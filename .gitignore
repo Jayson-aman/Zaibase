@@ -1,0 +1,17 @@
+# 依存
+node_modules/
+# 環境変数・秘密情報（絶対にコミットしない）
+.env
+.env.*
+*.key
+serviceAccount*.json
+firebase-debug.log
+yahoo_check.txt
+line_check.txt
+# OS
+.DS_Store
+# ビルド成果物
+dist/
+build/
+# Firebase
+.firebase/

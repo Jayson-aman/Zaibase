@@ -1,0 +1,251 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /listings/{id} {
+      allow read: if true;
+      allow create: if request.auth != null;
+      allow update, delete: if request.auth != null
+        && request.auth.uid == resource.data.userId;
+
+      // 出品への質問
+      match /questions/{qid} {
+        allow read: if request.auth != null;
+        allow create: if request.auth != null
+          && request.resource.data.userId == request.auth.uid
+          && request.resource.data.text is string
+          && request.resource.data.text.size() > 0
+          && request.resource.data.text.size() <= 500;
+        allow update: if request.auth != null
+          && get(/databases/$(database)/documents/listings/$(id)).data.userId == request.auth.uid;
+      }
+    }
+
+    // 出品者の公開プロフィール（評価表示用）
+    match /sellerProfiles/{uid} {
+      allow read: if request.auth != null;
+      allow create, update: if request.auth != null && request.auth.uid == uid;
+    }
+
+    // 職人プロフィール（第1期マッチング用）
+    match /craftsmanProfiles/{uid} {
+      allow read: if request.auth != null;
+      allow create, update: if request.auth != null && request.auth.uid == uid;
+    }
+
+    // 発注者プロフィール（案件登録・プラン管理）
+    match /ordererProfiles/{uid} {
+      allow read: if request.auth != null;
+      allow create, update: if request.auth != null && request.auth.uid == uid;
+    }
+
+    // 職人マッチング投稿（助けてほしい / 手伝える）
+    match /helpPosts/{id} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null
+        && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if request.auth != null
+        && request.auth.uid == resource.data.userId;
+    }
+
+    // 案件応募（マッチング承認フロー）
+    match /applications/{id} {
+      allow read: if request.auth != null
+        && (request.auth.uid == resource.data.postOwnerId
+            || request.auth.uid == resource.data.applicantId);
+      allow create: if request.auth != null
+        && request.resource.data.applicantId == request.auth.uid
+        && request.resource.data.postOwnerId != request.auth.uid
+        && request.resource.data.status == 'pending';
+      allow update: if request.auth != null && (
+        (request.auth.uid == resource.data.postOwnerId
+          && request.resource.data.status in ['approved', 'rejected'])
+        || (request.auth.uid == resource.data.applicantId
+          && resource.data.status == 'pending'
+          && request.resource.data.status == 'withdrawn')
+      );
+      allow delete: if false;
+    }
+
+    // 1対1トーク
+    match /conversations/{convId} {
+      allow read, update: if request.auth != null
+        && request.auth.uid in resource.data.participants;
+      allow create: if request.auth != null
+        && request.auth.uid in request.resource.data.participants
+        && request.resource.data.participants.size() == 2;
+
+      match /messages/{msgId} {
+        allow read: if request.auth != null
+          && request.auth.uid in get(/databases/$(database)/documents/conversations/$(convId)).data.participants;
+        allow create: if request.auth != null
+          && request.resource.data.senderId == request.auth.uid
+          && request.auth.uid in get(/databases/$(database)/documents/conversations/$(convId)).data.participants
+          && request.resource.data.text is string
+          && request.resource.data.text.size() > 0
+          && request.resource.data.text.size() <= 1000;
+      }
+    }
+
+    // 運営管理者（Firebase Console で admins/{uid} を手動作成）
+    match /admins/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow write: if false;
+    }
+
+    function isAdmin() {
+      return request.auth != null
+        && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    // 違反申告
+    match /reports/{id} {
+      allow create: if request.auth != null
+        && request.resource.data.reporterId == request.auth.uid;
+      allow read, update: if isAdmin();
+      allow delete: if false;
+    }
+
+    // フリーランス保護法：苦情・相談窓口
+    match /freelanceConsultations/{id} {
+      allow create: if request.auth != null
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.text is string
+        && request.resource.data.text.size() > 0
+        && request.resource.data.text.size() <= 2000;
+      allow read, update: if isAdmin();
+      allow delete: if false;
+    }
+
+    // 電子伝票
+    match /eTickets/{id} {
+      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow create: if request.auth != null
+        && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+
+    // 搬入管理
+    match /deliveries/{id} {
+      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow create: if request.auth != null
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.name is string
+        && request.resource.data.name.size() > 0;
+      allow update, delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+
+    // 搬入車両リアルタイム追跡
+    match /trackingSessions/{id} {
+      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow create: if request.auth != null
+        && request.resource.data.userId == request.auth.uid;
+      allow update: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+
+    // 現場写真
+    match /sitePhotos/{id} {
+      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow create: if request.auth != null
+        && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+
+    // 工事報告書
+    match /photoReports/{id} {
+      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow create: if request.auth != null
+        && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+
+    // 保険・パートナーリンクのクリックログ（収益追跡）
+    match /affiliateClicks/{id} {
+      allow create: if request.auth != null
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.company is string
+        && request.resource.data.category is string;
+      allow read, update, delete: if isAdmin();
+    }
+
+    // 請求書（適格請求書 PDF）
+    match /invoices/{id} {
+      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow create: if request.auth != null
+        && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+
+    // 見積書（AI見積サポート・Pro/Max）
+    match /estimates/{id} {
+      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow create: if request.auth != null
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.title is string
+        && request.resource.data.title.size() > 0
+        && request.resource.data.title.size() <= 120;
+      allow update, delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+
+    // 業務委託契約書（書面明示の証跡・更新は Cloud Functions）
+    match /contracts/{id} {
+      allow read: if request.auth != null
+        && (request.auth.uid == resource.data.ordererId
+            || request.auth.uid == resource.data.contractorId);
+      allow create: if request.auth != null
+        && request.auth.uid in request.resource.data.participants
+        && request.resource.data.rewardAmount is number
+        && request.resource.data.rewardAmount > 0;
+      allow update, delete: if false;
+    }
+
+    match /paymentAlerts/{id} {
+      allow read: if isAdmin();
+      allow write: if false;
+    }
+
+    match /churnAlerts/{id} {
+      allow read: if isAdmin();
+      allow write: if false;
+    }
+
+    match /churnReasons/{id} {
+      allow read: if isAdmin();
+      allow create: if false;
+      allow update, delete: if false;
+    }
+
+    match /gpsLogs/{id} {
+      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow create: if request.auth != null
+        && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if false;
+    }
+
+    match /faceAuthLogs/{id} {
+      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow create: if request.auth != null
+        && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if false;
+    }
+
+    match /ccusLogs/{id} {
+      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow write: if false;
+    }
+
+    match /securityLogs/{id} {
+      allow read: if isAdmin();
+      allow write: if false;
+    }
+
+    match /mail/{id} {
+      allow read, write: if false;
+    }
+
+    match /users/{uid}/{document=**} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+  }
+}

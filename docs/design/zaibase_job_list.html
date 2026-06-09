@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>案件一覧 — Zaibase</title>
+<style>
+  :root{--navy:#1a3c5e;--orange:#e8a020;--bg:#f4f6f8;--card:#fff;
+    --text:#1a2332;--muted:#6b7c93;--border:#dce3ea;--green:#1d9e75;--red:#e24b4a;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+    background:var(--bg);color:var(--text);min-height:100dvh;display:flex;flex-direction:column;}
+
+  /* ヘッダー */
+  header{background:var(--navy);padding:13px 16px 0;position:sticky;top:0;z-index:10;}
+  .hd-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+  .logo{color:#fff;font-size:17px;font-weight:800;}
+  .hd-post{background:var(--orange);color:#fff;border:none;border-radius:8px;
+    padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer;}
+
+  /* タブ */
+  .tabs{display:flex;gap:0;border-bottom:2px solid rgba(255,255,255,.15);}
+  .tab{padding:10px 16px;font-size:13px;font-weight:500;color:rgba(255,255,255,.6);
+    cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;transition:.15s;white-space:nowrap;}
+  .tab.act{color:#fff;border-bottom-color:#fff;}
+
+  /* 検索・フィルター */
+  .filter-bar{background:var(--card);padding:12px 16px;border-bottom:1px solid var(--border);
+    display:flex;gap:8px;align-items:center;position:sticky;top:89px;z-index:9;}
+  .search-wrap{flex:1;position:relative;}
+  .search-wrap i{position:absolute;left:10px;top:50%;transform:translateY(-50%);
+    color:var(--muted);font-size:16px;pointer-events:none;}
+  .search-wrap input{width:100%;height:36px;border:1px solid var(--border);border-radius:8px;
+    padding:0 10px 0 32px;font-size:13px;color:var(--text);background:var(--bg);}
+  .filter-btn{height:36px;padding:0 12px;border:1px solid var(--border);border-radius:8px;
+    font-size:13px;color:var(--muted);background:var(--card);cursor:pointer;white-space:nowrap;
+    display:flex;align-items:center;gap:5px;}
+  .filter-btn.act{border-color:var(--navy);color:var(--navy);background:#f0f5fa;}
+
+  /* 案件カード */
+  main{flex:1;padding:12px 14px;}
+  .sort-bar{display:flex;justify-content:space-between;align-items:center;
+    margin-bottom:10px;font-size:12px;color:var(--muted);}
+  .sort-select{border:none;background:none;font-size:12px;color:var(--navy);
+    font-weight:600;cursor:pointer;}
+
+  .job-card{background:var(--card);border-radius:12px;border:1px solid var(--border);
+    padding:14px;margin-bottom:10px;cursor:pointer;transition:.15s;}
+  .job-card:active{transform:scale(.99);opacity:.9;}
+  .job-card.urgent{border-left:3px solid var(--orange);}
+
+  .jc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;}
+  .jc-badges{display:flex;gap:5px;flex-wrap:wrap;}
+  .badge{display:inline-flex;align-items:center;gap:3px;padding:3px 8px;border-radius:10px;
+    font-size:11px;font-weight:600;}
+  .b-labor{background:#e8f4ff;color:#1a5c8e;}
+  .b-contract{background:#fff0e0;color:#8a4a00;}
+  .b-open{background:#e8f8f2;color:#0a6644;}
+  .b-matching{background:#fff8e0;color:#7a5a00;}
+  .b-urgent{background:#fff0e0;color:#8a3a00;}
+  .b-closed{background:#f0f0f0;color:#888;}
+
+  .jc-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:5px;line-height:1.4;}
+  .jc-meta{display:flex;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--muted);margin-bottom:8px;}
+  .jc-meta span{display:flex;align-items:center;gap:3px;}
+  .jc-meta i{font-size:13px;}
+
+  .jc-bottom{display:flex;justify-content:space-between;align-items:center;
+    padding-top:8px;border-top:1px solid var(--border);}
+  .jc-reward{font-size:15px;font-weight:800;color:var(--navy);}
+  .jc-reward sub{font-size:11px;font-weight:400;color:var(--muted);}
+  .jc-applicants{display:flex;align-items:center;gap:4px;font-size:12px;color:var(--muted);}
+  .jc-applicants .dot{width:6px;height:6px;border-radius:50%;background:var(--orange);}
+  .jc-applicants.has-new{color:var(--orange);font-weight:600;}
+
+  /* 空状態 */
+  .empty{text-align:center;padding:48px 20px;color:var(--muted);}
+  .empty i{font-size:48px;opacity:.3;display:block;margin-bottom:12px;}
+  .empty p{font-size:14px;line-height:1.7;}
+
+  /* FAB */
+  .fab{position:fixed;bottom:24px;right:20px;width:52px;height:52px;
+    border-radius:50%;background:var(--orange);border:none;color:#fff;
+    font-size:26px;cursor:pointer;box-shadow:0 4px 14px rgba(232,160,32,.45);
+    display:flex;align-items:center;justify-content:center;z-index:20;}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+<header>
+  <div class="hd-top">
+    <span class="logo">Zaibase</span>
+    <button class="hd-post" onclick="alert('案件登録画面へ')">+ 新規案件</button>
+  </div>
+  <div class="tabs">
+    <div class="tab act" onclick="switchTab('all',this)">すべて</div>
+    <div class="tab" onclick="switchTab('open',this)">募集中</div>
+    <div class="tab" onclick="switchTab('matching',this)">選考中</div>
+    <div class="tab" onclick="switchTab('active',this)">進行中</div>
+    <div class="tab" onclick="switchTab('closed',this)">完了</div>
+  </div>
+</header>
+
+<div class="filter-bar">
+  <div class="search-wrap">
+    <i class="ti ti-search"></i>
+    <input type="text" placeholder="工種・キーワードで検索" oninput="filterJobs(this.value)">
+  </div>
+  <button class="filter-btn" id="fbtn-labor" onclick="toggleFilter('labor')">
+    <i class="ti ti-hammer"></i>労務
+  </button>
+  <button class="filter-btn" id="fbtn-contract" onclick="toggleFilter('contract')">
+    <i class="ti ti-building-arch"></i>請負
+  </button>
+</div>
+
+<main>
+  <div class="sort-bar">
+    <span id="job-count">6件</span>
+    <select class="sort-select" onchange="sortJobs(this.value)">
+      <option value="new">新着順</option>
+      <option value="reward">報酬順</option>
+      <option value="start">開始日順</option>
+    </select>
+  </div>
+  <div id="job-list"></div>
+</main>
+
+<button class="fab" onclick="alert('案件登録画面へ')">
+  <i class="ti ti-plus"></i>
+</button>
+
+<script>
+const JOBS=[
+  {id:1,type:'contract',status:'matching',urgent:true,
+    title:'横浜市内 外壁タイル張り工事（3F東面・南面）',
+    trade:'タイル',address:'横浜市中区',start:'2026-06-20',end:'2026-07-10',
+    reward:480000,applicants:3,newApplicants:2},
+  {id:2,type:'labor',status:'open',urgent:false,
+    title:'川崎市 型枠大工 2名募集（即日〜）',
+    trade:'型枠',address:'川崎市幸区',start:'2026-06-10',end:'2026-06-30',
+    reward:22000,unit:'日当',applicants:1,newApplicants:1},
+  {id:3,type:'contract',status:'active',urgent:false,
+    title:'横浜みなとみらい 配管工事（衛生設備）',
+    trade:'配管',address:'横浜市西区',start:'2026-05-15',end:'2026-07-31',
+    reward:1200000,applicants:0,newApplicants:0},
+  {id:4,type:'labor',status:'open',urgent:true,
+    title:'相模原市 鉄筋工 3名 至急募集',
+    trade:'鉄筋',address:'相模原市中央区',start:'2026-06-09',end:'2026-06-20',
+    reward:25000,unit:'日当',applicants:0,newApplicants:0},
+  {id:5,type:'contract',status:'closed',urgent:false,
+    title:'横浜市 塗装工事（外壁・屋上防水）',
+    trade:'塗装',address:'横浜市保土ケ谷区',start:'2026-04-01',end:'2026-05-31',
+    reward:850000,applicants:2,newApplicants:0},
+  {id:6,type:'labor',status:'open',urgent:false,
+    title:'川崎市 内装仕上げ 1名（フローリング）',
+    trade:'内装',address:'川崎市川崎区',start:'2026-06-15',end:'2026-06-25',
+    reward:20000,unit:'日当',applicants:0,newApplicants:0},
+];
+
+let currentTab='all', filterType=null, searchQ='';
+
+function renderJobs(){
+  let jobs=[...JOBS];
+  if(currentTab!=='all') jobs=jobs.filter(j=>j.status===currentTab);
+  if(filterType) jobs=jobs.filter(j=>j.type===filterType);
+  if(searchQ) jobs=jobs.filter(j=>j.title.includes(searchQ)||j.trade.includes(searchQ)||j.address.includes(searchQ));
+
+  document.getElementById('job-count').textContent=jobs.length+'件';
+  const list=document.getElementById('job-list');
+  if(!jobs.length){
+    list.innerHTML=`<div class="empty"><i class="ti ti-clipboard-off"></i><p>該当する案件がありません</p></div>`;
+    return;
+  }
+  list.innerHTML=jobs.map(j=>jobCard(j)).join('');
+}
+
+function jobCard(j){
+  const statusLabel={open:'募集中',matching:'選考中',active:'進行中',closed:'完了'}[j.status];
+  const statusClass={open:'b-open',matching:'b-matching',active:'b-open',closed:'b-closed'}[j.status];
+  const typeLabel=j.type==='labor'?'労務':'請負工事';
+  const typeClass=j.type==='labor'?'b-labor':'b-contract';
+  const reward=j.unit?`¥${j.reward.toLocaleString()}<sub>/${j.unit}</sub>`:`¥${(j.reward/10000).toFixed(0)}万円`;
+  const appText=j.newApplicants>0?`新着 ${j.newApplicants}名`:(j.applicants?`${j.applicants}名応募`:'応募待ち');
+  const appClass=j.newApplicants>0?'jc-applicants has-new':'jc-applicants';
+  return `
+  <div class="job-card${j.urgent?' urgent':''}" onclick="openJob(${j.id})">
+    <div class="jc-top">
+      <div class="jc-badges">
+        <span class="badge ${typeClass}">${typeLabel}</span>
+        <span class="badge ${statusClass}">${statusLabel}</span>
+        ${j.urgent?'<span class="badge b-urgent">至急</span>':''}
+      </div>
+    </div>
+    <div class="jc-title">${j.title}</div>
+    <div class="jc-meta">
+      <span><i class="ti ti-tools"></i>${j.trade}</span>
+      <span><i class="ti ti-map-pin"></i>${j.address}</span>
+      <span><i class="ti ti-calendar"></i>${j.start}</span>
+    </div>
+    <div class="jc-bottom">
+      <div class="jc-reward">${reward}</div>
+      <div class="${appClass}">
+        ${j.newApplicants>0?'<div class="dot"></div>':''}${appText}
+      </div>
+    </div>
+  </div>`;
+}
+
+function switchTab(tab,el){
+  currentTab=tab;
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('act'));
+  el.classList.add('act');
+  renderJobs();
+}
+function toggleFilter(type){
+  filterType=filterType===type?null:type;
+  document.getElementById('fbtn-labor').classList.toggle('act',filterType==='labor');
+  document.getElementById('fbtn-contract').classList.toggle('act',filterType==='contract');
+  renderJobs();
+}
+function filterJobs(q){searchQ=q;renderJobs();}
+function sortJobs(v){
+  if(v==='reward') JOBS.sort((a,b)=>b.reward-a.reward);
+  else if(v==='start') JOBS.sort((a,b)=>a.start.localeCompare(b.start));
+  else JOBS.sort((a,b)=>b.id-a.id);
+  renderJobs();
+}
+function openJob(id){alert(`案件詳細・応募者管理画面へ（ID: ${id}）`);}
+
+renderJobs();
+</script>
+</body>
+</html>

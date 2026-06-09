@@ -1,0 +1,23 @@
+{
+  "name": "zaibase-functions",
+  "version": "1.0.0",
+  "description": "Zaibase Cloud Functions (zaisai-share)",
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "@aws-sdk/client-rekognition": "^3.1064.0",
+    "@google-cloud/vertexai": "^1.9.0",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.1.0",
+    "pdfkit": "^0.16.0",
+    "stripe": "^17.7.0"
+  }
+}

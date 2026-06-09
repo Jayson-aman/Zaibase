@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>支払方法の登録 — Zaibase</title>
+<style>
+  :root{--navy:#1a3c5e;--orange:#e8a020;--bg:#f4f6f8;--card:#fff;
+    --text:#1a2332;--muted:#6b7c93;--border:#dce3ea;--green:#1d9e75;--red:#e24b4a;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+    background:var(--bg);color:var(--text);min-height:100dvh;display:flex;flex-direction:column;}
+
+  header{background:var(--navy);padding:13px 16px;display:flex;align-items:center;gap:10px;}
+  .back{color:rgba(255,255,255,.7);font-size:22px;cursor:pointer;}
+  .title{color:#fff;font-size:17px;font-weight:700;margin:0 auto;}
+
+  main{flex:1;padding:16px;max-width:520px;margin:0 auto;width:100%;}
+
+  /* タブ切替（カード/口座） */
+  .type-tabs{display:flex;background:var(--bg);border-radius:10px;padding:4px;gap:4px;margin-bottom:16px;}
+  .type-tab{flex:1;padding:10px;border-radius:7px;font-size:14px;font-weight:600;
+    border:none;cursor:pointer;transition:.2s;color:var(--muted);background:transparent;
+    display:flex;align-items:center;justify-content:center;gap:6px;}
+  .type-tab.act{background:var(--navy);color:#fff;}
+
+  /* カードフォーム */
+  .section{background:var(--card);border-radius:14px;border:1px solid var(--border);
+    padding:18px;margin-bottom:14px;}
+  .sec-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:14px;
+    display:flex;align-items:center;gap:7px;}
+  .sec-title i{font-size:18px;color:var(--orange);}
+
+  .field{margin-bottom:14px;}
+  .field label{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-bottom:5px;}
+  .req{color:var(--red);margin-left:2px;}
+  input,select{width:100%;height:44px;border:1px solid var(--border);border-radius:8px;
+    padding:0 12px;font-size:14px;color:var(--text);background:var(--card);
+    appearance:none;transition:border-color .2s;font-family:inherit;}
+  input:focus,select:focus{outline:none;border-color:var(--navy);}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+
+  /* カード番号入力（Stripe Elements風） */
+  .card-input-wrap{border:1px solid var(--border);border-radius:8px;
+    padding:12px;display:flex;align-items:center;gap:10px;
+    background:var(--card);transition:border-color .2s;cursor:text;}
+  .card-input-wrap:focus-within{border-color:var(--navy);}
+  .card-input-wrap i{font-size:20px;color:var(--muted);flex-shrink:0;}
+  .card-input-wrap input{border:none;padding:0;height:auto;font-size:15px;
+    letter-spacing:2px;flex:1;outline:none;}
+  .card-brands{display:flex;gap:6px;flex-shrink:0;}
+  .card-brand{width:32px;height:20px;border-radius:3px;background:var(--bg);
+    border:1px solid var(--border);display:flex;align-items:center;justify-content:center;
+    font-size:8px;font-weight:800;color:var(--muted);}
+  .card-brand.visa{background:#1a1f71;color:#fff;}
+  .card-brand.mc{background:#eb001b;color:#fff;}
+  .card-brand.jcb{background:#003087;color:#fff;}
+
+  /* セキュリティバッジ */
+  .security-badge{display:flex;align-items:center;gap:8px;padding:10px 12px;
+    background:#f0f8f0;border-radius:8px;margin-bottom:14px;}
+  .security-badge i{font-size:18px;color:var(--green);}
+  .security-badge p{font-size:12px;color:var(--muted);line-height:1.5;}
+
+  /* 登録済みカード */
+  .saved-card{display:flex;align-items:center;gap:12px;padding:14px;
+    background:var(--card);border-radius:12px;border:1px solid var(--border);margin-bottom:8px;}
+  .sc-icon{width:44px;height:30px;border-radius:5px;background:#1a1f71;
+    display:flex;align-items:center;justify-content:center;
+    font-size:10px;font-weight:800;color:#fff;flex-shrink:0;}
+  .sc-info{flex:1;}
+  .sc-name{font-size:13px;font-weight:600;}
+  .sc-num{font-size:12px;color:var(--muted);}
+  .sc-default{padding:2px 8px;border-radius:8px;font-size:11px;font-weight:600;
+    background:#e8f8f2;color:var(--green);}
+  .sc-delete{color:var(--red);font-size:13px;cursor:pointer;padding:4px;}
+
+  /* 振込口座 */
+  .bank-form{display:none;}
+  .bank-note{background:#fff8e0;border:1px solid #f5d86e;border-radius:8px;
+    padding:10px 12px;margin-bottom:12px;font-size:12px;color:#7a5a00;line-height:1.6;}
+
+  /* ボタン */
+  .btn{width:100%;padding:15px;border-radius:10px;font-size:15px;font-weight:700;
+    border:none;cursor:pointer;transition:.15s;margin-bottom:10px;}
+  .btn:active{transform:scale(.98);}
+  .btn-primary{background:var(--navy);color:#fff;}
+  .btn-secondary{background:var(--bg);color:var(--navy);border:1px solid var(--border);}
+
+  /* Stripe帰属表示 */
+  .stripe-footer{display:flex;align-items:center;justify-content:center;gap:6px;
+    font-size:11px;color:var(--muted);margin-top:4px;}
+  .stripe-footer i{font-size:14px;}
+
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(60px);
+    background:var(--text);color:#fff;padding:11px 20px;border-radius:22px;
+    font-size:13px;font-weight:500;transition:transform .3s;z-index:99;white-space:nowrap;}
+  .toast.show{transform:translateX(-50%) translateY(0);}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+<header>
+  <span class="back" onclick="history.back()"><i class="ti ti-arrow-left"></i></span>
+  <span class="title">支払方法の登録</span>
+</header>
+<main>
+
+  <!-- タイプ切替 -->
+  <div class="type-tabs">
+    <button class="type-tab act" onclick="switchType('card',this)">
+      <i class="ti ti-credit-card"></i>クレジットカード
+    </button>
+    <button class="type-tab" onclick="switchType('bank',this)">
+      <i class="ti ti-building-bank"></i>銀行口座
+    </button>
+  </div>
+
+  <!-- 登録済みカード -->
+  <div class="section" id="saved-section">
+    <div class="sec-title"><i class="ti ti-credit-card"></i>登録済みカード</div>
+    <div class="saved-card">
+      <div class="sc-icon">VISA</div>
+      <div class="sc-info">
+        <div class="sc-name">山田 太郎</div>
+        <div class="sc-num">**** **** **** 4242　有効期限 08/28</div>
+      </div>
+      <span class="sc-default">メイン</span>
+    </div>
+    <div class="saved-card">
+      <div class="sc-icon" style="background:#eb001b">MC</div>
+      <div class="sc-info">
+        <div class="sc-name">山田 太郎</div>
+        <div class="sc-num">**** **** **** 5555　有効期限 12/27</div>
+      </div>
+      <span class="sc-delete" onclick="showToast('カードを削除しました')"><i class="ti ti-trash"></i></span>
+    </div>
+  </div>
+
+  <!-- 新規カード追加 -->
+  <div class="section" id="card-form">
+    <div class="sec-title"><i class="ti ti-plus"></i>新しいカードを追加</div>
+
+    <div class="security-badge">
+      <i class="ti ti-lock"></i>
+      <p>カード情報はStripeが安全に処理します。Zaibaseのサーバーにはカード番号が保存されません。</p>
+    </div>
+
+    <div class="field">
+      <label>カード番号<span class="req">*</span></label>
+      <div class="card-input-wrap" onclick="document.getElementById('card-num').focus()">
+        <i class="ti ti-credit-card"></i>
+        <input type="tel" id="card-num" placeholder="1234 5678 9012 3456"
+          maxlength="19" oninput="formatCard(this)">
+        <div class="card-brands">
+          <div class="card-brand visa">VISA</div>
+          <div class="card-brand mc">MC</div>
+          <div class="card-brand jcb">JCB</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row2">
+      <div class="field">
+        <label>有効期限<span class="req">*</span></label>
+        <input type="tel" id="card-exp" placeholder="MM / YY" maxlength="7"
+          oninput="formatExp(this)">
+      </div>
+      <div class="field">
+        <label>セキュリティコード<span class="req">*</span></label>
+        <input type="tel" id="card-cvc" placeholder="CVC" maxlength="4">
+      </div>
+    </div>
+
+    <div class="field">
+      <label>カード名義（ローマ字）<span class="req">*</span></label>
+      <input type="text" id="card-name" placeholder="TARO YAMADA" style="letter-spacing:1px">
+    </div>
+
+    <button class="btn btn-primary" onclick="addCard()">
+      <i class="ti ti-lock" style="font-size:15px;vertical-align:-2px;margin-right:5px"></i>
+      カードを登録する
+    </button>
+    <div class="stripe-footer">
+      <i class="ti ti-shield-check"></i>
+      Powered by Stripe — PCI DSS準拠
+    </div>
+  </div>
+
+  <!-- 銀行口座フォーム -->
+  <div class="section bank-form" id="bank-form">
+    <div class="sec-title"><i class="ti ti-building-bank"></i>銀行口座を登録（受取口座）</div>
+    <div class="bank-note">
+      受取口座として登録します。エスクローからの送金先として使用されます。<br>
+      Stripeによる本人確認が必要です（マイナンバーまたは運転免許証）。
+    </div>
+    <div class="field">
+      <label>銀行名<span class="req">*</span></label>
+      <select id="bank-name">
+        <option value="">選択してください</option>
+        <option>ゆうちょ銀行</option>
+        <option>三菱UFJ銀行</option>
+        <option>三井住友銀行</option>
+        <option>みずほ銀行</option>
+        <option>横浜銀行</option>
+        <option>川崎信用金庫</option>
+        <option>その他</option>
+      </select>
+    </div>
+    <div class="row2">
+      <div class="field">
+        <label>支店名<span class="req">*</span></label>
+        <input type="text" placeholder="例：横浜支店">
+      </div>
+      <div class="field">
+        <label>口座種別<span class="req">*</span></label>
+        <select>
+          <option>普通</option>
+          <option>当座</option>
+        </select>
+      </div>
+    </div>
+    <div class="field">
+      <label>口座番号<span class="req">*</span></label>
+      <input type="tel" placeholder="1234567" maxlength="8">
+    </div>
+    <div class="field">
+      <label>口座名義（カナ）<span class="req">*</span></label>
+      <input type="text" placeholder="ヤマダ タロウ" style="letter-spacing:1px">
+    </div>
+    <button class="btn btn-primary" onclick="addBank()">口座を登録する</button>
+    <div class="stripe-footer">
+      <i class="ti ti-shield-check"></i>
+      Powered by Stripe Connect — 資金移動業登録済み
+    </div>
+  </div>
+
+</main>
+<div class="toast" id="toast"></div>
+<script>
+function switchType(type,el){
+  document.querySelectorAll('.type-tab').forEach(t=>t.classList.remove('act'));
+  el.classList.add('act');
+  const isCard=type==='card';
+  document.getElementById('saved-section').style.display=isCard?'block':'none';
+  document.getElementById('card-form').style.display=isCard?'block':'none';
+  document.getElementById('bank-form').style.display=isCard?'none':'block';
+}
+function formatCard(el){
+  let v=el.value.replace(/\D/g,'').slice(0,16);
+  el.value=v.replace(/(.{4})/g,'$1 ').trim();
+}
+function formatExp(el){
+  let v=el.value.replace(/\D/g,'');
+  if(v.length>=2) v=v.slice(0,2)+' / '+v.slice(2,4);
+  el.value=v;
+}
+function addCard(){
+  const num=document.getElementById('card-num').value.replace(/\s/g,'');
+  const exp=document.getElementById('card-exp').value;
+  const cvc=document.getElementById('card-cvc').value;
+  const name=document.getElementById('card-name').value;
+  if(!num||num.length<16||!exp||!cvc||!name){
+    showToast('すべての項目を入力してください');return;
+  }
+  // Stripe.js: stripe.createPaymentMethod({ type:'card', card: elements.getElement('card') })
+  showToast('カードを登録しました');
+  document.getElementById('card-num').value='';
+  document.getElementById('card-exp').value='';
+  document.getElementById('card-cvc').value='';
+  document.getElementById('card-name').value='';
+}
+function addBank(){
+  showToast('口座登録のためStripe本人確認画面へ移動します');
+  // stripe.accounts.createLoginLink / createStripeOnboarding() Cloud Function
+}
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.className='toast show';
+  setTimeout(()=>t.className='toast',2600);
+}
+</script>
+</body>
+</html>

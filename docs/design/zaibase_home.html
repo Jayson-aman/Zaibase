@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ホーム — Zaibase</title>
+<style>
+  :root{--navy:#1a3c5e;--orange:#e8a020;--bg:#f4f6f8;--card:#fff;
+    --text:#1a2332;--muted:#6b7c93;--border:#dce3ea;--green:#1d9e75;--red:#e24b4a;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+    background:var(--bg);color:var(--text);min-height:100dvh;padding-bottom:70px;}
+
+  /* ヘッダー */
+  header{background:var(--navy);padding:16px 16px 20px;}
+  .hd-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
+  .logo{color:#fff;font-size:18px;font-weight:800;letter-spacing:.5px;}
+  .hd-icons{display:flex;gap:14px;align-items:center;}
+  .hd-icons i{color:rgba(255,255,255,.8);font-size:22px;cursor:pointer;}
+  .notif-wrap{position:relative;}
+  .notif-dot{position:absolute;top:-2px;right:-2px;width:8px;height:8px;
+    border-radius:50%;background:var(--orange);border:2px solid var(--navy);}
+
+  /* ユーザーカード */
+  .user-card{display:flex;align-items:center;gap:12px;}
+  .avatar{width:46px;height:46px;border-radius:50%;background:#2c5f82;
+    display:flex;align-items:center;justify-content:center;
+    font-size:16px;font-weight:800;color:#fff;flex-shrink:0;}
+  .user-info .greeting{font-size:12px;color:rgba(255,255,255,.6);}
+  .user-info .name{font-size:16px;font-weight:700;color:#fff;}
+  .user-info .plan{display:inline-flex;align-items:center;gap:3px;
+    background:rgba(232,160,32,.25);color:var(--orange);
+    font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;margin-top:3px;}
+  .user-right{margin-left:auto;text-align:right;}
+  .user-right .label{font-size:11px;color:rgba(255,255,255,.55);}
+  .user-right .val{font-size:18px;font-weight:800;color:#fff;}
+
+  /* サマリーカード */
+  .summary-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;
+    padding:16px;margin-top:-10px;}
+  .scard{background:var(--card);border-radius:12px;border:1px solid var(--border);
+    padding:14px;}
+  .scard .sc-label{font-size:11px;color:var(--muted);margin-bottom:4px;
+    display:flex;align-items:center;gap:4px;}
+  .scard .sc-label i{font-size:14px;}
+  .scard .sc-val{font-size:20px;font-weight:800;color:var(--navy);}
+  .scard .sc-sub{font-size:11px;color:var(--muted);margin-top:2px;}
+  .scard.alert .sc-val{color:var(--red);}
+  .scard.good  .sc-val{color:var(--green);}
+
+  /* セクション */
+  .section{padding:0 16px;margin-bottom:20px;}
+  .sec-header{display:flex;justify-content:space-between;align-items:center;
+    margin-bottom:10px;}
+  .sec-title{font-size:14px;font-weight:700;color:var(--navy);
+    display:flex;align-items:center;gap:6px;}
+  .sec-title i{font-size:17px;color:var(--orange);}
+  .sec-more{font-size:12px;color:var(--navy);font-weight:600;cursor:pointer;}
+
+  /* アクションボタン */
+  .action-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
+  .action-btn{background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:14px;cursor:pointer;transition:.15s;display:flex;flex-direction:column;
+    align-items:flex-start;gap:6px;}
+  .action-btn:active{transform:scale(.97);}
+  .action-btn .ab-icon{font-size:24px;color:var(--navy);}
+  .action-btn .ab-label{font-size:13px;font-weight:700;color:var(--text);}
+  .action-btn .ab-sub{font-size:11px;color:var(--muted);}
+  .action-btn.highlight{border-color:var(--orange);background:#fffbf2;}
+  .action-btn.highlight .ab-icon{color:var(--orange);}
+
+  /* お知らせ・タイムライン */
+  .timeline{display:flex;flex-direction:column;gap:0;}
+  .tl-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--bg);}
+  .tl-item:last-child{border-bottom:none;}
+  .tl-icon{width:36px;height:36px;border-radius:50%;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;font-size:16px;}
+  .tl-icon.green{background:#e8f8f2;color:var(--green);}
+  .tl-icon.orange{background:#fff3e0;color:var(--orange);}
+  .tl-icon.blue{background:#e8f0fa;color:var(--navy);}
+  .tl-icon.red{background:#fde8e8;color:var(--red);}
+  .tl-body{flex:1;min-width:0;}
+  .tl-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:2px;}
+  .tl-sub{font-size:12px;color:var(--muted);line-height:1.5;}
+  .tl-time{font-size:11px;color:var(--muted);white-space:nowrap;flex-shrink:0;padding-top:2px;}
+
+  /* 進行中案件 */
+  .active-job{background:var(--card);border-radius:12px;border:1px solid var(--border);
+    padding:14px;margin-bottom:8px;cursor:pointer;}
+  .aj-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;}
+  .aj-title{font-size:14px;font-weight:700;line-height:1.4;flex:1;margin-right:8px;}
+  .status-pill{padding:3px 9px;border-radius:10px;font-size:11px;font-weight:600;white-space:nowrap;}
+  .sp-active{background:#e8f8f2;color:var(--green);}
+  .sp-pending{background:#fff3e0;color:#8a4a00;}
+  .sp-overdue{background:#fde8e8;color:var(--red);}
+  .aj-meta{font-size:12px;color:var(--muted);display:flex;gap:10px;margin-bottom:8px;}
+  .aj-progress{height:4px;background:var(--bg);border-radius:2px;overflow:hidden;}
+  .aj-progress-bar{height:100%;border-radius:2px;background:var(--green);transition:.3s;}
+
+  /* 天気ウィジェット */
+  .weather-mini{display:flex;align-items:center;gap:10px;
+    background:var(--card);border-radius:12px;border:1px solid var(--border);
+    padding:12px 14px;cursor:pointer;}
+  .wm-icon{font-size:28px;}
+  .wm-text .wm-label{font-size:11px;color:var(--muted);}
+  .wm-text .wm-val{font-size:15px;font-weight:700;color:var(--text);}
+  .wm-right{margin-left:auto;text-align:right;}
+  .wm-right .wm-temp{font-size:20px;font-weight:800;color:var(--navy);}
+  .wm-right .wm-rain{font-size:12px;color:var(--muted);}
+
+  /* ボトムナビ */
+  .bottom-nav{position:fixed;bottom:0;left:0;right:0;background:var(--card);
+    border-top:1px solid var(--border);display:flex;padding:8px 0 env(safe-area-inset-bottom);
+    z-index:20;}
+  .nav-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;
+    cursor:pointer;padding:4px 0;}
+  .nav-item i{font-size:22px;color:var(--muted);transition:.15s;}
+  .nav-item span{font-size:10px;color:var(--muted);font-weight:500;}
+  .nav-item.act i{color:var(--navy);}
+  .nav-item.act span{color:var(--navy);font-weight:700;}
+  .nav-badge{position:relative;}
+  .nav-badge::after{content:'3';position:absolute;top:-4px;right:-8px;
+    width:16px;height:16px;border-radius:50%;background:var(--orange);
+    color:#fff;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+
+<header>
+  <div class="hd-row">
+    <span class="logo">Zaibase</span>
+    <div class="hd-icons">
+      <div class="notif-wrap">
+        <i class="ti ti-bell"></i>
+        <div class="notif-dot"></div>
+      </div>
+      <i class="ti ti-settings"></i>
+    </div>
+  </div>
+  <div class="user-card">
+    <div class="avatar">山田</div>
+    <div class="user-info">
+      <div class="greeting">おはようございます</div>
+      <div class="name">山田 太郎（一人親方）</div>
+      <div class="plan"><i class="ti ti-crown" style="font-size:11px"></i>Proプラン</div>
+    </div>
+    <div class="user-right">
+      <div class="label">今月の受注</div>
+      <div class="val">¥84万</div>
+    </div>
+  </div>
+</header>
+
+<!-- サマリーカード -->
+<div class="summary-cards">
+  <div class="scard good">
+    <div class="sc-label"><i class="ti ti-briefcase"></i>進行中案件</div>
+    <div class="sc-val">2件</div>
+    <div class="sc-sub">うち1件が完了待ち</div>
+  </div>
+  <div class="scard alert">
+    <div class="sc-label"><i class="ti ti-clock-exclamation"></i>支払待ち</div>
+    <div class="sc-val">¥48万</div>
+    <div class="sc-sub">残7日で支払期日</div>
+  </div>
+  <div class="scard">
+    <div class="sc-label"><i class="ti ti-star"></i>評価</div>
+    <div class="sc-val">4.8</div>
+    <div class="sc-sub">12件のレビュー</div>
+  </div>
+  <div class="scard">
+    <div class="sc-label"><i class="ti ti-id-badge"></i>CCUS実績</div>
+    <div class="sc-val">342日</div>
+    <div class="sc-sub">今月 18日就業</div>
+  </div>
+</div>
+
+<!-- クイックアクション -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-title"><i class="ti ti-bolt"></i>クイックアクション</div>
+  </div>
+  <div class="action-grid">
+    <div class="action-btn highlight" onclick="location.href='zaibase_job_search.html'">
+      <i class="ti ti-search nav-badge" style="font-size:24px;color:var(--orange)"></i>
+      <div class="ab-label">案件を探す</div>
+      <div class="ab-sub">新着3件あり</div>
+    </div>
+    <div class="action-btn" onclick="alert('GPS入退場記録')">
+      <i class="ti ti-map-pin" style="font-size:24px;color:var(--navy)"></i>
+      <div class="ab-label">入退場記録</div>
+      <div class="ab-sub">GPS・顔認証</div>
+    </div>
+    <div class="action-btn" onclick="alert('支払履歴画面へ')">
+      <i class="ti ti-coin-yen" style="font-size:24px;color:var(--navy)"></i>
+      <div class="ab-label">支払・請求</div>
+      <div class="ab-sub">¥48万 未回収</div>
+    </div>
+    <div class="action-btn" onclick="location.href='zaibase_worker_profile.html'">
+      <i class="ti ti-user-circle" style="font-size:24px;color:var(--navy)"></i>
+      <div class="ab-label">プロフィール</div>
+      <div class="ab-sub">CCUS連携済み</div>
+    </div>
+  </div>
+</div>
+
+<!-- 天気 -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-title"><i class="ti ti-cloud"></i>現場の天気</div>
+    <span class="sec-more">詳細 →</span>
+  </div>
+  <div class="weather-mini">
+    <div class="wm-icon">⛅</div>
+    <div class="wm-text">
+      <div class="wm-label">横浜市中区（現場）</div>
+      <div class="wm-val">曇り時々晴れ　作業可</div>
+    </div>
+    <div class="wm-right">
+      <div class="wm-temp">28°</div>
+      <div class="wm-rain">降水 15%</div>
+    </div>
+  </div>
+</div>
+
+<!-- 進行中案件 -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-title"><i class="ti ti-briefcase"></i>進行中の案件</div>
+    <span class="sec-more">すべて →</span>
+  </div>
+  <div class="active-job">
+    <div class="aj-top">
+      <div class="aj-title">外壁タイル張り工事（横浜市中区）</div>
+      <span class="status-pill sp-pending">完了報告待ち</span>
+    </div>
+    <div class="aj-meta">
+      <span>〜7/10</span>
+      <span>¥480,000</span>
+      <span>エスクロー保全中</span>
+    </div>
+    <div class="aj-progress"><div class="aj-progress-bar" style="width:85%"></div></div>
+  </div>
+  <div class="active-job">
+    <div class="aj-top">
+      <div class="aj-title">防水・シーリング工事（横浜市保土ケ谷区）</div>
+      <span class="status-pill sp-active">作業中</span>
+    </div>
+    <div class="aj-meta">
+      <span>〜7/31</span>
+      <span>¥320,000</span>
+      <span>エスクロー保全中</span>
+    </div>
+    <div class="aj-progress"><div class="aj-progress-bar" style="width:35%"></div></div>
+  </div>
+</div>
+
+<!-- お知らせ -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-title"><i class="ti ti-bell"></i>お知らせ</div>
+    <span class="sec-more">すべて →</span>
+  </div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-icon orange"><i class="ti ti-alert-triangle"></i></div>
+      <div class="tl-body">
+        <div class="tl-title">支払期日まであと7日</div>
+        <div class="tl-sub">外壁タイル張り工事 ¥480,000 の支払期日は7/16です</div>
+      </div>
+      <div class="tl-time">今日</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-icon green"><i class="ti ti-check"></i></div>
+      <div class="tl-body">
+        <div class="tl-title">マッチングが成立しました</div>
+        <div class="tl-sub">防水・シーリング工事 — 契約書PDFを送付しました</div>
+      </div>
+      <div class="tl-time">2日前</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-icon blue"><i class="ti ti-file-text"></i></div>
+      <div class="tl-body">
+        <div class="tl-title">新着案件 3件</div>
+        <div class="tl-sub">タイル・シーリング工種の新着案件があります</div>
+      </div>
+      <div class="tl-time">3日前</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-icon green"><i class="ti ti-coin-yen"></i></div>
+      <div class="tl-body">
+        <div class="tl-title">¥320,000 が入金されました</div>
+        <div class="tl-sub">横浜市 塗装工事 の報酬が着金しました</div>
+      </div>
+      <div class="tl-time">5日前</div>
+    </div>
+  </div>
+</div>
+
+<!-- ボトムナビ -->
+<nav class="bottom-nav">
+  <div class="nav-item act">
+    <i class="ti ti-home"></i><span>ホーム</span>
+  </div>
+  <div class="nav-item" onclick="location.href='zaibase_job_search.html'">
+    <i class="ti ti-search"></i><span>案件</span>
+  </div>
+  <div class="nav-item" onclick="alert('入退場記録')">
+    <i class="ti ti-map-pin"></i><span>入退場</span>
+  </div>
+  <div class="nav-item" onclick="alert('支払・請求')">
+    <i class="ti ti-coin-yen"></i><span>支払</span>
+  </div>
+  <div class="nav-item" onclick="location.href='zaibase_worker_profile.html'">
+    <i class="ti ti-user"></i><span>プロフィール</span>
+  </div>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>電子伝票 — Zaibase</title>
+<style>
+  :root{--navy:#1a3c5e;--orange:#e8a020;--bg:#f4f6f8;--card:#fff;
+    --text:#1a2332;--muted:#6b7c93;--border:#dce3ea;--green:#1d9e75;--red:#e24b4a;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+    background:var(--bg);color:var(--text);min-height:100dvh;
+    display:flex;flex-direction:column;padding-bottom:80px;}
+
+  header{background:var(--navy);padding:13px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0;}
+  .back{color:rgba(255,255,255,.7);font-size:22px;cursor:pointer;}
+  .hd-title{color:#fff;font-size:17px;font-weight:700;margin:0 auto;}
+  .hd-new{background:var(--orange);color:#fff;border:none;border-radius:7px;
+    padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer;}
+
+  .tabs{background:var(--card);border-bottom:1px solid var(--border);
+    display:flex;padding:0 16px;position:sticky;top:0;z-index:9;}
+  .tab{padding:11px 13px;font-size:13px;font-weight:500;color:var(--muted);
+    cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;}
+  .tab.act{color:var(--navy);border-bottom-color:var(--navy);font-weight:700;}
+
+  main{flex:1;padding:14px;max-width:560px;margin:0 auto;width:100%;}
+
+  /* セクション */
+  .section{background:var(--card);border-radius:14px;border:1px solid var(--border);
+    padding:15px;margin-bottom:12px;}
+  .sec-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:12px;
+    display:flex;align-items:center;gap:6px;}
+  .sec-title i{font-size:17px;color:var(--orange);}
+
+  /* フォーム */
+  .field{margin-bottom:11px;}
+  .field label{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-bottom:4px;}
+  .req{color:var(--red);margin-left:2px;}
+  input,select,textarea{width:100%;height:42px;border:1px solid var(--border);border-radius:8px;
+    padding:0 11px;font-size:14px;color:var(--text);background:var(--card);
+    appearance:none;font-family:inherit;transition:border-color .2s;}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy);}
+  textarea{height:60px;padding:9px 11px;resize:none;line-height:1.6;}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+
+  /* 置き場所指示 */
+  .location-card{background:#f0f5fa;border:1.5px solid #b8d0e8;border-radius:12px;padding:14px;margin-bottom:12px;}
+  .lc-title{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:8px;
+    display:flex;align-items:center;gap:6px;}
+  .lc-title i{font-size:16px;color:var(--orange);}
+  .map-preview{width:100%;height:160px;border-radius:10px;background:#c8d8e8;
+    overflow:hidden;position:relative;cursor:pointer;margin-bottom:10px;}
+  .map-preview iframe{width:100%;height:100%;border:none;pointer-events:none;}
+  .map-preview .map-pin{position:absolute;top:50%;left:50%;transform:translate(-50%,-100%);
+    font-size:32px;}
+  .map-edit-btn{position:absolute;bottom:8px;right:8px;background:var(--navy);color:#fff;
+    border:none;border-radius:6px;padding:5px 10px;font-size:11px;font-weight:700;cursor:pointer;}
+  .place-input{display:flex;gap:8px;margin-bottom:8px;}
+  .place-input input{flex:1;height:40px;}
+  .place-btn{height:40px;padding:0 12px;background:var(--navy);color:#fff;
+    border:none;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;}
+
+  /* 写真で場所指示 */
+  .photo-hint{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;}
+  .ph-btn{padding:7px 12px;border-radius:8px;font-size:12px;font-weight:600;
+    border:1px solid var(--border);background:var(--card);color:var(--text);
+    cursor:pointer;display:flex;align-items:center;gap:5px;}
+  .ph-btn i{font-size:14px;color:var(--orange);}
+
+  /* 送信先設定 */
+  .send-options{display:flex;flex-direction:column;gap:8px;}
+  .send-row{display:flex;align-items:center;gap:10px;padding:10px 12px;
+    background:var(--bg);border-radius:8px;cursor:pointer;}
+  .send-row.active{background:#e8f4ff;border:1px solid #b8d0e8;}
+  .send-icon{font-size:22px;flex-shrink:0;}
+  .send-info{flex:1;}
+  .send-name{font-size:13px;font-weight:600;}
+  .send-sub{font-size:11px;color:var(--muted);}
+  .send-check{width:22px;height:22px;border-radius:50%;border:2px solid var(--border);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;}
+  .send-row.active .send-check{background:var(--navy);border-color:var(--navy);color:#fff;}
+  .tel-input{margin-top:6px;display:none;}
+  .send-row.active .tel-input{display:block;}
+
+  /* 品目テーブル */
+  .items-table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:8px;}
+  .items-table th{text-align:left;font-size:11px;font-weight:600;color:var(--muted);
+    padding:5px 6px;border-bottom:2px solid var(--border);}
+  .items-table td{padding:5px 4px;border-bottom:1px solid var(--bg);vertical-align:middle;}
+  .items-table td input{height:36px;font-size:13px;}
+  .del-btn{width:26px;height:26px;border-radius:50%;background:var(--bg);
+    border:1px solid var(--border);color:var(--red);cursor:pointer;
+    display:flex;align-items:center;justify-content:center;font-size:12px;}
+  .add-item{width:100%;padding:8px;background:var(--bg);border:1px dashed var(--border);
+    border-radius:8px;font-size:12px;color:var(--muted);cursor:pointer;
+    display:flex;align-items:center;justify-content:center;gap:5px;margin-top:4px;}
+
+  /* 伝票一覧 */
+  .ticket-card{background:var(--card);border-radius:12px;border:1px solid var(--border);
+    padding:13px;margin-bottom:9px;cursor:pointer;}
+  .tc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:7px;}
+  .tc-title{font-size:14px;font-weight:700;flex:1;margin-right:8px;line-height:1.35;}
+  .tc-status{padding:3px 8px;border-radius:8px;font-size:11px;font-weight:600;white-space:nowrap;}
+  .s-sent     {background:#e8f4ff;color:var(--navy);}
+  .s-delivered{background:#fff8e0;color:#7a5a00;}
+  .s-signed   {background:#e8f8f2;color:var(--green);}
+  .s-draft    {background:#f0f0f0;color:#888;}
+  .tc-meta{font-size:12px;color:var(--muted);margin-bottom:8px;}
+  .tc-bottom{display:flex;justify-content:space-between;align-items:center;
+    padding-top:8px;border-top:1px solid var(--bg);}
+  .tc-items{font-size:12px;font-weight:500;color:var(--text);}
+  .tc-btns{display:flex;gap:6px;}
+  .tc-btn{padding:5px 10px;border-radius:7px;font-size:11px;font-weight:600;
+    border:1px solid var(--border);background:var(--card);cursor:pointer;
+    display:flex;align-items:center;gap:3px;}
+  .tc-btn.primary{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+  /* ── ドライバー画面（受取・署名） ── */
+  .driver-view{background:var(--card);border-radius:16px;border:2px solid var(--orange);
+    padding:18px;margin-bottom:14px;}
+  .dv-header{text-align:center;margin-bottom:16px;}
+  .dv-logo{font-size:13px;font-weight:800;color:var(--navy);margin-bottom:4px;}
+  .dv-title{font-size:18px;font-weight:800;color:var(--text);margin-bottom:4px;}
+  .dv-sub{font-size:12px;color:var(--muted);}
+
+  /* 地図ピン付きカード */
+  .map-card{border-radius:12px;overflow:hidden;border:1px solid var(--border);margin-bottom:14px;}
+  .mc-map{height:200px;background:#c8d8e8;position:relative;cursor:pointer;}
+  .mc-map .pin{position:absolute;top:50%;left:50%;transform:translate(-50%,-100%);font-size:40px;}
+  .mc-map .open-btn{position:absolute;bottom:10px;right:10px;
+    background:var(--navy);color:#fff;border:none;border-radius:8px;
+    padding:8px 14px;font-size:13px;font-weight:700;cursor:pointer;
+    display:flex;align-items:center;gap:5px;}
+  .mc-info{padding:12px 14px;background:var(--card);}
+  .mc-addr{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+  .mc-note{font-size:12px;color:var(--muted);line-height:1.6;}
+  .route-btn{width:100%;margin-top:10px;padding:12px;background:#34a853;color:#fff;
+    border:none;border-radius:9px;font-size:14px;font-weight:700;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;gap:7px;}
+
+  /* 伝票詳細（受取確認用） */
+  .ticket-detail{background:#f0f5fa;border-radius:10px;padding:12px;margin-bottom:12px;}
+  .td-row{display:flex;justify-content:space-between;font-size:13px;padding:4px 0;
+    border-bottom:1px solid #d8e8f4;}
+  .td-row:last-child{border-bottom:none;}
+  .td-row .k{color:var(--muted);}
+  .td-row .v{font-weight:500;}
+
+  /* 電子署名エリア */
+  .sign-area{background:#fafafa;border-radius:12px;border:2px dashed var(--border);
+    padding:14px;margin-bottom:12px;text-align:center;}
+  .sign-label{font-size:12px;font-weight:600;color:var(--muted);margin-bottom:8px;}
+  .sign-canvas-wrap{position:relative;width:100%;height:120px;
+    border-radius:8px;overflow:hidden;cursor:crosshair;touch-action:none;}
+  #sign-canvas{width:100%;height:100%;background:#fff;border:1px solid var(--border);border-radius:8px;}
+  .sign-clear{font-size:12px;color:var(--navy);cursor:pointer;margin-top:6px;
+    text-decoration:underline;}
+  .sign-done-badge{display:none;background:#e8f8f2;color:var(--green);
+    font-size:13px;font-weight:700;padding:10px;border-radius:8px;
+    align-items:center;justify-content:center;gap:6px;}
+  .sign-done-badge.show{display:flex;}
+
+  /* アクションバー */
+  .action-bar{position:fixed;bottom:0;left:0;right:0;background:var(--card);
+    border-top:1px solid var(--border);padding:12px 16px;display:flex;gap:8px;
+    padding-bottom:calc(12px + env(safe-area-inset-bottom));}
+  .btn{flex:1;padding:13px;border-radius:10px;font-size:14px;font-weight:700;
+    border:none;cursor:pointer;transition:.15s;display:flex;align-items:center;
+    justify-content:center;gap:6px;}
+  .btn:active{transform:scale(.97);}
+  .btn-secondary{background:var(--bg);color:var(--navy);border:1px solid var(--border);}
+  .btn-primary{background:var(--navy);color:#fff;}
+  .btn-green{background:var(--green);color:#fff;}
+  .btn-orange{background:var(--orange);color:#fff;}
+
+  .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(60px);
+    background:var(--text);color:#fff;padding:11px 20px;border-radius:22px;
+    font-size:13px;font-weight:500;transition:transform .3s;z-index:99;white-space:nowrap;}
+  .toast.show{transform:translateX(-50%) translateY(0);}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+
+<header>
+  <span class="back" onclick="history.back()"><i class="ti ti-arrow-left"></i></span>
+  <span class="hd-title">電子伝票</span>
+  <button class="hd-new" onclick="showTab('new')">+ 新規作成</button>
+</header>
+
+<div class="tabs">
+  <div class="tab act" id="tab-list"   onclick="showTab('list')">伝票一覧</div>
+  <div class="tab"     id="tab-new"    onclick="showTab('new')">伝票作成</div>
+  <div class="tab"     id="tab-driver" onclick="showTab('driver')">受取・署名</div>
+</div>
+
+<main>
+
+  <!-- ── 伝票一覧 ── -->
+  <div id="page-list">
+    <div class="ticket-card">
+      <div class="tc-top">
+        <div class="tc-title">タイル材料 納品伝票 No.T-2026-001</div>
+        <span class="tc-status s-signed">署名済み</span>
+      </div>
+      <div class="tc-meta">山田運輸 ・ 2026年6月20日 14:35 ・ 東側搬入口</div>
+      <div class="tc-bottom">
+        <div class="tc-items">タイル 500枚・接着剤 20袋</div>
+        <div class="tc-btns">
+          <button class="tc-btn" onclick="showToast('PDFをダウンロード')">
+            <i class="ti ti-download"></i>PDF
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="ticket-card">
+      <div class="tc-top">
+        <div class="tc-title">防水材料 納品伝票 No.T-2026-002</div>
+        <span class="tc-status s-delivered">配達中（署名待ち）</span>
+      </div>
+      <div class="tc-meta">佐藤物流 ・ 2026年6月20日 16:00予定 ・ 南側搬入口</div>
+      <div class="tc-bottom">
+        <div class="tc-items">ウレタン塗料 15缶・プライマー 5缶</div>
+        <div class="tc-btns">
+          <button class="tc-btn primary" onclick="showTab('driver')">
+            <i class="ti ti-pencil"></i>署名する
+          </button>
+          <button class="tc-btn" onclick="resendLink()">
+            <i class="ti ti-send"></i>再送
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="ticket-card">
+      <div class="tc-top">
+        <div class="tc-title">足場資材 納品伝票 No.T-2026-003</div>
+        <span class="tc-status s-sent">送信済み（ドライバー確認中）</span>
+      </div>
+      <div class="tc-meta">田中運搬 ・ 2026年6月23日 10:00予定 ・ 北側搬入口</div>
+      <div class="tc-bottom">
+        <div class="tc-items">単管パイプ 50本・クランプ 200個</div>
+        <div class="tc-btns">
+          <button class="tc-btn" onclick="resendLink()">
+            <i class="ti ti-send"></i>再送
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 伝票作成 ── -->
+  <div id="page-new" style="display:none">
+
+    <!-- 置き場所指示（核心機能） -->
+    <div class="location-card">
+      <div class="lc-title">
+        <i class="ti ti-map-pin"></i>置き場所をドライバーに指示
+      </div>
+      <div class="map-preview" onclick="openMap()">
+        <div class="map-pin">📍</div>
+        <button class="map-edit-btn" onclick="event.stopPropagation();openMap()">
+          <i class="ti ti-edit"></i> 場所を変更
+        </button>
+      </div>
+      <div class="place-input">
+        <input type="text" id="place-addr"
+          placeholder="住所または「東側搬入口」など場所の名前"
+          value="神奈川県横浜市中区山下町〇〇番地 東側搬入口">
+        <button class="place-btn" onclick="updateMap()">地図を更新</button>
+      </div>
+      <div class="field" style="margin-bottom:8px">
+        <label>置き場所の詳細指示</label>
+        <textarea id="place-detail"
+          placeholder="例：東側搬入口から入り、1階の倉庫前に積み上げてください。ブルーシートを敷いてあります。エレベーター使用不可。">東側搬入口から入り、1階の倉庫前（青いコーンの横）に積み上げてください。ブルーシートを敷いてあります。</textarea>
+      </div>
+      <div class="photo-hint">
+        <button class="ph-btn" onclick="showToast('現場写真を撮影して添付')">
+          <i class="ti ti-camera"></i>写真で場所を指示
+        </button>
+        <button class="ph-btn" onclick="copyMapLink()">
+          <i class="ti ti-map-2"></i>Googleマップリンクをコピー
+        </button>
+      </div>
+    </div>
+
+    <!-- 送信方法 -->
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-send"></i>ドライバーへの送信方法</div>
+      <div class="send-options">
+        <div class="send-row active" id="send-line" onclick="selectSend('line')">
+          <div class="send-icon">💬</div>
+          <div class="send-info">
+            <div class="send-name">LINE で送信</div>
+            <div class="send-sub">LINEアプリが開いて伝票URLを送れます</div>
+          </div>
+          <div class="send-check">✓</div>
+        </div>
+        <div class="send-row" id="send-sms" onclick="selectSend('sms')">
+          <div class="send-icon">📱</div>
+          <div class="send-info">
+            <div class="send-name">SMS（ショートメッセージ）で送信</div>
+            <div class="send-sub">電話番号に地図リンク＋伝票URLを送信</div>
+            <div class="tel-input">
+              <input type="tel" placeholder="電話番号（例：090-1234-5678）" id="driver-tel">
+            </div>
+          </div>
+          <div class="send-check"></div>
+        </div>
+        <div class="send-row" id="send-qr" onclick="selectSend('qr')">
+          <div class="send-icon">📷</div>
+          <div class="send-info">
+            <div class="send-name">QRコードで渡す</div>
+            <div class="send-sub">現地でドライバーにQRをスキャンしてもらう</div>
+          </div>
+          <div class="send-check"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 伝票基本情報 -->
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-file-invoice"></i>伝票情報</div>
+      <div class="row2">
+        <div class="field">
+          <label>伝票番号</label>
+          <input type="text" id="t-no" value="T-2026-004">
+        </div>
+        <div class="field">
+          <label>搬入予定日時<span class="req">*</span></label>
+          <input type="datetime-local" id="t-datetime">
+        </div>
+      </div>
+      <div class="field">
+        <label>納入業者名<span class="req">*</span></label>
+        <input type="text" id="t-supplier" placeholder="例：山田運輸 鈴木ドライバー">
+      </div>
+      <div class="field">
+        <label>ドライバーの連絡先</label>
+        <input type="tel" id="t-driver-tel" placeholder="090-0000-0000">
+      </div>
+    </div>
+
+    <!-- 品目 -->
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-list"></i>納品品目</div>
+      <table class="items-table">
+        <thead>
+          <tr><th>品目名</th><th>数量</th><th>単位</th><th></th></tr>
+        </thead>
+        <tbody id="ticket-items-body"></tbody>
+      </table>
+      <button class="add-item" onclick="addTicketItem()">
+        <i class="ti ti-plus"></i>品目を追加
+      </button>
+    </div>
+
+  </div>
+
+  <!-- ── ドライバー受取・電子署名画面 ── -->
+  <!-- ドライバーがLINE/SMSのリンクを開くとこの画面が表示される -->
+  <div id="page-driver" style="display:none">
+
+    <div class="driver-view">
+      <div class="dv-header">
+        <div class="dv-logo">Zaibase 電子伝票</div>
+        <div class="dv-title">納品伝票 No.T-2026-002</div>
+        <div class="dv-sub">この画面で場所を確認して受取サインをしてください</div>
+      </div>
+
+      <!-- 地図カード（置き場所） -->
+      <div class="map-card">
+        <div class="mc-map" onclick="openGoogleMaps()">
+          <div class="pin">📍</div>
+          <button class="mc-open-btn open-btn" onclick="event.stopPropagation();openGoogleMaps()">
+            <i class="ti ti-map-2"></i>Googleマップで開く
+          </button>
+        </div>
+        <div class="mc-info">
+          <div class="mc-addr">神奈川県横浜市中区山下町〇〇番地 南側搬入口</div>
+          <div class="mc-note">南側搬入口から入り、1階通路突き当たりの倉庫前に積み上げてください。赤いコーンが目印です。エレベーターは使用不可。</div>
+          <button class="route-btn" onclick="openRoute()">
+            <i class="ti ti-navigation" style="font-size:16px"></i>
+            ここへのルートを開く（Googleマップ）
+          </button>
+        </div>
+      </div>
+
+      <!-- 伝票詳細 -->
+      <div class="ticket-detail">
+        <div class="td-row"><span class="k">発注者</span><span class="v">株式会社〇〇建設</span></div>
+        <div class="td-row"><span class="k">現場名</span><span class="v">外壁タイル張り工事</span></div>
+        <div class="td-row"><span class="k">納品日時</span><span class="v">2026年6月20日 16:00</span></div>
+        <div class="td-row"><span class="k">品目</span><span class="v">ウレタン塗料 15缶・プライマー 5缶</span></div>
+        <div class="td-row"><span class="k">担当者連絡先</span><span class="v">山田 太郎 090-1234-5678</span></div>
+      </div>
+
+      <!-- 電子署名 -->
+      <div class="sign-area">
+        <div class="sign-label">受取サインをここに書いてください（指でなぞる）</div>
+        <div class="sign-canvas-wrap">
+          <canvas id="sign-canvas"></canvas>
+        </div>
+        <div class="sign-clear" onclick="clearSign()">署名をクリア</div>
+        <div class="sign-done-badge" id="sign-done-badge">
+          <i class="ti ti-circle-check" style="font-size:20px"></i>
+          署名が記録されました
+        </div>
+      </div>
+
+      <button class="btn btn-green" style="width:100%;padding:15px;font-size:16px;
+        border-radius:12px;margin-top:4px;" onclick="submitSign()">
+        <i class="ti ti-check"></i>受取を確認・署名する
+      </button>
+
+      <p style="font-size:11px;color:var(--muted);text-align:center;margin-top:10px;line-height:1.6;">
+        「受取を確認・署名する」を押すと電子署名と受取日時がZaibaseに記録されます。<br>
+        担当者（山田 太郎）に自動通知されます。
+      </p>
+    </div>
+  </div>
+
+</main>
+
+<!-- アクションバー（一覧） -->
+<div class="action-bar" id="bar-list">
+  <button class="btn btn-primary" onclick="showTab('new')" style="flex:none;width:100%">
+    <i class="ti ti-plus"></i>新しい電子伝票を作成
+  </button>
+</div>
+
+<!-- アクションバー（作成） -->
+<div class="action-bar" id="bar-new" style="display:none">
+  <button class="btn btn-secondary" onclick="saveDraft()">
+    <i class="ti ti-device-floppy"></i>下書き
+  </button>
+  <button class="btn btn-orange" onclick="sendTicket()">
+    <i class="ti ti-send"></i>送信する
+  </button>
+</div>
+
+<!-- アクションバー（ドライバー） -->
+<div class="action-bar" id="bar-driver" style="display:none" style="display:none">
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ── 電子署名キャンバス ─────────────────────────────────────────
+let isDrawing = false, hasSigned = false;
+const canvas = document.getElementById('sign-canvas');
+const ctx    = canvas.getContext('2d');
+
+function resizeCanvas() {
+  const wrap = canvas.parentElement;
+  canvas.width  = wrap.clientWidth;
+  canvas.height = wrap.clientHeight;
+  ctx.strokeStyle = '#1a2332';
+  ctx.lineWidth   = 2.5;
+  ctx.lineCap     = 'round';
+  ctx.lineJoin    = 'round';
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+function getPos(e) {
+  const r = canvas.getBoundingClientRect();
+  const src = e.touches ? e.touches[0] : e;
+  return { x: src.clientX - r.left, y: src.clientY - r.top };
+}
+
+canvas.addEventListener('mousedown',  e => { isDrawing=true; ctx.beginPath(); const p=getPos(e); ctx.moveTo(p.x,p.y); });
+canvas.addEventListener('mousemove',  e => { if(!isDrawing) return; const p=getPos(e); ctx.lineTo(p.x,p.y); ctx.stroke(); hasSigned=true; });
+canvas.addEventListener('mouseup',    ()=>{ isDrawing=false; });
+canvas.addEventListener('touchstart', e => { e.preventDefault(); isDrawing=true; ctx.beginPath(); const p=getPos(e); ctx.moveTo(p.x,p.y); }, {passive:false});
+canvas.addEventListener('touchmove',  e => { e.preventDefault(); if(!isDrawing) return; const p=getPos(e); ctx.lineTo(p.x,p.y); ctx.stroke(); hasSigned=true; }, {passive:false});
+canvas.addEventListener('touchend',   ()=>{ isDrawing=false; });
+
+function clearSign() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  hasSigned = false;
+  document.getElementById('sign-done-badge').classList.remove('show');
+}
+
+function submitSign() {
+  if (!hasSigned) {
+    showToast('署名してからボタンを押してください');
+    return;
+  }
+  // 署名データをFirestoreに保存
+  // const signatureData = canvas.toDataURL('image/png');
+  // await db.collection('deliveryTickets').doc(ticketId).update({
+  //   signatureData, signedAt: serverTimestamp(), signedBy: driverName,
+  //   status: 'signed'
+  // });
+  // 担当者にFCM通知 + メール
+  document.getElementById('sign-done-badge').classList.add('show');
+  showToast('受取確認が完了しました。担当者に通知しました');
+  setTimeout(() => showTab('list'), 2000);
+}
+
+// ── 伝票品目 ─────────────────────────────────────────────────
+let ticketItems = [
+  {id:1, name:'ウレタン塗料', qty:15, unit:'缶'},
+  {id:2, name:'プライマー',   qty:5,  unit:'缶'},
+];
+
+function addTicketItem(data={}) {
+  ticketItems.push({id:Date.now(), name:data.name||'', qty:data.qty||1, unit:data.unit||'個'});
+  renderTicketItems();
+}
+function removeTicketItem(id) {
+  ticketItems = ticketItems.filter(i=>i.id!==id);
+  renderTicketItems();
+}
+function renderTicketItems() {
+  document.getElementById('ticket-items-body').innerHTML = ticketItems.map(item=>`
+    <tr>
+      <td><input type="text" value="${item.name}" placeholder="品目名"
+        oninput="updateTItem(${item.id},'name',this.value)"></td>
+      <td><input type="number" value="${item.qty}" min="1" style="text-align:right"
+        oninput="updateTItem(${item.id},'qty',+this.value)"></td>
+      <td><input type="text" value="${item.unit}" style="width:60px"
+        oninput="updateTItem(${item.id},'unit',this.value)"></td>
+      <td><button class="del-btn" onclick="removeTicketItem(${item.id})">
+        <i class="ti ti-x"></i></button></td>
+    </tr>`).join('');
+}
+renderTicketItems();
+function updateTItem(id,key,val){const i=ticketItems.find(t=>t.id===id);if(i)i[key]=val;}
+
+// ── 送信方法選択 ─────────────────────────────────────────────
+let selectedSend = 'line';
+function selectSend(method) {
+  selectedSend = method;
+  ['line','sms','qr'].forEach(m=>{
+    document.getElementById('send-'+m).classList.toggle('active', m===method);
+  });
+}
+
+// ── 送信 ────────────────────────────────────────────────────
+function sendTicket() {
+  const supplier = document.getElementById('t-supplier').value.trim();
+  if (!supplier) { showToast('納入業者名を入力してください'); return; }
+
+  // 電子伝票URLを生成（Firestore保存後にユニークURL発行）
+  // const ticketUrl = `https://zaibase.jp/ticket/${ticketId}`;
+  // const mapUrl    = `https://maps.google.com/maps?q=${lat},${lng}`;
+  // const message   = `【Zaibase】納品伝票\n置き場所：${mapUrl}\n伝票確認・署名：${ticketUrl}`;
+
+  if (selectedSend === 'line') {
+    // window.open(`https://line.me/R/share?text=${encodeURIComponent(message)}`);
+    showToast('LINEアプリで伝票URLを送信します');
+  } else if (selectedSend === 'sms') {
+    const tel = document.getElementById('driver-tel').value;
+    // window.open(`sms:${tel}?body=${encodeURIComponent(message)}`);
+    showToast(`${tel || 'ドライバー'} にSMSで送信します`);
+  } else {
+    showToast('QRコードを表示します。ドライバーにスキャンしてもらってください');
+  }
+  setTimeout(() => showTab('list'), 1500);
+}
+
+function saveDraft()   { showToast('下書きを保存しました'); }
+function resendLink()  { showToast('ドライバーに伝票リンクを再送しました'); }
+function openMap()     { showToast('Googleマップで場所を選択'); }
+function updateMap()   { showToast('地図を更新しました'); }
+function copyMapLink() {
+  // navigator.clipboard.writeText(`https://maps.google.com/maps?q=35.444,...`);
+  showToast('Googleマップリンクをコピーしました');
+}
+function openGoogleMaps() { showToast('Googleマップを開きます'); }
+function openRoute()      {
+  // window.open(`https://www.google.com/maps/dir/?api=1&destination=35.44,139.64`);
+  showToast('Googleマップでルートを開きます');
+}
+
+// ── タブ切替 ─────────────────────────────────────────────────
+function showTab(tab) {
+  ['list','new','driver'].forEach(t=>{
+    document.getElementById('page-'+t).style.display = t===tab?'block':'none';
+    document.getElementById('tab-'+t).classList.toggle('act', t===tab);
+    document.getElementById('bar-'+t).style.display  = t===tab?'flex':'none';
+  });
+}
+
+// ── 初期設定 ─────────────────────────────────────────────────
+const dt = new Date(); dt.setMinutes(dt.getMinutes()-dt.getTimezoneOffset());
+document.getElementById('t-datetime').value = dt.toISOString().slice(0,16);
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.className = 'toast show';
+  setTimeout(()=>t.className='toast', 2800);
+}
+</script>
+</body>
+</html>

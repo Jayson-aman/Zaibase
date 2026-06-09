@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>現場写真・報告書 — Zaibase</title>
+<style>
+  :root{--navy:#1a3c5e;--orange:#e8a020;--bg:#f4f6f8;--card:#fff;
+    --text:#1a2332;--muted:#6b7c93;--border:#dce3ea;--green:#1d9e75;--red:#e24b4a;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+    background:var(--bg);color:var(--text);min-height:100dvh;
+    display:flex;flex-direction:column;padding-bottom:80px;}
+
+  header{background:var(--navy);padding:13px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0;}
+  .back{color:rgba(255,255,255,.7);font-size:22px;cursor:pointer;}
+  .hd-title{color:#fff;font-size:17px;font-weight:700;margin:0 auto;}
+  .hd-right{color:rgba(255,255,255,.8);font-size:13px;font-weight:600;cursor:pointer;}
+
+  .tabs{background:var(--card);border-bottom:1px solid var(--border);
+    display:flex;padding:0 16px;position:sticky;top:0;z-index:9;}
+  .tab{padding:12px 14px;font-size:13px;font-weight:500;color:var(--muted);
+    cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;}
+  .tab.act{color:var(--navy);border-bottom-color:var(--navy);font-weight:700;}
+
+  main{flex:1;padding:14px;max-width:560px;margin:0 auto;width:100%;}
+
+  /* ── 写真撮影・アップロード ── */
+  .upload-area{border:2px dashed var(--border);border-radius:14px;padding:28px 20px;
+    text-align:center;cursor:pointer;background:var(--card);margin-bottom:14px;
+    transition:.15s;}
+  .upload-area:active{background:var(--bg);}
+  .ua-icon{font-size:40px;color:var(--muted);margin-bottom:8px;}
+  .ua-title{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+  .ua-sub{font-size:12px;color:var(--muted);line-height:1.6;}
+  .ua-btn-row{display:flex;gap:8px;margin-top:14px;justify-content:center;}
+  .ua-btn{padding:10px 18px;border-radius:9px;font-size:13px;font-weight:700;
+    border:none;cursor:pointer;display:flex;align-items:center;gap:6px;}
+  .ua-btn.camera{background:var(--navy);color:#fff;}
+  .ua-btn.album{background:var(--bg);color:var(--navy);border:1px solid var(--border);}
+
+  /* AI解析中 */
+  .analyzing-banner{display:none;background:#f0f5fa;border:1px solid #b8d0e8;
+    border-radius:12px;padding:14px;margin-bottom:14px;
+    align-items:center;gap:12px;}
+  .analyzing-banner.show{display:flex;}
+  .ab-spinner{width:28px;height:28px;border-radius:50%;border:3px solid var(--border);
+    border-top-color:var(--navy);animation:spin .7s linear infinite;flex-shrink:0;}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .ab-text{font-size:13px;color:var(--navy);font-weight:500;}
+  .ab-sub{font-size:11px;color:var(--muted);margin-top:2px;}
+
+  /* 写真グリッド */
+  .photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:14px;}
+  .photo-item{aspect-ratio:1;border-radius:10px;overflow:hidden;position:relative;cursor:pointer;}
+  .photo-item img{width:100%;height:100%;object-fit:cover;}
+  .photo-item .pi-overlay{position:absolute;inset:0;background:rgba(0,0,0,.45);
+    display:flex;flex-direction:column;justify-content:flex-end;padding:6px;}
+  .pi-tag{display:inline-block;padding:2px 6px;border-radius:5px;
+    font-size:10px;font-weight:700;color:#fff;margin-bottom:2px;}
+  .pi-tag.before{background:var(--orange);}
+  .pi-tag.progress{background:var(--navy);}
+  .pi-tag.after{background:var(--green);}
+  .pi-tag.safety{background:var(--red);}
+  .pi-name{font-size:10px;color:rgba(255,255,255,.85);
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .pi-check{position:absolute;top:6px;right:6px;width:20px;height:20px;
+    border-radius:50%;background:var(--green);display:none;align-items:center;
+    justify-content:center;font-size:11px;color:#fff;}
+  .photo-item.selected .pi-check{display:flex;}
+  .photo-item.selected::after{content:'';position:absolute;inset:0;
+    border:3px solid var(--green);border-radius:10px;}
+
+  /* AIタグ付け結果 */
+  .ai-result{background:var(--card);border-radius:14px;border:1px solid var(--border);
+    padding:14px;margin-bottom:12px;display:none;}
+  .ai-result.show{display:block;}
+  .ar-header{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+  .ar-icon{width:28px;height:28px;border-radius:50%;background:var(--navy);
+    display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff;}
+  .ar-title{font-size:13px;font-weight:700;color:var(--navy);}
+  .ar-sub{font-size:11px;color:var(--muted);}
+  .tag-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px;}
+  .ai-tag{padding:4px 10px;border-radius:12px;font-size:12px;font-weight:600;cursor:pointer;}
+  .ai-tag.work{background:#e8f0fa;color:var(--navy);}
+  .ai-tag.loc {background:#e8f8f2;color:var(--green);}
+  .ai-tag.date{background:#fff8e0;color:#7a5a00;}
+  .ai-tag.issue{background:#fde8e8;color:var(--red);}
+  .ai-caption{font-size:12px;color:var(--muted);line-height:1.6;
+    background:var(--bg);border-radius:8px;padding:8px 10px;margin-top:6px;}
+
+  /* セクション */
+  .section{background:var(--card);border-radius:14px;border:1px solid var(--border);
+    padding:16px;margin-bottom:12px;}
+  .sec-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:12px;
+    display:flex;align-items:center;gap:6px;}
+  .sec-title i{font-size:17px;color:var(--orange);}
+
+  /* 報告書設定 */
+  .field{margin-bottom:12px;}
+  .field label{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-bottom:4px;}
+  input,select,textarea{width:100%;height:42px;border:1px solid var(--border);border-radius:8px;
+    padding:0 11px;font-size:14px;color:var(--text);background:var(--card);
+    appearance:none;font-family:inherit;}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy);}
+  textarea{height:70px;padding:9px 11px;resize:none;line-height:1.6;}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+
+  /* 報告書プレビュー */
+  .report-preview{background:#fafbfc;border:1px solid var(--border);border-radius:10px;
+    padding:16px;margin-top:10px;}
+  .rp-header{text-align:center;margin-bottom:12px;padding-bottom:10px;
+    border-bottom:2px solid var(--navy);}
+  .rp-logo{font-size:11px;color:var(--muted);margin-bottom:4px;}
+  .rp-title{font-size:16px;font-weight:800;color:var(--navy);}
+  .rp-meta{font-size:11px;color:var(--muted);margin-top:4px;}
+  .rp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:10px;}
+  .rp-photo{aspect-ratio:4/3;border-radius:8px;overflow:hidden;background:var(--bg);
+    position:relative;}
+  .rp-photo img{width:100%;height:100%;object-fit:cover;}
+  .rp-photo-cap{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.55);
+    padding:4px 7px;font-size:10px;color:#fff;}
+  .rp-comment{font-size:12px;color:var(--text);line-height:1.7;
+    background:var(--card);border-radius:8px;padding:10px 12px;border:1px solid var(--border);}
+
+  /* 過去の報告書 */
+  .report-card{display:flex;align-items:center;gap:10px;padding:12px 0;
+    border-bottom:1px solid var(--bg);cursor:pointer;}
+  .report-card:last-child{border-bottom:none;}
+  .rc-icon{width:40px;height:40px;border-radius:8px;background:#f0f5fa;
+    display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+  .rc-info{flex:1;min-width:0;}
+  .rc-title{font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .rc-meta{font-size:11px;color:var(--muted);margin-top:2px;}
+  .rc-right{display:flex;gap:6px;flex-shrink:0;}
+  .rc-btn{padding:5px 10px;border-radius:7px;font-size:11px;font-weight:600;
+    border:1px solid var(--border);background:var(--card);cursor:pointer;
+    display:flex;align-items:center;gap:3px;}
+
+  /* アクションバー */
+  .action-bar{position:fixed;bottom:0;left:0;right:0;background:var(--card);
+    border-top:1px solid var(--border);padding:12px 16px;display:flex;gap:8px;
+    padding-bottom:calc(12px + env(safe-area-inset-bottom));}
+  .btn{flex:1;padding:13px;border-radius:10px;font-size:14px;font-weight:700;
+    border:none;cursor:pointer;transition:.15s;display:flex;align-items:center;
+    justify-content:center;gap:6px;}
+  .btn:active{transform:scale(.97);}
+  .btn-secondary{background:var(--bg);color:var(--navy);border:1px solid var(--border);}
+  .btn-primary{background:var(--navy);color:#fff;}
+  .btn-green{background:var(--green);color:#fff;}
+
+  .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(60px);
+    background:var(--text);color:#fff;padding:11px 20px;border-radius:22px;
+    font-size:13px;font-weight:500;transition:transform .3s;z-index:99;white-space:nowrap;}
+  .toast.show{transform:translateX(-50%) translateY(0);}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+
+<header>
+  <span class="back" onclick="history.back()"><i class="ti ti-arrow-left"></i></span>
+  <span class="hd-title">現場写真・報告書</span>
+  <span class="hd-right" onclick="showTab('reports')">報告書一覧</span>
+</header>
+
+<div class="tabs">
+  <div class="tab act" id="tab-photos" onclick="showTab('photos')">
+    <i class="ti ti-camera" style="font-size:14px;vertical-align:-2px"></i> 写真管理
+  </div>
+  <div class="tab" id="tab-create" onclick="showTab('create')">
+    <i class="ti ti-file-description" style="font-size:14px;vertical-align:-2px"></i> 報告書作成
+  </div>
+  <div class="tab" id="tab-reports" onclick="showTab('reports')">
+    <i class="ti ti-files" style="font-size:14px;vertical-align:-2px"></i> 一覧
+  </div>
+</div>
+
+<main>
+
+  <!-- ── 写真管理タブ ── -->
+  <div id="page-photos">
+
+    <!-- アップロードエリア -->
+    <div class="upload-area" onclick="triggerUpload()">
+      <div class="ua-icon"><i class="ti ti-camera-plus"></i></div>
+      <div class="ua-title">写真をアップロード</div>
+      <div class="ua-sub">AIが工種・工程・場所を自動判定してタグ付けします<br>複数枚まとめてアップロード可</div>
+      <div class="ua-btn-row">
+        <button class="ua-btn camera" onclick="event.stopPropagation();takePhoto()">
+          <i class="ti ti-camera"></i>撮影
+        </button>
+        <button class="ua-btn album" onclick="event.stopPropagation();triggerUpload()">
+          <i class="ti ti-photo"></i>アルバムから選択
+        </button>
+      </div>
+    </div>
+    <input type="file" id="file-input" multiple accept="image/*" style="display:none"
+      onchange="handleUpload(this)">
+
+    <!-- AI解析中バナー -->
+    <div class="analyzing-banner" id="analyzing-banner">
+      <div class="ab-spinner"></div>
+      <div>
+        <div class="ab-text">AIが写真を解析中...</div>
+        <div class="ab-sub">工種・工程・問題箇所を自動判定しています</div>
+      </div>
+    </div>
+
+    <!-- AI解析結果 -->
+    <div class="ai-result" id="ai-result">
+      <div class="ar-header">
+        <div class="ar-icon"><i class="ti ti-sparkles"></i></div>
+        <div>
+          <div class="ar-title">AI解析完了</div>
+          <div class="ar-sub" id="ar-sub">3枚の写真を解析しました</div>
+        </div>
+      </div>
+      <div class="tag-row" id="ai-tags"></div>
+      <div class="ai-caption" id="ai-caption"></div>
+    </div>
+
+    <!-- 写真グリッド -->
+    <div class="section">
+      <div class="sec-title">
+        <i class="ti ti-photo"></i>
+        <span>外壁タイル張り工事（2026年6月）</span>
+      </div>
+      <!-- フィルターチップ -->
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <div style="padding:4px 10px;border-radius:12px;font-size:11px;font-weight:600;
+          background:var(--navy);color:#fff;cursor:pointer">すべて</div>
+        <div style="padding:4px 10px;border-radius:12px;font-size:11px;font-weight:600;
+          background:#fff3e0;color:#8a4a00;cursor:pointer">施工前</div>
+        <div style="padding:4px 10px;border-radius:12px;font-size:11px;font-weight:600;
+          background:#e8f0fa;color:var(--navy);cursor:pointer">施工中</div>
+        <div style="padding:4px 10px;border-radius:12px;font-size:11px;font-weight:600;
+          background:#e8f8f2;color:var(--green);cursor:pointer">施工後</div>
+        <div style="padding:4px 10px;border-radius:12px;font-size:11px;font-weight:600;
+          background:#fde8e8;color:var(--red);cursor:pointer">不具合</div>
+      </div>
+      <div class="photo-grid" id="photo-grid"></div>
+      <p style="font-size:12px;color:var(--muted);text-align:center;padding:8px 0;">
+        写真をタップして選択 → 報告書に追加できます
+      </p>
+    </div>
+  </div>
+
+  <!-- ── 報告書作成タブ ── -->
+  <div id="page-create" style="display:none">
+
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-file-description"></i>報告書の基本情報</div>
+      <div class="field">
+        <label>報告書の種類</label>
+        <select id="report-type" onchange="updateReportType()">
+          <option value="daily">日報（工事日報）</option>
+          <option value="progress">工程報告書</option>
+          <option value="completion">工事完了報告書</option>
+          <option value="inspection">検査・確認報告書</option>
+        </select>
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label>工事名</label>
+          <input type="text" id="r-work" value="外壁タイル張り工事">
+        </div>
+        <div class="field">
+          <label>報告日</label>
+          <input type="date" id="r-date">
+        </div>
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label>発注者名</label>
+          <input type="text" id="r-client" placeholder="株式会社〇〇建設">
+        </div>
+        <div class="field">
+          <label>作業者名</label>
+          <input type="text" id="r-worker" value="山田 太郎">
+        </div>
+      </div>
+      <div class="field">
+        <label>作業内容・進捗</label>
+        <textarea id="r-progress"
+          placeholder="例：3階東面タイル張り工事 120㎡中 85㎡完了（進捗71%）。残り東面上部35㎡は明日完了予定。"></textarea>
+      </div>
+    </div>
+
+    <!-- 写真選択 -->
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-photo"></i>報告書に含める写真</div>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:10px;">
+        写真管理タブで選択した写真が自動追加されます
+      </p>
+      <div class="photo-grid" id="selected-photos-grid"></div>
+      <button style="width:100%;padding:10px;background:var(--bg);border:1px dashed var(--border);
+        border-radius:8px;font-size:13px;color:var(--muted);cursor:pointer;
+        display:flex;align-items:center;justify-content:center;gap:6px;margin-top:6px;"
+        onclick="showTab('photos')">
+        <i class="ti ti-plus"></i>写真を選択する
+      </button>
+    </div>
+
+    <!-- AI文章生成 -->
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-sparkles"></i>AIで報告文を自動生成</div>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:10px;">
+        写真と作業内容をもとにAIが報告文を生成します
+      </p>
+      <button style="width:100%;padding:12px;background:#f0f5fa;border:1.5px solid #b8d0e8;
+        border-radius:10px;font-size:14px;font-weight:700;color:var(--navy);cursor:pointer;
+        display:flex;align-items:center;justify-content:center;gap:7px;"
+        onclick="generateReport()">
+        <i class="ti ti-sparkles"></i>AIで報告文を生成する
+      </button>
+      <div id="generated-text" style="display:none;margin-top:10px;">
+        <div style="font-size:12px;font-weight:600;color:var(--muted);margin-bottom:6px;">生成された報告文</div>
+        <textarea id="r-generated" style="height:120px;font-size:13px;line-height:1.7;"></textarea>
+      </div>
+    </div>
+
+    <!-- プレビュー -->
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-eye"></i>プレビュー</div>
+      <div class="report-preview">
+        <div class="rp-header">
+          <div class="rp-logo">Zaibase 工事報告書</div>
+          <div class="rp-title" id="rp-title">工事日報</div>
+          <div class="rp-meta" id="rp-meta">外壁タイル張り工事 ・ 2026年6月20日 ・ 山田 太郎</div>
+        </div>
+        <div class="rp-grid" id="rp-photos"></div>
+        <div class="rp-comment" id="rp-comment">
+          作業内容・進捗をここに記入すると報告書に反映されます。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 報告書一覧タブ ── -->
+  <div id="page-reports" style="display:none">
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-files"></i>過去の報告書</div>
+      <div class="report-card">
+        <div class="rc-icon">📋</div>
+        <div class="rc-info">
+          <div class="rc-title">工事日報 6/20 — 外壁タイル張り工事</div>
+          <div class="rc-meta">写真8枚 ・ AI生成 ・ 株式会社〇〇建設</div>
+        </div>
+        <div class="rc-right">
+          <button class="rc-btn" onclick="showToast('PDFをダウンロード')">
+            <i class="ti ti-download"></i>PDF
+          </button>
+          <button class="rc-btn" onclick="showToast('メールで送付')">
+            <i class="ti ti-send"></i>送付
+          </button>
+        </div>
+      </div>
+      <div class="report-card">
+        <div class="rc-icon">✅</div>
+        <div class="rc-info">
+          <div class="rc-title">工事完了報告書 — 防水・シーリング工事</div>
+          <div class="rc-meta">写真12枚 ・ AI生成 ・ □□不動産管理株式会社</div>
+        </div>
+        <div class="rc-right">
+          <button class="rc-btn" onclick="showToast('PDFをダウンロード')">
+            <i class="ti ti-download"></i>PDF
+          </button>
+          <button class="rc-btn" onclick="showToast('メールで送付')">
+            <i class="ti ti-send"></i>送付
+          </button>
+        </div>
+      </div>
+      <div class="report-card">
+        <div class="rc-icon">📊</div>
+        <div class="rc-info">
+          <div class="rc-title">工程報告書 6/15 — タイル張り工事 進捗71%</div>
+          <div class="rc-meta">写真5枚 ・ 手動作成</div>
+        </div>
+        <div class="rc-right">
+          <button class="rc-btn" onclick="showToast('PDFをダウンロード')">
+            <i class="ti ti-download"></i>PDF
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- アクションバー（写真タブ） -->
+<div class="action-bar" id="bar-photos">
+  <button class="btn btn-secondary" onclick="selectAll()">
+    <i class="ti ti-select-all"></i>全選択
+  </button>
+  <button class="btn btn-primary" onclick="addToReport()">
+    <i class="ti ti-file-plus"></i>報告書に追加
+  </button>
+</div>
+<!-- アクションバー（作成タブ） -->
+<div class="action-bar" id="bar-create" style="display:none">
+  <button class="btn btn-secondary" onclick="showToast('下書きを保存しました')">
+    <i class="ti ti-device-floppy"></i>保存
+  </button>
+  <button class="btn btn-primary" onclick="showToast('PDFを生成しています...')">
+    <i class="ti ti-download"></i>PDF出力
+  </button>
+  <button class="btn btn-green" onclick="showToast('発注者にメールで送付しました')">
+    <i class="ti ti-send"></i>送付
+  </button>
+</div>
+<!-- アクションバー（一覧タブ） -->
+<div class="action-bar" id="bar-reports" style="display:none">
+  <button class="btn btn-primary" onclick="showTab('create')" style="flex:none;width:100%">
+    <i class="ti ti-plus"></i>新しい報告書を作成
+  </button>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ── デモ写真データ ──────────────────────────────────────────
+const DEMO_PHOTOS = [
+  { id:1, tag:'before',   label:'施工前', name:'東面 下地確認',     color:'#e8954a', sel:false },
+  { id:2, tag:'before',   label:'施工前', name:'南面 既存タイル',   color:'#7a9ab5', sel:false },
+  { id:3, tag:'progress', label:'施工中', name:'東面 タイル張り中', color:'#4a8a7a', sel:true  },
+  { id:4, tag:'progress', label:'施工中', name:'足場状況確認',      color:'#6a7a9a', sel:false },
+  { id:5, tag:'after',    label:'施工後', name:'東面 完成',         color:'#3a8a5a', sel:true  },
+  { id:6, tag:'safety',   label:'不具合', name:'目地 浮き箇所',     color:'#9a4a4a', sel:false },
+];
+
+function renderPhotos() {
+  document.getElementById('photo-grid').innerHTML = DEMO_PHOTOS.map(p => `
+    <div class="photo-item ${p.sel?'selected':''}" onclick="togglePhoto(${p.id})">
+      <div style="width:100%;height:100%;background:${p.color};
+        display:flex;align-items:center;justify-content:center;">
+        <i class="ti ti-photo" style="font-size:28px;color:rgba(255,255,255,.5)"></i>
+      </div>
+      <div class="pi-overlay">
+        <span class="pi-tag ${p.tag}">${p.label}</span>
+        <div class="pi-name">${p.name}</div>
+      </div>
+      <div class="pi-check"><i class="ti ti-check"></i></div>
+    </div>`).join('');
+
+  // 報告書タブの選択済み写真
+  const sel = DEMO_PHOTOS.filter(p => p.sel);
+  document.getElementById('selected-photos-grid').innerHTML = sel.map(p => `
+    <div class="photo-item">
+      <div style="width:100%;height:100%;background:${p.color};
+        display:flex;align-items:center;justify-content:center;">
+        <i class="ti ti-photo" style="font-size:28px;color:rgba(255,255,255,.5)"></i>
+      </div>
+      <div class="pi-overlay">
+        <span class="pi-tag ${p.tag}">${p.label}</span>
+        <div class="pi-name">${p.name}</div>
+      </div>
+    </div>`).join('');
+
+  // プレビュー写真
+  document.getElementById('rp-photos').innerHTML = sel.slice(0,4).map(p => `
+    <div class="rp-photo">
+      <div style="width:100%;height:100%;background:${p.color};
+        display:flex;align-items:center;justify-content:center;">
+        <i class="ti ti-photo" style="font-size:24px;color:rgba(255,255,255,.4)"></i>
+      </div>
+      <div class="rp-photo-cap">${p.name}</div>
+    </div>`).join('');
+}
+renderPhotos();
+
+function togglePhoto(id) {
+  const p = DEMO_PHOTOS.find(ph => ph.id === id);
+  if (p) { p.sel = !p.sel; renderPhotos(); }
+}
+function selectAll() {
+  DEMO_PHOTOS.forEach(p => p.sel = true);
+  renderPhotos();
+  showToast('すべての写真を選択しました');
+}
+function addToReport() {
+  const n = DEMO_PHOTOS.filter(p => p.sel).length;
+  showToast(`${n}枚の写真を報告書に追加しました`);
+  showTab('create');
+}
+
+// ── ファイルアップロード（デモ） ──────────────────────────────
+function triggerUpload() { document.getElementById('file-input').click(); }
+function takePhoto()     { showToast('カメラを起動します'); }
+function handleUpload(input) {
+  if (!input.files.length) return;
+  const banner = document.getElementById('analyzing-banner');
+  banner.classList.add('show');
+  setTimeout(() => {
+    banner.classList.remove('show');
+    showAiResult(input.files.length);
+  }, 2200);
+}
+
+function showAiResult(count) {
+  const result = document.getElementById('ai-result');
+  result.classList.add('show');
+  document.getElementById('ar-sub').textContent = `${count}枚の写真を解析しました`;
+  document.getElementById('ai-tags').innerHTML = `
+    <span class="ai-tag work">タイル工事</span>
+    <span class="ai-tag loc">3階東面</span>
+    <span class="ai-tag date">施工中</span>
+    <span class="ai-tag issue">目地浮き：1箇所検出</span>`;
+  document.getElementById('ai-caption').textContent =
+    'AIの判定：外壁タイル張り工事の施工中写真です。3階東面のタイル貼り付け作業が確認できます。' +
+    '1枚目に目地の浮きと思われる箇所が検出されました。要確認をお勧めします。';
+  showToast('AI解析が完了しました');
+}
+
+// ── AI報告文生成 ──────────────────────────────────────────────
+async function generateReport() {
+  const progress = document.getElementById('r-progress').value;
+  const work     = document.getElementById('r-work').value;
+  const worker   = document.getElementById('r-worker').value;
+  const date     = document.getElementById('r-date').value;
+
+  showToast('AIが報告文を生成中...');
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        system: `あなたは建設業の現場報告書作成AIです。
+作業者から受け取った情報をもとに、発注者に提出できる丁寧で具体的な工事日報の報告文を作成してください。
+200〜300字程度でまとめてください。敬語・ビジネス文体で書いてください。`,
+        messages: [{
+          role: 'user',
+          content: `以下の情報から工事日報の報告文を作成してください。
+工事名：${work}
+作業日：${date}
+作業者：${worker}
+作業内容・進捗：${progress || '本日の作業を実施しました。'}`
+        }]
+      })
+    });
+    const data = await res.json();
+    const text = data.content?.[0]?.text || '';
+    document.getElementById('r-generated').value = text;
+    document.getElementById('generated-text').style.display = 'block';
+    document.getElementById('rp-comment').textContent = text;
+    showToast('報告文を生成しました');
+  } catch(e) {
+    const fallback =
+      `${date} の${work}における作業報告を申し上げます。\n` +
+      `本日は${worker}が${progress || '所定の作業'}を実施いたしました。\n` +
+      `引き続き安全第一で工事を進めてまいります。何卒よろしくお願いいたします。`;
+    document.getElementById('r-generated').value = fallback;
+    document.getElementById('generated-text').style.display = 'block';
+    document.getElementById('rp-comment').textContent = fallback;
+    showToast('報告文を生成しました（デモ）');
+  }
+}
+
+// ── 報告書タイプ変更 ─────────────────────────────────────────
+function updateReportType() {
+  const types = {
+    daily:'工事日報', progress:'工程報告書',
+    completion:'工事完了報告書', inspection:'検査・確認報告書'
+  };
+  document.getElementById('rp-title').textContent =
+    types[document.getElementById('report-type').value];
+}
+
+// ── タブ切替 ─────────────────────────────────────────────────
+function showTab(tab) {
+  ['photos','create','reports'].forEach(t => {
+    document.getElementById('page-'   +t).style.display = t===tab?'block':'none';
+    document.getElementById('tab-'    +t).classList.toggle('act', t===tab);
+    document.getElementById('bar-'    +t).style.display = t===tab?'flex':'none';
+  });
+}
+
+// ── 初期設定 ─────────────────────────────────────────────────
+const today = new Date().toISOString().slice(0,10);
+document.getElementById('r-date').value = today;
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.className = 'toast show';
+  setTimeout(() => t.className = 'toast', 2600);
+}
+</script>
+</body>
+</html>

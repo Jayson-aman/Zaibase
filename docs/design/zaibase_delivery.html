@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI搬入管理 — Zaibase</title>
+<style>
+  :root{--navy:#1a3c5e;--orange:#e8a020;--bg:#f4f6f8;--card:#fff;
+    --text:#1a2332;--muted:#6b7c93;--border:#dce3ea;--green:#1d9e75;--red:#e24b4a;
+    --amber:#f59e0b;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+    background:var(--bg);color:var(--text);min-height:100dvh;display:flex;
+    flex-direction:column;padding-bottom:24px;}
+
+  header{background:var(--navy);padding:13px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0;}
+  .back{color:rgba(255,255,255,.7);font-size:22px;cursor:pointer;}
+  .hd-title{color:#fff;font-size:17px;font-weight:700;margin:0 auto;}
+  .hd-qr{background:var(--orange);color:#fff;border:none;border-radius:7px;
+    padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer;
+    display:flex;align-items:center;gap:4px;}
+
+  .tabs{background:var(--card);border-bottom:1px solid var(--border);
+    display:flex;padding:0 16px;position:sticky;top:0;z-index:9;}
+  .tab{padding:11px 12px;font-size:12px;font-weight:500;color:var(--muted);
+    cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;}
+  .tab.act{color:var(--navy);border-bottom-color:var(--navy);font-weight:700;}
+
+  main{flex:1;padding:14px;max-width:580px;margin:0 auto;width:100%;}
+
+  /* ── AI入力エリア ── */
+  .ai-box{background:#f0f5fa;border:1.5px solid #b8d0e8;border-radius:14px;
+    padding:15px;margin-bottom:14px;}
+  .ai-hd{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+  .ai-icon{width:30px;height:30px;border-radius:50%;background:var(--navy);
+    display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;flex-shrink:0;}
+  .ai-label{font-size:13px;font-weight:700;color:var(--navy);}
+  .ai-sub{font-size:11px;color:var(--muted);}
+  .ai-row{display:flex;gap:8px;}
+  .ai-ta{flex:1;border:1px solid var(--border);border-radius:10px;padding:9px 12px;
+    font-size:14px;color:var(--text);background:var(--card);font-family:inherit;
+    resize:none;height:72px;line-height:1.6;}
+  .ai-ta:focus{outline:none;border-color:var(--navy);}
+  .ai-go{width:42px;height:42px;border-radius:9px;background:var(--navy);
+    border:none;color:#fff;font-size:19px;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;align-self:flex-end;}
+  .ai-chips{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px;}
+  .ai-chip{padding:5px 10px;border-radius:12px;font-size:11px;font-weight:500;
+    border:1px solid #b8d0e8;background:var(--card);color:var(--navy);
+    cursor:pointer;white-space:nowrap;}
+
+  /* ローディング */
+  .loading-bar{display:none;align-items:center;gap:10px;padding:10px 0;}
+  .loading-bar.show{display:flex;}
+  .ld-dot{width:7px;height:7px;border-radius:50%;background:var(--navy);
+    animation:ldot .7s infinite;}
+  .ld-dot:nth-child(2){animation-delay:.15s;}
+  .ld-dot:nth-child(3){animation-delay:.3s;}
+  @keyframes ldot{0%,100%{transform:scale(1)}50%{transform:scale(1.5)}}
+
+  /* ステータスバー */
+  .status-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px;}
+  .sc{background:var(--card);border-radius:10px;border:1px solid var(--border);
+    padding:10px 8px;text-align:center;}
+  .sc .n{font-size:20px;font-weight:800;color:var(--navy);}
+  .sc .l{font-size:10px;color:var(--muted);margin-top:2px;}
+  .sc.alert .n{color:var(--red);}
+  .sc.warn  .n{color:var(--amber);}
+
+  /* 搬入スケジュール */
+  .section{background:var(--card);border-radius:14px;border:1px solid var(--border);
+    padding:15px;margin-bottom:12px;}
+  .sec-hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;}
+  .sec-title{font-size:14px;font-weight:700;color:var(--navy);
+    display:flex;align-items:center;gap:6px;}
+  .sec-title i{font-size:17px;color:var(--orange);}
+  .sec-more{font-size:12px;color:var(--navy);font-weight:600;cursor:pointer;}
+
+  /* 搬入カード */
+  .delivery-card{border:1px solid var(--border);border-radius:11px;
+    padding:12px;margin-bottom:9px;cursor:pointer;transition:.15s;}
+  .delivery-card:active{transform:scale(.99);}
+  .delivery-card.urgent{border-left:3px solid var(--orange);}
+  .delivery-card.done{opacity:.65;}
+  .dc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:7px;}
+  .dc-title{font-size:14px;font-weight:700;flex:1;margin-right:8px;line-height:1.35;}
+  .dc-status{padding:3px 8px;border-radius:8px;font-size:11px;font-weight:600;white-space:nowrap;}
+  .s-scheduled{background:#e8f4ff;color:var(--navy);}
+  .s-transit  {background:#fff8e0;color:#7a5a00;}
+  .s-arriving {background:#fff3e0;color:#8a4a00;}
+  .s-done     {background:#e8f8f2;color:var(--green);}
+  .s-delayed  {background:#fde8e8;color:var(--red);}
+  .dc-meta{display:flex;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--muted);margin-bottom:8px;}
+  .dc-meta span{display:flex;align-items:center;gap:3px;}
+  .dc-meta i{font-size:13px;}
+  .dc-bottom{display:flex;justify-content:space-between;align-items:center;
+    padding-top:8px;border-top:1px solid var(--bg);}
+  .dc-items{font-size:12px;color:var(--text);font-weight:500;}
+  .dc-actions{display:flex;gap:6px;}
+  .dc-btn{padding:5px 10px;border-radius:7px;font-size:11px;font-weight:600;
+    border:1px solid var(--border);background:var(--card);cursor:pointer;
+    display:flex;align-items:center;gap:3px;}
+  .dc-btn.qr{background:var(--navy);color:#fff;border-color:var(--navy);}
+  .dc-btn.notify{background:#fff3e0;color:#8a4a00;border-color:#f5d86e;}
+
+  /* ガードマン通知 */
+  .guard-card{background:#fff8e0;border:1.5px solid #f5d86e;border-radius:12px;
+    padding:13px;margin-bottom:12px;display:flex;gap:10px;align-items:flex-start;}
+  .gc-icon{font-size:24px;flex-shrink:0;}
+  .gc-body{flex:1;}
+  .gc-title{font-size:13px;font-weight:700;color:#7a5a00;margin-bottom:3px;}
+  .gc-sub{font-size:12px;color:#8a6a00;line-height:1.55;}
+  .gc-btn{margin-top:8px;padding:8px 16px;background:#e8a020;color:#fff;
+    border:none;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;
+    display:flex;align-items:center;gap:5px;}
+
+  /* QRスキャナーモーダル */
+  .modal-wrap{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);
+    z-index:50;align-items:center;justify-content:center;padding:20px;}
+  .modal-wrap.show{display:flex;}
+  .modal{background:var(--card);border-radius:16px;padding:20px;width:100%;max-width:360px;}
+  .modal-title{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:6px;text-align:center;}
+  .qr-area{width:100%;aspect-ratio:1;background:#0d1b2a;border-radius:12px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    margin:14px 0;position:relative;}
+  .qr-frame{width:160px;height:160px;position:relative;}
+  .qr-frame::before,.qr-frame::after,.qr-c3,.qr-c4{
+    content:'';position:absolute;width:30px;height:30px;border-color:var(--orange);border-style:solid;}
+  .qr-frame::before{top:0;left:0;border-width:3px 0 0 3px;}
+  .qr-frame::after {top:0;right:0;border-width:3px 3px 0 0;}
+  .qr-c3{bottom:0;left:0;border-width:0 0 3px 3px;}
+  .qr-c4{bottom:0;right:0;border-width:0 3px 3px 0;}
+  .qr-scan-line{position:absolute;left:20px;right:20px;height:2px;
+    background:var(--orange);animation:scan 1.8s ease-in-out infinite;}
+  @keyframes scan{0%{top:20px;opacity:0}5%{opacity:1}95%{opacity:1}100%{top:140px;opacity:0}}
+  .qr-hint{font-size:12px;color:rgba(255,255,255,.65);margin-top:8px;}
+  .modal-btns{display:flex;gap:8px;}
+  .mbtn{flex:1;padding:12px;border-radius:10px;font-size:14px;font-weight:700;
+    border:none;cursor:pointer;}
+  .mbtn-cancel{background:var(--bg);color:var(--muted);}
+  .mbtn-manual{background:var(--navy);color:#fff;}
+
+  /* 搬入登録フォーム */
+  .field{margin-bottom:11px;}
+  .field label{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-bottom:4px;}
+  input,select,textarea{width:100%;height:42px;border:1px solid var(--border);border-radius:8px;
+    padding:0 11px;font-size:14px;color:var(--text);background:var(--card);
+    appearance:none;font-family:inherit;}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy);}
+  textarea{height:60px;padding:9px 11px;resize:none;line-height:1.6;}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+
+  /* アイテムリスト */
+  .items-list{display:flex;flex-direction:column;gap:6px;margin-bottom:8px;}
+  .item-row{display:flex;gap:8px;align-items:center;}
+  .item-row input:first-child{flex:2;}
+  .item-row input:nth-child(2){flex:1;text-align:right;}
+  .item-row input:nth-child(3){flex:1;}
+  .item-del{width:30px;height:30px;border-radius:50%;background:var(--bg);
+    border:1px solid var(--border);color:var(--red);cursor:pointer;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;}
+  .add-item{width:100%;padding:8px;background:var(--bg);border:1px dashed var(--border);
+    border-radius:8px;font-size:12px;color:var(--muted);cursor:pointer;
+    display:flex;align-items:center;justify-content:center;gap:5px;}
+
+  .submit-btn{width:100%;padding:14px;background:var(--navy);color:#fff;border:none;
+    border-radius:11px;font-size:15px;font-weight:700;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;gap:7px;margin-top:4px;}
+
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(60px);
+    background:var(--text);color:#fff;padding:11px 20px;border-radius:22px;
+    font-size:13px;font-weight:500;transition:transform .3s;z-index:99;white-space:nowrap;}
+  .toast.show{transform:translateX(-50%) translateY(0);}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+
+<header>
+  <span class="back" onclick="history.back()"><i class="ti ti-arrow-left"></i></span>
+  <span class="hd-title">AI搬入管理</span>
+  <button class="hd-qr" onclick="openQr()">
+    <i class="ti ti-qrcode" style="font-size:13px"></i>QRスキャン
+  </button>
+</header>
+
+<div class="tabs">
+  <div class="tab act" id="tab-today"    onclick="showTab('today')"   >本日</div>
+  <div class="tab"     id="tab-schedule" onclick="showTab('schedule')">スケジュール</div>
+  <div class="tab"     id="tab-new"      onclick="showTab('new')"     >搬入登録</div>
+  <div class="tab"     id="tab-history"  onclick="showTab('history')" >履歴</div>
+</div>
+
+<main>
+
+  <!-- ── 本日タブ ── -->
+  <div id="page-today">
+
+    <!-- AI入力 -->
+    <div class="ai-box">
+      <div class="ai-hd">
+        <div class="ai-icon"><i class="ti ti-sparkles"></i></div>
+        <div>
+          <div class="ai-label">AI搬入テンプレート生成</div>
+          <div class="ai-sub">話しかけるだけで搬入指示書を自動作成</div>
+        </div>
+      </div>
+      <div class="ai-row">
+        <textarea class="ai-ta" id="ai-input"
+          placeholder="例：明日午前10時にタイル500枚と接着剤20袋をトラックで搬入。ガードマン1名必要。"></textarea>
+        <button class="ai-go" onclick="generateDelivery()" aria-label="AI生成">
+          <i class="ti ti-send"></i>
+        </button>
+      </div>
+      <div class="ai-chips">
+        <div class="ai-chip" onclick="setAiInput('午前中にタイル材料を搬入、10tトラック1台')">タイル材料</div>
+        <div class="ai-chip" onclick="setAiInput('足場資材の搬入・設置、大型車2台、ガードマン必要')">足場搬入</div>
+        <div class="ai-chip" onclick="setAiInput('残材の搬出処分、2tダンプ1台、午後から')">残材搬出</div>
+        <div class="ai-chip" onclick="setAiInput('生コン打設、ミキサー車3台、朝7時から')">生コン</div>
+      </div>
+      <div class="loading-bar" id="ai-loading">
+        <div class="ld-dot"></div><div class="ld-dot"></div><div class="ld-dot"></div>
+        <span style="font-size:12px;color:var(--muted);margin-left:6px">AIが搬入計画を生成中...</span>
+      </div>
+    </div>
+
+    <!-- 本日ステータス -->
+    <div class="status-cards">
+      <div class="sc">
+        <div class="n">4</div><div class="l">本日予定</div>
+      </div>
+      <div class="sc warn">
+        <div class="n">1</div><div class="l">到着間近</div>
+      </div>
+      <div class="sc">
+        <div class="n">2</div><div class="l">完了</div>
+      </div>
+      <div class="sc alert">
+        <div class="n">1</div><div class="l">遅延</div>
+      </div>
+    </div>
+
+    <!-- ガードマン通知 -->
+    <div class="guard-card">
+      <div class="gc-icon">👮</div>
+      <div class="gc-body">
+        <div class="gc-title">ガードマンへの搬入通知が未送信</div>
+        <div class="gc-sub">14:30 の大型車搬入（タイル500枚）についてガードマンへの事前通知が必要です。</div>
+        <button class="gc-btn" onclick="notifyGuard()">
+          <i class="ti ti-send" style="font-size:13px"></i>ガードマンに通知する
+        </button>
+      </div>
+    </div>
+
+    <!-- 本日の搬入一覧 -->
+    <div class="section">
+      <div class="sec-hd">
+        <div class="sec-title"><i class="ti ti-truck-delivery"></i>本日の搬入</div>
+        <span class="sec-more">2026年6月20日</span>
+      </div>
+
+      <div class="delivery-card urgent" onclick="openDetail(1)">
+        <div class="dc-top">
+          <div class="dc-title">タイル材料搬入（LIXIL FT-3000）</div>
+          <span class="dc-status s-arriving">到着間近</span>
+        </div>
+        <div class="dc-meta">
+          <span><i class="ti ti-clock"></i>14:30予定</span>
+          <span><i class="ti ti-truck"></i>10tトラック</span>
+          <span><i class="ti ti-map-pin"></i>東側搬入口</span>
+          <span><i class="ti ti-user"></i>山田運輸</span>
+        </div>
+        <div class="dc-bottom">
+          <div class="dc-items">タイル 500枚・接着剤 20袋</div>
+          <div class="dc-actions">
+            <button class="dc-btn notify" onclick="event.stopPropagation();notifyGuard()">
+              <i class="ti ti-bell"></i>ガードマン通知
+            </button>
+            <button class="dc-btn qr" onclick="event.stopPropagation();openQr()">
+              <i class="ti ti-qrcode"></i>QR受取
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="delivery-card" onclick="openDetail(2)">
+        <div class="dc-top">
+          <div class="dc-title">足場資材 追加搬入</div>
+          <span class="dc-status s-transit">輸送中</span>
+        </div>
+        <div class="dc-meta">
+          <span><i class="ti ti-clock"></i>16:00予定</span>
+          <span><i class="ti ti-truck"></i>4tトラック</span>
+          <span><i class="ti ti-map-pin"></i>南側搬入口</span>
+          <span><i class="ti ti-user"></i>佐藤物流</span>
+        </div>
+        <div class="dc-bottom">
+          <div class="dc-items">単管パイプ 50本・クランプ 200個</div>
+          <div class="dc-actions">
+            <button class="dc-btn qr" onclick="event.stopPropagation();openQr()">
+              <i class="ti ti-qrcode"></i>QR受取
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="delivery-card done" onclick="openDetail(3)">
+        <div class="dc-top">
+          <div class="dc-title">防水材料搬入（ウレタン塗料）</div>
+          <span class="dc-status s-done">受取完了</span>
+        </div>
+        <div class="dc-meta">
+          <span><i class="ti ti-clock"></i>09:15 完了</span>
+          <span><i class="ti ti-truck"></i>2tトラック</span>
+          <span><i class="ti ti-check" style="color:var(--green)"></i>QRスキャン済み</span>
+        </div>
+        <div class="dc-bottom">
+          <div class="dc-items">ウレタン塗料 15缶・プライマー 5缶</div>
+          <div class="dc-actions">
+            <button class="dc-btn" onclick="event.stopPropagation();showToast('受取票PDFをダウンロード')">
+              <i class="ti ti-download"></i>受取票
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="delivery-card" style="border-left:3px solid var(--red);" onclick="openDetail(4)">
+        <div class="dc-top">
+          <div class="dc-title">左官材料（モルタル）— 遅延発生</div>
+          <span class="dc-status s-delayed">遅延</span>
+        </div>
+        <div class="dc-meta">
+          <span><i class="ti ti-clock"></i>当初11:00 → 17:00に変更</span>
+          <span><i class="ti ti-truck"></i>2tトラック</span>
+        </div>
+        <div class="dc-bottom">
+          <div class="dc-items" style="color:var(--red)">モルタル 30袋・砂 500kg</div>
+          <div class="dc-actions">
+            <button class="dc-btn" onclick="event.stopPropagation();showToast('遅延を現場監督に通知しました')">
+              <i class="ti ti-bell"></i>通知
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── スケジュールタブ ── -->
+  <div id="page-schedule" style="display:none">
+    <div class="section">
+      <div class="sec-hd">
+        <div class="sec-title"><i class="ti ti-calendar"></i>今週の搬入スケジュール</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <div style="background:var(--bg);border-radius:8px;padding:10px 12px;
+          display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <div style="font-size:12px;font-weight:700;color:var(--navy)">6月20日（本日）</div>
+            <div style="font-size:12px;color:var(--muted)">タイル・足場・防水材・左官材 計4件</div>
+          </div>
+          <span style="font-size:11px;font-weight:700;background:#fff3e0;color:#8a4a00;
+            padding:3px 8px;border-radius:7px">遅延1件</span>
+        </div>
+        <div style="background:var(--bg);border-radius:8px;padding:10px 12px;">
+          <div style="font-size:12px;font-weight:700;color:var(--navy)">6月23日（月）</div>
+          <div style="font-size:12px;color:var(--muted)">追加タイル材料 1件</div>
+        </div>
+        <div style="background:var(--bg);border-radius:8px;padding:10px 12px;">
+          <div style="font-size:12px;font-weight:700;color:var(--navy)">6月25日（水）</div>
+          <div style="font-size:12px;color:var(--muted)">残材搬出 1件</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 搬入登録タブ ── -->
+  <div id="page-new" style="display:none">
+    <div class="section">
+      <div class="sec-hd">
+        <div class="sec-title"><i class="ti ti-plus"></i>搬入を登録</div>
+      </div>
+      <div class="field">
+        <label>搬入名称<span style="color:var(--red)">*</span></label>
+        <input type="text" id="d-name" placeholder="例：タイル材料搬入（LIXIL FT-3000）">
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label>搬入日<span style="color:var(--red)">*</span></label>
+          <input type="date" id="d-date">
+        </div>
+        <div class="field">
+          <label>搬入時刻<span style="color:var(--red)">*</span></label>
+          <input type="time" id="d-time" value="10:00">
+        </div>
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label>車両種別</label>
+          <select id="d-vehicle">
+            <option>2tトラック</option>
+            <option>4tトラック</option>
+            <option selected>10tトラック</option>
+            <option>ミキサー車</option>
+            <option>その他大型車</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>搬入口</label>
+          <select id="d-gate">
+            <option>東側搬入口</option>
+            <option>南側搬入口</option>
+            <option>北側搬入口</option>
+            <option>正面出入口</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label>運送会社・ドライバー</label>
+        <input type="text" id="d-driver" placeholder="例：山田運輸 鈴木ドライバー">
+      </div>
+      <div class="field">
+        <label>搬入品目</label>
+        <div class="items-list" id="d-items-list"></div>
+        <button class="add-item" onclick="addDeliveryItem()">
+          <i class="ti ti-plus"></i>品目を追加
+        </button>
+      </div>
+      <div class="field">
+        <label>ガードマン手配</label>
+        <select id="d-guard">
+          <option value="no">不要</option>
+          <option value="yes">必要（自動通知する）</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>備考・注意事項</label>
+        <textarea id="d-note" placeholder="例：生コン打設のため道路占有許可取得済み。搬入前に現場担当者への連絡必須。"></textarea>
+      </div>
+      <button class="submit-btn" onclick="registerDelivery()">
+        <i class="ti ti-check"></i>搬入を登録する
+      </button>
+    </div>
+  </div>
+
+  <!-- ── 履歴タブ ── -->
+  <div id="page-history" style="display:none">
+    <div class="section">
+      <div class="sec-hd"><div class="sec-title"><i class="ti ti-history"></i>搬入履歴</div></div>
+      <div style="display:flex;flex-direction:column;gap:0;">
+        <div style="display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--bg);">
+          <div style="font-size:20px;flex-shrink:0">✅</div>
+          <div style="flex:1">
+            <div style="font-size:13px;font-weight:600">防水材料搬入（ウレタン塗料）</div>
+            <div style="font-size:11px;color:var(--muted)">6/20 09:15 ・ QRスキャン完了 ・ 山田運輸</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--bg);">
+          <div style="font-size:20px;flex-shrink:0">✅</div>
+          <div style="flex:1">
+            <div style="font-size:13px;font-weight:600">足場資材搬入（単管・クランプ）</div>
+            <div style="font-size:11px;color:var(--muted)">6/18 13:40 ・ QRスキャン完了 ・ 佐藤物流</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;padding:10px 0;">
+          <div style="font-size:20px;flex-shrink:0">⚠️</div>
+          <div style="flex:1">
+            <div style="font-size:13px;font-weight:600">タイル下地材搬入</div>
+            <div style="font-size:11px;color:var(--muted)">6/17 ・ 2時間遅延で受取完了</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- QRスキャナーモーダル -->
+<div class="modal-wrap" id="qr-modal" onclick="closeQr(event)">
+  <div class="modal">
+    <div class="modal-title">QRコードで受取確認</div>
+    <div class="qr-area">
+      <div class="qr-frame">
+        <div class="qr-c3"></div><div class="qr-c4"></div>
+        <div class="qr-scan-line"></div>
+      </div>
+      <div class="qr-hint">搬入票のQRコードをかざしてください</div>
+    </div>
+    <div class="modal-btns">
+      <button class="mbtn mbtn-cancel" onclick="closeQr()">キャンセル</button>
+      <button class="mbtn mbtn-manual" onclick="manualReceive()">手動で受取</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ── AI搬入テンプレート生成 ──────────────────────────────────────
+async function generateDelivery() {
+  const input = document.getElementById('ai-input').value.trim();
+  if (!input) { showToast('搬入内容を入力してください'); return; }
+
+  document.getElementById('ai-loading').classList.add('show');
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        system: `あなたは建設現場の搬入管理AIです。
+ユーザーの説明から搬入計画をJSON形式で返してください。
+必ずJSON形式のみで返答してください。
+{
+  "name": "搬入名称",
+  "date": "YYYY-MM-DD",
+  "time": "HH:MM",
+  "vehicle": "車両種別",
+  "gate": "搬入口",
+  "items": [{"name":"品目名","qty":数量,"unit":"単位"}],
+  "guardRequired": true/false,
+  "notes": "注意事項"
+}`,
+        messages: [{ role: 'user',
+          content: `以下の搬入内容からJSONを生成してください：\n${input}` }]
+      })
+    });
+    const data = await res.json();
+    const text = data.content?.[0]?.text || '';
+    const clean = text.replace(/```json|```/g, '').trim();
+    const plan = JSON.parse(clean);
+
+    // フォームに自動入力
+    showTab('new');
+    if (plan.name)  document.getElementById('d-name').value  = plan.name;
+    if (plan.date)  document.getElementById('d-date').value  = plan.date;
+    if (plan.time)  document.getElementById('d-time').value  = plan.time;
+    if (plan.notes) document.getElementById('d-note').value  = plan.notes;
+    if (plan.guardRequired) {
+      document.getElementById('d-guard').value = 'yes';
+    }
+    if (plan.items?.length) {
+      deliveryItems = [];
+      plan.items.forEach(i => addDeliveryItem(i));
+    }
+    showToast('AIが搬入計画を自動入力しました');
+  } catch(e) {
+    // デモフォールバック
+    showTab('new');
+    document.getElementById('d-name').value = input.slice(0,40);
+    document.getElementById('d-date').value = new Date().toISOString().slice(0,10);
+    showToast('搬入情報を入力しました（デモ）');
+  } finally {
+    document.getElementById('ai-loading').classList.remove('show');
+  }
+}
+
+function setAiInput(text) {
+  document.getElementById('ai-input').value = text;
+  document.getElementById('ai-input').focus();
+}
+
+// ── 品目リスト ─────────────────────────────────────────────────
+let deliveryItems = [];
+
+function addDeliveryItem(data = {}) {
+  const id = Date.now() + Math.random();
+  deliveryItems.push({ id, name: data.name||'', qty: data.qty||1, unit: data.unit||'個' });
+  renderDeliveryItems();
+}
+
+function removeDeliveryItem(id) {
+  deliveryItems = deliveryItems.filter(i => i.id !== id);
+  renderDeliveryItems();
+}
+
+function renderDeliveryItems() {
+  const list = document.getElementById('d-items-list');
+  if (!deliveryItems.length) { list.innerHTML = ''; return; }
+  list.innerHTML = deliveryItems.map(item => `
+    <div class="item-row">
+      <input type="text" value="${item.name}" placeholder="品目名"
+        oninput="updateDItem(${item.id},'name',this.value)">
+      <input type="number" value="${item.qty}" min="1"
+        oninput="updateDItem(${item.id},'qty',+this.value)" style="text-align:right">
+      <input type="text" value="${item.unit}" placeholder="枚/袋"
+        oninput="updateDItem(${item.id},'unit',this.value)">
+      <button class="item-del" onclick="removeDeliveryItem(${item.id})">
+        <i class="ti ti-x"></i></button>
+    </div>`).join('');
+}
+// 初期品目
+addDeliveryItem({ name:'タイル', qty:500, unit:'枚' });
+addDeliveryItem({ name:'接着剤', qty:20,  unit:'袋' });
+
+function updateDItem(id, key, val) {
+  const item = deliveryItems.find(i => i.id === id);
+  if (item) item[key] = val;
+}
+
+function registerDelivery() {
+  const name = document.getElementById('d-name').value.trim();
+  if (!name) { showToast('搬入名称を入力してください'); return; }
+  const guard = document.getElementById('d-guard').value;
+  if (guard === 'yes') {
+    showToast('搬入を登録しました。ガードマンに自動通知しました');
+  } else {
+    showToast('搬入を登録しました');
+  }
+  showTab('today');
+}
+
+// ── QRスキャン ─────────────────────────────────────────────────
+function openQr()  { document.getElementById('qr-modal').classList.add('show'); }
+function closeQr(e) {
+  if (!e || e.target === document.getElementById('qr-modal'))
+    document.getElementById('qr-modal').classList.remove('show');
+}
+function manualReceive() {
+  document.getElementById('qr-modal').classList.remove('show');
+  showToast('手動受取確認を記録しました');
+  // Firestore: deliveries/{id}.update({ status:'done', receivedAt: serverTimestamp() })
+}
+
+// ── ガードマン通知 ─────────────────────────────────────────────
+function notifyGuard() {
+  // FCM通知 + SMS（Twilio等）でガードマンに送信
+  showToast('ガードマンに搬入通知を送りました（14:30 10tトラック）');
+}
+
+function openDetail(id) { showToast('搬入詳細・編集'); }
+
+// ── タブ切替 ────────────────────────────────────────────────────
+function showTab(tab) {
+  ['today','schedule','new','history'].forEach(t => {
+    document.getElementById('page-'+t).style.display = t===tab?'block':'none';
+    document.getElementById('tab-'+t).classList.toggle('act', t===tab);
+  });
+}
+
+// ── 初期設定 ────────────────────────────────────────────────────
+const today = new Date().toISOString().slice(0,10);
+document.getElementById('d-date').value = today;
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.className = 'toast show';
+  setTimeout(() => t.className = 'toast', 2800);
+}
+</script>
+</body>
+</html>

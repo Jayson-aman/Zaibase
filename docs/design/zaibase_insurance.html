@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>現場保険 — Zaibase</title>
+<style>
+  :root{--navy:#1a3c5e;--orange:#e8a020;--bg:#f4f6f8;--card:#fff;
+    --text:#1a2332;--muted:#6b7c93;--border:#dce3ea;--green:#1d9e75;--red:#e24b4a;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+    background:var(--bg);color:var(--text);min-height:100dvh;display:flex;
+    flex-direction:column;padding-bottom:24px;}
+
+  header{background:var(--navy);padding:13px 16px;display:flex;align-items:center;gap:10px;}
+  .back{color:rgba(255,255,255,.7);font-size:22px;cursor:pointer;}
+  .title{color:#fff;font-size:17px;font-weight:700;margin:0 auto;}
+
+  main{flex:1;padding:14px;max-width:560px;margin:0 auto;width:100%;}
+
+  /* ヒーローバナー */
+  .hero{background:var(--navy);border-radius:16px;padding:20px;margin-bottom:16px;color:#fff;}
+  .hero-label{font-size:11px;font-weight:600;color:rgba(255,255,255,.6);margin-bottom:6px;
+    display:flex;align-items:center;gap:5px;}
+  .hero-title{font-size:20px;font-weight:800;line-height:1.35;margin-bottom:8px;}
+  .hero-sub{font-size:13px;color:rgba(255,255,255,.75);line-height:1.6;margin-bottom:14px;}
+  .hero-chips{display:flex;flex-wrap:wrap;gap:6px;}
+  .hero-chip{padding:4px 10px;border-radius:10px;font-size:11px;font-weight:600;
+    background:rgba(255,255,255,.15);color:#fff;}
+
+  /* セクション */
+  .section{background:var(--card);border-radius:14px;border:1px solid var(--border);
+    padding:16px;margin-bottom:12px;}
+  .sec-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:12px;
+    display:flex;align-items:center;gap:6px;}
+  .sec-title i{font-size:17px;color:var(--orange);}
+
+  /* 保険カード */
+  .ins-card{border:1px solid var(--border);border-radius:12px;padding:14px;
+    margin-bottom:10px;cursor:pointer;transition:.15s;position:relative;overflow:hidden;}
+  .ins-card:active{transform:scale(.99);}
+  .ins-card.featured{border-color:var(--orange);border-width:2px;}
+  .ins-card.featured::before{content:'おすすめ';position:absolute;top:0;right:0;
+    background:var(--orange);color:#fff;font-size:10px;font-weight:700;
+    padding:3px 10px;border-radius:0 12px 0 8px;}
+
+  .ic-top{display:flex;align-items:flex-start;gap:12px;margin-bottom:10px;}
+  .ic-logo{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;
+    justify-content:center;font-size:11px;font-weight:800;flex-shrink:0;}
+  .ic-info{flex:1;}
+  .ic-company{font-size:12px;color:var(--muted);}
+  .ic-name{font-size:15px;font-weight:700;line-height:1.3;margin:2px 0;}
+
+  .ic-badges{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px;}
+  .badge{padding:3px 8px;border-radius:8px;font-size:11px;font-weight:600;}
+  .b-heat{background:#fff3e0;color:#8a4a00;}
+  .b-injury{background:#e8f0fa;color:var(--navy);}
+  .b-labor{background:#e8f8f2;color:var(--green);}
+  .b-daily{background:#fff8e0;color:#7a5a00;}
+
+  .ic-features{display:flex;flex-direction:column;gap:4px;margin-bottom:12px;}
+  .ic-feature{display:flex;align-items:flex-start;gap:6px;font-size:12px;color:var(--text);}
+  .ic-feature i{font-size:13px;color:var(--green);margin-top:1px;flex-shrink:0;}
+
+  .ic-bottom{display:flex;justify-content:space-between;align-items:center;
+    padding-top:10px;border-top:1px solid var(--bg);}
+  .ic-price{font-size:14px;}
+  .ic-price strong{font-size:18px;font-weight:800;color:var(--navy);}
+  .ic-price span{font-size:11px;color:var(--muted);}
+  .ic-btn{padding:10px 18px;background:var(--navy);color:#fff;border:none;
+    border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;
+    display:flex;align-items:center;gap:5px;}
+  .ic-btn.orange{background:var(--orange);}
+
+  /* 比較テーブル */
+  .compare-table{width:100%;border-collapse:collapse;font-size:12px;}
+  .compare-table th{text-align:center;padding:8px 6px;background:#f0f5fa;
+    color:var(--navy);font-weight:700;border-bottom:2px solid var(--border);}
+  .compare-table th:first-child{text-align:left;}
+  .compare-table td{padding:8px 6px;border-bottom:1px solid var(--bg);text-align:center;}
+  .compare-table td:first-child{text-align:left;color:var(--muted);font-weight:500;}
+  .compare-table tr:last-child td{border-bottom:none;}
+  .c-ok{color:var(--green);font-size:15px;}
+  .c-no{color:var(--muted);font-size:15px;}
+  .c-opt{color:var(--orange);font-size:11px;}
+
+  /* 注意書き */
+  .disclaimer{background:#f0f5fa;border-radius:10px;padding:12px 14px;
+    font-size:11px;color:var(--muted);line-height:1.7;margin-top:14px;}
+  .disclaimer strong{color:var(--navy);}
+
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(60px);
+    background:var(--text);color:#fff;padding:11px 20px;border-radius:22px;
+    font-size:13px;font-weight:500;transition:transform .3s;z-index:99;white-space:nowrap;}
+  .toast.show{transform:translateX(-50%) translateY(0);}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+
+<header>
+  <span class="back" onclick="history.back()"><i class="ti ti-arrow-left"></i></span>
+  <span class="title">現場保険</span>
+</header>
+
+<main>
+
+  <!-- ヒーロー -->
+  <div class="hero">
+    <div class="hero-label"><i class="ti ti-shield-check" style="font-size:13px"></i>Zaibase 保険サポート</div>
+    <div class="hero-title">一人親方・建設職人向け<br>保険をまとめて比較</div>
+    <div class="hero-sub">熱中症・労災・傷害保険を一覧で確認。加入手続きもアプリから完結します。</div>
+    <div class="hero-chips">
+      <span class="hero-chip">熱中症保険</span>
+      <span class="hero-chip">傷害保険</span>
+      <span class="hero-chip">労災上乗せ</span>
+      <span class="hero-chip">日額払い</span>
+    </div>
+  </div>
+
+  <!-- 保険一覧 -->
+  <div class="section">
+    <div class="sec-title"><i class="ti ti-shield"></i>おすすめ保険</div>
+
+    <!-- PayPay保険 熱中症保険 -->
+    <div class="ins-card featured" onclick="openInsurance('paypay','https://www.paypay-insurance.co.jp')">
+      <div class="ic-top">
+        <div class="ic-logo" style="background:#e8f0fa;color:var(--navy)">PP</div>
+        <div class="ic-info">
+          <div class="ic-company">PayPay保険株式会社</div>
+          <div class="ic-name">熱中症お見舞い金保険</div>
+        </div>
+      </div>
+      <div class="ic-badges">
+        <span class="badge b-heat">熱中症</span>
+        <span class="badge b-daily">日払い可</span>
+      </div>
+      <div class="ic-features">
+        <div class="ic-feature"><i class="ti ti-check"></i>熱中症で入院・通院したら給付金</div>
+        <div class="ic-feature"><i class="ti ti-check"></i>スマホで即日加入・最短翌日から補償</div>
+        <div class="ic-feature"><i class="ti ti-check"></i>日払いプランあり（1日から加入可）</div>
+        <div class="ic-feature"><i class="ti ti-check"></i>PayPay残高で保険料支払い可</div>
+      </div>
+      <div class="ic-bottom">
+        <div class="ic-price"><strong>¥180</strong><span>〜/日</span></div>
+        <button class="ic-btn orange" onclick="openInsurance('paypay','https://www.paypay-insurance.co.jp');event.stopPropagation()">
+          <i class="ti ti-external-link"></i>詳細・加入
+        </button>
+      </div>
+    </div>
+
+    <!-- au損保 建設業向け傷害保険 -->
+    <div class="ins-card" onclick="openInsurance('au','https://www.au-sonpo.co.jp')">
+      <div class="ic-top">
+        <div class="ic-logo" style="background:#fff0e0;color:#8a4a00">au</div>
+        <div class="ic-info">
+          <div class="ic-company">au損保</div>
+          <div class="ic-name">ケガの保険（建設業向け）</div>
+        </div>
+      </div>
+      <div class="ic-badges">
+        <span class="badge b-injury">傷害</span>
+        <span class="badge b-heat">熱中症</span>
+        <span class="badge b-daily">月払い</span>
+      </div>
+      <div class="ic-features">
+        <div class="ic-feature"><i class="ti ti-check"></i>ケガ・骨折・切り傷などの傷害全般</div>
+        <div class="ic-feature"><i class="ti ti-check"></i>熱中症もカバー（特約）</div>
+        <div class="ic-feature"><i class="ti ti-check"></i>入院・手術・通院まで幅広く補償</div>
+      </div>
+      <div class="ic-bottom">
+        <div class="ic-price"><strong>¥1,200</strong><span>〜/月</span></div>
+        <button class="ic-btn" onclick="openInsurance('au','https://www.au-sonpo.co.jp');event.stopPropagation()">
+          <i class="ti ti-external-link"></i>詳細・加入
+        </button>
+      </div>
+    </div>
+
+    <!-- 労災上乗せ保険 -->
+    <div class="ins-card" onclick="openInsurance('rousai','https://www.tokiomarine-nichido.co.jp')">
+      <div class="ic-top">
+        <div class="ic-logo" style="background:#e8f8f2;color:var(--green)">TM</div>
+        <div class="ic-info">
+          <div class="ic-company">東京海上日動火災保険</div>
+          <div class="ic-name">労災上乗せ保険（一人親方向け）</div>
+        </div>
+      </div>
+      <div class="ic-badges">
+        <span class="badge b-labor">労災上乗せ</span>
+        <span class="badge b-injury">傷害</span>
+      </div>
+      <div class="ic-features">
+        <div class="ic-feature"><i class="ti ti-check"></i>政府労災を超える補償を追加</div>
+        <div class="ic-feature"><i class="ti ti-check"></i>一人親方の特別加入にも対応</div>
+        <div class="ic-feature"><i class="ti ti-check"></i>死亡・後遺障害・入院・通院を補償</div>
+        <div class="ic-feature"><i class="ti ti-check"></i>元請への賠償リスクもカバー可</div>
+      </div>
+      <div class="ic-bottom">
+        <div class="ic-price"><strong>¥2,800</strong><span>〜/月</span></div>
+        <button class="ic-btn" onclick="openInsurance('tm','https://www.tokiomarine-nichido.co.jp');event.stopPropagation()">
+          <i class="ti ti-external-link"></i>詳細・加入
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 比較表 -->
+  <div class="section">
+    <div class="sec-title"><i class="ti ti-table"></i>保険種類の比較</div>
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>補償内容</th>
+            <th>PayPay<br>熱中症</th>
+            <th>au損保<br>傷害</th>
+            <th>東京海上<br>労災上乗せ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>熱中症</td><td class="c-ok">✓</td><td class="c-opt">特約</td><td class="c-no">—</td></tr>
+          <tr><td>骨折・切り傷</td><td class="c-no">—</td><td class="c-ok">✓</td><td class="c-ok">✓</td></tr>
+          <tr><td>入院給付</td><td class="c-ok">✓</td><td class="c-ok">✓</td><td class="c-ok">✓</td></tr>
+          <tr><td>死亡・後遺障害</td><td class="c-no">—</td><td class="c-ok">✓</td><td class="c-ok">✓</td></tr>
+          <tr><td>賠償責任</td><td class="c-no">—</td><td class="c-no">—</td><td class="c-opt">特約</td></tr>
+          <tr><td>日払い加入</td><td class="c-ok">✓</td><td class="c-no">—</td><td class="c-no">—</td></tr>
+          <tr><td>最低保険料</td><td>¥180/日</td><td>¥1,200/月</td><td>¥2,800/月</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 収益モデル説明（内部情報・表示しない） -->
+  <!-- Zaibaseの収益：アフィリエイト成約報酬（保険会社により異なる）
+       PayPay保険：成約1件につき¥300〜500
+       au損保：成約1件につき¥800〜1,500
+       東京海上：要問い合わせ（代理店契約後）
+       将来：損害保険代理店登録→保険料の5〜10%継続コミッション -->
+
+  <!-- 注意書き -->
+  <div class="disclaimer">
+    <strong>【重要なお知らせ】</strong><br>
+    本ページは保険商品の情報提供を目的としています。Zaibaseは保険の販売・媒介を行うものではありません。保険の加入手続きは各保険会社のウェブサイトで直接行ってください。保険商品の詳細・保険料・補償内容は各社のページをご確認ください。<br><br>
+    <strong>一人親方の労災特別加入</strong>について：一人親方は政府の労災保険に特別加入できます。
+    <a href="https://www.mhlw.go.jp" target="_blank" style="color:var(--navy)">厚生労働省のサイト</a>でご確認ください。
+  </div>
+
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// アフィリエイトリンクへの遷移（実装時はアフィリエイトIDをURLに付与）
+function openInsurance(company, url) {
+  // 実装時：
+  // const affiliateUrl = buildAffiliateUrl(company, url);
+  // window.open(affiliateUrl, '_blank');
+  //
+  // Firestoreにクリックログを記録（収益追跡）
+  // db.collection('affiliateClicks').add({
+  //   company, userId: currentUser.uid, clickedAt: serverTimestamp()
+  // });
+  showToast(`${company}の保険詳細ページへ移動します`);
+  // 実際はリンクを開く
+  // window.open(url, '_blank');
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.className = 'toast show';
+  setTimeout(() => t.className = 'toast', 2600);
+}
+</script>
+</body>
+</html>

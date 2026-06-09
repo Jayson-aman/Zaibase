@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>支払・請求 — Zaibase</title>
+<style>
+  :root{--navy:#1a3c5e;--orange:#e8a020;--bg:#f4f6f8;--card:#fff;
+    --text:#1a2332;--muted:#6b7c93;--border:#dce3ea;--green:#1d9e75;--red:#e24b4a;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+    background:var(--bg);color:var(--text);min-height:100dvh;display:flex;flex-direction:column;
+    padding-bottom:70px;}
+
+  header{background:var(--navy);padding:13px 16px 0;position:sticky;top:0;z-index:10;}
+  .hd-row{display:flex;align-items:center;margin-bottom:12px;}
+  .back{color:rgba(255,255,255,.7);font-size:22px;cursor:pointer;}
+  .title{color:#fff;font-size:17px;font-weight:700;margin:0 auto;}
+
+  /* タブ */
+  .tabs{display:flex;border-bottom:2px solid rgba(255,255,255,.15);}
+  .tab{padding:10px 16px;font-size:13px;font-weight:500;color:rgba(255,255,255,.55);
+    cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;white-space:nowrap;}
+  .tab.act{color:#fff;border-bottom-color:#fff;}
+
+  /* 残高バナー */
+  .balance-banner{background:var(--navy);padding:16px;
+    display:flex;justify-content:space-between;align-items:center;}
+  .bb-left .bb-label{font-size:12px;color:rgba(255,255,255,.6);}
+  .bb-left .bb-val{font-size:26px;font-weight:800;color:#fff;}
+  .bb-right{text-align:right;}
+  .bb-right .bb-label{font-size:11px;color:rgba(255,255,255,.6);}
+  .bb-right .bb-val2{font-size:15px;font-weight:700;color:var(--orange);}
+
+  main{flex:1;padding:14px;}
+
+  /* 未払いアラート */
+  .overdue-alert{background:#fde8e8;border:1px solid #f5b4b4;border-radius:12px;
+    padding:14px;margin-bottom:14px;display:flex;gap:10px;align-items:flex-start;}
+  .overdue-alert i{font-size:20px;color:var(--red);flex-shrink:0;margin-top:1px;}
+  .oa-title{font-size:13px;font-weight:700;color:var(--red);margin-bottom:3px;}
+  .oa-sub{font-size:12px;color:#a33;}
+  .oa-btn{margin-top:6px;padding:7px 14px;background:var(--red);color:#fff;
+    border:none;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;}
+
+  /* 支払カード */
+  .pay-card{background:var(--card);border-radius:12px;border:1px solid var(--border);
+    padding:14px;margin-bottom:10px;cursor:pointer;}
+  .pc-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;}
+  .pc-title{font-size:14px;font-weight:700;line-height:1.4;flex:1;margin-right:8px;}
+  .pc-status{padding:3px 9px;border-radius:10px;font-size:11px;font-weight:600;white-space:nowrap;}
+  .s-escrow{background:#fff8e0;color:#7a5a00;}
+  .s-pending{background:#fde8e8;color:var(--red);}
+  .s-paid{background:#e8f8f2;color:var(--green);}
+  .s-overdue{background:var(--red);color:#fff;}
+
+  .pc-meta{display:flex;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--muted);margin-bottom:8px;}
+  .pc-meta span{display:flex;align-items:center;gap:3px;}
+  .pc-bottom{display:flex;justify-content:space-between;align-items:center;
+    padding-top:8px;border-top:1px solid var(--bg);}
+  .pc-amount{font-size:16px;font-weight:800;color:var(--navy);}
+  .pc-due{font-size:12px;}
+  .pc-due.warn{color:var(--orange);font-weight:600;}
+  .pc-due.ok{color:var(--muted);}
+  .pc-due.late{color:var(--red);font-weight:700;}
+  .pc-due.done{color:var(--green);}
+
+  /* 月次サマリー */
+  .month-section{margin-bottom:20px;}
+  .month-label{font-size:13px;font-weight:700;color:var(--navy);
+    padding:10px 0 8px;border-bottom:1px solid var(--border);margin-bottom:10px;}
+
+  /* 取引詳細モーダル */
+  .modal-wrap{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);
+    z-index:50;align-items:flex-end;}
+  .modal-wrap.show{display:flex;}
+  .modal{background:var(--card);border-radius:20px 20px 0 0;
+    width:100%;padding:20px;max-height:85dvh;overflow-y:auto;}
+  .modal-handle{width:36px;height:4px;background:var(--border);border-radius:2px;margin:0 auto 16px;}
+  .modal-title{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:14px;}
+  .modal-row{display:flex;justify-content:space-between;font-size:13px;
+    padding:8px 0;border-bottom:1px solid var(--bg);}
+  .modal-row:last-of-type{border-bottom:none;}
+  .modal-row .k{color:var(--muted);}
+  .modal-row .v{font-weight:500;text-align:right;max-width:60%;}
+
+  .dl-btn{width:100%;margin-top:14px;padding:13px;background:var(--bg);
+    border:1px solid var(--border);border-radius:10px;font-size:14px;
+    font-weight:600;color:var(--navy);cursor:pointer;display:flex;
+    align-items:center;justify-content:center;gap:6px;}
+
+  /* Stripeカード登録誘導 */
+  .stripe-prompt{background:#f0f5fa;border:1.5px dashed #b8d0e8;border-radius:12px;
+    padding:16px;margin-bottom:14px;text-align:center;}
+  .sp-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+  .sp-sub{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:12px;}
+  .sp-btn{background:var(--navy);color:#fff;border:none;border-radius:8px;
+    padding:11px 24px;font-size:14px;font-weight:700;cursor:pointer;}
+
+  /* ボトムナビ */
+  .bottom-nav{position:fixed;bottom:0;left:0;right:0;background:var(--card);
+    border-top:1px solid var(--border);display:flex;padding:8px 0 env(safe-area-inset-bottom);z-index:20;}
+  .nav-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;padding:4px 0;}
+  .nav-item i{font-size:22px;color:var(--muted);}
+  .nav-item span{font-size:10px;color:var(--muted);font-weight:500;}
+  .nav-item.act i{color:var(--navy);}
+  .nav-item.act span{color:var(--navy);font-weight:700;}
+
+  .toast{position:fixed;bottom:76px;left:50%;transform:translateX(-50%) translateY(60px);
+    background:var(--text);color:#fff;padding:11px 20px;border-radius:22px;
+    font-size:13px;font-weight:500;transition:transform .3s;z-index:99;white-space:nowrap;}
+  .toast.show{transform:translateX(-50%) translateY(0);}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+
+<header>
+  <div class="hd-row">
+    <span class="back" onclick="history.back()"><i class="ti ti-arrow-left"></i></span>
+    <span class="title">支払・請求</span>
+  </div>
+  <div class="tabs">
+    <div class="tab act" onclick="switchTab('receivable',this)">受取（職人）</div>
+    <div class="tab" onclick="switchTab('payable',this)">支払（発注者）</div>
+    <div class="tab" onclick="switchTab('history',this)">履歴</div>
+  </div>
+</header>
+
+<!-- 残高バナー -->
+<div class="balance-banner">
+  <div class="bb-left">
+    <div class="bb-label">未回収合計</div>
+    <div class="bb-val">¥800,000</div>
+  </div>
+  <div class="bb-right">
+    <div class="bb-label">今月の入金済み</div>
+    <div class="bb-val2">+¥320,000</div>
+  </div>
+</div>
+
+<main id="main-content">
+
+  <!-- 受取タブ -->
+  <div id="tab-receivable">
+    <!-- 期限切れアラート -->
+    <div class="overdue-alert">
+      <i class="ti ti-alert-circle"></i>
+      <div>
+        <div class="oa-title">支払期日が近づいています</div>
+        <div class="oa-sub">外壁タイル張り工事 ¥480,000 の支払期日まで残7日です。<br>フリーランス保護法により60日以内の支払が義務付けられています。</div>
+        <button class="oa-btn" onclick="showToast('督促メールを送信しました')">督促メールを送る</button>
+      </div>
+    </div>
+
+    <div class="month-section">
+      <div class="month-label">2026年6月 — 未回収</div>
+      <div class="pay-card" onclick="openDetail(1)">
+        <div class="pc-header">
+          <div class="pc-title">外壁タイル張り工事（横浜市中区）</div>
+          <span class="pc-status s-escrow">エスクロー保全中</span>
+        </div>
+        <div class="pc-meta">
+          <span><i class="ti ti-building"></i>株式会社〇〇建設</span>
+          <span><i class="ti ti-calendar"></i>6/20〜7/10</span>
+        </div>
+        <div class="pc-bottom">
+          <div class="pc-amount">¥480,000</div>
+          <div class="pc-due warn"><i class="ti ti-clock" style="font-size:12px"></i> 支払期日 残7日</div>
+        </div>
+      </div>
+      <div class="pay-card" onclick="openDetail(2)">
+        <div class="pc-header">
+          <div class="pc-title">防水・シーリング工事（横浜市保土ケ谷区）</div>
+          <span class="pc-status s-escrow">エスクロー保全中</span>
+        </div>
+        <div class="pc-meta">
+          <span><i class="ti ti-building"></i>□□不動産管理株式会社</span>
+          <span><i class="ti ti-calendar"></i>7/1〜7/31</span>
+        </div>
+        <div class="pc-bottom">
+          <div class="pc-amount">¥320,000</div>
+          <div class="pc-due ok">支払期日 残38日</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="month-section">
+      <div class="month-label">2026年5月 — 入金済み</div>
+      <div class="pay-card" onclick="openDetail(3)">
+        <div class="pc-header">
+          <div class="pc-title">塗装工事（外壁・屋上防水）横浜市保土ケ谷区</div>
+          <span class="pc-status s-paid">入金済み</span>
+        </div>
+        <div class="pc-meta">
+          <span><i class="ti ti-building"></i>◇◇建設株式会社</span>
+          <span><i class="ti ti-calendar"></i>4/1〜5/31</span>
+        </div>
+        <div class="pc-bottom">
+          <div class="pc-amount">¥320,000</div>
+          <div class="pc-due done">5/28 入金完了</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 支払タブ（発注者向け） -->
+  <div id="tab-payable" style="display:none">
+    <div class="stripe-prompt">
+      <div class="sp-title">支払方法を登録してください</div>
+      <div class="sp-sub">エスクロー決済のためにStripeでカードまたは銀行口座を登録します。マッチング成立時に自動的に報酬を保全します。</div>
+      <button class="sp-btn" onclick="location.href='zaibase_stripe.html'">カード・口座を登録する</button>
+    </div>
+    <div class="month-section">
+      <div class="month-label">支払待ち</div>
+      <div class="pay-card">
+        <div class="pc-header">
+          <div class="pc-title">川崎市 型枠大工 2名（6/10〜6/25）</div>
+          <span class="pc-status s-pending">支払待ち</span>
+        </div>
+        <div class="pc-meta">
+          <span><i class="ti ti-user"></i>鈴木 健一</span>
+          <span><i class="ti ti-calendar"></i>支払期日 7/10</span>
+        </div>
+        <div class="pc-bottom">
+          <div class="pc-amount">¥375,000</div>
+          <div class="pc-due warn">残21日</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 履歴タブ -->
+  <div id="tab-history" style="display:none">
+    <div class="month-section">
+      <div class="month-label">2026年6月</div>
+      <div class="pay-card" onclick="openDetail(3)">
+        <div class="pc-header">
+          <div class="pc-title">防水・シーリング工事 エスクロー保全</div>
+          <span class="pc-status s-escrow">保全中</span>
+        </div>
+        <div class="pc-bottom">
+          <div class="pc-amount">¥320,000</div>
+          <div class="pc-due ok">6/2 保全</div>
+        </div>
+      </div>
+    </div>
+    <div class="month-section">
+      <div class="month-label">2026年5月</div>
+      <div class="pay-card">
+        <div class="pc-header">
+          <div class="pc-title">塗装工事（外壁・屋上防水）受取</div>
+          <span class="pc-status s-paid">入金済み</span>
+        </div>
+        <div class="pc-bottom">
+          <div class="pc-amount">¥320,000</div>
+          <div class="pc-due done">5/28 入金</div>
+        </div>
+      </div>
+      <div class="pay-card">
+        <div class="pc-header">
+          <div class="pc-title">Zaibase手数料（4%）</div>
+          <span class="pc-status" style="background:#f0f0f0;color:#888">控除済み</span>
+        </div>
+        <div class="pc-bottom">
+          <div class="pc-amount" style="color:var(--red)">-¥12,800</div>
+          <div class="pc-due ok">5/28 控除</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- 詳細モーダル -->
+<div class="modal-wrap" id="modal" onclick="closeModal(event)">
+  <div class="modal">
+    <div class="modal-handle"></div>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<nav class="bottom-nav">
+  <div class="nav-item" onclick="location.href='zaibase_home.html'">
+    <i class="ti ti-home"></i><span>ホーム</span>
+  </div>
+  <div class="nav-item" onclick="location.href='zaibase_job_search.html'">
+    <i class="ti ti-search"></i><span>案件</span>
+  </div>
+  <div class="nav-item">
+    <i class="ti ti-map-pin"></i><span>入退場</span>
+  </div>
+  <div class="nav-item act">
+    <i class="ti ti-coin-yen"></i><span>支払</span>
+  </div>
+  <div class="nav-item" onclick="location.href='zaibase_worker_profile.html'">
+    <i class="ti ti-user"></i><span>プロフィール</span>
+  </div>
+</nav>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const DETAILS={
+  1:{title:'外壁タイル張り工事（横浜市中区）',
+    rows:[
+      ['発注者','株式会社〇〇建設'],['受注者','山田 太郎（一人親方）'],
+      ['契約日','2026年6月9日'],['作業期間','2026年6月20日〜7月10日'],
+      ['報酬額','¥480,000'],['Zaibase手数料（4%）','-¥19,200'],
+      ['あなたの受取額','¥460,800'],['支払期日','2026年7月16日'],
+      ['エスクロー状態','保全中（Stripe）'],['契約書','PDF ダウンロード可'],
+    ]},
+  2:{title:'防水・シーリング工事（横浜市保土ケ谷区）',
+    rows:[
+      ['発注者','□□不動産管理株式会社'],['受注者','山田 太郎（一人親方）'],
+      ['契約日','2026年6月2日'],['作業期間','2026年7月1日〜7月31日'],
+      ['報酬額','¥320,000'],['Zaibase手数料（6%）','-¥19,200'],
+      ['あなたの受取額','¥300,800'],['支払期日','2026年8月24日'],
+      ['エスクロー状態','保全中（Stripe）'],['契約書','PDF ダウンロード可'],
+    ]},
+  3:{title:'塗装工事（外壁・屋上防水）',
+    rows:[
+      ['発注者','◇◇建設株式会社'],['入金日','2026年5月28日'],
+      ['報酬額','¥320,000'],['Zaibase手数料（4%）','-¥12,800'],
+      ['振込額','¥307,200'],['振込先','山田 太郎 名義口座'],
+    ]},
+};
+function openDetail(id){
+  const d=DETAILS[id];
+  document.getElementById('modal-content').innerHTML=`
+    <div class="modal-title">${d.title}</div>
+    ${d.rows.map(([k,v])=>`<div class="modal-row"><span class="k">${k}</span><span class="v">${v}</span></div>`).join('')}
+    <button class="dl-btn"><i class="ti ti-download"></i>契約書PDFをダウンロード</button>`;
+  document.getElementById('modal').classList.add('show');
+}
+function closeModal(e){
+  if(e.target===document.getElementById('modal'))
+    document.getElementById('modal').classList.remove('show');
+}
+function switchTab(tab,el){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('act'));
+  el.classList.add('act');
+  ['receivable','payable','history'].forEach(t=>{
+    document.getElementById('tab-'+t).style.display=t===tab?'block':'none';
+  });
+}
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.className='toast show';
+  setTimeout(()=>t.className='toast',2800);
+}
+</script>
+</body>
+</html>

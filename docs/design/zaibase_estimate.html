@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>見積書作成 — Zaibase</title>
+<style>
+  :root{--navy:#1a3c5e;--orange:#e8a020;--bg:#f4f6f8;--card:#fff;
+    --text:#1a2332;--muted:#6b7c93;--border:#dce3ea;--green:#1d9e75;--red:#e24b4a;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+    background:var(--bg);color:var(--text);min-height:100dvh;display:flex;flex-direction:column;
+    padding-bottom:80px;}
+
+  header{background:var(--navy);padding:13px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0;}
+  .back{color:rgba(255,255,255,.7);font-size:22px;cursor:pointer;}
+  .title{color:#fff;font-size:17px;font-weight:700;margin:0 auto;}
+  .hd-ai{background:var(--orange);color:#fff;border:none;border-radius:7px;
+    padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:4px;}
+
+  /* タブ */
+  .tabs{background:var(--card);border-bottom:1px solid var(--border);
+    display:flex;padding:0 16px;position:sticky;top:0;z-index:9;}
+  .tab{padding:12px 14px;font-size:13px;font-weight:500;color:var(--muted);
+    cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;}
+  .tab.act{color:var(--navy);border-bottom-color:var(--navy);font-weight:700;}
+
+  main{flex:1;padding:14px;max-width:600px;margin:0 auto;width:100%;}
+
+  /* AIチャット入力 */
+  .ai-section{background:#f0f5fa;border:1.5px solid #b8d0e8;border-radius:14px;
+    padding:16px;margin-bottom:16px;}
+  .ai-header{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+  .ai-icon{width:32px;height:32px;border-radius:50%;background:var(--navy);
+    display:flex;align-items:center;justify-content:center;font-size:15px;color:#fff;flex-shrink:0;}
+  .ai-title{font-size:13px;font-weight:700;color:var(--navy);}
+  .ai-sub{font-size:11px;color:var(--muted);}
+  .ai-input-wrap{display:flex;gap:8px;}
+  .ai-input{flex:1;border:1px solid var(--border);border-radius:10px;padding:10px 13px;
+    font-size:14px;color:var(--text);background:var(--card);font-family:inherit;
+    resize:none;height:80px;line-height:1.6;}
+  .ai-input:focus{outline:none;border-color:var(--navy);}
+  .ai-send{width:44px;height:44px;border-radius:10px;background:var(--navy);
+    border:none;color:#fff;font-size:20px;cursor:pointer;display:flex;
+    align-items:center;justify-content:center;align-self:flex-end;}
+
+  /* テンプレートチップ */
+  .ai-chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;}
+  .ai-chip{padding:6px 11px;border-radius:14px;font-size:12px;font-weight:500;
+    border:1px solid #b8d0e8;background:var(--card);color:var(--navy);
+    cursor:pointer;transition:.15s;white-space:nowrap;}
+  .ai-chip:active{background:#e8f0fa;}
+
+  /* ローディング */
+  .ai-loading{display:none;align-items:center;gap:10px;padding:12px 0;justify-content:center;}
+  .ai-loading .dot{width:8px;height:8px;border-radius:50%;background:var(--navy);
+    animation:bounce .8s infinite;}
+  .ai-loading .dot:nth-child(2){animation-delay:.15s;}
+  .ai-loading .dot:nth-child(3){animation-delay:.3s;}
+  @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+  /* フォーム */
+  .section{background:var(--card);border-radius:14px;border:1px solid var(--border);
+    padding:16px;margin-bottom:12px;}
+  .sec-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:12px;
+    display:flex;align-items:center;gap:6px;}
+  .sec-title i{font-size:17px;color:var(--orange);}
+  .field{margin-bottom:12px;}
+  .field label{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-bottom:4px;}
+  input,select,textarea{width:100%;height:42px;border:1px solid var(--border);border-radius:8px;
+    padding:0 11px;font-size:14px;color:var(--text);background:var(--card);
+    appearance:none;font-family:inherit;}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy);}
+  textarea{height:64px;padding:9px 11px;resize:none;line-height:1.6;}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .row3{display:grid;grid-template-columns:2fr 1fr 1.2fr;gap:8px;}
+
+  /* 明細テーブル */
+  .items-table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:8px;}
+  .items-table th{text-align:left;font-size:11px;font-weight:600;color:var(--muted);
+    padding:6px 8px;border-bottom:2px solid var(--border);}
+  .items-table td{padding:6px 4px;border-bottom:1px solid var(--bg);vertical-align:middle;}
+  .items-table td input{height:36px;font-size:13px;}
+  .items-table td input.num{text-align:right;}
+  .del-btn{width:28px;height:28px;border-radius:50%;background:var(--bg);
+    border:1px solid var(--border);color:var(--red);cursor:pointer;
+    display:flex;align-items:center;justify-content:center;font-size:13px;}
+  .add-row-btn{width:100%;padding:9px;background:var(--bg);border:1px dashed var(--border);
+    border-radius:8px;font-size:13px;color:var(--muted);cursor:pointer;
+    display:flex;align-items:center;justify-content:center;gap:6px;}
+
+  /* 合計 */
+  .total-area{background:#f0f5fa;border-radius:10px;padding:12px 14px;}
+  .total-row{display:flex;justify-content:space-between;font-size:13px;padding:4px 0;}
+  .total-row .k{color:var(--muted);}
+  .total-row.grand .k{font-weight:700;color:var(--navy);font-size:14px;}
+  .total-row.grand .v{font-weight:800;color:var(--navy);font-size:18px;}
+  .total-row .v{font-weight:500;}
+
+  /* 備考 */
+  .note-area textarea{height:80px;}
+
+  /* アクションボタン */
+  .action-bar{position:fixed;bottom:0;left:0;right:0;background:var(--card);
+    border-top:1px solid var(--border);padding:12px 16px;
+    display:flex;gap:8px;padding-bottom:calc(12px + env(safe-area-inset-bottom));}
+  .btn{flex:1;padding:13px;border-radius:10px;font-size:14px;font-weight:700;
+    border:none;cursor:pointer;transition:.15s;display:flex;align-items:center;
+    justify-content:center;gap:6px;}
+  .btn:active{transform:scale(.97);}
+  .btn-secondary{background:var(--bg);color:var(--navy);border:1px solid var(--border);}
+  .btn-primary{background:var(--navy);color:#fff;}
+  .btn-green{background:var(--green);color:#fff;}
+
+  /* 見積一覧 */
+  .estimate-card{background:var(--card);border-radius:12px;border:1px solid var(--border);
+    padding:14px;margin-bottom:10px;cursor:pointer;}
+  .ec-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;}
+  .ec-title{font-size:14px;font-weight:700;flex:1;margin-right:8px;line-height:1.4;}
+  .ec-status{padding:3px 9px;border-radius:10px;font-size:11px;font-weight:600;}
+  .s-draft{background:#f0f0f0;color:#888;}
+  .s-sent{background:#e8f4ff;color:var(--navy);}
+  .s-accepted{background:#e8f8f2;color:var(--green);}
+  .ec-meta{font-size:12px;color:var(--muted);margin-bottom:8px;}
+  .ec-bottom{display:flex;justify-content:space-between;align-items:center;
+    padding-top:8px;border-top:1px solid var(--bg);}
+  .ec-amount{font-size:16px;font-weight:800;color:var(--navy);}
+  .ec-actions{display:flex;gap:6px;}
+  .ec-btn{padding:5px 12px;border-radius:7px;font-size:12px;font-weight:600;
+    border:1px solid var(--border);background:var(--card);cursor:pointer;}
+
+  .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(60px);
+    background:var(--text);color:#fff;padding:11px 20px;border-radius:22px;
+    font-size:13px;font-weight:500;transition:transform .3s;z-index:99;white-space:nowrap;}
+  .toast.show{transform:translateX(-50%) translateY(0);}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+<header>
+  <span class="back" onclick="history.back()"><i class="ti ti-arrow-left"></i></span>
+  <span class="title">見積書</span>
+  <button class="hd-ai" onclick="showTab('new')">
+    <i class="ti ti-sparkles" style="font-size:13px"></i>AI作成
+  </button>
+</header>
+
+<div class="tabs">
+  <div class="tab" id="tab-list" onclick="showTab('list')">見積一覧</div>
+  <div class="tab act" id="tab-new" onclick="showTab('new')">新規作成</div>
+</div>
+
+<main>
+
+  <!-- 見積一覧 -->
+  <div id="page-list" style="display:none">
+    <div class="estimate-card">
+      <div class="ec-top">
+        <div class="ec-title">外壁タイル張り工事 見積書</div>
+        <span class="ec-status s-accepted">承認済み</span>
+      </div>
+      <div class="ec-meta">株式会社〇〇建設 ・ 2026年6月5日</div>
+      <div class="ec-bottom">
+        <div class="ec-amount">¥480,000</div>
+        <div class="ec-actions">
+          <button class="ec-btn" onclick="showToast('PDFをダウンロード')"><i class="ti ti-download"></i> PDF</button>
+          <button class="ec-btn" onclick="showToast('案件登録に転用')"><i class="ti ti-arrow-right"></i> 案件化</button>
+        </div>
+      </div>
+    </div>
+    <div class="estimate-card">
+      <div class="ec-top">
+        <div class="ec-title">屋上防水改修工事 見積書</div>
+        <span class="ec-status s-sent">送付済み</span>
+      </div>
+      <div class="ec-meta">□□不動産管理株式会社 ・ 2026年6月8日</div>
+      <div class="ec-bottom">
+        <div class="ec-amount">¥320,000</div>
+        <div class="ec-actions">
+          <button class="ec-btn" onclick="showToast('PDFをダウンロード')"><i class="ti ti-download"></i> PDF</button>
+          <button class="ec-btn" onclick="showTab('new')"><i class="ti ti-edit"></i> 編集</button>
+        </div>
+      </div>
+    </div>
+    <div class="estimate-card">
+      <div class="ec-top">
+        <div class="ec-title">内装仕上げ工事（LGS・ボード張り）</div>
+        <span class="ec-status s-draft">下書き</span>
+      </div>
+      <div class="ec-meta">作成中 ・ 2026年6月9日</div>
+      <div class="ec-bottom">
+        <div class="ec-amount">¥—</div>
+        <div class="ec-actions">
+          <button class="ec-btn" onclick="showTab('new')"><i class="ti ti-edit"></i> 編集</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 新規作成 -->
+  <div id="page-new">
+
+    <!-- AI入力 -->
+    <div class="ai-section">
+      <div class="ai-header">
+        <div class="ai-icon"><i class="ti ti-sparkles"></i></div>
+        <div>
+          <div class="ai-title">AIで見積書を自動作成</div>
+          <div class="ai-sub">工事内容を話しかけるだけで明細を自動入力します</div>
+        </div>
+      </div>
+      <div class="ai-input-wrap">
+        <textarea class="ai-input" id="ai-prompt"
+          placeholder="例：横浜市のマンションで外壁タイル張り120㎡、足場設置あり、工期3週間"></textarea>
+        <button class="ai-send" onclick="generateEstimate()" aria-label="AI生成">
+          <i class="ti ti-send"></i>
+        </button>
+      </div>
+      <div class="ai-chips">
+        <div class="ai-chip" onclick="setPrompt('タイル張り工事120㎡、足場あり、3週間')">タイル工事</div>
+        <div class="ai-chip" onclick="setPrompt('外壁シーリング打替え、2階建て戸建て、1日作業')">シーリング</div>
+        <div class="ai-chip" onclick="setPrompt('屋上防水改修工事、ウレタン塗膜防水、150㎡')">防水工事</div>
+        <div class="ai-chip" onclick="setPrompt('内装LGS・ボード張り、事務所100㎡、2週間')">内装工事</div>
+      </div>
+      <div class="ai-loading" id="ai-loading">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <span style="font-size:13px;color:var(--muted);margin-left:4px">Geminiが見積を生成中...</span>
+      </div>
+    </div>
+
+    <!-- 基本情報 -->
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-file-text"></i>基本情報</div>
+      <div class="field">
+        <label>見積タイトル</label>
+        <input type="text" id="f-title" placeholder="例：外壁タイル張り工事 御見積書">
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label>見積日</label>
+          <input type="date" id="f-date">
+        </div>
+        <div class="field">
+          <label>有効期限</label>
+          <input type="date" id="f-expire">
+        </div>
+      </div>
+      <div class="field">
+        <label>宛先（会社名・氏名）</label>
+        <input type="text" id="f-client" placeholder="例：株式会社〇〇建設 御中">
+      </div>
+      <div class="field">
+        <label>工事場所</label>
+        <input type="text" id="f-location" placeholder="例：神奈川県横浜市中区山下町">
+      </div>
+    </div>
+
+    <!-- 明細 -->
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-list"></i>工事明細</div>
+      <table class="items-table">
+        <thead>
+          <tr>
+            <th style="width:38%">工事内容</th>
+            <th style="width:18%">数量</th>
+            <th style="width:15%">単位</th>
+            <th style="width:22%">単価（円）</th>
+            <th style="width:7%"></th>
+          </tr>
+        </thead>
+        <tbody id="items-body"></tbody>
+      </table>
+      <button class="add-row-btn" onclick="addItem()">
+        <i class="ti ti-plus"></i>明細を追加
+      </button>
+    </div>
+
+    <!-- 合計 -->
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-calculator"></i>合計金額</div>
+      <div class="total-area">
+        <div class="total-row"><span class="k">小計</span><span class="v" id="subtotal">¥0</span></div>
+        <div class="total-row">
+          <span class="k">消費税（10%）</span>
+          <span class="v" id="tax">¥0</span>
+        </div>
+        <div class="total-row grand" style="border-top:1px solid #b8d0e8;margin-top:6px;padding-top:8px">
+          <span class="k">合計（税込）</span>
+          <span class="v" id="total">¥0</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 備考 -->
+    <div class="section note-area">
+      <div class="sec-title"><i class="ti ti-notes"></i>備考・支払条件</div>
+      <div class="field">
+        <textarea id="f-note" placeholder="例：・お支払いは工事完了後30日以内にお願いします&#10;・本見積書の有効期限は発行日より30日間です&#10;・材料費は別途見積となります"></textarea>
+      </div>
+    </div>
+
+  </div><!-- /page-new -->
+</main>
+
+<!-- アクションバー -->
+<div class="action-bar" id="action-bar-new">
+  <button class="btn btn-secondary" onclick="saveDraft()">
+    <i class="ti ti-device-floppy"></i>下書き保存
+  </button>
+  <button class="btn btn-primary" onclick="exportPdf()">
+    <i class="ti ti-download"></i>PDF出力
+  </button>
+  <button class="btn btn-green" onclick="sendEstimate()">
+    <i class="ti ti-send"></i>送付
+  </button>
+</div>
+<div class="action-bar" id="action-bar-list" style="display:none">
+  <button class="btn btn-primary" onclick="showTab('new')" style="flex:none;width:100%">
+    <i class="ti ti-plus"></i>新規見積書を作成
+  </button>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ── 初期設定 ────────────────────────────────────────────────
+const today = new Date().toISOString().slice(0,10);
+const expire = new Date(); expire.setDate(expire.getDate()+30);
+document.getElementById('f-date').value = today;
+document.getElementById('f-expire').value = expire.toISOString().slice(0,10);
+
+let items = [];
+
+// 初期明細
+const defaultItems = [
+  { name:'タイル張り工事（東面・南面）', qty:120, unit:'㎡', price:2500 },
+  { name:'足場設置・撤去',               qty:1,   unit:'式', price:80000 },
+  { name:'下地処理・目地補修',           qty:1,   unit:'式', price:35000 },
+];
+defaultItems.forEach(i => addItem(i));
+
+function addItem(data = {}) {
+  const id = Date.now() + Math.random();
+  items.push({ id, name: data.name||'', qty: data.qty||1, unit: data.unit||'式', price: data.price||0 });
+  renderItems();
+}
+
+function removeItem(id) {
+  items = items.filter(i => i.id !== id);
+  renderItems();
+}
+
+function renderItems() {
+  const tbody = document.getElementById('items-body');
+  tbody.innerHTML = items.map(item => `
+    <tr>
+      <td><input type="text" value="${item.name}" placeholder="工事内容"
+        oninput="updateItem(${item.id},'name',this.value)"></td>
+      <td><input type="number" class="num" value="${item.qty}" min="0" step="0.1"
+        oninput="updateItem(${item.id},'qty',+this.value)"></td>
+      <td><input type="text" value="${item.unit}" placeholder="㎡"
+        oninput="updateItem(${item.id},'unit',this.value)"></td>
+      <td><input type="number" class="num" value="${item.price}" min="0" step="1000"
+        oninput="updateItem(${item.id},'price',+this.value)"></td>
+      <td><button class="del-btn" onclick="removeItem(${item.id})">
+        <i class="ti ti-x"></i></button></td>
+    </tr>`).join('');
+  calcTotal();
+}
+
+function updateItem(id, key, val) {
+  const item = items.find(i => i.id === id);
+  if (item) { item[key] = val; calcTotal(); }
+}
+
+function calcTotal() {
+  const sub = items.reduce((s, i) => s + (i.qty * i.price), 0);
+  const tax = Math.round(sub * 0.1);
+  const total = sub + tax;
+  document.getElementById('subtotal').textContent = '¥' + sub.toLocaleString();
+  document.getElementById('tax').textContent      = '¥' + tax.toLocaleString();
+  document.getElementById('total').textContent    = '¥' + total.toLocaleString();
+}
+
+// ── AI見積生成（Gemini API呼び出し） ──────────────────────────
+async function generateEstimate() {
+  const prompt = document.getElementById('ai-prompt').value.trim();
+  if (!prompt) { showToast('工事内容を入力してください'); return; }
+
+  document.getElementById('ai-loading').style.display = 'flex';
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        system: `あなたは建設業の見積書作成AIです。
+ユーザーが説明する工事内容から、見積書の明細を生成してください。
+必ずJSON配列のみで返答し、他のテキストは一切含めないでください。
+フォーマット：
+[
+  {"name":"工事内容","qty":数量,"unit":"単位","price":単価（円・整数）},
+  ...
+]
+単価は実際の建設業の相場に近い現実的な金額にしてください。
+明細は3〜6行程度にしてください。`,
+        messages: [{ role: 'user', content: `以下の工事の見積明細をJSONで生成してください：\n${prompt}` }]
+      })
+    });
+
+    const data = await res.json();
+    const text = data.content?.[0]?.text || '';
+    const clean = text.replace(/```json|```/g, '').trim();
+    const parsed = JSON.parse(clean);
+
+    // 明細をセット
+    items = [];
+    parsed.forEach(i => addItem(i));
+
+    // タイトル自動入力
+    if (!document.getElementById('f-title').value) {
+      document.getElementById('f-title').value = prompt.slice(0, 30) + ' 御見積書';
+    }
+
+    showToast('AIが見積明細を生成しました');
+  } catch(e) {
+    console.error(e);
+    // デモ用フォールバック
+    items = [];
+    addItem({ name:'工事費（労務・材料）', qty:1,   unit:'式', price:280000 });
+    addItem({ name:'諸経費',              qty:1,   unit:'式', price:28000  });
+    showToast('AI生成完了（デモモード）');
+  } finally {
+    document.getElementById('ai-loading').style.display = 'none';
+  }
+}
+
+function setPrompt(text) {
+  document.getElementById('ai-prompt').value = text;
+  document.getElementById('ai-prompt').focus();
+}
+
+// ── タブ切替 ────────────────────────────────────────────────
+function showTab(tab) {
+  const isNew = tab === 'new';
+  document.getElementById('page-new').style.display  = isNew ? 'block' : 'none';
+  document.getElementById('page-list').style.display = isNew ? 'none'  : 'block';
+  document.getElementById('tab-new').classList.toggle('act', isNew);
+  document.getElementById('tab-list').classList.toggle('act', !isNew);
+  document.getElementById('action-bar-new').style.display  = isNew ? 'flex' : 'none';
+  document.getElementById('action-bar-list').style.display = isNew ? 'none' : 'flex';
+}
+
+function saveDraft()    { showToast('下書きを保存しました'); }
+function exportPdf()    { showToast('PDFを生成しています...'); }
+function sendEstimate() { showToast('見積書をメールで送付しました'); }
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.className = 'toast show';
+  setTimeout(() => t.className = 'toast', 2600);
+}
+
+// 初期タブ
+showTab('new');
+</script>
+</body>
+</html>

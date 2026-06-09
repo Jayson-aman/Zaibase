@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>マッチング承認 — Zaibase</title>
+<style>
+  :root{--navy:#1a3c5e;--orange:#e8a020;--bg:#f4f6f8;--card:#fff;
+    --text:#1a2332;--muted:#6b7c93;--border:#dce3ea;--green:#1d9e75;--red:#e24b4a;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+    background:var(--bg);color:var(--text);min-height:100dvh;display:flex;flex-direction:column;}
+
+  header{background:var(--navy);padding:13px 16px;display:flex;align-items:center;gap:10px;}
+  .back{color:rgba(255,255,255,.7);font-size:13px;cursor:pointer;}
+  .logo{color:#fff;font-size:17px;font-weight:800;margin:0 auto;}
+
+  /* 案件情報バナー */
+  .job-banner{background:var(--navy);padding:12px 16px 16px;border-bottom:1px solid rgba(255,255,255,.1);}
+  .jb-title{color:#fff;font-size:15px;font-weight:700;margin-bottom:6px;line-height:1.4;}
+  .jb-meta{display:flex;flex-wrap:wrap;gap:10px;font-size:12px;color:rgba(255,255,255,.65);}
+  .jb-meta span{display:flex;align-items:center;gap:3px;}
+  .jb-meta i{font-size:13px;}
+
+  main{flex:1;padding:14px;}
+
+  /* 応募者カード */
+  .applicant-card{background:var(--card);border-radius:14px;border:1px solid var(--border);
+    margin-bottom:12px;overflow:hidden;transition:.15s;}
+  .ac-header{padding:14px;display:flex;align-items:center;gap:12px;cursor:pointer;}
+  .avatar{width:46px;height:46px;border-radius:50%;background:#2c5f82;
+    display:flex;align-items:center;justify-content:center;
+    font-size:16px;font-weight:700;color:#fff;flex-shrink:0;}
+  .ac-info{flex:1;min-width:0;}
+  .ac-name{font-size:15px;font-weight:700;margin-bottom:3px;}
+  .ac-badges{display:flex;gap:5px;flex-wrap:wrap;}
+  .badge{padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600;}
+  .b-ccus{background:#e8f4ff;color:#1a5c8e;}
+  .b-license{background:#fff0e8;color:#8a4a00;}
+  .b-rating{background:#fff8e0;color:#7a5a00;}
+  .b-new{background:#ffe8e8;color:#8a0000;}
+  .ac-score{text-align:right;flex-shrink:0;}
+  .score-val{font-size:22px;font-weight:800;color:var(--navy);}
+  .score-label{font-size:10px;color:var(--muted);}
+
+  /* 詳細パネル */
+  .ac-detail{border-top:1px solid var(--border);padding:14px;display:none;}
+  .ac-detail.open{display:block;}
+  .detail-row{display:flex;justify-content:space-between;font-size:13px;
+    padding:6px 0;border-bottom:1px solid var(--bg);}
+  .detail-row:last-of-type{border-bottom:none;}
+  .detail-row .k{color:var(--muted);}
+  .detail-row .v{font-weight:500;text-align:right;max-width:60%;}
+
+  /* CCUS実績バー */
+  .ccus-bar{margin:10px 0;padding:10px 12px;background:var(--bg);border-radius:8px;}
+  .ccus-title{font-size:11px;color:var(--muted);margin-bottom:6px;font-weight:600;}
+  .ccus-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;}
+  .ccus-stat{text-align:center;}
+  .ccus-stat .n{font-size:16px;font-weight:700;color:var(--navy);}
+  .ccus-stat .l{font-size:10px;color:var(--muted);}
+
+  /* 自己PRメッセージ */
+  .pr-bubble{background:#f0f5fa;border-radius:10px;padding:10px 12px;
+    font-size:13px;color:var(--text);line-height:1.65;margin:10px 0;
+    border-left:3px solid var(--navy);}
+
+  /* アクションボタン */
+  .ac-actions{display:flex;gap:8px;margin-top:12px;}
+  .btn{flex:1;padding:12px;border-radius:10px;font-size:14px;font-weight:700;
+    border:none;cursor:pointer;transition:.15s;display:flex;align-items:center;
+    justify-content:center;gap:6px;}
+  .btn:active{transform:scale(.97);}
+  .btn-approve{background:var(--green);color:#fff;}
+  .btn-reject{background:var(--bg);color:var(--red);border:1.5px solid var(--red);}
+  .btn-chat{background:var(--bg);color:var(--navy);border:1.5px solid var(--border);}
+
+  /* 承認確認モーダル */
+  .modal-wrap{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);
+    z-index:50;align-items:flex-end;justify-content:center;}
+  .modal-wrap.show{display:flex;}
+  .modal{background:var(--card);border-radius:20px 20px 0 0;padding:24px;width:100%;max-width:520px;}
+  .modal-title{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:8px;}
+  .modal-sub{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:16px;}
+  .modal-info{background:#f0f5fa;border-radius:10px;padding:12px;margin-bottom:16px;}
+  .modal-info-row{display:flex;justify-content:space-between;font-size:13px;padding:4px 0;}
+  .modal-info-row .k{color:var(--muted);}
+  .modal-info-row .v{font-weight:600;}
+  .modal-btns{display:flex;gap:10px;}
+  .modal-btns .btn{flex:1;}
+
+  /* 完了バナー */
+  .done-banner{background:var(--green);color:#fff;padding:14px 16px;
+    display:none;align-items:center;gap:10px;font-size:14px;font-weight:600;}
+  .done-banner.show{display:flex;}
+  .done-banner i{font-size:20px;}
+
+  .empty{text-align:center;padding:40px 20px;color:var(--muted);}
+  .empty i{font-size:44px;opacity:.3;display:block;margin-bottom:10px;}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+
+<header>
+  <span class="back" onclick="history.back()"><i class="ti ti-arrow-left"></i></span>
+  <span class="logo">応募者管理</span>
+</header>
+
+<!-- 案件情報バナー -->
+<div class="job-banner">
+  <div class="jb-title">横浜市内 外壁タイル張り工事（3F東面・南面）</div>
+  <div class="jb-meta">
+    <span><i class="ti ti-tools"></i>タイル</span>
+    <span><i class="ti ti-map-pin"></i>横浜市中区</span>
+    <span><i class="ti ti-calendar"></i>6/20〜7/10</span>
+    <span><i class="ti ti-coin-yen"></i>¥480,000</span>
+  </div>
+</div>
+
+<!-- 完了バナー -->
+<div class="done-banner" id="done-banner">
+  <i class="ti ti-circle-check"></i>
+  <div>
+    <div>マッチング成立 — 契約書を自動生成しました</div>
+    <div style="font-size:12px;font-weight:400;opacity:.85;margin-top:2px">双方にPDFを送付しました。エスクロー入金をお待ちください。</div>
+  </div>
+</div>
+
+<main>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+    <span style="font-size:13px;color:var(--muted);" id="count-label">3名が応募中</span>
+    <span style="font-size:12px;color:var(--muted);">マッチング率順</span>
+  </div>
+
+  <div id="applicant-list"></div>
+</main>
+
+<!-- 承認確認モーダル -->
+<div class="modal-wrap" id="modal">
+  <div class="modal">
+    <div class="modal-title" id="modal-title">このユーザーを承認しますか？</div>
+    <div class="modal-sub">承認するとマッチングが成立し、建設業法・フリーランス保護法に準拠した契約書が自動生成されます。他の応募者は自動的に不採用となります。</div>
+    <div class="modal-info" id="modal-info"></div>
+    <div class="modal-btns">
+      <button class="btn btn-reject" onclick="closeModal()">キャンセル</button>
+      <button class="btn btn-approve" onclick="confirmApprove()">
+        <i class="ti ti-check"></i>承認・契約書生成
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+const APPLICANTS=[
+  {id:1,name:'山田 太郎',initials:'YT',
+    score:96,
+    badges:['CCUS登録済み','評価 4.8★','建設業許可'],
+    isNew:true,
+    pr:'タイル工事歴18年。横浜市内の大型商業施設での施工実績多数あります。写真付きポートフォリオをご覧ください。',
+    ccus:{days:342,sites:28,years:18},
+    details:[
+      ['住所','神奈川県横浜市港北区'],
+      ['建設業許可','神奈川県知事許可（般-〇〇）第〇〇〇号'],
+      ['CCUS技能者ID','登録済み'],
+      ['顔認証','登録済み'],
+      ['過去の取引','Zaibase経由3件・未払いなし'],
+      ['応募メッセージ','2026年6月10日 08:42'],
+    ]},
+  {id:2,name:'鈴木 建設',initials:'SK',
+    score:88,
+    badges:['CCUS登録済み','評価 4.5★'],
+    isNew:false,
+    pr:'タイル・左官工事専門の一人親方です。施工単価は業界水準より抑えられます。品質には自信があります。',
+    ccus:{days:198,sites:15,years:12},
+    details:[
+      ['住所','神奈川県川崎市川崎区'],
+      ['建設業許可','未取得（500万円未満の工事は不要）'],
+      ['CCUS技能者ID','登録済み'],
+      ['顔認証','未登録'],
+      ['過去の取引','Zaibase経由1件'],
+      ['応募日時','2026年6月10日 11:15'],
+    ]},
+  {id:3,name:'田中 工業',initials:'TK',
+    score:72,
+    badges:['評価 4.1★'],
+    isNew:false,
+    pr:'登録したばかりですが、タイル工事の経験は豊富です。よろしくお願いします。',
+    ccus:{days:0,sites:0,years:8},
+    details:[
+      ['住所','神奈川県横浜市緑区'],
+      ['建設業許可','確認中'],
+      ['CCUS技能者ID','未登録'],
+      ['顔認証','未登録'],
+      ['過去の取引','初回'],
+      ['応募日時','2026年6月11日 14:30'],
+    ]},
+];
+
+let selectedApplicant=null;
+
+function renderApplicants(){
+  const list=document.getElementById('applicant-list');
+  if(!APPLICANTS.length){
+    list.innerHTML=`<div class="empty"><i class="ti ti-users-off"></i><p>まだ応募がありません</p></div>`;
+    return;
+  }
+  list.innerHTML=APPLICANTS.map((a,i)=>applicantCard(a,i)).join('');
+}
+
+function applicantCard(a,i){
+  const scoreColor=a.score>=90?'var(--green)':a.score>=80?'var(--navy)':'var(--muted)';
+  return `
+  <div class="applicant-card" id="ac-${a.id}">
+    <div class="ac-header" onclick="toggleDetail(${a.id})">
+      <div class="avatar" style="background:${['#2c5f82','#1d7a5f','#7a4a2c'][i%3]}">${a.initials}</div>
+      <div class="ac-info">
+        <div class="ac-name">${a.name}${a.isNew?'<span class="badge b-new" style="margin-left:6px">NEW</span>':''}</div>
+        <div class="ac-badges">
+          ${a.badges.map(b=>`<span class="badge ${badgeClass(b)}">${b}</span>`).join('')}
+        </div>
+      </div>
+      <div class="ac-score">
+        <div class="score-val" style="color:${scoreColor}">${a.score}</div>
+        <div class="score-label">マッチ率</div>
+      </div>
+    </div>
+    <div class="ac-detail" id="detail-${a.id}">
+      <div class="pr-bubble">${a.pr}</div>
+      <div class="ccus-bar">
+        <div class="ccus-title">CCUS就業実績</div>
+        <div class="ccus-stats">
+          <div class="ccus-stat"><div class="n">${a.ccus.days}</div><div class="l">就業日数</div></div>
+          <div class="ccus-stat"><div class="n">${a.ccus.sites}</div><div class="l">現場数</div></div>
+          <div class="ccus-stat"><div class="n">${a.ccus.years}</div><div class="l">経験年数</div></div>
+        </div>
+      </div>
+      ${a.details.map(([k,v])=>`<div class="detail-row"><span class="k">${k}</span><span class="v">${v}</span></div>`).join('')}
+      <div class="ac-actions">
+        <button class="btn btn-reject" onclick="reject(${a.id})">
+          <i class="ti ti-x"></i>見送る
+        </button>
+        <button class="btn btn-chat" onclick="chat(${a.id})">
+          <i class="ti ti-message"></i>質問
+        </button>
+        <button class="btn btn-approve" onclick="openModal(${a.id})">
+          <i class="ti ti-check"></i>承認
+        </button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function badgeClass(b){
+  if(b.includes('CCUS')) return 'b-ccus';
+  if(b.includes('許可')) return 'b-license';
+  if(b.includes('評価')) return 'b-rating';
+  return 'b-ccus';
+}
+function toggleDetail(id){
+  const d=document.getElementById('detail-'+id);
+  d.classList.toggle('open');
+}
+function openModal(id){
+  selectedApplicant=APPLICANTS.find(a=>a.id===id);
+  document.getElementById('modal-title').textContent=`${selectedApplicant.name} を承認しますか？`;
+  document.getElementById('modal-info').innerHTML=`
+    <div class="modal-info-row"><span class="k">職人</span><span class="v">${selectedApplicant.name}</span></div>
+    <div class="modal-info-row"><span class="k">案件</span><span class="v">外壁タイル張り工事</span></div>
+    <div class="modal-info-row"><span class="k">報酬</span><span class="v">¥480,000</span></div>
+    <div class="modal-info-row"><span class="k">Zaibase手数料</span><span class="v">¥19,200（4%）</span></div>
+    <div class="modal-info-row"><span class="k">職人への支払</span><span class="v">¥460,800</span></div>
+  `;
+  document.getElementById('modal').classList.add('show');
+}
+function closeModal(){document.getElementById('modal').classList.remove('show');}
+function confirmApprove(){
+  closeModal();
+  // Cloud Functions: approveMatching() → 契約書生成 → Firestore更新 → FCM通知
+  document.getElementById('done-banner').classList.add('show');
+  document.getElementById('applicant-list').innerHTML=`
+    <div style="background:var(--card);border-radius:14px;border:1px solid var(--border);padding:20px;text-align:center;">
+      <div style="font-size:32px;margin-bottom:10px">✓</div>
+      <div style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:6px">${selectedApplicant.name} とマッチング成立</div>
+      <div style="font-size:13px;color:var(--muted);line-height:1.7;">契約書PDFを双方に送付しました。<br>エスクロー入金後、作業開始となります。</div>
+    </div>`;
+  document.getElementById('count-label').textContent='マッチング成立';
+}
+function reject(id){
+  if(!confirm('この応募者を見送りますか？')) return;
+  const idx=APPLICANTS.findIndex(a=>a.id===id);
+  if(idx>=0) APPLICANTS.splice(idx,1);
+  renderApplicants();
+  document.getElementById('count-label').textContent=`${APPLICANTS.length}名が応募中`;
+}
+function chat(id){alert('チャット機能（実装予定）');}
+
+renderApplicants();
+</script>
+</body>
+</html>
