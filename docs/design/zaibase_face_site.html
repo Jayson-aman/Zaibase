@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>現場入退場 — Zaibase</title>
+<style>
+  :root {
+    --navy:   #1a3c5e;
+    --orange: #e8a020;
+    --steel:  #2c5f82;
+    --bg:     #0d1b2a;
+    --card:   #162535;
+    --text:   #e8edf2;
+    --muted:  #7a9ab5;
+    --border: #2a4560;
+    --green:  #1d9e75;
+    --red:    #e24b4a;
+    --amber:  #f59e0b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    background: var(--bg); color: var(--text);
+    min-height: 100dvh; display: flex; flex-direction: column;
+    user-select: none;
+  }
+
+  /* ヘッダー */
+  header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 20px; border-bottom: 1px solid var(--border);
+  }
+  .logo { font-size: 17px; font-weight: 800; color: #fff; letter-spacing: .5px; }
+  .site-info { text-align: right; }
+  .site-name { font-size: 13px; font-weight: 600; color: var(--text); }
+  .site-time  { font-size: 11px; color: var(--muted); }
+
+  /* メイン */
+  main { flex: 1; display: flex; flex-direction: column; padding: 16px; gap: 14px; }
+
+  /* モード切替 */
+  .mode-bar {
+    display: flex; background: var(--card);
+    border-radius: 10px; padding: 4px; gap: 4px;
+    border: 1px solid var(--border);
+  }
+  .mode-btn {
+    flex: 1; padding: 10px; border-radius: 7px;
+    font-size: 14px; font-weight: 700; border: none;
+    cursor: pointer; transition: .2s; color: var(--muted);
+    background: transparent;
+  }
+  .mode-btn.active-entry { background: var(--green); color: #fff; }
+  .mode-btn.active-exit  { background: var(--red);   color: #fff; }
+
+  /* カメラ */
+  .camera-section {
+    flex: 1; position: relative; border-radius: 16px;
+    overflow: hidden; background: #050e18;
+    border: 1px solid var(--border);
+    min-height: 300px;
+  }
+  #video {
+    width: 100%; height: 100%; object-fit: cover;
+    transform: scaleX(-1); display: block;
+  }
+
+  /* 認識オーバーレイ */
+  .overlay {
+    position: absolute; inset: 0; pointer-events: none;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 10px;
+  }
+  .scan-frame {
+    width: 200px; height: 200px; position: relative;
+  }
+  .scan-frame::before, .scan-frame::after,
+  .scan-frame .b3, .scan-frame .b4 {
+    content: ''; position: absolute;
+    width: 28px; height: 28px; border-color: var(--orange);
+    border-style: solid;
+  }
+  .scan-frame::before { top:0; left:0; border-width: 3px 0 0 3px; border-radius: 4px 0 0 0; }
+  .scan-frame::after  { top:0; right:0; border-width: 3px 3px 0 0; border-radius: 0 4px 0 0; }
+  .scan-frame .b3 { bottom:0; left:0; border-width: 0 0 3px 3px; border-radius: 0 0 0 4px; }
+  .scan-frame .b4 { bottom:0; right:0; border-width: 0 3px 3px 0; border-radius: 0 0 4px 0; }
+
+  .scan-line {
+    position: absolute; left: 10px; right: 10px; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--orange), transparent);
+    animation: scan 2s ease-in-out infinite;
+  }
+  @keyframes scan {
+    0%   { top: 10px; opacity: 0; }
+    10%  { opacity: 1; }
+    90%  { opacity: 1; }
+    100% { top: 186px; opacity: 0; }
+  }
+
+  .scan-hint {
+    font-size: 13px; color: rgba(255,255,255,.75);
+    background: rgba(0,0,0,.45); padding: 6px 16px;
+    border-radius: 20px; backdrop-filter: blur(4px);
+  }
+
+  /* 認証中オーバーレイ */
+  .processing-overlay {
+    position: absolute; inset: 0; background: rgba(13,27,42,.85);
+    display: none; flex-direction: column;
+    align-items: center; justify-content: center; gap: 14px;
+    backdrop-filter: blur(2px);
+  }
+  .proc-spinner {
+    width: 48px; height: 48px; border-radius: 50%;
+    border: 4px solid var(--border); border-top-color: var(--orange);
+    animation: spin .8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .proc-text { font-size: 14px; color: var(--muted); }
+
+  /* 結果オーバーレイ */
+  .result-overlay {
+    position: absolute; inset: 0;
+    display: none; flex-direction: column;
+    align-items: center; justify-content: center; gap: 10px;
+    backdrop-filter: blur(2px);
+  }
+  .result-overlay.success { background: rgba(10,60,38,.88); }
+  .result-overlay.failure { background: rgba(60,10,10,.88); }
+
+  .result-icon {
+    width: 72px; height: 72px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 34px;
+  }
+  .result-icon.ok  { background: rgba(29,158,117,.25); border: 2px solid var(--green); }
+  .result-icon.ng  { background: rgba(226,75,74,.25);  border: 2px solid var(--red);   }
+
+  .result-name   { font-size: 22px; font-weight: 800; color: #fff; }
+  .result-detail { font-size: 13px; color: rgba(255,255,255,.65); }
+  .result-time   {
+    font-size: 28px; font-weight: 300; color: #fff;
+    font-variant-numeric: tabular-nums; letter-spacing: 1px;
+  }
+  .result-badge {
+    padding: 6px 18px; border-radius: 20px;
+    font-size: 13px; font-weight: 700;
+  }
+  .result-badge.entry-ok { background: var(--green); color: #fff; }
+  .result-badge.exit-ok  { background: var(--red);   color: #fff; }
+  .result-badge.ng       { background: rgba(255,255,255,.15); color: rgba(255,255,255,.6); }
+
+  /* 直近の認証ログ */
+  .log-section { }
+  .log-title { font-size: 12px; color: var(--muted); margin-bottom: 8px; font-weight: 600; letter-spacing: .5px; }
+  .log-list { display: flex; flex-direction: column; gap: 6px; }
+  .log-item {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--card); border-radius: 8px;
+    padding: 10px 12px; border: 1px solid var(--border);
+  }
+  .log-avatar {
+    width: 34px; height: 34px; border-radius: 50%;
+    background: var(--steel); display: flex; align-items: center;
+    justify-content: center; font-size: 13px; font-weight: 700;
+    color: #fff; flex-shrink: 0;
+  }
+  .log-name { font-size: 13px; font-weight: 600; color: var(--text); }
+  .log-meta { font-size: 11px; color: var(--muted); }
+  .log-badge {
+    margin-left: auto; padding: 3px 10px; border-radius: 12px;
+    font-size: 11px; font-weight: 700; flex-shrink: 0;
+  }
+  .log-badge.entry { background: rgba(29,158,117,.2); color: #4fd1a5; }
+  .log-badge.exit  { background: rgba(226,75,74,.2);  color: #f08080; }
+
+  /* 手動認証ボタン */
+  .manual-btn {
+    width: 100%; padding: 13px; border-radius: 10px;
+    background: transparent; border: 1px solid var(--border);
+    color: var(--muted); font-size: 13px; cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="logo">Zaibase</span>
+  <div class="site-info">
+    <div class="site-name">△△ビル新築現場</div>
+    <div class="site-time" id="live-time">--:--:--</div>
+  </div>
+</header>
+
+<main>
+  <!-- モード切替 -->
+  <div class="mode-bar">
+    <button class="mode-btn active-entry" id="btn-entry" onclick="setMode('entry')">入場</button>
+    <button class="mode-btn" id="btn-exit"  onclick="setMode('exit')">退場</button>
+  </div>
+
+  <!-- カメラ -->
+  <div class="camera-section" id="camera-section">
+    <video id="video" autoplay playsinline muted></video>
+
+    <!-- スキャン枠 -->
+    <div class="overlay" id="scan-overlay">
+      <div class="scan-frame">
+        <div class="b3"></div><div class="b4"></div>
+        <div class="scan-line"></div>
+      </div>
+      <div class="scan-hint" id="scan-hint">顔をフレームに合わせてください</div>
+    </div>
+
+    <!-- 処理中 -->
+    <div class="processing-overlay" id="proc-overlay">
+      <div class="proc-spinner"></div>
+      <span class="proc-text">認証中...</span>
+    </div>
+
+    <!-- 結果 -->
+    <div class="result-overlay" id="result-overlay">
+      <div class="result-icon" id="result-icon">✓</div>
+      <div class="result-name" id="result-name">山田 太郎</div>
+      <div class="result-detail" id="result-detail">一致率 98.4%</div>
+      <div class="result-time" id="result-time">09:12:34</div>
+      <div class="result-badge entry-ok" id="result-badge">入場記録完了</div>
+    </div>
+  </div>
+
+  <!-- 直近ログ -->
+  <div class="log-section">
+    <div class="log-title">本日の入退場記録</div>
+    <div class="log-list" id="log-list">
+      <div class="log-item">
+        <div class="log-avatar">YT</div>
+        <div>
+          <div class="log-name">山田 太郎</div>
+          <div class="log-meta">08:47 · 一致率 97.2%</div>
+        </div>
+        <span class="log-badge entry">入場</span>
+      </div>
+      <div class="log-item">
+        <div class="log-avatar">SK</div>
+        <div>
+          <div class="log-name">鈴木 健一</div>
+          <div class="log-meta">08:53 · 一致率 99.1%</div>
+        </div>
+        <span class="log-badge entry">入場</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 手動 -->
+  <button class="manual-btn" onclick="manualAuth()">
+    顔認証できない場合は手動で記録する
+  </button>
+</main>
+
+<script>
+let currentMode = 'entry';
+let scanning    = false;
+let scanTimer   = null;
+
+// 時刻更新
+function updateTime() {
+  document.getElementById('live-time').textContent =
+    new Date().toLocaleTimeString('ja-JP');
+}
+setInterval(updateTime, 1000);
+updateTime();
+
+// カメラ起動
+async function startCamera() {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({
+      video: { facingMode: 'environment', width: { ideal: 1280 } }
+    });
+    document.getElementById('video').srcObject = stream;
+    startAutoScan();
+  } catch(e) {
+    document.getElementById('scan-hint').textContent =
+      'カメラを起動できませんでした';
+  }
+}
+
+// 自動スキャン（3秒ごとにキャプチャ→送信）
+function startAutoScan() {
+  scanTimer = setInterval(() => {
+    if (!scanning) tryCapture();
+  }, 3000);
+}
+
+function tryCapture() {
+  const video  = document.getElementById('video');
+  if (!video.videoWidth) return;
+
+  scanning = true;
+  const canvas = document.createElement('canvas');
+  canvas.width  = video.videoWidth;
+  canvas.height = video.videoHeight;
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(video, 0, 0);
+
+  // Cloud Functions authenticateFace() のモック
+  // 実際:
+  // const fn = firebase.functions().httpsCallable('authenticateFace');
+  // const res = await fn({ imageBase64: canvas.toDataURL('image/jpeg', .85),
+  //                        contractId: CURRENT_CONTRACT_ID, type: currentMode });
+  simulateAuth(canvas.toDataURL('image/jpeg', .85));
+}
+
+// 認証シミュレーション（デモ用）
+const DEMO_WORKERS = [
+  { name: '山田 太郎', initials: 'YT', sim: 98.4 },
+  { name: '鈴木 健一', initials: 'SK', sim: 99.1 },
+  { name: '田中 誠',   initials: 'TM', sim: 95.7 },
+];
+
+function simulateAuth(imageData) {
+  showProcessing();
+
+  setTimeout(() => {
+    const success  = Math.random() > 0.15;
+    if (success) {
+      const worker = DEMO_WORKERS[Math.floor(Math.random() * DEMO_WORKERS.length)];
+      showResult(true, worker);
+      addLog(worker);
+    } else {
+      showResult(false, null);
+    }
+    setTimeout(() => {
+      hideResult();
+      scanning = false;
+    }, 2800);
+  }, 1200);
+}
+
+function showProcessing() {
+  document.getElementById('scan-overlay').style.display   = 'none';
+  document.getElementById('proc-overlay').style.display   = 'flex';
+  document.getElementById('result-overlay').style.display = 'none';
+}
+
+function showResult(success, worker) {
+  document.getElementById('proc-overlay').style.display   = 'none';
+  const overlay = document.getElementById('result-overlay');
+  overlay.style.display = 'flex';
+
+  if (success) {
+    const now = new Date().toLocaleTimeString('ja-JP');
+    overlay.className = 'result-overlay success';
+    document.getElementById('result-icon').className = 'result-icon ok';
+    document.getElementById('result-icon').textContent = '✓';
+    document.getElementById('result-name').textContent   = worker.name;
+    document.getElementById('result-detail').textContent = `一致率 ${worker.sim.toFixed(1)}%`;
+    document.getElementById('result-time').textContent   = now;
+    const badge = document.getElementById('result-badge');
+    if (currentMode === 'entry') {
+      badge.textContent = '入場記録完了';
+      badge.className   = 'result-badge entry-ok';
+    } else {
+      badge.textContent = '退場記録完了';
+      badge.className   = 'result-badge exit-ok';
+    }
+  } else {
+    overlay.className = 'result-overlay failure';
+    document.getElementById('result-icon').className = 'result-icon ng';
+    document.getElementById('result-icon').textContent = '✗';
+    document.getElementById('result-name').textContent   = '未登録の顔';
+    document.getElementById('result-detail').textContent = 'Zaibaseアプリで顔登録が必要です';
+    document.getElementById('result-time').textContent   = '';
+    document.getElementById('result-badge').textContent  = '認証失敗';
+    document.getElementById('result-badge').className    = 'result-badge ng';
+  }
+}
+
+function hideResult() {
+  document.getElementById('result-overlay').style.display = 'none';
+  document.getElementById('scan-overlay').style.display   = 'flex';
+}
+
+function addLog(worker) {
+  const list  = document.getElementById('log-list');
+  const time  = new Date().toLocaleTimeString('ja-JP', { hour:'2-digit', minute:'2-digit' });
+  const item  = document.createElement('div');
+  item.className = 'log-item';
+  item.innerHTML = `
+    <div class="log-avatar">${worker.initials}</div>
+    <div>
+      <div class="log-name">${worker.name}</div>
+      <div class="log-meta">${time} · 一致率 ${worker.sim.toFixed(1)}%</div>
+    </div>
+    <span class="log-badge ${currentMode}">${currentMode === 'entry' ? '入場' : '退場'}</span>`;
+  list.insertBefore(item, list.firstChild);
+  if (list.children.length > 5) list.removeChild(list.lastChild);
+}
+
+function setMode(mode) {
+  currentMode = mode;
+  document.getElementById('btn-entry').className =
+    'mode-btn' + (mode === 'entry' ? ' active-entry' : '');
+  document.getElementById('btn-exit').className =
+    'mode-btn' + (mode === 'exit' ? ' active-exit' : '');
+  document.getElementById('scan-hint').textContent =
+    mode === 'entry' ? '顔をフレームに合わせてください（入場）'
+                     : '顔をフレームに合わせてください（退場）';
+}
+
+function manualAuth() {
+  alert('手動記録画面を開きます（実装予定）');
+}
+
+startCamera();
+</script>
+</body>
+</html>

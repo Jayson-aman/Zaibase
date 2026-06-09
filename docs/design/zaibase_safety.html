@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>現場安全 — Zaibase</title>
+<style>
+  :root{--navy:#1a3c5e;--orange:#e8a020;--bg:#f4f6f8;--card:#fff;
+    --text:#1a2332;--muted:#6b7c93;--border:#dce3ea;--green:#1d9e75;--red:#e24b4a;
+    --amber:#f59e0b;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+    background:var(--bg);color:var(--text);min-height:100dvh;display:flex;
+    flex-direction:column;padding-bottom:24px;}
+
+  header{background:var(--navy);padding:13px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0;}
+  .back{color:rgba(255,255,255,.7);font-size:22px;cursor:pointer;}
+  .title{color:#fff;font-size:17px;font-weight:700;margin:0 auto;}
+
+  .tabs{background:var(--card);border-bottom:1px solid var(--border);
+    display:flex;padding:0 16px;position:sticky;top:0;z-index:9;}
+  .tab{padding:12px 14px;font-size:13px;font-weight:500;color:var(--muted);
+    cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;}
+  .tab.act{color:var(--navy);border-bottom-color:var(--navy);font-weight:700;}
+
+  main{flex:1;padding:14px;max-width:560px;margin:0 auto;width:100%;}
+
+  /* ── 熱中症アラート ── */
+  .wbgt-card{border-radius:16px;padding:18px;margin-bottom:14px;color:#fff;}
+  .wbgt-card.safe    {background:#1d9e75;}
+  .wbgt-card.caution {background:#f59e0b;}
+  .wbgt-card.warning {background:#e8a020;}
+  .wbgt-card.danger  {background:#e24b4a;}
+  .wbgt-card.extreme {background:#7c1a1a;}
+
+  .wbgt-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;}
+  .wbgt-label{font-size:12px;font-weight:600;opacity:.8;margin-bottom:4px;}
+  .wbgt-val{font-size:48px;font-weight:800;line-height:1;}
+  .wbgt-unit{font-size:16px;font-weight:400;opacity:.8;}
+  .wbgt-right{text-align:right;}
+  .wbgt-level{font-size:22px;font-weight:800;}
+  .wbgt-sublabel{font-size:12px;opacity:.8;margin-top:2px;}
+  .wbgt-advice{background:rgba(0,0,0,.2);border-radius:10px;padding:11px 13px;
+    font-size:13px;line-height:1.65;}
+  .wbgt-advice strong{display:block;font-size:14px;margin-bottom:4px;}
+
+  .wbgt-meta{display:flex;gap:12px;margin-top:10px;font-size:12px;opacity:.8;}
+  .wbgt-meta span{display:flex;align-items:center;gap:4px;}
+
+  /* 時間別予報 */
+  .hourly-row{display:flex;gap:6px;overflow-x:auto;padding:4px 0 8px;scrollbar-width:none;margin-bottom:14px;}
+  .hourly-row::-webkit-scrollbar{display:none;}
+  .hour-item{flex-shrink:0;text-align:center;background:var(--card);border:1px solid var(--border);
+    border-radius:10px;padding:10px 8px;min-width:58px;}
+  .hour-time{font-size:11px;color:var(--muted);}
+  .hour-temp{font-size:15px;font-weight:700;color:var(--text);margin:4px 0;}
+  .hour-level{font-size:10px;font-weight:600;padding:2px 5px;border-radius:6px;}
+  .lv-safe    {background:#e8f8f2;color:var(--green);}
+  .lv-caution {background:#fff8e0;color:#7a5a00;}
+  .lv-warning {background:#fff3e0;color:#8a4a00;}
+  .lv-danger  {background:#fde8e8;color:var(--red);}
+
+  /* 作業指示バナー */
+  .work-banner{border-radius:12px;padding:14px;margin-bottom:14px;
+    display:flex;gap:10px;align-items:flex-start;}
+  .work-banner.ok{background:#e8f8f2;border:1px solid #9fe1cb;}
+  .work-banner.warn{background:#fff8e0;border:1px solid #f5d86e;}
+  .work-banner.stop{background:#fde8e8;border:1px solid #f5b4b4;}
+  .wb-icon{font-size:26px;flex-shrink:0;}
+  .wb-title{font-size:14px;font-weight:700;margin-bottom:3px;}
+  .wb-sub{font-size:12px;line-height:1.6;color:var(--muted);}
+  .wb-sub.ok   .wb-title{color:var(--green);}
+  .wb-sub.warn .wb-title{color:#7a5a00;}
+  .wb-sub.stop .wb-title{color:var(--red);}
+
+  /* ── ヒヤリハット ── */
+  .section{background:var(--card);border-radius:14px;border:1px solid var(--border);
+    padding:16px;margin-bottom:12px;}
+  .sec-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:12px;
+    display:flex;align-items:center;gap:6px;}
+  .sec-title i{font-size:17px;color:var(--orange);}
+
+  /* 種別選択 */
+  .type-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px;}
+  .type-btn{border:1.5px solid var(--border);border-radius:10px;padding:10px 6px;
+    text-align:center;cursor:pointer;transition:.15s;}
+  .type-btn.sel{border-color:var(--navy);background:#f0f5fa;}
+  .type-btn i{font-size:22px;color:var(--muted);display:block;margin-bottom:4px;}
+  .type-btn.sel i{color:var(--navy);}
+  .type-btn span{font-size:11px;font-weight:600;color:var(--muted);}
+  .type-btn.sel span{color:var(--navy);}
+
+  /* 重篤度 */
+  .severity-row{display:flex;gap:8px;margin-bottom:12px;}
+  .sev-btn{flex:1;padding:9px;border-radius:8px;font-size:12px;font-weight:700;
+    border:1.5px solid var(--border);background:var(--card);cursor:pointer;
+    text-align:center;transition:.15s;}
+  .sev-btn.sel-safe   {border-color:var(--green);background:#e8f8f2;color:var(--green);}
+  .sev-btn.sel-warn   {border-color:var(--amber);background:#fff8e0;color:#7a5a00;}
+  .sev-btn.sel-danger {border-color:var(--red);background:#fde8e8;color:var(--red);}
+
+  /* フォーム */
+  .field{margin-bottom:12px;}
+  .field label{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-bottom:4px;}
+  input,select,textarea{width:100%;height:42px;border:1px solid var(--border);border-radius:8px;
+    padding:0 11px;font-size:14px;color:var(--text);background:var(--card);
+    appearance:none;font-family:inherit;}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy);}
+  textarea{height:80px;padding:9px 11px;resize:none;line-height:1.6;}
+
+  /* 写真追加 */
+  .photo-area{border:2px dashed var(--border);border-radius:10px;padding:20px;
+    text-align:center;cursor:pointer;color:var(--muted);font-size:13px;
+    display:flex;flex-direction:column;align-items:center;gap:6px;}
+  .photo-area i{font-size:28px;}
+  .photo-area:active{background:var(--bg);}
+
+  /* 過去のヒヤリハット */
+  .hh-item{display:flex;gap:10px;padding:12px 0;border-bottom:1px solid var(--bg);}
+  .hh-item:last-child{border-bottom:none;}
+  .hh-icon{width:36px;height:36px;border-radius:8px;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;font-size:17px;}
+  .hh-icon.fall    {background:#fde8e8;color:var(--red);}
+  .hh-icon.tool    {background:#fff8e0;color:var(--amber);}
+  .hh-icon.health  {background:#fff3e0;color:var(--orange);}
+  .hh-icon.equip   {background:#e8f0fa;color:var(--navy);}
+  .hh-body{flex:1;min-width:0;}
+  .hh-title{font-size:13px;font-weight:600;margin-bottom:2px;}
+  .hh-meta{font-size:11px;color:var(--muted);}
+  .hh-sev{padding:2px 7px;border-radius:7px;font-size:10px;font-weight:700;margin-left:6px;}
+  .s-low {background:#e8f8f2;color:var(--green);}
+  .s-mid {background:#fff8e0;color:#7a5a00;}
+  .s-high{background:#fde8e8;color:var(--red);}
+
+  /* 送信ボタン */
+  .submit-btn{width:100%;padding:15px;background:var(--red);color:#fff;border:none;
+    border-radius:12px;font-size:16px;font-weight:800;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;gap:8px;margin-top:4px;}
+  .submit-btn:active{transform:scale(.98);}
+
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(60px);
+    background:var(--text);color:#fff;padding:11px 20px;border-radius:22px;
+    font-size:13px;font-weight:500;transition:transform .3s;z-index:99;white-space:nowrap;}
+  .toast.show{transform:translateX(-50%) translateY(0);}
+  .toast.urgent{background:var(--red);}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+
+<header>
+  <span class="back" onclick="history.back()"><i class="ti ti-arrow-left"></i></span>
+  <span class="title">現場安全</span>
+</header>
+
+<div class="tabs">
+  <div class="tab act" id="tab-heat" onclick="showTab('heat')">
+    <i class="ti ti-thermometer" style="font-size:14px;vertical-align:-2px"></i> 熱中症アラート
+  </div>
+  <div class="tab" id="tab-hh" onclick="showTab('hh')">
+    <i class="ti ti-alert-triangle" style="font-size:14px;vertical-align:-2px"></i> ヒヤリハット
+  </div>
+</div>
+
+<main>
+
+  <!-- ── 熱中症アラートページ ── -->
+  <div id="page-heat">
+
+    <!-- WBGTカード（動的） -->
+    <div class="wbgt-card warning" id="wbgt-card">
+      <div class="wbgt-top">
+        <div>
+          <div class="wbgt-label">WBGT（暑さ指数）</div>
+          <div class="wbgt-val" id="wbgt-val">28<span class="wbgt-unit">℃</span></div>
+        </div>
+        <div class="wbgt-right">
+          <div class="wbgt-level" id="wbgt-level">警戒</div>
+          <div class="wbgt-sublabel" id="wbgt-time">横浜市中区 現在</div>
+        </div>
+      </div>
+      <div class="wbgt-advice" id="wbgt-advice">
+        <strong id="wbgt-advice-title">積極的に水分・塩分補給</strong>
+        <span id="wbgt-advice-body">30分に1回の休憩を確保してください。めまい・頭痛・倦怠感が出たらすぐに作業を中断し、涼しい場所で休んでください。</span>
+      </div>
+      <div class="wbgt-meta">
+        <span><i class="ti ti-temperature"></i><span id="meta-temp">34°C</span></span>
+        <span><i class="ti ti-droplet"></i><span id="meta-hum">68%</span></span>
+        <span><i class="ti ti-wind"></i><span id="meta-wind">2.1m/s</span></span>
+        <span><i class="ti ti-clock"></i><span id="meta-time">09:15更新</span></span>
+      </div>
+    </div>
+
+    <!-- 作業指示 -->
+    <div class="work-banner warn" id="work-banner">
+      <div class="wb-icon">⚠️</div>
+      <div>
+        <div class="wb-title" style="color:#7a5a00">注意して作業を継続</div>
+        <div class="wb-sub">熱中症の初期症状に注意してください。
+          こまめな水分補給と適切な休憩を取りながら作業を続けてください。</div>
+      </div>
+    </div>
+
+    <!-- スライダーでWBGT体験 -->
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-adjustments"></i>WBGT シミュレーター</div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+        <span style="font-size:12px;color:var(--muted);width:36px">WBGT</span>
+        <input type="range" min="15" max="40" step="1" value="28" id="wbgt-slider"
+          oninput="updateWbgt(+this.value)" style="flex:1">
+        <span style="font-size:14px;font-weight:700;min-width:44px" id="slider-val">28℃</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted);padding:0 36px;">
+        <span style="color:var(--green)">安全</span>
+        <span style="color:var(--amber)">注意</span>
+        <span style="color:var(--orange)">警戒</span>
+        <span style="color:var(--red)">危険</span>
+        <span style="color:#7c1a1a">厳重警戒</span>
+      </div>
+    </div>
+
+    <!-- 時間別予報 -->
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-clock"></i>時間別 WBGT 予報</div>
+      <div class="hourly-row" id="hourly-row"></div>
+    </div>
+
+    <!-- 熱中症発症時の対応 -->
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-first-aid-kit"></i>熱中症が疑われる時の対応</div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="display:flex;gap:10px;padding:8px;background:var(--bg);border-radius:8px;font-size:13px;">
+          <span style="font-size:18px;flex-shrink:0">1</span>
+          <span><strong>涼しい場所へ移動</strong>させ、衣服をゆるめる</span>
+        </div>
+        <div style="display:flex;gap:10px;padding:8px;background:var(--bg);border-radius:8px;font-size:13px;">
+          <span style="font-size:18px;flex-shrink:0">2</span>
+          <span><strong>水分・塩分を補給</strong>（経口補水液が効果的）</span>
+        </div>
+        <div style="display:flex;gap:10px;padding:8px;background:var(--bg);border-radius:8px;font-size:13px;">
+          <span style="font-size:18px;flex-shrink:0">3</span>
+          <span><strong>体を冷やす</strong>（首・脇・足の付け根に冷却）</span>
+        </div>
+        <div style="display:flex;gap:10px;padding:8px;background:#fde8e8;border-radius:8px;font-size:13px;">
+          <span style="font-size:18px;flex-shrink:0">!</span>
+          <span style="color:var(--red)"><strong>意識がない・会話ができない場合は即119番</strong></span>
+        </div>
+      </div>
+      <button style="width:100%;margin-top:12px;padding:13px;background:var(--red);color:#fff;
+        border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;
+        display:flex;align-items:center;justify-content:center;gap:8px;"
+        onclick="call119()">
+        <i class="ti ti-phone-call"></i>119番に電話する
+      </button>
+    </div>
+  </div>
+
+  <!-- ── ヒヤリハットページ ── -->
+  <div id="page-hh" style="display:none">
+
+    <!-- ワンタップ報告 -->
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-alert-triangle"></i>ヒヤリハット報告</div>
+
+      <!-- 種別 -->
+      <p style="font-size:12px;color:var(--muted);margin-bottom:8px;">種別を選択<span style="color:var(--red)">*</span></p>
+      <div class="type-grid" id="type-grid">
+        <div class="type-btn sel" onclick="selType(this,'fall')">
+          <i class="ti ti-arrow-down-circle"></i><span>転落・転倒</span>
+        </div>
+        <div class="type-btn" onclick="selType(this,'tool')">
+          <i class="ti ti-hammer"></i><span>工具・資材</span>
+        </div>
+        <div class="type-btn" onclick="selType(this,'equip')">
+          <i class="ti ti-crane"></i><span>重機・機械</span>
+        </div>
+        <div class="type-btn" onclick="selType(this,'health')">
+          <i class="ti ti-heart-rate-monitor"></i><span>体調不良</span>
+        </div>
+        <div class="type-btn" onclick="selType(this,'fire')">
+          <i class="ti ti-flame"></i><span>火気・爆発</span>
+        </div>
+        <div class="type-btn" onclick="selType(this,'other')">
+          <i class="ti ti-dots-circle-horizontal"></i><span>その他</span>
+        </div>
+      </div>
+
+      <!-- 重篤度 -->
+      <p style="font-size:12px;color:var(--muted);margin-bottom:6px;">重篤度<span style="color:var(--red)">*</span></p>
+      <div class="severity-row" id="sev-row">
+        <button class="sev-btn sel-safe" onclick="selSev(this,'safe')">軽微</button>
+        <button class="sev-btn" onclick="selSev(this,'warn')">中程度</button>
+        <button class="sev-btn" onclick="selSev(this,'danger')">重大</button>
+      </div>
+
+      <!-- 内容 -->
+      <div class="field">
+        <label>発生状況・詳細<span style="color:var(--red)">*</span></label>
+        <textarea id="hh-desc" placeholder="例：3階足場から工具を落としそうになった。下方に作業員がいたが気づき回避。養生ネットが未設置だった。"></textarea>
+      </div>
+
+      <div class="row2" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div class="field">
+          <label>発生場所</label>
+          <input type="text" id="hh-location" placeholder="例：3階足場 東面">
+        </div>
+        <div class="field">
+          <label>発生日時</label>
+          <input type="datetime-local" id="hh-datetime">
+        </div>
+      </div>
+
+      <!-- 写真 -->
+      <div class="field">
+        <label>現場写真（任意）</label>
+        <div class="photo-area" onclick="showToast('カメラまたはアルバムから選択')">
+          <i class="ti ti-camera"></i>
+          <span>写真を追加</span>
+          <span style="font-size:11px">タップして撮影または選択</span>
+        </div>
+      </div>
+
+      <button class="submit-btn" onclick="submitHH()">
+        <i class="ti ti-send"></i>ヒヤリハットを報告する
+      </button>
+    </div>
+
+    <!-- 過去の報告 -->
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-history"></i>過去の報告（この現場）</div>
+      <div class="hh-item">
+        <div class="hh-icon fall"><i class="ti ti-arrow-down-circle"></i></div>
+        <div class="hh-body">
+          <div class="hh-title">足場から工具を落としそうになった
+            <span class="hh-sev s-mid">中程度</span>
+          </div>
+          <div class="hh-meta">3階東面 ・ 6/9 09:12 ・ 山田 太郎</div>
+        </div>
+      </div>
+      <div class="hh-item">
+        <div class="hh-icon health"><i class="ti ti-heart-rate-monitor"></i></div>
+        <div class="hh-body">
+          <div class="hh-title">作業員が軽いめまいを訴えた
+            <span class="hh-sev s-low">軽微</span>
+          </div>
+          <div class="hh-meta">屋上 ・ 6/8 14:30 ・ 鈴木 健一</div>
+        </div>
+      </div>
+      <div class="hh-item">
+        <div class="hh-icon equip"><i class="ti ti-crane"></i></div>
+        <div class="hh-body">
+          <div class="hh-title">クレーン旋回時に作業員が気づかず接近
+            <span class="hh-sev s-high">重大</span>
+          </div>
+          <div class="hh-meta">1階搬入口 ・ 6/7 10:05 ・ 田中 誠</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ── WBGT設定 ─────────────────────────────────────────────────
+const WBGT_LEVELS = [
+  { max:21, cls:'safe',    label:'安全',     icon:'✅',
+    title:'通常通り作業可',
+    body:'熱中症の危険は低いです。通常通り作業できます。水分補給を忘れずに。',
+    banner:'ok', bannerTitle:'作業可',
+    bannerBody:'熱中症の危険は低い状態です。通常通り作業できます。' },
+  { max:25, cls:'caution', label:'注意',     icon:'🟡',
+    title:'水分補給を意識的に',
+    body:'運動や激しい作業をする際は定期的に休憩を取ってください。',
+    banner:'ok', bannerTitle:'作業可（注意して）',
+    bannerBody:'こまめな水分補給と適切な休憩を取りながら作業してください。' },
+  { max:28, cls:'warning', label:'警戒',     icon:'⚠️',
+    title:'積極的に水分・塩分補給',
+    body:'30分に1回の休憩を確保してください。めまい・頭痛・倦怠感が出たらすぐに作業を中断し、涼しい場所で休んでください。',
+    banner:'warn', bannerTitle:'注意して作業を継続',
+    bannerBody:'熱中症の初期症状に注意してください。こまめな水分補給と適切な休憩を取りながら作業を続けてください。' },
+  { max:31, cls:'danger',  label:'厳重警戒', icon:'🔴',
+    title:'激しい作業は原則中止',
+    body:'屋外での激しい作業は中止を検討してください。涼しい環境での作業に切り替えるか、作業時間を短縮してください。',
+    banner:'warn', bannerTitle:'作業時間を短縮・交代制で',
+    bannerBody:'激しい作業は避け、こまめな休憩と水分補給を徹底してください。症状が出たら直ちに作業を中止してください。' },
+  { max:99, cls:'extreme', label:'危険',     icon:'🚨',
+    title:'屋外作業を中止',
+    body:'熱中症の危険性が極めて高い状態です。屋外作業は中止してください。やむを得ず作業する場合は責任者の判断のもと、複数人で安全を確認しながら行ってください。',
+    banner:'stop', bannerTitle:'屋外作業を中止',
+    bannerBody:'熱中症の危険性が極めて高い状態です。屋外作業はただちに中止し、涼しい場所に移動してください。' },
+];
+
+function getLevel(wbgt) {
+  return WBGT_LEVELS.find(l => wbgt <= l.max);
+}
+
+function updateWbgt(val) {
+  const lv = getLevel(val);
+  document.getElementById('slider-val').textContent = val + '℃';
+  document.getElementById('wbgt-val').innerHTML = val + '<span class="wbgt-unit">℃</span>';
+  document.getElementById('wbgt-level').textContent = lv.label;
+  document.getElementById('wbgt-advice-title').textContent = lv.title;
+  document.getElementById('wbgt-advice-body').textContent  = lv.body;
+
+  const card = document.getElementById('wbgt-card');
+  card.className = 'wbgt-card ' + lv.cls;
+
+  const banner = document.getElementById('work-banner');
+  banner.className = 'work-banner ' + lv.banner;
+  banner.querySelector('.wb-icon').textContent = lv.icon;
+  banner.querySelector('.wb-title').textContent = lv.bannerTitle;
+  banner.querySelector('.wb-sub').textContent   = lv.bannerBody;
+  const titleColors = {ok:var_green, warn:'#7a5a00', stop:'var(--red)'};
+
+  // 熱中症アラートトースト
+  if (val >= 31) showToast('危険レベル！屋外作業を中止してください', true);
+}
+
+const var_green = 'var(--green)';
+
+// 時間別予報生成
+function buildHourly() {
+  const hours = [6,7,8,9,10,11,12,13,14,15,16,17,18];
+  const wbgts = [20,22,24,26,27,29,31,32,30,28,27,25,23];
+  const html = hours.map((h,i) => {
+    const lv = getLevel(wbgts[i]);
+    return `<div class="hour-item">
+      <div class="hour-time">${h}時</div>
+      <div class="hour-temp">${wbgts[i]}℃</div>
+      <div class="hour-level lv-${lv.cls}">${lv.label}</div>
+    </div>`;
+  }).join('');
+  document.getElementById('hourly-row').innerHTML = html;
+}
+buildHourly();
+
+// 現在時刻をメタに設定
+const now = new Date();
+document.getElementById('meta-time').textContent =
+  now.getHours() + ':' + String(now.getMinutes()).padStart(2,'0') + '更新';
+
+// ── ヒヤリハット ─────────────────────────────────────────────
+let selectedType = 'fall';
+let selectedSev  = 'safe';
+
+// 日時のデフォルト
+const dt = new Date();
+dt.setMinutes(dt.getMinutes() - dt.getTimezoneOffset());
+document.getElementById('hh-datetime').value = dt.toISOString().slice(0,16);
+
+function selType(el, type) {
+  document.querySelectorAll('.type-btn').forEach(b => b.classList.remove('sel'));
+  el.classList.add('sel');
+  selectedType = type;
+}
+function selSev(el, sev) {
+  document.querySelectorAll('.sev-btn').forEach(b => {
+    b.className = 'sev-btn';
+  });
+  el.classList.add('sel-' + sev);
+  selectedSev = sev;
+}
+function submitHH() {
+  const desc = document.getElementById('hh-desc').value.trim();
+  if (!desc) { showToast('発生状況を入力してください'); return; }
+  // Firestore: db.collection('hazardReports').add({ type, severity, desc, location, datetime, contractId, userId })
+  // 管理者・現場監督にFCM通知
+  if (selectedSev === 'danger') {
+    showToast('重大なヒヤリハットを報告しました。管理者に通知しました', true);
+  } else {
+    showToast('ヒヤリハットを報告しました');
+  }
+  document.getElementById('hh-desc').value = '';
+}
+
+// ── タブ切替 ─────────────────────────────────────────────────
+function showTab(tab) {
+  const isHeat = tab === 'heat';
+  document.getElementById('page-heat').style.display = isHeat ? 'block' : 'none';
+  document.getElementById('page-hh').style.display   = isHeat ? 'none'  : 'block';
+  document.getElementById('tab-heat').classList.toggle('act',  isHeat);
+  document.getElementById('tab-hh').classList.toggle('act',   !isHeat);
+}
+
+function call119() {
+  if (confirm('119番に電話しますか？')) {
+    window.location.href = 'tel:119';
+  }
+}
+function showToast(msg, urgent) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast show' + (urgent ? ' urgent' : '');
+  setTimeout(() => t.className = 'toast', 3000);
+}
+</script>
+</body>
+</html>

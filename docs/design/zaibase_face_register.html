@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>顔認証登録 — Zaibase</title>
+<style>
+  :root {
+    --navy:   #1a3c5e;
+    --orange: #e8a020;
+    --steel:  #4a6f8a;
+    --bg:     #f4f6f8;
+    --card:   #ffffff;
+    --text:   #1a2332;
+    --muted:  #6b7c93;
+    --border: #dce3ea;
+    --green:  #1d9e75;
+    --red:    #e24b4a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    background: var(--bg); color: var(--text);
+    min-height: 100dvh; display: flex; flex-direction: column;
+  }
+
+  /* ヘッダー */
+  header {
+    background: var(--navy); padding: 14px 20px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  header .logo { color: #fff; font-size: 18px; font-weight: 700; letter-spacing: .5px; }
+  header .step { color: rgba(255,255,255,.55); font-size: 13px; margin-left: auto; }
+
+  /* メインコンテンツ */
+  main { flex: 1; padding: 20px 16px 32px; max-width: 480px; margin: 0 auto; width: 100%; }
+
+  /* ステッパー */
+  .stepper { display: flex; align-items: center; gap: 0; margin-bottom: 24px; }
+  .step-item { display: flex; flex-direction: column; align-items: center; gap: 4px; flex: 1; }
+  .step-dot {
+    width: 28px; height: 28px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 600; border: 2px solid var(--border);
+    background: var(--card); color: var(--muted); transition: .3s;
+  }
+  .step-dot.active  { background: var(--navy);   border-color: var(--navy);   color: #fff; }
+  .step-dot.done    { background: var(--green);  border-color: var(--green);  color: #fff; }
+  .step-line { flex: 1; height: 2px; background: var(--border); margin-bottom: 18px; transition: .3s; }
+  .step-line.done { background: var(--green); }
+  .step-label { font-size: 10px; color: var(--muted); white-space: nowrap; }
+  .step-item.active .step-label { color: var(--navy); font-weight: 600; }
+
+  /* カード */
+  .card {
+    background: var(--card); border-radius: 14px;
+    border: 1px solid var(--border); padding: 20px;
+    margin-bottom: 14px;
+  }
+  .card-title { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .card-sub   { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+  /* カメラビュー */
+  .camera-wrap {
+    position: relative; width: 100%;
+    aspect-ratio: 3/4; border-radius: 12px;
+    overflow: hidden; background: #0d1b2a;
+    margin: 16px 0;
+  }
+  #video { width: 100%; height: 100%; object-fit: cover; transform: scaleX(-1); }
+  #canvas { display: none; }
+
+  /* 顔枠ガイド */
+  .face-guide {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    pointer-events: none;
+  }
+  .face-oval {
+    width: 58%; aspect-ratio: 3/4;
+    border: 2.5px solid rgba(255,255,255,.7);
+    border-radius: 50%; position: relative;
+  }
+  .face-oval::before {
+    content: ''; position: absolute; inset: -8px;
+    border-radius: 50%;
+    border: 1px dashed rgba(255,255,255,.25);
+  }
+  .camera-hint {
+    position: absolute; bottom: 14px; left: 0; right: 0;
+    text-align: center; font-size: 12px;
+    color: rgba(255,255,255,.8); letter-spacing: .3px;
+  }
+
+  /* 撮影済みプレビュー */
+  .preview-wrap {
+    width: 100%; aspect-ratio: 3/4; border-radius: 12px;
+    overflow: hidden; margin: 16px 0; display: none;
+  }
+  #preview { width: 100%; height: 100%; object-fit: cover; }
+
+  /* チェックリスト */
+  .checklist { display: flex; flex-direction: column; gap: 8px; margin: 14px 0; }
+  .check-item {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 13px; color: var(--text); padding: 10px 12px;
+    background: var(--bg); border-radius: 8px;
+  }
+  .check-item .icon { font-size: 18px; flex-shrink: 0; }
+  .check-item.ok .icon   { color: var(--green); }
+  .check-item.warn .icon { color: var(--orange); }
+  .check-item.err .icon  { color: var(--red); }
+
+  /* 同意チェック */
+  .consent-box {
+    border: 1.5px solid var(--orange); border-radius: 10px;
+    padding: 14px; background: #fffbf0; margin: 14px 0;
+  }
+  .consent-box p { font-size: 12px; color: #7a5a00; line-height: 1.65; margin-bottom: 10px; }
+  .consent-check { display: flex; align-items: flex-start; gap: 8px; cursor: pointer; }
+  .consent-check input { margin-top: 2px; accent-color: var(--orange); width: 16px; height: 16px; flex-shrink: 0; }
+  .consent-check span { font-size: 13px; color: var(--text); font-weight: 500; }
+
+  /* ボタン */
+  .btn {
+    width: 100%; padding: 15px; border-radius: 10px;
+    font-size: 15px; font-weight: 700; border: none;
+    cursor: pointer; transition: opacity .2s, transform .1s;
+    letter-spacing: .3px;
+  }
+  .btn:active { transform: scale(.98); }
+  .btn:disabled { opacity: .4; cursor: not-allowed; }
+  .btn-primary { background: var(--navy); color: #fff; }
+  .btn-secondary { background: var(--bg); color: var(--navy); border: 1.5px solid var(--border); }
+  .btn-green { background: var(--green); color: #fff; }
+  .btn-orange { background: var(--orange); color: #fff; }
+
+  /* 完了画面 */
+  .success-screen { text-align: center; padding: 20px 0; }
+  .success-icon {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: #e8f8f2; display: flex; align-items: center;
+    justify-content: center; margin: 0 auto 16px; font-size: 34px;
+  }
+  .success-title { font-size: 20px; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
+  .success-sub   { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+  /* ローディング */
+  .loading { display: none; align-items: center; gap: 10px; justify-content: center; padding: 14px; }
+  .spinner {
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 3px solid var(--border); border-top-color: var(--navy);
+    animation: spin .8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* トースト */
+  .toast {
+    position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px);
+    background: var(--text); color: #fff; padding: 12px 20px;
+    border-radius: 24px; font-size: 13px; font-weight: 500;
+    transition: transform .3s; z-index: 100; white-space: nowrap;
+  }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+  .toast.error { background: var(--red); }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="logo">Zaibase</span>
+  <span class="step">顔認証登録</span>
+</header>
+
+<main>
+  <!-- ステッパー -->
+  <div class="stepper">
+    <div class="step-item active" id="si-1">
+      <div class="step-dot active" id="sd-1">1</div>
+      <span class="step-label">同意</span>
+    </div>
+    <div class="step-line" id="sl-1"></div>
+    <div class="step-item" id="si-2">
+      <div class="step-dot" id="sd-2">2</div>
+      <span class="step-label">撮影</span>
+    </div>
+    <div class="step-line" id="sl-2"></div>
+    <div class="step-item" id="si-3">
+      <div class="step-dot" id="sd-3">3</div>
+      <span class="step-label">登録</span>
+    </div>
+  </div>
+
+  <!-- Step 1: 同意 -->
+  <div id="step1">
+    <div class="card">
+      <p class="card-title">顔認証データの利用について</p>
+      <p class="card-sub">現場への入退場を顔認証で自動記録します。就業データはCCUSに自動連携され、手入力が不要になります。</p>
+    </div>
+
+    <div class="checklist">
+      <div class="check-item ok">
+        <span class="icon">✓</span>
+        <span>顔画像はAWS Rekognitionにのみ保存されます</span>
+      </div>
+      <div class="check-item ok">
+        <span class="icon">✓</span>
+        <span>Zaibaseサーバーには画像を保存しません</span>
+      </div>
+      <div class="check-item ok">
+        <span class="icon">✓</span>
+        <span>いつでも削除・同意撤回できます</span>
+      </div>
+      <div class="check-item warn">
+        <span class="icon">!</span>
+        <span>顔認証データは要配慮個人情報です（個人情報保護法）</span>
+      </div>
+    </div>
+
+    <div class="consent-box">
+      <p>上記の内容を確認し、顔認証データ（生体情報）の収集・利用・AWS Rekognitionへの提供について同意します。同意はいつでも設定画面から撤回できます。</p>
+      <label class="consent-check">
+        <input type="checkbox" id="consent-check" onchange="onConsentChange()">
+        <span>同意して顔認証を登録する</span>
+      </label>
+    </div>
+
+    <button class="btn btn-primary" id="btn-next1" onclick="goStep2()" disabled>
+      撮影に進む
+    </button>
+  </div>
+
+  <!-- Step 2: 撮影 -->
+  <div id="step2" style="display:none">
+    <div class="card">
+      <p class="card-title">顔を枠に合わせて撮影</p>
+      <p class="card-sub">正面を向き、明るい場所で撮影してください。眼鏡・マスクは外してください。</p>
+    </div>
+
+    <div class="camera-wrap" id="camera-wrap">
+      <video id="video" autoplay playsinline muted></video>
+      <canvas id="canvas"></canvas>
+      <div class="face-guide">
+        <div class="face-oval"></div>
+      </div>
+      <div class="camera-hint">顔を枠の中に合わせてください</div>
+    </div>
+
+    <div class="preview-wrap" id="preview-wrap">
+      <img id="preview" alt="撮影プレビュー">
+    </div>
+
+    <div class="checklist" id="photo-checks" style="display:none">
+      <div class="check-item" id="chk-face">
+        <span class="icon">○</span><span>顔が検出されました</span>
+      </div>
+      <div class="check-item" id="chk-bright">
+        <span class="icon">○</span><span>明るさが十分です</span>
+      </div>
+      <div class="check-item" id="chk-single">
+        <span class="icon">○</span><span>1人の顔のみ検出</span>
+      </div>
+    </div>
+
+    <div class="loading" id="loading-check">
+      <div class="spinner"></div>
+      <span style="font-size:13px;color:var(--muted)">顔を確認中...</span>
+    </div>
+
+    <div style="display:flex;gap:10px;margin-top:4px">
+      <button class="btn btn-secondary" id="btn-retake" onclick="retake()" style="display:none">
+        撮り直す
+      </button>
+      <button class="btn btn-orange" id="btn-capture" onclick="capture()">
+        撮影する
+      </button>
+    </div>
+    <button class="btn btn-green" id="btn-register" onclick="register()"
+      style="display:none;margin-top:10px">
+      この写真で登録する
+    </button>
+  </div>
+
+  <!-- Step 3: 登録中 / 完了 -->
+  <div id="step3" style="display:none">
+    <div class="loading" id="loading-register" style="display:flex;flex-direction:column;gap:14px;padding:40px 0">
+      <div class="spinner" style="width:36px;height:36px;border-width:4px"></div>
+      <span style="font-size:14px;color:var(--muted)">顔認証データを登録中...</span>
+    </div>
+
+    <div class="success-screen" id="success-screen" style="display:none">
+      <div class="success-icon">✓</div>
+      <p class="success-title">登録完了</p>
+      <p class="success-sub">顔認証の登録が完了しました。<br>次回から現場への入退場が<br>顔認証で自動記録されます。</p>
+      <div class="card" style="margin-top:20px;text-align:left">
+        <p class="card-title" style="font-size:13px">これからできること</p>
+        <div class="checklist" style="margin:10px 0 0">
+          <div class="check-item ok"><span class="icon">✓</span><span>現場入退場の自動記録</span></div>
+          <div class="check-item ok"><span class="icon">✓</span><span>CCUS就業履歴への自動連携</span></div>
+          <div class="check-item ok"><span class="icon">✓</span><span>勤怠実績の自動集計</span></div>
+        </div>
+      </div>
+      <button class="btn btn-primary" style="margin-top:16px" onclick="goHome()">
+        ホームに戻る
+      </button>
+    </div>
+  </div>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script>
+let stream = null;
+let capturedDataUrl = null;
+
+function onConsentChange() {
+  document.getElementById('btn-next1').disabled =
+    !document.getElementById('consent-check').checked;
+}
+
+async function goStep2() {
+  setStep(2);
+  try {
+    stream = await navigator.mediaDevices.getUserMedia({
+      video: { facingMode: 'user', width: { ideal: 720 }, height: { ideal: 960 } }
+    });
+    document.getElementById('video').srcObject = stream;
+  } catch(e) {
+    showToast('カメラへのアクセスが必要です', true);
+  }
+}
+
+function capture() {
+  const video  = document.getElementById('video');
+  const canvas = document.getElementById('canvas');
+  canvas.width  = video.videoWidth  || 720;
+  canvas.height = video.videoHeight || 960;
+  const ctx = canvas.getContext('2d');
+  ctx.save();
+  ctx.scale(-1, 1);
+  ctx.drawImage(video, -canvas.width, 0, canvas.width, canvas.height);
+  ctx.restore();
+
+  capturedDataUrl = canvas.toDataURL('image/jpeg', 0.92);
+  const preview = document.getElementById('preview');
+  preview.src   = capturedDataUrl;
+
+  document.getElementById('camera-wrap').style.display  = 'none';
+  document.getElementById('preview-wrap').style.display = 'block';
+  document.getElementById('btn-capture').style.display  = 'none';
+  document.getElementById('btn-retake').style.display   = 'block';
+  document.getElementById('loading-check').style.display = 'flex';
+  document.getElementById('photo-checks').style.display  = 'none';
+
+  // 簡易チェック（実際はCloud Functionsで検証）
+  setTimeout(() => {
+    document.getElementById('loading-check').style.display = 'none';
+    document.getElementById('photo-checks').style.display  = 'flex';
+    setCheck('chk-face',   'ok',   '✓', '顔が検出されました');
+    setCheck('chk-bright', 'ok',   '✓', '明るさが十分です');
+    setCheck('chk-single', 'ok',   '✓', '1人の顔のみ検出');
+    document.getElementById('btn-register').style.display = 'block';
+  }, 1400);
+}
+
+function setCheck(id, cls, icon, text) {
+  const el = document.getElementById(id);
+  el.className = 'check-item ' + cls;
+  el.innerHTML = `<span class="icon">${icon}</span><span>${text}</span>`;
+}
+
+function retake() {
+  capturedDataUrl = null;
+  document.getElementById('camera-wrap').style.display  = 'block';
+  document.getElementById('preview-wrap').style.display = 'none';
+  document.getElementById('btn-capture').style.display  = 'block';
+  document.getElementById('btn-retake').style.display   = 'none';
+  document.getElementById('btn-register').style.display = 'none';
+  document.getElementById('photo-checks').style.display = 'none';
+}
+
+async function register() {
+  if (!capturedDataUrl) return;
+  if (stream) { stream.getTracks().forEach(t => t.stop()); stream = null; }
+  setStep(3);
+  document.getElementById('loading-register').style.display = 'flex';
+
+  // Cloud Functions registerFace() 呼び出しのモック
+  // 実際: const fn = firebase.functions().httpsCallable('registerFace');
+  // await fn({ imageBase64: capturedDataUrl, consent: true });
+  await new Promise(r => setTimeout(r, 2200));
+
+  document.getElementById('loading-register').style.display = 'none';
+  document.getElementById('success-screen').style.display   = 'block';
+  advanceStepper(3);
+}
+
+function setStep(n) {
+  [1,2,3].forEach(i => {
+    document.getElementById('step'+i).style.display = i === n ? 'block' : 'none';
+  });
+  advanceStepper(n);
+}
+
+function advanceStepper(n) {
+  [1,2,3].forEach(i => {
+    const dot  = document.getElementById('sd-'+i);
+    const item = document.getElementById('si-'+i);
+    if (i < n) {
+      dot.className  = 'step-dot done';
+      dot.textContent = '✓';
+      item.className = 'step-item';
+    } else if (i === n) {
+      dot.className  = 'step-dot active';
+      item.className = 'step-item active';
+    }
+    if (i < 3) {
+      const line = document.getElementById('sl-'+i);
+      line.className = i < n ? 'step-line done' : 'step-line';
+    }
+  });
+}
+
+function showToast(msg, isErr) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className   = 'toast show' + (isErr ? ' error' : '');
+  setTimeout(() => t.className = 'toast', 2800);
+}
+
+function goHome() { showToast('ホーム画面に戻ります'); }
+</script>
+</body>
+</html>
