@@ -122,6 +122,73 @@
         { "fieldPath": "type", "order": "ASCENDING" },
         { "fieldPath": "timestamp", "order": "DESCENDING" }
       ]
+    },
+    {
+      "collectionGroup": "teamApplications",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "postId", "order": "ASCENDING" },
+        { "fieldPath": "status", "order": "ASCENDING" },
+        { "fieldPath": "createdAt", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "teamApplications",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "teamId", "order": "ASCENDING" },
+        { "fieldPath": "status", "order": "ASCENDING" },
+        { "fieldPath": "createdAt", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "helpPosts",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "bidType", "order": "ASCENDING" },
+        { "fieldPath": "status", "order": "ASCENDING" },
+        { "fieldPath": "createdAt", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "teamPayouts",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "contractId", "order": "ASCENDING" },
+        { "fieldPath": "memberUid", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "teams",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "legalStatus", "order": "ASCENDING" },
+        { "fieldPath": "teamScore", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "contracts",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "chainId", "order": "ASCENDING" },
+        { "fieldPath": "tierLevel", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "contracts",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "chainId", "order": "ASCENDING" },
+        { "fieldPath": "contractorId", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "contractChains",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "rootOrdererId", "order": "ASCENDING" },
+        { "fieldPath": "updatedAt", "order": "DESCENDING" }
+      ]
     }
   ],
   "fieldOverrides": []

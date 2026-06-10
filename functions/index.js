@@ -66,6 +66,19 @@ exports.onUserDeleted = faceAuth.onCraftsmanProfileDeleted;
 const invoicePdf = require("./invoice_pdf");
 exports.generateInvoicePdf = invoicePdf.generateInvoicePdf;
 
+// ── チーム・労働者協同組合（§19）────────────────────────────────
+const teams = require("./teams");
+exports.createTeam = teams.createTeam;
+exports.joinTeamByInvite = teams.joinTeamByInvite;
+
+// ── 多層契約チェーン（§20）──────────────────────────────────────
+const chains = require("./chains");
+exports.createContractChain = chains.createContractChain;
+exports.validateChainSubcontract = chains.validateChainSubcontract;
+exports.createChainContract = chains.createChainContract;
+exports.updateSubstantiveInvolvement = chains.updateSubstantiveInvolvement;
+exports.linkHelpPostToChain = chains.linkHelpPostToChain;
+
 // ── ユーティリティ ─────────────────────────────────────────────
 exports.health = onRequest((req, res) => {
   res.json({ ok: true, service: "zaibase-backend", time: new Date().toISOString() });

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>労災申請サポート — Zaibase（設計モック）</title>
+<!-- 正本は frontend/Zaibase.html #rousaiApplyScreen に統合済み -->
+<style>
+  :root{--navy:#1a3c5e;--orange:#e8a020;--bg:#f4f6f8;--card:#fff;
+    --text:#1a2332;--muted:#6b7c93;--border:#dce3ea;--green:#1d9e75;--red:#e24b4a;--amber:#f59e0b;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+    background:var(--bg);color:var(--text);min-height:100dvh;display:flex;flex-direction:column;padding-bottom:80px;}
+  header{background:var(--navy);padding:13px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0;}
+  .back{color:rgba(255,255,255,.7);font-size:22px;cursor:pointer;}
+  .hd-title{color:#fff;font-size:17px;font-weight:700;margin:0 auto;}
+  .tabs{background:var(--card);border-bottom:1px solid var(--border);
+    display:flex;padding:0 16px;position:sticky;top:0;z-index:9;}
+  .tab{padding:11px 12px;font-size:12px;font-weight:500;color:var(--muted);
+    cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;}
+  .tab.act{color:var(--navy);border-bottom-color:var(--navy);font-weight:700;}
+  main{flex:1;padding:14px;max-width:560px;margin:0 auto;width:100%;}
+  .legal-banner{background:#fff8e0;border:2px solid var(--orange);border-radius:14px;padding:15px;margin-bottom:16px;}
+  .lb-title{font-size:14px;font-weight:800;color:#7a5a00;margin-bottom:6px;display:flex;align-items:center;gap:7px;}
+  .lb-body{font-size:12px;color:#7a5a00;line-height:1.75;}
+  .lb-body strong{color:#5a3a00;}
+  .yoshiki-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px;}
+  .yoshiki-card{background:var(--card);border:1.5px solid var(--border);border-radius:12px;padding:13px;cursor:pointer;}
+  .yoshiki-card.sel{border-color:var(--navy);background:#f0f5fa;}
+  .section{background:var(--card);border-radius:14px;border:1px solid var(--border);padding:15px;margin-bottom:12px;}
+  .action-bar{position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:1px solid var(--border);padding:12px 16px;display:flex;gap:8px;}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+<header>
+  <span class="back"><i class="ti ti-arrow-left"></i></span>
+  <span class="hd-title">労災申請サポート</span>
+</header>
+<p style="padding:16px;font-size:13px;color:var(--muted);text-align:center;">
+  このファイルは設計参考用のスタブです。<br>
+  実装は <code>frontend/Zaibase.html</code> の <code>#rousaiApplyScreen</code> を参照してください。
+</p>
+<div class="legal-banner" style="margin:0 16px;">
+  <div class="lb-title"><i class="ti ti-shield-check"></i>社労士法第27条遵守</div>
+  <div class="lb-body">
+    <strong>申請書の作成・提出代行は社労士の独占業務。</strong>
+    Zaibaseは入力補助・様式案内・社労士紹介のみ行います。
+  </div>
+</div>
+</body>
+</html>

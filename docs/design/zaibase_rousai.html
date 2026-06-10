@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>労災保険サポート — Zaibase</title>
+<style>
+  :root{--navy:#1a3c5e;--orange:#e8a020;--bg:#f4f6f8;--card:#fff;
+    --text:#1a2332;--muted:#6b7c93;--border:#dce3ea;--green:#1d9e75;--red:#e24b4a;--amber:#f59e0b;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+    background:var(--bg);color:var(--text);min-height:100dvh;display:flex;flex-direction:column;padding-bottom:32px;}
+
+  header{background:var(--navy);padding:13px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0;}
+  .back{color:rgba(255,255,255,.7);font-size:22px;cursor:pointer;}
+  .hd-title{color:#fff;font-size:17px;font-weight:700;margin:0 auto;}
+
+  .tabs{background:var(--card);border-bottom:1px solid var(--border);
+    display:flex;padding:0 16px;position:sticky;top:0;z-index:9;}
+  .tab{padding:11px 12px;font-size:12px;font-weight:500;color:var(--muted);
+    cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;}
+  .tab.act{color:var(--navy);border-bottom-color:var(--navy);font-weight:700;}
+
+  main{flex:1;padding:14px;max-width:560px;margin:0 auto;width:100%;}
+
+  /* ヒーロー */
+  .hero{border-radius:16px;padding:18px;margin-bottom:14px;color:#fff;}
+  .hero-ok  {background:linear-gradient(135deg,#1a5c3a,#1d9e75);}
+  .hero-warn{background:linear-gradient(135deg,#7a5a00,#e8a020);}
+  .hero-ng  {background:linear-gradient(135deg,#7a1a1a,#e24b4a);}
+  .h-label{font-size:12px;opacity:.8;margin-bottom:4px;display:flex;align-items:center;gap:5px;}
+  .h-title{font-size:20px;font-weight:800;line-height:1.3;margin-bottom:6px;}
+  .h-sub{font-size:13px;opacity:.85;line-height:1.65;margin-bottom:12px;}
+  .h-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;
+    background:rgba(255,255,255,.2);border:1.5px solid rgba(255,255,255,.5);
+    border-radius:8px;font-size:13px;font-weight:700;color:#fff;cursor:pointer;}
+
+  /* セクション */
+  .section{background:var(--card);border-radius:14px;border:1px solid var(--border);
+    padding:15px;margin-bottom:12px;}
+  .sec-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:12px;
+    display:flex;align-items:center;gap:6px;}
+  .sec-title i{font-size:17px;color:var(--orange);}
+
+  /* リスクカード */
+  .risk-item{display:flex;gap:10px;padding:11px 0;border-bottom:1px solid var(--bg);}
+  .risk-item:last-child{border-bottom:none;}
+  .ri-icon{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;
+    justify-content:center;font-size:17px;flex-shrink:0;}
+  .ri-ok  {background:#e8f8f2;}
+  .ri-warn{background:#fff8e0;}
+  .ri-ng  {background:#fde8e8;}
+  .ri-body{flex:1;min-width:0;}
+  .ri-title{font-size:13px;font-weight:600;margin-bottom:2px;}
+  .ri-sub{font-size:11px;color:var(--muted);line-height:1.5;}
+  .ri-right{flex-shrink:0;text-align:right;}
+  .ri-badge{padding:3px 8px;border-radius:7px;font-size:11px;font-weight:700;}
+  .rb-ok  {background:#e8f8f2;color:var(--green);}
+  .rb-warn{background:#fff8e0;color:#7a5a00;}
+  .rb-ng  {background:#fde8e8;color:var(--red);}
+
+  /* 比較表 */
+  .compare{width:100%;border-collapse:collapse;font-size:12px;}
+  .compare th{background:#f0f5fa;color:var(--navy);font-weight:700;
+    padding:8px 8px;border-bottom:2px solid var(--border);text-align:center;}
+  .compare th:first-child{text-align:left;}
+  .compare td{padding:8px 8px;border-bottom:1px solid var(--bg);text-align:center;vertical-align:middle;}
+  .compare td:first-child{text-align:left;color:var(--muted);font-weight:500;}
+  .c-ok {color:var(--green);font-weight:700;font-size:14px;}
+  .c-no {color:var(--red);font-weight:700;font-size:14px;}
+  .c-pay{color:var(--orange);font-weight:600;}
+
+  /* 保険カード */
+  .ins-card{border:1px solid var(--border);border-radius:12px;padding:13px;margin-bottom:10px;}
+  .ins-card.recommend{border-color:var(--orange);border-width:2px;}
+  .ic-top{display:flex;align-items:flex-start;gap:10px;margin-bottom:8px;}
+  .ic-logo{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;
+    justify-content:center;font-size:11px;font-weight:800;flex-shrink:0;background:#f0f0f0;}
+  .ic-info{flex:1;}
+  .ic-name{font-size:14px;font-weight:700;margin-bottom:2px;}
+  .ic-org{font-size:11px;color:var(--muted);}
+  .ic-features{font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:10px;}
+  .ic-features span{display:flex;align-items:flex-start;gap:5px;}
+  .ic-features span i{color:var(--green);font-size:13px;margin-top:1px;flex-shrink:0;}
+  .ic-bottom{display:flex;justify-content:space-between;align-items:center;
+    padding-top:8px;border-top:1px solid var(--bg);}
+  .ic-price{font-size:13px;}
+  .ic-price strong{font-size:17px;font-weight:800;color:var(--navy);}
+  .ic-price span{font-size:11px;color:var(--muted);}
+  .ic-btn{padding:9px 16px;background:var(--navy);color:#fff;border:none;
+    border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;
+    display:flex;align-items:center;gap:5px;}
+  .ic-btn.orange{background:var(--orange);}
+
+  /* 費用シミュレーター */
+  .sim-result{background:#f0f5fa;border-radius:10px;padding:13px;margin-top:10px;}
+  .sr-row{display:flex;justify-content:space-between;font-size:13px;padding:4px 0;
+    border-bottom:1px solid #d8e8f4;}
+  .sr-row:last-child{border-bottom:none;}
+  .sr-row .k{color:var(--muted);}
+  .sr-row .v{font-weight:600;}
+  .sr-row.total .v{font-size:16px;font-weight:800;color:var(--navy);}
+
+  /* 従業員チェックリスト */
+  .check-item{display:flex;align-items:center;gap:10px;padding:10px 0;
+    border-bottom:1px solid var(--bg);cursor:pointer;}
+  .check-item:last-child{border-bottom:none;}
+  .ci-check{width:22px;height:22px;border-radius:50%;border:2px solid var(--border);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;
+    transition:.15s;}
+  .check-item.checked .ci-check{background:var(--green);border-color:var(--green);color:#fff;}
+  .ci-body{flex:1;}
+  .ci-title{font-size:13px;font-weight:600;}
+  .ci-sub{font-size:11px;color:var(--muted);margin-top:2px;}
+
+  /* 警告バナー */
+  .warn-banner{border-radius:12px;padding:13px;margin-bottom:12px;
+    display:flex;gap:10px;align-items:flex-start;}
+  .wb-ok  {background:#e8f8f2;border:1px solid #9fe1cb;}
+  .wb-warn{background:#fff8e0;border:1px solid #f5d86e;}
+  .wb-ng  {background:#fde8e8;border:1px solid #f5b4b4;}
+  .wb-icon{font-size:22px;flex-shrink:0;}
+  .wb-title{font-size:13px;font-weight:700;margin-bottom:3px;}
+  .wb-sub{font-size:12px;line-height:1.6;color:var(--muted);}
+  .wb-btn{margin-top:7px;padding:7px 14px;border:none;border-radius:7px;
+    font-size:12px;font-weight:700;cursor:pointer;}
+  .wbb-ok{background:var(--green);color:#fff;}
+  .wbb-warn{background:var(--orange);color:#fff;}
+  .wbb-ng{background:var(--red);color:#fff;}
+
+  /* 収益表 */
+  .rev-table{width:100%;border-collapse:collapse;font-size:12px;}
+  .rev-table th{background:#f0f5fa;color:var(--navy);font-weight:700;
+    padding:8px;border-bottom:2px solid var(--border);text-align:left;}
+  .rev-table td{padding:8px;border-bottom:1px solid var(--bg);vertical-align:top;}
+  .rev-table tr:last-child td{border-bottom:none;}
+  .rev-badge{display:inline-block;padding:2px 7px;border-radius:6px;
+    font-size:10px;font-weight:700;background:#e8f8f2;color:var(--green);}
+
+  /* 労働保険事務組合ロードマップ */
+  .union-roadmap{border:1px solid var(--border);border-radius:14px;padding:15px;margin-bottom:12px;background:var(--card);}
+  .ur-step{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--bg);font-size:12px;line-height:1.65;}
+  .ur-step:last-child{border-bottom:none;}
+  .ur-num{width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;font-size:11px;font-weight:800;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .ur-num.done{background:var(--green);}
+  .ur-num.wait{background:#94a3b8;}
+  .ur-cost-table{width:100%;border-collapse:collapse;font-size:11px;margin-top:8px;}
+  .ur-cost-table th,.ur-cost-table td{padding:6px 8px;border-bottom:1px solid var(--bg);text-align:left;vertical-align:top;}
+  .ur-cost-table th{background:#f0f5fa;color:var(--navy);font-weight:700;}
+  .ur-btn-outline{margin-top:10px;width:100%;padding:10px;border:1.5px solid var(--navy);border-radius:8px;
+    background:transparent;color:var(--navy);font-size:12px;font-weight:700;cursor:pointer;}
+
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(60px);
+    background:var(--text);color:#fff;padding:11px 20px;border-radius:22px;
+    font-size:13px;font-weight:500;transition:transform .3s;z-index:99;white-space:nowrap;}
+  .toast.show{transform:translateX(-50%) translateY(0);}
+  .toast.ok{background:var(--green);}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+<header>
+  <span class="back" onclick="history.back()"><i class="ti ti-arrow-left"></i></span>
+  <span class="hd-title">労災保険サポート</span>
+</header>
+
+<div class="tabs">
+  <div class="tab act" id="tab-hitori" onclick="showTab('hitori')">一人親方</div>
+  <div class="tab"     id="tab-sme"    onclick="showTab('sme')">中小企業</div>
+  <div class="tab"     id="tab-risk"   onclick="showTab('risk')">リスクと罰則</div>
+  <div class="tab"     id="tab-rev"    onclick="showTab('rev')">Zaibaseの収益</div>
+</div>
+
+<main>
+
+  <!-- ── 一人親方タブ ── -->
+  <div id="page-hitori">
+
+    <!-- 現在の状態 -->
+    <div class="hero hero-ok">
+      <div class="h-label"><i class="ti ti-shield-check" style="font-size:13px"></i>労災保険状況</div>
+      <div class="h-title">一人親方労災保険<br>加入済み ✓</div>
+      <div class="h-sub">日本建設組合連合 ／ 有効期限：2027年3月31日<br>給付基礎日額：¥10,000 ／ 保険番号：14-000-XXXXX</div>
+      <div class="h-btn" onclick="showToast('加入証明書PDFをダウンロード', 'ok')">
+        <i class="ti ti-download" style="font-size:14px"></i>加入証明書をダウンロード
+      </div>
+    </div>
+
+    <!-- リスクマップ -->
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-alert-triangle"></i>未加入だった場合のリスク（参考）</div>
+      <div class="risk-item">
+        <div class="ri-icon ri-ng"><i class="ti ti-ban" style="color:var(--red)"></i></div>
+        <div class="ri-body">
+          <div class="ri-title" style="color:var(--red)">現場入場ができなくなる</div>
+          <div class="ri-sub">国土交通省ガイドラインにより、元請会社は未加入の一人親方を現場に入れられません。仕事が全くできなくなります。</div>
+        </div>
+        <div class="ri-right"><div class="ri-badge rb-ng">最重要</div></div>
+      </div>
+      <div class="risk-item">
+        <div class="ri-icon ri-ng"><i class="ti ti-coin-off" style="color:var(--red)"></i></div>
+        <div class="ri-body">
+          <div class="ri-title" style="color:var(--red)">事故時の治療費・休業補償がゼロ</div>
+          <div class="ri-sub">業務中のケガは健康保険が使えません。治療費・入院費・手術費を全額自己負担。骨折1回で数十万〜数百万円の出費になる場合があります。</div>
+        </div>
+        <div class="ri-right"><div class="ri-badge rb-ng">深刻</div></div>
+      </div>
+      <div class="risk-item">
+        <div class="ri-icon ri-ng"><i class="ti ti-user-x" style="color:var(--red)"></i></div>
+        <div class="ri-body">
+          <div class="ri-title" style="color:var(--red)">死亡・障害時に家族への補償なし</div>
+          <div class="ri-sub">万が一の場合、遺族への補償が一切ありません。家族が路頭に迷うリスクがあります。</div>
+        </div>
+        <div class="ri-right"><div class="ri-badge rb-ng">深刻</div></div>
+      </div>
+      <div class="risk-item">
+        <div class="ri-icon ri-warn"><i class="ti ti-building" style="color:var(--amber)"></i></div>
+        <div class="ri-body">
+          <div class="ri-title" style="color:#7a5a00">元請会社も安全配慮義務違反で訴訟リスク</div>
+          <div class="ri-sub">元請会社が安全配慮義務違反として損害賠償請求を受けるリスクがあります。元請から「二度と使わない」と言われる可能性があります。</div>
+        </div>
+        <div class="ri-right"><div class="ri-badge rb-warn">要注意</div></div>
+      </div>
+    </div>
+
+    <!-- 補償内容の比較 -->
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-table"></i>加入・未加入の補償比較</div>
+      <div style="overflow-x:auto;">
+        <table class="compare">
+          <thead>
+            <tr><th>補償内容</th><th>加入済み</th><th>未加入</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>現場入場</td><td class="c-ok">○ 可能</td><td class="c-no">✗ 原則禁止</td></tr>
+            <tr><td>業務中の治療費</td><td class="c-ok">全額補償</td><td class="c-no">全額自己負担</td></tr>
+            <tr><td>休業中の生活費</td><td class="c-ok">給付基礎日額の80%</td><td class="c-no">¥0</td></tr>
+            <tr><td>後遺障害補償</td><td class="c-ok">障害等級に応じ補償</td><td class="c-no">¥0</td></tr>
+            <tr><td>死亡時の遺族補償</td><td class="c-ok">遺族年金・一時金</td><td class="c-no">¥0</td></tr>
+            <tr><td>通勤中のケガ</td><td class="c-ok">補償あり</td><td class="c-no">¥0</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 費用シミュレーター -->
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-calculator"></i>保険料シミュレーター</div>
+      <div style="margin-bottom:10px;">
+        <label style="font-size:12px;font-weight:600;color:var(--muted);display:block;margin-bottom:4px;">
+          給付基礎日額（日当の目安）
+        </label>
+        <select id="nikkyuu" onchange="calcPremium()" style="width:100%;height:42px;
+          border:1px solid var(--border);border-radius:8px;padding:0 11px;font-size:14px;
+          color:var(--text);background:var(--card);appearance:none;">
+          <option value="8000">¥8,000（日当¥1.5〜2万の方）</option>
+          <option value="10000" selected>¥10,000（日当¥2〜2.5万の方）</option>
+          <option value="12000">¥12,000（日当¥2.5〜3万の方）</option>
+          <option value="16000">¥16,000（日当¥3〜4万の方）</option>
+          <option value="20000">¥20,000（日当¥4万以上の方）</option>
+        </select>
+      </div>
+      <div class="sim-result" id="sim-result">
+        <div class="sr-row"><span class="k">年間保険料（建設業 18/1000）</span><span class="v" id="s-premium">¥65,700</span></div>
+        <div class="sr-row"><span class="k">組合費（月¥500）</span><span class="v">¥6,000</span></div>
+        <div class="sr-row total"><span class="k">年間合計</span><span class="v" id="s-total">¥71,700</span></div>
+        <div class="sr-row"><span class="k">1日あたりのコスト</span><span class="v" id="s-day">約¥196</span></div>
+        <div class="sr-row"><span class="k">休業時の1日補償額</span><span class="v" id="s-comp" style="color:var(--green)">¥8,000</span></div>
+      </div>
+      <div style="background:#e8f8f2;border-radius:8px;padding:8px 10px;margin-top:8px;
+        font-size:12px;color:var(--green);font-weight:600;">
+        1日あたり約¥200で、休業時に¥8,000〜20,000の補償が受けられます。
+      </div>
+    </div>
+
+    <!-- 加入組合の比較 -->
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-shield"></i>加入できる組合・団体</div>
+
+      <div class="ins-card recommend">
+        <div style="font-size:10px;font-weight:700;background:var(--orange);color:#fff;
+          padding:2px 8px;border-radius:5px;display:inline-block;margin-bottom:8px;">Zaibaseおすすめ</div>
+        <div class="ic-top">
+          <div class="ic-logo" style="background:#e8f0fa;color:var(--navy);">日建組</div>
+          <div class="ic-info">
+            <div class="ic-name">日本建設組合連合</div>
+            <div class="ic-org">厚生労働省認可 ／ 全国対応</div>
+          </div>
+        </div>
+        <div class="ic-features">
+          <span><i class="ti ti-check"></i>スマホで申込み・即日加入可能</span>
+          <span><i class="ti ti-check"></i>組合費月¥500（業界最安水準）</span>
+          <span><i class="ti ti-check"></i>加入証明書をZaibaseと自動連携</span>
+          <span><i class="ti ti-check"></i>CCUS連動・就業実績と一体管理</span>
+        </div>
+        <div class="ic-bottom">
+          <div class="ic-price"><strong id="price-display">¥71,700</strong><span>/年〜（日額¥10,000の場合）</span></div>
+          <button class="ic-btn orange" onclick="joinInsurance('日本建設組合連合')">
+            <i class="ti ti-external-link"></i>加入する
+          </button>
+        </div>
+      </div>
+
+      <div class="ins-card">
+        <div class="ic-top">
+          <div class="ic-logo" style="background:#fff8e0;color:#7a5a00;">全建総連</div>
+          <div class="ic-info">
+            <div class="ic-name">全国建設労働組合総連合</div>
+            <div class="ic-org">厚生労働省認可 ／ 全国対応</div>
+          </div>
+        </div>
+        <div class="ic-features">
+          <span><i class="ti ti-check"></i>組合員向け福利厚生が充実</span>
+          <span><i class="ti ti-check"></i>建設国保にも加入可能</span>
+        </div>
+        <div class="ic-bottom">
+          <div class="ic-price"><strong>¥65,700</strong><span>/年〜</span></div>
+          <button class="ic-btn" onclick="joinInsurance('全建総連')">
+            <i class="ti ti-external-link"></i>詳細を見る
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 中小企業タブ ── -->
+  <div id="page-sme" style="display:none">
+
+    <div class="hero hero-warn">
+      <div class="h-label"><i class="ti ti-building" style="font-size:13px"></i>中小企業の労災保険</div>
+      <div class="h-title">従業員を1人でも雇ったら<br>強制加入・義務違反は違法</div>
+      <div class="h-sub">従業員を雇用した日から自動的に労災保険の適用事業者になります。手続きを怠ると、事故発生時に給付額の最大100%を国から徴収されます。</div>
+    </div>
+
+    <!-- 未加入の罰則 -->
+    <div class="warn-banner wb-ng">
+      <div class="wb-icon">⛔</div>
+      <div>
+        <div class="wb-title" style="color:var(--red)">故意に未加入の場合：給付額の100%を徴収</div>
+        <div class="wb-sub">例：従業員が骨折で2ヶ月入院した場合の給付額が¥300万だとすると、会社は¥300万を国に納付しなければなりません。さらに2年分の遡及保険料＋追徴金10%も別途発生します。</div>
+        <button class="wb-btn wbb-ng" onclick="showToast('労働基準監督署への相談窓口')">対処法を確認する</button>
+      </div>
+    </div>
+
+    <!-- チェックリスト -->
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-checklist"></i>中小建設会社の保険加入チェックリスト</div>
+      <div id="sme-checklist">
+        <div class="check-item checked" onclick="toggleCheck(this)">
+          <div class="ci-check">✓</div>
+          <div class="ci-body">
+            <div class="ci-title">労災保険（強制）</div>
+            <div class="ci-sub">従業員1人以上を雇用した日から加入義務。手続き先：労働基準監督署</div>
+          </div>
+        </div>
+        <div class="check-item checked" onclick="toggleCheck(this)">
+          <div class="ci-check">✓</div>
+          <div class="ci-body">
+            <div class="ci-title">雇用保険（強制）</div>
+            <div class="ci-sub">週20時間以上・31日以上の雇用見込みがある従業員全員。手続き先：ハローワーク</div>
+          </div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this)">
+          <div class="ci-check"></div>
+          <div class="ci-body">
+            <div class="ci-title">健康保険・厚生年金（法人は強制）</div>
+            <div class="ci-sub">法人は従業員数にかかわらず加入義務。個人事業主は5人未満は任意。手続き先：年金事務所</div>
+          </div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this)">
+          <div class="ci-check"></div>
+          <div class="ci-body">
+            <div class="ci-title">中小事業主の特別加入</div>
+            <div class="ci-sub">社長・役員も労災補償を受けたい場合は特別加入が必要。従業員の労災保険とは別。手続き先：労働保険事務組合</div>
+          </div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this)">
+          <div class="ci-check"></div>
+          <div class="ci-body">
+            <div class="ci-title">下請け一人親方の労災確認</div>
+            <div class="ci-sub">発注した一人親方が労災保険に加入しているか確認。未確認のまま事故が起きると安全配慮義務違反になる場合があります。</div>
+          </div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this)">
+          <div class="ci-check"></div>
+          <div class="ci-body">
+            <div class="ci-title">労災保険料の申告（年度更新）</div>
+            <div class="ci-sub">毎年6月1日〜7月10日に前年度の確定保険料と当年度の概算保険料を申告・納付。</div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:10px;text-align:center;font-size:13px;color:var(--muted);" id="check-progress">
+        2 / 6 完了
+      </div>
+    </div>
+
+    <!-- 費用徴収シミュレーター -->
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-calculator"></i>未加入ペナルティ シミュレーター</div>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:10px;">
+        事故が発生した場合のペナルティ額を試算します
+      </p>
+      <div style="margin-bottom:10px;">
+        <label style="font-size:12px;font-weight:600;color:var(--muted);display:block;margin-bottom:4px;">事故による給付総額の見積もり</label>
+        <select id="kyufu" onchange="calcPenalty()" style="width:100%;height:42px;
+          border:1px solid var(--border);border-radius:8px;padding:0 11px;font-size:14px;
+          color:var(--text);background:var(--card);appearance:none;">
+          <option value="500000">¥50万（軽傷・通院のみ）</option>
+          <option value="1000000">¥100万（骨折・入院1ヶ月）</option>
+          <option value="3000000" selected>¥300万（重傷・入院3ヶ月）</option>
+          <option value="10000000">¥1,000万（後遺障害残存）</option>
+          <option value="50000000">¥5,000万（死亡事故）</option>
+        </select>
+      </div>
+      <div class="sim-result" id="penalty-result">
+        <div class="sr-row"><span class="k">給付総額（国が被災者に支払う）</span><span class="v">¥300万</span></div>
+        <div class="sr-row"><span class="k" style="color:var(--red)">故意未加入の場合の徴収（100%）</span>
+          <span class="v" style="color:var(--red)" id="p-iko">¥300万</span></div>
+        <div class="sr-row"><span class="k" style="color:var(--amber)">重大な過失の場合の徴収（40%）</span>
+          <span class="v" style="color:var(--amber)" id="p-kashitsu">¥120万</span></div>
+        <div class="sr-row"><span class="k">遡及保険料（2年分＋追徴10%）</span>
+          <span class="v" id="p-sokyu">別途発生</span></div>
+        <div class="sr-row total"><span class="k">最悪ケースの合計負担</span>
+          <span class="v" id="p-total" style="color:var(--red)">¥300万〜</span></div>
+      </div>
+      <div style="background:#fde8e8;border-radius:8px;padding:8px 10px;margin-top:8px;
+        font-size:12px;color:var(--red);font-weight:600;">
+        ⚠️ 正規に加入していれば保険料は¥0（国が補償）。未加入のままでいるメリットはありません。
+      </div>
+    </div>
+  </div>
+
+  <!-- ── リスクと罰則タブ ── -->
+  <div id="page-risk" style="display:none">
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-gavel"></i>法的リスクと罰則の全体像</div>
+      <div style="overflow-x:auto;">
+        <table class="compare">
+          <thead>
+            <tr><th>状況</th><th>一人親方</th><th>中小企業</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>法的義務</td><td>任意（事実上必須）</td><td style="color:var(--red);font-weight:600">強制加入・義務</td></tr>
+            <tr><td>未加入での現場入場</td><td class="c-no">禁止</td><td class="c-no">従業員を入れられない</td></tr>
+            <tr><td>事故時の治療費</td><td>全額自己負担</td><td>会社が全額負担</td></tr>
+            <tr><td>国からの罰則</td><td>なし（任意のため）</td><td class="c-no">給付額の40〜100%徴収</td></tr>
+            <tr><td>保険料の遡及</td><td>なし</td><td class="c-no">最大2年分＋追徴10%</td></tr>
+            <tr><td>元請への影響</td><td colspan="2">安全配慮義務違反→損害賠償・取引停止</td></tr>
+            <tr><td>建設業許可への影響</td><td>影響なし</td><td style="color:var(--red);">許可取消リスク</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-shield-exclamation"></i>よくある「抜け穴」とZaibaseの対処</div>
+      <div class="risk-item">
+        <div class="ri-icon ri-ng"><i class="ti ti-file-x" style="color:var(--red)"></i></div>
+        <div class="ri-body">
+          <div class="ri-title" style="color:var(--red)">古い加入証明書の流用・偽造</div>
+          <div class="ri-sub">期限切れの証明書コピーで加入しているふりをするケース。</div>
+          <div style="font-size:11px;color:var(--green);margin-top:4px;font-weight:600;">
+            Zaibase対処：有効期限を毎月自動確認。期限切れは即座に「未確認」ステータスに変更。
+          </div>
+        </div>
+      </div>
+      <div class="risk-item">
+        <div class="ri-icon ri-ng"><i class="ti ti-user-off" style="color:var(--red)"></i></div>
+        <div class="ri-body">
+          <div class="ri-title" style="color:var(--red)">偽装一人親方（実態は雇用）</div>
+          <div class="ri-sub">実質的に雇用関係なのに一人親方として扱い、社会保険・労災を逃れるケース。</div>
+          <div style="font-size:11px;color:var(--green);margin-top:4px;font-weight:600;">
+            Zaibase対処：CCUS就業記録・GPS入退場・稼働実態から雇用関係を検知。アラートを発報。
+          </div>
+        </div>
+      </div>
+      <div class="risk-item">
+        <div class="ri-icon ri-ng"><i class="ti ti-building-off" style="color:var(--red)"></i></div>
+        <div class="ri-body">
+          <div class="ri-title" style="color:var(--red)">名義だけの下請け（幽霊業者）</div>
+          <div class="ri-sub">実態のない会社を経由させて多重下請け構造を作るケース。</div>
+          <div style="font-size:11px;color:var(--green);margin-top:4px;font-weight:600;">
+            Zaibase対処：法人登記・建設業許可・社会保険・CCUS就業記録が揃わない業者は登録不可。
+          </div>
+        </div>
+      </div>
+      <div class="risk-item">
+        <div class="ri-icon ri-warn"><i class="ti ti-clock" style="color:var(--amber)"></i></div>
+        <div class="ri-body">
+          <div class="ri-title" style="color:#7a5a00">保険料を払いたくない・後回しにしている</div>
+          <div class="ri-sub">「大丈夫だろう」と加入を先延ばしにするケース。</div>
+          <div style="font-size:11px;color:var(--green);margin-top:4px;font-weight:600;">
+            Zaibase対処：未加入の場合、案件への応募ボタンが表示されない設計。加入後に解除。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Zaibaseの収益タブ ── -->
+  <div id="page-rev" style="display:none">
+
+    <div style="background:linear-gradient(135deg,#1a3c5e,#2c5f82);border-radius:14px;
+      padding:16px;margin-bottom:14px;color:#fff;">
+      <div style="font-size:14px;font-weight:700;margin-bottom:6px;
+        display:flex;align-items:center;gap:6px;">
+        <i class="ti ti-coin-yen" style="font-size:17px;color:var(--orange)"></i>
+        労災サポート機能の収益設計
+      </div>
+      <div style="font-size:13px;opacity:.85;line-height:1.7;">
+        リスク防止機能を収益源に変える。<br>
+        「安全・合法・確認済み」がZaibaseのブランドになります。
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-table"></i>収益源一覧</div>
+      <table class="rev-table">
+        <thead>
+          <tr><th>収益源</th><th>単価</th><th>条件</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div style="font-weight:600;margin-bottom:2px;">労災保険紹介（アフィリエイト）</div>
+              <div style="font-size:11px;color:var(--muted);">一人親方が組合に加入するたびに発生</div>
+            </td>
+            <td><span class="rev-badge">¥300〜1,500/件</span></td>
+            <td style="font-size:11px;color:var(--muted);">今すぐ<br>対応可能</td>
+          </tr>
+          <tr>
+            <td>
+              <div style="font-weight:600;margin-bottom:2px;">「労災確認済みバッジ」</div>
+              <div style="font-size:11px;color:var(--muted);">Proプランの付加価値として差別化</div>
+            </td>
+            <td><span class="rev-badge">Proプラン¥3,980/月</span></td>
+            <td style="font-size:11px;color:var(--muted);">加入促進<br>効果あり</td>
+          </tr>
+          <tr>
+            <td>
+              <div style="font-weight:600;margin-bottom:2px;">証明書確認・更新サービス</div>
+              <div style="font-size:11px;color:var(--muted);">有効期限管理・自動通知・確認代行</div>
+            </td>
+            <td><span class="rev-badge">年¥980/ユーザー</span></td>
+            <td style="font-size:11px;color:var(--muted);">継続収入</td>
+          </tr>
+          <tr>
+            <td>
+              <div style="font-weight:600;margin-bottom:2px;">中小企業向け労務チェック</div>
+              <div style="font-size:11px;color:var(--muted);">加入状況・申告状況の確認サービス</div>
+            </td>
+            <td><span class="rev-badge">Maxプランに含む</span></td>
+            <td style="font-size:11px;color:var(--muted);">Maxプラン<br>昇格促進</td>
+          </tr>
+          <tr>
+            <td>
+              <div style="font-weight:600;margin-bottom:2px;">労災申請・社労士紹介</div>
+              <div style="font-size:11px;color:var(--muted);">入力補助＋送客（代行は不可）</div>
+            </td>
+            <td><span class="rev-badge">¥5,000〜30,000/件</span></td>
+            <td style="font-size:11px;color:var(--green);font-weight:600;">✓ 合法</td>
+          </tr>
+          <tr>
+            <td>
+              <div style="font-weight:600;margin-bottom:2px;">労働保険事務組合（将来）</div>
+              <div style="font-size:11px;color:var(--muted);">2年実績＋30社委託後・特別加入代行</div>
+            </td>
+            <td><span class="rev-badge">月¥100万ポテンシャル</span></td>
+            <td style="font-size:11px;color:var(--amber);font-weight:600;">2〜3年後</td>
+          </tr>
+          <tr>
+            <td>
+              <div style="font-weight:600;margin-bottom:2px;">GMV増加による手数料増</div>
+              <div style="font-size:11px;color:var(--muted);">「確認済み」により大型案件が増加</div>
+            </td>
+            <td><span class="rev-badge">GMV×4〜8%</span></td>
+            <td style="font-size:11px;color:var(--muted);">最大の<br>収益源</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 年間収益試算 -->
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-chart-bar"></i>年間収益試算（登録1,000人の場合）</div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="display:flex;justify-content:space-between;font-size:13px;
+          padding:6px 0;border-bottom:1px solid var(--bg);">
+          <span style="color:var(--muted);">労災紹介アフィリ（800人加入×¥800平均）</span>
+          <span style="font-weight:700;">¥64万</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;
+          padding:6px 0;border-bottom:1px solid var(--bg);">
+          <span style="color:var(--muted);">証明書管理（1,000人×¥980）</span>
+          <span style="font-weight:700;">¥98万</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;
+          padding:6px 0;border-bottom:1px solid var(--bg);">
+          <span style="color:var(--muted);">Proプラン促進（300人×¥3,980）</span>
+          <span style="font-weight:700;">¥143万/月</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;
+          padding:6px 0;border-bottom:1px solid var(--bg);">
+          <span style="color:var(--muted);">大型案件手数料（GMV拡大分）</span>
+          <span style="font-weight:700;color:var(--orange);">主要収益</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:14px;
+          padding:8px 0;font-weight:800;color:var(--navy);">
+          <span>労災サポート関連の年間収益合計</span>
+          <span style="color:var(--green);">¥300万〜/年</span>
+        </div>
+      </div>
+      <div style="background:#e8f8f2;border-radius:8px;padding:10px;margin-top:8px;
+        font-size:12px;color:var(--green);line-height:1.7;font-weight:600;">
+        ✓ リスク防止が収益になる。<br>
+        ✓ 保険未加入者を「排除」することで良質なユーザーが集まり、GMVが増え、手数料収入が増加します。<br>
+        ✓ 追加コストはほぼゼロ。証明書確認はFirestoreに保存するだけ。
+      </div>
+    </div>
+
+    <!-- 労働保険事務組合 — 中長期ロードマップ -->
+    <div class="union-roadmap" id="rsUnionRoadmap">
+      <div style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px;display:flex;align-items:center;gap:6px;">
+        <i class="ti ti-route" style="color:var(--orange)"></i>労働保険事務組合 — 中長期ロードマップ
+      </div>
+      <p style="font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:10px;">
+        厚生労働大臣認可の事業主団体が、加入手続き・保険料申告・納付・雇用保険届出を代行する制度です。<strong>中小事業主の特別加入</strong>が最大のメリット。新しい法人を別途「事務組合」として設立するのではなく、<strong>一般社団法人 Zaibase が認可を受ける</strong>形になります。
+      </p>
+      <div style="background:#fff8e0;border:1px solid #f5d86e;border-radius:10px;padding:10px 12px;margin-bottom:12px;font-size:12px;color:#7a5a00;line-height:1.65;">
+        <strong>⚠️ 認可の前提：</strong>委託予定事業主<strong>30社以上</strong>に加え、団体として<strong>2年以上の運営実績</strong>が必要です。設立直後の即時認可は困難なため、<strong>有料職業紹介許可（最優先）→ 2年間の実績づくり → 事務組合認可</strong>が現実的な順序です。
+      </div>
+      <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px;">本店所在地で管轄労働局が決まる（神奈川・大阪どちらでも可）</div>
+      <table class="ur-cost-table" style="margin-bottom:12px;">
+        <thead><tr><th>本店の所在地</th><th>労働保険事務組合</th><th>有料職業紹介許可</th></tr></thead>
+        <tbody>
+          <tr><td>神奈川県</td><td>神奈川労働局 労働保険徴収課</td><td>神奈川労働局 需給調整事業課（045-650-2810）</td></tr>
+          <tr><td>大阪府</td><td>大阪労働局 労働保険徴収課</td><td>大阪労働局 需給調整事業課</td></tr>
+        </tbody>
+      </table>
+      <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px;">設立〜認可までの7ステップ</div>
+      <div class="ur-step"><div class="ur-num done">1</div><div><strong>一般社団法人を設立</strong>（費用¥10〜15万・2〜3週間）。本店を神奈川 or 大阪に登記。</div></div>
+      <div class="ur-step"><div class="ur-num wait">2</div><div><strong>定款に「労働保険事務処理」条項</strong>を明記。構成員から委託を受けて事務を行う旨を規定。</div></div>
+      <div class="ur-step"><div class="ur-num wait">3</div><div><strong>2年間、Zaibase本体として運営実績を積む</strong>（総会・事業報告・収支決算）。認可基準で必須。</div></div>
+      <div class="ur-step"><div class="ur-num wait">4</div><div><strong>委託予定書を30社以上</strong>収集（登録ユーザーから。メールで可）。</div></div>
+      <div class="ur-step"><div class="ur-num wait">5</div><div><strong>認可申請書類を準備</strong>（定款・事業計画・処理方法・役員履歴・委託予定名簿等）し、管轄労働局へ提出。</div></div>
+      <div class="ur-step"><div class="ur-num wait">6</div><div><strong>審査（1〜3ヶ月）</strong>。不備があれば補正指導あり。</div></div>
+      <div class="ur-step"><div class="ur-num wait">7</div><div><strong>認可取得・事業開始</strong>。以降も数年ごとに労働局の監査・区分経理が必要。</div></div>
+      <div style="background:#fde8e8;border-radius:8px;padding:9px 11px;margin:12px 0;font-size:12px;color:var(--red);line-height:1.65;">
+        <strong>業務範囲の限界：</strong>労働保険事務組合でも<strong>労災申請書の作成・提出代行は不可</strong>（社労士法第27条）。対象は加入手続き・保険料申告・納付・雇用保険届出まで。
+      </div>
+      <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px;">ランニングコスト試算（Zaibase運営側）</div>
+      <table class="ur-cost-table">
+        <thead><tr><th>規模</th><th>月額運営費（目安）</th><th>主な内訳</th></tr></thead>
+        <tbody>
+          <tr><td>立ち上げ期（委託〜100社）</td><td>¥15〜30万/月</td><td>法人維持・社労士顧問・バーチャルオフィス・区分経理</td></tr>
+          <tr><td>成長期（委託500〜1,000社）</td><td>¥50〜80万/月</td><td>専任事務員・社労士・システム・監査対応</td></tr>
+        </tbody>
+      </table>
+      <div style="font-size:12px;font-weight:700;color:var(--navy);margin:12px 0 6px;">収益 vs コスト（認可後）</div>
+      <div class="sr-row"><span class="k">組合費（1,000社×月¥1,000）</span><span class="v" style="color:var(--green)">月¥100万</span></div>
+      <div class="sr-row"><span class="k">国からの報奨金（納付保険料の2%）</span><span class="v">年数十万〜（上限¥1,000万/年）</span></div>
+      <div class="sr-row"><span class="k">損益分岐（1,000社規模）</span><span class="v" style="color:var(--green)">年¥400〜600万＋報奨金</span></div>
+      <div class="sr-row total"><span class="k">認可前2年間</span><span class="v" style="color:var(--amber)">組合費収入ゼロ・法人維持費のみ</span></div>
+      <div style="background:#e8f8f2;border-radius:8px;padding:10px;margin-top:10px;font-size:12px;color:var(--green);line-height:1.7;">
+        <strong>今月中のアクション：</strong><br>
+        ① 一般社団法人の設立（司法書士へ依頼）<br>
+        ② 登録ユーザーから委託予定書30通を先行収集（2年後の認可申請用）<br>
+        ③ 本店所在地の管轄労働局へ事前相談（神奈川 045-650-2800 / 大阪 06-6943-3111）
+      </div>
+      <button type="button" class="ur-btn-outline" onclick="openRoudoukan()">管轄労働局の所在地を確認する</button>
+    </div>
+  </div>
+
+</main>
+<div class="toast" id="toast"></div>
+
+<script>
+// ── 保険料計算 ──────────────────────────────────────────────
+function calcPremium() {
+  const nikkyuu = +document.getElementById('nikkyuu').value;
+  // 建設業の労災保険料率：18/1000
+  const rate = 18 / 1000;
+  // 給付基礎日額 × 365日 × 料率
+  const premium = Math.round(nikkyuu * 365 * rate);
+  const kumiai  = 6000;
+  const total   = premium + kumiai;
+  const perDay  = Math.round(total / 365);
+  document.getElementById('s-premium').textContent = '¥' + premium.toLocaleString();
+  document.getElementById('s-total').textContent   = '¥' + total.toLocaleString();
+  document.getElementById('s-day').textContent     = '約¥' + perDay;
+  document.getElementById('s-comp').textContent    = '¥' + nikkyuu.toLocaleString() + '（給付基礎日額の80% = ¥' + Math.round(nikkyuu*0.8).toLocaleString() + '/日）';
+  document.getElementById('price-display').textContent = '¥' + total.toLocaleString();
+}
+
+// ── ペナルティ計算 ──────────────────────────────────────────
+function calcPenalty() {
+  const kyufu = +document.getElementById('kyufu').value;
+  document.getElementById('p-iko').textContent      = '¥' + kyufu.toLocaleString();
+  document.getElementById('p-kashitsu').textContent = '¥' + Math.round(kyufu*0.4).toLocaleString();
+  document.getElementById('p-total').textContent    = '¥' + kyufu.toLocaleString() + '〜（＋遡及保険料）';
+}
+
+// ── チェックリスト ──────────────────────────────────────────
+function toggleCheck(el) {
+  el.classList.toggle('checked');
+  const items  = document.querySelectorAll('#sme-checklist .check-item');
+  const done   = document.querySelectorAll('#sme-checklist .check-item.checked').length;
+  document.getElementById('check-progress').textContent = done + ' / ' + items.length + ' 完了';
+}
+
+// ── タブ ──────────────────────────────────────────────────
+function showTab(tab) {
+  ['hitori','sme','risk','rev'].forEach(t => {
+    document.getElementById('page-'+t).style.display = t===tab?'block':'none';
+    document.getElementById('tab-'+t).classList.toggle('act', t===tab);
+  });
+}
+
+function joinInsurance(name) {
+  // Firestoreにアフィリエイトクリックを記録
+  // db.collection('affiliateClicks').add({ type:'rousai', org: name, userId, clickedAt: serverTimestamp() })
+  showToast(name + 'の加入ページへ移動します', 'ok');
+}
+
+function showToast(msg, type) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className   = 'toast show' + (type==='ok' ? ' ok' : '');
+  setTimeout(() => t.className = 'toast', 2800);
+}
+
+function openRoudoukan() {
+  window.open('https://www.mhlw.go.jp/roudou/roudou-kaizen/roudou-kijun/kanrisho/', '_blank', 'noopener,noreferrer');
+  showToast('最寄りの労働基準監督署を検索します', 'ok');
+}
+</script>
+</body>
+</html>

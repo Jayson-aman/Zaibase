@@ -18,7 +18,24 @@ firebase use zaisai-share
 cd functions && npm install
 ```
 
-## 2. Secrets 登録
+## 2. チーム機能（§19）
+
+```bash
+firebase deploy --only functions:createTeam,functions:joinTeamByInvite
+firebase deploy --only firestore:rules,firestore:indexes
+```
+
+## 2b. 多層契約チェーン（§20）
+
+```bash
+firebase deploy --only functions:createContractChain,functions:validateChainSubcontract,functions:createChainContract,functions:updateSubstantiveInvolvement,functions:linkHelpPostToChain
+firebase deploy --only firestore:rules,firestore:indexes
+```
+
+法務ゲート（弁護士確認後）: Firestore `platformConfig/teams` に `lawyerGatePassed: true` を設定。  
+相談用ブリーフ: `docs/legal/teams-coop-lawyer-brief.md`
+
+## 3. Secrets 登録
 
 ```bash
 # Stripe（エスクロー）
