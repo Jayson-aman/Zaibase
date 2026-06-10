@@ -1588,6 +1588,9 @@
     #moneyScreen .mn-result .big { font-size: 28px; font-weight: 900; color: var(--zb-green); }
     #moneyScreen .mn-lang-block { background: var(--zb-card); border: 1px solid var(--zb-border); border-radius: 12px; padding: 12px; margin-bottom: 10px; }
     #moneyScreen .mn-lang-label { font-size: 11px; font-weight: 700; color: var(--zb-orange); margin-bottom: 6px; }
+    #moneyScreen .mn-story-card { background: linear-gradient(135deg,#1a3c5e,#2c5f82); color: #fff; border-radius: 14px; padding: 16px; margin-bottom: 12px; }
+    #moneyScreen .mn-story-card .quote { font-size: 13px; line-height: 1.85; opacity: .92; margin-bottom: 12px; font-style: italic; }
+    #moneyScreen .mn-story-card .highlight { background: rgba(232,160,32,.25); border: 1px solid var(--zb-orange); border-radius: 10px; padding: 12px; font-size: 15px; font-weight: 800; text-align: center; }
     #communityScreen .cm-bridge-card { background: linear-gradient(135deg,#fff8f0,#fff); border: 1px solid #f0d8b0; border-radius: 12px; padding: 13px; margin-bottom: 10px; font-size: 12px; line-height: 1.75; color: var(--zb-text); }
     #communityScreen .cm-pf-input { width: 100%; border: 1px solid var(--zb-border); border-radius: 9px; padding: 10px; font-size: 14px; min-height: 80px; resize: vertical; font-family: inherit; }
     #communityScreen .cm-post-card { background: var(--zb-card); border-radius: 12px; border: 1px solid var(--zb-border); padding: 13px; margin-bottom: 10px; }
@@ -6431,7 +6434,19 @@ support@zaibase.jp</p>
   function renderMnForeignTab() {
     const el = document.getElementById('mnPageForeign');
     if (!el) return;
+    const storyMonths = (() => {
+      const d = mnDreams.find(x => x.preset === 'vn_house') || mnDreams[0];
+      if (!d) return 28;
+      const m = mnDreamMonths(d);
+      return m != null && m > 0 ? m : 28;
+    })();
     el.innerHTML = `
+      <div class="mn-story-card">
+        <div style="font-size:12px;opacity:.8;margin-bottom:8px;">「いつ帰るの？」——答えられなかった理由</div>
+        <div class="quote">帰れないからではない。夢が途中だったのかもしれない。Zaibaseは、その途中を数字で見えるようにする。</div>
+        <div class="highlight">🏠 ベトナムに家を建てる夢まで<br>あと <span style="font-size:22px;color:var(--zb-orange)">${storyMonths}</span> ヶ月</div>
+        <div style="font-size:11px;opacity:.75;margin-top:10px;text-align:center;">帰国は敗北ではない。夢の達成の一部だ。</div>
+      </div>
       <div class="mn-card">
         <div class="mn-sec-title"><i class="ti ti-world" style="color:var(--zb-orange)"></i>みんな仲間</div>
         ${Object.entries(MN_FOREIGN_MSG).map(([lang, text]) => `
