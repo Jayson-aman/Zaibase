@@ -1,0 +1,142 @@
+name: Zaibase 自動デプロイ
+
+on:
+  push:
+    branches:
+      - main        # mainブランチにpushしたら本番デプロイ
+      - staging     # stagingブランチにpushしたらステージングデプロイ
+  pull_request:
+    branches:
+      - main        # PRを作ったら自動テスト
+
+jobs:
+  # ── ① 本番デプロイ（mainブランチ） ──────────────────────────
+  deploy-production:
+    name: 本番デプロイ（zaisai-share）
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - name: コードを取得
+        uses: actions/checkout@v4
+
+      - name: Node.js 20 をセットアップ
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: functions/package-lock.json
+
+      - name: Functions の依存パッケージをインストール
+        run: |
+          cd functions
+          npm ci
+
+      - name: Firebase CLI をインストール
+        run: npm install -g firebase-tools
+
+      - name: Firestore ルール・インデックスをデプロイ
+        run: |
+          firebase deploy \
+            --only firestore:rules,firestore:indexes \
+            --project zaisai-share \
+            --token "${{ secrets.FIREBASE_TOKEN }}" \
+            --non-interactive
+
+      - name: Cloud Functions をデプロイ
+        run: |
+          firebase deploy \
+            --only functions \
+            --project zaisai-share \
+            --token "${{ secrets.FIREBASE_TOKEN }}" \
+            --non-interactive
+
+      - name: Hosting（フロントエンド）をデプロイ
+        run: |
+          firebase deploy \
+            --only hosting \
+            --project zaisai-share \
+            --token "${{ secrets.FIREBASE_TOKEN }}" \
+            --non-interactive
+
+      - name: デプロイ完了通知
+        if: success()
+        run: |
+          echo "✅ 本番デプロイ完了: $(date '+%Y-%m-%d %H:%M:%S')"
+          echo "🌐 URL: https://zaisai-share.web.app"
+
+      - name: デプロイ失敗通知
+        if: failure()
+        run: |
+          echo "❌ デプロイ失敗: $(date '+%Y-%m-%d %H:%M:%S')"
+
+  # ── ② ステージングデプロイ（stagingブランチ） ───────────────
+  deploy-staging:
+    name: ステージングデプロイ
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/staging' && github.event_name == 'push'
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: functions/package-lock.json
+
+      - name: Functions の依存パッケージをインストール
+        run: cd functions && npm ci
+
+      - name: Firebase CLI をインストール
+        run: npm install -g firebase-tools
+
+      - name: ステージング環境にデプロイ
+        run: |
+          firebase deploy \
+            --only hosting \
+            --project zaisai-share \
+            --token "${{ secrets.FIREBASE_TOKEN }}" \
+            --non-interactive
+
+      - run: echo "✅ ステージングデプロイ完了"
+
+  # ── ③ 構文チェック（PR時） ──────────────────────────────────
+  lint:
+    name: 構文チェック
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: functions/package-lock.json
+
+      - name: 依存パッケージをインストール
+        run: cd functions && npm ci
+
+      - name: Cloud Functions の構文チェック
+        run: |
+          cd functions
+          node --check index.js
+          for f in *.js; do
+            if [ "$f" != "index.js" ]; then
+              node --check "$f" && echo "✅ $f"
+            fi
+          done
+
+      - name: Firestore ルールの確認
+        run: |
+          if [ -f firestore.rules ]; then
+            echo "✅ firestore.rules が存在します"
+          else
+            echo "⚠️ firestore.rules が見つかりません"
+            exit 1
+          fi
+          if [ -f firestore.indexes.json ]; then
+            echo "✅ firestore.indexes.json が存在します"
+          else
+            echo "⚠️ firestore.indexes.json が見つかりません"
+            exit 1
+          fi
