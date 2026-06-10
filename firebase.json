@@ -3,7 +3,8 @@
     "public": "frontend",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
-      { "source": "/", "destination": "/Zaibase.html" }
+      { "source": "/app", "destination": "/Zaibase.html" },
+      { "source": "/", "destination": "/mission.html" }
     ]
   },
   "functions": [

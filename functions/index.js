@@ -88,6 +88,10 @@ const emergencyMatch = require("./emergency_match");
 exports.notifyUrgentJob = emergencyMatch.notifyUrgentJob;
 exports.listNearbyUrgentJobs = emergencyMatch.listNearbyUrgentJobs;
 
+// ── 職人コミュニティ（§29）────────────────────────────────────────
+const community = require("./community");
+exports.sendCommunityThanks = community.sendCommunityThanks;
+
 // ── ユーティリティ ─────────────────────────────────────────────
 exports.health = onRequest((req, res) => {
   res.json({ ok: true, service: "zaibase-backend", time: new Date().toISOString() });

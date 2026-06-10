@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>職人コミュニティ — Zaibase（設計モック・統合済み）</title>
-<!-- 正本UI: frontend/Zaibase.html #communityScreen（v2・4タブ） -->
+<!-- 正本UI: frontend/Zaibase.html #communityScreen（v3・5タブ） -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 <style>
   :root{--navy:#1a3c5e;--orange:#e8a020;--bg:#f4f6f8;--card:#fff;--muted:#6b7c93;--border:#dce3ea;--green:#1d9e75;--purple:#7c3aed;}
@@ -20,8 +20,8 @@
 </head>
 <body>
 <div class="mission">
-  <h1>「誰もひとりで困らない建設業を」</h1>
-  <p>年老いても、仕事が減っても、困ったときに助けてくれる仲間がいる。<br>シニア職人の技術と経験が、若い職人の未来を照らす。</p>
+  <h1>日本の建設技術を、次の世代に渡す</h1>
+  <p>職人が誇りを持って働ける国を、守る。Zaibaseはそのために存在します。<br>日本人の若者が戻ってくる環境を、コミュニティから作る。</p>
 </div>
 <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">
   このスタンドアロンHTMLは <strong>Zaibase.html</strong> の <code>#communityScreen</code> に<strong>統合済み</strong>です。<br>
@@ -32,16 +32,20 @@
   <span class="tab">師匠を探す</span>
   <span class="tab">弟子を探す</span>
   <span class="tab">ありがとう</span>
+  <span class="tab">誇り・未来</span>
 </div>
-<h2 style="font-size:15px;color:var(--navy);margin:16px 0 8px;">統合チェックリスト（v2）</h2>
+<h2 style="font-size:15px;color:var(--navy);margin:16px 0 8px;">統合チェックリスト（v3）</h2>
 <ul>
-  <li>✅ 4種投稿フォーム（助けて/経験談/感謝/質問）・匿名投稿</li>
+  <li>✅ 5種投稿フォーム（助けて/経験談/感謝/質問/建設業の誇り）・匿名投稿</li>
   <li>✅ 投稿一覧・いいね・返信・ありがとう送信</li>
   <li>✅ 師匠カード（山田68歳・鈴木72歳）・相談申込</li>
   <li>✅ 弟子募集一覧（シニア向け）・連絡ボタン</li>
   <li>✅ ありがとうポイント（1,240pt）・使い道・感謝の声</li>
-  <li>✅ ミッション文言（§0・§29）</li>
-  <li>⬜ Firestore <code>communityPosts</code></li>
+  <li>✅ ミッション文言（§0・§29）・ログイン画面ミッション</li>
+  <li>✅ 誇り・未来タブ（誇り投稿・若者コーナー・選んだ理由・技術継承記録）</li>
+  <li>✅ 師匠タブに技術継承記録セクション</li>
+  <li>✅ Firestore <code>communityPosts</code>（投稿・いいね・リアルタイム）</li>
+  <li>✅ <code>arigatoPoints</code> + <code>sendCommunityThanks</code> Cloud Function</li>
   <li>⬜ 師弟マッチング課金・報酬</li>
 </ul>
 <p style="font-size:12px;color:var(--muted);margin-top:20px;">入口：マイページ「🤝 職人のつながり」</p>

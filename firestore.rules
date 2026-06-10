@@ -340,6 +340,65 @@ service cloud.firestore {
       allow update, delete: if false;
     }
 
+    // 職人コミュニティ投稿（§29）
+    match /communityPosts/{id} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.type in ['help', 'wisdom', 'thanks', 'question', 'pride']
+        && request.resource.data.content is string
+        && request.resource.data.content.size() > 0
+        && request.resource.data.content.size() <= 2000
+        && request.resource.data.status == 'active'
+        && request.resource.data.likes == 0
+        && request.resource.data.likedBy.size() == 0
+        && request.resource.data.thanksBy.size() == 0;
+      allow update: if request.auth != null && (
+        (request.auth.uid == resource.data.userId
+          && request.resource.data.userId == resource.data.userId
+          && request.resource.data.status in ['active', 'hidden'])
+        || cmLikeUnlikeValid()
+      );
+      allow delete: if false;
+    }
+
+    function cmLikeUnlikeValid() {
+      return resource.data.status == 'active'
+        && request.resource.data.userId == resource.data.userId
+        && request.resource.data.content == resource.data.content
+        && request.resource.data.type == resource.data.type
+        && request.resource.data.thanksBy == resource.data.thanksBy
+        && (
+          (request.resource.data.likedBy.size() == resource.data.likedBy.size() + 1
+            && request.auth.uid in request.resource.data.likedBy
+            && !(request.auth.uid in resource.data.likedBy)
+            && request.resource.data.likes == resource.data.likes + 1)
+          || (request.resource.data.likedBy.size() == resource.data.likedBy.size() - 1
+            && !(request.auth.uid in request.resource.data.likedBy)
+            && request.auth.uid in resource.data.likedBy
+            && request.resource.data.likes == resource.data.likes - 1)
+        );
+    }
+
+    // ありがとうポイント残高（§29）— 更新は Cloud Functions トランザクション
+    match /arigatoPoints/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow create: if request.auth != null
+        && request.auth.uid == uid
+        && request.resource.data.balance == 100
+        && request.resource.data.helpCount == 0
+        && request.resource.data.helpPeople == 0;
+      allow update: if false;
+      allow delete: if false;
+    }
+
+    match /arigatoTransactions/{id} {
+      allow read: if request.auth != null
+        && (request.auth.uid == resource.data.fromUserId
+            || request.auth.uid == resource.data.toUserId);
+      allow write: if false;
+    }
+
     // 緊急職人手配（§24）
     match /urgentJobs/{id} {
       allow read: if request.auth != null;

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zaibase — 日本の建設技術を、次の世代へ</title>
+<style>
+  :root{
+    --navy:#1a3c5e;--orange:#e8a020;--green:#1d9e75;
+    --red:#e24b4a;--bg:#0d1b2a;--card:#1a2d40;--text:#f0f4f8;--muted:#8aa0b8;
+    --gold:#f5c842;--warm:#f97316;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+    background:var(--bg);color:var(--text);min-height:100dvh;overflow-x:hidden;}
+  .hero{min-height:100dvh;display:flex;flex-direction:column;
+    justify-content:center;align-items:center;text-align:center;
+    padding:40px 20px;position:relative;overflow:hidden;}
+  .hero-bg{position:absolute;inset:0;z-index:0;}
+  .hero-bg svg{width:100%;height:100%;opacity:.12;}
+  .stars{position:absolute;inset:0;z-index:1;}
+  .star{position:absolute;background:#fff;border-radius:50%;animation:twinkle var(--dur,3s) ease-in-out infinite;}
+  @keyframes twinkle{0%,100%{opacity:.2}50%{opacity:1}}
+  .hero-content{position:relative;z-index:2;max-width:480px;}
+  .hero-flag{font-size:48px;margin-bottom:16px;animation:float 3s ease-in-out infinite;}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+  .hero-catch{font-size:13px;font-weight:700;letter-spacing:3px;color:var(--gold);
+    margin-bottom:14px;text-transform:uppercase;}
+  .hero-title{font-size:28px;font-weight:900;line-height:1.45;margin-bottom:16px;
+    color:#fff;text-shadow:0 2px 20px rgba(0,0,0,.5);}
+  .hero-title .accent{color:var(--gold);}
+  .hero-sub{font-size:14px;line-height:1.9;color:rgba(255,255,255,.8);margin-bottom:28px;}
+  .hero-btn{display:inline-flex;align-items:center;gap:8px;padding:15px 32px;
+    background:var(--orange);color:#fff;border:none;border-radius:14px;
+    font-size:16px;font-weight:800;cursor:pointer;text-decoration:none;
+    box-shadow:0 4px 24px rgba(232,160,32,.4);transition:.2s;}
+  .hero-btn:active{transform:scale(.97);}
+  .hero-scroll{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);
+    color:rgba(255,255,255,.4);font-size:12px;display:flex;flex-direction:column;
+    align-items:center;gap:6px;animation:bounce 2s infinite;}
+  @keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}
+    50%{transform:translateX(-50%) translateY(8px)}}
+  .section{padding:48px 20px;max-width:540px;margin:0 auto;}
+  .sec-label{font-size:11px;font-weight:700;letter-spacing:3px;color:var(--orange);
+    margin-bottom:10px;text-align:center;}
+  .sec-title{font-size:22px;font-weight:800;line-height:1.45;text-align:center;
+    margin-bottom:24px;color:#fff;}
+  .crisis-card{background:var(--card);border-radius:16px;padding:18px;margin-bottom:12px;
+    border-left:4px solid var(--red);}
+  .cr-num{font-size:36px;font-weight:900;color:var(--red);line-height:1;}
+  .cr-unit{font-size:14px;color:var(--muted);margin-bottom:6px;}
+  .cr-desc{font-size:13px;color:rgba(255,255,255,.8);line-height:1.7;}
+  .voice-card{background:var(--card);border-radius:16px;padding:18px;margin-bottom:12px;
+    border:1px solid rgba(255,255,255,.08);}
+  .vc-quote{font-size:32px;color:var(--gold);line-height:1;margin-bottom:8px;}
+  .vc-text{font-size:14px;line-height:1.85;color:rgba(255,255,255,.9);
+    margin-bottom:12px;font-style:italic;}
+  .vc-author{display:flex;align-items:center;gap:10px;}
+  .vc-avatar{width:40px;height:40px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:14px;font-weight:700;color:#fff;flex-shrink:0;}
+  .vc-name{font-size:13px;font-weight:700;color:#fff;}
+  .vc-info{font-size:11px;color:var(--muted);margin-top:2px;}
+  .mission-section{background:linear-gradient(180deg,#0d1b2a,#1a2d40,#0d1b2a);
+    padding:60px 20px;text-align:center;}
+  .mission-icon{font-size:56px;margin-bottom:20px;}
+  .mission-title{font-size:24px;font-weight:900;color:#fff;line-height:1.4;margin-bottom:20px;}
+  .mission-title .gold{color:var(--gold);}
+  .mission-lines{display:flex;flex-direction:column;gap:14px;max-width:480px;margin:0 auto 32px;}
+  .ml-item{display:flex;align-items:flex-start;gap:12px;
+    background:rgba(255,255,255,.06);border-radius:12px;padding:14px;}
+  .ml-icon{font-size:22px;flex-shrink:0;}
+  .ml-text{font-size:13px;line-height:1.75;color:rgba(255,255,255,.85);text-align:left;}
+  .ml-text strong{color:var(--gold);display:block;font-size:14px;margin-bottom:3px;}
+  .pledge{background:var(--navy);border-radius:20px;padding:28px 20px;
+    margin:0 20px 48px;text-align:center;border:2px solid var(--orange);
+    max-width:500px;margin-left:auto;margin-right:auto;}
+  .pledge-title{font-size:16px;font-weight:800;color:var(--orange);margin-bottom:16px;
+    display:flex;align-items:center;justify-content:center;gap:8px;}
+  .pledge-text{font-size:14px;line-height:2.1;color:#fff;margin-bottom:20px;}
+  .pledge-sign{font-size:16px;font-weight:800;color:var(--gold);}
+  .cta-section{padding:40px 20px 60px;text-align:center;}
+  .cta-title{font-size:20px;font-weight:800;color:#fff;margin-bottom:8px;}
+  .cta-sub{font-size:13px;color:var(--muted);margin-bottom:24px;line-height:1.7;}
+  .cta-btns{display:flex;flex-direction:column;gap:10px;max-width:320px;margin:0 auto;}
+  .cta-btn{padding:16px;border-radius:12px;font-size:15px;font-weight:800;
+    border:none;cursor:pointer;display:flex;align-items:center;
+    justify-content:center;gap:8px;transition:.2s;text-decoration:none;}
+  .cta-btn:active{transform:scale(.97);}
+  .cta-primary{background:var(--orange);color:#fff;
+    box-shadow:0 4px 24px rgba(232,160,32,.35);}
+  .cta-secondary{background:rgba(255,255,255,.08);color:#fff;
+    border:1px solid rgba(255,255,255,.2);}
+  .flame{display:inline-block;animation:flame .8s ease-in-out infinite alternate;}
+  @keyframes flame{from{transform:rotate(-5deg) scale(1)}to{transform:rotate(5deg) scale(1.1)}}
+  .count{display:inline-block;}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-bg">
+    <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <rect x="10"  y="80"  width="50" height="220" fill="white"/>
+      <rect x="70"  y="120" width="40" height="180" fill="white"/>
+      <rect x="120" y="60"  width="60" height="240" fill="white"/>
+      <rect x="190" y="100" width="35" height="200" fill="white"/>
+      <rect x="235" y="50"  width="70" height="250" fill="white"/>
+      <rect x="315" y="90"  width="45" height="210" fill="white"/>
+      <rect x="368" y="130" width="32" height="170" fill="white"/>
+      <rect x="140" y="10"  width="6"  height="55"  fill="white"/>
+      <rect x="100" y="10"  width="90" height="6"   fill="white"/>
+      <line x1="146" y1="16" x2="190" y2="40" stroke="white" stroke-width="2"/>
+      <rect x="280" y="0"  width="5"   height="55"  fill="white"/>
+      <rect x="250" y="0"  width="70"  height="5"   fill="white"/>
+      <rect x="120" y="60"  width="3" height="240" fill="white" opacity=".5"/>
+      <rect x="175" y="60"  width="3" height="240" fill="white" opacity=".5"/>
+      <rect x="120" y="100" width="55" height="2"  fill="white" opacity=".5"/>
+      <rect x="120" y="150" width="55" height="2"  fill="white" opacity=".5"/>
+      <rect x="120" y="200" width="55" height="2"  fill="white" opacity=".5"/>
+      <circle cx="148" cy="110" r="5" fill="white"/>
+      <rect x="145" y="115" width="6" height="14" fill="white"/>
+      <circle cx="300" cy="85"  r="5" fill="white"/>
+      <rect x="297" y="90"  width="6" height="14" fill="white"/>
+    </svg>
+  </div>
+  <div class="stars" id="stars"></div>
+  <div class="hero-content">
+    <div class="hero-flag">🇯🇵</div>
+    <div class="hero-catch">Zaibase — 職人と共に</div>
+    <h1 class="hero-title">
+      日本の建設技術を、<br>
+      <span class="accent">次の世代へ渡す。</span><br>
+      職人が誇りを持って<br>
+      働ける国を、守る。
+    </h1>
+    <p class="hero-sub">
+      一人で困っている職人を、ひとりにしない。<br>
+      年老いても、体が動かなくなっても、<br>
+      あなたの技術と経験は<br>
+      必ず次の誰かを支えている。<br><br>
+      Zaibaseはそのために存在する。
+    </p>
+    <a href="#crisis" class="hero-btn">
+      <span class="flame">🔥</span>
+      Zaibaseを始める
+    </a>
+  </div>
+  <a href="#crisis" class="hero-scroll" style="text-decoration:none;color:inherit;">
+    <span>今の現実を知る</span>
+    <i class="ti ti-chevron-down"></i>
+  </a>
+</div>
+
+<div class="section" id="crisis">
+  <div class="sec-label">現実</div>
+  <div class="sec-title">今、日本の建設業で<br>何が起きているか</div>
+  <div class="crisis-card">
+    <div class="cr-num"><span class="count" data-target="60">0</span>%</div>
+    <div class="cr-unit">建設現場の職人が50代以上</div>
+    <div class="cr-desc">
+      10年後、今働いている職人の多くが現場を離れます。
+      その技術を受け取る若者が、今の日本にはいません。
+    </div>
+  </div>
+  <div class="crisis-card">
+    <div class="cr-num"><span class="count" data-target="3.5">0</span>倍</div>
+    <div class="cr-unit">7年間で建設業の外国人労働者が増加</div>
+    <div class="cr-desc">
+      ベトナム・インドネシアの方々が現場を支えています。
+      悪いことではない。でも日本人の担い手が減り続けている事実がある。
+      その原因は「日本人が来たくない現場環境」にあります。
+    </div>
+  </div>
+  <div class="crisis-card" style="border-color:var(--orange);">
+    <div class="cr-num" style="color:var(--orange);">
+      <span class="count" data-target="40">0</span>%
+    </div>
+    <div class="cr-unit">人手不足倒産の40%が建設業</div>
+    <div class="cr-desc">
+      未払い・低賃金・長時間労働・将来の不安。
+      これが続く限り、若い日本人は建設業を選びません。
+      Zaibaseはこれを変えたい。
+    </div>
+  </div>
+</div>
+
+<div class="section" id="voices">
+  <div class="sec-label">声</div>
+  <div class="sec-title">現場の職人たちが<br>言葉にできなかったこと</div>
+  <div class="voice-card">
+    <div class="vc-quote">"</div>
+    <div class="vc-text">
+      45年やってきた。タイル一枚一枚に魂を込めてきた。
+      でも年をとって仕事が減ると、誰も助けてくれない。
+      知り合いが減るだけ、仕事も消えていく。
+      こんなに積み上げてきたものが、誰にも伝わらないまま消えていくのか。
+      それが一番悔しかった。
+    </div>
+    <div class="vc-author">
+      <div class="vc-avatar" style="background:var(--orange);">山</div>
+      <div>
+        <div class="vc-name">山田 義雄</div>
+        <div class="vc-info">タイル工事歴45年 ・ 68歳 ・ 横浜市</div>
+      </div>
+    </div>
+  </div>
+  <div class="voice-card">
+    <div class="vc-quote">"</div>
+    <div class="vc-text">
+      一人親方で40年やってきた。未払いで泣いたことも、廃業を考えたこともある。
+      でも誰に相談すればいいかわからなかった。
+      弁護士に頼む金もない。同業者に話せば噂になる。
+      一人で抱えるしかなかった。
+      若い子たちには、同じ思いをさせたくない。
+    </div>
+    <div class="vc-author">
+      <div class="vc-avatar" style="background:#7c3aed;">鈴</div>
+      <div>
+        <div class="vc-name">鈴木 秀雄</div>
+        <div class="vc-info">左官・シーリング工事歴48年 ・ 72歳 ・ 大阪府</div>
+      </div>
+    </div>
+  </div>
+  <div class="voice-card">
+    <div class="vc-quote">"</div>
+    <div class="vc-text">
+      高校卒業して建設業に入った。怒鳴られてばかりで、
+      正直逃げ出したかった。
+      でも師匠に出会って変わった。
+      「お前の仕事は、この建物が建っている限り残る」
+      その言葉が今でも支えになっている。
+      この業界には、そういう言葉をかけてくれる人が必要だ。
+    </div>
+    <div class="vc-author">
+      <div class="vc-avatar" style="background:var(--green);">木</div>
+      <div>
+        <div class="vc-name">木村 大輝</div>
+        <div class="vc-info">鉄筋工事3年目 ・ 22歳 ・ 相模原市</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mission-section" id="mission">
+  <div class="mission-icon">🏗️</div>
+  <div class="mission-title">
+    Zaibaseが<span class="gold">約束すること</span>
+  </div>
+  <div class="mission-lines">
+    <div class="ml-item">
+      <div class="ml-icon">🛡️</div>
+      <div class="ml-text">
+        <strong>誰もひとりにしない</strong>
+        未払いも、仕事探しも、労災も、確定申告も。
+        困ったときに頼れる場所をZaibaseが作る。
+      </div>
+    </div>
+    <div class="ml-item">
+      <div class="ml-icon">🔥</div>
+      <div class="ml-text">
+        <strong>技術を次の世代へ渡す</strong>
+        シニア職人の45年・48年の経験は、日本の宝だ。
+        その知恵を若い職人に繋ぐ師弟の場を作る。
+      </div>
+    </div>
+    <div class="ml-item">
+      <div class="ml-icon">💴</div>
+      <div class="ml-text">
+        <strong>正当な報酬を必ず手元に届ける</strong>
+        エスクロー・電子伝票・電子署名で、
+        「未払い」という言葉を建設業からなくす。
+      </div>
+    </div>
+    <div class="ml-item">
+      <div class="ml-icon">🇯🇵</div>
+      <div class="ml-text">
+        <strong>日本の建設技術の担い手を守る</strong>
+        外国人が増えている根本は「日本人が来たくない現場」にある。
+        その環境を変えることが、日本の建設業を守ることだ。
+      </div>
+    </div>
+    <div class="ml-item">
+      <div class="ml-icon">👴</div>
+      <div class="ml-text">
+        <strong>年老いても、働き続けられる場所を作る</strong>
+        体力が落ちても、経験と技術がある。
+        シニア職人が尊重され、収入を得続けられる
+        仕組みをZaibaseが作る。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pledge">
+  <div class="pledge-title">
+    <span class="flame">🔥</span>
+    Zaibaseの誓い
+    <span class="flame">🔥</span>
+  </div>
+  <div class="pledge-text">
+    私たちは、職人を一人にしない。<br><br>
+    年老いて収入が不安になっても、<br>
+    仕事が突然なくなっても、<br>
+    未払いで泣かされても、<br>
+    誰にも相談できなくても——<br><br>
+    Zaibaseはここにいる。<br><br>
+    日本の建設技術を守ること。<br>
+    職人が誇りを持って働ける国を守ること。<br>
+    それが私たちの存在意義だ。
+  </div>
+  <div class="pledge-sign">— Zaibase 一同</div>
+</div>
+
+<div class="cta-section">
+  <div class="cta-title">今日から、一緒に始めよう</div>
+  <div class="cta-sub">
+    登録無料。まずあなたの話を聞かせてください。<br>
+    困っていること、不安なこと、何でも。
+  </div>
+  <div class="cta-btns">
+    <a href="/app" class="cta-btn cta-primary">
+      <i class="ti ti-user-plus" style="font-size:18px"></i>
+      職人として登録する（無料）
+    </a>
+    <a href="/app?open=community" class="cta-btn cta-secondary">
+      <i class="ti ti-users" style="font-size:18px"></i>
+      仲間の声を読む
+    </a>
+  </div>
+</div>
+
+<div style="text-align:center;padding:20px;font-size:11px;color:var(--muted);
+  border-top:1px solid rgba(255,255,255,.08);">
+  © 2026 一般社団法人 Zaibase　すべての職人とともに
+</div>
+
+<script>
+const starsEl = document.getElementById('stars');
+for (let i = 0; i < 60; i++) {
+  const s = document.createElement('div');
+  s.className = 'star';
+  const size = Math.random() * 2.5 + 1;
+  s.style.cssText = `
+    width:${size}px;height:${size}px;
+    top:${Math.random()*100}%;left:${Math.random()*100}%;
+    --dur:${Math.random()*4+2}s;
+    animation-delay:${Math.random()*4}s;`;
+  starsEl.appendChild(s);
+}
+
+function countUp(el, target, isFloat) {
+  const duration = 1800;
+  const start = performance.now();
+  function frame(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    const val = target * ease;
+    el.textContent = isFloat ? val.toFixed(1) : Math.round(val);
+    if (progress < 1) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseFloat(el.dataset.target);
+      const isFloat = el.dataset.target.includes('.');
+      countUp(el, target, isFloat);
+      observer.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.count').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
