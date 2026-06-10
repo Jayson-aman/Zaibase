@@ -48,7 +48,8 @@ jobs:
             --only functions \
             --project zaisai-share \
             --token "${{ secrets.FIREBASE_TOKEN }}" \
-            --non-interactive
+            --non-interactive \
+            --force
 
       - name: Hosting（フロントエンド）をデプロイ
         run: |
