@@ -399,6 +399,49 @@ service cloud.firestore {
       allow write: if false;
     }
 
+    // 夢の貯金（§30–§31）— 旧 dreamGoals は読取・移行用
+    match /dreamGoals/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow create, update: if request.auth != null
+        && request.auth.uid == uid
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.targetAmount is number
+        && request.resource.data.targetAmount > 0
+        && request.resource.data.savedAmount is number
+        && request.resource.data.savedAmount >= 0
+        && request.resource.data.title is string
+        && request.resource.data.title.size() > 0
+        && request.resource.data.title.size() <= 80;
+      allow delete: if false;
+    }
+
+    match /dreamSavings/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      match /items/{itemId} {
+        allow read: if request.auth != null && request.auth.uid == uid;
+        allow create: if request.auth != null
+          && request.auth.uid == uid
+          && request.resource.data.userId == request.auth.uid
+          && request.resource.data.title is string
+          && request.resource.data.title.size() > 0
+          && request.resource.data.title.size() <= 80
+          && request.resource.data.targetAmount is number
+          && request.resource.data.targetAmount > 0
+          && request.resource.data.savedAmount is number
+          && request.resource.data.savedAmount >= 0
+          && request.resource.data.monthlySave is number
+          && request.resource.data.monthlySave >= 0;
+        allow update: if request.auth != null
+          && request.auth.uid == uid
+          && request.resource.data.userId == request.auth.uid
+          && request.resource.data.title is string
+          && request.resource.data.targetAmount is number
+          && request.resource.data.savedAmount is number
+          && request.resource.data.monthlySave is number;
+        allow delete: if request.auth != null && request.auth.uid == uid;
+      }
+    }
+
     // 緊急職人手配（§24）
     match /urgentJobs/{id} {
       allow read: if request.auth != null;

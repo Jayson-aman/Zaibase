@@ -1550,6 +1550,45 @@
     #communityScreen .cm-youth-card { background: #e8f0fa; border-radius: 12px; padding: 13px; margin-bottom: 10px; cursor: pointer; }
     #communityScreen .cm-inherit-card { background: var(--zb-card); border: 1px solid var(--zb-border); border-left: 4px solid var(--zb-orange); border-radius: 12px; padding: 12px; margin-bottom: 10px; }
     #communityScreen .cm-stats-bar { background: #f0f5fa; border-radius: 10px; padding: 10px 12px; font-size: 11px; color: var(--zb-muted); line-height: 1.65; margin-bottom: 12px; }
+    #communityScreen .cm-lang-bar { display: flex; gap: 6px; padding: 8px 14px; background: var(--zb-card); border-bottom: 1px solid var(--zb-border); overflow-x: auto; }
+    #communityScreen .cm-lang-btn { padding: 5px 10px; border-radius: 16px; font-size: 11px; font-weight: 600; border: 1.5px solid var(--zb-border); background: var(--zb-bg); color: var(--zb-muted); cursor: pointer; white-space: nowrap; }
+    #communityScreen .cm-lang-btn.act { background: var(--zb-navy); color: #fff; border-color: var(--zb-navy); }
+    #communityScreen .cm-dream-banner { margin: 0 14px 10px; background: linear-gradient(135deg,#1a3c5e,#2c5f82); border-radius: 14px; padding: 14px; color: #fff; cursor: pointer; }
+    #communityScreen .cm-dream-banner .db-title { font-size: 13px; font-weight: 800; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+    #communityScreen .cm-dream-banner .db-goal { font-size: 12px; opacity: .9; margin-bottom: 8px; }
+    #communityScreen .cm-dream-track { height: 8px; background: rgba(255,255,255,.2); border-radius: 4px; overflow: hidden; margin-bottom: 6px; }
+    #communityScreen .cm-dream-fill { height: 100%; background: var(--zb-orange); border-radius: 4px; transition: width .4s; }
+    #communityScreen .cm-dream-remain { font-size: 11px; opacity: .85; }
+    #moneyScreen { background: var(--zb-bg); min-height: 100vh; display: flex; flex-direction: column; padding-bottom: 32px; color: var(--zb-text); }
+    #moneyScreen .mn-hd { background: linear-gradient(135deg,#1a3c5e,#2c5f82); padding: 13px 16px; flex-shrink: 0; }
+    #moneyScreen .mn-hd-row { display: flex; align-items: center; gap: 10px; }
+    #moneyScreen .mn-back { color: rgba(255,255,255,.75); font-size: 22px; border: none; background: none; cursor: pointer; }
+    #moneyScreen .mn-title { color: #fff; font-size: 17px; font-weight: 800; flex: 1; }
+    #moneyScreen .mn-legal { background: #fff8e6; color: #7a5a00; font-size: 11px; line-height: 1.65; padding: 10px 14px; border-bottom: 1px solid #f0d8a0; }
+    #moneyScreen .mn-tabs { display: flex; overflow-x: auto; background: var(--zb-card); border-bottom: 1px solid var(--zb-border); padding: 0 8px; position: sticky; top: 0; z-index: 9; }
+    #moneyScreen .mn-tab { padding: 11px 10px; font-size: 11px; font-weight: 600; color: var(--zb-muted); border: none; background: none; border-bottom: 2px solid transparent; white-space: nowrap; cursor: pointer; }
+    #moneyScreen .mn-tab.act { color: var(--zb-navy); border-bottom-color: var(--zb-navy); }
+    #moneyScreen .mn-main { flex: 1; padding: 14px; max-width: 560px; margin: 0 auto; width: 100%; }
+    #moneyScreen .mn-card { background: var(--zb-card); border: 1px solid var(--zb-border); border-radius: 14px; padding: 14px; margin-bottom: 12px; }
+    #moneyScreen .mn-sec-title { font-size: 14px; font-weight: 800; color: var(--zb-navy); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+    #moneyScreen .mn-dream-card { background: linear-gradient(135deg,#1a3c5e,#2c5f82); color: #fff; border-radius: 14px; padding: 14px; margin-bottom: 10px; }
+    #moneyScreen .mn-dream-track { height: 8px; background: rgba(255,255,255,.2); border-radius: 4px; overflow: hidden; margin: 8px 0; }
+    #moneyScreen .mn-dream-fill { height: 100%; background: var(--zb-orange); border-radius: 4px; }
+    #moneyScreen .mn-preset { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+    #moneyScreen .mn-preset-btn { padding: 8px 12px; border-radius: 10px; border: 1.5px solid var(--zb-border); background: var(--zb-card); font-size: 12px; font-weight: 600; cursor: pointer; }
+    #moneyScreen .mn-learn-item { border: 1px solid var(--zb-border); border-radius: 12px; margin-bottom: 8px; overflow: hidden; }
+    #moneyScreen .mn-learn-hd { padding: 12px; font-size: 13px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #f8fafc; }
+    #moneyScreen .mn-learn-body { padding: 0 12px 12px; font-size: 13px; line-height: 1.8; color: var(--zb-text); display: none; }
+    #moneyScreen .mn-learn-item.open .mn-learn-body { display: block; }
+    #moneyScreen .mn-disclaimer { font-size: 11px; color: var(--zb-muted); background: #f5f5f5; border-radius: 8px; padding: 10px; margin-top: 10px; line-height: 1.65; }
+    #moneyScreen .mn-field { margin-bottom: 10px; }
+    #moneyScreen .mn-field label { display: block; font-size: 12px; font-weight: 600; color: var(--zb-muted); margin-bottom: 4px; }
+    #moneyScreen .mn-field input { width: 100%; padding: 10px; border: 1px solid var(--zb-border); border-radius: 9px; font-size: 15px; }
+    #moneyScreen .mn-result { background: #e8f8f2; border-radius: 12px; padding: 14px; margin-top: 12px; }
+    #moneyScreen .mn-result .big { font-size: 28px; font-weight: 900; color: var(--zb-green); }
+    #moneyScreen .mn-lang-block { background: var(--zb-card); border: 1px solid var(--zb-border); border-radius: 12px; padding: 12px; margin-bottom: 10px; }
+    #moneyScreen .mn-lang-label { font-size: 11px; font-weight: 700; color: var(--zb-orange); margin-bottom: 6px; }
+    #communityScreen .cm-bridge-card { background: linear-gradient(135deg,#fff8f0,#fff); border: 1px solid #f0d8b0; border-radius: 12px; padding: 13px; margin-bottom: 10px; font-size: 12px; line-height: 1.75; color: var(--zb-text); }
     #communityScreen .cm-pf-input { width: 100%; border: 1px solid var(--zb-border); border-radius: 9px; padding: 10px; font-size: 14px; min-height: 80px; resize: vertical; font-family: inherit; }
     #communityScreen .cm-post-card { background: var(--zb-card); border-radius: 12px; border: 1px solid var(--zb-border); padding: 13px; margin-bottom: 10px; }
     #communityScreen .cm-post-card.help { border-left: 3px solid #e24b4a; }
@@ -1771,8 +1810,8 @@
   <div class="logo">Zaibase</div>
   <div class="logo-sub">職人の互助プラットフォーム</div>
   <div class="login-mission">
-    <strong>日本の建設技術を、次の世代に渡す。<br>職人が誇りを持って働ける国を、守る。</strong>
-    <p>Zaibaseはそのために存在します。正当な報酬・技術継承・一人親方の安心を、一つの場所で。</p>
+    <strong>日本の建設技術を、次の世代へ。国境を越えて。</strong>
+    <p>職人を一人にしない。日本人も、ベトナム人も、インドネシア人も。すべての職人の夢を、Zaibaseは支える。</p>
   </div>
 
   <div id="loginHintBox" class="login-hint"></div>
@@ -2716,12 +2755,18 @@ Email：info@zaibase.jp</div>
       <button type="button" class="cm-back" id="communityBackBtn"><i class="ti ti-arrow-left"></i></button>
       <span class="cm-logo">職人のつながり</span>
     </div>
-    <div class="cm-mission-v2">
-      <strong><i class="ti ti-heart" style="color:var(--zb-orange)"></i> 日本の建設技術を、次の世代に渡す</strong>
-      職人が誇りを持って働ける国を、守る。日本人の若者が戻ってくる環境を、Zaibaseから作る。
+    <div class="cm-mission-v2" id="cmMissionBox">
+      <strong id="cmMissionTitle"><i class="ti ti-heart" style="color:var(--zb-orange)"></i> 国境を越えて、技術を渡す</strong>
+      <span id="cmMissionBody">職人を一人にしない。日本人も、ベトナム人も、インドネシア人も。ここで働くすべての人の夢を、Zaibaseは支える。</span>
     </div>
   </header>
-  <div class="tm-legal-banner">誹謗中傷・個人情報の投稿は禁止。投稿はFirestoreに保存されます。</div>
+  <div class="tm-legal-banner" id="cmLegalBanner">誹謗中傷・個人情報の投稿は禁止。投稿はFirestoreに保存されます。</div>
+  <div class="cm-lang-bar" id="cmLangBar">
+    <button type="button" class="cm-lang-btn act" data-cm-lang="ja">🇯🇵 日本語</button>
+    <button type="button" class="cm-lang-btn" data-cm-lang="vi">🇻🇳 Tiếng Việt</button>
+    <button type="button" class="cm-lang-btn" data-cm-lang="id">🇮🇩 Bahasa</button>
+    <button type="button" class="cm-lang-btn" data-cm-lang="en">🌐 English</button>
+  </div>
   <div class="cm-tabs">
     <button type="button" class="cm-tab act" data-cm-tab="community">みんなの声</button>
     <button type="button" class="cm-tab" data-cm-tab="master">師匠を探す</button>
@@ -2729,6 +2774,7 @@ Email：info@zaibase.jp</div>
     <button type="button" class="cm-tab" data-cm-tab="thanks">ありがとう</button>
     <button type="button" class="cm-tab" data-cm-tab="pride">誇り・未来</button>
   </div>
+  <div id="cmDreamBannerWrap" style="max-width:560px;margin:0 auto;width:100%;"></div>
   <main class="cm-main">
     <div id="cmPageCommunity"></div>
     <div id="cmPageMaster" class="hidden"></div>
@@ -2737,6 +2783,30 @@ Email：info@zaibase.jp</div>
     <div id="cmPagePride" class="hidden"></div>
   </main>
   <div class="cm-toast" id="cmToast"></div>
+</div>
+
+<!-- 夢の貯金・お金の基礎知識（zaibase_money.html §31） -->
+<div id="moneyScreen" class="hidden">
+  <header class="mn-hd">
+    <div class="mn-hd-row">
+      <button type="button" class="mn-back" id="moneyBackBtn"><i class="ti ti-arrow-left"></i></button>
+      <span class="mn-title">🏠 夢の貯金・お金の基礎</span>
+    </div>
+  </header>
+  <div class="mn-legal">一般的な金融情報の提供です。個別の投資助言・銘柄推奨は行いません。投資にはリスクがあります。詳しくは証券会社・FPにご相談ください。</div>
+  <div class="mn-tabs">
+    <button type="button" class="mn-tab act" data-mn-tab="dream">夢の貯金</button>
+    <button type="button" class="mn-tab" data-mn-tab="learn">基礎知識</button>
+    <button type="button" class="mn-tab" data-mn-tab="takehome">手取り計算</button>
+    <button type="button" class="mn-tab" data-mn-tab="foreign">外国人サポート</button>
+  </div>
+  <main class="mn-main">
+    <div id="mnPageDream"></div>
+    <div id="mnPageLearn" class="hidden"></div>
+    <div id="mnPageTakehome" class="hidden"></div>
+    <div id="mnPageForeign" class="hidden"></div>
+  </main>
+  <div class="cm-toast" id="mnToast"></div>
 </div>
 
 <!-- Zaibaseポイント（Yahoo型・§23） -->
@@ -3338,6 +3408,7 @@ Email：info@zaibase.jp</div>
     <button type="button" id="mypagePricingBtn">💰 会員価格・交渉</button>
     <button type="button" id="mypagePointsBtn">🪙 Zaibaseポイント</button>
     <button type="button" id="mypageCommunityBtn">🤝 職人のつながり</button>
+    <button type="button" id="mypageMoneyBtn">🏠 夢の貯金・お金の基礎</button>
     <button type="button" id="mypageEmergencyBtn">🚨 緊急手配</button>
     <button type="button" id="mypagePhotoReportBtn">📷 現場報告</button>
     <button type="button" id="mypageDeliveryBtn">🚚 搬入管理</button>
@@ -4787,7 +4858,7 @@ support@zaibase.jp</p>
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
   import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, GoogleAuthProvider, OAuthProvider, signInWithPopup, signInWithRedirect, getRedirectResult, RecaptchaVerifier, PhoneAuthProvider, linkWithCredential } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-auth.js";
-  import { getFirestore, collection, addDoc, getDocs, query, orderBy, limit, serverTimestamp, doc, getDoc, setDoc, updateDoc, onSnapshot, where, Timestamp, increment, arrayUnion, arrayRemove, writeBatch } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-firestore.js";
+  import { getFirestore, collection, addDoc, getDocs, query, orderBy, limit, serverTimestamp, doc, getDoc, setDoc, updateDoc, onSnapshot, where, Timestamp, increment, arrayUnion, arrayRemove, writeBatch, deleteDoc } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-firestore.js";
   import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-storage.js";
   import { getFunctions, httpsCallable } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-functions.js";
 
@@ -5484,6 +5555,135 @@ support@zaibase.jp</p>
   const CM_TYPE_LABELS = { help: '🆘 助けて', wisdom: '💡 経験談', thanks: '🙏 感謝', question: '❓ 質問', pride: '🏗️ 誇り' };
   const CM_AVATAR_COLORS = ['#1a3c5e', '#e8a020', '#1d9e75', '#2c5f82', '#7c3aed', '#f97316', '#9a4a4a'];
   const CM_DEMO_SEED_KEY = 'zaibase_cm_demo_seeded_v1';
+  let cmLang = localStorage.getItem('zaibase_cm_lang') || 'ja';
+  let cmDreamGoal = null;
+  const CM_I18N = {
+    ja: {
+      missionTitle: '国境を越えて、技術を渡す',
+      missionBody: '職人を一人にしない。日本人も、ベトナム人も、インドネシア人も。ここで働くすべての人の夢を、Zaibaseは支える。',
+      legal: '誹謗中傷・個人情報の投稿は禁止。投稿はFirestoreに保存されます。',
+      tabs: { community: 'みんなの声', master: '師匠を探す', apprentice: '弟子を探す', thanks: 'ありがとう', pride: '誇り・未来' },
+      dreamTitle: '夢の貯金',
+      dreamSetup: '目標を設定する',
+      dreamRemain: 'あと',
+      dreamMan: '万円',
+      dreamProgress: '進捗',
+      dreamDefault: 'ベトナムに家を建てる',
+      bridgeTitle: '技術の架け橋',
+      bridgeText: '山田師匠の45年の技術が、ベトナムの若者に渡る。その若者が帰国して、日本品質の建物を建てる——それが日本の建設技術の輸出だ。',
+      visaReminder: '在留資格の更新リマインダー（準備中）',
+      langChanged: '言語を切り替えました',
+    },
+    vi: {
+      missionTitle: 'Vượt biên giới, truyền giao kỹ thuật',
+      missionBody: 'Không để ai phải đơn độc. Người Nhật, người Việt, người Indonesia — Zaibase đồng hành cùng ước mơ của mọi thợ.',
+      legal: 'Cấm đăng bài xúc phạm hoặc thông tin cá nhân. Bài đăng được lưu trên Firestore.',
+      tabs: { community: 'Cộng đồng', master: 'Tìm sư phụ', apprentice: 'Tìm đệ tử', thanks: 'Cảm ơn', pride: 'Tự hào' },
+      dreamTitle: 'Tiết kiệm ước mơ',
+      dreamSetup: 'Đặt mục tiêu',
+      dreamRemain: 'Còn',
+      dreamMan: 'triệu yên',
+      dreamProgress: 'Tiến độ',
+      dreamDefault: 'Xây nhà ở Việt Nam',
+      bridgeTitle: 'Cầu nối kỹ thuật',
+      bridgeText: '45 năm kinh nghiệm của thầy Yamada truyền cho thanh niên Việt Nam. Họ về nước và xây nhà chất lượng Nhật — đó là xuất khẩu kỹ thuật xây dựng Nhật Bản.',
+      visaReminder: 'Nhắc gia hạn tư cách lưu trú (sắp ra mắt)',
+      langChanged: 'Đã đổi ngôn ngữ',
+    },
+    id: {
+      missionTitle: 'Melampaui batas, wariskan teknologi',
+      missionBody: 'Tidak ada yang sendirian. Jepang, Vietnam, Indonesia — Zaibase mendukung mimpi setiap pekerja.',
+      legal: 'Dilarang memposting fitnah atau data pribadi. Posting disimpan di Firestore.',
+      tabs: { community: 'Suara', master: 'Cari guru', apprentice: 'Cari murid', thanks: 'Terima kasih', pride: 'Kebanggaan' },
+      dreamTitle: 'Tabungan impian',
+      dreamSetup: 'Atur target',
+      dreamRemain: 'Sisa',
+      dreamMan: 'juta yen',
+      dreamProgress: 'Progres',
+      dreamDefault: 'Membangun rumah di Vietnam',
+      bridgeTitle: 'Jembatan teknologi',
+      bridgeText: 'Teknik 45 tahun Guru Yamada ke pemuda Vietnam. Mereka pulang dan membangun dengan kualitas Jepang — ekspor teknologi konstruksi Jepang.',
+      visaReminder: 'Pengingat perpanjangan visa (segera)',
+      langChanged: 'Bahasa diubah',
+    },
+    en: {
+      missionTitle: 'Across borders, pass on craft',
+      missionBody: 'No one works alone. Japanese, Vietnamese, Indonesian — Zaibase supports every worker\'s dream.',
+      legal: 'No harassment or personal info. Posts are saved to Firestore.',
+      tabs: { community: 'Community', master: 'Find mentor', apprentice: 'Find apprentice', thanks: 'Thanks', pride: 'Pride' },
+      dreamTitle: 'Dream savings',
+      dreamSetup: 'Set a goal',
+      dreamRemain: 'Left',
+      dreamMan: '万 yen',
+      dreamProgress: 'Progress',
+      dreamDefault: 'Build a home in Vietnam',
+      bridgeTitle: 'Bridge of skills',
+      bridgeText: 'Master Yamada\'s 45 years reach young Vietnamese workers. They return home and build to Japanese quality — exporting Japan\'s construction craft.',
+      visaReminder: 'Visa renewal reminder (coming soon)',
+      langChanged: 'Language updated',
+    },
+  };
+
+  function cmT(key) {
+    return CM_I18N[cmLang]?.[key] ?? CM_I18N.ja[key] ?? key;
+  }
+
+  function cmApplyLang() {
+    const i = CM_I18N[cmLang] || CM_I18N.ja;
+    document.getElementById('cmMissionTitle').innerHTML = `<i class="ti ti-heart" style="color:var(--zb-orange)"></i> ${escapeHtml(i.missionTitle)}`;
+    const body = document.getElementById('cmMissionBody');
+    if (body) body.textContent = i.missionBody;
+    const legal = document.getElementById('cmLegalBanner');
+    if (legal) legal.textContent = i.legal;
+    document.querySelectorAll('#communityScreen .cm-tab').forEach(btn => {
+      const k = btn.dataset.cmTab;
+      if (i.tabs[k]) btn.textContent = i.tabs[k];
+    });
+    document.querySelectorAll('#cmLangBar .cm-lang-btn').forEach(btn => {
+      btn.classList.toggle('act', btn.dataset.cmLang === cmLang);
+    });
+    renderCmDreamBanner();
+    if (cmTab === 'pride') renderCmPrideTab();
+  }
+
+  function cmSetLang(lang) {
+    cmLang = lang;
+    localStorage.setItem('zaibase_cm_lang', lang);
+    cmApplyLang();
+    cmShowToast(cmT('langChanged'), 'ok');
+  }
+
+  async function cmLoadDreamGoal() {
+    await loadMnDreams();
+    cmDreamGoal = mnDreams[0] || null;
+    renderCmDreamBanner();
+  }
+
+  function renderCmDreamBanner() {
+    const wrap = document.getElementById('cmDreamBannerWrap');
+    if (!wrap) return;
+    const i = CM_I18N[cmLang] || CM_I18N.ja;
+    if (!cmDreamGoal) {
+      wrap.innerHTML = `<div class="cm-dream-banner" id="cmDreamBanner"><div class="db-title"><span>🏠</span> ${escapeHtml(i.dreamTitle)}</div><div class="db-goal">タップして夢を設定</div></div>`;
+      document.getElementById('cmDreamBanner')?.addEventListener('click', () => showScreen('moneyScreen'));
+      return;
+    }
+    const pct = Math.min(100, Math.round((cmDreamGoal.savedAmount / cmDreamGoal.targetAmount) * 100));
+    const remain = Math.max(0, cmDreamGoal.targetAmount - cmDreamGoal.savedAmount);
+    const remainMan = (remain / 10000).toFixed(0);
+    const months = mnDreamMonths(cmDreamGoal);
+    wrap.innerHTML = `
+      <div class="cm-dream-banner" id="cmDreamBanner">
+        <div class="db-title"><span>🏠</span> ${escapeHtml(i.dreamTitle)}</div>
+        <div class="db-goal">${escapeHtml(cmDreamGoal.title || i.dreamDefault)}</div>
+        <div class="cm-dream-track"><div class="cm-dream-fill" style="width:${pct}%"></div></div>
+        <div class="cm-dream-remain">${escapeHtml(i.dreamRemain)} <strong>${remainMan}</strong>${escapeHtml(i.dreamMan)}${months ? ` · あと<strong>${months}</strong>ヶ月` : ''}（${pct}%）</div>
+      </div>`;
+    document.getElementById('cmDreamBanner')?.addEventListener('click', () => showScreen('moneyScreen'));
+  }
+
+  function cmOpenDreamSetup() { showScreen('moneyScreen'); }
+
 
   const CM_DEMO_POSTS = [
     { type: 'help', authorName: '匿名の職人（60代）', authorInitials: '匿', authorColor: '#9a4a4a', area: '横浜市', content: '体力が落ちてきて高所作業がきつくなってきました。60代でも無理なく続けられる仕事の種類や、体を守るコツを教えてもらえませんか。一人親方で誰にも相談できなくて困っています。', likes: 12, isAnonymous: true, hasPhoto: false },
@@ -5944,9 +6144,16 @@ support@zaibase.jp</p>
       { master: '鈴木 秀雄', skill: '左官の手の角度', note: 'スピードより均一。弟子3名に動画で継承済み。' },
     ];
     el.innerHTML = `
+      <div class="cm-bridge-card">
+        <strong style="color:var(--zb-navy);display:block;margin-bottom:6px;">🌏 ${escapeHtml((CM_I18N[cmLang]||CM_I18N.ja).bridgeTitle)}</strong>
+        ${escapeHtml((CM_I18N[cmLang]||CM_I18N.ja).bridgeText)}
+      </div>
       <div class="cm-stats-bar">
         建設業外国人労働者は2024年10月時点<strong>約17.8万人</strong>（前年比+22.7%）。10年で60歳以上の3割が引退予測。<br>
-        <strong>日本人の若者が戻る環境</strong>を作ることが、技能継承の本質です。
+        <strong>誰も一人にしない</strong>——日本人の若者も、共に働く外国人の夢も、Zaibaseが支える。
+      </div>
+      <div style="background:#e8f8f2;border-radius:10px;padding:10px 12px;font-size:11px;color:var(--zb-green);margin-bottom:12px;">
+        <i class="ti ti-bell"></i> ${escapeHtml((CM_I18N[cmLang]||CM_I18N.ja).visaReminder)}
       </div>
       <div class="cm-section">
         <div class="cm-sec-title"><i class="ti ti-building" style="color:#f97316"></i>建設業の誇り</div>
@@ -6002,12 +6209,261 @@ support@zaibase.jp</p>
       document.getElementById('communityBackBtn')?.addEventListener('click', () => { cmStopSubscriptions(); showScreen('mypageScreen'); });
       document.querySelectorAll('#communityScreen .cm-tab').forEach(btn =>
         btn.addEventListener('click', () => switchCommunityTab(btn.dataset.cmTab)));
+      document.querySelectorAll('#cmLangBar .cm-lang-btn').forEach(btn =>
+        btn.addEventListener('click', () => cmSetLang(btn.dataset.cmLang)));
     }
+    cmApplyLang();
     cmSubscribePosts();
     cmSubscribeArigatoPoints();
     await cmEnsureArigatoPoints();
+    await cmLoadDreamGoal();
     await cmSeedDemoPostsIfEmpty();
     switchCommunityTab(cmTab);
+  }
+
+
+  // ===== 夢の貯金・お金の基礎知識（zaibase_money.html §31） =====
+  let mnTab = 'dream';
+  let mnDreams = [];
+  const MN_PRESETS = [
+    { id: 'vn_house', icon: '🇻🇳', title: 'ベトナムに家を建てる', target: 3000000 },
+    { id: 'jp_house', icon: '🏠', title: '日本に家を買う', target: 20000000 },
+    { id: 'retire', icon: '👴', title: '老後の安心', target: 5000000 },
+  ];
+  const MN_LEARN = [
+    { id: 'nisa', title: 'NISAって何？', body: '国が「少しずつ投資を始めたい人」を応援する制度です。材料を仕入れて、時間をかけて価値の高いものを作る——職人の仕事と似ています。利益に対する税金が優遇される枠があるだけ。難しい言葉は後回しでOK。「まず少額から」がポイントです。' },
+    { id: 'stock', title: '株って怖くない？', body: '株＝会社の小さな持ち分です。良い会社を選んで長く持つイメージ。一日で大きく動くから怖く感じますが、職人が一度に全資材を購入しないのと同じで、分散・長期が基本です。Zaibaseは「この銘柄を買え」とは言いません。' },
+    { id: 'fund', title: '投資信託とは', body: 'たくさんの人のお金をまとめて、プロが分散投資する仕組み。一人親方が大きい現場に入るより、チームでリスクを分ける感じ。手数料や中身は証券会社の説明書で確認を。' },
+    { id: 'retire', title: '一人親方の老後', body: '国民年金・国民健康保険は必ず押さえる。iDeCoは老後専用の積立枠。現場で体を使う職人ほど、稼いでいるうちに仕組みを作ることが大事です。' },
+    { id: 'tax', title: '確定申告の基本', body: '売上 − 経費 ＝ 利益。領収書は現場写真と同じで記録が命。Zaibaseの見積・請求・電子伝票がそのまま証拠になります。分からなければ税理士・FPへ。' },
+  ];
+  const MN_DISCLAIMER = '投資にはリスクがあります。値下がりする可能性もあります。個別の銘柄推奨・投資判断の代行は行いません。詳しくは証券会社・ファイナンシャルプランナー（FP）にご相談ください。';
+  const MN_FOREIGN_MSG = {
+    ja: '国籍は関係ない。ここで汗を流して働いている人は、みんな仲間だ。帰れないのではなく、夢の途中かもしれない。Zaibaseはその夢まで支える。',
+    vi: 'Quốc tịch không quan trọng. Ai đổ mồ hôi làm việc ở đây đều là đồng đội. Có thể không phải không về được — mà ước mơ còn dang dở. Zaibase đồng hành đến ước mơ đó.',
+    id: 'Kewarganegaraan tidak penting. Siapa pun yang bekerja di sini adalah rekan. Bukan tidak bisa pulang — mungkin mimpinya belum selesai. Zaibase mendukung mimpi itu.',
+  };
+
+  function mnDreamMonths(d) {
+    const remain = Math.max(0, (d.targetAmount || 0) - (d.savedAmount || 0));
+    const m = d.monthlySave || 0;
+    if (!m || remain <= 0) return remain <= 0 ? 0 : null;
+    return Math.ceil(remain / m);
+  }
+
+  function mnShowToast(msg, ok) {
+    const t = document.getElementById('mnToast');
+    if (!t) { cmShowToast?.(msg, ok ? 'ok' : undefined) || alert(msg); return; }
+    t.textContent = msg;
+    t.className = 'cm-toast show' + (ok ? ' ok' : '');
+    setTimeout(() => { t.className = 'cm-toast'; }, 2800);
+  }
+
+  async function loadMnDreams() {
+    const uid = auth.currentUser?.uid;
+    if (!uid) { mnDreams = []; return; }
+    try {
+      const snap = await getDocs(query(collection(db, 'dreamSavings', uid, 'items'), orderBy('createdAt', 'desc'), limit(20)));
+      mnDreams = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+      if (!mnDreams.length) {
+        const legacy = await getDoc(doc(db, 'dreamGoals', uid));
+        if (legacy.exists()) {
+          const L = legacy.data();
+          const ref = await addDoc(collection(db, 'dreamSavings', uid, 'items'), {
+            userId: uid, title: L.title || 'ベトナムに家を建てる', preset: 'vn_house',
+            targetAmount: L.targetAmount || 3000000, savedAmount: L.savedAmount || 0,
+            monthlySave: L.monthlySave || 50000, createdAt: serverTimestamp(), updatedAt: serverTimestamp(),
+          });
+          mnDreams = [{ id: ref.id, title: L.title, targetAmount: L.targetAmount, savedAmount: L.savedAmount, monthlySave: 50000 }];
+        }
+      }
+    } catch (e) {
+      console.warn('loadMnDreams', e);
+      mnDreams = [];
+    }
+    cmDreamGoal = mnDreams[0] || null;
+  }
+
+  async function mnSaveDream(data, id) {
+    const uid = auth.currentUser?.uid;
+    if (!uid) return;
+    const payload = {
+      userId: uid,
+      title: data.title,
+      preset: data.preset || 'custom',
+      targetAmount: data.targetAmount,
+      savedAmount: data.savedAmount,
+      monthlySave: data.monthlySave || 0,
+      updatedAt: serverTimestamp(),
+    };
+    if (id) await updateDoc(doc(db, 'dreamSavings', uid, 'items', id), payload);
+    else await addDoc(collection(db, 'dreamSavings', uid, 'items'), { ...payload, createdAt: serverTimestamp() });
+    await loadMnDreams();
+    renderCmDreamBanner();
+    if (document.body.dataset.screenId === 'moneyScreen') switchMoneyTab(mnTab);
+  }
+
+  function switchMoneyTab(tab) {
+    mnTab = tab;
+    document.querySelectorAll('#moneyScreen .mn-tab').forEach(b => b.classList.toggle('act', b.dataset.mnTab === tab));
+    ['dream', 'learn', 'takehome', 'foreign'].forEach(t => {
+      document.getElementById('mnPage' + t.charAt(0).toUpperCase() + t.slice(1))?.classList.toggle('hidden', t !== tab);
+    });
+    if (tab === 'dream') renderMnDreamTab();
+    else if (tab === 'learn') renderMnLearnTab();
+    else if (tab === 'takehome') renderMnTakehomeTab();
+    else renderMnForeignTab();
+  }
+
+  function renderMnDreamTab() {
+    const el = document.getElementById('mnPageDream');
+    if (!el) return;
+    el.innerHTML = `
+      <div class="mn-card">
+        <div class="mn-sec-title"><i class="ti ti-star" style="color:var(--zb-orange)"></i>夢を選ぶ</div>
+        <div class="mn-preset">${MN_PRESETS.map(p => `<button type="button" class="mn-preset-btn" data-mn-preset="${p.id}">${p.icon} ${escapeHtml(p.title)}</button>`).join('')}</div>
+        <button type="button" class="btn-outline" id="mnAddCustomDream" style="width:100%;font-size:12px;">＋ 自分の夢を追加</button>
+      </div>
+      ${mnDreams.length ? mnDreams.map(d => {
+        const pct = Math.min(100, Math.round((d.savedAmount / d.targetAmount) * 100));
+        const months = mnDreamMonths(d);
+        const remain = Math.max(0, d.targetAmount - d.savedAmount);
+        return `<div class="mn-dream-card" data-mn-edit="${d.id}">
+          <div style="font-size:15px;font-weight:800;">${escapeHtml(d.title)}</div>
+          <div class="mn-dream-track"><div class="mn-dream-fill" style="width:${pct}%"></div></div>
+          <div style="font-size:12px;opacity:.9;">貯金 ${(d.savedAmount/10000).toFixed(0)}万 / 目標 ${(d.targetAmount/10000).toFixed(0)}万円</div>
+          <div style="font-size:12px;margin-top:6px;opacity:.95;">あと <strong>${(remain/10000).toFixed(0)}</strong>万円${months != null ? ` · 積立ペースなら <strong>${months}</strong>ヶ月` : ''}</div>
+        </div>`;
+      }).join('') : '<div class="mn-card" style="text-align:center;color:var(--zb-muted);font-size:13px;">上のボタンから夢を登録してください</div>'}`;
+    el.querySelectorAll('[data-mn-preset]').forEach(btn => btn.addEventListener('click', () => mnAddPresetDream(btn.dataset.mnPreset)));
+    document.getElementById('mnAddCustomDream')?.addEventListener('click', mnAddCustomDream);
+    el.querySelectorAll('[data-mn-edit]').forEach(card => card.addEventListener('click', () => mnEditDream(card.dataset.mnEdit)));
+  }
+
+  async function mnAddPresetDream(presetId) {
+    const p = MN_PRESETS.find(x => x.id === presetId);
+    if (!p) return;
+    await mnSaveDream({ title: p.title, preset: p.id, targetAmount: p.target, savedAmount: 0, monthlySave: 50000 });
+    mnShowToast('夢を追加しました', true);
+  }
+
+  async function mnAddCustomDream() {
+    const title = prompt('夢の名前', '私の夢');
+    if (!title) return;
+    const target = parseInt(prompt('目標金額（円）', '3000000') || '0', 10) || 3000000;
+    const saved = parseInt(prompt('現在の貯金（円）', '0') || '0', 10) || 0;
+    const monthly = parseInt(prompt('月々の積立額（円）', '50000') || '0', 10) || 50000;
+    await mnSaveDream({ title, preset: 'custom', targetAmount: target, savedAmount: saved, monthlySave: monthly });
+    mnShowToast('夢を追加しました', true);
+  }
+
+  async function mnEditDream(id) {
+    const d = mnDreams.find(x => x.id === id);
+    if (!d) return;
+    const saved = parseInt(prompt('現在の貯金額（円）', String(d.savedAmount)) || String(d.savedAmount), 10);
+    if (Number.isNaN(saved)) return;
+    const monthly = parseInt(prompt('月々の積立額（円）', String(d.monthlySave || 50000)) || '0', 10);
+    await mnSaveDream({ ...d, savedAmount: Math.max(0, saved), monthlySave: Math.max(0, monthly) }, id);
+    mnShowToast('更新しました', true);
+  }
+
+  function renderMnLearnTab() {
+    const el = document.getElementById('mnPageLearn');
+    if (!el) return;
+    el.innerHTML = `<div class="mn-card"><div class="mn-sec-title"><i class="ti ti-book" style="color:var(--zb-navy)"></i>お金の基礎知識（職人の言葉で）</div>
+      <p style="font-size:12px;color:var(--zb-muted);line-height:1.7;margin-bottom:12px;">制度の説明・紹介のみ。銘柄の推奨や個別アドバイスは行いません。</p>
+      ${MN_LEARN.map(a => `
+        <div class="mn-learn-item" data-mn-learn="${a.id}">
+          <div class="mn-learn-hd">${escapeHtml(a.title)} <i class="ti ti-chevron-down"></i></div>
+          <div class="mn-learn-body">${escapeHtml(a.body)}<div class="mn-disclaimer">${escapeHtml(MN_DISCLAIMER)}</div></div>
+        </div>`).join('')}
+      <div style="margin-top:14px;padding:12px;background:#e8f0fa;border-radius:10px;font-size:12px;line-height:1.7;">
+        <strong>証券会社・FPへの相談</strong><br>個別の状況に合わせた話は専門家へ。Zaibaseは送客・紹介にとどめます（β）。
+      </div></div>`;
+    el.querySelectorAll('[data-mn-learn]').forEach(item => {
+      item.querySelector('.mn-learn-hd')?.addEventListener('click', () => item.classList.toggle('open'));
+    });
+  }
+
+  function renderMnTakehomeTab() {
+    const el = document.getElementById('mnPageTakehome');
+    if (!el) return;
+    const dreamMonthly = mnDreams.reduce((s, d) => s + (d.monthlySave || 0), 0);
+    el.innerHTML = `
+      <div class="mn-card">
+        <div class="mn-sec-title"><i class="ti ti-calculator" style="color:var(--zb-green)"></i>手取りシミュレーション（概算）</div>
+        <p style="font-size:11px;color:var(--zb-muted);margin-bottom:12px;">一人親方向けのざっくり計算です。正確な税額は税理士へ。</p>
+        <div class="mn-field"><label>今月の売上（円）</label><input type="number" id="mnRevenue" value="800000"></div>
+        <div class="mn-field"><label>経費・材料費（円）</label><input type="number" id="mnExpense" value="200000"></div>
+        <div class="mn-field"><label>夢の貯金（月々・円）</label><input type="number" id="mnDreamMonthly" value="${dreamMonthly || 50000}"></div>
+        <button type="button" class="btn-primary" id="mnCalcBtn" style="width:100%;">計算する</button>
+        <div id="mnTakehomeResult"></div>
+      </div>`;
+    document.getElementById('mnCalcBtn')?.addEventListener('click', mnCalcTakehome);
+  }
+
+  function mnCalcTakehome() {
+    const revenue = parseInt(document.getElementById('mnRevenue')?.value || '0', 10) || 0;
+    const expense = parseInt(document.getElementById('mnExpense')?.value || '0', 10) || 0;
+    const dreamM = parseInt(document.getElementById('mnDreamMonthly')?.value || '0', 10) || 0;
+    const profit = Math.max(0, revenue - expense);
+    const nenkin = Math.round(199590 / 12);
+    const kenpo = Math.round(Math.min(profit * 0.1, 120000));
+    const tax = Math.round(Math.max(0, (profit - 480000 / 12) * 0.1));
+    const takehome = Math.max(0, profit - nenkin - kenpo - tax);
+    const living = Math.max(0, takehome - dreamM);
+    document.getElementById('mnTakehomeResult').innerHTML = `
+      <div class="mn-result">
+        <div style="font-size:12px;color:var(--zb-muted);">利益（売上−経費）</div>
+        <div style="font-size:18px;font-weight:700;">¥${profit.toLocaleString()}</div>
+        <div style="font-size:12px;margin-top:10px;line-height:2;">
+          <div style="display:flex;justify-content:space-between;"><span>国民年金（目安）</span><span>−¥${nenkin.toLocaleString()}</span></div>
+          <div style="display:flex;justify-content:space-between;"><span>国民健康保険（目安）</span><span>−¥${kenpo.toLocaleString()}</span></div>
+          <div style="display:flex;justify-content:space-between;"><span>所得税（概算）</span><span>−¥${tax.toLocaleString()}</span></div>
+          <div style="display:flex;justify-content:space-between;"><span>夢の貯金</span><span>−¥${dreamM.toLocaleString()}</span></div>
+        </div>
+        <div style="margin-top:12px;font-size:12px;">手取り（税・社保後）</div>
+        <div class="big">¥${takehome.toLocaleString()}</div>
+        <div style="margin-top:8px;font-size:13px;font-weight:700;color:var(--zb-navy);">生活費に回せる額: ¥${living.toLocaleString()}</div>
+      </div>`;
+  }
+
+  function renderMnForeignTab() {
+    const el = document.getElementById('mnPageForeign');
+    if (!el) return;
+    el.innerHTML = `
+      <div class="mn-card">
+        <div class="mn-sec-title"><i class="ti ti-world" style="color:var(--zb-orange)"></i>みんな仲間</div>
+        ${Object.entries(MN_FOREIGN_MSG).map(([lang, text]) => `
+          <div class="mn-lang-block">
+            <div class="mn-lang-label">${lang === 'ja' ? '🇯🇵 日本語' : lang === 'vi' ? '🇻🇳 Tiếng Việt' : '🇮🇩 Bahasa Indonesia'}</div>
+            <div style="font-size:13px;line-height:1.85;">${escapeHtml(text)}</div>
+          </div>`).join('')}
+      </div>
+      <div class="mn-card">
+        <div class="mn-sec-title"><i class="ti ti-send" style="color:var(--zb-green)"></i>母国への送金（β）</div>
+        <p style="font-size:13px;line-height:1.75;margin-bottom:10px;">Wise等の送金サービスと提携予定。手数料の一部をZaibase収益に（§31）。</p>
+        <button type="button" class="btn-outline" id="mnWiseBtn" style="width:100%;">Wise 送金について（準備中）</button>
+      </div>
+      <div class="mn-card">
+        <div class="mn-sec-title"><i class="ti ti-bell"></i>在留資格の更新</div>
+        <p style="font-size:13px;line-height:1.75;">更新3ヶ月前に通知予定（β）。行政書士紹介は登録業者のみ。</p>
+        <button type="button" class="btn-outline" id="mnVisaBtn" style="width:100%;margin-top:8px;">リマインダーを設定（準備中）</button>
+      </div>`;
+    document.getElementById('mnWiseBtn')?.addEventListener('click', () => mnShowToast('Wise連携は準備中です'));
+    document.getElementById('mnVisaBtn')?.addEventListener('click', () => mnShowToast('在留資格リマインダーは準備中です'));
+  }
+
+  let mnBound = false;
+  async function initMoneyScreen() {
+    if (!auth.currentUser) { showScreen('mypageScreen'); return; }
+    if (!mnBound) {
+      mnBound = true;
+      document.querySelectorAll('#moneyScreen .mn-tab').forEach(btn =>
+        btn.addEventListener('click', () => switchMoneyTab(btn.dataset.mnTab)));
+    }
+    await loadMnDreams();
+    switchMoneyTab(mnTab);
   }
 
 
@@ -13242,7 +13698,7 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
     const prev = document.body.dataset.screenId;
     if (prev === 'trackingScreen' && id !== 'trackingScreen') stopTrackingTimers();
     if (prev === 'faceRegisterScreen' && id !== 'faceRegisterScreen') stopFaceRegisterWizard();
-    ['loginScreen','homeScreen','mainScreen','postScreen','mapScreen','mypageScreen','chatScreen','adminScreen','siteFaceScreen','jobPostScreen','teamJobPostScreen','jobApproveScreen','paymentScreen','stripeScreen','estimateScreen','invoiceScreen','insuranceScreen','rousaiScreen','rousaiApplyScreen','materialsMarketScreen','pricingScreen','pointsScreen','emergencyMatchScreen','communityScreen','photoReportScreen','deliveryScreen','eticketScreen','trackingScreen','safetyScreen','teamScreen','complianceGateScreen','chainScreen','faceRegisterScreen'].forEach(s =>
+    ['loginScreen','homeScreen','mainScreen','postScreen','mapScreen','mypageScreen','chatScreen','adminScreen','siteFaceScreen','jobPostScreen','teamJobPostScreen','jobApproveScreen','paymentScreen','stripeScreen','estimateScreen','invoiceScreen','insuranceScreen','rousaiScreen','rousaiApplyScreen','materialsMarketScreen','pricingScreen','pointsScreen','emergencyMatchScreen','communityScreen','moneyScreen','photoReportScreen','deliveryScreen','eticketScreen','trackingScreen','safetyScreen','teamScreen','complianceGateScreen','chainScreen','faceRegisterScreen'].forEach(s =>
       document.getElementById(s).classList.add('hidden')
     );
     document.getElementById('chatRoomScreen').classList.add('hidden');
@@ -13251,7 +13707,7 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
     document.getElementById(id).classList.remove('hidden');
     document.body.dataset.screenId = id;
 
-    const hideFab = ['loginScreen', 'siteFaceScreen', 'jobPostScreen', 'teamJobPostScreen', 'jobApproveScreen', 'homeScreen', 'paymentScreen', 'stripeScreen', 'estimateScreen', 'invoiceScreen', 'insuranceScreen', 'rousaiScreen', 'rousaiApplyScreen', 'materialsMarketScreen', 'pricingScreen', 'pointsScreen', 'emergencyMatchScreen', 'communityScreen', 'photoReportScreen', 'deliveryScreen', 'eticketScreen', 'trackingScreen', 'safetyScreen', 'teamScreen', 'complianceGateScreen', 'chainScreen', 'faceRegisterScreen', 'mypageScreen', 'chatScreen', 'chatRoomScreen'];
+    const hideFab = ['loginScreen', 'siteFaceScreen', 'jobPostScreen', 'teamJobPostScreen', 'jobApproveScreen', 'homeScreen', 'paymentScreen', 'stripeScreen', 'estimateScreen', 'invoiceScreen', 'insuranceScreen', 'rousaiScreen', 'rousaiApplyScreen', 'materialsMarketScreen', 'pricingScreen', 'pointsScreen', 'emergencyMatchScreen', 'communityScreen', 'moneyScreen', 'photoReportScreen', 'deliveryScreen', 'eticketScreen', 'trackingScreen', 'safetyScreen', 'teamScreen', 'complianceGateScreen', 'chainScreen', 'faceRegisterScreen', 'mypageScreen', 'chatScreen', 'chatRoomScreen'];
     document.getElementById('newMatchBtn')?.classList.toggle('hidden', hideFab.includes(id) || id !== 'mainScreen' || mainTab !== 'match');
     if (id === 'siteFaceScreen') initSiteFaceScreen();
     if (id === 'homeScreen') loadHomeDashboard();
@@ -13267,6 +13723,7 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
     if (id === 'pointsScreen') initPointsScreen();
     if (id === 'emergencyMatchScreen') initEmergencyMatchScreen();
     if (id === 'communityScreen') initCommunityScreen();
+    if (id === 'moneyScreen') initMoneyScreen();
     if (id === 'photoReportScreen') initPhotoReportScreen();
     if (id === 'deliveryScreen') initDeliveryScreen();
     if (id === 'eticketScreen') initEticketScreen();
@@ -15634,6 +16091,8 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
   document.getElementById('ecOpenPricingBtn')?.addEventListener('click', () => showScreen('pricingScreen'));
   document.getElementById('mypagePointsBtn')?.addEventListener('click', () => showScreen('pointsScreen'));
   document.getElementById('mypageCommunityBtn')?.addEventListener('click', () => showScreen('communityScreen'));
+  document.getElementById('mypageMoneyBtn')?.addEventListener('click', () => showScreen('moneyScreen'));
+  document.getElementById('moneyBackBtn')?.addEventListener('click', () => showScreen('mypageScreen'));
   document.getElementById('mypageEmergencyBtn')?.addEventListener('click', () => showScreen('emergencyMatchScreen'));
   document.getElementById('pointsBackBtn')?.addEventListener('click', () => showScreen('mypageScreen'));
   document.getElementById('emergencyBackBtn')?.addEventListener('click', () => showScreen('mypageScreen'));
