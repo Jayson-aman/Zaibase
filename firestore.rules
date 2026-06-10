@@ -331,6 +331,25 @@ service cloud.firestore {
       allow read, write: if false;
     }
 
+    // 資材EC注文（§22）
+    match /materialsOrders/{id} {
+      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow create: if request.auth != null
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.status is string;
+      allow update, delete: if false;
+    }
+
+    // 緊急職人手配（§24）
+    match /urgentJobs/{id} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null
+        && request.resource.data.ordererId == request.auth.uid
+        && request.resource.data.title is string
+        && request.resource.data.reward is number;
+      allow update, delete: if request.auth != null && request.auth.uid == resource.data.ordererId;
+    }
+
     match /users/{uid}/{document=**} {
       allow read, write: if request.auth != null && request.auth.uid == uid;
     }

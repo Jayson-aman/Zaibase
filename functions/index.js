@@ -79,6 +79,15 @@ exports.createChainContract = chains.createChainContract;
 exports.updateSubstantiveInvolvement = chains.updateSubstantiveInvolvement;
 exports.linkHelpPostToChain = chains.linkHelpPostToChain;
 
+// ── 資材EC（§22）────────────────────────────────────────────────
+const materialsEc = require("./materials_ec");
+exports.searchMaterialsPrices = materialsEc.searchMaterialsPrices;
+
+// ── 緊急職人手配（§24）────────────────────────────────────────────
+const emergencyMatch = require("./emergency_match");
+exports.notifyUrgentJob = emergencyMatch.notifyUrgentJob;
+exports.listNearbyUrgentJobs = emergencyMatch.listNearbyUrgentJobs;
+
 // ── ユーティリティ ─────────────────────────────────────────────
 exports.health = onRequest((req, res) => {
   res.json({ ok: true, service: "zaibase-backend", time: new Date().toISOString() });

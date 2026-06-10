@@ -824,6 +824,123 @@
     .rs-rev-table th { background: #f0f5fa; color: var(--zb-navy); font-weight: 700; padding: 8px; border-bottom: 2px solid var(--zb-border); text-align: left; }
     .rs-rev-table td { padding: 8px; border-bottom: 1px solid var(--zb-bg); vertical-align: top; }
     .rs-rev-badge { display: inline-block; padding: 2px 7px; border-radius: 6px; font-size: 10px; font-weight: 700; background: #e8f8f2; color: var(--zb-green); }
+    /* 資材マーケット（EC拡張） */
+    #materialsMarketScreen { background: var(--zb-bg); min-height: 100vh; display: flex; flex-direction: column; padding-bottom: 32px; color: var(--zb-text); }
+    .ec-hd { background: var(--zb-navy); padding: 13px 16px; display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .ec-back { color: rgba(255,255,255,.7); font-size: 22px; cursor: pointer; border: none; background: none; }
+    .ec-title { color: #fff; font-size: 17px; font-weight: 700; margin: 0 auto; }
+    .ec-tabs { background: var(--zb-card); border-bottom: 1px solid var(--zb-border); display: flex; padding: 0 12px; position: sticky; top: 0; z-index: 9; }
+    .ec-tab { padding: 11px 10px; font-size: 11px; font-weight: 500; color: var(--zb-muted); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; white-space: nowrap; border: none; background: none; }
+    .ec-tab.act { color: var(--zb-navy); border-bottom-color: var(--zb-navy); font-weight: 700; }
+    .ec-main { flex: 1; padding: 14px; max-width: 560px; margin: 0 auto; width: 100%; }
+    .ec-hero { background: linear-gradient(135deg,#1a3c5e,#2c5f82); border-radius: 14px; padding: 14px; margin-bottom: 12px; color: #fff; font-size: 12px; line-height: 1.65; }
+    .ec-model-badge { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 6px; margin-right: 6px; }
+    .ec-mb-b { background: #e8f8f2; color: var(--zb-green); }
+    .ec-mb-c { background: #fff8e0; color: #7a5a00; }
+    .ec-product-card { background: var(--zb-card); border: 1px solid var(--zb-border); border-radius: 12px; padding: 12px; margin-bottom: 10px; }
+    .ec-pc-top { display: flex; gap: 10px; align-items: flex-start; }
+    .ec-pc-icon { width: 48px; height: 48px; border-radius: 10px; background: #f0f5fa; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+    .ec-pc-price { font-size: 17px; font-weight: 800; color: var(--zb-navy); }
+    .ec-pc-retail { font-size: 11px; color: var(--zb-muted); text-decoration: line-through; }
+    .ec-pc-save { font-size: 11px; color: var(--zb-green); font-weight: 700; }
+    .ec-group-card { background: var(--zb-card); border: 2px solid var(--zb-orange); border-radius: 12px; padding: 13px; margin-bottom: 10px; }
+    .ec-gp-bar { height: 8px; background: #e8edf5; border-radius: 4px; overflow: hidden; margin: 8px 0; }
+    .ec-gp-fill { height: 100%; background: linear-gradient(90deg,var(--zb-orange),#f5c842); border-radius: 4px; }
+    .ec-cat-chip { display: inline-block; font-size: 11px; font-weight: 600; padding: 6px 12px; border-radius: 20px; border: 1px solid var(--zb-border); margin: 0 6px 6px 0; cursor: pointer; background: var(--zb-card); color: var(--zb-muted); }
+    .ec-cat-chip.act { background: var(--zb-navy); color: #fff; border-color: var(--zb-navy); }
+    #materialsMarketScreen { padding-bottom: 70px; }
+    #materialsMarketScreen .ec-shop-bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: var(--zb-card); border-top: 1px solid var(--zb-border); display: flex; padding: 8px 0 env(safe-area-inset-bottom); z-index: 25; }
+    #materialsMarketScreen .ec-sn-item { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; cursor: pointer; padding: 4px 0; border: none; background: none; }
+    #materialsMarketScreen .ec-sn-item i { font-size: 22px; color: var(--zb-muted); }
+    #materialsMarketScreen .ec-sn-item span { font-size: 10px; color: var(--zb-muted); font-weight: 500; }
+    #materialsMarketScreen .ec-sn-item.act i, #materialsMarketScreen .ec-sn-item.act span { color: var(--zb-navy); font-weight: 700; }
+    #materialsMarketScreen .ec-order-section { display: none; }
+    #materialsMarketScreen .ec-shop-hd { background: var(--zb-navy); padding: 0; flex-shrink: 0; }
+    #materialsMarketScreen .ec-shop-hd-top { display: flex; align-items: center; gap: 10px; padding: 11px 14px; }
+    #materialsMarketScreen .ec-shop-logo { color: #fff; font-size: 15px; font-weight: 800; flex: 1; }
+    #materialsMarketScreen .ec-shop-cart { position: relative; color: rgba(255,255,255,.8); font-size: 22px; cursor: pointer; border: none; background: none; padding: 0; }
+    #materialsMarketScreen .ec-cart-badge { position: absolute; top: -4px; right: -6px; background: var(--zb-orange); color: #fff; font-size: 9px; font-weight: 700; padding: 1px 5px; border-radius: 8px; min-width: 16px; text-align: center; }
+    #materialsMarketScreen .ec-search-bar { background: var(--zb-navy); padding: 0 14px 12px; }
+    #materialsMarketScreen .ec-search-wrap { display: flex; gap: 8px; }
+    #materialsMarketScreen .ec-search-wrap input { flex: 1; height: 40px; border: none; border-radius: 10px; padding: 0 14px; font-size: 14px; color: var(--zb-text); background: #fff; }
+    #materialsMarketScreen .ec-search-btn { height: 40px; padding: 0 16px; background: var(--zb-orange); color: #fff; border: none; border-radius: 10px; font-size: 13px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+    #materialsMarketScreen .ec-shop-cat-row { display: flex; gap: 6px; overflow-x: auto; padding: 10px 14px; background: var(--zb-card); border-bottom: 1px solid var(--zb-border); scrollbar-width: none; }
+    #materialsMarketScreen .ec-shop-cat-row::-webkit-scrollbar { display: none; }
+    #materialsMarketScreen .ec-shop-cat-chip { padding: 6px 13px; border-radius: 16px; font-size: 12px; font-weight: 600; border: 1px solid var(--zb-border); background: var(--zb-card); color: var(--zb-muted); cursor: pointer; white-space: nowrap; flex-shrink: 0; }
+    #materialsMarketScreen .ec-shop-cat-chip.sel { background: var(--zb-navy); border-color: var(--zb-navy); color: #fff; }
+    #materialsMarketScreen .ec-compare-banner { background: linear-gradient(135deg,var(--zb-navy),#2c5f82); border-radius: 14px; padding: 14px; margin-bottom: 14px; color: #fff; }
+    #materialsMarketScreen .ec-cb-title { font-size: 15px; font-weight: 800; margin-bottom: 4px; display: flex; align-items: center; gap: 7px; }
+    #materialsMarketScreen .ec-cb-sub { font-size: 12px; opacity: .8; margin-bottom: 10px; line-height: 1.6; }
+    #materialsMarketScreen .ec-cb-sources { display: flex; gap: 6px; flex-wrap: wrap; }
+    #materialsMarketScreen .ec-cb-src { padding: 4px 10px; background: rgba(255,255,255,.15); border-radius: 8px; font-size: 11px; font-weight: 600; color: #fff; }
+    #materialsMarketScreen .ec-sort-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+    #materialsMarketScreen .ec-item-count { font-size: 12px; color: var(--zb-muted); }
+    #materialsMarketScreen .ec-sort-sel { border: none; background: none; font-size: 12px; color: var(--zb-navy); font-weight: 600; cursor: pointer; }
+    #materialsMarketScreen .ec-item-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    #materialsMarketScreen .ec-item-card { background: var(--zb-card); border-radius: 12px; border: 1px solid var(--zb-border); overflow: hidden; cursor: pointer; transition: .15s; }
+    #materialsMarketScreen .ec-item-card:active { transform: scale(.98); }
+    #materialsMarketScreen .ec-item-card.best-price { border-color: var(--zb-green); border-width: 2px; }
+    #materialsMarketScreen .ec-ic-img { width: 100%; aspect-ratio: 1; background: var(--zb-bg); display: flex; align-items: center; justify-content: center; font-size: 40px; position: relative; }
+    #materialsMarketScreen .ec-ic-badge { position: absolute; top: 7px; left: 7px; padding: 3px 7px; border-radius: 7px; font-size: 10px; font-weight: 700; background: var(--zb-green); color: #fff; }
+    #materialsMarketScreen .ec-ic-body { padding: 10px; }
+    #materialsMarketScreen .ec-ic-name { font-size: 12px; font-weight: 600; margin-bottom: 4px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    #materialsMarketScreen .ec-ic-maker { font-size: 10px; color: var(--zb-muted); margin-bottom: 6px; }
+    #materialsMarketScreen .ec-pc-row { display: flex; justify-content: space-between; align-items: center; font-size: 11px; padding: 2px 0; }
+    #materialsMarketScreen .ec-pc-src { color: var(--zb-muted); display: flex; align-items: center; gap: 3px; }
+    #materialsMarketScreen .ec-pc-price.best { color: var(--zb-green); font-weight: 800; }
+    #materialsMarketScreen .ec-pc-price.high { color: var(--zb-muted); font-weight: 600; }
+    #materialsMarketScreen .ec-ic-best-price { font-size: 16px; font-weight: 800; color: var(--zb-navy); }
+    #materialsMarketScreen .ec-ic-best-src { font-size: 10px; color: var(--zb-green); font-weight: 600; }
+    #materialsMarketScreen .ec-ic-saving { font-size: 10px; color: var(--zb-red); font-weight: 600; }
+    #materialsMarketScreen .ec-add-cart { width: 100%; padding: 8px; background: var(--zb-orange); color: #fff; border: none; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer; margin-top: 6px; display: flex; align-items: center; justify-content: center; gap: 4px; }
+    #materialsMarketScreen .ec-group-banner { background: #fff8e0; border: 1.5px solid #f5d86e; border-radius: 12px; padding: 13px; margin-bottom: 14px; cursor: pointer; }
+    #materialsMarketScreen .ec-gb-title { font-size: 13px; font-weight: 700; color: #7a5a00; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+    #materialsMarketScreen .ec-gb-sub { font-size: 12px; color: #8a6a00; line-height: 1.6; margin-bottom: 8px; }
+    #materialsMarketScreen .ec-gb-items { display: flex; gap: 6px; flex-wrap: wrap; }
+    #materialsMarketScreen .ec-gb-item { background: #fff; border: 1px solid #f5d86e; border-radius: 8px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #7a5a00; }
+    #materialsMarketScreen .ec-gb-count { color: var(--zb-orange); font-weight: 800; }
+    #materialsMarketScreen .ec-cart-section { display: none; }
+    #materialsMarketScreen .ec-cart-item { display: flex; gap: 10px; padding: 12px 0; border-bottom: 1px solid var(--zb-bg); }
+    #materialsMarketScreen .ec-ci-img { width: 56px; height: 56px; background: var(--zb-bg); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
+    #materialsMarketScreen .ec-ci-info { flex: 1; min-width: 0; }
+    #materialsMarketScreen .ec-ci-name { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+    #materialsMarketScreen .ec-ci-src { font-size: 11px; color: var(--zb-green); font-weight: 600; }
+    #materialsMarketScreen .ec-ci-price { font-size: 14px; font-weight: 800; color: var(--zb-navy); }
+    #materialsMarketScreen .ec-ci-del { color: var(--zb-red); font-size: 20px; cursor: pointer; flex-shrink: 0; border: none; background: none; }
+    #materialsMarketScreen .ec-order-summary { background: #f0f5fa; border-radius: 12px; padding: 14px; margin-top: 14px; }
+    #materialsMarketScreen .ec-os-row { display: flex; justify-content: space-between; font-size: 13px; padding: 5px 0; border-bottom: 1px solid #d8e8f4; }
+    #materialsMarketScreen .ec-os-row:last-child { border-bottom: none; }
+    #materialsMarketScreen .ec-os-row .k { color: var(--zb-muted); }
+    #materialsMarketScreen .ec-os-row.total .k { font-weight: 700; color: var(--zb-navy); font-size: 14px; }
+    #materialsMarketScreen .ec-os-row.total .v { font-weight: 800; color: var(--zb-navy); font-size: 18px; }
+    #materialsMarketScreen .ec-modal-wrap { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 50; align-items: flex-end; }
+    #materialsMarketScreen .ec-modal-wrap.show { display: flex; }
+    #materialsMarketScreen .ec-modal { background: var(--zb-card); border-radius: 20px 20px 0 0; width: 100%; max-height: 92dvh; overflow-y: auto; padding: 20px; padding-bottom: calc(20px + env(safe-area-inset-bottom)); }
+    #materialsMarketScreen .ec-modal-handle { width: 36px; height: 4px; background: var(--zb-border); border-radius: 2px; margin: 0 auto 16px; }
+    #materialsMarketScreen .ec-modal-img { width: 100%; aspect-ratio: 4/3; background: var(--zb-bg); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 64px; margin-bottom: 14px; }
+    #materialsMarketScreen .ec-modal-name { font-size: 16px; font-weight: 800; color: var(--zb-navy); margin-bottom: 4px; line-height: 1.4; }
+    #materialsMarketScreen .ec-modal-maker { font-size: 12px; color: var(--zb-muted); margin-bottom: 14px; }
+    #materialsMarketScreen .ec-compare-table { width: 100%; border-collapse: collapse; margin-bottom: 14px; }
+    #materialsMarketScreen .ec-compare-table th { background: #f0f5fa; color: var(--zb-navy); font-size: 12px; font-weight: 700; padding: 8px 10px; text-align: left; border-bottom: 2px solid var(--zb-border); }
+    #materialsMarketScreen .ec-compare-table td { padding: 10px; border-bottom: 1px solid var(--zb-bg); font-size: 13px; vertical-align: middle; }
+    #materialsMarketScreen .ec-src-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; display: inline-block; }
+    #materialsMarketScreen .ec-price-cell { font-size: 15px; font-weight: 800; }
+    #materialsMarketScreen .ec-price-cell.best { color: var(--zb-green); }
+    #materialsMarketScreen .ec-delivery-cell { font-size: 11px; color: var(--zb-muted); }
+    #materialsMarketScreen .ec-order-btn { padding: 7px 14px; border-radius: 8px; font-size: 12px; font-weight: 700; border: none; cursor: pointer; }
+    #materialsMarketScreen .ec-ob-best { background: var(--zb-green); color: #fff; }
+    #materialsMarketScreen .ec-ob-normal { background: var(--zb-bg); color: var(--zb-navy); border: 1px solid var(--zb-border); }
+    #materialsMarketScreen .ec-qty-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    #materialsMarketScreen .ec-qty-btn { width: 32px; height: 32px; border-radius: 50%; background: var(--zb-bg); border: 1px solid var(--zb-border); font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--zb-navy); }
+    #materialsMarketScreen .ec-qty-val { font-size: 16px; font-weight: 700; min-width: 32px; text-align: center; }
+    #materialsMarketScreen .ec-fee-note { background: #f0f5fa; border-radius: 8px; padding: 10px 12px; font-size: 12px; color: var(--zb-navy); margin-bottom: 14px; line-height: 1.6; }
+    #materialsMarketScreen .ec-cart-btn { width: 100%; padding: 15px; background: var(--zb-orange); color: #fff; border: none; border-radius: 12px; font-size: 15px; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    #materialsMarketScreen .ec-toast { position: fixed; bottom: 76px; left: 50%; transform: translateX(-50%) translateY(60px); background: var(--zb-text); color: #fff; padding: 11px 20px; border-radius: 22px; font-size: 13px; font-weight: 500; transition: transform .3s; z-index: 99; white-space: nowrap; pointer-events: none; }
+    #materialsMarketScreen .ec-toast.show { transform: translateX(-50%) translateY(0); }
+    #materialsMarketScreen .ec-toast.ok { background: var(--zb-green); }
+    #materialsMarketScreen .ec-page-compare { display: none; flex: 1; flex-direction: column; }
+    #materialsMarketScreen .ec-page-compare.active { display: flex; }
+    #materialsMarketScreen .ec-compare-main { flex: 1; padding: 12px 14px; max-width: 560px; margin: 0 auto; width: 100%; }
     .rs-rousai-badge { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #e8f8f2; color: var(--zb-green); margin-left: 6px; }
     /* 労災申請サポート（zaibase_rousai_apply.html）— 社労士法遵守 */
     #rousaiApplyScreen { background: var(--zb-bg); min-height: 100vh; display: flex; flex-direction: column; padding-bottom: 80px; color: var(--zb-text); }
@@ -1313,6 +1430,24 @@
     #complianceScoreCard { margin: 0 12px 12px; background: var(--zb-card); border: 1px solid var(--zb-border); border-radius: 14px; padding: 14px; }
     #complianceScoreCard .cg-mini-bar { height: 8px; background: #e8edf5; border-radius: 4px; overflow: hidden; margin: 8px 0; }
     #complianceScoreCard .cg-mini-fill { height: 100%; background: linear-gradient(90deg,#1d9e75,#1a3c5e); border-radius: 4px; transition: width .3s; }
+    #transactionRankCard, #zbPointsCard { margin: 0 12px 12px; background: var(--zb-card); border: 1px solid var(--zb-border); border-radius: 14px; padding: 14px; }
+    .zb-rank-medal { display: inline-block; font-size: 10px; font-weight: 800; padding: 3px 10px; border-radius: 8px; }
+    .zb-rank-bronze { background: #f0e6d8; color: #7a4a10; }
+    .zb-rank-silver { background: #e8edf5; color: #4a5a6e; }
+    .zb-rank-gold { background: #fff8e0; color: #7a5a00; }
+    .zb-rank-platinum { background: linear-gradient(135deg,#e8f0ff,#f0e8ff); color: #3a2a6e; }
+    #pointsScreen, #emergencyMatchScreen { background: var(--zb-bg); min-height: 100vh; display: flex; flex-direction: column; padding-bottom: 32px; color: var(--zb-text); }
+    .pt-hd, .em-hd { background: var(--zb-navy); padding: 13px 16px; display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .pt-back, .em-back { color: rgba(255,255,255,.7); font-size: 22px; cursor: pointer; border: none; background: none; }
+    .pt-title, .em-title { color: #fff; font-size: 17px; font-weight: 700; margin: 0 auto; }
+    .pt-main, .em-main { flex: 1; padding: 14px; max-width: 560px; margin: 0 auto; width: 100%; }
+    .pt-balance { background: linear-gradient(135deg,#1a3c5e,#2c5f82); border-radius: 14px; padding: 18px; color: #fff; margin-bottom: 14px; text-align: center; }
+    .pt-balance-num { font-size: 36px; font-weight: 800; line-height: 1.1; }
+    .pt-use-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+    .pt-use-item { background: var(--zb-card); border: 1px solid var(--zb-border); border-radius: 10px; padding: 12px; font-size: 12px; text-align: center; }
+    .em-urgent-card { background: var(--zb-card); border: 2px solid var(--zb-orange); border-radius: 12px; padding: 14px; margin-bottom: 10px; }
+    .em-pulse { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--zb-red,#e24b4a); animation: emPulse 1.2s infinite; margin-right: 6px; }
+    @keyframes emPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(1.3)} }
     /* 多層契約管理（§20 #chainScreen） */
     #chainScreen { display: flex; flex-direction: column; min-height: 100vh; background: var(--zb-bg); padding-bottom: 32px; }
     .ch-hd { background: var(--zb-navy); padding: 13px 16px; display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
@@ -1955,6 +2090,113 @@
   </main>
 </div>
 
+<!-- 資材マーケット（EC拡張 — 最安値比較・モデルB/C） -->
+<div id="materialsMarketScreen" class="hidden">
+  <header class="ec-shop-hd" id="ecShopHeader">
+    <div class="ec-shop-hd-top">
+      <button type="button" class="ec-back" id="materialsMarketBackBtn"><i class="ti ti-arrow-left"></i></button>
+      <span class="ec-shop-logo">Zaibase 資材マーケット</span>
+      <button type="button" class="ec-shop-cart" id="ecShowCartBtn" title="カート">
+        <i class="ti ti-shopping-cart"></i>
+        <span class="ec-cart-badge" id="ec-cart-count">0</span>
+      </button>
+    </div>
+    <div class="ec-search-bar" id="ecSearchBar">
+      <div class="ec-search-wrap">
+        <input type="text" id="ec-search-input" placeholder="商品名・型番で検索（例：コーキング、タイル接着剤）">
+        <button type="button" class="ec-search-btn" id="ecSearchBtn"><i class="ti ti-search"></i> 検索</button>
+      </div>
+    </div>
+  </header>
+  <div class="tm-legal-banner">β・設計参考。価格はサンプル。API連携・問屋契約後に本番価格。毒物劇物・火薬類は非対応。</div>
+  <div class="ec-tabs">
+    <button type="button" class="ec-tab act" data-ec-tab="compare">最安値比較</button>
+    <button type="button" class="ec-tab" data-ec-tab="flea">余剰フリマ</button>
+    <button type="button" class="ec-tab" data-ec-tab="group">グループ購買</button>
+  </div>
+  <div id="ecPageCompare" class="ec-page-compare active">
+    <div class="ec-shop-cat-row" id="ec-cat-row"></div>
+    <div class="ec-compare-main" id="ec-compare-main">
+      <div class="ec-compare-banner">
+        <div class="ec-cb-title"><i class="ti ti-trending-down" style="font-size:18px;color:var(--zb-orange)"></i> 最安値を自動比較して発注</div>
+        <div class="ec-cb-sub">複数の販売店・問屋の価格を比較。最安値から1タップで発注。手数料はZaibaseのみ10%。</div>
+        <div class="ec-cb-sources">
+          <span class="ec-cb-src">🔵 楽天市場</span>
+          <span class="ec-cb-src">🟡 Yahoo!ショッピング</span>
+          <span class="ec-cb-src">🟠 モノタロウ</span>
+          <span class="ec-cb-src">🟢 山本政清商店</span>
+          <span class="ec-cb-src">🔴 ミウラ</span>
+        </div>
+      </div>
+      <div class="ec-group-banner" id="ecGroupBannerShortcut">
+        <div class="ec-gb-title"><i class="ti ti-users" style="font-size:16px;color:var(--zb-orange)"></i> グループ購買 — 今参加中の共同仕入れ</div>
+        <div class="ec-gb-sub">仲間とまとめ買いすると問屋価格で購入できます。締め切りまでに参加してください。</div>
+        <div class="ec-gb-items">
+          <div class="ec-gb-item">変成シリコン 20%OFF<br><span class="ec-gb-count">8/10人 参加中</span></div>
+          <div class="ec-gb-item">タイル接着剤 15%OFF<br><span class="ec-gb-count">5/10人 参加中</span></div>
+          <div class="ec-gb-item">ウレタン塗料 25%OFF<br><span class="ec-gb-count">3/10人 参加中</span></div>
+        </div>
+      </div>
+      <div class="ec-sort-bar" id="ecSortBar">
+        <span class="ec-item-count" id="ec-item-count">0件の商品</span>
+        <select class="ec-sort-sel" id="ec-sort-sel">
+          <option value="price">最安値順</option>
+          <option value="saving">節約額順</option>
+          <option value="popular">人気順</option>
+        </select>
+      </div>
+      <div class="ec-item-grid" id="ec-item-grid"></div>
+      <div class="ec-cart-section" id="ec-cart-section">
+        <div style="font-size:16px;font-weight:800;color:var(--zb-navy);margin-bottom:14px;"><i class="ti ti-shopping-cart"></i> カートの中身</div>
+        <div id="ec-cart-list"></div>
+        <div class="ec-order-summary" id="ec-order-summary"></div>
+        <button type="button" id="ecCheckoutBtn" style="width:100%;margin-top:12px;padding:15px;background:var(--zb-navy);color:#fff;border:none;border-radius:12px;font-size:15px;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;"><i class="ti ti-truck-delivery"></i>注文を確定する</button>
+        <button type="button" id="ecContinueShopBtn" style="width:100%;margin-top:8px;padding:12px;background:var(--zb-bg);color:var(--zb-navy);border:1px solid var(--zb-border);border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;">買い物を続ける</button>
+      </div>
+      <div class="ec-order-section" id="ec-order-section">
+        <div style="font-size:16px;font-weight:800;color:var(--zb-navy);margin-bottom:14px;"><i class="ti ti-package"></i> 注文履歴</div>
+        <div id="ec-order-list"><div style="text-align:center;padding:24px;color:var(--zb-muted);font-size:12px;">読み込み中…</div></div>
+        <button type="button" id="ecOrderBackBtn" style="width:100%;margin-top:12px;padding:12px;background:var(--zb-bg);color:var(--zb-navy);border:1px solid var(--zb-border);border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;">買い物に戻る</button>
+      </div>
+    </div>
+  </div>
+  <main class="ec-main hidden" id="ecPageFlea"></main>
+  <main class="ec-main hidden" id="ecPageGroup"></main>
+  <div class="ec-modal-wrap" id="ec-item-modal">
+    <div class="ec-modal" id="ec-modal-inner">
+      <div class="ec-modal-handle"></div>
+      <div id="ec-modal-content"></div>
+    </div>
+  </div>
+  <nav class="ec-shop-bottom-nav" id="ecShopBottomNav">
+    <button type="button" class="ec-sn-item act" data-ec-sn="shop"><i class="ti ti-shopping-bag"></i><span>資材</span></button>
+    <button type="button" class="ec-sn-item" data-ec-sn="home"><i class="ti ti-home"></i><span>ホーム</span></button>
+    <button type="button" class="ec-sn-item" data-ec-sn="cart"><i class="ti ti-shopping-cart"></i><span>カート</span></button>
+    <button type="button" class="ec-sn-item" data-ec-sn="orders"><i class="ti ti-package"></i><span>注文履歴</span></button>
+  </nav>
+  <div class="ec-toast" id="ec-toast"></div>
+</div>
+
+<!-- Zaibaseポイント（Yahoo型・§23） -->
+<div id="pointsScreen" class="hidden">
+  <header class="pt-hd">
+    <button type="button" class="pt-back" id="pointsBackBtn"><i class="ti ti-arrow-left"></i></button>
+    <span class="pt-title">Zaibaseポイント</span>
+  </header>
+  <div class="tm-legal-banner">β・1pt＝¥1相当。取引完了で付与。手数料割引・資材購入に利用可。</div>
+  <main class="pt-main" id="pointsMain"></main>
+</div>
+
+<!-- 緊急職人手配（Uber型・§24） -->
+<div id="emergencyMatchScreen" class="hidden">
+  <header class="em-hd">
+    <button type="button" class="em-back" id="emergencyBackBtn"><i class="ti ti-arrow-left"></i></button>
+    <span class="em-title">緊急職人手配</span>
+  </header>
+  <div class="tm-legal-banner">β・半径20km以内の職人に通知。手数料10〜15%（プレミアム）。業務委託・指揮命令なし。</div>
+  <main class="em-main" id="emergencyMain"></main>
+</div>
+
 <!-- 労災申請サポート（zaibase_rousai_apply.html）— 社労士法第27条遵守 -->
 <div id="rousaiApplyScreen" class="hidden">
   <header class="ra-hd">
@@ -2407,7 +2649,7 @@
   </div>
   <div class="main-tabs">
     <button class="main-tab active" data-maintab="match">👷 職人マッチング</button>
-    <button class="main-tab" data-maintab="materials">📦 資材フリマ</button>
+    <button class="main-tab" data-maintab="materials">📦 資材マーケット</button>
   </div>
 
   <div id="matchTab">
@@ -2490,6 +2732,11 @@
   </div>
 
   <div id="materialsTab" class="hidden">
+    <div style="margin:10px 16px 0;padding:12px;background:linear-gradient(135deg,#1a5c3a,#1d9e75);border-radius:12px;color:#fff;">
+      <div style="font-size:13px;font-weight:700;margin-bottom:4px;">🏪 Zaibase資材マーケット</div>
+      <div style="font-size:11px;opacity:.9;line-height:1.5;margin-bottom:8px;">フリマ（CtoC）に加え、問屋直売・グループ購買で石油系資材をまとめ買い（β）</div>
+      <button type="button" id="openMaterialsMarketBtn" style="width:100%;padding:9px;border:none;border-radius:8px;background:rgba(255,255,255,.25);color:#fff;font-size:12px;font-weight:700;cursor:pointer;">資材マーケットを開く</button>
+    </div>
     <div class="search-box">
       <span>🔍</span>
       <input type="text" id="searchInput" placeholder="カラーコーン、足場板、インパクト…">
@@ -2516,6 +2763,8 @@
   </div>
   <div class="profile-card" id="profilePreview"></div>
   <div id="complianceScoreCard" class="hidden"></div>
+  <div id="transactionRankCard" class="hidden"></div>
+  <div id="zbPointsCard" class="hidden"></div>
   <div class="mypage-quick-links">
     <button type="button" id="mypagePaymentBtn">💴 支払・請求</button>
     <button type="button" id="mypageStripeBtn">💳 支払方法</button>
@@ -2523,6 +2772,9 @@
     <button type="button" id="mypageInvoiceBtn">🧾 請求書</button>
     <button type="button" id="mypageInsuranceBtn">🛡️ 現場保険</button>
     <button type="button" id="mypageRousaiBtn">🦺 労災サポート</button>
+    <button type="button" id="mypageMaterialsMarketBtn">🏪 資材マーケット</button>
+    <button type="button" id="mypagePointsBtn">🪙 Zaibaseポイント</button>
+    <button type="button" id="mypageEmergencyBtn">🚨 緊急手配</button>
     <button type="button" id="mypagePhotoReportBtn">📷 現場報告</button>
     <button type="button" id="mypageDeliveryBtn">🚚 搬入管理</button>
     <button type="button" id="mypageEticketBtn">📄 電子伝票</button>
@@ -3992,6 +4244,7 @@ support@zaibase.jp</p>
   const markWorkCompleteFn = httpsCallable(functions, 'markWorkComplete');
   const confirmPaymentFn = httpsCallable(functions, 'confirmPayment');
   const getChurnStatsFn = httpsCallable(functions, 'getChurnStats');
+  const searchMaterialsPricesFn = httpsCallable(functions, 'searchMaterialsPrices');
   const cancelSubscriptionFn = httpsCallable(functions, 'cancelSubscription');
   const registerCcusWorkerIdFn = httpsCallable(functions, 'registerCcusWorkerId');
   const getCcusMonthlySummaryFn = httpsCallable(functions, 'getCcusMonthlySummary');
@@ -4465,6 +4718,189 @@ support@zaibase.jp</p>
       showScreen('complianceGateScreen');
       setTimeout(() => switchCgTab('revenue'), 50);
     });
+  }
+
+  const TX_RANK_DEFS = [
+    { id: 'bronze', label: 'ブロンズ', cls: 'zb-rank-bronze', minDeals: 0, minRating: 0, feeDiscount: 0, perks: '基本機能' },
+    { id: 'silver', label: 'シルバー', cls: 'zb-rank-silver', minDeals: 3, minRating: 4.0, feeDiscount: 0.005, perks: '手数料▲0.5%・優先表示' },
+    { id: 'gold', label: 'ゴールド', cls: 'zb-rank-gold', minDeals: 10, minRating: 4.5, feeDiscount: 0.01, perks: '手数料▲1%・大型案件' },
+    { id: 'platinum', label: 'プラチナ', cls: 'zb-rank-platinum', minDeals: 30, minRating: 4.8, feeDiscount: 0.015, perks: '手数料▲1.5%・専任サポート' },
+  ];
+
+  function calcTransactionRank(p) {
+    const deals = p.completedCount || 0;
+    const rating = p.ratingAvg || p.averageRating || 0;
+    let rank = TX_RANK_DEFS[0];
+    for (const r of TX_RANK_DEFS) {
+      if (deals >= r.minDeals && (rating === 0 || rating >= r.minRating)) rank = r;
+    }
+    const idx = TX_RANK_DEFS.findIndex(r => r.id === rank.id);
+    const next = TX_RANK_DEFS[idx + 1] || null;
+    const toNext = next ? Math.max(0, next.minDeals - deals) : 0;
+    return { rank, deals, rating, next, toNext };
+  }
+
+  function calcZbPoints(p) {
+    if (typeof p.zbPoints === 'number') return p.zbPoints;
+    const base = (p.completedCount || 0) * 120 + (p.matchCount || 0) * 30;
+    return Math.max(0, base);
+  }
+
+  function renderTransactionRankCard(p) {
+    const card = document.getElementById('transactionRankCard');
+    if (!card) return;
+    if (currentAccountRole === 'orderer') { card.classList.add('hidden'); return; }
+    const tx = calcTransactionRank(p);
+    const pct = tx.next ? Math.min(100, Math.round((tx.deals / tx.next.minDeals) * 100)) : 100;
+    card.classList.remove('hidden');
+    card.innerHTML = `
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px;">
+        <div>
+          <div style="font-size:13px;font-weight:700;color:var(--zb-navy);">🏅 取引ランク</div>
+          <div style="font-size:11px;color:var(--zb-muted);margin-top:2px;">楽天型・取引実績で昇格</div>
+        </div>
+        <span class="zb-rank-medal ${tx.rank.cls}">${tx.rank.label}</span>
+      </div>
+      <div class="cg-mini-bar"><div class="cg-mini-fill" style="width:${pct}%;background:linear-gradient(90deg,#e8a020,#f5c842);"></div></div>
+      <div style="font-size:11px;color:var(--zb-muted);line-height:1.55;margin-bottom:8px;">
+        完了 ${tx.deals}件 · 評価 ${tx.rating ? tx.rating.toFixed(1) : '—'}
+        ${tx.next ? ` · あと<strong style="color:var(--zb-navy);">${tx.toNext}件</strong>で${tx.next.label}` : ' · 最高ランク'}
+      </div>
+      <div style="font-size:11px;color:var(--zb-green);font-weight:600;margin-bottom:10px;">特典：${tx.rank.perks}（Max割引と合算上限▲2%）</div>
+      <button type="button" class="btn-outline" id="txRankDetailBtn" style="width:100%;font-size:12px;">ランク詳細を見る</button>`;
+    document.getElementById('txRankDetailBtn')?.addEventListener('click', () => showScreen('pointsScreen'));
+  }
+
+  function renderZbPointsCard(p) {
+    const card = document.getElementById('zbPointsCard');
+    if (!card) return;
+    const pts = calcZbPoints(p);
+    card.classList.remove('hidden');
+    card.innerHTML = `
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <div>
+          <div style="font-size:13px;font-weight:700;color:var(--zb-navy);">🪙 Zaibaseポイント</div>
+          <div style="font-size:11px;color:var(--zb-muted);margin-top:2px;">1pt ≈ ¥1（手数料割引等）</div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:24px;font-weight:800;color:var(--zb-orange);line-height:1;">${pts.toLocaleString()}</div>
+          <div style="font-size:10px;color:var(--zb-muted);">pt</div>
+        </div>
+      </div>
+      <button type="button" class="btn-outline" id="zbPointsOpenBtn" style="width:100%;font-size:12px;margin-top:10px;">ポイントの使い道・履歴</button>`;
+    document.getElementById('zbPointsOpenBtn')?.addEventListener('click', () => showScreen('pointsScreen'));
+  }
+
+  function renderPointsScreen(p) {
+    const el = document.getElementById('pointsMain');
+    if (!el) return;
+    const pts = calcZbPoints(p);
+    const tx = calcTransactionRank(p);
+    const history = [
+      { d: '取引完了ボーナス', pt: '+120', when: '直近' },
+      { d: '資材マーケット利用', pt: '+30', when: '3日前' },
+      { d: '手数料割引に使用', pt: '-500', when: '1週間前' },
+    ];
+    el.innerHTML = `
+      <div class="pt-balance">
+        <div style="font-size:12px;opacity:.85;margin-bottom:4px;">利用可能ポイント</div>
+        <div class="pt-balance-num">${pts.toLocaleString()}<span style="font-size:16px;font-weight:600;"> pt</span></div>
+        <div style="font-size:12px;opacity:.8;margin-top:6px;">≈ ¥${pts.toLocaleString()} 割引相当</div>
+      </div>
+      <div style="font-size:13px;font-weight:700;color:var(--zb-navy);margin-bottom:8px;">🏅 取引ランク：<span class="zb-rank-medal ${tx.rank.cls}">${tx.rank.label}</span></div>
+      <div style="font-size:12px;color:var(--zb-muted);line-height:1.6;margin-bottom:14px;">
+        ${TX_RANK_DEFS.map(r => `<div style="margin:4px 0;${r.id === tx.rank.id ? 'font-weight:700;color:var(--zb-navy);' : ''}">${r.label}：${r.minDeals}件以上・評価${r.minRating || '—'}以上 → ${r.perks}</div>`).join('')}
+      </div>
+      <div style="font-size:13px;font-weight:700;color:var(--zb-navy);margin-bottom:8px;">ポイントの使い道</div>
+      <div class="pt-use-grid">
+        <div class="pt-use-item">💴 手数料割引<br><span style="font-size:10px;color:var(--zb-muted);">1pt=¥1</span></div>
+        <div class="pt-use-item">🏪 資材購入<br><span style="font-size:10px;color:var(--zb-muted);">マーケットで利用</span></div>
+        <div class="pt-use-item">🦺 保険料充当<br><span style="font-size:10px;color:var(--zb-muted);">将来</span></div>
+        <div class="pt-use-item">📣 優先表示<br><span style="font-size:10px;color:var(--zb-muted);">案件ブースト</span></div>
+      </div>
+      <div style="font-size:13px;font-weight:700;color:var(--zb-navy);margin-bottom:8px;">履歴（β・サンプル）</div>
+      ${history.map(h => `<div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--zb-border);font-size:12px;">
+        <span>${escapeHtml(h.d)}<br><span style="font-size:10px;color:var(--zb-muted);">${escapeHtml(h.when)}</span></span>
+        <strong style="color:${h.pt.startsWith('+') ? 'var(--zb-green)' : 'var(--zb-red)'};">${h.pt}pt</strong>
+      </div>`).join('')}
+      <div style="margin-top:14px;padding:12px;background:#f0f5fa;border-radius:10px;font-size:11px;line-height:1.6;color:var(--zb-navy);">
+        <strong>4社統合ロードマップ</strong>：Yahoo型ポイント（今）→ 楽天型ランク（今）→ Uber型緊急手配（3〜6ヶ月）→ Amazon型資材EC（6〜12ヶ月）
+      </div>`;
+  }
+
+  async function initPointsScreen() {
+    const uid = auth.currentUser?.uid;
+    if (!uid) return;
+    const p = currentAccountRole === 'orderer' ? await getOrdererProfile(uid) : await getCraftsmanProfile(uid);
+    renderPointsScreen(p);
+  }
+
+  const EM_URGENT_JOBS = [
+    { id: 'u1', title: 'タイル補修・至急', site: '大阪市北区', trade: 'タイル', reward: 28000, km: 4.2, eta: '25分', slots: 1, deadline: '明日 8:00' },
+    { id: 'u2', title: '防水シート張り応援', site: '神戸市東灘区', trade: '防水', reward: 35000, km: 12.8, eta: '40分', slots: 2, deadline: '本日 17:00' },
+  ];
+
+  function renderEmergencyMatchScreen() {
+    const el = document.getElementById('emergencyMain');
+    if (!el) return;
+    const isOrderer = currentAccountRole === 'orderer';
+    if (isOrderer) {
+      el.innerHTML = `
+        <div style="background:linear-gradient(135deg,#8a2020,#c0392b);border-radius:14px;padding:14px;color:#fff;margin-bottom:14px;">
+          <div style="font-size:15px;font-weight:800;margin-bottom:6px;"><span class="em-pulse"></span>緊急案件を投稿</div>
+          <div style="font-size:12px;opacity:.9;line-height:1.6;">休んだ職人の穴埋め・当日応援。半径20kmのマッチング済み職人にプッシュ通知（β）。</div>
+        </div>
+        <div class="form-group"><label>現場名・作業内容</label><input type="text" id="emJobTitle" placeholder="例：外壁シーリング補修・至急"></div>
+        <div class="form-group"><label>必要工種</label><input type="text" id="emJobTrade" placeholder="タイル・防水・内装…"></div>
+        <div class="form-group"><label>報酬（業務委託・税込目安）</label><input type="number" id="emJobReward" placeholder="35000"></div>
+        <div class="form-group"><label>開始希望</label><input type="datetime-local" id="emJobStart"></div>
+        <div style="font-size:11px;color:var(--zb-muted);margin-bottom:12px;line-height:1.55;">手数料 <strong>10〜15%</strong>（通常より高め）。電子契約・エスクロー連携は本番で自動化。</div>
+        <button type="button" class="btn-primary" id="emPostUrgentBtn" style="width:100%;">緊急案件を投稿する（β）</button>`;
+      document.getElementById('emPostUrgentBtn')?.addEventListener('click', postUrgentJob);
+      return;
+    }
+    const cards = EM_URGENT_JOBS.map(j => `
+      <div class="em-urgent-card">
+        <div style="font-size:11px;color:var(--zb-muted);margin-bottom:4px;"><span class="em-pulse"></span>至急 · ${escapeHtml(j.deadline)}</div>
+        <div style="font-size:15px;font-weight:800;color:var(--zb-navy);margin-bottom:4px;">${escapeHtml(j.title)}</div>
+        <div style="font-size:12px;color:var(--zb-muted);margin-bottom:8px;">${escapeHtml(j.site)} · ${escapeHtml(j.trade)} · 車${j.km}km（約${escapeHtml(j.eta)}）</div>
+        <div style="font-size:18px;font-weight:800;color:var(--zb-orange);">¥${j.reward.toLocaleString()}</div>
+        <button type="button" class="btn-primary em-accept-btn" data-em-id="${j.id}" style="width:100%;margin-top:10px;">応援する（β）</button>
+      </div>`).join('');
+    el.innerHTML = `
+      <div style="font-size:12px;color:var(--zb-muted);margin-bottom:12px;line-height:1.6;">近場（20km以内）の緊急案件のみ表示。移動時間は地図API連携後に自動計算。</div>
+      ${cards || '<p style="text-align:center;color:var(--zb-muted);padding:24px;">近くに緊急案件はありません</p>'}`;
+    el.querySelectorAll('.em-accept-btn').forEach(btn => btn.addEventListener('click', () => {
+      const j = EM_URGENT_JOBS.find(x => x.id === btn.dataset.emId);
+      alert(`【β】緊急応援の申込は準備中です。\n\n${j?.title || ''}\n本番はプッシュ通知→電子契約→エスクロー`);
+      trackEcInterest('emergency_accept', btn.dataset.emId);
+    }));
+  }
+
+  async function postUrgentJob() {
+    const title = document.getElementById('emJobTitle')?.value?.trim();
+    const trade = document.getElementById('emJobTrade')?.value?.trim();
+    const reward = +(document.getElementById('emJobReward')?.value || 0);
+    if (!title || !reward) { alert('現場名と報酬を入力してください'); return; }
+    const uid = auth.currentUser?.uid;
+    if (uid) {
+      try {
+        await addDoc(collection(db, 'urgentJobs'), {
+          ordererId: uid,
+          title, trade, reward,
+          status: 'beta_open',
+          radiusKm: 20,
+          feeRate: 0.12,
+          createdAt: serverTimestamp(),
+        });
+      } catch (_) {}
+    }
+    alert('【β】緊急案件を投稿しました。半径20kmの職人に通知予定（本番はCloud Functions）');
+    trackEcInterest('emergency_post', title);
+  }
+
+  function initEmergencyMatchScreen() {
+    renderEmergencyMatchScreen();
   }
 
   function renderComplianceGateUI(p) {
@@ -7127,6 +7563,20 @@ support@zaibase.jp</p>
         <div class="rs-sr-row total"><span class="k">労災サポート関連の年間収益合計</span><span class="v" style="color:var(--zb-green)">¥300万〜/年</span></div>
         <div style="background:#e8f8f2;border-radius:8px;padding:10px;margin-top:10px;font-size:12px;color:var(--zb-green);line-height:1.7;font-weight:600;">✓ リスク防止が収益になる。<br>✓ 保険未加入者を「排除」することで良質なユーザーが集まり、GMVが増え、手数料収入が増加します。<br>✓ 追加コストはほぼゼロ。証明書確認はFirestoreに保存するだけ。</div>
       </div>
+      <div class="card" style="padding:15px;margin-top:12px;">
+        <div style="font-size:14px;font-weight:700;color:var(--zb-navy);margin-bottom:10px;"><i class="ti ti-building-store" style="color:var(--zb-orange)"></i> 4社統合ロードマップ（拡大期）</div>
+        <table class="rs-rev-table">
+          <thead><tr><th>軸</th><th>参考</th><th>状態</th></tr></thead>
+          <tbody>
+            <tr><td>Zaibaseポイント</td><td>Yahoo!型</td><td><span class="rs-rev-badge">✅ β UI</span></td></tr>
+            <tr><td>取引ランク</td><td>楽天型</td><td><span class="rs-rev-badge">✅ β UI</span></td></tr>
+            <tr><td>緊急職人手配</td><td>Uber型</td><td><span class="rs-rev-badge">✅ β UI</span></td></tr>
+            <tr><td>資材EC・最安値比較</td><td>Amazon型</td><td><span class="rs-rev-badge">✅ β UI</span></td></tr>
+            <tr><td>PayPay・広告</td><td>Yahoo!経済圏</td><td><span style="font-size:11px;color:#f59e0b;">将来</span></td></tr>
+          </tbody>
+        </table>
+        <div style="font-size:11px;color:var(--zb-muted);margin-top:8px;line-height:1.6;">税前月収：現行¥1,942万 → 統合後¥3,300万（試算）。ポイント＋ランクは追加コストほぼゼロ。</div>
+      </div>
       ${renderLaborInsuranceUnionRoadmap('rsUnionRoadmap')}`;
   }
 
@@ -7244,6 +7694,557 @@ support@zaibase.jp</p>
     if (rev) rev.innerHTML = renderRousaiRevTab();
     switchRousaiTab(rousaiActiveTab);
     bindRousaiEvents();
+  }
+
+  // ===== 資材マーケット（EC — 最安値比較・モデルB/C） =====
+  let ecMarketTab = 'compare';
+  let ecCompareCat = 'all';
+  let ecCompareItems = [];
+  let ecCart = [];
+  let ecSelectedItem = null;
+  let ecModalQty = 1;
+  const EC_COMPARE_CATS = [
+    { id: 'all', label: 'すべて' },
+    { id: 'sealing', label: 'シーリング・コーキング' },
+    { id: 'tile', label: 'タイル・接着剤' },
+    { id: 'paint', label: '塗料・防水材' },
+    { id: 'scaffold', label: '足場資材' },
+    { id: 'safety', label: '安全用品' },
+    { id: 'tool', label: '工具・電動工具' },
+  ];
+  const EC_COMPARE_ITEMS_ALL = [
+    { id: 1, cat: 'sealing', name: '変成シリコンシーラント 333ml グレー', maker: 'セメダイン', icon: '🔩', unit: '本', prices: [
+      { src: '山本政清商店', color: '#1d9e75', price: 850, delivery: '翌日配送', isBest: true },
+      { src: 'モノタロウ', color: '#e8a020', price: 920, delivery: '2〜3日' },
+      { src: 'Yahoo!', color: '#7a3adc', price: 980, delivery: '3〜5日' },
+      { src: '楽天', color: '#e24b4a', price: 1050, delivery: '3〜5日' },
+      { src: 'ミウラ', color: '#1a3c5e', price: 890, delivery: '当日可' },
+    ]},
+    { id: 2, cat: 'tile', name: 'タイル接着剤 25kg 白 フレックス', maker: 'LIXIL', icon: '🧱', unit: '袋', prices: [
+      { src: 'ミウラ', color: '#1a3c5e', price: 2800, delivery: '当日可', isBest: true },
+      { src: 'モノタロウ', color: '#e8a020', price: 3200, delivery: '2〜3日' },
+      { src: '楽天', color: '#e24b4a', price: 3500, delivery: '3〜5日' },
+      { src: 'Yahoo!', color: '#7a3adc', price: 3400, delivery: '3〜5日' },
+    ]},
+    { id: 3, cat: 'paint', name: 'ウレタン防水塗料 16kg 主剤', maker: '東日本塗料', icon: '🪣', unit: '缶', prices: [
+      { src: '山本政清商店', color: '#1d9e75', price: 12800, delivery: '翌日配送', isBest: true },
+      { src: 'モノタロウ', color: '#e8a020', price: 14200, delivery: '2〜3日' },
+      { src: 'Yahoo!', color: '#7a3adc', price: 15800, delivery: '3〜5日' },
+    ]},
+    { id: 4, cat: 'sealing', name: 'シリコンシーラント 333ml 透明', maker: 'コニシ', icon: '💉', unit: '本', prices: [
+      { src: 'モノタロウ', color: '#e8a020', price: 680, delivery: '2〜3日', isBest: true },
+      { src: 'Yahoo!', color: '#7a3adc', price: 750, delivery: '3〜5日' },
+      { src: '楽天', color: '#e24b4a', price: 820, delivery: '3〜5日' },
+      { src: '山本政清商店', color: '#1d9e75', price: 720, delivery: '翌日配送' },
+    ]},
+    { id: 5, cat: 'safety', name: 'フルハーネス安全帯 墜落制止用器具', maker: 'タジマ', icon: '🦺', unit: '個', prices: [
+      { src: 'Yahoo!', color: '#7a3adc', price: 18500, delivery: '3〜5日', isBest: true },
+      { src: 'モノタロウ', color: '#e8a020', price: 21000, delivery: '2〜3日' },
+      { src: '楽天', color: '#e24b4a', price: 22800, delivery: '3〜5日' },
+    ]},
+    { id: 6, cat: 'scaffold', name: '単管パイプ 48.6φ × 2m', maker: 'スペシャル', icon: '🔧', unit: '本', prices: [
+      { src: 'ミウラ', color: '#1a3c5e', price: 680, delivery: '当日可', isBest: true },
+      { src: '山本政清商店', color: '#1d9e75', price: 720, delivery: '翌日配送' },
+      { src: 'モノタロウ', color: '#e8a020', price: 850, delivery: '2〜3日' },
+    ]},
+    { id: 7, cat: 'tile', name: 'グラウト目地材 2kg ホワイト', maker: 'ダイフレックス', icon: '⬜', unit: '袋', prices: [
+      { src: '山本政清商店', color: '#1d9e75', price: 680, delivery: '翌日配送', isBest: true },
+      { src: '楽天', color: '#e24b4a', price: 780, delivery: '3〜5日' },
+      { src: 'Yahoo!', color: '#7a3adc', price: 820, delivery: '3〜5日' },
+    ]},
+    { id: 8, cat: 'paint', name: 'シーラー下塗り材 16kg', maker: '関西ペイント', icon: '🎨', unit: '缶', prices: [
+      { src: 'モノタロウ', color: '#e8a020', price: 8200, delivery: '2〜3日', isBest: true },
+      { src: 'Yahoo!', color: '#7a3adc', price: 9800, delivery: '3〜5日' },
+      { src: '楽天', color: '#e24b4a', price: 10200, delivery: '3〜5日' },
+    ]},
+  ];
+  const EC_GROUP_BUYS = [
+    { id: 'g1', cat: 'sealing', title: 'シーリング材 まとめ買い（大阪）', product: 'SR-1 320ml', target: 10, current: 7, unitPrice: 2400, retailPrice: 3000, unit: '本', qtyPerPerson: 20, deadline: '2026-06-15', area: '大阪', model: 'C' },
+    { id: 'g2', cat: 'sealing', title: 'コーキング 共同発注（神奈川）', product: 'ボンド S 300ml', target: 10, current: 4, unitPrice: 2100, retailPrice: 3000, unit: '本', qtyPerPerson: 15, deadline: '2026-06-20', area: '神奈川', model: 'C' },
+    { id: 'g3', cat: 'paint', title: '水性塗料 15L まとめ買い', product: '日本ペイント 水性 15L', target: 8, current: 8, unitPrice: 7200, retailPrice: 12500, unit: '缶', qtyPerPerson: 2, deadline: '2026-06-12', area: '関西', model: 'C', status: 'confirmed' },
+    { id: 'g4', cat: 'tile', title: 'タイル接着剤 20kg 共同購入', product: 'セメダイン タイル用 20kg', target: 10, current: 2, unitPrice: 3600, retailPrice: 5800, unit: '袋', qtyPerPerson: 3, deadline: '2026-06-25', area: '大阪', model: 'C' },
+  ];
+
+  function ecGetBestPrice(item) {
+    return item.prices.find(p => p.isBest) || item.prices[0];
+  }
+
+  function switchEcMarketTab(tab) {
+    ecMarketTab = tab;
+    document.querySelectorAll('#materialsMarketScreen .ec-tab').forEach(b => b.classList.toggle('act', b.dataset.ecTab === tab));
+    const isCompare = tab === 'compare';
+    document.getElementById('ecPageCompare')?.classList.toggle('active', isCompare);
+    document.getElementById('ecShopHeader')?.classList.toggle('hidden', !isCompare);
+    document.getElementById('ecShopBottomNav')?.classList.toggle('hidden', !isCompare);
+    document.getElementById('ecPageFlea')?.classList.toggle('hidden', tab !== 'flea');
+    document.getElementById('ecPageGroup')?.classList.toggle('hidden', tab !== 'group');
+    if (tab === 'compare') initEcCompareShop();
+    else if (tab === 'flea') renderEcPageFlea();
+    else renderEcPageGroup();
+  }
+
+  function ecSetShopNav(sn) {
+    document.querySelectorAll('#ecShopBottomNav .ec-sn-item').forEach(b => b.classList.toggle('act', b.dataset.ecSn === sn));
+  }
+
+  function renderEcPageFlea() {
+    const el = document.getElementById('ecPageFlea');
+    if (!el) return;
+    el.innerHTML = `
+      <div class="ec-hero">
+        <div style="font-size:14px;font-weight:700;margin-bottom:6px;">📦 余剰資材フリマ（CtoC）</div>
+        職人同士で余った資材・工具を売買。Zaibase既存機能をそのまま利用します。β期間はエスクローなし・直接取引。
+      </div>
+      <div class="ec-product-card">
+        <div style="font-size:13px;font-weight:700;margin-bottom:6px;">できること</div>
+        <ul style="font-size:12px;line-height:1.7;padding-left:18px;margin:0;color:var(--zb-muted);">
+          <li>余剰資材・中古工具の出品・購入</li>
+          <li>レンタル出品（電動工具・足場板等）</li>
+          <li>カテゴリ検索・ガイドライン準拠</li>
+        </ul>
+      </div>
+      <button type="button" id="ecOpenFleaBtn" style="width:100%;padding:13px;border:none;border-radius:10px;background:var(--zb-green);color:#fff;font-size:14px;font-weight:700;cursor:pointer;margin-top:8px;">資材フリマタブを開く</button>
+      <p style="font-size:11px;color:var(--zb-muted);text-align:center;margin-top:10px;">問屋直売・グループ購買は上のタブから切り替え</p>`;
+    document.getElementById('ecOpenFleaBtn')?.addEventListener('click', () => {
+      showScreen('mainScreen');
+      switchMainTab('materials');
+      loadListings();
+    });
+  }
+
+  function renderEcCatRow() {
+    const row = document.getElementById('ec-cat-row');
+    if (!row) return;
+    row.innerHTML = EC_COMPARE_CATS.map(c =>
+      `<button type="button" class="ec-shop-cat-chip${ecCompareCat === c.id ? ' sel' : ''}" data-ec-compare-cat="${c.id}">${escapeHtml(c.label)}</button>`
+    ).join('');
+    row.querySelectorAll('[data-ec-compare-cat]').forEach(btn => btn.addEventListener('click', () => {
+      ecCompareCat = btn.dataset.ecCompareCat;
+      ecCompareItems = ecCompareCat === 'all' ? [...EC_COMPARE_ITEMS_ALL] : EC_COMPARE_ITEMS_ALL.filter(i => i.cat === ecCompareCat);
+      renderEcCatRow();
+      renderEcCompareGrid();
+    }));
+  }
+
+  function renderEcCompareGrid() {
+    const grid = document.getElementById('ec-item-grid');
+    const countEl = document.getElementById('ec-item-count');
+    if (!grid) return;
+    if (countEl) countEl.textContent = ecCompareItems.length + '件の商品';
+    grid.innerHTML = ecCompareItems.map(item => {
+      const best = ecGetBestPrice(item);
+      const maxPrice = Math.max(...item.prices.map(p => p.price));
+      const saving = maxPrice - best.price;
+      const savingPct = maxPrice ? Math.round(saving / maxPrice * 100) : 0;
+      return `<div class="ec-item-card ${best.isBest ? 'best-price' : ''}" data-ec-item-id="${item.id}">
+        <div class="ec-ic-img">${item.icon}${savingPct >= 10 ? '<span class="ec-ic-badge">最安値</span>' : ''}</div>
+        <div class="ec-ic-body">
+          <div class="ec-ic-name">${escapeHtml(item.name)}</div>
+          <div class="ec-ic-maker">${escapeHtml(item.maker)}</div>
+          <div class="price-compare">
+            ${item.prices.slice(0, 3).map(p => `<div class="ec-pc-row">
+              <span class="ec-pc-src"><span class="ec-src-dot" style="background:${p.color}"></span>${escapeHtml(p.src)}</span>
+              <span class="ec-pc-price ${p.isBest ? 'best' : 'high'}">${p.isBest ? '✓ ' : ''}¥${p.price.toLocaleString()}</span>
+            </div>`).join('')}
+          </div>
+          <div class="ec-ic-best-price">¥${best.price.toLocaleString()}<span style="font-size:11px;font-weight:400;color:var(--zb-muted)">/${escapeHtml(item.unit)}</span></div>
+          <div class="ec-ic-best-src">${escapeHtml(best.src)}が最安値</div>
+          ${saving > 0 ? `<div class="ec-ic-saving">最大¥${saving.toLocaleString()}（${savingPct}%）節約</div>` : ''}
+          <button type="button" class="ec-add-cart" data-ec-add-cart="${item.id}"><i class="ti ti-shopping-cart" style="font-size:13px"></i>最安値で購入</button>
+        </div>
+      </div>`;
+    }).join('');
+    grid.querySelectorAll('[data-ec-item-id]').forEach(card => card.addEventListener('click', e => {
+      if (e.target.closest('[data-ec-add-cart]')) return;
+      openEcItemModal(card.dataset.ecItemId);
+    }));
+    grid.querySelectorAll('[data-ec-add-cart]').forEach(btn => btn.addEventListener('click', e => {
+      e.stopPropagation();
+      ecAddToCart(btn.dataset.ecAddCart);
+    }));
+  }
+
+  function ecShowToast(msg, ok) {
+    const t = document.getElementById('ec-toast');
+    if (!t) return;
+    t.textContent = msg;
+    t.classList.toggle('ok', !!ok);
+    t.classList.add('show');
+    clearTimeout(ecShowToast._tm);
+    ecShowToast._tm = setTimeout(() => t.classList.remove('show'), 2400);
+  }
+
+  function ecUpdateCartBadge() {
+    const total = ecCart.reduce((s, c) => s + c.qty, 0);
+    const el = document.getElementById('ec-cart-count');
+    if (el) el.textContent = total;
+  }
+
+  function ecFindCompareItem(id) {
+    const sid = String(id);
+    return ecCompareItems.find(i => String(i.id) === sid) || EC_COMPARE_ITEMS_ALL.find(i => String(i.id) === sid);
+  }
+
+  function ecAddToCart(id, price, src, qty) {
+    const item = ecFindCompareItem(id);
+    if (!item) return;
+    const best = ecGetBestPrice(item);
+    ecCart.push({ item, price: price ?? best.price, src: src ?? best.src, qty: qty ?? 1 });
+    ecUpdateCartBadge();
+    ecShowToast(item.name + ' をカートに追加しました', true);
+    trackEcInterest('compare', String(id));
+  }
+
+  function openEcItemModal(id) {
+    ecSelectedItem = ecFindCompareItem(id);
+    if (!ecSelectedItem) return;
+    ecModalQty = 1;
+    const best = ecGetBestPrice(ecSelectedItem);
+    const content = document.getElementById('ec-modal-content');
+    if (!content) return;
+    content.innerHTML = `
+      <div class="ec-modal-img">${ecSelectedItem.icon}</div>
+      <div class="ec-modal-name">${escapeHtml(ecSelectedItem.name)}</div>
+      <div class="ec-modal-maker">${escapeHtml(ecSelectedItem.maker)}</div>
+      <table class="ec-compare-table">
+        <thead><tr><th>販売店</th><th>価格</th><th>配送</th><th></th></tr></thead>
+        <tbody>
+          ${ecSelectedItem.prices.map((p, idx) => `<tr>
+            <td><span class="ec-src-dot" style="background:${p.color};margin-right:5px;"></span>${escapeHtml(p.src)}</td>
+            <td class="ec-price-cell ${p.isBest ? 'best' : ''}">¥${p.price.toLocaleString()}${p.isBest ? '<br><span style="font-size:10px;color:var(--zb-green)">★最安値</span>' : ''}</td>
+            <td class="ec-delivery-cell">${escapeHtml(p.delivery)}</td>
+            <td><button type="button" class="ec-order-btn ${p.isBest ? 'ec-ob-best' : 'ec-ob-normal'}" data-ec-modal-order="${idx}">${p.isBest ? '注文する' : '選択'}</button></td>
+          </tr>`).join('')}
+        </tbody>
+      </table>
+      <div class="ec-qty-row">
+        <span style="font-size:13px;font-weight:600;color:var(--zb-muted);">数量</span>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <button type="button" class="ec-qty-btn" id="ecQtyMinus">−</button>
+          <span class="ec-qty-val" id="ec-qty-display">1</span>
+          <button type="button" class="ec-qty-btn" id="ecQtyPlus">+</button>
+          <span style="font-size:12px;color:var(--zb-muted);">${escapeHtml(ecSelectedItem.unit)}</span>
+        </div>
+      </div>
+      <div class="ec-fee-note">
+        <strong>Zaibase手数料：10%</strong>（最安値 ¥${best.price.toLocaleString()} × 数量 × 10%）<br>
+        手数料を含む合計：<strong id="ec-total-price">¥${Math.round(best.price * ecModalQty * 1.1).toLocaleString()}</strong>
+      </div>
+      <button type="button" class="ec-cart-btn" id="ecModalBestBuy">
+        <i class="ti ti-shopping-cart"></i> ${escapeHtml(best.src)}から最安値で購入（¥${best.price.toLocaleString()}/${escapeHtml(ecSelectedItem.unit)}）
+      </button>`;
+    document.getElementById('ecQtyMinus')?.addEventListener('click', () => ecChangeModalQty(-1));
+    document.getElementById('ecQtyPlus')?.addEventListener('click', () => ecChangeModalQty(1));
+    document.getElementById('ecModalBestBuy')?.addEventListener('click', () => ecAddFromModal(best.price, best.src));
+    content.querySelectorAll('[data-ec-modal-order]').forEach(btn => btn.addEventListener('click', () => {
+      const p = ecSelectedItem.prices[+btn.dataset.ecModalOrder];
+      ecAddFromModal(p.price, p.src);
+    }));
+    document.getElementById('ec-item-modal')?.classList.add('show');
+  }
+
+  function ecChangeModalQty(d) {
+    ecModalQty = Math.max(1, ecModalQty + d);
+    const el = document.getElementById('ec-qty-display');
+    if (el) el.textContent = ecModalQty;
+    if (ecSelectedItem) {
+      const best = ecGetBestPrice(ecSelectedItem);
+      const totalEl = document.getElementById('ec-total-price');
+      if (totalEl) totalEl.textContent = '¥' + Math.round(best.price * ecModalQty * 1.1).toLocaleString();
+    }
+  }
+
+  function ecAddFromModal(price, src) {
+    if (!ecSelectedItem) return;
+    ecCart.push({ item: ecSelectedItem, price, src, qty: ecModalQty });
+    ecUpdateCartBadge();
+    ecCloseItemModal();
+    ecShowToast(ecSelectedItem.name + ' をカートに追加しました', true);
+    trackEcInterest('compare', String(ecSelectedItem.id));
+  }
+
+  function ecCloseItemModal() {
+    document.getElementById('ec-item-modal')?.classList.remove('show');
+  }
+
+  function ecShowCartView() {
+    document.getElementById('ec-item-grid')?.style.setProperty('display', 'none');
+    document.querySelector('#ec-compare-main .ec-compare-banner')?.style.setProperty('display', 'none');
+    document.getElementById('ecGroupBannerShortcut')?.style.setProperty('display', 'none');
+    document.getElementById('ecSortBar')?.style.setProperty('display', 'none');
+    document.getElementById('ec-order-section')?.style.setProperty('display', 'none');
+    const cs = document.getElementById('ec-cart-section');
+    if (cs) cs.style.display = 'block';
+    ecSetShopNav('cart');
+    ecRenderCart();
+  }
+
+  function ecShowCompareMain() {
+    document.getElementById('ec-item-grid')?.style.setProperty('display', 'grid');
+    document.querySelector('#ec-compare-main .ec-compare-banner')?.style.setProperty('display', 'block');
+    document.getElementById('ecGroupBannerShortcut')?.style.setProperty('display', 'block');
+    document.getElementById('ecSortBar')?.style.setProperty('display', 'flex');
+    document.getElementById('ec-cart-section')?.style.setProperty('display', 'none');
+    document.getElementById('ec-order-section')?.style.setProperty('display', 'none');
+    ecSetShopNav('shop');
+  }
+
+  async function ecShowOrderHistory() {
+    document.getElementById('ec-item-grid')?.style.setProperty('display', 'none');
+    document.querySelector('#ec-compare-main .ec-compare-banner')?.style.setProperty('display', 'none');
+    document.getElementById('ecGroupBannerShortcut')?.style.setProperty('display', 'none');
+    document.getElementById('ecSortBar')?.style.setProperty('display', 'none');
+    document.getElementById('ec-cart-section')?.style.setProperty('display', 'none');
+    document.getElementById('ec-order-section')?.style.setProperty('display', 'block');
+    ecSetShopNav('orders');
+    const list = document.getElementById('ec-order-list');
+    if (!list) return;
+    const uid = auth.currentUser?.uid;
+    if (!uid) {
+      list.innerHTML = '<div style="text-align:center;padding:24px;color:var(--zb-muted);">ログインが必要です</div>';
+      return;
+    }
+    list.innerHTML = '<div style="text-align:center;padding:24px;color:var(--zb-muted);">読み込み中…</div>';
+    try {
+      const snap = await getDocs(query(collection(db, 'materialsOrders'), where('userId', '==', uid), orderBy('createdAt', 'desc'), limit(20)));
+      const orders = [];
+      snap.forEach(d => orders.push({ id: d.id, ...d.data() }));
+      if (!orders.length) {
+        list.innerHTML = '<div style="text-align:center;padding:30px;color:var(--zb-muted);font-size:12px;">注文履歴はまだありません</div>';
+        return;
+      }
+      list.innerHTML = orders.map(o => {
+        const items = (o.items || []).map(i => escapeHtml(i.name || '')).join('、') || '—';
+        const total = (o.subtotal || 0) + Math.round((o.subtotal || 0) * (o.feeRate || 0.1));
+        const when = o.createdAt?.toDate?.() ? o.createdAt.toDate().toLocaleDateString('ja-JP') : '—';
+        return `<div style="background:var(--zb-card);border:1px solid var(--zb-border);border-radius:10px;padding:12px;margin-bottom:8px;font-size:12px;">
+          <div style="font-weight:700;color:var(--zb-navy);margin-bottom:4px;">${when} · ¥${total.toLocaleString()}</div>
+          <div style="color:var(--zb-muted);line-height:1.5;">${items}</div>
+          <div style="font-size:10px;color:var(--zb-green);margin-top:4px;">${escapeHtml(o.status || 'beta_pending')}</div>
+        </div>`;
+      }).join('');
+    } catch (_) {
+      list.innerHTML = '<div style="text-align:center;padding:24px;color:var(--zb-muted);">履歴を読み込めませんでした（β）</div>';
+    }
+  }
+
+  function mapApiItemToCompare(row, idx, mode) {
+    const price = +row.price || 0;
+    const src = row.src || (mode === 'rakuten' ? '楽天' : 'API');
+    return {
+      id: 'api_' + idx + '_' + Date.now(),
+      cat: 'tool',
+      name: row.name || row.title || '商品',
+      maker: src,
+      icon: '🛒',
+      unit: '個',
+      prices: [{ src, color: '#e24b4a', price, delivery: '要確認', isBest: true, url: row.url }],
+    };
+  }
+
+  function ecRenderCart() {
+    const list = document.getElementById('ec-cart-list');
+    const summary = document.getElementById('ec-order-summary');
+    if (!list) return;
+    if (!ecCart.length) {
+      list.innerHTML = '<div style="text-align:center;padding:30px;color:var(--zb-muted);">カートは空です</div>';
+      if (summary) summary.innerHTML = '';
+      return;
+    }
+    list.innerHTML = ecCart.map((c, i) => `<div class="ec-cart-item">
+      <div class="ec-ci-img">${c.item.icon}</div>
+      <div class="ec-ci-info">
+        <div class="ec-ci-name">${escapeHtml(c.item.name)}</div>
+        <div class="ec-ci-src">${escapeHtml(c.src)}から発注</div>
+        <div class="ec-ci-price">¥${c.price.toLocaleString()} × ${c.qty}${escapeHtml(c.item.unit)}</div>
+      </div>
+      <button type="button" class="ec-ci-del" data-ec-cart-del="${i}"><i class="ti ti-x"></i></button>
+    </div>`).join('');
+    list.querySelectorAll('[data-ec-cart-del]').forEach(btn => btn.addEventListener('click', () => {
+      ecCart.splice(+btn.dataset.ecCartDel, 1);
+      ecUpdateCartBadge();
+      ecRenderCart();
+    }));
+    const subtotal = ecCart.reduce((s, c) => s + c.price * c.qty, 0);
+    const fee = Math.round(subtotal * 0.1);
+    if (summary) summary.innerHTML = `
+      <div class="ec-os-row"><span class="k">小計</span><span class="v">¥${subtotal.toLocaleString()}</span></div>
+      <div class="ec-os-row"><span class="k">Zaibase手数料（10%）</span><span class="v" style="color:var(--zb-orange)">¥${fee.toLocaleString()}</span></div>
+      <div class="ec-os-row total"><span class="k">合計（税込）</span><span class="v">¥${(subtotal + fee).toLocaleString()}</span></div>`;
+  }
+
+  async function ecCheckout() {
+    if (!ecCart.length) return;
+    const uid = auth.currentUser?.uid;
+    if (uid) {
+      try {
+        await addDoc(collection(db, 'materialsOrders'), {
+          userId: uid,
+          items: ecCart.map(c => ({ itemId: c.item.id, name: c.item.name, src: c.src, price: c.price, qty: c.qty, unit: c.item.unit })),
+          subtotal: ecCart.reduce((s, c) => s + c.price * c.qty, 0),
+          feeRate: 0.1,
+          status: 'beta_pending',
+          createdAt: serverTimestamp(),
+        });
+      } catch (_) {}
+    }
+    trackEcInterest('checkout', 'cart');
+    ecShowToast('注文を確定しました。各販売店から発送されます（β）', true);
+    ecCart = [];
+    ecUpdateCartBadge();
+    ecShowCompareMain();
+  }
+
+  async function ecFilterCompareSearch() {
+    const q = (document.getElementById('ec-search-input')?.value || '').trim();
+    if (!q) {
+      ecCompareItems = ecCompareCat === 'all' ? [...EC_COMPARE_ITEMS_ALL] : EC_COMPARE_ITEMS_ALL.filter(i => i.cat === ecCompareCat);
+      renderEcCompareGrid();
+      return;
+    }
+    const local = EC_COMPARE_ITEMS_ALL.filter(i =>
+      i.name.includes(q) || i.maker.includes(q) || i.cat.includes(q));
+    ecShowToast('検索中…', false);
+    try {
+      const res = await searchMaterialsPricesFn({ keyword: q });
+      const data = res.data || {};
+      const apiRows = data.items || [];
+      if (apiRows.length && data.mode === 'rakuten') {
+        ecCompareItems = apiRows.slice(0, 10).map((row, i) => mapApiItemToCompare(row, i, 'rakuten'));
+        ecShowToast('楽天APIから ' + ecCompareItems.length + '件', true);
+      } else if (apiRows.length && apiRows[0].prices) {
+        ecCompareItems = [...local];
+        if (!ecCompareItems.length) ecCompareItems = [...EC_COMPARE_ITEMS_ALL];
+        ecShowToast('サンプル価格で表示（APIキー未設定）', false);
+      } else {
+        ecCompareItems = local.length ? local : EC_COMPARE_ITEMS_ALL.filter(i => i.name.includes(q) || i.maker.includes(q));
+        ecShowToast(local.length ? local.length + '件ヒット' : '該当なし', local.length > 0);
+      }
+    } catch (_) {
+      ecCompareItems = local.length ? local : EC_COMPARE_ITEMS_ALL.filter(i => i.name.includes(q) || i.maker.includes(q));
+      ecShowToast('ローカル検索結果を表示', false);
+    }
+    renderEcCompareGrid();
+  }
+
+  function ecSortCompareItems(v) {
+    if (v === 'price') {
+      ecCompareItems.sort((a, b) => ecGetBestPrice(a).price - ecGetBestPrice(b).price);
+    } else if (v === 'saving') {
+      ecCompareItems.sort((a, b) => {
+        const as = Math.max(...a.prices.map(p => p.price)) - ecGetBestPrice(a).price;
+        const bs = Math.max(...b.prices.map(p => p.price)) - ecGetBestPrice(b).price;
+        return bs - as;
+      });
+    } else if (v === 'popular') {
+      ecCompareItems.sort((a, b) => (b.id > a.id ? 1 : -1));
+    }
+    renderEcCompareGrid();
+  }
+
+  let ecCompareBound = false;
+  function initEcCompareShop() {
+    ecCompareItems = ecCompareCat === 'all' ? [...EC_COMPARE_ITEMS_ALL] : EC_COMPARE_ITEMS_ALL.filter(i => i.cat === ecCompareCat);
+    ecShowCompareMain();
+    renderEcCatRow();
+    renderEcCompareGrid();
+    ecUpdateCartBadge();
+    if (ecCompareBound) return;
+    ecCompareBound = true;
+    document.getElementById('ecSearchBtn')?.addEventListener('click', ecFilterCompareSearch);
+    document.getElementById('ec-search-input')?.addEventListener('keydown', e => { if (e.key === 'Enter') ecFilterCompareSearch(); });
+    document.getElementById('ec-sort-sel')?.addEventListener('change', e => ecSortCompareItems(e.target.value));
+    document.getElementById('ecShowCartBtn')?.addEventListener('click', ecShowCartView);
+    document.getElementById('ecContinueShopBtn')?.addEventListener('click', ecShowCompareMain);
+    document.getElementById('ecCheckoutBtn')?.addEventListener('click', ecCheckout);
+    document.getElementById('ecGroupBannerShortcut')?.addEventListener('click', () => switchEcMarketTab('group'));
+    document.getElementById('ec-item-modal')?.addEventListener('click', e => {
+      if (e.target.id === 'ec-item-modal') ecCloseItemModal();
+    });
+    document.getElementById('ecOrderBackBtn')?.addEventListener('click', ecShowCompareMain);
+    document.querySelectorAll('#ecShopBottomNav .ec-sn-item').forEach(btn => btn.addEventListener('click', () => {
+      const sn = btn.dataset.ecSn;
+      if (sn === 'shop') ecShowCompareMain();
+      else if (sn === 'home') showScreen('homeScreen');
+      else if (sn === 'cart') ecShowCartView();
+      else if (sn === 'orders') ecShowOrderHistory();
+    }));
+  }
+
+  function renderEcPageGroup() {
+    const el = document.getElementById('ecPageGroup');
+    if (!el) return;
+    const cards = EC_GROUP_BUYS.map(g => {
+      const pct = Math.min(100, Math.round((g.current / g.target) * 100));
+      const save = Math.round((1 - g.unitPrice / g.retailPrice) * 100);
+      const confirmed = g.status === 'confirmed';
+      const totalQty = g.target * g.qtyPerPerson;
+      const zbFee = Math.round(g.unitPrice * totalQty * 0.1);
+      return `<div class="ec-group-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">
+          <div>
+            <div style="font-size:11px;color:var(--zb-muted);">${escapeHtml(g.area)} · 締切 ${escapeHtml(g.deadline)} <span class="ec-model-badge ec-mb-c">モデルC</span></div>
+            <div style="font-size:14px;font-weight:700;margin:4px 0;">${escapeHtml(g.title)}</div>
+            <div style="font-size:12px;">${escapeHtml(g.product)} · 1人${g.qtyPerPerson}${escapeHtml(g.unit)}</div>
+          </div>
+          ${confirmed ? '<span style="font-size:10px;font-weight:700;padding:4px 8px;border-radius:6px;background:var(--zb-green);color:#fff;">成立</span>' : ''}
+        </div>
+        <div class="ec-gp-bar"><div class="ec-gp-fill" style="width:${pct}%;"></div></div>
+        <div style="font-size:12px;display:flex;justify-content:space-between;">
+          <span><strong>${g.current}</strong>/${g.target}人参加（${pct}%）</span>
+          <span class="ec-pc-save">まとめ買い ${save}% OFF</span>
+        </div>
+        <div style="margin-top:8px;font-size:15px;font-weight:800;color:var(--zb-navy);">¥${g.unitPrice.toLocaleString()}<span style="font-size:11px;font-weight:400;">/${escapeHtml(g.unit)}</span> <span class="ec-pc-retail" style="display:inline;">¥${g.retailPrice.toLocaleString()}</span></div>
+        <div style="font-size:10px;color:var(--zb-muted);margin-top:4px;">成立時 Zaibase手数料10%（例：¥${zbFee.toLocaleString()}）</div>
+        <button type="button" class="ec-join-btn" data-ec-join="${g.id}" style="width:100%;margin-top:10px;padding:10px;border:none;border-radius:8px;background:var(--zb-orange);color:#fff;font-size:13px;font-weight:700;cursor:pointer;${confirmed ? 'opacity:.6;' : ''}" ${confirmed ? 'disabled' : ''}>${confirmed ? '発注済み' : '参加する（β）'}</button>
+      </div>`;
+    }).join('');
+    el.innerHTML = `
+      <div class="ec-hero">
+        <div style="font-size:14px;font-weight:700;margin-bottom:6px;">🤝 グループ購買 <span class="ec-model-badge ec-mb-c">モデルC</span></div>
+        職人10人分をまとめて問屋発注。大量購入割引を還元し、Zaibaseは手数料10%。在庫リスクなし。
+      </div>
+      <div style="font-size:11px;background:#fff8e0;border:1px solid #f0d080;border-radius:10px;padding:10px;margin-bottom:12px;line-height:1.6;">
+        試算例：10人×20本シーリング → 月10グループで<strong>月48万円</strong>（手数料10%）
+      </div>
+      ${cards}`;
+    el.querySelectorAll('.ec-join-btn').forEach(btn => {
+      if (btn.disabled) return;
+      btn.addEventListener('click', () => {
+        const gid = btn.dataset.ecJoin;
+        const g = EC_GROUP_BUYS.find(x => x.id === gid);
+        alert(`【β】グループ購買の参加は準備中です。\n\n${g?.title || ''}\n目標${g?.target}人 · 現在${g?.current}人\n50人のユーザーが集まった段階で本番リリース予定。`);
+        trackEcInterest('group', gid);
+      });
+    });
+  }
+
+  async function trackEcInterest(type, itemId) {
+    const uid = auth.currentUser?.uid;
+    if (!uid) return;
+    try {
+      await addDoc(collection(db, 'affiliateClicks'), {
+        userId: uid,
+        company: 'zaibase_materials_ec',
+        category: 'materials_ec',
+        subCategory: type,
+        itemId: itemId || '',
+        clickedAt: serverTimestamp(),
+      });
+    } catch (_) {}
+  }
+
+  let ecMarketBound = false;
+  function bindMaterialsMarketEvents() {
+    if (ecMarketBound) return;
+    ecMarketBound = true;
+    document.getElementById('materialsMarketBackBtn')?.addEventListener('click', () => showScreen('mypageScreen'));
+    document.querySelectorAll('#materialsMarketScreen .ec-tab').forEach(btn => btn.addEventListener('click', () => switchEcMarketTab(btn.dataset.ecTab)));
+  }
+
+  function initMaterialsMarketScreen() {
+    bindMaterialsMarketEvents();
+    switchEcMarketTab(ecMarketTab || 'compare');
   }
 
   async function initRousaiScreen() {
@@ -9835,7 +10836,7 @@ support@zaibase.jp</p>
   }
 
   function updateBottomNavForScreen(id) {
-    const hideNav = ['loginScreen', 'jobPostScreen', 'jobApproveScreen', 'stripeScreen', 'estimateScreen', 'invoiceScreen', 'insuranceScreen', 'rousaiScreen', 'rousaiApplyScreen', 'photoReportScreen', 'deliveryScreen', 'eticketScreen', 'trackingScreen', 'safetyScreen', 'teamScreen', 'complianceGateScreen', 'chainScreen', 'faceRegisterScreen', 'chatRoomScreen', 'adminScreen'];
+    const hideNav = ['loginScreen', 'jobPostScreen', 'jobApproveScreen', 'stripeScreen', 'estimateScreen', 'invoiceScreen', 'insuranceScreen', 'rousaiScreen', 'rousaiApplyScreen', 'materialsMarketScreen', 'pointsScreen', 'emergencyMatchScreen', 'photoReportScreen', 'deliveryScreen', 'eticketScreen', 'trackingScreen', 'safetyScreen', 'teamScreen', 'complianceGateScreen', 'chainScreen', 'faceRegisterScreen', 'chatRoomScreen', 'adminScreen'];
     const isWorker = currentAccountRole !== 'orderer';
     const legacy = document.getElementById('bottomNav');
     const worker = document.getElementById('bottomNavWorker');
@@ -10975,7 +11976,7 @@ support@zaibase.jp</p>
     const prev = document.body.dataset.screenId;
     if (prev === 'trackingScreen' && id !== 'trackingScreen') stopTrackingTimers();
     if (prev === 'faceRegisterScreen' && id !== 'faceRegisterScreen') stopFaceRegisterWizard();
-    ['loginScreen','homeScreen','mainScreen','postScreen','mapScreen','mypageScreen','chatScreen','adminScreen','siteFaceScreen','jobPostScreen','teamJobPostScreen','jobApproveScreen','paymentScreen','stripeScreen','estimateScreen','invoiceScreen','insuranceScreen','rousaiScreen','rousaiApplyScreen','photoReportScreen','deliveryScreen','eticketScreen','trackingScreen','safetyScreen','teamScreen','complianceGateScreen','chainScreen','faceRegisterScreen'].forEach(s =>
+    ['loginScreen','homeScreen','mainScreen','postScreen','mapScreen','mypageScreen','chatScreen','adminScreen','siteFaceScreen','jobPostScreen','teamJobPostScreen','jobApproveScreen','paymentScreen','stripeScreen','estimateScreen','invoiceScreen','insuranceScreen','rousaiScreen','rousaiApplyScreen','materialsMarketScreen','pointsScreen','emergencyMatchScreen','photoReportScreen','deliveryScreen','eticketScreen','trackingScreen','safetyScreen','teamScreen','complianceGateScreen','chainScreen','faceRegisterScreen'].forEach(s =>
       document.getElementById(s).classList.add('hidden')
     );
     document.getElementById('chatRoomScreen').classList.add('hidden');
@@ -10984,7 +11985,7 @@ support@zaibase.jp</p>
     document.getElementById(id).classList.remove('hidden');
     document.body.dataset.screenId = id;
 
-    const hideFab = ['loginScreen', 'siteFaceScreen', 'jobPostScreen', 'teamJobPostScreen', 'jobApproveScreen', 'homeScreen', 'paymentScreen', 'stripeScreen', 'estimateScreen', 'invoiceScreen', 'insuranceScreen', 'rousaiScreen', 'rousaiApplyScreen', 'photoReportScreen', 'deliveryScreen', 'eticketScreen', 'trackingScreen', 'safetyScreen', 'teamScreen', 'complianceGateScreen', 'chainScreen', 'faceRegisterScreen', 'mypageScreen', 'chatScreen', 'chatRoomScreen'];
+    const hideFab = ['loginScreen', 'siteFaceScreen', 'jobPostScreen', 'teamJobPostScreen', 'jobApproveScreen', 'homeScreen', 'paymentScreen', 'stripeScreen', 'estimateScreen', 'invoiceScreen', 'insuranceScreen', 'rousaiScreen', 'rousaiApplyScreen', 'materialsMarketScreen', 'pointsScreen', 'emergencyMatchScreen', 'photoReportScreen', 'deliveryScreen', 'eticketScreen', 'trackingScreen', 'safetyScreen', 'teamScreen', 'complianceGateScreen', 'chainScreen', 'faceRegisterScreen', 'mypageScreen', 'chatScreen', 'chatRoomScreen'];
     document.getElementById('newMatchBtn')?.classList.toggle('hidden', hideFab.includes(id) || id !== 'mainScreen' || mainTab !== 'match');
     if (id === 'siteFaceScreen') initSiteFaceScreen();
     if (id === 'homeScreen') loadHomeDashboard();
@@ -10995,6 +11996,9 @@ support@zaibase.jp</p>
     if (id === 'insuranceScreen') initInsuranceScreen();
     if (id === 'rousaiScreen') initRousaiScreen();
     if (id === 'rousaiApplyScreen') initRousaiApplyScreen();
+    if (id === 'materialsMarketScreen') initMaterialsMarketScreen();
+    if (id === 'pointsScreen') initPointsScreen();
+    if (id === 'emergencyMatchScreen') initEmergencyMatchScreen();
     if (id === 'photoReportScreen') initPhotoReportScreen();
     if (id === 'deliveryScreen') initDeliveryScreen();
     if (id === 'eticketScreen') initEticketScreen();
@@ -12658,6 +13662,8 @@ support@zaibase.jp</p>
       </div>
     `;
     renderComplianceScoreCard(p);
+    renderTransactionRankCard(p);
+    renderZbPointsCard(p);
     renderPhoneAuthSection(p, user);
     renderCcusSection(p);
     renderFaceAuthSection(p);
@@ -13351,6 +14357,12 @@ support@zaibase.jp</p>
   });
   document.getElementById('mypageInsuranceBtn')?.addEventListener('click', () => showScreen('insuranceScreen'));
   document.getElementById('mypageRousaiBtn')?.addEventListener('click', () => showScreen('rousaiScreen'));
+  document.getElementById('mypageMaterialsMarketBtn')?.addEventListener('click', () => showScreen('materialsMarketScreen'));
+  document.getElementById('openMaterialsMarketBtn')?.addEventListener('click', () => showScreen('materialsMarketScreen'));
+  document.getElementById('mypagePointsBtn')?.addEventListener('click', () => showScreen('pointsScreen'));
+  document.getElementById('mypageEmergencyBtn')?.addEventListener('click', () => showScreen('emergencyMatchScreen'));
+  document.getElementById('pointsBackBtn')?.addEventListener('click', () => showScreen('mypageScreen'));
+  document.getElementById('emergencyBackBtn')?.addEventListener('click', () => showScreen('mypageScreen'));
   document.getElementById('insuranceToRousaiBtn')?.addEventListener('click', () => showScreen('rousaiScreen'));
   document.getElementById('rousaiBackBtn')?.addEventListener('click', () => showScreen('mypageScreen'));
   document.getElementById('rousaiApplyBackBtn')?.addEventListener('click', () => showScreen('rousaiScreen'));
