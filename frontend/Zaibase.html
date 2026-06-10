@@ -1448,6 +1448,76 @@
     .em-urgent-card { background: var(--zb-card); border: 2px solid var(--zb-orange); border-radius: 12px; padding: 14px; margin-bottom: 10px; }
     .em-pulse { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--zb-red,#e24b4a); animation: emPulse 1.2s infinite; margin-right: 6px; }
     @keyframes emPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(1.3)} }
+    /* 価格交渉・会員価格 v2（zaibase_pricing.html） */
+    #pricingScreen { background: var(--zb-bg); min-height: 100vh; display: flex; flex-direction: column; padding-bottom: 24px; color: var(--zb-text); --navy: var(--zb-navy); --orange: var(--zb-orange); --bg: var(--zb-bg); --card: var(--zb-card); --text: var(--zb-text); --muted: var(--zb-muted); --border: var(--zb-border); --green: var(--zb-green); --red: #e24b4a; --amber: #f59e0b; }
+    #pricingScreen .pr2-hd { background: var(--zb-navy); padding: 13px 16px; display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    #pricingScreen .pr2-back { color: rgba(255,255,255,.7); font-size: 22px; cursor: pointer; border: none; background: none; }
+    #pricingScreen .pr2-title { color: #fff; font-size: 17px; font-weight: 700; margin: 0 auto; }
+    #pricingScreen .pr2-tabs { background: var(--zb-card); border-bottom: 1px solid var(--zb-border); display: flex; padding: 0 14px; position: sticky; top: 0; z-index: 9; overflow-x: auto; scrollbar-width: none; }
+    #pricingScreen .pr2-tab { padding: 11px 12px; font-size: 12px; font-weight: 500; color: var(--zb-muted); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; white-space: nowrap; border: none; background: none; }
+    #pricingScreen .pr2-tab.act { color: var(--zb-navy); border-bottom-color: var(--zb-navy); font-weight: 700; }
+    #pricingScreen .pr2-main { flex: 1; padding: 14px; max-width: 600px; margin: 0 auto; width: 100%; }
+    #pricingScreen .section { background: var(--zb-card); border-radius: 14px; border: 1px solid var(--zb-border); padding: 15px; margin-bottom: 12px; }
+    #pricingScreen .sec-title { font-size: 14px; font-weight: 700; color: var(--zb-navy); margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+    #pricingScreen .sec-title i { font-size: 17px; color: var(--zb-orange); }
+    #pricingScreen .tier-hero { background: linear-gradient(135deg, var(--zb-navy), #2c5f82); border-radius: 16px; padding: 16px; margin-bottom: 14px; color: #fff; }
+    #pricingScreen .th-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; }
+    #pricingScreen .th-item { background: rgba(255,255,255,.12); border-radius: 10px; padding: 10px; text-align: center; }
+    #pricingScreen .th-item .n { font-size: 18px; font-weight: 800; }
+    #pricingScreen .th-item.best { background: rgba(29,158,117,.35); border: 1.5px solid #4ade80; }
+    #pricingScreen .price-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    #pricingScreen .price-table th { background: #f0f5fa; color: var(--zb-navy); font-weight: 700; padding: 8px 6px; border-bottom: 2px solid var(--zb-border); text-align: center; }
+    #pricingScreen .price-table td { padding: 8px 6px; border-bottom: 1px solid var(--zb-bg); text-align: center; }
+    #pricingScreen .pt-general { color: #e24b4a; }
+    #pricingScreen .pt-member { color: #f59e0b; font-weight: 700; }
+    #pricingScreen .pt-bulk { color: var(--zb-green); font-weight: 800; }
+    #pricingScreen .supplier-card { border: 1px solid var(--zb-border); border-radius: 12px; padding: 13px; margin-bottom: 10px; cursor: pointer; }
+    #pricingScreen .supplier-card.contracted { border-color: var(--zb-green); border-left: 4px solid var(--zb-green); }
+    #pricingScreen .supplier-card.negotiating { border-color: var(--zb-orange); border-left: 4px solid var(--zb-orange); }
+    #pricingScreen .ss-contracted { background: #e8f8f2; color: var(--zb-green); }
+    #pricingScreen .ss-negotiating { background: #fff8e0; color: #7a5a00; }
+    #pricingScreen .ss-pending { background: #f0f0f0; color: #888; }
+    #pricingScreen .sc-meta { display: flex; flex-wrap: wrap; gap: 8px; font-size: 12px; color: var(--zb-muted); margin-bottom: 8px; }
+    #pricingScreen .sc-rates { display: flex; gap: 6px; flex-wrap: wrap; }
+    #pricingScreen .rate-chip { padding: 4px 9px; border-radius: 8px; font-size: 11px; font-weight: 600; }
+    #pricingScreen .rc-ok { background: #e8f8f2; color: var(--zb-green); }
+    #pricingScreen .rc-neg { background: #fff8e0; color: #7a5a00; }
+    #pricingScreen .field { margin-bottom: 11px; }
+    #pricingScreen .field label { display: block; font-size: 12px; font-weight: 600; color: var(--zb-muted); margin-bottom: 4px; }
+    #pricingScreen input, #pricingScreen select, #pricingScreen textarea { width: 100%; height: 42px; border: 1px solid var(--zb-border); border-radius: 8px; padding: 0 11px; font-size: 14px; background: var(--zb-card); font-family: inherit; }
+    #pricingScreen textarea { height: 70px; padding: 9px 11px; resize: none; line-height: 1.6; }
+    #pricingScreen .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    #pricingScreen .kake-row { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+    #pricingScreen .kake-slider { flex: 1; accent-color: var(--zb-navy); }
+    #pricingScreen .sim-box { background: #f0faf5; border: 1px solid #9fe1cb; border-radius: 10px; padding: 12px; margin-top: 8px; }
+    #pricingScreen .sim-row { display: flex; justify-content: space-between; font-size: 13px; padding: 4px 0; border-bottom: 0.5px solid #d0e8d8; }
+    #pricingScreen .sim-row.profit .v { color: var(--zb-green); font-weight: 800; font-size: 15px; }
+    #pricingScreen .script-box { background: #f0f5fa; border: 1px solid #b8d0e8; border-radius: 10px; padding: 13px; margin-top: 8px; }
+    #pricingScreen .script-text { font-size: 12px; line-height: 1.8; white-space: pre-wrap; border: 1px solid var(--zb-border); border-radius: 8px; padding: 10px; background: var(--zb-card); }
+    #pricingScreen .copy-btn { margin-top: 7px; padding: 7px 14px; background: var(--zb-navy); color: #fff; border: none; border-radius: 7px; font-size: 12px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 5px; }
+    #pricingScreen .member-price-card { border-radius: 14px; overflow: hidden; margin-bottom: 10px; }
+    #pricingScreen .mpc-header.general { background: #fde8e8; }
+    #pricingScreen .mpc-header.pro { background: #e8f0fa; }
+    #pricingScreen .mpc-header.max { background: #e8f8f2; }
+    #pricingScreen .mpc-header.bulk { background: #fff8e0; }
+    #pricingScreen .mpc-body { padding: 12px 14px; background: var(--zb-card); border: 1px solid var(--zb-border); border-top: none; border-radius: 0 0 14px 14px; }
+    #pricingScreen .rev-hero { background: linear-gradient(135deg,#1a5c3a,var(--zb-green)); border-radius: 14px; padding: 16px; margin-bottom: 14px; color: #fff; }
+    #pricingScreen .rh-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; }
+    #pricingScreen .rh-item { background: rgba(255,255,255,.15); border-radius: 8px; padding: 10px; text-align: center; }
+    #pricingScreen .rh-item .n { font-size: 18px; font-weight: 800; }
+    #pricingScreen .btn { width: 100%; padding: 13px; border-radius: 10px; font-size: 14px; font-weight: 700; border: none; cursor: pointer; margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 6px; }
+    #pricingScreen .btn-primary { background: var(--zb-navy); color: #fff; }
+    #pricingScreen .pr2-toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%) translateY(60px); background: var(--zb-text); color: #fff; padding: 11px 20px; border-radius: 22px; font-size: 13px; transition: transform .3s; z-index: 99; pointer-events: none; }
+    #pricingScreen .pr2-toast.show { transform: translateX(-50%) translateY(0); }
+    #pricingScreen .pr2-toast.ok { background: var(--zb-green); }
+    /* photo report 等で共用する pr-*（#photoReportScreen） */
+    .pr-hd { background: var(--zb-navy); padding: 13px 16px; display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .pr-back { color: rgba(255,255,255,.7); font-size: 22px; cursor: pointer; border: none; background: none; }
+    .pr-title { color: #fff; font-size: 17px; font-weight: 700; margin: 0 auto; }
+    .pr-tabs { background: var(--zb-card); border-bottom: 1px solid var(--zb-border); display: flex; overflow-x: auto; padding: 0 8px; position: sticky; top: 0; z-index: 9; scrollbar-width: none; }
+    .pr-tab { padding: 11px 10px; font-size: 11px; font-weight: 500; color: var(--zb-muted); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; white-space: nowrap; border: none; background: none; }
+    .pr-tab.act { color: var(--zb-navy); border-bottom-color: var(--zb-navy); font-weight: 700; }
+    .pr-main { flex: 1; padding: 14px; max-width: 560px; margin: 0 auto; width: 100%; }
     /* 多層契約管理（§20 #chainScreen） */
     #chainScreen { display: flex; flex-direction: column; min-height: 100vh; background: var(--zb-bg); padding-bottom: 32px; }
     .ch-hd { background: var(--zb-navy); padding: 13px 16px; display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
@@ -2108,7 +2178,9 @@
       </div>
     </div>
   </header>
-  <div class="tm-legal-banner">β・設計参考。価格はサンプル。API連携・問屋契約後に本番価格。毒物劇物・火薬類は非対応。</div>
+  <div class="tm-legal-banner">β・設計参考。価格はサンプル。API連携・問屋契約後に本番価格。毒物劇物・火薬類は非対応。
+    <button type="button" id="ecOpenPricingBtn" style="display:block;margin:6px auto 0;padding:6px 14px;border:1px solid rgba(255,255,255,.4);border-radius:8px;background:rgba(255,255,255,.15);color:#fff;font-size:11px;font-weight:700;cursor:pointer;">💰 会員価格・問屋交渉を開く</button>
+  </div>
   <div class="ec-tabs">
     <button type="button" class="ec-tab act" data-ec-tab="compare">最安値比較</button>
     <button type="button" class="ec-tab" data-ec-tab="flea">余剰フリマ</button>
@@ -2175,6 +2247,380 @@
     <button type="button" class="ec-sn-item" data-ec-sn="orders"><i class="ti ti-package"></i><span>注文履歴</span></button>
   </nav>
   <div class="ec-toast" id="ec-toast"></div>
+</div>
+
+<div id="pricingScreen" class="hidden">
+  <header class="pr2-hd">
+    <button type="button" class="pr2-back" id="pricingBackBtn"><i class="ti ti-arrow-left"></i></button>
+    <span class="pr2-title">価格交渉・会員価格管理</span>
+  </header>
+  <div class="tm-legal-banner">β・内部設計参考。掛け率・契約状況はサンプル。問屋契約後に本番価格へ切替。</div>
+  <div class="pr2-tabs">
+    <button type="button" class="pr2-tab act" data-pr-tab="tier">会員別価格</button>
+    <button type="button" class="pr2-tab" data-pr-tab="supplier">問屋交渉管理</button>
+    <button type="button" class="pr2-tab" data-pr-tab="sim">収益シミュレーター</button>
+    <button type="button" class="pr2-tab" data-pr-tab="script">交渉スクリプト</button>
+  </div>
+  <main class="pr2-main">
+<div id="prPageTier">
+    <div class="tier-hero">
+      <div class="th-title">
+        <i class="ti ti-layers" style="font-size:18px;color:var(--orange)"></i>
+        Zaibaseの3段階価格体系
+      </div>
+      <div class="th-grid">
+        <div class="th-item">
+          <div class="n">一般価格</div>
+          <div class="l">市場価格<br>（定価の80〜90%）</div>
+        </div>
+        <div class="th-item">
+          <div class="n">会員価格</div>
+          <div class="l">Pro/Maxプラン<br>市場比10〜20%安</div>
+        </div>
+        <div class="th-item best">
+          <div class="n">🏆 バルク</div>
+          <div class="l">グループ購買<br>市場比25〜35%安</div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-table"></i>商品別 価格帯比較</div>
+      <div style="overflow-x:auto;">
+        <table class="price-table" id="prPriceTable"></table>
+      </div>
+      <div style="font-size:11px;color:var(--muted);margin-top:8px;line-height:1.6;">
+        ※掛け率はZaibaseが問屋・メーカーと交渉した結果に基づきます。<br>
+        ※バルク価格は10人以上のグループ購買時に適用されます。
+      </div>
+    </div>
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-eye"></i>ユーザーには何が見えるか</div>
+      <div class="member-price-card">
+        <div class="mpc-header general">
+          <span class="mpc-icon">👤</span>
+          <span class="mpc-name">未登録・無料会員</span>
+          <span class="mpc-tag tag-general">一般価格</span>
+        </div>
+        <div class="mpc-body">
+          <div class="mpc-price-row">
+            <span class="mppr-item">変成シリコン 333ml</span>
+            <span class="mppr-price" style="color:var(--red)">¥1,200/本</span>
+          </div>
+          <div style="font-size:11px;color:var(--muted);margin-top:6px;">
+            💡 Proプランに加入すると¥300/本（25%）安くなります
+          </div>
+        </div>
+      </div>
+      <div class="member-price-card">
+        <div class="mpc-header pro">
+          <span class="mpc-icon">⭐</span>
+          <span class="mpc-name">Proプラン会員</span>
+          <span class="mpc-tag tag-pro">会員価格</span>
+        </div>
+        <div class="mpc-body">
+          <div class="mpc-price-row">
+            <span class="mppr-item">変成シリコン 333ml</span>
+            <span class="mppr-price" style="color:var(--amber)">¥900/本</span>
+          </div>
+          <div style="font-size:11px;color:var(--muted);margin-top:6px;">
+            💡 グループ購買（10人〜）に参加すると¥750/本になります
+          </div>
+        </div>
+      </div>
+      <div class="member-price-card">
+        <div class="mpc-header max">
+          <span class="mpc-icon">👑</span>
+          <span class="mpc-name">Maxプラン会員</span>
+          <span class="mpc-tag tag-max">最優遇価格</span>
+        </div>
+        <div class="mpc-body">
+          <div class="mpc-price-row">
+            <span class="mppr-item">変成シリコン 333ml</span>
+            <span class="mppr-price" style="color:var(--green)">¥825/本</span>
+          </div>
+          <div style="font-size:11px;color:var(--muted);margin-top:6px;">
+            ✓ 最優遇価格が適用されています。グループ購買で¥750まで下げられます
+          </div>
+        </div>
+      </div>
+      <div class="member-price-card">
+        <div class="mpc-header bulk">
+          <span class="mpc-icon">👥</span>
+          <span class="mpc-name">グループ購買（10人以上）</span>
+          <span class="mpc-tag tag-bulk">バルク価格</span>
+        </div>
+        <div class="mpc-body">
+          <div class="mpc-price-row">
+            <span class="mppr-item">変成シリコン 333ml</span>
+            <span class="mppr-price" style="color:var(--green);font-size:16px;">¥750/本</span>
+          </div>
+          <div style="font-size:11px;color:var(--green);font-weight:600;margin-top:6px;">
+            一般価格¥1,200比 → ¥450（37.5%）節約
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="prPageSupplier" class="hidden">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px;">
+      <div style="background:#e8f8f2;border-radius:10px;padding:10px;text-align:center;">
+        <div style="font-size:20px;font-weight:800;color:var(--green)">2</div>
+        <div style="font-size:11px;color:var(--muted)">契約済み</div>
+      </div>
+      <div style="background:#fff8e0;border-radius:10px;padding:10px;text-align:center;">
+        <div style="font-size:20px;font-weight:800;color:var(--amber)">2</div>
+        <div style="font-size:11px;color:var(--muted)">交渉中</div>
+      </div>
+      <div style="background:#f0f0f0;border-radius:10px;padding:10px;text-align:center;">
+        <div style="font-size:20px;font-weight:800;color:#888">1</div>
+        <div style="font-size:11px;color:var(--muted)">アプローチ予定</div>
+      </div>
+    </div>
+    <div class="supplier-card contracted" data-sup="yamamoto">
+      <div class="sc-top">
+        <div>
+          <div class="sc-name">山本政清商店</div>
+          <div class="sc-type">地域金物屋 ／ 大阪・神奈川対応</div>
+        </div>
+        <span class="sc-status ss-contracted">契約済み</span>
+      </div>
+      <div class="sc-meta">
+        <span><i class="ti ti-package"></i>シーリング・タイル資材</span>
+        <span><i class="ti ti-calendar"></i>契約：2026年5月</span>
+        <span><i class="ti ti-coin-yen"></i>月取引¥180万</span>
+      </div>
+      <div class="sc-rates">
+        <span class="rate-chip rc-ok">会員価格：7掛け</span>
+        <span class="rate-chip rc-ok">バルク：5.5掛け</span>
+        <span class="rate-chip rc-ok">翌日配送対応</span>
+      </div>
+    </div>
+    <div class="supplier-card contracted" data-sup="miura">
+      <div class="sc-top">
+        <div>
+          <div class="sc-name">ミウラ</div>
+          <div class="sc-type">地域建材店 ／ 神奈川エリア</div>
+        </div>
+        <span class="sc-status ss-contracted">契約済み</span>
+      </div>
+      <div class="sc-meta">
+        <span><i class="ti ti-package"></i>足場資材・単管・クランプ</span>
+        <span><i class="ti ti-calendar"></i>契約：2026年6月</span>
+        <span><i class="ti ti-coin-yen"></i>月取引¥95万</span>
+      </div>
+      <div class="sc-rates">
+        <span class="rate-chip rc-ok">会員価格：6.5掛け</span>
+        <span class="rate-chip rc-ok">バルク：5掛け</span>
+        <span class="rate-chip rc-ok">当日受取可</span>
+      </div>
+    </div>
+    <div class="supplier-card negotiating" data-sup="cemedine">
+      <div class="sc-top">
+        <div>
+          <div class="sc-name">セメダイン（代理店経由）</div>
+          <div class="sc-type">シーリングメーカー ／ 全国対応</div>
+        </div>
+        <span class="sc-status ss-negotiating">交渉中</span>
+      </div>
+      <div class="sc-meta">
+        <span><i class="ti ti-package"></i>変成シリコン・エポキシ系</span>
+        <span><i class="ti ti-calendar"></i>初回面談：2026年6月12日</span>
+        <span><i class="ti ti-users"></i>担当：田中部長</span>
+      </div>
+      <div class="sc-rates">
+        <span class="rate-chip rc-neg">交渉中：7掛け希望</span>
+        <span class="rate-chip rc-neg">バルク：5.5掛け交渉中</span>
+      </div>
+    </div>
+    <div class="supplier-card negotiating" data-sup="konishi">
+      <div class="sc-top">
+        <div>
+          <div class="sc-name">コニシ（ボンド）</div>
+          <div class="sc-type">接着剤・シーリングメーカー ／ 全国</div>
+        </div>
+        <span class="sc-status ss-negotiating">交渉中</span>
+      </div>
+      <div class="sc-meta">
+        <span><i class="ti ti-package"></i>ボンドシリコン・コーキング材</span>
+        <span><i class="ti ti-calendar"></i>メール返信待ち</span>
+      </div>
+      <div class="sc-rates">
+        <span class="rate-chip rc-neg">代理店経由で申請中</span>
+      </div>
+    </div>
+    <div class="supplier-card pending">
+      <div class="sc-top">
+        <div>
+          <div class="sc-name">ナイス株式会社（建材商社）</div>
+          <div class="sc-type">建材総合商社 ／ 全国対応</div>
+        </div>
+        <span class="sc-status ss-pending">アプローチ予定</span>
+      </div>
+      <div class="sc-meta">
+        <span><i class="ti ti-package"></i>建材全般・複数メーカー扱い</span>
+        <span><i class="ti ti-calendar"></i>アポ調整中</span>
+      </div>
+      <div class="sc-rates">
+        <span class="rate-chip rc-no">未交渉</span>
+      </div>
+    </div>
+    <button class="btn btn-primary" id="prAddSupplierBtn">
+      <i class="ti ti-plus"></i>問屋・メーカーを追加
+    </button>
+  </div>
+  <div id="prPageSim" class="hidden">
+    <div class="rev-hero">
+      <div class="rh-title">
+        <i class="ti ti-coin-yen" style="font-size:16px"></i>
+        資材EC 収益シミュレーション
+      </div>
+      <div class="rh-grid">
+        <div class="rh-item">
+          <div class="n" id="prSMonthly">¥0</div>
+          <div class="l">月間手数料収入</div>
+        </div>
+        <div class="rh-item">
+          <div class="n" id="prSYearly">¥0</div>
+          <div class="l">年間手数料収入</div>
+        </div>
+        <div class="rh-item">
+          <div class="n" id="prSSaving">¥0</div>
+          <div class="l">職人の月間節約額</div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-sliders"></i>条件を入力</div>
+      <div class="kake-row">
+        <span class="kake-label">登録職人数</span>
+        <input type="range" class="kake-slider" min="10" max="2000" step="10"
+          value="100" id="prSlUsers">
+        <span class="kake-val" id="prVUsers">100人</span>
+      </div>
+      <div class="kake-row">
+        <span class="kake-label">月間購買額<br>（1人あたり）</span>
+        <input type="range" class="kake-slider" min="5000" max="200000" step="5000"
+          value="30000" id="prSlSpend">
+        <span class="kake-val" id="prVSpend">¥3万</span>
+      </div>
+      <div class="kake-row">
+        <span class="kake-label">Zaibase<br>手数料率</span>
+        <input type="range" class="kake-slider" min="5" max="15" step="1"
+          value="10" id="prSlFee">
+        <span class="kake-val" id="prVFee">10%</span>
+      </div>
+      <div class="kake-row">
+        <span class="kake-label">職人の<br>節約率</span>
+        <input type="range" class="kake-slider" min="10" max="40" step="1"
+          value="25" id="prSlSave">
+        <span class="kake-val" id="prVSave">25%</span>
+      </div>
+      <div class="sim-box" id="sim-result">
+        <div class="sim-row"><span class="k">月間総取引額</span><span class="v" id="prRGmv">—</span></div>
+        <div class="sim-row"><span class="k">Zaibase手数料（税引き前）</span><span class="v" id="prRFee">—</span></div>
+        <div class="sim-row"><span class="k">税引き後（約34%控除）</span><span class="v" id="prRNet">—</span></div>
+        <div class="sim-row profit"><span class="k">年間税引き後収益</span><span class="v" id="prRYearly">—</span></div>
+        <div class="sim-row"><span class="k">職人1人の月間節約額</span><span class="v" id="prRSaving">—</span></div>
+        <div class="sim-row"><span class="k">「資材ECがあるからProに入る」効果</span>
+          <span class="v" id="prRPromo" style="color:var(--orange)">—</span>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-calculator"></i>掛け率と価格の関係</div>
+      <div class="field">
+        <label>商品の定価</label>
+        <input type="number" id="prTeika" value="1500">
+      </div>
+      <div id="prKakeResults" style="display:flex;flex-direction:column;gap:6px;margin-top:8px;"></div>
+    </div>
+  </div>
+  <div id="prPageScript" class="hidden">
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-phone"></i>電話・訪問用スクリプト</div>
+      <div class="field">
+        <label>問屋・メーカー名</label>
+        <input type="text" id="prScCompany" placeholder="例：山本政清商店" value="山本政清商店">
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label>自社の登録職人数</label>
+          <input type="number" id="prScUsers" value="100">
+        </div>
+        <div class="field">
+          <label>月間見込み購買額（万円）</label>
+          <input type="number" id="prScBudget" value="300">
+        </div>
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label>希望する掛け率（会員価格）</label>
+          <select id="prScKake1">
+            <option value="6.5">6.5掛け</option>
+            <option value="7" selected>7掛け</option>
+            <option value="7.5">7.5掛け</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>希望する掛け率（バルク）</label>
+          <select id="prScKake2">
+            <option value="5" selected>5掛け</option>
+            <option value="5.5">5.5掛け</option>
+            <option value="6">6掛け</option>
+          </select>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary" id="prGenScriptBtn">
+        <i class="ti ti-sparkles"></i>スクリプトを生成する
+      </button>
+      <div id="prScriptOutput" class="hidden" style="margin-top:12px;">
+        <div class="script-box">
+          <div class="script-title">📞 電話・訪問スクリプト（コピーして使用）</div>
+          <div class="script-text" id="prScriptText"></div>
+          <button type="button" class="copy-btn" id="prCopyScriptBtn">
+            <i class="ti ti-copy"></i>コピーする
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-mail"></i>初回コンタクトメール文（テンプレート）</div>
+      <div class="script-box">
+        <div class="script-title">メール件名：建設職人向けプラットフォーム「Zaibase」からのご提案</div>
+        <div class="script-text" id="prEmailTemplate">株式会社（御社名）
+ご担当者様
+
+はじめてご連絡申し上げます。
+一般社団法人Zaibase（ザイベース）の（担当者名）と申します。
+
+弊社は建設職人・一人親方向けのマッチング・資材購買プラットフォームを運営しており、
+現在（　）名の職人・建設業者が登録しています。
+
+このたび、登録会員への資材供給パートナーとして、
+貴社との取引を検討いただけないかとご連絡いたしました。
+
+▼ 弊社の特徴
+・登録職人数：（　）名（神奈川・大阪エリア中心）
+・月間資材購買見込み：約（　）万円
+・グループ購買（10名以上まとめ発注）の仕組みあり
+・一括発注・一括決済で貴社の業務負荷を軽減
+
+▼ ご提案内容
+会員向け価格（掛け率（　）掛け程度）でのご供給を
+検討いただけますでしょうか。
+
+まずは30分程度のお打ち合わせの機会をいただけますと幸いです。
+
+Zaibase 担当者
+Email：info@zaibase.jp</div>
+        <button type="button" class="copy-btn" id="prCopyEmailBtn">
+          <i class="ti ti-copy"></i>コピーする
+        </button>
+      </div>
+    </div>
+  </div>
+  </main>
+  <div class="pr2-toast" id="prToast"></div>
 </div>
 
 <!-- Zaibaseポイント（Yahoo型・§23） -->
@@ -2773,6 +3219,7 @@
     <button type="button" id="mypageInsuranceBtn">🛡️ 現場保険</button>
     <button type="button" id="mypageRousaiBtn">🦺 労災サポート</button>
     <button type="button" id="mypageMaterialsMarketBtn">🏪 資材マーケット</button>
+    <button type="button" id="mypagePricingBtn">💰 会員価格・交渉</button>
     <button type="button" id="mypagePointsBtn">🪙 Zaibaseポイント</button>
     <button type="button" id="mypageEmergencyBtn">🚨 緊急手配</button>
     <button type="button" id="mypagePhotoReportBtn">📷 現場報告</button>
@@ -4901,6 +5348,164 @@ support@zaibase.jp</p>
 
   function initEmergencyMatchScreen() {
     renderEmergencyMatchScreen();
+  }
+
+  // ===== 価格交渉・会員価格 v2（zaibase_pricing.html） =====
+  let prTab = 'tier';
+  const PR_TABLE_PRODUCTS = [
+    { name:'変成シリコン 333ml', general:1200, member:900, bulk:750 },
+    { name:'タイル接着剤 25kg', general:3800, member:3000, bulk:2500 },
+    { name:'ウレタン防水塗料 16kg', general:15000, member:12000, bulk:9800 },
+    { name:'単管パイプ 2m', general:980, member:780, bulk:650 },
+    { name:'フルハーネス安全帯', general:23000, member:19000, bulk:15800 },
+    { name:'シリコンシーラント 333ml', general:980, member:750, bulk:620 },
+  ];
+
+  function prShowToast(msg, ok) {
+    const t = document.getElementById('prToast');
+    if (!t) { ecShowToast?.(msg, ok) || alert(msg); return; }
+    t.textContent = msg;
+    t.className = 'pr2-toast show' + (ok ? ' ok' : '');
+    setTimeout(() => { t.className = 'pr2-toast'; }, 2600);
+  }
+
+  function prBuildPriceTable() {
+    const el = document.getElementById('prPriceTable');
+    if (!el) return;
+    el.innerHTML = `<thead><tr><th>商品</th><th>一般価格</th><th>会員価格<br><span style="font-weight:400;font-size:10px">Pro/Max</span></th><th>バルク価格<br><span style="font-weight:400;font-size:10px">10人〜</span></th><th>節約率</th></tr></thead><tbody>
+      ${PR_TABLE_PRODUCTS.map(p => {
+        const savePct = Math.round((p.general - p.bulk) / p.general * 100);
+        return `<tr><td>${escapeHtml(p.name)}</td><td class="pt-general">¥${p.general.toLocaleString()}</td>
+          <td class="pt-member">¥${p.member.toLocaleString()}<div class="pt-rate rate-good">▲${Math.round((p.general-p.member)/p.general*100)}%</div></td>
+          <td class="pt-bulk">¥${p.bulk.toLocaleString()}<div class="pt-rate rate-great">▲${savePct}%</div></td>
+          <td style="color:var(--zb-green);font-weight:700;">最大${savePct}%</td></tr>`;
+      }).join('')}</tbody>`;
+  }
+
+  function prCalcSim() {
+    const users = +(document.getElementById('prSlUsers')?.value || 100);
+    const spend = +(document.getElementById('prSlSpend')?.value || 30000);
+    const fee = +(document.getElementById('prSlFee')?.value || 10) / 100;
+    const save = +(document.getElementById('prSlSave')?.value || 25) / 100;
+    const set = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
+    set('prVUsers', users + '人');
+    set('prVSpend', '¥' + Math.round(spend / 10000) + '万');
+    set('prVFee', Math.round(fee * 100) + '%');
+    set('prVSave', Math.round(save * 100) + '%');
+    const gmv = users * spend;
+    const feeAmt = Math.round(gmv * fee);
+    const netAmt = Math.round(feeAmt * 0.66);
+    const yearly = netAmt * 12;
+    const saving = Math.round(spend * save);
+    const proBonus = Math.round(users * 0.2 * 3980);
+    const fmt = n => n >= 1e6 ? '¥' + Math.round(n / 1e4) + '万' : '¥' + n.toLocaleString();
+    set('prRGmv', fmt(gmv));
+    set('prRFee', fmt(feeAmt));
+    set('prRNet', fmt(netAmt));
+    set('prRYearly', fmt(yearly));
+    set('prRSaving', fmt(saving));
+    set('prRPromo', '+' + fmt(proBonus) + '/月');
+    set('prSMonthly', fmt(netAmt));
+    set('prSYearly', fmt(yearly));
+    set('prSSaving', fmt(saving * users));
+  }
+
+  function prCalcKake() {
+    const teika = +(document.getElementById('prTeika')?.value || 0);
+    const el = document.getElementById('prKakeResults');
+    if (!el) return;
+    const tiers = [
+      { label: '大手ゼネコン（4.5掛け）', rate: 0.45, color: '#1a3c5e' },
+      { label: 'バルク購買（5.5掛け）', rate: 0.55, color: '#1d9e75' },
+      { label: '会員価格（7掛け）', rate: 0.70, color: '#f59e0b' },
+      { label: '一人親方個人（8掛け）', rate: 0.80, color: '#e8a020' },
+      { label: '小売価格（9掛け）', rate: 0.90, color: '#e24b4a' },
+    ];
+    const bulkPrice = Math.round(teika * tiers[1].rate);
+    el.innerHTML = tiers.map(t => {
+      const price = Math.round(teika * t.rate);
+      const diff = price - bulkPrice;
+      return `<div style="display:flex;align-items:center;gap:8px;padding:7px 10px;background:var(--zb-bg);border-radius:8px;font-size:12px;">
+        <span style="width:8px;height:8px;border-radius:50%;background:${t.color};flex-shrink:0;"></span>
+        <span style="flex:1;color:var(--zb-muted);">${t.label}</span>
+        <span style="font-weight:700;">¥${price.toLocaleString()}</span>
+        ${diff > 0 ? `<span style="color:#e24b4a;font-size:11px;">+¥${diff.toLocaleString()}</span>` : ''}</div>`;
+    }).join('');
+  }
+
+  function prGenerateScript() {
+    const company = document.getElementById('prScCompany')?.value || '御社';
+    const users = document.getElementById('prScUsers')?.value || '100';
+    const budget = document.getElementById('prScBudget')?.value || '300';
+    const kake1 = document.getElementById('prScKake1')?.value || '7';
+    const kake2 = document.getElementById('prScKake2')?.value || '5';
+    const script = `お忙しいところ恐れ入ります。
+「Zaibase（ザイベース）」という建設職人向けプラットフォームを運営しております、
+（担当者名）と申します。
+
+現在、弊社のプラットフォームには${users}名の職人・建設業者が登録しており、
+${company}様の商品に対して月間約${budget}万円の購買需要があると試算しています。
+
+本日ご連絡した目的は、弊社会員向けの特別価格でのご供給についてご相談したいためです。
+
+具体的には、
+・会員向け価格：定価の${kake1}掛け程度
+・10名以上のグループ購買時：定価の${kake2}掛け程度
+でのご対応が可能かどうかお聞きしたいのですが、
+ご担当者様とお打ち合わせのお時間をいただけますでしょうか？
+
+弊社からは
+・月間の発注量をコミットできること
+・一括発注・一括決済で業務コストを削減できること
+・地域の職人へのブランド認知向上
+といったメリットをご提供できます。
+
+30分程度でも構いません。ご都合のよい日程を教えていただけますか？`;
+    const out = document.getElementById('prScriptText');
+    if (out) out.textContent = script;
+    document.getElementById('prScriptOutput')?.classList.remove('hidden');
+    prShowToast('スクリプトを生成しました', true);
+  }
+
+  async function prCopyText(id) {
+    const t = document.getElementById(id);
+    if (!t) return;
+    try { await navigator.clipboard.writeText(t.textContent); prShowToast('コピーしました', true); }
+    catch (_) { alert('コピーに失敗しました'); }
+  }
+
+  function switchPricingTab(tab) {
+    prTab = tab;
+    document.querySelectorAll('#pricingScreen .pr2-tab').forEach(b => b.classList.toggle('act', b.dataset.prTab === tab));
+    ['tier', 'supplier', 'sim', 'script'].forEach(t => {
+      const page = document.getElementById('prPage' + t.charAt(0).toUpperCase() + t.slice(1));
+      if (page) page.classList.toggle('hidden', t !== tab);
+    });
+    if (tab === 'tier') prBuildPriceTable();
+    if (tab === 'sim') { prCalcSim(); prCalcKake(); }
+  }
+
+  let prBound = false;
+  function bindPricingScreen() {
+    if (prBound) return;
+    prBound = true;
+    document.getElementById('pricingBackBtn')?.addEventListener('click', () => showScreen('mypageScreen'));
+    document.querySelectorAll('#pricingScreen .pr2-tab').forEach(btn =>
+      btn.addEventListener('click', () => switchPricingTab(btn.dataset.prTab)));
+    ['prSlUsers', 'prSlSpend', 'prSlFee', 'prSlSave'].forEach(id =>
+      document.getElementById(id)?.addEventListener('input', prCalcSim));
+    document.getElementById('prTeika')?.addEventListener('input', prCalcKake);
+    document.getElementById('prGenScriptBtn')?.addEventListener('click', prGenerateScript);
+    document.getElementById('prCopyScriptBtn')?.addEventListener('click', () => prCopyText('prScriptText'));
+    document.getElementById('prCopyEmailBtn')?.addEventListener('click', () => prCopyText('prEmailTemplate'));
+    document.getElementById('prAddSupplierBtn')?.addEventListener('click', () => prShowToast('新規問屋を追加', true));
+    document.querySelectorAll('#pricingScreen .supplier-card[data-sup]').forEach(card =>
+      card.addEventListener('click', () => prShowToast('問屋詳細・編集（β）')));
+  }
+
+  function initPricingScreen() {
+    bindPricingScreen();
+    switchPricingTab(prTab);
   }
 
   function renderComplianceGateUI(p) {
@@ -10836,7 +11441,7 @@ support@zaibase.jp</p>
   }
 
   function updateBottomNavForScreen(id) {
-    const hideNav = ['loginScreen', 'jobPostScreen', 'jobApproveScreen', 'stripeScreen', 'estimateScreen', 'invoiceScreen', 'insuranceScreen', 'rousaiScreen', 'rousaiApplyScreen', 'materialsMarketScreen', 'pointsScreen', 'emergencyMatchScreen', 'photoReportScreen', 'deliveryScreen', 'eticketScreen', 'trackingScreen', 'safetyScreen', 'teamScreen', 'complianceGateScreen', 'chainScreen', 'faceRegisterScreen', 'chatRoomScreen', 'adminScreen'];
+    const hideNav = ['loginScreen', 'jobPostScreen', 'jobApproveScreen', 'stripeScreen', 'estimateScreen', 'invoiceScreen', 'insuranceScreen', 'rousaiScreen', 'rousaiApplyScreen', 'materialsMarketScreen', 'pricingScreen', 'pointsScreen', 'emergencyMatchScreen', 'photoReportScreen', 'deliveryScreen', 'eticketScreen', 'trackingScreen', 'safetyScreen', 'teamScreen', 'complianceGateScreen', 'chainScreen', 'faceRegisterScreen', 'chatRoomScreen', 'adminScreen'];
     const isWorker = currentAccountRole !== 'orderer';
     const legacy = document.getElementById('bottomNav');
     const worker = document.getElementById('bottomNavWorker');
@@ -11976,7 +12581,7 @@ support@zaibase.jp</p>
     const prev = document.body.dataset.screenId;
     if (prev === 'trackingScreen' && id !== 'trackingScreen') stopTrackingTimers();
     if (prev === 'faceRegisterScreen' && id !== 'faceRegisterScreen') stopFaceRegisterWizard();
-    ['loginScreen','homeScreen','mainScreen','postScreen','mapScreen','mypageScreen','chatScreen','adminScreen','siteFaceScreen','jobPostScreen','teamJobPostScreen','jobApproveScreen','paymentScreen','stripeScreen','estimateScreen','invoiceScreen','insuranceScreen','rousaiScreen','rousaiApplyScreen','materialsMarketScreen','pointsScreen','emergencyMatchScreen','photoReportScreen','deliveryScreen','eticketScreen','trackingScreen','safetyScreen','teamScreen','complianceGateScreen','chainScreen','faceRegisterScreen'].forEach(s =>
+    ['loginScreen','homeScreen','mainScreen','postScreen','mapScreen','mypageScreen','chatScreen','adminScreen','siteFaceScreen','jobPostScreen','teamJobPostScreen','jobApproveScreen','paymentScreen','stripeScreen','estimateScreen','invoiceScreen','insuranceScreen','rousaiScreen','rousaiApplyScreen','materialsMarketScreen','pricingScreen','pointsScreen','emergencyMatchScreen','photoReportScreen','deliveryScreen','eticketScreen','trackingScreen','safetyScreen','teamScreen','complianceGateScreen','chainScreen','faceRegisterScreen'].forEach(s =>
       document.getElementById(s).classList.add('hidden')
     );
     document.getElementById('chatRoomScreen').classList.add('hidden');
@@ -11985,7 +12590,7 @@ support@zaibase.jp</p>
     document.getElementById(id).classList.remove('hidden');
     document.body.dataset.screenId = id;
 
-    const hideFab = ['loginScreen', 'siteFaceScreen', 'jobPostScreen', 'teamJobPostScreen', 'jobApproveScreen', 'homeScreen', 'paymentScreen', 'stripeScreen', 'estimateScreen', 'invoiceScreen', 'insuranceScreen', 'rousaiScreen', 'rousaiApplyScreen', 'materialsMarketScreen', 'pointsScreen', 'emergencyMatchScreen', 'photoReportScreen', 'deliveryScreen', 'eticketScreen', 'trackingScreen', 'safetyScreen', 'teamScreen', 'complianceGateScreen', 'chainScreen', 'faceRegisterScreen', 'mypageScreen', 'chatScreen', 'chatRoomScreen'];
+    const hideFab = ['loginScreen', 'siteFaceScreen', 'jobPostScreen', 'teamJobPostScreen', 'jobApproveScreen', 'homeScreen', 'paymentScreen', 'stripeScreen', 'estimateScreen', 'invoiceScreen', 'insuranceScreen', 'rousaiScreen', 'rousaiApplyScreen', 'materialsMarketScreen', 'pricingScreen', 'pointsScreen', 'emergencyMatchScreen', 'photoReportScreen', 'deliveryScreen', 'eticketScreen', 'trackingScreen', 'safetyScreen', 'teamScreen', 'complianceGateScreen', 'chainScreen', 'faceRegisterScreen', 'mypageScreen', 'chatScreen', 'chatRoomScreen'];
     document.getElementById('newMatchBtn')?.classList.toggle('hidden', hideFab.includes(id) || id !== 'mainScreen' || mainTab !== 'match');
     if (id === 'siteFaceScreen') initSiteFaceScreen();
     if (id === 'homeScreen') loadHomeDashboard();
@@ -11997,6 +12602,7 @@ support@zaibase.jp</p>
     if (id === 'rousaiScreen') initRousaiScreen();
     if (id === 'rousaiApplyScreen') initRousaiApplyScreen();
     if (id === 'materialsMarketScreen') initMaterialsMarketScreen();
+    if (id === 'pricingScreen') initPricingScreen();
     if (id === 'pointsScreen') initPointsScreen();
     if (id === 'emergencyMatchScreen') initEmergencyMatchScreen();
     if (id === 'photoReportScreen') initPhotoReportScreen();
@@ -14358,7 +14964,9 @@ support@zaibase.jp</p>
   document.getElementById('mypageInsuranceBtn')?.addEventListener('click', () => showScreen('insuranceScreen'));
   document.getElementById('mypageRousaiBtn')?.addEventListener('click', () => showScreen('rousaiScreen'));
   document.getElementById('mypageMaterialsMarketBtn')?.addEventListener('click', () => showScreen('materialsMarketScreen'));
+  document.getElementById('mypagePricingBtn')?.addEventListener('click', () => showScreen('pricingScreen'));
   document.getElementById('openMaterialsMarketBtn')?.addEventListener('click', () => showScreen('materialsMarketScreen'));
+  document.getElementById('ecOpenPricingBtn')?.addEventListener('click', () => showScreen('pricingScreen'));
   document.getElementById('mypagePointsBtn')?.addEventListener('click', () => showScreen('pointsScreen'));
   document.getElementById('mypageEmergencyBtn')?.addEventListener('click', () => showScreen('emergencyMatchScreen'));
   document.getElementById('pointsBackBtn')?.addEventListener('click', () => showScreen('mypageScreen'));

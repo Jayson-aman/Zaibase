@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>価格交渉・会員価格管理 — Zaibase</title>
+<style>
+  :root{--navy:#1a3c5e;--orange:#e8a020;--bg:#f4f6f8;--card:#fff;
+    --text:#1a2332;--muted:#6b7c93;--border:#dce3ea;--green:#1d9e75;--red:#e24b4a;--amber:#f59e0b;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+    background:var(--bg);color:var(--text);min-height:100dvh;
+    display:flex;flex-direction:column;padding-bottom:24px;}
+  header{background:var(--navy);padding:13px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0;}
+  .back{color:rgba(255,255,255,.7);font-size:22px;cursor:pointer;}
+  .hd-title{color:#fff;font-size:17px;font-weight:700;margin:0 auto;}
+  .tabs{background:var(--card);border-bottom:1px solid var(--border);
+    display:flex;padding:0 14px;position:sticky;top:0;z-index:9;}
+  .tab{padding:11px 12px;font-size:12px;font-weight:500;color:var(--muted);
+    cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;}
+  .tab.act{color:var(--navy);border-bottom-color:var(--navy);font-weight:700;}
+  main{flex:1;padding:14px;max-width:600px;margin:0 auto;width:100%;}
+  .section{background:var(--card);border-radius:14px;border:1px solid var(--border);
+    padding:15px;margin-bottom:12px;}
+  .sec-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:12px;
+    display:flex;align-items:center;gap:6px;}
+  .sec-title i{font-size:17px;color:var(--orange);}
+  .tier-hero{background:linear-gradient(135deg,var(--navy),#2c5f82);
+    border-radius:16px;padding:16px;margin-bottom:14px;color:#fff;}
+  .th-title{font-size:15px;font-weight:800;margin-bottom:10px;
+    display:flex;align-items:center;gap:7px;}
+  .th-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+  .th-item{background:rgba(255,255,255,.12);border-radius:10px;padding:10px;text-align:center;}
+  .th-item .n{font-size:18px;font-weight:800;}
+  .th-item .l{font-size:10px;opacity:.8;margin-top:3px;line-height:1.4;}
+  .th-item.best{background:rgba(29,158,117,.35);border:1.5px solid #4ade80;}
+  .price-table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:8px;}
+  .price-table th{background:#f0f5fa;color:var(--navy);font-weight:700;
+    padding:8px 6px;border-bottom:2px solid var(--border);text-align:center;}
+  .price-table th:first-child{text-align:left;}
+  .price-table td{padding:8px 6px;border-bottom:1px solid var(--bg);
+    text-align:center;vertical-align:middle;}
+  .price-table td:first-child{text-align:left;font-weight:600;}
+  .price-table tr:last-child td{border-bottom:none;}
+  .pt-general{color:var(--red);}
+  .pt-member{color:var(--amber);font-weight:700;}
+  .pt-bulk{color:var(--green);font-weight:800;}
+  .pt-rate{font-size:10px;font-weight:600;padding:1px 5px;border-radius:4px;margin-top:2px;display:inline-block;}
+  .rate-good{background:#e8f8f2;color:var(--green);}
+  .rate-great{background:#e8f8f2;color:var(--green);}
+  .supplier-card{border:1px solid var(--border);border-radius:12px;
+    padding:13px;margin-bottom:10px;cursor:pointer;transition:.15s;}
+  .supplier-card:active{transform:scale(.99);}
+  .supplier-card.contracted{border-color:var(--green);border-left:4px solid var(--green);}
+  .supplier-card.negotiating{border-color:var(--amber);border-left:4px solid var(--amber);}
+  .supplier-card.pending{border-color:var(--border);border-left:4px solid var(--muted);}
+  .sc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;}
+  .sc-name{font-size:14px;font-weight:700;}
+  .sc-type{font-size:11px;color:var(--muted);margin-top:2px;}
+  .sc-status{padding:3px 9px;border-radius:8px;font-size:11px;font-weight:700;}
+  .ss-contracted {background:#e8f8f2;color:var(--green);}
+  .ss-negotiating{background:#fff8e0;color:#7a5a00;}
+  .ss-pending    {background:#f0f0f0;color:#888;}
+  .sc-meta{display:flex;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--muted);margin-bottom:8px;}
+  .sc-meta span{display:flex;align-items:center;gap:3px;}
+  .sc-rates{display:flex;gap:6px;flex-wrap:wrap;}
+  .rate-chip{padding:4px 9px;border-radius:8px;font-size:11px;font-weight:600;}
+  .rc-ok {background:#e8f8f2;color:var(--green);}
+  .rc-neg{background:#fff8e0;color:#7a5a00;}
+  .rc-no {background:#f0f0f0;color:#888;}
+  .field{margin-bottom:11px;}
+  .field label{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-bottom:4px;}
+  input,select,textarea{width:100%;height:42px;border:1px solid var(--border);border-radius:8px;
+    padding:0 11px;font-size:14px;color:var(--text);background:var(--card);
+    appearance:none;font-family:inherit;}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy);}
+  textarea{height:70px;padding:9px 11px;resize:none;line-height:1.6;}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .kake-row{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+  .kake-label{font-size:12px;color:var(--muted);width:80px;flex-shrink:0;}
+  .kake-slider{flex:1;}
+  .kake-val{font-size:13px;font-weight:700;min-width:44px;text-align:right;}
+  .sim-box{background:#f0faf5;border:1px solid #9fe1cb;border-radius:10px;
+    padding:12px;margin-top:8px;}
+  .sim-row{display:flex;justify-content:space-between;font-size:13px;padding:4px 0;
+    border-bottom:0.5px solid #d0e8d8;}
+  .sim-row:last-child{border-bottom:none;}
+  .sim-row .k{color:var(--muted);}
+  .sim-row .v{font-weight:600;}
+  .sim-row.profit .k{color:var(--navy);font-weight:700;}
+  .sim-row.profit .v{color:var(--green);font-weight:800;font-size:15px;}
+  .script-box{background:#f0f5fa;border:1px solid #b8d0e8;border-radius:10px;
+    padding:13px;margin-top:8px;}
+  .script-title{font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+  .script-text{font-size:12px;color:var(--text);line-height:1.8;
+    white-space:pre-wrap;border:1px solid var(--border);border-radius:8px;
+    padding:10px;background:var(--card);}
+  .copy-btn{margin-top:7px;padding:7px 14px;background:var(--navy);color:#fff;
+    border:none;border-radius:7px;font-size:12px;font-weight:700;cursor:pointer;
+    display:flex;align-items:center;gap:5px;}
+  .member-price-card{border-radius:14px;overflow:hidden;margin-bottom:10px;}
+  .mpc-header{padding:11px 14px;display:flex;align-items:center;gap:8px;}
+  .mpc-header.general {background:#fde8e8;}
+  .mpc-header.pro     {background:#e8f0fa;}
+  .mpc-header.max     {background:#e8f8f2;}
+  .mpc-header.bulk    {background:#fff8e0;}
+  .mpc-icon{font-size:20px;}
+  .mpc-name{font-size:13px;font-weight:700;}
+  .mpc-tag {font-size:11px;margin-left:auto;padding:2px 8px;border-radius:8px;font-weight:700;}
+  .tag-general {background:#fde8e8;color:var(--red);}
+  .tag-pro     {background:#e8f0fa;color:var(--navy);}
+  .tag-max     {background:#e8f8f2;color:var(--green);}
+  .tag-bulk    {background:#fff8e0;color:#7a5a00;}
+  .mpc-body{padding:12px 14px;background:var(--card);border:1px solid var(--border);
+    border-top:none;border-radius:0 0 14px 14px;}
+  .mpc-price-row{display:flex;justify-content:space-between;align-items:center;
+    font-size:13px;padding:5px 0;border-bottom:0.5px solid var(--bg);}
+  .mpc-price-row:last-child{border-bottom:none;}
+  .mppr-item{color:var(--muted);}
+  .mppr-price{font-weight:700;}
+  .rev-hero{background:linear-gradient(135deg,#1a5c3a,var(--green));
+    border-radius:14px;padding:16px;margin-bottom:14px;color:#fff;}
+  .rh-title{font-size:14px;font-weight:700;margin-bottom:10px;}
+  .rh-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+  .rh-item{background:rgba(255,255,255,.15);border-radius:8px;padding:10px;text-align:center;}
+  .rh-item .n{font-size:18px;font-weight:800;}
+  .rh-item .l{font-size:10px;opacity:.85;margin-top:3px;}
+  .btn{width:100%;padding:13px;border-radius:10px;font-size:14px;font-weight:700;
+    border:none;cursor:pointer;margin-top:8px;display:flex;align-items:center;
+    justify-content:center;gap:6px;}
+  .btn-primary{background:var(--navy);color:#fff;}
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(60px);
+    background:var(--text);color:#fff;padding:11px 20px;border-radius:22px;
+    font-size:13px;font-weight:500;transition:transform .3s;z-index:99;white-space:nowrap;}
+  .toast.show{transform:translateX(-50%) translateY(0);}
+  .toast.ok{background:var(--green);}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+<header>
+  <span class="back" onclick="history.back()"><i class="ti ti-arrow-left"></i></span>
+  <span class="hd-title">価格交渉・会員価格管理</span>
+</header>
+<div class="tabs">
+  <div class="tab act" id="tab-tier"     onclick="showTab('tier')">会員別価格</div>
+  <div class="tab"     id="tab-supplier" onclick="showTab('supplier')">問屋交渉管理</div>
+  <div class="tab"     id="tab-sim"      onclick="showTab('sim')">収益シミュレーター</div>
+  <div class="tab"     id="tab-script"   onclick="showTab('script')">交渉スクリプト</div>
+</div>
+<main>
+  <div id="page-tier">
+    <div class="tier-hero">
+      <div class="th-title">
+        <i class="ti ti-layers" style="font-size:18px;color:var(--orange)"></i>
+        Zaibaseの3段階価格体系
+      </div>
+      <div class="th-grid">
+        <div class="th-item">
+          <div class="n">一般価格</div>
+          <div class="l">市場価格<br>（定価の80〜90%）</div>
+        </div>
+        <div class="th-item">
+          <div class="n">会員価格</div>
+          <div class="l">Pro/Maxプラン<br>市場比10〜20%安</div>
+        </div>
+        <div class="th-item best">
+          <div class="n">🏆 バルク</div>
+          <div class="l">グループ購買<br>市場比25〜35%安</div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-table"></i>商品別 価格帯比較</div>
+      <div style="overflow-x:auto;">
+        <table class="price-table" id="price-table"></table>
+      </div>
+      <div style="font-size:11px;color:var(--muted);margin-top:8px;line-height:1.6;">
+        ※掛け率はZaibaseが問屋・メーカーと交渉した結果に基づきます。<br>
+        ※バルク価格は10人以上のグループ購買時に適用されます。
+      </div>
+    </div>
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-eye"></i>ユーザーには何が見えるか</div>
+      <div class="member-price-card">
+        <div class="mpc-header general">
+          <span class="mpc-icon">👤</span>
+          <span class="mpc-name">未登録・無料会員</span>
+          <span class="mpc-tag tag-general">一般価格</span>
+        </div>
+        <div class="mpc-body">
+          <div class="mpc-price-row">
+            <span class="mppr-item">変成シリコン 333ml</span>
+            <span class="mppr-price" style="color:var(--red)">¥1,200/本</span>
+          </div>
+          <div style="font-size:11px;color:var(--muted);margin-top:6px;">
+            💡 Proプランに加入すると¥300/本（25%）安くなります
+          </div>
+        </div>
+      </div>
+      <div class="member-price-card">
+        <div class="mpc-header pro">
+          <span class="mpc-icon">⭐</span>
+          <span class="mpc-name">Proプラン会員</span>
+          <span class="mpc-tag tag-pro">会員価格</span>
+        </div>
+        <div class="mpc-body">
+          <div class="mpc-price-row">
+            <span class="mppr-item">変成シリコン 333ml</span>
+            <span class="mppr-price" style="color:var(--amber)">¥900/本</span>
+          </div>
+          <div style="font-size:11px;color:var(--muted);margin-top:6px;">
+            💡 グループ購買（10人〜）に参加すると¥750/本になります
+          </div>
+        </div>
+      </div>
+      <div class="member-price-card">
+        <div class="mpc-header max">
+          <span class="mpc-icon">👑</span>
+          <span class="mpc-name">Maxプラン会員</span>
+          <span class="mpc-tag tag-max">最優遇価格</span>
+        </div>
+        <div class="mpc-body">
+          <div class="mpc-price-row">
+            <span class="mppr-item">変成シリコン 333ml</span>
+            <span class="mppr-price" style="color:var(--green)">¥825/本</span>
+          </div>
+          <div style="font-size:11px;color:var(--muted);margin-top:6px;">
+            ✓ 最優遇価格が適用されています。グループ購買で¥750まで下げられます
+          </div>
+        </div>
+      </div>
+      <div class="member-price-card">
+        <div class="mpc-header bulk">
+          <span class="mpc-icon">👥</span>
+          <span class="mpc-name">グループ購買（10人以上）</span>
+          <span class="mpc-tag tag-bulk">バルク価格</span>
+        </div>
+        <div class="mpc-body">
+          <div class="mpc-price-row">
+            <span class="mppr-item">変成シリコン 333ml</span>
+            <span class="mppr-price" style="color:var(--green);font-size:16px;">¥750/本</span>
+          </div>
+          <div style="font-size:11px;color:var(--green);font-weight:600;margin-top:6px;">
+            一般価格¥1,200比 → ¥450（37.5%）節約
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="page-supplier" style="display:none">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px;">
+      <div style="background:#e8f8f2;border-radius:10px;padding:10px;text-align:center;">
+        <div style="font-size:20px;font-weight:800;color:var(--green)">2</div>
+        <div style="font-size:11px;color:var(--muted)">契約済み</div>
+      </div>
+      <div style="background:#fff8e0;border-radius:10px;padding:10px;text-align:center;">
+        <div style="font-size:20px;font-weight:800;color:var(--amber)">2</div>
+        <div style="font-size:11px;color:var(--muted)">交渉中</div>
+      </div>
+      <div style="background:#f0f0f0;border-radius:10px;padding:10px;text-align:center;">
+        <div style="font-size:20px;font-weight:800;color:#888">1</div>
+        <div style="font-size:11px;color:var(--muted)">アプローチ予定</div>
+      </div>
+    </div>
+    <div class="supplier-card contracted" onclick="openSupplier('yamamoto')">
+      <div class="sc-top">
+        <div>
+          <div class="sc-name">山本政清商店</div>
+          <div class="sc-type">地域金物屋 ／ 大阪・神奈川対応</div>
+        </div>
+        <span class="sc-status ss-contracted">契約済み</span>
+      </div>
+      <div class="sc-meta">
+        <span><i class="ti ti-package"></i>シーリング・タイル資材</span>
+        <span><i class="ti ti-calendar"></i>契約：2026年5月</span>
+        <span><i class="ti ti-coin-yen"></i>月取引¥180万</span>
+      </div>
+      <div class="sc-rates">
+        <span class="rate-chip rc-ok">会員価格：7掛け</span>
+        <span class="rate-chip rc-ok">バルク：5.5掛け</span>
+        <span class="rate-chip rc-ok">翌日配送対応</span>
+      </div>
+    </div>
+    <div class="supplier-card contracted" onclick="openSupplier('miura')">
+      <div class="sc-top">
+        <div>
+          <div class="sc-name">ミウラ</div>
+          <div class="sc-type">地域建材店 ／ 神奈川エリア</div>
+        </div>
+        <span class="sc-status ss-contracted">契約済み</span>
+      </div>
+      <div class="sc-meta">
+        <span><i class="ti ti-package"></i>足場資材・単管・クランプ</span>
+        <span><i class="ti ti-calendar"></i>契約：2026年6月</span>
+        <span><i class="ti ti-coin-yen"></i>月取引¥95万</span>
+      </div>
+      <div class="sc-rates">
+        <span class="rate-chip rc-ok">会員価格：6.5掛け</span>
+        <span class="rate-chip rc-ok">バルク：5掛け</span>
+        <span class="rate-chip rc-ok">当日受取可</span>
+      </div>
+    </div>
+    <div class="supplier-card negotiating" onclick="openSupplier('cemedine')">
+      <div class="sc-top">
+        <div>
+          <div class="sc-name">セメダイン（代理店経由）</div>
+          <div class="sc-type">シーリングメーカー ／ 全国対応</div>
+        </div>
+        <span class="sc-status ss-negotiating">交渉中</span>
+      </div>
+      <div class="sc-meta">
+        <span><i class="ti ti-package"></i>変成シリコン・エポキシ系</span>
+        <span><i class="ti ti-calendar"></i>初回面談：2026年6月12日</span>
+        <span><i class="ti ti-users"></i>担当：田中部長</span>
+      </div>
+      <div class="sc-rates">
+        <span class="rate-chip rc-neg">交渉中：7掛け希望</span>
+        <span class="rate-chip rc-neg">バルク：5.5掛け交渉中</span>
+      </div>
+    </div>
+    <div class="supplier-card negotiating" onclick="openSupplier('konishi')">
+      <div class="sc-top">
+        <div>
+          <div class="sc-name">コニシ（ボンド）</div>
+          <div class="sc-type">接着剤・シーリングメーカー ／ 全国</div>
+        </div>
+        <span class="sc-status ss-negotiating">交渉中</span>
+      </div>
+      <div class="sc-meta">
+        <span><i class="ti ti-package"></i>ボンドシリコン・コーキング材</span>
+        <span><i class="ti ti-calendar"></i>メール返信待ち</span>
+      </div>
+      <div class="sc-rates">
+        <span class="rate-chip rc-neg">代理店経由で申請中</span>
+      </div>
+    </div>
+    <div class="supplier-card pending">
+      <div class="sc-top">
+        <div>
+          <div class="sc-name">ナイス株式会社（建材商社）</div>
+          <div class="sc-type">建材総合商社 ／ 全国対応</div>
+        </div>
+        <span class="sc-status ss-pending">アプローチ予定</span>
+      </div>
+      <div class="sc-meta">
+        <span><i class="ti ti-package"></i>建材全般・複数メーカー扱い</span>
+        <span><i class="ti ti-calendar"></i>アポ調整中</span>
+      </div>
+      <div class="sc-rates">
+        <span class="rate-chip rc-no">未交渉</span>
+      </div>
+    </div>
+    <button class="btn btn-primary" onclick="showToast('新規問屋を追加', 'ok')">
+      <i class="ti ti-plus"></i>問屋・メーカーを追加
+    </button>
+  </div>
+  <div id="page-sim" style="display:none">
+    <div class="rev-hero">
+      <div class="rh-title">
+        <i class="ti ti-coin-yen" style="font-size:16px"></i>
+        資材EC 収益シミュレーション
+      </div>
+      <div class="rh-grid">
+        <div class="rh-item">
+          <div class="n" id="s-monthly">¥0</div>
+          <div class="l">月間手数料収入</div>
+        </div>
+        <div class="rh-item">
+          <div class="n" id="s-yearly">¥0</div>
+          <div class="l">年間手数料収入</div>
+        </div>
+        <div class="rh-item">
+          <div class="n" id="s-saving">¥0</div>
+          <div class="l">職人の月間節約額</div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-sliders"></i>条件を入力</div>
+      <div class="kake-row">
+        <span class="kake-label">登録職人数</span>
+        <input type="range" class="kake-slider" min="10" max="2000" step="10"
+          value="100" id="sl-users" oninput="calcSim()">
+        <span class="kake-val" id="v-users">100人</span>
+      </div>
+      <div class="kake-row">
+        <span class="kake-label">月間購買額<br>（1人あたり）</span>
+        <input type="range" class="kake-slider" min="5000" max="200000" step="5000"
+          value="30000" id="sl-spend" oninput="calcSim()">
+        <span class="kake-val" id="v-spend">¥3万</span>
+      </div>
+      <div class="kake-row">
+        <span class="kake-label">Zaibase<br>手数料率</span>
+        <input type="range" class="kake-slider" min="5" max="15" step="1"
+          value="10" id="sl-fee" oninput="calcSim()">
+        <span class="kake-val" id="v-fee">10%</span>
+      </div>
+      <div class="kake-row">
+        <span class="kake-label">職人の<br>節約率</span>
+        <input type="range" class="kake-slider" min="10" max="40" step="1"
+          value="25" id="sl-save" oninput="calcSim()">
+        <span class="kake-val" id="v-save">25%</span>
+      </div>
+      <div class="sim-box" id="sim-result">
+        <div class="sim-row"><span class="k">月間総取引額</span><span class="v" id="r-gmv">—</span></div>
+        <div class="sim-row"><span class="k">Zaibase手数料（税引き前）</span><span class="v" id="r-fee">—</span></div>
+        <div class="sim-row"><span class="k">税引き後（約34%控除）</span><span class="v" id="r-net">—</span></div>
+        <div class="sim-row profit"><span class="k">年間税引き後収益</span><span class="v" id="r-yearly">—</span></div>
+        <div class="sim-row"><span class="k">職人1人の月間節約額</span><span class="v" id="r-saving">—</span></div>
+        <div class="sim-row"><span class="k">「資材ECがあるからProに入る」効果</span>
+          <span class="v" id="r-promo" style="color:var(--orange)">—</span>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-calculator"></i>掛け率と価格の関係</div>
+      <div class="field">
+        <label>商品の定価</label>
+        <input type="number" id="teika" value="1500" oninput="calcKake()">
+      </div>
+      <div id="kake-results" style="display:flex;flex-direction:column;gap:6px;margin-top:8px;"></div>
+    </div>
+  </div>
+  <div id="page-script" style="display:none">
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-phone"></i>電話・訪問用スクリプト</div>
+      <div class="field">
+        <label>問屋・メーカー名</label>
+        <input type="text" id="sc-company" placeholder="例：山本政清商店" value="山本政清商店">
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label>自社の登録職人数</label>
+          <input type="number" id="sc-users" value="100">
+        </div>
+        <div class="field">
+          <label>月間見込み購買額（万円）</label>
+          <input type="number" id="sc-budget" value="300">
+        </div>
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label>希望する掛け率（会員価格）</label>
+          <select id="sc-kake1">
+            <option value="6.5">6.5掛け</option>
+            <option value="7" selected>7掛け</option>
+            <option value="7.5">7.5掛け</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>希望する掛け率（バルク）</label>
+          <select id="sc-kake2">
+            <option value="5" selected>5掛け</option>
+            <option value="5.5">5.5掛け</option>
+            <option value="6">6掛け</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn btn-primary" onclick="generateScript()">
+        <i class="ti ti-sparkles"></i>スクリプトを生成する
+      </button>
+      <div id="script-output" style="display:none;margin-top:12px;">
+        <div class="script-box">
+          <div class="script-title">📞 電話・訪問スクリプト（コピーして使用）</div>
+          <div class="script-text" id="script-text"></div>
+          <button class="copy-btn" onclick="copyScript()">
+            <i class="ti ti-copy"></i>コピーする
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="sec-title"><i class="ti ti-mail"></i>初回コンタクトメール文（テンプレート）</div>
+      <div class="script-box">
+        <div class="script-title">メール件名：建設職人向けプラットフォーム「Zaibase」からのご提案</div>
+        <div class="script-text" id="email-template">株式会社（御社名）
+ご担当者様
+
+はじめてご連絡申し上げます。
+一般社団法人Zaibase（ザイベース）の（担当者名）と申します。
+
+弊社は建設職人・一人親方向けのマッチング・資材購買プラットフォームを運営しており、
+現在（　）名の職人・建設業者が登録しています。
+
+このたび、登録会員への資材供給パートナーとして、
+貴社との取引を検討いただけないかとご連絡いたしました。
+
+▼ 弊社の特徴
+・登録職人数：（　）名（神奈川・大阪エリア中心）
+・月間資材購買見込み：約（　）万円
+・グループ購買（10名以上まとめ発注）の仕組みあり
+・一括発注・一括決済で貴社の業務負荷を軽減
+
+▼ ご提案内容
+会員向け価格（掛け率（　）掛け程度）でのご供給を
+検討いただけますでしょうか。
+
+まずは30分程度のお打ち合わせの機会をいただけますと幸いです。
+
+Zaibase 担当者
+Email：info@zaibase.jp</div>
+        <button class="copy-btn" onclick="copyEmail()">
+          <i class="ti ti-copy"></i>コピーする
+        </button>
+      </div>
+    </div>
+  </div>
+</main>
+<div class="toast" id="toast"></div>
+<script>
+const PRODUCTS = [
+  { name:'変成シリコン 333ml', teika:1500, general:1200, member:900, max:825, bulk:750 },
+  { name:'タイル接着剤 25kg', teika:4500, general:3800, member:3000, max:2800, bulk:2500 },
+  { name:'ウレタン防水塗料 16kg', teika:18000, general:15000, member:12000, max:11000, bulk:9800 },
+  { name:'単管パイプ 2m', teika:1200, general:980, member:780, max:720, bulk:650 },
+  { name:'フルハーネス安全帯', teika:28000, general:23000, member:19000, max:17500, bulk:15800 },
+  { name:'シリコンシーラント 333ml', teika:1200, general:980, member:750, max:690, bulk:620 },
+];
+function buildPriceTable() {
+  const t = document.getElementById('price-table');
+  t.innerHTML = `
+    <thead>
+      <tr>
+        <th>商品</th>
+        <th>一般価格</th>
+        <th>会員価格<br><span style="font-weight:400;font-size:10px">Pro/Max</span></th>
+        <th>バルク価格<br><span style="font-weight:400;font-size:10px">10人〜</span></th>
+        <th>節約率</th>
+      </tr>
+    </thead>
+    <tbody>
+      ${PRODUCTS.map(p => {
+        const savePct = Math.round((p.general - p.bulk) / p.general * 100);
+        return `<tr>
+          <td>${p.name}</td>
+          <td class="pt-general">¥${p.general.toLocaleString()}</td>
+          <td class="pt-member">¥${p.member.toLocaleString()}
+            <div class="pt-rate rate-good">▲${Math.round((p.general-p.member)/p.general*100)}%</div>
+          </td>
+          <td class="pt-bulk">¥${p.bulk.toLocaleString()}
+            <div class="pt-rate rate-great">▲${savePct}%</div>
+          </td>
+          <td style="color:var(--green);font-weight:700;">最大${savePct}%</td>
+        </tr>`;
+      }).join('')}
+    </tbody>`;
+}
+function calcSim() {
+  const users  = +document.getElementById('sl-users').value;
+  const spend  = +document.getElementById('sl-spend').value;
+  const fee    = +document.getElementById('sl-fee').value / 100;
+  const save   = +document.getElementById('sl-save').value / 100;
+  document.getElementById('v-users').textContent = users + '人';
+  document.getElementById('v-spend').textContent = '¥' + Math.round(spend/10000) + '万';
+  document.getElementById('v-fee').textContent   = Math.round(fee*100) + '%';
+  document.getElementById('v-save').textContent  = Math.round(save*100) + '%';
+  const gmv     = users * spend;
+  const feeAmt  = Math.round(gmv * fee);
+  const netAmt  = Math.round(feeAmt * 0.66);
+  const yearly  = netAmt * 12;
+  const saving  = Math.round(spend * save);
+  const proBonus = Math.round(users * 0.2 * 3980);
+  const fmt = n => n >= 1e6 ? '¥'+Math.round(n/1e4)+'万' : '¥'+n.toLocaleString();
+  document.getElementById('r-gmv').textContent    = fmt(gmv);
+  document.getElementById('r-fee').textContent    = fmt(feeAmt);
+  document.getElementById('r-net').textContent    = fmt(netAmt);
+  document.getElementById('r-yearly').textContent = fmt(yearly);
+  document.getElementById('r-saving').textContent = fmt(saving);
+  document.getElementById('r-promo').textContent  = '+' + fmt(proBonus) + '/月';
+  document.getElementById('s-monthly').textContent = fmt(netAmt);
+  document.getElementById('s-yearly').textContent  = fmt(yearly);
+  document.getElementById('s-saving').textContent  = fmt(saving * users);
+}
+function calcKake() {
+  const teika = +document.getElementById('teika').value || 0;
+  const tiers = [
+    { label:'大手ゼネコン（4.5掛け）', rate:0.45, color:'#1a3c5e' },
+    { label:'バルク購買（5.5掛け）',   rate:0.55, color:'#1d9e75' },
+    { label:'会員価格（7掛け）',       rate:0.70, color:'#f59e0b' },
+    { label:'一人親方個人（8掛け）',   rate:0.80, color:'#e8a020' },
+    { label:'小売価格（9掛け）',       rate:0.90, color:'#e24b4a' },
+  ];
+  const bulkPrice = Math.round(teika * tiers[1].rate);
+  document.getElementById('kake-results').innerHTML = tiers.map(t => {
+    const price = Math.round(teika * t.rate);
+    const diff  = price - bulkPrice;
+    return `
+    <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;
+      background:var(--bg);border-radius:8px;font-size:12px;">
+      <span style="width:8px;height:8px;border-radius:50%;background:${t.color};flex-shrink:0;"></span>
+      <span style="flex:1;color:var(--muted);">${t.label}</span>
+      <span style="font-weight:700;">¥${price.toLocaleString()}</span>
+      ${diff > 0 ? `<span style="color:var(--red);font-size:11px;">+¥${diff.toLocaleString()}</span>` : ''}
+    </div>`;
+  }).join('');
+}
+function generateScript() {
+  const company = document.getElementById('sc-company').value || '御社';
+  const users   = document.getElementById('sc-users').value;
+  const budget  = document.getElementById('sc-budget').value;
+  const kake1   = document.getElementById('sc-kake1').value;
+  const kake2   = document.getElementById('sc-kake2').value;
+  const script = `お忙しいところ恐れ入ります。
+「Zaibase（ザイベース）」という建設職人向けプラットフォームを運営しております、
+（担当者名）と申します。
+
+現在、弊社のプラットフォームには${users}名の職人・建設業者が登録しており、
+${company}様の商品に対して月間約${budget}万円の購買需要があると試算しています。
+
+本日ご連絡した目的は、弊社会員向けの特別価格でのご供給についてご相談したいためです。
+
+具体的には、
+・会員向け価格：定価の${kake1}掛け程度
+・10名以上のグループ購買時：定価の${kake2}掛け程度
+でのご対応が可能かどうかお聞きしたいのですが、
+ご担当者様とお打ち合わせのお時間をいただけますでしょうか？
+
+弊社からは
+・月間の発注量をコミットできること
+・一括発注・一括決済で業務コストを削減できること
+・地域の職人へのブランド認知向上
+といったメリットをご提供できます。
+
+30分程度でも構いません。ご都合のよい日程を教えていただけますか？`;
+  document.getElementById('script-text').textContent = script;
+  document.getElementById('script-output').style.display = 'block';
+  showToast('スクリプトを生成しました', 'ok');
+}
+function copyScript() {
+  navigator.clipboard?.writeText(document.getElementById('script-text').textContent);
+  showToast('コピーしました', 'ok');
+}
+function copyEmail() {
+  navigator.clipboard?.writeText(document.getElementById('email-template').textContent);
+  showToast('コピーしました', 'ok');
+}
+function openSupplier(id) { showToast('問屋詳細・編集'); }
+function showTab(tab) {
+  ['tier','supplier','sim','script'].forEach(t => {
+    document.getElementById('page-'+t).style.display = t===tab?'block':'none';
+    document.getElementById('tab-'+t).classList.toggle('act', t===tab);
+  });
+}
+function showToast(msg, type) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast show' + (type==='ok'?' ok':'');
+  setTimeout(() => t.className = 'toast', 2600);
+}
+buildPriceTable();
+calcSim();
+calcKake();
+</script>
+</body>
+</html>
