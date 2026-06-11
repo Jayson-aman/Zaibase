@@ -1,11 +1,11 @@
 /**
- * Zaibase シニア施工管理技師 支援センター（§34）
+ * Zaibase シニア施工管理技士 支援センター（§34）
  *
  * getMentors      — メンター・相談窓口一覧取得
  * saveLifePlan    — ライフプラン保存（年齢別マイルストーン・退職計画等）
  * getLifePlanStats — ライフプラン統計（管理者向け）
  *
- * 対象: 50代以上の施工管理技師・現場監督
+ * 対象: 50代以上の施工管理技士・現場監督
  * 目的: 心のケア・資格継続・経済設計・人脈・70〜80代現役支援
  */
 const { onCall, HttpsError } = require("firebase-functions/v2/https");

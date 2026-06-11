@@ -100,7 +100,7 @@ exports.checkEnvCompliance = envCompliance.checkEnvCompliance;
 exports.submitEnvComplianceDoc = envCompliance.submitEnvComplianceDoc;
 exports.logEnvComplianceEvent = envCompliance.logEnvComplianceEvent;
 
-// ── シニア施工管理技師 支援センター（§34）─────────────────────────
+// ── シニア施工管理技士 支援センター（§34）─────────────────────────
 const lifePlan = require("./life_plan");
 exports.getMentors = lifePlan.getMentors;
 exports.saveLifePlan = lifePlan.saveLifePlan;
