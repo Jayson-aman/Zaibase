@@ -88,6 +88,12 @@ const emergencyMatch = require("./emergency_match");
 exports.notifyUrgentJob = emergencyMatch.notifyUrgentJob;
 exports.listNearbyUrgentJobs = emergencyMatch.listNearbyUrgentJobs;
 
+// ── 子育て互助システム（§33）──────────────────────────────────────
+const childcareSupport = require("./childcare_support");
+exports.notifyChildcareEmergency = childcareSupport.notifyChildcareEmergency;
+exports.completeChildcareMatch = childcareSupport.completeChildcareMatch;
+exports.getChildcareStats = childcareSupport.getChildcareStats;
+
 // ── 環境法令コンプライアンス（水質汚濁防止法・土壌汚染対策法）───────
 const envCompliance = require("./env_compliance");
 exports.checkEnvCompliance = envCompliance.checkEnvCompliance;

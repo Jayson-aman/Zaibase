@@ -1447,6 +1447,114 @@ Maxプラン割引と**合算上限▲2%**。UI：`#transactionRankCard`・`#poi
 
 ---
 
+## 33. 子育て互助システム（#childcareScreen）
+
+> 建設業の慢性的な人手不足の根本原因のひとつが、**ひとり親・父子家庭の就業困難**。  
+> 保育所・幼稚園の送り迎えが現場の早朝開始・延長と両立できず、離職・参入断念が起きている。  
+> Zaibaseユーザー同士の**互助（互いに助け合う）**で、育児と仕事の両立を支援し、業界全体の稼働率を上げる。
+
+### 33.1 社会課題と設計思想
+
+| 課題 | 対策 |
+|---|---|
+| 朝7時現場集合 × 保育所8時受付 → 無理 | 近くのZaibaseユーザーに送りを頼む |
+| 急な工期変更 → 夕方迎えに行けない | 緊急アラートで即時援助者を募集 |
+| 互助してもメリットがない | 援助ごとにZaibaseポイント+150ptを付与 |
+| 相手が信頼できるか不安 | Zaibase本人確認済みユーザーのみ参加可 |
+| 法的リスク | 互助の範囲（有償旅客運送に該当しない設計）・弁護士確認推奨 |
+
+**ミッションとのリンク**：「誰も一人にしない」「一人親方が安心して独立できる」
+
+### 33.2 機能一覧
+
+| 機能 | 概要 |
+|---|---|
+| **送迎リクエスト投稿** | 日時・保育所名・エリア・互助報酬（任意）・コメントを投稿 |
+| **緊急アラート** | 今すぐ助けてほしいときに近隣ユーザーへFCMプッシュ通知 |
+| **援助マッチング** | 他ユーザーのリクエストを見て「援助する」ボタンで即時マッチング |
+| **子育てプロフィール** | ひとり親フラグ・子供の年齢・援助可否・車の有無・対応時間帯 |
+| **互助ポイント付与** | 援助完了ごとに+150pt（`zbPoints`に加算・`zbPointsLedger`に記録） |
+| **互助履歴** | 援助した回数・してもらった回数・獲得ポイントの統計表示 |
+
+### 33.3 Firestoreスキーマ
+
+**`childcareRequests/{id}`**
+```javascript
+{
+  uid: string,               // 依頼者UID
+  displayName: string,
+  area: string,              // エリア・住所
+  facilityName: string,      // 保育所・幼稚園名
+  childAge: number | null,   // 子供の年齢（任意）
+  dateTime: string,          // ISO 8601
+  compensation: number,      // 互助報酬（0 = 無償）
+  note: string,
+  status: 'open' | 'matched' | 'completed' | 'cancelled',
+  helperId: string | null,   // マッチング後に設定
+  isEmergency: boolean,
+  createdAt: timestamp,
+  updatedAt: timestamp,
+}
+```
+
+**`childcareProfiles/{uid}`**
+```javascript
+{
+  isSingleParent: boolean,
+  childrenAges: number[],    // 子供の年齢一覧
+  homeArea: string,
+  canHelp: boolean,
+  helpAvailability: string,  // 援助可能時間帯・曜日（テキスト）
+  hasVehicle: boolean,
+  vehicleCapacity: number,   // 乗車可能子供人数
+  childcareHelpCount: number, // 累計援助回数
+  updatedAt: timestamp,
+}
+```
+
+**`childcareMatches/{id}`**
+```javascript
+{
+  requestId: string,
+  helperId: string,
+  helperName: string,
+  requesterId: string,
+  requesterName: string,
+  facilityName: string,
+  area: string,
+  dateTime: string,
+  compensation: number,
+  pointsAwarded: 150,
+  matchedAt: timestamp,
+  completedAt: timestamp | null,
+  status: 'matched' | 'completed',
+}
+```
+
+### 33.4 Cloud Functions
+
+| 関数 | 役割 |
+|---|---|
+| `notifyChildcareEmergency` | 緊急アラートを援助可能プロフィールユーザーにFCM配信 |
+| `completeChildcareMatch` | 依頼者が完了報告 → 援助者にポイント付与・ledger記録 |
+| `getChildcareStats` | 月次互助統計（ダッシュボード用） |
+
+### 33.5 法的注意事項（⚠️ 弁護士確認推奨）
+
+- **道路運送法の有償旅客運送との関係**：ユーザー間の互助報酬は「友人・知人間の実費弁償的な費用負担」の域を想定。定期的・反復的な有償送迎は「自家用有償旅客運送」や「ライドシェア」の規制対象になる可能性があるため、弁護士確認を行う。
+- **ファミリーサポートセンター事業との関係**：行政のファミリーサポートセンター（市区町村運営）と競合するサービスではなく、Zaibase職人コミュニティ内の互助として位置づける。
+- **子供の個人情報**：顔写真・氏名はアプリ上に保持しない設計。年齢（目安）のみ。
+
+### 33.6 今後の展望
+
+- [ ] 援助コミュニティの評価・信頼スコアとの連携（援助実績 → 信頼スコアボーナス）
+- [ ] 保育所・学童の情報データベース（エリア別施設検索）
+- [ ] 外国人職人向け多言語対応（ベトナム語・インドネシア語）
+- [ ] 月額互助プラン（Proプランで月2回までの緊急アラート無制限）
+- [ ] 企業・組合向け：協力会社ごとに「社内互助グループ」を作れる機能
+
+---
+
 ## 32. 環境法令コンプライアンス（水質汚濁防止法・土壌汚染対策法）
 
 > 解体・土工・地盤改良・コンクリート工事では建設業法・労働安全衛生法に加え、**環境二法**への対応が必要。  
