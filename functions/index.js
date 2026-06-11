@@ -88,6 +88,12 @@ const emergencyMatch = require("./emergency_match");
 exports.notifyUrgentJob = emergencyMatch.notifyUrgentJob;
 exports.listNearbyUrgentJobs = emergencyMatch.listNearbyUrgentJobs;
 
+// ── 環境法令コンプライアンス（水質汚濁防止法・土壌汚染対策法）───────
+const envCompliance = require("./env_compliance");
+exports.checkEnvCompliance = envCompliance.checkEnvCompliance;
+exports.submitEnvComplianceDoc = envCompliance.submitEnvComplianceDoc;
+exports.logEnvComplianceEvent = envCompliance.logEnvComplianceEvent;
+
 // ── 職人コミュニティ（§29）────────────────────────────────────────
 const community = require("./community");
 exports.sendCommunityThanks = community.sendCommunityThanks;
