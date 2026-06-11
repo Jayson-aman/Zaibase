@@ -1630,3 +1630,111 @@ Maxプラン割引と**合算上限▲2%**。UI：`#transactionRankCard`・`#poi
 - [ ] 都道府県別の「特定施設指定区域」情報の参照リンク（環境省・国交省のデータ活用）
 - [ ] 産業廃棄物マニフェスト（電子マニフェスト）との連携
 - [ ] 環境コンプライアンス専門の行政書士紹介機能（§31 夢の貯金画面と同様の専門家紹介）
+
+---
+
+## §34 シニア施工管理技師 支援センター
+
+### 34.1 概要
+
+50代以上の施工管理技師・現場監督を対象に、心のケア・資格継続・経済設計・人脈づくり・ライフプランの5領域を支援する総合センター機能。
+70代・80代まで活躍し続けられる建設業キャリアを後押しすることを目的とする。
+
+- **対象**: 50代以上の施工管理技師、現場監督、工事管理職
+- **テーマカラー**: パープル（`#7c3aed`）
+- **スクリーン**: `#lifePlanScreen`
+- **Firestore コレクション**: `lifePlans`, `stressChecks`, `seniorMentors`
+- **Cloud Functions**: `functions/life_plan.js`
+
+### 34.2 5つの支援領域
+
+| タブ | アイコン | 内容 |
+|---|---|---|
+| 心のケア | 💚 | ストレスチェック（5問）・ストレス可視化・専門家相談窓口 |
+| 資格・キャリア | 🎓 | 保有資格管理・CPD継続学習・定年後キャリア設計 |
+| 経済設計 | 💴 | 退職金シミュレーション・建退共・年金・iDeCo・老後資金試算 |
+| 人脈づくり | 🤝 | シニア職人ネットワーク・OBメンター登録・同期つながり |
+| ライフプラン | 📅 | 年齢別マイルストーン設定（50代・60代・70代・80代）・相談予約 |
+
+### 34.3 ストレスチェック（心のケア）
+
+```
+5問の簡易ストレス自己評価（毎月記録可）
+  質問1: 最近、現場でのプレッシャーを感じているか
+  質問2: 睡眠が十分に取れているか
+  質問3: 同僚や部下との関係に疲れを感じるか
+  質問4: 将来への不安（収入・健康）を感じるか
+  質問5: 仕事に意欲・やりがいを感じるか
+
+スコア 0〜10:  ストレス低め（緑）
+スコア 11〜17: 注意が必要（黄）
+スコア 18以上: 専門家に相談を（赤）
+```
+
+Firestore: `stressChecks/{docId}` — uid, score, level, answers, checkedAt
+
+### 34.4 退職金・経済設計シミュレーション
+
+```
+入力: 現在の月収・建退共掛金月額・現在年齢・退職予定年齢
+計算:
+  建退共推計額 = 掛金月額 × 12 × 積立年数 × 利率補正
+  年金収入（概算） = 月収 × 0.005 × 加入年数
+  iDeCo推計額 = 月額 × 12 × 年数 × 1.03^年数（複利3%仮定）
+  老後月次収入 = (建退共 + iDeCo) / 240 + 年金収入
+```
+
+### 34.5 年齢別キャリアマイルストーン（ライフプランタブ）
+
+| 年代 | 推奨アクション |
+|---|---|
+| 50代 | 1級施工管理技士維持・監理技術者登録更新・健康診断徹底・副業・メンター活動開始 |
+| 60代 | 定年延長交渉・独立検討・建退共給付手続き・FP相談・社会保険継続確認 |
+| 70代 | 顧問・技術指導・地域建設業貢献・体力に合わせた現場選択・相続準備 |
+| 80代 | 後進育成・職人塾講師・建設博物館等への技術継承活動・人生総括 |
+
+### 34.6 Cloud Functions（`functions/life_plan.js`）
+
+| 関数名 | 概要 |
+|---|---|
+| `getMentors` | メンター・相談窓口一覧取得（Firestoreにデータなければデフォルト6件返却） |
+| `saveLifePlan` | カテゴリ別（mental/career/finance/network/plan）ライフプランをFirestoreに保存 |
+| `getLifePlanStats` | ユーザーの登録済みカテゴリ・最新ストレスチェック結果を返す |
+
+### 34.7 Firestore スキーマ
+
+**`lifePlans/{uid}`**
+```
+uid: string
+mental:   { stressScore, stressLevel, answers, savedAt }
+career:   { certs[], targetCert, retirementAge, savedAt }
+finance:  { monthlySalary, kensetsuKyosaiMonthly, currentAge, retirementAge, savedAt }
+network:  { isMentor, specialty, yearsExp, message, savedAt }
+plan:     { milestones: { age50, age60, age70, age80 }, savedAt }
+updatedAt: timestamp
+```
+
+**`stressChecks/{docId}`**
+```
+uid: string
+score: number (0〜25)
+level: 'low' | 'caution' | 'high'
+answers: { q1〜q5: number }
+checkedAt: timestamp
+```
+
+**`seniorMentors/{docId}`** （管理者が手動登録）
+```
+name: string
+role: string
+specialty: string[]
+contact: string
+note: string
+active: boolean
+priority: number
+```
+
+### 34.8 マイページリンク
+
+- ボタン: `🏗️ シニア支援・ライフプラン`（`id="mypageLifePlanBtn"`）
+- マイページクイックリンク欄に配置、タップで `initLifePlanScreen()` → `showScreen('lifePlanScreen')`
