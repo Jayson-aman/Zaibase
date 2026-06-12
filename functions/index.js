@@ -112,6 +112,12 @@ exports.savePermit = kyoninka.savePermit;
 exports.getPermitsByJob = kyoninka.getPermitsByJob;
 exports.checkPermitDeadlines = kyoninka.checkPermitDeadlines;
 
+// ── 施工体制台帳・施工体系図（§39）────────────────────────────────
+const seikoTaikei = require("./seiko_taikei");
+exports.saveSeikoTaikei = seikoTaikei.saveSeikoTaikei;
+exports.getSeikoTaikei = seikoTaikei.getSeikoTaikei;
+exports.listSeikoTaikei = seikoTaikei.listSeikoTaikei;
+
 // ── 工数管理（§36）────────────────────────────────────────────────
 const koushou = require("./koushou");
 exports.addKoushouEntry = koushou.addKoushouEntry;
