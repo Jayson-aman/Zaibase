@@ -123,6 +123,11 @@ const kokiKanri = require("./koki_kanri");
 exports.saveKokiRecord = kokiKanri.saveKokiRecord;
 exports.getKokiRecords = kokiKanri.getKokiRecords;
 
+// ── 下請コンプライアンス（§41）──────────────────────────────────
+const koseiCompliance = require("./kosei_compliance");
+exports.checkIkkatsu = koseiCompliance.checkIkkatsu;
+exports.saveKosei = koseiCompliance.saveKosei;
+
 // ── 工数管理（§36）────────────────────────────────────────────────
 const koushou = require("./koushou");
 exports.addKoushouEntry = koushou.addKoushouEntry;
