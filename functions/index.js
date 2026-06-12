@@ -159,6 +159,10 @@ exports.clockInOut = karoshiSupport.clockInOut;
 exports.getWorkLogs = karoshiSupport.getWorkLogs;
 exports.saveInterview = karoshiSupport.saveInterview;
 exports.getInterviews = karoshiSupport.getInterviews;
+exports.postAnonymousConsult = karoshiSupport.postAnonymousConsult;
+exports.getAnonymousConsults = karoshiSupport.getAnonymousConsults;
+exports.replyAnonymousConsult = karoshiSupport.replyAnonymousConsult;
+exports.getConsultReplies = karoshiSupport.getConsultReplies;
 
 // ── 騒音・振動規制 申請支援（§45）─────────────────────────────────
 const noiseVib = require("./noise_vib");

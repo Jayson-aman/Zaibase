@@ -1888,6 +1888,47 @@
     #karoshiScreen .kr-iv-row { padding: 10px 0; border-bottom: 1px solid var(--zb-border); font-size: 12px; }
     #karoshiScreen .kr-iv-title { font-weight: 700; margin-bottom: 3px; }
     #karoshiScreen .kr-iv-meta { color: var(--zb-muted); font-size: 11px; }
+    #karoshiScreen .kr-violation { border-radius: 10px; padding: 10px 13px; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; font-size: 12px; }
+    #karoshiScreen .kr-violation.critical { background: #fef2f2; border-left: 4px solid #dc2626; }
+    #karoshiScreen .kr-violation.warning { background: #fffbeb; border-left: 4px solid #d97706; }
+    #karoshiScreen .kr-violation.ok { background: #f0fdf4; border-left: 4px solid #16a34a; }
+    #karoshiScreen .kr-violation-label { font-weight: 700; flex: 1; }
+    #karoshiScreen .kr-violation-hours { font-weight: 800; font-size: 18px; }
+    #karoshiScreen .kr-tel-card { background: var(--zb-card); border-radius: 14px; border: 1px solid var(--zb-border); padding: 14px; margin-bottom: 10px; }
+    #karoshiScreen .kr-tel-row { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--zb-border); }
+    #karoshiScreen .kr-tel-row:last-child { border-bottom: none; }
+    #karoshiScreen .kr-tel-icon { font-size: 22px; width: 36px; text-align: center; flex-shrink: 0; }
+    #karoshiScreen .kr-tel-info { flex: 1; }
+    #karoshiScreen .kr-tel-name { font-weight: 700; font-size: 13px; margin-bottom: 2px; }
+    #karoshiScreen .kr-tel-num { font-size: 18px; font-weight: 800; color: #b91c1c; letter-spacing: 1px; }
+    #karoshiScreen .kr-tel-note { font-size: 11px; color: var(--zb-muted); margin-top: 2px; }
+    #karoshiScreen .kr-tel-btn { padding: 8px 14px; background: #b91c1c; color: #fff; border: none; border-radius: 9px; font-size: 13px; font-weight: 700; cursor: pointer; flex-shrink: 0; }
+    #karoshiScreen .kr-switch-row { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--zb-border); margin-bottom: 10px; }
+    #karoshiScreen .kr-switch-label { font-size: 13px; font-weight: 700; }
+    #karoshiScreen .kr-switch-sub { font-size: 11px; color: var(--zb-muted); margin-top: 2px; }
+    #karoshiScreen .kr-toggle { position: relative; width: 50px; height: 26px; }
+    #karoshiScreen .kr-toggle input { opacity: 0; width: 0; height: 0; }
+    #karoshiScreen .kr-toggle-slider { position: absolute; inset: 0; background: #cbd5e1; border-radius: 26px; cursor: pointer; transition: .3s; }
+    #karoshiScreen .kr-toggle-slider:before { content: ''; position: absolute; width: 20px; height: 20px; left: 3px; bottom: 3px; background: #fff; border-radius: 50%; transition: .3s; }
+    #karoshiScreen .kr-toggle input:checked + .kr-toggle-slider { background: #15803d; }
+    #karoshiScreen .kr-toggle input:checked + .kr-toggle-slider:before { transform: translateX(24px); }
+    #karoshiScreen .kr-consult-card { background: var(--zb-card); border-radius: 12px; border: 1px solid var(--zb-border); padding: 13px; margin-bottom: 10px; }
+    #karoshiScreen .kr-consult-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    #karoshiScreen .kr-consult-avatar { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg,#991b1b,#dc2626); color: #fff; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    #karoshiScreen .kr-consult-name { font-size: 12px; font-weight: 700; flex: 1; }
+    #karoshiScreen .kr-consult-time { font-size: 11px; color: var(--zb-muted); }
+    #karoshiScreen .kr-consult-cat { padding: 2px 8px; border-radius: 6px; font-size: 10px; font-weight: 700; }
+    #karoshiScreen .kr-consult-cat.overwork { background: #fee2e2; color: #b91c1c; }
+    #karoshiScreen .kr-consult-cat.harassment { background: #fef3c7; color: #92400e; }
+    #karoshiScreen .kr-consult-cat.wage { background: #dbeafe; color: #1e40af; }
+    #karoshiScreen .kr-consult-cat.accident { background: #fce7f3; color: #9d174d; }
+    #karoshiScreen .kr-consult-cat.other { background: #f1f5f9; color: #475569; }
+    #karoshiScreen .kr-consult-body { font-size: 13px; line-height: 1.7; margin-bottom: 10px; }
+    #karoshiScreen .kr-consult-reply-area { background: var(--zb-bg); border-radius: 10px; padding: 10px; margin-top: 8px; }
+    #karoshiScreen .kr-reply-row { padding: 7px 0; border-bottom: 1px solid var(--zb-border); font-size: 12px; }
+    #karoshiScreen .kr-reply-row:last-child { border-bottom: none; }
+    #karoshiScreen .kr-reply-name { font-weight: 700; color: #15803d; margin-right: 6px; }
+    #karoshiScreen .kr-report-box { background: var(--zb-bg); border: 1.5px solid #b91c1c; border-radius: 10px; padding: 12px; font-size: 12px; line-height: 1.9; white-space: pre-wrap; font-family: monospace; color: var(--zb-text); max-height: 300px; overflow-y: auto; margin-top: 10px; }
 
     /* 騒音・振動規制 申請支援（§45 #noiseVibScreen） */
     #noiseVibScreen { background: var(--zb-bg); min-height: 100vh; display: flex; flex-direction: column; padding-bottom: 80px; color: var(--zb-text); }
@@ -5001,6 +5042,8 @@ Email：info@zaibase.jp</div>
     <button class="kr-tab" data-kr-tab="illegal">⚠️ 労災隠し・両罰</button>
     <button class="kr-tab" data-kr-tab="timelog">🕐 出退勤記録</button>
     <button class="kr-tab" data-kr-tab="interview">🎙️ 面談録音</button>
+    <button class="kr-tab" data-kr-tab="emergency">📞 緊急連絡</button>
+    <button class="kr-tab" data-kr-tab="consult">🤝 匿名相談</button>
   </nav>
   <main class="kr-main">
     <div id="krPageGuide"></div>
@@ -5010,6 +5053,8 @@ Email：info@zaibase.jp</div>
     <div id="krPageIllegal" class="hidden"></div>
     <div id="krPageTimelog" class="hidden"></div>
     <div id="krPageInterview" class="hidden"></div>
+    <div id="krPageEmergency" class="hidden"></div>
+    <div id="krPageConsult" class="hidden"></div>
   </main>
 </div>
 
@@ -8796,7 +8841,7 @@ support@zaibase.jp</p>
   function switchKrTab(tab) {
     krTab = tab;
     document.querySelectorAll('[data-kr-tab]').forEach(b => b.classList.toggle('act', b.dataset.krTab === tab));
-    ['guide','brain','mental','support','illegal','timelog','interview'].forEach(t =>
+    ['guide','brain','mental','support','illegal','timelog','interview','emergency','consult'].forEach(t =>
       document.getElementById('krPage' + t.charAt(0).toUpperCase() + t.slice(1))?.classList.toggle('hidden', t !== tab)
     );
     if (tab === 'guide') renderKrGuideTab();
@@ -8806,6 +8851,8 @@ support@zaibase.jp</p>
     if (tab === 'illegal') renderKrIllegalTab();
     if (tab === 'timelog') renderKrTimelogTab();
     if (tab === 'interview') renderKrInterviewTab();
+    if (tab === 'emergency') renderKrEmergencyTab();
+    if (tab === 'consult') renderKrConsultTab();
   }
 
   function renderKrGuideTab() {
@@ -9076,6 +9123,11 @@ support@zaibase.jp</p>
         <div id="krPunchMsg" style="font-size:12px;margin-top:6px;"></div>
       </div>
       <div class="kr-card">
+        <div class="kr-card-title">⚖️ 月次残業・法令チェック</div>
+        <div style="font-size:11px;color:var(--zb-muted);margin-bottom:8px;">打刻データから自動集計 ／ 80h超=過労死ライン ／ 45h超=36協定上限</div>
+        <div id="krViolationList"><div style="color:var(--zb-muted);font-size:12px;">データ集計中...</div></div>
+      </div>
+      <div class="kr-card">
         <div class="kr-card-title">📋 打刻履歴</div>
         <div id="krLogList"><div style="color:var(--zb-muted);font-size:12px;">読み込み中...</div></div>
       </div>`;
@@ -9197,6 +9249,31 @@ support@zaibase.jp</p>
       const fn = firebase.functions().httpsCallable('getWorkLogs');
       const res = await fn({});
       krWorkLogs = res.data.logs || [];
+
+      // violation analysis
+      const vEl = document.getElementById('krViolationList');
+      if (vEl) {
+        const vs = krAnalyzeViolations(krWorkLogs);
+        if (!vs.length) {
+          vEl.innerHTML = '<div style="color:var(--zb-muted);font-size:12px;">打刻データが不足しています（出勤・退勤を記録すると自動集計されます）</div>';
+        } else {
+          vEl.innerHTML = vs.map(v => `
+            <div class="kr-violation ${v.violation}">
+              <div>
+                <div style="font-size:11px;color:var(--zb-muted);">${v.month}</div>
+                <div class="kr-violation-label">${v.label}</div>
+              </div>
+              <div class="kr-violation-hours" style="color:${v.violation==='critical'?'#dc2626':v.violation==='warning'?'#d97706':'#16a34a'};">
+                ${v.overtime}h
+              </div>
+            </div>`).join('') +
+            (vs.some(v => v.violation !== 'ok') ? `
+              <div class="kr-notice warn" style="margin-top:6px;">
+                ⚠️ 法令違反の疑いがあります。<strong>📞 緊急連絡タブ</strong>から労基署に相談、または<strong>🎙️ 面談録音タブ</strong>で申告文面を生成してください。
+              </div>` : '');
+        }
+      }
+
       const el = document.getElementById('krLogList');
       if (!el) return;
       if (!krWorkLogs.length) { el.innerHTML = '<div style="color:var(--zb-muted);font-size:12px;">打刻記録がありません</div>'; return; }
@@ -9248,7 +9325,14 @@ support@zaibase.jp</p>
       </div>
       <div class="kr-card">
         <div class="kr-card-title">📂 過去の面談記録</div>
+        <div style="font-size:11px;color:var(--zb-muted);margin-bottom:8px;">「申告文面を生成」で労基署への申告書を自動作成できます</div>
         <div id="krIvList"><div style="color:var(--zb-muted);font-size:12px;">読み込み中...</div></div>
+      </div>
+      <div class="kr-card" id="krReportCard" style="display:none;">
+        <div class="kr-card-title">📄 労働基準監督署 申告文面</div>
+        <div style="font-size:11px;color:var(--zb-muted);margin-bottom:6px;">以下をコピーして最寄りの労基署へ提出・FAX・e-Govで送付できます</div>
+        <div id="krReportOutput" class="kr-report-box"></div>
+        <button class="kr-btn" style="margin-top:10px;" onclick="navigator.clipboard.writeText(document.getElementById('krReportOutput').textContent).then(()=>alert('📋 コピーしました'));">📋 クリップボードにコピー</button>
       </div>`;
 
     // Set today's date
@@ -9357,8 +9441,297 @@ support@zaibase.jp</p>
         <div class="kr-iv-row">
           <div class="kr-iv-title">🎙️ ${iv.title}</div>
           <div class="kr-iv-meta">${iv.interviewDate || '日付不明'} ／ ${iv.participants || '参加者不明'} ／ 文字起こし ${iv.transcriptLen || 0}文字</div>
+          <button class="kr-btn" style="margin-top:8px;" onclick="krGenerateReport(${JSON.stringify(iv).replace(/</g,'&lt;')})">📄 申告文面を生成</button>
         </div>`).join('');
     } catch(e) { /* ignore */ }
+  }
+
+  // ── 退勤法違反分析 ──────────────────────────────────────────────
+  function krAnalyzeViolations(logs) {
+    const sorted = [...logs].sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+    const monthOt = {};
+    let pendingIn = null;
+    for (const log of sorted) {
+      const isIn = log.type === 'in' || log.type === 'self_in';
+      const isOut = log.type === 'out' || log.type === 'self_out';
+      if (isIn) { pendingIn = log; }
+      else if (isOut && pendingIn) {
+        const inT = new Date(pendingIn.timestamp);
+        const outT = new Date(log.timestamp);
+        const hrs = (outT - inT) / 3600000;
+        if (hrs > 0 && hrs < 24) {
+          const ym = inT.toISOString().slice(0, 7);
+          monthOt[ym] = (monthOt[ym] || 0) + Math.max(0, hrs - 8);
+        }
+        pendingIn = null;
+      }
+    }
+    return Object.entries(monthOt).sort((a,b) => b[0].localeCompare(a[0])).map(([month, ot]) => ({
+      month,
+      overtime: Math.round(ot * 10) / 10,
+      violation: ot >= 80 ? 'critical' : ot >= 45 ? 'warning' : 'ok',
+      label: ot >= 80 ? '🚨 過労死ライン超え（80h）' : ot >= 45 ? '⚡ 36協定上限超え（45h）' : '✅ 適法範囲',
+    }));
+  }
+
+  // ── 労基申告文面生成 ──────────────────────────────────────────────
+  function krGenerateReport(iv) {
+    const today = new Date().toLocaleDateString('ja-JP', { year:'numeric', month:'long', day:'numeric' });
+    const violations = krAnalyzeViolations(krWorkLogs);
+    const otLines = violations.filter(v => v.violation !== 'ok')
+      .map(v => `  ${v.month}：時間外 ${v.overtime}h ${v.label}`)
+      .join('\n') || '  （打刻データから自動集計）';
+    const transcript = iv?.transcript ? iv.transcript.slice(0, 300) + (iv.transcript.length > 300 ? '…' : '') : '（録音データ参照）';
+    const reportText =
+`労働基準監督署　御中
+
+                          申　告　書
+
+申告年月日：${today}
+
+【申告者】匿名申告（建設従事者）
+
+【事業所の名称】${document.getElementById('krWpName')?.value || '　　　　　　　　　（記入）'}
+【事業所の所在地】${document.getElementById('krWpAddr')?.value || '　　　　　　　　　（記入）'}
+
+【申告の趣旨】
+下記のとおり、労働基準法および関連法令に違反する事実が
+あるため、是正指導を求めます。
+
+【申告の内容】
+１．時間外労働の法令違反
+${otLines}
+
+　労働基準法第36条に基づく時間外上限（月45時間・年360時間）
+　を超える時間外労働を強いられています。
+
+２．職場内における不適切な行為（面談記録より）
+面談日：${iv?.interviewDate || '　　　　'}
+参加者：${iv?.participants || '　　　　'}
+内容（抜粋）：
+${transcript}
+
+【違反法条】
+・労働基準法第36条（時間外・休日労働に関する協定）
+・労働基準法第37条（時間外、休日及び深夜の割増賃金）
+・労働施策総合推進法第30条の2（パワーハラスメントの防止）
+・過労死等防止対策推進法第4条（事業主の責務）
+
+【証拠】
+・GPS出退勤記録（Zaibase 打刻ログ）
+・面談録音・文字起こし
+・その他関係書類
+
+以上の通り申告いたします。
+
+備考：本申告は匿名で行います。是正に関する結果については、
+　　　匿名連絡先へご連絡ください。`;
+
+    const showReport = () => {
+      const el = document.getElementById('krReportOutput');
+      const card = document.getElementById('krReportCard');
+      if (el && card) {
+        el.textContent = reportText;
+        card.style.display = '';
+        card.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+    if (document.getElementById('krReportOutput')) {
+      showReport();
+    } else {
+      switchKrTab('interview');
+      setTimeout(showReport, 300);
+    }
+  }
+
+  // ── 緊急連絡先タブ ──────────────────────────────────────────────
+  function renderKrEmergencyTab() {
+    const el = document.getElementById('krPageEmergency');
+    if (!el) return;
+    const tels = [
+      { icon:'🏛️', name:'労働条件相談ほっとライン（無料）', num:'0120-811-610', note:'平日17:00-22:00 ／ 土日祝9:00-21:00', color:'#b91c1c' },
+      { icon:'⚖️', name:'総合労働相談コーナー（都道府県労働局）', num:'0570-200-059', note:'平日8:30-17:15（全国共通）', color:'#b91c1c' },
+      { icon:'🛡️', name:'ハラスメント悩み相談室（無料）', num:'0120-714-864', note:'平日9:00-21:00 ／ 土曜9:00-17:00', color:'#d97706' },
+      { icon:'💚', name:'よりそいホットライン（24時間・無料）', num:'0120-279-338', note:'24時間365日対応　命の危機を感じたらすぐに', color:'#15803d' },
+      { icon:'🌙', name:'いのちの電話（無料）', num:'0120-783-556', note:'毎月16日20:00〜翌8:00 常設', color:'#15803d' },
+      { icon:'📋', name:'過労死防止家族の会ホットライン', num:'06-6877-3683', note:'月〜金 10:00-16:00', color:'#7c3aed' },
+      { icon:'⚕️', name:'産業保健総合支援センター（都道府県）', num:'（各都道府県）', note:'メンタルヘルス・産業医相談', color:'#0369a1' },
+    ];
+    el.innerHTML = `
+      <div class="kr-notice warn" style="margin-bottom:12px;">
+        ⚠️ <strong>今すぐ誰かに話してください。</strong><br>
+        あなたの命はかけがえのないものです。一人で抱え込まないでください。
+      </div>
+      <div class="kr-tel-card">
+        <div class="kr-card-title" style="margin-bottom:10px;">📞 相談窓口・緊急連絡先</div>
+        ${tels.map(t => `
+          <div class="kr-tel-row">
+            <div class="kr-tel-icon">${t.icon}</div>
+            <div class="kr-tel-info">
+              <div class="kr-tel-name">${t.name}</div>
+              <div class="kr-tel-num" style="color:${t.color};">${t.num}</div>
+              <div class="kr-tel-note">${t.note}</div>
+            </div>
+            ${t.num.startsWith('0') ? `<button class="kr-tel-btn" onclick="location.href='tel:${t.num.replace(/-/g,'')}'">📞 発信</button>` : ''}
+          </div>`).join('')}
+      </div>
+      <div class="kr-tel-card">
+        <div class="kr-card-title" style="margin-bottom:10px;">🏛️ 労働基準監督署に申告する</div>
+        <div style="font-size:12px;line-height:1.8;color:var(--zb-muted);">
+          ① <strong>面談録音タブ</strong>で過去の面談記録を開く<br>
+          ② 「📄 申告文面を生成」ボタンをタップ<br>
+          ③ 生成された申告書をコピーして、最寄りの労働基準監督署へ<br>
+          ④ 持参・FAX・オンライン（e-Gov）いずれも可能
+        </div>
+        <div class="kr-notice info" style="margin-top:10px;">
+          💡 申告は<strong>匿名でも可能</strong>です。事業主への通知なしに調査を依頼できます。
+        </div>
+      </div>`;
+  }
+
+  // ── 匿名相談タブ ────────────────────────────────────────────────
+  let krAnonMode = true;
+  let krConsults = [];
+  let krOpenConsultId = null;
+
+  const KR_CAT_LABELS = { overwork:'長時間労働', harassment:'パワハラ', wage:'賃金未払', accident:'労働災害', other:'その他' };
+
+  function renderKrConsultTab() {
+    const el = document.getElementById('krPageConsult');
+    if (!el) return;
+    el.innerHTML = `
+      <div class="kr-card">
+        <div class="kr-card-title">🤝 匿名相談コミュニティ</div>
+        <div class="kr-switch-row">
+          <div>
+            <div class="kr-switch-label">匿名モード</div>
+            <div class="kr-switch-sub">ONにすると名前が自動生成されます</div>
+          </div>
+          <label class="kr-toggle">
+            <input type="checkbox" id="krAnonToggle" ${krAnonMode ? 'checked' : ''}>
+            <span class="kr-toggle-slider"></span>
+          </label>
+        </div>
+        <div id="krAnonLabel" class="kr-notice info" style="margin-bottom:10px;">
+          ${krAnonMode ? '🔒 匿名モードON — 名前は自動生成されます' : '👤 実名モードON — 表示名が使われます'}
+        </div>
+        <div class="kr-field"><label>カテゴリ</label>
+          <select id="krConsultCat">
+            <option value="overwork">長時間労働・過労</option>
+            <option value="harassment">パワハラ・ハラスメント</option>
+            <option value="wage">賃金未払・給与トラブル</option>
+            <option value="accident">労働災害・けが</option>
+            <option value="other">その他</option>
+          </select>
+        </div>
+        <div class="kr-field"><label>相談内容（10〜500文字）</label>
+          <textarea id="krConsultContent" style="height:100px;" placeholder="状況を詳しく書いてください。個人情報は書かないでください。"></textarea>
+        </div>
+        <button id="krConsultPostBtn" class="kr-btn">📨 相談を投稿する</button>
+        <div id="krConsultPostMsg" style="font-size:12px;margin-top:6px;"></div>
+      </div>
+      <div id="krConsultList"><div style="color:var(--zb-muted);font-size:12px;padding:10px;">読み込み中...</div></div>`;
+
+    document.getElementById('krAnonToggle').onchange = (e) => {
+      krAnonMode = e.target.checked;
+      const label = document.getElementById('krAnonLabel');
+      if (label) label.textContent = krAnonMode
+        ? '🔒 匿名モードON — 名前は自動生成されます'
+        : '👤 実名モードOFF — 匿名設定を推奨します';
+    };
+
+    document.getElementById('krConsultPostBtn').onclick = async () => {
+      const content = document.getElementById('krConsultContent').value.trim();
+      const cat = document.getElementById('krConsultCat').value;
+      const msg = document.getElementById('krConsultPostMsg');
+      if (content.length < 10) { msg.textContent = '❌ 10文字以上入力してください'; return; }
+      try {
+        msg.textContent = '送信中...';
+        const fn = firebase.functions().httpsCallable('postAnonymousConsult');
+        await fn({ content, category: cat });
+        document.getElementById('krConsultContent').value = '';
+        msg.textContent = '✅ 投稿しました';
+        await krLoadConsults();
+      } catch(e) { msg.textContent = '❌ ' + (e.message || '投稿失敗'); }
+    };
+
+    krLoadConsults();
+  }
+
+  async function krLoadConsults() {
+    try {
+      const fn = firebase.functions().httpsCallable('getAnonymousConsults');
+      const res = await fn({});
+      krConsults = res.data.consults || [];
+      const el = document.getElementById('krConsultList');
+      if (!el) return;
+      if (!krConsults.length) { el.innerHTML = '<div style="color:var(--zb-muted);font-size:12px;padding:10px;">相談がまだありません。最初の投稿者になりましょう。</div>'; return; }
+      el.innerHTML = krConsults.map(c => {
+        const catCls = c.category || 'other';
+        const catLabel = KR_CAT_LABELS[catCls] || 'その他';
+        const initials = (c.posterAnonId || '相談').slice(0, 2);
+        const timeStr = c.createdAt ? new Date(c.createdAt).toLocaleString('ja-JP', { month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit' }) : '';
+        return `
+          <div class="kr-consult-card" id="consult_${c.id}">
+            <div class="kr-consult-header">
+              <div class="kr-consult-avatar">${initials}</div>
+              <div class="kr-consult-name">${c.posterAnonId}</div>
+              <span class="kr-consult-cat ${catCls}">${catLabel}</span>
+              <div class="kr-consult-time">${timeStr}</div>
+            </div>
+            <div class="kr-consult-body">${c.content.replace(/</g,'&lt;').replace(/\n/g,'<br>')}</div>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <button class="kr-btn" style="padding:7px 14px;font-size:12px;background:#374151;margin-top:0;" onclick="krToggleReplies('${c.id}')">
+                💬 返信 ${c.replyCount || 0}件
+              </button>
+              ${c.resolved ? '<span style="color:#15803d;font-size:12px;font-weight:700;">✅ 解決済み</span>' : ''}
+            </div>
+            <div id="krReplyArea_${c.id}" class="hidden">
+              <div id="krReplies_${c.id}" class="kr-consult-reply-area" style="margin-top:8px;"></div>
+              <div style="display:flex;gap:6px;margin-top:8px;">
+                <textarea id="krReplyInput_${c.id}" style="flex:1;padding:8px;border:1.5px solid var(--zb-border);border-radius:9px;font-size:12px;background:var(--zb-bg);color:var(--zb-text);resize:none;" rows="2" placeholder="返信を入力（5〜300文字）"></textarea>
+                <button class="kr-punch-btn in" style="padding:8px 12px;font-size:12px;" onclick="krPostReply('${c.id}')">送信</button>
+              </div>
+            </div>
+          </div>`;
+      }).join('');
+    } catch(e) { /* ignore */ }
+  }
+
+  async function krToggleReplies(consultId) {
+    const area = document.getElementById('krReplyArea_' + consultId);
+    if (!area) return;
+    if (!area.classList.contains('hidden')) { area.classList.add('hidden'); return; }
+    area.classList.remove('hidden');
+    const repliesEl = document.getElementById('krReplies_' + consultId);
+    if (repliesEl) repliesEl.innerHTML = '<div style="font-size:12px;color:var(--zb-muted);">読み込み中...</div>';
+    try {
+      const fn = firebase.functions().httpsCallable('getConsultReplies');
+      const res = await fn({ consultId });
+      const replies = res.data.replies || [];
+      if (!repliesEl) return;
+      if (!replies.length) { repliesEl.innerHTML = '<div style="font-size:12px;color:var(--zb-muted);">返信はまだありません</div>'; return; }
+      repliesEl.innerHTML = replies.map(r => `
+        <div class="kr-reply-row">
+          <span class="kr-reply-name">${r.replierAnonId}</span>
+          ${r.content.replace(/</g,'&lt;').replace(/\n/g,'<br>')}
+          <span style="color:var(--zb-muted);font-size:10px;margin-left:6px;">${r.createdAt ? new Date(r.createdAt).toLocaleString('ja-JP',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}) : ''}</span>
+        </div>`).join('');
+    } catch(e) { if (repliesEl) repliesEl.innerHTML = '<div style="font-size:12px;color:#b91c1c;">読み込み失敗</div>'; }
+  }
+
+  async function krPostReply(consultId) {
+    const input = document.getElementById('krReplyInput_' + consultId);
+    if (!input) return;
+    const content = input.value.trim();
+    if (content.length < 5) { alert('返信は5文字以上入力してください'); return; }
+    try {
+      const fn = firebase.functions().httpsCallable('replyAnonymousConsult');
+      await fn({ consultId, content });
+      input.value = '';
+      await krToggleReplies(consultId); // close
+      await krToggleReplies(consultId); // reload & open
+    } catch(e) { alert('返信失敗: ' + (e.message || '')); }
   }
 
   function initKaroshiScreen() {
@@ -9367,7 +9740,7 @@ support@zaibase.jp</p>
       b.onclick = () => switchKrTab(b.dataset.krTab);
     });
     document.getElementById('karoshiBackBtn').onclick = () => showScreen('mypageScreen');
-    ['guide','brain','mental','support','illegal','timelog','interview'].forEach(t =>
+    ['guide','brain','mental','support','illegal','timelog','interview','emergency','consult'].forEach(t =>
       document.getElementById('krPage' + t.charAt(0).toUpperCase() + t.slice(1))?.classList.toggle('hidden', t !== 'guide')
     );
     renderKrGuideTab();

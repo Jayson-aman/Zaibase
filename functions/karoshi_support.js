@@ -1,20 +1,25 @@
 /**
  * Zaibase §44 過労死・労災支援センター
  *
- * saveKaroshiCase   — 過労死等相談・証拠記録の保存
- * getKaroshiCases   — 相談履歴の取得
- * registerWorkplace — 職場登録（GPS座標・有効半径）
- * getWorkplaces     — 職場一覧
- * clockInOut        — GPS出退勤打刻（自己申告対応）
- * getWorkLogs       — 勤務ログ取得
- * saveInterview     — 面談録音・文字起こし保存
- * getInterviews     — 面談記録一覧
+ * saveKaroshiCase      — 過労死等相談・証拠記録の保存
+ * getKaroshiCases      — 相談履歴の取得
+ * registerWorkplace    — 職場登録（GPS座標・有効半径）
+ * getWorkplaces        — 職場一覧
+ * clockInOut           — GPS出退勤打刻（自己申告対応）
+ * getWorkLogs          — 勤務ログ取得
+ * saveInterview        — 面談録音・文字起こし保存
+ * getInterviews        — 面談記録一覧
+ * postAnonymousConsult — 匿名相談投稿
+ * getAnonymousConsults — 匿名相談一覧
+ * replyAnonymousConsult— 匿名相談へ返信
  *
  * Firestore:
  *   karoshiCases/{caseId}
  *   karoshiWorkplaces/{wpId}
  *   karoshiTimeLogs/{logId}
  *   karoshiInterviews/{ivId}
+ *   karoshiConsults/{consultId}
+ *   karoshiConsultReplies/{replyId}
  *
  * 根拠:
  *   過労死等防止対策推進法（平成26年法律第100号）
@@ -24,6 +29,8 @@
  *   労働安全衛生法第100条（虚偽報告の禁止＝労災隠し）
  *   労働安全衛生法第122条（事業者両罰規定）
  *   労働基準法第75条〜第82条（労災補償）
+ *   労働基準法第36条（時間外・休日労働に関する協定）
+ *   労働施策総合推進法第30条の2（パワーハラスメントの防止）
  */
 const { onCall, HttpsError } = require("firebase-functions/v2/https");
 const { getFirestore, FieldValue } = require("firebase-admin/firestore");
@@ -224,6 +231,97 @@ exports.getInterviews = onCall({ region: "asia-northeast1" }, async (req) => {
       durationSec: d.data().durationSec,
       transcriptLen: (d.data().transcript || "").length,
       updatedAt: d.data().updatedAt?.toDate?.()?.toISOString() || null,
+    })),
+  };
+});
+
+// ── 匿名相談コミュニティ ───────────────────────────────────────────
+
+const ANON_PREFIXES = ['相談者', '建設職人', '現場労働者', '建設作業員', '技術者', '施工管理'];
+function anonId(uid) {
+  let h = 0;
+  for (let i = 0; i < uid.length; i++) h = (h * 31 + uid.charCodeAt(i)) >>> 0;
+  return ANON_PREFIXES[h % ANON_PREFIXES.length] + String(h % 9000 + 1000);
+}
+
+exports.postAnonymousConsult = onCall({ region: "asia-northeast1" }, async (req) => {
+  if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
+  const uid = req.auth.uid;
+  const d = req.data || {};
+  if (!d.content || String(d.content).trim().length < 10)
+    throw new HttpsError("invalid-argument", "相談内容は10文字以上入力してください");
+
+  const consultId = `consult_${Date.now()}_${Math.random().toString(36).slice(2,7)}`;
+  const validCategories = ['overwork', 'harassment', 'wage', 'accident', 'other'];
+  await db.collection("karoshiConsults").doc(consultId).set({
+    posterAnonId: anonId(uid),
+    category: validCategories.includes(d.category) ? d.category : 'other',
+    content: String(d.content).slice(0, 500),
+    replyCount: 0,
+    resolved: false,
+    createdAt: FieldValue.serverTimestamp(),
+  });
+  return { ok: true, consultId };
+});
+
+exports.getAnonymousConsults = onCall({ region: "asia-northeast1" }, async (req) => {
+  if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
+  const d = req.data || {};
+  const snap = await db.collection("karoshiConsults")
+    .orderBy("createdAt", "desc").limit(30).get();
+  return {
+    ok: true,
+    consults: snap.docs.map(doc => ({
+      id: doc.id,
+      posterAnonId: doc.data().posterAnonId,
+      category: doc.data().category,
+      content: doc.data().content,
+      replyCount: doc.data().replyCount || 0,
+      resolved: doc.data().resolved || false,
+      createdAt: doc.data().createdAt?.toDate?.()?.toISOString() || null,
+    })),
+  };
+});
+
+exports.replyAnonymousConsult = onCall({ region: "asia-northeast1" }, async (req) => {
+  if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
+  const uid = req.auth.uid;
+  const d = req.data || {};
+  if (!d.consultId) throw new HttpsError("invalid-argument", "consultId が必要です");
+  if (!d.content || String(d.content).trim().length < 5)
+    throw new HttpsError("invalid-argument", "返信は5文字以上入力してください");
+
+  const replyId = `reply_${Date.now()}_${Math.random().toString(36).slice(2,7)}`;
+  const batch = db.batch();
+  batch.set(db.collection("karoshiConsultReplies").doc(replyId), {
+    consultId: d.consultId,
+    replierAnonId: anonId(uid + 'reply'),
+    content: String(d.content).slice(0, 300),
+    createdAt: FieldValue.serverTimestamp(),
+  });
+  batch.update(db.collection("karoshiConsults").doc(d.consultId), {
+    replyCount: FieldValue.increment(1),
+  });
+  await batch.commit();
+  return { ok: true, replyId };
+});
+
+exports.getConsultReplies = onCall({ region: "asia-northeast1" }, async (req) => {
+  if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
+  const d = req.data || {};
+  if (!d.consultId) throw new HttpsError("invalid-argument", "consultId が必要です");
+  const snap = await db.collection("karoshiConsultReplies")
+    .where("consultId", "==", d.consultId)
+    .orderBy("createdAt", "asc")
+    .limit(50)
+    .get();
+  return {
+    ok: true,
+    replies: snap.docs.map(doc => ({
+      id: doc.id,
+      replierAnonId: doc.data().replierAnonId,
+      content: doc.data().content,
+      createdAt: doc.data().createdAt?.toDate?.()?.toISOString() || null,
     })),
   };
 });
