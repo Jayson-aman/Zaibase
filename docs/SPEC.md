@@ -1859,3 +1859,57 @@ updatedAt: timestamp
 ### Cloud Functions
 - **addKoushouEntry**: 工数エントリをバリデーション後にFirestoreへ保存
 - **getKoushouReport**: 指定年の月別集計・年間時間外合計を返す
+
+## §37 入札・認定・CPD管理（#nyusatsuScreen）
+
+### 概要
+公共工事の総合評価落札方式では、えるぼし・くるみん・ユースエール・ISO・CPD実績が加点評価される。これらの認定状況とCPD（継続職能開発）実績を一元管理し、加点シミュレーターで受注競争力を可視化する。
+
+### テーマカラー
+- メイン: `#0f766e`（ダークティール）
+- アクセント: `#14b8a6`
+
+### 3タブ構成
+
+#### タブ1: 🏅 認定管理
+管理対象認定:
+- えるぼし（女性活躍推進法）: 1段階/2段階/3段階/プラチナ
+- くるみん（次世代育成支援対策推進法）: くるみん/プラチナくるみん
+- ユースエール（若者雇用促進法）: 取得済/未取得
+- ISO 9001（品質マネジメント）: 取得済/更新中/未取得（有効期限あり）
+- ISO 14001（環境マネジメント）: 取得済/更新中/未取得（有効期限あり）
+- ISO 45001（安全衛生マネジメント）: 取得済/更新中/未取得（有効期限あり）
+
+各認定: 取得状況・取得日・有効期限（ISO系）・登録番号・備考を管理。保存先 `nyusatsuCerts/{uid}`。
+
+#### タブ2: 📊 入札加点シミュ
+15項目のチェックボックスで加点合計を算出。「認定管理タブのデータを自動反映」ボタンで認定取得状況を同期。
+
+#### タブ3: 📚 CPDトラッカー
+年間目標: 50単位（建設系CPD協議会推奨）  
+入力項目: 受講日・主催者・講習名・時間・単位数・種別・認定番号  
+サマリー: 累計単位・達成率・残り単位数・月別推移グラフ
+
+### Firestoreスキーマ
+**nyusatsuCerts** コレクション（ドキュメントID = uid）:
+- [certKey]: { status, acquiredDate, expiryDate, certNo, note }
+
+**cpdRecords** コレクション:
+- uid: string
+- date: string（YYYY-MM-DD）
+- organizer: string（主催者、最大100文字）
+- title: string（講習名、最大120文字）
+- hours: number（0.5単位）
+- units: number（0.5単位）
+- type: string（種別）
+- certNo: string（認定番号）
+- createdAt: Timestamp
+
+### Cloud Functions
+- **saveCertification**: `nyusatsuCerts/{uid}` に認定データをmerge保存
+- **addCpdRecord**: CPD記録をFirestoreに追加し年間累計を返す
+- **getCpdSummary**: 指定年のCPD累計・月別内訳を返す
+
+### マイページリンク
+- ボタン: `🏛️ 入札・認定・CPD`（`id="mypageNyusatsuBtn"`）
+- タップで `initNyusatsuScreen()` → `showScreen('nyusatsuScreen')`
