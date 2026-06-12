@@ -1831,6 +1831,59 @@
     .ny-cert-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
     .ny-reflect-btn { background: #0f766e; color: #fff; border: none; border-radius: 8px; padding: 8px 14px; font-size: 13px; font-weight: 600; cursor: pointer; margin-bottom: 14px; }
 
+    /* 許認可管理・法令チェック（§38 #kyoninkaScreen） */
+    #kyoninkaScreen { background: var(--zb-bg); min-height: 100vh; display: flex; flex-direction: column; padding-bottom: 80px; color: var(--zb-text); }
+    #kyoninkaScreen .kn-hd { background: linear-gradient(135deg,#450a0a,#991b1b); padding: 13px 16px 16px; flex-shrink: 0; }
+    #kyoninkaScreen .kn-hd-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    #kyoninkaScreen .kn-back { color: rgba(255,255,255,.75); font-size: 22px; border: none; background: none; cursor: pointer; }
+    #kyoninkaScreen .kn-logo { color: #fff; font-size: 17px; font-weight: 800; flex: 1; }
+    #kyoninkaScreen .kn-mission { background: rgba(255,255,255,.12); border-radius: 12px; padding: 11px 13px; color: #fff; font-size: 12px; line-height: 1.75; }
+    #kyoninkaScreen .kn-tabs { background: var(--zb-card); border-bottom: 1px solid var(--zb-border); display: flex; padding: 0 10px; position: sticky; top: 0; z-index: 9; }
+    #kyoninkaScreen .kn-tab { padding: 11px 16px; font-size: 13px; font-weight: 600; color: var(--zb-muted); border: none; background: none; border-bottom: 2px solid transparent; cursor: pointer; }
+    #kyoninkaScreen .kn-tab.act { color: #dc2626; border-bottom-color: #dc2626; }
+    #kyoninkaScreen .kn-main { flex: 1; padding: 14px; overflow-y: auto; }
+    #kyoninkaScreen .kn-card { background: var(--zb-card); border-radius: 14px; border: 1px solid var(--zb-border); padding: 14px; margin-bottom: 12px; }
+    #kyoninkaScreen .kn-card-title { font-size: 14px; font-weight: 700; color: var(--zb-navy); margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+    #kyoninkaScreen .kn-field { margin-bottom: 11px; }
+    #kyoninkaScreen .kn-field label { display: block; font-size: 12px; font-weight: 600; color: var(--zb-muted); margin-bottom: 4px; }
+    #kyoninkaScreen .kn-field input, #kyoninkaScreen .kn-field select { width: 100%; padding: 9px 12px; border: 1.5px solid var(--zb-border); border-radius: 9px; font-size: 14px; background: var(--zb-bg); color: var(--zb-text); box-sizing: border-box; }
+    #kyoninkaScreen .kn-check-group { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+    #kyoninkaScreen .kn-check-chip { display: flex; align-items: center; gap: 5px; padding: 6px 12px; border: 1.5px solid var(--zb-border); border-radius: 20px; font-size: 12px; cursor: pointer; background: var(--zb-bg); }
+    #kyoninkaScreen .kn-check-chip input[type=checkbox] { width: 14px; height: 14px; accent-color: #dc2626; }
+    #kyoninkaScreen .kn-check-chip.sel { border-color: #dc2626; background: #fef2f2; }
+    #kyoninkaScreen .kn-run-btn { width: 100%; padding: 13px; background: #991b1b; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; margin-top: 8px; }
+    #kyoninkaScreen .kn-result-item { border-radius: 12px; padding: 13px; margin-bottom: 10px; border: 1px solid var(--zb-border); }
+    #kyoninkaScreen .kn-result-item.required { border-color: #fca5a5; background: #fef2f2; }
+    #kyoninkaScreen .kn-result-item.warning { border-color: #fcd34d; background: #fffbeb; }
+    #kyoninkaScreen .kn-result-item.info { border-color: #93c5fd; background: #eff6ff; }
+    #kyoninkaScreen .kn-ri-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+    #kyoninkaScreen .kn-ri-badge { padding: 2px 9px; border-radius: 10px; font-size: 10px; font-weight: 700; flex-shrink: 0; }
+    #kyoninkaScreen .kn-ri-badge.required { background: #dc2626; color: #fff; }
+    #kyoninkaScreen .kn-ri-badge.warning { background: #f59e0b; color: #fff; }
+    #kyoninkaScreen .kn-ri-badge.info { background: #3b82f6; color: #fff; }
+    #kyoninkaScreen .kn-ri-title { font-size: 13px; font-weight: 700; color: var(--zb-navy); }
+    #kyoninkaScreen .kn-ri-law { font-size: 11px; color: var(--zb-muted); margin-bottom: 4px; }
+    #kyoninkaScreen .kn-ri-body { font-size: 12px; line-height: 1.65; color: var(--zb-text); }
+    #kyoninkaScreen .kn-ri-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; font-size: 11px; }
+    #kyoninkaScreen .kn-ri-meta-item { background: var(--zb-bg); border-radius: 6px; padding: 3px 8px; color: var(--zb-muted); }
+    #kyoninkaScreen .kn-ri-meta-item strong { color: var(--zb-navy); }
+    #kyoninkaScreen .kn-permit-row { padding: 12px 0; border-bottom: 1px solid var(--zb-border); }
+    #kyoninkaScreen .kn-permit-row:last-child { border-bottom: none; }
+    #kyoninkaScreen .kn-permit-header { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+    #kyoninkaScreen .kn-permit-name { font-size: 13px; font-weight: 700; color: var(--zb-navy); flex: 1; }
+    #kyoninkaScreen .kn-permit-status { padding: 2px 9px; border-radius: 10px; font-size: 10px; font-weight: 700; }
+    #kyoninkaScreen .kn-ps-pending { background: #fff8e0; color: #7a5a00; }
+    #kyoninkaScreen .kn-ps-applied { background: #e8f0fa; color: var(--zb-navy); }
+    #kyoninkaScreen .kn-ps-approved { background: #e8f8f2; color: #1a5c3a; }
+    #kyoninkaScreen .kn-ps-expired { background: #fde8e8; color: #c0392b; }
+    #kyoninkaScreen .kn-permit-meta { font-size: 11px; color: var(--zb-muted); line-height: 1.6; }
+    #kyoninkaScreen .kn-add-btn { width: 100%; padding: 11px; background: var(--zb-bg); border: 1.5px dashed var(--zb-border); border-radius: 10px; color: var(--zb-muted); font-size: 13px; font-weight: 600; cursor: pointer; margin-top: 8px; }
+    #kyoninkaScreen .kn-form-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.4); z-index: 500; display: flex; align-items: flex-end; }
+    #kyoninkaScreen .kn-form-sheet { background: var(--zb-card); border-radius: 20px 20px 0 0; padding: 20px 16px 40px; width: 100%; max-width: 480px; margin: 0 auto; }
+    #kyoninkaScreen .kn-form-title { font-size: 16px; font-weight: 800; color: var(--zb-navy); margin-bottom: 16px; }
+    #kyoninkaScreen .kn-form-save { width: 100%; padding: 13px; background: #991b1b; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; margin-top: 12px; }
+    #kyoninkaScreen .kn-empty { text-align: center; color: var(--zb-muted); font-size: 13px; padding: 32px 0; }
+
     /* CSR・ステークホルダー管理（§35 #csrScreen） */
     #csrScreen { background: var(--zb-bg); min-height: 100vh; display: flex; flex-direction: column; padding-bottom: 80px; color: var(--zb-text); }
     #csrScreen .csr-hd { background: linear-gradient(135deg,#0f2447,#1e3a5f); padding: 13px 16px 16px; flex-shrink: 0; }
@@ -3765,6 +3818,7 @@ Email：info@zaibase.jp</div>
     <button type="button" id="mypageCommunityBtn">🤝 職人のつながり</button>
     <button type="button" id="mypageChildcareBtn">🧒 子育て互助</button>
     <button type="button" id="mypageLifePlanBtn">🏗️ シニア支援・ライフプラン</button>
+    <button type="button" id="mypageKyoninkaBtn">⚖️ 許認可・法令チェック</button>
     <button type="button" id="mypageNyusatsuBtn">🏛️ 入札・認定・CPD</button>
     <button type="button" id="mypageKoushouBtn">⏱️ 工数管理</button>
     <button type="button" id="mypageCsrBtn">⚖️ CSR・人権管理</button>
@@ -4589,6 +4643,27 @@ Email：info@zaibase.jp</div>
     <div id="nyPageCert"><!-- JS描画 --></div>
     <div id="nyPageSim" class="hidden"><!-- JS描画 --></div>
     <div id="nyPageCpd" class="hidden"><!-- JS描画 --></div>
+  </main>
+</div>
+
+<!-- 許認可管理・法令チェック（§38 #kyoninkaScreen） -->
+<div id="kyoninkaScreen" class="hidden">
+  <header class="kn-hd">
+    <div class="kn-hd-row">
+      <button class="kn-back" id="kyoninkaBackBtn"><i class="ti ti-arrow-left"></i></button>
+      <span class="kn-logo">⚖️ 許認可管理・法令チェック</span>
+    </div>
+    <div class="kn-mission">
+      工事種別・規模・場所を入力すると必要な届出・許可を自動リストアップ。申請状況と期限を案件ごとに管理します。
+    </div>
+  </header>
+  <nav class="kn-tabs">
+    <button class="kn-tab act" data-kn-tab="check">⚖️ 法令チェック</button>
+    <button class="kn-tab" data-kn-tab="manage">📋 許認可管理</button>
+  </nav>
+  <main class="kn-main">
+    <div id="knPageCheck"></div>
+    <div id="knPageManage" class="hidden"></div>
   </main>
 </div>
 
