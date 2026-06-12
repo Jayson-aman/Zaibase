@@ -83,7 +83,7 @@ async function getOrCreatePriceId(stripe, plan, interval) {
     productId = allProducts.data[0].id;
   } else {
     const product = await stripe.products.create({
-      name: `Zaibase建設 ${meta.name}`,
+      name: `Zaibase Group 建設 ${meta.name}`,
       metadata: { zaibase_plan: plan },
     });
     productId = product.id;
@@ -118,7 +118,7 @@ async function getOrCreateCustomer(stripe, uid, email, displayName) {
   const customer = await stripe.customers.create({
     email: email || undefined,
     name: displayName || undefined,
-    description: "Zaibase建設 ユーザー",
+    description: "Zaibase Group ユーザー",
     metadata: { firebase_uid: uid },
   });
 
@@ -181,6 +181,9 @@ exports.createCheckoutSession = onCall(
       subscription_data: {
         metadata: { firebase_uid: uid, plan, interval },
         trial_period_days: d.trialDays || 0,
+      },
+      payment_method_options: {
+        card: { statement_descriptor_suffix_kanji: "Zaibase建設" },
       },
       locale: "ja",
     });
