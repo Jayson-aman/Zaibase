@@ -153,6 +153,12 @@ exports.sendCommunityThanks = community.sendCommunityThanks;
 const karoshiSupport = require("./karoshi_support");
 exports.saveKaroshiCase = karoshiSupport.saveKaroshiCase;
 exports.getKaroshiCases = karoshiSupport.getKaroshiCases;
+exports.registerWorkplace = karoshiSupport.registerWorkplace;
+exports.getWorkplaces = karoshiSupport.getWorkplaces;
+exports.clockInOut = karoshiSupport.clockInOut;
+exports.getWorkLogs = karoshiSupport.getWorkLogs;
+exports.saveInterview = karoshiSupport.saveInterview;
+exports.getInterviews = karoshiSupport.getInterviews;
 
 // ── 騒音・振動規制 申請支援（§45）─────────────────────────────────
 const noiseVib = require("./noise_vib");

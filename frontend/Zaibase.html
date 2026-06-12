@@ -1865,6 +1865,29 @@
     #karoshiScreen .kr-criterion { background: var(--zb-bg); border-radius: 10px; padding: 10px; margin-bottom: 6px; border-left: 3px solid #b91c1c; }
     #karoshiScreen .kr-criterion-title { font-size: 12px; font-weight: 700; color: #b91c1c; margin-bottom: 4px; }
     #karoshiScreen .kr-criterion-body { font-size: 12px; line-height: 1.7; }
+    #karoshiScreen .kr-wp-row { display: flex; align-items: center; gap: 8px; padding: 9px 0; border-bottom: 1px solid var(--zb-border); font-size: 12px; }
+    #karoshiScreen .kr-wp-name { font-weight: 700; flex: 1; }
+    #karoshiScreen .kr-wp-detail { color: var(--zb-muted); font-size: 11px; }
+    #karoshiScreen .kr-punch-btn { padding: 10px 18px; border-radius: 10px; border: none; font-size: 14px; font-weight: 700; cursor: pointer; }
+    #karoshiScreen .kr-punch-btn.in { background: #15803d; color: #fff; }
+    #karoshiScreen .kr-punch-btn.out { background: #1e40af; color: #fff; }
+    #karoshiScreen .kr-punch-btn.self { background: #6d28d9; color: #fff; }
+    #karoshiScreen .kr-gps-badge { display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; margin-bottom: 8px; }
+    #karoshiScreen .kr-gps-badge.ok { background: #dcfce7; color: #15803d; }
+    #karoshiScreen .kr-gps-badge.ng { background: #fee2e2; color: #b91c1c; }
+    #karoshiScreen .kr-gps-badge.wait { background: #f1f5f9; color: #64748b; }
+    #karoshiScreen .kr-log-row { display: flex; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid var(--zb-border); font-size: 12px; }
+    #karoshiScreen .kr-log-type { padding: 3px 8px; border-radius: 6px; font-size: 11px; font-weight: 700; }
+    #karoshiScreen .kr-log-type.in { background: #dcfce7; color: #15803d; }
+    #karoshiScreen .kr-log-type.out { background: #dbeafe; color: #1e40af; }
+    #karoshiScreen .kr-log-type.self { background: #ede9fe; color: #6d28d9; }
+    #karoshiScreen .kr-rec-btn { padding: 12px 20px; border-radius: 12px; border: none; font-size: 15px; font-weight: 700; cursor: pointer; }
+    #karoshiScreen .kr-rec-btn.start { background: #b91c1c; color: #fff; }
+    #karoshiScreen .kr-rec-btn.stop { background: #374151; color: #fff; }
+    #karoshiScreen .kr-transcript { background: var(--zb-bg); border: 1.5px solid var(--zb-border); border-radius: 10px; padding: 10px; font-size: 12px; line-height: 1.8; min-height: 100px; max-height: 200px; overflow-y: auto; color: var(--zb-text); white-space: pre-wrap; }
+    #karoshiScreen .kr-iv-row { padding: 10px 0; border-bottom: 1px solid var(--zb-border); font-size: 12px; }
+    #karoshiScreen .kr-iv-title { font-weight: 700; margin-bottom: 3px; }
+    #karoshiScreen .kr-iv-meta { color: var(--zb-muted); font-size: 11px; }
 
     /* 騒音・振動規制 申請支援（§45 #noiseVibScreen） */
     #noiseVibScreen { background: var(--zb-bg); min-height: 100vh; display: flex; flex-direction: column; padding-bottom: 80px; color: var(--zb-text); }
@@ -4976,6 +4999,8 @@ Email：info@zaibase.jp</div>
     <button class="kr-tab" data-kr-tab="mental">💬 精神障害・パワハラ</button>
     <button class="kr-tab" data-kr-tab="support">🏠 後遺症・生活支援</button>
     <button class="kr-tab" data-kr-tab="illegal">⚠️ 労災隠し・両罰</button>
+    <button class="kr-tab" data-kr-tab="timelog">🕐 出退勤記録</button>
+    <button class="kr-tab" data-kr-tab="interview">🎙️ 面談録音</button>
   </nav>
   <main class="kr-main">
     <div id="krPageGuide"></div>
@@ -4983,6 +5008,8 @@ Email：info@zaibase.jp</div>
     <div id="krPageMental" class="hidden"></div>
     <div id="krPageSupport" class="hidden"></div>
     <div id="krPageIllegal" class="hidden"></div>
+    <div id="krPageTimelog" class="hidden"></div>
+    <div id="krPageInterview" class="hidden"></div>
   </main>
 </div>
 
@@ -8769,7 +8796,7 @@ support@zaibase.jp</p>
   function switchKrTab(tab) {
     krTab = tab;
     document.querySelectorAll('[data-kr-tab]').forEach(b => b.classList.toggle('act', b.dataset.krTab === tab));
-    ['guide','brain','mental','support','illegal'].forEach(t =>
+    ['guide','brain','mental','support','illegal','timelog','interview'].forEach(t =>
       document.getElementById('krPage' + t.charAt(0).toUpperCase() + t.slice(1))?.classList.toggle('hidden', t !== tab)
     );
     if (tab === 'guide') renderKrGuideTab();
@@ -8777,6 +8804,8 @@ support@zaibase.jp</p>
     if (tab === 'mental') renderKrMentalTab();
     if (tab === 'support') renderKrSupportTab();
     if (tab === 'illegal') renderKrIllegalTab();
+    if (tab === 'timelog') renderKrTimelogTab();
+    if (tab === 'interview') renderKrInterviewTab();
   }
 
   function renderKrGuideTab() {
@@ -8997,13 +9026,348 @@ support@zaibase.jp</p>
       </div>`;
   }
 
+  // ── 出退勤記録タブ ──────────────────────────────────────────────
+  let krWorkplaces = [];
+  let krWorkLogs = [];
+  let krCurrentPos = null;
+  let krSelectedWp = null;
+
+  function haversineM(lat1, lng1, lat2, lng2) {
+    const R = 6371000;
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLng = (lng2 - lng1) * Math.PI / 180;
+    const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLng/2)**2;
+    return R * 2 * Math.asin(Math.sqrt(a));
+  }
+
+  async function renderKrTimelogTab() {
+    const el = document.getElementById('krPageTimelog');
+    if (!el) return;
+    el.innerHTML = `
+      <div class="kr-card">
+        <div class="kr-card-title">🏭 職場登録</div>
+        <div class="kr-field"><label>職場名</label><input id="krWpName" placeholder="○○建設 ○○現場"></div>
+        <div class="kr-field"><label>住所（任意）</label><input id="krWpAddr" placeholder="東京都渋谷区..."></div>
+        <div class="kr-field"><label>GPS座標（現在地取得 または 手入力）</label>
+          <div style="display:flex;gap:6px;">
+            <input id="krWpLat" placeholder="緯度 (35.xxx)" style="flex:1;">
+            <input id="krWpLng" placeholder="経度 (139.xxx)" style="flex:1;">
+          </div>
+          <button id="krWpGetGps" class="kr-btn" style="margin-top:6px;background:#374151;">📍 現在地取得</button>
+        </div>
+        <div class="kr-field"><label>有効半径（m） 最大1,000m</label><input id="krWpRadius" type="number" value="200" min="50" max="1000"></div>
+        <button id="krWpSaveBtn" class="kr-btn">職場を登録する</button>
+        <div id="krWpMsg" style="font-size:12px;margin-top:6px;"></div>
+      </div>
+      <div class="kr-card">
+        <div class="kr-card-title">🕐 出退勤打刻</div>
+        <div id="krGpsBadge" class="kr-gps-badge wait">⏳ GPS取得中...</div>
+        <div class="kr-field"><label>職場を選択</label>
+          <select id="krWpSelect"><option value="">― 職場を選択 ―</option></select>
+        </div>
+        <div id="krSelfReportArea" class="hidden">
+          <div class="kr-notice warn" style="margin-bottom:8px;">⚠️ 職場範囲外のため自己申告モードです</div>
+          <div class="kr-field"><label>申告理由（必須）</label><textarea id="krSelfReason" placeholder="テレワーク・直行直帰・GPS不良など"></textarea></div>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:8px;">
+          <button id="krClockInBtn" class="kr-punch-btn in" style="flex:1;">▶ 出勤</button>
+          <button id="krClockOutBtn" class="kr-punch-btn out" style="flex:1;">■ 退勤</button>
+        </div>
+        <div id="krPunchMsg" style="font-size:12px;margin-top:6px;"></div>
+      </div>
+      <div class="kr-card">
+        <div class="kr-card-title">📋 打刻履歴</div>
+        <div id="krLogList"><div style="color:var(--zb-muted);font-size:12px;">読み込み中...</div></div>
+      </div>`;
+
+    // Bind workplace GPS get
+    document.getElementById('krWpGetGps').onclick = () => {
+      if (!navigator.geolocation) { document.getElementById('krWpMsg').textContent = 'GPSが使用できません'; return; }
+      navigator.geolocation.getCurrentPosition(pos => {
+        document.getElementById('krWpLat').value = pos.coords.latitude.toFixed(7);
+        document.getElementById('krWpLng').value = pos.coords.longitude.toFixed(7);
+        document.getElementById('krWpMsg').textContent = '✅ 現在地を取得しました';
+      }, () => { document.getElementById('krWpMsg').textContent = '❌ GPS取得失敗'; });
+    };
+
+    // Bind workplace save
+    document.getElementById('krWpSaveBtn').onclick = async () => {
+      const name = document.getElementById('krWpName').value.trim();
+      if (!name) { document.getElementById('krWpMsg').textContent = '❌ 職場名を入力してください'; return; }
+      try {
+        const fn = firebase.functions().httpsCallable('registerWorkplace');
+        await fn({
+          name,
+          address: document.getElementById('krWpAddr').value.trim(),
+          lat: parseFloat(document.getElementById('krWpLat').value) || 0,
+          lng: parseFloat(document.getElementById('krWpLng').value) || 0,
+          radius: parseInt(document.getElementById('krWpRadius').value) || 200,
+        });
+        document.getElementById('krWpMsg').textContent = '✅ 職場を登録しました';
+        await krLoadWorkplaces();
+      } catch(e) { document.getElementById('krWpMsg').textContent = '❌ ' + (e.message || '登録失敗'); }
+    };
+
+    // Live GPS tracking for punch
+    if (navigator.geolocation) {
+      const badge = document.getElementById('krGpsBadge');
+      navigator.geolocation.getCurrentPosition(pos => {
+        krCurrentPos = pos.coords;
+        badge.className = 'kr-gps-badge ok';
+        badge.textContent = `✅ GPS取得済 (精度 ${Math.round(pos.coords.accuracy)}m)`;
+        krUpdatePunchMode();
+      }, () => {
+        krCurrentPos = null;
+        badge.className = 'kr-gps-badge ng';
+        badge.textContent = '❌ GPS取得失敗 — 自己申告モード';
+        document.getElementById('krSelfReportArea').classList.remove('hidden');
+      }, { enableHighAccuracy: true });
+    }
+
+    // Workplace select change
+    document.getElementById('krWpSelect').onchange = krUpdatePunchMode;
+
+    // Punch buttons
+    document.getElementById('krClockInBtn').onclick = () => krDoPunch('in');
+    document.getElementById('krClockOutBtn').onclick = () => krDoPunch('out');
+
+    await krLoadWorkplaces();
+    await krLoadWorkLogs();
+  }
+
+  async function krLoadWorkplaces() {
+    try {
+      const fn = firebase.functions().httpsCallable('getWorkplaces');
+      const res = await fn({});
+      krWorkplaces = res.data.workplaces || [];
+      const sel = document.getElementById('krWpSelect');
+      if (!sel) return;
+      sel.innerHTML = '<option value="">― 職場を選択 ―</option>' +
+        krWorkplaces.map(w => `<option value="${w.id}">${w.name} (半径${w.radius}m)</option>`).join('');
+    } catch(e) { /* ignore */ }
+  }
+
+  function krUpdatePunchMode() {
+    const sel = document.getElementById('krWpSelect');
+    if (!sel) return;
+    const wpId = sel.value;
+    const wp = krWorkplaces.find(w => w.id === wpId);
+    krSelectedWp = wp || null;
+    const selfArea = document.getElementById('krSelfReportArea');
+    if (!selfArea) return;
+    if (!krCurrentPos || !wp) {
+      selfArea.classList.remove('hidden');
+    } else {
+      const dist = haversineM(krCurrentPos.latitude, krCurrentPos.longitude, wp.lat, wp.lng);
+      selfArea.classList.toggle('hidden', dist <= wp.radius);
+    }
+  }
+
+  async function krDoPunch(baseType) {
+    const sel = document.getElementById('krWpSelect');
+    const wpId = sel ? sel.value : '';
+    const wp = krWorkplaces.find(w => w.id === wpId);
+    const selfArea = document.getElementById('krSelfReportArea');
+    const isSelf = !selfArea?.classList.contains('hidden');
+    const type = isSelf ? 'self_' + baseType : baseType;
+    const reason = document.getElementById('krSelfReason')?.value?.trim() || '';
+    if (isSelf && !reason) { document.getElementById('krPunchMsg').textContent = '❌ 申告理由を入力してください'; return; }
+
+    let dist = 0;
+    if (krCurrentPos && wp) dist = Math.round(haversineM(krCurrentPos.latitude, krCurrentPos.longitude, wp.lat, wp.lng));
+
+    try {
+      const fn = firebase.functions().httpsCallable('clockInOut');
+      await fn({
+        type, reason,
+        workplaceId: wpId,
+        workplaceName: wp ? wp.name : '',
+        lat: krCurrentPos?.latitude || 0,
+        lng: krCurrentPos?.longitude || 0,
+        distanceFromWorkplace: dist,
+      });
+      const label = baseType === 'in' ? '出勤' : '退勤';
+      document.getElementById('krPunchMsg').textContent = `✅ ${label}を記録しました${isSelf ? '（自己申告）' : ''}`;
+      await krLoadWorkLogs();
+    } catch(e) { document.getElementById('krPunchMsg').textContent = '❌ ' + (e.message || '打刻失敗'); }
+  }
+
+  async function krLoadWorkLogs() {
+    try {
+      const fn = firebase.functions().httpsCallable('getWorkLogs');
+      const res = await fn({});
+      krWorkLogs = res.data.logs || [];
+      const el = document.getElementById('krLogList');
+      if (!el) return;
+      if (!krWorkLogs.length) { el.innerHTML = '<div style="color:var(--zb-muted);font-size:12px;">打刻記録がありません</div>'; return; }
+      const typeLabel = { in:'出勤', out:'退勤', self_in:'出勤(申)', self_out:'退勤(申)' };
+      const typeCls = { in:'in', out:'out', self_in:'self', self_out:'self' };
+      el.innerHTML = krWorkLogs.slice(0, 30).map(l => `
+        <div class="kr-log-row">
+          <span class="kr-log-type ${typeCls[l.type]||''}">${typeLabel[l.type]||l.type}</span>
+          <div style="flex:1">
+            <div style="font-weight:700;">${l.workplaceName || '不明'}</div>
+            ${l.isSelfReport ? `<div style="color:#6d28d9;font-size:11px;">📝 ${l.reason}</div>` : ''}
+            ${l.distanceFromWorkplace ? `<div style="color:var(--zb-muted);font-size:11px;">距離: ${l.distanceFromWorkplace}m</div>` : ''}
+          </div>
+          <div style="color:var(--zb-muted);font-size:11px;">${l.timestamp ? new Date(l.timestamp).toLocaleString('ja-JP',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}) : ''}</div>
+        </div>`).join('');
+    } catch(e) { /* ignore */ }
+  }
+
+  // ── 面談録音・文字起こしタブ ──────────────────────────────────────
+  let krMediaRecorder = null;
+  let krAudioChunks = [];
+  let krSpeechRecog = null;
+  let krTranscriptText = '';
+  let krInterviews = [];
+
+  async function renderKrInterviewTab() {
+    const el = document.getElementById('krPageInterview');
+    if (!el) return;
+    el.innerHTML = `
+      <div class="kr-card">
+        <div class="kr-card-title">🎙️ 面談録音・文字起こし</div>
+        <div class="kr-field"><label>面談タイトル</label><input id="krIvTitle" placeholder="上司との面談 / 産業医面談 など"></div>
+        <div class="kr-field"><label>面談日</label><input id="krIvDate" type="date"></div>
+        <div class="kr-field"><label>参加者</label><input id="krIvParticipants" placeholder="田中部長・山田（本人）"></div>
+        <div class="kr-notice info" style="margin-bottom:10px;">📌 録音開始と同時に文字起こしが始まります。ブラウザがマイクの使用許可を求めます。</div>
+        <div style="display:flex;gap:8px;margin-bottom:10px;">
+          <button id="krRecStartBtn" class="kr-rec-btn start" style="flex:1;">🔴 録音開始</button>
+          <button id="krRecStopBtn" class="kr-rec-btn stop" style="flex:1;display:none;">⏹ 録音停止</button>
+        </div>
+        <div id="krRecStatus" style="font-size:12px;color:var(--zb-muted);margin-bottom:8px;"></div>
+        <div class="kr-field"><label>文字起こし（編集可）</label>
+          <div id="krTranscriptBox" class="kr-transcript" contenteditable="true" spellcheck="false"></div>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:8px;">
+          <button id="krIvSaveBtn" class="kr-btn" style="flex:1;">💾 面談記録を保存</button>
+          <button id="krAudioDlBtn" class="kr-btn" style="flex:1;background:#374151;display:none;">⬇ 音声DL</button>
+        </div>
+        <div id="krIvMsg" style="font-size:12px;margin-top:6px;"></div>
+      </div>
+      <div class="kr-card">
+        <div class="kr-card-title">📂 過去の面談記録</div>
+        <div id="krIvList"><div style="color:var(--zb-muted);font-size:12px;">読み込み中...</div></div>
+      </div>`;
+
+    // Set today's date
+    document.getElementById('krIvDate').value = new Date().toISOString().slice(0,10);
+
+    // Transcript box editing
+    const tbox = document.getElementById('krTranscriptBox');
+    tbox.addEventListener('input', () => { krTranscriptText = tbox.innerText; });
+
+    // Recording
+    document.getElementById('krRecStartBtn').onclick = async () => {
+      krTranscriptText = '';
+      krAudioChunks = [];
+      tbox.textContent = '';
+      const msg = document.getElementById('krRecStatus');
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        krMediaRecorder = new MediaRecorder(stream);
+        krMediaRecorder.ondataavailable = e => { if (e.data.size > 0) krAudioChunks.push(e.data); };
+        krMediaRecorder.onstop = () => {
+          stream.getTracks().forEach(t => t.stop());
+          const blob = new Blob(krAudioChunks, { type: 'audio/webm' });
+          const url = URL.createObjectURL(blob);
+          const dlBtn = document.getElementById('krAudioDlBtn');
+          if (dlBtn) {
+            dlBtn.style.display = '';
+            dlBtn.onclick = () => {
+              const a = document.createElement('a');
+              a.href = url;
+              a.download = `interview_${Date.now()}.webm`;
+              a.click();
+            };
+          }
+        };
+        krMediaRecorder.start(1000);
+
+        // Speech recognition
+        const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (SR) {
+          krSpeechRecog = new SR();
+          krSpeechRecog.lang = 'ja-JP';
+          krSpeechRecog.continuous = true;
+          krSpeechRecog.interimResults = true;
+          krSpeechRecog.onresult = ev => {
+            let final = '';
+            for (let i = ev.resultIndex; i < ev.results.length; i++) {
+              if (ev.results[i].isFinal) final += ev.results[i][0].transcript;
+            }
+            if (final) {
+              krTranscriptText += final + '\n';
+              tbox.textContent = krTranscriptText;
+              tbox.scrollTop = tbox.scrollHeight;
+            }
+          };
+          krSpeechRecog.onerror = () => {};
+          krSpeechRecog.start();
+          msg.textContent = '🔴 録音・文字起こし中...';
+        } else {
+          msg.textContent = '🔴 録音中（文字起こし非対応ブラウザ）';
+        }
+
+        document.getElementById('krRecStartBtn').style.display = 'none';
+        document.getElementById('krRecStopBtn').style.display = '';
+      } catch(e) { msg.textContent = '❌ マイクへのアクセスが拒否されました'; }
+    };
+
+    document.getElementById('krRecStopBtn').onclick = () => {
+      if (krMediaRecorder && krMediaRecorder.state !== 'inactive') krMediaRecorder.stop();
+      if (krSpeechRecog) { try { krSpeechRecog.stop(); } catch(e){} }
+      document.getElementById('krRecStartBtn').style.display = '';
+      document.getElementById('krRecStopBtn').style.display = 'none';
+      document.getElementById('krRecStatus').textContent = '⏹ 録音停止しました';
+    };
+
+    // Save interview
+    document.getElementById('krIvSaveBtn').onclick = async () => {
+      const title = document.getElementById('krIvTitle').value.trim() || '面談記録';
+      const transcript = document.getElementById('krTranscriptBox').innerText.trim();
+      const msg = document.getElementById('krIvMsg');
+      try {
+        const fn = firebase.functions().httpsCallable('saveInterview');
+        await fn({
+          title,
+          interviewDate: document.getElementById('krIvDate').value,
+          participants: document.getElementById('krIvParticipants').value.trim(),
+          transcript,
+          durationSec: 0,
+        });
+        msg.textContent = '✅ 面談記録を保存しました';
+        await krLoadInterviews();
+      } catch(e) { msg.textContent = '❌ ' + (e.message || '保存失敗'); }
+    };
+
+    await krLoadInterviews();
+  }
+
+  async function krLoadInterviews() {
+    try {
+      const fn = firebase.functions().httpsCallable('getInterviews');
+      const res = await fn({});
+      krInterviews = res.data.interviews || [];
+      const el = document.getElementById('krIvList');
+      if (!el) return;
+      if (!krInterviews.length) { el.innerHTML = '<div style="color:var(--zb-muted);font-size:12px;">面談記録がありません</div>'; return; }
+      el.innerHTML = krInterviews.map(iv => `
+        <div class="kr-iv-row">
+          <div class="kr-iv-title">🎙️ ${iv.title}</div>
+          <div class="kr-iv-meta">${iv.interviewDate || '日付不明'} ／ ${iv.participants || '参加者不明'} ／ 文字起こし ${iv.transcriptLen || 0}文字</div>
+        </div>`).join('');
+    } catch(e) { /* ignore */ }
+  }
+
   function initKaroshiScreen() {
     krTab = 'guide';
     document.querySelectorAll('[data-kr-tab]').forEach(b => {
       b.onclick = () => switchKrTab(b.dataset.krTab);
     });
     document.getElementById('karoshiBackBtn').onclick = () => showScreen('mypageScreen');
-    ['guide','brain','mental','support','illegal'].forEach(t =>
+    ['guide','brain','mental','support','illegal','timelog','interview'].forEach(t =>
       document.getElementById('krPage' + t.charAt(0).toUpperCase() + t.slice(1))?.classList.toggle('hidden', t !== 'guide')
     );
     renderKrGuideTab();
