@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Zaibase法律相談 — 建設業・労働法の専門相談</title>
+  <meta name="theme-color" content="#0EA5E9">
+  <meta name="description" content="建設職人・一人親方のための法律相談サービス。初回無料。建設業法・労働法・契約書のプロが対応。">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Segoe UI', sans-serif;
+      background: linear-gradient(160deg, #5BC8F0 0%, #87D8F5 40%, #E0F6FF 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px 32px;
+      max-width: 440px;
+      width: 100%;
+      box-shadow: 0 8px 40px rgba(3,105,161,.2);
+      text-align: center;
+    }
+    .group-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #0EA5E9;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .logo { font-size: 28px; font-weight: 800; color: #0369A1; margin-bottom: 4px; }
+    .logo span { color: #0EA5E9; }
+    .tagline { font-size: 13px; color: #666; margin-bottom: 32px; }
+    .coming-badge {
+      display: inline-block;
+      background: #FFF3CD;
+      color: #856404;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+    .plan-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .plan-col {
+      background: #F0F9FF;
+      border-radius: 12px;
+      padding: 12px 8px;
+      border: 1.5px solid #E0F2FE;
+    }
+    .plan-col.featured { border-color: #0EA5E9; background: #E0F9FF; }
+    .plan-name { font-size: 11px; font-weight: 700; color: #0369A1; margin-bottom: 4px; }
+    .plan-price { font-size: 16px; font-weight: 800; color: #0C4A6E; }
+    .plan-price span { font-size: 10px; font-weight: 400; color: #888; }
+    .plan-feature { font-size: 10px; color: #555; margin-top: 4px; line-height: 1.5; }
+    .free-note {
+      background: #E8F5E9;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 12px;
+      color: #2E7D32;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .notify-form { display: flex; gap: 8px; margin-bottom: 12px; }
+    .notify-form input {
+      flex: 1;
+      padding: 12px 14px;
+      border: 1.5px solid #ddd;
+      border-radius: 10px;
+      font-size: 14px;
+      outline: none;
+    }
+    .notify-form input:focus { border-color: #0EA5E9; }
+    .notify-btn {
+      padding: 12px 18px;
+      background: #0EA5E9;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .footer-link {
+      font-size: 12px;
+      color: #999;
+    }
+    .footer-link a { color: #0EA5E9; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="group-label">Zaibase Group</div>
+    <div class="logo">Zaibase<span>法律相談</span></div>
+    <div class="tagline">建設業・労働法の専門法律相談サービス</div>
+
+    <div class="coming-badge">🔨 準備中 — Coming Soon</div>
+
+    <div class="plan-grid">
+      <div class="plan-col">
+        <div class="plan-name">フリー</div>
+        <div class="plan-price">¥0</div>
+        <div class="plan-feature">初回1回<br>無料相談</div>
+      </div>
+      <div class="plan-col featured">
+        <div class="plan-name">スタンダード</div>
+        <div class="plan-price">¥2,980<span>/月</span></div>
+        <div class="plan-feature">月2回相談<br>テンプレDL</div>
+      </div>
+      <div class="plan-col">
+        <div class="plan-name">プロ</div>
+        <div class="plan-price">¥7,800<span>/月</span></div>
+        <div class="plan-feature">月無制限<br>弁護士紹介</div>
+      </div>
+    </div>
+
+    <div class="free-note">
+      ✅ Zaibase建設プロプラン会員はスタンダードが ¥1,980/月
+    </div>
+
+    <div class="notify-form">
+      <input type="email" id="emailInput" placeholder="メールアドレス（開始通知を受け取る）">
+      <button class="notify-btn" onclick="notify()">通知する</button>
+    </div>
+
+    <div class="footer-link">
+      Zaibase建設はこちら → <a href="https://zaisai-share.web.app/app">zaisai-share.web.app</a>
+    </div>
+  </div>
+
+  <script>
+    function notify() {
+      const email = document.getElementById('emailInput').value.trim();
+      if (!email || !email.includes('@')) {
+        alert('正しいメールアドレスを入力してください');
+        return;
+      }
+      // TODO: Firestore に保存
+      alert('ご登録ありがとうございます！\nサービス開始時にご連絡します。');
+      document.getElementById('emailInput').value = '';
+    }
+  </script>
+</body>
+</html>
