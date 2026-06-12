@@ -7805,11 +7805,11 @@ support@zaibase.jp</p>
         <div id="knDirectEmpResult" style="margin-top:10px;font-size:12px;color:var(--zb-muted);">上記を確認してください。</div>
       </div>
 
-      <!-- 専任義務チェッカー -->
+      <!-- 専任義務チェッカー（特例・緩和条件含む） -->
       <div class="kn-card" style="margin-top:10px;border-color:#d1fae5;background:#f0fdf4;">
-        <div style="font-size:13px;font-weight:700;color:#065f46;margin-bottom:10px;">🏗️ 専任義務 — 公共性ある重要工事の判定（建設業法第26条第3項）</div>
+        <div style="font-size:13px;font-weight:700;color:#065f46;margin-bottom:10px;">🏗️ 専任義務 + 特例チェッカー（建設業法第26条第3項・建設業法施行令第27条の2）</div>
         <div style="font-size:12px;line-height:1.75;color:var(--zb-text);margin-bottom:10px;">
-          <strong>公共性のある施設・工作物または多数の人が利用する施設・工作物に関する重要な建設工事</strong>については、主任技術者または監理技術者は工事現場ごとに<strong>専任</strong>でなければなりません。
+          <strong>公共性のある施設・工作物または多数の人が利用する施設・工作物に関する重要な建設工事</strong>については専任が原則。ただし以下の特例条件を満たせば非専任（兼務）が認められます。
         </div>
         <div class="kn-field">
           <label>工事の性質（複数選択可）</label>
@@ -7819,20 +7819,46 @@ support@zaibase.jp</p>
               '学校・病院・図書館等の公共施設',
               '多数の人が利用する民間施設（店舗・ホテル・集合住宅等）',
               '請負代金3,500万円以上（建築一式7,000万円以上）',
-              '工期が長期（6ヶ月超）',
             ].map(t => `
               <label class="kn-check-chip" style="border-radius:8px;"><input type="checkbox" value="${t}" class="kn-sj-cb"> ${t}</label>
             `).join('')}
           </div>
         </div>
-        <button class="kn-run-btn" id="knSenjinRunBtn" style="background:#065f46;margin-top:8px;">専任義務を判定する</button>
+        <div style="font-size:12px;font-weight:700;color:#065f46;margin:12px 0 6px;">⚡ 専任不要の特例条件（建設業法施行令第27条の2・国交省通達）</div>
+        <div style="font-size:11px;color:var(--zb-muted);margin-bottom:8px;">下記をすべて満たす場合、公共性ある工事でも専任でなくてよい（非専任で兼務可）：</div>
+        <div class="kn-check-group" id="knTokuliGroup" style="flex-direction:column;gap:6px;">
+          ${[
+            { id:'tk1', label:'① 受負代金が1億円未満（建築一式工事は2億円未満）' },
+            { id:'tk2', label:'② 同一市区町村内など、1日の勤務時間内に全現場を巡回できる範囲' },
+            { id:'tk3', label:'③ 下請負人の数が3者以下（工事ごと）' },
+            { id:'tk4', label:'④ 密接な関係のある2以上の工事（同一発注者・隣接・同一工事現場等）' },
+            { id:'tk5', label:'⑤ 情報通信技術（ICT・テレビ会議等）を利用して工事の状況を確認できる体制がある' },
+          ].map(i => `
+            <label class="kn-check-chip kn-tokuri-item" style="border-radius:8px;padding:8px 12px;width:100%;box-sizing:border-box;">
+              <input type="checkbox" class="kn-tk-cb" data-id="${i.id}"> ${i.label}
+            </label>`).join('')}
+        </div>
+        <div style="font-size:11px;color:var(--zb-muted);margin:8px 0 4px;">
+          ※ ①②③は特に重要。④「密接な関係」は工事の対象が同一・連続した施設等で工事現場間が10km程度以内が目安。⑤は令和3年改正で追加。
+        </div>
+        <button class="kn-run-btn" id="knSenjinRunBtn" style="background:#065f46;margin-top:8px;">専任義務・特例を判定する</button>
         <div id="knSenjinResult" style="margin-top:10px;"></div>
-        <div style="font-size:11px;color:var(--zb-muted);margin-top:12px;line-height:1.7;border-top:1px solid var(--zb-border);padding-top:8px;">
+
+        <!-- 密接関係工事・専任期間 -->
+        <div style="font-size:12px;font-weight:700;color:#065f46;margin:14px 0 6px;border-top:1px solid #bbf7d0;padding-top:10px;">📅 密接な関係のある2以上の工事・専任の期間</div>
+        <div style="font-size:11px;line-height:1.85;color:var(--zb-text);">
+          <strong>密接な関係のある2以上の工事の兼務特例（建設業法施行令第27条の2第1号）：</strong><br>
+          ・同一の建設業者が施工する工事で、工事の対象となる施設・設備・工作物が同一または連続したものであること<br>
+          ・工事現場相互の間隔が10km程度以内（1日の巡回が可能な範囲）であること<br>
+          ・下請け件数合計が3件以下かつ受負代金が1億円未満（建築一式2億円未満）であること<br><br>
+          <strong>専任の期間：</strong><br>
+          専任は<strong>工事の着工から完成（検査・引渡し）まで</strong>の全期間が対象です。<br>
+          ただし工事の実態に応じ、施工が行われない期間（資機材待ち・天候待ち等）は工事現場を離れることができますが、発注者との連絡体制を維持してください。
+        </div>
+        <div style="font-size:11px;color:var(--zb-muted);margin-top:10px;line-height:1.7;border-top:1px solid #bbf7d0;padding-top:8px;">
           <strong>専任の定義（建設業法第26条第3項・国交省通達）：</strong><br>
           他の工事現場に係る職務を<strong>兼務せず</strong>、勤務中は<strong>常時継続的に</strong>当該工事現場に係る職務に従事していること。<br>
-          ※「専任」≠「常駐」。検査対応・休暇取得・一時的な離席は問題ありません。<br><br>
-          <strong>専任が必要な工事の目安（建設業法施行令第27条）：</strong><br>
-          公共性のある工事で請負代金が土木一式・建築一式は7,000万円以上、それ以外は3,500万円以上（消費税込）。
+          ※「専任」≠「常駐」。検査対応・休暇取得・講習参加は問題ありません。
         </div>
       </div>
 
@@ -7857,6 +7883,7 @@ support@zaibase.jp</p>
 
     el.querySelectorAll('.kn-check-chip').forEach(chip => {
       const cb = chip.querySelector('input[type=checkbox]');
+      if (!cb) return;
       cb.onchange = () => {
         chip.classList.toggle('sel', cb.checked);
         if (chip.closest('#knDirectEmpGroup')) updateDirectEmpResult();
@@ -7881,30 +7908,64 @@ support@zaibase.jp</p>
 
   function runKnSenjinCheck() {
     const conds = [...document.querySelectorAll('.kn-sj-cb:checked')].map(c => c.value);
+    const tokuri = [...document.querySelectorAll('.kn-tk-cb:checked')].map(c => c.dataset.id);
     const result = document.getElementById('knSenjinResult');
     if (!result) return;
+
     const isPublic = conds.some(c => c.includes('公共工事') || c.includes('公共施設') || c.includes('多数'));
     const isLarge = conds.some(c => c.includes('3,500万円') || c.includes('7,000万円'));
-    const isLong = conds.some(c => c.includes('6ヶ月'));
-    const needsSenjin = isPublic || isLarge;
+    const needsSenjinBase = isPublic || isLarge;
+
     if (!conds.length) {
       result.innerHTML = '<span style="color:var(--zb-muted);">工事の性質を選択してください。</span>';
       return;
     }
-    if (needsSenjin) {
+
+    if (!needsSenjinBase) {
       result.innerHTML = `
-        <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:10px;font-size:12px;line-height:1.7;">
-          <strong style="color:#991b1b;">⚠️ 専任義務あり（建設業法第26条第3項）</strong><br>
-          主任技術者または監理技術者は<strong>現場専任</strong>が必要です。他現場との兼務は不可。<br>
-          ${isLong ? '工期が長期のため、監理技術者の継続的な専任確保を計画してください。<br>' : ''}
-          <span style="color:#b45309;">監理技術者資格者証を携帯し、発注者・許可行政庁からの求めに応じて提示できるようにしてください（第26条第5項）。</span>
+        <div style="background:#f0fdf4;border:1px solid #86efac;border-radius:8px;padding:10px;font-size:12px;line-height:1.7;">
+          <strong style="color:#065f46;">✅ 専任義務の対象外（民間小規模工事等）</strong><br>
+          公共性の高い施設・重要工事に該当しないため、専任義務はありません。兼務が可能です。<br>
+          ※ 発注者から専任を求められた場合はそれに従います。
+        </div>`;
+      return;
+    }
+
+    // 専任が原則必要な工事 → 特例条件を確認
+    const hasTk1 = tokuri.includes('tk1');   // 1億円未満
+    const hasTk2 = tokuri.includes('tk2');   // 1日巡回可能
+    const hasTk3 = tokuri.includes('tk3');   // 下請3以下
+    const hasTk4 = tokuri.includes('tk4');   // 密接関係
+    const hasTk5 = tokuri.includes('tk5');   // ICT活用
+
+    // 特例①②③ または ④ がすべて揃えば非専任可（施行令第27条の2）
+    const exceptionBySize = hasTk1 && hasTk2 && hasTk3;
+    const exceptionByMissetsu = hasTk4 && hasTk1 && hasTk2 && hasTk3;
+    const ictAssist = hasTk5;
+    const canExempt = exceptionBySize || exceptionByMissetsu;
+
+    const missingTk = [];
+    if (!hasTk1) missingTk.push('① 受負代金1億円未満（建築一式2億円未満）');
+    if (!hasTk2) missingTk.push('② 1日の勤務時間内に全現場を巡回できる範囲');
+    if (!hasTk3) missingTk.push('③ 下請負人数が3者以下');
+
+    if (canExempt) {
+      result.innerHTML = `
+        <div style="background:#f0fdf4;border:1px solid #86efac;border-radius:8px;padding:12px;font-size:12px;line-height:1.8;">
+          <strong style="color:#065f46;">✅ 専任の特例あり — 非専任（兼務）可（建設業法施行令第27条の2）</strong><br>
+          ${exceptionByMissetsu ? '密接な関係のある工事として、' : ''}特例条件①②③${hasTk4 ? '④' : ''}を満たすため、工事現場の専任義務が適用されません。<br>
+          ${ictAssist ? '<span style="color:#065f46;">⑤ ICT活用による遠隔確認体制があります。巡回の補完として活用できます。</span><br>' : ''}
+          <br>⚠️ <strong>注意：</strong>発注者（国・都道府県・市区町村）が専任を求める場合はその指示に従ってください。<br>
+          受注後に発注者・許可行政庁への確認を必ず行ってください。
         </div>`;
     } else {
       result.innerHTML = `
-        <div style="background:#f0fdf4;border:1px solid #86efac;border-radius:8px;padding:10px;font-size:12px;line-height:1.7;">
-          <strong style="color:#065f46;">✅ 専任義務なし（軽微工事・民間小規模工事）</strong><br>
-          兼務可能な範囲ですが、施工品質確保のため常時連絡できる体制を維持してください。<br>
-          ※ 発注者から専任を求められた場合はそれに従います。
+        <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:12px;font-size:12px;line-height:1.8;">
+          <strong style="color:#991b1b;">⚠️ 専任義務あり（建設業法第26条第3項）</strong><br>
+          主任技術者または監理技術者は<strong>現場専任</strong>が必要です。<br>
+          ${missingTk.length ? `<br>特例を適用するには以下が不足しています：<br>${missingTk.map(m => '・' + m).join('<br>')}<br>` : ''}
+          ${ictAssist ? '<br>⑤ ICT体制はありますが、①②③が揃わないと特例は適用されません。<br>' : ''}
+          <br><span style="color:#b45309;">監理技術者資格者証を携帯し、発注者・許可行政庁からの求めに応じて提示してください（第26条第5項）。</span>
         </div>`;
     }
   }
