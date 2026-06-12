@@ -87,7 +87,22 @@ function buildPdfBuffer(data, fontPath) {
     });
     doc.moveDown();
 
-    doc.text(`小計（税抜）: ${yen(subtotal)}`);
+    // 法定福利費内訳（建設工事標準請負契約約款）
+    const hf = data.hofukuHi;
+    if (hf?.enabled && Array.isArray(hf.items) && hf.items.length) {
+      doc.fontSize(10).text("【法定福利費内訳（事業主負担分）】");
+      doc.fontSize(9).fillColor("#444");
+      doc.text(`算出基礎 労務費: ${yen(hf.roumuHi || 0)}`);
+      hf.items.forEach((item) => {
+        const rateStr = ((item.rate || 0) * 100).toFixed(3) + "%";
+        doc.text(`  ${item.label}  ${rateStr}  ${yen(item.amount)}`);
+      });
+      doc.fontSize(10).fillColor("#000").text(`法定福利費 合計: ${yen(hf.total || 0)}`, { underline: true });
+      doc.fontSize(8).fillColor("#666").text("※料率は2024年度協会けんぽ全国平均・建設業標準値。実際の率は都道府県・組合により異なります。", { oblique: true });
+      doc.fillColor("#000").moveDown();
+    }
+
+    doc.fontSize(10).text(`小計（税抜）: ${yen(subtotal)}`);
     doc.text(`消費税（10%）: ${yen(tax)}`);
     doc.fontSize(12).text(`合計（税込）: ${yen(total)}`, { underline: true });
     doc.moveDown();
@@ -177,6 +192,7 @@ exports.generateInvoicePdf = onCall(async (request) => {
     bankAccount: d.bankAccount || "",
     bankHolder: d.bankHolder || "",
     note: String(d.note || "").slice(0, 1000),
+    hofukuHi: d.hofukuHi || null,
     subtotal,
     tax,
     total,
