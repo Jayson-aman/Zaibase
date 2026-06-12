@@ -35,6 +35,14 @@ exports.approveAndRelease = escrow.approveAndRelease;
 exports.disputeEscrow = escrow.disputeEscrow;
 exports.createStripeOnboarding = escrow.createStripeOnboarding;
 
+// ── 定期課金 Billing — STRIPE_SECRET_KEY / STRIPE_SUB_WEBHOOK_SECRET 必須 ──
+const subscription = require("./subscription");
+exports.createCheckoutSession = subscription.createCheckoutSession;
+exports.stripeSubWebhook = subscription.stripeSubWebhook;
+exports.switchPlan = subscription.switchPlan;
+exports.cancelStripeSubscription = subscription.cancelStripeSubscription;
+exports.getMySubscription = subscription.getMySubscription;
+
 // ── 解約防止 ───────────────────────────────────────────────────
 const churnPrevention = require("./churn_prevention");
 exports.getChurnStats = churnPrevention.getChurnStats;
