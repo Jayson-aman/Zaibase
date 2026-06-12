@@ -4807,11 +4807,13 @@ Email：info@zaibase.jp</div>
   <nav class="ks-tabs">
     <button class="ks-tab act" data-ks-tab="ikkatsu">🚫 一括下請けチェック</button>
     <button class="ks-tab" data-ks-tab="checklist">📋 法令遵守チェック</button>
+    <button class="ks-tab" data-ks-tab="violations">⚠️ 違反事例</button>
     <button class="ks-tab" data-ks-tab="guide">📚 遵守ガイドライン</button>
   </nav>
   <main class="ks-main">
     <div id="ksPageIkkatsu"></div>
     <div id="ksPageChecklist" class="hidden"></div>
+    <div id="ksPageViolations" class="hidden"></div>
     <div id="ksPageGuide" class="hidden"></div>
   </main>
 </div>
@@ -8527,17 +8529,79 @@ support@zaibase.jp</p>
 
   const KOSEI_CHECKLIST = [
     { id:'kc01', law:'建設業法第20条第2項', pts:5, label:'見積条件（工事内容・工期・材料等）を書面で提示してから見積りを依頼している', cat:'見積' },
-    { id:'kc02', law:'建設業法第20条第3項', pts:4, label:'見積期間を適切に確保している（500万円未満→1日以上、5,000万円以上→15日以上）', cat:'見積' },
-    { id:'kc03', law:'建設業法第19条の3', pts:6, label:'自己の取引上の地位を利用して不当に低い請負代金で下請け契約を締結していない', cat:'契約' },
-    { id:'kc04', law:'建設業法第19条の4', pts:5, label:'指定した資材・建設機械等の購入を強制していない（またはその損失を補填している）', cat:'契約' },
-    { id:'kc05', law:'建設業法第19条の5（令和6年改正）', pts:5, label:'著しく短い工期を強制していない（適正工期の確保）', cat:'工期' },
-    { id:'kc06', law:'建設業法第24条の3', pts:6, label:'下請代金は引渡し受領から50日以内（できる限り短い期間）に支払っている', cat:'支払' },
-    { id:'kc07', law:'建設業法第24条の3第2項', pts:5, label:'下請代金の支払いに割引困難な手形を使用していない', cat:'支払' },
-    { id:'kc08', law:'建設業法第24条の4', pts:4, label:'前払金の使途は建設工事の施工のために必要な費用に限定している', cat:'支払' },
-    { id:'kc09', law:'建設業法第22条', pts:6, label:'請け負った工事を一括して他の業者に請け負わせていない（一括下請け禁止）', cat:'施工' },
-    { id:'kc10', law:'建設業法第26条', pts:5, label:'主任技術者または監理技術者を適切に配置している', cat:'施工' },
-    { id:'kc11', law:'建設業法第24条の8', pts:4, label:'施工体制台帳・施工体系図を作成・掲示している（対象工事の場合）', cat:'施工' },
-    { id:'kc12', law:'建設業法第41条（特定建設業者）', pts:4, label:'特定建設業者として下請代金の支払い遅延の下請業者への指導を行っている', cat:'特定' },
+    { id:'kc02', law:'建設業法第20条第3項', pts:4, label:'見積期間を適切に確保している（500万円未満→1日以上、500〜5,000万円未満→5日以上、5,000万円以上→15日以上）', cat:'見積' },
+    { id:'kc03', law:'建設業法第19条', pts:5, label:'書面による当初契約を締結している（工事名・工期・代金・支払方法等の必要記載事項が完備）', cat:'契約' },
+    { id:'kc04', law:'建設業法第19条第2項', pts:5, label:'追加・変更工事が発生した場合、書面による変更契約を締結している', cat:'契約' },
+    { id:'kc05', law:'建設業法第19条の3', pts:6, label:'自己の取引上の地位を利用して不当に低い請負代金（指値発注）で下請け契約を締結していない', cat:'契約' },
+    { id:'kc06', law:'建設業法第19条の3', pts:5, label:'追加・変更工事の代金を元請が一方的に減額・据え置きしていない', cat:'契約' },
+    { id:'kc07', law:'建設業法第19条の3', pts:5, label:'法定福利費を認めない（含まない）金額で下請契約を締結していない', cat:'契約' },
+    { id:'kc08', law:'建設業法第19条の4', pts:4, label:'指定した資材・建設機械等の購入を強制していない（またはその損失を補填している）', cat:'契約' },
+    { id:'kc09', law:'建設業法第19条の5（令和6年改正）', pts:5, label:'著しく短い工期を強制していない（適正工期の確保）', cat:'工期' },
+    { id:'kc10', law:'建設業法第19条の5・労働基準法第36条', pts:5, label:'時間外労働の上限規制（月45h・年360h）に抵触する長時間労働を前提とした工期設定をしていない', cat:'工期' },
+    { id:'kc11', law:'建設業法第19条の3', pts:5, label:'下請負人に責任のないやり直し工事の費用を下請負人に負担させていない', cat:'支払' },
+    { id:'kc12', law:'建設業法第19条の3', pts:5, label:'合意のない安全衛生保護具代・清掃費・手数料等の相殺（赤伝処理）をしていない', cat:'支払' },
+    { id:'kc13', law:'建設業法第24条の3', pts:6, label:'下請代金は引渡し受領から50日以内（できる限り短い期間）に支払っている', cat:'支払' },
+    { id:'kc14', law:'建設業法第24条の3第2項', pts:5, label:'下請代金の支払いに60日を超える長期手形・割引困難な手形を使用していない', cat:'支払' },
+    { id:'kc15', law:'建設業法第24条の4', pts:4, label:'前払金の使途は建設工事の施工のために必要な費用に限定している', cat:'支払' },
+    { id:'kc16', law:'建設業法第22条', pts:6, label:'請け負った工事を一括して他の業者に請け負わせていない（一括下請け禁止）', cat:'施工' },
+    { id:'kc17', law:'建設業法第26条', pts:5, label:'主任技術者または監理技術者を適切に配置している', cat:'施工' },
+    { id:'kc18', law:'建設業法第24条の8', pts:4, label:'施工体制台帳・施工体系図を作成・掲示している（対象工事の場合）', cat:'施工' },
+    { id:'kc19', law:'建設業法第24条の5', pts:6, label:'下請負人が行政庁に通報・相談したことを理由に取引停止・減額等の不利益取扱いをしていない', cat:'その他' },
+    { id:'kc20', law:'建設業法第40条の3', pts:4, label:'営業所の帳簿を5年間保存している', cat:'その他' },
+    { id:'kc21', law:'建設業法第40条の3', pts:4, label:'元請として直接受注した工事の完成図・施工体制台帳等の図書を10年間保存している', cat:'その他' },
+  ];
+
+  const KS_VIOLATIONS = [
+    {
+      cat: '1. 見積条件の提示',
+      law: '建設業法第20条第2項・第3項',
+      items: [
+        { level:'ng', text:'曖昧な工事内容・数量で見積りを依頼（工事内容・工期・材料等の書面提示なし）' },
+        { level:'ng', text:'予定価格700万円の工事で見積期間を3日に設定（500〜5,000万円未満は5日以上必要）' },
+        { level:'warn', text:'口頭のみで見積条件を説明し、書面提示を省略する' },
+      ]
+    },
+    {
+      cat: '2. 書面による契約締結',
+      law: '建設業法第19条',
+      items: [
+        { level:'ng', text:'書面による当初契約を行わない・口頭のみで発注する' },
+        { level:'ng', text:'工事名・工期・請負代金・支払方法等の必要記載事項が欠如した契約書' },
+        { level:'ng', text:'着工後に契約書を交付する（遡及適用）' },
+        { level:'ng', text:'追加工事発生にもかかわらず書面での変更契約を締結しない' },
+        { level:'ng', text:'追加・変更工事の代金を元請が一方的に減額・据え置く（独占禁止法違反のおそれ）' },
+      ]
+    },
+    {
+      cat: '3. 工期の設定',
+      law: '建設業法第19条の5（令和6年6月改正）',
+      items: [
+        { level:'ng', text:'通常必要と認められる期間に比して著しく短い工期を強制する' },
+        { level:'ng', text:'時間外労働の上限規制（月45h・年360h）に抵触する長時間労働を前提とした工期設定' },
+        { level:'warn', text:'前工程の遅れ等、下請負人に責任のない理由で工期が不足した場合に、工期変更・費用負担の協議に応じない' },
+      ]
+    },
+    {
+      cat: '4. 代金の設定・支払い・赤伝処理',
+      law: '建設業法第19条の3・第24条の3・第24条の4',
+      items: [
+        { level:'ng', text:'下請負人の見積額を大幅に下回る額を一方的に決定する（指値発注）' },
+        { level:'ng', text:'法定福利費を認めない（保険料を含まない）金額での下請契約' },
+        { level:'ng', text:'下請負人に責任がないやり直し工事の費用を下請負人に負担させる' },
+        { level:'ng', text:'合意のない安全衛生保護具代・清掃費・手数料等の相殺（赤伝処理）' },
+        { level:'ng', text:'引渡し終了後にもかかわらず下請代金を支払わない' },
+        { level:'ng', text:'60日を超える長期手形・割引困難な手形による支払い' },
+      ]
+    },
+    {
+      cat: '5. 不利益取扱いの禁止・図書の保存',
+      law: '建設業法第24条の5・第40条の3',
+      items: [
+        { level:'ng', text:'下請負人が行政庁に通報・相談したことを理由に取引停止・減額等の不利益取扱いをする' },
+        { level:'ng', text:'営業所の帳簿を5年間保存していない（未保存は違反）' },
+        { level:'ng', text:'元請として直接受注した完成図・施工体制台帳等の図書を10年間保存していない' },
+      ]
+    },
   ];
 
   function switchKsTab(tab) {
@@ -8545,9 +8609,11 @@ support@zaibase.jp</p>
     document.querySelectorAll('[data-ks-tab]').forEach(b => b.classList.toggle('act', b.dataset.ksTab === tab));
     document.getElementById('ksPageIkkatsu').classList.toggle('hidden', tab !== 'ikkatsu');
     document.getElementById('ksPageChecklist').classList.toggle('hidden', tab !== 'checklist');
+    document.getElementById('ksPageViolations').classList.toggle('hidden', tab !== 'violations');
     document.getElementById('ksPageGuide').classList.toggle('hidden', tab !== 'guide');
     if (tab === 'guide') renderKsGuideTab();
     if (tab === 'checklist') renderKsChecklistTab();
+    if (tab === 'violations') renderKsViolationsTab();
   }
 
   function renderKsIkkatsuTab() {
@@ -8659,7 +8725,7 @@ support@zaibase.jp</p>
     el.innerHTML = `
       <div class="ks-card">
         <div class="ks-card-title">📋 建設業法令遵守チェックリスト（自社チェック）</div>
-        <div style="font-size:12px;color:var(--zb-muted);margin-bottom:12px;">国土交通省「建設業法令遵守ガイドライン」に基づく12項目チェック。</div>
+        <div style="font-size:12px;color:var(--zb-muted);margin-bottom:12px;">国土交通省「建設業法令遵守ガイドライン」に基づく21項目チェック。見積・契約・工期・支払・その他の全カテゴリを網羅。</div>
         <div id="ksScore" class="ks-score"><span class="ks-score-num" id="ksScoreNum">0</span><span style="font-size:16px;color:var(--zb-muted)"> / ${KOSEI_CHECKLIST.reduce((s,i)=>s+i.pts,0)}点</span></div>
         ${cats.map(cat => `
           <div style="font-size:13px;font-weight:700;color:var(--zb-navy);margin:12px 0 6px;padding-top:8px;border-top:1px solid var(--zb-border);">${cat}</div>
@@ -8698,6 +8764,56 @@ support@zaibase.jp</p>
         showZbToast('チェック結果を保存しました');
       } catch(e) { showZbToast('保存に失敗: ' + e.message); }
     };
+  }
+
+  function renderKsViolationsTab() {
+    const el = document.getElementById('ksPageViolations');
+    if (!el) return;
+    const levelCss = { ng: 'background:#fef2f2;border-left:3px solid #dc2626;', warn: 'background:#fffbeb;border-left:3px solid #f59e0b;' };
+    const levelIcon = { ng: '🚫', warn: '⚠️' };
+    el.innerHTML = `
+      <div class="ks-card">
+        <div class="ks-card-title">⚠️ 建設業法令遵守ガイドライン 違反・違反のおそれがある行為事例</div>
+        <div style="font-size:12px;color:var(--zb-muted);line-height:1.7;margin-bottom:14px;">
+          国土交通省「建設業法令遵守ガイドライン」に基づく元請・下請間の違反事例一覧。
+          <span style="display:inline-block;margin-left:6px;padding:1px 7px;border-radius:6px;font-size:11px;font-weight:700;background:#fef2f2;color:#dc2626;">🚫 違反</span>
+          <span style="display:inline-block;margin-left:4px;padding:1px 7px;border-radius:6px;font-size:11px;font-weight:700;background:#fffbeb;color:#b45309;">⚠️ 違反のおそれ</span>
+        </div>
+        ${KS_VIOLATIONS.map(cat => `
+          <div style="margin-bottom:16px;">
+            <div style="font-size:13px;font-weight:800;color:var(--zb-navy);margin-bottom:3px;">${escapeHtml(cat.cat)}</div>
+            <div style="font-size:10px;color:#c2410c;font-weight:700;margin-bottom:8px;">${escapeHtml(cat.law)}</div>
+            ${cat.items.map(item => `
+              <div style="padding:8px 10px;border-radius:8px;margin-bottom:6px;${levelCss[item.level]}">
+                <span style="font-weight:700;">${levelIcon[item.level]}</span>
+                <span style="font-size:12px;line-height:1.75;margin-left:4px;">${escapeHtml(item.text)}</span>
+              </div>`).join('')}
+          </div>`).join('')}
+      </div>
+      <div class="ks-card" style="border-color:#fef9c3;background:#fefce8;">
+        <div class="ks-card-title" style="color:#854d0e;">📋 見積期間の最低日数（建設業法第20条第3項）</div>
+        <table style="width:100%;font-size:12px;border-collapse:collapse;">
+          <thead><tr style="background:#fef08a;">
+            <th style="padding:6px 8px;text-align:left;border:1px solid #fcd34d;">予定価格</th>
+            <th style="padding:6px 8px;text-align:center;border:1px solid #fcd34d;">見積期間</th>
+          </tr></thead>
+          <tbody>
+            ${[['500万円未満','1日以上'],['500万円以上〜5,000万円未満','5日以上'],['5,000万円以上','15日以上']].map(r=>`
+            <tr><td style="padding:6px 8px;border:1px solid #fcd34d;">${r[0]}</td><td style="padding:6px 8px;text-align:center;border:1px solid #fcd34d;font-weight:700;">${r[1]}</td></tr>`).join('')}
+          </tbody>
+        </table>
+        <div style="font-size:11px;color:var(--zb-muted);margin-top:8px;">やむを得ない場合を除き、上記の期間を下回ってはなりません。</div>
+      </div>
+      <div class="ks-card" style="border-color:#dbeafe;background:#eff6ff;">
+        <div class="ks-card-title" style="color:#1e40af;">🏛️ 下請代金の支払期日ルール（建設業法第24条の3）</div>
+        <div style="font-size:12px;line-height:1.85;color:var(--zb-text);">
+          <strong>原則：</strong>引渡しを受けた日から<strong>50日以内</strong>（できる限り短い期間）<br>
+          <strong>元請への支払い後：</strong>元請が発注者から代金を受領した日から<strong>1ヶ月以内</strong><br>
+          <strong>手形：</strong>60日を超える長期手形・割引困難な手形は禁止<br>
+          <strong>特定建設業者：</strong>下位下請の遅延には指導義務あり（建設業法第41条）
+        </div>
+      </div>
+    `;
   }
 
   const KS_GUIDELINES = [
@@ -8746,6 +8862,7 @@ support@zaibase.jp</p>
     document.getElementById('koseiBackBtn').onclick = () => showScreen('mypageScreen');
     document.getElementById('ksPageIkkatsu').classList.remove('hidden');
     document.getElementById('ksPageChecklist').classList.add('hidden');
+    document.getElementById('ksPageViolations').classList.add('hidden');
     document.getElementById('ksPageGuide').classList.add('hidden');
     renderKsIkkatsuTab();
   }
