@@ -39,7 +39,7 @@ exports.notifyUrgentJob = onDocumentCreated("urgentJobs/{jobId}", async (event) 
   }
 });
 
-exports.listNearbyUrgentJobs = onCall(async (request) => {
+exports.listNearbyUrgentJobs = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (request) => {
   if (!request.auth) throw new HttpsError("unauthenticated", "ログインが必要です");
   const snap = await db.collection("urgentJobs")
     .where("status", "==", "beta_open")

@@ -64,7 +64,7 @@ async function sendPush(token, notification, data) {
 
 // ── 1. エスクロー預託 ─────────────────────────────────────────
 exports.createEscrow = onCall(
-  { region: "asia-northeast1", secrets: [STRIPE_SECRET_KEY] },
+  { region: "asia-northeast1", enforceAppCheck: true, secrets: [STRIPE_SECRET_KEY] },
   async (req) => {
     const stripe = require("stripe")(STRIPE_SECRET_KEY.value());
     const { contractId } = req.data || {};
@@ -130,7 +130,7 @@ exports.createEscrow = onCall(
 
 // ── 2. Stripe Webhook（預託確定） ─────────────────────────────
 exports.stripeWebhook = onRequest(
-  { region: "asia-northeast1", secrets: [STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET] },
+  { region: "asia-northeast1", enforceAppCheck: true, secrets: [STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET] },
   async (req, res) => {
     const stripe = require("stripe")(STRIPE_SECRET_KEY.value());
     const sig = req.headers["stripe-signature"];
@@ -201,7 +201,7 @@ exports.reportWorkComplete = onCall(
 
 // ── 4. 完了承認 → 自動送金（発注者） ─────────────────────────
 exports.approveAndRelease = onCall(
-  { region: "asia-northeast1", secrets: [STRIPE_SECRET_KEY] },
+  { region: "asia-northeast1", enforceAppCheck: true, secrets: [STRIPE_SECRET_KEY] },
   async (req) => {
     const stripe = require("stripe")(STRIPE_SECRET_KEY.value());
     const { contractId } = req.data || {};
@@ -333,7 +333,7 @@ exports.disputeEscrow = onCall(
 
 // ── 6. Stripe Connect オンボーディング（職人） ────────────────
 exports.createStripeOnboarding = onCall(
-  { region: "asia-northeast1", secrets: [STRIPE_SECRET_KEY] },
+  { region: "asia-northeast1", enforceAppCheck: true, secrets: [STRIPE_SECRET_KEY] },
   async (req) => {
     const stripe = require("stripe")(STRIPE_SECRET_KEY.value());
     const uid = req.auth?.uid;

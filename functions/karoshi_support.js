@@ -37,7 +37,7 @@ const { getFirestore, FieldValue } = require("firebase-admin/firestore");
 
 const db = getFirestore();
 
-exports.saveKaroshiCase = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.saveKaroshiCase = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const uid = req.auth.uid;
   const d = req.data || {};
@@ -70,7 +70,7 @@ exports.saveKaroshiCase = onCall({ region: "asia-northeast1" }, async (req) => {
   return { ok: true, caseId };
 });
 
-exports.getKaroshiCases = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.getKaroshiCases = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const uid = req.auth.uid;
   const snap = await db.collection("karoshiCases")
@@ -93,7 +93,7 @@ exports.getKaroshiCases = onCall({ region: "asia-northeast1" }, async (req) => {
 
 // ── 職場登録・GPS出退勤 ────────────────────────────────────────────
 
-exports.registerWorkplace = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.registerWorkplace = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const uid = req.auth.uid;
   const d = req.data || {};
@@ -119,7 +119,7 @@ exports.registerWorkplace = onCall({ region: "asia-northeast1" }, async (req) =>
   return { ok: true, wpId };
 });
 
-exports.getWorkplaces = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.getWorkplaces = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const uid = req.auth.uid;
   const snap = await db.collection("karoshiWorkplaces")
@@ -139,7 +139,7 @@ exports.getWorkplaces = onCall({ region: "asia-northeast1" }, async (req) => {
   };
 });
 
-exports.clockInOut = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.clockInOut = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const uid = req.auth.uid;
   const d = req.data || {};
@@ -165,7 +165,7 @@ exports.clockInOut = onCall({ region: "asia-northeast1" }, async (req) => {
   return { ok: true, logId };
 });
 
-exports.getWorkLogs = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.getWorkLogs = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const uid = req.auth.uid;
   const snap = await db.collection("karoshiTimeLogs")
@@ -189,7 +189,7 @@ exports.getWorkLogs = onCall({ region: "asia-northeast1" }, async (req) => {
 
 // ── 面談録音・文字起こし ────────────────────────────────────────────
 
-exports.saveInterview = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.saveInterview = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const uid = req.auth.uid;
   const d = req.data || {};
@@ -213,7 +213,7 @@ exports.saveInterview = onCall({ region: "asia-northeast1" }, async (req) => {
   return { ok: true, ivId };
 });
 
-exports.getInterviews = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.getInterviews = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const uid = req.auth.uid;
   const snap = await db.collection("karoshiInterviews")
@@ -244,7 +244,7 @@ function anonId(uid) {
   return ANON_PREFIXES[h % ANON_PREFIXES.length] + String(h % 9000 + 1000);
 }
 
-exports.postAnonymousConsult = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.postAnonymousConsult = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const uid = req.auth.uid;
   const d = req.data || {};
@@ -264,7 +264,7 @@ exports.postAnonymousConsult = onCall({ region: "asia-northeast1" }, async (req)
   return { ok: true, consultId };
 });
 
-exports.getAnonymousConsults = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.getAnonymousConsults = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const d = req.data || {};
   const snap = await db.collection("karoshiConsults")
@@ -283,7 +283,7 @@ exports.getAnonymousConsults = onCall({ region: "asia-northeast1" }, async (req)
   };
 });
 
-exports.replyAnonymousConsult = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.replyAnonymousConsult = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const uid = req.auth.uid;
   const d = req.data || {};
@@ -306,7 +306,7 @@ exports.replyAnonymousConsult = onCall({ region: "asia-northeast1" }, async (req
   return { ok: true, replyId };
 });
 
-exports.getConsultReplies = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.getConsultReplies = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const d = req.data || {};
   if (!d.consultId) throw new HttpsError("invalid-argument", "consultId が必要です");

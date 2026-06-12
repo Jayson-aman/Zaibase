@@ -91,7 +91,7 @@ async function deleteRekognitionFace(faceId) {
 }
 
 exports.registerFace = onCall(
-  { region: "asia-northeast1", secrets: FACE_SECRETS },
+  { region: "asia-northeast1", enforceAppCheck: true, secrets: FACE_SECRETS },
   async (req) => {
     const uid = req.auth?.uid;
     const imageBase64 = req.data?.imageBase64;
@@ -168,7 +168,7 @@ exports.registerFace = onCall(
 );
 
 exports.authenticateFace = onCall(
-  { region: "asia-northeast1", secrets: FACE_SECRETS },
+  { region: "asia-northeast1", enforceAppCheck: true, secrets: FACE_SECRETS },
   async (req) => {
     const imageBase64 = req.data?.imageBase64;
     const contractId = req.data?.contractId;
@@ -306,7 +306,7 @@ exports.onCraftsmanProfileDeleted = onDocumentDeleted(
 );
 
 exports.revokeFaceConsent = onCall(
-  { region: "asia-northeast1", secrets: FACE_SECRETS },
+  { region: "asia-northeast1", enforceAppCheck: true, secrets: FACE_SECRETS },
   async (req) => {
     const uid = req.auth?.uid;
     if (!uid) throw new HttpsError("unauthenticated", "login required");

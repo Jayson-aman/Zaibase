@@ -19,7 +19,7 @@ const { getFirestore, FieldValue } = require("firebase-admin/firestore");
 
 const db = getFirestore();
 
-exports.saveKokiRecord = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.saveKokiRecord = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const uid = req.auth.uid;
   const d = req.data || {};
@@ -63,7 +63,7 @@ exports.saveKokiRecord = onCall({ region: "asia-northeast1" }, async (req) => {
   return { ok: true, recordId };
 });
 
-exports.getKokiRecords = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.getKokiRecords = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const uid = req.auth.uid;
 

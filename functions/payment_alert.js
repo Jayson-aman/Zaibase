@@ -206,7 +206,7 @@ exports.paymentAlertScheduler = onSchedule(
 );
 
 exports.markWorkComplete = onCall(
-  { region: "asia-northeast1" },
+  { region: "asia-northeast1", enforceAppCheck: true },
   async (req) => {
     const { contractId, completionNote } = req.data || {};
     if (!contractId) throw new HttpsError("invalid-argument", "contractId required");
@@ -246,7 +246,7 @@ exports.markWorkComplete = onCall(
 );
 
 exports.confirmPayment = onCall(
-  { region: "asia-northeast1" },
+  { region: "asia-northeast1", enforceAppCheck: true },
   async (req) => {
     const { contractId } = req.data || {};
     if (!contractId) throw new HttpsError("invalid-argument", "contractId required");

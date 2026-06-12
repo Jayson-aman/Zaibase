@@ -19,7 +19,7 @@ const VALID_PLAN_CATEGORIES = ["mental", "career", "finance", "network", "plan"]
  * メンター・相談窓口一覧をFirestoreから返す。
  * データが存在しない場合はデフォルトのリソースリストを返す。
  */
-exports.getMentors = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.getMentors = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
   const snapshot = await db.collection("seniorMentors")
@@ -92,7 +92,7 @@ exports.getMentors = onCall({ region: "asia-northeast1" }, async (req) => {
  * ユーザーのライフプランを保存する。
  * カテゴリ別（mental/career/finance/network/plan）のデータをマージ保存。
  */
-exports.saveLifePlan = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.saveLifePlan = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
   const { category, data } = req.data || {};
@@ -131,7 +131,7 @@ exports.saveLifePlan = onCall({ region: "asia-northeast1" }, async (req) => {
  * ライフプラン統計を返す（管理者・ダッシュボード向け）。
  * 一般ユーザーには自分のデータのみ返す。
  */
-exports.getLifePlanStats = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.getLifePlanStats = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
   const uid = req.auth.uid;

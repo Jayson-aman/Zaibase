@@ -51,7 +51,7 @@ function isDocValid(doc) {
  * 案件・工種に対して環境法令コンプライアンスを検証する。
  * フロントエンドからは応募時・案件投稿時に呼び出す。
  */
-exports.checkEnvCompliance = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.checkEnvCompliance = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
   const { trade, jobCategory, listingType, area } = req.data || {};
@@ -142,7 +142,7 @@ exports.checkEnvCompliance = onCall({ region: "asia-northeast1" }, async (req) =
  * 水質汚濁防止法届出・土壌汚染調査報告書の自己申告を登録する。
  * verificationDocs.waterQuality / soilContamination に保存。
  */
-exports.submitEnvComplianceDoc = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.submitEnvComplianceDoc = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
   const { docType, submitted, expiry, referenceNo, notes } = req.data || {};
@@ -175,7 +175,7 @@ exports.submitEnvComplianceDoc = onCall({ region: "asia-northeast1" }, async (re
  * 汚染土ブロック・不法投棄疑いなどのイベントを監査ログに記録する。
  * フロントエンド（出品フロー・違反報告）から呼び出す。
  */
-exports.logEnvComplianceEvent = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.logEnvComplianceEvent = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
   const { eventType, listingId, details } = req.data || {};

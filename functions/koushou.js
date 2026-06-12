@@ -9,7 +9,7 @@ const db = getFirestore();
 
 const VALID_WORK_TYPES = ['施工・現場作業','施工管理・監理','図面作成・設計','見積・積算','発注・資材調達','打ち合わせ・会議','移動','事務・書類作成','その他'];
 
-exports.addKoushouEntry = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.addKoushouEntry = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const { date, jobName, hours, workType, memo } = req.data || {};
   if (!date || !jobName || !hours) throw new HttpsError("invalid-argument", "date・jobName・hours は必須です");
@@ -28,7 +28,7 @@ exports.addKoushouEntry = onCall({ region: "asia-northeast1" }, async (req) => {
   return { ok: true, entryId: ref.id };
 });
 
-exports.getKoushouReport = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.getKoushouReport = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const { year } = req.data || {};
   const targetYear = Number(year) || new Date().getFullYear();

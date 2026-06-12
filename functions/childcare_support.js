@@ -22,7 +22,7 @@ const POINTS_PER_HELP = 150;
  * 緊急送迎アラートをエリア内の援助可能ユーザーに FCM 通知する。
  * フロントエンドの「🚨 緊急」ボタンから呼び出す。
  */
-exports.notifyChildcareEmergency = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.notifyChildcareEmergency = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
   const { requestId, area, facilityName } = req.data || {};
@@ -91,7 +91,7 @@ exports.notifyChildcareEmergency = onCall({ region: "asia-northeast1" }, async (
  * 送迎互助の完了を記録し、援助者にポイントを付与する。
  * 依頼者（requester）が呼び出す。
  */
-exports.completeChildcareMatch = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.completeChildcareMatch = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
   const { matchId } = req.data || {};
@@ -149,7 +149,7 @@ exports.completeChildcareMatch = onCall({ region: "asia-northeast1" }, async (re
 /**
  * ユーザーの月次互助統計を返す（ダッシュボード用）。
  */
-exports.getChildcareStats = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.getChildcareStats = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
   const uid = req.auth.uid;

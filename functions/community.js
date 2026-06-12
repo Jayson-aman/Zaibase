@@ -9,7 +9,7 @@ const admin = require("firebase-admin");
 const THANKS_AMOUNT = 10;
 const INITIAL_BALANCE = 100;
 
-exports.sendCommunityThanks = onCall({ region: "asia-northeast1" }, async (request) => {
+exports.sendCommunityThanks = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (request) => {
   const uid = request.auth?.uid;
   if (!uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 

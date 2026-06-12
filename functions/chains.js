@@ -73,7 +73,7 @@ async function assertChainParticipant(chain, uid) {
   }
 }
 
-exports.createContractChain = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.createContractChain = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
   const {
@@ -216,12 +216,12 @@ async function runValidateChainSubcontract(uid, data) {
   };
 }
 
-exports.validateChainSubcontract = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.validateChainSubcontract = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   return runValidateChainSubcontract(req.auth.uid, req.data);
 });
 
-exports.createChainContract = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.createChainContract = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
   const { helpPostId, conversationId, contractorId, contractorName, ordererName } = req.data || {};
@@ -369,7 +369,7 @@ exports.createChainContract = onCall({ region: "asia-northeast1" }, async (req) 
   };
 });
 
-exports.updateSubstantiveInvolvement = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.updateSubstantiveInvolvement = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
   const { contractId, flags, evidenceIds } = req.data || {};
@@ -422,7 +422,7 @@ exports.updateSubstantiveInvolvement = onCall({ region: "asia-northeast1" }, asy
   return { ok: true, count, chainStatus, message: count >= 3 ? "実質関与を確認しました" : `あと${3 - count}項目必要です` };
 });
 
-exports.linkHelpPostToChain = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.linkHelpPostToChain = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
   const {

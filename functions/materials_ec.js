@@ -24,7 +24,7 @@ async function searchRakuten(keyword, appId) {
   });
 }
 
-exports.searchMaterialsPrices = onCall(async (request) => {
+exports.searchMaterialsPrices = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (request) => {
   if (!request.auth) throw new HttpsError("unauthenticated", "ログインが必要です");
   const keyword = (request.data?.keyword || "").trim();
   if (!keyword) throw new HttpsError("invalid-argument", "keyword が必要です");

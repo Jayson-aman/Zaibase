@@ -28,7 +28,7 @@ function foundingChecklistTemplate() {
   }));
 }
 
-exports.createTeam = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.createTeam = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
   const {
@@ -151,7 +151,7 @@ exports.createTeam = onCall({ region: "asia-northeast1" }, async (req) => {
   };
 });
 
-exports.joinTeamByInvite = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.joinTeamByInvite = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
   const { inviteCode, displayName: inputName, trade = "" } = req.data || {};

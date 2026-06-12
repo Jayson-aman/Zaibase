@@ -20,7 +20,7 @@ const db = getFirestore();
  * @param {object} req.data.flState     - { [itemId]: boolean } フリーランス法チェックの状態
  * @param {object} req.data.score       - { earned, possible, pct } スコアサマリー
  */
-exports.saveCsrCheck = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.saveCsrCheck = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
   const uid = req.auth.uid;
@@ -55,7 +55,7 @@ exports.saveCsrCheck = onCall({ region: "asia-northeast1" }, async (req) => {
  * 最新CSRレポートを返す。
  * csrChecks/{uid} と humanRightsDd/{uid} を結合して返す。
  */
-exports.getCsrReport = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.getCsrReport = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
   const uid = req.auth.uid;
@@ -92,7 +92,7 @@ exports.getCsrReport = onCall({ region: "asia-northeast1" }, async (req) => {
  * 人権DDデータを humanRightsDd/{uid} に保存する。
  * @param {object} req.data.ddState - { step1: { done, fields }, ... } 各ステップの状態
  */
-exports.saveHumanRightsDd = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.saveHumanRightsDd = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
   const uid = req.auth.uid;

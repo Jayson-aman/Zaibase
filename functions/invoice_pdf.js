@@ -133,7 +133,7 @@ function buildPdfBuffer(data, fontPath) {
   });
 }
 
-exports.generateInvoicePdf = onCall(async (request) => {
+exports.generateInvoicePdf = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (request) => {
   if (!request.auth) {
     throw new HttpsError("unauthenticated", "ログインが必要です");
   }

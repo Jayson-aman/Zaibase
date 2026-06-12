@@ -17,7 +17,7 @@ const { getFirestore, FieldValue } = require("firebase-admin/firestore");
 
 const db = getFirestore();
 
-exports.saveNoiseVibApp = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.saveNoiseVibApp = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const uid = req.auth.uid;
   const d = req.data || {};
@@ -63,7 +63,7 @@ exports.saveNoiseVibApp = onCall({ region: "asia-northeast1" }, async (req) => {
   return { ok: true, appId, notifyDeadline };
 });
 
-exports.getNoiseVibApps = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.getNoiseVibApps = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const uid = req.auth.uid;
   const snap = await db.collection("noiseVibApps")

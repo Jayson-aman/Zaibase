@@ -23,7 +23,7 @@ const { getFirestore, FieldValue } = require("firebase-admin/firestore");
 
 const db = getFirestore();
 
-exports.recordEnvReferral = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.recordEnvReferral = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const uid = req.auth.uid;
   const d = req.data || {};
@@ -44,7 +44,7 @@ exports.recordEnvReferral = onCall({ region: "asia-northeast1" }, async (req) =>
   return { ok: true, referralId };
 });
 
-exports.saveSoilJob = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.saveSoilJob = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const uid = req.auth.uid;
   const d = req.data || {};
@@ -104,7 +104,7 @@ exports.saveSoilJob = onCall({ region: "asia-northeast1" }, async (req) => {
   return { ok: true, jobId, notifyDeadline, reportDeadline, maskAlertDate };
 });
 
-exports.getSoilJobs = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.getSoilJobs = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const uid = req.auth.uid;
   const snap = await db.collection("soilJobs")

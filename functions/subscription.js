@@ -128,7 +128,7 @@ async function getOrCreateCustomer(stripe, uid, email, displayName) {
 
 // ── 1. Checkout Session 生成 ───────────────────────────────────────
 exports.createCheckoutSession = onCall(
-  { region: "asia-northeast1", secrets: [STRIPE_SECRET_KEY] },
+  { region: "asia-northeast1", enforceAppCheck: true, secrets: [STRIPE_SECRET_KEY] },
   async (req) => {
     const uid = req.auth?.uid;
     if (!uid) throw new HttpsError("unauthenticated", "ログインが必要です");
@@ -191,7 +191,7 @@ exports.createCheckoutSession = onCall(
 
 // ── 2. Stripe Webhook ──────────────────────────────────────────────
 exports.stripeSubWebhook = onRequest(
-  { region: "asia-northeast1", secrets: [STRIPE_SECRET_KEY, STRIPE_SUB_WEBHOOK_SECRET] },
+  { region: "asia-northeast1", enforceAppCheck: true, secrets: [STRIPE_SECRET_KEY, STRIPE_SUB_WEBHOOK_SECRET] },
   async (req, res) => {
     const stripe = require("stripe")(STRIPE_SECRET_KEY.value());
     let event;
@@ -350,7 +350,7 @@ async function handleSubEvent(stripe, event) {
 
 // ── 3. プラン変更（アップグレード・ダウングレード） ─────────────────
 exports.switchPlan = onCall(
-  { region: "asia-northeast1", secrets: [STRIPE_SECRET_KEY] },
+  { region: "asia-northeast1", enforceAppCheck: true, secrets: [STRIPE_SECRET_KEY] },
   async (req) => {
     const uid = req.auth?.uid;
     if (!uid) throw new HttpsError("unauthenticated", "ログインが必要です");
@@ -386,7 +386,7 @@ exports.switchPlan = onCall(
 
 // ── 4. Stripe側で解約（期間終了時に自動解約） ──────────────────────
 exports.cancelStripeSubscription = onCall(
-  { region: "asia-northeast1", secrets: [STRIPE_SECRET_KEY] },
+  { region: "asia-northeast1", enforceAppCheck: true, secrets: [STRIPE_SECRET_KEY] },
   async (req) => {
     const uid = req.auth?.uid;
     if (!uid) throw new HttpsError("unauthenticated", "ログインが必要です");
@@ -433,7 +433,7 @@ exports.cancelStripeSubscription = onCall(
 
 // ── 5. 現在のサブスクリプション状態取得 ─────────────────────────────
 exports.getMySubscription = onCall(
-  { region: "asia-northeast1", secrets: [STRIPE_SECRET_KEY] },
+  { region: "asia-northeast1", enforceAppCheck: true, secrets: [STRIPE_SECRET_KEY] },
   async (req) => {
     const uid = req.auth?.uid;
     if (!uid) throw new HttpsError("unauthenticated", "ログインが必要です");

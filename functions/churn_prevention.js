@@ -182,8 +182,8 @@ async function getChurnStatsHandler(req) {
   };
 }
 
-exports.getChurnStats = onCall({ region: "asia-northeast1" }, getChurnStatsHandler);
-exports.getChurnInterstitialStats = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.getChurnStats = onCall({ region: "asia-northeast1", enforceAppCheck: true }, getChurnStatsHandler);
+exports.getChurnInterstitialStats = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   const d = await getChurnStatsHandler(req);
   return {
     ...d,
@@ -420,7 +420,7 @@ exports.onPlanCancelled = onDocumentUpdated(
 
 // ── 手動解約 API ─────────────────────────────────────────────
 exports.cancelSubscription = onCall(
-  { region: "asia-northeast1" },
+  { region: "asia-northeast1", enforceAppCheck: true },
   async (req) => {
     const uid = req.auth?.uid;
     if (!uid) throw new HttpsError("unauthenticated", "login required");

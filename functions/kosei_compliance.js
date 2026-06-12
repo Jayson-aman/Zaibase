@@ -20,7 +20,7 @@ const { getFirestore, FieldValue } = require("firebase-admin/firestore");
 
 const db = getFirestore();
 
-exports.checkIkkatsu = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.checkIkkatsu = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const d = req.data || {};
   const issues = [];
@@ -52,7 +52,7 @@ exports.checkIkkatsu = onCall({ region: "asia-northeast1" }, async (req) => {
   return { ok: issues.length === 0, issues, passed };
 });
 
-exports.saveKosei = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.saveKosei = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const uid = req.auth.uid;
   const d = req.data || {};

@@ -11,7 +11,7 @@ const db = getFirestore();
 const VALID_CERT_KEYS = ['eruboshi','kurumin','youthyell','iso9001','iso14001','iso45001'];
 const CPD_TYPES = ['講習・研修','セミナー・講演','eラーニング','現場研修','技術発表','その他'];
 
-exports.saveCertification = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.saveCertification = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const { certData } = req.data || {};
   if (!certData || typeof certData !== 'object') throw new HttpsError("invalid-argument", "certData は必須です");
@@ -34,7 +34,7 @@ exports.saveCertification = onCall({ region: "asia-northeast1" }, async (req) =>
   return { ok: true };
 });
 
-exports.addCpdRecord = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.addCpdRecord = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const { date, organizer, title, hours, units, type, certNo } = req.data || {};
   if (!date || !title || !units) throw new HttpsError("invalid-argument", "date・title・units は必須です");
@@ -65,7 +65,7 @@ exports.addCpdRecord = onCall({ region: "asia-northeast1" }, async (req) => {
   return { ok: true, recordId: ref.id, annualUnits };
 });
 
-exports.getCpdSummary = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.getCpdSummary = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const { year } = req.data || {};
   const targetYear = Number(year) || new Date().getFullYear();

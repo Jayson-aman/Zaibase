@@ -41,7 +41,7 @@ function validateSubcontractor(s, idx) {
   };
 }
 
-exports.saveSeikoTaikei = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.saveSeikoTaikei = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const uid = req.auth.uid;
   const d = req.data || {};
@@ -82,7 +82,7 @@ exports.saveSeikoTaikei = onCall({ region: "asia-northeast1" }, async (req) => {
   return { ok: true, jobId: d.jobId, totalSubcontract };
 });
 
-exports.getSeikoTaikei = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.getSeikoTaikei = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const { jobId } = req.data || {};
   if (!jobId) throw new HttpsError("invalid-argument", "jobId が必要です");
@@ -94,7 +94,7 @@ exports.getSeikoTaikei = onCall({ region: "asia-northeast1" }, async (req) => {
   return { ok: true, record: { id: snap.id, ...data } };
 });
 
-exports.listSeikoTaikei = onCall({ region: "asia-northeast1" }, async (req) => {
+exports.listSeikoTaikei = onCall({ region: "asia-northeast1", enforceAppCheck: true }, async (req) => {
   if (!req.auth?.uid) throw new HttpsError("unauthenticated", "ログインが必要です");
   const uid = req.auth.uid;
 

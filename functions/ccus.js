@@ -232,7 +232,7 @@ exports.ccusRetryScheduler = onSchedule(
 );
 
 exports.registerCcusWorkerId = onCall(
-  { region: "asia-northeast1", secrets: [CCUS_API_KEY] },
+  { region: "asia-northeast1", enforceAppCheck: true, secrets: [CCUS_API_KEY] },
   async (req) => {
     const uid = req.auth?.uid;
     const ccusWorkerId = req.data?.ccusWorkerId;
@@ -255,7 +255,7 @@ exports.registerCcusWorkerId = onCall(
 );
 
 exports.registerCcusSiteId = onCall(
-  { region: "asia-northeast1", secrets: [CCUS_API_KEY] },
+  { region: "asia-northeast1", enforceAppCheck: true, secrets: [CCUS_API_KEY] },
   async (req) => {
     const uid = req.auth?.uid;
     const { contractId, ccusSiteId } = req.data ?? {};
