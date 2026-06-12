@@ -149,6 +149,22 @@ exports.saveHumanRightsDd = csr.saveHumanRightsDd;
 const community = require("./community");
 exports.sendCommunityThanks = community.sendCommunityThanks;
 
+// ── 過労死・労災支援センター（§44）────────────────────────────────
+const karoshiSupport = require("./karoshi_support");
+exports.saveKaroshiCase = karoshiSupport.saveKaroshiCase;
+exports.getKaroshiCases = karoshiSupport.getKaroshiCases;
+
+// ── 騒音・振動規制 申請支援（§45）─────────────────────────────────
+const noiseVib = require("./noise_vib");
+exports.saveNoiseVibApp = noiseVib.saveNoiseVibApp;
+exports.getNoiseVibApps = noiseVib.getNoiseVibApps;
+
+// ── 環境業者マッチング（§46）──────────────────────────────────────
+const envBizMatch = require("./env_biz_match");
+exports.recordEnvReferral = envBizMatch.recordEnvReferral;
+exports.saveSoilJob = envBizMatch.saveSoilJob;
+exports.getSoilJobs = envBizMatch.getSoilJobs;
+
 // ── ユーティリティ ─────────────────────────────────────────────
 exports.health = onRequest((req, res) => {
   res.json({ ok: true, service: "zaibase-backend", time: new Date().toISOString() });
