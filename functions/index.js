@@ -111,6 +111,12 @@ const koushou = require("./koushou");
 exports.addKoushouEntry = koushou.addKoushouEntry;
 exports.getKoushouReport = koushou.getKoushouReport;
 
+// ── 入札・認定・CPD管理（§37）─────────────────────────────────────
+const nyusatsu = require("./nyusatsu");
+exports.saveCertification = nyusatsu.saveCertification;
+exports.addCpdRecord = nyusatsu.addCpdRecord;
+exports.getCpdSummary = nyusatsu.getCpdSummary;
+
 // ── CSR・ステークホルダー管理（§35）───────────────────────────────
 const csr = require("./csr");
 exports.saveCsrCheck = csr.saveCsrCheck;
