@@ -2,47 +2,70 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
+    // ── ヘルパー関数 ──────────────────────────────────────────────
+
+    function isAuth() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return isAuth() && request.auth.uid == uid;
+    }
+
+    function isAdmin() {
+      return isAuth()
+        && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    // ── 管理者 ────────────────────────────────────────────────────
+
+    match /admins/{uid} {
+      allow read: if isOwner(uid);
+      allow write: if false;
+    }
+
+    // ── 求人・出品 ─────────────────────────────────────────────────
+
     match /listings/{id} {
       allow read: if true;
-      allow create: if request.auth != null;
-      allow update, delete: if request.auth != null
+      allow create: if isAuth();
+      allow update, delete: if isAuth()
         && request.auth.uid == resource.data.userId;
 
-      // 出品への質問
       match /questions/{qid} {
-        allow read: if request.auth != null;
-        allow create: if request.auth != null
+        allow read: if isAuth();
+        allow create: if isAuth()
           && request.resource.data.userId == request.auth.uid
           && request.resource.data.text is string
           && request.resource.data.text.size() > 0
           && request.resource.data.text.size() <= 500;
-        allow update: if request.auth != null
+        allow update: if isAuth()
           && get(/databases/$(database)/documents/listings/$(id)).data.userId == request.auth.uid;
       }
     }
 
-    // 出品者の公開プロフィール（評価表示用）
+    // ── プロフィール ───────────────────────────────────────────────
+
     match /sellerProfiles/{uid} {
-      allow read: if request.auth != null;
-      allow create, update: if request.auth != null && request.auth.uid == uid;
+      allow read: if isAuth();
+      allow create, update: if isOwner(uid);
     }
 
-    // 職人プロフィール（第1期マッチング用）
     match /craftsmanProfiles/{uid} {
-      allow read: if request.auth != null;
-      allow create, update: if request.auth != null && request.auth.uid == uid;
+      allow read: if isAuth();
+      allow create, update: if isOwner(uid);
     }
 
-    // 発注者プロフィール（案件登録・プラン管理）
     match /ordererProfiles/{uid} {
-      allow read: if request.auth != null;
-      allow create, update: if request.auth != null && request.auth.uid == uid;
+      allow read: if isAuth();
+      allow create, update: if isOwner(uid);
     }
 
-    // 職人マッチング投稿（助けてほしい / 手伝える）
+    // ── 求人・マッチング ───────────────────────────────────────────
+
     match /helpPosts/{id} {
-      allow read: if request.auth != null;
-      allow create: if request.auth != null
+      allow read: if isAuth();
+      allow create: if isAuth()
         && request.resource.data.userId == request.auth.uid
         && (
           !('bidType' in request.resource.data)
@@ -52,20 +75,19 @@ service cloud.firestore {
             && get(/databases/$(database)/documents/platformConfig/teams).data.lawyerGatePassed == true
           )
         );
-      allow update, delete: if request.auth != null
+      allow update, delete: if isAuth()
         && request.auth.uid == resource.data.userId;
     }
 
-    // 案件応募（マッチング承認フロー）
     match /applications/{id} {
-      allow read: if request.auth != null
+      allow read: if isAuth()
         && (request.auth.uid == resource.data.postOwnerId
             || request.auth.uid == resource.data.applicantId);
-      allow create: if request.auth != null
+      allow create: if isAuth()
         && request.resource.data.applicantId == request.auth.uid
         && request.resource.data.postOwnerId != request.auth.uid
         && request.resource.data.status == 'pending';
-      allow update: if request.auth != null && (
+      allow update: if isAuth() && (
         (request.auth.uid == resource.data.postOwnerId
           && request.resource.data.status in ['approved', 'rejected'])
         || (request.auth.uid == resource.data.applicantId
@@ -75,18 +97,19 @@ service cloud.firestore {
       allow delete: if false;
     }
 
-    // 1対1トーク
+    // ── トーク ─────────────────────────────────────────────────────
+
     match /conversations/{convId} {
-      allow read, update: if request.auth != null
+      allow read, update: if isAuth()
         && request.auth.uid in resource.data.participants;
-      allow create: if request.auth != null
+      allow create: if isAuth()
         && request.auth.uid in request.resource.data.participants
         && request.resource.data.participants.size() == 2;
 
       match /messages/{msgId} {
-        allow read: if request.auth != null
+        allow read: if isAuth()
           && request.auth.uid in get(/databases/$(database)/documents/conversations/$(convId)).data.participants;
-        allow create: if request.auth != null
+        allow create: if isAuth()
           && request.resource.data.senderId == request.auth.uid
           && request.auth.uid in get(/databases/$(database)/documents/conversations/$(convId)).data.participants
           && request.resource.data.text is string
@@ -95,28 +118,17 @@ service cloud.firestore {
       }
     }
 
-    // 運営管理者（Firebase Console で admins/{uid} を手動作成）
-    match /admins/{uid} {
-      allow read: if request.auth != null && request.auth.uid == uid;
-      allow write: if false;
-    }
+    // ── 違反申告・相談 ─────────────────────────────────────────────
 
-    function isAdmin() {
-      return request.auth != null
-        && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
-    }
-
-    // 違反申告
     match /reports/{id} {
-      allow create: if request.auth != null
+      allow create: if isAuth()
         && request.resource.data.reporterId == request.auth.uid;
       allow read, update: if isAdmin();
       allow delete: if false;
     }
 
-    // フリーランス保護法：苦情・相談窓口
     match /freelanceConsultations/{id} {
-      allow create: if request.auth != null
+      allow create: if isAuth()
         && request.resource.data.userId == request.auth.uid
         && request.resource.data.text is string
         && request.resource.data.text.size() > 0
@@ -125,100 +137,98 @@ service cloud.firestore {
       allow delete: if false;
     }
 
-    // 電子伝票
+    // ── 電子伝票・搬入 ─────────────────────────────────────────────
+
     match /eTickets/{id} {
-      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
-      allow create: if request.auth != null
+      allow read: if isAuth() && request.auth.uid == resource.data.userId;
+      allow create: if isAuth()
         && request.resource.data.userId == request.auth.uid;
-      allow update, delete: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow update, delete: if isAuth() && request.auth.uid == resource.data.userId;
     }
 
-    // 搬入管理
     match /deliveries/{id} {
-      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
-      allow create: if request.auth != null
+      allow read: if isAuth() && request.auth.uid == resource.data.userId;
+      allow create: if isAuth()
         && request.resource.data.userId == request.auth.uid
         && request.resource.data.name is string
         && request.resource.data.name.size() > 0;
-      allow update, delete: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow update, delete: if isAuth() && request.auth.uid == resource.data.userId;
     }
 
-    // ヒヤリハット・現場安全報告
+    // ── 安全・現場 ─────────────────────────────────────────────────
+
     match /hazardReports/{id} {
-      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
-      allow create: if request.auth != null
+      allow read: if isAuth() && request.auth.uid == resource.data.userId;
+      allow create: if isAuth()
         && request.resource.data.userId == request.auth.uid
         && request.resource.data.description is string
         && request.resource.data.description.size() > 0;
-      allow update, delete: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow update, delete: if isAuth() && request.auth.uid == resource.data.userId;
     }
 
-    // 搬入車両リアルタイム追跡
     match /trackingSessions/{id} {
-      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
-      allow create: if request.auth != null
+      allow read: if isAuth() && request.auth.uid == resource.data.userId;
+      allow create: if isAuth()
         && request.resource.data.userId == request.auth.uid;
-      allow update: if request.auth != null && request.auth.uid == resource.data.userId;
-      allow delete: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow update, delete: if isAuth() && request.auth.uid == resource.data.userId;
     }
 
-    // 現場写真
     match /sitePhotos/{id} {
-      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
-      allow create: if request.auth != null
+      allow read: if isAuth() && request.auth.uid == resource.data.userId;
+      allow create: if isAuth()
         && request.resource.data.userId == request.auth.uid;
-      allow update, delete: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow update, delete: if isAuth() && request.auth.uid == resource.data.userId;
     }
 
-    // 工事報告書
     match /photoReports/{id} {
-      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
-      allow create: if request.auth != null
+      allow read: if isAuth() && request.auth.uid == resource.data.userId;
+      allow create: if isAuth()
         && request.resource.data.userId == request.auth.uid;
-      allow update, delete: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow update, delete: if isAuth() && request.auth.uid == resource.data.userId;
     }
 
-    // 保険・パートナーリンクのクリックログ（収益追跡）
+    // ── アフィリエイト・請求書・見積 ───────────────────────────────
+
     match /affiliateClicks/{id} {
-      allow create: if request.auth != null
+      allow create: if isAuth()
         && request.resource.data.userId == request.auth.uid
         && request.resource.data.company is string
         && request.resource.data.category is string;
       allow read, update, delete: if isAdmin();
     }
 
-    // 請求書（適格請求書 PDF）
     match /invoices/{id} {
-      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
-      allow create: if request.auth != null
+      allow read: if isAuth() && request.auth.uid == resource.data.userId;
+      allow create: if isAuth()
         && request.resource.data.userId == request.auth.uid;
-      allow update, delete: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow update, delete: if isAuth() && request.auth.uid == resource.data.userId;
     }
 
-    // 見積書（AI見積サポート・Pro/Max）
     match /estimates/{id} {
-      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
-      allow create: if request.auth != null
+      allow read: if isAuth() && request.auth.uid == resource.data.userId;
+      allow create: if isAuth()
         && request.resource.data.userId == request.auth.uid
         && request.resource.data.title is string
         && request.resource.data.title.size() > 0
         && request.resource.data.title.size() <= 120;
-      allow update, delete: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow update, delete: if isAuth() && request.auth.uid == resource.data.userId;
     }
 
-    // プラットフォーム設定（チーム法務ゲート等）
+    // ── プラットフォーム設定 ───────────────────────────────────────
+
     match /platformConfig/{docId} {
-      allow read: if request.auth != null;
+      allow read: if isAuth();
       allow write: if isAdmin();
     }
 
-    // チーム・労働者協同組合（§19）— 作成・更新は Cloud Functions
+    // ── チーム・労働者協同組合（§19）─────────────────────────────
+
     match /teams/{teamId} {
-      allow read: if request.auth != null;
+      allow read: if isAuth();
       allow create, update, delete: if false;
 
       match /members/{memberUid} {
-        allow read: if request.auth != null
+        allow read: if isAuth()
           && (request.auth.uid == memberUid
               || request.auth.uid == get(/databases/$(database)/documents/teams/$(teamId)).data.representativeUid
               || request.auth.uid in get(/databases/$(database)/documents/teams/$(teamId)).data.memberIds);
@@ -231,13 +241,13 @@ service cloud.firestore {
     }
 
     match /teamApplications/{applicationId} {
-      allow read: if request.auth != null
+      allow read: if isAuth()
         && (request.auth.uid == resource.data.applicantUid
             || request.auth.uid == resource.data.postOwnerId);
-      allow create: if request.auth != null
+      allow create: if isAuth()
         && request.resource.data.applicantUid == request.auth.uid
         && request.resource.data.status == 'pending';
-      allow update: if request.auth != null && (
+      allow update: if isAuth() && (
         request.auth.uid == resource.data.postOwnerId
           && request.resource.data.status in ['selected', 'rejected']
         || (request.auth.uid == resource.data.applicantUid
@@ -248,44 +258,46 @@ service cloud.firestore {
     }
 
     match /teamPayouts/{payoutId} {
-      allow read: if request.auth != null
+      allow read: if isAuth()
         && request.auth.uid == resource.data.memberUid;
       allow write: if false;
     }
 
     match /teamScoreEvents/{eventId} {
-      allow read: if request.auth != null;
+      allow read: if isAuth();
       allow write: if false;
     }
 
-    // 多層契約チェーン（§20・透明化管理）
+    // ── 多層契約チェーン（§20）───────────────────────────────────
+
     match /contractChains/{chainId} {
-      allow read: if request.auth != null
+      allow read: if isAuth()
         && (request.auth.uid == resource.data.rootOrdererId
             || (resource.data.participantIds != null
                 && request.auth.uid in resource.data.participantIds));
-      allow create: if request.auth != null
+      allow create: if isAuth()
         && request.auth.uid == request.resource.data.rootOrdererId;
-      allow update: if request.auth != null
+      allow update: if isAuth()
         && (request.auth.uid == resource.data.rootOrdererId
             || request.auth.uid in resource.data.participantIds);
       allow delete: if false;
     }
 
-    // 業務委託契約書（書面明示の証跡・更新は Cloud Functions）
     match /contracts/{id} {
-      allow read: if request.auth != null
+      allow read: if isAuth()
         && (request.auth.uid == resource.data.ordererId
             || request.auth.uid == resource.data.contractorId
             || (resource.data.chainId is string
                 && exists(/databases/$(database)/documents/contractChains/$(resource.data.chainId))
                 && request.auth.uid in get(/databases/$(database)/documents/contractChains/$(resource.data.chainId)).data.participantIds));
-      allow create: if request.auth != null
+      allow create: if isAuth()
         && request.auth.uid in request.resource.data.participants
         && request.resource.data.rewardAmount is number
         && request.resource.data.rewardAmount > 0;
       allow update, delete: if false;
     }
+
+    // ── 支払・解約アラート（Cloud Functions のみ書込） ─────────────
 
     match /paymentAlerts/{id} {
       allow read: if isAdmin();
@@ -299,26 +311,27 @@ service cloud.firestore {
 
     match /churnReasons/{id} {
       allow read: if isAdmin();
-      allow create: if false;
-      allow update, delete: if false;
+      allow write: if false;
     }
 
+    // ── GPS・顔認証・CCUS ─────────────────────────────────────────
+
     match /gpsLogs/{id} {
-      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
-      allow create: if request.auth != null
+      allow read: if isAuth() && request.auth.uid == resource.data.userId;
+      allow create: if isAuth()
         && request.resource.data.userId == request.auth.uid;
       allow update, delete: if false;
     }
 
     match /faceAuthLogs/{id} {
-      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
-      allow create: if request.auth != null
+      allow read: if isAuth() && request.auth.uid == resource.data.userId;
+      allow create: if isAuth()
         && request.resource.data.userId == request.auth.uid;
       allow update, delete: if false;
     }
 
     match /ccusLogs/{id} {
-      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow read: if isAuth() && request.auth.uid == resource.data.userId;
       allow write: if false;
     }
 
@@ -331,19 +344,21 @@ service cloud.firestore {
       allow read, write: if false;
     }
 
-    // 資材EC注文（§22）
+    // ── 資材EC（§22）──────────────────────────────────────────────
+
     match /materialsOrders/{id} {
-      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
-      allow create: if request.auth != null
+      allow read: if isAuth() && request.auth.uid == resource.data.userId;
+      allow create: if isAuth()
         && request.resource.data.userId == request.auth.uid
         && request.resource.data.status is string;
       allow update, delete: if false;
     }
 
-    // 職人コミュニティ投稿（§29）
+    // ── 職人コミュニティ（§29）───────────────────────────────────
+
     match /communityPosts/{id} {
-      allow read: if request.auth != null;
-      allow create: if request.auth != null
+      allow read: if isAuth();
+      allow create: if isAuth()
         && request.resource.data.userId == request.auth.uid
         && request.resource.data.type in ['help', 'wisdom', 'thanks', 'question', 'pride']
         && request.resource.data.content is string
@@ -353,7 +368,7 @@ service cloud.firestore {
         && request.resource.data.likes == 0
         && request.resource.data.likedBy.size() == 0
         && request.resource.data.thanksBy.size() == 0;
-      allow update: if request.auth != null && (
+      allow update: if isAuth() && (
         (request.auth.uid == resource.data.userId
           && request.resource.data.userId == resource.data.userId
           && request.resource.data.status in ['active', 'hidden'])
@@ -380,30 +395,27 @@ service cloud.firestore {
         );
     }
 
-    // ありがとうポイント残高（§29）— 更新は Cloud Functions トランザクション
     match /arigatoPoints/{uid} {
-      allow read: if request.auth != null && request.auth.uid == uid;
-      allow create: if request.auth != null
-        && request.auth.uid == uid
+      allow read: if isOwner(uid);
+      allow create: if isOwner(uid)
         && request.resource.data.balance == 100
         && request.resource.data.helpCount == 0
         && request.resource.data.helpPeople == 0;
-      allow update: if false;
-      allow delete: if false;
+      allow update, delete: if false;
     }
 
     match /arigatoTransactions/{id} {
-      allow read: if request.auth != null
+      allow read: if isAuth()
         && (request.auth.uid == resource.data.fromUserId
             || request.auth.uid == resource.data.toUserId);
       allow write: if false;
     }
 
-    // 夢の貯金（§30–§31）— 旧 dreamGoals は読取・移行用
+    // ── 夢の貯金（§30–§31）───────────────────────────────────────
+
     match /dreamGoals/{uid} {
-      allow read: if request.auth != null && request.auth.uid == uid;
-      allow create, update: if request.auth != null
-        && request.auth.uid == uid
+      allow read: if isOwner(uid);
+      allow create, update: if isOwner(uid)
         && request.resource.data.userId == request.auth.uid
         && request.resource.data.targetAmount is number
         && request.resource.data.targetAmount > 0
@@ -416,11 +428,10 @@ service cloud.firestore {
     }
 
     match /dreamSavings/{uid} {
-      allow read: if request.auth != null && request.auth.uid == uid;
+      allow read: if isOwner(uid);
       match /items/{itemId} {
-        allow read: if request.auth != null && request.auth.uid == uid;
-        allow create: if request.auth != null
-          && request.auth.uid == uid
+        allow read: if isOwner(uid);
+        allow create: if isOwner(uid)
           && request.resource.data.userId == request.auth.uid
           && request.resource.data.title is string
           && request.resource.data.title.size() > 0
@@ -431,29 +442,196 @@ service cloud.firestore {
           && request.resource.data.savedAmount >= 0
           && request.resource.data.monthlySave is number
           && request.resource.data.monthlySave >= 0;
-        allow update: if request.auth != null
-          && request.auth.uid == uid
+        allow update: if isOwner(uid)
           && request.resource.data.userId == request.auth.uid
           && request.resource.data.title is string
           && request.resource.data.targetAmount is number
           && request.resource.data.savedAmount is number
           && request.resource.data.monthlySave is number;
-        allow delete: if request.auth != null && request.auth.uid == uid;
+        allow delete: if isOwner(uid);
       }
     }
 
-    // 緊急職人手配（§24）
+    // ── 緊急職人手配（§24）───────────────────────────────────────
+
     match /urgentJobs/{id} {
-      allow read: if request.auth != null;
-      allow create: if request.auth != null
+      allow read: if isAuth();
+      allow create: if isAuth()
         && request.resource.data.ordererId == request.auth.uid
         && request.resource.data.title is string
         && request.resource.data.reward is number;
-      allow update, delete: if request.auth != null && request.auth.uid == resource.data.ordererId;
+      allow update, delete: if isAuth() && request.auth.uid == resource.data.ordererId;
     }
 
-    match /users/{uid}/{document=**} {
-      allow read, write: if request.auth != null && request.auth.uid == uid;
+    // ── 子育て互助（§33）─────────────────────────────────────────
+
+    match /childcareEmergencies/{id} {
+      allow read: if isAuth()
+        && (request.auth.uid == resource.data.uid || isAdmin());
+      allow write: if false;
     }
+
+    match /childcareMatches/{id} {
+      allow read: if isAuth()
+        && (request.auth.uid == resource.data.requesterId
+            || request.auth.uid == resource.data.helperId);
+      allow write: if false;
+    }
+
+    // ── 環境法令コンプライアンス（水質汚濁防止法・土壌汚染対策法）──
+
+    match /envComplianceDocs/{id} {
+      allow read: if isAuth()
+        && (request.auth.uid == resource.data.uid || isAdmin());
+      allow write: if false;
+    }
+
+    match /envComplianceEvents/{id} {
+      allow read: if isAuth()
+        && (request.auth.uid == resource.data.uid || isAdmin());
+      allow write: if false;
+    }
+
+    // ── シニア支援・ライフプラン（§34）───────────────────────────
+
+    match /lifePlans/{uid} {
+      allow read: if isOwner(uid);
+      allow write: if false;
+    }
+
+    match /mentors/{id} {
+      allow read: if isAuth();
+      allow write: if isAdmin();
+    }
+
+    // ── 許認可管理（§38）─────────────────────────────────────────
+
+    match /permits/{id} {
+      allow read: if isAuth()
+        && (request.auth.uid == resource.data.uid || isAdmin());
+      allow write: if false;
+    }
+
+    // ── 施工体制台帳（§39）───────────────────────────────────────
+
+    match /seikoTaikei/{id} {
+      allow read: if isAuth()
+        && (request.auth.uid == resource.data.uid || isAdmin());
+      allow write: if false;
+    }
+
+    // ── 工期管理（§40）───────────────────────────────────────────
+
+    match /kokiRecords/{id} {
+      allow read: if isAuth()
+        && (request.auth.uid == resource.data.uid || isAdmin());
+      allow write: if false;
+    }
+
+    // ── 下請コンプライアンス（§41）───────────────────────────────
+
+    match /koseiRecords/{id} {
+      allow read: if isAuth()
+        && (request.auth.uid == resource.data.uid || isAdmin());
+      allow write: if false;
+    }
+
+    // ── 工数管理（§36）───────────────────────────────────────────
+
+    match /koushouEntries/{id} {
+      allow read: if isAuth()
+        && (request.auth.uid == resource.data.uid || isAdmin());
+      allow write: if false;
+    }
+
+    // ── 入札・認定・CPD（§37）────────────────────────────────────
+
+    match /certifications/{id} {
+      allow read: if isAuth()
+        && (request.auth.uid == resource.data.uid || isAdmin());
+      allow write: if false;
+    }
+
+    match /cpdRecords/{id} {
+      allow read: if isAuth()
+        && (request.auth.uid == resource.data.uid || isAdmin());
+      allow write: if false;
+    }
+
+    // ── CSR・ステークホルダー（§35）──────────────────────────────
+
+    match /csrChecks/{id} {
+      allow read: if isAuth()
+        && (request.auth.uid == resource.data.uid || isAdmin());
+      allow write: if false;
+    }
+
+    match /humanRightsDd/{id} {
+      allow read: if isAuth()
+        && (request.auth.uid == resource.data.uid || isAdmin());
+      allow write: if false;
+    }
+
+    // ── 過労死・労災支援センター（§44）───────────────────────────
+    // 高度に機密性の高いデータ — 本人のみアクセス可能
+
+    match /karoshiCases/{id} {
+      allow read: if isAuth() && request.auth.uid == resource.data.uid;
+      allow write: if false;
+    }
+
+    match /karoshiWorkplaces/{id} {
+      allow read: if isAuth() && request.auth.uid == resource.data.uid;
+      allow write: if false;
+    }
+
+    match /karoshiTimeLogs/{id} {
+      allow read: if isAuth() && request.auth.uid == resource.data.uid;
+      allow write: if false;
+    }
+
+    match /karoshiInterviews/{id} {
+      allow read: if isAuth() && request.auth.uid == resource.data.uid;
+      allow write: if false;
+    }
+
+    // 匿名相談 — 認証済みユーザーなら全員閲覧可（投稿・返信は Cloud Functions）
+    match /karoshiConsults/{id} {
+      allow read: if isAuth();
+      allow write: if false;
+    }
+
+    match /karoshiConsultReplies/{id} {
+      allow read: if isAuth();
+      allow write: if false;
+    }
+
+    // ── 騒音・振動規制（§45）─────────────────────────────────────
+
+    match /noiseVibApps/{id} {
+      allow read: if isAuth()
+        && (request.auth.uid == resource.data.uid || isAdmin());
+      allow write: if false;
+    }
+
+    // ── 環境業者マッチング（§46）─────────────────────────────────
+
+    match /envReferrals/{id} {
+      allow read: if isAuth()
+        && (request.auth.uid == resource.data.uid || isAdmin());
+      allow write: if false;
+    }
+
+    match /soilJobs/{id} {
+      allow read: if isAuth();
+      allow write: if false;
+    }
+
+    // ── ユーザーサブコレクション ──────────────────────────────────
+
+    match /users/{uid}/{document=**} {
+      allow read, write: if isOwner(uid);
+    }
+
   }
 }
