@@ -1738,3 +1738,89 @@ priority: number
 
 - ボタン: `🏗️ シニア支援・ライフプラン`（`id="mypageLifePlanBtn"`）
 - マイページクイックリンク欄に配置、タップで `initLifePlanScreen()` → `showScreen('lifePlanScreen')`
+
+---
+
+## §35 CSR・ステークホルダー管理（`#csrScreen`）
+
+### 35.1 概要
+
+建設業の社会的責任（CSR）をISO 26000の7原則に基づき可視化・管理する画面。
+説明責任・透明性・倫理的行動・ステークホルダー尊重・コンプライアンス・国際規範尊重・人権尊重の7カテゴリで自己評価を行い、スコア化する。
+
+### 35.2 タブ構成
+
+| タブ | 内容 |
+|---|---|
+| 📋 CSRチェック | ISO 26000対応チェックリスト（7カテゴリ）・スコアリング |
+| 🤝 ステークホルダー | 利害関係者（発注者・下請・一人親方・従業員・地域等）別対応状況 |
+| 👤 人権DD | 政府ガイドライン（2022年）準拠・5ステップ人権デューデリジェンス |
+| ⚥ ジェンダー | 女性活躍推進法・育児介護休業法・男女均等法等チェック |
+| 🔒 フリーランス法 | フリーランス保護法（2024年11月1日施行）義務・推奨事項チェック |
+
+### 35.3 CSRスコアリング
+
+CSR_CATEGORIES（7カテゴリ・20項目）の各チェック項目に配点（4〜6pt）を設定し、
+`取得点数 / 満点 × 100` でスコアを算出する。
+
+| スコア | 評価 | 表示色 |
+|---|---|---|
+| 70%以上 | 優良 | 青（#2563eb） |
+| 40〜69% | 要改善 | 黄（#f59e0b） |
+| 39%以下 | 要対応 | 赤（#ef4444） |
+
+### 35.4 人権DD 5ステップ（政府ガイドライン2022年準拠）
+
+1. 人権方針の策定・公表
+2. 人権リスクアセスメント
+3. リスク軽減措置の実施
+4. モニタリング
+5. 情報開示・コミュニケーション
+
+各ステップに「実施済み」チェックおよびメモフィールド（3〜4項目）を備える。
+
+### 35.5 フリーランス保護法チェック
+
+特定受託事業者に係る取引の適正化等に関する法律（2024年11月1日施行）の
+義務項目（第3条〜第8条）および推奨項目を網羅。
+
+義務項目未対応の場合は警告ボックスを表示。
+
+### 35.6 Cloud Functions（`functions/csr.js`）
+
+| 関数名 | 概要 |
+|---|---|
+| `saveCsrCheck` | CSRチェック結果（checkState・genderState・flState・score）を `csrChecks/{uid}` に保存 |
+| `getCsrReport` | `csrChecks/{uid}` と `humanRightsDd/{uid}` を結合して最新CSRレポートを返す |
+| `saveHumanRightsDd` | 人権DD 5ステップデータ（ddState）を `humanRightsDd/{uid}` に保存 |
+
+### 35.7 Firestore スキーマ
+
+**`csrChecks/{uid}`**
+```
+uid: string
+checkState:  { [itemId]: boolean }   // CSRチェック項目（acc1〜hr3）
+genderState: { [itemId]: boolean }   // ジェンダーチェック（g1〜g6）
+flState:     { [itemId]: boolean }   // フリーランス法チェック（fl1〜fl7）
+score: { earned: number, possible: number, pct: number }
+updatedAt: timestamp
+```
+
+**`humanRightsDd/{uid}`**
+```
+uid: string
+ddState: {
+  step1: { done: boolean, fields: string[] }
+  step2: { done: boolean, fields: string[] }
+  step3: { done: boolean, fields: string[] }
+  step4: { done: boolean, fields: string[] }
+  step5: { done: boolean, fields: string[] }
+}
+updatedAt: timestamp
+```
+
+### 35.8 マイページリンク
+
+- ボタン: `⚖️ CSR・人権管理`（`id="mypageCsrBtn"`）
+- マイページクイックリンク欄（`mypageLifePlanBtn` の直後）に配置
+- タップで `initCsrScreen()` → `showScreen('csrScreen')`

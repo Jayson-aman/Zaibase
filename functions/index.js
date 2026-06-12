@@ -106,6 +106,12 @@ exports.getMentors = lifePlan.getMentors;
 exports.saveLifePlan = lifePlan.saveLifePlan;
 exports.getLifePlanStats = lifePlan.getLifePlanStats;
 
+// ── CSR・ステークホルダー管理（§35）───────────────────────────────
+const csr = require("./csr");
+exports.saveCsrCheck = csr.saveCsrCheck;
+exports.getCsrReport = csr.getCsrReport;
+exports.saveHumanRightsDd = csr.saveHumanRightsDd;
+
 // ── 職人コミュニティ（§29）────────────────────────────────────────
 const community = require("./community");
 exports.sendCommunityThanks = community.sendCommunityThanks;
