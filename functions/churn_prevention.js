@@ -20,12 +20,14 @@ const { getMessaging } = require("firebase-admin/messaging");
 
 const db = getFirestore();
 
-const PRO_PRICE = 3980;
-const MAX_PRICE = 6980;
-const PLANS = { pro: PRO_PRICE, max: MAX_PRICE };
-const ANNUAL_PRICES = { pro: 39800, max: 69800 };
-const FREE_SURCHARGE = 0.02;
-const MAX_CONTRACT_DISCOUNT = 0.01;
+const STARTER_PRICE = 1980;
+const PRO_PRICE = 5480;
+const TEAM_PRICE = 14800;
+const PLANS = { starter: STARTER_PRICE, pro: PRO_PRICE, team: TEAM_PRICE };
+const ANNUAL_PRICES = { starter: 19800, pro: 54800, team: 148000 };
+const FREE_SURCHARGE = 0.02;        // フリー: +2%手数料
+const STARTER_SURCHARGE = 0.01;     // スターター: +1%手数料
+const TEAM_CONTRACT_DISCOUNT = 0.015; // チーム: 請負手数料▲1.5%
 
 const CONTRACT_STATUSES = ["payment_confirmed", "active", "work_completed", "pending_approval"];
 
@@ -361,7 +363,7 @@ async function churnSchedulerHandler() {
   const now = startOfDay(new Date());
   const snap = await db.collection("craftsmanProfiles")
     .where("subscriptionStatus", "==", "active")
-    .where("subscriptionPlan", "in", ["pro", "max"])
+    .where("subscriptionPlan", "in", ["starter", "pro", "team"])
     .get();
 
   let sent30 = 0;
