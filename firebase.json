@@ -2,8 +2,23 @@
   "hosting": {
     "public": "frontend",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "headers": [
+      {
+        "source": "/icons/**",
+        "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, immutable" }]
+      },
+      {
+        "source": "/legal/**",
+        "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }]
+      },
+      {
+        "source": "/manifest.json",
+        "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
+      }
+    ],
     "rewrites": [
       { "source": "/app", "destination": "/Zaibase.html" },
+      { "source": "/en", "destination": "/Zaibase_EN.html" },
       { "source": "/", "destination": "/mission.html" }
     ]
   },
