@@ -486,9 +486,10 @@ service cloud.firestore {
       allow write: if false;
     }
 
-    match /envComplianceEvents/{id} {
-      allow read: if isAuth()
-        && (request.auth.uid == resource.data.uid || isAdmin());
+    // checkEnvCompliance / logEnvComplianceEvent が書き込む監査ログ
+    match /envComplianceLogs/{id} {
+      allow read: if isAdmin()
+        || (isAuth() && resource.data.uid == request.auth.uid);
       allow write: if false;
     }
 
