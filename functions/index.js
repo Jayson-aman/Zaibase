@@ -118,6 +118,11 @@ exports.saveSeikoTaikei = seikoTaikei.saveSeikoTaikei;
 exports.getSeikoTaikei = seikoTaikei.getSeikoTaikei;
 exports.listSeikoTaikei = seikoTaikei.listSeikoTaikei;
 
+// ── 工期管理（§40）────────────────────────────────────────────────
+const kokiKanri = require("./koki_kanri");
+exports.saveKokiRecord = kokiKanri.saveKokiRecord;
+exports.getKokiRecords = kokiKanri.getKokiRecords;
+
 // ── 工数管理（§36）────────────────────────────────────────────────
 const koushou = require("./koushou");
 exports.addKoushouEntry = koushou.addKoushouEntry;
