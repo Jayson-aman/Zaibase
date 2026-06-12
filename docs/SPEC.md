@@ -1824,3 +1824,38 @@ updatedAt: timestamp
 - ボタン: `⚖️ CSR・人権管理`（`id="mypageCsrBtn"`）
 - マイページクイックリンク欄（`mypageLifePlanBtn` の直後）に配置
 - タップで `initCsrScreen()` → `showScreen('csrScreen')`
+
+## §36 工数管理（#koushouScreen）
+
+### 概要
+建設産業1,945h問題（全産業平均1,680hより265時間多い）への対応。2024年4月より建設業にも時間外労働上限規制（年360h/特別条項720h）が適用された。案件別工数入力・見積 vs 実績比較・上限アラートを提供する。
+
+### 4タブ構成
+- **日次入力**: 日付・案件名・時間・作業種別・メモを入力してFirestoreに保存
+- **案件別**: 案件ごとの累計工数と目標工数の比較・進捗バー表示
+- **月次レポート**: 選択月の日別・作業種別内訳グラフ
+- **上限管理**: 年間時間外累計と法定上限のゲージ・警告表示
+
+### 上限規制の基準値
+- 年間時間外上限（通常）: 360h
+- 年間時間外上限（特別条項）: 720h
+- 月間時間外上限（通常）: 45h
+- 月間時間外上限（特別条項）: 100h
+- 建設業への適用開始: 2024年4月
+
+### Firestoreスキーマ
+**koushouEntries** コレクション:
+- uid: string（ユーザーID）
+- date: string（YYYY-MM-DD）
+- jobName: string（案件名、最大80文字）
+- hours: number（0.5単位）
+- workType: string（作業種別）
+- memo: string（メモ、最大200文字）
+- createdAt: Timestamp
+
+**koushouTargets** コレクション（ドキュメントID = uid）:
+- [jobName]: number（案件ごとの目標工数）
+
+### Cloud Functions
+- **addKoushouEntry**: 工数エントリをバリデーション後にFirestoreへ保存
+- **getKoushouReport**: 指定年の月別集計・年間時間外合計を返す

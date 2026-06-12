@@ -106,6 +106,11 @@ exports.getMentors = lifePlan.getMentors;
 exports.saveLifePlan = lifePlan.saveLifePlan;
 exports.getLifePlanStats = lifePlan.getLifePlanStats;
 
+// ── 工数管理（§36）────────────────────────────────────────────────
+const koushou = require("./koushou");
+exports.addKoushouEntry = koushou.addKoushouEntry;
+exports.getKoushouReport = koushou.getKoushouReport;
+
 // ── CSR・ステークホルダー管理（§35）───────────────────────────────
 const csr = require("./csr");
 exports.saveCsrCheck = csr.saveCsrCheck;
