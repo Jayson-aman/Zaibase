@@ -1720,6 +1720,68 @@
     #communityScreen .cm-toast.ok { background: var(--zb-green); }
     #communityScreen .cm-toast.warm { background: var(--zb-orange); }
 
+    /* 工数管理（§36 #koushouScreen） */
+    #koushouScreen { background: var(--zb-bg); min-height: 100vh; display: flex; flex-direction: column; padding-bottom: 80px; color: var(--zb-text); }
+    #koushouScreen .ks-hd { background: linear-gradient(135deg,#7c2d12,#ea580c); padding: 13px 16px 16px; flex-shrink: 0; }
+    #koushouScreen .ks-hd-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    #koushouScreen .ks-back { color: rgba(255,255,255,.75); font-size: 22px; border: none; background: none; cursor: pointer; }
+    #koushouScreen .ks-logo { color: #fff; font-size: 17px; font-weight: 800; flex: 1; }
+    #koushouScreen .ks-mission { background: rgba(255,255,255,.13); border-radius: 12px; padding: 11px 13px; color: #fff; font-size: 12px; line-height: 1.75; }
+    #koushouScreen .ks-tabs { background: var(--zb-card); border-bottom: 1px solid var(--zb-border); display: flex; overflow-x: auto; padding: 0 10px; position: sticky; top: 0; z-index: 9; }
+    #koushouScreen .ks-tab { padding: 11px 12px; font-size: 12px; font-weight: 600; color: var(--zb-muted); border: none; background: none; border-bottom: 2px solid transparent; white-space: nowrap; cursor: pointer; }
+    #koushouScreen .ks-tab.act { color: #ea580c; border-bottom-color: #ea580c; }
+    #koushouScreen .ks-main { flex: 1; padding: 14px; overflow-y: auto; }
+    #koushouScreen .ks-card { background: var(--zb-card); border-radius: 14px; border: 1px solid var(--zb-border); padding: 14px; margin-bottom: 12px; }
+    #koushouScreen .ks-card-title { font-size: 14px; font-weight: 700; color: var(--zb-navy); margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+    #koushouScreen .ks-field { margin-bottom: 11px; }
+    #koushouScreen .ks-field label { display: block; font-size: 12px; font-weight: 600; color: var(--zb-muted); margin-bottom: 4px; }
+    #koushouScreen .ks-field input, #koushouScreen .ks-field select, #koushouScreen .ks-field textarea { width: 100%; padding: 9px 12px; border: 1.5px solid var(--zb-border); border-radius: 9px; font-size: 14px; background: var(--zb-bg); color: var(--zb-text); box-sizing: border-box; }
+    #koushouScreen .ks-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    #koushouScreen .ks-submit-btn { width: 100%; padding: 12px; background: #ea580c; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; }
+    #koushouScreen .ks-submit-btn:disabled { background: #aaa; }
+    #koushouScreen .ks-entry-row { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--zb-border); font-size: 13px; }
+    #koushouScreen .ks-entry-row:last-child { border-bottom: none; }
+    #koushouScreen .ks-entry-hrs { font-size: 16px; font-weight: 800; color: #ea580c; min-width: 44px; text-align: right; }
+    #koushouScreen .ks-entry-job { font-weight: 600; color: var(--zb-navy); flex: 1; }
+    #koushouScreen .ks-entry-type { font-size: 11px; color: var(--zb-muted); }
+    #koushouScreen .ks-entry-del { border: none; background: none; color: var(--zb-muted); font-size: 18px; cursor: pointer; padding: 0 4px; }
+    #koushouScreen .ks-proj-row { padding: 12px 0; border-bottom: 1px solid var(--zb-border); }
+    #koushouScreen .ks-proj-row:last-child { border-bottom: none; }
+    #koushouScreen .ks-proj-name { font-size: 13px; font-weight: 700; color: var(--zb-navy); margin-bottom: 4px; }
+    #koushouScreen .ks-proj-bar-wrap { background: #e2e8f0; border-radius: 5px; height: 8px; margin: 6px 0; overflow: hidden; }
+    #koushouScreen .ks-proj-bar { height: 100%; border-radius: 5px; background: #ea580c; transition: width .4s; }
+    #koushouScreen .ks-proj-bar.over { background: #ef4444; }
+    #koushouScreen .ks-proj-bar.warn { background: #f59e0b; }
+    #koushouScreen .ks-proj-stats { display: flex; gap: 12px; font-size: 11px; color: var(--zb-muted); }
+    #koushouScreen .ks-proj-stats strong { color: var(--zb-navy); font-size: 13px; }
+    #koushouScreen .ks-month-row { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--zb-border); font-size: 12px; }
+    #koushouScreen .ks-month-day { width: 48px; color: var(--zb-muted); flex-shrink: 0; }
+    #koushouScreen .ks-month-bar-wrap { flex: 1; background: #e2e8f0; border-radius: 4px; height: 6px; overflow: hidden; }
+    #koushouScreen .ks-month-bar { height: 100%; border-radius: 4px; background: #ea580c; }
+    #koushouScreen .ks-month-hrs { width: 44px; text-align: right; font-weight: 600; color: var(--zb-navy); }
+    #koushouScreen .ks-limit-ring-wrap { display: flex; justify-content: center; gap: 20px; margin-bottom: 14px; }
+    #koushouScreen .ks-limit-ring { text-align: center; }
+    #koushouScreen .ks-limit-ring-bar { width: 80px; height: 80px; border-radius: 50%; border: 8px solid #e2e8f0; display: flex; align-items: center; justify-content: center; flex-direction: column; margin: 0 auto 6px; }
+    #koushouScreen .ks-limit-ring-bar.warn { border-color: #f59e0b; }
+    #koushouScreen .ks-limit-ring-bar.danger { border-color: #ef4444; }
+    #koushouScreen .ks-limit-ring-bar.ok { border-color: #10b981; }
+    #koushouScreen .ks-limit-ring-val { font-size: 17px; font-weight: 800; color: var(--zb-navy); line-height: 1; }
+    #koushouScreen .ks-limit-ring-label { font-size: 9px; color: var(--zb-muted); margin-top: 2px; }
+    #koushouScreen .ks-limit-ring-title { font-size: 11px; font-weight: 700; color: var(--zb-navy); }
+    #koushouScreen .ks-warn-box { background: #fff8e0; border-radius: 10px; padding: 10px 13px; font-size: 12px; line-height: 1.65; color: #7a5a00; margin-bottom: 10px; }
+    #koushouScreen .ks-ok-box { background: #e8f8f2; border-radius: 10px; padding: 10px 13px; font-size: 12px; line-height: 1.65; color: #1a5c3a; margin-bottom: 10px; }
+    #koushouScreen .ks-danger-box { background: #fee2e2; border-radius: 10px; padding: 10px 13px; font-size: 12px; line-height: 1.65; color: #991b1b; margin-bottom: 10px; }
+    #koushouScreen .ks-stat-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-bottom: 14px; }
+    #koushouScreen .ks-stat { background: var(--zb-card); border: 1px solid var(--zb-border); border-radius: 12px; padding: 11px 8px; text-align: center; }
+    #koushouScreen .ks-stat .n { font-size: 20px; font-weight: 800; color: #ea580c; }
+    #koushouScreen .ks-stat .l { font-size: 10px; color: var(--zb-muted); margin-top: 2px; }
+    #koushouScreen .ks-month-sel { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+    #koushouScreen .ks-month-sel input { flex: 1; padding: 9px 12px; border: 1.5px solid var(--zb-border); border-radius: 9px; font-size: 14px; background: var(--zb-bg); }
+    #koushouScreen .ks-month-nav { padding: 8px 14px; background: var(--zb-card); border: 1px solid var(--zb-border); border-radius: 9px; font-size: 18px; cursor: pointer; }
+    #koushouScreen .ks-proj-target-wrap { display: flex; align-items: center; gap: 6px; margin-top: 4px; }
+    #koushouScreen .ks-proj-target-inp { width: 70px; padding: 4px 8px; border: 1px solid var(--zb-border); border-radius: 6px; font-size: 12px; background: var(--zb-bg); }
+    #koushouScreen .ks-empty { text-align: center; color: var(--zb-muted); font-size: 13px; padding: 32px 0; }
+
     /* CSR・ステークホルダー管理（§35 #csrScreen） */
     #csrScreen { background: var(--zb-bg); min-height: 100vh; display: flex; flex-direction: column; padding-bottom: 80px; color: var(--zb-text); }
     #csrScreen .csr-hd { background: linear-gradient(135deg,#0f2447,#1e3a5f); padding: 13px 16px 16px; flex-shrink: 0; }
@@ -3654,6 +3716,7 @@ Email：info@zaibase.jp</div>
     <button type="button" id="mypageCommunityBtn">🤝 職人のつながり</button>
     <button type="button" id="mypageChildcareBtn">🧒 子育て互助</button>
     <button type="button" id="mypageLifePlanBtn">🏗️ シニア支援・ライフプラン</button>
+    <button type="button" id="mypageKoushouBtn">⏱️ 工数管理</button>
     <button type="button" id="mypageCsrBtn">⚖️ CSR・人権管理</button>
     <button type="button" id="mypageMoneyBtn">🏠 夢の貯金・お金の基礎</button>
     <button type="button" id="mypageEmergencyBtn">🚨 緊急手配</button>
@@ -4428,6 +4491,31 @@ Email：info@zaibase.jp</div>
     <div id="lpPageNetwork" class="hidden"></div>
     <div id="lpPagePlan" class="hidden"></div>
   </div>
+</div>
+
+<!-- 工数管理（§36 #koushouScreen） -->
+<div id="koushouScreen" class="hidden">
+  <header class="ks-hd">
+    <div class="ks-hd-row">
+      <button class="ks-back" id="koushouBackBtn"><i class="ti ti-arrow-left"></i></button>
+      <span class="ks-logo">⏱️ 工数管理</span>
+    </div>
+    <div class="ks-mission">
+      建設業は年間1,945時間労働（全産業比+265時間）。2024年4月より時間外上限規制（年360h）適用。案件別工数と残業時間を把握し、適正な労働時間を実現します。
+    </div>
+  </header>
+  <nav class="ks-tabs">
+    <button class="ks-tab act" data-ks-tab="daily">⏱️ 日次入力</button>
+    <button class="ks-tab" data-ks-tab="project">📊 案件別</button>
+    <button class="ks-tab" data-ks-tab="monthly">📅 月次レポート</button>
+    <button class="ks-tab" data-ks-tab="limit">⚠️ 上限管理</button>
+  </nav>
+  <main class="ks-main">
+    <div id="ksPageDaily"></div>
+    <div id="ksPageProject" class="hidden"></div>
+    <div id="ksPageMonthly" class="hidden"></div>
+    <div id="ksPageLimit" class="hidden"></div>
+  </main>
 </div>
 
 <!-- CSR・ステークホルダー管理（§35 #csrScreen） -->
