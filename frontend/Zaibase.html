@@ -1782,6 +1782,55 @@
     #koushouScreen .ks-proj-target-inp { width: 70px; padding: 4px 8px; border: 1px solid var(--zb-border); border-radius: 6px; font-size: 12px; background: var(--zb-bg); }
     #koushouScreen .ks-empty { text-align: center; color: var(--zb-muted); font-size: 13px; padding: 32px 0; }
 
+    /* 入札・認定・CPD管理（§37 #nyusatsuScreen） */
+    #nyusatsuScreen { background: var(--zb-bg); min-height: 100vh; display: flex; flex-direction: column; padding-bottom: 80px; color: var(--zb-text); }
+    .ny-hd { background: linear-gradient(135deg,#042f2e,#0f766e); padding: 13px 16px 16px; flex-shrink: 0; }
+    .ny-hd-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .ny-back { color: rgba(255,255,255,.75); font-size: 22px; border: none; background: none; cursor: pointer; }
+    .ny-logo { color: #fff; font-size: 17px; font-weight: 800; flex: 1; }
+    .ny-mission { background: rgba(255,255,255,.13); border-radius: 12px; padding: 11px 13px; color: #fff; font-size: 12px; line-height: 1.75; }
+    .ny-tabs { background: var(--zb-card); border-bottom: 1px solid var(--zb-border); display: flex; overflow-x: auto; padding: 0 10px; position: sticky; top: 0; z-index: 9; }
+    .ny-tab { padding: 11px 12px; font-size: 12px; font-weight: 600; color: var(--zb-muted); border: none; background: none; border-bottom: 2px solid transparent; white-space: nowrap; cursor: pointer; }
+    .ny-tab.act { color: #14b8a6; border-bottom-color: #14b8a6; }
+    .ny-main { flex: 1; padding: 14px; overflow-y: auto; }
+    .ny-card { background: var(--zb-card); border-radius: 14px; border: 1px solid var(--zb-border); padding: 14px; margin-bottom: 12px; }
+    .ny-card-title { font-size: 14px; font-weight: 700; color: var(--zb-navy); margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+    .ny-cert-row { display: flex; flex-direction: column; gap: 8px; padding: 12px 0; border-bottom: 1px solid var(--zb-border); }
+    .ny-cert-row:last-child { border-bottom: none; }
+    .ny-cert-badge { font-size: 20px; }
+    .ny-cert-name { font-weight: 700; font-size: 14px; color: var(--zb-navy); }
+    .ny-cert-law { font-size: 11px; color: var(--zb-muted); }
+    .ny-cert-status { font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 20px; }
+    .ny-cert-status.got { background: #dcfce7; color: #16a34a; }
+    .ny-cert-status.renew { background: #fef9c3; color: #a16207; }
+    .ny-cert-status.none { background: #f1f5f9; color: var(--zb-muted); }
+    .ny-field { margin-bottom: 11px; }
+    .ny-field label { display: block; font-size: 12px; font-weight: 600; color: var(--zb-muted); margin-bottom: 4px; }
+    .ny-field input, .ny-field select, .ny-field textarea { width: 100%; padding: 9px 12px; border: 1.5px solid var(--zb-border); border-radius: 9px; font-size: 14px; background: var(--zb-bg); color: var(--zb-text); box-sizing: border-box; }
+    .ny-submit-btn { width: 100%; padding: 12px; background: #0f766e; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; }
+    .ny-submit-btn:disabled { background: #aaa; }
+    .ny-sim-item { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--zb-border); font-size: 13px; }
+    .ny-sim-item:last-child { border-bottom: none; }
+    .ny-sim-pts { font-size: 12px; color: #0f766e; font-weight: 700; min-width: 40px; text-align: right; }
+    .ny-sim-total { font-size: 22px; font-weight: 800; color: #0f766e; text-align: center; padding: 10px 0 4px; }
+    .ny-sim-comment { font-size: 13px; color: var(--zb-muted); text-align: center; margin-bottom: 10px; }
+    .ny-cpd-row { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--zb-border); font-size: 13px; }
+    .ny-cpd-row:last-child { border-bottom: none; }
+    .ny-cpd-units { font-size: 16px; font-weight: 800; color: #0f766e; min-width: 44px; text-align: right; }
+    .ny-cpd-title { font-weight: 600; color: var(--zb-navy); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .ny-cpd-meta { font-size: 11px; color: var(--zb-muted); }
+    .ny-cpd-del { border: none; background: none; color: var(--zb-muted); font-size: 18px; cursor: pointer; padding: 0 4px; }
+    .ny-progress-bar-wrap { background: #e2e8f0; border-radius: 5px; height: 10px; margin: 8px 0; overflow: hidden; }
+    .ny-progress-bar { height: 100%; border-radius: 5px; background: #0f766e; transition: width .4s; }
+    .ny-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+    .ny-stat { background: var(--zb-bg); border-radius: 10px; border: 1px solid var(--zb-border); padding: 12px; text-align: center; }
+    .ny-stat-val { font-size: 22px; font-weight: 800; color: #0f766e; }
+    .ny-stat-lbl { font-size: 11px; color: var(--zb-muted); margin-top: 2px; }
+    .ny-empty { text-align: center; color: var(--zb-muted); font-size: 13px; padding: 32px 0; }
+    .ny-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .ny-cert-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .ny-reflect-btn { background: #0f766e; color: #fff; border: none; border-radius: 8px; padding: 8px 14px; font-size: 13px; font-weight: 600; cursor: pointer; margin-bottom: 14px; }
+
     /* CSR・ステークホルダー管理（§35 #csrScreen） */
     #csrScreen { background: var(--zb-bg); min-height: 100vh; display: flex; flex-direction: column; padding-bottom: 80px; color: var(--zb-text); }
     #csrScreen .csr-hd { background: linear-gradient(135deg,#0f2447,#1e3a5f); padding: 13px 16px 16px; flex-shrink: 0; }
@@ -3716,6 +3765,7 @@ Email：info@zaibase.jp</div>
     <button type="button" id="mypageCommunityBtn">🤝 職人のつながり</button>
     <button type="button" id="mypageChildcareBtn">🧒 子育て互助</button>
     <button type="button" id="mypageLifePlanBtn">🏗️ シニア支援・ライフプラン</button>
+    <button type="button" id="mypageNyusatsuBtn">🏛️ 入札・認定・CPD</button>
     <button type="button" id="mypageKoushouBtn">⏱️ 工数管理</button>
     <button type="button" id="mypageCsrBtn">⚖️ CSR・人権管理</button>
     <button type="button" id="mypageMoneyBtn">🏠 夢の貯金・お金の基礎</button>
@@ -4515,6 +4565,30 @@ Email：info@zaibase.jp</div>
     <div id="ksPageProject" class="hidden"></div>
     <div id="ksPageMonthly" class="hidden"></div>
     <div id="ksPageLimit" class="hidden"></div>
+  </main>
+</div>
+
+<!-- 入札・認定・CPD管理（§37 #nyusatsuScreen） -->
+<div id="nyusatsuScreen" class="hidden">
+  <header class="ny-hd">
+    <div class="ny-hd-row">
+      <button class="ny-back" id="nyusatsuBackBtn"><i class="ti ti-arrow-left"></i></button>
+      <span class="ny-logo">🏛️ 入札・認定・CPD管理</span>
+    </div>
+    <div class="ny-mission">
+      えるぼし・くるみん・ユースエール・ISO・CPD実績を一元管理。
+      総合評価落札方式の加点要素を把握し、受注力を強化します。
+    </div>
+  </header>
+  <nav class="ny-tabs">
+    <button class="ny-tab act" data-ny-tab="cert">🏅 認定管理</button>
+    <button class="ny-tab" data-ny-tab="sim">📊 入札加点シミュ</button>
+    <button class="ny-tab" data-ny-tab="cpd">📚 CPDトラッカー</button>
+  </nav>
+  <main class="ny-main">
+    <div id="nyPageCert"><!-- JS描画 --></div>
+    <div id="nyPageSim" class="hidden"><!-- JS描画 --></div>
+    <div id="nyPageCpd" class="hidden"><!-- JS描画 --></div>
   </main>
 </div>
 
