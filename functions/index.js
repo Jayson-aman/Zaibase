@@ -106,6 +106,12 @@ exports.getMentors = lifePlan.getMentors;
 exports.saveLifePlan = lifePlan.saveLifePlan;
 exports.getLifePlanStats = lifePlan.getLifePlanStats;
 
+// ── 許認可管理・法令チェック（§38）────────────────────────────────
+const kyoninka = require("./kyoninka");
+exports.savePermit = kyoninka.savePermit;
+exports.getPermitsByJob = kyoninka.getPermitsByJob;
+exports.checkPermitDeadlines = kyoninka.checkPermitDeadlines;
+
 // ── 工数管理（§36）────────────────────────────────────────────────
 const koushou = require("./koushou");
 exports.addKoushouEntry = koushou.addKoushouEntry;

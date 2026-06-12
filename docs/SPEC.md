@@ -1913,3 +1913,51 @@ updatedAt: timestamp
 ### マイページリンク
 - ボタン: `🏛️ 入札・認定・CPD`（`id="mypageNyusatsuBtn"`）
 - タップで `initNyusatsuScreen()` → `showScreen('nyusatsuScreen')`
+
+## §38 許認可管理・法令チェック (#kyoninkaScreen)
+
+### 概要
+工事種別・規模・作業条件を入力すると、必要な届出・許可を自動リストアップする法令チェック機能と、案件ごとの申請状況・期限を管理する許認可管理機能の2タブ構成。
+
+テーマカラー: #991b1b（深紅）/ アクセント: #dc2626
+
+### 法令ルール一覧 (PERMIT_RULES)
+
+| ID | 届出・許可名 | 根拠法令 | severity |
+|---|---|---|---|
+| kensetu_recycle | 建設リサイクル法 事前届出 | 建設リサイクル法 第10条 | required |
+| asbestos_survey | アスベスト事前調査・結果報告 | 大気汚染防止法 第18条の15 | required |
+| noise_notification | 騒音規制法 届出 | 騒音規制法 第14条 | required |
+| vibration_notification | 振動規制法 届出 | 振動規制法 第14条 | required |
+| manifest | 産業廃棄物管理票 | 廃棄物処理法 第12条の3 | required |
+| road_use_permit | 道路使用許可 | 道路交通法 第77条 | required |
+| road_occupation_permit | 道路占用許可 | 道路法 第32条 | required |
+| special_vehicle | 特殊車両通行許可 | 道路法 第47条の2 | warning |
+| river_permit | 河川区域内工事許可 | 河川法 第26条・第27条 | required |
+| building_confirm | 建築確認申請 | 建築基準法 第6条 | required |
+| scaffold_notification | 足場設置届 | 労働安全衛生法 第88条 | required |
+| crane_notification | クレーン設置届 | 労働安全衛生法 第88条 | required |
+| fire_prevention | 消防法 着工届・設置届 | 消防法 第17条の14 | warning |
+| soil_change_notification | 土地形質変更届出 | 土壌汚染対策法 第4条 | warning |
+
+### Firestoreスキーマ
+
+**コレクション: `kyoninkaPermits`**
+
+| フィールド | 型 | 説明 |
+|---|---|---|
+| uid | string | ユーザーID |
+| jobName | string | 案件名 |
+| permitName | string | 届出・許可名 |
+| authority | string | 申請先 |
+| status | string | 申請準備中 / 申請済 / 許可取得 / 期限切れ |
+| appliedDate | string | 申請日 (YYYY-MM-DD) |
+| expiryDate | string | 許可・有効期限 (YYYY-MM-DD) |
+| memo | string | メモ |
+| createdAt | Timestamp | 作成日時 |
+
+### Cloud Functions
+
+- `savePermit(data)` — 届出記録を保存
+- `getPermitsByJob(data)` — 案件名で絞り込み取得
+- `checkPermitDeadlines(data)` — 7日以内に期限が来る届出を返す
