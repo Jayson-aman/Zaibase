@@ -331,7 +331,10 @@
   </button>
 
   <p style="margin-top:20px;font-size:11px;color:#999;">
-    ログインすることで<a href="#" style="color:var(--zb-sky);">利用規約</a>および<a href="#" style="color:var(--zb-sky);">プライバシーポリシー</a>に同意したものとみなします
+    ログインすることで<a href="#" onclick="event.preventDefault();showLegalScreen('terms')" style="color:var(--zb-sky);">利用規約</a>および<a href="#" onclick="event.preventDefault();showLegalScreen('privacy')" style="color:var(--zb-sky);">プライバシーポリシー</a>に同意したものとみなします
+  </p>
+  <p style="margin-top:8px;font-size:11px;color:#999;">
+    <a href="#" onclick="event.preventDefault();showLegalScreen('sct')" style="color:var(--zb-sky);">特定商取引法に基づく表記</a>
   </p>
 </div>
 
@@ -376,6 +379,11 @@
         <a href="https://zaisai-share.web.app/app" style="font-size:12px;color:var(--zb-sky);text-decoration:none;">
           Zaibase建設はこちら →
         </a>
+      </div>
+      <div style="text-align:center;margin-top:12px;font-size:11px;color:#999;line-height:2;">
+        <a href="#" onclick="event.preventDefault();showLegalScreen('sct')" style="color:var(--zb-muted);">特定商取引法</a>
+        ・<a href="#" onclick="event.preventDefault();showLegalScreen('terms')" style="color:var(--zb-muted);">利用規約</a>
+        ・<a href="#" onclick="event.preventDefault();showLegalScreen('privacy')" style="color:var(--zb-muted);">プライバシーポリシー</a>
       </div>
     </div>
 
@@ -522,6 +530,14 @@
       <span class="icon">💳</span>プラン
     </button>
   </nav>
+</div>
+
+<!-- ── 法律ページ（オーバーレイ） ──────────────────────────────── -->
+<div id="legalOverlay" style="display:none;position:fixed;inset:0;z-index:200;background:#fff;overflow-y:auto;">
+  <div style="max-width:480px;margin:0 auto;padding:20px 16px;">
+    <button onclick="closeLegalScreen()" style="background:none;border:none;color:var(--zb-sky);font-size:14px;cursor:pointer;margin-bottom:12px;">← 戻る</button>
+    <div id="legalContent"></div>
+  </div>
 </div>
 
 <div id="toast"></div>
@@ -899,6 +915,118 @@ if (urlParams.get("checkout") === "success") {
   history.replaceState({}, "", location.pathname);
   setTimeout(() => toast("⚠️ 決済がキャンセルされました"), 500);
 }
+
+// ── 法律ページ ────────────────────────────────────────────────────
+const LEGAL_PAGES = {
+  sct: `
+    <h2 style="font-size:18px;font-weight:800;color:var(--zb-dark);margin-bottom:16px;">特定商取引法に基づく表記</h2>
+    <div style="font-size:12px;color:var(--zb-muted);margin-bottom:16px;">
+      特定商取引法第11条・第12条の3に基づき、以下の事項を表示します。
+    </div>
+    <table style="width:100%;font-size:13px;border-collapse:collapse;">
+      <tr style="border-bottom:1px solid #E0F2FE;">
+        <td style="width:40%;padding:10px 8px;font-weight:700;background:var(--zb-pale);">販売業者名</td>
+        <td style="padding:10px 8px;">Zaibase Group（南條 雅哉）</td>
+      </tr>
+      <tr style="border-bottom:1px solid #E0F2FE;">
+        <td style="padding:10px 8px;font-weight:700;background:var(--zb-pale);">サービス名</td>
+        <td style="padding:10px 8px;">Zaibase法律相談</td>
+      </tr>
+      <tr style="border-bottom:1px solid #E0F2FE;">
+        <td style="padding:10px 8px;font-weight:700;background:var(--zb-pale);">所在地</td>
+        <td style="padding:10px 8px;">〒543-0071<br>大阪府大阪市天王寺区筆ヶ崎町6-12-1701</td>
+      </tr>
+      <tr style="border-bottom:1px solid #E0F2FE;">
+        <td style="padding:10px 8px;font-weight:700;background:var(--zb-pale);">電話番号</td>
+        <td style="padding:10px 8px;">
+          電話番号はご請求いただいた場合、遅滞なく開示いたします。<br>
+          <span style="font-size:11px;color:var(--zb-muted);">
+            ※ 特定商取引法に基づく省令（第8条・第11条）に準拠<br>
+            ※ お問い合わせはメール（support@zaibase.jp）にて承ります
+          </span>
+        </td>
+      </tr>
+      <tr style="border-bottom:1px solid #E0F2FE;">
+        <td style="padding:10px 8px;font-weight:700;background:var(--zb-pale);">メールアドレス</td>
+        <td style="padding:10px 8px;">support@zaibase.jp</td>
+      </tr>
+      <tr style="border-bottom:1px solid #E0F2FE;">
+        <td style="padding:10px 8px;font-weight:700;background:var(--zb-pale);">運営責任者</td>
+        <td style="padding:10px 8px;">南條 雅哉</td>
+      </tr>
+      <tr style="border-bottom:1px solid #E0F2FE;">
+        <td style="padding:10px 8px;font-weight:700;background:var(--zb-pale);">販売価格</td>
+        <td style="padding:10px 8px;">
+          スタンダードプラン：月額 ¥2,980（税込）<br>
+          プロプラン：月額 ¥7,800（税込）<br>
+          <span style="font-size:11px;color:var(--zb-muted);">
+            ※ 年払い・グループ割引は別途表示<br>
+            ※ 上記以外の追加料金はありません
+          </span>
+        </td>
+      </tr>
+      <tr style="border-bottom:1px solid #E0F2FE;">
+        <td style="padding:10px 8px;font-weight:700;background:var(--zb-pale);">支払方法</td>
+        <td style="padding:10px 8px;">クレジットカード（Visa / Mastercard / JCB / AMEX）<br>決済代行：Stripe, Inc.</td>
+      </tr>
+      <tr style="border-bottom:1px solid #E0F2FE;">
+        <td style="padding:10px 8px;font-weight:700;background:var(--zb-pale);">支払時期</td>
+        <td style="padding:10px 8px;">申込時に初回決済。以降毎月（または毎年）自動更新。</td>
+      </tr>
+      <tr style="border-bottom:1px solid #E0F2FE;">
+        <td style="padding:10px 8px;font-weight:700;background:var(--zb-pale);">サービス提供時期</td>
+        <td style="padding:10px 8px;">決済完了後、直ちに利用可能</td>
+      </tr>
+      <tr style="border-bottom:1px solid #E0F2FE;">
+        <td style="padding:10px 8px;font-weight:700;background:var(--zb-pale);">解約・返品</td>
+        <td style="padding:10px 8px;">
+          いつでもアカウント設定から解約可能。解約後も契約期間終了まで利用できます。<br>
+          <strong>課金期間の途中解約による日割り返金は行いません</strong>（消費者契約法第8条の3、特定商取引法第49条第2項に基づく）
+        </td>
+      </tr>
+      <tr>
+        <td style="padding:10px 8px;font-weight:700;background:var(--zb-pale);">動作環境</td>
+        <td style="padding:10px 8px;">Google Chrome / Safari / Edge（最新版推奨）。インターネット接続が必要です。</td>
+      </tr>
+    </table>
+  `,
+  terms: `
+    <h2 style="font-size:18px;font-weight:800;color:var(--zb-dark);margin-bottom:16px;">利用規約</h2>
+    <div style="font-size:12px;color:var(--zb-muted);margin-bottom:16px;">最終更新日: 2026年6月13日</div>
+    <div style="font-size:13px;line-height:1.8;">
+      <p style="margin-bottom:12px;"><strong>第1条（適用）</strong><br>本規約は、Zaibase Group（以下「当社」）が提供するZaibase法律相談（以下「本サービス」）の利用に関する条件を定めるものです。</p>
+      <p style="margin-bottom:12px;"><strong>第2条（サービス内容）</strong><br>本サービスは、建設業・労働法に関する一般的な法律情報の提供および専門家による相談サービスです。<strong>弁護士法第72条に定める「法律事務」には該当しません</strong>。個別の法的判断・訴訟代理は弁護士をご紹介します。</p>
+      <p style="margin-bottom:12px;"><strong>第3条（利用料金）</strong><br>有料プランの利用料金は別途「特定商取引法に基づく表記」に定めるとおりです。Stripeを通じてクレジットカードで決済されます。</p>
+      <p style="margin-bottom:12px;"><strong>第4条（禁止事項）</strong><br>・虚偽の情報を用いた登録<br>・サービスの不正利用・リバースエンジニアリング<br>・他の利用者への迷惑行為<br>・反社会的勢力への利益供与</p>
+      <p style="margin-bottom:12px;"><strong>第5条（免責事項）</strong><br>本サービスで提供する情報は一般的な法律情報であり、具体的な法的助言ではありません。情報に基づく行動の結果について当社は一切の責任を負いません。</p>
+      <p style="margin-bottom:12px;"><strong>第6条（個人情報）</strong><br>個人情報の取り扱いについては、別途定めるプライバシーポリシーに従います。</p>
+      <p style="margin-bottom:12px;"><strong>第7条（規約の変更）</strong><br>当社は本規約を変更できるものとします。変更後の規約はサービス上に掲示した時点で効力を生じます。</p>
+      <p><strong>第8条（準拠法・管轄）</strong><br>本規約は日本法に準拠します。本サービスに関する紛争は、大阪地方裁判所を第一審の専属的合意管轄裁判所とします。</p>
+    </div>
+  `,
+  privacy: `
+    <h2 style="font-size:18px;font-weight:800;color:var(--zb-dark);margin-bottom:16px;">プライバシーポリシー</h2>
+    <div style="font-size:12px;color:var(--zb-muted);margin-bottom:16px;">最終更新日: 2026年6月13日</div>
+    <div style="font-size:13px;line-height:1.8;">
+      <p style="margin-bottom:12px;"><strong>1. 事業者</strong><br>Zaibase Group 南條 雅哉（以下「当社」）</p>
+      <p style="margin-bottom:12px;"><strong>2. 収集する情報</strong><br>・Googleアカウント情報（メールアドレス、表示名）<br>・相談内容（カテゴリ、タイトル、質問文）<br>・利用状況（相談回数、プラン情報）<br>・決済に必要な情報（Stripe経由、カード情報は当社サーバーに保存されません）</p>
+      <p style="margin-bottom:12px;"><strong>3. 利用目的</strong><br>・サービスの提供・運営<br>・相談への回答<br>・プランの管理・課金処理<br>・サービス改善のための統計分析<br>・法令に基づく対応</p>
+      <p style="margin-bottom:12px;"><strong>4. 第三者提供</strong><br>法令に基づく場合を除き、個人情報を第三者に提供しません。ただし以下は除きます：<br>・Stripe, Inc.（決済処理のため）<br>・Google LLC（認証基盤として）<br>・提携弁護士・社労士（プロプラン紹介時、利用者の同意を得た場合のみ）</p>
+      <p style="margin-bottom:12px;"><strong>5. 安全管理措置</strong><br>Firebase（Google Cloud）上で暗号化保存。Firestoreセキュリティルールにより本人以外のアクセスを制限。</p>
+      <p style="margin-bottom:12px;"><strong>6. 開示・訂正・削除</strong><br>ご本人からの請求に基づき、個人情報の開示・訂正・削除に対応します。support@zaibase.jp までご連絡ください。</p>
+      <p><strong>7. お問い合わせ</strong><br>個人情報に関するお問い合わせ：support@zaibase.jp</p>
+    </div>
+  `,
+};
+
+window.showLegalScreen = function(page) {
+  document.getElementById("legalContent").innerHTML = LEGAL_PAGES[page] || "";
+  document.getElementById("legalOverlay").style.display = "block";
+};
+
+window.closeLegalScreen = function() {
+  document.getElementById("legalOverlay").style.display = "none";
+};
 </script>
 </body>
 </html>
