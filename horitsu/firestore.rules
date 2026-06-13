@@ -1,0 +1,46 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── ヘルパー関数 ──────────────────────────────────────────────
+    function isAuth()        { return request.auth != null; }
+    function isOwner(uid)    { return isAuth() && request.auth.uid == uid; }
+    function isAdmin()       {
+      return isAuth()
+        && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    // ── ユーザープロフィール（プラン・課金情報） ──────────────────
+    match /horitsuProfiles/{uid} {
+      allow read: if isOwner(uid) || isAdmin();
+      allow write: if false; // Cloud Functions 専用
+    }
+
+    // ── 相談データ ────────────────────────────────────────────────
+    match /consultations/{id} {
+      // 本人 or 管理者のみ閲覧
+      allow read: if isAdmin()
+        || (isAuth() && resource.data.uid == request.auth.uid);
+      allow write: if false; // Cloud Functions 専用
+    }
+
+    // ── 収益ログ（管理者専用） ────────────────────────────────────
+    match /horitsuRevenueLogs/{id} {
+      allow read: if isAdmin();
+      allow write: if false;
+    }
+
+    // ── 管理者テーブル（読取専用） ────────────────────────────────
+    match /admins/{uid} {
+      allow read: if isOwner(uid);
+      allow write: if false;
+    }
+
+    // ── 法令ガイド（全ユーザー閲覧可・書込はCF専用） ─────────────
+    match /legalGuides/{id} {
+      allow read: if isAuth();
+      allow write: if false;
+    }
+  }
+}

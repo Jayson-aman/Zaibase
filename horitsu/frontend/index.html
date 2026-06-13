@@ -6,152 +6,899 @@
   <title>Zaibase法律相談 — 建設業・労働法の専門相談</title>
   <meta name="theme-color" content="#0EA5E9">
   <meta name="description" content="建設職人・一人親方のための法律相談サービス。初回無料。建設業法・労働法・契約書のプロが対応。">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Zaibase法律相談">
   <style>
+    :root {
+      --zb-sky:   #0EA5E9;
+      --zb-dark:  #0369A1;
+      --zb-mid:   #0284C7;
+      --zb-pale:  #F0F9FF;
+      --zb-light: #E0F2FE;
+      --zb-muted: #64748B;
+      --zb-text:  #0F172A;
+      --zb-green: #16A34A;
+      --zb-amber: #D97706;
+      --zb-red:   #DC2626;
+      --radius:   14px;
+    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Segoe UI', sans-serif;
       background: linear-gradient(160deg, #5BC8F0 0%, #87D8F5 40%, #E0F6FF 100%);
       min-height: 100vh;
+      color: var(--zb-text);
+    }
+
+    /* ── レイアウト ───────────────────────────────────────────── */
+    .app-shell {
+      max-width: 480px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 0 1px rgba(14,165,233,.1), 0 8px 40px rgba(3,105,161,.15);
+    }
+    header {
+      background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%);
+      color: #fff;
+      padding: 14px 16px 12px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-    .card {
-      background: #fff;
-      border-radius: 20px;
-      padding: 40px 32px;
-      max-width: 440px;
-      width: 100%;
-      box-shadow: 0 8px 40px rgba(3,105,161,.2);
-      text-align: center;
-    }
-    .group-label {
-      font-size: 11px;
-      font-weight: 700;
-      color: #0EA5E9;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-    .logo { font-size: 28px; font-weight: 800; color: #0369A1; margin-bottom: 4px; }
-    .logo span { color: #0EA5E9; }
-    .tagline { font-size: 13px; color: #666; margin-bottom: 32px; }
-    .coming-badge {
-      display: inline-block;
-      background: #FFF3CD;
-      color: #856404;
-      font-size: 12px;
-      font-weight: 700;
-      padding: 4px 12px;
-      border-radius: 20px;
-      margin-bottom: 24px;
-    }
-    .plan-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
       gap: 10px;
-      margin-bottom: 28px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    .plan-col {
-      background: #F0F9FF;
-      border-radius: 12px;
-      padding: 12px 8px;
-      border: 1.5px solid #E0F2FE;
-    }
-    .plan-col.featured { border-color: #0EA5E9; background: #E0F9FF; }
-    .plan-name { font-size: 11px; font-weight: 700; color: #0369A1; margin-bottom: 4px; }
-    .plan-price { font-size: 16px; font-weight: 800; color: #0C4A6E; }
-    .plan-price span { font-size: 10px; font-weight: 400; color: #888; }
-    .plan-feature { font-size: 10px; color: #555; margin-top: 4px; line-height: 1.5; }
-    .free-note {
-      background: #E8F5E9;
-      border-radius: 10px;
-      padding: 10px 14px;
-      font-size: 12px;
-      color: #2E7D32;
-      margin-bottom: 20px;
+    .header-logo { font-size: 18px; font-weight: 800; flex: 1; }
+    .header-logo span { opacity: .75; font-weight: 500; }
+    .header-badge {
+      font-size: 10px;
+      background: rgba(255,255,255,.2);
+      padding: 3px 8px;
+      border-radius: 20px;
       font-weight: 600;
     }
-    .notify-form { display: flex; gap: 8px; margin-bottom: 12px; }
-    .notify-form input {
+    #headerUserBtn {
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.3);
+      color: #fff;
+      font-size: 12px;
+      padding: 5px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: none;
+    }
+    main { flex: 1; overflow-y: auto; padding-bottom: 80px; }
+
+    /* ── ボトムナビ ───────────────────────────────────────────── */
+    .bottom-nav {
+      position: sticky;
+      bottom: 0;
+      background: #fff;
+      border-top: 1px solid #E0F2FE;
+      display: flex;
+      display: none;
+    }
+    .bottom-nav.active { display: flex; }
+    .nav-btn {
       flex: 1;
-      padding: 12px 14px;
+      padding: 10px 4px 8px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 10px;
+      color: var(--zb-muted);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+    }
+    .nav-btn.active { color: var(--zb-sky); }
+    .nav-btn .icon { font-size: 20px; }
+
+    /* ── スクリーン ───────────────────────────────────────────── */
+    .screen { display: none; padding: 20px 16px; }
+    .screen.active { display: block; }
+
+    /* ── カード ───────────────────────────────────────────────── */
+    .card {
+      background: #fff;
+      border: 1px solid #E0F2FE;
+      border-radius: var(--radius);
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    .card-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--zb-dark);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ── ボタン ───────────────────────────────────────────────── */
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+    }
+    .btn-primary   { background: var(--zb-sky);  color: #fff; }
+    .btn-secondary { background: var(--zb-pale); color: var(--zb-dark); border: 1.5px solid var(--zb-light); }
+    .btn-danger    { background: #FEE2E2; color: var(--zb-red); }
+    .btn-google    { background: #fff; color: #333; border: 1.5px solid #ddd; display: flex; align-items: center; justify-content: center; gap: 10px; }
+    .btn + .btn    { margin-top: 10px; }
+    .btn:disabled  { opacity: .5; pointer-events: none; }
+
+    /* ── フォーム ───────────────────────────────────────────────── */
+    .form-group { margin-bottom: 14px; }
+    .form-group label { display: block; font-size: 12px; font-weight: 700; color: var(--zb-dark); margin-bottom: 5px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%;
+      padding: 11px 13px;
       border: 1.5px solid #ddd;
       border-radius: 10px;
       font-size: 14px;
+      font-family: inherit;
       outline: none;
+      background: #fff;
+      color: var(--zb-text);
     }
-    .notify-form input:focus { border-color: #0EA5E9; }
-    .notify-btn {
-      padding: 12px 18px;
-      background: #0EA5E9;
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-      font-size: 14px;
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--zb-sky); }
+
+    /* ── プランバッジ ───────────────────────────────────────────── */
+    .plan-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
       font-weight: 700;
+    }
+    .plan-badge.free     { background: #F1F5F9; color: #475569; }
+    .plan-badge.standard { background: #E0F2FE; color: var(--zb-dark); }
+    .plan-badge.pro      { background: #FEF3C7; color: #92400E; }
+
+    /* ── 相談カード ─────────────────────────────────────────────── */
+    .consult-card {
+      border: 1.5px solid #E0F2FE;
+      border-radius: var(--radius);
+      padding: 14px;
+      margin-bottom: 10px;
       cursor: pointer;
+      transition: border-color .15s;
+    }
+    .consult-card:hover { border-color: var(--zb-sky); }
+    .consult-card.unread { border-left: 3px solid var(--zb-sky); }
+    .consult-status {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-bottom: 6px;
+    }
+    .status-pending  { background: #FEF3C7; color: #92400E; }
+    .status-replied  { background: #DCFCE7; color: #166534; }
+    .status-closed   { background: #F1F5F9; color: #475569; }
+    .consult-title   { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+    .consult-meta    { font-size: 11px; color: var(--zb-muted); }
+
+    /* ── プラングリッド ─────────────────────────────────────────── */
+    .plan-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .plan-col {
+      background: var(--zb-pale);
+      border: 1.5px solid var(--zb-light);
+      border-radius: 12px;
+      padding: 12px 8px;
+      text-align: center;
+    }
+    .plan-col.featured { border-color: var(--zb-sky); background: #E0F9FF; }
+    .plan-col.current  { border-color: var(--zb-green); }
+    .plan-name  { font-size: 10px; font-weight: 700; color: var(--zb-dark); margin-bottom: 4px; }
+    .plan-price { font-size: 15px; font-weight: 800; color: #0C4A6E; }
+    .plan-price small { font-size: 9px; font-weight: 400; color: var(--zb-muted); }
+    .plan-feature { font-size: 9px; color: #555; margin-top: 4px; line-height: 1.5; }
+
+    /* ── トースト ───────────────────────────────────────────────── */
+    #toast {
+      position: fixed;
+      bottom: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #0F172A;
+      color: #fff;
+      font-size: 13px;
+      padding: 10px 18px;
+      border-radius: 20px;
+      z-index: 999;
+      opacity: 0;
+      transition: opacity .2s;
+      pointer-events: none;
       white-space: nowrap;
     }
-    .footer-link {
-      font-size: 12px;
-      color: #999;
+    #toast.show { opacity: 1; }
+
+    /* ── ローディング ───────────────────────────────────────────── */
+    .loading { text-align: center; padding: 40px; color: var(--zb-muted); font-size: 14px; }
+
+    /* ── セクション見出し ───────────────────────────────────────── */
+    .section-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--zb-dark);
+      margin-bottom: 14px;
     }
-    .footer-link a { color: #0EA5E9; text-decoration: none; }
+    .section-desc {
+      font-size: 13px;
+      color: var(--zb-muted);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── グループ割引バナー ─────────────────────────────────────── */
+    .group-banner {
+      background: linear-gradient(135deg, #DBEAFE, #E0F2FE);
+      border: 1.5px solid var(--zb-sky);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      margin-bottom: 16px;
+      font-size: 12px;
+      color: var(--zb-dark);
+    }
+    .group-banner strong { display: block; font-size: 13px; margin-bottom: 4px; }
+
+    /* ── ログイン画面 ───────────────────────────────────────────── */
+    #loginScreen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .login-logo    { font-size: 28px; font-weight: 800; color: var(--zb-dark); margin-bottom: 6px; }
+    .login-logo span { color: var(--zb-sky); }
+    .login-tagline { font-size: 13px; color: var(--zb-muted); margin-bottom: 32px; }
+    .login-plan-grid { width: 100%; margin-bottom: 28px; }
+    .login-free-note {
+      background: #DCFCE7;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 12px;
+      color: #166534;
+      font-weight: 600;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+
+    @media (min-width: 768px) {
+      body { background: linear-gradient(180deg, #5BC8F0 0%, #87D8F5 40%, #E0F6FF 100%); }
+      .app-shell { margin-top: 20px; margin-bottom: 20px; min-height: calc(100vh - 40px); border-radius: 20px; overflow: hidden; }
+    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="group-label">Zaibase Group</div>
-    <div class="logo">Zaibase<span>法律相談</span></div>
-    <div class="tagline">建設業・労働法の専門法律相談サービス</div>
 
-    <div class="coming-badge">🔨 準備中 — Coming Soon</div>
+<!-- ── ログイン画面 ──────────────────────────────────────────────── -->
+<div id="loginScreen">
+  <div class="login-logo">Zaibase<span>法律相談</span></div>
+  <div class="login-tagline">建設業・労働法の専門法律相談サービス</div>
 
-    <div class="plan-grid">
-      <div class="plan-col">
-        <div class="plan-name">フリー</div>
-        <div class="plan-price">¥0</div>
-        <div class="plan-feature">初回1回<br>無料相談</div>
-      </div>
-      <div class="plan-col featured">
-        <div class="plan-name">スタンダード</div>
-        <div class="plan-price">¥2,980<span>/月</span></div>
-        <div class="plan-feature">月2回相談<br>テンプレDL</div>
-      </div>
-      <div class="plan-col">
-        <div class="plan-name">プロ</div>
-        <div class="plan-price">¥7,800<span>/月</span></div>
-        <div class="plan-feature">月無制限<br>弁護士紹介</div>
-      </div>
+  <div class="login-plan-grid plan-grid">
+    <div class="plan-col">
+      <div class="plan-name">フリー</div>
+      <div class="plan-price">¥0</div>
+      <div class="plan-feature">初回1回<br>無料相談</div>
     </div>
-
-    <div class="free-note">
-      ✅ Zaibase建設プロプラン会員はスタンダードが ¥1,980/月
+    <div class="plan-col featured">
+      <div class="plan-name">スタンダード</div>
+      <div class="plan-price">¥2,980<small>/月</small></div>
+      <div class="plan-feature">月2回相談<br>テンプレDL</div>
     </div>
-
-    <div class="notify-form">
-      <input type="email" id="emailInput" placeholder="メールアドレス（開始通知を受け取る）">
-      <button class="notify-btn" onclick="notify()">通知する</button>
-    </div>
-
-    <div class="footer-link">
-      Zaibase建設はこちら → <a href="https://zaisai-share.web.app/app">zaisai-share.web.app</a>
+    <div class="plan-col">
+      <div class="plan-name">プロ</div>
+      <div class="plan-price">¥7,800<small>/月</small></div>
+      <div class="plan-feature">月無制限<br>弁護士紹介</div>
     </div>
   </div>
 
-  <script>
-    function notify() {
-      const email = document.getElementById('emailInput').value.trim();
-      if (!email || !email.includes('@')) {
-        alert('正しいメールアドレスを入力してください');
-        return;
-      }
-      // TODO: Firestore に保存
-      alert('ご登録ありがとうございます！\nサービス開始時にご連絡します。');
-      document.getElementById('emailInput').value = '';
+  <div class="login-free-note">
+    ✅ Zaibase建設プロプラン会員はスタンダード ¥1,980/月、プロ ¥6,800/月
+  </div>
+
+  <button class="btn btn-google" id="loginGoogleBtn" style="max-width:340px;width:100%;">
+    <svg width="18" height="18" viewBox="0 0 18 18"><path fill="#4285F4" d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844a4.14 4.14 0 0 1-1.796 2.716v2.259h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"/><path fill="#34A853" d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 0 0 9 18z"/><path fill="#FBBC05" d="M3.964 10.71A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"/><path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.958L3.964 6.29C4.672 4.163 6.656 3.58 9 3.58z"/></svg>
+    Googleアカウントでログイン
+  </button>
+
+  <p style="margin-top:20px;font-size:11px;color:#999;">
+    ログインすることで<a href="#" style="color:var(--zb-sky);">利用規約</a>および<a href="#" style="color:var(--zb-sky);">プライバシーポリシー</a>に同意したものとみなします
+  </p>
+</div>
+
+<!-- ── アプリ本体 ────────────────────────────────────────────────── -->
+<div class="app-shell" id="appShell" style="display:none;">
+  <header>
+    <div class="header-logo">Zaibase<span>法律相談</span></div>
+    <span class="header-badge" id="headerPlanBadge">フリー</span>
+    <button id="headerUserBtn">ログアウト</button>
+  </header>
+
+  <main>
+    <!-- ホーム -->
+    <div class="screen active" id="screenHome">
+      <div class="section-title">⚖️ マイページ</div>
+
+      <!-- プランステータス -->
+      <div class="card" id="planStatusCard">
+        <div class="card-title">📋 現在のプラン</div>
+        <div id="planStatusContent"><div class="loading">読み込み中…</div></div>
+      </div>
+
+      <!-- クイックアクション -->
+      <div class="card">
+        <div class="card-title">🚀 クイックアクション</div>
+        <button class="btn btn-primary" id="homeConsultBtn">✍️ 新しい相談を送る</button>
+        <button class="btn btn-secondary" id="homeHistoryBtn" style="margin-top:8px;">📂 相談履歴を見る</button>
+      </div>
+
+      <!-- グループ割引 -->
+      <div class="card" id="groupDiscountCard" style="display:none;">
+        <div class="card-title">🏢 Zaibase Groupグループ割引</div>
+        <div class="group-banner">
+          <strong>Zaibase建設プロプラン会員様へ</strong>
+          スタンダード ¥1,980/月・プロ ¥6,800/月 で利用いただけます。
+        </div>
+        <button class="btn btn-secondary" id="applyGroupDiscountBtn">割引を申請する</button>
+      </div>
+
+      <!-- Zaibase建設リンク -->
+      <div style="text-align:center;margin-top:8px;">
+        <a href="https://zaisai-share.web.app/app" style="font-size:12px;color:var(--zb-sky);text-decoration:none;">
+          Zaibase建設はこちら →
+        </a>
+      </div>
+    </div>
+
+    <!-- 相談フォーム -->
+    <div class="screen" id="screenConsult">
+      <div class="section-title">✍️ 相談を送る</div>
+      <div class="section-desc">建設業・労働法に関するご相談をお送りください。専門家が回答いたします。</div>
+
+      <div id="consultLimitMsg" style="display:none;margin-bottom:16px;"></div>
+
+      <div class="card">
+        <div class="form-group">
+          <label>カテゴリ *</label>
+          <select id="consultCategory">
+            <option value="">選択してください</option>
+            <option>未払い・遅延支払い（フリーランス保護法）</option>
+            <option>下請代金・一括下請負</option>
+            <option>長時間労働・過重労働</option>
+            <option>労災・業務上疾病</option>
+            <option>ハラスメント</option>
+            <option>建設業法・許認可</option>
+            <option>契約書・書面交付</option>
+            <option>その他</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>タイトル *</label>
+          <input type="text" id="consultTitle" placeholder="例：元請けから支払いが3ヶ月遅延している" maxlength="100">
+        </div>
+        <div class="form-group">
+          <label>相談内容 * <span style="font-weight:400;color:var(--zb-muted);">（20〜3,000文字）</span></label>
+          <textarea id="consultQuestion" placeholder="状況を詳しくお書きください。金額・期間・関係者との経緯なども記載いただけると、より具体的な回答ができます。" maxlength="3000"></textarea>
+          <div style="font-size:11px;color:var(--zb-muted);margin-top:4px;text-align:right;">
+            <span id="charCount">0</span> / 3,000文字
+          </div>
+        </div>
+        <button class="btn btn-primary" id="submitConsultBtn">相談を送る</button>
+      </div>
+
+      <div style="font-size:12px;color:var(--zb-muted);text-align:center;margin-top:8px;">
+        ※ 個人を特定できる情報（氏名・住所等）はご記入不要です
+      </div>
+    </div>
+
+    <!-- 相談履歴 -->
+    <div class="screen" id="screenHistory">
+      <div class="section-title">📂 相談履歴</div>
+      <div id="historyList"><div class="loading">読み込み中…</div></div>
+    </div>
+
+    <!-- プラン -->
+    <div class="screen" id="screenPlan">
+      <div class="section-title">💳 プランを選ぶ</div>
+
+      <div class="group-banner" id="groupDiscountBanner" style="display:none;">
+        <strong>🏢 グループ割引適用中</strong>
+        Zaibase建設プロプラン会員特別価格でご利用いただけます。
+      </div>
+
+      <div class="plan-grid" style="margin-bottom:16px;">
+        <div class="plan-col" id="planColFree">
+          <div class="plan-name">フリー</div>
+          <div class="plan-price">¥0</div>
+          <div class="plan-feature">初回1回<br>無料相談</div>
+        </div>
+        <div class="plan-col featured" id="planColStandard">
+          <div class="plan-name">スタンダード</div>
+          <div class="plan-price" id="stdPrice">¥2,980<small>/月</small></div>
+          <div class="plan-feature">月2回相談<br>テンプレDL</div>
+        </div>
+        <div class="plan-col" id="planColPro">
+          <div class="plan-name">プロ</div>
+          <div class="plan-price" id="proPrice">¥7,800<small>/月</small></div>
+          <div class="plan-feature">月無制限<br>弁護士紹介</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">📌 プラン比較</div>
+        <table style="width:100%;font-size:12px;border-collapse:collapse;">
+          <tr style="border-bottom:1px solid #E0F2FE;">
+            <td style="padding:8px 4px;color:var(--zb-muted);"></td>
+            <td style="padding:8px 4px;text-align:center;font-weight:700;color:var(--zb-muted);">フリー</td>
+            <td style="padding:8px 4px;text-align:center;font-weight:700;color:var(--zb-dark);">スタンダード</td>
+            <td style="padding:8px 4px;text-align:center;font-weight:700;color:#92400E;">プロ</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F1F5F9;">
+            <td style="padding:8px 4px;">月間相談回数</td>
+            <td style="padding:8px 4px;text-align:center;">1回<small>（通算）</small></td>
+            <td style="padding:8px 4px;text-align:center;">2回</td>
+            <td style="padding:8px 4px;text-align:center;">無制限</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F1F5F9;">
+            <td style="padding:8px 4px;">回答期間</td>
+            <td style="padding:8px 4px;text-align:center;">3〜5営業日</td>
+            <td style="padding:8px 4px;text-align:center;">3営業日</td>
+            <td style="padding:8px 4px;text-align:center;">翌営業日</td>
+          </tr>
+          <tr style="border-bottom:1px solid #F1F5F9;">
+            <td style="padding:8px 4px;">契約書テンプレ</td>
+            <td style="padding:8px 4px;text-align:center;">—</td>
+            <td style="padding:8px 4px;text-align:center;">✓ 全種</td>
+            <td style="padding:8px 4px;text-align:center;">✓ 全種</td>
+          </tr>
+          <tr>
+            <td style="padding:8px 4px;">弁護士・社労士紹介</td>
+            <td style="padding:8px 4px;text-align:center;">—</td>
+            <td style="padding:8px 4px;text-align:center;">—</td>
+            <td style="padding:8px 4px;text-align:center;">✓ 割引付き</td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="planActionArea">
+        <button class="btn btn-primary" id="upgradeStdBtn">スタンダードに申し込む</button>
+        <button class="btn btn-secondary" id="upgradeProBtn" style="margin-top:8px;">プロに申し込む</button>
+        <button class="btn btn-danger" id="cancelSubBtn" style="margin-top:8px;display:none;">サブスクリプションを解約する</button>
+      </div>
+
+      <div style="font-size:11px;color:var(--zb-muted);text-align:center;margin-top:12px;line-height:1.7;">
+        ※ 年払い（2ヶ月分お得）は申込後のカスタマーポータルから変更できます<br>
+        ※ 解約はいつでも可能。解約後も期間終了まで利用できます
+      </div>
+    </div>
+
+    <!-- 相談詳細 -->
+    <div class="screen" id="screenDetail">
+      <button id="backToHistoryBtn" style="background:none;border:none;color:var(--zb-sky);font-size:14px;cursor:pointer;margin-bottom:16px;">← 戻る</button>
+      <div id="detailContent"></div>
+    </div>
+  </main>
+
+  <nav class="bottom-nav" id="bottomNav">
+    <button class="nav-btn active" data-screen="screenHome" id="navHome">
+      <span class="icon">🏠</span>ホーム
+    </button>
+    <button class="nav-btn" data-screen="screenConsult" id="navConsult">
+      <span class="icon">✍️</span>相談する
+    </button>
+    <button class="nav-btn" data-screen="screenHistory" id="navHistory">
+      <span class="icon">📂</span>履歴
+    </button>
+    <button class="nav-btn" data-screen="screenPlan" id="navPlan">
+      <span class="icon">💳</span>プラン
+    </button>
+  </nav>
+</div>
+
+<div id="toast"></div>
+
+<script type="module">
+// ── Firebase 設定（デプロイ前に実際の値に置き換える） ────────────
+// Firebase Console → プロジェクト設定 → アプリ → 構成
+const FB_CONFIG = {
+  apiKey:            "REPLACE_WITH_FIREBASE_API_KEY",
+  authDomain:        "zaibase-horitsu.firebaseapp.com",
+  projectId:         "zaibase-horitsu",
+  storageBucket:     "zaibase-horitsu.appspot.com",
+  messagingSenderId: "REPLACE_WITH_SENDER_ID",
+  appId:             "REPLACE_WITH_APP_ID",
+};
+
+import { initializeApp }            from "https://www.gstatic.com/firebasejs/11.9.0/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged }
+  from "https://www.gstatic.com/firebasejs/11.9.0/firebase-auth.js";
+import { getFunctions, httpsCallable }
+  from "https://www.gstatic.com/firebasejs/11.9.0/firebase-functions.js";
+
+const app   = initializeApp(FB_CONFIG);
+const auth  = getAuth(app);
+const fns   = getFunctions(app, "asia-northeast1");
+
+// ── Cloud Functions ───────────────────────────────────────────────
+const getHoritsuPlan            = httpsCallable(fns, "getHoritsuPlan");
+const createHoritsuCheckout     = httpsCallable(fns, "createHoritsuCheckout");
+const cancelHoritsuSub          = httpsCallable(fns, "cancelHoritsuSub");
+const submitHoritsuConsult      = httpsCallable(fns, "submitHoritsuConsult");
+const getMyHoritsuConsults      = httpsCallable(fns, "getMyHoritsuConsults");
+const markHoritsuConsultRead    = httpsCallable(fns, "markHoritsuConsultRead");
+const applyGroupDiscount        = httpsCallable(fns, "applyGroupDiscount");
+
+// ── 状態 ─────────────────────────────────────────────────────────
+let currentPlan = "free";
+let groupDiscount = false;
+let consults = [];
+
+// ── UI ユーティリティ ─────────────────────────────────────────────
+function toast(msg, dur = 2800) {
+  const el = document.getElementById("toast");
+  el.textContent = msg;
+  el.classList.add("show");
+  setTimeout(() => el.classList.remove("show"), dur);
+}
+
+function showScreen(id) {
+  document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+  document.querySelectorAll(".nav-btn").forEach(b => {
+    b.classList.toggle("active", b.dataset.screen === id);
+  });
+}
+
+function fmtDate(ms) {
+  if (!ms) return "—";
+  return new Date(ms).toLocaleDateString("ja-JP", { year:"numeric", month:"2-digit", day:"2-digit" });
+}
+
+// ── 認証 ─────────────────────────────────────────────────────────
+document.getElementById("loginGoogleBtn").addEventListener("click", async () => {
+  try {
+    const provider = new GoogleAuthProvider();
+    await signInWithPopup(auth, provider);
+  } catch (e) {
+    toast("ログインに失敗しました: " + e.message);
+  }
+});
+
+document.getElementById("headerUserBtn").addEventListener("click", async () => {
+  if (confirm("ログアウトしますか？")) {
+    await signOut(auth);
+  }
+});
+
+onAuthStateChanged(auth, async (user) => {
+  const loginScreen = document.getElementById("loginScreen");
+  const appShell    = document.getElementById("appShell");
+  const bottomNav   = document.getElementById("bottomNav");
+  const headerUserBtn = document.getElementById("headerUserBtn");
+
+  if (user) {
+    loginScreen.style.display = "none";
+    appShell.style.display = "flex";
+    appShell.style.flexDirection = "column";
+    bottomNav.classList.add("active");
+    headerUserBtn.style.display = "block";
+    await loadPlan();
+  } else {
+    loginScreen.style.display = "flex";
+    appShell.style.display = "none";
+    bottomNav.classList.remove("active");
+    headerUserBtn.style.display = "none";
+  }
+});
+
+// ── プラン読込 ────────────────────────────────────────────────────
+async function loadPlan() {
+  try {
+    const res = await getHoritsuPlan();
+    const data = res.data;
+    currentPlan = data.plan || "free";
+    groupDiscount = data.groupDiscountGranted || false;
+
+    // ヘッダーバッジ
+    const badge = document.getElementById("headerPlanBadge");
+    const planLabel = { free: "フリー", standard: "スタンダード", pro: "プロ" }[currentPlan] || currentPlan;
+    badge.textContent = planLabel;
+
+    // プランステータスカード
+    const content = document.getElementById("planStatusContent");
+    const statusLabel = { active: "✅ 有効", past_due: "⚠️ 支払い失敗", cancelled: "❌ 解約済み" }[data.status] || data.status;
+    const limitText = currentPlan === "pro"
+      ? "月間相談：無制限"
+      : currentPlan === "standard"
+        ? `今月の残り相談：${Math.max(0, 2 - (data.consultsThisMonth || 0))}回`
+        : `残り相談：${data.consultTotal >= 1 ? "0回（上限に達しました）" : "1回"}`;
+
+    content.innerHTML = `
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+        <span class="plan-badge ${currentPlan}">${planLabel}</span>
+        <span style="font-size:12px;color:var(--zb-muted);">${statusLabel}</span>
+      </div>
+      <div style="font-size:13px;color:var(--zb-dark);font-weight:600;">${limitText}</div>
+      ${data.renewalAt ? `<div style="font-size:11px;color:var(--zb-muted);margin-top:4px;">次回更新: ${fmtDate(data.renewalAt)}</div>` : ""}
+      ${groupDiscount ? `<div style="font-size:11px;color:var(--zb-green);margin-top:4px;">🏢 グループ割引適用中</div>` : ""}
+    `;
+
+    // グループ割引カード（未申請のフリー/スタンダードユーザーに表示）
+    const groupCard = document.getElementById("groupDiscountCard");
+    if (!groupDiscount && !data.groupDiscountApplied) {
+      groupCard.style.display = "block";
     }
-  </script>
+
+    // プラン画面の価格表示
+    if (groupDiscount) {
+      document.getElementById("stdPrice").innerHTML = "¥1,980<small>/月</small>";
+      document.getElementById("proPrice").innerHTML = "¥6,800<small>/月</small>";
+      document.getElementById("groupDiscountBanner").style.display = "block";
+    }
+
+    // 現在のプランをハイライト
+    ["planColFree","planColStandard","planColPro"].forEach(id => {
+      document.getElementById(id)?.classList.remove("current");
+    });
+    const colMap = { free: "planColFree", standard: "planColStandard", pro: "planColPro" };
+    if (colMap[currentPlan]) document.getElementById(colMap[currentPlan]).classList.add("current");
+
+    // 解約ボタン表示
+    const cancelBtn = document.getElementById("cancelSubBtn");
+    if (currentPlan !== "free" && data.status === "active") {
+      cancelBtn.style.display = "block";
+    }
+
+    // アップグレードボタン非表示（プロプランはスタンダードを非表示）
+    if (currentPlan === "pro") {
+      document.getElementById("upgradeStdBtn").style.display = "none";
+      document.getElementById("upgradeProBtn").style.display = "none";
+    } else if (currentPlan === "standard") {
+      document.getElementById("upgradeStdBtn").style.display = "none";
+    }
+
+  } catch (e) {
+    document.getElementById("planStatusContent").innerHTML =
+      `<div style="color:var(--zb-red);font-size:13px;">読み込みエラー: ${e.message}</div>`;
+  }
+}
+
+// ── 相談フォーム ──────────────────────────────────────────────────
+document.getElementById("consultQuestion").addEventListener("input", function() {
+  document.getElementById("charCount").textContent = this.value.length;
+});
+
+document.getElementById("submitConsultBtn").addEventListener("click", async () => {
+  const category = document.getElementById("consultCategory").value;
+  const title    = document.getElementById("consultTitle").value.trim();
+  const question = document.getElementById("consultQuestion").value.trim();
+
+  if (!category) { toast("カテゴリを選択してください"); return; }
+  if (title.length < 4) { toast("タイトルを4文字以上入力してください"); return; }
+  if (question.length < 20) { toast("相談内容を20文字以上入力してください"); return; }
+
+  const btn = document.getElementById("submitConsultBtn");
+  btn.disabled = true;
+  btn.textContent = "送信中…";
+
+  try {
+    const res = await submitHoritsuConsult({ category, title, question });
+    const data = res.data;
+    toast(`✅ 相談を受け付けました（目安：${data.sla}）`);
+    document.getElementById("consultCategory").value = "";
+    document.getElementById("consultTitle").value = "";
+    document.getElementById("consultQuestion").value = "";
+    document.getElementById("charCount").textContent = "0";
+    showScreen("screenHistory");
+    await loadHistory();
+    await loadPlan();
+  } catch (e) {
+    if (e.code === "functions/resource-exhausted") {
+      const limitMsg = document.getElementById("consultLimitMsg");
+      limitMsg.style.display = "block";
+      limitMsg.innerHTML = `
+        <div class="card" style="border-color:var(--zb-amber);background:#FFFBEB;">
+          <div style="font-size:14px;font-weight:700;color:var(--zb-amber);margin-bottom:6px;">⚠️ ${e.message}</div>
+          <button class="btn btn-primary" onclick="document.getElementById('navPlan').click()">プランをアップグレード →</button>
+        </div>
+      `;
+    } else {
+      toast("エラー: " + e.message);
+    }
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "相談を送る";
+  }
+});
+
+// ── 相談履歴 ──────────────────────────────────────────────────────
+async function loadHistory() {
+  const list = document.getElementById("historyList");
+  list.innerHTML = '<div class="loading">読み込み中…</div>';
+  try {
+    const res = await getMyHoritsuConsults();
+    consults = res.data.consults || [];
+    if (consults.length === 0) {
+      list.innerHTML = `
+        <div style="text-align:center;padding:40px;color:var(--zb-muted);">
+          <div style="font-size:32px;margin-bottom:12px;">📭</div>
+          <div>まだ相談がありません</div>
+          <button class="btn btn-primary" style="margin-top:16px;max-width:200px;"
+            onclick="showScreen('screenConsult')">最初の相談を送る</button>
+        </div>`;
+      return;
+    }
+    list.innerHTML = consults.map((c, i) => `
+      <div class="consult-card ${!c.isReadByUser ? 'unread' : ''}" onclick="showDetail(${i})">
+        <span class="consult-status status-${c.status}">${
+          { pending: "⏳ 回答待ち", replied: "✅ 回答済み", closed: "🔒 クローズ" }[c.status]
+        }</span>
+        <div class="consult-title">${c.title}</div>
+        <div class="consult-meta">${c.category} · ${fmtDate(c.createdAt)}</div>
+        ${!c.isReadByUser && c.reply ? '<div style="font-size:11px;color:var(--zb-sky);margin-top:4px;">💬 新しい回答があります</div>' : ""}
+      </div>
+    `).join("");
+  } catch (e) {
+    list.innerHTML = `<div style="color:var(--zb-red);font-size:13px;">読み込みエラー: ${e.message}</div>`;
+  }
+}
+
+window.showDetail = async function(idx) {
+  const c = consults[idx];
+  if (!c) return;
+  const detail = document.getElementById("detailContent");
+  detail.innerHTML = `
+    <span class="consult-status status-${c.status}">${
+      { pending: "⏳ 回答待ち", replied: "✅ 回答済み", closed: "🔒 クローズ" }[c.status]
+    }</span>
+    <h2 style="font-size:16px;font-weight:800;margin:10px 0 4px;">${c.title}</h2>
+    <div style="font-size:11px;color:var(--zb-muted);margin-bottom:16px;">${c.category} · ${fmtDate(c.createdAt)}</div>
+    <div class="card">
+      <div class="card-title">📝 相談内容</div>
+      <div style="font-size:13px;line-height:1.7;white-space:pre-wrap;">${c.question}</div>
+    </div>
+    ${c.autoAck ? `<div class="card" style="background:#F0F9FF;border-color:var(--zb-light);">
+      <div style="font-size:12px;color:var(--zb-dark);">🤖 ${c.autoAck}</div>
+    </div>` : ""}
+    ${c.reply ? `
+    <div class="card" style="border-color:var(--zb-green);background:#F0FDF4;">
+      <div class="card-title" style="color:var(--zb-green);">💬 専門家からの回答</div>
+      <div style="font-size:13px;line-height:1.7;white-space:pre-wrap;">${c.reply}</div>
+      ${c.nextSteps ? `<div style="margin-top:12px;padding:10px;background:#DCFCE7;border-radius:8px;font-size:12px;">
+        <strong>次のステップ:</strong><br>${c.nextSteps}
+      </div>` : ""}
+      <div style="font-size:11px;color:var(--zb-muted);margin-top:8px;">回答日: ${fmtDate(c.repliedAt)}</div>
+    </div>` : ""}
+  `;
+  showScreen("screenDetail");
+  if (!c.isReadByUser) {
+    try {
+      await markHoritsuConsultRead({ consultId: c.id });
+      consults[idx].isReadByUser = true;
+    } catch (_) {}
+  }
+};
+
+document.getElementById("backToHistoryBtn").addEventListener("click", () => showScreen("screenHistory"));
+
+// ── Stripeチェックアウト ──────────────────────────────────────────
+async function checkout(plan) {
+  const btn = plan === "standard"
+    ? document.getElementById("upgradeStdBtn")
+    : document.getElementById("upgradeProBtn");
+  btn.disabled = true;
+  btn.textContent = "処理中…";
+  try {
+    const res = await createHoritsuCheckout({
+      plan,
+      interval: "monthly",
+      returnUrl: location.href,
+    });
+    const data = res.data;
+    if (data.url) location.href = data.url;
+  } catch (e) {
+    toast("エラー: " + e.message);
+    btn.disabled = false;
+    btn.textContent = plan === "standard" ? "スタンダードに申し込む" : "プロに申し込む";
+  }
+}
+
+document.getElementById("upgradeStdBtn").addEventListener("click", () => checkout("standard"));
+document.getElementById("upgradeProBtn").addEventListener("click", () => checkout("pro"));
+
+document.getElementById("cancelSubBtn").addEventListener("click", async () => {
+  if (!confirm("サブスクリプションを解約しますか？\n期間終了まで引き続きご利用いただけます。")) return;
+  const btn = document.getElementById("cancelSubBtn");
+  btn.disabled = true;
+  try {
+    const res = await cancelHoritsuSub();
+    toast(res.data.message || "解約リクエストを受け付けました");
+    btn.style.display = "none";
+    await loadPlan();
+  } catch (e) {
+    toast("エラー: " + e.message);
+    btn.disabled = false;
+  }
+});
+
+// ── グループ割引申請 ──────────────────────────────────────────────
+document.getElementById("applyGroupDiscountBtn").addEventListener("click", async () => {
+  const kensetsuUid = prompt("Zaibase建設のアカウントメールアドレス（任意）:");
+  const btn = document.getElementById("applyGroupDiscountBtn");
+  btn.disabled = true;
+  try {
+    const res = await applyGroupDiscount({ kensetsuUid });
+    toast(res.data.message || "申請しました");
+    document.getElementById("groupDiscountCard").style.display = "none";
+  } catch (e) {
+    toast("エラー: " + e.message);
+    btn.disabled = false;
+  }
+});
+
+// ── ナビゲーション ────────────────────────────────────────────────
+document.querySelectorAll(".nav-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const screenId = btn.dataset.screen;
+    showScreen(screenId);
+    if (screenId === "screenHistory") loadHistory();
+    if (screenId === "screenConsult") {
+      document.getElementById("consultLimitMsg").style.display = "none";
+    }
+  });
+});
+
+document.getElementById("homeConsultBtn").addEventListener("click", () => {
+  showScreen("screenConsult");
+  document.getElementById("navConsult").classList.add("active");
+  document.getElementById("navHome").classList.remove("active");
+});
+
+document.getElementById("homeHistoryBtn").addEventListener("click", () => {
+  showScreen("screenHistory");
+  loadHistory();
+  document.getElementById("navHistory").classList.add("active");
+  document.getElementById("navHome").classList.remove("active");
+});
+
+// ── チェックアウト完了リダイレクト処理 ────────────────────────────
+const urlParams = new URLSearchParams(location.search);
+if (urlParams.get("checkout") === "success") {
+  history.replaceState({}, "", location.pathname);
+  setTimeout(() => toast("✅ 決済が完了しました。プランが有効になりました！"), 500);
+} else if (urlParams.get("checkout") === "cancel") {
+  history.replaceState({}, "", location.pathname);
+  setTimeout(() => toast("⚠️ 決済がキャンセルされました"), 500);
+}
+</script>
 </body>
 </html>
