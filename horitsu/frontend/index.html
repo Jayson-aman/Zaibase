@@ -405,7 +405,6 @@
             <option>労災・業務上疾病</option>
             <option>ハラスメント</option>
             <option>建設業法・許認可</option>
-            <option>主任技術者・管理技術者（要件・専任・兼任）</option>
             <option>契約書・書面交付</option>
             <option>その他</option>
           </select>
@@ -516,133 +515,11 @@
       <div id="detailContent"></div>
     </div>
 
-    <!-- 法令ガイド（無料） -->
-    <div class="screen" id="screenGuide">
-      <div class="section-title">📚 法令ガイド <span style="font-size:11px;font-weight:400;color:var(--zb-green);">無料公開</span></div>
-      <div class="section-desc">建設現場で働く技術者が今すぐ確認すべき法令ポイントをまとめました。</div>
-
-      <!-- 技術者資格 -->
-      <div class="card" id="guide-engineer">
-        <div class="card-title">👷 主任技術者・管理技術者 必須チェック</div>
-        <div style="font-size:12px;color:var(--zb-muted);margin-bottom:12px;">建設業法 第26条・第26条の3</div>
-
-        <div style="margin-bottom:16px;">
-          <div style="font-size:13px;font-weight:700;color:var(--zb-dark);margin-bottom:6px;">▍どちらが必要？</div>
-          <table style="width:100%;font-size:12px;border-collapse:collapse;">
-            <tr style="background:var(--zb-pale);">
-              <td style="padding:8px;font-weight:700;border:1px solid var(--zb-light);"></td>
-              <td style="padding:8px;font-weight:700;border:1px solid var(--zb-light);">主任技術者</td>
-              <td style="padding:8px;font-weight:700;border:1px solid var(--zb-light);">監理技術者</td>
-            </tr>
-            <tr>
-              <td style="padding:8px;border:1px solid var(--zb-light);">適用工事</td>
-              <td style="padding:8px;border:1px solid var(--zb-light);">すべての建設工事</td>
-              <td style="padding:8px;border:1px solid var(--zb-light);">特定建設業者が元請で<br>下請総額4,500万円以上<br>（建築一式7,000万円以上）</td>
-            </tr>
-            <tr>
-              <td style="padding:8px;border:1px solid var(--zb-light);">資格要件</td>
-              <td style="padding:8px;border:1px solid var(--zb-light);">一般建設業の技術者</td>
-              <td style="padding:8px;border:1px solid var(--zb-light);">1級施工管理技士等<br>または国土交通大臣認定</td>
-            </tr>
-            <tr>
-              <td style="padding:8px;border:1px solid var(--zb-light);">専任義務</td>
-              <td style="padding:8px;border:1px solid var(--zb-light);">公共工事等3,500万円以上<br>（建築一式7,000万円以上）</td>
-              <td style="padding:8px;border:1px solid var(--zb-light);">同左（常に専任）</td>
-            </tr>
-          </table>
-        </div>
-
-        <div style="margin-bottom:16px;">
-          <div style="font-size:13px;font-weight:700;color:var(--zb-dark);margin-bottom:8px;">▍よくあるトラブルと法的リスク</div>
-          <div style="display:flex;flex-direction:column;gap:8px;">
-            <div style="background:#FEF3C7;border-radius:10px;padding:10px 12px;">
-              <div style="font-size:12px;font-weight:700;color:var(--zb-amber);">⚠️ 名義貸し（第26条違反）</div>
-              <div style="font-size:12px;margin-top:4px;line-height:1.6;">実際に現場にいない人を技術者として届け出ることは違法。発覚すると営業停止・許可取消のリスク。</div>
-            </div>
-            <div style="background:#FEF3C7;border-radius:10px;padding:10px 12px;">
-              <div style="font-size:12px;font-weight:700;color:var(--zb-amber);">⚠️ 専任義務違反</div>
-              <div style="font-size:12px;margin-top:4px;line-height:1.6;">専任が必要な現場で他の工事を兼任すると違法。兼任できる例外要件（同一現場・近隣等）を必ず確認。</div>
-            </div>
-            <div style="background:#FEF3C7;border-radius:10px;padding:10px 12px;">
-              <div style="font-size:12px;font-weight:700;color:var(--zb-amber);">⚠️ 配置前に退職・異動</div>
-              <div style="font-size:12px;margin-top:4px;line-height:1.6;">技術者が工事途中で退職した場合、速やかに後任を配置する義務。放置すると監督処分の対象。</div>
-            </div>
-          </div>
-        </div>
-
-        <div style="background:#DCFCE7;border-radius:10px;padding:12px;">
-          <div style="font-size:12px;font-weight:700;color:var(--zb-green);margin-bottom:6px;">✅ 2020年改正：専任緩和ルール</div>
-          <div style="font-size:12px;line-height:1.7;">
-            施工管理のICT活用により、一定条件下で<strong>テレワークによる兼任</strong>が認められる場合があります。<br>
-            ・現場と近接（移動30分以内の目安）<br>
-            ・非専任工事を同一法人が施工<br>
-            ・発注者の書面同意
-          </div>
-        </div>
-
-        <button class="btn btn-primary" style="margin-top:14px;" onclick="
-          document.getElementById('consultCategory').value='主任技術者・管理技術者（要件・専任・兼任）';
-          document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
-          document.getElementById('navConsult').classList.add('active');
-          showScreen('screenConsult');
-        ">この件で相談する →</button>
-      </div>
-
-      <!-- 未払い -->
-      <div class="card">
-        <div class="card-title">💴 未払い・遅延支払い 即チェック</div>
-        <div style="font-size:12px;color:var(--zb-muted);margin-bottom:12px;">建設業法 第24条の6・フリーランス保護法</div>
-        <div style="font-size:13px;line-height:1.8;">
-          <div style="margin-bottom:8px;"><strong>元請 → 下請の支払期限</strong><br>
-          元請が発注者から受領後<strong>1ヶ月以内</strong>に下請に支払う義務（建設業法第24条の6）</div>
-          <div style="margin-bottom:8px;"><strong>フリーランス保護法（2024年11月施行）</strong><br>
-          一人親方など個人事業主への支払いは<strong>60日以内</strong>。違反は勧告・公表の対象。</div>
-          <div style="background:#EFF6FF;border-radius:8px;padding:10px;font-size:12px;">
-            📋 <strong>証拠として残すべきもの：</strong>注文書・契約書・請求書・支払日の記録・メール/LINE履歴
-          </div>
-        </div>
-        <button class="btn btn-secondary" style="margin-top:12px;" onclick="
-          document.getElementById('consultCategory').value='未払い・遅延支払い（フリーランス保護法）';
-          document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
-          document.getElementById('navConsult').classList.add('active');
-          showScreen('screenConsult');
-        ">この件で相談する →</button>
-      </div>
-
-      <!-- 労災 -->
-      <div class="card">
-        <div class="card-title">🚑 労災・業務上疾病 基礎知識</div>
-        <div style="font-size:12px;color:var(--zb-muted);margin-bottom:12px;">労働者災害補償保険法</div>
-        <div style="font-size:13px;line-height:1.8;">
-          <div style="margin-bottom:8px;"><strong>一人親方でも労災に入れる</strong><br>
-          特別加入制度を使えば、一人親方も労災保険に加入できます。</div>
-          <div style="margin-bottom:8px;"><strong>元請の連帯責任</strong><br>
-          下請の労働者が被災した場合、元請も費用負担を求められる場合があります。</div>
-          <div style="background:#FFF1F2;border-radius:8px;padding:10px;font-size:12px;">
-            ⚠️ <strong>労災隠しは犯罪です</strong>（労働安全衛生法第100条違反・50万円以下の罰金）
-          </div>
-        </div>
-        <button class="btn btn-secondary" style="margin-top:12px;" onclick="
-          document.getElementById('consultCategory').value='労災・業務上疾病';
-          document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
-          document.getElementById('navConsult').classList.add('active');
-          showScreen('screenConsult');
-        ">この件で相談する →</button>
-      </div>
-
-      <div style="text-align:center;padding:16px;font-size:12px;color:var(--zb-muted);line-height:1.8;">
-        ※ このガイドは一般的な情報提供を目的としており、個別の法的助言ではありません。<br>
-        具体的な判断は専門家にご相談ください。
-      </div>
-    </div>
   </main>
 
   <nav class="bottom-nav" id="bottomNav">
     <button class="nav-btn active" data-screen="screenHome" id="navHome">
       <span class="icon">🏠</span>ホーム
-    </button>
-    <button class="nav-btn" data-screen="screenGuide" id="navGuide">
-      <span class="icon">📚</span>ガイド
     </button>
     <button class="nav-btn" data-screen="screenConsult" id="navConsult">
       <span class="icon">✍️</span>相談する
