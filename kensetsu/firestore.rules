@@ -122,8 +122,10 @@ service cloud.firestore {
 
     match /reports/{id} {
       allow create: if isAuth()
-        && request.resource.data.reporterId == request.auth.uid;
-      allow read, update: if isAdmin();
+        && request.resource.data.uid == request.auth.uid;
+      allow read: if isAuth()
+        && (request.auth.uid == resource.data.uid || isAdmin());
+      allow update: if isAdmin();
       allow delete: if false;
     }
 

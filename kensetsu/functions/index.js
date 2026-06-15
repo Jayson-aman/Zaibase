@@ -187,6 +187,14 @@ exports.getSoilJobs = envBizMatch.getSoilJobs;
 const invite = require("./invite");
 exports.redeemKensetsuLawyerInvite = invite.redeemKensetsuLawyerInvite;
 
+// ── コンテンツモデレーション ──────────────────────────────────────
+const moderation = require("./moderation");
+exports.checkContentModeration = moderation.checkContentModeration;
+exports.reportContent           = moderation.reportContent;
+exports.adminListReports        = moderation.adminListReports;
+exports.adminDeleteContent      = moderation.adminDeleteContent;
+exports.adminDismissReport      = moderation.adminDismissReport;
+
 // ── ユーティリティ ─────────────────────────────────────────────
 exports.health = onRequest((req, res) => {
   res.json({ ok: true, service: "zaibase-backend", time: new Date().toISOString() });
