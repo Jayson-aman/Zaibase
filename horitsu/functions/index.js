@@ -38,3 +38,7 @@ exports.getHoritsuRevenue              = revenue.getHoritsuRevenue;
 exports.grantGroupDiscount             = revenue.grantGroupDiscount;
 exports.listGroupDiscountApplications  = revenue.listGroupDiscountApplications;
 
+// ── 弁護士招待コード ──────────────────────────────────────────────
+const invite = require("./invite");
+exports.redeemLawyerInvite = invite.redeemLawyerInvite;
+

@@ -183,6 +183,10 @@ exports.recordEnvReferral = envBizMatch.recordEnvReferral;
 exports.saveSoilJob = envBizMatch.saveSoilJob;
 exports.getSoilJobs = envBizMatch.getSoilJobs;
 
+// ── 弁護士招待コード ──────────────────────────────────────────────
+const invite = require("./invite");
+exports.redeemKensetsuLawyerInvite = invite.redeemKensetsuLawyerInvite;
+
 // ── ユーティリティ ─────────────────────────────────────────────
 exports.health = onRequest((req, res) => {
   res.json({ ok: true, service: "zaibase-backend", time: new Date().toISOString() });

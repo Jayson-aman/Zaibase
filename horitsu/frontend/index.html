@@ -294,6 +294,69 @@
       body { background: linear-gradient(180deg, #5BC8F0 0%, #87D8F5 40%, #E0F6FF 100%); }
       .app-shell { margin-top: 20px; margin-bottom: 20px; min-height: calc(100vh - 40px); border-radius: 20px; overflow: hidden; }
     }
+
+    /* ── 管理者パネル ────────────────────────────────────────────── */
+    .admin-card {
+      border: 1.5px solid #FEF3C7;
+      border-radius: var(--radius);
+      padding: 14px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: border-color .15s;
+      background: #FFFBEB;
+    }
+    .admin-card:hover { border-color: var(--zb-amber); }
+    .admin-badge {
+      display: inline-block;
+      background: var(--zb-sky);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+    }
+
+    /* ── 招待コードモーダル ───────────────────────────────────────── */
+    #inviteModal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      background: rgba(0,0,0,.5);
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    #inviteModal.open { display: flex; }
+    .invite-box {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 24px;
+      width: 100%;
+      max-width: 360px;
+    }
+    .invite-box h3 { font-size:16px;font-weight:800;color:var(--zb-dark);margin-bottom:6px; }
+    .invite-box p  { font-size:12px;color:var(--zb-muted);margin-bottom:16px;line-height:1.6; }
+
+    /* ── 管理者返信モーダル ───────────────────────────────────────── */
+    #adminReplyModal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 310;
+      background: rgba(0,0,0,.5);
+      overflow-y: auto;
+      padding: 16px;
+    }
+    #adminReplyModal.open { display: block; }
+    .admin-reply-box {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 20px;
+      max-width: 480px;
+      margin: 20px auto;
+    }
   </style>
 </head>
 <body>
@@ -384,6 +447,9 @@
         <a href="#" onclick="event.preventDefault();showLegalScreen('sct')" style="color:var(--zb-muted);">特定商取引法</a>
         ・<a href="#" onclick="event.preventDefault();showLegalScreen('terms')" style="color:var(--zb-muted);">利用規約</a>
         ・<a href="#" onclick="event.preventDefault();showLegalScreen('privacy')" style="color:var(--zb-muted);">プライバシーポリシー</a>
+      </div>
+      <div style="text-align:center;margin-top:16px;">
+        <button id="openInviteModalBtn" style="background:none;border:none;color:#CBD5E1;font-size:11px;cursor:pointer;text-decoration:underline;">専門家・弁護士の方はこちら</button>
       </div>
     </div>
 
@@ -515,6 +581,16 @@
       <div id="detailContent"></div>
     </div>
 
+    <!-- 管理者パネル（弁護士専用） -->
+    <div class="screen" id="screenAdmin">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+        <div class="section-title" style="margin-bottom:0;">⚖️ 専門家管理画面</div>
+        <span class="admin-badge">弁護士専用</span>
+      </div>
+      <div style="font-size:12px;color:var(--zb-muted);margin-bottom:16px;">未回答の相談一覧です。タップして回答してください。</div>
+      <div id="adminConsultList"><div class="loading">読み込み中…</div></div>
+    </div>
+
   </main>
 
   <nav class="bottom-nav" id="bottomNav">
@@ -530,6 +606,9 @@
     <button class="nav-btn" data-screen="screenPlan" id="navPlan">
       <span class="icon">💳</span>プラン
     </button>
+    <button class="nav-btn" data-screen="screenAdmin" id="navAdmin" style="display:none;">
+      <span class="icon">⚖️</span>管理
+    </button>
   </nav>
 </div>
 
@@ -538,6 +617,47 @@
   <div style="max-width:480px;margin:0 auto;padding:20px 16px;">
     <button onclick="closeLegalScreen()" style="background:none;border:none;color:var(--zb-sky);font-size:14px;cursor:pointer;margin-bottom:12px;">← 戻る</button>
     <div id="legalContent"></div>
+  </div>
+</div>
+
+<!-- ── 招待コードモーダル ─────────────────────────────────────────── -->
+<div id="inviteModal">
+  <div class="invite-box">
+    <h3>⚖️ 専門家ログイン</h3>
+    <p>弁護士・社労士等の専門家の方は招待コードを入力してください。<br>コードは運営（info@zaibase.group）よりご案内しています。</p>
+    <div class="form-group">
+      <label>招待コード</label>
+      <input type="text" id="inviteCodeInput" placeholder="ZB-LEGAL-XXXX-XXXX-XXXX" autocomplete="off">
+    </div>
+    <button class="btn btn-primary" id="inviteSubmitBtn">認証する</button>
+    <button class="btn btn-secondary" id="inviteCancelBtn" style="margin-top:8px;">キャンセル</button>
+  </div>
+</div>
+
+<!-- ── 管理者返信モーダル ─────────────────────────────────────────── -->
+<div id="adminReplyModal">
+  <div class="admin-reply-box">
+    <button id="adminReplyCloseBtn" style="background:none;border:none;color:var(--zb-sky);font-size:14px;cursor:pointer;margin-bottom:12px;">← 戻る</button>
+    <div id="adminReplyConsultContent" style="margin-bottom:16px;"></div>
+    <div class="card" style="border-color:var(--zb-amber);">
+      <div class="card-title" style="color:var(--zb-amber);">✍️ 回答を入力</div>
+      <div class="form-group">
+        <label>回答内容 *</label>
+        <textarea id="adminReplyText" placeholder="専門家としての見解・アドバイスをご記入ください（10文字以上）" style="min-height:160px;"></textarea>
+      </div>
+      <div class="form-group">
+        <label>次のステップ（任意）</label>
+        <input type="text" id="adminNextSteps" placeholder="例：大阪労働局に相談されることをお勧めします">
+      </div>
+      <div class="form-group">
+        <label>ステータス</label>
+        <select id="adminReplyStatus">
+          <option value="replied">回答済み（replied）</option>
+          <option value="closed">クローズ（closed）</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" id="adminReplySendBtn">回答を送信</button>
+    </div>
   </div>
 </div>
 
@@ -572,12 +692,17 @@ const cancelHoritsuSub          = httpsCallable(fns, "cancelHoritsuSub");
 const submitHoritsuConsult      = httpsCallable(fns, "submitHoritsuConsult");
 const getMyHoritsuConsults      = httpsCallable(fns, "getMyHoritsuConsults");
 const markHoritsuConsultRead    = httpsCallable(fns, "markHoritsuConsultRead");
-const applyGroupDiscount        = httpsCallable(fns, "applyGroupDiscount");
+const applyGroupDiscount           = httpsCallable(fns, "applyGroupDiscount");
+const redeemLawyerInvite           = httpsCallable(fns, "redeemLawyerInvite");
+const adminListPendingConsults      = httpsCallable(fns, "adminListPendingConsults");
+const adminReplyHoritsuConsult      = httpsCallable(fns, "adminReplyHoritsuConsult");
 
 // ── 状態 ─────────────────────────────────────────────────────────
 let currentPlan = "free";
 let groupDiscount = false;
 let consults = [];
+let isAdmin = false;
+let adminConsultId = null;
 
 // ── UI ユーティリティ ─────────────────────────────────────────────
 function toast(msg, dur = 2800) {
@@ -629,11 +754,14 @@ onAuthStateChanged(auth, async (user) => {
     bottomNav.classList.add("active");
     headerUserBtn.style.display = "block";
     await loadPlan();
+    await checkAdminStatus();
   } else {
     loginScreen.style.display = "flex";
     appShell.style.display = "none";
     bottomNav.classList.remove("active");
     headerUserBtn.style.display = "none";
+    isAdmin = false;
+    document.getElementById("navAdmin").style.display = "none";
   }
 });
 
@@ -882,12 +1010,127 @@ document.getElementById("applyGroupDiscountBtn").addEventListener("click", async
   }
 });
 
+// ── 管理者ステータスチェック ──────────────────────────────────────
+async function checkAdminStatus() {
+  try {
+    const { getFirestore, doc, getDoc } = await import("https://www.gstatic.com/firebasejs/11.9.0/firebase-firestore.js");
+    const db = getFirestore(app);
+    const user = auth.currentUser;
+    if (!user) return;
+    const snap = await getDoc(doc(db, "admins", user.uid));
+    isAdmin = snap.exists();
+    document.getElementById("navAdmin").style.display = isAdmin ? "" : "none";
+  } catch (_) {}
+}
+
+// ── 招待コードモーダル ────────────────────────────────────────────
+document.getElementById("openInviteModalBtn").addEventListener("click", () => {
+  document.getElementById("inviteModal").classList.add("open");
+});
+document.getElementById("inviteCancelBtn").addEventListener("click", () => {
+  document.getElementById("inviteModal").classList.remove("open");
+});
+
+document.getElementById("inviteSubmitBtn").addEventListener("click", async () => {
+  const code = document.getElementById("inviteCodeInput").value.trim();
+  if (!code) { toast("招待コードを入力してください"); return; }
+  const btn = document.getElementById("inviteSubmitBtn");
+  btn.disabled = true;
+  btn.textContent = "確認中…";
+  try {
+    const res = await redeemLawyerInvite({ code });
+    const data = res.data;
+    document.getElementById("inviteModal").classList.remove("open");
+    toast("✅ " + data.message);
+    isAdmin = true;
+    document.getElementById("navAdmin").style.display = "";
+    showScreen("screenAdmin");
+    await loadAdminConsults();
+  } catch (e) {
+    toast("❌ " + (e.message || "コードが正しくありません"));
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "認証する";
+  }
+});
+
+// ── 管理者：未回答相談一覧 ────────────────────────────────────────
+async function loadAdminConsults() {
+  const list = document.getElementById("adminConsultList");
+  list.innerHTML = '<div class="loading">読み込み中…</div>';
+  try {
+    const res = await adminListPendingConsults();
+    const items = res.data.consults || [];
+    if (items.length === 0) {
+      list.innerHTML = '<div style="text-align:center;padding:40px;color:var(--zb-muted);">✅ 未回答の相談はありません</div>';
+      return;
+    }
+    list.innerHTML = `<div style="font-size:12px;color:var(--zb-muted);margin-bottom:10px;">未回答 ${items.length}件</div>` +
+      items.map(c => `
+        <div class="admin-card" onclick="openAdminReply('${c.id}','${escHtml(c.title)}','${escHtml(c.category)}','${escHtml(c.question)}','${c.plan}')">
+          <div style="font-size:11px;color:var(--zb-muted);margin-bottom:4px;">${c.category} · ${fmtDate(c.createdAt)} · <span class="plan-badge ${c.plan}">${c.plan}</span></div>
+          <div style="font-size:14px;font-weight:700;">${escHtml(c.title)}</div>
+          <div style="font-size:12px;color:#555;margin-top:6px;line-height:1.5;">${escHtml(c.question).slice(0, 80)}…</div>
+        </div>
+      `).join("");
+  } catch (e) {
+    list.innerHTML = `<div style="color:var(--zb-red);font-size:13px;">エラー: ${e.message}</div>`;
+  }
+}
+
+function escHtml(s) {
+  return String(s || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+}
+
+window.openAdminReply = function(id, title, category, question, plan) {
+  adminConsultId = id;
+  document.getElementById("adminReplyConsultContent").innerHTML = `
+    <div style="font-size:11px;color:var(--zb-muted);margin-bottom:4px;">${escHtml(category)} · <span class="plan-badge ${plan}">${plan}</span></div>
+    <div style="font-size:15px;font-weight:800;margin-bottom:8px;">${escHtml(title)}</div>
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-title">📝 相談内容</div>
+      <div style="font-size:13px;line-height:1.7;white-space:pre-wrap;">${escHtml(question)}</div>
+    </div>
+  `;
+  document.getElementById("adminReplyText").value = "";
+  document.getElementById("adminNextSteps").value = "";
+  document.getElementById("adminReplyStatus").value = "replied";
+  document.getElementById("adminReplyModal").classList.add("open");
+};
+
+document.getElementById("adminReplyCloseBtn").addEventListener("click", () => {
+  document.getElementById("adminReplyModal").classList.remove("open");
+});
+
+document.getElementById("adminReplySendBtn").addEventListener("click", async () => {
+  const reply     = document.getElementById("adminReplyText").value.trim();
+  const nextSteps = document.getElementById("adminNextSteps").value.trim();
+  const status    = document.getElementById("adminReplyStatus").value;
+  if (!reply || reply.length < 10) { toast("回答を10文字以上入力してください"); return; }
+
+  const btn = document.getElementById("adminReplySendBtn");
+  btn.disabled = true;
+  btn.textContent = "送信中…";
+  try {
+    await adminReplyHoritsuConsult({ consultId: adminConsultId, reply, nextSteps, status });
+    document.getElementById("adminReplyModal").classList.remove("open");
+    toast("✅ 回答を送信しました");
+    await loadAdminConsults();
+  } catch (e) {
+    toast("エラー: " + e.message);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "回答を送信";
+  }
+});
+
 // ── ナビゲーション ────────────────────────────────────────────────
 document.querySelectorAll(".nav-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     const screenId = btn.dataset.screen;
     showScreen(screenId);
     if (screenId === "screenHistory") loadHistory();
+    if (screenId === "screenAdmin") loadAdminConsults();
     if (screenId === "screenConsult") {
       document.getElementById("consultLimitMsg").style.display = "none";
     }
