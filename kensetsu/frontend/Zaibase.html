@@ -7660,11 +7660,37 @@ support@zaibase.jp</p>
           <button type="button" class="cm-pc-act" data-reply="${p.id}"><i class="ti ti-message-circle"></i> 返信</button>
           <button type="button" class="cm-pc-act${p.thanked ? ' thanked' : ''}" data-thanks="${p.id}"${p.thanked ? ' disabled' : ''}><i class="ti ti-heart-handshake"></i> ありがとう</button>
           <span style="margin-left:auto;font-size:11px;">${p.replies}件の返信</span>
+          <button type="button" class="cm-pc-act" data-cm-report="${p.id}" style="color:#e53935;margin-left:4px;" title="通報"><i class="ti ti-flag"></i></button>
         </div>
       </div>`).join('');
     list.querySelectorAll('[data-like]').forEach(btn => btn.addEventListener('click', () => cmToggleLike(btn.dataset.like)));
     list.querySelectorAll('[data-reply]').forEach(btn => btn.addEventListener('click', () => cmShowToast('返信画面（準備中）')));
     list.querySelectorAll('[data-thanks]').forEach(btn => btn.addEventListener('click', () => cmSendThanks(btn.dataset.thanks)));
+    list.querySelectorAll('[data-cm-report]').forEach(btn => btn.addEventListener('click', () => cmReportPost(btn.dataset.cmReport)));
+  }
+
+  async function cmReportPost(postId) {
+    const reasons = ['反社会的勢力・違法行為', '詐欺・スパム', '差別・ハラスメント', '虚偽の情報', 'その他'];
+    const reason = reasons[await new Promise(resolve => {
+      const overlay = document.createElement('div');
+      overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9999;display:flex;align-items:flex-end;justify-content:center;';
+      overlay.innerHTML = `<div style="background:#fff;border-radius:16px 16px 0 0;padding:20px;width:100%;max-width:480px;">
+        <div style="font-size:15px;font-weight:700;margin-bottom:12px;">🚨 通報理由を選択</div>
+        ${reasons.map((r, i) => `<button style="display:block;width:100%;text-align:left;padding:12px;border:1px solid #eee;border-radius:8px;margin-bottom:6px;font-size:13px;background:#fff;cursor:pointer;" data-idx="${i}">${r}</button>`).join('')}
+        <button style="display:block;width:100%;padding:12px;border:none;background:#f5f5f5;border-radius:8px;font-size:13px;cursor:pointer;margin-top:4px;" data-idx="-1">キャンセル</button>
+      </div>`;
+      overlay.querySelectorAll('button').forEach(b => b.onclick = () => { document.body.removeChild(overlay); resolve(parseInt(b.dataset.idx)); });
+      document.body.appendChild(overlay);
+    })];
+    if (reason < 0) return;
+    try {
+      const reportContentFn = httpsCallable(functions, 'reportContent');
+      await reportContentFn({ targetType: 'community', targetId: postId, reason: reasons[reason] });
+      cmShowToast('通報を受け付けました。ご協力ありがとうございます。');
+    } catch (e) {
+      if (e.code === 'functions/already-exists') cmShowToast('すでに通報済みです');
+      else cmShowToast('通報できませんでした: ' + e.message);
+    }
   }
 
   async function cmToggleLike(postId) {
