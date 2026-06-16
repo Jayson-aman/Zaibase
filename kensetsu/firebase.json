@@ -1,7 +1,7 @@
 {
   "hosting": {
     "public": "frontend",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**", "legal/**"],
     "headers": [
       {
         "source": "**",
@@ -18,10 +18,6 @@
       {
         "source": "/icons/**",
         "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, immutable" }]
-      },
-      {
-        "source": "/legal/**",
-        "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }]
       },
       {
         "source": "/manifest.json",
