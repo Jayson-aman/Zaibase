@@ -57,6 +57,38 @@ export default function ProgressScreen() {
   const overallPct =
     totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
 
+  const studiedSubjects = SUBJECTS.filter((s) => (progressData[s]?.total ?? 0) > 0);
+  const subjectPct = (s: SubjectKey) => {
+    const prog = progressData[s];
+    const total = prog?.total ?? 0;
+    return total > 0 ? Math.round(((prog?.correct ?? 0) / total) * 100) : 0;
+  };
+  const bestSubject = studiedSubjects.reduce<SubjectKey | null>(
+    (best, s) => (best == null || subjectPct(s) > subjectPct(best) ? s : best),
+    null
+  );
+  const worstSubject = studiedSubjects.reduce<SubjectKey | null>(
+    (worst, s) => (worst == null || subjectPct(s) < subjectPct(worst) ? s : worst),
+    null
+  );
+  const lastStudiedDates = studiedSubjects
+    .map((s) => progressData[s]?.lastStudied)
+    .filter((d): d is string => d != null)
+    .map((d) => new Date(d).getTime());
+  const mostRecentStudy = lastStudiedDates.length > 0 ? Math.max(...lastStudiedDates) : null;
+  const daysSinceStudy =
+    mostRecentStudy != null
+      ? Math.floor((Date.now() - mostRecentStudy) / (1000 * 60 * 60 * 24))
+      : null;
+  const engagementMessage =
+    daysSinceStudy == null
+      ? 'まだ学習を始めていません'
+      : daysSinceStudy === 0
+      ? '今日も学習しています！'
+      : daysSinceStudy <= 2
+      ? '順調に学習を続けています'
+      : `⚠️ ${daysSinceStudy}日間学習していません`;
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <ScrollView
@@ -86,6 +118,34 @@ export default function ProgressScreen() {
             />
           </View>
         </View>
+
+        {/* Parent report */}
+        {studiedSubjects.length > 0 && (
+          <View style={styles.reportCard}>
+            <Text style={styles.reportTitle}>保護者向けレポート</Text>
+            <Text style={styles.reportEngagement}>{engagementMessage}</Text>
+            <View style={styles.reportRow}>
+              {bestSubject != null && (
+                <View style={styles.reportItem}>
+                  <Text style={styles.reportItemLabel}>得意科目</Text>
+                  <Text style={styles.reportItemValue}>
+                    {subjectInfo[bestSubject].emoji} {subjectInfo[bestSubject].name}
+                  </Text>
+                  <Text style={styles.reportItemPct}>{subjectPct(bestSubject)}%</Text>
+                </View>
+              )}
+              {worstSubject != null && worstSubject !== bestSubject && (
+                <View style={styles.reportItem}>
+                  <Text style={styles.reportItemLabel}>要復習</Text>
+                  <Text style={styles.reportItemValue}>
+                    {subjectInfo[worstSubject].emoji} {subjectInfo[worstSubject].name}
+                  </Text>
+                  <Text style={styles.reportItemPct}>{subjectPct(worstSubject)}%</Text>
+                </View>
+              )}
+            </View>
+          </View>
+        )}
 
         {/* Per-subject progress */}
         <Text style={styles.sectionTitle}>科目別の成績</Text>
@@ -218,6 +278,58 @@ const styles = StyleSheet.create({
     height: '100%',
     backgroundColor: '#1E5FBE',
     borderRadius: 5,
+  },
+  reportCard: {
+    backgroundColor: '#FFFFFF',
+    marginHorizontal: 20,
+    marginTop: 16,
+    borderRadius: 16,
+    padding: 18,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.06,
+    shadowRadius: 6,
+    elevation: 3,
+  },
+  reportTitle: {
+    fontSize: 14,
+    fontWeight: '800',
+    color: '#1A1A2E',
+    marginBottom: 6,
+  },
+  reportEngagement: {
+    fontSize: 13,
+    color: '#555',
+    fontWeight: '600',
+    marginBottom: 14,
+  },
+  reportRow: {
+    flexDirection: 'row',
+    gap: 12,
+  },
+  reportItem: {
+    flex: 1,
+    backgroundColor: '#F5F7FA',
+    borderRadius: 12,
+    padding: 12,
+    alignItems: 'center',
+  },
+  reportItemLabel: {
+    fontSize: 11,
+    color: '#888',
+    fontWeight: '700',
+    marginBottom: 4,
+  },
+  reportItemValue: {
+    fontSize: 14,
+    fontWeight: '800',
+    color: '#1A1A2E',
+    marginBottom: 2,
+  },
+  reportItemPct: {
+    fontSize: 16,
+    fontWeight: '900',
+    color: '#1E5FBE',
   },
   sectionTitle: {
     fontSize: 17,
