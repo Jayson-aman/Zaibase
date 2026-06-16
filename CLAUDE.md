@@ -9,7 +9,7 @@
 | Zaibase法律相談（Cloud Run版・本番） | 別リポジトリ（~/Documents/GitHub/Zaibase法律相談） | https://3vfa-an.a.run.app | Cursor |
 | 中学受験対策 ahiru | jayson-aman/zaibase (ahiru/)（旧 jayson-aman/ahiru は統合元として残存） | https://exam.zaibase.group | Claude Code |
 | Zaibase Group 会社サイト | jayson-aman/zaibase.group | https://www.zaibase.group | Cursor |
-| Zaibase証券（仮） | jayson-aman/miyabi-securities-app（非公開・このリポジトリ未統合。旧 miyabi-securities はアーカイブ済み） | 未定 | Cursor |
+| Zaibase証券（仮） | jayson-aman/miyabi-securities-app（公開・このリポジトリ未統合。旧 miyabi-securities はアーカイブ済み。Streamlit製AI金融分析ダッシュボード：ニュース・要人発言・軍事動向のAI分析でFX・先物・株式・暗号資産・新興テーマ株の値動きを予測。Python100%、Yahoo Finance/Google Newsがデータ元、教育目的・投資助言ではないと明記） | 未定 | Cursor |
 | Zaibase物販（仮） | jayson-aman/eBay-export-profit-dashboard（公開・このリポジトリ未統合） | 未定（Streamlit Community Cloudでデプロイ） | Cursor |
 
 ## プロジェクト構成（このリポジトリ）
@@ -78,6 +78,7 @@ Zaibase/
 ahiruのRevenueCat課金が最優先のため、以下は着手前のアイデア段階。優先順位は決めていない。
 
 - FX口座開設アフィリエイト：ASP（A8.net／afb／バリューコマース／アクセストレード）経由でGMOクリック証券等と提携。成果報酬は口座開設1件あたり1万円程度（クリック課金ではなく成果報酬型）。金融商品取引法上、利益を保証する表現は不可。
+  - **`miyabi-securities-app`（Zaibase証券・AI金融分析ダッシュボード）との組み合わせが本命**：AI予測を見たユーザーがそのままFX口座開設に流れる導線を作れる。ただし「このAIが勝つと言っている／だから今すぐ口座開設」のような誘導は、教育目的の免責と矛盾し、投資助言業の規制（金融商品取引法）に抵触するリスクがあるため、予測コンテンツとアフィリエイト導線は明確に分離して表現する必要がある。
 - ahiru：参考書・問題集のAmazonアソシエイトリンク設置
 - kensetsu：保険・リフォーム業者の紹介料
 - horitsu：弁護士紹介料（既存ルールの通り、弁護士法72条の確認が取れるまで保留）
