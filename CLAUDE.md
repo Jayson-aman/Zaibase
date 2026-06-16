@@ -9,6 +9,8 @@
 | Zaibase法律相談（Cloud Run版・本番） | 別リポジトリ（~/Documents/GitHub/Zaibase法律相談） | https://3vfa-an.a.run.app | Cursor |
 | 中学受験対策 ahiru | jayson-aman/ahiru | https://exam.zaibase.group | Cursor |
 | Zaibase Group 会社サイト | jayson-aman/zaibase.group | https://www.zaibase.group | Cursor |
+| Zaibase証券（仮） | 未定（Cursorで構築中・枠のみ） | 未定 | Cursor |
+| Zaibase物販（仮） | 未定（Cursorで構築中・枠のみ） | 未定 | Cursor |
 
 ## プロジェクト構成（このリポジトリ）
 
@@ -47,6 +49,7 @@ Zaibase/
 | ahiru（受験）の機能追加 | **Cursor** |
 | Cloud Run版法律相談の機能追加 | **Cursor** |
 | 会社サイト（zaibase.group）の更新 | **Cursor** |
+| 証券・物販（構築中）の機能追加 | **Cursor**（リポジトリ確定後にここへ追記） |
 | デプロイ・GitHub管理 | **Claude Code（ここ）** |
 
 ## メール・クレーム対応
