@@ -313,7 +313,7 @@ exports.disputeEscrow = onCall(
     });
 
     await db.collection("mail").add({
-      to: "admin@zaibase.jp",
+      to: "info@zaibase.group",
       message: {
         subject: `【要対応】エスクロー紛争 ${contractId}`,
         html: `
@@ -358,8 +358,8 @@ exports.createStripeOnboarding = onCall(
 
     const accountLink = await stripe.accountLinks.create({
       account: stripeAccountId,
-      refresh_url: "https://zaibase.jp/stripe/refresh",
-      return_url: "https://zaibase.jp/stripe/complete",
+      refresh_url: "https://zaisai-share.web.app/app",
+      return_url: "https://zaisai-share.web.app/app",
       type: "account_onboarding",
     });
 

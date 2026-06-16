@@ -99,7 +99,7 @@ function buildMessages(contractId, c, alert, diffDays) {
       break;
     case "LATE_7":
       msgs.push({
-        email: "admin@zaibase.jp",
+        email: "info@zaibase.group",
         subject: `【管理者】支払7日超過 ${contractId}`,
         html: emailHtml("管理者エスカレーション",
           `<p>契約ID: ${contractId}</p>

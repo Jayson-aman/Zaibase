@@ -244,7 +244,7 @@ def generate_contract(cd: dict, output_path: str) -> str:
     pdf.hr(thick=0.3)
     pdf.set_jp(7.5)
     pdf.set_text_color(*COLOR_MUTED)
-    url = cd.get("zaibase_contract_url", f"https://zaibase.jp/contracts/{cd['contract_id']}")
+    url = cd.get("zaibase_contract_url", f"https://zaisai-share.web.app/app/contracts/{cd['contract_id']}")
     pdf.cell(0, 5, f"本契約書はZaibaseが自動生成。案件URL：{url}", ln=True)
     pdf.cell(0, 5,
         "準拠法令：建設業法第19条・第22条 ／ フリーランス保護法 ／ 職業安定法 ／ 労働者派遣法",

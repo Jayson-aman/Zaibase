@@ -242,7 +242,7 @@ async function send30DayNotice(uid, profile, stats) {
         <tr><td style="color:#666;">月払い継続</td><td style="text-align:right;">¥${planPrice.toLocaleString()} × 12 = ¥${(planPrice * 12).toLocaleString()}</td></tr>
         <tr><td style="color:#1a73e8;font-weight:bold;">年払いに切り替え</td><td style="text-align:right;color:#1a73e8;font-weight:bold;">¥${yearPrice.toLocaleString()}（¥${saving.toLocaleString()} お得）</td></tr>
       </table>
-      <a href="https://zaibase.jp/settings/billing?utm_source=churn30" style="display:inline-block;margin-top:12px;background:#1a3c5e;color:#fff;padding:10px 20px;border-radius:6px;text-decoration:none;font-size:14px;">年払いに切り替える</a>
+      <a href="https://zaisai-share.web.app/app?utm_source=churn30" style="display:inline-block;margin-top:12px;background:#1a3c5e;color:#fff;padding:10px 20px;border-radius:6px;text-decoration:none;font-size:14px;">年払いに切り替える</a>
     </div>
     <p style="color:#888;font-size:12px;">Zaibase株式会社</p>
   </div>
@@ -308,7 +308,7 @@ async function send7DayNotice(uid, profile, stats) {
         <div style="display:flex;justify-content:space-between;padding:4px 0;border-top:1px solid #eee;margin-top:4px;"><span style="font-weight:bold;">プラン継続の実質メリット</span><strong style="color:#1d9e75;">+¥${fmtNum(Math.abs(netSaving))}/月</strong></div>
       </div>
     </div>
-    <a href="https://zaibase.jp/settings/billing?utm_source=churn7" style="display:block;text-align:center;background:#1a3c5e;color:#fff;padding:14px;border-radius:6px;text-decoration:none;font-weight:bold;">プランを継続する</a>
+    <a href="https://zaisai-share.web.app/app?utm_source=churn7" style="display:block;text-align:center;background:#1a3c5e;color:#fff;padding:14px;border-radius:6px;text-decoration:none;font-weight:bold;">プランを継続する</a>
     <p style="color:#888;font-size:12px;margin-top:16px;">Zaibase株式会社</p>
   </div>
 </div>`,
@@ -347,8 +347,8 @@ async function sendCancellationEmail(uid, profile) {
       <p style="font-weight:bold;margin:0 0 6px;color:#1a3c5e;">GPS記録（${stats.gpsLogDays}日分）とCCUS実績はそのまま保存されています</p>
       <p style="color:#555;font-size:13px;margin:0;">再加入後すぐに続きをご利用いただけます。</p>
     </div>
-    <a href="https://zaibase.jp/upgrade?utm_source=cancellation" style="display:block;text-align:center;background:#f5f7fa;color:#1a3c5e;padding:12px;border-radius:6px;text-decoration:none;border:1px solid #ddd;">再加入はこちら（30秒で完了）</a>
-    <p style="color:#888;font-size:12px;margin-top:16px;">Zaibase株式会社 · support@zaibase.jp</p>
+    <a href="https://zaisai-share.web.app/app?utm_source=cancellation" style="display:block;text-align:center;background:#f5f7fa;color:#1a3c5e;padding:12px;border-radius:6px;text-decoration:none;border:1px solid #ddd;">再加入はこちら（30秒で完了）</a>
+    <p style="color:#888;font-size:12px;margin-top:16px;">Zaibase株式会社 · info@zaibase.group</p>
   </div>
 </div>`,
     },

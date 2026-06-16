@@ -87,7 +87,7 @@ Muted:    #64748B
 
 - 運営：南條 雅哉 / Zaibase Group
 - 住所：〒543-0071 大阪府大阪市天王寺区筆ヶ崎町6-12-1701
-- メール：support@zaibase.jp
+- メール：info@zaibase.group（`zaibase.jp` は未取得のため使用不可）
 - 電話：請求があった場合に遅滞なく開示（特定商取引法対応）
 
 ## Firebase プロジェクト
