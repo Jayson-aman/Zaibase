@@ -7,15 +7,22 @@ import {
   SafeAreaView,
   TouchableOpacity,
   Alert,
+  ActivityIndicator,
 } from 'react-native';
 import { useFocusEffect } from 'expo-router';
 import { loadProgress, resetProgress, ProgressData } from '../../store/progress';
-import { subjectInfo, SubjectKey } from '../../data/questions';
+import { questionsBySubject, subjectInfo, SubjectKey } from '../../data/questions';
+import { useMaxGate } from '../../hooks/useMaxGate';
+import { getWeakPointCoaching } from '../../services/aiCoach';
+import Paywall from '../../components/Paywall';
 
 const SUBJECTS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
 
 export default function ProgressScreen() {
   const [progressData, setProgressData] = useState<ProgressData>({});
+  const { paywallVisible, setPaywallVisible, requireMax } = useMaxGate();
+  const [coachLoading, setCoachLoading] = useState(false);
+  const [coachAdvice, setCoachAdvice] = useState<string | null>(null);
 
   async function fetchProgress() {
     const data = await loadProgress();
@@ -44,6 +51,35 @@ export default function ProgressScreen() {
         },
       ]
     );
+  }
+
+  function handleAskCoach(subjectKey: SubjectKey) {
+    requireMax(async () => {
+      const wrongIds = progressData[subjectKey]?.wrongQuestionIds ?? [];
+      const items = wrongIds
+        .map((id) => questionsBySubject[subjectKey].find((q) => q.id === id))
+        .filter((q): q is NonNullable<typeof q> => q != null)
+        .map((q) => ({ question: q.question, answer: q.answer }));
+
+      if (items.length === 0) {
+        Alert.alert(
+          'まだデータがありません',
+          'もう少し問題に挑戦すると、AIコーチが弱点を分析できるようになります。'
+        );
+        return;
+      }
+
+      setCoachLoading(true);
+      setCoachAdvice(null);
+      try {
+        const advice = await getWeakPointCoaching(subjectInfo[subjectKey].name, items);
+        setCoachAdvice(advice);
+      } catch {
+        Alert.alert('エラー', 'AIコーチの呼び出しに失敗しました。もう一度お試しください。');
+      } finally {
+        setCoachLoading(false);
+      }
+    });
   }
 
   const totalCorrect = SUBJECTS.reduce(
@@ -144,6 +180,30 @@ export default function ProgressScreen() {
                 </View>
               )}
             </View>
+
+            {worstSubject != null && (
+              <View style={styles.coachSection}>
+                <TouchableOpacity
+                  style={styles.coachButton}
+                  onPress={() => handleAskCoach(worstSubject)}
+                  activeOpacity={0.85}
+                  disabled={coachLoading}
+                >
+                  {coachLoading ? (
+                    <ActivityIndicator color="#FFFFFF" />
+                  ) : (
+                    <Text style={styles.coachButtonText}>
+                      🤖 AIコーチに{subjectInfo[worstSubject].name}の弱点を相談する
+                    </Text>
+                  )}
+                </TouchableOpacity>
+                {coachAdvice != null && (
+                  <View style={styles.coachAdviceBox}>
+                    <Text style={styles.coachAdviceText}>{coachAdvice}</Text>
+                  </View>
+                )}
+              </View>
+            )}
           </View>
         )}
 
@@ -199,6 +259,12 @@ export default function ProgressScreen() {
           <Text style={styles.resetText}>🗑️ 学習記録をリセット</Text>
         </TouchableOpacity>
       </ScrollView>
+
+      <Paywall
+        visible={paywallVisible}
+        onClose={() => setPaywallVisible(false)}
+        onPurchased={() => setPaywallVisible(false)}
+      />
     </SafeAreaView>
   );
 }
@@ -330,6 +396,34 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '900',
     color: '#1E5FBE',
+  },
+  coachSection: {
+    marginTop: 14,
+  },
+  coachButton: {
+    backgroundColor: '#9B59B6',
+    borderRadius: 14,
+    paddingVertical: 14,
+    alignItems: 'center',
+  },
+  coachButtonText: {
+    fontSize: 14,
+    fontWeight: '800',
+    color: '#FFFFFF',
+  },
+  coachAdviceBox: {
+    backgroundColor: '#F5F0FA',
+    borderRadius: 12,
+    padding: 14,
+    marginTop: 12,
+    borderWidth: 1,
+    borderColor: '#E5D5F0',
+  },
+  coachAdviceText: {
+    fontSize: 14,
+    color: '#3A2D4A',
+    fontWeight: '500',
+    lineHeight: 21,
   },
   sectionTitle: {
     fontSize: 17,

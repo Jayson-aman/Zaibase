@@ -53,6 +53,7 @@ export default function QuizScreen() {
   const [revealed, setRevealed] = useState(false);
   const [finished, setFinished] = useState(false);
   const [savedProgress, setSavedProgress] = useState(false);
+  const [wrongIds, setWrongIds] = useState<string[]>([]);
 
   const currentQuestion = questions[currentIndex];
   const total = questions.length;
@@ -64,17 +65,20 @@ export default function QuizScreen() {
 
   async function handleAnswer(correct: boolean) {
     const newScore = correct ? score + 1 : score;
+    const newWrongIds = correct ? wrongIds : [...wrongIds, currentQuestion.id];
 
     if (currentIndex + 1 >= total) {
       // Last question - save progress and show results
       if (!savedProgress) {
         setSavedProgress(true);
-        await saveProgress(subjectKey, newScore, total);
+        await saveProgress(subjectKey, newScore, total, newWrongIds);
       }
       setScore(newScore);
+      setWrongIds(newWrongIds);
       setFinished(true);
     } else {
       setScore(newScore);
+      setWrongIds(newWrongIds);
       setCurrentIndex((i) => i + 1);
       setRevealed(false);
     }
@@ -86,6 +90,7 @@ export default function QuizScreen() {
     setRevealed(false);
     setFinished(false);
     setSavedProgress(false);
+    setWrongIds([]);
   }
 
   if (questions.length === 0) {

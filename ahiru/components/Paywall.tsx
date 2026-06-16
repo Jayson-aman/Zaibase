@@ -16,7 +16,7 @@ import {
   purchasePackage,
   restorePurchases,
 } from '../services/subscription';
-import { PRO_FEATURES } from '../constants/proAccess';
+import { PRO_FEATURES, MAX_FEATURES } from '../constants/proAccess';
 
 interface Props {
   visible: boolean;
@@ -28,16 +28,16 @@ const PLANS = [
   {
     id: 'pro',
     name: 'Pro',
-    fallbackPrice: '¥480/月',
+    fallbackPrice: '¥980/月',
     color: '#9B59B6',
     features: [...PRO_FEATURES],
   },
   {
     id: 'max',
     name: 'Max',
-    fallbackPrice: '¥980/月',
+    fallbackPrice: '¥1,980/月',
     color: '#E74C3C',
-    features: [...PRO_FEATURES, '🔊 高音質AI音声（近日公開）'],
+    features: [...PRO_FEATURES, ...MAX_FEATURES],
   },
 ] as const;
 
