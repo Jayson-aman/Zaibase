@@ -9,8 +9,8 @@
 | Zaibase法律相談（Cloud Run版・本番） | 別リポジトリ（~/Documents/GitHub/Zaibase法律相談） | https://3vfa-an.a.run.app | Cursor |
 | 中学受験対策 ahiru | jayson-aman/zaibase (ahiru/)（旧 jayson-aman/ahiru は統合元として残存） | https://exam.zaibase.group | Claude Code |
 | Zaibase Group 会社サイト | jayson-aman/zaibase.group | https://www.zaibase.group | Cursor |
-| Zaibase証券（仮） | 未定（Cursorで構築中・枠のみ） | 未定 | Cursor |
-| Zaibase物販（仮） | 未定（Cursorで構築中・枠のみ） | 未定 | Cursor |
+| Zaibase証券（仮） | jayson-aman/miyabi-securities-app（非公開・このリポジトリ未統合。旧 miyabi-securities はアーカイブ済み） | 未定 | Cursor |
+| Zaibase物販（仮） | jayson-aman/eBay-export-profit-dashboard（公開・このリポジトリ未統合） | 未定（Streamlit Community Cloudでデプロイ） | Cursor |
 
 ## プロジェクト構成（このリポジトリ）
 
