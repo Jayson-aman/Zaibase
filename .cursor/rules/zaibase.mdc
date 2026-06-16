@@ -1,0 +1,22 @@
+---
+description: Zaibase Group プロジェクトの全体ルール（必読）
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+作業を始める前に、リポジトリルートの `CLAUDE.md` を必ず読んでください。
+このファイルには以下が書かれています。
+
+- Zaibase Group の全プロダクト一覧（建設・法律相談・受験・会社サイト）とURL
+- どのプロダクトをどのツール（Claude Code / Cursor）が担当しているか
+- kensetsu（建設）と horitsu（法律相談）を混ぜてはいけないという制約
+- Cloud Functions のルール（v2 / enforceAppCheck: true / region: asia-northeast1）
+- デザインパレット（青空色）
+- 弁護士招待コードなど機密情報の取り扱い
+- 事業者情報・Stripeプラン・Firebaseプロジェクト対応表
+
+`CLAUDE.md` の内容と矛盾する変更を行わないこと。
+このリポジトリ（jayson-aman/zaibase）内で作業する場合、`CLAUDE.md` の「ツール別担当まとめ」表に従い、担当外のプロダクトを誤って編集しないよう注意すること。
+
+`CLAUDE.md` を更新する変更を行った場合は、Claude Code 側にも矛盾が出ないよう、変更内容をコミットメッセージに明記すること。
