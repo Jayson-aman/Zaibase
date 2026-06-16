@@ -3,6 +3,7 @@ node_modules/
 # 環境変数・秘密情報（絶対にコミットしない）
 .env
 .env.*
+!**/.env.example
 *.key
 serviceAccount*.json
 firebase-debug.log
