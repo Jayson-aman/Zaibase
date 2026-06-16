@@ -62,9 +62,16 @@ Zaibase/
 - jayson-aman/ahiru（公開リポジトリ）から `git clone` でコード取得 → `ahiru/` 配下にGit履歴なしで統合済み。秘密情報（`.env`等）は元リポジトリに含まれておらず、持ち込みなし。
 - 旧 jayson-aman/ahiru リポジトリはこのまま残存（履歴保持用）。今後の開発はこのリポジトリの `ahiru/` でのみ行う。
 - **課金はStripeではなくRevenueCat**（`ahiru/services/subscription.ts`）：iOS/Androidのネイティブアプリ内課金（App Store/Google Play IAP）をRevenueCat経由で利用する構成。`.env.example` のRevenueCatキーはまだプレースホルダーのため、本番キー（`EXPO_PUBLIC_RC_API_KEY_IOS` / `_ANDROID`）とApp Store Connect/Google Play Console側の商品設定が未着手。
-- **要対応（Vercel）**：Web版はVercelでデプロイ（`ahiru/vercel.json`）。元のVercelプロジェクトが旧 jayson-aman/ahiru リポジトリに連携されている場合、デプロイ元をこのリポジトリに変更し、Root Directoryを `ahiru` に設定する必要がある（未設定のままだと旧リポジトリへのpushがないため自動デプロイが止まる）。
+- **Vercel連携：完了（2026/6/16）**：VercelプロジェクトのGitHub App権限を許可 → Connected Git Repositoryをこのリポジトリ（Jayson-aman/Zaibase）に変更 → Root Directoryを `ahiru` に設定 → `main` への統合コミット反映後、Production環境へのデプロイ成功を確認済み。
 - **要確認**：Claude Code on the web に jayson-aman/ahiru 単体の別セッション（「受験」、Vercelデプロイ待ち状態）が残っている場合、この統合後は重複作業になるため終了・整理する。
+- **現在の最優先タスク（2026/6/16時点・収益化優先）**：受験アプリのRevenueCat課金を有効化する。必要な3つのアカウント（RevenueCat／Apple Developer Program／Google Play Console）はいずれも未作成のため、Claude Codeがステップバイステップで作成・設定を案内中。コードは`services/subscription.ts`・`constants/proAccess.ts`に実装済みでプレースホルダーキーの差し替えのみで動く想定。
 - 残タスク：ログイン方式の検討、既存の建設・法律相談と同様の監視・自動化フローへの組み込み。
+
+## 司令塔AI（複数プロダクト横断監督）— 保留中
+
+- 構想：建設・法律相談・受験（・将来の証券・物販）を横断的にチェックするAI（Claude Agent SDK / Managed Agentsの`multiagent`構成を想定）。
+- コスト：固定費ではなくAnthropic APIの従量課金。1日1回程度の軽いチェックなら月数千円規模、頻度や読ませる情報量が増えると数万円規模になり得る。
+- **2026/6/16判断**：収益化（受験アプリのRevenueCat課金）が先に必要なため、司令塔AIの構築は保留。受験アプリの課金が稼働してから着手する。
 
 ## メール・クレーム対応
 
