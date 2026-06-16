@@ -35,6 +35,9 @@ Zaibase/
 - **kensetsu（建設）** と **horitsu（法律相談）** は別プロダクト・別Firebase
 - 法律関連コンテンツ → kensetsu に入れる（法律相談SPAではない）
 - 決済・Auth・Firestore は各プロジェクト独立
+- horitsu の `applyGroupDiscount`（建設プロプラン会員→法律相談¥1,000引き、`horitsu/functions/subscription.js`）は、弁護士法72条（周旋・紹介規制）の確認が取れるまで管理者承認（`groupDiscountGranted`）しない
+- zaibase.group・法律相談（Cloud Run版）に「建設のトラブルはそのまま法律相談へ」等、建設と法律相談を商業的に誘導する文言を入れない
+- 詳細は `docs/group/legal-compliance-addendum.md` 参照
 
 ## ツール別担当まとめ
 
