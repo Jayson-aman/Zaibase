@@ -25,7 +25,3 @@ export const MAX_FEATURES = [
   '🤖 AI弱点コーチ（間違えた問題からAIが復習アドバイス）',
 ] as const;
 
-/** Max が追加で使える機能 */
-export const MAX_FEATURES = [
-  '🤖 AI弱点コーチ（間違えた問題からAIが復習アドバイス）',
-] as const;

@@ -71,7 +71,7 @@ const FEATURES = [
     desc: '問題と解答を音声で読み上げ。\n通学中・就寝前でも学習できる。',
     tag: 'PRO',
     tagColor: '#9B59B6',
-    image: require('../../assets/images/feature-listen.png') as number,
+    image: require('../assets/images/feature-listen.png') as number,
   },
   {
     icon: '🤖',
@@ -79,7 +79,7 @@ const FEATURES = [
     desc: '間違えた問題をAIが分析。\n苦手単元と復習ポイントをアドバイス。',
     tag: 'MAX',
     tagColor: C.red,
-    image: require('../../assets/images/feature-ai.png') as number,
+    image: require('../assets/images/feature-ai.png') as number,
   },
   {
     icon: '🏆',
@@ -87,7 +87,7 @@ const FEATURES = [
     desc: '全利用者の中での自分の順位を表示。\n上位10%・TOP100バッジ獲得を目指す。',
     tag: '全員',
     tagColor: C.gold,
-    image: require('../../assets/images/feature-ranking.png') as number,
+    image: require('../assets/images/feature-ranking.png') as number,
   },
   {
     icon: '📊',
@@ -95,7 +95,7 @@ const FEATURES = [
     desc: '得意科目・苦手科目を一目で把握。\n保護者向けレポートも自動生成。',
     tag: '全員',
     tagColor: C.navy,
-    image: require('../../assets/mascots/mascot-home.png') as number,
+    image: require('../assets/mascots/mascot-home.png') as number,
   },
 ];
 
@@ -138,12 +138,9 @@ export default function LandingPage() {
         <View style={styles.nav}>
           <View style={styles.navLogoWrap}>
             <Text style={styles.navLogoZ}>Z</Text>
-            <View style={styles.navLogoTextWrap}>
-              <Text style={styles.navLogoMain}>
-                aibase<Text style={styles.navLogoDot}>.</Text>Group
-              </Text>
-              <Text style={styles.navLogoSub}>中学受験対策</Text>
-            </View>
+            <Text style={styles.navLogoMain}>
+              aibase<Text style={styles.navLogoDot}>.</Text>Group
+            </Text>
           </View>
           <TouchableOpacity style={styles.navCta} onPress={handleStart} activeOpacity={0.85}>
             <Text style={styles.navCtaText}>無料で始める</Text>
@@ -447,33 +444,24 @@ const styles = StyleSheet.create({
   navLogoWrap: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 6,
+    gap: 4,
   },
   navLogoZ: {
-    fontSize: 42,
+    fontSize: 52,
     fontWeight: '900',
-    color: C.navy,
-    lineHeight: 46,
+    color: C.navyDark,
+    lineHeight: 56,
     letterSpacing: -2,
-  },
-  navLogoTextWrap: {
-    flexDirection: 'column',
-    justifyContent: 'center',
+    fontStyle: 'italic',
   },
   navLogoMain: {
-    fontSize: 18,
+    fontSize: 26,
     fontWeight: '900',
-    color: C.navy,
+    color: C.navyDark,
     letterSpacing: 0.3,
   },
   navLogoDot: {
-    color: C.red,
-  },
-  navLogoSub: {
-    fontSize: 11,
-    fontWeight: '700',
-    color: C.textLight,
-    letterSpacing: 0.5,
+    color: C.navyDark,
   },
   navCta: {
     backgroundColor: C.navy,
