@@ -131,10 +131,15 @@ export default function LandingPage() {
       >
         {/* ── ヘッダーナビ ── */}
         <View style={styles.nav}>
-          <Text style={styles.navLogo}>
-            <Text style={styles.navLogoN}>N</Text>
-            <Text style={styles.navLogoRest}> 中学受験対策</Text>
-          </Text>
+          <View style={styles.navLogoWrap}>
+            <Text style={styles.navLogoZ}>Z</Text>
+            <View style={styles.navLogoTextWrap}>
+              <Text style={styles.navLogoMain}>
+                aibase<Text style={styles.navLogoDot}>.</Text>Group
+              </Text>
+              <Text style={styles.navLogoSub}>中学受験対策</Text>
+            </View>
+          </View>
           <TouchableOpacity style={styles.navCta} onPress={handleStart} activeOpacity={0.85}>
             <Text style={styles.navCtaText}>無料で始める</Text>
           </TouchableOpacity>
@@ -145,12 +150,12 @@ export default function LandingPage() {
           <View style={styles.heroTag}>
             <Text style={styles.heroTagText}>2026年度入試対応</Text>
           </View>
-          <Text style={styles.heroTitle}>
-            {'合格への\n正攻法を、\nここに。'}
+          <Text style={styles.heroTitle} adjustsFontSizeToFit numberOfLines={1}>
+            合格への正攻法を、ここに。
           </Text>
           <Text style={styles.heroSub}>
             算数・国語・理科・社会・英語{'\n'}
-            5科目 300問以上の一問一答と{'\n'}
+            5科目 830問以上 × 18校学校別コース{'\n'}
             AI弱点コーチで最難関中学を目指す。
           </Text>
 
@@ -162,7 +167,7 @@ export default function LandingPage() {
           {/* 実績バー */}
           <View style={styles.heroStats}>
             <View style={styles.heroStat}>
-              <Text style={styles.heroStatNum}>300<Text style={styles.heroStatUnit}>問</Text></Text>
+              <Text style={styles.heroStatNum}>830<Text style={styles.heroStatUnit}>問</Text></Text>
               <Text style={styles.heroStatLabel}>問題数</Text>
             </View>
             <View style={styles.heroStatDiv} />
@@ -392,7 +397,7 @@ export default function LandingPage() {
         {/* フッター */}
         <View style={styles.footer}>
           <Text style={styles.footerLogo}>
-            <Text style={{ color: C.red, fontWeight: '900' }}>N</Text> 中学受験対策
+            <Text style={{ color: '#7BA7DC', fontWeight: '900' }}>Zaibase.Group</Text> 中学受験対策
           </Text>
           <Text style={styles.footerText}>運営: 南條 雅哉 / Zaibase Group</Text>
           <Text style={styles.footerText}>info@zaibase.group</Text>
@@ -419,9 +424,37 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: C.grayBorder,
   },
-  navLogo: { fontSize: 20, fontWeight: '900', color: C.navy },
-  navLogoN: { fontSize: 26, color: C.red, fontWeight: '900' },
-  navLogoRest: { color: C.navy, fontSize: 18 },
+  navLogoWrap: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
+  navLogoZ: {
+    fontSize: 42,
+    fontWeight: '900',
+    color: C.navy,
+    lineHeight: 46,
+    letterSpacing: -2,
+  },
+  navLogoTextWrap: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
+  navLogoMain: {
+    fontSize: 18,
+    fontWeight: '900',
+    color: C.navy,
+    letterSpacing: 0.3,
+  },
+  navLogoDot: {
+    color: C.red,
+  },
+  navLogoSub: {
+    fontSize: 11,
+    fontWeight: '700',
+    color: C.textLight,
+    letterSpacing: 0.5,
+  },
   navCta: {
     backgroundColor: C.navy,
     paddingHorizontal: 18,
@@ -449,12 +482,13 @@ const styles = StyleSheet.create({
   },
   heroTagText: { color: C.white, fontSize: 14, fontWeight: '800', letterSpacing: 1 },
   heroTitle: {
-    fontSize: 52,
+    fontSize: 44,
     fontWeight: '900',
     color: C.navyDark,
-    lineHeight: 64,
+    lineHeight: 52,
     marginBottom: 20,
     letterSpacing: -1,
+    includeFontPadding: false,
   },
   heroSub: {
     fontSize: 20,
