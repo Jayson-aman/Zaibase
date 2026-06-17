@@ -2,8 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Animated } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { SubjectKey, subjectInfo } from '../data/questions';
-import { mascots } from '../data/images';
-import AnimatedMascot from './AnimatedMascot';
+import SubjectScene from './SubjectScene';
 
 type Props = {
   subject: SubjectKey;
@@ -72,13 +71,7 @@ export default function SubjectCard({ subject, onPress, questionCount }: Props) 
         style={styles.card}
       >
         <View style={styles.mascotArea}>
-          <AnimatedMascot
-            source={mascots[subject]}
-            style={styles.mascotImage}
-            fallbackEmoji={info.emoji}
-            animation="float"
-            accessibilityLabel={`${info.name}のキャラクター`}
-          />
+          <SubjectScene subject={subject} />
         </View>
 
         <View style={styles.sceneRow}>
@@ -129,10 +122,6 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     overflow: 'hidden',
     marginBottom: 6,
-  },
-  mascotImage: {
-    width: '100%',
-    height: '100%',
   },
   sceneRow: {
     flexDirection: 'row',
