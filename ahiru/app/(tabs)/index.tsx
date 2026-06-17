@@ -472,7 +472,7 @@ export default function HomeScreen() {
             activeOpacity={0.85}
           >
             <Text style={styles.dailyBtnText}>
-              🔥 今日（{todayLabel}曜日）のMAX日替わり30問
+              🔥 今日（{todayLabel}）のMAX日替わり30問
             </Text>
             {!isMax && <Text style={styles.dailyBtnBadge}>MAX限定</Text>}
           </TouchableOpacity>

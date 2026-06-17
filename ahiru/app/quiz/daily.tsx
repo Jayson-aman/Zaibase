@@ -29,7 +29,7 @@ export default function DailyChallengeScreen() {
 
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.heroBadge}>
-          <Text style={styles.heroBadgeDay}>{todayLabel}曜日</Text>
+          <Text style={styles.heroBadgeDay}>{todayLabel}</Text>
           <Text style={styles.heroTitle}>今日のチャレンジ</Text>
           <Text style={styles.heroSub}>
             四谷・日能研レベルの難問を各科目30問。{'\n'}毎日セットが変わります。
@@ -63,7 +63,7 @@ export default function DailyChallengeScreen() {
         <View style={styles.note}>
           <Text style={styles.noteText}>
             💡 日替わりセットは毎日午前0時に切り替わります。{'\n'}
-            同じ曜日は同じセットです。
+            同じ日目は同じ問題セットです。
           </Text>
         </View>
       </ScrollView>

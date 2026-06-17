@@ -305,7 +305,7 @@ export default function QuizScreen() {
           <Text style={styles.headerEmoji}>{info.emoji}</Text>
           <Text style={styles.headerTitle}>{info.name}</Text>
           {isDaily ? (
-            <Text style={styles.headerDiff}>🔥 {getTodayDayLabel()}曜日</Text>
+            <Text style={styles.headerDiff}>🔥 {getTodayDayLabel()}</Text>
           ) : diffInfo ? (
             <Text style={styles.headerDiff}>
               {diffInfo.icon} {diffInfo.label}
