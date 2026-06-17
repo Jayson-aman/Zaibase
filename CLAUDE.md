@@ -137,6 +137,7 @@ Muted:    #64748B
 |---|---|---|
 | Zaibase建設 | zaisai-share | https://zaisai-share.web.app/app |
 | Zaibase法律相談 | zaibase-horitsu | https://zaibase-horitsu.web.app |
+| 中学受験対策 ahiru | zaibase-exam | https://exam.zaibase.group |
 
 ## Stripe
 
