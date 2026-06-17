@@ -14,6 +14,7 @@ import { loadProgress, resetProgress, ProgressData } from '../../store/progress'
 import { questionsBySubject, subjectInfo, SubjectKey } from '../../data/questions';
 import { useMaxGate } from '../../hooks/useMaxGate';
 import { getWeakPointCoaching } from '../../services/aiCoach';
+import { fetchMyRanking, RankingResult } from '../../services/ranking';
 import Paywall from '../../components/Paywall';
 
 const SUBJECTS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
@@ -23,15 +24,30 @@ export default function ProgressScreen() {
   const { paywallVisible, setPaywallVisible, requireMax } = useMaxGate();
   const [coachLoading, setCoachLoading] = useState(false);
   const [coachAdvice, setCoachAdvice] = useState<string | null>(null);
+  const [ranking, setRanking] = useState<RankingResult | null>(null);
+  const [rankingLoading, setRankingLoading] = useState(false);
 
   async function fetchProgress() {
     const data = await loadProgress();
     setProgressData(data);
   }
 
+  async function loadRanking() {
+    setRankingLoading(true);
+    try {
+      const r = await fetchMyRanking();
+      setRanking(r);
+    } catch {
+      setRanking(null);
+    } finally {
+      setRankingLoading(false);
+    }
+  }
+
   useFocusEffect(
     useCallback(() => {
       fetchProgress();
+      loadRanking();
     }, [])
   );
 
@@ -153,6 +169,39 @@ export default function ProgressScreen() {
               ]}
             />
           </View>
+        </View>
+
+        {/* Ranking card */}
+        <View style={styles.rankingCard}>
+          <Text style={styles.rankingTitle}>🏆 全国ランキング</Text>
+          {rankingLoading ? (
+            <ActivityIndicator color="#1E5FBE" style={{ marginVertical: 12 }} />
+          ) : ranking != null ? (
+            <>
+              <View style={styles.rankingMain}>
+                <Text style={styles.rankingNum}>{ranking.rank}</Text>
+                <Text style={styles.rankingUnit}>位</Text>
+                <Text style={styles.rankingTotal}>/ {ranking.totalUsers}人中</Text>
+              </View>
+              <Text style={styles.rankingPct}>
+                上位 {Math.round((ranking.rank / ranking.totalUsers) * 100)}% に入っています
+              </Text>
+              {ranking.rank <= 10 && (
+                <View style={styles.rankingBadge}>
+                  <Text style={styles.rankingBadgeText}>🥇 TOP 10入り！</Text>
+                </View>
+              )}
+              {ranking.rank <= 100 && ranking.rank > 10 && (
+                <View style={[styles.rankingBadge, { backgroundColor: '#FFF8E1' }]}>
+                  <Text style={[styles.rankingBadgeText, { color: '#F39C12' }]}>⭐ TOP 100入り</Text>
+                </View>
+              )}
+            </>
+          ) : (
+            <Text style={styles.rankingEmpty}>
+              クイズを解くと全国順位が表示されます！
+            </Text>
+          )}
         </View>
 
         {/* Parent report */}
@@ -344,6 +393,77 @@ const styles = StyleSheet.create({
     height: '100%',
     backgroundColor: '#1E5FBE',
     borderRadius: 5,
+  },
+  rankingCard: {
+    backgroundColor: '#FFFFFF',
+    marginHorizontal: 20,
+    marginTop: 16,
+    borderRadius: 18,
+    padding: 22,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.08,
+    shadowRadius: 10,
+    elevation: 4,
+    alignItems: 'center',
+    borderWidth: 2,
+    borderColor: '#FFD700',
+  },
+  rankingTitle: {
+    fontSize: 18,
+    fontWeight: '900',
+    color: '#1A1A2E',
+    marginBottom: 12,
+    letterSpacing: 0.5,
+  },
+  rankingMain: {
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    gap: 4,
+    marginBottom: 8,
+  },
+  rankingNum: {
+    fontSize: 72,
+    fontWeight: '900',
+    color: '#1E5FBE',
+    lineHeight: 80,
+  },
+  rankingUnit: {
+    fontSize: 32,
+    fontWeight: '800',
+    color: '#1E5FBE',
+  },
+  rankingTotal: {
+    fontSize: 20,
+    fontWeight: '700',
+    color: '#888',
+    marginLeft: 8,
+  },
+  rankingPct: {
+    fontSize: 17,
+    color: '#555',
+    fontWeight: '600',
+    marginBottom: 10,
+  },
+  rankingBadge: {
+    backgroundColor: '#FFF3CD',
+    borderRadius: 12,
+    paddingHorizontal: 18,
+    paddingVertical: 8,
+    marginTop: 4,
+  },
+  rankingBadgeText: {
+    fontSize: 18,
+    fontWeight: '900',
+    color: '#856404',
+  },
+  rankingEmpty: {
+    fontSize: 16,
+    color: '#888',
+    fontWeight: '600',
+    textAlign: 'center',
+    paddingVertical: 12,
+    lineHeight: 26,
   },
   reportCard: {
     backgroundColor: '#FFFFFF',

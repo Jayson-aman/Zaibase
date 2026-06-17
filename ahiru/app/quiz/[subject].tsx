@@ -13,6 +13,7 @@ import QuizCard from '../../components/QuizCard';
 import AnimatedMascot from '../../components/AnimatedMascot';
 import { getResultMascot } from '../../data/images';
 import { saveProgress } from '../../store/progress';
+import { submitRankingScore } from '../../services/ranking';
 
 function isSubjectKey(value: string): value is SubjectKey {
   return ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'].includes(value);
@@ -75,6 +76,7 @@ export default function QuizScreen() {
         if (!savedProgress) {
           setSavedProgress(true);
           await saveProgress(subjectKey, newScore, total, newWrongIds);
+          submitRankingScore(newScore, total).catch(() => {});
         }
         setScore(newScore);
         setWrongIds(newWrongIds);

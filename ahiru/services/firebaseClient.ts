@@ -82,6 +82,20 @@ function getFirebaseFunctions(): Functions {
   return functionsInstance;
 }
 
+export async function getAuthUid(): Promise<string | null> {
+  if (!isFirebaseConfigured()) return null;
+  try {
+    return await ensureSignedIn();
+  } catch {
+    return null;
+  }
+}
+
+export async function getFirestoreDb() {
+  const { getFirestore } = await import('firebase/firestore');
+  return getFirestore(getFirebaseApp());
+}
+
 export async function callFirebaseFunction<TData, TResult>(
   name: string,
   data: TData
