@@ -279,7 +279,7 @@ export default function LandingPage() {
           <View style={styles.featuresGrid}>
             {FEATURES.map((f) => (
               <View key={f.title} style={[styles.featureCard, glassBlur]}>
-                <Image source={f.image} style={styles.featureImage} resizeMode="cover" />
+                <Image source={f.image} style={styles.featureImage} resizeMode="contain" />
                 <View style={styles.featureOverlay}>
                   <View style={[styles.featureTag, { backgroundColor: f.tagColor }]}>
                     <Text style={styles.featureTagText}>{f.tag}</Text>
@@ -728,7 +728,8 @@ const styles = StyleSheet.create({
   },
   featureImage: {
     width: '100%',
-    height: 220,
+    height: undefined,
+    aspectRatio: 4 / 3,
   },
   featureOverlay: {
     position: 'absolute',
