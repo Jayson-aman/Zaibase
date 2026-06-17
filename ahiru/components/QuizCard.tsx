@@ -130,10 +130,10 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect }
               );
             })}
           </View>
-          {question.hint != null && selectedChoice != null && (
+          {selectedChoice != null && (question.explanation != null || question.hint != null) && (
             <View style={styles.hintBox}>
-              <Text style={styles.hintLabel}>💡 ヒント</Text>
-              <Text style={styles.hintText}>{question.hint}</Text>
+              <Text style={styles.hintLabel}>📖 解説</Text>
+              <Text style={styles.hintText}>{question.explanation ?? question.hint}</Text>
             </View>
           )}
         </View>
@@ -158,10 +158,10 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect }
           />
           <Text style={styles.answerLabel}>答 え</Text>
           <Text style={styles.answerText}>{question.answer}</Text>
-          {question.hint != null && (
+          {(question.explanation != null || question.hint != null) && (
             <View style={styles.hintBox}>
-              <Text style={styles.hintLabel}>💡 ヒント</Text>
-              <Text style={styles.hintText}>{question.hint}</Text>
+              <Text style={styles.hintLabel}>📖 解説</Text>
+              <Text style={styles.hintText}>{question.explanation ?? question.hint}</Text>
             </View>
           )}
         </View>
@@ -308,29 +308,30 @@ const styles = StyleSheet.create({
     paddingTop: 20,
   },
   questionLabel: {
-    fontSize: 22,
+    fontSize: 16,
     fontWeight: '800',
     color: '#888',
     letterSpacing: 4,
-    marginBottom: 14,
-    textAlign: 'center',
+    marginBottom: 10,
+    textAlign: 'left',
     fontFamily: SERIF,
   },
   questionText: {
-    fontSize: 34,
+    fontSize: 28,
     fontWeight: '700',
     color: '#1A1A2E',
-    textAlign: 'center',
-    lineHeight: 50,
+    textAlign: 'left',
+    lineHeight: 44,
     marginBottom: 20,
     fontFamily: SERIF,
   },
   questionTextChoice: {
-    fontSize: 26,
+    fontSize: 22,
     fontWeight: '700',
     color: '#1A1A2E',
-    textAlign: 'center',
-    lineHeight: 40,
+    textAlign: 'left',
+    lineHeight: 34,
+    marginBottom: 4,
     fontFamily: SERIF,
   },
   tapHint: {
