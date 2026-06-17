@@ -111,7 +111,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                   style={styles.cardHeader}
                 >
                   <View>
-                    <Text style={styles.cardName}>プロ</Text>
+                    <Text style={styles.cardName}>PRO</Text>
                     <Text style={styles.cardTagline}>基本機能フルセット</Text>
                   </View>
                   <Text style={styles.cardPrice}>{proPrice}</Text>
@@ -137,7 +137,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                       <ActivityIndicator color="#fff" />
                     ) : (
                       <Text style={styles.buyBtnText}>
-                        {proPkg ? 'プロを始める' : '準備中'}
+                        {proPkg ? 'PRO プランを始める' : '準備中'}
                       </Text>
                     )}
                   </TouchableOpacity>
@@ -151,7 +151,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                   style={styles.cardHeader}
                 >
                   <View>
-                    <Text style={styles.cardName}>マックス</Text>
+                    <Text style={styles.cardName}>MAX</Text>
                     <Text style={styles.cardTagline}>プロ全機能＋AIコーチ</Text>
                   </View>
                   <Text style={styles.cardPrice}>{maxPrice}</Text>
@@ -160,12 +160,12 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                   {/* Proの機能（含まれている） */}
                   <View style={styles.includedBanner}>
                     <Text style={styles.includedBannerText}>
-                      ✓ プロの全機能（聞き流し・地図・イラスト等）をすべて含む
+                      ✓ PRO の全機能（聞き流し・地図・イラスト等）をすべて含む
                     </Text>
                   </View>
 
                   {/* Maxだけの追加機能 */}
-                  <Text style={styles.maxOnlyLabel}>✨ マックスだけの追加機能</Text>
+                  <Text style={styles.maxOnlyLabel}>✨ MAX だけの追加機能</Text>
                   {MAX_FEATURES.map((f) => (
                     <View key={f} style={styles.maxFeatureRow}>
                       <Text style={styles.maxFeatureCheck}>＋</Text>
@@ -197,7 +197,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                       <ActivityIndicator color="#fff" />
                     ) : (
                       <Text style={styles.buyBtnText}>
-                        {maxPkg ? 'マックスを始める' : '準備中'}
+                        {maxPkg ? 'MAX プランを始める' : '準備中'}
                       </Text>
                     )}
                   </TouchableOpacity>

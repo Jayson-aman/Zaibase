@@ -324,7 +324,7 @@ export default function HomeScreen() {
                                 <Text style={styles.schoolCardEmoji}>{s.emoji}</Text>
                                 <View style={styles.schoolCardBadges}>
                                   {needsMax && <Text style={styles.courseMaxBadge}>MAX</Text>}
-                                  {needsPro && !needsMax && <Text style={styles.courseProBadge}>Pro</Text>}
+                                  {needsPro && !needsMax && <Text style={styles.courseProBadge}>PRO</Text>}
                                 </View>
                               </View>
                               <Text style={[styles.schoolCardName, isSelected && { color: '#FFF' }]} numberOfLines={2}>
@@ -427,7 +427,7 @@ export default function HomeScreen() {
             onPress={() => setPaywallVisible(true)}
             activeOpacity={0.85}
           >
-            <Text style={styles.planBtnText}>👑 Pro・Max プランを見る</Text>
+            <Text style={styles.planBtnText}>👑 PRO・MAX プランを見る</Text>
           </TouchableOpacity>
         )}
 

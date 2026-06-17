@@ -69,7 +69,7 @@ const FEATURES = [
     icon: '🎧',
     title: '聞き流しモード',
     desc: '問題と解答を音声で読み上げ。\n通学中・就寝前でも学習できる。',
-    tag: 'Pro',
+    tag: 'PRO',
     tagColor: '#9B59B6',
     image: require('../../assets/images/feature-listen.png') as number,
   },
@@ -77,7 +77,7 @@ const FEATURES = [
     icon: '🤖',
     title: 'AI弱点コーチ',
     desc: '間違えた問題をAIが分析。\n苦手単元と復習ポイントをアドバイス。',
-    tag: 'Max',
+    tag: 'MAX',
     tagColor: C.red,
     image: require('../../assets/images/feature-ai.png') as number,
   },
@@ -357,7 +357,7 @@ export default function LandingPage() {
             <View style={styles.planBadge}>
               <Text style={styles.planBadgeText}>人気</Text>
             </View>
-            <Text style={[styles.planName, { color: '#7B2D8B' }]}>プロプラン</Text>
+            <Text style={[styles.planName, { color: '#7B2D8B' }]}>PRO プラン</Text>
             <View style={styles.planPriceRow}>
               <Text style={[styles.planPrice, { color: '#7B2D8B' }]}>¥980</Text>
               <Text style={styles.planPricePeriod}> / 月（税込）</Text>
@@ -373,7 +373,7 @@ export default function LandingPage() {
               <Text key={f} style={[styles.planFeature, { color: '#4A0070' }]}>{f}</Text>
             ))}
             <TouchableOpacity style={[styles.planBtn, { backgroundColor: '#7B2D8B' }]} onPress={handleStart} activeOpacity={0.85}>
-              <Text style={styles.planBtnText}>プロを始める</Text>
+              <Text style={styles.planBtnText}>PRO プランを始める</Text>
             </TouchableOpacity>
           </View>
 
@@ -382,7 +382,7 @@ export default function LandingPage() {
             <View style={[styles.planBadge, { backgroundColor: C.red }]}>
               <Text style={styles.planBadgeText}>おすすめ</Text>
             </View>
-            <Text style={[styles.planName, { color: C.red }]}>マックスプラン</Text>
+            <Text style={[styles.planName, { color: C.red }]}>MAX プラン</Text>
             <View style={styles.planPriceRow}>
               <Text style={[styles.planPrice, { color: C.red }]}>¥1,980</Text>
               <Text style={styles.planPricePeriod}> / 月（税込）</Text>
@@ -396,7 +396,7 @@ export default function LandingPage() {
               <Text key={f} style={[styles.planFeature, { color: C.red, fontWeight: '800' }]}>{f}</Text>
             ))}
             <TouchableOpacity style={[styles.planBtn, { backgroundColor: C.red }]} onPress={handleStart} activeOpacity={0.85}>
-              <Text style={styles.planBtnText}>マックスを始める</Text>
+              <Text style={styles.planBtnText}>MAX プランを始める</Text>
             </TouchableOpacity>
           </View>
         </View>
