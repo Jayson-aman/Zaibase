@@ -71,41 +71,41 @@ function getQuestionCount(
 function ZaibaseLogo() {
   return (
     <View style={logoStyles.wrap}>
-      <Text style={logoStyles.z}>Z</Text>
-      <View style={logoStyles.textWrap}>
+      <View style={logoStyles.zRow}>
+        <Text style={logoStyles.z}>Z</Text>
         <Text style={logoStyles.brand}>aibase<Text style={logoStyles.dot}>.</Text>Group</Text>
-        <Text style={logoStyles.sub}>中学・高校受験対策</Text>
       </View>
+      <Text style={logoStyles.sub}>中学・高校受験対策</Text>
     </View>
   );
 }
 
 const logoStyles = StyleSheet.create({
   wrap: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
+    flexDirection: 'column',
     marginBottom: 4,
+  },
+  zRow: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    gap: 2,
   },
   z: {
     fontSize: 56,
     fontWeight: '900',
     color: '#FFFFFF',
-    lineHeight: 62,
     letterSpacing: -2,
+    includeFontPadding: false,
     textShadowColor: 'rgba(0,0,0,0.25)',
     textShadowOffset: { width: 0, height: 2 },
     textShadowRadius: 4,
-  },
-  textWrap: {
-    flexDirection: 'column',
-    justifyContent: 'center',
   },
   brand: {
     fontSize: 26,
     fontWeight: '800',
     color: '#FFFFFF',
     letterSpacing: 0.5,
+    includeFontPadding: false,
   },
   dot: {
     color: '#FFD700',
