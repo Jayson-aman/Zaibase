@@ -109,29 +109,42 @@ export default function QuizScreen() {
     if (!q || questions.length < 2) return undefined;
     const correct = q.answer;
 
-    // 答えの「型」を判定
-    const isYear       = /^\d{2,4}年/.test(correct.trim());
-    const hasNumbered  = /[①②③④⑤]/.test(correct);
-    const isShort      = correct.length <= 15 && !hasNumbered;
+    // 答えの型を分類（20パターン対応）
+    function answerType(a: string): string {
+      const t = a.trim();
+      if (/^\d{2,4}年/.test(t))                                    return 'year';
+      if (/[①②③④⑤⑥⑦⑧⑨]/.test(t))                              return 'numbered';
+      if (/^[A-Za-z]/.test(t) && /[A-Za-z]{3,}/.test(t))          return 'english';
+      if (/^[ぁ-ん]+$/.test(t))                                     return 'hiragana';
+      if (/^[\d,，]+$/.test(t))                                     return 'number';
+      if (/\d+[／/]\d+/.test(t) || /分の\d+/.test(t))              return 'fraction';
+      if (/\d+(cm²|㎠|cm³|m²|km²|立方|平方)/.test(t))             return 'area-volume';
+      if (/\d+(cm|mm|m|km)\b/.test(t) && !/²|³|²/.test(t))        return 'length';
+      if (/\d+[℃°VΩWgkg]|秒速|時速|mol|Pa/.test(t))               return 'physics';
+      if (/^\d+(\.\d+)?%/.test(t) || /約\d+%/.test(t))            return 'percent';
+      if (/^\d+:\d+/.test(t))                                       return 'ratio';
+      if (/[・、]/.test(t) && t.length > 5 && !(/^\d{2,4}年/.test(t))) return 'list';
+      if (t.length <= 12 && !/[。\n]/.test(t))                     return 'short';
+      if (t.length > 60)                                            return 'long';
+      return 'medium';
+    }
 
+    const correctType = answerType(correct);
     const all = questions.filter((o) => o.id !== q.id && o.answer !== correct);
 
-    // 同型を優先してピック
-    let typed = all.filter((o) => {
-      if (isYear)      return /^\d{2,4}年/.test(o.answer.trim());
-      if (hasNumbered) return /[①②③④⑤]/.test(o.answer);
-      if (isShort)     return o.answer.length <= 15 && !/[①②③④⑤]/.test(o.answer);
-      // 長文説明系：同様の長さ・同教科優先
-      return o.answer.length > 15 && !/[①②③④⑤]/.test(o.answer);
-    });
+    // 1st: 同型
+    let typed = all.filter((o) => answerType(o.answer) === correctType);
 
-    // 足りなければ①②なし・長さ近いものでフォールバック
+    // 2nd: 長さが近いもの（±40文字）
     if (typed.length < 3) {
-      typed = all.filter((o) => !/[①②③④⑤]/.test(o.answer) && Math.abs(o.answer.length - correct.length) < 30);
+      typed = all.filter((o) =>
+        Math.abs(o.answer.length - correct.length) < 40 &&
+        answerType(o.answer) !== 'numbered'
+      );
     }
-    if (typed.length < 3) {
-      typed = all;
-    }
+
+    // 3rd: 全部
+    if (typed.length < 3) typed = all;
 
     const shuffled = [...typed].sort(() => Math.random() - 0.5);
     return [...shuffled.slice(0, 3), correct].sort(() => Math.random() - 0.5);
