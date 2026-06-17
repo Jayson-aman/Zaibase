@@ -254,19 +254,15 @@ export default function LandingPage() {
           <View style={styles.featuresGrid}>
             {FEATURES.map((f) => (
               <View key={f.title} style={styles.featureCard}>
-                <View style={styles.featureLeft}>
-                  <View style={styles.featureTop}>
-                    <Text style={styles.featureIcon}>{f.icon}</Text>
-                    <View style={[styles.featureTag, { backgroundColor: f.tagColor }]}>
-                      <Text style={styles.featureTagText}>{f.tag}</Text>
-                    </View>
+                <View style={styles.featureTop}>
+                  <Text style={styles.featureIcon}>{f.icon}</Text>
+                  <View style={[styles.featureTag, { backgroundColor: f.tagColor }]}>
+                    <Text style={styles.featureTagText}>{f.tag}</Text>
                   </View>
-                  <Text style={styles.featureTitle}>{f.title}</Text>
-                  <Text style={styles.featureDesc}>{f.desc}</Text>
                 </View>
-                <View style={styles.featureRight}>
-                  <Image source={f.image} style={styles.featureImage} resizeMode="contain" />
-                </View>
+                <Text style={styles.featureTitle}>{f.title}</Text>
+                <Text style={styles.featureDesc}>{f.desc}</Text>
+                <Image source={f.image} style={styles.featureImage} resizeMode="contain" />
               </View>
             ))}
           </View>
@@ -644,13 +640,13 @@ const styles = StyleSheet.create({
     padding: 20,
     borderWidth: 1,
     borderColor: C.grayBorder,
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 14,
   },
-  featureLeft: { flex: 1 },
-  featureRight: { width: 130, alignItems: 'center', justifyContent: 'center' },
-  featureImage: { width: 120, height: 120 },
+  featureImage: {
+    width: '100%',
+    height: 220,
+    marginTop: 16,
+    borderRadius: 8,
+  },
   featureTop: {
     flexDirection: 'row',
     justifyContent: 'space-between',
