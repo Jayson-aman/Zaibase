@@ -71,7 +71,7 @@ const FEATURES = [
     desc: '問題と解答を音声で読み上げ。\n通学中・就寝前でも学習できる。',
     tag: 'Pro',
     tagColor: '#9B59B6',
-    image: require('../../assets/mascots/mascot-listen.png') as number,
+    image: require('../../assets/images/feature-listen.png') as number,
   },
   {
     icon: '🤖',
@@ -79,7 +79,7 @@ const FEATURES = [
     desc: '間違えた問題をAIが分析。\n苦手単元と復習ポイントをアドバイス。',
     tag: 'Max',
     tagColor: C.red,
-    image: require('../../assets/mascots/mascot-sansu.png') as number,
+    image: require('../../assets/images/feature-ai.png') as number,
   },
   {
     icon: '🏆',
@@ -87,7 +87,7 @@ const FEATURES = [
     desc: '全利用者の中での自分の順位を表示。\n上位10%・TOP100バッジ獲得を目指す。',
     tag: '全員',
     tagColor: C.gold,
-    image: require('../../assets/mascots/mascot-celebrate.png') as number,
+    image: require('../../assets/images/feature-ranking.png') as number,
   },
   {
     icon: '📊',
