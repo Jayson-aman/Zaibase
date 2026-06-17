@@ -24,23 +24,6 @@ interface Props {
   onPurchased: () => void;
 }
 
-const PLANS = [
-  {
-    id: 'pro',
-    name: 'Pro',
-    fallbackPrice: '¥980/月',
-    color: '#9B59B6',
-    features: [...PRO_FEATURES],
-  },
-  {
-    id: 'max',
-    name: 'Max',
-    fallbackPrice: '¥1,980/月',
-    color: '#E74C3C',
-    features: [...PRO_FEATURES, ...MAX_FEATURES],
-  },
-] as const;
-
 function findPkg(
   offering: PurchasesOffering,
   planId: string,
@@ -92,6 +75,11 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
     }
   }
 
+  const proPkg = offering ? findPkg(offering, 'pro') : undefined;
+  const maxPkg = offering ? findPkg(offering, 'max') : undefined;
+  const proPrice = proPkg?.product.priceString ?? '¥980/月';
+  const maxPrice = maxPkg?.product.priceString ?? '¥1,980/月';
+
   return (
     <Modal
       visible={visible}
@@ -115,42 +103,107 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
           {loadingOff ? (
             <ActivityIndicator color="#fff" size="large" style={styles.spinner} />
           ) : (
-            PLANS.map((plan) => {
-              const pkg = offering ? findPkg(offering, plan.id) : undefined;
-              const priceStr = pkg?.product.priceString ?? plan.fallbackPrice;
-
-              return (
-                <View key={plan.id} style={[styles.card, { borderColor: plan.color }]}>
-                  <View style={[styles.cardHeader, { backgroundColor: plan.color }]}>
-                    <Text style={styles.cardName}>{plan.name}</Text>
-                    <Text style={styles.cardPrice}>{priceStr}</Text>
+            <>
+              {/* ── Pro ── */}
+              <View style={[styles.card, { borderColor: '#9B59B6' }]}>
+                <LinearGradient
+                  colors={['#9B59B6', '#7D3C98']}
+                  style={styles.cardHeader}
+                >
+                  <View>
+                    <Text style={styles.cardName}>プロ</Text>
+                    <Text style={styles.cardTagline}>基本機能フルセット</Text>
                   </View>
-                  <View style={styles.cardBody}>
-                    {plan.features.map((f) => (
-                      <Text key={f} style={styles.feature}>{f}</Text>
-                    ))}
-                    <TouchableOpacity
-                      style={[
-                        styles.buyBtn,
-                        { backgroundColor: plan.color },
-                        (!pkg || purchasing) && styles.buyBtnDisabled,
-                      ]}
-                      onPress={pkg ? () => handlePurchase(pkg) : undefined}
-                      disabled={!pkg || purchasing}
-                      activeOpacity={0.8}
-                    >
-                      {purchasing ? (
-                        <ActivityIndicator color="#fff" />
-                      ) : (
-                        <Text style={styles.buyBtnText}>
-                          {pkg ? `${plan.name}を始める` : '準備中'}
-                        </Text>
-                      )}
-                    </TouchableOpacity>
-                  </View>
+                  <Text style={styles.cardPrice}>{proPrice}</Text>
+                </LinearGradient>
+                <View style={styles.cardBody}>
+                  {PRO_FEATURES.map((f) => (
+                    <View key={f} style={styles.featureRow}>
+                      <Text style={styles.featureCheck}>✓</Text>
+                      <Text style={styles.featureText}>{f}</Text>
+                    </View>
+                  ))}
+                  <TouchableOpacity
+                    style={[
+                      styles.buyBtn,
+                      { backgroundColor: '#9B59B6' },
+                      (!proPkg || purchasing) && styles.buyBtnDisabled,
+                    ]}
+                    onPress={proPkg ? () => handlePurchase(proPkg) : undefined}
+                    disabled={!proPkg || purchasing}
+                    activeOpacity={0.8}
+                  >
+                    {purchasing ? (
+                      <ActivityIndicator color="#fff" />
+                    ) : (
+                      <Text style={styles.buyBtnText}>
+                        {proPkg ? 'プロを始める' : '準備中'}
+                      </Text>
+                    )}
+                  </TouchableOpacity>
                 </View>
-              );
-            })
+              </View>
+
+              {/* ── Max ── */}
+              <View style={[styles.card, { borderColor: '#E74C3C', borderWidth: 3 }]}>
+                <LinearGradient
+                  colors={['#E74C3C', '#C0392B']}
+                  style={styles.cardHeader}
+                >
+                  <View>
+                    <Text style={styles.cardName}>マックス</Text>
+                    <Text style={styles.cardTagline}>プロ全機能＋AIコーチ</Text>
+                  </View>
+                  <Text style={styles.cardPrice}>{maxPrice}</Text>
+                </LinearGradient>
+                <View style={styles.cardBody}>
+                  {/* Proの機能（含まれている） */}
+                  <View style={styles.includedBanner}>
+                    <Text style={styles.includedBannerText}>
+                      ✓ プロの全機能（聞き流し・地図・イラスト等）をすべて含む
+                    </Text>
+                  </View>
+
+                  {/* Maxだけの追加機能 */}
+                  <Text style={styles.maxOnlyLabel}>✨ マックスだけの追加機能</Text>
+                  {MAX_FEATURES.map((f) => (
+                    <View key={f} style={styles.maxFeatureRow}>
+                      <Text style={styles.maxFeatureCheck}>＋</Text>
+                      <Text style={styles.maxFeatureText}>{f}</Text>
+                    </View>
+                  ))}
+
+                  {/* AI弱点コーチの説明 */}
+                  <View style={styles.aiExplain}>
+                    <Text style={styles.aiExplainTitle}>🤖 AI弱点コーチとは？</Text>
+                    <Text style={styles.aiExplainText}>
+                      クイズで間違えた問題をAIが分析。{'\n'}
+                      「どこが苦手か」「何を復習すべきか」を{'\n'}
+                      わかりやすくアドバイスします。
+                    </Text>
+                  </View>
+
+                  <TouchableOpacity
+                    style={[
+                      styles.buyBtn,
+                      { backgroundColor: '#E74C3C' },
+                      (!maxPkg || purchasing) && styles.buyBtnDisabled,
+                    ]}
+                    onPress={maxPkg ? () => handlePurchase(maxPkg) : undefined}
+                    disabled={!maxPkg || purchasing}
+                    activeOpacity={0.8}
+                  >
+                    {purchasing ? (
+                      <ActivityIndicator color="#fff" />
+                    ) : (
+                      <Text style={styles.buyBtnText}>
+                        {maxPkg ? 'マックスを始める' : '準備中'}
+                      </Text>
+                    )}
+                  </TouchableOpacity>
+                </View>
+              </View>
+            </>
           )}
 
           <TouchableOpacity
@@ -177,14 +230,14 @@ const styles = StyleSheet.create({
     top: 52,
     right: 20,
     zIndex: 10,
-    width: 36,
-    height: 36,
-    borderRadius: 18,
+    width: 44,
+    height: 44,
+    borderRadius: 22,
     backgroundColor: 'rgba(255,255,255,0.2)',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  closeBtnText: { color: '#fff', fontSize: 16, fontWeight: '700' },
+  closeBtnText: { color: '#fff', fontSize: 20, fontWeight: '700' },
   scroll: {
     paddingTop: 80,
     paddingHorizontal: 20,
@@ -192,19 +245,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   spinner: { marginTop: 40 },
-  crown: { fontSize: 56, marginBottom: 16 },
-  title: { fontSize: 28, fontWeight: '900', color: '#fff', marginBottom: 8 },
+  crown: { fontSize: 64, marginBottom: 16 },
+  title: { fontSize: 36, fontWeight: '900', color: '#fff', marginBottom: 8 },
   subtitle: {
-    fontSize: 15,
+    fontSize: 20,
     color: 'rgba(255,255,255,0.7)',
     marginBottom: 32,
     textAlign: 'center',
   },
   card: {
     width: '100%',
-    borderRadius: 20,
+    borderRadius: 24,
     borderWidth: 2,
-    marginBottom: 20,
+    marginBottom: 24,
     overflow: 'hidden',
     backgroundColor: 'rgba(255,255,255,0.05)',
   },
@@ -212,29 +265,65 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: 20,
-    paddingVertical: 14,
+    paddingHorizontal: 24,
+    paddingVertical: 18,
   },
-  cardName: { fontSize: 20, fontWeight: '900', color: '#fff' },
-  cardPrice: { fontSize: 17, fontWeight: '800', color: '#fff' },
-  cardBody: { padding: 20, gap: 8 },
-  feature: { fontSize: 14, color: 'rgba(255,255,255,0.9)', fontWeight: '600' },
-  buyBtn: {
+  cardName: { fontSize: 28, fontWeight: '900', color: '#fff' },
+  cardTagline: { fontSize: 16, color: 'rgba(255,255,255,0.8)', fontWeight: '600', marginTop: 2 },
+  cardPrice: { fontSize: 24, fontWeight: '800', color: '#fff' },
+  cardBody: { padding: 20, gap: 10 },
+  featureRow: { flexDirection: 'row', alignItems: 'flex-start', gap: 10 },
+  featureCheck: { fontSize: 20, color: '#7DFFB3', fontWeight: '800', lineHeight: 28 },
+  featureText: { fontSize: 18, color: 'rgba(255,255,255,0.9)', fontWeight: '600', flex: 1, lineHeight: 28 },
+  includedBanner: {
+    backgroundColor: 'rgba(255,255,255,0.12)',
+    borderRadius: 12,
+    padding: 14,
+    marginBottom: 4,
+  },
+  includedBannerText: {
+    fontSize: 17,
+    color: '#7DFFB3',
+    fontWeight: '700',
+    lineHeight: 26,
+  },
+  maxOnlyLabel: {
+    fontSize: 20,
+    fontWeight: '900',
+    color: '#FFD700',
+    marginTop: 4,
+    marginBottom: 4,
+    letterSpacing: 0.5,
+  },
+  maxFeatureRow: { flexDirection: 'row', alignItems: 'flex-start', gap: 10 },
+  maxFeatureCheck: { fontSize: 22, color: '#FFD700', fontWeight: '900', lineHeight: 30 },
+  maxFeatureText: { fontSize: 18, color: '#FFD700', fontWeight: '700', flex: 1, lineHeight: 28 },
+  aiExplain: {
+    backgroundColor: 'rgba(255,215,0,0.1)',
     borderRadius: 14,
-    paddingVertical: 16,
+    padding: 16,
+    borderWidth: 1,
+    borderColor: 'rgba(255,215,0,0.3)',
+    marginTop: 4,
+  },
+  aiExplainTitle: { fontSize: 18, fontWeight: '800', color: '#FFD700', marginBottom: 8 },
+  aiExplainText: { fontSize: 16, color: 'rgba(255,255,255,0.85)', lineHeight: 26, fontWeight: '500' },
+  buyBtn: {
+    borderRadius: 16,
+    paddingVertical: 20,
     alignItems: 'center',
-    marginTop: 12,
+    marginTop: 14,
   },
   buyBtnDisabled: { opacity: 0.5 },
-  buyBtnText: { fontSize: 16, fontWeight: '800', color: '#fff' },
+  buyBtnText: { fontSize: 22, fontWeight: '800', color: '#fff' },
   restoreBtn: { paddingVertical: 16 },
-  restoreBtnText: { color: 'rgba(255,255,255,0.5)', fontSize: 14, fontWeight: '600' },
+  restoreBtnText: { color: 'rgba(255,255,255,0.5)', fontSize: 16, fontWeight: '600' },
   terms: {
-    fontSize: 11,
+    fontSize: 13,
     color: 'rgba(255,255,255,0.35)',
     textAlign: 'center',
     marginTop: 8,
-    lineHeight: 16,
+    lineHeight: 20,
     paddingHorizontal: 10,
   },
 });
