@@ -19,3 +19,8 @@ export const PRO_FEATURES = [
   '🏛 歴史イラスト・甲冑・合戦シーン',
   '🎨 アニメ mascots フル体験',
 ] as const;
+
+/** Max が追加で使える機能 */
+export const MAX_FEATURES = [
+  '🤖 AI弱点コーチ（間違えた問題からAIが復習アドバイス）',
+] as const;

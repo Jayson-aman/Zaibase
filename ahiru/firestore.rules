@@ -1,0 +1,11 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── AIコーチ利用回数カウンタ（Cloud Functions専用、クライアントから読み書き不可） ──
+    match /aiCoachUsage/{uid} {
+      allow read, write: if false;
+    }
+  }
+}
