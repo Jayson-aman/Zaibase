@@ -1,5 +1,8 @@
 import type { CourseKey, ExamType } from './courses';
 import { kankanQuestions, shitennojiQuestions, kokoGeneralQuestions, kokoTopQuestions } from './questions-courses';
+import { seikoQuestions, seifuNankaiQuestions, takatsukiQuestions } from './questions-schools-1';
+import { kaimeiQuestions, toinQuestions, kindaiQuestions, kansaiHokuyoQuestions } from './questions-schools-2';
+import { myojoQuestions, tezukayamaQuestions, kinrankaiQuestions, otaniQuestions } from './questions-schools-3';
 
 export type Question = {
   id: string;
@@ -2654,6 +2657,20 @@ export const questions: Question[] = [
   ...shitennojiQuestions,
   ...kokoGeneralQuestions,
   ...kokoTopQuestions,
+  // ── 学校別問題（大阪私学 最難関） ──
+  ...seikoQuestions,
+  ...seifuNankaiQuestions,
+  ...takatsukiQuestions,
+  // ── 学校別問題（大阪私学 難関） ──
+  ...kaimeiQuestions,
+  ...toinQuestions,
+  ...kindaiQuestions,
+  ...kansaiHokuyoQuestions,
+  ...myojoQuestions,
+  ...tezukayamaQuestions,
+  // ── 学校別問題（大阪私学 準難関） ──
+  ...kinrankaiQuestions,
+  ...otaniQuestions,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {
