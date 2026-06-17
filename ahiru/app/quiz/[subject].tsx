@@ -108,12 +108,33 @@ export default function QuizScreen() {
     const q = questions[currentIndex];
     if (!q || questions.length < 2) return undefined;
     const correct = q.answer;
-    const pool = questions
-      .filter((other) => other.id !== q.id && other.answer !== correct)
-      .map((other) => other.answer);
-    const shuffled = [...pool].sort(() => Math.random() - 0.5);
-    const distractors = shuffled.slice(0, 3);
-    return [...distractors, correct].sort(() => Math.random() - 0.5);
+
+    // 答えの「型」を判定
+    const isYear       = /^\d{2,4}年/.test(correct.trim());
+    const hasNumbered  = /[①②③④⑤]/.test(correct);
+    const isShort      = correct.length <= 15 && !hasNumbered;
+
+    const all = questions.filter((o) => o.id !== q.id && o.answer !== correct);
+
+    // 同型を優先してピック
+    let typed = all.filter((o) => {
+      if (isYear)      return /^\d{2,4}年/.test(o.answer.trim());
+      if (hasNumbered) return /[①②③④⑤]/.test(o.answer);
+      if (isShort)     return o.answer.length <= 15 && !/[①②③④⑤]/.test(o.answer);
+      // 長文説明系：同様の長さ・同教科優先
+      return o.answer.length > 15 && !/[①②③④⑤]/.test(o.answer);
+    });
+
+    // 足りなければ①②なし・長さ近いものでフォールバック
+    if (typed.length < 3) {
+      typed = all.filter((o) => !/[①②③④⑤]/.test(o.answer) && Math.abs(o.answer.length - correct.length) < 30);
+    }
+    if (typed.length < 3) {
+      typed = all;
+    }
+
+    const shuffled = [...typed].sort(() => Math.random() - 0.5);
+    return [...shuffled.slice(0, 3), correct].sort(() => Math.random() - 0.5);
   }, [currentIndex, questions]);
 
   function handleReveal() {
