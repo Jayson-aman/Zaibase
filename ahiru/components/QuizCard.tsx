@@ -5,7 +5,14 @@ import {
   TouchableOpacity,
   StyleSheet,
   Dimensions,
+  Platform,
 } from 'react-native';
+
+const SERIF = Platform.select({
+  ios: 'HiraMinProN-W6',
+  web: '"Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif',
+  default: undefined,
+}) as string | undefined;
 import { Question, subjectInfo } from '../data/questions';
 import {
   getQuestionIllustration,
@@ -273,6 +280,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#1A1A2E',
     lineHeight: 30,
+    fontFamily: SERIF,
   },
   choiceTextCorrect: {
     color: '#006B35',
@@ -306,6 +314,7 @@ const styles = StyleSheet.create({
     letterSpacing: 4,
     marginBottom: 14,
     textAlign: 'center',
+    fontFamily: SERIF,
   },
   questionText: {
     fontSize: 34,
@@ -314,6 +323,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     lineHeight: 50,
     marginBottom: 20,
+    fontFamily: SERIF,
   },
   questionTextChoice: {
     fontSize: 26,
@@ -321,6 +331,7 @@ const styles = StyleSheet.create({
     color: '#1A1A2E',
     textAlign: 'center',
     lineHeight: 40,
+    fontFamily: SERIF,
   },
   tapHint: {
     backgroundColor: '#EEF4FF',
@@ -351,6 +362,7 @@ const styles = StyleSheet.create({
     color: '#00A651',
     letterSpacing: 4,
     marginBottom: 14,
+    fontFamily: SERIF,
   },
   answerText: {
     fontSize: 36,
@@ -359,6 +371,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     lineHeight: 52,
     marginBottom: 20,
+    fontFamily: SERIF,
   },
   hintBox: {
     backgroundColor: '#FFFBEB',

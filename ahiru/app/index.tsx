@@ -35,9 +35,9 @@ const C = {
   divider:     'rgba(255,255,255,0.06)',
 };
 
-// 明朝体フォント（Webのみ）
 const SERIF = Platform.select({
-  web: '"Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, "Times New Roman", serif',
+  ios: 'HiraMinProN-W6',
+  web: '"Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif',
   default: undefined,
 }) as string | undefined;
 

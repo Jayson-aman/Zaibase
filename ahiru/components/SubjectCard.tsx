@@ -1,5 +1,11 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Platform } from 'react-native';
+
+const SERIF = Platform.select({
+  ios: 'HiraMinProN-W6',
+  web: '"Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif',
+  default: undefined,
+}) as string | undefined;
 import { LinearGradient } from 'expo-linear-gradient';
 import { SubjectKey, subjectInfo } from '../data/questions';
 import SubjectScene from './SubjectScene';
@@ -91,6 +97,7 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     marginBottom: 6,
     letterSpacing: 1,
+    fontFamily: SERIF,
   },
   sceneLabel: {
     fontSize: 26,

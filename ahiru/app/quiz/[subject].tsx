@@ -55,16 +55,12 @@ function filterQuestions(
   }
   if (difficultyFilter) {
     qs = qs.filter((q) => q.difficulty === difficultyFilter);
-  } else {
-    qs = qs.filter((q) => q.difficulty !== 'basic');
   }
   // Fallback: if no course-specific questions, return general pool
   if (qs.length === 0) {
     qs = all.filter((q) => (q.examType ?? 'chugaku') === 'chugaku');
     if (difficultyFilter) {
       qs = qs.filter((q) => q.difficulty === difficultyFilter);
-    } else {
-      qs = qs.filter((q) => q.difficulty !== 'basic');
     }
   }
   return qs;

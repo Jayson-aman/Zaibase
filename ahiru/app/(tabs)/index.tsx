@@ -45,6 +45,7 @@ const D = {
   divider:     'rgba(255,255,255,0.06)',
 };
 const SERIF = Platform.select({
+  ios: 'HiraMinProN-W6',
   web: '"Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif',
   default: undefined,
 }) as string | undefined;
