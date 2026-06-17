@@ -1,5 +1,6 @@
 import type { CourseKey, ExamType } from './courses';
-import { kankanQuestions, shitennojiQuestions, kokoGeneralQuestions, kokoTopQuestions } from './questions-courses';
+import { kankanQuestions, shitennojiQuestions, kokoGeneralQuestions } from './questions-courses';
+import { kokoKankanQuestions, kokoTopQuestions } from './questions-koko';
 import { seikoQuestions, seifuNankaiQuestions, takatsukiQuestions } from './questions-schools-1';
 import { kaimeiQuestions, toinQuestions, kindaiQuestions, kansaiHokuyoQuestions } from './questions-schools-2';
 import { myojoQuestions, tezukayamaQuestions, kinrankaiQuestions, otaniQuestions } from './questions-schools-3';
@@ -2656,6 +2657,7 @@ export const questions: Question[] = [
   ...kankanQuestions,
   ...shitennojiQuestions,
   ...kokoGeneralQuestions,
+  ...kokoKankanQuestions,
   ...kokoTopQuestions,
   // ── 学校別問題（大阪私学 最難関） ──
   ...seikoQuestions,

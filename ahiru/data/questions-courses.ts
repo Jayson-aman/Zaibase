@@ -1398,4 +1398,4 @@ export const kokoGeneralQuestions: Question[] = [
 // ============================================================
 // 高校受験 上位校コース (course: 'koko-top', examType: 'koko')
 // ============================================================
-export const kokoTopQuestions: Question[] = [];
+// kokoTopQuestions は questions-koko.ts に移動済み
