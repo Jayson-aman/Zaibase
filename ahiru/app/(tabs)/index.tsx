@@ -22,7 +22,10 @@ import {
   SubjectKey,
 } from '../../data/questions';
 import type { CourseKey, ExamType } from '../../data/courses';
-import { ALL_COURSES, CHUGAKU_COURSES, KOKO_COURSES, getCourseInfo } from '../../data/courses';
+import {
+  ALL_COURSES, CHUGAKU_COURSES, KOKO_COURSES, CATEGORY_COURSES, SCHOOL_COURSES,
+  getCourseInfo, LEVEL_ORDER,
+} from '../../data/courses';
 import { primeSpeech } from '../../utils/speech';
 import { getTodayDayLabel } from '../../utils/dailyChallenge';
 
@@ -124,6 +127,7 @@ export default function HomeScreen() {
   const [difficulty, setDifficulty] = useState<Difficulty>('all');
   const [examType, setExamType] = useState<ExamType>('chugaku');
   const [selectedCourse, setSelectedCourse] = useState<CourseKey>('general');
+  const [courseTab, setCourseTab] = useState<'category' | 'school'>('category');
 
   const courses = examType === 'chugaku' ? CHUGAKU_COURSES : KOKO_COURSES;
 
@@ -182,9 +186,14 @@ export default function HomeScreen() {
         ? questionsBySubject[listenSubject]
         : questionsBySubject[listenSubject].filter((q) => q.difficulty === difficulty);
 
-  // Courses that require MAX plan
-  const maxOnlyCourses: CourseKey[] = ['nandai', 'koko-top'];
+  // Courses that require MAX or Pro
+  const maxOnlyCourses = ALL_COURSES.filter(c => c.maxOnly).map(c => c.key);
   const courseRequiresMax = maxOnlyCourses.includes(selectedCourse);
+
+  // Schools sorted by level then name
+  const sortedSchools = [...SCHOOL_COURSES].sort(
+    (a, b) => LEVEL_ORDER[a.level] - LEVEL_ORDER[b.level],
+  );
 
   return (
     <SafeAreaView style={styles.container}>
@@ -225,36 +234,124 @@ export default function HomeScreen() {
         {!listenPickerActive && (
           <View style={styles.courseSection}>
             <Text style={styles.courseSectionLabel}>コースを選ぶ</Text>
-            <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.courseScroll}>
-              {courses.map((c) => {
-                const isSelected = selectedCourse === c.key;
-                const needsMax = maxOnlyCourses.includes(c.key);
-                return (
-                  <TouchableOpacity
-                    key={c.key}
-                    style={[
-                      styles.courseChip,
-                      isSelected && { backgroundColor: c.color, borderColor: c.color },
-                      !isSelected && { borderColor: c.color + '66' },
-                    ]}
-                    onPress={() => {
-                      if (needsMax && !isMax) {
-                        setPaywallVisible(true);
-                        return;
-                      }
-                      setSelectedCourse(c.key);
-                    }}
-                    activeOpacity={0.8}
-                  >
-                    <Text style={styles.courseChipEmoji}>{c.emoji}</Text>
-                    <Text style={[styles.courseChipText, isSelected && { color: '#FFFFFF' }]}>
-                      {c.shortName}
-                    </Text>
-                    {needsMax && <Text style={styles.courseMaxBadge}>MAX</Text>}
-                  </TouchableOpacity>
-                );
-              })}
-            </ScrollView>
+
+            {/* Sub-tabs: Category / School — only for 中学受験 */}
+            {examType === 'chugaku' && (
+              <View style={styles.courseTabRow}>
+                <TouchableOpacity
+                  style={[styles.courseTab, courseTab === 'category' && styles.courseTabActive]}
+                  onPress={() => setCourseTab('category')}
+                  activeOpacity={0.8}
+                >
+                  <Text style={[styles.courseTabText, courseTab === 'category' && styles.courseTabTextActive]}>
+                    📂 カテゴリ
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={[styles.courseTab, courseTab === 'school' && styles.courseTabActive]}
+                  onPress={() => setCourseTab('school')}
+                  activeOpacity={0.8}
+                >
+                  <Text style={[styles.courseTabText, courseTab === 'school' && styles.courseTabTextActive]}>
+                    🏫 学校別 ({SCHOOL_COURSES.length}校)
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            )}
+
+            {/* Category chips */}
+            {(examType === 'koko' || courseTab === 'category') && (
+              <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.courseScroll}>
+                {(examType === 'chugaku' ? CATEGORY_COURSES : KOKO_COURSES).map((c) => {
+                  const isSelected = selectedCourse === c.key;
+                  const needsMax = maxOnlyCourses.includes(c.key);
+                  return (
+                    <TouchableOpacity
+                      key={c.key}
+                      style={[
+                        styles.courseChip,
+                        isSelected && { backgroundColor: c.color, borderColor: c.color },
+                        !isSelected && { borderColor: c.color + '66' },
+                      ]}
+                      onPress={() => {
+                        if (needsMax && !isMax) { setPaywallVisible(true); return; }
+                        setSelectedCourse(c.key);
+                      }}
+                      activeOpacity={0.8}
+                    >
+                      <Text style={styles.courseChipEmoji}>{c.emoji}</Text>
+                      <Text style={[styles.courseChipText, isSelected && { color: '#FFFFFF' }]}>
+                        {c.shortName}
+                      </Text>
+                      {needsMax && <Text style={styles.courseMaxBadge}>MAX</Text>}
+                    </TouchableOpacity>
+                  );
+                })}
+              </ScrollView>
+            )}
+
+            {/* School grid */}
+            {examType === 'chugaku' && courseTab === 'school' && (
+              <ScrollView style={styles.schoolGridScroll} nestedScrollEnabled showsVerticalScrollIndicator={false}>
+                {(['最難関', '難関', '標準〜難関'] as const).map((level) => {
+                  const schools = sortedSchools.filter(s => s.level === level);
+                  if (schools.length === 0) return null;
+                  return (
+                    <View key={level} style={styles.schoolLevelGroup}>
+                      <Text style={styles.schoolLevelLabel}>{level}</Text>
+                      <View style={styles.schoolGrid}>
+                        {schools.map((s) => {
+                          const isSelected = selectedCourse === s.key;
+                          const needsMax = maxOnlyCourses.includes(s.key);
+                          const needsPro = !needsMax;
+                          return (
+                            <TouchableOpacity
+                              key={s.key}
+                              style={[
+                                styles.schoolCard,
+                                isSelected && { backgroundColor: s.color, borderColor: s.color },
+                                !isSelected && { borderColor: s.color + '55' },
+                              ]}
+                              onPress={() => {
+                                if (needsMax && !isMax) { setPaywallVisible(true); return; }
+                                if (needsPro && !isPro) { setPaywallVisible(true); return; }
+                                setSelectedCourse(s.key);
+                                setCourseTab('school');
+                              }}
+                              activeOpacity={0.8}
+                            >
+                              <View style={styles.schoolCardTop}>
+                                <Text style={styles.schoolCardEmoji}>{s.emoji}</Text>
+                                <View style={styles.schoolCardBadges}>
+                                  {needsMax && <Text style={styles.courseMaxBadge}>MAX</Text>}
+                                  {needsPro && !needsMax && <Text style={styles.courseProBadge}>Pro</Text>}
+                                </View>
+                              </View>
+                              <Text style={[styles.schoolCardName, isSelected && { color: '#FFF' }]} numberOfLines={2}>
+                                {s.shortName}
+                              </Text>
+                              <View style={styles.schoolCardMeta}>
+                                {s.hensachi && (
+                                  <Text style={[styles.schoolCardHensachi, isSelected && { color: '#FFE' }]}>
+                                    偏差値{s.hensachi}
+                                  </Text>
+                                )}
+                                {s.gender && (
+                                  <Text style={[styles.schoolCardGender, isSelected && { color: '#FFE' }]}>
+                                    {s.gender}
+                                  </Text>
+                                )}
+                              </View>
+                            </TouchableOpacity>
+                          );
+                        })}
+                      </View>
+                    </View>
+                  );
+                })}
+              </ScrollView>
+            )}
+
             {/* Course detail banner */}
             <View style={[styles.courseBanner, { borderColor: courseInfo.color }]}>
               <View style={styles.courseBannerLeft}>
@@ -274,6 +371,21 @@ export default function HomeScreen() {
                 {courseInfo.targetSchools.join('・')}
               </Text>
             </View>
+
+            {/* Scholarship info banner (MAX users) */}
+            {isMax && (
+              <View style={styles.scholarshipBanner}>
+                <Text style={styles.scholarshipTitle}>💴 奨学金・授業料支援情報</Text>
+                <Text style={styles.scholarshipText}>
+                  大阪府私学助成・授業料支援給付金制度を活用できる可能性があります。
+                  入学前に必ず確認してください。
+                </Text>
+                <Text style={styles.scholarshipLink}>
+                  ▸ 大阪私学連合会 奨学金情報{'\n'}
+                  ▸ 大阪府 授業料支援給付金
+                </Text>
+              </View>
+            )}
           </View>
         )}
 
@@ -571,6 +683,137 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#555',
     fontWeight: '500',
+  },
+
+  // Course sub-tabs
+  courseTabRow: {
+    flexDirection: 'row',
+    gap: 8,
+    marginBottom: 10,
+  },
+  courseTab: {
+    flex: 1,
+    paddingVertical: 9,
+    borderRadius: 10,
+    alignItems: 'center',
+    backgroundColor: '#F0F4FA',
+    borderWidth: 1.5,
+    borderColor: 'transparent',
+  },
+  courseTabActive: {
+    backgroundColor: '#1E5FBE',
+    borderColor: '#1E5FBE',
+  },
+  courseTabText: {
+    fontSize: 15,
+    fontWeight: '700',
+    color: '#666',
+  },
+  courseTabTextActive: {
+    color: '#FFFFFF',
+  },
+
+  // School grid
+  schoolGridScroll: {
+    maxHeight: 340,
+    marginBottom: 10,
+  },
+  schoolLevelGroup: {
+    marginBottom: 12,
+  },
+  schoolLevelLabel: {
+    fontSize: 13,
+    fontWeight: '800',
+    color: '#888',
+    marginBottom: 6,
+    letterSpacing: 0.5,
+    textTransform: 'uppercase',
+  },
+  schoolGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+  },
+  schoolCard: {
+    width: '47%',
+    backgroundColor: '#FFFFFF',
+    borderRadius: 12,
+    padding: 10,
+    borderWidth: 1.5,
+    borderColor: '#E0E6EF',
+  },
+  schoolCardTop: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 4,
+  },
+  schoolCardEmoji: {
+    fontSize: 20,
+  },
+  schoolCardBadges: {
+    flexDirection: 'row',
+    gap: 4,
+  },
+  courseProBadge: {
+    fontSize: 10,
+    fontWeight: '800',
+    color: '#7D3C98',
+    backgroundColor: '#F3E5F5',
+    paddingHorizontal: 5,
+    paddingVertical: 1,
+    borderRadius: 5,
+    overflow: 'hidden',
+  },
+  schoolCardName: {
+    fontSize: 13,
+    fontWeight: '800',
+    color: '#1A1A2E',
+    lineHeight: 18,
+    marginBottom: 4,
+  },
+  schoolCardMeta: {
+    flexDirection: 'row',
+    gap: 4,
+    flexWrap: 'wrap',
+  },
+  schoolCardHensachi: {
+    fontSize: 11,
+    color: '#888',
+    fontWeight: '600',
+  },
+  schoolCardGender: {
+    fontSize: 11,
+    color: '#888',
+    fontWeight: '600',
+  },
+
+  // Scholarship banner
+  scholarshipBanner: {
+    backgroundColor: '#FFF8E7',
+    borderRadius: 12,
+    padding: 12,
+    marginTop: 8,
+    borderLeftWidth: 4,
+    borderLeftColor: '#F9A825',
+  },
+  scholarshipTitle: {
+    fontSize: 14,
+    fontWeight: '800',
+    color: '#F57F17',
+    marginBottom: 4,
+  },
+  scholarshipText: {
+    fontSize: 12,
+    color: '#555',
+    lineHeight: 18,
+    marginBottom: 6,
+  },
+  scholarshipLink: {
+    fontSize: 12,
+    color: '#1565C0',
+    fontWeight: '600',
+    lineHeight: 20,
   },
 
   // Mascot
