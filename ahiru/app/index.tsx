@@ -728,7 +728,6 @@ const styles = StyleSheet.create({
   },
   featureImage: {
     width: '100%',
-    height: undefined,
     aspectRatio: 4 / 3,
   },
   featureOverlay: {
