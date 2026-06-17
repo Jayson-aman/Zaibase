@@ -15,12 +15,14 @@ import SchoolSlideshow from '../../components/SchoolSlideshow';
 import AnimatedMascot from '../../components/AnimatedMascot';
 import { homeMascot } from '../../data/images';
 import { useProGate } from '../../hooks/useProGate';
+import { useSubscription } from '../../hooks/useSubscription';
 import {
   questionsBySubject,
   subjectInfo,
   SubjectKey,
 } from '../../data/questions';
 import { primeSpeech } from '../../utils/speech';
+import { getTodayDayLabel } from '../../utils/dailyChallenge';
 
 const SUBJECTS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
 
@@ -82,7 +84,9 @@ export default function HomeScreen() {
 
   const listenInfo = listenSubject ? subjectInfo[listenSubject] : null;
   const { isPro, paywallVisible, setPaywallVisible, requirePro } = useProGate();
+  const { isMax } = useSubscription();
   const selectedDiff = DIFFICULTY_OPTIONS.find((d) => d.key === difficulty)!;
+  const todayLabel = getTodayDayLabel();
 
   const listenQuestions =
     listenSubject == null
@@ -140,6 +144,25 @@ export default function HomeScreen() {
             activeOpacity={0.85}
           >
             <Text style={styles.planBtnText}>👑 Pro・Max プランを見る</Text>
+          </TouchableOpacity>
+        )}
+
+        {!listenPickerActive && (
+          <TouchableOpacity
+            style={[styles.dailyBtn, !isMax && styles.dailyBtnLocked]}
+            onPress={() => {
+              if (!isMax) {
+                setPaywallVisible(true);
+                return;
+              }
+              router.push('/quiz/daily');
+            }}
+            activeOpacity={0.85}
+          >
+            <Text style={styles.dailyBtnText}>
+              🔥 今日（{todayLabel}曜日）のMAX日替わり30問
+            </Text>
+            {!isMax && <Text style={styles.dailyBtnBadge}>MAX限定</Text>}
           </TouchableOpacity>
         )}
 
@@ -422,6 +445,41 @@ const styles = StyleSheet.create({
     borderWidth: 2.5,
     borderColor: '#9B59B6',
     backgroundColor: 'rgba(155,89,182,0.08)',
+  },
+  dailyBtn: {
+    borderRadius: 16,
+    paddingVertical: 18,
+    paddingHorizontal: 20,
+    alignItems: 'center',
+    marginBottom: 20,
+    backgroundColor: '#C0392B',
+    shadowColor: '#C0392B',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.35,
+    shadowRadius: 8,
+    elevation: 6,
+  },
+  dailyBtnLocked: {
+    backgroundColor: '#E8D5D5',
+    shadowOpacity: 0,
+    elevation: 0,
+  },
+  dailyBtnText: {
+    fontSize: 24,
+    fontWeight: '800',
+    color: '#FFFFFF',
+    textAlign: 'center',
+  },
+  dailyBtnBadge: {
+    marginTop: 6,
+    fontSize: 16,
+    fontWeight: '700',
+    color: '#9B1818',
+    backgroundColor: '#FFE0E0',
+    paddingHorizontal: 12,
+    paddingVertical: 3,
+    borderRadius: 20,
+    overflow: 'hidden',
   },
   planBtnText: {
     fontSize: 24,

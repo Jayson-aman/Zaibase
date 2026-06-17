@@ -14,6 +14,7 @@ import AnimatedMascot from '../../components/AnimatedMascot';
 import { getResultMascot } from '../../data/images';
 import { saveProgress } from '../../store/progress';
 import { submitRankingScore } from '../../services/ranking';
+import { getDailyQuestions, getTodayDayLabel } from '../../utils/dailyChallenge';
 
 function isSubjectKey(value: string): value is SubjectKey {
   return ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'].includes(value);
@@ -32,22 +33,25 @@ const DIFF_LABELS: Record<Difficulty, { label: string; icon: string; color: stri
 };
 
 export default function QuizScreen() {
-  const { subject, difficulty: diffParam } = useLocalSearchParams<{
+  const { subject, difficulty: diffParam, mode } = useLocalSearchParams<{
     subject: string;
     difficulty?: string;
+    mode?: string;
   }>();
   const router = useRouter();
 
   const subjectKey: SubjectKey = isSubjectKey(subject ?? '') ? (subject as SubjectKey) : 'sansu';
   const difficultyFilter: Difficulty | null =
     diffParam && isDifficulty(diffParam) ? diffParam : null;
+  const isDaily = mode === 'daily';
   const info = subjectInfo[subjectKey];
 
   const questions = useMemo(() => {
+    if (isDaily) return getDailyQuestions(subjectKey);
     const all = questionsBySubject[subjectKey];
     if (difficultyFilter == null) return all;
     return all.filter((q) => q.difficulty === difficultyFilter);
-  }, [subjectKey, difficultyFilter]);
+  }, [subjectKey, difficultyFilter, isDaily]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -145,9 +149,11 @@ export default function QuizScreen() {
     return (
       <SafeAreaView style={[styles.safeArea, { backgroundColor: '#F5F7FA' }]}>
         <View style={styles.resultsContainer}>
-          <View style={[styles.resultsHeader, { backgroundColor: info.color }]}>
+          <View style={[styles.resultsHeader, { backgroundColor: isDaily ? '#C0392B' : info.color }]}>
             <Text style={styles.resultsHeaderEmoji}>{info.emoji}</Text>
-            <Text style={styles.resultsHeaderTitle}>{info.name} 完了！</Text>
+            <Text style={styles.resultsHeaderTitle}>
+              {isDaily ? `🔥 MAX日替わり ${info.name} 完了！` : `${info.name} 完了！`}
+            </Text>
           </View>
 
           <ScrollView contentContainerStyle={styles.resultsContent}>
@@ -204,18 +210,20 @@ export default function QuizScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
       {/* Header */}
-      <View style={[styles.header, { backgroundColor: info.color }]}>
+      <View style={[styles.header, { backgroundColor: isDaily ? '#C0392B' : info.color }]}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
           <Text style={styles.backBtnText}>← 戻る</Text>
         </TouchableOpacity>
         <View style={styles.headerCenter}>
           <Text style={styles.headerEmoji}>{info.emoji}</Text>
           <Text style={styles.headerTitle}>{info.name}</Text>
-          {diffInfo && (
+          {isDaily ? (
+            <Text style={styles.headerDiff}>🔥 {getTodayDayLabel()}曜日</Text>
+          ) : diffInfo ? (
             <Text style={styles.headerDiff}>
               {diffInfo.icon} {diffInfo.label}
             </Text>
-          )}
+          ) : null}
         </View>
         <View style={styles.headerRight}>
           <Text style={styles.questionIndicator}>
@@ -231,7 +239,7 @@ export default function QuizScreen() {
             styles.progressFill,
             {
               width: `${((currentIndex + (revealed ? 1 : 0)) / total) * 100}%`,
-              backgroundColor: info.color,
+              backgroundColor: isDaily ? '#C0392B' : info.color,
             },
           ]}
         />
