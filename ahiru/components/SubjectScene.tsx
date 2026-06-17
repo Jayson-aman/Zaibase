@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { View, Text, StyleSheet, Animated, Easing, Platform } from 'react-native';
+import React, { useEffect, useRef, useState } from 'react';
+import { View, Text, Image, StyleSheet, Animated, Easing, Platform } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { SubjectKey } from '../data/questions';
 
@@ -33,10 +33,21 @@ type TextDecorItem = {
   bold?: boolean;
 };
 
+type PhotoItem = {
+  uri: string;
+  left: number;   // %
+  top: number;    // %
+  w: number;      // %
+  h: number;      // %
+  opacity?: number;
+  radius?: number;
+};
+
 const SCENES: Record<SubjectKey, {
   bg: [string, string];
   elems: Elem[];
   texts?: TextDecorItem[];
+  photos?: PhotoItem[];
 }> = {
   sansu: {
     bg: ['#FFFDE7', '#FFE082'],
@@ -108,6 +119,18 @@ const SCENES: Record<SubjectKey, {
       { text: '歴史', left: 4,  top: 20, size: 26, color: 'rgba(130,80,10,0.35)', rotate: -8, bold: true },
       { text: '地理', left: 42, top: 68, size: 22, color: 'rgba(130,80,10,0.40)', rotate: 4,  bold: true },
     ],
+    photos: [
+      // 二条城（京都・世界文化遺産）
+      {
+        uri: 'https://commons.wikimedia.org/wiki/Special:FilePath/Nijo-jo_Castle.jpg',
+        left: 2, top: 28, w: 44, h: 38, opacity: 0.84, radius: 10,
+      },
+      // 四日市コンビナート（工場地帯・公害の歴史）
+      {
+        uri: 'https://commons.wikimedia.org/wiki/Special:FilePath/Yokkaichi-Nw.JPG',
+        left: 52, top: 33, w: 44, h: 32, opacity: 0.80, radius: 10,
+      },
+    ],
   },
   eigo: {
     bg: ['#E3F2FD', '#BBDEFB'],
@@ -122,6 +145,18 @@ const SCENES: Record<SubjectKey, {
       { text: 'Hello!',  left: 48, top: 48, size: 20, color: 'rgba(15,70,170,0.48)', rotate: 9,  bold: true },
       { text: 'ABC',     left: 4,  top: 22, size: 28, color: 'rgba(15,70,170,0.42)', rotate: -8 },
       { text: 'English', left: 4,  top: 74, size: 15, color: 'rgba(15,70,170,0.38)', rotate: 5  },
+    ],
+    photos: [
+      // 国連本部（ニューヨーク）
+      {
+        uri: 'https://commons.wikimedia.org/wiki/Special:FilePath/United_Nations_Headquarters_in_New_York_City.jpg',
+        left: 38, top: 28, w: 56, h: 40, opacity: 0.82, radius: 10,
+      },
+      // ビッグベン（英国・英語圏の象徴）
+      {
+        uri: 'https://commons.wikimedia.org/wiki/Special:FilePath/Big_Ben_2013.jpg',
+        left: 2, top: 30, w: 36, h: 38, opacity: 0.80, radius: 10,
+      },
     ],
   },
 };
@@ -145,6 +180,30 @@ function TextDecor({ t }: { t: TextDecorItem }) {
     >
       {t.text}
     </Text>
+  );
+}
+
+// ── 写真コンポーネント ─────────────────────────────────────
+function PhotoDecor({ p }: { p: PhotoItem }) {
+  const [err, setErr] = useState(false);
+  if (err) return null;
+  return (
+    <Image
+      source={{ uri: p.uri }}
+      style={[
+        styles.photo,
+        {
+          left:         `${p.left}%` as any,
+          top:          `${p.top}%` as any,
+          width:        `${p.w}%` as any,
+          height:       `${p.h}%` as any,
+          opacity:      p.opacity ?? 0.85,
+          borderRadius: p.radius ?? 10,
+        },
+      ]}
+      resizeMode="cover"
+      onError={() => setErr(true)}
+    />
   );
 }
 
@@ -241,7 +300,9 @@ export default function SubjectScene({ subject }: Props) {
   const scene = SCENES[subject];
   return (
     <LinearGradient colors={scene.bg} style={styles.container}>
-      {/* テキスト装飾（絵文字の背面） */}
+      {/* 写真（最背面） */}
+      {scene.photos?.map((p, i) => <PhotoDecor key={`p${i}`} p={p} />)}
+      {/* テキスト装飾 */}
       {scene.texts?.map((t, i) => <TextDecor key={`t${i}`} t={t} />)}
       {/* アニメーション絵文字（前面） */}
       {scene.elems.map((e, i) => <AnimEmoji key={i} e={e} />)}
@@ -261,5 +322,8 @@ const styles = StyleSheet.create({
   textDecor: {
     position: 'absolute',
     includeFontPadding: false,
+  },
+  photo: {
+    position: 'absolute',
   },
 });

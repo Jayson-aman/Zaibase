@@ -439,7 +439,6 @@ export default function LandingPage() {
             {'  '}中学受験対策
           </Text>
           <View style={styles.footerDivider} />
-          <Text style={styles.footerText}>運営：南條 雅哉 / Zaibase Group</Text>
           <Text style={styles.footerText}>info@zaibase.group</Text>
           <Text style={[styles.footerText, { marginTop: 12 }]}>
             © 2026 Zaibase Group. All rights reserved.
