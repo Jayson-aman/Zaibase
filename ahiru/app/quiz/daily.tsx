@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -6,16 +6,63 @@ import {
   StyleSheet,
   SafeAreaView,
   ScrollView,
+  ActivityIndicator,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { subjectInfo, SubjectKey } from '../../data/questions';
 import { getDailyQuestions, getTodayDayLabel } from '../../utils/dailyChallenge';
+import { useSubscription } from '../../hooks/useSubscription';
+import Paywall from '../../components/Paywall';
 
 const SUBJECTS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
 
 export default function DailyChallengeScreen() {
   const router = useRouter();
   const todayLabel = getTodayDayLabel();
+  const { isMax, loading } = useSubscription();
+  const [paywallVisible, setPaywallVisible] = useState(false);
+
+  if (loading) {
+    return (
+      <SafeAreaView style={[styles.safe, { alignItems: 'center', justifyContent: 'center' }]}>
+        <ActivityIndicator color="#FF6B35" size="large" />
+      </SafeAreaView>
+    );
+  }
+
+  if (!isMax) {
+    return (
+      <SafeAreaView style={styles.safe}>
+        <View style={styles.header}>
+          <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
+            <Text style={styles.backBtnText}>← 戻る</Text>
+          </TouchableOpacity>
+          <Text style={styles.headerTitle}>🔥 MAX日替わり30問</Text>
+          <View style={styles.headerRight} />
+        </View>
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', padding: 32 }}>
+          <Text style={{ fontSize: 64, marginBottom: 16 }}>🔒</Text>
+          <Text style={{ fontSize: 28, fontWeight: '900', color: '#fff', marginBottom: 12, textAlign: 'center' }}>
+            MAXプラン限定
+          </Text>
+          <Text style={{ fontSize: 18, color: '#aaa', textAlign: 'center', lineHeight: 28, marginBottom: 32 }}>
+            日替わり30問は MAXプランの方のみご利用いただけます。
+          </Text>
+          <TouchableOpacity
+            style={{ backgroundColor: '#E74C3C', borderRadius: 16, paddingVertical: 18, paddingHorizontal: 40 }}
+            onPress={() => setPaywallVisible(true)}
+          >
+            <Text style={{ fontSize: 20, fontWeight: '800', color: '#fff' }}>👑 MAXプランを見る</Text>
+          </TouchableOpacity>
+        </View>
+        <Paywall
+          visible={paywallVisible}
+          onClose={() => setPaywallVisible(false)}
+          onPurchased={() => setPaywallVisible(false)}
+        />
+      </SafeAreaView>
+    );
+  }
 
   return (
     <SafeAreaView style={styles.safe}>

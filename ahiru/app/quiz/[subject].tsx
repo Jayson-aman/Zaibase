@@ -106,45 +106,56 @@ export default function QuizScreen() {
 
   const currentChoices = useMemo(() => {
     const q = questions[currentIndex];
-    if (!q || questions.length < 2) return undefined;
+    if (!q || questions.length < 4) return undefined;
     const correct = q.answer;
 
-    // 答えの型を分類（20パターン対応）
     function answerType(a: string): string {
       const t = a.trim();
-      if (/^\d{2,4}年/.test(t))                                    return 'year';
-      if (/[①②③④⑤⑥⑦⑧⑨]/.test(t))                              return 'numbered';
-      if (/^[A-Za-z]/.test(t) && /[A-Za-z]{3,}/.test(t))          return 'english';
-      if (/^[ぁ-ん]+$/.test(t))                                     return 'hiragana';
-      if (/^[\d,，]+$/.test(t))                                     return 'number';
-      if (/\d+[／/]\d+/.test(t) || /分の\d+/.test(t))              return 'fraction';
-      if (/\d+(cm²|㎠|cm³|m²|km²|立方|平方)/.test(t))             return 'area-volume';
-      if (/\d+(cm|mm|m|km)\b/.test(t) && !/²|³|²/.test(t))        return 'length';
-      if (/\d+[℃°VΩWgkg]|秒速|時速|mol|Pa/.test(t))               return 'physics';
-      if (/^\d+(\.\d+)?%/.test(t) || /約\d+%/.test(t))            return 'percent';
-      if (/^\d+:\d+/.test(t))                                       return 'ratio';
-      if (/[・、]/.test(t) && t.length > 5 && !(/^\d{2,4}年/.test(t))) return 'list';
-      if (t.length <= 12 && !/[。\n]/.test(t))                     return 'short';
-      if (t.length > 60)                                            return 'long';
+      if (/^\d{2,4}年$/.test(t))                                         return 'year-bare';
+      if (/^\d{2,4}年/.test(t))                                          return 'year-compound';
+      if (/[①②③④⑤⑥⑦⑧⑨]/.test(t))                                  return 'numbered';
+      if (/^[A-Za-z]/.test(t) && /[A-Za-z]{3,}/.test(t))               return 'english';
+      if (/^[ぁ-ん]+$/.test(t))                                          return 'hiragana';
+      if (/^[\d,，]+$/.test(t))                                          return 'number';
+      if (/\d+[／/]\d+/.test(t) || /分の\d+/.test(t))                   return 'fraction';
+      if (/\d+(cm²|㎠|cm³|m²|km²|立方|平方)/.test(t))                  return 'area-volume';
+      if (/\d+(cm|mm|m|km)\b/.test(t) && !/[²³]/.test(t))              return 'length';
+      if (/\d+[℃°VΩW]|秒速|時速|mol|Pa/.test(t))                       return 'physics';
+      if (/\d+[gkg]/.test(t))                                            return 'mass';
+      if (/^\d+(\.\d+)?%/.test(t) || /約\d+%/.test(t))                 return 'percent';
+      if (/^\d+:\d+/.test(t))                                            return 'ratio';
+      if (/\d+[日羽本個匹頭枚冊杯台艘門]/.test(t))                       return 'count';
+      if (/\d+分$/.test(t) || /\d+時間/.test(t))                        return 'time';
+      if (/[・、]/.test(t) && t.length > 5 && !/^\d{2,4}年/.test(t))   return 'list';
+      if (t.length <= 12 && !/[。\n]/.test(t))                          return 'short';
+      if (t.length > 60)                                                  return 'long';
       return 'medium';
     }
 
     const correctType = answerType(correct);
     const all = questions.filter((o) => o.id !== q.id && o.answer !== correct);
 
-    // 1st: 同型
-    let typed = all.filter((o) => answerType(o.answer) === correctType);
+    // 答えテキストの重複を除去してユニークなものだけ使う
+    const seenAnswers = new Set<string>();
+    const uniqueAll = all.filter((o) => {
+      if (seenAnswers.has(o.answer)) return false;
+      seenAnswers.add(o.answer);
+      return true;
+    });
 
-    // 2nd: 長さが近いもの（±40文字）
+    // 1st: 同型
+    let typed = uniqueAll.filter((o) => answerType(o.answer) === correctType);
+
+    // 2nd: 長さが近いもの（±40文字）、numbered除外
     if (typed.length < 3) {
-      typed = all.filter((o) =>
+      typed = uniqueAll.filter((o) =>
         Math.abs(o.answer.length - correct.length) < 40 &&
         answerType(o.answer) !== 'numbered'
       );
     }
 
     // 3rd: 全部
-    if (typed.length < 3) typed = all;
+    if (typed.length < 3) typed = uniqueAll;
 
     const shuffled = [...typed].sort(() => Math.random() - 0.5);
     return [...shuffled.slice(0, 3), correct].sort(() => Math.random() - 0.5);
