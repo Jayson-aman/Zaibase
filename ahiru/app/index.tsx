@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   Dimensions,
+  Image,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -70,12 +71,7 @@ const FEATURES = [
     desc: '問題と解答を音声で読み上げ。\n通学中・就寝前でも学習できる。',
     tag: 'Pro',
     tagColor: '#9B59B6',
-    panels: [
-      { emoji: '🚗', text: '移動中でも\n学習できる！' },
-      { emoji: '🎧', text: '音声で\n流すだけ！' },
-      { emoji: '🌙', text: '就寝前に\n聞き流し' },
-      { emoji: '⭐', text: '自然に\n頭に入る！' },
-    ],
+    image: require('../../assets/mascots/mascot-listen.png') as number,
   },
   {
     icon: '🤖',
@@ -83,12 +79,7 @@ const FEATURES = [
     desc: '間違えた問題をAIが分析。\n苦手単元と復習ポイントをアドバイス。',
     tag: 'Max',
     tagColor: C.red,
-    panels: [
-      { emoji: '😓', text: 'また\n間違えた…' },
-      { emoji: '🤖', text: 'AIが\n分析中！' },
-      { emoji: '📍', text: '弱点を\n発見！' },
-      { emoji: '💪', text: '苦手を\n克服！' },
-    ],
+    image: require('../../assets/mascots/mascot-sansu.png') as number,
   },
   {
     icon: '🏆',
@@ -96,12 +87,7 @@ const FEATURES = [
     desc: '全利用者の中での自分の順位を表示。\n上位10%・TOP100バッジ獲得を目指す。',
     tag: '全員',
     tagColor: C.gold,
-    panels: [
-      { emoji: '📝', text: 'テスト\n完了！' },
-      { emoji: '📊', text: '全国と\n比較中' },
-      { emoji: '🥇', text: 'TOP100\n達成！' },
-      { emoji: '🏆', text: 'バッジ\n獲得！' },
-    ],
+    image: require('../../assets/mascots/mascot-celebrate.png') as number,
   },
   {
     icon: '📊',
@@ -109,12 +95,7 @@ const FEATURES = [
     desc: '得意科目・苦手科目を一目で把握。\n保護者向けレポートも自動生成。',
     tag: '全員',
     tagColor: C.navy,
-    panels: [
-      { emoji: '📚', text: '各科目を\n記録' },
-      { emoji: '📊', text: 'グラフで\n可視化' },
-      { emoji: '👨‍👩‍👧', text: '保護者も\n確認！' },
-      { emoji: '📈', text: 'レポート\n自動生成' },
-    ],
+    image: require('../../assets/mascots/mascot-home.png') as number,
   },
 ];
 
@@ -288,18 +269,7 @@ export default function LandingPage() {
                   <Text style={styles.featureDesc}>{f.desc}</Text>
                 </View>
                 <View style={styles.featureRight}>
-                  <View style={styles.mangaGrid}>
-                    {[0, 1].map((row) => (
-                      <View key={row} style={styles.mangaRow}>
-                        {f.panels.slice(row * 2, row * 2 + 2).map((p, i) => (
-                          <View key={i} style={styles.mangaCell}>
-                            <Text style={styles.mangaEmoji}>{p.emoji}</Text>
-                            <Text style={styles.mangaText}>{p.text}</Text>
-                          </View>
-                        ))}
-                      </View>
-                    ))}
-                  </View>
+                  <Image source={f.image} style={styles.featureImage} resizeMode="contain" />
                 </View>
               </View>
             ))}
@@ -710,7 +680,8 @@ const styles = StyleSheet.create({
     gap: 14,
   },
   featureLeft: { flex: 1 },
-  featureRight: { width: 148 },
+  featureRight: { width: 130, alignItems: 'center', justifyContent: 'center' },
+  featureImage: { width: 120, height: 120 },
   featureTop: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -736,26 +707,6 @@ const styles = StyleSheet.create({
     lineHeight: 28,
     fontWeight: '500',
   },
-  mangaGrid: {
-    borderWidth: 2,
-    borderColor: C.navyDark,
-    borderRadius: 8,
-    overflow: 'hidden',
-    backgroundColor: C.navyDark,
-  },
-  mangaRow: { flexDirection: 'row' },
-  mangaCell: {
-    flex: 1,
-    aspectRatio: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: C.white,
-    padding: 4,
-    borderWidth: 1,
-    borderColor: C.navyDark,
-  },
-  mangaEmoji: { fontSize: 24, marginBottom: 2 },
-  mangaText: { fontSize: 10, color: C.navyDark, fontWeight: '700', textAlign: 'center', lineHeight: 14 },
 
   // デバイス
   deviceSection: {
