@@ -8,11 +8,14 @@ import {
   ScrollView,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { questionsBySubject, subjectInfo, SubjectKey } from '../../data/questions';
+import { questionsBySubject, subjectInfo, SubjectKey, Question } from '../../data/questions';
+import type { CourseKey, ExamType } from '../../data/courses';
 import QuizCard from '../../components/QuizCard';
 import AnimatedMascot from '../../components/AnimatedMascot';
 import { getResultMascot } from '../../data/images';
 import { saveProgress } from '../../store/progress';
+import { submitRankingScore } from '../../services/ranking';
+import { getDailyQuestions, getTodayDayLabel } from '../../utils/dailyChallenge';
 
 function isSubjectKey(value: string): value is SubjectKey {
   return ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'].includes(value);
@@ -24,36 +27,74 @@ function isDifficulty(value: string): value is Difficulty {
   return ['basic', 'standard', 'advanced'].includes(value);
 }
 
+function isCourseKey(value: string): value is CourseKey {
+  return ['general','kankan','shitennoji','nandai','koko-general','koko-kankan','koko-top'].includes(value);
+}
+
+function isExamType(value: string): value is ExamType {
+  return value === 'chugaku' || value === 'koko';
+}
+
 const DIFF_LABELS: Record<Difficulty, { label: string; icon: string; color: string }> = {
   basic: { label: '基礎', icon: '🌱', color: '#27AE60' },
   standard: { label: '標準', icon: '⭐', color: '#F39C12' },
   advanced: { label: '発展', icon: '🔥', color: '#E74C3C' },
 };
 
+function filterQuestions(
+  all: Question[],
+  examType: ExamType,
+  course: CourseKey,
+  difficultyFilter: Difficulty | null,
+): Question[] {
+  let qs = all.filter((q) => (q.examType ?? 'chugaku') === examType);
+  if (course === 'general') {
+    qs = qs.filter((q) => !q.course || q.course === 'general');
+  } else {
+    qs = qs.filter((q) => q.course === course);
+  }
+  if (difficultyFilter) qs = qs.filter((q) => q.difficulty === difficultyFilter);
+  // Fallback: if no course-specific questions, return general pool
+  if (qs.length === 0) {
+    qs = all.filter((q) => (q.examType ?? 'chugaku') === 'chugaku');
+    if (difficultyFilter) qs = qs.filter((q) => q.difficulty === difficultyFilter);
+  }
+  return qs;
+}
+
 export default function QuizScreen() {
-  const { subject, difficulty: diffParam } = useLocalSearchParams<{
-    subject: string;
-    difficulty?: string;
-  }>();
+  const { subject, difficulty: diffParam, mode, course: courseParam, examType: examTypeParam } =
+    useLocalSearchParams<{
+      subject: string;
+      difficulty?: string;
+      mode?: string;
+      course?: string;
+      examType?: string;
+    }>();
   const router = useRouter();
 
   const subjectKey: SubjectKey = isSubjectKey(subject ?? '') ? (subject as SubjectKey) : 'sansu';
   const difficultyFilter: Difficulty | null =
     diffParam && isDifficulty(diffParam) ? diffParam : null;
+  const isDaily = mode === 'daily';
+  const course: CourseKey = courseParam && isCourseKey(courseParam) ? courseParam : 'general';
+  const examType: ExamType = examTypeParam && isExamType(examTypeParam) ? examTypeParam : 'chugaku';
   const info = subjectInfo[subjectKey];
 
   const questions = useMemo(() => {
+    if (isDaily) return getDailyQuestions(subjectKey);
     const all = questionsBySubject[subjectKey];
-    if (difficultyFilter == null) return all;
-    return all.filter((q) => q.difficulty === difficultyFilter);
-  }, [subjectKey, difficultyFilter]);
+    return filterQuestions(all, examType, course, difficultyFilter);
+  }, [subjectKey, difficultyFilter, isDaily, course, examType]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [finished, setFinished] = useState(false);
   const [savedProgress, setSavedProgress] = useState(false);
+  const [showExplanation, setShowExplanation] = useState(false);
   const [wrongIds, setWrongIds] = useState<string[]>([]);
+  const [feedback, setFeedback] = useState<'correct' | 'wrong' | null>(null);
 
   const currentQuestion = questions[currentIndex];
   const total = questions.length;
@@ -67,21 +108,26 @@ export default function QuizScreen() {
     const newScore = correct ? score + 1 : score;
     const newWrongIds = correct ? wrongIds : [...wrongIds, currentQuestion.id];
 
-    if (currentIndex + 1 >= total) {
-      // Last question - save progress and show results
-      if (!savedProgress) {
-        setSavedProgress(true);
-        await saveProgress(subjectKey, newScore, total, newWrongIds);
+    setFeedback(correct ? 'correct' : 'wrong');
+    setTimeout(async () => {
+      setFeedback(null);
+      if (currentIndex + 1 >= total) {
+        if (!savedProgress) {
+          setSavedProgress(true);
+          await saveProgress(subjectKey, newScore, total, newWrongIds);
+          submitRankingScore(newScore, total).catch(() => {});
+        }
+        setScore(newScore);
+        setWrongIds(newWrongIds);
+        setFinished(true);
+      } else {
+        setScore(newScore);
+        setWrongIds(newWrongIds);
+        setCurrentIndex((i) => i + 1);
+        setRevealed(false);
+        setShowExplanation(false);
       }
-      setScore(newScore);
-      setWrongIds(newWrongIds);
-      setFinished(true);
-    } else {
-      setScore(newScore);
-      setWrongIds(newWrongIds);
-      setCurrentIndex((i) => i + 1);
-      setRevealed(false);
-    }
+    }, 900);
   }
 
   async function handleRestart() {
@@ -91,6 +137,7 @@ export default function QuizScreen() {
     setFinished(false);
     setSavedProgress(false);
     setWrongIds([]);
+    setShowExplanation(false);
   }
 
   if (questions.length === 0) {
@@ -139,9 +186,11 @@ export default function QuizScreen() {
     return (
       <SafeAreaView style={[styles.safeArea, { backgroundColor: '#F5F7FA' }]}>
         <View style={styles.resultsContainer}>
-          <View style={[styles.resultsHeader, { backgroundColor: info.color }]}>
+          <View style={[styles.resultsHeader, { backgroundColor: isDaily ? '#C0392B' : info.color }]}>
             <Text style={styles.resultsHeaderEmoji}>{info.emoji}</Text>
-            <Text style={styles.resultsHeaderTitle}>{info.name} 完了！</Text>
+            <Text style={styles.resultsHeaderTitle}>
+              {isDaily ? `🔥 MAX日替わり ${info.name} 完了！` : `${info.name} 完了！`}
+            </Text>
           </View>
 
           <ScrollView contentContainerStyle={styles.resultsContent}>
@@ -198,18 +247,20 @@ export default function QuizScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
       {/* Header */}
-      <View style={[styles.header, { backgroundColor: info.color }]}>
+      <View style={[styles.header, { backgroundColor: isDaily ? '#C0392B' : info.color }]}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
           <Text style={styles.backBtnText}>← 戻る</Text>
         </TouchableOpacity>
         <View style={styles.headerCenter}>
           <Text style={styles.headerEmoji}>{info.emoji}</Text>
           <Text style={styles.headerTitle}>{info.name}</Text>
-          {diffInfo && (
+          {isDaily ? (
+            <Text style={styles.headerDiff}>🔥 {getTodayDayLabel()}曜日</Text>
+          ) : diffInfo ? (
             <Text style={styles.headerDiff}>
               {diffInfo.icon} {diffInfo.label}
             </Text>
-          )}
+          ) : null}
         </View>
         <View style={styles.headerRight}>
           <Text style={styles.questionIndicator}>
@@ -225,7 +276,7 @@ export default function QuizScreen() {
             styles.progressFill,
             {
               width: `${((currentIndex + (revealed ? 1 : 0)) / total) * 100}%`,
-              backgroundColor: info.color,
+              backgroundColor: isDaily ? '#C0392B' : info.color,
             },
           ]}
         />
@@ -254,6 +305,27 @@ export default function QuizScreen() {
           onReveal={handleReveal}
         />
 
+        {/* Explanation card - shown after reveal */}
+        {revealed && currentQuestion.explanation && (
+          <View style={styles.explanationWrap}>
+            <TouchableOpacity
+              style={styles.explanationToggle}
+              onPress={() => setShowExplanation((v) => !v)}
+              activeOpacity={0.8}
+            >
+              <Text style={styles.explanationToggleText}>
+                {showExplanation ? '▲ 解説を閉じる' : '💡 解説を見る'}
+              </Text>
+            </TouchableOpacity>
+            {showExplanation && (
+              <View style={styles.explanationCard}>
+                <Text style={styles.explanationTitle}>📝 解説</Text>
+                <Text style={styles.explanationText}>{currentQuestion.explanation}</Text>
+              </View>
+            )}
+          </View>
+        )}
+
         {/* Answer buttons - only shown after reveal */}
         {revealed && (
           <View style={styles.answerButtons}>
@@ -277,11 +349,25 @@ export default function QuizScreen() {
         {!revealed && (
           <View style={styles.revealHint}>
             <Text style={styles.revealHintText}>
-              カードをタップして答えを確認してね
+              カードをタップして答えを確認してね 👆
             </Text>
           </View>
         )}
       </ScrollView>
+
+      {feedback !== null && (
+        <View
+          style={[
+            styles.feedbackOverlay,
+            { backgroundColor: feedback === 'correct' ? 'rgba(0,166,81,0.88)' : 'rgba(231,76,60,0.88)' },
+          ]}
+          pointerEvents="none"
+        >
+          <Text style={styles.feedbackText}>
+            {feedback === 'correct' ? '○' : '×'}
+          </Text>
+        </View>
+      )}
     </SafeAreaView>
   );
 }
@@ -303,7 +389,7 @@ const styles = StyleSheet.create({
     minWidth: 60,
   },
   backBtnText: {
-    fontSize: 15,
+    fontSize: 22,
     color: '#FFFFFF',
     fontWeight: '700',
   },
@@ -312,19 +398,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 6,
+    gap: 8,
   },
   headerEmoji: {
-    fontSize: 20,
+    fontSize: 30,
   },
   headerTitle: {
-    fontSize: 18,
+    fontSize: 28,
     fontWeight: '800',
     color: '#FFFFFF',
     letterSpacing: 1,
   },
   headerDiff: {
-    fontSize: 12,
+    fontSize: 20,
     fontWeight: '700',
     color: 'rgba(255,255,255,0.9)',
     marginTop: 2,
@@ -346,7 +432,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   questionIndicator: {
-    fontSize: 14,
+    fontSize: 22,
     color: 'rgba(255,255,255,0.9)',
     fontWeight: '700',
   },
@@ -381,20 +467,20 @@ const styles = StyleSheet.create({
     borderColor: '#B8E6C8',
   },
   scoreBadgeText: {
-    fontSize: 13,
+    fontSize: 22,
     color: '#00A651',
     fontWeight: '700',
   },
   remainBadge: {
     backgroundColor: '#EEF4FF',
-    paddingHorizontal: 14,
-    paddingVertical: 6,
+    paddingHorizontal: 18,
+    paddingVertical: 8,
     borderRadius: 20,
     borderWidth: 1,
     borderColor: '#C5D8F8',
   },
   remainBadgeText: {
-    fontSize: 13,
+    fontSize: 22,
     color: '#1E5FBE',
     fontWeight: '700',
   },
@@ -407,8 +493,8 @@ const styles = StyleSheet.create({
   correctButton: {
     flex: 1,
     backgroundColor: '#00A651',
-    borderRadius: 16,
-    paddingVertical: 18,
+    borderRadius: 20,
+    paddingVertical: 26,
     alignItems: 'center',
     shadowColor: '#00A651',
     shadowOffset: { width: 0, height: 4 },
@@ -417,7 +503,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   correctButtonText: {
-    fontSize: 18,
+    fontSize: 36,
     fontWeight: '900',
     color: '#FFFFFF',
     letterSpacing: 1,
@@ -425,8 +511,8 @@ const styles = StyleSheet.create({
   wrongButton: {
     flex: 1,
     backgroundColor: '#E74C3C',
-    borderRadius: 16,
-    paddingVertical: 18,
+    borderRadius: 20,
+    paddingVertical: 26,
     alignItems: 'center',
     shadowColor: '#E74C3C',
     shadowOffset: { width: 0, height: 4 },
@@ -435,20 +521,70 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   wrongButtonText: {
-    fontSize: 18,
+    fontSize: 36,
     fontWeight: '900',
     color: '#FFFFFF',
     letterSpacing: 1,
   },
   revealHint: {
-    marginTop: 20,
+    marginTop: 24,
     alignItems: 'center',
     paddingHorizontal: 16,
   },
   revealHintText: {
-    fontSize: 14,
+    fontSize: 24,
     color: '#AAA',
+    fontWeight: '600',
+  },
+  explanationWrap: {
+    marginTop: 16,
+    marginHorizontal: 16,
+  },
+  explanationToggle: {
+    alignSelf: 'center',
+    backgroundColor: '#FFF8E1',
+    borderWidth: 1.5,
+    borderColor: '#F39C12',
+    borderRadius: 20,
+    paddingHorizontal: 20,
+    paddingVertical: 8,
+    marginBottom: 8,
+  },
+  explanationToggleText: {
+    fontSize: 17,
+    fontWeight: '700',
+    color: '#E67E22',
+  },
+  explanationCard: {
+    backgroundColor: '#FFFDF0',
+    borderRadius: 14,
+    padding: 16,
+    borderWidth: 1,
+    borderColor: '#F5D76E',
+  },
+  explanationTitle: {
+    fontSize: 17,
+    fontWeight: '800',
+    color: '#E67E22',
+    marginBottom: 8,
+  },
+  explanationText: {
+    fontSize: 16,
+    color: '#333',
+    lineHeight: 26,
     fontWeight: '500',
+  },
+  feedbackOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 999,
+  },
+  feedbackText: {
+    fontSize: 220,
+    fontWeight: '900',
+    color: '#FFFFFF',
+    lineHeight: 260,
   },
   // Results screen styles
   resultsContainer: {

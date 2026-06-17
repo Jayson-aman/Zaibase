@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Animated } from 'react-native';
+import React from 'react';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { SubjectKey, subjectInfo } from '../data/questions';
 import SubjectScene from './SubjectScene';
@@ -34,30 +34,6 @@ export default function SubjectCard({ subject, onPress, questionCount }: Props) 
   const lightColor = lightenColor(info.color);
   const scene = SUBJECT_SCENE[subject];
 
-  const bounceAnim = useRef(new Animated.Value(0)).current;
-  const rotateAnim = useRef(new Animated.Value(0)).current;
-
-  useEffect(() => {
-    Animated.loop(
-      Animated.sequence([
-        Animated.timing(bounceAnim, { toValue: -8, duration: 700, useNativeDriver: true }),
-        Animated.timing(bounceAnim, { toValue: 0, duration: 700, useNativeDriver: true }),
-      ])
-    ).start();
-
-    Animated.loop(
-      Animated.sequence([
-        Animated.timing(rotateAnim, { toValue: 1, duration: 2000, useNativeDriver: true }),
-        Animated.timing(rotateAnim, { toValue: 0, duration: 2000, useNativeDriver: true }),
-      ])
-    ).start();
-  }, [bounceAnim, rotateAnim]);
-
-  const rotate = rotateAnim.interpolate({
-    inputRange: [0, 1],
-    outputRange: ['-8deg', '8deg'],
-  });
-
   return (
     <TouchableOpacity
       onPress={onPress}
@@ -74,19 +50,6 @@ export default function SubjectCard({ subject, onPress, questionCount }: Props) 
           <SubjectScene subject={subject} />
         </View>
 
-        <View style={styles.sceneRow}>
-          <Animated.Text
-            style={[styles.sceneEmoji, { transform: [{ translateY: bounceAnim }] }]}
-          >
-            {scene.emoji1}
-          </Animated.Text>
-          <Animated.Text
-            style={[styles.sceneEmoji, { transform: [{ rotate }] }]}
-          >
-            {scene.emoji2}
-          </Animated.Text>
-        </View>
-
         <Text style={styles.name}>{info.name}</Text>
         <Text style={styles.sceneLabel}>{scene.label}</Text>
         <View style={styles.badge}>
@@ -99,63 +62,51 @@ export default function SubjectCard({ subject, onPress, questionCount }: Props) 
 
 const styles = StyleSheet.create({
   wrapper: {
-    width: '47%',
-    marginBottom: 14,
+    width: '100%',
+    marginBottom: 20,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.18,
-    shadowRadius: 8,
-    elevation: 5,
-    borderRadius: 18,
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.22,
+    shadowRadius: 12,
+    elevation: 7,
+    borderRadius: 24,
   },
   card: {
-    borderRadius: 18,
-    paddingTop: 8,
-    paddingBottom: 16,
-    paddingHorizontal: 8,
+    borderRadius: 24,
+    paddingTop: 0,
+    paddingBottom: 22,
+    paddingHorizontal: 0,
     alignItems: 'center',
     overflow: 'hidden',
   },
   mascotArea: {
     width: '100%',
-    height: 240,
-    borderRadius: 14,
+    height: 320,
     overflow: 'hidden',
-    marginBottom: 6,
-  },
-  sceneRow: {
-    flexDirection: 'row',
-    gap: 8,
-    marginBottom: 6,
-    height: 88,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  sceneEmoji: {
-    fontSize: 64,
+    marginBottom: 14,
   },
   name: {
-    fontSize: 34,
-    fontWeight: '800',
+    fontSize: 42,
+    fontWeight: '900',
     color: '#FFFFFF',
-    marginBottom: 4,
+    marginBottom: 6,
     letterSpacing: 1,
   },
   sceneLabel: {
-    fontSize: 20,
+    fontSize: 26,
     color: 'rgba(255,255,255,0.85)',
-    fontWeight: '600',
-    marginBottom: 10,
+    fontWeight: '700',
+    marginBottom: 14,
   },
   badge: {
     backgroundColor: 'rgba(255,255,255,0.3)',
-    paddingHorizontal: 16,
-    paddingVertical: 6,
-    borderRadius: 14,
+    paddingHorizontal: 22,
+    paddingVertical: 8,
+    borderRadius: 18,
   },
   badgeText: {
-    fontSize: 22,
+    fontSize: 28,
     color: '#FFFFFF',
-    fontWeight: '700',
+    fontWeight: '800',
   },
 });

@@ -13,11 +13,16 @@ export function isProGeoLayer(layer: string): layer is (typeof PRO_GEO_LAYERS)[n
 }
 
 export const PRO_FEATURES = [
-  '🎧 聞き流しモード（全科目）',
+  '🎧 聞き流しモード（算数・国語・理科・社会・英語）',
   '🗾 地理マップ全レイヤー（漁業・林業・工業・商業）',
   '🌾 全地域の漁業・林業・工業・商業詳細',
   '🏛 歴史イラスト・甲冑・合戦シーン',
-  '🎨 アニメ mascots フル体験',
+  '🎨 キャラクターマスコットのフル体験',
+] as const;
+
+/** Max が追加で使える機能（Proの全機能に上乗せ） */
+export const MAX_FEATURES = [
+  '🤖 AI弱点コーチ（間違えた問題からAIが復習アドバイス）',
 ] as const;
 
 /** Max が追加で使える機能 */
