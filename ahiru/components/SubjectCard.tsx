@@ -50,11 +50,6 @@ export default function SubjectCard({ subject, onPress, questionCount }: Props) 
           <SubjectScene subject={subject} />
         </View>
 
-        <View style={styles.sceneRow}>
-          <Text style={styles.sceneEmoji}>{scene.emoji1}</Text>
-          <Text style={styles.sceneEmoji}>{scene.emoji2}</Text>
-        </View>
-
         <Text style={styles.name}>{info.name}</Text>
         <Text style={styles.sceneLabel}>{scene.label}</Text>
         <View style={styles.badge}>
@@ -67,63 +62,51 @@ export default function SubjectCard({ subject, onPress, questionCount }: Props) 
 
 const styles = StyleSheet.create({
   wrapper: {
-    width: '47%',
-    marginBottom: 14,
+    width: '100%',
+    marginBottom: 20,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.18,
-    shadowRadius: 8,
-    elevation: 5,
-    borderRadius: 18,
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.22,
+    shadowRadius: 12,
+    elevation: 7,
+    borderRadius: 24,
   },
   card: {
-    borderRadius: 18,
-    paddingTop: 8,
-    paddingBottom: 16,
-    paddingHorizontal: 8,
+    borderRadius: 24,
+    paddingTop: 0,
+    paddingBottom: 22,
+    paddingHorizontal: 0,
     alignItems: 'center',
     overflow: 'hidden',
   },
   mascotArea: {
     width: '100%',
-    height: 240,
-    borderRadius: 14,
+    height: 320,
     overflow: 'hidden',
-    marginBottom: 6,
-  },
-  sceneRow: {
-    flexDirection: 'row',
-    gap: 8,
-    marginBottom: 6,
-    height: 88,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  sceneEmoji: {
-    fontSize: 64,
+    marginBottom: 14,
   },
   name: {
-    fontSize: 34,
-    fontWeight: '800',
+    fontSize: 42,
+    fontWeight: '900',
     color: '#FFFFFF',
-    marginBottom: 4,
+    marginBottom: 6,
     letterSpacing: 1,
   },
   sceneLabel: {
-    fontSize: 20,
+    fontSize: 26,
     color: 'rgba(255,255,255,0.85)',
-    fontWeight: '600',
-    marginBottom: 10,
+    fontWeight: '700',
+    marginBottom: 14,
   },
   badge: {
     backgroundColor: 'rgba(255,255,255,0.3)',
-    paddingHorizontal: 16,
-    paddingVertical: 6,
-    borderRadius: 14,
+    paddingHorizontal: 22,
+    paddingVertical: 8,
+    borderRadius: 18,
   },
   badgeText: {
-    fontSize: 22,
+    fontSize: 28,
     color: '#FFFFFF',
-    fontWeight: '700',
+    fontWeight: '800',
   },
 });
