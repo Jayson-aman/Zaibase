@@ -133,6 +133,16 @@ export default function HomeScreen() {
           </TouchableOpacity>
         )}
 
+        {!listenPickerActive && !isPro && (
+          <TouchableOpacity
+            style={styles.planBtn}
+            onPress={() => setPaywallVisible(true)}
+            activeOpacity={0.85}
+          >
+            <Text style={styles.planBtnText}>👑 Pro・Max プランを見る</Text>
+          </TouchableOpacity>
+        )}
+
         {!listenPickerActive && (
           <>
             <Text style={styles.sectionTitle}>難易度を選ぶ</Text>
@@ -270,9 +280,9 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   mascotImage: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
+    width: 160,
+    height: 160,
+    borderRadius: 80,
     backgroundColor: '#EEF4FF',
   },
   mascotTextWrap: {
@@ -325,9 +335,7 @@ const styles = StyleSheet.create({
     color: '#1E5FBE',
   },
   grid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
+    flexDirection: 'column',
     marginBottom: 20,
   },
   difficultyRow: {
@@ -405,5 +413,20 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     textAlign: 'center',
     lineHeight: 34,
+  },
+  planBtn: {
+    borderRadius: 16,
+    paddingVertical: 16,
+    alignItems: 'center',
+    marginBottom: 20,
+    borderWidth: 2.5,
+    borderColor: '#9B59B6',
+    backgroundColor: 'rgba(155,89,182,0.08)',
+  },
+  planBtnText: {
+    fontSize: 24,
+    fontWeight: '800',
+    color: '#9B59B6',
+    letterSpacing: 0.3,
   },
 });
