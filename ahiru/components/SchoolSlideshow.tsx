@@ -73,6 +73,7 @@ export default function SchoolSlideshow({ children }: Props) {
         <AnimatedMascot
           source={homeMascot}
           style={styles.animeMascot}
+          containerStyle={styles.animeMascot}
           fallbackEmoji="🎓"
           resizeMode="contain"
           animation="float"
