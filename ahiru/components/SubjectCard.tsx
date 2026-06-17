@@ -21,12 +21,12 @@ function lightenColor(hex: string): string {
   return map[hex] ?? hex;
 }
 
-const SUBJECT_SCENE: Record<SubjectKey, { emoji: string; label: string }> = {
-  sansu: { emoji: '✏️📐', label: '式を解く' },
-  kokugo: { emoji: '📖✍️', label: '読む・書く' },
-  rika: { emoji: '🔬🌱', label: '実験・観察' },
-  shakai: { emoji: '🗾📜', label: '地図・歴史' },
-  eigo: { emoji: '💬🌍', label: '話す・聞く' },
+const SUBJECT_SCENE: Record<SubjectKey, { emoji1: string; emoji2: string; label: string }> = {
+  sansu: { emoji1: '✏️', emoji2: '📐', label: '式を解く' },
+  kokugo: { emoji1: '📖', emoji2: '✍️', label: '読む・書く' },
+  rika: { emoji1: '🔬', emoji2: '🌱', label: '実験・観察' },
+  shakai: { emoji1: '🗾', emoji2: '📜', label: '地図・歴史' },
+  eigo: { emoji1: '💬', emoji2: '🌍', label: '話す・聞く' },
 };
 
 export default function SubjectCard({ subject, onPress, questionCount }: Props) {
@@ -78,12 +78,12 @@ export default function SubjectCard({ subject, onPress, questionCount }: Props) 
           <Animated.Text
             style={[styles.sceneEmoji, { transform: [{ translateY: bounceAnim }] }]}
           >
-            {scene.emoji.split('')[0]}
+            {scene.emoji1}
           </Animated.Text>
           <Animated.Text
             style={[styles.sceneEmoji, { transform: [{ rotate }] }]}
           >
-            {scene.emoji.split('')[1] ?? ''}
+            {scene.emoji2}
           </Animated.Text>
         </View>
 
@@ -118,43 +118,43 @@ const styles = StyleSheet.create({
   },
   mascotArea: {
     width: '100%',
-    height: 120,
+    height: 240,
     borderRadius: 14,
     overflow: 'hidden',
     marginBottom: 6,
   },
   sceneRow: {
     flexDirection: 'row',
-    gap: 4,
-    marginBottom: 4,
-    height: 44,
+    gap: 8,
+    marginBottom: 6,
+    height: 88,
     alignItems: 'center',
     justifyContent: 'center',
   },
   sceneEmoji: {
-    fontSize: 32,
+    fontSize: 64,
   },
   name: {
-    fontSize: 18,
+    fontSize: 34,
     fontWeight: '800',
     color: '#FFFFFF',
-    marginBottom: 2,
+    marginBottom: 4,
     letterSpacing: 1,
   },
   sceneLabel: {
-    fontSize: 11,
+    fontSize: 20,
     color: 'rgba(255,255,255,0.85)',
     fontWeight: '600',
-    marginBottom: 8,
+    marginBottom: 10,
   },
   badge: {
     backgroundColor: 'rgba(255,255,255,0.3)',
-    paddingHorizontal: 12,
-    paddingVertical: 4,
-    borderRadius: 12,
+    paddingHorizontal: 16,
+    paddingVertical: 6,
+    borderRadius: 14,
   },
   badgeText: {
-    fontSize: 13,
+    fontSize: 22,
     color: '#FFFFFF',
     fontWeight: '700',
   },
