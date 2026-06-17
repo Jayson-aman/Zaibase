@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import {
   View,
   Text,
@@ -6,53 +6,113 @@ import {
   TouchableOpacity,
   StyleSheet,
   Dimensions,
-  Animated,
 } from 'react-native';
 import { useRouter } from 'expo-router';
-import { LinearGradient } from 'expo-linear-gradient';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-const { width, height } = Dimensions.get('window');
+const { width } = Dimensions.get('window');
+
+// 日能研スタイル カラーパレット
+const C = {
+  navy: '#003087',      // 深紺
+  navyDark: '#001F5C',  // 濃紺
+  navyLight: '#E8EDF7', // 薄紺
+  red: '#CC0033',       // 赤
+  redLight: '#FFF0F3',  // 薄赤
+  white: '#FFFFFF',
+  gray: '#F5F7FA',
+  grayBorder: '#E0E6EF',
+  textDark: '#1A1A2E',
+  textMid: '#555',
+  textLight: '#888',
+  gold: '#D4AC0D',
+};
 
 const SUBJECTS = [
-  { name: '算数', emoji: '✏️', color: '#4A90D9', desc: '計算・図形・文章題' },
-  { name: '国語', emoji: '📖', color: '#E74C3C', desc: '読解・漢字・文学' },
-  { name: '理科', emoji: '🔬', color: '#27AE60', desc: '実験・生物・物理' },
-  { name: '社会', emoji: '🗾', color: '#F39C12', desc: '地理・歴史・公民' },
-  { name: '英語', emoji: '🌍', color: '#9B59B6', desc: '単語・文法・会話' },
+  { name: '算数', emoji: '📐', desc: '計算・図形・文章題・速さ', color: C.navy },
+  { name: '国語', emoji: '📖', desc: '読解・漢字・文学史・作文', color: '#C0392B' },
+  { name: '理科', emoji: '🔬', desc: '実験・生物・物理・化学', color: '#1A7A4A' },
+  { name: '社会', emoji: '🗾', desc: '地理・歴史・公民・時事', color: '#B07A00' },
+  { name: '英語', emoji: '🌍', desc: '文法・読解・会話・英作文', color: '#6B21A8' },
+];
+
+const CURRICULUM = [
+  {
+    level: '基礎',
+    icon: '🌱',
+    color: '#27AE60',
+    target: '小3〜小4生',
+    desc: '中学受験の土台固め。計算・漢字・基本概念をしっかり定着。',
+    count: '各科目 20問',
+  },
+  {
+    level: '標準',
+    icon: '⭐',
+    color: C.navy,
+    target: '小5〜小6生（開成・甲陽レベル）',
+    desc: '入試頻出問題を網羅。思考力・応用力を養う実戦問題。',
+    count: '各科目 20問',
+  },
+  {
+    level: '発展',
+    icon: '🔥',
+    color: C.red,
+    target: '小6生最上位（灘・東大寺レベル）',
+    desc: '四谷大塚・日能研コース相当の最難関問題。本番直前対策。',
+    count: '各科目 20問＋',
+  },
 ];
 
 const FEATURES = [
   {
-    emoji: '📱',
-    title: 'どこでも学習',
-    desc: 'スマホ・タブレット・PCで使える。\n車の中でも、外出先でも。',
-    color: '#E3F2FD',
-  },
-  {
-    emoji: '🎧',
+    icon: '🎧',
     title: '聞き流しモード',
-    desc: '問題と答えを音声で読み上げ。\nながら勉強で効率アップ。',
-    color: '#E8F5E9',
+    desc: '問題と解答を音声で読み上げ。\n通学中・就寝前でも学習できる。',
+    tag: 'Pro',
+    tagColor: '#9B59B6',
   },
   {
-    emoji: '🤖',
+    icon: '🤖',
     title: 'AI弱点コーチ',
-    desc: '間違えた問題をAIが分析して\n復習ポイントをアドバイス。',
-    color: '#FFF3E0',
+    desc: '間違えた問題をAIが分析。\n苦手単元と復習ポイントをアドバイス。',
+    tag: 'Max',
+    tagColor: C.red,
   },
   {
-    emoji: '🏆',
-    title: '有名中学に対応',
-    desc: '灘・開成・桜蔭レベルの問題から\n基礎まで全難易度対応。',
-    color: '#FCE4EC',
+    icon: '🏆',
+    title: '全国ランキング',
+    desc: '全利用者の中での自分の順位を表示。\n上位10%・TOP100バッジ獲得を目指す。',
+    tag: '全員',
+    tagColor: C.gold,
+  },
+  {
+    icon: '📊',
+    title: '科目別進捗管理',
+    desc: '得意科目・苦手科目を一目で把握。\n保護者向けレポートも自動生成。',
+    tag: '全員',
+    tagColor: C.navy,
   },
 ];
 
 const VOICES = [
-  { text: '毎日の通学中に聞き流しを使ったら\n社会の点数が20点上がった！', name: '小6・男子', school: '第一志望：開成中' },
-  { text: 'AI弱点コーチに教えてもらってから\n算数の苦手な単元が得意になった', name: '小5・女子', school: '第一志望：桜蔭中' },
-  { text: 'スマホでいつでもできるから\n隙間時間が全部勉強時間になった', name: '小6・男子', school: '第一志望：灘中' },
+  {
+    text: '灘中に合格しました。算数の最難関問題が本番と同じレベルで、毎日の練習が直接結果につながりました。',
+    name: '小6 男子',
+    result: '灘中 合格',
+    stars: 5,
+  },
+  {
+    text: 'AI弱点コーチで指摘された「速さの文章題」を集中的にやったら、苦手が得意になりました。',
+    name: '小5 女子',
+    result: '偏差値 +12',
+    stars: 5,
+  },
+  {
+    text: '聞き流しを毎朝の通学で使って、社会の知識量が格段に上がりました。隙間時間を無駄にしない。',
+    name: '小6 男子',
+    result: '開成中 合格',
+    stars: 5,
+  },
 ];
 
 export default function LandingPage() {
@@ -69,53 +129,98 @@ export default function LandingPage() {
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}
       >
-        {/* ─── Hero ─── */}
-        <LinearGradient
-          colors={['#0D3B8E', '#1E5FBE', '#3A80D2']}
-          style={styles.hero}
-        >
-          <SafeAreaView>
-            <Text style={styles.heroEyebrow}>🏫 中学受験対策アプリ</Text>
-            <Text style={styles.heroTitle}>{'合格への\n近道はここにある'}</Text>
-            <Text style={styles.heroSub}>
-              算数・国語・理科・社会・英語{'\n'}
-              5科目 250問以上の一問一答
-            </Text>
+        {/* ── ヘッダーナビ ── */}
+        <View style={styles.nav}>
+          <Text style={styles.navLogo}>
+            <Text style={styles.navLogoN}>N</Text>
+            <Text style={styles.navLogoRest}> 中学受験対策</Text>
+          </Text>
+          <TouchableOpacity style={styles.navCta} onPress={handleStart} activeOpacity={0.85}>
+            <Text style={styles.navCtaText}>無料で始める</Text>
+          </TouchableOpacity>
+        </View>
 
-            <View style={styles.heroStats}>
-              <View style={styles.heroStat}>
-                <Text style={styles.heroStatNum}>250+</Text>
-                <Text style={styles.heroStatLabel}>問題数</Text>
+        {/* ── ヒーロー ── */}
+        <View style={styles.hero}>
+          <View style={styles.heroTag}>
+            <Text style={styles.heroTagText}>2026年度入試対応</Text>
+          </View>
+          <Text style={styles.heroTitle}>
+            {'合格への\n正攻法を、\nここに。'}
+          </Text>
+          <Text style={styles.heroSub}>
+            算数・国語・理科・社会・英語{'\n'}
+            5科目 300問以上の一問一答と{'\n'}
+            AI弱点コーチで最難関中学を目指す。
+          </Text>
+
+          <TouchableOpacity style={styles.heroCta} onPress={handleStart} activeOpacity={0.85}>
+            <Text style={styles.heroCtaText}>無料で今すぐ始める →</Text>
+          </TouchableOpacity>
+          <Text style={styles.heroCtaSub}>登録不要・クレジットカード不要</Text>
+
+          {/* 実績バー */}
+          <View style={styles.heroStats}>
+            <View style={styles.heroStat}>
+              <Text style={styles.heroStatNum}>300<Text style={styles.heroStatUnit}>問</Text></Text>
+              <Text style={styles.heroStatLabel}>問題数</Text>
+            </View>
+            <View style={styles.heroStatDiv} />
+            <View style={styles.heroStat}>
+              <Text style={styles.heroStatNum}>5<Text style={styles.heroStatUnit}>科目</Text></Text>
+              <Text style={styles.heroStatLabel}>対応科目</Text>
+            </View>
+            <View style={styles.heroStatDiv} />
+            <View style={styles.heroStat}>
+              <Text style={styles.heroStatNum}>3<Text style={styles.heroStatUnit}>段階</Text></Text>
+              <Text style={styles.heroStatLabel}>難易度</Text>
+            </View>
+            <View style={styles.heroStatDiv} />
+            <View style={styles.heroStat}>
+              <Text style={styles.heroStatNum}>AI<Text style={styles.heroStatUnit}>搭載</Text></Text>
+              <Text style={styles.heroStatLabel}>弱点分析</Text>
+            </View>
+          </View>
+        </View>
+
+        {/* ── カリキュラム構成 ── */}
+        <View style={styles.section}>
+          <View style={styles.sectionHeader}>
+            <View style={styles.sectionAccent} />
+            <Text style={styles.sectionTitle}>カリキュラム構成</Text>
+          </View>
+          <Text style={styles.sectionDesc}>
+            基礎から最難関まで、3段階の難易度で完全網羅。
+          </Text>
+          {CURRICULUM.map((c) => (
+            <View key={c.level} style={styles.curriculumCard}>
+              <View style={[styles.curriculumLeft, { backgroundColor: c.color }]}>
+                <Text style={styles.curriculumIcon}>{c.icon}</Text>
+                <Text style={styles.curriculumLevel}>{c.level}</Text>
               </View>
-              <View style={styles.heroStatDivider} />
-              <View style={styles.heroStat}>
-                <Text style={styles.heroStatNum}>5</Text>
-                <Text style={styles.heroStatLabel}>対応科目</Text>
-              </View>
-              <View style={styles.heroStatDivider} />
-              <View style={styles.heroStat}>
-                <Text style={styles.heroStatNum}>3</Text>
-                <Text style={styles.heroStatLabel}>難易度</Text>
+              <View style={styles.curriculumRight}>
+                <Text style={styles.curriculumTarget}>{c.target}</Text>
+                <Text style={styles.curriculumDesc}>{c.desc}</Text>
+                <View style={styles.curriculumCount}>
+                  <Text style={styles.curriculumCountText}>{c.count}</Text>
+                </View>
               </View>
             </View>
+          ))}
+        </View>
 
-            <TouchableOpacity style={styles.heroCta} onPress={handleStart} activeOpacity={0.85}>
-              <Text style={styles.heroCtaText}>無料で今すぐ始める →</Text>
-            </TouchableOpacity>
-            <Text style={styles.heroCtaSub}>クレジットカード不要・登録なし</Text>
-          </SafeAreaView>
-        </LinearGradient>
-
-        {/* ─── 対応科目 ─── */}
-        <View style={styles.section}>
-          <Text style={styles.sectionEyebrow}>SUBJECTS</Text>
-          <Text style={styles.sectionTitle}>5科目フルカバー</Text>
+        {/* ── 5科目フルカバー ── */}
+        <View style={[styles.section, { backgroundColor: C.navyLight }]}>
+          <View style={styles.sectionHeader}>
+            <View style={styles.sectionAccent} />
+            <Text style={styles.sectionTitle}>5科目フルカバー</Text>
+          </View>
           <Text style={styles.sectionDesc}>
-            主要5科目を1つのアプリで。{'\n'}科目ごとに特訓できる。
+            主要5科目を1つのアプリで。科目ごとに特訓できる。
           </Text>
           <View style={styles.subjectsGrid}>
             {SUBJECTS.map((s) => (
-              <View key={s.name} style={[styles.subjectCard, { borderColor: s.color }]}>
+              <View key={s.name} style={styles.subjectCard}>
                 <Text style={styles.subjectEmoji}>{s.emoji}</Text>
                 <Text style={[styles.subjectName, { color: s.color }]}>{s.name}</Text>
                 <Text style={styles.subjectDesc}>{s.desc}</Text>
@@ -124,119 +229,174 @@ export default function LandingPage() {
           </View>
         </View>
 
-        {/* ─── 特長 ─── */}
-        <LinearGradient colors={['#F8FAFE', '#EFF4FF']} style={styles.featuresSection}>
-          <Text style={styles.sectionEyebrow}>FEATURES</Text>
-          <Text style={styles.sectionTitle}>選ばれる4つの理由</Text>
-          {FEATURES.map((f) => (
-            <View key={f.title} style={[styles.featureCard, { backgroundColor: f.color }]}>
-              <Text style={styles.featureEmoji}>{f.emoji}</Text>
-              <View style={styles.featureBody}>
+        {/* ── 特長 ── */}
+        <View style={styles.section}>
+          <View style={styles.sectionHeader}>
+            <View style={styles.sectionAccent} />
+            <Text style={styles.sectionTitle}>選ばれる4つの理由</Text>
+          </View>
+          <View style={styles.featuresGrid}>
+            {FEATURES.map((f) => (
+              <View key={f.title} style={styles.featureCard}>
+                <View style={styles.featureTop}>
+                  <Text style={styles.featureIcon}>{f.icon}</Text>
+                  <View style={[styles.featureTag, { backgroundColor: f.tagColor }]}>
+                    <Text style={styles.featureTagText}>{f.tag}</Text>
+                  </View>
+                </View>
                 <Text style={styles.featureTitle}>{f.title}</Text>
                 <Text style={styles.featureDesc}>{f.desc}</Text>
               </View>
-            </View>
-          ))}
-        </LinearGradient>
+            ))}
+          </View>
+        </View>
 
-        {/* ─── どこでも使える ─── */}
-        <View style={styles.deviceSection}>
-          <Text style={styles.sectionEyebrow}>ANYWHERE</Text>
-          <Text style={styles.sectionTitle}>{'いつでも\nどこでも'}</Text>
-          <View style={styles.deviceCards}>
+        {/* ── いつでも・どこでも ── */}
+        <View style={[styles.deviceSection]}>
+          <View style={styles.sectionHeader}>
+            <View style={styles.sectionAccent} />
+            <Text style={styles.sectionTitle}>いつでも・どこでも</Text>
+          </View>
+          <View style={styles.deviceRow}>
             {[
-              { emoji: '📱', name: 'スマホ', desc: 'iOS・Android' },
-              { emoji: '💻', name: 'タブレット', desc: 'iPad・Androidタブ' },
-              { emoji: '🖥️', name: 'パソコン', desc: 'Mac・Windows' },
+              { emoji: '📱', name: 'スマートフォン', sub: 'iOS・Android' },
+              { emoji: '💻', name: 'タブレット', sub: 'iPad・Androidタブ' },
+              { emoji: '🖥️', name: 'パソコン', sub: 'Mac・Windows' },
             ].map((d) => (
               <View key={d.name} style={styles.deviceCard}>
                 <Text style={styles.deviceEmoji}>{d.emoji}</Text>
                 <Text style={styles.deviceName}>{d.name}</Text>
-                <Text style={styles.deviceDesc}>{d.desc}</Text>
+                <Text style={styles.deviceSub}>{d.sub}</Text>
               </View>
             ))}
           </View>
-          <View style={styles.scenarioCard}>
-            <Text style={styles.scenarioTitle}>こんな場所で使えます</Text>
-            {['🚗 車の中（聞き流しモード）', '🚃 電車・バスの中', '☕ カフェや図書館', '🏠 自宅のリビング'].map((s) => (
-              <Text key={s} style={styles.scenarioItem}>{s}</Text>
-            ))}
+          <View style={styles.scenarioBox}>
+            <Text style={styles.scenarioTitle}>📍 こんな場所で使えます</Text>
+            <View style={styles.scenarioGrid}>
+              {[
+                '🚗 車の中（聞き流しモード）',
+                '🚃 電車・バスの通学中',
+                '🏠 自宅のリビング',
+                '☕ 図書館・カフェ',
+              ].map((s) => (
+                <View key={s} style={styles.scenarioItem}>
+                  <Text style={styles.scenarioText}>{s}</Text>
+                </View>
+              ))}
+            </View>
           </View>
         </View>
 
-        {/* ─── 声 ─── */}
-        <LinearGradient colors={['#1A1A2E', '#2D1B69']} style={styles.voicesSection}>
-          <Text style={[styles.sectionEyebrow, { color: 'rgba(255,255,255,0.6)' }]}>VOICES</Text>
-          <Text style={[styles.sectionTitle, { color: '#fff' }]}>使った子の声</Text>
+        {/* ── 合格者の声 ── */}
+        <View style={[styles.section, { backgroundColor: C.navy }]}>
+          <View style={styles.sectionHeader}>
+            <View style={[styles.sectionAccent, { backgroundColor: C.red }]} />
+            <Text style={[styles.sectionTitle, { color: C.white }]}>合格者・保護者の声</Text>
+          </View>
           {VOICES.map((v, i) => (
             <View key={i} style={styles.voiceCard}>
-              <Text style={styles.voiceQuote}>"</Text>
-              <Text style={styles.voiceText}>{v.text}</Text>
-              <Text style={styles.voiceName}>{v.name}　{v.school}</Text>
+              <View style={styles.voiceResultBadge}>
+                <Text style={styles.voiceResultText}>{v.result}</Text>
+              </View>
+              <Text style={styles.voiceText}>「{v.text}」</Text>
+              <Text style={styles.voiceName}>— {v.name}</Text>
             </View>
           ))}
-        </LinearGradient>
+        </View>
 
-        {/* ─── 料金 ─── */}
-        <View style={styles.pricingSection}>
-          <Text style={styles.sectionEyebrow}>PRICING</Text>
-          <Text style={styles.sectionTitle}>シンプルな料金</Text>
-
-          <View style={styles.pricingCard}>
-            <Text style={styles.pricingPlanName}>無料プラン</Text>
-            <Text style={styles.pricingPrice}>¥0</Text>
-            <Text style={styles.pricingPriceLabel}>ずっと無料</Text>
-            {['✓ クイズ（全科目・全問題）', '✓ 進捗管理', '✓ 難易度別チャレンジ'].map((f) => (
-              <Text key={f} style={styles.pricingFeature}>{f}</Text>
-            ))}
+        {/* ── 料金プラン ── */}
+        <View style={styles.section}>
+          <View style={styles.sectionHeader}>
+            <View style={styles.sectionAccent} />
+            <Text style={styles.sectionTitle}>シンプルな料金プラン</Text>
           </View>
 
-          <View style={[styles.pricingCard, styles.pricingCardPro]}>
-            <Text style={[styles.pricingPlanName, { color: '#9B59B6' }]}>プロプラン</Text>
-            <Text style={[styles.pricingPrice, { color: '#9B59B6' }]}>¥980</Text>
-            <Text style={styles.pricingPriceLabel}>/月（税込）</Text>
+          {/* 無料 */}
+          <View style={styles.planCard}>
+            <Text style={styles.planName}>無料プラン</Text>
+            <View style={styles.planPriceRow}>
+              <Text style={styles.planPrice}>¥0</Text>
+              <Text style={styles.planPricePeriod}> / ずっと無料</Text>
+            </View>
+            <View style={styles.planDivider} />
+            {['✓ 全科目クイズ（全問題）', '✓ 3段階難易度選択', '✓ 全国ランキング閲覧', '✓ 科目別進捗管理'].map((f) => (
+              <Text key={f} style={styles.planFeature}>{f}</Text>
+            ))}
+            <TouchableOpacity style={styles.planBtnSecondary} onPress={handleStart} activeOpacity={0.85}>
+              <Text style={styles.planBtnSecondaryText}>無料で始める</Text>
+            </TouchableOpacity>
+          </View>
+
+          {/* Pro */}
+          <View style={[styles.planCard, styles.planCardPro]}>
+            <View style={styles.planBadge}>
+              <Text style={styles.planBadgeText}>人気</Text>
+            </View>
+            <Text style={[styles.planName, { color: '#7B2D8B' }]}>プロプラン</Text>
+            <View style={styles.planPriceRow}>
+              <Text style={[styles.planPrice, { color: '#7B2D8B' }]}>¥980</Text>
+              <Text style={styles.planPricePeriod}> / 月（税込）</Text>
+            </View>
+            <View style={styles.planDivider} />
             {[
-              '✓ 聞き流しモード（算数・国語・理科・社会・英語）',
+              '✓ 無料プランの全機能',
+              '✓ 聞き流しモード（全5科目）',
               '✓ 地理マップ全レイヤー',
               '✓ 歴史イラスト・合戦シーン',
-              '✓ キャラクターマスコット',
+              '✓ キャラクターマスコット全解放',
             ].map((f) => (
-              <Text key={f} style={styles.pricingFeature}>{f}</Text>
+              <Text key={f} style={[styles.planFeature, { color: '#4A0070' }]}>{f}</Text>
             ))}
+            <TouchableOpacity style={[styles.planBtn, { backgroundColor: '#7B2D8B' }]} onPress={handleStart} activeOpacity={0.85}>
+              <Text style={styles.planBtnText}>プロを始める</Text>
+            </TouchableOpacity>
           </View>
 
-          <View style={[styles.pricingCard, styles.pricingCardMax]}>
-            <View style={styles.pricingBadge}>
-              <Text style={styles.pricingBadgeText}>おすすめ</Text>
+          {/* Max */}
+          <View style={[styles.planCard, styles.planCardMax]}>
+            <View style={[styles.planBadge, { backgroundColor: C.red }]}>
+              <Text style={styles.planBadgeText}>おすすめ</Text>
             </View>
-            <Text style={[styles.pricingPlanName, { color: '#E74C3C' }]}>マックスプラン</Text>
-            <Text style={[styles.pricingPrice, { color: '#E74C3C' }]}>¥1,980</Text>
-            <Text style={styles.pricingPriceLabel}>/月（税込）</Text>
+            <Text style={[styles.planName, { color: C.red }]}>マックスプラン</Text>
+            <View style={styles.planPriceRow}>
+              <Text style={[styles.planPrice, { color: C.red }]}>¥1,980</Text>
+              <Text style={styles.planPricePeriod}> / 月（税込）</Text>
+            </View>
+            <View style={styles.planDivider} />
             {[
-              '✓ プロの全機能',
-              '✓ AI弱点コーチ（苦手を自動分析）',
+              '✓ プロプランの全機能',
+              '✓ AI弱点コーチ（間違い問題をAI分析）',
+              '✓ 苦手単元の自動特定＆アドバイス',
             ].map((f) => (
-              <Text key={f} style={[styles.pricingFeature, { color: '#E74C3C', fontWeight: '800' }]}>{f}</Text>
+              <Text key={f} style={[styles.planFeature, { color: C.red, fontWeight: '800' }]}>{f}</Text>
             ))}
+            <TouchableOpacity style={[styles.planBtn, { backgroundColor: C.red }]} onPress={handleStart} activeOpacity={0.85}>
+              <Text style={styles.planBtnText}>マックスを始める</Text>
+            </TouchableOpacity>
           </View>
         </View>
 
-        {/* ─── 最後のCTA ─── */}
-        <LinearGradient colors={['#0D3B8E', '#1E5FBE']} style={styles.finalCta}>
-          <Text style={styles.finalCtaTitle}>{'今日から\n受験勉強を始めよう！'}</Text>
+        {/* ── 最終CTA ── */}
+        <View style={styles.finalCta}>
+          <View style={styles.finalCtaAccent} />
+          <Text style={styles.finalCtaTitle}>今日から、始めよう。</Text>
           <Text style={styles.finalCtaDesc}>
-            まずは無料で試してみてください。{'\n'}
-            登録もクレジットカードも不要です。
+            登録不要・クレジットカード不要。{'\n'}
+            まず無料で全問題にチャレンジしてみてください。
           </Text>
           <TouchableOpacity style={styles.finalCtaBtn} onPress={handleStart} activeOpacity={0.85}>
             <Text style={styles.finalCtaBtnText}>無料で始める →</Text>
           </TouchableOpacity>
-        </LinearGradient>
+        </View>
 
-        {/* Footer */}
+        {/* フッター */}
         <View style={styles.footer}>
-          <Text style={styles.footerText}>© 2026 Zaibase Group</Text>
-          <Text style={styles.footerText}>運営：南條 雅哉 / info@zaibase.group</Text>
+          <Text style={styles.footerLogo}>
+            <Text style={{ color: C.red, fontWeight: '900' }}>N</Text> 中学受験対策
+          </Text>
+          <Text style={styles.footerText}>運営: 南條 雅哉 / Zaibase Group</Text>
+          <Text style={styles.footerText}>info@zaibase.group</Text>
+          <Text style={[styles.footerText, { marginTop: 8 }]}>© 2026 Zaibase Group. All rights reserved.</Text>
         </View>
       </ScrollView>
     </View>
@@ -244,187 +404,406 @@ export default function LandingPage() {
 }
 
 const styles = StyleSheet.create({
-  root: { flex: 1, backgroundColor: '#fff' },
+  root: { flex: 1, backgroundColor: C.white },
   scroll: { flex: 1 },
   scrollContent: { paddingBottom: 0 },
 
-  // Hero
+  // ナビ
+  nav: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 24,
+    paddingVertical: 16,
+    backgroundColor: C.white,
+    borderBottomWidth: 1,
+    borderBottomColor: C.grayBorder,
+  },
+  navLogo: { fontSize: 20, fontWeight: '900', color: C.navy },
+  navLogoN: { fontSize: 26, color: C.red, fontWeight: '900' },
+  navLogoRest: { color: C.navy, fontSize: 18 },
+  navCta: {
+    backgroundColor: C.navy,
+    paddingHorizontal: 18,
+    paddingVertical: 10,
+    borderRadius: 8,
+  },
+  navCtaText: { color: C.white, fontSize: 15, fontWeight: '800' },
+
+  // ヒーロー
   hero: {
+    backgroundColor: C.white,
     paddingHorizontal: 28,
-    paddingTop: 20,
+    paddingTop: 40,
     paddingBottom: 48,
+    borderBottomWidth: 4,
+    borderBottomColor: C.navy,
   },
-  heroEyebrow: {
-    fontSize: 18,
-    color: 'rgba(255,255,255,0.8)',
-    fontWeight: '700',
-    marginBottom: 16,
-    marginTop: 16,
+  heroTag: {
+    alignSelf: 'flex-start',
+    backgroundColor: C.red,
+    paddingHorizontal: 12,
+    paddingVertical: 5,
+    borderRadius: 4,
+    marginBottom: 20,
   },
+  heroTagText: { color: C.white, fontSize: 14, fontWeight: '800', letterSpacing: 1 },
   heroTitle: {
     fontSize: 52,
     fontWeight: '900',
-    color: '#fff',
-    lineHeight: 62,
-    marginBottom: 16,
+    color: C.navyDark,
+    lineHeight: 64,
+    marginBottom: 20,
     letterSpacing: -1,
   },
   heroSub: {
-    fontSize: 22,
-    color: 'rgba(255,255,255,0.85)',
+    fontSize: 20,
+    color: C.textMid,
     lineHeight: 34,
-    marginBottom: 32,
+    marginBottom: 36,
     fontWeight: '500',
   },
-  heroStats: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 36,
-    backgroundColor: 'rgba(255,255,255,0.12)',
-    borderRadius: 20,
-    paddingVertical: 20,
-    paddingHorizontal: 24,
-  },
-  heroStat: { flex: 1, alignItems: 'center' },
-  heroStatNum: { fontSize: 40, fontWeight: '900', color: '#fff' },
-  heroStatLabel: { fontSize: 16, color: 'rgba(255,255,255,0.75)', fontWeight: '600' },
-  heroStatDivider: { width: 1, height: 48, backgroundColor: 'rgba(255,255,255,0.25)' },
   heroCta: {
-    backgroundColor: '#FFD700',
-    borderRadius: 20,
+    backgroundColor: C.red,
+    borderRadius: 8,
     paddingVertical: 22,
     alignItems: 'center',
     marginBottom: 12,
-    shadowColor: '#000',
+    shadowColor: C.red,
     shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.25,
+    shadowOpacity: 0.35,
     shadowRadius: 12,
     elevation: 8,
   },
-  heroCtaText: { fontSize: 28, fontWeight: '900', color: '#1A1A2E' },
-  heroCtaSub: { textAlign: 'center', fontSize: 16, color: 'rgba(255,255,255,0.65)', fontWeight: '500' },
+  heroCtaText: { fontSize: 26, fontWeight: '900', color: C.white, letterSpacing: 0.5 },
+  heroCtaSub: {
+    textAlign: 'center',
+    fontSize: 15,
+    color: C.textLight,
+    fontWeight: '500',
+    marginBottom: 36,
+  },
+  heroStats: {
+    flexDirection: 'row',
+    borderTopWidth: 1,
+    borderTopColor: C.grayBorder,
+    paddingTop: 28,
+  },
+  heroStat: { flex: 1, alignItems: 'center' },
+  heroStatNum: { fontSize: 32, fontWeight: '900', color: C.navy },
+  heroStatUnit: { fontSize: 16, fontWeight: '700', color: C.navy },
+  heroStatLabel: { fontSize: 13, color: C.textLight, fontWeight: '600', marginTop: 4 },
+  heroStatDiv: { width: 1, backgroundColor: C.grayBorder, marginVertical: 4 },
 
-  // Sections
-  section: { paddingHorizontal: 24, paddingVertical: 48 },
-  featuresSection: { paddingHorizontal: 24, paddingVertical: 48 },
-  sectionEyebrow: { fontSize: 14, fontWeight: '800', color: '#1E5FBE', letterSpacing: 3, marginBottom: 8 },
-  sectionTitle: { fontSize: 38, fontWeight: '900', color: '#1A1A2E', marginBottom: 12, lineHeight: 46 },
-  sectionDesc: { fontSize: 20, color: '#555', lineHeight: 32, marginBottom: 28, fontWeight: '500' },
+  // セクション共通
+  section: {
+    paddingHorizontal: 24,
+    paddingVertical: 48,
+    backgroundColor: C.white,
+  },
+  sectionHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    marginBottom: 10,
+  },
+  sectionAccent: {
+    width: 4,
+    height: 28,
+    backgroundColor: C.navy,
+    borderRadius: 2,
+  },
+  sectionTitle: {
+    fontSize: 28,
+    fontWeight: '900',
+    color: C.navyDark,
+    letterSpacing: 0.5,
+  },
+  sectionDesc: {
+    fontSize: 18,
+    color: C.textMid,
+    lineHeight: 30,
+    marginBottom: 28,
+    fontWeight: '500',
+  },
 
-  // Subjects
+  // カリキュラム
+  curriculumCard: {
+    flexDirection: 'row',
+    borderRadius: 12,
+    marginBottom: 14,
+    overflow: 'hidden',
+    borderWidth: 1,
+    borderColor: C.grayBorder,
+    backgroundColor: C.white,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.06,
+    shadowRadius: 6,
+    elevation: 2,
+  },
+  curriculumLeft: {
+    width: 80,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 18,
+  },
+  curriculumIcon: { fontSize: 28, marginBottom: 4 },
+  curriculumLevel: { fontSize: 15, fontWeight: '900', color: C.white },
+  curriculumRight: { flex: 1, padding: 16 },
+  curriculumTarget: {
+    fontSize: 14,
+    fontWeight: '800',
+    color: C.navy,
+    marginBottom: 6,
+  },
+  curriculumDesc: {
+    fontSize: 15,
+    color: C.textMid,
+    lineHeight: 24,
+    marginBottom: 8,
+    fontWeight: '500',
+  },
+  curriculumCount: {
+    alignSelf: 'flex-start',
+    backgroundColor: C.navyLight,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 6,
+  },
+  curriculumCountText: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: C.navy,
+  },
+
+  // 科目
   subjectsGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 12 },
   subjectCard: {
     width: (width - 60) / 2,
-    borderRadius: 18,
-    borderWidth: 2,
+    backgroundColor: C.white,
+    borderRadius: 12,
     padding: 18,
-    backgroundColor: '#fff',
+    borderWidth: 1,
+    borderColor: C.grayBorder,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.08,
-    shadowRadius: 8,
-    elevation: 3,
+    shadowOpacity: 0.06,
+    shadowRadius: 6,
+    elevation: 2,
   },
-  subjectEmoji: { fontSize: 40, marginBottom: 8 },
-  subjectName: { fontSize: 26, fontWeight: '900', marginBottom: 4 },
-  subjectDesc: { fontSize: 16, color: '#666', fontWeight: '500' },
+  subjectEmoji: { fontSize: 36, marginBottom: 8 },
+  subjectName: { fontSize: 22, fontWeight: '900', marginBottom: 4 },
+  subjectDesc: { fontSize: 14, color: C.textLight, fontWeight: '500', lineHeight: 22 },
 
-  // Features
+  // 特長
+  featuresGrid: { gap: 14 },
   featureCard: {
-    flexDirection: 'row',
-    borderRadius: 20,
-    padding: 22,
-    marginBottom: 14,
-    alignItems: 'flex-start',
-    gap: 18,
+    backgroundColor: C.gray,
+    borderRadius: 12,
+    padding: 20,
+    borderWidth: 1,
+    borderColor: C.grayBorder,
   },
-  featureEmoji: { fontSize: 44 },
-  featureBody: { flex: 1 },
-  featureTitle: { fontSize: 24, fontWeight: '900', color: '#1A1A2E', marginBottom: 6 },
-  featureDesc: { fontSize: 18, color: '#444', lineHeight: 28, fontWeight: '500' },
+  featureTop: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 10,
+  },
+  featureIcon: { fontSize: 36 },
+  featureTag: {
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 6,
+  },
+  featureTagText: { fontSize: 13, fontWeight: '800', color: C.white },
+  featureTitle: {
+    fontSize: 20,
+    fontWeight: '900',
+    color: C.navyDark,
+    marginBottom: 6,
+  },
+  featureDesc: {
+    fontSize: 16,
+    color: C.textMid,
+    lineHeight: 26,
+    fontWeight: '500',
+  },
 
-  // Devices
-  deviceSection: { paddingHorizontal: 24, paddingVertical: 48, backgroundColor: '#fff' },
-  deviceCards: { flexDirection: 'row', gap: 12, marginBottom: 24 },
+  // デバイス
+  deviceSection: {
+    paddingHorizontal: 24,
+    paddingVertical: 48,
+    backgroundColor: C.navyLight,
+  },
+  deviceRow: { flexDirection: 'row', gap: 10, marginBottom: 20 },
   deviceCard: {
     flex: 1,
+    backgroundColor: C.white,
+    borderRadius: 12,
+    padding: 16,
     alignItems: 'center',
-    backgroundColor: '#F5F7FA',
-    borderRadius: 18,
-    padding: 18,
+    borderWidth: 1,
+    borderColor: C.grayBorder,
   },
-  deviceEmoji: { fontSize: 40, marginBottom: 8 },
-  deviceName: { fontSize: 18, fontWeight: '800', color: '#1A1A2E', marginBottom: 4 },
-  deviceDesc: { fontSize: 14, color: '#666', textAlign: 'center' },
-  scenarioCard: {
-    backgroundColor: '#E3F2FD',
-    borderRadius: 20,
-    padding: 22,
+  deviceEmoji: { fontSize: 32, marginBottom: 8 },
+  deviceName: { fontSize: 14, fontWeight: '800', color: C.navyDark, textAlign: 'center', marginBottom: 4 },
+  deviceSub: { fontSize: 12, color: C.textLight, textAlign: 'center' },
+  scenarioBox: {
+    backgroundColor: C.white,
+    borderRadius: 12,
+    padding: 20,
+    borderWidth: 1,
+    borderColor: C.grayBorder,
   },
-  scenarioTitle: { fontSize: 22, fontWeight: '800', color: '#1E5FBE', marginBottom: 14 },
-  scenarioItem: { fontSize: 20, color: '#1A1A2E', lineHeight: 38, fontWeight: '600' },
+  scenarioTitle: {
+    fontSize: 17,
+    fontWeight: '900',
+    color: C.navyDark,
+    marginBottom: 14,
+  },
+  scenarioGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
+  scenarioItem: {
+    backgroundColor: C.navyLight,
+    borderRadius: 8,
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    width: (width - 88) / 2,
+  },
+  scenarioText: { fontSize: 15, color: C.navy, fontWeight: '700' },
 
-  // Voices
-  voicesSection: { paddingHorizontal: 24, paddingVertical: 48 },
+  // 声
   voiceCard: {
-    backgroundColor: 'rgba(255,255,255,0.08)',
-    borderRadius: 20,
-    padding: 22,
-    marginBottom: 16,
+    backgroundColor: 'rgba(255,255,255,0.07)',
+    borderRadius: 12,
+    padding: 20,
+    marginBottom: 14,
     borderWidth: 1,
     borderColor: 'rgba(255,255,255,0.15)',
   },
-  voiceQuote: { fontSize: 48, color: '#FFD700', lineHeight: 40, marginBottom: 8 },
-  voiceText: { fontSize: 20, color: '#fff', lineHeight: 32, fontWeight: '600', marginBottom: 14 },
-  voiceName: { fontSize: 16, color: 'rgba(255,255,255,0.55)', fontWeight: '700' },
+  voiceResultBadge: {
+    alignSelf: 'flex-start',
+    backgroundColor: C.red,
+    paddingHorizontal: 12,
+    paddingVertical: 5,
+    borderRadius: 6,
+    marginBottom: 12,
+  },
+  voiceResultText: { fontSize: 14, fontWeight: '900', color: C.white },
+  voiceText: {
+    fontSize: 17,
+    color: 'rgba(255,255,255,0.9)',
+    lineHeight: 30,
+    fontWeight: '500',
+    marginBottom: 10,
+  },
+  voiceName: { fontSize: 14, color: 'rgba(255,255,255,0.5)', fontWeight: '700' },
 
-  // Pricing
-  pricingSection: { paddingHorizontal: 24, paddingVertical: 48, backgroundColor: '#F5F7FA' },
-  pricingCard: {
-    backgroundColor: '#fff',
-    borderRadius: 20,
+  // 料金
+  planCard: {
+    backgroundColor: C.white,
+    borderRadius: 12,
     padding: 24,
     marginBottom: 16,
+    borderWidth: 1,
+    borderColor: C.grayBorder,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.08,
+    shadowOpacity: 0.06,
     shadowRadius: 8,
     elevation: 3,
   },
-  pricingCardPro: { borderWidth: 2, borderColor: '#9B59B6' },
-  pricingCardMax: { borderWidth: 3, borderColor: '#E74C3C', position: 'relative' },
-  pricingBadge: {
-    backgroundColor: '#E74C3C',
-    borderRadius: 10,
-    paddingHorizontal: 12,
-    paddingVertical: 4,
+  planCardPro: { borderWidth: 2, borderColor: '#7B2D8B' },
+  planCardMax: { borderWidth: 2, borderColor: C.red },
+  planBadge: {
     alignSelf: 'flex-start',
-    marginBottom: 8,
+    backgroundColor: C.navy,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 6,
+    marginBottom: 10,
   },
-  pricingBadgeText: { fontSize: 14, fontWeight: '800', color: '#fff' },
-  pricingPlanName: { fontSize: 24, fontWeight: '900', color: '#1A1A2E', marginBottom: 4 },
-  pricingPrice: { fontSize: 48, fontWeight: '900', color: '#1A1A2E' },
-  pricingPriceLabel: { fontSize: 16, color: '#888', marginBottom: 14 },
-  pricingFeature: { fontSize: 18, color: '#333', lineHeight: 32, fontWeight: '600' },
+  planBadgeText: { fontSize: 13, fontWeight: '900', color: C.white },
+  planName: { fontSize: 22, fontWeight: '900', color: C.navyDark, marginBottom: 6 },
+  planPriceRow: { flexDirection: 'row', alignItems: 'baseline', marginBottom: 6 },
+  planPrice: { fontSize: 44, fontWeight: '900', color: C.navyDark },
+  planPricePeriod: { fontSize: 16, color: C.textLight, fontWeight: '600' },
+  planDivider: { height: 1, backgroundColor: C.grayBorder, marginVertical: 16 },
+  planFeature: {
+    fontSize: 16,
+    color: C.textDark,
+    lineHeight: 32,
+    fontWeight: '600',
+  },
+  planBtn: {
+    borderRadius: 8,
+    paddingVertical: 18,
+    alignItems: 'center',
+    marginTop: 16,
+  },
+  planBtnText: { fontSize: 18, fontWeight: '900', color: C.white },
+  planBtnSecondary: {
+    borderRadius: 8,
+    paddingVertical: 18,
+    alignItems: 'center',
+    marginTop: 16,
+    borderWidth: 2,
+    borderColor: C.navy,
+  },
+  planBtnSecondaryText: { fontSize: 18, fontWeight: '900', color: C.navy },
 
-  // Final CTA
-  finalCta: { paddingHorizontal: 28, paddingVertical: 60, alignItems: 'center' },
-  finalCtaTitle: { fontSize: 48, fontWeight: '900', color: '#fff', textAlign: 'center', lineHeight: 58, marginBottom: 16 },
-  finalCtaDesc: { fontSize: 20, color: 'rgba(255,255,255,0.8)', textAlign: 'center', lineHeight: 32, marginBottom: 36, fontWeight: '500' },
+  // 最終CTA
+  finalCta: {
+    backgroundColor: C.navy,
+    paddingHorizontal: 28,
+    paddingVertical: 60,
+    alignItems: 'center',
+  },
+  finalCtaAccent: {
+    width: 48,
+    height: 4,
+    backgroundColor: C.red,
+    borderRadius: 2,
+    marginBottom: 24,
+  },
+  finalCtaTitle: {
+    fontSize: 42,
+    fontWeight: '900',
+    color: C.white,
+    textAlign: 'center',
+    marginBottom: 16,
+    letterSpacing: -0.5,
+  },
+  finalCtaDesc: {
+    fontSize: 18,
+    color: 'rgba(255,255,255,0.75)',
+    textAlign: 'center',
+    lineHeight: 30,
+    marginBottom: 36,
+    fontWeight: '500',
+  },
   finalCtaBtn: {
-    backgroundColor: '#FFD700',
-    borderRadius: 20,
+    backgroundColor: C.red,
+    borderRadius: 8,
     paddingVertical: 22,
     paddingHorizontal: 48,
-    shadowColor: '#000',
+    shadowColor: C.red,
     shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.25,
+    shadowOpacity: 0.4,
     shadowRadius: 12,
     elevation: 8,
   },
-  finalCtaBtnText: { fontSize: 28, fontWeight: '900', color: '#1A1A2E' },
+  finalCtaBtnText: { fontSize: 24, fontWeight: '900', color: C.white },
 
-  // Footer
-  footer: { paddingVertical: 24, paddingHorizontal: 24, backgroundColor: '#1A1A2E', alignItems: 'center', gap: 6 },
-  footerText: { fontSize: 14, color: 'rgba(255,255,255,0.4)', fontWeight: '500' },
+  // フッター
+  footer: {
+    backgroundColor: C.navyDark,
+    paddingVertical: 32,
+    paddingHorizontal: 24,
+    alignItems: 'center',
+    gap: 6,
+  },
+  footerLogo: { fontSize: 20, fontWeight: '900', color: C.white, marginBottom: 8 },
+  footerText: { fontSize: 13, color: 'rgba(255,255,255,0.45)', fontWeight: '500' },
 });
