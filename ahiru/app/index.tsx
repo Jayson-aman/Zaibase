@@ -136,12 +136,11 @@ export default function LandingPage() {
       >
         {/* ── ヘッダーナビ ── */}
         <View style={styles.nav}>
-          <View style={styles.navLogoWrap}>
-            <Text style={styles.navLogoZ}>Z</Text>
-            <Text style={styles.navLogoMain}>
-              aibase<Text style={styles.navLogoDot}>.</Text>Group
-            </Text>
-          </View>
+          <Image
+            source={require('../assets/images/logo.png')}
+            style={styles.navLogo}
+            resizeMode="contain"
+          />
           <TouchableOpacity style={styles.navCta} onPress={handleStart} activeOpacity={0.85}>
             <Text style={styles.navCtaText}>無料で始める</Text>
           </TouchableOpacity>
@@ -441,27 +440,9 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: C.grayBorder,
   },
-  navLogoWrap: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 4,
-  },
-  navLogoZ: {
-    fontSize: 52,
-    fontWeight: '900',
-    color: C.navyDark,
-    lineHeight: 56,
-    letterSpacing: -2,
-    fontStyle: 'italic',
-  },
-  navLogoMain: {
-    fontSize: 26,
-    fontWeight: '900',
-    color: C.navyDark,
-    letterSpacing: 0.3,
-  },
-  navLogoDot: {
-    color: C.navyDark,
+  navLogo: {
+    height: 48,
+    width: 220,
   },
   navCta: {
     backgroundColor: C.navy,
