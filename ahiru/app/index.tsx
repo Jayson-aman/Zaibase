@@ -228,10 +228,20 @@ export default function LandingPage() {
                 <Text style={styles.curriculumLevel}>{c.level}</Text>
               </View>
               <View style={styles.curriculumRight}>
-                <Text style={styles.curriculumTarget}>{c.target}</Text>
-                <Text style={styles.curriculumDesc}>{c.desc}</Text>
-                <View style={styles.curriculumCount}>
-                  <Text style={styles.curriculumCountText}>{c.count}</Text>
+                <View style={styles.curriculumMain}>
+                  <Text style={styles.curriculumTarget}>{c.target}</Text>
+                  <Text style={styles.curriculumDesc}>{c.desc}</Text>
+                  <View style={styles.curriculumCount}>
+                    <Text style={styles.curriculumCountText}>{c.count}</Text>
+                  </View>
+                </View>
+                <View style={styles.curriculumSubjects}>
+                  {SUBJECTS.map((s) => (
+                    <View key={s.name} style={[styles.curriculumSubjectTag, { borderColor: c.color }]}>
+                      <Text style={styles.curriculumSubjectEmoji}>{s.emoji}</Text>
+                      <Text style={[styles.curriculumSubjectName, { color: c.color }]}>{s.name}</Text>
+                    </View>
+                  ))}
                 </View>
               </View>
             </View>
@@ -617,39 +627,56 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   curriculumLeft: {
-    width: 80,
+    width: 88,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 18,
+    paddingVertical: 20,
   },
-  curriculumIcon: { fontSize: 28, marginBottom: 4 },
-  curriculumLevel: { fontSize: 15, fontWeight: '900', color: C.white },
-  curriculumRight: { flex: 1, padding: 16 },
+  curriculumIcon: { fontSize: 32, marginBottom: 6 },
+  curriculumLevel: { fontSize: 18, fontWeight: '900', color: C.white },
+  curriculumRight: { flex: 1, padding: 16, flexDirection: 'row', gap: 12, alignItems: 'center' },
+  curriculumMain: { flex: 1 },
   curriculumTarget: {
-    fontSize: 14,
+    fontSize: 18,
     fontWeight: '800',
     color: C.navy,
-    marginBottom: 6,
+    marginBottom: 8,
   },
   curriculumDesc: {
-    fontSize: 15,
+    fontSize: 16,
     color: C.textMid,
-    lineHeight: 24,
-    marginBottom: 8,
+    lineHeight: 26,
+    marginBottom: 10,
     fontWeight: '500',
   },
   curriculumCount: {
     alignSelf: 'flex-start',
     backgroundColor: C.navyLight,
-    paddingHorizontal: 10,
-    paddingVertical: 4,
+    paddingHorizontal: 12,
+    paddingVertical: 5,
     borderRadius: 6,
   },
   curriculumCountText: {
-    fontSize: 13,
+    fontSize: 15,
     fontWeight: '700',
     color: C.navy,
   },
+  curriculumSubjects: {
+    width: 76,
+    gap: 5,
+  },
+  curriculumSubjectTag: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    borderWidth: 1.5,
+    borderRadius: 6,
+    paddingHorizontal: 6,
+    paddingVertical: 3,
+    backgroundColor: C.white,
+  },
+  curriculumSubjectEmoji: { fontSize: 13 },
+  curriculumSubjectName: { fontSize: 13, fontWeight: '800' },
 
   // 科目
   subjectsGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 12 },
