@@ -210,12 +210,13 @@ export default function HomeScreen() {
   const todayLabel = getTodayDayLabel();
   const courseInfo = getCourseInfo(selectedCourse);
 
-  const listenQuestions =
-    listenSubject == null
-      ? []
-      : difficulty === 'all'
-        ? questionsBySubject[listenSubject]
-        : questionsBySubject[listenSubject].filter((q) => q.difficulty === difficulty);
+  const listenQuestions = React.useMemo(() => {
+    if (listenSubject == null) return [];
+    const qs = difficulty === 'all'
+      ? questionsBySubject[listenSubject]
+      : questionsBySubject[listenSubject].filter((q) => q.difficulty === difficulty);
+    return [...qs].sort(() => Math.random() - 0.5);
+  }, [listenSubject, difficulty]);
 
   // Courses that require MAX or Pro
   const maxOnlyCourses = ALL_COURSES.filter(c => c.maxOnly).map(c => c.key);
