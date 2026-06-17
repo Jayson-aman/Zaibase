@@ -21,6 +21,8 @@ import {
   subjectInfo,
   SubjectKey,
 } from '../../data/questions';
+import type { CourseKey, ExamType } from '../../data/courses';
+import { ALL_COURSES, CHUGAKU_COURSES, KOKO_COURSES, getCourseInfo } from '../../data/courses';
 import { primeSpeech } from '../../utils/speech';
 import { getTodayDayLabel } from '../../utils/dailyChallenge';
 
@@ -37,26 +39,110 @@ const DIFFICULTY_OPTIONS: {
 }[] = [
   { key: 'all', label: 'すべて', icon: '📚', color: '#1E5FBE', desc: '全問題' },
   { key: 'basic', label: '基礎', icon: '🌱', color: '#27AE60', desc: '基礎レベル' },
-  { key: 'standard', label: '標準', icon: '⭐', color: '#F39C12', desc: '開成・甲陽レベル' },
-  { key: 'advanced', label: '発展', icon: '🔥', color: '#E74C3C', desc: '灘・東大寺レベル' },
+  { key: 'standard', label: '標準', icon: '⭐', color: '#F39C12', desc: '標準レベル' },
+  { key: 'advanced', label: '発展', icon: '🔥', color: '#E74C3C', desc: '難関レベル' },
 ];
 
-function getQuestionCount(subject: SubjectKey, difficulty: Difficulty): number {
-  const qs = questionsBySubject[subject];
-  if (difficulty === 'all') return qs.length;
-  return qs.filter((q) => q.difficulty === difficulty).length;
+function getQuestionCount(
+  subject: SubjectKey,
+  difficulty: Difficulty,
+  examType: ExamType,
+  course: CourseKey,
+): number {
+  let qs = questionsBySubject[subject];
+  // Filter by examType
+  qs = qs.filter((q) => (q.examType ?? 'chugaku') === examType);
+  // Filter by course
+  if (course === 'general') {
+    qs = qs.filter((q) => !q.course || q.course === 'general');
+  } else {
+    qs = qs.filter((q) => q.course === course);
+  }
+  if (difficulty !== 'all') {
+    qs = qs.filter((q) => q.difficulty === difficulty);
+  }
+  return qs.length;
 }
 
+// ---------- Zaibase.Group logo header ----------
+function ZaibaseLogo() {
+  return (
+    <View style={logoStyles.wrap}>
+      <Text style={logoStyles.z}>Z</Text>
+      <View style={logoStyles.textWrap}>
+        <Text style={logoStyles.brand}>aibase<Text style={logoStyles.dot}>.</Text>Group</Text>
+        <Text style={logoStyles.sub}>中学・高校受験対策</Text>
+      </View>
+    </View>
+  );
+}
+
+const logoStyles = StyleSheet.create({
+  wrap: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    marginBottom: 4,
+  },
+  z: {
+    fontSize: 56,
+    fontWeight: '900',
+    color: '#FFFFFF',
+    lineHeight: 62,
+    letterSpacing: -2,
+    textShadowColor: 'rgba(0,0,0,0.25)',
+    textShadowOffset: { width: 0, height: 2 },
+    textShadowRadius: 4,
+  },
+  textWrap: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
+  brand: {
+    fontSize: 26,
+    fontWeight: '800',
+    color: '#FFFFFF',
+    letterSpacing: 0.5,
+  },
+  dot: {
+    color: '#FFD700',
+  },
+  sub: {
+    fontSize: 13,
+    color: 'rgba(255,255,255,0.82)',
+    fontWeight: '600',
+    letterSpacing: 0.5,
+  },
+});
+
+// ---------- Home Screen ----------
 export default function HomeScreen() {
   const router = useRouter();
   const [listenPickerActive, setListenPickerActive] = useState(false);
   const [listenVisible, setListenVisible] = useState(false);
   const [listenSubject, setListenSubject] = useState<SubjectKey | null>(null);
   const [difficulty, setDifficulty] = useState<Difficulty>('all');
+  const [examType, setExamType] = useState<ExamType>('chugaku');
+  const [selectedCourse, setSelectedCourse] = useState<CourseKey>('general');
+
+  const courses = examType === 'chugaku' ? CHUGAKU_COURSES : KOKO_COURSES;
+
+  function handleExamTypeChange(type: ExamType) {
+    setExamType(type);
+    // Reset to first course for this exam type
+    const firstCourse = type === 'chugaku' ? 'general' : 'koko-general';
+    setSelectedCourse(firstCourse);
+  }
 
   function handleSubject(subject: SubjectKey) {
-    const params = difficulty !== 'all' ? `?difficulty=${difficulty}` : '';
-    router.push(`/quiz/${subject}${params}`);
+    const params: Record<string, string> = {};
+    if (difficulty !== 'all') params.difficulty = difficulty;
+    params.examType = examType;
+    params.course = selectedCourse;
+    const query = Object.keys(params).length
+      ? '?' + Object.entries(params).map(([k, v]) => `${k}=${v}`).join('&')
+      : '';
+    router.push(`/quiz/${subject}${query}`);
   }
 
   function handleListenStartPress() {
@@ -87,6 +173,7 @@ export default function HomeScreen() {
   const { isMax } = useSubscription();
   const selectedDiff = DIFFICULTY_OPTIONS.find((d) => d.key === difficulty)!;
   const todayLabel = getTodayDayLabel();
+  const courseInfo = getCourseInfo(selectedCourse);
 
   const listenQuestions =
     listenSubject == null
@@ -95,11 +182,14 @@ export default function HomeScreen() {
         ? questionsBySubject[listenSubject]
         : questionsBySubject[listenSubject].filter((q) => q.difficulty === difficulty);
 
+  // Courses that require MAX plan
+  const maxOnlyCourses: CourseKey[] = ['nandai', 'koko-top'];
+  const courseRequiresMax = maxOnlyCourses.includes(selectedCourse);
+
   return (
     <SafeAreaView style={styles.container}>
       <SchoolSlideshow>
-        <Text style={styles.appTitle}>📚 中学受験対策</Text>
-        <Text style={styles.appSubtitle}>一問一答トレーニング</Text>
+        <ZaibaseLogo />
       </SchoolSlideshow>
 
       <ScrollView
@@ -107,6 +197,87 @@ export default function HomeScreen() {
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
       >
+        {/* Exam type toggle */}
+        {!listenPickerActive && (
+          <View style={styles.examToggleRow}>
+            <TouchableOpacity
+              style={[styles.examToggleBtn, examType === 'chugaku' && styles.examToggleBtnActive]}
+              onPress={() => handleExamTypeChange('chugaku')}
+              activeOpacity={0.8}
+            >
+              <Text style={[styles.examToggleText, examType === 'chugaku' && styles.examToggleTextActive]}>
+                📖 中学受験
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.examToggleBtn, examType === 'koko' && styles.examToggleBtnActive]}
+              onPress={() => handleExamTypeChange('koko')}
+              activeOpacity={0.8}
+            >
+              <Text style={[styles.examToggleText, examType === 'koko' && styles.examToggleTextActive]}>
+                🏫 高校受験
+              </Text>
+            </TouchableOpacity>
+          </View>
+        )}
+
+        {/* Course selector */}
+        {!listenPickerActive && (
+          <View style={styles.courseSection}>
+            <Text style={styles.courseSectionLabel}>コースを選ぶ</Text>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.courseScroll}>
+              {courses.map((c) => {
+                const isSelected = selectedCourse === c.key;
+                const needsMax = maxOnlyCourses.includes(c.key);
+                return (
+                  <TouchableOpacity
+                    key={c.key}
+                    style={[
+                      styles.courseChip,
+                      isSelected && { backgroundColor: c.color, borderColor: c.color },
+                      !isSelected && { borderColor: c.color + '66' },
+                    ]}
+                    onPress={() => {
+                      if (needsMax && !isMax) {
+                        setPaywallVisible(true);
+                        return;
+                      }
+                      setSelectedCourse(c.key);
+                    }}
+                    activeOpacity={0.8}
+                  >
+                    <Text style={styles.courseChipEmoji}>{c.emoji}</Text>
+                    <Text style={[styles.courseChipText, isSelected && { color: '#FFFFFF' }]}>
+                      {c.shortName}
+                    </Text>
+                    {needsMax && <Text style={styles.courseMaxBadge}>MAX</Text>}
+                  </TouchableOpacity>
+                );
+              })}
+            </ScrollView>
+            {/* Course detail banner */}
+            <View style={[styles.courseBanner, { borderColor: courseInfo.color }]}>
+              <View style={styles.courseBannerLeft}>
+                <Text style={[styles.courseBannerTitle, { color: courseInfo.color }]}>
+                  {courseInfo.emoji} {courseInfo.name}
+                </Text>
+                <Text style={styles.courseBannerDesc}>{courseInfo.description}</Text>
+              </View>
+              <View style={[styles.courseLevelBadge, { backgroundColor: courseInfo.color + '22' }]}>
+                <Text style={[styles.courseLevelText, { color: courseInfo.color }]}>{courseInfo.level}</Text>
+              </View>
+            </View>
+            {/* Target schools */}
+            <View style={styles.targetSchoolsRow}>
+              <Text style={styles.targetSchoolsLabel}>対象校：</Text>
+              <Text style={styles.targetSchoolsText} numberOfLines={1}>
+                {courseInfo.targetSchools.join('・')}
+              </Text>
+            </View>
+          </View>
+        )}
+
+        {/* Mascot banner */}
         {!listenPickerActive && (
           <View style={styles.mascotBanner}>
             <AnimatedMascot
@@ -119,12 +290,13 @@ export default function HomeScreen() {
             <View style={styles.mascotTextWrap}>
               <Text style={styles.mascotTitle}>一緒に頑張ろう！</Text>
               <Text style={styles.mascotSub}>
-                クイズも聞き流しも、イラスト付きで覚えやすい
+                クイズも聞き流しも、解説付きで理解が深まる
               </Text>
             </View>
           </View>
         )}
 
+        {/* Action buttons */}
         {!listenPickerActive && (
           <TouchableOpacity
             style={styles.listenStartBtn}
@@ -166,6 +338,7 @@ export default function HomeScreen() {
           </TouchableOpacity>
         )}
 
+        {/* Difficulty selector */}
         {!listenPickerActive && (
           <>
             <Text style={styles.sectionTitle}>難易度を選ぶ</Text>
@@ -214,7 +387,7 @@ export default function HomeScreen() {
             <SubjectCard
               key={subject}
               subject={subject}
-              questionCount={getQuestionCount(subject, difficulty)}
+              questionCount={getQuestionCount(subject, difficulty, examType, selectedCourse)}
               onPress={() =>
                 listenPickerActive
                   ? handleListenSubject(subject)
@@ -226,10 +399,10 @@ export default function HomeScreen() {
 
         <View style={styles.infoCard}>
           <Text style={styles.infoTitle}>📖 使い方</Text>
-          <Text style={styles.infoText}>① 科目をタップ（または 🔊 聞き流し）</Text>
+          <Text style={styles.infoText}>① コース・難易度・科目を選んでスタート</Text>
           <Text style={styles.infoText}>② 問題カードをタップして答えを確認</Text>
-          <Text style={styles.infoText}>③ ✓正解 / ✗不正解 を記録</Text>
-          <Text style={styles.infoText}>④ 進捗タブで成績を確認</Text>
+          <Text style={styles.infoText}>③ 解説を読んで「なぜその答えか」を理解</Text>
+          <Text style={styles.infoText}>④ 進捗タブで苦手分析を確認</Text>
         </View>
 
         <View style={styles.inspirationCard}>
@@ -268,33 +441,146 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#F5F7FA',
   },
-  appTitle: {
-    fontSize: 42,
-    fontWeight: '900',
-    color: '#FFFFFF',
-    letterSpacing: 1,
-    marginBottom: 6,
-  },
-  appSubtitle: {
-    fontSize: 22,
-    color: 'rgba(255,255,255,0.9)',
-    fontWeight: '600',
-  },
   scroll: {
     flex: 1,
   },
   content: {
     paddingHorizontal: 16,
-    paddingTop: 20,
+    paddingTop: 16,
     paddingBottom: 40,
   },
+
+  // Exam type toggle
+  examToggleRow: {
+    flexDirection: 'row',
+    backgroundColor: '#E8EDF5',
+    borderRadius: 14,
+    padding: 4,
+    marginBottom: 16,
+  },
+  examToggleBtn: {
+    flex: 1,
+    paddingVertical: 10,
+    borderRadius: 11,
+    alignItems: 'center',
+  },
+  examToggleBtnActive: {
+    backgroundColor: '#FFFFFF',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.12,
+    shadowRadius: 4,
+    elevation: 2,
+  },
+  examToggleText: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: '#888',
+  },
+  examToggleTextActive: {
+    color: '#1A1A2E',
+  },
+
+  // Course selector
+  courseSection: {
+    marginBottom: 16,
+  },
+  courseSectionLabel: {
+    fontSize: 20,
+    fontWeight: '800',
+    color: '#1A1A2E',
+    marginBottom: 10,
+  },
+  courseScroll: {
+    marginBottom: 10,
+  },
+  courseChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 8,
+    paddingHorizontal: 14,
+    borderRadius: 24,
+    marginRight: 8,
+    backgroundColor: '#FFFFFF',
+    borderWidth: 1.5,
+    borderColor: '#E0E6EF',
+    gap: 5,
+  },
+  courseChipEmoji: {
+    fontSize: 18,
+  },
+  courseChipText: {
+    fontSize: 17,
+    fontWeight: '700',
+    color: '#444',
+  },
+  courseMaxBadge: {
+    fontSize: 11,
+    fontWeight: '800',
+    color: '#C0392B',
+    backgroundColor: '#FFE8E8',
+    paddingHorizontal: 5,
+    paddingVertical: 1,
+    borderRadius: 6,
+    overflow: 'hidden',
+    marginLeft: 2,
+  },
+  courseBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#FFFFFF',
+    borderRadius: 12,
+    padding: 12,
+    borderLeftWidth: 4,
+    marginBottom: 6,
+    gap: 10,
+  },
+  courseBannerLeft: {
+    flex: 1,
+  },
+  courseBannerTitle: {
+    fontSize: 18,
+    fontWeight: '800',
+    marginBottom: 3,
+  },
+  courseBannerDesc: {
+    fontSize: 14,
+    color: '#666',
+    fontWeight: '500',
+  },
+  courseLevelBadge: {
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 8,
+  },
+  courseLevelText: {
+    fontSize: 14,
+    fontWeight: '800',
+  },
+  targetSchoolsRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  targetSchoolsLabel: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#888',
+  },
+  targetSchoolsText: {
+    flex: 1,
+    fontSize: 14,
+    color: '#555',
+    fontWeight: '500',
+  },
+
+  // Mascot
   mascotBanner: {
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#FFFFFF',
     borderRadius: 16,
     padding: 12,
-    marginBottom: 16,
+    marginBottom: 14,
     gap: 12,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
@@ -303,32 +589,34 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   mascotImage: {
-    width: 160,
-    height: 160,
-    borderRadius: 80,
+    width: 120,
+    height: 120,
+    borderRadius: 60,
     backgroundColor: '#EEF4FF',
   },
   mascotTextWrap: {
     flex: 1,
   },
   mascotTitle: {
-    fontSize: 26,
+    fontSize: 22,
     fontWeight: '800',
     color: '#1A1A2E',
-    marginBottom: 6,
+    marginBottom: 5,
   },
   mascotSub: {
-    fontSize: 18,
+    fontSize: 15,
     color: '#666',
-    lineHeight: 26,
+    lineHeight: 22,
     fontWeight: '500',
   },
+
+  // Listen button
   listenStartBtn: {
     backgroundColor: '#00A651',
     borderRadius: 16,
     paddingVertical: 18,
     alignItems: 'center',
-    marginBottom: 20,
+    marginBottom: 12,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.15,
@@ -336,18 +624,75 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   listenStartBtnText: {
-    fontSize: 28,
+    fontSize: 22,
     fontWeight: '800',
     color: '#FFFFFF',
     letterSpacing: 0.5,
   },
+
+  // Plan button
+  planBtn: {
+    borderRadius: 16,
+    paddingVertical: 14,
+    alignItems: 'center',
+    marginBottom: 12,
+    borderWidth: 2.5,
+    borderColor: '#9B59B6',
+    backgroundColor: 'rgba(155,89,182,0.08)',
+  },
+  planBtnText: {
+    fontSize: 20,
+    fontWeight: '800',
+    color: '#9B59B6',
+  },
+
+  // Daily challenge button
+  dailyBtn: {
+    borderRadius: 16,
+    paddingVertical: 18,
+    paddingHorizontal: 20,
+    alignItems: 'center',
+    marginBottom: 16,
+    backgroundColor: '#C0392B',
+    shadowColor: '#C0392B',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.35,
+    shadowRadius: 8,
+    elevation: 6,
+  },
+  dailyBtnLocked: {
+    backgroundColor: '#E8D5D5',
+    shadowOpacity: 0,
+    elevation: 0,
+  },
+  dailyBtnText: {
+    fontSize: 20,
+    fontWeight: '800',
+    color: '#FFFFFF',
+    textAlign: 'center',
+  },
+  dailyBtnBadge: {
+    marginTop: 5,
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#9B1818',
+    backgroundColor: '#FFE0E0',
+    paddingHorizontal: 12,
+    paddingVertical: 2,
+    borderRadius: 20,
+    overflow: 'hidden',
+  },
+
+  // Section title
   sectionTitle: {
-    fontSize: 28,
+    fontSize: 24,
     fontWeight: '800',
     color: '#1A1A2E',
-    marginBottom: 14,
+    marginBottom: 12,
     letterSpacing: 0.5,
   },
+
+  // Cancel button
   cancelBtn: {
     marginBottom: 12,
     alignSelf: 'flex-start',
@@ -357,10 +702,8 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: '#1E5FBE',
   },
-  grid: {
-    flexDirection: 'column',
-    marginBottom: 20,
-  },
+
+  // Difficulty
   difficultyRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -377,11 +720,11 @@ const styles = StyleSheet.create({
     borderColor: '#E0E6EF',
   },
   diffBtnIcon: {
-    fontSize: 28,
+    fontSize: 24,
     marginBottom: 4,
   },
   diffBtnLabel: {
-    fontSize: 18,
+    fontSize: 15,
     fontWeight: '700',
     color: '#555',
   },
@@ -397,10 +740,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
   },
   diffInfoText: {
-    fontSize: 20,
+    fontSize: 17,
     fontWeight: '700',
     textAlign: 'center',
   },
+
+  // Subject grid
+  grid: {
+    flexDirection: 'column',
+    marginBottom: 20,
+  },
+
+  // Info card
   infoCard: {
     backgroundColor: '#FFFFFF',
     borderRadius: 16,
@@ -413,17 +764,19 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   infoTitle: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: '800',
     color: '#1A1A2E',
     marginBottom: 10,
   },
   infoText: {
-    fontSize: 20,
+    fontSize: 17,
     color: '#444',
-    lineHeight: 34,
+    lineHeight: 30,
     fontWeight: '500',
   },
+
+  // Inspiration card
   inspirationCard: {
     backgroundColor: '#1E5FBE',
     borderRadius: 16,
@@ -431,60 +784,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   inspirationText: {
-    fontSize: 22,
+    fontSize: 19,
     fontWeight: '700',
     color: '#FFFFFF',
     textAlign: 'center',
-    lineHeight: 34,
-  },
-  planBtn: {
-    borderRadius: 16,
-    paddingVertical: 16,
-    alignItems: 'center',
-    marginBottom: 20,
-    borderWidth: 2.5,
-    borderColor: '#9B59B6',
-    backgroundColor: 'rgba(155,89,182,0.08)',
-  },
-  dailyBtn: {
-    borderRadius: 16,
-    paddingVertical: 18,
-    paddingHorizontal: 20,
-    alignItems: 'center',
-    marginBottom: 20,
-    backgroundColor: '#C0392B',
-    shadowColor: '#C0392B',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.35,
-    shadowRadius: 8,
-    elevation: 6,
-  },
-  dailyBtnLocked: {
-    backgroundColor: '#E8D5D5',
-    shadowOpacity: 0,
-    elevation: 0,
-  },
-  dailyBtnText: {
-    fontSize: 24,
-    fontWeight: '800',
-    color: '#FFFFFF',
-    textAlign: 'center',
-  },
-  dailyBtnBadge: {
-    marginTop: 6,
-    fontSize: 16,
-    fontWeight: '700',
-    color: '#9B1818',
-    backgroundColor: '#FFE0E0',
-    paddingHorizontal: 12,
-    paddingVertical: 3,
-    borderRadius: 20,
-    overflow: 'hidden',
-  },
-  planBtnText: {
-    fontSize: 24,
-    fontWeight: '800',
-    color: '#9B59B6',
-    letterSpacing: 0.3,
+    lineHeight: 30,
   },
 });

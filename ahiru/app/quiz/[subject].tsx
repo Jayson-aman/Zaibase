@@ -8,7 +8,8 @@ import {
   ScrollView,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { questionsBySubject, subjectInfo, SubjectKey } from '../../data/questions';
+import { questionsBySubject, subjectInfo, SubjectKey, Question } from '../../data/questions';
+import type { CourseKey, ExamType } from '../../data/courses';
 import QuizCard from '../../components/QuizCard';
 import AnimatedMascot from '../../components/AnimatedMascot';
 import { getResultMascot } from '../../data/images';
@@ -26,38 +27,72 @@ function isDifficulty(value: string): value is Difficulty {
   return ['basic', 'standard', 'advanced'].includes(value);
 }
 
+function isCourseKey(value: string): value is CourseKey {
+  return ['general','kankan','shitennoji','nandai','koko-general','koko-kankan','koko-top'].includes(value);
+}
+
+function isExamType(value: string): value is ExamType {
+  return value === 'chugaku' || value === 'koko';
+}
+
 const DIFF_LABELS: Record<Difficulty, { label: string; icon: string; color: string }> = {
   basic: { label: '基礎', icon: '🌱', color: '#27AE60' },
   standard: { label: '標準', icon: '⭐', color: '#F39C12' },
   advanced: { label: '発展', icon: '🔥', color: '#E74C3C' },
 };
 
+function filterQuestions(
+  all: Question[],
+  examType: ExamType,
+  course: CourseKey,
+  difficultyFilter: Difficulty | null,
+): Question[] {
+  let qs = all.filter((q) => (q.examType ?? 'chugaku') === examType);
+  if (course === 'general') {
+    qs = qs.filter((q) => !q.course || q.course === 'general');
+  } else {
+    qs = qs.filter((q) => q.course === course);
+  }
+  if (difficultyFilter) qs = qs.filter((q) => q.difficulty === difficultyFilter);
+  // Fallback: if no course-specific questions, return general pool
+  if (qs.length === 0) {
+    qs = all.filter((q) => (q.examType ?? 'chugaku') === 'chugaku');
+    if (difficultyFilter) qs = qs.filter((q) => q.difficulty === difficultyFilter);
+  }
+  return qs;
+}
+
 export default function QuizScreen() {
-  const { subject, difficulty: diffParam, mode } = useLocalSearchParams<{
-    subject: string;
-    difficulty?: string;
-    mode?: string;
-  }>();
+  const { subject, difficulty: diffParam, mode, course: courseParam, examType: examTypeParam } =
+    useLocalSearchParams<{
+      subject: string;
+      difficulty?: string;
+      mode?: string;
+      course?: string;
+      examType?: string;
+    }>();
   const router = useRouter();
 
   const subjectKey: SubjectKey = isSubjectKey(subject ?? '') ? (subject as SubjectKey) : 'sansu';
   const difficultyFilter: Difficulty | null =
     diffParam && isDifficulty(diffParam) ? diffParam : null;
   const isDaily = mode === 'daily';
+  const course: CourseKey = courseParam && isCourseKey(courseParam) ? courseParam : 'general';
+  const examType: ExamType = examTypeParam && isExamType(examTypeParam) ? examTypeParam : 'chugaku';
   const info = subjectInfo[subjectKey];
 
   const questions = useMemo(() => {
     if (isDaily) return getDailyQuestions(subjectKey);
     const all = questionsBySubject[subjectKey];
-    if (difficultyFilter == null) return all;
-    return all.filter((q) => q.difficulty === difficultyFilter);
-  }, [subjectKey, difficultyFilter, isDaily]);
+    return filterQuestions(all, examType, course, difficultyFilter);
+  }, [subjectKey, difficultyFilter, isDaily, course, examType]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [finished, setFinished] = useState(false);
   const [savedProgress, setSavedProgress] = useState(false);
+  const [showExplanation, setShowExplanation] = useState(false);
   const [wrongIds, setWrongIds] = useState<string[]>([]);
   const [feedback, setFeedback] = useState<'correct' | 'wrong' | null>(null);
 
@@ -90,6 +125,7 @@ export default function QuizScreen() {
         setWrongIds(newWrongIds);
         setCurrentIndex((i) => i + 1);
         setRevealed(false);
+        setShowExplanation(false);
       }
     }, 900);
   }
@@ -101,6 +137,7 @@ export default function QuizScreen() {
     setFinished(false);
     setSavedProgress(false);
     setWrongIds([]);
+    setShowExplanation(false);
   }
 
   if (questions.length === 0) {
@@ -267,6 +304,27 @@ export default function QuizScreen() {
           questionIndex={currentIndex}
           onReveal={handleReveal}
         />
+
+        {/* Explanation card - shown after reveal */}
+        {revealed && currentQuestion.explanation && (
+          <View style={styles.explanationWrap}>
+            <TouchableOpacity
+              style={styles.explanationToggle}
+              onPress={() => setShowExplanation((v) => !v)}
+              activeOpacity={0.8}
+            >
+              <Text style={styles.explanationToggleText}>
+                {showExplanation ? '▲ 解説を閉じる' : '💡 解説を見る'}
+              </Text>
+            </TouchableOpacity>
+            {showExplanation && (
+              <View style={styles.explanationCard}>
+                <Text style={styles.explanationTitle}>📝 解説</Text>
+                <Text style={styles.explanationText}>{currentQuestion.explanation}</Text>
+              </View>
+            )}
+          </View>
+        )}
 
         {/* Answer buttons - only shown after reveal */}
         {revealed && (
@@ -477,6 +535,44 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: '#AAA',
     fontWeight: '600',
+  },
+  explanationWrap: {
+    marginTop: 16,
+    marginHorizontal: 16,
+  },
+  explanationToggle: {
+    alignSelf: 'center',
+    backgroundColor: '#FFF8E1',
+    borderWidth: 1.5,
+    borderColor: '#F39C12',
+    borderRadius: 20,
+    paddingHorizontal: 20,
+    paddingVertical: 8,
+    marginBottom: 8,
+  },
+  explanationToggleText: {
+    fontSize: 17,
+    fontWeight: '700',
+    color: '#E67E22',
+  },
+  explanationCard: {
+    backgroundColor: '#FFFDF0',
+    borderRadius: 14,
+    padding: 16,
+    borderWidth: 1,
+    borderColor: '#F5D76E',
+  },
+  explanationTitle: {
+    fontSize: 17,
+    fontWeight: '800',
+    color: '#E67E22',
+    marginBottom: 8,
+  },
+  explanationText: {
+    fontSize: 16,
+    color: '#333',
+    lineHeight: 26,
+    fontWeight: '500',
   },
   feedbackOverlay: {
     ...StyleSheet.absoluteFillObject,

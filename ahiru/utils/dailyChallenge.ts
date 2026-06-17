@@ -1,4 +1,5 @@
 import { questions, Question, SubjectKey } from '../data/questions';
+import type { CourseKey, ExamType } from '../data/courses';
 
 // Mulberry32 — deterministic PRNG seeded with a 32-bit integer
 function mulberry32(seed: number) {
@@ -20,23 +21,60 @@ function seededShuffle<T>(arr: T[], seed: number): T[] {
   return result;
 }
 
+// Days since Unix epoch (UTC) — used for stable 5-day cycle
+function daysSinceEpoch(): number {
+  return Math.floor(Date.now() / 86400000);
+}
+
+// 5-day rotation index (0–4). Resets each week based on ISO week number.
+export function getDailyIndex(): number {
+  return daysSinceEpoch() % 5;
+}
+
+// Weekly seed offset so question order shifts each week
+function weeklyOffset(): number {
+  return Math.floor(daysSinceEpoch() / 7);
+}
+
 // Returns today's set of MAX daily questions for the given subject.
-// The pool is all advanced-difficulty questions (30 per subject).
-// Day-of-week (0–6) determines the shuffle seed, giving 7 distinct orderings.
-export function getDailyQuestions(subject: SubjectKey, count = 30): Question[] {
-  const pool = questions.filter(
-    (q) => q.subject === subject && q.difficulty === 'advanced',
-  );
-  const dayOfWeek = new Date().getDay(); // 0 (Sun) – 6 (Sat)
-  // Incorporate subject into seed so each subject gets a different order
+// Pool: advanced-difficulty questions filtered by course and examType.
+// A 5-day cycle (index 0–4) determines the shuffle seed.
+export function getDailyQuestions(
+  subject: SubjectKey,
+  count = 30,
+  course: CourseKey = 'general',
+  examType: ExamType = 'chugaku',
+): Question[] {
+  let pool = questions.filter((q) => q.subject === subject && q.difficulty === 'advanced');
+
+  // Filter by examType
+  pool = pool.filter((q) => (q.examType ?? 'chugaku') === examType);
+
+  // Filter by course
+  if (course === 'general') {
+    pool = pool.filter((q) => !q.course || q.course === 'general');
+  } else {
+    const coursePool = pool.filter((q) => q.course === course);
+    if (coursePool.length > 0) pool = coursePool;
+  }
+
+  const dayIndex = getDailyIndex(); // 0–4
   const subjectSeed = subject.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0);
-  const seed = dayOfWeek * 1000 + subjectSeed;
+  const courseSeed = course.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0);
+  // Weekly offset ensures different question order each week
+  const seed = dayIndex * 1000 + subjectSeed + courseSeed + weeklyOffset() * 97;
   const shuffled = seededShuffle(pool, seed);
   return shuffled.slice(0, count);
 }
 
-// Label for display (曜日)
-const DAY_LABELS = ['日', '月', '火', '水', '木', '金', '土'];
+// Day label for 5-day cycle
+const CYCLE_LABELS = ['1日目', '2日目', '3日目', '4日目', '5日目'];
 export function getTodayDayLabel(): string {
-  return DAY_LABELS[new Date().getDay()];
+  return CYCLE_LABELS[getDailyIndex()];
+}
+
+// Full label including week number
+export function getTodayLabel(): string {
+  const week = Math.floor(daysSinceEpoch() / 7);
+  return `第${week % 52 + 1}週 ${getTodayDayLabel()}`;
 }

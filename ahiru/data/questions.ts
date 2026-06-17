@@ -1,10 +1,16 @@
+import type { CourseKey, ExamType } from './courses';
+import { kankanQuestions, shitennojiQuestions, kokoGeneralQuestions, kokoTopQuestions } from './questions-courses';
+
 export type Question = {
   id: string;
   subject: 'sansu' | 'kokugo' | 'rika' | 'shakai' | 'eigo';
   question: string;
   answer: string;
   hint?: string;
+  explanation?: string;
   difficulty: 'basic' | 'standard' | 'advanced';
+  course?: CourseKey;
+  examType?: ExamType;
   questionReading?: string;
   answerReading?: string;
 };
@@ -2644,6 +2650,10 @@ export const questions: Question[] = [
     hint: 'Having finished = 分詞構文（完了形）。Despite being = 前置詞＋動名詞',
     difficulty: 'advanced',
   },
+  ...kankanQuestions,
+  ...shitennojiQuestions,
+  ...kokoGeneralQuestions,
+  ...kokoTopQuestions,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {
