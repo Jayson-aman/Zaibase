@@ -18,28 +18,39 @@ type Props = {
   question: Question;
   questionIndex?: number;
   onReveal?: () => void;
+  choices?: string[];
+  onChoiceSelect?: (correct: boolean) => void;
 };
 
 const { width, height } = Dimensions.get('window');
 
-export default function QuizCard({ question, onReveal }: Props) {
+export default function QuizCard({ question, onReveal, choices, onChoiceSelect }: Props) {
   const [revealed, setRevealed] = useState(false);
+  const [selectedChoice, setSelectedChoice] = useState<string | null>(null);
   const info = subjectInfo[question.subject];
   const illustration = getQuestionIllustration(question.subject, question.id);
   const historyLabel = getHistoryThemeLabel(question.id);
 
   function handlePress() {
-    if (!revealed) {
-      setRevealed(true);
-      onReveal?.();
-    }
+    if (choices != null || revealed) return;
+    setRevealed(true);
+    onReveal?.();
   }
+
+  function handleChoicePress(choice: string) {
+    if (selectedChoice != null) return;
+    const correct = choice === question.answer;
+    setSelectedChoice(choice);
+    onChoiceSelect?.(correct);
+  }
+
+  const choiceLabels = ['A', 'B', 'C', 'D'];
 
   return (
     <TouchableOpacity
       onPress={handlePress}
-      activeOpacity={0.9}
-      style={[styles.card, revealed && styles.cardRevealed]}
+      activeOpacity={choices != null ? 1 : 0.9}
+      style={[styles.card, choices == null && revealed && styles.cardRevealed]}
     >
       <View style={styles.illustrationWrap}>
         <AnimatedMascot
@@ -47,7 +58,7 @@ export default function QuizCard({ question, onReveal }: Props) {
           style={styles.illustration}
           containerStyle={styles.illustration}
           fallbackEmoji={info.emoji}
-          animation={revealed ? 'bounce' : 'float'}
+          animation={revealed || selectedChoice != null ? 'bounce' : 'float'}
           accessibilityLabel="問題イラスト"
         />
         <View style={[styles.subjectChip, { backgroundColor: info.color }]}>
@@ -62,7 +73,64 @@ export default function QuizCard({ question, onReveal }: Props) {
         )}
       </View>
 
-      {!revealed ? (
+      {choices != null ? (
+        <View style={styles.choiceSection}>
+          <Text style={styles.questionLabel}>問 題</Text>
+          <Text style={styles.questionTextChoice}>{question.question}</Text>
+          <View style={styles.choicesWrap}>
+            {choices.map((choice, i) => {
+              const isSelected = selectedChoice === choice;
+              const isCorrect = choice === question.answer;
+              const showResult = selectedChoice != null;
+
+              return (
+                <TouchableOpacity
+                  key={`${i}-${choice}`}
+                  style={[
+                    styles.choiceBtn,
+                    showResult && isCorrect && styles.choiceBtnCorrect,
+                    showResult && isSelected && !isCorrect && styles.choiceBtnWrong,
+                  ]}
+                  onPress={() => handleChoicePress(choice)}
+                  disabled={selectedChoice != null}
+                  activeOpacity={0.75}
+                >
+                  <View style={[
+                    styles.choiceLetter,
+                    showResult && isCorrect && styles.choiceLetterCorrect,
+                    showResult && isSelected && !isCorrect && styles.choiceLetterWrong,
+                  ]}>
+                    <Text style={[
+                      styles.choiceLetterText,
+                      showResult && (isCorrect || isSelected) && styles.choiceLetterTextResult,
+                    ]}>{choiceLabels[i]}</Text>
+                  </View>
+                  <Text
+                    style={[
+                      styles.choiceText,
+                      showResult && isCorrect && styles.choiceTextCorrect,
+                      showResult && isSelected && !isCorrect && styles.choiceTextWrong,
+                    ]}
+                    numberOfLines={3}
+                  >{choice}</Text>
+                  {showResult && isCorrect && (
+                    <Text style={styles.choiceCorrectMark}>✓</Text>
+                  )}
+                  {showResult && isSelected && !isCorrect && (
+                    <Text style={styles.choiceWrongMark}>✗</Text>
+                  )}
+                </TouchableOpacity>
+              );
+            })}
+          </View>
+          {question.hint != null && selectedChoice != null && (
+            <View style={styles.hintBox}>
+              <Text style={styles.hintLabel}>💡 ヒント</Text>
+              <Text style={styles.hintText}>{question.hint}</Text>
+            </View>
+          )}
+        </View>
+      ) : !revealed ? (
         <View style={styles.questionSide}>
           <Text style={styles.questionLabel}>問 題</Text>
           <Text style={styles.questionText}>{question.question}</Text>
@@ -114,7 +182,7 @@ const styles = StyleSheet.create({
   },
   illustrationWrap: {
     width: '100%',
-    height: height * 0.42,
+    height: height * 0.3,
     backgroundColor: '#EEF4FF',
   },
   illustration: {
@@ -148,6 +216,84 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '800',
   },
+  // Choice mode
+  choiceSection: {
+    padding: 20,
+    paddingTop: 14,
+  },
+  choicesWrap: {
+    gap: 10,
+    marginTop: 14,
+  },
+  choiceBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#FAFBFF',
+    borderWidth: 2,
+    borderColor: '#D6E0FF',
+    borderRadius: 16,
+    paddingVertical: 12,
+    paddingHorizontal: 14,
+    gap: 12,
+  },
+  choiceBtnCorrect: {
+    backgroundColor: '#E8F8EE',
+    borderColor: '#00A651',
+  },
+  choiceBtnWrong: {
+    backgroundColor: '#FEE8E6',
+    borderColor: '#E74C3C',
+  },
+  choiceLetter: {
+    width: 38,
+    height: 38,
+    borderRadius: 19,
+    backgroundColor: '#EEF4FF',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexShrink: 0,
+  },
+  choiceLetterCorrect: {
+    backgroundColor: '#00A651',
+  },
+  choiceLetterWrong: {
+    backgroundColor: '#E74C3C',
+  },
+  choiceLetterText: {
+    fontSize: 19,
+    fontWeight: '800',
+    color: '#1E5FBE',
+  },
+  choiceLetterTextResult: {
+    color: '#FFFFFF',
+  },
+  choiceText: {
+    flex: 1,
+    fontSize: 21,
+    fontWeight: '600',
+    color: '#1A1A2E',
+    lineHeight: 30,
+  },
+  choiceTextCorrect: {
+    color: '#006B35',
+    fontWeight: '700',
+  },
+  choiceTextWrong: {
+    color: '#C0392B',
+  },
+  choiceCorrectMark: {
+    fontSize: 24,
+    fontWeight: '900',
+    color: '#00A651',
+    flexShrink: 0,
+  },
+  choiceWrongMark: {
+    fontSize: 24,
+    fontWeight: '900',
+    color: '#E74C3C',
+    flexShrink: 0,
+  },
+  // Flip-card mode (original)
   questionSide: {
     alignItems: 'center',
     padding: 28,
@@ -159,6 +305,7 @@ const styles = StyleSheet.create({
     color: '#888',
     letterSpacing: 4,
     marginBottom: 14,
+    textAlign: 'center',
   },
   questionText: {
     fontSize: 34,
@@ -167,6 +314,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     lineHeight: 50,
     marginBottom: 20,
+  },
+  questionTextChoice: {
+    fontSize: 26,
+    fontWeight: '700',
+    color: '#1A1A2E',
+    textAlign: 'center',
+    lineHeight: 40,
   },
   tapHint: {
     backgroundColor: '#EEF4FF',
@@ -213,6 +367,7 @@ const styles = StyleSheet.create({
     width: '100%',
     borderLeftWidth: 4,
     borderLeftColor: '#F59E0B',
+    marginTop: 14,
   },
   hintLabel: {
     fontSize: 20,

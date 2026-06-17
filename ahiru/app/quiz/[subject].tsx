@@ -108,6 +108,18 @@ export default function QuizScreen() {
   const total = questions.length;
   const diffInfo = difficultyFilter ? DIFF_LABELS[difficultyFilter] : null;
 
+  const currentChoices = useMemo(() => {
+    const q = questions[currentIndex];
+    if (!q || questions.length < 2) return undefined;
+    const correct = q.answer;
+    const pool = questions
+      .filter((other) => other.id !== q.id && other.answer !== correct)
+      .map((other) => other.answer);
+    const shuffled = [...pool].sort(() => Math.random() - 0.5);
+    const distractors = shuffled.slice(0, 3);
+    return [...distractors, correct].sort(() => Math.random() - 0.5);
+  }, [currentIndex, questions]);
+
   function handleReveal() {
     setRevealed(true);
   }
@@ -311,6 +323,8 @@ export default function QuizScreen() {
           question={currentQuestion}
           questionIndex={currentIndex}
           onReveal={handleReveal}
+          choices={currentChoices}
+          onChoiceSelect={handleAnswer}
         />
 
         {/* Explanation card - shown after reveal */}
@@ -334,8 +348,8 @@ export default function QuizScreen() {
           </View>
         )}
 
-        {/* Answer buttons - only shown after reveal */}
-        {revealed && (
+        {/* Answer buttons - only shown in flip-card mode after reveal */}
+        {revealed && !currentChoices && (
           <View style={styles.answerButtons}>
             <TouchableOpacity
               style={styles.correctButton}
@@ -354,7 +368,7 @@ export default function QuizScreen() {
           </View>
         )}
 
-        {!revealed && (
+        {!revealed && !currentChoices && (
           <View style={styles.revealHint}>
             <Text style={styles.revealHintText}>
               カードをタップして答えを確認してね 👆
