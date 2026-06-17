@@ -23,7 +23,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png",
-      "bundler": "metro"
+      "bundler": "metro",
+      "lang": "ja",
+      "meta": {
+        "description": "大阪の中学受験対策アプリ。5科目830問以上・18校学校別コース。"
+      }
     },
     "plugins": [
       "expo-router"
