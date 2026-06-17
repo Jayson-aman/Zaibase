@@ -11,7 +11,8 @@ import {
 import { useRouter } from 'expo-router';
 import SubjectCard from '../../components/SubjectCard';
 import ListenMode from '../../components/ListenMode';
-import Paywall from '../../components/Paywall';
+import BetaGateModal from '../../components/BetaGateModal';
+import { useBetaAccess } from '../../hooks/useBetaAccess';
 import SchoolSlideshow from '../../components/SchoolSlideshow';
 import AnimatedMascot from '../../components/AnimatedMascot';
 import { homeMascot } from '../../data/images';
@@ -201,8 +202,10 @@ export default function HomeScreen() {
   }
 
   const listenInfo = listenSubject ? subjectInfo[listenSubject] : null;
-  const { isPro, paywallVisible, setPaywallVisible, requirePro } = useProGate();
-  const { isMax } = useSubscription();
+  const { hasAccess: betaAccess, unlock } = useBetaAccess();
+  const { isPro, paywallVisible, setPaywallVisible, requirePro } = useProGate(betaAccess);
+  const { isMax: subIsMax } = useSubscription();
+  const isMax = subIsMax || betaAccess;
   const selectedDiff = DIFFICULTY_OPTIONS.find((d) => d.key === difficulty)!;
   const todayLabel = getTodayDayLabel();
   const courseInfo = getCourseInfo(selectedCourse);
@@ -564,13 +567,11 @@ export default function HomeScreen() {
         />
       )}
 
-      <Paywall
+      <BetaGateModal
         visible={paywallVisible}
         onClose={() => setPaywallVisible(false)}
-        onPurchased={() => {
-          setPaywallVisible(false);
-          setListenPickerActive(true);
-        }}
+        onUnlocked={() => setPaywallVisible(false)}
+        unlock={unlock}
       />
     </SafeAreaView>
   );

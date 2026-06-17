@@ -1,24 +1,25 @@
 import { useCallback, useState } from 'react';
 import { useSubscription } from './useSubscription';
 
-export function useProGate() {
+export function useProGate(betaAccess = false) {
   const { isPro, loading, tier } = useSubscription();
+  const effectiveIsPro = isPro || betaAccess;
   const [paywallVisible, setPaywallVisible] = useState(false);
 
   const requirePro = useCallback(
     (onGranted?: () => void) => {
-      if (isPro) {
+      if (effectiveIsPro) {
         onGranted?.();
         return true;
       }
       setPaywallVisible(true);
       return false;
     },
-    [isPro],
+    [effectiveIsPro],
   );
 
   return {
-    isPro,
+    isPro: effectiveIsPro,
     loading,
     tier,
     paywallVisible,
