@@ -172,7 +172,7 @@ export default function LandingPage() {
 
             {/* メインタイトル（明朝体） */}
             <Text style={styles.heroTitle}>
-              合格への{'\n'}正攻法を、{'\n'}ここに。
+              合格への正攻法を、ここに。
             </Text>
 
             {/* デコライン */}
@@ -543,10 +543,10 @@ const styles = StyleSheet.create({
   },
   heroTitle: {
     fontFamily: SERIF,
-    fontSize: 52,
+    fontSize: 36,
     fontWeight: '700',
     color: C.white,
-    lineHeight: 72,
+    lineHeight: 50,
     marginBottom: 28,
     letterSpacing: -0.5,
     includeFontPadding: false,
