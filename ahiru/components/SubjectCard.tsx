@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Animated } from 'react-native';
+import React from 'react';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { SubjectKey, subjectInfo } from '../data/questions';
 import SubjectScene from './SubjectScene';
@@ -34,30 +34,6 @@ export default function SubjectCard({ subject, onPress, questionCount }: Props) 
   const lightColor = lightenColor(info.color);
   const scene = SUBJECT_SCENE[subject];
 
-  const bounceAnim = useRef(new Animated.Value(0)).current;
-  const rotateAnim = useRef(new Animated.Value(0)).current;
-
-  useEffect(() => {
-    Animated.loop(
-      Animated.sequence([
-        Animated.timing(bounceAnim, { toValue: -8, duration: 700, useNativeDriver: true }),
-        Animated.timing(bounceAnim, { toValue: 0, duration: 700, useNativeDriver: true }),
-      ])
-    ).start();
-
-    Animated.loop(
-      Animated.sequence([
-        Animated.timing(rotateAnim, { toValue: 1, duration: 2000, useNativeDriver: true }),
-        Animated.timing(rotateAnim, { toValue: 0, duration: 2000, useNativeDriver: true }),
-      ])
-    ).start();
-  }, [bounceAnim, rotateAnim]);
-
-  const rotate = rotateAnim.interpolate({
-    inputRange: [0, 1],
-    outputRange: ['-8deg', '8deg'],
-  });
-
   return (
     <TouchableOpacity
       onPress={onPress}
@@ -75,16 +51,8 @@ export default function SubjectCard({ subject, onPress, questionCount }: Props) 
         </View>
 
         <View style={styles.sceneRow}>
-          <Animated.Text
-            style={[styles.sceneEmoji, { transform: [{ translateY: bounceAnim }] }]}
-          >
-            {scene.emoji1}
-          </Animated.Text>
-          <Animated.Text
-            style={[styles.sceneEmoji, { transform: [{ rotate }] }]}
-          >
-            {scene.emoji2}
-          </Animated.Text>
+          <Text style={styles.sceneEmoji}>{scene.emoji1}</Text>
+          <Text style={styles.sceneEmoji}>{scene.emoji2}</Text>
         </View>
 
         <Text style={styles.name}>{info.name}</Text>

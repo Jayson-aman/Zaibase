@@ -236,14 +236,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5F7FA',
   },
   appTitle: {
-    fontSize: 26,
+    fontSize: 42,
     fontWeight: '900',
     color: '#FFFFFF',
     letterSpacing: 1,
-    marginBottom: 4,
+    marginBottom: 6,
   },
   appSubtitle: {
-    fontSize: 14,
+    fontSize: 22,
     color: 'rgba(255,255,255,0.9)',
     fontWeight: '600',
   },
@@ -270,24 +270,24 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   mascotImage: {
-    width: 72,
-    height: 72,
-    borderRadius: 36,
+    width: 100,
+    height: 100,
+    borderRadius: 50,
     backgroundColor: '#EEF4FF',
   },
   mascotTextWrap: {
     flex: 1,
   },
   mascotTitle: {
-    fontSize: 16,
+    fontSize: 26,
     fontWeight: '800',
     color: '#1A1A2E',
-    marginBottom: 4,
+    marginBottom: 6,
   },
   mascotSub: {
-    fontSize: 13,
+    fontSize: 18,
     color: '#666',
-    lineHeight: 18,
+    lineHeight: 26,
     fontWeight: '500',
   },
   listenStartBtn: {
@@ -303,13 +303,13 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   listenStartBtnText: {
-    fontSize: 18,
+    fontSize: 28,
     fontWeight: '800',
     color: '#FFFFFF',
     letterSpacing: 0.5,
   },
   sectionTitle: {
-    fontSize: 17,
+    fontSize: 28,
     fontWeight: '800',
     color: '#1A1A2E',
     marginBottom: 14,
@@ -346,11 +346,11 @@ const styles = StyleSheet.create({
     borderColor: '#E0E6EF',
   },
   diffBtnIcon: {
-    fontSize: 18,
-    marginBottom: 2,
+    fontSize: 28,
+    marginBottom: 4,
   },
   diffBtnLabel: {
-    fontSize: 11,
+    fontSize: 18,
     fontWeight: '700',
     color: '#555',
   },
@@ -366,7 +366,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
   },
   diffInfoText: {
-    fontSize: 13,
+    fontSize: 20,
     fontWeight: '700',
     textAlign: 'center',
   },
@@ -382,15 +382,15 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   infoTitle: {
-    fontSize: 15,
+    fontSize: 24,
     fontWeight: '800',
     color: '#1A1A2E',
     marginBottom: 10,
   },
   infoText: {
-    fontSize: 14,
+    fontSize: 20,
     color: '#444',
-    lineHeight: 24,
+    lineHeight: 34,
     fontWeight: '500',
   },
   inspirationCard: {
@@ -400,10 +400,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   inspirationText: {
-    fontSize: 15,
+    fontSize: 22,
     fontWeight: '700',
     color: '#FFFFFF',
     textAlign: 'center',
-    lineHeight: 24,
+    lineHeight: 34,
   },
 });
