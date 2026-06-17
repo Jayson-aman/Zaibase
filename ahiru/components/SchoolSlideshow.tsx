@@ -60,7 +60,7 @@ export default function SchoolSlideshow({ children }: Props) {
       </Animated.View>
 
       <LinearGradient
-        colors={['rgba(13,61,138,0.55)', 'rgba(13,61,138,0.88)']}
+        colors={['rgba(0,0,0,0)', 'rgba(0,0,0,0.55)']}
         style={styles.overlay}
       />
 

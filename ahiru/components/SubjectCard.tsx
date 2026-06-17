@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import React, { useEffect, useRef } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet, Animated } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { SubjectKey, subjectInfo } from '../data/questions';
 import { mascots } from '../data/images';
@@ -22,9 +22,42 @@ function lightenColor(hex: string): string {
   return map[hex] ?? hex;
 }
 
+const SUBJECT_SCENE: Record<SubjectKey, { emoji: string; label: string }> = {
+  sansu: { emoji: '✏️📐', label: '式を解く' },
+  kokugo: { emoji: '📖✍️', label: '読む・書く' },
+  rika: { emoji: '🔬🌱', label: '実験・観察' },
+  shakai: { emoji: '🗾📜', label: '地図・歴史' },
+  eigo: { emoji: '💬🌍', label: '話す・聞く' },
+};
+
 export default function SubjectCard({ subject, onPress, questionCount }: Props) {
   const info = subjectInfo[subject];
   const lightColor = lightenColor(info.color);
+  const scene = SUBJECT_SCENE[subject];
+
+  const bounceAnim = useRef(new Animated.Value(0)).current;
+  const rotateAnim = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    Animated.loop(
+      Animated.sequence([
+        Animated.timing(bounceAnim, { toValue: -8, duration: 700, useNativeDriver: true }),
+        Animated.timing(bounceAnim, { toValue: 0, duration: 700, useNativeDriver: true }),
+      ])
+    ).start();
+
+    Animated.loop(
+      Animated.sequence([
+        Animated.timing(rotateAnim, { toValue: 1, duration: 2000, useNativeDriver: true }),
+        Animated.timing(rotateAnim, { toValue: 0, duration: 2000, useNativeDriver: true }),
+      ])
+    ).start();
+  }, [bounceAnim, rotateAnim]);
+
+  const rotate = rotateAnim.interpolate({
+    inputRange: [0, 1],
+    outputRange: ['-8deg', '8deg'],
+  });
 
   return (
     <TouchableOpacity
@@ -38,19 +71,31 @@ export default function SubjectCard({ subject, onPress, questionCount }: Props) 
         end={{ x: 1, y: 1 }}
         style={styles.card}
       >
-        <View style={styles.animeFrame}>
+        <View style={styles.mascotArea}>
           <AnimatedMascot
             source={mascots[subject]}
-            style={styles.animeImage}
+            style={styles.mascotImage}
             fallbackEmoji={info.emoji}
             animation="float"
             accessibilityLabel={`${info.name}のキャラクター`}
           />
-          <View style={styles.emojiBadge}>
-            <Text style={styles.emoji}>{info.emoji}</Text>
-          </View>
         </View>
+
+        <View style={styles.sceneRow}>
+          <Animated.Text
+            style={[styles.sceneEmoji, { transform: [{ translateY: bounceAnim }] }]}
+          >
+            {scene.emoji.split('')[0]}
+          </Animated.Text>
+          <Animated.Text
+            style={[styles.sceneEmoji, { transform: [{ rotate }] }]}
+          >
+            {scene.emoji.split('')[1] ?? ''}
+          </Animated.Text>
+        </View>
+
         <Text style={styles.name}>{info.name}</Text>
+        <Text style={styles.sceneLabel}>{scene.label}</Text>
         <View style={styles.badge}>
           <Text style={styles.badgeText}>{questionCount}問</Text>
         </View>
@@ -65,53 +110,53 @@ const styles = StyleSheet.create({
     marginBottom: 14,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.15,
+    shadowOpacity: 0.18,
     shadowRadius: 8,
     elevation: 5,
     borderRadius: 18,
   },
   card: {
     borderRadius: 18,
-    paddingTop: 12,
-    paddingBottom: 20,
-    paddingHorizontal: 12,
+    paddingTop: 8,
+    paddingBottom: 16,
+    paddingHorizontal: 8,
     alignItems: 'center',
     overflow: 'hidden',
   },
-  animeFrame: {
+  mascotArea: {
     width: '100%',
-    height: 110,
+    height: 120,
     borderRadius: 14,
     overflow: 'hidden',
-    marginBottom: 10,
-    backgroundColor: 'rgba(255,255,255,0.92)',
-    borderWidth: 2,
-    borderColor: 'rgba(255,255,255,0.55)',
+    marginBottom: 6,
   },
-  animeImage: {
+  mascotImage: {
     width: '100%',
     height: '100%',
   },
-  emojiBadge: {
-    position: 'absolute',
-    bottom: 4,
-    right: 4,
-    backgroundColor: 'rgba(255,255,255,0.9)',
-    width: 28,
-    height: 28,
-    borderRadius: 14,
+  sceneRow: {
+    flexDirection: 'row',
+    gap: 4,
+    marginBottom: 4,
+    height: 44,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  emoji: {
-    fontSize: 16,
+  sceneEmoji: {
+    fontSize: 32,
   },
   name: {
     fontSize: 18,
     fontWeight: '800',
     color: '#FFFFFF',
-    marginBottom: 8,
+    marginBottom: 2,
     letterSpacing: 1,
+  },
+  sceneLabel: {
+    fontSize: 11,
+    color: 'rgba(255,255,255,0.85)',
+    fontWeight: '600',
+    marginBottom: 8,
   },
   badge: {
     backgroundColor: 'rgba(255,255,255,0.3)',
