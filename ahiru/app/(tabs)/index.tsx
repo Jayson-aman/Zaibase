@@ -116,6 +116,7 @@ const logoStyles = StyleSheet.create({
   z: {
     fontFamily: SERIF,
     fontSize: 56,
+    lineHeight: 60,
     fontWeight: '900',
     color: '#FFFFFF',
     letterSpacing: -2,
@@ -127,6 +128,7 @@ const logoStyles = StyleSheet.create({
   brand: {
     fontFamily: SERIF,
     fontSize: 26,
+    lineHeight: 28,
     fontWeight: '700',
     color: '#FFFFFF',
     letterSpacing: 0.5,
