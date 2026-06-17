@@ -54,6 +54,7 @@ export default function QuizScreen() {
   const [finished, setFinished] = useState(false);
   const [savedProgress, setSavedProgress] = useState(false);
   const [wrongIds, setWrongIds] = useState<string[]>([]);
+  const [feedback, setFeedback] = useState<'correct' | 'wrong' | null>(null);
 
   const currentQuestion = questions[currentIndex];
   const total = questions.length;
@@ -67,21 +68,24 @@ export default function QuizScreen() {
     const newScore = correct ? score + 1 : score;
     const newWrongIds = correct ? wrongIds : [...wrongIds, currentQuestion.id];
 
-    if (currentIndex + 1 >= total) {
-      // Last question - save progress and show results
-      if (!savedProgress) {
-        setSavedProgress(true);
-        await saveProgress(subjectKey, newScore, total, newWrongIds);
+    setFeedback(correct ? 'correct' : 'wrong');
+    setTimeout(async () => {
+      setFeedback(null);
+      if (currentIndex + 1 >= total) {
+        if (!savedProgress) {
+          setSavedProgress(true);
+          await saveProgress(subjectKey, newScore, total, newWrongIds);
+        }
+        setScore(newScore);
+        setWrongIds(newWrongIds);
+        setFinished(true);
+      } else {
+        setScore(newScore);
+        setWrongIds(newWrongIds);
+        setCurrentIndex((i) => i + 1);
+        setRevealed(false);
       }
-      setScore(newScore);
-      setWrongIds(newWrongIds);
-      setFinished(true);
-    } else {
-      setScore(newScore);
-      setWrongIds(newWrongIds);
-      setCurrentIndex((i) => i + 1);
-      setRevealed(false);
-    }
+    }, 900);
   }
 
   async function handleRestart() {
@@ -277,11 +281,25 @@ export default function QuizScreen() {
         {!revealed && (
           <View style={styles.revealHint}>
             <Text style={styles.revealHintText}>
-              カードをタップして答えを確認してね
+              カードをタップして答えを確認してね 👆
             </Text>
           </View>
         )}
       </ScrollView>
+
+      {feedback !== null && (
+        <View
+          style={[
+            styles.feedbackOverlay,
+            { backgroundColor: feedback === 'correct' ? 'rgba(0,166,81,0.88)' : 'rgba(231,76,60,0.88)' },
+          ]}
+          pointerEvents="none"
+        >
+          <Text style={styles.feedbackText}>
+            {feedback === 'correct' ? '○' : '×'}
+          </Text>
+        </View>
+      )}
     </SafeAreaView>
   );
 }
@@ -303,7 +321,7 @@ const styles = StyleSheet.create({
     minWidth: 60,
   },
   backBtnText: {
-    fontSize: 15,
+    fontSize: 22,
     color: '#FFFFFF',
     fontWeight: '700',
   },
@@ -312,19 +330,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 6,
+    gap: 8,
   },
   headerEmoji: {
-    fontSize: 20,
+    fontSize: 30,
   },
   headerTitle: {
-    fontSize: 18,
+    fontSize: 28,
     fontWeight: '800',
     color: '#FFFFFF',
     letterSpacing: 1,
   },
   headerDiff: {
-    fontSize: 12,
+    fontSize: 20,
     fontWeight: '700',
     color: 'rgba(255,255,255,0.9)',
     marginTop: 2,
@@ -346,7 +364,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   questionIndicator: {
-    fontSize: 14,
+    fontSize: 22,
     color: 'rgba(255,255,255,0.9)',
     fontWeight: '700',
   },
@@ -381,20 +399,20 @@ const styles = StyleSheet.create({
     borderColor: '#B8E6C8',
   },
   scoreBadgeText: {
-    fontSize: 13,
+    fontSize: 22,
     color: '#00A651',
     fontWeight: '700',
   },
   remainBadge: {
     backgroundColor: '#EEF4FF',
-    paddingHorizontal: 14,
-    paddingVertical: 6,
+    paddingHorizontal: 18,
+    paddingVertical: 8,
     borderRadius: 20,
     borderWidth: 1,
     borderColor: '#C5D8F8',
   },
   remainBadgeText: {
-    fontSize: 13,
+    fontSize: 22,
     color: '#1E5FBE',
     fontWeight: '700',
   },
@@ -407,8 +425,8 @@ const styles = StyleSheet.create({
   correctButton: {
     flex: 1,
     backgroundColor: '#00A651',
-    borderRadius: 16,
-    paddingVertical: 18,
+    borderRadius: 20,
+    paddingVertical: 26,
     alignItems: 'center',
     shadowColor: '#00A651',
     shadowOffset: { width: 0, height: 4 },
@@ -417,7 +435,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   correctButtonText: {
-    fontSize: 18,
+    fontSize: 36,
     fontWeight: '900',
     color: '#FFFFFF',
     letterSpacing: 1,
@@ -425,8 +443,8 @@ const styles = StyleSheet.create({
   wrongButton: {
     flex: 1,
     backgroundColor: '#E74C3C',
-    borderRadius: 16,
-    paddingVertical: 18,
+    borderRadius: 20,
+    paddingVertical: 26,
     alignItems: 'center',
     shadowColor: '#E74C3C',
     shadowOffset: { width: 0, height: 4 },
@@ -435,20 +453,32 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   wrongButtonText: {
-    fontSize: 18,
+    fontSize: 36,
     fontWeight: '900',
     color: '#FFFFFF',
     letterSpacing: 1,
   },
   revealHint: {
-    marginTop: 20,
+    marginTop: 24,
     alignItems: 'center',
     paddingHorizontal: 16,
   },
   revealHintText: {
-    fontSize: 14,
+    fontSize: 24,
     color: '#AAA',
-    fontWeight: '500',
+    fontWeight: '600',
+  },
+  feedbackOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 999,
+  },
+  feedbackText: {
+    fontSize: 220,
+    fontWeight: '900',
+    color: '#FFFFFF',
+    lineHeight: 260,
   },
   // Results screen styles
   resultsContainer: {
