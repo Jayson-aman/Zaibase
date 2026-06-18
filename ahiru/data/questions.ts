@@ -4,6 +4,7 @@ import { kokoKankanQuestions, kokoTopQuestions } from './questions-koko';
 import { seikoQuestions, seifuNankaiQuestions, takatsukiQuestions } from './questions-schools-1';
 import { kaimeiQuestions, toinQuestions, kindaiQuestions, kansaiHokuyoQuestions } from './questions-schools-2';
 import { toinExamQuestions, kindaiExamQuestions, kaimeiExamQuestions, kansaiHokuyoExamQuestions, myojoExamQuestions, tezukayamaExamQuestions, kinrankaiExamQuestions, otaniExamQuestions } from './questions-exam';
+import { freeTeaserQuestions } from './questions-free-teaser';
 import { myojoQuestions, tezukayamaQuestions, kinrankaiQuestions, otaniQuestions } from './questions-schools-3';
 
 export type Question = {
@@ -2655,6 +2656,7 @@ export const questions: Question[] = [
     hint: 'Having finished = 分詞構文（完了形）。Despite being = 前置詞＋動名詞',
     difficulty: 'advanced',
   },
+  ...freeTeaserQuestions,
   ...kankanQuestions,
   ...shitennojiQuestions,
   ...kokoGeneralQuestions,
