@@ -5,6 +5,8 @@ import { kindaiSansu, kindaiKokugo } from './kindai_sansu_kokugo';
 import { kindaiRika, kindaiShakai, kindaiEigo } from './kindai_rika_shakai_eigo';
 import { kaimeiSansu, kaimeiKokugo, kaimeiRika } from './kaimei_sansu_kokugo_rika';
 import { kaimeiShakai, kaimeiEigo } from './kaimei_shakai_eigo';
+import { kansaiHokuyoSansu, kansaiHokuyoKokugo, kansaiHokuyoRika, kansaiHokuyoShakai, kansaiHokuyoEigo } from './kansai_hokuyo_exam';
+import { myojoSansu, myojoKokugo, myojoRika, myojoShakai, myojoEigo } from './myojo_exam';
 
 // 大阪桐蔭中学校 — 入試形式 大問（偏差値57-62）
 export const toinExamQuestions: Question[] = [
@@ -31,4 +33,22 @@ export const kaimeiExamQuestions: Question[] = [
   ...kaimeiRika,
   ...kaimeiShakai,
   ...kaimeiEigo,
+];
+
+// 関西大学北陽中学校 — 入試形式 大問（偏差値54-58）
+export const kansaiHokuyoExamQuestions: Question[] = [
+  ...kansaiHokuyoSansu,
+  ...kansaiHokuyoKokugo,
+  ...kansaiHokuyoRika,
+  ...kansaiHokuyoShakai,
+  ...kansaiHokuyoEigo,
+];
+
+// 明星中学校 — 入試形式 大問（偏差値56-62）
+export const myojoExamQuestions: Question[] = [
+  ...myojoSansu,
+  ...myojoKokugo,
+  ...myojoRika,
+  ...myojoShakai,
+  ...myojoEigo,
 ];

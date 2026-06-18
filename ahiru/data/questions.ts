@@ -3,7 +3,7 @@ import { kankanQuestions, shitennojiQuestions, kokoGeneralQuestions } from './qu
 import { kokoKankanQuestions, kokoTopQuestions } from './questions-koko';
 import { seikoQuestions, seifuNankaiQuestions, takatsukiQuestions } from './questions-schools-1';
 import { kaimeiQuestions, toinQuestions, kindaiQuestions, kansaiHokuyoQuestions } from './questions-schools-2';
-import { toinExamQuestions, kindaiExamQuestions, kaimeiExamQuestions } from './questions-exam';
+import { toinExamQuestions, kindaiExamQuestions, kaimeiExamQuestions, kansaiHokuyoExamQuestions, myojoExamQuestions } from './questions-exam';
 import { myojoQuestions, tezukayamaQuestions, kinrankaiQuestions, otaniQuestions } from './questions-schools-3';
 
 export type Question = {
@@ -2672,7 +2672,9 @@ export const questions: Question[] = [
   ...kindaiQuestions,
   ...kindaiExamQuestions,
   ...kansaiHokuyoQuestions,
+  ...kansaiHokuyoExamQuestions,
   ...myojoQuestions,
+  ...myojoExamQuestions,
   ...tezukayamaQuestions,
   // ── 学校別問題（大阪私学 準難関） ──
   ...kinrankaiQuestions,
