@@ -39,6 +39,15 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="textbook"
+        options={{
+          title: 'テキスト',
+          tabBarIcon: ({ focused }) => (
+            <TabIcon emoji="📚" focused={focused} />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="progress"
         options={{
           title: '進捗',

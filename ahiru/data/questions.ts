@@ -3,7 +3,7 @@ import { kankanQuestions, shitennojiQuestions, kokoGeneralQuestions } from './qu
 import { kokoKankanQuestions, kokoTopQuestions } from './questions-koko';
 import { seikoQuestions, seifuNankaiQuestions, takatsukiQuestions } from './questions-schools-1';
 import { kaimeiQuestions, toinQuestions, kindaiQuestions, kansaiHokuyoQuestions } from './questions-schools-2';
-import { toinExamQuestions, kindaiExamQuestions, kaimeiExamQuestions, kansaiHokuyoExamQuestions, myojoExamQuestions, tezukayamaExamQuestions, kinrankaiExamQuestions, otaniExamQuestions, kankanExamQuestions, kankanMaxQuestions } from './questions-exam';
+import { toinExamQuestions, kindaiExamQuestions, kaimeiExamQuestions, kansaiHokuyoExamQuestions, myojoExamQuestions, tezukayamaExamQuestions, kinrankaiExamQuestions, otaniExamQuestions, kankanExamQuestions, kankanMaxQuestions, tokyoMeidaiExamQuestions, tokyoAoyamaExamQuestions, tokyoChuoExamQuestions, tokyoHoseiExamQuestions, tokyoGakushiinExamQuestions, tokyoHibiyaExamQuestions, tokyoWasedaExamQuestions, tokyoMeidaiKokoExamQuestions, tokyoChugakuMaxQuestions, tokyoKokoMaxQuestions } from './questions-exam';
 import { freeTeaserQuestions } from './questions-free-teaser';
 import { myojoQuestions, tezukayamaQuestions, kinrankaiQuestions, otaniQuestions } from './questions-schools-3';
 
@@ -2687,6 +2687,18 @@ export const questions: Question[] = [
   ...kinrankaiExamQuestions,
   ...otaniQuestions,
   ...otaniExamQuestions,
+  // ── 東京 中学受験 ──
+  ...tokyoMeidaiExamQuestions,
+  ...tokyoAoyamaExamQuestions,
+  ...tokyoChuoExamQuestions,
+  ...tokyoHoseiExamQuestions,
+  ...tokyoGakushiinExamQuestions,
+  ...tokyoChugakuMaxQuestions,
+  // ── 東京 高校受験 ──
+  ...tokyoHibiyaExamQuestions,
+  ...tokyoWasedaExamQuestions,
+  ...tokyoMeidaiKokoExamQuestions,
+  ...tokyoKokoMaxQuestions,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {

@@ -14,6 +14,9 @@ import { toinMaxQuestions, kindaiMaxQuestions, kaimeiMaxQuestions } from './toin
 import { kinrankaiMaxQuestions, otaniMaxQuestions } from './kinrankai_otani_max';
 import { kansaiHokuyoMaxQuestions, myojoMaxQuestions, tezukayamaMaxQuestions } from './kansaihokuyo_myojo_tezukayama_max';
 import { kankanExamQuestions, kankanMaxQuestions } from './kankan_exam';
+import { tokyoMeidaiSansu, tokyoMeidaiKokugo, tokyoMeidaiRika, tokyoMeidaiShakai, tokyoMeidaiEigo, tokyoAoyamaSansu, tokyoAoyamaKokugo, tokyoAoyamaRika, tokyoAoyamaShakai, tokyoAoyamaEigo, tokyoChuoSansu, tokyoChuoKokugo, tokyoChuoRika, tokyoChuoShakai, tokyoChuoEigo, tokyoHoseiSansu, tokyoHoseiKokugo, tokyoHoseiRika, tokyoHoseiShakai, tokyoHoseiEigo, tokyoGakushiinSansu, tokyoGakushiinKokugo, tokyoGakushiinRika, tokyoGakushiinShakai, tokyoGakushiinEigo } from './tokyo_chugaku_exam';
+import { tokyoHibiyaSansu, tokyoHibiyaKokugo, tokyoHibiyaRika, tokyoHibiyaShakai, tokyoHibiyaEigo, tokyoWasedaSansu, tokyoWasedaKokugo, tokyoWasedaRika, tokyoWasedaShakai, tokyoWasedaEigo, tokyoMeidaiKokoSansu, tokyoMeidaiKokoKokugo, tokyoMeidaiKokoRika, tokyoMeidaiKokoShakai, tokyoMeidaiKokoEigo } from './tokyo_koko_exam';
+import { tokyoChugakuMaxQuestions, tokyoKokoMaxQuestions } from './tokyo_max';
 
 // 大阪桐蔭中学校 — 入試形式 大問（偏差値57-62）
 export const toinExamQuestions: Question[] = [
@@ -97,3 +100,77 @@ export const otaniExamQuestions: Question[] = [
   ...otaniEigo,
   ...otaniMaxQuestions,
 ];
+
+// 東京 中学受験 — 明大明治中（偏差値60-64）
+export const tokyoMeidaiExamQuestions: Question[] = [
+  ...tokyoMeidaiSansu,
+  ...tokyoMeidaiKokugo,
+  ...tokyoMeidaiRika,
+  ...tokyoMeidaiShakai,
+  ...tokyoMeidaiEigo,
+];
+
+// 東京 中学受験 — 青山学院中等部（偏差値62-66）
+export const tokyoAoyamaExamQuestions: Question[] = [
+  ...tokyoAoyamaSansu,
+  ...tokyoAoyamaKokugo,
+  ...tokyoAoyamaRika,
+  ...tokyoAoyamaShakai,
+  ...tokyoAoyamaEigo,
+];
+
+// 東京 中学受験 — 中央大学附属中（偏差値60-64）
+export const tokyoChuoExamQuestions: Question[] = [
+  ...tokyoChuoSansu,
+  ...tokyoChuoKokugo,
+  ...tokyoChuoRika,
+  ...tokyoChuoShakai,
+  ...tokyoChuoEigo,
+];
+
+// 東京 中学受験 — 法政第二中（偏差値58-62）
+export const tokyoHoseiExamQuestions: Question[] = [
+  ...tokyoHoseiSansu,
+  ...tokyoHoseiKokugo,
+  ...tokyoHoseiRika,
+  ...tokyoHoseiShakai,
+  ...tokyoHoseiEigo,
+];
+
+// 東京 中学受験 — 学習院中等科（偏差値56-62）
+export const tokyoGakushiinExamQuestions: Question[] = [
+  ...tokyoGakushiinSansu,
+  ...tokyoGakushiinKokugo,
+  ...tokyoGakushiinRika,
+  ...tokyoGakushiinShakai,
+  ...tokyoGakushiinEigo,
+];
+
+// 東京 高校受験 — 都立日比谷・西レベル（偏差値70-73）MAX限定
+export const tokyoHibiyaExamQuestions: Question[] = [
+  ...tokyoHibiyaSansu,
+  ...tokyoHibiyaKokugo,
+  ...tokyoHibiyaRika,
+  ...tokyoHibiyaShakai,
+  ...tokyoHibiyaEigo,
+];
+
+// 東京 高校受験 — 早稲田附属・慶應・開成レベル（偏差値72-75）MAX限定
+export const tokyoWasedaExamQuestions: Question[] = [
+  ...tokyoWasedaSansu,
+  ...tokyoWasedaKokugo,
+  ...tokyoWasedaRika,
+  ...tokyoWasedaShakai,
+  ...tokyoWasedaEigo,
+];
+
+// 東京 高校受験 — 明大明治高・法政・中大附属（偏差値64-68）
+export const tokyoMeidaiKokoExamQuestions: Question[] = [
+  ...tokyoMeidaiKokoSansu,
+  ...tokyoMeidaiKokoKokugo,
+  ...tokyoMeidaiKokoRika,
+  ...tokyoMeidaiKokoShakai,
+  ...tokyoMeidaiKokoEigo,
+];
+
+export { tokyoChugakuMaxQuestions, tokyoKokoMaxQuestions };

@@ -25,10 +25,20 @@ export type CourseKey =
   | 'otani'           // 大谷（準難関・女子）
   | 'naniwa'          // 浪速（準難関）
   | 'otemon'          // 追手門学院（準難関）
+  // ── 東京 中学受験 学校別 ──
+  | 'tokyo-meidai'    // 明治大学附属明治中（難関）
+  | 'tokyo-aoyama'    // 青山学院中等部（難関）
+  | 'tokyo-chuo'      // 中央大学附属中（難関）
+  | 'tokyo-hosei'     // 法政大学第二中（標準〜難関）
+  | 'tokyo-gakushuin' // 学習院中等科（標準〜難関）
   // ── 高校受験 カテゴリ ──
   | 'koko-general'    // 公立高校 一般
   | 'koko-kankan'     // 関関同立附属高
-  | 'koko-top';       // 最難関公立（天王寺・北野）MAXのみ
+  | 'koko-top'        // 最難関公立（天王寺・北野）MAXのみ
+  // ── 東京 高校受験 ──
+  | 'koko-hibiya'     // 都立日比谷高校（最難関）
+  | 'koko-waseda'     // 早稲田大学附属高校（最難関）
+  | 'koko-meidai';    // 明大明治高校（難関）
 
 export type CourseLevel = '基礎〜標準' | '標準' | '標準〜難関' | '難関' | '最難関';
 
@@ -384,6 +394,116 @@ export const ALL_COURSES: CourseInfo[] = [
     maxOnly: true,
     gender: '共学',
     hensachi: '68〜72',
+  },
+
+  // ─────── 東京 中学受験 ───────
+  {
+    key: 'tokyo-meidai',
+    examType: 'chugaku',
+    name: '明治大学附属明治中',
+    shortName: '明大明治',
+    emoji: '🎌',
+    color: '#B71C1C',
+    level: '難関',
+    targetSchools: ['明治大学附属明治中学校'],
+    description: '明大明治の入試問題。明治大学への内部進学を見据えた総合力重視',
+    gender: '共学',
+    hensachi: '60〜64',
+  },
+  {
+    key: 'tokyo-aoyama',
+    examType: 'chugaku',
+    name: '青山学院中等部',
+    shortName: '青山学院',
+    emoji: '🏫',
+    color: '#1565C0',
+    level: '難関',
+    targetSchools: ['青山学院中等部'],
+    description: '青山学院の入試問題。英語・国語・思考力型の出題が特徴',
+    gender: '共学',
+    hensachi: '62〜66',
+  },
+  {
+    key: 'tokyo-chuo',
+    examType: 'chugaku',
+    name: '中央大学附属中学校',
+    shortName: '中央大附属',
+    emoji: '🎯',
+    color: '#880E4F',
+    level: '難関',
+    targetSchools: ['中央大学附属中学校'],
+    description: '中央大附属の入試問題。論理的思考・記述問題が多い',
+    gender: '共学',
+    hensachi: '60〜64',
+  },
+  {
+    key: 'tokyo-hosei',
+    examType: 'chugaku',
+    name: '法政大学第二中学校',
+    shortName: '法政第二',
+    emoji: '📐',
+    color: '#4527A0',
+    level: '標準〜難関',
+    targetSchools: ['法政大学第二中学校'],
+    description: '法政第二の入試問題。バランス型の出題、英語・数学に強い',
+    gender: '共学',
+    hensachi: '58〜62',
+  },
+  {
+    key: 'tokyo-gakushuin',
+    examType: 'chugaku',
+    name: '学習院中等科',
+    shortName: '学習院',
+    emoji: '🌸',
+    color: '#37474F',
+    level: '標準〜難関',
+    targetSchools: ['学習院中等科'],
+    description: '学習院の入試問題。伝統校、国語・社会の記述力が問われる',
+    gender: '男子',
+    hensachi: '56〜62',
+  },
+
+  // ─────── 東京 高校受験 ───────
+  {
+    key: 'koko-hibiya',
+    examType: 'koko',
+    name: '都立日比谷高校',
+    shortName: '日比谷',
+    emoji: '🏆',
+    color: '#1A237E',
+    level: '最難関',
+    targetSchools: ['都立日比谷高校', '都立西高校', '都立国立高校'],
+    description: '都立最難関校の入試問題（都立一貫校・日比谷・西・国立レベル）',
+    maxOnly: true,
+    gender: '共学',
+    hensachi: '70〜73',
+  },
+  {
+    key: 'koko-waseda',
+    examType: 'koko',
+    name: '早稲田大学附属高校',
+    shortName: '早稲田附属',
+    emoji: '⛩️',
+    color: '#B71C1C',
+    level: '最難関',
+    targetSchools: ['早稲田大学高等学院', '慶應義塾高校', '開成高校'],
+    description: '早稲田・慶應・開成レベルの最難関私立高校入試問題',
+    maxOnly: true,
+    gender: '男子',
+    hensachi: '72〜75',
+  },
+  {
+    key: 'koko-meidai',
+    examType: 'koko',
+    name: '明大明治高校',
+    shortName: '明大明治(高)',
+    emoji: '🎌',
+    color: '#C62828',
+    level: '難関',
+    targetSchools: ['明治大学附属明治高校', '法政大学附属高校', '中央大学附属高校'],
+    description: '明大明治・法政・中大附属など私立難関高校入試問題',
+    gender: '共学',
+    hensachi: '64〜68',
   },
 ];
 
