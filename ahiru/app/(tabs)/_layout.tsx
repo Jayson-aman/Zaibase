@@ -15,26 +15,26 @@ export default function TabLayout() {
       screenOptions={{
         headerShown: false,
         tabBarStyle: styles.tabBar,
-        tabBarActiveTintColor: '#1E5FBE',
-        tabBarInactiveTintColor: '#999',
+        tabBarActiveTintColor: '#C8A84B',
+        tabBarInactiveTintColor: '#4A6480',
         tabBarLabelStyle: styles.tabLabel,
       }}
     >
       <Tabs.Screen
-        name="index"
+        name="schools"
         options={{
-          title: 'ホーム',
+          title: '学校別',
           tabBarIcon: ({ focused }) => (
-            <TabIcon emoji="🏠" focused={focused} />
+            <TabIcon emoji="🏫" focused={focused} />
           ),
         }}
       />
       <Tabs.Screen
-        name="geography"
+        name="index"
         options={{
-          title: '地理',
+          title: 'クイズ',
           tabBarIcon: ({ focused }) => (
-            <TabIcon emoji="🗾" focused={focused} />
+            <TabIcon emoji="📝" focused={focused} />
           ),
         }}
       />
@@ -44,6 +44,15 @@ export default function TabLayout() {
           title: 'テキスト',
           tabBarIcon: ({ focused }) => (
             <TabIcon emoji="📚" focused={focused} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="geography"
+        options={{
+          title: '地図',
+          tabBarIcon: ({ focused }) => (
+            <TabIcon emoji="🗾" focused={focused} />
           ),
         }}
       />
@@ -62,20 +71,20 @@ export default function TabLayout() {
 
 const styles = StyleSheet.create({
   tabBar: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#070F1E',
     borderTopWidth: 1,
-    borderTopColor: '#E0E8F0',
+    borderTopColor: 'rgba(255,255,255,0.08)',
     height: 65,
     paddingBottom: 8,
     paddingTop: 4,
   },
   tabLabel: {
-    fontSize: 12,
+    fontSize: 11,
     fontWeight: '600',
   },
   tabIcon: {
     fontSize: 22,
-    opacity: 0.6,
+    opacity: 0.5,
   },
   tabIconFocused: {
     opacity: 1,
