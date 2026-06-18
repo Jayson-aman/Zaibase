@@ -12,6 +12,8 @@ import { kinrankaiSansu, kinrankaiKokugo, kinrankaiRika, kinrankaiShakai, kinran
 import { otaniSansu, otaniKokugo, otaniRika, otaniShakai, otaniEigo } from './otani_exam';
 import { toinMaxQuestions, kindaiMaxQuestions, kaimeiMaxQuestions } from './toin_kindai_kaimei_max';
 import { kinrankaiMaxQuestions, otaniMaxQuestions } from './kinrankai_otani_max';
+import { kansaiHokuyoMaxQuestions, myojoMaxQuestions, tezukayamaMaxQuestions } from './kansaihokuyo_myojo_tezukayama_max';
+import { kankanExamQuestions, kankanMaxQuestions } from './kankan_exam';
 
 // 大阪桐蔭中学校 — 入試形式 大問（偏差値57-62）
 export const toinExamQuestions: Question[] = [
@@ -50,6 +52,7 @@ export const kansaiHokuyoExamQuestions: Question[] = [
   ...kansaiHokuyoRika,
   ...kansaiHokuyoShakai,
   ...kansaiHokuyoEigo,
+  ...kansaiHokuyoMaxQuestions,
 ];
 
 // 明星中学校 — 入試形式 大問（偏差値56-62）
@@ -59,6 +62,7 @@ export const myojoExamQuestions: Question[] = [
   ...myojoRika,
   ...myojoShakai,
   ...myojoEigo,
+  ...myojoMaxQuestions,
 ];
 
 // 帝塚山学院中学校 — 入試形式 大問（偏差値55-60）
@@ -68,7 +72,11 @@ export const tezukayamaExamQuestions: Question[] = [
   ...tezukayamaRika,
   ...tezukayamaShakai,
   ...tezukayamaEigo,
+  ...tezukayamaMaxQuestions,
 ];
+
+// 関関同立附属中学校 — 入試形式 大問（偏差値58-68）
+export { kankanExamQuestions, kankanMaxQuestions };
 
 // 金蘭会中学校 — 入試形式 大問（偏差値50-56）
 export const kinrankaiExamQuestions: Question[] = [
