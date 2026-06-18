@@ -16,6 +16,8 @@ import { getResultMascot } from '../../data/images';
 import { saveProgress } from '../../store/progress';
 import { submitRankingScore } from '../../services/ranking';
 import { getDailyQuestions, getTodayDayLabel } from '../../utils/dailyChallenge';
+import { useSubscription } from '../../hooks/useSubscription';
+import { useBetaAccess } from '../../hooks/useBetaAccess';
 
 function isSubjectKey(value: string): value is SubjectKey {
   return ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'].includes(value);
@@ -90,6 +92,10 @@ export default function QuizScreen() {
     const all = questionsBySubject[subjectKey];
     return filterQuestions(all, examType, course, difficultyFilter);
   }, [subjectKey, difficultyFilter, isDaily, course, examType]);
+
+  const { isPro: subIsPro } = useSubscription();
+  const { hasAccess: betaAccess } = useBetaAccess();
+  const isPro = subIsPro || betaAccess;
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -366,10 +372,11 @@ export default function QuizScreen() {
           onReveal={handleReveal}
           choices={currentChoices}
           onChoiceSelect={handleAnswer}
+          isPro={isPro}
         />
 
         {/* Explanation card - shown after reveal */}
-        {revealed && currentQuestion.explanation && (
+        {revealed && currentQuestion.explanation && isPro && (
           <View style={styles.explanationWrap}>
             <TouchableOpacity
               style={styles.explanationToggle}
@@ -377,7 +384,7 @@ export default function QuizScreen() {
               activeOpacity={0.8}
             >
               <Text style={styles.explanationToggleText}>
-                {showExplanation ? '▲ 解説を閉じる' : '💡 解説を見る'}
+                {showExplanation ? '▲ 解説を閉じる' : '💡 詳細解説を見る'}
               </Text>
             </TouchableOpacity>
             {showExplanation && (
@@ -386,6 +393,13 @@ export default function QuizScreen() {
                 <Text style={styles.explanationText}>{currentQuestion.explanation}</Text>
               </View>
             )}
+          </View>
+        )}
+        {revealed && currentQuestion.explanation && !isPro && (
+          <View style={styles.upgradeTeaser}>
+            <Text style={styles.upgradeTeaserText}>
+              💡 詳細解説はProプランで見られます
+            </Text>
           </View>
         )}
 
@@ -636,6 +650,22 @@ const styles = StyleSheet.create({
     color: '#333',
     lineHeight: 26,
     fontWeight: '500',
+  },
+  upgradeTeaser: {
+    marginTop: 12,
+    marginHorizontal: 16,
+    backgroundColor: '#EFF6FF',
+    borderRadius: 12,
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    borderWidth: 1,
+    borderColor: '#BFDBFE',
+    alignItems: 'center',
+  },
+  upgradeTeaserText: {
+    fontSize: 15,
+    color: '#1D4ED8',
+    fontWeight: '600',
   },
   feedbackOverlay: {
     ...StyleSheet.absoluteFillObject,

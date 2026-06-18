@@ -27,11 +27,12 @@ type Props = {
   onReveal?: () => void;
   choices?: string[];
   onChoiceSelect?: (correct: boolean) => void;
+  isPro?: boolean;
 };
 
 const { width, height } = Dimensions.get('window');
 
-export default function QuizCard({ question, onReveal, choices, onChoiceSelect }: Props) {
+export default function QuizCard({ question, onReveal, choices, onChoiceSelect, isPro = false }: Props) {
   const [revealed, setRevealed] = useState(false);
   const [selectedChoice, setSelectedChoice] = useState<string | null>(null);
   const info = subjectInfo[question.subject];
@@ -133,7 +134,12 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect }
           {selectedChoice != null && (question.explanation != null || question.hint != null) && (
             <View style={styles.hintBox}>
               <Text style={styles.hintLabel}>📖 解説</Text>
-              <Text style={styles.hintText}>{question.explanation ?? question.hint}</Text>
+              <Text style={styles.hintText}>
+                {isPro ? (question.explanation ?? question.hint) : (question.hint ?? question.explanation?.split('\n')[0])}
+              </Text>
+              {!isPro && question.explanation && !question.hint && (
+                <Text style={styles.upgradeNudge}>🔒 詳細解説はProプランで</Text>
+              )}
             </View>
           )}
         </View>
@@ -161,7 +167,12 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect }
           {(question.explanation != null || question.hint != null) && (
             <View style={styles.hintBox}>
               <Text style={styles.hintLabel}>📖 解説</Text>
-              <Text style={styles.hintText}>{question.explanation ?? question.hint}</Text>
+              <Text style={styles.hintText}>
+                {isPro ? (question.explanation ?? question.hint) : (question.hint ?? question.explanation?.split('\n')[0])}
+              </Text>
+              {!isPro && question.explanation && !question.hint && (
+                <Text style={styles.upgradeNudge}>🔒 詳細解説はProプランで</Text>
+              )}
             </View>
           )}
         </View>
@@ -393,5 +404,11 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: '#78350F',
     lineHeight: 30,
+  },
+  upgradeNudge: {
+    fontSize: 16,
+    color: '#0284C7',
+    marginTop: 8,
+    fontWeight: '600',
   },
 });
