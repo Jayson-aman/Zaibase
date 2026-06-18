@@ -9,10 +9,10 @@
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "group.zaibase.exam"
+      "bundleIdentifier": "com.zaibase.exam"
     },
     "android": {
-      "package": "group.zaibase.exam",
+      "package": "com.zaibase.exam",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
