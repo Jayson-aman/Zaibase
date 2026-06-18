@@ -898,7 +898,7 @@ export const shakaiLessons: Lesson[] = [
         maxOnly: true,
       },
     ],
-  ,
+  },
   {
     id: 'shakai_04_kinsei',
     subject: 'shakai' as const,
