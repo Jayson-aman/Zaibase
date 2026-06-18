@@ -48,6 +48,7 @@ function filterQuestions(
   examType: ExamType,
   course: CourseKey,
   difficultyFilter: Difficulty | null,
+  isMax: boolean = false,
 ): Question[] {
   let qs = all.filter((q) => (q.examType ?? 'chugaku') === examType);
   if (course === 'general') {
@@ -55,12 +56,16 @@ function filterQuestions(
   } else {
     qs = qs.filter((q) => q.course === course);
   }
+  if (!isMax) {
+    qs = qs.filter((q) => !q.maxOnly);
+  }
   if (difficultyFilter) {
     qs = qs.filter((q) => q.difficulty === difficultyFilter);
   }
   // Fallback: if no course-specific questions, return general pool
   if (qs.length === 0) {
     qs = all.filter((q) => (q.examType ?? 'chugaku') === 'chugaku');
+    if (!isMax) qs = qs.filter((q) => !q.maxOnly);
     if (difficultyFilter) {
       qs = qs.filter((q) => q.difficulty === difficultyFilter);
     }
@@ -90,12 +95,13 @@ export default function QuizScreen() {
   const questions = useMemo(() => {
     if (isDaily) return getDailyQuestions(subjectKey);
     const all = questionsBySubject[subjectKey];
-    return filterQuestions(all, examType, course, difficultyFilter);
+    return filterQuestions(all, examType, course, difficultyFilter, isMax);
   }, [subjectKey, difficultyFilter, isDaily, course, examType]);
 
-  const { isPro: subIsPro } = useSubscription();
+  const { isPro: subIsPro, isMax: subIsMax } = useSubscription();
   const { hasAccess: betaAccess } = useBetaAccess();
   const isPro = subIsPro || betaAccess;
+  const isMax = subIsMax || betaAccess;
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);

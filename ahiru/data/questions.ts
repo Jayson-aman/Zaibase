@@ -19,6 +19,7 @@ export type Question = {
   examType?: ExamType;
   questionReading?: string;
   answerReading?: string;
+  maxOnly?: boolean;
 };
 
 export type SubjectKey = 'sansu' | 'kokugo' | 'rika' | 'shakai' | 'eigo';
