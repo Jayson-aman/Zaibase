@@ -9,6 +9,7 @@ import { kansaiHokuyoSansu, kansaiHokuyoKokugo, kansaiHokuyoRika, kansaiHokuyoSh
 import { myojoSansu, myojoKokugo, myojoRika, myojoShakai, myojoEigo } from './myojo_exam';
 import { tezukayamaSansu, tezukayamaKokugo, tezukayamaRika, tezukayamaShakai, tezukayamaEigo } from './tezukayama_exam';
 import { kinrankaiSansu, kinrankaiKokugo, kinrankaiRika, kinrankaiShakai, kinrankaiEigo } from './kinrankai_exam';
+import { otaniSansu, otaniKokugo, otaniRika, otaniShakai, otaniEigo } from './otani_exam';
 
 // 大阪桐蔭中学校 — 入試形式 大問（偏差値57-62）
 export const toinExamQuestions: Question[] = [
@@ -71,4 +72,13 @@ export const kinrankaiExamQuestions: Question[] = [
   ...kinrankaiRika,
   ...kinrankaiShakai,
   ...kinrankaiEigo,
+];
+
+// 大谷中学校 — 入試形式 大問（偏差値46-52）
+export const otaniExamQuestions: Question[] = [
+  ...otaniSansu,
+  ...otaniKokugo,
+  ...otaniRika,
+  ...otaniShakai,
+  ...otaniEigo,
 ];
