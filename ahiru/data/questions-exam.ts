@@ -10,6 +10,8 @@ import { myojoSansu, myojoKokugo, myojoRika, myojoShakai, myojoEigo } from './my
 import { tezukayamaSansu, tezukayamaKokugo, tezukayamaRika, tezukayamaShakai, tezukayamaEigo } from './tezukayama_exam';
 import { kinrankaiSansu, kinrankaiKokugo, kinrankaiRika, kinrankaiShakai, kinrankaiEigo } from './kinrankai_exam';
 import { otaniSansu, otaniKokugo, otaniRika, otaniShakai, otaniEigo } from './otani_exam';
+import { toinMaxQuestions, kindaiMaxQuestions, kaimeiMaxQuestions } from './toin_kindai_kaimei_max';
+import { kinrankaiMaxQuestions, otaniMaxQuestions } from './kinrankai_otani_max';
 
 // 大阪桐蔭中学校 — 入試形式 大問（偏差値57-62）
 export const toinExamQuestions: Question[] = [
@@ -18,6 +20,7 @@ export const toinExamQuestions: Question[] = [
   ...toinRika,
   ...toinShakai,
   ...toinEigo,
+  ...toinMaxQuestions,
 ];
 
 // 近畿大学附属中学校 — 入試形式 大問（偏差値55-60）
@@ -27,6 +30,7 @@ export const kindaiExamQuestions: Question[] = [
   ...kindaiRika,
   ...kindaiShakai,
   ...kindaiEigo,
+  ...kindaiMaxQuestions,
 ];
 
 // 開明中学校 — 入試形式 大問（偏差値58-62）
@@ -36,6 +40,7 @@ export const kaimeiExamQuestions: Question[] = [
   ...kaimeiRika,
   ...kaimeiShakai,
   ...kaimeiEigo,
+  ...kaimeiMaxQuestions,
 ];
 
 // 関西大学北陽中学校 — 入試形式 大問（偏差値54-58）
@@ -72,6 +77,7 @@ export const kinrankaiExamQuestions: Question[] = [
   ...kinrankaiRika,
   ...kinrankaiShakai,
   ...kinrankaiEigo,
+  ...kinrankaiMaxQuestions,
 ];
 
 // 大谷中学校 — 入試形式 大問（偏差値46-52）
@@ -81,4 +87,5 @@ export const otaniExamQuestions: Question[] = [
   ...otaniRika,
   ...otaniShakai,
   ...otaniEigo,
+  ...otaniMaxQuestions,
 ];
