@@ -6,6 +6,13 @@ import { kaimeiQuestions, toinQuestions, kindaiQuestions, kansaiHokuyoQuestions 
 import { toinExamQuestions, kindaiExamQuestions, kaimeiExamQuestions, kansaiHokuyoExamQuestions, myojoExamQuestions, tezukayamaExamQuestions, kinrankaiExamQuestions, otaniExamQuestions, kankanExamQuestions, kankanMaxQuestions, tokyoMeidaiExamQuestions, tokyoAoyamaExamQuestions, tokyoChuoExamQuestions, tokyoHoseiExamQuestions, tokyoGakushiinExamQuestions, tokyoHibiyaExamQuestions, tokyoWasedaExamQuestions, tokyoMeidaiKokoExamQuestions, tokyoChugakuMaxQuestions, tokyoKokoMaxQuestions } from './questions-exam';
 import { freeTeaserQuestions } from './questions-free-teaser';
 import { myojoQuestions, tezukayamaQuestions, kinrankaiQuestions, otaniQuestions } from './questions-schools-3';
+import { kisoSansu } from './kiso_sansu';
+import { sansuKiso } from './questions_sansu_kiso';
+import { kisoRika } from './kiso_rika';
+import { rikaExtra } from './questions_rika_extra';
+import { kokugoExtra } from './questions_kokugo_extra';
+import { shakaiExtra } from './questions_shakai_extra';
+import { eigoExtra } from './questions_eigo_extra';
 
 export type Question = {
   id: string;
@@ -20,6 +27,11 @@ export type Question = {
   questionReading?: string;
   answerReading?: string;
   maxOnly?: boolean;
+  choices?: string[];
+  examFrequency?: 'high' | 'medium' | 'very-high';
+  memoryTip?: string;
+  pitfall?: string;
+  videoUrl?: string;
 };
 
 export type SubjectKey = 'sansu' | 'kokugo' | 'rika' | 'shakai' | 'eigo';
@@ -2699,6 +2711,14 @@ export const questions: Question[] = [
   ...tokyoWasedaExamQuestions,
   ...tokyoMeidaiKokoExamQuestions,
   ...tokyoKokoMaxQuestions,
+  // ── 大量補強問題（基礎・応用・理科・国語・社会・英語）──────
+  ...kisoSansu,
+  ...sansuKiso,
+  ...kisoRika,
+  ...rikaExtra,
+  ...kokugoExtra,
+  ...shakaiExtra,
+  ...eigoExtra,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {

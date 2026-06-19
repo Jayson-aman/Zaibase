@@ -88,6 +88,8 @@ export default function QuizScreen() {
   const difficultyFilter: Difficulty | null =
     diffParam && isDifficulty(diffParam) ? diffParam : null;
   const isDaily = mode === 'daily';
+  const isMock = mode === 'mock';
+  const isKakomon = mode === 'kakomon';
   const course: CourseKey = courseParam && isCourseKey(courseParam) ? courseParam : 'general';
   const examType: ExamType = examTypeParam && isExamType(examTypeParam) ? examTypeParam : 'chugaku';
   const info = subjectInfo[subjectKey];
@@ -95,8 +97,20 @@ export default function QuizScreen() {
   const questions = useMemo(() => {
     if (isDaily) return getDailyQuestions(subjectKey);
     const all = questionsBySubject[subjectKey];
+    if (isMock) {
+      // Mock exam: mix of basic + advanced from the course, capped at 30 questions
+      const pool = filterQuestions(all, examType, course, null, true);
+      const shuffled = [...pool].sort(() => Math.random() - 0.5);
+      return shuffled.slice(0, 30);
+    }
+    if (isKakomon) {
+      // Past exams: school-specific questions only
+      const schoolQ = all.filter((q) => q.course === course && (q.examType ?? 'chugaku') === examType);
+      if (schoolQ.length > 0) return schoolQ;
+      return filterQuestions(all, examType, course, 'advanced', true);
+    }
     return filterQuestions(all, examType, course, difficultyFilter, isMax);
-  }, [subjectKey, difficultyFilter, isDaily, course, examType]);
+  }, [subjectKey, difficultyFilter, isDaily, isMock, isKakomon, course, examType]);
 
   const { isPro: subIsPro, isMax: subIsMax } = useSubscription();
   const { hasAccess: betaAccess } = useBetaAccess();
