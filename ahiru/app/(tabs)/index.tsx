@@ -29,7 +29,6 @@ import {
   getCourseInfo, LEVEL_ORDER,
 } from '../../data/courses';
 import { primeSpeech } from '../../utils/speech';
-import { getTodayDayLabel } from '../../utils/dailyChallenge';
 
 // ── ダークテーマカラーパレット ──────────────────────────────
 const D = {
@@ -207,7 +206,6 @@ export default function HomeScreen() {
   const { isMax: subIsMax } = useSubscription();
   const isMax = subIsMax || betaAccess;
   const selectedDiff = DIFFICULTY_OPTIONS.find((d) => d.key === difficulty)!;
-  const todayLabel = getTodayDayLabel();
   const courseInfo = getCourseInfo(selectedCourse);
 
   const listenQuestions = React.useMemo(() => {
@@ -476,7 +474,7 @@ export default function HomeScreen() {
             activeOpacity={0.85}
           >
             <Text style={styles.dailyBtnText}>
-              🔥 今日（{todayLabel}）のMAX日替わり30問
+              🔥 MAX日替わり30問
             </Text>
             {!isMax && <Text style={styles.dailyBtnBadge}>MAX限定</Text>}
           </TouchableOpacity>

@@ -3,13 +3,14 @@ import { useEffect } from 'react';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { initRevenueCat } from '../services/subscription';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 export default function RootLayout() {
   useEffect(() => {
     initRevenueCat();
   }, []);
   return (
-    <>
+    <ErrorBoundary>
       <StatusBar style="light" />
       <Stack
         screenOptions={{
@@ -25,6 +26,6 @@ export default function RootLayout() {
           }}
         />
       </Stack>
-    </>
+    </ErrorBoundary>
   );
 }

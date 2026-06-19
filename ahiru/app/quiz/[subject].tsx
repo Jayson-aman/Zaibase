@@ -170,7 +170,7 @@ export default function QuizScreen() {
     if (typed.length < 3) typed = uniqueAll;
 
     const shuffled = [...typed].sort(() => Math.random() - 0.5);
-    return [...shuffled.slice(0, 3), correct].sort(() => Math.random() - 0.5);
+    return [...shuffled.slice(0, 3).map((o) => o.answer), correct].sort(() => Math.random() - 0.5);
   }, [currentIndex, questions]);
 
   function handleReveal() {
@@ -674,7 +674,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   feedbackOverlay: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     alignItems: 'center',
     justifyContent: 'center',
     zIndex: 999,

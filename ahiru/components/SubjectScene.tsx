@@ -256,7 +256,8 @@ function AnimEmoji({ e }: { e: Elem }) {
     return () => clearTimeout(t);
   }, [e, v]);
 
-  let transform: object[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let transform: any[];
   if (e.anim === 'bounce') {
     const ty = v.interpolate({ inputRange: [0, 1], outputRange: [0, -12] });
     transform = [{ translateY: ty }];
