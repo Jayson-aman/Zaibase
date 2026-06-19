@@ -11,7 +11,9 @@ import { sansuKiso } from './questions_sansu_kiso';
 import { kisoRika } from './kiso_rika';
 import { rikaExtra } from './questions_rika_extra';
 import { kokugoExtra } from './questions_kokugo_extra';
+import { kokugoExtra3 } from './questions_kokugo_extra3';
 import { shakaiExtra } from './questions_shakai_extra';
+import { kisoShakai } from './kiso-questions';
 import { eigoExtra } from './questions_eigo_extra';
 
 export type Question = {
@@ -2717,7 +2719,9 @@ export const questions: Question[] = [
   ...kisoRika,
   ...rikaExtra,
   ...kokugoExtra,
+  ...kokugoExtra3,
   ...shakaiExtra,
+  ...kisoShakai,
   ...eigoExtra,
 ];
 
