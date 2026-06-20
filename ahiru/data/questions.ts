@@ -15,7 +15,6 @@ import { oyoSansuPart3 } from './oyoSansuPart3';
 import { kisoRika } from './kiso_rika';
 import { rikaExtra } from './questions_rika_extra';
 import { rikaExtra2 } from './questions_rika_extra2';
-import { rikaExtra2b } from './questions_rika_extra2b';
 import { kokugoExtra } from './questions_kokugo_extra';
 import { kokugoExtra3 } from './questions_kokugo_extra3';
 import { kokugoExtra2a } from './questions_kokugo_extra2a';
@@ -2734,7 +2733,6 @@ export const questions: Question[] = [
   ...kisoRika,
   ...rikaExtra,
   ...rikaExtra2,
-  ...rikaExtra2b,
   ...kokugoExtra,
   ...kokugoExtra3,
   ...kokugoExtra2a,
