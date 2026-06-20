@@ -19,6 +19,7 @@ import { kokugoExtra3 } from './questions_kokugo_extra3';
 import { shakaiExtra } from './questions_shakai_extra';
 import { kisoShakai } from './kiso-questions';
 import { eigoExtra } from './questions_eigo_extra';
+import { eigoExtra2 } from './questions_eigo_extra2';
 
 export type Question = {
   id: string;
@@ -2731,6 +2732,7 @@ export const questions: Question[] = [
   ...shakaiExtra,
   ...kisoShakai,
   ...eigoExtra,
+  ...eigoExtra2,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {
