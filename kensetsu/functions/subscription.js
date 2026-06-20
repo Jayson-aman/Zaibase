@@ -194,7 +194,7 @@ exports.createCheckoutSession = onCall(
 
 // ── 2. Stripe Webhook ──────────────────────────────────────────────
 exports.stripeSubWebhook = onRequest(
-  { region: "asia-northeast1", enforceAppCheck: true, secrets: [STRIPE_SECRET_KEY, STRIPE_SUB_WEBHOOK_SECRET] },
+  { region: "asia-northeast1", enforceAppCheck: false, secrets: [STRIPE_SECRET_KEY, STRIPE_SUB_WEBHOOK_SECRET] },
   async (req, res) => {
     const stripe = require("stripe")(STRIPE_SECRET_KEY.value());
     let event;
