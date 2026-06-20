@@ -20,6 +20,7 @@ import { kokugoExtra2a } from './questions_kokugo_extra2a';
 import { kokugoExtra2b } from './questions_kokugo_extra2b';
 import { shakaiExtra } from './questions_shakai_extra';
 import { kisoShakai } from './kiso-questions';
+import { shakaiExtra2a } from './questions_shakai_extra2a';
 import { eigoExtra } from './questions_eigo_extra';
 import { eigoExtra2 } from './questions_eigo_extra2';
 
@@ -2735,6 +2736,7 @@ export const questions: Question[] = [
   ...kokugoExtra2b,
   ...shakaiExtra,
   ...kisoShakai,
+  ...shakaiExtra2a,
   ...eigoExtra,
   ...eigoExtra2,
 ];
