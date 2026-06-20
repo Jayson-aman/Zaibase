@@ -7572,7 +7572,7 @@ info@zaibase.group</p>
     const uid = auth.currentUser?.uid;
     if (!uid) return;
     try {
-      const snap = await getDocs(query(collection(db, 'communityPosts'), limit(1));
+      const snap = await getDocs(query(collection(db, 'communityPosts'), limit(1)));
       if (!snap.empty) {
         localStorage.setItem(CM_DEMO_SEED_KEY, '1');
         return;
