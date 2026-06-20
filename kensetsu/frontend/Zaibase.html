@@ -6602,12 +6602,11 @@ info@zaibase.group</p>
   const app = initializeApp(firebaseConfig);
 
   // Firebase App Check — reCAPTCHA v3
-  // 手順: Firebase Console → App Check → ウェブアプリ → reCAPTCHA v3 サイトキーを登録し下記キーを置き換えてください
-  // ローカル開発用デバッグトークン: Firebase Console → App Check → アプリ → デバッグトークンを追加
-  initializeAppCheck(app, {
-    provider: new ReCaptchaV3Provider("6Lc_PLACEHOLDER_REPLACE_WITH_RECAPTCHA_V3_SITE_KEY"),
-    isTokenAutoRefreshEnabled: true,
-  });
+  // TODO: Firebase Console → App Check → ウェブアプリ → reCAPTCHA v3 サイトキーを登録後に有効化
+  // initializeAppCheck(app, {
+  //   provider: new ReCaptchaV3Provider("reCAPTCHA_v3_SITE_KEY_HERE"),
+  //   isTokenAutoRefreshEnabled: true,
+  // });
 
   const auth = getAuth(app);
   const db = getFirestore(app);
