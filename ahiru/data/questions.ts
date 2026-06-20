@@ -14,6 +14,8 @@ import { oyoSansuPart2 } from './oyoSansuPart2';
 import { oyoSansuPart3 } from './oyoSansuPart3';
 import { kisoRika } from './kiso_rika';
 import { rikaExtra } from './questions_rika_extra';
+import { rikaExtra2 } from './questions_rika_extra2';
+import { rikaExtra2b } from './questions_rika_extra2b';
 import { kokugoExtra } from './questions_kokugo_extra';
 import { kokugoExtra3 } from './questions_kokugo_extra3';
 import { kokugoExtra2a } from './questions_kokugo_extra2a';
@@ -21,6 +23,7 @@ import { kokugoExtra2b } from './questions_kokugo_extra2b';
 import { shakaiExtra } from './questions_shakai_extra';
 import { kisoShakai } from './kiso-questions';
 import { shakaiExtra2a } from './questions_shakai_extra2a';
+import { shakaiExtra2b } from './questions_shakai_extra2b';
 import { eigoExtra } from './questions_eigo_extra';
 import { eigoExtra2 } from './questions_eigo_extra2';
 
@@ -2730,6 +2733,8 @@ export const questions: Question[] = [
   ...oyoSansuPart3,
   ...kisoRika,
   ...rikaExtra,
+  ...rikaExtra2,
+  ...rikaExtra2b,
   ...kokugoExtra,
   ...kokugoExtra3,
   ...kokugoExtra2a,
@@ -2737,6 +2742,7 @@ export const questions: Question[] = [
   ...shakaiExtra,
   ...kisoShakai,
   ...shakaiExtra2a,
+  ...shakaiExtra2b,
   ...eigoExtra,
   ...eigoExtra2,
 ];
