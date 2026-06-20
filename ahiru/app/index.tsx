@@ -375,7 +375,7 @@ export default function LandingPage() {
             </View>
             <Text style={[styles.planName, { color: '#C07AE0' }]}>PRO プラン</Text>
             <View style={styles.planPriceRow}>
-              <Text style={[styles.planPrice, { color: '#C07AE0' }]}>¥1,680</Text>
+              <Text style={[styles.planPrice, { color: '#C07AE0' }]}>¥980</Text>
               <Text style={styles.planPricePeriod}> / 月（税込）</Text>
             </View>
             <View style={styles.planDivider} />
@@ -400,7 +400,7 @@ export default function LandingPage() {
             </View>
             <Text style={[styles.planName, { color: C.gold }]}>MAX プラン</Text>
             <View style={styles.planPriceRow}>
-              <Text style={[styles.planPrice, { color: C.gold }]}>¥2,680</Text>
+              <Text style={[styles.planPrice, { color: C.gold }]}>¥2,200</Text>
               <Text style={styles.planPricePeriod}> / 月（税込）</Text>
             </View>
             <View style={styles.planDivider} />
