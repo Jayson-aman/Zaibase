@@ -184,7 +184,7 @@ export default function LandingPage() {
 
             <Text style={styles.heroSub}>
               算数・国語・理科・社会・英語{'\n'}
-              5科目 830問以上 × 18校学校別コース{'\n'}
+              5科目 3,500問以上 × 18校学校別コース{'\n'}
               AI弱点コーチで最難関中学を目指す。
             </Text>
 
@@ -196,7 +196,7 @@ export default function LandingPage() {
             {/* スタッツ */}
             <View style={[styles.heroStats, glassBlur]}>
               {[
-                { num: '830', unit: '問', label: '問題数' },
+                { num: '3,500', unit: '問+', label: '問題数' },
                 { num: '5', unit: '科目', label: '対応科目' },
                 { num: '3', unit: '段階', label: '難易度' },
                 { num: 'AI', unit: '搭載', label: '弱点分析' },
