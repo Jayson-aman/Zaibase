@@ -10,6 +10,19 @@ import {
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { questionsBySubject, subjectInfo, SubjectKey, Question } from '../../data/questions';
 import type { CourseKey, ExamType } from '../../data/courses';
+import { explanationsSansu } from '../../data/explanations_sansu';
+import { explanationsKokugo } from '../../data/explanations_kokugo';
+import { explanationsRika } from '../../data/explanations_rika';
+import { explanationsShakai } from '../../data/explanations_shakai';
+import { explanationsEigo } from '../../data/explanations_eigo';
+
+const allExplanations: Record<string, string> = {
+  ...explanationsSansu,
+  ...explanationsKokugo,
+  ...explanationsRika,
+  ...explanationsShakai,
+  ...explanationsEigo,
+};
 import QuizCard from '../../components/QuizCard';
 import AnimatedMascot from '../../components/AnimatedMascot';
 import { getResultMascot } from '../../data/images';
@@ -407,7 +420,7 @@ export default function QuizScreen() {
         />
 
         {/* Explanation card - shown after reveal */}
-        {revealed && currentQuestion.explanation && isPro && (
+        {revealed && (currentQuestion.explanation || allExplanations[currentQuestion.id]) && isPro && (
           <View style={styles.explanationWrap}>
             <TouchableOpacity
               style={styles.explanationToggle}
@@ -421,12 +434,14 @@ export default function QuizScreen() {
             {showExplanation && (
               <View style={styles.explanationCard}>
                 <Text style={styles.explanationTitle}>📝 解説</Text>
-                <Text style={styles.explanationText}>{currentQuestion.explanation}</Text>
+                <Text style={styles.explanationText}>
+                  {currentQuestion.explanation || allExplanations[currentQuestion.id]}
+                </Text>
               </View>
             )}
           </View>
         )}
-        {revealed && currentQuestion.explanation && !isPro && (
+        {revealed && (currentQuestion.explanation || allExplanations[currentQuestion.id]) && !isPro && (
           <View style={styles.upgradeTeaser}>
             <Text style={styles.upgradeTeaserText}>
               💡 詳細解説はProプランで見られます
