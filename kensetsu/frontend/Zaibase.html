@@ -2603,6 +2603,9 @@
   <div class="input-group"><input type="password" id="password" placeholder="パスワード（6文字以上）"></div>
   <button class="btn-primary" id="loginBtn">ログイン</button>
   <button class="btn-secondary" id="signupBtn">新規登録</button>
+  <div style="text-align:right;margin-top:-8px;margin-bottom:4px;">
+    <button type="button" id="resetPwBtn" style="background:none;border:none;color:#0EA5E9;font-size:12px;cursor:pointer;padding:4px 0;">パスワードをお忘れの方</button>
+  </div>
   <div class="error-msg" id="authError"></div>
   <p class="legal-footer">ログイン・新規登録により
     <button type="button" class="legal-link" id="loginTermsBtn">利用規約</button>・
@@ -6586,14 +6589,14 @@ info@zaibase.group</p>
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
   import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app-check.js";
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, GoogleAuthProvider, OAuthProvider, signInWithPopup, signInWithRedirect, getRedirectResult, RecaptchaVerifier, PhoneAuthProvider, linkWithCredential } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-auth.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail, signOut, onAuthStateChanged, GoogleAuthProvider, OAuthProvider, signInWithPopup, signInWithRedirect, getRedirectResult, RecaptchaVerifier, PhoneAuthProvider, linkWithCredential } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-auth.js";
   import { getFirestore, collection, addDoc, getDocs, query, orderBy, limit, serverTimestamp, doc, getDoc, setDoc, updateDoc, onSnapshot, where, Timestamp, increment, arrayUnion, arrayRemove, writeBatch, deleteDoc } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-firestore.js";
   import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-storage.js";
   import { getFunctions, httpsCallable } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-functions.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyAw1jXRX9thcqfrqiB1Is81BIkpGkLcPT0",
-    authDomain: "zaisai-share.firebaseapp.com",
+    authDomain: "zaisai-share.web.app",
     projectId: "zaisai-share",
     storageBucket: "zaisai-share.firebasestorage.app",
     messagingSenderId: "1091454412524",
@@ -23206,6 +23209,21 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
     catch(e) {
       if (e.code === 'auth/email-already-in-use') errEl.textContent = 'このメールは既に登録されています';
       else errEl.textContent = '登録できませんでした: ' + e.message;
+    }
+  });
+
+  // ===== パスワードリセット =====
+  document.getElementById('resetPwBtn').addEventListener('click', async () => {
+    const email = document.getElementById('email').value.trim();
+    const errEl = document.getElementById('authError');
+    if (!email) { errEl.textContent = 'メールアドレスを入力してからクリックしてください'; return; }
+    try {
+      await sendPasswordResetEmail(auth, email);
+      errEl.style.color = '#0EA5E9';
+      errEl.textContent = `✅ ${email} にパスワードリセットメールを送信しました。メールのリンクからパスワードを設定後、ログインしてください。`;
+    } catch(e) {
+      errEl.style.color = '';
+      errEl.textContent = `送信失敗 [${e.code}]：${e.message}`;
     }
   });
 
