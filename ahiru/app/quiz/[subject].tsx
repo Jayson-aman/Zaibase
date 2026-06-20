@@ -172,6 +172,17 @@ export default function QuizScreen() {
     // 1st: 同型
     let typed = uniqueAll.filter((o) => answerType(o.answer) === correctType);
 
+    // 1.5th: 単位マッチング（時速・km・cm²など同じ単位を持つ答えを優先）
+    if (typed.length < 3) {
+      const unitMatch = correct.match(
+        /(時速|秒速|分速|km\/h|km²|cm²|m²|㎡|cm³|km\b|cm\b|mm\b|m\b|[℃°]C?|mol|Pa\b|[VΩW]\b|kg\b|g\b|[%％]|[分時]間)/
+      )?.[0];
+      if (unitMatch) {
+        const withUnit = uniqueAll.filter((o) => o.answer.includes(unitMatch));
+        if (withUnit.length >= 3) typed = withUnit;
+      }
+    }
+
     // 2nd: 長さが近いもの（±40文字）、numbered除外
     if (typed.length < 3) {
       typed = uniqueAll.filter((o) =>

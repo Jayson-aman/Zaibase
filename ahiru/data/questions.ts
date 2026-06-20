@@ -8,6 +8,10 @@ import { freeTeaserQuestions } from './questions-free-teaser';
 import { myojoQuestions, tezukayamaQuestions, kinrankaiQuestions, otaniQuestions } from './questions-schools-3';
 import { kisoSansu } from './kiso_sansu';
 import { sansuKiso } from './questions_sansu_kiso';
+import { sansuExtra2 } from './questions_sansu_extra2';
+import { oyoSansuPart1 } from './oyoSansuPart1';
+import { oyoSansuPart2 } from './oyoSansuPart2';
+import { oyoSansuPart3 } from './oyoSansuPart3';
 import { kisoRika } from './kiso_rika';
 import { rikaExtra } from './questions_rika_extra';
 import { kokugoExtra } from './questions_kokugo_extra';
@@ -2716,6 +2720,10 @@ export const questions: Question[] = [
   // ── 大量補強問題（基礎・応用・理科・国語・社会・英語）──────
   ...kisoSansu,
   ...sansuKiso,
+  ...sansuExtra2,
+  ...oyoSansuPart1,
+  ...oyoSansuPart2,
+  ...oyoSansuPart3,
   ...kisoRika,
   ...rikaExtra,
   ...kokugoExtra,
