@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Dimensions,
   Platform,
+  ScrollView,
 } from 'react-native';
 
 const SERIF = Platform.select({
@@ -83,8 +84,24 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
 
       {choices != null ? (
         <View style={styles.choiceSection}>
+          {question.passage != null && (
+            <View style={styles.passageBox}>
+              <Text style={styles.passageLabel}>📄 本 文</Text>
+              <ScrollView style={styles.passageScroll} nestedScrollEnabled>
+                <Text style={styles.passageText}>{question.passage}</Text>
+              </ScrollView>
+            </View>
+          )}
           <Text style={styles.questionLabel}>問 題</Text>
           <Text style={styles.questionTextChoice}>{question.question}</Text>
+          {question.figureDescription != null && (
+            <View style={styles.figureBox}>
+              <Text style={styles.figureLabel}>📐 図・表</Text>
+              <ScrollView horizontal={false}>
+                <Text style={styles.figureText}>{question.figureDescription}</Text>
+              </ScrollView>
+            </View>
+          )}
           <View style={styles.choicesWrap}>
             {choices.map((choice, i) => {
               const isSelected = selectedChoice === choice;
@@ -145,8 +162,22 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
         </View>
       ) : !revealed ? (
         <View style={styles.questionSide}>
+          {question.passage != null && (
+            <View style={styles.passageBox}>
+              <Text style={styles.passageLabel}>📄 本 文</Text>
+              <ScrollView style={styles.passageScroll} nestedScrollEnabled>
+                <Text style={styles.passageText}>{question.passage}</Text>
+              </ScrollView>
+            </View>
+          )}
           <Text style={styles.questionLabel}>問 題</Text>
           <Text style={styles.questionText}>{question.question}</Text>
+          {question.figureDescription != null && (
+            <View style={styles.figureBox}>
+              <Text style={styles.figureLabel}>📐 図・表</Text>
+              <Text style={styles.figureText}>{question.figureDescription}</Text>
+            </View>
+          )}
           <View style={styles.tapHint}>
             <Text style={styles.tapHintText}>タップして答えを見る 👆</Text>
           </View>
@@ -384,6 +415,54 @@ const styles = StyleSheet.create({
     lineHeight: 52,
     marginBottom: 20,
     fontFamily: SERIF,
+  },
+  passageBox: {
+    backgroundColor: '#FFFDF5',
+    borderRadius: 12,
+    padding: 14,
+    marginBottom: 12,
+    borderWidth: 1.5,
+    borderColor: '#D4B896',
+    width: '100%',
+  },
+  passageLabel: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: '#7C5C2E',
+    marginBottom: 8,
+    letterSpacing: 1,
+  },
+  passageScroll: {
+    maxHeight: 200,
+  },
+  passageText: {
+    fontSize: 16,
+    color: '#2A1A0A',
+    lineHeight: 28,
+    fontFamily: SERIF,
+  },
+  figureBox: {
+    backgroundColor: '#F0F7FF',
+    borderRadius: 12,
+    padding: 14,
+    marginTop: 10,
+    marginBottom: 4,
+    borderWidth: 1.5,
+    borderColor: '#B8D4F8',
+    width: '100%',
+  },
+  figureLabel: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#1E5FBE',
+    marginBottom: 6,
+    letterSpacing: 1,
+  },
+  figureText: {
+    fontSize: 16,
+    color: '#1A1A2E',
+    lineHeight: 26,
+    fontFamily: Platform.OS === 'ios' ? 'Courier' : 'monospace',
   },
   hintBox: {
     backgroundColor: '#FFFBEB',
