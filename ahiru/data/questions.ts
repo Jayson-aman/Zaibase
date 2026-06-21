@@ -6,6 +6,14 @@ import { kokoMaxKokugo } from './koko_max_kokugo';
 import { kokoMaxRika } from './koko_max_rika';
 import { kokoMaxEigo } from './koko_max_eigo';
 import { kokoMaxShakai } from './koko_max_shakai';
+import { kokoKisoSansu50 } from './koko_kiso_sansu_50';
+import { kokoKisoSansu100 } from './koko_kiso_sansu_100';
+import { kokoOyoSansu50 } from './koko_oyo_sansu_50';
+import { kokoMoshiSansu50 } from './koko_moshi_sansu_50';
+import { kokoKisoKokugo50 } from './koko_kiso_kokugo_50';
+import { kokoKisoRika50 } from './koko_kiso_rika_50';
+import { kokoKisoEigo50 } from './koko_kiso_eigo_50';
+import { kokoKisoShakai50 } from './koko_kiso_shakai_50';
 import { seikoQuestions, seifuNankaiQuestions, takatsukiQuestions } from './questions-schools-1';
 import { kaimeiQuestions, toinQuestions, kindaiQuestions, kansaiHokuyoQuestions } from './questions-schools-2';
 import { toinExamQuestions, kindaiExamQuestions, kaimeiExamQuestions, kansaiHokuyoExamQuestions, myojoExamQuestions, tezukayamaExamQuestions, kinrankaiExamQuestions, otaniExamQuestions, kankanExamQuestions, kankanMaxQuestions, tokyoMeidaiExamQuestions, tokyoAoyamaExamQuestions, tokyoChuoExamQuestions, tokyoHoseiExamQuestions, tokyoGakushiinExamQuestions, tokyoHibiyaExamQuestions, tokyoWasedaExamQuestions, tokyoMeidaiKokoExamQuestions, tokyoChugakuMaxQuestions, tokyoKokoMaxQuestions } from './questions-exam';
@@ -2708,6 +2716,14 @@ export const questions: Question[] = [
   ...kokoMaxRika,
   ...kokoMaxEigo,
   ...kokoMaxShakai,
+  ...kokoKisoSansu50,
+  ...kokoKisoSansu100,
+  ...kokoOyoSansu50,
+  ...kokoMoshiSansu50,
+  ...kokoKisoKokugo50,
+  ...kokoKisoRika50,
+  ...kokoKisoEigo50,
+  ...kokoKisoShakai50,
   // ── 学校別問題（大阪私学 最難関） ──
   ...seikoQuestions,
   ...seifuNankaiQuestions,
