@@ -61,7 +61,7 @@ function filterQuestions(
   examType: ExamType,
   course: CourseKey,
   difficultyFilter: Difficulty | null,
-  isMax: boolean = false,
+  isPaid: boolean = false,
 ): Question[] {
   let qs = all.filter((q) => (q.examType ?? 'chugaku') === examType);
   if (course === 'general') {
@@ -69,7 +69,7 @@ function filterQuestions(
   } else {
     qs = qs.filter((q) => q.course === course);
   }
-  if (!isMax) {
+  if (!isPaid) {
     qs = qs.filter((q) => !q.maxOnly);
   }
   if (difficultyFilter) {
@@ -78,7 +78,7 @@ function filterQuestions(
   // Fallback: if no course-specific questions, return general pool
   if (qs.length === 0) {
     qs = all.filter((q) => (q.examType ?? 'chugaku') === 'chugaku');
-    if (!isMax) qs = qs.filter((q) => !q.maxOnly);
+    if (!isPaid) qs = qs.filter((q) => !q.maxOnly);
     if (difficultyFilter) {
       qs = qs.filter((q) => q.difficulty === difficultyFilter);
     }
@@ -126,8 +126,8 @@ export default function QuizScreen() {
       if (schoolQ.length > 0) return schoolQ;
       return filterQuestions(all, examType, course, 'advanced', true);
     }
-    return filterQuestions(all, examType, course, difficultyFilter, isMax);
-  }, [subjectKey, difficultyFilter, isDaily, isMock, isKakomon, course, examType, isMax]);
+    return filterQuestions(all, examType, course, difficultyFilter, isPro || isMax);
+  }, [subjectKey, difficultyFilter, isDaily, isMock, isKakomon, course, examType, isPro, isMax]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
