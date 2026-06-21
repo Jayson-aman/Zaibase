@@ -2561,6 +2561,46 @@
     .badge-sos { display: inline-block; font-size: 11px; padding: 3px 8px; border-radius: 10px; font-weight: 600; margin-right: 4px; }
     .badge-sos-need { background: #FCEBEB; color: #A32D2D; }
     .badge-sos-offer { background: #EAF3DE; color: #3B6D11; }
+    /* 出会いの場 */
+    #meetingScreen { background: var(--zb-bg); min-height: 100vh; padding-bottom: 80px; }
+    .mt-hd { background: linear-gradient(135deg, #0369A1 0%, #0EA5E9 60%, #38BDF8 100%); padding: 20px 16px 0; color: #fff; }
+    .mt-hd-top { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .mt-hd-back { background: none; border: none; color: rgba(255,255,255,.8); font-size: 22px; cursor: pointer; padding: 0; }
+    .mt-hd-title { font-size: 18px; font-weight: 800; letter-spacing: -.3px; }
+    .mt-hd-sub { font-size: 11px; opacity: .8; margin-top: 1px; }
+    .mt-tabs { display: flex; }
+    .mt-tab { flex: 1; padding: 11px 8px; font-size: 13px; font-weight: 700; border: none; background: transparent; color: rgba(255,255,255,.6); cursor: pointer; border-bottom: 3px solid transparent; }
+    .mt-tab.act { color: #fff; border-bottom-color: #fff; }
+    .mt-filter { display: flex; gap: 8px; padding: 12px 16px 8px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .mt-filter::-webkit-scrollbar { display: none; }
+    .mt-filter-chip { flex-shrink: 0; padding: 6px 13px; border-radius: 20px; font-size: 12px; font-weight: 600; border: 1.5px solid var(--zb-border); background: #fff; color: var(--zb-muted); cursor: pointer; white-space: nowrap; }
+    .mt-filter-chip.sel { background: #0EA5E9; color: #fff; border-color: #0EA5E9; }
+    .mt-list { padding: 0 16px; }
+    .mt-card { background: #fff; border-radius: 14px; border: 1.5px solid var(--zb-border); padding: 16px; margin-bottom: 12px; cursor: pointer; transition: box-shadow .15s; }
+    .mt-card:active { box-shadow: 0 2px 12px rgba(14,165,233,.18); }
+    .mt-card-top { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
+    .mt-avatar { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg,#0369A1,#0EA5E9); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; color: #fff; font-weight: 700; }
+    .mt-avatar.company { border-radius: 10px; background: linear-gradient(135deg,#1d4ed8,#3b82f6); }
+    .mt-name { font-size: 15px; font-weight: 700; color: var(--zb-text); }
+    .mt-meta { font-size: 11px; color: var(--zb-muted); margin-top: 3px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .mt-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .mt-tag { padding: 3px 10px; border-radius: 6px; font-size: 11px; font-weight: 600; background: #E0F2FE; color: #0369A1; }
+    .mt-tag.senior { background: #FEF3C7; color: #92400E; }
+    .mt-tag.mentor { background: #D1FAE5; color: #065F46; }
+    .mt-tag.company-sp { background: #EDE9FE; color: #5B21B6; }
+    .mt-story { font-size: 12px; color: #475569; line-height: 1.6; border-left: 3px solid #BAE6FD; padding-left: 10px; margin-top: 6px; }
+    .mt-contact-btn { margin-top: 12px; width: 100%; padding: 11px; background: linear-gradient(135deg,#0369A1,#0EA5E9); color: #fff; border: none; border-radius: 10px; font-size: 13px; font-weight: 700; cursor: pointer; }
+    .mt-empty { text-align: center; padding: 60px 20px; color: var(--zb-muted); font-size: 14px; }
+    /* プロフィール追加フィールド */
+    .wp-story-section { background: #F0F9FF; border-radius: 12px; padding: 14px; margin-bottom: 14px; border: 1.5px solid #BAE6FD; }
+    .wp-story-label { font-size: 12px; font-weight: 700; color: #0369A1; margin-bottom: 8px; }
+    .wp-age-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+    .wp-age-chip { padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; border: 1.5px solid var(--zb-border); background: #fff; cursor: pointer; }
+    .wp-age-chip.sel { background: #0EA5E9; color: #fff; border-color: #0EA5E9; }
+    .wp-toggle-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--zb-border); }
+    .wp-toggle-row:last-child { border-bottom: none; }
+    .wp-toggle-label { font-size: 13px; color: var(--zb-text); }
+    .wp-toggle-sub { font-size: 11px; color: var(--zb-muted); margin-top: 2px; }
     /* トラブル相談窓口 */
     #troubleConsultScreen { background: var(--zb-bg); min-height: 100vh; padding-bottom: 80px; }
     .tc-hd { background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); padding: 20px 16px 20px; color: #fff; display: flex; align-items: center; gap: 12px; }
@@ -2793,6 +2833,16 @@
         <div style="font-size:11px;color:#64748B;margin-top:2px;">未払い・労災・契約トラブルはこちら</div>
       </div>
       <i class="ti ti-chevron-right" style="margin-left:auto;color:#94A3B8;font-size:18px;"></i>
+    </button>
+  </div>
+  <div style="padding:0 16px 20px;">
+    <button type="button" id="homeMeetingBtn" style="display:flex;align-items:center;gap:10px;width:100%;padding:16px;background:linear-gradient(135deg,#0369A1,#0EA5E9);color:#fff;border:none;border-radius:14px;cursor:pointer;text-align:left;box-shadow:0 4px 14px rgba(14,165,233,.3);">
+      <span style="font-size:26px;">🤝</span>
+      <div style="flex:1;">
+        <div style="font-size:15px;font-weight:800;">出会いの場</div>
+        <div style="font-size:11px;opacity:.85;margin-top:2px;">職人・企業がつながる場所 — 建設で生きる仲間を探す</div>
+      </div>
+      <i class="ti ti-chevron-right" style="font-size:20px;opacity:.8;"></i>
     </button>
   </div>
 </div>
@@ -4567,6 +4617,29 @@ Email：info@zaibase.group</div>
         <div id="profileLicenseList"></div>
         <div class="form-group" style="margin-top:10px;margin-bottom:0;"><label>建設業許可番号（任意）</label>
           <input type="text" id="profileLicenseNo" placeholder="例：神奈川県知事許可（般-00）第00000号">
+        </div>
+      </div>
+      <div class="wp-section">
+        <div class="wp-section-title"><i class="ti ti-heart" style="color:#e8a020;"></i>出会いの場 — プロフィール公開設定</div>
+        <div class="wp-story-section">
+          <div class="wp-story-label">🏗️ 建設を選んだ理由・一言PR（出会いの場に表示）</div>
+          <textarea id="profileStoryText" rows="3" placeholder="例：20年間、型枠一筋でやってきました。若い人に技術を伝えたい。まだまだ現役で稼ぎます。" style="width:100%;border:1.5px solid #BAE6FD;border-radius:8px;padding:10px;font-size:13px;font-family:inherit;box-sizing:border-box;resize:vertical;color:#1a2332;"></textarea>
+          <div class="wp-story-label" style="margin-top:12px;">年代</div>
+          <div class="wp-age-chips" id="profileAgeChips">
+            <div class="wp-age-chip" data-age="20代">20代</div>
+            <div class="wp-age-chip" data-age="30代">30代</div>
+            <div class="wp-age-chip" data-age="40代">40代</div>
+            <div class="wp-age-chip" data-age="50代">50代</div>
+            <div class="wp-age-chip" data-age="60代以上">60代以上</div>
+          </div>
+        </div>
+        <div class="wp-toggle-row">
+          <div><div class="wp-toggle-label">👨‍🏫 若手への指導・育成ができる</div><div class="wp-toggle-sub">技術を伝えたい・チームで働きたい</div></div>
+          <input type="checkbox" id="profileMentorAvailable" style="width:20px;height:20px;accent-color:#0EA5E9;">
+        </div>
+        <div class="wp-toggle-row">
+          <div><div class="wp-toggle-label">🌍 出会いの場に公開する</div><div class="wp-toggle-sub">企業・元請からプロフィールが見える</div></div>
+          <input type="checkbox" id="profilePublicVisible" style="width:20px;height:20px;accent-color:#0EA5E9;" checked>
         </div>
       </div>
       <div class="wp-section" id="wpRatingSection">
@@ -6687,6 +6760,54 @@ info@zaibase.group</p>
   <img id="lightboxImg" src="" alt="">
   <button class="lightbox-nav lightbox-next hidden" id="lightboxNext">›</button>
   <div class="lightbox-counter" id="lightboxCounter"></div>
+</div>
+
+<!-- 出会いの場 -->
+<div id="meetingScreen" class="hidden">
+  <div class="mt-hd">
+    <div class="mt-hd-top">
+      <button type="button" class="mt-hd-back" id="meetingBackBtn"><i class="ti ti-arrow-left"></i></button>
+      <div>
+        <div class="mt-hd-title">🤝 出会いの場</div>
+        <div class="mt-hd-sub">建設で生きる仲間・パートナー企業と出会う</div>
+      </div>
+    </div>
+    <div class="mt-tabs">
+      <button type="button" class="mt-tab act" id="mtTabWorker" data-mt="worker">👷 職人を探す</button>
+      <button type="button" class="mt-tab" id="mtTabCompany" data-mt="company">🏢 企業を探す</button>
+    </div>
+  </div>
+
+  <!-- 職人フィルター -->
+  <div class="mt-filter" id="mtWorkerFilter">
+    <div class="mt-filter-chip sel" data-wf="all">すべて</div>
+    <div class="mt-filter-chip" data-wf="50代">50代以上</div>
+    <div class="mt-filter-chip" data-wf="mentor">指導できる</div>
+    <div class="mt-filter-chip" data-wf="大工">大工</div>
+    <div class="mt-filter-chip" data-wf="鳶・足場">鳶・足場</div>
+    <div class="mt-filter-chip" data-wf="電気">電気</div>
+    <div class="mt-filter-chip" data-wf="配管">配管</div>
+    <div class="mt-filter-chip" data-wf="塗装">塗装</div>
+    <div class="mt-filter-chip" data-wf="土木">土木</div>
+    <div class="mt-filter-chip" data-wf="左官">左官</div>
+  </div>
+
+  <!-- 企業フィルター -->
+  <div class="mt-filter hidden" id="mtCompanyFilter">
+    <div class="mt-filter-chip sel" data-cf="all">すべて</div>
+    <div class="mt-filter-chip" data-cf="若手歓迎">若手歓迎</div>
+    <div class="mt-filter-chip" data-cf="50代歓迎">50代歓迎</div>
+    <div class="mt-filter-chip" data-cf="研修あり">研修あり</div>
+    <div class="mt-filter-chip" data-cf="元請">元請</div>
+    <div class="mt-filter-chip" data-cf="一人親方歓迎">一人親方歓迎</div>
+  </div>
+
+  <div class="mt-list" id="mtWorkerList">
+    <div class="mt-empty" id="mtWorkerEmpty" style="display:none;">プロフィール公開中の職人が見つかりません</div>
+  </div>
+  <div class="mt-list hidden" id="mtCompanyList">
+    <div class="mt-empty" id="mtCompanyEmpty" style="display:none;">掲載中の企業が見つかりません</div>
+  </div>
 </div>
 
 <!-- トラブル・法律相談窓口 -->
@@ -20216,7 +20337,7 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
   }
 
   function updateBottomNavForScreen(id) {
-    const hideNav = ['loginScreen', 'jobPostScreen', 'jobApproveScreen', 'stripeScreen', 'estimateScreen', 'invoiceScreen', 'insuranceScreen', 'rousaiScreen', 'rousaiApplyScreen', 'materialsMarketScreen', 'pricingScreen', 'pointsScreen', 'emergencyMatchScreen','communityScreen', 'photoReportScreen', 'deliveryScreen', 'eticketScreen', 'trackingScreen', 'safetyScreen', 'teamScreen', 'complianceGateScreen', 'chainScreen', 'faceRegisterScreen', 'chatRoomScreen', 'adminScreen', 'tutorialScreen', 'troubleConsultScreen'];
+    const hideNav = ['loginScreen', 'jobPostScreen', 'jobApproveScreen', 'stripeScreen', 'estimateScreen', 'invoiceScreen', 'insuranceScreen', 'rousaiScreen', 'rousaiApplyScreen', 'materialsMarketScreen', 'pricingScreen', 'pointsScreen', 'emergencyMatchScreen','communityScreen', 'photoReportScreen', 'deliveryScreen', 'eticketScreen', 'trackingScreen', 'safetyScreen', 'teamScreen', 'complianceGateScreen', 'chainScreen', 'faceRegisterScreen', 'chatRoomScreen', 'adminScreen', 'tutorialScreen', 'troubleConsultScreen', 'meetingScreen'];
     const isWorker = currentAccountRole !== 'orderer';
     const legacy = document.getElementById('bottomNav');
     const worker = document.getElementById('bottomNavWorker');
@@ -21356,7 +21477,7 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
     const prev = document.body.dataset.screenId;
     if (prev === 'trackingScreen' && id !== 'trackingScreen') stopTrackingTimers();
     if (prev === 'faceRegisterScreen' && id !== 'faceRegisterScreen') stopFaceRegisterWizard();
-    ['loginScreen','homeScreen','mainScreen','postScreen','mapScreen','mypageScreen','chatScreen','adminScreen','siteFaceScreen','jobPostScreen','teamJobPostScreen','jobApproveScreen','paymentScreen','stripeScreen','estimateScreen','invoiceScreen','insuranceScreen','rousaiScreen','rousaiApplyScreen','materialsMarketScreen','pricingScreen','pointsScreen','emergencyMatchScreen','communityScreen','moneyScreen','photoReportScreen','deliveryScreen','eticketScreen','trackingScreen','safetyScreen','teamScreen','complianceGateScreen','chainScreen','faceRegisterScreen','seikoTaikeiScreen','kokiScreen','koseiScreen','industryScreen','karoshiScreen','noiseVibScreen','envBizScreen','termsScreen','privacyScreen','sctScreen','tutorialScreen','troubleConsultScreen'].forEach(s =>
+    ['loginScreen','homeScreen','mainScreen','postScreen','mapScreen','mypageScreen','chatScreen','adminScreen','siteFaceScreen','jobPostScreen','teamJobPostScreen','jobApproveScreen','paymentScreen','stripeScreen','estimateScreen','invoiceScreen','insuranceScreen','rousaiScreen','rousaiApplyScreen','materialsMarketScreen','pricingScreen','pointsScreen','emergencyMatchScreen','communityScreen','moneyScreen','photoReportScreen','deliveryScreen','eticketScreen','trackingScreen','safetyScreen','teamScreen','complianceGateScreen','chainScreen','faceRegisterScreen','seikoTaikeiScreen','kokiScreen','koseiScreen','industryScreen','karoshiScreen','noiseVibScreen','envBizScreen','termsScreen','privacyScreen','sctScreen','tutorialScreen','troubleConsultScreen','meetingScreen'].forEach(s =>
       document.getElementById(s)?.classList.add('hidden')
     );
     document.getElementById('chatRoomScreen').classList.add('hidden');
@@ -21365,7 +21486,7 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
     document.getElementById(id).classList.remove('hidden');
     document.body.dataset.screenId = id;
 
-    const hideFab = ['loginScreen', 'siteFaceScreen', 'jobPostScreen', 'teamJobPostScreen', 'jobApproveScreen', 'homeScreen', 'paymentScreen', 'stripeScreen', 'estimateScreen', 'invoiceScreen', 'insuranceScreen', 'rousaiScreen', 'rousaiApplyScreen', 'materialsMarketScreen', 'pricingScreen', 'pointsScreen', 'emergencyMatchScreen', 'communityScreen', 'moneyScreen', 'photoReportScreen', 'deliveryScreen', 'eticketScreen', 'trackingScreen', 'safetyScreen', 'teamScreen', 'complianceGateScreen', 'chainScreen', 'faceRegisterScreen', 'mypageScreen', 'chatScreen', 'chatRoomScreen', 'tutorialScreen', 'troubleConsultScreen'];
+    const hideFab = ['loginScreen', 'siteFaceScreen', 'jobPostScreen', 'teamJobPostScreen', 'jobApproveScreen', 'homeScreen', 'paymentScreen', 'stripeScreen', 'estimateScreen', 'invoiceScreen', 'insuranceScreen', 'rousaiScreen', 'rousaiApplyScreen', 'materialsMarketScreen', 'pricingScreen', 'pointsScreen', 'emergencyMatchScreen', 'communityScreen', 'moneyScreen', 'photoReportScreen', 'deliveryScreen', 'eticketScreen', 'trackingScreen', 'safetyScreen', 'teamScreen', 'complianceGateScreen', 'chainScreen', 'faceRegisterScreen', 'mypageScreen', 'chatScreen', 'chatRoomScreen', 'tutorialScreen', 'troubleConsultScreen', 'meetingScreen'];
     document.getElementById('newMatchBtn')?.classList.toggle('hidden', hideFab.includes(id) || id !== 'mainScreen' || mainTab !== 'match');
     if (id === 'siteFaceScreen') initSiteFaceScreen();
     if (id === 'homeScreen') loadHomeDashboard();
@@ -23470,6 +23591,7 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
     const btn = document.getElementById('saveProfileBtn');
     btn.disabled = true;
     try {
+      const selectedAge = document.querySelector('#profileAgeChips .wp-age-chip.sel')?.dataset.age || '';
       await setDoc(doc(db, 'craftsmanProfiles', user.uid), {
         displayName, trade, trades, prefecture, bio,
         familyName, givenName,
@@ -23478,6 +23600,10 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
         experienceYears: document.getElementById('profileExperienceYears')?.value || '',
         licenses: getSelectedLicenses(),
         licenseNumber: document.getElementById('profileLicenseNo')?.value.trim() || '',
+        storyText: document.getElementById('profileStoryText')?.value.trim() || '',
+        ageGroup: selectedAge,
+        mentorAvailable: document.getElementById('profileMentorAvailable')?.checked || false,
+        publicVisible: document.getElementById('profilePublicVisible')?.checked !== false,
         accountRole,
         email: user.email || '',
         updatedAt: serverTimestamp()
@@ -24246,6 +24372,145 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
   document.getElementById('homeTutorialBtn')?.addEventListener('click', () => openTutorial());
   document.getElementById('mypageTutorialBtn')?.addEventListener('click', () => openTutorial());
   document.getElementById('tutorialBackBtn')?.addEventListener('click', () => showScreen(tutorialReturnScreen));
+
+  // ===== 出会いの場 =====
+  let meetingReturnScreen = 'homeScreen';
+  let mtCurrentTab = 'worker';
+  let mtWorkerFilter = 'all';
+  let mtCompanyFilter = 'all';
+  let mtWorkerData = [];
+  let mtCompanyData = [];
+
+  function openMeetingScreen() {
+    meetingReturnScreen = document.body.dataset.screenId || 'homeScreen';
+    showScreen('meetingScreen');
+    loadMeetingData();
+  }
+
+  async function loadMeetingData() {
+    // 職人データ読み込み
+    const wSnap = await getDocs(query(collection(db, 'craftsmanProfiles'), where('publicVisible', '==', true), limit(100)));
+    mtWorkerData = wSnap.docs.map(d => ({ id: d.id, ...d.data() }));
+    // 企業データ読み込み（発注者プロフィール）
+    const cSnap = await getDocs(query(collection(db, 'ordererProfiles'), where('meetingPublic', '==', true), limit(100)));
+    mtCompanyData = cSnap.docs.map(d => ({ id: d.id, ...d.data() }));
+    renderMeetingTab();
+  }
+
+  function renderMeetingTab() {
+    if (mtCurrentTab === 'worker') renderWorkerCards();
+    else renderCompanyCards();
+  }
+
+  function renderWorkerCards() {
+    const list = document.getElementById('mtWorkerList');
+    let data = mtWorkerData;
+    if (mtWorkerFilter === '50代') data = data.filter(p => p.ageGroup === '50代' || p.ageGroup === '60代以上');
+    else if (mtWorkerFilter === 'mentor') data = data.filter(p => p.mentorAvailable);
+    else if (mtWorkerFilter !== 'all') data = data.filter(p => (p.trades || []).includes(mtWorkerFilter) || p.trade === mtWorkerFilter);
+
+    const cards = data.map(p => {
+      const initials = (p.displayName || '職').slice(0, 1);
+      const tags = [
+        p.ageGroup ? `<span class="mt-tag ${p.ageGroup === '50代' || p.ageGroup === '60代以上' ? 'senior' : ''}">${p.ageGroup}</span>` : '',
+        p.mentorAvailable ? '<span class="mt-tag mentor">👨‍🏫 指導できる</span>' : '',
+        p.trade ? `<span class="mt-tag">${escapeHtml(p.trade)}</span>` : '',
+        p.experienceYears ? `<span class="mt-tag">${escapeHtml(p.experienceYears)}</span>` : '',
+      ].filter(Boolean).join('');
+      const story = p.storyText ? `<div class="mt-story">${escapeHtml(p.storyText.slice(0, 80))}${p.storyText.length > 80 ? '…' : ''}</div>` : '';
+      const name = p.companyName ? `${escapeHtml(p.displayName || '')}（${escapeHtml(p.companyName)}）` : escapeHtml(p.displayName || '職人');
+      const meta = [p.prefecture, p.businessType === 'hitori' ? '一人親方' : p.businessType === 'houjin' ? '法人' : '個人事業主'].filter(Boolean).join(' ・ ');
+      return `<div class="mt-card" data-uid="${p.id}">
+        <div class="mt-card-top">
+          <div class="mt-avatar">${initials}</div>
+          <div style="flex:1;">
+            <div class="mt-name">${name}</div>
+            <div class="mt-meta">${meta}</div>
+          </div>
+        </div>
+        <div class="mt-tags">${tags}</div>
+        ${story}
+        <button class="mt-contact-btn" onclick="openChatWithUser('${p.id}','${escapeHtml(p.displayName || '職人')}')">💬 メッセージを送る</button>
+      </div>`;
+    }).join('');
+    list.innerHTML = cards || '<div class="mt-empty">条件に合う職人が見つかりません</div>';
+  }
+
+  function renderCompanyCards() {
+    const list = document.getElementById('mtCompanyList');
+    let data = mtCompanyData;
+    if (mtCompanyFilter === '若手歓迎') data = data.filter(p => (p.welcomeConditions || '').includes('若手'));
+    else if (mtCompanyFilter === '50代歓迎') data = data.filter(p => (p.welcomeConditions || '').includes('50代') || (p.welcomeConditions || '').includes('ベテラン'));
+    else if (mtCompanyFilter === '研修あり') data = data.filter(p => p.trainingSystem);
+    else if (mtCompanyFilter === '元請') data = data.filter(p => p.companyType === 'genuke');
+    else if (mtCompanyFilter === '一人親方歓迎') data = data.filter(p => (p.welcomeConditions || '').includes('一人親方'));
+
+    const cards = data.map(p => {
+      const initials = (p.companyName || p.displayName || '企').slice(0, 1);
+      const specialties = (p.companySpecialty || []).map(s => `<span class="mt-tag company-sp">${escapeHtml(s)}</span>`).join('');
+      const welcomeTags = (p.welcomeConditions || '').split('・').filter(Boolean).map(w => `<span class="mt-tag">${escapeHtml(w.trim())}</span>`).join('');
+      const training = p.trainingSystem ? '<span class="mt-tag mentor">研修あり</span>' : '';
+      const story = p.representativeMessage ? `<div class="mt-story">${escapeHtml(p.representativeMessage.slice(0, 100))}${p.representativeMessage.length > 100 ? '…' : ''}</div>` : '';
+      return `<div class="mt-card" data-uid="${p.id}">
+        <div class="mt-card-top">
+          <div class="mt-avatar company">${initials}</div>
+          <div style="flex:1;">
+            <div class="mt-name">${escapeHtml(p.companyName || p.displayName || '企業')}</div>
+            <div class="mt-meta">${escapeHtml(p.prefecture || '')}${p.companyType ? ' ・ ' + (p.companyType === 'genuke' ? '元請' : '下請') : ''}</div>
+          </div>
+        </div>
+        <div class="mt-tags">${specialties}${welcomeTags}${training}</div>
+        ${story}
+        <button class="mt-contact-btn" onclick="openChatWithUser('${p.id}','${escapeHtml(p.companyName || p.displayName || '企業')}')">💬 問い合わせる</button>
+      </div>`;
+    }).join('');
+    list.innerHTML = cards || '<div class="mt-empty">掲載中の企業が見つかりません</div>';
+  }
+
+  document.getElementById('homeMeetingBtn')?.addEventListener('click', openMeetingScreen);
+  document.getElementById('meetingBackBtn')?.addEventListener('click', () => showScreen(meetingReturnScreen));
+
+  // タブ切替
+  document.querySelectorAll('.mt-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      mtCurrentTab = tab.dataset.mt;
+      document.querySelectorAll('.mt-tab').forEach(t => t.classList.remove('act'));
+      tab.classList.add('act');
+      document.getElementById('mtWorkerList').classList.toggle('hidden', mtCurrentTab !== 'worker');
+      document.getElementById('mtCompanyList').classList.toggle('hidden', mtCurrentTab !== 'company');
+      document.getElementById('mtWorkerFilter').classList.toggle('hidden', mtCurrentTab !== 'worker');
+      document.getElementById('mtCompanyFilter').classList.toggle('hidden', mtCurrentTab !== 'company');
+      renderMeetingTab();
+    });
+  });
+
+  // 職人フィルター
+  document.querySelectorAll('#mtWorkerFilter .mt-filter-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('#mtWorkerFilter .mt-filter-chip').forEach(c => c.classList.remove('sel'));
+      chip.classList.add('sel');
+      mtWorkerFilter = chip.dataset.wf;
+      renderWorkerCards();
+    });
+  });
+
+  // 企業フィルター
+  document.querySelectorAll('#mtCompanyFilter .mt-filter-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('#mtCompanyFilter .mt-filter-chip').forEach(c => c.classList.remove('sel'));
+      chip.classList.add('sel');
+      mtCompanyFilter = chip.dataset.cf;
+      renderCompanyCards();
+    });
+  });
+
+  // 年代チップ
+  document.querySelectorAll('#profileAgeChips .wp-age-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('#profileAgeChips .wp-age-chip').forEach(c => c.classList.remove('sel'));
+      chip.classList.add('sel');
+    });
+  });
 
   // ===== トラブル・法律相談窓口 =====
   let troubleReturnScreen = 'homeScreen';
