@@ -29,6 +29,7 @@ import { nichinokenSansu } from './nichinoken_sansu';
 import { nichinokenKokugo } from './nichinoken_kokugo';
 import { nichinokenRika } from './nichinoken_rika';
 import { nichinokenShakai } from './nichinoken_shakai';
+import { nichinokenEigo } from './nichinoken_eigo';
 
 export type Question = {
   id: string;
@@ -2755,6 +2756,7 @@ export const questions: Question[] = [
   ...nichinokenKokugo,
   ...nichinokenRika,
   ...nichinokenShakai,
+  ...nichinokenEigo,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {
