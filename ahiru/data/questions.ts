@@ -3,6 +3,7 @@ import { kankanQuestions, shitennojiQuestions, kokoGeneralQuestions } from './qu
 import { kokoKankanQuestions, kokoTopQuestions } from './questions-koko';
 import { kokoMaxSansu } from './koko_max_sansu';
 import { kokoMaxKokugo } from './koko_max_kokugo';
+import { kokoMaxRika } from './koko_max_rika';
 import { seikoQuestions, seifuNankaiQuestions, takatsukiQuestions } from './questions-schools-1';
 import { kaimeiQuestions, toinQuestions, kindaiQuestions, kansaiHokuyoQuestions } from './questions-schools-2';
 import { toinExamQuestions, kindaiExamQuestions, kaimeiExamQuestions, kansaiHokuyoExamQuestions, myojoExamQuestions, tezukayamaExamQuestions, kinrankaiExamQuestions, otaniExamQuestions, kankanExamQuestions, kankanMaxQuestions, tokyoMeidaiExamQuestions, tokyoAoyamaExamQuestions, tokyoChuoExamQuestions, tokyoHoseiExamQuestions, tokyoGakushiinExamQuestions, tokyoHibiyaExamQuestions, tokyoWasedaExamQuestions, tokyoMeidaiKokoExamQuestions, tokyoChugakuMaxQuestions, tokyoKokoMaxQuestions } from './questions-exam';
@@ -2702,6 +2703,7 @@ export const questions: Question[] = [
   ...kokoTopQuestions,
   ...kokoMaxSansu,
   ...kokoMaxKokugo,
+  ...kokoMaxRika,
   // ── 学校別問題（大阪私学 最難関） ──
   ...seikoQuestions,
   ...seifuNankaiQuestions,
