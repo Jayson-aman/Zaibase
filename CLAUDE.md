@@ -167,3 +167,14 @@ firebase functions:secrets:set HORITSU_STRIPE_SECRET_KEY
 cd ahiru && npm install && npm run web
 cd ahiru && npx expo export --platform web
 ```
+
+## SEO・Search Console 状況（2026/6/21時点）
+
+| サイト | プロパティ種別 | サイトマップ | 状態 |
+|---|---|---|---|
+| `zaibase.group` | ドメインプロパティ | `https://www.zaibase.group/sitemap.xml` | 成功・8ページ検出済み |
+| `zaisai-share.web.app` | URLプレフィックス | `sitemap.xml` | 送信済み・数時間〜1日で「成功」に変わる見込み |
+
+- Cloudflare TXT レコードは所有権維持のため削除しない
+- `/undefinedsitemap.xmlsitemap.xml`（誤送信）は放置でOK（無害）
+- **次のTODO**：Bing Webmaster Tools への登録（`zaibase.group` と `zaisai-share.web.app` の両方）。Google Search Console と同期する方法で所有権確認を自動完了できる。Yahoo 検索は Bing データを使うため、Bing 登録で Yahoo にも反映される。
