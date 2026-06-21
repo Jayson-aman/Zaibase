@@ -25,6 +25,8 @@ import { shakaiExtra2a } from './questions_shakai_extra2a';
 import { shakaiExtra2b } from './questions_shakai_extra2b';
 import { eigoExtra } from './questions_eigo_extra';
 import { eigoExtra2 } from './questions_eigo_extra2';
+import { nichinokenSansu } from './nichinoken_sansu';
+import { nichinokenKokugo } from './nichinoken_kokugo';
 
 export type Question = {
   id: string;
@@ -35,6 +37,8 @@ export type Question = {
   explanation?: string;
   difficulty: 'basic' | 'standard' | 'advanced';
   course?: CourseKey;
+  /** 図形や表をテキストで表現したもの。QuizCardで図エリアに表示される */
+  figureDescription?: string;
   examType?: ExamType;
   questionReading?: string;
   answerReading?: string;
@@ -2743,6 +2747,8 @@ export const questions: Question[] = [
   ...shakaiExtra2b,
   ...eigoExtra,
   ...eigoExtra2,
+  ...nichinokenSansu,
+  ...nichinokenKokugo,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {

@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Dimensions,
   Platform,
+  ScrollView,
 } from 'react-native';
 
 const SERIF = Platform.select({
@@ -85,6 +86,14 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
         <View style={styles.choiceSection}>
           <Text style={styles.questionLabel}>問 題</Text>
           <Text style={styles.questionTextChoice}>{question.question}</Text>
+          {question.figureDescription != null && (
+            <View style={styles.figureBox}>
+              <Text style={styles.figureLabel}>📐 図・表</Text>
+              <ScrollView horizontal={false}>
+                <Text style={styles.figureText}>{question.figureDescription}</Text>
+              </ScrollView>
+            </View>
+          )}
           <View style={styles.choicesWrap}>
             {choices.map((choice, i) => {
               const isSelected = selectedChoice === choice;
@@ -147,6 +156,12 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
         <View style={styles.questionSide}>
           <Text style={styles.questionLabel}>問 題</Text>
           <Text style={styles.questionText}>{question.question}</Text>
+          {question.figureDescription != null && (
+            <View style={styles.figureBox}>
+              <Text style={styles.figureLabel}>📐 図・表</Text>
+              <Text style={styles.figureText}>{question.figureDescription}</Text>
+            </View>
+          )}
           <View style={styles.tapHint}>
             <Text style={styles.tapHintText}>タップして答えを見る 👆</Text>
           </View>
@@ -384,6 +399,29 @@ const styles = StyleSheet.create({
     lineHeight: 52,
     marginBottom: 20,
     fontFamily: SERIF,
+  },
+  figureBox: {
+    backgroundColor: '#F0F7FF',
+    borderRadius: 12,
+    padding: 14,
+    marginTop: 10,
+    marginBottom: 4,
+    borderWidth: 1.5,
+    borderColor: '#B8D4F8',
+    width: '100%',
+  },
+  figureLabel: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#1E5FBE',
+    marginBottom: 6,
+    letterSpacing: 1,
+  },
+  figureText: {
+    fontSize: 16,
+    color: '#1A1A2E',
+    lineHeight: 26,
+    fontFamily: Platform.OS === 'ios' ? 'Courier' : 'monospace',
   },
   hintBox: {
     backgroundColor: '#FFFBEB',
