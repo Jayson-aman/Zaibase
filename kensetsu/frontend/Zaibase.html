@@ -10055,7 +10055,7 @@ info@zaibase.group</p>
       const name = document.getElementById('krWpName').value.trim();
       if (!name) { document.getElementById('krWpMsg').textContent = '❌ 職場名を入力してください'; return; }
       try {
-        const fn = firebase.functions().httpsCallable('registerWorkplace');
+        const fn = httpsCallable(functions, 'registerWorkplace');
         await fn({
           name,
           address: document.getElementById('krWpAddr').value.trim(),
@@ -10097,7 +10097,7 @@ info@zaibase.group</p>
 
   async function krLoadWorkplaces() {
     try {
-      const fn = firebase.functions().httpsCallable('getWorkplaces');
+      const fn = httpsCallable(functions, 'getWorkplaces');
       const res = await fn({});
       krWorkplaces = res.data.workplaces || [];
       const sel = document.getElementById('krWpSelect');
@@ -10137,7 +10137,7 @@ info@zaibase.group</p>
     if (krCurrentPos && wp) dist = Math.round(haversineM(krCurrentPos.latitude, krCurrentPos.longitude, wp.lat, wp.lng));
 
     try {
-      const fn = firebase.functions().httpsCallable('clockInOut');
+      const fn = httpsCallable(functions, 'clockInOut');
       await fn({
         type, reason,
         workplaceId: wpId,
@@ -10154,7 +10154,7 @@ info@zaibase.group</p>
 
   async function krLoadWorkLogs() {
     try {
-      const fn = firebase.functions().httpsCallable('getWorkLogs');
+      const fn = httpsCallable(functions, 'getWorkLogs');
       const res = await fn({});
       krWorkLogs = res.data.logs || [];
 
@@ -10321,7 +10321,7 @@ info@zaibase.group</p>
       const transcript = document.getElementById('krTranscriptBox').innerText.trim();
       const msg = document.getElementById('krIvMsg');
       try {
-        const fn = firebase.functions().httpsCallable('saveInterview');
+        const fn = httpsCallable(functions, 'saveInterview');
         await fn({
           title,
           interviewDate: document.getElementById('krIvDate').value,
@@ -10339,7 +10339,7 @@ info@zaibase.group</p>
 
   async function krLoadInterviews() {
     try {
-      const fn = firebase.functions().httpsCallable('getInterviews');
+      const fn = httpsCallable(functions, 'getInterviews');
       const res = await fn({});
       krInterviews = res.data.interviews || [];
       const el = document.getElementById('krIvList');
@@ -10555,7 +10555,7 @@ ${transcript}
       if (content.length < 10) { msg.textContent = '❌ 10文字以上入力してください'; return; }
       try {
         msg.textContent = '送信中...';
-        const fn = firebase.functions().httpsCallable('postAnonymousConsult');
+        const fn = httpsCallable(functions, 'postAnonymousConsult');
         await fn({ content, category: cat });
         document.getElementById('krConsultContent').value = '';
         msg.textContent = '✅ 投稿しました';
@@ -10568,7 +10568,7 @@ ${transcript}
 
   async function krLoadConsults() {
     try {
-      const fn = firebase.functions().httpsCallable('getAnonymousConsults');
+      const fn = httpsCallable(functions, 'getAnonymousConsults');
       const res = await fn({});
       krConsults = res.data.consults || [];
       const el = document.getElementById('krConsultList');
@@ -10614,7 +10614,7 @@ ${transcript}
     const repliesEl = document.getElementById('krReplies_' + consultId);
     if (repliesEl) repliesEl.innerHTML = '<div style="font-size:12px;color:var(--zb-muted);">読み込み中...</div>';
     try {
-      const fn = firebase.functions().httpsCallable('getConsultReplies');
+      const fn = httpsCallable(functions, 'getConsultReplies');
       const res = await fn({ consultId });
       const replies = res.data.replies || [];
       if (!repliesEl) return;
@@ -10634,7 +10634,7 @@ ${transcript}
     const content = input.value.trim();
     if (content.length < 5) { alert('返信は5文字以上入力してください'); return; }
     try {
-      const fn = firebase.functions().httpsCallable('replyAnonymousConsult');
+      const fn = httpsCallable(functions, 'replyAnonymousConsult');
       await fn({ consultId, content });
       input.value = '';
       await krToggleReplies(consultId); // close
@@ -23854,7 +23854,7 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
 
   async function loadStripeCurrentPlan() {
     try {
-      const fn = firebase.functions().httpsCallable('getMySubscription');
+      const fn = httpsCallable(functions, 'getMySubscription');
       const res = await fn({});
       const d = res.data;
       const planNames = { free:'フリープラン', starter:'スタータープラン', pro:'プロプラン', team:'チームプラン' };
@@ -23893,7 +23893,7 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
     const msg = document.getElementById('stripePlanMsg');
     msg.textContent = '決済画面を準備中...';
     try {
-      const fn = firebase.functions().httpsCallable('createCheckoutSession');
+      const fn = httpsCallable(functions, 'createCheckoutSession');
       const res = await fn({
         plan,
         interval: stripeInterval,
@@ -23917,7 +23917,7 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
     const msg = document.getElementById('stripeCancelMsg');
     msg.textContent = '処理中...';
     try {
-      const fn = firebase.functions().httpsCallable('cancelStripeSubscription');
+      const fn = httpsCallable(functions, 'cancelStripeSubscription');
       const res = await fn({ reason });
       msg.textContent = '✅ ' + (res.data.message || '解約しました');
       await loadStripeCurrentPlan();
@@ -23927,7 +23927,7 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
   document.getElementById('stripeOnboardingBtn')?.addEventListener('click', async () => {
     showZbToast('Stripe Connectの本人確認画面へ移動します...');
     try {
-      const fn = firebase.functions().httpsCallable('createStripeOnboarding');
+      const fn = httpsCallable(functions, 'createStripeOnboarding');
       const res = await fn({});
       if (res.data?.url) window.open(res.data.url, '_blank');
     } catch(e) { showZbToast('Stripe Connect: ' + (e.message || '接続エラー')); }
