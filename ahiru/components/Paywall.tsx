@@ -10,6 +10,7 @@ import {
   Alert,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { router } from 'expo-router';
 import type { PurchasesOffering, PurchasesPackage } from 'react-native-purchases';
 import {
   fetchCurrentOffering,
@@ -215,8 +216,28 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
           </TouchableOpacity>
 
           <Text style={styles.terms}>
-            ご購入後、自動的に更新されます。解約はApp Store / Google Playの設定からいつでも可能です。
+            サブスクリプションは期間終了の24時間前までに解約しない限り自動更新されます。解約はApp Store / Google Playの設定からいつでも可能です。お支払いは購入確定時にストアアカウントへ請求されます。
           </Text>
+
+          <View style={styles.legalLinks}>
+            <TouchableOpacity
+              onPress={() => {
+                onClose();
+                router.push('/terms');
+              }}
+            >
+              <Text style={styles.legalLinkText}>利用規約</Text>
+            </TouchableOpacity>
+            <Text style={styles.legalSep}>・</Text>
+            <TouchableOpacity
+              onPress={() => {
+                onClose();
+                router.push('/privacy');
+              }}
+            >
+              <Text style={styles.legalLinkText}>プライバシーポリシー</Text>
+            </TouchableOpacity>
+          </View>
         </ScrollView>
       </LinearGradient>
     </Modal>
@@ -326,4 +347,17 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     paddingHorizontal: 10,
   },
+  legalLinks: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 14,
+  },
+  legalLinkText: {
+    fontSize: 14,
+    color: 'rgba(255,255,255,0.7)',
+    fontWeight: '600',
+    textDecorationLine: 'underline',
+  },
+  legalSep: { fontSize: 14, color: 'rgba(255,255,255,0.4)', marginHorizontal: 8 },
 });

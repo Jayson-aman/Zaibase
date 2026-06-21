@@ -25,6 +25,14 @@ export default function RootLayout() {
             presentation: 'card',
           }}
         />
+        <Stack.Screen
+          name="terms"
+          options={{ headerShown: false, presentation: 'modal' }}
+        />
+        <Stack.Screen
+          name="privacy"
+          options={{ headerShown: false, presentation: 'modal' }}
+        />
       </Stack>
     </ErrorBoundary>
   );
