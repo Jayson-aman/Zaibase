@@ -177,4 +177,14 @@ cd ahiru && npx expo export --platform web
 
 - Cloudflare TXT レコードは所有権維持のため削除しない
 - `/undefinedsitemap.xmlsitemap.xml`（誤送信）は放置でOK（無害）
-- **次のTODO**：Bing Webmaster Tools への登録（`zaibase.group` と `zaisai-share.web.app` の両方）。Google Search Console と同期する方法で所有権確認を自動完了できる。Yahoo 検索は Bing データを使うため、Bing 登録で Yahoo にも反映される。
+- **次のTODO**：Bing Webmaster Tools への登録（`zaibase.group` と `zaisai-share.web.app` の両方）。Google Search Console と同期する方法で所有権確認を自動完了できる。Yahoo 検索は Bing データを使うため、Bing 登録で Yahoo にも反映される。Cursor が対応中。
+
+## 公開範囲（2026/6/21時点）
+
+| プロダクト | 公開状態 | 備考 |
+|---|---|---|
+| Zaibase建設 `zaisai-share.web.app` | **公開中** | メインプロダクト |
+| 会社サイト `zaibase.group` | **公開中（建設のみ案内）** | 法律・証券は「準備中」カード表示・リンクなし |
+| Zaibase法律相談 | 非公開（アクセスコード制） | `/law` は直接URLのみアクセス可 |
+| ahiru 受験 `exam.zaibase.group` | **公開中** | RevenueCat課金は未設定（プレースホルダー） |
+| Zaibase証券 | 未公開 | 別リポジトリ・準備中 |
