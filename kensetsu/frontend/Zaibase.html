@@ -2588,9 +2588,39 @@
     .tut-faq-q { font-size: 13px; font-weight: 600; color: #1a2332; margin-bottom: 4px; }
     .tut-faq-a { font-size: 12px; color: #64748B; line-height: 1.7; }
     .tut-contact-btn { display: block; width: 100%; padding: 14px; background: #0EA5E9; color: #fff; border: none; border-radius: 12px; font-size: 14px; font-weight: 700; cursor: pointer; text-align: center; margin-top: 4px; }
+    /* 招待コードゲート */
+    #inviteGateScreen { position: fixed; inset: 0; background: linear-gradient(160deg, #0369A1 0%, #0EA5E9 60%, #38BDF8 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 9999; padding: 32px 24px; }
+    #inviteGateScreen.hidden { display: none !important; }
+    .ig-logo { font-size: 28px; font-weight: 800; color: #fff; letter-spacing: -0.5px; margin-bottom: 6px; }
+    .ig-logo span { color: rgba(255,255,255,.7); }
+    .ig-tagline { font-size: 13px; color: rgba(255,255,255,.75); margin-bottom: 36px; text-align: center; }
+    .ig-card { background: #fff; border-radius: 18px; padding: 28px 24px; width: 100%; max-width: 360px; box-shadow: 0 8px 32px rgba(3,105,161,.25); }
+    .ig-card-title { font-size: 16px; font-weight: 700; color: #0369A1; text-align: center; margin-bottom: 6px; }
+    .ig-card-desc { font-size: 12px; color: #64748B; text-align: center; margin-bottom: 20px; line-height: 1.6; }
+    .ig-input { width: 100%; padding: 13px 14px; border: 1.5px solid #e2e8f0; border-radius: 10px; font-size: 15px; letter-spacing: 2px; text-align: center; box-sizing: border-box; color: #1a2332; outline: none; font-family: monospace; }
+    .ig-input:focus { border-color: #0EA5E9; box-shadow: 0 0 0 3px rgba(14,165,233,.15); }
+    .ig-btn { margin-top: 14px; width: 100%; padding: 14px; background: linear-gradient(135deg,#0369A1,#0EA5E9); color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; letter-spacing: .5px; }
+    .ig-btn:active { opacity: .85; }
+    .ig-error { margin-top: 10px; font-size: 12px; color: #dc2626; text-align: center; min-height: 18px; }
+    .ig-contact { margin-top: 20px; font-size: 11px; color: rgba(255,255,255,.65); text-align: center; line-height: 1.7; }
+    .ig-contact a { color: rgba(255,255,255,.85); }
   </style>
 </head>
 <body>
+
+<!-- 招待コードゲート -->
+<div id="inviteGateScreen">
+  <div class="ig-logo">Zaibase<span>建設</span></div>
+  <div class="ig-tagline">建設職人・一人親方のためのプラットフォーム</div>
+  <div class="ig-card">
+    <div class="ig-card-title">🔐 招待コードを入力</div>
+    <div class="ig-card-desc">このサービスは現在招待制です。<br>招待コードをお持ちの方のみご利用いただけます。</div>
+    <input type="text" id="igCodeInput" class="ig-input" placeholder="招待コードを入力" autocomplete="off" spellcheck="false">
+    <button type="button" id="igSubmitBtn" class="ig-btn">入場する</button>
+    <div class="ig-error" id="igError"></div>
+  </div>
+  <div class="ig-contact">招待コードをお持ちでない方は<br><a href="mailto:info@zaibase.group">info@zaibase.group</a> までお問い合わせください。</div>
+</div>
 
 <!-- ログイン画面 -->
 <div id="loginScreen">
@@ -6850,6 +6880,38 @@ info@zaibase.group</p>
   };
 
   const app = initializeApp(firebaseConfig);
+
+  // ===== 招待コードゲート =====
+  const INVITE_CODE = 'ZB-KENSETSU-2026';
+  const INVITE_KEY = 'zb_kensetsu_invite';
+
+  function checkInviteGate() {
+    const gate = document.getElementById('inviteGateScreen');
+    if (!gate) return true;
+    if (localStorage.getItem(INVITE_KEY) === 'granted') {
+      gate.classList.add('hidden');
+      return true;
+    }
+    gate.classList.remove('hidden');
+    return false;
+  }
+
+  document.getElementById('igSubmitBtn')?.addEventListener('click', () => {
+    const val = (document.getElementById('igCodeInput').value || '').trim().toUpperCase();
+    if (val === INVITE_CODE) {
+      localStorage.setItem(INVITE_KEY, 'granted');
+      document.getElementById('inviteGateScreen').classList.add('hidden');
+    } else {
+      document.getElementById('igError').textContent = '招待コードが正しくありません';
+    }
+  });
+
+  document.getElementById('igCodeInput')?.addEventListener('keydown', e => {
+    if (e.key === 'Enter') document.getElementById('igSubmitBtn').click();
+  });
+
+  // 起動時チェック
+  checkInviteGate();
 
   // Firebase App Check — reCAPTCHA v3
   // TODO: Firebase Console → App Check → ウェブアプリ → reCAPTCHA v3 サイトキーを登録後に有効化
