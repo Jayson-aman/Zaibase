@@ -6,8 +6,10 @@ import { shakaiLessons } from './lessons-shakai';
 import { eigoLessons } from './lessons-eigo';
 // 高校受験専用テキスト
 import { kokoMathLessons } from './lessons-koko-math';
+import { kokoRikaLessons } from './lessons-koko-rika';
 import { kokoKokugoLessons } from './lessons-koko-kokugo';
 import { kokoEigoLessons } from './lessons-koko-eigo';
+import { kokoShakaiLessons } from './lessons-koko-shakai';
 
 export type { Lesson };
 
@@ -19,8 +21,10 @@ export const allLessons: Lesson[] = [
   ...eigoLessons,
   // 高校受験（koko）
   ...kokoMathLessons,
+  ...kokoRikaLessons,
   ...kokoKokugoLessons,
   ...kokoEigoLessons,
+  ...kokoShakaiLessons,
 ];
 
 export function getLessonsBySubject(subject: string): Lesson[] {
