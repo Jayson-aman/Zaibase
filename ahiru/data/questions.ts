@@ -27,6 +27,8 @@ import { eigoExtra } from './questions_eigo_extra';
 import { eigoExtra2 } from './questions_eigo_extra2';
 import { nichinokenSansu } from './nichinoken_sansu';
 import { nichinokenKokugo } from './nichinoken_kokugo';
+import { nichinokenRika } from './nichinoken_rika';
+import { nichinokenShakai } from './nichinoken_shakai';
 
 export type Question = {
   id: string;
@@ -39,6 +41,8 @@ export type Question = {
   course?: CourseKey;
   /** 図形や表をテキストで表現したもの。QuizCardで図エリアに表示される */
   figureDescription?: string;
+  /** 国語の長文読解などで、問題文の前に表示する本文パッセージ */
+  passage?: string;
   examType?: ExamType;
   questionReading?: string;
   answerReading?: string;
@@ -2749,6 +2753,8 @@ export const questions: Question[] = [
   ...eigoExtra2,
   ...nichinokenSansu,
   ...nichinokenKokugo,
+  ...nichinokenRika,
+  ...nichinokenShakai,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {

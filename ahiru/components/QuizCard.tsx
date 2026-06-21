@@ -84,6 +84,14 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
 
       {choices != null ? (
         <View style={styles.choiceSection}>
+          {question.passage != null && (
+            <View style={styles.passageBox}>
+              <Text style={styles.passageLabel}>📄 本 文</Text>
+              <ScrollView style={styles.passageScroll} nestedScrollEnabled>
+                <Text style={styles.passageText}>{question.passage}</Text>
+              </ScrollView>
+            </View>
+          )}
           <Text style={styles.questionLabel}>問 題</Text>
           <Text style={styles.questionTextChoice}>{question.question}</Text>
           {question.figureDescription != null && (
@@ -154,6 +162,14 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
         </View>
       ) : !revealed ? (
         <View style={styles.questionSide}>
+          {question.passage != null && (
+            <View style={styles.passageBox}>
+              <Text style={styles.passageLabel}>📄 本 文</Text>
+              <ScrollView style={styles.passageScroll} nestedScrollEnabled>
+                <Text style={styles.passageText}>{question.passage}</Text>
+              </ScrollView>
+            </View>
+          )}
           <Text style={styles.questionLabel}>問 題</Text>
           <Text style={styles.questionText}>{question.question}</Text>
           {question.figureDescription != null && (
@@ -398,6 +414,31 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     lineHeight: 52,
     marginBottom: 20,
+    fontFamily: SERIF,
+  },
+  passageBox: {
+    backgroundColor: '#FFFDF5',
+    borderRadius: 12,
+    padding: 14,
+    marginBottom: 12,
+    borderWidth: 1.5,
+    borderColor: '#D4B896',
+    width: '100%',
+  },
+  passageLabel: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: '#7C5C2E',
+    marginBottom: 8,
+    letterSpacing: 1,
+  },
+  passageScroll: {
+    maxHeight: 200,
+  },
+  passageText: {
+    fontSize: 16,
+    color: '#2A1A0A',
+    lineHeight: 28,
     fontFamily: SERIF,
   },
   figureBox: {
