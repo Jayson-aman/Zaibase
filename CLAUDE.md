@@ -6,6 +6,7 @@
 |---|---|---|
 | **2026年7月21日ごろ** | **弁護士確認完了後 → 全国マッチング手数料機能を実装する**（業務委託・請負専門、成約時数%）。確認先は川原総合法律事務所。確認事項は `docs/legal/lawyer-checklist.md` の①有料職業紹介。実装準備は完了済み（`jobMatchingEnabled: false` を `true` に変更するだけで開放可能）。 | Claude Code |
 | **ahiru収益化＋弁護士確認後** | **弁護士法72条確認完了後 → 以下3機能を開放する。** Firestoreの `platformConfig/features` に `legalFeaturesEnabled: true` を設定するだけで有効化可能。①`⚖️ 許認可・法令チェック`（kyoninkaScreen・AI法的判断）②`🛡️ 信頼スコア`（complianceGateScreen・弁護士確認前β）③`Zaibase法律相談バナー`（弁護士紹介に該当する可能性・弁護士法72条⑤グループ割引）。確認事項は `docs/legal/lawyer-checklist.md` の③④⑤。財源はahiru（受験アプリ）の収益で賄う予定。 | Claude Code |
+| **Stripe審査通過後** | **建設の課金を再開する。** Firestoreの `platformConfig/features` に `billingEnabled: true` を設定するだけで有料プラン申込・Stripe決済が開放される。現在は料金プランページ・Stripe画面への導線・`doStripeCheckout()` をすべて停止中。 | Claude Code |
 
 > このリマインダーは完了したら削除する。
 
