@@ -400,7 +400,7 @@ export default function LandingPage() {
             </View>
             <Text style={[styles.planName, { color: C.gold }]}>MAX プラン</Text>
             <View style={styles.planPriceRow}>
-              <Text style={[styles.planPrice, { color: C.gold }]}>¥2,200</Text>
+              <Text style={[styles.planPrice, { color: C.gold }]}>¥2,000</Text>
               <Text style={styles.planPricePeriod}> / 月（税込）</Text>
             </View>
             <View style={styles.planDivider} />
