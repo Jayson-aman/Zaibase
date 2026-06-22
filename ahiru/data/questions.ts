@@ -45,6 +45,7 @@ import { nichinokenShakai } from './nichinoken_shakai';
 import { nichinokenEigo } from './nichinoken_eigo';
 import { kokoNyushiRika50 } from './koko_nyushi_rika_50';
 import { kokoNyushiSansu50 } from './koko_nyushi_sansu_50';
+import { kokoNyushiEigo50 } from './koko_nyushi_eigo_50';
 
 export type Question = {
   id: string;
@@ -2726,6 +2727,7 @@ export const questions: Question[] = [
   ...kokoKisoRika50,
   ...kokoNyushiRika50,
   ...kokoNyushiSansu50,
+  ...kokoNyushiEigo50,
   ...kokoKisoEigo50,
   ...kokoKisoShakai50,
   // ── 学校別問題（大阪私学 最難関） ──
