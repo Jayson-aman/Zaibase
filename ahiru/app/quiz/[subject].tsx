@@ -32,6 +32,7 @@ import { submitRankingScore } from '../../services/ranking';
 import { getDailyQuestions, getTodayDayLabel } from '../../utils/dailyChallenge';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
+import TutorChat from '../../components/TutorChat';
 
 function isSubjectKey(value: string): value is SubjectKey {
   return ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'].includes(value);
@@ -140,6 +141,7 @@ export default function QuizScreen() {
   const [feedback, setFeedback] = useState<'correct' | 'wrong' | null>(null);
   const [waitingNext, setWaitingNext] = useState(false);
   const [showPaywall, setShowPaywall] = useState(false);
+  const [showTutorChat, setShowTutorChat] = useState(false);
 
   const currentQuestion = questions[currentIndex];
   const total = questions.length;
@@ -477,6 +479,16 @@ export default function QuizScreen() {
               </TouchableOpacity>
             )}
 
+            {isMax && (
+              <TouchableOpacity
+                style={styles.tutorChatBtn}
+                onPress={() => setShowTutorChat(true)}
+                activeOpacity={0.85}
+              >
+                <Text style={styles.tutorChatBtnText}>🤖 AIに聞く（Max限定）</Text>
+              </TouchableOpacity>
+            )}
+
             <TouchableOpacity
               style={[styles.nextQuestionBtn, { backgroundColor: info.color }]}
               onPress={() => advanceOrFinish(score, wrongIds)}
@@ -564,6 +576,13 @@ export default function QuizScreen() {
         visible={showPaywall}
         onClose={() => setShowPaywall(false)}
         onPurchased={() => setShowPaywall(false)}
+      />
+
+      <TutorChat
+        visible={showTutorChat}
+        onClose={() => setShowTutorChat(false)}
+        initialQuestion={currentQuestion ? `【${info.name}】${currentQuestion.question}` : undefined}
+        subjectColor={info.color}
       />
     </SafeAreaView>
   );
@@ -1032,5 +1051,22 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     color: '#FFFFFF',
     letterSpacing: 0.5,
+  },
+  tutorChatBtn: {
+    backgroundColor: '#0EA5E9',
+    borderRadius: 16,
+    paddingVertical: 16,
+    alignItems: 'center',
+    shadowColor: '#0EA5E9',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 5,
+  },
+  tutorChatBtnText: {
+    fontSize: 17,
+    fontWeight: '800',
+    color: '#FFFFFF',
+    letterSpacing: 0.3,
   },
 });

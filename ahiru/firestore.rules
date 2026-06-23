@@ -7,5 +7,14 @@ service cloud.firestore {
     match /aiCoachUsage/{uid} {
       allow read, write: if false;
     }
+
+    // ── AI個別指導（Cloud Functions専用） ──
+    match /aiTutorUsage/{uid} {
+      allow read, write: if false;
+    }
+
+    match /aiTutorSessions/{docId} {
+      allow read, write: if false;
+    }
   }
 }
