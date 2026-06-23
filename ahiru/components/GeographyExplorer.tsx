@@ -106,7 +106,7 @@ export default function GeographyExplorer({ isPro, onRequirePro }: Props) {
       {!isPro && (
         <TouchableOpacity style={styles.proBanner} onPress={onRequirePro}>
           <Text style={styles.proBannerText}>
-            👑 Proで漁業・林業・工業・商業レイヤーを解放（¥480/月）
+            👑 Proで漁業・林業・工業・商業レイヤーを解放（¥1,000/月）
           </Text>
         </TouchableOpacity>
       )}

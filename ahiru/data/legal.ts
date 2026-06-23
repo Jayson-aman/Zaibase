@@ -184,8 +184,8 @@ export const ahiruTokusho: LegalSection[] = [
   {
     heading: '販売価格',
     bullets: [
-      'PRO プラン：¥480 / 月（税込）',
-      'MAX プラン：¥980 / 月（税込）',
+      'PRO プラン：¥1,000 / 月（税込）',
+      'MAX プラン：¥2,000 / 月（税込）',
       '※ 価格はアプリ内および各ストアの表示を正とします。',
     ],
   },

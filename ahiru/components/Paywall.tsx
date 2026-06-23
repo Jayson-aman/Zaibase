@@ -78,8 +78,8 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
 
   const proPkg = offering ? findPkg(offering, 'pro') : undefined;
   const maxPkg = offering ? findPkg(offering, 'max') : undefined;
-  const proPrice = proPkg?.product.priceString ?? '¥980/月';
-  const maxPrice = maxPkg?.product.priceString ?? '¥2,200/月';
+  const proPrice = proPkg?.product.priceString ?? '¥1,000/月';
+  const maxPrice = maxPkg?.product.priceString ?? '¥2,000/月';
 
   return (
     <Modal
