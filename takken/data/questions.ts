@@ -27,6 +27,7 @@ import { takkenhoQuestions2b } from './questions_takkenho_2b';
 import { takkenhoQuestions3 } from './questions_takkenho_3';
 import { takkenhoQuestions3b } from './questions_takkenho_3b';
 import { takkenhoQuestions4 } from './questions_takkenho_4';
+import { takkenhoQuestions6 } from './questions_takkenho_6';
 
 export const QUESTIONS: TakkenQuestion[] = [
   ...horeiQuestions,
@@ -43,4 +44,5 @@ export const QUESTIONS: TakkenQuestion[] = [
   ...takkenhoQuestions3,
   ...takkenhoQuestions3b,
   ...takkenhoQuestions4,
+  ...takkenhoQuestions6,
 ];
