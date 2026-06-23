@@ -20,6 +20,7 @@ import { zeiQuestions2 } from './questions_zei_2';
 import { kenriQuestions } from './questions_kenri';
 import { kenriQuestions2 } from './questions_kenri_2';
 import { takkenhoQuestions } from './questions_takkenho';
+import { takkenhoQuestions2 } from './questions_takkenho_2';
 import { takkenhoQuestions2b } from './questions_takkenho_2b';
 import { takkenhoQuestions3 } from './questions_takkenho_3';
 import { takkenhoQuestions3b } from './questions_takkenho_3b';
@@ -33,6 +34,7 @@ export const QUESTIONS: TakkenQuestion[] = [
   ...kenriQuestions,
   ...kenriQuestions2,
   ...takkenhoQuestions,
+  ...takkenhoQuestions2,
   ...takkenhoQuestions2b,
   ...takkenhoQuestions3,
   ...takkenhoQuestions3b,
