@@ -53,11 +53,35 @@ export async function getCustomerInfo(): Promise<unknown> {
   return Purchases.getCustomerInfo();
 }
 
+export const PRODUCT_ID_PRO = 'com.zaibase.exam.pro.monthly';
+export const PRODUCT_ID_MAX = 'com.zaibase.exam.max.monthly';
+
 export async function fetchCurrentOffering(): Promise<unknown> {
   if (isWeb || !isRevenueCatConfigured()) return null;
   const Purchases = (await import('react-native-purchases')).default;
   const offerings = await Purchases.getOfferings();
   return offerings.current ?? null;
+}
+
+export async function fetchProMaxProducts(): Promise<{ pro: unknown; max: unknown }> {
+  if (isWeb || !isRevenueCatConfigured()) return { pro: null, max: null };
+  try {
+    const Purchases = (await import('react-native-purchases')).default;
+    const products = await Purchases.getProducts([PRODUCT_ID_PRO, PRODUCT_ID_MAX]);
+    return {
+      pro: products.find((p) => p.identifier === PRODUCT_ID_PRO) ?? null,
+      max: products.find((p) => p.identifier === PRODUCT_ID_MAX) ?? null,
+    };
+  } catch {
+    return { pro: null, max: null };
+  }
+}
+
+export async function purchaseProduct(product: unknown): Promise<unknown> {
+  if (!isRevenueCatConfigured()) throw new Error('課金は準備中です');
+  const Purchases = (await import('react-native-purchases')).default;
+  const { customerInfo } = await Purchases.purchaseStoreProduct(product as never);
+  return customerInfo;
 }
 
 export async function purchasePackage(pkg: unknown): Promise<unknown> {
