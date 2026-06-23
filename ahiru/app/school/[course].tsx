@@ -13,6 +13,7 @@ import { useBetaAccess } from '../../hooks/useBetaAccess';
 import { useSubscription } from '../../hooks/useSubscription';
 import { questions } from '../../data/questions';
 import type { SubjectKey } from '../../data/questions';
+import { getCourseInfo } from '../../data/courses';
 
 const D = {
   bg:          '#040C1C',
@@ -138,6 +139,8 @@ export default function SchoolCurriculumScreen() {
   const [activeSubject, setActiveSubject] = useState<SubjectKey>('sansu');
 
   const meta = SCHOOL_META[course ?? ''] ?? { name: course ?? '学校', emoji: '🏫', hensachi: '—', region: '—' };
+  const courseInfo = course ? getCourseInfo(course as any) : null;
+  const examType = courseInfo?.examType ?? 'chugaku';
 
   // Question counts per stage
   const stageCounts = useMemo(() => {
@@ -170,16 +173,16 @@ export default function SchoolCurriculumScreen() {
         router.push('/(tabs)/textbook' as any);
         break;
       case 'kiso':
-        router.push(`/quiz/${activeSubject}?difficulty=basic&course=${course}` as any);
+        router.push(`/quiz/${activeSubject}?difficulty=basic&course=${course}&examType=${examType}` as any);
         break;
       case 'oyo':
-        router.push(`/quiz/${activeSubject}?difficulty=advanced&course=${course}` as any);
+        router.push(`/quiz/${activeSubject}?difficulty=advanced&course=${course}&examType=${examType}` as any);
         break;
       case 'mogi':
-        router.push(`/quiz/${activeSubject}?mode=mock&course=${course}` as any);
+        router.push(`/quiz/${activeSubject}?mode=mock&course=${course}&examType=${examType}` as any);
         break;
       case 'kakomon':
-        router.push(`/quiz/${activeSubject}?mode=kakomon&course=${course}` as any);
+        router.push(`/quiz/${activeSubject}?mode=kakomon&course=${course}&examType=${examType}` as any);
         break;
     }
   }

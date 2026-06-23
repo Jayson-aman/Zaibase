@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { questionsBySubject, subjectInfo, SubjectKey, Question } from '../../data/questions';
+import { ALL_COURSES } from '../../data/courses';
 import type { CourseKey, ExamType } from '../../data/courses';
 import { explanationsSansu } from '../../data/explanations_sansu';
 import { explanationsKokugo } from '../../data/explanations_kokugo';
@@ -46,7 +47,7 @@ function isDifficulty(value: string): value is Difficulty {
 }
 
 function isCourseKey(value: string): value is CourseKey {
-  return ['general','kankan','shitennoji','nandai','koko-general','koko-kankan','koko-top'].includes(value);
+  return ALL_COURSES.some((c) => c.key === value);
 }
 
 function isExamType(value: string): value is ExamType {
