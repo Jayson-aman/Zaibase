@@ -7,6 +7,7 @@ import {
   ScrollView,
   Dimensions,
   Pressable,
+  Modal,
 } from 'react-native';
 import Animated, {
   useAnimatedStyle,
@@ -22,7 +23,7 @@ import {
 import { GeoLayerId } from '../constants/proAccess';
 
 const MAP_W = Dimensions.get('window').width - 48;
-const MAP_H = MAP_W * 1.15;
+const MAP_H = MAP_W * 0.72;
 
 const LAYERS: { key: GeoLayerId; label: string; emoji: string; pro?: boolean }[] = [
   { key: 'terrain', label: '地形', emoji: '🏔' },
@@ -153,25 +154,41 @@ export default function GeographyExplorer({ isPro, onRequirePro }: Props) {
         </Animated.View>
       </View>
 
-      {selected ? (
-        <RegionDetail region={selected} layer={layer} onClose={() => resetView()} />
-      ) : (
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.zoneScroll}>
-          {industrialZoneSummary.map((z) => (
-            <TouchableOpacity
-              key={z.name}
-              style={styles.zoneChip}
-              onPress={() => !isPro && onRequirePro()}
-              activeOpacity={isPro ? 1 : 0.7}
-            >
-              <Text style={styles.zoneChipTitle}>
-                {z.name}工業地帯{!isPro ? ' 🔒' : ''}
-              </Text>
-              <Text style={styles.zoneChipSub}>{z.region} — {z.key}</Text>
-            </TouchableOpacity>
-          ))}
-        </ScrollView>
-      )}
+      <View style={styles.tapHint}>
+        <Text style={styles.tapHintText}>👆 地域をタップすると詳細情報が表示されます</Text>
+      </View>
+
+      <Modal
+        visible={!!selected}
+        animationType="slide"
+        presentationStyle="pageSheet"
+        onRequestClose={() => resetView()}
+      >
+        {selected && (
+          <View style={styles.modalRoot}>
+            <View style={[styles.modalHeader, { backgroundColor: selected.color }]}>
+              <Text style={styles.modalHeaderTitle}>{selected.emoji} {selected.name}</Text>
+              <TouchableOpacity onPress={() => resetView()} style={styles.modalCloseBtn}>
+                <Text style={styles.modalCloseBtnText}>✕ 閉じる</Text>
+              </TouchableOpacity>
+            </View>
+            <ScrollView style={styles.layerRow2} horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ padding: 12, gap: 8, flexDirection: 'row' }}>
+              {LAYERS.map((l) => (
+                <TouchableOpacity
+                  key={l.key}
+                  style={[styles.layerBtn, layer === l.key && styles.layerBtnActive]}
+                  onPress={() => handleLayerChange(l.key, l.pro)}
+                >
+                  <Text style={[styles.layerText, layer === l.key && styles.layerTextActive]}>
+                    {l.emoji} {l.label}{l.pro && !isPro ? ' 🔒' : ''}
+                  </Text>
+                </TouchableOpacity>
+              ))}
+            </ScrollView>
+            <RegionDetail region={selected} layer={layer} onClose={() => resetView()} />
+          </View>
+        )}
+      </Modal>
     </View>
   );
 }
@@ -388,6 +405,55 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 4,
     elevation: 4,
+  },
+  tapHint: {
+    backgroundColor: '#EEF4FF',
+    borderRadius: 10,
+    paddingVertical: 8,
+    paddingHorizontal: 14,
+    marginBottom: 10,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#C5D8F8',
+  },
+  tapHintText: {
+    fontSize: 13,
+    fontWeight: '600',
+    color: '#1E5FBE',
+  },
+  modalRoot: {
+    flex: 1,
+    backgroundColor: '#F5F7FA',
+  },
+  modalHeader: {
+    paddingTop: 52,
+    paddingBottom: 16,
+    paddingHorizontal: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  modalHeaderTitle: {
+    fontSize: 22,
+    fontWeight: '900',
+    color: '#FFFFFF',
+  },
+  modalCloseBtn: {
+    backgroundColor: 'rgba(0,0,0,0.2)',
+    borderRadius: 8,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+  },
+  modalCloseBtnText: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#FFFFFF',
+  },
+  layerRow2: {
+    flexGrow: 0,
+    backgroundColor: '#FFFFFF',
+    borderBottomWidth: 1,
+    borderBottomColor: '#E5EAF0',
   },
   regionPress: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 2 },
   regionEmoji: { fontSize: 16 },

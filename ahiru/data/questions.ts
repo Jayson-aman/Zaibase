@@ -22,12 +22,15 @@ import { myojoQuestions, tezukayamaQuestions, kinrankaiQuestions, otaniQuestions
 import { kisoSansu } from './kiso_sansu';
 import { sansuKiso } from './questions_sansu_kiso';
 import { sansuExtra2 } from './questions_sansu_extra2';
+import { sansuGeneralPlus } from './questions_sansu_general_plus';
 import { oyoSansuPart1 } from './oyoSansuPart1';
 import { oyoSansuPart2 } from './oyoSansuPart2';
 import { oyoSansuPart3 } from './oyoSansuPart3';
 import { kisoRika } from './kiso_rika';
 import { rikaExtra } from './questions_rika_extra';
 import { rikaExtra2 } from './questions_rika_extra2';
+import { rikaGeneralPlus } from './questions_rika_general_plus';
+import { kokugoGeneralPlus } from './questions_kokugo_general_plus';
 import { kokugoExtra } from './questions_kokugo_extra';
 import { kokugoExtra3 } from './questions_kokugo_extra3';
 import { kokugoExtra2a } from './questions_kokugo_extra2a';
@@ -36,6 +39,7 @@ import { shakaiExtra } from './questions_shakai_extra';
 import { kisoShakai } from './kiso-questions';
 import { shakaiExtra2a } from './questions_shakai_extra2a';
 import { shakaiExtra2b } from './questions_shakai_extra2b';
+import { shakaiGeneralPlus } from './questions_shakai_general_plus';
 import { eigoExtra } from './questions_eigo_extra';
 import { eigoExtra2 } from './questions_eigo_extra2';
 import { nichinokenSansu } from './nichinoken_sansu';
@@ -2770,12 +2774,15 @@ export const questions: Question[] = [
   ...kisoSansu,
   ...sansuKiso,
   ...sansuExtra2,
+  ...sansuGeneralPlus,
   ...oyoSansuPart1,
   ...oyoSansuPart2,
   ...oyoSansuPart3,
   ...kisoRika,
   ...rikaExtra,
   ...rikaExtra2,
+  ...rikaGeneralPlus,
+  ...kokugoGeneralPlus,
   ...kokugoExtra,
   ...kokugoExtra3,
   ...kokugoExtra2a,
@@ -2784,6 +2791,7 @@ export const questions: Question[] = [
   ...kisoShakai,
   ...shakaiExtra2a,
   ...shakaiExtra2b,
+  ...shakaiGeneralPlus,
   ...eigoExtra,
   ...eigoExtra2,
   ...nichinokenSansu,
