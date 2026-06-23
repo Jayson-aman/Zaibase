@@ -16,9 +16,11 @@ export type TakkenQuestion = {
 import { horeiQuestions } from './questions_horei';
 import { zeiQuestions } from './questions_zei';
 import { kenriQuestions } from './questions_kenri';
+import { takkenhoQuestions } from './questions_takkenho';
 
 export const QUESTIONS: TakkenQuestion[] = [
   ...horeiQuestions,
   ...zeiQuestions,
   ...kenriQuestions,
+  ...takkenhoQuestions,
 ];
