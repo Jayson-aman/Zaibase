@@ -8,6 +8,7 @@ import {
   ActivityIndicator,
   ScrollView,
   Alert,
+  Platform,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
@@ -197,6 +198,16 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
             </>
           )}
 
+          {Platform.OS === 'android' && (
+            <View style={styles.androidNotice}>
+              <Text style={styles.androidNoticeText}>
+                ⚠️ Android では現在 PRO / MAX プランのご購入はご利用いただけません。{'\n'}
+                購入は iPhone / iPad からお願いします。{'\n'}
+                ※ Android 対応は近日実装予定です。
+              </Text>
+            </View>
+          )}
+
           <TouchableOpacity
             style={styles.restoreBtn}
             onPress={handleRestore}
@@ -327,6 +338,22 @@ const styles = StyleSheet.create({
   },
   buyBtnDisabled: { opacity: 0.5 },
   buyBtnText: { fontSize: 22, fontWeight: '800', color: '#fff' },
+  androidNotice: {
+    backgroundColor: 'rgba(255,165,0,0.15)',
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: 'rgba(255,165,0,0.5)',
+    padding: 16,
+    marginBottom: 8,
+    width: '100%',
+  },
+  androidNoticeText: {
+    color: '#FFA500',
+    fontSize: 15,
+    fontWeight: '700',
+    textAlign: 'center',
+    lineHeight: 24,
+  },
   restoreBtn: { paddingVertical: 16 },
   restoreBtnText: { color: 'rgba(255,255,255,0.5)', fontSize: 16, fontWeight: '600' },
   terms: {
