@@ -53,6 +53,18 @@ import { kokoNyushiRika50 } from './koko_nyushi_rika_50';
 import { kokoNyushiSansu50 } from './koko_nyushi_sansu_50';
 import { kokoNyushiEigo50 } from './koko_nyushi_eigo_50';
 import { kokoNyushiShakai50 } from './koko_nyushi_shakai_50';
+import { kokoNyushiKokugo50 } from './koko_nyushi_kokugo_50';
+import { kokoKisoRika50b } from './koko_kiso_rika_50b';
+import { kokoKisoShakai50b } from './koko_kiso_shakai_50b';
+import { kokoKisoKokugo50b } from './koko_kiso_kokugo_50b';
+import { kokoKisoSansu50b } from './koko_kiso_sansu_50b';
+import { kokoKisoEigo50b } from './koko_kiso_eigo_50b';
+import { kokoOyoRika50 } from './koko_oyo_rika_50';
+import { kokoOyoKokugo50 } from './koko_oyo_kokugo_50';
+import { kokoOyoShakai50 } from './koko_oyo_shakai_50';
+import { kokoOyoEigo50 } from './koko_oyo_eigo_50';
+import { kokoMoshiRika50 } from './koko_moshi_rika_50';
+import { kokoMoshiEigo50 } from './koko_moshi_eigo_50';
 
 export type Question = {
   id: string;
@@ -2737,9 +2749,21 @@ export const questions: Question[] = [
   ...kokoNyushiSansu50,
   ...kokoNyushiEigo50,
   ...kokoNyushiShakai50,
+  ...kokoNyushiKokugo50,
   ...kokoKisoEigo50,
   ...kokoKisoShakai50,
   ...kokoMoshiShakai50,
+  ...kokoKisoRika50b,
+  ...kokoKisoShakai50b,
+  ...kokoKisoKokugo50b,
+  ...kokoKisoSansu50b,
+  ...kokoKisoEigo50b,
+  ...kokoOyoRika50,
+  ...kokoOyoKokugo50,
+  ...kokoOyoShakai50,
+  ...kokoOyoEigo50,
+  ...kokoMoshiRika50,
+  ...kokoMoshiEigo50,
   // ── 学校別問題（大阪私学 最難関） ──
   ...seikoQuestions,
   ...seifuNankaiQuestions,
