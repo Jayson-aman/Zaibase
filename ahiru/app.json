@@ -9,7 +9,8 @@
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.zaibase.exam"
+      "bundleIdentifier": "com.zaibase.exam",
+      "buildNumber": "9"
     },
     "android": {
       "package": "com.zaibase.exam",
