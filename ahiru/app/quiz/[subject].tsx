@@ -24,6 +24,7 @@ const allExplanations: Record<string, string> = {
   ...explanationsEigo,
 };
 import QuizCard from '../../components/QuizCard';
+import Paywall from '../../components/Paywall';
 import AnimatedMascot from '../../components/AnimatedMascot';
 import { getResultMascot } from '../../data/images';
 import { saveProgress } from '../../store/progress';
@@ -137,6 +138,8 @@ export default function QuizScreen() {
   const [showExplanation, setShowExplanation] = useState(false);
   const [wrongIds, setWrongIds] = useState<string[]>([]);
   const [feedback, setFeedback] = useState<'correct' | 'wrong' | null>(null);
+  const [waitingNext, setWaitingNext] = useState(false);
+  const [showPaywall, setShowPaywall] = useState(false);
 
   const currentQuestion = questions[currentIndex];
   const total = questions.length;
@@ -214,30 +217,42 @@ export default function QuizScreen() {
     setRevealed(true);
   }
 
+  async function advanceOrFinish(currentScore: number, currentWrongIds: string[]) {
+    setWaitingNext(false);
+    if (currentIndex + 1 >= total) {
+      if (!savedProgress) {
+        setSavedProgress(true);
+        await saveProgress(subjectKey, currentScore, total, currentWrongIds);
+        submitRankingScore(currentScore, total).catch(() => {});
+      }
+      setFinished(true);
+    } else {
+      setCurrentIndex((i) => i + 1);
+      setRevealed(false);
+      setShowExplanation(false);
+    }
+  }
+
   async function handleAnswer(correct: boolean) {
     const newScore = correct ? score + 1 : score;
     const newWrongIds = correct ? wrongIds : [...wrongIds, currentQuestion.id];
+    setScore(newScore);
+    setWrongIds(newWrongIds);
 
-    setFeedback(correct ? 'correct' : 'wrong');
+    if (!correct) {
+      setFeedback('wrong');
+      setTimeout(() => {
+        setFeedback(null);
+        setWaitingNext(true);
+      }, 400);
+      return;
+    }
+
+    setFeedback('correct');
     setTimeout(async () => {
       setFeedback(null);
-      if (currentIndex + 1 >= total) {
-        if (!savedProgress) {
-          setSavedProgress(true);
-          await saveProgress(subjectKey, newScore, total, newWrongIds);
-          submitRankingScore(newScore, total).catch(() => {});
-        }
-        setScore(newScore);
-        setWrongIds(newWrongIds);
-        setFinished(true);
-      } else {
-        setScore(newScore);
-        setWrongIds(newWrongIds);
-        setCurrentIndex((i) => i + 1);
-        setRevealed(false);
-        setShowExplanation(false);
-      }
-    }, 900);
+      await advanceOrFinish(newScore, newWrongIds);
+    }, 500);
   }
 
   async function handleRestart() {
@@ -248,6 +263,7 @@ export default function QuizScreen() {
     setSavedProgress(false);
     setWrongIds([]);
     setShowExplanation(false);
+    setWaitingNext(false);
   }
 
   if (questions.length === 0) {
@@ -418,6 +434,59 @@ export default function QuizScreen() {
           isPro={isPro}
         />
 
+        {/* Wrong answer feedback - Gemini-style */}
+        {waitingNext && (
+          <View style={styles.wrongFeedbackWrap}>
+            <View style={styles.wrongHeader}>
+              <Text style={styles.wrongHeaderText}>✗ 不正解！</Text>
+              <Text style={styles.wrongCorrectAnswer}>正解：{currentQuestion.answer}</Text>
+            </View>
+
+            {(currentQuestion.hint || currentQuestion.explanation || allExplanations[currentQuestion.id]) && (
+              <View style={styles.wrongExplanationCard}>
+                <Text style={styles.wrongExplanationTitle}>📖 解説</Text>
+                <Text style={styles.wrongExplanationText}>
+                  {isPro || isMax
+                    ? (currentQuestion.explanation ?? allExplanations[currentQuestion.id] ?? currentQuestion.hint)
+                    : (currentQuestion.hint ?? currentQuestion.explanation?.split('\n')[0] ?? allExplanations[currentQuestion.id]?.split('\n')[0])}
+                </Text>
+                {!isPro && !isMax && (currentQuestion.explanation || allExplanations[currentQuestion.id]) && (
+                  <TouchableOpacity
+                    style={styles.explanationUpgradeBtn}
+                    onPress={() => setShowPaywall(true)}
+                    activeOpacity={0.85}
+                  >
+                    <Text style={styles.explanationUpgradeBtnText}>🔒 詳細解説を見る（Pro/Max）</Text>
+                  </TouchableOpacity>
+                )}
+              </View>
+            )}
+
+            {!isPro && !isMax && (
+              <TouchableOpacity
+                style={styles.upgradeBanner}
+                onPress={() => setShowPaywall(true)}
+                activeOpacity={0.85}
+              >
+                <Text style={styles.upgradeBannerEmoji}>💎</Text>
+                <View style={styles.upgradeBannerContent}>
+                  <Text style={styles.upgradeBannerTitle}>Pro / Max にアップグレード</Text>
+                  <Text style={styles.upgradeBannerSub}>全問詳細解説・AI弱点コーチ・聞き流しモード</Text>
+                </View>
+                <Text style={styles.upgradeBannerArrow}>→</Text>
+              </TouchableOpacity>
+            )}
+
+            <TouchableOpacity
+              style={[styles.nextQuestionBtn, { backgroundColor: info.color }]}
+              onPress={() => advanceOrFinish(score, wrongIds)}
+              activeOpacity={0.85}
+            >
+              <Text style={styles.nextQuestionBtnText}>次の問題へ →</Text>
+            </TouchableOpacity>
+          </View>
+        )}
+
         {/* Explanation card - shown after reveal */}
         {revealed && (currentQuestion.explanation || allExplanations[currentQuestion.id]) && isPro && (
           <View style={styles.explanationWrap}>
@@ -448,8 +517,8 @@ export default function QuizScreen() {
           </View>
         )}
 
-        {/* Answer buttons - only shown in flip-card mode after reveal */}
-        {revealed && !currentChoices && (
+        {/* Answer buttons - only shown in flip-card mode after reveal (hide when waiting for next) */}
+        {revealed && !currentChoices && !waitingNext && (
           <View style={styles.answerButtons}>
             <TouchableOpacity
               style={styles.correctButton}
@@ -490,6 +559,12 @@ export default function QuizScreen() {
           </Text>
         </View>
       )}
+
+      <Paywall
+        visible={showPaywall}
+        onClose={() => setShowPaywall(false)}
+        onPurchased={() => setShowPaywall(false)}
+      />
     </SafeAreaView>
   );
 }
@@ -846,5 +921,116 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '700',
     color: '#555',
+  },
+  // Wrong answer feedback block
+  wrongFeedbackWrap: {
+    marginTop: 14,
+    marginHorizontal: 16,
+    gap: 12,
+  },
+  wrongHeader: {
+    backgroundColor: '#FEE8E6',
+    borderRadius: 16,
+    paddingVertical: 16,
+    paddingHorizontal: 20,
+    borderWidth: 2,
+    borderColor: '#E74C3C',
+    alignItems: 'center',
+  },
+  wrongHeaderText: {
+    fontSize: 26,
+    fontWeight: '900',
+    color: '#C0392B',
+    letterSpacing: 1,
+  },
+  wrongCorrectAnswer: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: '#555',
+    marginTop: 4,
+  },
+  wrongExplanationCard: {
+    backgroundColor: '#FFFBEB',
+    borderRadius: 16,
+    padding: 18,
+    borderLeftWidth: 4,
+    borderLeftColor: '#F59E0B',
+  },
+  wrongExplanationTitle: {
+    fontSize: 18,
+    fontWeight: '800',
+    color: '#B45309',
+    marginBottom: 8,
+  },
+  wrongExplanationText: {
+    fontSize: 17,
+    color: '#78350F',
+    lineHeight: 28,
+    fontWeight: '500',
+  },
+  explanationUpgradeBtn: {
+    marginTop: 12,
+    backgroundColor: '#EFF6FF',
+    borderRadius: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#BFDBFE',
+  },
+  explanationUpgradeBtnText: {
+    fontSize: 15,
+    fontWeight: '700',
+    color: '#1D4ED8',
+  },
+  upgradeBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#1A1A2E',
+    borderRadius: 16,
+    paddingVertical: 16,
+    paddingHorizontal: 18,
+    gap: 12,
+    borderWidth: 1.5,
+    borderColor: '#C8A84B',
+  },
+  upgradeBannerEmoji: {
+    fontSize: 28,
+    flexShrink: 0,
+  },
+  upgradeBannerContent: {
+    flex: 1,
+  },
+  upgradeBannerTitle: {
+    fontSize: 16,
+    fontWeight: '800',
+    color: '#C8A84B',
+  },
+  upgradeBannerSub: {
+    fontSize: 13,
+    color: 'rgba(255,255,255,0.7)',
+    marginTop: 2,
+  },
+  upgradeBannerArrow: {
+    fontSize: 22,
+    color: '#C8A84B',
+    fontWeight: '800',
+    flexShrink: 0,
+  },
+  nextQuestionBtn: {
+    borderRadius: 16,
+    paddingVertical: 18,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 8,
+    elevation: 5,
+  },
+  nextQuestionBtnText: {
+    fontSize: 18,
+    fontWeight: '800',
+    color: '#FFFFFF',
+    letterSpacing: 0.5,
   },
 });
