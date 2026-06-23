@@ -11,6 +11,7 @@ import { kokoKisoSansu100 } from './koko_kiso_sansu_100';
 import { kokoOyoSansu50 } from './koko_oyo_sansu_50';
 import { kokoMoshiSansu50 } from './koko_moshi_sansu_50';
 import { kokoKisoKokugo50 } from './koko_kiso_kokugo_50';
+import { kokoMoshiKokugo50 } from './koko_moshi_kokugo_50';
 import { kokoKisoRika50 } from './koko_kiso_rika_50';
 import { kokoKisoEigo50 } from './koko_kiso_eigo_50';
 import { kokoKisoShakai50 } from './koko_kiso_shakai_50';
@@ -2729,6 +2730,7 @@ export const questions: Question[] = [
   ...kokoOyoSansu50,
   ...kokoMoshiSansu50,
   ...kokoKisoKokugo50,
+  ...kokoMoshiKokugo50,
   ...kokoKisoRika50,
   ...kokoNyushiRika50,
   ...kokoNyushiSansu50,
