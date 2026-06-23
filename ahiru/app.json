@@ -30,7 +30,14 @@
       }
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "問題の写真をAI先生に送るために写真へのアクセスが必要です。",
+          "cameraPermission": "問題の写真を撮影してAI先生に質問するためにカメラへのアクセスが必要です。"
+        }
+      ]
     ]
   }
 }
