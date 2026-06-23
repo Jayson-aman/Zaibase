@@ -15,12 +15,20 @@ export type TakkenQuestion = {
 
 import { horeiQuestions } from './questions_horei';
 import { zeiQuestions } from './questions_zei';
+import { zeiQuestions2 } from './questions_zei_2';
 import { kenriQuestions } from './questions_kenri';
+import { kenriQuestions2 } from './questions_kenri_2';
 import { takkenhoQuestions } from './questions_takkenho';
+import { takkenhoQuestions3 } from './questions_takkenho_3';
+import { takkenhoQuestions4 } from './questions_takkenho_4';
 
 export const QUESTIONS: TakkenQuestion[] = [
   ...horeiQuestions,
   ...zeiQuestions,
+  ...zeiQuestions2,
   ...kenriQuestions,
+  ...kenriQuestions2,
   ...takkenhoQuestions,
+  ...takkenhoQuestions3,
+  ...takkenhoQuestions4,
 ];
