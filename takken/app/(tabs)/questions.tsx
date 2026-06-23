@@ -49,10 +49,6 @@ export default function QuestionsScreen() {
   }, [filter]);
 
   const handleStart = () => {
-    if (!isPro && (difficulty === 'advanced' || allFiltered.length > FREE_QUESTION_LIMIT)) {
-      setShowPaywall(true);
-      return;
-    }
     setQuestions(shuffle(filtered));
     setCurrent(0);
     setStarted(true);
