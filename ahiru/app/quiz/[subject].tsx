@@ -28,6 +28,7 @@ import Paywall from '../../components/Paywall';
 import AnimatedMascot from '../../components/AnimatedMascot';
 import { getResultMascot } from '../../data/images';
 import { saveProgress } from '../../store/progress';
+import { incrementTrialQuestions, isTrialExpired, TRIAL_QUESTION_LIMIT } from '../../store/trial';
 import { submitRankingScore } from '../../services/ranking';
 import { getDailyQuestions, getTodayDayLabel } from '../../utils/dailyChallenge';
 import { useSubscription } from '../../hooks/useSubscription';
@@ -236,6 +237,16 @@ export default function QuizScreen() {
   }
 
   async function handleAnswer(correct: boolean) {
+    // 無料ユーザーのお試し問題数チェック
+    if (!isPro && !isMax) {
+      const expired = await isTrialExpired();
+      if (expired) {
+        setShowPaywall(true);
+        return;
+      }
+      await incrementTrialQuestions();
+    }
+
     const newScore = correct ? score + 1 : score;
     const newWrongIds = correct ? wrongIds : [...wrongIds, currentQuestion.id];
     setScore(newScore);

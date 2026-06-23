@@ -111,16 +111,24 @@ exports.askTutor = onCall(
     if (!questionText && !imageBase64)
       throw new HttpsError("invalid-argument", "質問文または画像が必要です");
 
-    // Maxプラン確認（Firestoreに保存されたtierを確認）
+    // Maxプラン確認 or 無料体験（1回限り）
     const userRef = db.collection("users").doc(uid);
     const userSnap = await userRef.get();
-    const tier = userSnap.exists ? (userSnap.data()?.tier ?? "free") : "free";
+    const userData = userSnap.exists ? userSnap.data() : {};
+    const tier = userData?.tier ?? "free";
+    const trialAiUsed = userData?.trialAiUsed ?? false;
 
     if (tier !== "max") {
-      throw new HttpsError(
-        "permission-denied",
-        "AI個別指導はMaxプラン限定です。アップグレードして使ってみよう！"
-      );
+      if (trialAiUsed) {
+        throw new HttpsError(
+          "permission-denied",
+          "AI個別指導の無料体験（1回）は使い切りました。Maxプランにアップグレードすると月15回使えるよ！"
+        );
+      }
+      // 初回のみ許可 → 体験済みマークを付ける
+      if (isNewSession) {
+        await userRef.set({ trialAiUsed: true, updatedAt: FieldValue.serverTimestamp() }, { merge: true });
+      }
     }
 
     const turnCount = await getOrCreateSession(uid, sessionId, isNewSession);
