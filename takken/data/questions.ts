@@ -17,6 +17,7 @@ import { horeiQuestions } from './questions_horei';
 import { horeiQuestions2 } from './questions_horei_2';
 import { zeiQuestions } from './questions_zei';
 import { zeiQuestions2 } from './questions_zei_2';
+import { zeiQuestions3 } from './questions_zei_3';
 import { kenriQuestions } from './questions_kenri';
 import { kenriQuestions2 } from './questions_kenri_2';
 import { takkenhoQuestions } from './questions_takkenho';
@@ -31,6 +32,7 @@ export const QUESTIONS: TakkenQuestion[] = [
   ...horeiQuestions2,
   ...zeiQuestions,
   ...zeiQuestions2,
+  ...zeiQuestions3,
   ...kenriQuestions,
   ...kenriQuestions2,
   ...takkenhoQuestions,
