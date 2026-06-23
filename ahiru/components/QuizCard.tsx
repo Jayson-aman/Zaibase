@@ -33,6 +33,11 @@ type Props = {
 
 const { width, height } = Dimensions.get('window');
 
+function extractTrailingUnit(text: string): string {
+  const m = text.trim().match(/(cm²|㎠|cm³|km²|m²|㎡|mm|km|cm|m|kg|g|[%％]|円|羽|本|個|匹|頭|枚|冊|杯|台|艘|門|度|℃|時間|分|秒)$/u);
+  return m ? m[1] : '';
+}
+
 export default function QuizCard({ question, onReveal, choices, onChoiceSelect, isPro = false }: Props) {
   const [revealed, setRevealed] = useState(false);
   const [selectedChoice, setSelectedChoice] = useState<string | null>(null);
@@ -102,52 +107,70 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
               </ScrollView>
             </View>
           )}
-          <View style={styles.choicesWrap}>
-            {choices.map((choice, i) => {
-              const isSelected = selectedChoice === choice;
-              const isCorrect = choice === question.answer;
-              const showResult = selectedChoice != null;
-
-              return (
-                <TouchableOpacity
-                  key={`${i}-${choice}`}
-                  style={[
-                    styles.choiceBtn,
-                    showResult && isCorrect && styles.choiceBtnCorrect,
-                    showResult && isSelected && !isCorrect && styles.choiceBtnWrong,
-                  ]}
-                  onPress={() => handleChoicePress(choice)}
-                  disabled={selectedChoice != null}
-                  activeOpacity={0.75}
-                >
-                  <View style={[
-                    styles.choiceLetter,
-                    showResult && isCorrect && styles.choiceLetterCorrect,
-                    showResult && isSelected && !isCorrect && styles.choiceLetterWrong,
-                  ]}>
-                    <Text style={[
-                      styles.choiceLetterText,
-                      showResult && (isCorrect || isSelected) && styles.choiceLetterTextResult,
-                    ]}>{choiceLabels[i]}</Text>
+          {(() => {
+            const units = choices.map((c) => extractTrailingUnit(c));
+            const first = units[0] ?? '';
+            const sharedUnit = first !== '' && units.every((u) => u === first) ? first : '';
+            return (
+              <>
+                {sharedUnit !== '' && (
+                  <View style={styles.sharedUnitWrap}>
+                    <Text style={styles.sharedUnitText}>単位：{sharedUnit}</Text>
                   </View>
-                  <Text
-                    style={[
-                      styles.choiceText,
-                      showResult && isCorrect && styles.choiceTextCorrect,
-                      showResult && isSelected && !isCorrect && styles.choiceTextWrong,
-                    ]}
-                    numberOfLines={3}
-                  >{choice}</Text>
-                  {showResult && isCorrect && (
-                    <Text style={styles.choiceCorrectMark}>✓</Text>
-                  )}
-                  {showResult && isSelected && !isCorrect && (
-                    <Text style={styles.choiceWrongMark}>✗</Text>
-                  )}
-                </TouchableOpacity>
-              );
-            })}
-          </View>
+                )}
+                <View style={styles.choicesWrap}>
+                  {choices.map((choice, i) => {
+                    const isSelected = selectedChoice === choice;
+                    const isCorrect = choice === question.answer;
+                    const showResult = selectedChoice != null;
+                    const displayText = sharedUnit !== ''
+                      ? choice.trim().slice(0, choice.trim().length - sharedUnit.length).trim()
+                      : choice;
+
+                    return (
+                      <TouchableOpacity
+                        key={`${i}-${choice}`}
+                        style={[
+                          styles.choiceBtn,
+                          showResult && isCorrect && styles.choiceBtnCorrect,
+                          showResult && isSelected && !isCorrect && styles.choiceBtnWrong,
+                        ]}
+                        onPress={() => handleChoicePress(choice)}
+                        disabled={selectedChoice != null}
+                        activeOpacity={0.75}
+                      >
+                        <View style={[
+                          styles.choiceLetter,
+                          showResult && isCorrect && styles.choiceLetterCorrect,
+                          showResult && isSelected && !isCorrect && styles.choiceLetterWrong,
+                        ]}>
+                          <Text style={[
+                            styles.choiceLetterText,
+                            showResult && (isCorrect || isSelected) && styles.choiceLetterTextResult,
+                          ]}>{choiceLabels[i]}</Text>
+                        </View>
+                        <Text
+                          style={[
+                            styles.choiceText,
+                            showResult && isCorrect && styles.choiceTextCorrect,
+                            showResult && isSelected && !isCorrect && styles.choiceTextWrong,
+                          ]}
+                          numberOfLines={3}
+                        >{displayText}</Text>
+                        {showResult && isCorrect && (
+                          <Text style={styles.choiceCorrectMark}>✓</Text>
+                        )}
+                        {showResult && isSelected && !isCorrect && (
+                          <Text style={styles.choiceWrongMark}>✗</Text>
+                        )}
+                      </TouchableOpacity>
+                    );
+                  })}
+                </View>
+              </>
+            );
+          })()}
+
           {selectedChoice != null && (question.explanation != null || question.hint != null) && (
             <View style={styles.hintBox}>
               <Text style={styles.hintLabel}>📖 解説</Text>
@@ -269,6 +292,21 @@ const styles = StyleSheet.create({
   choiceSection: {
     padding: 20,
     paddingTop: 14,
+  },
+  sharedUnitWrap: {
+    backgroundColor: '#EEF4FF',
+    borderRadius: 8,
+    paddingHorizontal: 14,
+    paddingVertical: 6,
+    alignSelf: 'flex-start',
+    marginBottom: 8,
+    borderWidth: 1,
+    borderColor: '#C5D8F8',
+  },
+  sharedUnitText: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#1E5FBE',
   },
   choicesWrap: {
     gap: 10,
