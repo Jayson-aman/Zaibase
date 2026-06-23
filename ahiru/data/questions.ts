@@ -81,6 +81,7 @@ import { kokoSansuEx03 } from './koko_sansu_ex_03';
 import { kokoSansuEx04 } from './koko_sansu_ex_04';
 import { kokoSansuEx05 } from './koko_sansu_ex_05';
 import { chugakuSansuEx01 } from './chugaku_sansu_ex_01';
+import { kokoSansuEx09 } from './koko_sansu_ex_09';
 
 export type Question = {
   id: string;
@@ -2859,6 +2860,7 @@ export const questions: Question[] = [
   ...kokoSansuEx04,
   ...kokoSansuEx05,
   ...chugakuSansuEx01,
+  ...kokoSansuEx09,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {
