@@ -15,6 +15,7 @@ export type TakkenQuestion = {
 
 import { horeiQuestions } from './questions_horei';
 import { horeiQuestions2 } from './questions_horei_2';
+import { horeiQuestions3 } from './questions_horei_3';
 import { zeiQuestions } from './questions_zei';
 import { zeiQuestions2 } from './questions_zei_2';
 import { zeiQuestions3 } from './questions_zei_3';
@@ -30,6 +31,7 @@ import { takkenhoQuestions4 } from './questions_takkenho_4';
 export const QUESTIONS: TakkenQuestion[] = [
   ...horeiQuestions,
   ...horeiQuestions2,
+  ...horeiQuestions3,
   ...zeiQuestions,
   ...zeiQuestions2,
   ...zeiQuestions3,
