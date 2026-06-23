@@ -6,6 +6,12 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1E40AF"
+    },
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.zaibase.takken",
@@ -17,7 +23,8 @@
     "android": {
       "package": "com.zaibase.takken",
       "adaptiveIcon": {
-        "backgroundColor": "#0EA5E9"
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundColor": "#1E40AF"
       }
     },
     "web": {
