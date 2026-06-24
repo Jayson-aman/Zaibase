@@ -10,6 +10,7 @@ import {
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { getLessonById } from '../../data/lessons';
 import LessonRenderer from '../../components/LessonRenderer';
+import HomeButton from '../../components/HomeButton';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 import { subjectInfo } from '../../data/questions';
@@ -32,6 +33,7 @@ export default function LessonDetailScreen() {
           <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
             <Text style={styles.backBtnText}>← 戻る</Text>
           </TouchableOpacity>
+          <HomeButton variant="dark" style={{ marginTop: 12 }} />
         </View>
       </SafeAreaView>
     );
@@ -44,10 +46,13 @@ export default function LessonDetailScreen() {
     <SafeAreaView style={styles.container}>
       {/* Header */}
       <View style={[styles.header, { backgroundColor: info.color }]}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backRow}>
-          <Text style={styles.backArrow}>← </Text>
-          <Text style={styles.backLabel}>{info.name}</Text>
-        </TouchableOpacity>
+        <View style={styles.headerTopRow}>
+          <TouchableOpacity onPress={() => router.back()} style={styles.backRow}>
+            <Text style={styles.backArrow}>← </Text>
+            <Text style={styles.backLabel}>{info.name}</Text>
+          </TouchableOpacity>
+          <HomeButton variant="light" />
+        </View>
         <Text style={styles.lessonTitle}>{lesson.title}</Text>
         <Text style={styles.lessonDesc}>{lesson.description}</Text>
         {hasMaxContent && (
@@ -100,10 +105,15 @@ const styles = StyleSheet.create({
     paddingTop: 16,
     paddingBottom: 24,
   },
+  headerTopRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 12,
+  },
   backRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 12,
   },
   backArrow: { fontSize: 18, color: 'rgba(255,255,255,0.8)', fontWeight: '700' },
   backLabel: { fontSize: 14, color: 'rgba(255,255,255,0.8)', fontWeight: '600' },

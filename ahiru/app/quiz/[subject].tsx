@@ -35,6 +35,7 @@ import { getDailyQuestions, getTodayDayLabel } from '../../utils/dailyChallenge'
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 import TutorChat from '../../components/TutorChat';
+import HomeButton from '../../components/HomeButton';
 
 function isSubjectKey(value: string): value is SubjectKey {
   return ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'].includes(value);
@@ -225,6 +226,9 @@ export default function QuizScreen() {
             <Text style={styles.headerEmoji}>{info.emoji}</Text>
             <Text style={styles.headerTitle}>{info.name}</Text>
           </View>
+          <View style={styles.headerRight}>
+            <HomeButton variant="light" />
+          </View>
         </View>
         <View style={styles.emptyWrap}>
           <Text style={styles.emptyText}>この難易度の問題はありません</Text>
@@ -312,6 +316,8 @@ export default function QuizScreen() {
             >
               <Text style={styles.backButtonText}>← 科目一覧に戻る</Text>
             </TouchableOpacity>
+
+            <HomeButton variant="dark" style={{ alignSelf: 'center', marginTop: 12 }} />
           </ScrollView>
         </View>
       </SafeAreaView>
@@ -337,6 +343,7 @@ export default function QuizScreen() {
           ) : null}
         </View>
         <View style={styles.headerRight}>
+          <HomeButton variant="light" style={{ marginBottom: 4 }} />
           <Text style={styles.questionIndicator}>
             {currentIndex + 1}/{total}問
           </Text>

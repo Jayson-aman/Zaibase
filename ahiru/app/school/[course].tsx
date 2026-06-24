@@ -14,6 +14,7 @@ import { useSubscription } from '../../hooks/useSubscription';
 import { questions } from '../../data/questions';
 import type { SubjectKey } from '../../data/questions';
 import { getCourseInfo } from '../../data/courses';
+import HomeButton from '../../components/HomeButton';
 
 const D = {
   bg:          '#040C1C',
@@ -233,7 +234,7 @@ export default function SchoolCurriculumScreen() {
           <Text style={styles.schoolName}>{meta.name}</Text>
           <Text style={styles.hensachi}>偏差値 {meta.hensachi} ｜ {meta.region}</Text>
         </View>
-        <View style={{ width: 40 }} />
+        <HomeButton variant="light" />
       </View>
 
       {/* Learning Path Banner */}
