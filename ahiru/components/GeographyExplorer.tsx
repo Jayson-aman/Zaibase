@@ -25,21 +25,21 @@ import { GeoLayerId } from '../constants/proAccess';
 const MAP_W = Dimensions.get('window').width - 48;
 const MAP_H = MAP_W * 0.72;
 
-const LAYERS: { key: GeoLayerId; label: string; emoji: string; pro?: boolean }[] = [
+const LAYERS: { key: GeoLayerId; label: string; emoji: string }[] = [
   { key: 'terrain', label: '地形', emoji: '🏔' },
   { key: 'agriculture', label: '農業', emoji: '🌾' },
-  { key: 'fishery', label: '漁業', emoji: '🐟', pro: true },
-  { key: 'forestry', label: '林業', emoji: '🌲', pro: true },
-  { key: 'factory', label: '工業', emoji: '🏭', pro: true },
-  { key: 'commerce', label: '商業', emoji: '🏪', pro: true },
+  { key: 'fishery', label: '漁業', emoji: '🐟' },
+  { key: 'forestry', label: '林業', emoji: '🌲' },
+  { key: 'factory', label: '工業', emoji: '🏭' },
+  { key: 'commerce', label: '商業', emoji: '🏪' },
 ];
 
 type Props = {
-  isPro: boolean;
-  onRequirePro: () => void;
+  isPro?: boolean;
+  onRequirePro?: () => void;
 };
 
-export default function GeographyExplorer({ isPro, onRequirePro }: Props) {
+export default function GeographyExplorer(_props: Props) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [layer, setLayer] = useState<GeoLayerId>('terrain');
   const zoom = useSharedValue(1);
@@ -79,11 +79,7 @@ export default function GeographyExplorer({ isPro, onRequirePro }: Props) {
     tilt.value = withSpring(region.id === selectedId ? 12 : 6, { damping: 14 });
   }
 
-  function handleLayerChange(key: GeoLayerId, proOnly?: boolean) {
-    if (proOnly && !isPro) {
-      onRequirePro();
-      return;
-    }
+  function handleLayerChange(key: GeoLayerId) {
     setLayer(key);
   }
 
@@ -104,25 +100,16 @@ export default function GeographyExplorer({ isPro, onRequirePro }: Props) {
         </View>
       </View>
 
-      {!isPro && (
-        <TouchableOpacity style={styles.proBanner} onPress={onRequirePro}>
-          <Text style={styles.proBannerText}>
-            👑 Proで漁業・林業・工業・商業レイヤーを解放（¥1,000/月）
-          </Text>
-        </TouchableOpacity>
-      )}
-
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.layerScroll}>
         <View style={styles.layerRow}>
           {LAYERS.map((l) => (
             <TouchableOpacity
               key={l.key}
               style={[styles.layerBtn, layer === l.key && styles.layerBtnActive]}
-              onPress={() => handleLayerChange(l.key, l.pro)}
+              onPress={() => handleLayerChange(l.key)}
             >
               <Text style={[styles.layerText, layer === l.key && styles.layerTextActive]}>
                 {l.emoji} {l.label}
-                {l.pro && !isPro ? ' 🔒' : ''}
               </Text>
             </TouchableOpacity>
           ))}
@@ -177,10 +164,10 @@ export default function GeographyExplorer({ isPro, onRequirePro }: Props) {
                 <TouchableOpacity
                   key={l.key}
                   style={[styles.layerBtn, layer === l.key && styles.layerBtnActive]}
-                  onPress={() => handleLayerChange(l.key, l.pro)}
+                  onPress={() => handleLayerChange(l.key)}
                 >
                   <Text style={[styles.layerText, layer === l.key && styles.layerTextActive]}>
-                    {l.emoji} {l.label}{l.pro && !isPro ? ' 🔒' : ''}
+                    {l.emoji} {l.label}
                   </Text>
                 </TouchableOpacity>
               ))}

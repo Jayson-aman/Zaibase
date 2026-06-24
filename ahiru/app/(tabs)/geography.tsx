@@ -1,13 +1,8 @@
 import React from 'react';
 import { ScrollView, StyleSheet, SafeAreaView, Text, View } from 'react-native';
 import GeographyExplorer from '../../components/GeographyExplorer';
-import Paywall from '../../components/Paywall';
-import { useProGate } from '../../hooks/useProGate';
-import { useSubscription } from '../../hooks/useSubscription';
 
 export default function GeographyScreen() {
-  const { isPro, paywallVisible, setPaywallVisible, requirePro } = useProGate();
-  const { loading } = useSubscription();
 
   return (
     <SafeAreaView style={styles.container}>
@@ -16,12 +11,9 @@ export default function GeographyScreen() {
         <Text style={styles.headerSub}>
           農業・漁業・林業・工業・商業 — 全分野を立体マップで学ぶ
         </Text>
-        {!loading && (
-          <Text style={styles.proBadge}>{isPro ? '👑 Pro会員' : '無料: 地形・農業'}</Text>
-        )}
       </View>
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
-        <GeographyExplorer isPro={isPro} onRequirePro={() => requirePro()} />
+        <GeographyExplorer />
 
         <View style={styles.tipCard}>
           <Text style={styles.tipTitle}>💡 5つの産業分野</Text>
@@ -35,11 +27,6 @@ export default function GeographyScreen() {
         </View>
       </ScrollView>
 
-      <Paywall
-        visible={paywallVisible}
-        onClose={() => setPaywallVisible(false)}
-        onPurchased={() => setPaywallVisible(false)}
-      />
     </SafeAreaView>
   );
 }
