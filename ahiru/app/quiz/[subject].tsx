@@ -117,11 +117,17 @@ export default function QuizScreen() {
     if (isDaily) return getDailyQuestions(subjectKey, 30, course, examType);
     const all = questionsBySubject[subjectKey];
     if (isMock) {
-      const pool = filterQuestions(all, examType, course, null, true);
+      // 模擬試験: 入試形式（学校別大問）を除いた一般問題のみ使用
+      const generalKey = examType === 'koko' ? 'koko-general' : 'general';
+      const pool = all.filter((q) => {
+        if ((q.examType ?? 'chugaku') !== examType) return false;
+        return !q.course || q.course === generalKey;
+      });
       const shuffled = [...pool].sort(() => Math.random() - 0.5);
       return shuffled.slice(0, 30);
     }
     if (isKakomon) {
+      // 入試試験: 学校別問題のみ（大問形式）
       const schoolQ = all.filter((q) => q.course === course && (q.examType ?? 'chugaku') === examType);
       if (schoolQ.length > 0) return schoolQ;
       return filterQuestions(all, examType, course, 'advanced', true);
@@ -146,7 +152,7 @@ export default function QuizScreen() {
   const total = questions.length;
   const diffInfo = difficultyFilter ? DIFF_LABELS[difficultyFilter] : null;
 
-  const currentChoices = undefined;
+  const currentChoices = currentQuestion?.choices;
 
   function handleReveal() {
     setRevealed(true);

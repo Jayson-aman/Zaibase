@@ -4,11 +4,19 @@ export type IndustrialZone = {
   famous: string[];
 };
 
+export type SpotlightItem = {
+  name: string;
+  location: string;
+  why: string;
+  wikiTerm?: string;
+};
+
 export type AgricultureInfo = {
   farmingTypes: string[];
   mainCrops: string[];
   livestock: string[];
   notes: string[];
+  spotlights?: SpotlightItem[];
 };
 
 export type FisheryInfo = {

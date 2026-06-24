@@ -96,7 +96,8 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             </View>
           )}
           {(() => {
-            const units = choices.map((c) => extractTrailingUnit(c));
+            const stripLabel = (s: string) => s.replace(/^[A-D]\s+/, '');
+            const units = choices.map((c) => extractTrailingUnit(stripLabel(c)));
             const first = units[0] ?? '';
             const sharedUnit = first !== '' && units.every((u) => u === first) ? first : '';
             return (
@@ -111,9 +112,10 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
                     const isSelected = selectedChoice === choice;
                     const isCorrect = choice === question.answer;
                     const showResult = selectedChoice != null;
+                    const stripped = stripLabel(choice.trim());
                     const displayText = sharedUnit !== ''
-                      ? choice.trim().slice(0, choice.trim().length - sharedUnit.length).trim()
-                      : choice;
+                      ? stripped.slice(0, stripped.length - sharedUnit.length).trim()
+                      : stripped;
 
                     return (
                       <TouchableOpacity
