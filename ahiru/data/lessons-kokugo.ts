@@ -7,6 +7,7 @@ export const kokugoLessons: Lesson[] = [
     title: '説明文・論説文の読み解き方',
     description: '入試頻出！論説文の論理構造を掴んで得点につなげる',
     order: 1,
+    studyPeriod: '小5前半',
     sections: [
       {
         heading: '1. 説明文と論説文の違い',
@@ -193,6 +194,7 @@ export const kokugoLessons: Lesson[] = [
     title: '物語文・小説の読解術',
     description: '登場人物の心情と場面変化を正確に読む',
     order: 2,
+    studyPeriod: '小5後半',
     sections: [
       {
         heading: '1. 心情読解の基本',
@@ -392,6 +394,7 @@ export const kokugoLessons: Lesson[] = [
     title: '漢字・語彙・慣用句の完全攻略',
     description: '入試出題率No.1！漢字と語彙で確実に得点する',
     order: 3,
+    studyPeriod: '小4',
     sections: [
       {
         heading: '1. 漢字の読み書きの覚え方',
@@ -604,6 +607,7 @@ export const kokugoLessons: Lesson[] = [
     title: '文法・品詞・文の構造',
     description: '国語の核心！文法を体系的に理解して正確に使う',
     order: 4,
+    studyPeriod: '小5前半',
     sections: [
       {
         heading: '1. 品詞の分類',
@@ -824,6 +828,7 @@ export const kokugoLessons: Lesson[] = [
     title: '作文・記述答案の書き方',
     description: '点数に直結する！記述・作文の書き方を完全マスター',
     order: 5,
+    studyPeriod: '小6前半',
     sections: [
       {
         heading: '1. 記述答案の基本ルール',
@@ -1041,6 +1046,7 @@ Aの根拠となる部分・Bの根拠となる部分を別々に探す
     title: '資料・グラフ読解と詩・短歌の鑑賞',
     description: '現代入試の新傾向！資料読解と詩歌の問題を制する',
     order: 6,
+    studyPeriod: '小6後半・直前',
     sections: [
       {
         heading: '1. グラフ・資料読解の基本',
