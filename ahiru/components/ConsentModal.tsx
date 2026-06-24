@@ -10,6 +10,8 @@ import {
 } from 'react-native';
 import { router } from 'expo-router';
 
+const isWeb = Platform.OS === 'web';
+
 type Props = {
   onAgree: () => void;
 };
@@ -23,14 +25,8 @@ const SERIF = Platform.select({
 export default function ConsentModal({ onAgree }: Props) {
   const [checked, setChecked] = useState(false);
 
-  return (
-    <Modal
-      visible
-      animationType="slide"
-      presentationStyle="pageSheet"
-      statusBarTranslucent
-    >
-      <View style={styles.root}>
+  const inner = (
+    <View style={styles.root}>
         {/* ── Header ── */}
         <View style={styles.header}>
           <Text style={styles.logo}>🐥 ahiru</Text>
@@ -132,6 +128,24 @@ export default function ConsentModal({ onAgree }: Props) {
           </Text>
         </View>
       </View>
+  );
+
+  if (isWeb) {
+    return (
+      <View style={[StyleSheet.absoluteFill, styles.webOverlay]}>
+        {inner}
+      </View>
+    );
+  }
+
+  return (
+    <Modal
+      visible
+      animationType="slide"
+      presentationStyle="pageSheet"
+      statusBarTranslucent
+    >
+      {inner}
     </Modal>
   );
 }
@@ -140,6 +154,9 @@ const styles = StyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: '#F5F7FA',
+  },
+  webOverlay: {
+    zIndex: 9999,
   },
   header: {
     backgroundColor: '#040C1C',
