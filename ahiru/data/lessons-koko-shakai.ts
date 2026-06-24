@@ -7,6 +7,7 @@ export const kokoShakaiLessons: Lesson[] = [
     title: '日本地理',
     description: '日本の地形・気候・産業を体系的に理解する',
     order: 101,
+    studyPeriod: '中1',
     examType: 'koko',
     targetLevel: 'oyo',
     sections: [
@@ -247,6 +248,7 @@ export const kokoShakaiLessons: Lesson[] = [
     title: '世界地理',
     description: '世界の地形・気候・各地域の特色を掴む',
     order: 102,
+    studyPeriod: '中1',
     examType: 'koko',
     targetLevel: 'oyo',
     sections: [
@@ -506,6 +508,7 @@ export const kokoShakaiLessons: Lesson[] = [
     title: '日本史（古代〜近世）',
     description: '縄文時代から江戸時代まで流れで覚える日本史',
     order: 103,
+    studyPeriod: '中2',
     examType: 'koko',
     targetLevel: 'oyo',
     sections: [
@@ -753,6 +756,7 @@ export const kokoShakaiLessons: Lesson[] = [
     title: '日本史（近代〜現代）',
     description: '明治から現代まで近現代史を流れで理解する',
     order: 104,
+    studyPeriod: '中2',
     examType: 'koko',
     targetLevel: 'oyo',
     sections: [
@@ -1016,6 +1020,7 @@ export const kokoShakaiLessons: Lesson[] = [
     title: '公民（政治・人権・憲法）',
     description: '日本国憲法・三権分立・基本的人権を完全理解する',
     order: 105,
+    studyPeriod: '中3秋〜直前',
     examType: 'koko',
     targetLevel: 'oyo',
     sections: [
@@ -1270,6 +1275,7 @@ export const kokoShakaiLessons: Lesson[] = [
     title: '公民（経済・国際社会・時事）',
     description: '経済の仕組みと国際社会・環境問題を理解する',
     order: 106,
+    studyPeriod: '中3秋〜直前',
     examType: 'koko',
     targetLevel: 'oyo',
     sections: [

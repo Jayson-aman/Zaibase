@@ -8,6 +8,7 @@ export const kokoKokugoLessons: Lesson[] = [
     title: '漢字・語彙・熟語',
     description: '高校入試頻出！漢字の基礎から熟語・語彙力まで完全攻略',
     order: 1,
+    studyPeriod: '中1',
     targetLevel: 'nyushi',
     sections: [
       {
@@ -183,6 +184,7 @@ export const kokoKokugoLessons: Lesson[] = [
     title: '文法（品詞・文の成分・敬語）',
     description: '文法は得点源！品詞の識別から敬語まで体系的にマスター',
     order: 2,
+    studyPeriod: '中1',
     targetLevel: 'nyushi',
     sections: [
       {
@@ -411,6 +413,7 @@ export const kokoKokugoLessons: Lesson[] = [
     title: '説明文・論説文の読解',
     description: '論理的な文章を素早く正確に読み解く技術を習得する',
     order: 3,
+    studyPeriod: '中2',
     targetLevel: 'nyushi',
     sections: [
       {
@@ -590,6 +593,7 @@ export const kokoKokugoLessons: Lesson[] = [
     title: '文学的文章（小説・詩・短歌）読解',
     description: '登場人物の心情・表現技法・詩歌の鑑賞を完全攻略',
     order: 4,
+    studyPeriod: '中2',
     targetLevel: 'nyushi',
     sections: [
       {
@@ -801,6 +805,7 @@ export const kokoKokugoLessons: Lesson[] = [
     title: '古文・漢文入門',
     description: '歴史的仮名遣い・古語・古典文法・漢文訓読の基礎を攻略',
     order: 5,
+    studyPeriod: '中3前半',
     targetLevel: 'nyushi',
     sections: [
       {
@@ -1034,6 +1039,7 @@ export const kokoKokugoLessons: Lesson[] = [
     title: '作文・記述問題対策',
     description: '意見文・課題作文の書き方から減点されないルールまで完全攻略',
     order: 6,
+    studyPeriod: '中3夏',
     targetLevel: 'nyushi',
     sections: [
       {

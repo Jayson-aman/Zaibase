@@ -7,6 +7,7 @@ export const kokoRikaLessons: Lesson[] = [
     title: `物理（力・運動・エネルギー）`,
     description: `力の種類とつりあい、運動の法則、仕事とエネルギー保存、入試レベルの摩擦・道具・力学的エネルギーまでを体系的に学ぶ。`,
     order: 201,
+    studyPeriod: '中1',
     examType: 'koko',
     targetLevel: 'oyo',
     sections: [
@@ -187,6 +188,7 @@ F-x グラフ（比例直線）：
     title: `電気（回路・電力・磁界）`,
     description: `オームの法則から始まり、直列・並列回路の計算、電力と発熱量、電磁誘導、入試レベルの複合回路まで電気分野を総まとめ。`,
     order: 202,
+    studyPeriod: '中1',
     examType: 'koko',
     targetLevel: 'oyo',
     sections: [
@@ -365,6 +367,7 @@ R1=6Ohm と R2=3Ohm を並列接続、電源電圧 V=12V のとき
     title: `化学（化学変化・イオン・酸塩基）`,
     description: `元素記号の暗記から化学反応式の作り方、酸化還元、イオンと電気分解、酸・塩基・中和滴定まで化学分野を網羅する。`,
     order: 203,
+    studyPeriod: '中2',
     examType: 'koko',
     targetLevel: 'oyo',
     sections: [
@@ -541,6 +544,7 @@ HCl は1価の酸、NaOH は1価の塩基なので：
     title: `生物（細胞・植物・動物・遺伝）`,
     description: `細胞の構造から光合成・呼吸・消化・循環、生殖と遺伝の計算、入試レベルの神経・免疫まで生物分野を体系的に学ぶ。`,
     order: 204,
+    studyPeriod: '中2',
     examType: 'koko',
     targetLevel: 'oyo',
     sections: [
@@ -726,6 +730,7 @@ AaBb * AaBb の子の表現型比率：
     title: `地学（地層・天気・天体）`,
     description: `岩石・地層・地震の基本から、大気・天気・気候の仕組み、地球の自転公転と天体の動き、入試レベルの月・惑星・年周運動まで地学分野を体系化。`,
     order: 205,
+    studyPeriod: '中3前半',
     examType: 'koko',
     targetLevel: 'oyo',
     sections: [
@@ -917,6 +922,7 @@ AaBb * AaBb の子の表現型比率：
     title: `理科総合・実験考察・計算問題`,
     description: `測定・有効数字・グラフの読み方から対照実験の設計、各分野の頻出計算一覧、入試複合問題と記述問題の解法まで、理科全体を横断的にまとめる。`,
     order: 206,
+    studyPeriod: '中3秋〜直前',
     examType: 'koko',
     targetLevel: 'oyo',
     sections: [

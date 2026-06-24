@@ -7,6 +7,7 @@ export const kokoMathLessons: Lesson[] = [
     title: '方程式・連立方程式・二次方程式',
     description: '一次から二次まで、高校受験の方程式を完全攻略',
     order: 101,
+    studyPeriod: '中1',
     examType: 'koko',
     targetLevel: 'oyo',
     sections: [
@@ -317,6 +318,7 @@ ax² + bx + c = 0 のとき
     title: '関数（一次関数・二次関数）',
     description: 'グラフの読み書きから交点・最大最小まで完全マスター',
     order: 102,
+    studyPeriod: '中2',
     examType: 'koko',
     targetLevel: 'oyo',
     sections: [
@@ -566,6 +568,7 @@ y = ax² において、x が m から n に変化するときの変化の割合
     title: '平面図形（合同・相似・円）',
     description: '証明問題から円の定理まで、図形を論理的に攻略する',
     order: 103,
+    studyPeriod: '中2',
     examType: 'koko',
     targetLevel: 'oyo',
     sections: [
@@ -768,6 +771,7 @@ AB = 6, BC = 8, CA = 10 の直角三角形 ABC（∠B = 90°）。BC 上の点 D
     title: '三平方の定理（ピタゴラスの定理）',
     description: '平面から空間図形まで、三平方の定理を自在に使いこなす',
     order: 104,
+    studyPeriod: '中3前半',
     examType: 'koko',
     targetLevel: 'oyo',
     sections: [
@@ -993,6 +997,7 @@ ASCII図解（円錐の断面）
     title: '確率・統計・データ活用',
     description: '場合の数から四分位数まで、データを読む力を養う',
     order: 105,
+    studyPeriod: '中3前半',
     examType: 'koko',
     targetLevel: 'oyo',
     sections: [
@@ -1203,6 +1208,7 @@ nC2 = n(n−1)/2（n 個から 2 個選ぶ）
     title: '数と式・整数問題・規則性',
     description: '素因数分解から数列まで、数の世界を論理で読み解く',
     order: 106,
+    studyPeriod: '中3秋〜直前',
     examType: 'koko',
     targetLevel: 'oyo',
     sections: [

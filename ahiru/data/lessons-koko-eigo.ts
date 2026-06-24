@@ -6,6 +6,7 @@ export const kokoEigoLessons: Lesson[] = [
     subject: 'eigo',
     examType: 'koko',
     order: 1,
+    studyPeriod: '中1',
     title: '時制・助動詞・受動態',
     description: '時制の使い分けをマスターして英語の骨格を掴む',
     sections: [
@@ -202,6 +203,7 @@ She looks pale. She (　　) sick last night.
     subject: 'eigo',
     examType: 'koko',
     order: 2,
+    studyPeriod: '中1',
     title: '比較表現・関係詞',
     description: '比較と関係詞を使いこなして複雑な英文を読み書きする',
     sections: [
@@ -399,6 +401,7 @@ She gave me a present, which I liked very much.
     subject: 'eigo',
     examType: 'koko',
     order: 3,
+    studyPeriod: '中2',
     title: '不定詞・動名詞・分詞',
     description: '不定詞・動名詞・分詞の使い方を体系的にマスターする',
     sections: [
@@ -615,6 +618,7 @@ The news was very surprised.
     subject: 'eigo',
     examType: 'koko',
     order: 4,
+    studyPeriod: '中2',
     title: '長文読解戦略',
     description: '長文を素早く正確に読んで設問に対応する戦略',
     sections: [
@@ -806,6 +810,7 @@ Teachers and parents are worried about this situation. They say that too much ti
     subject: 'eigo',
     examType: 'koko',
     order: 5,
+    studyPeriod: '中3秋〜直前',
     title: '英作文・会話表現',
     description: '英作文を体系的に書けるようにする実践的な書き方',
     sections: [
@@ -1027,6 +1032,7 @@ I think students should be allowed to bring smartphones to school. First, they c
     subject: 'eigo',
     examType: 'koko',
     order: 6,
+    studyPeriod: '中3秋〜直前',
     title: '語彙・熟語・前置詞・会話表現',
     description: '高校受験に必要な語彙・熟語・前置詞を効率よく覚える',
     sections: [
