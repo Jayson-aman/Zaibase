@@ -7,7 +7,7 @@ import { router } from 'expo-router';
 import { SUBJECTS, CHAPTERS } from '../../data/chapters';
 import { QUESTIONS } from '../../data/questions';
 
-const EXAM_DATE = new Date('2025-10-19');
+const EXAM_DATE = new Date('2026-10-18');
 
 function daysUntilExam(): number {
   const now = new Date();

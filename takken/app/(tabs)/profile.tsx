@@ -104,7 +104,7 @@ export default function ProfileScreen() {
               )}
               {tier === 'pro' && (
                 <Text style={styles.currentPlanSub}>
-                  全1,000問・全解説・音声聞き流しが使えます
+                  全790問・全解説・音声聞き流しが使えます
                 </Text>
               )}
               {tier === 'max' && (
