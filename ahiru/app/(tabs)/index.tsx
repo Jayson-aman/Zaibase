@@ -418,13 +418,71 @@ export default function HomeScreen() {
               </Text>
             </View>
 
-            {/* Scholarship info banner (MAX users) */}
-            {isMax && (
-              <View style={styles.scholarshipBanner}>
-                <Text style={styles.scholarshipTitle}>💴 奨学金・授業料支援情報</Text>
-                <Text style={styles.scholarshipText}>
-                  大阪府私学助成・授業料支援給付金制度を活用できる可能性があります。
-                  入学前に必ず確認してください。
+            {/* Scholarship info banner */}
+            <View style={styles.scholarshipBanner}>
+              <Text style={styles.scholarshipTitle}>💴 奨学金・授業料支援情報</Text>
+              <Text style={styles.scholarshipText}>
+                私立高校の授業料は公的支援制度で大幅に軽減できます。入学前・入学直後に必ず確認してください。
+              </Text>
+
+              {/* 1. 国の就学支援金 */}
+              <View style={styles.scholarshipItem}>
+                <Text style={styles.scholarshipItemTitle}>① 高等学校等就学支援金（国）</Text>
+                <Text style={styles.scholarshipCondition}>
+                  【対象】国公私立高校に在籍する生徒{'\n'}
+                  【所得条件】保護者の年収目安910万円未満（市町村民税所得割額＋道府県民税所得割額が50万7千円未満）{'\n'}
+                  【支給額】私立高校：最大年間39万6,000円（加算あり）{'\n'}
+                  【申請】入学時に学校を通じて申請。様式は入学先の学校から配布されます。
+                </Text>
+                <TouchableOpacity
+                  onPress={() => Linking.openURL('https://www.mext.go.jp/a_menu/shotou/mushouka/index.htm')}
+                  activeOpacity={0.75}
+                >
+                  <Text style={styles.scholarshipLink}>▸ 文部科学省 就学支援金制度</Text>
+                </TouchableOpacity>
+              </View>
+
+              {/* 2. 奨学のための給付金 */}
+              <View style={styles.scholarshipItem}>
+                <Text style={styles.scholarshipItemTitle}>② 奨学のための給付金（国・非課税世帯）</Text>
+                <Text style={styles.scholarshipCondition}>
+                  【対象】住民税非課税世帯の高校生（生活保護・非課税）{'\n'}
+                  【支給額】私立高校：年間138,000円〜152,000円程度（学年・扶養人数により変動）{'\n'}
+                  【申請】毎年7〜9月頃、在籍高校経由で申請。様式は学校またはお住まいの市区町村窓口で入手可。
+                </Text>
+                <TouchableOpacity
+                  onPress={() => Linking.openURL('https://www.mext.go.jp/a_menu/shotou/mushouka/1342674.htm')}
+                  activeOpacity={0.75}
+                >
+                  <Text style={styles.scholarshipLink}>▸ 文部科学省 奨学のための給付金</Text>
+                </TouchableOpacity>
+              </View>
+
+              {/* 3. 大阪府 授業料支援 */}
+              <View style={styles.scholarshipItem}>
+                <Text style={styles.scholarshipItemTitle}>③ 大阪府 授業料支援補助金</Text>
+                <Text style={styles.scholarshipCondition}>
+                  【対象】大阪府内在住で府内私立高校等に在籍する生徒{'\n'}
+                  【所得条件】保護者の年収目安800万円未満（世帯によっては無償化）{'\n'}
+                  【支給額】授業料から就学支援金を差し引いた実質負担分を補助（最大無償）{'\n'}
+                  【申請】入学後4〜5月頃、在籍高校経由で申請。申請様式は学校で配布または大阪府HPからダウンロード可。
+                </Text>
+                <TouchableOpacity
+                  onPress={() => Linking.openURL('https://www.pref.osaka.lg.jp/o180160/shigaku/shigakumushouka/index.html')}
+                  activeOpacity={0.75}
+                >
+                  <Text style={styles.scholarshipLink}>▸ 大阪府 私立高校授業料支援補助金</Text>
+                </TouchableOpacity>
+              </View>
+
+              {/* 4. 大阪私学連合会 奨学金 */}
+              <View style={styles.scholarshipItem}>
+                <Text style={styles.scholarshipItemTitle}>④ 大阪私学連合会 奨学金</Text>
+                <Text style={styles.scholarshipCondition}>
+                  【対象】大阪府内の私立高校・中学校に在籍する生徒{'\n'}
+                  【所得条件】各奨学金により異なる（要確認）{'\n'}
+                  【支給額】奨学金の種類により異なる（給付型・貸与型あり）{'\n'}
+                  【申請】在籍学校の担任・進路指導部に相談。詳細は下記リンク参照。
                 </Text>
                 <TouchableOpacity
                   onPress={() => Linking.openURL('https://www.osaka-shigaku.gr.jp/scholarship/')}
@@ -432,14 +490,12 @@ export default function HomeScreen() {
                 >
                   <Text style={styles.scholarshipLink}>▸ 大阪私学連合会 奨学金情報</Text>
                 </TouchableOpacity>
-                <TouchableOpacity
-                  onPress={() => Linking.openURL('https://www.pref.osaka.lg.jp/o180160/shigaku/shigakumushouka/index.html')}
-                  activeOpacity={0.75}
-                >
-                  <Text style={styles.scholarshipLink}>▸ 大阪府 授業料支援給付金</Text>
-                </TouchableOpacity>
               </View>
-            )}
+
+              <Text style={styles.scholarshipNote}>
+                ※ 制度内容・金額は年度により変更される場合があります。必ず各公式サイト・在籍校で最新情報を確認してください。
+              </Text>
+            </View>
           </View>
         )}
 

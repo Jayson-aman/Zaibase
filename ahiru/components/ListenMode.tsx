@@ -42,7 +42,7 @@ type Props = {
   onClose: () => void;
 };
 
-const PAUSE_MS = 5000;
+const PAUSE_MS = 10000;
 
 type Speed = 'slow' | 'normal' | 'fast';
 const SPEED_SCALE: Record<Speed, number> = {
@@ -374,7 +374,7 @@ export default function ListenMode({
 
           <View style={styles.tipBox}>
             <Text style={styles.tipText}>
-              問題番号 → 問題文 → 5秒 → 「答えは」→ 答え → 5秒 → 次の問題{'\n'}
+              問題番号 → 問題文 → 10秒 → 「答えは」→ 答え → 10秒 → 次の問題{'\n'}
               イヤホンをつけて聞き流そう 🎧
             </Text>
           </View>
