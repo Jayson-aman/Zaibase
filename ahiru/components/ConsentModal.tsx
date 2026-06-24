@@ -31,7 +31,7 @@ export default function ConsentModal({ onAgree }: Props) {
         <View style={styles.header}>
           <Text style={styles.logo}>🐥 ahiru</Text>
           <Text style={styles.headerTitle}>ご利用前にご確認ください</Text>
-          <Text style={styles.headerSub}>中学受験対策アプリをご利用いただくにあたり、以下の規約にご同意ください。</Text>
+          <Text style={styles.headerSub}>中学・高校受験対策アプリをご利用いただくにあたり、以下の規約にご同意ください。</Text>
         </View>
 
         <ScrollView style={styles.scroll} contentContainerStyle={styles.scrollContent}>
