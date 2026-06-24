@@ -126,7 +126,8 @@ export default function QuizScreen() {
       if (schoolQ.length > 0) return schoolQ;
       return filterQuestions(all, examType, course, 'advanced', true);
     }
-    return filterQuestions(all, examType, course, difficultyFilter, isPro || isMax);
+    const filtered = filterQuestions(all, examType, course, difficultyFilter, isPro || isMax);
+    return [...filtered].sort(() => Math.random() - 0.5);
   }, [subjectKey, difficultyFilter, isDaily, isMock, isKakomon, course, examType, isPro, isMax]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
