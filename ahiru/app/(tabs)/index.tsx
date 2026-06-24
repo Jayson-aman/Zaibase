@@ -220,6 +220,18 @@ export default function HomeScreen() {
   const maxOnlyCourses = ALL_COURSES.filter(c => c.maxOnly).map(c => c.key);
   const courseRequiresMax = maxOnlyCourses.includes(selectedCourse);
 
+  // Filter KOKO_COURSES to only those that have actual question data
+  const kokoCoursesWithData = React.useMemo(() => {
+    const SUBJECTS_KEYS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
+    return KOKO_COURSES.filter((c) => {
+      const total = SUBJECTS_KEYS.reduce(
+        (sum, s) => sum + getQuestionCount(s, 'all', 'koko', c.key),
+        0,
+      );
+      return total > 0;
+    });
+  }, []);
+
   // Schools sorted by level then name
   const sortedSchools = [...SCHOOL_COURSES].sort(
     (a, b) => LEVEL_ORDER[a.level] - LEVEL_ORDER[b.level],
@@ -292,7 +304,7 @@ export default function HomeScreen() {
             {/* Category chips */}
             {(examType === 'koko' || courseTab === 'category') && (
               <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.courseScroll}>
-                {(examType === 'chugaku' ? CATEGORY_COURSES : KOKO_COURSES).map((c) => {
+                {(examType === 'chugaku' ? CATEGORY_COURSES : kokoCoursesWithData).map((c) => {
                   const isSelected = selectedCourse === c.key;
                   const needsMax = maxOnlyCourses.includes(c.key);
                   return (
