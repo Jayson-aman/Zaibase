@@ -446,7 +446,7 @@ Social media has changed the way people communicate. Today, millions of people s
 
 ③ Without your help, I (　) this project.
   ア. can't finish　イ. couldn't have finished　ウ. didn't finish　エ. won't finish`,
-    answer: '① イ(had)　② イ(were)　③ イ(couldn't have finished)',
+    answer: '① イ(had)　② イ(were)　③ イ(couldn\'t have finished)',
     hint: '①現在の仮定→仮定法過去（過去形）。②I wish+仮定法過去。③Without〜=If it were not for〜の変形（仮定法過去完了）。',
     explanation: `【出題意図】仮定法過去・I wish・Without〜の仮定法の応用を問う。【解説】①現実に反する現在の仮定→仮定法過去（If+過去形, would+原形）。②I wish+仮定法過去：現在の望みを過去形で表す。be動詞はwereを使う。③「あなたの助けなしには」=仮定法の条件部分。過去の事実に反する仮定→couldn't have finished（仮定法過去完了の帰結節）。【注意点】③Withoutは過去の文脈（プロジェクト完了）なので仮定法過去完了を使う。【関連知識】If it had not been for〜=Without〜（過去の仮定）の書き換えも頻出。`,
     pitfall: '①にhaveを使うと直説法になり「今本当に時間がある」という意味に変わる。',
