@@ -154,31 +154,26 @@ export const ahiruTokusho: LegalSection[] = [
     heading: '',
     paragraphs: [
       '特定商取引法第11条に基づき、以下の事項を表示します。本アプリ「ahiru」における有料サービス（Pro・MAXプラン）に関する情報です。',
+      '本アプリの有料機能はApple App Store（iOS/Mac）およびGoogle Play（Android）を通じて販売されます。App Store取引の販売業者はApple Distribution International（アイルランド）、Google Play取引の販売業者はGoogle Asia Pacific Pte. Ltd.（シンガポール）となります。各プラットフォームの利用規約もあわせてご確認ください。',
     ],
   },
   {
-    heading: '販売業者',
+    heading: '販売業者（サービス提供者）',
     bullets: [
       '屋号・サービス名：Zaibase Group（中学受験対策 ahiru）',
-      '運営責任者：南條 雅哉',
+      'メールアドレス：info@zaibase.group',
     ],
   },
   {
-    heading: '所在地',
+    heading: '所在地・運営責任者',
     paragraphs: [
-      '〒543-0071 大阪府大阪市天王寺区筆ヶ崎町6-12-1701',
+      '請求があった場合に遅滞なく開示します。上記メールアドレスまでご連絡ください（特定商取引法第11条第1項ただし書による省略）。',
     ],
   },
   {
     heading: '電話番号',
     paragraphs: [
-      '電話番号は、請求があった場合に遅滞なく開示します。下記メールアドレスまでご連絡ください（特定商取引法第11条第1項ただし書による省略）。',
-    ],
-  },
-  {
-    heading: 'メールアドレス',
-    paragraphs: [
-      'info@zaibase.group',
+      '電話番号は、請求があった場合に遅滞なく開示します。上記メールアドレスまでご連絡ください（特定商取引法第11条第1項ただし書による省略）。',
     ],
   },
   {
