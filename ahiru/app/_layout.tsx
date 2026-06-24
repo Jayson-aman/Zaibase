@@ -43,6 +43,18 @@ export default function RootLayout() {
           }}
         />
         <Stack.Screen
+          name="lesson/[id]"
+          options={{ headerShown: false, presentation: 'card' }}
+        />
+        <Stack.Screen
+          name="school/[course]"
+          options={{ headerShown: false, presentation: 'card' }}
+        />
+        <Stack.Screen
+          name="quiz/daily"
+          options={{ headerShown: false, presentation: 'card' }}
+        />
+        <Stack.Screen
           name="terms"
           options={{ headerShown: false, presentation: 'modal' }}
         />

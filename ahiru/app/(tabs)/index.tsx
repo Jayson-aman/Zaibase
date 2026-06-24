@@ -80,11 +80,12 @@ function getQuestionCount(
   let qs = questionsBySubject[subject];
   // Filter by examType
   qs = qs.filter((q) => (q.examType ?? 'chugaku') === examType);
-  // Filter by course
+  // Filter by course — mirror filterQuestions fallback: if school has no questions, use general pool
   if (course === 'general') {
     qs = qs.filter((q) => !q.course || q.course === 'general');
   } else {
-    qs = qs.filter((q) => q.course === course);
+    const schoolQs = qs.filter((q) => q.course === course);
+    qs = schoolQs.length > 0 ? schoolQs : qs.filter((q) => !q.course || q.course === 'general');
   }
   if (difficulty !== 'all') {
     qs = qs.filter((q) => q.difficulty === difficulty);
