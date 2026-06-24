@@ -22,7 +22,7 @@ import {
 } from '../data/geographyRegions';
 import { GeoLayerId } from '../constants/proAccess';
 
-const MAP_W = Dimensions.get('window').width - 48;
+const MAP_W = Math.min(Dimensions.get('window').width - 48, 440);
 const MAP_H = MAP_W * 0.72;
 
 const LAYERS: { key: GeoLayerId; label: string; emoji: string }[] = [
@@ -346,7 +346,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#E8EEF8',
   },
   layerBtnActive: { backgroundColor: '#1E5FBE' },
-  layerText: { fontSize: 11, fontWeight: '700', color: '#555' },
+  layerText: { fontSize: 13, fontWeight: '700', color: '#555' },
   layerTextActive: { color: '#FFF' },
   sectorRow: {
     flexDirection: 'row',
@@ -443,9 +443,9 @@ const styles = StyleSheet.create({
     borderBottomColor: '#E5EAF0',
   },
   regionPress: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 2 },
-  regionEmoji: { fontSize: 16 },
+  regionEmoji: { fontSize: 22 },
   regionName: {
-    fontSize: 9,
+    fontSize: 13,
     fontWeight: '800',
     color: '#FFF',
     textAlign: 'center',
@@ -454,7 +454,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     borderRadius: 16,
     padding: 16,
-    maxHeight: 300,
+    maxHeight: 480,
     borderWidth: 2,
     borderColor: '#1E5FBE',
   },
@@ -464,11 +464,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 12,
   },
-  detailTitle: { fontSize: 18, fontWeight: '900', color: '#1A1A2E' },
-  detailClose: { fontSize: 13, fontWeight: '700', color: '#1E5FBE' },
-  detailSection: { marginBottom: 12 },
-  detailSectionTitle: { fontSize: 14, fontWeight: '800', color: '#1E5FBE', marginBottom: 6 },
-  detailItem: { fontSize: 13, color: '#333', lineHeight: 22 },
+  detailTitle: { fontSize: 20, fontWeight: '900', color: '#1A1A2E' },
+  detailClose: { fontSize: 14, fontWeight: '700', color: '#1E5FBE' },
+  detailSection: { marginBottom: 14 },
+  detailSectionTitle: { fontSize: 16, fontWeight: '800', color: '#1E5FBE', marginBottom: 8 },
+  detailItem: { fontSize: 14, color: '#333', lineHeight: 24 },
   factoryBlock: {
     backgroundColor: '#FFF8EE',
     borderRadius: 12,
