@@ -59,15 +59,15 @@ const CURRICULUM = [
     level: '基礎',
     icon: '🌱',
     color: '#2A9460',
-    target: '小3〜小4生',
-    desc: '中学受験の土台固め。計算・漢字・基本概念をしっかり定着。',
+    target: '小3〜小4生 / 中1〜中2生',
+    desc: '受験の土台固め。計算・漢字・基本概念をしっかり定着。',
     count: '各科目 20問',
   },
   {
     level: '標準',
     icon: '⭐',
     color: '#4B8FE4',
-    target: '小5〜小6生（開成・甲陽レベル）',
+    target: '小5〜小6生 / 中2〜中3生',
     desc: '入試頻出問題を網羅。思考力・応用力を養う実戦問題。',
     count: '各科目 20問',
   },
@@ -75,8 +75,8 @@ const CURRICULUM = [
     level: '発展',
     icon: '🔥',
     color: '#C8A84B',
-    target: '小6生最上位（灘・東大寺レベル）',
-    desc: '四谷大塚・日能研コース相当の最難関問題。本番直前対策。',
+    target: '最難関中学受験 / 難関高校受験',
+    desc: '最難関問題・難関校対策。本番直前の実力完成。',
     count: '各科目 20問＋',
   },
 ];
@@ -184,8 +184,8 @@ export default function LandingPage() {
 
             <Text style={styles.heroSub}>
               算数・国語・理科・社会・英語{'\n'}
-              5科目 3,500問以上 × 18校学校別コース{'\n'}
-              AI弱点コーチで最難関中学を目指す。
+              5科目 3,500問以上 × 学校別コース対応{'\n'}
+              中学受験・高校受験、AI弱点コーチで志望校を目指す。
             </Text>
 
             <TouchableOpacity style={styles.heroCta} onPress={handleStart} activeOpacity={0.85}>
@@ -436,7 +436,7 @@ export default function LandingPage() {
         <View style={styles.footer}>
           <Text style={styles.footerBrand}>
             <Text style={{ color: C.gold }}>Zaibase.Group</Text>
-            {'  '}中学受験対策
+            {'  '}中学・高校受験対策
           </Text>
           <View style={styles.footerDivider} />
           <Text style={styles.footerText}>info@zaibase.group</Text>

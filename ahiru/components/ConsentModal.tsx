@@ -40,7 +40,7 @@ export default function ConsentModal({ onAgree }: Props) {
           <View style={styles.noticeBox}>
             <Text style={styles.noticeTitle}>👨‍👩‍👧 保護者の方へ</Text>
             <Text style={styles.noticeText}>
-              本アプリは主に小学生（中学受験生）を対象としています。未成年の方がご利用になる場合は、保護者（親権者）の同意のもとでご使用ください。有料プランへの申込みも、保護者の管理するアカウントで行ってください。
+              本アプリは小学生（中学受験生）・中学生（高校受験生）を対象としています。未成年の方がご利用になる場合は、保護者（親権者）の同意のもとでご使用ください。有料プランへの申込みも、保護者の管理するアカウントで行ってください。
             </Text>
           </View>
 
