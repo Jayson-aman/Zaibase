@@ -16,11 +16,8 @@ const SERIF = Platform.select({
 }) as string | undefined;
 import { Question, subjectInfo } from '../data/questions';
 import {
-  getQuestionIllustration,
   getHistoryThemeLabel,
-  mascots,
 } from '../data/images';
-import AnimatedMascot from './AnimatedMascot';
 
 type Props = {
   question: Question;
@@ -31,7 +28,7 @@ type Props = {
   isPro?: boolean;
 };
 
-const { width, height } = Dimensions.get('window');
+const { width } = Dimensions.get('window');
 
 function extractTrailingUnit(text: string): string {
   const m = text.trim().match(/(cm²|㎠|cm³|km²|m²|㎡|mm|km|cm|m|kg|g|[%％]|円|羽|本|個|匹|頭|枚|冊|杯|台|艘|門|度|℃|時間|分|秒)$/u);
@@ -42,7 +39,6 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
   const [revealed, setRevealed] = useState(false);
   const [selectedChoice, setSelectedChoice] = useState<string | null>(null);
   const info = subjectInfo[question.subject];
-  const illustration = getQuestionIllustration(question.subject, question.id);
   const historyLabel = getHistoryThemeLabel(question.id);
 
   function handlePress() {
@@ -66,15 +62,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
       activeOpacity={choices != null ? 1 : 0.9}
       style={[styles.card, choices == null && revealed && styles.cardRevealed]}
     >
-      <View style={styles.illustrationWrap}>
-        <AnimatedMascot
-          source={illustration}
-          style={styles.illustration}
-          containerStyle={styles.illustration}
-          fallbackEmoji={info.emoji}
-          animation={revealed || selectedChoice != null ? 'bounce' : 'float'}
-          accessibilityLabel="問題イラスト"
-        />
+      <View style={styles.subjectChipRow}>
         <View style={[styles.subjectChip, { backgroundColor: info.color }]}>
           <Text style={styles.subjectChipText}>
             {info.emoji} {info.name}
@@ -207,15 +195,6 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
         </View>
       ) : (
         <View style={styles.answerSide}>
-          <AnimatedMascot
-            source={mascots[question.subject]}
-            style={styles.answerMascot}
-            containerStyle={styles.answerMascot}
-            fallbackEmoji="✨"
-            resizeMode="contain"
-            animation="pulse"
-            accessibilityLabel="正解キャラクター"
-          />
           <Text style={styles.answerLabel}>答 え</Text>
           <Text style={styles.answerText}>{question.answer}</Text>
           {(question.explanation != null || question.hint != null) && (
@@ -252,40 +231,34 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderColor: '#00A651',
   },
-  illustrationWrap: {
-    width: '100%',
-    height: height * 0.3,
-    backgroundColor: '#EEF4FF',
-  },
-  illustration: {
-    width: '100%',
-    height: '100%',
+  subjectChipRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    paddingHorizontal: 16,
+    paddingTop: 16,
+    paddingBottom: 4,
+    flexWrap: 'wrap',
   },
   subjectChip: {
-    position: 'absolute',
-    top: 14,
-    left: 14,
     paddingHorizontal: 14,
     paddingVertical: 6,
     borderRadius: 16,
   },
   subjectChipText: {
     color: '#FFFFFF',
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: '800',
   },
   historyChip: {
-    position: 'absolute',
-    top: 14,
-    right: 14,
-    backgroundColor: 'rgba(255,255,255,0.92)',
+    backgroundColor: '#FEF3C7',
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 14,
   },
   historyChipText: {
     color: '#78350F',
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: '800',
   },
   // Choice mode
@@ -429,13 +402,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 28,
     paddingTop: 16,
-  },
-  answerMascot: {
-    width: 160,
-    height: 160,
-    borderRadius: 80,
-    marginBottom: 12,
-    backgroundColor: '#FFFFFF',
   },
   answerLabel: {
     fontSize: 22,
