@@ -149,73 +149,7 @@ export default function QuizScreen() {
   const total = questions.length;
   const diffInfo = difficultyFilter ? DIFF_LABELS[difficultyFilter] : null;
 
-  const currentChoices = useMemo(() => {
-    const q = questions[currentIndex];
-    if (!q || questions.length < 4) return undefined;
-    const correct = q.answer;
-
-    function answerType(a: string): string {
-      const t = a.trim();
-      if (/^\d{2,4}年$/.test(t))                                         return 'year-bare';
-      if (/^\d{2,4}年/.test(t))                                          return 'year-compound';
-      if (/[①②③④⑤⑥⑦⑧⑨]/.test(t))                                  return 'numbered';
-      if (/^[A-Za-z]/.test(t) && /[A-Za-z]{3,}/.test(t))               return 'english';
-      if (/^[ぁ-ん]+$/.test(t))                                          return 'hiragana';
-      if (/^[\d,，]+$/.test(t))                                          return 'number';
-      if (/\d+[／/]\d+/.test(t) || /分の\d+/.test(t))                   return 'fraction';
-      if (/\d+(cm²|㎠|cm³|m²|km²|立方|平方)/.test(t))                  return 'area-volume';
-      if (/\d+(cm|mm|m|km)\b/.test(t) && !/[²³]/.test(t))              return 'length';
-      if (/\d+[℃°VΩW]|秒速|時速|mol|Pa/.test(t))                       return 'physics';
-      if (/\d+[gkg]/.test(t))                                            return 'mass';
-      if (/^\d+(\.\d+)?%/.test(t) || /約\d+%/.test(t))                 return 'percent';
-      if (/^\d+:\d+/.test(t))                                            return 'ratio';
-      if (/\d+[日羽本個匹頭枚冊杯台艘門]/.test(t))                       return 'count';
-      if (/\d+分$/.test(t) || /\d+時間/.test(t))                        return 'time';
-      if (/[・、]/.test(t) && t.length > 5 && !/^\d{2,4}年/.test(t))   return 'list';
-      if (t.length <= 12 && !/[。\n]/.test(t))                          return 'short';
-      if (t.length > 60)                                                  return 'long';
-      return 'medium';
-    }
-
-    const correctType = answerType(correct);
-    const all = questions.filter((o) => o.id !== q.id && o.answer !== correct);
-
-    // 答えテキストの重複を除去してユニークなものだけ使う
-    const seenAnswers = new Set<string>();
-    const uniqueAll = all.filter((o) => {
-      if (seenAnswers.has(o.answer)) return false;
-      seenAnswers.add(o.answer);
-      return true;
-    });
-
-    // 1st: 同型
-    let typed = uniqueAll.filter((o) => answerType(o.answer) === correctType);
-
-    // 1.5th: 単位マッチング（時速・km・cm²など同じ単位を持つ答えを優先）
-    if (typed.length < 3) {
-      const unitMatch = correct.match(
-        /(時速|秒速|分速|km\/h|km²|cm²|m²|㎡|cm³|km\b|cm\b|mm\b|m\b|[℃°]C?|mol|Pa\b|[VΩW]\b|kg\b|g\b|[%％]|[分時]間)/
-      )?.[0];
-      if (unitMatch) {
-        const withUnit = uniqueAll.filter((o) => o.answer.includes(unitMatch));
-        if (withUnit.length >= 3) typed = withUnit;
-      }
-    }
-
-    // 2nd: 長さが近いもの（±40文字）、numbered除外
-    if (typed.length < 3) {
-      typed = uniqueAll.filter((o) =>
-        Math.abs(o.answer.length - correct.length) < 40 &&
-        answerType(o.answer) !== 'numbered'
-      );
-    }
-
-    // 3rd: 全部
-    if (typed.length < 3) typed = uniqueAll;
-
-    const shuffled = [...typed].sort(() => Math.random() - 0.5);
-    return [...shuffled.slice(0, 3).map((o) => o.answer), correct].sort(() => Math.random() - 0.5);
-  }, [currentIndex, questions]);
+  const currentChoices = undefined;
 
   function handleReveal() {
     setRevealed(true);

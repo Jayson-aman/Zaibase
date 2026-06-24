@@ -42,7 +42,7 @@ type Props = {
   onClose: () => void;
 };
 
-const PAUSE_MS = 2000;
+const PAUSE_MS = 5000;
 
 export default function ListenMode({
   visible,
@@ -333,7 +333,7 @@ export default function ListenMode({
 
           <View style={styles.tipBox}>
             <Text style={styles.tipText}>
-              問題番号 → 問題文 → 2秒 → 「答えは」→ 答え → 2秒 → 次の問題{'\n'}
+              問題番号 → 問題文 → 5秒 → 「答えは」→ 答え → 5秒 → 次の問題{'\n'}
               イヤホンをつけて聞き流そう 🎧
             </Text>
           </View>

@@ -70,6 +70,25 @@ export default function TutorChat({ visible, onClose, initialQuestion, subjectCo
   }, []);
 
   const takePhoto = useCallback(async () => {
+    if (Platform.OS === 'web') {
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = 'image/*';
+      (input as HTMLInputElement & { capture: string }).capture = 'environment';
+      input.onchange = async (e) => {
+        const file = (e.target as HTMLInputElement).files?.[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (ev) => {
+          const dataUrl = ev.target?.result as string;
+          setImageUri(dataUrl);
+          setImageBase64(dataUrl.split(',')[1] ?? null);
+        };
+        reader.readAsDataURL(file);
+      };
+      input.click();
+      return;
+    }
     try {
       const { launchCameraAsync, requestCameraPermissionsAsync, MediaTypeOptions } =
         await import('expo-image-picker');

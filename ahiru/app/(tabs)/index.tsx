@@ -7,6 +7,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
   Platform,
+  Linking,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import SubjectCard from '../../components/SubjectCard';
@@ -422,10 +423,18 @@ export default function HomeScreen() {
                   大阪府私学助成・授業料支援給付金制度を活用できる可能性があります。
                   入学前に必ず確認してください。
                 </Text>
-                <Text style={styles.scholarshipLink}>
-                  ▸ 大阪私学連合会 奨学金情報{'\n'}
-                  ▸ 大阪府 授業料支援給付金
-                </Text>
+                <TouchableOpacity
+                  onPress={() => Linking.openURL('https://www.osaka-shigaku.gr.jp/scholarship/')}
+                  activeOpacity={0.75}
+                >
+                  <Text style={styles.scholarshipLink}>▸ 大阪私学連合会 奨学金情報</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => Linking.openURL('https://www.pref.osaka.lg.jp/o180160/shigaku/shigakumushouka/index.html')}
+                  activeOpacity={0.75}
+                >
+                  <Text style={styles.scholarshipLink}>▸ 大阪府 授業料支援給付金</Text>
+                </TouchableOpacity>
               </View>
             )}
           </View>
