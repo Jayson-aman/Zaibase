@@ -83,8 +83,9 @@ export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
       ? isEnglishText(text) ? LANG_EN : LANG_JA
       : langOpt;
 
-  // English content reads slightly slower for clarity
-  const defaultRate = lang === LANG_EN ? 0.85 : 1.0;
+  // Read slower for clarity — 国語/社会 etc. were too fast to follow.
+  // English a touch slower still for a relaxed native cadence.
+  const defaultRate = lang === LANG_EN ? 0.82 : 0.85;
   const rate = options.rate ?? defaultRate;
 
   const token = cancelToken;
