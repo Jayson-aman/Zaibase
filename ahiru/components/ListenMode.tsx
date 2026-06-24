@@ -44,6 +44,18 @@ type Props = {
 
 const PAUSE_MS = 5000;
 
+type Speed = 'slow' | 'normal' | 'fast';
+const SPEED_SCALE: Record<Speed, number> = {
+  slow: 0.8,
+  normal: 1.0,
+  fast: 1.25,
+};
+const SPEED_OPTIONS: { key: Speed; label: string }[] = [
+  { key: 'slow', label: '🐢 ゆっくり' },
+  { key: 'normal', label: '🚶 ふつう' },
+  { key: 'fast', label: '🐇 速い' },
+];
+
 export default function ListenMode({
   visible,
   questions,
@@ -57,11 +69,13 @@ export default function ListenMode({
   const [phase, setPhase] = useState<Phase>('idle');
   const [paused, setPaused] = useState(false);
   const [active, setActive] = useState(false);
+  const [speed, setSpeed] = useState<Speed>('normal');
 
   const activeRef = useRef(false);
   const pausedRef = useRef(false);
   const indexRef = useRef(0);
   const phaseRef = useRef<Phase>('idle');
+  const speedRef = useRef<Speed>('normal');
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const runIdRef = useRef(0);
   const autoStartedRef = useRef(false);
@@ -78,6 +92,9 @@ export default function ListenMode({
   useEffect(() => {
     phaseRef.current = phase;
   }, [phase]);
+  useEffect(() => {
+    speedRef.current = speed;
+  }, [speed]);
 
   const clearTimer = useCallback(() => {
     if (timerRef.current != null) {
@@ -141,9 +158,9 @@ export default function ListenMode({
         indexRef.current = i;
 
         setPhase('reading_q');
-        await speak(`問題${i + 1}番`);
+        await speak(`問題${i + 1}番`, { rateScale: SPEED_SCALE[speedRef.current] });
         if (runId !== runIdRef.current || !activeRef.current) return;
-        await speak(toSpeechText(questions[i].question));
+        await speak(toSpeechText(questions[i].question), { rateScale: SPEED_SCALE[speedRef.current] });
         if (runId !== runIdRef.current || !activeRef.current) return;
 
         setPhase('pause_q');
@@ -151,11 +168,11 @@ export default function ListenMode({
         if (runId !== runIdRef.current || !activeRef.current) return;
 
         setPhase('reading_a_prefix');
-        await speak('答えは');
+        await speak('答えは', { rateScale: SPEED_SCALE[speedRef.current] });
         if (runId !== runIdRef.current || !activeRef.current) return;
 
         setPhase('reading_a');
-        await speak(toSpeechText(questions[i].answer));
+        await speak(toSpeechText(questions[i].answer), { rateScale: SPEED_SCALE[speedRef.current] });
         if (runId !== runIdRef.current || !activeRef.current) return;
 
         setPhase('pause_a');
@@ -313,6 +330,30 @@ export default function ListenMode({
             </Text>
           </View>
 
+          <View style={styles.speedRow}>
+            <Text style={styles.speedLabel}>読み上げ速度</Text>
+            <View style={styles.speedBtns}>
+              {SPEED_OPTIONS.map((opt) => {
+                const selected = speed === opt.key;
+                return (
+                  <TouchableOpacity
+                    key={opt.key}
+                    style={[
+                      styles.speedBtn,
+                      selected && { backgroundColor: subjectColor, borderColor: subjectColor },
+                    ]}
+                    onPress={() => setSpeed(opt.key)}
+                    activeOpacity={0.85}
+                  >
+                    <Text style={[styles.speedBtnText, selected && styles.speedBtnTextActive]}>
+                      {opt.label}
+                    </Text>
+                  </TouchableOpacity>
+                );
+              })}
+            </View>
+          </View>
+
           <View style={styles.controls}>
             <TouchableOpacity
               style={[styles.controlBtn, styles.pauseBtn]}
@@ -424,6 +465,36 @@ const styles = StyleSheet.create({
     marginRight: 8,
   },
   statusText: { fontSize: 14, fontWeight: '600' },
+  speedRow: {
+    alignItems: 'center',
+    marginBottom: 18,
+  },
+  speedLabel: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: '#666',
+    marginBottom: 8,
+  },
+  speedBtns: {
+    flexDirection: 'row',
+    gap: 8,
+  },
+  speedBtn: {
+    paddingVertical: 8,
+    paddingHorizontal: 14,
+    borderRadius: 20,
+    borderWidth: 1.5,
+    borderColor: '#D5DCE6',
+    backgroundColor: '#FFFFFF',
+  },
+  speedBtnText: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: '#666',
+  },
+  speedBtnTextActive: {
+    color: '#FFFFFF',
+  },
   controls: {
     flexDirection: 'row',
     justifyContent: 'center',

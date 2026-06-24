@@ -72,6 +72,8 @@ export function resumeSpeech(): void {
 
 export type SpeakOptions = {
   rate?: number;
+  /** Multiplier applied to the language-appropriate default rate (1 = default). */
+  rateScale?: number;
   /** Override language detection. 'auto' (default) detects from text content. */
   lang?: 'auto' | 'ja-JP' | 'en-US';
 };
@@ -86,7 +88,8 @@ export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
   // Read slower for clarity — 国語/社会 etc. were too fast to follow.
   // English a touch slower still for a relaxed native cadence.
   const defaultRate = lang === LANG_EN ? 0.82 : 0.85;
-  const rate = options.rate ?? defaultRate;
+  const scaledDefault = defaultRate * (options.rateScale ?? 1);
+  const rate = options.rate ?? scaledDefault;
 
   const token = cancelToken;
 
