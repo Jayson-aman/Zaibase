@@ -7,6 +7,7 @@ export const kkKokugo: Question[] = [
     subject: 'kokugo',
     course: 'koko-kankan',
     examType: 'koko',
+    examType: 'koko',
     difficulty: 'advanced',
     question:
       '次の文章を読んで問いに答えよ。\n「科学技術の発展は、私たちの生活を豊かにしてきた。しかし一方で、それが新たな問題を生み出すこともある。大切なのは、技術を使う人間の判断力と倫理観ではないだろうか。」\n問：筆者が最も伝えたいことを30字以内で述べよ。',
@@ -20,6 +21,7 @@ export const kkKokugo: Question[] = [
     subject: 'kokugo',
     course: 'koko-kankan',
     examType: 'koko',
+    examType: 'koko',
     difficulty: 'advanced',
     question:
       '物語文の読解問題。\n「花子は試験の結果を受け取ったとき、涙をこらえながらも微笑んだ。それは悲しみからではなく、長い努力がようやく形になったことへの、不思議な安堵感からだった。」\n問：花子が微笑んだ理由を説明せよ。',
@@ -32,6 +34,7 @@ export const kkKokugo: Question[] = [
     id: 'kk_kokugo_03',
     subject: 'kokugo',
     course: 'koko-kankan',
+    examType: 'koko',
     examType: 'koko',
     difficulty: 'advanced',
     question:
@@ -47,6 +50,7 @@ export const kkKokugo: Question[] = [
     subject: 'kokugo',
     course: 'koko-kankan',
     examType: 'koko',
+    examType: 'koko',
     difficulty: 'advanced',
     question:
       '動詞の活用形を答えよ。「書く」の五段活用を未然形・連用形・終止形・連体形・仮定形・命令形で答えよ。',
@@ -60,6 +64,7 @@ export const kkKokugo: Question[] = [
     subject: 'kokugo',
     course: 'koko-kankan',
     examType: 'koko',
+    examType: 'koko',
     difficulty: 'advanced',
     question:
       '助動詞「れる・られる」の用法（受身・可能・自発・尊敬）を、次の例文で答えよ。\n①「先生に呼ばれる」\n②「故郷が思い出される」\n③「この問題は解かれる（解くことができる）」\n④「先生が言われる」',
@@ -72,6 +77,7 @@ export const kkKokugo: Question[] = [
     id: 'kk_kokugo_06',
     subject: 'kokugo',
     course: 'koko-kankan',
+    examType: 'koko',
     examType: 'koko',
     difficulty: 'advanced',
     question:
@@ -87,6 +93,7 @@ export const kkKokugo: Question[] = [
     subject: 'kokugo',
     course: 'koko-kankan',
     examType: 'koko',
+    examType: 'koko',
     difficulty: 'advanced',
     question:
       '慣用句・ことわざの意味を答えよ。\n①「棚からぼたもち」\n②「七転び八起き」\n③「急がば回れ」',
@@ -100,6 +107,7 @@ export const kkKokugo: Question[] = [
     id: 'kk_kokugo_08',
     subject: 'kokugo',
     course: 'koko-kankan',
+    examType: 'koko',
     examType: 'koko',
     difficulty: 'advanced',
     question:
@@ -115,6 +123,7 @@ export const kkKokugo: Question[] = [
     subject: 'kokugo',
     course: 'koko-kankan',
     examType: 'koko',
+    examType: 'koko',
     difficulty: 'advanced',
     question:
       '敬語の変換をせよ。\n①「食べる」の尊敬語と謙譲語を答えよ。\n②「見る」の尊敬語と謙譲語を答えよ。',
@@ -128,6 +137,7 @@ export const kkKokugo: Question[] = [
     id: 'kk_kokugo_10',
     subject: 'kokugo',
     course: 'koko-kankan',
+    examType: 'koko',
     examType: 'koko',
     difficulty: 'advanced',
     question:
@@ -147,6 +157,7 @@ export const ktKokugo: Question[] = [
     subject: 'kokugo',
     course: 'koko-top',
     examType: 'koko',
+    examType: 'koko',
     difficulty: 'advanced',
     question:
       '次の論説文を読んで問いに答えよ。\n「グローバル化が進む現代において、異文化理解は単なる教養ではなく、社会を生き抜くための必須能力となっている。しかしそれは、自文化への理解なくして成立しない。己を知らずして他者を知ることはできないからだ。」\n問：筆者の主張の構造を「まず〜、しかし〜、なぜなら〜」の形で整理して説明せよ。',
@@ -160,6 +171,7 @@ export const ktKokugo: Question[] = [
     id: 'kt_kokugo_02',
     subject: 'kokugo',
     course: 'koko-top',
+    examType: 'koko',
     examType: 'koko',
     difficulty: 'advanced',
     question:
@@ -175,6 +187,7 @@ export const ktKokugo: Question[] = [
     subject: 'kokugo',
     course: 'koko-top',
     examType: 'koko',
+    examType: 'koko',
     difficulty: 'advanced',
     question:
       '古典の読解。方丈記の一節：\n「ゆく川の流れは絶えずして、しかも、もとの水にあらず。よどみに浮かぶうたかたは、かつ消え、かつ結びて、久しくとどまりたるためしなし。」\n問①：「うたかた」とは何か。\n問②：この文が表す主題を答えよ。',
@@ -188,6 +201,7 @@ export const ktKokugo: Question[] = [
     id: 'kt_kokugo_04',
     subject: 'kokugo',
     course: 'koko-top',
+    examType: 'koko',
     examType: 'koko',
     difficulty: 'advanced',
     question:
@@ -203,6 +217,7 @@ export const ktKokugo: Question[] = [
     subject: 'kokugo',
     course: 'koko-top',
     examType: 'koko',
+    examType: 'koko',
     difficulty: 'advanced',
     question:
       '品詞の識別。次の文の下線部の品詞と活用形を答えよ。\n「彼女はとても美しく歌った。」\n①「とても」　②「美しく」　③「歌った」',
@@ -216,6 +231,7 @@ export const ktKokugo: Question[] = [
     id: 'kt_kokugo_06',
     subject: 'kokugo',
     course: 'koko-top',
+    examType: 'koko',
     examType: 'koko',
     difficulty: 'advanced',
     question:
@@ -231,6 +247,7 @@ export const ktKokugo: Question[] = [
     subject: 'kokugo',
     course: 'koko-top',
     examType: 'koko',
+    examType: 'koko',
     difficulty: 'advanced',
     question:
       '四字熟語の意味と使い方。次の四字熟語の意味を答えよ。\n①「一石二鳥」　②「自業自得」　③「以心伝心」　④「半信半疑」',
@@ -244,6 +261,7 @@ export const ktKokugo: Question[] = [
     id: 'kt_kokugo_08',
     subject: 'kokugo',
     course: 'koko-top',
+    examType: 'koko',
     examType: 'koko',
     difficulty: 'advanced',
     question:
@@ -259,6 +277,7 @@ export const ktKokugo: Question[] = [
     subject: 'kokugo',
     course: 'koko-top',
     examType: 'koko',
+    examType: 'koko',
     difficulty: 'advanced',
     question:
       '敬語の複合問題。次の文の敬語の使い方の誤りを指摘し、正しく直せ。\n「先生が私の家にいらっしゃって、お菓子をいただかれた。」',
@@ -272,6 +291,7 @@ export const ktKokugo: Question[] = [
     id: 'kt_kokugo_10',
     subject: 'kokugo',
     course: 'koko-top',
+    examType: 'koko',
     examType: 'koko',
     difficulty: 'advanced',
     question:

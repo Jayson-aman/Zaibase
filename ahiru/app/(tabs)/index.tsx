@@ -80,12 +80,14 @@ function getQuestionCount(
   let qs = questionsBySubject[subject];
   // Filter by examType
   qs = qs.filter((q) => (q.examType ?? 'chugaku') === examType);
-  // Filter by course — mirror filterQuestions fallback: if school has no questions, use general pool
-  if (course === 'general') {
-    qs = qs.filter((q) => !q.course || q.course === 'general');
+  // Filter by course — for koko courses include koko-general as shared pool
+  const generalKey = examType === 'koko' ? 'koko-general' : 'general';
+  if (course === 'general' || course === 'koko-general') {
+    qs = qs.filter((q) => !q.course || q.course === generalKey);
   } else {
     const schoolQs = qs.filter((q) => q.course === course);
-    qs = schoolQs.length > 0 ? schoolQs : qs.filter((q) => !q.course || q.course === 'general');
+    const generalQs = qs.filter((q) => !q.course || q.course === generalKey);
+    qs = [...schoolQs, ...generalQs];
   }
   if (difficulty !== 'all') {
     qs = qs.filter((q) => q.difficulty === difficulty);
@@ -438,25 +440,6 @@ export default function HomeScreen() {
                 </TouchableOpacity>
               </View>
             )}
-          </View>
-        )}
-
-        {/* Mascot banner */}
-        {!listenPickerActive && (
-          <View style={styles.mascotBanner}>
-            <AnimatedMascot
-              source={homeMascot}
-              style={styles.mascotImage}
-              fallbackEmoji="📚"
-              animation="bounce"
-              accessibilityLabel="勉強応援キャラクター"
-            />
-            <View style={styles.mascotTextWrap}>
-              <Text style={styles.mascotTitle}>一緒に頑張ろう！</Text>
-              <Text style={styles.mascotSub}>
-                クイズも聞き流しも、解説付きで理解が深まる
-              </Text>
-            </View>
           </View>
         )}
 

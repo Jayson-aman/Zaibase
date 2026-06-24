@@ -69,24 +69,19 @@ function filterQuestions(
   isPaid: boolean = false,
 ): Question[] {
   let qs = all.filter((q) => (q.examType ?? 'chugaku') === examType);
-  if (course === 'general') {
-    qs = qs.filter((q) => !q.course || q.course === 'general');
+  const generalKey = examType === 'koko' ? 'koko-general' : 'general';
+  if (course === 'general' || course === 'koko-general') {
+    qs = qs.filter((q) => !q.course || q.course === generalKey);
   } else {
-    qs = qs.filter((q) => q.course === course);
+    const schoolQs = qs.filter((q) => q.course === course);
+    const generalQs = qs.filter((q) => !q.course || q.course === generalKey);
+    qs = [...schoolQs, ...generalQs];
   }
   if (!isPaid) {
     qs = qs.filter((q) => !q.maxOnly);
   }
   if (difficultyFilter) {
     qs = qs.filter((q) => q.difficulty === difficultyFilter);
-  }
-  // Fallback: if no course-specific questions, return general pool
-  if (qs.length === 0) {
-    qs = all.filter((q) => (q.examType ?? 'chugaku') === examType);
-    if (!isPaid) qs = qs.filter((q) => !q.maxOnly);
-    if (difficultyFilter) {
-      qs = qs.filter((q) => q.difficulty === difficultyFilter);
-    }
   }
   return qs;
 }
