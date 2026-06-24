@@ -258,6 +258,18 @@ function RegionDetail({
         <>
           <DetailSection title="🚜 農業の種類" items={ag.farmingTypes} />
           <DetailSection title="🌾 主要作物" items={ag.mainCrops} />
+          {ag.spotlights && ag.spotlights.length > 0 && (
+            <View style={styles.spotlightSection}>
+              <Text style={styles.spotlightHeader}>🔍 注目の特産品</Text>
+              {ag.spotlights.map((s) => (
+                <View key={s.name} style={styles.spotlightCard}>
+                  <Text style={styles.spotlightName}>{s.name}</Text>
+                  <Text style={styles.spotlightLocation}>📍 {s.location}</Text>
+                  <Text style={styles.spotlightWhy}>{s.why}</Text>
+                </View>
+              ))}
+            </View>
+          )}
           <DetailSection title="🐄 畜産" items={ag.livestock} />
           <DetailSection title="📝 メモ" items={ag.notes} />
           <DetailSection title="🎁 特産" items={region.products} />
@@ -469,6 +481,19 @@ const styles = StyleSheet.create({
   detailSection: { marginBottom: 14 },
   detailSectionTitle: { fontSize: 16, fontWeight: '800', color: '#1E5FBE', marginBottom: 8 },
   detailItem: { fontSize: 14, color: '#333', lineHeight: 24 },
+  spotlightSection: { marginBottom: 14 },
+  spotlightHeader: { fontSize: 16, fontWeight: '800', color: '#D97706', marginBottom: 8 },
+  spotlightCard: {
+    backgroundColor: '#FFFBEB',
+    borderRadius: 14,
+    padding: 14,
+    marginBottom: 10,
+    borderLeftWidth: 4,
+    borderLeftColor: '#F59E0B',
+  },
+  spotlightName: { fontSize: 16, fontWeight: '800', color: '#1A1A2E', marginBottom: 4 },
+  spotlightLocation: { fontSize: 13, color: '#666', marginBottom: 6 },
+  spotlightWhy: { fontSize: 14, color: '#333', lineHeight: 22 },
   factoryBlock: {
     backgroundColor: '#FFF8EE',
     borderRadius: 12,
