@@ -127,7 +127,14 @@ export default function TextbookScreen() {
                     <Text style={styles.lessonNumber}>{String(idx + 1).padStart(2, '0')}</Text>
                   </View>
                   <View style={styles.lessonCardBody}>
-                    <Text style={styles.lessonTitle}>{lesson.title}</Text>
+                    <View style={styles.lessonTitleRow}>
+                      <Text style={styles.lessonTitle}>{lesson.title}</Text>
+                      {lesson.studyPeriod && (
+                        <View style={styles.periodChip}>
+                          <Text style={styles.periodChipText}>📅 {lesson.studyPeriod}</Text>
+                        </View>
+                      )}
+                    </View>
                     <Text style={styles.lessonDesc} numberOfLines={2}>
                       {lesson.description}
                     </Text>
@@ -249,7 +256,10 @@ const styles = StyleSheet.create({
   },
   lessonNumber: { fontSize: 13, fontWeight: '800', color: '#1D4ED8' },
   lessonCardBody: { flex: 1 },
-  lessonTitle: { fontSize: 16, fontWeight: '700', color: '#1E3A5F', marginBottom: 2 },
+  lessonTitleRow: { flexDirection: 'row', alignItems: 'flex-start', flexWrap: 'wrap', gap: 6, marginBottom: 2 },
+  lessonTitle: { fontSize: 16, fontWeight: '700', color: '#1E3A5F', flexShrink: 1 },
+  periodChip: { backgroundColor: '#EEF4FF', borderRadius: 8, paddingHorizontal: 7, paddingVertical: 2 },
+  periodChipText: { fontSize: 10, fontWeight: '700', color: '#3B55A0' },
   lessonDesc: { fontSize: 13, color: '#64748B', lineHeight: 20 },
   maxTag: { fontSize: 11, color: '#92400E', fontWeight: '700', marginTop: 4 },
   lessonArrow: { fontSize: 24, color: '#94A3B8', paddingLeft: 8 },
