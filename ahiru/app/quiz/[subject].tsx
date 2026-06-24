@@ -81,7 +81,7 @@ function filterQuestions(
   }
   // Fallback: if no course-specific questions, return general pool
   if (qs.length === 0) {
-    qs = all.filter((q) => (q.examType ?? 'chugaku') === 'chugaku');
+    qs = all.filter((q) => (q.examType ?? 'chugaku') === examType);
     if (!isPaid) qs = qs.filter((q) => !q.maxOnly);
     if (difficultyFilter) {
       qs = qs.filter((q) => q.difficulty === difficultyFilter);
@@ -118,7 +118,7 @@ export default function QuizScreen() {
   const isMax = subIsMax || betaAccess;
 
   const questions = useMemo(() => {
-    if (isDaily) return getDailyQuestions(subjectKey);
+    if (isDaily) return getDailyQuestions(subjectKey, 30, course, examType);
     const all = questionsBySubject[subjectKey];
     if (isMock) {
       const pool = filterQuestions(all, examType, course, null, true);
