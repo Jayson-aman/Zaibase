@@ -4533,6 +4533,8 @@ Email：info@zaibase.group</div>
     <button type="button" id="mypageTeamJobBtn" class="hidden">🏗️ チーム向け発注</button>
     <button type="button" id="mypageComplianceBtn">🛡️ 信頼スコア</button>
     <button type="button" id="mypageChainBtn">🔗 多層契約（準備中）</button>
+    <button type="button" id="mypageCashflowBtn">💰 資金繰りシミュレーター</button>
+    <button type="button" id="mypagePriceNegotiationBtn">📈 価格転嫁交渉サポート</button>
     <!-- 多層契約停止中バナー（chainContractEnabled: false 時に表示） -->
     <div id="chainGateBanner" style="background:#f0f9ff;border:1px solid #bae6fd;border-radius:10px;padding:10px 12px;margin-top:6px;font-size:11px;color:#0369A1;line-height:1.7;">
       🔗 多層契約・下請けチェーン管理機能は現在準備中です。<br>弁護士による下請法・職業安定法の確認完了後に開放します。
@@ -6842,6 +6844,76 @@ info@zaibase.group</p>
   <div class="modal-panel" id="reportPanel"></div>
 </div>
 
+<!-- 資金繰りシミュレーター（cashFlowEnabled: false で非表示。弁護士確認後に開放） -->
+<div id="cashflowSimModal" class="modal-overlay hidden">
+  <div class="modal-panel">
+    <button class="detail-close" id="cashflowSimClose">×</button>
+    <div class="modal-title">💰 資金繰りシミュレーター</div>
+    <p style="font-size:13px;color:var(--zb-muted);margin:0 0 14px;">毎月の入出金を入力して、資金がいつ尽きるか確認できます</p>
+    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px;">
+      <label style="font-size:13px;font-weight:600;">現在の現金残高（万円）</label>
+      <input type="number" id="cfCash" placeholder="例: 200" style="border:1px solid var(--zb-border);border-radius:8px;padding:10px 12px;font-size:15px;width:100%;box-sizing:border-box;">
+      <label style="font-size:13px;font-weight:600;">月次の入金合計（万円）</label>
+      <input type="number" id="cfIncome" placeholder="例: 150" style="border:1px solid var(--zb-border);border-radius:8px;padding:10px 12px;font-size:15px;width:100%;box-sizing:border-box;">
+      <label style="font-size:13px;font-weight:600;">月次の支払合計（万円）<br><span style="font-weight:400;color:var(--zb-muted);">人件費・材料費・経費など</span></label>
+      <input type="number" id="cfExpense" placeholder="例: 180" style="border:1px solid var(--zb-border);border-radius:8px;padding:10px 12px;font-size:15px;width:100%;box-sizing:border-box;">
+      <label style="font-size:13px;font-weight:600;">入金サイト（工事完了から入金まで）</label>
+      <select id="cfPayLag" style="border:1px solid var(--zb-border);border-radius:8px;padding:10px 12px;font-size:14px;width:100%;box-sizing:border-box;">
+        <option value="0">当月入金</option>
+        <option value="1" selected>翌月（1ヶ月後）</option>
+        <option value="2">翌々月（2ヶ月後）</option>
+        <option value="3">3ヶ月後</option>
+      </select>
+    </div>
+    <button onclick="runCashflowSim()" style="width:100%;padding:12px;background:var(--zb-primary);color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;margin-bottom:16px;">シミュレーション実行</button>
+    <div id="cfResult" style="display:none;">
+      <div id="cfRunwayBanner" style="border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:14px;font-weight:600;"></div>
+      <div style="font-size:12px;font-weight:600;color:var(--zb-muted);margin-bottom:8px;">6ヶ月間の資金残高推移（万円）</div>
+      <div style="display:flex;align-items:flex-end;gap:4px;height:100px;" id="cfChartArea"></div>
+      <div style="display:flex;gap:4px;margin-top:4px;" id="cfMonthLabels"></div>
+      <div id="cfAdvice" style="margin-top:14px;background:#f0f9ff;border-radius:10px;padding:12px;font-size:13px;line-height:1.7;color:#0369A1;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- 価格転嫁交渉サポート（priceNegotiationEnabled: false で非表示。弁護士確認後に開放） -->
+<div id="priceNegotiationModal" class="modal-overlay hidden">
+  <div class="modal-panel">
+    <button class="detail-close" id="priceNegotiationClose">×</button>
+    <div class="modal-title">📈 価格転嫁交渉サポート</div>
+    <p style="font-size:13px;color:var(--zb-muted);margin:0 0 14px;">資材高騰分を元請けへ説明するための交渉材料をAIが生成します</p>
+    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px;">
+      <label style="font-size:13px;font-weight:600;">高騰した資材・費用</label>
+      <select id="pnMaterial" style="border:1px solid var(--zb-border);border-radius:8px;padding:10px 12px;font-size:14px;width:100%;box-sizing:border-box;">
+        <option value="鉄骨・鋼材">鉄骨・鋼材</option>
+        <option value="生コンクリート">生コンクリート</option>
+        <option value="木材・合板">木材・合板</option>
+        <option value="銅線・電線">銅線・電線</option>
+        <option value="燃料費（軽油・ガソリン）">燃料費（軽油・ガソリン）</option>
+        <option value="人件費（労務費）">人件費（労務費）</option>
+        <option value="その他">その他（備考欄に記入）</option>
+      </select>
+      <label style="font-size:13px;font-weight:600;">価格上昇率（%）</label>
+      <input type="number" id="pnRate" placeholder="例: 25" style="border:1px solid var(--zb-border);border-radius:8px;padding:10px 12px;font-size:15px;width:100%;box-sizing:border-box;">
+      <label style="font-size:13px;font-weight:600;">現在の工事請負金額（万円）</label>
+      <input type="number" id="pnContract" placeholder="例: 1200" style="border:1px solid var(--zb-border);border-radius:8px;padding:10px 12px;font-size:15px;width:100%;box-sizing:border-box;">
+      <label style="font-size:13px;font-weight:600;">資材費が工事費に占める割合（%）<br><span style="font-weight:400;color:var(--zb-muted);">不明な場合は30〜40%が目安</span></label>
+      <input type="number" id="pnMaterialRatio" placeholder="例: 35" value="35" style="border:1px solid var(--zb-border);border-radius:8px;padding:10px 12px;font-size:15px;width:100%;box-sizing:border-box;">
+      <label style="font-size:13px;font-weight:600;">備考・補足（任意）</label>
+      <textarea id="pnNote" placeholder="例: 中東情勢により今後もさらなる値上がりが見込まれる" rows="2" style="border:1px solid var(--zb-border);border-radius:8px;padding:10px 12px;font-size:14px;resize:none;width:100%;box-sizing:border-box;"></textarea>
+    </div>
+    <button onclick="runPriceNegotiation()" style="width:100%;padding:12px;background:var(--zb-primary);color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;margin-bottom:16px;">交渉文を生成</button>
+    <div id="pnResult" style="display:none;">
+      <div id="pnAmountBox" style="background:#fef9c3;border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:14px;color:#92400e;"></div>
+      <div style="font-size:12px;font-weight:600;color:var(--zb-muted);margin-bottom:6px;">AIが生成した交渉文</div>
+      <div id="pnLetter" style="background:#f8fafc;border:1px solid var(--zb-border);border-radius:10px;padding:14px;font-size:13px;line-height:1.8;white-space:pre-wrap;"></div>
+      <button onclick="copyPnLetter()" style="width:100%;padding:10px;background:#f0f9ff;color:#0369A1;border:1px solid #bae6fd;border-radius:8px;font-size:13px;cursor:pointer;margin-top:10px;">📋 コピー</button>
+    </div>
+    <div id="pnLoading" style="display:none;text-align:center;padding:20px;color:var(--zb-muted);font-size:13px;">AIが交渉文を生成中…</div>
+    <div id="pnError" style="display:none;color:#dc2626;font-size:13px;padding:10px;background:#fef2f2;border-radius:8px;margin-top:8px;"></div>
+  </div>
+</div>
+
 <!-- 写真拡大 -->
 <div id="lightbox" class="lightbox hidden">
   <button class="lightbox-close" id="lightboxClose">×</button>
@@ -7371,6 +7443,7 @@ info@zaibase.group</p>
   const updateSubstantiveInvolvementFn = httpsCallable(functions, 'updateSubstantiveInvolvement');
   const linkHelpPostToChainFn = httpsCallable(functions, 'linkHelpPostToChain');
   const sendCommunityThanksFn = httpsCallable(functions, 'sendCommunityThanks');
+  const generateNegotiationLetterFn = httpsCallable(functions, 'generateNegotiationLetter');
 
   const urlParams = new URLSearchParams(location.search);
   const pendingSiteFaceMode = urlParams.get('mode') === 'siteface';
@@ -19777,12 +19850,14 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
   // 機能ゲート（職業安定法・弁護士法72条・資金決済法対応。有効化はFirestore platformConfig/features で管理）
   // billingEnabled: 課金・決済機能（有料プラン申込）。Stripe審査通過・弁護士確認後に true に変更
   // legalFeaturesEnabled: 許認可チェック・コンプライアンスゲート・法律相談バナー（弁護士確認後に開放）
-  let featureFlags = { jobMatchingEnabled: false, chainContractEnabled: false, legalFeaturesEnabled: false, billingEnabled: false };
+  // cashFlowEnabled: 資金繰りシミュレーター（弁護士確認後に開放）
+  // priceNegotiationEnabled: 価格転嫁交渉サポートAI（弁護士確認後に開放）
+  let featureFlags = { jobMatchingEnabled: false, chainContractEnabled: false, legalFeaturesEnabled: false, billingEnabled: false, cashFlowEnabled: false, priceNegotiationEnabled: false };
 
   async function loadFeatureFlags() {
     try {
       const snap = await getDoc(doc(db, 'platformConfig', 'features'));
-      if (snap.exists()) featureFlags = { jobMatchingEnabled: false, chainContractEnabled: false, legalFeaturesEnabled: false, billingEnabled: false, ...snap.data() };
+      if (snap.exists()) featureFlags = { jobMatchingEnabled: false, chainContractEnabled: false, legalFeaturesEnabled: false, billingEnabled: false, cashFlowEnabled: false, priceNegotiationEnabled: false, ...snap.data() };
     } catch (_) {}
     applyFeatureGates();
   }
@@ -19821,6 +19896,12 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
       const el = document.getElementById(id);
       if (el) el.style.display = featureFlags.billingEnabled ? '' : 'none';
     });
+
+    // 資金繰りシミュレーター・価格転嫁交渉サポート（弁護士確認後に開放）
+    const cfBtn = document.getElementById('mypageCashflowBtn');
+    const pnBtn = document.getElementById('mypagePriceNegotiationBtn');
+    if (cfBtn) cfBtn.style.display = featureFlags.cashFlowEnabled ? '' : 'none';
+    if (pnBtn) pnBtn.style.display = featureFlags.priceNegotiationEnabled ? '' : 'none';
   }
   let currentTeamData = null;
   let currentTeamInviteCode = null;
@@ -24930,6 +25011,18 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
   document.getElementById('mypageTeamJobBtn')?.addEventListener('click', () => showScreen('teamJobPostScreen'));
   document.getElementById('mypageComplianceBtn')?.addEventListener('click', () => showScreen('complianceGateScreen'));
   document.getElementById('mypageChainBtn')?.addEventListener('click', () => showScreen('chainScreen'));
+  document.getElementById('mypageCashflowBtn')?.addEventListener('click', () => {
+    document.getElementById('cfResult').style.display = 'none';
+    document.getElementById('cashflowSimModal').classList.remove('hidden');
+  });
+  document.getElementById('cashflowSimClose')?.addEventListener('click', () => document.getElementById('cashflowSimModal').classList.add('hidden'));
+  document.getElementById('mypagePriceNegotiationBtn')?.addEventListener('click', () => {
+    document.getElementById('pnResult').style.display = 'none';
+    document.getElementById('pnLoading').style.display = 'none';
+    document.getElementById('pnError').style.display = 'none';
+    document.getElementById('priceNegotiationModal').classList.remove('hidden');
+  });
+  document.getElementById('priceNegotiationClose')?.addEventListener('click', () => document.getElementById('priceNegotiationModal').classList.add('hidden'));
   document.getElementById('complianceBackBtn')?.addEventListener('click', () => showScreen('mypageScreen'));
   document.getElementById('chainBackBtn')?.addEventListener('click', () => showScreen('mypageScreen'));
   document.getElementById('jobHdTeamPostBtn')?.addEventListener('click', () => showScreen('teamJobPostScreen'));
@@ -25648,6 +25741,121 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js').catch(e => console.warn('SW登録失敗:', e));
   }
+
+  // ── 資金繰りシミュレーター ────────────────────────────────
+  // cashFlowEnabled: false のため非表示。Firestore platformConfig/features で開放可能。
+  window.runCashflowSim = function() {
+    const cash    = parseFloat(document.getElementById('cfCash').value)    || 0;
+    const income  = parseFloat(document.getElementById('cfIncome').value)  || 0;
+    const expense = parseFloat(document.getElementById('cfExpense').value) || 0;
+    const lag     = parseInt(document.getElementById('cfPayLag').value)    || 0;
+
+    if (!cash && !income && !expense) { showZbToast('金額を入力してください'); return; }
+
+    // 6ヶ月間のキャッシュ残高を計算
+    const balances = [];
+    let b = cash;
+    for (let i = 1; i <= 6; i++) {
+      const effectiveIncome = i > lag ? income : 0; // 入金サイトによる遅延
+      b = b + effectiveIncome - expense;
+      balances.push(Math.round(b));
+    }
+
+    // ランウェイ判定
+    const net = income - expense;
+    let bannerHtml, bannerBg;
+    if (net >= 0) {
+      bannerHtml = '✅ 月次黒字: 毎月 <strong>+' + net.toLocaleString() + '万円</strong> のキャッシュが増えています';
+      bannerBg = 'background:#dcfce7;color:#166534;';
+    } else {
+      const runway = Math.floor(cash / (-net));
+      if (runway <= 2) {
+        bannerBg = 'background:#fef2f2;color:#dc2626;';
+        bannerHtml = '🚨 危険: このままでは約 <strong>' + runway + 'ヶ月</strong> で資金が底をつきます。今すぐ金融機関に相談を';
+      } else if (runway <= 4) {
+        bannerBg = 'background:#fef9c3;color:#92400e;';
+        bannerHtml = '⚠️ 要注意: 資金の余裕は約 <strong>' + runway + 'ヶ月</strong> です。早急な対策が必要です';
+      } else {
+        bannerBg = 'background:#e0f2fe;color:#0369A1;';
+        bannerHtml = '📋 現状の資金余裕は約 <strong>' + runway + 'ヶ月</strong> です。改善策を検討してください';
+      }
+    }
+    const banner = document.getElementById('cfRunwayBanner');
+    banner.innerHTML = bannerHtml;
+    banner.style.cssText = 'border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:14px;font-weight:600;' + bannerBg;
+
+    // 棒グラフ描画
+    const chartArea  = document.getElementById('cfChartArea');
+    const labelsArea = document.getElementById('cfMonthLabels');
+    const maxAbs = Math.max(...balances.map(Math.abs), 1);
+    const monthNames = ['来月','2ヶ月後','3ヶ月後','4ヶ月後','5ヶ月後','6ヶ月後'];
+    chartArea.innerHTML = '';
+    labelsArea.innerHTML = '';
+    balances.forEach((v, i) => {
+      const pct  = Math.min(Math.abs(v) / maxAbs * 100, 100);
+      const color = v < 0 ? '#ef4444' : v < cash * 0.3 ? '#f59e0b' : '#22c55e';
+      const col  = document.createElement('div');
+      col.style.cssText = 'flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:2px;';
+      col.innerHTML = '<div style="font-size:9px;color:#374151;text-align:center;">' + v.toLocaleString() + '</div>' +
+        '<div style="width:100%;background:' + color + ';height:' + pct + '%;border-radius:4px 4px 0 0;min-height:4px;"></div>';
+      chartArea.appendChild(col);
+      const lbl = document.createElement('div');
+      lbl.style.cssText = 'flex:1;text-align:center;font-size:9px;color:var(--zb-muted);';
+      lbl.textContent = monthNames[i];
+      labelsArea.appendChild(lbl);
+    });
+
+    // アドバイス
+    const advices = [];
+    const deficit = expense - income;
+    if (deficit > 0) {
+      advices.push('・月次の収支が <strong>' + deficit.toLocaleString() + '万円の赤字</strong> です。入金サイトの短縮か支払いサイトの延長を交渉してください');
+      if (lag >= 2) advices.push('・入金が ' + lag + 'ヶ月遅れているため、工事完了後しばらくの間は手元現金が特に少なくなります');
+      advices.push('・日本政策金融公庫や地方銀行への融資相談を早めに行ってください（赤字でも融資可能な場合があります）');
+    } else {
+      advices.push('・月次収支はプラスです。引き続き取引先の分散と新規開拓を進めましょう');
+      if (lag >= 2) advices.push('・入金が ' + lag + 'ヶ月遅れています。手元現金を常に ' + (expense * lag) + ' 万円以上確保することを目標にしてください');
+    }
+    document.getElementById('cfAdvice').innerHTML = advices.join('<br>');
+    document.getElementById('cfResult').style.display = '';
+  };
+
+  // ── 価格転嫁交渉サポート ──────────────────────────────────
+  // priceNegotiationEnabled: false のため非表示。Firestore platformConfig/features で開放可能。
+  window.runPriceNegotiation = async function() {
+    const material  = document.getElementById('pnMaterial').value;
+    const rate      = parseFloat(document.getElementById('pnRate').value) || 0;
+    const contract  = parseFloat(document.getElementById('pnContract').value) || 0;
+    const matRatio  = parseFloat(document.getElementById('pnMaterialRatio').value) || 35;
+    const note      = document.getElementById('pnNote').value;
+
+    if (!rate || !contract) { showZbToast('価格上昇率と請負金額を入力してください'); return; }
+
+    const increaseAmount = Math.round(contract * (matRatio / 100) * (rate / 100));
+    document.getElementById('pnAmountBox').innerHTML =
+      '資材高騰による増額試算: <strong style="font-size:18px;">＋' + increaseAmount.toLocaleString() + '万円</strong><br>' +
+      '<span style="font-size:12px;">請負金額 ' + contract + '万円 × 資材比率 ' + matRatio + '% × 上昇率 ' + rate + '%</span>';
+
+    document.getElementById('pnResult').style.display = 'none';
+    document.getElementById('pnLoading').style.display = '';
+    document.getElementById('pnError').style.display = 'none';
+
+    try {
+      const res = await generateNegotiationLetterFn({ material, rate, contract, matRatio, note, increaseAmount });
+      document.getElementById('pnLetter').textContent = res.data.letter;
+      document.getElementById('pnResult').style.display = '';
+    } catch(e) {
+      document.getElementById('pnError').textContent = '生成に失敗しました: ' + e.message;
+      document.getElementById('pnError').style.display = '';
+    } finally {
+      document.getElementById('pnLoading').style.display = 'none';
+    }
+  };
+
+  window.copyPnLetter = function() {
+    const text = document.getElementById('pnLetter').textContent;
+    navigator.clipboard.writeText(text).then(() => showZbToast('コピーしました'));
+  };
 
 </script>
 </body>

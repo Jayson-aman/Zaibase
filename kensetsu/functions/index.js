@@ -195,6 +195,12 @@ exports.adminListReports        = moderation.adminListReports;
 exports.adminDeleteContent      = moderation.adminDeleteContent;
 exports.adminDismissReport      = moderation.adminDismissReport;
 
+// ── 経営支援ツール（価格転嫁交渉サポート）────────────────────────────
+// priceNegotiationEnabled: false で非表示。Firestore platformConfig/features で開放可能。
+// Secrets: ANTHROPIC_API_KEY（firebase functions:secrets:set ANTHROPIC_API_KEY で設定）
+const managementTools = require("./management_tools");
+exports.generateNegotiationLetter = managementTools.generateNegotiationLetter;
+
 // ── ユーティリティ ─────────────────────────────────────────────
 exports.health = onRequest((req, res) => {
   res.json({ ok: true, service: "zaibase-backend", time: new Date().toISOString() });
