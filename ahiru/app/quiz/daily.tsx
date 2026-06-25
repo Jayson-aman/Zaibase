@@ -9,8 +9,8 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import { useRouter } from 'expo-router';
-import { subjectInfo, SubjectKey } from '../../data/questions';
-import { getDailyQuestions, getTodayDayLabel } from '../../utils/dailyChallenge';
+import { subjectInfo, SubjectKey } from '../../data/questions-meta';
+import { getTodayDayLabel } from '../../utils/dailyChallenge';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 import BetaGateModal from '../../components/BetaGateModal';
@@ -95,7 +95,7 @@ export default function DailyChallengeScreen() {
 
         {SUBJECTS.map((subject) => {
           const info = subjectInfo[subject];
-          const count = getDailyQuestions(subject).length;
+          const count = 30;
           return (
             <TouchableOpacity
               key={subject}

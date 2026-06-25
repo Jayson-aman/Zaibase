@@ -10,7 +10,7 @@ import {
 import { useRouter } from 'expo-router';
 import { getLessonsBySubject } from '../../data/lessons';
 import type { Lesson } from '../../data/lessons';
-import { subjectInfo, type SubjectKey } from '../../data/questions';
+import { subjectInfo, type SubjectKey } from '../../data/questions-meta';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 import BetaGateModal from '../../components/BetaGateModal';

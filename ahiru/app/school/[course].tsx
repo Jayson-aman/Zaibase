@@ -11,8 +11,8 @@ import {
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 import { useSubscription } from '../../hooks/useSubscription';
-import { questions } from '../../data/questions';
-import type { SubjectKey } from '../../data/questions';
+import type { SubjectKey } from '../../data/questions-meta';
+import { useAllQuestions } from '../../hooks/useSubjectQuestions';
 import { getCourseInfo } from '../../data/courses';
 import HomeButton from '../../components/HomeButton';
 
@@ -163,6 +163,7 @@ export default function SchoolCurriculumScreen() {
   const isMax = subTier === 'max' || betaAccess;
 
   const [activeSubject, setActiveSubject] = useState<SubjectKey>('sansu');
+  const { questions } = useAllQuestions();
 
   const meta = SCHOOL_META[course ?? ''] ?? { name: course ?? '学校', emoji: '🏫', hensachi: '—', region: '—' };
   const courseInfo = course ? getCourseInfo(course as any) : null;

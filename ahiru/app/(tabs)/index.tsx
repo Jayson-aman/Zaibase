@@ -19,11 +19,8 @@ import AnimatedMascot from '../../components/AnimatedMascot';
 import { homeMascot } from '../../data/images';
 import { useProGate } from '../../hooks/useProGate';
 import { useSubscription } from '../../hooks/useSubscription';
-import {
-  questionsBySubject,
-  subjectInfo,
-  SubjectKey,
-} from '../../data/questions';
+import { subjectInfo, type SubjectKey } from '../../data/questions-meta';
+import { useQuestionsBySubjectMap } from '../../hooks/useSubjectQuestions';
 import type { CourseKey, ExamType } from '../../data/courses';
 import {
   ALL_COURSES, CHUGAKU_COURSES, KOKO_COURSES, CATEGORY_COURSES, SCHOOL_COURSES,
@@ -76,7 +73,9 @@ function getQuestionCount(
   difficulty: Difficulty,
   examType: ExamType,
   course: CourseKey,
+  questionsBySubject: Record<SubjectKey, import('../../data/questions-meta').Question[]> | null,
 ): number {
+  if (!questionsBySubject) return 0;
   let qs = questionsBySubject[subject];
   // Filter by examType
   qs = qs.filter((q) => (q.examType ?? 'chugaku') === examType);
@@ -204,6 +203,7 @@ export default function HomeScreen() {
     setListenPickerActive(false);
   }
 
+  const { bySubject: questionsBySubject } = useQuestionsBySubjectMap();
   const listenInfo = listenSubject ? subjectInfo[listenSubject] : null;
   const { hasAccess: betaAccess, unlock } = useBetaAccess();
   const { isPro, paywallVisible, setPaywallVisible, requirePro } = useProGate(betaAccess);
@@ -213,12 +213,12 @@ export default function HomeScreen() {
   const courseInfo = getCourseInfo(selectedCourse);
 
   const listenQuestions = React.useMemo(() => {
-    if (listenSubject == null) return [];
+    if (listenSubject == null || !questionsBySubject) return [];
     const qs = difficulty === 'all'
       ? questionsBySubject[listenSubject]
       : questionsBySubject[listenSubject].filter((q) => q.difficulty === difficulty);
     return [...qs].sort(() => Math.random() - 0.5);
-  }, [listenSubject, difficulty]);
+  }, [listenSubject, difficulty, questionsBySubject]);
 
   // Courses that require MAX or Pro
   const maxOnlyCourses = ALL_COURSES.filter(c => c.maxOnly).map(c => c.key);
@@ -229,7 +229,7 @@ export default function HomeScreen() {
     const SUBJECTS_KEYS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
     return KOKO_COURSES.filter((c) => {
       const total = SUBJECTS_KEYS.reduce(
-        (sum, s) => sum + getQuestionCount(s, 'all', 'koko', c.key),
+        (sum, s) => sum + getQuestionCount(s, 'all', 'koko', c.key, questionsBySubject),
         0,
       );
       return total > 0;
@@ -590,7 +590,7 @@ export default function HomeScreen() {
             <SubjectCard
               key={subject}
               subject={subject}
-              questionCount={getQuestionCount(subject, difficulty, examType, selectedCourse)}
+              questionCount={getQuestionCount(subject, difficulty, examType, selectedCourse, questionsBySubject)}
               onPress={() =>
                 listenPickerActive
                   ? handleListenSubject(subject)

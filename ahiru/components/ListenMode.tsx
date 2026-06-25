@@ -8,7 +8,7 @@ import {
   SafeAreaView,
   ScrollView,
 } from 'react-native';
-import { Question } from '../data/questions';
+import type { Question } from '../data/questions-meta';
 import {
   speak,
   stopSpeech,

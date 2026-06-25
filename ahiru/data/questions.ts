@@ -100,31 +100,10 @@ import { kokoRikaEx01 } from './koko_rika_ex_01';
 import { kokoShakaiEx01 } from './kokoShakaiEx01';
 import { nandaiChugakuEx01 } from './nandai_chugaku_ex_01';
 
-export type Question = {
-  id: string;
-  subject: 'sansu' | 'kokugo' | 'rika' | 'shakai' | 'eigo';
-  question: string;
-  answer: string;
-  hint?: string;
-  explanation?: string;
-  difficulty: 'basic' | 'standard' | 'advanced';
-  course?: CourseKey;
-  /** 図形や表をテキストで表現したもの。QuizCardで図エリアに表示される */
-  figureDescription?: string;
-  /** 国語の長文読解などで、問題文の前に表示する本文パッセージ */
-  passage?: string;
-  examType?: ExamType;
-  questionReading?: string;
-  answerReading?: string;
-  maxOnly?: boolean;
-  choices?: string[];
-  examFrequency?: 'high' | 'medium' | 'very-high';
-  memoryTip?: string;
-  pitfall?: string;
-  videoUrl?: string;
-};
-
-export type SubjectKey = 'sansu' | 'kokugo' | 'rika' | 'shakai' | 'eigo';
+export type { Question, SubjectKey } from './questions-meta';
+export { subjectInfo } from './questions-meta';
+import type { Question } from './questions-meta';
+import type { SubjectKey } from './questions-meta';
 
 export const questions: Question[] = [
   // ============================================================
@@ -2905,16 +2884,6 @@ export const questionsBySubject: Record<SubjectKey, Question[]> = {
   eigo: questions.filter((q) => q.subject === 'eigo'),
 };
 
-export const subjectInfo: Record<
-  SubjectKey,
-  { name: string; emoji: string; color: string }
-> = {
-  sansu: { name: '算数', emoji: '📐', color: '#4A90D9' },
-  kokugo: { name: '国語', emoji: '📖', color: '#E74C3C' },
-  rika: { name: '理科', emoji: '🔬', color: '#27AE60' },
-  shakai: { name: '社会', emoji: '🌍', color: '#F39C12' },
-  eigo: { name: '英語', emoji: '🔤', color: '#9B59B6' },
-};
 
 export const questionsByDifficulty: Record<string, Question[]> = {
   basic: questions.filter((q) => q.difficulty === 'basic'),

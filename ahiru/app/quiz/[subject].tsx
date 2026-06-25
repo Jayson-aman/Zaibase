@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   View,
   Text,
@@ -8,7 +8,8 @@ import {
   ScrollView,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { questionsBySubject, subjectInfo, SubjectKey, Question } from '../../data/questions';
+import { subjectInfo, type SubjectKey, type Question } from '../../data/questions-meta';
+import { useSubjectQuestions } from '../../hooks/useSubjectQuestions';
 import { ALL_COURSES } from '../../data/courses';
 import type { CourseKey, ExamType } from '../../data/courses';
 import { explanationsSansu } from '../../data/explanations_sansu';
@@ -113,9 +114,12 @@ export default function QuizScreen() {
   const isPro = subIsPro || betaAccess;
   const isMax = subIsMax || betaAccess;
 
+  const { questions: subjectPool, loading: questionsLoading } = useSubjectQuestions(subjectKey);
+
   const questions = useMemo(() => {
-    if (isDaily) return getDailyQuestions(subjectKey, 30, course, examType);
-    const all = questionsBySubject[subjectKey];
+    if (questionsLoading) return [];
+    if (isDaily) return getDailyQuestions(subjectPool, subjectKey, 30, course, examType);
+    const all = subjectPool;
     if (isMock) {
       // 模擬試験: 入試形式（学校別大問）を除いた一般問題のみ使用
       const generalKey = examType === 'koko' ? 'koko-general' : 'general';
@@ -134,7 +138,7 @@ export default function QuizScreen() {
     }
     const filtered = filterQuestions(all, examType, course, difficultyFilter, isPro || isMax);
     return [...filtered].sort(() => Math.random() - 0.5);
-  }, [subjectKey, difficultyFilter, isDaily, isMock, isKakomon, course, examType, isPro, isMax]);
+  }, [subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, course, examType, isPro, isMax]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -215,6 +219,26 @@ export default function QuizScreen() {
     setWrongIds([]);
     setShowExplanation(false);
     setWaitingNext(false);
+  }
+
+  if (questionsLoading) {
+    return (
+      <SafeAreaView style={styles.safeArea}>
+        <View style={[styles.header, { backgroundColor: info.color }]}>
+          <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
+            <Text style={styles.backBtnText}>← 戻る</Text>
+          </TouchableOpacity>
+          <View style={styles.headerCenter}>
+            <Text style={styles.headerEmoji}>{info.emoji}</Text>
+            <Text style={styles.headerTitle}>{info.name}</Text>
+          </View>
+          <View style={styles.headerRight}><HomeButton variant="light" /></View>
+        </View>
+        <View style={styles.emptyWrap}>
+          <Text style={styles.emptyText}>問題を読み込み中...</Text>
+        </View>
+      </SafeAreaView>
+    );
   }
 
   if (questions.length === 0) {

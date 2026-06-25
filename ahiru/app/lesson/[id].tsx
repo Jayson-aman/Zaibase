@@ -13,7 +13,7 @@ import LessonRenderer from '../../components/LessonRenderer';
 import HomeButton from '../../components/HomeButton';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
-import { subjectInfo } from '../../data/questions';
+import { subjectInfo } from '../../data/questions-meta';
 
 export default function LessonDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();

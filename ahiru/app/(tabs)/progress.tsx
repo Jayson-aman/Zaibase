@@ -11,7 +11,8 @@ import {
 } from 'react-native';
 import { useFocusEffect, router } from 'expo-router';
 import { loadProgress, resetProgress, ProgressData } from '../../store/progress';
-import { questionsBySubject, subjectInfo, SubjectKey } from '../../data/questions';
+import { subjectInfo, type SubjectKey } from '../../data/questions-meta';
+import { useQuestionsBySubjectMap } from '../../hooks/useSubjectQuestions';
 import { useMaxGate } from '../../hooks/useMaxGate';
 import { getWeakPointCoaching } from '../../services/aiCoach';
 import { fetchMyRanking, RankingResult } from '../../services/ranking';
@@ -20,6 +21,7 @@ import Paywall from '../../components/Paywall';
 const SUBJECTS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
 
 export default function ProgressScreen() {
+  const { bySubject: questionsBySubject } = useQuestionsBySubjectMap();
   const [progressData, setProgressData] = useState<ProgressData>({});
   const { paywallVisible, setPaywallVisible, requireMax } = useMaxGate();
   const [coachLoading, setCoachLoading] = useState(false);
@@ -73,7 +75,7 @@ export default function ProgressScreen() {
     requireMax(async () => {
       const wrongIds = progressData[subjectKey]?.wrongQuestionIds ?? [];
       const items = wrongIds
-        .map((id) => questionsBySubject[subjectKey].find((q) => q.id === id))
+        .map((id) => (questionsBySubject?.[subjectKey] ?? []).find((q) => q.id === id))
         .filter((q): q is NonNullable<typeof q> => q != null)
         .map((q) => ({ question: q.question, answer: q.answer }));
 

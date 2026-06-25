@@ -14,7 +14,7 @@ const SERIF = Platform.select({
   web: '"Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif',
   default: undefined,
 }) as string | undefined;
-import { Question, subjectInfo } from '../data/questions';
+import { Question, subjectInfo } from '../data/questions-meta';
 import {
   getHistoryThemeLabel,
 } from '../data/images';
