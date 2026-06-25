@@ -219,6 +219,9 @@ export default function QuizScreen() {
     setWrongIds([]);
     setShowExplanation(false);
     setWaitingNext(false);
+    setFeedback(null);
+    setShowPaywall(false);
+    setShowTutorChat(false);
   }
 
   if (questionsLoading) {
