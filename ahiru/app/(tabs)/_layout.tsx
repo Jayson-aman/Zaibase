@@ -75,12 +75,18 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="coach"
+        options={{
+          title: 'コーチ',
+          tabBarIcon: ({ focused }) => (
+            <TabIcon emoji="🎓" focused={focused} />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="progress"
         options={{
-          title: '進捗',
-          tabBarIcon: ({ focused }) => (
-            <TabIcon emoji="📊" focused={focused} />
-          ),
+          href: null,
         }}
       />
     </Tabs>
