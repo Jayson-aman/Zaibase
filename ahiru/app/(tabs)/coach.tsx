@@ -198,6 +198,14 @@ export default function CoachScreen() {
   );
 
   // ── handlers ──────────────────────────────────────────────────────────────
+  function aiErrorMessage(err: unknown): string {
+    if (err != null && typeof err === 'object' && 'message' in err) {
+      const msg = String((err as { message: unknown }).message);
+      if (msg.length > 0 && msg.length < 200) return msg;
+    }
+    return 'しばらく待ってからもう一度お試しください。';
+  }
+
   async function handleAskCoach() {
     if (!isPro) { setPaywallVisible(true); return; }
     if (!worstSubject) {
@@ -218,8 +226,8 @@ export default function CoachScreen() {
     try {
       const advice = await getWeakPointCoaching(subjectInfo[worstSubject].name, items);
       setCoachAdvice(advice);
-    } catch {
-      Alert.alert('エラー', 'AIコーチの呼び出しに失敗しました。もう一度お試しください。');
+    } catch (err) {
+      Alert.alert('AIコーチ', aiErrorMessage(err));
     } finally {
       setCoachLoading(false);
     }
@@ -236,8 +244,8 @@ export default function CoachScreen() {
         { question: '次の記述をわかりやすさ・正確さ・表現の観点で採点・添削してください', answer: essayInput.trim() },
       ]);
       setEssayFeedback(feedback);
-    } catch {
-      Alert.alert('エラー', 'AI添削の呼び出しに失敗しました。もう一度お試しください。');
+    } catch (err) {
+      Alert.alert('AI添削', aiErrorMessage(err));
     } finally {
       setEssayLoading(false);
     }
@@ -421,13 +429,19 @@ export default function CoachScreen() {
         >
           {isMax ? (
             <View>
-              <Text style={s.sectionLabel}>記述の答えを入力してください</Text>
+              <View style={s.essayLabelRow}>
+                <Text style={s.sectionLabel}>記述の答えを入力してください</Text>
+                <Text style={[s.charCount, essayInput.length >= 180 && s.charCountWarn]}>
+                  {essayInput.length}/200
+                </Text>
+              </View>
               <TextInput
                 style={s.essayInput}
                 value={essayInput}
                 onChangeText={setEssayInput}
                 multiline
                 numberOfLines={5}
+                maxLength={200}
                 placeholder="ここに記述問題の答えを書いてください…"
                 placeholderTextColor={C.muted}
                 textAlignVertical="top"
@@ -559,6 +573,9 @@ const s = StyleSheet.create({
   disclaimer: { fontSize: 11, color: C.muted, textAlign: 'center' },
 
   // essay (Max)
+  essayLabelRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 8 },
+  charCount: { fontSize: 11, color: C.muted },
+  charCountWarn: { color: C.coral },
   essayInput: {
     backgroundColor: '#F8FAFF',
     borderRadius: 10,
