@@ -909,6 +909,32 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     lineHeight: 20,
   },
+  scholarshipItem: {
+    marginTop: 10,
+    paddingTop: 10,
+    borderTopWidth: 1,
+    borderTopColor: 'rgba(249,168,37,0.2)',
+  },
+  scholarshipItemTitle: {
+    fontSize: 12,
+    fontWeight: '800',
+    color: '#F9A825',
+    marginBottom: 4,
+  },
+  scholarshipCondition: {
+    fontSize: 11,
+    color: D.soft,
+    lineHeight: 17,
+    marginBottom: 4,
+    fontWeight: '400',
+  },
+  scholarshipNote: {
+    fontSize: 11,
+    color: D.muted,
+    lineHeight: 16,
+    marginTop: 10,
+    fontStyle: 'italic',
+  },
 
   // Mascot
   mascotBanner: {

@@ -12,7 +12,6 @@ export const kkEigo: Question[] = [
     difficulty: 'advanced',
     course: 'koko-kankan',
     examType: 'koko',
-    examType: 'koko',
   },
   {
     id: 'kk_eigo_02',
@@ -26,7 +25,6 @@ export const kkEigo: Question[] = [
       '現在完了（継続）：have/has+p.p.。for+期間(for three years)、since+起点(since 2021)。継続動作を強調するなら現在完了進行形(have been -ing)が自然。I have studied=3年間の学習(完了・継続)、I have been studying=今もずっと勉強中(継続強調)。',
     difficulty: 'advanced',
     course: 'koko-kankan',
-    examType: 'koko',
     examType: 'koko',
   },
   {
@@ -42,7 +40,6 @@ export const kkEigo: Question[] = [
     difficulty: 'advanced',
     course: 'koko-kankan',
     examType: 'koko',
-    examType: 'koko',
   },
   {
     id: 'kk_eigo_04',
@@ -55,7 +52,6 @@ export const kkEigo: Question[] = [
       '関係代名詞whoは先行詞が人のとき使い、後に続く節（won the science prize）が先行詞(a student)を修飾する。she→who（同じ人物を指す）。I met a student who won...「科学賞を取った生徒に会った」。先行詞が物ならwhich/that。',
     difficulty: 'advanced',
     course: 'koko-kankan',
-    examType: 'koko',
     examType: 'koko',
   },
   {
@@ -71,7 +67,6 @@ export const kkEigo: Question[] = [
     difficulty: 'advanced',
     course: 'koko-kankan',
     examType: 'koko',
-    examType: 'koko',
   },
   {
     id: 'kk_eigo_06',
@@ -84,7 +79,6 @@ export const kkEigo: Question[] = [
       "直接疑問文(Where does he live?)を他の文に組み込む場合、語順を平叙文と同じにする。Where does he live? → where he lives（does消えて3単現sが動詞につく）。I don't know + where he lives.。Do you know what time it is?なども同じ構造。",
     difficulty: 'advanced',
     course: 'koko-kankan',
-    examType: 'koko',
     examType: 'koko',
   },
   {
@@ -100,7 +94,6 @@ export const kkEigo: Question[] = [
     difficulty: 'advanced',
     course: 'koko-kankan',
     examType: 'koko',
-    examType: 'koko',
   },
   {
     id: 'kk_eigo_08',
@@ -115,7 +108,6 @@ export const kkEigo: Question[] = [
     difficulty: 'advanced',
     course: 'koko-kankan',
     examType: 'koko',
-    examType: 'koko',
   },
   {
     id: 'kk_eigo_09',
@@ -128,7 +120,6 @@ export const kkEigo: Question[] = [
       '現在完了の語順：主語+have/has(+副詞)+p.p.。neverはhaveの直後に置く。been to+場所「〜に行ったことがある」。I have never been to London.「私はロンドンに行ったことがない」(経験の否定)。',
     difficulty: 'advanced',
     course: 'koko-kankan',
-    examType: 'koko',
     examType: 'koko',
   },
   {
@@ -143,7 +134,6 @@ export const kkEigo: Question[] = [
       '英作文の型：①結論(what)「〜になりたい/〜で働きたい」②理由(why)「because/so」③具体的説明。語数チェック：30語以上を意識。よく使える表現：in the future(将来), I am interested in~(〜に興味がある), I think~(〜と思う), suits me(自分に合っている)。スペル・文法を確認する。',
     difficulty: 'advanced',
     course: 'koko-kankan',
-    examType: 'koko',
     examType: 'koko',
   },
 ];
@@ -161,7 +151,6 @@ export const ktEigo: Question[] = [
     difficulty: 'advanced',
     course: 'koko-top',
     examType: 'koko',
-    examType: 'koko',
   },
   {
     id: 'kt_eigo_02',
@@ -176,7 +165,6 @@ export const ktEigo: Question[] = [
     difficulty: 'advanced',
     course: 'koko-top',
     examType: 'koko',
-    examType: 'koko',
   },
   {
     id: 'kt_eigo_03',
@@ -189,7 +177,6 @@ export const ktEigo: Question[] = [
       '仮定法の種類：①仮定法過去=現在の事実に反する仮定（If I were rich, I would buy it.）②仮定法過去完了=過去の事実に反する仮定（If it had not rained, we would have played.）。過去の事実：昨日実際は雨が降った。だから「降らなかったら」はhad not rained。結果もhave+p.p.（would have played）。',
     difficulty: 'advanced',
     course: 'koko-top',
-    examType: 'koko',
     examType: 'koko',
   },
   {
@@ -205,7 +192,6 @@ export const ktEigo: Question[] = [
     difficulty: 'advanced',
     course: 'koko-top',
     examType: 'koko',
-    examType: 'koko',
   },
   {
     id: 'kt_eigo_05',
@@ -220,7 +206,6 @@ export const ktEigo: Question[] = [
     difficulty: 'advanced',
     course: 'koko-top',
     examType: 'koko',
-    examType: 'koko',
   },
   {
     id: 'kt_eigo_06',
@@ -233,7 +218,6 @@ export const ktEigo: Question[] = [
       '話法転換のルール：①said to+人→told+人②I→she(話者に合わせる)③you→me(聞き手に合わせる)④時制を1つ過去にずらす(will→would)⑤時の表現変換：tomorrow→the next day, now→then, today→that day, yesterday→the day before。',
     difficulty: 'advanced',
     course: 'koko-top',
-    examType: 'koko',
     examType: 'koko',
   },
   {
@@ -248,7 +232,6 @@ export const ktEigo: Question[] = [
     difficulty: 'advanced',
     course: 'koko-top',
     examType: 'koko',
-    examType: 'koko',
   },
   {
     id: 'kt_eigo_08',
@@ -261,7 +244,6 @@ export const ktEigo: Question[] = [
       '語彙推測の戦略：①ターゲット語の前後の文脈を読む②肯定的/否定的文脈を判断③具体的な行動（checked every detail, never made careless mistakes）から抽象的な意味を推測。meticulous=非常に細心・几帳面な（英語の語感：micro=細かい、curious=好奇心→combined: very careful about details）。',
     difficulty: 'advanced',
     course: 'koko-top',
-    examType: 'koko',
     examType: 'koko',
   },
   {
@@ -276,7 +258,6 @@ export const ktEigo: Question[] = [
     difficulty: 'advanced',
     course: 'koko-top',
     examType: 'koko',
-    examType: 'koko',
   },
   {
     id: 'kt_eigo_10',
@@ -290,7 +271,6 @@ export const ktEigo: Question[] = [
       '高得点英作文の要素：①明確な主張「Learning a foreign language is important」②理由1+例(First...For example)③理由2(Second)④まとめ(In conclusion)。高校入試で差がつく表現：allow us to do「〜することを可能にする」、broaden horizons「視野を広げる」、get access to「〜にアクセスする」、connect us to「〜と繋げる」。',
     difficulty: 'advanced',
     course: 'koko-top',
-    examType: 'koko',
     examType: 'koko',
   },
 ];
