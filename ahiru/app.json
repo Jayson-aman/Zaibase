@@ -9,7 +9,8 @@
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.zaibase.exam"
+      "bundleIdentifier": "com.zaibase.exam",
+      "buildNumber": "9"
     },
     "android": {
       "package": "com.zaibase.exam",
@@ -26,11 +27,18 @@
       "bundler": "metro",
       "lang": "ja",
       "meta": {
-        "description": "大阪の中学受験対策アプリ。5科目830問以上・18校学校別コース。"
+        "description": "中学受験・高校受験対策アプリ。5科目7,000問以上・学校別コース対応。"
       }
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "問題の写真をAI先生に送るために写真へのアクセスが必要です。",
+          "cameraPermission": "問題の写真を撮影してAI先生に質問するためにカメラへのアクセスが必要です。"
+        }
+      ]
     ]
   }
 }

@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "FP資格対策",
+    "slug": "fp-shiken",
+    "scheme": "fp-shiken",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.zaibase.fp"
+    },
+    "android": {
+      "package": "com.zaibase.fp",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/icon.png"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

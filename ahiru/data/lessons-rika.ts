@@ -7,6 +7,7 @@ export const rikaLessons: Lesson[] = [
     title: '植物のつくりとはたらき',
     description: '光合成・呼吸・蒸散・種子のつくりを完全マスター',
     order: 1,
+    studyPeriod: '小4',
     sections: [
       {
         heading: '1. 植物の細胞とつくり',
@@ -234,6 +235,7 @@ export const rikaLessons: Lesson[] = [
     title: '電気回路と電力の完全攻略',
     description: '直列・並列・オームの法則から電力計算まで完全制覇',
     order: 2,
+    studyPeriod: '小5前半',
     sections: [
       {
         heading: '1. 電流・電圧・抵抗の関係',
@@ -444,6 +446,7 @@ R₂ ＝ R ー R₁ ＝ 16 ー 8 ＝ 8Ω
     title: '化学変化と物質の性質',
     description: '燃焼・酸化・中和・状態変化を体系的に理解する',
     order: 3,
+    studyPeriod: '小5後半',
     sections: [
       {
         heading: '1. 物質の分類と状態変化',
@@ -684,6 +687,7 @@ CuCl₂ → Cu²⁺ ＋ 2Cl⁻
     title: '天体・地球・宇宙の仕組み',
     description: '太陽系・月の満ち欠け・地層・地震を完全攻略',
     order: 4,
+    studyPeriod: '小6前半',
     sections: [
       {
         heading: '1. 太陽系と惑星',
@@ -919,6 +923,7 @@ S波の到達時間 ＝ 240 ÷ 4 ＝ 60秒
     title: '力・運動・エネルギーの法則',
     description: 'ニュートンの運動法則から仕事・エネルギー保存まで',
     order: 5,
+    studyPeriod: '小6前半',
     sections: [
       {
         heading: '1. 力の種類と合成',
@@ -1181,6 +1186,7 @@ STEP4：仕事の原理で確認（仕事量は道具によらず一定）
     title: '生態系・人体・遺伝の基礎',
     description: '食物連鎖から遺伝の法則まで、生物の仕組みを完全理解',
     order: 6,
+    studyPeriod: '小6後半・直前',
     sections: [
       {
         heading: '1. 食物連鎖と生態系',

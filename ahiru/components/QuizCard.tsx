@@ -14,13 +14,10 @@ const SERIF = Platform.select({
   web: '"Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif',
   default: undefined,
 }) as string | undefined;
-import { Question, subjectInfo } from '../data/questions';
+import { Question, subjectInfo } from '../data/questions-meta';
 import {
-  getQuestionIllustration,
   getHistoryThemeLabel,
-  mascots,
 } from '../data/images';
-import AnimatedMascot from './AnimatedMascot';
 
 type Props = {
   question: Question;
@@ -31,13 +28,17 @@ type Props = {
   isPro?: boolean;
 };
 
-const { width, height } = Dimensions.get('window');
+const { width } = Dimensions.get('window');
+
+function extractTrailingUnit(text: string): string {
+  const m = text.trim().match(/(cm²|㎠|cm³|km²|m²|㎡|mm|km|cm|m|kg|g|[%％]|円|羽|本|個|匹|頭|枚|冊|杯|台|艘|門|度|℃|時間|分|秒)$/u);
+  return m ? m[1] : '';
+}
 
 export default function QuizCard({ question, onReveal, choices, onChoiceSelect, isPro = false }: Props) {
   const [revealed, setRevealed] = useState(false);
   const [selectedChoice, setSelectedChoice] = useState<string | null>(null);
   const info = subjectInfo[question.subject];
-  const illustration = getQuestionIllustration(question.subject, question.id);
   const historyLabel = getHistoryThemeLabel(question.id);
 
   function handlePress() {
@@ -61,15 +62,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
       activeOpacity={choices != null ? 1 : 0.9}
       style={[styles.card, choices == null && revealed && styles.cardRevealed]}
     >
-      <View style={styles.illustrationWrap}>
-        <AnimatedMascot
-          source={illustration}
-          style={styles.illustration}
-          containerStyle={styles.illustration}
-          fallbackEmoji={info.emoji}
-          animation={revealed || selectedChoice != null ? 'bounce' : 'float'}
-          accessibilityLabel="問題イラスト"
-        />
+      <View style={styles.subjectChipRow}>
         <View style={[styles.subjectChip, { backgroundColor: info.color }]}>
           <Text style={styles.subjectChipText}>
             {info.emoji} {info.name}
@@ -102,52 +95,72 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
               </ScrollView>
             </View>
           )}
-          <View style={styles.choicesWrap}>
-            {choices.map((choice, i) => {
-              const isSelected = selectedChoice === choice;
-              const isCorrect = choice === question.answer;
-              const showResult = selectedChoice != null;
-
-              return (
-                <TouchableOpacity
-                  key={`${i}-${choice}`}
-                  style={[
-                    styles.choiceBtn,
-                    showResult && isCorrect && styles.choiceBtnCorrect,
-                    showResult && isSelected && !isCorrect && styles.choiceBtnWrong,
-                  ]}
-                  onPress={() => handleChoicePress(choice)}
-                  disabled={selectedChoice != null}
-                  activeOpacity={0.75}
-                >
-                  <View style={[
-                    styles.choiceLetter,
-                    showResult && isCorrect && styles.choiceLetterCorrect,
-                    showResult && isSelected && !isCorrect && styles.choiceLetterWrong,
-                  ]}>
-                    <Text style={[
-                      styles.choiceLetterText,
-                      showResult && (isCorrect || isSelected) && styles.choiceLetterTextResult,
-                    ]}>{choiceLabels[i]}</Text>
+          {(() => {
+            const stripLabel = (s: string) => s.replace(/^[A-D]\s+/, '');
+            const units = choices.map((c) => extractTrailingUnit(stripLabel(c)));
+            const first = units[0] ?? '';
+            const sharedUnit = first !== '' && units.every((u) => u === first) ? first : '';
+            return (
+              <>
+                {sharedUnit !== '' && (
+                  <View style={styles.sharedUnitWrap}>
+                    <Text style={styles.sharedUnitText}>単位：{sharedUnit}</Text>
                   </View>
-                  <Text
-                    style={[
-                      styles.choiceText,
-                      showResult && isCorrect && styles.choiceTextCorrect,
-                      showResult && isSelected && !isCorrect && styles.choiceTextWrong,
-                    ]}
-                    numberOfLines={3}
-                  >{choice}</Text>
-                  {showResult && isCorrect && (
-                    <Text style={styles.choiceCorrectMark}>✓</Text>
-                  )}
-                  {showResult && isSelected && !isCorrect && (
-                    <Text style={styles.choiceWrongMark}>✗</Text>
-                  )}
-                </TouchableOpacity>
-              );
-            })}
-          </View>
+                )}
+                <View style={styles.choicesWrap}>
+                  {choices.map((choice, i) => {
+                    const isSelected = selectedChoice === choice;
+                    const isCorrect = choice === question.answer;
+                    const showResult = selectedChoice != null;
+                    const stripped = stripLabel(choice.trim());
+                    const displayText = sharedUnit !== ''
+                      ? stripped.slice(0, stripped.length - sharedUnit.length).trim()
+                      : stripped;
+
+                    return (
+                      <TouchableOpacity
+                        key={`${i}-${choice}`}
+                        style={[
+                          styles.choiceBtn,
+                          showResult && isCorrect && styles.choiceBtnCorrect,
+                          showResult && isSelected && !isCorrect && styles.choiceBtnWrong,
+                        ]}
+                        onPress={() => handleChoicePress(choice)}
+                        disabled={selectedChoice != null}
+                        activeOpacity={0.75}
+                      >
+                        <View style={[
+                          styles.choiceLetter,
+                          showResult && isCorrect && styles.choiceLetterCorrect,
+                          showResult && isSelected && !isCorrect && styles.choiceLetterWrong,
+                        ]}>
+                          <Text style={[
+                            styles.choiceLetterText,
+                            showResult && (isCorrect || isSelected) && styles.choiceLetterTextResult,
+                          ]}>{choiceLabels[i]}</Text>
+                        </View>
+                        <Text
+                          style={[
+                            styles.choiceText,
+                            showResult && isCorrect && styles.choiceTextCorrect,
+                            showResult && isSelected && !isCorrect && styles.choiceTextWrong,
+                          ]}
+                          numberOfLines={3}
+                        >{displayText}</Text>
+                        {showResult && isCorrect && (
+                          <Text style={styles.choiceCorrectMark}>✓</Text>
+                        )}
+                        {showResult && isSelected && !isCorrect && (
+                          <Text style={styles.choiceWrongMark}>✗</Text>
+                        )}
+                      </TouchableOpacity>
+                    );
+                  })}
+                </View>
+              </>
+            );
+          })()}
+
           {selectedChoice != null && (question.explanation != null || question.hint != null) && (
             <View style={styles.hintBox}>
               <Text style={styles.hintLabel}>📖 解説</Text>
@@ -184,15 +197,6 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
         </View>
       ) : (
         <View style={styles.answerSide}>
-          <AnimatedMascot
-            source={mascots[question.subject]}
-            style={styles.answerMascot}
-            containerStyle={styles.answerMascot}
-            fallbackEmoji="✨"
-            resizeMode="contain"
-            animation="pulse"
-            accessibilityLabel="正解キャラクター"
-          />
           <Text style={styles.answerLabel}>答 え</Text>
           <Text style={styles.answerText}>{question.answer}</Text>
           {(question.explanation != null || question.hint != null) && (
@@ -229,46 +233,55 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderColor: '#00A651',
   },
-  illustrationWrap: {
-    width: '100%',
-    height: height * 0.3,
-    backgroundColor: '#EEF4FF',
-  },
-  illustration: {
-    width: '100%',
-    height: '100%',
+  subjectChipRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    paddingHorizontal: 16,
+    paddingTop: 16,
+    paddingBottom: 4,
+    flexWrap: 'wrap',
   },
   subjectChip: {
-    position: 'absolute',
-    top: 14,
-    left: 14,
     paddingHorizontal: 14,
     paddingVertical: 6,
     borderRadius: 16,
   },
   subjectChipText: {
     color: '#FFFFFF',
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: '800',
   },
   historyChip: {
-    position: 'absolute',
-    top: 14,
-    right: 14,
-    backgroundColor: 'rgba(255,255,255,0.92)',
+    backgroundColor: '#FEF3C7',
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 14,
   },
   historyChipText: {
     color: '#78350F',
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: '800',
   },
   // Choice mode
   choiceSection: {
     padding: 20,
     paddingTop: 14,
+  },
+  sharedUnitWrap: {
+    backgroundColor: '#EEF4FF',
+    borderRadius: 8,
+    paddingHorizontal: 14,
+    paddingVertical: 6,
+    alignSelf: 'flex-start',
+    marginBottom: 8,
+    borderWidth: 1,
+    borderColor: '#C5D8F8',
+  },
+  sharedUnitText: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#1E5FBE',
   },
   choicesWrap: {
     gap: 10,
@@ -391,13 +404,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 28,
     paddingTop: 16,
-  },
-  answerMascot: {
-    width: 160,
-    height: 160,
-    borderRadius: 80,
-    marginBottom: 12,
-    backgroundColor: '#FFFFFF',
   },
   answerLabel: {
     fontSize: 22,

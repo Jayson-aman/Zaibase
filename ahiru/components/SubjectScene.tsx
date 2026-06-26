@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { View, Text, Image, StyleSheet, Animated, Easing, Platform } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { SubjectKey } from '../data/questions';
+import { SubjectKey } from '../data/questions-meta';
 
 // 明朝体フォント（iOS: HiraMinProN-W6, Web: Hiragino Mincho等）
 const SERIF = Platform.select({

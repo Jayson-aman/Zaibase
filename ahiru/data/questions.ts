@@ -1,6 +1,21 @@
 import type { CourseKey, ExamType } from './courses';
 import { kankanQuestions, shitennojiQuestions, kokoGeneralQuestions } from './questions-courses';
 import { kokoKankanQuestions, kokoTopQuestions } from './questions-koko';
+import { kokoMaxSansu } from './koko_max_sansu';
+import { kokoMaxKokugo } from './koko_max_kokugo';
+import { kokoMaxRika } from './koko_max_rika';
+import { kokoMaxEigo } from './koko_max_eigo';
+import { kokoMaxShakai } from './koko_max_shakai';
+import { kokoKisoSansu50 } from './koko_kiso_sansu_50';
+import { kokoKisoSansu100 } from './koko_kiso_sansu_100';
+import { kokoOyoSansu50 } from './koko_oyo_sansu_50';
+import { kokoMoshiSansu50 } from './koko_moshi_sansu_50';
+import { kokoKisoKokugo50 } from './koko_kiso_kokugo_50';
+import { kokoMoshiKokugo50 } from './koko_moshi_kokugo_50';
+import { kokoKisoRika50 } from './koko_kiso_rika_50';
+import { kokoKisoEigo50 } from './koko_kiso_eigo_50';
+import { kokoKisoShakai50 } from './koko_kiso_shakai_50';
+import { kokoMoshiShakai50 } from './koko_moshi_shakai_50';
 import { seikoQuestions, seifuNankaiQuestions, takatsukiQuestions } from './questions-schools-1';
 import { kaimeiQuestions, toinQuestions, kindaiQuestions, kansaiHokuyoQuestions } from './questions-schools-2';
 import { toinExamQuestions, kindaiExamQuestions, kaimeiExamQuestions, kansaiHokuyoExamQuestions, myojoExamQuestions, tezukayamaExamQuestions, kinrankaiExamQuestions, otaniExamQuestions, kankanExamQuestions, kankanMaxQuestions, tokyoMeidaiExamQuestions, tokyoAoyamaExamQuestions, tokyoChuoExamQuestions, tokyoHoseiExamQuestions, tokyoGakushiinExamQuestions, tokyoHibiyaExamQuestions, tokyoWasedaExamQuestions, tokyoMeidaiKokoExamQuestions, tokyoChugakuMaxQuestions, tokyoKokoMaxQuestions } from './questions-exam';
@@ -9,12 +24,15 @@ import { myojoQuestions, tezukayamaQuestions, kinrankaiQuestions, otaniQuestions
 import { kisoSansu } from './kiso_sansu';
 import { sansuKiso } from './questions_sansu_kiso';
 import { sansuExtra2 } from './questions_sansu_extra2';
+import { sansuGeneralPlus } from './questions_sansu_general_plus';
 import { oyoSansuPart1 } from './oyoSansuPart1';
 import { oyoSansuPart2 } from './oyoSansuPart2';
 import { oyoSansuPart3 } from './oyoSansuPart3';
 import { kisoRika } from './kiso_rika';
 import { rikaExtra } from './questions_rika_extra';
 import { rikaExtra2 } from './questions_rika_extra2';
+import { rikaGeneralPlus } from './questions_rika_general_plus';
+import { kokugoGeneralPlus } from './questions_kokugo_general_plus';
 import { kokugoExtra } from './questions_kokugo_extra';
 import { kokugoExtra3 } from './questions_kokugo_extra3';
 import { kokugoExtra2a } from './questions_kokugo_extra2a';
@@ -23,6 +41,7 @@ import { shakaiExtra } from './questions_shakai_extra';
 import { kisoShakai } from './kiso-questions';
 import { shakaiExtra2a } from './questions_shakai_extra2a';
 import { shakaiExtra2b } from './questions_shakai_extra2b';
+import { shakaiGeneralPlus } from './questions_shakai_general_plus';
 import { eigoExtra } from './questions_eigo_extra';
 import { eigoExtra2 } from './questions_eigo_extra2';
 import { nichinokenSansu } from './nichinoken_sansu';
@@ -30,32 +49,61 @@ import { nichinokenKokugo } from './nichinoken_kokugo';
 import { nichinokenRika } from './nichinoken_rika';
 import { nichinokenShakai } from './nichinoken_shakai';
 import { nichinokenEigo } from './nichinoken_eigo';
+import { kokoNyushiRika50 } from './koko_nyushi_rika_50';
+import { kokoNyushiSansu50 } from './koko_nyushi_sansu_50';
+import { kokoNyushiEigo50 } from './koko_nyushi_eigo_50';
+import { kokoNyushiShakai50 } from './koko_nyushi_shakai_50';
+import { kokoNyushiKokugo50 } from './koko_nyushi_kokugo_50';
+import { kokoKisoRika50b } from './koko_kiso_rika_50b';
+import { kokoKisoShakai50b } from './koko_kiso_shakai_50b';
+import { kokoKisoKokugo50b } from './koko_kiso_kokugo_50b';
+import { kokoKisoSansu50b } from './koko_kiso_sansu_50b';
+import { kokoKisoEigo50b } from './koko_kiso_eigo_50b';
+import { kokoOyoRika50 } from './koko_oyo_rika_50';
+import { kokoOyoKokugo50 } from './koko_oyo_kokugo_50';
+import { kokoOyoShakai50 } from './koko_oyo_shakai_50';
+import { kokoOyoEigo50 } from './koko_oyo_eigo_50';
+import { kokoMoshiRika50 } from './koko_moshi_rika_50';
+import { kokoMoshiEigo50 } from './koko_moshi_eigo_50';
+import { kokoKankanEigo20 } from './koko_kankan_eigo_20';
+import { kokoKankanSansu20 } from './koko_kankan_sansu_20';
+import { kokoKankanKokugo20 } from './koko_kankan_kokugo_20';
+import { kokoKankanRika20 } from './koko_kankan_rika_20';
+import { kokoKankanShakai20 } from './koko_kankan_shakai_20';
+import { kokoKankanEigo30 } from './koko_kankan_eigo_30';
+import { kokoKankanSansu30 } from './koko_kankan_sansu_30';
+import { kokoKankanKokugo30 } from './koko_kankan_kokugo_30';
+import { kokoKankanRika30 } from './koko_kankan_rika_30';
+import { kokoKankanShakai30 } from './koko_kankan_shakai_30';
+import { kokoSansuEx01 } from './koko_sansu_ex_01';
+import { kokoSansuEx02 } from './koko_sansu_ex_02';
+import { kokoSansuEx03 } from './koko_sansu_ex_03';
+import { kokoSansuEx04 } from './koko_sansu_ex_04';
+import { kokoSansuEx05 } from './koko_sansu_ex_05';
+import { chugakuSansuEx01 } from './chugaku_sansu_ex_01';
+import { kokoSansuEx09 } from './koko_sansu_ex_09';
+import { kokoSansuEx06 } from './koko_sansu_ex_06';
+import { kokoSansuEx07 } from './koko_sansu_ex_07';
+import { kokoSansuEx17 } from './koko_sansu_ex_17';
+import { kokoSansuEx08 } from './koko_sansu_ex_08';
+import { kokoSansuEx10 } from './koko_sansu_ex_10';
+import { kokoSansuEx11 } from './koko_sansu_ex_11';
+import { kokoSansuEx12 } from './koko_sansu_ex_12';
+import { kokoSansuEx13 } from './koko_sansu_ex_13';
+import { kokoSansuEx15 } from './koko_sansu_ex_15';
+import { kokoSansuEx16 } from './koko_sansu_ex_16';
+import { chugakuSansuEx02 } from './chugaku_sansu_ex_02';
+import { kokoSansuEx14 } from './koko_sansu_ex_14';
+import { kokoEigoEx01 } from './kokoEigoEx01';
+import { kokoKokugoEx01 } from './koko_kokugo_ex_01';
+import { kokoRikaEx01 } from './koko_rika_ex_01';
+import { kokoShakaiEx01 } from './kokoShakaiEx01';
+import { nandaiChugakuEx01 } from './nandai_chugaku_ex_01';
 
-export type Question = {
-  id: string;
-  subject: 'sansu' | 'kokugo' | 'rika' | 'shakai' | 'eigo';
-  question: string;
-  answer: string;
-  hint?: string;
-  explanation?: string;
-  difficulty: 'basic' | 'standard' | 'advanced';
-  course?: CourseKey;
-  /** 図形や表をテキストで表現したもの。QuizCardで図エリアに表示される */
-  figureDescription?: string;
-  /** 国語の長文読解などで、問題文の前に表示する本文パッセージ */
-  passage?: string;
-  examType?: ExamType;
-  questionReading?: string;
-  answerReading?: string;
-  maxOnly?: boolean;
-  choices?: string[];
-  examFrequency?: 'high' | 'medium' | 'very-high';
-  memoryTip?: string;
-  pitfall?: string;
-  videoUrl?: string;
-};
-
-export type SubjectKey = 'sansu' | 'kokugo' | 'rika' | 'shakai' | 'eigo';
+export type { Question, SubjectKey } from './questions-meta';
+export { subjectInfo } from './questions-meta';
+import type { Question } from './questions-meta';
+import type { SubjectKey } from './questions-meta';
 
 export const questions: Question[] = [
   // ============================================================
@@ -2698,6 +2746,37 @@ export const questions: Question[] = [
   ...kokoGeneralQuestions,
   ...kokoKankanQuestions,
   ...kokoTopQuestions,
+  ...kokoMaxSansu,
+  ...kokoMaxKokugo,
+  ...kokoMaxRika,
+  ...kokoMaxEigo,
+  ...kokoMaxShakai,
+  ...kokoKisoSansu50,
+  ...kokoKisoSansu100,
+  ...kokoOyoSansu50,
+  ...kokoMoshiSansu50,
+  ...kokoKisoKokugo50,
+  ...kokoMoshiKokugo50,
+  ...kokoKisoRika50,
+  ...kokoNyushiRika50,
+  ...kokoNyushiSansu50,
+  ...kokoNyushiEigo50,
+  ...kokoNyushiShakai50,
+  ...kokoNyushiKokugo50,
+  ...kokoKisoEigo50,
+  ...kokoKisoShakai50,
+  ...kokoMoshiShakai50,
+  ...kokoKisoRika50b,
+  ...kokoKisoShakai50b,
+  ...kokoKisoKokugo50b,
+  ...kokoKisoSansu50b,
+  ...kokoKisoEigo50b,
+  ...kokoOyoRika50,
+  ...kokoOyoKokugo50,
+  ...kokoOyoShakai50,
+  ...kokoOyoEigo50,
+  ...kokoMoshiRika50,
+  ...kokoMoshiEigo50,
   // ── 学校別問題（大阪私学 最難関） ──
   ...seikoQuestions,
   ...seifuNankaiQuestions,
@@ -2736,12 +2815,15 @@ export const questions: Question[] = [
   ...kisoSansu,
   ...sansuKiso,
   ...sansuExtra2,
+  ...sansuGeneralPlus,
   ...oyoSansuPart1,
   ...oyoSansuPart2,
   ...oyoSansuPart3,
   ...kisoRika,
   ...rikaExtra,
   ...rikaExtra2,
+  ...rikaGeneralPlus,
+  ...kokugoGeneralPlus,
   ...kokugoExtra,
   ...kokugoExtra3,
   ...kokugoExtra2a,
@@ -2750,6 +2832,7 @@ export const questions: Question[] = [
   ...kisoShakai,
   ...shakaiExtra2a,
   ...shakaiExtra2b,
+  ...shakaiGeneralPlus,
   ...eigoExtra,
   ...eigoExtra2,
   ...nichinokenSansu,
@@ -2757,6 +2840,40 @@ export const questions: Question[] = [
   ...nichinokenRika,
   ...nichinokenShakai,
   ...nichinokenEigo,
+  ...kokoKankanEigo20,
+  ...kokoKankanSansu20,
+  ...kokoKankanKokugo20,
+  ...kokoKankanRika20,
+  ...kokoKankanShakai20,
+  ...kokoKankanEigo30,
+  ...kokoKankanSansu30,
+  ...kokoKankanKokugo30,
+  ...kokoKankanRika30,
+  ...kokoKankanShakai30,
+  ...kokoSansuEx01,
+  ...kokoSansuEx02,
+  ...kokoSansuEx03,
+  ...kokoSansuEx04,
+  ...kokoSansuEx05,
+  ...chugakuSansuEx01,
+  ...kokoSansuEx09,
+  ...kokoSansuEx06,
+  ...kokoSansuEx07,
+  ...kokoSansuEx08,
+  ...kokoSansuEx17,
+  ...kokoSansuEx10,
+  ...kokoSansuEx11,
+  ...kokoSansuEx12,
+  ...kokoSansuEx13,
+  ...kokoSansuEx15,
+  ...kokoSansuEx16,
+  ...chugakuSansuEx02,
+  ...kokoSansuEx14,
+  ...kokoEigoEx01,
+  ...kokoKokugoEx01,
+  ...kokoRikaEx01,
+  ...kokoShakaiEx01,
+  ...nandaiChugakuEx01,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {
@@ -2767,16 +2884,6 @@ export const questionsBySubject: Record<SubjectKey, Question[]> = {
   eigo: questions.filter((q) => q.subject === 'eigo'),
 };
 
-export const subjectInfo: Record<
-  SubjectKey,
-  { name: string; emoji: string; color: string }
-> = {
-  sansu: { name: '算数', emoji: '📐', color: '#4A90D9' },
-  kokugo: { name: '国語', emoji: '📖', color: '#E74C3C' },
-  rika: { name: '理科', emoji: '🔬', color: '#27AE60' },
-  shakai: { name: '社会', emoji: '🌍', color: '#F39C12' },
-  eigo: { name: '英語', emoji: '🔤', color: '#9B59B6' },
-};
 
 export const questionsByDifficulty: Record<string, Question[]> = {
   basic: questions.filter((q) => q.difficulty === 'basic'),

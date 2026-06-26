@@ -794,6 +794,42 @@
     #estimateScreen, #invoiceScreen, #insuranceScreen, #photoReportScreen, #deliveryScreen, #eticketScreen { background: var(--zb-bg); min-height: 100vh; display: flex; flex-direction: column; padding-bottom: 80px; color: var(--zb-text); }
     /* 搬入車両追跡（zaibase_tracking.html） */
     #trackingScreen { height: 100dvh; overflow: hidden; display: flex; flex-direction: column; padding-bottom: 0; background: var(--zb-bg); color: var(--zb-text); }
+    #rainRadarScreen { height: 100dvh; overflow: hidden; display: flex; flex-direction: column; padding-bottom: 0; background: #0f172a; color: #fff; }
+    .rrdr-hd { background: #0f172a; padding: 12px 16px; display: flex; align-items: center; gap: 10px; flex-shrink: 0; border-bottom: 1px solid #1e3a5f; }
+    .rrdr-back { background: none; border: none; color: #94a3b8; font-size: 20px; cursor: pointer; padding: 4px; display: flex; align-items: center; }
+    .rrdr-title { flex: 1; font-size: 16px; font-weight: 700; color: #f1f5f9; }
+    .rrdr-refresh { background: #1e40af; border: none; color: #fff; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 4px; }
+    .rrdr-refresh:disabled { opacity: 0.5; cursor: default; }
+    .rrdr-tabs { display: flex; background: #1e293b; border-bottom: 1px solid #1e3a5f; flex-shrink: 0; }
+    .rrdr-tab { flex: 1; padding: 10px 2px; border: none; background: transparent; color: #64748b; font-size: 12px; font-weight: 600; cursor: pointer; border-bottom: 3px solid transparent; transition: color .2s; }
+    .rrdr-tab.active { color: #38bdf8; border-bottom-color: #38bdf8; }
+    #rainRadarMap { flex: 1; }
+    #rrdrWindWrap { display: none; flex: 1; flex-direction: column; }
+    #rrdrWindWrap.rrdr-active { display: flex; }
+    #rrdrForecastWrap { display: none; flex: 1; flex-direction: column; overflow-y: auto; background: #0f172a; padding: 12px 16px 20px; }
+    #rrdrForecastWrap.rrdr-active { display: flex; }
+    .rrdr-footer { background: #0f172a; border-top: 1px solid #1e3a5f; padding: 8px 16px; flex-shrink: 0; }
+    .rrdr-time { font-size: 11px; color: #94a3b8; margin-bottom: 6px; }
+    .rrdr-legend { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+    .rrdr-legend-label { font-size: 10px; color: #64748b; margin-right: 4px; }
+    .rrdr-legend-item { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+    .rrdr-legend-swatch { width: 22px; height: 10px; border-radius: 2px; }
+    .rrdr-legend-val { font-size: 9px; color: #94a3b8; }
+    .rrdr-fc-card { background: #1e293b; border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; }
+    .rrdr-fc-card.rrdr-fc-today { background: linear-gradient(135deg,#1e3a5f,#1e40af22); border: 1px solid #1e40af55; }
+    .rrdr-fc-card-hd { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+    .rrdr-fc-date { font-size: 13px; font-weight: 700; color: #f1f5f9; }
+    .rrdr-fc-label { font-size: 10px; background: #38bdf8; color: #0f172a; border-radius: 4px; padding: 2px 6px; font-weight: 700; }
+    .rrdr-fc-icon { font-size: 28px; }
+    .rrdr-fc-temps { font-size: 14px; font-weight: 700; color: #f1f5f9; }
+    .rrdr-fc-high { color: #f87171; }
+    .rrdr-fc-low { color: #60a5fa; }
+    .rrdr-fc-meta { display: flex; gap: 14px; font-size: 12px; color: #94a3b8; margin-top: 6px; }
+    .rrdr-fc-row { display: flex; align-items: center; gap: 8px; padding: 8px 0; border-top: 1px solid #1e3a5f; font-size: 12px; color: #cbd5e1; }
+    .rrdr-fc-row-date { width: 60px; font-size: 11px; color: #94a3b8; }
+    .rrdr-fc-row-icon { width: 24px; text-align: center; font-size: 16px; }
+    .rrdr-fc-row-tmp { margin-left: auto; font-size: 12px; font-weight: 600; }
+    .rrdr-fc-row-rain { font-size: 11px; color: #60a5fa; width: 36px; text-align: right; }
     #safetyScreen, #faceRegisterScreen { background: var(--zb-bg); min-height: 100vh; display: flex; flex-direction: column; padding-bottom: 80px; color: var(--zb-text); }
     #siteFaceScreen { background: #0d1b2a; min-height: 100dvh; display: flex; flex-direction: column; color: #e8edf2; padding-bottom: 24px; }
     /* 現場保険（zaibase_insurance.html） */
@@ -2561,9 +2597,131 @@
     .badge-sos { display: inline-block; font-size: 11px; padding: 3px 8px; border-radius: 10px; font-weight: 600; margin-right: 4px; }
     .badge-sos-need { background: #FCEBEB; color: #A32D2D; }
     .badge-sos-offer { background: #EAF3DE; color: #3B6D11; }
+    /* 出会いの場 */
+    #meetingScreen { background: var(--zb-bg); min-height: 100vh; padding-bottom: 80px; }
+    .mt-hd { background: linear-gradient(135deg, #0369A1 0%, #0EA5E9 60%, #38BDF8 100%); padding: 20px 16px 0; color: #fff; }
+    .mt-hd-top { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .mt-hd-back { background: none; border: none; color: rgba(255,255,255,.8); font-size: 22px; cursor: pointer; padding: 0; }
+    .mt-hd-title { font-size: 18px; font-weight: 800; letter-spacing: -.3px; }
+    .mt-hd-sub { font-size: 11px; opacity: .8; margin-top: 1px; }
+    .mt-tabs { display: flex; }
+    .mt-tab { flex: 1; padding: 11px 8px; font-size: 13px; font-weight: 700; border: none; background: transparent; color: rgba(255,255,255,.6); cursor: pointer; border-bottom: 3px solid transparent; }
+    .mt-tab.act { color: #fff; border-bottom-color: #fff; }
+    .mt-filter { display: flex; gap: 8px; padding: 12px 16px 8px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .mt-filter::-webkit-scrollbar { display: none; }
+    .mt-filter-chip { flex-shrink: 0; padding: 6px 13px; border-radius: 20px; font-size: 12px; font-weight: 600; border: 1.5px solid var(--zb-border); background: #fff; color: var(--zb-muted); cursor: pointer; white-space: nowrap; }
+    .mt-filter-chip.sel { background: #0EA5E9; color: #fff; border-color: #0EA5E9; }
+    .mt-list { padding: 0 16px; }
+    .mt-card { background: #fff; border-radius: 14px; border: 1.5px solid var(--zb-border); padding: 16px; margin-bottom: 12px; cursor: pointer; transition: box-shadow .15s; }
+    .mt-card:active { box-shadow: 0 2px 12px rgba(14,165,233,.18); }
+    .mt-card-top { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
+    .mt-avatar { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg,#0369A1,#0EA5E9); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; color: #fff; font-weight: 700; }
+    .mt-avatar.company { border-radius: 10px; background: linear-gradient(135deg,#1d4ed8,#3b82f6); }
+    .mt-name { font-size: 15px; font-weight: 700; color: var(--zb-text); }
+    .mt-meta { font-size: 11px; color: var(--zb-muted); margin-top: 3px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .mt-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .mt-tag { padding: 3px 10px; border-radius: 6px; font-size: 11px; font-weight: 600; background: #E0F2FE; color: #0369A1; }
+    .mt-tag.senior { background: #FEF3C7; color: #92400E; }
+    .mt-tag.mentor { background: #D1FAE5; color: #065F46; }
+    .mt-tag.company-sp { background: #EDE9FE; color: #5B21B6; }
+    .mt-story { font-size: 12px; color: #475569; line-height: 1.6; border-left: 3px solid #BAE6FD; padding-left: 10px; margin-top: 6px; }
+    .mt-contact-btn { margin-top: 12px; width: 100%; padding: 11px; background: linear-gradient(135deg,#0369A1,#0EA5E9); color: #fff; border: none; border-radius: 10px; font-size: 13px; font-weight: 700; cursor: pointer; }
+    .mt-empty { text-align: center; padding: 60px 20px; color: var(--zb-muted); font-size: 14px; }
+    /* プロフィール追加フィールド */
+    .wp-story-section { background: #F0F9FF; border-radius: 12px; padding: 14px; margin-bottom: 14px; border: 1.5px solid #BAE6FD; }
+    .wp-story-label { font-size: 12px; font-weight: 700; color: #0369A1; margin-bottom: 8px; }
+    .wp-age-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+    .wp-age-chip { padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; border: 1.5px solid var(--zb-border); background: #fff; cursor: pointer; }
+    .wp-age-chip.sel { background: #0EA5E9; color: #fff; border-color: #0EA5E9; }
+    .wp-toggle-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--zb-border); }
+    .wp-toggle-row:last-child { border-bottom: none; }
+    .wp-toggle-label { font-size: 13px; color: var(--zb-text); }
+    .wp-toggle-sub { font-size: 11px; color: var(--zb-muted); margin-top: 2px; }
+    /* トラブル相談窓口 */
+    #troubleConsultScreen { background: var(--zb-bg); min-height: 100vh; padding-bottom: 80px; }
+    .tc-hd { background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); padding: 20px 16px 20px; color: #fff; display: flex; align-items: center; gap: 12px; }
+    .tc-hd-back { background: none; border: none; color: rgba(255,255,255,.8); font-size: 22px; cursor: pointer; padding: 0; }
+    .tc-hd-title { font-size: 17px; font-weight: 700; }
+    .tc-hd-sub { font-size: 12px; opacity: .8; margin-top: 2px; }
+    .tc-notice { margin: 14px 16px 10px; background: #fff7ed; border: 1.5px solid #fed7aa; border-radius: 12px; padding: 12px 14px; font-size: 12px; color: #9a3412; line-height: 1.6; }
+    .tc-section-title { font-size: 12px; font-weight: 700; color: var(--zb-muted); letter-spacing: .5px; padding: 10px 16px 4px; }
+    .tc-card { background: #fff; border-radius: 12px; margin: 0 16px 10px; border: 1.5px solid var(--zb-border); overflow: hidden; }
+    .tc-card-hd { display: flex; align-items: center; gap: 10px; padding: 13px 16px; cursor: pointer; user-select: none; }
+    .tc-card-icon { font-size: 22px; flex-shrink: 0; }
+    .tc-card-label { flex: 1; }
+    .tc-card-name { font-size: 14px; font-weight: 700; color: var(--zb-text); }
+    .tc-card-desc { font-size: 11px; color: var(--zb-muted); margin-top: 2px; }
+    .tc-card-arrow { font-size: 16px; color: var(--zb-muted); transition: transform .2s; }
+    .tc-card.open .tc-card-arrow { transform: rotate(90deg); }
+    .tc-card-body { display: none; padding: 0 16px 14px; border-top: 1px solid var(--zb-border); }
+    .tc-card.open .tc-card-body { display: block; }
+    .tc-step { display: flex; gap: 10px; margin-top: 12px; font-size: 13px; color: var(--zb-text); line-height: 1.6; }
+    .tc-step-num { background: #0EA5E9; color: #fff; border-radius: 50%; width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+    .tc-resource { background: #f0f9ff; border-radius: 8px; padding: 10px 12px; margin-top: 12px; font-size: 12px; color: #0369a1; line-height: 1.6; border-left: 3px solid #0EA5E9; }
+    .tc-resource strong { display: block; margin-bottom: 3px; }
+    .tc-legal-banner { margin: 4px 16px 10px; background: #fff; border: 1.5px solid #BAE6FD; border-radius: 12px; padding: 14px 16px; display: flex; align-items: center; gap: 12px; cursor: pointer; }
+    .tc-legal-banner:active { background: #f0f9ff; }
+    .tc-contact-btn { display: flex; align-items: center; gap: 12px; width: calc(100% - 32px); margin: 0 16px 10px; padding: 14px 16px; background: #fff; border: 1.5px solid var(--zb-border); border-radius: 12px; cursor: pointer; text-align: left; font-family: inherit; }
+    /* 使い方 */
+    #tutorialScreen { background: var(--zb-bg); min-height: 100vh; padding-bottom: 80px; }
+    .tut-header { background: linear-gradient(135deg, #0369A1 0%, #0EA5E9 100%); padding: 20px 16px 24px; color: #fff; }
+    .tut-header-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .tut-back { background: none; border: none; color: #fff; font-size: 22px; cursor: pointer; padding: 4px; }
+    .tut-header-title { font-size: 18px; font-weight: 700; flex: 1; }
+    .tut-role-tabs { display: flex; background: rgba(255,255,255,.15); border-radius: 10px; padding: 4px; gap: 4px; }
+    .tut-role-tab { flex: 1; padding: 9px; border: none; border-radius: 7px; font-size: 13px; font-weight: 600; cursor: pointer; background: transparent; color: rgba(255,255,255,.7); }
+    .tut-role-tab.act { background: #fff; color: #0369A1; }
+    .tut-body { padding: 16px; }
+    .tut-section { background: #fff; border-radius: 14px; padding: 16px; margin-bottom: 14px; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+    .tut-section-title { font-size: 14px; font-weight: 700; color: #0369A1; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+    .tut-steps { display: flex; flex-direction: column; gap: 0; }
+    .tut-step { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid #f0f4f8; position: relative; }
+    .tut-step:last-child { border-bottom: none; }
+    .tut-step-num { width: 28px; height: 28px; border-radius: 50%; background: #0EA5E9; color: #fff; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .tut-step-body { flex: 1; }
+    .tut-step-title { font-size: 14px; font-weight: 600; color: #1a2332; margin-bottom: 3px; }
+    .tut-step-desc { font-size: 12px; color: #64748B; line-height: 1.6; }
+    .tut-tip-box { background: #F0F9FF; border: 1px solid #BAE6FD; border-radius: 10px; padding: 12px 14px; margin-top: 4px; font-size: 12px; color: #0369A1; line-height: 1.7; }
+    .tut-tip-box b { color: #0284C7; }
+    .tut-faq { margin-bottom: 0; }
+    .tut-faq-item { border-bottom: 1px solid #f0f4f8; padding: 12px 0; }
+    .tut-faq-item:last-child { border-bottom: none; }
+    .tut-faq-q { font-size: 13px; font-weight: 600; color: #1a2332; margin-bottom: 4px; }
+    .tut-faq-a { font-size: 12px; color: #64748B; line-height: 1.7; }
+    .tut-contact-btn { display: block; width: 100%; padding: 14px; background: #0EA5E9; color: #fff; border: none; border-radius: 12px; font-size: 14px; font-weight: 700; cursor: pointer; text-align: center; margin-top: 4px; }
+    /* 招待コードゲート */
+    #inviteGateScreen { position: fixed; inset: 0; background: linear-gradient(160deg, #0369A1 0%, #0EA5E9 60%, #38BDF8 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 9999; padding: 32px 24px; }
+    #inviteGateScreen.hidden { display: none !important; }
+    .ig-logo { font-size: 28px; font-weight: 800; color: #fff; letter-spacing: -0.5px; margin-bottom: 6px; }
+    .ig-logo span { color: rgba(255,255,255,.7); }
+    .ig-tagline { font-size: 13px; color: rgba(255,255,255,.75); margin-bottom: 36px; text-align: center; }
+    .ig-card { background: #fff; border-radius: 18px; padding: 28px 24px; width: 100%; max-width: 360px; box-shadow: 0 8px 32px rgba(3,105,161,.25); }
+    .ig-card-title { font-size: 16px; font-weight: 700; color: #0369A1; text-align: center; margin-bottom: 6px; }
+    .ig-card-desc { font-size: 12px; color: #64748B; text-align: center; margin-bottom: 20px; line-height: 1.6; }
+    .ig-input { width: 100%; padding: 13px 14px; border: 1.5px solid #e2e8f0; border-radius: 10px; font-size: 15px; letter-spacing: 2px; text-align: center; box-sizing: border-box; color: #1a2332; outline: none; font-family: monospace; }
+    .ig-input:focus { border-color: #0EA5E9; box-shadow: 0 0 0 3px rgba(14,165,233,.15); }
+    .ig-btn { margin-top: 14px; width: 100%; padding: 14px; background: linear-gradient(135deg,#0369A1,#0EA5E9); color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; letter-spacing: .5px; }
+    .ig-btn:active { opacity: .85; }
+    .ig-error { margin-top: 10px; font-size: 12px; color: #dc2626; text-align: center; min-height: 18px; }
+    .ig-contact { margin-top: 20px; font-size: 11px; color: rgba(255,255,255,.65); text-align: center; line-height: 1.7; }
+    .ig-contact a { color: rgba(255,255,255,.85); }
   </style>
 </head>
 <body>
+
+<!-- 招待コードゲート -->
+<div id="inviteGateScreen">
+  <div class="ig-logo">Zaibase<span>建設</span></div>
+  <div class="ig-tagline">建設職人・一人親方のためのプラットフォーム</div>
+  <div class="ig-card">
+    <div class="ig-card-title">🔐 招待コードを入力</div>
+    <div class="ig-card-desc">このサービスは現在招待制です。<br>招待コードをお持ちの方のみご利用いただけます。</div>
+    <input type="text" id="igCodeInput" class="ig-input" placeholder="招待コードを入力" autocomplete="off" spellcheck="false">
+    <button type="button" id="igSubmitBtn" class="ig-btn">入場する</button>
+    <div class="ig-error" id="igError"></div>
+  </div>
+  <div class="ig-contact">招待コードをお持ちでない方は<br><a href="mailto:info@zaibase.group">info@zaibase.group</a> までお問い合わせください。</div>
+</div>
 
 <!-- ログイン画面 -->
 <div id="loginScreen">
@@ -2682,6 +2840,46 @@
   <div class="home-section">
     <div class="home-sec-header"><div class="home-sec-title"><i class="ti ti-bell"></i>お知らせ</div></div>
     <div class="home-timeline" id="homeTimeline"><div style="font-size:13px;color:var(--zb-muted);padding:8px 0;">お知らせはありません</div></div>
+  </div>
+  <div style="padding:0 16px 8px;" id="homePlanBanner">
+    <button type="button" id="homePlanBtn" style="display:flex;align-items:center;gap:12px;width:100%;padding:14px 16px;background:linear-gradient(135deg,#0369A1,#0EA5E9);color:#fff;border:none;border-radius:12px;cursor:pointer;text-align:left;">
+      <span style="font-size:22px;">💳</span>
+      <div style="flex:1;">
+        <div style="font-size:14px;font-weight:700;">プラン・料金を見る</div>
+        <div style="font-size:11px;opacity:.85;margin-top:2px;">スターター ¥1,980〜 ／ プロ ¥5,480〜 ／ チーム ¥14,800〜</div>
+      </div>
+      <i class="ti ti-chevron-right" style="font-size:18px;opacity:.8;"></i>
+    </button>
+  </div>
+  <div style="padding:0 16px 16px;">
+    <button type="button" id="homeTutorialBtn" style="display:flex;align-items:center;gap:10px;width:100%;padding:14px 16px;background:#fff;border:1.5px solid #BAE6FD;border-radius:12px;cursor:pointer;text-align:left;">
+      <span style="font-size:22px;">📖</span>
+      <div>
+        <div style="font-size:14px;font-weight:700;color:#0369A1;">使い方ガイド</div>
+        <div style="font-size:11px;color:#64748B;margin-top:2px;">初めての方・わからないことがある方はこちら</div>
+      </div>
+      <i class="ti ti-chevron-right" style="margin-left:auto;color:#94A3B8;font-size:18px;"></i>
+    </button>
+  </div>
+  <div style="padding:0 16px 16px;">
+    <button type="button" id="homeTroubleBtn" style="display:flex;align-items:center;gap:10px;width:100%;padding:14px 16px;background:#fff;border:1.5px solid #FECACA;border-radius:12px;cursor:pointer;text-align:left;">
+      <span style="font-size:22px;">⚠️</span>
+      <div>
+        <div style="font-size:14px;font-weight:700;color:#dc2626;">トラブル・法律相談窓口</div>
+        <div style="font-size:11px;color:#64748B;margin-top:2px;">未払い・労災・契約トラブルはこちら</div>
+      </div>
+      <i class="ti ti-chevron-right" style="margin-left:auto;color:#94A3B8;font-size:18px;"></i>
+    </button>
+  </div>
+  <div style="padding:0 16px 20px;">
+    <button type="button" id="homeMeetingBtn" style="display:flex;align-items:center;gap:10px;width:100%;padding:16px;background:linear-gradient(135deg,#0369A1,#0EA5E9);color:#fff;border:none;border-radius:14px;cursor:pointer;text-align:left;box-shadow:0 4px 14px rgba(14,165,233,.3);">
+      <span style="font-size:26px;">🤝</span>
+      <div style="flex:1;">
+        <div style="font-size:15px;font-weight:800;">出会いの場</div>
+        <div style="font-size:11px;opacity:.85;margin-top:2px;">職人・企業がつながる場所 — 建設で生きる仲間を探す</div>
+      </div>
+      <i class="ti ti-chevron-right" style="font-size:20px;opacity:.8;"></i>
+    </button>
   </div>
 </div>
 
@@ -4196,6 +4394,45 @@ Email：info@zaibase.group</div>
   </div>
 </div>
 
+<!-- 雨雲レーダー -->
+<div id="rainRadarScreen" class="hidden">
+  <header class="rrdr-hd">
+    <button type="button" class="rrdr-back" id="rainRadarBackBtn"><i class="ti ti-arrow-left"></i></button>
+    <span class="rrdr-title">⛅ 気象情報</span>
+    <button type="button" class="rrdr-refresh" id="rainRadarRefreshBtn"><i class="ti ti-refresh"></i>更新</button>
+  </header>
+  <!-- タブ -->
+  <div class="rrdr-tabs">
+    <button type="button" class="rrdr-tab active" data-rrdr="rain5">🌧️ 雨（5分）</button>
+    <button type="button" class="rrdr-tab" data-rrdr="rain1h">🌧️ 雨（1時間）</button>
+    <button type="button" class="rrdr-tab" data-rrdr="wind">💨 風</button>
+    <button type="button" class="rrdr-tab" data-rrdr="forecast">☀️ 天気予報</button>
+  </div>
+  <!-- 地図（雨5分・1時間共用） -->
+  <div id="rainRadarMap"></div>
+  <!-- 風（Windy埋め込み） -->
+  <div id="rrdrWindWrap">
+    <iframe id="rrdrWindIframe" frameborder="0" style="flex:1;border:none;" allow="geolocation"></iframe>
+  </div>
+  <!-- 天気予報 -->
+  <div id="rrdrForecastWrap">
+    <div id="rrdrForecastContent" style="color:#94a3b8;font-size:13px;padding:20px 0;text-align:center;">天気予報を読み込み中…</div>
+  </div>
+  <!-- フッター（雨タブのみ表示） -->
+  <div class="rrdr-footer" id="rrdrFooter">
+    <div class="rrdr-time" id="rainRadarTime">データ取得中…</div>
+    <div class="rrdr-legend" id="rrdrLegend">
+      <span class="rrdr-legend-label">雨の強さ:</span>
+      <div class="rrdr-legend-item"><div class="rrdr-legend-swatch" style="background:#95f4f5;"></div><div class="rrdr-legend-val">0.5mm</div></div>
+      <div class="rrdr-legend-item"><div class="rrdr-legend-swatch" style="background:#4f99ff;"></div><div class="rrdr-legend-val">5mm</div></div>
+      <div class="rrdr-legend-item"><div class="rrdr-legend-swatch" style="background:#ffff01;"></div><div class="rrdr-legend-val">20mm</div></div>
+      <div class="rrdr-legend-item"><div class="rrdr-legend-swatch" style="background:#ff8000;"></div><div class="rrdr-legend-val">50mm</div></div>
+      <div class="rrdr-legend-item"><div class="rrdr-legend-swatch" style="background:#ff0000;"></div><div class="rrdr-legend-val">80mm+</div></div>
+      <span style="font-size:10px;color:#475569;margin-left:auto;">出典: 気象庁</span>
+    </div>
+  </div>
+</div>
+
 <!-- メイン画面 -->
 <div id="mainScreen" class="hidden">
   <div class="header">
@@ -4336,8 +4573,8 @@ Email：info@zaibase.group</div>
   <div id="transactionRankCard" class="hidden"></div>
   <div id="zbPointsCard" class="hidden"></div>
   <div class="mypage-quick-links">
+    <button type="button" id="mypageStripeBtn" style="background:linear-gradient(135deg,#0369A1,#0EA5E9);color:#fff;font-weight:700;border-radius:10px;">💳 プラン・料金 / 申込はこちら</button>
     <button type="button" id="mypagePaymentBtn">💴 支払・請求</button>
-    <button type="button" id="mypageStripeBtn">💳 支払方法</button>
     <button type="button" id="mypageEstimateBtn">📋 見積書</button>
     <button type="button" id="mypageInvoiceBtn">🧾 請求書</button>
     <button type="button" id="mypageInsuranceBtn">🛡️ 現場保険</button>
@@ -4366,16 +4603,20 @@ Email：info@zaibase.group</div>
     <button type="button" id="mypageDeliveryBtn">🚚 搬入管理</button>
     <button type="button" id="mypageEticketBtn">📄 電子伝票</button>
     <button type="button" id="mypageTrackingBtn">📍 車両追跡</button>
+    <button type="button" id="mypageRainRadarBtn">🌧️ 雨雲レーダー</button>
     <button type="button" id="mypageSafetyBtn">🦺 現場安全</button>
     <button type="button" id="mypageTeamBtn">🤝 チーム・組合</button>
     <button type="button" id="mypageTeamJobBtn" class="hidden">🏗️ チーム向け発注</button>
     <button type="button" id="mypageComplianceBtn">🛡️ 信頼スコア</button>
     <button type="button" id="mypageChainBtn">🔗 多層契約（準備中）</button>
+    <button type="button" id="mypageCashflowBtn">💰 資金繰りシミュレーター</button>
+    <button type="button" id="mypagePriceNegotiationBtn">📈 価格転嫁交渉サポート</button>
     <!-- 多層契約停止中バナー（chainContractEnabled: false 時に表示） -->
     <div id="chainGateBanner" style="background:#f0f9ff;border:1px solid #bae6fd;border-radius:10px;padding:10px 12px;margin-top:6px;font-size:11px;color:#0369A1;line-height:1.7;">
       🔗 多層契約・下請けチェーン管理機能は現在準備中です。<br>弁護士による下請法・職業安定法の確認完了後に開放します。
     </div>
     <hr style="border:none;border-top:1px solid var(--zb-border);margin:10px 0;">
+    <button type="button" id="mypageTutorialBtn">📖 使い方ガイド</button>
     <button type="button" id="mypageTermsBtn" style="font-size:12px;color:var(--zb-muted);">📄 利用規約</button>
     <button type="button" id="mypagePrivacyBtn" style="font-size:12px;color:var(--zb-muted);">🔒 個人情報保護方針</button>
     <button type="button" id="mypageSctBtn" style="font-size:12px;color:var(--zb-muted);">🏛️ 特定商取引法に基づく表記</button>
@@ -4454,6 +4695,29 @@ Email：info@zaibase.group</div>
         <div id="profileLicenseList"></div>
         <div class="form-group" style="margin-top:10px;margin-bottom:0;"><label>建設業許可番号（任意）</label>
           <input type="text" id="profileLicenseNo" placeholder="例：神奈川県知事許可（般-00）第00000号">
+        </div>
+      </div>
+      <div class="wp-section">
+        <div class="wp-section-title"><i class="ti ti-heart" style="color:#e8a020;"></i>出会いの場 — プロフィール公開設定</div>
+        <div class="wp-story-section">
+          <div class="wp-story-label">🏗️ 建設を選んだ理由・一言PR（出会いの場に表示）</div>
+          <textarea id="profileStoryText" rows="3" placeholder="例：20年間、型枠一筋でやってきました。若い人に技術を伝えたい。まだまだ現役で稼ぎます。" style="width:100%;border:1.5px solid #BAE6FD;border-radius:8px;padding:10px;font-size:13px;font-family:inherit;box-sizing:border-box;resize:vertical;color:#1a2332;"></textarea>
+          <div class="wp-story-label" style="margin-top:12px;">年代</div>
+          <div class="wp-age-chips" id="profileAgeChips">
+            <div class="wp-age-chip" data-age="20代">20代</div>
+            <div class="wp-age-chip" data-age="30代">30代</div>
+            <div class="wp-age-chip" data-age="40代">40代</div>
+            <div class="wp-age-chip" data-age="50代">50代</div>
+            <div class="wp-age-chip" data-age="60代以上">60代以上</div>
+          </div>
+        </div>
+        <div class="wp-toggle-row">
+          <div><div class="wp-toggle-label">👨‍🏫 若手への指導・育成ができる</div><div class="wp-toggle-sub">技術を伝えたい・チームで働きたい</div></div>
+          <input type="checkbox" id="profileMentorAvailable" style="width:20px;height:20px;accent-color:#0EA5E9;">
+        </div>
+        <div class="wp-toggle-row">
+          <div><div class="wp-toggle-label">🌍 出会いの場に公開する</div><div class="wp-toggle-sub">企業・元請からプロフィールが見える</div></div>
+          <input type="checkbox" id="profilePublicVisible" style="width:20px;height:20px;accent-color:#0EA5E9;" checked>
         </div>
       </div>
       <div class="wp-section" id="wpRatingSection">
@@ -5861,7 +6125,7 @@ Email：info@zaibase.group</div>
   <header class="legal-hd">
     <button class="legal-back" id="termsBackBtn">‹</button>
     <span class="legal-title">利用規約</span>
-    <span class="legal-updated">2026年6月施行</span>
+    <span class="legal-updated">2026年6月21日改定</span>
   </header>
   <div class="legal-body">
     <div class="legal-important">
@@ -5892,6 +6156,9 @@ Email：info@zaibase.group</div>
         <li>法令コンプライアンス支援（騒音・振動・土壌・過労死防止等）</li>
         <li>面談録音・文字起こし保存</li>
         <li>匿名相談コミュニティ</li>
+        <li>職人・企業プロフィール公開・メッセージ機能（「出会いの場」）</li>
+        <li>建設トラブル法令情報提供（「トラブル・法律相談窓口」）</li>
+        <li>労災申請書類記入補助（書類記入サポートのみ。申請代理は行いません）</li>
         <li>その他当社が定めるサービス</li>
       </ul>
     </div>
@@ -5907,10 +6174,23 @@ Email：info@zaibase.group</div>
       <p class="legal-p">ユーザーは以下の行為を行ってはなりません。</p>
       <ul class="legal-ul">
         <li>法令・公序良俗に違反する行為</li>
-        <li>虚偽の情報の登録・投稿</li>
-        <li>他のユーザーへの詐欺・ハラスメント行為</li>
+        <li>虚偽の情報の登録・投稿（身分・資格・許可の詐称を含む）</li>
+        <li>他のユーザーへの詐欺行為（着手金・材料費等を受け取っての逃亡・無断欠勤を含む）</li>
+        <li><strong>パワーハラスメント</strong>：職務上の地位を利用した暴言・威圧・過大な要求・私的使用の強要</li>
+        <li><strong>モラルハラスメント</strong>：精神的な追い詰め・無視・陰口・人格否定</li>
+        <li><strong>セクシャルハラスメント</strong>：性的な発言・行為・交際の強要・不適切な画像の送付</li>
+        <li><strong>強制労働・人身拘束</strong>：退職・離脱を妨げる行為・身分証の取り上げ・寮への監禁</li>
+        <li>報酬・代金の不当な減額・身に覚えのない差し引き（書面合意なき控除）</li>
+        <li><strong>キックバック・裏金・リベートの要求・授受</strong>（名目を問わず。下請け選定・施工管理者への口止め料・資材指定謝礼・紹介料の強要を含む）</li>
+        <li>本サービスのチャット・メッセージ機能をキックバックの要求・授受の連絡手段として利用すること</li>
+        <li>成約後の一方的な労働条件・報酬額・作業内容の変更の押しつけ</li>
+        <li>工事途中の無断放棄・無連絡の離脱（受注者）</li>
+        <li>報酬の支払義務を履行しないまま連絡を断つ行為（発注者）</li>
         <li>本サービスを通じた違法な労働者供給・多重派遣</li>
         <li>一括下請け禁止規定（建設業法第22条）に違反する行為</li>
+        <li>無許可業者（建設業許可未取得の業者）への軽微工事以外の発注</li>
+        <li>偽装請負（請負契約を装った実質的な労働者供給・指揮命令関係）</li>
+        <li>「出会いの場」機能を通じた職業紹介・労働者供給事業の運営</li>
         <li>本サービスのシステムへの不正アクセス・改ざん</li>
         <li>当社の許可なくサービスを商業的に再利用すること</li>
         <li>反社会的勢力への関与・協力</li>
@@ -5948,8 +6228,21 @@ Email：info@zaibase.group</div>
 
     <div class="legal-section">
       <div class="legal-h1">第9条（免責事項）</div>
-      <p class="legal-p">当社はマッチングのプラットフォームを提供するものであり、受発注契約の当事者ではありません。工事の品質・工期・代金に関するトラブルは当事者間で解決するものとします。</p>
-      <p class="legal-p">当社はサービスの中断・データ損失について、故意または重大な過失がある場合を除き責任を負いません。法令に基づく強行規定が適用される場合はこの限りではありません。</p>
+      <p class="legal-p">当社はマッチングのプラットフォームを提供するものであり、ユーザー間の受発注・業務委託契約の当事者ではありません。当社はユーザー間の雇用主・使用者・請負の当事者・保証人のいずれにも該当しません。</p>
+      <p class="legal-p">以下のトラブルは当事者間で解決するものとし、当社は解決義務・損害賠償義務を負いません。</p>
+      <ul class="legal-ul">
+        <li>報酬・工事代金の未払い・支払遅延</li>
+        <li>書面合意のない報酬の減額・差し引き</li>
+        <li>成約後の一方的な労働条件・作業内容の変更</li>
+        <li>工事の品質不良・工期遅延・未完成</li>
+        <li>受注者の無断離脱・行方不明・夜逃げ</li>
+        <li>発注者の報酬不払い・連絡不能・夜逃げ</li>
+        <li>パワーハラスメント・モラルハラスメント・セクシャルハラスメント</li>
+        <li>強制労働・不当な身体的拘束</li>
+        <li>詐欺・横領・不当利得</li>
+        <li>その他ユーザー間で生じた一切のトラブル</li>
+      </ul>
+      <p class="legal-p">当社はサービスの中断・データ損失について、故意または重大な過失がある場合を除き責任を負いません。なお、当社が保有するユーザーの登録情報（氏名・連絡先等）は、裁判所・警察等の法的手続きに基づく場合に限り開示します。</p>
     </div>
 
     <div class="legal-section">
@@ -5959,13 +6252,73 @@ Email：info@zaibase.group</div>
     </div>
 
     <div class="legal-section">
-      <div class="legal-h1">第11条（反社会的勢力の排除）</div>
-      <p class="legal-p">ユーザーは、自らが暴力団その他の反社会的勢力に該当せず、これらと関係を有しないことを表明・保証します。違反が判明した場合、当社は何らの催告なくアカウントの停止・削除等の措置をとることができます。</p>
+      <div class="legal-h1">第11条（反社会的勢力・外国的勢力の排除・不当介入からの保護）</div>
+      <p class="legal-p">① ユーザーは、自らが暴力団その他の反社会的勢力、および外国の組織的犯罪集団・外国的勢力（国籍・在留資格を問わず、組織的に不当な圧力・脅迫・利益誘導を行う個人または団体を含む。以下これらを総称して「反社会的勢力等」という。）に該当せず、これらと関係を有しないことを表明・保証します。違反が判明した場合、当社は何らの催告なくアカウントの停止・削除等の措置をとることができます。</p>
+      <p class="legal-p">② 反社会的勢力等（外国人・外国組織によるものを含む。）が、建設会社・一人親方その他のユーザーに対して、直接的または間接的に脅迫・恐喝・威圧・不当要求その他これらに類する行為（以下「不当介入」という。）を行い、その強制下において締結されたユーザー間の請負契約・業務委託契約その他の合意は、被害を受けたユーザーが民法第96条（強迫による意思表示の取消し）に基づいてこれを取り消し、または同法第90条（公序良俗違反）を根拠として無効を主張することができます。不当介入者が外国人または外国組織である場合も、日本の刑法・民法は等しく適用されます。当社は当該主張を支持し、Firestoreに保存されたチャットログ・案件記録等を法的手続きに基づいて提供します。</p>
+      <p class="legal-p">③ 本サービスのチャット・メッセージ機能が不当介入の連絡手段として利用されたことが確認された場合、当社は加害アカウントを即時停止し、証拠を保全のうえ、警察・公安調査庁・出入国在留管理庁（外国人による不当行為の場合）・都道府県公安委員会への通報を行うことができます。</p>
+      <p class="legal-p">④ 各都道府県の暴力団排除条例において、反社会的勢力等と知りながら行った利益供与・契約は無効とされ、または禁止されています。外国人・外国組織による不当介入についても同様に、組織犯罪処罰法（第3条等）その他の法令が適用されます。不当介入の申告を受けたユーザーに対し、当社は行政機関への申告方法を案内します。</p>
     </div>
 
     <div class="legal-section">
       <div class="legal-h1">第12条（本規約の変更）</div>
       <p class="legal-p">当社は、本規約の変更が①ユーザーの一般の利益に適合するとき、または②契約の目的に反せず変更の必要性・相当性等に照らして合理的なときは、民法第548条の4に基づき、ユーザーの個別の同意なく本規約を変更できます。②による変更の場合、効力発生日までに相当な期間をもってアプリ内またはウェブサイトで周知します。</p>
+    </div>
+
+    <div class="legal-section">
+      <div class="legal-h1">第13条（職人・企業プロフィール公開機能の位置づけ）</div>
+      <p class="legal-p">「出会いの場」機能は、職人・一人親方・建設会社のプロフィール情報を公開し、相互にメッセージを送信できる情報提供プラットフォームです。以下の点をご確認ください。</p>
+      <ul class="legal-ul">
+        <li>当社は<strong>有料職業紹介事業者ではありません</strong>（職業安定法第30条に基づく許可未取得）。本機能は職業安定法上の「職業紹介」には該当しない情報掲示板・メッセージ機能として提供します。</li>
+        <li>マッチング成立後の業務委託・請負契約は当事者間で締結するものとし、当社は契約当事者となりません。</li>
+        <li>ユーザーは本機能を通じて<strong>自ら職業紹介・労働者供給事業を行ってはなりません</strong>。</li>
+        <li>公開するプロフィール情報は正確かつ最新の状態を維持してください。虚偽情報の登録は第4条違反となります。</li>
+        <li>プロフィールの公開・非公開設定はいつでもマイページから変更できます。</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <div class="legal-h1">第14条（建設業法遵守義務）</div>
+      <p class="legal-p">ユーザーは、本サービスを通じた工事の受発注にあたり、以下の建設業法上の義務を遵守しなければなりません。</p>
+      <ul class="legal-ul">
+        <li><strong>一括下請禁止（建設業法第22条）</strong>：元請業者は、発注者の書面による承諾なく、下請契約の全部または主たる部分を一括して再下請に出してはなりません。</li>
+        <li><strong>無許可業者への発注禁止</strong>：軽微な工事（500万円未満・建築一式工事1,500万円未満）を超える工事を、建設業許可を受けていない業者に発注してはなりません（建設業法第3条）。</li>
+        <li><strong>偽装請負の禁止</strong>：請負契約を締結しながら実態として労働者供給・派遣を行う偽装請負は、労働者派遣法および建設業法に違反します。受注者への直接の作業指示・労働時間管理は行わないでください。</li>
+        <li><strong>書面契約義務（建設業法第19条）</strong>：工事の請負契約は書面で締結してください。当社提供の契約書自動生成機能をご利用いただけます。</li>
+        <li><strong>主任技術者・監理技術者の配置（建設業法第26条）</strong>：工事金額等に応じて適切な技術者を配置する義務があります。</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <div class="legal-h1">第15条（トラブル相談窓口・法令情報提供の範囲）</div>
+      <p class="legal-p">「トラブル・法律相談窓口」は、建設業に関連するトラブルの一般的な法令情報を提供するものです。以下の点をご理解の上ご利用ください。</p>
+      <ul class="legal-ul">
+        <li>当社が提供する情報は<strong>一般的な法令情報の参照</strong>であり、個別の法律相談・法的アドバイスではありません。</li>
+        <li>本機能は<strong>弁護士法第72条に定める法律事務の取扱い（非弁行為）には該当しません</strong>。個別事案への対応・示談代行・代理交渉等は行いません。</li>
+        <li>具体的な法的問題・紛争については、弁護士・司法書士等の有資格者にご相談ください。当社が特定の法律事務所・弁護士を推薦するものではありません。</li>
+        <li>掲載する公的機関（労働基準監督署・建設業許可行政庁等）の情報は参考として提供するものであり、当該機関への相談を強制するものではありません。</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <div class="legal-h1">第16条（労災申請書類記入サポートの範囲）</div>
+      <p class="legal-p">本サービスが提供する労災申請書類の記入サポートは以下の範囲に限ります。</p>
+      <ul class="legal-ul">
+        <li>書類の記入方法・必要項目の案内</li>
+        <li>必要書類一覧・提出先情報の提供</li>
+        <li>記入内容の確認補助（入力ミス防止）</li>
+      </ul>
+      <p class="legal-p">当社は<strong>労働保険事務組合・社会保険労務士ではありません</strong>。労働者災害補償保険法に基づく申請代理・代行は行いません（社会保険労務士法第27条）。申請手続きの代行が必要な場合は、社会保険労務士にご依頼ください。</p>
+    </div>
+
+    <div class="legal-section">
+      <div class="legal-h1">第17条（エスクロー決済の利用条件）</div>
+      <p class="legal-p">本サービスのエスクロー決済（Stripe Connect）のご利用にあたり、以下をご確認ください。</p>
+      <ul class="legal-ul">
+        <li>エスクロー決済機能はStripe, Inc.が提供する決済インフラを利用しており、当社はStripe Connect経由での資金移動の仲介を行います。</li>
+        <li>当社は資金決済法上の「資金移動業者」として登録していません。本機能は建設工事の請負代金の立替払い・預かり機能として提供しており、為替取引・送金サービスには該当しません。</li>
+        <li>発注者からの入金は工事完了確認後に受注者へ支払われます。工事完了の確認義務は発注者にあります。</li>
+        <li>決済に関するトラブル（未払い・誤振込等）については、当社はStripeの規約の範囲内でサポートを行いますが、最終的な解決は当事者間で行うものとします。</li>
+      </ul>
     </div>
 
     <div class="legal-contact">
@@ -6567,6 +6920,76 @@ info@zaibase.group</p>
   <div class="modal-panel" id="reportPanel"></div>
 </div>
 
+<!-- 資金繰りシミュレーター（cashFlowEnabled: false で非表示。弁護士確認後に開放） -->
+<div id="cashflowSimModal" class="modal-overlay hidden">
+  <div class="modal-panel">
+    <button class="detail-close" id="cashflowSimClose">×</button>
+    <div class="modal-title">💰 資金繰りシミュレーター</div>
+    <p style="font-size:13px;color:var(--zb-muted);margin:0 0 14px;">毎月の入出金を入力して、資金がいつ尽きるか確認できます</p>
+    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px;">
+      <label style="font-size:13px;font-weight:600;">現在の現金残高（万円）</label>
+      <input type="number" id="cfCash" placeholder="例: 200" style="border:1px solid var(--zb-border);border-radius:8px;padding:10px 12px;font-size:15px;width:100%;box-sizing:border-box;">
+      <label style="font-size:13px;font-weight:600;">月次の入金合計（万円）</label>
+      <input type="number" id="cfIncome" placeholder="例: 150" style="border:1px solid var(--zb-border);border-radius:8px;padding:10px 12px;font-size:15px;width:100%;box-sizing:border-box;">
+      <label style="font-size:13px;font-weight:600;">月次の支払合計（万円）<br><span style="font-weight:400;color:var(--zb-muted);">人件費・材料費・経費など</span></label>
+      <input type="number" id="cfExpense" placeholder="例: 180" style="border:1px solid var(--zb-border);border-radius:8px;padding:10px 12px;font-size:15px;width:100%;box-sizing:border-box;">
+      <label style="font-size:13px;font-weight:600;">入金サイト（工事完了から入金まで）</label>
+      <select id="cfPayLag" style="border:1px solid var(--zb-border);border-radius:8px;padding:10px 12px;font-size:14px;width:100%;box-sizing:border-box;">
+        <option value="0">当月入金</option>
+        <option value="1" selected>翌月（1ヶ月後）</option>
+        <option value="2">翌々月（2ヶ月後）</option>
+        <option value="3">3ヶ月後</option>
+      </select>
+    </div>
+    <button onclick="runCashflowSim()" style="width:100%;padding:12px;background:var(--zb-primary);color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;margin-bottom:16px;">シミュレーション実行</button>
+    <div id="cfResult" style="display:none;">
+      <div id="cfRunwayBanner" style="border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:14px;font-weight:600;"></div>
+      <div style="font-size:12px;font-weight:600;color:var(--zb-muted);margin-bottom:8px;">6ヶ月間の資金残高推移（万円）</div>
+      <div style="display:flex;align-items:flex-end;gap:4px;height:100px;" id="cfChartArea"></div>
+      <div style="display:flex;gap:4px;margin-top:4px;" id="cfMonthLabels"></div>
+      <div id="cfAdvice" style="margin-top:14px;background:#f0f9ff;border-radius:10px;padding:12px;font-size:13px;line-height:1.7;color:#0369A1;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- 価格転嫁交渉サポート（priceNegotiationEnabled: false で非表示。弁護士確認後に開放） -->
+<div id="priceNegotiationModal" class="modal-overlay hidden">
+  <div class="modal-panel">
+    <button class="detail-close" id="priceNegotiationClose">×</button>
+    <div class="modal-title">📈 価格転嫁交渉サポート</div>
+    <p style="font-size:13px;color:var(--zb-muted);margin:0 0 14px;">資材高騰分を元請けへ説明するための交渉材料をAIが生成します</p>
+    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px;">
+      <label style="font-size:13px;font-weight:600;">高騰した資材・費用</label>
+      <select id="pnMaterial" style="border:1px solid var(--zb-border);border-radius:8px;padding:10px 12px;font-size:14px;width:100%;box-sizing:border-box;">
+        <option value="鉄骨・鋼材">鉄骨・鋼材</option>
+        <option value="生コンクリート">生コンクリート</option>
+        <option value="木材・合板">木材・合板</option>
+        <option value="銅線・電線">銅線・電線</option>
+        <option value="燃料費（軽油・ガソリン）">燃料費（軽油・ガソリン）</option>
+        <option value="人件費（労務費）">人件費（労務費）</option>
+        <option value="その他">その他（備考欄に記入）</option>
+      </select>
+      <label style="font-size:13px;font-weight:600;">価格上昇率（%）</label>
+      <input type="number" id="pnRate" placeholder="例: 25" style="border:1px solid var(--zb-border);border-radius:8px;padding:10px 12px;font-size:15px;width:100%;box-sizing:border-box;">
+      <label style="font-size:13px;font-weight:600;">現在の工事請負金額（万円）</label>
+      <input type="number" id="pnContract" placeholder="例: 1200" style="border:1px solid var(--zb-border);border-radius:8px;padding:10px 12px;font-size:15px;width:100%;box-sizing:border-box;">
+      <label style="font-size:13px;font-weight:600;">資材費が工事費に占める割合（%）<br><span style="font-weight:400;color:var(--zb-muted);">不明な場合は30〜40%が目安</span></label>
+      <input type="number" id="pnMaterialRatio" placeholder="例: 35" value="35" style="border:1px solid var(--zb-border);border-radius:8px;padding:10px 12px;font-size:15px;width:100%;box-sizing:border-box;">
+      <label style="font-size:13px;font-weight:600;">備考・補足（任意）</label>
+      <textarea id="pnNote" placeholder="例: 中東情勢により今後もさらなる値上がりが見込まれる" rows="2" style="border:1px solid var(--zb-border);border-radius:8px;padding:10px 12px;font-size:14px;resize:none;width:100%;box-sizing:border-box;"></textarea>
+    </div>
+    <button onclick="runPriceNegotiation()" style="width:100%;padding:12px;background:var(--zb-primary);color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;margin-bottom:16px;">交渉文を生成</button>
+    <div id="pnResult" style="display:none;">
+      <div id="pnAmountBox" style="background:#fef9c3;border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:14px;color:#92400e;"></div>
+      <div style="font-size:12px;font-weight:600;color:var(--zb-muted);margin-bottom:6px;">AIが生成した交渉文</div>
+      <div id="pnLetter" style="background:#f8fafc;border:1px solid var(--zb-border);border-radius:10px;padding:14px;font-size:13px;line-height:1.8;white-space:pre-wrap;"></div>
+      <button onclick="copyPnLetter()" style="width:100%;padding:10px;background:#f0f9ff;color:#0369A1;border:1px solid #bae6fd;border-radius:8px;font-size:13px;cursor:pointer;margin-top:10px;">📋 コピー</button>
+    </div>
+    <div id="pnLoading" style="display:none;text-align:center;padding:20px;color:var(--zb-muted);font-size:13px;">AIが交渉文を生成中…</div>
+    <div id="pnError" style="display:none;color:#dc2626;font-size:13px;padding:10px;background:#fef2f2;border-radius:8px;margin-top:8px;"></div>
+  </div>
+</div>
+
 <!-- 写真拡大 -->
 <div id="lightbox" class="lightbox hidden">
   <button class="lightbox-close" id="lightboxClose">×</button>
@@ -6574,6 +6997,417 @@ info@zaibase.group</p>
   <img id="lightboxImg" src="" alt="">
   <button class="lightbox-nav lightbox-next hidden" id="lightboxNext">›</button>
   <div class="lightbox-counter" id="lightboxCounter"></div>
+</div>
+
+<!-- 出会いの場 -->
+<div id="meetingScreen" class="hidden">
+  <div class="mt-hd">
+    <div class="mt-hd-top">
+      <button type="button" class="mt-hd-back" id="meetingBackBtn"><i class="ti ti-arrow-left"></i></button>
+      <div>
+        <div class="mt-hd-title">🤝 出会いの場</div>
+        <div class="mt-hd-sub">建設で生きる仲間・パートナー企業と出会う</div>
+      </div>
+    </div>
+    <div style="background:rgba(255,255,255,.15);border-radius:8px;padding:8px 12px;margin-bottom:12px;font-size:11px;color:rgba(255,255,255,.9);line-height:1.6;">
+      ⚠️ 本機能はプロフィール公開・メッセージ機能です。有料職業紹介事業（職業安定法）には該当しません。雇用契約の締結は当事者間で行ってください。
+    </div>
+    <div class="mt-tabs">
+      <button type="button" class="mt-tab act" id="mtTabWorker" data-mt="worker">👷 職人を探す</button>
+      <button type="button" class="mt-tab" id="mtTabCompany" data-mt="company">🏢 企業を探す</button>
+    </div>
+  </div>
+
+  <!-- 職人フィルター -->
+  <div class="mt-filter" id="mtWorkerFilter">
+    <div class="mt-filter-chip sel" data-wf="all">すべて</div>
+    <div class="mt-filter-chip" data-wf="50代">50代以上</div>
+    <div class="mt-filter-chip" data-wf="mentor">指導できる</div>
+    <div class="mt-filter-chip" data-wf="大工">大工</div>
+    <div class="mt-filter-chip" data-wf="鳶・足場">鳶・足場</div>
+    <div class="mt-filter-chip" data-wf="電気">電気</div>
+    <div class="mt-filter-chip" data-wf="配管">配管</div>
+    <div class="mt-filter-chip" data-wf="塗装">塗装</div>
+    <div class="mt-filter-chip" data-wf="土木">土木</div>
+    <div class="mt-filter-chip" data-wf="左官">左官</div>
+  </div>
+
+  <!-- 企業フィルター -->
+  <div class="mt-filter hidden" id="mtCompanyFilter">
+    <div class="mt-filter-chip sel" data-cf="all">すべて</div>
+    <div class="mt-filter-chip" data-cf="若手歓迎">若手歓迎</div>
+    <div class="mt-filter-chip" data-cf="50代歓迎">50代歓迎</div>
+    <div class="mt-filter-chip" data-cf="研修あり">研修あり</div>
+    <div class="mt-filter-chip" data-cf="元請">元請</div>
+    <div class="mt-filter-chip" data-cf="一人親方歓迎">一人親方歓迎</div>
+  </div>
+
+  <div class="mt-list" id="mtWorkerList">
+    <div class="mt-empty" id="mtWorkerEmpty" style="display:none;">プロフィール公開中の職人が見つかりません</div>
+  </div>
+  <div class="mt-list hidden" id="mtCompanyList">
+    <div class="mt-empty" id="mtCompanyEmpty" style="display:none;">掲載中の企業が見つかりません</div>
+  </div>
+</div>
+
+<!-- トラブル・法律相談窓口 -->
+<div id="troubleConsultScreen" class="hidden">
+  <div class="tc-hd">
+    <button type="button" class="tc-hd-back" id="troubleBackBtn"><i class="ti ti-arrow-left"></i></button>
+    <div>
+      <div class="tc-hd-title">⚠️ トラブル・法律相談窓口</div>
+      <div class="tc-hd-sub">困ったときの対処法と相談先をご案内します</div>
+    </div>
+  </div>
+
+  <div class="tc-notice">
+    ⚠️ このページは一般的な情報提供です。具体的なご相談は弁護士・社労士・労働基準監督署など専門機関にお問い合わせください。
+  </div>
+
+  <div class="tc-section-title">よくあるトラブル — 項目をタップして対処法を確認</div>
+
+  <!-- 未払い -->
+  <div class="tc-card" id="tc-unpaid">
+    <div class="tc-card-hd">
+      <span class="tc-card-icon">💰</span>
+      <div class="tc-card-label">
+        <div class="tc-card-name">未払い・支払い遅延</div>
+        <div class="tc-card-desc">報酬が振り込まれない・支払いが遅れている</div>
+      </div>
+      <i class="ti ti-chevron-right tc-card-arrow"></i>
+    </div>
+    <div class="tc-card-body">
+      <div class="tc-step"><span class="tc-step-num">1</span><span>発注者に書面（メール・LINEでも可）で支払いを請求。「○月○日までに支払ってください」と期限を明記する。</span></div>
+      <div class="tc-step"><span class="tc-step-num">2</span><span>支払われない場合、内容証明郵便で督促。証拠として保存する。</span></div>
+      <div class="tc-step"><span class="tc-step-num">3</span><span>フリーランス保護法（2024年施行）では60日以内の支払いが義務。違反は公正取引委員会に申告できる。</span></div>
+      <div class="tc-step"><span class="tc-step-num">4</span><span>少額訴訟（60万円以下）は弁護士なしで本人申立が可能。</span></div>
+      <div class="tc-resource"><strong>📞 相談窓口</strong>公正取引委員会 下請法・フリーランス相談窓口：03-3581-5471<br>法テラス（無料法律相談）：0570-078374</div>
+    </div>
+  </div>
+
+  <!-- 下請代金 -->
+  <div class="tc-card" id="tc-subcontract">
+    <div class="tc-card-hd">
+      <span class="tc-card-icon">📉</span>
+      <div class="tc-card-label">
+        <div class="tc-card-name">下請代金の不当減額・買いたたき</div>
+        <div class="tc-card-desc">一方的に金額を下げられた・不当に値引きされた</div>
+      </div>
+      <i class="ti ti-chevron-right tc-card-arrow"></i>
+    </div>
+    <div class="tc-card-body">
+      <div class="tc-step"><span class="tc-step-num">1</span><span>見積書・注文書・契約書を保管する。口頭での合意もメモや録音で記録する。</span></div>
+      <div class="tc-step"><span class="tc-step-num">2</span><span>下請法では親事業者による不当な代金減額は禁止。公正取引委員会に申告できる。</span></div>
+      <div class="tc-step"><span class="tc-step-num">3</span><span>建設業法では書面による契約が義務。書面がない場合は違反を申告できる。</span></div>
+      <div class="tc-resource"><strong>📞 相談窓口</strong>公正取引委員会 下請法相談窓口：03-3581-5471<br>国土交通省 建設業の許可・契約相談：03-5253-8111</div>
+    </div>
+  </div>
+
+  <!-- 労災 -->
+  <div class="tc-card" id="tc-rousai">
+    <div class="tc-card-hd">
+      <span class="tc-card-icon">🏥</span>
+      <div class="tc-card-label">
+        <div class="tc-card-name">労災・現場での怪我・病気</div>
+        <div class="tc-card-desc">現場で怪我をした・労災認定されるか不安</div>
+      </div>
+      <i class="ti ti-chevron-right tc-card-arrow"></i>
+    </div>
+    <div class="tc-card-body">
+      <div class="tc-step"><span class="tc-step-num">1</span><span>まず病院へ。「労災保険を使いたい」と伝える。健康保険は使わない。</span></div>
+      <div class="tc-step"><span class="tc-step-num">2</span><span>一人親方は特別加入（労災保険の任意加入）が必要。加入していれば申請できる。</span></div>
+      <div class="tc-step"><span class="tc-step-num">3</span><span>労災申請書は最寄りの労働基準監督署に提出。Zaibase建設のアプリ内「労災サポート」で記入補助が受けられます。</span></div>
+      <div class="tc-step"><span class="tc-step-num">4</span><span>元請が労災を隠そうとする場合は労働基準監督署に相談。</span></div>
+      <div class="tc-resource"><strong>📞 相談窓口</strong>労働基準監督署：最寄り署に電話（全国共通）<br>一人親方労災保険組合：各都道府県に窓口あり</div>
+    </div>
+  </div>
+
+  <!-- 長時間労働 -->
+  <div class="tc-card" id="tc-overtime">
+    <div class="tc-card-hd">
+      <span class="tc-card-icon">⏰</span>
+      <div class="tc-card-label">
+        <div class="tc-card-name">長時間労働・過重労働</div>
+        <div class="tc-card-desc">休日なしの連続作業・深夜作業を強制される</div>
+      </div>
+      <i class="ti ti-chevron-right tc-card-arrow"></i>
+    </div>
+    <div class="tc-card-body">
+      <div class="tc-step"><span class="tc-step-num">1</span><span>労働時間・出勤記録を残す（スマホのGPS・写真でも可）。</span></div>
+      <div class="tc-step"><span class="tc-step-num">2</span><span>雇用関係がある場合、時間外労働の上限（月45時間・年360時間）を超える場合は違法。</span></div>
+      <div class="tc-step"><span class="tc-step-num">3</span><span>業務委託・一人親方の場合は労基法の適用外だが、過重労働を契約で強制することは公序良俗違反になりうる。</span></div>
+      <div class="tc-resource"><strong>📞 相談窓口</strong>労働基準監督署（労働時間・賃金の相談）<br>総合労働相談コーナー（無料）：0120-811-610</div>
+    </div>
+  </div>
+
+  <!-- ハラスメント -->
+  <div class="tc-card" id="tc-harassment">
+    <div class="tc-card-hd">
+      <span class="tc-card-icon">😠</span>
+      <div class="tc-card-label">
+        <div class="tc-card-name">ハラスメント・暴言・いじめ</div>
+        <div class="tc-card-desc">現場でのパワハラ・暴言・差別的扱い</div>
+      </div>
+      <i class="ti ti-chevron-right tc-card-arrow"></i>
+    </div>
+    <div class="tc-card-body">
+      <div class="tc-step"><span class="tc-step-num">1</span><span>日時・発言内容・状況をメモに記録する。音声録音は自分が当事者であれば合法。</span></div>
+      <div class="tc-step"><span class="tc-step-num">2</span><span>証拠が揃ったら、会社の相談窓口・労働組合・または外部機関に相談。</span></div>
+      <div class="tc-step"><span class="tc-step-num">3</span><span>外国人労働者の方は、言語での支援を受けられる専門窓口があります（英語・ベトナム語・インドネシア語等）。</span></div>
+      <div class="tc-resource"><strong>📞 相談窓口</strong>総合労働相談コーナー：0120-811-610<br>外国人労働者向け：外国人労働者相談コーナー（各都道府県）<br>法テラス多言語対応：0570-078374</div>
+    </div>
+  </div>
+
+  <!-- 契約書 -->
+  <div class="tc-card" id="tc-contract">
+    <div class="tc-card-hd">
+      <span class="tc-card-icon">📄</span>
+      <div class="tc-card-label">
+        <div class="tc-card-name">契約書・書面の不備</div>
+        <div class="tc-card-desc">口頭だけで契約書がない・内容が違う</div>
+      </div>
+      <i class="ti ti-chevron-right tc-card-arrow"></i>
+    </div>
+    <div class="tc-card-body">
+      <div class="tc-step"><span class="tc-step-num">1</span><span>建設業法では500万円以上の工事は書面契約が義務。書面がない場合は発注者に要求できる。</span></div>
+      <div class="tc-step"><span class="tc-step-num">2</span><span>フリーランス保護法では業務委託でも書面明示が義務（2024年施行）。</span></div>
+      <div class="tc-step"><span class="tc-step-num">3</span><span>Zaibase建設アプリ内の「見積書・契約書作成」機能で書面を作成・保存できます。</span></div>
+      <div class="tc-resource"><strong>📞 相談窓口</strong>国土交通省 建設業許可・契約：03-5253-8111<br>公正取引委員会 フリーランス相談：03-3581-5471</div>
+    </div>
+  </div>
+
+  <!-- 建設業許可 -->
+  <div class="tc-card" id="tc-license">
+    <div class="tc-card-hd">
+      <span class="tc-card-icon">🏗️</span>
+      <div class="tc-card-label">
+        <div class="tc-card-name">建設業許可・法令違反の疑い</div>
+        <div class="tc-card-desc">無許可業者に下請けさせられた・許可が必要か不安</div>
+      </div>
+      <i class="ti ti-chevron-right tc-card-arrow"></i>
+    </div>
+    <div class="tc-card-body">
+      <div class="tc-step"><span class="tc-step-num">1</span><span>500万円以上（建築一式は1,500万円以上）の工事は建設業許可が必要。</span></div>
+      <div class="tc-step"><span class="tc-step-num">2</span><span>許可業者かどうかは国土交通省の「建設業者・宅建業者等企業情報検索システム」で無料確認できる。</span></div>
+      <div class="tc-step"><span class="tc-step-num">3</span><span>無許可業者に下請けさせた元請も処罰対象。</span></div>
+      <div class="tc-resource"><strong>📞 相談窓口</strong>各都道府県の建設業許可担当窓口<br>国交省：03-5253-8111（建設業許可・指導）</div>
+    </div>
+  </div>
+
+  <div class="tc-section-title">専門家に相談する</div>
+
+  <!-- 法律相談バナー（中立表現・商業的誘導なし） -->
+  <div class="tc-legal-banner" id="tcLegalConsultBtn">
+    <span style="font-size:26px;">⚖️</span>
+    <div style="flex:1;">
+      <div style="font-size:14px;font-weight:700;color:#0369A1;">Zaibase法律相談</div>
+      <div style="font-size:11px;color:#64748B;margin-top:2px;">建設業・労働法専門の法律相談サービス</div>
+    </div>
+    <i class="ti ti-external-link" style="color:#94A3B8;font-size:18px;"></i>
+  </div>
+
+  <!-- お問い合わせ -->
+  <button type="button" class="tc-contact-btn" id="tcContactBtn">
+    <span style="font-size:22px;">✉️</span>
+    <div style="flex:1;">
+      <div style="font-size:14px;font-weight:700;color:var(--zb-text);">運営へのお問い合わせ</div>
+      <div style="font-size:11px;color:#64748B;margin-top:2px;">info@zaibase.group</div>
+    </div>
+    <i class="ti ti-chevron-right" style="color:#94A3B8;font-size:18px;"></i>
+  </button>
+
+  <div style="margin:0 16px 20px;background:#f8fafc;border-radius:10px;padding:12px 14px;font-size:11px;color:#64748B;line-height:1.7;">
+    ⚠️ <strong>免責事項</strong><br>
+    本ページの情報は一般的な情報提供であり、法律上・法的助言ではありません。具体的な対応は弁護士・社労士等の専門家にご相談ください。<br>
+    本アプリの労災サポート機能は書類記入補助のみです。申請代理（社会保険労務士法第27条の業務）は行いません。<br>
+    本ページからZaibase法律相談サービスへの利用を強制・推奨するものではありません。
+  </div>
+</div>
+
+<!-- 使い方 -->
+<div id="tutorialScreen" class="hidden">
+  <div class="tut-header">
+    <div class="tut-header-row">
+      <button type="button" class="tut-back" id="tutorialBackBtn"><i class="ti ti-arrow-left"></i></button>
+      <span class="tut-header-title">📖 使い方ガイド</span>
+    </div>
+    <div class="tut-role-tabs">
+      <button type="button" class="tut-role-tab act" id="tutTabWorker">👷 職人（受注者）</button>
+      <button type="button" class="tut-role-tab" id="tutTabOrderer">🏗️ 発注者（元請）</button>
+    </div>
+  </div>
+  <div class="tut-body">
+    <!-- 職人向け -->
+    <div id="tutWorkerSection">
+      <div class="tut-section">
+        <div class="tut-section-title"><i class="ti ti-list-check"></i>基本の流れ（全7ステップ）</div>
+        <div class="tut-steps">
+          <div class="tut-step">
+            <div class="tut-step-num">1</div>
+            <div class="tut-step-body">
+              <div class="tut-step-title">アカウント登録・ログイン</div>
+              <div class="tut-step-desc">Google・Yahoo・LINEまたはメールアドレスで登録。iOSは外部ブラウザ（Safari・Chrome）で開いてください。</div>
+            </div>
+          </div>
+          <div class="tut-step">
+            <div class="tut-step-num">2</div>
+            <div class="tut-step-body">
+              <div class="tut-step-title">プロフィールを設定する</div>
+              <div class="tut-step-desc">マイページ → 「受注者（職人）」を選択 → 業種・活動エリア・自己紹介・資格・経験年数を入力して保存。</div>
+            </div>
+          </div>
+          <div class="tut-step">
+            <div class="tut-step-num">3</div>
+            <div class="tut-step-body">
+              <div class="tut-step-title">案件を探す</div>
+              <div class="tut-step-desc">ホーム画面「案件を探す」または下のナビ「案件」タブから一覧を確認。地図タブでエリアを絞り込むことも可能。</div>
+            </div>
+          </div>
+          <div class="tut-step">
+            <div class="tut-step-num">4</div>
+            <div class="tut-step-body">
+              <div class="tut-step-title">案件に応募する</div>
+              <div class="tut-step-desc">気になる案件を開いて「応募する」ボタンをタップ。メッセージを添えて送ると採用率が上がります。</div>
+            </div>
+          </div>
+          <div class="tut-step">
+            <div class="tut-step-num">5</div>
+            <div class="tut-step-body">
+              <div class="tut-step-title">チャットで発注者と連絡</div>
+              <div class="tut-step-desc">採用後はチャット画面で日程・作業内容・条件を確認。不明点はここで解決してください。</div>
+            </div>
+          </div>
+          <div class="tut-step">
+            <div class="tut-step-num">6</div>
+            <div class="tut-step-body">
+              <div class="tut-step-title">現場の入退場を記録する</div>
+              <div class="tut-step-desc">「入退場記録」からGPS・顔認証で入場・退場を登録。建設キャリアアップシステム（CCUS）連携にも使えます。</div>
+            </div>
+          </div>
+          <div class="tut-step">
+            <div class="tut-step-num">7</div>
+            <div class="tut-step-body">
+              <div class="tut-step-title">支払いを受け取る</div>
+              <div class="tut-step-desc">作業完了後、マイページ「支払・請求」で入金を確認。請求書もここから発行できます。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tut-section">
+        <div class="tut-section-title"><i class="ti ti-tool"></i>便利な機能</div>
+        <div class="tut-tip-box">
+          <b>🦺 労災サポート</b>：現場中の事故に備えた労災保険の申請支援<br>
+          <b>📷 現場報告</b>：写真付きの日報・完了報告書を簡単作成<br>
+          <b>🪙 Zaibaseポイント</b>：取引ごとにポイントが貯まり手数料割引に<br>
+          <b>🤝 職人のつながり</b>：同業者とのネットワーク・仕事の紹介<br>
+          <b>⚖️ 許認可・法令チェック</b>：建設業法・建設業許可の確認<br>
+          <b>🌏 外国人サポート</b>：ベトナム語・インドネシア語対応。在留資格リマインダー・送金サポート（準備中）。マイページ「夢の貯金・お金の基礎」→「外国人サポート」タブから
+        </div>
+      </div>
+      <div class="tut-section">
+        <div class="tut-section-title"><i class="ti ti-help-circle"></i>よくある質問</div>
+        <div class="tut-faq">
+          <div class="tut-faq-item">
+            <div class="tut-faq-q">Q. 無料で使えますか？</div>
+            <div class="tut-faq-a">フリープランは無料です。応募・チャット・入退場記録の基本機能が使えます。プロプランでは優先表示・追加機能が使えます。</div>
+          </div>
+          <div class="tut-faq-item">
+            <div class="tut-faq-q">Q. 有料プランに申込む方法は？</div>
+            <div class="tut-faq-a">ホーム画面の「💳 プラン・料金を見る」バナー、またはマイページの「💳 プラン・料金 / 申込はこちら」から確認できます。スターター ¥1,980／月、プロ ¥5,480／月、チーム ¥14,800／月。クレジットカードで決済画面（Stripe）に進みます。</div>
+          </div>
+          <div class="tut-faq-item">
+            <div class="tut-faq-q">Q. iOSでログインできません</div>
+            <div class="tut-faq-a">LINEアプリ内のブラウザからは開けません。LINEの場合は右下の「…」→「ブラウザで開く」でSafariに切り替えてください。</div>
+          </div>
+          <div class="tut-faq-item">
+            <div class="tut-faq-q">Q. 手数料はいくらですか？</div>
+            <div class="tut-faq-a">マイページの「会員価格・交渉」から手数料シミュレータで確認できます。プランによって異なります。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 発注者向け -->
+    <div id="tutOrdererSection" class="hidden">
+      <div class="tut-section">
+        <div class="tut-section-title"><i class="ti ti-list-check"></i>基本の流れ（全6ステップ）</div>
+        <div class="tut-steps">
+          <div class="tut-step">
+            <div class="tut-step-num">1</div>
+            <div class="tut-step-body">
+              <div class="tut-step-title">アカウント登録・ログイン</div>
+              <div class="tut-step-desc">Google・Yahoo・LINEまたはメールアドレスで登録。iOSは外部ブラウザ（Safari・Chrome）をお使いください。</div>
+            </div>
+          </div>
+          <div class="tut-step">
+            <div class="tut-step-num">2</div>
+            <div class="tut-step-body">
+              <div class="tut-step-title">プロフィールで「発注者」を選択</div>
+              <div class="tut-step-desc">マイページ → 「発注者（現場・元請）」を選択 → 会社名・エリアを入力して保存。これで案件登録が可能になります。</div>
+            </div>
+          </div>
+          <div class="tut-step">
+            <div class="tut-step-num">3</div>
+            <div class="tut-step-body">
+              <div class="tut-step-title">案件を登録する</div>
+              <div class="tut-step-desc">下のナビ「➕ 出品」タブから工事内容・作業日・場所・希望単価・必要人数を入力して登録。職人に公開されます。</div>
+            </div>
+          </div>
+          <div class="tut-step">
+            <div class="tut-step-num">4</div>
+            <div class="tut-step-body">
+              <div class="tut-step-title">応募を確認・職人を選ぶ</div>
+              <div class="tut-step-desc">ホームの「進行中の案件」または案件詳細から応募者一覧を確認。プロフィール・評価・実績を見て採用を決定します。</div>
+            </div>
+          </div>
+          <div class="tut-step">
+            <div class="tut-step-num">5</div>
+            <div class="tut-step-body">
+              <div class="tut-step-title">チャットで詳細を打ち合わせ</div>
+              <div class="tut-step-desc">採用した職人とチャットで作業内容・当日の集合場所・資材の有無などを確認します。</div>
+            </div>
+          </div>
+          <div class="tut-step">
+            <div class="tut-step-num">6</div>
+            <div class="tut-step-body">
+              <div class="tut-step-title">完了後に支払いを行う</div>
+              <div class="tut-step-desc">作業完了の確認後、マイページ「支払・請求」から振込。見積書・請求書の管理も同画面で行えます。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tut-section">
+        <div class="tut-section-title"><i class="ti ti-tool"></i>便利な機能</div>
+        <div class="tut-tip-box">
+          <b>📋 見積書・請求書</b>：テンプレートから簡単作成・PDF印刷<br>
+          <b>🏗️ 施工体制台帳</b>：一次・二次下請けの体系図を自動作成<br>
+          <b>📅 工期管理</b>：適正工期の計算・スケジュール管理<br>
+          <b>🏛️ 入札・認定</b>：経営事項審査・入札参加資格の申請ガイド<br>
+          <b>⚠️ 下請コンプライアンス</b>：下請法・建設業法の遵守チェック
+        </div>
+      </div>
+      <div class="tut-section">
+        <div class="tut-section-title"><i class="ti ti-help-circle"></i>よくある質問</div>
+        <div class="tut-faq">
+          <div class="tut-faq-item">
+            <div class="tut-faq-q">Q. 何人まで採用できますか？</div>
+            <div class="tut-faq-a">フリープランでも人数制限はありません。ただし同時進行できる案件数はプランによって異なります。</div>
+          </div>
+          <div class="tut-faq-item">
+            <div class="tut-faq-q">Q. 職人のキャンセルが心配です</div>
+            <div class="tut-faq-a">チャットで事前確認のうえ、緊急時は「🚨 緊急手配」機能でエリアの空き職人を即座に呼べます。</div>
+          </div>
+          <div class="tut-faq-item">
+            <div class="tut-faq-q">Q. 一括下請けは違法ですか？</div>
+            <div class="tut-faq-a">建設業法第22条で原則禁止です。「下請コンプライアンス」画面で詳細と自社チェックができます。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tut-section" style="margin-top:0;">
+      <div style="font-size:13px;color:var(--zb-muted);margin-bottom:10px;line-height:1.6;">その他のご質問・ご要望は下記までお気軽にお問い合わせください。</div>
+      <a href="mailto:info@zaibase.group" class="tut-contact-btn">✉️ info@zaibase.group に問い合わせる</a>
+    </div>
+  </div>
 </div>
 
 <!-- 共通ボトムナビ（発注者・資材フリマ） -->
@@ -6600,7 +7434,7 @@ info@zaibase.group</p>
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
   import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app-check.js";
-  import { initializeAuth, browserLocalPersistence, browserPopupRedirectResolver, setPersistence, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail, signOut, onAuthStateChanged, GoogleAuthProvider, OAuthProvider, signInWithPopup, signInWithRedirect, getRedirectResult, RecaptchaVerifier, PhoneAuthProvider, linkWithCredential } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-auth.js";
+  import { initializeAuth, indexedDBLocalPersistence, browserLocalPersistence, browserPopupRedirectResolver, setPersistence, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail, signOut, onAuthStateChanged, GoogleAuthProvider, OAuthProvider, signInWithPopup, signInWithRedirect, getRedirectResult, RecaptchaVerifier, PhoneAuthProvider, linkWithCredential } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-auth.js";
   import { getFirestore, collection, addDoc, getDocs, query, orderBy, limit, serverTimestamp, doc, getDoc, setDoc, updateDoc, onSnapshot, where, Timestamp, increment, arrayUnion, arrayRemove, writeBatch, deleteDoc } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-firestore.js";
   import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-storage.js";
   import { getFunctions, httpsCallable } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-functions.js";
@@ -6617,6 +7451,38 @@ info@zaibase.group</p>
 
   const app = initializeApp(firebaseConfig);
 
+  // ===== 招待コードゲート =====
+  const INVITE_CODE = 'ZB-KENSETSU-2026';
+  const INVITE_KEY = 'zb_kensetsu_invite';
+
+  function checkInviteGate() {
+    const gate = document.getElementById('inviteGateScreen');
+    if (!gate) return true;
+    if (localStorage.getItem(INVITE_KEY) === 'granted') {
+      gate.classList.add('hidden');
+      return true;
+    }
+    gate.classList.remove('hidden');
+    return false;
+  }
+
+  document.getElementById('igSubmitBtn')?.addEventListener('click', () => {
+    const val = (document.getElementById('igCodeInput').value || '').trim().toUpperCase();
+    if (val === INVITE_CODE) {
+      localStorage.setItem(INVITE_KEY, 'granted');
+      document.getElementById('inviteGateScreen').classList.add('hidden');
+    } else {
+      document.getElementById('igError').textContent = '招待コードが正しくありません';
+    }
+  });
+
+  document.getElementById('igCodeInput')?.addEventListener('keydown', e => {
+    if (e.key === 'Enter') document.getElementById('igSubmitBtn').click();
+  });
+
+  // 起動時チェック
+  checkInviteGate();
+
   // Firebase App Check — reCAPTCHA v3
   // TODO: Firebase Console → App Check → ウェブアプリ → reCAPTCHA v3 サイトキーを登録後に有効化
   // initializeAppCheck(app, {
@@ -6624,13 +7490,11 @@ info@zaibase.group</p>
   //   isTokenAutoRefreshEnabled: true,
   // });
 
-  // initializeAuth で最初から localStorage を使用。
-  // getAuth() はデフォルトで IndexedDB を使うため、iOS Safari の ITP で
-  // onAuthStateChanged が null のまま固まる問題を根本解決する。
-  // popupRedirectResolver を明示しないと signInWithPopup/Redirect が
-  // auth/argument-error になるため browserPopupRedirectResolver を渡す。
+  // IndexedDB 永続化を使用。
+  // iOS Safari の Bounce Tracking Mitigations は localStorage を消去するが
+  // IndexedDB は消去しないため、リダイレクト後に getRedirectResult が正しく動く。
   const auth = initializeAuth(app, {
-    persistence: browserLocalPersistence,
+    persistence: indexedDBLocalPersistence,
     popupRedirectResolver: browserPopupRedirectResolver,
   });
   const persistenceReady = Promise.resolve();
@@ -6655,6 +7519,7 @@ info@zaibase.group</p>
   const updateSubstantiveInvolvementFn = httpsCallable(functions, 'updateSubstantiveInvolvement');
   const linkHelpPostToChainFn = httpsCallable(functions, 'linkHelpPostToChain');
   const sendCommunityThanksFn = httpsCallable(functions, 'sendCommunityThanks');
+  const generateNegotiationLetterFn = httpsCallable(functions, 'generateNegotiationLetter');
 
   const urlParams = new URLSearchParams(location.search);
   const pendingSiteFaceMode = urlParams.get('mode') === 'siteface';
@@ -9838,7 +10703,7 @@ info@zaibase.group</p>
       const name = document.getElementById('krWpName').value.trim();
       if (!name) { document.getElementById('krWpMsg').textContent = '❌ 職場名を入力してください'; return; }
       try {
-        const fn = firebase.functions().httpsCallable('registerWorkplace');
+        const fn = httpsCallable(functions, 'registerWorkplace');
         await fn({
           name,
           address: document.getElementById('krWpAddr').value.trim(),
@@ -9880,7 +10745,7 @@ info@zaibase.group</p>
 
   async function krLoadWorkplaces() {
     try {
-      const fn = firebase.functions().httpsCallable('getWorkplaces');
+      const fn = httpsCallable(functions, 'getWorkplaces');
       const res = await fn({});
       krWorkplaces = res.data.workplaces || [];
       const sel = document.getElementById('krWpSelect');
@@ -9920,7 +10785,7 @@ info@zaibase.group</p>
     if (krCurrentPos && wp) dist = Math.round(haversineM(krCurrentPos.latitude, krCurrentPos.longitude, wp.lat, wp.lng));
 
     try {
-      const fn = firebase.functions().httpsCallable('clockInOut');
+      const fn = httpsCallable(functions, 'clockInOut');
       await fn({
         type, reason,
         workplaceId: wpId,
@@ -9937,7 +10802,7 @@ info@zaibase.group</p>
 
   async function krLoadWorkLogs() {
     try {
-      const fn = firebase.functions().httpsCallable('getWorkLogs');
+      const fn = httpsCallable(functions, 'getWorkLogs');
       const res = await fn({});
       krWorkLogs = res.data.logs || [];
 
@@ -10104,7 +10969,7 @@ info@zaibase.group</p>
       const transcript = document.getElementById('krTranscriptBox').innerText.trim();
       const msg = document.getElementById('krIvMsg');
       try {
-        const fn = firebase.functions().httpsCallable('saveInterview');
+        const fn = httpsCallable(functions, 'saveInterview');
         await fn({
           title,
           interviewDate: document.getElementById('krIvDate').value,
@@ -10122,7 +10987,7 @@ info@zaibase.group</p>
 
   async function krLoadInterviews() {
     try {
-      const fn = firebase.functions().httpsCallable('getInterviews');
+      const fn = httpsCallable(functions, 'getInterviews');
       const res = await fn({});
       krInterviews = res.data.interviews || [];
       const el = document.getElementById('krIvList');
@@ -10338,7 +11203,7 @@ ${transcript}
       if (content.length < 10) { msg.textContent = '❌ 10文字以上入力してください'; return; }
       try {
         msg.textContent = '送信中...';
-        const fn = firebase.functions().httpsCallable('postAnonymousConsult');
+        const fn = httpsCallable(functions, 'postAnonymousConsult');
         await fn({ content, category: cat });
         document.getElementById('krConsultContent').value = '';
         msg.textContent = '✅ 投稿しました';
@@ -10351,7 +11216,7 @@ ${transcript}
 
   async function krLoadConsults() {
     try {
-      const fn = firebase.functions().httpsCallable('getAnonymousConsults');
+      const fn = httpsCallable(functions, 'getAnonymousConsults');
       const res = await fn({});
       krConsults = res.data.consults || [];
       const el = document.getElementById('krConsultList');
@@ -10397,7 +11262,7 @@ ${transcript}
     const repliesEl = document.getElementById('krReplies_' + consultId);
     if (repliesEl) repliesEl.innerHTML = '<div style="font-size:12px;color:var(--zb-muted);">読み込み中...</div>';
     try {
-      const fn = firebase.functions().httpsCallable('getConsultReplies');
+      const fn = httpsCallable(functions, 'getConsultReplies');
       const res = await fn({ consultId });
       const replies = res.data.replies || [];
       if (!repliesEl) return;
@@ -10417,7 +11282,7 @@ ${transcript}
     const content = input.value.trim();
     if (content.length < 5) { alert('返信は5文字以上入力してください'); return; }
     try {
-      const fn = firebase.functions().httpsCallable('replyAnonymousConsult');
+      const fn = httpsCallable(functions, 'replyAnonymousConsult');
       await fn({ consultId, content });
       input.value = '';
       await krToggleReplies(consultId); // close
@@ -13361,12 +14226,12 @@ ${transcript}
             <div style="font-size:13px;line-height:1.85;">${escapeHtml(text)}</div>
           </div>`).join('')}
       </div>
-      <div class="mn-card">
+      <div class="mn-card" style="display:none;" id="mnWiseCard">
         <div class="mn-sec-title"><i class="ti ti-send" style="color:var(--zb-green)"></i>母国への送金（β）</div>
         <p style="font-size:13px;line-height:1.75;margin-bottom:10px;">Wise等の送金サービスと提携予定。手数料の一部をZaibase収益に（§31）。</p>
         <button type="button" class="btn-outline" id="mnWiseBtn" style="width:100%;">Wise 送金について（準備中）</button>
       </div>
-      <div class="mn-card">
+      <div class="mn-card" style="display:none;" id="mnVisaCard">
         <div class="mn-sec-title"><i class="ti ti-bell"></i>在留資格の更新</div>
         <p style="font-size:13px;line-height:1.75;">更新3ヶ月前に通知予定（β）。行政書士紹介は登録業者のみ。</p>
         <button type="button" class="btn-outline" id="mnVisaBtn" style="width:100%;margin-top:8px;">リマインダーを設定（準備中）</button>
@@ -14913,6 +15778,9 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
     document.getElementById('homeUserName').textContent = bizLabel ? `${displayName}（${bizLabel}）` : displayName;
     const plan = PLAN_LABELS[prof.subscriptionPlan] || PLAN_LABELS.base;
     document.getElementById('homePlanBadge').innerHTML = `<i class="ti ti-crown" style="font-size:11px"></i> ${plan}`;
+    // 有料プランなら料金バナーを非表示
+    const isPaidPlan = prof.subscriptionPlan && prof.subscriptionPlan !== 'free' && prof.subscriptionStatus === 'active';
+    document.getElementById('homePlanBanner')?.classList.toggle('hidden', isPaidPlan);
     const myContracts = contractsForRole('contractor');
     const active = myContracts.filter(c => ['active', 'work_completed'].includes(c.status || 'active'));
     const pendingPay = myContracts.filter(c => ['work_completed', 'payment_overdue'].includes(c.status));
@@ -19055,13 +19923,17 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
 
   let teamsPlatformConfig = { lawyerGatePassed: false };
 
-  // 機能ゲート（職業安定法・資金決済法対応。有効化はFirestore platformConfig/features で管理）
-  let featureFlags = { jobMatchingEnabled: false, chainContractEnabled: false };
+  // 機能ゲート（職業安定法・弁護士法72条・資金決済法対応。有効化はFirestore platformConfig/features で管理）
+  // billingEnabled: 課金・決済機能（有料プラン申込）。Stripe審査通過・弁護士確認後に true に変更
+  // legalFeaturesEnabled: 許認可チェック・コンプライアンスゲート・法律相談バナー（弁護士確認後に開放）
+  // cashFlowEnabled: 資金繰りシミュレーター（弁護士確認後に開放）
+  // priceNegotiationEnabled: 価格転嫁交渉サポートAI（弁護士確認後に開放）
+  let featureFlags = { jobMatchingEnabled: false, chainContractEnabled: false, legalFeaturesEnabled: false, billingEnabled: false, cashFlowEnabled: false, priceNegotiationEnabled: false };
 
   async function loadFeatureFlags() {
     try {
       const snap = await getDoc(doc(db, 'platformConfig', 'features'));
-      if (snap.exists()) featureFlags = { jobMatchingEnabled: false, chainContractEnabled: false, ...snap.data() };
+      if (snap.exists()) featureFlags = { jobMatchingEnabled: false, chainContractEnabled: false, legalFeaturesEnabled: false, billingEnabled: false, cashFlowEnabled: false, priceNegotiationEnabled: false, ...snap.data() };
     } catch (_) {}
     applyFeatureGates();
   }
@@ -19071,7 +19943,9 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
     const matchTab = document.querySelector('[data-maintab="match"]');
     const matchGateBanner = document.getElementById('jobMatchGateBanner');
     if (matchTab) matchTab.style.display = featureFlags.jobMatchingEnabled ? '' : 'none';
-    if (matchGateBanner) matchGateBanner.classList.toggle('hidden', featureFlags.jobMatchingEnabled);
+    if (matchGateBanner) matchGateBanner.style.display = featureFlags.jobMatchingEnabled ? '' : 'none';
+    const emergencyBtn = document.getElementById('mypageEmergencyBtn');
+    if (emergencyBtn) emergencyBtn.style.display = featureFlags.jobMatchingEnabled ? '' : 'none';
     // 機能オフ時は「読み込み中…」を消す
     if (!featureFlags.jobMatchingEnabled) {
       const mc = document.getElementById('matchContainer');
@@ -19082,7 +19956,28 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
     const chainBtn = document.getElementById('mypageChainBtn');
     const chainGateBanner = document.getElementById('chainGateBanner');
     if (chainBtn) chainBtn.style.display = featureFlags.chainContractEnabled ? '' : 'none';
-    if (chainGateBanner) chainGateBanner.classList.toggle('hidden', featureFlags.chainContractEnabled);
+    if (chainGateBanner) chainGateBanner.style.display = featureFlags.chainContractEnabled ? '' : 'none';
+
+    // 弁護士法72条確認待ち機能（弁護士確認後に legalFeaturesEnabled: true で開放）
+    const kyoninkaBtn = document.getElementById('mypageKyoninkaBtn');
+    const complianceBtn = document.getElementById('mypageComplianceBtn');
+    const legalBanner = document.getElementById('tcLegalConsultBtn');
+    if (kyoninkaBtn) kyoninkaBtn.style.display = featureFlags.legalFeaturesEnabled ? '' : 'none';
+    if (complianceBtn) complianceBtn.style.display = featureFlags.legalFeaturesEnabled ? '' : 'none';
+    if (legalBanner) legalBanner.style.display = featureFlags.legalFeaturesEnabled ? '' : 'none';
+
+    // 課金・有料プラン（Stripe審査通過・弁護士確認後に billingEnabled: true で開放）
+    const billingIds = ['mypagePricingBtn', 'mypageStripeBtn', 'homePlanBtn', 'payOpenStripeBtn', 'ecOpenPricingBtn'];
+    billingIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.display = featureFlags.billingEnabled ? '' : 'none';
+    });
+
+    // 資金繰りシミュレーター・価格転嫁交渉サポート（弁護士確認後に開放）
+    const cfBtn = document.getElementById('mypageCashflowBtn');
+    const pnBtn = document.getElementById('mypagePriceNegotiationBtn');
+    if (cfBtn) cfBtn.style.display = featureFlags.cashFlowEnabled ? '' : 'none';
+    if (pnBtn) pnBtn.style.display = featureFlags.priceNegotiationEnabled ? '' : 'none';
   }
   let currentTeamData = null;
   let currentTeamInviteCode = null;
@@ -19713,7 +20608,7 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
   }
 
   function updateBottomNavForScreen(id) {
-    const hideNav = ['loginScreen', 'jobPostScreen', 'jobApproveScreen', 'stripeScreen', 'estimateScreen', 'invoiceScreen', 'insuranceScreen', 'rousaiScreen', 'rousaiApplyScreen', 'materialsMarketScreen', 'pricingScreen', 'pointsScreen', 'emergencyMatchScreen','communityScreen', 'photoReportScreen', 'deliveryScreen', 'eticketScreen', 'trackingScreen', 'safetyScreen', 'teamScreen', 'complianceGateScreen', 'chainScreen', 'faceRegisterScreen', 'chatRoomScreen', 'adminScreen'];
+    const hideNav = ['loginScreen', 'jobPostScreen', 'jobApproveScreen', 'stripeScreen', 'estimateScreen', 'invoiceScreen', 'insuranceScreen', 'rousaiScreen', 'rousaiApplyScreen', 'materialsMarketScreen', 'pricingScreen', 'pointsScreen', 'emergencyMatchScreen','communityScreen', 'photoReportScreen', 'deliveryScreen', 'eticketScreen', 'trackingScreen', 'rainRadarScreen', 'safetyScreen', 'teamScreen', 'complianceGateScreen', 'chainScreen', 'faceRegisterScreen', 'chatRoomScreen', 'adminScreen', 'tutorialScreen', 'troubleConsultScreen', 'meetingScreen'];
     const isWorker = currentAccountRole !== 'orderer';
     const legacy = document.getElementById('bottomNav');
     const worker = document.getElementById('bottomNavWorker');
@@ -20853,7 +21748,8 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
     const prev = document.body.dataset.screenId;
     if (prev === 'trackingScreen' && id !== 'trackingScreen') stopTrackingTimers();
     if (prev === 'faceRegisterScreen' && id !== 'faceRegisterScreen') stopFaceRegisterWizard();
-    ['loginScreen','homeScreen','mainScreen','postScreen','mapScreen','mypageScreen','chatScreen','adminScreen','siteFaceScreen','jobPostScreen','teamJobPostScreen','jobApproveScreen','paymentScreen','stripeScreen','estimateScreen','invoiceScreen','insuranceScreen','rousaiScreen','rousaiApplyScreen','materialsMarketScreen','pricingScreen','pointsScreen','emergencyMatchScreen','communityScreen','moneyScreen','photoReportScreen','deliveryScreen','eticketScreen','trackingScreen','safetyScreen','teamScreen','complianceGateScreen','chainScreen','faceRegisterScreen','seikoTaikeiScreen','kokiScreen','koseiScreen','industryScreen','karoshiScreen','noiseVibScreen','envBizScreen','termsScreen','privacyScreen','sctScreen'].forEach(s =>
+    if (prev === 'rainRadarScreen' && id !== 'rainRadarScreen') stopRainRadarTimer();
+    ['loginScreen','homeScreen','mainScreen','postScreen','mapScreen','mypageScreen','chatScreen','adminScreen','siteFaceScreen','jobPostScreen','teamJobPostScreen','jobApproveScreen','paymentScreen','stripeScreen','estimateScreen','invoiceScreen','insuranceScreen','rousaiScreen','rousaiApplyScreen','materialsMarketScreen','pricingScreen','pointsScreen','emergencyMatchScreen','communityScreen','moneyScreen','photoReportScreen','deliveryScreen','eticketScreen','trackingScreen','rainRadarScreen','safetyScreen','teamScreen','complianceGateScreen','chainScreen','faceRegisterScreen','seikoTaikeiScreen','kokiScreen','koseiScreen','industryScreen','karoshiScreen','noiseVibScreen','envBizScreen','termsScreen','privacyScreen','sctScreen','tutorialScreen','troubleConsultScreen','meetingScreen'].forEach(s =>
       document.getElementById(s)?.classList.add('hidden')
     );
     document.getElementById('chatRoomScreen').classList.add('hidden');
@@ -20862,7 +21758,7 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
     document.getElementById(id).classList.remove('hidden');
     document.body.dataset.screenId = id;
 
-    const hideFab = ['loginScreen', 'siteFaceScreen', 'jobPostScreen', 'teamJobPostScreen', 'jobApproveScreen', 'homeScreen', 'paymentScreen', 'stripeScreen', 'estimateScreen', 'invoiceScreen', 'insuranceScreen', 'rousaiScreen', 'rousaiApplyScreen', 'materialsMarketScreen', 'pricingScreen', 'pointsScreen', 'emergencyMatchScreen', 'communityScreen', 'moneyScreen', 'photoReportScreen', 'deliveryScreen', 'eticketScreen', 'trackingScreen', 'safetyScreen', 'teamScreen', 'complianceGateScreen', 'chainScreen', 'faceRegisterScreen', 'mypageScreen', 'chatScreen', 'chatRoomScreen'];
+    const hideFab = ['loginScreen', 'siteFaceScreen', 'jobPostScreen', 'teamJobPostScreen', 'jobApproveScreen', 'homeScreen', 'paymentScreen', 'stripeScreen', 'estimateScreen', 'invoiceScreen', 'insuranceScreen', 'rousaiScreen', 'rousaiApplyScreen', 'materialsMarketScreen', 'pricingScreen', 'pointsScreen', 'emergencyMatchScreen', 'communityScreen', 'moneyScreen', 'photoReportScreen', 'deliveryScreen', 'eticketScreen', 'trackingScreen', 'safetyScreen', 'teamScreen', 'complianceGateScreen', 'chainScreen', 'faceRegisterScreen', 'mypageScreen', 'chatScreen', 'chatRoomScreen', 'tutorialScreen', 'troubleConsultScreen', 'meetingScreen'];
     document.getElementById('newMatchBtn')?.classList.toggle('hidden', hideFab.includes(id) || id !== 'mainScreen' || mainTab !== 'match');
     if (id === 'siteFaceScreen') initSiteFaceScreen();
     if (id === 'homeScreen') loadHomeDashboard();
@@ -20883,6 +21779,7 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
     if (id === 'deliveryScreen') initDeliveryScreen();
     if (id === 'eticketScreen') initEticketScreen();
     if (id === 'trackingScreen') initTrackingScreen();
+    if (id === 'rainRadarScreen') initRainRadar();
     if (id === 'safetyScreen') initSafetyScreen();
     if (id === 'teamScreen') initTeamScreen();
     if (id === 'teamJobPostScreen') initTeamJobPostScreen();
@@ -22967,6 +23864,7 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
     const btn = document.getElementById('saveProfileBtn');
     btn.disabled = true;
     try {
+      const selectedAge = document.querySelector('#profileAgeChips .wp-age-chip.sel')?.dataset.age || '';
       await setDoc(doc(db, 'craftsmanProfiles', user.uid), {
         displayName, trade, trades, prefecture, bio,
         familyName, givenName,
@@ -22975,6 +23873,10 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
         experienceYears: document.getElementById('profileExperienceYears')?.value || '',
         licenses: getSelectedLicenses(),
         licenseNumber: document.getElementById('profileLicenseNo')?.value.trim() || '',
+        storyText: document.getElementById('profileStoryText')?.value.trim() || '',
+        ageGroup: selectedAge,
+        mentorAvailable: document.getElementById('profileMentorAvailable')?.checked || false,
+        publicVisible: document.getElementById('profilePublicVisible')?.checked !== false,
         accountRole,
         email: user.email || '',
         updatedAt: serverTimestamp()
@@ -23013,7 +23915,7 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
     const box = document.getElementById('loginDebugBox');
     if (!box) return;
     box.style.display = 'block';
-    box.textContent = '[v20260621-i] ' + msg;
+    box.textContent = '[v20260621-j] ' + msg;
   }
 
   function isLocalDevUrl() {
@@ -23045,7 +23947,7 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
     }
     if (isIOSSafari()) {
       box.className = 'login-hint';
-      box.innerHTML = `<strong>Safari でログインできます</strong><br>Google・Yahoo・LINE ボタンを押すとポップアップが開きます。アカウントを選択してください。`;
+      box.innerHTML = `<strong>Safari でログインできます</strong><br>Google・Yahoo・LINE ボタンを押すとログイン画面に移動します。完了後、自動的にアプリに戻ります。`;
       return;
     }
     box.className = 'login-hint';
@@ -23060,12 +23962,6 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
     const pending = sessionStorage.getItem('oauthRedirectProvider');
     if (pending) {
       showAuthLoading(`${pending}ログイン処理中…`);
-      // iOS Safari で getRedirectResult が IndexedDB のアクセス待ちで固まることがある。
-      // 8秒後に自動リロードすることで、onAuthStateChanged 経由でログイン完了させる。
-      authRedirectTimeout = setTimeout(() => {
-        sessionStorage.removeItem('oauthRedirectProvider');
-        window.location.reload();
-      }, 8000);
     }
     try {
       await persistenceReady;
@@ -23073,7 +23969,6 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
       if (result?.user) {
         // 成功: onAuthStateChanged がオーバーレイを消してホーム画面へ遷移する
       } else if (pending && !auth.currentUser) {
-        if (authRedirectTimeout) { clearTimeout(authRedirectTimeout); authRedirectTimeout = null; }
         hideAuthLoading();
         sessionStorage.removeItem('oauthRedirectProvider');
         const errEl = document.getElementById('authError');
@@ -23082,7 +23977,6 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
       }
     } catch (e) {
       console.error('OAuthリダイレクトエラー:', e.code, e.message, e);
-      if (authRedirectTimeout) { clearTimeout(authRedirectTimeout); authRedirectTimeout = null; }
       const provider = sessionStorage.getItem('oauthRedirectProvider') || 'OAuth';
       sessionStorage.removeItem('oauthRedirectProvider');
       hideAuthLoading();
@@ -23129,10 +24023,6 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
       return;
     }
     try {
-      // リダイレクト前に localStorage 永続化を設定する。
-      // これにより認証状態が localStorage に保存され、
-      // Safari 復帰時の IndexedDB ハングを回避できる。
-      await setPersistence(auth, browserLocalPersistence);
       sessionStorage.setItem('oauthRedirectProvider', label);
       showAuthLoading(`${label}ログイン画面へ移動中…`);
       await signInWithRedirect(auth, provider);
@@ -23197,11 +24087,9 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
     }
   });
 
-  // ===== OAuth ポップアップ（全デバイス共通・同期呼び出し版） =====
-  // iOS Safari はリダイレクト後に Bounce Tracking Prevention でストレージが消去され
-  // getRedirectResult が null を返す問題がある。
-  // 回避策：クリックハンドラからポップアップを同期的に呼び出す。
-  // iOS Safari はユーザー操作の直接チェーンで開かれたポップアップは許可する。
+  // ===== OAuth ログイン =====
+  // iOS Safari: リダイレクト方式（IndexedDB で状態を保持し Bounce Tracking を回避）
+  // PC・Android: ポップアップ方式
   function handleOAuthClick(provider, label) {
     const errEl = document.getElementById('authError');
     errEl.textContent = '';
@@ -23211,9 +24099,23 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
       errEl.textContent = `${label}：アプリ内ブラウザではログインできません。SafariまたはChromeで https://zaisai-share.web.app/app を開いてください。`;
       return;
     }
+    if (isIOSSafari()) {
+      // iOS Safari はポップアップを新しいタブで開くため window.opener が消えて失敗する。
+      // IndexedDB 永続化はリダイレクト後も消去されないため、リダイレクト方式が確実に動く。
+      showDebug(`${label}: iOS redirect 開始`);
+      sessionStorage.setItem('oauthRedirectProvider', label);
+      showAuthLoading(`${label}ログイン画面へ移動中…`);
+      signInWithRedirect(auth, provider).catch(function(e) {
+        hideAuthLoading();
+        sessionStorage.removeItem('oauthRedirectProvider');
+        showDebug(`${label}: redirect エラー [${e.code}]`);
+        errEl.style.color = '#c62828';
+        errEl.textContent = `${label}ログイン失敗 [${e.code}]：${e.message || ''}`;
+      });
+      return;
+    }
+    // PC・Android: ポップアップ
     showDebug(`${label}: popup 開始`);
-    // signInWithPopup をここで直接呼び出す（async/await なし）ことで
-    // クリック→window.open() が同期チェーンになり iOS Safari に許可される
     signInWithPopup(auth, provider).catch(function(e) {
       console.error(label + 'ログインエラー:', e.code, e.message, e);
       showDebug(label + ': エラー [' + e.code + ']');
@@ -23453,6 +24355,16 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
     showScreen('eticketScreen');
   });
   document.getElementById('mypageTrackingBtn')?.addEventListener('click', () => showScreen('trackingScreen'));
+  document.getElementById('mypageRainRadarBtn')?.addEventListener('click', () => showScreen('rainRadarScreen'));
+  document.getElementById('rainRadarBackBtn')?.addEventListener('click', () => showScreen('mypageScreen'));
+  document.getElementById('rainRadarRefreshBtn')?.addEventListener('click', () => {
+    if (rrdrCurrentTab === 'rain5') updateRainTiles(false);
+    else if (rrdrCurrentTab === 'rain1h') updateRainTiles(true);
+    else if (rrdrCurrentTab === 'wind') updateWindIframe();
+  });
+  document.querySelectorAll('.rrdr-tab').forEach(btn =>
+    btn.addEventListener('click', () => switchRrdrTab(btn.dataset.rrdr))
+  );
   document.getElementById('trackingBackBtn')?.addEventListener('click', () => showScreen('mypageScreen'));
   document.getElementById('deliveryTrackBtn')?.addEventListener('click', () => showScreen('trackingScreen'));
   document.getElementById('trkShareBtn')?.addEventListener('click', () => document.getElementById('trkDriverSend')?.classList.add('show'));
@@ -23637,7 +24549,7 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
 
   async function loadStripeCurrentPlan() {
     try {
-      const fn = firebase.functions().httpsCallable('getMySubscription');
+      const fn = httpsCallable(functions, 'getMySubscription');
       const res = await fn({});
       const d = res.data;
       const planNames = { free:'フリープラン', starter:'スタータープラン', pro:'プロプラン', team:'チームプラン' };
@@ -23673,10 +24585,14 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
   }
 
   window.doStripeCheckout = async function(plan) {
+    if (!featureFlags.billingEnabled) {
+      showZbToast('現在、有料プランの申込を一時停止しています。');
+      return;
+    }
     const msg = document.getElementById('stripePlanMsg');
     msg.textContent = '決済画面を準備中...';
     try {
-      const fn = firebase.functions().httpsCallable('createCheckoutSession');
+      const fn = httpsCallable(functions, 'createCheckoutSession');
       const res = await fn({
         plan,
         interval: stripeInterval,
@@ -23700,7 +24616,7 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
     const msg = document.getElementById('stripeCancelMsg');
     msg.textContent = '処理中...';
     try {
-      const fn = firebase.functions().httpsCallable('cancelStripeSubscription');
+      const fn = httpsCallable(functions, 'cancelStripeSubscription');
       const res = await fn({ reason });
       msg.textContent = '✅ ' + (res.data.message || '解約しました');
       await loadStripeCurrentPlan();
@@ -23710,7 +24626,7 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
   document.getElementById('stripeOnboardingBtn')?.addEventListener('click', async () => {
     showZbToast('Stripe Connectの本人確認画面へ移動します...');
     try {
-      const fn = firebase.functions().httpsCallable('createStripeOnboarding');
+      const fn = httpsCallable(functions, 'createStripeOnboarding');
       const res = await fn({});
       if (res.data?.url) window.open(res.data.url, '_blank');
     } catch(e) { showZbToast('Stripe Connect: ' + (e.message || '接続エラー')); }
@@ -23727,6 +24643,202 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
   document.getElementById('mypageTermsBtn')?.addEventListener('click', () => openLegal('termsScreen'));
   document.getElementById('mypagePrivacyBtn')?.addEventListener('click', () => openLegal('privacyScreen'));
   document.getElementById('mypageSctBtn')?.addEventListener('click', () => openLegal('sctScreen'));
+
+  // 使い方ガイド
+  let tutorialReturnScreen = 'mypageScreen';
+  function openTutorial(defaultTab) {
+    tutorialReturnScreen = document.body.dataset.screenId || 'mypageScreen';
+    const isWorker = (defaultTab || (currentAccountRole !== 'orderer' ? 'worker' : 'orderer')) === 'worker';
+    document.getElementById('tutWorkerSection').classList.toggle('hidden', !isWorker);
+    document.getElementById('tutOrdererSection').classList.toggle('hidden', isWorker);
+    document.getElementById('tutTabWorker').classList.toggle('act', isWorker);
+    document.getElementById('tutTabOrderer').classList.toggle('act', !isWorker);
+    showScreen('tutorialScreen');
+  }
+  document.getElementById('homePlanBtn')?.addEventListener('click', () => showScreen('stripeScreen'));
+  document.getElementById('homeTutorialBtn')?.addEventListener('click', () => openTutorial());
+  document.getElementById('mypageTutorialBtn')?.addEventListener('click', () => openTutorial());
+  document.getElementById('tutorialBackBtn')?.addEventListener('click', () => showScreen(tutorialReturnScreen));
+
+  // ===== 出会いの場 =====
+  let meetingReturnScreen = 'homeScreen';
+  let mtCurrentTab = 'worker';
+  let mtWorkerFilter = 'all';
+  let mtCompanyFilter = 'all';
+  let mtWorkerData = [];
+  let mtCompanyData = [];
+
+  function openMeetingScreen() {
+    meetingReturnScreen = document.body.dataset.screenId || 'homeScreen';
+    showScreen('meetingScreen');
+    loadMeetingData();
+  }
+
+  async function loadMeetingData() {
+    // 職人データ読み込み
+    const wSnap = await getDocs(query(collection(db, 'craftsmanProfiles'), where('publicVisible', '==', true), limit(100)));
+    mtWorkerData = wSnap.docs.map(d => ({ id: d.id, ...d.data() }));
+    // 企業データ読み込み（発注者プロフィール）
+    const cSnap = await getDocs(query(collection(db, 'ordererProfiles'), where('meetingPublic', '==', true), limit(100)));
+    mtCompanyData = cSnap.docs.map(d => ({ id: d.id, ...d.data() }));
+    renderMeetingTab();
+  }
+
+  function renderMeetingTab() {
+    if (mtCurrentTab === 'worker') renderWorkerCards();
+    else renderCompanyCards();
+  }
+
+  function renderWorkerCards() {
+    const list = document.getElementById('mtWorkerList');
+    let data = mtWorkerData;
+    if (mtWorkerFilter === '50代') data = data.filter(p => p.ageGroup === '50代' || p.ageGroup === '60代以上');
+    else if (mtWorkerFilter === 'mentor') data = data.filter(p => p.mentorAvailable);
+    else if (mtWorkerFilter !== 'all') data = data.filter(p => (p.trades || []).includes(mtWorkerFilter) || p.trade === mtWorkerFilter);
+
+    const cards = data.map(p => {
+      const initials = (p.displayName || '職').slice(0, 1);
+      const tags = [
+        p.ageGroup ? `<span class="mt-tag ${p.ageGroup === '50代' || p.ageGroup === '60代以上' ? 'senior' : ''}">${p.ageGroup}</span>` : '',
+        p.mentorAvailable ? '<span class="mt-tag mentor">👨‍🏫 指導できる</span>' : '',
+        p.trade ? `<span class="mt-tag">${escapeHtml(p.trade)}</span>` : '',
+        p.experienceYears ? `<span class="mt-tag">${escapeHtml(p.experienceYears)}</span>` : '',
+      ].filter(Boolean).join('');
+      const story = p.storyText ? `<div class="mt-story">${escapeHtml(p.storyText.slice(0, 80))}${p.storyText.length > 80 ? '…' : ''}</div>` : '';
+      const name = p.companyName ? `${escapeHtml(p.displayName || '')}（${escapeHtml(p.companyName)}）` : escapeHtml(p.displayName || '職人');
+      const meta = [p.prefecture, p.businessType === 'hitori' ? '一人親方' : p.businessType === 'houjin' ? '法人' : '個人事業主'].filter(Boolean).join(' ・ ');
+      return `<div class="mt-card" data-uid="${p.id}">
+        <div class="mt-card-top">
+          <div class="mt-avatar">${initials}</div>
+          <div style="flex:1;">
+            <div class="mt-name">${name}</div>
+            <div class="mt-meta">${meta}</div>
+          </div>
+        </div>
+        <div class="mt-tags">${tags}</div>
+        ${story}
+        <button class="mt-contact-btn" onclick="openChatWithUser('${p.id}','${escapeHtml(p.displayName || '職人')}')">💬 メッセージを送る</button>
+      </div>`;
+    }).join('');
+    list.innerHTML = cards || '<div class="mt-empty">条件に合う職人が見つかりません</div>';
+  }
+
+  function renderCompanyCards() {
+    const list = document.getElementById('mtCompanyList');
+    let data = mtCompanyData;
+    if (mtCompanyFilter === '若手歓迎') data = data.filter(p => (p.welcomeConditions || '').includes('若手'));
+    else if (mtCompanyFilter === '50代歓迎') data = data.filter(p => (p.welcomeConditions || '').includes('50代') || (p.welcomeConditions || '').includes('ベテラン'));
+    else if (mtCompanyFilter === '研修あり') data = data.filter(p => p.trainingSystem);
+    else if (mtCompanyFilter === '元請') data = data.filter(p => p.companyType === 'genuke');
+    else if (mtCompanyFilter === '一人親方歓迎') data = data.filter(p => (p.welcomeConditions || '').includes('一人親方'));
+
+    const cards = data.map(p => {
+      const initials = (p.companyName || p.displayName || '企').slice(0, 1);
+      const specialties = (p.companySpecialty || []).map(s => `<span class="mt-tag company-sp">${escapeHtml(s)}</span>`).join('');
+      const welcomeTags = (p.welcomeConditions || '').split('・').filter(Boolean).map(w => `<span class="mt-tag">${escapeHtml(w.trim())}</span>`).join('');
+      const training = p.trainingSystem ? '<span class="mt-tag mentor">研修あり</span>' : '';
+      const story = p.representativeMessage ? `<div class="mt-story">${escapeHtml(p.representativeMessage.slice(0, 100))}${p.representativeMessage.length > 100 ? '…' : ''}</div>` : '';
+      return `<div class="mt-card" data-uid="${p.id}">
+        <div class="mt-card-top">
+          <div class="mt-avatar company">${initials}</div>
+          <div style="flex:1;">
+            <div class="mt-name">${escapeHtml(p.companyName || p.displayName || '企業')}</div>
+            <div class="mt-meta">${escapeHtml(p.prefecture || '')}${p.companyType ? ' ・ ' + (p.companyType === 'genuke' ? '元請' : '下請') : ''}</div>
+          </div>
+        </div>
+        <div class="mt-tags">${specialties}${welcomeTags}${training}</div>
+        ${story}
+        <button class="mt-contact-btn" onclick="openChatWithUser('${p.id}','${escapeHtml(p.companyName || p.displayName || '企業')}')">💬 問い合わせる</button>
+      </div>`;
+    }).join('');
+    list.innerHTML = cards || '<div class="mt-empty">掲載中の企業が見つかりません</div>';
+  }
+
+  document.getElementById('homeMeetingBtn')?.addEventListener('click', openMeetingScreen);
+  document.getElementById('meetingBackBtn')?.addEventListener('click', () => showScreen(meetingReturnScreen));
+
+  // タブ切替
+  document.querySelectorAll('.mt-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      mtCurrentTab = tab.dataset.mt;
+      document.querySelectorAll('.mt-tab').forEach(t => t.classList.remove('act'));
+      tab.classList.add('act');
+      document.getElementById('mtWorkerList').classList.toggle('hidden', mtCurrentTab !== 'worker');
+      document.getElementById('mtCompanyList').classList.toggle('hidden', mtCurrentTab !== 'company');
+      document.getElementById('mtWorkerFilter').classList.toggle('hidden', mtCurrentTab !== 'worker');
+      document.getElementById('mtCompanyFilter').classList.toggle('hidden', mtCurrentTab !== 'company');
+      renderMeetingTab();
+    });
+  });
+
+  // 職人フィルター
+  document.querySelectorAll('#mtWorkerFilter .mt-filter-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('#mtWorkerFilter .mt-filter-chip').forEach(c => c.classList.remove('sel'));
+      chip.classList.add('sel');
+      mtWorkerFilter = chip.dataset.wf;
+      renderWorkerCards();
+    });
+  });
+
+  // 企業フィルター
+  document.querySelectorAll('#mtCompanyFilter .mt-filter-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('#mtCompanyFilter .mt-filter-chip').forEach(c => c.classList.remove('sel'));
+      chip.classList.add('sel');
+      mtCompanyFilter = chip.dataset.cf;
+      renderCompanyCards();
+    });
+  });
+
+  // 年代チップ
+  document.querySelectorAll('#profileAgeChips .wp-age-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('#profileAgeChips .wp-age-chip').forEach(c => c.classList.remove('sel'));
+      chip.classList.add('sel');
+    });
+  });
+
+  // ===== トラブル・法律相談窓口 =====
+  let troubleReturnScreen = 'homeScreen';
+  function openTroubleConsult() {
+    troubleReturnScreen = document.body.dataset.screenId || 'homeScreen';
+    showScreen('troubleConsultScreen');
+  }
+  document.getElementById('homeTroubleBtn')?.addEventListener('click', openTroubleConsult);
+  document.getElementById('troubleBackBtn')?.addEventListener('click', () => showScreen(troubleReturnScreen));
+
+  // アコーディオン
+  document.querySelectorAll('.tc-card-hd').forEach(hd => {
+    hd.addEventListener('click', () => {
+      const card = hd.closest('.tc-card');
+      const isOpen = card.classList.contains('open');
+      document.querySelectorAll('.tc-card.open').forEach(c => c.classList.remove('open'));
+      if (!isOpen) card.classList.add('open');
+    });
+  });
+
+  // 法律相談バナー（中立表現・外部リンク）
+  document.getElementById('tcLegalConsultBtn')?.addEventListener('click', () => {
+    window.open('https://zaibase-horitsu.web.app', '_blank');
+  });
+
+  // 問い合わせ
+  document.getElementById('tcContactBtn')?.addEventListener('click', () => {
+    window.location.href = 'mailto:info@zaibase.group?subject=トラブル相談（Zaibase建設）';
+  });
+  document.getElementById('tutTabWorker')?.addEventListener('click', () => {
+    document.getElementById('tutWorkerSection').classList.remove('hidden');
+    document.getElementById('tutOrdererSection').classList.add('hidden');
+    document.getElementById('tutTabWorker').classList.add('act');
+    document.getElementById('tutTabOrderer').classList.remove('act');
+  });
+  document.getElementById('tutTabOrderer')?.addEventListener('click', () => {
+    document.getElementById('tutWorkerSection').classList.add('hidden');
+    document.getElementById('tutOrdererSection').classList.remove('hidden');
+    document.getElementById('tutTabWorker').classList.remove('act');
+    document.getElementById('tutTabOrderer').classList.add('act');
+  });
   document.getElementById('loginTermsBtn')?.addEventListener('click', () => openLegal('termsScreen'));
   document.getElementById('loginPrivacyBtn')?.addEventListener('click', () => openLegal('privacyScreen'));
   document.getElementById('loginSctBtn')?.addEventListener('click', () => openLegal('sctScreen'));
@@ -23987,6 +25099,18 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
   document.getElementById('mypageTeamJobBtn')?.addEventListener('click', () => showScreen('teamJobPostScreen'));
   document.getElementById('mypageComplianceBtn')?.addEventListener('click', () => showScreen('complianceGateScreen'));
   document.getElementById('mypageChainBtn')?.addEventListener('click', () => showScreen('chainScreen'));
+  document.getElementById('mypageCashflowBtn')?.addEventListener('click', () => {
+    document.getElementById('cfResult').style.display = 'none';
+    document.getElementById('cashflowSimModal').classList.remove('hidden');
+  });
+  document.getElementById('cashflowSimClose')?.addEventListener('click', () => document.getElementById('cashflowSimModal').classList.add('hidden'));
+  document.getElementById('mypagePriceNegotiationBtn')?.addEventListener('click', () => {
+    document.getElementById('pnResult').style.display = 'none';
+    document.getElementById('pnLoading').style.display = 'none';
+    document.getElementById('pnError').style.display = 'none';
+    document.getElementById('priceNegotiationModal').classList.remove('hidden');
+  });
+  document.getElementById('priceNegotiationClose')?.addEventListener('click', () => document.getElementById('priceNegotiationModal').classList.add('hidden'));
   document.getElementById('complianceBackBtn')?.addEventListener('click', () => showScreen('mypageScreen'));
   document.getElementById('chainBackBtn')?.addEventListener('click', () => showScreen('mypageScreen'));
   document.getElementById('jobHdTeamPostBtn')?.addEventListener('click', () => showScreen('teamJobPostScreen'));
@@ -24705,6 +25829,309 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js').catch(e => console.warn('SW登録失敗:', e));
   }
+
+  // ── 気象情報（雨雲・風・天気予報）────────────────────────────────
+  let rainRadarMap = null;
+  let rainTileLayer = null;
+  let rainRadarTimer = null;
+  let rainUserMarker = null;
+  let rrdrCurrentTab = 'rain5';
+  let rrdrUserLat = 35.6762, rrdrUserLng = 139.6503;
+  let rrdrForecastLoaded = false;
+
+  const WMO_LABEL = {
+    0:'快晴☀️',1:'晴れ🌤',2:'晴れ時々曇り⛅',3:'曇り☁️',
+    45:'霧🌫',48:'霧氷🌫',
+    51:'霧雨🌦',53:'霧雨🌦',55:'霧雨🌦',
+    61:'小雨🌧',63:'雨🌧',65:'大雨🌧',
+    71:'小雪🌨',73:'雪❄️',75:'大雪❄️',77:'霧雪🌨',
+    80:'にわか雨🌦',81:'にわか雨🌦',82:'激しいにわか雨⛈',
+    85:'にわか雪🌨',86:'激しいにわか雪❄️',
+    95:'雷雨⛈',96:'雷雨⛈',99:'激しい雷雨⛈'
+  };
+
+  function stopRainRadarTimer() {
+    if (rainRadarTimer) { clearInterval(rainRadarTimer); rainRadarTimer = null; }
+  }
+
+  function formatJmaTime(v) {
+    return v.slice(0,4)+'/'+v.slice(4,6)+'/'+v.slice(6,8)+' '+v.slice(8,10)+':'+v.slice(10,12);
+  }
+
+  async function fetchJmaTimes(n2 = false) {
+    const url = n2
+      ? 'https://www.jma.go.jp/bosai/nowc/data/nowcast/targetTimes_N2.json'
+      : 'https://www.jma.go.jp/bosai/nowc/data/nowcast/targetTimes_N1.json';
+    const d = await (await fetch(url)).json();
+    return d.map(o => o.validtime);
+  }
+
+  async function updateRainTiles(n2 = false) {
+    const btn = document.getElementById('rainRadarRefreshBtn');
+    if (btn) btn.disabled = true;
+    try {
+      const times = await fetchJmaTimes(n2);
+      const validtime = times[times.length - 1];
+      if (rainTileLayer) { rainRadarMap.removeLayer(rainTileLayer); rainTileLayer = null; }
+      rainTileLayer = L.tileLayer(
+        'https://www.jma.go.jp/bosai/jmatile/data/nowc/' + validtime + '/none/{z}/{x}/{y}/surf/rain/png',
+        { opacity: 0.75, attribution: '© 気象庁', zIndex: 10 }
+      ).addTo(rainRadarMap);
+      const label = n2
+        ? '1時間予報 (' + formatJmaTime(times[0]) + '→' + formatJmaTime(validtime) + ')'
+        : '観測時刻: ' + formatJmaTime(validtime) + ' （5分ごと自動更新）';
+      const el = document.getElementById('rainRadarTime');
+      if (el) el.textContent = label;
+    } catch {
+      const el = document.getElementById('rainRadarTime');
+      if (el) el.textContent = 'データ取得に失敗しました';
+    } finally {
+      if (btn) btn.disabled = false;
+    }
+  }
+
+  function updateWindIframe() {
+    const iframe = document.getElementById('rrdrWindIframe');
+    if (!iframe) return;
+    const src = 'https://embed.windy.com/embed2.html?type=map&location=coordinates' +
+      '&metricRain=mm&metricTemp=%C2%B0C&metricWind=km/h' +
+      '&zoom=9&overlay=wind&lat=' + rrdrUserLat + '&lon=' + rrdrUserLng + '&message=true';
+    if (iframe.src !== src) iframe.src = src;
+  }
+
+  async function loadForecast() {
+    const el = document.getElementById('rrdrForecastContent');
+    if (!el) return;
+    el.innerHTML = '<div style="color:#94a3b8;font-size:13px;padding:20px 0;text-align:center;">天気予報を読み込み中…</div>';
+    try {
+      const url = 'https://api.open-meteo.com/v1/forecast' +
+        '?latitude=' + rrdrUserLat + '&longitude=' + rrdrUserLng +
+        '&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_probability_max,windspeed_10m_max' +
+        '&hourly=temperature_2m,precipitation_probability,weathercode,windspeed_10m' +
+        '&timezone=Asia%2FTokyo&forecast_days=14';
+      const d = await (await fetch(url)).json();
+      const days = d.daily;
+      const now = new Date();
+      const todayStr = now.toISOString().slice(0,10);
+      const tomorrowStr = new Date(now.getTime() + 86400000).toISOString().slice(0,10);
+      const DOW = ['日','月','火','水','木','金','土'];
+      let html = '';
+      days.time.forEach((dateStr, i) => {
+        const dt = new Date(dateStr + 'T00:00:00+09:00');
+        const dow = DOW[dt.getDay()];
+        const mm = dateStr.slice(5,7), dd = dateStr.slice(8,10);
+        const isToday = dateStr === todayStr, isTomorrow = dateStr === tomorrowStr;
+        const wmo = WMO_LABEL[days.weathercode[i]] || '—';
+        const hi = Math.round(days.temperature_2m_max[i]);
+        const lo = Math.round(days.temperature_2m_min[i]);
+        const rain = days.precipitation_probability_max[i] ?? 0;
+        const wind = Math.round(days.windspeed_10m_max[i]);
+        if (isToday || isTomorrow) {
+          const tag = isToday ? '<span class="rrdr-fc-label">今日</span>' : '<span class="rrdr-fc-label" style="background:#818cf8;">明日</span>';
+          html += `<div class="rrdr-fc-card${isToday?' rrdr-fc-today':''}">
+            <div class="rrdr-fc-card-hd">
+              <span class="rrdr-fc-date">${mm}/${dd}（${dow}）${tag}</span>
+              <span class="rrdr-fc-icon">${wmo.slice(-2)}</span>
+            </div>
+            <div style="font-size:14px;color:#cbd5e1;margin-bottom:6px;">${wmo.slice(0,-2)}</div>
+            <div class="rrdr-fc-temps">
+              <span class="rrdr-fc-high">↑${hi}°</span>
+              <span style="color:#475569;margin:0 4px;">/</span>
+              <span class="rrdr-fc-low">↓${lo}°</span>
+            </div>
+            <div class="rrdr-fc-meta">
+              <span>☔ 降水確率 ${rain}%</span>
+              <span>💨 風速 ${wind}km/h</span>
+            </div>
+          </div>`;
+        } else {
+          html += `<div class="rrdr-fc-row">
+            <span class="rrdr-fc-row-date">${mm}/${dd}（${dow}）</span>
+            <span class="rrdr-fc-row-icon">${wmo.slice(-2)}</span>
+            <span style="font-size:12px;color:#94a3b8;flex:1;padding-left:4px;">${wmo.slice(0,-2)}</span>
+            <span class="rrdr-fc-row-rain">☔${rain}%</span>
+            <span class="rrdr-fc-row-tmp"><span class="rrdr-fc-high">${hi}°</span>/<span class="rrdr-fc-low">${lo}°</span></span>
+          </div>`;
+        }
+      });
+      el.innerHTML = html;
+      rrdrForecastLoaded = true;
+    } catch {
+      el.innerHTML = '<div style="color:#f87171;font-size:13px;padding:20px 0;text-align:center;">天気予報の取得に失敗しました</div>';
+    }
+  }
+
+  function switchRrdrTab(tab) {
+    rrdrCurrentTab = tab;
+    document.querySelectorAll('.rrdr-tab').forEach(b => b.classList.toggle('active', b.dataset.rrdr === tab));
+    const isRain = tab === 'rain5' || tab === 'rain1h';
+    const isWind = tab === 'wind';
+    const isFc   = tab === 'forecast';
+    document.getElementById('rainRadarMap').style.display    = isRain ? '' : 'none';
+    document.getElementById('rrdrWindWrap').classList.toggle('rrdr-active', isWind);
+    document.getElementById('rrdrForecastWrap').classList.toggle('rrdr-active', isFc);
+    document.getElementById('rrdrFooter').style.display      = isRain ? '' : 'none';
+    document.getElementById('rainRadarRefreshBtn').style.display = isFc ? 'none' : '';
+    if (isRain) {
+      if (rainRadarMap) rainRadarMap.invalidateSize();
+      updateRainTiles(tab === 'rain1h');
+    }
+    if (isWind) updateWindIframe();
+    if (isFc && !rrdrForecastLoaded) loadForecast();
+  }
+
+  async function initRainRadar() {
+    // 現在地取得
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(pos => {
+        rrdrUserLat = pos.coords.latitude;
+        rrdrUserLng = pos.coords.longitude;
+        if (rainRadarMap) {
+          rainRadarMap.setView([rrdrUserLat, rrdrUserLng], 11);
+          if (rainUserMarker) rainRadarMap.removeLayer(rainUserMarker);
+          rainUserMarker = L.circleMarker([rrdrUserLat, rrdrUserLng], {
+            radius: 8, fillColor: '#0ea5e9', color: '#fff', weight: 2, fillOpacity: 1
+          }).addTo(rainRadarMap).bindPopup('現在地');
+        }
+        if (rrdrCurrentTab === 'wind') updateWindIframe();
+        if (rrdrCurrentTab === 'forecast') loadForecast();
+      }, () => {});
+    }
+    // 地図初期化
+    if (!rainRadarMap) {
+      rainRadarMap = L.map('rainRadarMap', { zoomControl: true }).setView([rrdrUserLat, rrdrUserLng], 9);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        maxZoom: 16, opacity: 0.6
+      }).addTo(rainRadarMap);
+    } else {
+      rainRadarMap.invalidateSize();
+    }
+    // タブを rain5 に戻す
+    rrdrCurrentTab = 'rain5';
+    rrdrForecastLoaded = false;
+    switchRrdrTab('rain5');
+    stopRainRadarTimer();
+    rainRadarTimer = setInterval(() => {
+      if (rrdrCurrentTab === 'rain5') updateRainTiles(false);
+      if (rrdrCurrentTab === 'rain1h') updateRainTiles(true);
+    }, 5 * 60 * 1000);
+  }
+
+  // ── 資金繰りシミュレーター ────────────────────────────────
+  // cashFlowEnabled: false のため非表示。Firestore platformConfig/features で開放可能。
+  window.runCashflowSim = function() {
+    const cash    = parseFloat(document.getElementById('cfCash').value)    || 0;
+    const income  = parseFloat(document.getElementById('cfIncome').value)  || 0;
+    const expense = parseFloat(document.getElementById('cfExpense').value) || 0;
+    const lag     = parseInt(document.getElementById('cfPayLag').value)    || 0;
+
+    if (!cash && !income && !expense) { showZbToast('金額を入力してください'); return; }
+
+    // 6ヶ月間のキャッシュ残高を計算
+    const balances = [];
+    let b = cash;
+    for (let i = 1; i <= 6; i++) {
+      const effectiveIncome = i > lag ? income : 0; // 入金サイトによる遅延
+      b = b + effectiveIncome - expense;
+      balances.push(Math.round(b));
+    }
+
+    // ランウェイ判定
+    const net = income - expense;
+    let bannerHtml, bannerBg;
+    if (net >= 0) {
+      bannerHtml = '✅ 月次黒字: 毎月 <strong>+' + net.toLocaleString() + '万円</strong> のキャッシュが増えています';
+      bannerBg = 'background:#dcfce7;color:#166534;';
+    } else {
+      const runway = Math.floor(cash / (-net));
+      if (runway <= 2) {
+        bannerBg = 'background:#fef2f2;color:#dc2626;';
+        bannerHtml = '🚨 危険: このままでは約 <strong>' + runway + 'ヶ月</strong> で資金が底をつきます。今すぐ金融機関に相談を';
+      } else if (runway <= 4) {
+        bannerBg = 'background:#fef9c3;color:#92400e;';
+        bannerHtml = '⚠️ 要注意: 資金の余裕は約 <strong>' + runway + 'ヶ月</strong> です。早急な対策が必要です';
+      } else {
+        bannerBg = 'background:#e0f2fe;color:#0369A1;';
+        bannerHtml = '📋 現状の資金余裕は約 <strong>' + runway + 'ヶ月</strong> です。改善策を検討してください';
+      }
+    }
+    const banner = document.getElementById('cfRunwayBanner');
+    banner.innerHTML = bannerHtml;
+    banner.style.cssText = 'border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:14px;font-weight:600;' + bannerBg;
+
+    // 棒グラフ描画
+    const chartArea  = document.getElementById('cfChartArea');
+    const labelsArea = document.getElementById('cfMonthLabels');
+    const maxAbs = Math.max(...balances.map(Math.abs), 1);
+    const monthNames = ['来月','2ヶ月後','3ヶ月後','4ヶ月後','5ヶ月後','6ヶ月後'];
+    chartArea.innerHTML = '';
+    labelsArea.innerHTML = '';
+    balances.forEach((v, i) => {
+      const pct  = Math.min(Math.abs(v) / maxAbs * 100, 100);
+      const color = v < 0 ? '#ef4444' : v < cash * 0.3 ? '#f59e0b' : '#22c55e';
+      const col  = document.createElement('div');
+      col.style.cssText = 'flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:2px;';
+      col.innerHTML = '<div style="font-size:9px;color:#374151;text-align:center;">' + v.toLocaleString() + '</div>' +
+        '<div style="width:100%;background:' + color + ';height:' + pct + '%;border-radius:4px 4px 0 0;min-height:4px;"></div>';
+      chartArea.appendChild(col);
+      const lbl = document.createElement('div');
+      lbl.style.cssText = 'flex:1;text-align:center;font-size:9px;color:var(--zb-muted);';
+      lbl.textContent = monthNames[i];
+      labelsArea.appendChild(lbl);
+    });
+
+    // アドバイス
+    const advices = [];
+    const deficit = expense - income;
+    if (deficit > 0) {
+      advices.push('・月次の収支が <strong>' + deficit.toLocaleString() + '万円の赤字</strong> です。入金サイトの短縮か支払いサイトの延長を交渉してください');
+      if (lag >= 2) advices.push('・入金が ' + lag + 'ヶ月遅れているため、工事完了後しばらくの間は手元現金が特に少なくなります');
+      advices.push('・日本政策金融公庫や地方銀行への融資相談を早めに行ってください（赤字でも融資可能な場合があります）');
+    } else {
+      advices.push('・月次収支はプラスです。引き続き取引先の分散と新規開拓を進めましょう');
+      if (lag >= 2) advices.push('・入金が ' + lag + 'ヶ月遅れています。手元現金を常に ' + (expense * lag) + ' 万円以上確保することを目標にしてください');
+    }
+    document.getElementById('cfAdvice').innerHTML = advices.join('<br>');
+    document.getElementById('cfResult').style.display = '';
+  };
+
+  // ── 価格転嫁交渉サポート ──────────────────────────────────
+  // priceNegotiationEnabled: false のため非表示。Firestore platformConfig/features で開放可能。
+  window.runPriceNegotiation = async function() {
+    const material  = document.getElementById('pnMaterial').value;
+    const rate      = parseFloat(document.getElementById('pnRate').value) || 0;
+    const contract  = parseFloat(document.getElementById('pnContract').value) || 0;
+    const matRatio  = parseFloat(document.getElementById('pnMaterialRatio').value) || 35;
+    const note      = document.getElementById('pnNote').value;
+
+    if (!rate || !contract) { showZbToast('価格上昇率と請負金額を入力してください'); return; }
+
+    const increaseAmount = Math.round(contract * (matRatio / 100) * (rate / 100));
+    document.getElementById('pnAmountBox').innerHTML =
+      '資材高騰による増額試算: <strong style="font-size:18px;">＋' + increaseAmount.toLocaleString() + '万円</strong><br>' +
+      '<span style="font-size:12px;">請負金額 ' + contract + '万円 × 資材比率 ' + matRatio + '% × 上昇率 ' + rate + '%</span>';
+
+    document.getElementById('pnResult').style.display = 'none';
+    document.getElementById('pnLoading').style.display = '';
+    document.getElementById('pnError').style.display = 'none';
+
+    try {
+      const res = await generateNegotiationLetterFn({ material, rate, contract, matRatio, note, increaseAmount });
+      document.getElementById('pnLetter').textContent = res.data.letter;
+      document.getElementById('pnResult').style.display = '';
+    } catch(e) {
+      document.getElementById('pnError').textContent = '生成に失敗しました: ' + e.message;
+      document.getElementById('pnError').style.display = '';
+    } finally {
+      document.getElementById('pnLoading').style.display = 'none';
+    }
+  };
+
+  window.copyPnLetter = function() {
+    const text = document.getElementById('pnLetter').textContent;
+    navigator.clipboard.writeText(text).then(() => showZbToast('コピーしました'));
+  };
 
 </script>
 </body>

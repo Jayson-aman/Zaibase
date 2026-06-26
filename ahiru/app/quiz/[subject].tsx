@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   View,
   Text,
@@ -8,7 +8,9 @@ import {
   ScrollView,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { questionsBySubject, subjectInfo, SubjectKey, Question } from '../../data/questions';
+import { subjectInfo, type SubjectKey, type Question } from '../../data/questions-meta';
+import { useSubjectQuestions } from '../../hooks/useSubjectQuestions';
+import { ALL_COURSES } from '../../data/courses';
 import type { CourseKey, ExamType } from '../../data/courses';
 import { explanationsSansu } from '../../data/explanations_sansu';
 import { explanationsKokugo } from '../../data/explanations_kokugo';
@@ -24,13 +26,17 @@ const allExplanations: Record<string, string> = {
   ...explanationsEigo,
 };
 import QuizCard from '../../components/QuizCard';
+import Paywall from '../../components/Paywall';
 import AnimatedMascot from '../../components/AnimatedMascot';
 import { getResultMascot } from '../../data/images';
 import { saveProgress } from '../../store/progress';
+import { incrementTrialQuestions, isTrialExpired, TRIAL_QUESTION_LIMIT } from '../../store/trial';
 import { submitRankingScore } from '../../services/ranking';
 import { getDailyQuestions, getTodayDayLabel } from '../../utils/dailyChallenge';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
+import TutorChat from '../../components/TutorChat';
+import HomeButton from '../../components/HomeButton';
 
 function isSubjectKey(value: string): value is SubjectKey {
   return ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'].includes(value);
@@ -43,7 +49,7 @@ function isDifficulty(value: string): value is Difficulty {
 }
 
 function isCourseKey(value: string): value is CourseKey {
-  return ['general','kankan','shitennoji','nandai','koko-general','koko-kankan','koko-top'].includes(value);
+  return ALL_COURSES.some((c) => c.key === value);
 }
 
 function isExamType(value: string): value is ExamType {
@@ -61,27 +67,22 @@ function filterQuestions(
   examType: ExamType,
   course: CourseKey,
   difficultyFilter: Difficulty | null,
-  isMax: boolean = false,
+  isPaid: boolean = false,
 ): Question[] {
   let qs = all.filter((q) => (q.examType ?? 'chugaku') === examType);
-  if (course === 'general') {
-    qs = qs.filter((q) => !q.course || q.course === 'general');
+  const generalKey = examType === 'koko' ? 'koko-general' : 'general';
+  if (course === 'general' || course === 'koko-general') {
+    qs = qs.filter((q) => !q.course || q.course === generalKey);
   } else {
-    qs = qs.filter((q) => q.course === course);
+    const schoolQs = qs.filter((q) => q.course === course);
+    const generalQs = qs.filter((q) => !q.course || q.course === generalKey);
+    qs = [...schoolQs, ...generalQs];
   }
-  if (!isMax) {
+  if (!isPaid) {
     qs = qs.filter((q) => !q.maxOnly);
   }
   if (difficultyFilter) {
     qs = qs.filter((q) => q.difficulty === difficultyFilter);
-  }
-  // Fallback: if no course-specific questions, return general pool
-  if (qs.length === 0) {
-    qs = all.filter((q) => (q.examType ?? 'chugaku') === 'chugaku');
-    if (!isMax) qs = qs.filter((q) => !q.maxOnly);
-    if (difficultyFilter) {
-      qs = qs.filter((q) => q.difficulty === difficultyFilter);
-    }
   }
   return qs;
 }
@@ -113,21 +114,31 @@ export default function QuizScreen() {
   const isPro = subIsPro || betaAccess;
   const isMax = subIsMax || betaAccess;
 
+  const { questions: subjectPool, loading: questionsLoading } = useSubjectQuestions(subjectKey);
+
   const questions = useMemo(() => {
-    if (isDaily) return getDailyQuestions(subjectKey);
-    const all = questionsBySubject[subjectKey];
+    if (questionsLoading) return [];
+    if (isDaily) return getDailyQuestions(subjectPool, subjectKey, 30, course, examType);
+    const all = subjectPool;
     if (isMock) {
-      const pool = filterQuestions(all, examType, course, null, true);
+      // 模擬試験: 入試形式（学校別大問）を除いた一般問題のみ使用
+      const generalKey = examType === 'koko' ? 'koko-general' : 'general';
+      const pool = all.filter((q) => {
+        if ((q.examType ?? 'chugaku') !== examType) return false;
+        return !q.course || q.course === generalKey;
+      });
       const shuffled = [...pool].sort(() => Math.random() - 0.5);
       return shuffled.slice(0, 30);
     }
     if (isKakomon) {
+      // 入試試験: 学校別問題のみ（大問形式）
       const schoolQ = all.filter((q) => q.course === course && (q.examType ?? 'chugaku') === examType);
       if (schoolQ.length > 0) return schoolQ;
       return filterQuestions(all, examType, course, 'advanced', true);
     }
-    return filterQuestions(all, examType, course, difficultyFilter, isMax);
-  }, [subjectKey, difficultyFilter, isDaily, isMock, isKakomon, course, examType, isMax]);
+    const filtered = filterQuestions(all, examType, course, difficultyFilter, isPro || isMax);
+    return [...filtered].sort(() => Math.random() - 0.5);
+  }, [subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, course, examType, isPro, isMax]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -137,107 +148,66 @@ export default function QuizScreen() {
   const [showExplanation, setShowExplanation] = useState(false);
   const [wrongIds, setWrongIds] = useState<string[]>([]);
   const [feedback, setFeedback] = useState<'correct' | 'wrong' | null>(null);
+  const [waitingNext, setWaitingNext] = useState(false);
+  const [showPaywall, setShowPaywall] = useState(false);
+  const [showTutorChat, setShowTutorChat] = useState(false);
 
   const currentQuestion = questions[currentIndex];
   const total = questions.length;
   const diffInfo = difficultyFilter ? DIFF_LABELS[difficultyFilter] : null;
 
-  const currentChoices = useMemo(() => {
-    const q = questions[currentIndex];
-    if (!q || questions.length < 4) return undefined;
-    const correct = q.answer;
-
-    function answerType(a: string): string {
-      const t = a.trim();
-      if (/^\d{2,4}年$/.test(t))                                         return 'year-bare';
-      if (/^\d{2,4}年/.test(t))                                          return 'year-compound';
-      if (/[①②③④⑤⑥⑦⑧⑨]/.test(t))                                  return 'numbered';
-      if (/^[A-Za-z]/.test(t) && /[A-Za-z]{3,}/.test(t))               return 'english';
-      if (/^[ぁ-ん]+$/.test(t))                                          return 'hiragana';
-      if (/^[\d,，]+$/.test(t))                                          return 'number';
-      if (/\d+[／/]\d+/.test(t) || /分の\d+/.test(t))                   return 'fraction';
-      if (/\d+(cm²|㎠|cm³|m²|km²|立方|平方)/.test(t))                  return 'area-volume';
-      if (/\d+(cm|mm|m|km)\b/.test(t) && !/[²³]/.test(t))              return 'length';
-      if (/\d+[℃°VΩW]|秒速|時速|mol|Pa/.test(t))                       return 'physics';
-      if (/\d+[gkg]/.test(t))                                            return 'mass';
-      if (/^\d+(\.\d+)?%/.test(t) || /約\d+%/.test(t))                 return 'percent';
-      if (/^\d+:\d+/.test(t))                                            return 'ratio';
-      if (/\d+[日羽本個匹頭枚冊杯台艘門]/.test(t))                       return 'count';
-      if (/\d+分$/.test(t) || /\d+時間/.test(t))                        return 'time';
-      if (/[・、]/.test(t) && t.length > 5 && !/^\d{2,4}年/.test(t))   return 'list';
-      if (t.length <= 12 && !/[。\n]/.test(t))                          return 'short';
-      if (t.length > 60)                                                  return 'long';
-      return 'medium';
-    }
-
-    const correctType = answerType(correct);
-    const all = questions.filter((o) => o.id !== q.id && o.answer !== correct);
-
-    // 答えテキストの重複を除去してユニークなものだけ使う
-    const seenAnswers = new Set<string>();
-    const uniqueAll = all.filter((o) => {
-      if (seenAnswers.has(o.answer)) return false;
-      seenAnswers.add(o.answer);
-      return true;
-    });
-
-    // 1st: 同型
-    let typed = uniqueAll.filter((o) => answerType(o.answer) === correctType);
-
-    // 1.5th: 単位マッチング（時速・km・cm²など同じ単位を持つ答えを優先）
-    if (typed.length < 3) {
-      const unitMatch = correct.match(
-        /(時速|秒速|分速|km\/h|km²|cm²|m²|㎡|cm³|km\b|cm\b|mm\b|m\b|[℃°]C?|mol|Pa\b|[VΩW]\b|kg\b|g\b|[%％]|[分時]間)/
-      )?.[0];
-      if (unitMatch) {
-        const withUnit = uniqueAll.filter((o) => o.answer.includes(unitMatch));
-        if (withUnit.length >= 3) typed = withUnit;
-      }
-    }
-
-    // 2nd: 長さが近いもの（±40文字）、numbered除外
-    if (typed.length < 3) {
-      typed = uniqueAll.filter((o) =>
-        Math.abs(o.answer.length - correct.length) < 40 &&
-        answerType(o.answer) !== 'numbered'
-      );
-    }
-
-    // 3rd: 全部
-    if (typed.length < 3) typed = uniqueAll;
-
-    const shuffled = [...typed].sort(() => Math.random() - 0.5);
-    return [...shuffled.slice(0, 3).map((o) => o.answer), correct].sort(() => Math.random() - 0.5);
-  }, [currentIndex, questions]);
+  const currentChoices = currentQuestion?.choices;
 
   function handleReveal() {
     setRevealed(true);
   }
 
+  async function advanceOrFinish(currentScore: number, currentWrongIds: string[]) {
+    setWaitingNext(false);
+    if (currentIndex + 1 >= total) {
+      if (!savedProgress) {
+        setSavedProgress(true);
+        await saveProgress(subjectKey, currentScore, total, currentWrongIds);
+        submitRankingScore(currentScore, total).catch(() => {});
+      }
+      setFinished(true);
+    } else {
+      setCurrentIndex((i) => i + 1);
+      setRevealed(false);
+      setShowExplanation(false);
+    }
+  }
+
   async function handleAnswer(correct: boolean) {
+    // 無料ユーザーのお試し問題数チェック
+    if (!isPro && !isMax) {
+      const expired = await isTrialExpired();
+      if (expired) {
+        setShowPaywall(true);
+        return;
+      }
+      await incrementTrialQuestions();
+    }
+
     const newScore = correct ? score + 1 : score;
     const newWrongIds = correct ? wrongIds : [...wrongIds, currentQuestion.id];
+    setScore(newScore);
+    setWrongIds(newWrongIds);
 
-    setFeedback(correct ? 'correct' : 'wrong');
+    if (!correct) {
+      setFeedback('wrong');
+      setTimeout(() => {
+        setFeedback(null);
+        setWaitingNext(true);
+      }, 400);
+      return;
+    }
+
+    setFeedback('correct');
     setTimeout(async () => {
       setFeedback(null);
-      if (currentIndex + 1 >= total) {
-        if (!savedProgress) {
-          setSavedProgress(true);
-          await saveProgress(subjectKey, newScore, total, newWrongIds);
-          submitRankingScore(newScore, total).catch(() => {});
-        }
-        setScore(newScore);
-        setWrongIds(newWrongIds);
-        setFinished(true);
-      } else {
-        setScore(newScore);
-        setWrongIds(newWrongIds);
-        setCurrentIndex((i) => i + 1);
-        setRevealed(false);
-        setShowExplanation(false);
-      }
-    }, 900);
+      await advanceOrFinish(newScore, newWrongIds);
+    }, 500);
   }
 
   async function handleRestart() {
@@ -248,6 +218,30 @@ export default function QuizScreen() {
     setSavedProgress(false);
     setWrongIds([]);
     setShowExplanation(false);
+    setWaitingNext(false);
+    setFeedback(null);
+    setShowPaywall(false);
+    setShowTutorChat(false);
+  }
+
+  if (questionsLoading) {
+    return (
+      <SafeAreaView style={styles.safeArea}>
+        <View style={[styles.header, { backgroundColor: info.color }]}>
+          <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
+            <Text style={styles.backBtnText}>← 戻る</Text>
+          </TouchableOpacity>
+          <View style={styles.headerCenter}>
+            <Text style={styles.headerEmoji}>{info.emoji}</Text>
+            <Text style={styles.headerTitle}>{info.name}</Text>
+          </View>
+          <View style={styles.headerRight}><HomeButton variant="light" /></View>
+        </View>
+        <View style={styles.emptyWrap}>
+          <Text style={styles.emptyText}>問題を読み込み中...</Text>
+        </View>
+      </SafeAreaView>
+    );
   }
 
   if (questions.length === 0) {
@@ -260,6 +254,9 @@ export default function QuizScreen() {
           <View style={styles.headerCenter}>
             <Text style={styles.headerEmoji}>{info.emoji}</Text>
             <Text style={styles.headerTitle}>{info.name}</Text>
+          </View>
+          <View style={styles.headerRight}>
+            <HomeButton variant="light" />
           </View>
         </View>
         <View style={styles.emptyWrap}>
@@ -348,6 +345,8 @@ export default function QuizScreen() {
             >
               <Text style={styles.backButtonText}>← 科目一覧に戻る</Text>
             </TouchableOpacity>
+
+            <HomeButton variant="dark" style={{ alignSelf: 'center', marginTop: 12 }} />
           </ScrollView>
         </View>
       </SafeAreaView>
@@ -373,6 +372,7 @@ export default function QuizScreen() {
           ) : null}
         </View>
         <View style={styles.headerRight}>
+          <HomeButton variant="light" style={{ marginBottom: 4 }} />
           <Text style={styles.questionIndicator}>
             {currentIndex + 1}/{total}問
           </Text>
@@ -418,6 +418,69 @@ export default function QuizScreen() {
           isPro={isPro}
         />
 
+        {/* Wrong answer feedback - Gemini-style */}
+        {waitingNext && (
+          <View style={styles.wrongFeedbackWrap}>
+            <View style={styles.wrongHeader}>
+              <Text style={styles.wrongHeaderText}>✗ 不正解！</Text>
+              <Text style={styles.wrongCorrectAnswer}>正解：{currentQuestion.answer}</Text>
+            </View>
+
+            {(currentQuestion.hint || currentQuestion.explanation || allExplanations[currentQuestion.id]) && (
+              <View style={styles.wrongExplanationCard}>
+                <Text style={styles.wrongExplanationTitle}>📖 解説</Text>
+                <Text style={styles.wrongExplanationText}>
+                  {isPro || isMax
+                    ? (currentQuestion.explanation ?? allExplanations[currentQuestion.id] ?? currentQuestion.hint)
+                    : (currentQuestion.hint ?? currentQuestion.explanation?.split('\n')[0] ?? allExplanations[currentQuestion.id]?.split('\n')[0])}
+                </Text>
+                {!isPro && !isMax && (currentQuestion.explanation || allExplanations[currentQuestion.id]) && (
+                  <TouchableOpacity
+                    style={styles.explanationUpgradeBtn}
+                    onPress={() => setShowPaywall(true)}
+                    activeOpacity={0.85}
+                  >
+                    <Text style={styles.explanationUpgradeBtnText}>🔒 詳細解説を見る（Pro/Max）</Text>
+                  </TouchableOpacity>
+                )}
+              </View>
+            )}
+
+            {!isPro && !isMax && (
+              <TouchableOpacity
+                style={styles.upgradeBanner}
+                onPress={() => setShowPaywall(true)}
+                activeOpacity={0.85}
+              >
+                <Text style={styles.upgradeBannerEmoji}>💎</Text>
+                <View style={styles.upgradeBannerContent}>
+                  <Text style={styles.upgradeBannerTitle}>Pro / Max にアップグレード</Text>
+                  <Text style={styles.upgradeBannerSub}>全問詳細解説・AI弱点コーチ・聞き流しモード</Text>
+                </View>
+                <Text style={styles.upgradeBannerArrow}>→</Text>
+              </TouchableOpacity>
+            )}
+
+            {isMax && (
+              <TouchableOpacity
+                style={styles.tutorChatBtn}
+                onPress={() => setShowTutorChat(true)}
+                activeOpacity={0.85}
+              >
+                <Text style={styles.tutorChatBtnText}>🤖 AIに聞く（Max限定）</Text>
+              </TouchableOpacity>
+            )}
+
+            <TouchableOpacity
+              style={[styles.nextQuestionBtn, { backgroundColor: info.color }]}
+              onPress={() => advanceOrFinish(score, wrongIds)}
+              activeOpacity={0.85}
+            >
+              <Text style={styles.nextQuestionBtnText}>次の問題へ →</Text>
+            </TouchableOpacity>
+          </View>
+        )}
+
         {/* Explanation card - shown after reveal */}
         {revealed && (currentQuestion.explanation || allExplanations[currentQuestion.id]) && isPro && (
           <View style={styles.explanationWrap}>
@@ -448,8 +511,8 @@ export default function QuizScreen() {
           </View>
         )}
 
-        {/* Answer buttons - only shown in flip-card mode after reveal */}
-        {revealed && !currentChoices && (
+        {/* Answer buttons - only shown in flip-card mode after reveal (hide when waiting for next) */}
+        {revealed && !currentChoices && !waitingNext && (
           <View style={styles.answerButtons}>
             <TouchableOpacity
               style={styles.correctButton}
@@ -490,6 +553,19 @@ export default function QuizScreen() {
           </Text>
         </View>
       )}
+
+      <Paywall
+        visible={showPaywall}
+        onClose={() => setShowPaywall(false)}
+        onPurchased={() => setShowPaywall(false)}
+      />
+
+      <TutorChat
+        visible={showTutorChat}
+        onClose={() => setShowTutorChat(false)}
+        initialQuestion={currentQuestion ? `【${info.name}】${currentQuestion.question}` : undefined}
+        subjectColor={info.color}
+      />
     </SafeAreaView>
   );
 }
@@ -846,5 +922,133 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '700',
     color: '#555',
+  },
+  // Wrong answer feedback block
+  wrongFeedbackWrap: {
+    marginTop: 14,
+    marginHorizontal: 16,
+    gap: 12,
+  },
+  wrongHeader: {
+    backgroundColor: '#FEE8E6',
+    borderRadius: 16,
+    paddingVertical: 16,
+    paddingHorizontal: 20,
+    borderWidth: 2,
+    borderColor: '#E74C3C',
+    alignItems: 'center',
+  },
+  wrongHeaderText: {
+    fontSize: 26,
+    fontWeight: '900',
+    color: '#C0392B',
+    letterSpacing: 1,
+  },
+  wrongCorrectAnswer: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: '#555',
+    marginTop: 4,
+  },
+  wrongExplanationCard: {
+    backgroundColor: '#FFFBEB',
+    borderRadius: 16,
+    padding: 18,
+    borderLeftWidth: 4,
+    borderLeftColor: '#F59E0B',
+  },
+  wrongExplanationTitle: {
+    fontSize: 18,
+    fontWeight: '800',
+    color: '#B45309',
+    marginBottom: 8,
+  },
+  wrongExplanationText: {
+    fontSize: 17,
+    color: '#78350F',
+    lineHeight: 28,
+    fontWeight: '500',
+  },
+  explanationUpgradeBtn: {
+    marginTop: 12,
+    backgroundColor: '#EFF6FF',
+    borderRadius: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#BFDBFE',
+  },
+  explanationUpgradeBtnText: {
+    fontSize: 15,
+    fontWeight: '700',
+    color: '#1D4ED8',
+  },
+  upgradeBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#1A1A2E',
+    borderRadius: 16,
+    paddingVertical: 16,
+    paddingHorizontal: 18,
+    gap: 12,
+    borderWidth: 1.5,
+    borderColor: '#C8A84B',
+  },
+  upgradeBannerEmoji: {
+    fontSize: 28,
+    flexShrink: 0,
+  },
+  upgradeBannerContent: {
+    flex: 1,
+  },
+  upgradeBannerTitle: {
+    fontSize: 16,
+    fontWeight: '800',
+    color: '#C8A84B',
+  },
+  upgradeBannerSub: {
+    fontSize: 13,
+    color: 'rgba(255,255,255,0.7)',
+    marginTop: 2,
+  },
+  upgradeBannerArrow: {
+    fontSize: 22,
+    color: '#C8A84B',
+    fontWeight: '800',
+    flexShrink: 0,
+  },
+  nextQuestionBtn: {
+    borderRadius: 16,
+    paddingVertical: 18,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 8,
+    elevation: 5,
+  },
+  nextQuestionBtnText: {
+    fontSize: 18,
+    fontWeight: '800',
+    color: '#FFFFFF',
+    letterSpacing: 0.5,
+  },
+  tutorChatBtn: {
+    backgroundColor: '#0EA5E9',
+    borderRadius: 16,
+    paddingVertical: 16,
+    alignItems: 'center',
+    shadowColor: '#0EA5E9',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 5,
+  },
+  tutorChatBtnText: {
+    fontSize: 17,
+    fontWeight: '800',
+    color: '#FFFFFF',
+    letterSpacing: 0.3,
   },
 });

@@ -7,7 +7,7 @@ const SERIF = Platform.select({
   default: undefined,
 }) as string | undefined;
 import { LinearGradient } from 'expo-linear-gradient';
-import { SubjectKey, subjectInfo } from '../data/questions';
+import { SubjectKey, subjectInfo } from '../data/questions-meta';
 import SubjectScene from './SubjectScene';
 
 type Props = {

@@ -9,11 +9,12 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import { useRouter } from 'expo-router';
-import { subjectInfo, SubjectKey } from '../../data/questions';
-import { getDailyQuestions, getTodayDayLabel } from '../../utils/dailyChallenge';
+import { subjectInfo, SubjectKey } from '../../data/questions-meta';
+import { getTodayDayLabel } from '../../utils/dailyChallenge';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 import BetaGateModal from '../../components/BetaGateModal';
+import HomeButton from '../../components/HomeButton';
 
 const SUBJECTS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
 
@@ -42,7 +43,9 @@ export default function DailyChallengeScreen() {
             <Text style={styles.backBtnText}>← 戻る</Text>
           </TouchableOpacity>
           <Text style={styles.headerTitle}>🔥 MAX日替わり30問</Text>
-          <View style={styles.headerRight} />
+          <View style={styles.headerRight}>
+            <HomeButton variant="light" />
+          </View>
         </View>
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', padding: 32 }}>
           <Text style={{ fontSize: 64, marginBottom: 16 }}>🔒</Text>
@@ -92,7 +95,7 @@ export default function DailyChallengeScreen() {
 
         {SUBJECTS.map((subject) => {
           const info = subjectInfo[subject];
-          const count = getDailyQuestions(subject).length;
+          const count = 30;
           return (
             <TouchableOpacity
               key={subject}

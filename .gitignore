@@ -1,5 +1,6 @@
 # 依存
 node_modules/
+package-lock.json
 # 環境変数・秘密情報（絶対にコミットしない）
 .env
 .env.*

@@ -1,4 +1,4 @@
-import { questions, Question, SubjectKey } from '../data/questions';
+import type { Question, SubjectKey } from '../data/questions-meta';
 import type { CourseKey, ExamType } from '../data/courses';
 
 // Mulberry32 — deterministic PRNG seeded with a 32-bit integer
@@ -40,12 +40,13 @@ function weeklyOffset(): number {
 // Pool: advanced-difficulty questions filtered by course and examType.
 // A 5-day cycle (index 0–4) determines the shuffle seed.
 export function getDailyQuestions(
+  allQuestions: Question[],
   subject: SubjectKey,
   count = 30,
   course: CourseKey = 'general',
   examType: ExamType = 'chugaku',
 ): Question[] {
-  let pool = questions.filter((q) => q.subject === subject && q.difficulty === 'advanced');
+  let pool = allQuestions.filter((q) => q.subject === subject && q.difficulty === 'advanced');
 
   // Filter by examType
   pool = pool.filter((q) => (q.examType ?? 'chugaku') === examType);

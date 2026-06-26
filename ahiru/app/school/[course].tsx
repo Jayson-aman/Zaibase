@@ -11,8 +11,10 @@ import {
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 import { useSubscription } from '../../hooks/useSubscription';
-import { questions } from '../../data/questions';
-import type { SubjectKey } from '../../data/questions';
+import type { SubjectKey } from '../../data/questions-meta';
+import { useAllQuestions } from '../../hooks/useSubjectQuestions';
+import { getCourseInfo } from '../../data/courses';
+import HomeButton from '../../components/HomeButton';
 
 const D = {
   bg:          '#040C1C',
@@ -45,26 +47,51 @@ const SUBJECTS: { key: SubjectKey; label: string; emoji: string }[] = [
 ];
 
 const SCHOOL_META: Record<string, { name: string; emoji: string; hensachi: string; region: string }> = {
+  // 中学受験
   'seiko':           { name: '大阪星光学院',   emoji: '⭐', hensachi: '66〜68', region: '大阪' },
   'seifu-nankai':    { name: '清風南海',       emoji: '🌊', hensachi: '64〜66', region: '大阪' },
+  'shitennoji':      { name: '四天王寺学園',   emoji: '🏯', hensachi: '60〜65', region: '大阪' },
   'takatsuki':       { name: '高槻中学校',     emoji: '🌸', hensachi: '63〜66', region: '大阪' },
   'kankan':          { name: '関関同立附属',   emoji: '🎓', hensachi: '55〜68', region: '関西' },
   'toin':            { name: '大阪桐蔭',       emoji: '🌸', hensachi: '57〜62', region: '大阪' },
   'kaimei':          { name: '開明',           emoji: '🌅', hensachi: '58〜62', region: '大阪' },
+  'seifu':           { name: '清風中学校',     emoji: '🌬️', hensachi: '54〜60', region: '大阪' },
   'kindai':          { name: '近畿大学附属',   emoji: '🎯', hensachi: '55〜60', region: '大阪' },
   'kansai-hokuyo':   { name: '関西大学北陽',   emoji: '🎓', hensachi: '54〜58', region: '大阪' },
   'myojo':           { name: '明星',           emoji: '✨', hensachi: '56〜62', region: '大阪' },
   'tezukayama':      { name: '帝塚山学院',     emoji: '🌺', hensachi: '55〜60', region: '奈良' },
   'kinrankai':       { name: '金蘭会',         emoji: '🌼', hensachi: '50〜56', region: '大阪' },
   'otani':           { name: '大谷',           emoji: '🍁', hensachi: '46〜52', region: '大阪' },
+  'naniwa':          { name: '浪速中学校',     emoji: '🌊', hensachi: '50〜56', region: '大阪' },
+  'otemon':          { name: '追手門学院',     emoji: '🏫', hensachi: '50〜58', region: '大阪' },
+  'poole':           { name: 'プール学院',     emoji: '🌸', hensachi: '45〜52', region: '大阪' },
+  'josejogakuen':    { name: '城星学園',       emoji: '⭐', hensachi: '45〜52', region: '大阪' },
+  'osaka-jogakuin':  { name: '大阪女学院',     emoji: '🌺', hensachi: '52〜58', region: '大阪' },
+  'kenmei':          { name: '賢明学院',       emoji: '💡', hensachi: '46〜52', region: '大阪' },
+  'nandai':          { name: '最難関コース',   emoji: '🔥', hensachi: '70+',    region: '関西' },
   'tokyo-meidai':    { name: '明大明治',       emoji: '🏛️', hensachi: '62〜66', region: '東京' },
   'tokyo-aoyama':    { name: '青山学院',       emoji: '🌿', hensachi: '58〜64', region: '東京' },
   'tokyo-chuo':      { name: '中央大学附属',   emoji: '🏫', hensachi: '57〜62', region: '東京' },
   'tokyo-hosei':     { name: '法政大学第二',   emoji: '⚖️', hensachi: '56〜60', region: '東京' },
-  'tokyo-gakushiin': { name: '学習院',         emoji: '👑', hensachi: '54〜58', region: '東京' },
-  'koko-hibiya':     { name: '都立日比谷',     emoji: '🏯', hensachi: '70+', region: '東京' },
-  'koko-waseda':     { name: '早稲田大附属',   emoji: '⛩️', hensachi: '72〜75', region: '東京' },
-  'koko-meidai':     { name: '明大明治高校',   emoji: '🏛️', hensachi: '68〜72', region: '東京' },
+  'tokyo-gakushuin': { name: '学習院中等科',   emoji: '👑', hensachi: '54〜58', region: '東京' },
+  // 高校受験
+  'koko-nada':        { name: '灘高校',             emoji: '🔥', hensachi: '76+',    region: '兵庫' },
+  'koko-kasei':       { name: '開成高校',            emoji: '🎓', hensachi: '76+',    region: '東京' },
+  'koko-koyo':        { name: '甲陽学院高校',        emoji: '🏔️', hensachi: '72〜75', region: '兵庫' },
+  'koko-keio':        { name: '慶應義塾高校',        emoji: '🎓', hensachi: '72〜76', region: '東京' },
+  'koko-kurume':      { name: '久留米大学附設高校',  emoji: '🏛️', hensachi: '72〜75', region: '福岡' },
+  'koko-nishiyamato': { name: '西大和学園高校',      emoji: '🌸', hensachi: '70〜73', region: '奈良' },
+  'koko-todaiji':     { name: '東大寺学園高校',      emoji: '🏯', hensachi: '70〜73', region: '奈良' },
+  'koko-azabu':       { name: '麻布高校',            emoji: '🎩', hensachi: '70〜74', region: '東京' },
+  'koko-hibiya':      { name: '都立日比谷高校',      emoji: '🏯', hensachi: '70+',    region: '東京' },
+  'koko-waseda':      { name: '早稲田大学附属高校',  emoji: '⛩️', hensachi: '72〜75', region: '東京' },
+  'koko-meidai':      { name: '明大明治高校',        emoji: '🏛️', hensachi: '68〜72', region: '東京' },
+  'koko-tokai':       { name: '東海高校',            emoji: '🌊', hensachi: '68〜72', region: '愛知' },
+  'koko-ohori':       { name: '福岡大附属大濠高校',  emoji: '🌊', hensachi: '66〜70', region: '福岡' },
+  'koko-taki':        { name: '滝高校',              emoji: '🌿', hensachi: '66〜70', region: '愛知' },
+  'koko-seinan':      { name: '西南学院高校',        emoji: '⛪', hensachi: '62〜66', region: '福岡' },
+  'koko-nanzan':      { name: '南山高校',            emoji: '🌺', hensachi: '64〜68', region: '愛知' },
+  'koko-kankan':      { name: '関関同立系高校',      emoji: '🎓', hensachi: '60〜68', region: '関西' },
 };
 
 type StageKey = 'textbook' | 'kiso' | 'oyo' | 'mogi' | 'kakomon';
@@ -136,8 +163,11 @@ export default function SchoolCurriculumScreen() {
   const isMax = subTier === 'max' || betaAccess;
 
   const [activeSubject, setActiveSubject] = useState<SubjectKey>('sansu');
+  const { questions } = useAllQuestions();
 
   const meta = SCHOOL_META[course ?? ''] ?? { name: course ?? '学校', emoji: '🏫', hensachi: '—', region: '—' };
+  const courseInfo = course ? getCourseInfo(course as any) : null;
+  const examType = courseInfo?.examType ?? 'chugaku';
 
   // Question counts per stage
   const stageCounts = useMemo(() => {
@@ -170,16 +200,16 @@ export default function SchoolCurriculumScreen() {
         router.push('/(tabs)/textbook' as any);
         break;
       case 'kiso':
-        router.push(`/quiz/${activeSubject}?difficulty=basic&course=${course}` as any);
+        router.push(`/quiz/${activeSubject}?difficulty=basic&course=${course}&examType=${examType}` as any);
         break;
       case 'oyo':
-        router.push(`/quiz/${activeSubject}?difficulty=advanced&course=${course}` as any);
+        router.push(`/quiz/${activeSubject}?difficulty=advanced&course=${course}&examType=${examType}` as any);
         break;
       case 'mogi':
-        router.push(`/quiz/${activeSubject}?mode=mock&course=${course}` as any);
+        router.push(`/quiz/${activeSubject}?mode=mock&course=${course}&examType=${examType}` as any);
         break;
       case 'kakomon':
-        router.push(`/quiz/${activeSubject}?mode=kakomon&course=${course}` as any);
+        router.push(`/quiz/${activeSubject}?mode=kakomon&course=${course}&examType=${examType}` as any);
         break;
     }
   }
@@ -205,7 +235,7 @@ export default function SchoolCurriculumScreen() {
           <Text style={styles.schoolName}>{meta.name}</Text>
           <Text style={styles.hensachi}>偏差値 {meta.hensachi} ｜ {meta.region}</Text>
         </View>
-        <View style={{ width: 40 }} />
+        <HomeButton variant="light" />
       </View>
 
       {/* Learning Path Banner */}

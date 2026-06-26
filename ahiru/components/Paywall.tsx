@@ -8,13 +8,13 @@ import {
   ActivityIndicator,
   ScrollView,
   Alert,
+  Platform,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
-import type { PurchasesOffering, PurchasesPackage } from 'react-native-purchases';
 import {
-  fetchCurrentOffering,
-  purchasePackage,
+  fetchProMaxProducts,
+  purchaseProduct,
   restorePurchases,
 } from '../services/subscription';
 import { PRO_FEATURES, MAX_FEATURES } from '../constants/proAccess';
@@ -25,35 +25,28 @@ interface Props {
   onPurchased: () => void;
 }
 
-function findPkg(
-  offering: PurchasesOffering,
-  planId: string,
-): PurchasesPackage | undefined {
-  return offering.availablePackages.find(
-    (p) =>
-      p.identifier.toLowerCase().includes(planId) ||
-      p.product.identifier.toLowerCase().includes(planId),
-  );
-}
-
 export default function Paywall({ visible, onClose, onPurchased }: Props) {
-  const [offering, setOffering] = useState<PurchasesOffering | null>(null);
+  const [proProd, setProProd] = useState<unknown>(null);
+  const [maxProd, setMaxProd] = useState<unknown>(null);
   const [loadingOff, setLoadingOff] = useState(true);
   const [purchasing, setPurchasing] = useState(false);
 
   useEffect(() => {
     if (!visible) return;
     setLoadingOff(true);
-    fetchCurrentOffering()
-      .then((o) => setOffering(o as PurchasesOffering | null))
-      .catch(() => setOffering(null))
+    fetchProMaxProducts()
+      .then(({ pro, max }) => {
+        setProProd(pro);
+        setMaxProd(max);
+      })
+      .catch(() => {})
       .finally(() => setLoadingOff(false));
   }, [visible]);
 
-  async function handlePurchase(pkg: PurchasesPackage) {
+  async function handlePurchase(product: unknown) {
     setPurchasing(true);
     try {
-      await purchasePackage(pkg);
+      await purchaseProduct(product);
       onPurchased();
     } catch (err: any) {
       if (!err?.userCancelled) {
@@ -76,10 +69,8 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
     }
   }
 
-  const proPkg = offering ? findPkg(offering, 'pro') : undefined;
-  const maxPkg = offering ? findPkg(offering, 'max') : undefined;
-  const proPrice = proPkg?.product.priceString ?? '¥980/月';
-  const maxPrice = maxPkg?.product.priceString ?? '¥2,200/月';
+  const proPrice = (proProd as any)?.priceString ?? '¥1,000/月';
+  const maxPrice = (maxProd as any)?.priceString ?? '¥2,000/月';
 
   return (
     <Modal
@@ -128,17 +119,17 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                     style={[
                       styles.buyBtn,
                       { backgroundColor: '#9B59B6' },
-                      (!proPkg || purchasing) && styles.buyBtnDisabled,
+                      (!proProd || purchasing) && styles.buyBtnDisabled,
                     ]}
-                    onPress={proPkg ? () => handlePurchase(proPkg) : undefined}
-                    disabled={!proPkg || purchasing}
+                    onPress={proProd ? () => handlePurchase(proProd) : undefined}
+                    disabled={!proProd || purchasing}
                     activeOpacity={0.8}
                   >
                     {purchasing ? (
                       <ActivityIndicator color="#fff" />
                     ) : (
                       <Text style={styles.buyBtnText}>
-                        {proPkg ? 'PRO プランを始める' : '準備中'}
+                        {proProd ? 'PRO プランを始める' : '準備中'}
                       </Text>
                     )}
                   </TouchableOpacity>
@@ -188,23 +179,36 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                     style={[
                       styles.buyBtn,
                       { backgroundColor: '#E74C3C' },
-                      (!maxPkg || purchasing) && styles.buyBtnDisabled,
+                      (!maxProd || purchasing) && styles.buyBtnDisabled,
                     ]}
-                    onPress={maxPkg ? () => handlePurchase(maxPkg) : undefined}
-                    disabled={!maxPkg || purchasing}
+                    onPress={maxProd ? () => handlePurchase(maxProd) : undefined}
+                    disabled={!maxProd || purchasing}
                     activeOpacity={0.8}
                   >
                     {purchasing ? (
                       <ActivityIndicator color="#fff" />
                     ) : (
                       <Text style={styles.buyBtnText}>
-                        {maxPkg ? 'MAX プランを始める' : '準備中'}
+                        {maxProd ? 'MAX プランを始める' : '準備中'}
                       </Text>
                     )}
                   </TouchableOpacity>
                 </View>
               </View>
             </>
+          )}
+
+          {Platform.OS === 'android' && (
+            <View style={styles.androidNotice}>
+              <Text style={styles.androidNoticeText}>
+                ⚠️ Android では現在 PRO / MAX プランのご購入はご利用いただけません。{'\n'}
+                購入は iPhone / iPad からお願いします。{'\n\n'}
+                📱 Android をお使いの方は Google Chrome で{'\n'}
+                exam.zaibase.group にアクセスすると{'\n'}
+                無料問題をご利用いただけます。{'\n\n'}
+                ※ Android アプリでの課金は近日実装予定です。
+              </Text>
+            </View>
           )}
 
           <TouchableOpacity
@@ -337,6 +341,22 @@ const styles = StyleSheet.create({
   },
   buyBtnDisabled: { opacity: 0.5 },
   buyBtnText: { fontSize: 22, fontWeight: '800', color: '#fff' },
+  androidNotice: {
+    backgroundColor: 'rgba(255,165,0,0.15)',
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: 'rgba(255,165,0,0.5)',
+    padding: 16,
+    marginBottom: 8,
+    width: '100%',
+  },
+  androidNoticeText: {
+    color: '#FFA500',
+    fontSize: 15,
+    fontWeight: '700',
+    textAlign: 'center',
+    lineHeight: 24,
+  },
   restoreBtn: { paddingVertical: 16 },
   restoreBtnText: { color: 'rgba(255,255,255,0.5)', fontSize: 16, fontWeight: '600' },
   terms: {

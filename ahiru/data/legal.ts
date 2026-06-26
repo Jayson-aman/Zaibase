@@ -11,6 +11,7 @@ export type LegalSection = {
 
 export const TERMS_UPDATED = '2026年6月21日';
 export const PRIVACY_UPDATED = '2026年6月21日';
+export const TOKUSHO_UPDATED = '2026年6月23日';
 
 export const ahiruTerms: LegalSection[] = [
   {
@@ -144,6 +145,91 @@ export const ahiruTerms: LegalSection[] = [
       'サービス名：中学受験対策 ahiru（Zaibase Group）',
       '連絡先：info@zaibase.group',
       '運営責任者の氏名・住所・電話番号：特定商取引法に基づき、請求があった場合に遅滞なく開示します。上記メールアドレスまでご連絡ください。',
+    ],
+  },
+];
+
+export const ahiruTokusho: LegalSection[] = [
+  {
+    heading: '',
+    paragraphs: [
+      '特定商取引法第11条に基づき、以下の事項を表示します。本アプリ「ahiru」における有料サービス（Pro・MAXプラン）に関する情報です。',
+      '本アプリの有料機能はApple App Store（iOS/Mac）およびGoogle Play（Android）を通じて販売されます。App Store取引の販売業者はApple Distribution International（アイルランド）、Google Play取引の販売業者はGoogle Asia Pacific Pte. Ltd.（シンガポール）となります。各プラットフォームの利用規約もあわせてご確認ください。',
+    ],
+  },
+  {
+    heading: '販売業者（サービス提供者）',
+    bullets: [
+      '屋号・サービス名：Zaibase Group（中学受験対策 ahiru）',
+      'メールアドレス：info@zaibase.group',
+    ],
+  },
+  {
+    heading: '所在地・運営責任者',
+    paragraphs: [
+      '請求があった場合に遅滞なく開示します。上記メールアドレスまでご連絡ください（特定商取引法第11条第1項ただし書による省略）。',
+    ],
+  },
+  {
+    heading: '電話番号',
+    paragraphs: [
+      '電話番号は、請求があった場合に遅滞なく開示します。上記メールアドレスまでご連絡ください（特定商取引法第11条第1項ただし書による省略）。',
+    ],
+  },
+  {
+    heading: '販売価格',
+    bullets: [
+      'PRO プラン：¥1,000 / 月（税込）',
+      'MAX プラン：¥2,000 / 月（税込）',
+      '※ 価格はアプリ内および各ストアの表示を正とします。',
+    ],
+  },
+  {
+    heading: '支払方法',
+    paragraphs: [
+      'Apple App Store（iOS・Mac）または Google Play（Android）のアプリ内課金（In-App Purchase）を通じて決済します。クレジットカード番号等の決済情報は当社では取得しません。',
+    ],
+  },
+  {
+    heading: '支払時期',
+    paragraphs: [
+      '購読開始時および各更新日（月次）に、ストアを通じて自動的に課金されます。',
+    ],
+  },
+  {
+    heading: 'サービスの提供時期',
+    paragraphs: [
+      '課金完了直後から有料機能（PRO・MAX）をご利用いただけます。',
+    ],
+  },
+  {
+    heading: '解約方法',
+    bullets: [
+      '【iOS】「設定」→ Apple IDをタップ →「サブスクリプション」→「ahiru（中学受験対策）」→「サブスクリプションをキャンセルする」',
+      '【Android】Google Playアプリを開く →「定期購入」→「ahiru（中学受験対策）」→「定期購入を解約」',
+      '解約後も、当該課金期間（月末）まで有料機能を引き続きご利用いただけます。翌月以降の課金は発生しません。',
+      '解約の申込みは、各更新日の24時間前までに行ってください。',
+    ],
+  },
+  {
+    heading: '返品・返金',
+    paragraphs: [
+      'デジタルコンテンツおよびサブスクリプション型サービスの性質上、購入後の返金は原則としてお受けできません。返金の可否はApple Inc.またはGoogle LLCの返金ポリシーに従います。',
+    ],
+  },
+  {
+    heading: '動作環境',
+    bullets: [
+      'iOS：iOS 16.0以上',
+      'Android：Android 9.0以上',
+      'Web：主要ブラウザの最新版（Chrome・Safari・Edge）',
+      '上記環境以外でのご利用はサポート外となります。',
+    ],
+  },
+  {
+    heading: '未成年者の有料プランご利用',
+    paragraphs: [
+      '未成年の方が有料プランを申し込む場合は、保護者（親権者）の同意が必要です。保護者が管理するストアアカウントから課金を行うことを推奨します。',
     ],
   },
 ];

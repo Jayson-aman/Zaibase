@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "宅建士対策 by Zaibase",
+    "slug": "zaibase-takken",
+    "scheme": "zaibase-takken",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1E40AF"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.zaibase.takken",
+      "buildNumber": "1",
+      "infoPlist": {
+        "UIBackgroundModes": ["audio"]
+      }
+    },
+    "android": {
+      "package": "com.zaibase.takken",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundColor": "#1E40AF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "lang": "ja",
+      "meta": {
+        "description": "宅地建物取引士（宅建士）試験対策。テキスト聞き流し・4択問題集・最新法改正対応。"
+      }
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

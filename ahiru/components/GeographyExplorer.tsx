@@ -7,6 +7,7 @@ import {
   ScrollView,
   Dimensions,
   Pressable,
+  Modal,
 } from 'react-native';
 import Animated, {
   useAnimatedStyle,
@@ -21,24 +22,24 @@ import {
 } from '../data/geographyRegions';
 import { GeoLayerId } from '../constants/proAccess';
 
-const MAP_W = Dimensions.get('window').width - 48;
-const MAP_H = MAP_W * 1.15;
+const MAP_W = Math.min(Dimensions.get('window').width - 48, 440);
+const MAP_H = MAP_W * 0.72;
 
-const LAYERS: { key: GeoLayerId; label: string; emoji: string; pro?: boolean }[] = [
+const LAYERS: { key: GeoLayerId; label: string; emoji: string }[] = [
   { key: 'terrain', label: '地形', emoji: '🏔' },
   { key: 'agriculture', label: '農業', emoji: '🌾' },
-  { key: 'fishery', label: '漁業', emoji: '🐟', pro: true },
-  { key: 'forestry', label: '林業', emoji: '🌲', pro: true },
-  { key: 'factory', label: '工業', emoji: '🏭', pro: true },
-  { key: 'commerce', label: '商業', emoji: '🏪', pro: true },
+  { key: 'fishery', label: '漁業', emoji: '🐟' },
+  { key: 'forestry', label: '林業', emoji: '🌲' },
+  { key: 'factory', label: '工業', emoji: '🏭' },
+  { key: 'commerce', label: '商業', emoji: '🏪' },
 ];
 
 type Props = {
-  isPro: boolean;
-  onRequirePro: () => void;
+  isPro?: boolean;
+  onRequirePro?: () => void;
 };
 
-export default function GeographyExplorer({ isPro, onRequirePro }: Props) {
+export default function GeographyExplorer(_props: Props) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [layer, setLayer] = useState<GeoLayerId>('terrain');
   const zoom = useSharedValue(1);
@@ -78,11 +79,7 @@ export default function GeographyExplorer({ isPro, onRequirePro }: Props) {
     tilt.value = withSpring(region.id === selectedId ? 12 : 6, { damping: 14 });
   }
 
-  function handleLayerChange(key: GeoLayerId, proOnly?: boolean) {
-    if (proOnly && !isPro) {
-      onRequirePro();
-      return;
-    }
+  function handleLayerChange(key: GeoLayerId) {
     setLayer(key);
   }
 
@@ -103,25 +100,16 @@ export default function GeographyExplorer({ isPro, onRequirePro }: Props) {
         </View>
       </View>
 
-      {!isPro && (
-        <TouchableOpacity style={styles.proBanner} onPress={onRequirePro}>
-          <Text style={styles.proBannerText}>
-            👑 Proで漁業・林業・工業・商業レイヤーを解放（¥480/月）
-          </Text>
-        </TouchableOpacity>
-      )}
-
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.layerScroll}>
         <View style={styles.layerRow}>
           {LAYERS.map((l) => (
             <TouchableOpacity
               key={l.key}
               style={[styles.layerBtn, layer === l.key && styles.layerBtnActive]}
-              onPress={() => handleLayerChange(l.key, l.pro)}
+              onPress={() => handleLayerChange(l.key)}
             >
               <Text style={[styles.layerText, layer === l.key && styles.layerTextActive]}>
                 {l.emoji} {l.label}
-                {l.pro && !isPro ? ' 🔒' : ''}
               </Text>
             </TouchableOpacity>
           ))}
@@ -153,25 +141,41 @@ export default function GeographyExplorer({ isPro, onRequirePro }: Props) {
         </Animated.View>
       </View>
 
-      {selected ? (
-        <RegionDetail region={selected} layer={layer} onClose={() => resetView()} />
-      ) : (
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.zoneScroll}>
-          {industrialZoneSummary.map((z) => (
-            <TouchableOpacity
-              key={z.name}
-              style={styles.zoneChip}
-              onPress={() => !isPro && onRequirePro()}
-              activeOpacity={isPro ? 1 : 0.7}
-            >
-              <Text style={styles.zoneChipTitle}>
-                {z.name}工業地帯{!isPro ? ' 🔒' : ''}
-              </Text>
-              <Text style={styles.zoneChipSub}>{z.region} — {z.key}</Text>
-            </TouchableOpacity>
-          ))}
-        </ScrollView>
-      )}
+      <View style={styles.tapHint}>
+        <Text style={styles.tapHintText}>👆 地域をタップすると詳細情報が表示されます</Text>
+      </View>
+
+      <Modal
+        visible={!!selected}
+        animationType="slide"
+        presentationStyle="pageSheet"
+        onRequestClose={() => resetView()}
+      >
+        {selected && (
+          <View style={styles.modalRoot}>
+            <View style={[styles.modalHeader, { backgroundColor: selected.color }]}>
+              <Text style={styles.modalHeaderTitle}>{selected.emoji} {selected.name}</Text>
+              <TouchableOpacity onPress={() => resetView()} style={styles.modalCloseBtn}>
+                <Text style={styles.modalCloseBtnText}>✕ 閉じる</Text>
+              </TouchableOpacity>
+            </View>
+            <ScrollView style={styles.layerRow2} horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ padding: 12, gap: 8, flexDirection: 'row' }}>
+              {LAYERS.map((l) => (
+                <TouchableOpacity
+                  key={l.key}
+                  style={[styles.layerBtn, layer === l.key && styles.layerBtnActive]}
+                  onPress={() => handleLayerChange(l.key)}
+                >
+                  <Text style={[styles.layerText, layer === l.key && styles.layerTextActive]}>
+                    {l.emoji} {l.label}
+                  </Text>
+                </TouchableOpacity>
+              ))}
+            </ScrollView>
+            <RegionDetail region={selected} layer={layer} onClose={() => resetView()} />
+          </View>
+        )}
+      </Modal>
     </View>
   );
 }
@@ -254,6 +258,18 @@ function RegionDetail({
         <>
           <DetailSection title="🚜 農業の種類" items={ag.farmingTypes} />
           <DetailSection title="🌾 主要作物" items={ag.mainCrops} />
+          {ag.spotlights && ag.spotlights.length > 0 && (
+            <View style={styles.spotlightSection}>
+              <Text style={styles.spotlightHeader}>🔍 注目の特産品</Text>
+              {ag.spotlights.map((s) => (
+                <View key={s.name} style={styles.spotlightCard}>
+                  <Text style={styles.spotlightName}>{s.name}</Text>
+                  <Text style={styles.spotlightLocation}>📍 {s.location}</Text>
+                  <Text style={styles.spotlightWhy}>{s.why}</Text>
+                </View>
+              ))}
+            </View>
+          )}
           <DetailSection title="🐄 畜産" items={ag.livestock} />
           <DetailSection title="📝 メモ" items={ag.notes} />
           <DetailSection title="🎁 特産" items={region.products} />
@@ -342,7 +358,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#E8EEF8',
   },
   layerBtnActive: { backgroundColor: '#1E5FBE' },
-  layerText: { fontSize: 11, fontWeight: '700', color: '#555' },
+  layerText: { fontSize: 13, fontWeight: '700', color: '#555' },
   layerTextActive: { color: '#FFF' },
   sectorRow: {
     flexDirection: 'row',
@@ -389,10 +405,59 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 4,
   },
+  tapHint: {
+    backgroundColor: '#EEF4FF',
+    borderRadius: 10,
+    paddingVertical: 8,
+    paddingHorizontal: 14,
+    marginBottom: 10,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#C5D8F8',
+  },
+  tapHintText: {
+    fontSize: 13,
+    fontWeight: '600',
+    color: '#1E5FBE',
+  },
+  modalRoot: {
+    flex: 1,
+    backgroundColor: '#F5F7FA',
+  },
+  modalHeader: {
+    paddingTop: 52,
+    paddingBottom: 16,
+    paddingHorizontal: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  modalHeaderTitle: {
+    fontSize: 22,
+    fontWeight: '900',
+    color: '#FFFFFF',
+  },
+  modalCloseBtn: {
+    backgroundColor: 'rgba(0,0,0,0.2)',
+    borderRadius: 8,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+  },
+  modalCloseBtnText: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#FFFFFF',
+  },
+  layerRow2: {
+    flexGrow: 0,
+    backgroundColor: '#FFFFFF',
+    borderBottomWidth: 1,
+    borderBottomColor: '#E5EAF0',
+  },
   regionPress: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 2 },
-  regionEmoji: { fontSize: 16 },
+  regionEmoji: { fontSize: 22 },
   regionName: {
-    fontSize: 9,
+    fontSize: 13,
     fontWeight: '800',
     color: '#FFF',
     textAlign: 'center',
@@ -401,7 +466,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     borderRadius: 16,
     padding: 16,
-    maxHeight: 300,
+    maxHeight: 480,
     borderWidth: 2,
     borderColor: '#1E5FBE',
   },
@@ -411,11 +476,24 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 12,
   },
-  detailTitle: { fontSize: 18, fontWeight: '900', color: '#1A1A2E' },
-  detailClose: { fontSize: 13, fontWeight: '700', color: '#1E5FBE' },
-  detailSection: { marginBottom: 12 },
-  detailSectionTitle: { fontSize: 14, fontWeight: '800', color: '#1E5FBE', marginBottom: 6 },
-  detailItem: { fontSize: 13, color: '#333', lineHeight: 22 },
+  detailTitle: { fontSize: 20, fontWeight: '900', color: '#1A1A2E' },
+  detailClose: { fontSize: 14, fontWeight: '700', color: '#1E5FBE' },
+  detailSection: { marginBottom: 14 },
+  detailSectionTitle: { fontSize: 16, fontWeight: '800', color: '#1E5FBE', marginBottom: 8 },
+  detailItem: { fontSize: 14, color: '#333', lineHeight: 24 },
+  spotlightSection: { marginBottom: 14 },
+  spotlightHeader: { fontSize: 16, fontWeight: '800', color: '#D97706', marginBottom: 8 },
+  spotlightCard: {
+    backgroundColor: '#FFFBEB',
+    borderRadius: 14,
+    padding: 14,
+    marginBottom: 10,
+    borderLeftWidth: 4,
+    borderLeftColor: '#F59E0B',
+  },
+  spotlightName: { fontSize: 16, fontWeight: '800', color: '#1A1A2E', marginBottom: 4 },
+  spotlightLocation: { fontSize: 13, color: '#666', marginBottom: 6 },
+  spotlightWhy: { fontSize: 14, color: '#333', lineHeight: 22 },
   factoryBlock: {
     backgroundColor: '#FFF8EE',
     borderRadius: 12,

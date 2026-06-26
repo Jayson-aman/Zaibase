@@ -9,9 +9,10 @@ import {
   Alert,
   ActivityIndicator,
 } from 'react-native';
-import { useFocusEffect } from 'expo-router';
+import { useFocusEffect, router } from 'expo-router';
 import { loadProgress, resetProgress, ProgressData } from '../../store/progress';
-import { questionsBySubject, subjectInfo, SubjectKey } from '../../data/questions';
+import { subjectInfo, type SubjectKey } from '../../data/questions-meta';
+import { useQuestionsBySubjectMap } from '../../hooks/useSubjectQuestions';
 import { useMaxGate } from '../../hooks/useMaxGate';
 import { getWeakPointCoaching } from '../../services/aiCoach';
 import { fetchMyRanking, RankingResult } from '../../services/ranking';
@@ -20,6 +21,7 @@ import Paywall from '../../components/Paywall';
 const SUBJECTS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
 
 export default function ProgressScreen() {
+  const { bySubject: questionsBySubject } = useQuestionsBySubjectMap();
   const [progressData, setProgressData] = useState<ProgressData>({});
   const { paywallVisible, setPaywallVisible, requireMax } = useMaxGate();
   const [coachLoading, setCoachLoading] = useState(false);
@@ -73,7 +75,7 @@ export default function ProgressScreen() {
     requireMax(async () => {
       const wrongIds = progressData[subjectKey]?.wrongQuestionIds ?? [];
       const items = wrongIds
-        .map((id) => questionsBySubject[subjectKey].find((q) => q.id === id))
+        .map((id) => (questionsBySubject?.[subjectKey] ?? []).find((q) => q.id === id))
         .filter((q): q is NonNullable<typeof q> => q != null)
         .map((q) => ({ question: q.question, answer: q.answer }));
 
@@ -307,6 +309,26 @@ export default function ProgressScreen() {
         >
           <Text style={styles.resetText}>🗑️ 学習記録をリセット</Text>
         </TouchableOpacity>
+
+        {/* Legal footer */}
+        <View style={styles.legalFooter}>
+          <Text style={styles.legalFooterTitle}>Zaibase Group / 中学・高校受験対策 ahiru</Text>
+          <View style={styles.legalLinks}>
+            <TouchableOpacity onPress={() => router.push('/terms')} activeOpacity={0.7}>
+              <Text style={styles.legalLink}>利用規約</Text>
+            </TouchableOpacity>
+            <Text style={styles.legalSep}>｜</Text>
+            <TouchableOpacity onPress={() => router.push('/privacy')} activeOpacity={0.7}>
+              <Text style={styles.legalLink}>プライバシーポリシー</Text>
+            </TouchableOpacity>
+            <Text style={styles.legalSep}>｜</Text>
+            <TouchableOpacity onPress={() => router.push('/tokusho')} activeOpacity={0.7}>
+              <Text style={styles.legalLink}>特定商取引法</Text>
+            </TouchableOpacity>
+          </View>
+          <Text style={styles.legalContact}>お問い合わせ: info@zaibase.group</Text>
+          <Text style={styles.legalCopy}>© 2026 Zaibase Group</Text>
+        </View>
       </ScrollView>
 
       <Paywall
@@ -637,5 +659,49 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: '700',
     color: '#E74C3C',
+  },
+  legalFooter: {
+    marginTop: 32,
+    marginBottom: 8,
+    paddingHorizontal: 20,
+    alignItems: 'center',
+    borderTopWidth: 1,
+    borderTopColor: '#E5EAF0',
+    paddingTop: 24,
+  },
+  legalFooterTitle: {
+    fontSize: 12,
+    fontWeight: '700',
+    color: '#AAA',
+    marginBottom: 10,
+    letterSpacing: 0.5,
+  },
+  legalLinks: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    gap: 2,
+    marginBottom: 8,
+  },
+  legalLink: {
+    fontSize: 12,
+    color: '#4A90D9',
+    fontWeight: '600',
+    textDecorationLine: 'underline',
+  },
+  legalSep: {
+    fontSize: 12,
+    color: '#CCC',
+  },
+  legalContact: {
+    fontSize: 11,
+    color: '#BBB',
+    marginBottom: 4,
+  },
+  legalCopy: {
+    fontSize: 11,
+    color: '#CCC',
+    marginBottom: 16,
   },
 });

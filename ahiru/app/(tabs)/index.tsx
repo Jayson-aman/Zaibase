@@ -7,6 +7,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
   Platform,
+  Linking,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import SubjectCard from '../../components/SubjectCard';
@@ -18,11 +19,8 @@ import AnimatedMascot from '../../components/AnimatedMascot';
 import { homeMascot } from '../../data/images';
 import { useProGate } from '../../hooks/useProGate';
 import { useSubscription } from '../../hooks/useSubscription';
-import {
-  questionsBySubject,
-  subjectInfo,
-  SubjectKey,
-} from '../../data/questions';
+import { subjectInfo, type SubjectKey } from '../../data/questions-meta';
+import { useQuestionsBySubjectMap } from '../../hooks/useSubjectQuestions';
 import type { CourseKey, ExamType } from '../../data/courses';
 import {
   ALL_COURSES, CHUGAKU_COURSES, KOKO_COURSES, CATEGORY_COURSES, SCHOOL_COURSES,
@@ -75,15 +73,20 @@ function getQuestionCount(
   difficulty: Difficulty,
   examType: ExamType,
   course: CourseKey,
+  questionsBySubject: Record<SubjectKey, import('../../data/questions-meta').Question[]> | null,
 ): number {
+  if (!questionsBySubject) return 0;
   let qs = questionsBySubject[subject];
   // Filter by examType
   qs = qs.filter((q) => (q.examType ?? 'chugaku') === examType);
-  // Filter by course
-  if (course === 'general') {
-    qs = qs.filter((q) => !q.course || q.course === 'general');
+  // Filter by course — for koko courses include koko-general as shared pool
+  const generalKey = examType === 'koko' ? 'koko-general' : 'general';
+  if (course === 'general' || course === 'koko-general') {
+    qs = qs.filter((q) => !q.course || q.course === generalKey);
   } else {
-    qs = qs.filter((q) => q.course === course);
+    const schoolQs = qs.filter((q) => q.course === course);
+    const generalQs = qs.filter((q) => !q.course || q.course === generalKey);
+    qs = [...schoolQs, ...generalQs];
   }
   if (difficulty !== 'all') {
     qs = qs.filter((q) => q.difficulty === difficulty);
@@ -200,6 +203,7 @@ export default function HomeScreen() {
     setListenPickerActive(false);
   }
 
+  const { bySubject: questionsBySubject } = useQuestionsBySubjectMap();
   const listenInfo = listenSubject ? subjectInfo[listenSubject] : null;
   const { hasAccess: betaAccess, unlock } = useBetaAccess();
   const { isPro, paywallVisible, setPaywallVisible, requirePro } = useProGate(betaAccess);
@@ -209,16 +213,28 @@ export default function HomeScreen() {
   const courseInfo = getCourseInfo(selectedCourse);
 
   const listenQuestions = React.useMemo(() => {
-    if (listenSubject == null) return [];
+    if (listenSubject == null || !questionsBySubject) return [];
     const qs = difficulty === 'all'
       ? questionsBySubject[listenSubject]
       : questionsBySubject[listenSubject].filter((q) => q.difficulty === difficulty);
     return [...qs].sort(() => Math.random() - 0.5);
-  }, [listenSubject, difficulty]);
+  }, [listenSubject, difficulty, questionsBySubject]);
 
   // Courses that require MAX or Pro
   const maxOnlyCourses = ALL_COURSES.filter(c => c.maxOnly).map(c => c.key);
   const courseRequiresMax = maxOnlyCourses.includes(selectedCourse);
+
+  // Filter KOKO_COURSES to only those that have actual question data
+  const kokoCoursesWithData = React.useMemo(() => {
+    const SUBJECTS_KEYS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
+    return KOKO_COURSES.filter((c) => {
+      const total = SUBJECTS_KEYS.reduce(
+        (sum, s) => sum + getQuestionCount(s, 'all', 'koko', c.key, questionsBySubject),
+        0,
+      );
+      return total > 0;
+    });
+  }, []);
 
   // Schools sorted by level then name
   const sortedSchools = [...SCHOOL_COURSES].sort(
@@ -292,7 +308,7 @@ export default function HomeScreen() {
             {/* Category chips */}
             {(examType === 'koko' || courseTab === 'category') && (
               <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.courseScroll}>
-                {(examType === 'chugaku' ? CATEGORY_COURSES : KOKO_COURSES).map((c) => {
+                {(examType === 'chugaku' ? CATEGORY_COURSES : kokoCoursesWithData).map((c) => {
                   const isSelected = selectedCourse === c.key;
                   const needsMax = maxOnlyCourses.includes(c.key);
                   return (
@@ -402,37 +418,82 @@ export default function HomeScreen() {
               </Text>
             </View>
 
-            {/* Scholarship info banner (MAX users) */}
-            {isMax && (
-              <View style={styles.scholarshipBanner}>
-                <Text style={styles.scholarshipTitle}>💴 奨学金・授業料支援情報</Text>
-                <Text style={styles.scholarshipText}>
-                  大阪府私学助成・授業料支援給付金制度を活用できる可能性があります。
-                  入学前に必ず確認してください。
-                </Text>
-                <Text style={styles.scholarshipLink}>
-                  ▸ 大阪私学連合会 奨学金情報{'\n'}
-                  ▸ 大阪府 授業料支援給付金
-                </Text>
-              </View>
-            )}
-          </View>
-        )}
+            {/* Scholarship info banner */}
+            <View style={styles.scholarshipBanner}>
+              <Text style={styles.scholarshipTitle}>💴 奨学金・授業料支援情報</Text>
+              <Text style={styles.scholarshipText}>
+                私立高校の授業料は公的支援制度で大幅に軽減できます。入学前・入学直後に必ず確認してください。
+              </Text>
 
-        {/* Mascot banner */}
-        {!listenPickerActive && (
-          <View style={styles.mascotBanner}>
-            <AnimatedMascot
-              source={homeMascot}
-              style={styles.mascotImage}
-              fallbackEmoji="📚"
-              animation="bounce"
-              accessibilityLabel="勉強応援キャラクター"
-            />
-            <View style={styles.mascotTextWrap}>
-              <Text style={styles.mascotTitle}>一緒に頑張ろう！</Text>
-              <Text style={styles.mascotSub}>
-                クイズも聞き流しも、解説付きで理解が深まる
+              {/* 1. 国の就学支援金 */}
+              <View style={styles.scholarshipItem}>
+                <Text style={styles.scholarshipItemTitle}>① 高等学校等就学支援金（国）</Text>
+                <Text style={styles.scholarshipCondition}>
+                  【対象】国公私立高校に在籍する生徒{'\n'}
+                  【所得条件】保護者の年収目安910万円未満（市町村民税所得割額＋道府県民税所得割額が50万7千円未満）{'\n'}
+                  【支給額】私立高校：最大年間39万6,000円（加算あり）{'\n'}
+                  【申請】入学時に学校を通じて申請。様式は入学先の学校から配布されます。
+                </Text>
+                <TouchableOpacity
+                  onPress={() => Linking.openURL('https://www.mext.go.jp/a_menu/shotou/mushouka/index.htm')}
+                  activeOpacity={0.75}
+                >
+                  <Text style={styles.scholarshipLink}>▸ 文部科学省 就学支援金制度</Text>
+                </TouchableOpacity>
+              </View>
+
+              {/* 2. 奨学のための給付金 */}
+              <View style={styles.scholarshipItem}>
+                <Text style={styles.scholarshipItemTitle}>② 奨学のための給付金（国・非課税世帯）</Text>
+                <Text style={styles.scholarshipCondition}>
+                  【対象】住民税非課税世帯の高校生（生活保護・非課税）{'\n'}
+                  【支給額】私立高校：年間138,000円〜152,000円程度（学年・扶養人数により変動）{'\n'}
+                  【申請】毎年7〜9月頃、在籍高校経由で申請。様式は学校またはお住まいの市区町村窓口で入手可。
+                </Text>
+                <TouchableOpacity
+                  onPress={() => Linking.openURL('https://www.mext.go.jp/a_menu/shotou/mushouka/1342674.htm')}
+                  activeOpacity={0.75}
+                >
+                  <Text style={styles.scholarshipLink}>▸ 文部科学省 奨学のための給付金</Text>
+                </TouchableOpacity>
+              </View>
+
+              {/* 3. 大阪府 授業料支援 */}
+              <View style={styles.scholarshipItem}>
+                <Text style={styles.scholarshipItemTitle}>③ 大阪府 授業料支援補助金</Text>
+                <Text style={styles.scholarshipCondition}>
+                  【対象】大阪府内在住で府内私立高校等に在籍する生徒{'\n'}
+                  【所得条件】保護者の年収目安800万円未満（世帯によっては無償化）{'\n'}
+                  【支給額】授業料から就学支援金を差し引いた実質負担分を補助（最大無償）{'\n'}
+                  【申請】入学後4〜5月頃、在籍高校経由で申請。申請様式は学校で配布または大阪府HPからダウンロード可。
+                </Text>
+                <TouchableOpacity
+                  onPress={() => Linking.openURL('https://www.pref.osaka.lg.jp/o180160/shigaku/shigakumushouka/index.html')}
+                  activeOpacity={0.75}
+                >
+                  <Text style={styles.scholarshipLink}>▸ 大阪府 私立高校授業料支援補助金</Text>
+                </TouchableOpacity>
+              </View>
+
+              {/* 4. 大阪私学連合会 奨学金 */}
+              <View style={styles.scholarshipItem}>
+                <Text style={styles.scholarshipItemTitle}>④ 大阪私学連合会 奨学金</Text>
+                <Text style={styles.scholarshipCondition}>
+                  【対象】大阪府内の私立高校・中学校に在籍する生徒{'\n'}
+                  【所得条件】各奨学金により異なる（要確認）{'\n'}
+                  【支給額】奨学金の種類により異なる（給付型・貸与型あり）{'\n'}
+                  【申請】在籍学校の担任・進路指導部に相談。詳細は下記リンク参照。
+                </Text>
+                <TouchableOpacity
+                  onPress={() => Linking.openURL('https://www.osaka-shigaku.gr.jp/scholarship/')}
+                  activeOpacity={0.75}
+                >
+                  <Text style={styles.scholarshipLink}>▸ 大阪私学連合会 奨学金情報</Text>
+                </TouchableOpacity>
+              </View>
+
+              <Text style={styles.scholarshipNote}>
+                ※ 制度内容・金額は年度により変更される場合があります。必ず各公式サイト・在籍校で最新情報を確認してください。
               </Text>
             </View>
           </View>
@@ -529,7 +590,7 @@ export default function HomeScreen() {
             <SubjectCard
               key={subject}
               subject={subject}
-              questionCount={getQuestionCount(subject, difficulty, examType, selectedCourse)}
+              questionCount={getQuestionCount(subject, difficulty, examType, selectedCourse, questionsBySubject)}
               onPress={() =>
                 listenPickerActive
                   ? handleListenSubject(subject)
@@ -847,6 +908,32 @@ const styles = StyleSheet.create({
     color: '#6BA8E8',
     fontWeight: '600',
     lineHeight: 20,
+  },
+  scholarshipItem: {
+    marginTop: 10,
+    paddingTop: 10,
+    borderTopWidth: 1,
+    borderTopColor: 'rgba(249,168,37,0.2)',
+  },
+  scholarshipItemTitle: {
+    fontSize: 12,
+    fontWeight: '800',
+    color: '#F9A825',
+    marginBottom: 4,
+  },
+  scholarshipCondition: {
+    fontSize: 11,
+    color: D.soft,
+    lineHeight: 17,
+    marginBottom: 4,
+    fontWeight: '400',
+  },
+  scholarshipNote: {
+    fontSize: 11,
+    color: D.muted,
+    lineHeight: 16,
+    marginTop: 10,
+    fontStyle: 'italic',
   },
 
   // Mascot

@@ -1,7 +1,8 @@
 import { Platform } from 'react-native';
 import * as Speech from 'expo-speech';
 
-const LANG = 'ja-JP';
+const LANG_JA = 'ja-JP';
+const LANG_EN = 'en-US';
 
 let cancelToken = 0;
 
@@ -18,8 +19,25 @@ export function primeSpeech(): void {
   syn.onvoiceschanged = () => syn.getVoices();
 }
 
-function pickJapaneseVoice(): SpeechSynthesisVoice | undefined {
+/** Returns true when text is predominantly Latin/English characters. */
+function isEnglishText(text: string): boolean {
+  const letters = (text.match(/[A-Za-zぁ-ん一-龯]/g) ?? []).length;
+  if (letters === 0) return false;
+  const latin = (text.match(/[A-Za-z]/g) ?? []).length;
+  return latin / letters > 0.55;
+}
+
+function pickVoice(lang: string): SpeechSynthesisVoice | undefined {
   const voices = window.speechSynthesis.getVoices();
+  if (lang === LANG_EN) {
+    // Prefer high-quality network voices, then any en-US, then en-*
+    return (
+      voices.find((v) => v.lang === 'en-US' && !v.localService) ??
+      voices.find((v) => v.lang === 'en-US') ??
+      voices.find((v) => v.lang.startsWith('en')) ??
+      voices[0]
+    );
+  }
   return (
     voices.find((v) => v.lang === 'ja-JP') ??
     voices.find((v) => v.lang.startsWith('ja')) ??
@@ -54,18 +72,33 @@ export function resumeSpeech(): void {
 
 export type SpeakOptions = {
   rate?: number;
+  /** Multiplier applied to the language-appropriate default rate (1 = default). */
+  rateScale?: number;
+  /** Override language detection. 'auto' (default) detects from text content. */
+  lang?: 'auto' | 'ja-JP' | 'en-US';
 };
 
 export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
-  const rate = options.rate ?? 1.0;
+  const langOpt = options.lang ?? 'auto';
+  const lang =
+    langOpt === 'auto'
+      ? isEnglishText(text) ? LANG_EN : LANG_JA
+      : langOpt;
+
+  // Read slower for clarity — 国語/社会 etc. were too fast to follow.
+  // English a touch slower still for a relaxed native cadence.
+  const defaultRate = lang === LANG_EN ? 0.82 : 0.85;
+  const scaledDefault = defaultRate * (options.rateScale ?? 1);
+  const rate = options.rate ?? scaledDefault;
+
   const token = cancelToken;
 
   if (isWebSpeech()) {
     return new Promise((resolve) => {
       const utter = new SpeechSynthesisUtterance(text);
-      utter.lang = LANG;
+      utter.lang = lang;
       utter.rate = rate;
-      const voice = pickJapaneseVoice();
+      const voice = pickVoice(lang);
       if (voice) utter.voice = voice;
 
       let settled = false;
@@ -102,7 +135,7 @@ export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
     };
 
     Speech.speak(text, {
-      language: LANG,
+      language: lang,
       rate,
       onDone: finish,
       onStopped: finish,

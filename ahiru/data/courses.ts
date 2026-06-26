@@ -38,7 +38,24 @@ export type CourseKey =
   // ── 東京 高校受験 ──
   | 'koko-hibiya'     // 都立日比谷高校（最難関）
   | 'koko-waseda'     // 早稲田大学附属高校（最難関）
-  | 'koko-meidai';    // 明大明治高校（難関）
+  | 'koko-meidai'    // 明大明治高校（難関）
+  // ── 関西 私立高校 ──
+  | 'koko-nada'       // 灘高校（関西最難関）
+  | 'koko-koyo'       // 甲陽学院高校（最難関）
+  | 'koko-nishiyamato' // 西大和学園高校（最難関）
+  | 'koko-todaiji'    // 東大寺学園高校（最難関）
+  // ── 東京 私立高校 ──
+  | 'koko-kasei'      // 開成高校（東京最難関）
+  | 'koko-keio'       // 慶應義塾高校（最難関）
+  | 'koko-azabu'      // 麻布高校（最難関）
+  // ── 名古屋 私立高校 ──
+  | 'koko-tokai'      // 東海高校（東海最難関）
+  | 'koko-taki'       // 滝高校（難関）
+  | 'koko-nanzan'     // 南山高校（難関）
+  // ── 福岡 私立高校 ──
+  | 'koko-kurume'     // 久留米大附設高校（九州最難関）
+  | 'koko-seinan'     // 西南学院高校（難関）
+  | 'koko-ohori';     // 福岡大附属大濠高校（難関）
 
 export type CourseLevel = '基礎〜標準' | '標準' | '標準〜難関' | '難関' | '最難関';
 
@@ -461,6 +478,196 @@ export const ALL_COURSES: CourseInfo[] = [
     description: '学習院の入試問題。伝統校、国語・社会の記述力が問われる',
     gender: '男子',
     hensachi: '56〜62',
+  },
+
+  // ─────── 関西 私立高校受験 ───────
+  {
+    key: 'koko-nada',
+    examType: 'koko',
+    name: '灘高校',
+    shortName: '灘',
+    emoji: '🔥',
+    color: '#1A237E',
+    level: '最難関',
+    targetSchools: ['灘高校'],
+    description: '灘高校の入試問題。全国最難関レベル、特に数学・理科の思考力が問われる',
+    maxOnly: true,
+    gender: '男子',
+    hensachi: '78+',
+  },
+  {
+    key: 'koko-koyo',
+    examType: 'koko',
+    name: '甲陽学院高校',
+    shortName: '甲陽学院',
+    emoji: '⚡',
+    color: '#4A148C',
+    level: '最難関',
+    targetSchools: ['甲陽学院高校'],
+    description: '甲陽学院高校の入試問題。数学の論証力・思考力が問われる',
+    maxOnly: true,
+    gender: '男子',
+    hensachi: '75〜77',
+  },
+  {
+    key: 'koko-nishiyamato',
+    examType: 'koko',
+    name: '西大和学園高校',
+    shortName: '西大和',
+    emoji: '🌸',
+    color: '#E65100',
+    level: '最難関',
+    targetSchools: ['西大和学園高校'],
+    description: '西大和学園高校の入試問題。東大・京大現役合格者多数、全科目難関レベル',
+    maxOnly: true,
+    gender: '共学',
+    hensachi: '73〜76',
+  },
+  {
+    key: 'koko-todaiji',
+    examType: 'koko',
+    name: '東大寺学園高校',
+    shortName: '東大寺学園',
+    emoji: '⛩️',
+    color: '#BF360C',
+    level: '最難関',
+    targetSchools: ['東大寺学園高校'],
+    description: '東大寺学園高校の入試問題。理系・医系進学者多数、数理の難度が高い',
+    maxOnly: true,
+    gender: '男子',
+    hensachi: '73〜76',
+  },
+
+  // ─────── 東京 私立高校受験 ───────
+  {
+    key: 'koko-kasei',
+    examType: 'koko',
+    name: '開成高校',
+    shortName: '開成',
+    emoji: '🏆',
+    color: '#212121',
+    level: '最難関',
+    targetSchools: ['開成高校'],
+    description: '開成高校の入試問題。東京最難関、全国トップクラスの数学・英語',
+    maxOnly: true,
+    gender: '男子',
+    hensachi: '78+',
+  },
+  {
+    key: 'koko-keio',
+    examType: 'koko',
+    name: '慶應義塾高校',
+    shortName: '慶應',
+    emoji: '🎓',
+    color: '#C62828',
+    level: '最難関',
+    targetSchools: ['慶應義塾高校', '慶應義塾志木高校', '慶應義塾女子高校'],
+    description: '慶應義塾高校の入試問題。英語・数学・国語の総合力が高水準で求められる',
+    maxOnly: true,
+    gender: '男子',
+    hensachi: '74〜76',
+  },
+  {
+    key: 'koko-azabu',
+    examType: 'koko',
+    name: '麻布高校',
+    shortName: '麻布',
+    emoji: '🌿',
+    color: '#1B5E20',
+    level: '最難関',
+    targetSchools: ['麻布高校'],
+    description: '麻布高校の入試問題。自由な校風を反映した論述・思考型の出題',
+    maxOnly: true,
+    gender: '男子',
+    hensachi: '74〜76',
+  },
+
+  // ─────── 名古屋 私立高校受験 ───────
+  {
+    key: 'koko-tokai',
+    examType: 'koko',
+    name: '東海高校',
+    shortName: '東海',
+    emoji: '🌊',
+    color: '#0D47A1',
+    level: '最難関',
+    targetSchools: ['東海高校'],
+    description: '東海高校の入試問題。東海地区最難関、医学部・東大合格者全国有数',
+    maxOnly: true,
+    gender: '男子',
+    hensachi: '73〜75',
+  },
+  {
+    key: 'koko-taki',
+    examType: 'koko',
+    name: '滝高校',
+    shortName: '滝',
+    emoji: '💧',
+    color: '#006064',
+    level: '難関',
+    targetSchools: ['滝高校'],
+    description: '滝高校の入試問題。東海地区難関共学校、名大・旧帝大進学実績が高い',
+    maxOnly: true,
+    gender: '共学',
+    hensachi: '68〜70',
+  },
+  {
+    key: 'koko-nanzan',
+    examType: 'koko',
+    name: '南山高校',
+    shortName: '南山',
+    emoji: '🌙',
+    color: '#880E4F',
+    level: '難関',
+    targetSchools: ['南山高校男子部', '南山高校女子部'],
+    description: '南山高校の入試問題。カトリック系名門校、英語教育に強み',
+    maxOnly: true,
+    gender: '共学',
+    hensachi: '65〜68',
+  },
+
+  // ─────── 福岡 私立高校受験 ───────
+  {
+    key: 'koko-kurume',
+    examType: 'koko',
+    name: '久留米大学附設高校',
+    shortName: '久留米附設',
+    emoji: '🌟',
+    color: '#4E342E',
+    level: '最難関',
+    targetSchools: ['久留米大学附設高校'],
+    description: '久留米大附設の入試問題。九州最難関、東大・京大・医学部合格者多数',
+    maxOnly: true,
+    gender: '共学',
+    hensachi: '72〜75',
+  },
+  {
+    key: 'koko-seinan',
+    examType: 'koko',
+    name: '西南学院高校',
+    shortName: '西南学院',
+    emoji: '✝️',
+    color: '#37474F',
+    level: '難関',
+    targetSchools: ['西南学院高校'],
+    description: '西南学院高校の入試問題。バプテスト系名門校、英語教育が充実',
+    maxOnly: true,
+    gender: '共学',
+    hensachi: '64〜67',
+  },
+  {
+    key: 'koko-ohori',
+    examType: 'koko',
+    name: '福岡大附属大濠高校',
+    shortName: '大濠',
+    emoji: '🏰',
+    color: '#283593',
+    level: '難関',
+    targetSchools: ['福岡大学附属大濠高校'],
+    description: '大濠高校の入試問題。福岡を代表する進学校、スーパーサイエンス指定校',
+    maxOnly: true,
+    gender: '共学',
+    hensachi: '65〜68',
   },
 
   // ─────── 東京 高校受験 ───────

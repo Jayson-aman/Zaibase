@@ -57,12 +57,36 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="timeline"
+        options={{
+          title: '年表',
+          tabBarIcon: ({ focused }) => (
+            <TabIcon emoji="📅" focused={focused} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="formulas"
+        options={{
+          title: '公式',
+          tabBarIcon: ({ focused }) => (
+            <TabIcon emoji="📋" focused={focused} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="coach"
+        options={{
+          title: 'コーチ',
+          tabBarIcon: ({ focused }) => (
+            <TabIcon emoji="🎓" focused={focused} />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="progress"
         options={{
-          title: '進捗',
-          tabBarIcon: ({ focused }) => (
-            <TabIcon emoji="📊" focused={focused} />
-          ),
+          href: null,
         }}
       />
     </Tabs>
@@ -74,16 +98,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#070F1E',
     borderTopWidth: 1,
     borderTopColor: 'rgba(255,255,255,0.08)',
-    height: 65,
-    paddingBottom: 8,
+    height: 60,
+    paddingBottom: 6,
     paddingTop: 4,
   },
   tabLabel: {
-    fontSize: 11,
+    fontSize: 10,
     fontWeight: '600',
   },
   tabIcon: {
-    fontSize: 22,
+    fontSize: 18,
     opacity: 0.5,
   },
   tabIconFocused: {

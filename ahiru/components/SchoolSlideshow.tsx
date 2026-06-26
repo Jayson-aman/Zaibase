@@ -9,8 +9,6 @@ import {
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { schoolSlides } from '../data/schools';
-import { homeMascot } from '../data/images';
-import AnimatedMascot from './AnimatedMascot';
 
 const SLIDE_INTERVAL_MS = 4000;
 const FADE_MS = 900;
@@ -69,18 +67,6 @@ export default function SchoolSlideshow({ children }: Props) {
         <Text style={styles.schoolName}>{slide.name}</Text>
       </View>
 
-      <View style={styles.animeMascotWrap}>
-        <AnimatedMascot
-          source={homeMascot}
-          style={styles.animeMascot}
-          containerStyle={styles.animeMascot}
-          fallbackEmoji="🎓"
-          resizeMode="contain"
-          animation="float"
-          accessibilityLabel="応援キャラクター"
-        />
-      </View>
-
       <View style={styles.content}>{children}</View>
     </View>
   );
@@ -125,28 +111,6 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0,0,0,0.4)',
     textShadowOffset: { width: 0, height: 1 },
     textShadowRadius: 4,
-  },
-  animeMascotWrap: {
-    position: 'absolute',
-    top: 12,
-    right: 12,
-    zIndex: 4,
-    width: 64,
-    height: 64,
-    borderRadius: 32,
-    backgroundColor: 'rgba(255,255,255,0.92)',
-    borderWidth: 2,
-    borderColor: 'rgba(255,255,255,0.6)',
-    overflow: 'hidden',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 4,
-    elevation: 4,
-  },
-  animeMascot: {
-    width: '100%',
-    height: '100%',
   },
   content: {
     paddingHorizontal: 20,

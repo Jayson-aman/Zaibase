@@ -1,5 +1,16 @@
 # Zaibase Group — 開発ガイド
 
+## ⏰ リマインダー（要対応）
+
+| 期限 | 内容 | 担当 |
+|---|---|---|
+| **2026年7月21日ごろ** | **弁護士確認完了後 → 全国マッチング手数料機能を実装する**（業務委託・請負専門、成約時数%）。確認先は川原総合法律事務所。確認事項は `docs/legal/lawyer-checklist.md` の①有料職業紹介。実装準備は完了済み（`jobMatchingEnabled: false` を `true` に変更するだけで開放可能）。 | Claude Code |
+| **ahiru収益化＋弁護士確認後** | **弁護士法72条確認完了後 → 以下3機能を開放する。** Firestoreの `platformConfig/features` に `legalFeaturesEnabled: true` を設定するだけで有効化可能。①`⚖️ 許認可・法令チェック`（kyoninkaScreen・AI法的判断）②`🛡️ 信頼スコア`（complianceGateScreen・弁護士確認前β）③`Zaibase法律相談バナー`（弁護士紹介に該当する可能性・弁護士法72条⑤グループ割引）。確認事項は `docs/legal/lawyer-checklist.md` の③④⑤。財源はahiru（受験アプリ）の収益で賄う予定。 | Claude Code |
+| **Stripe審査通過後** | **建設の課金を再開する。** Firestoreの `platformConfig/features` に `billingEnabled: true` を設定するだけで有料プラン申込・Stripe決済が開放される。現在は料金プランページ・Stripe画面への導線・`doStripeCheckout()` をすべて停止中。 | Claude Code |
+| **弁護士確認後（経営支援ツール）** | **資金繰りシミュレーター・価格転嫁交渉サポートを開放する。** ①Firestoreの `platformConfig/features` に `cashFlowEnabled: true` / `priceNegotiationEnabled: true` を設定。②`priceNegotiationEnabled` は Claude API（`generateNegotiationLetter` Cloud Function）を使用するため、事前に `firebase functions:secrets:set ANTHROPIC_API_KEY` でシークレットを設定してからデプロイする。実装: `kensetsu/frontend/Zaibase.html`・`kensetsu/functions/management_tools.js`。 | Claude Code |
+
+> このリマインダーは完了したら削除する。
+
 ## Zaibase Group 全プロダクト一覧
 
 | プロダクト | リポジトリ | URL | 担当ツール |
@@ -8,6 +19,7 @@
 | Zaibase法律相談（Firebase版） | jayson-aman/zaibase (horitsu/) | https://zaibase-horitsu.web.app | Claude Code |
 | Zaibase法律相談（Cloud Run版・本番） | 別リポジトリ（~/Documents/GitHub/Zaibase法律相談） | https://zaibase-legal-k56gkm3vfa-an.a.run.app | Cursor |
 | 中学受験対策 ahiru | jayson-aman/zaibase (ahiru/)（旧 jayson-aman/ahiru は統合元として残存） | https://exam.zaibase.group | Claude Code |
+| 宅建士対策 | jayson-aman/zaibase (takken/) | Vercel デプロイ予定（URL未定） | Claude Code |
 | Zaibase Group 会社サイト | jayson-aman/zaibase.group | https://www.zaibase.group | Cursor |
 | Zaibase証券（仮） | jayson-aman/miyabi-securities-app（公開・このリポジトリ未統合。旧 miyabi-securities はアーカイブ済み。Streamlit製AI金融分析ダッシュボード：ニュース・要人発言・軍事動向のAI分析でFX・先物・株式・暗号資産・新興テーマ株の値動きを予測。Python100%、Yahoo Finance/Google Newsがデータ元、教育目的・投資助言ではないと明記） | 未定 | Cursor |
 | Zaibase物販（仮） | jayson-aman/eBay-export-profit-dashboard（公開・このリポジトリ未統合） | 未定（Streamlit Community Cloudでデプロイ） | Cursor |
@@ -31,6 +43,11 @@ Zaibase/
 │   ├── components/ services/ hooks/ store/ data/
 │   ├── services/subscription.ts # RevenueCat連携（Stripeではない）
 │   └── vercel.json              # Web版デプロイ設定（Root Directory要設定）
+├── takken/            # 宅建士対策（Expo/React Native、iOS・Android・Web）
+│   ├── app/                     # expo-router 画面（ホーム・テキスト・問題集・マイページ）
+│   ├── data/                    # 790問（宅建業法・権利関係・法令制限・税その他）
+│   ├── services/subscription.ts # RevenueCat連携（プレースホルダー）
+│   └── vercel.json              # Web版デプロイ設定（Root Directory: takken）
 └── docs/
     ├── group/         # Zaibase Group 戦略・収益予測
     ├── kensetsu/      # 建設仕様書・設計画面
@@ -167,3 +184,24 @@ firebase functions:secrets:set HORITSU_STRIPE_SECRET_KEY
 cd ahiru && npm install && npm run web
 cd ahiru && npx expo export --platform web
 ```
+
+## SEO・Search Console 状況（2026/6/21時点）
+
+| サイト | プロパティ種別 | サイトマップ | 状態 |
+|---|---|---|---|
+| `zaibase.group` | ドメインプロパティ | `https://www.zaibase.group/sitemap.xml` | 成功・8ページ検出済み |
+| `zaisai-share.web.app` | URLプレフィックス | `sitemap.xml` | 送信済み・数時間〜1日で「成功」に変わる見込み |
+
+- Cloudflare TXT レコードは所有権維持のため削除しない
+- `/undefinedsitemap.xmlsitemap.xml`（誤送信）は放置でOK（無害）
+- **次のTODO**：Bing Webmaster Tools への登録（`zaibase.group` と `zaisai-share.web.app` の両方）。Google Search Console と同期する方法で所有権確認を自動完了できる。Yahoo 検索は Bing データを使うため、Bing 登録で Yahoo にも反映される。Cursor が対応中。
+
+## 公開範囲（2026/6/21時点）
+
+| プロダクト | 公開状態 | 備考 |
+|---|---|---|
+| Zaibase建設 `zaisai-share.web.app` | **公開中** | メインプロダクト |
+| 会社サイト `zaibase.group` | **公開中（建設のみ案内）** | 法律・証券は「準備中」カード表示・リンクなし |
+| Zaibase法律相談 | 非公開（アクセスコード制） | `/law` は直接URLのみアクセス可 |
+| ahiru 受験 `exam.zaibase.group` | **公開中** | RevenueCat課金は未設定（プレースホルダー） |
+| Zaibase証券 | 未公開 | 別リポジトリ・準備中 |
