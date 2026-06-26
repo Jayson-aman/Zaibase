@@ -36,3 +36,6 @@ export const subjectInfo: Record<FPSubject, { name: string; emoji: string; color
   real_estate: { name: '不動産',  emoji: '🏢', color: '#8E44AD' },
   estate:      { name: '相続',    emoji: '📜', color: '#2C3E50' },
 };
+
+export type FPCategory = FPSubject;
+export const categoryInfo = subjectInfo;
