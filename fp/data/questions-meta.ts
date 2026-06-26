@@ -1,30 +1,34 @@
-export type FPCategory =
-  | 'life'        // ライフプランニング・資金計画
+export type FPSubject =
+  | 'life'        // ライフプランニングと資金計画
   | 'risk'        // リスク管理（保険）
   | 'investment'  // 金融資産運用
   | 'tax'         // タックスプランニング
   | 'real_estate' // 不動産
   | 'estate';     // 相続・事業承継
 
-export type FPGrade = '3kyu' | '2kyu';
+export type FPChoiceKey = 'A' | 'B' | 'C' | 'D';
+
+export type FPChoice = {
+  key: FPChoiceKey;
+  text: string;
+  explanation: string; // 正解・不正解の理由
+};
 
 export type FPQuestion = {
   id: string;
-  category: FPCategory;
-  grade: FPGrade;
-  difficulty: 'basic' | 'standard' | 'advanced';
+  subject: FPSubject;
+  subjectName: string;
   question: string;
-  choices: string[];      // 必ず4択
-  answer: string;         // 正解選択肢のテキスト
-  explanation: string;    // 【解説】形式の詳細解説
-  hint?: string;
-  pitfall?: string;       // よくあるミス
-  memoryTip?: string;     // 覚え方
+  choices: FPChoice[]; // 必ず4択（A/B/C/D）
+  correctKey: FPChoiceKey;
+  explanation: string; // 総合解説
+  difficulty: 'basic' | 'standard' | 'advanced';
+  level: '3級' | '2級' | '1級';
   examFrequency?: 'very-high' | 'high' | 'medium' | 'low';
   isRecentChange?: boolean;
 };
 
-export const categoryInfo: Record<FPCategory, { name: string; emoji: string; color: string }> = {
+export const subjectInfo: Record<FPSubject, { name: string; emoji: string; color: string }> = {
   life:        { name: 'ライフ',  emoji: '🏠', color: '#4A90D9' },
   risk:        { name: 'リスク',  emoji: '🛡️', color: '#E74C3C' },
   investment:  { name: '金融',    emoji: '📈', color: '#27AE60' },
