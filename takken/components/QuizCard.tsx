@@ -5,19 +5,22 @@ import type { TakkenQuestion } from '../data/questions';
 type Props = {
   question: TakkenQuestion;
   onNext?: () => void;
+  onAnswered?: (isCorrect: boolean) => void;
   showNumber?: number;
   totalNumber?: number;
+  isWeak?: boolean;
 };
 
 const CHOICE_LABELS = ['A', 'B', 'C', 'D'];
 
-export default function QuizCard({ question, onNext, showNumber, totalNumber }: Props) {
+export default function QuizCard({ question, onNext, onAnswered, showNumber, totalNumber, isWeak }: Props) {
   const [selected, setSelected] = useState<number | null>(null);
   const answered = selected !== null;
 
   const handleSelect = (idx: number) => {
     if (answered) return;
     setSelected(idx);
+    onAnswered?.(idx === question.correctAnswer);
   };
 
   const getChoiceStyle = (idx: number) => {
@@ -50,6 +53,11 @@ export default function QuizCard({ question, onNext, showNumber, totalNumber }: 
         <View style={[styles.subjectBadge, { backgroundColor: SUBJECT_COLORS[question.subject] }]}>
           <Text style={styles.subjectText}>{question.subject}</Text>
         </View>
+        {isWeak && (
+          <View style={styles.weakBadge}>
+            <Text style={styles.weakBadgeText}>🔴 苦手</Text>
+          </View>
+        )}
         {showNumber && totalNumber && (
           <Text style={styles.counter}>{showNumber} / {totalNumber}</Text>
         )}
@@ -158,6 +166,8 @@ const styles = StyleSheet.create({
   header: { flexDirection: 'row', alignItems: 'center', marginBottom: 12, gap: 8 },
   subjectBadge: { paddingHorizontal: 10, paddingVertical: 3, borderRadius: 20 },
   subjectText: { color: '#fff', fontSize: 11, fontWeight: '700' },
+  weakBadge: { paddingHorizontal: 8, paddingVertical: 3, borderRadius: 20, backgroundColor: '#FEE2E2' },
+  weakBadgeText: { fontSize: 11, fontWeight: '700', color: '#DC2626' },
   counter: { flex: 1, textAlign: 'center', color: '#94A3B8', fontSize: 12 },
   diffBadge: { paddingHorizontal: 8, paddingVertical: 3, borderRadius: 20 },
   diffText: { fontSize: 11, fontWeight: '600', color: '#374151' },

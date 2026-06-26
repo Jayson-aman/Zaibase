@@ -19,6 +19,7 @@
 | Zaibase法律相談（Firebase版） | jayson-aman/zaibase (horitsu/) | https://zaibase-horitsu.web.app | Claude Code |
 | Zaibase法律相談（Cloud Run版・本番） | 別リポジトリ（~/Documents/GitHub/Zaibase法律相談） | https://zaibase-legal-k56gkm3vfa-an.a.run.app | Cursor |
 | 中学受験対策 ahiru | jayson-aman/zaibase (ahiru/)（旧 jayson-aman/ahiru は統合元として残存） | https://exam.zaibase.group | Claude Code |
+| 宅建士対策 | jayson-aman/zaibase (takken/) | Vercel デプロイ予定（URL未定） | Claude Code |
 | Zaibase Group 会社サイト | jayson-aman/zaibase.group | https://www.zaibase.group | Cursor |
 | Zaibase証券（仮） | jayson-aman/miyabi-securities-app（公開・このリポジトリ未統合。旧 miyabi-securities はアーカイブ済み。Streamlit製AI金融分析ダッシュボード：ニュース・要人発言・軍事動向のAI分析でFX・先物・株式・暗号資産・新興テーマ株の値動きを予測。Python100%、Yahoo Finance/Google Newsがデータ元、教育目的・投資助言ではないと明記） | 未定 | Cursor |
 | Zaibase物販（仮） | jayson-aman/eBay-export-profit-dashboard（公開・このリポジトリ未統合） | 未定（Streamlit Community Cloudでデプロイ） | Cursor |
@@ -42,6 +43,11 @@ Zaibase/
 │   ├── components/ services/ hooks/ store/ data/
 │   ├── services/subscription.ts # RevenueCat連携（Stripeではない）
 │   └── vercel.json              # Web版デプロイ設定（Root Directory要設定）
+├── takken/            # 宅建士対策（Expo/React Native、iOS・Android・Web）
+│   ├── app/                     # expo-router 画面（ホーム・テキスト・問題集・マイページ）
+│   ├── data/                    # 790問（宅建業法・権利関係・法令制限・税その他）
+│   ├── services/subscription.ts # RevenueCat連携（プレースホルダー）
+│   └── vercel.json              # Web版デプロイ設定（Root Directory: takken）
 └── docs/
     ├── group/         # Zaibase Group 戦略・収益予測
     ├── kensetsu/      # 建設仕様書・設計画面
