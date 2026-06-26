@@ -102,6 +102,8 @@ import { nandaiChugakuEx01 } from './nandai_chugaku_ex_01';
 import { kindaiExamV2 } from './kindai_exam_v2';
 import { seifuExamV2 } from './seifu_exam_v2';
 import { takatsukiExamV2 } from './takatsuki_exam_v2';
+import { kaimeiExamV2 } from './kaimei_exam_v2';
+import { toinExamV2 } from './toin_exam_v2';
 
 export type { Question, SubjectKey } from './questions-meta';
 export { subjectInfo } from './questions-meta';
@@ -2883,6 +2885,8 @@ export const questions: Question[] = [
   ...kindaiExamV2,
   ...seifuExamV2,
   ...takatsukiExamV2,
+  ...kaimeiExamV2,
+  ...toinExamV2,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {
