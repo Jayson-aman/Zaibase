@@ -25,3 +25,15 @@ export const MAX_FEATURES = [
   '🤖 AI弱点コーチ（間違えた問題からAIが復習アドバイス）',
 ] as const;
 
+// ─── 英単語 Paywall（別課金） ───────────────────────────────
+/** 英単語アドオン entitlement ID（RevenueCat） */
+export const ENTITLEMENT_VOCAB = 'vocab';
+
+/** 英単語アドオンで使える機能 */
+export const VOCAB_FEATURES = [
+  '🔊 ネイティブ発音（OpenAI TTS HD）',
+  '📖 全1000単語・熟語の例文詳細',
+  '📊 英単語進捗トラッキング',
+  '🔁 スペリング練習モード',
+] as const;
+

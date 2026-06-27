@@ -84,6 +84,15 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="vocab"
+        options={{
+          title: '英単語',
+          tabBarIcon: ({ focused }) => (
+            <TabIcon emoji="🔤" focused={focused} />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="progress"
         options={{
           href: null,
