@@ -86,14 +86,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             source={illustration}
             style={styles.illustration}
             resizeMode="cover"
-            blurRadius={isPro ? 0 : 14}
           />
-          {!isPro && (
-            <View style={styles.illustrationOverlay}>
-              <Text style={styles.illustrationLockIcon}>🔒</Text>
-              <Text style={styles.illustrationLockText}>Proプランで解放</Text>
-            </View>
-          )}
         </View>
       )}
 
@@ -526,24 +519,5 @@ const styles = StyleSheet.create({
   illustration: {
     width: '100%',
     height: 170,
-  },
-  illustrationOverlay: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'rgba(0,0,0,0.25)',
-  },
-  illustrationLockIcon: {
-    fontSize: 30,
-  },
-  illustrationLockText: {
-    fontSize: 13,
-    color: '#fff',
-    fontWeight: '700',
-    marginTop: 4,
   },
 });
