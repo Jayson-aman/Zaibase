@@ -7,6 +7,7 @@ import {
   Dimensions,
   Platform,
   ScrollView,
+  Image,
 } from 'react-native';
 
 const SERIF = Platform.select({
@@ -17,6 +18,7 @@ const SERIF = Platform.select({
 import { Question, subjectInfo } from '../data/questions-meta';
 import {
   getHistoryThemeLabel,
+  getQuestionIllustration,
 } from '../data/images';
 
 type Props = {
@@ -40,6 +42,9 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
   const [selectedChoice, setSelectedChoice] = useState<string | null>(null);
   const info = subjectInfo[question.subject];
   const historyLabel = getHistoryThemeLabel(question.id);
+  const illustration = question.subject === 'shakai'
+    ? getQuestionIllustration(question.subject, question.id)
+    : null;
 
   function handlePress() {
     if (choices != null || revealed) return;
@@ -74,6 +79,23 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
           </View>
         )}
       </View>
+
+      {illustration != null && (
+        <View style={styles.illustrationWrap}>
+          <Image
+            source={illustration}
+            style={styles.illustration}
+            resizeMode="cover"
+            blurRadius={isPro ? 0 : 14}
+          />
+          {!isPro && (
+            <View style={styles.illustrationOverlay}>
+              <Text style={styles.illustrationLockIcon}>🔒</Text>
+              <Text style={styles.illustrationLockText}>Proプランで解放</Text>
+            </View>
+          )}
+        </View>
+      )}
 
       {choices != null ? (
         <View style={styles.choiceSection}>
@@ -495,5 +517,33 @@ const styles = StyleSheet.create({
     color: '#0284C7',
     marginTop: 8,
     fontWeight: '600',
+  },
+  illustrationWrap: {
+    width: '100%',
+    height: 170,
+    overflow: 'hidden',
+  },
+  illustration: {
+    width: '100%',
+    height: 170,
+  },
+  illustrationOverlay: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(0,0,0,0.25)',
+  },
+  illustrationLockIcon: {
+    fontSize: 30,
+  },
+  illustrationLockText: {
+    fontSize: 13,
+    color: '#fff',
+    fontWeight: '700',
+    marginTop: 4,
   },
 });
