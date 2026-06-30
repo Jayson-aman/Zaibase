@@ -88,7 +88,7 @@ export async function speakWithDevice(text: string): Promise<void> {
         language: 'en-US',
         rate: 0.85,
         onDone: resolve,
-        onError: resolve,
+        onError: () => resolve(),
       });
     });
   } catch {

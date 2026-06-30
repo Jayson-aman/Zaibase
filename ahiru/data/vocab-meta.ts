@@ -19,18 +19,24 @@ export type VocabPos =
 
 export type VocabEntry = {
   id: string;
-  word: string;           // 英単語または熟語
-  pronunciation: string;  // カタカナ読み（例: アクセプト）
+  word: string;
+  pronunciation: string;   // カタカナ読み
+  ipa?: string;            // IPA発音記号（例: [wɑ́tər]）
   pos: VocabPos;
-  meaning: string;        // メイン日本語訳
-  meanings?: string[];    // 複数の意味（品詞別）
-  example: string;        // 英語例文
-  exampleJa: string;      // 例文和訳
+  meaning: string;         // メイン日本語訳
+  meanings?: string[];     // 番号付き複数の意味（例: ['①後ろへ', '②もとへ']）
+  example: string;
+  exampleJa: string;
+  example2?: string;       // 追加例文
+  example2Ja?: string;
   level: VocabLevel;
-  category: string;       // テーマ（science, society, nature, health, daily...）
+  category: string;
   frequency: 'very-high' | 'high' | 'medium';
-  isPhrase: boolean;      // 熟語フラグ
-  leapUnit?: number;      // LEAP参照ユニット番号
+  isPhrase: boolean;
+  leapUnit?: number;
+  keyPoint?: string;       // ここが大切（用法・文法注意・ニュアンス）
+  setNote?: string;        // セットで暗記（関連語・対義語・派生語）
+  memoryHook?: string;     // 覚え方ダブル（語源・語呂合わせ）
 };
 
 export const levelLabel: Record<VocabLevel, string> = {

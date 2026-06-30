@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040C1C"/>
+      <stop offset="100%" stop-color="#0A1830"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8C96A"/>
+      <stop offset="50%" stop-color="#C8A84B"/>
+      <stop offset="100%" stop-color="#A07828"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A90D9"/>
+      <stop offset="100%" stop-color="#2EC4B6"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1200" height="1200" fill="url(#bg)" rx="80"/>
+
+  <!-- 装飾ライン（上） -->
+  <rect x="0" y="0" width="1200" height="6" fill="url(#gold)" rx="3"/>
+  <!-- 装飾ライン（下） -->
+  <rect x="0" y="1194" width="1200" height="6" fill="url(#gold)" rx="3"/>
+
+  <!-- 外枠カード -->
+  <rect x="60" y="60" width="1080" height="1080" fill="none" stroke="url(#gold)" stroke-width="3" rx="40" opacity="0.3"/>
+
+  <!-- 上部：アプリ名 ahiru -->
+  <text x="600" y="175" font-family="'Helvetica Neue', Arial, sans-serif" font-size="72" font-weight="900"
+        fill="url(#blue)" text-anchor="middle" letter-spacing="16" filter="url(#glow)">ahiru</text>
+
+  <!-- メイン：英単語 大きく -->
+  <text x="600" y="430" font-family="'Hiragino Sans', 'Noto Sans JP', sans-serif" font-size="210" font-weight="900"
+        fill="url(#gold)" text-anchor="middle" filter="url(#shadow)">英単語</text>
+
+  <!-- サブ：英熟語 -->
+  <text x="600" y="570" font-family="'Hiragino Sans', 'Noto Sans JP', sans-serif" font-size="100" font-weight="700"
+        fill="#EDF4FF" text-anchor="middle" opacity="0.85">英熟語</text>
+
+  <!-- 区切り線 -->
+  <line x1="200" y1="620" x2="1000" y2="620" stroke="url(#gold)" stroke-width="2" opacity="0.4"/>
+
+  <!-- 数量バッジ -->
+  <rect x="200" y="660" width="370" height="90" rx="45" fill="url(#gold)" opacity="0.15"/>
+  <rect x="200" y="660" width="370" height="90" rx="45" fill="none" stroke="url(#gold)" stroke-width="2" opacity="0.5"/>
+  <text x="385" y="717" font-family="'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="900"
+        fill="url(#gold)" text-anchor="middle">2,000語</text>
+
+  <rect x="630" y="660" width="370" height="90" rx="45" fill="rgba(46,196,182,0.12)"/>
+  <rect x="630" y="660" width="370" height="90" rx="45" fill="none" stroke="#2EC4B6" stroke-width="2" opacity="0.5"/>
+  <text x="815" y="717" font-family="'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="900"
+        fill="#2EC4B6" text-anchor="middle">2,000熟語</text>
+
+  <!-- 特徴アイコン行 -->
+  <text x="600" y="850" font-family="'Hiragino Sans', 'Noto Sans JP', sans-serif" font-size="52" font-weight="700"
+        fill="#7FA8CC" text-anchor="middle">🔊 ネイティブ発音　▶ 聞き流し</text>
+
+  <text x="600" y="940" font-family="'Hiragino Sans', 'Noto Sans JP', sans-serif" font-size="44" font-weight="600"
+        fill="#3E5870" text-anchor="middle">📌 ここが大切　🔗 セットで暗記　💡 覚え方</text>
+
+  <!-- 下部：LEAP準拠 -->
+  <text x="600" y="1060" font-family="'Helvetica Neue', Arial, sans-serif" font-size="38" font-weight="600"
+        fill="#C8A84B" text-anchor="middle" letter-spacing="4" opacity="0.8">LEAP準拠 · 中学〜受験対応</text>
+
+  <!-- PRO バッジ（右上） -->
+  <rect x="960" y="90" width="150" height="58" rx="29" fill="url(#gold)"/>
+  <text x="1035" y="129" font-family="'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="900"
+        fill="#040C1C" text-anchor="middle">PRO</text>
+</svg>
