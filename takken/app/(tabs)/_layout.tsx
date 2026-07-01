@@ -5,6 +5,7 @@ const TABS = [
   { name: 'index',    title: 'ホーム',    icon: '🏠' },
   { name: 'textbook', title: 'テキスト',  icon: '📖' },
   { name: 'questions', title: '問題集',   icon: '✏️' },
+  { name: 'exam',     title: '本試験',    icon: '📝' },
   { name: 'profile',  title: 'マイページ', icon: '👤' },
 ];
 
