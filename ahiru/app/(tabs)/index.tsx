@@ -14,7 +14,6 @@ import SubjectCard from '../../components/SubjectCard';
 import ListenMode from '../../components/ListenMode';
 import Paywall from '../../components/Paywall';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
-import SchoolSlideshow from '../../components/SchoolSlideshow';
 import AnimatedMascot from '../../components/AnimatedMascot';
 import { homeMascot } from '../../data/images';
 import { useProGate } from '../../hooks/useProGate';
@@ -28,19 +27,19 @@ import {
 } from '../../data/courses';
 import { primeSpeech } from '../../utils/speech';
 
-// ── ダークテーマカラーパレット ──────────────────────────────
+// ── スカイブルーカラーパレット（明るいテーマ） ──────────────────
 const D = {
-  bg:          '#040C1C',
-  glass:       'rgba(255,255,255,0.05)',
-  glassMid:    'rgba(255,255,255,0.08)',
-  glassBorder: 'rgba(255,255,255,0.09)',
-  gold:        '#C8A84B',
-  goldDim:     'rgba(200,168,75,0.18)',
-  goldBorder:  'rgba(200,168,75,0.35)',
-  white:       '#EDF4FF',
-  soft:        '#7FA8CC',
-  muted:       '#3E5870',
-  divider:     'rgba(255,255,255,0.06)',
+  bg:          '#F0F9FF',
+  glass:       'rgba(14,165,233,0.07)',
+  glassMid:    'rgba(14,165,233,0.13)',
+  glassBorder: 'rgba(14,165,233,0.25)',
+  gold:        '#0EA5E9',
+  goldDim:     'rgba(14,165,233,0.14)',
+  goldBorder:  'rgba(14,165,233,0.40)',
+  white:       '#0C2A43',
+  soft:        '#0369A1',
+  muted:       '#64748B',
+  divider:     'rgba(14,165,233,0.15)',
 };
 const SERIF = Platform.select({
   ios: 'HiraMinProN-W6',
@@ -139,11 +138,11 @@ const logoStyles = StyleSheet.create({
     includeFontPadding: false,
   },
   dot: {
-    color: D.gold,
+    color: '#FFD966',
   },
   sub: {
     fontSize: 13,
-    color: 'rgba(255,255,255,0.75)',
+    color: 'rgba(255,255,255,0.85)',
     fontWeight: '500',
     letterSpacing: 1.5,
   },
@@ -243,9 +242,9 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <SchoolSlideshow>
+      <View style={styles.header}>
         <ZaibaseLogo />
-      </SchoolSlideshow>
+      </View>
 
       <ScrollView
         style={styles.scroll}
@@ -641,6 +640,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: D.bg,
   },
+  header: {
+    backgroundColor: D.gold,
+    paddingHorizontal: 20,
+    paddingTop: 16,
+    paddingBottom: 20,
+  },
   scroll: {
     flex: 1,
   },
@@ -672,7 +677,7 @@ const styles = StyleSheet.create({
     borderColor: D.glassBorder,
   },
   examToggleText: {
-    fontSize: 17,
+    fontSize: 19,
     fontWeight: '600',
     color: D.muted,
   },
@@ -711,7 +716,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
   },
   courseChipText: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: '700',
     color: D.soft,
   },
@@ -1004,7 +1009,7 @@ const styles = StyleSheet.create({
     backgroundColor: D.goldDim,
   },
   planBtnText: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: '800',
     color: D.gold,
   },
