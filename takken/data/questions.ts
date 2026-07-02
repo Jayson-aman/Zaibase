@@ -38,6 +38,7 @@ import { takkenhoQuestions6 } from './questions_takkenho_6';
 import { takkenhoQuestions7 } from './questions_takkenho_7';
 import { takkenhoQuestions8 } from './questions_takkenho_8';
 import { takkenhoQuestionsPast1 } from './questions_takkenho_past1';
+import { takkenhoQuestionsPast2 } from './questions_takkenho_past2';
 import { takkenhoQuestionsPast3 } from './questions_takkenho_past3';
 import { horeiQuestionsPast } from './questions_horei_past';
 
@@ -68,5 +69,6 @@ export const QUESTIONS: TakkenQuestion[] = [
   ...takkenhoQuestions7,
   ...takkenhoQuestions8,
   ...takkenhoQuestionsPast1,
+  ...takkenhoQuestionsPast2,
   ...takkenhoQuestionsPast3,
 ];
