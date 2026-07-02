@@ -22,12 +22,14 @@ import { zeiQuestions2 } from './questions_zei_2';
 import { zeiQuestions3 } from './questions_zei_3';
 import { zeiQuestions4 } from './questions_zei_4';
 import { zeiQuestions5 } from './questions_zei_5';
+import { zeiQuestionsPast } from './questions_zei_past';
 import { kenriQuestions } from './questions_kenri';
 import { kenriQuestions2 } from './questions_kenri_2';
 import { kenriQuestions3 } from './questions_kenri_3';
 import { kenriQuestions4 } from './questions_kenri_4';
 import { kenriQuestions5 } from './questions_kenri_5';
 import { kenriQuestions6 } from './questions_kenri_6';
+import { kenriQuestionsPast } from './questions_kenri_past';
 import { takkenhoQuestions } from './questions_takkenho';
 import { takkenhoQuestions2 } from './questions_takkenho_2';
 import { takkenhoQuestions2b } from './questions_takkenho_2b';
@@ -53,12 +55,14 @@ export const QUESTIONS: TakkenQuestion[] = [
   ...zeiQuestions3,
   ...zeiQuestions4,
   ...zeiQuestions5,
+  ...zeiQuestionsPast,
   ...kenriQuestions,
   ...kenriQuestions2,
   ...kenriQuestions3,
   ...kenriQuestions4,
   ...kenriQuestions5,
   ...kenriQuestions6,
+  ...kenriQuestionsPast,
   ...takkenhoQuestions,
   ...takkenhoQuestions2,
   ...takkenhoQuestions2b,
