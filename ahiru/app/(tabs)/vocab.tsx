@@ -9,9 +9,11 @@ import {
   Platform,
   Animated,
   Dimensions,
+  ActivityIndicator,
 } from 'react-native';
 import { speakWithOpenAI, speakWithDevice } from '../../services/tts';
-import { useSubscription } from '../../hooks/useSubscription';
+import { useVocabSubscription } from '../../hooks/useVocabSubscription';
+import { fetchVocabProducts, purchaseProduct, restorePurchases } from '../../services/subscription';
 import type { VocabEntry } from '../../data/vocab-meta';
 import { vocabWords } from '../../data/vocab_words';
 
@@ -45,8 +47,8 @@ const TYPE_FILTER = ['全て', '単語', '熟語'] as const;
 const LISTEN_INTERVAL_MS = 4500;
 
 export default function VocabScreen() {
-  const { isPro } = useSubscription();
-  const hasVocabPro = isPro;
+  const { hasVocab } = useVocabSubscription();
+  const hasVocabPro = hasVocab;
 
   const [levelFilter, setLevelFilter] = useState<string>('全て');
   const [typeFilter,  setTypeFilter]  = useState<string>('全て');
@@ -126,7 +128,14 @@ export default function VocabScreen() {
   const frontRotate = flipAnim.interpolate({ inputRange: [0,1], outputRange: ['0deg','180deg'] });
   const backRotate  = flipAnim.interpolate({ inputRange: [0,1], outputRange: ['180deg','360deg'] });
 
-  if (showPaywall) return <VocabPaywall onClose={() => setShowPaywall(false)} />;
+  if (showPaywall) {
+    return (
+      <VocabPaywall
+        onClose={() => setShowPaywall(false)}
+        onPurchased={() => setShowPaywall(false)}
+      />
+    );
+  }
 
   return (
     <SafeAreaView style={s.safe}>
@@ -264,7 +273,7 @@ export default function VocabScreen() {
 
         {!hasVocabPro && (
           <TouchableOpacity style={s.promoBanner} onPress={() => setShowPaywall(true)}>
-            <Text style={s.promoText}>🔊 英単語Pro — ネイティブ発音・聞き流し・全4,000語　¥980/月</Text>
+            <Text style={s.promoText}>🔊 英単語Pro — ネイティブ発音・聞き流し・全4,000語　¥1,000/月〜</Text>
           </TouchableOpacity>
         )}
       </ScrollView>
@@ -273,7 +282,53 @@ export default function VocabScreen() {
 }
 
 // ── Paywall ─────────────────────────────────────────
-function VocabPaywall({ onClose }: { onClose: () => void }) {
+function VocabPaywall({ onClose, onPurchased }: { onClose: () => void; onPurchased: () => void }) {
+  const [monthlyProd, setMonthlyProd] = useState<unknown>(null);
+  const [yearlyProd,  setYearlyProd]  = useState<unknown>(null);
+  const [loadingProd, setLoadingProd] = useState(true);
+  const [purchasing,  setPurchasing]  = useState(false);
+
+  useEffect(() => {
+    setLoadingProd(true);
+    fetchVocabProducts()
+      .then(({ monthly, yearly }) => {
+        setMonthlyProd(monthly);
+        setYearlyProd(yearly);
+      })
+      .catch(() => {})
+      .finally(() => setLoadingProd(false));
+  }, []);
+
+  async function handlePurchase(product: unknown) {
+    if (!product) return;
+    setPurchasing(true);
+    try {
+      await purchaseProduct(product);
+      onPurchased();
+    } catch (err: any) {
+      if (!err?.userCancelled) {
+        alert('購入エラー。もう一度お試しください。');
+      }
+    } finally {
+      setPurchasing(false);
+    }
+  }
+
+  async function handleRestore() {
+    setPurchasing(true);
+    try {
+      await restorePurchases();
+      onPurchased();
+    } catch {
+      alert('購入の復元に失敗しました。');
+    } finally {
+      setPurchasing(false);
+    }
+  }
+
+  const monthlyPrice = (monthlyProd as any)?.priceString ?? '¥1,000/月';
+  const yearlyPrice  = (yearlyProd as any)?.priceString ?? '¥4,000/年';
+
   return (
     <SafeAreaView style={[s.safe, { justifyContent: 'center' }]}>
       <View style={s.paywallCard}>
@@ -293,11 +348,33 @@ function VocabPaywall({ onClose }: { onClose: () => void }) {
           </View>
         ))}
 
-        <TouchableOpacity style={s.purchaseBtn}
-          onPress={() => alert('購入フロー準備中です。\n英単語Pro: ¥980/月\n7日間無料トライアルあり')}>
-          <Text style={s.purchaseBtnText}>¥980/月　で始める</Text>
+        {loadingProd ? (
+          <ActivityIndicator color={D.gold} style={{ marginTop: 24 }} />
+        ) : (
+          <>
+            <TouchableOpacity
+              style={[s.purchaseBtn, (!yearlyProd || purchasing) && s.purchaseBtnDisabled]}
+              onPress={() => handlePurchase(yearlyProd)}
+              disabled={!yearlyProd || purchasing}
+            >
+              <Text style={s.purchaseBtnText}>
+                {purchasing ? '処理中...' : `${yearlyPrice}　で始める（お得）`}
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={[s.purchaseBtnOutline, (!monthlyProd || purchasing) && s.purchaseBtnDisabled]}
+              onPress={() => handlePurchase(monthlyProd)}
+              disabled={!monthlyProd || purchasing}
+            >
+              <Text style={s.purchaseBtnOutlineText}>{monthlyPrice}　で始める</Text>
+            </TouchableOpacity>
+          </>
+        )}
+
+        <Text style={s.paywallNote}>いつでもキャンセル可能</Text>
+        <TouchableOpacity onPress={handleRestore} disabled={purchasing}>
+          <Text style={s.restoreText}>購入を復元する</Text>
         </TouchableOpacity>
-        <Text style={s.paywallNote}>いつでもキャンセル可能　・　7日間無料トライアル</Text>
         <TouchableOpacity onPress={onClose} style={s.closeBtn}>
           <Text style={s.closeBtnText}>閉じる</Text>
         </TouchableOpacity>
@@ -386,6 +463,10 @@ const s = StyleSheet.create({
   featureText:       { fontSize: 14, color: D.white },
   purchaseBtn:       { marginTop: 24, backgroundColor: D.gold, borderRadius: 14, paddingVertical: 16, paddingHorizontal: 40, width: '100%', alignItems: 'center' },
   purchaseBtnText:   { fontSize: 20, fontWeight: '800', color: '#040C1C' },
+  purchaseBtnOutline: { marginTop: 10, backgroundColor: 'transparent', borderRadius: 14, borderWidth: 1, borderColor: D.goldBorder, paddingVertical: 14, paddingHorizontal: 40, width: '100%', alignItems: 'center' },
+  purchaseBtnOutlineText: { fontSize: 16, fontWeight: '700', color: D.gold },
+  purchaseBtnDisabled: { opacity: 0.5 },
+  restoreText:       { fontSize: 13, color: D.muted, marginTop: 14, textAlign: 'center', textDecorationLine: 'underline' },
   paywallNote:       { fontSize: 11, color: D.muted, marginTop: 10, textAlign: 'center' },
   closeBtn:          { marginTop: 16, padding: 10 },
   closeBtnText:      { fontSize: 14, color: D.muted },
