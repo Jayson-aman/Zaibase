@@ -13,7 +13,7 @@ import type { Lesson } from '../../data/lessons';
 import { subjectInfo, type SubjectKey } from '../../data/questions-meta';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
-import BetaGateModal from '../../components/BetaGateModal';
+import Paywall from '../../components/Paywall';
 import { useProGate } from '../../hooks/useProGate';
 
 const SUBJECTS: { key: SubjectKey; emoji: string; color: string }[] = [
@@ -26,7 +26,7 @@ const SUBJECTS: { key: SubjectKey; emoji: string; color: string }[] = [
 
 export default function TextbookScreen() {
   const router = useRouter();
-  const { hasAccess: betaAccess, unlock } = useBetaAccess();
+  const { hasAccess: betaAccess } = useBetaAccess();
   const { isPro: subIsPro, loading } = useSubscription();
   const isPro = subIsPro || betaAccess;
 
@@ -150,11 +150,10 @@ export default function TextbookScreen() {
         )}
       </ScrollView>
 
-      <BetaGateModal
+      <Paywall
         visible={paywallVisible}
         onClose={() => setPaywallVisible(false)}
-        onUnlocked={() => setPaywallVisible(false)}
-        unlock={unlock}
+        onPurchased={() => setPaywallVisible(false)}
       />
     </SafeAreaView>
   );

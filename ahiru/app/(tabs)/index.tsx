@@ -12,7 +12,7 @@ import {
 import { useRouter } from 'expo-router';
 import SubjectCard from '../../components/SubjectCard';
 import ListenMode from '../../components/ListenMode';
-import BetaGateModal from '../../components/BetaGateModal';
+import Paywall from '../../components/Paywall';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 import SchoolSlideshow from '../../components/SchoolSlideshow';
 import AnimatedMascot from '../../components/AnimatedMascot';
@@ -205,7 +205,7 @@ export default function HomeScreen() {
 
   const { bySubject: questionsBySubject } = useQuestionsBySubjectMap();
   const listenInfo = listenSubject ? subjectInfo[listenSubject] : null;
-  const { hasAccess: betaAccess, unlock } = useBetaAccess();
+  const { hasAccess: betaAccess } = useBetaAccess();
   const { isPro, paywallVisible, setPaywallVisible, requirePro } = useProGate(betaAccess);
   const { isMax: subIsMax } = useSubscription();
   const isMax = subIsMax || betaAccess;
@@ -627,11 +627,10 @@ export default function HomeScreen() {
         />
       )}
 
-      <BetaGateModal
+      <Paywall
         visible={paywallVisible}
         onClose={() => setPaywallVisible(false)}
-        onUnlocked={() => setPaywallVisible(false)}
-        unlock={unlock}
+        onPurchased={() => setPaywallVisible(false)}
       />
     </SafeAreaView>
   );
