@@ -104,6 +104,12 @@ import { seifuExamV2 } from './seifu_exam_v2';
 import { takatsukiExamV2 } from './takatsuki_exam_v2';
 import { kaimeiExamV2 } from './kaimei_exam_v2';
 import { toinExamV2 } from './toin_exam_v2';
+import { toinExamTop } from './toin_exam_top';
+import { josejogakuenExam } from './josejogakuen_exam';
+import { naniwaExam } from './naniwa_exam';
+import { otemonExam } from './otemon_exam';
+import { pooleExam } from './poole_exam';
+import { kenmeiExam } from './kenmei_exam';
 
 export type { Question, SubjectKey } from './questions-meta';
 export { subjectInfo } from './questions-meta';
@@ -2887,6 +2893,12 @@ export const questions: Question[] = [
   ...takatsukiExamV2,
   ...kaimeiExamV2,
   ...toinExamV2,
+  ...toinExamTop,
+  ...josejogakuenExam,
+  ...naniwaExam,
+  ...otemonExam,
+  ...pooleExam,
+  ...kenmeiExam,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {
