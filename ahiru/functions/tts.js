@@ -5,7 +5,7 @@
  *
  * コスト保護:
  *   APIキーはサーバー側のみで保持する（クライアントには一切渡さない）。
- *   1回あたり最大400文字、1日あたり最大150回までに制限し、
+ *   1回あたり最大150文字、1日あたり最大30回までに制限し、
  *   ttsUsage/{uid} で1日の呼び出し回数を記録する。
  *
  * 必須 Secrets:
@@ -21,8 +21,11 @@ const { defineSecret } = require("firebase-functions/params");
 const db = getFirestore();
 const OPENAI_API_KEY = defineSecret("OPENAI_API_KEY");
 
-const DAILY_LIMIT = 150;
-const MAX_CHARS = 400;
+// 英単語Pro（¥1,000/月 or ¥4,000/年 ≈ ¥333/月）の採算を守るための上限。
+// 30回/日 × 150文字 × 30日 = 135,000文字/月 ≈ tts-1-hd換算で月あたり
+// 最大約¥600（実運用ではこの上限に張り付くことは稀で、実コストはこれよりかなり低い）。
+const DAILY_LIMIT = 30;
+const MAX_CHARS = 150;
 
 function todayKey() {
   return new Date().toISOString().slice(0, 10);
