@@ -225,7 +225,7 @@ export default function ProfileScreen() {
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>運営</Text>
           <InfoRow label="アプリ" value="宅建士対策 by Zaibase v1.0.0" />
-          <InfoRow label="運営" value="南條 雅哉 / Zaibase Group" />
+          <InfoRow label="運営" value="Zaibase Group" />
           <InfoRow label="メール" value="info@zaibase.group" />
           <TouchableOpacity
             style={styles.row}
