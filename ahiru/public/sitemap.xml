@@ -187,6 +187,42 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://exam.zaibase.group/school/nagoya-nanzan</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://exam.zaibase.group/school/nagoya-tokai</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://exam.zaibase.group/school/nagoya-taki</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://exam.zaibase.group/school/fukuoka-kurume</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://exam.zaibase.group/school/fukuoka-seinan</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://exam.zaibase.group/school/fukuoka-ohori</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://exam.zaibase.group/school/koko-nada</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
