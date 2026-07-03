@@ -1,6 +1,8 @@
 import 'react-native-reanimated';
 import { useEffect, useState } from 'react';
+import { Platform } from 'react-native';
 import { Stack } from 'expo-router';
+import Head from 'expo-router/head';
 import { StatusBar } from 'expo-status-bar';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { initRevenueCat } from '../services/subscription';
@@ -28,6 +30,15 @@ export default function RootLayout() {
 
   return (
     <ErrorBoundary>
+      {Platform.OS === 'web' && (
+        <Head>
+          <title>中学受験対策 ahiru｜5科目7,000問以上・学校別コース対応</title>
+          <meta
+            name="description"
+            content="中学受験・高校受験対策アプリ。5科目7,000問以上・学校別コース対応。志望校の過去問対策・聞き流し学習・AIコーチで効率よく合格を目指す。"
+          />
+        </Head>
+      )}
       <StatusBar style="light" />
       <Stack
         screenOptions={{
