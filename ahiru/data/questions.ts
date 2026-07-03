@@ -111,6 +111,17 @@ import { otemonExam } from './otemon_exam';
 import { pooleExam } from './poole_exam';
 import { kenmeiExam } from './kenmei_exam';
 import { kankanExamTop } from './kankan_exam_top';
+import { tokyoMeidaiExam } from './tokyo_meidai_exam';
+import { tokyoAoyamaExam } from './tokyo_aoyama_exam';
+import { tokyoChuoExam } from './tokyo_chuo_exam';
+import { tokyoHoseiExam } from './tokyo_hosei_exam';
+import { tokyoGakushuinExam } from './tokyo_gakushuin_exam';
+import { nagoyaNanzanExam } from './nagoya_nanzan_exam';
+import { nagoyaTokaiExam } from './nagoya_tokai_exam';
+import { nagoyaTakiExam } from './nagoya_taki_exam';
+import { fukuokaKurumeExam } from './fukuoka_kurume_exam';
+import { fukuokaSeinanExam } from './fukuoka_seinan_exam';
+import { fukuokaOhoriExam } from './fukuoka_ohori_exam';
 
 export type { Question, SubjectKey } from './questions-meta';
 export { subjectInfo } from './questions-meta';
@@ -2901,6 +2912,17 @@ export const questions: Question[] = [
   ...pooleExam,
   ...kenmeiExam,
   ...kankanExamTop,
+  ...tokyoMeidaiExam,
+  ...tokyoAoyamaExam,
+  ...tokyoChuoExam,
+  ...tokyoHoseiExam,
+  ...tokyoGakushuinExam,
+  ...nagoyaNanzanExam,
+  ...nagoyaTokaiExam,
+  ...nagoyaTakiExam,
+  ...fukuokaKurumeExam,
+  ...fukuokaSeinanExam,
+  ...fukuokaOhoriExam,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {
