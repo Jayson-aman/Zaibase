@@ -110,6 +110,7 @@ import { naniwaExam } from './naniwa_exam';
 import { otemonExam } from './otemon_exam';
 import { pooleExam } from './poole_exam';
 import { kenmeiExam } from './kenmei_exam';
+import { kankanExamTop } from './kankan_exam_top';
 
 export type { Question, SubjectKey } from './questions-meta';
 export { subjectInfo } from './questions-meta';
@@ -2899,6 +2900,7 @@ export const questions: Question[] = [
   ...otemonExam,
   ...pooleExam,
   ...kenmeiExam,
+  ...kankanExamTop,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {
