@@ -85,7 +85,7 @@ export default function ChapterScreen() {
         </View>
 
         {/* 図解 */}
-        <ChapterFigures figures={chapter.figures} />
+        <ChapterFigures figures={chapter.figures} subject={chapter.subject} />
 
         {/* 前後ナビ */}
         <View style={styles.nav}>
