@@ -3,7 +3,7 @@ import type { TakkenQuestion } from './questions';
 export const kenriQuestions3: TakkenQuestion[] = [
   // ── kenri_09: 不法行為 (10問) ──────────────────────────────────────────────
   {
-    id: 'kr_071',
+    id: 'kr_241',
     subject: '権利関係',
     chapterId: 'kenri_09',
     question: '民法における不法行為に関する次の記述のうち、正しいものはどれか。',
@@ -27,7 +27,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '不法行為の消滅時効：知った時から3年・不法行為時から20年',
   },
   {
-    id: 'kr_072',
+    id: 'kr_242',
     subject: '権利関係',
     chapterId: 'kenri_09',
     question: '使用者責任に関する次の記述のうち、民法の規定および判例によれば、誤っているものはどれか。',
@@ -51,7 +51,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '使用者責任は過失推定（中間責任）。免責には使用者側の立証が必要',
   },
   {
-    id: 'kr_073',
+    id: 'kr_243',
     subject: '権利関係',
     chapterId: 'kenri_09',
     question: '土地工作物責任に関する次の記述のうち、民法の規定によれば、正しいものはどれか。',
@@ -75,7 +75,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '土地工作物責任：占有者＝中間責任、所有者＝無過失責任',
   },
   {
-    id: 'kr_074',
+    id: 'kr_244',
     subject: '権利関係',
     chapterId: 'kenri_09',
     question: '共同不法行為に関する次の記述のうち、民法の規定によれば、誤っているものはどれか。',
@@ -99,7 +99,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '共同不法行為：連帯責任・客観的関連共同性・求償権あり',
   },
   {
-    id: 'kr_075',
+    id: 'kr_245',
     subject: '権利関係',
     chapterId: 'kenri_09',
     question: '民法における過失相殺に関する次の記述のうち、正しいものはどれか。',
@@ -123,7 +123,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '過失相殺は裁量的規定（「できる」）・慰謝料にも適用あり',
   },
   {
-    id: 'kr_076',
+    id: 'kr_246',
     subject: '権利関係',
     chapterId: 'kenri_09',
     question: '不法行為における損害賠償の範囲に関する次の記述のうち、民法の規定によれば、誤っているものはどれか。',
@@ -148,7 +148,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '不法行為の消滅：主観3年（生命身体5年）・客観20年で絶対消滅',
   },
   {
-    id: 'kr_077',
+    id: 'kr_247',
     subject: '権利関係',
     chapterId: 'kenri_09',
     question: '宅建業者の使用者責任に関する次の記述のうち、民法の規定および判例によれば、正しいものはどれか。',
@@ -172,7 +172,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '使用者責任は外形標準説・被害者は使用者・被用者双方に請求可',
   },
   {
-    id: 'kr_078',
+    id: 'kr_248',
     subject: '権利関係',
     chapterId: 'kenri_09',
     question: '責任無能力者の監督義務者の責任に関する次の記述のうち、民法の規定および判例によれば、誤っているものはどれか。',
@@ -196,7 +196,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '精神障害者の配偶者が当然に監督義務者とはならない（最判H28.3.1）',
   },
   {
-    id: 'kr_079',
+    id: 'kr_249',
     subject: '権利関係',
     chapterId: 'kenri_09',
     question: '不法行為による損害賠償の方法に関する次の記述のうち、民法の規定によれば、正しいものはどれか。',
@@ -220,7 +220,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '名誉毀損：名誉回復処分を請求可（民法723条）・不法行為時から遅延損害金発生',
   },
   {
-    id: 'kr_080',
+    id: 'kr_250',
     subject: '権利関係',
     chapterId: 'kenri_09',
     question: '不法行為に関する次の記述のうち、民法の規定および判例によれば、誤っているものはどれか。',
@@ -246,7 +246,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
 
   // ── kenri_10: 相続 (12問) ──────────────────────────────────────────────
   {
-    id: 'kr_081',
+    id: 'kr_251',
     subject: '権利関係',
     chapterId: 'kenri_10',
     question: '民法に関する次の記述のうち、正しいものはどれか。',
@@ -270,7 +270,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '法定相続分：配偶者＋子＝1/2ずつ、＋直系尊属＝2/3・1/3、＋兄弟姉妹＝3/4・1/4',
   },
   {
-    id: 'kr_082',
+    id: 'kr_252',
     subject: '権利関係',
     chapterId: 'kenri_10',
     question: '代襲相続に関する次の記述のうち、民法の規定によれば、誤っているものはどれか。',
@@ -294,7 +294,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '代襲相続の原因：死亡・欠格・廃除の三つ。相続放棄は代襲原因にならない',
   },
   {
-    id: 'kr_083',
+    id: 'kr_253',
     subject: '権利関係',
     chapterId: 'kenri_10',
     question: '相続放棄に関する次の記述のうち、民法の規定によれば、正しいものはどれか。',
@@ -318,7 +318,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '相続放棄：3か月以内・家庭裁判所申述・全部放棄・詐欺強迫による取消可',
   },
   {
-    id: 'kr_084',
+    id: 'kr_254',
     subject: '権利関係',
     chapterId: 'kenri_10',
     question: '遺言の方式に関する次の記述のうち、民法の規定によれば、誤っているものはどれか。',
@@ -343,7 +343,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '秘密証書遺言は内容を公証人に開示しない。自筆証書の財産目録はPC可（2019年改正）',
   },
   {
-    id: 'kr_085',
+    id: 'kr_255',
     subject: '権利関係',
     chapterId: 'kenri_10',
     question: '遺留分に関する次の記述のうち、民法の規定によれば、正しいものはどれか。',
@@ -368,7 +368,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '遺留分侵害額請求は金銭請求（2019年改正）・行使期限1年・兄弟姉妹は遺留分なし',
   },
   {
-    id: 'kr_086',
+    id: 'kr_256',
     subject: '権利関係',
     chapterId: 'kenri_10',
     question: '限定承認に関する次の記述のうち、民法の規定によれば、誤っているものはどれか。',
@@ -392,7 +392,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '限定承認：全員共同・3か月以内・相続財産の範囲内で責任あり',
   },
   {
-    id: 'kr_087',
+    id: 'kr_257',
     subject: '権利関係',
     chapterId: 'kenri_10',
     question: '遺言の効力に関する次の記述のうち、民法の規定によれば、正しいものはどれか。',
@@ -416,7 +416,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '遺言の撤回：いつでも可・後の遺言が優先・故意破棄は撤回とみなし',
   },
   {
-    id: 'kr_088',
+    id: 'kr_258',
     subject: '権利関係',
     chapterId: 'kenri_10',
     question: '相続人の不存在と特別縁故者に関する次の記述のうち、民法の規定によれば、誤っているものはどれか。',
@@ -440,7 +440,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '特別縁故者への分与申立ては捜索公告期間満了後3か月以内',
   },
   {
-    id: 'kr_089',
+    id: 'kr_259',
     subject: '権利関係',
     chapterId: 'kenri_10',
     question: '相続と登記に関する次の記述のうち、民法の規定および判例によれば、正しいものはどれか。',
@@ -465,7 +465,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '法定相続分超過部分：登記がなければ第三者に対抗不可（民法899条の2）',
   },
   {
-    id: 'kr_090',
+    id: 'kr_260',
     subject: '権利関係',
     chapterId: 'kenri_10',
     question: '遺産分割に関する次の記述のうち、民法の規定によれば、誤っているものはどれか。',
@@ -489,7 +489,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '遺産分割は遡及効あり（相続開始時に遡る）・全員合意が必要',
   },
   {
-    id: 'kr_091',
+    id: 'kr_261',
     subject: '権利関係',
     chapterId: 'kenri_10',
     question: '数次相続に関する次の記述のうち、民法の規定および判例によれば、正しいものはどれか。',
@@ -513,7 +513,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '数次相続：第二相続人は第一相続の遺産分割協議に参加可',
   },
   {
-    id: 'kr_092',
+    id: 'kr_262',
     subject: '権利関係',
     chapterId: 'kenri_10',
     question: '相続欠格に関する次の記述のうち、民法の規定によれば、誤っているものはどれか。',
@@ -539,7 +539,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
 
   // ── kenri_11: 区分所有法 (10問) ──────────────────────────────────────────────
   {
-    id: 'kr_093',
+    id: 'kr_263',
     subject: '権利関係',
     chapterId: 'kenri_11',
     question: '建物の区分所有等に関する法律（区分所有法）における専有部分と共用部分に関する次の記述のうち、正しいものはどれか。',
@@ -563,7 +563,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '共用部分の変更：区分所有者・議決権各3/4以上の集会決議で可',
   },
   {
-    id: 'kr_094',
+    id: 'kr_264',
     subject: '権利関係',
     chapterId: 'kenri_11',
     question: '管理組合および管理者に関する次の記述のうち、区分所有法の規定によれば、誤っているものはどれか。',
@@ -587,7 +587,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '管理者不在でも区分所有者1/5以上で集会招集可（区分所有法34条5項）',
   },
   {
-    id: 'kr_095',
+    id: 'kr_265',
     subject: '権利関係',
     chapterId: 'kenri_11',
     question: '区分所有法における集会の決議要件に関する次の記述のうち、正しいものはどれか。',
@@ -611,7 +611,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '建替え決議：各5/4以上。規約変更・大規模滅失復旧・著しい共用部変更：各3/4以上',
   },
   {
-    id: 'kr_096',
+    id: 'kr_266',
     subject: '権利関係',
     chapterId: 'kenri_11',
     question: '区分所有建物の規約に関する次の記述のうち、区分所有法の規定によれば、誤っているものはどれか。',
@@ -635,7 +635,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '原始規約：分譲業者が公正証書で単独設定可（区分所有法32条）',
   },
   {
-    id: 'kr_097',
+    id: 'kr_267',
     subject: '権利関係',
     chapterId: 'kenri_11',
     question: '区分所有法における集会に関する次の記述のうち、正しいものはどれか。',
@@ -659,7 +659,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '集会招集通知は1週間前。普通決議は区分所有者・議決権の各過半数',
   },
   {
-    id: 'kr_098',
+    id: 'kr_268',
     subject: '権利関係',
     chapterId: 'kenri_11',
     question: '管理費および修繕積立金に関する次の記述のうち、区分所有法の規定によれば、正しいものはどれか。',
@@ -683,7 +683,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '管理費滞納：特定承継人も責任負う（区分所有法8条）・競売請求可（59条）',
   },
   {
-    id: 'kr_099',
+    id: 'kr_269',
     subject: '権利関係',
     chapterId: 'kenri_11',
     question: '区分所有建物の敷地に関する次の記述のうち、区分所有法の規定によれば、誤っているものはどれか。',
@@ -707,7 +707,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '分離処分禁止が原則・規約で分離処分を許容可・敷地割合は規約変更可',
   },
   {
-    id: 'kr_100',
+    id: 'kr_270',
     subject: '権利関係',
     chapterId: 'kenri_11',
     question: '区分所有法における義務違反者に対する措置に関する次の記述のうち、正しいものはどれか。',
@@ -731,7 +731,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '義務違反者への措置段階：停止請求→使用禁止（3/4）→競売請求（3/4）',
   },
   {
-    id: 'kr_101',
+    id: 'kr_271',
     subject: '権利関係',
     chapterId: 'kenri_11',
     question: '区分所有法に関する次の記述のうち、誤っているものはどれか。',
@@ -755,7 +755,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '管理組合法人は人数制限なし・集会で3/4以上の決議で設立可',
   },
   {
-    id: 'kr_102',
+    id: 'kr_272',
     subject: '権利関係',
     chapterId: 'kenri_11',
     question: '区分所有法における復旧・建替えに関する次の記述のうち、正しいものはどれか。',
@@ -781,7 +781,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
 
   // ── kenri_12: 不動産登記法 (8問) ──────────────────────────────────────────────
   {
-    id: 'kr_103',
+    id: 'kr_273',
     subject: '権利関係',
     chapterId: 'kenri_12',
     question: '不動産登記の効力に関する次の記述のうち、不動産登記法および民法の規定によれば、正しいものはどれか。',
@@ -805,7 +805,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '不動産登記：公信力なし・推定力あり・対抗要件（177条）',
   },
   {
-    id: 'kr_104',
+    id: 'kr_274',
     subject: '権利関係',
     chapterId: 'kenri_12',
     question: '仮登記に関する次の記述のうち、不動産登記法の規定によれば、誤っているものはどれか。',
@@ -829,7 +829,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '仮登記：順位保全効・本登記の順位は仮登記時点とみなし・原則共同申請',
   },
   {
-    id: 'kr_105',
+    id: 'kr_275',
     subject: '権利関係',
     chapterId: 'kenri_12',
     question: '表題登記に関する次の記述のうち、不動産登記法の規定によれば、正しいものはどれか。',
@@ -853,7 +853,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '表題登記：新築から1か月以内に申請義務・怠ると10万円以下の過料',
   },
   {
-    id: 'kr_106',
+    id: 'kr_276',
     subject: '権利関係',
     chapterId: 'kenri_12',
     question: '所有権保存登記に関する次の記述のうち、不動産登記法の規定によれば、誤っているものはどれか。',
@@ -877,7 +877,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '所有権保存登記：申請義務なし・単独申請・区分建物は転得者も申請可',
   },
   {
-    id: 'kr_107',
+    id: 'kr_277',
     subject: '権利関係',
     chapterId: 'kenri_12',
     question: '不動産登記の申請手続に関する次の記述のうち、不動産登記法の規定によれば、正しいものはどれか。',
@@ -901,7 +901,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '登記申請：書面申請またはオンライン申請が可能・登記原因証明情報は原則必要',
   },
   {
-    id: 'kr_108',
+    id: 'kr_278',
     subject: '権利関係',
     chapterId: 'kenri_12',
     question: '相続登記の申請義務に関する次の記述のうち、不動産登記法の規定によれば、誤っているものはどれか。',
@@ -926,7 +926,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '相続登記義務化（2024年4月1日施行）：3年以内・遡及適用あり・10万円以下の過料',
   },
   {
-    id: 'kr_109',
+    id: 'kr_279',
     subject: '権利関係',
     chapterId: 'kenri_12',
     question: '登記の種類に関する次の記述のうち、不動産登記法の規定によれば、正しいものはどれか。',
@@ -950,7 +950,7 @@ export const kenriQuestions3: TakkenQuestion[] = [
     keyPoint: '更正登記（当初の誤り訂正）vs変更登記（後発的変化）。仮差押えは嘱託登記',
   },
   {
-    id: 'kr_110',
+    id: 'kr_280',
     subject: '権利関係',
     chapterId: 'kenri_12',
     question: '不動産登記と民法第177条に関する次の記述のうち、判例によれば、誤っているものはどれか。',
