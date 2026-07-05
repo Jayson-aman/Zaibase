@@ -90,6 +90,7 @@ function CompareFigure({ fig }: { fig: Extract<ChapterFigure, { type: 'compare' 
           </View>
         ))}
       </View>
+      {fig.note ? <Text style={styles.note}>※ {fig.note}</Text> : null}
     </View>
   );
 }
@@ -112,6 +113,7 @@ function FlowFigure({ fig }: { fig: Extract<ChapterFigure, { type: 'flow' }> }) 
           {i < fig.steps.length - 1 && <Text style={styles.flowArrow}>▼</Text>}
         </View>
       ))}
+      {fig.note ? <Text style={styles.note}>※ {fig.note}</Text> : null}
     </View>
   );
 }
@@ -135,6 +137,7 @@ function HierarchyFigure({ fig }: { fig: Extract<ChapterFigure, { type: 'hierarc
           </View>
         ))}
       </View>
+      {fig.note ? <Text style={styles.note}>※ {fig.note}</Text> : null}
     </View>
   );
 }
@@ -155,6 +158,7 @@ function TimelineFigure({ fig }: { fig: Extract<ChapterFigure, { type: 'timeline
           </View>
         </View>
       ))}
+      {fig.note ? <Text style={styles.note}>※ {fig.note}</Text> : null}
     </View>
   );
 }
