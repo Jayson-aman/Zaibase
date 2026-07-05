@@ -5,6 +5,11 @@ import {
 import { router, useLocalSearchParams } from 'expo-router';
 import { getChapterById, SUBJECTS, CHAPTERS } from '../../data/chapters';
 import AudioPlayer from '../../components/AudioPlayer';
+import ChapterFigures from '../../components/ChapterFigures';
+
+export async function generateStaticParams() {
+  return CHAPTERS.map((c) => ({ id: c.id }));
+}
 
 export default function ChapterScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -78,6 +83,9 @@ export default function ChapterScreen() {
           <Text style={styles.contentTitle}>📝 解説</Text>
           <Text style={styles.contentText}>{chapter.content}</Text>
         </View>
+
+        {/* 図解 */}
+        <ChapterFigures figures={chapter.figures} />
 
         {/* 前後ナビ */}
         <View style={styles.nav}>

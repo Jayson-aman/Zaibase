@@ -1,6 +1,24 @@
 export type Subject = '権利関係' | '法令上の制限' | '宅建業法' | '税・その他';
 export type Difficulty = 'basic' | 'standard' | 'advanced';
 
+/**
+ * 構造化図解。iPhone・iPad・Web すべてで React Native の View/Text だけで
+ * 描画されるため、プラットフォームによる表示差がない。
+ */
+export type ChapterFigure =
+  // 比較表：ヘッダー行＋データ行のシンプルな表
+  | { type: 'table'; title?: string; headers: string[]; rows: string[][]; note?: string }
+  // 2項目の対比（詐欺 vs 強迫、専任 vs 一般 など）
+  | { type: 'compare'; title?: string; left: { heading: string; items: string[] }; right: { heading: string; items: string[] } }
+  // 手続きの流れ（開発許可の流れ、クーリングオフ など）
+  | { type: 'flow'; title?: string; steps: { label: string; detail?: string }[] }
+  // 分類・階層（制限行為能力者の3類型 など）
+  | { type: 'hierarchy'; title?: string; root: string; children: { label: string; sub?: string[] }[] }
+  // 期間・年表（時効期間、法改正の時系列 など）
+  | { type: 'timeline'; title?: string; events: { when: string; what: string }[] }
+  // 重要ポイント・ひっかけ注意
+  | { type: 'callout'; variant: 'point' | 'warning' | 'trap'; title?: string; body: string };
+
 export type Chapter = {
   id: string;
   subject: Subject;
@@ -12,6 +30,7 @@ export type Chapter = {
   estimatedMinutes: number;
   keyPoints: string[];
   content: string;
+  figures?: ChapterFigure[];
   recentChange?: string;
 };
 
