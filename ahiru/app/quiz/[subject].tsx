@@ -27,8 +27,6 @@ const allExplanations: Record<string, string> = {
 };
 import QuizCard from '../../components/QuizCard';
 import Paywall from '../../components/Paywall';
-import AnimatedMascot from '../../components/AnimatedMascot';
-import { getResultMascot } from '../../data/images';
 import { saveProgress } from '../../store/progress';
 import { incrementTrialQuestions, isTrialExpired, TRIAL_QUESTION_LIMIT } from '../../store/trial';
 import { submitRankingScore } from '../../services/ranking';
@@ -302,13 +300,6 @@ export default function QuizScreen() {
 
           <ScrollView contentContainerStyle={styles.resultsContent}>
             <View style={styles.resultCard}>
-              <AnimatedMascot
-                source={getResultMascot(pct)}
-                style={styles.resultAnime}
-                fallbackEmoji={emoji}
-                animation="bounce"
-                accessibilityLabel="結果イラスト"
-              />
               <Text style={styles.resultEmoji}>{emoji}</Text>
               <Text style={styles.resultMessage}>{message}</Text>
               <View style={styles.resultScoreRow}>
