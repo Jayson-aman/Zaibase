@@ -38,6 +38,31 @@ function buildExamSet(): TakkenQuestion[] {
   return result; // 科目順のまま出題（本番と同じ並び）
 }
 
+// ─── 年度別 本試験セット（作成済みの年度模擬をそのまま出題） ──────
+const EXAM_SUBJECT_ORDER: TakkenQuestion['subject'][] = [
+  '権利関係', '法令上の制限', '宅建業法', '税・その他',
+];
+
+const AVAILABLE_EXAM_YEARS: number[] = Array.from(
+  new Set(QUESTIONS.filter((q) => q.examYear != null).map((q) => q.examYear as number)),
+).sort((a, b) => b - a);
+
+function buildYearExamSet(year: number): TakkenQuestion[] {
+  const yearQs = QUESTIONS.filter((q) => q.examYear === year);
+  // 本試験と同じ科目順に並べる
+  const ordered: TakkenQuestion[] = [];
+  for (const subject of EXAM_SUBJECT_ORDER) {
+    ordered.push(...yearQs.filter((q) => q.subject === subject));
+  }
+  return ordered;
+}
+
+function eraLabel(year: number): string {
+  // 西暦→令和（令和元年=2019）
+  const reiwa = year - 2018;
+  return `令和${reiwa}年度（${year}）`;
+}
+
 function formatTime(sec: number): string {
   const h = Math.floor(sec / 3600);
   const m = Math.floor((sec % 3600) / 60);
@@ -57,6 +82,7 @@ export default function ExamScreen() {
   const [timeLeft, setTimeLeft]         = useState(EXAM_DURATION_SEC);
   const [showPaywall, setShowPaywall]   = useState(false);
   const [reviewIdx, setReviewIdx]       = useState<number | null>(null);
+  const [selectedYear, setSelectedYear] = useState<number | null>(null); // null = ランダム出題
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   // ─── タイマー ─────────────────────────────────────────
@@ -77,13 +103,13 @@ export default function ExamScreen() {
 
   const startExam = useCallback(() => {
     if (!isMax) { setShowPaywall(true); return; }
-    const qs = buildExamSet();
+    const qs = selectedYear != null ? buildYearExamSet(selectedYear) : buildExamSet();
     setQuestions(qs);
     setAnswers(new Array(qs.length).fill(null));
     setCurrent(0);
     setTimeLeft(EXAM_DURATION_SEC);
     setPhase('exam');
-  }, [isMax]);
+  }, [isMax, selectedYear]);
 
   const submitExam = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current);
@@ -156,6 +182,35 @@ export default function ExamScreen() {
       <ScrollView style={styles.root} contentContainerStyle={styles.startContent}>
         <Text style={styles.startTitle}>📝 本試験模擬モード</Text>
         <Text style={styles.startSubtitle}>実際の宅建試験と同じ形式で腕試し</Text>
+
+        <Text style={styles.sectionTitle}>出題形式を選ぶ</Text>
+        <View style={styles.yearRow}>
+          <TouchableOpacity
+            style={[styles.yearChip, selectedYear === null && styles.yearChipActive]}
+            onPress={() => setSelectedYear(null)}
+          >
+            <Text style={[styles.yearChipText, selectedYear === null && styles.yearChipTextActive]}>
+              ランダム出題
+            </Text>
+            <Text style={[styles.yearChipSub, selectedYear === null && styles.yearChipTextActive]}>
+              全問題からランダムに50問
+            </Text>
+          </TouchableOpacity>
+          {AVAILABLE_EXAM_YEARS.map((y) => (
+            <TouchableOpacity
+              key={y}
+              style={[styles.yearChip, selectedYear === y && styles.yearChipActive]}
+              onPress={() => setSelectedYear(y)}
+            >
+              <Text style={[styles.yearChipText, selectedYear === y && styles.yearChipTextActive]}>
+                {eraLabel(y)}
+              </Text>
+              <Text style={[styles.yearChipSub, selectedYear === y && styles.yearChipTextActive]}>
+                本試験形式の予想問題50問
+              </Text>
+            </TouchableOpacity>
+          ))}
+        </View>
 
         <View style={styles.infoCard}>
           <Row label="出題数" value="50問" />
@@ -275,7 +330,7 @@ export default function ExamScreen() {
       {/* ヘッダー */}
       <View style={styles.examHeader}>
         <Text style={[styles.timer, isLowTime && styles.timerLow]}>{formatTime(timeLeft)}</Text>
-        <Text style={styles.examProgress}>{current + 1} / {TOTAL_QUESTIONS}</Text>
+        <Text style={styles.examProgress}>{current + 1} / {questions.length}</Text>
         <TouchableOpacity style={styles.submitHeaderBtn} onPress={confirmSubmit}>
           <Text style={styles.submitHeaderText}>提出</Text>
         </TouchableOpacity>
@@ -328,7 +383,7 @@ export default function ExamScreen() {
         >
           <Text style={styles.navBtnText}>← 前の問題</Text>
         </TouchableOpacity>
-        {current < TOTAL_QUESTIONS - 1 ? (
+        {current < questions.length - 1 ? (
           <TouchableOpacity style={[styles.navBtn, styles.navBtnNext]} onPress={() => setCurrent((c) => c + 1)}>
             <Text style={[styles.navBtnText, { color: '#fff' }]}>次の問題 →</Text>
           </TouchableOpacity>
@@ -359,6 +414,12 @@ const styles = StyleSheet.create({
   startContent: { padding: 20, paddingTop: Platform.OS === 'ios' ? 60 : 40, paddingBottom: 40 },
   startTitle: { fontSize: 26, fontWeight: '800', color: '#1E293B', textAlign: 'center', marginBottom: 6 },
   startSubtitle: { fontSize: 14, color: '#64748B', textAlign: 'center', marginBottom: 24 },
+  yearRow: { gap: 10, marginBottom: 20 },
+  yearChip: { backgroundColor: '#fff', borderRadius: 12, padding: 14, borderWidth: 2, borderColor: '#E2E8F0' },
+  yearChipActive: { borderColor: '#1E40AF', backgroundColor: '#EFF6FF' },
+  yearChipText: { fontSize: 16, fontWeight: '800', color: '#1E293B' },
+  yearChipTextActive: { color: '#1E40AF' },
+  yearChipSub: { fontSize: 12, color: '#64748B', marginTop: 2 },
   infoCard: { backgroundColor: '#fff', borderRadius: 14, padding: 16, marginBottom: 20, elevation: 2, shadowColor: '#000', shadowOpacity: 0.06, shadowRadius: 8, shadowOffset: { width: 0, height: 2 } },
   infoRow: { flexDirection: 'row', justifyContent: 'space-between', paddingVertical: 8, borderBottomWidth: 1, borderBottomColor: '#F1F5F9' },
   infoLabel: { fontSize: 14, color: '#64748B' },
