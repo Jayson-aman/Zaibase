@@ -7,6 +7,7 @@ import {
   Dimensions,
   Platform,
   ScrollView,
+  Image,
 } from 'react-native';
 
 const SERIF = Platform.select({
@@ -15,6 +16,10 @@ const SERIF = Platform.select({
   default: undefined,
 }) as string | undefined;
 import { Question, subjectInfo } from '../data/questions-meta';
+import {
+  getHistoryThemeLabel,
+  getQuestionIllustration,
+} from '../data/images';
 
 type Props = {
   question: Question;
@@ -36,6 +41,10 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
   const [revealed, setRevealed] = useState(false);
   const [selectedChoice, setSelectedChoice] = useState<string | null>(null);
   const info = subjectInfo[question.subject];
+  const historyLabel = getHistoryThemeLabel(question.id);
+  const illustration = question.subject === 'shakai'
+    ? getQuestionIllustration(question.subject, question.id)
+    : null;
 
   function handlePress() {
     if (choices != null || revealed) return;
@@ -64,7 +73,22 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             {info.emoji} {info.name}
           </Text>
         </View>
+        {historyLabel != null && (
+          <View style={styles.historyChip}>
+            <Text style={styles.historyChipText}>🏛 {historyLabel}</Text>
+          </View>
+        )}
       </View>
+
+      {illustration != null && (
+        <View style={styles.illustrationWrap}>
+          <Image
+            source={illustration}
+            style={styles.illustration}
+            resizeMode="cover"
+          />
+        </View>
+      )}
 
       {choices != null ? (
         <View style={styles.choiceSection}>

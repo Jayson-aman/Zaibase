@@ -112,7 +112,7 @@ const FEATURES = [
     desc: '得意科目・苦手科目を一目で把握。\n保護者向けレポートも自動生成。',
     tag: '全員',
     tagColor: C.blue,
-    image: require('../assets/images/feature-ranking.png') as number,
+    image: require('../assets/mascots/mascot-home.png') as number,
   },
 ];
 
@@ -383,7 +383,8 @@ export default function LandingPage() {
               '✓ 無料プランの全機能',
               '✓ 聞き流しモード（全5科目）',
               '✓ 地理マップ全レイヤー',
-              '✓ 全科目・全問題への無制限アクセス',
+              '✓ 歴史イラスト・合戦シーン',
+              '✓ キャラクターマスコット全解放',
             ].map((f) => (
               <Text key={f} style={[styles.planFeature, { color: '#D4AAFF' }]}>{f}</Text>
             ))}
