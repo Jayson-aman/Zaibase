@@ -3,6 +3,7 @@ import {
   View, Text, ScrollView, TouchableOpacity, StyleSheet,
   Platform, Linking, Alert, ActivityIndicator,
 } from 'react-native';
+import { router } from 'expo-router';
 import { clearTTSCache } from '../../services/tts';
 import { useSubscription } from '../../hooks/useSubscription';
 import {
@@ -236,17 +237,24 @@ export default function ProfileScreen() {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.row}
-            onPress={() => Linking.openURL('https://www.zaibase.group/privacy')}
+            onPress={() => router.push('/privacy')}
           >
             <Text style={styles.rowLabel}>プライバシーポリシー</Text>
-            <Text style={styles.rowLink}>表示 ↗</Text>
+            <Text style={styles.rowLink}>表示 ›</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.row}
-            onPress={() => Linking.openURL('https://www.zaibase.group/terms')}
+            onPress={() => router.push('/terms')}
           >
             <Text style={styles.rowLabel}>利用規約</Text>
-            <Text style={styles.rowLink}>表示 ↗</Text>
+            <Text style={styles.rowLink}>表示 ›</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.row}
+            onPress={() => router.push('/tokusho')}
+          >
+            <Text style={styles.rowLabel}>特定商取引法に基づく表示</Text>
+            <Text style={styles.rowLink}>表示 ›</Text>
           </TouchableOpacity>
         </View>
 
