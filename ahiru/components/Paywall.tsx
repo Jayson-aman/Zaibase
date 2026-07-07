@@ -201,11 +201,9 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
           {Platform.OS === 'android' && (
             <View style={styles.androidNotice}>
               <Text style={styles.androidNoticeText}>
-                ⚠️ Android では現在 PRO / MAX プランのご購入はご利用いただけません。{'\n'}
-                購入は iPhone / iPad からお願いします。{'\n\n'}
-                📱 Android をお使いの方は Google Chrome で{'\n'}
-                exam.zaibase.group にアクセスすると{'\n'}
-                無料問題をご利用いただけます。{'\n\n'}
+                ⚠️ Android アプリでは現在 PRO / MAX プランのご購入はご利用いただけません。{'\n\n'}
+                📱 Google Chrome で exam.zaibase.group にアクセスすると{'\n'}
+                Web版からご購入いただけます。{'\n\n'}
                 ※ Android アプリでの課金は近日実装予定です。
               </Text>
             </View>
@@ -220,7 +218,9 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
           </TouchableOpacity>
 
           <Text style={styles.terms}>
-            サブスクリプションは期間終了の24時間前までに解約しない限り自動更新されます。解約はApp Store / Google Playの設定からいつでも可能です。お支払いは購入確定時にストアアカウントへ請求されます。
+            {Platform.OS === 'web'
+              ? 'サブスクリプションは期間終了の24時間前までに解約しない限り自動更新されます。お支払いはクレジットカード（Stripe経由）です。解約は購入完了メール内の「サブスクリプション管理」リンクからいつでも可能です。'
+              : 'サブスクリプションは期間終了の24時間前までに解約しない限り自動更新されます。解約はApp Store / Google Playの設定からいつでも可能です。お支払いは購入確定時にストアアカウントへ請求されます。'}
           </Text>
 
           <View style={styles.legalLinks}>
