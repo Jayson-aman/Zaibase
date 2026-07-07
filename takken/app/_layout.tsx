@@ -18,6 +18,9 @@ export default function RootLayout() {
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="chapter/[id]" options={{ headerShown: false, presentation: 'card' }} />
+        <Stack.Screen name="privacy" options={{ headerShown: false, presentation: 'modal' }} />
+        <Stack.Screen name="terms" options={{ headerShown: false, presentation: 'modal' }} />
+        <Stack.Screen name="tokusho" options={{ headerShown: false, presentation: 'modal' }} />
       </Stack>
     </>
   );

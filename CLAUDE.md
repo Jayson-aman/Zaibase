@@ -20,6 +20,7 @@
 | Zaibase法律相談（Cloud Run版・本番） | 別リポジトリ（~/Documents/GitHub/Zaibase法律相談） | https://zaibase-legal-k56gkm3vfa-an.a.run.app | Cursor |
 | 中学受験対策 ahiru | jayson-aman/zaibase (ahiru/)（旧 jayson-aman/ahiru は統合元として残存） | https://exam.zaibase.group | Claude Code |
 | 宅建士対策 | jayson-aman/zaibase (takken/) | Vercel デプロイ予定（URL未定） | Claude Code |
+| 高校受験 英単語・英熟語 EWP.Zaibase | ローカル・Git未管理（このリポジトリ未統合。Cursorで作成、RevenueCat課金は実機テスト済みで稼働中。英単語2,300語・英熟語2,200語、文法ワークブック全25章、ジョーク読解クイズ収録） | 未定 | Cursor |
 | Zaibase Group 会社サイト | jayson-aman/zaibase.group | https://www.zaibase.group | Cursor |
 | Zaibase証券（仮） | jayson-aman/miyabi-securities-app（公開・このリポジトリ未統合。旧 miyabi-securities はアーカイブ済み。Streamlit製AI金融分析ダッシュボード：ニュース・要人発言・軍事動向のAI分析でFX・先物・株式・暗号資産・新興テーマ株の値動きを予測。Python100%、Yahoo Finance/Google Newsがデータ元、教育目的・投資助言ではないと明記） | 未定 | Cursor |
 | Zaibase物販（仮） | jayson-aman/eBay-export-profit-dashboard（公開・このリポジトリ未統合） | 未定（Streamlit Community Cloudでデプロイ） | Cursor |
@@ -45,7 +46,7 @@ Zaibase/
 │   └── vercel.json              # Web版デプロイ設定（Root Directory要設定）
 ├── takken/            # 宅建士対策（Expo/React Native、iOS・Android・Web）
 │   ├── app/                     # expo-router 画面（ホーム・テキスト・問題集・マイページ）
-│   ├── data/                    # 790問（宅建業法・権利関係・法令制限・税その他）
+│   ├── data/                    # 約1,400問＋全34章テキスト・図解（宅建業法・権利関係・法令制限・税その他）。令和7・8年本試験模擬50問×2含む
 │   ├── services/subscription.ts # RevenueCat連携（プレースホルダー）
 │   └── vercel.json              # Web版デプロイ設定（Root Directory: takken）
 └── docs/
@@ -62,6 +63,15 @@ Zaibase/
 - horitsu の `applyGroupDiscount`（建設プロプラン会員→法律相談¥1,000引き、`horitsu/functions/subscription.js`）は、弁護士法72条（周旋・紹介規制）の確認が取れるまで管理者承認（`groupDiscountGranted`）しない
 - zaibase.group・法律相談（Cloud Run版）に「建設のトラブルはそのまま法律相談へ」等、建設と法律相談を商業的に誘導する文言を入れない
 - 詳細は `docs/group/legal-compliance-addendum.md` 参照
+
+## 法改正・税制改正の更新方針（宅建・法律相談・建設）
+
+**方針：法改正・税制改正があった都度、該当コンテンツ（問題・解説・図解・テキスト）を最新の現行法に更新する。** 特に宅建（takken）は毎年10月の本試験が「その年の4月1日時点で施行されている法令」に基づくため、年度の法改正は必ず反映する。
+
+- **更新対象**：takken の問題（`data/questions_*.ts`）・解説・章テキストと図解（`data/chapters.ts`）、horitsu/kensetsu の法律コンテンツ。
+- **現在反映済みのベースライン（2026年時点）**：盛土規制法（宅地造成及び特定盛土等規制法・令和5年施行）、相続登記の申請義務化（令和6年4月）、成年年齢18歳（令和4年）、譲渡所得の長期20.315%／短期39.63%、不動産取得税 土地・住宅3%、固定資産税 小規模住宅用地1/6 等。
+- **毎年チェックすべき典型項目**：税率・軽減措置の期限延長／改正（不動産取得税・固定資産税・登録免許税・印紙税の特例）、住宅ローン控除、各種特別控除の要件、都市計画法・建築基準法・宅建業法の改正、統計問題の最新データ。
+- **作業手順**：法改正を反映する際は、①該当する問題・解説・図解を検索して更新、②`correctExplanation` と `choiceExplanations`・図解の数値を現行法に合わせる、③`recentChange` フィールドや `isRecentChange` があれば付与、④TypeScript型チェック後にコミット。
 
 ## ツール別担当まとめ
 

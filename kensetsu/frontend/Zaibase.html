@@ -2052,6 +2052,52 @@
     #karoshiScreen .kr-reply-name { font-weight: 700; color: #15803d; margin-right: 6px; }
     #karoshiScreen .kr-report-box { background: var(--zb-bg); border: 1.5px solid #b91c1c; border-radius: 10px; padding: 12px; font-size: 12px; line-height: 1.9; white-space: pre-wrap; font-family: monospace; color: var(--zb-text); max-height: 300px; overflow-y: auto; margin-top: 10px; }
 
+    /* 施工計画書・品質管理（#sekoKeikakuScreen） */
+    #sekoKeikakuScreen { background: var(--zb-bg); min-height: 100vh; display: flex; flex-direction: column; padding-bottom: 80px; color: var(--zb-text); }
+    #sekoKeikakuScreen .sk-hd { background: linear-gradient(135deg,#0c4a6e,#0369a1); padding: 13px 16px 16px; flex-shrink: 0; }
+    #sekoKeikakuScreen .sk-hd-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    #sekoKeikakuScreen .sk-back { color: rgba(255,255,255,.75); font-size: 22px; border: none; background: none; cursor: pointer; }
+    #sekoKeikakuScreen .sk-logo { color: #fff; font-size: 17px; font-weight: 800; flex: 1; }
+    #sekoKeikakuScreen .sk-mission { background: rgba(255,255,255,.12); border-radius: 12px; padding: 11px 13px; color: #fff; font-size: 12px; line-height: 1.75; }
+    #sekoKeikakuScreen .sk-tabs { background: var(--zb-card); border-bottom: 1px solid var(--zb-border); display: flex; padding: 0 6px; position: sticky; top: 0; z-index: 9; overflow-x: auto; }
+    #sekoKeikakuScreen .sk-tab { padding: 11px 12px; font-size: 12px; font-weight: 600; color: var(--zb-muted); border: none; background: none; border-bottom: 2px solid transparent; cursor: pointer; white-space: nowrap; }
+    #sekoKeikakuScreen .sk-tab.act { color: #0369a1; border-bottom-color: #0369a1; }
+    #sekoKeikakuScreen .sk-main { flex: 1; padding: 14px; overflow-y: auto; }
+    #sekoKeikakuScreen .sk-card { background: var(--zb-card); border-radius: 14px; border: 1px solid var(--zb-border); padding: 14px; margin-bottom: 12px; }
+    #sekoKeikakuScreen .sk-card-title { font-size: 14px; font-weight: 700; color: var(--zb-navy); margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+    #sekoKeikakuScreen .sk-field { margin-bottom: 10px; }
+    #sekoKeikakuScreen .sk-field label { display: block; font-size: 12px; font-weight: 600; color: var(--zb-muted); margin-bottom: 4px; }
+    #sekoKeikakuScreen .sk-field input, #sekoKeikakuScreen .sk-field select, #sekoKeikakuScreen .sk-field textarea { width: 100%; padding: 9px 12px; border: 1.5px solid var(--zb-border); border-radius: 9px; font-size: 14px; background: var(--zb-bg); color: var(--zb-text); box-sizing: border-box; }
+    #sekoKeikakuScreen .sk-field textarea { height: 70px; resize: vertical; }
+    #sekoKeikakuScreen .sk-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    #sekoKeikakuScreen .sk-section-hd { font-size: 13px; font-weight: 800; color: #0369a1; background: #e0f2fe; border-radius: 8px; padding: 8px 12px; margin: 14px 0 8px; }
+    #sekoKeikakuScreen .sk-preview { background: #f8fafc; border: 1px solid var(--zb-border); border-radius: 10px; padding: 12px; font-size: 12px; line-height: 2; white-space: pre-wrap; font-family: monospace; color: var(--zb-text); max-height: 320px; overflow-y: auto; }
+    #sekoKeikakuScreen .sk-btn { width: 100%; padding: 13px; background: #0369a1; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; margin-top: 8px; }
+    #sekoKeikakuScreen .sk-btn.green { background: #15803d; }
+    #sekoKeikakuScreen .sk-chk-row { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--zb-border); }
+    #sekoKeikakuScreen .sk-chk-row:last-child { border-bottom: none; }
+    #sekoKeikakuScreen .sk-chk-row input[type=checkbox] { margin-top: 3px; accent-color: #0369a1; width: 16px; height: 16px; flex-shrink: 0; }
+    #sekoKeikakuScreen .sk-chk-label { font-size: 12px; line-height: 1.7; color: var(--zb-text); flex: 1; }
+    #sekoKeikakuScreen .sk-chk-label.done { text-decoration: line-through; color: var(--zb-muted); }
+    #sekoKeikakuScreen .sk-badge { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 10px; font-weight: 700; margin-left: 4px; }
+    #sekoKeikakuScreen .sk-badge.must { background: #fee2e2; color: #b91c1c; }
+    #sekoKeikakuScreen .sk-badge.rec { background: #dbeafe; color: #1e40af; }
+    #sekoKeikakuScreen .sk-progress { background: #e2e8f0; border-radius: 10px; height: 10px; margin: 8px 0; }
+    #sekoKeikakuScreen .sk-progress-fill { height: 10px; border-radius: 10px; background: #0369a1; transition: width .3s; }
+    #sekoKeikakuScreen .sk-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+    #sekoKeikakuScreen .sk-table th { background: #0369a1; color: #fff; padding: 7px 8px; text-align: left; font-weight: 700; }
+    #sekoKeikakuScreen .sk-table td { padding: 7px 8px; border-bottom: 1px solid var(--zb-border); vertical-align: top; }
+    #sekoKeikakuScreen .sk-table tr:nth-child(even) td { background: var(--zb-bg); }
+    #sekoKeikakuScreen .sk-alert { border-radius: 10px; padding: 10px 13px; font-size: 12px; line-height: 1.7; margin-bottom: 8px; }
+    #sekoKeikakuScreen .sk-alert.warn { background: #fffbeb; border-left: 4px solid #d97706; }
+    #sekoKeikakuScreen .sk-alert.danger { background: #fef2f2; border-left: 4px solid #dc2626; }
+    #sekoKeikakuScreen .sk-alert.ok { background: #f0fdf4; border-left: 4px solid #16a34a; }
+    #sekoKeikakuScreen .sk-alert.info { background: #eff6ff; border-left: 4px solid #2563eb; }
+    #sekoKeikakuScreen .sk-temp-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; }
+    #sekoKeikakuScreen .sk-temp-badge.ok { background: #dcfce7; color: #15803d; }
+    #sekoKeikakuScreen .sk-temp-badge.warn { background: #fef3c7; color: #92400e; }
+    #sekoKeikakuScreen .sk-temp-badge.ng { background: #fee2e2; color: #b91c1c; }
+
     /* 騒音・振動規制 申請支援（§45 #noiseVibScreen） */
     #noiseVibScreen { background: var(--zb-bg); min-height: 100vh; display: flex; flex-direction: column; padding-bottom: 80px; color: var(--zb-text); }
     #noiseVibScreen .nv2-hd { background: linear-gradient(135deg,#451a03,#b45309); padding: 13px 16px 16px; flex-shrink: 0; }
@@ -4611,6 +4657,7 @@ Email：info@zaibase.group</div>
     <button type="button" id="mypageChainBtn">🔗 多層契約（準備中）</button>
     <button type="button" id="mypageCashflowBtn">💰 資金繰りシミュレーター</button>
     <button type="button" id="mypagePriceGuideBtn">📋 価格協議コンプライアンスガイド</button>
+    <button type="button" id="mypageSekoBtn">🏗️ 施工計画書・品質管理</button>
     <button type="button" id="mypagePriceNegotiationBtn">📈 価格転嫁交渉サポート</button>
     <!-- 多層契約停止中バナー（chainContractEnabled: false 時に表示） -->
     <div id="chainGateBanner" style="background:#f0f9ff;border:1px solid #bae6fd;border-radius:10px;padding:10px 12px;margin-top:6px;font-size:11px;color:#0369A1;line-height:1.7;">
@@ -5472,11 +5519,13 @@ Email：info@zaibase.group</div>
     <button class="ind-tab act" data-ind-tab="demand">🏗️ 需要・投資</button>
     <button class="ind-tab" data-ind-tab="structure">🏢 業者数・構造</button>
     <button class="ind-tab" data-ind-tab="labor">👷 人材・労働</button>
+    <button class="ind-tab" data-ind-tab="materials">📦 資材市況</button>
   </nav>
   <main class="ind-main">
     <div id="indPageDemand"></div>
     <div id="indPageStructure" class="hidden"></div>
     <div id="indPageLabor" class="hidden"></div>
+    <div id="indPageMaterials" class="hidden"></div>
   </main>
 </div>
 
@@ -6446,11 +6495,11 @@ Email：info@zaibase.group</div>
     <div class="legal-section">
       <div class="legal-h1">事業者情報</div>
       <table class="legal-table">
-        <tr><td style="width:40%;font-weight:700;">販売業者名</td><td>Zaibase Group（南條 雅哉）</td></tr>
-        <tr><td style="font-weight:700;">所在地</td><td>〒543-0071<br>大阪府大阪市天王寺区筆ヶ崎町6-12-1701</td></tr>
-        <tr><td style="font-weight:700;">電話番号</td><td>請求があった場合、遅滞なく開示します</td></tr>
+        <tr><td style="width:40%;font-weight:700;">販売業者名</td><td>Zaibase Group</td></tr>
+        <tr><td style="font-weight:700;">所在地</td><td>請求があった場合、遅滞なく開示します（info@zaibase.group までメールをお送りください）</td></tr>
+        <tr><td style="font-weight:700;">電話番号</td><td>請求があった場合、遅滞なく開示します（info@zaibase.group までメールをお送りください）</td></tr>
         <tr><td style="font-weight:700;">メールアドレス</td><td>info@zaibase.group</td></tr>
-        <tr><td style="font-weight:700;">運営責任者</td><td>南條 雅哉</td></tr>
+        <tr><td style="font-weight:700;">運営責任者</td><td>請求があった場合、遅滞なく開示します（info@zaibase.group までメールをお送りください）</td></tr>
       </table>
     </div>
 
@@ -7071,6 +7120,27 @@ info@zaibase.group</p>
     <div id="pnLoading" style="display:none;text-align:center;padding:20px;color:var(--zb-muted);font-size:13px;">AIが交渉文を生成中…</div>
     <div id="pnError" style="display:none;color:#dc2626;font-size:13px;padding:10px;background:#fef2f2;border-radius:8px;margin-top:8px;"></div>
   </div>
+</div>
+
+<!-- 施工計画書・品質管理（#sekoKeikakuScreen） -->
+<div id="sekoKeikakuScreen" class="hidden">
+  <header class="sk-hd">
+    <div class="sk-hd-row">
+      <button class="sk-back" id="sekoBackBtn"><i class="ti ti-arrow-left"></i></button>
+      <span class="sk-logo">🏗️ 施工計画書・品質管理</span>
+    </div>
+    <div class="sk-mission">施工計画書の作成支援・品質管理チェック・既製コンクリート杭工事管理をサポートします。</div>
+  </header>
+  <nav class="sk-tabs">
+    <button class="sk-tab act" data-sk-tab="plan">📋 施工計画書作成</button>
+    <button class="sk-tab" data-sk-tab="quality">✅ 品質管理チェック</button>
+    <button class="sk-tab" data-sk-tab="pile">🪨 既製杭施工管理</button>
+  </nav>
+  <main class="sk-main">
+    <div id="skPagePlan"></div>
+    <div id="skPageQuality" class="hidden"></div>
+    <div id="skPagePile" class="hidden"></div>
+  </main>
 </div>
 
 <!-- 写真拡大 -->
@@ -11796,9 +11866,11 @@ ${transcript}
     document.getElementById('indPageDemand').classList.toggle('hidden', tab !== 'demand');
     document.getElementById('indPageStructure').classList.toggle('hidden', tab !== 'structure');
     document.getElementById('indPageLabor').classList.toggle('hidden', tab !== 'labor');
+    document.getElementById('indPageMaterials').classList.toggle('hidden', tab !== 'materials');
     if (tab === 'demand') renderIndDemandTab();
     if (tab === 'structure') renderIndStructureTab();
     if (tab === 'labor') renderIndLaborTab();
+    if (tab === 'materials') renderIndMaterialsTab();
   }
 
   function renderIndDemandTab() {
@@ -11988,6 +12060,147 @@ ${transcript}
     `;
   }
 
+  // ===== 資材市況タブ =====
+  const MAT_REGIONS = ['東京', '大阪', '名古屋', '福岡'];
+  let matRegion = '東京';
+
+  // 参考単価（令和6〜7年度水準）・実際の調達は必ず見積取得のこと
+  const MAT_DATA = {
+    '東京': {
+      steel: { price: '260,000〜360,000', unit: '円/t（材工）', trend: '↗', note: '鉄鉱石・コークス価格上昇・輸送費高騰' },
+      rebar: { price: '175,000〜230,000', unit: '円/t（材工）', trend: '→', note: '電炉メーカー電力コスト転嫁継続' },
+      concrete: { price: '25,000〜30,000', unit: '円/m³（打設込）', trend: '↗', note: '骨材・輸送・人件費上昇' },
+      elevator: { price: '900〜1,300', unit: '万円（6人乗り3停止・材工）', trend: '↗', note: '半導体・基板部品の調達難が継続' },
+      alc: { price: '17,000〜22,000', unit: '円/m²（材工）', trend: '→', note: '輸送コスト上昇分を価格転嫁中' },
+      sash: { price: '50,000〜70,000', unit: '円/m²（材工）', trend: '↗', note: 'アルミ地金価格・LNG燃料費の上昇' },
+      steelDoor: { price: '28,000〜45,000', unit: '円/枚（W900×H2100・材工）', trend: '→', note: '鋼材価格高止まりも生産安定' },
+      pairGlass: { price: '22,000〜38,000', unit: '円/m²（Low-E複層・材工）', trend: '→', note: 'ガス代上昇分の価格転嫁ほぼ完了' },
+      oaFloor: { price: '20,000〜30,000', unit: '円/m²（スチール製150mm・材工）', trend: '→', note: '鋼板コスト安定で横ばい傾向' },
+    },
+    '大阪': {
+      steel: { price: '245,000〜340,000', unit: '円/t（材工）', trend: '↗', note: '港湾輸送コスト上昇・関西圏需要堅調' },
+      rebar: { price: '165,000〜215,000', unit: '円/t（材工）', trend: '→', note: '神戸製鋼・大阪製鉄等の供給安定' },
+      concrete: { price: '23,000〜27,500', unit: '円/m³（打設込）', trend: '↗', note: '大阪・関西万博関連需要で逼迫' },
+      elevator: { price: '850〜1,200', unit: '万円（6人乗り3停止・材工）', trend: '↗', note: '万博・再開発案件で工期延伸リスク' },
+      alc: { price: '16,000〜21,000', unit: '円/m²（材工）', trend: '→', note: '関西圏供給体制は比較的安定' },
+      sash: { price: '47,000〜65,000', unit: '円/m²（材工）', trend: '↗', note: '万博需要集中で職人不足・割増傾向' },
+      steelDoor: { price: '26,000〜42,000', unit: '円/枚（W900×H2100・材工）', trend: '→', note: '名古屋・関東製品の広域流通で安定' },
+      pairGlass: { price: '20,000〜35,000', unit: '円/m²（Low-E複層・材工）', trend: '→', note: '大手板ガラスメーカー拠点が近隣' },
+      oaFloor: { price: '19,000〜28,000', unit: '円/m²（スチール製150mm・材工）', trend: '→', note: '東京比5〜10%安の傾向' },
+    },
+    '名古屋': {
+      steel: { price: '235,000〜320,000', unit: '円/t（材工）', trend: '→', note: '鉄鋼メーカー拠点近隣で輸送費低減' },
+      rebar: { price: '158,000〜205,000', unit: '円/t（材工）', trend: '→', note: '東海地区は中部電力圏で電炉コスト比較的安定' },
+      concrete: { price: '21,500〜26,000', unit: '円/m³（打設込）', trend: '→', note: '中部圏は骨材産地近接で比較的低価格' },
+      elevator: { price: '820〜1,150', unit: '万円（6人乗り3停止・材工）', trend: '↗', note: '半導体・電子部品の国内調達難継続' },
+      alc: { price: '15,500〜20,000', unit: '円/m²（材工）', trend: '→', note: '東海圏はメーカー直送ルートが整備' },
+      sash: { price: '44,000〜62,000', unit: '円/m²（材工）', trend: '→', note: '自動車産業との競合で職人確保は課題' },
+      steelDoor: { price: '25,000〜40,000', unit: '円/枚（W900×H2100・材工）', trend: '→', note: '製造業集積地のため流通効率が高い' },
+      pairGlass: { price: '19,000〜33,000', unit: '円/m²（Low-E複層・材工）', trend: '→', note: '中部圏のガラス加工拠点が近隣' },
+      oaFloor: { price: '18,000〜26,000', unit: '円/m²（スチール製150mm・材工）', trend: '→', note: '東京比8〜12%安の傾向' },
+    },
+    '福岡': {
+      steel: { price: '230,000〜315,000', unit: '円/t（材工）', trend: '→', note: '日本製鉄九州製鉄所（八幡）が近隣' },
+      rebar: { price: '155,000〜200,000', unit: '円/t（材工）', trend: '→', note: '九州電力管内・電炉コスト安定傾向' },
+      concrete: { price: '21,000〜25,500', unit: '円/m³（打設込）', trend: '→', note: '九州は骨材産地が多く比較的安価' },
+      elevator: { price: '800〜1,100', unit: '万円（6人乗り3停止・材工）', trend: '↗', note: '九州へのメーカー配送コストが高い' },
+      alc: { price: '15,000〜19,500', unit: '円/m²（材工）', trend: '→', note: '一部製品は関西・中部から広域輸送' },
+      sash: { price: '43,000〜60,000', unit: '円/m²（材工）', trend: '→', note: '九州圏の施工会社は比較的安定供給' },
+      steelDoor: { price: '24,000〜38,000', unit: '円/枚（W900×H2100・材工）', trend: '→', note: '製鉄所近隣のため材料調達コスト低め' },
+      pairGlass: { price: '19,000〜32,000', unit: '円/m²（Low-E複層・材工）', trend: '→', note: '大手板ガラスメーカーの九州拠点あり' },
+      oaFloor: { price: '17,500〜25,000', unit: '円/m²（スチール製150mm・材工）', trend: '→', note: '東京比10〜15%安の傾向' },
+    },
+  };
+
+  const MAT_NAPHTHA = [
+    { name: '断熱材（押出法ポリスチレン・XPS）', status: 'shortage', note: 'ナフサ系原料（スチレンモノマー）の需給逼迫。増量申請は早めに。' },
+    { name: '断熱材（発泡ウレタン・硬質PU）', status: 'shortage', note: 'MDI・TDI等イソシアネートの供給不安定。代替品（グラスウール系）に切替推奨。' },
+    { name: 'シーリング材（ポリウレタン系・変成シリコーン）', status: 'tight', note: 'ウレタン原料高止まり。リードタイム延伸（発注から納品3〜4週）。' },
+    { name: '防水材（改質アスファルト系）', status: 'tight', note: '原油価格上昇の影響で単価上昇中。早期発注で納期確保を推奨。' },
+    { name: '塗料（溶剤系・一般建築用）', status: 'tight', note: 'ナフサ系溶剤価格上昇。水性塗料への切替で影響を軽減できる場合あり。' },
+    { name: '床材・壁材（塩ビ系・PVC）', status: 'tight', note: 'ナフサ由来の塩化ビニル樹脂価格上昇。代替はOAフロア・タイル系が安定。' },
+    { name: '配管材（硬質塩ビ管・VP管）', status: 'stable', note: '設備配管系は在庫対応可。ただし特殊サイズは納期注意。' },
+    { name: '断熱材（グラスウール・ロックウール系）', status: 'stable', note: 'ガラス繊維・鉱物繊維系のため石油由来原料の影響を受けにくい。安定供給中。' },
+  ];
+
+  function renderIndMaterialsTab() {
+    const el = document.getElementById('indPageMaterials');
+    if (!el) return;
+    const d = MAT_DATA[matRegion];
+    const statusColor = { shortage: '#dc2626', tight: '#d97706', stable: '#16a34a' };
+    const statusLabel = { shortage: '🔴 品薄', tight: '🟡 やや逼迫', stable: '🟢 安定' };
+    const trendColor = { '↗': '#dc2626', '→': '#64748b', '↘': '#2563eb' };
+    const rows = [
+      ['鉄骨', d.steel], ['鉄筋（異形棒鋼）', d.rebar], ['生コンクリート', d.concrete],
+      ['昇降機（EV）', d.elevator], ['ALC パネル', d.alc], ['アルミサッシ', d.sash],
+      ['スチール建具', d.steelDoor], ['ペアガラス（Low-E）', d.pairGlass], ['OA フロア', d.oaFloor],
+    ];
+    el.innerHTML = `
+      <div style="padding:10px 14px 0;">
+        <div style="font-size:11px;color:#dc2626;background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:8px 10px;margin-bottom:10px;line-height:1.6;">
+          ⚠️ 以下の単価は令和6〜7年度の参考水準です。実際の調達は必ず現地業者から見積りを取得してください。
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;">
+          ${MAT_REGIONS.map(r => `<button onclick="matRegion='${r}';renderIndMaterialsTab();" style="padding:6px 14px;border-radius:20px;border:1px solid ${r===matRegion?'#0ea5e9':'#cbd5e1'};background:${r===matRegion?'#0ea5e9':'#fff'};color:${r===matRegion?'#fff':'#334155'};font-size:12px;font-weight:700;cursor:pointer;">${r}</button>`).join('')}
+        </div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-card-title">🏗️ 主要資機材 参考単価（${matRegion}・令和6〜7年度）</div>
+        <div style="overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:12px;">
+            <thead>
+              <tr style="background:var(--zb-bg);">
+                <th style="padding:7px 8px;text-align:left;border-bottom:2px solid var(--zb-border);font-weight:700;color:var(--zb-navy);">資材</th>
+                <th style="padding:7px 8px;text-align:right;border-bottom:2px solid var(--zb-border);font-weight:700;color:var(--zb-navy);">参考単価</th>
+                <th style="padding:7px 4px;text-align:center;border-bottom:2px solid var(--zb-border);font-weight:700;color:var(--zb-navy);">動向</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${rows.map(([name, item], i) => `
+              <tr style="background:${i%2===0?'var(--zb-card)':'var(--zb-bg)'};">
+                <td style="padding:8px 8px;border-bottom:1px solid var(--zb-border);font-weight:600;color:var(--zb-text);">${name}</td>
+                <td style="padding:8px 8px;text-align:right;border-bottom:1px solid var(--zb-border);">
+                  <div style="font-weight:700;color:var(--zb-navy);">${item.price}</div>
+                  <div style="font-size:10px;color:var(--zb-muted);">${item.unit}</div>
+                </td>
+                <td style="padding:8px 4px;text-align:center;border-bottom:1px solid var(--zb-border);">
+                  <span style="font-size:16px;color:${trendColor[item.trend]||'#64748b'};">${item.trend}</span>
+                </td>
+              </tr>
+              <tr style="background:${i%2===0?'var(--zb-card)':'var(--zb-bg)'};">
+                <td colspan="3" style="padding:3px 8px 8px;border-bottom:1px solid var(--zb-border);font-size:11px;color:var(--zb-muted);">↳ ${item.note}</td>
+              </tr>`).join('')}
+            </tbody>
+          </table>
+        </div>
+        <div style="font-size:11px;color:var(--zb-muted);margin-top:8px;">動向凡例: ↗上昇傾向 → 横ばい ↘下落傾向</div>
+      </div>
+      <div class="ind-card" style="border-color:#fef3c7;background:#fffbeb;">
+        <div class="ind-card-title" style="color:#92400e;">⛽ ナフサ由来建材の品薄・供給状況</div>
+        <div style="font-size:12px;color:var(--zb-muted);margin-bottom:10px;line-height:1.6;">原油・ナフサ価格上昇の影響で、石油化学系建材の一部で品薄・リードタイム延伸が発生しています。</div>
+        ${MAT_NAPHTHA.map(item => `
+        <div style="display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:8px;background:var(--zb-bg);margin-bottom:8px;">
+          <div style="min-width:72px;font-size:11px;font-weight:700;color:${statusColor[item.status]};white-space:nowrap;padding-top:1px;">${statusLabel[item.status]}</div>
+          <div>
+            <div style="font-size:12px;font-weight:700;color:var(--zb-navy);margin-bottom:3px;">${item.name}</div>
+            <div style="font-size:11px;color:var(--zb-muted);line-height:1.6;">${item.note}</div>
+          </div>
+        </div>`).join('')}
+        <div style="font-size:11px;color:#92400e;background:#fde68a;border-radius:6px;padding:8px 10px;margin-top:4px;">
+          💡 品薄資材は早期発注・代替品の検討・複数サプライヤーの確保が有効です。Zaibase資材マーケットで最安値比較ができます。
+        </div>
+      </div>
+      <div class="ind-card" style="border-color:#dbeafe;background:#eff6ff;">
+        <div class="ind-card-title" style="color:#1e40af;">📋 資材高騰への対応チェックリスト</div>
+        ${['見積書に「材料費変動条項」を明記し、発注後の一方的値引き要求を防止している','主要資材（鉄筋・生コン・鉄骨）は複数の地場業者から相見積りを取得している','品薄資材は工程確定後すぐ（着工2〜3ヶ月前）に発注・確保している','ナフサ由来代替品（グラスウール断熱・水性塗料）の採用をあらかじめ設計に盛り込んでいる','資材単価上昇分を元請・発注者に対し根拠資料（見積書・市況情報）とともに価格転嫁交渉している'].map((t,i) => `
+        <label style="display:flex;align-items:flex-start;gap:8px;padding:8px 0;border-bottom:1px solid var(--zb-border);cursor:pointer;">
+          <input type="checkbox" id="matChk${i}" style="margin-top:2px;accent-color:#0ea5e9;">
+          <span style="font-size:12px;color:var(--zb-text);line-height:1.6;">${t}</span>
+        </label>`).join('')}
+      </div>
+    `;
+  }
+
   function initIndustryScreen() {
     indTab = 'demand';
     document.querySelectorAll('[data-ind-tab]').forEach(b => {
@@ -11996,6 +12209,7 @@ ${transcript}
     document.getElementById('industryBackBtn').onclick = () => showScreen('mypageScreen');
     document.getElementById('indPageDemand').classList.remove('hidden');
     document.getElementById('indPageStructure').classList.add('hidden');
+    document.getElementById('indPageMaterials').classList.add('hidden');
     document.getElementById('indPageLabor').classList.add('hidden');
     renderIndDemandTab();
   }
@@ -25202,6 +25416,374 @@ ${company}様の商品に対して月間約${budget}万円の購買需要があ�
   });
   document.getElementById('priceNegotiationClose')?.addEventListener('click', () => document.getElementById('priceNegotiationModal').classList.add('hidden'));
   document.getElementById('complianceBackBtn')?.addEventListener('click', () => showScreen('mypageScreen'));
+
+  // ===== 施工計画書・品質管理（#sekoKeikakuScreen） =====
+  let skTab = 'plan';
+
+  const SK_QUALITY_ITEMS = [
+    { id:'sq01', cat:'暑中コンクリート', text:'コンクリートの練混ぜから打込み終了までの時間が1.5時間以内であることを確認した', badge:'must' },
+    { id:'sq02', cat:'暑中コンクリート', text:'荷卸し時のコンクリート温度が35℃以下であることを確認した（超える場合は工事監理者と協議）', badge:'must' },
+    { id:'sq03', cat:'暑中コンクリート', text:'打込み時のコンクリート温度が38℃以下であることを確認した', badge:'must' },
+    { id:'sq04', cat:'暑中コンクリート', text:'使用するセメントがJIS登録認証機関によって認証されていることを確認した', badge:'must' },
+    { id:'sq05', cat:'暑中コンクリート', text:'日中の高温時間帯（14〜16時）の打設を避けるよう工程を調整した（または監理者と協議済）', badge:'rec' },
+    { id:'sq06', cat:'暑中コンクリート', text:'打設後の養生方法（散水・シート養生等）を確認し、乾燥収縮ひび割れ対策を実施した', badge:'must' },
+    { id:'sq07', cat:'暑中コンクリート', text:'マスコンクリートの場合、温度応力解析結果に基づき工事監理者と協議を行った', badge:'rec' },
+    { id:'sq08', cat:'材料受入', text:'生コン伝票（配合・強度・スランプ・水セメント比）を確認し、規格値内であることを確認した', badge:'must' },
+    { id:'sq09', cat:'材料受入', text:'スランプ試験・空気量試験・塩化物含有量試験の結果を記録した', badge:'must' },
+    { id:'sq10', cat:'材料受入', text:'供試体（テストピース）を採取し、標準養生・封かん養生を行っている', badge:'must' },
+    { id:'sq11', cat:'施工管理', text:'打込み区画・打込み順序・打込み速度が施工計画書に従っていることを確認した', badge:'must' },
+    { id:'sq12', cat:'施工管理', text:'締固め（バイブレータ）の挿入間隔・挿入時間が適切であることを確認した', badge:'must' },
+    { id:'sq13', cat:'施工管理', text:'打継ぎ部の処理（レイタンス除去・散水）が適切に行われたことを確認した', badge:'must' },
+    { id:'sq14', cat:'施工管理', text:'型枠・支保工の取外し時期が適切であることを確認した（圧縮強度試験結果による）', badge:'must' },
+    { id:'sq15', cat:'記録', text:'写真管理（打設前・打設中・打設後）を実施し、工事写真台帳に整理した', badge:'must' },
+    { id:'sq16', cat:'記録', text:'品質管理記録表（コンクリート打設管理表）を作成・保管している', badge:'must' },
+  ];
+
+  const SK_PILE_ITEMS = [
+    { id:'sp01', cat:'事前確認', text:'施工計画書（杭工事）が工事監理者に承認されていることを確認した', badge:'must' },
+    { id:'sp02', cat:'事前確認', text:'杭の受入れ検査（外観・寸法・強度証明書・JIS認証）を実施した', badge:'must' },
+    { id:'sp03', cat:'事前確認', text:'杭打機・アースオーガの仕様・能力が計画書と一致していることを確認した', badge:'must' },
+    { id:'sp04', cat:'事前確認', text:'施工機械の搬入経路・作業半径・転倒防止措置を確認した', badge:'must' },
+    { id:'sp05', cat:'事前確認', text:'近隣への騒音・振動・泥水飛散等の事前説明・対策が完了している', badge:'must' },
+    { id:'sp06', cat:'施工', text:'杭心の位置出しを実施し、監理者の確認を得た', badge:'must' },
+    { id:'sp07', cat:'施工', text:'アースオーガ掘削中の排土・泥水処理が計画通りに実施されている', badge:'must' },
+    { id:'sp08', cat:'施工', text:'根固め液・杭周固定液の注入量・圧力が計画値範囲内であることを確認した', badge:'must' },
+    { id:'sp09', cat:'施工', text:'杭の鉛直精度（傾斜1/100以内）を施工中に確認している', badge:'must' },
+    { id:'sp10', cat:'施工', text:'支持層への到達（N値・掘削トルク・掘削速度）を確認・記録した', badge:'must' },
+    { id:'sp11', cat:'施工', text:'杭頭のカットオフレベルを確認し、余長処理方法を決定した', badge:'rec' },
+    { id:'sp12', cat:'運搬', text:'杭の現場搬入は早朝・残業時間を避け、事前に工事監理者と協議の上実施した', badge:'must' },
+    { id:'sp13', cat:'運搬', text:'車両入場の際はガードマンが誘導し、第三者災害防止措置を実施した', badge:'must' },
+    { id:'sp14', cat:'記録', text:'杭施工管理記録（施工記録表・支持層確認書・根固め液注入量記録）を作成した', badge:'must' },
+    { id:'sp15', cat:'記録', text:'施工後の杭頭処理写真・杭体写真を整理し工事写真台帳に保管した', badge:'must' },
+    { id:'sp16', cat:'記録', text:'杭施工完了後、杭位置・鉛直精度の実測値を図面に記録し提出した', badge:'rec' },
+  ];
+
+  function switchSkTab(tab) {
+    skTab = tab;
+    document.querySelectorAll('[data-sk-tab]').forEach(b => b.classList.toggle('act', b.dataset.skTab === tab));
+    document.getElementById('skPagePlan').classList.toggle('hidden', tab !== 'plan');
+    document.getElementById('skPageQuality').classList.toggle('hidden', tab !== 'quality');
+    document.getElementById('skPagePile').classList.toggle('hidden', tab !== 'pile');
+    if (tab === 'plan') renderSkPlanTab();
+    if (tab === 'quality') renderSkQualityTab();
+    if (tab === 'pile') renderSkPileTab();
+  }
+
+  function renderSkPlanTab() {
+    const el = document.getElementById('skPagePlan');
+    if (!el || el.dataset.rendered) return;
+    el.dataset.rendered = '1';
+    el.innerHTML = `
+      <div class="sk-alert info" style="margin-bottom:12px;">
+        📋 既製コンクリート杭工事・コンクリート工事等の施工計画書の章立てに沿って入力すると、計画書の文章ドラフトを出力します。
+      </div>
+      <div class="sk-card">
+        <div class="sk-card-title">📁 第1章 総則</div>
+        <div class="sk-field"><label>工事名称</label><input id="sk_kojiName" placeholder="例: ○○ビル新築工事（既製コンクリート杭工事）"></div>
+        <div class="sk-row2">
+          <div class="sk-field"><label>工種</label><select id="sk_koshu"><option>既製コンクリート杭工事</option><option>現場打ちコンクリート杭工事</option><option>コンクリート工事</option><option>鉄骨工事</option><option>土工事・山留め工事</option><option>仮設工事</option><option>その他</option></select></div>
+          <div class="sk-field"><label>作成日</label><input type="date" id="sk_date"></div>
+        </div>
+        <div class="sk-field"><label>適用範囲</label><textarea id="sk_scope" placeholder="例: 本計画書は、○○ビル新築工事における既製コンクリート杭工事（PHC杭・SC杭）の施工全般に適用する。"></textarea></div>
+      </div>
+      <div class="sk-card">
+        <div class="sk-card-title">🏢 第2章 工事概要</div>
+        <div class="sk-row2">
+          <div class="sk-field"><label>工事場所</label><input id="sk_location" placeholder="例: 大阪府大阪市○○区"></div>
+          <div class="sk-field"><label>施主</label><input id="sk_client" placeholder="例: ○○株式会社"></div>
+        </div>
+        <div class="sk-row2">
+          <div class="sk-field"><label>設計会社</label><input id="sk_design" placeholder="例: ○○設計事務所"></div>
+          <div class="sk-field"><label>工事監理</label><input id="sk_kanri" placeholder="例: ○○建築士事務所"></div>
+        </div>
+        <div class="sk-row2">
+          <div class="sk-field"><label>工期（開始）</label><input type="date" id="sk_startDate"></div>
+          <div class="sk-field"><label>工期（完了）</label><input type="date" id="sk_endDate"></div>
+        </div>
+        <div class="sk-field"><label>工事概要（構造・規模等）</label><textarea id="sk_summary" placeholder="例: RC造・一部S造、地上10階・地下1階、延床面積5,000㎡。杭種：PHC杭（A種・B種）φ400〜600mm、杭長25m、総本数42本。工法：プレボーリング根固め工法（セメントミルク工法）。"></textarea></div>
+      </div>
+      <div class="sk-card">
+        <div class="sk-card-title">👷 第3章 施工管理体制</div>
+        <div class="sk-row2">
+          <div class="sk-field"><label>工事責任者</label><input id="sk_manager" placeholder="氏名"></div>
+          <div class="sk-field"><label>施工管理担当</label><input id="sk_staff" placeholder="氏名"></div>
+        </div>
+        <div class="sk-field"><label>安全衛生責任者</label><input id="sk_safety" placeholder="氏名"></div>
+        <div class="sk-field"><label>品質管理方針</label><textarea id="sk_quality" placeholder="例: 設計図書・施工仕様書・本計画書に従い、品質基準を満足する施工を行う。施工中は随時写真管理・記録管理を行い、監理者への報告を徹底する。"></textarea></div>
+      </div>
+      <div class="sk-card">
+        <div class="sk-card-title">🔧 第4章 使用材料・機械</div>
+        <div class="sk-field"><label>主要材料</label><textarea id="sk_material" placeholder="例: PHC杭（JIS A 5335準拠）A種φ400×L=25m、根固め液（水セメント比70%・セメント量350kg/m³）、杭周固定液（水セメント比120%）"></textarea></div>
+        <div class="sk-field"><label>主要機械</label><textarea id="sk_machine" placeholder="例: 杭打機（三点支持式・能力250kN）、アースオーガ（掘削径φ700mm）、プラント（ミキサー容量0.5m³）、バックホウ（0.45m³）、クローラークレーン（50t吊）"></textarea></div>
+      </div>
+      <div class="sk-card">
+        <div class="sk-card-title">🚛 第5章 運搬計画</div>
+        <div class="sk-field"><label>搬入経路</label><textarea id="sk_route" placeholder="例: 〇〇IC出口→国道○号→現場。搬入時間帯：8:00〜17:00（早朝・残業は工事監理者と事前協議）。搬入は１台ずつ行い、ガードマン２名が現場入口で誘導する。"></textarea></div>
+      </div>
+      <div class="sk-card">
+        <div class="sk-card-title">⚠️ 第6章 安全・環境対策</div>
+        <div class="sk-field"><label>安全対策</label><textarea id="sk_safe" placeholder="例: 施工機械の転倒・接触防止のため、作業半径内への立入禁止措置を実施する。毎朝KYK（危険予知活動）を実施し、安全確認を徹底する。"></textarea></div>
+        <div class="sk-field"><label>環境対策</label><textarea id="sk_env" placeholder="例: 掘削排土・泥水は適切に管理・処分する。騒音・振動の規制基準を遵守し、近隣への影響を最小限とする。"></textarea></div>
+      </div>
+      <button class="sk-btn" onclick="generateSkPlan()">📄 施工計画書ドラフトを生成</button>
+      <div id="skPlanPreviewWrap" style="display:none;margin-top:12px;">
+        <div style="font-size:13px;font-weight:700;color:var(--zb-navy);margin-bottom:8px;">▼ 生成された施工計画書ドラフト</div>
+        <div class="sk-preview" id="skPlanPreview"></div>
+        <button class="sk-btn" style="margin-top:8px;background:#374151;" onclick="copySkPlan()">📋 コピー</button>
+      </div>
+    `;
+    document.getElementById('sk_date').value = new Date().toISOString().slice(0,10);
+  }
+
+  function generateSkPlan() {
+    const v = id => (document.getElementById(id)?.value || '').trim();
+    const today = v('sk_date') || new Date().toLocaleDateString('ja-JP');
+    const text = `施 工 計 画 書
+━━━━━━━━━━━━━━━━━━━━━━
+
+第1章 総　則
+
+1.1 工事名称
+  ${v('sk_kojiName') || '（工事名を入力してください）'}
+
+1.2 工種
+  ${v('sk_koshu') || '既製コンクリート杭工事'}
+
+1.3 作成日
+  ${today}
+
+1.4 適用範囲
+  ${v('sk_scope') || '本計画書は、標記工事における各工種の施工全般に適用する。'}
+
+━━━━━━━━━━━━━━━━━━━━━━
+第2章 工事概要
+
+2.1 全体工事概要
+
+  工 事 名：${v('sk_kojiName') || '　　　　　　'}
+  工事場所：${v('sk_location') || '　　　　　　'}
+  施    主：${v('sk_client') || '　　　　　　'}
+  設 計 者：${v('sk_design') || '　　　　　　'}
+  工事監理：${v('sk_kanri') || '　　　　　　'}
+  工期（開始）：${v('sk_startDate') || '　　年　月　日'}
+  工期（完了）：${v('sk_endDate') || '　　年　月　日'}
+
+2.2 工事概要
+  ${v('sk_summary') || '（工事の構造・規模等を記載してください）'}
+
+━━━━━━━━━━━━━━━━━━━━━━
+第3章 施工管理体制
+
+3.1 管理体制
+  工 事 責 任 者：${v('sk_manager') || '　　　　　　'}
+  施工管理担当者：${v('sk_staff') || '　　　　　　'}
+  安全衛生責任者：${v('sk_safety') || '　　　　　　'}
+
+3.2 品質管理方針
+  ${v('sk_quality') || '設計図書・仕様書・本計画書に基づき、所定の品質を確保する。'}
+
+━━━━━━━━━━━━━━━━━━━━━━
+第4章 使用材料・機械
+
+4.1 主要材料
+  ${v('sk_material') || '（使用材料を記載してください）'}
+
+4.2 主要機械
+  ${v('sk_machine') || '（使用機械を記載してください）'}
+
+━━━━━━━━━━━━━━━━━━━━━━
+第5章 運搬計画
+
+5.1 搬入経路・車両管理
+  ${v('sk_route') || '（搬入経路・時間帯・誘導方法を記載してください）'}
+
+━━━━━━━━━━━━━━━━━━━━━━
+第6章 安全・環境対策
+
+6.1 安全対策
+  ${v('sk_safe') || '（安全対策を記載してください）'}
+
+6.2 環境対策
+  ${v('sk_env') || '（環境対策を記載してください）'}
+
+━━━━━━━━━━━━━━━━━━━━━━
+以 上
+
+【注意】本ドラフトは Zaibase で作成したたたき台です。
+工事監理者・元請への提出前に必ず内容を確認・修正してください。`;
+    document.getElementById('skPlanPreview').textContent = text;
+    document.getElementById('skPlanPreviewWrap').style.display = 'block';
+    document.getElementById('skPlanPreview').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function copySkPlan() {
+    const text = document.getElementById('skPlanPreview')?.textContent || '';
+    navigator.clipboard?.writeText(text).then(() => alert('コピーしました'));
+  }
+
+  function renderSkQualityTab() {
+    const el = document.getElementById('skPageQuality');
+    if (!el) return;
+    const cats = [...new Set(SK_QUALITY_ITEMS.map(i => i.cat))];
+    el.innerHTML = `
+      <div class="sk-alert warn" style="margin-bottom:12px;">
+        ⚠️ 暑中期（日平均気温25℃超）はJASS 5 N値・施工管理標準に従い、荷卸し温度35℃以下・打込み温度38℃以下を厳守してください。
+      </div>
+      <div class="sk-card">
+        <div class="sk-card-title">🌡️ コンクリート温度クイックチェック</div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;margin-bottom:10px;">
+          <div style="flex:1;min-width:120px;">
+            <label style="font-size:12px;font-weight:600;color:var(--zb-muted);">荷卸し温度（℃）</label>
+            <input type="number" id="skTempUnload" placeholder="例: 32" style="width:100%;padding:9px;border:1.5px solid var(--zb-border);border-radius:9px;font-size:16px;box-sizing:border-box;" oninput="checkSkTemp()">
+          </div>
+          <div style="flex:1;min-width:120px;">
+            <label style="font-size:12px;font-weight:600;color:var(--zb-muted);">打込み温度（℃）</label>
+            <input type="number" id="skTempPlace" placeholder="例: 35" style="width:100%;padding:9px;border:1.5px solid var(--zb-border);border-radius:9px;font-size:16px;box-sizing:border-box;" oninput="checkSkTemp()">
+          </div>
+        </div>
+        <div id="skTempResult" style="display:flex;gap:8px;flex-wrap:wrap;"></div>
+      </div>
+      <div class="sk-card">
+        <div class="sk-card-title">✅ 品質管理チェックリスト</div>
+        <div id="skQualityProgress" style="margin-bottom:10px;">
+          <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--zb-muted);margin-bottom:4px;"><span>完了項目</span><span id="skQCnt">0 / ${SK_QUALITY_ITEMS.length}</span></div>
+          <div class="sk-progress"><div class="sk-progress-fill" id="skQBar" style="width:0%"></div></div>
+        </div>
+        ${cats.map(cat => `
+        <div style="font-size:12px;font-weight:800;color:#0369a1;background:#e0f2fe;border-radius:6px;padding:6px 10px;margin:10px 0 6px;">${cat}</div>
+        ${SK_QUALITY_ITEMS.filter(i=>i.cat===cat).map(item=>`
+        <div class="sk-chk-row">
+          <input type="checkbox" id="${item.id}" onchange="updateSkQProgress()">
+          <label for="${item.id}" class="sk-chk-label">${item.text}<span class="sk-badge ${item.badge}">${item.badge==='must'?'必須':'推奨'}</span></label>
+        </div>`).join('')}
+        `).join('')}
+      </div>
+    `;
+  }
+
+  function checkSkTemp() {
+    const u = parseFloat(document.getElementById('skTempUnload')?.value);
+    const p = parseFloat(document.getElementById('skTempPlace')?.value);
+    const res = document.getElementById('skTempResult');
+    if (!res) return;
+    let html = '';
+    if (!isNaN(u)) {
+      const ok = u <= 35;
+      html += `<span class="sk-temp-badge ${ok?'ok':'ng'}">荷卸し ${u}℃ ${ok?'✅ 基準内（≤35℃）':'❌ 超過！監理者と協議'}</span>`;
+    }
+    if (!isNaN(p)) {
+      const ok2 = p <= 38;
+      html += `<span class="sk-temp-badge ${ok2?'ok':p<=40?'warn':'ng'}">打込み ${p}℃ ${ok2?'✅ 基準内（≤38℃）':p<=40?'⚠️ 上限近接・注意':'❌ 超過！打設中止検討'}</span>`;
+    }
+    res.innerHTML = html;
+  }
+
+  function updateSkQProgress() {
+    const total = SK_QUALITY_ITEMS.length;
+    const done = SK_QUALITY_ITEMS.filter(i => document.getElementById(i.id)?.checked).length;
+    const pct = Math.round(done / total * 100);
+    document.getElementById('skQCnt').textContent = `${done} / ${total}`;
+    document.getElementById('skQBar').style.width = pct + '%';
+    document.getElementById('skQBar').style.background = pct < 50 ? '#f59e0b' : pct < 80 ? '#0369a1' : '#16a34a';
+  }
+
+  function renderSkPileTab() {
+    const el = document.getElementById('skPagePile');
+    if (!el) return;
+    const cats = [...new Set(SK_PILE_ITEMS.map(i => i.cat))];
+    el.innerHTML = `
+      <div class="sk-alert info" style="margin-bottom:12px;">
+        🪨 既製コンクリート杭（PHC杭・SC杭等）のプレボーリング根固め工法を想定した施工管理チェックリストです。
+      </div>
+      <div class="sk-card">
+        <div class="sk-card-title">📊 杭仕様クイック入力</div>
+        <div class="sk-row2">
+          <div class="sk-field"><label>杭種</label><select id="skPileType"><option>PHC杭（A種）</option><option>PHC杭（B種）</option><option>PHC杭（C種）</option><option>SC杭</option><option>ST杭</option><option>節杭</option><option>その他</option></select></div>
+          <div class="sk-field"><label>杭径（mm）</label><input type="number" id="skPileDia" placeholder="例: 400"></div>
+        </div>
+        <div class="sk-row2">
+          <div class="sk-field"><label>杭長（m）</label><input type="number" id="skPileLen" placeholder="例: 25"></div>
+          <div class="sk-field"><label>本数</label><input type="number" id="skPileNum" placeholder="例: 42"></div>
+        </div>
+        <div class="sk-field"><label>設計支持力（kN/本）</label><input type="number" id="skPileLoad" placeholder="例: 1500"></div>
+        <div id="skPileSpec" style="margin-top:8px;font-size:12px;line-height:1.8;color:var(--zb-text);background:var(--zb-bg);border-radius:8px;padding:10px;display:none;"></div>
+        <button class="sk-btn" style="margin-top:8px;" onclick="showSkPileSpec()">仕様を確認</button>
+      </div>
+      <div class="sk-card">
+        <div class="sk-card-title">✅ 既製杭施工管理チェックリスト</div>
+        <div style="margin-bottom:10px;">
+          <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--zb-muted);margin-bottom:4px;"><span>完了項目</span><span id="skPCnt">0 / ${SK_PILE_ITEMS.length}</span></div>
+          <div class="sk-progress"><div class="sk-progress-fill" id="skPBar" style="width:0%"></div></div>
+        </div>
+        ${cats.map(cat => `
+        <div style="font-size:12px;font-weight:800;color:#0369a1;background:#e0f2fe;border-radius:6px;padding:6px 10px;margin:10px 0 6px;">${cat}</div>
+        ${SK_PILE_ITEMS.filter(i=>i.cat===cat).map(item=>`
+        <div class="sk-chk-row">
+          <input type="checkbox" id="${item.id}" onchange="updateSkPProgress()">
+          <label for="${item.id}" class="sk-chk-label">${item.text}<span class="sk-badge ${item.badge}">${item.badge==='must'?'必須':'推奨'}</span></label>
+        </div>`).join('')}
+        `).join('')}
+      </div>
+      <div class="sk-card">
+        <div class="sk-card-title">📋 根固め液・杭周固定液 標準配合（参考）</div>
+        <div style="overflow-x:auto;">
+          <table class="sk-table">
+            <thead><tr><th>液種</th><th>水セメント比</th><th>セメント量</th><th>注入タイミング</th></tr></thead>
+            <tbody>
+              <tr><td>根固め液</td><td>W/C≤70%</td><td>≥350 kg/m³</td><td>掘削完了後・底部に注入</td></tr>
+              <tr><td>杭周固定液</td><td>W/C≤120%</td><td>≥200 kg/m³</td><td>引抜き時（杭周充填）</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="font-size:11px;color:var(--zb-muted);margin-top:6px;">※ 設計仕様書・杭メーカー施工要領書の値が優先されます。必ず確認してください。</div>
+      </div>
+    `;
+  }
+
+  function showSkPileSpec() {
+    const type = document.getElementById('skPileType')?.value || 'PHC杭';
+    const dia = document.getElementById('skPileDia')?.value || '―';
+    const len = document.getElementById('skPileLen')?.value || '―';
+    const num = document.getElementById('skPileNum')?.value || '―';
+    const load = document.getElementById('skPileLoad')?.value || '―';
+    const el = document.getElementById('skPileSpec');
+    if (!el) return;
+    el.innerHTML = `<strong>杭仕様まとめ</strong><br>
+杭  種: ${type}<br>
+杭  径: φ${dia} mm<br>
+杭  長: ${len} m<br>
+本  数: ${num} 本<br>
+設計支持力: ${load} kN/本<br>
+掘削径目安: φ${dia ? (parseInt(dia)+200)+'〜'+(parseInt(dia)+300) : '―'} mm（設計仕様書を確認）`;
+    el.style.display = 'block';
+  }
+
+  function updateSkPProgress() {
+    const total = SK_PILE_ITEMS.length;
+    const done = SK_PILE_ITEMS.filter(i => document.getElementById(i.id)?.checked).length;
+    const pct = Math.round(done / total * 100);
+    document.getElementById('skPCnt').textContent = `${done} / ${total}`;
+    document.getElementById('skPBar').style.width = pct + '%';
+    document.getElementById('skPBar').style.background = pct < 50 ? '#f59e0b' : pct < 80 ? '#0369a1' : '#16a34a';
+  }
+
+  function initSekoKeikakuScreen() {
+    skTab = 'plan';
+    document.querySelectorAll('[data-sk-tab]').forEach(b => {
+      b.onclick = () => switchSkTab(b.dataset.skTab);
+    });
+    document.getElementById('sekoBackBtn').onclick = () => showScreen('mypageScreen');
+    document.getElementById('skPagePlan').classList.remove('hidden');
+    document.getElementById('skPageQuality').classList.add('hidden');
+    document.getElementById('skPagePile').classList.add('hidden');
+    renderSkPlanTab();
+  }
+
+  document.getElementById('mypageSekoBtn')?.addEventListener('click', () => {
+    showScreen('sekoKeikakuScreen');
+    initSekoKeikakuScreen();
+  });
+
   document.getElementById('chainBackBtn')?.addEventListener('click', () => showScreen('mypageScreen'));
   document.getElementById('jobHdTeamPostBtn')?.addEventListener('click', () => showScreen('teamJobPostScreen'));
   document.getElementById('safetyBackBtn')?.addEventListener('click', () => showScreen(currentAccountRole === 'orderer' ? 'mypageScreen' : 'homeScreen'));

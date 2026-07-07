@@ -31,6 +31,14 @@ export type CourseKey =
   | 'tokyo-chuo'      // 中央大学附属中（難関）
   | 'tokyo-hosei'     // 法政大学第二中（標準〜難関）
   | 'tokyo-gakushuin' // 学習院中等科（標準〜難関）
+  // ── 名古屋 中学受験 学校別 ──
+  | 'nagoya-nanzan'   // 南山中学校（難関）
+  | 'nagoya-tokai'    // 東海中学校（最難関）
+  | 'nagoya-taki'     // 滝中学校（難関）
+  // ── 福岡 中学受験 学校別 ──
+  | 'fukuoka-kurume'  // 久留米大学附設中学校（九州最難関）
+  | 'fukuoka-seinan'  // 西南学院中学校（難関）
+  | 'fukuoka-ohori'   // 福岡大学附属大濠中学校（難関）
   // ── 高校受験 カテゴリ ──
   | 'koko-general'    // 公立高校 一般
   | 'koko-kankan'     // 関関同立附属高
@@ -478,6 +486,84 @@ export const ALL_COURSES: CourseInfo[] = [
     description: '学習院の入試問題。伝統校、国語・社会の記述力が問われる',
     gender: '男子',
     hensachi: '56〜62',
+  },
+  {
+    key: 'nagoya-nanzan',
+    examType: 'chugaku',
+    name: '南山中学校',
+    shortName: '南山',
+    emoji: '🌙',
+    color: '#880E4F',
+    level: '難関',
+    targetSchools: ['南山中学校男子部', '南山中学校女子部'],
+    description: '南山中学校の入試問題。カトリック系名門校、英語教育に強み',
+    gender: '共学',
+    hensachi: '62〜66',
+  },
+  {
+    key: 'nagoya-tokai',
+    examType: 'chugaku',
+    name: '東海中学校',
+    shortName: '東海',
+    emoji: '⚓',
+    color: '#01579B',
+    level: '最難関',
+    targetSchools: ['東海中学校'],
+    description: '東海中学校の入試問題。東海地区最難関の男子校、旧帝大進学実績が高い',
+    gender: '男子',
+    hensachi: '66〜70',
+  },
+  {
+    key: 'nagoya-taki',
+    examType: 'chugaku',
+    name: '滝中学校',
+    shortName: '滝',
+    emoji: '💧',
+    color: '#006064',
+    level: '難関',
+    targetSchools: ['滝中学校'],
+    description: '滝中学校の入試問題。東海地区難関共学校、名大・旧帝大進学実績が高い',
+    gender: '共学',
+    hensachi: '60〜64',
+  },
+  {
+    key: 'fukuoka-kurume',
+    examType: 'chugaku',
+    name: '久留米大学附設中学校',
+    shortName: '久留米附設',
+    emoji: '🌟',
+    color: '#4E342E',
+    level: '最難関',
+    targetSchools: ['久留米大学附設中学校'],
+    description: '久留米大附設の入試問題。九州最難関、東大・京大・医学部合格者多数',
+    gender: '共学',
+    hensachi: '68〜72',
+  },
+  {
+    key: 'fukuoka-seinan',
+    examType: 'chugaku',
+    name: '西南学院中学校',
+    shortName: '西南学院',
+    emoji: '✝️',
+    color: '#37474F',
+    level: '難関',
+    targetSchools: ['西南学院中学校'],
+    description: '西南学院中学校の入試問題。バプテスト系名門校、英語教育が充実',
+    gender: '共学',
+    hensachi: '58〜62',
+  },
+  {
+    key: 'fukuoka-ohori',
+    examType: 'chugaku',
+    name: '福岡大学附属大濠中学校',
+    shortName: '大濠',
+    emoji: '🏰',
+    color: '#283593',
+    level: '難関',
+    targetSchools: ['福岡大学附属大濠中学校'],
+    description: '大濠中学校の入試問題。福岡を代表する進学校、スーパーサイエンス指定校',
+    gender: '共学',
+    hensachi: '60〜64',
   },
 
   // ─────── 関西 私立高校受験 ───────

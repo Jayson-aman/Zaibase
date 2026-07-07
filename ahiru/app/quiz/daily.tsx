@@ -13,7 +13,7 @@ import { subjectInfo, SubjectKey } from '../../data/questions-meta';
 import { getTodayDayLabel } from '../../utils/dailyChallenge';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
-import BetaGateModal from '../../components/BetaGateModal';
+import Paywall from '../../components/Paywall';
 import HomeButton from '../../components/HomeButton';
 
 const SUBJECTS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
@@ -22,7 +22,7 @@ export default function DailyChallengeScreen() {
   const router = useRouter();
   const todayLabel = getTodayDayLabel();
   const { isMax: subIsMax, loading: subLoading } = useSubscription();
-  const { hasAccess: betaAccess, loading: betaLoading, unlock } = useBetaAccess();
+  const { hasAccess: betaAccess, loading: betaLoading } = useBetaAccess();
   const loading = subLoading || betaLoading;
   const isMax = subIsMax || betaAccess;
   const [paywallVisible, setPaywallVisible] = useState(false);
@@ -62,11 +62,10 @@ export default function DailyChallengeScreen() {
             <Text style={{ fontSize: 20, fontWeight: '800', color: '#fff' }}>👑 MAXプランを見る</Text>
           </TouchableOpacity>
         </View>
-        <BetaGateModal
+        <Paywall
           visible={paywallVisible}
           onClose={() => setPaywallVisible(false)}
-          onUnlocked={() => setPaywallVisible(false)}
-          unlock={unlock}
+          onPurchased={() => setPaywallVisible(false)}
         />
       </SafeAreaView>
     );

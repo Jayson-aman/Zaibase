@@ -9,12 +9,17 @@ import {
   Platform,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
+import Head from 'expo-router/head';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 import { useSubscription } from '../../hooks/useSubscription';
 import type { SubjectKey } from '../../data/questions-meta';
 import { useAllQuestions } from '../../hooks/useSubjectQuestions';
-import { getCourseInfo } from '../../data/courses';
+import { ALL_COURSES, getCourseInfo } from '../../data/courses';
 import HomeButton from '../../components/HomeButton';
+
+export async function generateStaticParams() {
+  return ALL_COURSES.map((c) => ({ course: c.key }));
+}
 
 const D = {
   bg:          '#040C1C',
@@ -223,8 +228,21 @@ export default function SchoolCurriculumScreen() {
     });
   }, [course]);
 
+  const pageTitle = `${meta.name}の過去問対策｜中学受験対策 ahiru`;
+  const pageDescription =
+    courseInfo?.description ??
+    `${meta.name}（偏差値${meta.hensachi}）の入試問題・過去問を科目別に演習できます。中学受験対策アプリ「ahiru」。`;
+
   return (
     <SafeAreaView style={styles.safe}>
+      {Platform.OS === 'web' && (
+        <Head>
+          <title>{pageTitle}</title>
+          <meta name="description" content={pageDescription} />
+          <meta property="og:title" content={pageTitle} />
+          <meta property="og:description" content={pageDescription} />
+        </Head>
+      )}
       {/* Header */}
       <View style={styles.topBar}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>

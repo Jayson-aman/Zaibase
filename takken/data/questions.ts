@@ -22,12 +22,14 @@ import { zeiQuestions2 } from './questions_zei_2';
 import { zeiQuestions3 } from './questions_zei_3';
 import { zeiQuestions4 } from './questions_zei_4';
 import { zeiQuestions5 } from './questions_zei_5';
+import { zeiQuestionsPast } from './questions_zei_past';
 import { kenriQuestions } from './questions_kenri';
 import { kenriQuestions2 } from './questions_kenri_2';
 import { kenriQuestions3 } from './questions_kenri_3';
 import { kenriQuestions4 } from './questions_kenri_4';
 import { kenriQuestions5 } from './questions_kenri_5';
 import { kenriQuestions6 } from './questions_kenri_6';
+import { kenriQuestionsPast } from './questions_kenri_past';
 import { takkenhoQuestions } from './questions_takkenho';
 import { takkenhoQuestions2 } from './questions_takkenho_2';
 import { takkenhoQuestions2b } from './questions_takkenho_2b';
@@ -37,23 +39,32 @@ import { takkenhoQuestions4 } from './questions_takkenho_4';
 import { takkenhoQuestions6 } from './questions_takkenho_6';
 import { takkenhoQuestions7 } from './questions_takkenho_7';
 import { takkenhoQuestions8 } from './questions_takkenho_8';
+import { takkenhoQuestionsPast1 } from './questions_takkenho_past1';
+import { takkenhoQuestionsPast2 } from './questions_takkenho_past2';
+import { takkenhoQuestionsPast3 } from './questions_takkenho_past3';
+import { horeiQuestionsPast } from './questions_horei_past';
+import { honshikenR7 } from './questions_honshiken_r7';
+import { honshikenR8 } from './questions_honshiken_r8';
 
 export const QUESTIONS: TakkenQuestion[] = [
   ...horeiQuestions,
   ...horeiQuestions2,
   ...horeiQuestions3,
   ...horeiQuestions4,
+  ...horeiQuestionsPast,
   ...zeiQuestions,
   ...zeiQuestions2,
   ...zeiQuestions3,
   ...zeiQuestions4,
   ...zeiQuestions5,
+  ...zeiQuestionsPast,
   ...kenriQuestions,
   ...kenriQuestions2,
   ...kenriQuestions3,
   ...kenriQuestions4,
   ...kenriQuestions5,
   ...kenriQuestions6,
+  ...kenriQuestionsPast,
   ...takkenhoQuestions,
   ...takkenhoQuestions2,
   ...takkenhoQuestions2b,
@@ -63,4 +74,9 @@ export const QUESTIONS: TakkenQuestion[] = [
   ...takkenhoQuestions6,
   ...takkenhoQuestions7,
   ...takkenhoQuestions8,
+  ...takkenhoQuestionsPast1,
+  ...takkenhoQuestionsPast2,
+  ...takkenhoQuestionsPast3,
+  ...honshikenR7,
+  ...honshikenR8,
 ];

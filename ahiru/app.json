@@ -26,6 +26,7 @@
       "favicon": "./assets/favicon.png",
       "bundler": "metro",
       "lang": "ja",
+      "output": "static",
       "meta": {
         "description": "中学受験・高校受験対策アプリ。5科目7,000問以上・学校別コース対応。"
       }

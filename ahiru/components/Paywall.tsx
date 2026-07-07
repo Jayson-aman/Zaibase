@@ -69,8 +69,8 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
     }
   }
 
-  const proPrice = (proProd as any)?.priceString ?? '¥1,000/月';
-  const maxPrice = (maxProd as any)?.priceString ?? '¥2,000/月';
+  const proPrice = (proProd as any)?.priceString ?? '¥2,000/月';
+  const maxPrice = (maxProd as any)?.priceString ?? '¥3,000/月';
 
   return (
     <Modal

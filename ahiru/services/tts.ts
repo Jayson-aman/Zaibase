@@ -1,40 +1,21 @@
 import { Platform } from 'react-native';
+import { callFirebaseFunction } from './firebaseClient';
 
-const OPENAI_API_KEY = process.env.EXPO_PUBLIC_OPENAI_API_KEY ?? '';
+type SpeakTextResult = { ok: true; audioBase64: string };
 
 /**
- * OpenAI TTS API で英語音声を再生する（Pro/Vocab paywall後に使用）
+ * サーバー側Cloud Function（speakText）経由でOpenAI TTS音声を再生する。
+ * APIキーはサーバー側のみで保持し、クライアントには一切含まれない
+ * （1日あたりの呼び出し回数はサーバー側で制限される）。
  * Web: HTMLAudioElement, Native: expo-av を使用
  */
 export async function speakWithOpenAI(text: string): Promise<void> {
-  if (!OPENAI_API_KEY) {
-    // フォールバック: デバイス TTS
-    await speakWithDevice(text);
-    return;
-  }
-
   try {
-    const response = await fetch('https://api.openai.com/v1/audio/speech', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${OPENAI_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'tts-1-hd',
-        input: text,
-        voice: 'alloy', // 自然な英語発音
-        response_format: 'mp3',
-        speed: 0.9,     // やや遅めで聞き取りやすく
-      }),
-    });
-
-    if (!response.ok) throw new Error(`TTS API error: ${response.status}`);
-
-    const blob = await response.blob();
-    const url = URL.createObjectURL(blob);
-    await playAudioUrl(url);
-    URL.revokeObjectURL(url);
+    const { audioBase64 } = await callFirebaseFunction<{ text: string }, SpeakTextResult>(
+      'speakText',
+      { text }
+    );
+    await playAudioUrl(`data:audio/mp3;base64,${audioBase64}`);
   } catch {
     await speakWithDevice(text);
   }
@@ -94,8 +75,4 @@ export async function speakWithDevice(text: string): Promise<void> {
   } catch {
     // 無視
   }
-}
-
-export function isTTSPremiumAvailable(): boolean {
-  return OPENAI_API_KEY.length > 10;
 }
