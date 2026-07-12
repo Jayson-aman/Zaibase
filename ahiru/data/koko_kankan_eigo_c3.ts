@@ -36,16 +36,16 @@ A: Me too. Let's ask the teacher for one more day.
     maxOnly: false,
     question: `次の（　）に適切な語を選びなさい。
 
-① Our school festival was (　) exciting event.（私たちの学園祭はとてもわくわくする行事だった）
+① Our school festival was (　) an exciting event that we still talk about it.（私たちの学園祭は、今でも話題になるほどわくわくする行事だった）
 ② There were (　) many food stalls in the schoolyard.（校庭にはとても多くの屋台があった）
 ③ I had (　) fun that I want to join again next year.（とても楽しかったので来年もまた参加したい）
 
-ア. so　イ. an　ウ. such`,
-    answer: '① ウ(such)　② ア(so)　③ ア(so)',
-    hint: 'such+a/an+形容詞+名詞、so+形容詞（+that）の違いを確認する。',
-    explanation: `【出題意図】such とso の使い分け（後ろに名詞を伴うかどうか）を問う。【解説】①後ろに「a/an+形容詞+名詞」（an exciting event）が続くのでsuch。②後ろは形容詞many単独＋名詞stallsだが、manyは数量形容詞でso many+名詞の形が定着表現なのでso。③後ろに名詞がなく形容詞相当のfun（ここでは名詞だが不可算名詞として単独で使われる）が続き、so〜that構文なのでso。【注意点】such a/an+形容詞+名詞、so+形容詞（+名詞なし）が基本ルール。so many/so muchは例外的に名詞を伴う定着表現。【関連知識】such a nice day、so difficult a question（倒置的表現）なども発展的に押さえる。`,
-    pitfall: '②をsuch many とするのは誤り。so many/so muchは決まった言い方。',
-    memoryTip: 'such+a(n)+形容詞+名詞、so+形容詞、ただしso many/so muchは例外と覚える。',
+ア. so　イ. very　ウ. such`,
+    answer: '① ウ(such)　② ア(so)　③ ウ(such)',
+    hint: 'such+a/an+形容詞+名詞、such+（無冠詞の）名詞、so+形容詞（+that）の違いを確認する。',
+    explanation: `【出題意図】such とso の使い分け（後ろに名詞を伴うかどうか）を問う。【解説】①後ろに「an+形容詞+名詞」（an exciting event）が続くのでsuch（soやveryは a/an+形容詞+名詞の直前には置けない）。②後ろは形容詞many単独＋名詞stallsだが、manyは数量形容詞でso many+名詞の形が定着表現なのでso。③funは裸の名詞（不可算名詞）なので、such+名詞の形でsuch funとする（so funは形容詞ではない名詞funには使えない）。【注意点】such a/an+形容詞+名詞、such+（無冠詞の）名詞、so+形容詞（+名詞なし）が基本ルール。so many/so muchは例外的に名詞を伴う定着表現。【関連知識】such a nice day、so difficult a question（倒置的表現）なども発展的に押さえる。`,
+    pitfall: '②をsuch many とするのは誤り。so many/so muchは決まった言い方。③をso funとするのも誤り。funは名詞なのでsuch funが正しい。',
+    memoryTip: 'such+a(n)+形容詞+名詞／such+裸の名詞、so+形容詞、ただしso many/so muchは例外と覚える。',
   },
   {
     id: 'koko_kankan_eigo_c3_03',
@@ -227,7 +227,7 @@ B: That's a good idea. I'll ask them tomorrow.
     maxOnly: false,
     question: `次の語句を並べ替えて、意味の通る英文を作りなさい。
 
-① [ the / is / more / important / than / health ] money.
+① [ is / more / important / than / health ] money.
   （健康はお金より大切だ）
 
 ② [ how / know / to / I / use / don't ] this new tablet.
@@ -343,10 +343,10 @@ Many schools in Japan have started to allow students to use smartphones for lear
     maxOnly: false,
     question: `次の（　）に適切な語を入れ、間接疑問文を完成させなさい。
 
-① Do you know (　) (　) this word means?（この単語が何を意味するか知っていますか）
-② I wonder (　) (　) will win the speech contest.（誰がスピーチコンテストで優勝するのだろう）
+① Do you know (　) this word means?（この単語が何を意味するか知っていますか）
+② I wonder (　) will win the speech contest.（誰がスピーチコンテストで優勝するのだろう）
 ③ Please tell me (　) the club activity (　) start.（部活動がいつ始まるか教えてください）`,
-    answer: '① what this word　② who　③ when, will (does)',
+    answer: '① what　② who　③ when, will (does)',
     hint: '間接疑問文は「疑問詞+主語+動詞」の語順になる（疑問文の倒置をしない）。',
     explanation: `【出題意図】間接疑問文の語順（疑問詞+主語+動詞、疑問文の倒置をしない）を問う。【解説】①「What does this word mean?」→間接疑問ではwhat this word meansの語順（doは消える）。②「Who will win〜?」のwhoが主語の場合は間接疑問でも語順が変わらない（who will win）。③「When will the club activity start?」→間接疑問ではwhen the club activity will startの語順。【注意点】疑問詞が主語の場合（②）は普通の疑問文と間接疑問文で語順が変わらない点に注意。①③は疑問詞が主語でないため、主語+動詞の平叙文の語順に戻す。【関連知識】間接疑問文はknow/wonder/tell/askなどの動詞の目的語としてよく使われる。`,
     pitfall: '①をwhat does this word meanのままにするのは誤り。間接疑問ではdoesを使わない。',
@@ -406,13 +406,13 @@ B: That sounds great. Thanks for the offer.
   The school festival (　) held every year at our school.
 
 ② 私はこの前の日曜日、ずっと勉強していた。
-  I (　) (　) studying all day last Sunday.
+  I (　) studying all day last Sunday.
 
 ③ この問題は生徒たちにとって解くのが難しい。
   This problem is difficult for students (　) (　).`,
-    answer: '① is　② was, was (had been)　③ to solve',
+    answer: '① is　② was　③ to solve',
     hint: '①受動態、②過去進行形、③形容詞+for+人+to do。',
-    explanation: `【出題意図】受動態・過去進行形・形容詞+for+人+to doの複合的な文法運用を問う。【解説】①「開催される」＝受動態is held。②「ずっと勉強していた」＝過去のある時点で継続していた動作なので過去進行形was studying（was studyingを二重に書く形式のためwas, wasを想定。文脈により過去完了進行形had been studyingも可）。③「解くのが難しい」＝difficult for students to solve（形容詞+for+人+to do）。【注意点】②は「be動詞+動詞-ing」の過去進行形の形をそのまま当てはめる。【関連知識】文化祭（school festival）、体育祭（sports festival）は学校行事の頻出語彙。`,
+    explanation: `【出題意図】受動態・過去進行形・形容詞+for+人+to doの複合的な文法運用を問う。【解説】①「開催される」＝受動態is held。②「ずっと勉強していた」＝過去のある時点で継続していた動作なので過去進行形was studying（be動詞+動詞-ing）。③「解くのが難しい」＝difficult for students to solve（形容詞+for+人+to do）。【注意点】②は「be動詞+動詞-ing」の過去進行形の形をそのまま当てはめる。【関連知識】文化祭（school festival）、体育祭（sports festival）は学校行事の頻出語彙。`,
     pitfall: '③をdifficult for students solving とすると誤り。for+人の後はto不定詞。',
     memoryTip: '形容詞（easy/difficult/important等）+for+人+to do の型を暗記する。',
   },
@@ -468,7 +468,7 @@ Reducing plastic waste has become an important topic at schools. Some students h
     maxOnly: false,
     question: `次の語句を並べ替えて、意味の通る英文を作りなさい。
 
-① [ was / the / who / student / spoke / that ] first was very nervous.
+① [ the / student / that / spoke ] first was very nervous.
   （最初に話した生徒はとても緊張していた）
 
 ② [ me / could / you / tell / where ] the gym is?
@@ -787,7 +787,7 @@ Japan's declining birthrate has led to a decrease in the number of children, and
 ① [ the harder / becomes / study / the more / you / interesting / the subject ].
   （勉強すればするほど、その科目はより面白くなる）
 
-② [ what / matters / most / is / it / how / not / but / you / study / long you study ].
+② [ what / matters / most / is / not / how / long / you / study / but / how / you / study ].
   （重要なのは、どれだけ長く勉強するかではなく、どのように勉強するかだ）`,
     answer: `① The harder you study, the more interesting the subject becomes.
 ② What matters most is not how long you study but how you study.`,
@@ -903,7 +903,7 @@ Climate change is affecting school life in unexpected ways. Extremely hot summer
 ① [ can't / help / feeling / I / nervous ] before the entrance exam.
   （入試の前、緊張せずにはいられない）
 
-② [ far / it / as / know / as / I ], the schedule hasn't changed.
+② [ far / as / know / as / I ], the schedule hasn't changed.
   （私が知る限り、予定は変わっていない）
 
 ③ [ there / no / of / is / point / worrying ] about things you cannot control.
@@ -999,7 +999,7 @@ Peer pressure among teenagers can influence decisions ranging from fashion choic
 「私たちの学校には、生徒がお互いに助け合う文化がある。この伝統を守り続けることが、より良い学校生活につながると私は信じている。」`,
     answer: `（解答例）Our school has a culture in which students help each other. I believe that keeping this tradition alive will lead to a better school life for all of us.（28語）
 
-（別解）Our school has a tradition of students supporting one another. I am convinced that continuing this custom will make our school life better for everyone.（24語→調整例）Our school has a strong tradition of students supporting one another, and I am convinced that continuing this custom will make our school life better for everyone.（27語）`,
+（別解）Our school has a strong tradition of students supporting one another, and I am convinced that continuing this custom will make our school life better for everyone.（27語）`,
     hint: '「〜する文化」→a culture in which〜/a culture of〜ing、「〜につながると信じている」→I believe (that)〜will lead to〜。',
     explanation: `【出題意図】関係代名詞・動名詞を用いた文化・伝統の説明と、意見を述べる文の複合英作文。【解説】「お互いに助け合う文化」→a culture in which students help each other（関係代名詞whichを用いた表現）、またはa culture of students helping/supporting each other（動名詞を用いた表現）。「この伝統を守り続けることが〜につながる」→keeping this tradition alive will lead to〜（動名詞句が主語）。「〜と信じている」→I believe (that)〜。【注意点】「help each other」「support one another」はどちらも「お互いに助け合う」という意味で使える。keep〜aliveは「〜を存続させる」という重要表現。【関連知識】lead to〜（〜につながる）、tradition/custom（伝統・慣習）は学校文化に関する英作文で頻出の語彙。`,
     pitfall: '「文化がある」をthere is a cultureとするより、Our school has a cultureとする方が自然な英語になる。',
