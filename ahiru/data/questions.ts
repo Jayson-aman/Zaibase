@@ -85,6 +85,23 @@ import { kokoKankanSansu30 } from './koko_kankan_sansu_30';
 import { kokoKankanKokugo30 } from './koko_kankan_kokugo_30';
 import { kokoKankanRika30 } from './koko_kankan_rika_30';
 import { kokoKankanShakai30 } from './koko_kankan_shakai_30';
+import { kokoKankanEigoC1 } from './koko_kankan_eigo_c1';
+import { kokoKankanEigoC2 } from './koko_kankan_eigo_c2';
+import { kokoKankanEigoC3 } from './koko_kankan_eigo_c3';
+import { kokoKankanKokugoC1 } from './koko_kankan_kokugo_c1';
+import { kokoKankanKokugoC2 } from './koko_kankan_kokugo_c2';
+import { kokoKankanKokugoC3 } from './koko_kankan_kokugo_c3';
+import { kokoKankanRikaC1 } from './koko_kankan_rika_c1';
+import { kokoKankanRikaC2 } from './koko_kankan_rika_c2';
+import { kokoKankanRikaC3 } from './koko_kankan_rika_c3';
+import { kokoKankanShakaiC1 } from './koko_kankan_shakai_c1';
+import { kokoKankanShakaiC2 } from './koko_kankan_shakai_c2';
+import { kokoKankanShakaiC3 } from './koko_kankan_shakai_c3';
+import { kokoKankanSansuC1 } from './koko_kankan_sansu_c1';
+import { kokoKankanSansuC2 } from './koko_kankan_sansu_c2';
+import { kokoKankanSansuC3 } from './koko_kankan_sansu_c3';
+import { kokoKankanSansuC4 } from './koko_kankan_sansu_c4';
+import { kokoKankanSansuC5 } from './koko_kankan_sansu_c5';
 import { kokoSansuEx01 } from './koko_sansu_ex_01';
 import { kokoSansuEx02 } from './koko_sansu_ex_02';
 import { kokoSansuEx03 } from './koko_sansu_ex_03';
@@ -2893,6 +2910,23 @@ export const questions: Question[] = [
   ...kokoKankanKokugo30,
   ...kokoKankanRika30,
   ...kokoKankanShakai30,
+  ...kokoKankanEigoC1,
+  ...kokoKankanEigoC2,
+  ...kokoKankanEigoC3,
+  ...kokoKankanKokugoC1,
+  ...kokoKankanKokugoC2,
+  ...kokoKankanKokugoC3,
+  ...kokoKankanRikaC1,
+  ...kokoKankanRikaC2,
+  ...kokoKankanRikaC3,
+  ...kokoKankanShakaiC1,
+  ...kokoKankanShakaiC2,
+  ...kokoKankanShakaiC3,
+  ...kokoKankanSansuC1,
+  ...kokoKankanSansuC2,
+  ...kokoKankanSansuC3,
+  ...kokoKankanSansuC4,
+  ...kokoKankanSansuC5,
   ...kokoSansuEx01,
   ...kokoSansuEx02,
   ...kokoSansuEx03,
