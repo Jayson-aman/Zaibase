@@ -10,6 +10,7 @@ export const kokoKankanEigo20: Question[] = [
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'basic',
+    maxOnly: false,
     question: `次の（　）内に最も適切な語を選べ。
 
 A: "Have you ever ( ) to Kyoto?"
@@ -41,6 +42,7 @@ have/has の後ろには「動詞原形」ではなく必ず「過去分詞」�
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'basic',
+    maxOnly: false,
     question: `次の（　）内に適切な語を選び、英文を完成させなさい。
 
 ① I enjoy ( swim / swimming ) in the sea every summer.
@@ -68,6 +70,7 @@ like / love / hate / prefer は不定詞・動名詞どちらもOK（意味は�
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'basic',
+    maxOnly: false,
     question: `次の（　）に who / which / that のうち最も適切なものを入れなさい。（複数の答えがある場合はすべて答えよ）
 
 ① The girl (　) is singing on the stage is my sister.
@@ -96,6 +99,7 @@ who は人のみ。which は物・動物のみ。that は人にも物にも使�
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'basic',
+    maxOnly: false,
     question: `次の（　）に適切な語を入れ、比較の文を完成させなさい。
 
 ① Mt. Fuji is the (　) mountain in Japan.
@@ -128,6 +132,7 @@ who は人のみ。which は物・動物のみ。that は人にも物にも使�
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'basic',
+    maxOnly: false,
     question: `次の能動態の文を受動態に書き換えなさい。
 
 ① Someone stole my bicycle yesterday.
@@ -165,6 +170,7 @@ who は人のみ。which は物・動物のみ。that は人にも物にも使�
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'standard',
+    maxOnly: false,
     question: `次の（　）内に最も適切な語句を入れ、間接疑問文を完成させなさい。
 
 ① I don't know (　　　　　) she lives.
@@ -198,6 +204,7 @@ who は人のみ。which は物・動物のみ。that は人にも物にも使�
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'standard',
+    maxOnly: false,
     question: `次の2文の意味の違いを説明し、（　）に適切な動詞の形を入れなさい。
 
 A: When I called her, she (　) (　) dinner.
@@ -228,6 +235,7 @@ B：「今朝から（since this morning）ずっと〜し続けている（今�
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'standard',
+    maxOnly: false,
     question: `次の（　）に適切な語句を入れ、仮定法の文を完成させなさい。
 
 ① If I (　) a bird, I (　) fly to you.
@@ -258,6 +266,7 @@ B：「今朝から（since this morning）ずっと〜し続けている（今�
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'standard',
+    maxOnly: false,
     question: `次の英文を読んで、設問に答えなさい。
 
 Japan has many traditional cultures that attract people from all over the world. One of the most famous is the tea ceremony, called "sado" in Japanese. In a tea ceremony, people prepare and drink green tea in a special way. Every movement is important and must be done carefully. The ceremony teaches people about respect, peace, and beauty.
@@ -288,6 +297,7 @@ Another well-known tradition is "origami," the art of paper folding. By folding 
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'standard',
+    maxOnly: false,
     question: `次の語句を正しい順序に並べ替えて、意味の通る英文を作りなさい。（文頭の語も小文字で示す）
 
 ① [ the / that / know / you / do / man ] is standing over there?
@@ -324,6 +334,7 @@ be happy/glad/surprised/sorry to do〜「〜して嬉しい/驚いた/申し訳�
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question: `次の英文を読んで、設問①〜④に答えなさい。
 
 Environmental problems are becoming more serious around the world. One of the biggest challenges is global warming. Scientists say that the Earth's temperature has risen by about 1°C over the past century. This change is mainly caused by greenhouse gases, such as carbon dioxide (CO₂), which are released when people burn fossil fuels like coal, oil, and gas.
@@ -361,6 +372,7 @@ To solve these problems, individuals, companies, and governments must work toget
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question: `次の会話文の（　）に最も適切な文をア〜エから選びなさい。
 
 A: Excuse me. Could you tell me how to get to the nearest convenience store?
@@ -404,6 +416,7 @@ B: (　③　) Have a nice day!
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question: `次の（　）に最も適切な語句をア〜エから選びなさい。
 
 ① Can you (　) my bag while I'm in the restroom?
@@ -437,6 +450,7 @@ B: (　③　) Have a nice day!
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question: `次の日本語を英語に訳しなさい。（20語程度）
 
 「私が子どものころ、母はよく私に『失敗を恐れるな。失敗から学ぶことができる』と言っていた。今でもその言葉を大切にしている。」`,
@@ -462,6 +476,7 @@ B: (　③　) Have a nice day!
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question: `次の各文には文法的な誤りが1か所ある。誤りを含む部分を指摘し、正しく直しなさい。
 
 ① She has worked here since five years.
@@ -494,6 +509,7 @@ B: (　③　) Have a nice day!
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question: `次の英文を読んで、設問①〜④に答えなさい。
 
 Artificial intelligence, or AI, is changing the way we live and work. In recent years, AI has been used in many fields, from medicine to education. For example, AI can now help doctors analyze medical images more accurately than ever before. In schools, AI-powered programs can create personalized learning plans for each student, helping those who struggle and challenging those who excel.
@@ -527,6 +543,7 @@ AI関連の重要語彙：artificial intelligence（人工知能）、machine le
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question: `次の英文を読んで、設問①②に答えなさい。
 
 Sleep is one of the most important things for our health, but many young people today do not get enough of it. Teenagers need about eight to ten hours of sleep each night, but studies show that many get only six hours or less. This lack of sleep can cause serious problems, including difficulty concentrating in school, mood changes, and even physical health issues.
@@ -563,6 +580,7 @@ Experts suggest that to improve sleep, teenagers should avoid using phones at le
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question: `次の会話文を読んで、（　①　）〜（　④　）に入る最も適切な文をア〜クから選びなさい。（同じ選択肢は2度使えない）
 
 [At school, during lunch break]
@@ -601,6 +619,7 @@ Yumi: I'd love to visit Kinkakuji and maybe try some traditional Kyoto cuisine!
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question: `次のテーマについて、あなた自身の意見を英語で述べなさい。（30語以上）
 
 テーマ：「中学生は毎日スマートフォンを使うべきか、それとも使用を制限すべきか。あなたの考えを理由とともに述べなさい。」
@@ -630,6 +649,7 @@ I believe students should be free to use smartphones every day. Smartphones help
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question: `次の英文を読んで、設問①〜④に答えなさい。（最高難度：記述含む）
 
 [Passage 1]

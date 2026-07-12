@@ -8,6 +8,7 @@ export const kokoKankanShakai20: Question[] = [
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'basic',
+    maxOnly: false,
     question:
       'フォッサマグナとはどのような地形的特徴をもつ地帯か。また、日本列島をどのように分ける役割を果たしているか説明せよ。',
     answer:
@@ -32,6 +33,7 @@ export const kokoKankanShakai20: Question[] = [
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'basic',
+    maxOnly: false,
     question:
       'ケッペンの気候区分において、熱帯・乾燥帯・温帯・冷帯（亜寒帯）・寒帯の5つの気候帯を区別する主な基準を述べよ。また、日本が属する主な気候帯を答えよ。',
     answer:
@@ -65,6 +67,7 @@ export const kokoKankanShakai20: Question[] = [
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'basic',
+    maxOnly: false,
     question:
       '日本の米作りが盛んな地域として東北地方・北陸地方が挙げられる。これらの地域で稲作が発達した理由を、気候・地形・水の観点から説明せよ。',
     answer:
@@ -97,6 +100,7 @@ export const kokoKankanShakai20: Question[] = [
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'basic',
+    maxOnly: false,
     question:
       '明治維新の中心的な改革として「廃藩置県」「四民平等」「殖産興業」「文明開化」が挙げられる。このうち廃藩置県（1871年）が実施された目的と、その政治的効果を説明せよ。',
     answer:
@@ -131,6 +135,7 @@ export const kokoKankanShakai20: Question[] = [
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'basic',
+    maxOnly: false,
     question:
       '大正デモクラシーの時代（大正期）に成立した普通選挙法（1925年）の内容を述べよ。また、同年に成立した治安維持法との関係を説明せよ。',
     answer:
@@ -168,6 +173,7 @@ export const kokoKankanShakai20: Question[] = [
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'standard',
+    maxOnly: false,
     question:
       '次の地形図の読み取りに関する問いに答えよ。〔図の描写〕縮尺2万5千分の1の地形図において、A地点の標高は50m、B地点の標高は150mである。両地点の地図上の直線距離は8cmである。①実際の距離は何kmか。②A地点からB地点に向かう場合、平均勾配（傾き）はどれくらいか（比率で答えよ）。③等高線の間隔が狭い部分と広い部分では、どちらが急斜面か。',
     answer:
@@ -210,6 +216,7 @@ export const kokoKankanShakai20: Question[] = [
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'standard',
+    maxOnly: false,
     question:
       '日本の工業地帯・工業地域について、次の問いに答えよ。①かつて「四大工業地帯」と呼ばれた地帯を全て挙げよ。②近年、太平洋ベルトに加えて北関東工業地域が成長した要因を述べよ。③日本の主要輸出品が、戦後の繊維製品から重化学工業品、そして現在の自動車・半導体へと変化した背景を説明せよ。',
     answer:
@@ -246,6 +253,7 @@ export const kokoKankanShakai20: Question[] = [
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'standard',
+    maxOnly: false,
     question:
       '第二次世界大戦の終結に関して、次の問いに答えよ。①日本がポツダム宣言を受諾した年月日と、それに至った主な出来事（原爆投下・ソ連参戦）の順序を述べよ。②サンフランシスコ平和条約（1951年）が締結された意義と、同時に締結された日米安全保障条約の内容を説明せよ。',
     answer:
@@ -284,6 +292,7 @@ export const kokoKankanShakai20: Question[] = [
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'standard',
+    maxOnly: false,
     question:
       '戦後日本の高度経済成長（1955〜1973年頃）について、次の問いに答えよ。①この時期の経済成長率はおよそ何%か。②高度成長を支えた国内要因を3つ挙げよ。③1973年に高度成長が終わった直接の原因を述べよ。',
     answer:
@@ -323,6 +332,7 @@ export const kokoKankanShakai20: Question[] = [
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'standard',
+    maxOnly: false,
     question:
       '日本国憲法の三大原則を列挙し、それぞれの内容を簡潔に説明せよ。また、憲法第9条が定める内容の要点を述べよ。',
     answer:
@@ -365,6 +375,7 @@ export const kokoKankanShakai20: Question[] = [
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question:
       '日本の人口問題について、次の資料を読んで問いに答えよ。〔資料〕2023年の合計特殊出生率は1.20（過去最低水準）、2024年の出生数は約70万人台と予測。65歳以上人口は全体の約29%。一方、東京圏（東京・神奈川・埼玉・千葉）の人口集中は続き、東北・四国・中国地方の山間部では人口10万人未満の市町村が増加している。①少子化が進む社会的・経済的背景を2つ挙げよ。②この資料から読み取れる「過疎」と「過密」の問題点をそれぞれ1つ挙げよ。③人口ピラミッドの形が「富士山型」から「つりがね型」を経て「つぼ型」に変化する過程で生じる社会保障上の課題を述べよ。',
     answer:
@@ -411,6 +422,7 @@ export const kokoKankanShakai20: Question[] = [
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question:
       '江戸時代の対外政策について「鎖国」という言葉を使わずに実態を説明せよ。また、長崎・対馬・薩摩・松前の4つの「窓口」それぞれで行われた交流の相手国・内容を述べよ。',
     answer:
@@ -453,6 +465,7 @@ export const kokoKankanShakai20: Question[] = [
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question:
       '日本の三権分立について、次の問いに答えよ。①国会・内閣・裁判所それぞれが互いをチェックする具体的な仕組みを1つずつ挙げよ。②衆議院が参議院より強い権限をもつ「衆議院の優越」が認められる理由と、具体的な場面（3つ）を述べよ。③内閣不信任決議が可決された場合、内閣がとれる2つの対応を述べよ。',
     answer:
@@ -499,6 +512,7 @@ export const kokoKankanShakai20: Question[] = [
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question:
       '市場経済のしくみについて、次の問いに答えよ。①需要曲線と供給曲線がグラフ上で交差する点を何というか。またその点が示す意味を述べよ。②ある財の価格が上昇したとき、需要量・供給量はそれぞれどのように変化するか（需要の法則・供給の法則）。③不況時に日本銀行が行う金融政策（金融緩和）の手段と、その効果を説明せよ。',
     answer:
@@ -546,6 +560,7 @@ export const kokoKankanShakai20: Question[] = [
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question:
       '地方自治の直接請求権について、次の表の空欄を埋めよ。〔表〕①条例の制定・改廃の請求：必要署名数（　A　）、請求先（　B　）。②監査の請求：必要署名数（　C　）、請求先（　D　）。③議会の解散請求：必要署名数（　E　）、請求先（　F　）。また、住民投票と国民投票の違いを述べよ。',
     answer:
@@ -592,6 +607,7 @@ export const kokoKankanShakai20: Question[] = [
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question:
       '次の資料を読んで、地球規模の問題に関する問いに答えよ。〔資料〕2015年に国連で採択されたSDGs（持続可能な開発目標）は17のゴールを定めている。目標2は「飢餓をゼロに」、目標13は「気候変動に具体的な対策を」とある。世界の穀物生産量は増加傾向にあるが、約8億人が慢性的な飢餓状態にある（国連FAO・2023年）。一方、世界の平均気温は産業革命前比で約1.1℃上昇しており、このままでは2100年に3〜5℃上昇が予測される。①飢餓が解消されない主な構造的原因を「生産」以外の観点から2つ挙げよ。②気候変動が農業・食料生産に与える具体的な悪影響を2つ述べよ。③SDGsの「だれひとり取り残さない」という理念を実現するために、日本がとるべき行動の例を1つ挙げよ。',
     answer:
@@ -641,6 +657,7 @@ SDGsは2030年までの目標であり、目標達成の「中間評価」（202
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question:
       '次の年表を読んで、近現代史の因果関係に関する問いに答えよ。〔年表〕1929年 世界恐慌（ウォール街の株価大暴落）→1931年 満州事変→1932年 五・一五事件→1936年 二・二六事件→1937年 日中戦争→1938年 国家総動員法→1941年 太平洋戦争開戦。①世界恐慌が日本の軍国主義化を促進した構造的な因果関係を100字程度で説明せよ。②国家総動員法（1938年）が議会の承認なしに政府が動員できるようになった点について、どのような問題があるかを述べよ。③この時期の歴史から現代の民主主義が学ぶべき教訓を1つ挙げよ。',
     answer:
@@ -686,6 +703,7 @@ SDGsは2030年までの目標であり、目標達成の「中間評価」（202
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question:
       '国際社会の仕組みについて、次の問いに答えよ。①国際連合の主要な機関を3つ挙げ、それぞれの機能を述べよ。②安全保障理事会において「拒否権」がある常任理事国5か国を全て列挙し、拒否権が国際平和の維持を困難にする理由を説明せよ。③PKO（国連平和維持活動）とODA（政府開発援助）の違いを、目的・実施主体の観点から説明せよ。',
     answer:
@@ -736,6 +754,7 @@ PKOは国連の機関ではなく、加盟国が派遣する軍・警察・民�
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question:
       '日本の社会保障制度は「四本柱」から成るとされる。①四本柱の名称を全て列挙し、それぞれの具体例を1つずつ挙げよ。②少子高齢化が社会保障財政に与える影響を、歳入（収入）と歳出（支出）の両面から説明せよ。③日本の国民皆保険・国民皆年金制度が実現したのは1961年であるが、その意義と現在の課題を述べよ。',
     answer:
@@ -803,6 +822,7 @@ PKOは国連の機関ではなく、加盟国が派遣する軍・警察・民�
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question:
       '次の資料・グラフ・年表を総合的に読み取り、問いに答えよ。〔資料A：日本の輸出入の変化（文章描写）〕2000年：輸出品目の1位は自動車（約20%）、2位は半導体等電子部品（約14%）。2020年：輸出品目の1位は自動車（約22%）、2位は一般機械（約19%）。輸入1位は原油・粗油（2000年・2020年ともに約15〜17%）。〔資料B：政府の財政〕2023年度予算：歳出総額114兆円、社会保障費約37兆円（約32%）、国債費約25兆円（約22%）、一般歳入のうち税収63兆円・国債発行額35兆円。〔資料C：年表〕1989年 消費税3%導入、1997年 5%、2014年 8%、2019年 10%。①資料Aから、日本の貿易の特徴と課題を1つずつ挙げよ。②資料Bから読み取れる日本の財政の問題点を述べよ。③資料Bと資料Cを組み合わせて、日本政府が消費税を段階的に引き上げてきた理由を論述せよ（100字程度）。',
     answer:
