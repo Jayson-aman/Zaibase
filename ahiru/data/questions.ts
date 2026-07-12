@@ -52,6 +52,16 @@ import { nichinokenEigo } from './nichinoken_eigo';
 import { kokoNyushiRika50 } from './koko_nyushi_rika_50';
 import { kokoNyushiSansu50 } from './koko_nyushi_sansu_50';
 import { kokoNyushiEigo50 } from './koko_nyushi_eigo_50';
+import { kokoNyushiEigo2 } from './koko_nyushi_eigo2';
+import { kokoNyushiEigo3 } from './koko_nyushi_eigo3';
+import { kokoNyushiEigo4 } from './koko_nyushi_eigo4';
+import { kokoNyushiEigo5 } from './koko_nyushi_eigo5';
+import { kokoNyushiEigo6 } from './koko_nyushi_eigo6';
+import { kokoNyushiEigo7 } from './koko_nyushi_eigo7';
+import { kokoNyushiEigo8 } from './koko_nyushi_eigo8';
+import { kokoNyushiEigo9 } from './koko_nyushi_eigo9';
+import { kokoNyushiEigo10 } from './koko_nyushi_eigo10';
+import { kokoNyushiEigo11 } from './koko_nyushi_eigo11';
 import { kokoNyushiShakai50 } from './koko_nyushi_shakai_50';
 import { kokoNyushiKokugo50 } from './koko_nyushi_kokugo_50';
 import { kokoKisoRika50b } from './koko_kiso_rika_50b';
@@ -2784,6 +2794,16 @@ export const questions: Question[] = [
   ...kokoNyushiRika50,
   ...kokoNyushiSansu50,
   ...kokoNyushiEigo50,
+  ...kokoNyushiEigo2,
+  ...kokoNyushiEigo3,
+  ...kokoNyushiEigo4,
+  ...kokoNyushiEigo5,
+  ...kokoNyushiEigo6,
+  ...kokoNyushiEigo7,
+  ...kokoNyushiEigo8,
+  ...kokoNyushiEigo9,
+  ...kokoNyushiEigo10,
+  ...kokoNyushiEigo11,
   ...kokoNyushiShakai50,
   ...kokoNyushiKokugo50,
   ...kokoKisoEigo50,
