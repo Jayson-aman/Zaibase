@@ -251,6 +251,22 @@ export default function HomeScreen() {
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
       >
+        {/* 受験とは別枠の学習コンテンツへの入り口（英単語・英熟語・英会話・英検・TOEIC対策） */}
+        {!listenPickerActive && (
+          <TouchableOpacity
+            style={styles.vocabEntryCard}
+            activeOpacity={0.85}
+            onPress={() => router.push('/vocab')}
+          >
+            <View style={styles.vocabEntryTextWrap}>
+              <Text style={styles.vocabEntryBadge}>受験対策とは別の学習コンテンツ</Text>
+              <Text style={styles.vocabEntryTitle}>🔤 英単語・英熟語・英会話</Text>
+              <Text style={styles.vocabEntrySub}>英検準2級〜1級・TOEIC800対応　単語5,000+・熟語4,000+</Text>
+            </View>
+            <Text style={styles.vocabEntryArrow}>›</Text>
+          </TouchableOpacity>
+        )}
+
         {/* Exam type toggle */}
         {!listenPickerActive && (
           <View style={styles.examToggleRow}>
@@ -653,6 +669,43 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingTop: 16,
     paddingBottom: 40,
+  },
+  vocabEntryCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: 'rgba(160,100,220,0.10)',
+    borderWidth: 1,
+    borderColor: 'rgba(160,100,220,0.35)',
+    borderRadius: 16,
+    paddingVertical: 14,
+    paddingHorizontal: 16,
+    marginBottom: 18,
+  },
+  vocabEntryTextWrap: {
+    flex: 1,
+  },
+  vocabEntryBadge: {
+    fontSize: 10,
+    fontWeight: '700',
+    color: '#A064DC',
+    letterSpacing: 0.5,
+    marginBottom: 4,
+  },
+  vocabEntryTitle: {
+    fontSize: 16,
+    fontWeight: '800',
+    color: D.white,
+    marginBottom: 2,
+  },
+  vocabEntrySub: {
+    fontSize: 11,
+    color: D.muted,
+  },
+  vocabEntryArrow: {
+    fontSize: 28,
+    color: '#A064DC',
+    fontWeight: '300',
+    marginLeft: 8,
   },
 
   // Exam type toggle

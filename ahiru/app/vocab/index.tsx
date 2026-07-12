@@ -11,11 +11,18 @@ import {
   Dimensions,
   ActivityIndicator,
 } from 'react-native';
+import { useRouter } from 'expo-router';
 import { speakWithOpenAI, speakWithDevice } from '../../services/tts';
 import { useVocabSubscription } from '../../hooks/useVocabSubscription';
 import { fetchVocabProducts, purchaseProduct, restorePurchases } from '../../services/subscription';
-import type { VocabEntry } from '../../data/vocab-meta';
+import type { VocabEntry, VocabLevel } from '../../data/vocab-meta';
+import { levelColor, levelLabel } from '../../data/vocab-meta';
 import { vocabWords } from '../../data/vocab_words';
+import { useFonts, BIZUDGothic_400Regular, BIZUDGothic_700Bold } from '@expo-google-fonts/biz-udgothic';
+
+// 教科書体に近い、可読性重視のUD（ユニバーサルデザイン）フォント
+const TEXTBOOK_REGULAR = 'BIZUDGothic_400Regular';
+const TEXTBOOK_BOLD = 'BIZUDGothic_700Bold';
 
 const { width: SCREEN_W } = Dimensions.get('window');
 
@@ -38,17 +45,23 @@ const D = {
   purpleText:   '#A064DC',
 };
 
-const LEVEL_FILTER = ['全て', '中学基礎', '中学標準', '高校基礎', '高校標準', '受験重要'] as const;
+const LEVEL_FILTER = [
+  '全て', '中学基礎', '中学標準', '高校基礎', '高校標準', '受験重要',
+  '英検準2級', '英検2級', '英検1級', 'TOEIC800',
+] as const;
 const LEVEL_MAP: Record<string, string> = {
   '全て': 'all', '中学基礎': 'junior_basic', '中学標準': 'junior_std',
   '高校基礎': 'senior_basic', '高校標準': 'senior_std', '受験重要': 'entrance',
+  '英検準2級': 'eiken_pre2', '英検2級': 'eiken_2', '英検1級': 'eiken_1', 'TOEIC800': 'toeic_800',
 };
-const TYPE_FILTER = ['全て', '単語', '熟語'] as const;
+const TYPE_FILTER = ['全て', '単語', '熟語', '英会話'] as const;
 const LISTEN_INTERVAL_MS = 4500;
 
 export default function VocabScreen() {
+  const router = useRouter();
   const { hasVocab } = useVocabSubscription();
   const hasVocabPro = hasVocab;
+  const [fontsLoaded] = useFonts({ BIZUDGothic_400Regular, BIZUDGothic_700Bold });
 
   const [levelFilter, setLevelFilter] = useState<string>('全て');
   const [typeFilter,  setTypeFilter]  = useState<string>('全て');
@@ -64,8 +77,9 @@ export default function VocabScreen() {
   const filtered = vocabWords.filter(w => {
     const levelOk = levelFilter === '全て' || w.level === LEVEL_MAP[levelFilter];
     const typeOk  = typeFilter  === '全て'
-      || (typeFilter === '単語' && !w.isPhrase)
-      || (typeFilter === '熟語' &&  w.isPhrase);
+      || (typeFilter === '単語' && !w.isPhrase && w.category !== 'conversation')
+      || (typeFilter === '熟語' &&  w.isPhrase && w.category !== 'conversation')
+      || (typeFilter === '英会話' && w.category === 'conversation');
     return levelOk && typeOk;
   });
 
@@ -140,17 +154,36 @@ export default function VocabScreen() {
   return (
     <SafeAreaView style={s.safe}>
       <ScrollView contentContainerStyle={s.scroll}>
-        <Text style={s.title}>英単語・英熟語</Text>
-        <Text style={s.sub}>LEAP準拠 2,000語 ＋ 2,000熟語収録</Text>
+        <Text style={[s.title, fontsLoaded && { fontFamily: TEXTBOOK_BOLD }]}>英単語・英熟語</Text>
+        <Text style={s.sub}>単語5,000語+・熟語4,000+・英会話200　英検準2級〜1級・TOEIC800対応</Text>
 
-        {/* レベルフィルター */}
+        <TouchableOpacity style={s.conversationEntryBtn} onPress={() => router.push('/conversation')}>
+          <Text style={s.conversationEntryText}>🗣️ AIと英会話を練習する</Text>
+        </TouchableOpacity>
+
+        {/* レベルフィルター（レベルごとに色分け） */}
         <ScrollView horizontal showsHorizontalScrollIndicator={false} style={s.filterRow}>
-          {LEVEL_FILTER.map(lbl => (
-            <TouchableOpacity key={lbl} style={[s.filterChip, levelFilter === lbl && s.filterChipActive]}
-              onPress={() => changeFilter(lbl, typeFilter)}>
-              <Text style={[s.filterText, levelFilter === lbl && s.filterTextActive]}>{lbl}</Text>
-            </TouchableOpacity>
-          ))}
+          {LEVEL_FILTER.map(lbl => {
+            const lvKey = LEVEL_MAP[lbl] as VocabLevel | 'all';
+            const lc = lvKey !== 'all' ? levelColor[lvKey as VocabLevel] : null;
+            const isActive = levelFilter === lbl;
+            return (
+              <TouchableOpacity
+                key={lbl}
+                style={[
+                  s.filterChip,
+                  isActive && (lc
+                    ? { backgroundColor: lc.bg, borderColor: lc.border }
+                    : s.filterChipActive),
+                ]}
+                onPress={() => changeFilter(lbl, typeFilter)}
+              >
+                <Text style={[s.filterText, isActive && { color: lc ? lc.text : D.gold, fontWeight: '700' }]}>
+                  {lbl}
+                </Text>
+              </TouchableOpacity>
+            );
+          })}
         </ScrollView>
 
         {/* 単語／熟語切替 */}
@@ -171,11 +204,15 @@ export default function VocabScreen() {
             <Animated.View style={[s.card, s.cardFront, { transform: [{ rotateY: frontRotate }] }]}>
               <View style={s.badgeRow}>
                 <View style={s.idBadge}><Text style={s.idBadgeText}>No.{card.id.replace(/[a-z]/gi,'').padStart(4,'0')}</Text></View>
+                <View style={[s.levelBadge, { backgroundColor: levelColor[card.level].bg, borderColor: levelColor[card.level].border }]}>
+                  <Text style={[s.levelBadgeText, { color: levelColor[card.level].text }]}>{levelLabel[card.level]}</Text>
+                </View>
                 <View style={s.posBadge}><Text style={s.posBadgeText}>{card.pos}</Text></View>
-                {card.isPhrase && <View style={s.phraseBadge}><Text style={s.phraseBadgeText}>熟語</Text></View>}
+                {card.isPhrase && card.category !== 'conversation' && <View style={s.phraseBadge}><Text style={s.phraseBadgeText}>熟語</Text></View>}
+                {card.category === 'conversation' && <View style={s.convBadge}><Text style={s.convBadgeText}>英会話</Text></View>}
               </View>
 
-              <Text style={s.wordText}>{card.word}</Text>
+              <Text style={[s.wordText, fontsLoaded && { fontFamily: TEXTBOOK_BOLD }]}>{card.word}</Text>
 
               <View style={s.pronRow}>
                 {card.ipa ? <Text style={s.ipaText}>{card.ipa}</Text> : null}
@@ -210,21 +247,21 @@ export default function VocabScreen() {
 
                 {card.meanings && card.meanings.length > 1 ? (
                   card.meanings.map((m, i) => (
-                    <Text key={i} style={s.meaningItem}>
+                    <Text key={i} style={[s.meaningItem, fontsLoaded && { fontFamily: TEXTBOOK_BOLD }]}>
                       <Text style={s.meaningNum}>{'①②③④⑤'[i] ?? `${i+1}.`}</Text>{'  '}{m}
                     </Text>
                   ))
                 ) : (
-                  <Text style={s.meaningText}>{card.meaning}</Text>
+                  <Text style={[s.meaningText, fontsLoaded && { fontFamily: TEXTBOOK_BOLD }]}>{card.meaning}</Text>
                 )}
 
                 <View style={s.exampleBox}>
                   <Text style={s.exampleLabel}>例　文</Text>
-                  <Text style={s.exampleEn}>{card.example}</Text>
-                  <Text style={s.exampleJa}>{card.exampleJa}</Text>
+                  <Text style={[s.exampleEn, fontsLoaded && { fontFamily: TEXTBOOK_REGULAR }]}>{card.example}</Text>
+                  <Text style={[s.exampleJa, fontsLoaded && { fontFamily: TEXTBOOK_REGULAR }]}>{card.exampleJa}</Text>
                   {card.example2 ? <>
-                    <Text style={[s.exampleEn, {marginTop: 8}]}>{card.example2}</Text>
-                    <Text style={s.exampleJa}>{card.example2Ja}</Text>
+                    <Text style={[s.exampleEn, {marginTop: 8}, fontsLoaded && { fontFamily: TEXTBOOK_REGULAR }]}>{card.example2}</Text>
+                    <Text style={[s.exampleJa, fontsLoaded && { fontFamily: TEXTBOOK_REGULAR }]}>{card.example2Ja}</Text>
                   </> : null}
                 </View>
 
@@ -242,7 +279,7 @@ export default function VocabScreen() {
                   </View>
                 ) : null}
 
-                <Text style={s.categoryTag}>#{card.category}  #{card.level}</Text>
+                <Text style={s.categoryTag}>#{card.category}  #{levelLabel[card.level]}</Text>
               </ScrollView>
             </Animated.View>
           </TouchableOpacity>
@@ -273,7 +310,7 @@ export default function VocabScreen() {
 
         {!hasVocabPro && (
           <TouchableOpacity style={s.promoBanner} onPress={() => setShowPaywall(true)}>
-            <Text style={s.promoText}>🔊 英単語Pro — ネイティブ発音・聞き流し・全4,000語　¥1,000/月〜</Text>
+            <Text style={s.promoText}>🔊 英単語Pro — ネイティブ発音・聞き流し・単語5,000+・熟語4,000+　¥1,000/月〜</Text>
           </TouchableOpacity>
         )}
       </ScrollView>
@@ -339,7 +376,8 @@ function VocabPaywall({ onClose, onPurchased }: { onClose: () => void; onPurchas
         {[
           '🔊 ネイティブ発音（OpenAI TTS HD・高音質）',
           '▶ 聞き流しモード（自動ページ送り）',
-          '📖 全2,000語 ＋ 2,000熟語',
+          '📖 単語5,000語+ ＋ 熟語4,000+ ＋ 日常英会話200',
+          '🎓 英検準2級〜1級・TOEIC800レベル対応',
           '📌 ここが大切・セットで暗記・覚え方ダブル',
           '📊 学習進捗トラッキング',
         ].map(f => (
@@ -392,6 +430,8 @@ const s = StyleSheet.create({
   scroll:            { padding: 16, paddingBottom: 40 },
   title:             { fontSize: 24, fontWeight: '800', color: D.gold, textAlign: 'center', marginTop: 8 },
   sub:               { fontSize: 12, color: D.muted, textAlign: 'center', marginBottom: 12 },
+  conversationEntryBtn: { backgroundColor: 'rgba(160,100,220,0.14)', borderWidth: 1, borderColor: D.purpleBorder, borderRadius: 14, paddingVertical: 12, alignItems: 'center', marginBottom: 14 },
+  conversationEntryText: { fontSize: 14, fontWeight: '700', color: D.purpleText },
   filterRow:         { flexGrow: 0, marginBottom: 8 },
   filterChip:        { paddingHorizontal: 14, paddingVertical: 6, borderRadius: 20, backgroundColor: D.card, borderWidth: 1, borderColor: D.cardBorder, marginRight: 8 },
   filterChipActive:  { backgroundColor: D.goldDim, borderColor: D.gold },
@@ -414,6 +454,10 @@ const s = StyleSheet.create({
   posBadgeText:      { fontSize: 11, color: D.gold, fontWeight: '700' },
   phraseBadge:       { backgroundColor: 'rgba(74,200,180,0.15)', borderRadius: 8, paddingHorizontal: 8, paddingVertical: 3 },
   phraseBadgeText:   { fontSize: 11, color: D.tealText, fontWeight: '700' },
+  levelBadge:        { borderRadius: 8, paddingHorizontal: 8, paddingVertical: 3, borderWidth: 1 },
+  levelBadgeText:    { fontSize: 11, fontWeight: '700' },
+  convBadge:         { backgroundColor: 'rgba(240,96,144,0.15)', borderRadius: 8, paddingHorizontal: 8, paddingVertical: 3 },
+  convBadgeText:     { fontSize: 11, color: '#F06090', fontWeight: '700' },
   wordText:          { fontSize: 38, fontWeight: '800', color: D.white, marginBottom: 4 },
   pronRow:           { flexDirection: 'row', alignItems: 'center', gap: 10, marginBottom: 10 },
   ipaText:           { fontSize: 15, color: D.soft, fontStyle: 'italic' },

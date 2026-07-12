@@ -66,6 +66,14 @@ export default function RootLayout() {
           options={{ headerShown: false, presentation: 'card' }}
         />
         <Stack.Screen
+          name="vocab/index"
+          options={{ headerShown: false, presentation: 'card' }}
+        />
+        <Stack.Screen
+          name="conversation/index"
+          options={{ headerShown: false, presentation: 'card' }}
+        />
+        <Stack.Screen
           name="terms"
           options={{ headerShown: false, presentation: 'modal' }}
         />
