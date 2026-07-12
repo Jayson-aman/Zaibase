@@ -575,7 +575,7 @@ At the same time, an aging population means a greater need for medical care and 
     answer: `① 約35パーセント。
 ② ・女性や高齢者をより多く雇うよう企業に促した。・外国人労働者の受け入れに関する規則を一部緩和した。
 ③ Robots and AI technology.
-④ 日本は少子高齢化による労働力不足や介護人材不足という課題に直面しており、今後同じような高齢化に直面する他国にとって、日本の経験が参考になる可能性があるということ。（79字）`,
+④ 日本は少子高齢化による労働力・介護人材不足に直面しており、今後同様の高齢化に直面する他国にとって日本の経験が参考になる可能性があるということ。（71字）`,
     hint: `①「nearly 35 percent of the population will be over 65 years old」。②「encouraged businesses to hire more women and elderly people, and has also relaxed some rules on accepting foreign workers」。③「Robots and AI technology are increasingly being used」。④最終文をそのまま日本語でまとめる。`,
     explanation: `【出題意図】3段落構成の論説文（現状提示→課題→対策と展望）を読み、数値情報・政府対応・技術活用・結論の要約という総合的な読解力を問う最高難度の問題。【解説】①第1段落「nearly 35 percent... over 65 years old」。②第2段落「encouraged businesses to hire more women and elderly people」「relaxed some rules on accepting foreign workers」の2点。③第3段落「Robots and AI technology」。④第3段落最終文は「日本の高齢化対応の経験が、今後同様の課題に直面する他国の参考になりうる」という将来への示唆で締めくくられている。【注意点】3段落構成の論説文では、各段落の役割（1：現状・データ、2：労働力の課題と対策、3：医療・介護の課題と将来への示唆）を意識して読むと整理しやすい。【関連知識】aging population（高齢化社会）、workforce（労働力）、caregiver（介護者）は社会保障・人口問題の英文で頻出語彙。`,
     pitfall: `②で「外国人労働者を増やした」のように断定しすぎない。本文は「relaxed some rules（規則を緩和した）」であり、直接「増やした」とまでは書かれていない点に注意。`,
@@ -812,8 +812,7 @@ Manager: Perfect. We'll be in touch by the end of this week with our decision.`,
     question: `次の日本語を英語に訳しなさい。（20語以上）
 
 もし私がもっと早く彼女にそのことを伝えていたら、彼女はそんなに驚かなかっただろう。`,
-    answer: `（解答例）If I had told her about it earlier, she would not have been so surprised.（14語→字数を満たすために別解を追加）
-（別解）If I had told her about it earlier, she wouldn't have been so surprised, and things would have gone more smoothly between us.（22語）`,
+    answer: `（解答例）If I had told her about it earlier, she wouldn't have been so surprised, and things would have gone more smoothly between us.（23語）`,
     hint: `過去の事実に反する仮定なので仮定法過去完了：If+主語+had+過去分詞〜, 主語+would have+過去分詞〜。`,
     explanation: `【出題意図】仮定法過去完了を用いた和文英訳。過去の出来事に対する反実仮想（実際には伝えなかった）を正確に表現できるかを問う。【解説】「もし〜していたら」は過去の事実に反する仮定なので仮定法過去完了のif節：If I had told her about it earlier。「そんなに驚かなかっただろう」は帰結節でwould not have been so surprised（would/could/might+have+過去分詞の否定形）。【注意点】仮定法過去完了の帰結節はwouldn't have been（過去分詞）であり、wouldn't beやdidn't beとしない。過去の事実（実際には早く伝えなかった、実際には驚いた）と反対の内容を表す点を押さえる。【関連知識】仮定法過去完了はI wish I had done〜（〜していたらなあ）、should have done〜（〜すべきだった）などの後悔表現ともセットで学習すると理解が深まる。`,
     pitfall: `If I told her about it earlier, she would not be so surprised.のように仮定法過去にしてしまうと「現在の話」になり、過去の後悔のニュアンスが失われる。`,
@@ -829,8 +828,7 @@ Manager: Perfect. We'll be in touch by the end of this week with our decision.`,
     question: `次の日本語を英語に訳しなさい。（20語以上）
 
 この本は、私がこれまでに読んだ中で最も感動的な物語の一つだと思う。`,
-    answer: `（解答例）I think this book is one of the most moving stories that I have ever read.（16語→語数条件を満たす別解）
-（別解）I think this book is one of the most moving stories that I have ever read, and I would like to recommend it to everyone.（24語）`,
+    answer: `（解答例）I think this book is one of the most moving stories that I have ever read, and I would like to recommend it to everyone.（25語）`,
     hint: `「〜の中で最も…な一つ」はone of the most+形容詞+複数名詞。「これまでに読んだ中で」はthat I have ever read（現在完了の経験用法）。`,
     explanation: `【出題意図】最上級の重要表現「one of the most+形容詞+複数名詞」と、現在完了の経験用法（ever）を組み合わせた英作文を問う。【解説】「最も感動的な物語の一つ」はone of the most moving stories（最上級+複数名詞、theは省略可）。「私がこれまでに読んだ中で」は関係代名詞thatを使ってthat I have ever read（現在完了の経験、everは「これまでに」を強調）。【注意点】one of the most+形容詞の後ろは必ず複数名詞（storiesであってstoryではない）にする。movingは「感動的な」という意味の現在分詞形容詞（moved=感動させられた、との違いに注意）。【関連知識】one of the+最上級+複数名詞（〜の中で最も…なものの一つ）は、highest score、best playersなど幅広い場面で使える定番表現。`,
     pitfall: `one of the most moving storyと単数名詞にしない。「one of the+最上級」の後ろは必ず複数形。`,
@@ -846,8 +844,7 @@ Manager: Perfect. We'll be in touch by the end of this week with our decision.`,
     question: `次の日本語を英語に訳しなさい。（20語以上）
 
 環境を守るために、私たち一人ひとりができることから始めるべきだと思う。`,
-    answer: `（解答例）I think we should start with what each of us can do in order to protect the environment.（18語→語数条件を満たす別解）
-（別解）I think we should start with what each of us can do in order to protect the environment for future generations.（21語）`,
+    answer: `（解答例）I think we should start with what each of us can do in order to protect the environment for future generations.（21語）`,
     hint: `「〜すべきだと思う」はI think we should〜。「私たち一人ひとりができること」は関係詞whatを使ってwhat each of us can do。「〜するために」はin order to〜。`,
     explanation: `【出題意図】関係代名詞what（先行詞を含む関係詞）と目的を表すin order to〜を組み合わせた、環境問題をテーマにした意見英作文を問う。【解説】「私たち一人ひとりができること」は「the thing that each of us can do」を1語にまとめたwhat each of us can doで表現する。「〜から始めるべきだ」はshould start with〜。「環境を守るために」は目的を明確にするin order to protect the environment（またはto protect the environment）。【注意点】whatは「もの・こと」という先行詞を含む関係代名詞であり、what以下は名詞節としてstart withの目的語になる。「each of us」は「私たちのそれぞれ」で3人称単数扱い（can doは変化しないので問題ないが、be動詞なら注意）。【関連知識】environment（環境）、future generations（将来の世代）はSDGs・環境問題の英作文で頻出のテーマ語彙。`,
     pitfall: `what each of us can doをthe thing what each of us can doのように二重にしない。whatは単独で「〜すること・もの」を表す。`,
@@ -863,9 +860,7 @@ Manager: Perfect. We'll be in touch by the end of this week with our decision.`,
     question: `次の日本語を英語に訳しなさい。（20語以上）
 
 彼が経験してきた困難を考えると、彼が成功したことは驚くべきことではない。`,
-    answer: `（解答例）Considering the difficulties he has experienced, it is not surprising that he has succeeded.（14語→語数条件を満たす別解）
-（別解）Considering the difficulties he has experienced, it is not surprising that he has succeeded in his career.（17語→さらに補い22語程度に調整）
-（さらなる別解）Considering all the difficulties that he has experienced throughout his life, it is not surprising at all that he has succeeded so well.（23語）`,
+    answer: `（解答例）Considering all the difficulties that he has experienced throughout his life, it is not surprising at all that he has succeeded so well.（23語）`,
     hint: `「〜を考えると」はConsidering〜（分詞構文）。「驚くべきことではない」はit is not surprising that〜。`,
     explanation: `【出題意図】分詞構文Considering〜（〜を考慮すると）と形式主語構文It is not surprising that〜を組み合わせた高度な英作文を問う。【解説】「彼が経験してきた困難を考えると」はConsidering the difficulties he has experienced（Consideringは前置詞的に使われる分詞構文で「〜を考慮すると」の意味）。「彼が成功したことは驚くべきことではない」はIt is not surprising that he has succeeded.（It is 〜 that S V の形式主語構文）。【注意点】Consideringは分詞構文だが、慣用的に前置詞のように使われ、主語の一致を気にせず使える点が特徴（懸垂分詞のように見えても許容される）。that節中は現在完了he has succeededを使い、これまでの経緯を含めたニュアンスを出す。【関連知識】Consideringと似た用法にGiven〜（〜を考えると）、Judging from〜（〜から判断すると）があり、いずれも文頭で「判断の根拠」を示す表現。`,
     pitfall: `If we consider the difficultiesとしても文法的には可能だが、Consideringを使った分詞構文の方がより簡潔で高校入試上級レベルの表現として評価される。`,
@@ -881,8 +876,7 @@ Manager: Perfect. We'll be in touch by the end of this week with our decision.`,
     question: `次の日本語を英語に訳しなさい。（20語以上）
 
 このアプリを使えば使うほど、それがどれほど便利かがわかってくる。`,
-    answer: `（解答例）The more you use this app, the more you realize how useful it is.（14語→語数条件を満たす別解）
-（別解）The more you use this app every day, the more you will realize how useful and convenient it really is.（20語）`,
+    answer: `（解答例）The more you use this app every day, the more you will realize how useful and convenient it really is.（20語）`,
     hint: `「〜すればするほど…」はThe+比較級〜, the+比較級…の構文。「どれほど便利か」はhow useful it is（間接疑問文）。`,
     explanation: `【出題意図】「the+比較級, the+比較級」構文と、howを使った間接疑問文を組み合わせた高度な英作文を問う。【解説】「使えば使うほど」はThe more you use this app（useは動詞なのでmoreは副詞的にuseを修飾）。「わかってくる」はthe more you realize、「それがどれほど便利かが」はrealizeの目的語となる間接疑問文how useful it is（疑問詞howの後ろは平叙文の語順：主語+動詞）。【注意点】間接疑問文はHow useful is it?（疑問文の語順）ではなく、how useful it is（平叙文の語順）にする点が重要な文法事項。【関連知識】The more〜, the more…構文は他にも The harder you study, the better grades you will get.（勉強すればするほど良い成績が取れる）のように幅広く応用できる。`,
     pitfall: `間接疑問文の部分をhow useful is itと疑問文の語順のままにしない。realizeの目的語になる節なので平叙文の語順（it is）にする。`,
@@ -914,9 +908,7 @@ Manager: Perfect. We'll be in touch by the end of this week with our decision.`,
     question: `次の日本語を英語に訳しなさい。（20語以上）
 
 多くの生徒が試験前に十分な睡眠を取ることの大切さを忘れがちだ。`,
-    answer: `（解答例）Many students tend to forget how important it is to get enough sleep before an exam.（16語→語数条件を満たす別解）
-（別解）Many students tend to forget how important it is to get enough sleep before taking an important exam.（18語→さらに調整）
-（さらなる別解）Many high school students tend to forget how important it is to get enough sleep the night before an exam.（20語）`,
+    answer: `（解答例）Many high school students tend to forget how important it is to get enough sleep the night before an exam.（20語）`,
     hint: `「〜しがちだ」はtend to〜。「〜することの大切さ」は形式主語構文how important it is to〜。`,
     explanation: `【出題意図】tend to〜（〜しがちである）という頻度・傾向を表す表現と、形式主語構文it is 〜 to doを組み合わせた英作文を問う。【解説】「忘れがちだ」はtend to forget（tend to〜=〜する傾向がある）。「十分な睡眠を取ることの大切さ」はhow important it is to get enough sleep（間接疑問文＋形式主語構文の組み合わせで「それがどれほど重要か」を表す）。「試験前に」はbefore an exam。【注意点】the importance of getting enough sleepという名詞句を使う書き方も可能だが、how important it is to〜の方が構文としてより実践的で応用が利く。tend toの後ろは動詞の原形（forget）。【関連知識】tend to〜（〜する傾向がある）、be likely to〜（〜しそうである）はいずれも一般的傾向を述べる際に頻出の表現。`,
     pitfall: `how important it is to〜の部分をhow is it important to〜のように疑問文の語順にしない。間接的な名詞節として平叙文の語順を保つ。`,
@@ -932,8 +924,7 @@ Manager: Perfect. We'll be in touch by the end of this week with our decision.`,
     question: `次の日本語を英語に訳しなさい。（20語以上）
 
 もし誰も地球温暖化について何も行動を起こさなければ、多くの動植物が絶滅するかもしれない。`,
-    answer: `（解答例）If nobody takes any action against global warming, many plants and animals may become extinct.（15語→語数条件を満たす別解）
-（別解）If nobody takes any action against global warming soon, many kinds of plants and animals around the world may become extinct.（21語）`,
+    answer: `（解答例）If nobody takes any action against global warming soon, many kinds of plants and animals around the world may become extinct.（21語）`,
     hint: `現実に起こりうる条件なのでif節は現在形。「絶滅する」はbecome extinct。「行動を起こす」はtake action。`,
     explanation: `【出題意図】現実的な条件を表すif節（現在形）と、環境問題の重要語彙（extinct、take action）を用いた英作文を問う。【解説】「もし〜しなければ」は現実にありうる仮定なのでif節は現在形：If nobody takes any action。「地球温暖化に対して」はagainst global warming。「多くの動植物が絶滅するかもしれない」はmany plants and animals may become extinct（may=〜かもしれない、可能性を表す助動詞）。【注意点】ここでは仮定法（If nobody took〜, would become〜）ではなく、現実的にありうる未来の条件として現在形＋may/mightを使う点が重要。地球温暖化はまだ確定した未来ではないため、仮定法過去にすると「まずありえない話」という誤ったニュアンスになる。【関連知識】become extinct（絶滅する）、take action against〜（〜に対して行動を起こす）は環境問題の英作文で重要な語彙・表現。`,
     pitfall: `If nobody took any action, many plants and animals would become extinct.のように仮定法にすると、「実際にはありえない」という含みが強くなり、現実的な警告のニュアンスが弱まる。`,
