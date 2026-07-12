@@ -161,10 +161,10 @@ She said to me, "Do you like tea?"
 ③ As it was written in French, I couldn't read the letter.`,
     answer: `① Seeing her, I waved my hand.
 ② Being sick, he stayed home.
-③ Written in French, I couldn't read the letter.`,
-    hint: '従属節の主語が主節と同じとき、接続詞と主語を消して動詞を分詞（-ing/p.p.）にする。',
-    explanation: `【出題意図】時・理由・受動態を含む分詞構文への書き換えを問う。【解説】①「見たとき」→能動なのでSeeing（現在分詞）。②「病気だったので」→be動詞の分詞構文はBeing sick。③「フランス語で書かれていたので」→受動態の分詞構文は先頭のBeingを省略しWrittenから始める（Being writtenのBeingを省略）。【注意点】分詞構文を作る際は、①接続詞を消す、②主語が主節と同じなら消す、③動詞をing形（能動）かp.p.（受動）にする、の3ステップを踏む。【関連知識】否定の分詞構文はNot+分詞（Not knowing what to say, she remained silent.）。`,
-    pitfall: '③をBeing written in Frenchとしても文法的には正しいが、受動の分詞構文ではBeingを省略するのがより自然。',
+③ It being written in French, I couldn't read the letter.`,
+    hint: '従属節の主語が主節と同じとき、接続詞と主語を消して動詞を分詞（-ing/p.p.）にする。主語が異なるときは分詞の前に主語（it等）を残す（独立分詞構文）。',
+    explanation: `【出題意図】時・理由・受動態を含む分詞構文への書き換えを問う。【解説】①「見たとき」→能動なのでSeeing（現在分詞）。②「病気だったので」→be動詞の分詞構文はBeing sick。③「手紙がフランス語で書かれていたので」の意味上の主語はthe letter（it）であり、主節の主語Iとは異なるため、分詞の前に主語itを残す独立分詞構文にする：It being written in French, I couldn't read the letter。【注意点】分詞構文を作る際は、①接続詞を消す、②主語が主節と同じなら消す（異なる場合は分詞の前に残す＝独立分詞構文）、③動詞をing形（能動）かp.p.（受動）にする、の3ステップを踏む。【関連知識】否定の分詞構文はNot+分詞（Not knowing what to say, she remained silent.）。`,
+    pitfall: '③の意味上の主語（手紙）は主節の主語（I）と異なるため、主語を省略してWritten in French, I could not...とすると懸垂分詞（意味上の主語が不明確な誤り）になる。',
     memoryTip: '分詞構文の作り方は「接続詞を消す→主語を消す（同じなら）→動詞をing/p.p.に」の3手順。',
   },
   {
@@ -666,12 +666,12 @@ A growing number of schools are therefore adopting alternative assessment method
 ② All things (　), I still think this plan is worth trying.
   ア. consider　イ. considering　ウ. considered　エ. to consider
 
-③ There is nothing left (　) for us to do.
+③ There is nothing left for us to do (　) wait.
   ア. but　イ. except to do　ウ. besides　エ. than`,
     answer: '① イ(knowing)　② ウ(considered)　③ ア(but)',
-    hint: '①否定の分詞構文Not+ing。②独立分詞構文（受動：considered）。③There is nothing left but to do〜=「〜する以外にない」。',
-    explanation: `【出題意図】否定の分詞構文・独立分詞構文（All things considered）・nothing but構文という3つの高難度表現を問う。【解説】①「何と言うべきかわからず」という否定の分詞構文はNot+現在分詞（knowing）。②All things consideredは「すべてを考慮すると」という意味の独立分詞構文（things=主語、consideredは受動の過去分詞）で、慣用表現として定着している。③There is nothing left but to do〜=「〜する以外に残されたものはない」。butは前置詞的に「〜以外」の意味で使われる。【注意点】②はAll things being consideredのbeingが省略された形と理解できる。③のbutはexceptと同じ意味で使われる特殊な用法。【関連知識】nothing but〜（ただ〜だけ）、have no choice but to do（〜する以外に選択肢がない）も同系統の表現。`,
-    pitfall: '③でイ(except to do)を選ぶと、通常exceptの後は動詞原形または前置詞句が続くため文法的に不自然（except toだと二重になる）。',
+    hint: '①否定の分詞構文Not+ing。②独立分詞構文（受動：considered）。③There is nothing left ... but wait=「〜する以外にない」。butの後ろは動詞原形。',
+    explanation: `【出題意図】否定の分詞構文・独立分詞構文（All things considered）・nothing but構文という3つの高難度表現を問う。【解説】①「何と言うべきかわからず」という否定の分詞構文はNot+現在分詞（knowing）。②All things consideredは「すべてを考慮すると」という意味の独立分詞構文（things=主語、consideredは受動の過去分詞）で、慣用表現として定着している。③There is nothing left for us to do but wait.=「私たちが待つ以外にすることは残されていない」。butは前置詞的に「〜以外」の意味で使われ、後ろには動詞原形（wait）が続く。【注意点】②はAll things being consideredのbeingが省略された形と理解できる。③のbutの直後は動詞原形が続く点に注意（but to waitとしない）。【関連知識】nothing but〜（ただ〜だけ）、have no choice but to do（〜する以外に選択肢がない）も同系統の表現。`,
+    pitfall: '③でイ(except to do)を選ぶと、butの後ろにさらにto doが続き二重になり不自然。exceptの後ろは動詞原形または名詞句が続く。',
     memoryTip: 'All things considered（すべてを考慮すると）は独立分詞構文の定型句として丸暗記する。',
   },
   {
@@ -689,8 +689,8 @@ A growing number of schools are therefore adopting alternative assessment method
 ④ I would rather you stayed here than go alone.`,
     answer: `① that made → which made（非制限用法の関係代名詞whichで前文全体を受ける。thatは非制限用法に使えない）
 ② television was watched by Yumi → Yumi watched television（分詞構文の意味上の主語は主節の主語と一致させる必要があり、Having finishedの主語はYumiなので、主節の主語もYumiにする）
-③ the less we become → we become less（「the+比較級」の語順に合わせ、becomeの後の形容詞less prejudicedの語順を確認。正しくはthe less prejudiced we become）
-④ than go alone → than have you go alone（rather A than Bの構文を統一する。もしくはthan going aloneとする）`,
+③ the less we become → the less prejudiced we become（「the+比較級」の形にするには、比較級prejudicedをtheの直後に置く語順にする）
+④ than go alone → than went alone（would rather S+過去形と対応させ、比較対象の形をそろえる。もしくはthan going aloneとする）`,
     hint: '①非制限用法にthatは使えない。②分詞構文の意味上の主語の一致（懸垂分詞の誤り）。③the比較級構文の語順。④would rather+過去形との対応。',
     explanation: `【出題意図】非制限用法・分詞構文の主語一致（懸垂分詞の誤り）・the比較級構文の語順・would ratherの構文という4つの重要文法の誤り発見を問う最高難度の問題。【解説】①コンマの前の文全体を受けて「それが投資家を喜ばせた」という意味にするには非制限用法のwhichを使う（thatは非制限用法不可）。②Having finished her homeworkの意味上の主語はYumiだが、主節が受動態television was watched by Yumiになっているため、分詞の主語（Yumi＝したこと）と主節の主語（television＝見られたもの）が一致しない懸垂分詞（ダングリング・パーティシプル）の誤り。主節をYumi watched televisionという能動態にして主語を一致させる。③the more〜, the 比較級〜の構文で、「less prejudiced（より偏見が少ない）」という比較級のまとまりを崩さないよう語順を整える（the less prejudiced we become）。④I would rather S+過去形（仮定法的用法）〜than S+動詞の構文で、比較対象の形をそろえる必要がある（動名詞にするか、同じ形にする）。【注意点】②のような懸垂分詞は非常に見落としやすい高度な誤りで、「分詞の意味上の主語と主節の主語が一致しているか」を必ず確認する習慣が重要。【関連知識】懸垂分詞の例：Walking down the street, a big dog suddenly appeared.（歩いていたのは「私」のはずなのに主語がa big dogになっている誤り）も同種のミス。`,
     pitfall: '②の懸垂分詞（ダングリング・パーティシプル）は文法的には一見自然に見えるため特に注意が必要。',
@@ -882,13 +882,12 @@ Little did the villagers know that the quiet stranger who had arrived that morni
 
 ② [ hard / study / you / matter / how / , / will / you / pass / the exam / not ].
   （どんなに一生懸命勉強しても、あなたはその試験に合格しないだろう）`,
-    answer: `① She talks as if she knew everything about much.（語順修正：She talks as if she knew everything about much.）
-→ 正: She talks as if she knew much about everything.
+    answer: `① She talks as if she knows much about everything.（sheをもう1語補い、talksの主語と knows の主語の両方を作る）
 
 ② No matter how hard you study, you will not pass the exam.`,
-    hint: '①as if+仮定法過去（knew）。②No matter how+形容詞/副詞+S+V。',
-    explanation: `【出題意図】as if仮定法とNo matter how構文の語順整序を問う。【解説】①「まるで何でも知っているかのように」はas if she knew much about everything（as if+仮定法過去knew）とする。knowsのままでは仮定法にならないため、不足している1語としてknewを補う（またはknowsをknewに変える）。②「どんなに一生懸命勉強しても」はNo matter how hard you study（No matter how+副詞hard+主語+動詞）とする。不足している1語としてNoを補い、No matter howの形を完成させる。【注意点】①のような並べ替え問題では、単語がすでに与えられている場合、文法的に正しい形（knew）に変える操作が必要になることがある。②はNo matterのNoが不足しているパターン。【関連知識】No matter how hard〜, S will not…は「どんなに〜しても…ない」という譲歩+否定の頻出パターン。`,
-    pitfall: '①でknowsをそのまま使うと仮定法にならず、「実際に何でも知っている」という意味になり日本語の「まるで」のニュアンスが消える。',
+    hint: '①she を1つ補い、as if の後にも主語sheを置く。②No matter how+形容詞/副詞+S+V。',
+    explanation: `【出題意図】as ifの構文とNo matter how構文の語順整序を問う。【解説】①「まるで何でも知っているかのように」はShe talks as if she knows much about everythingとする。語群のsheは1つしかないため、talksの主語（She）とas ifの後の主語（she）の両方に使うには、sheをもう1語補う必要がある。②「どんなに一生懸命勉強しても」はNo matter how hard you study（No matter how+副詞hard+主語+動詞）とする。不足している1語としてNoを補い、No matter howの形を完成させる。【注意点】①のような並べ替え問題では、同じ語が文中に複数回必要になる場合、その語自体を補う必要がある。②はNo matterのNoが不足しているパターン。【関連知識】No matter how hard〜, S will not…は「どんなに〜しても…ない」という譲歩+否定の頻出パターン。`,
+    pitfall: '①でsheを1つしか使わないと、as ifの後に主語がない不完全な文になってしまう。',
     memoryTip: 'as if の後は基本的に仮定法（過去形）を使うと覚え、直説法の現在形との違いを意識する。',
   },
   {
