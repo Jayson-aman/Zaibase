@@ -150,6 +150,25 @@ import { fukuokaKurumeExam } from './fukuoka_kurume_exam';
 import { fukuokaSeinanExam } from './fukuoka_seinan_exam';
 import { fukuokaOhoriExam } from './fukuoka_ohori_exam';
 
+// ── 中学受験 標準レベル追加分（6000問化） ──────────────────────────
+import { chugaku2026Sansu1 } from './chugaku2026_sansu_1';
+import { chugaku2026Sansu2 } from './chugaku2026_sansu_2';
+import { chugaku2026Kokugo1 } from './chugaku2026_kokugo_1';
+import { chugaku2026Kokugo2 } from './chugaku2026_kokugo_2';
+import { chugaku2026Rika1 } from './chugaku2026_rika_1';
+import { chugaku2026Rika2 } from './chugaku2026_rika_2';
+import { chugaku2026Shakai1 } from './chugaku2026_shakai_1';
+import { chugaku2026Shakai2 } from './chugaku2026_shakai_2';
+import { chugaku2026Eigo1 } from './chugaku2026_eigo_1';
+import { chugaku2026Eigo2 } from './chugaku2026_eigo_2';
+
+// ── 高校受験 関東・東京・関関同立 本試験レベル追加分（5000問化） ──────
+import { kokoKanto2026Sansu } from './koko_kanto2026_sansu';
+import { kokoKanto2026Kokugo } from './koko_kanto2026_kokugo';
+import { kokoKanto2026Rika } from './koko_kanto2026_rika';
+import { kokoKanto2026Shakai } from './koko_kanto2026_shakai';
+import { kokoKanto2026Eigo } from './koko_kanto2026_eigo';
+
 export type { Question, SubjectKey } from './questions-meta';
 export { subjectInfo } from './questions-meta';
 import type { Question } from './questions-meta';
@@ -2977,6 +2996,21 @@ export const questions: Question[] = [
   ...fukuokaKurumeExam,
   ...fukuokaSeinanExam,
   ...fukuokaOhoriExam,
+  ...chugaku2026Sansu1,
+  ...chugaku2026Sansu2,
+  ...chugaku2026Kokugo1,
+  ...chugaku2026Kokugo2,
+  ...chugaku2026Rika1,
+  ...chugaku2026Rika2,
+  ...chugaku2026Shakai1,
+  ...chugaku2026Shakai2,
+  ...chugaku2026Eigo1,
+  ...chugaku2026Eigo2,
+  ...kokoKanto2026Sansu,
+  ...kokoKanto2026Kokugo,
+  ...kokoKanto2026Rika,
+  ...kokoKanto2026Shakai,
+  ...kokoKanto2026Eigo,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {
