@@ -103,7 +103,7 @@ B: Yes, I (　).（はい、暇です）`,
 ② He plays the guitar every weekend.`,
     answer: `① I don't like natto.
 ② He doesn't play the guitar every weekend.`,
-    hint: '一般動詞の否定文はdon't/doesn'tを動詞の前に置き、動詞は原形にする。',
+    hint: '一般動詞の否定文はdo not/does notを動詞の前に置き、動詞は原形にする。',
     explanation: `【出題意図】一般動詞の否定文（don't/doesn't+動詞原形）の作り方を問う。【解説】①主語Iはdon'tを使い、I don't like natto.。②主語He（3人称単数）はdoesn'tを使い、動詞playは原形のままplayにする（doesn't plays としない）。【注意点】doesn'tを使う否定文では、動詞の3単現のsを取って原形に戻すのを忘れないこと。【関連知識】be動詞の否定（is not/are not）と一般動詞の否定（don't/doesn't+原形）の違いをしっかり区別する。`,
     pitfall: '②をHe doesn\'t plays the guitar.としないこと。doesn\'tの後は動詞の原形。',
     memoryTip: 'doesn\'tを使ったら動詞のsを取る、don\'tを使ったら動詞はそのまま原形、と覚える。',
@@ -292,7 +292,7 @@ B: It's a pencil case.
 ② He came to school by bus this morning.`,
     answer: `① I didn't finish my homework before dinner.
 ② He didn't come to school by bus this morning.`,
-    hint: '一般動詞過去の否定文は「主語+didn't+動詞の原形〜」の形。',
+    hint: `一般動詞過去の否定文は「主語+didn't+動詞の原形〜」の形。`,
     explanation: `【出題意図】一般動詞過去形の否定文（didn't+動詞原形）の作り方を問う。【解説】①finishedをdidn'tと組み合わせるときは動詞を原形finishに戻す。②同様にcameを原形comeに戻す（不規則動詞でも原形に戻すルールは同じ）。【注意点】不規則動詞（came等）であっても、didn'tを使う否定文では必ず原形に戻す点に注意する。【関連知識】didn't＝did not。didn't+動詞原形は、主語が何であっても形が変わらない（3単現のsも付かない）。`,
     pitfall: '②をdidn\'t camedのように過去形のまま使わないこと。didn\'tの後は必ず原形。',
     memoryTip: 'didn\'t（did not）の後ろは動詞の原形、と徹底して覚える。',
@@ -706,7 +706,7 @@ Students at our school must wear their school uniform. They must not use their s
   （彼女はまだレポートを終えていない）`,
     answer: `① Have you ever eaten natto?
 ② She has not finished her report yet.`,
-    hint: '①現在完了の疑問文はHave/Has+主語+過去分詞〜?、②否定文はhas not（hasn't）+過去分詞、文末にyet。',
+    hint: `①現在完了の疑問文はHave/Has+主語+過去分詞〜?、②否定文はhas not（hasn't）+過去分詞、文末にyet。`,
     explanation: `【出題意図】現在完了の疑問文（経験）と否定文（完了）の語順を問う整序問題。【解説】①「Have you ever eaten natto?」＝Have+主語you+ever+過去分詞eatenの語順。everは過去分詞の直前に置く。②「She has not finished her report yet.」＝has not（hasn't）+過去分詞finished、文末にyet（まだ）を置く。【注意点】現在完了の疑問文はHave/Hasを主語の前に出すだけで、一般動詞のようにDo/Didを使わない。【関連知識】現在完了の疑問文・否定文はいずれもhave/hasの位置と過去分詞の形がポイントになる。`,
     pitfall: '②のyetを文の途中に置かないこと。否定文のyetは基本的に文末に置く。',
     memoryTip: '現在完了の疑問文・否定文は、be動詞と同じ感覚でhave/hasを動かすと覚える。',
@@ -1008,7 +1008,7 @@ This old bridge was built more than 100 years ago. It has been used by local peo
     answer: `① それは今でも町のシンボルとして愛されている。
 ② 昨年の台風の被害を受けてから修理されていないため。
 ③ イ`,
-    hint: '①受動態is lovedの訳、②has not been repaired since last year's typhoonに注目、③本文全体の内容と照合。',
+    hint: `①受動態is lovedの訳、②has not been repaired since last year's typhoonに注目、③本文全体の内容と照合。`,
     explanation: `【出題意図】現在完了の受動態（has been used/has not been repaired）を含む読解問題で、受動態の訳と内容把握を問う。【解説】①「it is still loved as a symbol of the town」＝「それ（橋）は今でも町のシンボルとして愛されている」と受動態のまま自然な日本語に訳す。②「it has not been repaired since last year's typhoon」から、昨年の台風以来修理されていないことが理由だとわかる。③本文には「it has not been repaired since last year's typhoon」とあり、これに合致するのはイ。アは「建てられて100年以上」という記述と矛盾し、ウは「今でも使われている（has been used）」という記述と矛盾する。【注意点】has been used、is loved、has not been repairedとすべて受動態で書かれているので、それぞれ「〜される、〜されている」という意味で正確に読み取る。【関連知識】現在完了の受動態（have/has been+過去分詞）は「（過去から現在まで）〜され続けている」という意味を表す。`,
     pitfall: '③でウを選ばないこと。it has been used（今でも使われている）とあり、「もう使われていない」は誤り。',
     memoryTip: '現在完了の受動態＝have/has been+過去分詞＝「ずっと〜されている／されてきた」と覚える。',
