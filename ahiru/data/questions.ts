@@ -169,6 +169,18 @@ import { kokoKanto2026Rika } from './koko_kanto2026_rika';
 import { kokoKanto2026Shakai } from './koko_kanto2026_shakai';
 import { kokoKanto2026Eigo } from './koko_kanto2026_eigo';
 
+// ── 1学期期末テスト対策追加分 ──────────────────────────────────────
+import { term1_2026ChugakuSansu } from './term1_2026_chugaku_sansu';
+import { term1_2026ChugakuKokugo } from './term1_2026_chugaku_kokugo';
+import { term1_2026ChugakuRika } from './term1_2026_chugaku_rika';
+import { term1_2026ChugakuShakai } from './term1_2026_chugaku_shakai';
+import { term1_2026ChugakuEigo } from './term1_2026_chugaku_eigo';
+import { term1_2026KokoSansu } from './term1_2026_koko_sansu';
+import { term1_2026KokoKokugo } from './term1_2026_koko_kokugo';
+import { term1_2026KokoRika } from './term1_2026_koko_rika';
+import { term1_2026KokoShakai } from './term1_2026_koko_shakai';
+import { term1_2026KokoEigo } from './term1_2026_koko_eigo';
+
 export type { Question, SubjectKey } from './questions-meta';
 export { subjectInfo } from './questions-meta';
 import type { Question } from './questions-meta';
@@ -3011,6 +3023,16 @@ export const questions: Question[] = [
   ...kokoKanto2026Rika,
   ...kokoKanto2026Shakai,
   ...kokoKanto2026Eigo,
+  ...term1_2026ChugakuSansu,
+  ...term1_2026ChugakuKokugo,
+  ...term1_2026ChugakuRika,
+  ...term1_2026ChugakuShakai,
+  ...term1_2026ChugakuEigo,
+  ...term1_2026KokoSansu,
+  ...term1_2026KokoKokugo,
+  ...term1_2026KokoRika,
+  ...term1_2026KokoShakai,
+  ...term1_2026KokoEigo,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {
