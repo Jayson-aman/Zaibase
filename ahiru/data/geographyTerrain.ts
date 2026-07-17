@@ -74,7 +74,7 @@ export const mountainRanges: MountainRange[] = [
     region: '東北・関東の境',
     note: '新潟県と福島・群馬県の境にそびえる。冬は日本有数の豪雪地帯で、スキー場が多い。',
     path: 'M 206 168 L 212 176 L 206 184 L 214 190',
-    labelX: 196, labelY: 178,
+    labelX: 202, labelY: 164,
   },
   {
     id: 'hida',
@@ -86,7 +86,7 @@ export const mountainRanges: MountainRange[] = [
     region: '中部',
     note: '「日本アルプス」の一つ。3000m級の山が連なり「日本の屋根」とよばれる。立山・槍ヶ岳が有名。',
     path: 'M 170 160 L 174 168 L 170 176 L 176 184 L 172 192',
-    labelX: 156, labelY: 176,
+    labelX: 146, labelY: 168,
   },
   {
     id: 'kiso',
@@ -98,7 +98,7 @@ export const mountainRanges: MountainRange[] = [
     region: '中部',
     note: '日本アルプスの一つ。飛騨山脈と赤石山脈にはさまれた細長い山脈。',
     path: 'M 184 176 L 188 184 L 184 192 L 189 200',
-    labelX: 184, labelY: 206,
+    labelX: 176, labelY: 214,
   },
   {
     id: 'akaishi',
@@ -110,7 +110,7 @@ export const mountainRanges: MountainRange[] = [
     region: '中部',
     note: '日本アルプスの一つ。最高峰の北岳は、富士山に次ぐ日本で2番目に高い山。',
     path: 'M 198 176 L 202 184 L 198 192 L 203 202',
-    labelX: 208, labelY: 196,
+    labelX: 216, labelY: 202,
   },
   {
     id: 'chugoku',
@@ -162,7 +162,7 @@ export const rivers: River[] = [
     mouth: '日本海',
     note: '長野県では「千曲川（ちくまがわ）」とよばれ、新潟県に入ると「信濃川」になる。日本一長い川で、越後平野の米づくりを支える。',
     path: 'M 186 192 C 192 178 196 166 198 152 C 199 142 197 132 196 124',
-    labelX: 180, labelY: 150,
+    labelX: 166, labelY: 146,
   },
   {
     id: 'tone',
@@ -222,7 +222,7 @@ export const rivers: River[] = [
     mouth: '日本海',
     note: '山形県だけを流れる川で、日本三大急流の一つ。松尾芭蕉が俳句によんだことでも有名。庄内平野で米（はえぬき・つや姫）を育てる。',
     path: 'M 214 128 C 208 138 204 148 202 158 C 200 164 199 168 200 172',
-    labelX: 202, labelY: 128,
+    labelX: 206, labelY: 132,
   },
   {
     id: 'yoshino',
