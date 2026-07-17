@@ -98,6 +98,80 @@ export type ChemStructFigure = {
   caption?: string;
 };
 
+// 折れ線・曲線グラフ（複数系列・軸ラベル）。溶解度曲線・冷却曲線・電流電圧(I-V)・
+// 光合成曲線・ばねの伸び・時間変化など、任意の測定データをプロットする。
+export type LineChartFigure = {
+  kind: 'lineChart';
+  xLabel?: string;
+  yLabel?: string;
+  xRange?: [number, number];
+  yRange?: [number, number];
+  series: {
+    label?: string;
+    color?: string;
+    dashed?: boolean;
+    markers?: boolean; // データ点に●を打つ
+    points: { x: number; y: number }[];
+  }[];
+  caption?: string;
+};
+
+// 棒グラフ・ヒストグラム
+export type BarChartFigure = {
+  kind: 'barChart';
+  xLabel?: string;
+  yLabel?: string;
+  yMax?: number;
+  histogram?: boolean; // 棒を隙間なく並べる（度数分布）
+  bars: { label: string; value: number; color?: string }[];
+  caption?: string;
+};
+
+// 円グラフ（割合）
+export type PieChartFigure = {
+  kind: 'pieChart';
+  slices: { label: string; value: number; color?: string }[];
+  caption?: string;
+};
+
+// 回路図（電池・抵抗/電熱線・豆電球・スイッチ・電流計・電圧計）
+export type CircuitComponent = {
+  type: 'resistor' | 'bulb' | 'switch' | 'ammeter' | 'voltmeter';
+  label?: string;
+};
+export type CircuitFigure = {
+  kind: 'circuit';
+  layout?: 'series' | 'parallel';
+  series?: CircuitComponent[]; // 直列に並ぶ素子（上辺）
+  branches?: CircuitComponent[][]; // 並列の各枝（layout:'parallel'）
+  battery?: { label?: string; cells?: number };
+  caption?: string;
+};
+
+// 展開図（立方体・直方体）
+export type NetFigure = {
+  kind: 'net';
+  shape: 'cube' | 'cuboid';
+  faceLabels?: string[]; // 十字型に並ぶ6面のラベル（任意）
+  dims?: { w: string; d: string; h: string }; // 直方体の寸法ラベル
+  caption?: string;
+};
+
+// 地層・柱状図（複数地点の対比）
+export type StratumFigure = {
+  kind: 'stratum';
+  columns: {
+    label?: string;
+    topLabel?: string; // 地表の標高など
+    layers: {
+      name: string;
+      thickness: number;
+      pattern?: 'mud' | 'sand' | 'gravel' | 'lime' | 'ash' | 'plain';
+    }[];
+  }[];
+  caption?: string;
+};
+
 export type Figure =
   | CoordFigure
   | PolyFigure
@@ -106,7 +180,13 @@ export type Figure =
   | NumberLineFigure
   | BoxplotFigure
   | ChemEqFigure
-  | ChemStructFigure;
+  | ChemStructFigure
+  | LineChartFigure
+  | BarChartFigure
+  | PieChartFigure
+  | CircuitFigure
+  | NetFigure
+  | StratumFigure;
 
 // 問題ID → 図形。各バッチファイルから登録をマージする。
 import { figuresSample } from './figures-sample';
@@ -118,6 +198,10 @@ import { figuresMath5 } from './figures-math-5';
 import { figuresMath6 } from './figures-math-6';
 import { figuresSci1 } from './figures-sci-1';
 import { figuresSci2 } from './figures-sci-2';
+import { figuresSci3 } from './figures-sci-3';
+import { figuresSci4 } from './figures-sci-4';
+import { figuresMath7 } from './figures-math-7';
+import { figuresSocial1 } from './figures-social-1';
 
 export const figures: Record<string, Figure> = {
   ...figuresSample,
@@ -127,8 +211,12 @@ export const figures: Record<string, Figure> = {
   ...figuresMath4,
   ...figuresMath5,
   ...figuresMath6,
+  ...figuresMath7,
   ...figuresSci1,
   ...figuresSci2,
+  ...figuresSci3,
+  ...figuresSci4,
+  ...figuresSocial1,
 };
 
 export function getFigure(questionId: string): Figure | null {

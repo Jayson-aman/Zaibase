@@ -23,6 +23,13 @@ import type {
   BoxplotFigure,
   ChemEqFigure,
   ChemStructFigure,
+  LineChartFigure,
+  BarChartFigure,
+  PieChartFigure,
+  CircuitFigure,
+  CircuitComponent,
+  NetFigure,
+  StratumFigure,
   Pt,
 } from '../data/figures';
 
@@ -613,6 +620,234 @@ function ChemStructFig({ fig }: { fig: ChemStructFigure }) {
   return <>{els}</>;
 }
 
+// ---------- 折れ線・曲線グラフ ----------
+
+function LineChartFig({ fig }: { fig: LineChartFigure }) {
+  const area: Area = { x0: 42, y0: 14, w: VBW - 60, h: VBH - 54 };
+  const allX: number[] = [];
+  const allY: number[] = [];
+  fig.series.forEach((s) => s.points.forEach((p) => { allX.push(p.x); allY.push(p.y); }));
+  const xr = fig.xRange ?? [Math.min(...allX), Math.max(...allX)];
+  let yr = fig.yRange ?? [Math.min(0, ...allY), Math.max(...allY) * 1.1];
+  if (yr[1] - yr[0] < 1e-9) yr = [yr[0] - 1, yr[1] + 1];
+  const px = (x: number) => area.x0 + ((x - xr[0]) / (xr[1] - xr[0] || 1)) * area.w;
+  const py = (y: number) => area.y0 + area.h - ((y - yr[0]) / (yr[1] - yr[0] || 1)) * area.h;
+  const els: React.ReactNode[] = [];
+  const sx = niceStep(xr[1] - xr[0]);
+  const sy = niceStep(yr[1] - yr[0]);
+  for (let x = Math.ceil(xr[0] / sx) * sx; x <= xr[1] + 1e-9; x += sx) {
+    els.push(<Line key={`gx${x}`} x1={px(x)} y1={area.y0} x2={px(x)} y2={area.y0 + area.h} stroke={GRID} strokeWidth={1} />);
+    els.push(<SvgText key={`gxl${x}`} x={px(x)} y={area.y0 + area.h + 12} fontSize={9} fill={AXIS} textAnchor="middle">{+x.toFixed(1)}</SvgText>);
+  }
+  for (let y = Math.ceil(yr[0] / sy) * sy; y <= yr[1] + 1e-9; y += sy) {
+    els.push(<Line key={`gy${y}`} x1={area.x0} y1={py(y)} x2={area.x0 + area.w} y2={py(y)} stroke={GRID} strokeWidth={1} />);
+    els.push(<SvgText key={`gyl${y}`} x={area.x0 - 4} y={py(y) + 3} fontSize={9} fill={AXIS} textAnchor="end">{+y.toFixed(1)}</SvgText>);
+  }
+  els.push(<Line key="xax" x1={area.x0} y1={area.y0 + area.h} x2={area.x0 + area.w} y2={area.y0 + area.h} stroke={AXIS} strokeWidth={1.6} />);
+  els.push(<Line key="yax" x1={area.x0} y1={area.y0} x2={area.x0} y2={area.y0 + area.h} stroke={AXIS} strokeWidth={1.6} />);
+  fig.series.forEach((s, i) => {
+    const color = s.color ?? PALETTE[i % PALETTE.length];
+    const pts = s.points.map((p) => `${px(p.x).toFixed(1)},${py(p.y).toFixed(1)}`).join(' ');
+    els.push(<Polyline key={`ser${i}`} points={pts} fill="none" stroke={color} strokeWidth={2} strokeDasharray={s.dashed ? '5 3' : undefined} strokeLinejoin="round" />);
+    if (s.markers) s.points.forEach((p, k) => els.push(<SvgCircle key={`m${i}_${k}`} cx={px(p.x)} cy={py(p.y)} r={2.6} fill={color} />));
+    if (s.label) {
+      const last = s.points[s.points.length - 1];
+      els.push(<SvgText key={`sl${i}`} x={px(last.x) - 2} y={py(last.y) - 5} fontSize={10} fill={color} fontWeight="bold" textAnchor="end">{s.label}</SvgText>);
+    }
+  });
+  if (fig.xLabel) els.push(<SvgText key="xlab" x={area.x0 + area.w / 2} y={VBH - 4} fontSize={10} fill={INK} textAnchor="middle">{fig.xLabel}</SvgText>);
+  if (fig.yLabel) els.push(<SvgText key="ylab" x={12} y={area.y0 + area.h / 2} fontSize={10} fill={INK} textAnchor="middle" rotation={-90} originX={12} originY={area.y0 + area.h / 2}>{fig.yLabel}</SvgText>);
+  return <>{els}</>;
+}
+
+// ---------- 棒グラフ・ヒストグラム ----------
+
+function BarChartFig({ fig }: { fig: BarChartFigure }) {
+  const area: Area = { x0: 40, y0: 16, w: VBW - 56, h: VBH - 54 };
+  const yMax = fig.yMax ?? ((Math.max(...fig.bars.map((b) => b.value)) * 1.15) || 1);
+  const n = fig.bars.length;
+  const slot = area.w / n;
+  const gap = fig.histogram ? 0 : slot * 0.28;
+  const bw = slot - gap;
+  const py = (v: number) => area.y0 + area.h - (v / yMax) * area.h;
+  const els: React.ReactNode[] = [];
+  const sy = niceStep(yMax);
+  for (let y = 0; y <= yMax + 1e-9; y += sy) {
+    els.push(<Line key={`gy${y}`} x1={area.x0} y1={py(y)} x2={area.x0 + area.w} y2={py(y)} stroke={GRID} strokeWidth={1} />);
+    els.push(<SvgText key={`gyl${y}`} x={area.x0 - 4} y={py(y) + 3} fontSize={9} fill={AXIS} textAnchor="end">{+y.toFixed(0)}</SvgText>);
+  }
+  els.push(<Line key="xax" x1={area.x0} y1={area.y0 + area.h} x2={area.x0 + area.w} y2={area.y0 + area.h} stroke={AXIS} strokeWidth={1.6} />);
+  els.push(<Line key="yax" x1={area.x0} y1={area.y0} x2={area.x0} y2={area.y0 + area.h} stroke={AXIS} strokeWidth={1.6} />);
+  fig.bars.forEach((b, i) => {
+    const x = area.x0 + slot * i + gap / 2;
+    const color = b.color ?? PALETTE[i % PALETTE.length];
+    els.push(<Rect key={`b${i}`} x={x} y={py(b.value)} width={bw} height={area.y0 + area.h - py(b.value)} fill={color} opacity={0.82} stroke={fig.histogram ? '#fff' : color} strokeWidth={fig.histogram ? 1 : 0} />);
+    els.push(<SvgText key={`bl${i}`} x={x + bw / 2} y={area.y0 + area.h + 12} fontSize={9} fill={AXIS} textAnchor="middle">{b.label}</SvgText>);
+  });
+  if (fig.yLabel) els.push(<SvgText key="ylab" x={12} y={area.y0 + area.h / 2} fontSize={10} fill={INK} textAnchor="middle" rotation={-90} originX={12} originY={area.y0 + area.h / 2}>{fig.yLabel}</SvgText>);
+  return <>{els}</>;
+}
+
+// ---------- 円グラフ ----------
+
+function PieChartFig({ fig }: { fig: PieChartFigure }) {
+  const cx = 108, cy = VBH / 2, R = 84;
+  const total = fig.slices.reduce((a, s) => a + s.value, 0) || 1;
+  const els: React.ReactNode[] = [];
+  let acc = -90;
+  fig.slices.forEach((s, i) => {
+    const frac = s.value / total;
+    const a0 = acc;
+    const a1 = acc + frac * 360;
+    acc = a1;
+    const color = s.color ?? PALETTE[i % PALETTE.length];
+    const rad = (d: number) => (d * Math.PI) / 180;
+    const p0 = { x: cx + R * Math.cos(rad(a0)), y: cy + R * Math.sin(rad(a0)) };
+    const p1 = { x: cx + R * Math.cos(rad(a1)), y: cy + R * Math.sin(rad(a1)) };
+    const large = a1 - a0 > 180 ? 1 : 0;
+    els.push(<Path key={`sl${i}`} d={`M${cx},${cy} L${p0.x},${p0.y} A${R},${R} 0 ${large} 1 ${p1.x},${p1.y} Z`} fill={color} opacity={0.85} stroke="#fff" strokeWidth={1.4} />);
+    // 凡例
+    const ly = 40 + i * 22;
+    els.push(<Rect key={`lg${i}`} x={214} y={ly - 8} width={12} height={12} fill={color} opacity={0.85} />);
+    els.push(<SvgText key={`lt${i}`} x={230} y={ly + 2} fontSize={10} fill={INK}>{`${s.label} ${Math.round(frac * 100)}%`}</SvgText>);
+  });
+  return <>{els}</>;
+}
+
+// ---------- 回路図 ----------
+
+function circuitComp(comp: CircuitComponent, cx: number, cy: number, orient: 'h' | 'v', keyp: string): React.ReactNode[] {
+  const out: React.ReactNode[] = [];
+  const half = 16;
+  const labelPos = orient === 'h' ? { x: cx, y: cy - 14, anchor: 'middle' as const } : { x: cx + 20, y: cy + 3, anchor: 'start' as const };
+  if (comp.type === 'resistor') {
+    if (orient === 'h') out.push(<Rect key={`${keyp}r`} x={cx - half} y={cy - 8} width={half * 2} height={16} fill="#fff" stroke={INK} strokeWidth={1.6} />);
+    else out.push(<Rect key={`${keyp}r`} x={cx - 8} y={cy - half} width={16} height={half * 2} fill="#fff" stroke={INK} strokeWidth={1.6} />);
+  } else if (comp.type === 'bulb') {
+    out.push(<SvgCircle key={`${keyp}c`} cx={cx} cy={cy} r={12} fill="#fff" stroke={INK} strokeWidth={1.6} />);
+    out.push(<Line key={`${keyp}x1`} x1={cx - 8.5} y1={cy - 8.5} x2={cx + 8.5} y2={cy + 8.5} stroke={INK} strokeWidth={1.3} />);
+    out.push(<Line key={`${keyp}x2`} x1={cx - 8.5} y1={cy + 8.5} x2={cx + 8.5} y2={cy - 8.5} stroke={INK} strokeWidth={1.3} />);
+  } else if (comp.type === 'ammeter' || comp.type === 'voltmeter') {
+    out.push(<SvgCircle key={`${keyp}c`} cx={cx} cy={cy} r={12} fill="#fff" stroke={INK} strokeWidth={1.6} />);
+    out.push(<SvgText key={`${keyp}t`} x={cx} y={cy + 5} fontSize={14} fill={INK} textAnchor="middle" fontWeight="bold">{comp.type === 'ammeter' ? 'A' : 'V'}</SvgText>);
+  } else if (comp.type === 'switch') {
+    if (orient === 'h') {
+      out.push(<SvgCircle key={`${keyp}s1`} cx={cx - half} cy={cy} r={2.4} fill={INK} />);
+      out.push(<SvgCircle key={`${keyp}s2`} cx={cx + half} cy={cy} r={2.4} fill={INK} />);
+      out.push(<Line key={`${keyp}sl`} x1={cx - half} y1={cy} x2={cx + half - 4} y2={cy - 11} stroke={INK} strokeWidth={1.6} />);
+    } else {
+      out.push(<SvgCircle key={`${keyp}s1`} cx={cx} cy={cy - half} r={2.4} fill={INK} />);
+      out.push(<SvgCircle key={`${keyp}s2`} cx={cx} cy={cy + half} r={2.4} fill={INK} />);
+      out.push(<Line key={`${keyp}sl`} x1={cx} y1={cy - half} x2={cx + 11} y2={cy + half - 4} stroke={INK} strokeWidth={1.6} />);
+    }
+  }
+  if (comp.label) out.push(<SvgText key={`${keyp}l`} x={labelPos.x} y={labelPos.y} fontSize={10} fill={ACCENT} textAnchor={labelPos.anchor} fontWeight="bold">{comp.label}</SvgText>);
+  return out;
+}
+
+function batterySym(cx: number, cy: number, orient: 'h' | 'v', label: string | undefined, keyp: string): React.ReactNode[] {
+  const out: React.ReactNode[] = [];
+  if (orient === 'h') {
+    out.push(<Line key={`${keyp}long`} x1={cx - 4} y1={cy - 11} x2={cx - 4} y2={cy + 11} stroke={INK} strokeWidth={1.8} />);
+    out.push(<Line key={`${keyp}short`} x1={cx + 4} y1={cy - 6} x2={cx + 4} y2={cy + 6} stroke={INK} strokeWidth={3.4} />);
+  } else {
+    out.push(<Line key={`${keyp}long`} x1={cx - 11} y1={cy - 4} x2={cx + 11} y2={cy - 4} stroke={INK} strokeWidth={1.8} />);
+    out.push(<Line key={`${keyp}short`} x1={cx - 6} y1={cy + 4} x2={cx + 6} y2={cy + 4} stroke={INK} strokeWidth={3.4} />);
+  }
+  out.push(<SvgText key={`${keyp}bl`} x={cx} y={orient === 'h' ? cy + 24 : cy - 12} fontSize={10} fill={INK} textAnchor="middle">{label ?? '電池'}</SvgText>);
+  return out;
+}
+
+function CircuitFig({ fig }: { fig: CircuitFigure }) {
+  const els: React.ReactNode[] = [];
+  const L = 44, R = VBW - 44, T = 66, B = 182;
+  if (fig.layout === 'parallel' && fig.branches && fig.branches.length) {
+    // 左に電池、上下レールの間に各枝を縦に配置
+    els.push(<Line key="top" x1={L} y1={T} x2={R} y2={T} stroke={INK} strokeWidth={1.8} />);
+    els.push(<Line key="bot" x1={L} y1={B} x2={R} y2={B} stroke={INK} strokeWidth={1.8} />);
+    els.push(<Line key="lft" x1={L} y1={T} x2={L} y2={B} stroke={INK} strokeWidth={1.8} />);
+    els.push(...batterySym(L, (T + B) / 2, 'v', fig.battery?.label, 'bat'));
+    const series = fig.series ?? [];
+    series.forEach((c, i) => els.push(...circuitComp(c, L + 60 + i * 44, T, 'h', `s${i}`)));
+    const nb = fig.branches.length;
+    fig.branches.forEach((branch, bi) => {
+      const bx = L + (R - L) * ((bi + 1) / (nb + 1));
+      els.push(<Line key={`br${bi}`} x1={bx} y1={T} x2={bx} y2={B} stroke={INK} strokeWidth={1.6} />);
+      branch.forEach((c, ci) => els.push(...circuitComp(c, bx, (T + B) / 2 + ci * 40 - (branch.length - 1) * 20, 'v', `b${bi}_${ci}`)));
+    });
+  } else {
+    // 直列：長方形ループ。上辺に素子、下辺に電池。
+    els.push(<Line key="left" x1={L} y1={T} x2={L} y2={B} stroke={INK} strokeWidth={1.8} />);
+    els.push(<Line key="right" x1={R} y1={T} x2={R} y2={B} stroke={INK} strokeWidth={1.8} />);
+    els.push(<Line key="top" x1={L} y1={T} x2={R} y2={T} stroke={INK} strokeWidth={1.8} />);
+    els.push(<Line key="bot" x1={L} y1={B} x2={R} y2={B} stroke={INK} strokeWidth={1.8} />);
+    const series = fig.series ?? [];
+    const n = Math.max(series.length, 1);
+    series.forEach((c, i) => {
+      const cx = L + ((R - L) * (i + 1)) / (n + 1);
+      // 素子部分の導線を白で隠す表現は省略。素子を上辺の上に重ねる。
+      els.push(...circuitComp(c, cx, T, 'h', `s${i}`));
+    });
+    els.push(...batterySym((L + R) / 2, B, 'h', fig.battery?.label, 'bat'));
+  }
+  return <>{els}</>;
+}
+
+// ---------- 展開図 ----------
+
+function NetFig({ fig }: { fig: NetFigure }) {
+  const els: React.ReactNode[] = [];
+  const u = 42;
+  const ox = VBW / 2 - u / 2;
+  const oy = 20;
+  // 十字型（クロス）配置：中央列に4面、左右に1面ずつ
+  const cells: { c: number; r: number }[] = [
+    { c: 1, r: 0 }, { c: 1, r: 1 }, { c: 1, r: 2 }, { c: 1, r: 3 }, { c: 0, r: 1 }, { c: 2, r: 1 },
+  ];
+  const baseX = VBW / 2 - u * 1.5;
+  cells.forEach((cell, i) => {
+    const x = baseX + cell.c * u;
+    const y = oy + cell.r * u;
+    els.push(<Rect key={`f${i}`} x={x} y={y} width={u} height={u} fill="rgba(14,165,233,0.10)" stroke={ACCENT} strokeWidth={1.6} />);
+    const lab = fig.faceLabels?.[i];
+    if (lab) els.push(<SvgText key={`fl${i}`} x={x + u / 2} y={y + u / 2 + 4} fontSize={12} fill={INK} textAnchor="middle" fontWeight="bold">{lab}</SvgText>);
+  });
+  if (fig.dims) {
+    els.push(<SvgText key="dw" x={baseX + u + u / 2} y={oy + 4 * u + 14} fontSize={10} fill={INK} textAnchor="middle">{fig.dims.w}</SvgText>);
+    els.push(<SvgText key="dh" x={baseX - 6} y={oy + u + u / 2} fontSize={10} fill={INK} textAnchor="end">{fig.dims.h}</SvgText>);
+    els.push(<SvgText key="dd" x={baseX + 2 * u + u + 6} y={oy + u + u / 2} fontSize={10} fill={INK} textAnchor="start">{fig.dims.d}</SvgText>);
+  }
+  return <>{els}</>;
+}
+
+// ---------- 地層・柱状図 ----------
+
+const STRATUM_FILL: Record<string, string> = {
+  mud: '#9CA3AF', sand: '#FCD34D', gravel: '#A8A29E', lime: '#93C5FD', ash: '#FBCFE8', plain: '#E5E7EB',
+};
+
+function StratumFig({ fig }: { fig: StratumFigure }) {
+  const els: React.ReactNode[] = [];
+  const n = fig.columns.length;
+  const totalMax = Math.max(...fig.columns.map((c) => c.layers.reduce((a, l) => a + l.thickness, 0))) || 1;
+  const H = 150;
+  const scale = H / totalMax;
+  const colW = Math.min(52, (VBW - 30) / n - 14);
+  fig.columns.forEach((col, ci) => {
+    const x = 24 + ci * ((VBW - 40) / n);
+    let y = 40;
+    if (col.topLabel) els.push(<SvgText key={`tl${ci}`} x={x + colW / 2} y={34} fontSize={9} fill={AXIS} textAnchor="middle">{col.topLabel}</SvgText>);
+    col.layers.forEach((ly, li) => {
+      const hh = ly.thickness * scale;
+      els.push(<Rect key={`ly${ci}_${li}`} x={x} y={y} width={colW} height={hh} fill={STRATUM_FILL[ly.pattern ?? 'plain']} stroke={INK} strokeWidth={1} />);
+      if (hh >= 12) els.push(<SvgText key={`lyt${ci}_${li}`} x={x + colW / 2} y={y + hh / 2 + 3} fontSize={8} fill={INK} textAnchor="middle">{ly.name}</SvgText>);
+      y += hh;
+    });
+    if (col.label) els.push(<SvgText key={`cl${ci}`} x={x + colW / 2} y={y + 12} fontSize={10} fill={INK} textAnchor="middle" fontWeight="bold">{col.label}</SvgText>);
+  });
+  return <>{els}</>;
+}
+
 // ---------- 公開コンポーネント ----------
 
 function easeOut(t: number): number {
@@ -660,6 +895,12 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
       case 'numberLine': return <NumberLineFig fig={figure} />;
       case 'boxplot': return <BoxplotFig fig={figure} />;
       case 'chemStructure': return <ChemStructFig fig={figure} />;
+      case 'lineChart': return <LineChartFig fig={figure} />;
+      case 'barChart': return <BarChartFig fig={figure} />;
+      case 'pieChart': return <PieChartFig fig={figure} />;
+      case 'circuit': return <CircuitFig fig={figure} />;
+      case 'net': return <NetFig fig={figure} />;
+      case 'stratum': return <StratumFig fig={figure} />;
       default: return null;
     }
   }, [figure, uid]);
