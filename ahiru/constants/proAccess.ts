@@ -1,5 +1,5 @@
 /** 無料プランで使える機能 */
-export const FREE_GEO_LAYERS = ['terrain', 'agriculture'] as const;
+export const FREE_GEO_LAYERS = ['terrain', 'mountains', 'agriculture'] as const;
 
 /** Pro が必要な地理レイヤー */
 export const PRO_GEO_LAYERS = ['fishery', 'forestry', 'factory', 'commerce'] as const;
