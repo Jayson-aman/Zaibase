@@ -8,6 +8,7 @@ import {
   Dimensions,
   Pressable,
   Modal,
+  Image,
 } from 'react-native';
 import Animated, {
   useAnimatedStyle,
@@ -28,6 +29,7 @@ import {
   japanAlpsTrivia,
 } from '../data/geographyTerrain';
 import { prefectureShapes, JP_MAP_VIEWBOX } from '../data/japanPrefectures';
+import { geographyImages } from '../data/geographyImages';
 import { GeoLayerId } from '../constants/proAccess';
 
 // 初期レンダリングで window.width が 0 の場合に負値にならないようガード
@@ -401,13 +403,19 @@ function RegionDetail({
           {ag.spotlights && ag.spotlights.length > 0 && (
             <View style={styles.spotlightSection}>
               <Text style={styles.spotlightHeader}>🔍 注目の特産品</Text>
-              {ag.spotlights.map((s) => (
-                <View key={s.name} style={styles.spotlightCard}>
-                  <Text style={styles.spotlightName}>{s.name}</Text>
-                  <Text style={styles.spotlightLocation}>📍 {s.location}</Text>
-                  <Text style={styles.spotlightWhy}>{s.why}</Text>
-                </View>
-              ))}
+              {ag.spotlights.map((s) => {
+                const img = geographyImages[s.name];
+                return (
+                  <View key={s.name} style={styles.spotlightCard}>
+                    {img && (
+                      <Image source={img} style={styles.spotlightImage} resizeMode="cover" />
+                    )}
+                    <Text style={styles.spotlightName}>{s.name}</Text>
+                    <Text style={styles.spotlightLocation}>📍 {s.location}</Text>
+                    <Text style={styles.spotlightWhy}>{s.why}</Text>
+                  </View>
+                );
+              })}
             </View>
           )}
           <DetailSection title="🐄 畜産" items={ag.livestock} />
@@ -723,6 +731,7 @@ const styles = StyleSheet.create({
     borderLeftWidth: 4,
     borderLeftColor: '#F59E0B',
   },
+  spotlightImage: { width: '100%', height: 150, borderRadius: 10, marginBottom: 8, backgroundColor: '#F1F5F9' },
   spotlightName: { fontSize: 16, fontWeight: '800', color: '#1A1A2E', marginBottom: 4 },
   spotlightLocation: { fontSize: 13, color: '#666', marginBottom: 6 },
   spotlightWhy: { fontSize: 14, color: '#333', lineHeight: 22 },
