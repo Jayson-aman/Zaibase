@@ -27,13 +27,31 @@ import {
   abaregawaTrivia,
   japanAlpsTrivia,
 } from '../data/geographyTerrain';
+import { prefectureShapes, JP_MAP_VIEWBOX } from '../data/japanPrefectures';
 import { GeoLayerId } from '../constants/proAccess';
 
-const MAP_W = Math.min(Dimensions.get('window').width - 48, 440);
+// 初期レンダリングで window.width が 0 の場合に負値にならないようガード
+const MAP_W = Math.max(240, Math.min(Dimensions.get('window').width - 48, 440));
 const MAP_H = MAP_W * 1.15;
-// SVGパスのviewBox（data/geographyRegions.ts のsvgPath座標系と一致させる）
-const VIEWBOX_W = 300;
-const VIEWBOX_H = 420;
+// 都道府県SVGパスのviewBox（data/japanPrefectures.ts と一致）
+const VIEWBOX_W = JP_MAP_VIEWBOX.w;
+const VIEWBOX_H = JP_MAP_VIEWBOX.h;
+
+// 地方ごとに、その地方に属する都道府県の重心の平均をラベル位置にする
+const REGION_LABEL_POS: Record<string, { x: number; y: number }> = (() => {
+  const acc: Record<string, { x: number; y: number; n: number }> = {};
+  for (const p of prefectureShapes) {
+    const a = (acc[p.region] ??= { x: 0, y: 0, n: 0 });
+    a.x += p.cx;
+    a.y += p.cy;
+    a.n += 1;
+  }
+  const out: Record<string, { x: number; y: number }> = {};
+  for (const [region, a] of Object.entries(acc)) out[region] = { x: a.x / a.n, y: a.y / a.n };
+  // 沖縄インセットに重心が引っぱられないよう、九州本体側へ寄せる
+  if (out.kyushu) out.kyushu = { x: 55, y: 268 };
+  return out;
+})();
 
 const LAYERS: { key: GeoLayerId; label: string; emoji: string }[] = [
   { key: 'terrain', label: '地形', emoji: '🏔' },
@@ -141,18 +159,20 @@ export default function GeographyExplorer(_props: Props) {
         <Animated.View style={[styles.mapContainer, mapAnimatedStyle]}>
           <View style={[styles.mapBase, { width: MAP_W, height: MAP_H }]}>
             <Svg width={MAP_W} height={MAP_H} viewBox={`0 0 ${VIEWBOX_W} ${VIEWBOX_H}`}>
-              {geographyRegions.map((region) => {
-                const isSel = selectedId === region.id;
+              {/* 47都道府県を地方の色で描く（正確な国土形状） */}
+              {prefectureShapes.map((pref) => {
+                const isSel = selectedId === pref.region;
                 // 山と川レイヤーのときは、地方の色をうすくして山脈・川を目立たせる
                 const dimmed = layer === 'mountains';
+                const region = geographyRegions.find((r) => r.id === pref.region);
                 return (
-                  <SvgG key={region.id} onPress={() => selectRegion(region)}>
+                  <SvgG key={`pref_${pref.id}`} onPress={() => region && selectRegion(region)}>
                     <SvgPath
-                      d={region.svgPath ?? ''}
-                      fill={region.color}
-                      stroke={isSel ? '#FFFFFF' : 'rgba(255,255,255,0.65)'}
-                      strokeWidth={isSel ? 3 : 1.4}
-                      opacity={isSel ? 1 : dimmed ? 0.45 : 0.92}
+                      d={pref.path}
+                      fill={pref.color}
+                      stroke={isSel ? '#FFFFFF' : 'rgba(255,255,255,0.55)'}
+                      strokeWidth={isSel ? 1.2 : 0.5}
+                      opacity={isSel ? 1 : dimmed ? 0.45 : 0.9}
                     />
                   </SvgG>
                 );
@@ -190,7 +210,8 @@ export default function GeographyExplorer(_props: Props) {
             </Svg>
             {/* 地域ラベル（絵文字＋名前）をSVGの上に絶対配置 */}
             {geographyRegions.map((region) => {
-              if (region.labelX == null || region.labelY == null) return null;
+              const pos = REGION_LABEL_POS[region.id];
+              if (!pos) return null;
               const isSel = selectedId === region.id;
               return (
                 <Pressable
@@ -200,8 +221,8 @@ export default function GeographyExplorer(_props: Props) {
                     styles.mapLabel,
                     layer === 'mountains' && styles.mapLabelDim,
                     {
-                      left: (region.labelX / VIEWBOX_W) * MAP_W - 30,
-                      top: (region.labelY / VIEWBOX_H) * MAP_H - 16,
+                      left: (pos.x / VIEWBOX_W) * MAP_W - 30,
+                      top: (pos.y / VIEWBOX_H) * MAP_H - 16,
                     },
                   ]}
                 >
