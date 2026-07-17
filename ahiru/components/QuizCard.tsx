@@ -20,6 +20,7 @@ import {
   getHistoryThemeLabel,
   getQuestionIllustration,
 } from '../data/images';
+import { getSubjectIllustration, getSubjectThemeLabel } from '../data/subjectImages';
 
 type Props = {
   question: Question;
@@ -41,10 +42,16 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
   const [revealed, setRevealed] = useState(false);
   const [selectedChoice, setSelectedChoice] = useState<string | null>(null);
   const info = subjectInfo[question.subject];
-  const historyLabel = getHistoryThemeLabel(question.id);
-  const illustration = question.subject === 'shakai'
-    ? getQuestionIllustration(question.subject, question.id)
-    : null;
+  // 単元テーマ判定（理科・社会）：問題文＋解説からキーワードで自動分類
+  const themeText = `${question.question} ${question.explanation ?? ''}`;
+  // 生成済みイラストがあれば単元イラストを優先。無ければ従来の社会イラストにフォールバック
+  const subjectIllust = getSubjectIllustration(question.subject, themeText);
+  const illustration = subjectIllust
+    ?? (question.subject === 'shakai'
+      ? getQuestionIllustration(question.subject, question.id)
+      : null);
+  const historyLabel = getHistoryThemeLabel(question.id)
+    ?? getSubjectThemeLabel(question.subject, themeText);
 
   function handlePress() {
     if (choices != null || revealed) return;
@@ -75,7 +82,9 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
         </View>
         {historyLabel != null && (
           <View style={styles.historyChip}>
-            <Text style={styles.historyChipText}>🏛 {historyLabel}</Text>
+            <Text style={styles.historyChipText}>
+              {question.subject === 'rika' ? '🔬' : '🏛'} {historyLabel}
+            </Text>
           </View>
         )}
       </View>
