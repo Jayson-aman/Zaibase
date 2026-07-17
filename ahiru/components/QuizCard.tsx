@@ -17,6 +17,8 @@ const SERIF = Platform.select({
 import { Question, subjectInfo } from '../data/questions-meta';
 import { getHistoryThemeLabel } from '../data/images';
 import { getSubjectThemeLabel } from '../data/subjectImages';
+import { getFigure } from '../data/figures';
+import FigureView from './FigureView';
 
 type Props = {
   question: Question;
@@ -44,6 +46,8 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
   // 単元ラベル（🏛/🔬 のテキストチップ）のみ残す。
   const historyLabel = getHistoryThemeLabel(question.id)
     ?? getSubjectThemeLabel(question.subject, themeText);
+  // ベクター図形（座標グラフ・図形・立体・化学式など）。あれば図で表示。
+  const figure = getFigure(question.id);
 
   function handlePress() {
     if (choices != null || revealed) return;
@@ -93,14 +97,16 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
           )}
           <Text style={styles.questionLabel}>問 題</Text>
           <Text style={styles.questionTextChoice}>{question.question}</Text>
-          {question.figureDescription != null && (
+          {figure != null ? (
+            <FigureView figure={figure} />
+          ) : question.figureDescription != null ? (
             <View style={styles.figureBox}>
               <Text style={styles.figureLabel}>📐 図・表</Text>
               <ScrollView horizontal={false}>
                 <Text style={styles.figureText}>{question.figureDescription}</Text>
               </ScrollView>
             </View>
-          )}
+          ) : null}
           {(() => {
             const stripLabel = (s: string) => s.replace(/^[A-D]\s+/, '');
             const units = choices.map((c) => extractTrailingUnit(stripLabel(c)));
@@ -191,12 +197,14 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
           )}
           <Text style={styles.questionLabel}>問 題</Text>
           <Text style={styles.questionText}>{question.question}</Text>
-          {question.figureDescription != null && (
+          {figure != null ? (
+            <FigureView figure={figure} />
+          ) : question.figureDescription != null ? (
             <View style={styles.figureBox}>
               <Text style={styles.figureLabel}>📐 図・表</Text>
               <Text style={styles.figureText}>{question.figureDescription}</Text>
             </View>
-          )}
+          ) : null}
           <View style={styles.tapHint}>
             <Text style={styles.tapHintText}>タップして答えを見る 👆</Text>
           </View>
