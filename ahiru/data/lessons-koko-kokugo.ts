@@ -1635,7 +1635,7 @@ export const kokoKokugoLessons: Lesson[] = [
     title: '古典文学史と和歌の修辞',
     description: '古文常識・有名古典作品の知識と和歌の表現技法（枕詞・掛詞・序詞）を攻略',
     order: 9,
-    studyPeriod: '中3後半',
+    studyPeriod: '中3秋〜直前',
     targetLevel: 'nyushi',
     sections: [
       {
@@ -1815,7 +1815,7 @@ export const kokoKokugoLessons: Lesson[] = [
     title: '近現代文学史（作家と作品）',
     description: '明治から現代までの代表的作家・作品・文学の流れを体系的に整理',
     order: 10,
-    studyPeriod: '中3後半',
+    studyPeriod: '中3秋〜直前',
     targetLevel: 'nyushi',
     sections: [
       {
@@ -1972,7 +1972,7 @@ export const kokoKokugoLessons: Lesson[] = [
     title: '話し合い・聞き取りと表現',
     description: '放送（聞き取り）問題・話し合いの進め方・スピーチや発表の技術を攻略',
     order: 11,
-    studyPeriod: '中3後半',
+    studyPeriod: '中3秋〜直前',
     targetLevel: 'nyushi',
     sections: [
       {
