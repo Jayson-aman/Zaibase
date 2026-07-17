@@ -15,6 +15,7 @@ import { useRouter } from 'expo-router';
 import { speakWithOpenAI, speakWithDevice } from '../../services/tts';
 import { useVocabSubscription } from '../../hooks/useVocabSubscription';
 import { fetchVocabProducts, purchaseProduct, restorePurchases } from '../../services/subscription';
+import { VOCAB_MONTHLY_LABEL, VOCAB_YEARLY_LABEL } from '../../constants/pricing';
 import type { VocabEntry, VocabLevel } from '../../data/vocab-meta';
 import { levelColor, levelLabel } from '../../data/vocab-meta';
 import { vocabWords } from '../../data/vocab_words';
@@ -310,7 +311,7 @@ export default function VocabScreen() {
 
         {!hasVocabPro && (
           <TouchableOpacity style={s.promoBanner} onPress={() => setShowPaywall(true)}>
-            <Text style={s.promoText}>🔊 英単語Pro — ネイティブ発音・聞き流し・単語5,000+・熟語4,000+　¥1,000/月〜</Text>
+            <Text style={s.promoText}>🔊 英単語Pro — ネイティブ発音・聞き流し・単語5,000+・熟語4,000+　{VOCAB_MONTHLY_LABEL}〜</Text>
           </TouchableOpacity>
         )}
       </ScrollView>
@@ -363,8 +364,8 @@ function VocabPaywall({ onClose, onPurchased }: { onClose: () => void; onPurchas
     }
   }
 
-  const monthlyPrice = (monthlyProd as any)?.priceString ?? '¥1,000/月';
-  const yearlyPrice  = (yearlyProd as any)?.priceString ?? '¥4,000/年';
+  const monthlyPrice = (monthlyProd as any)?.priceString ?? VOCAB_MONTHLY_LABEL;
+  const yearlyPrice  = (yearlyProd as any)?.priceString ?? VOCAB_YEARLY_LABEL;
 
   return (
     <SafeAreaView style={[s.safe, { justifyContent: 'center' }]}>

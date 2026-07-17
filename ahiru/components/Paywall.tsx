@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
+import { PRO_PRICE_LABEL, MAX_PRICE_LABEL } from '../constants/pricing';
 import {
   fetchProMaxProducts,
   purchaseProduct,
@@ -69,8 +70,8 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
     }
   }
 
-  const proPrice = (proProd as any)?.priceString ?? '¥2,000/月';
-  const maxPrice = (maxProd as any)?.priceString ?? '¥3,000/月';
+  const proPrice = (proProd as any)?.priceString ?? PRO_PRICE_LABEL;
+  const maxPrice = (maxProd as any)?.priceString ?? MAX_PRICE_LABEL;
 
   return (
     <Modal
