@@ -145,6 +145,7 @@ yの変化量 = -3-3 = -6
   {
     id: 'koko_kankan_sansu_c1_06',
     subject: 'sansu',
+    figureDescription: '反比例 y = 12/x のグラフ。第1象限と第3象限に分かれて描かれる双曲線で、原点は通らない。',
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'basic',
@@ -654,6 +655,7 @@ AとBがy軸を挟んで反対側にある（Aはx<0、Bはx>0）ため、△OAC
   {
     id: 'koko_kankan_sansu_c1_24',
     subject: 'sansu',
+    figureDescription: '放物線 y = ax²（a = -2）のグラフ。原点を頂点とする上に凸の放物線で、点(2, -8)を通り、yの値は常に0以下。',
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',

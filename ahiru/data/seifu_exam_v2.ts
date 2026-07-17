@@ -169,6 +169,8 @@ export const seifuExamV2: Question[] = [
   },
   {
     id: 'seifu_v2_s007',
+    figureDescription:
+      '底面の半径5cm、母線の長さ13cmの円すい。頂点・底面の中心・底面の円周上の点を結ぶと、母線13cm・底面の半径5cm・高さ（軸）を3辺とする直角三角形ができる。',
     subject: 'sansu',
     difficulty: 'advanced',
     course: 'seifu',

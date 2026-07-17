@@ -594,6 +594,7 @@ y = 2 × 4 + 3
     difficulty: 'basic',
     maxOnly: true,
     question: '一次関数 y = 3x − 1 について、次の問いに答えなさい。\n\n①傾きと切片をそれぞれ答えなさい。\n②グラフはどんな直線か。',
+    figureDescription: 'y = 3x − 1 のグラフは、y軸と点 (0, −1) で交わり、xが1増えるとyが3増える傾き3の右上がりの直線。x軸とは点 (1/3, 0) 付近で交わる。',
     answer: '①傾き：3、切片：−1　②右上がりの直線で、y軸との交点は (0, −1)',
     hint: 'y = ax + b の形で、a が傾き、b が切片だよ。',
     explanation: `【解法の道筋】
@@ -663,6 +664,7 @@ y = 2x + 1
     difficulty: 'basic',
     maxOnly: true,
     question: 'y = −2x + 4 のグラフが x 軸と交わる点（x 切片）の座標を求めなさい。',
+    figureDescription: 'y = −2x + 4 のグラフは、y軸と点 (0, 4) で交わり、傾き −2 で右下がりの直線。x軸とは求める点 (2, 0) で交わる。',
     answer: '(2, 0)',
     hint: 'x軸との交点では y = 0 になるよ。',
     explanation: `【解法の道筋】
@@ -787,6 +789,7 @@ y = 4
     difficulty: 'basic',
     maxOnly: true,
     question: '比例 y = 3x について、x = −2 のときの y の値を求めなさい。また、この関係をグラフで表すとどのような形になりますか。',
+    figureDescription: 'y = 3x のグラフは、原点 (0, 0) を通り、傾き3で右上がりの直線。たとえば点 (−2, −6) や点 (1, 3) を通る。',
     answer: 'y = −6　グラフ：原点を通る右上がりの直線',
     hint: 'x = −2 を代入しよう。比例のグラフは必ず原点を通るよ。',
     explanation: `【解法の道筋】

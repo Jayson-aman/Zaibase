@@ -868,6 +868,7 @@ x＝9のとき：y＝7×9＝63
     difficulty: 'standard',
     maxOnly: false,
     question: '下の表は、直方体の水そうに水を入れるときの、時間x分と水の深さycmの関係を表したものである。yはxに比例している。表のあいているところにあてはまる数を求めなさい。\n\nx（分）：2、4、6、8\ny（cm）：5、10、□、20',
+    figureDescription: '上の段に時間x（分）2・4・6・8、下の段に水の深さy（cm）5・10・□・20を並べた2行の表。x＝6に対応するyのマスが□（空欄）になっている。',
     answer: '15',
     hint: '比例定数（y÷x）を求めてから、x＝6のときのyを計算する。',
     explanation: `【出題意図】
@@ -1352,6 +1353,7 @@ Bさん：3000+300＝3300 (円)
     difficulty: 'advanced',
     maxOnly: true,
     question: '次の図形のうち、点対称な図形をすべて選びなさい。\n①正三角形　②正方形　③正六角形　④正五角形　⑤平行四辺形',
+    figureDescription: '①正三角形、②正方形、③正六角形、④正五角形、⑤平行四辺形の5つの図形が、それぞれ番号をつけて横に並べて描かれている。',
     answer: '②正方形、③正六角形、⑤平行四辺形',
     hint: '正n角形はnが偶数のとき点対称になる。平行四辺形はいつも点対称。',
     explanation: `【出題意図】
@@ -1453,6 +1455,7 @@ AO＝OD（点Oが中点であるため）＝6cm
     difficulty: 'advanced',
     maxOnly: true,
     question: '三角形ABCの2倍の拡大図が三角形DEFである。三角形ABCの辺BC＝4cm、角B＝50°のとき、三角形DEFの辺EF、角Eの大きさをそれぞれ求めなさい（対応：A↔D、B↔E、C↔F）。',
+    figureDescription: '三角形ABCと、それを2倍に拡大した三角形DEFが並んで描かれている。三角形ABCには辺BC＝4cm、角B＝50°が書き込まれ、DEFはABCと同じ形で各辺が2倍の大きさ（対応はA↔D、B↔E、C↔F）。',
     answer: '辺EF＝8cm、角E＝50°',
     hint: '拡大図では、対応する辺の長さは同じ倍率（2倍）になるが、対応する角の大きさは変わらない。',
     explanation: `【出題意図】
@@ -1479,6 +1482,7 @@ EF ＝ BC × 2 ＝ 4 × 2 ＝ 8 (cm)
     difficulty: 'advanced',
     maxOnly: true,
     question: '実際の長さが150mある道のりを、5000分の1の縮図（縮尺）で地図に表すと、地図上では何cmになりますか。',
+    figureDescription: '実際の長さ150mの道のりと、それを5000分の1の縮尺で地図上に縮めて表した短い線分を対比したイメージ図。実物の長さと地図上の長さの縮尺関係を示している。',
     answer: '3cm',
     hint: '実際の長さをcmに直してから、縮尺（1/5000）をかける。',
     explanation: `【出題意図】
@@ -1530,6 +1534,7 @@ cmからkmへの変換は「100000で割る」（1km＝1000m＝100000cm）こと
     difficulty: 'advanced',
     maxOnly: true,
     question: '三角形ABCを2分の1に縮小した縮図が三角形DEFである。三角形ABCの面積が48cm²であるとき、三角形DEFの面積を求めなさい。',
+    figureDescription: '三角形ABCと、それを2分の1に縮小した縮図の三角形DEFが並んで描かれている。三角形ABCには面積48cm²が示され、DEFはABCと同じ形で各辺が半分の長さ。',
     answer: '12cm²',
     hint: '辺の長さが1/2になると、面積は(1/2)×(1/2)＝1/4になる。',
     explanation: `【出題意図】

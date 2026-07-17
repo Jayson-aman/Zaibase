@@ -65,6 +65,7 @@ export const takatsukiExamV2: Question[] = [
   {
     id: 'takatsuki_v2_s003',
     subject: 'sansu',
+    figureDescription: '半径6cm（直径12cm）の半円と、その直径を1辺とする1辺12cmの正方形を組み合わせた図。色がついているのは正方形の内側で半円の外側の部分。',
     difficulty: 'advanced',
     course: 'takatsuki',
     examType: 'chugaku',
@@ -164,6 +165,7 @@ export const takatsukiExamV2: Question[] = [
   {
     id: 'takatsuki_v2_s006',
     subject: 'sansu',
+    figureDescription: '1辺2cmの正三角形を規則正しくすき間なく並べて大きな正三角形を作る図。1段目は小三角形1個、2段目は4個、3段目は9個と増える。6段目の大きな正三角形を考える。',
     difficulty: 'advanced',
     course: 'takatsuki',
     examType: 'chugaku',

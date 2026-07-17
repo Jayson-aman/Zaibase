@@ -277,6 +277,8 @@ y=ax+bの傾きa：x1増加でy がa増加（a<0なら減少）。y切片b：グ
   },
   {
     id: 'koko_kankan_sansu_b_11',
+    figureDescription:
+      '二次関数 y=2x² のグラフ。原点(0,0)を頂点とし、y軸について左右対称に上へ開いた下に凸の放物線。−2≦x≦2 の範囲では頂点(0,0)が最小値0となる。',
     subject: 'sansu',
     examType: 'koko',
     course: 'koko-kankan',
@@ -540,6 +542,8 @@ n=2k+1（奇数）のとき：(2k+1)²+2(2k+1)+3=4k²+4k+1+4k+2+3=4k²+8k+6=2(2k
   },
   {
     id: 'koko_kankan_sansu_b_21',
+    figureDescription:
+      '三角形ABCの辺AB上に点Pをとった図。APとPBの長さの比は1:2で、頂点CとPを結ぶ線分CPによって三角形ABCが△APCと△BPCの2つに分けられる。両三角形は頂点Cから底辺ABへの高さが共通。',
     subject: 'sansu',
     examType: 'koko',
     course: 'koko-kankan',

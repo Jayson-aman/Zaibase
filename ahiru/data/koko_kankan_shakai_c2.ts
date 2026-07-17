@@ -317,6 +317,7 @@ export const kokoKankanShakaiC2: Question[] = [
   {
     id: 'koko_kankan_shakai_c2_23',
     subject: 'shakai',
+    figureDescription: '大阪・ロンドン・シンガポール3都市の雨温図（棒グラフの月降水量と折れ線の月平均気温）。大阪は気温の年較差が大きく夏に降水が多い、ロンドンは年較差が小さく降水も年間平準、シンガポールは年中高温多雨。',
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',

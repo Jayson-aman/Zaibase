@@ -69,6 +69,7 @@ export const kindaiSansu: Question[] = [
   {
     id: 'kindai_sansu_r02',
     subject: 'sansu',
+    figureDescription: '複数の図形の図。問(2)は上底6cm・下底14cm・高さ8cmの台形。問(3)は1辺10cmの正方形で、各頂点から対角の頂点へ辺の中点を通る直線を引き中央に小さな正方形ができる図。問(4)は∠B=90°・AB=6cm・BC=8cm・AC=10cmの直角三角形ABCで、AからBCに下ろした垂線の足がH。問(5)は1辺8cmの正方形から底辺8cm・高さ5cmの三角形を切り取った図。',
     difficulty: 'advanced',
     course: 'kindai',
     examType: 'chugaku',

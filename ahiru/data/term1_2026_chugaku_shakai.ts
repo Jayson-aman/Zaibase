@@ -44,6 +44,7 @@ export const term1_2026ChugakuShakai: Question[] = [
   {
     id: 'term1_2026_chugaku_shakai_004',
     subject: 'shakai',
+    figureDescription: '3つの地図記号が並んでいる。田は稲の切り株を表す横線2本（Ⅱのような形）、畑は双葉を表すＶ字のような形、果樹園は果実を表す丸に点を打った記号。',
     examType: 'chugaku',
     difficulty: 'basic',
     maxOnly: false,
@@ -57,6 +58,7 @@ export const term1_2026ChugakuShakai: Question[] = [
   {
     id: 'term1_2026_chugaku_shakai_005',
     subject: 'shakai',
+    figureDescription: '2つの地図記号。郵便局を表す「〒」の記号と、火消し道具「さすまた」を図案化した消防署の記号。',
     examType: 'chugaku',
     difficulty: 'basic',
     maxOnly: false,
@@ -776,6 +778,7 @@ export const term1_2026ChugakuShakai: Question[] = [
   {
     id: 'term1_2026_chugaku_shakai_060',
     subject: 'shakai',
+    figureDescription: '扇形に広がる土地を描いた地形図。扇の中央部分に果樹園の地図記号が集まり、その周辺の低い土地には田の地図記号が多く分布している（扇状地）。',
     examType: 'chugaku',
     difficulty: 'advanced',
     maxOnly: true,

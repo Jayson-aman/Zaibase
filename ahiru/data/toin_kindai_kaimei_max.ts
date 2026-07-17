@@ -3,6 +3,8 @@ import type { Question } from './questions';
 export const toinMaxQuestions: Question[] = [
   {
     id: 'toin_sansu_max01',
+    figureDescription:
+      '横軸に時間（分）、縦軸に家からの距離（m）をとった折れ線グラフ。分速80mで家から前進して途中の折り返し点まで上がり、そこから分速120mで家（距離0）まで下がり、再び分速100mで学校（距離2000m）まで上がる、山と谷を描く折れ線で表される。',
     subject: 'sansu',
     question:
       '太郎が家から学校へ分速80mで歩き始めた。家から学校までの距離は2km（2000m）である。\n' +

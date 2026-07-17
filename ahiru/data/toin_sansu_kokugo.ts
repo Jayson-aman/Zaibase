@@ -82,6 +82,7 @@ export const toinSansu: Question[] = [
   // ============================================================
   {
     id: 'toin_sansu_r02',
+    figureDescription: '縦15cm・横20cmの長方形ABCD（Aが左上、Bが右上、Cが右下、Dが左下）。辺AB上にAP＝8cmとなる点P、辺BC上にBQ＝9cmとなる点Qをとり、頂点Dから点P・点Qへそれぞれ直線DP・DQが引かれている。別問題として、底面の直径6cm・高さ10cmの円柱も扱う。',
     subject: 'sansu',
     difficulty: 'advanced',
     course: 'toin',

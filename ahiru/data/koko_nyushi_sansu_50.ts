@@ -476,6 +476,8 @@ export const kokoNyushiSansu50: Question[] = [
   // ============================================================
   {
     id: 'koko_nyushi_sansu_16',
+    figureDescription:
+      '一次関数 y=2x−3 の直線グラフ。y軸とは点(0,−3)で交わり（切片−3）、xが1増えるごとにyが2増える右上がりの直線で、点(3,3)を通る。',
     subject: 'sansu',
     question: '一次関数 y = 2x - 3 の傾きと y 切片を答えなさい。また、このグラフが通る点 (3, a) の a の値を求めなさい。',
     answer: '傾き：2、y 切片：-3、a = 3',

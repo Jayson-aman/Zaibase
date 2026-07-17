@@ -169,6 +169,7 @@ export const kokoKankanShakai20: Question[] = [
   // ── Q06–Q10: 応用 (standard) ─────────────────────────────────────────
   {
     id: 'koko_kankan_shakai_06',
+    figureDescription: '縮尺2万5千分の1の地形図。標高50mのA地点と標高150mのB地点が示され、両地点を結ぶ直線の地図上の長さは8cm。等高線が引かれ、間隔の狭い（急斜面）部分と広い（緩斜面）部分がある。',
     subject: 'shakai',
     examType: 'koko',
     course: 'koko-kankan',
@@ -508,6 +509,7 @@ export const kokoKankanShakai20: Question[] = [
   },
   {
     id: 'koko_kankan_shakai_14',
+    figureDescription: '縦軸に価格、横軸に数量をとった座標に、右下がりの需要曲線と右上がりの供給曲線が描かれ、2本の曲線が1点で交わっているグラフ。',
     subject: 'shakai',
     examType: 'koko',
     course: 'koko-kankan',
@@ -556,6 +558,7 @@ export const kokoKankanShakai20: Question[] = [
   },
   {
     id: 'koko_kankan_shakai_15',
+    figureDescription: '直接請求権の種類ごとに「必要署名数」と「請求先」を並べた表。①条例の制定・改廃の請求（署名数A・請求先B）、②監査の請求（署名数C・請求先D）、③議会の解散請求（署名数E・請求先F）の3行があり、A〜Fが空欄になっている。',
     subject: 'shakai',
     examType: 'koko',
     course: 'koko-kankan',
@@ -818,6 +821,7 @@ PKOは国連の機関ではなく、加盟国が派遣する軍・警察・民�
   },
   {
     id: 'koko_kankan_shakai_20',
+    figureDescription: '3種類の資料が並ぶ。資料A：日本の輸出入品目の2000年と2020年の順位・割合を示した表（輸出1位は自動車、輸入1位は原油）。資料B：2023年度予算の内訳（歳出総額114兆円、社会保障費約37兆円、国債費約25兆円、税収69兆円・国債発行35兆円）。資料C：消費税率の推移年表（1989年3%→1997年5%→2014年8%→2019年10%）。',
     subject: 'shakai',
     examType: 'koko',
     course: 'koko-kankan',

@@ -96,6 +96,7 @@ export const chugaku2026Shakai2: Question[] = [
   {
     id: 'chugaku2026_shakai_068',
     subject: 'shakai',
+    figureDescription: '3つの地図記号。卍（寺院）、鳥居の形の記号（神社）、歯車の形の記号（工場）。',
     examType: 'chugaku',
     difficulty: 'basic',
     maxOnly: false,

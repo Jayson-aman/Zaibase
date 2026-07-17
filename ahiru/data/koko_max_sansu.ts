@@ -17,6 +17,7 @@ export const kokoMaxSansu: Question[] = [
   {
     id: 'koko_max_sansu_02',
     subject: 'sansu',
+    figureDescription: '頂点が原点の上に開いた放物線 y = 2x²。y軸に関して左右対称で、点(-3, 18)を通る。xの変域 -2 ≦ x ≦ 1 の部分を考える。',
     question: '関数 y = ax² のグラフが点 (-3, 18) を通るとき、定数 a の値を求め、x の変域が -2 ≦ x ≦ 1 のときの y の変域を求めなさい。',
     answer: 'a = 2、y の変域：0 ≦ y ≦ 8',
     hint: '点を代入して a を求め、頂点（原点）を含む変域かどうかを確認する。',
@@ -41,6 +42,7 @@ export const kokoMaxSansu: Question[] = [
   {
     id: 'koko_max_sansu_04',
     subject: 'sansu',
+    figureDescription: '直角三角形ABC（∠C = 90°）で、AB = 6cm、BC = 8cm。辺BC上に、AD = DC となる点Dをとった図。BDの長さを求める。',
     question: '右の図において、AB = 6cm、BC = 8cm の直角三角形 ABC（∠C = 90°）の辺 BC 上に点 D をとり、AD = DC となるようにするとき、BD の長さを求めなさい。',
     answer: 'BD = 16/5 cm（3.2cm）',
     hint: 'AD = DC = x とおいて、三平方の定理を2回使う。BD = BC - DC。',
@@ -245,6 +247,7 @@ export const kokoMaxSansu: Question[] = [
   {
     id: 'koko_max_sansu_21',
     subject: 'sansu',
+    figureDescription: '円Oの直径ABが10cm。弦CDが直径ABと点Eで垂直に交わり、CE = 3cm。EからBまでの長さBEを求める図。',
     question: '右図において、円 O の直径 AB = 10cm、弦 CD は AB と点 E で垂直に交わり、CE = 3cm のとき、BE の長さを求めなさい。',
     answer: 'BE = 1cm（または9cm）',
     hint: '接弦定理ではなく方べきの定理：AE × EB = CE × ED',
@@ -389,6 +392,7 @@ export const kokoMaxSansu: Question[] = [
   {
     id: 'koko_max_sansu_33',
     subject: 'sansu',
+    figureDescription: 'AB // CD の台形ABCDで、下底AB = 6cm、上底CD = 4cm、高さ5cm。対角線ACとBDの交点をPとした図。',
     question: '右図で四角形 ABCD において AB // CD、AB = 6cm、CD = 4cm、高さ = 5cm のとき、台形の面積を求めなさい。また、対角線 AC と BD の交点 P に対して △APB の面積を求めなさい。',
     answer: '台形の面積 = 25cm²、△APB の面積 = 9cm²',
     hint: '台形の面積 = (上底+下底)×高さ/2。△APB と △CPD は相似。',
@@ -473,6 +477,7 @@ export const kokoMaxSansu: Question[] = [
   {
     id: 'koko_max_sansu_40',
     subject: 'sansu',
+    figureDescription: '上に凸の放物線 y = -x² + 4x + 5。頂点(2, 9)、軸 x = 2、y切片は5、x切片は(-1, 0)と(5, 0)を通る概形。',
     question: '二次関数 y = -x² + 4x + 5 の頂点・軸・最大値を求め、グラフの概形を説明しなさい。',
     answer: '頂点(2, 9)、軸 x = 2、最大値 9（x=2 のとき）。上に凸の放物線、y 切片 = 5、x 切片 = -1, 5。',
     hint: '平方完成して頂点を求める。x 切片は y = 0 を解く。',

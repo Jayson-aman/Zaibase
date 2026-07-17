@@ -388,6 +388,8 @@ export const kokoSansuEx12: Question[] = [
   },
   {
     id: 'koko_sansu_ex_12_028',
+    figureDescription:
+      '二次関数 y=ax²+bx+c のグラフ。頂点が点(2,−1)にある下に凸の放物線で、y軸とは点(0,3)で交わる。',
     subject: 'sansu',
     examType: 'koko',
     course: 'koko-nishiyamato',
@@ -598,6 +600,8 @@ export const kokoSansuEx12: Question[] = [
   },
   {
     id: 'koko_sansu_ex_12_043',
+    figureDescription:
+      '二次関数 y=x²+px+q のグラフ。x軸と2点(1,0)・(3,0)で交わる下に凸の放物線で、軸は2つの交点の中間(x=2)にあり、頂点は(2,−1)。',
     subject: 'sansu',
     examType: 'koko',
     course: 'koko-nishiyamato',

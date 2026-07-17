@@ -293,6 +293,7 @@ export const toinQuestions: Question[] = [
   {
     id: 'toin_sansu_05', subject: 'sansu', difficulty: 'advanced',
     course: 'toin', examType: 'chugaku',
+    figureDescription: '底辺8cm、高さ6cmの直角三角形。底辺が水平に置かれ、その一端から垂直に高さ6cmの辺が立っている。この底辺を回転軸として1回転させると、底面の半径6cm・高さ8cmの円錐ができる。',
     question: '右の図のような、直角三角形（底辺8cm、高さ6cm）を底辺を軸として1回転させたときにできる立体の体積を求めなさい。（π=3.14）',
     answer: '301.44cm³',
     hint: '円錐の体積 = (1/3)×π×r²×h',
@@ -797,6 +798,7 @@ export const kansaiHokuyoQuestions: Question[] = [
   {
     id: 'kansai_hokuyo_sansu_05', subject: 'sansu', difficulty: 'advanced',
     course: 'kansai-hokuyo', examType: 'chugaku',
+    figureDescription: '底辺12cm、高さ8cmの平行四辺形。底辺が水平で、斜めに傾いた2辺が上下の底辺をつなぎ、底辺から上辺までの垂直な高さが8cmと示されている。',
     question: '次の図形の面積を求めなさい。底辺12cm、高さ8cmの平行四辺形。',
     answer: '96cm²',
     hint: '平行四辺形の面積 = 底辺 × 高さ',

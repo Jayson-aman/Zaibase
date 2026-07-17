@@ -7,7 +7,6 @@ import {
   Dimensions,
   Platform,
   ScrollView,
-  Image,
 } from 'react-native';
 
 const SERIF = Platform.select({
@@ -16,11 +15,8 @@ const SERIF = Platform.select({
   default: undefined,
 }) as string | undefined;
 import { Question, subjectInfo } from '../data/questions-meta';
-import {
-  getHistoryThemeLabel,
-  getQuestionIllustration,
-} from '../data/images';
-import { getSubjectIllustration, getSubjectThemeLabel } from '../data/subjectImages';
+import { getHistoryThemeLabel } from '../data/images';
+import { getSubjectThemeLabel } from '../data/subjectImages';
 
 type Props = {
   question: Question;
@@ -44,12 +40,8 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
   const info = subjectInfo[question.subject];
   // 単元テーマ判定（理科・社会）：問題文＋解説からキーワードで自動分類
   const themeText = `${question.question} ${question.explanation ?? ''}`;
-  // 生成済みイラストがあれば単元イラストを優先。無ければ従来の社会イラストにフォールバック
-  const subjectIllust = getSubjectIllustration(question.subject, themeText);
-  const illustration = subjectIllust
-    ?? (question.subject === 'shakai'
-      ? getQuestionIllustration(question.subject, question.id)
-      : null);
+  // キャラクター（マンガ風）イラストは各教科の問題カードから削除済み。
+  // 単元ラベル（🏛/🔬 のテキストチップ）のみ残す。
   const historyLabel = getHistoryThemeLabel(question.id)
     ?? getSubjectThemeLabel(question.subject, themeText);
 
@@ -88,16 +80,6 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
           </View>
         )}
       </View>
-
-      {illustration != null && (
-        <View style={styles.illustrationWrap}>
-          <Image
-            source={illustration}
-            style={styles.illustration}
-            resizeMode="cover"
-          />
-        </View>
-      )}
 
       {choices != null ? (
         <View style={styles.choiceSection}>
@@ -519,14 +501,5 @@ const styles = StyleSheet.create({
     color: '#0284C7',
     marginTop: 8,
     fontWeight: '600',
-  },
-  illustrationWrap: {
-    width: '100%',
-    height: 170,
-    overflow: 'hidden',
-  },
-  illustration: {
-    width: '100%',
-    height: 170,
   },
 });

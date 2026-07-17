@@ -633,6 +633,7 @@ export const kokoKankanRikaC2: Question[] = [
   },
   {
     id: 'koko_kankan_rika_c2_46',
+    figureDescription: '横軸にマグネシウムの質量、縦軸に発生した水素の体積をとったグラフ。原点から右上がりの直線で水素が増えていくが、あるマグネシウムの質量のところでグラフが折れ曲がり、それ以降は水平になって水素の発生量が一定値で頭打ちになる。塩酸の量は0.3molで一定。',
     subject: 'rika',
     examType: 'koko',
     course: 'koko-kankan',

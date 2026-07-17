@@ -493,6 +493,8 @@ export const kokoKankanRikaC3: Question[] = [
   },
   {
     id: 'koko_kankan_rika_c3_36',
+    figureDescription:
+      '東西に600m離れたA地点とB地点の柱状図（地層の重なりを縦に表した図）。共通する火山灰の層（鍵層）が、西のA地点では標高80m、東のB地点では標高65mの位置にあり、東側で15m低くなっている。',
     subject: 'rika',
     examType: 'koko',
     course: 'koko-kankan',

@@ -653,6 +653,7 @@ export const chugaku2026Rika2: Question[] = [
   },
   {
     id: 'chugaku2026_rika_111',
+    figureDescription: '気温と飽和水蒸気量の対応表。10℃…9.4g/m³、15℃…12.8g/m³、20℃…17.3g/m³、25℃…23.0g/m³、30℃…30.0g/m³が並んでいる。',
     subject: 'rika',
     examType: 'chugaku',
     difficulty: 'advanced',
