@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, StyleSheet, Dimensions, Platform } from 'react-native';
+import React, { useEffect, useId, useMemo, useRef, useState, useCallback } from 'react';
+import { View, Text, StyleSheet, Dimensions, Platform, TouchableOpacity } from 'react-native';
 import Svg, {
   Line,
   Circle as SvgCircle,
@@ -54,7 +54,7 @@ function niceStep(range: number): number {
   return step * pow;
 }
 
-function CoordinateFig({ fig }: { fig: CoordFigure }) {
+function CoordinateFig({ fig, uid }: { fig: CoordFigure; uid: string }) {
   const pad = 24;
   const area: Area = { x0: pad, y0: 12, w: VBW - pad * 2, h: VBH - pad * 2 };
 
@@ -114,7 +114,7 @@ function CoordinateFig({ fig }: { fig: CoordFigure }) {
     els.push(<SvgText key={`ty${y}`} x={x0 - 5} y={py(y) + 3.5} fontSize={10} fill={AXIS} textAnchor="end">{+y.toFixed(2)}</SvgText>);
   }
 
-  const clipId = 'coordclip';
+  const clipId = `coord-${uid}`;
 
   // 塗りつぶし領域
   if (fig.polygon && fig.polygon.length >= 3) {
@@ -196,14 +196,14 @@ function CoordinateFig({ fig }: { fig: CoordFigure }) {
   });
 
   return (
-    <Svg width="100%" height="100%" viewBox={`0 0 ${VBW} ${VBH}`}>
+    <>
       <Defs>
         <ClipPath id={clipId}>
           <Rect x={area.x0} y={area.y0} width={area.w} height={area.h} />
         </ClipPath>
       </Defs>
       {els}
-    </Svg>
+    </>
   );
 }
 
@@ -362,11 +362,7 @@ function PolygonFig({ fig }: { fig: PolyFigure }) {
     els.push(<SvgText key={`vl${i}`} x={P[i].x + out.x * 13} y={P[i].y + out.y * 13 + 4} fontSize={12} fill={INK} fontWeight="bold" textAnchor="middle">{p.label}</SvgText>);
   });
 
-  return (
-    <Svg width="100%" height="100%" viewBox={`0 0 ${VBW} ${VBH}`}>
-      {els}
-    </Svg>
-  );
+  return <>{els}</>;
 }
 
 function norm(v: { x: number; y: number }) {
@@ -416,11 +412,7 @@ function CircleFig({ fig }: { fig: CircleFigure }) {
     }
   });
 
-  return (
-    <Svg width="100%" height="100%" viewBox={`0 0 ${VBW} ${VBH}`}>
-      {els}
-    </Svg>
-  );
+  return <>{els}</>;
 }
 
 // ---------- 立体 ----------
@@ -485,11 +477,7 @@ function SolidFig({ fig }: { fig: SolidFigure }) {
     }
   }
 
-  return (
-    <Svg width="100%" height="100%" viewBox={`0 0 ${VBW} ${VBH}`}>
-      {els}
-    </Svg>
-  );
+  return <>{els}</>;
 }
 
 // ---------- 数直線 ----------
@@ -515,11 +503,7 @@ function NumberLineFig({ fig }: { fig: NumberLineFigure }) {
     els.push(<SvgCircle key={`p${i}`} cx={px(p.x)} cy={y} r={5} fill={p.open ? '#fff' : ACCENT} stroke={ACCENT} strokeWidth={2} />);
     if (p.label) els.push(<SvgText key={`pl${i}`} x={px(p.x)} y={y - 12} fontSize={11} fill={INK} textAnchor="middle" fontWeight="bold">{p.label}</SvgText>);
   });
-  return (
-    <Svg width="100%" height="100%" viewBox={`0 0 ${VBW} ${VBH}`}>
-      {els}
-    </Svg>
-  );
+  return <>{els}</>;
 }
 
 // ---------- 箱ひげ図 ----------
@@ -550,11 +534,7 @@ function BoxplotFig({ fig }: { fig: BoxplotFigure }) {
   els.push(<Line key="med" x1={px(fig.median)} y1={y - 18} x2={px(fig.median)} y2={y + 18} stroke="#E11D48" strokeWidth={2} />);
   const lab = (v: number, t: string) => els.push(<SvgText key={`lb${t}`} x={px(v)} y={y - 24} fontSize={9} fill={AXIS} textAnchor="middle">{t}</SvgText>);
   lab(fig.min, '最小'); lab(fig.median, '中央'); lab(fig.max, '最大');
-  return (
-    <Svg width="100%" height="100%" viewBox={`0 0 ${VBW} ${VBH}`}>
-      {els}
-    </Svg>
-  );
+  return <>{els}</>;
 }
 
 // ---------- 化学反応式（RN Textで整形） ----------
@@ -630,37 +610,96 @@ function ChemStructFig({ fig }: { fig: ChemStructFigure }) {
   fig.atoms.forEach((a, i) => {
     els.push(<SvgText key={`a${i}`} x={P[i].x} y={P[i].y + 6} fontSize={17} fill={INK} textAnchor="middle" fontWeight="bold">{a.el}</SvgText>);
   });
-  return (
-    <Svg width="100%" height="100%" viewBox={`0 0 ${VBW} ${VBH}`}>
-      {els}
-    </Svg>
-  );
+  return <>{els}</>;
 }
 
 // ---------- 公開コンポーネント ----------
 
-export default function FigureView({ figure }: { figure: Figure }) {
+function easeOut(t: number): number {
+  return 1 - Math.pow(1 - t, 3);
+}
+
+// animated=true（主に解説側）で、図が左から描き込まれるアニメーションを再生。
+// タップで何度でも再生し直せる。
+export default function FigureView({ figure, animated = false }: { figure: Figure; animated?: boolean }) {
   const { w, h } = useSize();
   const isChem = figure.kind === 'chemEquation';
+  const rawId = useId();
+  const uid = rawId.replace(/[^a-zA-Z0-9]/g, '');
 
-  let body: React.ReactNode;
-  switch (figure.kind) {
-    case 'coordinate': body = <CoordinateFig fig={figure} />; break;
-    case 'polygon': body = <PolygonFig fig={figure} />; break;
-    case 'circle': body = <CircleFig fig={figure} />; break;
-    case 'solid': body = <SolidFig fig={figure} />; break;
-    case 'numberLine': body = <NumberLineFig fig={figure} />; break;
-    case 'boxplot': body = <BoxplotFig fig={figure} />; break;
-    case 'chemEquation': body = <ChemEquationFig fig={figure} />; break;
-    case 'chemStructure': body = <ChemStructFig fig={figure} />; break;
-    default: body = null;
+  const [progress, setProgress] = useState(animated ? 0 : 1);
+  const rafRef = useRef<number | null>(null);
+
+  const play = useCallback(() => {
+    if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
+    const DUR = 1150;
+    let startTs: number | null = null;
+    const tick = (ts: number) => {
+      if (startTs == null) startTs = ts;
+      const t = Math.min(1, (ts - startTs) / DUR);
+      setProgress(easeOut(t));
+      if (t < 1) rafRef.current = requestAnimationFrame(tick);
+    };
+    setProgress(0);
+    rafRef.current = requestAnimationFrame(tick);
+  }, []);
+
+  useEffect(() => {
+    if (animated) play();
+    return () => {
+      if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
+    };
+  }, [animated, play]);
+
+  const body = useMemo(() => {
+    switch (figure.kind) {
+      case 'coordinate': return <CoordinateFig fig={figure} uid={uid} />;
+      case 'polygon': return <PolygonFig fig={figure} />;
+      case 'circle': return <CircleFig fig={figure} />;
+      case 'solid': return <SolidFig fig={figure} />;
+      case 'numberLine': return <NumberLineFig fig={figure} />;
+      case 'boxplot': return <BoxplotFig fig={figure} />;
+      case 'chemStructure': return <ChemStructFig fig={figure} />;
+      default: return null;
+    }
+  }, [figure, uid]);
+
+  // 化学反応式はSVGではないのでフェードインで演出
+  if (isChem) {
+    return (
+      <View style={styles.wrap}>
+        <TouchableOpacity
+          activeOpacity={animated ? 0.7 : 1}
+          onPress={animated ? play : undefined}
+          style={[styles.canvas, styles.chemCanvas, { opacity: animated ? Math.max(0.15, progress) : 1 }]}
+        >
+          <ChemEquationFig fig={figure as ChemEqFigure} />
+        </TouchableOpacity>
+        {animated && <Text style={styles.replayHint}>▶ タップで再生</Text>}
+        {figure.caption != null && <Text style={styles.caption}>{figure.caption}</Text>}
+      </View>
+    );
   }
+
+  const revealW = Math.max(0.001, VBW * progress);
 
   return (
     <View style={styles.wrap}>
-      <View style={[styles.canvas, isChem ? styles.chemCanvas : { width: w, height: h }]}>
-        {body}
-      </View>
+      <TouchableOpacity
+        activeOpacity={animated ? 0.85 : 1}
+        onPress={animated ? play : undefined}
+        style={[styles.canvas, { width: w, height: h }]}
+      >
+        <Svg width="100%" height="100%" viewBox={`0 0 ${VBW} ${VBH}`}>
+          <Defs>
+            <ClipPath id={`reveal-${uid}`}>
+              <Rect x={0} y={0} width={revealW} height={VBH} />
+            </ClipPath>
+          </Defs>
+          <G clipPath={animated ? `url(#reveal-${uid})` : undefined}>{body}</G>
+        </Svg>
+      </TouchableOpacity>
+      {animated && <Text style={styles.replayHint}>▶ タップで再生</Text>}
       {figure.caption != null && <Text style={styles.caption}>{figure.caption}</Text>}
     </View>
   );
@@ -684,6 +723,12 @@ const styles = StyleSheet.create({
     marginTop: 6,
     textAlign: 'center',
     paddingHorizontal: 12,
+  },
+  replayHint: {
+    fontSize: 11,
+    color: '#0EA5E9',
+    marginTop: 4,
+    fontWeight: '600',
   },
   chemRow: {
     flexDirection: 'row',

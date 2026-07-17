@@ -185,6 +185,8 @@ export type { Question, SubjectKey } from './questions-meta';
 export { subjectInfo } from './questions-meta';
 import type { Question } from './questions-meta';
 import type { SubjectKey } from './questions-meta';
+import { kokugoChoubunChugaku } from './kokugo_choubun_chugaku';
+import { kokugoChoubunKoko } from './kokugo_choubun_koko';
 
 export const questions: Question[] = [
   // ============================================================
@@ -3034,6 +3036,8 @@ export const questions: Question[] = [
   ...term1_2026KokoRika,
   ...term1_2026KokoShakai,
   ...term1_2026KokoEigo,
+  ...kokugoChoubunChugaku,
+  ...kokugoChoubunKoko,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {

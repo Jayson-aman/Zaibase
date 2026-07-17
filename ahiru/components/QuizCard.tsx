@@ -213,6 +213,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
         <View style={styles.answerSide}>
           <Text style={styles.answerLabel}>答 え</Text>
           <Text style={styles.answerText}>{question.answer}</Text>
+          {figure != null && <FigureView figure={figure} animated />}
           {(question.explanation != null || question.hint != null) && (
             <View style={styles.hintBox}>
               <Text style={styles.hintLabel}>📖 解説</Text>
