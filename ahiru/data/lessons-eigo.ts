@@ -1530,4 +1530,1147 @@ d) How long did it take?
       },
     ],
   },
+  {
+    id: 'eigo_07_alphabet_phonics',
+    subject: 'eigo',
+    title: 'アルファベット・フォニックス・ローマ字',
+    description: '英語のいちばん最初！文字・音・ローマ字の基礎を固める',
+    order: 7,
+    sections: [
+      {
+        heading: '1. アルファベットの大文字と小文字',
+        body: `英語はアルファベット26文字ですべての単語を作る。まずは大文字（Capital letter）と小文字（Small letter）をセットで覚えよう。
+
+■ アルファベット26文字（大文字→小文字）
+A a ／ B b ／ C c ／ D d ／ E e ／ F f ／ G g
+H h ／ I i ／ J j ／ K k ／ L l ／ M m ／ N n
+O o ／ P p ／ Q q ／ R r ／ S s ／ T t ／ U u
+V v ／ W w ／ X x ／ Y y ／ Z z
+
+■ 母音（vowel）と子音（consonant）
+・母音は5つ：a・i・u・e・o
+・それ以外の21文字はすべて子音
+★ ポイント：この「母音」を知っていると、a と an の使い分け（母音の前は an）などのルールがわかる。
+
+■ 大文字を使う場所（入試でも問われる基本ルール）
+①文のいちばん最初の文字
+　例）This is a pen.（Tを大文字に）
+②人の名前・地名・国名（固有名詞）の最初の文字
+　例）Tom ／ Japan ／ Osaka ／ Mt. Fuji
+③I（私は）はいつでも大文字
+　例）Yes, I am. ／ Tom and I are friends.
+④曜日・月の名前の最初の文字
+　例）Monday ／ April ／ Sunday
+⑤言語・国民を表す語
+　例）English ／ Japanese
+
+⚠ 注意：文の途中でも I はいつも大文字。i と小文字で書くのは間違い。
+
+■ まちがえやすい形の文字
+・b と d（左右が逆）
+・p と q（上下・左右が逆）
+・小文字の a と o、n と h の高さのちがい
+★ 4本線のノートを使うとき、b・d・h・k・l・t は上の段まで、g・j・p・q・y は下の段まで伸ばす、と覚えると形がそろう。`,
+      },
+      {
+        heading: '2. フォニックス（文字と音のルール）',
+        body: `フォニックス（Phonics）とは「文字と音の関係のルール」のこと。これを知ると、はじめて見る単語もローマ字読みではなく英語の音で読めるようになる。
+
+■ 子音の基本の音（アルファベット読みとちがう「音」）
+b →「ブ」 ／ c →「ク」 ／ d →「ドゥ」 ／ f →「フ」
+g →「グ」 ／ h →「ハ」 ／ j →「ヂュ」 ／ k →「ク」
+l →「ル」 ／ m →「ム」 ／ n →「ンヌ」 ／ p →「プ」
+r →「ゥル」 ／ s →「ス」 ／ t →「トゥ」 ／ v →「ヴ」
+w →「ゥ」 ／ y →「ィ」 ／ z →「ズ」
+★ ポイント：名前の読み方（ビー・シー…）と、単語の中での音（ブ・ク…）はちがう。フォニックスでは「音」のほうを使う。
+
+■ 母音の短い音（短母音）
+a →「ア」（cat キャット）
+i →「イ」（sit スィット）
+u →「ア」（cup カップ）
+e →「エ」（pen ペン）
+o →「オ」（box ボックス）
+
+■ 3文字の単語を音でつなげて読む練習
+c-a-t → ク・ア・トゥ → cat（ねこ）
+d-o-g → ドゥ・オ・グ → dog（いぬ）
+b-i-g → ブ・イ・グ → big（大きい）
+r-u-n → ゥル・ア・ンヌ → run（走る）
+★ ポイント：1文字ずつの音をなめらかにつなげると単語の発音になる。
+
+■ 単語の最後に e がつくと母音が「名前読み」になる（マジックe）
+・cap（キャップ・ぼうし）→ cape（ケイプ・岬）　a が「エイ」に
+・kit（キット）→ kite（カイト・たこ）　i が「アイ」に
+・not（ノット）→ note（ノウト・メモ）　o が「オウ」に
+・cut（カット）→ cute（キュート・かわいい）　u が「ユー」に
+⚠ 注意：最後の e 自体は読まない（発音しない）。前の母音を「アルファベットの名前の音」に変える役目。
+
+■ 2文字で1つの音になるもの（重要）
+sh →「シュ」（ship 船）／ ch →「チ」（chair いす）
+th →「ス／ズ」（think 考える ／ this これ）
+ph →「フ」（phone 電話）／ ck →「ク」（duck あひる）
+★ フォニックスを知っていると、つづり（スペル）を覚えるのもぐんと楽になる。`,
+      },
+      {
+        heading: '3. ローマ字（訓令式とヘボン式）',
+        body: `ローマ字は「日本語をアルファベットで書く」ためのもの。英語そのものではないが、名前や地名を書くときに必要で、小学校でも学ぶ。
+
+■ ローマ字の基本（母音＋子音の組み合わせ）
+・母音：a（あ）・i（い）・u（う）・e（え）・o（お）
+・子音＋母音で1音：ka き→ki く→ku け→ke こ→ko
+例）さくら → sakura ／ ねこ → neko ／ とけい → tokei
+
+■ 五十音のローマ字（訓令式）
+か行 ka ki ku ke ko ／ さ行 sa si su se so
+た行 ta ti tu te to ／ な行 na ni nu ne no
+は行 ha hi hu he ho ／ ま行 ma mi mu me mo
+や行 ya (i) yu (e) yo ／ ら行 ra ri ru re ro
+わ行 wa (o) ／ ん n
+
+■ 訓令式とヘボン式のちがい（重要）
+学校のテストは「訓令式」が基本だが、パスポートや駅名などの実生活では「ヘボン式」が使われる。ちがう部分だけ覚えよう。
+| 音 | 訓令式 | ヘボン式 |
+|----|--------|----------|
+| し | si | shi |
+| ち | ti | chi |
+| つ | tu | tsu |
+| ふ | hu | fu |
+| じ | zi | ji |
+| しゃ | sya | sha |
+| ちゃ | tya | cha |
+例）ふじさん → 訓令式 huzisan ／ ヘボン式 Fujisan
+
+■ のばす音・つまる音・「ん」の書き方
+・のばす音（長音）：訓令式は母音の上に「＾」（ô）、ヘボン式はのばさず書くか o を重ねる
+　例）おおさか → Osaka ／ とうきょう → Tokyo（ヘボン式では長音記号を省くことが多い）
+・つまる音（促音「っ」）：次の子音を重ねる
+　例）きっぷ → kippu ／ がっこう → gakkou（gakkô）
+・はねる音「ん」：n で書く。ただし b・p・m の前は m にすることがある（ヘボン式）
+　例）しんぶん → shinbun ／ ぐんま → Gunma（Gumma）
+
+⚠ 注意：人名・地名は最初の文字を大文字にする。
+例）Tanaka Taro ／ Nihon（Japan）／ Kyoto`,
+      },
+      {
+        heading: '4. 単語を正しく書くための基本ルール',
+        body: `英語を書くときには、日本語にはない「書き方のきまり」がいくつもある。ここでミスをなくそう。
+
+■ 単語と単語の間はスペースを空ける
+英語は単語ごとに区切って書く。くっつけて書いてはいけない。
+○ I am a student.
+× Iamastudent.
+
+■ 文の終わりには符号（ピリオド・クエスチョンマーク）をつける
+・ふつうの文（肯定文・否定文）→ ピリオド「.」
+　例）I like dogs.
+・質問の文（疑問文）→ クエスチョンマーク「?」
+　例）Do you like dogs?
+・強い気持ちの文（感嘆文など）→ エクスクラメーションマーク「!」
+　例）What a nice day!
+
+■ コンマ（,）の使い方
+・ものを並べるとき（3つ以上）
+　例）I have a pen, a book, and a ruler.
+・呼びかけや返事のあと
+　例）Yes, I do. ／ Hi, Tom.
+
+■ 短縮形（アポストロフィ ' を使う）
+話し言葉やくだけた文でよく使う。
+・I am → I'm ／ You are → You're ／ He is → He's
+・is not → isn't ／ are not → aren't ／ do not → don't
+・does not → doesn't ／ cannot → can't ／ will not → won't
+例）I'm a student. ／ She isn't busy. ／ I don't know.
+★ ポイント：短縮形の「'」は省いた文字の場所に置く（is not → isn'tのo が消える）。
+
+■ 名前や 's（アポストロフィ エス）で「〜の」を表す
+・人やものの持ち主を表すとき、名前のあとに 's をつける
+　例）Tom's book（トムの本）／ my mother's car（母の車）
+　例）the dog's name（その犬の名前）
+
+⚠ よくあるミスまとめ
+・文の最初を小文字で書く → ×（大文字にする）
+・I を i と書く → ×
+・ピリオドやクエスチョンマークを忘れる → 減点されやすい
+・単語をくっつけて書く → ×`,
+      },
+      {
+        heading: '5. 練習問題（文字・音・ローマ字）',
+        body: `これまで学んだことを問題で確認しよう。
+
+【問題1】次の単語の最初の文字は、a と an のどちらがつくか答えなさい。
+① (   ) apple　② (   ) book　③ (   ) orange　④ (   ) cat
+
+【解答】① an　② a　③ an　④ a
+【解説】母音（a・i・u・e・o）で始まる語には an、子音で始まる語には a をつける。apple・orange は母音で始まるので an。
+
+【問題2】次のローマ字（ヘボン式）を日本語（ひらがな）に直しなさい。
+① Fujisan　② Tokyo　③ shashin
+
+【解答】① ふじさん　② とうきょう　③ しゃしん
+【解説】ヘボン式では し＝shi、ふ＝fu、しゃ＝sha。読みにくいときは子音＋母音に区切って考える（sha-shin）。
+
+【問題3】次の文をただしく書き直しなさい。（大文字・スペース・符号に注意）
+iamtom
+
+【解答】I am Tom.
+【解説】①文の最初 I は大文字　②単語の間はスペース　③人の名前 Tom は大文字　④文の終わりにピリオド。
+
+【問題4】次の語を短縮形に直しなさい。
+① I am　② is not　③ do not
+
+【解答】① I'm　② isn't　③ don't
+【解説】アポストロフィ「'」は消した文字の場所に入れる。
+
+★ まとめ
+■ 大文字を使う場所：文頭・名前・地名・曜日/月・I
+■ フォニックス：文字は「名前」と「音」の2つの読み方がある
+■ ローマ字：学校は訓令式、実生活はヘボン式（shi/chi/tsu/fu…）
+■ 書き方：単語の間はスペース、文末に符号、I はいつも大文字`,
+      },
+      {
+        heading: '★ MAXレベル：発音記号と特殊なつづり',
+        body: `■ 発音記号（辞書に書いてある記号）
+辞書で単語を引くと [ ] の中に発音記号が書いてある。読めると正しい発音がわかる。
+・[i:] 長い「イー」：see [si:] ／ eat [i:t]
+・[i] 短い「イ」：sit [sit] ／ big [big]
+・[æ] 口を大きく開けた「ア」：cat [kæt] ／ apple [æpl]
+・[ə] あいまいな「ア」（シュワー）：about [əbáut] ／ banana [bənǽnə]
+・[θ] 舌を歯で軽くはさむ「ス」：think ／ [ð] 濁った「ズ」：this
+★ ポイント：[ˈ] や [´] はアクセント（強く読む場所）を表す。英語はアクセントの位置がとても大切。
+
+■ サイレントレター（読まないつづり）
+英語には「書くのに読まない文字」がある。丸ごと覚える。
+・k を読まない：know（ノウ）／ knife（ナイフ）／ knee（ニー）
+・b を読まない：comb（コウム・くし）／ climb（クライム・登る）
+・w を読まない：write（ライト・書く）／ wrong（ロング・まちがい）
+・h を読まない：hour（アワー・時間）／ honest（オネスト・正直な）
+・gh を読まない：night（ナイト）／ light（ライト）／ high（ハイ）
+
+■ 同じつづりでも読み方が変わる例
+・ea →「イー」（eat, sea, tea）だが「エ」（bread パン, head 頭）のこともある
+・ou →「アウ」（house, out）だが「ウー」（you, group）のことも
+・oo →「ウー」（moon, food）だが短い「ウ」（book, good）のことも
+⚠ 注意：英語のつづりと発音は例外が多い。フォニックスは「基本の読み方」であって、100%ではない。よく出る例外は個別に覚える。
+
+■ アクセントの位置で意味・品詞が変わる語（上級）
+同じつづりでも、強く読む場所で品詞が変わる単語がある。
+・présent（名詞・形容詞「贈り物・現在の」）／ presént（動詞「贈る・発表する」）
+・récord（名詞「記録」）／ recórd（動詞「記録する」）
+・óbject（名詞「物・目的」）／ objéct（動詞「反対する」）
+★ 高校英語や難関中学の発音問題で問われる。「名詞は前、動詞は後ろにアクセント」というパターンが多い。`,
+        maxOnly: true,
+      },
+    ],
+  },
+  {
+    id: 'eigo_08_be_ippan_doushi',
+    subject: 'eigo',
+    title: 'be動詞と一般動詞の基礎',
+    description: '英文づくりの土台！2種類の動詞と肯定・否定・疑問を完全マスター',
+    order: 8,
+    sections: [
+      {
+        heading: '1. be動詞（am / is / are）の使い方',
+        body: `英語の動詞には大きく2種類ある。「be動詞」と「一般動詞」だ。まずは be動詞から学ぼう。
+
+■ be動詞とは
+be動詞は「〜です・〜にいる／ある」という意味を表す動詞。主語（〜は）によって形が変わる。
+
+■ be動詞の使い分け（現在形）
+| 主語 | be動詞 | 例文 |
+|------|--------|------|
+| I（私は） | am | I am a student.（私は生徒です） |
+| you（あなたは） | are | You are kind.（あなたは親切です） |
+| he / she / it（彼・彼女・それは） | is | He is my friend.（彼は私の友達です） |
+| we / you / they（私たち・あなたたち・彼らは） | are | They are teachers.（彼らは先生です） |
+
+★ 覚え方：「I は am」「he/she/it は is」「you と複数は are」。
+
+■ be動詞の2つの意味
+①「〜です・〜だ」（主語＝あとの語）
+　例）I am Tom.（私はトムです）→ I ＝ Tom
+　例）This is a book.（これは本です）→ This ＝ a book
+②「〜にいる・〜にある」（場所を表す）
+　例）I am in the classroom.（私は教室にいます）
+　例）Your bag is on the desk.（あなたのかばんは机の上にあります）
+
+■ 短縮形（話し言葉でよく使う）
+I am → I'm ／ You are → You're ／ He is → He's
+She is → She's ／ It is → It's ／ We are → We're ／ They are → They're
+例）I'm from Osaka.（私は大阪出身です）
+
+⚠ 注意：be動詞の文には一般動詞（play・like など）を入れない。
+× I am play tennis.（×）
+○ I play tennis.（一般動詞の文）
+○ I am a tennis player.（be動詞の文）`,
+      },
+      {
+        heading: '2. 一般動詞の使い方と三人称単数のs',
+        body: `一般動詞は「動作や状態」を表す動詞。be動詞（am/is/are）以外の動詞はすべて一般動詞だ。
+
+■ 一般動詞の例
+play（〜をする）／ like（〜が好き）／ have（持っている）／ go（行く）
+study（勉強する）／ run（走る）／ eat（食べる）／ read（読む）／ live（住む）
+
+■ 一般動詞の肯定文（ふつうの文）
+主語 ＋ 一般動詞 ＋ 〜
+例）I play soccer.（私はサッカーをする）
+例）You like music.（あなたは音楽が好きだ）
+例）We study English.（私たちは英語を勉強する）
+
+■ 三人称単数のs（重要ルール）
+主語が he / she / it や1人の人・1つのもの（三人称単数）のとき、一般動詞の最後に s または es をつける。
+例）I play tennis. → He plays tennis.
+例）They like dogs. → She likes dogs.
+
+■ 三人称単数とは
+・一人称：I（私）／ we（私たち）
+・二人称：you（あなた・あなたたち）
+・三人称：それ以外すべて（he, she, it, Tom, my mother, the cat, this book など）
+★ ポイント：「私」でも「あなた」でもない、1人・1つの何かが三人称単数。
+
+■ s / es のつけ方
+・ふつうは s：play → plays ／ like → likes ／ run → runs
+・s, o, x, ch, sh で終わる語は es：go → goes ／ watch → watches ／ wash → washes
+・「子音＋y」で終わる語は y を i に変えて es：study → studies ／ cry → cries
+・特別な形：have → has
+
+例）My father goes to work by train.（父は電車で仕事に行く）
+例）She studies math every day.（彼女は毎日数学を勉強する）
+例）Tom has a dog.（トムは犬を飼っている）
+
+⚠ 注意：主語が複数（they, we, my parents など）のときは s をつけない。
+× They likes soccer.（×）
+○ They like soccer.（○）`,
+      },
+      {
+        heading: '3. 否定文の作り方（〜でない・〜しない）',
+        body: `「〜ではない」「〜しない」という否定文の作り方は、be動詞と一般動詞でまったく違う。ここを区別するのが最重要。
+
+■ be動詞の否定文：be動詞のあとに not を置く
+形：主語 ＋ am / is / are ＋ not ＋ 〜
+例）I am not a teacher.（私は先生ではありません）
+例）She is not busy.（彼女は忙しくありません）
+例）They are not students.（彼らは生徒ではありません）
+★ 短縮形：is not → isn't ／ are not → aren't（am not に短縮形はない）
+例）He isn't at home. ／ We aren't ready.
+
+■ 一般動詞の否定文：動詞の前に do not / does not を置く
+形：主語 ＋ do not（does not）＋ 動詞の原形 ＋ 〜
+・主語が I / you / we / they → do not（don't）
+・主語が he / she / it（三人称単数）→ does not（doesn't）
+例）I do not like natto.（私は納豆が好きではない）
+例）She does not play the piano.（彼女はピアノを弾かない）
+
+■ 最重要ポイント：does not のあとの動詞は原形に戻す
+三人称単数でも、does not を使うときは動詞の s を取って原形にする。
+× She does not likes tennis.（×）
+○ She does not like tennis.（○ likes → like）
+★ 理由：s の意味は does がすでに引き受けているので、動詞は原形でよい。
+
+■ 短縮形
+do not → don't ／ does not → doesn't
+例）I don't have a smartphone.（私はスマホを持っていない）
+例）My brother doesn't eat vegetables.（弟は野菜を食べない）
+
+⚠ まちがえやすいポイント
+・be動詞の文なのに do を使う → ×
+　× I don't be busy. → ○ I'm not busy.
+・一般動詞の文なのに not だけ → ×
+　× I not like it. → ○ I don't like it.`,
+      },
+      {
+        heading: '4. 疑問文の作り方と答え方',
+        body: `「〜ですか？」「〜しますか？」とたずねる疑問文も、be動詞と一般動詞で作り方が違う。
+
+■ be動詞の疑問文：be動詞を文の先頭に出す
+形：Am / Is / Are ＋ 主語 ＋ 〜 ?
+例）You are a student. → Are you a student?（あなたは生徒ですか）
+例）He is your brother. → Is he your brother?（彼はあなたの兄ですか）
+
+答え方（Yes / No で答える）
+・Yes, 主語 ＋ be動詞. ／ No, 主語 ＋ be動詞 ＋ not.
+例）Are you a student? → Yes, I am. ／ No, I am not.（No, I'm not.）
+例）Is he busy? → Yes, he is. ／ No, he isn't.
+★ ポイント：答えの主語は代名詞にする（Tom → he、your mother → she）。
+
+■ 一般動詞の疑問文：Do / Does を文の先頭に置く
+形：Do（Does）＋ 主語 ＋ 動詞の原形 ＋ 〜 ?
+・主語が I / you / we / they → Do
+・主語が he / she / it（三人称単数）→ Does
+例）You play tennis. → Do you play tennis?（テニスをしますか）
+例）She likes music. → Does she like music?（音楽が好きですか）
+
+■ 最重要ポイント：Does の疑問文でも動詞は原形
+× Does she likes music?（×）
+○ Does she like music?（○ likes → like）
+★ 否定文の does not と同じで、s は does が引き受ける。
+
+答え方
+・Yes, 主語 ＋ do / does. ／ No, 主語 ＋ don't / doesn't.
+例）Do you like dogs? → Yes, I do. ／ No, I don't.
+例）Does he play soccer? → Yes, he does. ／ No, he doesn't.
+
+⚠ まちがえやすいポイント
+・答えるときの動詞を間違える
+　Are you 〜? → Yes, I am.（be動詞で答える）
+　Do you 〜? → Yes, I do.（do で答える）
+　この2つを混同しないこと！`,
+      },
+      {
+        heading: '5. be動詞と一般動詞の使い分け・練習問題',
+        body: `be動詞と一般動詞を正しく区別できるかが、英文法の第一関門。問題で確認しよう。
+
+■ 使い分けのまとめ表
+|  | be動詞（am/is/are） | 一般動詞（play/like等） |
+|--|------|------|
+| 意味 | 〜です・いる/ある | 動作・状態 |
+| 否定文 | be動詞＋not | do/does not＋原形 |
+| 疑問文 | be動詞を前へ | Do/Doesを前へ＋原形 |
+| 答え | Yes, I am. | Yes, I do. |
+
+【問題1】（　）に am / is / are のどれかを入れなさい。
+① I (   ) a soccer fan.　② She (   ) very kind.　③ They (   ) my classmates.
+
+【解答】① am　② is　③ are
+【解説】I → am、she（三人称単数）→ is、they（複数）→ are。
+
+【問題2】次の文を否定文にしなさい。
+① He plays the guitar.　② I am hungry.
+
+【解答】① He does not play the guitar.（doesn't play）　② I am not hungry.（I'm not hungry.）
+【解説】①一般動詞の文 → does not ＋ 原形（plays → play）。②be動詞の文 → be動詞のあとに not。
+
+【問題3】次の文を疑問文にして、Yes で答えなさい。
+① You like English.　② Ms. Tanaka is a teacher.
+
+【解答】① Do you like English? — Yes, I do.　② Is Ms. Tanaka a teacher? — Yes, she is.
+【解説】①一般動詞 → Do を前に。答えは do。②be動詞 → is を前に。答えは be動詞。Ms. Tanaka は she で受ける。
+
+【問題4】まちがいを直しなさい。
+Does your sister likes music?
+
+【解答】Does your sister like music?
+【解説】Does の疑問文では動詞を原形にする（likes → like）。
+
+★ 入試・テスト対策ポイント
+■ まず「be動詞の文か一般動詞の文か」を見分ける
+■ 否定文・疑問文は種類ごとにルールが違う
+■ does / doesn't のあとの動詞は必ず原形
+■ 答えの動詞は質問に合わせる（Are→am、Do→do）`,
+      },
+      {
+        heading: '★ MAXレベル：三単現のsと状態動詞・命令文への発展',
+        body: `■ 三人称単数のs（三単現）を落とさないための総整理
+三単現の s は「主語が三人称・単数・現在形」の3つがそろったときだけつく。1つでも欠けたらつかない。
+・過去形にはつかない：He played tennis.（s ではなく ed）
+・does / doesn't のあとはつかない：He doesn't play.（原形）
+・助動詞（can など）のあとはつかない：He can play.（原形）
+★ ポイント：「三・単・現」の3拍子がそろったときだけ s、と唱えて確認する。
+
+■ 動作動詞と状態動詞（進行形にできない動詞）
+一般動詞には「動作」を表すものと「状態・気持ち」を表すものがある。
+・動作動詞：play, run, eat, study（進行形 -ing にできる）
+・状態動詞：like, love, know, have（持つ）, want, need（原則、進行形にしない）
+× I am liking this song.（×）
+○ I like this song.（○）
+⚠ 注意：have は「持っている」のときは状態動詞（進行形不可）だが、「食べる・過ごす」の意味なら動作動詞になり進行形にできる。
+　例）I am having lunch.（昼食を食べているところだ）○
+
+■ There is / There are（〜がある・いる）の構文
+be動詞を使った特別な形。「（場所に）〜がある／いる」を表す。
+・単数のもの → There is ＋ 単数名詞
+　例）There is a book on the desk.（机の上に本がある）
+・複数のもの → There are ＋ 複数名詞
+　例）There are three cats in the garden.（庭に3匹の猫がいる）
+・否定：There is not（isn't）／ 疑問：Is there 〜?
+　例）Is there a station near here? — Yes, there is.
+⚠ 注意：the my your など「特定のもの」は There is 構文で使わない。
+　× There is my bag on the desk. → ○ My bag is on the desk.
+
+■ 命令文への発展（主語 you を省いた形）
+一般動詞の文から主語 you を取り、動詞の原形で始めると命令文になる。
+・You open the window. → Open the window.（窓を開けなさい）
+・be動詞の命令文は Be で始める：Be quiet.（静かにしなさい）／ Be kind.（親切にしなさい）
+★ ポイント：命令文は動詞の原形で始まる、という点で「Do/Does の疑問文」「否定文の原形」とルールがつながっている。原形の感覚をここで完成させよう。`,
+        maxOnly: true,
+      },
+    ],
+  },
+  {
+    id: 'eigo_09_gimonshi',
+    subject: 'eigo',
+    title: '疑問詞（what/who/where/when/how など）で質問する',
+    description: '5W1Hを使いこなす！具体的にたずねる疑問文の作り方',
+    order: 9,
+    sections: [
+      {
+        heading: '1. 疑問詞とは・what と who',
+        body: `「はい・いいえ」で答えられない、具体的な内容をたずねる質問には「疑問詞」を使う。日本語の「なに・だれ・どこ・いつ・どうやって」にあたる言葉だ。
+
+■ おもな疑問詞（5W1H）
+・what（なに）／ who（だれ）／ where（どこ）
+・when（いつ）／ why（なぜ）／ how（どうやって・どのくらい）
+・which（どちら・どれ）／ whose（だれの）
+
+■ 疑問詞を使った疑問文の基本の形
+疑問詞 ＋ ふつうの疑問文（do/does/is/are… ＋ 主語 ＋ 〜）?
+★ ポイント：疑問詞は「文のいちばん最初」に置く。そのあとは Yes/No 疑問文と同じ語順。
+
+■ what（なに）の使い方
+・単独で「何」：What is this?（これは何ですか）— It is a pen.
+・一般動詞と：What do you want?（何がほしいですか）— I want a new bag.
+・「何の〜」と名詞をつける：What sport do you like?（何のスポーツが好きですか）
+　例）What time is it?（何時ですか）／ What color do you like?（何色が好きですか）
+
+■ who（だれ）の使い方
+・who が主語のとき（だれが〜する）→ 疑問詞のあとにすぐ動詞。三単現の s をつける。
+　例）Who plays the piano?（だれがピアノを弾きますか）— Tom does.
+・who が主語でないとき → ふつうの疑問文の語順
+　例）Who is that girl?（あの女の子はだれですか）— She is my sister.
+　例）Who do you like?（だれが好きですか）
+
+⚠ 注意：疑問詞の疑問文には Yes / No で答えない。たずねられた「中身」を答える。
+　× Where do you live? — Yes, I do.（×）
+　○ Where do you live? — I live in Osaka.（○）`,
+      },
+      {
+        heading: '2. where（どこ）と when（いつ）',
+        body: `場所をたずねる where、時をたずねる when は日常会話でも入試でも超頻出。
+
+■ where（どこ・どこで・どこに）
+形：Where ＋ do/does/is/are ＋ 主語 ＋ 〜 ?
+例）Where do you live?（どこに住んでいますか）— I live in Tokyo.
+例）Where is my pen?（私のペンはどこですか）— It is on the desk.
+例）Where does she study?（彼女はどこで勉強しますか）— She studies in her room.
+★ 答え方：場所を表す語（in 〜, on 〜, at 〜, here, there）で答える。
+
+■ 場所を表す前置詞とセットで覚える
+・in（〜の中に）：in the box ／ in Osaka
+・on（〜の上に）：on the table
+・under（〜の下に）：under the chair
+・near（〜の近くに）：near the station
+・by（〜のそばに）：by the window
+
+■ when（いつ）
+形：When ＋ do/does/is/are ＋ 主語 ＋ 〜 ?
+例）When do you play tennis?（いつテニスをしますか）— On Sundays.
+例）When is your birthday?（誕生日はいつですか）— It is May 5th.
+例）When does the movie start?（映画はいつ始まりますか）— At seven.
+★ 答え方：時を表す語（on Monday, in summer, at seven, tomorrow など）で答える。
+
+■ 時を表す前置詞の使い分け（重要）
+・at ＋ 時刻：at seven（7時に）／ at noon（正午に）
+・on ＋ 曜日・日付：on Sunday ／ on May 5th
+・in ＋ 月・季節・年：in April ／ in summer ／ in 2026
+⚠ 注意：「時刻＝at」「曜日/日＝on」「月/季節/年＝in」の3段階で覚える。範囲が広いほど in、せまい一点ほど at。`,
+      },
+      {
+        heading: '3. how の使い方（数・量・年齢・程度）',
+        body: `how は「どうやって（方法）」だけでなく、「how ＋ 形容詞／副詞」でいろいろな程度をたずねる、とても便利な疑問詞。
+
+■ how 単独（方法・状態・様子）
+・方法「どうやって」：How do you go to school?（どうやって学校へ行きますか）— By bus.
+・状態「どんな具合」：How are you?（元気ですか）— I'm fine, thank you.
+・感想「どうですか」：How is the weather?（天気はどうですか）— It's sunny.
+
+■ how many（いくつ／何人）＋ 数えられる名詞の複数形
+例）How many books do you have?（本を何冊持っていますか）— I have ten (books).
+例）How many students are there in your class?（クラスに何人生徒がいますか）— Thirty.
+★ ポイント：how many のあとの名詞は必ず複数形（books, students）。
+
+■ how much（いくら／どれくらい）
+①値段をたずねる：How much is this bag?（このかばんはいくらですか）— It's 2,000 yen.
+②数えられない量：How much water do you need?（水はどれくらい必要ですか）
+★ ポイント：数えられる → how many、数えられない（水・お金など）→ how much。
+
+■ how old（何歳・築何年）
+例）How old are you?（何歳ですか）— I'm twelve (years old).
+例）How old is this temple?（この寺は築何年ですか）
+
+■ how long / how tall / how far など
+・how long（どのくらい長い・長さ／期間）：How long is this river?
+・how tall（どのくらい高い・身長）：How tall are you? — I'm 150 cm.
+・how far（どのくらい遠い・距離）：How far is it from here to the station?
+・how often（どのくらいの頻度で）：How often do you play tennis? — Twice a week.
+★ 覚え方：「how ＋ 形容詞」で「どのくらい〜？」とたずねる、が共通ルール。`,
+      },
+      {
+        heading: '4. why・which・whose と答え方',
+        body: `残りの疑問詞 why（なぜ）・which（どちら）・whose（だれの）を覚えれば、疑問詞はすべてそろう。
+
+■ why（なぜ）と答え方
+形：Why ＋ do/does/is/are ＋ 主語 ＋ 〜 ?
+例）Why do you like English?（なぜ英語が好きですか）
+答え方は2通り：
+①Because ＋ 主語 ＋ 動詞（〜だから）
+　例）Because it is fun.（楽しいからです）
+②To ＋ 動詞の原形（〜するためです）
+　例）Why do you study hard? — To be a doctor.（医者になるためです）
+★ ポイント：why の答えは Because または To 〜 で始めるのが基本。
+
+■ which（どちら・どれ）
+2つ以上の中から選ぶときに使う。
+・Which is your bag, this one or that one?（あなたのかばんはどちら、これそれともあれ）
+・Which ＋ 名詞：Which season do you like?（どの季節が好きですか）
+★ ポイント：「A それとも B」と選択肢があるときは、what より which を使う。
+
+■ whose（だれの）
+持ち主をたずねる。「whose ＋ 名詞」または whose 単独。
+例）Whose pen is this?（これはだれのペンですか）— It's mine.（私のです）
+例）Whose is this bike?（この自転車はだれのですか）— It's Tom's.
+★ 答え方：mine（私の）／ yours（あなたの）／ Tom's（トムの）など所有を表す語。
+
+■ 疑問詞のまとめ表
+| 疑問詞 | 意味 | 答えの例 |
+|--------|------|----------|
+| what | なに | It's a pen. |
+| who | だれ | She is my sister. |
+| where | どこ | In Osaka. |
+| when | いつ | On Sunday. |
+| why | なぜ | Because it's fun. |
+| how | どうやって/どのくらい | By bus. / I'm fine. |
+| which | どちら | This one. |
+| whose | だれの | It's mine. |
+
+⚠ 注意：疑問詞疑問文には Yes/No で答えず、たずねられた内容を答える。これが最重要ルール。`,
+      },
+      {
+        heading: '5. 練習問題（疑問詞）',
+        body: `疑問詞を正しく使えるか、問題で確認しよう。
+
+【問題1】答えの文に合うように、（　）に適切な疑問詞を入れなさい。
+① (   ) do you live? — I live in Kyoto.
+② (   ) is your birthday? — It's April 10th.
+③ (   ) many pencils do you have? — I have five.
+
+【解答】① Where　② When　③ How
+【解説】①場所を答えている → Where　②日付を答えている → When　③数を答えている → How many の How。
+
+【問題2】次の日本語を英語にしなさい。
+「あなたはなぜ早く起きるのですか。」
+
+【解答例】Why do you get up early?
+【解説】疑問詞 Why ＋ 一般動詞の疑問文（do you get up）＋ early。答えるときは Because 〜 か To 〜。
+
+【問題3】下線部をたずねる疑問文を作りなさい。
+This is Tom's bag.（下線部：Tom's）
+
+【解答】Whose bag is this?
+【解説】「だれの」持ち物かをたずねる → Whose。whose bag のかたまりを文頭に置き、is this? を続ける。
+
+【問題4】（　）に which か what を入れなさい。
+(   ) do you like better, tea or coffee?
+
+【解答】Which
+【解説】「tea それとも coffee」と2つの選択肢から選ぶので which を使う。選択肢があるときは what ではなく which。
+
+★ 入試・テスト対策ポイント
+■ 疑問詞は文の最初に置き、あとは Yes/No 疑問文と同じ語順
+■ how ＋ 形容詞（many/much/old/long/tall/far/often）で程度をたずねる
+■ why の答えは Because 〜／To 〜
+■ 選択肢があるときは which
+■ 疑問詞疑問文に Yes/No で答えない`,
+      },
+      {
+        heading: '★ MAXレベル：間接疑問文・付加疑問・疑問詞＋to',
+        body: `■ 間接疑問文（疑問文が文の中に入る形）
+疑問文が別の文の一部になると、語順が「疑問詞 ＋ 主語 ＋ 動詞」（ふつうの文の語順）に変わる。do/does/did は使わない。
+・直接疑問：Where does she live?
+・間接疑問：I don't know where she lives.（彼女がどこに住んでいるか知らない）
+例）Do you know what time it is?（今何時か知っていますか）
+例）Tell me why you were late.（なぜ遅れたのか教えて）
+⚠ 注意：間接疑問文の中では
+　①疑問文の語順（倒置）にしない
+　②do/does/did を使わず、動詞に三単現の s や過去形をつける
+　× I don't know where does she live. → ○ I don't know where she lives.
+★ 入試で最も差がつく落とし穴。「文の中の疑問文はふつうの語順」と覚える。
+
+■ 付加疑問文（〜だよね？と念を押す）
+文の最後に「短い疑問」をつけて確認する。前が肯定なら後ろは否定、前が否定なら後ろは肯定にする。
+・You are a student, aren't you?（あなたは生徒だよね）
+・He plays tennis, doesn't he?（彼はテニスをするよね）
+・She doesn't like natto, does she?（彼女は納豆が好きじゃないよね）
+★ ポイント：前の文の動詞（be動詞／do・does／助動詞）を使い、肯定と否定を逆にして主語を代名詞にする。
+
+■ 疑問詞 ＋ to 不定詞（〜すべきか）
+疑問詞と to ＋ 動詞の原形を組み合わせると、便利な名詞のかたまりになる。
+・what to do（何をすべきか）：I don't know what to do.（何をすべきかわからない）
+・how to 〜（〜のしかた）：Please tell me how to use this.（使い方を教えて）
+・where to go（どこへ行くべきか）：We decided where to go.（どこへ行くか決めた）
+・when to start（いつ始めるべきか）
+例）Do you know how to get to the station?（駅への行き方を知っていますか）
+★ ポイント：「how to swim（泳ぎ方）」のように、疑問詞＋to＋原形で「〜する方法・〜すべきか」を表す。会話・作文で非常に役立つ。
+
+■ How come 〜?（なぜ〜なの？）
+why のくだけた言い方。ただし語順がふつうの文（主語＋動詞）になる点に注意。
+例）How come you are so happy?（どうしてそんなに嬉しいの）
+⚠ why なら Why are you so happy? と倒置するが、How come のあとは倒置しない。`,
+        maxOnly: true,
+      },
+    ],
+  },
+  {
+    id: 'eigo_10_can_meirei',
+    subject: 'eigo',
+    title: 'can・命令文・助動詞の基礎',
+    description: '「できる」「〜しなさい」「〜しよう」を表す表現をマスター',
+    order: 10,
+    sections: [
+      {
+        heading: '1. can の使い方（能力・可能）',
+        body: `can は「〜できる」という意味を表す言葉。動詞を助ける働きをするので「助動詞（じょどうし）」と呼ばれる。
+
+■ can の基本の形
+主語 ＋ can ＋ 動詞の原形 ＋ 〜
+例）I can swim.（私は泳げる）
+例）She can speak English.（彼女は英語が話せる）
+例）Birds can fly.（鳥は飛べる）
+★ 最重要ポイント：can のあとの動詞は、主語が he/she でも必ず「原形」。三単現の s をつけない。
+× She can speaks English.（×）
+○ She can speak English.（○）
+
+■ なぜ原形になるのか
+can などの助動詞は「動詞を助ける」役目。時制や人称の情報は助動詞がもつので、あとの動詞は変化しない原形のまま。これは will・must・should など他の助動詞にも共通するルール。
+
+■ can の否定文（〜できない）
+can のあとに not をつける。can not は1語で cannot、短縮形は can't。
+例）I cannot（can't）ride a bike.（私は自転車に乗れない）
+例）He can't cook.（彼は料理ができない）
+
+■ can の疑問文（〜できますか）
+can を文の最初に出す。
+形：Can ＋ 主語 ＋ 動詞の原形 〜 ?
+例）Can you play the guitar?（ギターを弾けますか）
+答え方：Yes, 主語 ＋ can. ／ No, 主語 ＋ can't.
+例）Can you swim? — Yes, I can. ／ No, I can't.
+
+■ be able to（can とほぼ同じ意味）
+can は「be able to（〜することができる）」で言いかえられる。
+例）I can swim. = I am able to swim.
+★ ポイント：未来（will）や完了形など、can が使えない場面では be able to を使う。
+例）I will be able to swim soon.（もうすぐ泳げるようになる）※will can とは言えない`,
+      },
+      {
+        heading: '2. can のいろいろな意味（許可・依頼）',
+        body: `can は「能力（〜できる）」以外にも、会話でよく使う意味がある。場面ごとに覚えよう。
+
+■ 許可「〜してもよい」（Can I 〜?）
+自分がしてよいか相手にたずねる。
+例）Can I open the window?（窓を開けてもいいですか）
+例）Can I use your pen?（あなたのペンを使ってもいいですか）
+答え方：Sure. / Of course. / OK.（いいですよ）／ Sorry, you can't.（だめです）
+
+■ 依頼「〜してくれますか」（Can you 〜?）
+相手に何かをたのむ。
+例）Can you help me?（手伝ってくれますか）
+例）Can you pass me the salt?（塩を取ってくれますか）
+答え方：Sure. / OK. / All right.（いいですよ）／ Sorry, I can't.（ごめん、できません）
+
+■ よりていねいな言い方（Could you / May I）
+・Could you 〜?：Can you より丁寧な依頼「〜していただけますか」
+　例）Could you tell me the way to the station?（駅への道を教えていただけますか）
+・May I 〜?：Can I より丁寧な許可「〜してもよろしいですか」
+　例）May I come in?（入ってもよろしいですか）
+★ ポイント：Could / May は目上の人やお店などでの丁寧な表現。中身は can とほぼ同じ。
+
+■ 「〜できた」（過去の could）
+can の過去形は could。「〜できた」を表す。
+例）I could swim when I was five.（5歳のとき泳げた）
+否定：couldn't（〜できなかった）
+例）I couldn't sleep last night.（昨夜は眠れなかった）
+
+⚠ 注意：Can I / Can you の答えでは can で答えない。
+　Can you help me? — Sure.（○）／ Yes, I can.（能力を答える感じで少し不自然）
+　依頼・許可には Sure. / Of course. / Sorry. などで応じるのが自然。`,
+      },
+      {
+        heading: '3. 命令文（〜しなさい・〜してください）',
+        body: `「〜しなさい」「〜してください」と相手に指示・お願いする文を命令文という。作り方はとてもシンプル。
+
+■ 命令文の基本：主語 you を省き、動詞の原形で始める
+・You open the door. → Open the door.（ドアを開けなさい）
+・You are quiet. → Be quiet.（静かにしなさい）
+★ ポイント：ふつうの文の主語 You を取るだけ。be動詞の命令文は Be で始める。
+
+■ ていねいにする please
+文の最初か最後に please をつけると「〜してください」と丁寧になる。
+例）Please sit down. ／ Sit down, please.（すわってください）
+★ 文末につけるときは前にコンマ「,」を入れる。
+
+■ 否定の命令文「〜してはいけない」（Don't 〜）
+動詞の原形の前に Don't（Do not）を置く。
+例）Don't run here.（ここで走ってはいけません）
+例）Don't be late.（遅れてはいけません）※be動詞でも Don't be
+例）Don't worry.（心配しないで）
+
+■ Let's 〜（〜しよう）：さそいかけの文
+Let's（Let us の短縮）＋ 動詞の原形 で「（いっしょに）〜しよう」と提案する。
+例）Let's play soccer.（サッカーをしよう）
+例）Let's go to the library.（図書館へ行こう）
+答え方：Yes, let's.（そうしよう）／ Sounds good.（いいね）／ Sorry, I can't.（ごめん、無理）
+
+■ 命令文 ＋ and / or（重要構文）
+・命令文, and 〜：「〜しなさい、そうすれば…」
+　例）Get up early, and you can catch the train.（早く起きなさい、そうすれば電車に乗れる）
+・命令文, or 〜：「〜しなさい、さもないと…」
+　例）Hurry up, or you will be late.（急ぎなさい、さもないと遅れるよ）
+★ ポイント：and は「そうすれば（良い結果）」、or は「さもないと（悪い結果）」。入試頻出。
+
+⚠ 注意：命令文には主語がない。動詞は必ず原形で始める。三単現の s も過去形もつけない。`,
+      },
+      {
+        heading: '4. その他の助動詞（will / must / should / may）',
+        body: `can 以外にも、動詞に意味を加える助動詞がある。どれも「助動詞 ＋ 動詞の原形」の形は共通。
+
+■ will（〜するつもりだ・〜だろう）：未来を表す
+例）I will study hard.（一生懸命勉強するつもりだ）
+例）It will rain tomorrow.（明日は雨が降るだろう）
+否定：will not（won't）
+例）I won't give up.（あきらめない）
+疑問：Will you 〜?（〜してくれますか／〜するつもりですか）
+例）Will you help me? — Sure.
+
+■ must（〜しなければならない・〜にちがいない）
+①義務「〜しなければならない」
+　例）You must do your homework.（宿題をしなければならない）
+②推量「〜にちがいない」
+　例）He must be tired.（彼は疲れているにちがいない）
+否定 must not（mustn't）は「〜してはいけない」（強い禁止）
+　例）You must not run here.（ここで走ってはいけない）
+
+■ have to（〜しなければならない）：must とほぼ同じ意味
+・主語が三人称単数のときは has to
+　例）She has to go now.（彼女はもう行かなければならない）
+・否定 don't have to は「〜しなくてよい」（不必要）※must not と意味が違う！
+　例）You don't have to hurry.（急がなくてよい）
+⚠ 注意：must not「〜してはいけない（禁止）」と don't have to「〜しなくてよい（不要）」は正反対。入試頻出の区別。
+
+■ should（〜すべきだ・〜したほうがよい）
+例）You should see a doctor.（医者に行ったほうがよい）
+例）We should protect nature.（自然を守るべきだ）
+
+■ may（〜してもよい・〜かもしれない）
+①許可「〜してもよい」：You may go home.（帰ってもよい）
+②推量「〜かもしれない」：It may rain.（雨が降るかもしれない）
+
+★ 助動詞の共通ルールまとめ
+①助動詞のあとの動詞は必ず原形（三単現の s なし）
+②助動詞は2つ並べられない（× will can → ○ will be able to）
+③否定は助動詞 ＋ not、疑問は助動詞を前に出す`,
+      },
+      {
+        heading: '5. 練習問題（can・命令文・助動詞）',
+        body: `助動詞と命令文の理解を問題で確認しよう。
+
+【問題1】（　）内から正しいものを選びなさい。
+She can ( plays / play / played ) the violin.
+
+【解答】play
+【解説】助動詞 can のあとの動詞は必ず原形。主語が she でも plays にしない。
+
+【問題2】次の文を否定文にしなさい。
+① You can enter this room.　② Run in the classroom.（命令文）
+
+【解答】① You cannot（can't）enter this room.　② Don't run in the classroom.
+【解説】①can の否定は cannot／can't。②命令文の否定は Don't ＋ 原形。
+
+【問題3】次の日本語を英語にしなさい。
+「急ぎなさい、さもないとバスに乗り遅れますよ。」
+
+【解答例】Hurry up, or you will miss the bus.
+【解説】「命令文, or 〜」で「〜しなさい、さもないと…」。and（そうすれば）と or（さもないと）を混同しないこと。
+
+【問題4】意味の違いに注意して日本語にしなさい。
+① You must not swim here.　② You don't have to swim here.
+
+【解答】① ここで泳いではいけない。（禁止）　② ここで泳ぐ必要はない。（不要）
+【解説】must not は強い禁止、don't have to は「しなくてよい」。正反対の意味なので要注意。
+
+★ 入試・テスト対策ポイント
+■ 助動詞（can/will/must/should/may）のあとは必ず動詞の原形
+■ 命令文は原形で始める。否定は Don't、勧誘は Let's
+■ 「命令文, and」＝そうすれば／「命令文, or」＝さもないと
+■ must not（禁止）と don't have to（不要）は正反対
+■ can = be able to、must = have to で言いかえられる`,
+      },
+      {
+        heading: '★ MAXレベル：助動詞の書きかえと過去・未来での表現',
+        body: `■ 助動詞は時制で言いかえが必要（原則2語並べられない）
+助動詞どうしは並べられないため、未来や完了では「be able to / have to」を使う。
+・can → 未来：will be able to（〜できるようになる）
+　例）I will be able to drive a car next year.
+・must → 未来：will have to（〜しなければならないだろう）
+　例）You will have to wait.（待たなければならないだろう）
+・must → 過去：had to（〜しなければならなかった）
+　例）I had to walk home yesterday.（昨日は歩いて帰らなければならなかった）
+⚠ 注意：must には過去形がないので、過去は had to を使う。
+
+■ 助動詞を使ったていねいな依頼・申し出の使い分け
+・Will you 〜? … 依頼（〜してくれる？）ややカジュアル
+・Would you 〜? … Will you より丁寧
+・Can you 〜? … 依頼（〜できる？）
+・Could you 〜? … Can you より丁寧
+・Shall I 〜? … 申し出（〜しましょうか）
+　例）Shall I carry your bag?（かばんを持ちましょうか）— Yes, please.
+・Shall we 〜? … 勧誘（いっしょに〜しましょうか）＝ Let's 〜
+　例）Shall we dance?（踊りましょうか）
+
+■ had better（〜したほうがよい／しないと困る）
+should より強い忠告。「そうしないとまずい」というニュアンス。
+例）You had better see a doctor.（医者に行ったほうがいい）
+否定：had better not（〜しないほうがよい）
+例）You had better not eat too much.（食べすぎないほうがいい）
+⚠ 注意：had better のあとも動詞は原形。not の位置は had better の直後（had better not）。
+
+■ 助動詞 ＋ have ＋ 過去分詞（過去への推量・後悔）※発展
+・must have 過去分詞：〜したにちがいない
+　例）He must have missed the train.（電車に乗り遅れたにちがいない）
+・should have 過去分詞：〜すべきだったのに（後悔）
+　例）I should have studied harder.（もっと勉強すべきだった）
+・may / might have 過去分詞：〜したかもしれない
+　例）She may have forgotten it.（忘れたのかもしれない）
+★ ポイント：これらは「今から見て過去のこと」を推量・後悔する上級表現。難関校・高校英語で頻出。
+
+■ Let's 〜 の付加疑問と応答
+・Let's go, shall we?（行きましょうよ、ね？）… Let's の付加疑問は shall we?
+・命令文の付加疑問は will you?：Open the door, will you?（ドアを開けてくれる？）
+これらは「疑問詞・付加疑問」と「命令・勧誘」の知識を組み合わせた総合問題として出やすい。`,
+        maxOnly: true,
+      },
+    ],
+  },
+  {
+    id: 'eigo_11_aisatsu_kaiwa',
+    subject: 'eigo',
+    title: 'あいさつ・自己紹介・数・曜日・時間の会話表現',
+    description: '英語で話す第一歩！日常の決まり文句と数・時・曜日を身につける',
+    order: 11,
+    sections: [
+      {
+        heading: '1. あいさつと別れの表現',
+        body: `英語のコミュニケーションはあいさつから始まる。場面や時間帯に合ったあいさつを覚えよう。
+
+■ 時間帯によるあいさつ
+・Good morning.（おはよう）… 朝
+・Good afternoon.（こんにちは）… 昼
+・Good evening.（こんばんは）… 夜
+・Hello. / Hi.（やあ・こんにちは）… いつでも使える
+★ ポイント：Good night.（おやすみ）は「別れ・寝るとき」に使う。夜のあいさつ（会ったとき）は Good evening。
+
+■ 調子をたずねる・答える
+・How are you?（元気ですか）
+　答え：I'm fine, thank you. And you?（元気です、ありがとう。あなたは？）
+　　　　Pretty good. / Not bad. / So-so.（まあまあ）
+・How are you doing? / How's it going?（調子どう？）… くだけた言い方
+
+■ はじめて会ったときのあいさつ
+・Nice to meet you.（はじめまして）
+　答え：Nice to meet you, too.（こちらこそ）
+★ ポイント：2回目以降は Nice to see you.（また会えてうれしい）を使う。meet は「初対面」、see は「再会」。
+
+■ 別れのあいさつ
+・Goodbye. / Bye.（さようなら）
+・See you. / See you later.（またね）／ See you tomorrow.（また明日）
+・Take care.（気をつけてね）
+・Have a nice day.（よい一日を）
+　答え：You too.（あなたもね）
+
+■ お礼・あやまり・返事
+・Thank you (very much). / Thanks.（ありがとう）→ You're welcome.（どういたしまして）
+・I'm sorry. / Excuse me.（ごめんなさい／すみません）→ That's OK. / No problem.（大丈夫）
+⚠ 注意：Excuse me. は「呼びかけ・軽い失礼」（すみません＝話しかけるとき）、I'm sorry. は「あやまる」（ごめんなさい）。場面で使い分ける。`,
+      },
+      {
+        heading: '2. 自己紹介の表現',
+        body: `自己紹介は名前・出身・好きなもの・できることなどを英語で言えるようにしよう。スピーキングテストでも定番。
+
+■ 名前を言う
+・My name is Tom. / I'm Tom.（私の名前はトムです）
+・Please call me Ken.（ケンと呼んでください）
+・たずねる：What's your name?（お名前は）— My name is 〜.
+
+■ 出身・住んでいる場所
+・I'm from Osaka.（大阪出身です）
+・I live in Tokyo.（東京に住んでいます）
+・たずねる：Where are you from? — I'm from Japan.
+
+■ 年齢・学年
+・I'm twelve (years old).（12歳です）
+・I'm a sixth grader. / I'm in the sixth grade.（6年生です）
+・たずねる：How old are you? — I'm twelve.
+
+■ 好きなもの・得意なこと
+・I like soccer. / My favorite sport is soccer.（サッカーが好きです）
+・I'm good at math.（数学が得意です）
+・I can play the piano.（ピアノが弾けます）
+・たずねる：What subject do you like? — I like English.
+
+■ 家族やペット
+・I have a brother and a sister.（兄と妹がいます）
+・I have a dog. Its name is Pochi.（犬を飼っています。名前はポチです）
+
+■ 自己紹介の例（つなげてみよう）
+Hello. My name is Yuki. I'm from Kyoto. I'm eleven years old. I like reading books, and I'm good at English. I have a cat. Nice to meet you.
+★ ポイント：「あいさつ→名前→出身→年齢→好きなこと→ペット→しめのあいさつ」の順で並べると自然な自己紹介になる。`,
+      },
+      {
+        heading: '3. 数の言い方（基数・序数）',
+        body: `数は日付・時間・値段・電話番号などあらゆる場面で使う。基数（ふつうの数）と序数（順番）をセットで覚えよう。
+
+■ 基数（ものの数を表す数）1〜20
+one, two, three, four, five, six, seven, eight, nine, ten,
+eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty
+⚠ 注意：13〜19は「-teen」、つづりに注意（thirteen, fifteen, eighteen は特別な形）。
+
+■ 何十・大きな数
+・twenty(20), thirty(30), forty(40 ※uなし), fifty(50), sixty(60), seventy(70), eighty(80), ninety(90)
+・21以上はハイフンでつなぐ：21 → twenty-one ／ 35 → thirty-five
+・100 → one hundred ／ 1,000 → one thousand ／ 10,000 → ten thousand
+例）235 → two hundred (and) thirty-five
+★ ポイント：hundred・thousand は複数でも s をつけない（two hundred、× two hundreds）。
+
+■ 序数（順番・〜番目を表す数）
+first(1st), second(2nd), third(3rd), fourth(4th), fifth(5th),
+sixth(6th), seventh(7th), eighth(8th), ninth(9th ※eなし), tenth(10th),
+eleventh, twelfth(12th), … twentieth(20th), twenty-first(21st)
+★ ポイント：1st, 2nd, 3rd は特別な形。それ以外は基本「-th」。5番目 fifth、9番目 ninth、12番目 twelfth はつづりに注意。
+
+■ 序数を使う場面
+・日付：May 5th（5月5日）／ the third of April（4月3日）
+・順番：the first floor（1階）／ the second question（2問目）
+・「〜回目」：the first time（初めて）
+
+■ 電話番号・年号の読み方
+・電話番号は数字を1つずつ読む：090-1234-5678 → zero nine zero, one two three four, …
+・年号は2けたずつ：1999 → nineteen ninety-nine ／ 2026 → twenty twenty-six
+⚠ 注意：0 は「オー」または「ゼロ」と読む。`,
+      },
+      {
+        heading: '4. 曜日・月・日付の言い方',
+        body: `曜日・月・日付は会話でも入試でも頻出。つづりと大文字ルールに注意して覚えよう。
+
+■ 曜日（Days of the week）※最初は大文字
+Sunday（日）, Monday（月）, Tuesday（火）, Wednesday（水）,
+Thursday（木）, Friday（金）, Saturday（土）
+⚠ 注意：Wednesday（d を読まない）、Tuesday・Thursday のつづりに注意。
+・「〜曜日に」は on を使う：on Monday（月曜日に）／ on Sundays（毎週日曜に）
+・たずねる：What day is it today? — It's Friday.（今日は何曜日？— 金曜日）
+
+■ 月（Months）※最初は大文字
+January（1月）, February（2月）, March（3月）, April（4月）,
+May（5月）, June（6月）, July（7月）, August（8月）,
+September（9月）, October（10月）, November（11月）, December（12月）
+・「〜月に」は in を使う：in April（4月に）／ in December
+⚠ 注意：February のつづり（r が2つ）、August の発音（オーガスト）に注意。
+
+■ 日付の言い方
+・月 ＋ 序数：May 5th（5月5日）／ July 20th
+・読むときは序数（fifth, twentieth）で読む：May fifth
+・「〜日に」は on：on May 5th
+・たずねる：What's the date today? — It's June 10th.（今日は何日？— 6月10日）
+
+■ 日付を書く順番（アメリカ式とイギリス式）
+・アメリカ式：月→日→年　例）April 3, 2026 ／ 4/3/2026
+・イギリス式：日→月→年　例）3 April 2026 ／ 3/4/2026
+★ ポイント：4/3 がアメリカでは4月3日、イギリスでは3月4日を指す。入試ではアメリカ式が基本。
+
+■ 季節（Seasons）
+spring（春）, summer（夏）, fall / autumn（秋）, winter（冬）
+・「〜（季節）に」は in：in summer（夏に）
+例）I like winter because I can ski.（スキーができるので冬が好きだ）`,
+      },
+      {
+        heading: '5. 時間の言い方と練習問題',
+        body: `時刻のたずね方・答え方を覚えれば、日常会話とリスニングでぐっと有利になる。
+
+■ 時刻のたずね方
+・What time is it (now)?（今何時ですか）
+・Do you have the time?（今何時ですか）※ていねいな言い方
+・What time do you 〜?（何時に〜しますか）
+　例）What time do you get up? — At six.（6時に起きます）
+
+■ 時刻の答え方
+①「時＋分」をそのまま並べる（かんたん）
+　7:15 → It's seven fifteen. ／ 8:30 → It's eight thirty.
+②past（過ぎ）と to（前）を使う言い方
+　・7:15 → It's fifteen past seven.（7時15分過ぎ）
+　・7:45 → It's fifteen to eight.（8時15分前）
+　・7:30 → It's half past seven.（7時半）
+　・7:00ちょうど → It's seven o'clock.
+★ ポイント：past は「〜分過ぎ」、to は「〜分前（次の時刻まで）」。half は30分、quarter は15分。
+
+■ 午前・午後
+・a.m.（午前）／ p.m.（午後）
+　例）It's 9 a.m.（午前9時）／ It's 3 p.m.（午後3時）
+・in the morning（午前中に）／ in the afternoon（午後に）／ in the evening（夕方に）／ at night（夜に）
+・at noon（正午に）／ at midnight（真夜中に）
+
+【問題1】次の時刻を英語で言いなさい（2通り）。
+6:30
+
+【解答】It's six thirty. ／ It's half past six.
+【解説】そのまま読む言い方と past を使う言い方の両方ができるとよい。30分は half。
+
+【問題2】（　）に at / on / in のどれかを入れなさい。
+① I get up (   ) seven.　② My birthday is (   ) May.　③ We have no school (   ) Sunday.
+
+【解答】① at　② in　③ on
+【解説】時刻は at、月は in、曜日は on。「点＝at、範囲が広い＝in、曜日/日付＝on」で覚える。
+
+【問題3】次の日本語を英語にしなさい。
+「今日は何曜日ですか。」
+
+【解答】What day is it today?
+【解説】曜日をたずねる決まった言い方。日付をたずねるなら What's the date today?。
+
+★ まとめ
+■ あいさつは時間帯・初対面/再会で使い分ける
+■ 自己紹介は「名前→出身→年齢→好き→ペット」の順
+■ 序数の 1st/2nd/3rd/5th/9th/12th は特別な形
+■ 時の前置詞：時刻 at ／ 曜日・日付 on ／ 月・季節・年 in
+■ 時刻は「そのまま読む」と「past / to」の2通り`,
+      },
+      {
+        heading: '★ MAXレベル：場面別の会話表現とていねいさ',
+        body: `■ 買い物での会話（店員と客）
+・店員：May I help you?（いらっしゃいませ／お手伝いしましょうか）
+・客：I'm just looking, thank you.（見ているだけです）／ I'm looking for a T-shirt.（Tシャツを探しています）
+・値段：How much is it? — It's 1,500 yen.
+・試着：Can I try it on?（試着してもいいですか）
+・決める：I'll take it.（これをください）／ Here you are.（はいどうぞ）
+★ ポイント：May I help you? は店・道案内など「手伝いの申し出」の決まり文句。
+
+■ 電話での会話
+・Hello, this is Tom.（もしもし、トムです）※電話では I am ではなく this is を使う
+・May I speak to Ken?（ケンをお願いできますか）
+・Speaking.（私です）※本人が出たとき
+・Hold on, please. / Just a moment, please.（少々お待ちください）
+・Can I take a message?（伝言をうかがいましょうか）／ Can I leave a message?（伝言をお願いできますか）
+⚠ 注意：電話では自分を this is 〜、相手を you ではなく you のままだが、名乗りは this is。I am Tom とは言わない。
+
+■ レストラン・食事での会話
+・注文をとる：Are you ready to order?（ご注文はお決まりですか）
+・注文する：I'd like a hamburger, please.（ハンバーガーをお願いします）※I'd like = I would like（ていねいな I want）
+・すすめる：Would you like some more?（もう少しいかがですか）— Yes, please. / No, thank you.
+・会計：Check, please. / Can I have the bill?（お会計をお願いします）
+★ ポイント：I'd like 〜／Would you like 〜? は want より丁寧。接客・おもてなしの定番表現。
+
+■ 道案内の会話
+・たずねる：Excuse me. How can I get to the station?（駅へはどう行けばいいですか）
+・答える：Go straight and turn right at the second corner. It's on your left.
+・距離・時間：It's about five minutes' walk.（歩いて5分くらいです）
+・お礼：Thank you. — You're welcome.
+
+■ ていねいさの段階（同じ内容でも表現で印象が変わる）
+| カジュアル | ふつう | ていねい |
+|----|----|----|
+| Open the window. | Can you open the window? | Could you open the window? |
+| I want water. | I'd like water. | I'd like some water, please. |
+| What? | Pardon? | I beg your pardon? |
+★ 入試のリスニング・会話問題では、場面（店・電話・食事・道案内）と、ていねいさのレベルを聞き分ける力が問われる。決まり文句をかたまりで覚えておくと即得点につながる。`,
+        maxOnly: true,
+      },
+    ],
+  },
 ];
