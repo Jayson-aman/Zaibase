@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -14,6 +14,7 @@ import Animated, {
   useSharedValue,
   withSpring,
 } from 'react-native-reanimated';
+import Svg, { Path as SvgPath, G as SvgG } from 'react-native-svg';
 import {
   geographyRegions,
   industrialZoneSummary,
@@ -23,7 +24,10 @@ import {
 import { GeoLayerId } from '../constants/proAccess';
 
 const MAP_W = Math.min(Dimensions.get('window').width - 48, 440);
-const MAP_H = MAP_W * 0.72;
+const MAP_H = MAP_W * 1.15;
+// SVGパスのviewBox（data/geographyRegions.ts のsvgPath座標系と一致させる）
+const VIEWBOX_W = 300;
+const VIEWBOX_H = 420;
 
 const LAYERS: { key: GeoLayerId; label: string; emoji: string }[] = [
   { key: 'terrain', label: '地形', emoji: '🏔' },
@@ -129,14 +133,45 @@ export default function GeographyExplorer(_props: Props) {
         <View style={styles.mapShadow} />
         <Animated.View style={[styles.mapContainer, mapAnimatedStyle]}>
           <View style={[styles.mapBase, { width: MAP_W, height: MAP_H }]}>
-            {geographyRegions.map((region) => (
-              <RegionBlock
-                key={region.id}
-                region={region}
-                selected={selectedId === region.id}
-                onPress={() => selectRegion(region)}
-              />
-            ))}
+            <Svg width={MAP_W} height={MAP_H} viewBox={`0 0 ${VIEWBOX_W} ${VIEWBOX_H}`}>
+              {geographyRegions.map((region) => {
+                const isSel = selectedId === region.id;
+                return (
+                  <SvgG key={region.id} onPress={() => selectRegion(region)}>
+                    <SvgPath
+                      d={region.svgPath ?? ''}
+                      fill={region.color}
+                      stroke={isSel ? '#FFFFFF' : 'rgba(255,255,255,0.65)'}
+                      strokeWidth={isSel ? 3 : 1.4}
+                      opacity={isSel ? 1 : 0.92}
+                    />
+                  </SvgG>
+                );
+              })}
+            </Svg>
+            {/* 地域ラベル（絵文字＋名前）をSVGの上に絶対配置 */}
+            {geographyRegions.map((region) => {
+              if (region.labelX == null || region.labelY == null) return null;
+              const isSel = selectedId === region.id;
+              return (
+                <Pressable
+                  key={`label_${region.id}`}
+                  onPress={() => selectRegion(region)}
+                  style={[
+                    styles.mapLabel,
+                    {
+                      left: (region.labelX / VIEWBOX_W) * MAP_W - 30,
+                      top: (region.labelY / VIEWBOX_H) * MAP_H - 16,
+                    },
+                  ]}
+                >
+                  <Text style={styles.mapLabelEmoji}>{region.emoji}</Text>
+                  <Text style={[styles.mapLabelText, isSel && styles.mapLabelTextSel]} numberOfLines={1}>
+                    {region.name.replace(/（.*）/, '')}
+                  </Text>
+                </Pressable>
+              );
+            })}
           </View>
         </Animated.View>
       </View>
@@ -177,50 +212,6 @@ export default function GeographyExplorer(_props: Props) {
         )}
       </Modal>
     </View>
-  );
-}
-
-function RegionBlock({
-  region,
-  selected,
-  onPress,
-}: {
-  region: GeoRegion;
-  selected: boolean;
-  onPress: () => void;
-}) {
-  const scale = useSharedValue(1);
-
-  useEffect(() => {
-    scale.value = withSpring(selected ? 1.08 : 1, { damping: 12 });
-  }, [selected, scale]);
-
-  const blockStyle = useAnimatedStyle(() => ({
-    transform: [{ scale: scale.value }],
-    zIndex: selected ? 10 : 1,
-  }));
-
-  return (
-    <Animated.View
-      style={[
-        styles.regionBlock,
-        blockStyle,
-        {
-          left: `${region.mapX}%`,
-          top: `${region.mapY}%`,
-          width: `${region.mapW}%`,
-          height: `${region.mapH}%`,
-          backgroundColor: region.color,
-          borderColor: selected ? '#FFFFFF' : 'rgba(255,255,255,0.5)',
-          borderWidth: selected ? 3 : 1.5,
-        },
-      ]}
-    >
-      <Pressable style={styles.regionPress} onPress={onPress}>
-        <Text style={styles.regionEmoji}>{region.emoji}</Text>
-        <Text style={styles.regionName} numberOfLines={1}>{region.name}</Text>
-      </Pressable>
-    </Animated.View>
   );
 }
 
@@ -404,6 +395,26 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 4,
     elevation: 4,
+  },
+  mapLabel: {
+    position: 'absolute',
+    width: 60,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  mapLabelEmoji: { fontSize: 15, textAlign: 'center' },
+  mapLabelText: {
+    fontSize: 10,
+    fontWeight: '800',
+    color: '#FFFFFF',
+    textAlign: 'center',
+    textShadowColor: 'rgba(0,0,0,0.55)',
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 2,
+  },
+  mapLabelTextSel: {
+    fontSize: 11,
+    textShadowColor: 'rgba(0,0,0,0.8)',
   },
   tapHint: {
     backgroundColor: '#EEF4FF',

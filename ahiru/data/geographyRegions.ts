@@ -34,6 +34,11 @@ export type GeoRegion = {
   mapY: number;
   mapW: number;
   mapH: number;
+  /** 日本地図SVGパス（viewBox 0 0 300 420 座標系。実際の地形に近い形状） */
+  svgPath?: string;
+  /** ラベル（地域名）を表示する位置（viewBox座標） */
+  labelX?: number;
+  labelY?: number;
   terrain: string;
   climate: string;
   features: string[];
@@ -54,6 +59,8 @@ export const geographyRegions: GeoRegion[] = [
     emoji: '🐮',
     color: '#5B8DEF',
     mapX: 78, mapY: 4, mapW: 22, mapH: 24,
+    svgPath: 'M 218 26 C 236 14 258 20 264 40 C 268 56 258 68 244 72 L 226 90 L 220 72 C 208 68 200 54 204 40 C 208 30 210 30 218 26 Z',
+    labelX: 236, labelY: 48,
     terrain: '平野・台地・山岳。日本最大の面積。',
     climate: '夏は涼しく、冬は雪が多い。',
     features: ['広大な農地', 'ダイヤモンドダスト', '雪まつり'],
@@ -104,6 +111,8 @@ export const geographyRegions: GeoRegion[] = [
     emoji: '🍎',
     color: '#27AE60',
     mapX: 72, mapY: 28, mapW: 18, mapH: 22,
+    svgPath: 'M 214 100 L 236 104 L 240 130 L 234 158 L 226 178 L 212 178 L 202 154 L 200 124 L 205 106 Z',
+    labelX: 220, labelY: 138,
     terrain: '奥羽山脈をはさむ太平洋側・日本海側の平野。',
     climate: '夏は涼しい。冬は豪雪。',
     features: ['米どころ', 'りんご', '三陸海岸（リアス）'],
@@ -156,6 +165,8 @@ export const geographyRegions: GeoRegion[] = [
     emoji: '🗼',
     color: '#E74C3C',
     mapX: 72, mapY: 50, mapW: 16, mapH: 18,
+    svgPath: 'M 212 178 L 226 178 L 248 186 L 256 206 L 246 222 L 224 224 L 212 206 L 208 188 Z',
+    labelX: 230, labelY: 202,
     terrain: '関東平野（日本最大）。房総半島。',
     climate: '夏暑く冬乾燥。内陸と沿岸で差大。',
     features: ['首都圏', '埋め立て', '東京湾'],
@@ -217,6 +228,8 @@ export const geographyRegions: GeoRegion[] = [
     emoji: '🏭',
     color: '#F39C12',
     mapX: 48, mapY: 52, mapW: 18, mapH: 16,
+    svgPath: 'M 168 158 L 200 154 L 212 178 L 208 188 L 212 206 L 196 220 L 172 220 L 158 200 L 154 176 Z',
+    labelX: 184, labelY: 190,
     terrain: '日本アルプス・富士山・伊勢湾・濃尾平野。',
     climate: '太平洋側。伊吹おろしで冬晴れ。',
     features: ['中京工業地帯', 'トヨタ', '陶磁器'],
@@ -272,6 +285,8 @@ export const geographyRegions: GeoRegion[] = [
     emoji: '🏯',
     color: '#9B59B6',
     mapX: 38, mapY: 58, mapW: 14, mapH: 14,
+    svgPath: 'M 138 192 L 160 188 L 174 202 L 176 220 L 168 232 L 160 254 L 150 240 L 142 226 L 132 210 Z',
+    labelX: 154, labelY: 214,
     terrain: '大阪平野・奈良盆地・琵琶湖（日本最大の湖）・紀伊山地。',
     climate: '大阪・兵庫南部：瀬戸内式気候（温暖・少雨）。奈良盆地：内陸性で寒暖差大。和歌山・三重：黒潮の影響で温暖多雨。北部（兵庫北・京都北・滋賀北）：日本海側で積雪多し。',
     features: ['阪神工業地帯', '京都・奈良の古都・世界遺産', '神戸港（国際貿易港）', '琵琶湖（近畿の水がめ）'],
@@ -330,6 +345,8 @@ export const geographyRegions: GeoRegion[] = [
     emoji: '⛩️',
     color: '#1ABC9C',
     mapX: 22, mapY: 56, mapW: 14, mapH: 12,
+    svgPath: 'M 66 198 L 104 194 L 138 192 L 132 210 L 122 222 L 90 224 L 62 218 L 56 206 Z',
+    labelX: 96, labelY: 209,
     terrain: '中国山地。瀬戸内側と日本海側。',
     climate: '瀬戸内温暖。日本海側は雪。',
     features: ['瀬戸大橋', '出雲', '原爆ドーム'],
@@ -372,6 +389,8 @@ export const geographyRegions: GeoRegion[] = [
     emoji: '🌉',
     color: '#3498DB',
     mapX: 30, mapY: 72, mapW: 12, mapH: 10,
+    svgPath: 'M 92 236 L 128 232 L 146 242 L 140 256 L 110 262 L 88 254 Z',
+    labelX: 116, labelY: 248,
     terrain: '四国山地。吉野川。',
     climate: '太平洋側温暖多雨。',
     features: ['四国遍路', '鳴門の渦潮', '讃岐うどん'],
@@ -415,6 +434,8 @@ export const geographyRegions: GeoRegion[] = [
     emoji: '🌋',
     color: '#E67E22',
     mapX: 8, mapY: 68, mapW: 18, mapH: 22,
+    svgPath: 'M 44 216 L 74 212 L 88 230 L 84 256 L 72 282 L 54 294 L 40 278 L 34 250 L 36 228 Z M 26 350 L 40 348 L 42 362 L 30 368 L 22 358 Z',
+    labelX: 58, labelY: 250,
     terrain: '火山（阿蘇・桜島）。平野は限られる。',
     climate: '温暖。梅雨前線の影響大。',
     features: ['北九州工業', 'シリコンアイランド', '温泉'],
