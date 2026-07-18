@@ -19,6 +19,8 @@ import { getHistoryThemeLabel } from '../data/images';
 import { getSubjectThemeLabel } from '../data/subjectImages';
 import { getFigure } from '../data/figures';
 import FigureView from './FigureView';
+import { getQuestionVideo } from '../data/videos';
+import VideoPlayer from './VideoPlayer';
 
 type Props = {
   question: Question;
@@ -48,6 +50,8 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
     ?? getSubjectThemeLabel(question.subject, themeText);
   // ベクター図形（座標グラフ・図形・立体・化学式など）。あれば図で表示。
   const figure = getFigure(question.id);
+  // 解説動画（レジストリ or 問題データの videoUrl）。あれば解答側で再生。
+  const video = getQuestionVideo(question.id, question.videoUrl);
 
   function handlePress() {
     if (choices != null || revealed) return;
@@ -214,6 +218,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
           <Text style={styles.answerLabel}>答 え</Text>
           <Text style={styles.answerText}>{question.answer}</Text>
           {figure != null && <FigureView figure={figure} animated />}
+          {video != null && <VideoPlayer url={video.url} title={video.title} />}
           {(question.explanation != null || question.hint != null) && (
             <View style={styles.hintBox}>
               <Text style={styles.hintLabel}>📖 解説</Text>

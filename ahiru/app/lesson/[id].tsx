@@ -10,6 +10,8 @@ import {
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { getLessonById } from '../../data/lessons';
 import LessonRenderer from '../../components/LessonRenderer';
+import VideoPlayer from '../../components/VideoPlayer';
+import { getLessonVideo } from '../../data/videos';
 import HomeButton from '../../components/HomeButton';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
@@ -41,6 +43,7 @@ export default function LessonDetailScreen() {
 
   const info = subjectInfo[lesson.subject];
   const hasMaxContent = lesson.sections.some((s) => s.maxOnly);
+  const lessonVideo = getLessonVideo(lesson.id);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -80,6 +83,9 @@ export default function LessonDetailScreen() {
                   ⭐ この単元にはMAX限定の深堀り解説があります
                 </Text>
               </View>
+            )}
+            {lessonVideo != null && (
+              <VideoPlayer url={lessonVideo.url} title={lessonVideo.title ?? '動画解説'} />
             )}
             <LessonRenderer sections={lesson.sections} isMax={isMax} />
           </>
