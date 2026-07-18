@@ -6,6 +6,7 @@ import Head from 'expo-router/head';
 import { StatusBar } from 'expo-status-bar';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { initRevenueCat } from '../services/subscription';
+import { subscribeAuth } from '../services/auth';
 import ErrorBoundary from '../components/ErrorBoundary';
 import ConsentModal from '../components/ConsentModal';
 
@@ -17,10 +18,17 @@ export default function RootLayout() {
 
   useEffect(() => {
     initRevenueCat();
+    // 起動時に既存ログインを復元し、RevenueCatを同一ユーザーに紐付け直す
+    // （全端末で加入状態を共有＝二重課金防止）。
+    let unsubAuth: (() => void) | undefined;
+    subscribeAuth(() => {})
+      .then((fn) => { unsubAuth = fn; })
+      .catch(() => {});
     AsyncStorage.getItem(CONSENT_KEY).then((v) => {
       if (v !== '1') setShowConsent(true);
       setConsentChecked(true);
     });
+    return () => { if (unsubAuth) unsubAuth(); };
   }, []);
 
   async function handleConsent() {

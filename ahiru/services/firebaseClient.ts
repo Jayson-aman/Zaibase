@@ -25,7 +25,7 @@ function getFirebaseApp(): FirebaseApp {
 }
 
 let authPromise: Promise<Auth> | null = null;
-async function getFirebaseAuth(): Promise<Auth> {
+export async function getFirebaseAuth(): Promise<Auth> {
   if (!authPromise) {
     authPromise = (async () => {
       const app = getFirebaseApp();

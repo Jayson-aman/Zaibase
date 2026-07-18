@@ -19,6 +19,7 @@ import {
   restorePurchases,
 } from '../services/subscription';
 import { PRO_FEATURES, MAX_FEATURES } from '../constants/proAccess';
+import { useAuthUser } from '../hooks/useAuthUser';
 
 interface Props {
   visible: boolean;
@@ -31,6 +32,12 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
   const [maxProd, setMaxProd] = useState<unknown>(null);
   const [loadingOff, setLoadingOff] = useState(true);
   const [purchasing, setPurchasing] = useState(false);
+  const { isLoggedIn } = useAuthUser();
+
+  function goLogin() {
+    onClose();
+    router.push('/login');
+  }
 
   useEffect(() => {
     if (!visible) return;
@@ -45,6 +52,12 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
   }, [visible]);
 
   async function handlePurchase(product: unknown) {
+    // ご購入は必ずアカウントに紐付ける（機種変更・複数端末で引き継ぎ、
+    // iOS↔Webの二重課金を防止）。未ログインならまずログイン画面へ。
+    if (!isLoggedIn) {
+      goLogin();
+      return;
+    }
     setPurchasing(true);
     try {
       await purchaseProduct(product);
@@ -92,6 +105,15 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
           <Text style={styles.crown}>👑</Text>
           <Text style={styles.title}>プレミアムプラン</Text>
           <Text style={styles.subtitle}>聞き流し学習でさらに力をつける</Text>
+
+          {!isLoggedIn && (
+            <TouchableOpacity style={styles.loginBanner} onPress={goLogin} activeOpacity={0.85}>
+              <Text style={styles.loginBannerText}>
+                🔑 ご購入の前にログイン（無料）{'\n'}
+                <Text style={styles.loginBannerSub}>スマホ・iPad・パソコンで引き継げます。二重課金にはなりません。</Text>
+              </Text>
+            </TouchableOpacity>
+          )}
 
           {loadingOff ? (
             <ActivityIndicator color="#fff" size="large" style={styles.spinner} />
@@ -276,9 +298,21 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 20,
     color: 'rgba(255,255,255,0.7)',
-    marginBottom: 32,
+    marginBottom: 24,
     textAlign: 'center',
   },
+  loginBanner: {
+    width: '100%',
+    backgroundColor: 'rgba(14,165,233,0.18)',
+    borderColor: 'rgba(56,189,248,0.5)',
+    borderWidth: 1,
+    borderRadius: 14,
+    paddingVertical: 14,
+    paddingHorizontal: 16,
+    marginBottom: 24,
+  },
+  loginBannerText: { color: '#E0F2FE', fontSize: 15, fontWeight: '700', textAlign: 'center', lineHeight: 22 },
+  loginBannerSub: { color: 'rgba(224,242,254,0.85)', fontSize: 12, fontWeight: '400' },
   card: {
     width: '100%',
     borderRadius: 24,

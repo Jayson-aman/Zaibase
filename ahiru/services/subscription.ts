@@ -45,6 +45,67 @@ async function getWebPurchases() {
   return Purchases.configure({ apiKey: RC_KEY_WEB, appUserId });
 }
 
+// ログインしたユーザー（Firebase UID）をRevenueCatに紐付ける。
+// 全デバイス・全プラットフォームで同一 appUserId になるため、加入状態が
+// 共有され、iOSで加入した人がWebで二重に課金される事故を防げる。
+export async function identifyUser(uid: string): Promise<void> {
+  if (!isRevenueCatConfigured() || !uid) return;
+  try {
+    if (isWeb) {
+      try {
+        window.localStorage.setItem(WEB_APP_USER_ID_KEY, uid);
+      } catch {
+        // 保存不可でも続行
+      }
+      const { Purchases } = await import('@revenuecat/purchases-js');
+      if (Purchases.isConfigured()) {
+        const inst = Purchases.getSharedInstance() as unknown as {
+          changeUser?: (id: string) => Promise<unknown>;
+        };
+        if (typeof inst.changeUser === 'function') {
+          await inst.changeUser(uid);
+          return;
+        }
+      }
+      Purchases.configure({ apiKey: RC_KEY_WEB, appUserId: uid });
+    } else {
+      const Purchases = (await import('react-native-purchases')).default;
+      await Purchases.logIn(uid);
+    }
+  } catch {
+    // 紐付け失敗は致命的ではない（購入自体は可能）
+  }
+}
+
+// ログアウト時：RevenueCatを匿名ユーザーへ戻す。
+export async function logoutUser(): Promise<void> {
+  if (!isRevenueCatConfigured()) return;
+  try {
+    if (isWeb) {
+      try {
+        window.localStorage.removeItem(WEB_APP_USER_ID_KEY);
+      } catch {
+        // ignore
+      }
+      const { Purchases } = await import('@revenuecat/purchases-js');
+      const anon = Purchases.generateRevenueCatAnonymousAppUserId();
+      if (Purchases.isConfigured()) {
+        const inst = Purchases.getSharedInstance() as unknown as {
+          changeUser?: (id: string) => Promise<unknown>;
+        };
+        if (typeof inst.changeUser === 'function') {
+          await inst.changeUser(anon);
+        }
+      }
+    } else {
+      const Purchases = (await import('react-native-purchases')).default;
+      await Purchases.logOut();
+    }
+  } catch {
+    // ignore
+  }
+}
+
 export function initRevenueCat(): void {
   if (!isRevenueCatConfigured()) return;
   if (isWeb) {
