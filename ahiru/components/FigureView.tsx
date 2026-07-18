@@ -1,12 +1,11 @@
-import React, { useEffect, useId, useMemo, useRef, useState, useCallback } from 'react';
-import { View, Text, StyleSheet, Dimensions, Platform, TouchableOpacity } from 'react-native';
+import React, { useId, useMemo } from 'react';
+import { View, Text, StyleSheet, Dimensions, Platform } from 'react-native';
 import Svg, {
   Line,
   Circle as SvgCircle,
   Path,
   Polygon as SvgPolygon,
   Polyline,
-  G,
   Text as SvgText,
   Ellipse,
   Rect,
@@ -848,10 +847,6 @@ function StratumFig({ fig }: { fig: StratumFigure }) {
 
 // ---------- 公開コンポーネント ----------
 
-function easeOut(t: number): number {
-  return 1 - Math.pow(1 - t, 3);
-}
-
 function buildParts(figure: Figure, uid: string): React.ReactNode[] {
   switch (figure.kind) {
     case 'coordinate': return CoordinateFig({ fig: figure, uid });
@@ -871,86 +866,32 @@ function buildParts(figure: Figure, uid: string): React.ReactNode[] {
   }
 }
 
-// animated=true（主に解説側）で、図の要素が描かれた順に段階的に立ち上がる
-// 「動く解説」アニメーションを再生する（軸→グラフ→点、図形→補助線→印…）。
-// タップで何度でも再生し直せる。
-export default function FigureView({ figure, animated = false }: { figure: Figure; animated?: boolean }) {
+// 図はシンプルな静止表示（アニメーションなし）。内容がひと目で分かることを優先。
+// animated プロップは後方互換のため受け取るが、表示は常に静止。
+export default function FigureView({ figure }: { figure: Figure; animated?: boolean }) {
   const { w, h } = useSize();
-  const isChem = figure.kind === 'chemEquation';
   const rawId = useId();
   const uid = rawId.replace(/[^a-zA-Z0-9]/g, '');
-
-  const [progress, setProgress] = useState(animated ? 0 : 1);
-  const rafRef = useRef<number | null>(null);
-
-  const play = useCallback(() => {
-    if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
-    const DUR = 1700;
-    let startTs: number | null = null;
-    const tick = (ts: number) => {
-      if (startTs == null) startTs = ts;
-      const t = Math.min(1, (ts - startTs) / DUR);
-      setProgress(easeOut(t));
-      if (t < 1) rafRef.current = requestAnimationFrame(tick);
-    };
-    setProgress(0);
-    rafRef.current = requestAnimationFrame(tick);
-  }, []);
-
-  useEffect(() => {
-    if (animated) play();
-    return () => {
-      if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
-    };
-  }, [animated, play]);
-
   const parts = useMemo(() => buildParts(figure, uid), [figure, uid]);
 
-  // 化学反応式はSVGではないのでフェードインで演出
-  if (isChem) {
+  if (figure.kind === 'chemEquation') {
     return (
       <View style={styles.wrap}>
-        <TouchableOpacity
-          activeOpacity={animated ? 0.7 : 1}
-          onPress={animated ? play : undefined}
-          style={[styles.canvas, styles.chemCanvas, { opacity: animated ? Math.max(0.15, progress) : 1 }]}
-        >
+        <View style={[styles.canvas, styles.chemCanvas]}>
           <ChemEquationFig fig={figure as ChemEqFigure} />
-        </TouchableOpacity>
-        {animated && <Text style={styles.replayHint}>▶ タップで再生</Text>}
+        </View>
         {figure.caption != null && <Text style={styles.caption}>{figure.caption}</Text>}
       </View>
     );
   }
 
-  // 段階表示：要素iは progress が i/N を超えると WINDOW 幅でフェードインする
-  const N = Math.max(parts.length, 1);
-  const WINDOW = Math.max(3, Math.round(N * 0.18));
-  const opacityOf = (i: number) => {
-    if (!animated) return 1;
-    const t = progress * (N + WINDOW) - i;
-    return Math.max(0, Math.min(1, t / WINDOW));
-  };
-
   return (
     <View style={styles.wrap}>
-      <TouchableOpacity
-        activeOpacity={animated ? 0.85 : 1}
-        onPress={animated ? play : undefined}
-        style={[styles.canvas, { width: w, height: h }]}
-      >
+      <View style={[styles.canvas, { width: w, height: h }]}>
         <Svg width="100%" height="100%" viewBox={`0 0 ${VBW} ${VBH}`}>
-          {parts.map((el, i) => (
-            <G key={`p${i}`} opacity={opacityOf(i)}>{el}</G>
-          ))}
+          {parts}
         </Svg>
-      </TouchableOpacity>
-      {animated && (
-        <View style={[styles.progressTrack, { width: w }]}>
-          <View style={[styles.progressFill, { width: Math.round(w * progress) }]} />
-        </View>
-      )}
-      {animated && <Text style={styles.replayHint}>▶ タップで再生（動く解説）</Text>}
+      </View>
       {figure.caption != null && <Text style={styles.caption}>{figure.caption}</Text>}
     </View>
   );
@@ -974,25 +915,6 @@ const styles = StyleSheet.create({
     marginTop: 6,
     textAlign: 'center',
     paddingHorizontal: 12,
-  },
-  replayHint: {
-    fontSize: 11,
-    color: '#0EA5E9',
-    marginTop: 4,
-    fontWeight: '600',
-  },
-  progressTrack: {
-    height: 3,
-    borderRadius: 2,
-    backgroundColor: '#E2E8F0',
-    marginTop: 8,
-    overflow: 'hidden',
-    alignSelf: 'center',
-  },
-  progressFill: {
-    height: 3,
-    borderRadius: 2,
-    backgroundColor: '#0EA5E9',
   },
   chemRow: {
     flexDirection: 'row',

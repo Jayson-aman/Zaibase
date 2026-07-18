@@ -16,9 +16,9 @@ const { width } = Dimensions.get('window');
 
 // ── Premium dark navy palette ──────────────────────────────
 const C = {
-  bg:          '#040C1C',   // メインダーク紺
-  bgAlt:       '#06111F',   // 少し明るいセクション用
-  bgCard:      '#091728',   // カード背景
+  bg:          '#0C1E38',   // メイン紺（少し明るめ）
+  bgAlt:       '#12294A',   // 明るいセクション用
+  bgCard:      '#1A3557',   // カード背景
   gold:        '#C8A84B',   // ゴールドアクセント
   goldLight:   '#E4C96D',   // 明るいゴールド
   goldDim:     'rgba(200,168,75,0.18)',
@@ -28,7 +28,7 @@ const C = {
   red:         '#D95050',
   white:       '#EDF4FF',   // 見出し白
   soft:        '#7FA8CC',   // 本文ソフト青
-  muted:       '#3E5870',   // 薄い文字
+  muted:       '#6E8CA8',   // 薄い文字（読みやすさUP）
   glass:       'rgba(255,255,255,0.045)',
   glassMid:    'rgba(255,255,255,0.07)',
   glassBorder: 'rgba(255,255,255,0.09)',
@@ -48,11 +48,11 @@ const glassBlur: any = Platform.OS === 'web'
   : {};
 
 const SUBJECTS = [
-  { name: '算数', emoji: '📐', desc: '計算・図形・文章題・速さ', color: '#4B8FE4' },
-  { name: '国語', emoji: '📖', desc: '読解・漢字・文学史・作文', color: '#E06060' },
-  { name: '理科', emoji: '🔬', desc: '実験・生物・物理・化学', color: '#3AB073' },
-  { name: '社会', emoji: '🗾', desc: '地理・歴史・公民・時事', color: '#C8A84B' },
-  { name: '英語', emoji: '🌍', desc: '文法・読解・会話・英作文', color: '#9B70D8' },
+  { key: 'sansu', name: '算数', emoji: '📐', desc: '計算・図形・文章題・速さ', color: '#4B8FE4' },
+  { key: 'kokugo', name: '国語', emoji: '📖', desc: '読解・漢字・文学史・作文', color: '#E06060' },
+  { key: 'rika', name: '理科', emoji: '🔬', desc: '実験・生物・物理・化学', color: '#3AB073' },
+  { key: 'shakai', name: '社会', emoji: '🗾', desc: '地理・歴史・公民・時事', color: '#C8A84B' },
+  { key: 'eigo', name: '英語', emoji: '🌍', desc: '文法・読解・会話・英作文', color: '#9B70D8' },
 ];
 
 const CURRICULUM = [
@@ -259,13 +259,19 @@ export default function LandingPage() {
           </Text>
           <View style={styles.subjectsGrid}>
             {SUBJECTS.map((s) => (
-              <View key={s.name} style={[styles.subjectCard, glassBlur]}>
+              <TouchableOpacity
+                key={s.name}
+                style={[styles.subjectCard, glassBlur]}
+                activeOpacity={0.85}
+                onPress={() => router.push(`/quiz/${s.key}` as any)}
+              >
                 <View style={[styles.subjectIconCircle, { backgroundColor: s.color + '22', borderColor: s.color + '55' }]}>
                   <Text style={styles.subjectEmoji}>{s.emoji}</Text>
                 </View>
                 <Text style={[styles.subjectName, { color: s.color }]}>{s.name}</Text>
                 <Text style={styles.subjectDesc}>{s.desc}</Text>
-              </View>
+                <Text style={styles.subjectGo}>タップで開始 →</Text>
+              </TouchableOpacity>
             ))}
           </View>
         </View>
@@ -331,7 +337,7 @@ export default function LandingPage() {
         </View>
 
         {/* ─── 合格者の声 ─────────────────────── */}
-        <View style={[styles.section, { backgroundColor: '#030810' }]}>
+        <View style={[styles.section, { backgroundColor: '#0A1A30' }]}>
           <SectionLabel label="合格者・保護者の声" goldMode />
           <Text style={[styles.sectionTitle, { color: C.white }]}>実績が語る</Text>
           {VOICES.map((v, i) => (
@@ -717,6 +723,7 @@ const styles = StyleSheet.create({
   subjectEmoji: { fontSize: 28 },
   subjectName: { fontSize: 20, fontWeight: '900', marginBottom: 6, textAlign: 'center' },
   subjectDesc: { fontSize: 13, color: C.muted, fontWeight: '400', lineHeight: 20, textAlign: 'center' },
+  subjectGo: { fontSize: 12, color: '#38BDF8', fontWeight: '700', marginTop: 8, textAlign: 'center' },
 
   // 特長
   featuresGrid: { gap: 16 },
