@@ -202,16 +202,14 @@ function CoordinateFig({ fig, uid }: { fig: CoordFigure; uid: string }) {
     if (p.label) els.push(<SvgText key={`ptl${i}`} x={px(p.x) + 5} y={py(p.y) - 5} fontSize={11} fill={INK} fontWeight="bold">{p.label}</SvgText>);
   });
 
-  return (
-    <>
-      <Defs>
-        <ClipPath id={clipId}>
-          <Rect x={area.x0} y={area.y0} width={area.w} height={area.h} />
-        </ClipPath>
-      </Defs>
-      {els}
-    </>
-  );
+  return [
+    <Defs key="defs">
+      <ClipPath id={clipId}>
+        <Rect x={area.x0} y={area.y0} width={area.w} height={area.h} />
+      </ClipPath>
+    </Defs>,
+    ...els,
+  ];
 }
 
 // ---------- 多角形（三角形・四角形の面積・合同・角度） ----------
@@ -369,7 +367,7 @@ function PolygonFig({ fig }: { fig: PolyFigure }) {
     els.push(<SvgText key={`vl${i}`} x={P[i].x + out.x * 13} y={P[i].y + out.y * 13 + 4} fontSize={12} fill={INK} fontWeight="bold" textAnchor="middle">{p.label}</SvgText>);
   });
 
-  return <>{els}</>;
+  return els;
 }
 
 function norm(v: { x: number; y: number }) {
@@ -419,7 +417,7 @@ function CircleFig({ fig }: { fig: CircleFigure }) {
     }
   });
 
-  return <>{els}</>;
+  return els;
 }
 
 // ---------- 立体 ----------
@@ -484,7 +482,7 @@ function SolidFig({ fig }: { fig: SolidFigure }) {
     }
   }
 
-  return <>{els}</>;
+  return els;
 }
 
 // ---------- 数直線 ----------
@@ -510,7 +508,7 @@ function NumberLineFig({ fig }: { fig: NumberLineFigure }) {
     els.push(<SvgCircle key={`p${i}`} cx={px(p.x)} cy={y} r={5} fill={p.open ? '#fff' : ACCENT} stroke={ACCENT} strokeWidth={2} />);
     if (p.label) els.push(<SvgText key={`pl${i}`} x={px(p.x)} y={y - 12} fontSize={11} fill={INK} textAnchor="middle" fontWeight="bold">{p.label}</SvgText>);
   });
-  return <>{els}</>;
+  return els;
 }
 
 // ---------- 箱ひげ図 ----------
@@ -541,7 +539,7 @@ function BoxplotFig({ fig }: { fig: BoxplotFigure }) {
   els.push(<Line key="med" x1={px(fig.median)} y1={y - 18} x2={px(fig.median)} y2={y + 18} stroke="#E11D48" strokeWidth={2} />);
   const lab = (v: number, t: string) => els.push(<SvgText key={`lb${t}`} x={px(v)} y={y - 24} fontSize={9} fill={AXIS} textAnchor="middle">{t}</SvgText>);
   lab(fig.min, '最小'); lab(fig.median, '中央'); lab(fig.max, '最大');
-  return <>{els}</>;
+  return els;
 }
 
 // ---------- 化学反応式（RN Textで整形） ----------
@@ -617,7 +615,7 @@ function ChemStructFig({ fig }: { fig: ChemStructFigure }) {
   fig.atoms.forEach((a, i) => {
     els.push(<SvgText key={`a${i}`} x={P[i].x} y={P[i].y + 6} fontSize={17} fill={INK} textAnchor="middle" fontWeight="bold">{a.el}</SvgText>);
   });
-  return <>{els}</>;
+  return els;
 }
 
 // ---------- 折れ線・曲線グラフ ----------
@@ -657,7 +655,7 @@ function LineChartFig({ fig }: { fig: LineChartFigure }) {
   });
   if (fig.xLabel) els.push(<SvgText key="xlab" x={area.x0 + area.w / 2} y={VBH - 4} fontSize={10} fill={INK} textAnchor="middle">{fig.xLabel}</SvgText>);
   if (fig.yLabel) els.push(<SvgText key="ylab" x={12} y={area.y0 + area.h / 2} fontSize={10} fill={INK} textAnchor="middle" rotation={-90} originX={12} originY={area.y0 + area.h / 2}>{fig.yLabel}</SvgText>);
-  return <>{els}</>;
+  return els;
 }
 
 // ---------- 棒グラフ・ヒストグラム ----------
@@ -685,7 +683,7 @@ function BarChartFig({ fig }: { fig: BarChartFigure }) {
     els.push(<SvgText key={`bl${i}`} x={x + bw / 2} y={area.y0 + area.h + 12} fontSize={9} fill={AXIS} textAnchor="middle">{b.label}</SvgText>);
   });
   if (fig.yLabel) els.push(<SvgText key="ylab" x={12} y={area.y0 + area.h / 2} fontSize={10} fill={INK} textAnchor="middle" rotation={-90} originX={12} originY={area.y0 + area.h / 2}>{fig.yLabel}</SvgText>);
-  return <>{els}</>;
+  return els;
 }
 
 // ---------- 円グラフ ----------
@@ -711,7 +709,7 @@ function PieChartFig({ fig }: { fig: PieChartFigure }) {
     els.push(<Rect key={`lg${i}`} x={214} y={ly - 8} width={12} height={12} fill={color} opacity={0.85} />);
     els.push(<SvgText key={`lt${i}`} x={230} y={ly + 2} fontSize={10} fill={INK}>{`${s.label} ${Math.round(frac * 100)}%`}</SvgText>);
   });
-  return <>{els}</>;
+  return els;
 }
 
 // ---------- 回路図 ----------
@@ -790,7 +788,7 @@ function CircuitFig({ fig }: { fig: CircuitFigure }) {
     });
     els.push(...batterySym((L + R) / 2, B, 'h', fig.battery?.label, 'bat'));
   }
-  return <>{els}</>;
+  return els;
 }
 
 // ---------- 展開図 ----------
@@ -817,7 +815,7 @@ function NetFig({ fig }: { fig: NetFigure }) {
     els.push(<SvgText key="dh" x={baseX - 6} y={oy + u + u / 2} fontSize={10} fill={INK} textAnchor="end">{fig.dims.h}</SvgText>);
     els.push(<SvgText key="dd" x={baseX + 2 * u + u + 6} y={oy + u + u / 2} fontSize={10} fill={INK} textAnchor="start">{fig.dims.d}</SvgText>);
   }
-  return <>{els}</>;
+  return els;
 }
 
 // ---------- 地層・柱状図 ----------
@@ -845,7 +843,7 @@ function StratumFig({ fig }: { fig: StratumFigure }) {
     });
     if (col.label) els.push(<SvgText key={`cl${ci}`} x={x + colW / 2} y={y + 12} fontSize={10} fill={INK} textAnchor="middle" fontWeight="bold">{col.label}</SvgText>);
   });
-  return <>{els}</>;
+  return els;
 }
 
 // ---------- 公開コンポーネント ----------
@@ -854,7 +852,27 @@ function easeOut(t: number): number {
   return 1 - Math.pow(1 - t, 3);
 }
 
-// animated=true（主に解説側）で、図が左から描き込まれるアニメーションを再生。
+function buildParts(figure: Figure, uid: string): React.ReactNode[] {
+  switch (figure.kind) {
+    case 'coordinate': return CoordinateFig({ fig: figure, uid });
+    case 'polygon': return PolygonFig({ fig: figure });
+    case 'circle': return CircleFig({ fig: figure });
+    case 'solid': return SolidFig({ fig: figure });
+    case 'numberLine': return NumberLineFig({ fig: figure });
+    case 'boxplot': return BoxplotFig({ fig: figure });
+    case 'chemStructure': return ChemStructFig({ fig: figure });
+    case 'lineChart': return LineChartFig({ fig: figure });
+    case 'barChart': return BarChartFig({ fig: figure });
+    case 'pieChart': return PieChartFig({ fig: figure });
+    case 'circuit': return CircuitFig({ fig: figure });
+    case 'net': return NetFig({ fig: figure });
+    case 'stratum': return StratumFig({ fig: figure });
+    default: return [];
+  }
+}
+
+// animated=true（主に解説側）で、図の要素が描かれた順に段階的に立ち上がる
+// 「動く解説」アニメーションを再生する（軸→グラフ→点、図形→補助線→印…）。
 // タップで何度でも再生し直せる。
 export default function FigureView({ figure, animated = false }: { figure: Figure; animated?: boolean }) {
   const { w, h } = useSize();
@@ -867,7 +885,7 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
 
   const play = useCallback(() => {
     if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
-    const DUR = 1150;
+    const DUR = 1700;
     let startTs: number | null = null;
     const tick = (ts: number) => {
       if (startTs == null) startTs = ts;
@@ -886,24 +904,7 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
     };
   }, [animated, play]);
 
-  const body = useMemo(() => {
-    switch (figure.kind) {
-      case 'coordinate': return <CoordinateFig fig={figure} uid={uid} />;
-      case 'polygon': return <PolygonFig fig={figure} />;
-      case 'circle': return <CircleFig fig={figure} />;
-      case 'solid': return <SolidFig fig={figure} />;
-      case 'numberLine': return <NumberLineFig fig={figure} />;
-      case 'boxplot': return <BoxplotFig fig={figure} />;
-      case 'chemStructure': return <ChemStructFig fig={figure} />;
-      case 'lineChart': return <LineChartFig fig={figure} />;
-      case 'barChart': return <BarChartFig fig={figure} />;
-      case 'pieChart': return <PieChartFig fig={figure} />;
-      case 'circuit': return <CircuitFig fig={figure} />;
-      case 'net': return <NetFig fig={figure} />;
-      case 'stratum': return <StratumFig fig={figure} />;
-      default: return null;
-    }
-  }, [figure, uid]);
+  const parts = useMemo(() => buildParts(figure, uid), [figure, uid]);
 
   // 化学反応式はSVGではないのでフェードインで演出
   if (isChem) {
@@ -922,7 +923,14 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
     );
   }
 
-  const revealW = Math.max(0.001, VBW * progress);
+  // 段階表示：要素iは progress が i/N を超えると WINDOW 幅でフェードインする
+  const N = Math.max(parts.length, 1);
+  const WINDOW = Math.max(3, Math.round(N * 0.18));
+  const opacityOf = (i: number) => {
+    if (!animated) return 1;
+    const t = progress * (N + WINDOW) - i;
+    return Math.max(0, Math.min(1, t / WINDOW));
+  };
 
   return (
     <View style={styles.wrap}>
@@ -932,15 +940,17 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
         style={[styles.canvas, { width: w, height: h }]}
       >
         <Svg width="100%" height="100%" viewBox={`0 0 ${VBW} ${VBH}`}>
-          <Defs>
-            <ClipPath id={`reveal-${uid}`}>
-              <Rect x={0} y={0} width={revealW} height={VBH} />
-            </ClipPath>
-          </Defs>
-          <G clipPath={animated ? `url(#reveal-${uid})` : undefined}>{body}</G>
+          {parts.map((el, i) => (
+            <G key={`p${i}`} opacity={opacityOf(i)}>{el}</G>
+          ))}
         </Svg>
       </TouchableOpacity>
-      {animated && <Text style={styles.replayHint}>▶ タップで再生</Text>}
+      {animated && (
+        <View style={[styles.progressTrack, { width: w }]}>
+          <View style={[styles.progressFill, { width: Math.round(w * progress) }]} />
+        </View>
+      )}
+      {animated && <Text style={styles.replayHint}>▶ タップで再生（動く解説）</Text>}
       {figure.caption != null && <Text style={styles.caption}>{figure.caption}</Text>}
     </View>
   );
@@ -970,6 +980,19 @@ const styles = StyleSheet.create({
     color: '#0EA5E9',
     marginTop: 4,
     fontWeight: '600',
+  },
+  progressTrack: {
+    height: 3,
+    borderRadius: 2,
+    backgroundColor: '#E2E8F0',
+    marginTop: 8,
+    overflow: 'hidden',
+    alignSelf: 'center',
+  },
+  progressFill: {
+    height: 3,
+    borderRadius: 2,
+    backgroundColor: '#0EA5E9',
   },
   chemRow: {
     flexDirection: 'row',

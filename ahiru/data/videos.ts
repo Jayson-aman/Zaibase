@@ -4,14 +4,9 @@
 
 export type VideoRef = { url: string; title?: string };
 
-// 問題ID → 解説動画
-export const questionVideos: Record<string, VideoRef> = {
-  // デモ（差し替え用サンプル）。実際の解説動画URLに置き換えてください。
-  koko_kankan_sansu_04: {
-    url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
-    title: '解説動画（サンプル・差し替え用）',
-  },
-};
+// 問題ID → 解説動画（現在は動画を使わず「動く図解アニメ」で解説する方針のため空。
+// 将来 YouTube/MP4 のURLを追加すれば、解答側に解説動画が表示される）。
+export const questionVideos: Record<string, VideoRef> = {};
 
 // レッスンID → 動画解説
 export const lessonVideos: Record<string, VideoRef> = {
