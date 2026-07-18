@@ -18,6 +18,7 @@
 const { onCall, HttpsError } = require("firebase-functions/v2/https");
 const { getFirestore, FieldValue } = require("firebase-admin/firestore");
 const { defineSecret } = require("firebase-functions/params");
+const { sanitizeHistory } = require("./_sanitize");
 
 const db = getFirestore();
 const ANTHROPIC_API_KEY = defineSecret("ANTHROPIC_API_KEY");
@@ -90,7 +91,11 @@ exports.chatEnglishConversation = onCall(
     await checkAndIncrementUsage(uid);
 
     const levelGuide = LEVEL_GUIDE[level] ?? LEVEL_GUIDE.eiken_2;
-    const trimmedHistory = history.slice(-MAX_HISTORY_TURNS * 2);
+    // 履歴は件数・各要素の内容長を制限し、roleを許可値に限定（コスト濫用防止）
+    const trimmedHistory = sanitizeHistory(history, {
+      maxTurns: MAX_HISTORY_TURNS,
+      maxContentLen: 2000,
+    });
 
     const Anthropic = require("@anthropic-ai/sdk");
     const client = new Anthropic({ apiKey: ANTHROPIC_API_KEY.value() });

@@ -206,16 +206,24 @@ exports.health = onRequest((req, res) => {
   res.json({ ok: true, service: "zaibase-backend", time: new Date().toISOString() });
 });
 
-exports.translateText = onCall(async (request) => {
+exports.translateText = onCall(
+  // App Check を強制し、正規アプリ以外（スクリプト/ボット）からの
+  // 呼び出しを遮断。翻訳は Vertex AI 従量課金のためコスト濫用を防ぐ。
+  { region: "asia-northeast1", enforceAppCheck: true },
+  async (request) => {
   const { text, target } = request.data || {};
-  if (!text || !target) {
+  if (!text || typeof text !== "string" || !target || typeof target !== "string") {
     return { error: "text（原文）と target（翻訳先の言語）は必須です" };
   }
+  if (text.length > 5000) {
+    return { error: "翻訳できるのは一度に5000文字までです" };
+  }
+  const safeTarget = target.slice(0, 20);
   try {
     const { VertexAI } = require("@google-cloud/vertexai");
     const vertex = new VertexAI({ project: process.env.GCLOUD_PROJECT, location: "asia-northeast1" });
     const model = vertex.getGenerativeModel({ model: "gemini-1.5-flash" });
-    const prompt = "次の文章を「" + target + "」に翻訳してください。訳文だけを返し、説明は不要です。\n\n" + text;
+    const prompt = "次の文章を「" + safeTarget + "」に翻訳してください。訳文だけを返し、説明は不要です。\n\n" + text;
     const result = await model.generateContent(prompt);
     const translated = result.response.candidates[0].content.parts[0].text.trim();
     return { translated };

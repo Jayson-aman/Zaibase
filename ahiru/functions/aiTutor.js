@@ -18,6 +18,7 @@
  *   ANTHROPIC_API_KEY
  */
 const { onCall, HttpsError } = require("firebase-functions/v2/https");
+const { sanitizeHistory, assertImageSize, capString } = require("./_sanitize");
 const { getFirestore, FieldValue } = require("firebase-admin/firestore");
 const { defineSecret } = require("firebase-functions/params");
 
@@ -107,9 +108,14 @@ exports.askTutor = onCall(
       isNewSession = false,
     } = req.data ?? {};
 
-    if (!sessionId) throw new HttpsError("invalid-argument", "sessionId が必要です");
+    if (!sessionId || typeof sessionId !== "string" || sessionId.length > 128)
+      throw new HttpsError("invalid-argument", "sessionId が不正です");
     if (!questionText && !imageBase64)
       throw new HttpsError("invalid-argument", "質問文または画像が必要です");
+    // 巨大入力によるトークン濫用（コスト爆撃）への防御
+    assertImageSize(imageBase64);
+    const safeQuestionText = capString(questionText, 2000);
+    const safeHistory = sanitizeHistory(history, { maxTurns: 12, maxContentLen: 4000 });
 
     // Maxプラン確認 or 無料体験（1回限り）
     const userRef = db.collection("users").doc(uid);
@@ -146,12 +152,12 @@ exports.askTutor = onCall(
         source: { type: "base64", media_type: "image/jpeg", data: imageBase64 },
       });
     }
-    if (questionText) {
-      userContent.push({ type: "text", text: questionText });
+    if (safeQuestionText) {
+      userContent.push({ type: "text", text: safeQuestionText });
     }
 
     const messages = [
-      ...history.map((h) => ({ role: h.role, content: h.content })),
+      ...safeHistory,
       { role: "user", content: userContent },
     ];
 
