@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { ERAS, EVENTS, type Era } from '../../data/timeline';
-import { getPortraitForPerson } from '../../data/history-portraits';
+import { getPortraitsForPerson } from '../../data/history-portraits';
 
 export default function TimelineScreen() {
   const router = useRouter();
@@ -65,7 +65,7 @@ export default function TimelineScreen() {
         </View>
 
         {events.map((ev, i) => {
-          const portrait = getPortraitForPerson(ev.person);
+          const portraits = getPortraitsForPerson(ev.person);
           return (
             <View key={i} style={styles.eventRow}>
               <View style={[styles.eventDot, { backgroundColor: eraInfo.color }]} />
@@ -82,13 +82,17 @@ export default function TimelineScreen() {
                     <Text style={styles.eventTitle}>{ev.event}</Text>
                     <Text style={styles.eventNote}>{ev.note}</Text>
                   </View>
-                  {portrait != null && (
-                    <Image source={portrait.image} style={styles.portraitImage} resizeMode="cover" />
+                  {portraits.length > 0 && (
+                    <View style={styles.portraitStack}>
+                      {portraits.map((p) => (
+                        <Image key={p.person} source={p.image} style={styles.portraitImage} resizeMode="cover" />
+                      ))}
+                    </View>
                   )}
                 </View>
-                {portrait?.caption != null && (
-                  <Text style={styles.portraitCaption}>🖼 {portrait.caption}</Text>
-                )}
+                {portraits.map((p) => (
+                  <Text key={p.person} style={styles.portraitCaption}>🖼 {p.person}：{p.caption}</Text>
+                ))}
               </View>
             </View>
           );
@@ -178,9 +182,10 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   eventCardInner: { flexDirection: 'row', alignItems: 'flex-start', gap: 12 },
+  portraitStack: { flexDirection: 'row', gap: 6, flexShrink: 0 },
   portraitImage: {
-    width: 64,
-    height: 84,
+    width: 56,
+    height: 74,
     borderRadius: 8,
     backgroundColor: '#F0F3F7',
     flexShrink: 0,
