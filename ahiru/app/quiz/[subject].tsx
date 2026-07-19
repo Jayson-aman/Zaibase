@@ -12,6 +12,7 @@ import { subjectInfo, type SubjectKey, type Question } from '../../data/question
 import { useSubjectQuestions } from '../../hooks/useSubjectQuestions';
 import { ALL_COURSES } from '../../data/courses';
 import type { CourseKey, ExamType } from '../../data/courses';
+import { getTopic, questionMatchesTopic } from '../../data/topics';
 import { explanationsSansu } from '../../data/explanations_sansu';
 import { explanationsKokugo } from '../../data/explanations_kokugo';
 import { explanationsRika } from '../../data/explanations_rika';
@@ -88,13 +89,14 @@ function filterQuestions(
 }
 
 export default function QuizScreen() {
-  const { subject, difficulty: diffParam, mode, course: courseParam, examType: examTypeParam } =
+  const { subject, difficulty: diffParam, mode, course: courseParam, examType: examTypeParam, topic: topicParam } =
     useLocalSearchParams<{
       subject: string;
       difficulty?: string;
       mode?: string;
       course?: string;
       examType?: string;
+      topic?: string;
     }>();
   const router = useRouter();
 
@@ -120,6 +122,17 @@ export default function QuizScreen() {
     if (questionsLoading) return [];
     if (isDaily) return getDailyQuestions(subjectPool, subjectKey, 30, course, examType);
     const all = subjectPool;
+    // 単元別モード：コースを問わず、その単元に該当する問題だけを出題
+    if (topicParam) {
+      const topic = getTopic(subjectKey, topicParam);
+      if (topic) {
+        let pool = all.filter((q) => (q.examType ?? 'chugaku') === examType);
+        pool = pool.filter((q) => questionMatchesTopic(q, topic));
+        if (!(isPro || isMax)) pool = pool.filter((q) => !q.maxOnly);
+        if (difficultyFilter) pool = pool.filter((q) => q.difficulty === difficultyFilter);
+        return [...pool].sort(() => Math.random() - 0.5);
+      }
+    }
     if (isMock) {
       // 模擬試験: 入試形式（学校別大問）を除いた一般問題のみ使用
       const generalKey = examType === 'koko' ? 'koko-general' : 'general';
@@ -138,7 +151,7 @@ export default function QuizScreen() {
     }
     const filtered = filterQuestions(all, examType, course, difficultyFilter, isPro || isMax);
     return [...filtered].sort(() => Math.random() - 0.5);
-  }, [subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, course, examType, isPro, isMax]);
+  }, [subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, course, examType, isPro, isMax, topicParam]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);

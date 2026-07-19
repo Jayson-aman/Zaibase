@@ -618,6 +618,29 @@ export default function HomeScreen() {
           ))}
         </View>
 
+        {!listenPickerActive && (
+          <>
+            <Text style={[styles.sectionTitle, { marginTop: 8 }]}>🧩 単元別に学ぶ</Text>
+            <Text style={styles.topicNote}>
+              一次関数・長文読解・割合・回路など、単元をえらんで集中練習
+            </Text>
+            <View style={styles.topicRow}>
+              {SUBJECTS.map((s) => (
+                <TouchableOpacity
+                  key={`topic_${s}`}
+                  style={styles.topicChip}
+                  activeOpacity={0.85}
+                  onPress={() => router.push(`/topics/${s}?examType=${examType}` as any)}
+                >
+                  <Text style={styles.topicChipText}>
+                    {subjectInfo[s].emoji} {subjectInfo[s].name}の単元
+                  </Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+          </>
+        )}
+
         <View style={styles.infoCard}>
           <Text style={styles.infoTitle}>📖 使い方</Text>
           <Text style={styles.infoText}>① コース・難易度・科目を選んでスタート</Text>
@@ -1190,6 +1213,32 @@ const styles = StyleSheet.create({
   },
 
   // Info card
+  topicNote: {
+    color: 'rgba(255,255,255,0.65)',
+    fontSize: 13,
+    marginHorizontal: 20,
+    marginBottom: 10,
+  },
+  topicRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+    marginHorizontal: 20,
+    marginBottom: 20,
+  },
+  topicChip: {
+    backgroundColor: 'rgba(255,255,255,0.10)',
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.20)',
+    borderRadius: 999,
+    paddingHorizontal: 14,
+    paddingVertical: 9,
+  },
+  topicChipText: {
+    color: '#FFFFFF',
+    fontSize: 14,
+    fontWeight: '700',
+  },
   infoCard: {
     backgroundColor: D.glass,
     borderRadius: 12,
