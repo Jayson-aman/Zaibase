@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { ERAS, EVENTS, type Era } from '../../data/timeline';
-import { getPortraitsForPerson } from '../../data/history-portraits';
+import { getPortraitsForPerson, getEventImages } from '../../data/history-portraits';
 
 export default function TimelineScreen() {
   const router = useRouter();
@@ -66,6 +66,11 @@ export default function TimelineScreen() {
 
         {events.map((ev, i) => {
           const portraits = getPortraitsForPerson(ev.person);
+          const eventImages = getEventImages(ev.event);
+          const images = [
+            ...portraits.map((p) => ({ key: p.person, image: p.image, label: p.person, caption: p.caption })),
+            ...eventImages.map((e) => ({ key: e.eventMatch, image: e.image, label: null, caption: e.caption })),
+          ];
           return (
             <View key={i} style={styles.eventRow}>
               <View style={[styles.eventDot, { backgroundColor: eraInfo.color }]} />
@@ -82,16 +87,18 @@ export default function TimelineScreen() {
                     <Text style={styles.eventTitle}>{ev.event}</Text>
                     <Text style={styles.eventNote}>{ev.note}</Text>
                   </View>
-                  {portraits.length > 0 && (
+                  {images.length > 0 && (
                     <View style={styles.portraitStack}>
-                      {portraits.map((p) => (
-                        <Image key={p.person} source={p.image} style={styles.portraitImage} resizeMode="cover" />
+                      {images.map((img) => (
+                        <Image key={img.key} source={img.image} style={styles.portraitImage} resizeMode="cover" />
                       ))}
                     </View>
                   )}
                 </View>
-                {portraits.map((p) => (
-                  <Text key={p.person} style={styles.portraitCaption}>🖼 {p.person}：{p.caption}</Text>
+                {images.map((img) => (
+                  <Text key={img.key} style={styles.portraitCaption}>
+                    🖼 {img.label != null ? `${img.label}：` : ''}{img.caption}
+                  </Text>
                 ))}
               </View>
             </View>

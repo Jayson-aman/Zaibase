@@ -45,3 +45,25 @@ export function getPortraitsForPerson(personField?: string): HistoryPortrait[] {
   if (personField == null) return [];
   return historyPortraits.filter((p) => personField.includes(p.person));
 }
+
+// できごと自体を写した写真（人物の肖像ではない：建造物・仏像など）。
+// timeline.ts の event 文字列に部分一致するもの。
+export type HistoryEventImage = {
+  /** timeline.ts の event 文字列に含まれる部分文字列 */
+  eventMatch: string;
+  image: ImageSourcePropType;
+  caption?: string;
+};
+
+export const historyEventImages: HistoryEventImage[] = [
+  {
+    eventMatch: '東大寺の大仏',
+    image: require('../assets/history-portraits/todaiji-daibutsu.jpg'),
+    caption: '東大寺盧舎那仏像（現在の姿）。聖武天皇の発願により造立された',
+  },
+];
+
+export function getEventImages(eventText?: string): HistoryEventImage[] {
+  if (eventText == null) return [];
+  return historyEventImages.filter((e) => eventText.includes(e.eventMatch));
+}
