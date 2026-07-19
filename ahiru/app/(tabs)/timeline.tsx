@@ -7,6 +7,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
 } from 'react-native';
+import { useRouter } from 'expo-router';
 
 type Era = '縄文・弥生' | '古墳・飛鳥・奈良' | '平安' | '鎌倉・室町' | '戦国・安土桃山' | '江戸' | '明治・大正' | '昭和・平成・令和';
 
@@ -102,6 +103,7 @@ const EVENTS: Record<Era, { year: string; event: string; note: string }[]> = {
 };
 
 export default function TimelineScreen() {
+  const router = useRouter();
   const [selectedEra, setSelectedEra] = useState<Era>('明治・大正');
 
   const events = EVENTS[selectedEra];
@@ -111,10 +113,13 @@ export default function TimelineScreen() {
     <SafeAreaView style={styles.container}>
       <View style={[styles.header, { backgroundColor: eraInfo.color }]}>
         <Text style={styles.headerEmoji}>{eraInfo.emoji}</Text>
-        <View>
+        <View style={{ flex: 1 }}>
           <Text style={styles.headerTitle}>📅 歴史年表</Text>
           <Text style={styles.headerSub}>時代の流れを一覧で学ぶ</Text>
         </View>
+        <TouchableOpacity style={styles.songBtn} onPress={() => router.push('/songs')} activeOpacity={0.85}>
+          <Text style={styles.songBtnText}>🎵 覚え歌</Text>
+        </TouchableOpacity>
       </View>
 
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.eraScroll} contentContainerStyle={styles.eraScrollContent}>
@@ -175,6 +180,8 @@ const styles = StyleSheet.create({
   },
   headerEmoji: { fontSize: 40 },
   headerTitle: { fontSize: 22, fontWeight: '900', color: '#FFFFFF' },
+  songBtn: { backgroundColor: 'rgba(255,255,255,0.25)', borderRadius: 999, paddingHorizontal: 14, paddingVertical: 8 },
+  songBtnText: { color: '#FFFFFF', fontWeight: '800', fontSize: 14 },
   headerSub: { fontSize: 13, color: 'rgba(255,255,255,0.85)', fontWeight: '500', marginTop: 2 },
   eraScroll: { flexGrow: 0, backgroundColor: '#FFFFFF', borderBottomWidth: 1, borderBottomColor: '#E5EAF0' },
   eraScrollContent: { padding: 10, gap: 8, flexDirection: 'row' },
