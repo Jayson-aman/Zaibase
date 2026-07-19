@@ -9,6 +9,15 @@ export const kokoEigoLessons: Lesson[] = [
     studyPeriod: '中1',
     title: '時制・助動詞・受動態',
     description: '時制の使い分けをマスターして英語の骨格を掴む',
+    keyPoints: [
+      `現在形＝習慣・普遍的事実（三単現のs）、過去形＝完結した過去。過去の疑問・否定は did＋原形`,
+      `will（その場の意志・予測）と be going to（前からの予定・根拠ある予測）。時・条件の副詞節は未来でも現在形`,
+      `現在完了 have/has＋過去分詞：完了(just/already/yet)／経験(ever/never)／継続(for/since)`,
+      `have been to（経験・行ったことがある）と have gone to（結果・行ってしまった）の区別。現在完了進行形 have been -ing`,
+      `受動態 be動詞＋過去分詞（＋by〜）。be covered with／be known for／be made of・from`,
+      `助動詞の否定：must not（禁止）≠ don't have to（不必要）`,
+      `助動詞＋have＋過去分詞：must have〜（したに違いない）／should have〜（すべきだった）／can't have〜（したはずがない）`,
+    ],
     sections: [
       {
         heading: '1. 基本時制（現在形・過去形・未来形）',
@@ -206,6 +215,15 @@ She looks pale. She (　　) sick last night.
     studyPeriod: '中1',
     title: '比較表現・関係詞',
     description: '比較と関係詞を使いこなして複雑な英文を読み書きする',
+    keyPoints: [
+      `原級 as 〜 as、比較級 -er/more 〜 than、最上級 the -est/most。not as 〜 as「〜ほど…でない」`,
+      `不規則変化：good/well-better-best、bad-worse-worst、many/much-more-most、little-less-least`,
+      `倍数 twice as 〜 as、the＋比較級, the＋比較級「〜すればするほど…」`,
+      `最上級の書きかえ：No other＋単数名詞〜as…as／比較級＋than any other＋単数名詞`,
+      `関係代名詞：主格 who/which、目的格 who(m)/which/that（省略可）、所有格 whose`,
+      `先行詞に最上級・序数・all/every/no・不定代名詞がつくと that を使う。what は先行詞を含む（〜こと・もの）`,
+      `関係副詞 where/when/why/how。非制限用法（, which）では that は使えない`,
+    ],
     sections: [
       {
         heading: '1. 比較の3段階（原級・比較級・最上級）',
@@ -404,6 +422,15 @@ She gave me a present, which I liked very much.
     studyPeriod: '中2',
     title: '不定詞・動名詞・分詞',
     description: '不定詞・動名詞・分詞の使い方を体系的にマスターする',
+    keyPoints: [
+      `to不定詞の3用法：名詞的「〜すること」／形容詞的「〜すべき」／副詞的「〜するために・〜して」`,
+      `疑問詞＋to不定詞（how to〜, what to〜, where to〜）`,
+      `動名詞のみを目的語 enjoy/finish/stop/mind/avoid/give up、不定詞のみ want/hope/decide/plan/promise`,
+      `remember/forget/try/stop は -ing と to で意味が変わる（remember -ing＝したことを覚えている／to＝忘れずに〜する）`,
+      `分詞の形容詞用法：現在分詞（〜している）・過去分詞（〜された）。1語は名詞の前、2語以上は後ろから修飾`,
+      `感情動詞は物・事→現在分詞(exciting)、人→過去分詞(excited)`,
+      `分詞構文：接続詞と主語を省き動詞を-ingに。Having＋過去分詞は主節より前の出来事`,
+    ],
     sections: [
       {
         heading: '1. to不定詞の3用法',
@@ -621,6 +648,15 @@ The news was very surprised.
     studyPeriod: '中2',
     title: '長文読解戦略',
     description: '長文を素早く正確に読んで設問に対応する戦略',
+    keyPoints: [
+      `スキミングで全体把握（見出し・各段落の第1文）、スキャニングで数字・固有名詞を探す`,
+      `設問を先読みしてキーワードを把握してから本文を読む`,
+      `内容一致：all/always/never/only の極端な選択肢、言い換え、本文にない内容(Not mentioned)に注意`,
+      `指示語 it/they/this は直前1〜2文を代入して確認`,
+      `空欄補充は前後の接続詞・論理関係で判断（however＝逆接、therefore＝結論、for example＝具体例）`,
+      `ジャンル別に読む（論説文＝主張と根拠、物語文＝心情の変化、会話文＝話者と流れ）`,
+      `わからない語は接頭辞・接尾辞と文脈で推測し、1語に固執せず先へ進む`,
+    ],
     sections: [
       {
         heading: '1. スキャニング・スキミングの技術',
@@ -813,6 +849,15 @@ Teachers and parents are worried about this situation. They say that too much ti
     studyPeriod: '中3秋〜直前',
     title: '英作文・会話表現',
     description: '英作文を体系的に書けるようにする実践的な書き方',
+    keyPoints: [
+      `5文型 SV／SVC(S＝C)／SVO／SVOO／SVOC(O＝C)を英作文の土台にする`,
+      `日本語を英語の発想に直す（省略された主語を補い、動詞は主語の直後に置く）`,
+      `頻出構文：There is/are〜、It takes 〜 to…、It is … to〜、I want you to〜`,
+      `意見文は三段構成（I think→First/For example→In conclusion）で理由を2〜3個`,
+      `接続詞 however/therefore/for example/in addition/on the other hand を使い分ける`,
+      `会話定型：Why don't we〜?／Shall I〜?／How about -ing?、承諾 Sounds good、断り I'm afraid I can't`,
+      `語数制限では省略形(I'm/don't)も1語と数え、指定語数を守る`,
+    ],
     sections: [
       {
         heading: '1. 英語の基本文型（5文型）',
@@ -1035,6 +1080,14 @@ I think students should be allowed to bring smartphones to school. First, they c
     studyPeriod: '中3秋〜直前',
     title: '語彙・熟語・前置詞・会話表現',
     description: '高校受験に必要な語彙・熟語・前置詞を効率よく覚える',
+    keyPoints: [
+      `分野別の頻出語を暗記（environment/pollution/recycle、community/culture/tradition/volunteer）`,
+      `語形変化を4形セットで覚える（nation/national/nationally/nationality、success/successful/succeed）`,
+      `フレーズ動詞：look after(世話)／look for(探す)／look forward to／get along with／give up／make friends with`,
+      `look forward to の to は前置詞→後ろは-ing（× to see ○ to seeing）`,
+      `時の前置詞 at(時刻)／on(曜日・日付)／in(月・年・季節)、by(期限)と until(継続)の区別`,
+      `前置詞は核心イメージで（at＝点、on＝接触・面、in＝空間の中）`,
+    ],
     sections: [
       {
         heading: '1. 高校受験頻出単語（カテゴリ別）',
@@ -1288,6 +1341,14 @@ I am looking forward to (　　) you again.
     studyPeriod: '中3秋〜直前',
     title: '仮定法・間接疑問・話法',
     description: '仮定法・間接疑問・話法の切り替えで難関入試の複雑な文に対応する',
+    keyPoints: [
+      `仮定法過去 If＋過去形（be動詞はwere）, 主語＋would/could/might＋原形＝現在の事実に反する仮定`,
+      `仮定法過去完了 If＋had＋過去分詞, 主語＋would/could have＋過去分詞＝過去の事実に反する仮定`,
+      `I wish＋仮定法「〜ならいいのに／だったらよかったのに」、as if＋仮定法「まるで〜のように」`,
+      `間接疑問文は「疑問詞＋主語＋動詞」の平叙文の語順（I don't know where he is.）`,
+      `話法の転換：直接→間接で代名詞・時制・時や場所の副詞を変える（say→that節、命令文は tell 人 to〜）`,
+      `If it were not for〜「〜がなければ」、仮定法の倒置（Were I…／Had I…）`,
+    ],
     sections: [
       {
         heading: '1. 仮定法過去（現在の事実に反する仮定）',
@@ -1499,6 +1560,14 @@ If I had left home earlier, I (　　) the train.
     studyPeriod: '中2',
     title: '接続詞と文構造',
     description: '接続詞と文構造を理解して複雑な文を正確に読み書きする',
+    keyPoints: [
+      `等位接続詞 and/but/or/so、相関接続詞 both A and B／either A or B／not only A but also B／neither A nor B`,
+      `従属接続詞：時(when/while/until)／条件(if/unless)／理由(because/since/as)／譲歩(though/although)`,
+      `that節は名詞節「〜ということ」。so＋形容詞/副詞＋that…「とても〜なので…」、such＋(a)＋名詞＋that`,
+      `時・条件を表す副詞節では未来のことでも現在形を使う`,
+      `重文（等位接続詞で結ぶ）と複文（従属節を含む）を見分け、主節と従属節を把握する`,
+      `not only A but also B が主語のときは動詞をB（後ろ）に一致させる`,
+    ],
     sections: [
       {
         heading: '1. 等位接続詞と相関接続詞',
@@ -1702,6 +1771,14 @@ We stayed home because it was very cold.
     studyPeriod: '中1',
     title: '名詞・冠詞・代名詞',
     description: '名詞・冠詞・代名詞の使い分けで細かな減点を防ぐ',
+    keyPoints: [
+      `不可算名詞（water/information/advice/furniture）はa/an・複数形不可。数えるには a piece of〜`,
+      `many/(a) few＋可算名詞、much/(a) little＋不可算名詞`,
+      `冠詞 a/an（初出・1つの）、the（特定・世界に1つ・楽器）。無冠詞（食事・スポーツ・by＋交通手段）`,
+      `代名詞の格：主格／所有格（名詞の前）／目的格／所有代名詞（名詞の代わり）、再帰代名詞 -self`,
+      `it（特定のもの）と one（不特定の同種のもの）、another/other/the other/others の使い分け`,
+      `形式主語 it（It is … to〜／that〜）、there is/are 構文`,
+    ],
     sections: [
       {
         heading: '1. 可算名詞・不可算名詞と数量表現',
@@ -1900,6 +1977,14 @@ There is my two pens on the table.
     studyPeriod: '中1',
     title: '文の種類（疑問文・命令文・感嘆文）',
     description: '疑問文・命令文・感嘆文・付加疑問など文の形を完全整理する',
+    keyPoints: [
+      `疑問文：be動詞は主語の前へ、一般動詞は do/does/did＋主語＋原形、疑問詞は文頭。間接疑問は平叙文の語順`,
+      `命令文は動詞の原形で始める。否定は Don't＋原形、Let's＋原形「〜しよう」`,
+      `感嘆文 What(＋a/an)＋形容詞＋名詞！／How＋形容詞・副詞！`,
+      `付加疑問：肯定文→否定の付加(, isn't it?)、否定文→肯定の付加(, do you?)`,
+      `否定疑問文の答えは中身で判断（する＝Yes、しない＝No）で、日本語の「はい/いいえ」と逆になる`,
+      `選択疑問文 A or B は Yes/No で答えず、どちらかを答える`,
+    ],
     sections: [
       {
         heading: '1. 疑問文の作り方（be動詞・一般動詞・疑問詞）',
@@ -2095,6 +2180,14 @@ B: It's cloudy and cold.
     studyPeriod: '中3秋〜直前',
     title: '発音・アクセント・リスニング対策',
     description: '発音・アクセント問題とリスニングを得点源にするための対策',
+    keyPoints: [
+      `発音問題は下線部の母音・子音の音が同じか異なるかを判別（-edの発音/t//d//id/、-s/-esの/s//z//iz/）`,
+      `アクセントは -tion/-sion/-ic の直前の音節、-ee/-eer は語尾に強勢が来る傾向`,
+      `音の変化を知る：連結（リンキング）・脱落・同化、機能語の弱形`,
+      `リスニングは放送前に設問・選択肢・イラストに目を通す`,
+      `数字・時刻・固有名詞・値段の聞き取りに注意する`,
+      `品詞でアクセントが変わる語（récord 名詞／recórd 動詞、présent／presént）`,
+    ],
     sections: [
       {
         heading: '1. 発音問題（下線部の音が同じ／異なる）',
