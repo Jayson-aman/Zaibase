@@ -27,6 +27,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/nakanooe-no-oji.jpg'),
     caption: 'のちの天智天皇。大化の改新で中臣鎌足とともに蘇我氏を倒した',
   },
+  {
+    person: '元明天皇',
+    image: require('../assets/history-portraits/genmei-tennou.jpg'),
+    caption: '第43代天皇（女帝）。天智天皇の皇女。710年に平城京へ遷都した',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
