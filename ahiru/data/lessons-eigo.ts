@@ -6,6 +6,15 @@ export const eigoLessons: Lesson[] = [
     subject: 'eigo',
     title: '英語の基本文型と時制の完全マスター',
     description: '入試の核心！5文型と時制のルールを体系的に学ぶ',
+    keyPoints: [
+      `5文型：SV／SVC（S＝C）／SVO／SVOO（人＋物）／SVOC（O＝C）。動詞の後ろの語で見分ける`,
+      `be動詞は現在 am(I)／is(3人称単数)／are(you・複数)、過去 was／were。一般動詞は三単現で-s/-es（go→goes, have→has）`,
+      `過去形の不規則変化は「原形・過去形・過去分詞」をセットで暗記（go-went-gone / see-saw-seen 等）`,
+      `未来は will＋原形（その場の意志・予測）と be going to＋原形（前から決めた予定・根拠ある予測）`,
+      `現在完了 have/has＋過去分詞：継続 for/since、完了 just/already/yet、経験 ever/never/once。yesterday・〜agoなど過去の一点とは併用不可`,
+      `受動態は be動詞＋過去分詞（＋by〜）。be interested in／be known for／be made of／be covered with など前置詞セットで暗記`,
+      `仮定法過去 If＋過去形（be動詞はwere）, 主語＋would/could/might＋原形。仮定法過去完了 If＋had＋過去分詞`,
+    ],
     order: 1,
     sections: [
       {
@@ -259,6 +268,15 @@ I wish ＋ 仮定法過去完了：「〜だったらよかったのになぁ」
     subject: 'eigo',
     title: '名詞・代名詞・冠詞の完全理解',
     description: '細かいがよく出る！冠詞と代名詞の使い分けをマスター',
+    keyPoints: [
+      `可算名詞は複数形-s/-es・a/anがつく。不可算名詞（water/money/information/advice/news/homework）はa/an・複数形にできない`,
+      `many＋可算、much＋不可算、a lot ofは両方OK。few/a few＋可算、little/a little＋不可算`,
+      `someは肯定文と勧誘・依頼、anyは否定文・疑問文で使う`,
+      `a/anは初出「1つの」、theは既出・特定・世界に1つ（the sun/the moon）。a/anは発音で選ぶ（an hour, a university）`,
+      `人称代名詞の格：主格I／所有格my（名詞の前）／目的格me／所有代名詞mine（名詞の代わり）`,
+      `one/another/the other/others/the others の使い分け。全2つなら one と the other`,
+      `再帰代名詞 -self/-selves。by oneself は「ひとりで・独力で」`,
+    ],
     order: 2,
     sections: [
       {
@@ -500,6 +518,15 @@ a) other   b) another   c) the other   d) the others
     subject: 'eigo',
     title: '長文読解の攻略技術',
     description: '入試英語の配点No.1！長文を速く正確に読む',
+    keyPoints: [
+      `本文を読む前に設問・選択肢を先読みし、どこに答えがあるか予測する`,
+      `各段落の最初の文（topic sentence）に要点がある。時間がなければ各段落の頭を読む`,
+      `However/But＝逆接（後ろに主張）、Therefore/So＝結論、For example＝具体例、In addition＝追加`,
+      `知らない単語は文脈・言い換え・接頭辞接尾辞で推測（un-/re-/pre-、-tion/-ful/-less/-ly）`,
+      `内容一致は選択肢のキーワードを本文で探し、言い換え（visited＝went to 等）と主語・時・場所のすり替えに注意`,
+      `指示語（it/they/this）は直前1〜2文から探し、代入して意味が通るか確認`,
+      `Whyの答えはBecause〜。疑問詞に対応した内容を主語＋動詞の完全な文で答え、質問の時制に合わせる`,
+    ],
     order: 3,
     sections: [
       {
@@ -751,6 +778,15 @@ d) Why Children Are Better Language Learners
     subject: 'eigo',
     title: '英作文・英文並び替えの攻略',
     description: '配点が高い英作文を自信を持って書けるようにする',
+    keyPoints: [
+      `英語の基本語順は S＋V＋O＋場所＋時間。動詞は主語のすぐ後ろに置く`,
+      `否定文：be動詞＋not／do(does/did)＋not＋原形／助動詞＋not＋原形`,
+      `疑問文：Do/Does/Did＋主語＋原形、疑問詞＋do/does/did＋主語＋原形`,
+      `間接疑問文は「疑問詞＋主語＋動詞」の普通の語順（I know where she lives.）`,
+      `並び替え頻出構文：There is/are〜、It takes 〜 to…、It is 〜 for 人 to…`,
+      `自由英作文は序論(I think〜)→本論(First/For example)→結論(In conclusion)の三段構成`,
+      `三単現のs・過去形・冠詞・文頭大文字・文末ピリオドのミスを最後に必ず点検`,
+    ],
     order: 4,
     sections: [
       {
@@ -1000,6 +1036,15 @@ I think that smartphones are useful for children. First, they can learn many thi
     subject: 'eigo',
     title: '不定詞・動名詞・関係詞・接続詞の応用',
     description: '中学英語の集大成！複雑な文を作る文法を完全習得',
+    keyPoints: [
+      `不定詞（to＋原形）の3用法：名詞的「〜すること」／形容詞的「〜すべき」／副詞的「〜するために」`,
+      `too 〜 to…「〜すぎて…できない」、〜 enough to…「…するのに十分〜だ」`,
+      `動名詞（-ing）「〜すること」。enjoy/finish/stop/mindは動名詞、want/hope/decideは不定詞を目的語にとる`,
+      `関係代名詞 who(人)/which(もの)/that/whose で名詞を後ろから修飾。目的格は省略できる`,
+      `接続詞＋主語＋動詞で副詞節をつくる（when/if/because/although）。時・条件の副詞節は未来でも現在形`,
+      `so 〜 that…「とても〜なので…」、It seems that〜「〜のようだ」などの重要構文`,
+      `比較の複合表現：not as 〜 as…、the＋比較級, the＋比較級、比較級 and 比較級`,
+    ],
     order: 5,
     sections: [
       {
@@ -1259,6 +1304,14 @@ a) after   b) until   c) because   d) although
     subject: 'eigo',
     title: 'リスニング対策と英語表現の幅を広げる',
     description: '入試リスニング・会話表現・語彙強化の総まとめ',
+    keyPoints: [
+      `リスニングは放送が始まる前に設問・選択肢・イラストに目を通しておく`,
+      `会話の決まり文句：May I help you? / How about 〜? / Why don't we 〜? / Shall I 〜?`,
+      `依頼 Could you 〜?、許可 May I 〜?、提案 Let's 〜／Shall we 〜? を場面で使い分ける`,
+      `電話・買い物・道案内など場面別の定型応答を覚える`,
+      `数字・時刻・曜日・値段は聞き取りで狙われるので即座に理解できるようにする`,
+      `頻出熟語（look forward to / be good at / take care of / get to 等）をセットで暗記`,
+    ],
     order: 6,
     sections: [
       {
@@ -1535,6 +1588,14 @@ d) How long did it take?
     subject: 'eigo',
     title: 'アルファベット・フォニックス・ローマ字',
     description: '英語のいちばん最初！文字・音・ローマ字の基礎を固める',
+    keyPoints: [
+      `アルファベット大文字26・小文字26を正しく書く。b/d・p/q の向き、n/h の高さに注意`,
+      `フォニックス：aは/æ/(apple)などの基本音。母音字＋子音字＋e で母音がアルファベット読みになる（cake, bike, home）`,
+      `ローマ字ヘボン式：し＝shi、ち＝chi、つ＝tsu、ふ＝fu、じ＝ji（パスポート・駅名はヘボン式）`,
+      `訓令式（si/ti/tu）とヘボン式（shi/chi/tsu）の違いを区別する`,
+      `文頭・固有名詞・I（私は）は必ず大文字で書く`,
+      `母音字は a, i, u, e, o の5つ。それ以外は子音字`,
+    ],
     order: 7,
     sections: [
       {
@@ -1767,6 +1828,14 @@ iamtom
     subject: 'eigo',
     title: 'be動詞と一般動詞の基礎',
     description: '英文づくりの土台！2種類の動詞と肯定・否定・疑問を完全マスター',
+    keyPoints: [
+      `be動詞は am(I)／is(3人称単数)／are(you・複数)。「〜です・〜にいる（ある）」を表す`,
+      `一般動詞は動作「〜する」。三人称単数現在は-s/-esをつける（plays, watches, has, goes）`,
+      `否定文：be動詞＋not／don't(doesn't)＋動詞の原形`,
+      `疑問文：Is/Are＋主語〜?／Do(Does)＋主語＋動詞の原形〜?`,
+      `1つの文にbe動詞と一般動詞を両方は入れない（× I am play soccer.）`,
+      `答え方：Yes, I am.／No, I'm not.／Yes, I do.／No, I don't.`,
+    ],
     order: 8,
     sections: [
       {
@@ -2002,6 +2071,14 @@ be動詞を使った特別な形。「（場所に）〜がある／いる」を
     subject: 'eigo',
     title: '疑問詞（what/who/where/when/how など）で質問する',
     description: '5W1Hを使いこなす！具体的にたずねる疑問文の作り方',
+    keyPoints: [
+      `疑問詞：what(何)／who(誰)／where(どこ)／when(いつ)／which(どちら)／whose(誰の)／why(なぜ)／how(どう)`,
+      `語順は「疑問詞＋do/does/did＋主語＋原形」または「疑問詞＋be動詞＋主語」`,
+      `how many＋可算名詞複数(数)、how much(量・値段)、how old(年齢)、how long(長さ・期間)`,
+      `why の答えは Because 〜。疑問詞で始まる疑問文には Yes/No で答えない`,
+      `whose＝誰の（所有）、which＝どちら（選択）`,
+      `how＝手段・方法・状態（How do you go? / How are you?）`,
+    ],
     order: 9,
     sections: [
       {
@@ -2215,6 +2292,14 @@ why のくだけた言い方。ただし語順がふつうの文（主語＋動�
     subject: 'eigo',
     title: 'can・命令文・助動詞の基礎',
     description: '「できる」「〜しなさい」「〜しよう」を表す表現をマスター',
+    keyPoints: [
+      `can＋動詞の原形「〜できる」。否定 can't/cannot、疑問 Can you 〜?`,
+      `can は許可（Can/May I 〜?）・依頼（Can/Could you 〜?）の意味にもなる`,
+      `命令文は動詞の原形で始める。否定命令は Don't＋原形、ていねいには please を添える`,
+      `Let's＋動詞の原形「〜しよう」`,
+      `will「〜だろう・するつもり」、must「〜しなければならない」、should「〜すべき」、may「〜してよい・かもしれない」`,
+      `助動詞の後は必ず動詞の原形（× can plays）。must は have to で書きかえられる`,
+    ],
     order: 10,
     sections: [
       {
@@ -2445,6 +2530,14 @@ should より強い忠告。「そうしないとまずい」というニュア�
     subject: 'eigo',
     title: 'あいさつ・自己紹介・数・曜日・時間の会話表現',
     description: '英語で話す第一歩！日常の決まり文句と数・時・曜日を身につける',
+    keyPoints: [
+      `あいさつ：Good morning/afternoon/evening、How are you?→I'm fine, thank you.`,
+      `自己紹介：My name is 〜.／I'm from 〜.／Nice to meet you.`,
+      `基数（one, two…）と序数（first, second, third…）。日付には序数を使う`,
+      `曜日 Sunday〜Saturday、月 January〜December。曜日名・月名は必ず大文字で始める`,
+      `時刻は It's＋数字。What time is it?→It's seven (o'clock).`,
+      `数字：13〜19は-teen、20/30…は-ty、序数は 21st・22nd・23rd のように作る`,
+    ],
     order: 11,
     sections: [
       {
