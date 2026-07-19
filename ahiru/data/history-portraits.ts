@@ -66,6 +66,11 @@ export const historyEventImages: HistoryEventImage[] = [
     image: require('../assets/history-portraits/todaiji-daibutsu.jpg'),
     caption: '東大寺盧舎那仏像（現在の姿）。聖武天皇の発願により造立された',
   },
+  {
+    eventMatch: '平城京に遷都',
+    image: require('../assets/history-portraits/heijokyo-daigokuden.jpg'),
+    caption: '平城宮 大極殿・大極門（復元）。当時の宮殿の姿を伝える',
+  },
 ];
 
 export function getEventImages(eventText?: string): HistoryEventImage[] {
