@@ -187,6 +187,7 @@ import type { Question } from './questions-meta';
 import type { SubjectKey } from './questions-meta';
 import { kokugoChoubunChugaku } from './kokugo_choubun_chugaku';
 import { eigoChoubunChugaku } from './eigo_choubun_chugaku';
+import { kokoRikaExpand1 } from './koko_rika_expand_1';
 import { kokugoChoubunKoko } from './kokugo_choubun_koko';
 import { kokugoChoubunChugaku2 } from './kokugo_choubun_chugaku_2';
 import { kokugoChoubunKoko2 } from './kokugo_choubun_koko_2';
@@ -3041,6 +3042,7 @@ export const questions: Question[] = [
   ...term1_2026KokoEigo,
   ...kokugoChoubunChugaku,
   ...eigoChoubunChugaku,
+  ...kokoRikaExpand1,
   ...kokugoChoubunKoko,
   ...kokugoChoubunChugaku2,
   ...kokugoChoubunKoko2,
