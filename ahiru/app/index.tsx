@@ -113,7 +113,7 @@ const FEATURES = [
     desc: '得意科目・苦手科目を一目で把握。\n保護者向けレポートも自動生成。',
     tag: '全員',
     tagColor: C.blue,
-    image: require('../assets/mascots/mascot-home.png') as number,
+    image: null as number | null,
   },
 ];
 
@@ -286,7 +286,13 @@ export default function LandingPage() {
           <View style={styles.featuresGrid}>
             {FEATURES.map((f) => (
               <View key={f.title} style={[styles.featureCard, glassBlur]}>
-                <Image source={f.image} style={styles.featureImage} resizeMode="contain" />
+                {f.image ? (
+                  <Image source={f.image} style={styles.featureImage} resizeMode="contain" />
+                ) : (
+                  <View style={[styles.featureImage, styles.featureImagePlaceholder]}>
+                    <Text style={styles.featureImagePlaceholderIcon}>{f.icon}</Text>
+                  </View>
+                )}
                 <View style={styles.featureOverlay}>
                   <View style={[styles.featureTag, { backgroundColor: f.tagColor }]}>
                     <Text style={styles.featureTagText}>{f.tag}</Text>
@@ -378,7 +384,7 @@ export default function LandingPage() {
               '✓ 聞き流しモード（全5科目）',
               '✓ 地理マップ全レイヤー',
               '✓ 歴史イラスト・合戦シーン',
-              '✓ キャラクターマスコット全解放',
+              '✓ 動く図解・アニメ解説',
             ].map((f) => (
               <Text key={f} style={[styles.planFeature, { color: '#D4AAFF' }]}>{f}</Text>
             ))}
@@ -724,6 +730,14 @@ const styles = StyleSheet.create({
   featureImage: {
     width: '100%',
     aspectRatio: 4 / 3,
+  },
+  featureImagePlaceholder: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: C.glassMid,
+  },
+  featureImagePlaceholderIcon: {
+    fontSize: 72,
   },
   featureOverlay: {
     position: 'absolute',

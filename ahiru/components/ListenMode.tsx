@@ -16,12 +16,7 @@ import {
   resumeSpeech,
   toSpeechText,
 } from '../utils/speech';
-import AnimatedMascot from './AnimatedMascot';
-import {
-  listenMascot,
-  getQuestionIllustration,
-  getHistoryThemeLabel,
-} from '../data/images';
+import { getHistoryThemeLabel } from '../data/images';
 
 type Phase =
   | 'idle'
@@ -288,23 +283,6 @@ export default function ListenMode({
           contentContainerStyle={styles.content}
           showsVerticalScrollIndicator={false}
         >
-          <View style={styles.animeRow}>
-            <AnimatedMascot
-              source={getQuestionIllustration(q.subject, q.id)}
-              style={styles.sceneImage}
-              fallbackEmoji={subjectEmoji}
-              animation="float"
-              accessibilityLabel="問題シーン"
-            />
-            <AnimatedMascot
-              source={listenMascot}
-              style={styles.mascotImage}
-              fallbackEmoji="🎧"
-              resizeMode="contain"
-              animation={active && !paused ? 'pulse' : 'float'}
-              accessibilityLabel="聞き流しキャラクター"
-            />
-          </View>
           {historyLabel != null && (
             <Text style={styles.historyBanner}>🏛 {historyLabel}の問題</Text>
           )}

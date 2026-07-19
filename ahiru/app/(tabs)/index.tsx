@@ -14,8 +14,6 @@ import SubjectCard from '../../components/SubjectCard';
 import ListenMode from '../../components/ListenMode';
 import Paywall from '../../components/Paywall';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
-import AnimatedMascot from '../../components/AnimatedMascot';
-import { homeMascot } from '../../data/images';
 import { useProGate } from '../../hooks/useProGate';
 import { useSubscription } from '../../hooks/useSubscription';
 import { subjectInfo, type SubjectKey } from '../../data/questions-meta';
@@ -1026,42 +1024,6 @@ const styles = StyleSheet.create({
     lineHeight: 16,
     marginTop: 10,
     fontStyle: 'italic',
-  },
-
-  // Mascot
-  mascotBanner: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: D.glass,
-    borderRadius: 14,
-    padding: 14,
-    marginBottom: 14,
-    gap: 12,
-    borderWidth: 1,
-    borderColor: D.glassBorder,
-  },
-  mascotImage: {
-    width: 110,
-    height: 110,
-    borderRadius: 55,
-    backgroundColor: D.glassMid,
-  },
-  mascotTextWrap: {
-    flex: 1,
-  },
-  mascotTitle: {
-    fontFamily: SERIF,
-    fontSize: 20,
-    fontWeight: '700',
-    color: D.white,
-    marginBottom: 5,
-    includeFontPadding: false,
-  },
-  mascotSub: {
-    fontSize: 14,
-    color: D.soft,
-    lineHeight: 22,
-    fontWeight: '400',
   },
 
   // Listen button
