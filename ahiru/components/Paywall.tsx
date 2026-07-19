@@ -110,7 +110,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
             <TouchableOpacity style={styles.loginBanner} onPress={goLogin} activeOpacity={0.85}>
               <Text style={styles.loginBannerText}>
                 🔑 ご購入の前にログイン（無料）{'\n'}
-                <Text style={styles.loginBannerSub}>スマホ・iPad・パソコンで引き継げます。二重課金にはなりません。</Text>
+                <Text style={styles.loginBannerSub}>ログインするとご購入内容を引き継げます。</Text>
               </Text>
             </TouchableOpacity>
           )}

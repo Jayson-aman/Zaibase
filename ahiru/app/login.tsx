@@ -73,14 +73,8 @@ export default function LoginScreen() {
           <Text style={styles.logo}>🐤</Text>
           <Text style={styles.title}>{isSignup ? 'アカウント作成' : 'ログイン'}</Text>
           <Text style={styles.subtitle}>
-            アカウントでログインすると、スマホ・iPad・パソコンで{'\n'}進捗やご購入プランを引き継げます。
+            アカウントでログインすると、学習の記録やご購入内容を引き継げます。
           </Text>
-
-          <View style={styles.infoBox}>
-            <Text style={styles.infoText}>
-              🔒 一度ご購入いただくと、同じアカウントでログインした全端末で有効になります（二重課金にはなりません）。
-            </Text>
-          </View>
 
           <TextInput
             style={styles.input}

@@ -304,21 +304,8 @@ export default function LandingPage() {
 
         {/* ─── いつでも・どこでも ─────────────────── */}
         <View style={[styles.section, { backgroundColor: C.bgAlt }]}>
-          <SectionLabel label="マルチデバイス" />
+          <SectionLabel label="スキマ時間に" />
           <Text style={styles.sectionTitle}>いつでも・どこでも</Text>
-          <View style={styles.deviceRow}>
-            {[
-              { emoji: '📱', name: 'スマートフォン', sub: 'iOS・Android' },
-              { emoji: '💻', name: 'タブレット', sub: 'iPad対応' },
-              { emoji: '🖥️', name: 'パソコン', sub: 'Mac・Windows' },
-            ].map((d) => (
-              <View key={d.name} style={[styles.deviceCard, glassBlur]}>
-                <Text style={styles.deviceEmoji}>{d.emoji}</Text>
-                <Text style={styles.deviceName}>{d.name}</Text>
-                <Text style={styles.deviceSub}>{d.sub}</Text>
-              </View>
-            ))}
-          </View>
           <View style={[styles.scenarioBox, glassBlur]}>
             <Text style={styles.scenarioTitle}>📍 こんな場所で活用</Text>
             <View style={styles.scenarioGrid}>

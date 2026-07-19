@@ -41,7 +41,7 @@ function AccountCard() {
       <View style={styles.accountCard}>
         <Text style={styles.accountLabel}>ログイン中</Text>
         <Text style={styles.accountEmail}>{email ?? 'アカウント'}</Text>
-        <Text style={styles.accountNote}>スマホ・iPad・パソコンで進捗とプランが引き継がれます。</Text>
+        <Text style={styles.accountNote}>学習の記録やご購入内容を引き継げます。</Text>
         <TouchableOpacity style={styles.accountLogout} onPress={handleLogout} activeOpacity={0.85}>
           <Text style={styles.accountLogoutText}>ログアウト</Text>
         </TouchableOpacity>
@@ -52,7 +52,7 @@ function AccountCard() {
     <TouchableOpacity style={styles.accountCardCta} onPress={() => router.push('/login')} activeOpacity={0.9}>
       <Text style={styles.accountCtaTitle}>🔑 ログイン / 新規登録</Text>
       <Text style={styles.accountCtaSub}>
-        機種変更・複数端末でも進捗とご購入プランを引き継げます（二重課金防止）
+        ログインすると学習の記録やご購入内容を引き継げます
       </Text>
     </TouchableOpacity>
   );

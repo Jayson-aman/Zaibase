@@ -1214,7 +1214,7 @@ const styles = StyleSheet.create({
 
   // Info card
   topicNote: {
-    color: 'rgba(255,255,255,0.65)',
+    color: '#5B7288',
     fontSize: 13,
     marginHorizontal: 20,
     marginBottom: 10,
@@ -1227,15 +1227,15 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   topicChip: {
-    backgroundColor: 'rgba(255,255,255,0.10)',
+    backgroundColor: '#FFFFFF',
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.20)',
+    borderColor: '#BAE6FD',
     borderRadius: 999,
     paddingHorizontal: 14,
     paddingVertical: 9,
   },
   topicChipText: {
-    color: '#FFFFFF',
+    color: '#0369A1',
     fontSize: 14,
     fontWeight: '700',
   },
