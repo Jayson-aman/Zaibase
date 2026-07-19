@@ -32,6 +32,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/genmei-tennou.jpg'),
     caption: '第43代天皇（女帝）。天智天皇の皇女。710年に平城京へ遷都した',
   },
+  {
+    person: '聖武天皇',
+    image: require('../assets/history-portraits/shomu-tennou.jpg'),
+    caption: '天平年間の災害・疫病（天然痘）を機に仏教に深く帰依し、国分寺建立・東大寺大仏造立を発願した',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
