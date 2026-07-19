@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {
   View,
   Text,
+  Image,
   ScrollView,
   StyleSheet,
   SafeAreaView,
@@ -9,6 +10,7 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { ERAS, EVENTS, type Era } from '../../data/timeline';
+import { getPortraitForPerson } from '../../data/history-portraits';
 
 export default function TimelineScreen() {
   const router = useRouter();
@@ -62,22 +64,35 @@ export default function TimelineScreen() {
           </View>
         </View>
 
-        {events.map((ev, i) => (
-          <View key={i} style={styles.eventRow}>
-            <View style={[styles.eventDot, { backgroundColor: eraInfo.color }]} />
-            <View style={[styles.eventLine, i === events.length - 1 && styles.eventLineHidden, { backgroundColor: eraInfo.color + '44' }]} />
-            <View style={styles.eventCard}>
-              <Text style={[styles.eventYear, { color: eraInfo.color }]}>{ev.year}</Text>
-              {ev.person != null && (
-                <View style={[styles.personChip, { backgroundColor: eraInfo.color + '18', borderColor: eraInfo.color + '55' }]}>
-                  <Text style={[styles.personChipText, { color: eraInfo.color }]}>👤 {ev.person}</Text>
+        {events.map((ev, i) => {
+          const portrait = getPortraitForPerson(ev.person);
+          return (
+            <View key={i} style={styles.eventRow}>
+              <View style={[styles.eventDot, { backgroundColor: eraInfo.color }]} />
+              <View style={[styles.eventLine, i === events.length - 1 && styles.eventLineHidden, { backgroundColor: eraInfo.color + '44' }]} />
+              <View style={styles.eventCard}>
+                <View style={styles.eventCardInner}>
+                  <View style={{ flex: 1 }}>
+                    <Text style={[styles.eventYear, { color: eraInfo.color }]}>{ev.year}</Text>
+                    {ev.person != null && (
+                      <View style={[styles.personChip, { backgroundColor: eraInfo.color + '18', borderColor: eraInfo.color + '55' }]}>
+                        <Text style={[styles.personChipText, { color: eraInfo.color }]}>👤 {ev.person}</Text>
+                      </View>
+                    )}
+                    <Text style={styles.eventTitle}>{ev.event}</Text>
+                    <Text style={styles.eventNote}>{ev.note}</Text>
+                  </View>
+                  {portrait != null && (
+                    <Image source={portrait.image} style={styles.portraitImage} resizeMode="cover" />
+                  )}
                 </View>
-              )}
-              <Text style={styles.eventTitle}>{ev.event}</Text>
-              <Text style={styles.eventNote}>{ev.note}</Text>
+                {portrait?.caption != null && (
+                  <Text style={styles.portraitCaption}>🖼 {portrait.caption}</Text>
+                )}
+              </View>
             </View>
-          </View>
-        ))}
+          );
+        })}
 
         <View style={{ height: 40 }} />
       </ScrollView>
@@ -162,6 +177,15 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 2,
   },
+  eventCardInner: { flexDirection: 'row', alignItems: 'flex-start', gap: 12 },
+  portraitImage: {
+    width: 64,
+    height: 84,
+    borderRadius: 8,
+    backgroundColor: '#F0F3F7',
+    flexShrink: 0,
+  },
+  portraitCaption: { fontSize: 11, color: '#94A3B8', marginTop: 8, fontStyle: 'italic' },
   eventYear: { fontSize: 12, fontWeight: '800', marginBottom: 4 },
   personChip: {
     alignSelf: 'flex-start',
