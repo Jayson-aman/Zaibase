@@ -13,7 +13,9 @@ import { useRouter } from 'expo-router';
 import {
   admissionSchools,
   admissionSearchUrl,
+  LEVELS,
   type SchoolExamType,
+  type SchoolLevel,
 } from '../data/admissions';
 
 const YEARS = ['2027年度', '2026年度', '2028年度'];
@@ -21,11 +23,13 @@ const YEARS = ['2027年度', '2026年度', '2028年度'];
 export default function AdmissionsScreen() {
   const router = useRouter();
   const [type, setType] = useState<SchoolExamType>('chugaku');
+  const [level, setLevel] = useState<SchoolLevel | 'all'>('all');
   const [year, setYear] = useState('2027年度');
   const [query, setQuery] = useState('');
 
   const list = admissionSchools
     .filter((s) => s.type === type)
+    .filter((s) => (level === 'all' ? true : (s.level ?? 'top') === level))
     .filter((s) =>
       query.trim() === ''
         ? true
@@ -66,6 +70,26 @@ export default function AdmissionsScreen() {
         </TouchableOpacity>
       </View>
 
+      <View style={styles.levelRow}>
+        <TouchableOpacity
+          style={[styles.levelChip, level === 'all' && styles.levelChipActive]}
+          onPress={() => setLevel('all')}
+          activeOpacity={0.85}
+        >
+          <Text style={[styles.levelText, level === 'all' && styles.levelTextActive]}>すべて</Text>
+        </TouchableOpacity>
+        {LEVELS.map((l) => (
+          <TouchableOpacity
+            key={l.key}
+            style={[styles.levelChip, level === l.key && styles.levelChipActive]}
+            onPress={() => setLevel(l.key)}
+            activeOpacity={0.85}
+          >
+            <Text style={[styles.levelText, level === l.key && styles.levelTextActive]}>{l.label}</Text>
+          </TouchableOpacity>
+        ))}
+      </View>
+
       <View style={styles.yearRow}>
         {YEARS.map((y) => (
           <TouchableOpacity
@@ -99,7 +123,14 @@ export default function AdmissionsScreen() {
               onPress={() => Linking.openURL(admissionSearchUrl(s, year))}
             >
               <View style={styles.cardBody}>
-                <Text style={styles.schoolName}>{s.name}</Text>
+                <View style={styles.schoolNameRow}>
+                  <Text style={styles.schoolName}>{s.name}</Text>
+                  <View style={[styles.levelBadge, (s.level ?? 'top') === 'standard' && styles.levelBadgeStandard]}>
+                    <Text style={[styles.levelBadgeText, (s.level ?? 'top') === 'standard' && styles.levelBadgeTextStandard]}>
+                      {(s.level ?? 'top') === 'standard' ? '標準' : '難関'}
+                    </Text>
+                  </View>
+                </View>
                 <Text style={styles.schoolMeta}>
                   {s.prefecture}・{s.region}
                   {s.note ? `・${s.note}` : ''}
@@ -133,6 +164,11 @@ const styles = StyleSheet.create({
   tabActiveHs: { backgroundColor: '#7C3AED' },
   tabText: { fontSize: 15, fontWeight: '700', color: '#475569' },
   tabTextActive: { color: '#fff' },
+  levelRow: { flexDirection: 'row', gap: 8, paddingHorizontal: 16, marginTop: 12 },
+  levelChip: { flex: 1, paddingVertical: 8, borderRadius: 999, backgroundColor: '#fff', borderWidth: 1, borderColor: '#CBD5E1', alignItems: 'center' },
+  levelChipActive: { backgroundColor: '#0369A1', borderColor: '#0369A1' },
+  levelText: { fontSize: 13, fontWeight: '700', color: '#475569' },
+  levelTextActive: { color: '#fff' },
   yearRow: { flexDirection: 'row', gap: 8, paddingHorizontal: 16, marginTop: 10 },
   yearChip: { paddingVertical: 7, paddingHorizontal: 14, borderRadius: 999, backgroundColor: '#fff', borderWidth: 1, borderColor: '#CBD5E1' },
   yearChipActive: { backgroundColor: '#0369A1', borderColor: '#0369A1' },
@@ -166,7 +202,12 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   cardBody: { flex: 1 },
+  schoolNameRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   schoolName: { fontSize: 16, fontWeight: '700', color: '#0F172A' },
+  levelBadge: { paddingHorizontal: 8, paddingVertical: 2, borderRadius: 999, backgroundColor: '#FEF3C7' },
+  levelBadgeStandard: { backgroundColor: '#DBEAFE' },
+  levelBadgeText: { fontSize: 11, fontWeight: '800', color: '#92400E' },
+  levelBadgeTextStandard: { color: '#1D4ED8' },
   schoolMeta: { fontSize: 12, color: '#64748B', marginTop: 3 },
   cardLink: { fontSize: 13, color: '#0369A1', fontWeight: '800' },
   footNote: { fontSize: 12, color: '#64748B', marginTop: 8, lineHeight: 18 },

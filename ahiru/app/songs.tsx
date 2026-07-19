@@ -7,8 +7,9 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import { useRouter } from 'expo-router';
+import { useLocalSearchParams, useRouter } from 'expo-router';
 import { songs, type SongCategory } from '../data/songs';
+import { ERAS, type Era } from '../data/timeline';
 
 const CATEGORIES: { key: SongCategory; emoji: string; color: string }[] = [
   { key: '地理', emoji: '🗾', color: '#F59E0B' },
@@ -18,8 +19,16 @@ const CATEGORIES: { key: SongCategory; emoji: string; color: string }[] = [
 
 export default function SongsScreen() {
   const router = useRouter();
-  const [cat, setCat] = useState<SongCategory>('地理');
-  const list = songs.filter((s) => s.category === cat);
+  const params = useLocalSearchParams<{ tab?: string; era?: string }>();
+  const initialCat = (params.tab as SongCategory) ?? '地理';
+  const [cat, setCat] = useState<SongCategory>(
+    CATEGORIES.some((c) => c.key === initialCat) ? initialCat : '地理',
+  );
+  const initialEra = ERAS.some((e) => e.key === params.era) ? (params.era as Era) : null;
+  const [eraFilter, setEraFilter] = useState<Era | null>(initialEra);
+  const list = songs
+    .filter((s) => s.category === cat)
+    .filter((s) => (cat === '歴史' && eraFilter != null ? s.era === eraFilter : true));
   const catColor = CATEGORIES.find((c) => c.key === cat)?.color ?? '#F59E0B';
 
   return (
@@ -51,14 +60,50 @@ export default function SongsScreen() {
         })}
       </View>
 
+      {cat === '歴史' && (
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          style={styles.eraRow}
+          contentContainerStyle={styles.eraRowContent}
+        >
+          <TouchableOpacity
+            style={[styles.eraChip, eraFilter == null && styles.eraChipActive]}
+            onPress={() => setEraFilter(null)}
+            activeOpacity={0.85}
+          >
+            <Text style={[styles.eraChipText, eraFilter == null && styles.eraChipTextActive]}>すべて</Text>
+          </TouchableOpacity>
+          {ERAS.map((e) => (
+            <TouchableOpacity
+              key={e.key}
+              style={[styles.eraChip, eraFilter === e.key && { backgroundColor: e.color, borderColor: e.color }]}
+              onPress={() => setEraFilter(e.key)}
+              activeOpacity={0.85}
+            >
+              <Text style={[styles.eraChipText, eraFilter === e.key && styles.eraChipTextActive]} numberOfLines={1}>
+                {e.emoji} {e.key}
+              </Text>
+            </TouchableOpacity>
+          ))}
+        </ScrollView>
+      )}
+
       <ScrollView contentContainerStyle={styles.scroll}>
         {list.length === 0 ? (
           <Text style={styles.empty}>準備中です。もうすぐ追加されます。</Text>
         ) : (
           list.map((s) => (
             <View key={s.id} style={styles.card}>
-              <View style={[styles.melodyChip, { backgroundColor: catColor + '22', borderColor: catColor + '66' }]}>
-                <Text style={[styles.melodyText, { color: catColor }]}>♪ メロディ：{s.melody}</Text>
+              <View style={styles.chipRow}>
+                <View style={[styles.melodyChip, { backgroundColor: catColor + '22', borderColor: catColor + '66' }]}>
+                  <Text style={[styles.melodyText, { color: catColor }]}>♪ メロディ：{s.melody}</Text>
+                </View>
+                {s.era != null && (
+                  <View style={[styles.melodyChip, { backgroundColor: catColor + '22', borderColor: catColor + '66' }]}>
+                    <Text style={[styles.melodyText, { color: catColor }]}>🕰 {s.era}</Text>
+                  </View>
+                )}
               </View>
               <Text style={styles.songTitle}>{s.title}</Text>
               <Text style={styles.lyrics}>{s.lyrics}</Text>
@@ -92,6 +137,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   tabText: { fontSize: 15, fontWeight: '700', color: '#92400E' },
+  eraRow: { flexGrow: 0, marginBottom: 8 },
+  eraRowContent: { paddingHorizontal: 16, gap: 8 },
+  eraChip: {
+    paddingHorizontal: 12,
+    paddingVertical: 7,
+    borderRadius: 999,
+    backgroundColor: '#fff',
+    borderWidth: 1,
+    borderColor: '#FDE68A',
+  },
+  eraChipActive: { backgroundColor: '#92400E', borderColor: '#92400E' },
+  eraChipText: { fontSize: 12, fontWeight: '700', color: '#92400E' },
+  eraChipTextActive: { color: '#fff' },
+  chipRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 10 },
   tabTextActive: { color: '#fff' },
   scroll: { padding: 16 },
   empty: { textAlign: 'center', color: '#B45309', marginTop: 40, fontSize: 15 },
