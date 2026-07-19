@@ -52,6 +52,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/fujiwara-no-michinaga.jpg'),
     caption: '藤原兼家の五男。1016年に摂政となり、摂関政治の全盛期を築いた',
   },
+  {
+    person: '白河上皇',
+    image: require('../assets/history-portraits/shirakawa-tennou.jpg'),
+    caption: '第72代天皇（白河天皇）。譲位後の1086年に院政を始めた',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
