@@ -47,6 +47,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/sugawara-no-michizane.jpg'),
     caption: '平安前期の学者・政治家。894年に遣唐使の廃止を建議した',
   },
+  {
+    person: '藤原道長',
+    image: require('../assets/history-portraits/fujiwara-no-michinaga.jpg'),
+    caption: '藤原兼家の五男。1016年に摂政となり、摂関政治の全盛期を築いた',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
