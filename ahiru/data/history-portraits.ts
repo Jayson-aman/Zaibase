@@ -37,6 +37,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/shomu-tennou.jpg'),
     caption: '天平年間の災害・疫病（天然痘）を機に仏教に深く帰依し、国分寺建立・東大寺大仏造立を発願した',
   },
+  {
+    person: '桓武天皇',
+    image: require('../assets/history-portraits/kanmu-tennou.jpg'),
+    caption: '光仁天皇の子（山部親王）。794年に平安京へ遷都した',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
