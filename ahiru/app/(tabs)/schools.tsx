@@ -132,6 +132,15 @@ export default function SchoolsScreen() {
           <Text style={styles.headerSub}>目標校を選んで本番レベルの問題を解こう</Text>
         </View>
 
+        <TouchableOpacity
+          style={styles.admissionCta}
+          activeOpacity={0.9}
+          onPress={() => router.push('/admissions')}
+        >
+          <Text style={styles.admissionCtaTitle}>📋 募集要項を調べる</Text>
+          <Text style={styles.admissionCtaSub}>全国の中学・高校の公式募集要項を年度別に検索 →</Text>
+        </TouchableOpacity>
+
         {SCHOOL_GROUPS.map((group) => (
           <View key={group.label} style={styles.group}>
             <View style={styles.groupHeader}>
@@ -204,6 +213,15 @@ const styles = StyleSheet.create({
     color: D.soft,
     fontSize: 13,
   },
+  admissionCta: {
+    backgroundColor: '#0EA5E9',
+    borderRadius: 14,
+    padding: 16,
+    marginHorizontal: 16,
+    marginBottom: 18,
+  },
+  admissionCtaTitle: { color: '#fff', fontSize: 16, fontWeight: '800' },
+  admissionCtaSub: { color: 'rgba(255,255,255,0.9)', fontSize: 12, marginTop: 4 },
   group: {
     marginBottom: 24,
   },
