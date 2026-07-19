@@ -188,6 +188,7 @@ import type { SubjectKey } from './questions-meta';
 import { kokugoChoubunChugaku } from './kokugo_choubun_chugaku';
 import { eigoChoubunChugaku } from './eigo_choubun_chugaku';
 import { kokoRikaExpand1 } from './koko_rika_expand_1';
+import { kokoShakaiExpand1 } from './koko_shakai_expand_1';
 import { kokugoChoubunKoko } from './kokugo_choubun_koko';
 import { kokugoChoubunChugaku2 } from './kokugo_choubun_chugaku_2';
 import { kokugoChoubunKoko2 } from './kokugo_choubun_koko_2';
@@ -3043,6 +3044,7 @@ export const questions: Question[] = [
   ...kokugoChoubunChugaku,
   ...eigoChoubunChugaku,
   ...kokoRikaExpand1,
+  ...kokoShakaiExpand1,
   ...kokugoChoubunKoko,
   ...kokugoChoubunChugaku2,
   ...kokugoChoubunKoko2,
