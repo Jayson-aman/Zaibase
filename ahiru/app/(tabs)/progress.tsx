@@ -353,7 +353,7 @@ export default function ProgressScreen() {
 
         {/* Legal footer */}
         <View style={styles.legalFooter}>
-          <Text style={styles.legalFooterTitle}>Zaibase Group / 中学・高校受験対策 ahiru</Text>
+          <Text style={styles.legalFooterTitle}>Zaibase Group / Zaibase受験</Text>
           <View style={styles.legalLinks}>
             <TouchableOpacity onPress={() => router.push('/terms')} activeOpacity={0.7}>
               <Text style={styles.legalLink}>利用規約</Text>

@@ -70,7 +70,7 @@ export default function LoginScreen() {
             <Text style={styles.closeText}>✕</Text>
           </TouchableOpacity>
 
-          <Text style={styles.logo}>🐤</Text>
+          <Text style={styles.logo}>🎓</Text>
           <Text style={styles.title}>{isSignup ? 'アカウント作成' : 'ログイン'}</Text>
           <Text style={styles.subtitle}>
             アカウントでログインすると、学習の記録やご購入内容を引き継げます。

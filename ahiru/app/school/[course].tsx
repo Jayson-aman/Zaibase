@@ -228,10 +228,10 @@ export default function SchoolCurriculumScreen() {
     });
   }, [course]);
 
-  const pageTitle = `${meta.name}の過去問対策｜中学受験対策 ahiru`;
+  const pageTitle = `${meta.name}の過去問対策｜Zaibase受験`;
   const pageDescription =
     courseInfo?.description ??
-    `${meta.name}（偏差値${meta.hensachi}）の入試問題・過去問を科目別に演習できます。中学受験対策アプリ「ahiru」。`;
+    `${meta.name}（偏差値${meta.hensachi}）の入試問題・過去問を科目別に演習できます。中学受験対策アプリ「Zaibase受験」。`;
 
   return (
     <SafeAreaView style={styles.safe}>
