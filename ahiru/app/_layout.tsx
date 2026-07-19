@@ -40,10 +40,10 @@ export default function RootLayout() {
     <ErrorBoundary>
       {Platform.OS === 'web' && (
         <Head>
-          <title>中学受験対策 ahiru｜5科目7,000問以上・学校別コース対応</title>
+          <title>中学受験・高校受験対策 ahiru｜5科目11,000問以上・学校別コース対応</title>
           <meta
             name="description"
-            content="中学受験・高校受験対策アプリ。5科目7,000問以上・学校別コース対応。志望校の過去問対策・聞き流し学習・AIコーチで効率よく合格を目指す。"
+            content="中学受験・高校受験対策アプリ。5科目11,000問以上・学校別コース対応。志望校の過去問対策・聞き流し学習・AIコーチで効率よく合格を目指す。"
           />
         </Head>
       )}

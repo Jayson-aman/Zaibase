@@ -185,7 +185,7 @@ export default function LandingPage() {
 
             <Text style={styles.heroSub}>
               算数・国語・理科・社会・英語{'\n'}
-              5科目 7,000問以上 × 学校別コース対応{'\n'}
+              5科目 11,000問以上 × 学校別コース対応{'\n'}
               中学受験・高校受験、AI弱点コーチで志望校を目指す。
             </Text>
 
@@ -197,7 +197,7 @@ export default function LandingPage() {
             {/* スタッツ */}
             <View style={[styles.heroStats, glassBlur]}>
               {[
-                { num: '7,000', unit: '問+', label: '問題数' },
+                { num: '11,000', unit: '問+', label: '問題数' },
                 { num: '5', unit: '科目', label: '対応科目' },
                 { num: '3', unit: '段階', label: '難易度' },
                 { num: 'AI', unit: '搭載', label: '弱点分析' },
@@ -263,14 +263,14 @@ export default function LandingPage() {
                 key={s.name}
                 style={[styles.subjectCard, glassBlur]}
                 activeOpacity={0.85}
-                onPress={() => router.push(`/quiz/${s.key}` as any)}
+                onPress={() => router.replace('/(tabs)/' as any)}
               >
                 <View style={[styles.subjectIconCircle, { backgroundColor: s.color + '22', borderColor: s.color + '55' }]}>
                   <Text style={styles.subjectEmoji}>{s.emoji}</Text>
                 </View>
                 <Text style={[styles.subjectName, { color: s.color }]}>{s.name}</Text>
                 <Text style={styles.subjectDesc}>{s.desc}</Text>
-                <Text style={styles.subjectGo}>タップで開始 →</Text>
+                <Text style={styles.subjectGo}>タップして始める →</Text>
               </TouchableOpacity>
             ))}
           </View>

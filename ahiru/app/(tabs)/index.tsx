@@ -269,6 +269,9 @@ export default function HomeScreen() {
 
         {/* Exam type toggle */}
         {!listenPickerActive && (
+          <Text style={styles.stepLabel}>① 受験の種類を選ぶ</Text>
+        )}
+        {!listenPickerActive && (
           <View style={styles.examToggleRow}>
             <TouchableOpacity
               style={[styles.examToggleBtn, examType === 'chugaku' && styles.examToggleBtnActive]}
@@ -294,7 +297,7 @@ export default function HomeScreen() {
         {/* Course selector */}
         {!listenPickerActive && (
           <View style={styles.courseSection}>
-            <Text style={styles.courseSectionLabel}>コースを選ぶ</Text>
+            <Text style={styles.courseSectionLabel}>② レベル・コースを選ぶ</Text>
 
             {/* Sub-tabs: Category / School — only for 中学受験 */}
             {examType === 'chugaku' && (
@@ -559,7 +562,7 @@ export default function HomeScreen() {
         {/* Difficulty selector */}
         {!listenPickerActive && (
           <>
-            <Text style={styles.sectionTitle}>難易度を選ぶ</Text>
+            <Text style={styles.sectionTitle}>③ 難易度（レベル）を選ぶ</Text>
             <View style={styles.difficultyRow}>
               {DIFFICULTY_OPTIONS.map((opt) => {
                 const active = difficulty === opt.key;
@@ -748,6 +751,15 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '700',
     color: D.white,
+    marginBottom: 10,
+  },
+  stepLabel: {
+    fontFamily: SERIF,
+    fontSize: 20,
+    fontWeight: '700',
+    color: D.white,
+    marginHorizontal: 20,
+    marginTop: 8,
     marginBottom: 10,
   },
   courseScroll: {
