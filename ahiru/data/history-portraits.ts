@@ -152,6 +152,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/tokugawa-yoshimune.jpg'),
     caption: '和歌山藩主から江戸幕府第8代将軍に。家康の曽孫で「幕府中興の祖」とも呼ばれ、1716年に享保の改革（目安箱・公事方御定書）を行った',
   },
+  {
+    person: '松平定信',
+    image: require('../assets/history-portraits/matsudaira-sadanobu.jpg'),
+    caption: '陸奥白河藩主、老中。徳川吉宗の孫。1787年に寛政の改革を行った（画像は本人による自画像）',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
