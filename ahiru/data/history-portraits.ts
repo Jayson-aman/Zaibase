@@ -112,6 +112,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/francisco-xavier.jpg'),
     caption: 'カトリック教会の宣教師。1549年、鹿児島に来航し日本に初めてキリスト教を伝えた',
   },
+  {
+    person: '織田信長',
+    image: require('../assets/history-portraits/oda-nobunaga.jpg'),
+    caption: '長興寺蔵の肖像画。戦国の三英傑の一人。1560年桶狭間の戦い・1573年室町幕府滅亡で有名',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
