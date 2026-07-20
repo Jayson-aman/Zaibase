@@ -202,6 +202,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/togo-heihachiro.jpg'),
     caption: '海軍軍人、連合艦隊司令長官。1904年の日露戦争・日本海海戦でバルチック艦隊を破り完勝した（日清戦争でも「浪速」艦長として活躍）',
   },
+  {
+    person: '加藤高明',
+    image: require('../assets/history-portraits/kato-takaaki.jpg'),
+    caption: '外交官出身の政治家、内閣総理大臣。1925年に普通選挙法・治安維持法を成立させた',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
