@@ -107,6 +107,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/hojo-yoshitoki.png'),
     caption: '鎌倉幕府第2代執権。北条政子の弟。1221年、承久の乱で後鳥羽上皇方を破った',
   },
+  {
+    person: 'フランシスコ・ザビエル',
+    image: require('../assets/history-portraits/francisco-xavier.jpg'),
+    caption: 'カトリック教会の宣教師。1549年、鹿児島に来航し日本に初めてキリスト教を伝えた',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
