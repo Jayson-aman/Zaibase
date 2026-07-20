@@ -150,7 +150,7 @@ export const historyPortraits: HistoryPortrait[] = [
   {
     person: '徳川吉宗',
     image: require('../assets/history-portraits/tokugawa-yoshimune.jpg'),
-    caption: '江戸幕府第8代将軍。1716年に享保の改革（目安箱・公事方御定書）を行った',
+    caption: '和歌山藩主から江戸幕府第8代将軍に。家康の曽孫で「幕府中興の祖」とも呼ばれ、1716年に享保の改革（目安箱・公事方御定書）を行った',
   },
 ];
 
