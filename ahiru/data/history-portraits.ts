@@ -122,6 +122,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/imagawa-yoshimoto.jpg'),
     caption: '駿河の戦国大名。1560年、2万5千の大軍で尾張に侵攻するも桶狭間で織田信長に討たれた',
   },
+  {
+    person: '明智光秀',
+    image: require('../assets/history-portraits/akechi-mitsuhide.jpg'),
+    caption: '土岐氏の流れを汲む武将。1582年、本能寺の変で主君・織田信長を討った',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
