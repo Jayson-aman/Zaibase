@@ -96,6 +96,11 @@ export const historyEventImages: HistoryEventImage[] = [
     image: require('../assets/history-portraits/heijokyo-daigokuden.jpg'),
     caption: '平城宮 大極殿・大極門（復元）。当時の宮殿の姿を伝える',
   },
+  {
+    eventMatch: '壇ノ浦の戦い',
+    image: require('../assets/history-portraits/dannoura-battle.jpg'),
+    caption: '壇ノ浦の戦いを描いた合戦図。源氏と平氏の最後の海戦',
+  },
 ];
 
 export function getEventImages(eventText?: string): HistoryEventImage[] {
