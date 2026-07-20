@@ -232,6 +232,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/sakanoue-no-tamuramaro.jpg'),
     caption: '桓武天皇に仕えた武官。797年に征夷大将軍となり、蝦夷を平定するため胆沢城を築いた',
   },
+  {
+    person: '板垣退助',
+    image: require('../assets/history-portraits/itagaki-taisuke.jpg'),
+    caption: '土佐藩士出身の政治家。1874年に民撰議院設立建白書を提出し、自由民権運動を広げた',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
