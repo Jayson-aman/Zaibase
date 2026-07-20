@@ -267,6 +267,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/ono-no-imoko.jpg'),
     caption: '推古天皇の時代の官人。607年、遣隋使として聖徳太子の国書を隋の皇帝に届けた',
   },
+  {
+    person: '鑑真',
+    image: require('../assets/history-portraits/ganjin.jpg'),
+    caption: '唐招提寺の「鑑真和上坐像」。何度も渡航に失敗し失明しながらも753年に来日し、正しい戒律を伝えた',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
