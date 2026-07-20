@@ -337,6 +337,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/chikamatsu-monzaemon.jpg'),
     caption: '人形浄瑠璃・歌舞伎の作者。元禄文化を代表する劇作家として有名',
   },
+  {
+    person: '葛飾北斎',
+    image: require('../assets/history-portraits/katsushika-hokusai.jpg'),
+    caption: '化政文化を代表する浮世絵師（自画像）。「富嶽三十六景」など生涯3万4千点を超える作品を残した',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
