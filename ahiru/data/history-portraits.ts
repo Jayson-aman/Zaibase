@@ -297,6 +297,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/tokugawa-yoshinobu.jpg'),
     caption: '江戸幕府第15代・最後の将軍。1867年に大政奉還を行い、約260年続いた江戸幕府を終わらせた',
   },
+  {
+    person: '岩倉具視',
+    image: require('../assets/history-portraits/iwakura-tomomi.jpg'),
+    caption: '公家出身の政治家。1871〜1873年に岩倉使節団を率いて欧米を視察した',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
