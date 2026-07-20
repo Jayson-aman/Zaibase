@@ -142,6 +142,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/tokugawa-iemitsu.jpg'),
     caption: '江戸幕府第3代将軍。1635年に参勤交代を制度化し、1641年に鎖国を完成させた',
   },
+  {
+    person: '柳生宗矩',
+    image: require('../assets/history-portraits/yagyu-munenori.jpg'),
+    caption: '徳川将軍家の兵法指南役。柳生新陰流を将軍家御流儀とし、1636年に大名となった',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
