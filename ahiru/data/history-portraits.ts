@@ -272,6 +272,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/ganjin.jpg'),
     caption: '唐招提寺の「鑑真和上坐像」。何度も渡航に失敗し失明しながらも753年に来日し、正しい戒律を伝えた',
   },
+  {
+    person: '上杉謙信',
+    image: require('../assets/history-portraits/uesugi-kenshin.png'),
+    caption: '越後の戦国大名（初名は長尾景虎）。1550年代、武田信玄と川中島の戦いを繰り返した',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
@@ -297,6 +302,11 @@ export type HistoryEventImage = {
 };
 
 export const historyEventImages: HistoryEventImage[] = [
+  {
+    eventMatch: '川中島の戦い',
+    image: require('../assets/history-portraits/kawanakajima-statue.jpg'),
+    caption: '川中島古戦場に立つ上杉謙信・武田信玄の一騎討ち像',
+  },
   {
     eventMatch: '東大寺の大仏',
     image: require('../assets/history-portraits/todaiji-daibutsu.jpg'),
