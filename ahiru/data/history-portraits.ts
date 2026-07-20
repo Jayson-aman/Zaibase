@@ -302,6 +302,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/iwakura-tomomi.jpg'),
     caption: '公家出身の政治家。1871〜1873年に岩倉使節団を率いて欧米を視察した',
   },
+  {
+    person: '小村寿太郎',
+    image: require('../assets/history-portraits/komura-jutaro.jpg'),
+    caption: '外交官出身の政治家、外務大臣。1911年に関税自主権を回復し、不平等条約改正を完成させた',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
