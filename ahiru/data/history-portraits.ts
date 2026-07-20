@@ -242,6 +242,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/saicho.jpg'),
     caption: '伝教大師。804年に唐へ渡り、帰国後に比叡山延暦寺を建てて天台宗を開いた',
   },
+  {
+    person: '空海',
+    image: require('../assets/history-portraits/kukai.jpg'),
+    caption: '弘法大師。804年に唐へ渡り、帰国後に高野山金剛峯寺を建てて真言宗を開いた',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
