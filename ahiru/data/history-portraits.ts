@@ -187,6 +187,16 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/okubo-toshimichi.jpg'),
     caption: '旧薩摩藩士。西郷隆盛・木戸孝允と並ぶ「維新の三傑」の一人。1868年の明治維新以降、廃藩置県など中央集権化を主導した',
   },
+  {
+    person: '木戸孝允',
+    image: require('../assets/history-portraits/kido-takayoshi.jpg'),
+    caption: '長州藩士（幕末は桂小五郎と名乗る）。西郷隆盛・大久保利通と並ぶ「維新の三傑」の一人',
+  },
+  {
+    person: '坂本龍馬',
+    image: require('../assets/history-portraits/sakamoto-ryoma.jpg'),
+    caption: '土佐藩の志士。対立していた薩摩藩・長州藩を結ぶ薩長同盟を仲介し、明治維新の土台を作った（1867年に暗殺された）',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
