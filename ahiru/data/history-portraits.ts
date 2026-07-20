@@ -262,6 +262,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/sei-shonagon.jpg'),
     caption: '随筆『枕草子』の作者として有名（伝統的な絵姿）',
   },
+  {
+    person: '小野妹子',
+    image: require('../assets/history-portraits/ono-no-imoko.jpg'),
+    caption: '推古天皇の時代の官人。607年、遣隋使として聖徳太子の国書を隋の皇帝に届けた',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
