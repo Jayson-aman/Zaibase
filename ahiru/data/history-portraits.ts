@@ -292,6 +292,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/oshio-heihachiro.jpg'),
     caption: '大坂町奉行所の元与力・陽明学者。1837年、天保の飢饉で苦しむ人々を救おうと反乱を起こした',
   },
+  {
+    person: '徳川慶喜',
+    image: require('../assets/history-portraits/tokugawa-yoshinobu.jpg'),
+    caption: '江戸幕府第15代・最後の将軍。1867年に大政奉還を行い、約260年続いた江戸幕府を終わらせた',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
