@@ -176,6 +176,16 @@ export const historyEventImages: HistoryEventImage[] = [
     image: require('../assets/history-portraits/kangoufu-tally.jpg'),
     caption: '実際に使われた勘合符。倭寇や密貿易と区別するための証明書',
   },
+  {
+    eventMatch: '桶狭間の戦い',
+    image: require('../assets/history-portraits/okehazama-battle.jpg'),
+    caption: '桶狭間の戦いを描いた浮世絵',
+  },
+  {
+    eventMatch: '桶狭間の戦い',
+    image: require('../assets/history-portraits/okehazama-battlefield-site.jpg'),
+    caption: '桶狭間古戦場（現在の様子）',
+  },
 ];
 
 export function getEventImages(eventText?: string): HistoryEventImage[] {
