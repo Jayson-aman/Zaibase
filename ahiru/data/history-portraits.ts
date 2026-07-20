@@ -282,6 +282,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/takeda-shingen.jpg'),
     caption: '甲斐の戦国大名（初名は晴信）。1550年代、上杉謙信と川中島の戦いを繰り返した',
   },
+  {
+    person: '徳川綱吉',
+    image: require('../assets/history-portraits/tokugawa-tsunayoshi.jpg'),
+    caption: '江戸幕府第5代将軍。1685年に生類憐みの令を出し、湯島聖堂を建てるなど文治政治を進めた',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
