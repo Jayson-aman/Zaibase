@@ -132,6 +132,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/toyotomi-hideyoshi.png'),
     caption: '戦国の三英傑の一人、初代武家関白・太閤。1590年に天下統一を果たした',
   },
+  {
+    person: '徳川家康',
+    image: require('../assets/history-portraits/tokugawa-ieyasu.jpg'),
+    caption: '戦国の三英傑の一人。1600年に関ヶ原の戦いに勝利し、1603年に江戸幕府を開いた',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
