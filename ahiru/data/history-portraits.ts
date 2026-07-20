@@ -317,6 +317,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/tojo-hideki.jpg'),
     caption: '陸軍軍人、首相。1941年に太平洋戦争が始まった（戦後A級戦犯として処刑された）',
   },
+  {
+    person: '田中角栄',
+    image: require('../assets/history-portraits/tanaka-kakuei.jpg'),
+    caption: '「今太閤」と呼ばれた政治家。1972年に日中共同声明で国交を正常化した',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
