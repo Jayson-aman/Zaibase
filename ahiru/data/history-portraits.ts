@@ -257,6 +257,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/murasaki-shikibu.jpg'),
     caption: '一条天皇の中宮彰子に仕えた女房。『源氏物語』の作者として有名（伝統的な絵姿）',
   },
+  {
+    person: '清少納言',
+    image: require('../assets/history-portraits/sei-shonagon.jpg'),
+    caption: '随筆『枕草子』の作者として有名（伝統的な絵姿）',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
