@@ -162,6 +162,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/mizuno-tadakuni.jpg'),
     caption: '肥前唐津藩主、のち遠江浜松藩主。江戸幕府老中。1841年に天保の改革を行った',
   },
+  {
+    person: 'ペリー',
+    image: require('../assets/history-portraits/matthew-perry.png'),
+    caption: 'アメリカ海軍提督マシュー・ペリー。1853年、黒船4隻で浦賀に来航した',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
@@ -230,6 +235,11 @@ export const historyEventImages: HistoryEventImage[] = [
     eventMatch: '本能寺の変',
     image: require('../assets/history-portraits/honnoji-no-hen.jpg'),
     caption: '本能寺の変を描いた浮世絵',
+  },
+  {
+    eventMatch: '浦賀に来航',
+    image: require('../assets/history-portraits/perry-kurihama-landing.jpg'),
+    caption: 'ペリー一行の久里浜上陸の様子を描いた版画',
   },
 ];
 
