@@ -187,9 +187,10 @@ export function getPortraitsForPerson(personField?: string): HistoryPortrait[] {
 }
 
 // できごと自体を写した写真（人物の肖像ではない：建造物・仏像など）。
-// timeline.ts の event 文字列に部分一致するもの。
+// timeline.ts の event または note 文字列に部分一致するもの
+// （呼び出し側は `${ev.event} ${ev.note}` を渡す）。
 export type HistoryEventImage = {
-  /** timeline.ts の event 文字列に含まれる部分文字列 */
+  /** timeline.ts の event または note 文字列に含まれる部分文字列 */
   eventMatch: string;
   image: ImageSourcePropType;
   caption?: string;
@@ -245,6 +246,11 @@ export const historyEventImages: HistoryEventImage[] = [
     eventMatch: '浦賀に来航',
     image: require('../assets/history-portraits/perry-kurihama-landing.jpg'),
     caption: 'ペリー一行の久里浜上陸の様子を描いた版画',
+  },
+  {
+    eventMatch: '桜田門外の変',
+    image: require('../assets/history-portraits/sakuradamon-gaihen.webp'),
+    caption: '桜田門外の変を描いた錦絵。井伊直弼が暗殺された事件',
   },
 ];
 

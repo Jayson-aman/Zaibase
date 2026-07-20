@@ -66,7 +66,7 @@ export default function TimelineScreen() {
 
         {events.map((ev, i) => {
           const portraits = getPortraitsForPerson(ev.person);
-          const eventImages = getEventImages(ev.event);
+          const eventImages = getEventImages(`${ev.event} ${ev.note}`);
           const images = [
             ...portraits.map((p) => ({ key: `person-${p.person}`, image: p.image, label: p.person, caption: p.caption })),
             ...eventImages.map((e, idx) => ({ key: `event-${e.eventMatch}-${idx}`, image: e.image, label: null, caption: e.caption })),
