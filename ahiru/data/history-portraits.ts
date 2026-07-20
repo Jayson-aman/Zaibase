@@ -207,6 +207,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/kato-takaaki.jpg'),
     caption: '外交官出身の政治家、内閣総理大臣。1925年に普通選挙法・治安維持法を成立させた',
   },
+  {
+    person: '明治天皇',
+    image: require('../assets/history-portraits/meiji-tennou.jpg'),
+    caption: '第122代天皇。倒幕・明治維新の象徴として近代日本を指導し、「大帝」とも称えられた',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
