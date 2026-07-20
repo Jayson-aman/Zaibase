@@ -177,6 +177,16 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/saigo-takamori.jpg'),
     caption: '薩摩藩の下級藩士出身。1877年に西南戦争を起こした（本人の実際の写真は現存せず、これはイタリア人画家キヨッソーネが1883年に親族の証言などをもとに描いた合成画）',
   },
+  {
+    person: '伊藤博文',
+    image: require('../assets/history-portraits/ito-hirobumi.jpg'),
+    caption: '明治時代の政治家、初代内閣総理大臣。1889年に大日本帝国憲法の制定を主導した',
+  },
+  {
+    person: '大久保利通',
+    image: require('../assets/history-portraits/okubo-toshimichi.jpg'),
+    caption: '旧薩摩藩士。西郷隆盛・木戸孝允と並ぶ「維新の三傑」の一人。1868年の明治維新以降、廃藩置県など中央集権化を主導した',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
