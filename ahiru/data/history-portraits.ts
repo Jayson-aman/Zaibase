@@ -277,6 +277,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/uesugi-kenshin.png'),
     caption: '越後の戦国大名（初名は長尾景虎）。1550年代、武田信玄と川中島の戦いを繰り返した',
   },
+  {
+    person: '武田信玄',
+    image: require('../assets/history-portraits/takeda-shingen.jpg'),
+    caption: '甲斐の戦国大名（初名は晴信）。1550年代、上杉謙信と川中島の戦いを繰り返した',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
