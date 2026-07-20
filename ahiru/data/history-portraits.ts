@@ -126,6 +126,11 @@ export const historyEventImages: HistoryEventImage[] = [
     image: require('../assets/history-portraits/jokyu-no-ran.jpg'),
     caption: '承久の乱を描いた合戦図。後鳥羽上皇方と鎌倉幕府方が戦った',
   },
+  {
+    eventMatch: '元寇',
+    image: require('../assets/history-portraits/genko-mongol-invasion.jpg'),
+    caption: '「蒙古襲来絵詞」。元軍と戦う日本の武士を描いた絵巻',
+  },
 ];
 
 export function getEventImages(eventText?: string): HistoryEventImage[] {
