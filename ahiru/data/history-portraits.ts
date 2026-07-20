@@ -222,6 +222,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/naruhito-tennou.jpg'),
     caption: '第126代天皇。2019年5月1日に即位し、令和の時代が始まった',
   },
+  {
+    person: '平清盛',
+    image: require('../assets/history-portraits/taira-no-kiyomori.jpg'),
+    caption: '桓武天皇の子孫、平氏の棟梁。1167年に武士として初めて太政大臣になった',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
