@@ -191,6 +191,11 @@ export const historyEventImages: HistoryEventImage[] = [
     image: require('../assets/history-portraits/okehazama-battlefield-site.jpg'),
     caption: '桶狭間古戦場（現在の様子）',
   },
+  {
+    eventMatch: '本能寺の変',
+    image: require('../assets/history-portraits/honnoji-no-hen.jpg'),
+    caption: '本能寺の変を描いた浮世絵',
+  },
 ];
 
 export function getEventImages(eventText?: string): HistoryEventImage[] {
