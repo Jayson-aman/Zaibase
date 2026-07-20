@@ -322,6 +322,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/tanaka-kakuei.jpg'),
     caption: '「今太閤」と呼ばれた政治家。1972年に日中共同声明で国交を正常化した',
   },
+  {
+    person: '井原西鶴',
+    image: require('../assets/history-portraits/ihara-saikaku.png'),
+    caption: '大坂の浮世草子作者、俳諧師。元禄文化を代表する町人文学を生み出した',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
