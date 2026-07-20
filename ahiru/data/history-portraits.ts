@@ -151,6 +151,11 @@ export const historyEventImages: HistoryEventImage[] = [
     image: require('../assets/history-portraits/genko-mongol-invasion.jpg'),
     caption: '「蒙古襲来絵詞」。元軍と戦う日本の武士を描いた絵巻',
   },
+  {
+    eventMatch: '日明貿易',
+    image: require('../assets/history-portraits/kangoufu-tally.jpg'),
+    caption: '実際に使われた勘合符。倭寇や密貿易と区別するための証明書',
+  },
 ];
 
 export function getEventImages(eventText?: string): HistoryEventImage[] {
