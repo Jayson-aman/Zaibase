@@ -62,6 +62,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/minamoto-no-yoshitsune.jpg'),
     caption: '源頼朝の異母弟。1185年、壇ノ浦の戦いで平氏を滅ぼした',
   },
+  {
+    person: '源頼朝',
+    image: require('../assets/history-portraits/minamoto-no-yoritomo.jpg'),
+    caption: '「神護寺三像」の一つと伝わる肖像画。1192年に征夷大将軍となり鎌倉幕府を開いた（本人かは学説上の議論もある）',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
