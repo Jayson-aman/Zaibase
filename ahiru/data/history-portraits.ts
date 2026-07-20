@@ -197,6 +197,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/sakamoto-ryoma.jpg'),
     caption: '土佐藩の志士。対立していた薩摩藩・長州藩を結ぶ薩長同盟を仲介し、明治維新の土台を作った（1867年に暗殺された）',
   },
+  {
+    person: '東郷平八郎',
+    image: require('../assets/history-portraits/togo-heihachiro.jpg'),
+    caption: '海軍軍人、連合艦隊司令長官。1904年の日露戦争・日本海海戦でバルチック艦隊を破り完勝した（日清戦争でも「浪速」艦長として活躍）',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
