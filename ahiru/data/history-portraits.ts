@@ -332,6 +332,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/matsuo-basho.jpg'),
     caption: '俳聖と称される俳諧師。弟子の河合曾良と旅した紀行文『おくのほそ道』が有名',
   },
+  {
+    person: '近松門左衛門',
+    image: require('../assets/history-portraits/chikamatsu-monzaemon.jpg'),
+    caption: '人形浄瑠璃・歌舞伎の作者。元禄文化を代表する劇作家として有名',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
