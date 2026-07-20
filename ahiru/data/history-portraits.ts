@@ -87,6 +87,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/godaigo-tennou.jpg'),
     caption: '第96代天皇。1333年、倒幕運動により鎌倉幕府を滅ぼした',
   },
+  {
+    person: '楠木正成',
+    image: require('../assets/history-portraits/kusunoki-masashige.jpg'),
+    caption: '鎌倉時代末期の武将。後醍醐天皇に味方し、ゲリラ戦で幕府軍を苦しめた',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
