@@ -167,6 +167,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/matthew-perry.png'),
     caption: 'アメリカ海軍提督マシュー・ペリー。1853年、黒船4隻で浦賀に来航した',
   },
+  {
+    person: '井伊直弼',
+    image: require('../assets/history-portraits/ii-naosuke.jpg'),
+    caption: '近江彦根藩主、江戸幕府大老。1858年に日米修好通商条約に調印し、安政の大獄で反対派を弾圧、翌々年の桜田門外の変で暗殺された',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
