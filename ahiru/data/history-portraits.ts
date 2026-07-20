@@ -382,6 +382,11 @@ export const historyEventImages: HistoryEventImage[] = [
     image: require('../assets/history-portraits/sakuradamon-gaihen.webp'),
     caption: '桜田門外の変を描いた錦絵。井伊直弼が暗殺された事件',
   },
+  {
+    eventMatch: '大政奉還',
+    image: require('../assets/history-portraits/nijojo-ninomaru-goten.jpg'),
+    caption: '二条城 二の丸御殿。徳川慶喜が大政奉還を表明した場所として有名',
+  },
 ];
 
 export function getEventImages(eventText?: string): HistoryEventImage[] {
