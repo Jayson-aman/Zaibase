@@ -82,6 +82,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/kublai-khan.jpg'),
     caption: '元（モンゴル帝国）の皇帝。1274年・1281年の2度、日本に元寇を仕掛けた',
   },
+  {
+    person: '後醍醐天皇',
+    image: require('../assets/history-portraits/godaigo-tennou.jpg'),
+    caption: '第96代天皇。1333年、倒幕運動により鎌倉幕府を滅ぼした',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
