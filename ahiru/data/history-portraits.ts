@@ -327,6 +327,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/ihara-saikaku.png'),
     caption: '大坂の浮世草子作者、俳諧師。元禄文化を代表する町人文学を生み出した',
   },
+  {
+    person: '松尾芭蕉',
+    image: require('../assets/history-portraits/matsuo-basho.jpg'),
+    caption: '俳聖と称される俳諧師。弟子の河合曾良と旅した紀行文『おくのほそ道』が有名',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
