@@ -72,6 +72,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/gotoba-jokou.jpg'),
     caption: '新古今和歌集の編纂でも知られる。1221年、承久の乱で北条義時追討の兵を挙げるも敗れ隠岐に配流された',
   },
+  {
+    person: '北条泰時',
+    image: require('../assets/history-portraits/hojo-yasutoki.jpg'),
+    caption: '鎌倉幕府第3代執権。1232年、武家法の基本となる御成敗式目を制定した',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
