@@ -172,6 +172,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/ii-naosuke.jpg'),
     caption: '近江彦根藩主、江戸幕府大老。1858年に日米修好通商条約に調印し、安政の大獄で反対派を弾圧、翌々年の桜田門外の変で暗殺された',
   },
+  {
+    person: '西郷隆盛',
+    image: require('../assets/history-portraits/saigo-takamori.jpg'),
+    caption: '薩摩藩の下級藩士出身。1877年に西南戦争を起こした（本人の実際の写真は現存せず、これはイタリア人画家キヨッソーネが1883年に親族の証言などをもとに描いた合成画）',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
