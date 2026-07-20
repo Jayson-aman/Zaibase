@@ -383,7 +383,6 @@ export default function LandingPage() {
               '✓ 無料プランの全機能',
               '✓ 聞き流しモード（全5科目）',
               '✓ 地理マップ全レイヤー',
-              '✓ 歴史イラスト・合戦シーン',
               '✓ 動く図解・アニメ解説',
             ].map((f) => (
               <Text key={f} style={[styles.planFeature, { color: '#D4AAFF' }]}>{f}</Text>
