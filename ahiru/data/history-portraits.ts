@@ -312,6 +312,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/hara-takashi.jpg'),
     caption: '「平民宰相」と呼ばれた政治家。1918年に本格的な政党内閣を組織した（1921年に東京駅で暗殺された）',
   },
+  {
+    person: '東条英機',
+    image: require('../assets/history-portraits/tojo-hideki.jpg'),
+    caption: '陸軍軍人、首相。1941年に太平洋戦争が始まった（戦後A級戦犯として処刑された）',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
