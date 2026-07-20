@@ -117,6 +117,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/oda-nobunaga.jpg'),
     caption: '長興寺蔵の肖像画。戦国の三英傑の一人。1560年桶狭間の戦い・1573年室町幕府滅亡で有名',
   },
+  {
+    person: '今川義元',
+    image: require('../assets/history-portraits/imagawa-yoshimoto.jpg'),
+    caption: '駿河の戦国大名。1560年、2万5千の大軍で尾張に侵攻するも桶狭間で織田信長に討たれた',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
