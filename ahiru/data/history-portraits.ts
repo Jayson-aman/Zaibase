@@ -67,6 +67,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/minamoto-no-yoritomo.jpg'),
     caption: '「神護寺三像」の一つと伝わる肖像画。1192年に征夷大将軍となり鎌倉幕府を開いた（本人かは学説上の議論もある）',
   },
+  {
+    person: '後鳥羽上皇',
+    image: require('../assets/history-portraits/gotoba-jokou.jpg'),
+    caption: '新古今和歌集の編纂でも知られる。1221年、承久の乱で北条義時追討の兵を挙げるも敗れ隠岐に配流された',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
