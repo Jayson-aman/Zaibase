@@ -92,6 +92,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/kusunoki-masashige.jpg'),
     caption: '鎌倉時代末期の武将。後醍醐天皇に味方し、ゲリラ戦で幕府軍を苦しめた',
   },
+  {
+    person: '足利尊氏',
+    image: require('../assets/history-portraits/ashikaga-takauji.jpg'),
+    caption: '有名な「騎馬武者像」。1338年に室町幕府を開いた（近年は高師直を描いたものとの説もある）',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
