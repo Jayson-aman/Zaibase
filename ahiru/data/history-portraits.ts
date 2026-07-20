@@ -252,6 +252,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/fujiwara-no-sumitomo.jpg'),
     caption: '後世の歌舞伎風の絵に描かれた藤原純友。939〜941年に瀬戸内海で反乱を起こした',
   },
+  {
+    person: '紫式部',
+    image: require('../assets/history-portraits/murasaki-shikibu.jpg'),
+    caption: '一条天皇の中宮彰子に仕えた女房。『源氏物語』の作者として有名（伝統的な絵姿）',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
