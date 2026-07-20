@@ -157,6 +157,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/matsudaira-sadanobu.jpg'),
     caption: '陸奥白河藩主、老中。徳川吉宗の孫。1787年に寛政の改革を行った（画像は本人による自画像）',
   },
+  {
+    person: '水野忠邦',
+    image: require('../assets/history-portraits/mizuno-tadakuni.jpg'),
+    caption: '肥前唐津藩主、のち遠江浜松藩主。江戸幕府老中。1841年に天保の改革を行った',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
