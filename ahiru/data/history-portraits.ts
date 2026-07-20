@@ -307,6 +307,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/komura-jutaro.jpg'),
     caption: '外交官出身の政治家、外務大臣。1911年に関税自主権を回復し、不平等条約改正を完成させた',
   },
+  {
+    person: '原敬',
+    image: require('../assets/history-portraits/hara-takashi.jpg'),
+    caption: '「平民宰相」と呼ばれた政治家。1918年に本格的な政党内閣を組織した（1921年に東京駅で暗殺された）',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
