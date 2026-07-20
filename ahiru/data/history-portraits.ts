@@ -227,6 +227,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/taira-no-kiyomori.jpg'),
     caption: '桓武天皇の子孫、平氏の棟梁。1167年に武士として初めて太政大臣になった',
   },
+  {
+    person: '坂上田村麻呂',
+    image: require('../assets/history-portraits/sakanoue-no-tamuramaro.jpg'),
+    caption: '桓武天皇に仕えた武官。797年に征夷大将軍となり、蝦夷を平定するため胆沢城を築いた',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
