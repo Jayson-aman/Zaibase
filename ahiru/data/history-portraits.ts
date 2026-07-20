@@ -97,6 +97,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/ashikaga-takauji.jpg'),
     caption: '有名な「騎馬武者像」。1338年に室町幕府を開いた（近年は高師直を描いたものとの説もある）',
   },
+  {
+    person: '足利義満',
+    image: require('../assets/history-portraits/ashikaga-yoshimitsu.jpg'),
+    caption: '足利尊氏の孫、室町幕府第3代将軍。1404年に日明貿易（勘合貿易）を始めた',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
