@@ -217,6 +217,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/yoshida-shigeru.jpg'),
     caption: '外交官出身の政治家、内閣総理大臣（第45・48〜51代）。1951年にサンフランシスコ平和条約に調印し独立を回復した',
   },
+  {
+    person: '徳仁天皇',
+    image: require('../assets/history-portraits/naruhito-tennou.jpg'),
+    caption: '第126代天皇。2019年5月1日に即位し、令和の時代が始まった',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
