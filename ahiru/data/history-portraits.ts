@@ -212,6 +212,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/meiji-tennou.jpg'),
     caption: '第122代天皇。倒幕・明治維新の象徴として近代日本を指導し、「大帝」とも称えられた',
   },
+  {
+    person: '吉田茂',
+    image: require('../assets/history-portraits/yoshida-shigeru.jpg'),
+    caption: '外交官出身の政治家、内閣総理大臣（第45・48〜51代）。1951年にサンフランシスコ平和条約に調印し独立を回復した',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
