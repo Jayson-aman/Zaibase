@@ -87,7 +87,7 @@ const SCHOOL_GROUPS: SchoolGroup[] = [
       { key: 'tokyo-aoyama',    name: '青山学院',      emoji: '🌿', hensachi: '58〜64', gender: '共学', tier: 'max' },
       { key: 'tokyo-chuo',      name: '中央大学附属',  emoji: '🏫', hensachi: '57〜62', gender: '共学', tier: 'max' },
       { key: 'tokyo-hosei',     name: '法政大学第二',  emoji: '⚖️', hensachi: '56〜60', gender: '共学', tier: 'max' },
-      { key: 'tokyo-gakushiin', name: '学習院',        emoji: '👑', hensachi: '54〜58', gender: '共学', tier: 'max' },
+      { key: 'tokyo-gakushuin', name: '学習院',        emoji: '👑', hensachi: '54〜58', gender: '共学', tier: 'max' },
     ],
   },
   {

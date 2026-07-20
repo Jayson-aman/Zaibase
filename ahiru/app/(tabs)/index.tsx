@@ -155,7 +155,7 @@ export default function HomeScreen() {
   const [difficulty, setDifficulty] = useState<Difficulty>('all');
   const [examType, setExamType] = useState<ExamType>('chugaku');
   const [selectedCourse, setSelectedCourse] = useState<CourseKey>('general');
-  const [courseTab, setCourseTab] = useState<'category' | 'school'>('category');
+  const [courseTab, setCourseTab] = useState<'category' | 'school'>('school');
 
   const courses = examType === 'chugaku' ? CHUGAKU_COURSES : KOKO_COURSES;
 
@@ -233,10 +233,18 @@ export default function HomeScreen() {
     });
   }, []);
 
-  // Schools sorted by level then name
-  const sortedSchools = [...SCHOOL_COURSES].sort(
-    (a, b) => LEVEL_ORDER[a.level] - LEVEL_ORDER[b.level],
-  );
+  // Schools sorted by level then name（専用問題が実際にある学校のみ表示）
+  const sortedSchools = React.useMemo(() => {
+    const SUBJECTS_KEYS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
+    const withData = SCHOOL_COURSES.filter((c) => {
+      const total = SUBJECTS_KEYS.reduce(
+        (sum, s) => sum + getQuestionCount(s, 'all', 'chugaku', c.key, questionsBySubject),
+        0,
+      );
+      return total > 0;
+    });
+    return [...withData].sort((a, b) => LEVEL_ORDER[a.level] - LEVEL_ORDER[b.level]);
+  }, [questionsBySubject]);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -301,21 +309,21 @@ export default function HomeScreen() {
             {examType === 'chugaku' && (
               <View style={styles.courseTabRow}>
                 <TouchableOpacity
+                  style={[styles.courseTab, courseTab === 'school' && styles.courseTabActive]}
+                  onPress={() => setCourseTab('school')}
+                  activeOpacity={0.8}
+                >
+                  <Text style={[styles.courseTabText, courseTab === 'school' && styles.courseTabTextActive]}>
+                    🏫 学校別 ({sortedSchools.length}校)
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
                   style={[styles.courseTab, courseTab === 'category' && styles.courseTabActive]}
                   onPress={() => setCourseTab('category')}
                   activeOpacity={0.8}
                 >
                   <Text style={[styles.courseTabText, courseTab === 'category' && styles.courseTabTextActive]}>
                     📂 カテゴリ
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  style={[styles.courseTab, courseTab === 'school' && styles.courseTabActive]}
-                  onPress={() => setCourseTab('school')}
-                  activeOpacity={0.8}
-                >
-                  <Text style={[styles.courseTabText, courseTab === 'school' && styles.courseTabTextActive]}>
-                    🏫 学校別 ({SCHOOL_COURSES.length}校)
                   </Text>
                 </TouchableOpacity>
               </View>
