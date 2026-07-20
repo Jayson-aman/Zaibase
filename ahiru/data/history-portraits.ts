@@ -342,6 +342,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/katsushika-hokusai.jpg'),
     caption: '化政文化を代表する浮世絵師（自画像）。「富嶽三十六景」など生涯3万4千点を超える作品を残した',
   },
+  {
+    person: '歌川広重',
+    image: require('../assets/history-portraits/utagawa-hiroshige.jpg'),
+    caption: '化政文化を代表する浮世絵師。「東海道五十三次」などの風景画で人気を集め、ゴッホやモネら西洋の画家にも影響を与えた',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
@@ -431,6 +436,11 @@ export const historyEventImages: HistoryEventImage[] = [
     eventMatch: '大政奉還',
     image: require('../assets/history-portraits/nijojo-ninomaru-goten.jpg'),
     caption: '二条城 二の丸御殿。徳川慶喜が大政奉還を表明した場所として有名',
+  },
+  {
+    eventMatch: '化政文化',
+    image: require('../assets/history-portraits/hiroshige-yodogawa.jpg'),
+    caption: '歌川広重「京都名所之内 淀川」。化政文化を代表する風景画の一つ',
   },
 ];
 
