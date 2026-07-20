@@ -127,6 +127,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/akechi-mitsuhide.jpg'),
     caption: '土岐氏の流れを汲む武将。1582年、本能寺の変で主君・織田信長を討った',
   },
+  {
+    person: '豊臣秀吉',
+    image: require('../assets/history-portraits/toyotomi-hideyoshi.png'),
+    caption: '戦国の三英傑の一人、初代武家関白・太閤。1590年に天下統一を果たした',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
