@@ -147,6 +147,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/yagyu-munenori.jpg'),
     caption: '徳川将軍家の兵法指南役。柳生新陰流を将軍家御流儀とし、1636年に大名となった',
   },
+  {
+    person: '徳川吉宗',
+    image: require('../assets/history-portraits/tokugawa-yoshimune.jpg'),
+    caption: '江戸幕府第8代将軍。1716年に享保の改革（目安箱・公事方御定書）を行った',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
