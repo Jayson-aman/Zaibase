@@ -111,6 +111,11 @@ export const historyEventImages: HistoryEventImage[] = [
     image: require('../assets/history-portraits/dannoura-battle.jpg'),
     caption: '壇ノ浦の戦いを描いた合戦図。源氏と平氏の最後の海戦',
   },
+  {
+    eventMatch: '承久の乱',
+    image: require('../assets/history-portraits/jokyu-no-ran.jpg'),
+    caption: '承久の乱を描いた合戦図。後鳥羽上皇方と鎌倉幕府方が戦った',
+  },
 ];
 
 export function getEventImages(eventText?: string): HistoryEventImage[] {
