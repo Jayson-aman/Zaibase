@@ -287,6 +287,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/tokugawa-tsunayoshi.jpg'),
     caption: '江戸幕府第5代将軍。1685年に生類憐みの令を出し、湯島聖堂を建てるなど文治政治を進めた',
   },
+  {
+    person: '大塩平八郎',
+    image: require('../assets/history-portraits/oshio-heihachiro.jpg'),
+    caption: '大坂町奉行所の元与力・陽明学者。1837年、天保の飢饉で苦しむ人々を救おうと反乱を起こした',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
