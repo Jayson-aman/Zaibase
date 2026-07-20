@@ -237,6 +237,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/itagaki-taisuke.jpg'),
     caption: '土佐藩士出身の政治家。1874年に民撰議院設立建白書を提出し、自由民権運動を広げた',
   },
+  {
+    person: '最澄',
+    image: require('../assets/history-portraits/saicho.jpg'),
+    caption: '伝教大師。804年に唐へ渡り、帰国後に比叡山延暦寺を建てて天台宗を開いた',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
