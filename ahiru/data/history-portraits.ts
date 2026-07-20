@@ -137,6 +137,11 @@ export const historyPortraits: HistoryPortrait[] = [
     image: require('../assets/history-portraits/tokugawa-ieyasu.jpg'),
     caption: '戦国の三英傑の一人。1600年に関ヶ原の戦いに勝利し、1603年に江戸幕府を開いた',
   },
+  {
+    person: '徳川家光',
+    image: require('../assets/history-portraits/tokugawa-iemitsu.jpg'),
+    caption: '江戸幕府第3代将軍。1635年に参勤交代を制度化し、1641年に鎖国を完成させた',
+  },
 ];
 
 /** 1人の肖像画だけが欲しいとき（最初の一致） */
