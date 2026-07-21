@@ -61,6 +61,16 @@ const DIFF_LABELS: Record<Difficulty, { label: string; icon: string; color: stri
   advanced: { label: '発展', icon: '🔥', color: '#E74C3C' },
 };
 
+/** Fisher-Yates シャッフル。Array.sort(() => Math.random() - 0.5) は偏りがあるため使わない。 */
+function shuffle<T>(arr: T[]): T[] {
+  const result = [...arr];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
 function filterQuestions(
   all: Question[],
   examType: ExamType,
@@ -128,7 +138,7 @@ export default function QuizScreen() {
         pool = pool.filter((q) => questionMatchesTopic(q, topic));
         if (!(isPro || isMax)) pool = pool.filter((q) => !q.maxOnly);
         if (difficultyFilter) pool = pool.filter((q) => q.difficulty === difficultyFilter);
-        return [...pool].sort(() => Math.random() - 0.5);
+        return shuffle(pool);
       }
     }
     if (isMock) {
@@ -138,17 +148,16 @@ export default function QuizScreen() {
         if ((q.examType ?? 'chugaku') !== examType) return false;
         return !q.course || q.course === generalKey;
       });
-      const shuffled = [...pool].sort(() => Math.random() - 0.5);
-      return shuffled.slice(0, 30);
+      return shuffle(pool).slice(0, 30);
     }
     if (isKakomon) {
-      // 入試試験: 学校別問題のみ（大問形式）
+      // 入試試験: 学校別問題のみ（大問形式）。学校ごとに同じ順番にならないようシャッフル。
       const schoolQ = all.filter((q) => q.course === course && (q.examType ?? 'chugaku') === examType);
-      if (schoolQ.length > 0) return schoolQ;
-      return filterQuestions(all, examType, course, 'advanced', true);
+      if (schoolQ.length > 0) return shuffle(schoolQ);
+      return shuffle(filterQuestions(all, examType, course, 'advanced', true));
     }
     const filtered = filterQuestions(all, examType, course, difficultyFilter, isPro || isMax);
-    return [...filtered].sort(() => Math.random() - 0.5);
+    return shuffle(filtered);
   }, [subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, course, examType, isPro, isMax, topicParam]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
