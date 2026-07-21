@@ -72,6 +72,20 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
   }
 
   async function handleRestore() {
+    // 購入と同様、復元も必ずログイン済みアカウントに紐付ける。
+    // 未ログインで復元すると匿名IDに紐づき、Web版で同じ加入状態を
+    // 引き継げなくなるため、先にログインを促す。
+    if (!isLoggedIn) {
+      Alert.alert(
+        'ログインが必要です',
+        '購入の復元にはログインが必要です。ログインすると、他の端末（Webなど）でも同じご購入内容を引き継げます。',
+        [
+          { text: 'キャンセル', style: 'cancel' },
+          { text: 'ログイン', onPress: goLogin },
+        ],
+      );
+      return;
+    }
     setPurchasing(true);
     try {
       await restorePurchases();
