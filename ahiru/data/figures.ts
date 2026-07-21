@@ -217,6 +217,7 @@ import { figuresKokoKoyoFill } from './school_koko_koyo_fill';
 import { figuresKokoKeioFill } from './school_koko_keio_fill';
 import { figuresKokoNadaFill } from './school_koko_nada_fill';
 import { figuresKokoNishiyamatoFill } from './school_koko_nishiyamato_fill';
+import { figuresKokoMeidaiFill } from './school_koko_meidai_fill';
 
 export const figures: Record<string, Figure> = {
   ...figuresSample,
@@ -247,6 +248,7 @@ export const figures: Record<string, Figure> = {
   ...figuresKokoKeioFill,
   ...figuresKokoNadaFill,
   ...figuresKokoNishiyamatoFill,
+  ...figuresKokoMeidaiFill,
 };
 
 export function getFigure(questionId: string): Figure | null {

@@ -93,7 +93,7 @@ export const schoolKokoNishiyamatoFill: Question[] = [
     id: 'nishiyamato_kokugo_07',
     subject: 'kokugo',
     question: '次の①〜④の「ない」のうち、動詞の未然形について打消の意味を添える助動詞であるものを一つ選びなさい。①危ない　②値段が高くない　③今日は学校に行かない　④幼い',
-    answer: '③',
+    answer: '今日は学校に行かない',
     hint: '助動詞の「ない」は動詞の後に付き、「ぬ」に置き換えられる',
     explanation: '【解説】\n「危ない」「幼い」は「ない」を含む一語の形容詞。「高くない」は形容詞「高い」の連用形に補助形容詞「ない」が付いた形。「行かない」は動詞「行く」の未然形「行か」に付いた打消の助動詞「ない」で、「行かぬ」と言い換えられる。よって③が正解。',
     difficulty: 'standard',
