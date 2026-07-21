@@ -1278,7 +1278,7 @@ export const tokyoMeidaiKokoShakai: Question[] = [
   {
     id: 'koko_meidai_shakai_01',
     figureDescription:
-      '問1・問2で用いる統計グラフ。都道府県別の農業産出額を比べた棒グラフと、工業地帯・工業地域別の工業出荷額を比べた棒グラフからなり、それぞれ各地域の数値の大小を読み取る形式。',
+      '問2で用いる統計グラフ。工業地帯・工業地域別の工業出荷額（兆円）を比べた棒グラフ。',
     subject: 'shakai',
     course: 'koko-meidai',
     examType: 'koko',

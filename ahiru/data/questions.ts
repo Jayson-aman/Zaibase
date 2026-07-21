@@ -211,6 +211,7 @@ import { schoolKokoTodaijiFill } from './school_koko_todaiji_fill';
 import { schoolKokoKoyoFill } from './school_koko_koyo_fill';
 import { schoolKokoKeioFill } from './school_koko_keio_fill';
 import { schoolKokoNadaFill } from './school_koko_nada_fill';
+import { schoolKokoNishiyamatoFill } from './school_koko_nishiyamato_fill';
 
 export const questions: Question[] = [
   // ============================================================
@@ -3084,6 +3085,7 @@ export const questions: Question[] = [
   ...schoolKokoKoyoFill,
   ...schoolKokoKeioFill,
   ...schoolKokoNadaFill,
+  ...schoolKokoNishiyamatoFill,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {

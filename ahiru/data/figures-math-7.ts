@@ -123,4 +123,15 @@ export const figuresMath7: Record<string, Figure> = {
     ],
     caption: '3年生50人の点数分布',
   },
+  // 放物線 y=x²-4x+3。x軸との交点(1,0)(3,0)を示す。p,q・頂点の値は答えなので示さない。
+  koko_sansu_ex_12_043: {
+    kind: 'coordinate',
+    xRange: [-1, 5],
+    yRange: [-2, 6],
+    parabolas: [{ a: 1, b: -4, c: 3 }],
+    points: [
+      { x: 1, y: 0, label: '(1,0)' },
+      { x: 3, y: 0, label: '(3,0)' },
+    ],
+  },
 };

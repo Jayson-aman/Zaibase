@@ -1022,6 +1022,13 @@ export const schoolKokoTaki: Question[] = [
 ];
 
 export const figuresKokoTaki: Record<string, Figure> = {
+  // 放物線 y=2x²。x=-1からx=3までの変域を示す（yの変域の答えは示さない）
+  taki_sansu_03: {
+    kind: 'coordinate',
+    xRange: [-3, 4],
+    yRange: [-2, 20],
+    parabolas: [{ a: 2 }],
+  },
   // 中心角∠AOB＝140°から円周角∠ACBを求める（答えの70°はラベルに含めない）
   taki_sansu_05: {
     kind: 'circle',

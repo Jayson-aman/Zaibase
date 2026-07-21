@@ -601,7 +601,7 @@ export const kokoSansuEx12: Question[] = [
   {
     id: 'koko_sansu_ex_12_043',
     figureDescription:
-      '二次関数 y=x²+px+q のグラフ。x軸と2点(1,0)・(3,0)で交わる下に凸の放物線で、軸は2つの交点の中間(x=2)にあり、頂点は(2,−1)。',
+      '二次関数 y=x²+px+q のグラフ。x軸と2点(1,0)・(3,0)で交わる下に凸の放物線。',
     subject: 'sansu',
     examType: 'koko',
     course: 'koko-nishiyamato',

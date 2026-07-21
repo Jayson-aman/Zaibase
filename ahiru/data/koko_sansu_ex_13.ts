@@ -505,7 +505,6 @@ export const kokoSansuEx13: Question[] = [
     course: 'koko-todaiji',
     difficulty: 'advanced',
     maxOnly: true,
-    figureDescription: 'y = f(x) = x³ - 3x + 2 のグラフは、左下から右上へ向かう三次曲線。点 (-1, 4) で山（極大）をつくって一度下がり、点 (1, 0) で谷（極小）をつくって再び上昇する、S字を横に伸ばしたような形。点 (1, 0) でx軸に接する。',
     question: 'f(x) = x³ - 3x + 2 の極値を求め、グラフの概形を説明せよ。',
     answer: '極大値=4（x=-1のとき）、極小値=0（x=1のとき）。',
     hint: "f'(x)=3x²-3=3(x-1)(x+1)=0 → x=±1。f(-1)=4（極大）、f(1)=0（極小）。",

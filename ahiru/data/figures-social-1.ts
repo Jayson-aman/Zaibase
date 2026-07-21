@@ -24,4 +24,18 @@ export const figuresSocial1: Record<string, Figure> = {
     ],
     caption: '2023年度予算 歳出の内訳（兆円・総額114兆円）',
   },
+  // 工業地帯・工業地域別の工業出荷額比較（概数・兆円）。中京工業地帯がトップという解答は示さない。
+  'koko_meidai_shakai_01': {
+    kind: 'barChart',
+    xLabel: '工業地帯・工業地域',
+    yLabel: '工業出荷額（兆円）',
+    bars: [
+      { label: '中京', value: 58 },
+      { label: '阪神', value: 31 },
+      { label: '関東内陸', value: 30 },
+      { label: '瀬戸内', value: 28 },
+      { label: '京浜', value: 24 },
+    ],
+    caption: '工業地帯・工業地域別の工業出荷額（概数）',
+  },
 };

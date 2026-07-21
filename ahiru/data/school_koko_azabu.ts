@@ -985,6 +985,12 @@ export const figuresKokoAzabu: Record<string, Figure> = {
     yRange: [-2, 14],
     parabolas: [{ a: 3 }],
   },
+  // 縦9cm・横12cm・高さ20cmの直方体ABCD-EFGH。対角線AGの長さは解答なので示さない。
+  azabu_sansu_04: {
+    kind: 'solid',
+    shape: 'cuboid',
+    labels: { width: '12cm', depth: '9cm', height: '20cm' },
+  },
   // R1・R2を直列につないだ回路。電流の値は解答なので示さない。
   azabu_rika_03: {
     kind: 'circuit',

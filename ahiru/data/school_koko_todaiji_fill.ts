@@ -712,7 +712,7 @@ export const schoolKokoTodaijiFill: Question[] = [
       "Our school's science club started an experiment last spring: they built a small solar panel to charge their laptop during club activities. At first, the panel produced only a little electricity, especially on cloudy days. After changing the angle of the panel several times, the club found that facing it directly toward the sun in the afternoon produced the most power. The club now plans to share their data with a nearby elementary school next month.",
     question:
       'In the sentence "The club now plans to share their data with a nearby elementary school," what does "share" mean here?',
-    answer: 'to give something (information) to others so that they can use or see it',
+    answer: 'to give something to others so that they can use or see it',
     hint: 'Think about what happens to the data once the club "shares" it with another school.',
     explanation:
       '【解説】\n"share"は「分け与える・共有する」という意味で、ここでは科学部が集めたデータを近くの小学校に提供し、一緒に使えるようにするという文脈で使われている。「秘密にする」「捨てる」「売る」といった意味とは異なる。',
