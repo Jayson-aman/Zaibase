@@ -115,6 +115,14 @@ const FEATURES = [
     tagColor: C.blue,
     image: null as number | null,
   },
+  {
+    icon: '🌀',
+    title: '動く図解',
+    desc: '図形・グラフ・回路・地層をアニメーションで解説。\n見て納得してから解き直せる。',
+    tag: '全員',
+    tagColor: C.gold,
+    image: null as number | null,
+  },
 ];
 
 const VOICES = [
@@ -185,7 +193,7 @@ export default function LandingPage() {
 
             <Text style={styles.heroSub}>
               算数・国語・理科・社会・英語{'\n'}
-              5科目 11,000問以上 × 学校別コース対応{'\n'}
+              5科目 13,000問以上 × 動く図解 × 学校別コース対応{'\n'}
               中学受験・高校受験、AI弱点コーチで志望校を目指す。
             </Text>
 
@@ -197,9 +205,9 @@ export default function LandingPage() {
             {/* スタッツ */}
             <View style={[styles.heroStats, glassBlur]}>
               {[
-                { num: '11,000', unit: '問+', label: '問題数' },
+                { num: '13,000', unit: '問+', label: '問題数' },
                 { num: '5', unit: '科目', label: '対応科目' },
-                { num: '3', unit: '段階', label: '難易度' },
+                { num: '動く', unit: '図解', label: '解説アニメ' },
                 { num: 'AI', unit: '搭載', label: '弱点分析' },
               ].map((s, i) => (
                 <React.Fragment key={s.label}>
@@ -279,7 +287,7 @@ export default function LandingPage() {
         {/* ─── 特長 ────────────────────────────── */}
         <View style={styles.section}>
           <SectionLabel label="選ばれる理由" />
-          <Text style={styles.sectionTitle}>4つの強み</Text>
+          <Text style={styles.sectionTitle}>5つの強み</Text>
           <Text style={styles.sectionDesc}>
             合格実績を支えるテクノロジーと問題クオリティ。
           </Text>
