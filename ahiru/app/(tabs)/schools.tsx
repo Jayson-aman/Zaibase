@@ -95,9 +95,10 @@ const SCHOOL_GROUPS: SchoolGroup[] = [
     icon: '🎌',
     color: '#10B981',
     schools: [
-      { key: 'koko-hibiya',  name: '都立日比谷',   emoji: '🏯', hensachi: '70+',   gender: '共学', tier: 'max' },
-      { key: 'koko-waseda',  name: '早稲田大附属', emoji: '⛩️', hensachi: '72〜75', gender: '男子', tier: 'max' },
-      { key: 'koko-meidai',  name: '明大明治高校', emoji: '🏛️', hensachi: '68〜72', gender: '共学', tier: 'max' },
+      { key: 'koko-hibiya',     name: '都立日比谷',     emoji: '🏯', hensachi: '70+',   gender: '共学', tier: 'max' },
+      { key: 'koko-waseda',     name: '早稲田大附属',   emoji: '⛩️', hensachi: '72〜75', gender: '男子', tier: 'max' },
+      { key: 'koko-meidai',     name: '明大明治高校',   emoji: '🏛️', hensachi: '68〜72', gender: '共学', tier: 'max' },
+      { key: 'koko-shitennoji', name: '四天王寺(高)',   emoji: '⛩️', hensachi: '62〜68', gender: '女子', tier: 'pro' },
     ],
   },
 ];
