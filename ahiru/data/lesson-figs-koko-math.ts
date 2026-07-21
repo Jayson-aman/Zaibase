@@ -969,4 +969,107 @@ export const lessonFigsKokoMath: Record<string, Figure> = {
     ],
     caption: '2つのグラフの交点(5分後、水位15cm)で2つの水そうの水位が等しくなる',
   },
+
+  // ===== koko_math_21 証明問題の書き方の体系整理 =====
+
+  // 合同の証明（1辺と両端の角）
+  lf_kmath_61: {
+    kind: 'coordinate',
+    xRange: [-1, 10],
+    yRange: [-1, 6],
+    segments: [
+      [{ x: 0, y: 0 }, { x: 3, y: 0 }],
+      [{ x: 3, y: 0 }, { x: 1, y: 4 }],
+      [{ x: 1, y: 4 }, { x: 0, y: 0 }],
+      [{ x: 5, y: 0 }, { x: 8, y: 0 }],
+      [{ x: 8, y: 0 }, { x: 6, y: 4 }],
+      [{ x: 6, y: 4 }, { x: 5, y: 0 }],
+    ],
+    points: [
+      { x: 0, y: 0, label: 'A' },
+      { x: 3, y: 0, label: 'B' },
+      { x: 1, y: 4, label: 'C' },
+      { x: 5, y: 0, label: 'D' },
+      { x: 8, y: 0, label: 'E' },
+      { x: 6, y: 4, label: 'F' },
+    ],
+    caption: '△ABC≡△DEF（1辺とその両端の角がそれぞれ等しいことを示して合同を証明する）',
+  },
+
+  // 円に内接する四角形の対角線と相似の証明
+  lf_kmath_62: {
+    kind: 'circle',
+    points: [
+      { angle: 60, label: 'A' },
+      { angle: 150, label: 'B' },
+      { angle: 220, label: 'C' },
+      { angle: 330, label: 'D' },
+    ],
+    chords: [[0, 1], [1, 2], [2, 3], [3, 0], [0, 2], [1, 3]],
+    caption: '対角線AC, BDの交点Pで、∠APB=∠DPC（対頂角）、∠PAB=∠PDC（円周角）から△PAB∽△PDC',
+  },
+
+  // ===== koko_math_22 入試頻出の融合問題演習 =====
+
+  // 関数×図形の融合（放物線と直線、△OAB）
+  lf_kmath_63: {
+    kind: 'coordinate',
+    xRange: [-3, 5],
+    yRange: [-1, 9],
+    parabolas: [{ a: 0.5, label: 'y=(1/2)x²' }],
+    lines: [{ a: 1, b: 4, label: 'y=x+4' }],
+    points: [
+      { x: -2, y: 2, label: 'A(−2,2)' },
+      { x: 4, y: 8, label: 'B(4,8)' },
+    ],
+    caption: '放物線と直線の交点A,Bから△OABの面積を分割法で求める（関数×図形の融合）',
+  },
+
+  // 確率×図形の融合（さいころの目→頂点の対応）
+  lf_kmath_64: {
+    kind: 'barChart',
+    yLabel: '到達する頂点(1=A,2=B,3=C,4=D)',
+    bars: [
+      { label: '目1', value: 2, color: '#0EA5E9' },
+      { label: '目2', value: 3, color: '#0EA5E9' },
+      { label: '目3', value: 4, color: '#0EA5E9' },
+      { label: '目4', value: 1, color: '#E11D48' },
+      { label: '目5', value: 2, color: '#0EA5E9' },
+      { label: '目6', value: 3, color: '#0EA5E9' },
+    ],
+    caption: 'さいころの目に応じてPが頂点A→B→C→Dの順に進む（1=B,2=C,3=D,4=Aに対応。目4でAに戻る）',
+  },
+
+  // 規則性×図形の融合（正三角形の連結と周の長さ）
+  lf_kmath_65: {
+    kind: 'barChart',
+    yLabel: '周の長さ(cm)',
+    bars: [
+      { label: 'n=1', value: 3, color: '#0EA5E9' },
+      { label: 'n=2', value: 4, color: '#0EA5E9' },
+      { label: 'n=3', value: 5, color: '#0EA5E9' },
+      { label: 'n=4', value: 6, color: '#0EA5E9' },
+    ],
+    caption: '正三角形をn個並べた図形の周の長さはn+2（cm）。1個増えるごとに1cmずつ増える',
+  },
+
+  // 総合演習：等積変形でPの座標を求める
+  lf_kmath_66: {
+    kind: 'coordinate',
+    xRange: [-10, 5],
+    yRange: [-1, 9],
+    parabolas: [{ a: 0.5, label: 'y=(1/2)x²' }],
+    lines: [
+      { a: 1, b: 4, label: 'y=x+4' },
+      { a: 1, b: 0, label: 'y=x' },
+      { a: 1, b: 8, label: 'y=x+8' },
+    ],
+    points: [
+      { x: -2, y: 2, label: 'A' },
+      { x: 4, y: 8, label: 'B' },
+      { x: 0, y: 0, label: 'P(0,0)=O' },
+      { x: -8, y: 0, label: 'P(−8,0)' },
+    ],
+    caption: '△OABと面積が等しい△PABを作るx軸上の点はP(0,0)とP(−8,0)の2点（等積変形の平行線を利用）',
+  },
 };
