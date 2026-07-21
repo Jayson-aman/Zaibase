@@ -12,6 +12,7 @@ export type LegalSection = {
 export const TERMS_UPDATED = '2026年6月21日';
 export const PRIVACY_UPDATED = '2026年6月21日';
 export const TOKUSHO_UPDATED = '2026年6月23日';
+export const CREDITS_UPDATED = '2026年7月21日';
 
 export const ahiruTerms: LegalSection[] = [
   {
@@ -334,5 +335,29 @@ export const ahiruPrivacy: LegalSection[] = [
       '連絡先：info@zaibase.group',
       '運営責任者の氏名・住所：請求があった場合に遅滞なく開示します。',
     ],
+  },
+];
+
+export const ahiruCredits: LegalSection[] = [
+  {
+    heading: '',
+    paragraphs: [
+      '本アプリの「歴史年表」機能で使用している歴史上の人物の肖像画・史跡等の画像は、Wikipedia（ウィキペディア）およびWikimedia Commonsに掲載されている画像を使用しています。',
+      'これらの画像は、著作権の保護期間が満了したパブリックドメインの作品（江戸時代以前の肖像画・浮世絵等）、または投稿者がクリエイティブ・コモンズ・ライセンス（CC BY、CC BY-SA等）のもとで公開した画像であると認識して使用しています。',
+    ],
+  },
+  {
+    heading: '出典',
+    bullets: [
+      'Wikipedia（https://ja.wikipedia.org）',
+      'Wikimedia Commons（https://commons.wikimedia.org）',
+    ],
+  },
+  {
+    heading: 'ご連絡について',
+    paragraphs: [
+      '掲載画像について、著作権者様より使用許諾範囲に関するご指摘やクレジット表記の追加・修正のご要望、削除のご依頼をいただいた場合は、確認のうえ速やかに対応いたします。下記までご連絡ください。',
+    ],
+    bullets: ['連絡先：info@zaibase.group'],
   },
 ];

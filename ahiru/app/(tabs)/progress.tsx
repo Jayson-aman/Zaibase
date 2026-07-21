@@ -366,6 +366,10 @@ export default function ProgressScreen() {
             <TouchableOpacity onPress={() => router.push('/tokusho')} activeOpacity={0.7}>
               <Text style={styles.legalLink}>特定商取引法</Text>
             </TouchableOpacity>
+            <Text style={styles.legalSep}>｜</Text>
+            <TouchableOpacity onPress={() => router.push('/credits')} activeOpacity={0.7}>
+              <Text style={styles.legalLink}>画像クレジット</Text>
+            </TouchableOpacity>
           </View>
           <Text style={styles.legalContact}>お問い合わせ: info@zaibase.group</Text>
           <Text style={styles.legalCopy}>© 2026 Zaibase Group</Text>

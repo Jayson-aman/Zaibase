@@ -105,6 +105,9 @@ export default function TimelineScreen() {
           );
         })}
 
+        <TouchableOpacity onPress={() => router.push('/credits')} activeOpacity={0.7}>
+          <Text style={styles.creditsLink}>画像クレジットを見る →</Text>
+        </TouchableOpacity>
         <View style={{ height: 40 }} />
       </ScrollView>
     </SafeAreaView>
@@ -198,6 +201,7 @@ const styles = StyleSheet.create({
     flexShrink: 0,
   },
   portraitCaption: { fontSize: 11, color: '#94A3B8', marginTop: 8, fontStyle: 'italic' },
+  creditsLink: { fontSize: 12, color: '#64748B', textAlign: 'center', marginTop: 4, textDecorationLine: 'underline' },
   eventYear: { fontSize: 12, fontWeight: '800', marginBottom: 4 },
   personChip: {
     alignSelf: 'flex-start',
