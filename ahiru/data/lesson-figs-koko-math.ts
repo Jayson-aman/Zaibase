@@ -651,4 +651,69 @@ export const lessonFigsKokoMath: Record<string, Figure> = {
     chords: [[0, 1], [1, 2], [0, 2]],
     caption: '接点Tでの接線と弦TAのなす角は、弧TAに対する円周角∠TCAに等しい（接弦定理）',
   },
+
+  // ===== koko_math_15 動点問題 =====
+
+  // 正方形の辺上を動く点P
+  lf_kmath_44: {
+    kind: 'coordinate',
+    xRange: [-1, 9],
+    yRange: [-1, 9],
+    segments: [
+      [{ x: 0, y: 0 }, { x: 8, y: 0 }],
+      [{ x: 8, y: 0 }, { x: 8, y: 8 }],
+      [{ x: 8, y: 8 }, { x: 0, y: 8 }],
+      [{ x: 0, y: 8 }, { x: 0, y: 0 }],
+    ],
+    points: [
+      { x: 0, y: 0, label: 'A' },
+      { x: 8, y: 0, label: 'B' },
+      { x: 8, y: 8, label: 'C' },
+      { x: 0, y: 8, label: 'D' },
+      { x: 3, y: 0, label: 'P(t=1.5)' },
+    ],
+    caption: '点PはAを出発し毎秒2cmでB→Cの順に動く。t秒後のAP=2t（0≤t≤4の間はAB上）',
+  },
+
+  // △APDの面積の変化グラフ（直線→一定）
+  lf_kmath_45: {
+    kind: 'lineChart',
+    xLabel: 't（秒）',
+    yLabel: '△APDの面積 S',
+    xRange: [0, 8],
+    yRange: [0, 36],
+    series: [
+      {
+        label: 'S(t)',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 4, y: 32 },
+          { x: 8, y: 32 },
+        ],
+      },
+    ],
+    caption: '0≤t≤4はS=8tで直線的に増加、4≤t≤8はS=32で一定（AD∥BCのため高さが変わらない）',
+  },
+
+  // 折れ線グラフから式を逆算する
+  lf_kmath_46: {
+    kind: 'lineChart',
+    xLabel: 't（秒）',
+    yLabel: '面積 S',
+    xRange: [0, 7],
+    yRange: [0, 14],
+    series: [
+      {
+        label: 'S(t)',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 3, y: 12 },
+          { x: 7, y: 12 },
+        ],
+      },
+    ],
+    caption: '0≤t≤3で直線的に増加(S=4t)、3≤t≤7で一定(S=12)。t=3の折れ目が点が次の辺へ移った時刻',
+  },
 };
