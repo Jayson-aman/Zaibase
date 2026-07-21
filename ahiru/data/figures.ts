@@ -202,6 +202,13 @@ import { figuresSci3 } from './figures-sci-3';
 import { figuresSci4 } from './figures-sci-4';
 import { figuresMath7 } from './figures-math-7';
 import { figuresSocial1 } from './figures-social-1';
+import { figuresOsakaJogakuin } from './school_osaka_jogakuin';
+import { figuresKokoAzabu } from './school_koko_azabu';
+import { figuresKokoNanzan } from './school_koko_nanzan';
+import { figuresKokoSeinan } from './school_koko_seinan';
+import { figuresKokoTaki } from './school_koko_taki';
+import { figuresKokoKurume } from './school_koko_kurume';
+import { figuresKokoOhori } from './school_koko_ohori';
 
 export const figures: Record<string, Figure> = {
   ...figuresSample,
@@ -217,6 +224,13 @@ export const figures: Record<string, Figure> = {
   ...figuresSci3,
   ...figuresSci4,
   ...figuresSocial1,
+  ...figuresOsakaJogakuin,
+  ...figuresKokoAzabu,
+  ...figuresKokoNanzan,
+  ...figuresKokoSeinan,
+  ...figuresKokoTaki,
+  ...figuresKokoKurume,
+  ...figuresKokoOhori,
 };
 
 export function getFigure(questionId: string): Figure | null {

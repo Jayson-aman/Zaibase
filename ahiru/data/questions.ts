@@ -195,6 +195,15 @@ import { kokugoChoubunKoko } from './kokugo_choubun_koko';
 import { kokugoChoubunChugaku2 } from './kokugo_choubun_chugaku_2';
 import { kokugoChoubunKoko2 } from './kokugo_choubun_koko_2';
 
+// ── 学校別問題（50校対応・図解付き） ────────────────────────────
+import { schoolOsakaJogakuin } from './school_osaka_jogakuin';
+import { schoolKokoAzabu } from './school_koko_azabu';
+import { schoolKokoNanzan } from './school_koko_nanzan';
+import { schoolKokoSeinan } from './school_koko_seinan';
+import { schoolKokoTaki } from './school_koko_taki';
+import { schoolKokoKurume } from './school_koko_kurume';
+import { schoolKokoOhori } from './school_koko_ohori';
+
 export const questions: Question[] = [
   // ============================================================
   // 算数 (sansu) - 50問
@@ -3052,6 +3061,13 @@ export const questions: Question[] = [
   ...kokugoChoubunKoko,
   ...kokugoChoubunChugaku2,
   ...kokugoChoubunKoko2,
+  ...schoolOsakaJogakuin,
+  ...schoolKokoAzabu,
+  ...schoolKokoNanzan,
+  ...schoolKokoSeinan,
+  ...schoolKokoTaki,
+  ...schoolKokoKurume,
+  ...schoolKokoOhori,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {
