@@ -206,6 +206,10 @@ import { schoolKokoOhori } from './school_koko_ohori';
 import { schoolKokoTokai } from './school_koko_tokai';
 import { schoolKokoShitennoji } from './school_koko_shitennoji';
 import { schoolKokoHibiyaWasedaFill } from './school_koko_hibiya_waseda_fill';
+import { schoolKokoKaseiFill } from './school_koko_kasei_fill';
+import { schoolKokoTodaijiFill } from './school_koko_todaiji_fill';
+import { schoolKokoKoyoFill } from './school_koko_koyo_fill';
+import { schoolKokoKeioFill } from './school_koko_keio_fill';
 
 export const questions: Question[] = [
   // ============================================================
@@ -3074,6 +3078,10 @@ export const questions: Question[] = [
   ...schoolKokoTokai,
   ...schoolKokoShitennoji,
   ...schoolKokoHibiyaWasedaFill,
+  ...schoolKokoKaseiFill,
+  ...schoolKokoTodaijiFill,
+  ...schoolKokoKoyoFill,
+  ...schoolKokoKeioFill,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {
