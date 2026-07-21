@@ -506,4 +506,351 @@ export const lessonFigsKokoRika: Record<string, Figure> = {
     ],
     caption: '走時曲線：P波とS波の到達時間の差（初期微動継続時間）は震源距離に比例',
   },
+
+  // ===== 12 物理（運動の法則・力学的エネルギー発展） =====
+  lf_krika_30: {
+    kind: 'lineChart',
+    xLabel: '時間 (s)',
+    yLabel: '速さ (m/s)',
+    series: [
+      {
+        label: '台車の加速',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 1, y: 3 },
+          { x: 2, y: 6 },
+        ],
+      },
+    ],
+    caption: 'v-tグラフ：右上がりの直線は等加速度運動。傾き＝加速度（この例では3m/s²）',
+  },
+  lf_krika_31: {
+    kind: 'barChart',
+    yLabel: '受ける力 (N)',
+    bars: [
+      { label: '衝突時間0.1秒', value: 20 },
+      { label: '衝突時間0.5秒', value: 4 },
+    ],
+    caption: '同じ力積（運動量変化）でも、衝突時間が長いほど受ける力は小さい（F=J/t）',
+  },
+  lf_krika_32: {
+    kind: 'barChart',
+    yLabel: '運動量 (kg・m/s)',
+    bars: [
+      { label: 'A(衝突前)', value: 6 },
+      { label: 'B(衝突前)', value: 0 },
+      { label: '合体後の合計', value: 6 },
+    ],
+    caption: '運動量保存の法則：衝突前の運動量の合計と衝突後の合計は等しい',
+  },
+
+  // ===== 13 物理（電流と磁界・モーターの原理） =====
+  lf_krika_33: {
+    kind: 'lineChart',
+    xLabel: '導線からの距離',
+    yLabel: '磁界の強さ',
+    series: [
+      {
+        label: '電流一定',
+        markers: true,
+        points: [
+          { x: 1, y: 8 },
+          { x: 2, y: 4 },
+          { x: 4, y: 2 },
+          { x: 8, y: 1 },
+        ],
+      },
+    ],
+    caption: '直線電流がつくる磁界は、導線からの距離が近いほど強い',
+  },
+  lf_krika_34: {
+    kind: 'barChart',
+    yLabel: '電磁石の強さ(相対値)',
+    bars: [
+      { label: '50回巻き', value: 2 },
+      { label: '100回巻き', value: 4 },
+      { label: '200回巻き', value: 8 },
+    ],
+    caption: 'コイルの巻き数が多いほど電磁石は強くなる（電流の大きさが一定の場合）',
+  },
+  lf_krika_35: {
+    kind: 'lineChart',
+    xLabel: '電流 (A)',
+    yLabel: '導線が受ける力 (N)',
+    series: [
+      {
+        label: '磁界一定',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 1, y: 2 },
+          { x: 2, y: 4 },
+        ],
+      },
+    ],
+    caption: 'フレミングの左手の法則：電流が大きいほど、磁界の中の導線が受ける力は大きい',
+  },
+
+  // ===== 14 化学（酸化還元と電池） =====
+  lf_krika_36: {
+    kind: 'chemEquation',
+    equation: 'Zn -> Zn2+ + 2e-',
+    caption: 'ボルタ電池・ダニエル電池の−極（亜鉛板）の反応：亜鉛が電子を放出してとける（酸化）',
+  },
+  lf_krika_37: {
+    kind: 'chemEquation',
+    equation: 'Zn + Cu2+ -> Zn2+ + Cu',
+    caption: 'ダニエル電池全体の反応：亜鉛が銅イオンに電子を渡し、銅が析出する',
+  },
+
+  // ===== 15 化学（物質量・モル計算と気体） =====
+  lf_krika_38: {
+    kind: 'lineChart',
+    xLabel: '物質量 (mol)',
+    yLabel: '質量 (g)',
+    series: [
+      {
+        label: '水(モル質量18g/mol)',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 1, y: 18 },
+          { x: 2, y: 36 },
+        ],
+      },
+    ],
+    caption: '質量＝物質量×モル質量：原点を通る直線（水の場合、傾き18g/mol）',
+  },
+
+  // ===== 16 生物（生殖と発生） =====
+  lf_krika_39: {
+    kind: 'barChart',
+    yLabel: '染色体の数（本）',
+    bars: [
+      { label: '体細胞(2n)', value: 46 },
+      { label: '生殖細胞(n)', value: 23 },
+    ],
+    caption: '減数分裂で染色体数が半分になる（ヒトの例：46本→23本）',
+  },
+  lf_krika_40: {
+    kind: 'barChart',
+    yLabel: '細胞の数',
+    bars: [
+      { label: '1細胞期', value: 1 },
+      { label: '2細胞期', value: 2 },
+      { label: '4細胞期', value: 4 },
+      { label: '8細胞期', value: 8 },
+    ],
+    caption: '卵割：分裂のたびに細胞数が倍増する（胚全体の大きさはほぼ変わらない）',
+  },
+  lf_krika_41: {
+    kind: 'barChart',
+    yLabel: '生じる遺伝子型の種類数(相対値)',
+    bars: [
+      { label: '無性生殖（クローン）', value: 1 },
+      { label: '有性生殖（組み合わせ）', value: 4 },
+    ],
+    caption: '有性生殖は遺伝子の組み合わせにより多様な子を生み出す（無性生殖は親と同じクローンのみ）',
+  },
+
+  // ===== 17 生物（遺伝の規則性・発展） =====
+  lf_krika_42: {
+    kind: 'barChart',
+    yLabel: '子の数の比',
+    bars: [
+      { label: 'Aa（優性）', value: 1 },
+      { label: 'aa（劣性）', value: 1 },
+    ],
+    caption: '検定交雑（Aa×aa）の結果：優性:劣性=1:1になれば、もとの個体はAaと判定できる',
+  },
+
+  // ===== 18 地学（天気図と気団・日本の四季の天気） =====
+  lf_krika_43: {
+    kind: 'lineChart',
+    xLabel: '地点の位置',
+    yLabel: '気圧 (hPa)',
+    series: [
+      {
+        label: '等圧線の間隔がせまい区間',
+        markers: true,
+        points: [
+          { x: 0, y: 1020 },
+          { x: 1, y: 1008 },
+          { x: 2, y: 996 },
+        ],
+      },
+    ],
+    caption: '等圧線の間隔がせまい（気圧の変化が急な）ところほど風が強い',
+  },
+  lf_krika_44: {
+    kind: 'barChart',
+    yLabel: '気温の目安 (℃)',
+    bars: [
+      { label: 'シベリア気団', value: -10 },
+      { label: 'オホーツク海気団', value: 5 },
+      { label: '小笠原気団', value: 28 },
+      { label: '揚子江気団', value: 15 },
+    ],
+    caption: '日本付近の4つの気団：発生場所により気温・湿り気の性質が大きく異なる（目安の値）',
+  },
+  lf_krika_45: {
+    kind: 'lineChart',
+    xLabel: '東西方向の移動(西→東)',
+    yLabel: '緯度(北上)',
+    series: [
+      {
+        label: '台風の進路',
+        markers: true,
+        points: [
+          { x: 0, y: 5 },
+          { x: 2, y: 8 },
+          { x: 4, y: 12 },
+          { x: 6, y: 20 },
+          { x: 8, y: 30 },
+        ],
+      },
+    ],
+    caption: '台風は低緯度で西寄りに進んだのち、偏西風の影響で北東へ進路を変えることが多い',
+  },
+
+  // ===== 19 地学（地層の重なりと大地の歴史） =====
+  lf_krika_46: {
+    kind: 'stratum',
+    columns: [
+      {
+        label: 'X地点',
+        topLabel: '標高80m',
+        layers: [
+          { name: '泥岩', thickness: 2, pattern: 'mud' },
+          { name: '砂岩', thickness: 2, pattern: 'sand' },
+          { name: '凝灰岩(かぎ層)', thickness: 1, pattern: 'ash' },
+          { name: 'れき岩', thickness: 3, pattern: 'gravel' },
+        ],
+      },
+      {
+        label: 'Y地点',
+        topLabel: '標高72m',
+        layers: [
+          { name: '砂岩', thickness: 3, pattern: 'sand' },
+          { name: '凝灰岩(かぎ層)', thickness: 1, pattern: 'ash' },
+          { name: 'れき岩', thickness: 2, pattern: 'gravel' },
+        ],
+      },
+    ],
+    caption: '標高をそろえてかぎ層（凝灰岩）を対比すると、2地点の地層のつながりが分かる',
+  },
+  lf_krika_47: {
+    kind: 'barChart',
+    yLabel: 'おおよその長さ(百万年)',
+    bars: [
+      { label: '古生代', value: 290 },
+      { label: '中生代', value: 186 },
+      { label: '新生代', value: 66 },
+    ],
+    caption: '地質年代のおおよその長さの目安（古生代が最も長く続いた）',
+  },
+
+  // ===== 20 地学（太陽系の天体） =====
+  lf_krika_48: {
+    kind: 'barChart',
+    yLabel: '密度 (g/cm³)',
+    bars: [
+      { label: '地球', value: 5.5 },
+      { label: '火星', value: 3.9 },
+      { label: '木星', value: 1.3 },
+      { label: '土星', value: 0.7 },
+    ],
+    caption: '地球型惑星は密度が大きく、木星型惑星は密度が小さい（水の密度1.0との比較）',
+  },
+  lf_krika_49: {
+    kind: 'lineChart',
+    xLabel: '太陽からの距離 (AU)',
+    yLabel: '公転周期 (年)',
+    series: [
+      {
+        label: '惑星',
+        markers: true,
+        points: [
+          { x: 0.4, y: 0.24 },
+          { x: 0.7, y: 0.62 },
+          { x: 1, y: 1 },
+          { x: 1.5, y: 1.9 },
+          { x: 5.2, y: 12 },
+          { x: 9.6, y: 29 },
+        ],
+      },
+    ],
+    caption: '太陽から遠い惑星ほど公転周期が長くなる（ケプラーの法則の基礎）',
+  },
+
+  // ===== 21 理科総合（科学技術とエネルギー資源） =====
+  lf_krika_50: {
+    kind: 'lineChart',
+    xLabel: '世代',
+    yLabel: '核分裂の回数(相対値)',
+    series: [
+      {
+        label: '連鎖反応',
+        markers: true,
+        points: [
+          { x: 0, y: 1 },
+          { x: 1, y: 2 },
+          { x: 2, y: 4 },
+          { x: 3, y: 8 },
+        ],
+      },
+    ],
+    caption: '核分裂の連鎖反応：1回の分裂で生じた中性子が次々に新たな分裂を引き起こす',
+  },
+  lf_krika_51: {
+    kind: 'barChart',
+    yLabel: '透過力(相対値)',
+    bars: [
+      { label: 'α線(紙で止まる)', value: 1 },
+      { label: 'β線(アルミで止まる)', value: 2 },
+      { label: 'γ線(厚い鉛が必要)', value: 3 },
+    ],
+    caption: '放射線の透過力：α線<β線<γ線の順に、物を通り抜ける力が強くなる',
+  },
+
+  // ===== 22 物理（圧力・浮力・大気の力） =====
+  lf_krika_52: {
+    kind: 'lineChart',
+    xLabel: '接する面積 (m²)',
+    yLabel: '圧力 (Pa)',
+    series: [
+      {
+        label: '力20N一定',
+        markers: true,
+        points: [
+          { x: 0.005, y: 4000 },
+          { x: 0.01, y: 2000 },
+          { x: 0.02, y: 1000 },
+          { x: 0.04, y: 500 },
+        ],
+      },
+    ],
+    caption: '力が一定のとき、圧力は接する面積に反比例する（F=20Nの例）',
+  },
+  lf_krika_53: {
+    kind: 'lineChart',
+    xLabel: '沈んだ深さ (cm)',
+    yLabel: '浮力 (N)',
+    series: [
+      {
+        label: '物体が沈んでいく過程',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 2, y: 0.4 },
+          { x: 4, y: 0.8 },
+          { x: 6, y: 1.2 },
+          { x: 8, y: 1.2 },
+          { x: 10, y: 1.2 },
+        ],
+      },
+    ],
+    caption: '物体が完全に沈んだあとは、深さが増しても押しのける体積が変わらず浮力は一定',
+  },
 };
