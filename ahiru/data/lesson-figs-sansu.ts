@@ -670,4 +670,390 @@ export const lessonFigsSansu: Record<string, Figure> = {
     ],
     caption: '全36通りのうち和7は6通りで最多 → 確率＝6/36＝1/6',
   },
+
+  // ===== sansu_12_tanni_atari 単位量あたりの大きさ =====
+
+  // 1. 人口密度の比較（A市2,000人/km² vs B市4,000人/km²）
+  lf_sansu_38: {
+    kind: 'barChart',
+    yLabel: '人口密度（人/km²）',
+    bars: [
+      { label: 'A市(12万人/60km²)', value: 2000 },
+      { label: 'B市(18万人/45km²)', value: 4000 },
+    ],
+    caption: '人口密度＝人口÷面積。B市はA市の2倍混んでいる（4,000人/km²と2,000人/km²）',
+  },
+
+  // 2. こみぐあい（部屋A0.2人/㎡ vs 部屋B0.24人/㎡）
+  lf_sansu_39: {
+    kind: 'barChart',
+    yLabel: '1㎡あたりの人数（人）',
+    bars: [
+      { label: '部屋A(40㎡・8人)', value: 0.2 },
+      { label: '部屋B(25㎡・6人)', value: 0.24 },
+    ],
+    caption: '1㎡あたりの人数は部屋Bの方が多い → 部屋Bの方が混んでいる',
+  },
+
+  // 3. 燃費の比較（車A15km/L vs 車B20km/L）
+  lf_sansu_40: {
+    kind: 'barChart',
+    yLabel: '燃費（km/L）',
+    bars: [
+      { label: '車A(600km/40L)', value: 15 },
+      { label: '車B(500km/25L)', value: 20 },
+    ],
+    caption: '燃費＝走った距離÷使ったガソリンの量。車Bの方が燃費がよい（1Lで20km走る）',
+  },
+
+  // ===== sansu_13_hirei_hantai 比例と反比例 =====
+
+  // 1. 比例のグラフ（y=2x、原点を通る直線）
+  lf_sansu_41: {
+    kind: 'coordinate',
+    xRange: [0, 5],
+    yRange: [0, 10],
+    lines: [{ a: 2, b: 0, label: 'y＝2x' }],
+    points: [
+      { x: 1, y: 2 },
+      { x: 2, y: 4 },
+      { x: 3, y: 6 },
+    ],
+    caption: 'yはxに比例。xが2倍・3倍になるとyも2倍・3倍になる（原点を通る直線）',
+  },
+
+  // 2. 反比例のグラフ（y=12/x、双曲線）
+  lf_sansu_42: {
+    kind: 'coordinate',
+    xRange: [0.5, 6],
+    yRange: [0, 12],
+    hyperbolas: [{ k: 12, label: 'y＝12/x' }],
+    points: [
+      { x: 2, y: 6 },
+      { x: 3, y: 4 },
+      { x: 4, y: 3 },
+    ],
+    caption: 'xとyの積は常に12で一定。xが2倍になるとyは1/2になる（双曲線）',
+  },
+
+  // 3. 比例と反比例のグラフの形の違い
+  lf_sansu_43: {
+    kind: 'lineChart',
+    xLabel: 'x',
+    yLabel: 'y',
+    series: [
+      {
+        label: '比例 y＝2x',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 1, y: 2 },
+          { x: 2, y: 4 },
+          { x: 3, y: 6 },
+          { x: 4, y: 8 },
+        ],
+      },
+      {
+        label: '反比例 y＝12/x',
+        markers: true,
+        dashed: true,
+        points: [
+          { x: 1, y: 12 },
+          { x: 2, y: 6 },
+          { x: 3, y: 4 },
+          { x: 4, y: 3 },
+          { x: 6, y: 2 },
+        ],
+      },
+    ],
+    caption: '比例のグラフは原点を通る直線、反比例のグラフは軸に近づくが触れない曲線',
+  },
+
+  // ===== sansu_14_zukei_ido 図形の移動 =====
+
+  // 1. 平行移動（三角形ABC→A'B'C'、右3・上1）
+  lf_sansu_44: {
+    kind: 'coordinate',
+    xRange: [-0.5, 6],
+    yRange: [-0.5, 4],
+    segments: [
+      [{ x: 0, y: 0 }, { x: 2, y: 0 }],
+      [{ x: 2, y: 0 }, { x: 0, y: 2 }],
+      [{ x: 0, y: 2 }, { x: 0, y: 0 }],
+      [{ x: 3, y: 1 }, { x: 5, y: 1 }],
+      [{ x: 5, y: 1 }, { x: 3, y: 3 }],
+      [{ x: 3, y: 3 }, { x: 3, y: 1 }],
+    ],
+    points: [
+      { x: 0, y: 0, label: 'A' },
+      { x: 2, y: 0, label: 'B' },
+      { x: 0, y: 2, label: 'C' },
+      { x: 3, y: 1, label: "A'" },
+      { x: 5, y: 1, label: "B'" },
+      { x: 3, y: 3, label: "C'" },
+    ],
+    caption: '三角形ABCを右に3・上に1平行移動すると三角形A\'B\'C\'になる。形と大きさは変わらない',
+  },
+
+  // 2. 回転移動（中心Oのまわりに90°回転）
+  lf_sansu_45: {
+    kind: 'circle',
+    showCenter: true,
+    points: [
+      { angle: 0, label: 'P' },
+      { angle: 90, label: "P'" },
+    ],
+    chords: [[0, 1]],
+    caption: '点Pを中心Oのまわりに90°回転させると点P\'に移る。OP＝OP\'（半径は変わらない）',
+  },
+
+  // 3. 転がり移動（円が直線上を転がる：中心の高さは半径のまま一定）
+  lf_sansu_46: {
+    kind: 'lineChart',
+    xLabel: '転がった距離（cm）',
+    yLabel: '中心の高さ（cm）',
+    series: [
+      {
+        label: '円の中心の高さ',
+        markers: true,
+        points: [
+          { x: 0, y: 3 },
+          { x: 10, y: 3 },
+          { x: 20, y: 3 },
+          { x: 30, y: 3 },
+        ],
+      },
+    ],
+    caption: '半径3cmの円が直線上を転がるとき、中心は常に高さ3cmを保ったまま水平に進む',
+  },
+
+  // ===== sansu_15_setsudan 立体・平面図形の切断 =====
+
+  // 1. 立方体の切断の基本
+  lf_sansu_47: {
+    kind: 'solid',
+    shape: 'cube',
+    labels: { width: '6cm' },
+    caption: '1辺6cmの立方体。3点を通る平面で切ると切り口の形が変わる',
+  },
+
+  // 2. 中点を通る切断面（正六角形）
+  lf_sansu_48: {
+    kind: 'polygon',
+    points: [
+      { x: 2, y: 0, label: 'P' },
+      { x: 4, y: 0, label: 'Q' },
+      { x: 6, y: 2, label: 'R' },
+      { x: 4, y: 4, label: 'S' },
+      { x: 2, y: 4, label: 'T' },
+      { x: 0, y: 2, label: 'U' },
+    ],
+    fill: true,
+    caption: '立方体の各辺の中点を通るように切ると、切り口は正六角形になる',
+  },
+
+  // 3. 直方体の切断（対角線を含む長方形の切り口）
+  lf_sansu_49: {
+    kind: 'solid',
+    shape: 'cuboid',
+    labels: { width: '8cm', depth: '6cm', height: '4cm' },
+    caption: 'たて6cm・よこ8cm・高さ4cmの直方体。対角線を含む平面で切ると切り口は長方形になる',
+  },
+
+  // ===== sansu_16_bunpai_sashiatsume 分配算・差集め算の発展 =====
+
+  // 1. 分配算（3,600円を3:2:1に分配）
+  lf_sansu_50: {
+    kind: 'barChart',
+    yLabel: '金額（円）',
+    bars: [
+      { label: '兄', value: 1800 },
+      { label: '弟', value: 1200 },
+      { label: '妹', value: 600 },
+    ],
+    caption: '合計3,600円を兄:弟:妹＝3:2:1で分けると、兄1,800円・弟1,200円・妹600円',
+  },
+
+  // 2. 差集め算（余り7個・不足5個から人数を求める）
+  lf_sansu_51: {
+    kind: 'barChart',
+    yLabel: '個数（余り／不足）',
+    bars: [
+      { label: '4個ずつ（余り）', value: 7 },
+      { label: '6個ずつ（不足）', value: 5 },
+    ],
+    caption: '余り7個と不足5個の合計12個が、1人あたりの差(6−4＝2個)×人数にあたる→人数＝12÷2＝6人',
+  },
+
+  // ===== sansu_17_heikin_tsurukame 平均とつるかめ算の発展 =====
+
+  // 1. 平均点の推移（4回目に必要な点数を逆算）
+  lf_sansu_52: {
+    kind: 'barChart',
+    yLabel: '点数',
+    bars: [
+      { label: '1回目', value: 68 },
+      { label: '2回目', value: 75 },
+      { label: '3回目', value: 82 },
+      { label: '4回目(目標)', value: 95 },
+    ],
+    caption: '4回の平均を80点にするには、合計320点が必要→4回目は320−225＝95点',
+  },
+
+  // 2. 3種類のつるかめ算（りんご・みかん・かき）
+  lf_sansu_53: {
+    kind: 'barChart',
+    yLabel: '個数',
+    bars: [
+      { label: 'りんご(100円)', value: 3 },
+      { label: 'みかん(60円)', value: 6 },
+      { label: 'かき(140円)', value: 6 },
+    ],
+    caption: '「かきの数＝りんごの数の2倍」という条件で2種類のつるかめ算に帰着させて解く',
+  },
+
+  // ===== sansu_18_mizusou_graph 水そう問題とグラフの発展 =====
+
+  // 1. 仕切りのある水そうの水位グラフ（傾きが変わる）
+  lf_sansu_54: {
+    kind: 'lineChart',
+    xLabel: '時間（分）',
+    yLabel: '水位（cm）',
+    series: [
+      {
+        label: '水位',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 5, y: 10 },
+          { x: 15, y: 16 },
+        ],
+      },
+    ],
+    caption: '仕切りの高さ(10cm)に達するまでは底面積が小さく傾きが急、その後は底面積が広がり傾きがゆるやかになる',
+  },
+
+  // 2. 仕切りで分かれた底面積の比較
+  lf_sansu_55: {
+    kind: 'barChart',
+    yLabel: '底面積（cm²）',
+    bars: [
+      { label: '仕切りの左側', value: 20 },
+      { label: '仕切りの右側', value: 30 },
+      { label: '合計（仕切りを超えた後）', value: 50 },
+    ],
+    caption: '底面積が小さいほど、同じ水の量を入れたときの水位の上がり方が急になる',
+  },
+
+  // ===== sansu_19_ronri_pazuru 論理・推理パズル =====
+
+  // 1. 数直線を使った手がかりの整理
+  lf_sansu_56: {
+    kind: 'numberLine',
+    min: 0,
+    max: 20,
+    step: 5,
+    points: [{ x: 12, label: 'Aの得点' }],
+    segments: [{ from: 8, to: 16 }],
+    caption: '手がかり「8点より多く16点より少ない」を数直線に表すと、候補の範囲がしぼり込める',
+  },
+
+  // 2. 総当たり戦の勝ち数（4人・6試合）
+  lf_sansu_57: {
+    kind: 'barChart',
+    yLabel: '勝った試合数',
+    bars: [
+      { label: 'A', value: 3 },
+      { label: 'B', value: 2 },
+      { label: 'C', value: 1 },
+      { label: 'D', value: 0 },
+    ],
+    caption: '総当たり戦（4人）の総試合数＝4×3÷2＝6試合。勝ち数の合計は必ず試合数と一致する',
+  },
+
+  // ===== sansu_20_hi_bunshou 比の文章題の応用 =====
+
+  // 1. 比で分けたお金（A:B＝3:2、合計3,500円）
+  lf_sansu_58: {
+    kind: 'barChart',
+    yLabel: '金額（円）',
+    bars: [
+      { label: 'Aの所持金', value: 2100 },
+      { label: 'Bの所持金', value: 1400 },
+    ],
+    caption: 'A:B＝3:2で合計3,500円→1あたり700円、A＝2,100円、B＝1,400円',
+  },
+
+  // 2. 比を使った面積比（BD:DC=3:2 のときの三角形の面積比）
+  lf_sansu_59: {
+    kind: 'polygon',
+    points: [
+      { x: 0, y: 0, label: 'B' },
+      { x: 6, y: 0, label: 'D' },
+      { x: 10, y: 0, label: 'C' },
+      { x: 4, y: 6, label: 'A' },
+    ],
+    sideLabels: ['BD', 'DC', null, null],
+    caption: 'BD:DC＝3:2のとき、△ABD:△ADC＝3:2（底辺の比＝高さが共通なので面積比と一致）',
+  },
+
+  // ===== sansu_21_houjin_kisokusei 数表と規則性の発展（方陣算） =====
+
+  // 1. 中空方陣（1辺4個・周は12人）
+  lf_sansu_60: {
+    kind: 'coordinate',
+    xRange: [-0.5, 3.5],
+    yRange: [-0.5, 3.5],
+    points: [
+      { x: 0, y: 0 }, { x: 1, y: 0 }, { x: 2, y: 0 }, { x: 3, y: 0 },
+      { x: 0, y: 1 }, { x: 3, y: 1 },
+      { x: 0, y: 2 }, { x: 3, y: 2 },
+      { x: 0, y: 3 }, { x: 1, y: 3 }, { x: 2, y: 3 }, { x: 3, y: 3 },
+    ],
+    caption: '1辺4個の中空の正方形（方陣）の周りの人数＝(4−1)×4＝12人。1辺n個なら周は(n−1)×4人',
+  },
+
+  // 2. 格子点を数える（直角三角形の中の格子点）
+  lf_sansu_61: {
+    kind: 'coordinate',
+    xRange: [-0.5, 4.5],
+    yRange: [-0.5, 3.5],
+    polygon: [
+      { x: 0, y: 0 },
+      { x: 4, y: 0 },
+      { x: 0, y: 3 },
+    ],
+    points: [
+      { x: 0, y: 0 }, { x: 4, y: 0 }, { x: 0, y: 3 },
+      { x: 1, y: 0 }, { x: 2, y: 0 }, { x: 3, y: 0 },
+      { x: 0, y: 1 }, { x: 0, y: 2 },
+    ],
+    caption: '直角をはさむ2辺が4と3の直角三角形。格子点は図をかいて1つずつ数えるのが基本',
+  },
+
+  // ===== sansu_22_wariai_hi_yugo 割合・比の融合発展問題 =====
+
+  // 1. 連続する値上げ・値下げ（2,000円→2,400円→1,800円）
+  lf_sansu_62: {
+    kind: 'barChart',
+    yLabel: '価格（円）',
+    bars: [
+      { label: '元値', value: 2000 },
+      { label: '20%値上げ後', value: 2400 },
+      { label: '25%値下げ後', value: 1800 },
+    ],
+    caption: '2,000円→20%値上げ(×1.2)→2,400円→25%値下げ(×0.75)→1,800円。結局10%値下げと同じ',
+  },
+
+  // 2. 食塩水の複数操作（水を加える＋食塩を加える）
+  lf_sansu_63: {
+    kind: 'barChart',
+    yLabel: '食塩の重さ（g）',
+    bars: [
+      { label: '操作前(10%×300g)', value: 30 },
+      { label: '水100g加えた後', value: 30 },
+      { label: 'さらに食塩20g加えた後', value: 50 },
+    ],
+    caption: '水を加えても食塩の量は変わらないが、食塩そのものを加えると食塩の量が増える点に注意',
+  },
 };

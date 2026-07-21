@@ -2365,4 +2365,2062 @@ B: It's cloudy and cold.
       },
     ],
   },
+
+  {
+    id: 'koko_eigo_12_perfect_advanced',
+    subject: 'eigo',
+    examType: 'koko',
+    order: 12,
+    title: '現在完了・過去完了の発展と時制の一致',
+    description: '過去完了形と時制の一致のルールを理解し、複雑な時間関係を正確に表現する',
+    keyPoints: [
+      `過去完了 had＋過去分詞は「過去のある時点までに完了・経験・継続していたこと」（大過去）を表す`,
+      `現在完了は「今まで」、過去完了は「（過去の）あの時まで」という基準点の違いで使い分ける`,
+      `before/after/by the time/when など時の基準点を示す語と過去完了は相性がよい`,
+      `時制の一致の基本：主節が過去形のとき、従属節の動詞も1つ前の時制にずらす`,
+      `時制の一致の例外：普遍の真理・ことわざ・現在も変わらぬ習慣は現在形のまま`,
+      `had＋過去分詞は仮定法過去完了と同形なので、if節の有無・文脈で見分ける`,
+      `過去完了進行形 had been -ing は「過去のある時点まで動作が継続していた」ことを強調する`,
+    ],
+    sections: [
+      {
+        heading: '1. 過去完了形の基本（大過去の考え方）',
+        level: 'kiso',
+        body: `■ 過去完了形とは
+過去完了形（had ＋ 過去分詞）は「過去のある時点よりも、さらに前に起きたこと」を表す。
+基準となる過去の時点があり、それ「より前」の出来事を表すときに使う（これを「大過去」と呼ぶ）。
+
+  例）When I arrived at the station, the train had already left.
+      （私が駅に着いたとき、電車はすでに出発していた）
+      → 基準点：私が駅に着いた（過去）
+      → それより前：電車が出発した（大過去＝過去完了）
+
+★ポイント：時間の流れをイメージすると分かりやすい。
+  had 出発した ―――――― 私が到着した（過去形）―――――― 今
+  　　（過去完了）              （過去形）
+
+■ 過去完了の3用法（現在完了と同じ枠組みで理解する）
+  完了・結果：The train had already left when I got there.
+    （私がそこに着いたときには、電車はすでに出発していた）
+  経験：I had never seen snow before I visited Hokkaido.
+    （北海道を訪れる前は、雪を見たことがなかった）
+  継続：She had lived in Osaka for ten years before she moved to Tokyo.
+    （東京に引っ越す前、彼女は10年間大阪に住んでいた）
+
+■ 基準点を示す語句（過去完了と相性がよい表現）
+  before（〜する前に）: I had finished my homework before dinner.
+  after（〜した後に）: After I had cleaned my room, I went out.
+  by the time（〜するまでには）: By the time he came, we had eaten all the cake.
+  when（〜したとき）: When she woke up, it had already stopped raining.
+
+⚠注意：before / after を使う場合、前後関係が接続詞自体で明確なので、
+  現在では過去形で代用されることも多い（I had finished before dinner. → I finished before dinner.）。
+  ただし入試では過去完了の形そのものを問う問題が多いので、正しく作れるようにしておく。`,
+      },
+      {
+        heading: '2. 現在完了・過去完了・単純過去の使い分け',
+        level: 'oyo',
+        body: `■ 3つの時制の基準点の違い
+  単純過去：基準点なし。「過去のある時点で起きたこと」をただ述べる。
+  現在完了：基準点は「現在」。「今までに」起きたこと。
+  過去完了：基準点は「過去のある時点」。「その時までに」起きたこと。
+
++------------+------------------+---------------------------------------+
+| 時制       | 基準点           | 例文                                    |
++------------+------------------+---------------------------------------+
+| 単純過去   | なし（過去の一点）| I visited Kyoto last year.             |
+| 現在完了   | 現在             | I have visited Kyoto three times.      |
+| 過去完了   | 過去のある時点   | I had visited Kyoto twice before I     |
+|            |                  | moved to Tokyo.                        |
++------------+------------------+---------------------------------------+
+
+■ 具体例で比較する
+  She has lost her key. （彼女は鍵をなくした＝今も見つかっていない：現在完了）
+  She lost her key yesterday. （昨日鍵をなくした＝単なる過去の事実：単純過去）
+  She had lost her key when she got home.
+  （家に着いたとき、鍵をすでになくしていた＝家に着く前の時点で完了：過去完了）
+
+★ポイント：文中に「2つの過去の出来事」が出てくるときは、
+  時間的に「先に起きた方」を過去完了、「後に起きた方」を単純過去にする。
+
+  例）I lost the ticket that I had bought yesterday.
+      （私は昨日買ったチケットをなくした）
+      → 買った（先）＝ had bought、なくした（後）＝ lost
+
+⚠注意：単に「時間の前後関係」がなく、2つの動作がほぼ同時・並列の場合は
+  両方とも単純過去でよい（無理に過去完了にしない）。
+  I opened the door and turned on the light.（同時的な連続動作）`,
+      },
+      {
+        heading: '3. 時制の一致のルールと例外',
+        level: 'oyo',
+        body: `■ 時制の一致とは
+主節（伝える側）の動詞が過去形のとき、従属節（伝えられる内容）の動詞も
+「1つ前の時制」にずらすというルール。間接話法・that節などで重要。
+
+  主節が現在形：I think that he is busy.（彼が忙しいと思う）
+  主節が過去形：I thought that he was busy.（彼が忙しいと思った）
+  　　　　　　　　　　　is → was（現在形→過去形）
+
++----------------+----------------------+
+| 元の時制       | 一致後の時制        |
++----------------+----------------------+
+| 現在形         | 過去形               |
+| 現在完了形     | 過去完了形           |
+| 過去形         | 過去完了形           |
+| will           | would                |
+| can            | could                |
++----------------+----------------------+
+
+  例）She said, "I have finished my homework."
+      → She said that she had finished her homework.
+      He said, "I will call you tomorrow."
+      → He said that he would call me the next day.
+
+■ 時制の一致を受けない場合（入試最重要の例外）
+  ① 普遍的な真理・科学的事実：常に現在形のまま
+    The teacher said that the earth goes around the sun.
+    （地球が太陽の周りを回ることは常に真実なので goes のまま）
+  ② 現在も変わらない習慣・事実
+    She said that she plays tennis every Sunday.（今も続く習慣なら現在形も可）
+  ③ ことわざ・格言
+    He said that honesty is the best policy.
+
+★ポイント：「今も変わらず真実かどうか」で判断する。
+  過去に一度だけ成立した事実（過去のその時点の状態）は過去形に一致させるが、
+  時代を超えて変わらない真理は現在形のままでよい。
+
+⚠注意：時制の一致は「主節が過去形のとき」だけ発生する。
+  主節が現在形（I think / I know など）のときは、そのままの時制でよい。`,
+      },
+      {
+        heading: '4. 過去完了進行形と仮定法との見分け方',
+        level: 'oyo',
+        body: `■ 過去完了進行形（had been + -ing）
+「過去のある時点まで、動作がずっと継続していた」ことを強調するときに使う。
+現在完了進行形（have been -ing）の「過去バージョン」と考えるとよい。
+
+  現在完了進行形：I have been studying for two hours.（今まで2時間ずっと勉強している）
+  過去完了進行形：I had been studying for two hours when she called.
+    （彼女が電話してきたとき、私はすでに2時間ずっと勉強していた）
+
+  例）It had been raining for a week before the flood happened.
+      （洪水が起きる前、1週間ずっと雨が降り続いていた）
+
+★ポイント：過去完了進行形は「動作の継続」を強調し、
+  過去完了（単純形）は「完了・結果」に重点があることが多い。
+  He had worked there for ten years.（10年間そこで働いていた＝継続の事実）
+  He had been working all day, so he was very tired.（一日中働き続けていたので疲れていた＝動作の継続を強調）
+
+■ had + 過去分詞の2つの顔（過去完了 vs. 仮定法過去完了）
+had ＋ 過去分詞は「過去完了」と「仮定法過去完了（If節）」の両方で使われる同じ形。
+文脈と if の有無で見分ける。
+
+  過去完了（事実）：He had finished his work before I arrived.
+    （彼は私が着く前に仕事を終えていた＝実際にあったこと）
+  仮定法過去完了（反実仮想）：If he had finished his work, he could have gone home.
+    （もし仕事を終えていたら、家に帰れたのに＝実際は終えていない）
+
+★ポイント：if があれば仮定法、if がなく単に時間の前後関係を述べていれば過去完了。
+  ⚠注意：wish や as if の後の had + 過去分詞も仮定法（過去の事実に反する願望）。
+    I wish I had studied harder.（もっと勉強していればなあ＝実際はしなかった）
+
+■ 時制の一致と仮定法の複合問題（入試上位校頻出）
+  He told me that he had lived in London for five years.
+  （彼はロンドンに5年間住んでいたと私に言った）
+  → 伝達動詞 told（過去）に一致して had lived（過去完了）になっている。
+  これは「時制の一致」であって仮定法ではない点に注意。`,
+      },
+      {
+        heading: '5. 入試問題例',
+        level: 'nyushi',
+        body: `📝入試問題例
+
+【問1】（　）に適切な形を入れなさい。
+When I got to the theater, the movie (already / start).
+→ 答え：had already started
+
+【問2】日本語に合うように英文を完成させなさい。
+「彼女が来る前に、私はすでに宿題を終えていた。」
+I (　　) (　　) my homework before she came.
+→ 答え：had finished
+
+【問3】次の文を間接話法に直しなさい。
+He said, "I have lost my wallet."
+→ 答え：He said that he had lost his wallet.
+
+【問4】（　）に入る最も適切なものを選びなさい。
+Our teacher told us that light (　　) faster than sound.
+① traveled  ② travels  ③ had traveled  ④ would travel
+→ 答え：② travels（普遍の科学的事実は時制の一致を受けない）
+
+【問5】2つの文を、時間の前後関係が分かるように1文にしなさい。
+Ken lost the pen. His father had given it to him.
+→ 答え：Ken lost the pen that his father had given him.
+（あげた方が先＝過去完了、なくした方が後＝単純過去）
+
+【問6】（　）に入る最も適切なものを選びなさい。
+By the time we arrived, the concert (　　) already (　　).
+① has / begun  ② had / begun  ③ have / begun  ④ will / begin
+→ 答え：② had / begun（by the timeは過去完了と共起しやすい）`,
+      },
+    ],
+  },
+
+  {
+    id: 'koko_eigo_13_participial_advanced',
+    subject: 'eigo',
+    examType: 'koko',
+    order: 13,
+    title: '分詞構文の発展',
+    description: '分詞構文の完了形・受動態・独立分詞構文まで踏み込んで読み書きに使えるようにする',
+    keyPoints: [
+      `分詞構文の基本の復習：接続詞・主語を省き動詞を-ingに（Being/Havingは省略可）`,
+      `完了形の分詞構文 Having＋過去分詞は、主節よりも前の時点の出来事を表す`,
+      `受動態の分詞構文（Being＋過去分詞、Havingbeen＋過去分詞）は Being を省略できる`,
+      `否定の分詞構文は Not/Never を分詞の直前に置く`,
+      `独立分詞構文：従属節と主節の主語が異なるとき、分詞の前に主語を残す`,
+      `with＋名詞＋分詞（付帯状況）：「〜を…しながら／〜が…の状態で」`,
+      `慣用的独立分詞構文（generally speaking等）は主語が一致しなくても使う`,
+    ],
+    sections: [
+      {
+        heading: '1. 分詞構文の復習と基本の作り方',
+        level: 'kiso',
+        body: `■ 分詞構文とは（復習）
+副詞節（接続詞＋主語＋動詞）を分詞（-ing/過去分詞）で書き換えた簡潔な表現。
+書き言葉・入試の並べ替え問題で頻出。
+
+■ 作り方の4ステップ（復習）
+  ① 接続詞を省略する
+  ② 主節と主語が同じなら省略する
+  ③ 動詞を -ing 形にする
+  ④ 否定は Not/Never を分詞の直前に置く
+
+  例）Because she didn't know the way, she asked a police officer.
+    → ① Because省略 ② she省略 ③ didn't know→Not knowing
+    → Not knowing the way, she asked a police officer.
+    （道を知らなかったので、彼女は警察官に尋ねた）
+
+★ポイント：分詞構文の意味は文脈で判断する（時・理由・条件・付帯状況・譲歩）。
+  Living near the station, I can walk to school.
+  （駅の近くに住んでいるので、学校まで歩ける）→ 理由
+  Turning left, you will find the shop.
+  （左に曲がれば、その店が見つかる）→ 条件
+
+■ 接続詞を残す分詞構文（意味を明確にしたいとき）
+意味があいまいになりやすい場合、接続詞を残したまま分詞構文にすることもある。
+  While walking in the park, I met an old friend.
+  （公園を歩いている間に、旧友に会った）
+  Before leaving the house, please turn off the lights.
+  （家を出る前に、電気を消してください）
+
+⚠注意：分詞構文は「主節の主語と従属節の主語が同じ」ときにしか
+  主語を省略できない。異なる場合は次の独立分詞構文で扱う。`,
+      },
+      {
+        heading: '2. 完了形・受動態の分詞構文',
+        level: 'oyo',
+        body: `■ 完了形の分詞構文（Having ＋ 過去分詞）
+主節の動詞よりも「前の時点」で起きたことを表すときに使う
+（過去完了形を分詞構文にした形と考えるとよい）。
+
+  例）Having finished my homework, I went out to play.
+      （宿題を終えたので、私は遊びに出かけた）
+      = After I had finished my homework, I went out to play.
+
+★ポイント：主節と同時（あるいはその後）の出来事なら単純形（-ing）、
+  主節より前の出来事なら完了形（Having＋過去分詞）を使う。
+
+  同時：Seeing the teacher, the students stood up.
+    （先生を見て、生徒たちは立ち上がった＝ほぼ同時）
+  前：Having seen the movie before, I knew the ending.
+    （以前その映画を見たことがあったので、結末を知っていた＝見た方が先）
+
+■ 受動態の分詞構文（Being／Havingbeen ＋ 過去分詞）
+元の文が受動態のとき、分詞構文にすると Being／Having been で始まるが、
+これらはしばしば省略される。
+
+  例）Being written in easy English, this book is popular with beginners.
+      → Written in easy English, this book is popular with beginners.
+      （やさしい英語で書かれているので、この本は初心者に人気がある）
+      = As it is written in easy English, ...
+
+  完了受動態：Having been raised in Kyoto, she knows the city well.
+    → 過去分詞から始まる場合、Having been は省略されることが多いが、
+      意味は「〜され（てい）たので」という受動＋完了。
+
+★ポイント：分詞構文の先頭が過去分詞（-ed/不規則形）から始まっていたら、
+  「Being/Having been が省略された受動態の分詞構文」だと判断する。
+
+⚠注意：現在分詞（-ing）で始まる分詞構文と、過去分詞から始まる分詞構文を混同しない。
+  Surprised at the news, she couldn't speak.（驚かされた＝受動＝過去分詞）
+  Surprising everyone, he won the race.（驚かせた＝能動＝現在分詞）`,
+      },
+      {
+        heading: '3. 独立分詞構文（主語が主節と異なる場合）',
+        level: 'oyo',
+        body: `■ 独立分詞構文とは
+分詞構文の主語が主節の主語と異なるとき、分詞の前にその主語を残す。
+これを「独立分詞構文」と呼ぶ。
+
+  例）Because it was raining, we stayed home.
+    → ① Because省略 ② 主語が異なるので it を残す ③ was→being
+    → It being rainy, we stayed home.（あまり一般的でないため書き言葉限定）
+
+  より自然な入試頻出パターン：
+    As the sun had set, we went back to the hotel.
+    → The sun having set, we went back to the hotel.
+    （日が沈んでしまったので、私たちはホテルに戻った）
+
+★ポイント：独立分詞構文は硬い書き言葉に多く、会話ではあまり使われない。
+  入試では「読解で出会う」ことの方が「作文で書く」ことより多い。
+
+■ with ＋ 名詞 ＋ 分詞（付帯状況構文）
+「〜を…した状態で／〜が…しながら」という付帯状況を表す、独立分詞構文に近い重要構文。
+  with ＋ 名詞 ＋ 現在分詞（〜が…している状態で）
+  with ＋ 名詞 ＋ 過去分詞（〜が…された状態で）
+
+  例）He was standing with his arms crossed.
+      （彼は腕を組んだ状態で立っていた）
+      She was reading a book with the TV on.
+      （テレビをつけたまま本を読んでいた）
+      Don't speak with your mouth full.
+      （口を食べ物でいっぱいにしたまま話さないで）
+
+★ポイント：名詞と分詞の間には「主語と動詞」のような能動・受動の関係がある。
+  his arms crossed（腕は組まれる側→過去分詞）
+  the TV on（on は形容詞・副詞なので分詞ではないが同じ構文で使われる）
+
+⚠注意：with の後の名詞と分詞の能動・受動の関係を正しく判断する。
+  with his eyes closed（目を閉じた状態で＝閉じられる→過去分詞）
+  with his dog running beside him（犬が走っている状態で＝走る→現在分詞）`,
+      },
+      {
+        heading: '4. 慣用的独立分詞構文と否定の分詞構文',
+        level: 'oyo',
+        body: `■ 慣用的独立分詞構文（主語が一致しなくても使う決まり文句）
+以下は主節の主語と分詞の意味上の主語が一致していなくても、
+慣用的にそのまま使われる表現。入試の会話文・論説文で頻出。
+
+  generally speaking（一般的に言えば）
+    Generally speaking, Japanese people are polite.
+  frankly speaking（率直に言えば）
+    Frankly speaking, I don't like this plan.
+  strictly speaking（厳密に言えば）
+    Strictly speaking, a tomato is a fruit.
+  judging from 〜（〜から判断すると）
+    Judging from the sky, it will rain soon.
+  considering 〜（〜を考慮すると）
+    Considering his age, he runs very fast.
+  speaking of 〜（〜と言えば）
+    Speaking of Kyoto, have you ever been there?
+
+★ポイント：これらは「話し手（一般論としての誰か）」が意味上の主語であり、
+  文法的に厳密な独立分詞構文ではなく、決まり文句として覚える。
+
+■ 否定の分詞構文の作り方（復習と発展）
+否定語 Not/Never は分詞の直前に置く。
+
+  例）Because he didn't have money, he couldn't buy the book.
+    → Not having money, he couldn't buy the book.
+    （お金を持っていなかったので、その本を買えなかった）
+
+  完了形の否定：
+    Not having finished his homework, he couldn't watch TV.
+    （宿題を終えていなかったので、テレビを見られなかった）
+
+⚠注意：Not を分詞の後ろに置くミスが多いので注意。
+  × Having not finished（誤りとされることが多い）
+  〇 Not having finished（Not は分詞の前）
+
+■ 分詞構文の書き換え問題の解法手順
+  ① 分詞構文の主語が誰か（主節と同じか）を確認する
+  ② 分詞の形（-ing か過去分詞か）から能動・受動を判断する
+  ③ 単純形か完了形（Having+過去分詞）かで時間関係を判断する
+  ④ 文脈から接続詞（時・理由・条件・付帯状況）を補って訳す`,
+      },
+      {
+        heading: '5. 入試問題例',
+        level: 'nyushi',
+        body: `📝入試問題例
+
+【問1】次の文を分詞構文に書き換えなさい。
+Because I had never seen the movie before, I didn't know the story.
+→ 答え：Never having seen the movie before, I didn't know the story.
+
+【問2】（　）に最も適切なものを選びなさい。
+( ) in a hurry, she left her umbrella at the station.
+① Being  ② Been  ③ Have  ④ To be
+→ 答え：① Being（Being in a hurry＝急いでいたので）
+
+【問3】次の文の意味として最も適切な日本語を選びなさい。
+"With his eyes closed, he listened to the music."
+① 目を開けて音楽を聴いた
+② 目を閉じて音楽を聴いた
+③ 音楽を聴きながら目を閉じようとした
+→ 答え：②
+
+【問4】日本語に合うように英文を完成させなさい。
+「厳密に言えば、彼の答えは間違っている。」
+(　　) speaking, his answer is wrong.
+→ 答え：Strictly
+
+【問5】次の2文をほぼ同じ意味の1文にしなさい（分詞構文を使って）。
+As it was written in simple English, the book was easy to read.
+→ 答え：Written in simple English, the book was easy to read.
+
+【問6】次の文の誤りを正しく直しなさい。
+Having not eaten breakfast, I felt very hungry.
+→ 答え：Not having eaten breakfast, I felt very hungry.（Notは分詞の前）`,
+      },
+    ],
+  },
+
+  {
+    id: 'koko_eigo_14_indirect_question_advanced',
+    subject: 'eigo',
+    examType: 'koko',
+    order: 14,
+    title: '間接疑問文・話法の応用発展',
+    description: '複雑な間接疑問文と話法の応用パターンを使いこなし、難関校の並べ替え・書き換えに対応する',
+    keyPoints: [
+      `間接疑問文が think/believe/guess/supposeの目的語になるとき、疑問詞は文頭に出る（Do you think＋疑問詞〜?）`,
+      `二重目的語をとる動詞＋間接疑問（ask me where〜、tell me why〜）の語順`,
+      `疑問詞＋to不定詞と間接疑問文の書き換え（how to〜＝how I should〜）`,
+      `依頼・提案の間接的表現（Could you tell me〜? / I was wondering if〜）は丁寧さのレベルが上がる`,
+      `話法の転換で命令文・依頼文・感嘆文・平叙文が混在する複合問題の解法`,
+      `時や場所を表す指示語（here/now/thisなど）は話法転換で規則的に変化する`,
+      `伝達動詞の使い分け：say/tell/ask/adviseなどは目的語の有無・形が異なる`,
+    ],
+    sections: [
+      {
+        heading: '1. think型動詞と間接疑問文の語順（最重要パターン）',
+        level: 'oyo',
+        body: `■ 疑問詞が think/believe/guess/suppose の目的語になるとき
+通常の間接疑問文は〈疑問詞＋主語＋動詞〉の語順だが、
+do you think / do you believe などが間に入るときは、疑問詞が文頭に出る特殊な語順になる。
+
+  誤りやすい例：
+    × Do you know where does he live?
+    〇 Do you know where he lives?（通常の間接疑問：疑問詞の後は肯定文語順）
+
+  think型の特殊な語順：
+    × Do you know what do you think he is doing?
+    〇 What do you think he is doing?
+    （彼が何をしていると思いますか）
+    → 疑問詞 What が文頭に出て、think の疑問文がそのまま続く
+
+★ポイント：know型（普通の間接疑問）と think型（疑問詞が前に出る）を区別する。
+  know型：Do you know where he lives?（where以下は肯定文の語順）
+  think型：Where do you think he lives?（whereが文頭、doyouthinkは疑問文語順）
+
+  他の think型動詞：believe, guess, suppose, imagine
+    Who do you suppose will win the game?
+    （誰が試合に勝つと思いますか）
+    How long do you think the trip will take?
+    （旅行はどのくらいかかると思いますか）
+
+⚠注意：疑問詞が主語のときは Who do you think will win のように
+  do you think の後に動詞（will win）が続き、doesなどは不要。`,
+      },
+      {
+        heading: '2. 二重目的語をとる動詞＋間接疑問文',
+        level: 'oyo',
+        body: `■ ask/tell/show me＋間接疑問（SVOO型）
+ask や tell のように「人＋もの」の2つの目的語をとる動詞の後にも、
+間接疑問文（疑問詞＋主語＋動詞）を目的語として続けることができる。
+
+  例）Please tell me where the station is.
+      （駅がどこにあるか教えてください）
+      I asked him what time the train would leave.
+      （私は彼に電車が何時に出るか尋ねた）
+      Can you show me how this machine works?
+      （この機械の使い方を見せてもらえますか）
+
+★ポイント：ask/tell の直後は必ず「人」（目的語）が来て、
+  その後に間接疑問（疑問詞＋主語＋動詞）が続く。
+
+  ⚠注意：want to know なども同じパターンで使われる。
+    I want to know why she was absent yesterday.
+
+■ whether/if を使った依頼・確認表現（会話頻出）
+  I wonder if 〜（〜かなと思う・丁寧な疑問）
+    I wonder if you could help me.（手伝っていただけないかと思うのですが）
+  I'm not sure whether 〜（〜かどうか自信がない）
+    I'm not sure whether he will come.
+  Could you tell me whether 〜 or not?（〜かどうか教えていただけますか）
+    Could you tell me whether the shop is open or not?
+
+★ポイント：I wonder if 〜は「〜してもらえますか」という
+  非常に丁寧な依頼表現として会話文・作文問題で頻出。
+
+■ 疑問詞＋to不定詞と間接疑問文の書き換え
+  How should I get to the station? ＝ How to get to the station?
+  I don't know what I should do. ＝ I don't know what to do.
+  Please tell me when I should start. ＝ Please tell me when to start.
+
+  ⚠注意：主語が話し手・聞き手と一致しないと to不定詞に書き換えられない。
+    I don't know what he should do.（× what to do には書き換え不可。主語がheのため）`,
+      },
+      {
+        heading: '3. 丁寧な依頼表現と会話での間接疑問',
+        level: 'oyo',
+        body: `■ 丁寧さのレベルによる依頼表現の使い分け
+直接的な疑問文よりも、間接疑問文を使った依頼の方が丁寧に聞こえる。
+
++---------------------------+--------------------------------------+
+| 直接的（ややカジュアル）  | 間接的・丁寧                          |
++---------------------------+--------------------------------------+
+| Where is the station?     | Could you tell me where the station   |
+|                            | is?                                   |
+| What time does it start?  | Do you know what time it starts?      |
+| Can you help me?          | I was wondering if you could help me.|
++---------------------------+--------------------------------------+
+
+★ポイント：丁寧な依頼表現ほど文が長くなり、間接疑問（語順が変わらない）を使う。
+  面接・道案内・電話など、フォーマルな場面の会話文で頻出。
+
+■ 感嘆文・平叙文を含む複合話法の転換
+話法の転換問題では、平叙文・疑問文・命令文・感嘆文が混在することがある。
+それぞれの転換ルールを組み合わせて解く。
+
+  He said, "What a beautiful sunset it is!"
+  → He said that it was a very beautiful sunset.
+  （感嘆文は間接話法では what/how を保持せず、that節＋veryなどで表すことが多い）
+
+  She said to me, "Can you help me carry this bag?"
+  → She asked me if I could help her carry the bag.
+  （依頼の疑問文はif/whetherを使った間接疑問に変換）
+
+■ 混合問題の解き方（手順）
+  ① 発言が平叙文・疑問文・命令文のどれかを判断する
+  ② それぞれのルール（4章参照）を適用する
+  ③ 代名詞・時制・場所や時の副詞を書き換える
+  ④ 疑問文なら伝達動詞を ask に、命令文なら tell/ask に変える`,
+      },
+      {
+        heading: '4. 伝達動詞の使い分けと副詞の変化の総整理',
+        level: 'oyo',
+        body: `■ 伝達動詞の形の違い（入試で狙われるポイント）
+  say（言う）：say (that) 〜／say to 人, "..."（sayの直後に人は来ない）
+    × He said me that he was tired.（誤り）
+    〇 He said to me that he was tired. / He told me that he was tired.
+  tell（伝える）：tell 人 (that) 〜、tell 人 to 〜（tellの直後は必ず人）
+  ask（尋ねる・頼む）：ask 人 疑問詞〜、ask 人 to 〜（依頼）
+  advise（助言する）：advise 人 to 〜
+  suggest（提案する）：suggest (that) 〜（人を直接目的語にしない点に注意）
+    × He suggested me to go.（誤り）
+    〇 He suggested that I (should) go. / He suggested going.
+
+■ 話法転換での時・場所を表す語の変化（総整理表）
++-------------+-----------------+  +-------------+------------------+
+| 直接話法    | 間接話法        |  | 直接話法    | 間接話法         |
++-------------+-----------------+  +-------------+------------------+
+| now         | then            |  | this week   | that week        |
+| today       | that day        |  | next week   | the following    |
+| yesterday   | the day before  |  |             | week             |
+| tomorrow    | the next day    |  | last week   | the week before  |
+| here        | there           |  | this        | that             |
++-------------+-----------------+  +-------------+------------------+
+
+★ポイント：これらの変化は「発言した時点」と「伝える時点」がずれることに由来する。
+  実際の入試では、文脈上ずれがない場合（同じ日に伝える場合など）は
+  today のままでも許容されることがあるが、基本ルールとして上表を覚えておく。
+
+⚠注意：話法の転換は「代名詞」「時制」「時・場所の副詞」の3つを
+  同時にチェックする必要がある。1つでも見落とすと不正解になりやすい。`,
+      },
+      {
+        heading: '5. 入試問題例',
+        level: 'nyushi',
+        body: `📝入試問題例
+
+【問1】（　）に最も適切なものを選びなさい。
+( ) do you think she bought at the store?
+① What  ② Do you know what  ③ What does  ④ You think what
+→ 答え：① What（think型は疑問詞が文頭に出て、doyouthinkが続く）
+
+【問2】日本語に合うように英文を完成させなさい。
+「彼がどこの出身か教えてもらえますか。」
+Could you tell me (　　) (　　) (　　) from?
+→ 答え：where he is（Could you tell me where he is from?）
+
+【問3】ほぼ同じ意味になるように書き換えなさい。
+I don't know how I should solve this problem.
+= I don't know how (　　) (　　) this problem.
+→ 答え：to solve
+
+【問4】次の文を間接話法に直しなさい。
+She said to me, "Will you come to the party tomorrow?"
+→ 答え：She asked me if I would come to the party the next day.
+
+【問5】（　）に入る最も適切なものを選びなさい。
+He (　　) me that I should study harder.
+① said  ② told  ③ talked  ④ spoke
+→ 答え：② told（tellの直後は人）
+
+【問6】並べ替えなさい。
+( wonder / help / I / you / if / could / me ) with this bag.
+→ 答え：I wonder if you could help me with this bag.`,
+      },
+    ],
+  },
+
+  {
+    id: 'koko_eigo_15_free_writing',
+    subject: 'eigo',
+    examType: 'koko',
+    order: 15,
+    title: '自由英作文の減点されない書き方',
+    description: '自由英作文で満点を狙うための構成・採点基準・減点回避のテクニックを身につける',
+    keyPoints: [
+      `自由英作文の採点基準は主に「内容（設問への対応）」「構成」「語彙・文法の正確さ」の3つ`,
+      `テーマ型・意見型・データ型（グラフ/イラスト）の3タイプごとに書き方の型がある`,
+      `1文を短く・シンプルな文型（SV/SVC/SVO）中心にすると文法ミスが減る`,
+      `自信のない複雑な構文（仮定法・関係詞の多用）は避け、確実に正しい文で書く`,
+      `語数指定は必ず守り、指定範囲の8〜9割以上を目安に書く`,
+      `減点されやすいミス：三単現のs抜け、時制の不統一、可算/不可算の誤り、スペルミス`,
+      `書き終えたら見直しの5チェック（主語と動詞の一致・時制・スペル・語数・設問への対応）を行う`,
+    ],
+    sections: [
+      {
+        heading: '1. 自由英作文の採点基準を理解する',
+        level: 'kiso',
+        body: `■ 自由英作文はどこで採点されているか
+自由英作文（あるテーマについて自分の意見や体験を英語で書く問題）は、
+主に次の3つの観点で採点される。
+
+  ① 内容（設問に正しく答えているか）
+    設問で聞かれていることに対して、的確に答えているか。
+    賛成/反対を問われているのに理由を書かないなどは大きく減点される。
+  ② 構成（論理的に組み立てられているか）
+    意見→理由→具体例→まとめ、の流れがあるか。
+  ③ 語彙・文法の正確さ（減点方式のことが多い）
+    スペルミス・文法ミス・時制の誤りなどが1つずつ減点される。
+
+★ポイント：「難しい表現を使って1つ間違える」より
+  「簡単な表現を使って全て正確に書く」方が高得点になりやすい。
+  自由英作文は「正確さ」を最優先し、その上で内容の充実度を上げる。
+
+■ 満点を狙うより「大きく減点されない」ことを優先する
+  ・分からない単語を無理に使わない（知っている単語で言い換える）
+  ・自信のない文法事項（仮定法・分詞構文など）を無理に使わない
+  ・1文を長くしすぎない（主語と動詞の対応がずれやすくなる）
+
+⚠注意：内容が独創的でも、文法ミスが多ければ得点は伸びない。
+  逆に、内容がシンプルでも正確な英文であれば高得点が狙える。`,
+      },
+      {
+        heading: '2. 出題タイプ別の書き方（意見型・体験型・データ型）',
+        level: 'oyo',
+        body: `■ 意見型（賛成/反対、自分の考えを述べる）
+「〜についてどう思うか」「賛成か反対か」を問うタイプ。
+
+  型：
+  ① I think (that) 〜. / I agree/disagree with 〜.（意見の表明）
+  ② There are two reasons. First, 〜. Second, 〜.（理由を2つ）
+  ③ For example, 〜.（具体例を1つ入れると説得力が増す）
+  ④ For these reasons, I think 〜.（まとめ）
+
+  例）Do you think students should have smartphones at school?
+  → I think students should be allowed to have smartphones at school.
+    First, they can use them to check information quickly.
+    Second, they can contact their family in case of an emergency.
+    For these reasons, I agree with this idea.
+
+■ 体験型（自分の経験・思い出について書く）
+  型：
+  ① When I was 〜, I 〜.（いつ・何をしたか）
+  ② I felt 〜 because 〜.（そのときの気持ちと理由）
+  ③ Since then, I have 〜. / This experience taught me 〜.（その後・学んだこと）
+
+  例）Tell us about a memorable experience.
+  → When I was twelve, I visited Okinawa with my family.
+    I was very surprised to see the beautiful sea for the first time.
+    Since then, I have wanted to learn more about the ocean.
+
+■ データ型（グラフ・表・イラストの説明）
+  型：
+  ① The graph/picture shows (that) 〜.（資料が何を示すか）
+  ② According to the graph, 〜.（具体的な数値・変化）
+  ③ From this, we can see that 〜.（そこから分かること・意見）
+
+  例）The graph shows the number of foreign tourists in Japan.
+    According to the graph, the number increased sharply after 2020.
+    From this, I think Japan is becoming more popular among tourists.
+
+★ポイント：どのタイプでも「型」に沿って書くと、
+  内容の抜け漏れがなくなり、構成の減点を防げる。`,
+      },
+      {
+        heading: '3. 文法ミスを減らす書き方のテクニック',
+        level: 'oyo',
+        body: `■ シンプルな文型を選ぶ
+自由英作文では、複雑な構文を使うほど文法ミスのリスクが上がる。
+基本の文型（SV/SVC/SVO/SVOO/SVOC）を組み合わせて書けば十分に得点できる。
+
+  避けた方が安全な構文（自信がなければ使わない）：
+    仮定法（If I were 〜）、分詞構文（Being tired, 〜）、
+    複雑な関係詞の入れ子（the book which the boy who 〜 wrote）
+
+  代わりに使える安全な表現：
+    I think that 〜. / I want to 〜. / It is important to 〜.
+    〜, so 〜. / 〜 because 〜.（1つの接続詞でつなぐシンプルな重文・複文）
+
+■ 一文を短くする（1文1メッセージ）
+長い1文を書こうとすると、主語と動詞の対応がずれやすくなる。
+「1つの文には1つの言いたいこと」を意識して短く区切る。
+
+  ✗ 減点されやすい例（長すぎて主語と動詞がずれている）：
+    I think that smartphones is useful because we can use it for study and also communicate with friends and it help us in emergency.
+  ✓ 改善例：
+    I think smartphones are useful. We can use them for studying.
+    We can also use them to contact friends and family in an emergency.
+
+■ 減点されやすいミスのチェックリスト
+  ① 三単現のs抜け：He like music.（× like → 〇 likes）
+  ② 時制の不統一：I go there yesterday.（× go → 〇 went）
+  ③ 可算・不可算の誤り：many informations（× → much information）
+  ④ 冠詞の抜け・誤り：I have dog.（× → I have a dog.）
+  ⑤ スペルミス：becuase（× → because）、recieve（× → receive）
+  ⑥ 主語と動詞の一致：Everyone are happy.（× are → 〇 is）
+
+★ポイント：見直しの際は「1文ずつ主語と動詞を指差し確認」すると
+  三単現のs抜けや一致のミスに気づきやすい。`,
+      },
+      {
+        heading: '4. 語数指定の守り方と使える万能フレーズ集',
+        level: 'oyo',
+        body: `■ 語数指定を守るコツ
+「30語以上」「40〜50語程度」などの指定は必ず守る。
+短すぎても長すぎても減点されることが多い。
+
+  ① 書く前に「型」に沿って何を書くか箇条書きでメモする
+  ② 大体の語数配分を決める（意見10語＋理由20語＋まとめ10語 等）
+  ③ 書き終えたら実際に単語数を数える（I'm/don'tなどの短縮形も1語）
+  ④ 指定の8〜9割以上を目安にし、少なすぎる場合は具体例を追加する
+
+★ポイント：語数が足りないときは「For example, 〜」で具体例を1つ足すのが
+  最も自然に語数を増やせるテクニック。
+
+■ どんなテーマにも使える万能フレーズ集
+  意見の導入：
+    I think (that) 〜. / In my opinion, 〜. / I believe (that) 〜.
+  理由を並べる：
+    There are two reasons for this. / First, 〜. Second, 〜.
+  具体例を出す：
+    For example, 〜. / For instance, 〜.
+  追加情報：
+    Also, 〜. / In addition, 〜. / Moreover, 〜.
+  まとめ：
+    For these reasons, 〜. / In conclusion, 〜. / That is why I think 〜.
+
+■ よく使う便利な単語・表現（抽象的なテーマで使いやすい）
+  useful（役に立つ）、important（重要な）、necessary（必要な）
+  helpful（助けになる）、convenient（便利な）、improve（向上させる）
+  communicate with 〜（〜と意思疎通する）、save time/money（時間・お金を節約する）
+
+⚠注意：日本語の直訳が難しい表現は避け、
+  自分が確実に使える単語・構文に言い換えて書く（パラフレーズの発想）。`,
+      },
+      {
+        heading: '5. 入試問題例（模範解答つき）',
+        level: 'nyushi',
+        body: `📝入試問題例
+
+【問題】次のテーマについて、あなたの意見を理由とともに30〜40語の英語で書きなさい。
+「中学生は毎日部活動をするべきだと思いますか。」
+
+【減点されやすい解答例】
+I think students should do club activities. Because it is good for health and make friend and it is fun too much so I like it very much every day.
+→ 問題点：becauseで文を始める書き方、make friendsのsの抜け、
+  too muchの誤用、内容が理由になっていない部分がある。
+
+【模範解答例（約35語）】
+I think students should do club activities every day. First, it helps them stay healthy. Second, they can make good friends through club activities. For these reasons, I agree with this idea.
+
+★ポイント：模範解答は「シンプルな文の積み重ね」でできている。
+  難しい単語や構文を使わなくても、正確に書けば高得点が狙える。
+
+【問1】次の英作文の下線部の誤りを直しなさい。
+"I have a lot of homeworks every day, so I am always busy."
+→ 答え：homeworks → homework（不可算名詞は複数形にしない）
+
+【問2】次の日本語を、指定された語数（15語程度）の英語にしなさい。
+「私は将来、外国で働きたいです。なぜなら色々な文化を学べるからです。」
+→ 答え例：I want to work in a foreign country in the future because I can learn about different cultures.`,
+      },
+    ],
+  },
+
+  {
+    id: 'koko_eigo_16_functional_scenes',
+    subject: 'eigo',
+    examType: 'koko',
+    order: 16,
+    title: 'リスニング頻出表現（道案内・電話・買い物）',
+    description: '道案内・電話・買い物・レストランなど場面別の定型表現をリスニングと会話文対策として身につける',
+    keyPoints: [
+      `道案内：go straight/turn left(right)/on your left(right)/It's next to〜/You can't miss it`,
+      `電話：May[Can] I speak to〜?／Who's calling, please?／Hold on, please／He's out now`,
+      `買い物：May I help you?／I'm just looking, thank you／How much is it?／I'll take it`,
+      `レストラン：Are you ready to order?／I'd like〜／For here or to go?／Could we have the bill?`,
+      `場所・道順を表す前置詞句（on your right、across from、between A and B、around the corner）`,
+      `リスニングでは場面が変われば頻出語彙も変わるため、場面ごとにセットで覚える`,
+      `聞き取れなくても場面から予測できる語（駅なら platform、店なら price など）に注目する`,
+    ],
+    sections: [
+      {
+        heading: '1. 道案内の定型表現',
+        level: 'kiso',
+        body: `■ 道を尋ねる表現
+  Excuse me. How can I get to the station?（すみません、駅へはどう行けばいいですか）
+  Could you tell me the way to the museum?（美術館への道を教えていただけますか）
+  Is there a post office near here?（この近くに郵便局はありますか）
+  Excuse me, where am I on this map?（すみません、地図上で私は今どこにいますか）
+
+■ 道を教える表現（動作の指示）
+  Go straight (ahead / along this street).（まっすぐ行ってください）
+  Turn left/right at the corner.（角を左に／右に曲がってください）
+  Go straight for two blocks.（2区画分まっすぐ進んでください）
+  Cross the bridge/street.（橋・道を渡ってください）
+  Walk until you see the park.（公園が見えるまで歩いてください）
+
+■ 場所を説明する表現
+  It's on your left/right.（あなたの左手/右手にあります）
+  It's next to the bank.（銀行の隣にあります）
+  It's across from the library.（図書館の向かいにあります）
+  It's between the flower shop and the bakery.（花屋とパン屋の間にあります）
+  It's around the corner.（角を曲がったところにあります）
+  You can't miss it.（すぐに分かりますよ＝目印になるので見逃さない）
+
+★ポイント：道案内の会話文は「地図・イラストを見て答える」形式が多い。
+  放送を聞きながら地図上に矢印や印をつけると正解しやすい。
+
+⚠注意：turn left（左に曲がる）と on your left（あなたの左手に＝位置）を混同しない。`,
+      },
+      {
+        heading: '2. 電話での定型表現',
+        level: 'oyo',
+        body: `■ 電話をかける・取り次いでもらう
+  Hello, this is Ken (speaking).（もしもし、ケンです）
+  May[Can] I speak to Mr. Smith, please?（スミスさんをお願いできますか）
+  Is Emily there?（エミリーはいますか）
+
+■ 電話に出る・取り次ぐ
+  Speaking.（私です＝本人が電話に出た応答）
+  Who's calling, please?（どちら様でしょうか）
+  Hold on, please. / Just a moment, please.（少々お待ちください）
+  I'll put you through.（おつなぎします）
+
+■ 不在・伝言
+  I'm sorry, he's out now.（申し訳ありませんが、彼は今外出しています）
+  He's not available right now.（彼は今電話に出られません）
+  Can I take a message?（伝言を承りましょうか）
+  Could you tell him to call me back?（彼に折り返し電話するよう伝えていただけますか）
+  I'll call back later.（後でかけ直します）
+
+■ その他の電話表現
+  Can you hear me?（聞こえますか）
+  Sorry, could you speak more slowly?（すみません、もう少しゆっくり話していただけますか）
+  You have the wrong number.（電話番号をお間違えです）
+
+★ポイント：電話の会話文は「誰が誰に何を伝えたいか」を整理しながら聞く。
+  伝言メモ（メッセージ）を書き取らせる問題では、
+  日時・用件・折り返しの要不要をメモすると正解しやすい。
+
+⚠注意：Who's calling, please? に対しては名前で答える（This is Ken. など）。
+  Speaking. は「自分が呼ばれている本人である」ことを示す特別な応答。`,
+      },
+      {
+        heading: '3. 買い物・レストランでの定型表現',
+        level: 'oyo',
+        body: `■ 買い物の定型表現
+  May[Can] I help you?（いらっしゃいませ／何かお探しですか）
+  I'm just looking, thank you.（見ているだけです、ありがとう）
+  I'm looking for a birthday present for my mother.（母への誕生日プレゼントを探しています）
+  Do you have this in a smaller size?（これのもっと小さいサイズはありますか）
+  Can I try this on?（試着してもいいですか）
+  How much is it[this]?（これはいくらですか）
+  That will be 2,000 yen.（2,000円になります）
+  I'll take it.（それを買います）
+  Do you accept credit cards?（クレジットカードは使えますか）
+
+■ レストランの定型表現
+  A table for two, please.（2名でお願いします）
+  Are you ready to order?（ご注文はお決まりですか）
+  I'd like the set meal, please.（セットメニューをお願いします）
+  What would you recommend?（おすすめは何ですか）
+  For here or to go?（こちらでお召し上がりですか、お持ち帰りですか）
+  Could we have the bill[check], please?（お会計をお願いできますか）
+  Anything else?（他にご注文はございますか）
+
+★ポイント：買い物・レストランの会話は「数量・値段・サイズ・注文品目」が
+  聞き取りのポイントになりやすい。数字は特に注意して聞く。
+
+⚠注意：How much（値段を尋ねる）とHow many（数を尋ねる）を混同しない。
+  How much is this shirt? / How many shirts do you have?`,
+      },
+      {
+        heading: '4. その他の場面別表現（病院・図書館・学校行事）',
+        level: 'oyo',
+        body: `■ 病院・薬局での表現
+  What's wrong with you? / What seems to be the problem?（どうされましたか）
+  I have a headache/stomachache/fever.（頭痛/腹痛/熱があります）
+  How long have you had this pain?（この痛みはいつからですか＝現在完了の継続用法）
+  You should take this medicine three times a day.（この薬を1日3回飲んでください）
+  Get well soon.（お大事に）
+
+■ 図書館での表現
+  Could I borrow this book?（この本を借りられますか）
+  How long can I keep it?（どのくらいの期間借りられますか）
+  You can keep it for two weeks.（2週間借りられます）
+  I'd like to return this book.（この本を返却したいのですが）
+  It's overdue. There is a late fee.（返却期限が過ぎています。延滞料金があります）
+
+■ 学校行事・招待の表現
+  Would you like to come to my birthday party?（誕生日パーティーに来ませんか）
+  What time should I arrive?（何時に着けばいいですか）
+  What should I bring?（何を持っていけばいいですか）
+  I'm sorry, I can't make it.（すみません、行けません）
+  I'm looking forward to seeing you there.（そこでお会いできるのを楽しみにしています）
+
+★ポイント：どの場面でも「依頼・提案→応答（承諾/断り）」の流れが基本パターン。
+  応答の内容（Yes/No、理由）を正確に聞き取れば設問に対応できる。
+
+⚠注意：場面が変わっても基本の会話パターン（挨拶→用件→応答→締めくくり）は共通。
+  場面特有の語彙（病院ならmedicine/fever、図書館ならborrow/overdue）を重点的に覚える。`,
+      },
+      {
+        heading: '5. 入試問題例',
+        level: 'nyushi',
+        body: `📝入試問題例
+
+【問1】次の対話の（　）に入る最も適切なものを選びなさい。
+A: Excuse me. How can I get to the city library?
+B: Go straight and turn left at the second corner. (　　)
+① You can't miss it.  ② I'm just looking.  ③ Speaking.  ④ For here or to go?
+→ 答え：①
+
+【問2】次の対話が成立するように並べ替えなさい。
+A: May I speak to Ms. Green, please?
+B: ( is / moment / a / just / please ).
+→ 答え：Just a moment, please.
+
+【問3】次の対話の応答として最も適切なものを選びなさい。
+A: How much is this T-shirt?
+① It's over there.  ② It's 1,500 yen.  ③ I'm looking for a shirt.  ④ It's cotton.
+→ 答え：②
+
+【問4】次の対話の意味として最も適切な日本語を選びなさい。
+"Are you ready to order?" "Not yet. Could you give us a few more minutes?"
+① もう注文はお決まりですか／まだです。もう少し時間をいただけますか
+② お会計はお決まりですか／もう払いました
+③ お手洗いはどこですか／あちらです
+→ 答え：①
+
+【問5】次の対話の（　）に最も適切なものを選びなさい。
+A: I have a stomachache.
+B: (　　)
+① That's a good idea.  ② You should see a doctor.  ③ For here or to go?  ④ Speaking.
+→ 答え：②`,
+      },
+    ],
+  },
+
+  {
+    id: 'koko_eigo_17_eiken_expressions',
+    subject: 'eigo',
+    examType: 'koko',
+    order: 17,
+    title: '英検3級〜準2級レベルの重要構文',
+    description: '英検レベルの重要構文・イディオムを習得し、難関校の空所補充・語法問題に対応する',
+    keyPoints: [
+      `used to＋原形「以前は〜だった／〜したものだ」と be/get used to -ing「〜に慣れている」を区別`,
+      `had better＋原形「〜すべきだ（強い忠告）」、would rather＋原形「むしろ〜したい」`,
+      `cannot help -ing／cannot help but＋原形「〜せずにはいられない」`,
+      `It is said that S+V.／S is said to〜「〜と言われている」の書き換え`,
+      `not so much A as B「AというよりむしろB」、no more than/not more than、no less than/not less than`,
+      `may well「〜するのももっともだ」、might as well「〜した方がましだ」`,
+      `so far「今のところ」、as far as I know「私の知る限り」、no longer「もはや〜ない」`,
+    ],
+    sections: [
+      {
+        heading: '1. used to / be used to の使い分け（最頻出の混同ポイント）',
+        level: 'kiso',
+        body: `■ used to ＋ 動詞の原形（以前は〜だった・〜したものだ）
+過去の習慣・状態で「今はもう違う」ことを表す。
+
+  例）I used to play soccer every day.
+      （以前は毎日サッカーをしていた＝今はしていない）
+      There used to be a big tree here.
+      （以前ここに大きな木があった＝今はない）
+
+★ポイント：used to は「過去の習慣・状態」を表し、現在との対比を含む。
+  would も過去の習慣を表せるが、would は「動作の繰り返し」のみで、
+  状態（be動詞を使うような文）には使えない。
+    I would visit my grandmother every summer.（動作の繰り返しでOK）
+    × I would be a shy boy.（状態にはwouldは使えない。used toを使う）
+
+■ be/get used to ＋ 名詞・動名詞（〜に慣れている・慣れる）
+「used to」の後に -ing や名詞が来ると全く別の意味になる（入試最重要の混同ポイント）。
+
+  be used to -ing / 名詞：〜に慣れている（状態）
+    He is used to living in Japan.（彼は日本に住むことに慣れている）
+  get used to -ing / 名詞：〜に慣れる（変化）
+    I will get used to this new school soon.（すぐにこの新しい学校に慣れるだろう）
+
++------------------------+----------------------------+
+| 形                     | 意味                       |
++------------------------+----------------------------+
+| used to + 原形         | 以前は〜だった（過去の習慣）|
+| be used to + -ing/名詞 | 〜に慣れている             |
+| get used to + -ing/名詞| 〜に慣れる                 |
++------------------------+----------------------------+
+
+⚠注意：この3つは形が似ているため入試で頻繁に混同を狙われる。
+  toの後が「原形」か「-ing/名詞」かを必ず確認する。`,
+      },
+      {
+        heading: '2. had better・would rather・cannot help など重要構文',
+        level: 'oyo',
+        body: `■ had better ＋ 原形（〜すべきだ・〜した方がいい：強い忠告）
+should より強いニュアンスで、「そうしないとまずいことになる」という警告を含む。
+  You had better see a doctor.（医者に診てもらった方がいい）
+  You had better not be late.（遅れない方がいい）← 否定は had better not
+
+  ⚠注意：had better は目上の人には失礼になることがあるため、
+  相手によっては should の方が無難。
+
+■ would rather ＋ 原形（むしろ〜したい）
+  I would rather stay home than go out.
+  （出かけるよりむしろ家にいたい）
+  would rather A than B（BよりむしろA）の形で使うことが多い。
+
+■ cannot help -ing / cannot help but ＋ 原形（〜せずにはいられない）
+  I couldn't help laughing at the joke.
+  （その冗談に笑わずにはいられなかった）
+  = I couldn't help but laugh at the joke.
+
+★ポイント：cannot help -ing の help は「避ける」という意味で使われている
+  （「手伝えない」ではない）。
+
+■ may well ／ might as well（似ているが意味が違う重要ペア）
+  may well ＋ 原形：〜するのももっともだ（当然だ）
+    You may well be surprised at the news.
+    （その知らせに驚くのももっともだ）
+  might as well ＋ 原形：〜した方がまし（他に良い選択肢がない消極的な提案）
+    We might as well go home now.（もう家に帰った方がましだ）
+
+⚠注意：may well（当然だ）と might as well（〜する方がましだ）を混同しやすい。
+  意味が全く異なるので、文脈で判断する。`,
+      },
+      {
+        heading: '3. It is said that の書き換えと比較の重要構文',
+        level: 'oyo',
+        body: `■ It is said that S + V. ＝ S is said to 〜.（〜と言われている）
+「一般に〜と言われている」という伝聞を表す2つの言い方。
+
+  例）It is said that this temple is very old.
+      = This temple is said to be very old.
+      （このお寺はとても古いと言われている）
+
+  過去のことを表す場合は、to have + 過去分詞を使う（時制のずれに注意）。
+    It is said that he was rich when he was young.
+    = He is said to have been rich when he was young.
+    （彼は若い頃裕福だったと言われている）
+
+★ポイント：It is said that の後の時制と、is said to の後の不定詞の形
+  （to＋原形 or to have＋過去分詞）が一致しているか確認する。
+  同じ他の表現：It is believed that〜／It is known that〜も同じパターン。
+
+■ not so much A as B（AというよりむしろB）
+  He is not so much a teacher as a friend.
+  （彼は先生というよりむしろ友達だ）
+  = He is more a friend than a teacher.
+
+■ no more than / not more than、no less than / not less than
+  no more than 10（たった10（少ないという気持ち））
+  not more than 10（10を超えない＝多くても10：客観的な上限）
+  no less than 10（10もの（多いという気持ち））
+  not less than 10（10を下回らない＝少なくとも10：客観的な下限）
+
+  例）He has no more than 100 yen.（たった100円しか持っていない）
+      He has not more than 100 yen.（多くても100円しか持っていない）
+      She has no less than 100 books.（100冊もの本を持っている）
+
+⚠注意：no〜（主観的な少なさ/多さの強調）と not〜（客観的な数値の範囲）の
+  ニュアンスの違いを意識する。難関校で頻出。`,
+      },
+      {
+        heading: '4. 時間・程度を表す重要イディオム',
+        level: 'oyo',
+        body: `■ so far（今のところ・これまでのところ）
+  So far, everything has gone well.（今のところ、すべて順調だ）
+  ★現在完了形と一緒に使われることが多い。
+
+■ as far as I know（私の知る限り）
+  As far as I know, he is still in Japan.（私の知る限り、彼はまだ日本にいる）
+  ★as far as は「範囲」、as long as は「条件・期間」を表す点に注意。
+    As long as you study hard, you will pass.（一生懸命勉強する限り、合格するだろう）
+
+■ no longer（もはや〜ない）
+  He is no longer a child.（彼はもはや子供ではない）
+  = He is not a child any longer[anymore].
+  ★no longer は be動詞・助動詞の後に置くことが多い。
+
+■ not〜any more / not〜any longer（もう〜ない：no longerの書き換え）
+  She doesn't live here anymore.（彼女はもうここに住んでいない）
+
+■ in case（〜する場合に備えて）
+  Take an umbrella in case it rains.（雨が降る場合に備えて傘を持っていきなさい）
+  ⚠注意：in case は「〜するかもしれないから念のため」という意味で、
+  if（もし〜なら）とは意味が異なる。
+
+■ provided/providing (that)（もし〜ならば：条件を強く限定）
+  You can go out, provided that you finish your homework.
+  （宿題を終えるという条件で、外出してもよい）
+
+★ポイント：これらのイディオムは英検の語彙問題・高校入試の空所補充で
+  そのまま出題されることが多い。例文ごと音読して覚える。`,
+      },
+      {
+        heading: '5. 入試問題例',
+        level: 'nyushi',
+        body: `📝入試問題例
+
+【問1】（　）に最も適切なものを選びなさい。
+I am not used to (　　) in front of many people.
+① speak  ② speaking  ③ spoke  ④ speaks
+→ 答え：② speaking（be used to のtoは前置詞）
+
+【問2】ほぼ同じ意味になるように書き換えなさい。
+It is said that this town is famous for its hot springs.
+= This town (　　) (　　) (　　) famous for its hot springs.
+→ 答え：is said to be
+
+【問3】（　）に入る最も適切なものを選びなさい。
+You (　　) not be late for the meeting, or the boss will be angry.
+① had better  ② would rather  ③ used to  ④ may well
+→ 答え：① had better（otherwise angryという警告なのでhad better）
+
+【問4】次の文の意味として最も適切なものを選びなさい。
+"He has no more than 500 yen."
+① 彼は500円しか持っていない
+② 彼は少なくとも500円持っている
+③ 彼は500円以上持っている
+→ 答え：①
+
+【問5】（　）に適語を入れなさい。
+As (　　) as I know, she has never been abroad.
+→ 答え：far
+
+【問6】次の2文を、ほぼ同じ意味の1文にしなさい。
+I couldn't stop myself from crying when I heard the news.
+= I (　　) (　　) crying when I heard the news.
+→ 答え：couldn't help`,
+      },
+    ],
+  },
+
+  {
+    id: 'koko_eigo_18_question_types',
+    subject: 'eigo',
+    examType: 'koko',
+    order: 18,
+    title: '長文の設問タイプ別攻略（内容一致・空所補充）',
+    description: '内容一致問題と空所補充問題を設問タイプごとに深掘りし、得点力を上げる',
+    keyPoints: [
+      `内容一致問題は「本文の言い換え（パラフレーズ）」を見抜くことが最大のカギ`,
+      `内容一致の誤答パターン：数値のすり替え、因果の逆転、一部だけ正しい選択肢、Not mentioned`,
+      `空所補充（1文選択型）は前後の指示語・接続詞・話の流れから文脈を特定する`,
+      `空所補充（語句選択型）は空所の前後の文法的な形（品詞・時制）にも注目する`,
+      `段落ごとの要旨（トピックセンテンス）をメモしながら読むと該当箇所を探しやすい`,
+      `選択肢を先に全て読まず、本文の該当箇所を先に絞ってから選択肢と照合する`,
+      `消去法：本文と矛盾する選択肢→本文にない内容の選択肢→紛らわしい選択肢の順に消す`,
+    ],
+    sections: [
+      {
+        heading: '1. 内容一致問題の誤答パターンを見抜く',
+        level: 'oyo',
+        body: `■ 内容一致問題でよくある「ひっかけ」のパターン
+入試の内容一致問題は、本文と一見似ているが微妙に違う選択肢が並ぶ。
+代表的な誤答パターンを知っておくと選択のスピードと精度が上がる。
+
+  ① 数値のすり替え
+    本文：about 30% of students　→ 誤答：40% of students
+  ② 因果関係の逆転
+    本文：A because of B　→ 誤答：B because of A（原因と結果が逆）
+  ③ 一部だけ正しい（部分的真実）
+    本文の一部分だけを取り出し、全体としては誤りの選択肢を作る
+  ④ 断定しすぎ（言い過ぎ）
+    本文：some students think〜　→ 誤答：all students think〜
+  ⑤ Not mentioned（本文に書かれていない）
+    本文にない情報を、もっともらしく作った選択肢
+
+★ポイント：all/always/never/only/every などの「極端な語」を含む選択肢は
+  本文の実際のニュアンスとずれていることが多いので特に注意して照合する。
+
+■ パラフレーズ（言い換え）を見抜く
+選択肢は本文の単語をそのまま使わず、同じ意味の別の語句で書かれることが多い。
+
+  本文：Many people were surprised at the result.
+  選択肢：The result was unexpected for a lot of people.
+  （surprised at → unexpected、many people → a lot of people）
+
+★ポイント：単語が一致しているかではなく「意味が一致しているか」で判断する。
+  本文中のキーワードの同義語・言い換え表現に敏感になることが重要。`,
+      },
+      {
+        heading: '2. 空所補充（1文選択型）の解き方',
+        level: 'oyo',
+        body: `■ 1文選択型の空所補充とは
+文章中の空欄に「最も適切な1文」を選択肢から選ぶ形式。
+段落のつながり（論理関係）を把握することが最重要。
+
+■ 解法の手順
+  ① 空所の直前・直後の文を丁寧に読む
+  ② 空所の前後に指示語（it/this/that/they）があれば、それが指す内容を確認する
+  ③ 選択肢の中の指示語・接続詞が、前後の文とかみ合うか確認する
+  ④ 話の流れ（具体例→まとめ、原因→結果など）に矛盾しない文を選ぶ
+
+  例）...Many people enjoy reading books on rainy days. [　　] For example, they can relax at home without worrying about the weather.
+  → 空所の後に For example とあるので、空所には「本を読む利点の一般的な内容」が入る。
+    正解の選択肢はその一般論を述べたものになる。
+
+★ポイント：選択肢の「文頭の語」（However/For example/In addition/Also など）が
+  大きなヒントになる。前後の文との論理関係と矛盾しないかを必ず確認する。
+
+■ 空所補充で見るべき「つながりの手がかり」
+  代名詞：前の文の名詞と数・性が一致しているか（it/they/this/these）
+  時制：前後の文の時制と自然につながるか
+  話題の一貫性：段落全体のテーマから外れていないか
+
+⚠注意：選択肢が単独では正しい英文でも、
+  前後の文とのつながりが不自然であれば不正解になる。`,
+      },
+      {
+        heading: '3. 空所補充（語句選択型）の解き方',
+        level: 'oyo',
+        body: `■ 語句選択型の空所補充とは
+1〜数語の空所に、文法的・意味的に合う語句を選ぶ形式。
+文法知識と語彙知識の両方が必要になる。
+
+■ 解法の手順
+  ① 空所の前後の品詞・形を確認する（動詞の形・前置詞の有無など）
+  ② 空所を含む文だけでなく、前後の文の意味とのつながりを確認する
+  ③ 接続詞・副詞（however/therefore/so/because等）が空所なら、
+    論理関係（逆接・因果・並列）で判断する
+  ④ 選択肢を全て空所に当てはめて意味が通るか確認する
+
+  例）Ken practiced soccer very hard. (　　), he could not join the team.
+  ① However  ② Therefore  ③ For example  ④ In addition
+  → 空所の前後は「熱心に練習した」と「チームに入れなかった」で逆の内容
+  → 答え：① However（逆接）
+
+■ 文法的な形に注目するタイプ
+  She is looking forward to (　　) you again.
+  ① see  ② seeing  ③ saw  ④ seen
+  → look forward to のtoは前置詞なので、後ろは動名詞
+  → 答え：② seeing
+
+★ポイント：語句選択型は「意味」と「文法」の両方からアプローチできる。
+  文法的に1つに絞れる場合は、まず文法的な形（品詞・活用）から確認すると速い。
+
+⚠注意：接続副詞（however/therefore等）は文中のどこに置かれても
+  意味は変わらないが、位置によってコンマの打ち方が変わる点にも注意。`,
+      },
+      {
+        heading: '4. 段落要旨メモと消去法の実践テクニック',
+        level: 'oyo',
+        body: `■ 段落要旨メモの取り方
+長文を読みながら、各段落の余白に「一言でその段落の要旨」をメモしておくと、
+設問で「どの段落に書かれているか」を素早く探せるようになる。
+
+  例）
+  第1段落：スマホ利用時間の調査結果（データ）
+  第2段落：教師・親の心配（悪影響）
+  第3段落：専門家の意見（学習ツールとしての可能性）
+
+  設問「専門家はどう考えているか」→ 第3段落を見ればよいと即座に分かる。
+
+★ポイント：段落メモは日本語で数語程度でよい。完璧な要約を作る必要はなく、
+  「どこに何が書いてあるか」の索引として使う。
+
+■ 消去法の実践手順（内容一致問題）
+  ① まず「本文に明確に反する」選択肢を消す（最も見つけやすい）
+  ② 次に「本文に書かれていない（Not mentioned）」選択肢を消す
+  ③ 残った選択肢の中で「一部だけ正しい・言い過ぎ」の選択肢を消す
+  ④ 最後に残った選択肢を本文と正確に照合して確定する
+
+■ 時間配分の目安（内容一致・空所補充を含む大問）
+  ① 設問に軽く目を通す（1分）
+  ② 段落メモを取りながら本文を読む（5〜7分）
+  ③ 設問を解く（消去法を使いながら、5〜7分）
+  ④ 見直し（1〜2分）
+
+⚠注意：全ての選択肢を本文と一字一句照合しようとすると時間が足りなくなる。
+  明らかにおかしい選択肢から素早く消していく「引き算の発想」が重要。`,
+      },
+      {
+        heading: '5. 入試問題例',
+        level: 'nyushi',
+        body: `📝入試問題例
+
+次の英文を読んで、設問に答えなさい。
+
+Studying abroad has become more popular among Japanese high school students in recent years. According to a survey, about 20% of high school students are interested in studying in another country. [　　A　　] Some students want to improve their language skills, while others hope to experience different cultures. However, there are also challenges, such as high costs and homesickness. Despite these difficulties, many students who have studied abroad say that it was a valuable experience for their future.
+
+【問1】空所Aに入る最も適切な文を選びなさい。
+① However, most of them are not interested in it at all.
+② There are several reasons why they want to do so.
+③ For this reason, no one wants to study abroad.
+→ 答え：②（直後にSome students...whileothers...と理由が続くため）
+
+【問2】本文の内容と合っているものを選びなさい。
+① About 20% of high school students have already studied abroad.
+② Studying abroad has no problems at all.
+③ Some students who studied abroad found it valuable for their future.
+→ 答え：③（①は「興味がある」であり「すでに留学した」ではない。②は課題があると書かれている）
+
+【問3】本文の内容から、留学の課題として挙げられているものを2つ日本語で書きなさい。
+→ 答え：費用が高いこと、ホームシックになること`,
+      },
+    ],
+  },
+
+  {
+    id: 'koko_eigo_19_dialogue_reading',
+    subject: 'eigo',
+    examType: 'koko',
+    order: 19,
+    title: '対話文読解の攻略',
+    description: '対話文特有の話の流れ・談話標識・空所補充問題への対応力を鍛える',
+    keyPoints: [
+      `対話文は「質問→応答」「提案→承諾/断り」「依頼→返答」の3大パターンで進む`,
+      `話者を記号（A/B）だけでなく発言内容から役割（店員/客、先生/生徒など）を把握する`,
+      `談話標識：By the way(ところで)/Speaking of which(それと言えば)/Anyway(とにかく)`,
+      `空所の発言選択は「直後の発言」から逆算して考えるのが最も確実`,
+      `話題転換・相槌・聞き返しの表現は内容一致に直接関係しないことが多いが流れの把握に必須`,
+      `長い対話文では話題が変わるポイント（but/actually/well など）に印をつけて読む`,
+      `イラスト付き対話文はイラストの情報（値段・時刻・場所）と対話の内容を照合する`,
+    ],
+    sections: [
+      {
+        heading: '1. 対話文の基本パターンと話者の把握',
+        level: 'oyo',
+        body: `■ 対話文が進む3つの基本パターン
+入試の対話文はほぼ次の3パターンの組み合わせでできている。
+
+  ① 質問→応答
+    A: What time does the museum open?
+    B: It opens at nine.
+  ② 提案→承諾/断り
+    A: Why don't we go to the new café after school?
+    B: Sounds good! / I'm sorry, I have club activities today.
+  ③ 依頼→返答
+    A: Could you help me with my homework?
+    B: Sure, no problem. / I'm afraid I'm busy right now.
+
+★ポイント：どのパターンかを見抜けば、応答の選択肢を絞りやすくなる。
+  質問には具体的な答えが、提案には賛成/断りが、依頼には承諾/断りが続く。
+
+■ 話者の役割を発言内容から把握する
+対話文にはA・Bとしか書かれていないことが多いが、
+発言内容から「誰が誰に何を話しているか」（店員と客、先生と生徒など）を推測する。
+
+  例）A: May I help you? B: Yes, I'm looking for a birthday present.
+  → Aは店員、Bは客だと分かる（May I help you?は接客の定型句）
+
+★ポイント：役割が分かると、その後の展開（店員なら商品を勧める、
+  客なら値段や条件を聞くなど）が予測しやすくなる。`,
+      },
+      {
+        heading: '2. 談話標識（つなぎ言葉）の役割',
+        level: 'oyo',
+        body: `■ 話題を転換・展開する表現
+対話文には「会話ならでは」のつなぎ言葉（談話標識）が頻繁に使われる。
+これらは会話の流れを示す重要な合図になる。
+
+  By the way,（ところで）→ 話題を変える合図
+    By the way, have you finished your homework?
+  Speaking of which,（それと言えば）→ 直前の話題に関連した新しい話
+    Speaking of which, I saw Tom at the library yesterday.
+  Anyway,（とにかく／それはさておき）→ 話をまとめる・元に戻す
+    Anyway, let's talk about the plan for tomorrow.
+  Actually,（実は）→ 意外な事実・訂正を伝える
+    Actually, I've never been to Kyoto.
+  Well,（ええと／そうですね）→ 考え中・少し間を置く
+    Well, let me think about it.
+
+★ポイント：By the way や Actually の後には、
+  それまでの話題とは違う新しい情報が来ることが多い。
+  設問でその後の内容を問われることが多いので注意して読む。
+
+■ 相槌・聞き返しの表現（内容理解の助けになる）
+  I see. / I understand.（なるほど）
+  Really? / Are you serious?（本当に？）
+  What do you mean?（どういう意味ですか）
+  Sorry, could you say that again?（すみません、もう一度言っていただけますか）
+
+⚠注意：これらの相槌表現自体が設問で問われることは少ないが、
+  「話者が驚いている／納得していない」など心情を読み取るヒントになる。`,
+      },
+      {
+        heading: '3. 空所補充（発言選択型）の解き方',
+        level: 'oyo',
+        body: `■ 対話文特有の空所補充のコツ
+対話文の空所補充問題は、長文の空所補充と違い
+「次の発言」から逆算して考えるのが最も効果的。
+
+■ 解法の手順
+  ① 空所の直前の発言を確認する（何を言っているか）
+  ② 空所の直後の発言を確認する（それにどう応答しているか）
+  ③ 直後の発言と自然につながる内容を選択肢から選ぶ
+  ④ 選択肢の文末表現（疑問文/提案/断りなど）が直後の応答と矛盾しないか確認
+
+  例）A: Would you like some more coffee?
+      B: (　　)
+      A: OK, I'll bring you some tea instead.
+  → Aの2つ目の発言「代わりに紅茶を持ってきます」から、
+    Bは「コーヒーを断った」と分かる。
+  → 答え：No, thank you. I don't really like coffee.
+
+★ポイント：「直後の発言に矛盾しない」という視点が最大の決め手。
+  選択肢だけを見て自然に思えても、直後との整合性がなければ不正解。
+
+■ 選択肢に共通するパターンから逆算する
+選択肢が全て似た構造（例：全て Yes/No で始まる）の場合は、
+質問の種類（Yes/No疑問文か疑問詞疑問文か）を先に確認する。
+
+  疑問詞疑問文には Yes/No で答える選択肢は基本的に不正解になる。
+    Where did you buy that bag? に対し No, I didn't. は不成立。`,
+      },
+      {
+        heading: '4. イラスト・メモ付き対話文の読み方',
+        level: 'oyo',
+        body: `■ イラスト・表と対話文を照合する問題
+値段表・時刻表・メニュー・地図などのイラストと合わせて出題される対話文は、
+「対話の内容とイラストの情報を突き合わせる」ことが求められる。
+
+■ 解法のポイント
+  ① 対話文を読む前にイラスト・表の情報（項目・数値）をざっと確認する
+  ② 対話中に出てくる数値・固有名詞に印をつけながら読む
+  ③ 「変更・訂正」の発言（Actually.../ I changed my mind...）に特に注意する
+     → イラストの当初の情報と、対話の中で変わった情報が異なることが多い
+
+  例）（メニュー：Aセット500円、Bセット700円）
+  A: I'll have the A set.
+  B: Actually, could I change it to the B set instead?
+  → 最終的な注文はBセット（700円）である点に注意。
+    「最初に言った内容」ではなく「最終的にどうなったか」を問う設問が多い。
+
+★ポイント：対話文は時間の流れとともに内容が変化することが多い。
+  「結局どうなったか（最終結果）」を問う設問では、
+  対話の最後の部分に正解の根拠があることが多い。
+
+⚠注意：メモ・伝言問題では、対話に出てきた情報の一部だけがメモに反映される
+  形式もあるため、「メモに書くべき情報は何か」を意識して読む。`,
+      },
+      {
+        heading: '5. 入試問題例',
+        level: 'nyushi',
+        body: `📝入試問題例
+
+次の対話文を読んで、設問に答えなさい。
+
+A: Hi, Emily. Are you free this Saturday?
+B: I think so. Why?
+A: There's a new movie starting this weekend. Do you want to go with me?
+B: That sounds fun! What time does it start?
+A: There are two showings, one at 2 p.m. and another at 5 p.m.
+B: Let's go to the later one. I have a piano lesson in the morning.
+A: OK, then let's meet at the theater at 4:45.
+B: Sounds good. See you then!
+
+【問1】BはAのその日の予定として、朝に何をしていますか。
+→ 答え：ピアノのレッスン
+
+【問2】2人はどちらの回の映画を見に行くことにしましたか。
+→ 答え：午後5時の回
+
+【問3】（　）に入る最も適切なものを選びなさい。
+A: OK, then let's meet at the theater at 4:45.
+B: (　　)
+① I'm just looking.  ② Sounds good. See you then!  ③ Speaking.  ④ Not yet.
+→ 答え：②
+
+【問4】この対話の内容と合っているものを選びなさい。
+① Emily has no plans on Saturday morning.
+② They decided to watch the movie at 2 p.m.
+③ They will meet at the theater before the movie starts.
+→ 答え：③`,
+      },
+    ],
+  },
+
+  {
+    id: 'koko_eigo_20_translation_patterns',
+    subject: 'eigo',
+    examType: 'koko',
+    order: 20,
+    title: '和文英訳の頻出パターン',
+    description: '和文英訳で頻出する日本語特有の言い回しを英語らしい発想に変換する技術を身につける',
+    keyPoints: [
+      `無生物主語構文：「〜のおかげで」「〜によって」を主語にする（This medicine will make you feel better.）`,
+      `二重否定は肯定的な意味になる（ThereisnooneWhodoesnotknow〜＝みんな知っている）を訳し分ける`,
+      `部分否定 not always/not all「いつも〜とは限らない／全てが〜なわけではない」`,
+      `「〜させる」の訳し分け：使役動詞make/have/let、getto〜、help＋原形`,
+      `「〜してもらう」「〜される」の受動的表現をhave/get＋O＋過去分詞で表す`,
+      `日本語の「〜ので」「〜けれど」を接続詞1つで表し、becausebutの二重使用を避ける`,
+      `数量・程度の日本語（〜くらい、〜ほど、〜割）を英語の比較・分数表現に対応させる`,
+    ],
+    sections: [
+      {
+        heading: '1. 無生物主語構文（日本語にない発想）',
+        level: 'oyo',
+        body: `■ 無生物主語構文とは
+日本語では「人」を主語にする文でも、英語では「もの・こと」を主語にする方が
+自然な場合が多い。これを無生物主語構文と呼ぶ。
+
+  日本語：「この薬を飲めば、気分がよくなります。」
+  直訳困難：If you take this medicine, you will feel better.（これも可）
+  無生物主語：This medicine will make you feel better.
+  （この薬はあなたを気分よくさせるだろう）
+
+  日本語：「その知らせを聞いて、彼女は驚いた。」
+  無生物主語：The news surprised her.（その知らせが彼女を驚かせた）
+
+  日本語：「事故のせいで、私たちは遅れた。」
+  無生物主語：The accident made us late.
+
+■ よく使う無生物主語構文のパターン
+  〜のおかげで…できる：〜 enable(s) 人 to 〜／〜 help(s) 人 (to) 〜
+    This map will help you find the way.（この地図が道を見つける助けになる）
+  〜によって…になる：〜 make(s) 人/物 〜
+    Hard work made him successful.（努力が彼を成功させた）
+  〜のため…できない：〜 prevent(s)/keep(s) 人 from -ing
+    The heavy rain prevented us from going out.
+    （大雨のため、私たちは外出できなかった）
+
+★ポイント：「人が主語」の発想から抜け出し、「原因・理由」を主語にすると
+  シンプルで英語らしい1文にまとまることが多い。
+
+⚠注意：無生物主語構文は自由英作文では無理に使う必要はないが、
+  和文英訳（与えられた日本語を訳す問題）では頻出パターンなので理解しておく。`,
+      },
+      {
+        heading: '2. 否定表現の訳し分け（二重否定・部分否定）',
+        level: 'oyo',
+        body: `■ 二重否定（否定を2回使って肯定の意味にする）
+「〜しない人はいない」＝「みんな〜する」という意味になる表現。
+
+  There is no one who doesn't know his name.
+  （彼の名前を知らない人はいない＝みんなが知っている）
+  Nothing is impossible.（不可能なことは何もない＝何でも可能だ）
+
+★ポイント：二重否定は強い肯定を表す修辞的な表現。
+  和文英訳では「〜ない…はない」という日本語を見たら二重否定を疑う。
+
+■ 部分否定（全部ではなく一部を否定する）
+not all / not always / not every などは「全てではない」という意味になり、
+「全て〜ない」という全否定とは全く違う意味になる。
+
+  Not all students like studying.
+  （すべての生徒が勉強好きというわけではない＝一部は好き）
+  ⚠全否定との違い：No students like studying.（生徒は誰も勉強が好きではない）
+
+  She is not always busy.（彼女はいつも忙しいわけではない＝時々暇）
+  ⚠全否定：She is never busy.（彼女は決して忙しくない）
+
++------------------+----------------------------------+
+| 表現             | 意味                             |
++------------------+----------------------------------+
+| not all/every〜  | 全てが〜というわけではない（部分否定）|
+| no/none/never〜  | 全く〜ない（全否定）              |
++------------------------------------------------------+
+
+★ポイント：日本語の「みんなが〜というわけではない」を見たら
+  not all / not every で部分否定を作ることを思い出す。
+
+⚠注意：not all の位置に注意。主語につけるか、動詞の前につけるかで
+  意味が変わらないよう、not all + 名詞の形を基本形として覚える。`,
+      },
+      {
+        heading: '3. 「〜させる」「〜してもらう」の訳し分け',
+        level: 'oyo',
+        body: `■ 使役動詞の使い分け（make/have/let/get）
+日本語の「〜させる」は文脈によって英語では異なる動詞を使う。
+
+  make ＋ O ＋ 原形：（強制的に）〜させる
+    My mother made me clean my room.（母は私に部屋を掃除させた＝強制）
+  have ＋ O ＋ 原形：（当然のこととして）〜してもらう・させる
+    I had my brother carry the bag.（弟に鞄を運んでもらった）
+  let ＋ O ＋ 原形：（許可して）〜させてあげる
+    My father let me use his car.（父は私に車を使わせてくれた＝許可）
+  get ＋ O ＋ to不定詞：（説得して）〜させる
+    She got her son to clean his room.（彼女は息子を説得して部屋を掃除させた）
+
+★ポイント：「強制のmake」「許可のlet」「依頼・説得のget」の
+  ニュアンスの違いを日本語の文脈から判断する。
+
+■ 「〜してもらう」「〜される」の受動的表現（have/get + O + 過去分詞）
+「（人に頼んで）〜してもらう」「（被害として）〜される」は
+have/get ＋ 目的語 ＋ 過去分詞の形で表す。
+
+  I had my hair cut yesterday.（昨日髪を切ってもらった）
+  I got my bike fixed at the shop.（店で自転車を直してもらった）
+  She had her bag stolen on the train.（電車でバッグを盗まれた＝被害）
+
+★ポイント：目的語と過去分詞の間には「されるもの」の関係がある。
+  my hair（切られる）→ cut、my bike（直される）→ fixed
+
+⚠注意：have/get + O + 原形（誰かにさせる）と
+  have/get + O + 過去分詞（〜される・してもらう）の形の違いに注意。
+  I had him fix my bike.（彼に直させた／彼に直してもらった：人が主語で原形）
+  I had my bike fixed.（自転車を直してもらった：ものが目的語で過去分詞）`,
+      },
+      {
+        heading: '4. 接続詞の重複回避と数量・程度表現',
+        level: 'oyo',
+        body: `■ 「〜ので」「〜けれど」は接続詞を1つだけ使う
+日本語では「〜だが、しかし…」のように接続詞的表現を重ねることがあるが、
+英語では because と so、although と but を同じ文で重ねて使わない。
+
+  ⚠注意：× Because it was raining, so we stayed home.（誤り：becauseとsoの重複）
+  〇 Because it was raining, we stayed home.
+  〇 It was raining, so we stayed home.
+
+  ⚠注意：× Although he was tired, but he kept working.（誤り）
+  〇 Although he was tired, he kept working.
+  〇 He was tired, but he kept working.
+
+★ポイント：日本語の「〜だから、それで」につられて2つ接続詞を使わないよう注意する。
+  和文英訳では「1文に1つの接続詞（または等位接続詞）」が原則。
+
+■ 数量・程度を表す日本語の英訳パターン
+  「〜の半分」：half of 〜　　例）half of the students
+  「〜の3分の1」：a[one] third of 〜
+  「〜割」：〜 out of ten／〜 percent
+    「7割の生徒が」→ seven out of ten students / 70 percent of students
+  「〜くらい」：about 〜／around 〜
+  「〜ほど…ない」：not as … as 〜（比較の章を参照）
+  「〜倍」：〜 times as … as（twice as tall as など）
+
+  例）About 70% of the students agreed with the idea.
+      （生徒の約7割がその考えに賛成した）
+
+★ポイント：日本語特有の分数・割合表現を英語の決まった型
+  （X out of Y, X percent of, a [fraction] of）に落とし込む練習をしておく。
+
+⚠注意：「〜人に1人」は one in 〜 という特別な言い方をすることも多い。
+  One in three people has this experience.（3人に1人がこの経験を持つ）`,
+      },
+      {
+        heading: '5. 入試問題例',
+        level: 'nyushi',
+        body: `📝入試問題例
+
+【問1】次の日本語を英語にしなさい。
+「この写真を見ると、私は子供の頃を思い出す。」
+→ 答え例：This picture reminds me of my childhood.（無生物主語構文）
+
+【問2】次の日本語を英語にしなさい。
+「すべての生徒がその意見に賛成したわけではない。」
+→ 答え例：Not all the students agreed with the opinion.
+
+【問3】次の日本語を英語にしなさい。
+「母は私に毎日30分ピアノを練習させる。」
+→ 答え例：My mother makes me practice the piano for thirty minutes every day.
+
+【問4】次の日本語を英語にしなさい。
+「私は駅で財布を盗まれた。」
+→ 答え例：I had my wallet stolen at the station.
+
+【問5】次の英文の誤りを正しく直しなさい。
+"Because I was busy, so I couldn't call you."
+→ 答え：Because I was busy, I couldn't call you.（becauseとsoの重複を解消）
+
+【問6】次の日本語を英語にしなさい。
+「クラスの生徒の約4割がその映画を見たことがある。」
+→ 答え例：About 40 percent of the students in my class have seen the movie.`,
+      },
+    ],
+  },
+
+  {
+    id: 'koko_eigo_21_passive_advanced',
+    subject: 'eigo',
+    examType: 'koko',
+    order: 21,
+    title: '受動態の発展（群動詞・SVOO・知覚使役動詞）',
+    description: '受動態の基本を超えて、群動詞・SVOO文型・知覚使役動詞の受動態まで正確に使いこなす',
+    keyPoints: [
+      `群動詞（take care of型）の受動態は動詞句をひとまとまりにしてbe動詞＋過去分詞にする`,
+      `SVOO文型の受動態は目的語が2つあるため、どちらを主語にするかで2通りの受動態ができる`,
+      `SVOC文型の受動態はO＝Cの関係を保ったまま、Cをbe動詞の後に残す`,
+      `知覚動詞・使役動詞のSVOC（原形不定詞）を受動態にすると原形にtoが必要になる`,
+      `助動詞を含む受動態 can/will/must be＋過去分詞、進行形の受動態 is being＋過去分詞`,
+      `疑問文の受動態と否定の受動態の作り方（be動詞の位置に注意）`,
+      `動作主が不明・重要でないときはby以下を省略する（人が主語の能動態に書き換えられないときに受動態を使う）`,
+    ],
+    sections: [
+      {
+        heading: '1. 群動詞（フレーズ動詞）の受動態',
+        level: 'oyo',
+        body: `■ 群動詞の受動態とは
+「動詞＋前置詞／動詞＋副詞＋前置詞」のようなまとまり（群動詞）は、
+受動態にするときも1つの動詞のように扱い、ひとまとまりのまま be動詞＋過去分詞にする。
+
+  能動態：Everyone looks up to him.（みんなが彼を尊敬している）
+  受動態：He is looked up to by everyone.
+  （lookupto全体をひとまとまりとして受動態にする）
+
+■ 受動態でよく使われる群動詞（入試頻出）
+  take care of（〜の世話をする）
+    → The baby was taken care of by her grandmother.
+  laugh at（〜を笑う）
+    → He was laughed at by his classmates.
+  speak to（〜に話しかける）
+    → She was spoken to by a stranger.
+  look after（〜の世話をする）
+    → The garden is looked after by Mr. Smith.
+  put off（〜を延期する）
+    → The meeting was put off until next week.
+  bring up（〜を育てる）
+    → He was brought up in a small town.
+
+★ポイント：群動詞の受動態を作るときは、群動詞を分解せず
+  「1つの動詞」として捉えることが最重要。前置詞を落とさないよう注意。
+
+⚠注意：× He is looked by everyone up to.（誤り：前置詞の位置を動かしてはいけない）
+  〇 He is looked up to by everyone.（群動詞のまとまりを崩さない）`,
+      },
+      {
+        heading: '2. SVOO文型・SVOC文型の受動態',
+        level: 'oyo',
+        body: `■ SVOO（人＋物の2つの目的語）の受動態
+give/tell/show/teach/send のように「人に物を〜する」動詞は目的語が2つあるため、
+どちらを主語にするかで2種類の受動態ができる。
+
+  能動態：My grandmother gave me this watch.
+  （祖母は私にこの時計をくれた）
+
+  「人」を主語にする受動態：
+    I was given this watch by my grandmother.
+    （私は祖母にこの時計を与えられた）
+  「物」を主語にする受動態：
+    This watch was given to me by my grandmother.
+    （この時計は祖母によって私に与えられた）← toが必要になる点に注意
+
+★ポイント：「物」を主語にするときは、元の文で使われていた前置詞
+  （to/for）を正しく補う必要がある。
+    give/show/tell/send → to を使う：This letter was sent to me.
+    buy/make/cook → for を使う：A cake was made for her by him.
+
+■ SVOC（O＝C）の受動態
+call/name/make/keep/find などSVOCをとる動詞の受動態は、
+補語（C）をそのままbe動詞の後ろに残す。
+
+  能動態：We call him Ken.（私たちは彼をケンと呼ぶ）
+  受動態：He is called Ken (by us).（彼はケンと呼ばれている）
+
+  能動態：The news made her happy.（その知らせは彼女を幸せにした）
+  受動態：She was made happy by the news.（彼女はその知らせで幸せにされた）
+
+  能動態：They named the baby Emma.
+  受動態：The baby was named Emma (by them).
+
+★ポイント：SVOCの受動態では「O＝C」の関係（him＝Ken、her＝happy）が
+  そのままS＝Cとして保たれる。Cの位置・形は変わらない。`,
+      },
+      {
+        heading: '3. 知覚動詞・使役動詞（SVOC：原形不定詞）の受動態',
+        level: 'oyo',
+        body: `■ 知覚動詞のSVOC（O＋原形）を受動態にするとtoが必要になる
+see/hear/feel などの知覚動詞は能動態では原形不定詞（動詞の原形）を使うが、
+受動態にするとその原形の前に to が必要になる（入試最重要の変化点）。
+
+  能動態：I saw him enter the room.（彼が部屋に入るのを見た）
+  受動態：He was seen to enter the room (by me).
+  （原形 enter に to がつき、to enter になる）
+
+  能動態：They heard her sing a song.
+  受動態：She was heard to sing a song (by them).
+
+★ポイント：能動態では原形、受動態では to不定詞に変わる、というルールを覚える。
+  ⚠注意：進行中の動作を表す -ing 形はそのまま使われることが多い。
+    I saw him crossing the street. → He was seen crossing the street.
+    （原形の場合のみtoが必要で、-ing形はそのまま）
+
+■ 使役動詞 make のSVOC（O＋原形）も同様にtoが必要になる
+使役動詞のうち make だけは受動態にすると to が必要になる
+（have と let は受動態そのものがほとんど使われない）。
+
+  能動態：His mother made him clean his room.
+  受動態：He was made to clean his room (by his mother).
+  （原形cleanにtoがつき、to cleanになる）
+
+★ポイント：make ＋ O ＋ 原形 → be made to ＋ 原形（能動⇔受動でtoが出現）
+  ⚠注意：let の受動態は英語として不自然になるため、
+  入試ではほとんど出題されない（allow などに言い換えられることが多い）。
+    He was allowed to use the computer.（≒letの受動態の代わりに使う表現）`,
+      },
+      {
+        heading: '4. 助動詞・進行形を含む受動態と疑問文・否定文',
+        level: 'oyo',
+        body: `■ 助動詞を含む受動態（can/will/must be ＋ 過去分詞）
+助動詞のある文を受動態にするときは〈助動詞＋be＋過去分詞〉の形になる。
+
+  能動態：You must finish this work by tomorrow.
+  受動態：This work must be finished by tomorrow.
+
+  能動態：They will build a new library next year.
+  受動態：A new library will be built next year.
+
+  能動態：Everyone can see the mountain from here.
+  受動態：The mountain can be seen from here.
+
+★ポイント：助動詞の後ろは常に動詞の原形なので、be動詞も原形の be になる。
+  ⚠注意：× This work must finished.（誤り：beが抜けている）
+
+■ 進行形の受動態（is/are/was/were being ＋ 過去分詞）
+「今〜されている最中だ」ということを表す。
+
+  能動態：They are building a new bridge now.
+  受動態：A new bridge is being built now.
+  （その橋は今建設されている最中だ）
+
+  過去進行形の受動態：
+    The room was being cleaned when I arrived.
+    （私が着いたとき、部屋は掃除されている最中だった）
+
+■ 疑問文・否定文の受動態（復習と発展）
+  疑問文：be動詞（または助動詞）を主語の前に出す。
+    Was this bridge built in 1990? / Can this book be found in the library?
+  否定文：be動詞（助動詞）の直後に not を置く。
+    This bridge was not built in 1990. / This work cannot be finished today.
+
+⚠注意：受動態の疑問文でdo/doesを使わないように注意（be動詞・助動詞を使う）。
+  × Does this bridge built in 1990?（誤り）`,
+      },
+      {
+        heading: '5. 入試問題例',
+        level: 'nyushi',
+        body: `📝入試問題例
+
+【問1】次の文を受動態にしなさい。
+Everyone in the class laughs at his jokes.
+→ 答え：His jokes are laughed at by everyone in the class.
+
+【問2】次の文を、下線部の語を主語にして受動態にしなさい。
+My father bought me a new bike.（meを主語に）
+→ 答え：I was bought a new bike by my father.
+
+【問3】（　）に最も適切な形を入れなさい。
+He was seen (　　) the building around noon.
+① enter  ② to enter  ③ entering  ④ entered
+→ 答え：② to enter（知覚動詞の受動態は to不定詞になる。※③も文脈により可だが原形からの書き換えでは②が基本）
+
+【問4】次の文を受動態にしなさい。
+His teacher made him rewrite the report.
+→ 答え：He was made to rewrite the report by his teacher.
+
+【問5】次の文を受動態にしなさい。
+They are repairing the road now.
+→ 答え：The road is being repaired now.
+
+【問6】（　）に入る最も適切なものを選びなさい。
+This letter (　　) be sent to him by tomorrow.
+① must  ② must to  ③ has to be  ④ is must
+→ 答え：①（助動詞＋be＋過去分詞）`,
+      },
+    ],
+  },
+
+  {
+    id: 'koko_eigo_22_verb_patterns',
+    subject: 'eigo',
+    examType: 'koko',
+    order: 22,
+    title: '動詞の語法（SVOC・SVOOの応用）',
+    description: '紛らわしい自動詞・他動詞と、SVOO・SVOCをとる動詞の語法を正確に整理する',
+    keyPoints: [
+      `自動詞と他動詞が紛らわしい動詞：rise(自)/raise(他)、lie(自)/lay(他)、rise/arise`,
+      `say/tell/talk/speakは目的語のとり方が異なる（tellの直後は人、say/talk/speakは前置詞が必要な場合あり）`,
+      `SVOO⇔SVO+to/forの書き換え：give/show/teach型はto、buy/make/cook型はfor`,
+      `SVOCをとる代表的な動詞：call/name/make/keep/find/leave/paint/elect`,
+      `keep/leave＋O＋現在分詞・形容詞（状態を保つ・そのままにする）`,
+      `borrow/lend/rentの使い分け（借りる方向・お金がからむかどうか）`,
+      `look/see/watchの違い（意図的に見るか、視界に入るか、動くものを注視するか）`,
+    ],
+    sections: [
+      {
+        heading: '1. 紛らわしい自動詞・他動詞',
+        level: 'oyo',
+        body: `■ rise（自動詞）と raise（他動詞）
+  rise（自動詞：上がる、上昇する）：目的語をとらない
+    The sun rises in the east.（太陽は東から昇る）
+    Prices have risen recently.（最近物価が上がった）
+  raise（他動詞：〜を上げる）：目的語が必要
+    Please raise your hand.（手を挙げてください）
+    The company raised the prices.（その会社は価格を上げた）
+
+■ lie（自動詞：横になる）と lay（他動詞：〜を横たえる、置く）
+  lie - lay - lain（自動詞：横になる・存在する）
+    He lay on the bed and closed his eyes.（彼はベッドに横になり目を閉じた）
+    ⚠注意：lie（横になる）の過去形は lay。lie（嘘をつく）の過去形は lied なので混同注意。
+  lay - laid - laid（他動詞：〜を横たえる・置く）
+    She laid the baby on the bed.（彼女は赤ちゃんをベッドに寝かせた）
+
+■ sit（自動詞：座る）と seat（他動詞：〜を座らせる）
+  I sat on the chair.（私は椅子に座った）
+  Please be seated. / The usher seated us near the front.
+  （前の方の席にご案内しました＝座らせた）
+
+★ポイント：自動詞は「主語自身が動作をする」、他動詞は「他のものに〜させる」
+  という視点で整理すると覚えやすい。rise（自ら上がる）／raise（何かを上げる）
+
+⚠注意：これらは形が似ているため、空所補充・並べ替え問題で頻出。
+  目的語（名詞）が後ろにあるかどうかで自動詞・他動詞を判断する。`,
+      },
+      {
+        heading: '2. say/tell/talk/speakの使い分け',
+        level: 'oyo',
+        body: `■ say（〜と言う）：発言の内容を目的語にとる
+  He said (that) he was tired.（彼は疲れていると言った）
+  He said nothing.（彼は何も言わなかった）
+  ⚠注意：sayの直後に「人」を置けない。
+    × He said me that 〜（誤り）→ He said to me that 〜、または He told me that 〜
+
+■ tell（〜に伝える）：直後に「人」が必要
+  He told me that he was tired.（彼は私に疲れていると言った）
+  He told me the truth.（彼は私に真実を告げた）
+  He told me to wait here.（彼は私にここで待つように言った）
+
+■ talk（話す）・speak（話す）：自動詞的に使われることが多い
+  talk to/with 人（人と話す）：カジュアルな会話
+    I talked with my friend for an hour.
+  speak to 人（人に話しかける）：ややフォーマル、一方的な発言にも使う
+    Can I speak to Mr. Brown?（ブラウンさんとお話しできますか）
+  speak + 言語（〜語を話す）：目的語に直接言語がくる
+    She speaks three languages.（彼女は3か国語を話す）
+
++--------+------------------+-----------------------------------+
+| 動詞   | 直後にくる形     | 例                                 |
++--------+------------------+-------------------------------------+
+| say    | (that)節・内容   | say (that) 〜 / say nothing        |
+| tell   | 人 (+内容/to〜)  | tell 人 (that) 〜 / tell 人 to〜   |
+| talk   | to/with 人       | talk to[with] 人 about 〜          |
+| speak  | to 人 / 言語     | speak to 人 / speak English        |
++--------+------------------+-------------------------------------+
+
+★ポイント：4つの動詞の「直後に何が来るか」の型を表で整理して覚える。`,
+      },
+      {
+        heading: '3. SVOO⇔SVO＋to/forの書き換え',
+        level: 'oyo',
+        body: `■ SVOOをSVO＋前置詞に書き換える2つのグループ
+「人に物を〜する」というSVOO文型は、物を先に置き
+前置詞（to または for）を使ってSVOの形に書き換えられる。
+
+■ to を使うグループ（相手に「渡る・伝わる」イメージの動詞）
+  give/show/teach/tell/send/lend/pass/write
+    He gave me a present. → He gave a present to me.
+    She teaches us English. → She teaches English to us.
+    I'll send you the photos. → I'll send the photos to you.
+
+■ for を使うグループ（相手の「ために」何かをするイメージの動詞）
+  buy/make/cook/get/find/choose
+    My father bought me a bike. → My father bought a bike for me.
+    She made him a cake. → She made a cake for him.
+    I'll find you a good seat. → I'll find a good seat for you.
+
+★ポイント：to のグループは「その物が実際に相手に届く・伝わる」動詞、
+  for のグループは「相手のために（代わりに）行う」動詞、というイメージで区別する。
+
+⚠注意：ask は for を使う特別な動詞（人に対して物・ことを求める）。
+  I asked him a favor. → I asked a favor of him.（askはtoでもforでもなくof）
+
+■ 代名詞を目的語にとるときの語順の制約
+SVOOの「人」が代名詞（it/them等）のときは、SVO＋前置詞の形しか使えない。
+  × Give me it.（不自然） → 〇 Give it to me.
+  ⚠注意：物が代名詞になる場合は前置詞を使った形にするのが基本ルール。`,
+      },
+      {
+        heading: '4. SVOCをとる重要動詞とkeep/leaveの語法',
+        level: 'oyo',
+        body: `■ SVOC（O＝Cの関係）をとる代表的な動詞
+  call ＋ O ＋ C（OをCと呼ぶ）：We call the dog Pochi.
+  name ＋ O ＋ C（OをCと名づける）：They named the boy John.
+  make ＋ O ＋ C（OをCにする）：The news made him sad.
+  keep ＋ O ＋ C（OをCのままにしておく）：Keep the door open.
+  find ＋ O ＋ C（OがCだと分かる）：I found the book interesting.
+  leave ＋ O ＋ C（OをCのままにする・放置する）：Don't leave the window open.
+  paint ＋ O ＋ C（OをC色に塗る）：She painted the wall white.
+  elect ＋ O ＋ C（OをCに選ぶ）：They elected him captain.
+
+★ポイント：どの動詞も「O＝C」という等式関係が成り立つ。
+  We call the dog Pochi. → the dog = Pochi
+  I found the book interesting. → the book = interesting
+
+■ keep/leave ＋ O ＋ 現在分詞・過去分詞（状態の維持・放置）
+Cの位置に分詞（-ing/過去分詞）が来ることもある。
+
+  keep ＋ O ＋ -ing（Oを〜させ続ける）
+    The rain kept us waiting for an hour.（雨のため私たちは1時間待たされ続けた）
+  leave ＋ O ＋ 過去分詞（Oを〜されたままにする）
+    He left the door locked.（彼はドアに鍵をかけたままにした）
+  leave ＋ O ＋ -ing（Oが〜している状態のままにする）
+    She left the engine running.（彼女はエンジンをかけたままにした）
+
+⚠注意：分詞の形（現在分詞か過去分詞か）は、Oとの能動・受動の関係で決まる。
+  the door（鍵をかけられる側→過去分詞locked）
+  the engine（動いている側→現在分詞running）
+
+■ borrow/lend/rentの使い分け
+  borrow（無料で借りる、持ち運べる物）：I borrowed a book from the library.
+  lend（貸す）：Can you lend me your pen?
+  rent（有料で借りる・貸す、主に不動産や乗り物）：We rented a car for the trip.
+  ⚠注意：使う・使わせてもらう場所が固定されているもの（電話・トイレ等）は
+  borrow ではなく use を使う：May I use your phone?（× borrow your phone）`,
+      },
+      {
+        heading: '5. 入試問題例',
+        level: 'nyushi',
+        body: `📝入試問題例
+
+【問1】（　）に適切な形を選びなさい。
+The number of tourists has (　　) sharply this year.
+① rose  ② risen  ③ raised  ④ raise
+→ 答え：② risen（riseの過去分詞、自動詞なので受動態にしない）
+
+【問2】次の文を書き換えなさい（forを使って）。
+My mother made me a nice lunch.
+→ 答え：My mother made a nice lunch for me.
+
+【問3】（　）に最も適切なものを選びなさい。
+Please (　　) me the way to the museum.
+① say  ② talk  ③ tell  ④ speak
+→ 答え：③ tell（直後に人が来るのはtell）
+
+【問4】次の文の（　）に適切な語を入れなさい。
+I found the movie very (　　).（面白かった、という意味に）
+→ 答え：interesting（findのSVOC：O=Cの関係）
+
+【問5】次の文の意味として最も適切なものを選びなさい。
+"She left the light on when she went out."
+① 彼女は電気をつけたまま出かけた
+② 彼女は電気を消してから出かけた
+③ 彼女は電気をつけ忘れた
+→ 答え：①
+
+【問6】（　）に適切な語を選びなさい。
+Could you (　　) me your dictionary for a moment?
+① borrow  ② lend  ③ rent  ④ use
+→ 答え：② lend（貸してもらう＝lend、主語がcould youなので相手に貸してほしい）`,
+      },
+    ],
+  },
 ];
