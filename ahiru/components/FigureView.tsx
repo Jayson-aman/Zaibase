@@ -654,7 +654,7 @@ function LineChartFig({ fig }: { fig: LineChartFigure }) {
     }
   });
   if (fig.xLabel) els.push(<SvgText key="xlab" x={area.x0 + area.w / 2} y={VBH - 4} fontSize={10} fill={INK} textAnchor="middle">{fig.xLabel}</SvgText>);
-  if (fig.yLabel) els.push(<SvgText key="ylab" x={12} y={area.y0 + area.h / 2} fontSize={10} fill={INK} textAnchor="middle" rotation={-90} originX={12} originY={area.y0 + area.h / 2}>{fig.yLabel}</SvgText>);
+  if (fig.yLabel) els.push(<SvgText key="ylab" x={12} y={area.y0 + area.h / 2} fontSize={10} fill={INK} textAnchor="middle" transform={`rotate(-90, 12, ${area.y0 + area.h / 2})`}>{fig.yLabel}</SvgText>);
   return els;
 }
 
@@ -682,7 +682,7 @@ function BarChartFig({ fig }: { fig: BarChartFigure }) {
     els.push(<Rect key={`b${i}`} x={x} y={py(b.value)} width={bw} height={area.y0 + area.h - py(b.value)} fill={color} opacity={0.82} stroke={fig.histogram ? '#fff' : color} strokeWidth={fig.histogram ? 1 : 0} />);
     els.push(<SvgText key={`bl${i}`} x={x + bw / 2} y={area.y0 + area.h + 12} fontSize={9} fill={AXIS} textAnchor="middle">{b.label}</SvgText>);
   });
-  if (fig.yLabel) els.push(<SvgText key="ylab" x={12} y={area.y0 + area.h / 2} fontSize={10} fill={INK} textAnchor="middle" rotation={-90} originX={12} originY={area.y0 + area.h / 2}>{fig.yLabel}</SvgText>);
+  if (fig.yLabel) els.push(<SvgText key="ylab" x={12} y={area.y0 + area.h / 2} fontSize={10} fill={INK} textAnchor="middle" transform={`rotate(-90, 12, ${area.y0 + area.h / 2})`}>{fig.yLabel}</SvgText>);
   return els;
 }
 
