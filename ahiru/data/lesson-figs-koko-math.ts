@@ -716,4 +716,257 @@ export const lessonFigsKokoMath: Record<string, Figure> = {
     ],
     caption: '0≤t≤3で直線的に増加(S=4t)、3≤t≤7で一定(S=12)。t=3の折れ目が点が次の辺へ移った時刻',
   },
+
+  // ===== koko_math_16 数列・規則性の発展 =====
+
+  // 等比数列の和 Sn=3ⁿ−1
+  lf_kmath_47: {
+    kind: 'barChart',
+    yLabel: 'Sn（和）',
+    bars: [
+      { label: 'n=1', value: 2, color: '#0EA5E9' },
+      { label: 'n=2', value: 8, color: '#0EA5E9' },
+      { label: 'n=3', value: 26, color: '#0EA5E9' },
+      { label: 'n=4', value: 80, color: '#0EA5E9' },
+      { label: 'n=5', value: 242, color: '#0EA5E9' },
+    ],
+    caption: '初項2・公比3の等比数列の和 Sn=3ⁿ−1（n=1〜5で 2, 8, 26, 80, 242）',
+  },
+
+  // 群数列（各群の個数）
+  lf_kmath_48: {
+    kind: 'barChart',
+    yLabel: '個数',
+    bars: [
+      { label: '第1群', value: 1, color: '#0EA5E9' },
+      { label: '第2群', value: 2, color: '#0EA5E9' },
+      { label: '第3群', value: 3, color: '#0EA5E9' },
+      { label: '第4群', value: 4, color: '#0EA5E9' },
+      { label: '第5群', value: 5, color: '#0EA5E9' },
+    ],
+    caption: '群数列 1|2,3|4,5,6|7,8,9,10|11…|の第k群はk個。第5群は11〜15の5個',
+  },
+
+  // 格子点の個数（0≤x≤3, 0≤y≤x）
+  lf_kmath_49: {
+    kind: 'coordinate',
+    xRange: [-1, 4],
+    yRange: [-1, 4],
+    points: [
+      { x: 0, y: 0 },
+      { x: 1, y: 0 },
+      { x: 1, y: 1 },
+      { x: 2, y: 0 },
+      { x: 2, y: 1 },
+      { x: 2, y: 2 },
+      { x: 3, y: 0 },
+      { x: 3, y: 1 },
+      { x: 3, y: 2 },
+      { x: 3, y: 3 },
+    ],
+    lines: [{ a: 1, b: 0, label: 'y=x' }],
+    caption: '0≤x≤3, 0≤y≤x を満たす格子点は10個（x列ごとに1, 2, 3, 4個）',
+  },
+
+  // ===== koko_math_17 場合の数・確率の応用 =====
+
+  // 順列 nPr の増え方
+  lf_kmath_50: {
+    kind: 'barChart',
+    yLabel: '場合の数',
+    bars: [
+      { label: '5P1', value: 5, color: '#0EA5E9' },
+      { label: '5P2', value: 20, color: '#0EA5E9' },
+      { label: '5P3', value: 60, color: '#0EA5E9' },
+    ],
+    caption: '5人から1人・2人・3人を選んで並べる場合の数：5P1=5、5P2=20、5P3=60',
+  },
+
+  // 円順列（5人が円卓に座る）
+  lf_kmath_51: {
+    kind: 'circle',
+    points: [
+      { angle: 90, label: 'A' },
+      { angle: 162, label: 'B' },
+      { angle: 234, label: 'C' },
+      { angle: 306, label: 'D' },
+      { angle: 18, label: 'E' },
+    ],
+    chords: [[0, 1], [1, 2], [2, 3], [3, 4], [4, 0]],
+    caption: '5人が円卓に座る円順列は(5−1)!=24通り。1人を固定して残り4人の並び方を考える',
+  },
+
+  // ===== koko_math_18 データの活用の発展 =====
+
+  // 分散の計算（偏差の2乗）
+  lf_kmath_52: {
+    kind: 'barChart',
+    yLabel: '偏差の2乗',
+    bars: [
+      { label: '2', value: 16, color: '#0EA5E9' },
+      { label: '4', value: 4, color: '#0EA5E9' },
+      { label: '6', value: 0, color: '#0EA5E9' },
+      { label: '8', value: 4, color: '#0EA5E9' },
+      { label: '10', value: 16, color: '#0EA5E9' },
+    ],
+    caption: 'データ2,4,6,8,10（平均6）の偏差の2乗：16,4,0,4,16。分散=平均=8、標準偏差=√8≒2.83',
+  },
+
+  // 散布図（正の相関）
+  lf_kmath_53: {
+    kind: 'coordinate',
+    xRange: [0, 10],
+    yRange: [0, 10],
+    points: [
+      { x: 1, y: 2 },
+      { x: 2, y: 3 },
+      { x: 3, y: 3 },
+      { x: 4, y: 5 },
+      { x: 5, y: 5 },
+      { x: 6, y: 6 },
+      { x: 7, y: 7 },
+      { x: 8, y: 7 },
+      { x: 9, y: 9 },
+    ],
+    caption: '散布図の例：点が右上がりに分布しているので正の相関がある',
+  },
+
+  // 標本調査（捕獲・再捕獲法）
+  lf_kmath_54: {
+    kind: 'barChart',
+    yLabel: '匹数',
+    bars: [
+      { label: '標本中の印あり', value: 4, color: '#E11D48' },
+      { label: '標本の総数', value: 80, color: '#0EA5E9' },
+    ],
+    caption: '標本80匹中、印のついた魚が4匹。比率4/80から池全体の総数を2000匹と推定する',
+  },
+
+  // ===== koko_math_19 比例・反比例の応用 =====
+
+  // 比例と反比例のグラフ比較
+  lf_kmath_55: {
+    kind: 'coordinate',
+    xRange: [-1, 6],
+    yRange: [-1, 26],
+    lines: [{ a: 5, b: 0, label: 'y=5x（比例）' }],
+    hyperbolas: [{ k: 24, label: 'y=24/x（反比例）' }],
+    caption: '比例 y=5x は原点を通る直線、反比例 y=24/x は双曲線。表でy/xかxyが一定かを確認する',
+  },
+
+  // 歯車の反比例（歯数×回転数が一定）
+  lf_kmath_56: {
+    kind: 'barChart',
+    yLabel: '歯数×回転数',
+    bars: [
+      { label: '歯車A(20歯,30回転)', value: 600, color: '#0EA5E9' },
+      { label: '歯車B(15歯,40回転)', value: 600, color: '#0EA5E9' },
+    ],
+    caption: 'かみ合う歯車は 歯数×回転数 が等しい（20×30=15×40=600）',
+  },
+
+  // 水そうの水位グラフ（底面積が変わると傾きが変わる）
+  lf_kmath_57: {
+    kind: 'lineChart',
+    xLabel: '時間（分）',
+    yLabel: '水位（cm）',
+    xRange: [0, 8],
+    yRange: [0, 22],
+    series: [
+      {
+        label: '水位',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 4, y: 8 },
+          { x: 7, y: 20 },
+        ],
+      },
+    ],
+    caption: '底面積が広い部分(0〜4分)は水位がゆっくり上昇、狭い部分(4〜7分)は水位が速く上昇する',
+  },
+
+  // ===== koko_math_20 グラフの読み取りと変化の割合の応用 =====
+
+  // ダイヤグラム（休憩を含む移動）
+  lf_kmath_58: {
+    kind: 'lineChart',
+    xLabel: '時間（時）',
+    yLabel: '道のり（km）',
+    xRange: [0, 2.5],
+    yRange: [0, 7],
+    series: [
+      {
+        label: '道のり',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 1, y: 4 },
+          { x: 1.5, y: 4 },
+          { x: 2.5, y: 6 },
+        ],
+      },
+    ],
+    caption: '0〜1時間は時速4kmで移動、1〜1.5時間は休憩（水平）、1.5〜2.5時間は時速2kmで移動',
+  },
+
+  // 2人が出会うグラフ（2直線の交点）
+  lf_kmath_59: {
+    kind: 'lineChart',
+    xLabel: '時間（分）',
+    yLabel: 'A地点からの距離（m）',
+    xRange: [0, 30],
+    yRange: [0, 2400],
+    series: [
+      {
+        label: 'Bさん(分速80m)',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 20, y: 1600 },
+          { x: 30, y: 2400 },
+        ],
+      },
+      {
+        label: 'Aさん(分速40m)',
+        markers: true,
+        points: [
+          { x: 0, y: 2400 },
+          { x: 20, y: 1600 },
+          { x: 30, y: 1200 },
+        ],
+      },
+    ],
+    caption: '2直線の交点(20分後、1600m地点)が2人が出会う時刻と場所',
+  },
+
+  // 2つの水そうの水位比較
+  lf_kmath_60: {
+    kind: 'lineChart',
+    xLabel: '時間（分）',
+    yLabel: '水位（cm）',
+    xRange: [0, 10],
+    yRange: [0, 30],
+    series: [
+      {
+        label: '水そうA(y=3x)',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 5, y: 15 },
+          { x: 10, y: 30 },
+        ],
+      },
+      {
+        label: '水そうB(y=10+x)',
+        markers: true,
+        points: [
+          { x: 0, y: 10 },
+          { x: 5, y: 15 },
+          { x: 10, y: 20 },
+        ],
+      },
+    ],
+    caption: '2つのグラフの交点(5分後、水位15cm)で2つの水そうの水位が等しくなる',
+  },
 };
