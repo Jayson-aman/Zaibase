@@ -2267,6 +2267,7 @@ Aの根拠となる部分・Bの根拠となる部分を別々に探す
   {
     id: 'kokugo_12_kanjo_goi',
     subject: 'kokugo',
+    examType: 'chugaku',
     title: '心情語彙の完全マスター',
     description: '「うれしい」「悲しい」で終わらせない、精密な感情表現の語彙力',
     order: 12,
@@ -2432,6 +2433,7 @@ Aの根拠となる部分・Bの根拠となる部分を別々に探す
   {
     id: 'kokugo_13_taigi_ruigi',
     subject: 'kokugo',
+    examType: 'chugaku',
     title: '対義語・類義語の完全攻略',
     description: '語彙問題の得点源！反対語・似た意味の言葉を体系的に整理する',
     order: 13,
@@ -2603,6 +2605,7 @@ Aの根拠となる部分・Bの根拠となる部分を別々に探す
   {
     id: 'kokugo_14_doon_dokun',
     subject: 'kokugo',
+    examType: 'chugaku',
     title: '同音異義語・同訓異字の徹底攻略',
     description: '書き取りの最大の失点源！読みが同じ漢字を完全に整理する',
     order: 14,
@@ -2763,6 +2766,7 @@ Aの根拠となる部分・Bの根拠となる部分を別々に探す
   {
     id: 'kokugo_15_kanyoku_kotowaza',
     subject: 'kokugo',
+    examType: 'chugaku',
     title: '四字熟語・ことわざ・慣用句の体系整理',
     description: '知識問題の得点源を分類学習で一気に固める',
     order: 15,
@@ -2939,6 +2943,7 @@ Aの根拠となる部分・Bの根拠となる部分を別々に探す
   {
     id: 'kokugo_16_kyakuhon',
     subject: 'kokugo',
+    examType: 'chugaku',
     title: '脚本・戯曲的文章の読解',
     description: 'せりふとト書きから場面・心情を立体的に読み取る',
     order: 16,
@@ -3109,6 +3114,7 @@ Aの根拠となる部分・Bの根拠となる部分を別々に探す
   {
     id: 'kokugo_17_jitsuyobun',
     subject: 'kokugo',
+    examType: 'chugaku',
     title: '手紙・案内文・広告文などの実用文読解',
     description: '新傾向！生活に密着した実用文書を正確に読み取る',
     order: 17,
@@ -3281,6 +3287,7 @@ Aの根拠となる部分・Bの根拠となる部分を別々に探す
   {
     id: 'kokugo_18_fukusu_shiryo',
     subject: 'kokugo',
+    examType: 'chugaku',
     title: '複数資料を比較する読解問題',
     description: '新傾向入試の核心！立場の異なる複数の文章・資料を統合する',
     order: 18,
@@ -3456,6 +3463,7 @@ Bさん：「本文には（　言葉は思考の道具である　）と書か�
   {
     id: 'kokugo_19_shi_shurui',
     subject: 'kokugo',
+    examType: 'chugaku',
     title: '詩の種類と表現技法の深掘り',
     description: '形式・分類から鑑賞文の書き方まで、詩を体系的にマスターする',
     order: 19,
@@ -3626,6 +3634,7 @@ Bさん：「本文には（　言葉は思考の道具である　）と書か�
   {
     id: 'kokugo_20_ronri_tenkai',
     subject: 'kokugo',
+    examType: 'chugaku',
     title: '文章構成・論理展開パターンの識別',
     description: '文章の「型」を見抜けば、初見の文章も怖くない',
     order: 20,
@@ -3800,6 +3809,7 @@ Bさん：「本文には（　言葉は思考の道具である　）と書か�
   {
     id: 'kokugo_21_gensou_gijutsu',
     subject: 'kokugo',
+    examType: 'chugaku',
     title: '記述問題で減点されない書き方（特殊形式編）',
     description: '抜き出し・条件付き・複数要素記述など、特殊形式の記述を完全攻略',
     order: 21,
@@ -3978,6 +3988,7 @@ Bさん：「（　　　）と気づいたんだと思うよ。」
   {
     id: 'kokugo_22_shinjo_henka',
     subject: 'kokugo',
+    examType: 'chugaku',
     title: '心情変化を正確に読み取る技術',
     description: 'きっかけ→変化→結果の因果関係で人物の心を追いかける',
     order: 22,
