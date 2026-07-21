@@ -470,4 +470,185 @@ export const lessonFigsKokoMath: Record<string, Figure> = {
     sector: { from: 0, to: 90 },
     caption: '弓形＝おうぎ形−三角形＝(π×4²×90/360)−(1/2×4×4)＝4π−8 cm²',
   },
+
+  // ===== koko_math_12 二次関数と図形の融合 =====
+
+  // 放物線上の2点から直線の式を求める
+  lf_kmath_34: {
+    kind: 'coordinate',
+    xRange: [-5, 7],
+    yRange: [-1, 14],
+    parabolas: [{ a: 1 / 3, label: 'y=(1/3)x²' }],
+    lines: [{ a: 1, b: 6, label: 'y=x+6' }],
+    points: [
+      { x: -3, y: 3, label: 'A(−3, 3)' },
+      { x: 6, y: 12, label: 'B(6, 12)' },
+    ],
+    caption: '放物線上の点 A, B の座標から直線の式 y=x+6 を求める',
+  },
+
+  // △OABをy軸上の点で分割
+  lf_kmath_35: {
+    kind: 'coordinate',
+    xRange: [-5, 7],
+    yRange: [-1, 14],
+    segments: [
+      [{ x: 0, y: 0 }, { x: -3, y: 3 }],
+      [{ x: 0, y: 0 }, { x: 6, y: 12 }],
+      [{ x: -3, y: 3 }, { x: 6, y: 12 }],
+      [{ x: 0, y: 0 }, { x: 0, y: 6 }],
+    ],
+    points: [
+      { x: 0, y: 0, label: 'O' },
+      { x: -3, y: 3, label: 'A' },
+      { x: 6, y: 12, label: 'B' },
+      { x: 0, y: 6, label: 'C(0,6)' },
+    ],
+    caption: '△OABをy軸上の点Cで分割：△OAC=9, △OBC=18、合計27',
+  },
+
+  // 等積変形（Pに平行な直線でQへ移す）
+  lf_kmath_36: {
+    kind: 'coordinate',
+    xRange: [-6, 4],
+    yRange: [-1, 6],
+    parabolas: [{ a: 1, label: 'y=x²' }],
+    lines: [{ a: 1, b: 5, label: 'Pを通りABに平行' }],
+    points: [
+      { x: -1, y: 1, label: 'A' },
+      { x: 2, y: 4, label: 'B' },
+      { x: 0, y: 5, label: 'P' },
+      { x: -5, y: 0, label: 'Q' },
+    ],
+    caption: 'PをABに平行な直線上でQへ動かしても△ABPと△ABQの面積は変わらない',
+  },
+
+  // 動点Pの面積変化グラフ
+  lf_kmath_37: {
+    kind: 'lineChart',
+    xLabel: 't',
+    yLabel: '△OAPの面積 S',
+    xRange: [0, 4],
+    yRange: [0, 9],
+    series: [
+      {
+        label: 'S=8t−2t²',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 1, y: 6 },
+          { x: 2, y: 8 },
+          { x: 3, y: 6 },
+          { x: 4, y: 0 },
+        ],
+      },
+    ],
+    caption: '面積 S=8t−2t² は t=2 のとき最大値8。t=1, 3 のとき S=6',
+  },
+
+  // ===== koko_math_13 相似の応用 =====
+
+  // 平行線と線分の比の定理
+  lf_kmath_38: {
+    kind: 'coordinate',
+    xRange: [-4, 7],
+    yRange: [-1, 7],
+    segments: [
+      [{ x: 0, y: 6 }, { x: -3, y: 0 }],
+      [{ x: 0, y: 6 }, { x: 6, y: 0 }],
+      [{ x: -3, y: 0 }, { x: 6, y: 0 }],
+      [{ x: -2, y: 2 }, { x: 4, y: 2 }],
+    ],
+    points: [
+      { x: 0, y: 6, label: 'A' },
+      { x: -3, y: 0, label: 'B' },
+      { x: 6, y: 0, label: 'C' },
+      { x: -2, y: 2, label: 'D' },
+      { x: 4, y: 2, label: 'E' },
+    ],
+    caption: 'DE∥BCのとき AD:AB=AE:AC=DE:BC（この例ではすべて2:3）',
+  },
+
+  // 原点を相似の中心とした拡大
+  lf_kmath_39: {
+    kind: 'coordinate',
+    xRange: [-1, 9],
+    yRange: [-1, 7],
+    segments: [
+      [{ x: 0, y: 0 }, { x: 4, y: 0 }],
+      [{ x: 4, y: 0 }, { x: 4, y: 3 }],
+      [{ x: 4, y: 3 }, { x: 0, y: 0 }],
+      [{ x: 0, y: 0 }, { x: 8, y: 0 }],
+      [{ x: 8, y: 0 }, { x: 8, y: 6 }],
+      [{ x: 8, y: 6 }, { x: 0, y: 0 }],
+    ],
+    points: [
+      { x: 0, y: 0, label: 'O' },
+      { x: 4, y: 0, label: 'B(4,0)' },
+      { x: 4, y: 3, label: 'C(4,3)' },
+      { x: 8, y: 0, label: 'E(8,0)' },
+      { x: 8, y: 6, label: 'F(8,6)' },
+    ],
+    caption: '原点を相似の中心として2倍に拡大：OB:OE=OC:OF=1:2で△OBC∽△OEF',
+  },
+
+  // 角の二等分線と比
+  lf_kmath_40: {
+    kind: 'coordinate',
+    xRange: [-1, 11],
+    yRange: [-1, 7],
+    segments: [
+      [{ x: 2.75, y: 5.33 }, { x: 0, y: 0 }],
+      [{ x: 2.75, y: 5.33 }, { x: 10, y: 0 }],
+      [{ x: 0, y: 0 }, { x: 10, y: 0 }],
+      [{ x: 2.75, y: 5.33 }, { x: 4, y: 0 }],
+    ],
+    points: [
+      { x: 2.75, y: 5.33, label: 'A' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 10, y: 0, label: 'C' },
+      { x: 4, y: 0, label: 'D' },
+    ],
+    caption: '∠Aの二等分線ADが対辺BCを AB:AC=6:9=2:3 の比に分ける（BD:DC=2:3）',
+  },
+
+  // ===== koko_math_14 円と相似・方べきの定理 =====
+
+  // 円に内接する四角形（対角の和180°）
+  lf_kmath_41: {
+    kind: 'circle',
+    points: [
+      { angle: 60, label: 'A' },
+      { angle: 150, label: 'B' },
+      { angle: 220, label: 'C' },
+      { angle: 330, label: 'D' },
+    ],
+    chords: [[0, 1], [1, 2], [2, 3], [3, 0]],
+    caption: '円に内接する四角形ABCDでは ∠A+∠C=180°、∠B+∠D=180°',
+  },
+
+  // 方べきの定理①：円内部で交わる弦
+  lf_kmath_42: {
+    kind: 'circle',
+    points: [
+      { angle: 10, label: 'A' },
+      { angle: 100, label: 'C' },
+      { angle: 170, label: 'B' },
+      { angle: 260, label: 'D' },
+    ],
+    chords: [[0, 2], [1, 3]],
+    caption: '弦ABと弦CDが円の内部の点Pで交わるとき、PA×PB＝PC×PDが成り立つ（方べきの定理）',
+  },
+
+  // 接弦定理（接線と弦のなす角＝円周角）
+  lf_kmath_43: {
+    kind: 'circle',
+    points: [
+      { angle: 0, label: 'T' },
+      { angle: 120, label: 'A' },
+      { angle: 240, label: 'C' },
+    ],
+    chords: [[0, 1], [1, 2], [0, 2]],
+    caption: '接点Tでの接線と弦TAのなす角は、弧TAに対する円周角∠TCAに等しい（接弦定理）',
+  },
 };
