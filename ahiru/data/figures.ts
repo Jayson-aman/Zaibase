@@ -209,6 +209,7 @@ import { figuresKokoSeinan } from './school_koko_seinan';
 import { figuresKokoTaki } from './school_koko_taki';
 import { figuresKokoKurume } from './school_koko_kurume';
 import { figuresKokoOhori } from './school_koko_ohori';
+import { figuresKokoTokai } from './school_koko_tokai';
 
 export const figures: Record<string, Figure> = {
   ...figuresSample,
@@ -231,6 +232,7 @@ export const figures: Record<string, Figure> = {
   ...figuresKokoTaki,
   ...figuresKokoKurume,
   ...figuresKokoOhori,
+  ...figuresKokoTokai,
 };
 
 export function getFigure(questionId: string): Figure | null {
