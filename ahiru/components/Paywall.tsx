@@ -239,8 +239,6 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
             <View style={styles.androidNotice}>
               <Text style={styles.androidNoticeText}>
                 ⚠️ Android アプリでは現在 PRO / MAX プランのご購入はご利用いただけません。{'\n\n'}
-                📱 Google Chrome で exam.zaibase.group にアクセスすると{'\n'}
-                Web版からご購入いただけます。{'\n\n'}
                 ※ Android アプリでの課金は近日実装予定です。
               </Text>
             </View>
