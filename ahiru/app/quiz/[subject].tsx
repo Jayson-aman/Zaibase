@@ -31,6 +31,7 @@ import Paywall from '../../components/Paywall';
 import { saveProgress } from '../../store/progress';
 import { incrementTrialQuestions, isTrialExpired, TRIAL_QUESTION_LIMIT } from '../../store/trial';
 import { submitRankingScore } from '../../services/ranking';
+import { maybeRequestReview } from '../../services/reviewPrompt';
 import { getDailyQuestions, getTodayDayLabel } from '../../utils/dailyChallenge';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
@@ -189,6 +190,7 @@ export default function QuizScreen() {
         setSavedProgress(true);
         await saveProgress(subjectKey, currentScore, total, currentWrongIds);
         submitRankingScore(currentScore, total).catch(() => {});
+        maybeRequestReview(currentScore, total).catch(() => {});
       }
       setFinished(true);
     } else {
