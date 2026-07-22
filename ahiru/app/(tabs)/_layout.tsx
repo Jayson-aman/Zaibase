@@ -1,13 +1,6 @@
 import { Tabs } from 'expo-router';
-import { Text, StyleSheet } from 'react-native';
-
-function TabIcon({ emoji, focused }: { emoji: string; focused: boolean }) {
-  return (
-    <Text style={[styles.tabIcon, focused && styles.tabIconFocused]}>
-      {emoji}
-    </Text>
-  );
-}
+import { StyleSheet } from 'react-native';
+import TabBarIcon from '../../components/TabBarIcon';
 
 export default function TabLayout() {
   return (
@@ -24,63 +17,49 @@ export default function TabLayout() {
         name="schools"
         options={{
           title: '学校別',
-          tabBarIcon: ({ focused }) => (
-            <TabIcon emoji="🏫" focused={focused} />
-          ),
+          tabBarIcon: ({ color }) => <TabBarIcon name="schools" color={color} />,
         }}
       />
       <Tabs.Screen
         name="index"
         options={{
           title: 'クイズ',
-          tabBarIcon: ({ focused }) => (
-            <TabIcon emoji="📝" focused={focused} />
-          ),
+          tabBarIcon: ({ color }) => <TabBarIcon name="quiz" color={color} />,
         }}
       />
       <Tabs.Screen
         name="textbook"
         options={{
           title: 'テキスト',
-          tabBarIcon: ({ focused }) => (
-            <TabIcon emoji="📚" focused={focused} />
-          ),
+          tabBarIcon: ({ color }) => <TabBarIcon name="textbook" color={color} />,
         }}
       />
       <Tabs.Screen
         name="geography"
         options={{
           title: '地図',
-          tabBarIcon: ({ focused }) => (
-            <TabIcon emoji="🗾" focused={focused} />
-          ),
+          tabBarIcon: ({ color }) => <TabBarIcon name="geography" color={color} />,
         }}
       />
       <Tabs.Screen
         name="timeline"
         options={{
           title: '年表',
-          tabBarIcon: ({ focused }) => (
-            <TabIcon emoji="📅" focused={focused} />
-          ),
+          tabBarIcon: ({ color }) => <TabBarIcon name="timeline" color={color} />,
         }}
       />
       <Tabs.Screen
         name="formulas"
         options={{
           title: '公式',
-          tabBarIcon: ({ focused }) => (
-            <TabIcon emoji="📋" focused={focused} />
-          ),
+          tabBarIcon: ({ color }) => <TabBarIcon name="formulas" color={color} />,
         }}
       />
       <Tabs.Screen
         name="coach"
         options={{
           title: 'コーチ',
-          tabBarIcon: ({ focused }) => (
-            <TabIcon emoji="🎓" focused={focused} />
-          ),
+          tabBarIcon: ({ color }) => <TabBarIcon name="coach" color={color} />,
         }}
       />
       <Tabs.Screen
@@ -105,12 +84,5 @@ const styles = StyleSheet.create({
   tabLabel: {
     fontSize: 10,
     fontWeight: '600',
-  },
-  tabIcon: {
-    fontSize: 18,
-    opacity: 0.5,
-  },
-  tabIconFocused: {
-    opacity: 1,
   },
 });
