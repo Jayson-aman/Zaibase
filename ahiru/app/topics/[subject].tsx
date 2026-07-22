@@ -44,7 +44,7 @@ export default function TopicPickerScreen() {
           <Text style={styles.backText}>← 戻る</Text>
         </TouchableOpacity>
         <Text style={styles.title}>
-          {info.emoji} {info.name}の単元をえらぶ
+          {info.name}の単元をえらぶ
         </Text>
         <Text style={styles.subtitle}>
           {examType === 'chugaku' ? '📖 中学受験' : '🏫 高校受験'}・単元ごとに集中練習

@@ -258,7 +258,7 @@ export default function ProgressScreen() {
                 <View style={styles.reportItem}>
                   <Text style={styles.reportItemLabel}>得意科目</Text>
                   <Text style={styles.reportItemValue}>
-                    {subjectInfo[bestSubject].emoji} {subjectInfo[bestSubject].name}
+                    {subjectInfo[bestSubject].name}
                   </Text>
                   <Text style={styles.reportItemPct}>{subjectPct(bestSubject)}%</Text>
                 </View>
@@ -267,7 +267,7 @@ export default function ProgressScreen() {
                 <View style={styles.reportItem}>
                   <Text style={styles.reportItemLabel}>要復習</Text>
                   <Text style={styles.reportItemValue}>
-                    {subjectInfo[worstSubject].emoji} {subjectInfo[worstSubject].name}
+                    {subjectInfo[worstSubject].name}
                   </Text>
                   <Text style={styles.reportItemPct}>{subjectPct(worstSubject)}%</Text>
                 </View>

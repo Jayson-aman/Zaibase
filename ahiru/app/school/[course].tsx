@@ -16,6 +16,7 @@ import type { SubjectKey } from '../../data/questions-meta';
 import { useAllQuestions } from '../../hooks/useSubjectQuestions';
 import { ALL_COURSES, getCourseInfo } from '../../data/courses';
 import HomeButton from '../../components/HomeButton';
+import SubjectIcon from '../../components/SubjectIcon';
 
 export async function generateStaticParams() {
   return ALL_COURSES.map((c) => ({ course: c.key }));
@@ -286,7 +287,7 @@ export default function SchoolCurriculumScreen() {
               onPress={() => setActiveSubject(s.key)}
               activeOpacity={0.8}
             >
-              <Text style={styles.subjectEmoji}>{s.emoji}</Text>
+              <SubjectIcon subject={s.key} size={15} color={active ? D.gold : D.soft} strokeWidth={2} />
               <Text style={[styles.subjectLabel, active && styles.subjectLabelActive]}>
                 {s.label}
               </Text>
