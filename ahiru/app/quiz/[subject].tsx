@@ -41,6 +41,7 @@ import Fireworks from '../../components/Fireworks';
 import { getFigure } from '../../data/figures';
 import FigureView from '../../components/FigureView';
 import { pickEncouragement, pickStreakEncouragement } from '../../data/encouragements';
+import SubjectIcon from '../../components/SubjectIcon';
 
 function isSubjectKey(value: string): value is SubjectKey {
   return ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'].includes(value);
@@ -319,7 +320,7 @@ export default function QuizScreen() {
             <Text style={styles.backBtnText}>← 戻る</Text>
           </TouchableOpacity>
           <View style={styles.headerCenter}>
-            <Text style={styles.headerEmoji}>{info.emoji}</Text>
+            <SubjectIcon subject={subjectKey} size={28} color="#FFFFFF" strokeWidth={2} />
             <Text style={styles.headerTitle}>{info.name}</Text>
           </View>
           <View style={styles.headerRight}><HomeButton variant="light" /></View>
@@ -339,7 +340,7 @@ export default function QuizScreen() {
             <Text style={styles.backBtnText}>← 戻る</Text>
           </TouchableOpacity>
           <View style={styles.headerCenter}>
-            <Text style={styles.headerEmoji}>{info.emoji}</Text>
+            <SubjectIcon subject={subjectKey} size={28} color="#FFFFFF" strokeWidth={2} />
             <Text style={styles.headerTitle}>{info.name}</Text>
           </View>
           <View style={styles.headerRight}>
@@ -381,7 +382,7 @@ export default function QuizScreen() {
       <SafeAreaView style={[styles.safeArea, { backgroundColor: '#F5F7FA' }]}>
         <View style={styles.resultsContainer}>
           <View style={[styles.resultsHeader, { backgroundColor: isDaily ? '#C0392B' : info.color }]}>
-            <Text style={styles.resultsHeaderEmoji}>{info.emoji}</Text>
+            <SubjectIcon subject={subjectKey} size={44} color="#FFFFFF" strokeWidth={2} />
             <Text style={styles.resultsHeaderTitle}>
               {isDaily ? `🔥 MAX日替わり ${info.name} 完了！` : `${info.name} 完了！`}
             </Text>
@@ -441,7 +442,7 @@ export default function QuizScreen() {
           <Text style={styles.backBtnText}>← 戻る</Text>
         </TouchableOpacity>
         <View style={styles.headerCenter}>
-          <Text style={styles.headerEmoji}>{info.emoji}</Text>
+          <SubjectIcon subject={subjectKey} size={28} color="#FFFFFF" strokeWidth={2} />
           <Text style={styles.headerTitle}>{info.name}</Text>
           {isDaily ? (
             <Text style={styles.headerDiff}>🔥 {getTodayDayLabel()}</Text>

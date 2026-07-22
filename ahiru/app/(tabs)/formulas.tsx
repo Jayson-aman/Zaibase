@@ -8,6 +8,10 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import { FORMULAS, SUBJECTS, type Subject } from '../../data/formulas';
+import SubjectIcon, { type IconSubject } from '../../components/SubjectIcon';
+
+// 公式タブの教科名（算数/理科/社会）→ アイコンキー
+const SUBJ_ICON: Record<Subject, IconSubject> = { 算数: 'sansu', 理科: 'rika', 社会: 'shakai' };
 
 export default function FormulasScreen() {
   const [subject, setSubject] = useState<Subject>('算数');
@@ -17,7 +21,7 @@ export default function FormulasScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={[styles.header, { backgroundColor: subjectInfo.color }]}>
-        <Text style={styles.headerEmoji}>{subjectInfo.emoji}</Text>
+        <SubjectIcon subject={SUBJ_ICON[subject]} size={30} color="#FFFFFF" strokeWidth={2} />
         <View>
           <Text style={styles.headerTitle}>📋 公式・まとめ</Text>
           <Text style={styles.headerSub}>図解でわかる・チェックポイントで固める</Text>
@@ -32,7 +36,7 @@ export default function FormulasScreen() {
             onPress={() => setSubject(s.key)}
             activeOpacity={0.8}
           >
-            <Text style={styles.subjectBtnEmoji}>{s.emoji}</Text>
+            <SubjectIcon subject={SUBJ_ICON[s.key]} size={18} color={subject === s.key ? '#FFFFFF' : s.color} strokeWidth={2} />
             <Text style={[styles.subjectBtnText, subject === s.key && styles.subjectBtnTextActive]}>
               {s.key}
             </Text>
