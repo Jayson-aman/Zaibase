@@ -347,6 +347,7 @@ export default function VocabScreen() {
 
 // ── Paywall ─────────────────────────────────────────
 function VocabPaywall({ onClose, onPurchased }: { onClose: () => void; onPurchased: () => void }) {
+  const router = useRouter();
   const [monthlyProd, setMonthlyProd] = useState<unknown>(null);
   const [yearlyProd,  setYearlyProd]  = useState<unknown>(null);
   const [loadingProd, setLoadingProd] = useState(true);
@@ -423,7 +424,7 @@ function VocabPaywall({ onClose, onPurchased }: { onClose: () => void; onPurchas
               disabled={!yearlyProd || purchasing}
             >
               <Text style={s.purchaseBtnText}>
-                {purchasing ? '処理中...' : `${yearlyPrice}　で始める（お得）`}
+                {purchasing ? '処理中...' : `年額 ${yearlyPrice}　で始める（お得）`}
               </Text>
             </TouchableOpacity>
             <TouchableOpacity
@@ -431,7 +432,7 @@ function VocabPaywall({ onClose, onPurchased }: { onClose: () => void; onPurchas
               onPress={() => handlePurchase(monthlyProd)}
               disabled={!monthlyProd || purchasing}
             >
-              <Text style={s.purchaseBtnOutlineText}>{monthlyPrice}　で始める</Text>
+              <Text style={s.purchaseBtnOutlineText}>月額 {monthlyPrice}　で始める</Text>
             </TouchableOpacity>
           </>
         )}
@@ -440,6 +441,23 @@ function VocabPaywall({ onClose, onPurchased }: { onClose: () => void; onPurchas
         <TouchableOpacity onPress={handleRestore} disabled={purchasing}>
           <Text style={s.restoreText}>購入を復元する</Text>
         </TouchableOpacity>
+
+        {/* 自動更新サブスクの必須開示（App Store審査対応） */}
+        <Text style={s.paywallTerms}>
+          {Platform.OS === 'web'
+            ? '英単語Proは月額/年額の自動更新サブスクリプションです。期間終了の24時間前までに解約しない限り自動更新されます。お支払いはクレジットカード（Stripe経由）。解約は購入完了メール内の管理リンクからいつでも可能です。'
+            : '英単語Proは月額/年額の自動更新サブスクリプションです。期間終了の24時間前までに解約しない限り自動更新されます。解約はApp Store / Google Playの設定からいつでも可能。お支払いは購入確定時にストアアカウントへ請求されます。'}
+        </Text>
+        <View style={s.legalRow}>
+          <TouchableOpacity onPress={() => { onClose(); router.push('/terms'); }}>
+            <Text style={s.legalLink}>利用規約（EULA）</Text>
+          </TouchableOpacity>
+          <Text style={s.legalSep}>・</Text>
+          <TouchableOpacity onPress={() => { onClose(); router.push('/privacy'); }}>
+            <Text style={s.legalLink}>プライバシーポリシー</Text>
+          </TouchableOpacity>
+        </View>
+
         <TouchableOpacity onPress={onClose} style={s.closeBtn}>
           <Text style={s.closeBtnText}>閉じる</Text>
         </TouchableOpacity>
@@ -542,6 +560,10 @@ const s = StyleSheet.create({
   purchaseBtnDisabled: { opacity: 0.5 },
   restoreText:       { fontSize: 13, color: D.muted, marginTop: 14, textAlign: 'center', textDecorationLine: 'underline' },
   paywallNote:       { fontSize: 11, color: D.muted, marginTop: 10, textAlign: 'center' },
+  paywallTerms:      { fontSize: 10, color: D.muted, textAlign: 'center', marginTop: 12, lineHeight: 16, paddingHorizontal: 6 },
+  legalRow:          { flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 10 },
+  legalLink:         { fontSize: 12, color: D.soft, fontWeight: '600', textDecorationLine: 'underline' },
+  legalSep:          { fontSize: 12, color: D.muted, marginHorizontal: 8 },
   closeBtn:          { marginTop: 16, padding: 10 },
   closeBtnText:      { fontSize: 14, color: D.muted },
 });
