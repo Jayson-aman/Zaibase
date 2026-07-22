@@ -11,6 +11,7 @@ import {
 import { useRouter } from 'expo-router';
 import { ERAS, EVENTS, type Era } from '../../data/timeline';
 import { getPortraitsForPerson, getEventImages } from '../../data/history-portraits';
+import { historyImages } from '../../data/historyImages';
 
 export default function TimelineScreen() {
   const router = useRouter();
@@ -67,9 +68,13 @@ export default function TimelineScreen() {
         {events.map((ev, i) => {
           const portraits = getPortraitsForPerson(ev.person);
           const eventImages = getEventImages(`${ev.event} ${ev.note}`);
+          const illust = ev.img != null && historyImages[ev.img] != null
+            ? [{ key: `img-${ev.img}`, image: historyImages[ev.img], label: null, caption: 'イメージイラスト（教育用に作成した想像図。実物・実写ではありません）' }]
+            : [];
           const images = [
             ...portraits.map((p) => ({ key: `person-${p.person}`, image: p.image, label: p.person, caption: p.caption })),
             ...eventImages.map((e, idx) => ({ key: `event-${e.eventMatch}-${idx}`, image: e.image, label: null, caption: e.caption })),
+            ...illust,
           ];
           return (
             <View key={i} style={styles.eventRow}>
