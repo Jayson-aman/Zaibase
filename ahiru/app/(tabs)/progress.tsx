@@ -17,6 +17,7 @@ import { useMaxGate } from '../../hooks/useMaxGate';
 import { getWeakPointCoaching } from '../../services/aiCoach';
 import { fetchMyRanking, RankingResult } from '../../services/ranking';
 import Paywall from '../../components/Paywall';
+import SubjectIcon from '../../components/SubjectIcon';
 import { useAuthUser } from '../../hooks/useAuthUser';
 import { signOutUser } from '../../services/auth';
 
@@ -315,7 +316,7 @@ export default function ProgressScreen() {
             <View key={subject} style={styles.subjectCard}>
               <View style={styles.subjectRow}>
                 <View style={[styles.subjectIcon, { backgroundColor: info.color + '22' }]}>
-                  <Text style={styles.subjectEmoji}>{info.emoji}</Text>
+                  <SubjectIcon subject={subject} size={22} color={info.color} strokeWidth={2} />
                 </View>
                 <View style={styles.subjectMeta}>
                   <Text style={styles.subjectName}>{info.name}</Text>

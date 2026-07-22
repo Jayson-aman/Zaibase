@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { subjectInfo, SubjectKey } from '../../data/questions-meta';
+import SubjectIcon from '../../components/SubjectIcon';
 import { getTodayDayLabel } from '../../utils/dailyChallenge';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
@@ -102,7 +103,7 @@ export default function DailyChallengeScreen() {
               onPress={() => router.push(`/quiz/${subject}?mode=daily`)}
               activeOpacity={0.85}
             >
-              <Text style={styles.subjectEmoji}>{info.emoji}</Text>
+              <SubjectIcon subject={subject} size={30} color={info.color} strokeWidth={2} />
               <View style={styles.subjectInfo}>
                 <Text style={styles.subjectName}>{info.name}</Text>
                 <Text style={styles.subjectCount}>🔥 {count}問 · 発展レベル</Text>

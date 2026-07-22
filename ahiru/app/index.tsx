@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { formatYen, PRICES } from '../constants/pricing';
+import SubjectIcon, { type IconSubject } from '../components/SubjectIcon';
 
 const { width } = Dimensions.get('window');
 
@@ -248,7 +249,7 @@ export default function LandingPage() {
                 <View style={styles.currSubjects}>
                   {SUBJECTS.map((s) => (
                     <View key={s.name} style={[styles.currSubTag, { borderColor: c.color + '60' }]}>
-                      <Text style={styles.currSubEmoji}>{s.emoji}</Text>
+                      <SubjectIcon subject={s.key as IconSubject} size={12} color={c.color} strokeWidth={2} />
                       <Text style={[styles.currSubName, { color: c.color }]}>{s.name}</Text>
                     </View>
                   ))}
@@ -274,7 +275,7 @@ export default function LandingPage() {
                 onPress={() => router.replace('/(tabs)/' as any)}
               >
                 <View style={[styles.subjectIconCircle, { backgroundColor: s.color + '22', borderColor: s.color + '55' }]}>
-                  <Text style={styles.subjectEmoji}>{s.emoji}</Text>
+                  <SubjectIcon subject={s.key as IconSubject} size={28} color={s.color} strokeWidth={2} />
                 </View>
                 <Text style={[styles.subjectName, { color: s.color }]}>{s.name}</Text>
                 <Text style={styles.subjectDesc}>{s.desc}</Text>
