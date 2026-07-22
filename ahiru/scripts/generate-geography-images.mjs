@@ -92,6 +92,28 @@ async function generateImage(apiKey, modelId, prompt) {
   throw new Error('No image in response');
 }
 
+// sharp があればモバイル向けに縮小＋PNG圧縮する（無くても素の画像を保存して動く）。
+// Gemini は JPEG を返すことがあるため、sharp が使えるときは必ず PNG に統一する。
+let sharpMod = null;
+async function loadSharp() {
+  if (sharpMod !== null) return sharpMod;
+  try {
+    sharpMod = (await import('sharp')).default;
+  } catch {
+    sharpMod = false; // 未インストール
+  }
+  return sharpMod;
+}
+
+async function toPng(buffer) {
+  const sharp = await loadSharp();
+  if (!sharp) return null; // 変換不可
+  return sharp(buffer)
+    .resize(640, 640, { fit: 'cover' })
+    .png({ compressionLevel: 9, quality: 82 })
+    .toBuffer();
+}
+
 function writeMap(generatedKeys) {
   const lines = PRODUCTS.filter((p) => generatedKeys.has(p.key)).map(
     (p) => `  ${JSON.stringify(p.spotlight)}: require('../assets/geography/${p.key}.png'),`
@@ -133,10 +155,12 @@ async function main() {
     const outPath = path.join(OUT_DIR, `${p.key}.png`);
     process.stdout.write(`Generating ${p.key} (${p.spotlight})... `);
     try {
-      const buffer = await generateImage(apiKey, modelId, p.prompt);
-      fs.writeFileSync(outPath, buffer);
+      const raw = await generateImage(apiKey, modelId, p.prompt);
+      const png = await toPng(raw);
+      fs.writeFileSync(outPath, png ?? raw);
+      const kb = Math.round(fs.statSync(outPath).size / 1024);
       generated.add(p.key);
-      console.log('OK');
+      console.log(`OK (${kb}KB${png ? ', png640' : ', raw'})`);
     } catch (err) {
       console.log('FAILED');
       console.error(`  ${err.message}`);
