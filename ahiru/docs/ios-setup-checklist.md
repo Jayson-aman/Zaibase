@@ -22,10 +22,10 @@ App Store Connect → マイApp → Zaibase受験 → 「App内課金」また�
 
 | プラン | Product ID | 種別 | 価格（日本・税込） | グループ |
 |---|---|---|---|---|
-| PRO 月額 | `com.zaibase.exam.pro.monthly` | 自動更新（1か月） | ¥1,480 | A メインプラン |
-| MAX 月額 | `com.zaibase.exam.max.monthly` | 自動更新（1か月） | ¥2,480 | A メインプラン |
-| 英単語 月額 | `com.zaibase.exam.vocab.monthly` | 自動更新（1か月） | ¥980 | B 英単語 |
-| 英単語 年額 | `com.zaibase.exam.vocab.yearly` | 自動更新（1年） | ¥7,800 | B 英単語 |
+| PRO 月額 | `com.zaibase.exam.pro.monthly` | 自動更新（1か月） | ¥1,700 | A メインプラン |
+| MAX 月額 | `com.zaibase.exam.max.monthly` | 自動更新（1か月） | ¥2,850 | A メインプラン |
+| 英単語 月額 | `com.zaibase.exam.vocab.monthly` | 自動更新（1か月） | ¥1,130 | B 英単語 |
+| 英単語 年額 | `com.zaibase.exam.vocab.yearly` | 自動更新（1年） | ¥8,980 | B 英単語 |
 
 - 各商品に「表示名」「説明」「審査用スクリーンショット」を設定（審査用スクショはPaywall画面のもので可）。
 - 価格は「価格ポイント」から日本円で上記額に一致するものを選ぶ。

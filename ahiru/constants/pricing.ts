@@ -12,10 +12,10 @@
 
 /** 税込の月額・年額（円） */
 export const PRICES = {
-  proMonthly: 1480,
-  maxMonthly: 2480,
-  vocabMonthly: 980,
-  vocabYearly: 7800,
+  proMonthly: 1700,
+  maxMonthly: 2850,
+  vocabMonthly: 1130,
+  vocabYearly: 8980,
 } as const;
 
 /** 3桁区切りの円表記（Hermes でも安全なように手動フォーマット） */
