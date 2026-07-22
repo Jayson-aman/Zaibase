@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef, useEffect } from 'react';
+import React, { useState, useCallback, useRef, useEffect, useMemo } from 'react';
 import {
   View,
   Text,
@@ -71,18 +71,30 @@ export default function VocabScreen() {
   const [showPaywall, setShowPaywall] = useState(false);
   const [isSpeaking,  setIsSpeaking]  = useState(false);
   const [isListening, setIsListening] = useState(false);
+  const [shuffleKey,  setShuffleKey]  = useState(0);
 
   const flipAnim    = useRef(new Animated.Value(0)).current;
   const listenTimer = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const filtered = vocabWords.filter(w => {
-    const levelOk = levelFilter === '全て' || w.level === LEVEL_MAP[levelFilter];
-    const typeOk  = typeFilter  === '全て'
-      || (typeFilter === '単語' && !w.isPhrase && w.category !== 'conversation')
-      || (typeFilter === '熟語' &&  w.isPhrase && w.category !== 'conversation')
-      || (typeFilter === '英会話' && w.category === 'conversation');
-    return levelOk && typeOk;
-  });
+  // フィルターに合う単語をランダム順に並べる（毎回ちがう順で出題）。
+  // フィルター変更・シャッフルボタンで並べ直す。ナビ中は順番を保つ。
+  const filtered = useMemo(() => {
+    const base = vocabWords.filter(w => {
+      const levelOk = levelFilter === '全て' || w.level === LEVEL_MAP[levelFilter];
+      const typeOk  = typeFilter  === '全て'
+        || (typeFilter === '単語' && !w.isPhrase && w.category !== 'conversation')
+        || (typeFilter === '熟語' &&  w.isPhrase && w.category !== 'conversation')
+        || (typeFilter === '英会話' && w.category === 'conversation');
+      return levelOk && typeOk;
+    });
+    // Fisher-Yates シャッフル（偏りのない並べ替え）
+    const a = [...base];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }, [levelFilter, typeFilter, shuffleKey]);
 
   const card: VocabEntry | undefined = filtered[cardIndex];
 
@@ -197,7 +209,15 @@ export default function VocabScreen() {
           ))}
         </View>
 
-        <Text style={s.progress}>{cardIndex + 1} / {filtered.length}</Text>
+        <View style={s.progressRow}>
+          <Text style={s.progress}>{cardIndex + 1} / {filtered.length}　🔀ランダム出題</Text>
+          <TouchableOpacity
+            style={s.shuffleBtn}
+            onPress={() => { resetCard(); setCardIndex(0); setShuffleKey(k => k + 1); }}
+          >
+            <Text style={s.shuffleBtnText}>🔀 シャッフル</Text>
+          </TouchableOpacity>
+        </View>
 
         {card ? (
           <TouchableOpacity activeOpacity={0.92} onPress={handleFlip} style={s.cardWrap}>
@@ -443,7 +463,10 @@ const s = StyleSheet.create({
   typeChipActive:    { backgroundColor: 'rgba(74,144,217,0.18)', borderColor: D.blue },
   typeText:          { fontSize: 13, color: D.muted },
   typeTextActive:    { color: D.blue, fontWeight: '700' },
-  progress:          { textAlign: 'center', color: D.muted, fontSize: 12, marginBottom: 10 },
+  progressRow:       { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 10, marginBottom: 10 },
+  progress:          { textAlign: 'center', color: D.muted, fontSize: 12 },
+  shuffleBtn:        { backgroundColor: D.goldDim, borderWidth: 1, borderColor: D.goldBorder, borderRadius: 14, paddingHorizontal: 12, paddingVertical: 5 },
+  shuffleBtnText:    { fontSize: 12, color: D.gold, fontWeight: '700' },
   cardWrap:          { width: '100%', maxWidth: 480, alignSelf: 'center', height: 460, marginBottom: 16 },
   card:              { position: 'absolute', width: '100%', height: '100%', borderRadius: 18, padding: 20, backgroundColor: D.card, borderWidth: 1, borderColor: D.cardBorder, backfaceVisibility: 'hidden', ...glassWeb },
   cardFront:         {},
