@@ -19,6 +19,7 @@ import { VOCAB_MONTHLY_LABEL, VOCAB_YEARLY_LABEL } from '../../constants/pricing
 import type { VocabEntry, VocabLevel } from '../../data/vocab-meta';
 import { levelColor, levelLabel } from '../../data/vocab-meta';
 import { vocabWords } from '../../data/vocab_words';
+import { vocabUsageNotes } from '../../data/vocab-usage-notes';
 import { useFonts, BIZUDGothic_400Regular, BIZUDGothic_700Bold } from '@expo-google-fonts/biz-udgothic';
 
 // 教科書体に近い、可読性重視のUD（ユニバーサルデザイン）フォント
@@ -97,6 +98,11 @@ export default function VocabScreen() {
   }, [levelFilter, typeFilter, shuffleKey]);
 
   const card: VocabEntry | undefined = filtered[cardIndex];
+
+  // 用法・差がつきノート：カード自身に無ければ共通ノートで補う
+  const usage = card ? vocabUsageNotes[card.word.toLowerCase()] : undefined;
+  const kpNote = card?.keyPoint ?? usage?.keyPoint;
+  const snNote = card?.setNote ?? usage?.setNote;
 
   // 聞き流し自動送り
   useEffect(() => {
@@ -286,17 +292,17 @@ export default function VocabScreen() {
                   </> : null}
                 </View>
 
-                {card.keyPoint ? (
+                {kpNote ? (
                   <View style={s.keyBox}>
-                    <Text style={s.keyLabel}>📌 ここが大切</Text>
-                    <Text style={s.keyText}>{card.keyPoint}</Text>
+                    <Text style={s.keyLabel}>📌 ここが大切（用法・差がつく）</Text>
+                    <Text style={s.keyText}>{kpNote}</Text>
                   </View>
                 ) : null}
 
-                {card.setNote ? (
+                {snNote ? (
                   <View style={s.setBox}>
                     <Text style={s.setLabel}>🔗 セットで暗記</Text>
-                    <Text style={s.setText}>{card.setNote}</Text>
+                    <Text style={s.setText}>{snNote}</Text>
                   </View>
                 ) : null}
 
