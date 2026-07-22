@@ -92,7 +92,13 @@ export default function ConsentModal({ onAgree }: Props) {
           <View style={styles.planBox}>
             <Text style={styles.planBoxTitle}>💳 有料プランについて</Text>
             <Text style={styles.planBoxText}>
-              {`本アプリは無料でご利用いただけます。PRO（${PRO_PRICE_LABEL}）・MAX（${MAX_PRICE_LABEL}）プランでは、聞き流しモード・AI弱点コーチ等の追加機能をご利用いただけます。課金はApp Store / Google Play、またはWeb版はクレジットカード決済を通じて行われます。`}
+              {`本アプリは無料でご利用いただけます。PRO（${PRO_PRICE_LABEL}）・MAX（${MAX_PRICE_LABEL}）プランでは、聞き流しモード・AI弱点コーチ等の追加機能をご利用いただけます。課金は${
+                isWeb
+                  ? 'クレジットカード決済'
+                  : Platform.OS === 'ios'
+                  ? 'App Store'
+                  : 'Google Play'
+              }を通じて行われます。`}
             </Text>
           </View>
 
