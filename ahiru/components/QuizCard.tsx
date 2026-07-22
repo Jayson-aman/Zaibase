@@ -15,6 +15,7 @@ const SERIF = Platform.select({
   default: undefined,
 }) as string | undefined;
 import { Question, subjectInfo } from '../data/questions-meta';
+import SubjectIcon from './SubjectIcon';
 import { getHistoryThemeLabel } from '../data/images';
 import { getSubjectThemeLabel } from '../data/subjectImages';
 import { getFigure } from '../data/figures';
@@ -76,9 +77,8 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
     >
       <View style={styles.subjectChipRow}>
         <View style={[styles.subjectChip, { backgroundColor: info.color }]}>
-          <Text style={styles.subjectChipText}>
-            {info.emoji} {info.name}
-          </Text>
+          <SubjectIcon subject={question.subject} size={16} color="#FFFFFF" strokeWidth={2.2} />
+          <Text style={styles.subjectChipText}>{info.name}</Text>
         </View>
         {historyLabel != null && (
           <View style={styles.historyChip}>
@@ -265,6 +265,9 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   subjectChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
     paddingHorizontal: 14,
     paddingVertical: 6,
     borderRadius: 16,
