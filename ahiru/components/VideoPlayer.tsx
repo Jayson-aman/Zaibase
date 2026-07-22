@@ -8,13 +8,13 @@ import {
   Linking,
   Dimensions,
 } from 'react-native';
-import { Video, ResizeMode } from 'expo-av';
-
 /**
  * 解説動画プレイヤー（クロスプラットフォーム）。
- * - MP4 / HLS などの直リンク → expo-av の Video でインライン再生（Web・iOS・Android）。
- * - YouTube / Vimeo など → Web は iframe 埋め込み、ネイティブは「▶ 再生」ボタンで
- *   外部（ブラウザ/アプリ）を開く（react-native-webview 非依存で確実に動く）。
+ * - MP4 / HLS などの直リンク → Web は HTML5 <video> でインライン再生、
+ *   ネイティブは「▶ 再生」ボタンで外部（ブラウザ/アプリ）を開く。
+ * - YouTube / Vimeo など → Web は iframe 埋め込み、ネイティブは外部で開く。
+ * （SDK 56 で廃止された expo-av には依存しない。将来ネイティブでのインライン再生が
+ *   必要になったら expo-video の VideoView を追加する）
  */
 
 function parseYouTubeId(url: string): string | null {
@@ -41,15 +41,15 @@ export default function VideoPlayer({
 
   let body: React.ReactNode;
 
-  if (isDirectVideo(url)) {
-    body = (
-      <Video
-        source={{ uri: url }}
-        style={{ width: '100%', height: h, borderRadius: 12, backgroundColor: '#000' }}
-        useNativeControls
-        resizeMode={ResizeMode.CONTAIN}
-      />
-    );
+  if (isDirectVideo(url) && Platform.OS === 'web') {
+    // Web: HTML5 の <video> でインライン再生
+    body = React.createElement('video', {
+      src: url,
+      controls: true,
+      width: '100%',
+      height: h,
+      style: { borderRadius: 12, backgroundColor: '#000', width: '100%', height: h },
+    });
   } else if (ytId && Platform.OS === 'web') {
     // Web は react-dom 経由なので実DOMのiframeを生成できる
     body = React.createElement('iframe', {

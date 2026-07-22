@@ -47,7 +47,7 @@ export default function TutorChat({ visible, onClose, initialQuestion, subjectCo
 
   const pickImage = useCallback(async () => {
     try {
-      const { launchImageLibraryAsync, requestMediaLibraryPermissionsAsync, MediaTypeOptions } =
+      const { launchImageLibraryAsync, requestMediaLibraryPermissionsAsync } =
         await import('expo-image-picker');
       const { status } = await requestMediaLibraryPermissionsAsync();
       if (status !== 'granted') {
@@ -55,7 +55,7 @@ export default function TutorChat({ visible, onClose, initialQuestion, subjectCo
         return;
       }
       const result = await launchImageLibraryAsync({
-        mediaTypes: MediaTypeOptions.Images,
+        mediaTypes: ['images'],
         allowsEditing: true,
         quality: 0.6,
         base64: true,
@@ -90,7 +90,7 @@ export default function TutorChat({ visible, onClose, initialQuestion, subjectCo
       return;
     }
     try {
-      const { launchCameraAsync, requestCameraPermissionsAsync, MediaTypeOptions } =
+      const { launchCameraAsync, requestCameraPermissionsAsync } =
         await import('expo-image-picker');
       const { status } = await requestCameraPermissionsAsync();
       if (status !== 'granted') {
@@ -98,7 +98,7 @@ export default function TutorChat({ visible, onClose, initialQuestion, subjectCo
         return;
       }
       const result = await launchCameraAsync({
-        mediaTypes: MediaTypeOptions.Images,
+        mediaTypes: ['images'],
         allowsEditing: true,
         quality: 0.6,
         base64: true,
