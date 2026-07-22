@@ -108,7 +108,7 @@ export default function FormulasScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#F5F7FA' },
+  container: { flex: 1, backgroundColor: '#F7F8FB' },
   header: {
     paddingTop: 16,
     paddingBottom: 20,
@@ -123,8 +123,8 @@ const styles = StyleSheet.create({
   subjectRow: {
     flexDirection: 'row',
     backgroundColor: '#FFFFFF',
-    borderBottomWidth: 1,
-    borderBottomColor: '#E5EAF0',
+    borderBottomWidth: 1.5,
+    borderBottomColor: '#CBD2DE',
     padding: 10,
     gap: 8,
   },
@@ -135,8 +135,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: 6,
     paddingVertical: 10,
-    borderRadius: 10,
-    backgroundColor: '#F0F3F7',
+    borderRadius: 8,
+    backgroundColor: '#FFFFFF',
+    borderWidth: 1.5,
+    borderColor: '#DDE2EC',
   },
   subjectBtnEmoji: { fontSize: 18 },
   subjectBtnText: { fontSize: 14, fontWeight: '700', color: '#666' },
@@ -145,14 +147,11 @@ const styles = StyleSheet.create({
   content: { padding: 16 },
   section: {
     backgroundColor: '#FFFFFF',
-    borderRadius: 14,
-    marginBottom: 16,
+    borderRadius: 10,
+    marginBottom: 14,
     overflow: 'hidden',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.06,
-    shadowRadius: 4,
-    elevation: 2,
+    borderWidth: 1.5,
+    borderColor: '#CBD2DE',
   },
   sectionTitle: {
     fontSize: 16,
