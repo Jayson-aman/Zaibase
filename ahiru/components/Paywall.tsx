@@ -33,6 +33,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
   const [loadingOff, setLoadingOff] = useState(true);
   const [purchasing, setPurchasing] = useState(false);
   const { isLoggedIn } = useAuthUser();
+  const isWeb = Platform.OS === 'web';
 
   function goLogin() {
     onClose();
@@ -52,9 +53,10 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
   }, [visible]);
 
   async function handlePurchase(product: unknown) {
-    // ご購入は必ずアカウントに紐付ける（機種変更・複数端末で引き継ぎ、
-    // iOS↔Webの二重課金を防止）。未ログインならまずログイン画面へ。
-    if (!isLoggedIn) {
+    // iOS / Android はストアアカウント（Apple ID / Google）に購入が紐付くため
+    // ログイン不要でそのまま購入できる。Web 版のみ Stripe 購入をアカウントに
+    // 紐付けるため、未ログインならログイン画面へ誘導する。
+    if (isWeb && !isLoggedIn) {
       goLogin();
       return;
     }
@@ -72,13 +74,12 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
   }
 
   async function handleRestore() {
-    // 購入と同様、復元も必ずログイン済みアカウントに紐付ける。
-    // 未ログインで復元すると匿名IDに紐づき、Web版で同じ加入状態を
-    // 引き継げなくなるため、先にログインを促す。
-    if (!isLoggedIn) {
+    // iOS / Android はストアの購入履歴から復元するためログイン不要。
+    // Web 版のみ、Stripe 購入をアカウントで管理するためログインを促す。
+    if (isWeb && !isLoggedIn) {
       Alert.alert(
         'ログインが必要です',
-        '購入の復元にはログインが必要です。ログインすると、他の端末（Webなど）でも同じご購入内容を引き継げます。',
+        'Web版でご購入を復元するにはログインが必要です。',
         [
           { text: 'キャンセル', style: 'cancel' },
           { text: 'ログイン', onPress: goLogin },
@@ -120,7 +121,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
           <Text style={styles.title}>プレミアムプラン</Text>
           <Text style={styles.subtitle}>聞き流し学習でさらに力をつける</Text>
 
-          {!isLoggedIn && (
+          {isWeb && !isLoggedIn && (
             <TouchableOpacity style={styles.loginBanner} onPress={goLogin} activeOpacity={0.85}>
               <Text style={styles.loginBannerText}>
                 🔑 ご購入の前にログイン（無料）{'\n'}
