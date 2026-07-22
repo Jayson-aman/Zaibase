@@ -221,12 +221,14 @@ import { figuresKokoMeidaiFill } from './school_koko_meidai_fill';
 import { figuresCoreSansu } from './figures-core-sansu';
 import { figuresCoreRika } from './figures-core-rika';
 import { figuresKokoSansu } from './figures-koko-sansu';
+import { figuresKokoRika } from './figures-koko-rika';
 
 export const figures: Record<string, Figure> = {
   ...figuresSample,
   ...figuresCoreSansu,
   ...figuresCoreRika,
   ...figuresKokoSansu,
+  ...figuresKokoRika,
   ...figuresMath1,
   ...figuresMath2,
   ...figuresMath3,
