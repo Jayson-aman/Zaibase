@@ -177,12 +177,12 @@ export default function LandingPage() {
           <View style={styles.heroInner}>
             {/* タグバッジ */}
             <View style={styles.heroTag}>
-              <Text style={styles.heroTagText}>✦  2026年度入試対応</Text>
+              <Text style={styles.heroTagText}>中学受験・高校受験  ｜  2026年度入試対応</Text>
             </View>
 
             {/* メインタイトル（明朝体） */}
             <Text style={styles.heroTitle}>
-              合格への正攻法を、ここに。
+              中学受験・高校受験{'\n'}合格への正攻法を、ここに。
             </Text>
 
             {/* デコライン */}
@@ -193,9 +193,9 @@ export default function LandingPage() {
             </View>
 
             <Text style={styles.heroSub}>
-              算数・国語・理科・社会・英語{'\n'}
-              5科目 13,000問以上 × 動く図解 × 学校別コース対応{'\n'}
-              中学受験・高校受験、AI弱点コーチで志望校を目指す。
+              中学受験・高校受験の対策アプリ。{'\n'}
+              算数・国語・理科・社会・英語の5科目 13,000問以上 × 動く図解 × 学校別コース。{'\n'}
+              AI弱点コーチで志望校合格を目指す。
             </Text>
 
             <TouchableOpacity style={styles.heroCta} onPress={handleStart} activeOpacity={0.85}>
