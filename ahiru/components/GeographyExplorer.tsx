@@ -377,6 +377,12 @@ function RegionDetail({
 }) {
   const ag = region.agriculture;
   const fi = region.fishery;
+  // 「山と川」レイヤーで地域を選んだとき用：この地域にある山地・山脈を抽出。
+  // 地域名の括弧書き（例：近畿（関西））を外して region 文字列と突き合わせる。
+  const regionKey = region.name.replace(/（.*）/, '');
+  const regionMountains = mountainRanges.filter(
+    (m) => m.region.includes(regionKey) || regionKey.includes(m.region),
+  );
 
   return (
     <ScrollView style={styles.detailCard} showsVerticalScrollIndicator={false}>
@@ -393,6 +399,29 @@ function RegionDetail({
           <DetailSection title="🌤 気候" items={[region.climate]} />
           <DetailSection title="✨ 特色" items={region.features} />
           <DetailSection title="🏙 主要都市" items={region.cities.map((c) => `${c.name} — ${c.note}`)} />
+        </>
+      )}
+
+      {layer === 'mountains' && (
+        <>
+          <DetailSection title="🏔 地形" items={[region.terrain]} />
+          {regionMountains.length > 0 ? (
+            <DetailSection
+              title="⛰ この地域のおもな山地・山脈"
+              items={regionMountains.map(
+                (m) => `${m.name}（${m.reading}）／${m.kind}・最高峰 ${m.highestPeak} ${m.heightM}m — ${m.note}`,
+              )}
+            />
+          ) : (
+            <DetailSection
+              title="⛰ 山地・山脈"
+              items={['この地域には日本アルプスのような大きな山脈はありません。全国のおもな山地・山脈は、地図の下の一覧で位置とあわせて確認できます。']}
+            />
+          )}
+          <DetailSection
+            title="💧 川について"
+            items={['全国のおもな川（信濃川・利根川など）は、地図の下の「主要な川（長い順）」一覧で、つくる平野や河口とあわせて確認できます。']}
+          />
         </>
       )}
 
