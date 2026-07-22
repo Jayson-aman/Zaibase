@@ -1,7 +1,7 @@
 import 'react-native-reanimated';
 import { useEffect, useState } from 'react';
 import { Platform } from 'react-native';
-import { Stack } from 'expo-router';
+import { Stack, usePathname } from 'expo-router';
 import Head from 'expo-router/head';
 import { StatusBar } from 'expo-status-bar';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -15,6 +15,11 @@ const CONSENT_KEY = 'ahiru_terms_agreed_v1';
 export default function RootLayout() {
   const [consentChecked, setConsentChecked] = useState(false);
   const [showConsent, setShowConsent] = useState(false);
+  const pathname = usePathname();
+  // 法的ページ（利用規約・プライバシー・特商法・画像クレジット）は
+  // 同意ゲートを被せずに直接開けるようにする。App Store のプライバシー
+  // ポリシーURL（.../privacy）が同意モーダルで塞がれないようにするため。
+  const isLegalRoute = ['/terms', '/privacy', '/tokusho', '/credits'].includes(pathname);
 
   useEffect(() => {
     initRevenueCat();
@@ -94,7 +99,7 @@ export default function RootLayout() {
           options={{ headerShown: false, presentation: 'modal' }}
         />
       </Stack>
-      {consentChecked && showConsent && (
+      {consentChecked && showConsent && !isLegalRoute && (
         <ConsentModal onAgree={handleConsent} />
       )}
     </ErrorBoundary>
