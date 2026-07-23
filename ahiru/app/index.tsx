@@ -16,25 +16,26 @@ import SubjectIcon, { type IconSubject } from '../components/SubjectIcon';
 const { width } = Dimensions.get('window');
 
 // ── Premium dark navy palette ──────────────────────────────
+// 白基調（ミニマル幾何）パレット。white=主要テキスト(ink)、glass=白カード。
 const C = {
-  bg:          '#0C1E38',   // メイン紺（少し明るめ）
-  bgAlt:       '#12294A',   // 明るいセクション用
-  bgCard:      '#1A3557',   // カード背景
-  gold:        '#C8A84B',   // ゴールドアクセント
-  goldLight:   '#E4C96D',   // 明るいゴールド
-  goldDim:     'rgba(200,168,75,0.18)',
-  goldBorder:  'rgba(200,168,75,0.35)',
-  blue:        '#4B8FE4',   // 明るい青
-  blueLight:   '#A8CAFF',   // ソフト青
-  red:         '#D95050',
-  white:       '#EDF4FF',   // 見出し白
-  soft:        '#7FA8CC',   // 本文ソフト青
-  muted:       '#6E8CA8',   // 薄い文字（読みやすさUP）
-  glass:       'rgba(255,255,255,0.045)',
-  glassMid:    'rgba(255,255,255,0.07)',
-  glassBorder: 'rgba(255,255,255,0.09)',
-  glassHover:  'rgba(255,255,255,0.11)',
-  divider:     'rgba(255,255,255,0.06)',
+  bg:          '#F7F8FB',   // ページ背景（クールホワイト）
+  bgAlt:       '#FFFFFF',   // セクション（白）
+  bgCard:      '#FFFFFF',   // カード背景
+  gold:        '#A9821E',   // ゴールドアクセント（白背景で可読）
+  goldLight:   '#8A6A1E',   // 濃いゴールド
+  goldDim:     'rgba(169,130,30,0.10)',
+  goldBorder:  'rgba(169,130,30,0.40)',
+  blue:        '#2B4ACB',   // アクセント青
+  blueLight:   '#2B4ACB',
+  red:         '#D14343',
+  white:       '#0F1826',   // 見出し・主要テキスト（ink）
+  soft:        '#4A5A6B',   // 本文
+  muted:       '#7A8798',   // 薄い文字
+  glass:       '#FFFFFF',            // 白カード
+  glassMid:    '#F2F5FA',
+  glassBorder: '#CBD2DE',            // 明確な境界線
+  glassHover:  '#EEF1F6',
+  divider:     '#E3E7EF',
 };
 
 const SERIF = Platform.select({
@@ -339,7 +340,7 @@ export default function LandingPage() {
         </View>
 
         {/* ─── 合格者の声 ─────────────────────── */}
-        <View style={[styles.section, { backgroundColor: '#0A1A30' }]}>
+        <View style={[styles.section, { backgroundColor: '#EEF2F8' }]}>
           <SectionLabel label="合格者・保護者の声" goldMode />
           <Text style={[styles.sectionTitle, { color: C.white }]}>実績が語る</Text>
           {VOICES.map((v, i) => (
@@ -382,9 +383,9 @@ export default function LandingPage() {
             <View style={[styles.planBadge, { backgroundColor: '#7B2D8B' }]}>
               <Text style={styles.planBadgeText}>人気</Text>
             </View>
-            <Text style={[styles.planName, { color: '#C07AE0' }]}>PRO プラン</Text>
+            <Text style={[styles.planName, { color: '#7A3FD0' }]}>PRO プラン</Text>
             <View style={styles.planPriceRow}>
-              <Text style={[styles.planPrice, { color: '#C07AE0' }]}>{formatYen(PRICES.proMonthly)}</Text>
+              <Text style={[styles.planPrice, { color: '#7A3FD0' }]}>{formatYen(PRICES.proMonthly)}</Text>
               <Text style={styles.planPricePeriod}> / 月（税込）</Text>
             </View>
             <View style={styles.planDivider} />
@@ -394,7 +395,7 @@ export default function LandingPage() {
               '✓ 地理マップ全レイヤー',
               '✓ 動く図解・アニメ解説',
             ].map((f) => (
-              <Text key={f} style={[styles.planFeature, { color: '#D4AAFF' }]}>{f}</Text>
+              <Text key={f} style={[styles.planFeature, { color: '#7A3FD0' }]}>{f}</Text>
             ))}
             <TouchableOpacity style={[styles.planBtn, { backgroundColor: '#7B2D8B' }]} onPress={handleStart} activeOpacity={0.85}>
               <Text style={styles.planBtnText}>PRO プランを始める</Text>
@@ -487,7 +488,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 24,
     paddingVertical: 14,
-    backgroundColor: 'rgba(4,12,28,0.92)',
+    backgroundColor: 'rgba(255,255,255,0.92)',
     borderBottomWidth: 1,
     borderBottomColor: C.glassBorder,
     position: 'relative',
@@ -724,7 +725,7 @@ const styles = StyleSheet.create({
   subjectEmoji: { fontSize: 28 },
   subjectName: { fontSize: 20, fontWeight: '900', marginBottom: 6, textAlign: 'center' },
   subjectDesc: { fontSize: 13, color: C.muted, fontWeight: '400', lineHeight: 20, textAlign: 'center' },
-  subjectGo: { fontSize: 12, color: '#38BDF8', fontWeight: '700', marginTop: 8, textAlign: 'center' },
+  subjectGo: { fontSize: 12, color: '#2B4ACB', fontWeight: '700', marginTop: 8, textAlign: 'center' },
 
   // 特長
   featuresGrid: { gap: 16 },
@@ -893,7 +894,7 @@ const styles = StyleSheet.create({
 
   // Final CTA
   finalCta: {
-    backgroundColor: '#030913',
+    backgroundColor: '#EEF2F8',
     paddingHorizontal: 28,
     paddingVertical: 72,
     alignItems: 'center',
@@ -966,7 +967,7 @@ const styles = StyleSheet.create({
 
   // FOOTER
   footer: {
-    backgroundColor: '#020710',
+    backgroundColor: '#E8ECF3',
     paddingVertical: 36,
     paddingHorizontal: 24,
     alignItems: 'center',
