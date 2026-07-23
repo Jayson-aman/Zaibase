@@ -44,8 +44,9 @@ const D = {
 export default function ConversationScreen() {
   const router = useRouter();
   const { hasVocab } = useVocabSubscription();
-  const { isPro, isMax } = useSubscription();
-  const isPaid = hasVocab || isPro || isMax;
+  const { isMax } = useSubscription();
+  // AI英会話は英語系コンテンツ：英単語Pro（vocab）またはMaxで開放。
+  const isPaid = hasVocab || isMax;
   const [level, setLevel] = useState<VocabLevel>('eiken_2');
   const [scenario, setScenario] = useState<string | undefined>(undefined);
   const [messages, setMessages] = useState<ConversationMessage[]>([]);

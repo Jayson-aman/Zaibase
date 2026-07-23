@@ -415,8 +415,10 @@ export default function LandingPage() {
             <View style={styles.planDivider} />
             {[
               '✓ PROプランの全機能',
+              '✓ 英単語Proを丸ごと同梱（単語5,000+・熟語4,000+）',
+              '✓ 英検対策 2・3・4級 5,160問',
+              '✓ AIと英会話練習',
               '✓ AI弱点コーチ（間違い問題をAI分析）',
-              '✓ 苦手単元の自動特定＆アドバイス',
             ].map((f) => (
               <Text key={f} style={[styles.planFeature, { color: C.goldLight }]}>{f}</Text>
             ))}

@@ -12,10 +12,14 @@
 
 /** 税込の月額・年額（円） */
 export const PRICES = {
-  proMonthly: 1700,
+  // Pro：受験5科目（聞き流し・地理マップ全レイヤー・図解・全問題）。
+  proMonthly: 1980,
+  // Max：受験Pro＋英単語Pro（英検含む）＋AI弱点コーチの全部入り。
+  // 単品合計（Pro¥1,980＋英単語Pro¥1,680＝¥3,660）より割安に設定。
   maxMonthly: 2850,
-  vocabMonthly: 1130,
-  vocabYearly: 8980,
+  // 英単語Pro：英単語5,000+・熟語4,000+・英会話・英検5,160問・ネイティブ発音・AI英会話。
+  vocabMonthly: 1680,
+  vocabYearly: 13800,
 } as const;
 
 /** 3桁区切りの円表記（Hermes でも安全なように手動フォーマット） */

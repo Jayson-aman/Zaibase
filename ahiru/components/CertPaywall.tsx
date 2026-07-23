@@ -40,10 +40,11 @@ export default function CertPaywall({
 }: Props) {
   const router = useRouter();
   const { hasVocab, loading: vocabLoading } = useVocabSubscription();
-  const { isPro, isMax, loading: subLoading } = useSubscription();
+  const { isMax, loading: subLoading } = useSubscription();
 
   const loading = vocabLoading || subLoading;
-  const hasAccess = hasVocab || isPro || isMax;
+  // 英検は「英単語Pro（vocab）」または全部入りのMaxで開放（受験専用Proは対象外）。
+  const hasAccess = hasVocab || isMax;
 
   const content = typeof children === 'function' ? children(hasAccess) : children;
 

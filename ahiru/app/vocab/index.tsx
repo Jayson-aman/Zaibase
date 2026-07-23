@@ -14,6 +14,7 @@ import {
 import { useRouter } from 'expo-router';
 import { speakWithOpenAI, speakWithDevice } from '../../services/tts';
 import { useVocabSubscription } from '../../hooks/useVocabSubscription';
+import { useSubscription } from '../../hooks/useSubscription';
 import { fetchVocabProducts, purchaseProduct, restorePurchases } from '../../services/subscription';
 import { VOCAB_MONTHLY_LABEL, VOCAB_YEARLY_LABEL } from '../../constants/pricing';
 import type { VocabEntry, VocabLevel } from '../../data/vocab-meta';
@@ -64,7 +65,9 @@ const LISTEN_INTERVAL_MS = 4500;
 export default function VocabScreen() {
   const router = useRouter();
   const { hasVocab } = useVocabSubscription();
-  const hasVocabPro = hasVocab;
+  const { isMax } = useSubscription();
+  // 英単語Pro（vocab）加入者、または全部入りのMax会員に開放。
+  const hasVocabPro = hasVocab || isMax;
   const [fontsLoaded] = useFonts({ BIZUDGothic_400Regular, BIZUDGothic_700Bold });
 
   const [levelFilter, setLevelFilter] = useState<string>('全て');
@@ -343,7 +346,7 @@ export default function VocabScreen() {
 
         {!hasVocabPro && (
           <TouchableOpacity style={s.promoBanner} onPress={() => setShowPaywall(true)}>
-            <Text style={s.promoText}>🔊 英単語Pro — ネイティブ発音・聞き流し・単語5,000+・熟語4,000+　{VOCAB_MONTHLY_LABEL}〜</Text>
+            <Text style={s.promoText}>🔊 英単語Pro — 単語5,000+・熟語4,000+・英検5,160問・ネイティブ発音　{VOCAB_MONTHLY_LABEL}〜</Text>
           </TouchableOpacity>
         )}
       </ScrollView>
@@ -408,12 +411,13 @@ function VocabPaywall({ onClose, onPurchased }: { onClose: () => void; onPurchas
         <Text style={s.paywallSub}>ネイティブ発音 ＋ 聞き流しで効率UP</Text>
 
         {[
-          '🔊 ネイティブ発音（OpenAI TTS HD・高音質）',
+          '🔊 ネイティブ発音（OpenAI TTS・高音質）',
           '▶ 聞き流しモード（自動ページ送り）',
           '📖 単語5,000語+ ＋ 熟語4,000+ ＋ 日常英会話200',
+          '🇬🇧 英検対策 2・3・4級 5,160問（リスニング音声つき）',
+          '🗣️ AIと英会話練習',
           '🎓 英検準2級〜1級・TOEIC800レベル対応',
-          '📌 ここが大切・セットで暗記・覚え方ダブル',
-          '📊 学習進捗トラッキング',
+          '📊 学習進捗トラッキング・スペリング練習',
         ].map(f => (
           <View key={f} style={s.featureRow}>
             <Text style={s.featureText}>{f}</Text>
