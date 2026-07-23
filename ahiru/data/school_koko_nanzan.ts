@@ -723,7 +723,8 @@ export const schoolKokoNanzan: Question[] = [
     examType: 'koko',
     difficulty: 'basic',
     question:
-      '世界の気候帯（熱帯・温帯・冷帯（亜寒帯）・寒帯・乾燥帯）のうち、一年を通して降水量が少なく、砂漠やステップが広がる気候帯を何というか。',
+      '一年を通して降水量が少なく、砂漠やステップが広がる気候帯を何というか。',
+    choices: ['熱帯', '乾燥帯', '温帯', '寒帯'],
     answer: '乾燥帯',
     hint: 'サハラ砂漠やゴビ砂漠など、雨がほとんど降らない地域が当てはまる気候帯。',
     explanation:
@@ -786,7 +787,8 @@ export const schoolKokoNanzan: Question[] = [
     examType: 'koko',
     difficulty: 'standard',
     question:
-      '明治政府が行った三大改革（学制・徴兵令・地租改正）のうち、土地の価格（地価）を基準にして税を現金で納めさせるようにした改革を何というか。',
+      '明治政府が土地の価格（地価）を基準にして税を現金で納めさせるようにした改革を何というか。',
+    choices: ['学制', '徴兵令', '地租改正', '廃藩置県'],
     answer: '地租改正',
     hint: 'それまでの年貢は収穫高（米の量）に応じて納めるものだったが、この改革によって基準が変わった。',
     explanation:
@@ -920,7 +922,8 @@ export const schoolKokoNanzan: Question[] = [
     examType: 'koko',
     difficulty: 'standard',
     question:
-      '京浜工業地帯・中京工業地帯・阪神工業地帯のうち、輸送用機械（自動車）の生産額が特に多く、日本最大の製造品出荷額を誇る工業地帯はどこか。',
+      '輸送用機械（自動車）の生産額が特に多く、日本最大の製造品出荷額を誇る工業地帯はどこか。',
+    choices: ['京浜工業地帯', '中京工業地帯', '阪神工業地帯', '北九州工業地帯'],
     answer: '中京工業地帯',
     hint: '愛知県・三重県を中心とし、自動車産業が特に盛んな工業地帯。',
     explanation:
