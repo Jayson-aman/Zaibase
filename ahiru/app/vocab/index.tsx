@@ -424,7 +424,7 @@ function VocabPaywall({ onClose, onPurchased }: { onClose: () => void; onPurchas
               disabled={!yearlyProd || purchasing}
             >
               <Text style={s.purchaseBtnText}>
-                {purchasing ? '処理中...' : `年額 ${yearlyPrice}　で始める（お得）`}
+                {purchasing ? '処理中...' : yearlyProd ? `年額 ${yearlyPrice}　で始める（お得）` : '準備中'}
               </Text>
             </TouchableOpacity>
             <TouchableOpacity
@@ -432,9 +432,18 @@ function VocabPaywall({ onClose, onPurchased }: { onClose: () => void; onPurchas
               onPress={() => handlePurchase(monthlyProd)}
               disabled={!monthlyProd || purchasing}
             >
-              <Text style={s.purchaseBtnOutlineText}>月額 {monthlyPrice}　で始める</Text>
+              <Text style={s.purchaseBtnOutlineText}>{monthlyProd ? `月額 ${monthlyPrice}　で始める` : '準備中'}</Text>
             </TouchableOpacity>
           </>
+        )}
+
+        {Platform.OS === 'android' && (
+          <View style={s.androidNotice}>
+            <Text style={s.androidNoticeText}>
+              ⚠️ Android アプリでは現在 英単語Pro のご購入はご利用いただけません。{'\n'}
+              ※ Google Play での課金は近日実装予定です。
+            </Text>
+          </View>
         )}
 
         <Text style={s.paywallNote}>いつでもキャンセル可能</Text>
@@ -560,6 +569,8 @@ const s = StyleSheet.create({
   purchaseBtnDisabled: { opacity: 0.5 },
   restoreText:       { fontSize: 13, color: D.muted, marginTop: 14, textAlign: 'center', textDecorationLine: 'underline' },
   paywallNote:       { fontSize: 11, color: D.muted, marginTop: 10, textAlign: 'center' },
+  androidNotice:     { backgroundColor: 'rgba(255,165,0,0.14)', borderWidth: 1, borderColor: 'rgba(255,165,0,0.45)', borderRadius: 12, padding: 14, marginTop: 16, width: '100%' },
+  androidNoticeText: { color: '#FFA500', fontSize: 13, fontWeight: '700', textAlign: 'center', lineHeight: 20 },
   paywallTerms:      { fontSize: 10, color: D.muted, textAlign: 'center', marginTop: 12, lineHeight: 16, paddingHorizontal: 6 },
   legalRow:          { flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 10 },
   legalLink:         { fontSize: 12, color: D.soft, fontWeight: '600', textDecorationLine: 'underline' },
