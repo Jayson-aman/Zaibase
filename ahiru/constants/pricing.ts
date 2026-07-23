@@ -16,7 +16,8 @@ export const PRICES = {
   proMonthly: 1980,
   // Max：受験Pro＋英単語Pro（英検含む）＋AI弱点コーチの全部入り。
   // 単品合計（Pro¥1,980＋英単語Pro¥1,680＝¥3,660）より割安に設定。
-  maxMonthly: 2850,
+  // ¥2,850はApple価格ポイントに無いため、最も近い¥2,890を採用。
+  maxMonthly: 2890,
   // 英単語Pro：英単語5,000+・熟語4,000+・英会話・英検5,160問・ネイティブ発音・AI英会話。
   vocabMonthly: 1680,
   vocabYearly: 13800,
