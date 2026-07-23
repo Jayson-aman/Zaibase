@@ -45,10 +45,10 @@ export default function RootLayout() {
     <ErrorBoundary>
       {Platform.OS === 'web' && (
         <Head>
-          <title>Zaibase受験｜中学・高校受験対策｜5科目11,000問以上・学校別コース対応</title>
+          <title>中学受験・高校受験の対策アプリ｜Zaibase受験 5科目13,000問＋動く図解</title>
           <meta
             name="description"
-            content="中学受験・高校受験対策アプリ。5科目11,000問以上・学校別コース対応。志望校の過去問対策・聞き流し学習・AIコーチで効率よく合格を目指す。"
+            content="中学受験・高校受験の対策アプリ。算数・国語・理科・社会・英語の5科目13,000問以上、灘・開成・慶應など50校対応、図形やグラフが動く図解つき教科書とAI弱点コーチ。無料で今すぐ始められます。"
           />
         </Head>
       )}
