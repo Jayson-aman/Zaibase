@@ -4,10 +4,10 @@
  * askTutor — 問題の写真＋テキスト質問を受け取り、Claude APIで解説を返す（Maxプラン限定）
  *
  * 料金設計:
- *   - Max ¥2,000/月: 月15セッションまで込み
- *   - 1セッション = 1問題 (最大5往復)
+ *   - Max ¥2,850/月: 月18セッションまで込み
+ *   - 1セッション = 1問題 (最大6往復)
  *   - 1往復目: claude-opus-4-8（画像理解・初回分析）
- *   - 2〜5往復目: claude-haiku-4-5（フォローアップ・低コスト）
+ *   - 2〜6往復目: claude-haiku-4-5（フォローアップ・低コスト）
  *   - 追加購入: +5問 ¥200 (消耗型IAP、extraCreditsとしてFirestoreに加算)
  *
  * Firestore:
@@ -25,8 +25,8 @@ const { defineSecret } = require("firebase-functions/params");
 const db = getFirestore();
 const ANTHROPIC_API_KEY = defineSecret("ANTHROPIC_API_KEY");
 
-const MONTHLY_SESSION_LIMIT = 15;
-const TURN_LIMIT = 5;
+const MONTHLY_SESSION_LIMIT = 18;
+const TURN_LIMIT = 6;
 
 function monthKey() {
   return new Date().toISOString().slice(0, 7);
@@ -128,7 +128,7 @@ exports.askTutor = onCall(
       if (trialAiUsed) {
         throw new HttpsError(
           "permission-denied",
-          "AI個別指導の無料体験（1回）は使い切りました。Maxプランにアップグレードすると月15回使えるよ！"
+          "AI個別指導の無料体験（1回）は使い切りました。Maxプランにアップグレードすると月18回使えるよ！"
         );
       }
       // 初回のみ許可 → 体験済みマークを付ける

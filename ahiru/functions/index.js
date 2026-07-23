@@ -13,7 +13,7 @@ setGlobalOptions({ region: "asia-northeast1", maxInstances: 10 });
 const aiCoach = require("./aiCoach");
 exports.getWeakPointCoaching = aiCoach.getWeakPointCoaching;
 
-// ── AI個別指導（Maxプラン限定・月15問・1問5往復） ──────────────────
+// ── AI個別指導（Maxプラン限定・月18問・1問6往復） ──────────────────
 const aiTutor = require("./aiTutor");
 exports.askTutor = aiTutor.askTutor;
 exports.addTutorCredits = aiTutor.addTutorCredits;

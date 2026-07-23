@@ -16,7 +16,7 @@ import {
 import { LinearGradient } from 'expo-linear-gradient';
 import { askTutor, type TutorMessage } from '../services/aiTutor';
 
-const TURN_LIMIT = 5;
+const TURN_LIMIT = 6;
 const SESSION_LIMIT = 15;
 
 interface Props {
@@ -215,7 +215,7 @@ export default function TutorChat({ visible, onClose, initialQuestion, subjectCo
             {turnCount >= TURN_LIMIT && (
               <View style={styles.limitBanner}>
                 <Text style={styles.limitText}>
-                  💡 5回質問しました！先生や塾の先生に聞いてみると{'\n'}もっとわかりやすく教えてくれるかも😊
+                  💡 6回質問しました！先生や塾の先生に聞いてみると{'\n'}もっとわかりやすく教えてくれるかも😊
                 </Text>
               </View>
             )}
