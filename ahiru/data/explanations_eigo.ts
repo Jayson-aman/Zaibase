@@ -98,4 +98,42 @@ export const explanationsEigo: Record<string, string> = {
   'eigo_49': '【解説】\n仮定法過去は「現実とは違う仮定（もし〜だったら）」を表す表現！\n形：If ＋ 主語 ＋ 過去形, 主語 ＋ would/could ＋ 動詞の原形.\n「もし私が鳥だったら、空を飛べるのに」\n→ If I were a bird, I could fly in the sky.\nwere は主語が I でも were を使うのが仮定法のルール！',
 
   'eigo_50': '【解説】\n道案内の会話でよく使う表現を覚えよう！\n・could you tell me how to ～（〜への行き方を教えてもらえますか）\n・Go straight（まっすぐ行く）\n・turn left/right（左/右に曲がる）\n・at the traffic light（信号で）\n・on your right/left（右手/左手に）\n空欄補充は前後の文脈から判断しよう！',
+
+  'eigo_ex_01': '【解説】\n現在完了形（have/has ＋ 過去分詞）は「過去の出来事が今につながっている」ことを表し、経験・継続・完了を言うときに使います。「経験」の回数は three times（3回）のように文末に置き、have been to ～ で「〜へ行ったことがある」を表します。\n一方、過去形は yesterday のようにはっきりした過去の一時点を表すので、現在完了形とは違い yesterday など明確な過去を示す語とは一緒に使えない点が要注意です。',
+
+  'eigo_ex_02': '【解説】\n受動態は「be動詞 ＋ 過去分詞（＋ by 〜）」で作り、「誰がしたか」より「何が〜されるか」を主役にします。①は過去の文なので be動詞を was にして This letter was written by Tom。②は「今まさに建設中」という現在進行形の受動態で、進行形の being を使い is being built とするのがポイントです。\nwrite の過去分詞は written、build の過去分詞は built という不規則変化を正確に覚えましょう。',
+
+  'eigo_ex_03': '【解説】\n不定詞（to ＋ 動詞の原形）には3用法があり、文中での働きで見分けます。名詞的用法は「〜すること」（want to study のように動詞の目的語など）、形容詞的用法は「〜するための」で前の名詞を後ろから修飾（a book to read＝読むための本）、副詞的用法は「〜するために」で目的を表します（study hard to pass＝合格するために勉強する）。\nどの用法も to の後ろは必ず動詞の原形にするのが鉄則です。',
+
+  'eigo_ex_04': '【解説】\nSVOC文型は「O（目的語）＝C（補語）」の関係が成り立つのが特徴で、make・call・name などの動詞でよく使われます。The news made her happy. では her（O）＝ happy（C）で「彼女が幸せな状態になる」という関係が成立します。\nSVOOの文型（give him a book など）とは違い、SVOCでは O と C がイコールになる点を確認して見分けましょう。',
+
+  'eigo_ex_05': '【解説】\n①主語 she は三人称単数なので、否定は do not ではなく does not（doesn\'t）を使います。②現在完了形は have ＋ 過去分詞なので、過去形の went ではなく go の過去分詞 gone を使い have gone とします。\n③ beautiful のような長い形容詞の最上級は前に most を付けるだけでよく、most と最上級語尾 -est を重ねる二重比較は誤りなので most beautiful が正解です。',
+
+  'eigo_ex_06': '【解説】\n間接疑問文とは、疑問文が文の一部（動詞の目的語など）に組み込まれた形です。ふつうの疑問文 Where does she live? では does が前に出ますが、間接疑問文では疑問詞の後を「主語＋動詞」の平叙文の語順に戻します。\nそのため助動詞 does は消え、主語 she が三人称単数なので動詞に s を付けて where she lives とするのがポイントです。',
+
+  'eigo_ex_07': '【解説】\n関係代名詞は2つの文をつなぎ、前の名詞（先行詞）を後ろから説明する働きをします。先行詞が「人」なら who、「物・動物」なら which、人・物どちらにも使えるのが that です。\n例 The boy who is playing soccer is my friend. では who 以下が the boy を説明しており、who は後ろの動詞の主語も兼ねている（主格）ことを意識しましょう。',
+
+  'eigo_ex_08': '【解説】\n①「日本で最も高い」は最上級で、the ＋ 形容詞 -est ＋ in ～ の形を使い the highest mountain in Japan とします。②「同じくらい速く」は原級を使った as ～ as で挟み、間には副詞の原級 fast を入れて as fast as とします。\n③「〜より…が好き」は like A better than B（B より A が好き）という決まった言い方を使う点に注意しましょう。',
+
+  'eigo_ex_09': '【解説】\n①「医者になるために」は目的を表す副詞的用法の不定詞 to become a doctor で表し、主語 She は三人称単数なので動詞は studies にします。②「もし明日雨なら」は条件を表す if の文です。\n未来のことでも、時や条件を表す if 節の中では will を使わず現在形 rains にし、主節の方に will stay を使うのが英語のルールです。',
+
+  'eigo_ex_10': '【解説】\nHaving finished ～ は完了を表す分詞構文で「〜し終えてから」という意味を作り、主節より前に起きたことを表します。Despite ～ は前置詞で「〜にもかかわらず」を表し、後ろには名詞や動名詞（being tired）が続く点が接続詞 though との違いです。\ntwo more kilometers は「さらに2キロ」という意味で、more が数量に「追加」の意味を加えていることを訳に反映させましょう。',
+
+  'eigo_yotsuya_01': '【解説】\n現在完了形（have/has ＋ 過去分詞）は「過去の出来事が今につながっている」ことを表し、ここでは three times を伴って「経験」を表します。have been to ～ で「〜へ行ったことがある」という定番表現になります。\n過去形は yesterday のようにはっきりした過去の一時点を表し、現在完了形は yesterday など明確な過去を示す語とは一緒に使えないので区別が大切です。',
+
+  'eigo_yotsuya_02': '【解説】\n受動態は「be動詞 ＋ 過去分詞（＋ by 〜）」で作ります。①は過去の文なので be動詞を was にして This letter was written by Tom とし、write の過去分詞 written を使います。\n②は「今まさに建設中」という現在進行形の受動態で、進行形の being を加えて is being built とするのがポイントです。',
+
+  'eigo_yotsuya_03': '【解説】\n不定詞（to ＋ 動詞の原形）は文中での働きで3用法に分かれます。名詞的用法は「〜すること」で動詞の目的語などになり、形容詞的用法は前の名詞を後ろから修飾して「〜するための」（a book to read）、副詞的用法は目的を表して「〜するために」（to pass the exam）となります。\nどの用法でも to の後ろは必ず動詞の原形にします。',
+
+  'eigo_yotsuya_04': '【解説】\nSVOC文型は「O（目的語）＝C（補語）」の関係が成り立つのが特徴で、make・call・name などの動詞で使われます。The news made her happy. では her ＝ happy、We call him Ken. では him ＝ Ken の関係が成り立ちます。\ngive him a book のような O が2つ並ぶSVOO文型とは違い、O と C がイコールになる点で見分けます。',
+
+  'eigo_yotsuya_05': '【解説】\n①主語 she は三人称単数なので否定は does not（doesn\'t）を使います。②現在完了形は have ＋ 過去分詞なので、過去形 went ではなく過去分詞 gone を使い have gone とします。\n③ beautiful のような長い形容詞は前に most を付けるだけで最上級になり、most と -est を重ねる二重比較は誤りなので most beautiful が正解です。',
+
+  'eigo_yotsuya_06': '【解説】\n①「医者になるために」は目的を表す副詞的用法の不定詞 to become a doctor で表し、主語 She が三人称単数なので動詞は studies にします。②「もし明日雨なら」は条件を表す if の文です。\n未来のことでも、時や条件を表す if 節の中では will を使わず現在形 rains にし、主節に will stay を使うのが英語のルールです。',
+
+  'eigo_yotsuya_07': '【解説】\n関係代名詞は2つの文をつなぎ、前の名詞（先行詞）を後ろから修飾する代名詞です。先行詞が「人」なら who、「物・動物」なら which、人・物どちらにも使えるのが that です。\n例 The boy who is playing soccer is my friend. では who 以下が the boy を説明し、who が後ろの節の主語を兼ねている（主格）ことを意識しましょう。',
+
+  'eigo_yotsuya_08': '【解説】\n間接疑問文とは、疑問文が文の一部（動詞の目的語など）に組み込まれた形です。ふつうの疑問文 Where does she live? では does が前に出ますが、間接疑問文では疑問詞の後を「主語＋動詞」の平叙文の語順に戻します。\nそのため助動詞 does は消え、主語 she が三人称単数なので動詞に s を付けて where she lives とします。',
+
+  'eigo_yotsuya_09': '【解説】\n①最上級は the ＋ 形容詞 -est ＋ in ～ の形で the highest mountain in Japan とします。②「同じくらい速く」は原級を as ～ as で挟み、間に副詞の原級 fast を入れて as fast as she とします。\n③「〜より…が好き」は like A better than B（B より A が好き）または prefer A to B という決まった言い方を使う点に注意しましょう。',
 };
