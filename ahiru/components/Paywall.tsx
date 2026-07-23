@@ -108,7 +108,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
       presentationStyle="pageSheet"
       onRequestClose={onClose}
     >
-      <LinearGradient colors={['#1A1A2E', '#2D1B69']} style={styles.container}>
+      <LinearGradient colors={['#FFFFFF', '#F2F5FA']} style={styles.container}>
         <TouchableOpacity style={styles.closeBtn} onPress={onClose}>
           <Text style={styles.closeBtnText}>✕</Text>
         </TouchableOpacity>
@@ -294,11 +294,11 @@ const styles = StyleSheet.create({
     width: 44,
     height: 44,
     borderRadius: 22,
-    backgroundColor: 'rgba(255,255,255,0.2)',
+    backgroundColor: 'rgba(15,24,38,0.06)',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  closeBtnText: { color: '#fff', fontSize: 20, fontWeight: '700' },
+  closeBtnText: { color: '#0F1826', fontSize: 20, fontWeight: '700' },
   scroll: {
     paddingTop: 80,
     paddingHorizontal: 20,
@@ -307,10 +307,10 @@ const styles = StyleSheet.create({
   },
   spinner: { marginTop: 40 },
   crown: { fontSize: 64, marginBottom: 16 },
-  title: { fontSize: 36, fontWeight: '900', color: '#fff', marginBottom: 8 },
+  title: { fontSize: 36, fontWeight: '900', color: '#0F1826', marginBottom: 8 },
   subtitle: {
     fontSize: 20,
-    color: 'rgba(255,255,255,0.7)',
+    color: '#7A8798',
     marginBottom: 24,
     textAlign: 'center',
   },
@@ -324,15 +324,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     marginBottom: 24,
   },
-  loginBannerText: { color: '#E0F2FE', fontSize: 15, fontWeight: '700', textAlign: 'center', lineHeight: 22 },
-  loginBannerSub: { color: 'rgba(224,242,254,0.85)', fontSize: 12, fontWeight: '400' },
+  loginBannerText: { color: '#1D4ED8', fontSize: 15, fontWeight: '700', textAlign: 'center', lineHeight: 22 },
+  loginBannerSub: { color: '#5A6B7E', fontSize: 12, fontWeight: '400' },
   card: {
     width: '100%',
     borderRadius: 24,
     borderWidth: 2,
     marginBottom: 24,
     overflow: 'hidden',
-    backgroundColor: 'rgba(255,255,255,0.05)',
+    backgroundColor: '#FFFFFF',
   },
   cardHeader: {
     flexDirection: 'row',
@@ -346,31 +346,31 @@ const styles = StyleSheet.create({
   cardPrice: { fontSize: 24, fontWeight: '800', color: '#fff' },
   cardBody: { padding: 20, gap: 10 },
   featureRow: { flexDirection: 'row', alignItems: 'flex-start', gap: 10 },
-  featureCheck: { fontSize: 20, color: '#7DFFB3', fontWeight: '800', lineHeight: 28 },
-  featureText: { fontSize: 18, color: 'rgba(255,255,255,0.9)', fontWeight: '600', flex: 1, lineHeight: 28 },
+  featureCheck: { fontSize: 20, color: '#0B7A54', fontWeight: '800', lineHeight: 28 },
+  featureText: { fontSize: 18, color: '#0F1826', fontWeight: '600', flex: 1, lineHeight: 28 },
   includedBanner: {
-    backgroundColor: 'rgba(255,255,255,0.12)',
+    backgroundColor: '#EAF7EF',
     borderRadius: 12,
     padding: 14,
     marginBottom: 4,
   },
   includedBannerText: {
     fontSize: 17,
-    color: '#7DFFB3',
+    color: '#0B7A54',
     fontWeight: '700',
     lineHeight: 26,
   },
   maxOnlyLabel: {
     fontSize: 20,
     fontWeight: '900',
-    color: '#FFD700',
+    color: '#A9821E',
     marginTop: 4,
     marginBottom: 4,
     letterSpacing: 0.5,
   },
   maxFeatureRow: { flexDirection: 'row', alignItems: 'flex-start', gap: 10 },
-  maxFeatureCheck: { fontSize: 22, color: '#FFD700', fontWeight: '900', lineHeight: 30 },
-  maxFeatureText: { fontSize: 18, color: '#FFD700', fontWeight: '700', flex: 1, lineHeight: 28 },
+  maxFeatureCheck: { fontSize: 22, color: '#A9821E', fontWeight: '900', lineHeight: 30 },
+  maxFeatureText: { fontSize: 18, color: '#A9821E', fontWeight: '700', flex: 1, lineHeight: 28 },
   aiExplain: {
     backgroundColor: 'rgba(255,215,0,0.1)',
     borderRadius: 14,
@@ -379,8 +379,8 @@ const styles = StyleSheet.create({
     borderColor: 'rgba(255,215,0,0.3)',
     marginTop: 4,
   },
-  aiExplainTitle: { fontSize: 18, fontWeight: '800', color: '#FFD700', marginBottom: 8 },
-  aiExplainText: { fontSize: 16, color: 'rgba(255,255,255,0.85)', lineHeight: 26, fontWeight: '500' },
+  aiExplainTitle: { fontSize: 18, fontWeight: '800', color: '#A9821E', marginBottom: 8 },
+  aiExplainText: { fontSize: 16, color: '#4A5A6B', lineHeight: 26, fontWeight: '500' },
   buyBtn: {
     borderRadius: 16,
     paddingVertical: 20,
@@ -406,10 +406,10 @@ const styles = StyleSheet.create({
     lineHeight: 24,
   },
   restoreBtn: { paddingVertical: 16 },
-  restoreBtnText: { color: 'rgba(255,255,255,0.5)', fontSize: 16, fontWeight: '600' },
+  restoreBtnText: { color: '#8695AB', fontSize: 16, fontWeight: '600' },
   terms: {
     fontSize: 13,
-    color: 'rgba(255,255,255,0.35)',
+    color: '#8695AB',
     textAlign: 'center',
     marginTop: 8,
     lineHeight: 20,
@@ -423,7 +423,7 @@ const styles = StyleSheet.create({
   },
   legalLinkText: {
     fontSize: 14,
-    color: 'rgba(255,255,255,0.7)',
+    color: '#7A8798',
     fontWeight: '600',
     textDecorationLine: 'underline',
   },
