@@ -8,7 +8,8 @@
  *   - 1セッション = 1問題 (最大6往復)
  *   - 1往復目: claude-opus-4-8（画像理解・初回分析）
  *   - 2〜6往復目: claude-haiku-4-5（フォローアップ・低コスト）
- *   - 追加購入: +5問 ¥200 (消耗型IAP、extraCreditsとしてFirestoreに加算)
+ *   - （将来）追加購入: +5問の消耗型IAP。現在は未提供のため、購入導線・案内文言は出さない。
+ *     実装時はサーバーで購入検証（RevenueCat webフック/レシート）後に addTutorCredits を呼ぶこと。
  *
  * Firestore:
  *   aiTutorUsage/{uid} — 月別セッション数・追加クレジット
@@ -48,10 +49,9 @@ async function getOrCreateSession(uid, sessionId, isNewSession) {
       const limit = MONTHLY_SESSION_LIMIT + extraCredits;
 
       if (sessionsUsed >= limit) {
-        const extra = extraCredits > 0 ? `（追加購入${extraCredits}問含む）` : "";
         throw new HttpsError(
           "resource-exhausted",
-          `今月のAI個別指導は${limit}問${extra}使い切りました。「+5問追加」を購入するか、来月また使えます！`
+          `今月のAI個別指導は${limit}問すべて使い切りました。また来月からたくさん使えるよ！今月もよく頑張ったね😊`
         );
       }
 
