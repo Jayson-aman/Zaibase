@@ -7,7 +7,8 @@ export const kokoNyushiEigo2: Question[] = [
   {
     id: 'koko_nyushi_eigo2_01',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nIt ( ) for three hours before we finally left the mountain.\n① snows  ② snowed  ③ has snowed  ④ had been snowing',
+    question: '次の（　）内に最も適切な語を選べ。  It ( ) for three hours before we finally left the mountain.',
+    choices: ['① snows', '② snowed', '③ has snowed', '④ had been snowing'],
     answer: '④ had been snowing',
     hint: '「山を出発した」という過去の時点より前から続いていた動作を表す時制を選ぶ。',
     explanation: `【出題意図】
@@ -38,7 +39,8 @@ export const kokoNyushiEigo2: Question[] = [
   {
     id: 'koko_nyushi_eigo2_02',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe weather forecast says it ( ) rain this afternoon, so take an umbrella just in case.\n① must  ② may  ③ can  ④ need',
+    question: '次の（　）内に最も適切な語を選べ。  The weather forecast says it ( ) rain this afternoon, so take an umbrella just in case.',
+    choices: ['① must', '② may', '③ can', '④ need'],
     answer: '② may',
     hint: '「〜かもしれない」という不確実な可能性を表す助動詞を選ぶ。',
     explanation: `【出題意図】
@@ -70,7 +72,8 @@ must（ほぼ確実）＞ will（〜だろう）＞ may/might（〜かもしれ�
   {
     id: 'koko_nyushi_eigo2_03',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語形を選べ。\n\nA name ( ) to each typhoon by international weather organizations every year.\n① gives  ② is given  ③ gave  ④ has give',
+    question: '次の（　）内に最も適切な語形を選べ。  A name ( ) to each typhoon by international weather organizations every year.',
+    choices: ['① gives', '② is given', '③ gave', '④ has give'],
     answer: '② is given',
     hint: '「名前」は与える側ではなく与えられる側。受動態の現在形を選ぶ。',
     explanation: `【出題意図】
@@ -101,7 +104,8 @@ give の変化：give → gave → given（過去分詞）
   {
     id: 'koko_nyushi_eigo2_04',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nAugust is ( ) month of the year in most parts of Japan.\n① hot  ② hotter  ③ the hottest  ④ most hot',
+    question: '次の（　）内に最も適切な語を選べ。  August is ( ) month of the year in most parts of Japan.',
+    choices: ['① hot', '② hotter', '③ the hottest', '④ most hot'],
     answer: '③ the hottest',
     hint: '「1年で一番〜」は最上級。最上級の前には the が必要。',
     explanation: `【出題意図】
@@ -134,7 +138,8 @@ give の変化：give → gave → given（過去分詞）
   {
     id: 'koko_nyushi_eigo2_05',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nWe got up very early ( ) the sunrise from the top of the hill.\n① for  ② so  ③ to  ④ in order',
+    question: '次の（　）内に最も適切な語を選べ。  We got up very early ( ) the sunrise from the top of the hill.',
+    choices: ['① for', '② so', '③ to', '④ in order'],
     answer: '③ to',
     hint: '「〜するために」という目的を表す不定詞の副詞的用法。',
     explanation: `【出題意図】
@@ -165,7 +170,8 @@ in order to〜 は同じ意味だがより書き言葉的。
   {
     id: 'koko_nyushi_eigo2_06',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nEvery spring, many people in Japan enjoy ( ) under the cherry blossoms.\n① eat  ② to eat  ③ eating  ④ ate',
+    question: '次の（　）内に最も適切な語を選べ。  Every spring, many people in Japan enjoy ( ) under the cherry blossoms.',
+    choices: ['① eat', '② to eat', '③ eating', '④ ate'],
     answer: '③ eating',
     hint: 'enjoy の後ろには動名詞（〜ing）が来る。',
     explanation: `【出題意図】
@@ -196,7 +202,8 @@ enjoy（楽しむ）、finish（終える）、stop（やめる）、mind（気�
   {
     id: 'koko_nyushi_eigo2_07',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nBy the end of this month, the rainy season ( ) here.\n① will end  ② has ended  ③ will have ended  ④ ended',
+    question: '次の（　）内に最も適切な語を選べ。  By the end of this month, the rainy season ( ) here.',
+    choices: ['① will end', '② has ended', '③ will have ended', '④ ended'],
     answer: '③ will have ended',
     hint: '「今月末までには」という未来の時点での完了を表す時制を選ぶ。',
     explanation: `【出題意図】
@@ -227,7 +234,8 @@ enjoy（楽しむ）、finish（終える）、stop（やめる）、mind（気�
   {
     id: 'koko_nyushi_eigo2_08',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nIf it ( ) heavily tomorrow, the outdoor festival will be canceled.\n① rains  ② will rain  ③ rained  ④ is raining',
+    question: '次の（　）内に最も適切な語を選べ。  If it ( ) heavily tomorrow, the outdoor festival will be canceled.',
+    choices: ['① rains', '② will rain', '③ rained', '④ is raining'],
     answer: '① rains',
     hint: '条件を表す if 節の中では、未来のことでも現在形を使う。',
     explanation: `【出題意図】
@@ -258,7 +266,8 @@ if（もし〜なら）/ when（〜するとき）/ until（〜まで）/ as soo
   {
     id: 'koko_nyushi_eigo2_09',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThis old wooden bridge ( ) by a big flood twenty years ago.\n① destroys  ② was destroyed  ③ destroyed  ④ has destroy',
+    question: '次の（　）内に最も適切な語を選べ。  This old wooden bridge ( ) by a big flood twenty years ago.',
+    choices: ['① destroys', '② was destroyed', '③ destroyed', '④ has destroy'],
     answer: '② was destroyed',
     hint: '橋は「壊す」側ではなく「壊される」側。過去の出来事なので過去形の受動態を選ぶ。',
     explanation: `【出題意図】
@@ -290,7 +299,8 @@ destroy の変化：destroy → destroyed → destroyed（規則動詞）
   {
     id: 'koko_nyushi_eigo2_10',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThis winter is ( ) than last winter, according to the weather experts.\n① cold  ② more cold  ③ colder  ④ coldest',
+    question: '次の（　）内に最も適切な語を選べ。  This winter is ( ) than last winter, according to the weather experts.',
+    choices: ['① cold', '② more cold', '③ colder', '④ coldest'],
     answer: '③ colder',
     hint: '2つの冬を比べるときは比較級（-er）を使う。than が手がかり。',
     explanation: `【出題意図】
@@ -322,7 +332,8 @@ than があれば比較級が必要。cold は1音節の形容詞なので -er �
   {
     id: 'koko_nyushi_eigo2_11',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nI want ( ) the northern lights in Iceland someday.\n① see  ② seeing  ③ to see  ④ seen',
+    question: '次の（　）内に最も適切な語を選べ。  I want ( ) the northern lights in Iceland someday.',
+    choices: ['① see', '② seeing', '③ to see', '④ seen'],
     answer: '③ to see',
     hint: 'want の後ろに来る不定詞の名詞的用法（〜したい）を選ぶ。',
     explanation: `【出題意図】
@@ -352,7 +363,8 @@ want は「〜したい」という意味で、後ろに不定詞（to + 動詞�
   {
     id: 'koko_nyushi_eigo2_12',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nPeople all over the world should stop ( ) down forests to fight climate change.\n① cut  ② to cut  ③ cutting  ④ cuts',
+    question: '次の（　）内に最も適切な語を選べ。  People all over the world should stop ( ) down forests to fight climate change.',
+    choices: ['① cut', '② to cut', '③ cutting', '④ cuts'],
     answer: '③ cutting',
     hint: 'stop の後ろに来る動名詞（〜するのをやめる）を選ぶ。',
     explanation: `【出題意図】
@@ -387,7 +399,8 @@ stop + 不定詞：〜するために立ち止まる（意味が全く異なる�
   {
     id: 'koko_nyushi_eigo2_13',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な前置詞を選べ。\n\nMany small children are afraid ( ) thunder and lightning.\n① in  ② of  ③ with  ④ about',
+    question: '次の（　）内に最も適切な前置詞を選べ。  Many small children are afraid ( ) thunder and lightning.',
+    choices: ['① in', '② of', '③ with', '④ about'],
     answer: '② of',
     hint: 'be afraid の後ろに来る前置詞を選ぶ。',
     explanation: `【出題意図】
@@ -421,7 +434,8 @@ be proud of〜：〜を誇りに思う
   {
     id: 'koko_nyushi_eigo2_14',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nI am really looking forward ( ) the first snow of the year.\n① to see  ② to seeing  ③ see  ④ seeing',
+    question: '次の（　）内に最も適切な語を選べ。  I am really looking forward ( ) the first snow of the year.',
+    choices: ['① to see', '② to seeing', '③ see', '④ seeing'],
     answer: '② to seeing',
     hint: 'look forward to のあとの to は前置詞なので、後ろには動名詞が来る。',
     explanation: `【出題意図】
@@ -452,7 +466,8 @@ look forward to〜ing：〜するのを楽しみにする
   {
     id: 'koko_nyushi_eigo2_15',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語句を選べ。\n\nThe outdoor concert was canceled ( ) the sudden heavy rain.\n① because  ② due to  ③ so  ④ although',
+    question: '次の（　）内に最も適切な語句を選べ。  The outdoor concert was canceled ( ) the sudden heavy rain.',
+    choices: ['① because', '② due to', '③ so', '④ although'],
     answer: '② due to',
     hint: '後ろに名詞（句）が続く原因・理由を表す前置詞句を選ぶ。',
     explanation: `【出題意図】
@@ -484,7 +499,8 @@ because の後ろには「主語＋動詞」の文が必要だが、due to の�
   {
     id: 'koko_nyushi_eigo2_16',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe weather forecaster said the rain would ( ) snow as the temperature dropped tonight.\n① turn into  ② turn on  ③ turn off  ④ turn up',
+    question: '次の（　）内に最も適切な語を選べ。  The weather forecaster said the rain would ( ) snow as the temperature dropped tonight.',
+    choices: ['① turn into', '② turn on', '③ turn off', '④ turn up'],
     answer: '① turn into',
     hint: '「〜に変わる」という意味の句動詞を選ぶ。',
     explanation: `【出題意図】
@@ -517,7 +533,8 @@ turn を使った句動詞：
   {
     id: 'koko_nyushi_eigo2_17',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nAfter the big storm, the whole town was ( ) with thick snow.\n① filled  ② covered  ③ full  ④ made',
+    question: '次の（　）内に最も適切な語を選べ。  After the big storm, the whole town was ( ) with thick snow.',
+    choices: ['① filled', '② covered', '③ full', '④ made'],
     answer: '② covered',
     hint: 'be covered with〜（〜で覆われている）という表現を選ぶ。',
     explanation: `【出題意図】
@@ -551,7 +568,8 @@ be + 過去分詞 + with/of〜 の使い分け：
   {
     id: 'koko_nyushi_eigo2_18',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThis region is famous ( ) its beautiful autumn leaves.\n① of  ② for  ③ with  ④ at',
+    question: '次の（　）内に最も適切な語を選べ。  This region is famous ( ) its beautiful autumn leaves.',
+    choices: ['① of', '② for', '③ with', '④ at'],
     answer: '② for',
     hint: 'be famous の後ろに来る前置詞を選ぶ。',
     explanation: `【出題意図】
@@ -583,7 +601,8 @@ be famous as〜：〜として有名だ（職業・役割）
   {
     id: 'koko_nyushi_eigo2_19',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nIt took me a long time to get used ( ) the cold and dry weather here.\n① for  ② with  ③ to  ④ at',
+    question: '次の（　）内に最も適切な語を選べ。  It took me a long time to get used ( ) the cold and dry weather here.',
+    choices: ['① for', '② with', '③ to', '④ at'],
     answer: '③ to',
     hint: 'get used の後ろに来る前置詞を選ぶ（前置詞のあとは動名詞が続く形）。',
     explanation: `【出題意図】
@@ -615,7 +634,8 @@ get used to doing：〜することに慣れる
   {
     id: 'koko_nyushi_eigo2_20',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語句を選べ。\n\nDuring the long drought, the village ( ) drinking water.\n① ran out of  ② ran into  ③ ran away  ④ ran over',
+    question: '次の（　）内に最も適切な語句を選べ。  During the long drought, the village ( ) drinking water.',
+    choices: ['① ran out of', '② ran into', '③ ran away', '④ ran over'],
     answer: '① ran out of',
     hint: '「〜を使い果たす、〜が尽きる」という意味の句動詞を選ぶ。',
     explanation: `【出題意図】
@@ -652,7 +672,8 @@ run を使った句動詞：
   {
     id: 'koko_nyushi_eigo2_21',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nPeople ( ) live in snowy areas often use special tires in winter.\n① who  ② which  ③ whom  ④ whose',
+    question: '次の（　）内に最も適切な語を選べ。  People ( ) live in snowy areas often use special tires in winter.',
+    choices: ['① who', '② which', '③ whom', '④ whose'],
     answer: '① who',
     hint: '先行詞は「人」、関係代名詞節内での役割は「主語」。',
     explanation: `【出題意図】
@@ -685,7 +706,8 @@ run を使った句動詞：
   {
     id: 'koko_nyushi_eigo2_22',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe article ( ) I read yesterday was about the effects of climate change.\n① who  ② which  ③ whom  ④ where',
+    question: '次の（　）内に最も適切な語を選べ。  The article ( ) I read yesterday was about the effects of climate change.',
+    choices: ['① who', '② which', '③ whom', '④ where'],
     answer: '② which',
     hint: '先行詞は「物（記事）」。関係代名詞節内で read の目的語になっている。',
     explanation: `【出題意図】
@@ -718,7 +740,8 @@ The book (which/that) I read was interesting.
   {
     id: 'koko_nyushi_eigo2_23',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nI want to visit a country ( ) it snows almost all year round.\n① which  ② who  ③ where  ④ when',
+    question: '次の（　）内に最も適切な語を選べ。  I want to visit a country ( ) it snows almost all year round.',
+    choices: ['① which', '② who', '③ where', '④ when'],
     answer: '③ where',
     hint: '先行詞は「場所（country）」で、関係副詞を使う。',
     explanation: `【出題意図】
@@ -788,7 +811,8 @@ whose の使い方：先行詞（人・物）の所有格を表す。物の場�
   {
     id: 'koko_nyushi_eigo2_25',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nCould you tell me ( ) it usually starts snowing in this area?\n① what  ② when  ③ where  ④ why',
+    question: '次の（　）内に最も適切な語を選べ。  Could you tell me ( ) it usually starts snowing in this area?',
+    choices: ['① what', '② when', '③ where', '④ why'],
     answer: '② when',
     hint: '「いつ雪が降り始めるか」という間接疑問文。時を尋ねる疑問詞を選ぶ。',
     explanation: `【出題意図】
@@ -1101,7 +1125,8 @@ The river is shallow enough for children to cross.
   {
     id: 'koko_nyushi_eigo2_34',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: Would you like to go on a picnic this weekend if it is sunny?\nB: ( )\n\n① No, I don\'t.\n② Yes, I\'d love to.\n③ I don\'t like sunny.\n④ Yes, I would like.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: Would you like to go on a picnic this weekend if it is sunny? B: ( )',
+    choices: ['① No, I don\'t.', '② Yes, I\'d love to.', '③ I don\'t like sunny.', '④ Yes, I would like.'],
     answer: '② Yes, I\'d love to.',
     hint: 'Would you like to〜? は「〜しませんか」という誘いの表現。適切な受け方を選ぶ。',
     explanation: `【出題意図】
@@ -1170,7 +1195,8 @@ should は「〜のはずだ」という推量の意味でも使われる。
   {
     id: 'koko_nyushi_eigo2_36',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: I\'m worried the typhoon will ruin our school trip tomorrow.\nB: ( ) The forecast says it will pass by tonight.\n\n① Don\'t worry.\n② That\'s too bad.\n③ I\'m sorry to hear that.\n④ Never mind.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: I\'m worried the typhoon will ruin our school trip tomorrow. B: ( ) The forecast says it will pass by tonight.',
+    choices: ['① Don\'t worry.', '② That\'s too bad.', '③ I\'m sorry to hear that.', '④ Never mind.'],
     answer: '① Don\'t worry.',
     hint: '後に続く「The forecast says it will pass by tonight.（予報では今夜には通り過ぎるそうです）」という励ましの言葉に合う返答を選ぶ。',
     explanation: `【出題意図】
@@ -1204,7 +1230,8 @@ B：心配しないで。予報では今夜には通り過ぎるそうだよ。
   {
     id: 'koko_nyushi_eigo2_37',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: May I open the window? It\'s getting hot in here.\nB: ( )\nA: Thank you.\n\n① Sure, go ahead.\n② No, you may not open it.\n③ I don\'t have a window.\n④ Yes, you may go.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: May I open the window? It\'s getting hot in here. B: ( ) A: Thank you.',
+    choices: ['① Sure, go ahead.', '② No, you may not open it.', '③ I don\'t have a window.', '④ Yes, you may go.'],
     answer: '① Sure, go ahead.',
     hint: 'May I〜? は許可を求める表現。自然な許可の与え方を選ぶ。',
     explanation: `【出題意図】
@@ -1239,7 +1266,8 @@ A：ありがとう。
   {
     id: 'koko_nyushi_eigo2_38',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語を選べ。\n\nI have never ( ) such a beautiful rainbow before.\n① see  ② saw  ③ seen  ④ seeing',
+    question: '次の英文の（　）に入る最も適切な語を選べ。  I have never ( ) such a beautiful rainbow before.',
+    choices: ['① see', '② saw', '③ seen', '④ seeing'],
     answer: '③ seen',
     hint: '現在完了形（have/has + 過去分詞）の経験用法。see の過去分詞を選ぶ。',
     explanation: `【出題意図】
@@ -1278,7 +1306,8 @@ see-saw-seen / go-went-gone / take-took-taken / write-wrote-written
   {
     id: 'koko_nyushi_eigo2_39',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語を選べ。\n\nIt started snowing ( ) New Year\'s Day this year.\n① in  ② at  ③ on  ④ by',
+    question: '次の英文の（　）に入る最も適切な語を選べ。  It started snowing ( ) New Year\'s Day this year.',
+    choices: ['① in', '② at', '③ on', '④ by'],
     answer: '③ on',
     hint: '特定の日には前置詞 on を使う。',
     explanation: `【出題意図】
@@ -1311,7 +1340,8 @@ in：月・年・季節・時間帯（in March / in 2020 / in winter）
   {
     id: 'koko_nyushi_eigo2_40',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語句を選べ。\n\nShe asked me ( ) the windows before the storm arrived.\n① close  ② to close  ③ closing  ④ closed',
+    question: '次の英文の（　）に入る最も適切な語句を選べ。  She asked me ( ) the windows before the storm arrived.',
+    choices: ['① close', '② to close', '③ closing', '④ closed'],
     answer: '② to close',
     hint: 'ask + 人 + to do（人に〜するよう頼む）という構文。',
     explanation: `【出題意図】
@@ -1344,7 +1374,8 @@ ask + 人 + to do = 「人に〜するよう頼む」という重要構文。
   {
     id: 'koko_nyushi_eigo2_41',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語句を選べ。\n\nI think ( ) important to check the weather forecast before climbing a mountain.\n① this  ② that  ③ it  ④ what',
+    question: '次の英文の（　）に入る最も適切な語句を選べ。  I think ( ) important to check the weather forecast before climbing a mountain.',
+    choices: ['① this', '② that', '③ it', '④ what'],
     answer: '③ it',
     hint: '形式主語 it を使った「it is + 形容詞 + to 動詞」の構文。',
     explanation: `【出題意図】
@@ -1559,7 +1590,8 @@ This festival is popular not only in summer but also in autumn.
     id: 'koko_nyushi_eigo2_47',
     subject: 'eigo',
     passage: `Weather forecasting has changed a lot over the past hundred years. In the past, people looked at the sky, felt the wind, and used their experience to guess the weather. Today, scientists use satellites, computers, and complex models to predict rain, snow, and typhoons days in advance. These forecasts help farmers decide when to plant crops, help airlines plan safe flights, and help cities prepare for storms. However, weather can still be difficult to predict perfectly, especially for sudden changes like local thunderstorms. Even with modern technology, experts say that weather forecasting will never be 100 percent accurate, because nature is too complex to fully understand.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の内容と合っているものを1つ選べ。\n① 現代の天気予報は100パーセント正確だ。\n② 昔の人は空や風の様子から経験的に天気を予測していた。\n③ 天気予報は農家には役立たない。\n④ 突然の雷雨は現代の技術で完全に予測できる。',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の内容と合っているものを1つ選べ。',
+    choices: ['① 現代の天気予報は100パーセント正確だ。', '② 昔の人は空や風の様子から経験的に天気を予測していた。', '③ 天気予報は農家には役立たない。', '④ 突然の雷雨は現代の技術で完全に予測できる。'],
     answer: '② 昔の人は空や風の様子から経験的に天気を予測していた。',
     hint: '本文の "In the past, people looked at the sky, felt the wind, and used their experience to guess the weather." という部分を探す。',
     explanation: `【出題意図】
@@ -1591,7 +1623,8 @@ This festival is popular not only in summer but also in autumn.
     id: 'koko_nyushi_eigo2_48',
     subject: 'eigo',
     passage: `Japan is known around the world for having four distinct seasons, each with its own charm. In spring, cherry blossoms bloom across the country, and many people enjoy hanami parties under the pink flowers. Summer brings hot and humid days, along with lively festivals and fireworks. In autumn, the mountains turn red and yellow as the leaves change color, attracting many visitors who want to see this beautiful sight. Winter covers much of the country in snow, especially in the north, where people enjoy skiing and hot springs. These seasonal changes affect not only daily life but also traditional food, clothing, and events throughout the year.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文中の下線部 "this beautiful sight" が指す内容として最も適切なものを選べ。\n① 桜が咲く様子\n② 山々の紅葉\n③ 雪が降る様子\n④ 花火大会の様子',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文中の下線部 "this beautiful sight" が指す内容として最も適切なものを選べ。',
+    choices: ['① 桜が咲く様子', '② 山々の紅葉', '③ 雪が降る様子', '④ 花火大会の様子'],
     answer: '② 山々の紅葉',
     hint: '"this beautiful sight" の直前の文で述べられている、山の様子を確認する。',
     explanation: `【出題意図】
@@ -1624,7 +1657,8 @@ This festival is popular not only in summer but also in autumn.
     id: 'koko_nyushi_eigo2_49',
     subject: 'eigo',
     passage: `For centuries, cherry blossoms in Japan have bloomed around the same time each spring, and people have used this timing to plan festivals and events. In recent years, however, records show that cherry blossoms are blooming earlier than they used to. Scientists believe this change is closely connected to rising temperatures caused by climate change. Similar changes have been observed in other countries, where plants bloom earlier and animals change their behavior according to shifting seasons. These small changes may seem unimportant at first, but they can affect farming, ecosystems, and even the timing of traditional festivals. Researchers continue to study these patterns to understand how climate change is reshaping the natural world.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の主題として最も適切なものを選べ。\n① 桜祭りの長い歴史\n② 気候変動が自然界のタイミングに与える影響\n③ 日本の伝統行事の一覧\n④ 動物の行動を研究する具体的な方法',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の主題として最も適切なものを選べ。',
+    choices: ['① 桜祭りの長い歴史', '② 気候変動が自然界のタイミングに与える影響', '③ 日本の伝統行事の一覧', '④ 動物の行動を研究する具体的な方法'],
     answer: '② 気候変動が自然界のタイミングに与える影響',
     hint: '本文全体の流れ（過去の様子→近年の変化→原因→他国の例→影響→今後の研究）を把握して、何が最も中心的に述べられているかを考える。',
     explanation: `【出題意図】
@@ -1661,7 +1695,8 @@ This festival is popular not only in summer but also in autumn.
     id: 'koko_nyushi_eigo2_50',
     subject: 'eigo',
     passage: `Typhoons visit Japan almost every year, especially between August and October, bringing strong winds and heavy rain. Because of this, many schools and communities hold disaster drills to prepare students and residents for emergencies. During a typhoon, people are advised to stay indoors, avoid going near rivers or the coast, and keep emergency supplies such as water, food, and flashlights ready. Some schools even close early or cancel classes when a typhoon is expected to be especially dangerous. While technology now allows forecasters to track typhoons accurately, being prepared in advance is still the best way to stay safe. Communities that practice these safety habits tend to suffer less damage when a typhoon actually arrives.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の内容と合っていないものを1つ選べ。\n① 台風は主に8月から10月にかけて日本を訪れることが多い。\n② 台風の際は川や海岸に近づくべきではないとされている。\n③ 台風の接近が予想されても学校が休みになることはない。\n④ 事前に備えている地域は被害が少ない傾向にある。',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の内容と合っていないものを1つ選べ。',
+    choices: ['① 台風は主に8月から10月にかけて日本を訪れることが多い。', '② 台風の際は川や海岸に近づくべきではないとされている。', '③ 台風の接近が予想されても学校が休みになることはない。', '④ 事前に備えている地域は被害が少ない傾向にある。'],
     answer: '③ 台風の接近が予想されても学校が休みになることはない。',
     hint: '本文中の "Some schools even close early or cancel classes when a typhoon is expected to be especially dangerous." という部分と選択肢③を比較する。',
     explanation: `【出題意図】

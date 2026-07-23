@@ -7,7 +7,8 @@ export const kokoNyushiEigo10: Question[] = [
   {
     id: 'koko_nyushi_eigo10_01',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語句を選べ。\n\nThe volunteers ( ) food to homeless people for over ten years.\n① serve  ② served  ③ have served  ④ have been serving',
+    question: '次の（　）内に最も適切な語句を選べ。  The volunteers ( ) food to homeless people for over ten years.',
+    choices: ['① serve', '② served', '③ have served', '④ have been serving'],
     answer: '④ have been serving',
     hint: '「10年以上ずっと〜している」という継続を表す時制を選ぶ。',
     explanation: `【出題意図】
@@ -37,7 +38,8 @@ have/has been + Ving ＝過去から現在まで続く動作の継続を強調�
   {
     id: 'koko_nyushi_eigo10_02',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nWe ( ) help our neighbors when they are in trouble.\n① must not  ② should  ③ can\'t  ④ won\'t',
+    question: '次の（　）内に最も適切な語を選べ。  We ( ) help our neighbors when they are in trouble.',
+    choices: ['① must not', '② should', '③ can\'t', '④ won\'t'],
     answer: '② should',
     hint: '「困っているときは助けるべきだ」という一般的な義務・道徳的な推奨を表す助動詞を選ぶ。',
     explanation: `【出題意図】
@@ -67,7 +69,8 @@ should＝道徳的義務・アドバイス。must＝強い義務・規則。ough
   {
     id: 'koko_nyushi_eigo10_03',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語句を選べ。\n\nThis community center ( ) by local volunteers five years ago.\n① built  ② was built  ③ has built  ④ is building',
+    question: '次の（　）内に最も適切な語句を選べ。  This community center ( ) by local volunteers five years ago.',
+    choices: ['① built', '② was built', '③ has built', '④ is building'],
     answer: '② was built',
     hint: '「地域センターが建てられた」という過去の受動態を選ぶ。',
     explanation: `【出題意図】
@@ -97,7 +100,8 @@ should＝道徳的義務・アドバイス。must＝強い義務・規則。ough
   {
     id: 'koko_nyushi_eigo10_04',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nMore people are joining volunteer activities ( ) five years ago.\n① as  ② than  ③ that  ④ so',
+    question: '次の（　）内に最も適切な語を選べ。  More people are joining volunteer activities ( ) five years ago.',
+    choices: ['① as', '② than', '③ that', '④ so'],
     answer: '② than',
     hint: '比較級 more people の後に続く語を考える。',
     explanation: `【出題意図】
@@ -127,7 +131,8 @@ More people（比較級）がある文ではthanで比較対象を示す。「5�
   {
     id: 'koko_nyushi_eigo10_05',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThey held a charity event ( ) money for children in need.\n① raise  ② raising  ③ to raise  ④ raised',
+    question: '次の（　）内に最も適切な語を選べ。  They held a charity event ( ) money for children in need.',
+    choices: ['① raise', '② raising', '③ to raise', '④ raised'],
     answer: '③ to raise',
     hint: '「お金を集めるために」という目的を表す不定詞を選ぶ。',
     explanation: `【出題意図】
@@ -157,7 +162,8 @@ More people（比較級）がある文ではthanで比較対象を示す。「5�
   {
     id: 'koko_nyushi_eigo10_06',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nWe should avoid ( ) too much food, because many people around the world don\'t have enough to eat.\n① waste  ② to waste  ③ wasting  ④ wasted',
+    question: '次の（　）内に最も適切な語を選べ。  We should avoid ( ) too much food, because many people around the world don\'t have enough to eat.',
+    choices: ['① waste', '② to waste', '③ wasting', '④ wasted'],
     answer: '③ wasting',
     hint: 'avoidの後ろに来る動詞の形（動名詞）を選ぶ。',
     explanation: `【出題意図】
@@ -187,7 +193,8 @@ avoid＋動名詞＝「〜するのを避ける」。avoidは不定詞を目的�
   {
     id: 'koko_nyushi_eigo10_07',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語句を選べ。\n\nBy the end of this year, this NPO ( ) more than one thousand families.\n① will help  ② has helped  ③ will have helped  ④ helped',
+    question: '次の（　）内に最も適切な語句を選べ。  By the end of this year, this NPO ( ) more than one thousand families.',
+    choices: ['① will help', '② has helped', '③ will have helped', '④ helped'],
     answer: '③ will have helped',
     hint: '「今年の終わりまでには」という未来の時点での完了を表す時制を選ぶ。',
     explanation: `【出題意図】
@@ -217,7 +224,8 @@ avoid＋動名詞＝「〜するのを避ける」。avoidは不定詞を目的�
   {
     id: 'koko_nyushi_eigo10_08',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nIf we ( ) more about local problems, we can find better ways to solve them.\n① will learn  ② learn  ③ learned  ④ have learned',
+    question: '次の（　）内に最も適切な語を選べ。  If we ( ) more about local problems, we can find better ways to solve them.',
+    choices: ['① will learn', '② learn', '③ learned', '④ have learned'],
     answer: '② learn',
     hint: '条件を表すif節の中では、未来のことでも現在形を使う。',
     explanation: `【出題意図】
@@ -247,7 +255,8 @@ avoid＋動名詞＝「〜するのを避ける」。avoidは不定詞を目的�
   {
     id: 'koko_nyushi_eigo10_09',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語句を選べ。\n\nThere ( ) be an empty lot here, but now it is a community garden.\n① used to  ② is used to  ③ was used to  ④ has used to',
+    question: '次の（　）内に最も適切な語句を選べ。  There ( ) be an empty lot here, but now it is a community garden.',
+    choices: ['① used to', '② is used to', '③ was used to', '④ has used to'],
     answer: '① used to',
     hint: '「以前は〜だった（今は違う）」という過去の状態を表す表現を選ぶ。',
     explanation: `【出題意図】
@@ -277,7 +286,8 @@ used to＋動詞原形＝以前は〜だった（今は違う）。be used to＋
   {
     id: 'koko_nyushi_eigo10_10',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe number of volunteers this year is ( ) large as last year\'s.\n① so  ② very  ③ as  ④ much',
+    question: '次の（　）内に最も適切な語を選べ。  The number of volunteers this year is ( ) large as last year\'s.',
+    choices: ['① so', '② very', '③ as', '④ much'],
     answer: '③ as',
     hint: '「〜と同じくらい…」という原級比較 as＋形容詞＋as の形を考える。',
     explanation: `【出題意図】
@@ -307,7 +317,8 @@ as＋形容詞/副詞＋as〜＝〜と同じくらい…。否定文not as/so〜
   {
     id: 'koko_nyushi_eigo10_11',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nHe was ( ) enough to give up his weekend to help clean the river.\n① kind  ② kindly  ③ kindness  ④ more kind',
+    question: '次の（　）内に最も適切な語を選べ。  He was ( ) enough to give up his weekend to help clean the river.',
+    choices: ['① kind', '② kindly', '③ kindness', '④ more kind'],
     answer: '① kind',
     hint: 'enoughの前には形容詞の原級が来る。',
     explanation: `【出題意図】
@@ -337,7 +348,8 @@ enoughの前には形容詞の原級を置く（副詞や名詞は不可）。�
   {
     id: 'koko_nyushi_eigo10_12',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe teacher had the students ( ) donations for the flood victims.\n① collect  ② to collect  ③ collecting  ④ collected',
+    question: '次の（　）内に最も適切な語を選べ。  The teacher had the students ( ) donations for the flood victims.',
+    choices: ['① collect', '② to collect', '③ collecting', '④ collected'],
     answer: '① collect',
     hint: 'have＋人＋動詞原形で「人に〜させる」という使役表現。',
     explanation: `【出題意図】
@@ -371,7 +383,8 @@ have＋人＋動詞原形＝「人に〜させる、〜してもらう」。教�
   {
     id: 'koko_nyushi_eigo10_13',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nMany students decided to take ( ) in the beach cleanup last Sunday.\n① part  ② care  ③ place  ④ turns',
+    question: '次の（　）内に最も適切な語を選べ。  Many students decided to take ( ) in the beach cleanup last Sunday.',
+    choices: ['① part', '② care', '③ place', '④ turns'],
     answer: '① part',
     hint: 'take part in〜で「〜に参加する」という熟語。',
     explanation: `【出題意図】
@@ -401,7 +414,8 @@ take part in〜＝join〜とほぼ同義。inを忘れないこと。
   {
     id: 'koko_nyushi_eigo10_14',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nWe need to be more ( ) of the problems that homeless people face every day.\n① aware  ② afraid  ③ ashamed  ④ ready',
+    question: '次の（　）内に最も適切な語を選べ。  We need to be more ( ) of the problems that homeless people face every day.',
+    choices: ['① aware', '② afraid', '③ ashamed', '④ ready'],
     answer: '① aware',
     hint: 'be aware of〜で「〜に気づいている、〜を意識している」という熟語。',
     explanation: `【出題意図】
@@ -431,7 +445,8 @@ be aware of〜＝〜に気づいている、意識している。似た形のbe 
   {
     id: 'koko_nyushi_eigo10_15',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThis charity provides food and clothes for families ( ) need.\n① in  ② on  ③ at  ④ for',
+    question: '次の（　）内に最も適切な語を選べ。  This charity provides food and clothes for families ( ) need.',
+    choices: ['① in', '② on', '③ at', '④ for'],
     answer: '① in',
     hint: 'in need で「困っている、困窮している」という定型表現。',
     explanation: `【出題意図】
@@ -459,7 +474,8 @@ in need（of〜）＝（〜を）必要としている、困っている。peopl
   {
     id: 'koko_nyushi_eigo10_16',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語句を選べ。\n\nThe shelter ( ) blankets during the cold winter, so volunteers collected more.\n① ran out of  ② ran into  ③ ran away  ④ ran over',
+    question: '次の（　）内に最も適切な語句を選べ。  The shelter ( ) blankets during the cold winter, so volunteers collected more.',
+    choices: ['① ran out of', '② ran into', '③ ran away', '④ ran over'],
     answer: '① ran out of',
     hint: 'run out of〜で「〜を使い果たす」という熟語。',
     explanation: `【出題意図】
@@ -489,7 +505,8 @@ run out of〜＝資源・物が尽きる。似た表現にbe out of〜（〜が�
   {
     id: 'koko_nyushi_eigo10_17',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nEven a small act of kindness can make a ( ) in someone\'s life.\n① difference  ② decision  ③ direction  ④ distance',
+    question: '次の（　）内に最も適切な語を選べ。  Even a small act of kindness can make a ( ) in someone\'s life.',
+    choices: ['① difference', '② decision', '③ direction', '④ distance'],
     answer: '① difference',
     hint: 'make a difference で「変化をもたらす、役に立つ」という熟語。',
     explanation: `【出題意図】
@@ -518,7 +535,8 @@ make a difference（to/in〜）＝〜に良い影響を与える。makeを使っ
   {
     id: 'koko_nyushi_eigo10_18',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nAll of us are ( ) for keeping our town clean and safe.\n① responsible  ② possible  ③ available  ④ suitable',
+    question: '次の（　）内に最も適切な語を選べ。  All of us are ( ) for keeping our town clean and safe.',
+    choices: ['① responsible', '② possible', '③ available', '④ suitable'],
     answer: '① responsible',
     hint: 'be responsible for〜で「〜に対して責任がある」という熟語。',
     explanation: `【出題意図】
@@ -548,7 +566,8 @@ be responsible for〜＝〜の責任を負う。forの後ろには名詞また�
   {
     id: 'koko_nyushi_eigo10_19',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語句を選べ。\n\nThis small town ( ) volunteers to keep the library open.\n① depends on  ② depends for  ③ relies at  ④ counts about',
+    question: '次の（　）内に最も適切な語句を選べ。  This small town ( ) volunteers to keep the library open.',
+    choices: ['① depends on', '② depends for', '③ relies at', '④ counts about'],
     answer: '① depends on',
     hint: 'depend on〜で「〜に頼る、〜次第である」という熟語。',
     explanation: `【出題意図】
@@ -578,7 +597,8 @@ depend on〜＝rely on〜＝count on〜（すべて「〜に頼る」）。前�
   {
     id: 'koko_nyushi_eigo10_20',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nIt is time for us to take ( ) to solve the problem of poverty in our city.\n① action  ② act  ③ activity  ④ actor',
+    question: '次の（　）内に最も適切な語を選べ。  It is time for us to take ( ) to solve the problem of poverty in our city.',
+    choices: ['① action', '② act', '③ activity', '④ actor'],
     answer: '① action',
     hint: 'take action で「行動を起こす」という熟語。',
     explanation: `【出題意図】
@@ -609,7 +629,8 @@ take action＝行動を起こす。似た形にtake steps（措置を講じる�
   {
     id: 'koko_nyushi_eigo10_21',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe man ( ) started this volunteer group is my uncle.\n① who  ② which  ③ whom  ④ whose',
+    question: '次の（　）内に最も適切な語を選べ。  The man ( ) started this volunteer group is my uncle.',
+    choices: ['① who', '② which', '③ whom', '④ whose'],
     answer: '① who',
     hint: '先行詞は「人」で、関係詞節内で主語の役割をしている。',
     explanation: `【出題意図】
@@ -639,7 +660,8 @@ take action＝行動を起こす。似た形にtake steps（措置を講じる�
   {
     id: 'koko_nyushi_eigo10_22',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe old clothes ( ) we collected were sent to families in need.\n① who  ② which  ③ whose  ④ where',
+    question: '次の（　）内に最も適切な語を選べ。  The old clothes ( ) we collected were sent to families in need.',
+    choices: ['① who', '② which', '③ whose', '④ where'],
     answer: '② which',
     hint: '先行詞は「物」で、関係詞節内で目的格として使われている。',
     explanation: `【出題意図】
@@ -669,7 +691,8 @@ take action＝行動を起こす。似た形にtake steps（措置を講じる�
   {
     id: 'koko_nyushi_eigo10_23',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nWe supported a family ( ) house was destroyed by the flood.\n① who  ② which  ③ whose  ④ whom',
+    question: '次の（　）内に最も適切な語を選べ。  We supported a family ( ) house was destroyed by the flood.',
+    choices: ['① who', '② which', '③ whose', '④ whom'],
     answer: '③ whose',
     hint: '「その家族の家が」という所有の関係を表す関係代名詞を選ぶ。',
     explanation: `【出題意図】
@@ -699,7 +722,8 @@ whose＋名詞＋動詞〜の形で「〜の（名詞）が…」を表す。先
   {
     id: 'koko_nyushi_eigo10_24',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThis is the shelter ( ) many homeless people can stay for free.\n① which  ② who  ③ where  ④ when',
+    question: '次の（　）内に最も適切な語を選べ。  This is the shelter ( ) many homeless people can stay for free.',
+    choices: ['① which', '② who', '③ where', '④ when'],
     answer: '③ where',
     hint: '先行詞は「場所」。関係副詞を選ぶ。',
     explanation: `【出題意図】
@@ -729,7 +753,8 @@ whose＋名詞＋動詞〜の形で「〜の（名詞）が…」を表す。先
   {
     id: 'koko_nyushi_eigo10_25',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nDo you know ( ) caused so many people to lose their homes?\n① what  ② which  ③ how  ④ whose',
+    question: '次の（　）内に最も適切な語を選べ。  Do you know ( ) caused so many people to lose their homes?',
+    choices: ['① what', '② which', '③ how', '④ whose'],
     answer: '① what',
     hint: '「何が原因だったのか」を尋ねる間接疑問文。疑問詞が主語の役割も果たす。',
     explanation: `【出題意図】
@@ -759,7 +784,8 @@ whose＋名詞＋動詞〜の形で「〜の（名詞）が…」を表す。先
   {
     id: 'koko_nyushi_eigo10_26',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nCould you tell me ( ) the next volunteer meeting will be held?\n① what  ② when  ③ whom  ④ which',
+    question: '次の（　）内に最も適切な語を選べ。  Could you tell me ( ) the next volunteer meeting will be held?',
+    choices: ['① what', '② when', '③ whom', '④ which'],
     answer: '② when',
     hint: '「次のボランティア会議がいつ開かれるか」を尋ねる間接疑問文。',
     explanation: `【出題意図】
@@ -999,7 +1025,8 @@ the number of〜（〜の数）は単数扱い（is/wasを使う）。a number o
   {
     id: 'koko_nyushi_eigo10_34',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: We\'re looking for volunteers to help clean the river this Saturday. Would you like to join us?\nB: ( )\n\n① Sure, I\'d love to.\n② No, I don\'t.\n③ I have already cleaned it.\n④ Yes, I did.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: We\'re looking for volunteers to help clean the river this Saturday. Would you like to join us? B: ( )',
+    choices: ['① Sure, I\'d love to.', '② No, I don\'t.', '③ I have already cleaned it.', '④ Yes, I did.'],
     answer: '① Sure, I\'d love to.',
     hint: 'Would you like to〜?（勧誘・誘い）への自然な受け方を選ぶ。',
     explanation: `【出題意図】
@@ -1031,7 +1058,8 @@ Would you like to〜?への返答：受ける＝Sure, I'd love to./I'd be happy 
   {
     id: 'koko_nyushi_eigo10_35',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: Excuse me, could you tell me how to get to the animal shelter?\nB: ( ) Then turn left, and you\'ll see it on your right.\n\n① Go straight for two blocks.\n② I have never been there.\n③ It\'s a very kind shelter.\n④ You should ask someone else.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: Excuse me, could you tell me how to get to the animal shelter? B: ( ) Then turn left, and you\'ll see it on your right.',
+    choices: ['① Go straight for two blocks.', '② I have never been there.', '③ It\'s a very kind shelter.', '④ You should ask someone else.'],
     answer: '① Go straight for two blocks.',
     hint: '道案内の文脈。後に続く「それから左に曲がって」に自然につながる文を選ぶ。',
     explanation: `【出題意図】
@@ -1063,7 +1091,8 @@ B：2区画まっすぐ進んでください。それから左に曲がると、
   {
     id: 'koko_nyushi_eigo10_36',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: I want to donate some books, but I don\'t have a car to carry them.\nB: ( ) I can drive you to the collection center.\n\n① Don\'t worry about that.\n② That\'s too bad for you.\n③ I\'m afraid I can\'t help.\n④ You should buy a car.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: I want to donate some books, but I don\'t have a car to carry them. B: ( ) I can drive you to the collection center.',
+    choices: ['① Don\'t worry about that.', '② That\'s too bad for you.', '③ I\'m afraid I can\'t help.', '④ You should buy a car.'],
     answer: '① Don\'t worry about that.',
     hint: '後に続く「車で送ってあげるよ」という申し出につながる返答を選ぶ。',
     explanation: `【出題意図】
@@ -1095,7 +1124,8 @@ B：それは心配しないで。回収センターまで車で送ってあげ�
   {
     id: 'koko_nyushi_eigo10_37',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: You look tired. Can I carry that box of donations for you?\nB: ( )\n\n① That\'s very kind of you. Thank you.\n② No, I never carry boxes.\n③ I don\'t like donations.\n④ Yes, you must carry it.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: You look tired. Can I carry that box of donations for you? B: ( )',
+    choices: ['① That\'s very kind of you. Thank you.', '② No, I never carry boxes.', '③ I don\'t like donations.', '④ Yes, you must carry it.'],
     answer: '① That\'s very kind of you. Thank you.',
     hint: 'Can I〜?（申し出）への自然な受け方を選ぶ。',
     explanation: `【出題意図】
@@ -1127,7 +1157,8 @@ B：ご親切にありがとうございます。
   {
     id: 'koko_nyushi_eigo10_38',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語を選べ。\n\nOur town has ( ) many changes since the volunteer group started working here.\n① see  ② saw  ③ seen  ④ seeing',
+    question: '次の英文の（　）に入る最も適切な語を選べ。  Our town has ( ) many changes since the volunteer group started working here.',
+    choices: ['① see', '② saw', '③ seen', '④ seeing'],
     answer: '③ seen',
     hint: '現在完了形（have/has＋過去分詞）。seeの過去分詞を選ぶ。',
     explanation: `【出題意図】
@@ -1157,7 +1188,8 @@ has＋過去分詞＝現在完了形。seeの活用：see-saw-seen。sinceは現
   {
     id: 'koko_nyushi_eigo10_39',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語を選べ。\n\nThe volunteer meeting will be held ( ) the community center this Saturday.\n① in  ② at  ③ on  ④ to',
+    question: '次の英文の（　）に入る最も適切な語を選べ。  The volunteer meeting will be held ( ) the community center this Saturday.',
+    choices: ['① in', '② at', '③ on', '④ to'],
     answer: '② at',
     hint: '特定の建物・地点を表す前置詞を選ぶ。',
     explanation: `【出題意図】
@@ -1187,7 +1219,8 @@ the community center（特定の建物・地点）にはatを使う。inは広�
   {
     id: 'koko_nyushi_eigo10_40',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語を選べ。\n\nEvery year, our school ( ) old textbooks to students who cannot afford new ones.\n① borrows  ② donates  ③ sells  ④ rents',
+    question: '次の英文の（　）に入る最も適切な語を選べ。  Every year, our school ( ) old textbooks to students who cannot afford new ones.',
+    choices: ['① borrows', '② donates', '③ sells', '④ rents'],
     answer: '② donates',
     hint: '「〜を寄付する」という意味の動詞を選ぶ。',
     explanation: `【出題意図】
@@ -1217,7 +1250,8 @@ donate〜to…＝…に〜を寄付する。名詞形はdonation（寄付）。
   {
     id: 'koko_nyushi_eigo10_41',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語句を選べ。\n\nMany elderly people live alone in this area. ( ), a group of students visits them once a week to talk and help with small tasks.\n① As a result  ② However  ③ For example  ④ Instead',
+    question: '次の英文の（　）に入る最も適切な語句を選べ。  Many elderly people live alone in this area. ( ), a group of students visits them once a week to talk and help with small tasks.',
+    choices: ['① As a result', '② However', '③ For example', '④ Instead'],
     answer: '① As a result',
     hint: '前文の内容（高齢者が一人暮らしをしている）を受けて、その結果として行われている取り組みを表すつなぎ言葉を選ぶ。',
     explanation: `【出題意図】
@@ -1398,7 +1432,8 @@ if節内は現在形で未来を表す。主節はwill＋動詞原形。比較�
     id: 'koko_nyushi_eigo10_47',
     subject: 'eigo',
     passage: `In many cities, a large amount of food is thrown away every day, even though many people do not have enough to eat. Food banks are organizations that collect extra food from stores, restaurants, and farms and give it to families in need. Volunteers spend hours sorting and packing food so that it can be delivered quickly. Some schools have also started their own small food banks for students whose families are struggling. By reducing food waste and sharing what we have, communities can support each other and make sure that fewer people go hungry.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の内容と合っているものを1つ選べ。\n① 食品は店やレストランからのみ集められる。\n② フードバンクはボランティアが食品を分類し梱包することで支えられている。\n③ 学校は生徒の家庭にフードバンクの利用を禁止している。\n④ 食品ロスと貧困の問題には関係がない。',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の内容と合っているものを1つ選べ。',
+    choices: ['① 食品は店やレストランからのみ集められる。', '② フードバンクはボランティアが食品を分類し梱包することで支えられている。', '③ 学校は生徒の家庭にフードバンクの利用を禁止している。', '④ 食品ロスと貧困の問題には関係がない。'],
     answer: '② フードバンクはボランティアが食品を分類し梱包することで支えられている。',
     hint: '本文中の "Volunteers spend hours sorting and packing food" という一文に注目する。',
     explanation: `【出題意図】
@@ -1426,7 +1461,8 @@ if節内は現在形で未来を表す。主節はwill＋動詞原形。比較�
     id: 'koko_nyushi_eigo10_48',
     subject: 'eigo',
     passage: `After the earthquake, many houses in the small town were badly damaged. Volunteers from all over the country came to help clear debris, repair roofs, and rebuild homes. Local residents were grateful for this support, but they also wanted to take an active role themselves. They organized their own teams to plan the rebuilding process and to decide which buildings should be fixed first. This combination of outside help and local leadership allowed the town to recover faster than expected. Experts say that this is a good model for other communities facing similar disasters.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文中の下線部 "this" が指す内容として最も適切なものを選べ。\n① 地震で家が壊れたこと\n② 外部からの支援と地元住民のリーダーシップの組み合わせ\n③ 専門家が町を訪れたこと\n④ ボランティアが屋根を修理したこと',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文中の下線部 "this" が指す内容として最も適切なものを選べ。',
+    choices: ['① 地震で家が壊れたこと', '② 外部からの支援と地元住民のリーダーシップの組み合わせ', '③ 専門家が町を訪れたこと', '④ ボランティアが屋根を修理したこと'],
     answer: '② 外部からの支援と地元住民のリーダーシップの組み合わせ',
     hint: '"this" の直前の文 "This combination of outside help and local leadership" を確認する。',
     explanation: `【出題意図】
@@ -1455,7 +1491,8 @@ if節内は現在形で未来を表す。主節はwill＋動詞原形。比較�
     id: 'koko_nyushi_eigo10_49',
     subject: 'eigo',
     passage: `Many high schools now encourage students to visit nursing homes as part of their volunteer activities. At first, some students feel nervous about talking with elderly residents they do not know. However, after a few visits, most students say they enjoy listening to the residents' stories about the past. The elderly residents, in turn, often say that these visits make their days brighter and give them a chance to share their experiences with younger generations. Teachers believe that these exchanges help students develop empathy while giving elderly people a sense of connection to the community.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の主題として最も適切なものを選べ。\n① 高校生が老人ホームを訪問することで両者に生まれる良い影響\n② 老人ホームの職員不足についての報告\n③ 高齢者の孤独に関する統計データ\n④ 学校の授業でのボランティア活動の評価方法',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の主題として最も適切なものを選べ。',
+    choices: ['① 高校生が老人ホームを訪問することで両者に生まれる良い影響', '② 老人ホームの職員不足についての報告', '③ 高齢者の孤独に関する統計データ', '④ 学校の授業でのボランティア活動の評価方法'],
     answer: '① 高校生が老人ホームを訪問することで両者に生まれる良い影響',
     hint: '本文全体が学生と高齢者の双方にとっての効果（共感の育成、地域とのつながり）を述べていることに注目する。',
     explanation: `【出題意図】
@@ -1484,7 +1521,8 @@ if節内は現在形で未来を表す。主節はwill＋動詞原形。比較�
     id: 'koko_nyushi_eigo10_50',
     subject: 'eigo',
     passage: `Every Friday evening, a group of volunteers gathers at a local church to cook and serve a hot meal for people who are homeless. The volunteers include students, office workers, and retired teachers who all give up their evening for this activity. The meal service began five years ago with only a handful of volunteers, but now more than thirty people help each week. Some homeless visitors say that the meal is not just about food, but also about being treated with kindness and respect. The organizers hope to expand the service to other neighborhoods in the near future.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の内容と合っていないものを1つ選べ。\n① この食事提供活動は毎週金曜日の夜に行われている。\n② ボランティアには学生、会社員、退職した教師が含まれる。\n③ この活動は始まってから一度も規模が変わっていない。\n④ 主催者は他の地域にもこの活動を広げたいと考えている。',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の内容と合っていないものを1つ選べ。',
+    choices: ['① この食事提供活動は毎週金曜日の夜に行われている。', '② ボランティアには学生、会社員、退職した教師が含まれる。', '③ この活動は始まってから一度も規模が変わっていない。', '④ 主催者は他の地域にもこの活動を広げたいと考えている。'],
     answer: '③ この活動は始まってから一度も規模が変わっていない。',
     hint: '本文には "began five years ago with only a handful of volunteers, but now more than thirty people help" とあり、規模の変化が述べられている。',
     explanation: `【出題意図】

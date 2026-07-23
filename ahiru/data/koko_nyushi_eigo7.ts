@@ -7,7 +7,8 @@ export const kokoNyushiEigo7: Question[] = [
   {
     id: 'koko_nyushi_eigo7_01',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nMy mother ( ) dinner for two hours when I got home.\n① cooks  ② cooked  ③ has cooked  ④ had been cooking',
+    question: '次の（　）内に最も適切な語を選べ。  My mother ( ) dinner for two hours when I got home.',
+    choices: ['① cooks', '② cooked', '③ has cooked', '④ had been cooking'],
     answer: '④ had been cooking',
     hint: '「私が帰宅したとき」より前から続いていた動作を表す時制を選ぶ。',
     explanation: `【出題意図】
@@ -37,7 +38,8 @@ export const kokoNyushiEigo7: Question[] = [
   {
     id: 'koko_nyushi_eigo7_02',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nWe ( ) buy some eggs on the way home, or we won’t be able to make the cake.\n① must  ② should  ③ can  ④ may',
+    question: '次の（　）内に最も適切な語を選べ。  We ( ) buy some eggs on the way home, or we won’t be able to make the cake.',
+    choices: ['① must', '② should', '③ can', '④ may'],
     answer: '① must',
     hint: '「〜しなければケーキが作れない」という強い必要性を表す助動詞を選ぶ。',
     explanation: `【出題意図】
@@ -67,7 +69,8 @@ must：話者の主観による強い義務。否定文 must not は「〜して
   {
     id: 'koko_nyushi_eigo7_03',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語形を選べ。\n\nThis curry ( ) by my grandmother every Sunday.\n① cooks  ② is cooked  ③ was cooked  ④ has cook',
+    question: '次の（　）内に最も適切な語形を選べ。  This curry ( ) by my grandmother every Sunday.',
+    choices: ['① cooks', '② is cooked', '③ was cooked', '④ has cook'],
     answer: '② is cooked',
     hint: '「毎週日曜日に〜される」という習慣を表す受動態の現在形を探す。',
     explanation: `【出題意図】
@@ -97,7 +100,8 @@ must：話者の主観による強い義務。否定文 must not は「〜して
   {
     id: 'koko_nyushi_eigo7_04',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThis supermarket is ( ) than the one near the station.\n① cheap  ② cheaper  ③ the cheapest  ④ most cheap',
+    question: '次の（　）内に最も適切な語を選べ。  This supermarket is ( ) than the one near the station.',
+    choices: ['① cheap', '② cheaper', '③ the cheapest', '④ most cheap'],
     answer: '② cheaper',
     hint: '「〜より安い」と2つの店を比べているので比較級を使う。',
     explanation: `【出題意図】
@@ -127,7 +131,8 @@ must：話者の主観による強い義務。否定文 must not は「〜して
   {
     id: 'koko_nyushi_eigo7_05',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nMy father went to the shopping mall ( ) a birthday present for my sister.\n① for  ② so  ③ to buy  ④ buying',
+    question: '次の（　）内に最も適切な語を選べ。  My father went to the shopping mall ( ) a birthday present for my sister.',
+    choices: ['① for', '② so', '③ to buy', '④ buying'],
     answer: '③ to buy',
     hint: '「〜するために」という目的を表す不定詞の副詞的用法を選ぶ。',
     explanation: `【出題意図】
@@ -157,7 +162,8 @@ must：話者の主観による強い義務。否定文 must not は「〜して
   {
     id: 'koko_nyushi_eigo7_06',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nMy little brother finished ( ) his toys before dinner.\n① put away  ② to put away  ③ putting away  ④ puts away',
+    question: '次の（　）内に最も適切な語を選べ。  My little brother finished ( ) his toys before dinner.',
+    choices: ['① put away', '② to put away', '③ putting away', '④ puts away'],
     answer: '③ putting away',
     hint: 'finish の後ろには動名詞（〜ing）が来る。',
     explanation: `【出題意図】
@@ -187,7 +193,8 @@ finish は目的語に動名詞のみをとり、不定詞（to +原形）はと
   {
     id: 'koko_nyushi_eigo7_07',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nBy the time my parents come home, I ( ) all the cleaning.\n① will finish  ② have finished  ③ will have finished  ④ finished',
+    question: '次の（　）内に最も適切な語を選べ。  By the time my parents come home, I ( ) all the cleaning.',
+    choices: ['① will finish', '② have finished', '③ will have finished', '④ finished'],
     answer: '③ will have finished',
     hint: '「両親が帰宅するまでには」という未来の時点での完了を表す時制を選ぶ。',
     explanation: `【出題意図】
@@ -217,7 +224,8 @@ finish は目的語に動名詞のみをとり、不定詞（to +原形）はと
   {
     id: 'koko_nyushi_eigo7_08',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nIf it ( ) rain tomorrow, we will go grocery shopping in the afternoon.\n① doesn’t  ② won’t  ③ didn’t  ④ isn’t',
+    question: '次の（　）内に最も適切な語を選べ。  If it ( ) rain tomorrow, we will go grocery shopping in the afternoon.',
+    choices: ['① doesn’t', '② won’t', '③ didn’t', '④ isn’t'],
     answer: '① doesn’t',
     hint: '条件を表す if 節の中では、未来のことでも現在形を使う。',
     explanation: `【出題意図】
@@ -247,7 +255,8 @@ finish は目的語に動名詞のみをとり、不定詞（to +原形）はと
   {
     id: 'koko_nyushi_eigo7_09',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThese vegetables ( ) grown by my grandfather in his garden.\n① is  ② are  ③ was  ④ has',
+    question: '次の（　）内に最も適切な語を選べ。  These vegetables ( ) grown by my grandfather in his garden.',
+    choices: ['① is', '② are', '③ was', '④ has'],
     answer: '② are',
     hint: '主語 These vegetables は複数形。受動態の be動詞を主語に合わせる。',
     explanation: `【出題意図】
@@ -277,7 +286,8 @@ finish は目的語に動名詞のみをとり、不定詞（to +原形）はと
   {
     id: 'koko_nyushi_eigo7_10',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nOf all my family members, my mother gets up ( ).\n① early  ② earlier  ③ the earliest  ④ more early',
+    question: '次の（　）内に最も適切な語を選べ。  Of all my family members, my mother gets up ( ).',
+    choices: ['① early', '② earlier', '③ the earliest', '④ more early'],
     answer: '③ the earliest',
     hint: '「家族の中で一番」という範囲を示す語句があるので最上級を使う。',
     explanation: `【出題意図】
@@ -307,7 +317,8 @@ finish は目的語に動名詞のみをとり、不定詞（to +原形）はと
   {
     id: 'koko_nyushi_eigo7_11',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nI want ( ) a good cook like my mother someday.\n① be  ② being  ③ to be  ④ been',
+    question: '次の（　）内に最も適切な語を選べ。  I want ( ) a good cook like my mother someday.',
+    choices: ['① be', '② being', '③ to be', '④ been'],
     answer: '③ to be',
     hint: 'want の後ろに来る不定詞の名詞的用法（〜したい）を選ぶ。',
     explanation: `【出題意図】
@@ -337,7 +348,8 @@ want to do：〜したい（不定詞のみを目的語にとる動詞：want, h
   {
     id: 'koko_nyushi_eigo7_12',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\n( ) the laundry every morning is one of my daily jobs at home.\n① Do  ② Doing  ③ To do  ④ Did',
+    question: '次の（　）内に最も適切な語を選べ。  ( ) the laundry every morning is one of my daily jobs at home.',
+    choices: ['① Do', '② Doing', '③ To do', '④ Did'],
     answer: '② Doing',
     hint: '文全体の主語になる部分を選ぶ。主語には動名詞が使える。',
     explanation: `【出題意図】
@@ -371,7 +383,8 @@ want to do：〜したい（不定詞のみを目的語にとる動詞：want, h
   {
     id: 'koko_nyushi_eigo7_13',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な前置詞を選べ。\n\nMy father is very proud ( ) my sister’s cooking.\n① of  ② with  ③ at  ④ for',
+    question: '次の（　）内に最も適切な前置詞を選べ。  My father is very proud ( ) my sister’s cooking.',
+    choices: ['① of', '② with', '③ at', '④ for'],
     answer: '① of',
     hint: 'be proud の後ろに来る前置詞を選ぶ。',
     explanation: `【出題意図】
@@ -401,7 +414,8 @@ be proud of〜 は「〜を誇りに思う」という意味の固定表現。
   {
     id: 'koko_nyushi_eigo7_14',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nCan you ( ) my little sister while I go grocery shopping?\n① look at  ② look for  ③ look after  ④ look into',
+    question: '次の（　）内に最も適切な語を選べ。  Can you ( ) my little sister while I go grocery shopping?',
+    choices: ['① look at', '② look for', '③ look after', '④ look into'],
     answer: '③ look after',
     hint: '「〜の世話をする」という意味の句動詞を選ぶ。',
     explanation: `【出題意図】
@@ -431,7 +445,8 @@ look after〜 = take care of〜（〜の世話をする）。look の句動詞�
   {
     id: 'koko_nyushi_eigo7_15',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nWe have ( ) out of milk, so I need to go to the store.\n① run  ② left  ③ taken  ④ given',
+    question: '次の（　）内に最も適切な語を選べ。  We have ( ) out of milk, so I need to go to the store.',
+    choices: ['① run', '② left', '③ taken', '④ given'],
     answer: '① run',
     hint: '「〜を使い果たす、〜がなくなる」という意味の熟語 run out of〜 を思い出す。',
     explanation: `【出題意図】
@@ -461,7 +476,8 @@ run out of〜：〜を使い果たす（We have run out of sugar.）。似た表
   {
     id: 'koko_nyushi_eigo7_16',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nMy mother bought a new jacket ( ) the department store yesterday.\n① at  ② to  ③ on  ④ into',
+    question: '次の（　）内に最も適切な語を選べ。  My mother bought a new jacket ( ) the department store yesterday.',
+    choices: ['① at', '② to', '③ on', '④ into'],
     answer: '① at',
     hint: '「〜（店）で買う」というときの前置詞は、比較的特定の建物・場所に使うものを選ぶ。',
     explanation: `【出題意図】
@@ -491,7 +507,8 @@ at＋比較的小さい・特定の地点（at the store, at the station）／in
   {
     id: 'koko_nyushi_eigo7_17',
     subject: 'eigo',
-    question: '次の文と意味が最も近いものを選べ。\n\nMy cooking style is similar to my mother’s.\n① My cooking style is the same as my mother’s.\n② My cooking style is like my mother’s.\n③ My cooking style is different from my mother’s.\n④ My cooking style is better than my mother’s.',
+    question: '次の文と意味が最も近いものを選べ。  My cooking style is similar to my mother’s.',
+    choices: ['① My cooking style is the same as my mother’s.', '② My cooking style is like my mother’s.', '③ My cooking style is different from my mother’s.', '④ My cooking style is better than my mother’s.'],
     answer: '② My cooking style is like my mother’s.',
     hint: 'be similar to〜 は「〜に似ている」という意味。完全に同一という意味ではない。',
     explanation: `【出題意図】
@@ -521,7 +538,8 @@ be similar to〜＝be like〜（〜に似ている）。be the same as〜（全�
   {
     id: 'koko_nyushi_eigo7_18',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nI get along well ( ) my younger brother.\n① with  ② to  ③ for  ④ at',
+    question: '次の（　）内に最も適切な語を選べ。  I get along well ( ) my younger brother.',
+    choices: ['① with', '② to', '③ for', '④ at'],
     answer: '① with',
     hint: 'get along well の後ろに来る前置詞は「〜と（一緒に）」を表すものを選ぶ。',
     explanation: `【出題意図】
@@ -551,7 +569,8 @@ get along (well) with〜：〜とうまくやる。人間関係を表す熟語�
   {
     id: 'koko_nyushi_eigo7_19',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nWhether we can go on a family trip this summer ( ) on my father’s work schedule.\n① decides  ② depends  ③ needs  ④ spends',
+    question: '次の（　）内に最も適切な語を選べ。  Whether we can go on a family trip this summer ( ) on my father’s work schedule.',
+    choices: ['① decides', '② depends', '③ needs', '④ spends'],
     answer: '② depends',
     hint: '「〜次第である」という意味の熟語 depend on〜 を思い出す。',
     explanation: `【出題意図】
@@ -581,7 +600,8 @@ depend on〜：〜次第である、〜に頼る。Whether〜（〜かどうか�
   {
     id: 'koko_nyushi_eigo7_20',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nWe left the supermarket early to be ( ) time for dinner.\n① in  ② on  ③ at  ④ for',
+    question: '次の（　）内に最も適切な語を選べ。  We left the supermarket early to be ( ) time for dinner.',
+    choices: ['① in', '② on', '③ at', '④ for'],
     answer: '① in',
     hint: '「〜に間に合って」という意味の熟語 in time for〜 を思い出す。',
     explanation: `【出題意図】
@@ -615,7 +635,8 @@ in time for〜／to do：〜に間に合って。on time：時間通りに（定
   {
     id: 'koko_nyushi_eigo7_21',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe woman ( ) is cooking in the kitchen is my aunt.\n① who  ② which  ③ whom  ④ whose',
+    question: '次の（　）内に最も適切な語を選べ。  The woman ( ) is cooking in the kitchen is my aunt.',
+    choices: ['① who', '② which', '③ whom', '④ whose'],
     answer: '① who',
     hint: '先行詞は「人」、関係代名詞節内での役割は「主語」。',
     explanation: `【出題意図】
@@ -645,7 +666,8 @@ in time for〜／to do：〜に間に合って。on time：時間通りに（定
   {
     id: 'koko_nyushi_eigo7_22',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe bag ( ) my mother bought at the mall was very expensive.\n① who  ② which  ③ whom  ④ where',
+    question: '次の（　）内に最も適切な語を選べ。  The bag ( ) my mother bought at the mall was very expensive.',
+    choices: ['① who', '② which', '③ whom', '④ where'],
     answer: '② which',
     hint: '先行詞は「物（バッグ）」。関係代名詞節内で bought の目的語になっている。',
     explanation: `【出題意図】
@@ -677,7 +699,8 @@ which は省略可（that に置き換え可）：The bag (that) my mother bough
   {
     id: 'koko_nyushi_eigo7_23',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nI still remember the store ( ) my grandmother used to buy vegetables.\n① which  ② who  ③ where  ④ when',
+    question: '次の（　）内に最も適切な語を選べ。  I still remember the store ( ) my grandmother used to buy vegetables.',
+    choices: ['① which', '② who', '③ where', '④ when'],
     answer: '③ where',
     hint: '先行詞は「場所（store）」で、関係副詞を使う。',
     explanation: `【出題意図】
@@ -772,7 +795,8 @@ whose の構造：先行詞＋whose＋名詞＋動詞〜。所有格代名詞（
   {
     id: 'koko_nyushi_eigo7_26',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nCould you tell me ( ) vegetables we should buy for the curry?\n① when  ② which  ③ where  ④ why',
+    question: '次の（　）内に最も適切な語を選べ。  Could you tell me ( ) vegetables we should buy for the curry?',
+    choices: ['① when', '② which', '③ where', '④ why'],
     answer: '② which',
     hint: '「どの野菜を」という選択を尋ねる間接疑問文。疑問詞の意味を考える。',
     explanation: `【出題意図】
@@ -1027,7 +1051,8 @@ This bag is light enough for my grandmother to carry.
   {
     id: 'koko_nyushi_eigo7_34',
     subject: 'eigo',
-    question: '次の対話文の（　）に最も適切なものを選べ。\n\nA: Excuse me, could you tell me where the milk is?\nB: ( ) It’s next to the eggs, in the third aisle.\n① Sure, no problem.  ② I have no idea what you mean.  ③ You’re welcome.  ④ I don’t like milk.',
+    question: '次の対話文の（　）に最も適切なものを選べ。  A: Excuse me, could you tell me where the milk is? B: ( ) It’s next to the eggs, in the third aisle.',
+    choices: ['① Sure, no problem.', '② I have no idea what you mean.', '③ You’re welcome.', '④ I don’t like milk.'],
     answer: '① Sure, no problem.',
     hint: '道案内・場所を尋ねられたときの自然な応答を選ぶ。',
     explanation: `【出題意図】
@@ -1057,7 +1082,8 @@ Could you tell me where〜?（間接疑問文）を使った丁寧な依頼表�
   {
     id: 'koko_nyushi_eigo7_35',
     subject: 'eigo',
-    question: '次の対話文の（　）に最も適切なものを選べ。\n\nA: Mom, can I help you with the cooking?\nB: ( ) Could you wash the vegetables for me?\n① No, thank you.  ② That would be great.  ③ I already finished it.  ④ Please don’t.',
+    question: '次の対話文の（　）に最も適切なものを選べ。  A: Mom, can I help you with the cooking? B: ( ) Could you wash the vegetables for me?',
+    choices: ['① No, thank you.', '② That would be great.', '③ I already finished it.', '④ Please don’t.'],
     answer: '② That would be great.',
     hint: '手伝いを申し出た子どもに対して、母親が快く受け入れて具体的な作業を頼む流れを考える。',
     explanation: `【出題意図】
@@ -1087,7 +1113,8 @@ Can I help you with〜?（〜を手伝ってもいいですか）という申し
   {
     id: 'koko_nyushi_eigo7_36',
     subject: 'eigo',
-    question: '次の対話文の（　）に最も適切なものを選べ。\n\nA: This shirt looks nice, but it’s a little expensive.\nB: Why don’t you wait until the sale? ( )\nA: That sounds like a good idea.\n① The store closes soon.  ② Prices are usually lower then.  ③ I already bought it.  ④ It doesn’t fit me.',
+    question: '次の対話文の（　）に最も適切なものを選べ。  A: This shirt looks nice, but it’s a little expensive. B: Why don’t you wait until the sale? ( ) A: That sounds like a good idea.',
+    choices: ['① The store closes soon.', '② Prices are usually lower then.', '③ I already bought it.', '④ It doesn’t fit me.'],
     answer: '② Prices are usually lower then.',
     hint: 'セールを待つことを勧めた理由として自然につながる文を選ぶ。',
     explanation: `【出題意図】
@@ -1117,7 +1144,8 @@ Why don't you〜?（〜したらどう？）という提案表現。then はこ�
   {
     id: 'koko_nyushi_eigo7_37',
     subject: 'eigo',
-    question: '次の短い文章の（　）に最も適切なものを選べ。\n\nEvery Saturday, my whole family goes to the farmer’s market together. My father usually carries the heavy bags, ( ) my mother chooses the freshest vegetables.\n① so  ② while  ③ because  ④ although',
+    question: '次の短い文章の（　）に最も適切なものを選べ。  Every Saturday, my whole family goes to the farmer’s market together. My father usually carries the heavy bags, ( ) my mother chooses the freshest vegetables.',
+    choices: ['① so', '② while', '③ because', '④ although'],
     answer: '② while',
     hint: '2つの動作が同時に並行して行われていることを表す接続詞を選ぶ。',
     explanation: `【出題意図】
@@ -1147,7 +1175,8 @@ while：2つの動作・出来事が同時に起こることを示す接続詞�
   {
     id: 'koko_nyushi_eigo7_38',
     subject: 'eigo',
-    question: '次の対話文の（　）に最も適切なものを選べ。\n\nA: Do you know why the bakery is closed today?\nB: ( ) Maybe it’s a holiday.\n① Yes, I made it myself.  ② No, I have no idea.  ③ Sure, I’ll take it.  ④ Yes, it opens at nine.',
+    question: '次の対話文の（　）に最も適切なものを選べ。  A: Do you know why the bakery is closed today? B: ( ) Maybe it’s a holiday.',
+    choices: ['① Yes, I made it myself.', '② No, I have no idea.', '③ Sure, I’ll take it.', '④ Yes, it opens at nine.'],
     answer: '② No, I have no idea.',
     hint: '直後の「Maybe〜（たぶん〜）」という推測につながる応答を考える。',
     explanation: `【出題意図】
@@ -1177,7 +1206,8 @@ Do you know why〜?（間接疑問文）に対する返答は、Yes, I do. / No,
   {
     id: 'koko_nyushi_eigo7_39',
     subject: 'eigo',
-    question: '次の対話文の（　）に最も適切なものを選べ。\n\nA: I heard you are going to cook dinner for your family tonight.\nB: Yes, but I have never cooked curry before. ( )\nA: Don’t worry. I’ll help you.\n① I’m a little nervous about it.  ② I cooked it many times.  ③ I don’t like curry at all.  ④ It was very delicious.',
+    question: '次の対話文の（　）に最も適切なものを選べ。  A: I heard you are going to cook dinner for your family tonight. B: Yes, but I have never cooked curry before. ( ) A: Don’t worry. I’ll help you.',
+    choices: ['① I’m a little nervous about it.', '② I cooked it many times.', '③ I don’t like curry at all.', '④ It was very delicious.'],
     answer: '① I’m a little nervous about it.',
     hint: '直後の Don’t worry.（心配しないで）という励ましにつながる発言を考える。',
     explanation: `【出題意図】
@@ -1207,7 +1237,8 @@ have never＋過去分詞（経験の否定）：〜したことが一度もな�
   {
     id: 'koko_nyushi_eigo7_40',
     subject: 'eigo',
-    question: '次の短い文章の（　）に最も適切なものを選べ。\n\nMy grandmother always says that the best gifts are not the most expensive ones, ( ) the ones made with the most care.\n① but  ② or  ③ so  ④ if',
+    question: '次の短い文章の（　）に最も適切なものを選べ。  My grandmother always says that the best gifts are not the most expensive ones, ( ) the ones made with the most care.',
+    choices: ['① but', '② or', '③ so', '④ if'],
     answer: '① but',
     hint: '「最も高価な物ではなく、最も心のこもった物」という対比を表す接続詞を選ぶ。',
     explanation: `【出題意図】
@@ -1237,7 +1268,8 @@ not A but B：AではなくB。ones は「物」を指す代名詞で、繰り�
   {
     id: 'koko_nyushi_eigo7_41',
     subject: 'eigo',
-    question: '次の対話文の（　）に最も適切なものを選べ。\n\nA: These strawberries look fresh. Should we buy some?\nB: ( ) They’re a little expensive today, though.\n① Sure, let’s get some.  ② No, I have already eaten them.  ③ Yes, I sold them yesterday.  ④ Sorry, I can’t hear you.',
+    question: '次の対話文の（　）に最も適切なものを選べ。  A: These strawberries look fresh. Should we buy some? B: ( ) They’re a little expensive today, though.',
+    choices: ['① Sure, let’s get some.', '② No, I have already eaten them.', '③ Yes, I sold them yesterday.', '④ Sorry, I can’t hear you.'],
     answer: '① Sure, let’s get some.',
     hint: '直後の「今日は少し高いけど」という続きに自然につながる、賛成の返答を選ぶ。',
     explanation: `【出題意図】

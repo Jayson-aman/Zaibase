@@ -7,7 +7,8 @@ export const kokoNyushiEigo9: Question[] = [
   {
     id: 'koko_nyushi_eigo9_01',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe astronomer ( ) the stars for over ten years when she finally discovered the new planet.\n① watches  ② watched  ③ has watched  ④ had been watching',
+    question: '次の（　）内に最も適切な語を選べ。  The astronomer ( ) the stars for over ten years when she finally discovered the new planet.',
+    choices: ['① watches', '② watched', '③ has watched', '④ had been watching'],
     answer: '④ had been watching',
     hint: '「発見した」という過去の一点よりもさらに前から続いていた動作を表す時制を選ぶ。',
     explanation: `【出題意図】
@@ -37,7 +38,8 @@ export const kokoNyushiEigo9: Question[] = [
   {
     id: 'koko_nyushi_eigo9_02',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nAstronauts ( ) wear special suits when they walk outside the space station because there is no air.\n① can  ② should  ③ have to  ④ need',
+    question: '次の（　）内に最も適切な語を選べ。  Astronauts ( ) wear special suits when they walk outside the space station because there is no air.',
+    choices: ['① can', '② should', '③ have to', '④ need'],
     answer: '③ have to',
     hint: '「空気がないから」という外的な状況による必要性を表す表現を選ぶ。',
     explanation: `【出題意図】
@@ -66,7 +68,8 @@ have to：外部の規則・状況による義務。must：話者の主観的な
   {
     id: 'koko_nyushi_eigo9_03',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nNew data ( ) from the Mars rover to scientists on Earth every day.\n① sends  ② is sent  ③ was sent  ④ has send',
+    question: '次の（　）内に最も適切な語を選べ。  New data ( ) from the Mars rover to scientists on Earth every day.',
+    choices: ['① sends', '② is sent', '③ was sent', '④ has send'],
     answer: '② is sent',
     hint: '主語（data）は「送る」側ではなく「送られる」側。受動態の現在形を選ぶ。',
     explanation: `【出題意図】
@@ -95,7 +98,8 @@ have to：外部の規則・状況による義務。must：話者の主観的な
   {
     id: 'koko_nyushi_eigo9_04',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThis is ( ) telescope that scientists have ever built.\n① powerful  ② more powerful  ③ the most powerful  ④ most powerful',
+    question: '次の（　）内に最も適切な語を選べ。  This is ( ) telescope that scientists have ever built.',
+    choices: ['① powerful', '② more powerful', '③ the most powerful', '④ most powerful'],
     answer: '③ the most powerful',
     hint: '「これまでに作られた中で一番〜」は最上級。最上級には the が必要。',
     explanation: `【出題意図】
@@ -124,7 +128,8 @@ have to：外部の規則・状況による義務。must：話者の主観的な
   {
     id: 'koko_nyushi_eigo9_05',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nEngineers designed the rover ( ) rocks and soil on Mars.\n① for collect  ② collecting  ③ to collect  ④ collected',
+    question: '次の（　）内に最も適切な語を選べ。  Engineers designed the rover ( ) rocks and soil on Mars.',
+    choices: ['① for collect', '② collecting', '③ to collect', '④ collected'],
     answer: '③ to collect',
     hint: '「〜するために」という目的を表す不定詞の副詞的用法。',
     explanation: `【出題意図】
@@ -153,7 +158,8 @@ have to：外部の規則・状況による義務。must：話者の主観的な
   {
     id: 'koko_nyushi_eigo9_06',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe programmer finished ( ) the new app before the deadline.\n① test  ② to test  ③ testing  ④ tested',
+    question: '次の（　）内に最も適切な語を選べ。  The programmer finished ( ) the new app before the deadline.',
+    choices: ['① test', '② to test', '③ testing', '④ tested'],
     answer: '③ testing',
     hint: 'finish の後ろには動名詞（〜ing）が来る。',
     explanation: `【出題意図】
@@ -182,7 +188,8 @@ finish は目的語に動名詞（〜ing）のみを取り、不定詞は取ら�
   {
     id: 'koko_nyushi_eigo9_07',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nBy the year 2030, scientists ( ) a cure for many diseases with the help of AI.\n① will discover  ② will have discovered  ③ have discovered  ④ discovered',
+    question: '次の（　）内に最も適切な語を選べ。  By the year 2030, scientists ( ) a cure for many diseases with the help of AI.',
+    choices: ['① will discover', '② will have discovered', '③ have discovered', '④ discovered'],
     answer: '② will have discovered',
     hint: '「2030年までには」という未来の時点での完了を表す時制を選ぶ。',
     explanation: `【出題意図】
@@ -211,7 +218,8 @@ finish は目的語に動名詞（〜ing）のみを取り、不定詞は取ら�
   {
     id: 'koko_nyushi_eigo9_08',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nIf the rocket launch ( ) successful tomorrow, it will be a historic moment for space exploration.\n① is  ② will be  ③ was  ④ has been',
+    question: '次の（　）内に最も適切な語を選べ。  If the rocket launch ( ) successful tomorrow, it will be a historic moment for space exploration.',
+    choices: ['① is', '② will be', '③ was', '④ has been'],
     answer: '① is',
     hint: '条件を表す if 節の中では、未来のことでも現在形を使う。',
     explanation: `【出題意図】
@@ -240,7 +248,8 @@ finish は目的語に動名詞（〜ing）のみを取り、不定詞は取ら�
   {
     id: 'koko_nyushi_eigo9_09',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語句を選べ。\n\nSolar panels ( ) regularly to keep them working efficiently.\n① should clean  ② should be cleaned  ③ should cleaning  ④ should be clean',
+    question: '次の（　）内に最も適切な語句を選べ。  Solar panels ( ) regularly to keep them working efficiently.',
+    choices: ['① should clean', '② should be cleaned', '③ should cleaning', '④ should be clean'],
     answer: '② should be cleaned',
     hint: '「太陽光パネル」は掃除する側ではなく「掃除される」側。助動詞＋受動態の形を選ぶ。',
     explanation: `【出題意図】
@@ -269,7 +278,8 @@ finish は目的語に動名詞（〜ing）のみを取り、不定詞は取ら�
   {
     id: 'koko_nyushi_eigo9_10',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nA smartphone today is much ( ) than the huge computers used in the 1960s.\n① powerful  ② more powerful  ③ most powerful  ④ as powerful',
+    question: '次の（　）内に最も適切な語を選べ。  A smartphone today is much ( ) than the huge computers used in the 1960s.',
+    choices: ['① powerful', '② more powerful', '③ most powerful', '④ as powerful'],
     answer: '② more powerful',
     hint: 'than があるので比較級を選ぶ。powerful は多音節語なので more を使う。',
     explanation: `【出題意図】
@@ -298,7 +308,8 @@ than があれば比較級が必要。powerful は3音節の形容詞なので m
   {
     id: 'koko_nyushi_eigo9_11',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nHave you ever ( ) a documentary about black holes?\n① watch  ② watched  ③ watching  ④ to watch',
+    question: '次の（　）内に最も適切な語を選べ。  Have you ever ( ) a documentary about black holes?',
+    choices: ['① watch', '② watched', '③ watching', '④ to watch'],
     answer: '② watched',
     hint: '現在完了形（have/has + 過去分詞）の経験用法。watch の過去分詞を選ぶ。',
     explanation: `【出題意図】
@@ -327,7 +338,8 @@ Have you ever ( )? は「これまでに〜したことがありますか」と�
   {
     id: 'koko_nyushi_eigo9_12',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\n( ) renewable energy such as solar and wind power is important for protecting our planet.\n① Use  ② To using  ③ Using  ④ Used',
+    question: '次の（　）内に最も適切な語を選べ。  ( ) renewable energy such as solar and wind power is important for protecting our planet.',
+    choices: ['① Use', '② To using', '③ Using', '④ Used'],
     answer: '③ Using',
     hint: '文全体の主語になる動名詞を選ぶ。',
     explanation: `【出題意図】
@@ -360,7 +372,8 @@ Have you ever ( )? は「これまでに〜したことがありますか」と�
   {
     id: 'koko_nyushi_eigo9_13',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な前置詞を選べ。\n\nEver since she was young, she has been interested ( ) robotics.\n① at  ② with  ③ in  ④ about',
+    question: '次の（　）内に最も適切な前置詞を選べ。  Ever since she was young, she has been interested ( ) robotics.',
+    choices: ['① at', '② with', '③ in', '④ about'],
     answer: '③ in',
     hint: 'be interested の後ろに来る前置詞を選ぶ。',
     explanation: `【出題意図】
@@ -389,7 +402,8 @@ be interested in〜 は「〜に興味がある」という意味のイディオ
   {
     id: 'koko_nyushi_eigo9_14',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nMany students decided to ( ) part in the science fair this year.\n① make  ② have  ③ take  ④ give',
+    question: '次の（　）内に最も適切な語を選べ。  Many students decided to ( ) part in the science fair this year.',
+    choices: ['① make', '② have', '③ take', '④ give'],
     answer: '③ take',
     hint: 'take part in〜 で「〜に参加する」という熟語。',
     explanation: `【出題意図】
@@ -418,7 +432,8 @@ take を含む頻出熟語：take part in〜（参加する）、take care of〜
   {
     id: 'koko_nyushi_eigo9_15',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nScientists are looking ( ) new ways to store solar energy efficiently.\n① after  ② for  ③ at  ④ into',
+    question: '次の（　）内に最も適切な語を選べ。  Scientists are looking ( ) new ways to store solar energy efficiently.',
+    choices: ['① after', '② for', '③ at', '④ into'],
     answer: '② for',
     hint: 'look for〜 は「〜を探す」という意味の熟語。',
     explanation: `【出題意図】
@@ -447,7 +462,8 @@ look の句動詞：look for〜（探す）、look into〜（調べる）、look
   {
     id: 'koko_nyushi_eigo9_16',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe space probe finally arrived ( ) Jupiter after a six-year journey.\n① to  ② at  ③ in  ④ on',
+    question: '次の（　）内に最も適切な語を選べ。  The space probe finally arrived ( ) Jupiter after a six-year journey.',
+    choices: ['① to', '② at', '③ in', '④ on'],
     answer: '② at',
     hint: '惑星のような到達地点には arrive at を使う。',
     explanation: `【出題意図】
@@ -476,7 +492,8 @@ arrive at〜（特定の地点・目的地）：arrive at the station / arrive a
   {
     id: 'koko_nyushi_eigo9_17',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nAlexander Graham Bell ( ) the telephone in 1876.\n① discovered  ② invented  ③ found  ④ created',
+    question: '次の（　）内に最も適切な語を選べ。  Alexander Graham Bell ( ) the telephone in 1876.',
+    choices: ['① discovered', '② invented', '③ found', '④ created'],
     answer: '② invented',
     hint: '「もともと存在しなかった新しいものを作り出す」場合に使う動詞を選ぶ。',
     explanation: `【出題意図】
@@ -505,7 +522,8 @@ invent（発明する：電話・電球など新しいもの）／discover（発
   {
     id: 'koko_nyushi_eigo9_18',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nMarie Curie is known ( ) her discovery of radium.\n① for  ② as  ③ by  ④ with',
+    question: '次の（　）内に最も適切な語を選べ。  Marie Curie is known ( ) her discovery of radium.',
+    choices: ['① for', '② as', '③ by', '④ with'],
     answer: '① for',
     hint: '「〜で知られている」という業績を表す前置詞を選ぶ。',
     explanation: `【出題意図】
@@ -534,7 +552,8 @@ be known for〜（業績・理由）／be known as〜（肩書き）／be famous
   {
     id: 'koko_nyushi_eigo9_19',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語句を選べ。\n\nPlease remember to ( ) your smartphone before the meeting starts.\n① turn off  ② turn down  ③ turn up  ④ turn over',
+    question: '次の（　）内に最も適切な語句を選べ。  Please remember to ( ) your smartphone before the meeting starts.',
+    choices: ['① turn off', '② turn down', '③ turn up', '④ turn over'],
     answer: '① turn off',
     hint: '会議前に電源を「切る」という意味の句動詞を選ぶ。',
     explanation: `【出題意図】
@@ -563,7 +582,8 @@ turn の句動詞：turn on/off（つける／消す）、turn up/down（上げ�
   {
     id: 'koko_nyushi_eigo9_20',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe success of the space mission depends ( ) the accuracy of the calculations.\n① in  ② at  ③ on  ④ of',
+    question: '次の（　）内に最も適切な語を選べ。  The success of the space mission depends ( ) the accuracy of the calculations.',
+    choices: ['① in', '② at', '③ on', '④ of'],
     answer: '③ on',
     hint: 'depend の後ろに来る前置詞を選ぶ。',
     explanation: `【出題意図】
@@ -596,7 +616,8 @@ depend on〜（〜次第である）：rely on〜（頼る）も類似の意味�
   {
     id: 'koko_nyushi_eigo9_21',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe scientist ( ) works at NASA gave a lecture about black holes.\n① who  ② which  ③ whom  ④ whose',
+    question: '次の（　）内に最も適切な語を選べ。  The scientist ( ) works at NASA gave a lecture about black holes.',
+    choices: ['① who', '② which', '③ whom', '④ whose'],
     answer: '① who',
     hint: '先行詞は「人」、関係代名詞節内での役割は「主語」。',
     explanation: `【出題意図】
@@ -625,7 +646,8 @@ depend on〜（〜次第である）：rely on〜（頼る）も類似の意味�
   {
     id: 'koko_nyushi_eigo9_22',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe smartphone ( ) I bought last year already feels outdated.\n① which  ② who  ③ whom  ④ where',
+    question: '次の（　）内に最も適切な語を選べ。  The smartphone ( ) I bought last year already feels outdated.',
+    choices: ['① which', '② who', '③ whom', '④ where'],
     answer: '① which',
     hint: '先行詞は「物（スマートフォン）」。関係代名詞節内で bought の目的語になっている。',
     explanation: `【出題意図】
@@ -656,7 +678,8 @@ which は省略可（that に置き換え可）：The smartphone (that) I bought
   {
     id: 'koko_nyushi_eigo9_23',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nI visited the laboratory ( ) the new vaccine was developed.\n① which  ② who  ③ where  ④ when',
+    question: '次の（　）内に最も適切な語を選べ。  I visited the laboratory ( ) the new vaccine was developed.',
+    choices: ['① which', '② who', '③ where', '④ when'],
     answer: '③ where',
     hint: '先行詞は「場所（laboratory）」で、関係副詞を使う。',
     explanation: `【出題意図】
@@ -747,7 +770,8 @@ whose の使い方：先行詞（人・物）の所有格を表す。whose 節�
   {
     id: 'koko_nyushi_eigo9_26',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nCould you tell me ( ) this machine works?\n① what  ② how  ③ where  ④ why',
+    question: '次の（　）内に最も適切な語を選べ。  Could you tell me ( ) this machine works?',
+    choices: ['① what', '② how', '③ where', '④ why'],
     answer: '② how',
     hint: '「この機械がどのように動くか」という方法を尋ねる間接疑問文。',
     explanation: `【出題意図】
@@ -1001,7 +1025,8 @@ This experiment is simple enough for beginners to try.
   {
     id: 'koko_nyushi_eigo9_34',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: Could you help me set up this telescope?\nB: ( )\n\n① Sure, no problem.\n② No, I don\'t.\n③ I\'d like a telescope.\n④ Yes, I would like.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: Could you help me set up this telescope? B: ( )',
+    choices: ['① Sure, no problem.', '② No, I don\'t.', '③ I\'d like a telescope.', '④ Yes, I would like.'],
     answer: '① Sure, no problem.',
     hint: 'Could you〜? は丁寧な依頼表現。自然な引き受け方を選ぶ。',
     explanation: `【出題意図】
@@ -1063,7 +1088,8 @@ B：急速充電器を使えば約30分かかります。
   {
     id: 'koko_nyushi_eigo9_36',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: I\'m going to present my science project tomorrow, but I\'m really nervous.\nB: ( ) You\'ve prepared so well.\n\n① Don\'t worry.\n② That\'s too bad.\n③ I\'m sorry to hear that.\n④ Never mind.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: I\'m going to present my science project tomorrow, but I\'m really nervous. B: ( ) You\'ve prepared so well.',
+    choices: ['① Don\'t worry.', '② That\'s too bad.', '③ I\'m sorry to hear that.', '④ Never mind.'],
     answer: '① Don\'t worry.',
     hint: '後に続く「You\'ve prepared so well.（よく準備したじゃないか）」という励ましの言葉に合う返答を選ぶ。',
     explanation: `【出題意図】
@@ -1094,7 +1120,8 @@ B：心配しないで。あなたはよく準備したじゃないか。
   {
     id: 'koko_nyushi_eigo9_37',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: May I use the computer in the lab?\nB: ( )\nA: Thank you.\n\n① Sure, go ahead.\n② No, you may not use it.\n③ I don\'t have a computer.\n④ Yes, you may go.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: May I use the computer in the lab? B: ( ) A: Thank you.',
+    choices: ['① Sure, go ahead.', '② No, you may not use it.', '③ I don\'t have a computer.', '④ Yes, you may go.'],
     answer: '① Sure, go ahead.',
     hint: 'May I〜? は許可を求める表現。自然な許可の与え方を選ぶ。',
     explanation: `【出題意図】
@@ -1126,7 +1153,8 @@ A：ありがとう。
   {
     id: 'koko_nyushi_eigo9_38',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語を選べ。\n\nI have never ( ) such an advanced robot before.\n① see  ② saw  ③ seen  ④ seeing',
+    question: '次の英文の（　）に入る最も適切な語を選べ。  I have never ( ) such an advanced robot before.',
+    choices: ['① see', '② saw', '③ seen', '④ seeing'],
     answer: '③ seen',
     hint: '現在完了形（have/has + 過去分詞）の経験用法。see の過去分詞を選ぶ。',
     explanation: `【出題意図】
@@ -1155,7 +1183,8 @@ never は現在完了形の経験用法で「一度も〜したことがない�
   {
     id: 'koko_nyushi_eigo9_39',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語を選べ。\n\nThe new smartphone will be released ( ) April 15th.\n① in  ② at  ③ on  ④ by',
+    question: '次の英文の（　）に入る最も適切な語を選べ。  The new smartphone will be released ( ) April 15th.',
+    choices: ['① in', '② at', '③ on', '④ by'],
     answer: '③ on',
     hint: '特定の日付には前置詞 on を使う。',
     explanation: `【出題意図】
@@ -1184,7 +1213,8 @@ never は現在完了形の経験用法で「一度も〜したことがない�
   {
     id: 'koko_nyushi_eigo9_40',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語句を選べ。\n\nThe teacher asked the students ( ) their laptops before the experiment began.\n① turn off  ② to turn off  ③ turning off  ④ turned off',
+    question: '次の英文の（　）に入る最も適切な語句を選べ。  The teacher asked the students ( ) their laptops before the experiment began.',
+    choices: ['① turn off', '② to turn off', '③ turning off', '④ turned off'],
     answer: '② to turn off',
     hint: 'ask + 人 + to do（人に〜するよう頼む）という構文。',
     explanation: `【出題意図】
@@ -1213,7 +1243,8 @@ ask + 人 + to do＝「人に〜するよう頼む」という重要構文。
   {
     id: 'koko_nyushi_eigo9_41',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語句を選べ。\n\nI think ( ) essential to test new technology carefully before releasing it to the public.\n① this  ② that  ③ it  ④ what',
+    question: '次の英文の（　）に入る最も適切な語句を選べ。  I think ( ) essential to test new technology carefully before releasing it to the public.',
+    choices: ['① this', '② that', '③ it', '④ what'],
     answer: '③ it',
     hint: '形式主語 it を使った「it is + 形容詞 + to 動詞」の構文。',
     explanation: `【出題意図】
@@ -1407,7 +1438,8 @@ This invention is popular not only with adults but also with children.
     id: 'koko_nyushi_eigo9_47',
     subject: 'eigo',
     passage: `More and more schools around the world are now teaching children how to code. Learning to program helps students understand logical thinking and problem solving. It also prepares them for future jobs, because many industries now need workers who understand computer technology. Some people worry that coding is too difficult for young children, but simple programming languages, such as those used to make games or control small robots, are designed especially for beginners. Teachers say that children who learn to code often become more confident and creative. In addition, coding can be combined with other subjects, such as art or music, to make learning more interesting. Experts believe that basic computer skills will soon be as important as reading and writing.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の内容と合っているものを1つ選べ。\n① すべての生徒がプログラミングを難しいと感じている。\n② 簡単なプログラミング言語は初心者のために作られている。\n③ プログラミング教育は美術や音楽と組み合わせることはできない。\n④ 専門家はコンピューターの基礎知識が不要になると考えている。',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の内容と合っているものを1つ選べ。',
+    choices: ['① すべての生徒がプログラミングを難しいと感じている。', '② 簡単なプログラミング言語は初心者のために作られている。', '③ プログラミング教育は美術や音楽と組み合わせることはできない。', '④ 専門家はコンピューターの基礎知識が不要になると考えている。'],
     answer: '② 簡単なプログラミング言語は初心者のために作られている。',
     hint: '本文中の "simple programming languages...are designed especially for beginners." という文を探す。',
     explanation: `【出題意図】
@@ -1435,7 +1467,8 @@ This invention is popular not only with adults but also with children.
     id: 'koko_nyushi_eigo9_48',
     subject: 'eigo',
     passage: `In 2021, a robotic rover landed on Mars to search for signs of ancient life. The rover carries many instruments, including cameras and a device that can collect rock samples. After exploring the surface for several months, scientists found minerals that usually form in water. This finding excited many researchers because it suggested that Mars may have had rivers or lakes billions of years ago. Some scientists believe this could mean that microscopic life once existed on the planet. However, more research is needed before anyone can be certain. NASA plans to send another mission to bring the rock samples back to Earth so that they can be studied more carefully in laboratories.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文中の下線部 "This finding" が指す内容として最も適切なものを選べ。\n① ロケットの新しい設計\n② 火星に水が存在した可能性を示す鉱物の発見\n③ ロボットのカメラの性能\n④ 地球にサンプルを持ち帰る計画',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文中の下線部 "This finding" が指す内容として最も適切なものを選べ。',
+    choices: ['① ロケットの新しい設計', '② 火星に水が存在した可能性を示す鉱物の発見', '③ ロボットのカメラの性能', '④ 地球にサンプルを持ち帰る計画'],
     answer: '② 火星に水が存在した可能性を示す鉱物の発見',
     hint: '"This finding" は直前の文「scientists found minerals that usually form in water」を指す。',
     explanation: `【出題意図】
@@ -1465,7 +1498,8 @@ This invention is popular not only with adults but also with children.
     id: 'koko_nyushi_eigo9_49',
     subject: 'eigo',
     passage: `Artificial intelligence, or AI, is now part of our everyday lives, even when we do not notice it. When you ask your phone for directions, when a website suggests products you might like, or when your email filters out spam, AI is working behind the scenes. AI systems learn from large amounts of data and improve their performance over time. Many companies are using AI to make services faster and more convenient for customers. At the same time, some experts warn that we should be careful about how AI collects and uses personal information. They believe that clear rules are necessary to protect people's privacy while still allowing technology to develop. Understanding both the benefits and the risks of AI will become increasingly important for everyone in the future.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の主題として最も適切なものを選べ。\n① AIが個人情報を盗む具体的な事件の報告\n② 日常生活に浸透するAIの利便性と、その利用に伴う課題\n③ AIを開発する特定の企業の歴史\n④ スマートフォンの新機能の技術的な仕組み',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の主題として最も適切なものを選べ。',
+    choices: ['① AIが個人情報を盗む具体的な事件の報告', '② 日常生活に浸透するAIの利便性と、その利用に伴う課題', '③ AIを開発する特定の企業の歴史', '④ スマートフォンの新機能の技術的な仕組み'],
     answer: '② 日常生活に浸透するAIの利便性と、その利用に伴う課題',
     hint: '本文全体の流れ（AIの身近な例→便利さ→専門家の懸念→今後の重要性）を把握して、何が最も中心的に述べられているかを考える。',
     explanation: `【出題意図】
@@ -1498,7 +1532,8 @@ This invention is popular not only with adults but also with children.
     id: 'koko_nyushi_eigo9_50',
     subject: 'eigo',
     passage: `Space around Earth is becoming crowded with objects called space debris. This includes broken satellites, pieces of old rockets, and other equipment left behind after missions. Even a small piece of debris can seriously damage a working satellite or a spacecraft because it travels extremely fast. Scientists are now developing new technologies to track this debris and, in some cases, remove it from orbit. Some companies are designing special satellites that can capture debris using nets or robotic arms. International cooperation is also important because debris created by one country can threaten satellites owned by another. Experts agree that if nothing is done, the problem will only get worse as more satellites are launched every year.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の内容と合っていないものを1つ選べ。\n① 宇宙ゴミには壊れた人工衛星や古いロケットの破片が含まれる。\n② 小さな宇宙ゴミでも稼働中の衛星に深刻な損害を与える可能性がある。\n③ 宇宙ゴミの除去は一つの国だけで完結する問題であり、国際協力は不要である。\n④ 網やロボットアームを使って宇宙ゴミを捕獲する衛星を開発している企業がある。',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の内容と合っていないものを1つ選べ。',
+    choices: ['① 宇宙ゴミには壊れた人工衛星や古いロケットの破片が含まれる。', '② 小さな宇宙ゴミでも稼働中の衛星に深刻な損害を与える可能性がある。', '③ 宇宙ゴミの除去は一つの国だけで完結する問題であり、国際協力は不要である。', '④ 網やロボットアームを使って宇宙ゴミを捕獲する衛星を開発している企業がある。'],
     answer: '③ 宇宙ゴミの除去は一つの国だけで完結する問題であり、国際協力は不要である。',
     hint: '本文では "International cooperation is also important" と述べられている点に注目する。',
     explanation: `【出題意図】

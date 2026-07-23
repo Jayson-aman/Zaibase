@@ -7,7 +7,8 @@ export const kokoNyushiEigo8: Question[] = [
   {
     id: 'koko_nyushi_eigo8_01',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語句を選べ。\n\nHe ( ) as a carpenter for ten years when the factory next door closed down.\n① works  ② has worked  ③ had been working  ④ will work',
+    question: '次の（　）内に最も適切な語句を選べ。  He ( ) as a carpenter for ten years when the factory next door closed down.',
+    choices: ['① works', '② has worked', '③ had been working', '④ will work'],
     answer: '③ had been working',
     hint: '工場が閉鎖した（過去の一時点）よりもさらに前から続いていた動作を表す時制を選ぶ。',
     explanation: `【出題意図】
@@ -38,7 +39,8 @@ export const kokoNyushiEigo8: Question[] = [
   {
     id: 'koko_nyushi_eigo8_02',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nYou ( ) arrive at the interview room by 8:30, because the door will be locked after that.\n① must  ② should  ③ have to  ④ need',
+    question: '次の（　）内に最も適切な語を選べ。  You ( ) arrive at the interview room by 8:30, because the door will be locked after that.',
+    choices: ['① must', '② should', '③ have to', '④ need'],
     answer: '③ have to',
     hint: '「8時30分までに」という外部の規則・締め切りがある場合の義務の表現を選ぶ。',
     explanation: `【出題意図】
@@ -71,7 +73,8 @@ should：義務より軽い推奨
   {
     id: 'koko_nyushi_eigo8_03',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語形を選べ。\n\nThis application form ( ) by the personnel department every spring.\n① reviews  ② is reviewed  ③ was reviewed  ④ has review',
+    question: '次の（　）内に最も適切な語形を選べ。  This application form ( ) by the personnel department every spring.',
+    choices: ['① reviews', '② is reviewed', '③ was reviewed', '④ has review'],
     answer: '② is reviewed',
     hint: '「毎年〜される」という受動態の現在形を探す。',
     explanation: `【出題意図】
@@ -100,7 +103,8 @@ should：義務より軽い推奨
   {
     id: 'koko_nyushi_eigo8_04',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nBeing a firefighter is ( ) job in our town, everyone says.\n① dangerous  ② more dangerous  ③ the most dangerous  ④ most dangerous',
+    question: '次の（　）内に最も適切な語を選べ。  Being a firefighter is ( ) job in our town, everyone says.',
+    choices: ['① dangerous', '② more dangerous', '③ the most dangerous', '④ most dangerous'],
     answer: '③ the most dangerous',
     hint: '「町で一番〜」は最上級。最上級の前には the が必要。',
     explanation: `【出題意図】
@@ -131,7 +135,8 @@ should：義務より軽い推奨
   {
     id: 'koko_nyushi_eigo8_05',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nShe worked part-time at a bakery every weekend ( ) save money for cooking school.\n① for  ② so  ③ to  ④ in order',
+    question: '次の（　）内に最も適切な語を選べ。  She worked part-time at a bakery every weekend ( ) save money for cooking school.',
+    choices: ['① for', '② so', '③ to', '④ in order'],
     answer: '③ to',
     hint: '「〜するために」という目的を表す不定詞の副詞的用法。',
     explanation: `【出題意図】
@@ -160,7 +165,8 @@ should：義務より軽い推奨
   {
     id: 'koko_nyushi_eigo8_06',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nHe enjoys ( ) with children at the day-care center during his job experience.\n① play  ② to play  ③ playing  ④ played',
+    question: '次の（　）内に最も適切な語を選べ。  He enjoys ( ) with children at the day-care center during his job experience.',
+    choices: ['① play', '② to play', '③ playing', '④ played'],
     answer: '③ playing',
     hint: 'enjoy の後ろには動名詞（〜ing）が来る。',
     explanation: `【出題意図】
@@ -190,7 +196,8 @@ enjoy は目的語に動名詞（〜ing）だけを取り、不定詞は取ら�
   {
     id: 'koko_nyushi_eigo8_07',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nBy the time she turns thirty, she ( ) her own restaurant for five years.\n① will open  ② has opened  ③ will have opened  ④ opened',
+    question: '次の（　）内に最も適切な語を選べ。  By the time she turns thirty, she ( ) her own restaurant for five years.',
+    choices: ['① will open', '② has opened', '③ will have opened', '④ opened'],
     answer: '③ will have opened',
     hint: '「30歳になるまでには」という未来の時点での完了・継続を表す時制を選ぶ。',
     explanation: `【出題意図】
@@ -219,7 +226,8 @@ enjoy は目的語に動名詞（〜ing）だけを取り、不定詞は取ら�
   {
     id: 'koko_nyushi_eigo8_08',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nIf you ( ) hard during your work experience, you will learn a lot about the job.\n① work  ② will work  ③ worked  ④ working',
+    question: '次の（　）内に最も適切な語を選べ。  If you ( ) hard during your work experience, you will learn a lot about the job.',
+    choices: ['① work', '② will work', '③ worked', '④ working'],
     answer: '① work',
     hint: '条件を表す if 節の中では、未来のことでも現在形を使う。',
     explanation: `【出題意図】
@@ -248,7 +256,8 @@ enjoy は目的語に動名詞（〜ing）だけを取り、不定詞は取ら�
   {
     id: 'koko_nyushi_eigo8_09',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe new intern ( ) by the sales manager last Monday.\n① interviews  ② is interviewed  ③ was interviewed  ④ has interview',
+    question: '次の（　）内に最も適切な語を選べ。  The new intern ( ) by the sales manager last Monday.',
+    choices: ['① interviews', '② is interviewed', '③ was interviewed', '④ has interview'],
     answer: '③ was interviewed',
     hint: '「先週の月曜日」という過去の一時点を表す語句に注目し、受動態の過去形を選ぶ。',
     explanation: `【出題意図】
@@ -277,7 +286,8 @@ enjoy は目的語に動名詞（〜ing）だけを取り、不定詞は取ら�
   {
     id: 'koko_nyushi_eigo8_10',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThis job requires ( ) patience than my last one did.\n① much  ② more  ③ most  ④ many',
+    question: '次の（　）内に最も適切な語を選べ。  This job requires ( ) patience than my last one did.',
+    choices: ['① much', '② more', '③ most', '④ many'],
     answer: '② more',
     hint: 'than があるので比較級を選ぶ。patience は数えられない名詞。',
     explanation: `【出題意図】
@@ -308,7 +318,8 @@ many（数えられる名詞・原級）→ more（比較級）→ the most（�
   {
     id: 'koko_nyushi_eigo8_11',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nI want ( ) an interpreter after I graduate from college.\n① be  ② being  ③ to be  ④ to being',
+    question: '次の（　）内に最も適切な語を選べ。  I want ( ) an interpreter after I graduate from college.',
+    choices: ['① be', '② being', '③ to be', '④ to being'],
     answer: '③ to be',
     hint: 'want の後ろに来る不定詞の名詞的用法（〜したい）を選ぶ。',
     explanation: `【出題意図】
@@ -339,7 +350,8 @@ want to be〜：〜になりたい（職業や状態を表す表現に頻出）
   {
     id: 'koko_nyushi_eigo8_12',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\n( ) with your hands is one of the best parts of being a carpenter.\n① Work  ② To work  ③ Working  ④ Worked',
+    question: '次の（　）内に最も適切な語を選べ。  ( ) with your hands is one of the best parts of being a carpenter.',
+    choices: ['① Work', '② To work', '③ Working', '④ Worked'],
     answer: '③ Working',
     hint: '文の主語になれる形（動名詞）を選ぶ。',
     explanation: `【出題意図】
@@ -372,7 +384,8 @@ want to be〜：〜になりたい（職業や状態を表す表現に頻出）
   {
     id: 'koko_nyushi_eigo8_13',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な前置詞を選べ。\n\nShe has been interested ( ) becoming a vet since she was a little girl.\n① at  ② with  ③ in  ④ about',
+    question: '次の（　）内に最も適切な前置詞を選べ。  She has been interested ( ) becoming a vet since she was a little girl.',
+    choices: ['① at', '② with', '③ in', '④ about'],
     answer: '③ in',
     hint: 'be interested の後ろに来る前置詞を選ぶ。',
     explanation: `【出題意図】
@@ -401,7 +414,8 @@ be interested in〜 は「〜に興味がある」という意味のイディオ
   {
     id: 'koko_nyushi_eigo8_14',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nMs. Tanaka is in charge ( ) training new staff members at the hospital.\n① of  ② for  ③ with  ④ to',
+    question: '次の（　）内に最も適切な語を選べ。  Ms. Tanaka is in charge ( ) training new staff members at the hospital.',
+    choices: ['① of', '② for', '③ with', '④ to'],
     answer: '① of',
     hint: 'in charge of〜 で「〜を担当している」という熟語。',
     explanation: `【出題意図】
@@ -431,7 +445,8 @@ in charge of〜：〜を担当している、〜の責任者である
   {
     id: 'koko_nyushi_eigo8_15',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nYou can always count ( ) your mentor for advice when you have a problem at work.\n① on  ② for  ③ with  ④ of',
+    question: '次の（　）内に最も適切な語を選べ。  You can always count ( ) your mentor for advice when you have a problem at work.',
+    choices: ['① on', '② for', '③ with', '④ of'],
     answer: '① on',
     hint: 'count on〜 は「〜を頼りにする」という意味の熟語。',
     explanation: `【出題意図】
@@ -461,7 +476,8 @@ count on〜：〜を頼りにする（= rely on〜、depend on〜）
   {
     id: 'koko_nyushi_eigo8_16',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nYou should ( ) for the summer internship program before the deadline.\n① apply  ② ask  ③ look  ④ decide',
+    question: '次の（　）内に最も適切な語を選べ。  You should ( ) for the summer internship program before the deadline.',
+    choices: ['① apply', '② ask', '③ look', '④ decide'],
     answer: '① apply',
     hint: '「（求人・プログラムなど）に応募する」という意味の動詞を選ぶ。',
     explanation: `【出題意図】
@@ -491,7 +507,8 @@ apply for〜：〜に応募する（仕事・学校・許可証など）
   {
     id: 'koko_nyushi_eigo8_17',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nHis parents are very proud ( ) him for becoming a doctor.\n① of  ② at  ③ with  ④ for',
+    question: '次の（　）内に最も適切な語を選べ。  His parents are very proud ( ) him for becoming a doctor.',
+    choices: ['① of', '② at', '③ with', '④ for'],
     answer: '① of',
     hint: 'be proud of〜 で「〜を誇りに思う」という熟語。',
     explanation: `【出題意図】
@@ -521,7 +538,8 @@ be proud of〜：〜を誇りに思う
   {
     id: 'koko_nyushi_eigo8_18',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nHer new job is quite similar ( ) her old one in many ways.\n① to  ② with  ③ as  ④ from',
+    question: '次の（　）内に最も適切な語を選べ。  Her new job is quite similar ( ) her old one in many ways.',
+    choices: ['① to', '② with', '③ as', '④ from'],
     answer: '① to',
     hint: 'be similar to〜 で「〜に似ている」という熟語。',
     explanation: `【出題意図】
@@ -550,7 +568,8 @@ be similar to〜 は「〜に似ている」という意味のイディオム。
   {
     id: 'koko_nyushi_eigo8_19',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThis small town is famous ( ) producing skilled carpenters.\n① for  ② of  ③ with  ④ at',
+    question: '次の（　）内に最も適切な語を選べ。  This small town is famous ( ) producing skilled carpenters.',
+    choices: ['① for', '② of', '③ with', '④ at'],
     answer: '① for',
     hint: 'be famous for〜 で「〜で有名だ」という熟語。',
     explanation: `【出題意図】
@@ -580,7 +599,8 @@ be famous for〜：〜で有名だ（理由・特徴を表す for）
   {
     id: 'koko_nyushi_eigo8_20',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nDon\'t ( ) up on your dream of becoming a pilot, even if it seems difficult now.\n① give  ② take  ③ look  ④ get',
+    question: '次の（　）内に最も適切な語を選べ。  Don\'t ( ) up on your dream of becoming a pilot, even if it seems difficult now.',
+    choices: ['① give', '② take', '③ look', '④ get'],
     answer: '① give',
     hint: 'give up on〜 は「〜を諦める」という熟語。',
     explanation: `【出題意図】
@@ -615,7 +635,8 @@ give up on + 人・夢：give up on your dream（夢を諦める）
   {
     id: 'koko_nyushi_eigo8_21',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe woman ( ) is giving a speech about her career today is a famous engineer.\n① who  ② which  ③ whom  ④ whose',
+    question: '次の（　）内に最も適切な語を選べ。  The woman ( ) is giving a speech about her career today is a famous engineer.',
+    choices: ['① who', '② which', '③ whom', '④ whose'],
     answer: '① who',
     hint: '先行詞は「人」、関係代名詞節内での役割は「主語」。',
     explanation: `【出題意図】
@@ -644,7 +665,8 @@ give up on + 人・夢：give up on your dream（夢を諦める）
   {
     id: 'koko_nyushi_eigo8_22',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThis is the job ( ) I have always wanted to do since I was a child.\n① who  ② which  ③ whom  ④ where',
+    question: '次の（　）内に最も適切な語を選べ。  This is the job ( ) I have always wanted to do since I was a child.',
+    choices: ['① who', '② which', '③ whom', '④ where'],
     answer: '② which',
     hint: '先行詞は「物・こと（job）」。関係代名詞節内で wanted の目的語になっている。',
     explanation: `【出題意図】
@@ -675,7 +697,8 @@ which は省略可（that に置き換え可）：This is the job (that) I have 
   {
     id: 'koko_nyushi_eigo8_23',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nI want to work for a company ( ) I can use my English every day.\n① which  ② who  ③ where  ④ when',
+    question: '次の（　）内に最も適切な語を選べ。  I want to work for a company ( ) I can use my English every day.',
+    choices: ['① which', '② who', '③ where', '④ when'],
     answer: '③ where',
     hint: '先行詞は「場所（company）」で、関係副詞を使う。',
     explanation: `【出題意図】
@@ -767,7 +790,8 @@ whose の使い方：先行詞（人・物）の所有格を表す。whose 節�
   {
     id: 'koko_nyushi_eigo8_26',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nCould you tell me ( ) I can become a pilot in Japan?\n① where  ② how  ③ which  ④ why',
+    question: '次の（　）内に最も適切な語を選べ。  Could you tell me ( ) I can become a pilot in Japan?',
+    choices: ['① where', '② how', '③ which', '④ why'],
     answer: '② how',
     hint: '「どうすれば〜になれるか」という方法を尋ねる間接疑問文。',
     explanation: `【出題意図】
@@ -1019,7 +1043,8 @@ This job is easy enough for beginners to learn.
   {
     id: 'koko_nyushi_eigo8_34',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: We would like to offer you the position. Would you like to start next Monday?\nB: ( )\n\n① No, I don\'t.\n② Yes, I would like.\n③ Yes, I\'d be happy to.\n④ I like Mondays.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: We would like to offer you the position. Would you like to start next Monday? B: ( )',
+    choices: ['① No, I don\'t.', '② Yes, I would like.', '③ Yes, I\'d be happy to.', '④ I like Mondays.'],
     answer: '③ Yes, I\'d be happy to.',
     hint: 'Would you like to〜? という申し出・誘いに自然に答える表現を選ぶ。',
     explanation: `【出題意図】
@@ -1050,7 +1075,8 @@ Would you like to〜?（誘い・提案）への肯定応答：I'd love to. / I'
   {
     id: 'koko_nyushi_eigo8_35',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: How long does it take to become a doctor in Japan?\nB: ( )\n\n① It\'s very expensive.\n② It usually takes about ten years.\n③ You should study science.\n④ Doctors are very busy.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: How long does it take to become a doctor in Japan? B: ( )',
+    choices: ['① It\'s very expensive.', '② It usually takes about ten years.', '③ You should study science.', '④ Doctors are very busy.'],
     answer: '② It usually takes about ten years.',
     hint: 'How long does it take to〜? は所要時間を尋ねる表現。',
     explanation: `【出題意図】
@@ -1082,7 +1108,8 @@ B：普通は10年くらいかかります。
   {
     id: 'koko_nyushi_eigo8_36',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: I have a job interview tomorrow, but I\'m really nervous.\nB: ( ) You\'ve prepared for this for weeks.\n\n① Don\'t worry.\n② That\'s too bad.\n③ I\'m sorry to hear that.\n④ Never mind.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: I have a job interview tomorrow, but I\'m really nervous. B: ( ) You\'ve prepared for this for weeks.',
+    choices: ['① Don\'t worry.', '② That\'s too bad.', '③ I\'m sorry to hear that.', '④ Never mind.'],
     answer: '① Don\'t worry.',
     hint: '後に続く「You\'ve prepared for this for weeks.（何週間も準備してきたじゃないか）」という励ましの言葉に合う返答を選ぶ。',
     explanation: `【出題意図】
@@ -1113,7 +1140,8 @@ B：心配しないで。何週間も準備してきたじゃないか。
   {
     id: 'koko_nyushi_eigo8_37',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: May I ask you a question about the salary for this position?\nB: ( )\nA: Thank you.\n\n① Sure, go ahead.\n② No, you may not.\n③ I don\'t have a salary.\n④ Yes, you may go.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: May I ask you a question about the salary for this position? B: ( ) A: Thank you.',
+    choices: ['① Sure, go ahead.', '② No, you may not.', '③ I don\'t have a salary.', '④ Yes, you may go.'],
     answer: '① Sure, go ahead.',
     hint: 'May I〜? は許可を求める表現。自然な許可の与え方を選ぶ。',
     explanation: `【出題意図】
@@ -1146,7 +1174,8 @@ A：ありがとうございます。
   {
     id: 'koko_nyushi_eigo8_38',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語を選べ。\n\nI have never ( ) such an important decision at work before.\n① make  ② made  ③ making  ④ makes',
+    question: '次の英文の（　）に入る最も適切な語を選べ。  I have never ( ) such an important decision at work before.',
+    choices: ['① make', '② made', '③ making', '④ makes'],
     answer: '② made',
     hint: '現在完了形（have/has + 過去分詞）の経験用法。make の過去分詞を選ぶ。',
     explanation: `【出題意図】
@@ -1176,7 +1205,8 @@ never は現在完了形の経験用法で「一度も〜したことがない�
   {
     id: 'koko_nyushi_eigo8_39',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語を選べ。\n\nOur new employee orientation will be held ( ) Monday morning.\n① in  ② at  ③ on  ④ by',
+    question: '次の英文の（　）に入る最も適切な語を選べ。  Our new employee orientation will be held ( ) Monday morning.',
+    choices: ['① in', '② at', '③ on', '④ by'],
     answer: '③ on',
     hint: '曜日・特定の日には前置詞 on を使う。',
     explanation: `【出題意図】
@@ -1205,7 +1235,8 @@ never は現在完了形の経験用法で「一度も〜したことがない�
   {
     id: 'koko_nyushi_eigo8_40',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語句を選べ。\n\nThe manager asked me ( ) a report on the new project by Friday.\n① write  ② to write  ③ writing  ④ wrote',
+    question: '次の英文の（　）に入る最も適切な語句を選べ。  The manager asked me ( ) a report on the new project by Friday.',
+    choices: ['① write', '② to write', '③ writing', '④ wrote'],
     answer: '② to write',
     hint: 'ask + 人 + to do（人に〜するよう頼む）という構文。',
     explanation: `【出題意図】
@@ -1234,7 +1265,8 @@ ask + 人 + to do = 「人に〜するよう頼む」という重要構文。
   {
     id: 'koko_nyushi_eigo8_41',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語句を選べ。\n\nI think ( ) necessary to have some work experience before applying for this job.\n① this  ② that  ③ it  ④ what',
+    question: '次の英文の（　）に入る最も適切な語句を選べ。  I think ( ) necessary to have some work experience before applying for this job.',
+    choices: ['① this', '② that', '③ it', '④ what'],
     answer: '③ it',
     hint: '形式主語 it を使った「it is + 形容詞 + to 動詞」の構文。',
     explanation: `【出題意図】
@@ -1427,7 +1459,8 @@ This job requires not only experience but also patience.
     id: 'koko_nyushi_eigo8_47',
     subject: 'eigo',
     passage: `Every year, our school holds a "Work Experience Week" for third-year students. Last month, I visited a small bakery near the station for three days. On the first day, I was surprised at how early the work started. The owner told me that the dough had to rest overnight, so he arrived at four in the morning to begin baking. I learned how to shape bread and clean the shop. It was harder than I had expected, but I felt proud when customers said the bread I had made looked delicious. This experience taught me that every job requires effort that we cannot see from the outside.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の内容と合っているものを1つ選べ。\n① 筆者は1週間パン屋で働いた。\n② パン屋の店主は毎朝4時に来て仕事を始めていた。\n③ 筆者はパンを作る作業を任されなかった。\n④ 筆者はこの職業体験を楽しく感じなかった。',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の内容と合っているものを1つ選べ。',
+    choices: ['① 筆者は1週間パン屋で働いた。', '② パン屋の店主は毎朝4時に来て仕事を始めていた。', '③ 筆者はパンを作る作業を任されなかった。', '④ 筆者はこの職業体験を楽しく感じなかった。'],
     answer: '② パン屋の店主は毎朝4時に来て仕事を始めていた。',
     hint: '本文中の "he arrived at four in the morning to begin baking" という一文を探す。',
     explanation: `【出題意図】
@@ -1454,7 +1487,8 @@ This job requires not only experience but also patience.
     id: 'koko_nyushi_eigo8_48',
     subject: 'eigo',
     passage: `Many junior high school students in Japan feel unsure about what career to choose. To help with this, some schools invite people from different jobs to talk with students. Last week, a nurse, a computer programmer, and a farmer visited our class and shared their stories. They talked about why they chose their jobs and what challenges they faced. After listening to them, many of my classmates said this experience changed the way they thought about their future. Before, some students believed there were only a few "good" jobs, but now they understand that every job has its own value and requires special skills.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文中の下線部 "this experience" が指す内容として最も適切なものを選べ。\n① クラス全員で農業体験をしたこと\n② 看護師・プログラマー・農家の話をクラスで聞いたこと\n③ 生徒たちがそれぞれの将来の夢について発表したこと\n④ 学校が新しい職業体験プログラムを企画したこと',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文中の下線部 "this experience" が指す内容として最も適切なものを選べ。',
+    choices: ['① クラス全員で農業体験をしたこと', '② 看護師・プログラマー・農家の話をクラスで聞いたこと', '③ 生徒たちがそれぞれの将来の夢について発表したこと', '④ 学校が新しい職業体験プログラムを企画したこと'],
     answer: '② 看護師・プログラマー・農家の話をクラスで聞いたこと',
     hint: '"this experience" は直前の文で述べられた出来事を指す。',
     explanation: `【出題意図】
@@ -1485,7 +1519,8 @@ This job requires not only experience but also patience.
     id: 'koko_nyushi_eigo8_49',
     subject: 'eigo',
     passage: `Many high school students in Japan have part-time jobs, such as working at a convenience store or a restaurant. Some parents worry that part-time jobs take too much time away from studying. However, many students say that these jobs teach them things that cannot be learned from textbooks. For example, they learn how to talk politely to customers and how to work as a team with co-workers who are older than them. They also learn to manage their own money for the first time. Of course, students need to balance work and study carefully, but a part-time job can be a valuable step toward becoming a responsible adult.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の主題として最も適切なものを選べ。\n① コンビニでのアルバイトの具体的な業務内容\n② アルバイトが勉強に与える悪影響についての警告\n③ アルバイトを通じて生徒が学べることとその価値\n④ 生徒がアルバイトで稼ぐお金の平均額',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の主題として最も適切なものを選べ。',
+    choices: ['① コンビニでのアルバイトの具体的な業務内容', '② アルバイトが勉強に与える悪影響についての警告', '③ アルバイトを通じて生徒が学べることとその価値', '④ 生徒がアルバイトで稼ぐお金の平均額'],
     answer: '③ アルバイトを通じて生徒が学べることとその価値',
     hint: '本文全体の流れ（心配の声→実際に学べること→結論）を把握して、何が最も中心的に述べられているかを考える。',
     explanation: `【出題意図】
@@ -1519,7 +1554,8 @@ This job requires not only experience but also patience.
     id: 'koko_nyushi_eigo8_50',
     subject: 'eigo',
     passage: `Artificial intelligence is expected to change many jobs in the near future. Some experts say that certain jobs, such as simple data entry, may disappear because computers can do them faster and more accurately than humans. On the other hand, new kinds of jobs are also being created, especially in fields related to technology and creativity. Experts agree that it is impossible to predict exactly which jobs will exist in twenty years. Because of this, they suggest that students should not focus only on learning specific skills for one job. Instead, they should develop the ability to learn new things quickly, since this ability will remain useful no matter how jobs change.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の内容と合っていないものを1つ選べ。\n① 単純なデータ入力のような仕事は将来なくなる可能性がある。\n② 技術や創造性に関連する新しい仕事も生まれつつある。\n③ 専門家は20年後にどんな仕事が存在するか正確に予測できると述べている。\n④ 専門家は新しいことを素早く学ぶ力を身につけるべきだと提案している。',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の内容と合っていないものを1つ選べ。',
+    choices: ['① 単純なデータ入力のような仕事は将来なくなる可能性がある。', '② 技術や創造性に関連する新しい仕事も生まれつつある。', '③ 専門家は20年後にどんな仕事が存在するか正確に予測できると述べている。', '④ 専門家は新しいことを素早く学ぶ力を身につけるべきだと提案している。'],
     answer: '③ 専門家は20年後にどんな仕事が存在するか正確に予測できると述べている。',
     hint: '本文では「20年後にどんな仕事が存在するか正確に予測することは不可能だ」と専門家が述べている。',
     explanation: `【出題意図】

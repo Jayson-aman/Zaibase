@@ -9,7 +9,8 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_01',
     subject: 'eigo',
-    question: '次の英文の（　）内に入る最も適切な語句を選びなさい。\n\nI ( ) this book twice. It is really interesting.\n\n① read  ② have read  ③ was reading  ④ had read',
+    question: '次の英文の（　）内に入る最も適切な語句を選びなさい。  I ( ) this book twice. It is really interesting.',
+    choices: ['① read', '② have read', '③ was reading', '④ had read'],
     answer: '② have read',
     hint: '「〜したことがある」という経験を表す時制を考えましょう。',
     explanation: '正解は② have read（現在完了形）。\n\n【解説】\n「私はこの本を2回読んだことがある」という経験を表す文です。現在完了形（have/has + 過去分詞）は、①過去の経験、②現在までの継続、③完了・結果を表します。\n\n• ① read（現在形または過去形）：過去形なら「読んだ」だが、twice と組み合わせると時制の用法として不自然。現在形なら意味が合わない。\n• ③ was reading（過去進行形）：「読んでいた」という過去のある時点の動作。\n• ④ had read（過去完了形）：過去のある時点より前の完了を表す。この文では基準となる過去時制がないため不適切。\n\n現在完了の経験用法は twice（2回）、once（1回）、before（以前に）、never（一度も〜ない）などの語句と一緒に使われることが多い。',
@@ -21,7 +22,8 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_02',
     subject: 'eigo',
-    question: '次の英文の（　）内に入る最も適切な語句を選びなさい。\n\nBy the time she arrived at the station, the train ( ).\n\n① already left  ② has already left  ③ had already left  ④ was already leaving',
+    question: '次の英文の（　）内に入る最も適切な語句を選びなさい。  By the time she arrived at the station, the train ( ).',
+    choices: ['① already left', '② has already left', '③ had already left', '④ was already leaving'],
     answer: '③ had already left',
     hint: '「駅に着いた」のが過去、「電車が出た」のはそれより前の出来事です。',
     explanation: '正解は③ had already left（過去完了形）。\n\n【解説】\n「彼女が駅に着いたとき、電車はすでに出てしまっていた」という文です。\n\n過去完了形（had + 過去分詞）は、過去のある時点（arrived）よりもさらに前に起きた出来事を表します。これを「大過去」とも呼びます。\n\n時間の流れ：\n電車が出発 → 彼女が到着（arrived：過去形）\n\n電車が出発したのは「到着した」よりも前なので、過去完了形（had left）を使います。\n\n• ① already left：過去形ですが、By the time ... arrived という構文では過去完了が必要。\n• ② has already left：現在完了形。現在時制の基準点がないため不適切。\n• ④ was already leaving：過去進行形。「出発しようとしていた」という意味になり、「すでに出た後」という文意に合わない。',
@@ -45,7 +47,8 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_04',
     subject: 'eigo',
-    question: '次の英文の（　）内に入る最も適切な語句を選びなさい。\n\nIf I ( ) a bird, I could fly to you right now.\n\n① am  ② was  ③ were  ④ will be',
+    question: '次の英文の（　）内に入る最も適切な語句を選びなさい。  If I ( ) a bird, I could fly to you right now.',
+    choices: ['① am', '② was', '③ were', '④ will be'],
     answer: '③ were',
     hint: '現実とは異なる仮定（「もし〜だったら」）を表す構文を考えましょう。',
     explanation: '正解は③ were（仮定法過去）。\n\n【解説】\n「もし私が鳥だったら、今すぐあなたのところに飛んでいけるのに」という文です。現実には鳥ではないので、事実に反する仮定を表す仮定法過去を使います。\n\n【仮定法過去の形】\nIf + 主語 + 動詞の過去形 〜, 主語 + 助動詞の過去形（could/would/might） + 動詞の原形\n\n【重要ポイント】\n仮定法過去では、be動詞はすべての主語に対して were を使うのが文法的に正しい形です（I/he/she/it でも were）。ただし現代英語では was も口語的に使われますが、試験では were が正解とされます。\n\n• ① am：直説法（事実を述べる）の現在形。仮定法ではない。\n• ② was：口語的には使われるが、試験の仮定法では were が正解。\n• ④ will be：未来を表す直説法。仮定法ではない。',
@@ -57,7 +60,8 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_05',
     subject: 'eigo',
-    question: '次の英文の（　）内に入る最も適切な語句を選びなさい。\n\nIf she had studied harder, she ( ) the exam.\n\n① would pass  ② would have passed  ③ had passed  ④ will have passed',
+    question: '次の英文の（　）内に入る最も適切な語句を選びなさい。  If she had studied harder, she ( ) the exam.',
+    choices: ['① would pass', '② would have passed', '③ had passed', '④ will have passed'],
     answer: '② would have passed',
     hint: '過去の事実に反する仮定（「あのとき〜していたら」）の帰結節を考えましょう。',
     explanation: '正解は② would have passed（仮定法過去完了）。\n\n【解説】\n「もし彼女がもっと一生懸命勉強していたなら、試験に合格していただろうに」という文です。過去の事実に反する仮定を表す仮定法過去完了を使います。\n\n【仮定法過去完了の形】\nIf + 主語 + had + 過去分詞 〜（条件節）,\n主語 + would/could/might + have + 過去分詞（帰結節）\n\n【仮定法の種類まとめ】\n①仮定法過去（現在の事実に反する仮定）\n  If I were rich, I could buy it.\n②仮定法過去完了（過去の事実に反する仮定）\n  If I had been rich, I could have bought it.\n\n• ① would pass：仮定法過去の帰結節。条件節が had studied（過去完了）なので帰結節も過去完了が必要。\n• ③ had passed：条件節の形（If節の動詞形）。帰結節には使わない。\n• ④ will have passed：未来完了形。仮定法の帰結節には使わない。',
@@ -69,7 +73,8 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_06',
     subject: 'eigo',
-    question: '次の英文の（　）内に入る最も適切な語を選びなさい。\n\nThe woman ( ) is talking to my father is our new teacher.\n\n① who  ② which  ③ what  ④ whose',
+    question: '次の英文の（　）内に入る最も適切な語を選びなさい。  The woman ( ) is talking to my father is our new teacher.',
+    choices: ['① who', '② which', '③ what', '④ whose'],
     answer: '① who',
     hint: '先行詞は「人」ですか、「物」ですか？関係代名詞の種類を確認しましょう。',
     explanation: '正解は① who（関係代名詞）。\n\n【解説】\n「私の父と話している女性は新しい先生です」という文です。\n\n【関係代名詞の選び方】\n先行詞（修飾される名詞）と関係詞節での役割によって選ぶ：\n\n| 先行詞 | 主語の役割 | 目的語の役割 | 所有格 |\n|--------|----------|------------|------|\n| 人     | who      | who(m)     | whose |\n| 物・動物 | which   | which      | whose/of which |\n| 人・物  | that    | that       | — |\n\nthe woman（先行詞：人）が関係詞節内で主語の役割（is talking の主語）→ who を使う。\n\n• ② which：先行詞が物・動物のとき。\n• ③ what：先行詞を含む関係代名詞（the thing which の意味）。先行詞と一緒には使えない。\n• ④ whose：所有格の関係代名詞。whose father のように「〜の」という意味になる。',
@@ -105,7 +110,8 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_09',
     subject: 'eigo',
-    question: '次の英文の（　）内に入る最も適切な語句を選びなさい。\n\nMt. Fuji is ( ) mountain in Japan.\n\n① high  ② higher  ③ the highest  ④ the higher',
+    question: '次の英文の（　）内に入る最も適切な語句を選びなさい。  Mt. Fuji is ( ) mountain in Japan.',
+    choices: ['① high', '② higher', '③ the highest', '④ the higher'],
     answer: '③ the highest',
     hint: '「日本で最も高い山」という意味になる比較の形を考えましょう。',
     explanation: '正解は③ the highest（最上級）。\n\n【解説】\n「富士山は日本で最も高い山です」という文です。\n\n【比較の3つの形】\n①原級（比較なし）：high / beautiful\n②比較級（2つを比べて）：higher / more beautiful（〜より…だ）\n③最上級（3つ以上の中で最も）：the highest / the most beautiful\n\n【最上級の特徴】\n• 最上級の前には必ず the を付ける\n• 「〜の中で」という範囲を in または of で表す\n  in Japan（日本で）/ in my class（クラスで）\n  of all（すべての中で）/ of the three（3つの中で）\n\n• ① high：原級。「高い山」という意味だが比較していない。\n• ② higher：比較級。2つを比較するときに使う。than が必要。\n• ④ the higher：比較級に the は通常付けない。ただし「the 比較級 〜, the 比較級 〜」（〜すればするほど〜）の構文は例外。',
@@ -515,7 +521,8 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_41',
     subject: 'eigo',
-    question: '次の対話文の（　）に入る最も適切な表現を選びなさい。\n\nA: I\'m thinking of going to Canada next summer to study English. What do you think?\nB: That sounds great! ( )\nA: I\'ve been learning English for five years, but I want to improve my speaking skills.\nB: Then studying abroad is definitely the right choice for you.\n\n① Why have you been studying English?\n② How long have you been studying English?\n③ Have you ever been to Canada?\n④ What made you decide to study abroad?',
+    question: '次の対話文の（　）に入る最も適切な表現を選びなさい。  A: I\'m thinking of going to Canada next summer to study English. What do you think? B: That sounds great! ( ) A: I\'ve been learning English for five years, but I want to improve my speaking skills. B: Then studying abroad is definitely the right choice for you.',
+    choices: ['① Why have you been studying English?', '② How long have you been studying English?', '③ Have you ever been to Canada?', '④ What made you decide to study abroad?'],
     answer: '① Why have you been studying English?',
     hint: 'Aさんの次の返答「5年間学んでいる」「スピーキングを伸ばしたい」に自然につながる質問を選びましょう。',
     explanation: '正解は① Why have you been studying English?\n（なぜ英語を勉強しているのですか？）\n\nAさんの返答：「I\'ve been learning English for five years, but I want to improve my speaking skills.」\n→ 英語を学んでいる理由（目的）と期間について答えている。\n\n【各選択肢の検討】\n① Why have you been studying English?（なぜ英語を勉強しているのですか？）\n→ Aの返答「スピーキングを伸ばしたい」が理由として自然につながる ✓\n\n② How long have you been studying English?（どのくらい英語を勉強していますか？）\n→ Aの返答は期間（5年）も含んでいるが、「but I want to improve speaking skills」という追加情報がつながりにくい。また、④How long... に対しては「for five years」だけで答えが完結するはず。\n\n③ Have you ever been to Canada?（カナダに行ったことがありますか？）\n→ Aの返答と全く関係ない。\n\n④ What made you decide to study abroad?（なぜ留学することにしたのですか？）\n→ 理由を尋ねるが、①の方がより自然な流れ。「英語を勉強している理由→スキルを伸ばしたい→だから留学を決めた」という論理的な流れが①でできる。',
@@ -527,7 +534,8 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_42',
     subject: 'eigo',
-    question: '次の対話文の（　）に入る最も適切な表現を選びなさい。\n\nA: Excuse me. Could you tell me how to get to the nearest train station?\nB: Sure. ( ) Go straight for two blocks, then turn left at the traffic light.\nA: I see. And how long does it take?\nB: About ten minutes on foot.\n\n① It\'s easy to find.\n② The station is far from here.\n③ Of course, no problem.\n④ Let me show you the way.',
+    question: '次の対話文の（　）に入る最も適切な表現を選びなさい。  A: Excuse me. Could you tell me how to get to the nearest train station? B: Sure. ( ) Go straight for two blocks, then turn left at the traffic light. A: I see. And how long does it take? B: About ten minutes on foot.',
+    choices: ['① It\'s easy to find.', '② The station is far from here.', '③ Of course, no problem.', '④ Let me show you the way.'],
     answer: '① It\'s easy to find.',
     hint: 'Bさんが案内の説明を始める前の自然なつなぎの言葉を選びましょう。',
     explanation: "正解は① It's easy to find.\n（簡単に見つかりますよ）\n\n【会話の流れ】\nA：最寄り駅への行き方を教えてもらえますか？\nB：（①）まっすぐ2ブロック行って、信号を左折してください。\nA：なるほど。どのくらい時間がかかりますか？\nB：徒歩で約10分です。\n\n【各選択肢の検討】\n① It's easy to find.（簡単に見つかりますよ）\n→ 案内を始める前に「簡単ですよ」と告げてから説明に入るのは自然 ✓\n\n② The station is far from here.（駅はここから遠いです）\n→ その後「徒歩10分」という答えと矛盾する可能性がある（10分は「遠い」とは言いにくい）\n\n③ Of course, no problem.（もちろんいいですよ）\n→ 意味的には問題ないが、「Sure.」を B はすでに言っているので重複感がある。\n\n④ Let me show you the way.（道案内しましょうか）\n→ 実際に案内する申し出だが、その後に「まっすぐ行って」と口頭で説明しているので、実際に連れて行く文脈と矛盾する。\n\n【道案内の定型表現】\n• Go straight for two blocks.（2ブロックまっすぐ行く）\n• Turn left / right at the traffic light.（信号を左折/右折する）\n• You can't miss it.（絶対見つかりますよ）",
@@ -539,7 +547,8 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_43',
     subject: 'eigo',
-    question: '次の対話文の（　）に入る最も適切な表現を選びなさい。\n\nA: I heard you\'re going to quit your job and start your own business. Is that true?\nB: Yes, it is. I\'ve been saving money for this for years.\nA: ( ) It\'s a big decision. Have you thought about the risks?\nB: Of course. But I believe that if you never take risks, you\'ll never achieve great things.\n\n① That\'s amazing news!\n② I\'m sorry to hear that.\n③ Are you sure about that?\n④ What a terrible idea!',
+    question: '次の対話文の（　）に入る最も適切な表現を選びなさい。  A: I heard you\'re going to quit your job and start your own business. Is that true? B: Yes, it is. I\'ve been saving money for this for years. A: ( ) It\'s a big decision. Have you thought about the risks? B: Of course. But I believe that if you never take risks, you\'ll never achieve great things.',
+    choices: ['① That\'s amazing news!', '② I\'m sorry to hear that.', '③ Are you sure about that?', '④ What a terrible idea!'],
     answer: '③ Are you sure about that?',
     hint: 'Aさんの次の「大きな決断ですね。リスクについて考えましたか？」という心配の言葉に自然につながる表現を選びましょう。',
     explanation: "正解は③ Are you sure about that?\n（本当にそれでいいの？それで確かなの？）\n\n【会話の流れ】\nA：仕事を辞めて起業するって本当ですか？\nB：はい。何年もお金をためてきました。\nA：（③本当にそれでいいの？）大きな決断ですね。リスクについて考えましたか？\nB：もちろん。でもリスクを取らなければ、大きなことは達成できないと信じています。\n\n【各選択肢の検討】\n① That's amazing news!（それは素晴らしいニュースですね！）\n→ 純粋に肯定的。その後「リスクについて考えた？」という懸念の言葉につながりにくい。\n\n② I'm sorry to hear that.（それは残念ですね）\n→ 否定的すぎる。起業を悪いニュースのように聞こえる。\n\n③ Are you sure about that?（本当にそれでいいの？）\n→ 驚き・懸念を示しつつ、次の「大きな決断だが...リスクは？」につながる ✓\n\n④ What a terrible idea!（なんてひどいアイデアなんだ！）\n→ 失礼で極端。対話文のトーンに合わない。\n\n【Are you sure about 〜?】\n「〜について確かですか？本当に大丈夫ですか？」\n→ 相手の決断を疑問視したり、確認するときに使う表現",
@@ -587,7 +596,8 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_47',
     subject: 'eigo',
-    question: '次の対話文の（　）に入る最も適切な表現を選びなさい。\n\nA: You look exhausted. What\'s the matter?\nB: I\'ve been working on this project for three days without any sleep.\nA: ( ) You should take a break and get some rest.\nB: I know, but the deadline is tomorrow morning.\n\n① No wonder you\'re tired!\n② That must be exciting!\n③ How lucky you are!\n④ It doesn\'t matter.',
+    question: '次の対話文の（　）に入る最も適切な表現を選びなさい。  A: You look exhausted. What\'s the matter? B: I\'ve been working on this project for three days without any sleep. A: ( ) You should take a break and get some rest. B: I know, but the deadline is tomorrow morning.',
+    choices: ['① No wonder you\'re tired!', '② That must be exciting!', '③ How lucky you are!', '④ It doesn\'t matter.'],
     answer: '① No wonder you\'re tired!',
     hint: '「3日間一睡もせずに仕事をしていた」と聞いたときの自然な反応を考えましょう。',
     explanation: "正解は① No wonder you're tired!\n（疲れているのも無理はないよ！）\n\n【No wonder 〜】\n「〜も無理はない、〜も当然だ」\n= It is no wonder that 〜 の省略形\n\n例：\n• No wonder she failed.（彼女が失敗したのも無理はない）\n• No wonder he's angry.（彼が怒るのも当然だ）\n\n【会話の文脈】\nBが3日間寝ずに仕事をしていると言っている\n→ Aが「疲れているのも無理はない」と共感する ✓\n→ その後「休んで」と勧める\n\n【各選択肢の検討】\n② That must be exciting!（それはわくわくするに違いない！）\n→ 睡眠なしの3日間の仕事を「わくわく」と表現するのは不適切。\n\n③ How lucky you are!（なんて幸運なんだ！）\n→ 文脈に合わない。\n\n④ It doesn't matter.（それは関係ない・たいしたことない）\n→ 相手の苦労を否定するような表現で不適切。\n\n【関連表現】\n• I'm not surprised.（驚かないよ）\n• That's understandable.（それは理解できる）\n• Of course you're tired.（もちろん疲れるよ）",
@@ -611,7 +621,8 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_49',
     subject: 'eigo',
-    question: '次の対話文の（　）に入る最も適切な表現を選びなさい。\n\nA: Would you mind if I opened the window? It\'s a bit stuffy in here.\nB: ( ) Please go ahead.\nA: Thank you. I appreciate it.\n\n① Yes, I would.\n② Not at all.\n③ I\'m afraid not.\n④ Of course I would.',
+    question: '次の対話文の（　）に入る最も適切な表現を選びなさい。  A: Would you mind if I opened the window? It\'s a bit stuffy in here. B: ( ) Please go ahead. A: Thank you. I appreciate it.',
+    choices: ['① Yes, I would.', '② Not at all.', '③ I\'m afraid not.', '④ Of course I would.'],
     answer: '② Not at all.',
     hint: '「Would you mind if 〜?」という質問に対して「構いません（どうぞ）」と答えるにはどの表現が正しいですか？',
     explanation: '正解は② Not at all.\n\n【Would you mind if 〜? への答え方】\n「Would you mind if 〜?」は「〜してもいいですか？（それに気にしますか？）」という丁寧な許可を求める表現。\n\nmind = 「気にする、嫌だと思う」\n\n→「構いません（どうぞ）」と許可する場合は、否定で答える：\n• Not at all.（全く気にしません）✓\n• No, not at all.（いいえ、全く構いません）✓\n• Of course not.（もちろん構いません）✓\n• No, please go ahead.（どうぞ）✓\n\n→「嫌です」と断る場合は肯定で答える：\n• Yes, I would mind.（気になります）\n• Actually, I\'d prefer you didn\'t.（実は、しないでほしいのですが）\n\n【紛らわしいポイント】\n日本語では「構いません」は「OK」という意味なのでつい「Yes」と答えがちだが、英語では Yes と言うと「気にする＝NO」の意味になってしまう。\n\n×Yes, please go ahead.（「はい、気にします」→ 矛盾）\n○Not at all. Please go ahead.（「全く気にしません。どうぞ」）',
@@ -623,7 +634,8 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_50',
     subject: 'eigo',
-    question: '次の対話文の（　）に入る最も適切な表現を選びなさい。また、その理由を日本語で説明しなさい。\n\nA: I can\'t believe you managed to finish the marathon! How did you do it?\nB: To be honest, there were several times when I almost gave up.\nA: ( ) You should be really proud of yourself.\nB: Thanks. It taught me that the only way to achieve something difficult is to keep going, no matter what.\n\n① But you kept going anyway, didn\'t you?\n② Why didn\'t you give up?\n③ Maybe you should have given up.\n④ It would have been better to stop.',
+    question: '次の対話文の（　）に入る最も適切な表現を選びなさい。また、その理由を日本語で説明しなさい。  A: I can\'t believe you managed to finish the marathon! How did you do it? B: To be honest, there were several times when I almost gave up. A: ( ) You should be really proud of yourself. B: Thanks. It taught me that the only way to achieve something difficult is to keep going, no matter what.',
+    choices: ['① But you kept going anyway, didn\'t you?', '② Why didn\'t you give up?', '③ Maybe you should have given up.', '④ It would have been better to stop.'],
     answer: '① But you kept going anyway, didn\'t you?',
     hint: 'Aさんの次のセリフ「本当に誇りに思うべきだ」という肯定的な評価に自然につながる表現を選びましょう。付加疑問文の役割も考えてみてください。',
     explanation: "正解は① But you kept going anyway, didn't you?\n（でも、結局あなたは走り続けたんでしょう？）\n\n【会話の流れ】\nA：マラソンを完走できたなんて信じられない！どうやったの？\nB：正直に言うと、諦めそうになったことが何度もあった。\nA：（①でも、結局走り続けたんでしょう？）本当に誇りに思うべきだよ。\nB：ありがとう。難しいことを達成する唯一の方法は、何があっても続けることだとわかった。\n\n【各選択肢の検討】\n① But you kept going anyway, didn't you?\n→ 「諦めそうになったが走り続けた」という事実を確認し、その達成を称える流れにつながる ✓\n→ 付加疑問文（didn't you?）で確認しながら共感を示している\n\n② Why didn't you give up?（なぜ諦めなかったの？）\n→ 否定的なニュアンス。「諦めるべきだった」という含みになりかねない。\n\n③ Maybe you should have given up.（諦めればよかったのかも）\n→ Bの達成を否定するので不適切。\n\n④ It would have been better to stop.（止まった方がよかったのでは）\n→ ③と同様、達成を否定する表現。\n\n【付加疑問文（Tag Question）】\n文末に付ける短い疑問文で、確認や同意を求める。\n肯定文 + 否定の付加疑問：You kept going, didn't you?\n否定文 + 肯定の付加疑問：You didn't stop, did you?",

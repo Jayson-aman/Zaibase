@@ -7,7 +7,8 @@ export const kokoNyushiEigo5: Question[] = [
   {
     id: 'koko_nyushi_eigo5_01',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語句を選べ。\n\nAluminum cans ( ) into new products within about sixty days after they are collected.\n① turn  ② are turned  ③ turned  ④ have turned',
+    question: '次の（　）内に最も適切な語句を選べ。  Aluminum cans ( ) into new products within about sixty days after they are collected.',
+    choices: ['① turn', '② are turned', '③ turned', '④ have turned'],
     answer: '② are turned',
     hint: '缶は「変える」側ではなく「変えられる」側であることに注目する。',
     explanation: `【出題意図】
@@ -38,7 +39,8 @@ export const kokoNyushiEigo5: Question[] = [
   {
     id: 'koko_nyushi_eigo5_02',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nAccording to the weather forecast, air pollution levels ( ) be very high this afternoon, so children should stay indoors.\n① must  ② may  ③ should  ④ will',
+    question: '次の（　）内に最も適切な語を選べ。  According to the weather forecast, air pollution levels ( ) be very high this afternoon, so children should stay indoors.',
+    choices: ['① must', '② may', '③ should', '④ will'],
     answer: '② may',
     hint: '天気予報の「〜かもしれない」という不確かな可能性を表す助動詞を選ぶ。',
     explanation: `【出題意図】
@@ -68,7 +70,8 @@ export const kokoNyushiEigo5: Question[] = [
   {
     id: 'koko_nyushi_eigo5_03',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語句を選べ。\n\nOf all the rivers in this area, this one is ( ) polluted.\n① more  ② most  ③ the most  ④ much more',
+    question: '次の（　）内に最も適切な語句を選べ。  Of all the rivers in this area, this one is ( ) polluted.',
+    choices: ['① more', '② most', '③ the most', '④ much more'],
     answer: '③ the most',
     hint: '「この地域のすべての川の中で」という範囲を表す表現があるので最上級を使う。',
     explanation: `【出題意図】
@@ -99,7 +102,8 @@ export const kokoNyushiEigo5: Question[] = [
   {
     id: 'koko_nyushi_eigo5_04',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nVolunteers picked up trash along the beach ( ) protect sea animals from plastic waste.\n① for  ② so  ③ to  ④ in order',
+    question: '次の（　）内に最も適切な語を選べ。  Volunteers picked up trash along the beach ( ) protect sea animals from plastic waste.',
+    choices: ['① for', '② so', '③ to', '④ in order'],
     answer: '③ to',
     hint: '「〜するために」という目的を表す不定詞の副詞的用法を選ぶ。',
     explanation: `【出題意図】
@@ -129,7 +133,8 @@ export const kokoNyushiEigo5: Question[] = [
   {
     id: 'koko_nyushi_eigo5_05',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nYou should avoid ( ) too much sugar if you want to keep your teeth healthy.\n① eat  ② to eat  ③ eating  ④ eaten',
+    question: '次の（　）内に最も適切な語を選べ。  You should avoid ( ) too much sugar if you want to keep your teeth healthy.',
+    choices: ['① eat', '② to eat', '③ eating', '④ eaten'],
     answer: '③ eating',
     hint: 'avoid の後ろには動名詞（〜ing）が来る。',
     explanation: `【出題意図】
@@ -160,7 +165,8 @@ avoid（避ける）、enjoy（楽しむ）、finish（終える）、stop（や
   {
     id: 'koko_nyushi_eigo5_06',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語句を選べ。\n\nBy the time this recycling program ends, the city ( ) more than one million plastic bottles.\n① will collect  ② has collected  ③ will have collected  ④ collected',
+    question: '次の（　）内に最も適切な語句を選べ。  By the time this recycling program ends, the city ( ) more than one million plastic bottles.',
+    choices: ['① will collect', '② has collected', '③ will have collected', '④ collected'],
     answer: '③ will have collected',
     hint: '「このプログラムが終わるまでには」という未来の時点での完了を表す時制を選ぶ。',
     explanation: `【出題意図】
@@ -190,7 +196,8 @@ avoid（避ける）、enjoy（楽しむ）、finish（終える）、stop（や
   {
     id: 'koko_nyushi_eigo5_07',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nIf people ( ) throwing plastic into the ocean, marine life will continue to suffer.\n① will keep  ② keep  ③ kept  ④ keeping',
+    question: '次の（　）内に最も適切な語を選べ。  If people ( ) throwing plastic into the ocean, marine life will continue to suffer.',
+    choices: ['① will keep', '② keep', '③ kept', '④ keeping'],
     answer: '② keep',
     hint: '条件を表す if 節の中では、未来のことでも現在形を使う。',
     explanation: `【出題意図】
@@ -220,7 +227,8 @@ avoid（避ける）、enjoy（楽しむ）、finish（終える）、stop（や
   {
     id: 'koko_nyushi_eigo5_08',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語句を選べ。\n\nThis recycling center ( ) five years ago to reduce landfill waste.\n① builds  ② is built  ③ was built  ④ has built',
+    question: '次の（　）内に最も適切な語句を選べ。  This recycling center ( ) five years ago to reduce landfill waste.',
+    choices: ['① builds', '② is built', '③ was built', '④ has built'],
     answer: '③ was built',
     hint: '「5年前に」という過去の一時点を表す語句と、受動態の時制に注目する。',
     explanation: `【出題意図】
@@ -250,7 +258,8 @@ avoid（避ける）、enjoy（楽しむ）、finish（終える）、stop（や
   {
     id: 'koko_nyushi_eigo5_09',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nSolar power is becoming ( ) than coal in many countries now.\n① cheap  ② cheaper  ③ the cheapest  ④ more cheap',
+    question: '次の（　）内に最も適切な語を選べ。  Solar power is becoming ( ) than coal in many countries now.',
+    choices: ['① cheap', '② cheaper', '③ the cheapest', '④ more cheap'],
     answer: '② cheaper',
     hint: '2つのエネルギー源を比べているので比較級（-er）を使う。than が手がかり。',
     explanation: `【出題意図】
@@ -280,7 +289,8 @@ than があれば比較級が必要。cheap は1音節の形容詞なので -er 
   {
     id: 'koko_nyushi_eigo5_10',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語句を選べ。\n\nMany young people want ( ) part in beach clean-up activities these days.\n① take  ② taking  ③ to take  ④ took',
+    question: '次の（　）内に最も適切な語句を選べ。  Many young people want ( ) part in beach clean-up activities these days.',
+    choices: ['① take', '② taking', '③ to take', '④ took'],
     answer: '③ to take',
     hint: 'want の後ろに来る不定詞の名詞的用法（〜したい）を選ぶ。',
     explanation: `【出題意図】
@@ -311,7 +321,8 @@ take part in〜：〜に参加する（= participate in〜）
   {
     id: 'koko_nyushi_eigo5_11',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe factory finally stopped ( ) chemical waste into the river last year.\n① dump  ② to dump  ③ dumping  ④ dumped',
+    question: '次の（　）内に最も適切な語を選べ。  The factory finally stopped ( ) chemical waste into the river last year.',
+    choices: ['① dump', '② to dump', '③ dumping', '④ dumped'],
     answer: '③ dumping',
     hint: 'stop の後ろの目的語（〜するのをやめる）と、stop to do（〜するために立ち止まる）の違いに注意する。',
     explanation: `【出題意図】
@@ -341,7 +352,8 @@ stop + 動名詞：〜するのをやめる。stop + 不定詞：〜するため
   {
     id: 'koko_nyushi_eigo5_12',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語句を選べ。\n\nScientists ( ) the effects of microplastics on fish for over a decade.\n① study  ② have studied  ③ have been studying  ④ studied',
+    question: '次の（　）内に最も適切な語句を選べ。  Scientists ( ) the effects of microplastics on fish for over a decade.',
+    choices: ['① study', '② have studied', '③ have been studying', '④ studied'],
     answer: '③ have been studying',
     hint: '「10年以上にわたって」という継続を表す語句から時制を判断する。',
     explanation: `【出題意図】
@@ -375,7 +387,8 @@ stop + 動名詞：〜するのをやめる。stop + 不定詞：〜するため
   {
     id: 'koko_nyushi_eigo5_13',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な前置詞を選べ。\n\nMany doctors are worried ( ) the rising number of people who don\'t get enough sleep.\n① of  ② about  ③ with  ④ at',
+    question: '次の（　）内に最も適切な前置詞を選べ。  Many doctors are worried ( ) the rising number of people who don\'t get enough sleep.',
+    choices: ['① of', '② about', '③ with', '④ at'],
     answer: '② about',
     hint: 'be worried の後ろに来る前置詞を選ぶ。',
     explanation: `【出題意図】
@@ -405,7 +418,8 @@ be worried about〜 は「〜を心配している」という意味のイディ
   {
     id: 'koko_nyushi_eigo5_14',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nShe decided to ( ) up eating fast food after learning about its health risks.\n① give  ② take  ③ make  ④ turn',
+    question: '次の（　）内に最も適切な語を選べ。  She decided to ( ) up eating fast food after learning about its health risks.',
+    choices: ['① give', '② take', '③ make', '④ turn'],
     answer: '① give',
     hint: 'give up〜ing で「〜するのをやめる」という熟語。',
     explanation: `【出題意図】
@@ -435,7 +449,8 @@ give up を含む頻出表現：give up smoking（喫煙をやめる）、give u
   {
     id: 'koko_nyushi_eigo5_15',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nIf we keep using resources so quickly, we will ( ) out of clean water someday.\n① go  ② run  ③ use  ④ get',
+    question: '次の（　）内に最も適切な語を選べ。  If we keep using resources so quickly, we will ( ) out of clean water someday.',
+    choices: ['① go', '② run', '③ use', '④ get'],
     answer: '② run',
     hint: 'run out of〜 で「〜を使い果たす」という熟語。',
     explanation: `【出題意図】
@@ -466,7 +481,8 @@ run out of〜：資源・時間・お金などが尽きることを表す頻出�
   {
     id: 'koko_nyushi_eigo5_16',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThis eco-friendly bag is made ( ) recycled plastic bottles.\n① of  ② from  ③ by  ④ with',
+    question: '次の（　）内に最も適切な語を選べ。  This eco-friendly bag is made ( ) recycled plastic bottles.',
+    choices: ['① of', '② from', '③ by', '④ with'],
     answer: '② from',
     hint: '材料が加工されて元の形が分からなくなる場合の前置詞を選ぶ。',
     explanation: `【出題意図】
@@ -497,7 +513,8 @@ be made of〜（見た目が変わらない材料）、be made from〜（見た�
   {
     id: 'koko_nyushi_eigo5_17',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nIt is not easy to ( ) rid of bad eating habits once you are used to them.\n① take  ② make  ③ get  ④ do',
+    question: '次の（　）内に最も適切な語を選べ。  It is not easy to ( ) rid of bad eating habits once you are used to them.',
+    choices: ['① take', '② make', '③ get', '④ do'],
     answer: '③ get',
     hint: 'get rid of〜 で「〜を取り除く」という熟語。',
     explanation: `【出題意図】
@@ -528,7 +545,8 @@ be used to〜（〜に慣れている）と get used to〜（〜に慣れる）�
   {
     id: 'koko_nyushi_eigo5_18',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nMany children in the region suffer ( ) diseases caused by polluted water.\n① of  ② from  ③ with  ④ by',
+    question: '次の（　）内に最も適切な語を選べ。  Many children in the region suffer ( ) diseases caused by polluted water.',
+    choices: ['① of', '② from', '③ with', '④ by'],
     answer: '② from',
     hint: 'suffer の後ろに来る前置詞を選ぶ。「〜が原因で苦しむ」という意味。',
     explanation: `【出題意図】
@@ -558,7 +576,8 @@ suffer from〜：病気・苦痛・被害などの原因を示す。die of / die
   {
     id: 'koko_nyushi_eigo5_19',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nOur health greatly depends ( ) the quality of the food we eat every day.\n① of  ② on  ③ at  ④ in',
+    question: '次の（　）内に最も適切な語を選べ。  Our health greatly depends ( ) the quality of the food we eat every day.',
+    choices: ['① of', '② on', '③ at', '④ in'],
     answer: '② on',
     hint: 'depend の後ろに来る前置詞を選ぶ。「〜に左右される」という意味。',
     explanation: `【出題意図】
@@ -588,7 +607,8 @@ depend on〜：人・状況・条件などに頼る、左右される場合に�
   {
     id: 'koko_nyushi_eigo5_20',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nEven small actions like turning off lights can ( ) a difference for the environment.\n① do  ② make  ③ have  ④ take',
+    question: '次の（　）内に最も適切な語を選べ。  Even small actions like turning off lights can ( ) a difference for the environment.',
+    choices: ['① do', '② make', '③ have', '④ take'],
     answer: '② make',
     hint: 'make a difference で「変化をもたらす、効果がある」という熟語。',
     explanation: `【出題意図】
@@ -622,7 +642,8 @@ make a difference：良い影響・効果を与えるという意味で環境や
   {
     id: 'koko_nyushi_eigo5_21',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe doctor ( ) works at this clinic gives free health checkups to elderly people every month.\n① who  ② which  ③ whom  ④ whose',
+    question: '次の（　）内に最も適切な語を選べ。  The doctor ( ) works at this clinic gives free health checkups to elderly people every month.',
+    choices: ['① who', '② which', '③ whom', '④ whose'],
     answer: '① who',
     hint: '先行詞は「人」、関係代名詞節内での役割は「主語」。',
     explanation: `【出題意図】
@@ -652,7 +673,8 @@ make a difference：良い影響・効果を与えるという意味で環境や
   {
     id: 'koko_nyushi_eigo5_22',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe plastic bag ( ) I used yesterday ended up polluting the river near my house.\n① who  ② which  ③ where  ④ whom',
+    question: '次の（　）内に最も適切な語を選べ。  The plastic bag ( ) I used yesterday ended up polluting the river near my house.',
+    choices: ['① who', '② which', '③ where', '④ whom'],
     answer: '② which',
     hint: '先行詞は「物（袋）」。関係代名詞節内で used の目的語になっている。',
     explanation: `【出題意図】
@@ -684,7 +706,8 @@ which は省略可（thatに置き換え可）：The plastic bag (that) I used y
   {
     id: 'koko_nyushi_eigo5_23',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nI visited the factory ( ) old bottles are turned into new glass products.\n① which  ② who  ③ where  ④ when',
+    question: '次の（　）内に最も適切な語を選べ。  I visited the factory ( ) old bottles are turned into new glass products.',
+    choices: ['① which', '② who', '③ where', '④ when'],
     answer: '③ where',
     hint: '先行詞は「場所（factory）」で、関係副詞を使う。',
     explanation: `【出題意図】
@@ -779,7 +802,8 @@ whose の使い方：先行詞（人・物）の所有格を表す。先行詞�
   {
     id: 'koko_nyushi_eigo5_26',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nCould you tell me ( ) much plastic waste this factory produces every day?\n① what  ② how  ③ why  ④ where',
+    question: '次の（　）内に最も適切な語を選べ。  Could you tell me ( ) much plastic waste this factory produces every day?',
+    choices: ['① what', '② how', '③ why', '④ where'],
     answer: '② how',
     hint: '「どのくらいの量のプラスチックごみ」という数量を尋ねる疑問詞を選ぶ。',
     explanation: `【出題意図】
@@ -1055,7 +1079,8 @@ should を使った助言表現：You should + 動詞原形〜（〜した方が
   {
     id: 'koko_nyushi_eigo5_35',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: How often do you take your plastic bottles to the recycling bin?\nB: ( )\n\n① It\'s about two kilometers away.\n② I recycle them almost every week.\n③ I don\'t like plastic bottles.\n④ The bin is very large.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: How often do you take your plastic bottles to the recycling bin? B: ( )',
+    choices: ['① It\'s about two kilometers away.', '② I recycle them almost every week.', '③ I don\'t like plastic bottles.', '④ The bin is very large.'],
     answer: '② I recycle them almost every week.',
     hint: 'How often〜? は頻度を尋ねる表現。頻度で答えている選択肢を選ぶ。',
     explanation: `【出題意図】
@@ -1087,7 +1112,8 @@ How often〜?（頻度）と How far〜?（距離）、How long〜?（時間・�
   {
     id: 'koko_nyushi_eigo5_36',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: I really want to run in the marathon next month, but I haven\'t trained enough.\nB: ( ) You still have four weeks to practice.\n\n① Don\'t give up.\n② That\'s too bad.\n③ I\'m sorry to hear that.\n④ Never mind.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: I really want to run in the marathon next month, but I haven\'t trained enough. B: ( ) You still have four weeks to practice.',
+    choices: ['① Don\'t give up.', '② That\'s too bad.', '③ I\'m sorry to hear that.', '④ Never mind.'],
     answer: '① Don\'t give up.',
     hint: '後に続く「まだ4週間ある」という励ましの言葉に合う返答を選ぶ。',
     explanation: `【出題意図】
@@ -1119,7 +1145,8 @@ B：諦めないで。まだ練習する時間が4週間あるよ。
   {
     id: 'koko_nyushi_eigo5_37',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: May I refill my water bottle here?\nB: ( )\nA: Thank you.\n\n① Sure, go ahead.\n② No, you may not refill it.\n③ I don\'t have any water.\n④ Yes, you may go.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: May I refill my water bottle here? B: ( ) A: Thank you.',
+    choices: ['① Sure, go ahead.', '② No, you may not refill it.', '③ I don\'t have any water.', '④ Yes, you may go.'],
     answer: '① Sure, go ahead.',
     hint: 'May I〜? は許可を求める表現。自然な許可の与え方を選ぶ。',
     explanation: `【出題意図】
@@ -1152,7 +1179,8 @@ A：ありがとう。
   {
     id: 'koko_nyushi_eigo5_38',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語を選べ。\n\nI have never ( ) such polluted air in my life.\n① see  ② saw  ③ seen  ④ seeing',
+    question: '次の英文の（　）に入る最も適切な語を選べ。  I have never ( ) such polluted air in my life.',
+    choices: ['① see', '② saw', '③ seen', '④ seeing'],
     answer: '③ seen',
     hint: '現在完了形（have/has + 過去分詞）の経験用法。see の過去分詞を選ぶ。',
     explanation: `【出題意図】
@@ -1182,7 +1210,8 @@ never は現在完了形の経験用法で「一度も〜したことがない�
   {
     id: 'koko_nyushi_eigo5_39',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語を選べ。\n\nThe city\'s clean-up event will be held ( ) the first Sunday of every month.\n① in  ② at  ③ on  ④ by',
+    question: '次の英文の（　）に入る最も適切な語を選べ。  The city\'s clean-up event will be held ( ) the first Sunday of every month.',
+    choices: ['① in', '② at', '③ on', '④ by'],
     answer: '③ on',
     hint: '曜日・特定の日には前置詞 on を使う。',
     explanation: `【出題意図】
@@ -1212,7 +1241,8 @@ never は現在完了形の経験用法で「一度も〜したことがない�
   {
     id: 'koko_nyushi_eigo5_40',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語句を選べ。\n\nThe teacher asked the students ( ) plant a tree for Earth Day.\n① plant  ② to plant  ③ planting  ④ planted',
+    question: '次の英文の（　）に入る最も適切な語句を選べ。  The teacher asked the students ( ) plant a tree for Earth Day.',
+    choices: ['① plant', '② to plant', '③ planting', '④ planted'],
     answer: '② to plant',
     hint: 'ask + 人 + to do（人に〜するよう頼む）という構文。',
     explanation: `【出題意図】
@@ -1242,7 +1272,8 @@ ask + 人 + to do = 「人に〜するよう頼む」という重要構文。
   {
     id: 'koko_nyushi_eigo5_41',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語を選べ。\n\nI think ( ) necessary to reduce plastic waste as soon as possible.\n① this  ② that  ③ it  ④ what',
+    question: '次の英文の（　）に入る最も適切な語を選べ。  I think ( ) necessary to reduce plastic waste as soon as possible.',
+    choices: ['① this', '② that', '③ it', '④ what'],
     answer: '③ it',
     hint: '形式主語 it を使った「it is + 形容詞 + to 動詞」の構文。',
     explanation: `【出題意図】
@@ -1424,7 +1455,8 @@ Could you〜? = Can you〜? の丁寧版。show + 人 + 物：人に物を見せ
     id: 'koko_nyushi_eigo5_47',
     subject: 'eigo',
     passage: `Every year, families in many countries throw away a large amount of food that is still good to eat. There are some simple ways to reduce this problem. First, plan your meals before you go shopping so you only buy what you need. Second, use leftovers to make new dishes instead of throwing them away. Third, learn the difference between "best before" and "use by" dates, because food is often still safe to eat after the "best before" date. If more families follow these simple steps, we can save money and protect the environment at the same time.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の内容と合っているものを1つ選べ。\n① 買い物の前に食事の計画を立てることは効果がない。\n② 残り物は新しい料理に使わず、すぐに捨てるべきだ。\n③ 賞味期限が過ぎても食べても安全な場合がある。\n④ この問題を解決するのは政府だけの責任である。',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の内容と合っているものを1つ選べ。',
+    choices: ['① 買い物の前に食事の計画を立てることは効果がない。', '② 残り物は新しい料理に使わず、すぐに捨てるべきだ。', '③ 賞味期限が過ぎても食べても安全な場合がある。', '④ この問題を解決するのは政府だけの責任である。'],
     answer: '③ 賞味期限が過ぎても食べても安全な場合がある。',
     hint: '本文中の "food is often still safe to eat after the \'best before\' date" という文を探す。',
     explanation: `【出題意図】
@@ -1479,7 +1511,8 @@ Could you〜? = Can you〜? の丁寧版。show + 人 + 物：人に物を見せ
     id: 'koko_nyushi_eigo5_49',
     subject: 'eigo',
     passage: `Many doctors now say that regular exercise is one of the best things you can do for your mental health, not just your body. When people exercise, their brains release chemicals that make them feel happier and less stressed. Studies show that people who walk or run a few times a week often sleep better and feel more confident. Exercise does not have to be difficult or expensive. Even a short walk around the neighborhood can help. Experts recommend that people try to move their bodies every day, even if it is only for a short time, because small habits can lead to big changes in how we feel.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の主題として最も適切なものを選べ。\n① 運動が経済にもたらす具体的な数値的効果\n② 運動が心の健康にもたらす良い効果と、日常に取り入れる方法\n③ 医者になるために必要な運動の知識\n④ ジムで行う本格的なトレーニングの重要性',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の主題として最も適切なものを選べ。',
+    choices: ['① 運動が経済にもたらす具体的な数値的効果', '② 運動が心の健康にもたらす良い効果と、日常に取り入れる方法', '③ 医者になるために必要な運動の知識', '④ ジムで行う本格的なトレーニングの重要性'],
     answer: '② 運動が心の健康にもたらす良い効果と、日常に取り入れる方法',
     hint: '本文全体の流れ（効果の説明→科学的根拠→簡単に始める方法→専門家の助言）を把握して、何が最も中心的に述べられているかを考える。',
     explanation: `【出題意図】
@@ -1512,7 +1545,8 @@ Could you〜? = Can you〜? の丁寧版。show + 人 + 物：人に物を見せ
     id: 'koko_nyushi_eigo5_50',
     subject: 'eigo',
     passage: `More and more countries are switching from fossil fuels to renewable energy sources such as solar and wind power. This change brings many benefits. Renewable energy produces much less pollution than burning coal or oil, so it helps keep the air cleaner. It also does not run out, unlike fossil fuels, which took millions of years to form. However, building solar panels and wind turbines still costs a lot of money, and some people worry about the space they take up. Despite these challenges, many experts believe that renewable energy will continue to grow because it is better for both our health and the future of the planet.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の内容と合っていないものを1つ選べ。\n① 再生可能エネルギーは化石燃料を燃やすよりも汚染が少ない。\n② 再生可能エネルギーは化石燃料と違い、なくなる心配がない。\n③ 太陽光パネルや風力タービンの建設には現在まったく費用がかからない。\n④ 多くの専門家は再生可能エネルギーが今後も増え続けると考えている。',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の内容と合っていないものを1つ選べ。',
+    choices: ['① 再生可能エネルギーは化石燃料を燃やすよりも汚染が少ない。', '② 再生可能エネルギーは化石燃料と違い、なくなる心配がない。', '③ 太陽光パネルや風力タービンの建設には現在まったく費用がかからない。', '④ 多くの専門家は再生可能エネルギーが今後も増え続けると考えている。'],
     answer: '③ 太陽光パネルや風力タービンの建設には現在まったく費用がかからない。',
     hint: '本文では「太陽光パネルや風力タービンの建設にはまだ多くの費用がかかる」と述べている。',
     explanation: `【出題意図】

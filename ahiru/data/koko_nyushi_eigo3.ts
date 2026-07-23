@@ -7,7 +7,8 @@ export const kokoNyushiEigo3: Question[] = [
   {
     id: 'koko_nyushi_eigo3_01',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語句を選べ。\n\nOur badminton club ( ) practicing for the tournament since April.\n① is  ② was  ③ has been  ④ will be',
+    question: '次の（　）内に最も適切な語句を選べ。  Our badminton club ( ) practicing for the tournament since April.',
+    choices: ['① is', '② was', '③ has been', '④ will be'],
     answer: '③ has been',
     hint: '「4月からずっと」という継続を表す現在完了進行形を作る助動詞を選ぶ。',
     explanation: `【出題意図】
@@ -39,7 +40,8 @@ sinceは「起点」、forは「期間」を表し、どちらも現在完了（
   {
     id: 'koko_nyushi_eigo3_02',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nYou ( ) bring your recorder to music class tomorrow; the teacher told us this morning.\n① must  ② should  ③ may  ④ can',
+    question: '次の（　）内に最も適切な語を選べ。  You ( ) bring your recorder to music class tomorrow; the teacher told us this morning.',
+    choices: ['① must', '② should', '③ may', '④ can'],
     answer: '① must',
     hint: '「先生に言われた」という強い義務・指示のニュアンスに合う助動詞を選ぶ。',
     explanation: `【出題意図】
@@ -71,7 +73,8 @@ should：推奨・アドバイス（「〜した方がいい」）
   {
     id: 'koko_nyushi_eigo3_03',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語形を選べ。\n\nThe school festival ( ) by the student council every October.\n① holds  ② is held  ③ was held  ④ has held',
+    question: '次の（　）内に最も適切な語形を選べ。  The school festival ( ) by the student council every October.',
+    choices: ['① holds', '② is held', '③ was held', '④ has held'],
     answer: '② is held',
     hint: '文化祭は「開催する」側ではなく「開催される」側。習慣的な事実を表す時制を選ぶ。',
     explanation: `【出題意図】
@@ -103,7 +106,8 @@ hold の活用：hold → held → held
   {
     id: 'koko_nyushi_eigo3_04',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nOf all the members in the brass band, Aya practices ( ).\n① hard  ② harder  ③ the hardest  ④ more hard',
+    question: '次の（　）内に最も適切な語を選べ。  Of all the members in the brass band, Aya practices ( ).',
+    choices: ['① hard', '② harder', '③ the hardest', '④ more hard'],
     answer: '③ the hardest',
     hint: '「全員の中で」という範囲を示す表現があるときは最上級を使う。',
     explanation: `【出題意図】
@@ -134,7 +138,8 @@ hold の活用：hold → held → held
   {
     id: 'koko_nyushi_eigo3_05',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nShe was too shy ( ) to the new students in her class.\n① talking  ② talked  ③ to talk  ④ talk',
+    question: '次の（　）内に最も適切な語を選べ。  She was too shy ( ) to the new students in her class.',
+    choices: ['① talking', '② talked', '③ to talk', '④ talk'],
     answer: '③ to talk',
     hint: '「too + 形容詞 + to + 動詞」で「〜すぎて…できない」という意味になる。',
     explanation: `【出題意図】
@@ -166,7 +171,8 @@ too + 形容詞/副詞 + to + 動詞原形：〜すぎて…できない
   {
     id: 'koko_nyushi_eigo3_06',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nOur teacher suggested ( ) a farewell party for the graduating seniors.\n① have  ② to have  ③ having  ④ had',
+    question: '次の（　）内に最も適切な語を選べ。  Our teacher suggested ( ) a farewell party for the graduating seniors.',
+    choices: ['① have', '② to have', '③ having', '④ had'],
     answer: '③ having',
     hint: 'suggest の後ろには動名詞が来る（不定詞は不可）。',
     explanation: `【出題意図】
@@ -198,7 +204,8 @@ suggest は「suggest that + 主語 + (should) + 動詞原形」の形でも表�
   {
     id: 'koko_nyushi_eigo3_07',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nBy the time the new term starts, we ( ) our new classroom.\n① will clean  ② have cleaned  ③ will have cleaned  ④ cleaned',
+    question: '次の（　）内に最も適切な語を選べ。  By the time the new term starts, we ( ) our new classroom.',
+    choices: ['① will clean', '② have cleaned', '③ will have cleaned', '④ cleaned'],
     answer: '③ will have cleaned',
     hint: '「新学期が始まるまでには」という未来のある時点での完了を表す時制を選ぶ。',
     explanation: `【出題意図】
@@ -230,7 +237,8 @@ suggest は「suggest that + 主語 + (should) + 動詞原形」の形でも表�
   {
     id: 'koko_nyushi_eigo3_08',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nIf it ( ) rainy on sports day, we will hold the events in the gym.\n① is  ② will be  ③ was  ④ has been',
+    question: '次の（　）内に最も適切な語を選べ。  If it ( ) rainy on sports day, we will hold the events in the gym.',
+    choices: ['① is', '② will be', '③ was', '④ has been'],
     answer: '① is',
     hint: '条件を表す if 節の中では、未来のことでも現在形を使う。',
     explanation: `【出題意図】
@@ -261,7 +269,8 @@ if（もし〜なら）/ when（〜するとき）/ before（〜する前に）/
   {
     id: 'koko_nyushi_eigo3_09',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThese uniforms ( ) by the soccer team for the next championship.\n① wear  ② are worn  ③ were wearing  ④ have worn',
+    question: '次の（　）内に最も適切な語を選べ。  These uniforms ( ) by the soccer team for the next championship.',
+    choices: ['① wear', '② are worn', '③ were wearing', '④ have worn'],
     answer: '② are worn',
     hint: 'ユニフォームは「着る」側ではなく「着られる」側。受動態の現在形を選ぶ。',
     explanation: `【出題意図】
@@ -293,7 +302,8 @@ wear の活用：wear → wore → worn（過去分詞）
   {
     id: 'koko_nyushi_eigo3_10',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThis year\'s cultural festival was ( ) than last year\'s.\n① exciting  ② excite  ③ more exciting  ④ most exciting',
+    question: '次の（　）内に最も適切な語を選べ。  This year\'s cultural festival was ( ) than last year\'s.',
+    choices: ['① exciting', '② excite', '③ more exciting', '④ most exciting'],
     answer: '③ more exciting',
     hint: '2つの文化祭を比べているので、than とセットで使う比較級を選ぶ。exciting は2音節以上の語。',
     explanation: `【出題意図】
@@ -325,7 +335,8 @@ than があるので比較級が必要。exciting は3音節の形容詞なの�
   {
     id: 'koko_nyushi_eigo3_11',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nOur homeroom teacher always encourages us ( ) new things.\n① try  ② trying  ③ to try  ④ tried',
+    question: '次の（　）内に最も適切な語を選べ。  Our homeroom teacher always encourages us ( ) new things.',
+    choices: ['① try', '② trying', '③ to try', '④ tried'],
     answer: '③ to try',
     hint: 'encourage + 人 + to do（人に〜するよう励ます）という構文。',
     explanation: `【出題意図】
@@ -359,7 +370,8 @@ encourage + 人 + to do = 「人に〜するよう励ます・勧める」とい
   {
     id: 'koko_nyushi_eigo3_12',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\n( ) the classroom every day makes us feel proud of our school.\n① Clean  ② Cleans  ③ Cleaning  ④ Cleaned',
+    question: '次の（　）内に最も適切な語を選べ。  ( ) the classroom every day makes us feel proud of our school.',
+    choices: ['① Clean', '② Cleans', '③ Cleaning', '④ Cleaned'],
     answer: '③ Cleaning',
     hint: '文の主語になる形。動詞のままでは主語になれない。',
     explanation: `【出題意図】
@@ -397,7 +409,8 @@ encourage + 人 + to do = 「人に〜するよう励ます・勧める」とい
   {
     id: 'koko_nyushi_eigo3_13',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nOur class is going to take ( ) in the chorus contest next month.\n① place  ② part  ③ care  ④ turns',
+    question: '次の（　）内に最も適切な語を選べ。  Our class is going to take ( ) in the chorus contest next month.',
+    choices: ['① place', '② part', '③ care', '④ turns'],
     answer: '② part',
     hint: 'take part in〜 で「〜に参加する」という熟語になる。',
     explanation: `【出題意図】
@@ -431,7 +444,8 @@ take を含む頻出熟語：
   {
     id: 'koko_nyushi_eigo3_14',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nI\'m really looking forward ( ) the school trip to Kyoto next week.\n① for  ② at  ③ to  ④ on',
+    question: '次の（　）内に最も適切な語を選べ。  I\'m really looking forward ( ) the school trip to Kyoto next week.',
+    choices: ['① for', '② at', '③ to', '④ on'],
     answer: '③ to',
     hint: 'look forward to〜ing は「〜するのを楽しみにする」という熟語。',
     explanation: `【出題意図】
@@ -463,7 +477,8 @@ look forward to + 名詞／動名詞：〜を楽しみにする
   {
     id: 'koko_nyushi_eigo3_15',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nMy best friend always ( ) me up when I feel sad about club matches.\n① makes  ② cheers  ③ takes  ④ gives',
+    question: '次の（　）内に最も適切な語を選べ。  My best friend always ( ) me up when I feel sad about club matches.',
+    choices: ['① makes', '② cheers', '③ takes', '④ gives'],
     answer: '② cheers',
     hint: 'cheer up〜（〜を励ます）という句動詞を選ぶ。',
     explanation: `【出題意図】
@@ -495,7 +510,8 @@ Cheer up!：（単独で）元気出して！
   {
     id: 'koko_nyushi_eigo3_16',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nOur volleyball team is famous ( ) its teamwork.\n① with  ② for  ③ of  ④ about',
+    question: '次の（　）内に最も適切な語を選べ。  Our volleyball team is famous ( ) its teamwork.',
+    choices: ['① with', '② for', '③ of', '④ about'],
     answer: '② for',
     hint: 'be famous for〜 で「〜で有名だ」という意味になる。',
     explanation: `【出題意図】
@@ -559,7 +575,8 @@ want + 人 + to do：人に〜してほしい（願望）
   {
     id: 'koko_nyushi_eigo3_18',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe new student is still not used ( ) the rules of our tennis club.\n① to  ② with  ③ for  ④ at',
+    question: '次の（　）内に最も適切な語を選べ。  The new student is still not used ( ) the rules of our tennis club.',
+    choices: ['① to', '② with', '③ for', '④ at'],
     answer: '① to',
     hint: 'be used to〜 で「〜に慣れている」という意味になる前置詞。',
     explanation: `【出題意図】
@@ -591,7 +608,8 @@ used to + 動詞原形：かつて〜した（過去の習慣・状態、現在�
   {
     id: 'koko_nyushi_eigo3_19',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nWe need to ( ) up with a good plan for the school festival.\n① come  ② go  ③ get  ④ put',
+    question: '次の（　）内に最も適切な語を選べ。  We need to ( ) up with a good plan for the school festival.',
+    choices: ['① come', '② go', '③ get', '④ put'],
     answer: '① come',
     hint: 'come up with〜 で「〜を思いつく」という意味の熟語。',
     explanation: `【出題意図】
@@ -623,7 +641,8 @@ come up with〜：（考え・計画・解決策を）思いつく
   {
     id: 'koko_nyushi_eigo3_20',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe brass band practices ( ) 4 p.m. to 6 p.m. every weekday.\n① since  ② from  ③ at  ④ during',
+    question: '次の（　）内に最も適切な語を選べ。  The brass band practices ( ) 4 p.m. to 6 p.m. every weekday.',
+    choices: ['① since', '② from', '③ at', '④ during'],
     answer: '② from',
     hint: '「〜から…まで」という期間を示す表現 from A to B を選ぶ。',
     explanation: `【出題意図】
@@ -659,7 +678,8 @@ since + 起点：〜以来（現在完了形と共に使う）
   {
     id: 'koko_nyushi_eigo3_21',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe boy ( ) is running the fastest on the track team is my classmate.\n① who  ② which  ③ whom  ④ whose',
+    question: '次の（　）内に最も適切な語を選べ。  The boy ( ) is running the fastest on the track team is my classmate.',
+    choices: ['① who', '② which', '③ whom', '④ whose'],
     answer: '① who',
     hint: '先行詞は「人」、関係代名詞節内での役割は「主語」。',
     explanation: `【出題意図】
@@ -693,7 +713,8 @@ that は who / which の代わりに使えるが所有格・前置詞の後ろ�
   {
     id: 'koko_nyushi_eigo3_22',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe song ( ) our chorus club sang at the contest was written by a famous composer.\n① who  ② which  ③ whom  ④ where',
+    question: '次の（　）内に最も適切な語を選べ。  The song ( ) our chorus club sang at the contest was written by a famous composer.',
+    choices: ['① who', '② which', '③ whom', '④ where'],
     answer: '② which',
     hint: '先行詞は「物（歌）」。関係代名詞節内で sang の目的語になっている。',
     explanation: `【出題意図】
@@ -727,7 +748,8 @@ which は省略可能（that に置き換え可）：The song (that) our chorus 
   {
     id: 'koko_nyushi_eigo3_23',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nI still remember the day ( ) our team won the championship for the first time.\n① which  ② who  ③ where  ④ when',
+    question: '次の（　）内に最も適切な語を選べ。  I still remember the day ( ) our team won the championship for the first time.',
+    choices: ['① which', '② who', '③ where', '④ when'],
     answer: '④ when',
     hint: '先行詞は「時（day）」で、時を表す関係副詞を使う。',
     explanation: `【出題意図】
@@ -829,7 +851,8 @@ whose の使い方：先行詞（人・物）の所有格を表す
   {
     id: 'koko_nyushi_eigo3_26',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nCould you tell me ( ) the drama club is going to perform this year?\n① when  ② which play  ③ where  ④ how',
+    question: '次の（　）内に最も適切な語を選べ。  Could you tell me ( ) the drama club is going to perform this year?',
+    choices: ['① when', '② which play', '③ where', '④ how'],
     answer: '② which play',
     hint: '「今年どの劇を上演するか」という意味の間接疑問文。選択を尋ねる疑問詞を選ぶ。',
     explanation: `【出題意図】
@@ -1116,7 +1139,8 @@ This dance is easy enough for new members to follow.
   {
     id: 'koko_nyushi_eigo3_34',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: Would you like to join our art club this year?\nB: ( )\n\n① No, I don\'t.\n② Yes, I\'d love to.\n③ I like art.\n④ Yes, I would like.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: Would you like to join our art club this year? B: ( )',
+    choices: ['① No, I don\'t.', '② Yes, I\'d love to.', '③ I like art.', '④ Yes, I would like.'],
     answer: '② Yes, I\'d love to.',
     hint: 'Would you like to〜? は「〜しませんか」という誘いの表現。適切な受け方を選ぶ。',
     explanation: `【出題意図】
@@ -1153,7 +1177,8 @@ I'd love to. は「ぜひそうしたい」という前向きな返事の定型�
   {
     id: 'koko_nyushi_eigo3_35',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: How long does it take to get to the gym from the classroom?\nB: ( )\n\n① It\'s about two hundred meters.\n② It takes about five minutes on foot.\n③ You should hurry up.\n④ The gym is very large.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: How long does it take to get to the gym from the classroom? B: ( )',
+    choices: ['① It\'s about two hundred meters.', '② It takes about five minutes on foot.', '③ You should hurry up.', '④ The gym is very large.'],
     answer: '② It takes about five minutes on foot.',
     hint: 'How long does it take to〜? は「〜するのにどのくらいかかりますか」という所要時間を尋ねる表現。',
     explanation: `【出題意図】
@@ -1189,7 +1214,8 @@ on foot：歩いて（= by walking）
   {
     id: 'koko_nyushi_eigo3_36',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: I lost the relay race today, and I feel terrible.\nB: ( ) You gave it your best shot.\n\n① Don\'t worry.\n② That\'s too bad.\n③ I\'m sorry to hear that.\n④ Never mind.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: I lost the relay race today, and I feel terrible. B: ( ) You gave it your best shot.',
+    choices: ['① Don\'t worry.', '② That\'s too bad.', '③ I\'m sorry to hear that.', '④ Never mind.'],
     answer: '① Don\'t worry.',
     hint: '後に続く「You gave it your best shot.（全力を尽くしたじゃないか）」という励ましの言葉に合う返答を選ぶ。',
     explanation: `【出題意図】
@@ -1225,7 +1251,8 @@ B：心配しないで。全力を尽くしたじゃない。
   {
     id: 'koko_nyushi_eigo3_37',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: May I use the club room to practice my speech?\nB: ( )\nA: Thank you very much.\n\n① Sure, go ahead.\n② No, you may not use it.\n③ I don\'t have a club room.\n④ Yes, you may go.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: May I use the club room to practice my speech? B: ( ) A: Thank you very much.',
+    choices: ['① Sure, go ahead.', '② No, you may not use it.', '③ I don\'t have a club room.', '④ Yes, you may go.'],
     answer: '① Sure, go ahead.',
     hint: 'May I〜? は許可を求める表現。自然な許可の与え方を選ぶ。',
     explanation: `【出題意図】
@@ -1265,7 +1292,8 @@ A：どうもありがとうございます。
   {
     id: 'koko_nyushi_eigo3_38',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語を選べ。\n\nI have never ( ) such a difficult piece on the piano before.\n① play  ② played  ③ playing  ④ playing',
+    question: '次の英文の（　）に入る最も適切な語を選べ。  I have never ( ) such a difficult piece on the piano before.',
+    choices: ['① play', '② played', '③ playing', '④ playing'],
     answer: '② played',
     hint: '現在完了形（have/has + 過去分詞）の経験用法。play の過去分詞を選ぶ。',
     explanation: `【出題意図】
@@ -1303,7 +1331,8 @@ play の活用：play（原形）→ played（過去形）→ played（過去分
   {
     id: 'koko_nyushi_eigo3_39',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語を選べ。\n\nThe entrance ceremony will be held ( ) April 8th this year.\n① in  ② at  ③ on  ④ by',
+    question: '次の英文の（　）に入る最も適切な語を選べ。  The entrance ceremony will be held ( ) April 8th this year.',
+    choices: ['① in', '② at', '③ on', '④ by'],
     answer: '③ on',
     hint: '特定の日付には前置詞 on を使う。',
     explanation: `【出題意図】
@@ -1338,7 +1367,8 @@ in：月・年・季節・時間帯（in April / in 2026 / in spring）
   {
     id: 'koko_nyushi_eigo3_40',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語句を選べ。\n\nOur coach allowed us ( ) home early after the long practice.\n① go  ② to go  ③ going  ④ went',
+    question: '次の英文の（　）に入る最も適切な語句を選べ。  Our coach allowed us ( ) home early after the long practice.',
+    choices: ['① go', '② to go', '③ going', '④ went'],
     answer: '② to go',
     hint: 'allow + 人 + to do（人が〜するのを許可する）という構文。',
     explanation: `【出題意図】
@@ -1372,7 +1402,8 @@ allow + 人 + to do = 「人が〜するのを許可する」という重要構�
   {
     id: 'koko_nyushi_eigo3_41',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語句を選べ。\n\nI think ( ) important for club members to support each other.\n① this  ② that  ③ it  ④ what',
+    question: '次の英文の（　）に入る最も適切な語句を選べ。  I think ( ) important for club members to support each other.',
+    choices: ['① this', '② that', '③ it', '④ what'],
     answer: '③ it',
     hint: '形式主語 it を使った「it is + 形容詞 + to 動詞」の構文。',
     explanation: `【出題意図】
@@ -1614,7 +1645,8 @@ popular with / popular among：
     id: 'koko_nyushi_eigo3_47',
     subject: 'eigo',
     passage: `Many students think that joining a club is only about winning games or contests, but there are other important things to learn. First, working with teammates teaches you how to communicate well with different kinds of people. Second, practicing regularly helps you learn patience and discipline, even when you do not see quick results. Third, supporting each other during difficult times builds strong friendships that can last for many years. Of course, winning is exciting, but the friendships and skills you gain through club activities are often more valuable than any trophy. That is why teachers often say that club activities are as important as classroom lessons.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の内容と合っているものを1つ選べ。\n① 部活動の目的は試合や大会に勝つことだけだ。\n② チームメートと協力することはコミュニケーション能力を育てる。\n③ 練習の結果はすぐに出ることが多い。\n④ 友情よりトロフィーの方が価値があると本文は述べている。',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の内容と合っているものを1つ選べ。',
+    choices: ['① 部活動の目的は試合や大会に勝つことだけだ。', '② チームメートと協力することはコミュニケーション能力を育てる。', '③ 練習の結果はすぐに出ることが多い。', '④ 友情よりトロフィーの方が価値があると本文は述べている。'],
     answer: '② チームメートと協力することはコミュニケーション能力を育てる。',
     hint: '本文中の "working with teammates teaches you how to communicate well" という文を探す。',
     explanation: `【出題意図】
@@ -1647,7 +1679,8 @@ popular with / popular among：
     id: 'koko_nyushi_eigo3_48',
     subject: 'eigo',
     passage: `Last spring, a new student named Emi joined our badminton club. At first, she did not know anyone and looked nervous during practice. However, some of the older members noticed this and started talking to her every day. They also invited her to eat lunch with them. After a few weeks, Emi began to smile more and practice with confidence. She later said, "I was so worried about making friends, but everyone here was kind to me from the beginning." This experience taught the whole club an important lesson: small acts of kindness can make a huge difference to someone who feels alone.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文中の下線部 "This experience" が指す内容として最も適切なものを選べ。\n① 恵美が部活で優勝した経験\n② 恵美がバドミントンの技術を上達させた経験\n③ 上級部員たちが恵美に親切に接し、彼女が変わっていった経験\n④ 恵美が新しい学校に転校した経験',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文中の下線部 "This experience" が指す内容として最も適切なものを選べ。',
+    choices: ['① 恵美が部活で優勝した経験', '② 恵美がバドミントンの技術を上達させた経験', '③ 上級部員たちが恵美に親切に接し、彼女が変わっていった経験', '④ 恵美が新しい学校に転校した経験'],
     answer: '③ 上級部員たちが恵美に親切に接し、彼女が変わっていった経験',
     hint: '"This experience" は直前までに描かれてきた、恵美と部員たちのやり取り全体を指す。',
     explanation: `【出題意図】
@@ -1684,7 +1717,8 @@ popular with / popular among：
     id: 'koko_nyushi_eigo3_49',
     subject: 'eigo',
     passage: `Many schools in Japan have started to change the way club activities are managed. In the past, teachers often supervised club practice every day, even on weekends. This caused many teachers to feel extremely tired, and some students felt too much pressure to win. Recently, some schools have begun to introduce outside coaches who are professionals in their sport. These coaches can teach students more effective skills, while teachers get more time to rest and prepare for classes. Students also say that they enjoy practice more when they can focus on both learning and having fun, instead of only trying to win.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の主題として最も適切なものを選べ。\n① 日本の学校の部活動における外部コーチ導入の背景と効果\n② 日本の教員の労働時間に関する統計データ\n③ 生徒がスポーツで勝つことの重要性\n④ 週末に部活動を行うことの是非についての法律\n',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の主題として最も適切なものを選べ。',
+    choices: ['① 日本の学校の部活動における外部コーチ導入の背景と効果', '② 日本の教員の労働時間に関する統計データ', '③ 生徒がスポーツで勝つことの重要性', '④ 週末に部活動を行うことの是非についての法律'],
     answer: '① 日本の学校の部活動における外部コーチ導入の背景と効果',
     hint: '本文全体の流れ（問題提起→変化の紹介→効果→生徒の感想）を把握して、何が最も中心的に述べられているかを考える。',
     explanation: `【出題意図】
@@ -1722,7 +1756,8 @@ popular with / popular among：
     id: 'koko_nyushi_eigo3_50',
     subject: 'eigo',
     passage: `Yuta and Kenji had been best friends since elementary school, and they both joined the soccer club when they entered high school. However, in their second year, only Yuta was chosen for the starting lineup, while Kenji had to stay on the bench. At first, Kenji felt jealous and started to avoid talking to Yuta. Yuta noticed the change and felt worried about their friendship. One day, Yuta asked Kenji directly, "Are you upset with me?" Kenji was surprised but finally admitted his feelings. After they talked honestly, they understood each other better and decided to support each other no matter who was in the starting lineup. Their friendship became even stronger than before.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の内容と合っていないものを1つ選べ。\n① ユウタとケンジは小学校からの親友である。\n② 2年生のとき、ケンジがスタメンに選ばれ、ユウタはベンチだった。\n③ ケンジは最初、嫉妬してユウタを避けていた。\n④ 2人は正直に話し合った後、以前より強い友情を築いた。',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の内容と合っていないものを1つ選べ。',
+    choices: ['① ユウタとケンジは小学校からの親友である。', '② 2年生のとき、ケンジがスタメンに選ばれ、ユウタはベンチだった。', '③ ケンジは最初、嫉妬してユウタを避けていた。', '④ 2人は正直に話し合った後、以前より強い友情を築いた。'],
     answer: '② 2年生のとき、ケンジがスタメンに選ばれ、ユウタはベンチだった。',
     hint: '本文では「ユウタだけがスタメンに選ばれ、ケンジはベンチに残った」と述べている。選択肢②が本文の内容と合っているか確認する。',
     explanation: `【出題意図】

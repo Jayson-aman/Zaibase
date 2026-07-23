@@ -7,7 +7,8 @@ export const kokoNyushiEigo11: Question[] = [
   {
     id: 'koko_nyushi_eigo11_01',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nBy the time the fireworks started, we ( ) in line for three hours.\n① wait  ② waited  ③ have waited  ④ had been waiting',
+    question: '次の（　）内に最も適切な語を選べ。  By the time the fireworks started, we ( ) in line for three hours.',
+    choices: ['① wait', '② waited', '③ have waited', '④ had been waiting'],
     answer: '④ had been waiting',
     hint: '「花火が始まったとき」という過去の時点より前から続いていた動作を表す時制を選ぶ。',
     explanation: `【出題意図】
@@ -38,7 +39,8 @@ export const kokoNyushiEigo11: Question[] = [
   {
     id: 'koko_nyushi_eigo11_02',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nAccording to Japanese tradition, visitors ( ) bow twice, clap twice, and bow once more at a Shinto shrine.\n① can  ② should  ③ will  ④ used to',
+    question: '次の（　）内に最も適切な語を選べ。  According to Japanese tradition, visitors ( ) bow twice, clap twice, and bow once more at a Shinto shrine.',
+    choices: ['① can', '② should', '③ will', '④ used to'],
     answer: '② should',
     hint: '法律ではなく「慣習・作法」として推奨される行動を表す助動詞を選ぶ。',
     explanation: `【出題意図】
@@ -70,7 +72,8 @@ used to：過去に繰り返していたが今はしていない習慣
   {
     id: 'koko_nyushi_eigo11_03',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語形を選べ。\n\nThis ancient scroll ( ) very carefully because it is over five hundred years old.\n① handles  ② is handled  ③ was handled  ④ has handled',
+    question: '次の（　）内に最も適切な語形を選べ。  This ancient scroll ( ) very carefully because it is over five hundred years old.',
+    choices: ['① handles', '② is handled', '③ was handled', '④ has handled'],
     answer: '② is handled',
     hint: '巻物は「扱う」側ではなく「扱われる」側。現在の一般的な事実を表す受動態を選ぶ。',
     explanation: `【出題意図】
@@ -101,7 +104,8 @@ used to：過去に繰り返していたが今はしていない習慣
   {
     id: 'koko_nyushi_eigo11_04',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nKinkaku-ji is one of ( ) temples in Kyoto.\n① famous  ② more famous  ③ the most famous  ④ most famous',
+    question: '次の（　）内に最も適切な語を選べ。  Kinkaku-ji is one of ( ) temples in Kyoto.',
+    choices: ['① famous', '② more famous', '③ the most famous', '④ most famous'],
     answer: '③ the most famous',
     hint: '「one of ＋最上級＋複数名詞」という定型表現。最上級には the が必要。',
     explanation: `【出題意図】
@@ -133,7 +137,8 @@ one of the + 最上級 + 複数名詞：「最も〜な…のうちの1つ」
   {
     id: 'koko_nyushi_eigo11_05',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nMany tourists visit Nara ( ) the ancient temples and feed the deer.\n① for see  ② so see  ③ to see  ④ seeing',
+    question: '次の（　）内に最も適切な語を選べ。  Many tourists visit Nara ( ) the ancient temples and feed the deer.',
+    choices: ['① for see', '② so see', '③ to see', '④ seeing'],
     answer: '③ to see',
     hint: '「〜するために」という目的を表す不定詞の副詞的用法。',
     explanation: `【出題意図】
@@ -164,7 +169,8 @@ one of the + 最上級 + 複数名詞：「最も〜な…のうちの1つ」
   {
     id: 'koko_nyushi_eigo11_06',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe craftsman finished ( ) the lacquerware by hand, just as his ancestors had done.\n① paint  ② to paint  ③ painting  ④ painted',
+    question: '次の（　）内に最も適切な語を選べ。  The craftsman finished ( ) the lacquerware by hand, just as his ancestors had done.',
+    choices: ['① paint', '② to paint', '③ painting', '④ painted'],
     answer: '③ painting',
     hint: 'finish の後ろには動名詞（〜ing）が来る。',
     explanation: `【出題意図】
@@ -195,7 +201,8 @@ finish（終える）、enjoy（楽しむ）、stop（やめる）、practice（
   {
     id: 'koko_nyushi_eigo11_07',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nBy 2030, this shrine ( ) for exactly one thousand years.\n① will stand  ② will have stood  ③ has stood  ④ stood',
+    question: '次の（　）内に最も適切な語を選べ。  By 2030, this shrine ( ) for exactly one thousand years.',
+    choices: ['① will stand', '② will have stood', '③ has stood', '④ stood'],
     answer: '② will have stood',
     hint: '「2030年までには」という未来の時点での継続の完了を表す時制を選ぶ。',
     explanation: `【出題意図】
@@ -226,7 +233,8 @@ finish（終える）、enjoy（楽しむ）、stop（やめる）、practice（
   {
     id: 'koko_nyushi_eigo11_08',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nIf the weather ( ) fine on the day of the festival, more people will come to see the parade.\n① is  ② will be  ③ was  ④ has been',
+    question: '次の（　）内に最も適切な語を選べ。  If the weather ( ) fine on the day of the festival, more people will come to see the parade.',
+    choices: ['① is', '② will be', '③ was', '④ has been'],
     answer: '① is',
     hint: '条件を表す if 節の中では、未来のことでも現在形を使う。',
     explanation: `【出題意図】
@@ -257,7 +265,8 @@ if（もし〜なら）/ when（〜するとき）/ before（〜する前に）/
   {
     id: 'koko_nyushi_eigo11_09',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe castle ( ) by fire during a war in the sixteenth century, and it was later rebuilt.\n① destroys  ② was destroyed  ③ destroyed  ④ has destroyed',
+    question: '次の（　）内に最も適切な語を選べ。  The castle ( ) by fire during a war in the sixteenth century, and it was later rebuilt.',
+    choices: ['① destroys', '② was destroyed', '③ destroyed', '④ has destroyed'],
     answer: '② was destroyed',
     hint: '城は「破壊する」側ではなく「破壊される」側。過去の出来事を表す受動態を選ぶ。',
     explanation: `【出題意図】
@@ -288,7 +297,8 @@ by〜（〜によって）で原因や行為者を示すこともできる（by 
   {
     id: 'koko_nyushi_eigo11_10',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThis shrine is ( ) than the one we visited yesterday.\n① old  ② more old  ③ older  ④ oldest',
+    question: '次の（　）内に最も適切な語を選べ。  This shrine is ( ) than the one we visited yesterday.',
+    choices: ['① old', '② more old', '③ older', '④ oldest'],
     answer: '③ older',
     hint: '2つのものを比べるときは比較級（-er）を使う。than が手がかり。',
     explanation: `【出題意図】
@@ -320,7 +330,8 @@ than があれば比較級が必要。old は1音節の形容詞なので -er �
   {
     id: 'koko_nyushi_eigo11_11',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nShe wants ( ) a traditional dancer when she grows up.\n① be  ② being  ③ to be  ④ to being',
+    question: '次の（　）内に最も適切な語を選べ。  She wants ( ) a traditional dancer when she grows up.',
+    choices: ['① be', '② being', '③ to be', '④ to being'],
     answer: '③ to be',
     hint: 'want の後ろに来る不定詞の名詞的用法（〜したい）を選ぶ。',
     explanation: `【出題意図】
@@ -351,7 +362,8 @@ want to be〜：〜になりたい（職業や役割を表すのに頻出）
   {
     id: 'koko_nyushi_eigo11_12',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\n( ) folk songs at the summer festival is one of my happiest childhood memories.\n① Sing  ② To sing  ③ Singing  ④ Sung',
+    question: '次の（　）内に最も適切な語を選べ。  ( ) folk songs at the summer festival is one of my happiest childhood memories.',
+    choices: ['① Sing', '② To sing', '③ Singing', '④ Sung'],
     answer: '③ Singing',
     hint: '文全体の主語になる形を選ぶ。動名詞は主語になれる。',
     explanation: `【出題意図】
@@ -386,7 +398,8 @@ want to be〜：〜になりたい（職業や役割を表すのに頻出）
   {
     id: 'koko_nyushi_eigo11_13',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な前置詞を選べ。\n\nKyoto is famous ( ) its beautiful shrines and traditional festivals.\n① of  ② for  ③ with  ④ at',
+    question: '次の（　）内に最も適切な前置詞を選べ。  Kyoto is famous ( ) its beautiful shrines and traditional festivals.',
+    choices: ['① of', '② for', '③ with', '④ at'],
     answer: '② for',
     hint: 'be famous の後ろに来る前置詞を選ぶ。',
     explanation: `【出題意図】
@@ -419,7 +432,8 @@ be famous for〜 は「〜で有名だ」という意味のイディオム。前
   {
     id: 'koko_nyushi_eigo11_14',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nEvery summer, hundreds of local people ( ) part in the traditional dance parade.\n① make  ② have  ③ take  ④ do',
+    question: '次の（　）内に最も適切な語を選べ。  Every summer, hundreds of local people ( ) part in the traditional dance parade.',
+    choices: ['① make', '② have', '③ take', '④ do'],
     answer: '③ take',
     hint: 'take part in〜で「〜に参加する」という熟語。',
     explanation: `【出題意図】
@@ -452,7 +466,8 @@ take を含む頻出熟語：
   {
     id: 'koko_nyushi_eigo11_15',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe children are looking forward ( ) the New Year fireworks tonight.\n① at  ② to  ③ for  ④ on',
+    question: '次の（　）内に最も適切な語を選べ。  The children are looking forward ( ) the New Year fireworks tonight.',
+    choices: ['① at', '② to', '③ for', '④ on'],
     answer: '② to',
     hint: 'look forward to〜 は「〜を楽しみにする」という意味の熟語。',
     explanation: `【出題意図】
@@ -483,7 +498,8 @@ look forward to + 名詞／動名詞：〜を楽しみにする
   {
     id: 'koko_nyushi_eigo11_16',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThis mountain village is known ( ) the birthplace of a famous samurai.\n① of  ② for  ③ as  ④ to',
+    question: '次の（　）内に最も適切な語を選べ。  This mountain village is known ( ) the birthplace of a famous samurai.',
+    choices: ['① of', '② for', '③ as', '④ to'],
     answer: '③ as',
     hint: '「〜として知られている」という「その正体・立場」を示す表現を選ぶ。',
     explanation: `【出題意図】
@@ -516,7 +532,8 @@ be known to〜：〜に知られている（対象となる人）
   {
     id: 'koko_nyushi_eigo11_17',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThis craft has been handed ( ) from generation to generation for over four hundred years.\n① down  ② up  ③ over  ④ off',
+    question: '次の（　）内に最も適切な語を選べ。  This craft has been handed ( ) from generation to generation for over four hundred years.',
+    choices: ['① down', '② up', '③ over', '④ off'],
     answer: '① down',
     hint: 'hand down〜 は「〜を代々伝える、受け継ぐ」という意味の句動詞。',
     explanation: `【出題意図】
@@ -547,7 +564,8 @@ from generation to generation：世代から世代へ、代々
   {
     id: 'koko_nyushi_eigo11_18',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe tea ceremony began ( ) the middle of the afternoon, when the light was soft and warm.\n① at  ② on  ③ in  ④ by',
+    question: '次の（　）内に最も適切な語を選べ。  The tea ceremony began ( ) the middle of the afternoon, when the light was soft and warm.',
+    choices: ['① at', '② on', '③ in', '④ by'],
     answer: '③ in',
     hint: '「〜の真ん中に」という意味の熟語 in the middle of〜 を思い出す。',
     explanation: `【出題意図】
@@ -579,7 +597,8 @@ in the middle of〜：〜の真ん中に、〜の途中で
   {
     id: 'koko_nyushi_eigo11_19',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThis shrine ( ) back to the eighth century, making it one of the oldest in the region.\n① dates  ② makes  ③ takes  ④ turns',
+    question: '次の（　）内に最も適切な語を選べ。  This shrine ( ) back to the eighth century, making it one of the oldest in the region.',
+    choices: ['① dates', '② makes', '③ takes', '④ turns'],
     answer: '① dates',
     hint: 'date back to〜 は「（時代が）〜にさかのぼる」という意味の熟語。',
     explanation: `【出題意図】
@@ -610,7 +629,8 @@ date back to〜：（起源・歴史が）〜にさかのぼる（= go back to�
   {
     id: 'koko_nyushi_eigo11_20',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThis historical drama is ( ) on real events that happened during the war.\n① based  ② interested  ③ known  ④ filled',
+    question: '次の（　）内に最も適切な語を選べ。  This historical drama is ( ) on real events that happened during the war.',
+    choices: ['① based', '② interested', '③ known', '④ filled'],
     answer: '① based',
     hint: '「〜に基づいている」という意味の熟語 be based on〜 を思い出す。',
     explanation: `【出題意図】
@@ -646,7 +666,8 @@ be interested in〜／be known for〜・as〜／be filled with〜
   {
     id: 'koko_nyushi_eigo11_21',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe woman ( ) is wearing a kimono in that photo is my grandmother.\n① who  ② which  ③ whom  ④ whose',
+    question: '次の（　）内に最も適切な語を選べ。  The woman ( ) is wearing a kimono in that photo is my grandmother.',
+    choices: ['① who', '② which', '③ whom', '④ whose'],
     answer: '① who',
     hint: '先行詞は「人」、関係代名詞節内での役割は「主語」。',
     explanation: `【出題意図】
@@ -679,7 +700,8 @@ be interested in〜／be known for〜・as〜／be filled with〜
   {
     id: 'koko_nyushi_eigo11_22',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe festival ( ) we saw last summer is held every August.\n① who  ② which  ③ whom  ④ where',
+    question: '次の（　）内に最も適切な語を選べ。  The festival ( ) we saw last summer is held every August.',
+    choices: ['① who', '② which', '③ whom', '④ where'],
     answer: '② which',
     hint: '先行詞は「物・行事（festival）」。関係代名詞節内で saw の目的語になっている。',
     explanation: `【出題意図】
@@ -712,7 +734,8 @@ which は省略可（that に置き換え可）：The festival (that) we saw las
   {
     id: 'koko_nyushi_eigo11_23',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nKyoto is the city ( ) many old temples still stand.\n① which  ② who  ③ where  ④ when',
+    question: '次の（　）内に最も適切な語を選べ。  Kyoto is the city ( ) many old temples still stand.',
+    choices: ['① which', '② who', '③ where', '④ when'],
     answer: '③ where',
     hint: '先行詞は「場所（city）」で、関係副詞を使う。',
     explanation: `【出題意図】
@@ -811,7 +834,8 @@ whose の使い方：先行詞（人・物）の所有格を表す
   {
     id: 'koko_nyushi_eigo11_26',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nCould you tell me ( ) this festival is held every autumn?\n① why  ② which  ③ where  ④ who',
+    question: '次の（　）内に最も適切な語を選べ。  Could you tell me ( ) this festival is held every autumn?',
+    choices: ['① why', '② which', '③ where', '④ who'],
     answer: '① why',
     hint: '「なぜ毎年秋に行われるのか」という理由を尋ねる間接疑問文。',
     explanation: `【出題意図】
@@ -1066,7 +1090,8 @@ enough to構文に「for＋人」が加わった形の語順を問う問題。�
   {
     id: 'koko_nyushi_eigo11_34',
     subject: 'eigo',
-    question: '次の対話文の（　）に最も適切なものを選べ。\n\nA: Have you ever seen a Noh performance?\nB: ( )\n① Yes, I have. It was fascinating.  ② Yes, I do.  ③ No, I don\'t have.  ④ Yes, I saw ever.',
+    question: '次の対話文の（　）に最も適切なものを選べ。  A: Have you ever seen a Noh performance? B: ( )',
+    choices: ['① Yes, I have. It was fascinating.', '② Yes, I do.', '③ No, I don\'t have.', '④ Yes, I saw ever.'],
     answer: '① Yes, I have. It was fascinating.',
     hint: '現在完了形の疑問文（経験）には現在完了形で答える。',
     explanation: `【出題意図】
@@ -1132,7 +1157,8 @@ How long has/have + 主語 + 過去分詞〜?：「どのくらいの間〜し�
   {
     id: 'koko_nyushi_eigo11_36',
     subject: 'eigo',
-    question: '次の対話文の（　）に最も適切なものを選べ。\n\nA: May I take a photograph of this suit of armor?\nB: ( )\nA: Thank you.\n① Of course, please do.  ② No, you may not go.  ③ I don\'t have a camera.  ④ Yes, you may go.',
+    question: '次の対話文の（　）に最も適切なものを選べ。  A: May I take a photograph of this suit of armor? B: ( ) A: Thank you.',
+    choices: ['① Of course, please do.', '② No, you may not go.', '③ I don\'t have a camera.', '④ Yes, you may go.'],
     answer: '① Of course, please do.',
     hint: 'May I〜? は許可を求める表現。自然な許可の与え方を選ぶ。',
     explanation: `【出題意図】
@@ -1200,7 +1226,8 @@ What time does/do + 主語 + 動詞〜?：開始・終了の時刻を尋ねる
   {
     id: 'koko_nyushi_eigo11_38',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語を選べ。\n\nThis traditional festival ( ) held every year since the Edo period.\n① is  ② was  ③ has been  ④ had been',
+    question: '次の英文の（　）に入る最も適切な語を選べ。  This traditional festival ( ) held every year since the Edo period.',
+    choices: ['① is', '② was', '③ has been', '④ had been'],
     answer: '③ has been',
     hint: '「江戸時代から」という過去から現在まで続いている状態を表す現在完了の受動態を選ぶ。',
     explanation: `【出題意図】
@@ -1231,7 +1258,8 @@ since〜（〜以来）と相性がよい継続表現。
   {
     id: 'koko_nyushi_eigo11_39',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語を選べ。\n\nThe shrine festival takes place ( ) the first weekend of October.\n① in  ② at  ③ on  ④ by',
+    question: '次の英文の（　）に入る最も適切な語を選べ。  The shrine festival takes place ( ) the first weekend of October.',
+    choices: ['① in', '② at', '③ on', '④ by'],
     answer: '③ on',
     hint: '特定の日・週末には前置詞 on を使う。',
     explanation: `【出題意図】
@@ -1262,7 +1290,8 @@ at：時刻・時点／on：曜日・特定の日／in：月・年・季節・�
   {
     id: 'koko_nyushi_eigo11_40',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語句を選べ。\n\nThe elders asked the young volunteers ( ) the shrine gate before the ceremony.\n① clean  ② to clean  ③ cleaning  ④ cleaned',
+    question: '次の英文の（　）に入る最も適切な語句を選べ。  The elders asked the young volunteers ( ) the shrine gate before the ceremony.',
+    choices: ['① clean', '② to clean', '③ cleaning', '④ cleaned'],
     answer: '② to clean',
     hint: 'ask + 人 + to do（人に〜するよう頼む）という構文。',
     explanation: `【出題意図】
@@ -1295,7 +1324,8 @@ ask + 人 + to do = 「人に〜するよう頼む」という重要構文。
   {
     id: 'koko_nyushi_eigo11_41',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語句を選べ。\n\nI think ( ) important to preserve traditional festivals for future generations.\n① this  ② that  ③ it  ④ what',
+    question: '次の英文の（　）に入る最も適切な語句を選べ。  I think ( ) important to preserve traditional festivals for future generations.',
+    choices: ['① this', '② that', '③ it', '④ what'],
     answer: '③ it',
     hint: '形式主語 it を使った「it is + 形容詞 + to 動詞」の構文。',
     explanation: `【出題意図】
@@ -1506,7 +1536,8 @@ popular with / popular among：with は特定の人、among はグループの�
     id: 'koko_nyushi_eigo11_47',
     subject: 'eigo',
     passage: `The Gion Festival in Kyoto is one of the most famous festivals in Japan. It has a history of more than one thousand years. The festival began as a religious ceremony to stop a terrible disease that was spreading through the city. People prayed to the gods and carried tall, decorated floats through the streets. Today, these floats are called yamaboko, and some of them are so large that it takes many people to pull them. Every July, thousands of visitors come to Kyoto to see the floats and enjoy traditional music. Although the festival has changed over the centuries, its purpose of bringing people together and asking for good health remains the same.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の内容と合っているものを1つ選べ。\n① 祇園祭は始まってからまだ100年も経っていない。\n② 祇園祭はもともと疫病を鎮めるための宗教的な行事として始まった。\n③ 山鉾と呼ばれる山車は、誰の助けもなく1人で引くことができるほど軽い。\n④ 祇園祭は江戸時代に入って初めて始まった祭りである。',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の内容と合っているものを1つ選べ。',
+    choices: ['① 祇園祭は始まってからまだ100年も経っていない。', '② 祇園祭はもともと疫病を鎮めるための宗教的な行事として始まった。', '③ 山鉾と呼ばれる山車は、誰の助けもなく1人で引くことができるほど軽い。', '④ 祇園祭は江戸時代に入って初めて始まった祭りである。'],
     answer: '② 祇園祭はもともと疫病を鎮めるための宗教的な行事として始まった。',
     hint: '本文中の "The festival began as a religious ceremony to stop a terrible disease" という文を探す。',
     explanation: `【出題意図】
@@ -1538,7 +1569,8 @@ popular with / popular among：with は特定の人、among はグループの�
     id: 'koko_nyushi_eigo11_48',
     subject: 'eigo',
     passage: `Japanese lacquerware, called shikki, is made through a long and careful process. First, craftsmen collect sap from lacquer trees and let it dry naturally. Next, they apply many thin layers of the lacquer to a wooden base, letting each layer dry completely before adding the next one. This process can take several months or even years for a single piece. Finally, skilled artists add beautiful designs using gold or silver powder. Because these steps require great patience and skill, fewer young people are choosing to become lacquerware craftsmen today. Some workshops have started teaching classes to keep this traditional art alive for future generations.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文中の下線部 "these steps" が指す内容として最も適切なものを選べ。\n① 樹液を集めて自然乾燥させる作業だけ\n② 樹液集め・薄い漆の重ね塗り・金銀粉での装飾までの、漆器づくり全体の一連の工程\n③ 若者が漆器職人になることを選ばない理由\n④ 漆の木を育てるための方法',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文中の下線部 "these steps" が指す内容として最も適切なものを選べ。',
+    choices: ['① 樹液を集めて自然乾燥させる作業だけ', '② 樹液集め・薄い漆の重ね塗り・金銀粉での装飾までの、漆器づくり全体の一連の工程', '③ 若者が漆器職人になることを選ばない理由', '④ 漆の木を育てるための方法'],
     answer: '② 樹液集め・薄い漆の重ね塗り・金銀粉での装飾までの、漆器づくり全体の一連の工程',
     hint: '"these steps" は直前で説明された "First〜, Next〜, Finally〜" という一連の工程全体を指す。',
     explanation: `【出題意図】
@@ -1572,7 +1604,8 @@ popular with / popular among：with は特定の人、among はグループの�
     id: 'koko_nyushi_eigo11_49',
     subject: 'eigo',
     passage: `In many small towns across Japan, traditional festivals are struggling to survive because the population is getting older and younger people are moving to big cities. However, some communities have found a new way to keep their festivals alive. They have started teaching taiko drumming and traditional dance to children in local schools. Some towns have even created special events where young people design their own festival costumes. These efforts have brought new energy to old traditions. Local leaders say that when children feel proud of their hometown's culture, they are more likely to stay involved even after they grow up. Many hope this will help protect Japan's traditional festivals for many more generations.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の主題として最も適切なものを選べ。\n① 日本の人口減少についての統計データ\n② 地方の伝統的な祭りを次の世代へつなぐための地域の新しい取り組み\n③ 都会で働く若者の生活の大変さ\n④ 学校の音楽の授業内容についての報告',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の主題として最も適切なものを選べ。',
+    choices: ['① 日本の人口減少についての統計データ', '② 地方の伝統的な祭りを次の世代へつなぐための地域の新しい取り組み', '③ 都会で働く若者の生活の大変さ', '④ 学校の音楽の授業内容についての報告'],
     answer: '② 地方の伝統的な祭りを次の世代へつなぐための地域の新しい取り組み',
     hint: '本文全体の流れ（問題提起→地域の取り組み→効果→地元指導者の考え）を把握して、何が最も中心的に述べられているかを考える。',
     explanation: `【出題意図】
@@ -1609,7 +1642,8 @@ popular with / popular among：with は特定の人、among はグループの�
     id: 'koko_nyushi_eigo11_50',
     subject: 'eigo',
     passage: `Many castles in Japan were built during a time of war, when local lords needed strong buildings to protect their land. However, most castles standing today were not used for battles. Instead, many of them were destroyed by fire, earthquakes, or war, and later rebuilt using concrete in the twentieth century. A few castles, though, still have their original wooden structures from hundreds of years ago, and these are especially valuable to historians. Today, castles attract millions of tourists every year, and local governments spend large amounts of money to preserve them. For many visitors, climbing to the top floor of a castle offers not only a beautiful view but also a chance to imagine what life was like centuries ago.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の内容と合っていないものを1つ選べ。\n① 現在残っている城の多くは、実際には戦闘で使われたことがない。\n② いくつかの城は、何百年も前の木造の建物がそのまま残っている。\n③ すべての城は、一度も建て替えられることなく現在の姿を保っている。\n④ 城は現在、多くの観光客を集めている。',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の内容と合っていないものを1つ選べ。',
+    choices: ['① 現在残っている城の多くは、実際には戦闘で使われたことがない。', '② いくつかの城は、何百年も前の木造の建物がそのまま残っている。', '③ すべての城は、一度も建て替えられることなく現在の姿を保っている。', '④ 城は現在、多くの観光客を集めている。'],
     answer: '③ すべての城は、一度も建て替えられることなく現在の姿を保っている。',
     hint: '本文には「多くの城は火事・地震・戦争で破壊され、20世紀にコンクリートで再建された」とある。',
     explanation: `【出題意図】

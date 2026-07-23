@@ -7,7 +7,8 @@ export const kokoNyushiEigo50: Question[] = [
   {
     id: 'koko_nyushi_eigo_01',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nShe ( ) the piano for three hours when I arrived.\n① plays  ② played  ③ has played  ④ had been playing',
+    question: '次の（　）内に最も適切な語を選べ。  She ( ) the piano for three hours when I arrived.',
+    choices: ['① plays', '② played', '③ has played', '④ had been playing'],
     answer: '④ had been playing',
     hint: '「私が着いたとき」という過去の時点より前から続いていた動作を表す時制を選ぶ。',
     explanation: `【出題意図】
@@ -39,7 +40,8 @@ export const kokoNyushiEigo50: Question[] = [
   {
     id: 'koko_nyushi_eigo_02',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nYou ( ) finish the report by tomorrow.\n① must  ② should  ③ have to  ④ need',
+    question: '次の（　）内に最も適切な語を選べ。  You ( ) finish the report by tomorrow.',
+    choices: ['① must', '② should', '③ have to', '④ need'],
     answer: '③ have to',
     hint: '「明日までに」という締め切りがある場合、最も強い義務・必要性を表す表現を選ぶ。',
     explanation: `【出題意図】
@@ -72,7 +74,8 @@ should：義務より軽い推奨（「〜した方がいい」）
   {
     id: 'koko_nyushi_eigo_03',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語形を選べ。\n\nThis book ( ) by many students every year.\n① reads  ② is read  ③ was read  ④ has read',
+    question: '次の（　）内に最も適切な語形を選べ。  This book ( ) by many students every year.',
+    choices: ['① reads', '② is read', '③ was read', '④ has read'],
     answer: '② is read',
     hint: '「毎年〜される」という受動態の現在形を探す。',
     explanation: `【出題意図】
@@ -108,7 +111,8 @@ should：義務より軽い推奨（「〜した方がいい」）
   {
     id: 'koko_nyushi_eigo_04',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nMt. Fuji is ( ) mountain in Japan.\n① high  ② higher  ③ the highest  ④ most high',
+    question: '次の（　）内に最も適切な語を選べ。  Mt. Fuji is ( ) mountain in Japan.',
+    choices: ['① high', '② higher', '③ the highest', '④ most high'],
     answer: '③ the highest',
     hint: '「日本で一番〜」は最上級。最上級の前には the が必要。',
     explanation: `【出題意図】
@@ -144,7 +148,8 @@ should：義務より軽い推奨（「〜した方がいい」）
   {
     id: 'koko_nyushi_eigo_05',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nI went to the library ( ) study English.\n① for  ② so  ③ to  ④ in order',
+    question: '次の（　）内に最も適切な語を選べ。  I went to the library ( ) study English.',
+    choices: ['① for', '② so', '③ to', '④ in order'],
     answer: '③ to',
     hint: '「〜するために」という目的を表す不定詞の副詞的用法。',
     explanation: `【出題意図】
@@ -178,7 +183,8 @@ should：義務より軽い推奨（「〜した方がいい」）
   {
     id: 'koko_nyushi_eigo_06',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nHe enjoyed ( ) soccer with his friends.\n① play  ② to play  ③ playing  ④ played',
+    question: '次の（　）内に最も適切な語を選べ。  He enjoyed ( ) soccer with his friends.',
+    choices: ['① play', '② to play', '③ playing', '④ played'],
     answer: '③ playing',
     hint: 'enjoy の後ろには動名詞（〜ing）が来る。',
     explanation: `【出題意図】
@@ -215,7 +221,8 @@ like / love / start / begin / continue
   {
     id: 'koko_nyushi_eigo_07',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nI ( ) here for five years by next March.\n① will live  ② have lived  ③ will have lived  ④ lived',
+    question: '次の（　）内に最も適切な語を選べ。  I ( ) here for five years by next March.',
+    choices: ['① will live', '② have lived', '③ will have lived', '④ lived'],
     answer: '③ will have lived',
     hint: '「来年3月までには」という未来の時点での完了を表す時制を選ぶ。',
     explanation: `【出題意図】
@@ -249,7 +256,8 @@ like / love / start / begin / continue
   {
     id: 'koko_nyushi_eigo_08',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nIf it ( ) tomorrow, we will cancel the picnic.\n① rains  ② will rain  ③ rained  ④ is raining',
+    question: '次の（　）内に最も適切な語を選べ。  If it ( ) tomorrow, we will cancel the picnic.',
+    choices: ['① rains', '② will rain', '③ rained', '④ is raining'],
     answer: '① rains',
     hint: '条件を表す if 節の中では、未来のことでも現在形を使う。',
     explanation: `【出題意図】
@@ -283,7 +291,8 @@ if（もし〜なら）/ when（〜するとき）/ until（〜まで）/ as soo
   {
     id: 'koko_nyushi_eigo_09',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThis letter ( ) in French.\n① writes  ② is written  ③ was writing  ④ has write',
+    question: '次の（　）内に最も適切な語を選べ。  This letter ( ) in French.',
+    choices: ['① writes', '② is written', '③ was writing', '④ has write'],
     answer: '② is written',
     hint: '手紙は「書かれている」状態にある。受動態の現在形を選ぶ。',
     explanation: `【出題意図】
@@ -315,7 +324,8 @@ write の変化：write → wrote → written（過去分詞）
   {
     id: 'koko_nyushi_eigo_10',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nShe is ( ) than her sister.\n① tall  ② more tall  ③ taller  ④ tallest',
+    question: '次の（　）内に最も適切な語を選べ。  She is ( ) than her sister.',
+    choices: ['① tall', '② more tall', '③ taller', '④ tallest'],
     answer: '③ taller',
     hint: '2者を比べるときは比較級（-er）を使う。than が手がかり。',
     explanation: `【出題意図】
@@ -349,7 +359,8 @@ than があれば比較級が必要。tall は1音節の形容詞なので -er �
   {
     id: 'koko_nyushi_eigo_11',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nI want ( ) a doctor in the future.\n① be  ② being  ③ to be  ④ to being',
+    question: '次の（　）内に最も適切な語を選べ。  I want ( ) a doctor in the future.',
+    choices: ['① be', '② being', '③ to be', '④ to being'],
     answer: '③ to be',
     hint: 'want の後ろに来る不定詞の名詞的用法（〜したい）を選ぶ。',
     explanation: `【出題意図】
@@ -383,7 +394,8 @@ want to be〜：〜になりたい（職業や状態を表すのに頻出）
   {
     id: 'koko_nyushi_eigo_12',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nStopping ( ) is important for our health.\n① smoke  ② to smoke  ③ smoking  ④ smoked',
+    question: '次の（　）内に最も適切な語を選べ。  Stopping ( ) is important for our health.',
+    choices: ['① smoke', '② to smoke', '③ smoking', '④ smoked'],
     answer: '③ smoking',
     hint: 'stop の後ろの目的語と文の主語になる動名詞を見分ける。',
     explanation: `【出題意図】
@@ -421,7 +433,8 @@ stop + 不定詞：〜するために立ち止まる（stop to smoke = 煙草を
   {
     id: 'koko_nyushi_eigo_13',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な前置詞を選べ。\n\nShe has been interested ( ) music since childhood.\n① at  ② with  ③ in  ④ about',
+    question: '次の（　）内に最も適切な前置詞を選べ。  She has been interested ( ) music since childhood.',
+    choices: ['① at', '② with', '③ in', '④ about'],
     answer: '③ in',
     hint: 'be interested の後ろに来る前置詞を選ぶ。',
     explanation: `【出題意図】
@@ -459,7 +472,8 @@ be interested in〜 は「〜に興味がある」という意味のイディオ
   {
     id: 'koko_nyushi_eigo_14',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nPlease ( ) care of my dog while I am away.\n① make  ② have  ③ take  ④ give',
+    question: '次の（　）内に最も適切な語を選べ。  Please ( ) care of my dog while I am away.',
+    choices: ['① make', '② have', '③ take', '④ give'],
     answer: '③ take',
     hint: 'take care of〜 で「〜の世話をする」という熟語。',
     explanation: `【出題意図】
@@ -495,7 +509,8 @@ take を含む頻出熟語：
   {
     id: 'koko_nyushi_eigo_15',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nI am looking ( ) my glasses. Have you seen them?\n① after  ② for  ③ at  ④ into',
+    question: '次の（　）内に最も適切な語を選べ。  I am looking ( ) my glasses. Have you seen them?',
+    choices: ['① after', '② for', '③ at', '④ into'],
     answer: '② for',
     hint: 'look for〜 は「〜を探す」という意味の熟語。',
     explanation: `【出題意図】
@@ -531,7 +546,8 @@ look の句動詞まとめ（入試最頻出）：
   {
     id: 'koko_nyushi_eigo_16',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nWe arrived ( ) Osaka at noon.\n① to  ② at  ③ in  ④ on',
+    question: '次の（　）内に最も適切な語を選べ。  We arrived ( ) Osaka at noon.',
+    choices: ['① to', '② at', '③ in', '④ on'],
     answer: '③ in',
     hint: 'arrive の後ろの前置詞は場所の大きさによって at か in を使い分ける。',
     explanation: `【出題意図】
@@ -568,7 +584,8 @@ get to Osaka / get to the station
   {
     id: 'koko_nyushi_eigo_17',
     subject: 'eigo',
-    question: '次の文と意味が最も近いものを選べ。\n\nShe is able to speak three languages.\n① She can speak three languages.\n② She should speak three languages.\n③ She must speak three languages.\n④ She will speak three languages.',
+    question: '次の文と意味が最も近いものを選べ。  She is able to speak three languages.',
+    choices: ['① She can speak three languages.', '② She should speak three languages.', '③ She must speak three languages.', '④ She will speak three languages.'],
     answer: '① She can speak three languages.',
     hint: 'be able to = can（〜できる・能力）の言い換え。',
     explanation: `【出題意図】
@@ -604,7 +621,8 @@ can には過去形 could があるが、be able to は全時制で使える：
   {
     id: 'koko_nyushi_eigo_18',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nHe is different ( ) his brother in personality.\n① from  ② with  ③ to  ④ than',
+    question: '次の（　）内に最も適切な語を選べ。  He is different ( ) his brother in personality.',
+    choices: ['① from', '② with', '③ to', '④ than'],
     answer: '① from',
     hint: 'be different から来る前置詞を選ぶ。',
     explanation: `【出題意図】
@@ -639,7 +657,8 @@ be different from〜 は「〜と異なる、〜とは違う」という意味�
   {
     id: 'koko_nyushi_eigo_19',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nI ( ) up early every morning to exercise.\n① wake  ② get  ③ rise  ④ stand',
+    question: '次の（　）内に最も適切な語を選べ。  I ( ) up early every morning to exercise.',
+    choices: ['① wake', '② get', '③ rise', '④ stand'],
     answer: '② get',
     hint: '「朝起きる」という日常動作に最もよく使われる句動詞を選ぶ。',
     explanation: `【出題意図】
@@ -674,7 +693,8 @@ be different from〜 は「〜と異なる、〜とは違う」という意味�
   {
     id: 'koko_nyushi_eigo_20',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe train ( ) at 8:30 every morning.\n① leaves  ② is left  ③ leave  ④ has left',
+    question: '次の（　）内に最も適切な語を選べ。  The train ( ) at 8:30 every morning.',
+    choices: ['① leaves', '② is left', '③ leave', '④ has left'],
     answer: '① leaves',
     hint: '主語が3人称単数・習慣的な事実を表す現在形を選ぶ。',
     explanation: `【出題意図】
@@ -711,7 +731,8 @@ be different from〜 は「〜と異なる、〜とは違う」という意味�
   {
     id: 'koko_nyushi_eigo_21',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe girl ( ) is singing on the stage is my cousin.\n① who  ② which  ③ whom  ④ whose',
+    question: '次の（　）内に最も適切な語を選べ。  The girl ( ) is singing on the stage is my cousin.',
+    choices: ['① who', '② which', '③ whom', '④ whose'],
     answer: '① who',
     hint: '先行詞は「人」、関係代名詞節内での役割は「主語」。',
     explanation: `【出題意図】
@@ -747,7 +768,8 @@ that は who / which の代わりに使えるが、whose や前置詞の後ろ�
   {
     id: 'koko_nyushi_eigo_22',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThis is the book ( ) I bought yesterday.\n① who  ② which  ③ whom  ④ where',
+    question: '次の（　）内に最も適切な語を選べ。  This is the book ( ) I bought yesterday.',
+    choices: ['① who', '② which', '③ whom', '④ where'],
     answer: '② which',
     hint: '先行詞は「物（本）」。関係代名詞節内で bought の目的語になっている。',
     explanation: `【出題意図】
@@ -785,7 +807,8 @@ which は省略可（that に置き換え可）：This is the book (that) I boug
   {
     id: 'koko_nyushi_eigo_23',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nI know the city ( ) she was born.\n① which  ② who  ③ where  ④ when',
+    question: '次の（　）内に最も適切な語を選べ。  I know the city ( ) she was born.',
+    choices: ['① which', '② who', '③ where', '④ when'],
     answer: '③ where',
     hint: '先行詞は「場所（city）」で、関係副詞を使う。',
     explanation: `【出題意図】
@@ -898,7 +921,8 @@ whose 節の構造：
   {
     id: 'koko_nyushi_eigo_26',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nCould you tell me ( ) the next bus comes?\n① when  ② which  ③ where  ④ how',
+    question: '次の（　）内に最も適切な語を選べ。  Could you tell me ( ) the next bus comes?',
+    choices: ['① when', '② which', '③ where', '④ how'],
     answer: '① when',
     hint: '「次のバスがいつ来るか」という意味の間接疑問文。時を表す疑問詞を選ぶ。',
     explanation: `【出題意図】
@@ -1198,7 +1222,8 @@ This problem is easy enough for all students to understand.
   {
     id: 'koko_nyushi_eigo_34',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: Would you like some more tea?\nB: ( )\n\n① No, I don\'t.\n② Yes, please. Thank you.\n③ I\'d like tea.\n④ Yes, I would like.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: Would you like some more tea? B: ( )',
+    choices: ['① No, I don\'t.', '② Yes, please. Thank you.', '③ I\'d like tea.', '④ Yes, I would like.'],
     answer: '② Yes, please. Thank you.',
     hint: 'Would you like〜? は「〜はいかがですか」という丁寧な申し出。適切な受け方を選ぶ。',
     explanation: `【出題意図】
@@ -1274,7 +1299,8 @@ How long does it take to〜?：所要時間を尋ねる定型表現
   {
     id: 'koko_nyushi_eigo_36',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: I\'m going to take the English test tomorrow, but I\'m not confident.\nB: ( ) You\'ve studied really hard.\n\n① Don\'t worry.\n② That\'s too bad.\n③ I\'m sorry to hear that.\n④ Never mind.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: I\'m going to take the English test tomorrow, but I\'m not confident. B: ( ) You\'ve studied really hard.',
+    choices: ['① Don\'t worry.', '② That\'s too bad.', '③ I\'m sorry to hear that.', '④ Never mind.'],
     answer: '① Don\'t worry.',
     hint: '後に続く「You\'ve studied really hard.（一生懸命勉強したじゃないか）」という励ましの言葉に合う返答を選ぶ。',
     explanation: `【出題意図】
@@ -1311,7 +1337,8 @@ B：心配しないで。本当に一生懸命勉強したじゃないか。
   {
     id: 'koko_nyushi_eigo_37',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: May I use your dictionary?\nB: ( )\nA: Thank you.\n\n① Sure, go ahead.\n② No, you may not use it.\n③ I don\'t have a dictionary.\n④ Yes, you may go.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: May I use your dictionary? B: ( ) A: Thank you.',
+    choices: ['① Sure, go ahead.', '② No, you may not use it.', '③ I don\'t have a dictionary.', '④ Yes, you may go.'],
     answer: '① Sure, go ahead.',
     hint: 'May I〜? は許可を求める表現。自然な許可の与え方を選ぶ。',
     explanation: `【出題意図】
@@ -1354,7 +1381,8 @@ A：ありがとう。
   {
     id: 'koko_nyushi_eigo_38',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語を選べ。\n\nI have never ( ) sushi before.\n① eat  ② ate  ③ eaten  ④ eating',
+    question: '次の英文の（　）に入る最も適切な語を選べ。  I have never ( ) sushi before.',
+    choices: ['① eat', '② ate', '③ eaten', '④ eating'],
     answer: '③ eaten',
     hint: '現在完了形（have/has + 過去分詞）の経験用法。eat の過去分詞を選ぶ。',
     explanation: `【出題意図】
@@ -1394,7 +1422,8 @@ eat-ate-eaten / go-went-gone / see-saw-seen / take-took-taken / write-wrote-writ
   {
     id: 'koko_nyushi_eigo_39',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語を選べ。\n\nThe concert will be held ( ) Sunday evening.\n① in  ② at  ③ on  ④ by',
+    question: '次の英文の（　）に入る最も適切な語を選べ。  The concert will be held ( ) Sunday evening.',
+    choices: ['① in', '② at', '③ on', '④ by'],
     answer: '③ on',
     hint: '曜日・特定の日には前置詞 on を使う。',
     explanation: `【出題意図】
@@ -1429,7 +1458,8 @@ in：月・年・季節・時間帯（in March / in 2020 / in summer / in the mo
   {
     id: 'koko_nyushi_eigo_40',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語句を選べ。\n\nShe asked me ( ) the door.\n① open  ② to open  ③ opening  ④ opened',
+    question: '次の英文の（　）に入る最も適切な語句を選べ。  She asked me ( ) the door.',
+    choices: ['① open', '② to open', '③ opening', '④ opened'],
     answer: '② to open',
     hint: 'ask + 人 + to do（人に〜するよう頼む）という構文。',
     explanation: `【出題意図】
@@ -1465,7 +1495,8 @@ ask + 人 + to do = 「人に〜するよう頼む」という重要構文。
   {
     id: 'koko_nyushi_eigo_41',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語句を選べ。\n\nI think ( ) very important to keep our environment clean.\n① this  ② that  ③ it  ④ what',
+    question: '次の英文の（　）に入る最も適切な語句を選べ。  I think ( ) very important to keep our environment clean.',
+    choices: ['① this', '② that', '③ it', '④ what'],
     answer: '③ it',
     hint: '形式主語 it を使った「it is + 形容詞 + to 動詞」の構文。',
     explanation: `【出題意図】
@@ -1720,7 +1751,8 @@ popular with / popular among：
     id: 'koko_nyushi_eigo_47',
     subject: 'eigo',
     passage: `Many people think that learning English is difficult, but there are some easy ways to improve your skills. First, try to watch English movies or TV shows with subtitles. This can help you understand natural conversation. Second, keep a diary in English every day. Even a few sentences are fine. Writing every day helps you build your vocabulary and grammar skills. Third, try to speak with native speakers or language exchange partners. Do not be afraid to make mistakes. Mistakes are actually a great way to learn. If you continue these habits, your English will improve much faster than you think.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の内容と合っているものを1つ選べ。\n① 英語の映画は字幕なしで見るべきだ。\n② 日記は毎日たくさんの文を書かなければならない。\n③ 間違いを犯すことは英語学習の良い方法の一つだ。\n④ ネイティブとのスピーキングは上級者のみにすすめられる。',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の内容と合っているものを1つ選べ。',
+    choices: ['① 英語の映画は字幕なしで見るべきだ。', '② 日記は毎日たくさんの文を書かなければならない。', '③ 間違いを犯すことは英語学習の良い方法の一つだ。', '④ ネイティブとのスピーキングは上級者のみにすすめられる。'],
     answer: '③ 間違いを犯すことは英語学習の良い方法の一つだ。',
     hint: '本文中の "Mistakes are actually a great way to learn." という文を探す。',
     explanation: `【出題意図】
@@ -1755,7 +1787,8 @@ popular with / popular among：
     id: 'koko_nyushi_eigo_48',
     subject: 'eigo',
     passage: `Recycling is one of the most important things we can do to protect our planet. When we recycle paper, plastic, and glass, we save energy and reduce waste. For example, recycling one ton of paper can save 17 trees. However, many people still throw away things that could be recycled. One reason is that they do not know which items can be recycled. Another reason is that it is sometimes inconvenient. To solve these problems, local governments should make recycling easier and teach people why it is important. Each of us can make a difference if we try.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文中の下線部 "these problems" が指す内容として最も適切なものを選べ。\n① リサイクルにかかるコストと労力\n② リサイクルできるものを知らないことと、不便なこと\n③ 紙・プラスチック・ガラスのリサイクル方法\n④ エネルギーの節約と廃棄物の削減',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文中の下線部 "these problems" が指す内容として最も適切なものを選べ。',
+    choices: ['① リサイクルにかかるコストと労力', '② リサイクルできるものを知らないことと、不便なこと', '③ 紙・プラスチック・ガラスのリサイクル方法', '④ エネルギーの節約と廃棄物の削減'],
     answer: '② リサイクルできるものを知らないことと、不便なこと',
     hint: '"these problems" は直前に述べられた2つの理由（One reason〜, Another reason〜）を指す。',
     explanation: `【出題意図】
@@ -1795,7 +1828,8 @@ these = 複数 → 直前の2つの理由が対応
     id: 'koko_nyushi_eigo_49',
     subject: 'eigo',
     passage: `In Japan, many elderly people live alone. This is becoming a serious social problem. Some communities have started programs to help these people. For example, volunteers visit the homes of elderly people every week to check on them. Some neighborhoods have also created community centers where people can meet and talk. These programs are helping elderly people feel less lonely and more connected to their communities. Experts say that feeling connected to others is very important for both mental and physical health. They believe that more support systems like these are needed in the future.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の主題として最も適切なものを選べ。\n① 高齢者の一人暮らしが日本で増えている数値的な報告\n② 地域社会が高齢者の孤独に対処するための取り組みとその効果\n③ ボランティア活動が日本の若者に与える影響\n④ 高齢化社会に対応するための政府の政策',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の主題として最も適切なものを選べ。',
+    choices: ['① 高齢者の一人暮らしが日本で増えている数値的な報告', '② 地域社会が高齢者の孤独に対処するための取り組みとその効果', '③ ボランティア活動が日本の若者に与える影響', '④ 高齢化社会に対応するための政府の政策'],
     answer: '② 地域社会が高齢者の孤独に対処するための取り組みとその効果',
     hint: '本文全体の流れ（問題提起→取り組みの紹介→効果→専門家の意見）を把握して、何が最も中心的に述べられているかを考える。',
     explanation: `【出題意図】

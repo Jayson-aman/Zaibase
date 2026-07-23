@@ -7,7 +7,8 @@ export const kokoNyushiEigo4: Question[] = [
   {
     id: 'koko_nyushi_eigo4_01',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語(句)を選べ。\n\nBy the time we got to the gate, the plane ( ).\n① leaves  ② left  ③ has left  ④ had already left',
+    question: '次の（　）内に最も適切な語(句)を選べ。  By the time we got to the gate, the plane ( ).',
+    choices: ['① leaves', '② left', '③ has left', '④ had already left'],
     answer: '④ had already left',
     hint: 'ゲートに着いた時点よりもさらに前に起こった出来事を表す時制を選ぶ。',
     explanation: `【出題意図】
@@ -38,7 +39,8 @@ export const kokoNyushiEigo4: Question[] = [
   {
     id: 'koko_nyushi_eigo4_02',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nAccording to the airline rules, passengers ( ) show their passports at the gate.\n① may  ② should  ③ have to  ④ would',
+    question: '次の（　）内に最も適切な語を選べ。  According to the airline rules, passengers ( ) show their passports at the gate.',
+    choices: ['① may', '② should', '③ have to', '④ would'],
     answer: '③ have to',
     hint: '規則によって決められている義務を表す表現を選ぶ。',
     explanation: `【出題意図】
@@ -72,7 +74,8 @@ should：義務より弱い推奨
   {
     id: 'koko_nyushi_eigo4_03',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語形を選べ。\n\nEnglish ( ) as an official language in more than fifty countries.\n① speaks  ② is spoken  ③ was spoken  ④ has spoken',
+    question: '次の（　）内に最も適切な語形を選べ。  English ( ) as an official language in more than fifty countries.',
+    choices: ['① speaks', '② is spoken', '③ was spoken', '④ has spoken'],
     answer: '② is spoken',
     hint: '「英語」は話す側ではなく話される側。現在の一般的な事実を表す受動態を選ぶ。',
     explanation: `【出題意図】
@@ -105,7 +108,8 @@ should：義務より弱い推奨
   {
     id: 'koko_nyushi_eigo4_04',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nKyoto is ( ) tourist destination in Japan for foreign visitors.\n① a popular  ② more popular  ③ the most popular  ④ most popular',
+    question: '次の（　）内に最も適切な語を選べ。  Kyoto is ( ) tourist destination in Japan for foreign visitors.',
+    choices: ['① a popular', '② more popular', '③ the most popular', '④ most popular'],
     answer: '③ the most popular',
     hint: '「日本で一番〜」という範囲の中での最上級を選ぶ。最上級には the が必要。',
     explanation: `【出題意図】
@@ -138,7 +142,8 @@ should：義務より弱い推奨
   {
     id: 'koko_nyushi_eigo4_05',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nMy family went to Okinawa ( ) the beautiful sea.\n① for see  ② seeing  ③ to see  ④ saw',
+    question: '次の（　）内に最も適切な語を選べ。  My family went to Okinawa ( ) the beautiful sea.',
+    choices: ['① for see', '② seeing', '③ to see', '④ saw'],
     answer: '③ to see',
     hint: '「〜するために」という目的を表す不定詞の副詞的用法を選ぶ。',
     explanation: `【出題意図】
@@ -169,7 +174,8 @@ should：義務より弱い推奨
   {
     id: 'koko_nyushi_eigo4_06',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nWe enjoyed ( ) with people from many different countries at the festival.\n① talk  ② to talk  ③ talking  ④ talked',
+    question: '次の（　）内に最も適切な語を選べ。  We enjoyed ( ) with people from many different countries at the festival.',
+    choices: ['① talk', '② to talk', '③ talking', '④ talked'],
     answer: '③ talking',
     hint: 'enjoy の後ろに来る形（動名詞か不定詞か）を確認する。',
     explanation: `【出題意図】
@@ -200,7 +206,8 @@ enjoy（楽しむ）、finish（終える）、stop（やめる）、mind（気�
   {
     id: 'koko_nyushi_eigo4_07',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語(句)を選べ。\n\nBy the end of this trip, I ( ) five countries in Europe.\n① will visit  ② have visited  ③ will have visited  ④ visited',
+    question: '次の（　）内に最も適切な語(句)を選べ。  By the end of this trip, I ( ) five countries in Europe.',
+    choices: ['① will visit', '② have visited', '③ will have visited', '④ visited'],
     answer: '③ will have visited',
     hint: '「この旅行が終わるまでには」という未来の時点での完了を表す時制を選ぶ。',
     explanation: `【出題意図】
@@ -231,7 +238,8 @@ enjoy（楽しむ）、finish（終える）、stop（やめる）、mind（気�
   {
     id: 'koko_nyushi_eigo4_08',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nIf the weather ( ) fine tomorrow, we will go sightseeing around the old town.\n① will be  ② is  ③ was  ④ being',
+    question: '次の（　）内に最も適切な語を選べ。  If the weather ( ) fine tomorrow, we will go sightseeing around the old town.',
+    choices: ['① will be', '② is', '③ was', '④ being'],
     answer: '② is',
     hint: '条件を表す if 節の中では、未来のことでも現在形を使う。',
     explanation: `【出題意図】
@@ -262,7 +270,8 @@ if（もし〜なら）/ when（〜するとき）/ as soon as（〜したらす
   {
     id: 'koko_nyushi_eigo4_09',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThis castle ( ) more than four hundred years ago.\n① built  ② is built  ③ was built  ④ has built',
+    question: '次の（　）内に最も適切な語を選べ。  This castle ( ) more than four hundred years ago.',
+    choices: ['① built', '② is built', '③ was built', '④ has built'],
     answer: '③ was built',
     hint: '「〜年前」という過去の一時点を示す語句とともに使う受動態の時制を選ぶ。',
     explanation: `【出題意図】
@@ -292,7 +301,8 @@ if（もし〜なら）/ when（〜するとき）/ as soon as（〜したらす
   {
     id: 'koko_nyushi_eigo4_10',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe population of this city is much ( ) than that of my hometown.\n① large  ② larger  ③ largest  ④ more large',
+    question: '次の（　）内に最も適切な語を選べ。  The population of this city is much ( ) than that of my hometown.',
+    choices: ['① large', '② larger', '③ largest', '④ more large'],
     answer: '② larger',
     hint: '2つのものを比べるときは比較級を使う。than が手がかり。',
     explanation: `【出題意図】
@@ -325,7 +335,8 @@ than があるので比較級が必要。large は1音節の形容詞なので -
   {
     id: 'koko_nyushi_eigo4_11',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nShe wants ( ) an interpreter and help people from abroad in the future.\n① be  ② being  ③ to be  ④ to being',
+    question: '次の（　）内に最も適切な語を選べ。  She wants ( ) an interpreter and help people from abroad in the future.',
+    choices: ['① be', '② being', '③ to be', '④ to being'],
     answer: '③ to be',
     hint: 'want の後ろに来る不定詞の名詞的用法（〜したい）を選ぶ。',
     explanation: `【出題意図】
@@ -356,7 +367,8 @@ want to be〜：〜になりたい（職業・将来の夢を表すときに頻�
   {
     id: 'koko_nyushi_eigo4_12',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nDuring the tour, we stopped ( ) pictures of the old bridge.\n① take  ② taking  ③ to take  ④ took',
+    question: '次の（　）内に最も適切な語を選べ。  During the tour, we stopped ( ) pictures of the old bridge.',
+    choices: ['① take', '② taking', '③ to take', '④ took'],
     answer: '③ to take',
     hint: '「立ち止まって写真を撮った」という意味になる形を考える。stop + 動名詞との意味の違いに注意。',
     explanation: `【出題意図】
@@ -391,7 +403,8 @@ stop + 不定詞：〜するために立ち止まる（stop to take pictures＝�
   {
     id: 'koko_nyushi_eigo4_13',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な前置詞を選べ。\n\nThis small town is famous ( ) its traditional summer festival.\n① of  ② for  ③ with  ④ about',
+    question: '次の（　）内に最も適切な前置詞を選べ。  This small town is famous ( ) its traditional summer festival.',
+    choices: ['① of', '② for', '③ with', '④ about'],
     answer: '② for',
     hint: 'be famous のあとに来る前置詞を選ぶ。',
     explanation: `【出題意図】
@@ -423,7 +436,8 @@ be famous as〜：〜として有名だ（肩書き・役割を示す）
   {
     id: 'koko_nyushi_eigo4_14',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な前置詞を選べ。\n\nThe airport was full ( ) tourists carrying large suitcases.\n① of  ② with  ③ in  ④ for',
+    question: '次の（　）内に最も適切な前置詞を選べ。  The airport was full ( ) tourists carrying large suitcases.',
+    choices: ['① of', '② with', '③ in', '④ for'],
     answer: '① of',
     hint: 'be full の後ろに来る前置詞を選ぶ。',
     explanation: `【出題意図】
@@ -455,7 +469,8 @@ be filled with〜：〜で満たされている（似た意味だが動詞 fill 
   {
     id: 'koko_nyushi_eigo4_15',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nIn addition ( ) visiting museums, we tried a lot of local food during our trip.\n① for  ② to  ③ of  ④ with',
+    question: '次の（　）内に最も適切な語を選べ。  In addition ( ) visiting museums, we tried a lot of local food during our trip.',
+    choices: ['① for', '② to', '③ of', '④ with'],
     answer: '② to',
     hint: 'in addition の後ろに来る前置詞は「to」で固定されている。',
     explanation: `【出題意図】
@@ -488,7 +503,8 @@ in addition to + 名詞／動名詞：〜に加えて
   {
     id: 'koko_nyushi_eigo4_16',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nIt took me a few weeks to get used ( ) the local customs after moving abroad.\n① to  ② with  ③ for  ④ of',
+    question: '次の（　）内に最も適切な語を選べ。  It took me a few weeks to get used ( ) the local customs after moving abroad.',
+    choices: ['① to', '② with', '③ for', '④ of'],
     answer: '① to',
     hint: 'get used のあとに来る前置詞を選ぶ。「to」の後ろは名詞または動名詞。',
     explanation: `【出題意図】
@@ -520,7 +536,8 @@ used to + 動詞原形：以前は〜だった（過去の習慣・状態）→ 
   {
     id: 'koko_nyushi_eigo4_17',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語(句)を選べ。\n\n( ) her kind help, we were able to find the hotel without getting lost.\n① Thanks to  ② Instead of  ③ In spite of  ④ Because',
+    question: '次の（　）内に最も適切な語(句)を選べ。  ( ) her kind help, we were able to find the hotel without getting lost.',
+    choices: ['① Thanks to', '② Instead of', '③ In spite of', '④ Because'],
     answer: '① Thanks to',
     hint: '「〜のおかげで」という肯定的な原因・理由を表す表現を選ぶ。',
     explanation: `【出題意図】
@@ -552,7 +569,8 @@ in spite of + 名詞：〜にもかかわらず（逆接）
   {
     id: 'koko_nyushi_eigo4_18',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語(句)を選べ。\n\nI tried authentic Italian pizza ( ) when I visited Rome last summer.\n① at first  ② first time  ③ for the first time  ④ the first time',
+    question: '次の（　）内に最も適切な語(句)を選べ。  I tried authentic Italian pizza ( ) when I visited Rome last summer.',
+    choices: ['① at first', '② first time', '③ for the first time', '④ the first time'],
     answer: '③ for the first time',
     hint: '「初めて〜した」という経験を表す定型表現を選ぶ。',
     explanation: `【出題意図】
@@ -584,7 +602,8 @@ the first time + 主語 + 動詞：〜が初めて…したとき（接続詞的
   {
     id: 'koko_nyushi_eigo4_19',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語(句)を選べ。\n\nWe decided to walk around the old town ( ) taking a taxi.\n① instead of  ② instead  ③ rather  ④ without of',
+    question: '次の（　）内に最も適切な語(句)を選べ。  We decided to walk around the old town ( ) taking a taxi.',
+    choices: ['① instead of', '② instead', '③ rather', '④ without of'],
     answer: '① instead of',
     hint: '「〜の代わりに」という意味を表す、後ろに名詞・動名詞を続けられる表現を選ぶ。',
     explanation: `【出題意図】
@@ -616,7 +635,8 @@ rather than + 動詞原形／動名詞：〜よりむしろ
   {
     id: 'koko_nyushi_eigo4_20',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語(句)を選べ。\n\nI am really looking forward ( ) a new culture during my exchange program.\n① to experience  ② to experiencing  ③ experience  ④ experiencing',
+    question: '次の（　）内に最も適切な語(句)を選べ。  I am really looking forward ( ) a new culture during my exchange program.',
+    choices: ['① to experience', '② to experiencing', '③ experience', '④ experiencing'],
     answer: '② to experiencing',
     hint: 'look forward to〜 の to は前置詞。後ろには動名詞が続く。',
     explanation: `【出題意図】
@@ -651,7 +671,8 @@ look forward to + 名詞／動名詞：〜を楽しみにしている
   {
     id: 'koko_nyushi_eigo4_21',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThe guide ( ) showed us around the temple spoke four languages.\n① who  ② which  ③ whom  ④ whose',
+    question: '次の（　）内に最も適切な語を選べ。  The guide ( ) showed us around the temple spoke four languages.',
+    choices: ['① who', '② which', '③ whom', '④ whose'],
     answer: '① who',
     hint: '先行詞は「人」、関係代名詞節内での役割は「主語」。',
     explanation: `【出題意図】
@@ -685,7 +706,8 @@ look forward to + 名詞／動名詞：〜を楽しみにしている
   {
     id: 'koko_nyushi_eigo4_22',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nThis is the souvenir ( ) I bought at the night market.\n① who  ② which  ③ where  ④ whom',
+    question: '次の（　）内に最も適切な語を選べ。  This is the souvenir ( ) I bought at the night market.',
+    choices: ['① who', '② which', '③ where', '④ whom'],
     answer: '② which',
     hint: '先行詞は「物（お土産）」。関係代名詞節内で bought の目的語になっている。',
     explanation: `【出題意図】
@@ -719,7 +741,8 @@ which は省略可（that に置き換え可）：This is the souvenir (that) I 
   {
     id: 'koko_nyushi_eigo4_23',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nI still remember the small village ( ) I stayed with a host family.\n① which  ② who  ③ where  ④ when',
+    question: '次の（　）内に最も適切な語を選べ。  I still remember the small village ( ) I stayed with a host family.',
+    choices: ['① which', '② who', '③ where', '④ when'],
     answer: '③ where',
     hint: '先行詞は「場所（village）」。関係副詞を使う。',
     explanation: `【出題意図】
@@ -754,7 +777,8 @@ which は省略可（that に置き換え可）：This is the souvenir (that) I 
   {
     id: 'koko_nyushi_eigo4_24',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nI made friends with a student ( ) parents run a restaurant in Thailand.\n① who  ② which  ③ whom  ④ whose',
+    question: '次の（　）内に最も適切な語を選べ。  I made friends with a student ( ) parents run a restaurant in Thailand.',
+    choices: ['① who', '② which', '③ whom', '④ whose'],
     answer: '④ whose',
     hint: '「その学生の両親」という所有の関係を表す関係代名詞を選ぶ。',
     explanation: `【出題意図】
@@ -820,7 +844,8 @@ whose の使い方：先行詞（人・物）の所有格を表す
   {
     id: 'koko_nyushi_eigo4_26',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。\n\nCould you tell me ( ) I can exchange money near here?\n① what  ② where  ③ why  ④ who',
+    question: '次の（　）内に最も適切な語を選べ。  Could you tell me ( ) I can exchange money near here?',
+    choices: ['① what', '② where', '③ why', '④ who'],
     answer: '② where',
     hint: '「近くのどこで両替できるか」という場所を尋ねる間接疑問文。',
     explanation: `【出題意図】
@@ -1107,7 +1132,8 @@ This map is easy enough for tourists to follow.
   {
     id: 'koko_nyushi_eigo4_34',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: Would you like to try some local street food tonight?\nB: ( )\n\n① No, I don\'t.\n② Yes, I\'d love to.\n③ I don\'t like food.\n④ Yes, you would.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: Would you like to try some local street food tonight? B: ( )',
+    choices: ['① No, I don\'t.', '② Yes, I\'d love to.', '③ I don\'t like food.', '④ Yes, you would.'],
     answer: '② Yes, I\'d love to.',
     hint: 'Would you like to〜? は「〜しませんか」という誘いの表現。適切な受け方を選ぶ。',
     explanation: `【出題意図】
@@ -1144,7 +1170,8 @@ I'd love to.＝I would love to.の短縮形
   {
     id: 'koko_nyushi_eigo4_35',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: How long does it take to get to the airport from your hotel?\nB: ( )\n\n① It\'s about twenty kilometers.\n② It takes about forty minutes by taxi.\n③ You should take a bus.\n④ The airport is very crowded.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: How long does it take to get to the airport from your hotel? B: ( )',
+    choices: ['① It\'s about twenty kilometers.', '② It takes about forty minutes by taxi.', '③ You should take a bus.', '④ The airport is very crowded.'],
     answer: '② It takes about forty minutes by taxi.',
     hint: 'How long does it take to〜? は「〜するのにどのくらいかかりますか」という所要時間を尋ねる表現。',
     explanation: `【出題意図】
@@ -1181,7 +1208,8 @@ How long does it take to〜?：所要時間を尋ねる定型表現
   {
     id: 'koko_nyushi_eigo4_36',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: I\'m going to give a speech in English tomorrow, but I\'m really nervous.\nB: ( ) You\'ve practiced so many times.\n\n① Don\'t worry.\n② That\'s too bad.\n③ I\'m sorry to hear that.\n④ Never mind.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: I\'m going to give a speech in English tomorrow, but I\'m really nervous. B: ( ) You\'ve practiced so many times.',
+    choices: ['① Don\'t worry.', '② That\'s too bad.', '③ I\'m sorry to hear that.', '④ Never mind.'],
     answer: '① Don\'t worry.',
     hint: '後に続く「You\'ve practiced so many times.（あなたは何度も練習したじゃない）」という励ましの言葉に合う返答を選ぶ。',
     explanation: `【出題意図】
@@ -1216,7 +1244,8 @@ B：心配しないで。あなたは何度も練習したじゃない。
   {
     id: 'koko_nyushi_eigo4_37',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。\n\nA: May I take a picture of this painting?\nB: ( )\nA: Thank you very much.\n\n① Sure, go ahead.\n② No, you may not take it.\n③ I don\'t have a camera.\n④ Yes, you may go.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: May I take a picture of this painting? B: ( ) A: Thank you very much.',
+    choices: ['① Sure, go ahead.', '② No, you may not take it.', '③ I don\'t have a camera.', '④ Yes, you may go.'],
     answer: '① Sure, go ahead.',
     hint: 'May I〜? は許可を求める表現。自然な許可の与え方を選ぶ。',
     explanation: `【出題意図】
@@ -1251,7 +1280,8 @@ A：ありがとうございます。
   {
     id: 'koko_nyushi_eigo4_38',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語を選べ。\n\nI have never ( ) such delicious noodles before.\n① try  ② tried  ③ tries  ④ trying',
+    question: '次の英文の（　）に入る最も適切な語を選べ。  I have never ( ) such delicious noodles before.',
+    choices: ['① try', '② tried', '③ tries', '④ trying'],
     answer: '② tried',
     hint: '現在完了形（have/has＋過去分詞）の経験用法。try の過去分詞を選ぶ。',
     explanation: `【出題意図】
@@ -1287,7 +1317,8 @@ tryの活用：try（原形）→tried（過去形）→tried（過去分詞）
   {
     id: 'koko_nyushi_eigo4_39',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語を選べ。\n\n( ) the morning of our departure, we said goodbye to our host family.\n① In  ② At  ③ On  ④ By',
+    question: '次の英文の（　）に入る最も適切な語を選べ。  ( ) the morning of our departure, we said goodbye to our host family.',
+    choices: ['① In', '② At', '③ On', '④ By'],
     answer: '③ On',
     hint: '特定の日の朝を表すときの前置詞を選ぶ。',
     explanation: `【出題意図】
@@ -1320,7 +1351,8 @@ tryの活用：try（原形）→tried（過去形）→tried（過去分詞）
   {
     id: 'koko_nyushi_eigo4_40',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語句を選べ。\n\nOur host mother asked us ( ) our shoes before entering the house.\n① take off  ② to take off  ③ taking off  ④ took off',
+    question: '次の英文の（　）に入る最も適切な語句を選べ。  Our host mother asked us ( ) our shoes before entering the house.',
+    choices: ['① take off', '② to take off', '③ taking off', '④ took off'],
     answer: '② to take off',
     hint: 'ask＋人＋to do（人に〜するよう頼む）という構文。',
     explanation: `【出題意図】
@@ -1354,7 +1386,8 @@ ask＋人＋to do＝「人に〜するよう頼む」という重要構文。
   {
     id: 'koko_nyushi_eigo4_41',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語句を選べ。\n\nI found ( ) very exciting to communicate with people from different cultures.\n① this  ② that  ③ it  ④ what',
+    question: '次の英文の（　）に入る最も適切な語句を選べ。  I found ( ) very exciting to communicate with people from different cultures.',
+    choices: ['① this', '② that', '③ it', '④ what'],
     answer: '③ it',
     hint: '形式目的語 it を使った「find it + 形容詞 + to 動詞」の構文。',
     explanation: `【出題意図】
@@ -1584,7 +1617,8 @@ popular with／popular among：
     id: 'koko_nyushi_eigo4_47',
     subject: 'eigo',
     passage: `Last summer, Aya stayed with a host family in Canada for three weeks. At first, she felt nervous because she could not understand every word her host parents said. However, her host family was very patient and often repeated sentences slowly. Aya also learned to cook a traditional Canadian dish with her host mother. On weekends, the family took her to a nearby lake and taught her how to canoe. By the end of her stay, Aya could have simple conversations in English without translating in her head. She realized that making mistakes was a normal part of learning a new language, and she promised to keep studying English after she returned to Japan.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の内容と合っているものを1つ選べ。\n① Aya はカナダに行く前から英語を完璧に話せた。\n② Aya のホストファミリーは、彼女が理解できるようゆっくり文を繰り返した。\n③ Aya はホストマザーから何も学ばなかった。\n④ Aya は日本に帰国後、英語の勉強をやめると決めた。',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の内容と合っているものを1つ選べ。',
+    choices: ['① Aya はカナダに行く前から英語を完璧に話せた。', '② Aya のホストファミリーは、彼女が理解できるようゆっくり文を繰り返した。', '③ Aya はホストマザーから何も学ばなかった。', '④ Aya は日本に帰国後、英語の勉強をやめると決めた。'],
     answer: '② Aya のホストファミリーは、彼女が理解できるようゆっくり文を繰り返した。',
     hint: '本文中の "often repeated sentences slowly" という部分を探す。',
     explanation: `【出題意図】
@@ -1616,7 +1650,8 @@ popular with／popular among：
     id: 'koko_nyushi_eigo4_48',
     subject: 'eigo',
     passage: `Every October, a large international food festival is held in Yokohama. People from more than thirty countries set up stalls and sell traditional dishes from their home countries. Visitors can taste curry from India, dumplings from China, and churros from Spain, all in the same afternoon. The festival also has a stage where dancers and musicians perform traditional art from their cultures. Many visitors say that this event gives them a chance to experience different cultures without leaving the country. Last year, more than one hundred thousand people visited the festival over two days, and organizers hope even more people will join next year to enjoy this colorful celebration of world cultures.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文中の下線部 "this event" が指す内容として最も適切なものを選べ。\n① 横浜で毎年10月に開催される国際的な食の祭典\n② 100か国以上が参加する国際会議\n③ 世界各国の伝統舞踊だけを紹介するイベント\n④ 一年を通して行われる観光キャンペーン',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文中の下線部 "this event" が指す内容として最も適切なものを選べ。',
+    choices: ['① 横浜で毎年10月に開催される国際的な食の祭典', '② 100か国以上が参加する国際会議', '③ 世界各国の伝統舞踊だけを紹介するイベント', '④ 一年を通して行われる観光キャンペーン'],
     answer: '① 横浜で毎年10月に開催される国際的な食の祭典',
     hint: '"this event" は本文の冒頭で説明されている祭り全体を指す。',
     explanation: `【出題意図】
@@ -1648,7 +1683,8 @@ popular with／popular among：
     id: 'koko_nyushi_eigo4_49',
     subject: 'eigo',
     passage: `Table manners are very different around the world, and travelers often need to learn new customs before visiting a foreign country. In Japan, it is polite to say "itadakimasu" before eating and to hold the rice bowl in one hand. In India, many people traditionally eat with their right hand instead of using forks or spoons. In France, it is considered rude to put your hands under the table during a meal. These differences can surprise visitors, but understanding them helps people avoid embarrassing mistakes and shows respect for local culture. Experts who study cross-cultural communication say that learning about table manners is one of the easiest ways to understand a country's values and traditions.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の主題として最も適切なものを選べ。\n① 日本の食事のマナーだけを詳しく説明した文章\n② 世界各国で異なる食事のマナーとその文化的な意味\n③ フォークとスプーンの正しい使い方\n④ 海外旅行での食費の節約方法',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の主題として最も適切なものを選べ。',
+    choices: ['① 日本の食事のマナーだけを詳しく説明した文章', '② 世界各国で異なる食事のマナーとその文化的な意味', '③ フォークとスプーンの正しい使い方', '④ 海外旅行での食費の節約方法'],
     answer: '② 世界各国で異なる食事のマナーとその文化的な意味',
     hint: '本文全体で日本・インド・フランスの複数の例が挙げられている点に注目する。',
     explanation: `【出題意図】
@@ -1685,7 +1721,8 @@ popular with／popular among：
     id: 'koko_nyushi_eigo4_50',
     subject: 'eigo',
     passage: `In recent years, language exchange apps have become popular among travelers who want to learn a new language before visiting a foreign country. These apps connect users with native speakers around the world so that they can practice speaking through video calls or text messages. Many users say that talking with a real person is more helpful than only studying textbooks. Some apps also let users ask questions about local culture, such as which foods to try or how to behave politely in public places. Because of these apps, more people are able to make friends abroad even before their trip begins. However, experts remind users that apps cannot completely replace real experience, such as traveling and meeting people face to face.`,
-    question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文の内容と合っていないものを1つ選べ。\n① 語学交換アプリは世界中のネイティブスピーカーとユーザーをつなげる。\n② 多くの利用者は教科書だけで学ぶより実際の人と話す方が役立つと感じている。\n③ アプリは現地の文化についての質問はできない。\n④ 専門家はアプリが実際の体験を完全に代わることはできないと述べている。',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文の内容と合っていないものを1つ選べ。',
+    choices: ['① 語学交換アプリは世界中のネイティブスピーカーとユーザーをつなげる。', '② 多くの利用者は教科書だけで学ぶより実際の人と話す方が役立つと感じている。', '③ アプリは現地の文化についての質問はできない。', '④ 専門家はアプリが実際の体験を完全に代わることはできないと述べている。'],
     answer: '③ アプリは現地の文化についての質問はできない。',
     hint: '本文中の "Some apps also let users ask questions about local culture" という一文を確認する。',
     explanation: `【出題意図】

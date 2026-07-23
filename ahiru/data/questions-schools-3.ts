@@ -224,7 +224,8 @@ export const myojoQuestions: Question[] = [
   {
     id: 'myojo_eigo_03', subject: 'eigo', difficulty: 'advanced',
     course: 'myojo', examType: 'chugaku',
-    question: '（　）に入る最も適切な語を選べ。\n"I have lived in Osaka ( ) 2015."\n① for　② since　③ during　④ while',
+    question: '（　）に入る最も適切な語を選べ。 "I have lived in Osaka ( ) 2015."',
+    choices: ['① for', '② since', '③ during', '④ while'],
     answer: '② since',
     hint: '特定の時点から現在まで継続 → since＋年・時点',
     explanation: 'since＋時点（2015）：「2015年からずっと」\nfor＋期間（for 10 years）：「10年間」\nduring＋名詞期間：「〜の間中」\nwhile＋節：「〜している間」',
@@ -720,7 +721,8 @@ export const kinrankaiQuestions: Question[] = [
   {
     id: 'kinrankai_eigo_01', subject: 'eigo', difficulty: 'advanced',
     course: 'kinrankai', examType: 'chugaku',
-    question: '（　）に入る適切な語を選べ。\n"Please ( ) the door when you leave."\n① open　② close　③ take　④ make',
+    question: '（　）に入る適切な語を選べ。 "Please ( ) the door when you leave."',
+    choices: ['① open', '② close', '③ take', '④ make'],
     answer: '② close',
     hint: '「出るときはドアを〜してください」',
     explanation: '"close the door"（ドアを閉める）が文脈に合う。\n"open"は開ける、"take"は持っていく、"make"は作る。\nleave（立ち去る）ときはclose（閉める）。',
