@@ -28,16 +28,17 @@ const SCENARIOS = [
   { label: '職場・面接', value: 'オフィスでの会話や面接のやり取り' },
 ];
 
+// 白基調（ミニマル幾何）パレット。白カード＋暗色テキスト。
 const D = {
-  bg:           '#040C1C',
-  card:         'rgba(255,255,255,0.06)',
-  cardBorder:   'rgba(255,255,255,0.10)',
-  gold:         '#C8A84B',
-  white:        '#EDF4FF',
-  soft:         '#7FA8CC',
-  muted:        '#3E5870',
-  purpleBorder: 'rgba(160,100,220,0.35)',
-  purpleText:   '#A064DC',
+  bg:           '#F7F8FB',
+  card:         '#FFFFFF',
+  cardBorder:   '#CBD2DE',
+  gold:         '#A9821E',
+  white:        '#0F1826',
+  soft:         '#4A5A6B',
+  muted:        '#8695AB',
+  purpleBorder: 'rgba(112,72,224,0.35)',
+  purpleText:   '#6A3FD0',
 };
 
 export default function ConversationScreen() {
