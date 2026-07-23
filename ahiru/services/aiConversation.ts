@@ -12,6 +12,8 @@ interface ChatConversationRequest {
   history: ConversationMessage[];
   level: VocabLevel;
   scenario?: string;
+  /** 有料（英単語Pro等）かどうかのヒント。1日の回数上限に使う（無料3/有料15） */
+  isPaid?: boolean;
 }
 
 interface ChatConversationResponse {

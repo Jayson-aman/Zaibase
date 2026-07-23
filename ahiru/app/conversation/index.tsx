@@ -15,6 +15,8 @@ import {
 import { useRouter } from 'expo-router';
 import { chatEnglishConversation, type ConversationMessage } from '../../services/aiConversation';
 import { levelColor, levelLabel, type VocabLevel } from '../../data/vocab-meta';
+import { useVocabSubscription } from '../../hooks/useVocabSubscription';
+import { useSubscription } from '../../hooks/useSubscription';
 
 const LEVEL_OPTIONS: VocabLevel[] = ['eiken_pre2', 'eiken_2', 'eiken_1', 'toeic_800'];
 
@@ -40,6 +42,9 @@ const D = {
 
 export default function ConversationScreen() {
   const router = useRouter();
+  const { hasVocab } = useVocabSubscription();
+  const { isPro, isMax } = useSubscription();
+  const isPaid = hasVocab || isPro || isMax;
   const [level, setLevel] = useState<VocabLevel>('eiken_2');
   const [scenario, setScenario] = useState<string | undefined>(undefined);
   const [messages, setMessages] = useState<ConversationMessage[]>([]);
@@ -64,6 +69,7 @@ export default function ConversationScreen() {
         history: messages,
         level,
         scenario,
+        isPaid,
       });
       setMessages([...newMessages, { role: 'assistant', content: res.reply }]);
       setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 100);

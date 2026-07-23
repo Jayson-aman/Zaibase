@@ -21,9 +21,9 @@ const { defineSecret } = require("firebase-functions/params");
 const db = getFirestore();
 const OPENAI_API_KEY = defineSecret("OPENAI_API_KEY");
 
-// 英単語Pro（¥1,000/月 or ¥4,000/年 ≈ ¥333/月）の採算を守るための上限。
-// 30回/日 × 150文字 × 30日 = 135,000文字/月 ≈ tts-1-hd換算で月あたり
-// 最大約¥600（実運用ではこの上限に張り付くことは稀で、実コストはこれよりかなり低い）。
+// 採算（利益75%）を守るための上限。モデルは tts-1（非HD）で単価を半減。
+// 30回/日 × 150文字 × 30日 = 135,000文字/月 ≈ tts-1換算で月あたり約¥300以下。
+// （無料ユーザーは端末TTS＝無料。OpenAI音声は有料ユーザーのネイティブ発音・聞き流しのみ）
 const DAILY_LIMIT = 30;
 const MAX_CHARS = 150;
 
@@ -76,7 +76,7 @@ exports.speakText = onCall(
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "tts-1-hd",
+        model: "tts-1",
         input: safeText,
         voice: "alloy",
         response_format: "mp3",
