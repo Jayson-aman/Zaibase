@@ -10,29 +10,32 @@ import {
   Platform,
 } from 'react-native';
 import { useRouter } from 'expo-router';
+import { formatYen, PRICES } from '../constants/pricing';
+import SubjectIcon, { type IconSubject } from '../components/SubjectIcon';
 
 const { width } = Dimensions.get('window');
 
 // ── Premium dark navy palette ──────────────────────────────
+// 白基調（ミニマル幾何）パレット。white=主要テキスト(ink)、glass=白カード。
 const C = {
-  bg:          '#040C1C',   // メインダーク紺
-  bgAlt:       '#06111F',   // 少し明るいセクション用
-  bgCard:      '#091728',   // カード背景
-  gold:        '#C8A84B',   // ゴールドアクセント
-  goldLight:   '#E4C96D',   // 明るいゴールド
-  goldDim:     'rgba(200,168,75,0.18)',
-  goldBorder:  'rgba(200,168,75,0.35)',
-  blue:        '#4B8FE4',   // 明るい青
-  blueLight:   '#A8CAFF',   // ソフト青
-  red:         '#D95050',
-  white:       '#EDF4FF',   // 見出し白
-  soft:        '#7FA8CC',   // 本文ソフト青
-  muted:       '#3E5870',   // 薄い文字
-  glass:       'rgba(255,255,255,0.045)',
-  glassMid:    'rgba(255,255,255,0.07)',
-  glassBorder: 'rgba(255,255,255,0.09)',
-  glassHover:  'rgba(255,255,255,0.11)',
-  divider:     'rgba(255,255,255,0.06)',
+  bg:          '#F7F8FB',   // ページ背景（クールホワイト）
+  bgAlt:       '#FFFFFF',   // セクション（白）
+  bgCard:      '#FFFFFF',   // カード背景
+  gold:        '#A9821E',   // ゴールドアクセント（白背景で可読）
+  goldLight:   '#8A6A1E',   // 濃いゴールド
+  goldDim:     'rgba(169,130,30,0.10)',
+  goldBorder:  'rgba(169,130,30,0.40)',
+  blue:        '#2B4ACB',   // アクセント青
+  blueLight:   '#2B4ACB',
+  red:         '#D14343',
+  white:       '#0F1826',   // 見出し・主要テキスト（ink）
+  soft:        '#4A5A6B',   // 本文
+  muted:       '#7A8798',   // 薄い文字
+  glass:       '#FFFFFF',            // 白カード
+  glassMid:    '#F2F5FA',
+  glassBorder: '#CBD2DE',            // 明確な境界線
+  glassHover:  '#EEF1F6',
+  divider:     '#E3E7EF',
 };
 
 const SERIF = Platform.select({
@@ -47,11 +50,11 @@ const glassBlur: any = Platform.OS === 'web'
   : {};
 
 const SUBJECTS = [
-  { name: '算数', emoji: '📐', desc: '計算・図形・文章題・速さ', color: '#4B8FE4' },
-  { name: '国語', emoji: '📖', desc: '読解・漢字・文学史・作文', color: '#E06060' },
-  { name: '理科', emoji: '🔬', desc: '実験・生物・物理・化学', color: '#3AB073' },
-  { name: '社会', emoji: '🗾', desc: '地理・歴史・公民・時事', color: '#C8A84B' },
-  { name: '英語', emoji: '🌍', desc: '文法・読解・会話・英作文', color: '#9B70D8' },
+  { key: 'sansu', name: '算数', emoji: '📐', desc: '計算・図形・文章題・速さ', color: '#4B8FE4' },
+  { key: 'kokugo', name: '国語', emoji: '📖', desc: '読解・漢字・文学史・作文', color: '#E06060' },
+  { key: 'rika', name: '理科', emoji: '🔬', desc: '実験・生物・物理・化学', color: '#3AB073' },
+  { key: 'shakai', name: '社会', emoji: '🗾', desc: '地理・歴史・公民・時事', color: '#C8A84B' },
+  { key: 'eigo', name: '英語', emoji: '🌍', desc: '文法・読解・会話・英作文', color: '#9B70D8' },
 ];
 
 const CURRICULUM = [
@@ -112,7 +115,15 @@ const FEATURES = [
     desc: '得意科目・苦手科目を一目で把握。\n保護者向けレポートも自動生成。',
     tag: '全員',
     tagColor: C.blue,
-    image: require('../assets/mascots/mascot-home.png') as number,
+    image: null as number | null,
+  },
+  {
+    icon: '🌀',
+    title: '動く図解',
+    desc: '図形・グラフ・回路・地層をアニメーションで解説。\n見て納得してから解き直せる。',
+    tag: '全員',
+    tagColor: C.gold,
+    image: null as number | null,
   },
 ];
 
@@ -167,12 +178,12 @@ export default function LandingPage() {
           <View style={styles.heroInner}>
             {/* タグバッジ */}
             <View style={styles.heroTag}>
-              <Text style={styles.heroTagText}>✦  2026年度入試対応</Text>
+              <Text style={styles.heroTagText}>中学受験・高校受験  ｜  2026年度入試対応</Text>
             </View>
 
             {/* メインタイトル（明朝体） */}
             <Text style={styles.heroTitle}>
-              合格への正攻法を、ここに。
+              中学受験・高校受験{'\n'}合格への正攻法を、ここに。
             </Text>
 
             {/* デコライン */}
@@ -183,9 +194,9 @@ export default function LandingPage() {
             </View>
 
             <Text style={styles.heroSub}>
-              算数・国語・理科・社会・英語{'\n'}
-              5科目 7,000問以上 × 学校別コース対応{'\n'}
-              中学受験・高校受験、AI弱点コーチで志望校を目指す。
+              中学受験・高校受験の対策アプリ。{'\n'}
+              算数・国語・理科・社会・英語の5科目 13,000問以上 × 動く図解 × 学校別コース。{'\n'}
+              AI弱点コーチで志望校合格を目指す。
             </Text>
 
             <TouchableOpacity style={styles.heroCta} onPress={handleStart} activeOpacity={0.85}>
@@ -196,9 +207,9 @@ export default function LandingPage() {
             {/* スタッツ */}
             <View style={[styles.heroStats, glassBlur]}>
               {[
-                { num: '7,000', unit: '問+', label: '問題数' },
+                { num: '13,000', unit: '問+', label: '問題数' },
                 { num: '5', unit: '科目', label: '対応科目' },
-                { num: '3', unit: '段階', label: '難易度' },
+                { num: '動く', unit: '図解', label: '解説アニメ' },
                 { num: 'AI', unit: '搭載', label: '弱点分析' },
               ].map((s, i) => (
                 <React.Fragment key={s.label}>
@@ -239,7 +250,7 @@ export default function LandingPage() {
                 <View style={styles.currSubjects}>
                   {SUBJECTS.map((s) => (
                     <View key={s.name} style={[styles.currSubTag, { borderColor: c.color + '60' }]}>
-                      <Text style={styles.currSubEmoji}>{s.emoji}</Text>
+                      <SubjectIcon subject={s.key as IconSubject} size={12} color={c.color} strokeWidth={2} />
                       <Text style={[styles.currSubName, { color: c.color }]}>{s.name}</Text>
                     </View>
                   ))}
@@ -258,13 +269,19 @@ export default function LandingPage() {
           </Text>
           <View style={styles.subjectsGrid}>
             {SUBJECTS.map((s) => (
-              <View key={s.name} style={[styles.subjectCard, glassBlur]}>
+              <TouchableOpacity
+                key={s.name}
+                style={[styles.subjectCard, glassBlur]}
+                activeOpacity={0.85}
+                onPress={() => router.replace('/(tabs)/' as any)}
+              >
                 <View style={[styles.subjectIconCircle, { backgroundColor: s.color + '22', borderColor: s.color + '55' }]}>
-                  <Text style={styles.subjectEmoji}>{s.emoji}</Text>
+                  <SubjectIcon subject={s.key as IconSubject} size={28} color={s.color} strokeWidth={2} />
                 </View>
                 <Text style={[styles.subjectName, { color: s.color }]}>{s.name}</Text>
                 <Text style={styles.subjectDesc}>{s.desc}</Text>
-              </View>
+                <Text style={styles.subjectGo}>タップして始める →</Text>
+              </TouchableOpacity>
             ))}
           </View>
         </View>
@@ -272,14 +289,20 @@ export default function LandingPage() {
         {/* ─── 特長 ────────────────────────────── */}
         <View style={styles.section}>
           <SectionLabel label="選ばれる理由" />
-          <Text style={styles.sectionTitle}>4つの強み</Text>
+          <Text style={styles.sectionTitle}>5つの強み</Text>
           <Text style={styles.sectionDesc}>
             合格実績を支えるテクノロジーと問題クオリティ。
           </Text>
           <View style={styles.featuresGrid}>
             {FEATURES.map((f) => (
               <View key={f.title} style={[styles.featureCard, glassBlur]}>
-                <Image source={f.image} style={styles.featureImage} resizeMode="contain" />
+                {f.image ? (
+                  <Image source={f.image} style={styles.featureImage} resizeMode="contain" />
+                ) : (
+                  <View style={[styles.featureImage, styles.featureImagePlaceholder]}>
+                    <Text style={styles.featureImagePlaceholderIcon}>{f.icon}</Text>
+                  </View>
+                )}
                 <View style={styles.featureOverlay}>
                   <View style={[styles.featureTag, { backgroundColor: f.tagColor }]}>
                     <Text style={styles.featureTagText}>{f.tag}</Text>
@@ -297,21 +320,8 @@ export default function LandingPage() {
 
         {/* ─── いつでも・どこでも ─────────────────── */}
         <View style={[styles.section, { backgroundColor: C.bgAlt }]}>
-          <SectionLabel label="マルチデバイス" />
+          <SectionLabel label="スキマ時間に" />
           <Text style={styles.sectionTitle}>いつでも・どこでも</Text>
-          <View style={styles.deviceRow}>
-            {[
-              { emoji: '📱', name: 'スマートフォン', sub: 'iOS・Android' },
-              { emoji: '💻', name: 'タブレット', sub: 'iPad対応' },
-              { emoji: '🖥️', name: 'パソコン', sub: 'Mac・Windows' },
-            ].map((d) => (
-              <View key={d.name} style={[styles.deviceCard, glassBlur]}>
-                <Text style={styles.deviceEmoji}>{d.emoji}</Text>
-                <Text style={styles.deviceName}>{d.name}</Text>
-                <Text style={styles.deviceSub}>{d.sub}</Text>
-              </View>
-            ))}
-          </View>
           <View style={[styles.scenarioBox, glassBlur]}>
             <Text style={styles.scenarioTitle}>📍 こんな場所で活用</Text>
             <View style={styles.scenarioGrid}>
@@ -330,7 +340,7 @@ export default function LandingPage() {
         </View>
 
         {/* ─── 合格者の声 ─────────────────────── */}
-        <View style={[styles.section, { backgroundColor: '#030810' }]}>
+        <View style={[styles.section, { backgroundColor: '#EEF2F8' }]}>
           <SectionLabel label="合格者・保護者の声" goldMode />
           <Text style={[styles.sectionTitle, { color: C.white }]}>実績が語る</Text>
           {VOICES.map((v, i) => (
@@ -373,9 +383,9 @@ export default function LandingPage() {
             <View style={[styles.planBadge, { backgroundColor: '#7B2D8B' }]}>
               <Text style={styles.planBadgeText}>人気</Text>
             </View>
-            <Text style={[styles.planName, { color: '#C07AE0' }]}>PRO プラン</Text>
+            <Text style={[styles.planName, { color: '#7A3FD0' }]}>PRO プラン</Text>
             <View style={styles.planPriceRow}>
-              <Text style={[styles.planPrice, { color: '#C07AE0' }]}>¥2,000</Text>
+              <Text style={[styles.planPrice, { color: '#7A3FD0' }]}>{formatYen(PRICES.proMonthly)}</Text>
               <Text style={styles.planPricePeriod}> / 月（税込）</Text>
             </View>
             <View style={styles.planDivider} />
@@ -383,10 +393,9 @@ export default function LandingPage() {
               '✓ 無料プランの全機能',
               '✓ 聞き流しモード（全5科目）',
               '✓ 地理マップ全レイヤー',
-              '✓ 歴史イラスト・合戦シーン',
-              '✓ キャラクターマスコット全解放',
+              '✓ 動く図解・アニメ解説',
             ].map((f) => (
-              <Text key={f} style={[styles.planFeature, { color: '#D4AAFF' }]}>{f}</Text>
+              <Text key={f} style={[styles.planFeature, { color: '#7A3FD0' }]}>{f}</Text>
             ))}
             <TouchableOpacity style={[styles.planBtn, { backgroundColor: '#7B2D8B' }]} onPress={handleStart} activeOpacity={0.85}>
               <Text style={styles.planBtnText}>PRO プランを始める</Text>
@@ -400,14 +409,16 @@ export default function LandingPage() {
             </View>
             <Text style={[styles.planName, { color: C.gold }]}>MAX プラン</Text>
             <View style={styles.planPriceRow}>
-              <Text style={[styles.planPrice, { color: C.gold }]}>¥3,000</Text>
+              <Text style={[styles.planPrice, { color: C.gold }]}>{formatYen(PRICES.maxMonthly)}</Text>
               <Text style={styles.planPricePeriod}> / 月（税込）</Text>
             </View>
             <View style={styles.planDivider} />
             {[
               '✓ PROプランの全機能',
+              '✓ 英単語Proを丸ごと同梱（単語5,000+・熟語4,000+）',
+              '✓ 英検対策 2・3・4級 5,160問',
+              '✓ AIと英会話練習',
               '✓ AI弱点コーチ（間違い問題をAI分析）',
-              '✓ 苦手単元の自動特定＆アドバイス',
             ].map((f) => (
               <Text key={f} style={[styles.planFeature, { color: C.goldLight }]}>{f}</Text>
             ))}
@@ -479,7 +490,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 24,
     paddingVertical: 14,
-    backgroundColor: 'rgba(4,12,28,0.92)',
+    backgroundColor: 'rgba(255,255,255,0.92)',
     borderBottomWidth: 1,
     borderBottomColor: C.glassBorder,
     position: 'relative',
@@ -716,6 +727,7 @@ const styles = StyleSheet.create({
   subjectEmoji: { fontSize: 28 },
   subjectName: { fontSize: 20, fontWeight: '900', marginBottom: 6, textAlign: 'center' },
   subjectDesc: { fontSize: 13, color: C.muted, fontWeight: '400', lineHeight: 20, textAlign: 'center' },
+  subjectGo: { fontSize: 12, color: '#2B4ACB', fontWeight: '700', marginTop: 8, textAlign: 'center' },
 
   // 特長
   featuresGrid: { gap: 16 },
@@ -729,6 +741,14 @@ const styles = StyleSheet.create({
   featureImage: {
     width: '100%',
     aspectRatio: 4 / 3,
+  },
+  featureImagePlaceholder: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: C.glassMid,
+  },
+  featureImagePlaceholderIcon: {
+    fontSize: 72,
   },
   featureOverlay: {
     position: 'absolute',
@@ -876,7 +896,7 @@ const styles = StyleSheet.create({
 
   // Final CTA
   finalCta: {
-    backgroundColor: '#030913',
+    backgroundColor: '#EEF2F8',
     paddingHorizontal: 28,
     paddingVertical: 72,
     alignItems: 'center',
@@ -949,7 +969,7 @@ const styles = StyleSheet.create({
 
   // FOOTER
   footer: {
-    backgroundColor: '#020710',
+    backgroundColor: '#E8ECF3',
     paddingVertical: 36,
     paddingHorizontal: 24,
     alignItems: 'center',

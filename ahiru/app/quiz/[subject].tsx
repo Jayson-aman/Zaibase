@@ -12,6 +12,7 @@ import { subjectInfo, type SubjectKey, type Question } from '../../data/question
 import { useSubjectQuestions } from '../../hooks/useSubjectQuestions';
 import { ALL_COURSES } from '../../data/courses';
 import type { CourseKey, ExamType } from '../../data/courses';
+import { getTopic, questionMatchesTopic } from '../../data/topics';
 import { explanationsSansu } from '../../data/explanations_sansu';
 import { explanationsKokugo } from '../../data/explanations_kokugo';
 import { explanationsRika } from '../../data/explanations_rika';
@@ -27,16 +28,20 @@ const allExplanations: Record<string, string> = {
 };
 import QuizCard from '../../components/QuizCard';
 import Paywall from '../../components/Paywall';
-import AnimatedMascot from '../../components/AnimatedMascot';
-import { getResultMascot } from '../../data/images';
 import { saveProgress } from '../../store/progress';
 import { incrementTrialQuestions, isTrialExpired, TRIAL_QUESTION_LIMIT } from '../../store/trial';
 import { submitRankingScore } from '../../services/ranking';
+import { maybeRequestReview } from '../../services/reviewPrompt';
 import { getDailyQuestions, getTodayDayLabel } from '../../utils/dailyChallenge';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 import TutorChat from '../../components/TutorChat';
 import HomeButton from '../../components/HomeButton';
+import Fireworks from '../../components/Fireworks';
+import { getFigure } from '../../data/figures';
+import FigureView from '../../components/FigureView';
+import { pickEncouragement, pickStreakEncouragement } from '../../data/encouragements';
+import SubjectIcon from '../../components/SubjectIcon';
 
 function isSubjectKey(value: string): value is SubjectKey {
   return ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'].includes(value);
@@ -61,6 +66,16 @@ const DIFF_LABELS: Record<Difficulty, { label: string; icon: string; color: stri
   standard: { label: '標準', icon: '⭐', color: '#F39C12' },
   advanced: { label: '発展', icon: '🔥', color: '#E74C3C' },
 };
+
+/** Fisher-Yates シャッフル。Array.sort(() => Math.random() - 0.5) は偏りがあるため使わない。 */
+function shuffle<T>(arr: T[]): T[] {
+  const result = [...arr];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
 
 function filterQuestions(
   all: Question[],
@@ -88,13 +103,14 @@ function filterQuestions(
 }
 
 export default function QuizScreen() {
-  const { subject, difficulty: diffParam, mode, course: courseParam, examType: examTypeParam } =
+  const { subject, difficulty: diffParam, mode, course: courseParam, examType: examTypeParam, topic: topicParam } =
     useLocalSearchParams<{
       subject: string;
       difficulty?: string;
       mode?: string;
       course?: string;
       examType?: string;
+      topic?: string;
     }>();
   const router = useRouter();
 
@@ -116,10 +132,24 @@ export default function QuizScreen() {
 
   const { questions: subjectPool, loading: questionsLoading } = useSubjectQuestions(subjectKey);
 
-  const questions = useMemo(() => {
+  // 「もう一度チャレンジ」で毎回シャッフルし直すためのキー
+  const [restartKey, setRestartKey] = useState(0);
+
+  const baseQuestions = useMemo(() => {
     if (questionsLoading) return [];
     if (isDaily) return getDailyQuestions(subjectPool, subjectKey, 30, course, examType);
     const all = subjectPool;
+    // 単元別モード：コースを問わず、その単元に該当する問題だけを出題
+    if (topicParam) {
+      const topic = getTopic(subjectKey, topicParam);
+      if (topic) {
+        let pool = all.filter((q) => (q.examType ?? 'chugaku') === examType);
+        pool = pool.filter((q) => questionMatchesTopic(q, topic));
+        if (!(isPro || isMax)) pool = pool.filter((q) => !q.maxOnly);
+        if (difficultyFilter) pool = pool.filter((q) => q.difficulty === difficultyFilter);
+        return shuffle(pool);
+      }
+    }
     if (isMock) {
       // 模擬試験: 入試形式（学校別大問）を除いた一般問題のみ使用
       const generalKey = examType === 'koko' ? 'koko-general' : 'general';
@@ -127,18 +157,17 @@ export default function QuizScreen() {
         if ((q.examType ?? 'chugaku') !== examType) return false;
         return !q.course || q.course === generalKey;
       });
-      const shuffled = [...pool].sort(() => Math.random() - 0.5);
-      return shuffled.slice(0, 30);
+      return shuffle(pool).slice(0, 30);
     }
     if (isKakomon) {
-      // 入試試験: 学校別問題のみ（大問形式）
+      // 入試試験: 学校別問題のみ（大問形式）。学校ごとに同じ順番にならないようシャッフル。
       const schoolQ = all.filter((q) => q.course === course && (q.examType ?? 'chugaku') === examType);
-      if (schoolQ.length > 0) return schoolQ;
-      return filterQuestions(all, examType, course, 'advanced', true);
+      if (schoolQ.length > 0) return shuffle(schoolQ);
+      return shuffle(filterQuestions(all, examType, course, 'advanced', true));
     }
     const filtered = filterQuestions(all, examType, course, difficultyFilter, isPro || isMax);
-    return [...filtered].sort(() => Math.random() - 0.5);
-  }, [subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, course, examType, isPro, isMax]);
+    return shuffle(filtered);
+  }, [subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, course, examType, isPro, isMax, topicParam, restartKey]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -151,15 +180,68 @@ export default function QuizScreen() {
   const [waitingNext, setWaitingNext] = useState(false);
   const [showPaywall, setShowPaywall] = useState(false);
   const [showTutorChat, setShowTutorChat] = useState(false);
+  // 出題キュー（基礎問題の差し込みで伸びることがある）
+  const [queue, setQueue] = useState<Question[]>([]);
+  // 連続不正解の回数（3回でやさしく基礎に戻す）
+  const [wrongStreak, setWrongStreak] = useState(0);
+  // 直前の不正解で基礎問題を差し込んだか（バナー表示用）
+  const [remedialJustInjected, setRemedialJustInjected] = useState(false);
+  // 正解時のお祝い花火
+  const [showFireworks, setShowFireworks] = useState(false);
 
-  const currentQuestion = questions[currentIndex];
-  const total = questions.length;
+  // baseQuestions が変わったら（初回ロード・シャッフルし直し・条件変更）キューを作り直す
+  useEffect(() => {
+    setQueue(baseQuestions);
+    setCurrentIndex(0);
+    setScore(0);
+    setRevealed(false);
+    setFinished(false);
+    setSavedProgress(false);
+    setWrongIds([]);
+    setShowExplanation(false);
+    setWaitingNext(false);
+    setFeedback(null);
+    setWrongStreak(0);
+    setRemedialJustInjected(false);
+    setShowFireworks(false);
+  }, [baseQuestions]);
+
+  // ロード後の一瞬だけ queue が空になるのを避けるため baseQuestions をフォールバックに使う
+  const activeQuestions = queue.length > 0 ? queue : baseQuestions;
+  const currentQuestion = activeQuestions[currentIndex];
+  const total = activeQuestions.length;
   const diffInfo = difficultyFilter ? DIFF_LABELS[difficultyFilter] : null;
+  const currentFigure = currentQuestion ? getFigure(currentQuestion.id) : undefined;
 
   const currentChoices = currentQuestion?.choices;
 
   function handleReveal() {
     setRevealed(true);
+  }
+
+  /**
+   * 連続で間違えたとき、同じ教科の基礎問題を最大3問、今の位置の直後に差し込む。
+   * 基礎を解き終わると、そのまま元のコースの問題に戻る（＝同じコースに行く）。
+   * 差し込めたら true。
+   */
+  function injectRemedialBasics(): boolean {
+    const seenIds = new Set(activeQuestions.map((q) => q.id));
+    const basics = subjectPool.filter(
+      (q) =>
+        (q.examType ?? 'chugaku') === examType &&
+        q.difficulty === 'basic' &&
+        !q.maxOnly &&
+        !seenIds.has(q.id),
+    );
+    if (basics.length === 0) return false;
+    const pick = shuffle(basics).slice(0, 3);
+    setQueue((prev) => {
+      const base = prev.length > 0 ? prev : activeQuestions;
+      const next = [...base];
+      next.splice(currentIndex + 1, 0, ...pick);
+      return next;
+    });
+    return true;
   }
 
   async function advanceOrFinish(currentScore: number, currentWrongIds: string[]) {
@@ -169,6 +251,7 @@ export default function QuizScreen() {
         setSavedProgress(true);
         await saveProgress(subjectKey, currentScore, total, currentWrongIds);
         submitRankingScore(currentScore, total).catch(() => {});
+        maybeRequestReview(currentScore, total).catch(() => {});
       }
       setFinished(true);
     } else {
@@ -195,6 +278,15 @@ export default function QuizScreen() {
     setWrongIds(newWrongIds);
 
     if (!correct) {
+      const newStreak = wrongStreak + 1;
+      setWrongStreak(newStreak);
+      // 3回連続で間違えたら、やさしく基礎問題に戻す
+      let injected = false;
+      if (newStreak >= 3) {
+        injected = injectRemedialBasics();
+        if (injected) setWrongStreak(0);
+      }
+      setRemedialJustInjected(injected);
       setFeedback('wrong');
       setTimeout(() => {
         setFeedback(null);
@@ -203,25 +295,21 @@ export default function QuizScreen() {
       return;
     }
 
-    setFeedback('correct');
+    // 正解：連続不正解をリセットして花火を打ち上げる
+    setWrongStreak(0);
+    setShowFireworks(true);
     setTimeout(async () => {
-      setFeedback(null);
+      setShowFireworks(false);
       await advanceOrFinish(newScore, newWrongIds);
-    }, 500);
+    }, 1100);
   }
 
   async function handleRestart() {
-    setCurrentIndex(0);
-    setScore(0);
-    setRevealed(false);
-    setFinished(false);
-    setSavedProgress(false);
-    setWrongIds([]);
-    setShowExplanation(false);
-    setWaitingNext(false);
-    setFeedback(null);
+    // restartKey を進めると baseQuestions が再シャッフルされ、
+    // useEffect が全ステートを初期化する（＝毎回ちがう順番で出題）。
     setShowPaywall(false);
     setShowTutorChat(false);
+    setRestartKey((k) => k + 1);
   }
 
   if (questionsLoading) {
@@ -232,7 +320,7 @@ export default function QuizScreen() {
             <Text style={styles.backBtnText}>← 戻る</Text>
           </TouchableOpacity>
           <View style={styles.headerCenter}>
-            <Text style={styles.headerEmoji}>{info.emoji}</Text>
+            <SubjectIcon subject={subjectKey} size={28} color="#FFFFFF" strokeWidth={2} />
             <Text style={styles.headerTitle}>{info.name}</Text>
           </View>
           <View style={styles.headerRight}><HomeButton variant="light" /></View>
@@ -244,7 +332,7 @@ export default function QuizScreen() {
     );
   }
 
-  if (questions.length === 0) {
+  if (baseQuestions.length === 0) {
     return (
       <SafeAreaView style={styles.safeArea}>
         <View style={[styles.header, { backgroundColor: info.color }]}>
@@ -252,7 +340,7 @@ export default function QuizScreen() {
             <Text style={styles.backBtnText}>← 戻る</Text>
           </TouchableOpacity>
           <View style={styles.headerCenter}>
-            <Text style={styles.headerEmoji}>{info.emoji}</Text>
+            <SubjectIcon subject={subjectKey} size={28} color="#FFFFFF" strokeWidth={2} />
             <Text style={styles.headerTitle}>{info.name}</Text>
           </View>
           <View style={styles.headerRight}>
@@ -294,7 +382,7 @@ export default function QuizScreen() {
       <SafeAreaView style={[styles.safeArea, { backgroundColor: '#F5F7FA' }]}>
         <View style={styles.resultsContainer}>
           <View style={[styles.resultsHeader, { backgroundColor: isDaily ? '#C0392B' : info.color }]}>
-            <Text style={styles.resultsHeaderEmoji}>{info.emoji}</Text>
+            <SubjectIcon subject={subjectKey} size={44} color="#FFFFFF" strokeWidth={2} />
             <Text style={styles.resultsHeaderTitle}>
               {isDaily ? `🔥 MAX日替わり ${info.name} 完了！` : `${info.name} 完了！`}
             </Text>
@@ -302,13 +390,6 @@ export default function QuizScreen() {
 
           <ScrollView contentContainerStyle={styles.resultsContent}>
             <View style={styles.resultCard}>
-              <AnimatedMascot
-                source={getResultMascot(pct)}
-                style={styles.resultAnime}
-                fallbackEmoji={emoji}
-                animation="bounce"
-                accessibilityLabel="結果イラスト"
-              />
               <Text style={styles.resultEmoji}>{emoji}</Text>
               <Text style={styles.resultMessage}>{message}</Text>
               <View style={styles.resultScoreRow}>
@@ -361,7 +442,7 @@ export default function QuizScreen() {
           <Text style={styles.backBtnText}>← 戻る</Text>
         </TouchableOpacity>
         <View style={styles.headerCenter}>
-          <Text style={styles.headerEmoji}>{info.emoji}</Text>
+          <SubjectIcon subject={subjectKey} size={28} color="#FFFFFF" strokeWidth={2} />
           <Text style={styles.headerTitle}>{info.name}</Text>
           {isDaily ? (
             <Text style={styles.headerDiff}>🔥 {getTodayDayLabel()}</Text>
@@ -426,21 +507,57 @@ export default function QuizScreen() {
               <Text style={styles.wrongCorrectAnswer}>正解：{currentQuestion.answer}</Text>
             </View>
 
+            {/* 励みになる言葉 */}
+            <View style={styles.cheerCard}>
+              <Text style={styles.cheerText}>{pickEncouragement(wrongIds.length)}</Text>
+            </View>
+
+            {/* 連続で間違えたときは、やさしく基礎に戻したことを伝える */}
+            {remedialJustInjected && (
+              <View style={styles.remedialCard}>
+                <Text style={styles.remedialTitle}>🌱 いったん基礎にもどろう</Text>
+                <Text style={styles.remedialText}>
+                  {pickStreakEncouragement(wrongIds.length)}
+                  {'\n'}このあと基礎問題を数問はさんでから、また同じコースに戻るよ。
+                </Text>
+              </View>
+            )}
+
+            {/* 図解（この問題に図があれば、解説と一緒に表示） */}
+            {currentFigure != null && (
+              <View style={styles.wrongFigureCard}>
+                <Text style={styles.wrongFigureLabel}>📐 図解でチェック</Text>
+                <FigureView figure={currentFigure} animated />
+              </View>
+            )}
+
             {(currentQuestion.hint || currentQuestion.explanation || allExplanations[currentQuestion.id]) && (
               <View style={styles.wrongExplanationCard}>
-                <Text style={styles.wrongExplanationTitle}>📖 解説</Text>
+                <Text style={styles.wrongExplanationTitle}>📖 くわしい解説</Text>
                 <Text style={styles.wrongExplanationText}>
                   {isPro || isMax
                     ? (currentQuestion.explanation ?? allExplanations[currentQuestion.id] ?? currentQuestion.hint)
                     : (currentQuestion.hint ?? currentQuestion.explanation?.split('\n')[0] ?? allExplanations[currentQuestion.id]?.split('\n')[0])}
                 </Text>
+                {(isPro || isMax) && currentQuestion.memoryTip && (
+                  <View style={styles.tipRow}>
+                    <Text style={styles.tipLabel}>💡 覚え方</Text>
+                    <Text style={styles.tipText}>{currentQuestion.memoryTip}</Text>
+                  </View>
+                )}
+                {(isPro || isMax) && currentQuestion.pitfall && (
+                  <View style={styles.tipRow}>
+                    <Text style={styles.pitfallLabel}>⚠️ ひっかけ注意</Text>
+                    <Text style={styles.tipText}>{currentQuestion.pitfall}</Text>
+                  </View>
+                )}
                 {!isPro && !isMax && (currentQuestion.explanation || allExplanations[currentQuestion.id]) && (
                   <TouchableOpacity
                     style={styles.explanationUpgradeBtn}
                     onPress={() => setShowPaywall(true)}
                     activeOpacity={0.85}
                   >
-                    <Text style={styles.explanationUpgradeBtnText}>🔒 詳細解説を見る（Pro/Max）</Text>
+                    <Text style={styles.explanationUpgradeBtnText}>🔒 図解つき詳細解説を見る（Pro/Max）</Text>
                   </TouchableOpacity>
                 )}
               </View>
@@ -553,6 +670,8 @@ export default function QuizScreen() {
           </Text>
         </View>
       )}
+
+      {showFireworks && <Fireworks />}
 
       <Paywall
         visible={showPaywall}
@@ -983,6 +1102,79 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: '700',
     color: '#1D4ED8',
+  },
+  cheerCard: {
+    backgroundColor: '#EAF7EF',
+    borderRadius: 14,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderWidth: 1,
+    borderColor: '#B8E6C8',
+    alignItems: 'center',
+  },
+  cheerText: {
+    fontSize: 16,
+    fontWeight: '800',
+    color: '#1E7A4B',
+    textAlign: 'center',
+    lineHeight: 24,
+  },
+  remedialCard: {
+    backgroundColor: '#F0FAF3',
+    borderRadius: 14,
+    padding: 16,
+    borderLeftWidth: 4,
+    borderLeftColor: '#27AE60',
+  },
+  remedialTitle: {
+    fontSize: 17,
+    fontWeight: '900',
+    color: '#1E7A4B',
+    marginBottom: 6,
+  },
+  remedialText: {
+    fontSize: 15,
+    color: '#2F5D45',
+    lineHeight: 24,
+    fontWeight: '500',
+  },
+  wrongFigureCard: {
+    backgroundColor: '#F7FBFF',
+    borderRadius: 16,
+    padding: 14,
+    borderWidth: 1,
+    borderColor: '#D6E6FA',
+  },
+  wrongFigureLabel: {
+    fontSize: 15,
+    fontWeight: '800',
+    color: '#2C6BB3',
+    marginBottom: 10,
+  },
+  tipRow: {
+    marginTop: 12,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 12,
+  },
+  tipLabel: {
+    fontSize: 14,
+    fontWeight: '800',
+    color: '#B45309',
+    marginBottom: 4,
+  },
+  pitfallLabel: {
+    fontSize: 14,
+    fontWeight: '800',
+    color: '#C0392B',
+    marginBottom: 4,
+  },
+  tipText: {
+    fontSize: 15,
+    color: '#4A3A2A',
+    lineHeight: 23,
+    fontWeight: '500',
   },
   upgradeBanner: {
     flexDirection: 'row',

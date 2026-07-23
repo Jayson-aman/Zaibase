@@ -9,6 +9,7 @@ import {
   Platform,
 } from 'react-native';
 import { router } from 'expo-router';
+import { PRO_PRICE_LABEL, MAX_PRICE_LABEL } from '../constants/pricing';
 
 const isWeb = Platform.OS === 'web';
 
@@ -29,7 +30,7 @@ export default function ConsentModal({ onAgree }: Props) {
     <View style={styles.root}>
         {/* ── Header ── */}
         <View style={styles.header}>
-          <Text style={styles.logo}>🐥 ahiru</Text>
+          <Text style={styles.logo}>🎓 Zaibase受験</Text>
           <Text style={styles.headerTitle}>ご利用前にご確認ください</Text>
           <Text style={styles.headerSub}>中学・高校受験対策アプリをご利用いただくにあたり、以下の規約にご同意ください。</Text>
         </View>
@@ -91,7 +92,13 @@ export default function ConsentModal({ onAgree }: Props) {
           <View style={styles.planBox}>
             <Text style={styles.planBoxTitle}>💳 有料プランについて</Text>
             <Text style={styles.planBoxText}>
-              本アプリは無料でご利用いただけます。PRO（¥2,000/月）・MAX（¥3,000/月）プランでは、聞き流しモード・AI弱点コーチ等の追加機能をご利用いただけます。課金はApp Store / Google Play を通じて行われます。
+              {`本アプリは無料でご利用いただけます。PRO（${PRO_PRICE_LABEL}）・MAX（${MAX_PRICE_LABEL}）プランでは、聞き流しモード・AI弱点コーチ等の追加機能をご利用いただけます。課金は${
+                isWeb
+                  ? 'クレジットカード決済'
+                  : Platform.OS === 'ios'
+                  ? 'App Store'
+                  : 'Google Play'
+              }を通じて行われます。`}
             </Text>
           </View>
 
@@ -159,27 +166,31 @@ const styles = StyleSheet.create({
     zIndex: 9999,
   },
   header: {
-    backgroundColor: '#040C1C',
+    backgroundColor: '#FFFFFF',
     paddingHorizontal: 24,
     paddingTop: 52,
-    paddingBottom: 28,
+    paddingBottom: 24,
     alignItems: 'center',
+    borderBottomWidth: 1.5,
+    borderBottomColor: '#CBD2DE',
   },
   logo: {
-    fontSize: 40,
+    fontSize: 28,
+    fontWeight: '800',
+    color: '#0F1826',
     marginBottom: 8,
   },
   headerTitle: {
     fontFamily: SERIF,
     fontSize: 20,
     fontWeight: '700',
-    color: '#EDF4FF',
+    color: '#0F1826',
     marginBottom: 8,
     textAlign: 'center',
   },
   headerSub: {
     fontSize: 13,
-    color: 'rgba(255,255,255,0.65)',
+    color: '#7A8798',
     textAlign: 'center',
     lineHeight: 20,
     fontWeight: '400',

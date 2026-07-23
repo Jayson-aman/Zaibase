@@ -42,6 +42,7 @@ export type CourseKey =
   // ── 高校受験 カテゴリ ──
   | 'koko-general'    // 公立高校 一般
   | 'koko-kankan'     // 関関同立附属高
+  | 'koko-shitennoji' // 四天王寺高等学校
   | 'koko-top'        // 最難関公立（天王寺・北野）MAXのみ
   // ── 東京 高校受験 ──
   | 'koko-hibiya'     // 都立日比谷高校（最難関）
@@ -419,6 +420,19 @@ export const ALL_COURSES: CourseInfo[] = [
     maxOnly: true,
     gender: '共学',
     hensachi: '68〜72',
+  },
+  {
+    key: 'koko-shitennoji',
+    examType: 'koko',
+    name: '四天王寺高等学校',
+    shortName: '四天王寺(高)',
+    emoji: '⛩️',
+    color: '#C0392B',
+    level: '難関',
+    targetSchools: ['四天王寺高等学校'],
+    description: '四天王寺高等学校の入試レベル問題。論理的思考と記述力が問われる',
+    gender: '女子',
+    hensachi: '62〜68',
   },
 
   // ─────── 東京 中学受験 ───────

@@ -25,8 +25,10 @@ export default function ProfileScreen() {
     if (!isRevenueCatConfigured()) {
       Alert.alert(
         '準備中',
-        'App Store の審査通過後に課金機能が有効になります。\n\n' +
-        '現在はすべての機能を無料でお試しいただけます。',
+        (Platform.OS === 'web'
+          ? 'ただいま課金機能を準備中です。'
+          : 'App Store の審査通過後に課金機能が有効になります。') +
+        '\n\n現在はすべての機能を無料でお試しいただけます。',
         [{ text: 'OK' }],
       );
       return;
@@ -197,8 +199,11 @@ export default function ProfileScreen() {
 
             <Text style={styles.legalNote}>
               • 月額サブスクリプション。期間終了日の24時間以上前にキャンセルしない限り自動更新されます。{'\n'}
-              • Apple ID アカウントに請求されます。{'\n'}
-              • キャンセルは「設定」→「Apple ID」→「サブスクリプション」から行えます。
+              {Platform.OS === 'web' ? (
+                <>• クレジットカード決済（Stripe経由）です。キャンセルは購入完了メール内の「サブスクリプション管理」リンクから行えます。</>
+              ) : (
+                <>• Apple ID アカウントに請求されます。{'\n'}• キャンセルは「設定」→「Apple ID」→「サブスクリプション」から行えます。</>
+              )}
             </Text>
           </View>
         )}

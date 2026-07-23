@@ -4,11 +4,12 @@
  * askTutor — 問題の写真＋テキスト質問を受け取り、Claude APIで解説を返す（Maxプラン限定）
  *
  * 料金設計:
- *   - Max ¥2,000/月: 月15セッションまで込み
- *   - 1セッション = 1問題 (最大5往復)
+ *   - Max ¥2,850/月: 月18セッションまで込み
+ *   - 1セッション = 1問題 (最大6往復)
  *   - 1往復目: claude-opus-4-8（画像理解・初回分析）
- *   - 2〜5往復目: claude-haiku-4-5（フォローアップ・低コスト）
- *   - 追加購入: +5問 ¥200 (消耗型IAP、extraCreditsとしてFirestoreに加算)
+ *   - 2〜6往復目: claude-haiku-4-5（フォローアップ・低コスト）
+ *   - （将来）追加購入: +5問の消耗型IAP。現在は未提供のため、購入導線・案内文言は出さない。
+ *     実装時はサーバーで購入検証（RevenueCat webフック/レシート）後に addTutorCredits を呼ぶこと。
  *
  * Firestore:
  *   aiTutorUsage/{uid} — 月別セッション数・追加クレジット
@@ -18,14 +19,15 @@
  *   ANTHROPIC_API_KEY
  */
 const { onCall, HttpsError } = require("firebase-functions/v2/https");
+const { sanitizeHistory, assertImageSize, capString } = require("./_sanitize");
 const { getFirestore, FieldValue } = require("firebase-admin/firestore");
 const { defineSecret } = require("firebase-functions/params");
 
 const db = getFirestore();
 const ANTHROPIC_API_KEY = defineSecret("ANTHROPIC_API_KEY");
 
-const MONTHLY_SESSION_LIMIT = 15;
-const TURN_LIMIT = 5;
+const MONTHLY_SESSION_LIMIT = 18;
+const TURN_LIMIT = 6;
 
 function monthKey() {
   return new Date().toISOString().slice(0, 7);
@@ -47,10 +49,9 @@ async function getOrCreateSession(uid, sessionId, isNewSession) {
       const limit = MONTHLY_SESSION_LIMIT + extraCredits;
 
       if (sessionsUsed >= limit) {
-        const extra = extraCredits > 0 ? `（追加購入${extraCredits}問含む）` : "";
         throw new HttpsError(
           "resource-exhausted",
-          `今月のAI個別指導は${limit}問${extra}使い切りました。「+5問追加」を購入するか、来月また使えます！`
+          `今月のAI個別指導は${limit}問すべて使い切りました。また来月からたくさん使えるよ！今月もよく頑張ったね😊`
         );
       }
 
@@ -107,9 +108,14 @@ exports.askTutor = onCall(
       isNewSession = false,
     } = req.data ?? {};
 
-    if (!sessionId) throw new HttpsError("invalid-argument", "sessionId が必要です");
+    if (!sessionId || typeof sessionId !== "string" || sessionId.length > 128)
+      throw new HttpsError("invalid-argument", "sessionId が不正です");
     if (!questionText && !imageBase64)
       throw new HttpsError("invalid-argument", "質問文または画像が必要です");
+    // 巨大入力によるトークン濫用（コスト爆撃）への防御
+    assertImageSize(imageBase64);
+    const safeQuestionText = capString(questionText, 2000);
+    const safeHistory = sanitizeHistory(history, { maxTurns: 12, maxContentLen: 4000 });
 
     // Maxプラン確認 or 無料体験（1回限り）
     const userRef = db.collection("users").doc(uid);
@@ -122,7 +128,7 @@ exports.askTutor = onCall(
       if (trialAiUsed) {
         throw new HttpsError(
           "permission-denied",
-          "AI個別指導の無料体験（1回）は使い切りました。Maxプランにアップグレードすると月15回使えるよ！"
+          "AI個別指導の無料体験（1回）は使い切りました。Maxプランにアップグレードすると月18回使えるよ！"
         );
       }
       // 初回のみ許可 → 体験済みマークを付ける
@@ -146,12 +152,12 @@ exports.askTutor = onCall(
         source: { type: "base64", media_type: "image/jpeg", data: imageBase64 },
       });
     }
-    if (questionText) {
-      userContent.push({ type: "text", text: questionText });
+    if (safeQuestionText) {
+      userContent.push({ type: "text", text: safeQuestionText });
     }
 
     const messages = [
-      ...history.map((h) => ({ role: h.role, content: h.content })),
+      ...safeHistory,
       { role: "user", content: userContent },
     ];
 

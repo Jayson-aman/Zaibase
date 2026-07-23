@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -8,25 +8,56 @@ import {
   Dimensions,
   Pressable,
   Modal,
+  Image,
 } from 'react-native';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
   withSpring,
 } from 'react-native-reanimated';
+import Svg, { Path as SvgPath, G as SvgG } from 'react-native-svg';
 import {
   geographyRegions,
   industrialZoneSummary,
   sectorOverview,
   GeoRegion,
 } from '../data/geographyRegions';
+import {
+  mountainRanges,
+  rivers,
+  abaregawaTrivia,
+  japanAlpsTrivia,
+} from '../data/geographyTerrain';
+import { prefectureShapes, JP_MAP_VIEWBOX } from '../data/japanPrefectures';
+import { geographyImages } from '../data/geographyImages';
 import { GeoLayerId } from '../constants/proAccess';
 
-const MAP_W = Math.min(Dimensions.get('window').width - 48, 440);
-const MAP_H = MAP_W * 0.72;
+// 初期レンダリングで window.width が 0 の場合に負値にならないようガード
+const MAP_W = Math.max(240, Math.min(Dimensions.get('window').width - 48, 440));
+const MAP_H = MAP_W * 1.15;
+// 都道府県SVGパスのviewBox（data/japanPrefectures.ts と一致）
+const VIEWBOX_W = JP_MAP_VIEWBOX.w;
+const VIEWBOX_H = JP_MAP_VIEWBOX.h;
+
+// 地方ごとに、その地方に属する都道府県の重心の平均をラベル位置にする
+const REGION_LABEL_POS: Record<string, { x: number; y: number }> = (() => {
+  const acc: Record<string, { x: number; y: number; n: number }> = {};
+  for (const p of prefectureShapes) {
+    const a = (acc[p.region] ??= { x: 0, y: 0, n: 0 });
+    a.x += p.cx;
+    a.y += p.cy;
+    a.n += 1;
+  }
+  const out: Record<string, { x: number; y: number }> = {};
+  for (const [region, a] of Object.entries(acc)) out[region] = { x: a.x / a.n, y: a.y / a.n };
+  // 沖縄インセットに重心が引っぱられないよう、九州本体側へ寄せる
+  if (out.kyushu) out.kyushu = { x: 55, y: 268 };
+  return out;
+})();
 
 const LAYERS: { key: GeoLayerId; label: string; emoji: string }[] = [
   { key: 'terrain', label: '地形', emoji: '🏔' },
+  { key: 'mountains', label: '山と川', emoji: '⛰️' },
   { key: 'agriculture', label: '農業', emoji: '🌾' },
   { key: 'fishery', label: '漁業', emoji: '🐟' },
   { key: 'forestry', label: '林業', emoji: '🌲' },
@@ -129,21 +160,176 @@ export default function GeographyExplorer(_props: Props) {
         <View style={styles.mapShadow} />
         <Animated.View style={[styles.mapContainer, mapAnimatedStyle]}>
           <View style={[styles.mapBase, { width: MAP_W, height: MAP_H }]}>
-            {geographyRegions.map((region) => (
-              <RegionBlock
-                key={region.id}
-                region={region}
-                selected={selectedId === region.id}
-                onPress={() => selectRegion(region)}
-              />
+            <Svg width={MAP_W} height={MAP_H} viewBox={`0 0 ${VIEWBOX_W} ${VIEWBOX_H}`}>
+              {/* 47都道府県を地方の色で描く（正確な国土形状） */}
+              {prefectureShapes.map((pref) => {
+                const isSel = selectedId === pref.region;
+                // 山と川レイヤーのときは、地方の色をうすくして山脈・川を目立たせる
+                const dimmed = layer === 'mountains';
+                const region = geographyRegions.find((r) => r.id === pref.region);
+                return (
+                  <SvgG key={`pref_${pref.id}`} onPress={() => region && selectRegion(region)}>
+                    <SvgPath
+                      d={pref.path}
+                      fill={pref.color}
+                      stroke={isSel ? '#FFFFFF' : 'rgba(255,255,255,0.55)'}
+                      strokeWidth={isSel ? 1.2 : 0.5}
+                      opacity={isSel ? 1 : dimmed ? 0.45 : 0.9}
+                    />
+                  </SvgG>
+                );
+              })}
+
+              {/* 山と川レイヤー：川（青い線）と山脈（茶色のギザギザ）を重ねる */}
+              {layer === 'mountains' && (
+                <SvgG>
+                  {rivers.map((r) => (
+                    <SvgPath
+                      key={`river_${r.id}`}
+                      d={r.path}
+                      fill="none"
+                      stroke="#1D6FC0"
+                      strokeWidth={2.4}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      opacity={0.95}
+                    />
+                  ))}
+                  {mountainRanges.map((m) => (
+                    <SvgPath
+                      key={`mtn_${m.id}`}
+                      d={m.path}
+                      fill="none"
+                      stroke="#7A5230"
+                      strokeWidth={2.6}
+                      strokeLinecap="round"
+                      strokeLinejoin="miter"
+                      opacity={0.95}
+                    />
+                  ))}
+                </SvgG>
+              )}
+            </Svg>
+            {/* 地域ラベル（絵文字＋名前）をSVGの上に絶対配置 */}
+            {geographyRegions.map((region) => {
+              const pos = REGION_LABEL_POS[region.id];
+              if (!pos) return null;
+              const isSel = selectedId === region.id;
+              return (
+                <Pressable
+                  key={`label_${region.id}`}
+                  onPress={() => selectRegion(region)}
+                  style={[
+                    styles.mapLabel,
+                    layer === 'mountains' && styles.mapLabelDim,
+                    {
+                      left: (pos.x / VIEWBOX_W) * MAP_W - 30,
+                      top: (pos.y / VIEWBOX_H) * MAP_H - 16,
+                    },
+                  ]}
+                >
+                  <Text style={styles.mapLabelEmoji}>{region.emoji}</Text>
+                  <Text style={[styles.mapLabelText, isSel && styles.mapLabelTextSel]} numberOfLines={1}>
+                    {region.name.replace(/（.*）/, '')}
+                  </Text>
+                </Pressable>
+              );
+            })}
+
+            {/* 山と川レイヤーのラベル */}
+            {layer === 'mountains' && rivers.map((r) => (
+              <View
+                key={`rlabel_${r.id}`}
+                pointerEvents="none"
+                style={[
+                  styles.terrainLabel,
+                  { left: (r.labelX / VIEWBOX_W) * MAP_W - 24, top: (r.labelY / VIEWBOX_H) * MAP_H - 8 },
+                ]}
+              >
+                <Text style={styles.riverLabelText} numberOfLines={1}>💧{r.name}</Text>
+              </View>
+            ))}
+            {layer === 'mountains' && mountainRanges.map((m) => (
+              <View
+                key={`mlabel_${m.id}`}
+                pointerEvents="none"
+                style={[
+                  styles.terrainLabel,
+                  { left: (m.labelX / VIEWBOX_W) * MAP_W - 24, top: (m.labelY / VIEWBOX_H) * MAP_H - 8 },
+                ]}
+              >
+                <Text style={styles.mountainLabelText} numberOfLines={1}>⛰{m.name.replace(/（.*）/, '')}</Text>
+              </View>
             ))}
           </View>
         </Animated.View>
       </View>
 
       <View style={styles.tapHint}>
-        <Text style={styles.tapHintText}>👆 地域をタップすると詳細情報が表示されます</Text>
+        <Text style={styles.tapHintText}>
+          {layer === 'mountains'
+            ? '⛰ 茶色の線が山脈、💧 青い線が川。下に長さ・標高の詳細があるよ'
+            : '👆 地域をタップすると詳細情報が表示されます'}
+        </Text>
       </View>
+
+      {/* 山と川レイヤーの詳細リスト */}
+      {layer === 'mountains' && (
+        <View style={styles.terrainPanel}>
+          {/* 川（長さ順） */}
+          <Text style={styles.terrainPanelTitle}>💧 主要な川（長い順）</Text>
+          {rivers.map((r) => (
+            <View key={`rd_${r.id}`} style={styles.terrainCard}>
+              <View style={styles.terrainCardHead}>
+                <Text style={styles.terrainCardName}>{r.name}<Text style={styles.terrainReading}>（{r.reading}）</Text></Text>
+                <View style={styles.terrainBadge}>
+                  <Text style={styles.terrainBadgeText}>{r.lengthKm}km</Text>
+                </View>
+              </View>
+              {(r.rank || r.nickname) && (
+                <Text style={styles.terrainTag}>
+                  {r.rank ? `🏅 ${r.rank}` : ''}{r.rank && r.nickname ? '　' : ''}{r.nickname ? `📛 別名「${r.nickname}」` : ''}
+                </Text>
+              )}
+              <Text style={styles.terrainMeta}>🌾 つくる平野：{r.plain}　🌊 河口：{r.mouth}</Text>
+              <Text style={styles.terrainNote}>{r.note}</Text>
+            </View>
+          ))}
+
+          {/* 山脈（山地） */}
+          <Text style={[styles.terrainPanelTitle, { marginTop: 14 }]}>⛰ 主要な山脈・山地</Text>
+          {mountainRanges.map((m) => (
+            <View key={`md_${m.id}`} style={styles.terrainCard}>
+              <View style={styles.terrainCardHead}>
+                <Text style={styles.terrainCardName}>{m.name}<Text style={styles.terrainReading}>（{m.reading}）</Text></Text>
+                <View style={[styles.terrainBadge, styles.terrainBadgeMtn]}>
+                  <Text style={styles.terrainBadgeText}>{m.heightM.toLocaleString()}m</Text>
+                </View>
+              </View>
+              <Text style={styles.terrainMeta}>📍 {m.region}　🗻 最高峰：{m.highestPeak}</Text>
+              <Text style={styles.terrainNote}>{m.note}</Text>
+            </View>
+          ))}
+
+          {/* 豆知識：日本アルプス */}
+          <View style={styles.triviaCard}>
+            <Text style={styles.triviaTitle}>💡 {japanAlpsTrivia.title}</Text>
+            <Text style={styles.triviaIntro}>{japanAlpsTrivia.intro}</Text>
+            {japanAlpsTrivia.items.map((it) => (
+              <Text key={it.name} style={styles.triviaItem}>・{it.name}：{it.peak}</Text>
+            ))}
+          </View>
+
+          {/* 豆知識：三大暴れ川 */}
+          <View style={styles.triviaCard}>
+            <Text style={styles.triviaTitle}>💡 {abaregawaTrivia.title}</Text>
+            <Text style={styles.triviaIntro}>{abaregawaTrivia.intro}</Text>
+            {abaregawaTrivia.items.map((it) => (
+              <Text key={it.name} style={styles.triviaItem}>・{it.name}（{it.region}）＝「{it.nickname}」</Text>
+            ))}
+          </View>
+        </View>
+      )}
 
       <Modal
         visible={!!selected}
@@ -180,50 +366,6 @@ export default function GeographyExplorer(_props: Props) {
   );
 }
 
-function RegionBlock({
-  region,
-  selected,
-  onPress,
-}: {
-  region: GeoRegion;
-  selected: boolean;
-  onPress: () => void;
-}) {
-  const scale = useSharedValue(1);
-
-  useEffect(() => {
-    scale.value = withSpring(selected ? 1.08 : 1, { damping: 12 });
-  }, [selected, scale]);
-
-  const blockStyle = useAnimatedStyle(() => ({
-    transform: [{ scale: scale.value }],
-    zIndex: selected ? 10 : 1,
-  }));
-
-  return (
-    <Animated.View
-      style={[
-        styles.regionBlock,
-        blockStyle,
-        {
-          left: `${region.mapX}%`,
-          top: `${region.mapY}%`,
-          width: `${region.mapW}%`,
-          height: `${region.mapH}%`,
-          backgroundColor: region.color,
-          borderColor: selected ? '#FFFFFF' : 'rgba(255,255,255,0.5)',
-          borderWidth: selected ? 3 : 1.5,
-        },
-      ]}
-    >
-      <Pressable style={styles.regionPress} onPress={onPress}>
-        <Text style={styles.regionEmoji}>{region.emoji}</Text>
-        <Text style={styles.regionName} numberOfLines={1}>{region.name}</Text>
-      </Pressable>
-    </Animated.View>
-  );
-}
-
 function RegionDetail({
   region,
   layer,
@@ -235,6 +377,12 @@ function RegionDetail({
 }) {
   const ag = region.agriculture;
   const fi = region.fishery;
+  // 「山と川」レイヤーで地域を選んだとき用：この地域にある山地・山脈を抽出。
+  // 地域名の括弧書き（例：近畿（関西））を外して region 文字列と突き合わせる。
+  const regionKey = region.name.replace(/（.*）/, '');
+  const regionMountains = mountainRanges.filter(
+    (m) => m.region.includes(regionKey) || regionKey.includes(m.region),
+  );
 
   return (
     <ScrollView style={styles.detailCard} showsVerticalScrollIndicator={false}>
@@ -254,6 +402,29 @@ function RegionDetail({
         </>
       )}
 
+      {layer === 'mountains' && (
+        <>
+          <DetailSection title="🏔 地形" items={[region.terrain]} />
+          {regionMountains.length > 0 ? (
+            <DetailSection
+              title="⛰ この地域のおもな山地・山脈"
+              items={regionMountains.map(
+                (m) => `${m.name}（${m.reading}）／${m.kind}・最高峰 ${m.highestPeak} ${m.heightM}m — ${m.note}`,
+              )}
+            />
+          ) : (
+            <DetailSection
+              title="⛰ 山地・山脈"
+              items={['この地域には日本アルプスのような大きな山脈はありません。全国のおもな山地・山脈は、地図の下の一覧で位置とあわせて確認できます。']}
+            />
+          )}
+          <DetailSection
+            title="💧 川について"
+            items={['全国のおもな川（信濃川・利根川など）は、地図の下の「主要な川（長い順）」一覧で、つくる平野や河口とあわせて確認できます。']}
+          />
+        </>
+      )}
+
       {layer === 'agriculture' && (
         <>
           <DetailSection title="🚜 農業の種類" items={ag.farmingTypes} />
@@ -261,13 +432,19 @@ function RegionDetail({
           {ag.spotlights && ag.spotlights.length > 0 && (
             <View style={styles.spotlightSection}>
               <Text style={styles.spotlightHeader}>🔍 注目の特産品</Text>
-              {ag.spotlights.map((s) => (
-                <View key={s.name} style={styles.spotlightCard}>
-                  <Text style={styles.spotlightName}>{s.name}</Text>
-                  <Text style={styles.spotlightLocation}>📍 {s.location}</Text>
-                  <Text style={styles.spotlightWhy}>{s.why}</Text>
-                </View>
-              ))}
+              {ag.spotlights.map((s) => {
+                const img = geographyImages[s.name];
+                return (
+                  <View key={s.name} style={styles.spotlightCard}>
+                    {img && (
+                      <Image source={img} style={styles.spotlightImage} resizeMode="cover" />
+                    )}
+                    <Text style={styles.spotlightName}>{s.name}</Text>
+                    <Text style={styles.spotlightLocation}>📍 {s.location}</Text>
+                    <Text style={styles.spotlightWhy}>{s.why}</Text>
+                  </View>
+                );
+              })}
             </View>
           )}
           <DetailSection title="🐄 畜産" items={ag.livestock} />
@@ -405,6 +582,98 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 4,
   },
+  mapLabel: {
+    position: 'absolute',
+    width: 60,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  mapLabelEmoji: { fontSize: 15, textAlign: 'center' },
+  mapLabelText: {
+    fontSize: 10,
+    fontWeight: '800',
+    color: '#FFFFFF',
+    textAlign: 'center',
+    textShadowColor: 'rgba(0,0,0,0.55)',
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 2,
+  },
+  mapLabelTextSel: {
+    fontSize: 11,
+    textShadowColor: 'rgba(0,0,0,0.8)',
+  },
+  mapLabelDim: { opacity: 0.55 },
+  terrainLabel: {
+    position: 'absolute',
+    width: 48,
+    alignItems: 'center',
+  },
+  riverLabelText: {
+    fontSize: 8,
+    fontWeight: '800',
+    color: '#0B3D6B',
+    textAlign: 'center',
+    backgroundColor: 'rgba(255,255,255,0.82)',
+    borderRadius: 4,
+    paddingHorizontal: 2,
+    overflow: 'hidden',
+  },
+  mountainLabelText: {
+    fontSize: 8,
+    fontWeight: '800',
+    color: '#5A3A1E',
+    textAlign: 'center',
+    backgroundColor: 'rgba(255,244,230,0.85)',
+    borderRadius: 4,
+    paddingHorizontal: 2,
+    overflow: 'hidden',
+  },
+  terrainPanel: { marginBottom: 8 },
+  terrainPanelTitle: {
+    fontSize: 15,
+    fontWeight: '900',
+    color: '#1A1A2E',
+    marginBottom: 8,
+  },
+  terrainCard: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 12,
+    padding: 12,
+    marginBottom: 8,
+    borderLeftWidth: 4,
+    borderLeftColor: '#1D6FC0',
+  },
+  terrainCardHead: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 4,
+  },
+  terrainCardName: { fontSize: 15, fontWeight: '800', color: '#1A1A2E', flexShrink: 1 },
+  terrainReading: { fontSize: 11, fontWeight: '600', color: '#888' },
+  terrainBadge: {
+    backgroundColor: '#1D6FC0',
+    borderRadius: 8,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    marginLeft: 6,
+  },
+  terrainBadgeMtn: { backgroundColor: '#7A5230' },
+  terrainBadgeText: { fontSize: 12, fontWeight: '900', color: '#FFF' },
+  terrainTag: { fontSize: 12, fontWeight: '700', color: '#D97706', marginBottom: 3 },
+  terrainMeta: { fontSize: 12, color: '#555', marginBottom: 4, lineHeight: 18 },
+  terrainNote: { fontSize: 13, color: '#333', lineHeight: 20 },
+  triviaCard: {
+    backgroundColor: '#FFFBEB',
+    borderRadius: 12,
+    padding: 14,
+    marginTop: 10,
+    borderWidth: 1,
+    borderColor: '#FDE68A',
+  },
+  triviaTitle: { fontSize: 14, fontWeight: '900', color: '#B45309', marginBottom: 6 },
+  triviaIntro: { fontSize: 12, color: '#555', lineHeight: 19, marginBottom: 6 },
+  triviaItem: { fontSize: 13, color: '#333', lineHeight: 22 },
   tapHint: {
     backgroundColor: '#EEF4FF',
     borderRadius: 10,
@@ -491,6 +760,7 @@ const styles = StyleSheet.create({
     borderLeftWidth: 4,
     borderLeftColor: '#F59E0B',
   },
+  spotlightImage: { width: '100%', height: 150, borderRadius: 10, marginBottom: 8, backgroundColor: '#F1F5F9' },
   spotlightName: { fontSize: 16, fontWeight: '800', color: '#1A1A2E', marginBottom: 4 },
   spotlightLocation: { fontSize: 13, color: '#666', marginBottom: 6 },
   spotlightWhy: { fontSize: 14, color: '#333', lineHeight: 22 },

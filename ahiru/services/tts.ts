@@ -7,7 +7,7 @@ type SpeakTextResult = { ok: true; audioBase64: string };
  * サーバー側Cloud Function（speakText）経由でOpenAI TTS音声を再生する。
  * APIキーはサーバー側のみで保持し、クライアントには一切含まれない
  * （1日あたりの呼び出し回数はサーバー側で制限される）。
- * Web: HTMLAudioElement, Native: expo-av を使用
+ * Web: HTMLAudioElement, Native: expo-audio を使用
  */
 export async function speakWithOpenAI(text: string): Promise<void> {
   try {
@@ -31,15 +31,16 @@ async function playAudioUrl(url: string): Promise<void> {
     });
   }
 
-  // Native: expo-av
+  // Native: expo-audio（expo-av は SDK 56 で廃止）
   try {
-    const { Audio } = await import('expo-av');
-    const { sound } = await Audio.Sound.createAsync({ uri: url });
-    await sound.playAsync();
+    const { createAudioPlayer } = await import('expo-audio');
+    const player = createAudioPlayer({ uri: url });
+    player.play();
     await new Promise<void>((resolve) => {
-      sound.setOnPlaybackStatusUpdate((status) => {
-        if ('didJustFinish' in status && status.didJustFinish) {
-          sound.unloadAsync();
+      const sub = player.addListener('playbackStatusUpdate', (status) => {
+        if (status.didJustFinish) {
+          sub?.remove?.();
+          player.remove();
           resolve();
         }
       });

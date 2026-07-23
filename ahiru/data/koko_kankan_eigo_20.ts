@@ -10,6 +10,7 @@ export const kokoKankanEigo20: Question[] = [
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'basic',
+    maxOnly: false,
     question: `次の（　）内に最も適切な語を選べ。
 
 A: "Have you ever ( ) to Kyoto?"
@@ -41,6 +42,7 @@ have/has の後ろには「動詞原形」ではなく必ず「過去分詞」�
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'basic',
+    maxOnly: false,
     question: `次の（　）内に適切な語を選び、英文を完成させなさい。
 
 ① I enjoy ( swim / swimming ) in the sea every summer.
@@ -68,6 +70,7 @@ like / love / hate / prefer は不定詞・動名詞どちらもOK（意味は�
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'basic',
+    maxOnly: false,
     question: `次の（　）に who / which / that のうち最も適切なものを入れなさい。（複数の答えがある場合はすべて答えよ）
 
 ① The girl (　) is singing on the stage is my sister.
@@ -96,6 +99,7 @@ who は人のみ。which は物・動物のみ。that は人にも物にも使�
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'basic',
+    maxOnly: false,
     question: `次の（　）に適切な語を入れ、比較の文を完成させなさい。
 
 ① Mt. Fuji is the (　) mountain in Japan.
@@ -128,6 +132,7 @@ who は人のみ。which は物・動物のみ。that は人にも物にも使�
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'basic',
+    maxOnly: false,
     question: `次の能動態の文を受動態に書き換えなさい。
 
 ① Someone stole my bicycle yesterday.
@@ -165,6 +170,7 @@ who は人のみ。which は物・動物のみ。that は人にも物にも使�
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'standard',
+    maxOnly: false,
     question: `次の（　）内に最も適切な語句を入れ、間接疑問文を完成させなさい。
 
 ① I don't know (　　　　　) she lives.
@@ -198,6 +204,7 @@ who は人のみ。which は物・動物のみ。that は人にも物にも使�
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'standard',
+    maxOnly: false,
     question: `次の2文の意味の違いを説明し、（　）に適切な動詞の形を入れなさい。
 
 A: When I called her, she (　) (　) dinner.
@@ -228,6 +235,7 @@ B：「今朝から（since this morning）ずっと〜し続けている（今�
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'standard',
+    maxOnly: false,
     question: `次の（　）に適切な語句を入れ、仮定法の文を完成させなさい。
 
 ① If I (　) a bird, I (　) fly to you.
@@ -258,6 +266,7 @@ B：「今朝から（since this morning）ずっと〜し続けている（今�
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'standard',
+    maxOnly: false,
     question: `次の英文を読んで、設問に答えなさい。
 
 Japan has many traditional cultures that attract people from all over the world. One of the most famous is the tea ceremony, called "sado" in Japanese. In a tea ceremony, people prepare and drink green tea in a special way. Every movement is important and must be done carefully. The ceremony teaches people about respect, peace, and beauty.
@@ -268,7 +277,7 @@ Another well-known tradition is "origami," the art of paper folding. By folding 
 ① What does the tea ceremony teach people about?（英語で答えよ）
 ② What can people make with origami?（日本語で答えよ）
 ③ 下線部「has spread」の時制を答え、その意味を説明せよ。`,
-    answer: '① It teaches people about respect, peace, and beauty.\n② 鳥、花、複雑な動物など（折り紙で1枚の紙を折ることで作れるもの）\n③ 現在完了形（経験・結果）。「世界中に広まった（今もその状態が続いている）」という完了・結果の意味を表している。',
+    answer: '① It teaches people about respect, peace, and beauty.\n② 鳥、花、複雑な動物など（折り紙で1枚の紙を折ることで作れるもの）\n③ 現在完了形（完了・結果）。「世界中に広まった（今もその状態が続いている）」という完了・結果の意味を表している。',
     hint: '①「tea ceremony teaches〜」の部分を探す。②「By folding〜, people can make〜」の部分を探す。③ have/has + 過去分詞の形から時制を判断する。',
     explanation: `【出題意図】
 日本の伝統文化をテーマにした英文読解問題。内容把握（本文から情報を取り出す力）と時制の知識（現在完了形の意味）を同時に問う。関関同立附属高の読解問題の典型的な形式。
@@ -288,6 +297,7 @@ Another well-known tradition is "origami," the art of paper folding. By folding 
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'standard',
+    maxOnly: false,
     question: `次の語句を正しい順序に並べ替えて、意味の通る英文を作りなさい。（文頭の語も小文字で示す）
 
 ① [ the / that / know / you / do / man ] is standing over there?
@@ -296,7 +306,7 @@ Another well-known tradition is "origami," the art of paper folding. By folding 
 ② [ to / was / I / happy / hear ] the news.
    （私はその知らせを聞いて嬉しかった）
 
-③ [ the / is / she / speak / able / to ] three languages.
+③ [ is / she / speak / able / to ] three languages.
    （彼女は3つの言語を話すことができる）`,
     answer: '① Do you know the man that is standing over there?\n② I was happy to hear the news.\n③ She is able to speak three languages.',
     hint: '①「知っていますか」→ Do you know〜? 後ろに「あそこに立っている男性」を関係代名詞でつなぐ。②「聞いて嬉しかった」→ be happy to + 動詞原形（感情の原因を表す不定詞）。③「話すことができる」→ be able to + 動詞原形。',
@@ -324,6 +334,7 @@ be happy/glad/surprised/sorry to do〜「〜して嬉しい/驚いた/申し訳�
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question: `次の英文を読んで、設問①〜④に答えなさい。
 
 Environmental problems are becoming more serious around the world. One of the biggest challenges is global warming. Scientists say that the Earth's temperature has risen by about 1°C over the past century. This change is mainly caused by greenhouse gases, such as carbon dioxide (CO₂), which are released when people burn fossil fuels like coal, oil, and gas.
@@ -353,7 +364,7 @@ To solve these problems, individuals, companies, and governments must work toget
 英語で答える設問は必ず完全な文（主語+動詞）で答えること。選択肢問題では「〜のみ」「〜だけ」などの限定表現に注意。イは「fish, birds, and other sea animals」すべてに影響するので誤り。エは本文と逆の内容なので誤り。
 
 【関連知識】
-環境問題の重要語彙：global warming（地球温暖化）、greenhouse gas（温室効果ガス）、fossil fuel（化石燃料）、carbon dioxide（二酸化炭素）、plastic pollution（プラスチック汚染）、renewable energy（再生可能エネルギー）。これらは関大一高・近大附属高の長文でも頻出のテーマ。`,
+環境問題の重要語彙：global warming（地球温暖化）、greenhouse gas（温室効果ガス）、fossil fuel（化石燃料）、carbon dioxide（二酸化炭素）、plastic pollution（プラスチック汚染）、renewable energy（再生可能エネルギー）。これらは関大一高・同志社高の長文でも頻出のテーマ。`,
   },
   {
     id: 'koko_kankan_eigo_12',
@@ -361,6 +372,7 @@ To solve these problems, individuals, companies, and governments must work toget
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question: `次の会話文の（　）に最も適切な文をア〜エから選びなさい。
 
 A: Excuse me. Could you tell me how to get to the nearest convenience store?
@@ -404,6 +416,7 @@ B: (　③　) Have a nice day!
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question: `次の（　）に最も適切な語句をア〜エから選びなさい。
 
 ① Can you (　) my bag while I'm in the restroom?
@@ -437,6 +450,7 @@ B: (　③　) Have a nice day!
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question: `次の日本語を英語に訳しなさい。（20語程度）
 
 「私が子どものころ、母はよく私に『失敗を恐れるな。失敗から学ぶことができる』と言っていた。今でもその言葉を大切にしている。」`,
@@ -462,6 +476,7 @@ B: (　③　) Have a nice day!
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question: `次の各文には文法的な誤りが1か所ある。誤りを含む部分を指摘し、正しく直しなさい。
 
 ① She has worked here since five years.
@@ -486,7 +501,7 @@ B: (　③　) Have a nice day!
 
   // ============================================================
   // Q16–Q20: 入試（difficulty: 'advanced'）
-  // 関大一高・関学高・同志社高・立命館高・近大附属高・明大明治高レベル
+  // 関大一高・関学高・同志社高・立命館高レベル
   // ============================================================
   {
     id: 'koko_kankan_eigo_16',
@@ -494,6 +509,7 @@ B: (　③　) Have a nice day!
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question: `次の英文を読んで、設問①〜④に答えなさい。
 
 Artificial intelligence, or AI, is changing the way we live and work. In recent years, AI has been used in many fields, from medicine to education. For example, AI can now help doctors analyze medical images more accurately than ever before. In schools, AI-powered programs can create personalized learning plans for each student, helping those who struggle and challenging those who excel.
@@ -507,7 +523,7 @@ Despite these concerns, many experts believe that AI will ultimately benefit hum
 ② What are two concerns people have about AI?（英語で答えよ）
 ③ 下線部「will work alongside us」とはどういう意味か、日本語で説明せよ。
 ④ 筆者のAIに対する立場を、本文の根拠を示しながら日本語で説明せよ。（60字以内）`,
-    answer: '① Medicine (helping doctors analyze medical images) and education (creating personalized learning plans).\n② （例）Some people worry that AI will take away jobs. Others are concerned about privacy and the collection of personal data.\n③ 人間と並んで・協力しながら働く（人間を置き換えるのではなく、AIが人間の隣に立って共同作業をする）という意味。\n④ 筆者は条件付きで肯定的。「責任ある形で開発・使用されれば、AIは最終的に人類に恩恵をもたらす」と述べており、人間の創造的な仕事を支援する立場をとる。（57字）',
+    answer: '① Medicine (helping doctors analyze medical images) and education (creating personalized learning plans).\n② （例）Some people worry that AI will take away jobs. Others are concerned about privacy and the collection of personal data.\n③ 人間と並んで・協力しながら働く（人間を置き換えるのではなく、AIが人間の隣に立って共同作業をする）という意味。\n④ 筆者は条件付きで肯定的。責任ある形で使えばAIは人類に恩恵をもたらすと述べ、人間の創造的な仕事を支援する立場をとる。（58字）',
     hint: '①第1段落にmedicine（医療）とeducation（教育）の具体例がある。②第2段落「Some people worry〜」「Others are concerned〜」に注目。③alongside = 〜の横に・並んで。④第3段落のDespit〜の部分に筆者の見解が集約されている。',
     explanation: `【出題意図】
 AIと未来社会をテーマにした200語程度の論説文読解問題。情報の抽出・英語での記述・語句の意味説明・筆者の主張の把握という、記述を含む4問の総合的な読解力と表現力を問う。関大一高・同志社高レベルの入試形式。
@@ -527,6 +543,7 @@ AI関連の重要語彙：artificial intelligence（人工知能）、machine le
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question: `次の英文を読んで、設問①②に答えなさい。
 
 Sleep is one of the most important things for our health, but many young people today do not get enough of it. Teenagers need about eight to ten hours of sleep each night, but studies show that many get only six hours or less. This lack of sleep can cause serious problems, including difficulty concentrating in school, mood changes, and even physical health issues.
@@ -563,6 +580,7 @@ Experts suggest that to improve sleep, teenagers should avoid using phones at le
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question: `次の会話文を読んで、（　①　）〜（　④　）に入る最も適切な文をア〜クから選びなさい。（同じ選択肢は2度使えない）
 
 [At school, during lunch break]
@@ -601,6 +619,7 @@ Yumi: I'd love to visit Kinkakuji and maybe try some traditional Kyoto cuisine!
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question: `次のテーマについて、あなた自身の意見を英語で述べなさい。（30語以上）
 
 テーマ：「中学生は毎日スマートフォンを使うべきか、それとも使用を制限すべきか。あなたの考えを理由とともに述べなさい。」
@@ -613,7 +632,7 @@ I think junior high school students should limit their smartphone use. Using sma
 I believe students should be free to use smartphones every day. Smartphones help us learn new things, communicate with friends, and stay safe when we are away from home. However, we should also be responsible and avoid using them during class or late at night.（47語）`,
     hint: '「I think / I believe + 主張」の後に「Because / because / This is because」で理由をつなぐ。具体的な理由を1〜2つ挙げて、最後にまとめの文を書くと30語以上になりやすい。',
     explanation: `【出題意図】
-自分の意見を英語で論理的に述べる英作文問題（意見型）。主張・理由・具体例・まとめという意見文の構成力と、30語以上という語数条件を満たす表現力を同時に問う。近大附属高・関大一高の英作文形式。
+自分の意見を英語で論理的に述べる英作文問題（意見型）。主張・理由・具体例・まとめという意見文の構成力と、30語以上という語数条件を満たす表現力を同時に問う。関大一高・同志社高の英作文形式。
 
 【解説】
 意見型英作文の基本構成：①主張（I think/believe〜）→②理由（because / This is because〜）→③具体例（For example / For instance〜）→④まとめ（Therefore / So〜）。「制限すべき」の理由例：睡眠不足・集中力低下・依存症リスク・対面コミュニケーション不足。「自由に使うべき」の理由例：学習ツール・緊急時の安全確保・友人とのコミュニケーション・グローバルな情報収集。どちらの立場でも「理由が明確かつ具体的」であれば評価される。
@@ -630,6 +649,7 @@ I believe students should be free to use smartphones every day. Smartphones help
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
+    maxOnly: true,
     question: `次の英文を読んで、設問①〜④に答えなさい。（最高難度：記述含む）
 
 [Passage 1]
@@ -649,7 +669,7 @@ Perhaps the answer lies somewhere in between. Rather than fully embracing or rej
 ③ 下線部「it is a luxury that not everyone can afford」とはどういう意味か、日本語で答えよ。
 
 ④ 筆者が第3段落で主張していることを、あなた自身の言葉を加えながら日本語で論じよ。（80字以内）`,
-    answer: `① 現代の速いペースの生活への反動として、家族・健康・自然・コミュニティに焦点を当て、ゆっくりと充実した生き方をしようとする考え方。（39字）
+    answer: `① 速いペースの生活への反動で、大切なものに目を向けゆっくり生きようとする考え方。（39字）
 
 ② （例）
 ・It is a luxury that not everyone can afford — low-wage workers cannot choose to slow down.
@@ -657,7 +677,7 @@ Perhaps the answer lies somewhere in between. Rather than fully embracing or rej
 
 ③ スロー・リビングはすべての人が選べる贅沢ではない（低賃金で長時間働く人にはそのような選択肢がない）という意味。
 
-④ 筆者はスロー・リビングの完全な採用でも拒否でもなく、現代の技術を賢く活用しながら休息や人とのつながりにも時間を作るバランスのとれたアプローチが最も持続可能だと主張している。個人がどの側面を選ぶか意識的に決めることが重要だと思う。（79字）`,
+④ 筆者は技術を賢く使いつつ休息やつながりの時間も作るバランス型が最も持続可能だと主張しており、私もどの側面を選ぶか意識的に決める姿勢が大切だと思う。（73字）`,
     hint: '①第1段落のslow livingの説明をまとめる。②第2段落「Critics〜」の内容から2点を抜き出す。③afford = （費用・時間・労力を）〜する余裕がある。④第3段落全体の主旨をつかみ、自分の言葉を加えて論じる。',
     explanation: `【出題意図】
 スロー・リビングをテーマにした複数段落の論説文読解問題。概念の説明・批判論点の抽出・語句の意味解説・筆者の主張への自己見解付与という、高度な読解力・思考力・表現力をすべて問う最高難度の入試問題。関大一高・同志社高・立命館高の入試レベル。

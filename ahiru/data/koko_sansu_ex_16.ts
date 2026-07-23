@@ -109,6 +109,7 @@ export const kokoSansuEx16: Question[] = [
     course: 'koko-kankan',
     difficulty: 'basic',
     maxOnly: false,
+    figureDescription: '上下に平行な2本の直線 l（上）と m（下）があり、その間を折れ線が結んでいる。折れ線の折れ曲がる頂点にできる角が∠x。上側で直線 l と折れ線がなす角が∠a＝65°、下側で直線 m と折れ線がなす角が∠b＝55°。',
     question: '右の図で直線 l ∥ m、∠a = 65°、∠b = 55° のとき、∠x を求めよ（∠x は l と m の間の折れ線の角）。',
     answer: '∠x = 120°',
     hint: 'l に平行な補助線を引くと、錯角の関係から ∠x = ∠a + ∠b。',

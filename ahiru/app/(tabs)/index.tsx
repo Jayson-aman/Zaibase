@@ -14,8 +14,6 @@ import SubjectCard from '../../components/SubjectCard';
 import ListenMode from '../../components/ListenMode';
 import Paywall from '../../components/Paywall';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
-import AnimatedMascot from '../../components/AnimatedMascot';
-import { homeMascot } from '../../data/images';
 import { useProGate } from '../../hooks/useProGate';
 import { useSubscription } from '../../hooks/useSubscription';
 import { subjectInfo, type SubjectKey } from '../../data/questions-meta';
@@ -157,7 +155,7 @@ export default function HomeScreen() {
   const [difficulty, setDifficulty] = useState<Difficulty>('all');
   const [examType, setExamType] = useState<ExamType>('chugaku');
   const [selectedCourse, setSelectedCourse] = useState<CourseKey>('general');
-  const [courseTab, setCourseTab] = useState<'category' | 'school'>('category');
+  const [courseTab, setCourseTab] = useState<'category' | 'school'>('school');
 
   const courses = examType === 'chugaku' ? CHUGAKU_COURSES : KOKO_COURSES;
 
@@ -235,10 +233,18 @@ export default function HomeScreen() {
     });
   }, []);
 
-  // Schools sorted by level then name
-  const sortedSchools = [...SCHOOL_COURSES].sort(
-    (a, b) => LEVEL_ORDER[a.level] - LEVEL_ORDER[b.level],
-  );
+  // Schools sorted by level then name（専用問題が実際にある学校のみ表示）
+  const sortedSchools = React.useMemo(() => {
+    const SUBJECTS_KEYS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
+    const withData = SCHOOL_COURSES.filter((c) => {
+      const total = SUBJECTS_KEYS.reduce(
+        (sum, s) => sum + getQuestionCount(s, 'all', 'chugaku', c.key, questionsBySubject),
+        0,
+      );
+      return total > 0;
+    });
+    return [...withData].sort((a, b) => LEVEL_ORDER[a.level] - LEVEL_ORDER[b.level]);
+  }, [questionsBySubject]);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -251,7 +257,26 @@ export default function HomeScreen() {
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
       >
+        {/* 受験とは別枠の学習コンテンツへの入り口（英単語・英熟語・英会話・英検・TOEIC対策） */}
+        {!listenPickerActive && (
+          <TouchableOpacity
+            style={styles.vocabEntryCard}
+            activeOpacity={0.85}
+            onPress={() => router.push('/vocab')}
+          >
+            <View style={styles.vocabEntryTextWrap}>
+              <Text style={styles.vocabEntryBadge}>受験対策とは別の学習コンテンツ</Text>
+              <Text style={styles.vocabEntryTitle}>🔤 英単語・英熟語・英会話</Text>
+              <Text style={styles.vocabEntrySub}>英検準2級〜1級・TOEIC800対応　単語5,000+・熟語4,000+</Text>
+            </View>
+            <Text style={styles.vocabEntryArrow}>›</Text>
+          </TouchableOpacity>
+        )}
+
         {/* Exam type toggle */}
+        {!listenPickerActive && (
+          <Text style={styles.stepLabel}>① 受験の種類を選ぶ</Text>
+        )}
         {!listenPickerActive && (
           <View style={styles.examToggleRow}>
             <TouchableOpacity
@@ -278,11 +303,20 @@ export default function HomeScreen() {
         {/* Course selector */}
         {!listenPickerActive && (
           <View style={styles.courseSection}>
-            <Text style={styles.courseSectionLabel}>コースを選ぶ</Text>
+            <Text style={styles.courseSectionLabel}>② レベル・コースを選ぶ</Text>
 
             {/* Sub-tabs: Category / School — only for 中学受験 */}
             {examType === 'chugaku' && (
               <View style={styles.courseTabRow}>
+                <TouchableOpacity
+                  style={[styles.courseTab, courseTab === 'school' && styles.courseTabActive]}
+                  onPress={() => setCourseTab('school')}
+                  activeOpacity={0.8}
+                >
+                  <Text style={[styles.courseTabText, courseTab === 'school' && styles.courseTabTextActive]}>
+                    🏫 学校別 ({sortedSchools.length}校)
+                  </Text>
+                </TouchableOpacity>
                 <TouchableOpacity
                   style={[styles.courseTab, courseTab === 'category' && styles.courseTabActive]}
                   onPress={() => setCourseTab('category')}
@@ -290,15 +324,6 @@ export default function HomeScreen() {
                 >
                   <Text style={[styles.courseTabText, courseTab === 'category' && styles.courseTabTextActive]}>
                     📂 カテゴリ
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  style={[styles.courseTab, courseTab === 'school' && styles.courseTabActive]}
-                  onPress={() => setCourseTab('school')}
-                  activeOpacity={0.8}
-                >
-                  <Text style={[styles.courseTabText, courseTab === 'school' && styles.courseTabTextActive]}>
-                    🏫 学校別 ({SCHOOL_COURSES.length}校)
                   </Text>
                 </TouchableOpacity>
               </View>
@@ -543,7 +568,7 @@ export default function HomeScreen() {
         {/* Difficulty selector */}
         {!listenPickerActive && (
           <>
-            <Text style={styles.sectionTitle}>難易度を選ぶ</Text>
+            <Text style={styles.sectionTitle}>③ 難易度（レベル）を選ぶ</Text>
             <View style={styles.difficultyRow}>
               {DIFFICULTY_OPTIONS.map((opt) => {
                 const active = difficulty === opt.key;
@@ -598,6 +623,29 @@ export default function HomeScreen() {
             />
           ))}
         </View>
+
+        {!listenPickerActive && (
+          <>
+            <Text style={[styles.sectionTitle, { marginTop: 8 }]}>🧩 単元別に学ぶ</Text>
+            <Text style={styles.topicNote}>
+              一次関数・長文読解・割合・回路など、単元をえらんで集中練習
+            </Text>
+            <View style={styles.topicRow}>
+              {SUBJECTS.map((s) => (
+                <TouchableOpacity
+                  key={`topic_${s}`}
+                  style={styles.topicChip}
+                  activeOpacity={0.85}
+                  onPress={() => router.push(`/topics/${s}?examType=${examType}` as any)}
+                >
+                  <Text style={styles.topicChipText}>
+                    {subjectInfo[s].emoji} {subjectInfo[s].name}の単元
+                  </Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+          </>
+        )}
 
         <View style={styles.infoCard}>
           <Text style={styles.infoTitle}>📖 使い方</Text>
@@ -654,6 +702,43 @@ const styles = StyleSheet.create({
     paddingTop: 16,
     paddingBottom: 40,
   },
+  vocabEntryCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: 'rgba(160,100,220,0.10)',
+    borderWidth: 1,
+    borderColor: 'rgba(160,100,220,0.35)',
+    borderRadius: 16,
+    paddingVertical: 14,
+    paddingHorizontal: 16,
+    marginBottom: 18,
+  },
+  vocabEntryTextWrap: {
+    flex: 1,
+  },
+  vocabEntryBadge: {
+    fontSize: 10,
+    fontWeight: '700',
+    color: '#A064DC',
+    letterSpacing: 0.5,
+    marginBottom: 4,
+  },
+  vocabEntryTitle: {
+    fontSize: 16,
+    fontWeight: '800',
+    color: D.white,
+    marginBottom: 2,
+  },
+  vocabEntrySub: {
+    fontSize: 11,
+    color: D.muted,
+  },
+  vocabEntryArrow: {
+    fontSize: 28,
+    color: '#A064DC',
+    fontWeight: '300',
+    marginLeft: 8,
+  },
 
   // Exam type toggle
   examToggleRow: {
@@ -695,6 +780,15 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '700',
     color: D.white,
+    marginBottom: 10,
+  },
+  stepLabel: {
+    fontFamily: SERIF,
+    fontSize: 20,
+    fontWeight: '700',
+    color: D.white,
+    marginHorizontal: 20,
+    marginTop: 8,
     marginBottom: 10,
   },
   courseScroll: {
@@ -940,42 +1034,6 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
   },
 
-  // Mascot
-  mascotBanner: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: D.glass,
-    borderRadius: 14,
-    padding: 14,
-    marginBottom: 14,
-    gap: 12,
-    borderWidth: 1,
-    borderColor: D.glassBorder,
-  },
-  mascotImage: {
-    width: 110,
-    height: 110,
-    borderRadius: 55,
-    backgroundColor: D.glassMid,
-  },
-  mascotTextWrap: {
-    flex: 1,
-  },
-  mascotTitle: {
-    fontFamily: SERIF,
-    fontSize: 20,
-    fontWeight: '700',
-    color: D.white,
-    marginBottom: 5,
-    includeFontPadding: false,
-  },
-  mascotSub: {
-    fontSize: 14,
-    color: D.soft,
-    lineHeight: 22,
-    fontWeight: '400',
-  },
-
   // Listen button
   listenStartBtn: {
     backgroundColor: '#187A40',
@@ -1125,6 +1183,32 @@ const styles = StyleSheet.create({
   },
 
   // Info card
+  topicNote: {
+    color: '#5B7288',
+    fontSize: 13,
+    marginHorizontal: 20,
+    marginBottom: 10,
+  },
+  topicRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+    marginHorizontal: 20,
+    marginBottom: 20,
+  },
+  topicChip: {
+    backgroundColor: '#FFFFFF',
+    borderWidth: 1,
+    borderColor: '#BAE6FD',
+    borderRadius: 999,
+    paddingHorizontal: 14,
+    paddingVertical: 9,
+  },
+  topicChipText: {
+    color: '#0369A1',
+    fontSize: 14,
+    fontWeight: '700',
+  },
   infoCard: {
     backgroundColor: D.glass,
     borderRadius: 12,

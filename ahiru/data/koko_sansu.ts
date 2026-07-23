@@ -157,6 +157,8 @@ export const ktSansu: Question[] = [
     examType: 'koko',
     difficulty: 'advanced',
     question: '関数 y＝ax² のグラフが点 (3, －18) を通るとき、a の値を求めよ。また x＝－2 のときの y の値を求めよ。',
+    figureDescription:
+      '座標平面に、原点を頂点として下に開いた放物線 y＝ax²（a＜0）が描かれ、そのグラフが点 (3, −18) を通っている。',
     answer: 'a＝－2、y＝－8',
     hint: '点の座標を代入して a を求め、次に x＝－2 を代入する。',
     explanation:

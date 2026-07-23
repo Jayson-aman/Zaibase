@@ -16,5 +16,10 @@ service cloud.firestore {
     match /aiTutorSessions/{docId} {
       allow read, write: if false;
     }
+
+    // ── AI英会話練習の利用回数カウンタ（Cloud Functions専用） ──
+    match /aiConversationUsage/{uid} {
+      allow read, write: if false;
+    }
   }
 }

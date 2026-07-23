@@ -34,6 +34,7 @@ export const tokyoChugakuMaxQuestions: Question[] = [
   },
   {
     id: 'tokyo_meidai_max_03',
+    figureDescription: '光の強さ（0・1000・2000・3000ルクス）を横に並べ、それぞれの1時間あたりのCO₂変化量（0ルクスで+4の放出、1000ルクスで−2の吸収、2000・3000ルクスでともに−8の吸収）を対応させた表。＋は放出、−は吸収を表す。',
     subject: 'rika',
     difficulty: 'advanced',
     examType: 'chugaku',
@@ -372,6 +373,7 @@ export const tokyoChugakuMaxQuestions: Question[] = [
   },
   {
     id: 'tokyo_gakushuin_max_05',
+    figureDescription: 'アンケート結果を示すグラフ。日本の中学生の45%が1日3時間以上スマートフォンを使用し、60%が主に勉強や情報検索のために使うと回答したことを表している。',
     subject: 'eigo',
     difficulty: 'advanced',
     examType: 'chugaku',

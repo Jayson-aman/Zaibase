@@ -87,7 +87,7 @@ const SCHOOL_GROUPS: SchoolGroup[] = [
       { key: 'tokyo-aoyama',    name: '青山学院',      emoji: '🌿', hensachi: '58〜64', gender: '共学', tier: 'max' },
       { key: 'tokyo-chuo',      name: '中央大学附属',  emoji: '🏫', hensachi: '57〜62', gender: '共学', tier: 'max' },
       { key: 'tokyo-hosei',     name: '法政大学第二',  emoji: '⚖️', hensachi: '56〜60', gender: '共学', tier: 'max' },
-      { key: 'tokyo-gakushiin', name: '学習院',        emoji: '👑', hensachi: '54〜58', gender: '共学', tier: 'max' },
+      { key: 'tokyo-gakushuin', name: '学習院',        emoji: '👑', hensachi: '54〜58', gender: '共学', tier: 'max' },
     ],
   },
   {
@@ -95,9 +95,10 @@ const SCHOOL_GROUPS: SchoolGroup[] = [
     icon: '🎌',
     color: '#10B981',
     schools: [
-      { key: 'koko-hibiya',  name: '都立日比谷',   emoji: '🏯', hensachi: '70+',   gender: '共学', tier: 'max' },
-      { key: 'koko-waseda',  name: '早稲田大附属', emoji: '⛩️', hensachi: '72〜75', gender: '男子', tier: 'max' },
-      { key: 'koko-meidai',  name: '明大明治高校', emoji: '🏛️', hensachi: '68〜72', gender: '共学', tier: 'max' },
+      { key: 'koko-hibiya',     name: '都立日比谷',     emoji: '🏯', hensachi: '70+',   gender: '共学', tier: 'max' },
+      { key: 'koko-waseda',     name: '早稲田大附属',   emoji: '⛩️', hensachi: '72〜75', gender: '男子', tier: 'max' },
+      { key: 'koko-meidai',     name: '明大明治高校',   emoji: '🏛️', hensachi: '68〜72', gender: '共学', tier: 'max' },
+      { key: 'koko-shitennoji', name: '四天王寺(高)',   emoji: '⛩️', hensachi: '62〜68', gender: '女子', tier: 'pro' },
     ],
   },
 ];
@@ -131,6 +132,15 @@ export default function SchoolsScreen() {
           <Text style={styles.headerTitle}>🏫 学校別 入試問題</Text>
           <Text style={styles.headerSub}>目標校を選んで本番レベルの問題を解こう</Text>
         </View>
+
+        <TouchableOpacity
+          style={styles.admissionCta}
+          activeOpacity={0.9}
+          onPress={() => router.push('/admissions')}
+        >
+          <Text style={styles.admissionCtaTitle}>📋 募集要項を調べる</Text>
+          <Text style={styles.admissionCtaSub}>全国の中学・高校の公式募集要項を年度別に検索 →</Text>
+        </TouchableOpacity>
 
         {SCHOOL_GROUPS.map((group) => (
           <View key={group.label} style={styles.group}>
@@ -204,6 +214,15 @@ const styles = StyleSheet.create({
     color: D.soft,
     fontSize: 13,
   },
+  admissionCta: {
+    backgroundColor: '#0EA5E9',
+    borderRadius: 14,
+    padding: 16,
+    marginHorizontal: 16,
+    marginBottom: 18,
+  },
+  admissionCtaTitle: { color: '#fff', fontSize: 16, fontWeight: '800' },
+  admissionCtaSub: { color: 'rgba(255,255,255,0.9)', fontSize: 12, marginTop: 4 },
   group: {
     marginBottom: 24,
   },

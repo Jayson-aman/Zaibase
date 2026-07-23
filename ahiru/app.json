@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Entrance Exam",
+    "name": "Zaibase受験",
     "slug": "entrance-exam",
     "scheme": "entrance-exam",
     "version": "1.0.0",
@@ -28,7 +28,7 @@
       "lang": "ja",
       "output": "static",
       "meta": {
-        "description": "中学受験・高校受験対策アプリ。5科目7,000問以上・学校別コース対応。"
+        "description": "中学受験・高校受験対策アプリ。5科目13,000問以上・灘/開成/慶應など50校対応・図形やグラフが動く図解付き教科書。"
       }
     },
     "plugins": [

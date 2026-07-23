@@ -1021,6 +1021,8 @@ x/4 － x/6 ＝ 1/2（30分＝0.5時間）。
   },
   {
     id: 'koko_meidai_sansu_02',
+    figureDescription:
+      '放物線 y=x² と直線 y=2x+3 を同じ座標平面に重ねたグラフ。両者は点(−1,1)と(3,9)の2か所で交わり、その2点の間では放物線が直線より下側にあって、直線と放物線で囲まれた図形ができる。',
     subject: 'sansu',
     course: 'koko-meidai',
     examType: 'koko',
@@ -1275,6 +1277,8 @@ MnO₂は触媒として働く。反応の速度を速めるが、自身は反�
 export const tokyoMeidaiKokoShakai: Question[] = [
   {
     id: 'koko_meidai_shakai_01',
+    figureDescription:
+      '問2で用いる統計グラフ。工業地帯・工業地域別の工業出荷額（兆円）を比べた棒グラフ。',
     subject: 'shakai',
     course: 'koko-meidai',
     examType: 'koko',

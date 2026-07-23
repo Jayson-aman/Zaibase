@@ -6,6 +6,8 @@ export const toinExamV2: Question[] = [
   // ============================================================
   {
     id: 'toin_v2_s001',
+    figureDescription:
+      '横軸に時間（分）、縦軸に距離（m）をとった折れ線グラフ。走者Aは原点から毎分250mの一定の傾きで直線的に上がり、1875mに7.5分で到達する。走者Bは最初の5分間は毎分150mのゆるやかな傾き（5分で750m）で進み、5分以降は毎分400mの急な傾きに変わる2本つなぎの折れ線で表される。',
     subject: 'sansu',
     difficulty: 'advanced',
     course: 'toin',
@@ -57,6 +59,8 @@ export const toinExamV2: Question[] = [
   },
   {
     id: 'toin_v2_s004',
+    figureDescription:
+      '算数テストの結果をまとめた度数分布表。上段に点数（50・60・70・80・90・100点）、下段に対応する人数（3・6・9・5・4・3人）が並ぶ2行6列の表。',
     subject: 'sansu',
     difficulty: 'advanced',
     course: 'toin',
@@ -108,6 +112,8 @@ export const toinExamV2: Question[] = [
   },
   {
     id: 'toin_v2_s007',
+    figureDescription:
+      '底面の半径3cm・母線9cmの円すいと、その展開図。展開図は半径9cm（母線の長さ）のおうぎ形（側面）と半径3cmの円（底面）からなり、おうぎ形の弧の長さが底面の円周6πcmに等しくなっている。',
     subject: 'sansu',
     difficulty: 'advanced',
     course: 'toin',
@@ -145,6 +151,8 @@ export const toinExamV2: Question[] = [
   // ============================================================
   {
     id: 'toin_v2_r001',
+    figureDescription:
+      '酸化銅を水素で還元した実験結果の表。酸化銅1.0・2.0・3.0・4.0gに対し、発生した水が0.23・0.45・0.68・0.90g、残った銅が0.80・1.60・2.40・3.20gと並ぶ3行の表。',
     subject: 'rika',
     difficulty: 'advanced',
     course: 'toin',
@@ -162,6 +170,8 @@ export const toinExamV2: Question[] = [
   },
   {
     id: 'toin_v2_r002',
+    figureDescription:
+      '光の強さと二酸化炭素の変化量の関係を示した実験結果の表。光の強さ0・1・2・3・4に対し、CO₂の変化量が−3・−1・+1・+3・+5mg/時（−は放出、+は吸収）と並ぶ2行の表。',
     subject: 'rika',
     difficulty: 'advanced',
     course: 'toin',
@@ -221,6 +231,8 @@ export const toinExamV2: Question[] = [
   // ============================================================
   {
     id: 'toin_v2_sh001',
+    figureDescription:
+      '日本の主な工業地帯・工業地域と、その特徴を対応させた表。中京工業地帯（自動車が主力・日本最大）、阪神工業地帯（金属・化学・印刷が中心）、京浜工業地帯（機械・印刷・情報産業）、北九州工業地域（鉄鋼・化学・かつては四大工業地帯）の4つが並ぶ。',
     subject: 'shakai',
     difficulty: 'advanced',
     course: 'toin',

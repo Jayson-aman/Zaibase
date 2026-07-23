@@ -7,7 +7,6 @@ import {
   Dimensions,
   Platform,
   ScrollView,
-  Image,
 } from 'react-native';
 
 const SERIF = Platform.select({
@@ -16,10 +15,13 @@ const SERIF = Platform.select({
   default: undefined,
 }) as string | undefined;
 import { Question, subjectInfo } from '../data/questions-meta';
-import {
-  getHistoryThemeLabel,
-  getQuestionIllustration,
-} from '../data/images';
+import SubjectIcon from './SubjectIcon';
+import { getHistoryThemeLabel } from '../data/images';
+import { getSubjectThemeLabel } from '../data/subjectImages';
+import { getFigure } from '../data/figures';
+import FigureView from './FigureView';
+import { getQuestionVideo } from '../data/videos';
+import VideoPlayer from './VideoPlayer';
 
 type Props = {
   question: Question;
@@ -41,10 +43,16 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
   const [revealed, setRevealed] = useState(false);
   const [selectedChoice, setSelectedChoice] = useState<string | null>(null);
   const info = subjectInfo[question.subject];
-  const historyLabel = getHistoryThemeLabel(question.id);
-  const illustration = question.subject === 'shakai'
-    ? getQuestionIllustration(question.subject, question.id)
-    : null;
+  // 単元テーマ判定（理科・社会）：問題文＋解説からキーワードで自動分類
+  const themeText = `${question.question} ${question.explanation ?? ''}`;
+  // キャラクター（マンガ風）イラストは各教科の問題カードから削除済み。
+  // 単元ラベル（🏛/🔬 のテキストチップ）のみ残す。
+  const historyLabel = getHistoryThemeLabel(question.id)
+    ?? getSubjectThemeLabel(question.subject, themeText);
+  // ベクター図形（座標グラフ・図形・立体・化学式など）。あれば図で表示。
+  const figure = getFigure(question.id);
+  // 解説動画（レジストリ or 問題データの videoUrl）。あれば解答側で再生。
+  const video = getQuestionVideo(question.id, question.videoUrl);
 
   function handlePress() {
     if (choices != null || revealed) return;
@@ -69,26 +77,17 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
     >
       <View style={styles.subjectChipRow}>
         <View style={[styles.subjectChip, { backgroundColor: info.color }]}>
-          <Text style={styles.subjectChipText}>
-            {info.emoji} {info.name}
-          </Text>
+          <SubjectIcon subject={question.subject} size={16} color="#FFFFFF" strokeWidth={2.2} />
+          <Text style={styles.subjectChipText}>{info.name}</Text>
         </View>
         {historyLabel != null && (
           <View style={styles.historyChip}>
-            <Text style={styles.historyChipText}>🏛 {historyLabel}</Text>
+            <Text style={styles.historyChipText}>
+              {question.subject === 'rika' ? '🔬' : '🏛'} {historyLabel}
+            </Text>
           </View>
         )}
       </View>
-
-      {illustration != null && (
-        <View style={styles.illustrationWrap}>
-          <Image
-            source={illustration}
-            style={styles.illustration}
-            resizeMode="cover"
-          />
-        </View>
-      )}
 
       {choices != null ? (
         <View style={styles.choiceSection}>
@@ -102,14 +101,16 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
           )}
           <Text style={styles.questionLabel}>問 題</Text>
           <Text style={styles.questionTextChoice}>{question.question}</Text>
-          {question.figureDescription != null && (
+          {figure != null ? (
+            <FigureView figure={figure} />
+          ) : question.figureDescription != null ? (
             <View style={styles.figureBox}>
               <Text style={styles.figureLabel}>📐 図・表</Text>
               <ScrollView horizontal={false}>
                 <Text style={styles.figureText}>{question.figureDescription}</Text>
               </ScrollView>
             </View>
-          )}
+          ) : null}
           {(() => {
             const stripLabel = (s: string) => s.replace(/^[A-D]\s+/, '');
             const units = choices.map((c) => extractTrailingUnit(stripLabel(c)));
@@ -200,12 +201,14 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
           )}
           <Text style={styles.questionLabel}>問 題</Text>
           <Text style={styles.questionText}>{question.question}</Text>
-          {question.figureDescription != null && (
+          {figure != null ? (
+            <FigureView figure={figure} />
+          ) : question.figureDescription != null ? (
             <View style={styles.figureBox}>
               <Text style={styles.figureLabel}>📐 図・表</Text>
               <Text style={styles.figureText}>{question.figureDescription}</Text>
             </View>
-          )}
+          ) : null}
           <View style={styles.tapHint}>
             <Text style={styles.tapHintText}>タップして答えを見る 👆</Text>
           </View>
@@ -214,6 +217,8 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
         <View style={styles.answerSide}>
           <Text style={styles.answerLabel}>答 え</Text>
           <Text style={styles.answerText}>{question.answer}</Text>
+          {figure != null && <FigureView figure={figure} animated />}
+          {video != null && <VideoPlayer url={video.url} title={video.title} />}
           {(question.explanation != null || question.hint != null) && (
             <View style={styles.hintBox}>
               <Text style={styles.hintLabel}>📖 解説</Text>
@@ -234,14 +239,16 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
 const styles = StyleSheet.create({
   card: {
     backgroundColor: '#FFFFFF',
-    borderRadius: 24,
+    borderRadius: 14,
     marginHorizontal: 16,
     overflow: 'hidden',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.14,
-    shadowRadius: 14,
-    elevation: 8,
+    borderWidth: 1.5,
+    borderColor: '#CBD2DE',
+    shadowColor: '#0F1826',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.05,
+    shadowRadius: 8,
+    elevation: 2,
   },
   cardRevealed: {
     backgroundColor: '#F0FFF4',
@@ -258,6 +265,9 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   subjectChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
     paddingHorizontal: 14,
     paddingVertical: 6,
     borderRadius: 16,
@@ -510,14 +520,5 @@ const styles = StyleSheet.create({
     color: '#0284C7',
     marginTop: 8,
     fontWeight: '600',
-  },
-  illustrationWrap: {
-    width: '100%',
-    height: 170,
-    overflow: 'hidden',
-  },
-  illustration: {
-    width: '100%',
-    height: 170,
   },
 });

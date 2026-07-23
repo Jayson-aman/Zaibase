@@ -146,6 +146,7 @@ export const kaimeiExamV2: Question[] = [
   {
     id: 'kaimei_v2_r001',
     subject: 'rika',
+    figureDescription: '水の温度と硝酸カリウムの溶解度（g/100g水）の関係を示す表。20℃で31g、40℃で64g、60℃で110g、80℃で169g。',
     difficulty: 'advanced',
     course: 'kaimei',
     examType: 'chugaku',

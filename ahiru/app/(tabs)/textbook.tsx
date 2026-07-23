@@ -107,7 +107,7 @@ export default function TextbookScreen() {
         {selectedSubject && isPro && (
           <View style={styles.lessonList}>
             <Text style={styles.lessonListTitle}>
-              {subjectInfo[selectedSubject].emoji} {subjectInfo[selectedSubject].name} の単元一覧
+              {subjectInfo[selectedSubject].name} の単元一覧
             </Text>
             {lessons.length === 0 ? (
               <View style={styles.emptyBox}>

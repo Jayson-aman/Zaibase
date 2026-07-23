@@ -5,6 +5,7 @@
   "dependencies": {
     "@expo/metro-runtime": "^56.0.16",
     "@react-native-async-storage/async-storage": "^3.1.1",
+    "@revenuecat/purchases-js": "^1.47.0",
     "expo": "~56.0.11",
     "expo-av": "~15.0.2",
     "expo-file-system": "~18.0.10",
@@ -21,7 +22,7 @@
     "react-native-safe-area-context": "^5.8.0",
     "react-native-screens": "^4.25.2",
     "react-native-web": "^0.21.2",
-    "react-native-worklets": "^0.9.2"
+    "react-native-worklets": "^0.10.2"
   },
   "devDependencies": {
     "@types/react": "~19.2.2",

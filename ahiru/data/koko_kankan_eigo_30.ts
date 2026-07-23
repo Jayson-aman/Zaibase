@@ -187,7 +187,7 @@ export const kokoKankanEigo30: Question[] = [
   （私はその知らせを聞いて驚いた）
 
 ③ He grew up (　) be a doctor.
-  （彼は医者になるために育った→医者になった）`,
+  （彼は成長して医者になった）`,
     answer: '① to　② to　③ to',
     hint: '「〜するために」「〜して（感情の原因）」「〜して（結果）」はすべてto+動詞原形。',
     explanation: `【出題意図】不定詞の副詞的用法（目的・感情の原因・結果）の3用法を問う。【解説】①目的「〜するために」→to study。②感情の原因「〜して（驚いた）」→to hear。be glad/happy/surprised/sorry to doの形。③結果「〜した結果〜になった」→grew up to be（grew upは「成長した」、結果としてbe a doctorになった）。【注意点】①と③は日本語がどちらも「〜するために」になりうるが、③は結果用法（意図がない）。【関連知識】in order to〜（〜するために）は目的の意味をより明確に示す。`,
@@ -343,10 +343,10 @@ A: Thanks. I'll try that.
 ① [ to / I / what / do / know / don't ] next.
   （次に何をすればいいかわからない）
 
-② [ the / is / who / woman / that ] standing by the door?
+② [ the / is / is / who / woman / that ] standing by the door?
   （ドアのそばに立っている女性は誰ですか）
 
-③ [ have / she / for / been / years / ten ] a nurse.
+③ [ has / she / for / been / years / ten ] a nurse.
   （彼女は10年間看護師をしている）`,
     answer: `① I don't know what to do next.
 ② Who is the woman that is standing by the door?
@@ -487,7 +487,7 @@ The idea that "money cannot buy happiness" is often quoted, but researchers have
 
 ① 下線部「a more complex picture」とはどういうことか、日本語で答えよ。（30字以内）
 ② お金と幸福の関係について、筆者が述べている内容を2点日本語でまとめよ。`,
-    answer: `① お金と幸福の関係は「お金で幸福は買えない」という単純な話ではなく、より複雑だということ。（40字→要約すると）ある収入水準まではお金が幸福を改善するが、それ以上は効果が薄いという複雑な関係。
+    answer: `① 収入が一定水準を超えると幸福への効果が薄れる複雑な関係。（28字）
 ② ・一定の収入水準まではお金が幸福感を高める（基本的ニーズを満たしストレスを減らすため）。・一定水準を超えると追加の富は日々の幸福にほとんど影響しない。どう使うか（体験・他者への出費）が重要。`,
     hint: '①「お金で幸福は買えない」という単純な図式より複雑な実態があることを指す。②本文の「up to〜」と「beyond that point」で対比されている2つの事実をまとめる。',
     explanation: `【出題意図】論説文の下線部説明と内容要約を組み合わせた問題。比較・対比構造の把握と情報整理能力を問う。【解説】①「a more complex picture」=単純な格言（お金で幸福は買えない）より複雑な実態。研究が示す「条件付き」の関係を指す。②対比構造：(a)一定収入まで→幸福を改善（基本的ニーズ、ストレス減少）、(b)一定収入超→追加の富はほぼ効果なし。さらに「how（どのように使うか）」が重要とまとめる。【注意点】「two points」を求められているので必ず2点を明確に分けて書く。【関連知識】幸福経済学の研究（イースタリンパラドックス等）も背景知識として関連する。`,
@@ -647,9 +647,9 @@ In many countries, the school year begins in September, but Japan starts it in A
 テーマ：「高校生が海外留学することは良いことだと思いますか、理由とともに述べなさい。」
 
 （I think / I believe で書き始めること）`,
-    answer: `（賛成例）I think studying abroad in high school is a great experience. Students can improve their English skills, learn about different cultures, and become more independent. These experiences help them grow as global citizens. （35語）
+    answer: `（賛成例）I think studying abroad in high school is a great experience. Students can improve their English skills, learn about different cultures, and become more independent. These experiences help them grow as global citizens and prepare for their future careers.（39語）
 
-（反対例）I believe studying abroad is not always necessary for high school students. It can be expensive and stressful, and students can still learn about the world through books, online courses, and international exchange programs at home.（37語）`,
+（反対例）I believe studying abroad is not always necessary for high school students. It can be expensive and stressful, and students can still learn about the world through books, online courses, and international exchange programs at home.（36語）`,
     hint: '主張→理由1・2→まとめの構成で書く。賛否どちらでも、理由が明確なら評価される。',
     explanation: `【出題意図】海外留学をテーマにした意見英作文。主張・理由・具体例・まとめの構成力と35語以上の語数条件を問う。【解説】賛成の理由例：英語力向上・異文化理解・自立心の育成・グローバル市民としての成長。反対の理由例：費用・ストレス・家族との別離・国内でも代替手段がある。どちらの立場でも、理由が具体的で論理的なら採点上評価される。【注意点】35語以上を確実に満たすために理由を2つ以上挙げる。「For example」「In addition」「Therefore」などの接続詞で文をつなぐと自然。スペルミスや主語と動詞の一致を最後に確認する。【関連知識】留学関連語彙：study abroad、exchange student、cultural differences、language barrier、global citizen。`,
     pitfall: '主張のみで理由を書かないと語数不足になる。必ず「because〜」で理由を続ける。',
@@ -681,7 +681,7 @@ The most effective approach may be to use technology as a tool rather than a rep
     answer: `① It makes learning more engaging. / It prepares students for the digital future.
 ② ・スクリーンを見る時間が増えすぎると、集中力と社会性が損なわれる可能性がある。・手書きの方がタイピングより情報を記憶しやすいという研究がある。（技術への過度な依存で批判的思考力が失われる懸念も含む）
 ③ 技術は従来の学習の「代わり」ではなく「道具」として使うべきだということ。
-④ 筆者はデジタルとアナログのバランスをとることを最善の方法として提案している。技術は現代社会に必要なスキルを与える一方、読み書きを通じた深い思考力も必要だという立場。（78字）`,
+④ 筆者はデジタルとアナログのバランスを最善策として提案。技術は現代社会に必要なスキルを与える一方、読み書きを通じた深い思考力も必要だという立場。（71字）`,
     hint: '①Supporters argue that〜の内容を2点。②critics point out〜とresearch suggests〜を2点。③rather than=〜ではなく。④第3段落のbalancing以降が核心。',
     explanation: `【出題意図】教育と技術をテーマにした3段落の論説文読解。賛成・批判・折衷案という論説の典型構造を理解し、各段落から情報を抽出・整理・論評する最高レベルの読解問題。【解説】①第1段落：「makes learning more engaging」と「prepares students for the digital future」の2点。②第2段落：スクリーンタイムと集中力・社会性、手書きvsタイピングの記憶力研究、批判的思考力の喪失懸念の3点から2点を選ぶ。③rather than=「〜ではなく」。技術を主役（replacement）ではなく補助的役割（tool）として位置づける。④第3段落：賛成・批判どちらにも偏らず、デジタル（現代スキル）とアナログ（深い思考・手書き）のバランスを最善策とする折衷案の立場。自分の言葉を加えるとより高い評価を得られる。【注意点】④では必ず「筆者の主張の要約」に加えて「自分の意見・感想」の要素を入れること。字数（80字以内）の管理も重要。【関連知識】教育テクノロジー語彙：EdTech、digital literacy、critical thinking、screen time、handwriting、tablet/laptop。論説文の構造：問題提起（賛成）→反論（批判）→結論（折衷）は最頻出パターン。`,
     pitfall: '①でcriticsの主張を書かない。Supporters（第1段落）の主張のみを2点答える。',

@@ -20,6 +20,35 @@ import { vocabPhrases8 } from './vocab_phrases_8';
 import { vocabPhrases9 } from './vocab_phrases_9';
 import { vocabPhrases10 } from './vocab_phrases_10';
 
+// ── 英検準2級〜1級・TOEIC800レベル 新規追加分 ──────────────────────
+import { vocabWordsEikenPre2_1 } from './vocab_words_eiken_pre2_1';
+import { vocabWordsEikenPre2_2 } from './vocab_words_eiken_pre2_2';
+import { vocabWordsEikenPre2_3 } from './vocab_words_eiken_pre2_3';
+import { vocabWordsEikenPre2_4 } from './vocab_words_eiken_pre2_4';
+import { vocabWordsEiken2_1 } from './vocab_words_eiken_2_1';
+import { vocabWordsEiken2_2 } from './vocab_words_eiken_2_2';
+import { vocabWordsEiken2_3 } from './vocab_words_eiken_2_3';
+import { vocabWordsEiken2_4 } from './vocab_words_eiken_2_4';
+import { vocabWordsEiken1_1 } from './vocab_words_eiken_1_1';
+import { vocabWordsEiken1_2 } from './vocab_words_eiken_1_2';
+import { vocabWordsEiken1_3 } from './vocab_words_eiken_1_3';
+import { vocabWordsEiken1_4 } from './vocab_words_eiken_1_4';
+import { vocabWordsToeic800_1 } from './vocab_words_toeic800_1';
+import { vocabWordsToeic800_2 } from './vocab_words_toeic800_2';
+import { vocabWordsToeic800_3 } from './vocab_words_toeic800_3';
+
+import { vocabPhrasesEikenPre2_1 } from './vocab_phrases_eiken_pre2_1';
+import { vocabPhrasesEikenPre2_2 } from './vocab_phrases_eiken_pre2_2';
+import { vocabPhrasesEiken2_1 } from './vocab_phrases_eiken_2_1';
+import { vocabPhrasesEiken2_2 } from './vocab_phrases_eiken_2_2';
+import { vocabPhrasesEiken1_1 } from './vocab_phrases_eiken_1_1';
+import { vocabPhrasesEiken1_2 } from './vocab_phrases_eiken_1_2';
+import { vocabPhrasesToeic800_1 } from './vocab_phrases_toeic800_1';
+import { vocabPhrasesToeic800_2 } from './vocab_phrases_toeic800_2';
+
+import { vocabConversations1 } from './vocab_conversations_1';
+import { vocabConversations2 } from './vocab_conversations_2';
+
 export const vocabWords: VocabEntry[] = [
   ...vocabWords1,
   ...vocabWords2,
@@ -41,4 +70,29 @@ export const vocabWords: VocabEntry[] = [
   ...vocabPhrases8,
   ...vocabPhrases9,
   ...vocabPhrases10,
+  ...vocabWordsEikenPre2_1,
+  ...vocabWordsEikenPre2_2,
+  ...vocabWordsEikenPre2_3,
+  ...vocabWordsEikenPre2_4,
+  ...vocabWordsEiken2_1,
+  ...vocabWordsEiken2_2,
+  ...vocabWordsEiken2_3,
+  ...vocabWordsEiken2_4,
+  ...vocabWordsEiken1_1,
+  ...vocabWordsEiken1_2,
+  ...vocabWordsEiken1_3,
+  ...vocabWordsEiken1_4,
+  ...vocabWordsToeic800_1,
+  ...vocabWordsToeic800_2,
+  ...vocabWordsToeic800_3,
+  ...vocabPhrasesEikenPre2_1,
+  ...vocabPhrasesEikenPre2_2,
+  ...vocabPhrasesEiken2_1,
+  ...vocabPhrasesEiken2_2,
+  ...vocabPhrasesEiken1_1,
+  ...vocabPhrasesEiken1_2,
+  ...vocabPhrasesToeic800_1,
+  ...vocabPhrasesToeic800_2,
+  ...vocabConversations1,
+  ...vocabConversations2,
 ];

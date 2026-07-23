@@ -17,6 +17,8 @@ import { useQuestionsBySubjectMap } from '../../hooks/useSubjectQuestions';
 import { useSubscription } from '../../hooks/useSubscription';
 import { getWeakPointCoaching } from '../../services/aiCoach';
 import Paywall from '../../components/Paywall';
+import SubjectIcon from '../../components/SubjectIcon';
+import { PRO_PRICE_LABEL, MAX_PRICE_LABEL } from '../../constants/pricing';
 
 // ─── palette ────────────────────────────────────────────────────────────────
 const C = {
@@ -283,7 +285,7 @@ export default function CoachScreen() {
                 const barColor = pct >= 70 ? C.green : pct >= 50 ? C.gold : C.coral;
                 return (
                   <View key={key} style={s.barRow}>
-                    <Text style={s.barEmoji}>{info.emoji}</Text>
+                    <SubjectIcon subject={key} size={22} color={info.color} strokeWidth={2} />
                     <View style={s.barMeta}>
                       <View style={s.barLabelRow}>
                         <Text style={s.barSubject}>{info.name}</Text>
@@ -331,7 +333,7 @@ export default function CoachScreen() {
           ) : (
             <LockedContent
               text="まちがえた問題をAIが分析して苦手単元を特定し、集中的な復習プランを自動生成します。"
-              buttonLabel="Proプランで解放 ¥2,000/月"
+              buttonLabel={`Proプランで解放 ${PRO_PRICE_LABEL}`}
               buttonColor={C.coral}
               onUnlock={() => setPaywallVisible(true)}
             />
@@ -393,7 +395,7 @@ export default function CoachScreen() {
                       const studied = studiedSubjects.includes(sub);
                       return (
                         <View key={sub} style={s.subjectCell}>
-                          <Text style={s.cellEmoji}>{info.emoji}</Text>
+                          <SubjectIcon subject={sub} size={20} color={info.color} strokeWidth={2} />
                           <Text style={s.cellName}>{info.name}</Text>
                           <View
                             style={[s.gradePill, { backgroundColor: studied ? g.color : C.muted }]}
@@ -412,7 +414,7 @@ export default function CoachScreen() {
           ) : (
             <LockedContent
               text="学習実績をもとに志望校への合格可能性を判定します。科目別のA〜D判定と合格ラインまでの差分を表示。"
-              buttonLabel="Proプランで解放 ¥2,000/月"
+              buttonLabel={`Proプランで解放 ${PRO_PRICE_LABEL}`}
               buttonColor={C.primary}
               onUnlock={() => setPaywallVisible(true)}
             />
@@ -469,7 +471,7 @@ export default function CoachScreen() {
           ) : (
             <LockedContent
               text="記述問題の答えを入力すると、AIがわかりやすさ・正確さ・表現の観点で採点・フィードバックします。どこが惜しかったか、より良い表現はどうか丁寧に指導します。"
-              buttonLabel="Maxプランで解放 ¥3,000/月"
+              buttonLabel={`Maxプランで解放 ${MAX_PRICE_LABEL}`}
               buttonColor={C.purple}
               onUnlock={() => setPaywallVisible(true)}
             />

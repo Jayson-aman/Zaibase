@@ -10,14 +10,110 @@ const isWeb = Platform.OS === 'web';
 
 const RC_KEY_IOS = process.env.EXPO_PUBLIC_RC_API_KEY_IOS ?? '';
 const RC_KEY_ANDROID = process.env.EXPO_PUBLIC_RC_API_KEY_ANDROID ?? '';
+const RC_KEY_WEB = process.env.EXPO_PUBLIC_RC_API_KEY_WEB ?? '';
+
+// RevenueCatダッシュボードのWeb Billingオファリングで、これらのIDのパッケージを作成する
+const WEB_PACKAGE_ID_PRO = 'pro_monthly';
+const WEB_PACKAGE_ID_MAX = 'max_monthly';
+const WEB_PACKAGE_ID_VOCAB_MONTHLY = 'vocab_monthly';
+const WEB_PACKAGE_ID_VOCAB_YEARLY = 'vocab_yearly';
+
+const WEB_APP_USER_ID_KEY = 'zaibase_exam_rc_app_user_id';
 
 export function isRevenueCatConfigured(): boolean {
-  const key = Platform.select({ ios: RC_KEY_IOS, android: RC_KEY_ANDROID, default: '' }) ?? '';
-  return key.length > 10 && !key.includes('XXXX');
+  const key = isWeb ? RC_KEY_WEB : (Platform.select({ ios: RC_KEY_IOS, android: RC_KEY_ANDROID, default: '' }) ?? '');
+  return key.length > 10 && !key.toUpperCase().includes('XXXX');
+}
+
+async function getWebPurchases() {
+  const { Purchases } = await import('@revenuecat/purchases-js');
+  if (Purchases.isConfigured()) return Purchases.getSharedInstance();
+  let appUserId: string | null = null;
+  try {
+    appUserId = window.localStorage.getItem(WEB_APP_USER_ID_KEY);
+  } catch {
+    // localStorage不可時（プライベートブラウズ等）は毎回匿名IDを発行
+  }
+  if (!appUserId) {
+    appUserId = Purchases.generateRevenueCatAnonymousAppUserId();
+    try {
+      window.localStorage.setItem(WEB_APP_USER_ID_KEY, appUserId);
+    } catch {
+      // 保存できなくても購入自体は可能
+    }
+  }
+  return Purchases.configure({ apiKey: RC_KEY_WEB, appUserId });
+}
+
+// ログインしたユーザー（Firebase UID）をRevenueCatに紐付ける。
+// 全デバイス・全プラットフォームで同一 appUserId になるため、加入状態が
+// 共有され、iOSで加入した人がWebで二重に課金される事故を防げる。
+export async function identifyUser(uid: string): Promise<void> {
+  if (!isRevenueCatConfigured() || !uid) return;
+  try {
+    if (isWeb) {
+      try {
+        window.localStorage.setItem(WEB_APP_USER_ID_KEY, uid);
+      } catch {
+        // 保存不可でも続行
+      }
+      const { Purchases } = await import('@revenuecat/purchases-js');
+      if (Purchases.isConfigured()) {
+        const inst = Purchases.getSharedInstance() as unknown as {
+          changeUser?: (id: string) => Promise<unknown>;
+        };
+        if (typeof inst.changeUser === 'function') {
+          await inst.changeUser(uid);
+          return;
+        }
+      }
+      Purchases.configure({ apiKey: RC_KEY_WEB, appUserId: uid });
+    } else {
+      const Purchases = (await import('react-native-purchases')).default;
+      await Purchases.logIn(uid);
+    }
+  } catch {
+    // 紐付け失敗は致命的ではない（購入自体は可能）
+  }
+}
+
+// ログアウト時：RevenueCatを匿名ユーザーへ戻す。
+export async function logoutUser(): Promise<void> {
+  if (!isRevenueCatConfigured()) return;
+  try {
+    if (isWeb) {
+      try {
+        window.localStorage.removeItem(WEB_APP_USER_ID_KEY);
+      } catch {
+        // ignore
+      }
+      const { Purchases } = await import('@revenuecat/purchases-js');
+      const anon = Purchases.generateRevenueCatAnonymousAppUserId();
+      if (Purchases.isConfigured()) {
+        const inst = Purchases.getSharedInstance() as unknown as {
+          changeUser?: (id: string) => Promise<unknown>;
+        };
+        if (typeof inst.changeUser === 'function') {
+          await inst.changeUser(anon);
+        }
+      }
+    } else {
+      const Purchases = (await import('react-native-purchases')).default;
+      await Purchases.logOut();
+    }
+  } catch {
+    // ignore
+  }
 }
 
 export function initRevenueCat(): void {
-  if (isWeb || !isRevenueCatConfigured()) return;
+  if (!isRevenueCatConfigured()) return;
+  if (isWeb) {
+    getWebPurchases().catch(() => {
+      // Web Billing未設定時は無視
+    });
+    return;
+  }
   (async () => {
     try {
       const Purchases = (await import('react-native-purchases')).default;
@@ -53,8 +149,12 @@ export function hasVocabEntitlement(info: unknown): boolean {
 }
 
 export async function getCustomerInfo(): Promise<unknown> {
-  if (isWeb || !isRevenueCatConfigured()) {
+  if (!isRevenueCatConfigured()) {
     return { entitlements: { active: {} } };
+  }
+  if (isWeb) {
+    const purchases = await getWebPurchases();
+    return purchases.getCustomerInfo();
   }
   const Purchases = (await import('react-native-purchases')).default;
   return Purchases.getCustomerInfo();
@@ -65,15 +165,63 @@ export const PRODUCT_ID_MAX = 'com.zaibase.exam.max.monthly';
 export const PRODUCT_ID_VOCAB_MONTHLY = 'com.zaibase.exam.vocab.monthly';
 export const PRODUCT_ID_VOCAB_YEARLY = 'com.zaibase.exam.vocab.yearly';
 
+type WebPackageLike = {
+  identifier: string;
+  webBillingProduct?: { currentPrice?: { formattedPrice?: string } };
+};
+
+type WebProductWrapper = { identifier: string; priceString: string; __webPackage: unknown };
+
+function wrapWebPackage(pkg: WebPackageLike): WebProductWrapper {
+  return {
+    identifier: pkg.identifier,
+    priceString: pkg.webBillingProduct?.currentPrice?.formattedPrice ?? '',
+    __webPackage: pkg,
+  };
+}
+
+function unwrapWebPackage(product: unknown): unknown {
+  return (product as { __webPackage?: unknown } | null)?.__webPackage ?? product;
+}
+
 export async function fetchCurrentOffering(): Promise<unknown> {
-  if (isWeb || !isRevenueCatConfigured()) return null;
+  if (!isRevenueCatConfigured()) return null;
+  if (isWeb) {
+    try {
+      const purchases = await getWebPurchases();
+      const offerings = await purchases.getOfferings();
+      return offerings.current ?? null;
+    } catch {
+      return null;
+    }
+  }
   const Purchases = (await import('react-native-purchases')).default;
   const offerings = await Purchases.getOfferings();
   return offerings.current ?? null;
 }
 
+async function fetchWebOfferingPackages(): Promise<WebPackageLike[]> {
+  const purchases = await getWebPurchases();
+  const offerings = await purchases.getOfferings();
+  const current = offerings.current;
+  return (current?.availablePackages as WebPackageLike[] | undefined) ?? [];
+}
+
 export async function fetchProMaxProducts(): Promise<{ pro: unknown; max: unknown }> {
-  if (isWeb || !isRevenueCatConfigured()) return { pro: null, max: null };
+  if (!isRevenueCatConfigured()) return { pro: null, max: null };
+  if (isWeb) {
+    try {
+      const packages = await fetchWebOfferingPackages();
+      const pro = packages.find((p) => p.identifier === WEB_PACKAGE_ID_PRO);
+      const max = packages.find((p) => p.identifier === WEB_PACKAGE_ID_MAX);
+      return {
+        pro: pro ? wrapWebPackage(pro) : null,
+        max: max ? wrapWebPackage(max) : null,
+      };
+    } catch {
+      return { pro: null, max: null };
+    }
+  }
   try {
     const Purchases = (await import('react-native-purchases')).default;
     const products = await Purchases.getProducts([PRODUCT_ID_PRO, PRODUCT_ID_MAX]);
@@ -87,7 +235,20 @@ export async function fetchProMaxProducts(): Promise<{ pro: unknown; max: unknow
 }
 
 export async function fetchVocabProducts(): Promise<{ monthly: unknown; yearly: unknown }> {
-  if (isWeb || !isRevenueCatConfigured()) return { monthly: null, yearly: null };
+  if (!isRevenueCatConfigured()) return { monthly: null, yearly: null };
+  if (isWeb) {
+    try {
+      const packages = await fetchWebOfferingPackages();
+      const monthly = packages.find((p) => p.identifier === WEB_PACKAGE_ID_VOCAB_MONTHLY);
+      const yearly = packages.find((p) => p.identifier === WEB_PACKAGE_ID_VOCAB_YEARLY);
+      return {
+        monthly: monthly ? wrapWebPackage(monthly) : null,
+        yearly: yearly ? wrapWebPackage(yearly) : null,
+      };
+    } catch {
+      return { monthly: null, yearly: null };
+    }
+  }
   try {
     const Purchases = (await import('react-native-purchases')).default;
     const products = await Purchases.getProducts([PRODUCT_ID_VOCAB_MONTHLY, PRODUCT_ID_VOCAB_YEARLY]);
@@ -102,6 +263,11 @@ export async function fetchVocabProducts(): Promise<{ monthly: unknown; yearly: 
 
 export async function purchaseProduct(product: unknown): Promise<unknown> {
   if (!isRevenueCatConfigured()) throw new Error('課金は準備中です');
+  if (isWeb) {
+    const purchases = await getWebPurchases();
+    const result = await purchases.purchase({ rcPackage: unwrapWebPackage(product) as never });
+    return result.customerInfo;
+  }
   const Purchases = (await import('react-native-purchases')).default;
   const { customerInfo } = await Purchases.purchaseStoreProduct(product as never);
   return customerInfo;
@@ -111,6 +277,11 @@ export async function purchasePackage(pkg: unknown): Promise<unknown> {
   if (!isRevenueCatConfigured()) {
     throw new Error('課金は準備中です');
   }
+  if (isWeb) {
+    const purchases = await getWebPurchases();
+    const result = await purchases.purchase({ rcPackage: unwrapWebPackage(pkg) as never });
+    return result.customerInfo;
+  }
   const Purchases = (await import('react-native-purchases')).default;
   const { customerInfo } = await Purchases.purchasePackage(pkg as never);
   return customerInfo;
@@ -119,6 +290,11 @@ export async function purchasePackage(pkg: unknown): Promise<unknown> {
 export async function restorePurchases(): Promise<unknown> {
   if (!isRevenueCatConfigured()) {
     throw new Error('課金は準備中です');
+  }
+  if (isWeb) {
+    // Web版は購入時のブラウザに紐づく匿名IDで管理されるため、最新の顧客情報を再取得する
+    const purchases = await getWebPurchases();
+    return purchases.getCustomerInfo();
   }
   const Purchases = (await import('react-native-purchases')).default;
   return Purchases.restorePurchases();

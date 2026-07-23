@@ -5,6 +5,8 @@ export type LessonSection = {
   body: string;
   maxOnly?: boolean;
   level?: 'kiso' | 'oyo' | 'moshi' | 'nyushi';
+  /** 動く図解のID（data/lesson-figures.ts に登録）。セクション本文の下に描画される */
+  figureId?: string;
 };
 
 export type StudyPeriod =
@@ -29,4 +31,6 @@ export type Lesson = {
   examType?: 'chugaku' | 'koko';
   targetLevel?: 'kiso' | 'oyo' | 'moshi' | 'nyushi';
   studyPeriod?: StudyPeriod;
+  /** 📌 覚える要点（この単元で必ず暗記すべきことの箇条書き） */
+  keyPoints?: string[];
 };

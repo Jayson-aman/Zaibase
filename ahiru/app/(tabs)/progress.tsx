@@ -17,8 +17,47 @@ import { useMaxGate } from '../../hooks/useMaxGate';
 import { getWeakPointCoaching } from '../../services/aiCoach';
 import { fetchMyRanking, RankingResult } from '../../services/ranking';
 import Paywall from '../../components/Paywall';
+import SubjectIcon from '../../components/SubjectIcon';
+import { useAuthUser } from '../../hooks/useAuthUser';
+import { signOutUser } from '../../services/auth';
 
 const SUBJECTS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
+
+function AccountCard() {
+  const { isLoggedIn, email } = useAuthUser();
+  async function handleLogout() {
+    Alert.alert('ログアウト', 'ログアウトしますか？', [
+      { text: 'キャンセル', style: 'cancel' },
+      {
+        text: 'ログアウト',
+        style: 'destructive',
+        onPress: () => {
+          signOutUser().catch(() => {});
+        },
+      },
+    ]);
+  }
+  if (isLoggedIn) {
+    return (
+      <View style={styles.accountCard}>
+        <Text style={styles.accountLabel}>ログイン中</Text>
+        <Text style={styles.accountEmail}>{email ?? 'アカウント'}</Text>
+        <Text style={styles.accountNote}>学習の記録やご購入内容を引き継げます。</Text>
+        <TouchableOpacity style={styles.accountLogout} onPress={handleLogout} activeOpacity={0.85}>
+          <Text style={styles.accountLogoutText}>ログアウト</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+  return (
+    <TouchableOpacity style={styles.accountCardCta} onPress={() => router.push('/login')} activeOpacity={0.9}>
+      <Text style={styles.accountCtaTitle}>🔑 ログイン / 新規登録</Text>
+      <Text style={styles.accountCtaSub}>
+        ログインすると学習の記録やご購入内容を引き継げます
+      </Text>
+    </TouchableOpacity>
+  );
+}
 
 export default function ProgressScreen() {
   const { bySubject: questionsBySubject } = useQuestionsBySubjectMap();
@@ -156,6 +195,9 @@ export default function ProgressScreen() {
           <Text style={styles.headerSubtitle}>がんばってる記録だよ！</Text>
         </View>
 
+        {/* アカウント（複数端末・機種変更の引き継ぎ／二重課金防止） */}
+        <AccountCard />
+
         {/* Overall summary */}
         <View style={styles.summaryCard}>
           <Text style={styles.summaryLabel}>総合正解率</Text>
@@ -216,7 +258,7 @@ export default function ProgressScreen() {
                 <View style={styles.reportItem}>
                   <Text style={styles.reportItemLabel}>得意科目</Text>
                   <Text style={styles.reportItemValue}>
-                    {subjectInfo[bestSubject].emoji} {subjectInfo[bestSubject].name}
+                    {subjectInfo[bestSubject].name}
                   </Text>
                   <Text style={styles.reportItemPct}>{subjectPct(bestSubject)}%</Text>
                 </View>
@@ -225,7 +267,7 @@ export default function ProgressScreen() {
                 <View style={styles.reportItem}>
                   <Text style={styles.reportItemLabel}>要復習</Text>
                   <Text style={styles.reportItemValue}>
-                    {subjectInfo[worstSubject].emoji} {subjectInfo[worstSubject].name}
+                    {subjectInfo[worstSubject].name}
                   </Text>
                   <Text style={styles.reportItemPct}>{subjectPct(worstSubject)}%</Text>
                 </View>
@@ -274,7 +316,7 @@ export default function ProgressScreen() {
             <View key={subject} style={styles.subjectCard}>
               <View style={styles.subjectRow}>
                 <View style={[styles.subjectIcon, { backgroundColor: info.color + '22' }]}>
-                  <Text style={styles.subjectEmoji}>{info.emoji}</Text>
+                  <SubjectIcon subject={subject} size={22} color={info.color} strokeWidth={2} />
                 </View>
                 <View style={styles.subjectMeta}>
                   <Text style={styles.subjectName}>{info.name}</Text>
@@ -312,7 +354,7 @@ export default function ProgressScreen() {
 
         {/* Legal footer */}
         <View style={styles.legalFooter}>
-          <Text style={styles.legalFooterTitle}>Zaibase Group / 中学・高校受験対策 ahiru</Text>
+          <Text style={styles.legalFooterTitle}>Zaibase Group / Zaibase受験</Text>
           <View style={styles.legalLinks}>
             <TouchableOpacity onPress={() => router.push('/terms')} activeOpacity={0.7}>
               <Text style={styles.legalLink}>利用規約</Text>
@@ -324,6 +366,10 @@ export default function ProgressScreen() {
             <Text style={styles.legalSep}>｜</Text>
             <TouchableOpacity onPress={() => router.push('/tokusho')} activeOpacity={0.7}>
               <Text style={styles.legalLink}>特定商取引法</Text>
+            </TouchableOpacity>
+            <Text style={styles.legalSep}>｜</Text>
+            <TouchableOpacity onPress={() => router.push('/credits')} activeOpacity={0.7}>
+              <Text style={styles.legalLink}>画像クレジット</Text>
             </TouchableOpacity>
           </View>
           <Text style={styles.legalContact}>お問い合わせ: info@zaibase.group</Text>
@@ -370,6 +416,29 @@ const styles = StyleSheet.create({
     color: 'rgba(255,255,255,0.8)',
     fontWeight: '500',
   },
+  accountCard: {
+    backgroundColor: '#FFFFFF',
+    marginHorizontal: 20,
+    marginTop: 20,
+    borderRadius: 16,
+    padding: 18,
+    borderWidth: 1,
+    borderColor: '#BAE6FD',
+  },
+  accountLabel: { fontSize: 12, color: '#0EA5E9', fontWeight: '700' },
+  accountEmail: { fontSize: 16, color: '#0F172A', fontWeight: '700', marginTop: 4 },
+  accountNote: { fontSize: 12, color: '#64748B', marginTop: 6, lineHeight: 18 },
+  accountLogout: { marginTop: 12, alignSelf: 'flex-start', paddingVertical: 8, paddingHorizontal: 16, borderRadius: 10, backgroundColor: '#F1F5F9' },
+  accountLogoutText: { color: '#64748B', fontWeight: '700', fontSize: 14 },
+  accountCardCta: {
+    backgroundColor: '#0EA5E9',
+    marginHorizontal: 20,
+    marginTop: 20,
+    borderRadius: 16,
+    padding: 18,
+  },
+  accountCtaTitle: { color: '#fff', fontSize: 17, fontWeight: '800' },
+  accountCtaSub: { color: 'rgba(255,255,255,0.9)', fontSize: 12, marginTop: 6, lineHeight: 18 },
   summaryCard: {
     backgroundColor: '#FFFFFF',
     marginHorizontal: 20,

@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import type { LessonSection } from '../data/lesson-types';
+import { getLessonFigure } from '../data/lesson-figures';
+import FigureView from './FigureView';
 
 type Props = {
   sections: LessonSection[];
@@ -74,6 +76,10 @@ export default function LessonRenderer({ sections, isMax }: Props) {
             </Text>
           )}
           {renderBody(section.body)}
+          {section.figureId != null && (() => {
+            const fig = getLessonFigure(section.figureId);
+            return fig != null ? <FigureView figure={fig} animated /> : null;
+          })()}
         </View>
       ))}
     </View>

@@ -52,6 +52,16 @@ import { nichinokenEigo } from './nichinoken_eigo';
 import { kokoNyushiRika50 } from './koko_nyushi_rika_50';
 import { kokoNyushiSansu50 } from './koko_nyushi_sansu_50';
 import { kokoNyushiEigo50 } from './koko_nyushi_eigo_50';
+import { kokoNyushiEigo2 } from './koko_nyushi_eigo2';
+import { kokoNyushiEigo3 } from './koko_nyushi_eigo3';
+import { kokoNyushiEigo4 } from './koko_nyushi_eigo4';
+import { kokoNyushiEigo5 } from './koko_nyushi_eigo5';
+import { kokoNyushiEigo6 } from './koko_nyushi_eigo6';
+import { kokoNyushiEigo7 } from './koko_nyushi_eigo7';
+import { kokoNyushiEigo8 } from './koko_nyushi_eigo8';
+import { kokoNyushiEigo9 } from './koko_nyushi_eigo9';
+import { kokoNyushiEigo10 } from './koko_nyushi_eigo10';
+import { kokoNyushiEigo11 } from './koko_nyushi_eigo11';
 import { kokoNyushiShakai50 } from './koko_nyushi_shakai_50';
 import { kokoNyushiKokugo50 } from './koko_nyushi_kokugo_50';
 import { kokoKisoRika50b } from './koko_kiso_rika_50b';
@@ -75,6 +85,23 @@ import { kokoKankanSansu30 } from './koko_kankan_sansu_30';
 import { kokoKankanKokugo30 } from './koko_kankan_kokugo_30';
 import { kokoKankanRika30 } from './koko_kankan_rika_30';
 import { kokoKankanShakai30 } from './koko_kankan_shakai_30';
+import { kokoKankanEigoC1 } from './koko_kankan_eigo_c1';
+import { kokoKankanEigoC2 } from './koko_kankan_eigo_c2';
+import { kokoKankanEigoC3 } from './koko_kankan_eigo_c3';
+import { kokoKankanKokugoC1 } from './koko_kankan_kokugo_c1';
+import { kokoKankanKokugoC2 } from './koko_kankan_kokugo_c2';
+import { kokoKankanKokugoC3 } from './koko_kankan_kokugo_c3';
+import { kokoKankanRikaC1 } from './koko_kankan_rika_c1';
+import { kokoKankanRikaC2 } from './koko_kankan_rika_c2';
+import { kokoKankanRikaC3 } from './koko_kankan_rika_c3';
+import { kokoKankanShakaiC1 } from './koko_kankan_shakai_c1';
+import { kokoKankanShakaiC2 } from './koko_kankan_shakai_c2';
+import { kokoKankanShakaiC3 } from './koko_kankan_shakai_c3';
+import { kokoKankanSansuC1 } from './koko_kankan_sansu_c1';
+import { kokoKankanSansuC2 } from './koko_kankan_sansu_c2';
+import { kokoKankanSansuC3 } from './koko_kankan_sansu_c3';
+import { kokoKankanSansuC4 } from './koko_kankan_sansu_c4';
+import { kokoKankanSansuC5 } from './koko_kankan_sansu_c5';
 import { kokoSansuEx01 } from './koko_sansu_ex_01';
 import { kokoSansuEx02 } from './koko_sansu_ex_02';
 import { kokoSansuEx03 } from './koko_sansu_ex_03';
@@ -123,10 +150,69 @@ import { fukuokaKurumeExam } from './fukuoka_kurume_exam';
 import { fukuokaSeinanExam } from './fukuoka_seinan_exam';
 import { fukuokaOhoriExam } from './fukuoka_ohori_exam';
 
+// ── 中学受験 標準レベル追加分（6000問化） ──────────────────────────
+import { chugaku2026Sansu1 } from './chugaku2026_sansu_1';
+import { chugaku2026Sansu2 } from './chugaku2026_sansu_2';
+import { chugaku2026Kokugo1 } from './chugaku2026_kokugo_1';
+import { chugaku2026Kokugo2 } from './chugaku2026_kokugo_2';
+import { chugaku2026Rika1 } from './chugaku2026_rika_1';
+import { chugaku2026Rika2 } from './chugaku2026_rika_2';
+import { chugaku2026Shakai1 } from './chugaku2026_shakai_1';
+import { chugaku2026Shakai2 } from './chugaku2026_shakai_2';
+import { chugaku2026Eigo1 } from './chugaku2026_eigo_1';
+import { chugaku2026Eigo2 } from './chugaku2026_eigo_2';
+
+// ── 高校受験 関東・東京・関関同立 本試験レベル追加分（5000問化） ──────
+import { kokoKanto2026Sansu } from './koko_kanto2026_sansu';
+import { kokoKanto2026Kokugo } from './koko_kanto2026_kokugo';
+import { kokoKanto2026Rika } from './koko_kanto2026_rika';
+import { kokoKanto2026Shakai } from './koko_kanto2026_shakai';
+import { kokoKanto2026Eigo } from './koko_kanto2026_eigo';
+
+// ── 1学期期末テスト対策追加分 ──────────────────────────────────────
+import { term1_2026ChugakuSansu } from './term1_2026_chugaku_sansu';
+import { term1_2026ChugakuKokugo } from './term1_2026_chugaku_kokugo';
+import { term1_2026ChugakuRika } from './term1_2026_chugaku_rika';
+import { term1_2026ChugakuShakai } from './term1_2026_chugaku_shakai';
+import { term1_2026ChugakuEigo } from './term1_2026_chugaku_eigo';
+import { term1_2026KokoSansu } from './term1_2026_koko_sansu';
+import { term1_2026KokoKokugo } from './term1_2026_koko_kokugo';
+import { term1_2026KokoRika } from './term1_2026_koko_rika';
+import { term1_2026KokoShakai } from './term1_2026_koko_shakai';
+import { term1_2026KokoEigo } from './term1_2026_koko_eigo';
+
 export type { Question, SubjectKey } from './questions-meta';
 export { subjectInfo } from './questions-meta';
 import type { Question } from './questions-meta';
 import type { SubjectKey } from './questions-meta';
+import { kokugoChoubunChugaku } from './kokugo_choubun_chugaku';
+import { eigoChoubunChugaku } from './eigo_choubun_chugaku';
+import { kokoRikaExpand1 } from './koko_rika_expand_1';
+import { kokoShakaiExpand1 } from './koko_shakai_expand_1';
+import { kokoKokugoExpand1 } from './koko_kokugo_expand_1';
+import { sansuDataChugaku } from './sansu_data_chugaku';
+import { kokugoChoubunKoko } from './kokugo_choubun_koko';
+import { kokugoChoubunChugaku2 } from './kokugo_choubun_chugaku_2';
+import { kokugoChoubunKoko2 } from './kokugo_choubun_koko_2';
+
+// ── 学校別問題（50校対応・図解付き） ────────────────────────────
+import { schoolOsakaJogakuin } from './school_osaka_jogakuin';
+import { schoolKokoAzabu } from './school_koko_azabu';
+import { schoolKokoNanzan } from './school_koko_nanzan';
+import { schoolKokoSeinan } from './school_koko_seinan';
+import { schoolKokoTaki } from './school_koko_taki';
+import { schoolKokoKurume } from './school_koko_kurume';
+import { schoolKokoOhori } from './school_koko_ohori';
+import { schoolKokoTokai } from './school_koko_tokai';
+import { schoolKokoShitennoji } from './school_koko_shitennoji';
+import { schoolKokoHibiyaWasedaFill } from './school_koko_hibiya_waseda_fill';
+import { schoolKokoKaseiFill } from './school_koko_kasei_fill';
+import { schoolKokoTodaijiFill } from './school_koko_todaiji_fill';
+import { schoolKokoKoyoFill } from './school_koko_koyo_fill';
+import { schoolKokoKeioFill } from './school_koko_keio_fill';
+import { schoolKokoNadaFill } from './school_koko_nada_fill';
+import { schoolKokoNishiyamatoFill } from './school_koko_nishiyamato_fill';
+import { schoolKokoMeidaiFill } from './school_koko_meidai_fill';
 
 export const questions: Question[] = [
   // ============================================================
@@ -2014,6 +2100,7 @@ export const questions: Question[] = [
     id: 'sansu_yotsuya_02',
     subject: 'sansu',
     question: '1辺12cmの正方形の紙を、図のように縦横3等分して9つの小正方形に分ける。四隅の4つと中央の1つの小正方形を切り取ったとき、残った図形の周りの長さは何cmか？',
+    figureDescription: '1辺12cmの正方形を縦横それぞれ3等分し、1辺4cmの小正方形9個に区切った図。四隅の4個と中央の1個（合計5個）に切り取りを表す斜線が入り、残るのは十字形（プラス形）に並ぶ4個の小正方形。',
     answer: '64cm',
     hint: '元の正方形の周=48cm。切り取った5つの正方形(各4cm角)のうち、隅4つは各2辺が外周、内側の切り口が新たに加わる。1つ切り取るごとに+4cm×2辺−4cm=+4cm増える×4隅+中央切り抜き4辺×4=48+16=64cm',
     difficulty: 'advanced',
@@ -2784,6 +2871,16 @@ export const questions: Question[] = [
   ...kokoNyushiRika50,
   ...kokoNyushiSansu50,
   ...kokoNyushiEigo50,
+  ...kokoNyushiEigo2,
+  ...kokoNyushiEigo3,
+  ...kokoNyushiEigo4,
+  ...kokoNyushiEigo5,
+  ...kokoNyushiEigo6,
+  ...kokoNyushiEigo7,
+  ...kokoNyushiEigo8,
+  ...kokoNyushiEigo9,
+  ...kokoNyushiEigo10,
+  ...kokoNyushiEigo11,
   ...kokoNyushiShakai50,
   ...kokoNyushiKokugo50,
   ...kokoKisoEigo50,
@@ -2873,6 +2970,23 @@ export const questions: Question[] = [
   ...kokoKankanKokugo30,
   ...kokoKankanRika30,
   ...kokoKankanShakai30,
+  ...kokoKankanEigoC1,
+  ...kokoKankanEigoC2,
+  ...kokoKankanEigoC3,
+  ...kokoKankanKokugoC1,
+  ...kokoKankanKokugoC2,
+  ...kokoKankanKokugoC3,
+  ...kokoKankanRikaC1,
+  ...kokoKankanRikaC2,
+  ...kokoKankanRikaC3,
+  ...kokoKankanShakaiC1,
+  ...kokoKankanShakaiC2,
+  ...kokoKankanShakaiC3,
+  ...kokoKankanSansuC1,
+  ...kokoKankanSansuC2,
+  ...kokoKankanSansuC3,
+  ...kokoKankanSansuC4,
+  ...kokoKankanSansuC5,
   ...kokoSansuEx01,
   ...kokoSansuEx02,
   ...kokoSansuEx03,
@@ -2923,6 +3037,57 @@ export const questions: Question[] = [
   ...fukuokaKurumeExam,
   ...fukuokaSeinanExam,
   ...fukuokaOhoriExam,
+  ...chugaku2026Sansu1,
+  ...chugaku2026Sansu2,
+  ...chugaku2026Kokugo1,
+  ...chugaku2026Kokugo2,
+  ...chugaku2026Rika1,
+  ...chugaku2026Rika2,
+  ...chugaku2026Shakai1,
+  ...chugaku2026Shakai2,
+  ...chugaku2026Eigo1,
+  ...chugaku2026Eigo2,
+  ...kokoKanto2026Sansu,
+  ...kokoKanto2026Kokugo,
+  ...kokoKanto2026Rika,
+  ...kokoKanto2026Shakai,
+  ...kokoKanto2026Eigo,
+  ...term1_2026ChugakuSansu,
+  ...term1_2026ChugakuKokugo,
+  ...term1_2026ChugakuRika,
+  ...term1_2026ChugakuShakai,
+  ...term1_2026ChugakuEigo,
+  ...term1_2026KokoSansu,
+  ...term1_2026KokoKokugo,
+  ...term1_2026KokoRika,
+  ...term1_2026KokoShakai,
+  ...term1_2026KokoEigo,
+  ...kokugoChoubunChugaku,
+  ...eigoChoubunChugaku,
+  ...kokoRikaExpand1,
+  ...kokoShakaiExpand1,
+  ...kokoKokugoExpand1,
+  ...sansuDataChugaku,
+  ...kokugoChoubunKoko,
+  ...kokugoChoubunChugaku2,
+  ...kokugoChoubunKoko2,
+  ...schoolOsakaJogakuin,
+  ...schoolKokoAzabu,
+  ...schoolKokoNanzan,
+  ...schoolKokoSeinan,
+  ...schoolKokoTaki,
+  ...schoolKokoKurume,
+  ...schoolKokoOhori,
+  ...schoolKokoTokai,
+  ...schoolKokoShitennoji,
+  ...schoolKokoHibiyaWasedaFill,
+  ...schoolKokoKaseiFill,
+  ...schoolKokoTodaijiFill,
+  ...schoolKokoKoyoFill,
+  ...schoolKokoKeioFill,
+  ...schoolKokoNadaFill,
+  ...schoolKokoNishiyamatoFill,
+  ...schoolKokoMeidaiFill,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {

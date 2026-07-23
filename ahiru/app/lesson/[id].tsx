@@ -10,6 +10,8 @@ import {
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { getLessonById } from '../../data/lessons';
 import LessonRenderer from '../../components/LessonRenderer';
+import VideoPlayer from '../../components/VideoPlayer';
+import { getLessonVideo } from '../../data/videos';
 import HomeButton from '../../components/HomeButton';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
@@ -41,6 +43,7 @@ export default function LessonDetailScreen() {
 
   const info = subjectInfo[lesson.subject];
   const hasMaxContent = lesson.sections.some((s) => s.maxOnly);
+  const lessonVideo = getLessonVideo(lesson.id);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -81,7 +84,32 @@ export default function LessonDetailScreen() {
                 </Text>
               </View>
             )}
+            {lessonVideo != null && (
+              <VideoPlayer url={lessonVideo.url} title={lessonVideo.title ?? '動画解説'} />
+            )}
             <LessonRenderer sections={lesson.sections} isMax={isMax} />
+            {lesson.keyPoints != null && lesson.keyPoints.length > 0 && (
+              <View style={styles.keyPointsBox}>
+                <Text style={styles.keyPointsTitle}>📌 覚える要点</Text>
+                {lesson.keyPoints.map((p, i) => (
+                  <View key={i} style={styles.keyPointRow}>
+                    <Text style={styles.keyPointCheck}>✅</Text>
+                    <Text style={styles.keyPointText}>{p}</Text>
+                  </View>
+                ))}
+              </View>
+            )}
+            <TouchableOpacity
+              style={[styles.practiceBtn, { backgroundColor: info.color }]}
+              activeOpacity={0.85}
+              onPress={() =>
+                router.push(
+                  `/quiz/${lesson.subject}?examType=${lesson.examType ?? 'chugaku'}` as any,
+                )
+              }
+            >
+              <Text style={styles.practiceBtnText}>✏️ この単元の練習問題にちょうせん →</Text>
+            </TouchableOpacity>
           </>
         )}
       </ScrollView>
@@ -152,4 +180,24 @@ const styles = StyleSheet.create({
     borderColor: '#FDE68A',
   },
   maxTeaserText: { fontSize: 13, color: '#92400E', fontWeight: '600' },
+  keyPointsBox: {
+    backgroundColor: '#ECFDF5',
+    borderRadius: 14,
+    padding: 16,
+    marginTop: 8,
+    marginBottom: 16,
+    borderLeftWidth: 4,
+    borderLeftColor: '#10B981',
+  },
+  keyPointsTitle: { fontSize: 17, fontWeight: '800', color: '#065F46', marginBottom: 10 },
+  keyPointRow: { flexDirection: 'row', alignItems: 'flex-start', marginBottom: 8 },
+  keyPointCheck: { fontSize: 14, marginRight: 8, marginTop: 2 },
+  keyPointText: { flex: 1, fontSize: 15, color: '#064E3B', lineHeight: 23 },
+  practiceBtn: {
+    borderRadius: 14,
+    paddingVertical: 16,
+    alignItems: 'center',
+    marginBottom: 28,
+  },
+  practiceBtnText: { color: '#fff', fontSize: 16, fontWeight: '800' },
 });

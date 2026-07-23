@@ -143,6 +143,8 @@ export const kokoKisoSansu50: Question[] = [
   },
   {
     id: 'koko_kiso_sansu_11',
+    figureDescription:
+      '反比例 y=6/x のグラフ。第1象限（右上）と第3象限（左下）に1本ずつ、計2本のなめらかな曲線（双曲線）が描かれる。曲線はx軸・y軸に限りなく近づくが決して交わらず、原点も通らない。',
     subject: 'sansu',
     course: 'koko-general',
     examType: 'koko',
@@ -157,6 +159,8 @@ export const kokoKisoSansu50: Question[] = [
   },
   {
     id: 'koko_kiso_sansu_12',
+    figureDescription:
+      '一次関数 y=2x−3 の直線グラフ。y軸とは点(0,−3)で交わり（切片−3）、xが1増えるごとにyが2増える右上がりの直線で、点(3,3)を通る。',
     subject: 'sansu',
     course: 'koko-general',
     examType: 'koko',
@@ -661,6 +665,8 @@ export const kokoKisoSansu50: Question[] = [
   },
   {
     id: 'koko_kiso_sansu_48',
+    figureDescription:
+      'データの散らばりを表す箱ひげ図。長方形の箱の左端が第1四分位数10、右端が第3四分位数22の位置にあり、箱の横幅が四分位範囲（22−10＝12）にあたる。',
     subject: 'sansu',
     course: 'koko-general',
     examType: 'koko',
