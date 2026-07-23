@@ -11,10 +11,4 @@ export const figuresSample: Record<string, Figure> = {
     lines: [{ a: 4, b: 0 }],
     points: [{ x: 3, y: 12, label: '(3, 12)' }],
   },
-  // 円すい：底面の半径5cm・母線13cm。高さは解答なので示さない。
-  seifu_v2_s007: {
-    kind: 'solid',
-    shape: 'cone',
-    labels: { radius: '5cm', slant: '13cm' },
-  },
 };
