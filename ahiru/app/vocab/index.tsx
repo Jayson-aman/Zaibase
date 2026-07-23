@@ -182,6 +182,10 @@ export default function VocabScreen() {
           <Text style={s.conversationEntryText}>🗣️ AIと英会話を練習する</Text>
         </TouchableOpacity>
 
+        <TouchableOpacity style={s.eikenEntryBtn} onPress={() => router.push('/eiken')}>
+          <Text style={s.eikenEntryText}>🇬🇧 英検対策（2・3・4級 5,160問）</Text>
+        </TouchableOpacity>
+
         {/* レベルフィルター（レベルごとに色分け） */}
         <ScrollView horizontal showsHorizontalScrollIndicator={false} style={s.filterRow}>
           {LEVEL_FILTER.map(lbl => {
@@ -488,6 +492,8 @@ const s = StyleSheet.create({
   sub:               { fontSize: 12, color: D.muted, textAlign: 'center', marginBottom: 12 },
   conversationEntryBtn: { backgroundColor: 'rgba(160,100,220,0.14)', borderWidth: 1, borderColor: D.purpleBorder, borderRadius: 14, paddingVertical: 12, alignItems: 'center', marginBottom: 14 },
   conversationEntryText: { fontSize: 14, fontWeight: '700', color: D.purpleText },
+  eikenEntryBtn: { backgroundColor: 'rgba(198,40,40,0.10)', borderWidth: 1, borderColor: 'rgba(198,40,40,0.35)', borderRadius: 14, paddingVertical: 12, alignItems: 'center', marginBottom: 14 },
+  eikenEntryText: { fontSize: 14, fontWeight: '700', color: '#C62828' },
   filterRow:         { flexGrow: 0, marginBottom: 8 },
   filterChip:        { paddingHorizontal: 14, paddingVertical: 6, borderRadius: 20, backgroundColor: D.card, borderWidth: 1, borderColor: D.cardBorder, marginRight: 8 },
   filterChipActive:  { backgroundColor: D.goldDim, borderColor: D.gold },

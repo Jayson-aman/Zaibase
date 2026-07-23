@@ -87,6 +87,18 @@ export default function RootLayout() {
           options={{ headerShown: false, presentation: 'card' }}
         />
         <Stack.Screen
+          name="eiken/index"
+          options={{ headerShown: false, presentation: 'card' }}
+        />
+        <Stack.Screen
+          name="eiken/[level]"
+          options={{ headerShown: false, presentation: 'card' }}
+        />
+        <Stack.Screen
+          name="eiken/taisaku"
+          options={{ headerShown: false, presentation: 'card' }}
+        />
+        <Stack.Screen
           name="terms"
           options={{ headerShown: false, presentation: 'modal' }}
         />
