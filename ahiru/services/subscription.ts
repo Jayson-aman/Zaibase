@@ -160,10 +160,13 @@ export async function getCustomerInfo(): Promise<unknown> {
   return Purchases.getCustomerInfo();
 }
 
-export const PRODUCT_ID_PRO = 'com.zaibase.exam.pro.monthly';
-export const PRODUCT_ID_MAX = 'com.zaibase.exam.max.monthly';
-export const PRODUCT_ID_VOCAB_MONTHLY = 'com.zaibase.exam.vocab.monthly';
-export const PRODUCT_ID_VOCAB_YEARLY = 'com.zaibase.exam.vocab.yearly';
+// ⚠️ 製品IDは App Store Connect で一度作成すると削除しても再利用不可（Apple仕様）。
+// アプリ誤削除→復元で旧ID（*.pro.monthly 等）が使用済みになったため、
+// ドット無しの新IDに変更。App Store Connect / RevenueCat 側もこのIDで作成すること。
+export const PRODUCT_ID_PRO = 'com.zaibase.exam.promonthly';
+export const PRODUCT_ID_MAX = 'com.zaibase.exam.maxmonthly';
+export const PRODUCT_ID_VOCAB_MONTHLY = 'com.zaibase.exam.vocabmonthly';
+export const PRODUCT_ID_VOCAB_YEARLY = 'com.zaibase.exam.vocabyearly';
 
 type WebPackageLike = {
   identifier: string;
