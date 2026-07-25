@@ -21,6 +21,7 @@ const { onCall, HttpsError } = require("firebase-functions/v2/https");
 const { getFirestore, FieldValue } = require("firebase-admin/firestore");
 const { defineSecret } = require("firebase-functions/params");
 const { sanitizeHistory } = require("./_sanitize");
+const { REVENUECAT_SECRET_KEY, fetchTierFromRevenueCat } = require("./revenuecat");
 
 const db = getFirestore();
 const ANTHROPIC_API_KEY = defineSecret("ANTHROPIC_API_KEY");
@@ -77,12 +78,12 @@ async function checkAndIncrementUsage(uid, limit) {
 }
 
 exports.chatEnglishConversation = onCall(
-  { region: "asia-northeast1", enforceAppCheck: true, secrets: [ANTHROPIC_API_KEY] },
+  { region: "asia-northeast1", secrets: [ANTHROPIC_API_KEY, REVENUECAT_SECRET_KEY] },
   async (req) => {
     const uid = req.auth?.uid;
     if (!uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
-    const { message, history = [], level = "eiken_2", scenario, isPaid = false } = req.data ?? {};
+    const { message, history = [], level = "eiken_2", scenario } = req.data ?? {};
 
     if (!message || typeof message !== "string" || !message.trim()) {
       throw new HttpsError("invalid-argument", "message が必要です");
@@ -94,11 +95,17 @@ exports.chatEnglishConversation = onCall(
       throw new HttpsError("invalid-argument", "history は配列である必要があります");
     }
 
-    // 有料判定：将来の tier 同期（webhook）を優先し、無ければクライアントの isPaid ヒント。
-    // これは日次レート制限のためのソフトゲート（コンテンツのペイウォールではない）。
-    const userSnap = await db.collection("users").doc(uid).get();
-    const tier = userSnap.exists ? (userSnap.data()?.tier ?? "free") : "free";
-    const paid = tier === "max" || tier === "pro" || tier === "vocab" || isPaid === true;
+    // 有料判定は RevenueCat を正とする。クライアントの isPaid は詐称できるため
+    // 使わない（誰でも有料枠を名乗れてAPIコストが流出する）。
+    // 英語系コンテンツは英単語Pro（vocab）または全部入りMaxで開放。
+    const rcTier = await fetchTierFromRevenueCat(uid);
+    let tier = rcTier;
+    if (tier === null) {
+      // RevenueCat に問い合わせできない場合のみ Firestore の tier にフォールバック
+      const userSnap = await db.collection("users").doc(uid).get();
+      tier = userSnap.exists ? (userSnap.data()?.tier ?? "free") : "free";
+    }
+    const paid = tier === "max" || tier === "vocab";
     const dailyLimit = paid ? PAID_DAILY_LIMIT : FREE_DAILY_LIMIT;
 
     await checkAndIncrementUsage(uid, dailyLimit);

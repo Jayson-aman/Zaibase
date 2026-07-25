@@ -1,6 +1,10 @@
 // Zaibase受験 — 利用規約・プライバシーポリシー
 // kensetsu（建設）の規約と同水準。子ども向けアプリのため未成年者条項を重視。
 
+// 特商法の販売価格は constants/pricing を参照して表示のズレを防ぐ
+// （価格改定時にこのファイルを直し忘れても自動で追随する）。
+import { PRO_PRICE_LABEL, MAX_PRICE_LABEL, VOCAB_MONTHLY_LABEL, VOCAB_YEARLY_LABEL } from '../constants/pricing';
+
 export type LegalSection = {
   heading: string;
   /** 段落（複数可）。配列の各要素が1段落。 */
@@ -181,8 +185,10 @@ export const ahiruTokusho: LegalSection[] = [
   {
     heading: '販売価格',
     bullets: [
-      'PRO プラン：¥2,000 / 月（税込）',
-      'MAX プラン：¥3,000 / 月（税込）',
+      `PRO プラン：${PRO_PRICE_LABEL}（税込）`,
+      `MAX プラン：${MAX_PRICE_LABEL}（税込）`,
+      `英単語Pro（月額）：${VOCAB_MONTHLY_LABEL}（税込）`,
+      `英単語Pro（年額）：${VOCAB_YEARLY_LABEL}（税込）`,
       '※ 価格はアプリ内および各ストアの表示を正とします。',
     ],
   },
@@ -197,7 +203,7 @@ export const ahiruTokusho: LegalSection[] = [
   {
     heading: '支払時期',
     paragraphs: [
-      '購読開始時および各更新日（月次）に、ストアまたはWeb版決済代行会社を通じて自動的に課金されます。',
+      '購読開始時および各更新日（月額プランは毎月、年額プランは毎年）に、ストアまたはWeb版決済代行会社を通じて自動的に課金されます。',
     ],
   },
   {

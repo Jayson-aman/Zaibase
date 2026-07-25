@@ -56,7 +56,7 @@ async function checkAndIncrementLimit(uid) {
 }
 
 exports.speakText = onCall(
-  { region: "asia-northeast1", enforceAppCheck: true, secrets: [OPENAI_API_KEY] },
+  { region: "asia-northeast1", secrets: [OPENAI_API_KEY] },
   async (req) => {
     const uid = req.auth?.uid;
     if (!uid) throw new HttpsError("unauthenticated", "ログインが必要です");

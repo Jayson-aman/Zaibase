@@ -52,7 +52,7 @@ async function checkAndIncrementLimit(uid) {
 }
 
 exports.getWeakPointCoaching = onCall(
-  { region: "asia-northeast1", enforceAppCheck: true, secrets: [ANTHROPIC_API_KEY] },
+  { region: "asia-northeast1", secrets: [ANTHROPIC_API_KEY] },
   async (req) => {
     const uid = req.auth?.uid;
     if (!uid) throw new HttpsError("unauthenticated", "ログインが必要です");

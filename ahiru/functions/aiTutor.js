@@ -3,6 +3,14 @@
  *
  * askTutor — 問題の写真＋テキスト質問を受け取り、Claude APIで解説を返す（Maxプラン限定）
  *
+ * ⚠️ App Check について:
+ *   クライアントの App Check は Web（reCAPTCHA v3）のみ実装で、ネイティブ
+ *   （iOS/Android）は App Attest / Play Integrity のネイティブ設定が未対応。
+ *   enforceAppCheck: true のままだと iOS 実機で全 AI 機能が弾かれるため無効化した。
+ *   不正利用対策は「Firebase Auth 必須（request.auth）＋ Firestore の
+ *   利用回数制限（月/日単位）」で担保する。ネイティブ App Check を実装したら
+ *   各 onCall に enforceAppCheck: true を戻すこと。
+ *
  * 料金設計:
  *   - Max ¥2,850/月: 月18セッションまで込み
  *   - 1セッション = 1問題 (最大6往復)
@@ -22,6 +30,7 @@ const { onCall, HttpsError } = require("firebase-functions/v2/https");
 const { sanitizeHistory, assertImageSize, capString } = require("./_sanitize");
 const { getFirestore, FieldValue } = require("firebase-admin/firestore");
 const { defineSecret } = require("firebase-functions/params");
+const { REVENUECAT_SECRET_KEY, fetchTierFromRevenueCat } = require("./revenuecat");
 
 const db = getFirestore();
 const ANTHROPIC_API_KEY = defineSecret("ANTHROPIC_API_KEY");
@@ -95,7 +104,7 @@ async function getOrCreateSession(uid, sessionId, isNewSession) {
 }
 
 exports.askTutor = onCall(
-  { region: "asia-northeast1", enforceAppCheck: true, secrets: [ANTHROPIC_API_KEY] },
+  { region: "asia-northeast1", secrets: [ANTHROPIC_API_KEY, REVENUECAT_SECRET_KEY] },
   async (req) => {
     const uid = req.auth?.uid;
     if (!uid) throw new HttpsError("unauthenticated", "ログインが必要です");
@@ -118,10 +127,13 @@ exports.askTutor = onCall(
     const safeHistory = sanitizeHistory(history, { maxTurns: 12, maxContentLen: 4000 });
 
     // Maxプラン確認 or 無料体験（1回限り）
+    // 課金判定は RevenueCat を正とする。users/{uid}.tier は書き込み処理が無く
+    // 常に free になってしまうため、単独では課金者を判定できない。
     const userRef = db.collection("users").doc(uid);
     const userSnap = await userRef.get();
     const userData = userSnap.exists ? userSnap.data() : {};
-    const tier = userData?.tier ?? "free";
+    const rcTier = await fetchTierFromRevenueCat(uid);
+    const tier = rcTier ?? (userData?.tier ?? "free");
     const trialAiUsed = userData?.trialAiUsed ?? false;
 
     if (tier !== "max") {
@@ -198,7 +210,7 @@ exports.askTutor = onCall(
  * クライアントから呼ぶ（購入確認後）
  */
 exports.addTutorCredits = onCall(
-  { region: "asia-northeast1", enforceAppCheck: true },
+  { region: "asia-northeast1" },
   async (req) => {
     const uid = req.auth?.uid;
     if (!uid) throw new HttpsError("unauthenticated", "ログインが必要です");
