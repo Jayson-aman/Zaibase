@@ -184,4 +184,12 @@ export const formulaImages: Record<string, ImageSourcePropType> = {
   "新しい人権": require('../assets/formulas/shakai-new-rights.png'),
   "三権分立": require('../assets/formulas/shakai-three-powers.png'),
   "国会のしくみ": require('../assets/formulas/shakai-diet-structure.png'),
+  "内閣と議院内閣制": require('../assets/formulas/shakai-cabinet-system.png'),
+  "裁判所と三審制": require('../assets/formulas/shakai-courts-three-trials.png'),
+  "違憲審査権と憲法の番人": require('../assets/formulas/shakai-supreme-court.png'),
+  "地方自治と直接請求権": require('../assets/formulas/shakai-local-government.png'),
+  "選挙と参政権": require('../assets/formulas/shakai-elections.png'),
+  "需要と供給と価格": require('../assets/formulas/shakai-supply-demand.png'),
+  "景気とインフレ・デフレ": require('../assets/formulas/shakai-inflation-deflation.png'),
+  "日本銀行の役割": require('../assets/formulas/shakai-bank-of-japan.png'),
 };
