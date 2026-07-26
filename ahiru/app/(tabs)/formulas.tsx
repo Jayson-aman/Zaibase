@@ -94,7 +94,7 @@ export default function FormulasScreen() {
                   </View>
                 )}
 
-                {!item.figure && !formulaImages[item.label] && !item.steps && item.asciiFigure && (
+                {!item.figure && !formulaImages[item.label] && !(item.steps && item.steps.length > 0) && item.asciiFigure && (
                   <View style={styles.figureBox}>
                     <Text style={styles.figureLabel}>図解</Text>
                     <ScrollView horizontal showsHorizontalScrollIndicator={false}>

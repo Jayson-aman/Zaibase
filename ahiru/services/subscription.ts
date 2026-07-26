@@ -25,6 +25,20 @@ export function isRevenueCatConfigured(): boolean {
   return key.length > 10 && !key.toUpperCase().includes('XXXX');
 }
 
+// Web版にはネイティブのようなCustomerInfo更新リスナーが無いため、購入・復元の直後に
+// useSubscription/useVocabSubscription へ明示的に通知して画面の権限表示を即座に更新する。
+type EntitlementListener = (info: unknown) => void;
+const entitlementListeners = new Set<EntitlementListener>();
+
+export function onEntitlementChanged(listener: EntitlementListener): () => void {
+  entitlementListeners.add(listener);
+  return () => entitlementListeners.delete(listener);
+}
+
+function emitEntitlementChanged(info: unknown): void {
+  entitlementListeners.forEach((listener) => listener(info));
+}
+
 async function getWebPurchases() {
   const { Purchases } = await import('@revenuecat/purchases-js');
   if (Purchases.isConfigured()) return Purchases.getSharedInstance();
@@ -266,13 +280,16 @@ export async function fetchVocabProducts(): Promise<{ monthly: unknown; yearly: 
 
 export async function purchaseProduct(product: unknown): Promise<unknown> {
   if (!isRevenueCatConfigured()) throw new Error('課金は準備中です');
+  let customerInfo: unknown;
   if (isWeb) {
     const purchases = await getWebPurchases();
     const result = await purchases.purchase({ rcPackage: unwrapWebPackage(product) as never });
-    return result.customerInfo;
+    customerInfo = result.customerInfo;
+  } else {
+    const Purchases = (await import('react-native-purchases')).default;
+    customerInfo = (await Purchases.purchaseStoreProduct(product as never)).customerInfo;
   }
-  const Purchases = (await import('react-native-purchases')).default;
-  const { customerInfo } = await Purchases.purchaseStoreProduct(product as never);
+  emitEntitlementChanged(customerInfo);
   return customerInfo;
 }
 
@@ -280,13 +297,16 @@ export async function purchasePackage(pkg: unknown): Promise<unknown> {
   if (!isRevenueCatConfigured()) {
     throw new Error('課金は準備中です');
   }
+  let customerInfo: unknown;
   if (isWeb) {
     const purchases = await getWebPurchases();
     const result = await purchases.purchase({ rcPackage: unwrapWebPackage(pkg) as never });
-    return result.customerInfo;
+    customerInfo = result.customerInfo;
+  } else {
+    const Purchases = (await import('react-native-purchases')).default;
+    customerInfo = (await Purchases.purchasePackage(pkg as never)).customerInfo;
   }
-  const Purchases = (await import('react-native-purchases')).default;
-  const { customerInfo } = await Purchases.purchasePackage(pkg as never);
+  emitEntitlementChanged(customerInfo);
   return customerInfo;
 }
 
@@ -294,11 +314,15 @@ export async function restorePurchases(): Promise<unknown> {
   if (!isRevenueCatConfigured()) {
     throw new Error('課金は準備中です');
   }
+  let customerInfo: unknown;
   if (isWeb) {
     // Web版は購入時のブラウザに紐づく匿名IDで管理されるため、最新の顧客情報を再取得する
     const purchases = await getWebPurchases();
-    return purchases.getCustomerInfo();
+    customerInfo = await purchases.getCustomerInfo();
+  } else {
+    const Purchases = (await import('react-native-purchases')).default;
+    customerInfo = await Purchases.restorePurchases();
   }
-  const Purchases = (await import('react-native-purchases')).default;
-  return Purchases.restorePurchases();
+  emitEntitlementChanged(customerInfo);
+  return customerInfo;
 }

@@ -17,6 +17,7 @@
 const { onCall, HttpsError } = require("firebase-functions/v2/https");
 const { getFirestore, FieldValue } = require("firebase-admin/firestore");
 const { defineSecret } = require("firebase-functions/params");
+const { REVENUECAT_SECRET_KEY, fetchTierFromRevenueCat } = require("./revenuecat");
 
 const db = getFirestore();
 const OPENAI_API_KEY = defineSecret("OPENAI_API_KEY");
@@ -56,10 +57,19 @@ async function checkAndIncrementLimit(uid) {
 }
 
 exports.speakText = onCall(
-  { region: "asia-northeast1", secrets: [OPENAI_API_KEY] },
+  { region: "asia-northeast1", secrets: [OPENAI_API_KEY, REVENUECAT_SECRET_KEY] },
   async (req) => {
     const uid = req.auth?.uid;
     if (!uid) throw new HttpsError("unauthenticated", "ログインが必要です");
+
+    // 課金判定はRevenueCatを正とする（英単語Pro・Maxプラン限定機能）
+    const tier = await fetchTierFromRevenueCat(uid);
+    if (tier !== "max" && tier !== "vocab") {
+      throw new HttpsError(
+        "permission-denied",
+        "ネイティブ発音の聞き流しは英単語Pro・Maxプラン限定の機能です。"
+      );
+    }
 
     const { text } = req.data || {};
     if (!text || typeof text !== "string" || text.trim().length === 0) {

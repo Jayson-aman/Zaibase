@@ -3,6 +3,7 @@ import { Platform } from 'react-native';
 import {
   getCustomerInfo,
   tierFromCustomerInfo,
+  onEntitlementChanged,
   SubscriptionTier,
 } from '../services/subscription';
 
@@ -43,9 +44,15 @@ export function useSubscription(): SubscriptionState {
       })();
     }
 
+    // 購入・復元の直後にも即座に反映する（Web版にはネイティブの更新リスナーが無いため）
+    const unsubscribe = onEntitlementChanged((info) => {
+      if (mounted.current) setTier(tierFromCustomerInfo(info));
+    });
+
     return () => {
       mounted.current = false;
       cleanup?.();
+      unsubscribe();
     };
   }, []);
 

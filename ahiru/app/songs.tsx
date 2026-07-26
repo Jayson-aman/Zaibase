@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   View,
   Text,
@@ -15,6 +15,21 @@ import { songs, type Song, type SongCategory } from '../data/songs';
 import { ERAS, type Era } from '../data/timeline';
 import { melodyAudio } from '../data/melodyAudio';
 import { speakJapanese, stopSpeaking } from '../services/tts';
+
+// このスクリーン内で同時に1つの音（メロディ or 読み上げ）だけを再生する。
+// 新しい再生を始める前に、直前に鳴らしていたものを止める。
+let stopCurrentPlayback: (() => void) | null = null;
+function takeOverPlayback(stop: () => void) {
+  try {
+    stopCurrentPlayback?.();
+  } catch {
+    // 直前の再生インスタンスが既に破棄されていても無視する
+  }
+  stopCurrentPlayback = stop;
+}
+function releasePlayback(stop: () => void) {
+  if (stopCurrentPlayback === stop) stopCurrentPlayback = null;
+}
 
 const CATEGORIES: { key: SongCategory; emoji: string; color: string }[] = [
   { key: '地理', emoji: '🗾', color: '#F59E0B' },
@@ -120,26 +135,47 @@ function SongCard({ song: s, catColor }: { song: Song; catColor: string }) {
   const player = useAudioPlayer(melodySource);
   const status = useAudioPlayerStatus(player);
   const [speaking, setSpeaking] = useState(false);
+  const speakingRef = useRef(false);
+
+  // 画面遷移・カード破棄・別カードの再生開始時に、鳴らしっぱなしにしない
+  useEffect(() => {
+    return () => {
+      player.pause();
+      if (speakingRef.current) stopSpeaking();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const toggleMelody = () => {
     if (!melodySource) return;
     if (status.playing) {
       player.pause();
-    } else {
-      player.seekTo(0);
-      player.play();
+      return;
     }
+    // 曲が最後まで再生し終わっている場合だけ頭出しし、一時停止からの再開は途中位置から続ける
+    const finished = status.duration > 0 && status.currentTime >= status.duration - 0.05;
+    if (finished) player.seekTo(0);
+    takeOverPlayback(() => player.pause());
+    player.play();
   };
 
   const toggleLyrics = async () => {
     if (speaking) {
       await stopSpeaking();
       setSpeaking(false);
+      speakingRef.current = false;
       return;
     }
+    takeOverPlayback(() => {
+      stopSpeaking();
+      setSpeaking(false);
+      speakingRef.current = false;
+    });
     setSpeaking(true);
+    speakingRef.current = true;
     await speakJapanese(s.lyrics);
     setSpeaking(false);
+    speakingRef.current = false;
   };
 
   return (

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Platform } from 'react-native';
-import { getCustomerInfo, hasVocabEntitlement } from '../services/subscription';
+import { getCustomerInfo, hasVocabEntitlement, onEntitlementChanged } from '../services/subscription';
 
 export interface VocabSubscriptionState {
   hasVocab: boolean;
@@ -37,9 +37,15 @@ export function useVocabSubscription(): VocabSubscriptionState {
       })();
     }
 
+    // 購入・復元の直後にも即座に反映する（Web版にはネイティブの更新リスナーが無いため）
+    const unsubscribe = onEntitlementChanged((info) => {
+      if (mounted.current) setHasVocab(hasVocabEntitlement(info));
+    });
+
     return () => {
       mounted.current = false;
       cleanup?.();
+      unsubscribe();
     };
   }, []);
 
