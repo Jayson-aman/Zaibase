@@ -273,6 +273,21 @@ export default function HomeScreen() {
           </TouchableOpacity>
         )}
 
+        {!listenPickerActive && (
+          <TouchableOpacity
+            style={styles.yojiEntryCard}
+            activeOpacity={0.85}
+            onPress={() => router.push('/yojijukugo')}
+          >
+            <View style={styles.vocabEntryTextWrap}>
+              <Text style={styles.yojiEntryBadge}>国語・漢字の学習コンテンツ</Text>
+              <Text style={styles.vocabEntryTitle}>📚 四字熟語</Text>
+              <Text style={styles.vocabEntrySub}>小学生レベル100・中学生レベル100を読み方・意味・例文つきで</Text>
+            </View>
+            <Text style={styles.yojiEntryArrow}>›</Text>
+          </TouchableOpacity>
+        )}
+
         {/* Exam type toggle */}
         {!listenPickerActive && (
           <Text style={styles.stepLabel}>① 受験の種類を選ぶ</Text>
@@ -736,6 +751,30 @@ const styles = StyleSheet.create({
   vocabEntryArrow: {
     fontSize: 28,
     color: '#A064DC',
+    fontWeight: '300',
+    marginLeft: 8,
+  },
+  yojiEntryCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: 'rgba(217,119,6,0.10)',
+    borderWidth: 1,
+    borderColor: 'rgba(217,119,6,0.35)',
+    borderRadius: 16,
+    paddingVertical: 14,
+    paddingHorizontal: 16,
+    marginBottom: 18,
+  },
+  yojiEntryBadge: {
+    fontSize: 10,
+    fontWeight: '700',
+    color: '#B45309',
+    letterSpacing: 0.5,
+    marginBottom: 4,
+  },
+  yojiEntryArrow: {
+    fontSize: 28,
+    color: '#B45309',
     fontWeight: '300',
     marginLeft: 8,
   },
