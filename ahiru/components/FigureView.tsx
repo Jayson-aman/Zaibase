@@ -30,8 +30,10 @@ import type {
   CircuitComponent,
   NetFigure,
   StratumFigure,
+  JapanMapFigure,
   Pt,
 } from '../data/figures';
+import { prefectureShapes, JP_MAP_VIEWBOX } from '../data/japanPrefectures';
 
 // 内部描画座標系（viewBox）。Svgの実サイズは画面幅に合わせて拡大縮小する。
 const VBW = 320;
@@ -818,6 +820,35 @@ function NetFig({ fig }: { fig: NetFigure }) {
   return els;
 }
 
+// ---------- 日本地図 ----------
+
+function JapanMapFig({ fig }: { fig: JapanMapFigure }) {
+  const scale = Math.min(VBW / JP_MAP_VIEWBOX.w, VBH / JP_MAP_VIEWBOX.h);
+  const ox = (VBW - JP_MAP_VIEWBOX.w * scale) / 2;
+  const oy = (VBH - JP_MAP_VIEWBOX.h * scale) / 2;
+  const tx = (x: number) => ox + x * scale;
+  const ty = (y: number) => oy + y * scale;
+  const els: React.ReactNode[] = [];
+  els.push(
+    <G key="prefs" transform={`translate(${ox},${oy}) scale(${scale})`}>
+      {prefectureShapes.map((p) => (
+        <Path key={`pf${p.id}`} d={p.path} fill="rgba(34,197,94,0.28)" stroke={ACCENT} strokeWidth={1 / scale} />
+      ))}
+    </G>,
+  );
+  fig.markers?.forEach((m, i) => {
+    const x = tx(m.x);
+    const y = ty(m.y);
+    els.push(<SvgCircle key={`mk${i}`} cx={x} cy={y} r={3.5} fill="#E11D48" stroke="#FFFFFF" strokeWidth={1} />);
+    els.push(
+      <SvgText key={`mkl${i}`} x={x} y={y - 7} fontSize={10} fill={INK} textAnchor="middle" fontWeight="bold">
+        {m.label}
+      </SvgText>,
+    );
+  });
+  return els;
+}
+
 // ---------- 地層・柱状図 ----------
 
 const STRATUM_FILL: Record<string, string> = {
@@ -863,6 +894,7 @@ function buildParts(figure: Figure, uid: string): React.ReactNode[] {
     case 'circuit': return CircuitFig({ fig: figure });
     case 'net': return NetFig({ fig: figure });
     case 'stratum': return StratumFig({ fig: figure });
+    case 'japanMap': return JapanMapFig({ fig: figure });
     default: return [];
   }
 }

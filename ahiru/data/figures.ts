@@ -157,6 +157,16 @@ export type NetFigure = {
   caption?: string;
 };
 
+// 日本地図（都道府県の実形状＋任意のマーカー）。
+// 座標は data/japanPrefectures.ts と同じ viewBox 0 0 300 420。
+// 遠方の島（南鳥島・沖ノ鳥島など）は実際の距離では収まらないため、
+// 方角が合う位置に寄せて配置してよい（キャプションで実際の遠さを補足する）。
+export type JapanMapFigure = {
+  kind: 'japanMap';
+  markers?: { x: number; y: number; label: string }[];
+  caption?: string;
+};
+
 // 地層・柱状図（複数地点の対比）
 export type StratumFigure = {
   kind: 'stratum';
@@ -186,7 +196,8 @@ export type Figure =
   | PieChartFigure
   | CircuitFigure
   | NetFigure
-  | StratumFigure;
+  | StratumFigure
+  | JapanMapFigure;
 
 // 問題ID → 図形。各バッチファイルから登録をマージする。
 import { figuresSample } from './figures-sample';

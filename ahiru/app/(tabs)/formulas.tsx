@@ -67,7 +67,14 @@ export default function FormulasScreen() {
                   <Text style={styles.explanation}>{item.explanation}</Text>
                 )}
 
-                {formulaImages[item.label] && (
+                {item.figure && (
+                  <View style={styles.figureBox}>
+                    <Text style={styles.figureLabel}>図解</Text>
+                    <FigureView figure={item.figure} />
+                  </View>
+                )}
+
+                {!item.figure && formulaImages[item.label] && (
                   <View style={styles.figureBox}>
                     <Text style={styles.figureLabel}>図解</Text>
                     <Image
@@ -78,14 +85,7 @@ export default function FormulasScreen() {
                   </View>
                 )}
 
-                {!formulaImages[item.label] && item.figure && (
-                  <View style={styles.figureBox}>
-                    <Text style={styles.figureLabel}>図解</Text>
-                    <FigureView figure={item.figure} />
-                  </View>
-                )}
-
-                {!formulaImages[item.label] && !item.figure && item.steps && item.steps.length > 0 && (
+                {!item.figure && !formulaImages[item.label] && item.steps && item.steps.length > 0 && (
                   <View style={styles.stepsBox}>
                     <Text style={styles.figureLabel}>とき方の流れ</Text>
                     {item.steps.map((st, si) => (
@@ -94,7 +94,7 @@ export default function FormulasScreen() {
                   </View>
                 )}
 
-                {!formulaImages[item.label] && !item.figure && !item.steps && item.asciiFigure && (
+                {!item.figure && !formulaImages[item.label] && !item.steps && item.asciiFigure && (
                   <View style={styles.figureBox}>
                     <Text style={styles.figureLabel}>図解</Text>
                     <ScrollView horizontal showsHorizontalScrollIndicator={false}>
