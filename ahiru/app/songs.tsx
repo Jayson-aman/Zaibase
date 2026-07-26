@@ -7,6 +7,7 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { songs, type SongCategory } from '../data/songs';
 import { ERAS, type Era } from '../data/timeline';
@@ -61,32 +62,41 @@ export default function SongsScreen() {
       </View>
 
       {cat === '歴史' && (
-        <ScrollView
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          style={styles.eraRow}
-          contentContainerStyle={styles.eraRowContent}
-        >
-          <TouchableOpacity
-            style={[styles.eraChip, eraFilter == null && styles.eraChipActive]}
-            onPress={() => setEraFilter(null)}
-            activeOpacity={0.85}
+        <View style={styles.eraRowWrap}>
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            style={styles.eraRow}
+            contentContainerStyle={styles.eraRowContent}
           >
-            <Text style={[styles.eraChipText, eraFilter == null && styles.eraChipTextActive]}>すべて</Text>
-          </TouchableOpacity>
-          {ERAS.map((e) => (
             <TouchableOpacity
-              key={e.key}
-              style={[styles.eraChip, eraFilter === e.key && { backgroundColor: e.color, borderColor: e.color }]}
-              onPress={() => setEraFilter(e.key)}
+              style={[styles.eraChip, eraFilter == null && styles.eraChipActive]}
+              onPress={() => setEraFilter(null)}
               activeOpacity={0.85}
             >
-              <Text style={[styles.eraChipText, eraFilter === e.key && styles.eraChipTextActive]} numberOfLines={1}>
-                {e.emoji} {e.key}
-              </Text>
+              <Text style={[styles.eraChipText, eraFilter == null && styles.eraChipTextActive]}>すべて</Text>
             </TouchableOpacity>
-          ))}
-        </ScrollView>
+            {ERAS.map((e) => (
+              <TouchableOpacity
+                key={e.key}
+                style={[styles.eraChip, eraFilter === e.key && { backgroundColor: e.color, borderColor: e.color }]}
+                onPress={() => setEraFilter(e.key)}
+                activeOpacity={0.85}
+              >
+                <Text style={[styles.eraChipText, eraFilter === e.key && styles.eraChipTextActive]} numberOfLines={1}>
+                  {e.emoji} {e.key}
+                </Text>
+              </TouchableOpacity>
+            ))}
+          </ScrollView>
+          <LinearGradient
+            colors={['rgba(255,251,235,0)', '#FFFBEB']}
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 0 }}
+            style={styles.eraRowFade}
+            pointerEvents="none"
+          />
+        </View>
       )}
 
       <ScrollView contentContainerStyle={styles.scroll}>
@@ -137,8 +147,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   tabText: { fontSize: 15, fontWeight: '700', color: '#92400E' },
-  eraRow: { flexGrow: 0, marginBottom: 8 },
-  eraRowContent: { paddingHorizontal: 16, gap: 8 },
+  eraRowWrap: { marginBottom: 8 },
+  eraRow: { flexGrow: 0 },
+  eraRowContent: { paddingHorizontal: 16, paddingRight: 32, gap: 8 },
+  eraRowFade: {
+    position: 'absolute',
+    right: 0,
+    top: 0,
+    bottom: 0,
+    width: 28,
+  },
   eraChip: {
     paddingHorizontal: 12,
     paddingVertical: 7,

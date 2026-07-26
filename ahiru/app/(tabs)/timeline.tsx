@@ -8,6 +8,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
 } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import { ERAS, EVENTS, type Era } from '../../data/timeline';
 import { getPortraitsForPerson, getEventImages } from '../../data/history-portraits';
@@ -37,24 +38,33 @@ export default function TimelineScreen() {
         </TouchableOpacity>
       </View>
 
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.eraScroll} contentContainerStyle={styles.eraScrollContent}>
-        {ERAS.map((era) => (
-          <TouchableOpacity
-            key={era.key}
-            style={[styles.eraChip, selectedEra === era.key && { backgroundColor: era.color }]}
-            onPress={() => setSelectedEra(era.key)}
-            activeOpacity={0.8}
-          >
-            <Text style={styles.eraChipEmoji}>{era.emoji}</Text>
-            <Text style={[styles.eraChipText, selectedEra === era.key && styles.eraChipTextActive]} numberOfLines={1}>
-              {era.key}
-            </Text>
-            <Text style={[styles.eraChipPeriod, selectedEra === era.key && { color: 'rgba(255,255,255,0.8)' }]}>
-              {era.period}
-            </Text>
-          </TouchableOpacity>
-        ))}
-      </ScrollView>
+      <View style={styles.eraScrollWrap}>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.eraScroll} contentContainerStyle={styles.eraScrollContent}>
+          {ERAS.map((era) => (
+            <TouchableOpacity
+              key={era.key}
+              style={[styles.eraChip, selectedEra === era.key && { backgroundColor: era.color }]}
+              onPress={() => setSelectedEra(era.key)}
+              activeOpacity={0.8}
+            >
+              <Text style={styles.eraChipEmoji}>{era.emoji}</Text>
+              <Text style={[styles.eraChipText, selectedEra === era.key && styles.eraChipTextActive]} numberOfLines={1}>
+                {era.key}
+              </Text>
+              <Text style={[styles.eraChipPeriod, selectedEra === era.key && { color: 'rgba(255,255,255,0.8)' }]}>
+                {era.period}
+              </Text>
+            </TouchableOpacity>
+          ))}
+        </ScrollView>
+        <LinearGradient
+          colors={['rgba(255,255,255,0)', '#FFFFFF']}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 0 }}
+          style={styles.eraScrollFade}
+          pointerEvents="none"
+        />
+      </View>
 
       <ScrollView style={styles.scroll} contentContainerStyle={styles.content}>
         <View style={[styles.eraHeader, { backgroundColor: eraInfo.color + '22', borderColor: eraInfo.color }]}>
@@ -134,8 +144,16 @@ const styles = StyleSheet.create({
   songBtn: { backgroundColor: 'rgba(255,255,255,0.25)', borderRadius: 999, paddingHorizontal: 12, paddingVertical: 8, maxWidth: 120 },
   songBtnText: { color: '#FFFFFF', fontWeight: '800', fontSize: 12, textAlign: 'center' },
   headerSub: { fontSize: 13, color: 'rgba(255,255,255,0.85)', fontWeight: '500', marginTop: 2 },
-  eraScroll: { flexGrow: 0, backgroundColor: '#FFFFFF', borderBottomWidth: 1, borderBottomColor: '#E5EAF0' },
-  eraScrollContent: { padding: 10, gap: 8, flexDirection: 'row' },
+  eraScrollWrap: { backgroundColor: '#FFFFFF', borderBottomWidth: 1, borderBottomColor: '#E5EAF0' },
+  eraScroll: { flexGrow: 0 },
+  eraScrollContent: { padding: 10, paddingRight: 30, gap: 8, flexDirection: 'row' },
+  eraScrollFade: {
+    position: 'absolute',
+    right: 0,
+    top: 0,
+    bottom: 0,
+    width: 28,
+  },
   eraChip: {
     alignItems: 'center',
     paddingHorizontal: 12,
