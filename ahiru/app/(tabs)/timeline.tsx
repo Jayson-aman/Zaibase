@@ -101,6 +101,11 @@ export default function TimelineScreen() {
                     )}
                     <Text style={styles.eventTitle}>{ev.event}</Text>
                     <Text style={styles.eventNote}>{ev.note}</Text>
+                    {ev.goroawase != null && (
+                      <View style={styles.goroawaseBox}>
+                        <Text style={styles.goroawaseText}>🎵 {ev.goroawase}</Text>
+                      </View>
+                    )}
                   </View>
                   {images.length > 0 && (
                     <View style={styles.portraitStack}>
@@ -237,4 +242,15 @@ const styles = StyleSheet.create({
   personChipText: { fontSize: 12, fontWeight: '800' },
   eventTitle: { fontSize: 16, fontWeight: '800', color: '#1A1A2E', marginBottom: 6 },
   eventNote: { fontSize: 13, color: '#555', lineHeight: 20, fontWeight: '400' },
+  goroawaseBox: {
+    backgroundColor: '#FFFBEB',
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#FDE68A',
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    marginTop: 8,
+    alignSelf: 'flex-start',
+  },
+  goroawaseText: { fontSize: 12.5, color: '#92400E', fontWeight: '700' },
 });
