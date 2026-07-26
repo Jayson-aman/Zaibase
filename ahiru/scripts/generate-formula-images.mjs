@@ -131,6 +131,7 @@ const PRODUCTS = [
 
   // ───────── 理科：てこ・滑車・輪軸・ばね ─────────
   { key: 'rika-lever-balance', label: 'てこのつり合い（モーメント）', prompt: `A simple wooden seesaw balancing two different-sized weights, one on each side, resting on a central pivot. ${RIKA_STYLE}` },
+  { key: 'rika-lever-rod-weight', label: '棒の重さがあるてこ', prompt: `A single uniform wooden rod balanced horizontally on a small triangular pivot stand, level and steady. ${RIKA_STYLE}` },
   { key: 'rika-fixed-pulley', label: '定滑車', prompt: `A single pulley wheel fixed to a ceiling beam, with a rope over it holding a weight on one end. ${RIKA_STYLE}` },
   { key: 'rika-movable-pulley', label: '動滑車', prompt: `A pulley system where the pulley wheel itself moves, lifted by two strands of rope holding a weight below it. ${RIKA_STYLE}` },
   { key: 'rika-wheel-axle', label: '輪軸（りんじく）', prompt: `A wheel-and-axle mechanism, a large wheel attached to a smaller central hub, like a ship's steering wheel. ${RIKA_STYLE}` },
@@ -142,34 +143,53 @@ const PRODUCTS = [
   { key: 'rika-battery-series', label: '電池の直列つなぎ', prompt: `A simple illustrated electric circuit with two batteries connected end to end powering one brightly glowing light bulb. ${RIKA_STYLE}` },
   { key: 'rika-ohms-law', label: 'オームの法則（中学）', prompt: `A simple illustrated electric circuit with a battery, a coiled resistor, and a round gauge meter. ${RIKA_STYLE}` },
   { key: 'rika-electromagnet', label: '電磁石の強さ', prompt: `A coil of copper wire wrapped around an iron nail, with small metal paperclips sticking to one end. ${RIKA_STYLE}` },
+  { key: 'rika-compass-current', label: '電流の向きとN極（右手・方位磁針）', prompt: `A small compass with its needle deflected, placed near a straight wire coil carrying current. ${RIKA_STYLE}` },
 
   // ───────── 理科：光と音 ─────────
   { key: 'rika-light-reflection', label: '光の反射の法則', prompt: `A beam of light hitting a flat mirror at an angle and bouncing off at a matching angle, shown as two clean light rays. ${RIKA_STYLE}` },
   { key: 'rika-light-refraction', label: '光の屈折', prompt: `A drinking straw standing in a clear glass of water, appearing bent at the water surface. ${RIKA_STYLE}` },
   { key: 'rika-convex-lens-focus', label: '凸レンズと焦点', prompt: `A round magnifying glass lens focusing parallel rays of sunlight into a single small bright point. ${RIKA_STYLE}` },
   { key: 'rika-convex-lens-image', label: '凸レンズの像（実像）', prompt: `A round convex lens on a stand projecting an upside-down image of a small object onto a screen behind it. ${RIKA_STYLE}` },
+  { key: 'rika-sound-speed', label: '音の速さ', prompt: `A dramatic lightning bolt striking in the distance over a landscape, with visible sound wave ripples spreading outward. ${RIKA_STYLE}` },
+  { key: 'rika-pitch-loudness', label: '音の高さ・大きさ', prompt: `A close-up of a vibrating guitar string, motion blur showing the vibration, warm stage lighting. ${RIKA_STYLE}` },
+
+  // ───────── 理科：力と運動（浮力・密度・圧力・振り子）追加分 ─────────
+  { key: 'rika-density', label: '密度', prompt: `A wooden block floating on water next to a metal ball sinking to the bottom of a clear glass tank. ${RIKA_STYLE}` },
+  { key: 'rika-buoyancy', label: '浮力（アルキメデスの原理）', prompt: `A ball fully submerged in a clear glass tank of water, with visible ripples and displaced water at the surface. ${RIKA_STYLE}` },
+  { key: 'rika-floating-object', label: '水にうく物の浮力', prompt: `A wooden log floating calmly on a lake, most of it above the waterline, gentle ripples around it. ${RIKA_STYLE}` },
+  { key: 'rika-pressure', label: '圧力', prompt: `A sharp thumbtack pressing into a soft cushioned surface, close-up comparison view. ${RIKA_STYLE}` },
+  { key: 'rika-pendulum', label: '振り子の周期', prompt: `A simple pendulum, a round weight hanging from a string, swinging in an arc from a fixed stand. ${RIKA_STYLE}` },
 
   // ───────── 理科：水溶液・溶解度・濃度 ─────────
+  { key: 'rika-dissolve-weight', label: '水溶液のとける量と重さ', prompt: `A clear glass beaker with sugar cubes dissolving into water, gentle swirling visible. ${RIKA_STYLE}` },
   { key: 'rika-concentration', label: '濃度（質量パーセント濃度）', prompt: `A clear glass beaker of water with white salt crystals dissolving at the bottom, small sparkles in the liquid. ${RIKA_STYLE}` },
   { key: 'rika-solubility', label: '溶解度', prompt: `A glass beaker of warm water with crystals dissolving and gentle steam rising from the surface. ${RIKA_STYLE}` },
+  { key: 'rika-saturated-solution', label: '飽和水溶液', prompt: `A glass beaker with clearly visible crystal clusters settled at the bottom of a clear liquid, cooling. ${RIKA_STYLE}` },
   { key: 'rika-filtration', label: 'ろ過のしかた', prompt: `A glass funnel lined with filter paper set into a beaker, cloudy liquid being poured through with a glass stirring rod. ${RIKA_STYLE}` },
 
   // ───────── 理科：気体・燃焼・中和 ─────────
+  { key: 'rika-oxygen', label: '酸素の性質と集め方', prompt: `A glowing wooden splint reigniting with a small flame inside a test tube of gas, bright spark. ${RIKA_STYLE}` },
   { key: 'rika-carbon-dioxide', label: '二酸化炭素の性質と集め方', prompt: `A flask with bubbling reaction connected by a tube to a test tube of clear limewater that is turning cloudy white. ${RIKA_STYLE}` },
+  { key: 'rika-hydrogen', label: '水素の性質', prompt: `A test tube collecting gas bubbles over water in a basin, connected to a small reaction flask, light and airy. ${RIKA_STYLE}` },
+  { key: 'rika-ammonia', label: 'アンモニアの性質と集め方', prompt: `An inverted test tube collecting rising gas above a small heated flask, wisps suggesting a pungent gas. ${RIKA_STYLE}` },
   { key: 'rika-combustion', label: 'ものが燃える3条件', prompt: `A single lit candle with a warm glowing flame on a small table, close-up view. ${RIKA_STYLE}` },
   { key: 'rika-litmus', label: '酸性・中性・アルカリ性（リトマス紙）', prompt: `Strips of litmus paper dipped in small dishes of liquid, one strip turning red and another turning blue. ${RIKA_STYLE}` },
+  { key: 'rika-neutralization', label: '中和', prompt: `Two beakers of colored liquid, one pink and one clear, being poured together into a third beaker turning a neutral pale green. ${RIKA_STYLE}` },
 
   // ───────── 理科：天体 ─────────
   { key: 'rika-sun-daily-path', label: '太陽の1日の動き（日周運動）', prompt: `A wide sky showing the arc of the sun's path from sunrise to sunset over a calm landscape horizon. ${RIKA_STYLE}` },
   { key: 'rika-solar-altitude', label: '南中高度と季節', prompt: `A split scene comparing a high summer sun and a low winter sun above the same landscape, warm and cool tones. ${RIKA_STYLE}` },
   { key: 'rika-moon-phases', label: '月の満ち欠け', prompt: `A dark night sky showing a sequence of the moon in several different phases from new moon to full moon. ${RIKA_STYLE}` },
   { key: 'rika-star-trails', label: '星の1日の動き', prompt: `A deep night sky showing circular star trail streaks rotating around one bright fixed star. ${RIKA_STYLE}` },
+  { key: 'rika-star-yearly-shift', label: '星の1年の動き（年周運動）', prompt: `Four small night-sky scenes side by side representing spring, summer, autumn, and winter, each with a slightly different starry constellation view. ${RIKA_STYLE}` },
 
   // ───────── 理科：気象 ─────────
+  { key: 'rika-humidity', label: '湿度', prompt: `A foggy, steamy windowpane with condensation, cozy warm room visible faintly behind it. ${RIKA_STYLE}` },
   { key: 'rika-dew-point', label: '露点（ろてん）', prompt: `Small water droplets condensing on the outside surface of a cold glass of water. ${RIKA_STYLE}` },
   { key: 'rika-cloud-rain', label: '雲・雨のでき方', prompt: `Fluffy white and grey clouds forming above a green landscape, with gentle rain falling below. ${RIKA_STYLE}` },
   { key: 'rika-cold-front', label: '寒冷前線', prompt: `Dark dramatic storm clouds with heavy rain falling over a landscape, strong contrast. ${RIKA_STYLE}` },
   { key: 'rika-warm-front', label: '温暖前線', prompt: `A soft overcast grey sky with a gentle light drizzle over a wide calm landscape. ${RIKA_STYLE}` },
+  { key: 'rika-japan-seasons', label: '日本の四季と気団', prompt: `A simple stylized landscape showing snowy mountains on one side and a warm humid coastline on the other, representing contrasting seasonal air. ${RIKA_STYLE}` },
 
   // ───────── 理科：植物 ─────────
   { key: 'rika-photosynthesis', label: '光合成', prompt: `A vivid green leaf in bright sunlight with tiny sparkling oxygen bubbles and visible leaf veins, close-up. ${RIKA_STYLE}` },
@@ -181,8 +201,10 @@ const PRODUCTS = [
 
   // ───────── 理科：動物・人体 ─────────
   { key: 'rika-digestive-tract', label: '消化管の順路', prompt: `A simple human body silhouette with the digestive tract illustrated inside, from mouth through stomach to intestines, textbook diagram style. ${RIKA_STYLE}` },
+  { key: 'rika-digestive-enzyme', label: '消化酵素（消化液）', prompt: `A bowl of steaming rice with a gentle glowing highlight suggesting starch breaking down, warm and appetizing. ${RIKA_STYLE}` },
   { key: 'rika-small-intestine-villi', label: '小腸のつくり（柔毛）', prompt: `A close-up cross-section illustration of the small intestine's inner wall, covered in tiny finger-like folds (villi). ${RIKA_STYLE}` },
   { key: 'rika-blood-circulation', label: '血液の循環', prompt: `A simple human body silhouette showing the heart and blood vessels circulating between the heart, lungs, and body, textbook diagram style. ${RIKA_STYLE}` },
+  { key: 'rika-arterial-venous-blood', label: '動脈血と静脈血', prompt: `A close-up split comparison of bright vivid red blood on one side and darker deep red blood on the other, inside simple vessel shapes. ${RIKA_STYLE}` },
   { key: 'rika-lungs', label: '肺のつくりと呼吸', prompt: `A cross-section illustration of human lungs showing branching airways ending in clusters of small air sacs. ${RIKA_STYLE}` },
   { key: 'rika-vertebrate-classification', label: 'セキツイ動物の分類', prompt: `Five friendly animals standing together representing each vertebrate group: a fish, a frog, a lizard, a bird, and a small mammal. ${RIKA_STYLE}` },
 ];
