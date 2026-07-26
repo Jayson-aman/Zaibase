@@ -41,6 +41,13 @@ const RIKA_STYLE =
   'like a premium picture-book diagram. Soft shading, clear and simple. Square composition. ' +
   'ABSOLUTELY NO text, NO numbers, NO labels, NO watermark, NO real brand logos, NO real people.';
 
+const SHAKAI_STYLE =
+  'Bright, engaging, original illustration for a Japanese elementary/middle-school social studies textbook ' +
+  '(geography, history, or civics), like a premium infographic panel. Clean, simple, warm colors. Square composition. ' +
+  'ABSOLUTELY NO text, NO numbers, NO letters, NO real national flags, NO real emblems or logos, NO watermark. ' +
+  'For historical scenes: depict generic period-costumed figures or buildings/landscapes only — ' +
+  'NO recognizable face or portrait of any specific real named historical figure, silhouette or distant/back view only.';
+
 /**
  * key   : 画像ファイル名（拡張子なし）＝assets/formulas/{key}.png
  * label : data/formulas-*.ts の item.label と完全一致させる（UI照合キー）
@@ -207,6 +214,106 @@ const PRODUCTS = [
   { key: 'rika-arterial-venous-blood', label: '動脈血と静脈血', prompt: `A close-up split comparison of bright vivid red blood on one side and darker deep red blood on the other, inside simple vessel shapes. ${RIKA_STYLE}` },
   { key: 'rika-lungs', label: '肺のつくりと呼吸', prompt: `A cross-section illustration of human lungs showing branching airways ending in clusters of small air sacs. ${RIKA_STYLE}` },
   { key: 'rika-vertebrate-classification', label: 'セキツイ動物の分類', prompt: `Five friendly animals standing together representing each vertebrate group: a fish, a frog, a lizard, a bird, and a small mammal. ${RIKA_STYLE}` },
+
+  // ───────── 社会：日本の地形・気候 ─────────
+  { key: 'shakai-japan-territory', label: '日本の位置と国土', prompt: `A stylized aerial map illustration of the Japanese archipelago surrounded by blue ocean, island chain view. ${SHAKAI_STYLE}` },
+  { key: 'shakai-mountains', label: '日本の山地・山脈', prompt: `A dramatic range of tall Japanese mountains with steam rising from a hot spring in a valley below. ${SHAKAI_STYLE}` },
+  { key: 'shakai-rivers-plains', label: '川と平野・地形', prompt: `An aerial landscape view of a river flowing from steep mountains through a fan-shaped orchard valley down to a flat river-mouth delta by the sea. ${SHAKAI_STYLE}` },
+  { key: 'shakai-currents-coast', label: '海流と海岸', prompt: `Ocean waves where a warm current and a cool current visibly meet, small fishing boats nearby, dramatic sky. ${SHAKAI_STYLE}` },
+  { key: 'shakai-climate-zones', label: '日本の気候区分', prompt: `A single landscape split between a snowy mountain coastline on one side and a sunny mild coastline on the other, representing contrasting climates. ${SHAKAI_STYLE}` },
+  { key: 'shakai-monsoon-typhoon', label: '季節風（モンスーン）と梅雨・台風', prompt: `A dramatic swirling typhoon cloud system viewed from above over the ocean near a coastline. ${SHAKAI_STYLE}` },
+  { key: 'shakai-disaster-prevention', label: '自然災害と防災', prompt: `A calm hillside Japanese neighborhood with a clear elevated evacuation path and safety signage shapes (no text), reassuring tone. ${SHAKAI_STYLE}` },
+
+  // ───────── 社会：日本の農業・水産業 ─────────
+  { key: 'shakai-rice-farming', label: '稲作（米づくり）', prompt: `A golden rice paddy field ready for harvest with mountains in the background, autumn light. ${SHAKAI_STYLE}` },
+  { key: 'shakai-forcing-retarding', label: '促成栽培と抑制栽培', prompt: `A split scene: a warm greenhouse full of vegetables on one side, a cool misty highland vegetable field on the other. ${SHAKAI_STYLE}` },
+  { key: 'shakai-livestock-farming', label: '畑作・畜産の地域', prompt: `Wide green Hokkaido farmland with dairy cows grazing and a red barn in the distance. ${SHAKAI_STYLE}` },
+  { key: 'shakai-orchard-regions', label: '果樹栽培の産地', prompt: `A sunny orchard with rows of trees bearing ripe red apples. ${SHAKAI_STYLE}` },
+  { key: 'shakai-fisheries', label: '日本の水産業', prompt: `A calm fishing harbor at dawn with small boats and fishing nets. ${SHAKAI_STYLE}` },
+  { key: 'shakai-food-self-sufficiency', label: '食料自給率と輸入', prompt: `A wooden dinner table set with a mix of rice, bread, and vegetables, symbolizing food from many sources. ${SHAKAI_STYLE}` },
+
+  // ───────── 社会：日本の工業・貿易 ─────────
+  { key: 'shakai-pacific-belt', label: '太平洋ベルトと工業地帯', prompt: `A coastal industrial skyline with factories and cargo cranes along a bay at dusk. ${SHAKAI_STYLE}` },
+  { key: 'shakai-three-industrial-zones', label: '三大工業地帯', prompt: `An automobile factory assembly line with robotic arms building a car body. ${SHAKAI_STYLE}` },
+  { key: 'shakai-industry-types', label: '工業の種類（重化学・軽工業）', prompt: `A split scene comparing a traditional textile weaving mill and a modern machinery factory. ${SHAKAI_STYLE}` },
+  { key: 'shakai-trade-change', label: '日本の貿易の変化', prompt: `A large cargo ship stacked with colorful shipping containers at a busy port. ${SHAKAI_STYLE}` },
+  { key: 'shakai-trade-partners-ports', label: '主な貿易相手と貿易港', prompt: `A split scene of a cargo airplane at an airport and a container ship at a harbor, side by side. ${SHAKAI_STYLE}` },
+  { key: 'shakai-energy-power', label: 'エネルギーと発電', prompt: `Solar panels and wind turbines on a green hillside under a clear sky. ${SHAKAI_STYLE}` },
+
+  // ───────── 社会：世界の国々・時差 ─────────
+  { key: 'shakai-continents-oceans', label: '六大陸と三大洋', prompt: `A stylized globe floating in space showing simplified continents and blue oceans. ${SHAKAI_STYLE}` },
+  { key: 'shakai-latitude-longitude', label: '緯度と経度', prompt: `A globe with visible latitude and longitude grid lines wrapping around it. ${SHAKAI_STYLE}` },
+  { key: 'shakai-standard-time', label: '日本の標準時と時差の考え方', prompt: `A wall of several round clock faces each showing a slightly different time, world-clock style. ${SHAKAI_STYLE}` },
+  { key: 'shakai-timezone-same-side', label: '時差の計算（同じ側）', prompt: `A globe half-lit by sunlight with two small city marker pins connected by a curved line. ${SHAKAI_STYLE}` },
+  { key: 'shakai-timezone-cross-side', label: '時差の計算（東経と西経）', prompt: `A globe showing day on one side and night on the other, with a glowing dividing line. ${SHAKAI_STYLE}` },
+  { key: 'shakai-date-line', label: '日付変更線', prompt: `A globe centered on the Pacific Ocean with a glowing curved line running north-south across it. ${SHAKAI_STYLE}` },
+  { key: 'shakai-world-religions', label: '世界の宗教・文化', prompt: `A skyline silhouette showing a temple, a church, and a mosque standing together peacefully at sunset. ${SHAKAI_STYLE}` },
+
+  // ───────── 社会：古代〜中世 ─────────
+  { key: 'shakai-taika-reform', label: '聖徳太子と大化の改新', prompt: `An ancient Japanese Asuka-period wooden palace hall with a tiled roof, no people. ${SHAKAI_STYLE}` },
+  { key: 'shakai-nara-period', label: '奈良時代と律令国家', prompt: `A respectful distant view of a grand ancient wooden temple hall housing a huge seated bronze Buddha statue. ${SHAKAI_STYLE}` },
+  { key: 'shakai-heian-sekkan', label: '平安時代と摂関政治', prompt: `An elegant Heian-period aristocratic mansion with a garden pond, shinden-zukuri architecture style, no people. ${SHAKAI_STYLE}` },
+  { key: 'shakai-kokufu-culture', label: '国風文化', prompt: `A Heian-period noblewoman in flowing multi-layered kimono robes, seen from behind, writing with an ink brush by a garden window. ${SHAKAI_STYLE}` },
+  { key: 'shakai-kamakura-shogunate', label: '鎌倉幕府の成立', prompt: `A samurai warrior in traditional armor standing before a modest wooden hall, seen from a distance or side view. ${SHAKAI_STYLE}` },
+  { key: 'shakai-mongol-invasion', label: '元寇と鎌倉幕府の衰え', prompt: `Samurai figures on a stormy beach facing distant war ships on rough seas. ${SHAKAI_STYLE}` },
+  { key: 'shakai-muromachi-onin', label: '室町幕府と応仁の乱', prompt: `The golden pavilion of a Muromachi-period temple reflecting in a calm garden pond. ${SHAKAI_STYLE}` },
+
+  // ───────── 社会：近世 ─────────
+  { key: 'shakai-unification', label: '天下統一（信長・秀吉）', prompt: `A grand Japanese castle with tall stone walls on a hill under a dramatic sky, Momoyama-period style. ${SHAKAI_STYLE}` },
+  { key: 'shakai-edo-shogunate', label: '江戸幕府の成立', prompt: `An Edo-period castle town with a stone bridge crossing a moat toward castle walls. ${SHAKAI_STYLE}` },
+  { key: 'shakai-daimyo-control', label: '大名の統制（武家諸法度・参勤交代）', prompt: `A long procession of samurai retainers walking along a historic highway between pine trees, distant view. ${SHAKAI_STYLE}` },
+  { key: 'shakai-status-farmers', label: '身分制度と農民', prompt: `A peaceful Edo-period farming village with terraced rice fields and thatched-roof houses. ${SHAKAI_STYLE}` },
+  { key: 'shakai-sakoku', label: '鎖国', prompt: `A small fan-shaped artificial island in a harbor with old sailing ships anchored nearby, Nagasaki Dejima style. ${SHAKAI_STYLE}` },
+  { key: 'shakai-three-reforms-edo', label: '江戸の三大改革', prompt: `An Edo-period town street lined with wooden merchant shops and hanging paper lanterns at dusk. ${SHAKAI_STYLE}` },
+  { key: 'shakai-edo-culture', label: '江戸時代の文化', prompt: `An original woodblock-print-style illustration of a great ocean wave curling over a distant mountain, ukiyo-e inspired. ${SHAKAI_STYLE}` },
+
+  // ───────── 社会：近代 ─────────
+  { key: 'shakai-opening-meiji', label: '開国と明治維新', prompt: `A large black steam warship approaching a traditional Japanese coastal fishing town, viewed from the shore. ${SHAKAI_STYLE}` },
+  { key: 'shakai-meiji-reforms', label: '明治の三大改革（学制・徴兵令・地租改正）', prompt: `A Meiji-era Western-style brick schoolhouse building with children walking toward it, distant view. ${SHAKAI_STYLE}` },
+  { key: 'shakai-constitution-meiji', label: '自由民権運動と大日本帝国憲法', prompt: `A grand Meiji-era Western-style government building with columns, under a clear sky. ${SHAKAI_STYLE}` },
+  { key: 'shakai-sino-russo-wars', label: '日清戦争と日露戦争', prompt: `Historic warships at sea under a dramatic stormy sky, distant naval scene, no flags or text. ${SHAKAI_STYLE}` },
+  { key: 'shakai-taisho-democracy', label: '第一次世界大戦と大正デモクラシー', prompt: `A bustling Taisho-era city street with early automobiles, streetcars, and modern brick buildings. ${SHAKAI_STYLE}` },
+  { key: 'shakai-war-path-showa', label: '昭和の戦争への道', prompt: `A somber wartime cityscape silhouette against a darkening sky, respectful and non-graphic. ${SHAKAI_STYLE}` },
+
+  // ───────── 社会：現代 ─────────
+  { key: 'shakai-postwar-reform', label: '終戦と戦後改革', prompt: `A hopeful postwar Japanese city scene with rebuilding construction cranes and new buildings rising. ${SHAKAI_STYLE}` },
+  { key: 'shakai-constitution-japan', label: '日本国憲法の制定', prompt: `The Japanese National Diet Building exterior under a clear blue sky. ${SHAKAI_STYLE}` },
+  { key: 'shakai-international-return', label: '国際社会への復帰', prompt: `A world map globe illustration with Japan highlighted and gentle connecting lines reaching to other regions. ${SHAKAI_STYLE}` },
+  { key: 'shakai-economic-growth', label: '高度経済成長', prompt: `A 1960s Japanese city skyline with a sleek bullet train speeding past on elevated tracks. ${SHAKAI_STYLE}` },
+  { key: 'shakai-modern-challenges', label: '現代の日本と課題', prompt: `A warm modern Japanese neighborhood scene showing both elderly residents and a young family together, symbolic of demographic change. ${SHAKAI_STYLE}` },
+
+  // ───────── 社会：憲法と人権 ─────────
+  { key: 'shakai-constitution-supreme', label: '憲法は国の最高法規', prompt: `A stone pillar engraved with abstract scales-of-justice symbol, standing on a pedestal, dignified and symbolic. ${SHAKAI_STYLE}` },
+  { key: 'shakai-pacifism', label: '三大原則の柱・平和主義', prompt: `A white dove flying over a peaceful sunlit landscape. ${SHAKAI_STYLE}` },
+  { key: 'shakai-human-rights-types', label: '基本的人権の種類', prompt: `A diverse group of simple silhouette figures of different ages standing together peacefully, symbolic unity. ${SHAKAI_STYLE}` },
+  { key: 'shakai-social-rights', label: '社会権と生存権', prompt: `A warm cozy family home interior scene, symbolic of livelihood and wellbeing. ${SHAKAI_STYLE}` },
+  { key: 'shakai-three-duties', label: '国民の三大義務', prompt: `A small community scene showing a school building and a workplace together under a bright sky. ${SHAKAI_STYLE}` },
+  { key: 'shakai-new-rights', label: '新しい人権', prompt: `A person sitting in a cozy room looking at a glowing laptop screen, symbolic of information and privacy. ${SHAKAI_STYLE}` },
+
+  // ───────── 社会：三権分立と政治のしくみ ─────────
+  { key: 'shakai-three-powers', label: '三権分立', prompt: `Three grand government buildings arranged in a triangular composition, symbolic of balanced power. ${SHAKAI_STYLE}` },
+  { key: 'shakai-diet-structure', label: '国会のしくみ', prompt: `The Japanese National Diet Building exterior, grand and formal, clear sky. ${SHAKAI_STYLE}` },
+  { key: 'shakai-cabinet-system', label: '内閣と議院内閣制', prompt: `A formal government meeting room with a long table and empty chairs, symbolic cabinet meeting. ${SHAKAI_STYLE}` },
+  { key: 'shakai-courts-three-trials', label: '裁判所と三審制', prompt: `A solemn courthouse building exterior with tall stone pillars. ${SHAKAI_STYLE}` },
+  { key: 'shakai-supreme-court', label: '違憲審査権と憲法の番人', prompt: `A dignified Supreme Court building exterior with grand steps leading up to it. ${SHAKAI_STYLE}` },
+  { key: 'shakai-local-government', label: '地方自治と直接請求権', prompt: `A friendly small-town hall building with community members chatting nearby. ${SHAKAI_STYLE}` },
+  { key: 'shakai-elections', label: '選挙と参政権', prompt: `A row of simple voting booths with a ballot box in a community hall. ${SHAKAI_STYLE}` },
+
+  // ───────── 社会：経済・財政・税 ─────────
+  { key: 'shakai-supply-demand', label: '需要と供給と価格', prompt: `A busy fresh outdoor market stall piled with colorful fruits and vegetables. ${SHAKAI_STYLE}` },
+  { key: 'shakai-inflation-deflation', label: '景気とインフレ・デフレ', prompt: `A lively shopping street scene with people carrying bags, symbolic of economic activity. ${SHAKAI_STYLE}` },
+  { key: 'shakai-bank-of-japan', label: '日本銀行の役割', prompt: `A grand formal classical bank building exterior with tall columns. ${SHAKAI_STYLE}` },
+  { key: 'shakai-national-budget', label: '財政と国の予算', prompt: `Neat stacks of coins next to a ledger book and calculator, symbolic of budgeting. ${SHAKAI_STYLE}` },
+  { key: 'shakai-tax-types', label: '税金の種類（直接税・間接税）', prompt: `A small shop counter with a cash register and a shopping basket, symbolic of paying tax at checkout. ${SHAKAI_STYLE}` },
+  { key: 'shakai-progressive-tax-welfare', label: '累進課税と社会保障', prompt: `A caring nurse gently assisting an elderly person in a bright warm room, symbolic of social security. ${SHAKAI_STYLE}` },
+
+  // ───────── 社会：国際社会・国連 ─────────
+  { key: 'shakai-un-structure', label: '国際連合のしくみ', prompt: `A generic modern glass international conference building exterior with a blue sky, no flags or emblems. ${SHAKAI_STYLE}` },
+  { key: 'shakai-un-assembly-council', label: '総会と安全保障理事会', prompt: `A large circular assembly hall with many rows of delegate seats around a central podium, symbolic UN-style chamber. ${SHAKAI_STYLE}` },
+  { key: 'shakai-veto-power', label: '常任理事国の拒否権', prompt: `A round table meeting with several simple figures seated, one hand raised in objection, symbolic negotiation scene. ${SHAKAI_STYLE}` },
+  { key: 'shakai-un-agencies', label: '国連の専門機関', prompt: `Children sitting together studying with books and a small globe on the table, warm and hopeful. ${SHAKAI_STYLE}` },
+  { key: 'shakai-pko-cooperation', label: 'PKOと国際協力', prompt: `Peacekeepers in blue helmets helping build a well in a friendly village setting, humanitarian scene. ${SHAKAI_STYLE}` },
+  { key: 'shakai-sdgs-environment', label: '地球環境問題とSDGs', prompt: `A healthy green Earth globe glowing softly, surrounded by small icons of solar panels and wind turbines, symbolic sustainability. ${SHAKAI_STYLE}` },
 ];
 
 async function generateImage(apiKey, modelId, prompt) {
