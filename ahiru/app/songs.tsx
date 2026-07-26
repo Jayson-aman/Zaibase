@@ -6,11 +6,15 @@ import {
   SafeAreaView,
   ScrollView,
   TouchableOpacity,
+  ActivityIndicator,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { useAudioPlayer, useAudioPlayerStatus } from 'expo-audio';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { songs, type SongCategory } from '../data/songs';
+import { songs, type Song, type SongCategory } from '../data/songs';
 import { ERAS, type Era } from '../data/timeline';
+import { melodyAudio } from '../data/melodyAudio';
+import { speakJapanese, stopSpeaking } from '../services/tts';
 
 const CATEGORIES: { key: SongCategory; emoji: string; color: string }[] = [
   { key: '地理', emoji: '🗾', color: '#F59E0B' },
@@ -103,30 +107,83 @@ export default function SongsScreen() {
         {list.length === 0 ? (
           <Text style={styles.empty}>準備中です。もうすぐ追加されます。</Text>
         ) : (
-          list.map((s) => (
-            <View key={s.id} style={styles.card}>
-              <View style={styles.chipRow}>
-                <View style={[styles.melodyChip, { backgroundColor: catColor + '22', borderColor: catColor + '66' }]}>
-                  <Text style={[styles.melodyText, { color: catColor }]}>♪ メロディ：{s.melody}</Text>
-                </View>
-                {s.era != null && (
-                  <View style={[styles.melodyChip, { backgroundColor: catColor + '22', borderColor: catColor + '66' }]}>
-                    <Text style={[styles.melodyText, { color: catColor }]}>🕰 {s.era}</Text>
-                  </View>
-                )}
-              </View>
-              <Text style={styles.songTitle}>{s.title}</Text>
-              <Text style={styles.lyrics}>{s.lyrics}</Text>
-              <View style={styles.pointsBox}>
-                <Text style={styles.pointsLabel}>💡 覚えられること</Text>
-                <Text style={styles.pointsText}>{s.points}</Text>
-              </View>
-            </View>
-          ))
+          list.map((s) => <SongCard key={s.id} song={s} catColor={catColor} />)
         )}
         <View style={{ height: 40 }} />
       </ScrollView>
     </SafeAreaView>
+  );
+}
+
+function SongCard({ song: s, catColor }: { song: Song; catColor: string }) {
+  const melodySource = melodyAudio[s.melody] ?? null;
+  const player = useAudioPlayer(melodySource);
+  const status = useAudioPlayerStatus(player);
+  const [speaking, setSpeaking] = useState(false);
+
+  const toggleMelody = () => {
+    if (!melodySource) return;
+    if (status.playing) {
+      player.pause();
+    } else {
+      player.seekTo(0);
+      player.play();
+    }
+  };
+
+  const toggleLyrics = async () => {
+    if (speaking) {
+      await stopSpeaking();
+      setSpeaking(false);
+      return;
+    }
+    setSpeaking(true);
+    await speakJapanese(s.lyrics);
+    setSpeaking(false);
+  };
+
+  return (
+    <View style={styles.card}>
+      <View style={styles.chipRow}>
+        <TouchableOpacity
+          style={[
+            styles.melodyChip,
+            { backgroundColor: catColor + '22', borderColor: catColor + '66' },
+            !melodySource && styles.melodyChipDisabled,
+          ]}
+          onPress={toggleMelody}
+          disabled={!melodySource}
+          activeOpacity={0.8}
+        >
+          <Text style={[styles.melodyText, { color: catColor }]}>
+            {melodySource ? (status.playing ? '⏸ ' : '▶︎ ') : '♪ '}
+            メロディ：{s.melody}
+          </Text>
+        </TouchableOpacity>
+        {s.era != null && (
+          <View style={[styles.melodyChip, { backgroundColor: catColor + '22', borderColor: catColor + '66' }]}>
+            <Text style={[styles.melodyText, { color: catColor }]}>🕰 {s.era}</Text>
+          </View>
+        )}
+      </View>
+      <Text style={styles.songTitle}>{s.title}</Text>
+      <Text style={styles.lyrics}>{s.lyrics}</Text>
+      <TouchableOpacity
+        style={[styles.speakBtn, { borderColor: catColor + '66' }]}
+        onPress={toggleLyrics}
+        activeOpacity={0.8}
+      >
+        {speaking ? (
+          <ActivityIndicator size="small" color={catColor} />
+        ) : (
+          <Text style={[styles.speakBtnText, { color: catColor }]}>🔊 歌詞を読み上げる</Text>
+        )}
+      </TouchableOpacity>
+      <View style={styles.pointsBox}>
+        <Text style={styles.pointsLabel}>💡 覚えられること</Text>
+        <Text style={styles.pointsText}>{s.points}</Text>
+      </View>
+    </View>
   );
 }
 
@@ -192,8 +249,20 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   melodyText: { fontSize: 12, fontWeight: '700' },
+  melodyChipDisabled: { opacity: 0.6 },
   songTitle: { fontSize: 20, fontWeight: '800', color: '#1F2937', marginBottom: 10 },
   lyrics: { fontSize: 17, color: '#111827', lineHeight: 30 },
+  speakBtn: {
+    alignSelf: 'flex-start',
+    borderWidth: 1.5,
+    borderRadius: 999,
+    paddingHorizontal: 14,
+    paddingVertical: 7,
+    marginTop: 12,
+    minWidth: 150,
+    alignItems: 'center',
+  },
+  speakBtnText: { fontSize: 13, fontWeight: '700' },
   pointsBox: {
     backgroundColor: '#FFFBEB',
     borderRadius: 12,

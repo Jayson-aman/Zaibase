@@ -77,3 +77,45 @@ export async function speakWithDevice(text: string): Promise<void> {
     // 無視
   }
 }
+
+/** 日本語テキストを端末TTSで読み上げる（替え歌の歌詞など） */
+export async function speakJapanese(text: string): Promise<void> {
+  if (Platform.OS === 'web') {
+    return new Promise((resolve) => {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'ja-JP';
+      utterance.rate = 0.95;
+      utterance.onend = () => resolve();
+      utterance.onerror = () => resolve();
+      window.speechSynthesis.speak(utterance);
+    });
+  }
+
+  try {
+    const Speech = (await import('expo-speech')).default;
+    await new Promise<void>((resolve) => {
+      Speech.speak(text, {
+        language: 'ja-JP',
+        rate: 0.95,
+        onDone: resolve,
+        onError: () => resolve(),
+      });
+    });
+  } catch {
+    // 無視
+  }
+}
+
+/** 再生中の読み上げを止める（画面遷移時など） */
+export async function stopSpeaking(): Promise<void> {
+  if (Platform.OS === 'web') {
+    window.speechSynthesis.cancel();
+    return;
+  }
+  try {
+    const Speech = (await import('expo-speech')).default;
+    await Speech.stop();
+  } catch {
+    // 無視
+  }
+}
