@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { FORMULAS, SUBJECTS, type Subject } from '../../data/formulas';
 import SubjectIcon, { type IconSubject } from '../../components/SubjectIcon';
+import FigureView from '../../components/FigureView';
 
 // 公式タブの教科名（算数/理科/社会）→ アイコンキー
 const SUBJ_ICON: Record<Subject, IconSubject> = { 算数: 'sansu', 理科: 'rika', 社会: 'shakai' };
@@ -64,7 +65,23 @@ export default function FormulasScreen() {
                   <Text style={styles.explanation}>{item.explanation}</Text>
                 )}
 
-                {item.asciiFigure && (
+                {item.figure && (
+                  <View style={styles.figureBox}>
+                    <Text style={styles.figureLabel}>図解</Text>
+                    <FigureView figure={item.figure} />
+                  </View>
+                )}
+
+                {!item.figure && item.steps && item.steps.length > 0 && (
+                  <View style={styles.stepsBox}>
+                    <Text style={styles.figureLabel}>とき方の流れ</Text>
+                    {item.steps.map((st, si) => (
+                      <Text key={si} style={styles.stepsLine}>{st}</Text>
+                    ))}
+                  </View>
+                )}
+
+                {!item.figure && !item.steps && item.asciiFigure && (
                   <View style={styles.figureBox}>
                     <Text style={styles.figureLabel}>図解</Text>
                     <ScrollView horizontal showsHorizontalScrollIndicator={false}>
@@ -230,6 +247,21 @@ const styles = StyleSheet.create({
     lineHeight: 17,
     color: '#33413B',
     fontFamily: 'monospace',
+  },
+  stepsBox: {
+    backgroundColor: '#F8FAFF',
+    borderWidth: 1,
+    borderColor: '#E2E8F5',
+    borderRadius: 8,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    marginTop: 8,
+  },
+  stepsLine: {
+    fontSize: 13,
+    lineHeight: 21,
+    color: '#2A3A4A',
+    fontVariant: ['tabular-nums'],
   },
   exampleBox: {
     backgroundColor: '#FFF9F0',
