@@ -192,4 +192,13 @@ export const formulaImages: Record<string, ImageSourcePropType> = {
   "需要と供給と価格": require('../assets/formulas/shakai-supply-demand.png'),
   "景気とインフレ・デフレ": require('../assets/formulas/shakai-inflation-deflation.png'),
   "日本銀行の役割": require('../assets/formulas/shakai-bank-of-japan.png'),
+  "財政と国の予算": require('../assets/formulas/shakai-national-budget.png'),
+  "税金の種類（直接税・間接税）": require('../assets/formulas/shakai-tax-types.png'),
+  "累進課税と社会保障": require('../assets/formulas/shakai-progressive-tax-welfare.png'),
+  "国際連合のしくみ": require('../assets/formulas/shakai-un-structure.png'),
+  "総会と安全保障理事会": require('../assets/formulas/shakai-un-assembly-council.png'),
+  "常任理事国の拒否権": require('../assets/formulas/shakai-veto-power.png'),
+  "国連の専門機関": require('../assets/formulas/shakai-un-agencies.png'),
+  "PKOと国際協力": require('../assets/formulas/shakai-pko-cooperation.png'),
+  "地球環境問題とSDGs": require('../assets/formulas/shakai-sdgs-environment.png'),
 };
