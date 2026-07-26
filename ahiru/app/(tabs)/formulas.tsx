@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {
   View,
   Text,
+  Image,
   ScrollView,
   StyleSheet,
   SafeAreaView,
@@ -10,6 +11,7 @@ import {
 import { FORMULAS, SUBJECTS, type Subject } from '../../data/formulas';
 import SubjectIcon, { type IconSubject } from '../../components/SubjectIcon';
 import FigureView from '../../components/FigureView';
+import { formulaImages } from '../../data/formulaImages';
 
 // 公式タブの教科名（算数/理科/社会）→ アイコンキー
 const SUBJ_ICON: Record<Subject, IconSubject> = { 算数: 'sansu', 理科: 'rika', 社会: 'shakai' };
@@ -65,14 +67,25 @@ export default function FormulasScreen() {
                   <Text style={styles.explanation}>{item.explanation}</Text>
                 )}
 
-                {item.figure && (
+                {formulaImages[item.label] && (
+                  <View style={styles.figureBox}>
+                    <Text style={styles.figureLabel}>図解</Text>
+                    <Image
+                      source={formulaImages[item.label]}
+                      style={styles.formulaImage}
+                      resizeMode="cover"
+                    />
+                  </View>
+                )}
+
+                {!formulaImages[item.label] && item.figure && (
                   <View style={styles.figureBox}>
                     <Text style={styles.figureLabel}>図解</Text>
                     <FigureView figure={item.figure} />
                   </View>
                 )}
 
-                {!item.figure && item.steps && item.steps.length > 0 && (
+                {!formulaImages[item.label] && !item.figure && item.steps && item.steps.length > 0 && (
                   <View style={styles.stepsBox}>
                     <Text style={styles.figureLabel}>とき方の流れ</Text>
                     {item.steps.map((st, si) => (
@@ -81,7 +94,7 @@ export default function FormulasScreen() {
                   </View>
                 )}
 
-                {!item.figure && !item.steps && item.asciiFigure && (
+                {!formulaImages[item.label] && !item.figure && !item.steps && item.asciiFigure && (
                   <View style={styles.figureBox}>
                     <Text style={styles.figureLabel}>図解</Text>
                     <ScrollView horizontal showsHorizontalScrollIndicator={false}>
@@ -247,6 +260,12 @@ const styles = StyleSheet.create({
     lineHeight: 17,
     color: '#33413B',
     fontFamily: 'monospace',
+  },
+  formulaImage: {
+    width: '100%',
+    aspectRatio: 1,
+    borderRadius: 10,
+    backgroundColor: '#F0F3F7',
   },
   stepsBox: {
     backgroundColor: '#F8FAFF',
