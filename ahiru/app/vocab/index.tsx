@@ -94,10 +94,10 @@ export default function VocabScreen() {
   const flipAnim    = useRef(new Animated.Value(0)).current;
   const listenTimer = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  // フィルターに合う単語をランダム順に並べる（毎回ちがう順で出題）。
-  // フィルター変更・シャッフルボタンで並べ直す。ナビ中は順番を保つ。
+  // フィルターに合う単語（並べ替え前の安定した順序）。
+  // 無料枠はこの安定順の先頭から取るため、シャッフルしても中身が変わらない。
   const filtered = useMemo(() => {
-    const base = vocabWords.filter(w => {
+    return vocabWords.filter(w => {
       const levelOk = levelFilter === '全て' || w.level === LEVEL_MAP[levelFilter];
       const typeOk  = typeFilter  === '全て'
         || (typeFilter === '単語' && !w.isPhrase && w.category !== 'conversation')
@@ -105,20 +105,31 @@ export default function VocabScreen() {
         || (typeFilter === '英会話' && w.category === 'conversation');
       return levelOk && typeOk;
     });
+  }, [levelFilter, typeFilter]);
+
+  // 表示対象。未加入は「安定順の先頭 FREE_WORD_LIMIT 語」に限定してから並べ替える。
+  //
+  // ⚠️ 先にシャッフルしてから slice すると、シャッフルのたびに違う50語が出てきて
+  //    無料のまま全語を読めてしまう（＝有料の意味が無くなる）。必ず
+  //    「絞り込み → 無料分を切り出す → その中だけ並べ替える」の順にすること。
+  const visible = useMemo(() => {
+    const pool = hasVocabPro ? filtered : filtered.slice(0, FREE_WORD_LIMIT);
     // Fisher-Yates シャッフル（偏りのない並べ替え）
-    const a = [...base];
+    const a = [...pool];
     for (let i = a.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [a[i], a[j]] = [a[j], a[i]];
     }
     return a;
-  }, [levelFilter, typeFilter, shuffleKey]);
+    // shuffleKey が変わるたびに並べ替え直す（無料枠の中身自体は変わらない）
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filtered, hasVocabPro, shuffleKey]);
 
-  // 未加入は先頭 FREE_WORD_LIMIT 語まで（フィルターごとに無料分を用意する）
-  const visible = useMemo(
-    () => (hasVocabPro ? filtered : filtered.slice(0, FREE_WORD_LIMIT)),
-    [filtered, hasVocabPro],
-  );
+  // 加入状態が切れるなどで表示件数が減ったとき、位置が範囲外のままだと
+  // 「3001 / 50」のような表示になり中身も出なくなるため、先頭に戻す。
+  useEffect(() => {
+    if (cardIndex >= visible.length) setCardIndex(0);
+  }, [visible.length, cardIndex]);
 
   const card: VocabEntry | undefined = visible[cardIndex];
 
@@ -254,7 +265,7 @@ export default function VocabScreen() {
           ))}
         </View>
 
-        {!hasVocabPro && (
+        {!hasVocabPro && filtered.length > FREE_WORD_LIMIT && (
           <TouchableOpacity style={s.freeLimitBanner} onPress={() => setShowPaywall(true)} activeOpacity={0.85}>
             <Text style={s.freeLimitText}>
               無料で{FREE_WORD_LIMIT}語まで試せます。全{filtered.length}語は英単語Proで解放 ▸
@@ -265,7 +276,7 @@ export default function VocabScreen() {
         <View style={s.progressRow}>
           <Text style={s.progress}>
             {cardIndex + 1} / {visible.length}
-            {!hasVocabPro && `（無料分・全${filtered.length}語）`}　🔀ランダム出題
+            {!hasVocabPro && filtered.length > FREE_WORD_LIMIT && `（無料分・全${filtered.length}語）`}　🔀ランダム出題
           </Text>
           <TouchableOpacity
             style={s.shuffleBtn}

@@ -66,7 +66,9 @@ async function playAudioUrl(url: string): Promise<void> {
       const finish = () => {
         if (done) return;
         done = true;
-        currentStop = null;
+        // 自分の停止ハンドルの場合だけ消す。無条件に消すと、後から始まった
+        // 別の再生のハンドルまで捨ててしまい、その音を止められなくなる。
+        if (currentStop === stopThis) currentStop = null;
         clearTimeout(timer);
         try {
           sub?.remove?.();
@@ -82,7 +84,7 @@ async function playAudioUrl(url: string): Promise<void> {
       // 音声は最長でも数十秒。保険として60秒で必ず打ち切る。
       const timer = setTimeout(finish, 60000);
       // 画面を離れたときに stopSpeaking() から止められるようにする
-      currentStop = () => {
+      const stopThis = () => {
         try {
           player.pause();
         } catch {
@@ -90,6 +92,7 @@ async function playAudioUrl(url: string): Promise<void> {
         }
         finish();
       };
+      currentStop = stopThis;
     });
   } catch {
     // 音声データのURLではなく元のテキストを読ませたいので、ここでは端末TTSを呼ばない

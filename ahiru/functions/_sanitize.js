@@ -81,6 +81,10 @@ function sanitizeHistory(
     if (keepFrom > 0) out.splice(0, keepFrom);
   }
 
+  // 履歴の先頭が assistant だと Anthropic が 400 を返す（最初は user 必須）。
+  // 上の切り詰めで先頭が assistant になることがあるので、その分を落とす。
+  while (out.length > 0 && out[0].role === "assistant") out.shift();
+
   // 新しい方から数えて maxImages 枚だけ画像を残し、それより古い画像は落とす。
   if (Number.isFinite(maxImages)) {
     let seen = 0;
