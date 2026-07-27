@@ -21,13 +21,36 @@ export async function speakWithOpenAI(text: string): Promise<void> {
   }
 }
 
+// 再生中の音声を stopSpeaking() から止められるように保持しておく。
+// 保持しないと、画面を離れても OpenAI 音声が鳴り続ける。
+let currentStop: (() => void) | null = null;
+
 async function playAudioUrl(url: string): Promise<void> {
   if (Platform.OS === 'web') {
     return new Promise((resolve, reject) => {
       const audio = new Audio(url);
-      audio.onended = () => resolve();
-      audio.onerror = reject;
-      audio.play().catch(reject);
+      const done = () => {
+        if (currentStop === stop) currentStop = null;
+        resolve();
+      };
+      const stop = () => {
+        try {
+          audio.pause();
+        } catch {
+          // 既に停止済みなら無視
+        }
+        done();
+      };
+      currentStop = stop;
+      audio.onended = done;
+      audio.onerror = () => {
+        if (currentStop === stop) currentStop = null;
+        reject(new Error('audio error'));
+      };
+      audio.play().catch((e) => {
+        if (currentStop === stop) currentStop = null;
+        reject(e);
+      });
     });
   }
 
@@ -43,6 +66,7 @@ async function playAudioUrl(url: string): Promise<void> {
       const finish = () => {
         if (done) return;
         done = true;
+        currentStop = null;
         clearTimeout(timer);
         try {
           sub?.remove?.();
@@ -57,6 +81,15 @@ async function playAudioUrl(url: string): Promise<void> {
       });
       // 音声は最長でも数十秒。保険として60秒で必ず打ち切る。
       const timer = setTimeout(finish, 60000);
+      // 画面を離れたときに stopSpeaking() から止められるようにする
+      currentStop = () => {
+        try {
+          player.pause();
+        } catch {
+          // 既に破棄済みなら無視
+        }
+        finish();
+      };
     });
   } catch {
     // 音声データのURLではなく元のテキストを読ませたいので、ここでは端末TTSを呼ばない
@@ -122,6 +155,14 @@ export async function speakJapanese(text: string): Promise<void> {
 
 /** 再生中の読み上げを止める（画面遷移時など） */
 export async function stopSpeaking(): Promise<void> {
+  // OpenAI音声（ファイル再生）も止める。端末TTSだけ止めても鳴り続けるため。
+  try {
+    currentStop?.();
+  } catch {
+    // 既に停止済みなら無視
+  }
+  currentStop = null;
+
   if (Platform.OS === 'web') {
     window.speechSynthesis.cancel();
     return;

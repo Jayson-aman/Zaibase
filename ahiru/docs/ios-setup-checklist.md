@@ -108,6 +108,37 @@ eas env:create --environment production --name EXPO_PUBLIC_FIREBASE_APP_ID --val
 eas env:list --environment production
 ```
 
+## STEP 6.5【必須】サーバー側（Cloud Functions）の設定とデプロイ
+
+**これを飛ばすと、課金したユーザー全員が「プランにアップグレードしてください」と拒否される。**
+AI機能の課金判定・AI応答・音声合成はすべてサーバー側で行っており、以下の
+シークレットが未設定だと、判定不能→安全側に倒して全拒否になるため。
+
+```bash
+cd ahiru/functions
+
+# 課金判定（RevenueCat ダッシュボード → API keys → Secret API key）
+firebase functions:secrets:set REVENUECAT_SECRET_KEY
+
+# AI先生・AI英会話・AI弱点コーチ（Anthropic）
+firebase functions:secrets:set ANTHROPIC_API_KEY
+
+# ネイティブ発音の音声合成（OpenAI）
+firebase functions:secrets:set OPENAI_API_KEY
+
+# 関数本体をデプロイ
+firebase deploy --only functions
+
+# Firestoreのセキュリティルールをデプロイ
+# （未反映だと全国ランキングが誰にも表示されない）
+cd .. && firebase deploy --only firestore:rules
+```
+
+設定できたか確認：
+```bash
+firebase functions:secrets:access REVENUECAT_SECRET_KEY
+```
+
 ## STEP 7. iOS ビルド
 
 ```bash

@@ -15,7 +15,7 @@ export default function Root({ children }: PropsWithChildren) {
         <title>中学受験・高校受験の対策アプリ｜Zaibase受験 5科目13,000問＋動く図解</title>
         <meta
           name="description"
-          content="中学受験・高校受験の対策アプリ。算数・国語・理科・社会・英語の5科目13,000問以上、灘・開成・慶應など50校対応、図形やグラフが動く図解つき教科書とAI弱点コーチ。無料で今すぐ始められます。"
+          content="中学受験・高校受験の対策アプリ。算数・国語・理科・社会・英語の5科目13,000問以上、灘・開成・慶應など40校以上に対応、図形やグラフが動く図解つき教科書とAI弱点コーチ。無料で今すぐ始められます。"
         />
         <meta
           name="keywords"
@@ -25,7 +25,7 @@ export default function Root({ children }: PropsWithChildren) {
         <meta property="og:title" content="中学受験・高校受験の対策アプリ｜Zaibase受験" />
         <meta
           property="og:description"
-          content="中学受験・高校受験対策。5科目13,000問以上・50校対応・動く図解つき教科書・AI弱点コーチ。無料で始められます。"
+          content="中学受験・高校受験対策。5科目13,000問以上・40校以上に対応・動く図解つき教科書・AI弱点コーチ。無料で始められます。"
         />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="ja_JP" />

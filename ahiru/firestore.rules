@@ -21,5 +21,32 @@ service cloud.firestore {
     match /aiConversationUsage/{uid} {
       allow read, write: if false;
     }
+
+    // ── 全国ランキング ──
+    // ルールが無いとFirestoreは既定で全拒否になり、ランキングが誰にも
+    // 表示されない（アプリ側はエラーを握りつぶすため無言で壊れる）。
+    // 読み取りは順位計算のため全員に許可。書き込みは本人の文書のみで、
+    // スコアの形式（0〜100、correct<=total）も検証してデタラメな値を弾く。
+    match /examLeaderboard/{uid} {
+      allow read: if true;
+      allow create, update: if request.auth != null
+        && request.auth.uid == uid
+        && request.resource.data.uid == uid
+        && request.resource.data.pct is int
+        && request.resource.data.pct >= 0
+        && request.resource.data.pct <= 100
+        && request.resource.data.correct is int
+        && request.resource.data.total is int
+        && request.resource.data.correct >= 0
+        && request.resource.data.total > 0
+        && request.resource.data.correct <= request.resource.data.total;
+      // アカウント削除時に本人の登録を消せるようにする
+      allow delete: if request.auth != null && request.auth.uid == uid;
+    }
+
+    // 上記以外は全て拒否（明示）
+    match /{document=**} {
+      allow read, write: if false;
+    }
   }
 }

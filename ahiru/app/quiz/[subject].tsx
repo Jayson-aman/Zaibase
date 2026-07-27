@@ -126,7 +126,7 @@ export default function QuizScreen() {
   const info = subjectInfo[subjectKey];
 
   // isMax/isPro を useMemo より前に宣言しないと Temporal Dead Zone クラッシュが起きる
-  const { isPro: subIsPro, isMax: subIsMax } = useSubscription();
+  const { isPro: subIsPro, isMax: subIsMax, loading: subLoading } = useSubscription();
   const { hasAccess: betaAccess } = useBetaAccess();
   const isPro = subIsPro || betaAccess;
   const isMax = subIsMax || betaAccess;
@@ -282,8 +282,10 @@ export default function QuizScreen() {
     if (answeringRef.current) return;
     answeringRef.current = true;
 
-    // 無料ユーザーのお試し問題数チェック
-    if (!isPro && !isMax) {
+    // 無料ユーザーのお試し問題数チェック。
+    // 課金状態の取得中（subLoading）は加入者も未加入に見えるため、その間は
+    // 上限判定をしない（加入者がいきなりペイウォールで止められるのを防ぐ）。
+    if (!isPro && !isMax && !subLoading) {
       const expired = await isTrialExpired();
       if (expired) {
         setTrialBlocked(true);
@@ -331,6 +333,7 @@ export default function QuizScreen() {
     // useEffect が全ステートを初期化する（＝毎回ちがう順番で出題）。
     setShowPaywall(false);
     setShowTutorChat(false);
+    setTrialBlocked(false);
     setRestartKey((k) => k + 1);
   }
 
@@ -708,7 +711,12 @@ export default function QuizScreen() {
         }}
         onPurchased={() => {
           setShowPaywall(false);
-          setTrialBlocked(false);
+          // 上限で止められた問題は選択肢が選択済み・「次へ」も無い状態のため、
+          // 購入後はそのカードに戻さず出題をやり直す。
+          if (trialBlocked) {
+            setTrialBlocked(false);
+            setRestartKey((k) => k + 1);
+          }
         }}
       />
 

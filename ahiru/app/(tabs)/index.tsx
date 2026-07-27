@@ -267,7 +267,7 @@ export default function HomeScreen() {
             <View style={styles.vocabEntryTextWrap}>
               <Text style={styles.vocabEntryBadge}>受験対策とは別の学習コンテンツ</Text>
               <Text style={styles.vocabEntryTitle}>🔤 英単語・英熟語・英会話</Text>
-              <Text style={styles.vocabEntrySub}>英検準2級〜1級・TOEIC800対応　単語5,000+・熟語4,000+</Text>
+              <Text style={styles.vocabEntrySub}>英検準2級〜1級・TOEIC800対応　単語4,800+・熟語4,000+</Text>
             </View>
             <Text style={styles.vocabEntryArrow}>›</Text>
           </TouchableOpacity>

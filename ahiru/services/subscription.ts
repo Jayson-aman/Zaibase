@@ -138,23 +138,31 @@ export function initRevenueCat(): void {
       const apiKey =
         Platform.select({ ios: RC_KEY_IOS, android: RC_KEY_ANDROID }) ?? RC_KEY_IOS;
 
-      // RevenueCat の app_user_id を Firebase の uid に合わせる。
-      // これをしないと、ログインせずに購入した人は RevenueCat 側が匿名IDになり、
-      // サーバー（Cloud Functions）が Firebase uid で問い合わせても該当なし＝無料扱いになる。
-      // その結果「課金したのにAI機能が使えない」という致命的な状態になる。
-      // 匿名サインインでも uid は安定して永続化されるので、これで購入と結びつく。
-      let appUserID: string | null = null;
+      // 先に匿名で configure してから logIn(uid) で紐付ける。
+      //
+      // configure({ appUserID }) を直接使ってはいけない：
+      //   configure は「そのIDで始める」だけで、既存の匿名IDに紐づいた購入を
+      //   引き継がない。既に購入済みの人が新バージョンを開くと別人扱いになり、
+      //   課金しているのに無料表示に戻ってしまう。
+      //   logIn は現在が匿名なら購入を新しいIDへ移し替える（エイリアス）ので、
+      //   既存購入者も、匿名のまま購入した人が後からログインする場合も救われる。
+      //
+      // uid を紐付ける目的：サーバー（Cloud Functions）は Firebase uid で
+      // RevenueCat に問い合わせるため、一致していないと課金者が無料扱いになる。
+      Purchases.configure({ apiKey });
+
+      // 認証の待ちで configure 自体が遅れないよう、紐付けは後追いで行う。
+      // ネットワーク不調で認証が返らない場合に購入導線ごと死なせないため、
+      // タイムアウトを設ける。
       try {
         const { getAuthUid } = await import('./firebaseClient');
-        appUserID = await getAuthUid();
+        const uid = await Promise.race([
+          getAuthUid(),
+          new Promise<null>((resolve) => setTimeout(() => resolve(null), 8000)),
+        ]);
+        if (uid) await Purchases.logIn(uid);
       } catch {
-        // Firebase 未設定時は RevenueCat 側の匿名IDにフォールバック
-      }
-
-      if (appUserID) {
-        Purchases.configure({ apiKey, appUserID });
-      } else {
-        Purchases.configure({ apiKey });
+        // 紐付けに失敗しても購入自体は可能。次回起動時に再試行される。
       }
     } catch {
       // RevenueCat 未設定時は無視

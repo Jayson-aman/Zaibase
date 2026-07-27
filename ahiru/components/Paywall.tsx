@@ -17,6 +17,8 @@ import {
   fetchProMaxProducts,
   purchaseProduct,
   restorePurchases,
+  tierFromCustomerInfo,
+  hasVocabEntitlement,
 } from '../services/subscription';
 import { PRO_FEATURES, MAX_FEATURES } from '../constants/proAccess';
 import { useAuthUser } from '../hooks/useAuthUser';
@@ -89,8 +91,20 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
     }
     setPurchasing(true);
     try {
-      await restorePurchases();
-      onPurchased();
+      const info = await restorePurchases();
+      // 復元しても何も無かった場合に黙って閉じると「押しても何も起きない」
+      // ように見える（App Store審査でよく指摘される）。結果を必ず伝える。
+      const restored =
+        tierFromCustomerInfo(info) !== 'free' || hasVocabEntitlement(info);
+      if (restored) {
+        Alert.alert('復元しました', 'ご購入内容を復元しました。');
+        onPurchased();
+      } else {
+        Alert.alert(
+          '復元できる購入がありません',
+          'このApple IDでのご購入が見つかりませんでした。購入時と同じApple IDでサインインしているかご確認ください。',
+        );
+      }
     } catch {
       Alert.alert('復元エラー', '購入の復元に失敗しました。');
     } finally {

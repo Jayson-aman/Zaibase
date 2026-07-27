@@ -11,10 +11,13 @@ export function useMaxGate() {
         onGranted?.();
         return true;
       }
+      // 課金状態の取得中は tier が初期値のため、Max加入者にもペイウォールが
+      // 出てしまう。確定するまでは何もしない。
+      if (loading) return false;
       setPaywallVisible(true);
       return false;
     },
-    [isMax],
+    [isMax, loading],
   );
 
   return {

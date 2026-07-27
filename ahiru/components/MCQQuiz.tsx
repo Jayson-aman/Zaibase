@@ -52,16 +52,8 @@ export default function MCQQuiz({ questions, accentColor = '#37474F', onComplete
   const [speaking, setSpeaking] = useState(false);
 
   const q = shuffled[index];
-  // 問題数が減るなどで index が範囲外になった場合に落ちないようにする
-  if (q == null && !finished) {
-    return (
-      <View style={styles.container}>
-        <View style={styles.content}>
-          <Text style={styles.questionText}>問題を準備中です</Text>
-        </View>
-      </View>
-    );
-  }
+  // ※ 範囲外チェックはこの関数の末尾（全フックの呼び出し後）にある `if (!q)` で行う。
+  //    ここで早期returnするとフック数がレンダーごとに変わり、Reactが落ちる。
 
   useEffect(() => {
     Speech.stop();

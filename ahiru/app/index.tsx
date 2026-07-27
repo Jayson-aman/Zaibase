@@ -127,21 +127,24 @@ const FEATURES = [
   },
 ];
 
-const VOICES = [
+// 収録内容の事実。体験談ではなく、アプリ内で数えられる実数のみを載せる。
+// （合格実績や偏差値の伸びは、根拠を用意できるまで掲載しない。景品表示法の
+//  優良誤認・体験談規制、およびApp Store審査の正確性要件に抵触するため）
+const CONTENT_FACTS = [
   {
-    text: '灘中に合格しました。算数の最難関問題が本番と同じレベルで、毎日の練習が直接結果につながりました。',
-    name: '小6 男子',
-    result: '灘中 合格',
+    text: '算数・国語・理科・社会・英語の5科目を、基礎から発展まで難易度別に収録。まちがえた問題は自動で記録され、あとから復習できます。',
+    name: '5科目 13,000問以上',
+    result: '収録問題数',
   },
   {
-    text: 'AI弱点コーチで指摘された「速さの文章題」を集中的にやったら、苦手が得意になりました。',
-    name: '小5 女子',
-    result: '偏差値 +12',
+    text: '図形・グラフ・電気回路・生物のつくりなどを、数値が解答と必ず一致するベクター図で表示。文章だけではイメージしにくい単元を目で確認できます。',
+    name: '動く図解つき',
+    result: '図解',
   },
   {
-    text: '聞き流しを毎朝の通学で使って、社会の知識量が格段に上がりました。隙間時間を無駄にしない。',
-    name: '小6 男子',
-    result: '開成中 合格',
+    text: '英単語・熟語・日常英会話に加え、英検2・3・4級の対策問題5,160問を収録。通学中に使える聞き流しにも対応しています。',
+    name: '英検2・3・4級 5,160問',
+    result: '英語対策',
   },
 ];
 
@@ -291,7 +294,7 @@ export default function LandingPage() {
           <SectionLabel label="選ばれる理由" />
           <Text style={styles.sectionTitle}>5つの強み</Text>
           <Text style={styles.sectionDesc}>
-            合格実績を支えるテクノロジーと問題クオリティ。
+            毎日の学習を支えるテクノロジーと問題クオリティ。
           </Text>
           <View style={styles.featuresGrid}>
             {FEATURES.map((f) => (
@@ -339,11 +342,11 @@ export default function LandingPage() {
           </View>
         </View>
 
-        {/* ─── 合格者の声 ─────────────────────── */}
+        {/* ─── 収録内容（事実ベース） ─────────────────────── */}
         <View style={[styles.section, { backgroundColor: '#EEF2F8' }]}>
-          <SectionLabel label="合格者・保護者の声" goldMode />
-          <Text style={[styles.sectionTitle, { color: C.white }]}>実績が語る</Text>
-          {VOICES.map((v, i) => (
+          <SectionLabel label="収録内容" goldMode />
+          <Text style={[styles.sectionTitle, { color: C.white }]}>中身で選ぶ</Text>
+          {CONTENT_FACTS.map((v, i) => (
             <View key={i} style={[styles.voiceCard, glassBlur]}>
               <Text style={styles.voiceQuoteMark}>&ldquo;</Text>
               <Text style={styles.voiceText}>{v.text}</Text>
@@ -415,7 +418,7 @@ export default function LandingPage() {
             <View style={styles.planDivider} />
             {[
               '✓ PROプランの全機能',
-              '✓ 英単語Proを丸ごと同梱（単語5,000+・熟語4,000+）',
+              '✓ 英単語Proを丸ごと同梱（単語4,800+・熟語4,000+）',
               '✓ 英検対策 2・3・4級 5,160問',
               '✓ AIと英会話練習',
               '✓ AI弱点コーチ（間違い問題をAI分析）',

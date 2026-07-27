@@ -195,7 +195,7 @@ import { kokugoChoubunKoko } from './kokugo_choubun_koko';
 import { kokugoChoubunChugaku2 } from './kokugo_choubun_chugaku_2';
 import { kokugoChoubunKoko2 } from './kokugo_choubun_koko_2';
 
-// ── 学校別問題（50校対応・図解付き） ────────────────────────────
+// ── 学校別問題（40校以上に対応・図解付き） ────────────────────────────
 import { schoolOsakaJogakuin } from './school_osaka_jogakuin';
 import { schoolKokoAzabu } from './school_koko_azabu';
 import { schoolKokoNanzan } from './school_koko_nanzan';

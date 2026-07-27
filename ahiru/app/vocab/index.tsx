@@ -12,10 +12,17 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import { useRouter } from 'expo-router';
+import { useAuthUser } from '../../hooks/useAuthUser';
 import { speakWithOpenAI, speakWithDevice, stopSpeaking } from '../../services/tts';
 import { useVocabSubscription } from '../../hooks/useVocabSubscription';
 import { useSubscription } from '../../hooks/useSubscription';
-import { fetchVocabProducts, purchaseProduct, restorePurchases } from '../../services/subscription';
+import {
+  fetchVocabProducts,
+  purchaseProduct,
+  restorePurchases,
+  tierFromCustomerInfo,
+  hasVocabEntitlement,
+} from '../../services/subscription';
 import { VOCAB_MONTHLY_LABEL, VOCAB_YEARLY_LABEL } from '../../constants/pricing';
 import type { VocabEntry, VocabLevel } from '../../data/vocab-meta';
 import { levelColor, levelLabel } from '../../data/vocab-meta';
@@ -191,7 +198,7 @@ export default function VocabScreen() {
           <Text style={s.backText}>← 戻る</Text>
         </TouchableOpacity>
         <Text style={[s.title, fontsLoaded && { fontFamily: TEXTBOOK_BOLD }]}>英単語・英熟語</Text>
-        <Text style={s.sub}>単語5,000語+・熟語4,000+・英会話200　英検準2級〜1級・TOEIC800対応</Text>
+        <Text style={s.sub}>単語4,800語+・熟語4,000+・英会話200　英検準2級〜1級・TOEIC800対応</Text>
 
         <TouchableOpacity style={s.conversationEntryBtn} onPress={() => router.push('/conversation')}>
           <Text style={s.conversationEntryText}>🗣️ AIと英会話を練習する</Text>
@@ -358,7 +365,7 @@ export default function VocabScreen() {
 
         {!hasVocabPro && (
           <TouchableOpacity style={s.promoBanner} onPress={() => setShowPaywall(true)}>
-            <Text style={s.promoText}>🔊 英単語Pro — 単語5,000+・熟語4,000+・英検5,160問・ネイティブ発音　{VOCAB_MONTHLY_LABEL}〜</Text>
+            <Text style={s.promoText}>🔊 英単語Pro — 単語4,800+・熟語4,000+・英検5,160問・ネイティブ発音　{VOCAB_MONTHLY_LABEL}〜</Text>
           </TouchableOpacity>
         )}
       </ScrollView>
@@ -368,6 +375,8 @@ export default function VocabScreen() {
 
 // ── Paywall ─────────────────────────────────────────
 function VocabPaywall({ onClose, onPurchased }: { onClose: () => void; onPurchased: () => void }) {
+  const { isLoggedIn } = useAuthUser();
+  const isWebPlatform = Platform.OS === 'web';
   const router = useRouter();
   const [monthlyProd, setMonthlyProd] = useState<unknown>(null);
   const [yearlyProd,  setYearlyProd]  = useState<unknown>(null);
@@ -387,6 +396,13 @@ function VocabPaywall({ onClose, onPurchased }: { onClose: () => void; onPurchas
 
   async function handlePurchase(product: unknown) {
     if (!product) return;
+    // Web版の購入はブラウザのローカルIDに紐づくため、未ログインだと
+    // 別ブラウザや履歴消去で購入が復元できなくなる。先にログインさせる。
+    if (isWebPlatform && !isLoggedIn) {
+      alert('Web版のご購入にはログインが必要です。ログイン後にもう一度お試しください。');
+      router.push('/login');
+      return;
+    }
     setPurchasing(true);
     try {
       await purchaseProduct(product);
@@ -403,8 +419,16 @@ function VocabPaywall({ onClose, onPurchased }: { onClose: () => void; onPurchas
   async function handleRestore() {
     setPurchasing(true);
     try {
-      await restorePurchases();
-      onPurchased();
+      const info = await restorePurchases();
+      // 復元対象が無いのに黙って閉じると「押しても何も起きない」ように見える
+      // （App Store審査でよく指摘される）。結果を必ず伝える。
+      const restored = hasVocabEntitlement(info) || tierFromCustomerInfo(info) === 'max';
+      if (restored) {
+        alert('ご購入内容を復元しました。');
+        onPurchased();
+      } else {
+        alert('復元できる購入が見つかりませんでした。購入時と同じApple IDでサインインしているかご確認ください。');
+      }
     } catch {
       alert('購入の復元に失敗しました。');
     } finally {
@@ -425,12 +449,11 @@ function VocabPaywall({ onClose, onPurchased }: { onClose: () => void; onPurchas
         {[
           '🔊 ネイティブ発音（OpenAI TTS・高音質）',
           '▶ 聞き流しモード（自動ページ送り）',
-          '📖 単語5,000語+ ＋ 熟語4,000+ ＋ 日常英会話200',
+          '📖 単語4,800語+ ＋ 熟語4,000+ ＋ 日常英会話200',
           '🇬🇧 英検対策 2・3・4級 5,160問（リスニング音声つき）',
           '🗣️ AIと英会話練習',
           '🎓 英検準2級〜1級・TOEIC800レベル対応',
-          '📊 学習進捗トラッキング・スペリング練習',
-        ].map(f => (
+                  ].map(f => (
           <View key={f} style={s.featureRow}>
             <Text style={s.featureText}>{f}</Text>
           </View>

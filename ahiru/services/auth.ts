@@ -87,6 +87,28 @@ export async function deleteAccount(): Promise<void> {
   const user = auth.currentUser;
   if (!user) throw new AuthError('ログインしていません。');
 
+  // 先にユーザーに紐づくデータを消してから認証アカウントを消す。
+  // 順序を逆にすると、認証が消えた時点で権限を失い消せなくなる。
+  const uid = user.uid;
+  try {
+    const { getFirestoreDb } = await import('./firebaseClient');
+    const db = await getFirestoreDb();
+    const { doc, deleteDoc } = await import('firebase/firestore');
+    // ランキング登録を削除（他コレクションはサーバー側の管理データで、
+    // クライアントからは削除権限が無いため対象外）
+    await deleteDoc(doc(db, 'examLeaderboard', uid)).catch(() => {});
+  } catch {
+    // Firestore未設定などでも認証アカウントの削除は続行する
+  }
+
+  // 端末に残る学習記録・お試し回数なども消す
+  try {
+    const AsyncStorage = (await import('@react-native-async-storage/async-storage')).default;
+    await AsyncStorage.clear();
+  } catch {
+    // 消せなくても続行
+  }
+
   const { deleteUser } = await import('firebase/auth');
   try {
     await deleteUser(user);

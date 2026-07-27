@@ -17,7 +17,6 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { askTutor, type TutorMessage } from '../services/aiTutor';
 
 const TURN_LIMIT = 6;
-const SESSION_LIMIT = 15;
 
 interface Props {
   visible: boolean;

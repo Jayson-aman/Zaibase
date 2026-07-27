@@ -51,16 +51,11 @@ export default function CertPaywall({
 
   if (hasAccess) return <>{content}</>;
 
-  // 判定中：関数形式の子は hasAccess=false を受け取るので未開放状態で描画できるが、
-  // 素のReactNodeは「未開放」を表現できず、そのまま出すと有料分まで見えてしまう。
-  if (loading) {
-    if (isFn) return <>{content}</>;
-    return (
-      <View style={styles.wrap}>
-        <View style={styles.contentArea} />
-      </View>
-    );
-  }
+  // 判定中：関数形式の子は hasAccess=false を受け取るので未開放状態で描画でき、
+  // 素のReactNodeもそのまま描画する。空Viewにすると、画面全体を子として渡している
+  // 呼び出し元（英検トップなど）で戻るボタンごと消えて真っ白になってしまうため。
+  // 判定は数百ミリ秒で確定し、確定後は下の未加入表示に切り替わる。
+  if (loading) return <>{content}</>;
 
   // 未加入：無料分（freeLimit）を表示しつつ、下部に開放バナーを出す
   return (

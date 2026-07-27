@@ -23,8 +23,14 @@ function capString(v, max) {
  * - maxImages で履歴に残す画像の総数を制限する。制限しないと毎ターン
  *   過去の画像すべてを再送してしまい、1セッションのAPIコストが桁違いに膨らむ。
  *   新しい方から数えて maxImages 枚だけ残す。
+ * - maxTotalChars で履歴全体の合計文字数に上限をかける。1件ずつの上限だけでは
+ *   「上限いっぱいのメッセージ×最大件数」で数十万トークンを送れてしまい、
+ *   1リクエストのAPI費用が桁違いになる。新しい方を優先して残す。
  */
-function sanitizeHistory(history, { maxTurns = 20, maxContentLen = 4000, maxImages = Infinity } = {}) {
+function sanitizeHistory(
+  history,
+  { maxTurns = 20, maxContentLen = 4000, maxImages = Infinity, maxTotalChars = 60000 } = {},
+) {
   if (!Array.isArray(history)) return [];
   const trimmed = history.slice(-maxTurns * 2);
   const out = [];
@@ -57,6 +63,22 @@ function sanitizeHistory(history, { maxTurns = 20, maxContentLen = 4000, maxImag
       continue;
     }
     out.push({ role, content });
+  }
+
+  // 履歴全体の合計文字数に上限をかける（新しい方を優先して残す）。
+  if (Number.isFinite(maxTotalChars)) {
+    let used = 0;
+    let keepFrom = out.length;
+    for (let i = out.length - 1; i >= 0; i -= 1) {
+      const c = out[i].content;
+      const len = typeof c === "string"
+        ? c.length
+        : c.reduce((n, b) => n + (b.type === "text" ? (b.text ? b.text.length : 0) : 0), 0);
+      if (used + len > maxTotalChars) break;
+      used += len;
+      keepFrom = i;
+    }
+    if (keepFrom > 0) out.splice(0, keepFrom);
   }
 
   // 新しい方から数えて maxImages 枚だけ画像を残し、それより古い画像は落とす。

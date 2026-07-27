@@ -236,7 +236,6 @@ exports.addTutorCredits = onCall(
       "failed-precondition",
       "追加クレジットの購入は現在準備中です。"
     );
-    // eslint-disable-next-line no-unreachable
 
     const usageRef = db.collection("aiTutorUsage").doc(uid);
     await usageRef.set(
