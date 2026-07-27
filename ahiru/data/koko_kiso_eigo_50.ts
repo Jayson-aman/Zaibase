@@ -192,7 +192,7 @@ export const kokoKisoEigo50: Question[] = [
     maxOnly: true,
     question: '次の（　）に適切な形（to + 動詞 または 動詞-ing）を入れなさい。\n① I enjoy (　) to music.（音楽を聴くのが好きだ）[listen]\n② She wants (　) a doctor.（医者になりたい）[be]\n③ He stopped (　) English.（英語の勉強をやめた）[study]',
     answer: '① listening　② to be　③ studying',
-    hint: 'enjoy・stop・finish → 動名詞(-ing)。want・hope・decide → 不定詞(to)。',
+    hint: 'enjoy・finish・practice → 動名詞(-ing)。want・hope・decide → 不定詞(to)。stopは両方取れて意味が変わる。',
     explanation: '【日本人がつまずく理由】\n「〜すること」という意味なのに、動詞によってtoかingかが変わる。日本語では区別しないので理解しにくい。\n\n【ルール整理】\n・動名詞(-ing)しか目的語に取れない動詞：enjoy、finish、mind、practice、give up、avoid\n・不定詞(to)しか取れない動詞：want、hope、decide、plan、wish、refuse\n・両方OK（意味が変わる）：remember、forget、try、stop（stop -ing＝〜するのをやめる／stop to do＝〜するために立ち止まる）\n\n【例文で確認】\n○ I enjoy playing tennis.（○）\n× I enjoy to play tennis.（×）\n○ She wants to visit Paris.（○）\n× She wants visiting Paris.（×）\n\n【答え】\n① listening　② to be　③ studying',
     pitfall: '「enjoy to play」や「want playing」のように間違った組み合わせを使うミス。動詞ごとにどちらを取るか覚えるしかない。',
     memoryTip: '"E.M.P.F.G." = Enjoy / Mind / Practice / Finish / Give up → 全部-ing。WANTはto。listen は自動詞なので listen to music と to を忘れずに。',
