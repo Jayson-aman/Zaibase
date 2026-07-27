@@ -17,7 +17,7 @@
 const { onCall, HttpsError } = require("firebase-functions/v2/https");
 const { getFirestore, FieldValue } = require("firebase-admin/firestore");
 const { defineSecret } = require("firebase-functions/params");
-const { REVENUECAT_SECRET_KEY, fetchTierFromRevenueCat } = require("./revenuecat");
+const { REVENUECAT_SECRET_KEY, hasVocabAccess } = require("./revenuecat");
 
 const db = getFirestore();
 const OPENAI_API_KEY = defineSecret("OPENAI_API_KEY");
@@ -62,9 +62,10 @@ exports.speakText = onCall(
     const uid = req.auth?.uid;
     if (!uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
-    // 課金判定はRevenueCatを正とする（英単語Pro・Maxプラン限定機能）
-    const tier = await fetchTierFromRevenueCat(uid);
-    if (tier !== "max" && tier !== "vocab") {
+    // 課金判定はRevenueCatを正とする（英単語Pro・Maxプラン限定機能）。
+    // entitlement を集合で見るので、受験Proと英単語Proを両方買っている人も正しく通る。
+    const allowed = await hasVocabAccess(uid);
+    if (allowed !== true) {
       throw new HttpsError(
         "permission-denied",
         "ネイティブ発音の聞き流しは英単語Pro・Maxプラン限定の機能です。"

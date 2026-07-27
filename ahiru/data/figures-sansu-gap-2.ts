@@ -331,7 +331,7 @@ export const figuresSansuGap2: Record<string, Figure> = {
       { x: 3, y: -1.732, label: 'C' },
       { x: 0, y: 3.464, label: 'A' },
     ],
-    sideLabels: [null, '6cm', null],
+    sideLabels: ['6cm', null, null],
     caption: '∠BAC=60°、BC=6cmが与えられている。AB+AC=8（個々の値は不定）。Rと面積は解答。',
   },
   // 一般の三角形ABCとAからBCへの垂線の足H（数値は与えられていない）。BH,CH,AHの具体的な値は解答。

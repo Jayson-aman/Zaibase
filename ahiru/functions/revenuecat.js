@@ -29,20 +29,30 @@ const ENTITLEMENT_PRO = "pro";
 const ENTITLEMENT_VOCAB = "vocab";
 
 /**
- * RevenueCat から現在有効なティアを取得する。
- * @returns {Promise<"max"|"pro"|"vocab"|"free"|null>}
- *   null = 判定不能（キー未設定・API障害など）。呼び出し元は従来のフォールバックを使う。
+ * RevenueCat から現在有効な entitlement をすべて取得する。
+ *
+ * なぜ「ティア1つ」ではなく集合を返すか:
+ *   pro（受験コンテンツ）と vocab（英語コンテンツ）は別々に買える独立した商品で、
+ *   両方持つ人がいる。これを1つのティアに畳むと、pro+vocab の人が "pro" と判定され、
+ *   vocab 限定機能（ネイティブ発音など）を「買っているのに」拒否されてしまう。
+ *
+ * @returns {Promise<{max: boolean, pro: boolean, vocab: boolean} | null>}
+ *   null = 判定不能（キー未設定・API障害など）。呼び出し元はフォールバックを使う。
  */
-async function fetchTierFromRevenueCat(uid) {
+async function fetchEntitlements(uid) {
   if (!uid) return null;
 
   let key = "";
   try {
     key = REVENUECAT_SECRET_KEY.value();
   } catch {
+    console.error("revenuecat: REVENUECAT_SECRET_KEY が読み出せません（未設定の可能性）");
     return null;
   }
-  if (!key) return null;
+  if (!key) {
+    console.error("revenuecat: REVENUECAT_SECRET_KEY が空です。課金判定ができません");
+    return null;
+  }
 
   let json;
   try {
@@ -51,10 +61,14 @@ async function fetchTierFromRevenueCat(uid) {
       { headers: { Authorization: `Bearer ${key}`, Accept: "application/json" } }
     );
     // 404 = 未購入ユーザー。RevenueCat は購入前でも 200 を返すが、念のため両対応。
-    if (res.status === 404) return "free";
-    if (!res.ok) return null;
+    if (res.status === 404) return { max: false, pro: false, vocab: false };
+    if (!res.ok) {
+      console.error(`revenuecat: API が ${res.status} を返しました。課金判定ができません`);
+      return null;
+    }
     json = await res.json();
-  } catch {
+  } catch (err) {
+    console.error("revenuecat: API 呼び出しに失敗しました", err);
     return null;
   }
 
@@ -69,13 +83,48 @@ async function fetchTierFromRevenueCat(uid) {
     return Number.isFinite(expiresAt) && expiresAt > now;
   };
 
-  if (isActive(ENTITLEMENT_MAX)) return "max";
-  if (isActive(ENTITLEMENT_PRO)) return "pro";
-  if (isActive(ENTITLEMENT_VOCAB)) return "vocab";
+  return {
+    max: isActive(ENTITLEMENT_MAX),
+    pro: isActive(ENTITLEMENT_PRO),
+    vocab: isActive(ENTITLEMENT_VOCAB),
+  };
+}
+
+/**
+ * 英語系コンテンツ（英単語Pro相当）が使えるか。
+ * Max は全部入りなので当然含む。pro だけの人は対象外。
+ */
+async function hasVocabAccess(uid) {
+  const ent = await fetchEntitlements(uid);
+  if (ent === null) return null;
+  return ent.max || ent.vocab;
+}
+
+/** Max（全部入り）限定機能が使えるか。 */
+async function hasMaxAccess(uid) {
+  const ent = await fetchEntitlements(uid);
+  if (ent === null) return null;
+  return ent.max;
+}
+
+/**
+ * 後方互換用。単一ティアに畳むため pro+vocab の判別ができない。
+ * 新しいコードでは fetchEntitlements / hasVocabAccess / hasMaxAccess を使うこと。
+ * @returns {Promise<"max"|"pro"|"vocab"|"free"|null>}
+ */
+async function fetchTierFromRevenueCat(uid) {
+  const ent = await fetchEntitlements(uid);
+  if (ent === null) return null;
+  if (ent.max) return "max";
+  if (ent.pro) return "pro";
+  if (ent.vocab) return "vocab";
   return "free";
 }
 
 module.exports = {
   REVENUECAT_SECRET_KEY,
+  fetchEntitlements,
+  hasVocabAccess,
+  hasMaxAccess,
   fetchTierFromRevenueCat,
 };

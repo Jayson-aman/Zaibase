@@ -21,7 +21,7 @@ const { onCall, HttpsError } = require("firebase-functions/v2/https");
 const { getFirestore, FieldValue } = require("firebase-admin/firestore");
 const { defineSecret } = require("firebase-functions/params");
 const { sanitizeHistory } = require("./_sanitize");
-const { REVENUECAT_SECRET_KEY, fetchTierFromRevenueCat } = require("./revenuecat");
+const { REVENUECAT_SECRET_KEY, hasVocabAccess } = require("./revenuecat");
 
 const db = getFirestore();
 const ANTHROPIC_API_KEY = defineSecret("ANTHROPIC_API_KEY");
@@ -98,14 +98,8 @@ exports.chatEnglishConversation = onCall(
     // 有料判定は RevenueCat を正とする。クライアントの isPaid は詐称できるため
     // 使わない（誰でも有料枠を名乗れてAPIコストが流出する）。
     // 英語系コンテンツは英単語Pro（vocab）または全部入りMaxで開放。
-    const rcTier = await fetchTierFromRevenueCat(uid);
-    let tier = rcTier;
-    if (tier === null) {
-      // RevenueCat に問い合わせできない場合のみ Firestore の tier にフォールバック
-      const userSnap = await db.collection("users").doc(uid).get();
-      tier = userSnap.exists ? (userSnap.data()?.tier ?? "free") : "free";
-    }
-    const paid = tier === "max" || tier === "vocab";
+    // entitlement を集合で見るので、受験Proと英単語Proの両方を買っている人も正しく通る。
+    const paid = (await hasVocabAccess(uid)) === true;
     const dailyLimit = paid ? PAID_DAILY_LIMIT : FREE_DAILY_LIMIT;
 
     await checkAndIncrementUsage(uid, dailyLimit);

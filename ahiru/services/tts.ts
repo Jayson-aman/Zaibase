@@ -32,21 +32,35 @@ async function playAudioUrl(url: string): Promise<void> {
   }
 
   // Native: expo-audio（expo-av は SDK 56 で廃止）
+  // 再生が終わらない/失敗した場合でも必ず解決させる。解決しないと呼び出し元の
+  // ローディング表示（🔊ボタン）が戻らず、二度と押せなくなる。
   try {
     const { createAudioPlayer } = await import('expo-audio');
     const player = createAudioPlayer({ uri: url });
     player.play();
     await new Promise<void>((resolve) => {
-      const sub = player.addListener('playbackStatusUpdate', (status) => {
-        if (status.didJustFinish) {
+      let done = false;
+      const finish = () => {
+        if (done) return;
+        done = true;
+        clearTimeout(timer);
+        try {
           sub?.remove?.();
           player.remove();
-          resolve();
+        } catch {
+          // 既に破棄済みなら無視
         }
+        resolve();
+      };
+      const sub = player.addListener('playbackStatusUpdate', (status) => {
+        if (status.didJustFinish) finish();
       });
+      // 音声は最長でも数十秒。保険として60秒で必ず打ち切る。
+      const timer = setTimeout(finish, 60000);
     });
   } catch {
-    await speakWithDevice(url);
+    // 音声データのURLではなく元のテキストを読ませたいので、ここでは端末TTSを呼ばない
+    // （data:URLをそのまま読み上げると数十万文字の base64 を読み上げてしまう）。
   }
 }
 
@@ -64,7 +78,7 @@ export async function speakWithDevice(text: string): Promise<void> {
   }
 
   try {
-    const Speech = (await import('expo-speech')).default;
+    const Speech = await import('expo-speech');
     await new Promise<void>((resolve) => {
       Speech.speak(text, {
         language: 'en-US',
@@ -92,7 +106,7 @@ export async function speakJapanese(text: string): Promise<void> {
   }
 
   try {
-    const Speech = (await import('expo-speech')).default;
+    const Speech = await import('expo-speech');
     await new Promise<void>((resolve) => {
       Speech.speak(text, {
         language: 'ja-JP',
@@ -113,7 +127,7 @@ export async function stopSpeaking(): Promise<void> {
     return;
   }
   try {
-    const Speech = (await import('expo-speech')).default;
+    const Speech = await import('expo-speech');
     await Speech.stop();
   } catch {
     // 無視

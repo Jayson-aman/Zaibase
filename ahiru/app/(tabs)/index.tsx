@@ -231,7 +231,7 @@ export default function HomeScreen() {
       );
       return total > 0;
     });
-  }, []);
+  }, [questionsBySubject]);
 
   // Schools sorted by level then name（専用問題が実際にある学校のみ表示）
   const sortedSchools = React.useMemo(() => {
@@ -667,8 +667,19 @@ export default function HomeScreen() {
           <Text style={styles.infoText}>① コース・難易度・科目を選んでスタート</Text>
           <Text style={styles.infoText}>② 問題カードをタップして答えを確認</Text>
           <Text style={styles.infoText}>③ 解説を読んで「なぜその答えか」を理解</Text>
-          <Text style={styles.infoText}>④ 進捗タブで苦手分析を確認</Text>
+          <Text style={styles.infoText}>④ マイページで苦手分析を確認</Text>
         </View>
+
+        {/* マイページ（学習記録・ランキング・アカウント・規約）への導線。
+            タブには出していないため、ここから開けるようにしておく。 */}
+        <TouchableOpacity
+          style={styles.myPageCard}
+          onPress={() => router.push('/progress')}
+          activeOpacity={0.85}
+        >
+          <Text style={styles.myPageText}>👤 マイページ（記録・ランキング・アカウント設定）</Text>
+          <Text style={styles.myPageArrow}>›</Text>
+        </TouchableOpacity>
 
         <View style={styles.inspirationCard}>
           <Text style={styles.inspirationText}>
@@ -1256,6 +1267,20 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: D.glassBorder,
   },
+  myPageCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: D.glassMid,
+    borderRadius: 12,
+    paddingHorizontal: 18,
+    paddingVertical: 16,
+    marginBottom: 14,
+    borderWidth: 1,
+    borderColor: D.glassBorder,
+  },
+  myPageText: { flex: 1, fontSize: 15, fontWeight: '700', color: D.white },
+  myPageArrow: { fontSize: 22, color: D.soft, fontWeight: '700' },
   infoTitle: {
     fontFamily: SERIF,
     fontSize: 18,

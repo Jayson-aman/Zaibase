@@ -252,13 +252,6 @@ export const figuresSansuGap1: Record<string, Figure> = {
     caption: '縦:横:高さ=3k:4k:12k、対角線の長さ=26cm',
   },
 
-  // 1辺10cmの正方形（与件）に内接する円（半径5cm）。花びらは正方形の四隅にできる部分。面積は解答なので示さない。
-  nichinoken_figure_01: {
-    kind: 'circle',
-    radiusLabel: '5cm',
-    showCenter: true,
-    caption: '1辺10cmの正方形に内接する円。花びらは正方形の四隅にできる部分',
-  },
 
   // 1辺10cmの正方形（与件）の1つの角を中心とする半径10cm・中心角90°のおうぎ形。三日月部分の面積は解答なので示さない。
   nichinoken_figure_02: {
@@ -551,13 +544,6 @@ export const figuresSansuGap1: Record<string, Figure> = {
     kind: 'solid',
     shape: 'cuboid',
     labels: { width: '4', depth: '3', height: '5' },
-  },
-
-  // 円錐。底面の半径3cm・母線9cm（ともに与件）。高さ・体積・中心角は解答なので示さない。
-  koko_sansu_ex_16_048: {
-    kind: 'solid',
-    shape: 'cone',
-    labels: { radius: '3cm', slant: '9cm' },
   },
 
   // 放物線 y=x²-6x+5（与件）。頂点・x軸との交点・囲まれた面積は解答なので点や塗りつぶしは示さない。
@@ -873,9 +859,8 @@ export const figuresSansuGap1: Record<string, Figure> = {
   // 縦4cm・横6cm（与件）の長方形に内接する最大の円（半径2cm＝短辺の半分）。面積は解答なので示さない。
   kiso_s_060: {
     kind: 'circle',
-    radiusLabel: '2cm',
     showCenter: true,
-    caption: '縦4cm・横6cmの長方形に内接する最大の円（直径=短辺4cm）',
+    caption: '縦4cm・横6cmの長方形に入る最大の円。半径は解答なので示さない。',
   },
 
   // 1辺6cmの立方体（与件）。表面積は解答なので示さない。

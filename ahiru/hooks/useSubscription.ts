@@ -31,15 +31,25 @@ export function useSubscription(): SubscriptionState {
         if (mounted.current) setLoading(false);
       });
 
+    // addCustomerInfoUpdateListener は void を返す（関数ではない）。
+    // 解除には removeCustomerInfoUpdateListener に同じ関数参照を渡す必要がある。
+    // ここを間違えるとリスナーが解除されず、画面を開くたびに増え続ける。
     let cleanup: (() => void) | null = null;
+    let disposed = false;
     if (Platform.OS !== 'web') {
       (async () => {
         try {
           const Purchases = (await import('react-native-purchases')).default;
-          const removeListener = Purchases.addCustomerInfoUpdateListener((info) => {
+          const listener = (info: Parameters<typeof Purchases.addCustomerInfoUpdateListener>[0] extends (arg: infer A) => void ? A : never) => {
             if (mounted.current) setTier(tierFromCustomerInfo(info));
-          }) as (() => void) | undefined;
-          cleanup = () => removeListener?.();
+          };
+          if (disposed) return;
+          Purchases.addCustomerInfoUpdateListener(listener);
+          cleanup = () => {
+            try {
+              Purchases.removeCustomerInfoUpdateListener(listener);
+            } catch {}
+          };
         } catch {}
       })();
     }
@@ -51,6 +61,7 @@ export function useSubscription(): SubscriptionState {
 
     return () => {
       mounted.current = false;
+      disposed = true;
       cleanup?.();
       unsubscribe();
     };

@@ -72,6 +72,37 @@ export async function signOutUser(): Promise<void> {
   await logoutUser();
 }
 
+/**
+ * アカウントを完全に削除する。
+ *
+ * Appleのガイドライン5.1.1(v)により、アプリ内でアカウントを作成できる場合は
+ * アプリ内で削除もできる必要がある（無いと審査で却下される）。
+ *
+ * 直前にログインしていないとFirebaseが `auth/requires-recent-login` を返すため、
+ * その場合は再ログインを促すメッセージを出す。
+ */
+export async function deleteAccount(): Promise<void> {
+  if (!isFirebaseConfigured()) throw new AuthError('この機能は準備中です');
+  const auth = await getFirebaseAuth();
+  const user = auth.currentUser;
+  if (!user) throw new AuthError('ログインしていません。');
+
+  const { deleteUser } = await import('firebase/auth');
+  try {
+    await deleteUser(user);
+  } catch (e: any) {
+    if (e?.code === 'auth/requires-recent-login') {
+      throw new AuthError(
+        'セキュリティのため、一度ログアウトしてもう一度ログインしてから削除してください。',
+      );
+    }
+    throw new AuthError(friendlyError(e?.code));
+  }
+  // 購読状況はApple/Googleのアカウントに紐づくため、アカウント削除では解約されない。
+  // 呼び出し側でその旨を必ず案内すること。
+  await logoutUser();
+}
+
 export async function sendResetEmail(email: string): Promise<void> {
   if (!isFirebaseConfigured()) throw new AuthError('この機能は準備中です');
   const auth = await getFirebaseAuth();

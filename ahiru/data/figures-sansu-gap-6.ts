@@ -333,8 +333,8 @@ export const figuresSansuGap6: Record<string, Figure> = {
   koko_kiso_sansu_40: {
     kind: 'circle',
     points: [
-      { angle: 160, label: 'A' },
-      { angle: 20, label: 'B' },
+      { angle: 125, label: 'A' },
+      { angle: 55, label: 'B' },
       { angle: -60, label: 'P' },
       { angle: -100, label: 'Q' },
     ],

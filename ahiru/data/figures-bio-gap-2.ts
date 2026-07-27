@@ -53,6 +53,7 @@ export const figuresBioGap2: Record<string, Figure> = {
   re_070: {
     kind: 'bioDiagram',
     template: 'flower',
+    hideParts: ['gaku', 'kaben', 'yaku', 'kashi', 'chuto', 'kachu'],
   },
   // 心臓。4つの部屋すべてと体循環・肺循環の流れを説明させる設問なので、全ラベル表示の参考図。
   re_075: {
@@ -68,6 +69,7 @@ export const figuresBioGap2: Record<string, Figure> = {
   rx2_028: {
     kind: 'bioDiagram',
     template: 'digestiveSystem',
+    hideParts: ['kuchi', 'shokudou', 'i', 'shouchou', 'daichou', 'koumon'],
   },
   // 消化系。でんぷんを消化する消化液を2つ答えさせる設問なので、全ラベル表示の参考図。
   rika_gp_24: {
@@ -93,6 +95,7 @@ export const figuresBioGap2: Record<string, Figure> = {
   term1_2026_chugaku_rika_027: {
     kind: 'bioDiagram',
     template: 'digestiveSystem',
+    hideParts: ['kuchi', 'shokudou', 'i', 'shouchou', 'daichou', 'koumon'],
   },
   // 種子のつくり。子葉にたくわえられたでんぷんが使われて減る理由を問う設問で、子葉の位置確認用に全ラベル表示。
   term1_2026_chugaku_rika_043: {
@@ -108,6 +111,7 @@ export const figuresBioGap2: Record<string, Figure> = {
   tokyo_gakushuin_rika_02: {
     kind: 'bioDiagram',
     template: 'digestiveSystem',
+    hideParts: ['kuchi', 'shokudou', 'i', 'shouchou', 'daichou', 'koumon'],
   },
   // 消化系。問2で小腸吸収後まず運ばれる器官（肝臓）を答えさせるので、肝臓のラベルだけ隠す。
   koko_meidai_rika_03: {

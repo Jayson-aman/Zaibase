@@ -30,7 +30,7 @@ const { onCall, HttpsError } = require("firebase-functions/v2/https");
 const { sanitizeHistory, assertImageSize, capString } = require("./_sanitize");
 const { getFirestore, FieldValue } = require("firebase-admin/firestore");
 const { defineSecret } = require("firebase-functions/params");
-const { REVENUECAT_SECRET_KEY, fetchTierFromRevenueCat } = require("./revenuecat");
+const { REVENUECAT_SECRET_KEY, hasMaxAccess } = require("./revenuecat");
 
 const db = getFirestore();
 const ANTHROPIC_API_KEY = defineSecret("ANTHROPIC_API_KEY");
@@ -132,11 +132,14 @@ exports.askTutor = onCall(
     const userRef = db.collection("users").doc(uid);
     const userSnap = await userRef.get();
     const userData = userSnap.exists ? userSnap.data() : {};
-    const rcTier = await fetchTierFromRevenueCat(uid);
-    const tier = rcTier ?? (userData?.tier ?? "free");
+    const isMax = (await hasMaxAccess(uid)) === true;
     const trialAiUsed = userData?.trialAiUsed ?? false;
 
-    if (tier !== "max") {
+    // 無料体験は「1セッション」であって「1メッセージ」ではない。
+    // 継続中の会話（isNewSession=false）まで弾くと、体験が1往復で切れて
+    // 会話の途中で遮断されてしまうため、判定は新規セッション時のみ行う。
+    // 継続には既存のセッション文書が必要で、その作成はここを通るので抜け道にはならない。
+    if (!isMax && isNewSession) {
       if (trialAiUsed) {
         throw new HttpsError(
           "permission-denied",
@@ -144,9 +147,7 @@ exports.askTutor = onCall(
         );
       }
       // 初回のみ許可 → 体験済みマークを付ける
-      if (isNewSession) {
-        await userRef.set({ trialAiUsed: true, updatedAt: FieldValue.serverTimestamp() }, { merge: true });
-      }
+      await userRef.set({ trialAiUsed: true, updatedAt: FieldValue.serverTimestamp() }, { merge: true });
     }
 
     const turnCount = await getOrCreateSession(uid, sessionId, isNewSession);
@@ -225,6 +226,15 @@ exports.addTutorCredits = onCall(
     if (typeof creditsToAdd !== "number" || creditsToAdd <= 0 || creditsToAdd > 20) {
       throw new HttpsError("invalid-argument", "creditsToAdd は1〜20の数値です");
     }
+
+    // 消耗型IAPのレシート検証が未実装のため、この入口は閉じておく。
+    // 開けたままだと誰でも好きなだけクレジットを足せてしまい、
+    // 高コストなOpusセッションが無制限に使われてAPI課金が青天井になる。
+    throw new HttpsError(
+      "failed-precondition",
+      "追加クレジットの購入は現在準備中です。"
+    );
+    // eslint-disable-next-line no-unreachable
 
     const usageRef = db.collection("aiTutorUsage").doc(uid);
     await usageRef.set(

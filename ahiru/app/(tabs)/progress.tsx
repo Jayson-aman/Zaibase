@@ -19,7 +19,7 @@ import { fetchMyRanking, RankingResult } from '../../services/ranking';
 import Paywall from '../../components/Paywall';
 import SubjectIcon from '../../components/SubjectIcon';
 import { useAuthUser } from '../../hooks/useAuthUser';
-import { signOutUser } from '../../services/auth';
+import { signOutUser, deleteAccount, AuthError } from '../../services/auth';
 
 const SUBJECTS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
 
@@ -37,6 +37,35 @@ function AccountCard() {
       },
     ]);
   }
+  // Appleのガイドライン5.1.1(v)により、アプリ内でアカウント削除ができる必要がある。
+  async function handleDeleteAccount() {
+    Alert.alert(
+      'アカウントを削除',
+      'アカウントと学習記録を完全に削除します。この操作は取り消せません。\n\n' +
+        '※ サブスクリプションはApple IDに紐づいているため、この操作では解約されません。' +
+        '解約は「設定」アプリ →（あなたの名前）→「サブスクリプション」から行ってください。',
+      [
+        { text: 'キャンセル', style: 'cancel' },
+        {
+          text: '削除する',
+          style: 'destructive',
+          onPress: () => {
+            deleteAccount()
+              .then(() => {
+                Alert.alert('削除しました', 'アカウントを削除しました。ご利用ありがとうございました。');
+              })
+              .catch((e) => {
+                Alert.alert(
+                  '削除できませんでした',
+                  e instanceof AuthError ? e.message : 'もう一度お試しください。',
+                );
+              });
+          },
+        },
+      ],
+    );
+  }
+
   if (isLoggedIn) {
     return (
       <View style={styles.accountCard}>
@@ -45,6 +74,9 @@ function AccountCard() {
         <Text style={styles.accountNote}>学習の記録やご購入内容を引き継げます。</Text>
         <TouchableOpacity style={styles.accountLogout} onPress={handleLogout} activeOpacity={0.85}>
           <Text style={styles.accountLogoutText}>ログアウト</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.accountDelete} onPress={handleDeleteAccount} activeOpacity={0.85}>
+          <Text style={styles.accountDeleteText}>アカウントを削除</Text>
         </TouchableOpacity>
       </View>
     );
@@ -430,6 +462,8 @@ const styles = StyleSheet.create({
   accountNote: { fontSize: 12, color: '#64748B', marginTop: 6, lineHeight: 18 },
   accountLogout: { marginTop: 12, alignSelf: 'flex-start', paddingVertical: 8, paddingHorizontal: 16, borderRadius: 10, backgroundColor: '#F1F5F9' },
   accountLogoutText: { color: '#64748B', fontWeight: '700', fontSize: 14 },
+  accountDelete: { marginTop: 8, alignSelf: 'flex-start', paddingVertical: 8, paddingHorizontal: 16, borderRadius: 10, borderWidth: 1, borderColor: '#FCA5A5' },
+  accountDeleteText: { color: '#DC2626', fontWeight: '700', fontSize: 14 },
   accountCardCta: {
     backgroundColor: '#0EA5E9',
     marginHorizontal: 20,

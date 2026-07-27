@@ -209,7 +209,9 @@ export default function CoachScreen() {
   }
 
   async function handleAskCoach() {
-    if (!isPro) { setPaywallVisible(true); return; }
+    // サーバー（getWeakPointCoaching）はMax限定。ここをProで通すと、
+    // Pro購入者がボタンを押した瞬間に「Maxにアップグレードして」と拒否される。
+    if (!isMax) { setPaywallVisible(true); return; }
     if (!worstSubject) {
       Alert.alert('まだデータがありません', '問題に挑戦するとAIが弱点を分析できるようになります。');
       return;
@@ -313,7 +315,9 @@ export default function CoachScreen() {
                     <ActivityIndicator color="#FFF" />
                   ) : (
                     <Text style={s.coachBtnText}>
-                      🤖 {subjectInfo[worstSubject].name}の弱点をAIに相談する
+                      {isMax
+                        ? `🤖 ${subjectInfo[worstSubject].name}の弱点をAIに相談する`
+                        : `🤖 AIに相談する（Maxプラン ${MAX_PRICE_LABEL}）`}
                     </Text>
                   )}
                 </TouchableOpacity>

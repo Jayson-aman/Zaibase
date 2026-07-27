@@ -16,7 +16,7 @@
 const { onCall, HttpsError } = require("firebase-functions/v2/https");
 const { getFirestore, FieldValue } = require("firebase-admin/firestore");
 const { defineSecret } = require("firebase-functions/params");
-const { REVENUECAT_SECRET_KEY, fetchTierFromRevenueCat } = require("./revenuecat");
+const { REVENUECAT_SECRET_KEY, hasMaxAccess } = require("./revenuecat");
 
 const db = getFirestore();
 const ANTHROPIC_API_KEY = defineSecret("ANTHROPIC_API_KEY");
@@ -59,8 +59,8 @@ exports.getWeakPointCoaching = onCall(
     if (!uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
     // 課金判定はRevenueCatを正とする（Maxプラン限定機能）
-    const tier = await fetchTierFromRevenueCat(uid);
-    if (tier !== "max") {
+    const allowed = await hasMaxAccess(uid);
+    if (allowed !== true) {
       throw new HttpsError(
         "permission-denied",
         "AI弱点コーチはMaxプラン限定の機能です。Maxプランにアップグレードしてね！"

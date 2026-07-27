@@ -140,7 +140,13 @@ function SongCard({ song: s, catColor }: { song: Song; catColor: string }) {
   // 画面遷移・カード破棄・別カードの再生開始時に、鳴らしっぱなしにしない
   useEffect(() => {
     return () => {
-      player.pause();
+      // expo-audio 側のクリーンアップが先に走って player が解放済みのことがあるため、
+      // pause() は必ず try で囲む（囲まないと画面を戻るたびにクラッシュする）。
+      try {
+        player.pause();
+      } catch {
+        // 既に破棄済みなら無視
+      }
       if (speakingRef.current) stopSpeaking();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps

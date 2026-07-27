@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import {
   View,
   Text,
@@ -178,6 +178,9 @@ export default function QuizScreen() {
   const [wrongIds, setWrongIds] = useState<string[]>([]);
   const [feedback, setFeedback] = useState<'correct' | 'wrong' | null>(null);
   const [waitingNext, setWaitingNext] = useState(false);
+  // 正解/不正解ボタンの二重タップ防止。二重に走ると currentIndex が2つ進み、
+  // 最後の2問で範囲外になって落ちる。
+  const answeringRef = useRef(false);
   const [showPaywall, setShowPaywall] = useState(false);
   const [showTutorChat, setShowTutorChat] = useState(false);
   // 出題キュー（基礎問題の差し込みで伸びることがある）
@@ -246,6 +249,7 @@ export default function QuizScreen() {
 
   async function advanceOrFinish(currentScore: number, currentWrongIds: string[]) {
     setWaitingNext(false);
+    answeringRef.current = false;
     if (currentIndex + 1 >= total) {
       if (!savedProgress) {
         setSavedProgress(true);
@@ -262,11 +266,15 @@ export default function QuizScreen() {
   }
 
   async function handleAnswer(correct: boolean) {
+    if (answeringRef.current) return;
+    answeringRef.current = true;
+
     // 無料ユーザーのお試し問題数チェック
     if (!isPro && !isMax) {
       const expired = await isTrialExpired();
       if (expired) {
         setShowPaywall(true);
+        answeringRef.current = false;
         return;
       }
       await incrementTrialQuestions();

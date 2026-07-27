@@ -137,7 +137,25 @@ export function initRevenueCat(): void {
       }
       const apiKey =
         Platform.select({ ios: RC_KEY_IOS, android: RC_KEY_ANDROID }) ?? RC_KEY_IOS;
-      Purchases.configure({ apiKey });
+
+      // RevenueCat の app_user_id を Firebase の uid に合わせる。
+      // これをしないと、ログインせずに購入した人は RevenueCat 側が匿名IDになり、
+      // サーバー（Cloud Functions）が Firebase uid で問い合わせても該当なし＝無料扱いになる。
+      // その結果「課金したのにAI機能が使えない」という致命的な状態になる。
+      // 匿名サインインでも uid は安定して永続化されるので、これで購入と結びつく。
+      let appUserID: string | null = null;
+      try {
+        const { getAuthUid } = await import('./firebaseClient');
+        appUserID = await getAuthUid();
+      } catch {
+        // Firebase 未設定時は RevenueCat 側の匿名IDにフォールバック
+      }
+
+      if (appUserID) {
+        Purchases.configure({ apiKey, appUserID });
+      } else {
+        Purchases.configure({ apiKey });
+      }
     } catch {
       // RevenueCat 未設定時は無視
     }

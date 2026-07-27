@@ -1266,7 +1266,7 @@ export const figuresSansuGap4: Record<string, Figure> = {
     kind: 'solid',
     shape: 'cylinder',
     labels: { radius: '5cm', height: '12cm' },
-    caption: '同じ底面・高さの円錐の体積は円柱の1/3。円錐の体積は解答。',
+    caption: '底面の半径5cm・高さ12cmの円柱。同じ底面・高さの円錐と体積を比べる（比は解答）。',
   },
   // 半径2cmの円(与えられた値)が1辺8cmの正方形(与えられた値)の外周を外側から1周する。円の中心が描く線の長さは解答。
   sansu_gp_44: {

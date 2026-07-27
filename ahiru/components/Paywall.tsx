@@ -98,8 +98,12 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
     }
   }
 
-  const proPrice = (proProd as any)?.priceString ?? PRO_PRICE_LABEL;
-  const maxPrice = (maxProd as any)?.priceString ?? MAX_PRICE_LABEL;
+  // ストアの priceString は「¥1,980」のように期間を含まない。
+  // Appleのガイドライン3.1.2で課金期間の明示が必須なため、必ず「/月」を付ける。
+  const withPeriod = (priceString: string | undefined, fallback: string) =>
+    priceString ? `${priceString}/月` : fallback;
+  const proPrice = withPeriod((proProd as any)?.priceString, PRO_PRICE_LABEL);
+  const maxPrice = withPeriod((maxProd as any)?.priceString, MAX_PRICE_LABEL);
 
   return (
     <Modal
