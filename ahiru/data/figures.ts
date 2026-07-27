@@ -260,6 +260,8 @@ import { figuresSansuGap4 } from './figures-sansu-gap-4';
 import { figuresSansuGap5 } from './figures-sansu-gap-5';
 import { figuresSansuGap6 } from './figures-sansu-gap-6';
 import { figuresBio1 } from './figures-bio-1';
+import { figuresBioGap1 } from './figures-bio-gap-1';
+import { figuresBioGap2 } from './figures-bio-gap-2';
 
 export const figures: Record<string, Figure> = {
   ...figuresSample,
@@ -301,6 +303,8 @@ export const figures: Record<string, Figure> = {
   ...figuresSansuGap5,
   ...figuresSansuGap6,
   ...figuresBio1,
+  ...figuresBioGap1,
+  ...figuresBioGap2,
 };
 
 export function getFigure(questionId: string): Figure | null {
