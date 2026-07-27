@@ -254,6 +254,7 @@ import { figuresCoreSansu } from './figures-core-sansu';
 import { figuresCoreRika } from './figures-core-rika';
 import { figuresKokoSansu } from './figures-koko-sansu';
 import { figuresKokoRika } from './figures-koko-rika';
+import { figuresSansuGap1 } from './figures-sansu-gap-1';
 import { figuresSansuGap2 } from './figures-sansu-gap-2';
 import { figuresSansuGap3 } from './figures-sansu-gap-3';
 import { figuresSansuGap4 } from './figures-sansu-gap-4';
@@ -297,6 +298,7 @@ export const figures: Record<string, Figure> = {
   ...figuresKokoNadaFill,
   ...figuresKokoNishiyamatoFill,
   ...figuresKokoMeidaiFill,
+  ...figuresSansuGap1,
   ...figuresSansuGap2,
   ...figuresSansuGap3,
   ...figuresSansuGap4,
