@@ -167,6 +167,26 @@ export type JapanMapFigure = {
   caption?: string;
 };
 
+// 生物の構造図（花・種子・葉・こん虫・心臓・消化器官・目・耳など、名称が
+// 覚えにくい部分をラベル付きの模式図で示す）。テンプレートごとに固定の
+// 部位キーがあり、hidePartsで「答えにあたる部位」のラベルだけ隠せる
+// （その部位を指す引き出し線は残るが文字は「？」になる）。
+export type BioDiagramTemplate =
+  | 'flower'
+  | 'seed'
+  | 'leafCrossSection'
+  | 'insectBody'
+  | 'heart'
+  | 'digestiveSystem'
+  | 'eye'
+  | 'ear';
+export type BioDiagramFigure = {
+  kind: 'bioDiagram';
+  template: BioDiagramTemplate;
+  hideParts?: string[]; // 隠したい部位キー（そのテンプレートの部位一覧はFigureView.tsx参照）
+  caption?: string;
+};
+
 // 地層・柱状図（複数地点の対比）
 export type StratumFigure = {
   kind: 'stratum';
@@ -197,7 +217,8 @@ export type Figure =
   | CircuitFigure
   | NetFigure
   | StratumFigure
-  | JapanMapFigure;
+  | JapanMapFigure
+  | BioDiagramFigure;
 
 // 問題ID → 図形。各バッチファイルから登録をマージする。
 import { figuresSample } from './figures-sample';
@@ -233,6 +254,11 @@ import { figuresCoreSansu } from './figures-core-sansu';
 import { figuresCoreRika } from './figures-core-rika';
 import { figuresKokoSansu } from './figures-koko-sansu';
 import { figuresKokoRika } from './figures-koko-rika';
+import { figuresSansuGap2 } from './figures-sansu-gap-2';
+import { figuresSansuGap4 } from './figures-sansu-gap-4';
+import { figuresSansuGap5 } from './figures-sansu-gap-5';
+import { figuresSansuGap6 } from './figures-sansu-gap-6';
+import { figuresBio1 } from './figures-bio-1';
 
 export const figures: Record<string, Figure> = {
   ...figuresSample,
@@ -268,6 +294,11 @@ export const figures: Record<string, Figure> = {
   ...figuresKokoNadaFill,
   ...figuresKokoNishiyamatoFill,
   ...figuresKokoMeidaiFill,
+  ...figuresSansuGap2,
+  ...figuresSansuGap4,
+  ...figuresSansuGap5,
+  ...figuresSansuGap6,
+  ...figuresBio1,
 };
 
 export function getFigure(questionId: string): Figure | null {
