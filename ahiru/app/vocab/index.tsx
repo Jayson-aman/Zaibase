@@ -69,6 +69,11 @@ const LEVEL_MAP: Record<string, string> = {
 const TYPE_FILTER = ['全て', '単語', '熟語', '英会話'] as const;
 const LISTEN_INTERVAL_MS = 4500;
 
+// 無料で試せる単語数。英検対策と同じ「一部無料・続きは加入」方式に合わせる。
+// 全部無料だと、英単語Proの目玉として宣伝している内容が実際には無料で
+// 読めてしまい、宣伝と実態が食い違う。
+const FREE_WORD_LIMIT = 50;
+
 export default function VocabScreen() {
   const router = useRouter();
   const { hasVocab } = useVocabSubscription();
@@ -109,7 +114,13 @@ export default function VocabScreen() {
     return a;
   }, [levelFilter, typeFilter, shuffleKey]);
 
-  const card: VocabEntry | undefined = filtered[cardIndex];
+  // 未加入は先頭 FREE_WORD_LIMIT 語まで（フィルターごとに無料分を用意する）
+  const visible = useMemo(
+    () => (hasVocabPro ? filtered : filtered.slice(0, FREE_WORD_LIMIT)),
+    [filtered, hasVocabPro],
+  );
+
+  const card: VocabEntry | undefined = visible[cardIndex];
 
   // 用法・差がつきノート：カード自身に無ければ共通ノートで補う
   const usage = card ? vocabUsageNotes[card.word.toLowerCase()] : undefined;
@@ -137,14 +148,14 @@ export default function VocabScreen() {
     listenTimer.current = setInterval(() => {
       setFlipped(false);
       flipAnim.setValue(0);
-      setCardIndex(i => (filtered.length > 0 ? (i + 1) % filtered.length : 0));
+      setCardIndex(i => (visible.length > 0 ? (i + 1) % visible.length : 0));
     }, LISTEN_INTERVAL_MS);
     return () => {
       if (listenTimer.current) clearInterval(listenTimer.current);
       // 再生中の音声も止める。止めないとホームに戻っても読み上げが続く。
       stopSpeaking().catch(() => {});
     };
-  }, [isListening, cardIndex, filtered.length, hasVocabPro]);
+  }, [isListening, cardIndex, visible.length, hasVocabPro]);
 
   const handleFlip = useCallback(() => {
     Animated.spring(flipAnim, { toValue: flipped ? 0 : 1, useNativeDriver: true, friction: 8 }).start();
@@ -170,8 +181,8 @@ export default function VocabScreen() {
   }, [card]);
 
   const resetCard = () => { setFlipped(false); flipAnim.setValue(0); };
-  const goNext = () => { resetCard(); setCardIndex(i => (filtered.length > 0 ? (i + 1) % filtered.length : 0)); };
-  const goPrev = () => { resetCard(); setCardIndex(i => (filtered.length > 0 ? (i - 1 + filtered.length) % filtered.length : 0)); };
+  const goNext = () => { resetCard(); setCardIndex(i => (visible.length > 0 ? (i + 1) % visible.length : 0)); };
+  const goPrev = () => { resetCard(); setCardIndex(i => (visible.length > 0 ? (i - 1 + visible.length) % visible.length : 0)); };
   const changeFilter = (lv: string, tp: string) => { setLevelFilter(lv); setTypeFilter(tp); setCardIndex(0); resetCard(); };
 
   const frontRotate = flipAnim.interpolate({ inputRange: [0,1], outputRange: ['0deg','180deg'] });
@@ -243,8 +254,19 @@ export default function VocabScreen() {
           ))}
         </View>
 
+        {!hasVocabPro && (
+          <TouchableOpacity style={s.freeLimitBanner} onPress={() => setShowPaywall(true)} activeOpacity={0.85}>
+            <Text style={s.freeLimitText}>
+              無料で{FREE_WORD_LIMIT}語まで試せます。全{filtered.length}語は英単語Proで解放 ▸
+            </Text>
+          </TouchableOpacity>
+        )}
+
         <View style={s.progressRow}>
-          <Text style={s.progress}>{cardIndex + 1} / {filtered.length}　🔀ランダム出題</Text>
+          <Text style={s.progress}>
+            {cardIndex + 1} / {visible.length}
+            {!hasVocabPro && `（無料分・全${filtered.length}語）`}　🔀ランダム出題
+          </Text>
           <TouchableOpacity
             style={s.shuffleBtn}
             onPress={() => { resetCard(); setCardIndex(0); setShuffleKey(k => k + 1); }}
@@ -527,6 +549,8 @@ const glassWeb: any = Platform.OS === 'web'
 const s = StyleSheet.create({
   safe:              { flex: 1, backgroundColor: D.bg },
   scroll:            { padding: 16, paddingBottom: 40 },
+  freeLimitBanner:   { backgroundColor: D.goldDim, borderWidth: 1, borderColor: D.goldBorder, borderRadius: 10, paddingHorizontal: 14, paddingVertical: 10, marginBottom: 10 },
+  freeLimitText:     { fontSize: 13, fontWeight: '700', color: D.gold, textAlign: 'center' },
   backRow:           { alignSelf: 'flex-start', paddingVertical: 8, paddingHorizontal: 4 },
   backText:          { fontSize: 16, fontWeight: '700', color: D.gold },
   title:             { fontSize: 24, fontWeight: '800', color: D.gold, textAlign: 'center', marginTop: 8 },

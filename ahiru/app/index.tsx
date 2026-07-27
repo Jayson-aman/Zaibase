@@ -395,8 +395,8 @@ export default function LandingPage() {
             {[
               '✓ 無料プランの全機能',
               '✓ 聞き流しモード（全5科目）',
-              '✓ 地理マップ全レイヤー',
-              '✓ 動く図解・アニメ解説',
+              '✓ 全13,000問＋難関校の発展問題',
+              '✓ くわしい解説・覚え方つき',
             ].map((f) => (
               <Text key={f} style={[styles.planFeature, { color: '#7A3FD0' }]}>{f}</Text>
             ))}
