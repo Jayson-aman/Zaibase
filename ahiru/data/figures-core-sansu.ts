@@ -101,7 +101,7 @@ export const figuresCoreSansu: Record<string, Figure> = {
       { angle: 312 },
       { angle: 336 },
     ],
-    caption: '周囲120m ÷ 8m = 15本（円形は本数＝間隔数）',
+    caption: '周囲120mの円形の池に8mおきに木を植える（円形は本数＝間隔数）',
   },
 
   // 男子:女子 = 3:2、全40人 → 男子24人・女子16人。

@@ -86,7 +86,7 @@ export const figuresKokoRika: Record<string, Figure> = {
     ],
     sideLabels: ['水平面', '垂直（高さ）', '斜面'],
     rightAngles: [1],
-    caption: '傾き30°の斜面。重力W=mg=49Nを斜面方向 Wsin30°=24.5N と垂直方向 Wcos30°≈42.4N に分解',
+    caption: '傾き30°の斜面。重力Wを斜面方向（Wsin30°）と斜面に垂直な方向（Wcos30°）に分解する',
   },
 
   // oyo_05：並列回路（6Ωと3Ω、電源100V）
@@ -181,7 +181,7 @@ export const figuresKokoRika: Record<string, Figure> = {
   koko_oyo_rika_38: {
     kind: 'chemEquation',
     equation: 'C2H5OH + 3O2 -> 2CO2 + 3H2O',
-    caption: '有機物の完全燃焼（C→CO₂、H→H₂O）。1molから CO₂ 2mol・H₂O 3mol',
+    caption: '有機物の完全燃焼。炭素はCO₂に、水素はH₂Oになる（生成量は解答）',
   },
 
   // oyo_39：メタン・エチレン・アセチレンの結合（単・二重・三重結合）
