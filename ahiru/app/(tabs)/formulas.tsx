@@ -4,6 +4,7 @@ import {
   Text,
   Image,
   ScrollView,
+  FlatList,
   StyleSheet,
   SafeAreaView,
   TouchableOpacity,
@@ -16,10 +17,107 @@ import { formulaImages } from '../../data/formulaImages';
 // 公式タブの教科名（算数/理科/社会）→ アイコンキー
 const SUBJ_ICON: Record<Subject, IconSubject> = { 算数: 'sansu', 理科: 'rika', 社会: 'shakai' };
 
+
+// 1項目分の描画。FlatListの行として使う。
+function FormulaRow({ item, accent }: { item: any; accent: string }) {
+  return (
+      <View style={styles.formulaRow}>
+        <View style={[styles.formulaLabel, { borderLeftColor: accent }]}>
+          <Text style={styles.formulaLabelText}>{item.label}</Text>
+        </View>
+
+        <View style={styles.formulaBox}>
+          <Text style={[styles.formulaText, { color: accent }]}>{item.formula}</Text>
+          {item.note && <Text style={styles.formulaNote}>{item.note}</Text>}
+        </View>
+
+        {item.explanation && (
+          <Text style={styles.explanation}>{item.explanation}</Text>
+        )}
+
+        {item.figure && (
+          <View style={styles.figureBox}>
+            <Text style={styles.figureLabel}>図解</Text>
+            <FigureView figure={item.figure} />
+          </View>
+        )}
+
+        {!item.figure && formulaImages[item.label] && (
+          <View style={styles.figureBox}>
+            <Text style={styles.figureLabel}>図解</Text>
+            <Image
+              source={formulaImages[item.label]}
+              style={styles.formulaImage}
+              resizeMode="cover"
+            />
+          </View>
+        )}
+
+        {!item.figure && !formulaImages[item.label] && item.steps && item.steps.length > 0 && (
+          <View style={styles.stepsBox}>
+            <Text style={styles.figureLabel}>とき方の流れ</Text>
+            {item.steps.map((st: string, si: number) => (
+              <Text key={si} style={styles.stepsLine}>{st}</Text>
+            ))}
+          </View>
+        )}
+
+        {!item.figure && !formulaImages[item.label] && !(item.steps && item.steps.length > 0) && item.asciiFigure && (
+          <View style={styles.figureBox}>
+            <Text style={styles.figureLabel}>図解</Text>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+              <Text style={styles.figureText}>{item.asciiFigure}</Text>
+            </ScrollView>
+          </View>
+        )}
+
+        {item.example && (
+          <View style={[styles.exampleBox, { borderLeftColor: accent }]}>
+            <Text style={styles.exampleQ}>
+              <Text style={[styles.exampleTag, { color: accent }]}>例題 </Text>
+              {item.example.q}
+            </Text>
+            <Text style={styles.exampleA}>
+              <Text style={styles.exampleTagA}>解答 </Text>
+              {item.example.a}
+            </Text>
+          </View>
+        )}
+
+        {item.checkpoints && item.checkpoints.length > 0 && (
+          <View style={styles.checkBox}>
+            <Text style={[styles.checkTitle, { color: accent }]}>✓ チェックポイント</Text>
+            {item.checkpoints.map((cp: string, ci: number) => (
+              <View key={ci} style={styles.checkRow}>
+                <Text style={[styles.checkMark, { color: accent }]}>▸</Text>
+                <Text style={styles.checkText}>{cp}</Text>
+              </View>
+            ))}
+          </View>
+        )}
+      </View>
+  );
+}
+
 export default function FormulasScreen() {
   const [subject, setSubject] = useState<Subject>('算数');
   const sections = FORMULAS[subject];
   const subjectInfo = SUBJECTS.find((s) => s.key === subject)!;
+
+  // セクション見出しと項目を1本のリストにならし、FlatListで仮想化できるようにする
+  type Row =
+    | { kind: 'header'; key: string; title: string; intro?: string }
+    | { kind: 'item'; key: string; item: (typeof sections)[number]['items'][number] };
+  const rows: Row[] = React.useMemo(() => {
+    const out: Row[] = [];
+    sections.forEach((section, si) => {
+      out.push({ kind: 'header', key: `h${si}`, title: section.title, intro: section.intro });
+      section.items.forEach((item, ii) => {
+        out.push({ kind: 'item', key: `i${si}_${ii}`, item });
+      });
+    });
+    return out;
+  }, [sections]);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -47,92 +145,30 @@ export default function FormulasScreen() {
         ))}
       </View>
 
-      <ScrollView style={styles.scroll} contentContainerStyle={styles.content}>
-        {sections.map((section) => (
-          <View key={section.title} style={styles.section}>
-            <Text style={[styles.sectionTitle, { color: subjectInfo.color }]}>{section.title}</Text>
-            {section.intro && <Text style={styles.sectionIntro}>{section.intro}</Text>}
-            {section.items.map((item, i) => (
-              <View key={i} style={styles.formulaRow}>
-                <View style={[styles.formulaLabel, { borderLeftColor: subjectInfo.color }]}>
-                  <Text style={styles.formulaLabelText}>{item.label}</Text>
-                </View>
-
-                <View style={styles.formulaBox}>
-                  <Text style={[styles.formulaText, { color: subjectInfo.color }]}>{item.formula}</Text>
-                  {item.note && <Text style={styles.formulaNote}>{item.note}</Text>}
-                </View>
-
-                {item.explanation && (
-                  <Text style={styles.explanation}>{item.explanation}</Text>
-                )}
-
-                {item.figure && (
-                  <View style={styles.figureBox}>
-                    <Text style={styles.figureLabel}>図解</Text>
-                    <FigureView figure={item.figure} />
-                  </View>
-                )}
-
-                {!item.figure && formulaImages[item.label] && (
-                  <View style={styles.figureBox}>
-                    <Text style={styles.figureLabel}>図解</Text>
-                    <Image
-                      source={formulaImages[item.label]}
-                      style={styles.formulaImage}
-                      resizeMode="cover"
-                    />
-                  </View>
-                )}
-
-                {!item.figure && !formulaImages[item.label] && item.steps && item.steps.length > 0 && (
-                  <View style={styles.stepsBox}>
-                    <Text style={styles.figureLabel}>とき方の流れ</Text>
-                    {item.steps.map((st, si) => (
-                      <Text key={si} style={styles.stepsLine}>{st}</Text>
-                    ))}
-                  </View>
-                )}
-
-                {!item.figure && !formulaImages[item.label] && !(item.steps && item.steps.length > 0) && item.asciiFigure && (
-                  <View style={styles.figureBox}>
-                    <Text style={styles.figureLabel}>図解</Text>
-                    <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                      <Text style={styles.figureText}>{item.asciiFigure}</Text>
-                    </ScrollView>
-                  </View>
-                )}
-
-                {item.example && (
-                  <View style={[styles.exampleBox, { borderLeftColor: subjectInfo.color }]}>
-                    <Text style={styles.exampleQ}>
-                      <Text style={[styles.exampleTag, { color: subjectInfo.color }]}>例題 </Text>
-                      {item.example.q}
-                    </Text>
-                    <Text style={styles.exampleA}>
-                      <Text style={styles.exampleTagA}>解答 </Text>
-                      {item.example.a}
-                    </Text>
-                  </View>
-                )}
-
-                {item.checkpoints && item.checkpoints.length > 0 && (
-                  <View style={styles.checkBox}>
-                    <Text style={[styles.checkTitle, { color: subjectInfo.color }]}>✓ チェックポイント</Text>
-                    {item.checkpoints.map((cp, ci) => (
-                      <View key={ci} style={styles.checkRow}>
-                        <Text style={[styles.checkMark, { color: subjectInfo.color }]}>▸</Text>
-                        <Text style={styles.checkText}>{cp}</Text>
-                      </View>
-                    ))}
-                  </View>
-                )}
-              </View>
-            ))}
-          </View>
-        ))}
-        <View style={{ height: 120 }} />
-      </ScrollView>
+      <FlatList
+        style={styles.scroll}
+        contentContainerStyle={styles.content}
+        data={rows}
+        keyExtractor={(r) => r.key}
+        // 画像を含む項目が多く（社会は75枚）、全部を一度に描画すると
+        // 640×640の画像がまとめて展開されて低メモリ端末で落ちる。
+        // 画面に入った分だけ描画・保持する。
+        initialNumToRender={4}
+        maxToRenderPerBatch={4}
+        windowSize={5}
+        removeClippedSubviews
+        ListFooterComponent={<View style={{ height: 120 }} />}
+        renderItem={({ item: row }) =>
+          row.kind === 'header' ? (
+            <View style={styles.sectionHeader}>
+              <Text style={[styles.sectionTitle, { color: subjectInfo.color }]}>{row.title}</Text>
+              {row.intro != null && <Text style={styles.sectionIntro}>{row.intro}</Text>}
+            </View>
+          ) : (
+            <FormulaRow item={row.item} accent={subjectInfo.color} />
+          )
+        }
+      />
     </SafeAreaView>
   );
 }
@@ -175,6 +211,14 @@ const styles = StyleSheet.create({
   subjectBtnTextActive: { color: '#FFFFFF' },
   scroll: { flex: 1 },
   content: { padding: 16 },
+  sectionHeader: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 10,
+    marginTop: 14,
+    borderWidth: 1.5,
+    borderColor: '#CBD2DE',
+    overflow: 'hidden',
+  },
   section: {
     backgroundColor: '#FFFFFF',
     borderRadius: 10,

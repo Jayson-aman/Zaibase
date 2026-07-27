@@ -65,30 +65,59 @@ const DIFFICULTY_OPTIONS: {
   { key: 'advanced', label: '発展', icon: '🔥', color: '#E74C3C', desc: '難関レベル' },
 ];
 
+// 件数は「科目×受験種別×コース×難易度」ごとに1回だけ数えて表に持つ。
+// 毎回 filter を鎖状につなぐと、コース一覧を描くだけで100万回以上の要素走査が
+// 発生し、ホーム画面が数百ミリ秒固まる（古い端末ほど顕著）。
+type CountIndex = {
+  // key: `${subject}|${examType}|${course}|${difficulty}`
+  counts: Map<string, number>;
+  generalCounts: Map<string, number>;
+};
+
+function buildCountIndex(
+  questionsBySubject: Record<SubjectKey, import('../../data/questions-meta').Question[]> | null,
+): CountIndex | null {
+  if (!questionsBySubject) return null;
+  const counts = new Map<string, number>();
+  const generalCounts = new Map<string, number>();
+
+  const bump = (m: Map<string, number>, k: string) => m.set(k, (m.get(k) ?? 0) + 1);
+
+  (Object.keys(questionsBySubject) as SubjectKey[]).forEach((subject) => {
+    for (const q of questionsBySubject[subject]) {
+      const examType = (q.examType ?? 'chugaku') as ExamType;
+      const generalKey = examType === 'koko' ? 'koko-general' : 'general';
+      const isGeneral = !q.course || q.course === generalKey;
+      const diff = q.difficulty;
+
+      if (isGeneral) {
+        // 「共通問題」はどのコースからも参照されるので別集計にする
+        bump(generalCounts, `${subject}|${examType}|all`);
+        bump(generalCounts, `${subject}|${examType}|${diff}`);
+      } else {
+        bump(counts, `${subject}|${examType}|${q.course}|all`);
+        bump(counts, `${subject}|${examType}|${q.course}|${diff}`);
+      }
+    }
+  });
+
+  return { counts, generalCounts };
+}
+
 function getQuestionCount(
   subject: SubjectKey,
   difficulty: Difficulty,
   examType: ExamType,
   course: CourseKey,
-  questionsBySubject: Record<SubjectKey, import('../../data/questions-meta').Question[]> | null,
+  index: CountIndex | null,
 ): number {
-  if (!questionsBySubject) return 0;
-  let qs = questionsBySubject[subject];
-  // Filter by examType
-  qs = qs.filter((q) => (q.examType ?? 'chugaku') === examType);
-  // Filter by course — for koko courses include koko-general as shared pool
-  const generalKey = examType === 'koko' ? 'koko-general' : 'general';
-  if (course === 'general' || course === 'koko-general') {
-    qs = qs.filter((q) => !q.course || q.course === generalKey);
-  } else {
-    const schoolQs = qs.filter((q) => q.course === course);
-    const generalQs = qs.filter((q) => !q.course || q.course === generalKey);
-    qs = [...schoolQs, ...generalQs];
-  }
-  if (difficulty !== 'all') {
-    qs = qs.filter((q) => q.difficulty === difficulty);
-  }
-  return qs.length;
+  if (!index) return 0;
+  const d = difficulty === 'all' ? 'all' : difficulty;
+  const general = index.generalCounts.get(`${subject}|${examType}|${d}`) ?? 0;
+  if (course === 'general' || course === 'koko-general') return general;
+  const school = index.counts.get(`${subject}|${examType}|${course}|${d}`) ?? 0;
+  // 学校別コースは「その学校の問題＋共通問題」を出題する
+  return school + general;
 }
 
 // ---------- Zaibase.Group logo header ----------
@@ -201,6 +230,7 @@ export default function HomeScreen() {
   }
 
   const { bySubject: questionsBySubject } = useQuestionsBySubjectMap();
+  const countIndex = React.useMemo(() => buildCountIndex(questionsBySubject), [questionsBySubject]);
   const listenInfo = listenSubject ? subjectInfo[listenSubject] : null;
   const { hasAccess: betaAccess } = useBetaAccess();
   const { isPro, paywallVisible, setPaywallVisible, requirePro } = useProGate(betaAccess);
@@ -210,11 +240,18 @@ export default function HomeScreen() {
   const courseInfo = getCourseInfo(selectedCourse);
 
   const listenQuestions = React.useMemo(() => {
+    // 聞き流しは問題そのものが要るので、集計表ではなく元データを使う
     if (listenSubject == null || !questionsBySubject) return [];
     const qs = difficulty === 'all'
       ? questionsBySubject[listenSubject]
       : questionsBySubject[listenSubject].filter((q) => q.difficulty === difficulty);
-    return [...qs].sort(() => Math.random() - 0.5);
+    // Fisher-Yates（sort(() => Math.random() - 0.5) は偏るため使わない）
+    const a = [...qs];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
   }, [listenSubject, difficulty, questionsBySubject]);
 
   // Courses that require MAX or Pro
@@ -226,25 +263,25 @@ export default function HomeScreen() {
     const SUBJECTS_KEYS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
     return KOKO_COURSES.filter((c) => {
       const total = SUBJECTS_KEYS.reduce(
-        (sum, s) => sum + getQuestionCount(s, 'all', 'koko', c.key, questionsBySubject),
+        (sum, s) => sum + getQuestionCount(s, 'all', 'koko', c.key, countIndex),
         0,
       );
       return total > 0;
     });
-  }, [questionsBySubject]);
+  }, [countIndex]);
 
   // Schools sorted by level then name（専用問題が実際にある学校のみ表示）
   const sortedSchools = React.useMemo(() => {
     const SUBJECTS_KEYS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
     const withData = SCHOOL_COURSES.filter((c) => {
       const total = SUBJECTS_KEYS.reduce(
-        (sum, s) => sum + getQuestionCount(s, 'all', 'chugaku', c.key, questionsBySubject),
+        (sum, s) => sum + getQuestionCount(s, 'all', 'chugaku', c.key, countIndex),
         0,
       );
       return total > 0;
     });
     return [...withData].sort((a, b) => LEVEL_ORDER[a.level] - LEVEL_ORDER[b.level]);
-  }, [questionsBySubject]);
+  }, [countIndex]);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -629,7 +666,7 @@ export default function HomeScreen() {
             <SubjectCard
               key={subject}
               subject={subject}
-              questionCount={getQuestionCount(subject, difficulty, examType, selectedCourse, questionsBySubject)}
+              questionCount={getQuestionCount(subject, difficulty, examType, selectedCourse, countIndex)}
               onPress={() =>
                 listenPickerActive
                   ? handleListenSubject(subject)

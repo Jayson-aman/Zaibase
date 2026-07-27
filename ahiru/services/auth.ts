@@ -101,14 +101,6 @@ export async function deleteAccount(): Promise<void> {
     // Firestore未設定などでも認証アカウントの削除は続行する
   }
 
-  // 端末に残る学習記録・お試し回数なども消す
-  try {
-    const AsyncStorage = (await import('@react-native-async-storage/async-storage')).default;
-    await AsyncStorage.clear();
-  } catch {
-    // 消せなくても続行
-  }
-
   const { deleteUser } = await import('firebase/auth');
   try {
     await deleteUser(user);
@@ -119,6 +111,16 @@ export async function deleteAccount(): Promise<void> {
       );
     }
     throw new AuthError(friendlyError(e?.code));
+  }
+
+  // 端末に残る学習記録・お試し回数なども消す。
+  // ⚠️ アカウント削除が成功した後に行うこと。先に消すと、再ログインが必要で
+  // 削除に失敗した場合に、アカウントは残ったまま学習記録だけ失われる。
+  try {
+    const AsyncStorage = (await import('@react-native-async-storage/async-storage')).default;
+    await AsyncStorage.clear();
+  } catch {
+    // 消せなくても続行
   }
   // 購読状況はApple/Googleのアカウントに紐づくため、アカウント削除では解約されない。
   // 呼び出し側でその旨を必ず案内すること。

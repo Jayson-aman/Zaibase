@@ -23,12 +23,13 @@ service cloud.firestore {
     }
 
     // ── 全国ランキング ──
-    // ルールが無いとFirestoreは既定で全拒否になり、ランキングが誰にも
-    // 表示されない（アプリ側はエラーを握りつぶすため無言で壊れる）。
-    // 読み取りは順位計算のため全員に許可。書き込みは本人の文書のみで、
-    // スコアの形式（0〜100、correct<=total）も検証してデタラメな値を弾く。
+    // 読み取りは本人の記録のみ。全体を読めるようにすると、誰でも全ユーザーの
+    // ID・スコア・最終学習日時を一覧できてしまう（子ども向けアプリでは避ける）。
+    // 順位の計算は Cloud Function（getMyRanking）が Admin 権限で行う。
+    // 書き込みは本人の文書のみで、スコアの形式（0〜100、correct<=total）も
+    // 検証してデタラメな値を弾く。
     match /examLeaderboard/{uid} {
-      allow read: if true;
+      allow read: if request.auth != null && request.auth.uid == uid;
       allow create, update: if request.auth != null
         && request.auth.uid == uid
         && request.resource.data.uid == uid
