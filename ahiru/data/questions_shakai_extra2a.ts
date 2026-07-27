@@ -213,7 +213,7 @@ export const shakaiExtra2a: Question[] = [
   {
     id: 'she2_020',
     subject: 'shakai' as const,
-    question: '関東地方で唯一、海に面していない（内陸県の）県はどこと、どこか（2県）？',
+    question: '関東地方で海に面していない（内陸県の）県をすべて答えなさい（3県）。',
     answer: '埼玉県・群馬県・栃木県（3県）',
     hint: '関東地方の北部・西部にある内陸の県',
     explanation: '【解説】\n関東地方の内陸県は埼玉・群馬・栃木の3県。いずれも海に面していない内陸県。',
