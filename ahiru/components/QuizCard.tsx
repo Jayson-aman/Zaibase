@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {
   View,
   Text,
+  Image,
   TouchableOpacity,
   StyleSheet,
   Dimensions,
@@ -17,7 +18,7 @@ const SERIF = Platform.select({
 import { Question, subjectInfo } from '../data/questions-meta';
 import SubjectIcon from './SubjectIcon';
 import { getHistoryThemeLabel } from '../data/images';
-import { getSubjectThemeLabel } from '../data/subjectImages';
+import { getSubjectThemeLabel, getSubjectIllustration } from '../data/subjectImages';
 import { getFigure } from '../data/figures';
 import FigureView from './FigureView';
 import { getQuestionVideo } from '../data/videos';
@@ -51,6 +52,9 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
     ?? getSubjectThemeLabel(question.subject, themeText);
   // ベクター図形（座標グラフ・図形・立体・化学式など）。あれば図で表示。
   const figure = getFigure(question.id);
+  // 図形化しにくい理科・社会の単元（植物のつくり・人体・時代の様子など）はAI生成の単元イラストで補う。
+  // ベクター図形がある問題は図の方が正確なので、そちらを優先する。
+  const illustration = figure == null ? getSubjectIllustration(question.subject, themeText) : null;
   // 解説動画（レジストリ or 問題データの videoUrl）。あれば解答側で再生。
   const video = getQuestionVideo(question.id, question.videoUrl);
 
@@ -103,6 +107,8 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
           <Text style={styles.questionTextChoice}>{question.question}</Text>
           {figure != null ? (
             <FigureView figure={figure} />
+          ) : illustration != null ? (
+            <Image source={illustration} style={styles.subjectImage} resizeMode="cover" />
           ) : question.figureDescription != null ? (
             <View style={styles.figureBox}>
               <Text style={styles.figureLabel}>📐 図・表</Text>
@@ -203,6 +209,8 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
           <Text style={styles.questionText}>{question.question}</Text>
           {figure != null ? (
             <FigureView figure={figure} />
+          ) : illustration != null ? (
+            <Image source={illustration} style={styles.subjectImage} resizeMode="cover" />
           ) : question.figureDescription != null ? (
             <View style={styles.figureBox}>
               <Text style={styles.figureLabel}>📐 図・表</Text>
@@ -217,7 +225,11 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
         <View style={styles.answerSide}>
           <Text style={styles.answerLabel}>答 え</Text>
           <Text style={styles.answerText}>{question.answer}</Text>
-          {figure != null && <FigureView figure={figure} animated />}
+          {figure != null ? (
+            <FigureView figure={figure} animated />
+          ) : illustration != null ? (
+            <Image source={illustration} style={styles.subjectImage} resizeMode="cover" />
+          ) : null}
           {video != null && <VideoPlayer url={video.url} title={video.title} />}
           {(question.explanation != null || question.hint != null) && (
             <View style={styles.hintBox}>
@@ -471,6 +483,14 @@ const styles = StyleSheet.create({
     color: '#2A1A0A',
     lineHeight: 28,
     fontFamily: SERIF,
+  },
+  subjectImage: {
+    width: '100%',
+    aspectRatio: 1,
+    borderRadius: 12,
+    marginTop: 10,
+    marginBottom: 4,
+    backgroundColor: '#F0F3F7',
   },
   figureBox: {
     backgroundColor: '#F0F7FF',
