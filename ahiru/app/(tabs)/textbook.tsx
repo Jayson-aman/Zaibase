@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { getLessonsBySubject } from '../../data/lessons';
+import type { ExamType } from '../../data/courses';
 import type { Lesson } from '../../data/lessons';
 import { subjectInfo, type SubjectKey } from '../../data/questions-meta';
 import { useSubscription } from '../../hooks/useSubscription';
@@ -33,6 +34,8 @@ export default function TextbookScreen() {
   const { paywallVisible, setPaywallVisible, requirePro } = useProGate(betaAccess);
 
   const [selectedSubject, setSelectedSubject] = useState<SubjectKey | null>(null);
+  // 受験種別で絞らないと、中学受験の小学生に中1〜中3の内容が混ざって出てしまう。
+  const [examType, setExamType] = useState<ExamType>('chugaku');
 
   function handleSubjectPress(key: SubjectKey) {
     requirePro(() => setSelectedSubject(key));
@@ -52,7 +55,9 @@ export default function TextbookScreen() {
     );
   }
 
-  const lessons = selectedSubject ? getLessonsBySubject(selectedSubject) : [];
+  const lessons = selectedSubject
+    ? getLessonsBySubject(selectedSubject).filter((l) => (l.examType ?? 'chugaku') === examType)
+    : [];
 
   return (
     <SafeAreaView style={styles.container}>
@@ -70,12 +75,33 @@ export default function TextbookScreen() {
           )}
         </View>
 
+        {/* 受験種別の切り替え */}
+        <View style={styles.examTypeRow}>
+          {([
+            { key: 'chugaku' as ExamType, label: '中学受験' },
+            { key: 'koko' as ExamType, label: '高校受験' },
+          ]).map((t) => (
+            <TouchableOpacity
+              key={t.key}
+              style={[styles.examTypeBtn, examType === t.key && styles.examTypeBtnActive]}
+              onPress={() => setExamType(t.key)}
+              activeOpacity={0.85}
+            >
+              <Text style={[styles.examTypeText, examType === t.key && styles.examTypeTextActive]}>
+                {t.label}
+              </Text>
+            </TouchableOpacity>
+          ))}
+        </View>
+
         {/* Subject Tiles */}
         <Text style={styles.sectionLabel}>科目を選んでください</Text>
         <View style={styles.subjectGrid}>
           {SUBJECTS.map(({ key, emoji, color }) => {
             const info = subjectInfo[key];
-            const count = getLessonsBySubject(key).length;
+            const count = getLessonsBySubject(key).filter(
+              (l) => (l.examType ?? 'chugaku') === examType,
+            ).length;
             const isSelected = selectedSubject === key;
             return (
               <TouchableOpacity
@@ -189,6 +215,19 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginBottom: 12,
   },
+  examTypeRow: { flexDirection: 'row', gap: 10, marginBottom: 14 },
+  examTypeBtn: {
+    flex: 1,
+    paddingVertical: 10,
+    borderRadius: 10,
+    alignItems: 'center',
+    backgroundColor: '#FFFFFF',
+    borderWidth: 1.5,
+    borderColor: '#DDE2EC',
+  },
+  examTypeBtnActive: { backgroundColor: '#0EA5E9', borderColor: '#0EA5E9' },
+  examTypeText: { fontSize: 14, fontWeight: '700', color: '#64748B' },
+  examTypeTextActive: { color: '#FFFFFF' },
   subjectGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',

@@ -58,7 +58,9 @@ export function pauseSpeech(): void {
   if (isWebSpeech()) {
     window.speechSynthesis.pause();
   } else {
-    Speech.pause();
+    // Android では pause/resume が未対応で UnavailabilityError を投げる。
+    // 捨てると未処理のPromise拒否になるので必ず握りつぶす。
+    Speech.pause().catch(() => {});
   }
 }
 
@@ -66,7 +68,7 @@ export function resumeSpeech(): void {
   if (isWebSpeech()) {
     window.speechSynthesis.resume();
   } else {
-    Speech.resume();
+    Speech.resume().catch(() => {});
   }
 }
 
@@ -102,8 +104,10 @@ export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
       if (voice) utter.voice = voice;
 
       let settled = false;
+      // token が古い（stopSpeech 済み）場合でも必ず resolve する。
+      // resolve しないと await している呼び出し元が永久に止まる。
       const finish = () => {
-        if (settled || token !== cancelToken) return;
+        if (settled) return;
         settled = true;
         resolve();
       };
@@ -128,8 +132,9 @@ export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
 
   return new Promise((resolve) => {
     let settled = false;
+    // token が古い（stopSpeech 済み）場合でも必ず resolve する。
     const finish = () => {
-      if (settled || token !== cancelToken) return;
+      if (settled) return;
       settled = true;
       resolve();
     };

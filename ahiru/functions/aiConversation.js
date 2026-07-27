@@ -7,9 +7,8 @@
  * 料金設計（利益75%を守るための上限。モデルは低コストのHaikuを使用）:
  *   - 無料ユーザー: 1日3メッセージまで（体験）
  *   - 有料ユーザー: 1日15メッセージまで
- *   - 有料判定は現状クライアントからの isPaid ヒント（＝レート制限のみのソフトゲート）。
- *     厳密なサーバー判定には RevenueCat→Firestore の tier 同期（webhook）が必要。
- *     ※ webhook を入れると AI先生(askTutor)の tier 判定も正しく効くようになる。
+ *   - 有料判定は RevenueCat REST API をサーバー側で照会して行う（クライアントの
+ *     申告は信用しない）。英単語Pro（vocab）または全部入りMaxで有料枠になる。
  *
  * Firestore:
  *   aiConversationUsage/{uid} — 日別メッセージ数

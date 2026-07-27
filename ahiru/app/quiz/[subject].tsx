@@ -114,6 +114,7 @@ export default function QuizScreen() {
     }>();
   const router = useRouter();
 
+
   const subjectKey: SubjectKey = isSubjectKey(subject ?? '') ? (subject as SubjectKey) : 'sansu';
   const difficultyFilter: Difficulty | null =
     diffParam && isDifficulty(diffParam) ? diffParam : null;
@@ -182,6 +183,10 @@ export default function QuizScreen() {
   // 最後の2問で範囲外になって落ちる。
   const answeringRef = useRef(false);
   const [showPaywall, setShowPaywall] = useState(false);
+  // 無料お試しの上限で止められたかどうか（ペイウォールを閉じた後の行き先を変える）
+  const [trialBlocked, setTrialBlocked] = useState(false);
+  // 画面を離れた後にタイマーが発火して未マウントの状態を触らないよう、破棄用に保持する
+  const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
   const [showTutorChat, setShowTutorChat] = useState(false);
   // 出題キュー（基礎問題の差し込みで伸びることがある）
   const [queue, setQueue] = useState<Question[]>([]);
@@ -247,6 +252,14 @@ export default function QuizScreen() {
     return true;
   }
 
+  // 画面を離れたら未発火のタイマーを止める（未マウントの状態更新を防ぐ）
+  useEffect(() => {
+    return () => {
+      timersRef.current.forEach(clearTimeout);
+      timersRef.current = [];
+    };
+  }, []);
+
   async function advanceOrFinish(currentScore: number, currentWrongIds: string[]) {
     setWaitingNext(false);
     answeringRef.current = false;
@@ -273,6 +286,7 @@ export default function QuizScreen() {
     if (!isPro && !isMax) {
       const expired = await isTrialExpired();
       if (expired) {
+        setTrialBlocked(true);
         setShowPaywall(true);
         answeringRef.current = false;
         return;
@@ -296,20 +310,20 @@ export default function QuizScreen() {
       }
       setRemedialJustInjected(injected);
       setFeedback('wrong');
-      setTimeout(() => {
+      timersRef.current.push(setTimeout(() => {
         setFeedback(null);
         setWaitingNext(true);
-      }, 400);
+      }, 400));
       return;
     }
 
     // 正解：連続不正解をリセットして花火を打ち上げる
     setWrongStreak(0);
     setShowFireworks(true);
-    setTimeout(async () => {
+    timersRef.current.push(setTimeout(async () => {
       setShowFireworks(false);
       await advanceOrFinish(newScore, newWrongIds);
-    }, 1100);
+    }, 1100));
   }
 
   async function handleRestart() {
@@ -683,8 +697,19 @@ export default function QuizScreen() {
 
       <Paywall
         visible={showPaywall}
-        onClose={() => setShowPaywall(false)}
-        onPurchased={() => setShowPaywall(false)}
+        onClose={() => {
+          setShowPaywall(false);
+          // お試し上限に達した状態でペイウォールを閉じると、選択肢は選択済みで
+          // 無効・「次へ」も出ない行き止まりになる。閉じたら一覧へ戻す。
+          if (trialBlocked) {
+            if (router.canGoBack()) router.back();
+            else router.replace('/');
+          }
+        }}
+        onPurchased={() => {
+          setShowPaywall(false);
+          setTrialBlocked(false);
+        }}
       />
 
       <TutorChat

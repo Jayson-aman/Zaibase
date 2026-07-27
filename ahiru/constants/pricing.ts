@@ -4,7 +4,7 @@
 // 全プラットフォーム（iOS App Store / Google Play / Web=Stripe）で
 // 「同一の金額」に統一する。実際に表示される金額は各ストアが返す
 // priceString だが、それらのストア登録額も必ずこの表と一致させること。
-// ストア設定の手順・対応表は docs/ahiru-pricing.md を参照。
+// ストア設定の手順・対応表は docs/pricing.md を参照。
 //
 // ストアの priceString がまだ取得できない場合（未設定・読込前など）は、
 // 下の *_LABEL をフォールバック表示として使う。表示のブレを防ぐため、

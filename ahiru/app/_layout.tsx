@@ -36,10 +36,18 @@ export default function RootLayout() {
     subscribeAuth(() => {})
       .then((fn) => { unsubAuth = fn; })
       .catch(() => {});
-    AsyncStorage.getItem(CONSENT_KEY).then((v) => {
-      if (v !== '1') setShowConsent(true);
-      setConsentChecked(true);
-    });
+    // 失敗しても consentChecked を必ず立てる。立てないと同意ゲートが永久に出ず、
+    // 画面が真っ白のまま進めなくなる。
+    AsyncStorage.getItem(CONSENT_KEY)
+      .then((v) => {
+        if (v !== '1') setShowConsent(true);
+      })
+      .catch(() => {
+        setShowConsent(true);
+      })
+      .finally(() => {
+        setConsentChecked(true);
+      });
     return () => { if (unsubAuth) unsubAuth(); };
   }, []);
 

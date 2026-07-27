@@ -20,8 +20,11 @@ function capString(v, max) {
  * - 文字列コンテンツは maxContentLen で切り詰め
  * - 構造化コンテンツ（配列）はブロック数を制限、テキストは切り詰め、
  *   巨大画像ブロックは除外
+ * - maxImages で履歴に残す画像の総数を制限する。制限しないと毎ターン
+ *   過去の画像すべてを再送してしまい、1セッションのAPIコストが桁違いに膨らむ。
+ *   新しい方から数えて maxImages 枚だけ残す。
  */
-function sanitizeHistory(history, { maxTurns = 20, maxContentLen = 4000 } = {}) {
+function sanitizeHistory(history, { maxTurns = 20, maxContentLen = 4000, maxImages = Infinity } = {}) {
   if (!Array.isArray(history)) return [];
   const trimmed = history.slice(-maxTurns * 2);
   const out = [];
@@ -55,6 +58,28 @@ function sanitizeHistory(history, { maxTurns = 20, maxContentLen = 4000 } = {}) 
     }
     out.push({ role, content });
   }
+
+  // 新しい方から数えて maxImages 枚だけ画像を残し、それより古い画像は落とす。
+  if (Number.isFinite(maxImages)) {
+    let seen = 0;
+    for (let i = out.length - 1; i >= 0; i -= 1) {
+      const c = out[i].content;
+      if (!Array.isArray(c)) continue;
+      const kept = [];
+      for (let j = c.length - 1; j >= 0; j -= 1) {
+        const b = c[j];
+        if (b.type === "image") {
+          if (seen >= maxImages) continue;
+          seen += 1;
+        }
+        kept.unshift(b);
+      }
+      if (kept.length) out[i] = { role: out[i].role, content: kept };
+      else out[i] = null;
+    }
+    return out.filter(Boolean);
+  }
+
   return out;
 }
 

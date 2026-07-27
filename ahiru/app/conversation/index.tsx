@@ -72,7 +72,9 @@ export default function ConversationScreen() {
       setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 100);
     } catch (err: any) {
       const msg = err?.message ?? 'エラーが発生しました。もう一度試してください。';
-      Alert.alert('AIからの返信エラー', msg);
+      // 無料枠の上限で止まった場合は、エラーではなく案内として見せる
+      const isLimit = err?.code === 'functions/resource-exhausted';
+      Alert.alert(isLimit ? '本日の練習は終了です' : 'AIからの返信エラー', msg);
       setMessages(messages); // revert
     } finally {
       setLoading(false);

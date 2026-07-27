@@ -12,7 +12,7 @@
  *   各 onCall に enforceAppCheck: true を戻すこと。
  *
  * 料金設計:
- *   - Max ¥2,850/月: 月18セッションまで込み
+ *   - Max ¥2,890/月: 月18セッションまで込み
  *   - 1セッション = 1問題 (最大6往復)
  *   - 1往復目: claude-opus-4-8（画像理解・初回分析）
  *   - 2〜6往復目: claude-haiku-4-5（フォローアップ・低コスト）
@@ -124,7 +124,9 @@ exports.askTutor = onCall(
     // 巨大入力によるトークン濫用（コスト爆撃）への防御
     assertImageSize(imageBase64);
     const safeQuestionText = capString(questionText, 2000);
-    const safeHistory = sanitizeHistory(history, { maxTurns: 12, maxContentLen: 4000 });
+    // 画像は履歴に1枚だけ残す。全ターン分を再送すると1セッションで最大数十MBの
+    // 画像をAPIに送ることになり、コストが青天井になる。
+    const safeHistory = sanitizeHistory(history, { maxTurns: 12, maxContentLen: 4000, maxImages: 1 });
 
     // Maxプラン確認 or 無料体験（1回限り）
     // 課金判定は RevenueCat を正とする。users/{uid}.tier は書き込み処理が無く

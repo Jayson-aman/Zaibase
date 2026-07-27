@@ -217,6 +217,15 @@ export default function ListenMode({
     }
   }, [visible, autoStart, startSession, stopAll]);
 
+  // アンマウント時にも必ず読み上げを止める。visible を false にせず親が
+  // 一気に破棄するケースでは上の !visible 分岐が走らないため、鳴りっぱなしになる。
+  useEffect(() => {
+    return () => {
+      stopAll();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   function handlePauseToggle() {
     if (!active && phase !== 'done') return;
 
@@ -281,7 +290,7 @@ export default function ListenMode({
   }
 
   return (
-    <Modal visible={visible} animationType="slide" statusBarTranslucent>
+    <Modal visible={visible} animationType="slide" statusBarTranslucent onRequestClose={handleStop}>
       <SafeAreaView style={styles.root}>
         <View style={[styles.header, { backgroundColor: subjectColor }]}>
           <Text style={styles.headerTitle}>

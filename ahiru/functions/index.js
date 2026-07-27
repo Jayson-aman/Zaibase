@@ -18,10 +18,10 @@ const aiTutor = require("./aiTutor");
 exports.askTutor = aiTutor.askTutor;
 exports.addTutorCredits = aiTutor.addTutorCredits;
 
-// ── 聞き流しTTS（英単語Pro・1日150回まで） ──────────────────────
+// ── 聞き流しTTS（英単語Pro・1日30回まで） ──────────────────────
 const tts = require("./tts");
 exports.speakText = tts.speakText;
 
-// ── AI英会話練習（1日20メッセージまで） ──────────────────────
+// ── AI英会話練習（無料1日3・有料1日15メッセージまで） ──────────────────────
 const aiConversation = require("./aiConversation");
 exports.chatEnglishConversation = aiConversation.chatEnglishConversation;

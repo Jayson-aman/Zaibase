@@ -12,7 +12,7 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import { useRouter } from 'expo-router';
-import { speakWithOpenAI, speakWithDevice } from '../../services/tts';
+import { speakWithOpenAI, speakWithDevice, stopSpeaking } from '../../services/tts';
 import { useVocabSubscription } from '../../hooks/useVocabSubscription';
 import { useSubscription } from '../../hooks/useSubscription';
 import { fetchVocabProducts, purchaseProduct, restorePurchases } from '../../services/subscription';
@@ -130,9 +130,13 @@ export default function VocabScreen() {
     listenTimer.current = setInterval(() => {
       setFlipped(false);
       flipAnim.setValue(0);
-      setCardIndex(i => (i + 1) % filtered.length);
+      setCardIndex(i => (filtered.length > 0 ? (i + 1) % filtered.length : 0));
     }, LISTEN_INTERVAL_MS);
-    return () => { if (listenTimer.current) clearInterval(listenTimer.current); };
+    return () => {
+      if (listenTimer.current) clearInterval(listenTimer.current);
+      // 再生中の音声も止める。止めないとホームに戻っても読み上げが続く。
+      stopSpeaking().catch(() => {});
+    };
   }, [isListening, cardIndex, filtered.length, hasVocabPro]);
 
   const handleFlip = useCallback(() => {
@@ -159,8 +163,8 @@ export default function VocabScreen() {
   }, [card]);
 
   const resetCard = () => { setFlipped(false); flipAnim.setValue(0); };
-  const goNext = () => { resetCard(); setCardIndex(i => (i + 1) % filtered.length); };
-  const goPrev = () => { resetCard(); setCardIndex(i => (i - 1 + filtered.length) % filtered.length); };
+  const goNext = () => { resetCard(); setCardIndex(i => (filtered.length > 0 ? (i + 1) % filtered.length : 0)); };
+  const goPrev = () => { resetCard(); setCardIndex(i => (filtered.length > 0 ? (i - 1 + filtered.length) % filtered.length : 0)); };
   const changeFilter = (lv: string, tp: string) => { setLevelFilter(lv); setTypeFilter(tp); setCardIndex(0); resetCard(); };
 
   const frontRotate = flipAnim.interpolate({ inputRange: [0,1], outputRange: ['0deg','180deg'] });
@@ -178,6 +182,14 @@ export default function VocabScreen() {
   return (
     <SafeAreaView style={s.safe}>
       <ScrollView contentContainerStyle={s.scroll}>
+        {/* 戻る導線が無いと、この画面に入ったユーザーが行き止まりになる。 */}
+        <TouchableOpacity
+          style={s.backRow}
+          onPress={() => (router.canGoBack() ? router.back() : router.replace('/'))}
+          activeOpacity={0.7}
+        >
+          <Text style={s.backText}>← 戻る</Text>
+        </TouchableOpacity>
         <Text style={[s.title, fontsLoaded && { fontFamily: TEXTBOOK_BOLD }]}>英単語・英熟語</Text>
         <Text style={s.sub}>単語5,000語+・熟語4,000+・英会話200　英検準2級〜1級・TOEIC800対応</Text>
 
@@ -492,6 +504,8 @@ const glassWeb: any = Platform.OS === 'web'
 const s = StyleSheet.create({
   safe:              { flex: 1, backgroundColor: D.bg },
   scroll:            { padding: 16, paddingBottom: 40 },
+  backRow:           { alignSelf: 'flex-start', paddingVertical: 8, paddingHorizontal: 4 },
+  backText:          { fontSize: 16, fontWeight: '700', color: D.gold },
   title:             { fontSize: 24, fontWeight: '800', color: D.gold, textAlign: 'center', marginTop: 8 },
   sub:               { fontSize: 12, color: D.muted, textAlign: 'center', marginBottom: 12 },
   conversationEntryBtn: { backgroundColor: 'rgba(160,100,220,0.14)', borderWidth: 1, borderColor: D.purpleBorder, borderRadius: 14, paddingVertical: 12, alignItems: 'center', marginBottom: 14 },

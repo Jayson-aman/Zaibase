@@ -25,6 +25,12 @@ const CATEGORY_LABELS: Record<string, string> = {
 };
 
 export default function EikenLevelScreen() {
+  // 直接このURLを開いた場合は戻り先が無く router.back() が無反応になるため、
+  // その場合はホームへ逃がす。
+  function safeBack() {
+    if (router.canGoBack()) router.back();
+    else router.replace('/');
+  }
   const { level } = useLocalSearchParams<{ level: string }>();
   const router = useRouter();
   const info = LEVEL_INFO[level ?? ''] ?? { name: level, nameEn: '', emoji: '📖', color: '#7B1FA2', cefr: '' };
@@ -46,7 +52,7 @@ export default function EikenLevelScreen() {
     return (
       <SafeAreaView style={styles.safeArea}>
         <View style={[styles.header, { backgroundColor: info.color }]}>
-          <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
+          <TouchableOpacity onPress={() => safeBack()} style={styles.backBtn}>
             <Text style={styles.backBtnText}>← 戻る</Text>
           </TouchableOpacity>
           <Text style={styles.headerTitle}>{info.emoji} {info.name}</Text>
@@ -55,7 +61,7 @@ export default function EikenLevelScreen() {
           <Text style={styles.emoji}>🚧</Text>
           <Text style={styles.title}>問題を準備中</Text>
           <Text style={styles.text}>{info.name}の問題は{'\n'}現在作成中です。近日公開予定。</Text>
-          <TouchableOpacity style={[styles.btn, { backgroundColor: info.color }]} onPress={() => router.back()}>
+          <TouchableOpacity style={[styles.btn, { backgroundColor: info.color }]} onPress={() => safeBack()}>
             <Text style={styles.btnText}>← 級一覧に戻る</Text>
           </TouchableOpacity>
         </View>
@@ -79,7 +85,7 @@ export default function EikenLevelScreen() {
         {(hasAccess: boolean) => (
         <>
         <View style={[styles.header, { backgroundColor: info.color }]}>
-          <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
+          <TouchableOpacity onPress={() => safeBack()} style={styles.backBtn}>
             <Text style={styles.backBtnText}>← 戻る</Text>
           </TouchableOpacity>
           <Text style={styles.headerTitle}>{info.emoji} {info.name}</Text>

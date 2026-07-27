@@ -15,6 +15,12 @@ import { useRouter } from 'expo-router';
 import { signInEmail, signUpEmail, sendResetEmail, AuthError } from '../services/auth';
 
 export default function LoginScreen() {
+  // 直接このURLを開いた場合は戻り先が無く router.back() が無反応になるため、
+  // その場合はホームへ逃がす。
+  function safeBack() {
+    if (router.canGoBack()) router.back();
+    else router.replace('/');
+  }
   const router = useRouter();
   const [mode, setMode] = useState<'signin' | 'signup'>('signin');
   const [email, setEmail] = useState('');
@@ -36,7 +42,7 @@ export default function LoginScreen() {
     try {
       if (isSignup) await signUpEmail(email, password);
       else await signInEmail(email, password);
-      router.back();
+      safeBack();
     } catch (e) {
       setError(e instanceof AuthError ? e.message : 'エラーが発生しました。');
     } finally {
@@ -66,7 +72,7 @@ export default function LoginScreen() {
     <SafeAreaView style={styles.container}>
       <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={{ flex: 1 }}>
         <ScrollView contentContainerStyle={styles.scroll} keyboardShouldPersistTaps="handled">
-          <TouchableOpacity onPress={() => router.back()} style={styles.closeBtn}>
+          <TouchableOpacity onPress={() => safeBack()} style={styles.closeBtn}>
             <Text style={styles.closeText}>✕</Text>
           </TouchableOpacity>
 

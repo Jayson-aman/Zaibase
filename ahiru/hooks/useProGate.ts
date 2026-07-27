@@ -12,10 +12,13 @@ export function useProGate(betaAccess = false) {
         onGranted?.();
         return true;
       }
+      // 課金状態の取得中は tier が初期値の 'free' のため、加入者にも
+      // ペイウォールを出してしまう。判定が確定するまでは何もしない。
+      if (loading) return false;
       setPaywallVisible(true);
       return false;
     },
-    [effectiveIsPro],
+    [effectiveIsPro, loading],
   );
 
   return {

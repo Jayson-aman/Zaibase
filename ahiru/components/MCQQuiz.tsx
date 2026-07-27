@@ -39,7 +39,12 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 export default function MCQQuiz({ questions, accentColor = '#37474F', onComplete }: Props) {
-  const shuffled = useMemo(() => shuffle(questions), [questions]);
+  // questions は呼び出し側で毎回 slice() され新しい配列になるため、
+  // [questions] を依存にすると毎レンダーでシャッフルし直され、
+  // 回答中に問題がすり替わってしまう。中身が変わった時だけ引き直す。
+  const questionsKey = questions.map((q) => q.id).join('|');
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const shuffled = useMemo(() => shuffle(questions), [questionsKey]);
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<'A' | 'B' | 'C' | 'D' | null>(null);
   const [correctCount, setCorrectCount] = useState(0);
@@ -47,6 +52,16 @@ export default function MCQQuiz({ questions, accentColor = '#37474F', onComplete
   const [speaking, setSpeaking] = useState(false);
 
   const q = shuffled[index];
+  // 問題数が減るなどで index が範囲外になった場合に落ちないようにする
+  if (q == null && !finished) {
+    return (
+      <View style={styles.container}>
+        <View style={styles.content}>
+          <Text style={styles.questionText}>問題を準備中です</Text>
+        </View>
+      </View>
+    );
+  }
 
   useEffect(() => {
     Speech.stop();
