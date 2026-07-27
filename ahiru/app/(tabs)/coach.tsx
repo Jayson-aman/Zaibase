@@ -478,7 +478,7 @@ export default function CoachScreen() {
           )}
         </StepCard>
 
-        <View style={{ height: 32 }} />
+        <View style={{ height: 120 }} />
       </ScrollView>
 
       <Paywall

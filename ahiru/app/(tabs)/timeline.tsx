@@ -128,7 +128,7 @@ export default function TimelineScreen() {
         <TouchableOpacity onPress={() => router.push('/credits')} activeOpacity={0.7}>
           <Text style={styles.creditsLink}>画像クレジットを見る →</Text>
         </TouchableOpacity>
-        <View style={{ height: 40 }} />
+        <View style={{ height: 120 }} />
       </ScrollView>
     </SafeAreaView>
   );

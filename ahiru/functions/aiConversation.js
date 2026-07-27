@@ -124,11 +124,12 @@ exports.chatEnglishConversation = onCall(
       ? `今回の会話シチュエーション：${scenario}`
       : "今回の会話シチュエーション：自由な日常会話";
 
-    const response = await client.messages.create({
-      model: "claude-haiku-4-5",
-      max_tokens: 500,
-      thinking: { type: "adaptive" },
-      system: `あなたは日本人の英語学習者と英会話練習をするフレンドリーなネイティブスピーカーです。以下のルールを厳守してください。
+    let response;
+    try {
+      response = await client.messages.create({
+        model: "claude-haiku-4-5",
+        max_tokens: 500,
+        system: `あなたは日本人の英語学習者と英会話練習をするフレンドリーなネイティブスピーカーです。以下のルールを厳守してください。
 
 【対象レベル】${levelGuide}
 ${scenarioLine}
@@ -144,11 +145,15 @@ ${scenarioLine}
 （英語での応答本文）
 
 📝 ワンポイント：（ミスがあれば日本語で簡潔に訂正。なければこの行ごと省略）`,
-      messages: [
-        ...trimmedHistory.map((h) => ({ role: h.role, content: h.content })),
-        { role: "user", content: message },
-      ],
-    });
+        messages: [
+          ...trimmedHistory.map((h) => ({ role: h.role, content: h.content })),
+          { role: "user", content: message },
+        ],
+      });
+    } catch (err) {
+      console.error("chatEnglishConversation: Claude API error", err);
+      throw new HttpsError("internal", "AIとの通信でエラーが発生しました。もう一度試してください。");
+    }
 
     const textBlock = response.content.find((b) => b.type === "text");
     const reply = textBlock?.text?.trim() ?? "";

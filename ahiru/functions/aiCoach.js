@@ -93,18 +93,24 @@ exports.getWeakPointCoaching = onCall(
       .map((it, i) => `${i + 1}. 問題: ${it.question} / 正解: ${it.answer}`)
       .join("\n");
 
-    const response = await client.messages.create({
-      model: "claude-haiku-4-5",
-      max_tokens: 600,
-      system:
-        "あなたは中学受験を目指す小学生を指導する、優しく的確な家庭教師です。" +
-        "生徒が間違えた問題のリストから、共通する弱点や誤解のパターンを分析し、" +
-        "小学生にも分かる言葉で、具体的な復習アドバイスを日本語で3〜4文程度にまとめてください。" +
-        "保護者が読んでも納得できる、優しいけれど具体的な内容にしてください。絵文字は1〜2個まで。",
-      messages: [
-        { role: "user", content: `科目: ${subjectName}\n間違えた問題:\n${itemsText}` },
-      ],
-    });
+    let response;
+    try {
+      response = await client.messages.create({
+        model: "claude-haiku-4-5",
+        max_tokens: 600,
+        system:
+          "あなたは中学受験を目指す小学生を指導する、優しく的確な家庭教師です。" +
+          "生徒が間違えた問題のリストから、共通する弱点や誤解のパターンを分析し、" +
+          "小学生にも分かる言葉で、具体的な復習アドバイスを日本語で3〜4文程度にまとめてください。" +
+          "保護者が読んでも納得できる、優しいけれど具体的な内容にしてください。絵文字は1〜2個まで。",
+        messages: [
+          { role: "user", content: `科目: ${subjectName}\n間違えた問題:\n${itemsText}` },
+        ],
+      });
+    } catch (err) {
+      console.error("getWeakPointCoaching: Claude API error", err);
+      throw new HttpsError("internal", "アドバイスの生成でエラーが発生しました。もう一度試してください。");
+    }
 
     const textBlock = response.content.find((b) => b.type === "text");
     const advice = textBlock?.text?.trim() ?? "";

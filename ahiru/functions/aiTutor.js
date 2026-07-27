@@ -173,11 +173,13 @@ exports.askTutor = onCall(
       { role: "user", content: userContent },
     ];
 
-    const response = await client.messages.create({
-      model,
-      max_tokens: 600,
-      thinking: { type: "adaptive" },
-      system: `あなたは中学生の受験勉強を手伝う、優しく丁寧な家庭教師です。
+    let response;
+    try {
+      response = await client.messages.create({
+        model,
+        max_tokens: 600,
+        ...(model === "claude-opus-4-8" ? { thinking: { type: "adaptive" } } : {}),
+        system: `あなたは中学生の受験勉強を手伝う、優しく丁寧な家庭教師です。
 生徒が「わからない！」と困っています。以下のルールで教えてください：
 
 【基本方針】
@@ -194,8 +196,12 @@ exports.askTutor = onCall(
 【回答の長さ】
 200〜350文字程度。長すぎると読みにくいので簡潔に。
 絵文字を1〜2個使ってOK。`,
-      messages,
-    });
+        messages,
+      });
+    } catch (err) {
+      console.error("askTutor: Claude API error", err);
+      throw new HttpsError("internal", "AIとの通信でエラーが発生しました。もう一度試してね。");
+    }
 
     const textBlock = response.content.find((b) => b.type === "text");
     const answer = textBlock?.text?.trim() ?? "";
