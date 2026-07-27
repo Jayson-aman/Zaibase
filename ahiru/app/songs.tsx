@@ -215,6 +215,9 @@ function SongCard({ song: s, catColor }: { song: Song; catColor: string }) {
           <Text style={[styles.speakBtnText, { color: catColor }]}>🔊 歌詞を読み上げる</Text>
         )}
       </TouchableOpacity>
+      <Text style={styles.playbackHint}>
+        ※ メロディと歌詞読み上げは別々に再生されます（同時には鳴りません）
+      </Text>
       <View style={styles.pointsBox}>
         <Text style={styles.pointsLabel}>💡 覚えられること</Text>
         <Text style={styles.pointsText}>{s.points}</Text>
@@ -299,6 +302,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   speakBtnText: { fontSize: 13, fontWeight: '700' },
+  playbackHint: { fontSize: 11, color: '#9CA3AF', marginTop: 8 },
   pointsBox: {
     backgroundColor: '#FFFBEB',
     borderRadius: 12,

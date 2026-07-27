@@ -22,6 +22,13 @@ export default function RootLayout() {
   const isLegalRoute = ['/terms', '/privacy', '/tokusho', '/credits'].includes(pathname);
 
   useEffect(() => {
+    // 端末のマナー/サイレントスイッチがONでも読み上げ・メロディ・聞き流しが
+    // 聞こえるようにする（未設定だとexpo-speech等がスイッチに従って無音になる端末がある）。
+    if (Platform.OS !== 'web') {
+      import('expo-audio')
+        .then(({ setAudioModeAsync }) => setAudioModeAsync({ playsInSilentMode: true }))
+        .catch(() => {});
+    }
     initRevenueCat();
     // 起動時に既存ログインを復元し、RevenueCatを同一ユーザーに紐付け直す
     // （全端末で加入状態を共有＝二重課金防止）。
