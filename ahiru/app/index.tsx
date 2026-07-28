@@ -302,7 +302,7 @@ export default function LandingPage() {
                 {f.image ? (
                   <Image source={f.image} style={styles.featureImage} resizeMode="contain" />
                 ) : (
-                  <View style={[styles.featureImage, styles.featureImagePlaceholder]}>
+                  <View style={styles.featureImagePlaceholder}>
                     <Text style={styles.featureImagePlaceholderIcon}>{f.icon}</Text>
                   </View>
                 )}
@@ -746,12 +746,14 @@ const styles = StyleSheet.create({
     aspectRatio: 4 / 3,
   },
   featureImagePlaceholder: {
+    width: '100%',
+    height: 110,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: C.glassMid,
   },
   featureImagePlaceholderIcon: {
-    fontSize: 72,
+    fontSize: 44,
   },
   featureOverlay: {
     position: 'absolute',
