@@ -233,9 +233,13 @@ export default function HomeScreen() {
   const countIndex = React.useMemo(() => buildCountIndex(questionsBySubject), [questionsBySubject]);
   const listenInfo = listenSubject ? subjectInfo[listenSubject] : null;
   const { hasAccess: betaAccess } = useBetaAccess();
-  const { isPro, paywallVisible, setPaywallVisible, requirePro } = useProGate(betaAccess);
-  const { isMax: subIsMax } = useSubscription();
+  const { isPro, loading: proLoading, paywallVisible, setPaywallVisible, requirePro } = useProGate(betaAccess);
+  const { isMax: subIsMax, loading: maxLoading } = useSubscription();
   const isMax = subIsMax || betaAccess;
+  // 課金状態の取得中は isPro/isMax が初期値(false)のため、加入者でも
+  // MAX/PROロックの判定でペイウォールを誤表示してしまう。確定するまでは
+  // タップを無視する（requirePro/requireMax と同じ「読み込み中は何もしない」方針）。
+  const subLoading = proLoading || maxLoading;
   const selectedDiff = DIFFICULTY_OPTIONS.find((d) => d.key === difficulty)!;
   const courseInfo = getCourseInfo(selectedCourse);
 
@@ -396,6 +400,7 @@ export default function HomeScreen() {
                         !isSelected && { borderColor: c.color + '66' },
                       ]}
                       onPress={() => {
+                        if (subLoading) return;
                         if (needsMax && !isMax) { setPaywallVisible(true); return; }
                         setSelectedCourse(c.key);
                       }}
@@ -435,6 +440,7 @@ export default function HomeScreen() {
                                 !isSelected && { borderColor: s.color + '55' },
                               ]}
                               onPress={() => {
+                                if (subLoading) return;
                                 if (needsMax && !isMax) { setPaywallVisible(true); return; }
                                 if (needsPro && !isPro) { setPaywallVisible(true); return; }
                                 setSelectedCourse(s.key);
@@ -602,6 +608,7 @@ export default function HomeScreen() {
           <TouchableOpacity
             style={[styles.dailyBtn, !isMax && styles.dailyBtnLocked]}
             onPress={() => {
+              if (subLoading) return;
               if (!isMax) {
                 setPaywallVisible(true);
                 return;

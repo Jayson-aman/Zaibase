@@ -6,6 +6,7 @@ import {
   StyleSheet,
   SafeAreaView,
   TouchableOpacity,
+  ActivityIndicator,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { getLessonById } from '../../data/lessons';
@@ -20,7 +21,9 @@ import { subjectInfo } from '../../data/questions-meta';
 export default function LessonDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
-  const { isPro: subIsPro, isMax: subIsMax } = useSubscription();
+  // loading を見ずに isPro/isMax だけで分岐すると、課金状態の取得が終わるまでの
+  // 一瞬、加入者にも「Proプランで閲覧できます」のロック画面が出てしまう。
+  const { isPro: subIsPro, isMax: subIsMax, loading: subLoading } = useSubscription();
   const { hasAccess: betaAccess } = useBetaAccess();
   const isPro = subIsPro || betaAccess;
   const isMax = subIsMax || betaAccess;
@@ -68,14 +71,19 @@ export default function LessonDetailScreen() {
       </View>
 
       <ScrollView style={styles.scroll} contentContainerStyle={styles.content}>
-        {!isPro && (
+        {subLoading && (
+          <View style={styles.center}>
+            <ActivityIndicator color={info.color} />
+          </View>
+        )}
+        {!subLoading && !isPro && (
           <View style={styles.lockedBanner}>
             <Text style={styles.lockedText}>
               🔒 このコンテンツはProプランで閲覧できます
             </Text>
           </View>
         )}
-        {isPro && (
+        {!subLoading && isPro && (
           <>
             {hasMaxContent && !isMax && (
               <View style={styles.maxTeaser}>

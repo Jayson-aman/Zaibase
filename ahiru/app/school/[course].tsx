@@ -165,7 +165,7 @@ export default function SchoolCurriculumScreen() {
   const { course } = useLocalSearchParams<{ course: string }>();
   const router = useRouter();
   const { hasAccess: betaAccess } = useBetaAccess();
-  const { tier: subTier } = useSubscription();
+  const { tier: subTier, loading: subLoading } = useSubscription();
   const isPro = subTier === 'pro' || subTier === 'max' || betaAccess;
   const isMax = subTier === 'max' || betaAccess;
 
@@ -196,6 +196,9 @@ export default function SchoolCurriculumScreen() {
   }
 
   function handleStage(stage: Stage) {
+    // 課金状態の取得中は加入者でも 'free' に見えるため、確定するまで待つ
+    // （さもないと加入者が一瞬タップしただけでペイウォール画面に飛ばされる）。
+    if (subLoading) return;
     if (!hasAccess(stage.tier)) {
       router.push('/paywall' as any);
       return;

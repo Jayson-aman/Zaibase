@@ -76,10 +76,13 @@ const FREE_WORD_LIMIT = 50;
 
 export default function VocabScreen() {
   const router = useRouter();
-  const { hasVocab } = useVocabSubscription();
-  const { isMax } = useSubscription();
+  const { hasVocab, loading: vocabLoading } = useVocabSubscription();
+  const { isMax, loading: maxLoading } = useSubscription();
   // 英単語Pro（vocab）加入者、または全部入りのMax会員に開放。
   const hasVocabPro = hasVocab || isMax;
+  // 課金状態の取得中は hasVocab/isMax が初期値(false)のため、確定するまでは
+  // ネイティブ発音・聞き流しのタップでペイウォールを誤表示しない。
+  const subLoading = vocabLoading || maxLoading;
   const [fontsLoaded] = useFonts({ BIZUDGothic_400Regular, BIZUDGothic_700Bold });
 
   const [levelFilter, setLevelFilter] = useState<string>('全て');
@@ -175,6 +178,7 @@ export default function VocabScreen() {
 
   const handleSpeak = useCallback(async () => {
     if (!card) return;
+    if (subLoading) return;
     if (!hasVocabPro) { setShowPaywall(true); return; }
     setIsSpeaking(true);
     try {
@@ -182,7 +186,7 @@ export default function VocabScreen() {
       await speakWithOpenAI(`${card.word}. ${pron}. ${card.example}`);
     }
     finally { setIsSpeaking(false); }
-  }, [card, hasVocabPro]);
+  }, [card, hasVocabPro, subLoading]);
 
   const handleFreeSpeak = useCallback(async () => {
     if (!card) return;
@@ -383,6 +387,7 @@ export default function VocabScreen() {
           <TouchableOpacity
             style={[s.listenBtn, isListening && s.listenBtnActive]}
             onPress={() => {
+              if (subLoading) return;
               if (!hasVocabPro) { setShowPaywall(true); return; }
               setIsListening(l => !l);
             }}
