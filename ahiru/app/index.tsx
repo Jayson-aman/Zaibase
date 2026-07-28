@@ -64,7 +64,7 @@ const CURRICULUM = [
     color: '#2A9460',
     target: '小3〜小4生 / 中1〜中2生',
     desc: '受験の土台固め。計算・漢字・基本概念をしっかり定着。',
-    count: '各科目 20問',
+    count: '各科目 400問以上',
   },
   {
     level: '標準',
@@ -72,7 +72,7 @@ const CURRICULUM = [
     color: '#4B8FE4',
     target: '小5〜小6生 / 中2〜中3生',
     desc: '入試頻出問題を網羅。思考力・応用力を養う実戦問題。',
-    count: '各科目 20問',
+    count: '各科目 700問以上',
   },
   {
     level: '発展',
@@ -80,7 +80,7 @@ const CURRICULUM = [
     color: '#C8A84B',
     target: '最難関中学受験 / 難関高校受験',
     desc: '最難関問題・難関校対策。本番直前の実力完成。',
-    count: '各科目 20問＋',
+    count: '各科目 1000問以上',
   },
 ];
 
