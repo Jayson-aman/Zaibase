@@ -218,7 +218,12 @@ export default function LandingPage() {
                 <React.Fragment key={s.label}>
                   {i > 0 && <View style={styles.heroStatDiv} />}
                   <View style={styles.heroStat}>
-                    <Text style={styles.heroStatNum}>
+                    <Text
+                      style={styles.heroStatNum}
+                      numberOfLines={1}
+                      adjustsFontSizeToFit
+                      minimumFontScale={0.55}
+                    >
                       {s.num}<Text style={styles.heroStatUnit}>{s.unit}</Text>
                     </Text>
                     <Text style={styles.heroStatLabel}>{s.label}</Text>
@@ -620,6 +625,10 @@ const styles = StyleSheet.create({
     fontWeight: '900',
     color: C.gold,
     includeFontPadding: false,
+    // 4分割の狭い列でも「13,000問+」のような長い値がはみ出さないよう、
+    // 幅いっぱいに広げた上で adjustsFontSizeToFit に縮小させる。
+    width: '100%',
+    textAlign: 'center',
   },
   heroStatUnit: { fontSize: 13, fontWeight: '700', color: C.gold },
   heroStatLabel: { fontSize: 12, color: C.muted, fontWeight: '600', marginTop: 4 },

@@ -544,6 +544,11 @@ const styles = StyleSheet.create({
   rankingMain: {
     flexDirection: 'row',
     alignItems: 'baseline',
+    justifyContent: 'center',
+    // ユーザー数が増えて順位・母数の桁が増えても、fontSize:72の巨大な数字と
+    // 合わせて1行に収まりきらないことがある。折り返して2行になれるようにして、
+    // カード幅からのはみ出し・右端の重なりを防ぐ。
+    flexWrap: 'wrap',
     gap: 4,
     marginBottom: 8,
   },
