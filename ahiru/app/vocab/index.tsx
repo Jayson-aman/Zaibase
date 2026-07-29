@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useAuthUser } from '../../hooks/useAuthUser';
+import HomeButton from '../../components/HomeButton';
 import { speakWithOpenAI, speakWithDevice, speakJapanese, stopSpeaking } from '../../services/tts';
 import { useVocabSubscription } from '../../hooks/useVocabSubscription';
 import { useSubscription } from '../../hooks/useSubscription';
@@ -245,13 +246,16 @@ export default function VocabScreen() {
     <SafeAreaView style={s.safe}>
       <ScrollView contentContainerStyle={s.scroll}>
         {/* 戻る導線が無いと、この画面に入ったユーザーが行き止まりになる。 */}
-        <TouchableOpacity
-          style={s.backRow}
-          onPress={() => (router.canGoBack() ? router.back() : router.replace('/'))}
-          activeOpacity={0.7}
-        >
-          <Text style={s.backText}>← 戻る</Text>
-        </TouchableOpacity>
+        <View style={s.backHeaderRow}>
+          <TouchableOpacity
+            style={s.backRow}
+            onPress={() => (router.canGoBack() ? router.back() : router.replace('/'))}
+            activeOpacity={0.7}
+          >
+            <Text style={s.backText}>← 戻る</Text>
+          </TouchableOpacity>
+          <HomeButton variant="dark" />
+        </View>
         <Text style={[s.title, fontsLoaded && { fontFamily: TEXTBOOK_BOLD }]}>英単語・英熟語</Text>
         <Text style={s.sub}>単語4,800語+・熟語4,000+・英会話200　英検準2級〜1級・TOEIC800対応</Text>
 
@@ -618,6 +622,7 @@ const s = StyleSheet.create({
   scroll:            { padding: 16, paddingBottom: 40 },
   freeLimitBanner:   { backgroundColor: D.goldDim, borderWidth: 1, borderColor: D.goldBorder, borderRadius: 10, paddingHorizontal: 14, paddingVertical: 10, marginBottom: 10 },
   freeLimitText:     { fontSize: 13, fontWeight: '700', color: D.gold, textAlign: 'center' },
+  backHeaderRow:     { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   backRow:           { alignSelf: 'flex-start', paddingVertical: 8, paddingHorizontal: 4 },
   backText:          { fontSize: 16, fontWeight: '700', color: D.gold },
   title:             { fontSize: 24, fontWeight: '800', color: D.gold, textAlign: 'center', marginTop: 8 },

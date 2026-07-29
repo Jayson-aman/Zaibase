@@ -79,7 +79,9 @@ export default function DailyChallengeScreen() {
           <Text style={styles.backBtnText}>← 戻る</Text>
         </TouchableOpacity>
         <Text style={styles.headerTitle}>🔥 MAX日替わり30問</Text>
-        <View style={styles.headerRight} />
+        <View style={styles.headerRight}>
+          <HomeButton variant="light" />
+        </View>
       </View>
 
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>

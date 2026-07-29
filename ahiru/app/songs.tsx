@@ -15,6 +15,7 @@ import { songs, type Song, type SongCategory } from '../data/songs';
 import { ERAS, type Era } from '../data/timeline';
 import { melodyAudio } from '../data/melodyAudio';
 import { speakJapanese, stopSpeaking } from '../services/tts';
+import HomeButton from '../components/HomeButton';
 
 // このスクリーン内で同時に1つの音（メロディ or 読み上げ）だけを再生する。
 // 新しい再生を始める前に、直前に鳴らしていたものを止める。
@@ -54,10 +55,16 @@ export default function SongsScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backRow}>
-          <Text style={styles.backArrow}>← </Text>
-          <Text style={styles.backLabel}>戻る</Text>
-        </TouchableOpacity>
+        <View style={styles.headerTopRow}>
+          <TouchableOpacity
+            onPress={() => (router.canGoBack() ? router.back() : router.replace('/'))}
+            style={styles.backRow}
+          >
+            <Text style={styles.backArrow}>← </Text>
+            <Text style={styles.backLabel}>戻る</Text>
+          </TouchableOpacity>
+          <HomeButton variant="dark" />
+        </View>
         <Text style={styles.title}>🎵 覚え歌（替え歌）</Text>
         <Text style={styles.subtitle}>メロディにのせて社会を楽しく暗記！</Text>
       </View>
@@ -235,6 +242,7 @@ function SongCard({ song: s, catColor }: { song: Song; catColor: string }) {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#FFFBEB' },
   header: { paddingHorizontal: 20, paddingTop: 8, paddingBottom: 12 },
+  headerTopRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   backRow: { flexDirection: 'row', alignItems: 'center', paddingVertical: 6 },
   backArrow: { fontSize: 18, color: '#B45309', fontWeight: '700' },
   backLabel: { fontSize: 16, color: '#B45309', fontWeight: '700' },

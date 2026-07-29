@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { getYojijukugoByLevel, type YojijukugoLevel } from '../data/yojijukugo';
+import HomeButton from '../components/HomeButton';
 
 const LEVELS: { key: YojijukugoLevel; emoji: string; label: string; color: string }[] = [
   { key: 'elementary', emoji: '🎒', label: '小学生レベル', color: '#0EA5E9' },
@@ -24,10 +25,16 @@ export default function YojijukugoScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backRow}>
-          <Text style={styles.backArrow}>← </Text>
-          <Text style={styles.backLabel}>戻る</Text>
-        </TouchableOpacity>
+        <View style={styles.headerTopRow}>
+          <TouchableOpacity
+            onPress={() => (router.canGoBack() ? router.back() : router.replace('/'))}
+            style={styles.backRow}
+          >
+            <Text style={styles.backArrow}>← </Text>
+            <Text style={styles.backLabel}>戻る</Text>
+          </TouchableOpacity>
+          <HomeButton variant="dark" />
+        </View>
         <Text style={styles.title}>📚 四字熟語</Text>
         <Text style={styles.subtitle}>読み方・意味・使い方をセットで覚える（全{list.length}語）</Text>
       </View>
@@ -76,6 +83,7 @@ export default function YojijukugoScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#F7F8FB' },
   header: { paddingHorizontal: 20, paddingTop: 8, paddingBottom: 12 },
+  headerTopRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   backRow: { flexDirection: 'row', alignItems: 'center', paddingVertical: 6 },
   backArrow: { fontSize: 18, color: '#B45309', fontWeight: '700' },
   backLabel: { fontSize: 16, color: '#B45309', fontWeight: '700' },

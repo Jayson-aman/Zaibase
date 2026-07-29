@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity } from 'react-na
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import MCQQuiz from '../../components/MCQQuiz';
 import CertPaywall from '../../components/CertPaywall';
+import HomeButton from '../../components/HomeButton';
 import { eikenQuestions } from '../../data/eiken_questions';
 import { VOCAB_MONTHLY_LABEL, VOCAB_YEARLY_LABEL } from '../../constants/pricing';
 
@@ -52,9 +53,12 @@ export default function EikenLevelScreen() {
     return (
       <SafeAreaView style={styles.safeArea}>
         <View style={[styles.header, { backgroundColor: info.color }]}>
-          <TouchableOpacity onPress={() => safeBack()} style={styles.backBtn}>
-            <Text style={styles.backBtnText}>← 戻る</Text>
-          </TouchableOpacity>
+          <View style={styles.headerTopRow}>
+            <TouchableOpacity onPress={() => safeBack()} style={styles.backBtn}>
+              <Text style={styles.backBtnText}>← 戻る</Text>
+            </TouchableOpacity>
+            <HomeButton variant="light" />
+          </View>
           <Text style={styles.headerTitle}>{info.emoji} {info.name}</Text>
         </View>
         <View style={styles.body}>
@@ -85,9 +89,12 @@ export default function EikenLevelScreen() {
         {(hasAccess: boolean) => (
         <>
         <View style={[styles.header, { backgroundColor: info.color }]}>
-          <TouchableOpacity onPress={() => safeBack()} style={styles.backBtn}>
-            <Text style={styles.backBtnText}>← 戻る</Text>
-          </TouchableOpacity>
+          <View style={styles.headerTopRow}>
+            <TouchableOpacity onPress={() => safeBack()} style={styles.backBtn}>
+              <Text style={styles.backBtnText}>← 戻る</Text>
+            </TouchableOpacity>
+            <HomeButton variant="light" />
+          </View>
           <Text style={styles.headerTitle}>{info.emoji} {info.name}</Text>
           <Text style={styles.headerSub}>{info.cefr}　{allQuestions.length}問収録</Text>
         </View>
@@ -102,7 +109,8 @@ export default function EikenLevelScreen() {
 const styles = StyleSheet.create({
   safeArea: { flex: 1, backgroundColor: '#F5F7FA' },
   header: { paddingHorizontal: 20, paddingVertical: 16 },
-  backBtn: { marginBottom: 8 },
+  headerTopRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 },
+  backBtn: {},
   backBtnText: { color: 'rgba(255,255,255,0.85)', fontSize: 14, fontWeight: '700' },
   headerTitle: { fontSize: 18, fontWeight: '900', color: '#FFFFFF' },
   headerSub: { fontSize: 12, color: 'rgba(255,255,255,0.7)', fontWeight: '600', marginTop: 2 },
