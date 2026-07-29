@@ -101,32 +101,41 @@ async function playAudioUrl(url: string): Promise<void> {
   }
 }
 
-/** デバイス TTS フォールバック（無料ユーザー向け） */
-export async function speakWithDevice(text: string, speed: number = 1.0): Promise<void> {
+/**
+ * デバイス TTS フォールバック（無料ユーザー向け）。
+ * 戻り値は「実際に最後まで読み上げられたか」。expo-speech自体が使えない
+ * （import失敗・onErrorが呼ばれた）場合はfalseを返すので、呼び出し側で
+ * 「ボタンを押しても無反応」に見える状態かどうかを判定できる。
+ */
+export async function speakWithDevice(text: string, speed: number = 1.0): Promise<boolean> {
   const rate = 0.85 * speed;
   if (Platform.OS === 'web') {
     return new Promise((resolve) => {
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = 'en-US';
       utterance.rate = rate;
-      utterance.onend = () => resolve();
-      utterance.onerror = () => resolve();
+      utterance.onend = () => resolve(true);
+      utterance.onerror = () => resolve(false);
       window.speechSynthesis.speak(utterance);
     });
   }
 
   try {
     const Speech = await import('expo-speech');
-    await new Promise<void>((resolve) => {
+    return await new Promise<boolean>((resolve) => {
       Speech.speak(text, {
         language: 'en-US',
         rate,
-        onDone: resolve,
-        onError: () => resolve(),
+        onDone: () => resolve(true),
+        onError: (e) => {
+          console.error('speakWithDevice: expo-speech onError', e);
+          resolve(false);
+        },
       });
     });
-  } catch {
-    // 無視
+  } catch (e) {
+    console.error('speakWithDevice: expo-speech import/speak failed', e);
+    return false;
   }
 }
 
@@ -151,11 +160,14 @@ export async function speakJapanese(text: string, speed: number = 1.0): Promise<
         language: 'ja-JP',
         rate,
         onDone: resolve,
-        onError: () => resolve(),
+        onError: (e) => {
+          console.error('speakJapanese: expo-speech onError', e);
+          resolve();
+        },
       });
     });
-  } catch {
-    // 無視
+  } catch (e) {
+    console.error('speakJapanese: expo-speech import/speak failed', e);
   }
 }
 

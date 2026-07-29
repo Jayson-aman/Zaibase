@@ -10,6 +10,7 @@ import {
   Animated,
   Dimensions,
   ActivityIndicator,
+  Alert,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useAuthUser } from '../../hooks/useAuthUser';
@@ -221,8 +222,20 @@ export default function VocabScreen() {
   const handleFreeSpeak = useCallback(async () => {
     if (!card) return;
     setIsSpeaking(true);
-    try { await speakWithDevice(card.word, LISTEN_SPEED_SCALE[listenSpeed]); }
-    finally { setIsSpeaking(false); }
+    try {
+      const ok = await speakWithDevice(card.word, LISTEN_SPEED_SCALE[listenSpeed]);
+      // 端末の読み上げ機能自体が使えない場合、ボタンを押しても本当に
+      // 何も起きない（無音のまま完了する）ので、押し間違いと区別できるよう
+      // はっきり伝える。
+      if (!ok) {
+        Alert.alert(
+          '読み上げできませんでした',
+          'この端末の読み上げ機能を利用できませんでした。端末を再起動するか、しばらくしてからもう一度お試しください。'
+        );
+      }
+    } finally {
+      setIsSpeaking(false);
+    }
   }, [card, listenSpeed]);
 
   const resetCard = () => { setFlipped(false); flipAnim.setValue(0); };
