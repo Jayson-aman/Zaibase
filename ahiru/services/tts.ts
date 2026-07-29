@@ -9,15 +9,16 @@ type SpeakTextResult = { ok: true; audioBase64: string };
  * （1日あたりの呼び出し回数はサーバー側で制限される）。
  * Web: HTMLAudioElement, Native: expo-audio を使用
  */
-export async function speakWithOpenAI(text: string): Promise<void> {
+export async function speakWithOpenAI(text: string, speed: number = 1.0): Promise<void> {
+  const safeSpeed = Math.min(1.3, Math.max(0.7, speed));
   try {
-    const { audioBase64 } = await callFirebaseFunction<{ text: string }, SpeakTextResult>(
-      'speakText',
-      { text }
-    );
+    const { audioBase64 } = await callFirebaseFunction<
+      { text: string; speed: number },
+      SpeakTextResult
+    >('speakText', { text, speed: safeSpeed });
     await playAudioUrl(`data:audio/mp3;base64,${audioBase64}`);
   } catch {
-    await speakWithDevice(text);
+    await speakWithDevice(text, speed);
   }
 }
 
@@ -101,12 +102,13 @@ async function playAudioUrl(url: string): Promise<void> {
 }
 
 /** デバイス TTS フォールバック（無料ユーザー向け） */
-export async function speakWithDevice(text: string): Promise<void> {
+export async function speakWithDevice(text: string, speed: number = 1.0): Promise<void> {
+  const rate = 0.85 * speed;
   if (Platform.OS === 'web') {
     return new Promise((resolve) => {
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = 'en-US';
-      utterance.rate = 0.85;
+      utterance.rate = rate;
       utterance.onend = () => resolve();
       utterance.onerror = () => resolve();
       window.speechSynthesis.speak(utterance);
@@ -118,7 +120,7 @@ export async function speakWithDevice(text: string): Promise<void> {
     await new Promise<void>((resolve) => {
       Speech.speak(text, {
         language: 'en-US',
-        rate: 0.85,
+        rate,
         onDone: resolve,
         onError: () => resolve(),
       });
@@ -128,13 +130,14 @@ export async function speakWithDevice(text: string): Promise<void> {
   }
 }
 
-/** 日本語テキストを端末TTSで読み上げる（替え歌の歌詞など） */
-export async function speakJapanese(text: string): Promise<void> {
+/** 日本語テキストを端末TTSで読み上げる（替え歌の歌詞・単語帳の日本語訳など） */
+export async function speakJapanese(text: string, speed: number = 1.0): Promise<void> {
+  const rate = 0.95 * speed;
   if (Platform.OS === 'web') {
     return new Promise((resolve) => {
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = 'ja-JP';
-      utterance.rate = 0.95;
+      utterance.rate = rate;
       utterance.onend = () => resolve();
       utterance.onerror = () => resolve();
       window.speechSynthesis.speak(utterance);
@@ -146,7 +149,7 @@ export async function speakJapanese(text: string): Promise<void> {
     await new Promise<void>((resolve) => {
       Speech.speak(text, {
         language: 'ja-JP',
-        rate: 0.95,
+        rate,
         onDone: resolve,
         onError: () => resolve(),
       });

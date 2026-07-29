@@ -72,11 +72,17 @@ exports.speakText = onCall(
       );
     }
 
-    const { text } = req.data || {};
+    const { text, speed } = req.data || {};
     if (!text || typeof text !== "string" || text.trim().length === 0) {
       throw new HttpsError("invalid-argument", "text は必須です");
     }
     const safeText = text.slice(0, MAX_CHARS);
+    // クライアントの速度スライダー由来。範囲外の値やAPI仕様外の速度を
+    // 送られても安全なように、実用域(0.6〜1.3)にクランプする。
+    const safeSpeed =
+      typeof speed === "number" && Number.isFinite(speed)
+        ? Math.min(1.3, Math.max(0.6, speed))
+        : 0.9;
 
     await checkAndIncrementLimit(uid);
 
@@ -91,7 +97,7 @@ exports.speakText = onCall(
         input: safeText,
         voice: "alloy",
         response_format: "mp3",
-        speed: 0.9,
+        speed: safeSpeed,
       }),
     });
 

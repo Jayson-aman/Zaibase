@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useAuthUser } from '../../hooks/useAuthUser';
-import { speakWithOpenAI, speakWithDevice, stopSpeaking } from '../../services/tts';
+import { speakWithOpenAI, speakWithDevice, speakJapanese, stopSpeaking } from '../../services/tts';
 import { useVocabSubscription } from '../../hooks/useVocabSubscription';
 import { useSubscription } from '../../hooks/useSubscription';
 import {
@@ -67,7 +67,20 @@ const LEVEL_MAP: Record<string, string> = {
   '英検準2級': 'eiken_pre2', '英検2級': 'eiken_2', '英検1級': 'eiken_1', 'TOEIC800': 'toeic_800',
 };
 const TYPE_FILTER = ['全て', '単語', '熟語', '英会話'] as const;
-const LISTEN_INTERVAL_MS = 4500;
+// 聞き流し1枚読み終えたあとの小休止（実際の読み上げ時間はここに含まない）。
+const LISTEN_PAUSE_MS = 500;
+
+type ListenSpeed = 'slow' | 'normal' | 'fast';
+const LISTEN_SPEED_SCALE: Record<ListenSpeed, number> = {
+  slow: 0.75,
+  normal: 1.0,
+  fast: 1.25,
+};
+const LISTEN_SPEED_OPTIONS: { key: ListenSpeed; label: string }[] = [
+  { key: 'slow', label: '🐢 ゆっくり' },
+  { key: 'normal', label: '🚶 ふつう' },
+  { key: 'fast', label: '🐇 速い' },
+];
 
 // 無料で試せる単語数。英検対策と同じ「一部無料・続きは加入」方式に合わせる。
 // 全部無料だと、英単語Proの目玉として宣伝している内容が実際には無料で
@@ -93,9 +106,9 @@ export default function VocabScreen() {
   const [isSpeaking,  setIsSpeaking]  = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [shuffleKey,  setShuffleKey]  = useState(0);
+  const [listenSpeed, setListenSpeed] = useState<ListenSpeed>('normal');
 
-  const flipAnim    = useRef(new Animated.Value(0)).current;
-  const listenTimer = useRef<ReturnType<typeof setInterval> | null>(null);
+  const flipAnim = useRef(new Animated.Value(0)).current;
 
   // フィルターに合う単語（並べ替え前の安定した順序）。
   // 無料枠はこの安定順の先頭から取るため、シャッフルしても中身が変わらない。
@@ -141,35 +154,49 @@ export default function VocabScreen() {
   const kpNote = card?.keyPoint ?? usage?.keyPoint;
   const snNote = card?.setNote ?? usage?.setNote;
 
-  // 聞き流し自動送り
+  // 聞き流し自動送り。
+  // 以前は「読み上げ」と「次のカードへ進むタイマー」を同時に走らせていたため、
+  // 読み上げが長い単語ではタイマーが先に発火して英語の途中や日本語訳が
+  // 読み終わる前にカードが切り替わり（＝日本語が切れる）、逆に読み上げが
+  // 短い単語では次に進むまで無音が続いていた（＝間が長い）。
+  // 読み上げが終わるのを実際に待ってから、小休止を挟んで次に進むようにする。
   useEffect(() => {
-    if (!isListening) {
-      if (listenTimer.current) clearInterval(listenTimer.current);
-      return;
-    }
-    const speak = async () => {
+    if (!isListening) return;
+    let cancelled = false;
+    const speedScale = LISTEN_SPEED_SCALE[listenSpeed];
+
+    const run = async () => {
       if (!card) return;
       try {
+        // 英語（単語）→ 日本語（意味）の順に、別々の読み上げとして再生する。
+        // カタカナ読み・IPA記号は「読み上げる」ためのものではなく表示用の
+        // ヒントなので音声には含めない（英語用の声にカタカナを読ませると
+        // 発音が崩れ、英語と日本語の切り替えで不自然な間が空く原因だった）。
         if (hasVocabPro) {
-          const pron = card.ipa ?? card.pronunciation;
-          await speakWithOpenAI(`${card.word}. ${pron}. ${card.meaning}`);
+          await speakWithOpenAI(card.word, speedScale);
         } else {
-          await speakWithDevice(card.word);
+          await speakWithDevice(card.word, speedScale);
         }
-      } catch (_) {}
-    };
-    speak();
-    listenTimer.current = setInterval(() => {
+        if (cancelled) return;
+        await speakJapanese(card.meaning, speedScale);
+      } catch (_) {
+        // 無視
+      }
+      if (cancelled) return;
+      await new Promise<void>((resolve) => setTimeout(resolve, LISTEN_PAUSE_MS));
+      if (cancelled) return;
       setFlipped(false);
       flipAnim.setValue(0);
       setCardIndex(i => (visible.length > 0 ? (i + 1) % visible.length : 0));
-    }, LISTEN_INTERVAL_MS);
+    };
+
+    run();
     return () => {
-      if (listenTimer.current) clearInterval(listenTimer.current);
+      cancelled = true;
       // 再生中の音声も止める。止めないとホームに戻っても読み上げが続く。
       stopSpeaking().catch(() => {});
     };
-  }, [isListening, cardIndex, visible.length, hasVocabPro]);
+  }, [isListening, cardIndex, visible.length, hasVocabPro, listenSpeed]);
 
   const handleFlip = useCallback(() => {
     Animated.spring(flipAnim, { toValue: flipped ? 0 : 1, useNativeDriver: true, friction: 8 }).start();
@@ -182,18 +209,20 @@ export default function VocabScreen() {
     if (!hasVocabPro) { setShowPaywall(true); return; }
     setIsSpeaking(true);
     try {
-      const pron = card.ipa ?? card.pronunciation;
-      await speakWithOpenAI(`${card.word}. ${pron}. ${card.example}`);
+      const speedScale = LISTEN_SPEED_SCALE[listenSpeed];
+      // カタカナ読み・IPA記号は表示用のヒントであり読み上げ対象ではないため、
+      // 単語と例文（どちらも英語）だけを1つの音声としてつなげる。
+      await speakWithOpenAI(`${card.word}. ${card.example}`, speedScale);
     }
     finally { setIsSpeaking(false); }
-  }, [card, hasVocabPro, subLoading]);
+  }, [card, hasVocabPro, subLoading, listenSpeed]);
 
   const handleFreeSpeak = useCallback(async () => {
     if (!card) return;
     setIsSpeaking(true);
-    try { await speakWithDevice(card.word); }
+    try { await speakWithDevice(card.word, LISTEN_SPEED_SCALE[listenSpeed]); }
     finally { setIsSpeaking(false); }
-  }, [card]);
+  }, [card, listenSpeed]);
 
   const resetCard = () => { setFlipped(false); flipAnim.setValue(0); };
   const goNext = () => { resetCard(); setCardIndex(i => (visible.length > 0 ? (i + 1) % visible.length : 0)); };
@@ -399,6 +428,28 @@ export default function VocabScreen() {
           <TouchableOpacity style={[s.navBtn, s.navBtnNext]} onPress={goNext}>
             <Text style={[s.navBtnText, s.navBtnTextNext]}>次 →</Text>
           </TouchableOpacity>
+        </View>
+
+        {/* 読み上げ速度（聞き流し・ネイティブ発音の両方に効く） */}
+        <View style={s.listenSpeedRow}>
+          <Text style={s.listenSpeedLabel}>読み上げ速度</Text>
+          <View style={s.listenSpeedBtns}>
+            {LISTEN_SPEED_OPTIONS.map((opt) => {
+              const selected = listenSpeed === opt.key;
+              return (
+                <TouchableOpacity
+                  key={opt.key}
+                  style={[s.listenSpeedBtn, selected && s.listenSpeedBtnActive]}
+                  onPress={() => setListenSpeed(opt.key)}
+                  activeOpacity={0.85}
+                >
+                  <Text style={[s.listenSpeedBtnText, selected && s.listenSpeedBtnTextActive]}>
+                    {opt.label}
+                  </Text>
+                </TouchableOpacity>
+              );
+            })}
+          </View>
         </View>
 
         {!hasVocabPro && (
@@ -643,6 +694,13 @@ const s = StyleSheet.create({
   listenBtnActive:   { backgroundColor: 'rgba(74,200,180,0.28)', borderColor: D.tealText },
   listenBtnText:     { fontSize: 13, color: D.tealText, fontWeight: '700' },
   listenBtnTextActive: { color: '#2EC4B6' },
+  listenSpeedRow:      { alignItems: 'center', marginBottom: 16, maxWidth: 480, alignSelf: 'center', width: '100%' },
+  listenSpeedLabel:    { fontSize: 12, color: D.muted, fontWeight: '700', marginBottom: 6 },
+  listenSpeedBtns:     { flexDirection: 'row', gap: 8 },
+  listenSpeedBtn:      { paddingVertical: 7, paddingHorizontal: 12, borderRadius: 18, borderWidth: 1, borderColor: D.cardBorder, backgroundColor: D.card },
+  listenSpeedBtnActive:{ backgroundColor: D.goldDim, borderColor: D.gold },
+  listenSpeedBtnText:  { fontSize: 12, color: D.soft, fontWeight: '700' },
+  listenSpeedBtnTextActive: { color: D.gold },
   promoBanner:       { backgroundColor: D.goldDim, borderWidth: 1, borderColor: D.gold, borderRadius: 12, padding: 14, alignItems: 'center', marginTop: 4 },
   promoText:         { fontSize: 13, color: D.gold, fontWeight: '700', textAlign: 'center' },
   paywallCard:       { margin: 20, backgroundColor: D.card, borderRadius: 20, borderWidth: 1, borderColor: D.goldBorder, padding: 28, alignItems: 'center', ...glassWeb },
