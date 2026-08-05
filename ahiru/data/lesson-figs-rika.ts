@@ -457,4 +457,509 @@ export const lessonFigsRika: Record<string, Figure> = {
     labels: { radius: '火口の半径', height: '山の高さ', slant: '斜面' },
     caption: '成層火山（例：富士山）は溶岩の流出と噴火（火山灰など）をくり返し、円すい形に積み重なってできる',
   },
+
+  // ── 追加バッチ（カバレッジ拡充） ─────────────────────────────
+
+  // 第1章 植物：入試例題1（呼吸量・見かけの光合成量・真の光合成量）
+  lf_rika_35: {
+    kind: 'barChart',
+    yLabel: 'CO₂量(mg/時間)',
+    bars: [
+      { label: '呼吸量(暗所)', value: 2 },
+      { label: '見かけの光合成量', value: 6 },
+      { label: '真の光合成量', value: 8 },
+    ],
+    caption: '真の光合成量＝見かけの光合成量＋呼吸量＝6＋2＝8mg/時間',
+  },
+
+  // 第2章 電気回路：電力と発熱量（Q=P×t、500Wのストーブ）
+  lf_rika_36: {
+    kind: 'lineChart',
+    xLabel: '使用時間(分)',
+    yLabel: '発熱量(kJ)',
+    xRange: [0, 10],
+    yRange: [0, 320],
+    series: [
+      { label: '500Wの電気ストーブ', markers: true, points: [ { x: 0, y: 0 }, { x: 10, y: 300 } ] },
+    ],
+    caption: 'Q＝P×t。500W×600秒(10分)＝300,000J＝300kJ。原点を通る比例のグラフになる',
+  },
+  // 第2章 電気回路：入試例題1（R1直列＋R2/R3並列、電源30V）
+  lf_rika_37: {
+    kind: 'circuit',
+    layout: 'parallel',
+    series: [ { type: 'resistor', label: 'R₁ 10Ω' } ],
+    branches: [
+      [ { type: 'resistor', label: 'R₂ 15Ω' } ],
+      [ { type: 'resistor', label: 'R₃ 30Ω' } ],
+    ],
+    battery: { label: '30V' },
+    caption: 'R₂とR₃の並列合成10Ω＋R₁10Ω＝20Ω。全体の電流＝30÷20＝1.5A、R₁の電圧＝15V',
+  },
+
+  // 第3章 化学変化：密度の比較（木・水・アルミニウム・鉄）
+  lf_rika_38: {
+    kind: 'barChart',
+    yLabel: '密度(g/cm³)',
+    bars: [
+      { label: '木', value: 0.5 },
+      { label: '水', value: 1.0 },
+      { label: 'アルミニウム', value: 2.7 },
+      { label: '鉄', value: 7.9 },
+    ],
+    caption: '密度＝質量÷体積。密度が大きいほど同じ体積で重い。54g・20cm³の物体はアルミニウム(2.7g/cm³)',
+  },
+  // 第3章 化学変化：pHスケール（酸性・中性・アルカリ性）
+  lf_rika_39: {
+    kind: 'numberLine',
+    min: 0,
+    max: 14,
+    step: 2,
+    points: [
+      { x: 0, label: '酸性(強)' },
+      { x: 7, label: '中性' },
+      { x: 14, label: 'アルカリ性(強)' },
+    ],
+    caption: 'pHが7より小さいほど酸性が強く、7より大きいほどアルカリ性が強い。pH＝7は中性（BTB液は緑色）',
+  },
+  // 第3章 化学変化：入試例題1（石灰石＋塩酸→CO₂、質量保存）
+  lf_rika_40: {
+    kind: 'chemEquation',
+    equation: 'CaCO3 + 2HCl -> CaCl2 + H2O + CO2',
+    caption: '石灰石（炭酸カルシウム）にうすい塩酸を加えると二酸化炭素が発生する。密閉していなければ発生したCO₂の分だけ質量が減る',
+  },
+  // 第3章 化学変化：MAXレベル（水の電気分解）
+  lf_rika_41: {
+    kind: 'chemEquation',
+    equation: '2H2O -> 2H2 + O2',
+    caption: '水の電気分解。陰極に水素、陽極に酸素が発生し、体積比は水素：酸素＝2：1',
+  },
+
+  // 第4章 天体・地層：太陽系8惑星の順序
+  lf_rika_42: {
+    kind: 'numberLine',
+    min: 0,
+    max: 9,
+    step: 1,
+    points: [
+      { x: 0, label: '太陽' },
+      { x: 1, label: '水星' },
+      { x: 2, label: '金星' },
+      { x: 3, label: '地球' },
+      { x: 4, label: '火星' },
+      { x: 5, label: '木星' },
+      { x: 6, label: '土星' },
+      { x: 7, label: '天王星' },
+      { x: 8, label: '海王星' },
+    ],
+    caption: '太陽から近い順に「水金地火木土天海」。水星・金星が内惑星、火星より外側が外惑星',
+  },
+  // 第4章 天体・地層：月の満ち欠けのサイクル（模式）
+  lf_rika_43: {
+    kind: 'circle',
+    showCenter: true,
+    points: [
+      { angle: 180, label: '新月' },
+      { angle: 135, label: '三日月' },
+      { angle: 90, label: '上弦の月' },
+      { angle: 45, label: '満ちていく月' },
+      { angle: 0, label: '満月' },
+      { angle: 315, label: '欠けていく月' },
+      { angle: 270, label: '下弦の月' },
+      { angle: 225, label: '三日月' },
+    ],
+    caption: '月は地球のまわりを公転しながら太陽光の当たる向きが変わり、新月→上弦→満月→下弦→新月と満ち欠けする（周期約29.5日）',
+  },
+  // 第4章 天体・地層：季節ごとの南中高度（北緯35°）
+  lf_rika_44: {
+    kind: 'barChart',
+    yLabel: '南中高度(度)',
+    bars: [
+      { label: '冬至', value: 31.6 },
+      { label: '春分・秋分', value: 55 },
+      { label: '夏至', value: 78.4 },
+    ],
+    caption: '北緯35°での南中高度。夏至90－35＋23.4＝78.4°、冬至90－35－23.4＝31.6°、春秋分90－35＝55°',
+  },
+
+  // 第5章 力・運動：エネルギー保存（高さと位置・運動エネルギー）
+  lf_rika_45: {
+    kind: 'lineChart',
+    xLabel: '高さ(m)',
+    yLabel: 'エネルギー(J)',
+    xRange: [0, 2],
+    yRange: [0, 1050],
+    series: [
+      { label: '位置エネルギー', color: '#0EA5E9', markers: true, points: [ { x: 0, y: 0 }, { x: 2, y: 1000 } ] },
+      { label: '運動エネルギー', color: '#E11D48', markers: true, points: [ { x: 0, y: 1000 }, { x: 2, y: 0 } ] },
+    ],
+    caption: '摩擦がなければ位置エネルギー＋運動エネルギーは一定（エネルギー保存の法則）。高い位置ほど位置エネルギー大・運動エネルギー小',
+  },
+  // 第5章 力・運動：入試例題3（浮力の計算）
+  lf_rika_46: {
+    kind: 'barChart',
+    yLabel: '力(N)',
+    bars: [
+      { label: '重力', value: 5.4 },
+      { label: '浮力', value: 2.0 },
+      { label: '見かけの重さ', value: 3.4 },
+    ],
+    caption: '密度2.7g/cm³・体積200cm³のアルミニウム。重力5.4N－浮力2.0N＝見かけの重さ3.4N',
+  },
+
+  // 第6章 生態系・人体・遺伝：消化器官（口→食道→胃→小腸→大腸）
+  lf_rika_47: {
+    kind: 'bioDiagram',
+    template: 'digestiveSystem',
+    caption: '口→食道→胃→肝臓・すい臓からの消化液→小腸（吸収）→大腸→こう門の順に食べ物が通る',
+  },
+  // 第6章 生態系・人体・遺伝：目のつくり
+  lf_rika_48: {
+    kind: 'bioDiagram',
+    template: 'eye',
+    caption: '角膜から入った光は水晶体で屈折し、網膜に像を結ぶ。視神経が信号を脳へ伝える',
+  },
+  // 第6章 生態系・人体・遺伝：入試例題3（F2・400粒のうち丸・しわ）
+  lf_rika_49: {
+    kind: 'barChart',
+    yLabel: '種子の数(粒)',
+    bars: [
+      { label: '丸(優性)', value: 300 },
+      { label: 'しわ(劣性)', value: 100 },
+    ],
+    caption: 'F2の表現型比は丸：しわ＝3：1。400粒のうちしわは400×1/4＝100粒、丸は300粒',
+  },
+
+  // 第7章 光・音・熱：入試例題1（鏡にうつる像までの距離）
+  lf_rika_50: {
+    kind: 'numberLine',
+    min: -1,
+    max: 7,
+    step: 1,
+    points: [
+      { x: 0, label: '人' },
+      { x: 3, label: '鏡' },
+      { x: 6, label: '像' },
+    ],
+    caption: '鏡の奥、物体と鏡の距離と同じ位置に像ができる。人から像までの見かけの距離は3＋3＝6m',
+  },
+  // 第7章 光・音・熱：MAXレベル（凸レンズの写像公式、f=10cm）
+  lf_rika_51: {
+    kind: 'lineChart',
+    xLabel: '物体距離a(cm)',
+    yLabel: '像距離b(cm)',
+    xRange: [10, 45],
+    yRange: [0, 35],
+    series: [
+      { label: '焦点距離10cmのレンズ', markers: true, points: [ { x: 15, y: 30 }, { x: 20, y: 20 }, { x: 30, y: 15 }, { x: 40, y: 13.3 } ] },
+    ],
+    caption: '1/a＋1/b＝1/f（f＝10cm）。a＝20cm（焦点距離の2倍）で実物と同じ大きさの実像ができる（a＝b＝20）',
+  },
+
+  // 第8章 てこ・輪軸・滑車：棒の重さと支点・重心・右端
+  lf_rika_52: {
+    kind: 'numberLine',
+    min: 0,
+    max: 60,
+    step: 10,
+    points: [
+      { x: 0, label: '支点' },
+      { x: 30, label: '重心(120g)' },
+      { x: 60, label: '右端(F)' },
+    ],
+    caption: '長さ60cm・重さ120gの棒。F×60＝120×30よりF＝60g',
+  },
+  // 第8章 てこ・輪軸・滑車：輪軸のつり合い（力×半径が一定）
+  lf_rika_53: {
+    kind: 'coordinate',
+    xRange: [0, 40],
+    yRange: [0, 80],
+    hyperbolas: [ { k: 600, label: '力×半径＝600' } ],
+    points: [
+      { x: 30, y: 20, label: '大輪 20g' },
+      { x: 10, y: 60, label: '小輪 60g' },
+    ],
+    caption: '輪軸のつり合いは「力×半径」が一定（てこと同じ考え方）。20g×30cm＝60g×10cm＝600',
+  },
+  // 第8章 てこ・輪軸・滑車：動滑車の数と必要な力
+  lf_rika_54: {
+    kind: 'barChart',
+    yLabel: '必要な力(g)',
+    bars: [
+      { label: '動滑車0個', value: 200 },
+      { label: '動滑車1個', value: 100 },
+      { label: '動滑車2個', value: 50 },
+    ],
+    caption: '200gの物体を持ち上げるのに必要な力＝重さ÷(2×動滑車の数)。動滑車が増えるほど力は小さくなる',
+  },
+  // 第8章 てこ・輪軸・滑車：入試例題1（複数おもりのてこ）
+  lf_rika_55: {
+    kind: 'numberLine',
+    min: -50,
+    max: 40,
+    step: 10,
+    points: [
+      { x: -40, label: '30g' },
+      { x: -20, label: '60g' },
+      { x: 0, label: '支点' },
+      { x: 30, label: '80g' },
+    ],
+    caption: '左のモーメント合計＝60×20＋30×40＝2400。右：x×30＝2400よりx＝80g',
+  },
+  // 第8章 てこ・輪軸・滑車：MAXレベル（2段てこの倍率）
+  lf_rika_56: {
+    kind: 'barChart',
+    yLabel: '力(g)',
+    bars: [
+      { label: '力点', value: 10 },
+      { label: 'てこA出力', value: 40 },
+      { label: 'てこB出力(最終)', value: 120 },
+    ],
+    caption: '連結したてこの倍率はかけ算になる。10g→(4倍)→40g→(3倍)→120g、全体で12倍',
+  },
+
+  // 第9章 水溶液：再結晶（硝酸カリウム80℃→20℃）
+  lf_rika_57: {
+    kind: 'barChart',
+    yLabel: '硝酸カリウムの量(g)',
+    bars: [
+      { label: '80℃でとけていた量', value: 170 },
+      { label: '20℃でとける量', value: 32 },
+      { label: '出てくる結晶', value: 138 },
+    ],
+    caption: '水100gの飽和水溶液を80℃から20℃に冷やすと170－32＝138gの結晶が出てくる',
+  },
+  // 第9章 水溶液：入試例題1（8%→水を加えて5%に）
+  lf_rika_58: {
+    kind: 'pieChart',
+    slices: [
+      { label: '食塩', value: 12 },
+      { label: '水', value: 228 },
+    ],
+    caption: '8％の食塩水150gに水90gを加えると全体240g・食塩12gで濃度5％になる（12÷240×100＝5％）',
+  },
+  // 第9章 水溶液：MAXレベル（水を蒸発させた後の結晶量）
+  lf_rika_59: {
+    kind: 'barChart',
+    yLabel: '硝酸カリウムの量(g)',
+    bars: [
+      { label: 'はじめにとけていた量', value: 64 },
+      { label: '水50g蒸発後にとける量', value: 32 },
+      { label: '出てくる結晶', value: 32 },
+    ],
+    caption: '40℃の飽和水溶液(水100g＋硝酸カリウム64g)から水を50g蒸発させると、とける量が半分(32g)になり32gの結晶が出る',
+  },
+
+  // 第11章 天気と気象：入試例題2（露点の内挿）
+  lf_rika_60: {
+    kind: 'lineChart',
+    xLabel: '気温(℃)',
+    yLabel: '飽和水蒸気量(g/m³)',
+    xRange: [7, 11],
+    yRange: [8, 10],
+    series: [
+      { label: '飽和水蒸気量', markers: true, points: [ { x: 8, y: 8.3 }, { x: 10, y: 9.4 } ] },
+    ],
+    caption: '水蒸気量8.65g/m³になる温度が露点。8℃で8.3、10℃で9.4なので露点はおよそ9℃前後',
+  },
+
+  // 第12章 ものの燃え方：発火点の比較
+  lf_rika_61: {
+    kind: 'barChart',
+    yLabel: '発火点(℃)',
+    bars: [
+      { label: '紙', value: 290 },
+      { label: 'ガソリン', value: 300 },
+      { label: 'アルコール', value: 400 },
+      { label: '木材', value: 435 },
+    ],
+    caption: '発火点が低い物質ほど低い温度で燃え始め、危険性が高い（木材の発火点は約400〜470℃の目安で435とした）',
+  },
+  // 第12章 ものの燃え方：空気の成分の割合
+  lf_rika_62: {
+    kind: 'pieChart',
+    slices: [
+      { label: 'ちっ素', value: 78 },
+      { label: '酸素', value: 21 },
+      { label: 'その他(アルゴン等)', value: 1 },
+    ],
+    caption: '空気の体積の割合。二酸化炭素は約0.04％とごくわずかで「その他」に含まれる',
+  },
+  // 第12章 ものの燃え方：入試例題3（集気びんの容積と燃焼時間）
+  lf_rika_63: {
+    kind: 'lineChart',
+    xLabel: '集気びんの容積(mL)',
+    yLabel: '燃える時間(秒)',
+    xRange: [0, 2000],
+    yRange: [0, 170],
+    series: [
+      { label: '燃焼時間', markers: true, points: [ { x: 500, y: 40 }, { x: 1000, y: 80 }, { x: 2000, y: 160 } ] },
+    ],
+    caption: 'びんの容積(空気の量)と燃える時間はほぼ比例する',
+  },
+
+  // 第13章 気体の発生と性質：酸素の発生（過酸化水素水の分解）
+  lf_rika_64: {
+    kind: 'chemEquation',
+    equation: '2H2O2 -> 2H2O + O2',
+    caption: '二酸化マンガンを触媒として過酸化水素水（オキシドール）が分解し、酸素が発生する',
+  },
+  // 第13章 気体の発生と性質：入試例題2（亜鉛の質量と水素の発生量）
+  lf_rika_65: {
+    kind: 'lineChart',
+    xLabel: '亜鉛の質量(g)',
+    yLabel: '発生する水素の体積(L)',
+    xRange: [0, 6.5],
+    yRange: [0, 2.6],
+    series: [
+      { label: '水素の発生量', markers: true, points: [ { x: 0, y: 0 }, { x: 3.25, y: 1.2 }, { x: 6.5, y: 2.4 } ] },
+    ],
+    caption: '亜鉛の質量と発生する水素の体積は比例する。3.25g→1.2L、2倍の6.5g→2.4L',
+  },
+
+  // 第14章 動物の分類：あしの数の比較（昆虫類・クモ類・甲殻類）
+  lf_rika_66: {
+    kind: 'barChart',
+    yLabel: 'あしの数(本)',
+    bars: [
+      { label: '昆虫類', value: 6 },
+      { label: 'クモ類', value: 8 },
+      { label: '甲殻類', value: 10 },
+    ],
+    caption: 'あしが6本＝昆虫類。クモ類は8本、甲殻類(エビ・カニ)は10本前後でどちらも昆虫ではない',
+  },
+  // 第14章 動物の分類：昆虫のからだのつくり
+  lf_rika_67: {
+    kind: 'bioDiagram',
+    template: 'insectBody',
+    caption: '昆虫のからだは頭部・胸部・腹部の3つに分かれ、あし6本・はねはすべて胸部につく',
+  },
+
+  // 第15章 こん虫の一生と季節：変態のステージ（完全変態）
+  lf_rika_68: {
+    kind: 'numberLine',
+    min: 0,
+    max: 5,
+    step: 1,
+    points: [
+      { x: 1, label: '卵' },
+      { x: 2, label: '幼虫' },
+      { x: 3, label: 'さなぎ' },
+      { x: 4, label: '成虫' },
+    ],
+    caption: '完全変態は卵→幼虫→さなぎ→成虫の4段階。不完全変態はさなぎ（3）の段階がなく、卵→幼虫→成虫の3段階',
+  },
+  // 第15章 こん虫の一生と季節：セミの幼虫期間と成虫期間の対比
+  lf_rika_69: {
+    kind: 'barChart',
+    yLabel: '期間(日・目安)',
+    bars: [
+      { label: '幼虫(土の中・最大17年)', value: 6205 },
+      { label: '成虫(地上・1〜2週間)', value: 14 },
+    ],
+    caption: 'セミは一生の大部分（数年〜17年）を土の中の幼虫として過ごし、地上の成虫期間はごくわずか',
+  },
+  // 第15章 こん虫の一生と季節：MAXレベル（積算温度）
+  lf_rika_70: {
+    kind: 'lineChart',
+    xLabel: '経過日数(日)',
+    yLabel: '積算温度(℃・累積)',
+    xRange: [0, 3],
+    yRange: [0, 22],
+    series: [
+      { label: '積算温度', markers: true, points: [ { x: 1, y: 5 }, { x: 2, y: 12 }, { x: 3, y: 20 } ] },
+    ],
+    caption: '1日目5℃・2日目7℃・3日目8℃の気温を足し合わせていく（積算温度）。一定値を超えるとサクラが開花すると予測される',
+  },
+
+  // 第16章 花のつくりと受粉：花のつくり
+  lf_rika_71: {
+    kind: 'bioDiagram',
+    template: 'flower',
+    caption: '外側から「がく→花弁→おしべ(やく)→めしべ(柱頭・花柱・子房・胚珠)」の順に並ぶ',
+  },
+  // 第16章 花のつくりと受粉：種子のつくり
+  lf_rika_72: {
+    kind: 'bioDiagram',
+    template: 'seed',
+    caption: '受精後、胚珠は種子になる。種皮の中に子葉・幼根・幼芽をふくむ胚が入っている',
+  },
+
+  // 第17章 天体の日周運動・年周運動：経度差と南中時刻のずれ
+  lf_rika_73: {
+    kind: 'lineChart',
+    xLabel: '経度差(度)',
+    yLabel: '時刻差(分)',
+    xRange: [0, 30],
+    yRange: [0, 130],
+    series: [
+      { label: '南中時刻のずれ', markers: true, points: [ { x: 0, y: 0 }, { x: 15, y: 60 }, { x: 30, y: 120 } ] },
+    ],
+    caption: '経度1度につき時刻は4分ずれる。東経150度は明石(東経135度)より15度東にあるため南中が60分早い',
+  },
+  // 第17章 天体の日周運動・年周運動：MAXレベル（恒星時と太陽時の累積差）
+  lf_rika_74: {
+    kind: 'lineChart',
+    xLabel: '経過日数(日)',
+    yLabel: '恒星時との差(分・累積)',
+    xRange: [0, 365],
+    yRange: [0, 1500],
+    series: [
+      { label: '太陽時と恒星時の差', markers: true, points: [ { x: 0, y: 0 }, { x: 100, y: 400 }, { x: 200, y: 800 }, { x: 365, y: 1460 } ] },
+    ],
+    caption: '1日あたり約4分のズレが365日積み重なると約1460分（≒24.3時間）、ほぼ1日分になる',
+  },
+
+  // 第18章 流水のはたらきと地層：MAXレベル（流速の2乗と運搬できる粒の重さ）
+  lf_rika_75: {
+    kind: 'coordinate',
+    xRange: [0, 3],
+    yRange: [0, 9],
+    parabolas: [ { a: 1, label: '運べる重さ∝流速²' } ],
+    caption: '流水が運べる粒の重さは流速のおよそ2乗に比例する。流速が2倍になると運べる重さは約4倍以上になる',
+  },
+
+  // 第19章 人体の呼吸と血液循環：心臓のつくり
+  lf_rika_76: {
+    kind: 'bioDiagram',
+    template: 'heart',
+    caption: '心臓は右心房・右心室・左心房・左心室の2心房2心室。弁が血液の逆流を防ぐ',
+  },
+  // 第19章 人体の呼吸と血液循環：入試例題3（脈拍数の比較）
+  lf_rika_77: {
+    kind: 'barChart',
+    yLabel: '心拍数(回/分)',
+    bars: [
+      { label: '安静時の例(15秒で18回)', value: 72 },
+      { label: '運動直後の例(10秒で20回)', value: 120 },
+    ],
+    caption: '15秒18回→1分72回(18×4)。運動直後は10秒20回→1分120回(20×6)と大きく増加する',
+  },
+
+  // 第20章 理科の実験器具と観察：顕微鏡の倍率一覧
+  lf_rika_78: {
+    kind: 'barChart',
+    yLabel: '倍率',
+    bars: [
+      { label: '10×4', value: 40 },
+      { label: '10×10', value: 100 },
+      { label: '10×40', value: 400 },
+      { label: '15×40', value: 600 },
+    ],
+    caption: '顕微鏡の倍率＝接眼レンズの倍率×対物レンズの倍率',
+  },
+
+  // 第22章 火山のしくみと鉱物：マグマの粘性と火山の形
+  lf_rika_79: {
+    kind: 'numberLine',
+    min: 0,
+    max: 4,
+    step: 1,
+    points: [
+      { x: 1, label: '盾状火山' },
+      { x: 2, label: '成層火山' },
+      { x: 3, label: '溶岩ドーム' },
+    ],
+    caption: 'マグマの粘性は盾状火山＜成層火山＜溶岩ドームの順に大きくなる。粘性が大きいほど爆発的な噴火になる',
+  },
 };
