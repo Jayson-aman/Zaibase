@@ -1072,4 +1072,430 @@ export const lessonFigsKokoMath: Record<string, Figure> = {
     ],
     caption: '△OABと面積が等しい△PABを作るx軸上の点はP(0,0)とP(−8,0)の2点（等積変形の平行線を利用）',
   },
+
+  // ===== 追加分（カバレッジ拡充） =====
+
+  // 一次関数：2直線の交点
+  lf_kmath_67: {
+    kind: 'coordinate',
+    xRange: [-1, 5],
+    yRange: [-2, 9],
+    lines: [
+      { a: 2, b: 1, label: 'y=2x+1' },
+      { a: -1, b: 7, label: 'y=−x+7' },
+    ],
+    points: [{ x: 2, y: 5, label: '(2, 5)' }],
+    caption: '2直線 y=2x+1 と y=−x+7 の交点は連立方程式を解いて (2, 5)',
+  },
+
+  // 正六角形の対角線・高さ
+  lf_kmath_68: {
+    kind: 'polygon',
+    points: [
+      { x: 2, y: 0, label: 'A' },
+      { x: 1, y: 1.732 },
+      { x: -1, y: 1.732 },
+      { x: -2, y: 0 },
+      { x: -1, y: -1.732 },
+      { x: 1, y: -1.732 },
+    ],
+    fill: true,
+    equalSides: [[0, 1, 2, 3, 4, 5]],
+    diagonals: [[0, 3]],
+    sideLabels: ['a=2', null, null, null, null, null],
+    caption: '正六角形（一辺a=2）：最長の対角線=2a=4、高さ=a√3≒3.46、面積=(3√3/2)a²≒10.39',
+  },
+
+  // 不等式 x≥2 の数直線
+  lf_kmath_69: {
+    kind: 'numberLine',
+    min: -1,
+    max: 6,
+    step: 1,
+    points: [{ x: 2, label: '2' }],
+    segments: [{ from: 2, to: 6, fromOpen: false, toOpen: true }],
+    caption: 'x≥2 は2を含み（●）、そこから右側すべてが解',
+  },
+
+  // 不等式 x<5 の数直線
+  lf_kmath_70: {
+    kind: 'numberLine',
+    min: -2,
+    max: 6,
+    step: 1,
+    segments: [{ from: -2, to: 5, fromOpen: true, toOpen: true }],
+    caption: 'x<5 は5を含まず（○）、そこから左側すべてが解',
+  },
+
+  // 三角形の外心（垂直二等分線の交点）
+  lf_kmath_71: {
+    kind: 'coordinate',
+    xRange: [-2, 8],
+    yRange: [-2, 10],
+    segments: [
+      [{ x: 0, y: 0 }, { x: 6, y: 0 }],
+      [{ x: 0, y: 0 }, { x: 0, y: 8 }],
+      [{ x: 6, y: 0 }, { x: 0, y: 8 }],
+      [{ x: 3, y: -1 }, { x: 3, y: 9 }],
+      [{ x: -1, y: 4 }, { x: 7, y: 4 }],
+    ],
+    points: [
+      { x: 0, y: 0, label: 'A' },
+      { x: 6, y: 0, label: 'B' },
+      { x: 0, y: 8, label: 'C' },
+      { x: 3, y: 4, label: 'P(外心)' },
+    ],
+    caption: '辺AB・ACの垂直二等分線の交点Pは3頂点から等距離（外心）。直角三角形では斜辺BCの中点と一致する',
+  },
+
+  // 放物線上の台形の面積
+  lf_kmath_72: {
+    kind: 'coordinate',
+    xRange: [-6, 6],
+    yRange: [-1, 10],
+    parabolas: [{ a: 0.5, label: 'y=(1/2)x²' }],
+    polygon: [
+      { x: -4, y: 8 },
+      { x: -2, y: 2 },
+      { x: 2, y: 2 },
+      { x: 4, y: 8 },
+    ],
+    points: [
+      { x: -4, y: 8, label: 'A' },
+      { x: -2, y: 2, label: 'B' },
+      { x: 2, y: 2, label: 'C' },
+      { x: 4, y: 8, label: 'D' },
+    ],
+    caption: '台形ABCD：上底AD=8、下底BC=4、高さ6、面積=(1/2)×(4+8)×6=36',
+  },
+
+  // 三角形の面積を2等分する中線
+  lf_kmath_73: {
+    kind: 'coordinate',
+    xRange: [-5, 8],
+    yRange: [-1, 16],
+    segments: [
+      [{ x: 0, y: 0 }, { x: -3, y: 3 }],
+      [{ x: -3, y: 3 }, { x: 6, y: 12 }],
+      [{ x: 6, y: 12 }, { x: 0, y: 0 }],
+      [{ x: 0, y: 0 }, { x: 3.2, y: 16 }],
+    ],
+    points: [
+      { x: 0, y: 0, label: 'O' },
+      { x: -3, y: 3, label: 'A' },
+      { x: 6, y: 12, label: 'B' },
+      { x: 1.5, y: 7.5, label: 'M(中点)' },
+    ],
+    caption: 'ABの中点Mを通る直線OM（y=5x）は△OABの面積を2等分する',
+  },
+
+  // 総合演習：放物線と直線・△OABの分割
+  lf_kmath_74: {
+    kind: 'coordinate',
+    xRange: [-3, 5],
+    yRange: [-1, 9],
+    parabolas: [{ a: 0.5, label: 'y=(1/2)x²' }],
+    segments: [
+      [{ x: 0, y: 0 }, { x: -2, y: 2 }],
+      [{ x: 0, y: 0 }, { x: 4, y: 8 }],
+      [{ x: 0, y: 0 }, { x: 0, y: 4 }],
+    ],
+    lines: [{ a: 1, b: 4, label: 'y=x+4' }],
+    points: [
+      { x: -2, y: 2, label: 'A' },
+      { x: 4, y: 8, label: 'B' },
+      { x: 0, y: 4, label: 'C(0,4)' },
+      { x: 0, y: 0, label: 'O' },
+    ],
+    caption: '△OABをy軸上の点Cで分割：△OAC=4、△OBC=8、合計12',
+  },
+
+  // 線分の内分点
+  lf_kmath_75: {
+    kind: 'coordinate',
+    xRange: [-1, 9],
+    yRange: [-1, 10],
+    segments: [[{ x: 1, y: 2 }, { x: 7, y: 8 }]],
+    points: [
+      { x: 1, y: 2, label: 'A(1,2)' },
+      { x: 7, y: 8, label: 'B(7,8)' },
+      { x: 3, y: 4, label: 'P(3,4)' },
+    ],
+    caption: 'ABを1:2に内分する点P：AP:PB=1:2、P=(3,4)',
+  },
+
+  // 平行四辺形と対角線の交点（相似の融合）
+  lf_kmath_76: {
+    kind: 'coordinate',
+    xRange: [-1, 6],
+    yRange: [-1, 4],
+    segments: [
+      [{ x: 0, y: 0 }, { x: 3, y: 0 }],
+      [{ x: 3, y: 0 }, { x: 4, y: 2 }],
+      [{ x: 4, y: 2 }, { x: 1, y: 2 }],
+      [{ x: 1, y: 2 }, { x: 0, y: 0 }],
+      [{ x: 1, y: 2 }, { x: 1, y: 0 }],
+      [{ x: 0, y: 0 }, { x: 4, y: 2 }],
+    ],
+    points: [
+      { x: 0, y: 0, label: 'A' },
+      { x: 3, y: 0, label: 'B' },
+      { x: 4, y: 2, label: 'C' },
+      { x: 1, y: 2, label: 'D' },
+      { x: 1, y: 0, label: 'E' },
+      { x: 1, y: 0.5, label: 'F' },
+    ],
+    caption: 'AE:EB=1:2のとき、DEとACの交点FはAF:FC=1:3（△AEF∽△CDFより）',
+  },
+
+  // 直角三角形と斜辺への垂線（相似×三平方）
+  lf_kmath_77: {
+    kind: 'polygon',
+    points: [
+      { x: 0, y: 0, label: 'A' },
+      { x: 10, y: 0, label: 'B' },
+      { x: 3.6, y: 4.8, label: 'C' },
+    ],
+    fill: true,
+    rightAngles: [2],
+    sideLabels: ['AB=10', 'BC=8', 'CA=6'],
+    heights: [{ from: 2, toEdge: [0, 1], label: 'CH=4.8' }],
+    caption: '∠C=90°の直角三角形。斜辺への垂線CH=4.8は△ABC∽△ACH∽△CBHから求まる',
+  },
+
+  // 往復する動点の三角波グラフ
+  lf_kmath_78: {
+    kind: 'lineChart',
+    xLabel: 't（秒）',
+    yLabel: 'AP（cm）',
+    xRange: [0, 12],
+    yRange: [0, 7],
+    series: [
+      {
+        label: 'AP(t)',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 3, y: 6 },
+          { x: 6, y: 0 },
+          { x: 9, y: 6 },
+          { x: 12, y: 0 },
+        ],
+      },
+    ],
+    caption: 'AB=6cmを毎秒2cmで往復する点Pの位置。1往復6秒の三角波グラフになる',
+  },
+
+  // 放物線上を動く点と面積最大
+  lf_kmath_79: {
+    kind: 'coordinate',
+    xRange: [-1, 4],
+    yRange: [-1, 10],
+    parabolas: [{ a: 1, label: 'y=x²' }],
+    lines: [{ a: 3, b: 0, label: 'y=3x' }],
+    points: [
+      { x: 0, y: 0, label: 'O' },
+      { x: 3, y: 9, label: 'A(3,9)' },
+      { x: 1.5, y: 2.25, label: 'P(t=1.5)' },
+    ],
+    caption: '放物線上の点P(t,t²)が動くとき、△OAPの面積はt=1.5で最大値3.375',
+  },
+
+  // 直角三角形上の動点と面積の一次関数
+  lf_kmath_80: {
+    kind: 'lineChart',
+    xLabel: 't（秒）',
+    yLabel: '△ABPの面積 S',
+    xRange: [0, 4],
+    yRange: [0, 26],
+    series: [
+      {
+        label: 'S=6t',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 4, y: 24 },
+        ],
+      },
+    ],
+    caption: '点Pが辺BC上を動く0≤t≤4の間、面積は一次関数的に増加し、t=4で△ABC全体(24)と一致する',
+  },
+
+  // フィボナッチ数列の増え方
+  lf_kmath_81: {
+    kind: 'barChart',
+    yLabel: '値',
+    bars: [
+      { label: '第1項', value: 1, color: '#0EA5E9' },
+      { label: '第2項', value: 1, color: '#0EA5E9' },
+      { label: '第3項', value: 2, color: '#0EA5E9' },
+      { label: '第4項', value: 3, color: '#0EA5E9' },
+      { label: '第5項', value: 5, color: '#0EA5E9' },
+      { label: '第6項', value: 8, color: '#0EA5E9' },
+      { label: '第7項', value: 13, color: '#0EA5E9' },
+      { label: '第8項', value: 21, color: '#0EA5E9' },
+    ],
+    caption: 'フィボナッチ数列 1,1,2,3,5,8,13,21…（前の2項の和が次の項になる）',
+  },
+
+  // 平均が同じでも分散が異なる2グループ
+  lf_kmath_82: {
+    kind: 'barChart',
+    yLabel: '分散',
+    bars: [
+      { label: 'グループA(4,5,6,7,8)', value: 2, color: '#0EA5E9' },
+      { label: 'グループB(1,3,6,9,11)', value: 13.6, color: '#E11D48' },
+    ],
+    caption: 'どちらも平均は6だが、グループBの方が分散が大きくデータが散らばっている',
+  },
+
+  // 相関表：通学時間と朝食の割合
+  lf_kmath_83: {
+    kind: 'barChart',
+    yLabel: '朝食ありの割合（%）',
+    bars: [
+      { label: '通学20分未満', value: 75, color: '#0EA5E9' },
+      { label: '通学20分以上', value: 50, color: '#0EA5E9' },
+    ],
+    caption: '通学時間が短いほど朝食をとる割合が高い傾向（75% と 50%）',
+  },
+
+  // 分散の計算（テスト得点データ）
+  lf_kmath_84: {
+    kind: 'barChart',
+    yLabel: '偏差の2乗',
+    bars: [
+      { label: '60', value: 225, color: '#0EA5E9' },
+      { label: '70', value: 25, color: '#0EA5E9' },
+      { label: '75', value: 0, color: '#0EA5E9' },
+      { label: '80', value: 25, color: '#0EA5E9' },
+      { label: '90', value: 225, color: '#0EA5E9' },
+    ],
+    caption: 'テスト結果60,70,75,80,90（平均75）の偏差の2乗の合計を5で割ると分散100、標準偏差10',
+  },
+
+  // ばねの伸びは重さに比例
+  lf_kmath_85: {
+    kind: 'lineChart',
+    xLabel: 'おもりの重さ（g）',
+    yLabel: '伸び（cm）',
+    xRange: [0, 30],
+    yRange: [0, 6],
+    series: [
+      {
+        label: '伸び=0.2×重さ',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 10, y: 2 },
+          { x: 25, y: 5 },
+        ],
+      },
+    ],
+    caption: 'ばねの伸びはおもりの重さに比例する（フックの法則）。比例定数0.2cm/g',
+  },
+
+  // 水そう問題：反比例のグラフ
+  lf_kmath_86: {
+    kind: 'coordinate',
+    xRange: [0, 15],
+    yRange: [0, 30],
+    hyperbolas: [{ k: 120, label: 'xy=120' }],
+    points: [
+      { x: 5, y: 24, label: '(5,24)' },
+      { x: 8, y: 15, label: '(8,15)' },
+    ],
+    caption: '水そうの容積120L（一定）。毎分の給水量xとかかる時間yは反比例（xy=120）',
+  },
+
+  // グラフから直線の式を逆算
+  lf_kmath_87: {
+    kind: 'coordinate',
+    xRange: [-1, 5],
+    yRange: [-1, 12],
+    lines: [{ a: 2, b: 3, label: 'y=2x+3' }],
+    points: [
+      { x: 0, y: 3, label: '(0,3)' },
+      { x: 4, y: 11, label: '(4,11)' },
+    ],
+    caption: '2点(0,3)と(4,11)を通る直線：傾き=(11−3)/4=2、切片3 → y=2x+3',
+  },
+
+  // 兄弟が追いつくダイヤグラム
+  lf_kmath_88: {
+    kind: 'lineChart',
+    xLabel: '弟が出発してからの時間（分）',
+    yLabel: '家からの距離（m）',
+    xRange: [0, 20],
+    yRange: [0, 2400],
+    series: [
+      {
+        label: '兄(分速80m・10分先発)',
+        markers: true,
+        points: [
+          { x: 0, y: 800 },
+          { x: 20, y: 2400 },
+        ],
+      },
+      {
+        label: '弟(分速120m)',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 20, y: 2400 },
+        ],
+      },
+    ],
+    caption: '2直線の交点(20分後、2400m地点)で弟が兄に追いつく',
+  },
+
+  // ひし形（正方形ではない反例）
+  lf_kmath_89: {
+    kind: 'polygon',
+    points: [
+      { x: 0, y: 0, label: 'A' },
+      { x: 4, y: 0, label: 'B' },
+      { x: 5.37, y: 3.76, label: 'C' },
+      { x: 1.37, y: 3.76, label: 'D' },
+    ],
+    fill: true,
+    equalSides: [[0, 1, 2, 3]],
+    diagonals: [[0, 2], [1, 3]],
+    caption: '4辺がすべて等しい（ひし形）が、角は90°でないため正方形ではない反例',
+  },
+
+  // 二次方程式の動点問題（正方形の辺上）
+  lf_kmath_90: {
+    kind: 'coordinate',
+    xRange: [-1, 11],
+    yRange: [-1, 11],
+    segments: [
+      [{ x: 0, y: 0 }, { x: 10, y: 0 }],
+      [{ x: 10, y: 0 }, { x: 10, y: 10 }],
+      [{ x: 10, y: 10 }, { x: 0, y: 10 }],
+      [{ x: 0, y: 10 }, { x: 0, y: 0 }],
+      [{ x: 0, y: 0 }, { x: 4.9, y: 0 }],
+      [{ x: 0, y: 0 }, { x: 0, y: 9.8 }],
+      [{ x: 4.9, y: 0 }, { x: 0, y: 9.8 }],
+    ],
+    points: [
+      { x: 0, y: 0, label: 'A' },
+      { x: 10, y: 0, label: 'B' },
+      { x: 10, y: 10, label: 'C' },
+      { x: 0, y: 10, label: 'D' },
+      { x: 4.9, y: 0, label: 'P(AP=2√6)' },
+      { x: 0, y: 9.8, label: 'Q(AQ=4√6)' },
+    ],
+    caption: 'AP=t, AQ=2tとなる点P,Qで△APQ=t²。t²=24となるt=2√6秒後の位置',
+  },
+
+  // 不等式の文章題：ケーキの個数の範囲
+  lf_kmath_91: {
+    kind: 'numberLine',
+    min: 0,
+    max: 10,
+    step: 1,
+    segments: [{ from: 0, to: 5, fromOpen: false, toOpen: false }],
+    caption: '120x+80(10−x)≤1000を解くとx≤5。ケーキの個数は0〜10個のうち最大5個',
+  },
 };
