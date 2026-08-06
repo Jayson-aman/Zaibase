@@ -1,6 +1,20 @@
 import type { Lesson } from './lesson-types';
+// 450セッション化（数の性質〜統計まで12ユニット）。既存の22レッスンは
+// 単元の概観として残し、新規セッションはorder 501以降で後ろに続く。
+import { sansuExt01Lessons } from './lessons-sansu-ext01';
+import { sansuExt02Lessons } from './lessons-sansu-ext02';
+import { sansuExt03Lessons } from './lessons-sansu-ext03';
+import { sansuExt04Lessons } from './lessons-sansu-ext04';
+import { sansuExt05Lessons } from './lessons-sansu-ext05';
+import { sansuExt06Lessons } from './lessons-sansu-ext06';
+import { sansuExt07Lessons } from './lessons-sansu-ext07';
+import { sansuExt08Lessons } from './lessons-sansu-ext08';
+import { sansuExt09Lessons } from './lessons-sansu-ext09';
+import { sansuExt10Lessons } from './lessons-sansu-ext10';
+import { sansuExt11Lessons } from './lessons-sansu-ext11';
+import { sansuExt12Lessons } from './lessons-sansu-ext12';
 
-export const sansuLessons: Lesson[] = [
+const sansuOverviewLessons: Lesson[] = [
   {
     id: 'sansu_01_wariai',
     subject: 'sansu',
@@ -7284,4 +7298,20 @@ Aは1個あたり原価の25%、Bは1個あたり原価の20%の利益を見込�
       },
     ],
   },
+];
+
+export const sansuLessons: Lesson[] = [
+  ...sansuOverviewLessons,
+  ...sansuExt01Lessons,
+  ...sansuExt02Lessons,
+  ...sansuExt03Lessons,
+  ...sansuExt04Lessons,
+  ...sansuExt05Lessons,
+  ...sansuExt06Lessons,
+  ...sansuExt07Lessons,
+  ...sansuExt08Lessons,
+  ...sansuExt09Lessons,
+  ...sansuExt10Lessons,
+  ...sansuExt11Lessons,
+  ...sansuExt12Lessons,
 ];
