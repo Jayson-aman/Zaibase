@@ -107,6 +107,25 @@ export default function LessonDetailScreen() {
                 ))}
               </View>
             )}
+            {lesson.trapExamples != null && lesson.trapExamples.length > 0 && (
+              <View style={styles.trapBox}>
+                <Text style={styles.trapTitle}>⚠️ ひっかけ問題に注意</Text>
+                {lesson.trapExamples.map((t, i) => (
+                  <View key={i} style={[styles.trapItem, i > 0 && styles.trapItemSpacer]}>
+                    <Text style={styles.trapQuestionLabel}>問題</Text>
+                    <Text style={styles.trapQuestion}>{t.question}</Text>
+                    <View style={styles.trapWrongBox}>
+                      <Text style={styles.trapWrongLabel}>❌ こう間違えがち：{t.wrongAnswer}</Text>
+                      <Text style={styles.trapWrongText}>{t.trapExplanation}</Text>
+                    </View>
+                    <View style={styles.trapCorrectBox}>
+                      <Text style={styles.trapCorrectLabel}>✅ 正解：{t.correctAnswer}</Text>
+                      <Text style={styles.trapCorrectText}>{t.correctExplanation}</Text>
+                    </View>
+                  </View>
+                ))}
+              </View>
+            )}
             <TouchableOpacity
               style={[styles.practiceBtn, { backgroundColor: info.color }]}
               activeOpacity={0.85}
@@ -201,6 +220,35 @@ const styles = StyleSheet.create({
   keyPointRow: { flexDirection: 'row', alignItems: 'flex-start', marginBottom: 8 },
   keyPointCheck: { fontSize: 14, marginRight: 8, marginTop: 2 },
   keyPointText: { flex: 1, fontSize: 15, color: '#064E3B', lineHeight: 23 },
+  trapBox: {
+    backgroundColor: '#FFF7ED',
+    borderRadius: 14,
+    padding: 16,
+    marginTop: 8,
+    marginBottom: 16,
+    borderLeftWidth: 4,
+    borderLeftColor: '#F97316',
+  },
+  trapTitle: { fontSize: 17, fontWeight: '800', color: '#9A3412', marginBottom: 10 },
+  trapItem: {},
+  trapItemSpacer: { marginTop: 18, paddingTop: 18, borderTopWidth: 1, borderTopColor: '#FED7AA' },
+  trapQuestionLabel: { fontSize: 12, fontWeight: '800', color: '#C2410C', marginBottom: 4 },
+  trapQuestion: { fontSize: 15, color: '#1F2937', lineHeight: 23, marginBottom: 10 },
+  trapWrongBox: {
+    backgroundColor: '#FEF2F2',
+    borderRadius: 10,
+    padding: 12,
+    marginBottom: 8,
+  },
+  trapWrongLabel: { fontSize: 13.5, fontWeight: '700', color: '#B91C1C', marginBottom: 4 },
+  trapWrongText: { fontSize: 13.5, color: '#7F1D1D', lineHeight: 20 },
+  trapCorrectBox: {
+    backgroundColor: '#ECFDF5',
+    borderRadius: 10,
+    padding: 12,
+  },
+  trapCorrectLabel: { fontSize: 13.5, fontWeight: '700', color: '#047857', marginBottom: 4 },
+  trapCorrectText: { fontSize: 13.5, color: '#064E3B', lineHeight: 20 },
   practiceBtn: {
     borderRadius: 14,
     paddingVertical: 16,

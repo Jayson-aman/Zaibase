@@ -3,7 +3,7 @@ import {
   View,
   Text,
   TouchableOpacity,
-  ScrollView,
+  FlatList,
   StyleSheet,
   SafeAreaView,
 } from 'react-native';
@@ -59,122 +59,138 @@ export default function TextbookScreen() {
     ? getLessonsBySubject(selectedSubject).filter((l) => (l.examType ?? 'chugaku') === examType)
     : [];
 
-  return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView contentContainerStyle={styles.scroll}>
-        {/* Header */}
-        <View style={styles.header}>
-          <Text style={styles.headerTitle}>📚 入試テキスト</Text>
-          <Text style={styles.headerSub}>
-            合格点まで育てる科目別解説
-          </Text>
-          {!isPro && (
-            <View style={styles.proBanner}>
-              <Text style={styles.proBannerText}>🔒 Proプランで全解説を閲覧できます</Text>
-            </View>
-          )}
-        </View>
+  const showEmpty = selectedSubject != null && isPro && lessons.length === 0;
+  const showList = selectedSubject != null && isPro && lessons.length > 0;
 
-        {/* 受験種別の切り替え */}
-        <View style={styles.examTypeRow}>
-          {([
-            { key: 'chugaku' as ExamType, label: '中学受験' },
-            { key: 'koko' as ExamType, label: '高校受験' },
-          ]).map((t) => (
-            <TouchableOpacity
-              key={t.key}
-              style={[styles.examTypeBtn, examType === t.key && styles.examTypeBtnActive]}
-              onPress={() => setExamType(t.key)}
-              activeOpacity={0.85}
-            >
-              <Text style={[styles.examTypeText, examType === t.key && styles.examTypeTextActive]}>
-                {t.label}
-              </Text>
-            </TouchableOpacity>
-          ))}
-        </View>
-
-        {/* Subject Tiles */}
-        <Text style={styles.sectionLabel}>科目を選んでください</Text>
-        <View style={styles.subjectGrid}>
-          {SUBJECTS.map(({ key, emoji, color }) => {
-            const info = subjectInfo[key];
-            const count = getLessonsBySubject(key).filter(
-              (l) => (l.examType ?? 'chugaku') === examType,
-            ).length;
-            const isSelected = selectedSubject === key;
-            return (
-              <TouchableOpacity
-                key={key}
-                style={[
-                  styles.subjectTile,
-                  isSelected && { borderColor: color, borderWidth: 3 },
-                  !isPro && styles.subjectTileLocked,
-                ]}
-                onPress={() => handleSubjectPress(key)}
-                activeOpacity={0.8}
-              >
-                <Text style={styles.subjectEmoji}>{emoji}</Text>
-                <Text style={[styles.subjectName, isSelected && { color }]}>
-                  {info.name}
-                </Text>
-                {count > 0 ? (
-                  <Text style={styles.lessonCount}>{count}単元</Text>
-                ) : (
-                  <Text style={styles.lessonCountPending}>準備中</Text>
-                )}
-                {!isPro && <Text style={styles.lockIcon}>🔒</Text>}
-              </TouchableOpacity>
-            );
-          })}
-        </View>
-
-        {/* Lesson List */}
-        {selectedSubject && isPro && (
-          <View style={styles.lessonList}>
-            <Text style={styles.lessonListTitle}>
-              {subjectInfo[selectedSubject].name} の単元一覧
-            </Text>
-            {lessons.length === 0 ? (
-              <View style={styles.emptyBox}>
-                <Text style={styles.emptyText}>
-                  このコンテンツは準備中です。{'\n'}もうしばらくお待ちください。
-                </Text>
-              </View>
-            ) : (
-              lessons.map((lesson, idx) => (
-                <TouchableOpacity
-                  key={lesson.id}
-                  style={styles.lessonCard}
-                  onPress={() => handleLessonPress(lesson)}
-                  activeOpacity={0.8}
-                >
-                  <View style={styles.lessonCardLeft}>
-                    <Text style={styles.lessonNumber}>{String(idx + 1).padStart(2, '0')}</Text>
-                  </View>
-                  <View style={styles.lessonCardBody}>
-                    <View style={styles.lessonTitleRow}>
-                      <Text style={styles.lessonTitle}>{lesson.title}</Text>
-                      {lesson.studyPeriod && (
-                        <View style={styles.periodChip}>
-                          <Text style={styles.periodChipText}>📅 {lesson.studyPeriod}</Text>
-                        </View>
-                      )}
-                    </View>
-                    <Text style={styles.lessonDesc} numberOfLines={2}>
-                      {lesson.description}
-                    </Text>
-                    {lesson.sections.some((s) => s.maxOnly) && (
-                      <Text style={styles.maxTag}>⭐ MAX深堀りあり</Text>
-                    )}
-                  </View>
-                  <Text style={styles.lessonArrow}>›</Text>
-                </TouchableOpacity>
-              ))
-            )}
+  const listHeader = (
+    <View>
+      {/* Header */}
+      <View style={styles.header}>
+        <Text style={styles.headerTitle}>📚 入試テキスト</Text>
+        <Text style={styles.headerSub}>
+          合格点まで育てる科目別解説
+        </Text>
+        {!isPro && (
+          <View style={styles.proBanner}>
+            <Text style={styles.proBannerText}>🔒 Proプランで全解説を閲覧できます</Text>
           </View>
         )}
-      </ScrollView>
+      </View>
+
+      {/* 受験種別の切り替え */}
+      <View style={styles.examTypeRow}>
+        {([
+          { key: 'chugaku' as ExamType, label: '中学受験' },
+          { key: 'koko' as ExamType, label: '高校受験' },
+        ]).map((t) => (
+          <TouchableOpacity
+            key={t.key}
+            style={[styles.examTypeBtn, examType === t.key && styles.examTypeBtnActive]}
+            onPress={() => setExamType(t.key)}
+            activeOpacity={0.85}
+          >
+            <Text style={[styles.examTypeText, examType === t.key && styles.examTypeTextActive]}>
+              {t.label}
+            </Text>
+          </TouchableOpacity>
+        ))}
+      </View>
+
+      {/* Subject Tiles */}
+      <Text style={styles.sectionLabel}>科目を選んでください</Text>
+      <View style={styles.subjectGrid}>
+        {SUBJECTS.map(({ key, emoji, color }) => {
+          const info = subjectInfo[key];
+          const count = getLessonsBySubject(key).filter(
+            (l) => (l.examType ?? 'chugaku') === examType,
+          ).length;
+          const isSelected = selectedSubject === key;
+          return (
+            <TouchableOpacity
+              key={key}
+              style={[
+                styles.subjectTile,
+                isSelected && { borderColor: color, borderWidth: 3 },
+                !isPro && styles.subjectTileLocked,
+              ]}
+              onPress={() => handleSubjectPress(key)}
+              activeOpacity={0.8}
+            >
+              <Text style={styles.subjectEmoji}>{emoji}</Text>
+              <Text style={[styles.subjectName, isSelected && { color }]}>
+                {info.name}
+              </Text>
+              {count > 0 ? (
+                <Text style={styles.lessonCount}>{count}単元</Text>
+              ) : (
+                <Text style={styles.lessonCountPending}>準備中</Text>
+              )}
+              {!isPro && <Text style={styles.lockIcon}>🔒</Text>}
+            </TouchableOpacity>
+          );
+        })}
+      </View>
+
+      {/* Lesson List */}
+      {selectedSubject && isPro && (
+        <Text style={styles.lessonListTitle}>
+          {subjectInfo[selectedSubject].name} の単元一覧
+        </Text>
+      )}
+      {showEmpty && (
+        <View style={styles.emptyBox}>
+          <Text style={styles.emptyText}>
+            このコンテンツは準備中です。{'\n'}もうしばらくお待ちください。
+          </Text>
+        </View>
+      )}
+    </View>
+  );
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <FlatList
+        style={styles.scroll}
+        contentContainerStyle={styles.scrollContent}
+        data={showList ? lessons : []}
+        keyExtractor={(l) => l.id}
+        ListHeaderComponent={listHeader}
+        // 単元数が数百に達する科目もあるため、全件を一度に描画せず
+        // 画面に入った分だけ描画・保持する（低メモリ端末での動作対策）。
+        initialNumToRender={12}
+        maxToRenderPerBatch={12}
+        windowSize={7}
+        removeClippedSubviews
+        ListFooterComponent={<View style={{ height: 40 }} />}
+        renderItem={({ item: lesson, index: idx }) => (
+          <TouchableOpacity
+            style={styles.lessonCard}
+            onPress={() => handleLessonPress(lesson)}
+            activeOpacity={0.8}
+          >
+            <View style={styles.lessonCardLeft}>
+              <Text style={styles.lessonNumber}>{String(idx + 1).padStart(2, '0')}</Text>
+            </View>
+            <View style={styles.lessonCardBody}>
+              <View style={styles.lessonTitleRow}>
+                <Text style={styles.lessonTitle}>{lesson.title}</Text>
+                {lesson.studyPeriod && (
+                  <View style={styles.periodChip}>
+                    <Text style={styles.periodChipText}>📅 {lesson.studyPeriod}</Text>
+                  </View>
+                )}
+              </View>
+              <Text style={styles.lessonDesc} numberOfLines={2}>
+                {lesson.description}
+              </Text>
+              {lesson.sections.some((s) => s.maxOnly) && (
+                <Text style={styles.maxTag}>⭐ MAX深堀りあり</Text>
+              )}
+            </View>
+            <Text style={styles.lessonArrow}>›</Text>
+          </TouchableOpacity>
+        )}
+      />
 
       <Paywall
         visible={paywallVisible}
@@ -187,7 +203,8 @@ export default function TextbookScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#F0F9FF' },
-  scroll: { paddingBottom: 40 },
+  scroll: { flex: 1 },
+  scrollContent: { paddingBottom: 40 },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   loadingText: { fontSize: 18, color: '#64748B' },
   header: {
@@ -256,18 +273,20 @@ const styles = StyleSheet.create({
   lessonCount: { fontSize: 12, color: '#64748B', fontWeight: '600' },
   lessonCountPending: { fontSize: 11, color: '#94A3B8' },
   lockIcon: { position: 'absolute', top: 6, right: 8, fontSize: 12 },
-  lessonList: { marginHorizontal: 16, marginTop: 24 },
   lessonListTitle: {
     fontSize: 18,
     fontWeight: '800',
     color: '#1E3A5F',
     marginBottom: 14,
+    marginHorizontal: 16,
+    marginTop: 24,
   },
   emptyBox: {
     backgroundColor: '#FFFFFF',
     borderRadius: 14,
     padding: 24,
     alignItems: 'center',
+    marginHorizontal: 16,
   },
   emptyText: { fontSize: 15, color: '#94A3B8', textAlign: 'center', lineHeight: 24 },
   lessonCard: {
@@ -277,6 +296,7 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     padding: 14,
     marginBottom: 10,
+    marginHorizontal: 16,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.06,
