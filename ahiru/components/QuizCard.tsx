@@ -91,6 +91,16 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             </Text>
           </View>
         )}
+        {question.isWritten && (
+          <View style={styles.writtenChip}>
+            <Text style={styles.writtenChipText}>✍️ 記述式</Text>
+          </View>
+        )}
+        {question.subQuestions != null && question.subQuestions.length > 0 && (
+          <View style={styles.subQChip}>
+            <Text style={styles.subQChipText}>📋 小問{question.subQuestions.length}問</Text>
+          </View>
+        )}
       </View>
 
       {choices != null ? (
@@ -217,14 +227,53 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
               <Text style={styles.figureText}>{question.figureDescription}</Text>
             </View>
           ) : null}
+          {question.subQuestions != null && question.subQuestions.length > 0 && (
+            <View style={styles.subQList}>
+              {question.subQuestions.map((sq) => (
+                <View key={sq.label} style={styles.subQRow}>
+                  <Text style={styles.subQLabel}>{sq.label}</Text>
+                  <Text style={styles.subQPrompt}>{sq.prompt}</Text>
+                </View>
+              ))}
+            </View>
+          )}
           <View style={styles.tapHint}>
-            <Text style={styles.tapHintText}>タップして答えを見る 👆</Text>
+            <Text style={styles.tapHintText}>
+              {question.isWritten ? '自分の言葉で説明してから、タップして模範解答を見る 👆' : 'タップして答えを見る 👆'}
+            </Text>
           </View>
         </View>
       ) : (
         <View style={styles.answerSide}>
-          <Text style={styles.answerLabel}>答 え</Text>
-          <Text style={styles.answerText}>{question.answer}</Text>
+          {question.subQuestions != null && question.subQuestions.length > 0 ? (
+            <View style={styles.subQAnswerList}>
+              {question.subQuestions.map((sq) => (
+                <View key={sq.label} style={styles.subQAnswerRow}>
+                  <Text style={styles.subQAnswerLabel}>{sq.label}　{sq.prompt}</Text>
+                  <Text style={styles.subQAnswerText}>{sq.answer}</Text>
+                  {sq.explanation != null && (
+                    <Text style={styles.subQAnswerExpl}>{sq.explanation}</Text>
+                  )}
+                </View>
+              ))}
+            </View>
+          ) : (
+            <>
+              <Text style={styles.answerLabel}>{question.isWritten ? '模範解答' : '答 え'}</Text>
+              <Text style={styles.answerText}>{question.answer}</Text>
+            </>
+          )}
+          {question.isWritten && question.rubricPoints != null && question.rubricPoints.length > 0 && (
+            <View style={styles.rubricBox}>
+              <Text style={styles.rubricLabel}>✅ 自己採点チェックリスト</Text>
+              {question.rubricPoints.map((p, i) => (
+                <View key={i} style={styles.rubricRow}>
+                  <Text style={styles.rubricCheck}>☑</Text>
+                  <Text style={styles.rubricText}>{p}</Text>
+                </View>
+              ))}
+            </View>
+          )}
           {figure != null ? (
             <FigureView figure={figure} animated />
           ) : illustration != null ? (
@@ -299,6 +348,110 @@ const styles = StyleSheet.create({
     color: '#78350F',
     fontSize: 16,
     fontWeight: '800',
+  },
+  writtenChip: {
+    backgroundColor: '#EDE7F6',
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 14,
+  },
+  writtenChipText: {
+    color: '#4527A0',
+    fontSize: 14,
+    fontWeight: '800',
+  },
+  subQChip: {
+    backgroundColor: '#E0F2F1',
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 14,
+  },
+  subQChipText: {
+    color: '#00695C',
+    fontSize: 14,
+    fontWeight: '800',
+  },
+  subQList: {
+    marginTop: 14,
+    gap: 10,
+  },
+  subQRow: {
+    backgroundColor: '#F7F8FB',
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: '#DDE2EC',
+    padding: 12,
+  },
+  subQLabel: {
+    fontSize: 13,
+    fontWeight: '900',
+    color: '#4A5A6B',
+    marginBottom: 4,
+  },
+  subQPrompt: {
+    fontSize: 15,
+    color: '#0F1826',
+    lineHeight: 22,
+  },
+  subQAnswerList: {
+    gap: 12,
+    marginBottom: 8,
+  },
+  subQAnswerRow: {
+    backgroundColor: 'rgba(0,166,81,0.06)',
+    borderRadius: 12,
+    borderLeftWidth: 3,
+    borderLeftColor: '#00A651',
+    padding: 12,
+  },
+  subQAnswerLabel: {
+    fontSize: 13,
+    fontWeight: '800',
+    color: '#4A5A6B',
+    marginBottom: 4,
+  },
+  subQAnswerText: {
+    fontSize: 17,
+    fontWeight: '800',
+    color: '#00694A',
+  },
+  subQAnswerExpl: {
+    fontSize: 13,
+    color: '#3A4A5A',
+    lineHeight: 19,
+    marginTop: 4,
+  },
+  rubricBox: {
+    backgroundColor: '#FFFBEB',
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: '#FDE68A',
+    padding: 14,
+    marginTop: 12,
+    marginBottom: 4,
+  },
+  rubricLabel: {
+    fontSize: 14,
+    fontWeight: '800',
+    color: '#92400E',
+    marginBottom: 8,
+  },
+  rubricRow: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    marginBottom: 6,
+    gap: 6,
+  },
+  rubricCheck: {
+    fontSize: 14,
+    color: '#92400E',
+    marginTop: 1,
+  },
+  rubricText: {
+    flex: 1,
+    fontSize: 14,
+    color: '#78350F',
+    lineHeight: 21,
   },
   // Choice mode
   choiceSection: {
