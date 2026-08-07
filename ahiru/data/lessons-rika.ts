@@ -1,6 +1,20 @@
 import type { Lesson } from './lesson-types';
+// 450セッション化（植物〜地層まで12ユニット）。既存の22レッスンは
+// 単元の概観として残し、新規セッションはorder 501以降で後ろに続く。
+import { rikaExt01Lessons } from './lessons-rika-ext01';
+import { rikaExt02Lessons } from './lessons-rika-ext02';
+import { rikaExt03Lessons } from './lessons-rika-ext03';
+import { rikaExt04Lessons } from './lessons-rika-ext04';
+import { rikaExt05Lessons } from './lessons-rika-ext05';
+import { rikaExt06Lessons } from './lessons-rika-ext06';
+import { rikaExt07Lessons } from './lessons-rika-ext07';
+import { rikaExt08Lessons } from './lessons-rika-ext08';
+import { rikaExt09Lessons } from './lessons-rika-ext09';
+import { rikaExt10Lessons } from './lessons-rika-ext10';
+import { rikaExt11Lessons } from './lessons-rika-ext11';
+import { rikaExt12Lessons } from './lessons-rika-ext12';
 
-export const rikaLessons: Lesson[] = [
+const rikaOverviewLessons: Lesson[] = [
   {
     id: 'rika_01_shokubutsu',
     subject: 'rika',
@@ -4872,4 +4886,20 @@ A：酸素（助燃性）　B：二酸化炭素（石灰水を白くにごらせ
       },
     ],
   },
+];
+
+export const rikaLessons: Lesson[] = [
+  ...rikaOverviewLessons,
+  ...rikaExt01Lessons,
+  ...rikaExt02Lessons,
+  ...rikaExt03Lessons,
+  ...rikaExt04Lessons,
+  ...rikaExt05Lessons,
+  ...rikaExt06Lessons,
+  ...rikaExt07Lessons,
+  ...rikaExt08Lessons,
+  ...rikaExt09Lessons,
+  ...rikaExt10Lessons,
+  ...rikaExt11Lessons,
+  ...rikaExt12Lessons,
 ];
