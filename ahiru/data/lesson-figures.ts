@@ -32,6 +32,18 @@ import { lessonFigsRikaExt09 } from './lesson-figs-rika-ext09';
 import { lessonFigsRikaExt10 } from './lesson-figs-rika-ext10';
 import { lessonFigsRikaExt11 } from './lesson-figs-rika-ext11';
 import { lessonFigsRikaExt12 } from './lesson-figs-rika-ext12';
+import { lessonFigsShakaiExt01 } from './lesson-figs-shakai-ext01';
+import { lessonFigsShakaiExt02 } from './lesson-figs-shakai-ext02';
+import { lessonFigsShakaiExt03 } from './lesson-figs-shakai-ext03';
+import { lessonFigsShakaiExt04 } from './lesson-figs-shakai-ext04';
+import { lessonFigsShakaiExt05 } from './lesson-figs-shakai-ext05';
+import { lessonFigsShakaiExt06 } from './lesson-figs-shakai-ext06';
+import { lessonFigsShakaiExt07 } from './lesson-figs-shakai-ext07';
+import { lessonFigsShakaiExt08 } from './lesson-figs-shakai-ext08';
+import { lessonFigsShakaiExt09 } from './lesson-figs-shakai-ext09';
+import { lessonFigsShakaiExt10 } from './lesson-figs-shakai-ext10';
+import { lessonFigsShakaiExt11 } from './lesson-figs-shakai-ext11';
+import { lessonFigsShakaiExt12 } from './lesson-figs-shakai-ext12';
 
 export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsSansu,
@@ -62,6 +74,18 @@ export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsRikaExt10,
   ...lessonFigsRikaExt11,
   ...lessonFigsRikaExt12,
+  ...lessonFigsShakaiExt01,
+  ...lessonFigsShakaiExt02,
+  ...lessonFigsShakaiExt03,
+  ...lessonFigsShakaiExt04,
+  ...lessonFigsShakaiExt05,
+  ...lessonFigsShakaiExt06,
+  ...lessonFigsShakaiExt07,
+  ...lessonFigsShakaiExt08,
+  ...lessonFigsShakaiExt09,
+  ...lessonFigsShakaiExt10,
+  ...lessonFigsShakaiExt11,
+  ...lessonFigsShakaiExt12,
 };
 
 export function getLessonFigure(figureId: string): Figure | null {

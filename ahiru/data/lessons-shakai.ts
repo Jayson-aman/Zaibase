@@ -1,6 +1,20 @@
 import type { Lesson } from './lesson-types';
+// 450セッション化（地理5・歴史5・公民2の12ユニット）。既存の22レッスンは
+// 単元の概観として残し、新規セッションはorder 501以降で後ろに続く。
+import { shakaiExt01Lessons } from './lessons-shakai-ext01';
+import { shakaiExt02Lessons } from './lessons-shakai-ext02';
+import { shakaiExt03Lessons } from './lessons-shakai-ext03';
+import { shakaiExt04Lessons } from './lessons-shakai-ext04';
+import { shakaiExt05Lessons } from './lessons-shakai-ext05';
+import { shakaiExt06Lessons } from './lessons-shakai-ext06';
+import { shakaiExt07Lessons } from './lessons-shakai-ext07';
+import { shakaiExt08Lessons } from './lessons-shakai-ext08';
+import { shakaiExt09Lessons } from './lessons-shakai-ext09';
+import { shakaiExt10Lessons } from './lessons-shakai-ext10';
+import { shakaiExt11Lessons } from './lessons-shakai-ext11';
+import { shakaiExt12Lessons } from './lessons-shakai-ext12';
 
-export const shakaiLessons: Lesson[] = [
+const shakaiOverviewLessons: Lesson[] = [
   {
     id: 'shakai_01_nihonchiri',
     keyPoints: [
@@ -4513,4 +4527,20 @@ UNHCR（国連難民高等弁務官事務所）によると、世界の難民・
     ],
   }
 
+];
+
+export const shakaiLessons: Lesson[] = [
+  ...shakaiOverviewLessons,
+  ...shakaiExt01Lessons,
+  ...shakaiExt02Lessons,
+  ...shakaiExt03Lessons,
+  ...shakaiExt04Lessons,
+  ...shakaiExt05Lessons,
+  ...shakaiExt06Lessons,
+  ...shakaiExt07Lessons,
+  ...shakaiExt08Lessons,
+  ...shakaiExt09Lessons,
+  ...shakaiExt10Lessons,
+  ...shakaiExt11Lessons,
+  ...shakaiExt12Lessons,
 ];
