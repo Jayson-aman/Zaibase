@@ -1,6 +1,20 @@
 import type { Lesson } from './lesson-types';
+import { eigoExt01Lessons } from './lessons-eigo-ext01';
+import { eigoExt02Lessons } from './lessons-eigo-ext02';
+import { eigoExt03Lessons } from './lessons-eigo-ext03';
+import { eigoExt04Lessons } from './lessons-eigo-ext04';
+import { eigoExt05Lessons } from './lessons-eigo-ext05';
+import { eigoExt06Lessons } from './lessons-eigo-ext06';
+import { eigoExt07Lessons } from './lessons-eigo-ext07';
+import { eigoExt08Lessons } from './lessons-eigo-ext08';
+import { eigoExt09Lessons } from './lessons-eigo-ext09';
+import { eigoExt10Lessons } from './lessons-eigo-ext10';
+import { eigoExt11Lessons } from './lessons-eigo-ext11';
+import { eigoExt12Lessons } from './lessons-eigo-ext12';
 
-export const eigoLessons: Lesson[] = [
+// 既存の総論レッスン（order 1〜22）。450セッションの拡張ユニットは
+// lessons-eigo-ext01〜ext12（order 501〜950）にあり、下でまとめて結合する。
+const eigoOverviewLessons: Lesson[] = [
   {
     id: 'eigo_01_bunpo_kihon',
     subject: 'eigo',
@@ -5192,4 +5206,20 @@ Why don't you 〜?は形は否定疑問文だが、意味は「〜してはど�
       },
     ],
   },
+];
+
+export const eigoLessons: Lesson[] = [
+  ...eigoOverviewLessons,
+  ...eigoExt01Lessons,
+  ...eigoExt02Lessons,
+  ...eigoExt03Lessons,
+  ...eigoExt04Lessons,
+  ...eigoExt05Lessons,
+  ...eigoExt06Lessons,
+  ...eigoExt07Lessons,
+  ...eigoExt08Lessons,
+  ...eigoExt09Lessons,
+  ...eigoExt10Lessons,
+  ...eigoExt11Lessons,
+  ...eigoExt12Lessons,
 ];

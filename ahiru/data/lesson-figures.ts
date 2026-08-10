@@ -56,6 +56,18 @@ import { lessonFigsKokugoExt09 } from './lesson-figs-kokugo-ext09';
 import { lessonFigsKokugoExt10 } from './lesson-figs-kokugo-ext10';
 import { lessonFigsKokugoExt11 } from './lesson-figs-kokugo-ext11';
 import { lessonFigsKokugoExt12 } from './lesson-figs-kokugo-ext12';
+import { lessonFigsEigoExt01 } from './lesson-figs-eigo-ext01';
+import { lessonFigsEigoExt02 } from './lesson-figs-eigo-ext02';
+import { lessonFigsEigoExt03 } from './lesson-figs-eigo-ext03';
+import { lessonFigsEigoExt04 } from './lesson-figs-eigo-ext04';
+import { lessonFigsEigoExt05 } from './lesson-figs-eigo-ext05';
+import { lessonFigsEigoExt06 } from './lesson-figs-eigo-ext06';
+import { lessonFigsEigoExt07 } from './lesson-figs-eigo-ext07';
+import { lessonFigsEigoExt08 } from './lesson-figs-eigo-ext08';
+import { lessonFigsEigoExt09 } from './lesson-figs-eigo-ext09';
+import { lessonFigsEigoExt10 } from './lesson-figs-eigo-ext10';
+import { lessonFigsEigoExt11 } from './lesson-figs-eigo-ext11';
+import { lessonFigsEigoExt12 } from './lesson-figs-eigo-ext12';
 
 export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsSansu,
@@ -110,6 +122,18 @@ export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsKokugoExt10,
   ...lessonFigsKokugoExt11,
   ...lessonFigsKokugoExt12,
+  ...lessonFigsEigoExt01,
+  ...lessonFigsEigoExt02,
+  ...lessonFigsEigoExt03,
+  ...lessonFigsEigoExt04,
+  ...lessonFigsEigoExt05,
+  ...lessonFigsEigoExt06,
+  ...lessonFigsEigoExt07,
+  ...lessonFigsEigoExt08,
+  ...lessonFigsEigoExt09,
+  ...lessonFigsEigoExt10,
+  ...lessonFigsEigoExt11,
+  ...lessonFigsEigoExt12,
 };
 
 export function getLessonFigure(figureId: string): Figure | null {
