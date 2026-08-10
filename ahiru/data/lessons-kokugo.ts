@@ -1,6 +1,20 @@
 import type { Lesson } from './lesson-types';
+// 450セッション化（漢字〜入試実戦の12ユニット）。既存の22レッスンは
+// 単元の概観として残し、新規セッションはorder 501以降で後ろに続く。
+import { kokugoExt01Lessons } from './lessons-kokugo-ext01';
+import { kokugoExt02Lessons } from './lessons-kokugo-ext02';
+import { kokugoExt03Lessons } from './lessons-kokugo-ext03';
+import { kokugoExt04Lessons } from './lessons-kokugo-ext04';
+import { kokugoExt05Lessons } from './lessons-kokugo-ext05';
+import { kokugoExt06Lessons } from './lessons-kokugo-ext06';
+import { kokugoExt07Lessons } from './lessons-kokugo-ext07';
+import { kokugoExt08Lessons } from './lessons-kokugo-ext08';
+import { kokugoExt09Lessons } from './lessons-kokugo-ext09';
+import { kokugoExt10Lessons } from './lessons-kokugo-ext10';
+import { kokugoExt11Lessons } from './lessons-kokugo-ext11';
+import { kokugoExt12Lessons } from './lessons-kokugo-ext12';
 
-export const kokugoLessons: Lesson[] = [
+const kokugoOverviewLessons: Lesson[] = [
   {
     id: 'kokugo_01_yomitoki',
     subject: 'kokugo',
@@ -4153,4 +4167,20 @@ Bさん：「（　　　）と気づいたんだと思うよ。」
       },
     ],
   },
+];
+
+export const kokugoLessons: Lesson[] = [
+  ...kokugoOverviewLessons,
+  ...kokugoExt01Lessons,
+  ...kokugoExt02Lessons,
+  ...kokugoExt03Lessons,
+  ...kokugoExt04Lessons,
+  ...kokugoExt05Lessons,
+  ...kokugoExt06Lessons,
+  ...kokugoExt07Lessons,
+  ...kokugoExt08Lessons,
+  ...kokugoExt09Lessons,
+  ...kokugoExt10Lessons,
+  ...kokugoExt11Lessons,
+  ...kokugoExt12Lessons,
 ];
