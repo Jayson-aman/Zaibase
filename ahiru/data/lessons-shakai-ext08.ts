@@ -13,6 +13,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '戦国の世と織田信長の登場（桶狭間の戦い）',
     description: '応仁の乱から始まる戦国時代の中で、織田信長が1560年の桶狭間の戦いで台頭するまでを学ぶ',
+    intro: '愛知県の豊明市や名古屋市緑区のあたりには、桶狭間という地名が今も残ります。1560年、ここで尾張の小さな大名だった織田信長が、大軍を率いる今川義元を破りました。無名に近かった若者が、天下取りに名乗りを上げた瞬間です。',
     order: 756,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -76,6 +77,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '信長の勢力拡大と室町幕府の滅亡（1573年）',
     description: '足利義昭を立てての上洛から、1573年に室町幕府を滅ぼすまでの信長の歩みをたどる',
+    intro: '信長は足利義昭を将軍の座につけ、その後ろだてとして堂々と京都に入りました。ところが数年後、その義昭を京都から追放してしまいます。1573年、室町幕府の終わりです。将軍を利用し、いらなくなれば切りすてる——信長のやり方を追います。',
     order: 757,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -128,6 +130,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '長篠の戦いと鉄砲（1575年）',
     description: '1575年の長篠の戦いで鉄砲がどのように使われ、戦い方をどう変えたのかを理解する',
+    intro: '種子島に鉄砲が伝わったのは1543年のことでした。それから30年あまりたった1575年、長篠の戦いで織田信長と徳川家康の連合軍が大量の鉄砲を使い、武田軍を破ります。新しい武器が、戦い方そのものを変えてしまった場面です。',
     order: 758,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -180,6 +183,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '信長の経済政策（楽市・楽座と関所の廃止）',
     description: '安土城下の楽市・楽座、関所の廃止など、信長が商業を発展させた政策を学ぶ',
+    intro: '店を出すには決まった仲間に入らないといけない——昔の商売にはそんなしくみがありました。信長は安土の城下でこれをやめさせ、だれでも自由に商売できるようにします。関所も廃止しました。なぜ商人を集めたかったのかを考えましょう。',
     order: 759,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -235,6 +239,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '信長と宗教勢力・本能寺の変（1582年）',
     description: '比叡山の焼き討ちや石山本願寺との戦い、そして1582年の本能寺の変までを学ぶ',
+    intro: '当時の寺は、お経をあげるだけの場所ではありませんでした。広い領地と武器を持ち、大名にも負けない力があったのです。信長が比叡山を焼き、石山本願寺と10年も戦った理由はここにあります。そして1582年、本能寺の変が起こります。',
     order: 760,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -299,6 +304,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '豊臣秀吉の天下統一（1590年）',
     description: '山崎の戦いから小田原攻めまで、秀吉が1590年に全国統一を果たすまでを学ぶ',
+    intro: '信長が倒れたとき、家来の一人にすぎなかった羽柴秀吉はただちに引き返し、山崎の戦いで明智光秀を破りました。そこから8年、1590年の小田原攻めで全国統一を果たします。だれよりも速く動いた者が天下を取った道のりを見ていきます。',
     order: 761,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -349,6 +355,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '太閤検地（1582年〜）',
     description: '全国の田畑を統一した基準で調べ、年貢の基礎を固めた太閤検地のしくみと意義を学ぶ',
+    intro: 'ものさしやますの大きさが土地ごとにばらばらでは、どこがどれだけ米をとれるのかを比べられません。秀吉は基準をそろえて全国の田畑を調べ直しました。地味に見えるこの作業が、実は天下を治めるうえでいちばん大切な仕事でした。',
     order: 762,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -403,6 +410,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '刀狩と兵農分離（1588年）',
     description: '1588年の刀狩令によって武士と百姓の身分が分けられた「兵農分離」を学ぶ',
+    intro: 'それまでの村では、百姓も刀や槍を持っていて、いざとなれば戦いました。1588年、秀吉は「大仏をつくる釘にする」という理由で武器を差し出させます。この刀狩によって、戦う人と耕す人がはっきり分けられていくことになります。',
     order: 763,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -458,6 +466,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '秀吉の対外政策（バテレン追放令と朝鮮出兵）',
     description: '1587年のバテレン追放令と、1592年・1597年の二度の朝鮮出兵を学ぶ',
+    intro: '国内を統一した秀吉が、次に目を向けたのは海の外でした。1587年にはキリスト教の宣教師を追放し、1592年と1597年には朝鮮へ大軍を送ります。統一を成しとげた人物が、なぜ外へ向かったのかを考えながら読み進めましょう。',
     order: 764,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -518,6 +527,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '安土桃山文化',
     description: '天守をもつ壮大な城、豪華な障壁画、わび茶、南蛮文化など安土桃山文化の特色を学ぶ',
+    intro: '姫路城や大阪城の天守を写真で見たことがあるでしょう。高くそびえる天守、金色に輝く障壁画——安土桃山文化は、力を持った大名たちの自信がそのまま形になった文化です。一方で千利休は、まったく逆の美しさを求めました。',
     order: 765,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -579,6 +589,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '関ヶ原の戦い（1600年）',
     description: '「天下分け目の戦い」とよばれる1600年の関ヶ原の戦いと、その後の勢力の変化を学ぶ',
+    intro: '岐阜県の関ケ原町は、東海道新幹線も高速道路も通る交通の要所です。1600年、この盆地に東西あわせて十数万の兵が集まりました。「天下分け目の戦い」とよばれるこの一日が、その後260年あまりの日本を決めることになります。',
     order: 766,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -632,6 +643,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '江戸幕府の成立（1603年）と豊臣氏の滅亡',
     description: '1603年に徳川家康が江戸幕府を開いてから、1615年に豊臣氏が滅びるまでを学ぶ',
+    intro: '関ヶ原に勝った徳川家康は、1603年に征夷大将軍となって江戸に幕府を開きます。しかし大阪にはまだ豊臣秀頼がいました。家康が将軍の位をわずか2年で息子にゆずったのはなぜか。1615年に豊臣氏が滅びるまでを追いましょう。',
     order: 767,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -692,6 +704,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '江戸幕府のしくみ（老中・奉行・京都所司代）',
     description: '将軍を頂点とする幕府の役職と、幕府の強大な経済力のしくみを学ぶ',
+    intro: '将軍が一人ですべてを決めていたわけではありません。ふだんの政治は老中が担当し、大名の監視、寺社、江戸の町など、仕事ごとに役職が分かれていました。役職の名前と仕事、そして幕府の財政の強さを合わせておさえましょう。',
     order: 768,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -758,6 +771,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '大名の統制と武家諸法度（1615年・1635年）',
     description: '大名を取りしまる武家諸法度が、いつだれによって出され、何が加えられたのかを整理する',
+    intro: '大名は自分の領地では殿様です。その殿様たちに、城を勝手に修理してはいけない、結婚も届け出よ、と細かく命じたのが武家諸法度でした。1615年に最初に出され、1635年に大きな決まりが加わります。だれが出したかも要注意です。',
     order: 769,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -816,6 +830,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '幕藩体制と大名の配置',
     description: '幕府と藩が全国を支配する幕藩体制、親藩・譜代・外様の区別と配置のねらいを学ぶ',
+    intro: '地図で大名の配置を見ると、江戸のまわりには親藩や譜代、遠くの九州や東北には外様が置かれています。これは決して偶然ではありません。徳川氏がどこを警戒していたのかを、大名の並べ方から読み取ってみましょう。',
     order: 770,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -867,6 +882,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '参勤交代のしくみと影響（1635年・徳川家光）',
     description: '1635年に家光が制度化した参勤交代のしくみ・ねらい・社会にあたえた影響を学ぶ',
+    intro: '大名が1年おきに江戸と領地を行き来し、妻子は江戸に住まわせる——参勤交代は大名にとって大変な出費でした。しかし人が動けば街道の宿場町がにぎわい、文化も各地へ運ばれます。制度のねらいと、思わぬ効果の両方を見ていきます。',
     order: 771,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -924,6 +940,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '朝廷と寺社の統制',
     description: '禁中並公家諸法度による朝廷の統制と、寺請制度による寺社・民衆の管理を学ぶ',
+    intro: '幕府が警戒したのは大名だけではありません。天皇や公家、そして寺も、力を持てば脅威になります。禁中並公家諸法度で朝廷をしばり、寺請制度ではすべての人をどこかの寺に登録させました。今の戸籍にあたる役目も寺が担ったのです。',
     order: 772,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -982,6 +999,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '江戸時代の身分制度と人口の割合',
     description: '武士・百姓・町人という身分のしくみと、人口のおよその割合を資料から読み取る',
+    intro: '江戸時代の人口のうち、武士はおよそ7％、百姓は約85％を占めたといわれます。人数では圧倒的に少ない武士が、なぜ支配する側でいられたのでしょうか。円グラフの数字を読み取りながら、身分のしくみを考えていきましょう。',
     order: 773,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1036,6 +1054,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '村と百姓のくらし（五人組・年貢）',
     description: '村のしくみ、五人組の連帯責任、四公六民の年貢など百姓のくらしを学ぶ',
+    intro: 'となりの家が年貢を納められなければ、自分たちが代わりに払う——五人組はそういうしくみでした。逃げられないよう、たがいに見張らせたのです。四公六民という重い年貢とあわせて、百姓のくらしがどんなものだったかを見ます。',
     order: 774,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1098,6 +1117,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '南蛮貿易と朱印船貿易',
     description: '鎖国の前、日本が世界とさかんに交流していた時代の貿易のようすを学ぶ',
+    intro: '鎖国の前、日本人は東南アジアまで出かけて商売をしていました。タイやベトナムには日本町までできています。てんぷらやカステラ、カルタなど、今も使うことばがこのころ入ってきました。国を閉ざす前の日本の姿を見ておきましょう。',
     order: 775,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1153,6 +1173,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: 'キリスト教の禁止と島原・天草一揆（1637年）',
     description: '禁教令から島原・天草一揆までの流れと、幕府がキリスト教を禁じた理由を学ぶ',
+    intro: '1637年、島原や天草の人々が一揆を起こしました。中心になったのは天草四郎という少年です。重い年貢とキリスト教の弾圧に苦しんだ人々が立ち上がったこの事件は、幕府をひどく驚かせ、鎖国を決定づけることになりました。',
     order: 776,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1208,6 +1229,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '鎖国の完成（1639年・1641年）',
     description: '禁教令から出島への商館移転まで、鎖国が完成するまでの流れを順に整理する',
+    intro: '「鎖国」という言葉からは、国を完全に閉ざした姿を想像するかもしれません。しかし実際には、貿易の相手と場所をしぼっただけでした。ポルトガル船を追い返した1639年、オランダ商館を出島へ移した1641年——順に整理していきます。',
     order: 777,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1266,6 +1288,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '四つの窓口①長崎（オランダ・中国）',
     description: '幕府が直接管理した長崎の出島・唐人屋敷での貿易と、そこから入る海外情報を学ぶ',
+    intro: '長崎の出島は、面積わずか1.5ヘクタールほどの扇形の埋め立て地でした。この小さな島が、200年以上のあいだ日本とヨーロッパを結ぶ唯一の窓口だったのです。品物だけでなく、どんな情報が入ってきたのかにも注目しましょう。',
     order: 778,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1320,6 +1343,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '四つの窓口②対馬・薩摩・松前',
     description: '朝鮮・琉球・アイヌとの交流を担った三つの窓口を、藩と相手の対応で整理する',
+    intro: '長崎のほかにも、三つの窓口がありました。対馬藩は朝鮮と、薩摩藩は琉球と、松前藩はアイヌの人々と結びついています。どの藩がどの相手と、どんなつき合い方をしたのか。組み合わせを混同しやすいので、表にして整理しましょう。',
     order: 779,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1381,6 +1405,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '農業の発達（新田開発と新しい農具）',
     description: '新田開発による耕地の拡大、備中ぐわ・千歯こきなどの農具、商品作物の広がりを学ぶ',
+    intro: '備中ぐわ、千歯こき、唐箕——名前を聞くだけでは何のことかわかりませんね。実はどれも、少ない人手で多くの作業をこなすための道具です。新田開発で田畑が広がった江戸時代、農業がどう変わったのかを見ていきましょう。',
     order: 780,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1446,6 +1471,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '諸産業の発達（鉱山・水産業・特産物）',
     description: '鉱山、漁業、各地の特産物など、江戸時代に発達したさまざまな産業を学ぶ',
+    intro: '石見銀山は、世界遺産に登録されている島根県の鉱山です。江戸時代の初めごろ、日本の銀は世界の産出量のかなりの部分を占めていました。鉱山、漁業、そして各地の特産物——江戸時代に育った産業を、地図とともに見ていきます。',
     order: 781,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1505,6 +1531,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '交通の発達（五街道と航路）',
     description: '五街道と関所、東廻り・西廻り航路や菱垣廻船など、陸と海の交通を学ぶ',
+    intro: '東海道新幹線も東名高速道路も、江戸時代の東海道とほぼ同じところを通っています。人と物を運ぶ道すじは、そう簡単には変わらないのです。五街道と関所、そして海の航路がどのように整えられたのかを見ていきましょう。',
     order: 782,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1565,6 +1592,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '三都の発達（江戸・大坂・京都）',
     description: '「将軍のおひざもと」江戸、「天下の台所」大坂、文化の中心京都の特色を比べる',
+    intro: '「将軍のおひざもと」江戸、「天下の台所」大坂。この呼び名は、それぞれの町の役割をうまく言い当てています。なぜ大坂に全国の米や特産物が集まったのか、そして京都は何の中心だったのか。三つの都市を比べてみましょう。',
     order: 783,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1627,6 +1655,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '江戸の三大改革の全体像',
     description: '享保・寛政・天保の三大改革を、年号・担当者・特色でまとめて整理する',
+    intro: '享保・寛政・天保——三つの改革は名前も内容も似ていて、とても混ざりやすいところです。共通するのは「幕府のお金が足りない」という悩みでした。まずは年号・担当者・特色を一覧にして、全体の骨組みをつくってしまいましょう。',
     order: 784,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1691,6 +1720,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '享保の改革（1716年・徳川吉宗）',
     description: '8代将軍徳川吉宗の享保の改革の内容と成果を学ぶ',
+    intro: '目安箱という投書箱を設け、庶民の意見を直接聞いた将軍がいます。8代将軍の徳川吉宗です。寄せられた意見から、小石川養生所という医療施設も生まれました。財政を立て直すために吉宗が何をしたのか、具体的に見ていきます。',
     order: 785,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1749,6 +1779,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '田沼意次の政治（1772年〜）',
     description: '商業の力で財政を立て直そうとした田沼意次の政治と、その失敗を学ぶ',
+    intro: '年貢を増やして財政を立て直すのが、それまでのやり方でした。田沼意次はちがい、商人の力を利用して収入を得ようとします。発想は新しかったのに、なぜ田沼は失脚したのでしょうか。時代の運の悪さも含めて見ていきましょう。',
     order: 786,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1803,6 +1834,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '寛政の改革（1787年・松平定信）',
     description: '田沼の政治のあとを受けた松平定信のきびしい改革の内容と結果を学ぶ',
+    intro: '「白河の清きに魚のすみかねてもとの濁りの田沼恋しき」——当時こんな狂歌がよまれました。白河藩主だった松平定信のきびしすぎる政治より、田沼のころのほうがましだ、という皮肉です。何がそれほど不評だったのでしょうか。',
     order: 787,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1857,6 +1889,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '天保の改革（1841年・水野忠邦）',
     description: '天保のききん・大塩平八郎の乱を背景にした、水野忠邦の天保の改革を学ぶ',
+    intro: '大きなききんが続き、大阪では元役人の大塩平八郎が乱を起こしました。幕府の足元がゆれるなかで始まったのが、水野忠邦の天保の改革です。倹約を命じ、江戸に出てきた人を村へ帰そうとしたこの改革の結果を見ていきましょう。',
     order: 788,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1920,6 +1953,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '百姓一揆・打ちこわしと社会の動揺',
     description: '三大ききんを背景に増えた百姓一揆・打ちこわしと、幕府の支配のゆらぎを学ぶ',
+    intro: '米が不足すると値段が上がり、真っ先に困るのは町の貧しい人たちです。江戸時代には、米を買いしめた商人の家をおそう打ちこわしがたびたび起きました。ききんのたびに高くなるグラフの山から、幕府のゆらぎを読み取ります。',
     order: 789,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1977,6 +2011,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '元禄文化（上方の町人文化）',
     description: '17世紀末、上方の町人がにない手となった元禄文化の作者と作品を学ぶ',
+    intro: '歌舞伎や人形浄瑠璃は、今も劇場で上演されています。その台本を書いた近松門左衛門は、江戸時代の元禄のころに活躍した人です。京都・大坂を中心に、力をつけた町人がにない手となった文化を、作者と作品でおさえましょう。',
     order: 790,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2033,6 +2068,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '化政文化（江戸の町人文化）',
     description: '19世紀初め、江戸を中心に栄えた化政文化の作者と作品を学ぶ',
+    intro: '葛飾北斎の「富嶽三十六景」は、今のパスポートのデザインにも使われました。江戸で栄えた化政文化を代表する作品です。浮世絵は多色刷りの版画なので安く手に入り、庶民の楽しみになりました。元禄文化とのちがいにも注目します。',
     order: 791,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2090,6 +2126,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '国学と蘭学の発達',
     description: '『古事記伝』『解体新書』『大日本沿海輿地全図』など、江戸時代の新しい学問を学ぶ',
+    intro: 'オランダ語の医学書を、辞書もほとんどないまま訳しきった人たちがいます。杉田玄白や前野良沢らの『解体新書』です。一方で、日本古来の考え方を研究する国学も生まれました。鎖国の中でも、学問は確かに動いていたのです。',
     order: 792,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2150,6 +2187,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '教育の広がり（寺子屋・藩校）',
     description: '寺子屋・藩校・私塾など、江戸時代の教育の広がりと識字率の高さを学ぶ',
+    intro: '幕末に日本へ来た外国人は、庶民が字を読み書きできることに驚いたといいます。全国に広がった寺子屋のおかげでした。武士の子は藩校で、町や村の子は寺子屋で学ぶ。だれが、どこで、何を学んだのかを整理しておきましょう。',
     order: 793,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2210,6 +2248,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '入試実戦①年代整序と人物・政策の組み合わせ',
     description: '近世の重要年代を並べかえ、人物と政策の組み合わせを正確に判断する練習をする',
+    intro: '年代の並べかえ問題は、一つひとつの年号を丸暗記しなくても解けます。「だれの時代か」という大きな骨組みをつかんでおけば、順番はおのずと決まるからです。近世の重要事項を、人物と政策のセットで確認していきましょう。',
     order: 794,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2283,6 +2322,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '入試実戦②資料の読み取りと記述対策',
     description: '円グラフ・地図・史料を読み取り、記述問題で理由を説明できるようにする',
+    intro: 'グラフや史料の問題は、知識がなくても読めば解ける——そう思っていると失点します。実際には「なぜこの年に増えたのか」を説明できるかが問われるからです。資料と知識をつなぐ練習を、記述の書き方まで含めて行いましょう。',
     order: 795,
     studyPeriod: '小6前半',
     keyPoints: [

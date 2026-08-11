@@ -12,6 +12,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '日本の位置①：緯度・経度と標準時',
     description: '日本のおおよその緯度・経度、標準時子午線（東経135度）と時差の考え方を学ぶ',
+    intro: 'ヨーロッパのサッカー中継が、日本では真夜中や早朝に放送されるのはなぜでしょう。地球は丸く、場所によって太陽がのぼる時刻がちがうからです。日本の時刻は、兵庫県明石市を通る東経135度の線を基準に決められています。その決め方から見ていきましょう。',
     order: 501,
     studyPeriod: '小4',
     keyPoints: [
@@ -67,6 +68,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '日本の位置②：東西南北のはしの島',
     description: '択捉島・南鳥島・沖ノ鳥島・与那国島の位置と、沖ノ鳥島を守る理由を学ぶ',
+    intro: '日本の南のはしにある沖ノ鳥島は、満潮のときに海面の上に出る部分がごくわずかしかありません。それでも国は多額の費用をかけ、コンクリートで囲んで守ってきました。小さな島を必死に守る理由が分かると、「はしの島」の名前が意味を持って見えてきます。',
     order: 502,
     studyPeriod: '小4',
     keyPoints: [
@@ -119,6 +121,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '国土の面積と、領海・排他的経済水域',
     description: '国土面積38万km²と、領海・EEZを合わせた約447万km²の意味を学ぶ',
+    intro: '日本の国土面積は約38万km²で、世界の中では決して広いほうではありません。ところが海の広さまで合わせると、世界でも上位に入ります。陸はせまいのに海では上位——このギャップの理由を、領海と排他的経済水域という言葉から探っていきます。',
     order: 503,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -173,6 +176,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '地方区分と、日本の領土をめぐる問題',
     description: '7地方区分・47都道府県の並びと、北方領土・竹島・尖閣諸島の位置を整理する',
+    intro: 'ニュースで「北方領土」「竹島」「尖閣諸島」という地名を聞いたことがあるでしょうか。どれも日本の地図のはしのほうにあり、相手の国と主張が食いちがっている場所です。まず47都道府県と7地方の並びを頭に入れ、そのうえでこれらの位置を確かめます。',
     order: 504,
     studyPeriod: '小4',
     keyPoints: [
@@ -231,6 +235,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '日本列島の成り立ち：弧状列島とプレート',
     description: '国土の約4分の3が山地であること、火山・地震が多い理由をプレートから理解する',
+    intro: '日本では地震のニュースが絶えず、温泉も火山もあちこちにあります。世界にはほとんど地震のない国もあるのに、なぜ日本ではこうなのでしょう。答えは、日本列島が地球の表面をおおう「プレート」のぶつかり目にのっていることにあります。',
     order: 505,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -289,6 +294,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '日本アルプス：飛騨・木曽・赤石の3山脈',
     description: '北・中央・南アルプスの正式名称と、またがる県を確実に区別する',
+    intro: '「北アルプス」「南アルプス」という呼び名は、ヨーロッパのアルプス山脈になぞらえた愛称です。テストで問われるのは飛騨・木曽・赤石という正式な名前のほう。どれも3000m級の山が並ぶ日本の屋根で、どれがどこかを取りちがえる人がとても多いところです。',
     order: 506,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -345,6 +351,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: 'フォッサマグナと中央構造線',
     description: '東日本と西日本を分ける大地溝帯と、西日本を東西に走る大断層を区別する',
+    intro: '静岡から新潟へ日本列島をたてに切ると、地面のつくりががらりと変わる場所があります。フォッサマグナとは「大きなみぞ」という意味です。日本を東と西に分けるこの境目と、西日本を東西に走る大きな断層——2つの線を混同しないように整理します。',
     order: 507,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -401,6 +408,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '東日本の山地・山脈',
     description: '日高・北上・奥羽・出羽・越後・関東山地の位置と、やませとの関係を学ぶ',
+    intro: '東北地方では、同じ地方の中でも太平洋側だけが夏に冷えこみ、米が実らない年がありました。原因は「やませ」という冷たい風ですが、その被害の大小を決めているのは、実は山脈の並び方です。東日本の山地の位置を、風と結びつけて覚えていきましょう。',
     order: 508,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -461,6 +469,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '西日本の山地と、日本の高い山ランキング',
     description: '中国・四国・紀伊・九州の山地の特徴と、富士山以下の高い山の順位を学ぶ',
+    intro: '日本一高い山が富士山だと知らない人はいません。では2番目は——山梨県の北岳と答えられる人はぐっと減ります。高い山の順位と、なだらかな中国山地・けわしい紀伊山地といった西日本の山の性格を、あわせて押さえていきます。',
     order: 509,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -520,6 +529,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '平野のでき方と関東平野',
     description: '沖積平野と台地のちがい、日本最大の関東平野と関東ローム層を学ぶ',
+    intro: '東京から電車で北へ1時間走っても、窓の外はまだ平らなまま——関東平野は日本でいちばん広い平野です。この平らな土地は、川が運んだ土や火山灰が長い時間をかけて積もってできました。でき方が分かると、土地の使われ方まで見えてきます。',
     order: 510,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -575,6 +585,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '東日本の平野',
     description: '石狩・十勝・仙台・越後・庄内・秋田平野の位置と農業を結びつける',
+    intro: '「庄内平野の米」「十勝平野のじゃがいも」のように、平野の名前は農産物とセットで出てきます。逆に言えば、平野の位置さえ地図で言えれば、その土地の農業まで一気に思い出せます。東日本の平野を、川と作物とつなげて覚えましょう。',
     order: 511,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -634,6 +645,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '西日本の平野',
     description: '濃尾・大阪・讃岐・筑紫・宮崎平野の特色と、輪中・ため池・二毛作を学ぶ',
+    intro: '木曽川の下流には、集落のまわりをぐるりと堤防で囲んだ「輪中」があります。讃岐平野には数えきれないほどのため池。どちらも水と向き合ってきた人びとのくふうです。西日本の平野は、その土地ならではの工夫とセットで覚えると忘れません。',
     order: 512,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -693,6 +705,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '盆地の地形と気候、果樹栽培',
     description: '甲府・長野・山形・松本盆地と、年較差が大きい盆地の気候を学ぶ',
+    intro: '山梨県の甲府盆地はぶどう、山形盆地はさくらんぼ——盆地には果物の名産地が集まっています。まわりを山に囲まれた土地は、夏は暑く冬は寒く、昼と夜の気温差も大きくなります。この「差が大きい」ことが、あまい果物を育てるカギになります。',
     order: 513,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -751,6 +764,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '台地の地形：シラス台地・根釧台地・武蔵野台地',
     description: '水が得にくい台地で、どのような農業が行われてきたかを学ぶ',
+    intro: '鹿児島のシラス台地は、雨がふってもすぐ地下にしみこんでしまうため、昔から米づくりに向かない土地でした。それでも人びとはさつまいもや茶、畜産に活路を見いだします。水に苦労してきた台地が、どう使われてきたのかを見ていきます。',
     order: 514,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -808,6 +822,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '日本の川の特色と長さランキング',
     description: '世界の川と比べた「短く急流」という特徴と、長さの順位を確認する',
+    intro: '世界最長のナイル川は約6700km。それに対して日本一長い信濃川は約367kmで、20分の1にもなりません。しかも日本の川は山から海までが短く、まるで坂道を転がるように流れ下ります。その特徴が水害や発電とどう結びつくのかを見ていきます。',
     order: 515,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -869,6 +884,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '流域面積と、日本の湖',
     description: '流域面積の意味と1位の利根川、面積・深さで日本一の湖を区別する',
+    intro: '「日本一長い川は信濃川、では日本一大きい川は」と聞かれたら、答えは利根川です。長さと流域面積では1位がちがうからです。湖も同じで、面積で日本一の琵琶湖と、深さで日本一の田沢湖は別ものです。まぎらわしい「日本一」を整理します。',
     order: 516,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -949,6 +965,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '東日本の主な川',
     description: '石狩川・北上川・最上川・阿武隈川・利根川・荒川の位置と平野の対応を整理する',
+    intro: '川の名前は、流れている平野とセットで問われます。石狩川と石狩平野のように名前が同じなら簡単ですが、最上川と庄内平野、利根川と関東平野のように名前がちがう組み合わせでつまずく人が多いところです。地図の上で線をたどりながら覚えましょう。',
     order: 517,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -1010,6 +1027,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '西日本の主な川',
     description: '木曽三川・天竜川・淀川・吉野川・四万十川・筑後川を整理する',
+    intro: '高知県の四万十川は「最後の清流」と呼ばれ、大雨のときには欄干のない橋がわざと水にしずむようにつくられています。木曽三川、淀川、筑後川——西日本の川にはそれぞれ物語があります。名前だけの暗記にせず、流れる場所と結びつけて覚えます。',
     order: 518,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -1072,6 +1090,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '扇状地と三角州',
     description: 'できる場所・土のつぶの大きさ・土地利用のちがいを対比して覚える',
+    intro: '同じ川がつくる地形なのに、山から出たところにできる扇状地はぶどう畑、河口にできる三角州は水田や市街地になります。どちらも川が土を積もらせた土地なのに、なぜ使われ方が変わるのでしょう。カギは、積もった土のつぶの大きさにあります。',
     order: 519,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -1132,6 +1151,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: 'リアス海岸',
     description: '沈降でできた出入りの複雑な海岸と、養殖業・津波との関係を学ぶ',
+    intro: '三陸海岸の地図を見ると、海岸線がのこぎりの歯のようにギザギザです。この地形のおかげで波がおだやかになり、かきやわかめの養殖がさかんになりました。ところが同じ地形が、津波のときには波を高くしてしまいます。長所と短所の両方を見ます。',
     order: 520,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -1190,6 +1210,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '砂浜海岸・砂丘・砂州・砂嘴',
     description: '砂が運ばれ積もってできる海岸地形を、形のちがいで区別する',
+    intro: '鳥取砂丘、天橋立、北海道の野付半島——どれも砂が積もってできた地形ですが、名前も形もちがいます。ちがいを生むのは、砂を運ぶのが風なのか波なのか、そしてどの向きに積もったのかです。似た漢字にまどわされないよう、形で区別しましょう。',
     order: 521,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -1249,6 +1270,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '日本近海の海流と潮目・大陸棚',
     description: '4つの海流の名前と向き、潮目が好漁場になる理由を学ぶ',
+    intro: '三陸沖は、いわしもさんまもよくとれる世界有数の漁場です。その理由は、北から来る冷たい海流と南から来る暖かい海流がちょうどぶつかるから。海の中で何が起きているのかが分かると、漁港の位置まで説明できるようになります。',
     order: 522,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -1307,6 +1329,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '干潟・干拓と埋め立て',
     description: '有明海の干潟、八郎潟の干拓、東京湾の埋め立ての違いを整理する',
+    intro: '有明海では、潮が引くと沖のほうまで泥の海底が現れます。この干潟をしめ切って農地にしたのが干拓、海を土や砂でうめて陸にしたのが埋め立てです。似ているようで、やっていることも目的もまるでちがいます。3つの言葉を区別しましょう。',
     order: 523,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -1366,6 +1389,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '日本の気候の大枠と季節風',
     description: '6つの気候区分の全体像と、季節風が雨や雪をもたらすしくみを理解する',
+    intro: '同じ日の天気予報でも、日本海側は大雪、太平洋側は晴れ、ということがよくあります。細長い日本列島が、真ん中を走る山脈で二つに分けられているからです。その主役が季節風。風の向きが変わるだけで、雨も雪も気温も変わっていきます。',
     order: 524,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -1425,6 +1449,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '北海道の気候（札幌の雨温図）',
     description: '冷帯の特徴・梅雨がないこと・降水量が意外に少ないことを読み取る',
+    intro: '札幌は大雪の降る町として知られていますが、1年間の降水量で比べると東京より少ないのです。雪は多いのに雨の量では負ける——不思議に思いませんか。梅雨がないことも合わせて、雨温図から北海道らしさを読み取っていきます。',
     order: 525,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -1497,6 +1522,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '日本海側の気候（金沢の雨温図）',
     description: '冬に降水量が最大になる日本海側の特徴を、金沢のデータで確認する',
+    intro: '金沢の雨温図を見ると、降水量の棒グラフがいちばん高くなるのは夏ではなく12月です。雨は夏に多いのがふつうなのに、なぜ冬なのでしょう。答えは、日本海をわたってくる冬の季節風にあります。冬に降水量が最大になる理由を追いかけます。',
     order: 526,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -1568,6 +1594,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '太平洋側の気候（静岡の雨温図）',
     description: '夏から秋に雨が多く冬が乾く太平洋側の特徴を、静岡のデータで確認する',
+    intro: '静岡では夏から秋にかけて雨が集中し、冬はよく晴れた日が続きます。同じ冬なのに、日本海側の金沢とはまるで逆です。同じ季節風がふいているのに、なぜ反対の天気になるのでしょう。山脈をこえる前と後のちがいがポイントになります。',
     order: 527,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -1643,6 +1670,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '中央高地（内陸）の気候（長野の雨温図）',
     description: '年較差が大きく降水量が少ない内陸の気候を、長野のデータで確認する',
+    intro: '長野県の高原は、夏でも朝晩は上着がほしくなるほど涼しく、冬は氷点下まで冷えこみます。海から遠い内陸では、1年の気温の差も1日の気温の差も大きくなるのです。降水量が少ない理由とあわせて、雨温図から確かめていきます。',
     order: 528,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -1714,6 +1742,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '瀬戸内の気候（高松の雨温図）',
     description: '2つの山地にはさまれて少雨になるしくみと、水不足への対策を学ぶ',
+    intro: '香川県には昔から数えきれないほどのため池があり、讃岐山脈の下にトンネルをほって水を引く用水路までつくられました。雨が少ない土地だからです。同じ日本なのに、なぜ瀬戸内だけ雨が降らないのか。山地と季節風の関係で説明できます。',
     order: 529,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -1791,6 +1820,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '南西諸島の気候（那覇の雨温図）',
     description: '亜熱帯の気候と台風、それに合わせた住居や農業のくふうを学ぶ',
+    intro: '沖縄の古い家は、赤い屋根がわらをしっくいで固め、まわりを石垣と木で囲んでいます。強い台風から家を守るためのくふうです。冬でも月の平均気温が15度を下回らない暖かさと、台風の多さ。気候が暮らしの形をつくってきた例を見ていきます。',
     order: 530,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -1868,6 +1898,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '雨温図の読み方の基本',
     description: '折れ線と棒グラフの意味、判別の3ステップを身につける',
+    intro: '雨温図は、折れ線と棒グラフが一つになった少し変わったグラフです。慣れないうちは「どこを見ればいいのか分からない」と感じます。でも見る順番さえ決めてしまえば、初めて見る都市でも3ステップで気候区分を言い当てられます。その手順を身につけます。',
     order: 531,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -1933,6 +1964,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '雨温図の判別演習①：札幌・静岡・那覇',
     description: '気温の線の高さと年較差で、南北に離れた3都市を見分ける',
+    intro: '3つの雨温図を並べられて「どれが札幌か」と聞かれたら、まずどこを見ますか。南北に大きく離れた都市どうしなら、気温の折れ線の高さと年較差だけで決着がつきます。いちばん判別しやすいパターンから、練習を始めましょう。',
     order: 532,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -1994,6 +2026,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '雨温図の判別演習②：金沢・高松・長野',
     description: '降水量のパターンと冬の気温で、まぎらわしい3都市を見分ける',
+    intro: '前回とちがい、今度は気温だけでは決まりません。金沢・高松・長野は、どれも本州にあって緯度も近いからです。決め手になるのは降水量の形と冬の気温。まぎらわしい3都市を、見るべき順番どおりに切り分けていきます。',
     order: 533,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -2057,6 +2090,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '入試実戦①：地形の総合問題',
     description: '地図をもとに山地・平野・河川・海岸を横断的に問う出題形式に慣れる',
+    intro: '入試の地図問題では、「Aの山地の名前」「Bの川が流れこむ平野」がひとつの大問の中で次々に聞かれます。単元ごとに覚えていても、地図の上でつながっていないと答えられません。ここまで学んだ地形を、一枚の地図の上で結びなおします。',
     order: 534,
     studyPeriod: '小5前半',
     targetLevel: 'nyushi',
@@ -2125,6 +2159,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '入試実戦②：気候・雨温図の総合問題',
     description: '6つの気候区分と特徴的な風を、実際の出題形式で総整理する',
+    intro: 'やませ、からっ風、季節風、フェーン現象——気候の問題では、風の名前が地域とセットで問われます。雨温図の判別と組み合わせて出されることもしばしばです。6つの気候区分と特徴的な風を、本番と同じ形式で総点検しましょう。',
     order: 535,
     studyPeriod: '小5前半',
     targetLevel: 'nyushi',
