@@ -14,6 +14,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '助詞とは何か：付属語で活用しない語',
     description: '助詞の正体と4つの種類（格助詞・接続助詞・副助詞・終助詞）の全体像をつかむ',
+    intro: '「犬が走る」と「犬も走る」。一文字変えただけで、伝わる内容が変わります。この一文字が助詞です。自分では活用せず、他の語にくっついてはたらきます。まずは四つの種類の全体像をつかみます。',
     order: 691,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -99,6 +100,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '格助詞①：10語を丸ごと覚える',
     description: '格助詞は10語だけ。「鬼が戸より出、空の部屋」でまとめて暗記する',
+    intro: '格助詞は全部でたった十語しかありません。数が決まっているのですから、覚えてしまえば「これは格助詞か」で迷うことがなくなります。「鬼が戸より出、空の部屋」の語呂で一気に頭に入れます。',
     order: 692,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -187,6 +189,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '格助詞②：それぞれの意味・用法',
     description: '「が・の・を・に・で・と・から・より・へ・や」が表す意味を例文で整理する',
+    intro: '同じ「で」でも、「バスで行く」は手段、「公園で遊ぶ」は場所を表します。格助詞は語数こそ少ないのに、一語がいくつもの意味を持ちます。例文とセットにして、意味を整理していきましょう。',
     order: 693,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -289,6 +292,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '接続助詞：前と後ろをつなぐ助詞',
     description: '順接・逆接・並立の3つのはたらきと、代表的な接続助詞を整理する',
+    intro: '「雨が降ったので中止だ」と「雨が降ったが決行した」。「ので」と「が」が、前と後ろの関係を決めています。順接か逆接か並立か。この見分けは、説明文で筆者の論を追うときにも直接役立ちます。',
     order: 694,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -378,6 +382,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '副助詞：意味をそえる助詞',
     description: '「は・も・こそ・さえ・しか・だけ・ばかり・ほど」などが加える意味を読み取る',
+    intro: '「ぼくだけ行く」「ぼくしか行かない」「ぼくも行く」。「行く」は同じなのに、伝わることがちがいます。副助詞は意味をそえる助詞です。何をそえているのかを読み取る練習をしていきます。',
     order: 695,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -468,6 +473,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '終助詞：文末の気持ちを表す助詞',
     description: '「か・な・ね・よ・ぞ・とも・わ・かしら」が表す話し手の気持ちを読み取る',
+    intro: '「明日は雨だ」「明日は雨だね」「明日は雨だよ」。文末に一文字加わるだけで、話し手の気持ちが変わります。物語文で人物の心情をつかむときにも効いてくる、文末の助詞を見ていきます。',
     order: 696,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -560,6 +566,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '助詞のまとめ：4分類を確実に見分ける',
     description: '位置と直前の語から助詞の種類を決める手順を身につける',
+    intro: '助詞の種類を決めるときに見るのは二つだけ、どこにあるかと、直前に何があるかです。文末にあれば終助詞、活用する語のあとで前後をつなげば接続助詞。手順にしてしまえば迷いません。',
     order: 697,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -661,6 +668,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '「の」の識別：4つの用法を置きかえで見分ける',
     description: '主語の「の」・連体修飾の「の」・体言の代用の「の」・終助詞の「の」を区別する',
+    intro: '「私の本」「私の書いた本」「赤いのがほしい」。全部「の」ですが、はたらきはちがいます。決め手は置きかえです。「が」に変えられるか、「もの・こと」に変えられるかで分かれていきます。',
     order: 698,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -753,6 +761,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '「が」の識別：格助詞と接続助詞',
     description: '主語の「が」・対象の「が」・逆接の「が」を直前の語で見分ける',
+    intro: '「弟が来た」の「が」と「行ったが、いなかった」の「が」。同じ文字でも、前者は主語をつくり、後者は前後を逆につなぎます。見分ける手がかりは、直前にどんな語があるかという一点です。',
     order: 699,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -843,6 +852,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '「に」の識別：格助詞か、活用語尾か、副詞の一部か',
     description: '「に」が格助詞・形容動詞の活用語尾・副詞の一部・接続助詞の一部のどれかを見分ける',
+    intro: '「学校に行く」「静かになる」「すぐに来る」。この三つの「に」は、それぞれ正体がちがいます。切り離せるか、言い切りの形に直せるか。確かめ方を決めておけば、確実に区別できます。',
     order: 700,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -936,6 +946,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '「で」の識別：4つの「で」を見分ける',
     description: '格助詞・接続助詞・断定の助動詞「だ」・形容動詞の活用語尾を区別する',
+    intro: '「電車で行く」「元気で明るい」「読んでいる」「子どもである」。「で」は四つの顔を持っています。入試で最頻出の識別の一つです。置きかえテストを使って、一つずつ切り分けていきましょう。',
     order: 701,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1031,6 +1042,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '「から」「まで」「でも」の識別',
     description: '格助詞か接続助詞か副助詞か、直前の語で決める練習をする',
+    intro: '「駅から歩く」と「寒いから休む」。同じ「から」でも、前者は出発点、後者は理由を表します。ちがいは直前の語にあります。名詞につくのか、活用する語につくのか。そこで決めていきます。',
     order: 702,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1128,6 +1140,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '助動詞とは何か：付属語で活用する語',
     description: '助動詞の定義と、接続（どんな形の語に付くか）で見分ける考え方を学ぶ',
+    intro: '「行く」に「ない」「た」「たい」をつけると、打ち消し・過去・希望と意味が変わります。助動詞は、自分だけでは文をつくれないのに、文の意味を大きく動かします。鍵はどんな形の語につくかです。',
     order: 703,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1231,6 +1244,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '使役の助動詞「せる・させる」',
     description: '「〜させる」が表す使役の意味と、動詞の種類による使い分けを学ぶ',
+    intro: '「弟が行く」を「弟を行かせる」にすると、行くのは弟のままなのに、そうさせた人がもう一人あらわれます。これが使役です。どちらの形を使うかは、直前の動詞の種類によって決まります。',
     order: 704,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1319,6 +1333,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '打消の助動詞「ない・ぬ（ん）」と「まい」',
     description: '打消の助動詞の接続と、打消の意志・推量を表す「まい」を学ぶ',
+    intro: '「行かない」は「行かぬ」と言いかえられます。この置きかえができるかどうかが、あとの識別問題でそのまま武器になります。あわせて「二度と行くまい」の「まい」も押さえておきましょう。',
     order: 705,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1409,6 +1424,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '助動詞「た」：過去・完了・存続・想起',
     description: '「た」がもつ4つの意味を、言いかえで見分ける',
+    intro: '「昨日読んだ」「かべにかかった絵」「そうだ、明日だった」。全部「た」ですが、過去とはかぎりません。完了や存続、思い出しの意味もあります。言いかえて確かめる方法で見分けていきます。',
     order: 706,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1501,6 +1517,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '「う・よう」と丁寧の「ます」',
     description: '推量・意志・勧誘の「う・よう」と、丁寧に述べる「ます」を整理する',
+    intro: '「行こう」は、自分の意志でしょうか、さそいでしょうか。それとも予想でしょうか。文の形だけでは決まらず、だれの動作かで変わります。丁寧に述べる「ます」とあわせて整理していきます。',
     order: 707,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1589,6 +1606,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '断定の「だ・です」と希望の「たい・たがる」',
     description: '断定を表す助動詞と、希望を表す助動詞の使い方・接続を学ぶ',
+    intro: '「行きたい」とは言えても、「弟が行きたい」とは言いにくく、「弟が行きたがる」と言います。自分の希望か、他人の希望か。助動詞は使い分けまで含めて覚えると、誤りに気づけるようになります。',
     order: 708,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1679,6 +1697,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '「そうだ」「ようだ」「らしい」の意味',
     description: '様態・伝聞・比況・例示・推定という5つの意味を整理する',
+    intro: '「雨が降りそうだ」と「雨が降るそうだ」。たった一文字のちがいで、前者は自分が見た様子、後者は人から聞いた話になります。様態・伝聞・比況・例示・推定を、ここで整理していきましょう。',
     order: 709,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1777,6 +1796,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '「れる・られる」の基本：接続と4つの意味',
     description: '受け身・尊敬・可能・自発という4用法の全体像をつかむ',
+    intro: '「先生にほめられる」「先生が来られる」「昔が思い出される」。同じ「れる・られる」なのに、受け身・尊敬・可能・自発と意味が分かれます。まずは四つの用法の全体像をつかみます。',
     order: 710,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1879,6 +1899,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '受け身と可能の見分け方',
     description: '「〜ことができる」と「〜に（よって）」の2つのテストで確実に区別する',
+    intro: '「この水は飲まれる」は、だれかに飲まれるのか、飲むことができるのか。文だけを見ても決まりません。そこで二つのテストを使います。「〜ことができる」に直せるか、「〜に」を補えるかです。',
     order: 711,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1971,6 +1992,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '尊敬の「れる・られる」：だれの動作かを見る',
     description: '主語と言いかえで尊敬の用法を確実に見分ける',
+    intro: '「先生が話される」の「れる」は受け身ではありません。話すのは先生、つまり敬うべき相手だからです。だれの動作かを見る——尊敬かどうかの見分けは、この一点にかかっています。',
     order: 712,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2055,6 +2077,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '自発の「れる・られる」と4用法の総整理',
     description: '心のはたらきを表す動詞に付く自発を理解し、4用法の判定手順を完成させる',
+    intro: '「故郷が思い出される」。だれかに思い出させられているわけではなく、自然にそうなってしまう、という意味です。これが自発で、心のはたらきを表す動詞につきます。四つの判定手順を完成させます。',
     order: 713,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2156,6 +2179,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '「ない」の識別①：助動詞か形容詞か',
     description: '「ぬ」に置きかえるテストで、打消の助動詞と形容詞を区別する',
+    intro: '「行かない」の「ない」は「行かぬ」に直せますが、「お金がない」を「お金がぬ」とは言えません。この一手で、助動詞と形容詞は区別できます。まずは二つの切り分けから始めましょう。',
     order: 714,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2250,6 +2274,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '「ない」の識別②：形容詞の一部と補助形容詞',
     description: '4種類の「ない」を区別し、答案で正確な用語を使えるようにする',
+    intro: '「はかない夢」の「ない」は、取り除くと語そのものが消えてしまいます。「おもしろくない」の「ない」は取り除いても言葉が残ります。四種類の「ない」を、答案で書ける用語まで含めて整理します。',
     order: 715,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2344,6 +2369,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '「そうだ」の識別：様態と伝聞',
     description: '接続（直前の活用形）だけで様態と伝聞を確実に区別する',
+    intro: '「おいしそうだ」と「おいしいそうだ」。前者は見た目からの判断、後者は人から聞いた話です。見分けるのに意味を考える必要はありません。直前がどんな形かを見るだけで決まってしまいます。',
     order: 716,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2443,6 +2469,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '「ようだ」「らしい」の識別',
     description: '比況・例示・推定の見分けと、助動詞「らしい」と接尾語「らしい」の区別',
+    intro: '「彼らしい服装」と「彼が来るらしい」。前者は「いかにも彼だ」、後者は「そうだと聞いた」。同じ「らしい」でも正体がちがいます。「ようだ」の比況・例示とあわせて見分けていきます。',
     order: 717,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2545,6 +2572,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '敬語の三分類：だれの動作かで決まる',
     description: '尊敬語・謙譲語・丁寧語の区別を「動作をするのはだれか」から理解する',
+    intro: '「先生が召し上がる」と「私がいただく」。どちらも食べるという意味ですが、食べる人がちがいます。敬語を分けるときに見るのは、だれの動作かという一点です。ここから三分類を組み立てます。',
     order: 718,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2639,6 +2667,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '尊敬語のつくり方：相手の動作を高める',
     description: '「お〜になる」「れる・られる」「特別な動詞」の3通りを使い分ける',
+    intro: '「先生が来た」を敬語に直すと、「お越しになった」「来られた」「いらっしゃった」と何通りもあります。相手の動作を高めるつくり方は三通り。どれを使うかの決め方まで確認していきます。',
     order: 719,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2743,6 +2772,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '謙譲語のつくり方：自分の動作をへりくだる',
     description: '「お〜する」「〜いたす」「特別な動詞」で自分側の動作を低めて相手を高める',
+    intro: '自分を高くすることだけが敬語ではありません。自分の側を低く言えば、その分だけ相手が高くなります。それが謙譲語です。「お持ちする」「いたす」など、自分側の動作に使う形をそろえます。',
     order: 720,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2845,6 +2875,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '丁寧語と美化語：聞き手への配りょ',
     description: '「です・ます・ございます」と「お」「ご」の付いた美化語を理解する',
+    intro: '「です・ます」は、話に出てくる人ではなく、聞いている相手に向けた敬語です。だから敬うべき人が登場しない文にも使えます。「お茶」「お菓子」のような美化語とあわせて確認しましょう。',
     order: 721,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2937,6 +2968,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '特別な敬語動詞の一覧を覚える',
     description: '言う・行く・来る・いる・見る・食べる・する・知るなどの尊敬語と謙譲語を対で暗記する',
+    intro: '「言う」の尊敬語は「おっしゃる」、謙譲語は「申す」。「行く」なら「いらっしゃる」と「参る」。形が決まっている動詞は、尊敬語と謙譲語を対にして覚えるのがいちばん早く、まちがえにくくなります。',
     order: 722,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -3038,6 +3070,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '二重敬語：敬語の使いすぎに注意する',
     description: '同じ種類の敬語を重ねた誤りを見つけ、正しい形に直す',
+    intro: '「先生がお読みになられる」。ていねいに言おうとしたのに、これは誤りです。「お〜になる」と「れる」で、尊敬語が二重に重なっているからです。どこが重なっているかを見つけて直します。',
     order: 723,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -3132,6 +3165,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '謙譲語の誤用：相手の動作に使っていないか',
     description: '「お客様が申されました」型の誤りを見抜き、正しい尊敬語に直す',
+    intro: '「お客様が申されました」。一見ていねいですが、「申す」は自分の側に使う謙譲語です。これでは敬うべきお客様を低めてしまいます。この型の誤りを見抜いて、正しい尊敬語に直す練習をします。',
     order: 724,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -3230,6 +3264,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '「いただく」と「くださる」／敬語の総合演習',
     description: '主語と助詞から使い分けを決め、敬語問題の解き方を完成させる',
+    intro: '「先生に教えていただいた」と「先生が教えてくださった」。同じ場面なのに、主語と助詞がちがいます。どちらを使うかは、だれを主語にするかで決まります。総合演習で敬語を仕上げましょう。',
     order: 725,
     studyPeriod: '小6前半',
     keyPoints: [

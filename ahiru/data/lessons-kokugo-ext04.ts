@@ -15,6 +15,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '類義語とは何か — 「似ている」は「同じ」ではない',
     description: '意味の重なりとズレをつかみ、言いかえられる範囲を見きわめる',
+    intro: '「この時計は値段が高い」は「高価だ」と言いかえられます。では「兄は背が高い」を「背が高価だ」と言えるでしょうか。似た意味の語どうしでも、置きかえられる場面とそうでない場面があります。その境目を見つけるのがこの回です。',
     order: 616,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -116,6 +117,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '程度の強さで区別する類義語',
     description: '必要と必須、心配と不安と恐怖 — 強さの目盛りの上に語を並べる',
+    intro: '「心配」「不安」「恐怖」——どれも落ち着かない気持ちを表しますが、テストの前日に感じるのはどれでしょうか。似た意味の語は、強さの目盛りの上に並べると一気に整理できます。今回はその目盛りを引きます。',
     order: 617,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -212,6 +214,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: 'かたさで区別する類義語 — 和語と漢語',
     description: '同じ意味でも文体が変わる。会話文と説明文で語を使い分ける',
+    intro: '友だちには「わかった」と言うのに、作文では「理解した」と書きます。意味はほとんど同じなのに、なぜ書き分けるのでしょうか。言葉には「かたさ」があり、話し言葉向きと書き言葉向きに分かれます。',
     order: 618,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -307,6 +310,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '同音の類義語を書き分ける — 保証・保障・補償／対象・対称・対照',
     description: '音が同じで意味がちがう語を、意味の中心の漢字から判断する',
+    intro: '「品質をホショウする」「生活をホショウする」「損害をホショウする」——音は全部同じなのに、あてる漢字は三つとも違います。どれを選ぶかは、その語の意味の中心にある漢字で決まります。書き取りで差がつくところです。',
     order: 619,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -406,6 +410,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: 'よい意味・悪い意味で区別する類義語',
     description: '結果と成果と末路 — 語がもともと持っているプラス・マイナスを見抜く',
+    intro: '同じ「終わり方」でも、「成果」と言われればうれしく、「末路」と言われればぞっとします。言葉にはもともとプラスかマイナスの色がついていて、それを外すと文全体が不自然になります。今回はその色を見分けます。',
     order: 620,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -499,6 +504,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '類義語の入試演習 — 言いかえ・選択問題の解き方',
     description: '「同じ意味の語を選べ」型の設問を、置きかえテストで確実に処理する',
+    intro: '「――と同じ意味の語を選べ」という問題で、二つまで絞れたのに最後で外した経験はありませんか。勘で決めずにすむ方法があります。選んだ語を実際に文へ入れて読んでみる、置きかえテストです。',
     order: 621,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -595,6 +601,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '対義語の基本と作り方 — 打ち消しの接頭語',
     description: '不・無・非・未の使い分けで、対義語を自分で作れるようにする',
+    intro: '「可能」の反対は「不可能」、「関係」の反対は「無関係」。では「常識」の反対は「不常識」でしょうか。打ち消しの「不・無・非・未」は、どれをつけるかが語ごとに決まっています。その見分け方を身につけます。',
     order: 622,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -698,6 +705,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '二字熟語の対義語① — 漢字が一字ずつ対応する組',
     description: '増加⇔減少のように、上下の漢字がそれぞれ反対になる型を覚える',
+    intro: '「増加」の反対は「減少」。よく見ると「増↔減」「加↔少」と、上下の漢字がそれぞれ反対になっています。この型に気づくと、覚えていない対義語でも自分で組み立てられるようになります。',
     order: 623,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -791,6 +799,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '二字熟語の対義語② — 熟語全体で対になる組',
     description: '原因⇔結果、需要⇔供給 — 漢字が対応しない対義語をまとめて覚える',
+    intro: '「原因」の反対を漢字一字ずつ考えても、「結果」にはたどりつきません。漢字が対応しない対義語もあるからです。こちらは分解しても解けないので、ペアのまま覚えるしかありません。まとめて片づけましょう。',
     order: 624,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -886,6 +895,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '説明文に出る対義語のペア',
     description: '権利と義務、生産と消費 — 社会・経済のキーワードを対で押さえる',
+    intro: '説明文で「権利」という語が出てきたら、少し先に「義務」が出てくることがよくあります。筆者は対になる語を並べて論を進めるからです。ペアを知っていると、次に来る話が読む前に見当がつきます。',
     order: 625,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -983,6 +993,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '和語の対義語 — 文脈で相手が変わる語',
     description: '「薄い」の反対は何か。一つに決まらない対義語の扱い方',
+    intro: '「薄い」の反対は何でしょうか。紙なら「厚い」、味なら「濃い」、可能性なら「大きい」。一つに決まりません。和語の対義語は、何について言っているかで相手が変わります。文脈から決める練習をします。',
     order: 626,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -1075,6 +1086,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '対義語の入試演習 — 出題パターンと解き方',
     description: '書かせる・選ばせる・本文から抜き出させる、三つの型を練習する',
+    intro: '対義語の問題は、書かせる・選ばせる・本文から抜き出させるの三つの型しかありません。型が分かれば、どこを見ればよいかも決まります。今回は三つを順に練習して、取りこぼしをなくします。',
     order: 627,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1162,6 +1174,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '多義語とは — 一つの語がいくつもの意味を持つ',
     description: '中心の意味から意味が広がるしくみを理解する',
+    intro: '「頭がいい」「行列の頭」「頭を下げる」——同じ「頭」なのに、指しているものはそれぞれ違います。でも、ばらばらではありません。中心の意味から枝が伸びるように広がっているのです。そのしくみを見ます。',
     order: 628,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -1256,6 +1269,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '多義語①「あたる」「とる」— 和語動詞の広がり',
     description: '文中の主語と目的語から、どの意味かを決める練習',
+    intro: '「くじにあたる」「日にあたる」「担当にあたる」。「写真をとる」「点をとる」「年をとる」。同じ動詞でも、前後にどんな言葉が来るかで意味が決まります。手がかりは主語と目的語です。',
     order: 629,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -1349,6 +1363,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '多義語②「かける」「たつ」「つく」',
     description: '同じ音で意味が大きく分かれる基本動詞をまとめて整理する',
+    intro: '「時間をかける」「電話をかける」「めがねをかける」。「席をたつ」「うわさがたつ」「役にたつ」。基本の動詞ほど意味が広く、入試ではそこが問われます。まとめて整理しておきましょう。',
     order: 630,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -1439,6 +1454,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '多義語③ 体の部分を表す語の広がり',
     description: '手・頭・目・口 — 体の語がどこまで意味を広げるかを知る',
+    intro: '「手が足りない」の「手」は人手のこと、「手をうつ」の「手」は方法のことです。体の部分を表す語は、体をはなれてどんどん意味を広げていきます。どこまで広がるかを知れば、慣用句にも強くなります。',
     order: 631,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1541,6 +1557,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '多義語の入試演習 — 「同じ意味のものを選べ」の解き方',
     description: '言いかえテストで、意味の枝を確実に見分ける',
+    intro: '「傍線部と同じ意味で使われているものを選べ」は、多義語の定番問題です。ここでも役に立つのが言いかえです。傍線部を別の言葉に置きかえ、その言葉が入る選択肢を探せば、意味の枝を取りちがえません。',
     order: 632,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1644,6 +1661,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '具体と抽象 — 説明文を読むための第一の道具',
     description: '共通点を取り出すのが抽象化。例と主張を見分けられるようになる',
+    intro: '「犬・猫・馬」をひとまとめにすると「動物」。共通点だけを取り出すこの作業が抽象化です。説明文では、筆者の主張が抽象、そのあとの話が具体例、という形がくり返し出てきます。読む道具として使えます。',
     order: 633,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1737,6 +1755,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '主観と客観',
     description: '自分だけの見方と、だれが見てもそう言える見方を区別する',
+    intro: '「このケーキはおいしい」と「このケーキは直径二十センチだ」。前者は人によって変わり、後者はだれが測っても同じです。この差が主観と客観です。筆者がどちらを述べているかで、読み方が変わります。',
     order: 634,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1826,6 +1845,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '普遍と特殊、絶対と相対',
     description: '「普遍」と「不変」を取りちがえない。比べて決まるかどうかで考える',
+    intro: '「普遍」と「不変」は読みが同じで、意味も似ていそうに見えます。でも前者は「どこでも当てはまる」、後者は「変わらない」。取りちがえると論がねじれます。比べて決まるかどうかで整理しましょう。',
     order: 635,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1921,6 +1941,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '必然と偶然、原理と法則',
     description: 'なぜそうなるのかを説明する語のグループを押さえる',
+    intro: '道を歩いていて友だちに会うのは偶然、手を放したものが落ちるのは必然です。「なぜそうなるのか」を説明する語には仲間があります。まとめて押さえておくと、理由を述べる文章がぐっと読みやすくなります。',
     order: 636,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2016,6 +2037,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '自然と人工、文化と文明',
     description: '環境・文化をテーマにした説明文の必須キーワード',
+    intro: '公園の木は自然でしょうか、人工でしょうか。人が植えたのだから人工とも言えます。環境をテーマにした説明文では、この線引きそのものが問題にされます。文化と文明のちがいもあわせて確認します。',
     order: 637,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2114,6 +2136,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '個人と社会、自由と責任',
     description: '人と人との関係を語る抽象語をまとめる',
+    intro: '「自由なんだから何をしてもいい」と言われたら、どこか引っかかります。自由には必ず責任がついてくるからです。人と人との関係を語る抽象語を整理すると、こうした文章の言いたいことがつかめます。',
     order: 638,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2207,6 +2230,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '合理・効率・便利さを問い直す語',
     description: '近代を論じる説明文のキーワードをまとめて理解する',
+    intro: '便利になったはずなのに、なぜか忙しい。説明文にはこういう話がよく出てきます。合理・効率という語はふつうよい意味ですが、筆者はしばしばそれを問い直します。近代を論じる文章のかぎになる語です。',
     order: 639,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2302,6 +2326,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '矛盾・逆説・二項対立 — 論の型を表す語',
     description: '説明文の組み立てそのものを指す語を覚え、論の展開を先読みする',
+    intro: '「急がば回れ」は、急ぎたいのに回れという、一見おかしな言い方です。こうした形を逆説といいます。論の組み立てそのものを指す語を知っておくと、次にどう展開するかを先読みできるようになります。',
     order: 640,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2402,6 +2427,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: 'カタカナ語① 説明文に出る抽象的なカタカナ語',
     description: 'アイデンティティ・パラドックス・ジレンマを日本語に置きかえて覚える',
+    intro: '「アイデンティティ」を日本語で言うと何でしょうか。「自分が自分であること」です。説明文のカタカナ語は、日本語に置きかえたとたんに意味がはっきりします。訳をセットにして覚えていきましょう。',
     order: 641,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2490,6 +2516,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: 'カタカナ語② 社会・環境のキーワード',
     description: 'グローバル、ローカル、サステナブル — 時事的な語をおさえる',
+    intro: 'ニュースで「サステナブル」「グローバル」という語をよく耳にします。何となく分かったつもりで読み飛ばすと、説明文では大きく外します。時事的なカタカナ語を、日本語の意味とともに押さえます。',
     order: 642,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2577,6 +2604,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: 'カタカナ語③ 日本語に言いかえる練習',
     description: 'リスク・ケア・システム — 日常語になったカタカナ語を正確に訳す',
+    intro: '「リスク」を「危険」と訳すと、少しずれます。リスクは「これから起こるかもしれない悪いこと」で、まだ起きてはいないからです。日常語になったカタカナ語ほど、正確に言いかえる練習が必要です。',
     order: 643,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2667,6 +2695,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: 'カタカナ語④ 意味がずれている語・和製英語',
     description: 'ナイーブ、クレーム、コンプレックス — 思い込みで読むと外す語',
+    intro: '「ナイーブな人」と聞くと、繊細な人を思いうかべませんか。もとの英語では「世間知らず」に近い意味です。思い込みのまま読むと外す語があります。意味がずれている語をまとめて確認します。',
     order: 644,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2768,6 +2797,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '語彙演習① 空欄補充の解き方',
     description: '前後の言葉との結びつきから、入る語を一つに決める',
+    intro: '空欄に入る語を選ぶ問題で、二つとも意味は合っているのに片方が誤りになることがあります。決め手は前後の言葉との結びつきです。「忠告を＋する／受ける」のように、組み合わせで決まっています。',
     order: 645,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2871,6 +2901,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '語彙演習② 傍線部の語の意味を答える',
     description: '辞書の意味ではなく、その文脈での意味を答える練習',
+    intro: '「傍線部の語の意味を答えよ」で辞書どおりの意味を書いたのに誤りだった、というのはよくある失敗です。聞かれているのは、その文章の中でどういう意味で使われているか。文脈から答える練習をします。',
     order: 646,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2969,6 +3000,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '語彙演習③ 記述で使える語彙',
     description: '説明の精度を上げる語を身につけ、書ける言葉を増やす',
+    intro: '記述で「すごい」「いろいろ」と書いてしまい、点にならなかったことはありませんか。書ける言葉の数が、そのまま説明の精度になります。使える語を増やして、答案の言葉を入れかえていきます。',
     order: 647,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -3069,6 +3101,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '語彙演習④ 同音異義語・同訓異字の書き取り',
     description: '意味から漢字を決める手順を固める',
+    intro: '「注意をカンキする」「部屋をカンキする」。読みは同じでも、前者は「喚起」、後者は「換気」です。迷ったときは音から漢字を思い出すのではなく、意味から漢字を決めます。その手順を固めます。',
     order: 648,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -3152,6 +3185,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '語彙演習⑤ 熟語の構成と、知らない語の意味の推測',
     description: '漢字の組み合わせ方から、初めて見る熟語の意味を読み取る',
+    intro: '知らない熟語が出てきても、あきらめなくて大丈夫です。「豊富」は似た意味の漢字が並んだ形、「登山」は「山に登る」と下から返って読む形。組み立て方が分かれば、意味の見当をつけられます。',
     order: 649,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -3245,6 +3279,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '語彙演習⑥ 総合チェックと覚え方',
     description: '35回分の要点を確認し、語彙を増やし続ける方法を身につける',
+    intro: '語彙は覚えた分だけ読める量が増えますが、一度覚えても使わなければ消えていきます。ここまでの要点を確認したうえで、これから先も語を増やし続けるためのやり方を身につけて締めくくります。',
     order: 650,
     studyPeriod: '小6前半',
     keyPoints: [
