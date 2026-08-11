@@ -13,6 +13,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '旧石器時代と岩宿遺跡：日本列島に人が住みはじめる',
     description: '打製石器を使った旧石器時代のくらしと、岩宿遺跡の発見が持つ意味を学ぶ',
+    intro: 'およそ80年前まで、日本に旧石器時代はなかったと考えられていました。それをくつがえしたのが、群馬県の岩宿で相沢忠洋が見つけた石器です。土器も田んぼもまだなかったころ、人はどこに住み、何を食べていたのでしょうか。',
     order: 681,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -76,6 +77,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '縄文時代のくらし①：縄文土器と竪穴住居',
     description: '約1万4千年前に始まった縄文時代の道具と住まいの特徴をおさえる',
+    intro: '縄文時代はおよそ1万年以上も続きました。約600年の弥生時代とくらべると、けたちがいの長さです。その長いあいだ、人々は縄目のついた土器で食べものを煮て、地面を掘りくぼめた竪穴住居に住んでいました。その暮らしを見ていきます。',
     order: 682,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -143,6 +145,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '縄文時代のくらし②：貝塚・土偶・まじない',
     description: '貝塚から分かること、土偶や抜歯・屈葬に表れた縄文人の考え方を学ぶ',
+    intro: '昔の人が捨てたごみの山が、今では宝の山になっています。貝塚に残された貝がらや魚の骨から、縄文の人が何を食べていたかが分かるからです。土偶や屈葬といった風習からは、当時の人の願いまで読み取れます。',
     order: 683,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -214,6 +217,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '三内丸山遺跡と縄文の交易',
     description: '青森県の三内丸山遺跡から分かる大規模な定住集落と、遠くはなれた地域との交流を学ぶ',
+    intro: '青森県の三内丸山遺跡からは、直径1mほどもある太い柱を6本立てた建物のあとが見つかりました。狩りをしながら移動する生活というイメージとはずいぶんちがいます。しかも新潟のひすいまで出土しました。縄文の意外な姿を見ていきます。',
     order: 684,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -269,6 +273,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '縄文と弥生のちがい総整理',
     description: '土器・道具・住まい・食料・社会の5つの観点で縄文時代と弥生時代を比較する',
+    intro: '入試で最も差がつくのが、縄文と弥生の取りちがえです。土器の色と厚さ、食べもの、住まい、道具、そして身分の差。5つの観点で並べて比べると、それぞれの時代の特徴がくっきり見えてきます。ここで一度まとめて整理しましょう。',
     order: 685,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -336,6 +341,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '稲作の伝来と弥生時代の始まり',
     description: '大陸から伝わった稲作が社会をどう変えたかを、順を追って理解する',
+    intro: '毎日食べているお米は、もともと日本にあったものではありません。大陸から朝鮮半島を経て、九州北部に伝わってきたものです。米づくりが始まると、たくわえができ、貧富の差が生まれ、争いまで起こりました。その流れを追います。',
     order: 686,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -393,6 +399,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '弥生時代の道具とむら：石包丁・高床倉庫・登呂遺跡',
     description: '米づくりの道具と、収かく・保存のしくみを具体的におさえる',
+    intro: '石包丁という道具は、名前は包丁でも切るのは食材ではありません。稲の穂の部分だけをつみとるための道具です。なぜ根元から刈らなかったのでしょうか。米づくりを支えた道具と、米をたくわえる倉庫のしくみを見ていきます。',
     order: 687,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -453,6 +460,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '金属器の伝来：青銅器と鉄器の使い分け',
     description: '青銅器（祭りの道具）と鉄器（実用の道具）のちがいを整理する',
+    intro: '同じころに伝わった青銅器と鉄器なのに、使われ方はまったくちがいました。青銅器は祭りの道具、鉄器は武器や農具です。銅鐸のような青銅器は、つくられたばかりのころ金色にかがやいていました。使い分けの理由を考えましょう。',
     order: 688,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -507,6 +515,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: 'むらからくにへ：環濠集落と吉野ヶ里遺跡',
     description: '争いの時代を映す環濠集落のつくりと、その代表である吉野ヶ里遺跡を学ぶ',
+    intro: '佐賀県の吉野ヶ里遺跡からは、首のない人骨や、矢じりのささった人骨が見つかっています。むらのまわりを深い濠と柵で囲んでいたのも、身を守るためでした。米づくりが始まった時代に何が起きていたのかを読み解きます。',
     order: 689,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -562,6 +571,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '中国の歴史書に見る倭：漢書地理志と金印',
     description: '『漢書』地理志・『後漢書』東夷伝から、当時の日本の姿を読み取る',
+    intro: '江戸時代、福岡県の志賀島で「漢委奴国王」と刻まれた金印が掘り出されました。日本にまだ文字の記録がなかったころのことは、中国の歴史書が教えてくれます。そこに書かれた内容から、当時の日本の姿をさぐっていきましょう。',
     order: 690,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -618,6 +628,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '邪馬台国と卑弥呼：魏志倭人伝が伝える国',
     description: '239年に魏へ使いを送った女王卑弥呼と、邪馬台国の位置をめぐる論争を学ぶ',
+    intro: '邪馬台国がどこにあったのか、実は今も分かっていません。九州説と近畿説が長く争っています。手がかりは『魏志』倭人伝という中国の書物だけ。239年に魏へ使いを送った女王・卑弥呼のすがたを、そこから読み取っていきます。',
     order: 691,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -682,6 +693,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '古墳の形と種類：前方後円墳とは何か',
     description: '古墳のかたちの種類と、巨大な墓がつくられた意味を学ぶ',
+    intro: '上から見ると鍵穴のような形をした前方後円墳は、日本でしか見られない独特の古墳です。なぜこれほど手間のかかる墓をつくったのでしょうか。古墳の形の種類と、その大きさが意味することを学んでいきましょう。',
     order: 692,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -742,6 +754,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '大仙古墳と巨大古墳：規模を数字でつかむ',
     description: '日本最大の大仙古墳をはじめとする巨大前方後円墳の規模と分布を学ぶ',
+    intro: '大阪府堺市にある大仙古墳は全長約486m。あまりに大きいので、地上に立つと森のある小山にしか見えません。2019年には「百舌鳥・古市古墳群」として世界文化遺産に登録されました。数字でその規模をつかみましょう。',
     order: 693,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -802,6 +815,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '埴輪と副葬品：古墳から分かること',
     description: '埴輪の種類とはたらき、副葬品の変化から当時の社会を読み取る',
+    intro: '土偶と埴輪を取りちがえる人はとても多いのですが、つくられた時代も役目もちがいます。埴輪は古墳の上や周りに並べられた素焼きの焼きものです。人・馬・家の形をした埴輪や副葬品から、当時の社会が見えてきます。',
     order: 694,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -867,6 +881,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '大和政権とワカタケル大王',
     description: '大和政権のしくみと、稲荷山・江田船山の鉄剣・鉄刀が示す勢力の広がりを学ぶ',
+    intro: '埼玉県と熊本県という遠くはなれた2つの古墳から、同じ「ワカタケル大王」の名を刻んだ鉄剣と鉄刀が見つかりました。これは何を意味するのでしょうか。大和政権の勢力がどこまで広がっていたのかを考えていきます。',
     order: 695,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -934,6 +949,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '渡来人と大陸文化の伝来',
     description: '渡来人がもたらした技術・文字・宗教と、仏教公伝の年代を学ぶ',
+    intro: '今使っている漢字も、もとは大陸から伝わったものです。朝鮮半島や中国から移り住んだ渡来人が、文字・技術・宗教をまとめて日本にもたらしました。仏教が公式に伝わったのは538年。何がどう変わったのかを見ていきましょう。',
     order: 696,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -996,6 +1012,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '聖徳太子の登場：593年、推古天皇の摂政に',
     description: '飛鳥時代の始まりと、聖徳太子が目ざした天皇中心の政治を学ぶ',
+    intro: '593年、聖徳太子は推古天皇の摂政になりました。天皇が国のトップのはずなのに、当時は蘇我氏などの豪族のほうが力を持っていたのです。天皇を中心とする国をつくろうとした太子の挑戦から、飛鳥時代が始まります。',
     order: 697,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1058,6 +1075,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '冠位十二階と十七条の憲法',
     description: '603年の冠位十二階、604年の十七条の憲法のねらいを正確につかむ',
+    intro: '家がらのよい人だけが役人になれる。そんな世の中を変えようとしたのが、603年の冠位十二階です。翌604年には十七条の憲法が定められました。ただしこれは、今の憲法のように国民の権利を守るものではありません。',
     order: 698,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1121,6 +1139,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '遣隋使と小野妹子：607年の国書',
     description: '対等な立場を求めた国書の意味と、遣隋使・遣唐使の区別を学ぶ',
+    intro: '607年、小野妹子が隋へ持っていった手紙には「日出づる処の天子」と書かれていました。相手は大国・隋の皇帝です。当然のように皇帝は腹を立てました。それでも聖徳太子がこう書いた理由を考えてみましょう。',
     order: 699,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1181,6 +1200,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '飛鳥文化：法隆寺と日本最初の仏教文化',
     description: '法隆寺をはじめとする飛鳥文化の特色と代表的な作品をおさえる',
+    intro: '奈良の法隆寺は、現存する世界最古の木造建築とされています。1400年ほど前の建物が、今も立っているのです。その造りや飾りには、インドや西アジアの影響まで見られます。日本で最初の仏教文化を見ていきましょう。',
     order: 700,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1242,6 +1262,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '大化の改新：645年、天皇中心の国づくりへ',
     description: '中大兄皇子と中臣鎌足による蘇我氏打倒と、公地公民の方針を学ぶ',
+    intro: '645年、宮中で蘇我入鹿がたおされました。ねらったのは中大兄皇子と中臣鎌足です。ここから「すべての土地と人は国のもの」という大きな方針転換が始まります。日本で最初の元号「大化」も、このときに生まれました。',
     order: 701,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1307,6 +1328,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '白村江の戦いと壬申の乱',
     description: '663年の大敗による国防の強化と、672年の内乱から天武天皇の政治までを学ぶ',
+    intro: '663年、日本は白村江で唐と新羅の連合軍に大敗しました。負けたあとに日本がしたのは、九州に城を築き、防人を置いて守りを固めることでした。外国での敗戦が、国内のしくみを大きく変えていく流れを追いましょう。',
     order: 702,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1383,6 +1405,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '大宝律令と律令国家のしくみ',
     description: '701年の大宝律令で完成した中央・地方の行政組織を整理する',
+    intro: '701年、大宝律令が完成し、日本は法律で動く国になりました。律は刑罰のきまり、令は政治のしくみのきまりです。中央には二官八省、地方には国・郡・里。今の役所のもとになったしくみを整理していきましょう。',
     order: 703,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1455,6 +1478,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '班田収授法と農民の税負担',
     description: '口分田の分け方と、租・調・庸・雑徭・兵役の負担を正確に整理する',
+    intro: '6歳になると国から田んぼが与えられ、死ぬと国に返す。これが班田収授法です。ただし、その代わりに重い負担がありました。租・調・庸に加え、九州を3年間守る防人まであります。農民の税負担を正確に整理しましょう。',
     order: 704,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1535,6 +1559,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '平城京と和同開珎：奈良時代の始まり',
     description: '710年の平城京遷都と、唐の長安をまねた都のつくり、貨幣の発行を学ぶ',
+    intro: '710年、都が奈良の平城京に移りました。碁盤の目のように区切られたつくりは、唐の都・長安をまねたものです。その少し前には和同開珎という貨幣もつくられました。新しい都のすがたと、そのねらいを見ていきましょう。',
     order: 705,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1594,6 +1619,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '聖武天皇と大仏：仏教の力で国を守る',
     description: '国分寺建立の詔（741年）と大仏開眼（752年）の背景とねらいを学ぶ',
+    intro: '東大寺の大仏の高さは約15m。これほど巨大なものを、なぜ国をあげてつくったのでしょうか。当時はききんや病気が広がり、社会は不安でいっぱいでした。仏教の力で国を守ろうとした聖武天皇の考えを学んでいきます。',
     order: 706,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1660,6 +1686,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '墾田永年私財法と荘園の始まり',
     description: '公地公民がくずれていく流れを、三世一身法と墾田永年私財法で理解する',
+    intro: '「新しく開いた土地は、ずっと自分のものにしてよい」。743年、朝廷はこう認めました。すべての土地は国のものという公地公民の原則を、自分からくずしたことになります。なぜそんな決定をしたのかを考えていきましょう。',
     order: 707,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1727,6 +1754,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '天平文化：正倉院・歴史書・万葉集',
     description: '国際色ゆたかな天平文化の代表作を、書物と美術に分けて整理する',
+    intro: '奈良の正倉院には、遠くペルシアから伝わったガラスの器が今も残っています。シルクロードの終着点が日本だったことを示す宝物です。古事記・日本書紀・万葉集も生まれたこの時代の文化を、書物と美術に分けて見ていきます。',
     order: 708,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1800,6 +1828,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '桓武天皇と平安京遷都（794年）',
     description: '長岡京・平安京への遷都の理由と、桓武天皇の政治改革を学ぶ',
+    intro: '794年に移された平安京は、そこから1000年以上も都であり続けました。桓武天皇がわざわざ都を移したのは、力を強めた奈良の大寺院から政治を切りはなすためです。新しい都で何を変えようとしたのかを見ていきましょう。',
     order: 709,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1870,6 +1899,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '坂上田村麻呂と蝦夷の平定',
     description: '797年に征夷大将軍となった坂上田村麻呂と、東北経営の実際を学ぶ',
+    intro: '征夷大将軍と聞くと源頼朝や徳川家康を思いうかべますが、もとは東北の蝦夷を征討するための臨時の職でした。797年にその職についたのが坂上田村麻呂です。朝廷と東北に住む人々との関わりを見ていきましょう。',
     order: 710,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1925,6 +1955,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '最澄と空海：新しい仏教の登場',
     description: '天台宗と真言宗のちがいを、人物・寺・山でセットにして覚える',
+    intro: '最澄は比叡山、空海は高野山。名前も宗派も似ていて混同しやすい2人ですが、セットで覚えれば逆に強い武器になります。804年、2人はともに遣唐使の船で唐へわたりました。人物・宗派・寺・山を結びつけて整理しましょう。',
     order: 711,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1985,6 +2016,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '遣唐使の停止（894年）と菅原道真',
     description: '約260年続いた遣唐使が停止された理由と、その後の影響を学ぶ',
+    intro: '約260年続いた遣唐使は、894年に停止されました。それを提案したのは、遣唐大使に任じられた菅原道真本人です。行く役目をもらった人が、なぜ中止を願い出たのでしょうか。その理由と、その後に育った文化を見ていきます。',
     order: 712,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2046,6 +2078,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '摂関政治のしくみ：なぜ藤原氏が力を持てたのか',
     description: '外戚という言葉の意味と、摂政・関白の役割を正確につかむ',
+    intro: '藤原氏はなぜ、天皇でもないのに政治を動かせたのでしょうか。答えは「外戚」ということばにあります。娘を天皇のきさきにし、生まれた子を次の天皇に立てて、その祖父になるのです。摂政と関白のしくみを正確につかみましょう。',
     order: 713,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2119,6 +2152,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '藤原道長と頼通：摂関政治の全盛',
     description: '1016年の道長の摂政就任から、頼通の平等院鳳凰堂までを追う',
+    intro: '「この世をば わが世とぞ思ふ 望月の」。満月に自分をたとえた歌をよんだのが藤原道長です。4人の娘を天皇のきさきにし、権力の頂点に立ちました。しかしその栄華は長くは続きません。全盛とおとろえまでを追いましょう。',
     order: 714,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2187,6 +2221,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '国風文化：かな文字と女性の文学',
     description: '遣唐使停止後に育った日本風の文化を、文学・建築・美術で整理する',
+    intro: '今使っているひらがなは、この時代に生まれました。中国から来た漢字だけでは、日本語の細やかな気持ちを書き表しにくかったからです。『源氏物語』も『枕草子』も、かな文字があったから書かれました。日本風の文化を見ていきます。',
     order: 715,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2260,6 +2295,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '浄土信仰と末法思想',
     description: '不安な世の中で広まった阿弥陀信仰と、その代表的な建築・彫刻を学ぶ',
+    intro: '1052年から世の中が乱れる。当時の人はそう信じていました。末法思想です。地震やききん、争いが続く不安の中で、人々は阿弥陀仏にすがりました。平等院鳳凰堂が建てられた背景には、そうした願いがあります。',
     order: 716,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2318,6 +2354,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '武士のおこりと承平・天慶の乱',
     description: '武士がどのように生まれ、平将門・藤原純友の乱で何が示されたかを学ぶ',
+    intro: '武士はある日とつぜん現れたわけではありません。地方の有力者が自分の土地を守るために武装したのが始まりです。関東で反乱を起こした平将門、瀬戸内海で反乱を起こした藤原純友。この乱をしずめたのも、また武士でした。',
     order: 717,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2385,6 +2422,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '院政と平氏政権：武士が政治の中心へ',
     description: '1086年の院政開始から、保元・平治の乱を経て平氏が滅びるまでを追う',
+    intro: '天皇の位をゆずったのに、政治の実権は手放さない。1086年に白河上皇が始めた院政は、そういうしくみでした。やがて保元・平治の乱を経て、平清盛が武士として初めて太政大臣になります。武士の世へ向かう流れを追います。',
     order: 718,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2462,6 +2500,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '入試実戦①：原始・古代の年号と時代順の総整理',
     description: '並べかえ問題に対応するため、基本年号と時代の順序を一気に確認する',
+    intro: '593、645、710、794、894。この5つの年号がすらすら出てくれば、並べかえ問題はほとんど落としません。年号はばらばらに覚えるのではなく、時代の順序という一本の線の上に並べ直すのがコツです。ここで総整理しましょう。',
     order: 719,
     studyPeriod: '小6前半',
     targetLevel: 'nyushi',
@@ -2557,6 +2596,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '入試実戦②：まちがえやすい人物・文化の総点検',
     description: '入試で最も差がつく混同ポイントを、対比表の形で最終確認する',
+    intro: '聖徳太子と聖武天皇、遣隋使と遣唐使、天平文化と国風文化、土偶と埴輪。名前や中身が似ているものほど、入試では容赦なく出されます。差がつくのはここです。対比表の形で、まぎらわしいものを一気に片づけましょう。',
     order: 720,
     studyPeriod: '小6前半',
     targetLevel: 'nyushi',
