@@ -218,15 +218,17 @@ export default function LandingPage() {
                 <React.Fragment key={s.label}>
                   {i > 0 && <View style={styles.heroStatDiv} />}
                   <View style={styles.heroStat}>
-                    <Text
-                      style={styles.heroStatNum}
-                      numberOfLines={1}
-                      adjustsFontSizeToFit
-                      minimumFontScale={0.55}
-                    >
-                      {s.num}<Text style={styles.heroStatUnit}>{s.unit}</Text>
+                    {/* adjustsFontSizeToFit は Web では効かず「13,0…」と切れてしまうため、
+                        単位を下段に分けて、縮小に頼らず収まる形にしている。 */}
+                    <Text style={styles.heroStatNum} numberOfLines={1}>
+                      {s.num}
                     </Text>
-                    <Text style={styles.heroStatLabel}>{s.label}</Text>
+                    <Text style={styles.heroStatUnit} numberOfLines={1}>
+                      {s.unit}
+                    </Text>
+                    <Text style={styles.heroStatLabel} numberOfLines={1}>
+                      {s.label}
+                    </Text>
                   </View>
                 </React.Fragment>
               ))}
@@ -619,19 +621,18 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
     paddingHorizontal: 8,
   },
-  heroStat: { flex: 1, alignItems: 'center' },
+  heroStat: { flex: 1, alignItems: 'center', paddingHorizontal: 2 },
   heroStatNum: {
-    fontSize: 26,
+    fontSize: 20,
     fontWeight: '900',
     color: C.gold,
     includeFontPadding: false,
-    // 4分割の狭い列でも「13,000問+」のような長い値がはみ出さないよう、
-    // 幅いっぱいに広げた上で adjustsFontSizeToFit に縮小させる。
+    letterSpacing: -0.4,
     width: '100%',
     textAlign: 'center',
   },
-  heroStatUnit: { fontSize: 13, fontWeight: '700', color: C.gold },
-  heroStatLabel: { fontSize: 12, color: C.muted, fontWeight: '600', marginTop: 4 },
+  heroStatUnit: { fontSize: 11, fontWeight: '700', color: C.gold, marginTop: 1 },
+  heroStatLabel: { fontSize: 11, color: C.muted, fontWeight: '600', marginTop: 5 },
   heroStatDiv: {
     width: 1,
     backgroundColor: C.divider,

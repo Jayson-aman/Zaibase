@@ -57,11 +57,33 @@ function useSize() {
 // ---------- 座標平面 ----------
 
 function niceStep(range: number): number {
-  const raw = range / 8;
-  const pow = Math.pow(10, Math.floor(Math.log10(raw)));
+  return niceStepFor(range, 8);
+}
+
+// 目盛りの本数を指定して「きりのよい」間隔を求める。
+// 本数が多すぎると軸ラベルが密集して読めなくなるため、
+// 棒グラフなど値ラベルを別に出す図では少なめ（5本程度）にする。
+function niceStepFor(range: number, targetTicks: number): number {
+  const raw = range / Math.max(1, targetTicks);
+  const pow = Math.pow(10, Math.floor(Math.log10(raw || 1)));
   const n = raw / pow;
   const step = n >= 5 ? 5 : n >= 2 ? 2 : 1;
   return step * pow;
+}
+
+// 目盛り値の表示桁数。刻みが小数のときに 0 と丸められてしまうのを防ぐ。
+function tickText(v: number, step: number): string {
+  const d = step >= 1 ? 0 : Math.min(3, Math.ceil(-Math.log10(step)));
+  return v.toFixed(d);
+}
+
+// SVG の描画枠からラベルがはみ出して切れるのを防ぐ。
+// 端に寄った文字は anchor を start/end に切り替えて内側へ収める。
+function clampLabelX(x: number, anchor: 'start' | 'middle' | 'end') {
+  const M = 3;
+  if (x < 34) return { x: Math.max(M, x), anchor: 'start' as const };
+  if (x > VBW - 34) return { x: Math.min(VBW - M, x), anchor: 'end' as const };
+  return { x, anchor };
 }
 
 function CoordinateFig({ fig, uid }: { fig: CoordFigure; uid: string }) {
@@ -664,28 +686,41 @@ function LineChartFig({ fig }: { fig: LineChartFigure }) {
 // ---------- 棒グラフ・ヒストグラム ----------
 
 function BarChartFig({ fig }: { fig: BarChartFigure }) {
-  const area: Area = { x0: 40, y0: 16, w: VBW - 56, h: VBH - 54 };
-  const yMax = fig.yMax ?? ((Math.max(...fig.bars.map((b) => b.value)) * 1.15) || 1);
+  const area: Area = { x0: 40, y0: 24, w: VBW - 56, h: VBH - 62 };
+  const yMax = fig.yMax ?? ((Math.max(...fig.bars.map((b) => b.value)) * 1.18) || 1);
   const n = fig.bars.length;
   const slot = area.w / n;
   const gap = fig.histogram ? 0 : slot * 0.28;
   const bw = slot - gap;
   const py = (v: number) => area.y0 + area.h - (v / yMax) * area.h;
   const els: React.ReactNode[] = [];
-  const sy = niceStep(yMax);
+  // 目盛りは5本前後に抑える。棒の上に実数を出すので、細かい目盛りは不要。
+  const sy = niceStepFor(yMax, 5);
   for (let y = 0; y <= yMax + 1e-9; y += sy) {
     els.push(<Line key={`gy${y}`} x1={area.x0} y1={py(y)} x2={area.x0 + area.w} y2={py(y)} stroke={GRID} strokeWidth={1} />);
-    els.push(<SvgText key={`gyl${y}`} x={area.x0 - 4} y={py(y) + 3} fontSize={9} fill={AXIS} textAnchor="end">{+y.toFixed(0)}</SvgText>);
+    els.push(<SvgText key={`gyl${y}`} x={area.x0 - 4} y={py(y) + 3} fontSize={9} fill={AXIS} textAnchor="end">{tickText(y, sy)}</SvgText>);
   }
   els.push(<Line key="xax" x1={area.x0} y1={area.y0 + area.h} x2={area.x0 + area.w} y2={area.y0 + area.h} stroke={AXIS} strokeWidth={1.6} />);
   els.push(<Line key="yax" x1={area.x0} y1={area.y0} x2={area.x0} y2={area.y0 + area.h} stroke={AXIS} strokeWidth={1.6} />);
   fig.bars.forEach((b, i) => {
     const x = area.x0 + slot * i + gap / 2;
     const color = b.color ?? PALETTE[i % PALETTE.length];
-    els.push(<Rect key={`b${i}`} x={x} y={py(b.value)} width={bw} height={area.y0 + area.h - py(b.value)} fill={color} opacity={0.82} stroke={fig.histogram ? '#fff' : color} strokeWidth={fig.histogram ? 1 : 0} />);
-    els.push(<SvgText key={`bl${i}`} x={x + bw / 2} y={area.y0 + area.h + 12} fontSize={9} fill={AXIS} textAnchor="middle">{b.label}</SvgText>);
+    // 桁の違う値が並ぶと小さい棒が消えてしまうので、最低限の高さを残す
+    const rawH = area.y0 + area.h - py(b.value);
+    const h = b.value > 0 ? Math.max(2, rawH) : rawH;
+    const top = area.y0 + area.h - h;
+    els.push(<Rect key={`b${i}`} x={x} y={top} width={bw} height={h} fill={color} opacity={0.82} stroke={fig.histogram ? '#fff' : color} strokeWidth={fig.histogram ? 1 : 0} />);
+    // 棒の上に実数を出す。目盛りを読まなくても値が分かるようにする。
+    if (!fig.histogram) {
+      els.push(
+        <SvgText key={`bv${i}`} x={x + bw / 2} y={top - 4} fontSize={9.5} fill={INK} textAnchor="middle" fontWeight="bold">
+          {b.value}
+        </SvgText>,
+      );
+    }
+    els.push(<SvgText key={`bl${i}`} x={x + bw / 2} y={area.y0 + area.h + 13} fontSize={9} fill={AXIS} textAnchor="middle">{b.label}</SvgText>);
   });
-  if (fig.yLabel) els.push(<SvgText key="ylab" x={12} y={area.y0 + area.h / 2} fontSize={10} fill={INK} textAnchor="middle" transform={`rotate(-90, 12, ${area.y0 + area.h / 2})`}>{fig.yLabel}</SvgText>);
+  if (fig.yLabel) els.push(<SvgText key="ylab" x={11} y={area.y0 + area.h / 2} fontSize={9.5} fill={INK} textAnchor="middle" transform={`rotate(-90, 11, ${area.y0 + area.h / 2})`}>{fig.yLabel}</SvgText>);
   return els;
 }
 
@@ -837,15 +872,32 @@ function JapanMapFig({ fig }: { fig: JapanMapFigure }) {
       ))}
     </G>,
   );
+  // ラベルどうしが重なると読めなくなるので、既に置いた位置と近い場合は上へ逃がす。
+  const placed: { x: number; y: number; half: number }[] = [];
   fig.markers?.forEach((m, i) => {
     const x = tx(m.x);
     const y = ty(m.y);
     els.push(<SvgCircle key={`mk${i}`} cx={x} cy={y} r={3.5} fill="#E11D48" stroke="#FFFFFF" strokeWidth={1} />);
+
+    const half = (m.label?.length ?? 0) * 2.8; // だいたいの文字幅の半分
+    let ly = y - 8;
+    for (let guard = 0; guard < 8; guard++) {
+      const hit = placed.some((p) => Math.abs(p.y - ly) < 11 && Math.abs(p.x - x) < p.half + half + 4);
+      if (!hit) break;
+      ly -= 12;
+    }
+    if (ly < 10) ly = y + 16; // 上に逃げきれないときは下側へ
+    const c = clampLabelX(x, 'middle');
+    placed.push({ x: c.x, y: ly, half });
     els.push(
-      <SvgText key={`mkl${i}`} x={x} y={y - 7} fontSize={10} fill={INK} textAnchor="middle" fontWeight="bold">
+      <SvgText key={`mkl${i}`} x={c.x} y={ly} fontSize={10} fill={INK} textAnchor={c.anchor} fontWeight="bold">
         {m.label}
       </SvgText>,
     );
+    // 逃がした分だけ点から離れるので、引き出し線でどの点のラベルかを示す
+    if (Math.abs(ly - (y - 8)) > 2) {
+      els.push(<Line key={`mkc${i}`} x1={x} y1={y - 4} x2={c.x} y2={ly + 3} stroke={AXIS} strokeWidth={0.8} opacity={0.6} />);
+    }
   });
   return els;
 }
@@ -891,9 +943,16 @@ function bioLabel(
   anchor: 'start' | 'middle' | 'end' = 'start',
 ): React.ReactNode[] {
   const shown = hide.has(key) ? '？' : text;
+  const rawX = lx2 + (anchor === 'end' ? -2 : anchor === 'middle' ? 0 : 2);
+  // 端に寄ったラベルが枠外で切れないように内側へ寄せる
+  const c = clampLabelX(rawX, anchor);
   return [
     <Line key={`${key}_ld`} x1={lx1} y1={ly1} x2={lx2} y2={ly2} stroke={INK} strokeWidth={1} />,
-    <SvgText key={`${key}_lt`} x={lx2 + (anchor === 'end' ? -2 : anchor === 'middle' ? 0 : 2)} y={ly2 + 3} fontSize={10} fill={INK} textAnchor={anchor}>
+    // 図の線の上に文字が乗っても読めるように、白フチを敷く
+    <SvgText key={`${key}_lb`} x={c.x} y={ly2 + 3} fontSize={10} fill="#FFFFFF" stroke="#FFFFFF" strokeWidth={3} textAnchor={c.anchor}>
+      {shown}
+    </SvgText>,
+    <SvgText key={`${key}_lt`} x={c.x} y={ly2 + 3} fontSize={10} fill={INK} textAnchor={c.anchor}>
       {shown}
     </SvgText>,
   ];
@@ -1229,10 +1288,19 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
 }
 
 const styles = StyleSheet.create({
+  // 図は本文から独立した「図版」として、白地＋細い枠で囲って輪郭を出す。
+  // 枠がないと図が本文の中に溶けて、どこからどこまでが図か分かりにくい。
   wrap: {
     alignItems: 'center',
-    marginTop: 12,
-    marginBottom: 4,
+    marginTop: 10,
+    marginBottom: 12,
+    paddingTop: 8,
+    paddingBottom: 10,
+    backgroundColor: '#FFFFFF',
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
+    borderRadius: 8,
+    overflow: 'hidden',
   },
   canvas: {
     alignSelf: 'center',
@@ -1241,17 +1309,19 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
   },
   caption: {
-    fontSize: 12,
-    color: '#64748B',
+    fontSize: 11.5,
+    color: '#475569',
     marginTop: 6,
     textAlign: 'center',
+    lineHeight: 17,
     paddingHorizontal: 12,
   },
   replayHint: {
-    fontSize: 11,
+    fontSize: 10.5,
     color: '#0EA5E9',
     marginTop: 4,
-    fontWeight: '600',
+    fontWeight: '700',
+    letterSpacing: 0.2,
   },
   progressTrack: {
     height: 3,
