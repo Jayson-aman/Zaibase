@@ -15,6 +15,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '音読みと訓読み①：二つの読み方のちがい',
     description: '中国から来た音読みと、日本語の意味をあてた訓読みを区別できるようにする',
+    intro: '「山」を「やま」と読むか「サン」と読むか。ふだんは何となく決めていますが、なぜ一つの漢字に二つの読み方があるのでしょう。「サン」だけ聞いても意味は浮かびませんが、「やま」なら絵が浮かびます。この差が、二つの読み方を見分ける手がかりになります。',
     order: 501,
     studyPeriod: '小4',
     keyPoints: [
@@ -95,6 +96,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '音読みと訓読み②：熟語の四つの読み方',
     description: '音音・訓訓・重箱読み・湯桶読みの四種類を、代表例とともに区別する',
+    intro: '「消印」は「けしいん」、「番組」は「ばんぐみ」。同じ二字熟語なのに、片方は訓＋音、もう片方は音＋訓です。この読み方の混ざり方には名前があり、「重箱」「湯桶」という身近な入れ物の名がついています。四つの型を知ると、初めて見る熟語の読みも予想できます。',
     order: 502,
     studyPeriod: '小4',
     keyPoints: [
@@ -177,6 +179,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '音読みと訓読み③：一字が複数の音読みを持つ場合',
     description: '行・生・明・人・大などの複数の音読みを、熟語ごとに正しく使い分ける',
+    intro: '「行」という字は、「銀行」ではコウ、「行列」ではギョウ、「行灯」ではアンと読みます。同じ字なのに、熟語が変わると読みも変わるのです。読みの問題で落とすのは、たいていこうした複数の音読みを持つ字です。熟語ごとにセットで覚えていきましょう。',
     order: 503,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -261,6 +264,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '音読みと訓読み④：一字が複数の訓読みを持つ場合',
     description: '生・下・細・苦・冷など、訓読みを複数持つ漢字を送りがなで読み分ける',
+    intro: '「生」という字は、生きる・生まれる・生える・生の魚と、訓読みだけで何通りもあります。読み分けの手がかりは送りがなです。「生きる」と「生える」は送る字がちがうから区別できる。送りがなが読みを決めているという見方を身につけます。',
     order: 504,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -342,6 +346,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '音読みと訓読み⑤：文の中で読みを決める',
     description: '同じ表記でも文脈で読みが変わる語を、前後の意味から判断する練習',
+    intro: '「一日」は「ついたち」とも「いちにち」とも読めます。「四月一日」なら前者、「今日は一日中いそがしい」なら後者です。同じ表記でも、前後の言葉が読みを決めています。文の意味から読みを選ぶ練習をしていきましょう。',
     order: 505,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -430,6 +435,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '部首①：七つの位置による分類',
     description: 'へん・つくり・かんむり・あし・たれ・にょう・かまえの位置と代表例を覚える',
+    intro: '「花」の部首はどこにあるでしょう。「開」の部首はどうでしょう。部首は左側にあるとはかぎらず、上や下、外側をぐるりと囲んでいることもあります。位置ごとに「へん」「かんむり」「かまえ」と名前がついていて、辞書を引くときの入り口になります。',
     order: 506,
     studyPeriod: '小4',
     keyPoints: [
@@ -527,6 +533,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '部首②：主なへん・つくりの意味',
     description: 'さんずい・りっしんべん・のぎへん・こざとへん／おおざとなどの意味を知り、漢字の意味を推測する',
+    intro: '「海」「河」「池」「湖」に共通しているのはさんずいです。どれも水にかかわる字ですね。部首はかざりではなく、意味のグループを示す印なのです。だから知らない漢字が出てきても、部首を見れば「たぶん水に関係する」と見当がつきます。',
     order: 507,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -618,6 +625,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '部首③：かんむり・あし・たれ・にょう・かまえ',
     description: '左右以外の位置にある部首を、意味と代表的な漢字でまとめて覚える',
+    intro: '「安」のうかんむりは家の屋根の形、「熱」の下にある四つの点は火を表します。部首は左右だけでなく、上・下・外にもかくれています。位置が変わると見つけにくくなり、部首の問題で落とす原因になります。左右以外をまとめて確認しましょう。',
     order: 508,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -710,6 +718,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '漢字の成り立ち：象形・指事・会意・形声',
     description: '漢字ができた四つの原理を、代表的な漢字とともに区別できるようにする',
+    intro: '「山」「川」は、ものの形をなぞって生まれた字です。では「上」「下」はどうでしょう。なぞるべき形がありません。漢字の作り方には四つの原理があり、それを知ると「なぜこの部分がこの字にあるのか」が見えてきます。',
     order: 509,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -807,6 +816,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '部首④：まちがえやすい部首と、部首からの意味推測',
     description: '目立つ部分にだまされない部首の見分け方と、部首を手がかりに意味を推測する方法',
+    intro: '「聞」の部首は門ではなく耳、「病」の部首はやまいだれです。目立つ部分につられると、部首をまちがえます。部首は「意味を担っている部分」なので、その字が何を表すかを考えれば答えが決まります。だまされやすい字を集めて確認しましょう。',
     order: 510,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -896,6 +906,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '同音異義語①：見分ける三つの方法',
     description: '読みが同じで意味のちがう熟語を、漢字一字の意味から選び分ける基本を学ぶ',
+    intro: '「三人イガイは欠席」と「イガイな結果」。同じ「イガイ」でも、書く漢字はちがいます。読みが同じ熟語は、漢字一字ずつの意味に分けてみると差が見えてきます。なんとなくで選ばず、意味から選び分ける方法を身につけましょう。',
     order: 511,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -981,6 +992,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '同音異義語②：ホショウとタイショウ',
     description: '保証・保障・補償／対象・対照・対称を、漢字一字の意味から確実に使い分ける',
+    intro: '「品質をホショウする」と「安全をホショウする」では、書く漢字がちがいます。保証・保障・補償は、どれも「まもる」感じがしますが、守っている対象が別なのです。一字の意味に分けて、どの場面でどれを使うのかをはっきりさせます。',
     order: 512,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -1069,6 +1081,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '同音異義語③：ツイキュウとカイホウ',
     description: '追求・追及・追究／開放・解放・快方・介抱を文脈で選び分ける',
+    intro: '「責任をツイキュウする」と「利益をツイキュウする」。同じ読みでも、追及と追求では向かう先がまるでちがいます。文の中でだれが何をしているのかを読み取れば、書くべき漢字は自然に決まります。文脈から選ぶ力をつけましょう。',
     order: 513,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -1158,6 +1171,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '同音異義語④：イガイ・イシ・カテイ・キカン',
     description: '以外／意外、意思／意志、家庭／仮定／過程／課程、期間／機関／器官／気管を整理する',
+    intro: '「キカン」と聞いて、いくつの漢字が浮かびますか。期間・機関・器官・気管——どれも小学生の文章に出てくる言葉です。読みが同じ熟語が四つも並ぶと、たよりになるのは文脈だけ。組ごとに整理して覚えていきます。',
     order: 514,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -1245,6 +1259,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '同音異義語⑤：カンシン・シュウシュウ・ホウフ',
     description: '関心・感心・歓心・寒心／収集・収拾／豊富・抱負など、意味の差が大きい組を覚える',
+    intro: '「カンシンがある」と「カンシンな子ども」。前者は関心、後者は感心で、意味はまるで別ものです。同音異義語には、こうして一字ちがうだけで文の意味が変わってしまうものがあります。差の大きい組から確実にしていきましょう。',
     order: 515,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -1335,6 +1350,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '同音異義語⑥：総合演習と文脈判断',
     description: 'カンショウ・ソウゾウ・コウセイ・ヘイコウなど頻出語で、文脈から選ぶ力を仕上げる',
+    intro: '「カンショウ」を漢字で書いてください、と言われて手が止まったら要注意です。鑑賞・観賞・干渉・感傷と、候補がいくつも浮かびます。ここまで学んだ「一字の意味に分ける」やり方を、入試で頻出する語を使って総仕上げします。',
     order: 516,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1433,6 +1449,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '同訓異字①：熟語に直して見分ける',
     description: '訓読みが同じ漢字を、その字を使った熟語を思い出して選び分ける方法',
+    intro: '「あたたかいスープ」と「あたたかい日ざし」。どちらも同じ読みですが、書く漢字は温と暖でちがいます。迷ったときは、その字を使った熟語（温度・暖房）を思い出すと決まります。この一手を習慣にしていきましょう。',
     order: 517,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -1519,6 +1536,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '同訓異字②：なおす・みる・きく',
     description: '治す／直す、見る／診る／観る、聞く／聴く／効くの使い分け',
+    intro: '「病気をなおす」と「まちがいをなおす」。前者は治す、後者は直すです。医者は病気を「診る」、音楽は「聴く」——ふだんひらがなで済ませている言葉ほど、漢字にしたとたんに意味の差がはっきり出てきます。書き分けの理由から見ていきましょう。',
     order: 518,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -1604,6 +1622,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '同訓異字③：はかる',
     description: '計る・測る・量る・図る・諮る・謀るを、何をはかるかで正確に書き分ける',
+    intro: '体重をはかる、時間をはかる、面積をはかる。同じ「はかる」でも、量る・計る・測ると書き分けます。何をはかっているのかで漢字が決まるので、使う道具を思いうかべると迷いません。六つの「はかる」を整理していきます。',
     order: 519,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1698,6 +1717,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '同訓異字④：つとめる・おさめる',
     description: '努める・勤める・務める／収める・納める・治める・修めるを熟語で見分ける',
+    intro: '「会社につとめる」「司会をつとめる」「復旧につとめる」。三つとも別の漢字を使います。「おさめる」にいたっては四つもあります。数が多くて苦しい単元ですが、勤務・任務・努力と熟語に直せば、一つずつ決まっていきます。',
     order: 520,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1783,6 +1803,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '同訓異字⑤：あつい・かたい・たつ',
     description: '暑い／熱い／厚い、堅い／固い／硬い、建つ／立つ／断つ／絶つ／裁つを整理する',
+    intro: '「あついお茶」「あつい本」「あつい夏」。三つとも別の漢字です。「かたい」も堅い・固い・硬いと三通りあります。日常でよく使う言葉ほど書き分けがむずかしいのは、話しているときは区別しなくても通じてしまうからです。',
     order: 521,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1858,6 +1879,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '同訓異字⑥：あらわす・のぞむ・さす／総合演習',
     description: '表す・現す・著す、望む・臨む、差す・指す・刺す・挿すなどを仕上げる',
+    intro: '「本をあらわす」と聞いて、「著す」が浮かびますか。表す・現す・著すは、どれも読みは同じですが使う場面がちがいます。ここまで学んだ同訓異字を総仕上げして、書き取りで確実に点を取れるようにしていきましょう。',
     order: 522,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -1943,6 +1965,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '送りがな①：活用語尾を送るという原則',
     description: '動詞・形容詞の送りがなの基本原則と、副詞の送りがなを学ぶ',
+    intro: '「動く」を「動ごく」と書いたらまちがいです。では、どこから送ればよいのでしょうか。送りがなには「形が変わる部分を送る」という原則があります。原則を一つ知っておくだけで、覚えなければならない量がぐんと減ります。',
     order: 523,
     studyPeriod: '小5前半',
     keyPoints: [
@@ -2037,6 +2060,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '送りがな②：形容詞・形容動詞',
     description: '「〜しい」「〜かい」「〜らかだ」「〜やかだ」など、まちがえやすい語尾を整理する',
+    intro: '「新らしい」ではなく「新しい」、「短かい」ではなく「短い」。よく見かける誤りですが、どちらが正しいか自信を持って言えるでしょうか。形容詞・形容動詞は語尾がまぎらわしく、感覚だけで書いていると確実に落とします。',
     order: 524,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -2131,6 +2155,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '送りがな③：派生語・複合語',
     description: 'もとの語の送りがなを引きつぐ考え方と、複合語での省略のきまり',
+    intro: '「終わる」は「わる」を送るのに、「終わり」はどうでしょう。「受付」に送りがなが要らないのはなぜでしょう。もとの言葉から作られた語や、二つの語がくっついてできた語では、送りがなの付け方に別のきまりがはたらいています。',
     order: 525,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -2222,6 +2247,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '送りがな④：まちがえやすい語の総点検',
     description: '入試で問われる送りがなを一覧で確認し、誤答パターンをつぶす',
+    intro: '「必ず」「少し」「幸せ」「勇ましい」。どれも入試で問われる送りがなです。人がまちがえる語はだいたい決まっているので、あらかじめ集めて確認しておけば失点は防げます。誤答のパターンごとに点検していきましょう。',
     order: 526,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2317,6 +2343,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '熟字訓①：熟字訓とは何か／日付の読み',
     description: '一字ずつに分けられない特別な読みのしくみと、日付の特別な読みを覚える',
+    intro: '「二十日」を「はつか」と読みますが、この読みは二にも十にも日にも当てはめられません。一字ずつに分けられない、特別な読みなのです。日付にはこうした読みが集まっています。まずはそのしくみから確かめていきます。',
     order: 527,
     studyPeriod: '小4',
     keyPoints: [
@@ -2410,6 +2437,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '熟字訓②：季節・自然の特別な読み',
     description: '五月雨・時雨・梅雨・吹雪・雪崩など、天気と季節にかかわる熟字訓を覚える',
+    intro: '「五月雨」を「ごがつあめ」と読んだら不正解、正しくは「さみだれ」です。「時雨」「梅雨」「雪崩」も、字を見ただけでは読めません。天気や季節を表す言葉には、こうした特別な読みが数多く集まっています。読めるかどうかで差がつくところです。',
     order: 528,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -2504,6 +2532,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '熟字訓③：行事・生活の特別な読み',
     description: '七夕・相撲・浴衣・土産・名残など、暮らしの中の熟字訓を覚える',
+    intro: '「七夕」「浴衣」「土産」。読めるけれど、なぜその読みになるのかは説明できない——それでよいのが熟字訓です。暮らしの中に自然に入りこんでいる言葉なので、書き取りよりも読みの問題として出されます。よく出るものから確実にしていきましょう。',
     order: 529,
     studyPeriod: '小5後半',
     keyPoints: [
@@ -2593,6 +2622,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '熟字訓④：人・体・数にかかわる特別な読み',
     description: '伯父と叔父の使い分け、素人・玄人・海女など人にかかわる熟字訓を整理する',
+    intro: '父の兄は「伯父」、父の弟は「叔父」。どちらも「おじ」と読みますが、書く字がちがいます。人にかかわる特別な読みには、こうして知らないと選べないものがあります。「素人」「海女」もその仲間です。意味とセットで覚えていきましょう。',
     order: 530,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2685,6 +2715,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '書き誤り①：形の似た漢字',
     description: '複と復、末と未、綱と網など、形が似ていて混同しやすい漢字を意味で区別する',
+    intro: '「複雑」と「復習」。右側は同じ形なのに、左のへんがちがいます。「末」と「未」にいたっては、長い横棒が上にあるか下にあるかだけの差です。似た形の漢字は、書くときに手が勝手に別の字を選んでしまいます。意味とセットで区別しましょう。',
     order: 531,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2780,6 +2811,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '書き誤り②：点や画の有無',
     description: '専と博、候と侯など、点や一画の有無で正誤が分かれる漢字を確認する',
+    intro: '「専」に点を打つか打たないか。「博」には点があります。たった一点の有無で、正解と不正解が分かれてしまいます。細かすぎると思うかもしれませんが、採点者はそこを見ています。あぶない字を先に知っておきましょう。',
     order: 532,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2871,6 +2903,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '書き誤り③：四字熟語・慣用表現の誤字',
     description: '絶体絶命・異口同音・五里霧中など、同音でまちがえやすい四字熟語を正す',
+    intro: '「絶体絶命」を「絶対絶命」と書いていませんか。読みが同じなので、意味を知らないかぎり自分では気づけません。四字熟語の書き取りは、この同音の別字で落とす人がとても多い分野です。危ない語を先回りして確認します。',
     order: 533,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -2965,6 +2998,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '書き誤り④：まぎらわしいへんの書き分け',
     description: 'しめすへんところもへん、にすいとさんずいなど、へんの取りちがえを防ぐ',
+    intro: '「複」はころもへん、「福」はしめすへん。衣に関係するか、神にかかわるかのちがいです。にすいとさんずいも、点が二つか三つかで別の字になります。へんが表す意味を知っておけば、書き分けで迷うことはありません。',
     order: 534,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -3055,6 +3089,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '書き誤り⑤：筆順と画数',
     description: '筆順の原則と、右と左のちがい、まちがえやすい画数を確認する',
+    intro: '「右」と「左」は、書き始める場所がちがうと知っていましたか。見た目はよく似ているのに、筆順が別なのです。筆順は整った字を書くための道すじであり、画数の数えまちがいを防ぐことにもつながります。まずは筆順の原則から確認していきます。',
     order: 535,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -3165,6 +3200,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '入試演習①：説明文でよく出る抽象語',
     description: '抽象・普遍・客観・矛盾など、論説文で頻出する語を意味とともに書けるようにする',
+    intro: '説明文に「抽象的な議論」と出てきて、意味が浮かばずに止まってしまったことはありませんか。読解でつまずく原因の多くは、内容そのものではなく語の意味です。論説文でくり返し出る語は、読めるだけでなく書けるようにしておきます。',
     order: 536,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -3261,6 +3297,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '入試演習②：物語文でよく出る心情語',
     description: '緊張・慎重・沈黙・憤慨など、登場人物の気持ちを表す語を書けるようにする',
+    intro: '「憤慨する」「沈黙が続いた」。物語文では、登場人物の気持ちがこうした一語で表されます。この語を知らないと、気持ちを読みちがえたまま設問に進んでしまいます。書き取りと読解の両方に効く言葉をまとめて覚えましょう。',
     order: 537,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -3352,6 +3389,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '入試演習③：社会・時事にかかわる漢字',
     description: '貿易・需要・供給・環境・資源など、説明文や社会科と重なる漢字を書けるようにする',
+    intro: '「需要」と「供給」、買う側はどちらでしょう。説明文には、こうした社会科と重なる言葉がよく出てきます。漢字を書けるだけでなく意味までわかっていると、文章の内容そのものが読みやすくなります。意味を知ることも漢字学習のうちです。',
     order: 538,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -3439,6 +3477,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '入試演習④：総合演習と覚え方の設計',
     description: '学年別配当漢字の全体像をつかみ、まちがえた漢字を効率よく定着させる方法',
+    intro: '漢字は覚える量が多く、やみくもに書き取りをくり返しても必ず抜けが出ます。大事なのは「まちがえた字だけをもう一度やる」しくみを作ることです。学年ごとの全体像をつかんだうえで、効率のよい定着のしかたを考えます。',
     order: 539,
     studyPeriod: '小6前半',
     keyPoints: [
@@ -3535,6 +3574,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     examType: 'chugaku',
     title: '入試演習⑤：答案作法とミスの防ぎ方',
     description: 'とめ・はね・はらい、送りがなの書き忘れなど、本番で失点しないための最終確認',
+    intro: '書けているのに×——原因は、とめ・はね・はらいや、送りがなの書きもらしです。せっかく覚えた漢字を得点に変えるには、書き方の作法まで含めて仕上げる必要があります。本番でのミスの防ぎ方を、最後にまとめて確認しましょう。',
     order: 540,
     studyPeriod: '小6前半',
     keyPoints: [
