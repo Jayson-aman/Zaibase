@@ -40,6 +40,13 @@ export type Lesson = {
   subject: SubjectKey;
   title: string;
   description: string;
+  /**
+   * 🌱 導入（本題に入る前のつかみ）。
+   * いきなり用語や公式から始めず、身近な場面や問いかけで「なぜこれを学ぶのか」を
+   * つかませるための短い文章（2〜4文・100〜180字程度）。
+   * 授業でいう「導入 → 展開 → まとめ」の導入にあたる。
+   */
+  intro?: string;
   sections: LessonSection[];
   order: number;
   examType?: 'chugaku' | 'koko';

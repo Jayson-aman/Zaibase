@@ -95,6 +95,12 @@ export default function LessonDetailScreen() {
             {lessonVideo != null && (
               <VideoPlayer url={lessonVideo.url} title={lessonVideo.title ?? '動画解説'} />
             )}
+            {lesson.intro != null && lesson.intro !== '' && (
+              <View style={styles.introBox}>
+                <Text style={styles.introLabel}>🌱 まずはここから</Text>
+                <Text style={styles.introText}>{lesson.intro}</Text>
+              </View>
+            )}
             <LessonRenderer sections={lesson.sections} isMax={isMax} />
             {lesson.keyPoints != null && lesson.keyPoints.length > 0 && (
               <View style={styles.keyPointsBox}>
@@ -209,6 +215,25 @@ const styles = StyleSheet.create({
     borderColor: '#FDE68A',
   },
   maxTeaserText: { fontSize: 13, color: '#92400E', fontWeight: '600' },
+  // 導入（つかみ）。本文より先に読ませたいので、本文とは違う色面で目立たせる。
+  introBox: {
+    backgroundColor: '#F0F9FF',
+    borderRadius: 8,
+    padding: 14,
+    marginBottom: 16,
+    borderWidth: 1,
+    borderColor: '#BAE6FD',
+    borderLeftWidth: 4,
+    borderLeftColor: '#0EA5E9',
+  },
+  introLabel: {
+    fontSize: 12,
+    fontWeight: '900',
+    color: '#0369A1',
+    letterSpacing: 0.4,
+    marginBottom: 6,
+  },
+  introText: { fontSize: 14.5, color: '#0F172A', lineHeight: 23 },
   keyPointsBox: {
     backgroundColor: '#ECFDF5',
     borderRadius: 8,
