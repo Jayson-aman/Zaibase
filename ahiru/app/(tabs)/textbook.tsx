@@ -25,6 +25,13 @@ const SUBJECTS: { key: SubjectKey; emoji: string; color: string }[] = [
   { key: 'eigo', emoji: '🌐', color: '#3B82F6' },
 ];
 
+// 中学受験は「算数」、高校受験は「数学」。同じ subject キーを共有しているため
+// 表示名だけ受験種別で差しかえる。
+function subjectLabel(key: SubjectKey, examType: ExamType): string {
+  if (key === 'sansu' && examType === 'koko') return '数学';
+  return subjectInfo[key].name;
+}
+
 export default function TextbookScreen() {
   const router = useRouter();
   const { hasAccess: betaAccess } = useBetaAccess();
@@ -100,7 +107,7 @@ export default function TextbookScreen() {
       <Text style={styles.sectionLabel}>科目を選んでください</Text>
       <View style={styles.subjectGrid}>
         {SUBJECTS.map(({ key, emoji, color }) => {
-          const info = subjectInfo[key];
+
           const count = getLessonsBySubject(key).filter(
             (l) => (l.examType ?? 'chugaku') === examType,
           ).length;
@@ -118,7 +125,7 @@ export default function TextbookScreen() {
             >
               <Text style={styles.subjectEmoji}>{emoji}</Text>
               <Text style={[styles.subjectName, isSelected && { color }]}>
-                {info.name}
+                {subjectLabel(key, examType)}
               </Text>
               {count > 0 ? (
                 <Text style={styles.lessonCount}>{count}単元</Text>
@@ -134,7 +141,7 @@ export default function TextbookScreen() {
       {/* Lesson List */}
       {selectedSubject && isPro && (
         <Text style={styles.lessonListTitle}>
-          {subjectInfo[selectedSubject].name} の単元一覧
+          {subjectLabel(selectedSubject, examType)} の単元一覧
         </Text>
       )}
       {showEmpty && (
