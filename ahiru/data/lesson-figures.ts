@@ -68,6 +68,18 @@ import { lessonFigsEigoExt09 } from './lesson-figs-eigo-ext09';
 import { lessonFigsEigoExt10 } from './lesson-figs-eigo-ext10';
 import { lessonFigsEigoExt11 } from './lesson-figs-eigo-ext11';
 import { lessonFigsEigoExt12 } from './lesson-figs-eigo-ext12';
+import { lessonFigsKokoMathExt01 } from './lesson-figs-koko-math-ext01';
+import { lessonFigsKokoMathExt02 } from './lesson-figs-koko-math-ext02';
+import { lessonFigsKokoMathExt03 } from './lesson-figs-koko-math-ext03';
+import { lessonFigsKokoMathExt04 } from './lesson-figs-koko-math-ext04';
+import { lessonFigsKokoMathExt05 } from './lesson-figs-koko-math-ext05';
+import { lessonFigsKokoMathExt06 } from './lesson-figs-koko-math-ext06';
+import { lessonFigsKokoMathExt07 } from './lesson-figs-koko-math-ext07';
+import { lessonFigsKokoMathExt08 } from './lesson-figs-koko-math-ext08';
+import { lessonFigsKokoMathExt09 } from './lesson-figs-koko-math-ext09';
+import { lessonFigsKokoMathExt10 } from './lesson-figs-koko-math-ext10';
+import { lessonFigsKokoMathExt11 } from './lesson-figs-koko-math-ext11';
+import { lessonFigsKokoMathExt12 } from './lesson-figs-koko-math-ext12';
 
 export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsSansu,
@@ -134,6 +146,18 @@ export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsEigoExt10,
   ...lessonFigsEigoExt11,
   ...lessonFigsEigoExt12,
+  ...lessonFigsKokoMathExt01,
+  ...lessonFigsKokoMathExt02,
+  ...lessonFigsKokoMathExt03,
+  ...lessonFigsKokoMathExt04,
+  ...lessonFigsKokoMathExt05,
+  ...lessonFigsKokoMathExt06,
+  ...lessonFigsKokoMathExt07,
+  ...lessonFigsKokoMathExt08,
+  ...lessonFigsKokoMathExt09,
+  ...lessonFigsKokoMathExt10,
+  ...lessonFigsKokoMathExt11,
+  ...lessonFigsKokoMathExt12,
 };
 
 export function getLessonFigure(figureId: string): Figure | null {

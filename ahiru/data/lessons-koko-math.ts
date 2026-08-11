@@ -1,6 +1,20 @@
 import type { Lesson } from './lesson-types';
+import { kokoMathExt01Lessons } from './lessons-koko-math-ext01';
+import { kokoMathExt02Lessons } from './lessons-koko-math-ext02';
+import { kokoMathExt03Lessons } from './lessons-koko-math-ext03';
+import { kokoMathExt04Lessons } from './lessons-koko-math-ext04';
+import { kokoMathExt05Lessons } from './lessons-koko-math-ext05';
+import { kokoMathExt06Lessons } from './lessons-koko-math-ext06';
+import { kokoMathExt07Lessons } from './lessons-koko-math-ext07';
+import { kokoMathExt08Lessons } from './lessons-koko-math-ext08';
+import { kokoMathExt09Lessons } from './lessons-koko-math-ext09';
+import { kokoMathExt10Lessons } from './lessons-koko-math-ext10';
+import { kokoMathExt11Lessons } from './lessons-koko-math-ext11';
+import { kokoMathExt12Lessons } from './lessons-koko-math-ext12';
 
-export const kokoMathLessons: Lesson[] = [
+// 既存の総論レッスン（order 101〜122）。450セッションの拡張ユニットは
+// lessons-koko-math-ext01〜ext12（order 501〜950）にあり、下でまとめて結合する。
+const kokoMathOverviewLessons: Lesson[] = [
   {
     id: 'koko_math_01_equation',
     subject: 'sansu',
@@ -5428,4 +5442,20 @@ DE∥BCのとき、△ADE∽△ABCを証明する。
       },
     ],
   },
+];
+
+export const kokoMathLessons: Lesson[] = [
+  ...kokoMathOverviewLessons,
+  ...kokoMathExt01Lessons,
+  ...kokoMathExt02Lessons,
+  ...kokoMathExt03Lessons,
+  ...kokoMathExt04Lessons,
+  ...kokoMathExt05Lessons,
+  ...kokoMathExt06Lessons,
+  ...kokoMathExt07Lessons,
+  ...kokoMathExt08Lessons,
+  ...kokoMathExt09Lessons,
+  ...kokoMathExt10Lessons,
+  ...kokoMathExt11Lessons,
+  ...kokoMathExt12Lessons,
 ];
