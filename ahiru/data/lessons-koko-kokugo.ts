@@ -1,6 +1,20 @@
 import type { Lesson } from './lesson-types';
+import { kokoKokugoExt01Lessons } from './lessons-koko-kokugo-ext01';
+import { kokoKokugoExt02Lessons } from './lessons-koko-kokugo-ext02';
+import { kokoKokugoExt03Lessons } from './lessons-koko-kokugo-ext03';
+import { kokoKokugoExt04Lessons } from './lessons-koko-kokugo-ext04';
+import { kokoKokugoExt05Lessons } from './lessons-koko-kokugo-ext05';
+import { kokoKokugoExt06Lessons } from './lessons-koko-kokugo-ext06';
+import { kokoKokugoExt07Lessons } from './lessons-koko-kokugo-ext07';
+import { kokoKokugoExt08Lessons } from './lessons-koko-kokugo-ext08';
+import { kokoKokugoExt09Lessons } from './lessons-koko-kokugo-ext09';
+import { kokoKokugoExt10Lessons } from './lessons-koko-kokugo-ext10';
+import { kokoKokugoExt11Lessons } from './lessons-koko-kokugo-ext11';
+import { kokoKokugoExt12Lessons } from './lessons-koko-kokugo-ext12';
 
-export const kokoKokugoLessons: Lesson[] = [
+// 既存の総論レッスン（order 1〜22）。450セッションの拡張ユニットは
+// lessons-koko-kokugo-ext01〜ext12（order 501〜950）にあり、下でまとめて結合する。
+const kokoKokugoOverviewLessons: Lesson[] = [
   {
     id: 'koko_kokugo_01_kanji',
     subject: 'kokugo',
@@ -4343,4 +4357,20 @@ B：「しかし」（逆接・欠点を述べる）
       },
     ],
   },
+];
+
+export const kokoKokugoLessons: Lesson[] = [
+  ...kokoKokugoOverviewLessons,
+  ...kokoKokugoExt01Lessons,
+  ...kokoKokugoExt02Lessons,
+  ...kokoKokugoExt03Lessons,
+  ...kokoKokugoExt04Lessons,
+  ...kokoKokugoExt05Lessons,
+  ...kokoKokugoExt06Lessons,
+  ...kokoKokugoExt07Lessons,
+  ...kokoKokugoExt08Lessons,
+  ...kokoKokugoExt09Lessons,
+  ...kokoKokugoExt10Lessons,
+  ...kokoKokugoExt11Lessons,
+  ...kokoKokugoExt12Lessons,
 ];
