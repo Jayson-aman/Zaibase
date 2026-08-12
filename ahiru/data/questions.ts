@@ -20,6 +20,8 @@ import { seikoQuestions, seifuNankaiQuestions, takatsukiQuestions } from './ques
 import { kaimeiQuestions, toinQuestions, kindaiQuestions, kansaiHokuyoQuestions } from './questions-schools-2';
 import { toinExamQuestions, kindaiExamQuestions, kaimeiExamQuestions, kansaiHokuyoExamQuestions, myojoExamQuestions, tezukayamaExamQuestions, kinrankaiExamQuestions, otaniExamQuestions, kankanExamQuestions, kankanMaxQuestions, tokyoMeidaiExamQuestions, tokyoAoyamaExamQuestions, tokyoChuoExamQuestions, tokyoHoseiExamQuestions, tokyoGakushiinExamQuestions, tokyoHibiyaExamQuestions, tokyoWasedaExamQuestions, tokyoMeidaiKokoExamQuestions, tokyoChugakuMaxQuestions, tokyoKokoMaxQuestions } from './questions-exam';
 import { freeTeaserQuestions } from './questions-free-teaser';
+// 記述式・複数小問の応用問題（暗記形式の一問一答とは別枠）
+import { writtenChugakuRikeiQuestions } from './questions-written-chugaku-rikei';
 import { myojoQuestions, tezukayamaQuestions, kinrankaiQuestions, otaniQuestions } from './questions-schools-3';
 import { kisoSansu } from './kiso_sansu';
 import { sansuKiso } from './questions_sansu_kiso';
@@ -3199,6 +3201,7 @@ export const questions: Question[] = [
     difficulty: 'advanced',
   },
   ...freeTeaserQuestions,
+  ...writtenChugakuRikeiQuestions,
   ...kankanQuestions,
   ...kankanExamQuestions,
   ...kankanMaxQuestions,
