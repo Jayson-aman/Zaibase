@@ -1,6 +1,20 @@
 import type { Lesson } from './lesson-types';
+import { kokoRikaExt01Lessons } from './lessons-koko-rika-ext01';
+import { kokoRikaExt02Lessons } from './lessons-koko-rika-ext02';
+import { kokoRikaExt03Lessons } from './lessons-koko-rika-ext03';
+import { kokoRikaExt04Lessons } from './lessons-koko-rika-ext04';
+import { kokoRikaExt05Lessons } from './lessons-koko-rika-ext05';
+import { kokoRikaExt06Lessons } from './lessons-koko-rika-ext06';
+import { kokoRikaExt07Lessons } from './lessons-koko-rika-ext07';
+import { kokoRikaExt08Lessons } from './lessons-koko-rika-ext08';
+import { kokoRikaExt09Lessons } from './lessons-koko-rika-ext09';
+import { kokoRikaExt10Lessons } from './lessons-koko-rika-ext10';
+import { kokoRikaExt11Lessons } from './lessons-koko-rika-ext11';
+import { kokoRikaExt12Lessons } from './lessons-koko-rika-ext12';
 
-export const kokoRikaLessons: Lesson[] = [
+// 既存の総論レッスン（order 201〜222）。450セッションの拡張ユニットは
+// lessons-koko-rika-ext01〜ext12（order 501〜950）にあり、下でまとめて結合する。
+const kokoRikaOverviewLessons: Lesson[] = [
   {
     id: `koko_rika_01_physics`,
     keyPoints: [
@@ -4045,4 +4059,20 @@ O型の子（ii）が生まれるには、両親とも少なくとも1つのi（
       },
     ],
   },
+];
+
+export const kokoRikaLessons: Lesson[] = [
+  ...kokoRikaOverviewLessons,
+  ...kokoRikaExt01Lessons,
+  ...kokoRikaExt02Lessons,
+  ...kokoRikaExt03Lessons,
+  ...kokoRikaExt04Lessons,
+  ...kokoRikaExt05Lessons,
+  ...kokoRikaExt06Lessons,
+  ...kokoRikaExt07Lessons,
+  ...kokoRikaExt08Lessons,
+  ...kokoRikaExt09Lessons,
+  ...kokoRikaExt10Lessons,
+  ...kokoRikaExt11Lessons,
+  ...kokoRikaExt12Lessons,
 ];
