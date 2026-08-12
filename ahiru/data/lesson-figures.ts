@@ -104,6 +104,18 @@ import { lessonFigsKokoKokugoExt09 } from './lesson-figs-koko-kokugo-ext09';
 import { lessonFigsKokoKokugoExt10 } from './lesson-figs-koko-kokugo-ext10';
 import { lessonFigsKokoKokugoExt11 } from './lesson-figs-koko-kokugo-ext11';
 import { lessonFigsKokoKokugoExt12 } from './lesson-figs-koko-kokugo-ext12';
+import { lessonFigsKokoShakaiExt01 } from './lesson-figs-koko-shakai-ext01';
+import { lessonFigsKokoShakaiExt02 } from './lesson-figs-koko-shakai-ext02';
+import { lessonFigsKokoShakaiExt03 } from './lesson-figs-koko-shakai-ext03';
+import { lessonFigsKokoShakaiExt04 } from './lesson-figs-koko-shakai-ext04';
+import { lessonFigsKokoShakaiExt05 } from './lesson-figs-koko-shakai-ext05';
+import { lessonFigsKokoShakaiExt06 } from './lesson-figs-koko-shakai-ext06';
+import { lessonFigsKokoShakaiExt07 } from './lesson-figs-koko-shakai-ext07';
+import { lessonFigsKokoShakaiExt08 } from './lesson-figs-koko-shakai-ext08';
+import { lessonFigsKokoShakaiExt09 } from './lesson-figs-koko-shakai-ext09';
+import { lessonFigsKokoShakaiExt10 } from './lesson-figs-koko-shakai-ext10';
+import { lessonFigsKokoShakaiExt11 } from './lesson-figs-koko-shakai-ext11';
+import { lessonFigsKokoShakaiExt12 } from './lesson-figs-koko-shakai-ext12';
 
 export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsSansu,
@@ -206,6 +218,18 @@ export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsKokoRikaExt10,
   ...lessonFigsKokoRikaExt11,
   ...lessonFigsKokoRikaExt12,
+  ...lessonFigsKokoShakaiExt01,
+  ...lessonFigsKokoShakaiExt02,
+  ...lessonFigsKokoShakaiExt03,
+  ...lessonFigsKokoShakaiExt04,
+  ...lessonFigsKokoShakaiExt05,
+  ...lessonFigsKokoShakaiExt06,
+  ...lessonFigsKokoShakaiExt07,
+  ...lessonFigsKokoShakaiExt08,
+  ...lessonFigsKokoShakaiExt09,
+  ...lessonFigsKokoShakaiExt10,
+  ...lessonFigsKokoShakaiExt11,
+  ...lessonFigsKokoShakaiExt12,
 };
 
 export function getLessonFigure(figureId: string): Figure | null {
