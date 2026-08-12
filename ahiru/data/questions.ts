@@ -22,6 +22,7 @@ import { toinExamQuestions, kindaiExamQuestions, kaimeiExamQuestions, kansaiHoku
 import { freeTeaserQuestions } from './questions-free-teaser';
 // 記述式・複数小問の応用問題（暗記形式の一問一答とは別枠）
 import { writtenChugakuRikeiQuestions } from './questions-written-chugaku-rikei';
+import { writtenKokoQuestions } from './questions-written-koko';
 import { myojoQuestions, tezukayamaQuestions, kinrankaiQuestions, otaniQuestions } from './questions-schools-3';
 import { kisoSansu } from './kiso_sansu';
 import { sansuKiso } from './questions_sansu_kiso';
@@ -3202,6 +3203,7 @@ export const questions: Question[] = [
   },
   ...freeTeaserQuestions,
   ...writtenChugakuRikeiQuestions,
+  ...writtenKokoQuestions,
   ...kankanQuestions,
   ...kankanExamQuestions,
   ...kankanMaxQuestions,
