@@ -427,7 +427,7 @@ beautiful（beau-ti-ful）、important（im-por-tant）、difficult（dif-fi-cul
 ■ 短く見えるのに more 型
 famous（fa-mous）→ more famous
 useful（use-ful）→ more useful
-tired（tired は一音節だが more tired が普通）→ more tired
+tired（-ed で終わる形容詞）→ more tired
 boring → more boring
 careful → more careful
 ※ -ing、-ed でできた形容詞は more 型と覚える。
@@ -1663,8 +1663,8 @@ mine（私のもの）、yours（あなたのもの）、his、hers、ours、the
 　（東京の人口は大阪の人口より多い）※ that ＝ the population
 例）The weather in Japan is milder than that in Canada.
 　（日本の天気はカナダの天気より穏やかだ）※ that ＝ the weather
-例）The prices of these books are higher than those of those magazines.
-　（これらの本の値段はあれらの雑誌の値段より高い）※ those ＝ the prices（複数）
+例）The prices of these books are higher than those of the magazines.
+　（これらの本の値段はその雑誌の値段より高い）※ those ＝ the prices（複数）
 
 ■ 単数か複数かの判断
 くり返す名詞が単数（population, weather, climate, size）→ that

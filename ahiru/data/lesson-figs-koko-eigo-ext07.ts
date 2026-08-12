@@ -48,7 +48,7 @@ export const lessonFigsKokoEigoExt07: Record<string, Figure> = {
       { label: 'Bag C 15000', value: 15000, color: '#16A34A' },
     ],
     caption:
-      'expensive は音節が4つの長い語なので more / the most を前に置く。比較級：Bag B is more expensive than Bag A.／最上級：Bag C is the most expensive of the three.／原級の否定：Bag A is not as expensive as Bag B.。15000÷3000＝5 なので Bag C is five times as expensive as Bag A. とも言える',
+      'expensive は ex-pen-sive と音節が三つある長い語なので more / the most を前に置く。比較級：Bag B is more expensive than Bag A.／最上級：Bag C is the most expensive of the three.／原級の否定：Bag A is not as expensive as Bag B.。15000÷3000＝5 なので Bag C is five times as expensive as Bag A. とも言える',
   },
 
   // s227：good / well － better － best（テストの点 72 / 85 / 94 点）
