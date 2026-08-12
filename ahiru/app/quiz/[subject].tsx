@@ -13,6 +13,7 @@ import { useSubjectQuestions } from '../../hooks/useSubjectQuestions';
 import { ALL_COURSES } from '../../data/courses';
 import type { CourseKey, ExamType } from '../../data/courses';
 import { getTopic, questionMatchesTopic } from '../../data/topics';
+import { getTestMode, buildTestSet, type TestModeKey, type LevelKey } from '../../data/test-modes';
 import { explanationsSansu } from '../../data/explanations_sansu';
 import { explanationsKokugo } from '../../data/explanations_kokugo';
 import { explanationsRika } from '../../data/explanations_rika';
@@ -103,14 +104,22 @@ function filterQuestions(
 }
 
 export default function QuizScreen() {
-  const { subject, difficulty: diffParam, mode, course: courseParam, examType: examTypeParam, topic: topicParam } =
-    useLocalSearchParams<{
+  const {
+    subject,
+    difficulty: diffParam,
+    mode,
+    course: courseParam,
+    examType: examTypeParam,
+    topic: topicParam,
+    testmode: testModeParam,
+  } = useLocalSearchParams<{
       subject: string;
       difficulty?: string;
       mode?: string;
       course?: string;
       examType?: string;
       topic?: string;
+      testmode?: string;
     }>();
   const router = useRouter();
 
@@ -121,6 +130,13 @@ export default function QuizScreen() {
   const isDaily = mode === 'daily';
   const isMock = mode === 'mock';
   const isKakomon = mode === 'kakomon';
+  // テスト対策モード（学期末・学力調査・レベル別・入試）。
+  // 種類ごとに難易度の配分と、記述式・複数小問（活用型）の比率を変える。
+  const testModeKey: TestModeKey | null =
+    testModeParam === 'term' || testModeParam === 'achievement' ||
+    testModeParam === 'level' || testModeParam === 'nyushi'
+      ? testModeParam
+      : null;
   const course: CourseKey = courseParam && isCourseKey(courseParam) ? courseParam : 'general';
   const examType: ExamType = examTypeParam && isExamType(examTypeParam) ? examTypeParam : 'chugaku';
   const info = subjectInfo[subjectKey];
@@ -151,6 +167,12 @@ export default function QuizScreen() {
         return shuffle(pool);
       }
     }
+    if (testModeKey) {
+      const tm = getTestMode(testModeKey);
+      let pool = all.filter((q) => (q.examType ?? 'chugaku') === examType);
+      if (!(isPro || isMax)) pool = pool.filter((q) => !q.maxOnly);
+      return buildTestSet(pool, tm, restartKey + 1, difficultyFilter as LevelKey | undefined);
+    }
     if (isMock) {
       // 模擬試験: 入試形式（学校別大問）を除いた一般問題のみ使用
       const generalKey = examType === 'koko' ? 'koko-general' : 'general';
@@ -168,7 +190,7 @@ export default function QuizScreen() {
     }
     const filtered = filterQuestions(all, examType, course, difficultyFilter, isPro || isMax);
     return shuffle(filtered);
-  }, [subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, course, examType, isPro, isMax, topicParam, restartKey]);
+  }, [subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, testModeKey, course, examType, isPro, isMax, topicParam, restartKey]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);

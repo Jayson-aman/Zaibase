@@ -298,6 +298,24 @@ export default function HomeScreen() {
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
       >
+        {/* テスト対策：入試だけでなく学期末テスト・学力調査にも合わせて出題する */}
+        {!listenPickerActive && (
+          <TouchableOpacity
+            style={styles.testPrepCard}
+            activeOpacity={0.85}
+            onPress={() => router.push('/testprep')}
+          >
+            <View style={styles.vocabEntryTextWrap}>
+              <Text style={styles.testPrepBadge}>目的に合わせて出題</Text>
+              <Text style={styles.vocabEntryTitle}>📚 テスト対策</Text>
+              <Text style={styles.vocabEntrySub}>
+                学期末テスト・学力調査・レベル別ドリル・入試対策
+              </Text>
+            </View>
+            <Text style={styles.testPrepArrow}>›</Text>
+          </TouchableOpacity>
+        )}
+
         {/* 受験とは別枠の学習コンテンツへの入り口（英単語・英熟語・英会話・英検・TOEIC対策） */}
         {!listenPickerActive && (
           <TouchableOpacity
@@ -772,6 +790,27 @@ const styles = StyleSheet.create({
     paddingTop: 16,
     paddingBottom: 40,
   },
+  testPrepCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#FFFFFF',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#7DD3FC',
+    borderLeftWidth: 4,
+    borderLeftColor: '#0EA5E9',
+    paddingVertical: 14,
+    paddingHorizontal: 14,
+    marginBottom: 10,
+  },
+  testPrepBadge: {
+    fontSize: 10.5,
+    fontWeight: '800',
+    color: '#0369A1',
+    letterSpacing: 0.4,
+    marginBottom: 3,
+  },
+  testPrepArrow: { fontSize: 24, color: '#0EA5E9', fontWeight: '300', marginLeft: 6 },
   vocabEntryCard: {
     flexDirection: 'row',
     alignItems: 'center',
