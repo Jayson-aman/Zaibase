@@ -3044,7 +3044,7 @@ deliciouse / delicous → delicious
 intresting / interesting（e を落としやすい）→ interesting
 diffrent → different
 vacantion → vacation
-recieve → receive（i の前に e ではなく、e の前に i ではない。c の後ろは ei）
+recieve → receive（c の後ろは ei の順。believe / friend は ie の順）
 beleive → believe
 tommorow → tomorrow（m は1つ、r も1つ）
 Wenesday → Wednesday

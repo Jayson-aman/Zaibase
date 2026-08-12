@@ -250,7 +250,7 @@ export const lessonFigsKokoEigoExt05: Record<string, Figure> = {
       ],
     ],
     caption:
-      '線がたすき掛けになっているのがポイント。本文が肯定なら否定の短縮形のタグ（You are a student, isn\'t it ではなく aren\'t you?）、本文が否定なら肯定のタグ（You don\'t like it, do you?）をつける。主語は必ず代名詞に直す',
+      '線がたすき掛けになっているのがポイント。本文が肯定なら否定の短縮形のタグ（You are a student, aren\'t you?）、本文が否定なら肯定のタグ（You don\'t like natto, do you?）をつける。タグの主語は必ず代名詞に直す（Tom → he）',
   },
 
   // s180：否定疑問文への答えは、英語と日本語で「はい・いいえ」が入れかわる
