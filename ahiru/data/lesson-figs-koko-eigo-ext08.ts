@@ -249,8 +249,8 @@ export const lessonFigsKokoEigoExt08: Record<string, Figure> = {
       { x: 10, y: 0 },
       { x: 0, y: 0 },
     ],
-    sideLabels: ['①名詞', '②-ing／過去分詞＝分詞（〜している・〜される）', '②′ to＋原形＝不定詞（〜するための）', '②″ 主語＋動詞＝関係代名詞の省略'],
+    sideLabels: ['①名詞', '②-ing／過去分詞なら分詞（〜している・〜される）', '③to＋原形なら不定詞（〜するための）', '④主語＋動詞なら関係代名詞の省略'],
     fill: true,
-    caption: '名詞のうしろに続く三つの形の識別。①の名詞の直後に来るものを見る。-ing や過去分詞なら分詞（the boy running in the park）、to＋原形なら不定詞の形容詞的用法（something to eat）、主語＋動詞なら関係代名詞の省略（the book I read yesterday）。いずれの場合も、そのかたまりのあとに文の動詞があるかを必ず確認する',
+    caption: '名詞のうしろに続く三つの形の識別。①の名詞の直後に来るのは②③④のいずれか一つで、どれが来るかで修飾のしかたが決まる。-ing や過去分詞なら分詞（the boy running in the park）、to＋原形なら不定詞の形容詞的用法（something to eat）、主語＋動詞なら関係代名詞の省略（the book I read yesterday）。いずれの場合も、そのかたまりのあとに文の動詞があるかを必ず確認する',
   },
 };

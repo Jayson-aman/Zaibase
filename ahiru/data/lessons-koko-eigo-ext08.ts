@@ -2337,7 +2337,7 @@ said to me の me が伝えられた相手なので、tell / ask のうしろに
     ],
     sections: [
       {
-        heading: 'make / let / have の使い分け',
+        heading: 'make / let / help の使い分け',
         body: `使役動詞と呼ばれるグループで、いずれも「人に何かをさせる」を表すが、強さが違う。うしろは to のない原形になる。
 
 ■ make ＋人＋原形（強制）
@@ -2569,7 +2569,7 @@ begin / start がすでに -ing 形になっているときは、-ing が続く�
           'enjoy は動名詞だけを目的語にとる動詞で、enjoy to 〜 とは言わない。finish / stop / mind も同じ仲間である。「〜すること」という訳は不定詞にも動名詞にも当てはまるので、訳ではなく動詞の種類で形を決める必要がある。',
       },
       {
-        question: '次の対話で、窓を開けることを承諾する返事を選びなさい。A: Would you mind closing the door? B:（ア）Yes, of course.（イ）No, not at all.',
+        question: '次の対話で、ドアを閉めることを承諾する返事を選びなさい。A: Would you mind closing the door? B:（ア）Yes, of course.（イ）No, not at all.',
         wrongAnswer: '（ア）Yes, of course.',
         trapExplanation: '「もちろんいいですよ」という日本語の感覚から Yes を選んでしまうが、mind は「いやがる」の意味である。',
         correctAnswer: '（イ）No, not at all.',
