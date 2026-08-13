@@ -769,7 +769,7 @@ const styles = StyleSheet.create({
     minWidth: 60,
   },
   backBtnText: {
-    fontSize: 22,
+    fontSize: 15,
     color: '#FFFFFF',
     fontWeight: '700',
   },
@@ -781,16 +781,16 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   headerEmoji: {
-    fontSize: 30,
+    fontSize: 20,
   },
   headerTitle: {
-    fontSize: 28,
+    fontSize: 18,
     fontWeight: '800',
     color: '#FFFFFF',
-    letterSpacing: 1,
+    letterSpacing: 0.5,
   },
   headerDiff: {
-    fontSize: 20,
+    fontSize: 12,
     fontWeight: '700',
     color: 'rgba(255,255,255,0.9)',
     marginTop: 2,
@@ -812,7 +812,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   questionIndicator: {
-    fontSize: 22,
+    fontSize: 13,
     color: 'rgba(255,255,255,0.9)',
     fontWeight: '700',
   },
@@ -847,7 +847,7 @@ const styles = StyleSheet.create({
     borderColor: '#B8E6C8',
   },
   scoreBadgeText: {
-    fontSize: 22,
+    fontSize: 13,
     color: '#00A651',
     fontWeight: '700',
   },
@@ -860,7 +860,7 @@ const styles = StyleSheet.create({
     borderColor: '#C5D8F8',
   },
   remainBadgeText: {
-    fontSize: 22,
+    fontSize: 13,
     color: '#1E5FBE',
     fontWeight: '700',
   },
@@ -874,7 +874,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#00A651',
     borderRadius: 20,
-    paddingVertical: 26,
+    paddingVertical: 18,
     alignItems: 'center',
     shadowColor: '#00A651',
     shadowOffset: { width: 0, height: 4 },
@@ -883,7 +883,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   correctButtonText: {
-    fontSize: 36,
+    fontSize: 22,
     fontWeight: '900',
     color: '#FFFFFF',
     letterSpacing: 1,
@@ -892,7 +892,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#E74C3C',
     borderRadius: 20,
-    paddingVertical: 26,
+    paddingVertical: 18,
     alignItems: 'center',
     shadowColor: '#E74C3C',
     shadowOffset: { width: 0, height: 4 },
@@ -901,7 +901,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   wrongButtonText: {
-    fontSize: 36,
+    fontSize: 22,
     fontWeight: '900',
     color: '#FFFFFF',
     letterSpacing: 1,
@@ -912,7 +912,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   revealHintText: {
-    fontSize: 24,
+    fontSize: 14,
     color: '#AAA',
     fontWeight: '600',
   },
@@ -949,9 +949,9 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   explanationText: {
-    fontSize: 16,
+    fontSize: 15,
     color: '#333',
-    lineHeight: 26,
+    lineHeight: 24,
     fontWeight: '500',
   },
   upgradeTeaser: {
@@ -977,10 +977,10 @@ const styles = StyleSheet.create({
     zIndex: 999,
   },
   feedbackText: {
-    fontSize: 220,
+    fontSize: 150,
     fontWeight: '900',
     color: '#FFFFFF',
-    lineHeight: 260,
+    lineHeight: 180,
   },
   // Results screen styles
   resultsContainer: {
@@ -1121,7 +1121,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   wrongHeaderText: {
-    fontSize: 26,
+    fontSize: 18,
     fontWeight: '900',
     color: '#C0392B',
     letterSpacing: 1,

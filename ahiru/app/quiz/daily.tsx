@@ -147,13 +147,13 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
   },
   backBtnText: {
-    fontSize: 20,
+    fontSize: 15,
     color: '#FF6B35',
     fontWeight: '700',
   },
   headerTitle: {
     flex: 1,
-    fontSize: 24,
+    fontSize: 18,
     fontWeight: '900',
     color: '#FFFFFF',
     textAlign: 'center',
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
     borderColor: '#C0392B',
   },
   heroBadgeDay: {
-    fontSize: 18,
+    fontSize: 13,
     fontWeight: '800',
     color: '#FF6B35',
     backgroundColor: 'rgba(192,57,43,0.2)',
@@ -186,20 +186,20 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   heroTitle: {
-    fontSize: 36,
+    fontSize: 26,
     fontWeight: '900',
     color: '#FFFFFF',
     marginBottom: 10,
   },
   heroSub: {
-    fontSize: 18,
+    fontSize: 14,
     color: '#AAA',
     textAlign: 'center',
-    lineHeight: 28,
+    lineHeight: 22,
     fontWeight: '500',
   },
   pickLabel: {
-    fontSize: 22,
+    fontSize: 16,
     fontWeight: '800',
     color: '#FFFFFF',
     marginBottom: 14,
@@ -215,19 +215,19 @@ const styles = StyleSheet.create({
     gap: 14,
   },
   subjectEmoji: {
-    fontSize: 38,
+    fontSize: 28,
   },
   subjectInfo: {
     flex: 1,
   },
   subjectName: {
-    fontSize: 24,
+    fontSize: 17,
     fontWeight: '800',
     color: '#FFFFFF',
     marginBottom: 4,
   },
   subjectCount: {
-    fontSize: 18,
+    fontSize: 13,
     color: '#FF6B35',
     fontWeight: '600',
   },
