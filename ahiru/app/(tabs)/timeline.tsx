@@ -92,7 +92,7 @@ export default function TimelineScreen() {
               <View style={[styles.eventLine, i === events.length - 1 && styles.eventLineHidden, { backgroundColor: eraInfo.color + '44' }]} />
               <View style={styles.eventCard}>
                 <View style={styles.eventCardInner}>
-                  <View style={{ flex: 1 }}>
+                  <View style={styles.eventCardText}>
                     <Text style={[styles.eventYear, { color: eraInfo.color }]}>{ev.year}</Text>
                     {ev.person != null && (
                       <View style={[styles.personChip, { backgroundColor: eraInfo.color + '18', borderColor: eraInfo.color + '55' }]}>
@@ -219,8 +219,9 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 2,
   },
-  eventCardInner: { flexDirection: 'row', alignItems: 'flex-start', gap: 12 },
-  portraitStack: { flexDirection: 'row', gap: 6, flexShrink: 0 },
+  eventCardInner: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'flex-start', gap: 12 },
+  eventCardText: { flex: 1, minWidth: 160 },
+  portraitStack: { flexDirection: 'row', flexWrap: 'wrap', gap: 6, flexShrink: 0 },
   portraitImage: {
     width: 56,
     height: 74,
