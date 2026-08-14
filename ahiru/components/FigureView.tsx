@@ -49,7 +49,10 @@ const PALETTE = ['#0EA5E9', '#E11D48', '#16A34A', '#9333EA', '#F59E0B'];
 type Area = { x0: number; y0: number; w: number; h: number };
 
 function useSize() {
-  const cardW = Math.min(Dimensions.get('window').width - 64, 460);
+  // 呼び出し元によって左右の余白（マージン＋パディング）の合計が異なる。
+  // 一番余白が大きい画面（公式・まとめ: 16*2 + 16*2 + 12*2 = 88px）でも
+  // はみ出さないよう、余白は多めに見積もっておく。
+  const cardW = Math.min(Dimensions.get('window').width - 88, 460);
   const w = Math.max(220, cardW);
   return { w, h: (w * VBH) / VBW };
 }

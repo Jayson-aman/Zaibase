@@ -60,7 +60,7 @@ export default function TestPrepScreen() {
             <TouchableOpacity
               key={m.key}
               style={[styles.modeCard, active && { borderColor: m.color, borderWidth: 2 }]}
-              onPress={() => setModeKey(active ? null : m.key)}
+              onPress={() => setModeKey(m.key)}
               activeOpacity={0.85}
             >
               <View style={[styles.modeBadge, { backgroundColor: m.color }]}>

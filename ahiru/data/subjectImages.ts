@@ -116,15 +116,21 @@ export const civicsImages: Record<string, ImageSourcePropType> = {
 function matchTheme(themes: SubjectTheme[], text: string): string | null {
   let bestId: string | null = null;
   let bestHits = 0;
+  let tied = false;
   for (const t of themes) {
     let hits = 0;
     for (const kw of t.keywords) if (text.includes(kw)) hits++;
     if (hits > bestHits) {
       bestHits = hits;
       bestId = t.id;
+      tied = false;
+    } else if (hits > 0 && hits === bestHits) {
+      // 複数テーマが同じキーワード数で並んだ場合、どちらか一方に決め打ちすると
+      // 誤ったイラストを表示してしまうため、あいまいなときは画像なしにする。
+      tied = true;
     }
   }
-  return bestHits > 0 ? bestId : null;
+  return bestHits > 0 && !tied ? bestId : null;
 }
 
 /** 問題文から単元テーマを判定（ラベル表示用） */

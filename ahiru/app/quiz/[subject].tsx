@@ -197,7 +197,6 @@ export default function QuizScreen() {
   const [revealed, setRevealed] = useState(false);
   const [finished, setFinished] = useState(false);
   const [savedProgress, setSavedProgress] = useState(false);
-  const [showExplanation, setShowExplanation] = useState(false);
   const [wrongIds, setWrongIds] = useState<string[]>([]);
   const [feedback, setFeedback] = useState<'correct' | 'wrong' | null>(null);
   const [waitingNext, setWaitingNext] = useState(false);
@@ -228,7 +227,6 @@ export default function QuizScreen() {
     setFinished(false);
     setSavedProgress(false);
     setWrongIds([]);
-    setShowExplanation(false);
     setWaitingNext(false);
     setFeedback(null);
     setWrongStreak(0);
@@ -296,7 +294,6 @@ export default function QuizScreen() {
     } else {
       setCurrentIndex((i) => i + 1);
       setRevealed(false);
-      setShowExplanation(false);
     }
   }
 
@@ -645,36 +642,6 @@ export default function QuizScreen() {
           </View>
         )}
 
-        {/* Explanation card - shown after reveal */}
-        {revealed && (currentQuestion.explanation || allExplanations[currentQuestion.id]) && isPro && (
-          <View style={styles.explanationWrap}>
-            <TouchableOpacity
-              style={styles.explanationToggle}
-              onPress={() => setShowExplanation((v) => !v)}
-              activeOpacity={0.8}
-            >
-              <Text style={styles.explanationToggleText}>
-                {showExplanation ? '▲ 解説を閉じる' : '💡 詳細解説を見る'}
-              </Text>
-            </TouchableOpacity>
-            {showExplanation && (
-              <View style={styles.explanationCard}>
-                <Text style={styles.explanationTitle}>📝 解説</Text>
-                <Text style={styles.explanationText}>
-                  {currentQuestion.explanation || allExplanations[currentQuestion.id]}
-                </Text>
-              </View>
-            )}
-          </View>
-        )}
-        {revealed && (currentQuestion.explanation || allExplanations[currentQuestion.id]) && !isPro && (
-          <View style={styles.upgradeTeaser}>
-            <Text style={styles.upgradeTeaserText}>
-              💡 詳細解説はProプランで見られます
-            </Text>
-          </View>
-        )}
-
         {/* Answer buttons - only shown in flip-card mode after reveal (hide when waiting for next) */}
         {revealed && !currentChoices && !waitingNext && (
           <View style={styles.answerButtons}>
@@ -914,60 +881,6 @@ const styles = StyleSheet.create({
   revealHintText: {
     fontSize: 14,
     color: '#AAA',
-    fontWeight: '600',
-  },
-  explanationWrap: {
-    marginTop: 16,
-    marginHorizontal: 16,
-  },
-  explanationToggle: {
-    alignSelf: 'center',
-    backgroundColor: '#FFF8E1',
-    borderWidth: 1.5,
-    borderColor: '#F39C12',
-    borderRadius: 20,
-    paddingHorizontal: 20,
-    paddingVertical: 8,
-    marginBottom: 8,
-  },
-  explanationToggleText: {
-    fontSize: 17,
-    fontWeight: '700',
-    color: '#E67E22',
-  },
-  explanationCard: {
-    backgroundColor: '#FFFDF0',
-    borderRadius: 14,
-    padding: 16,
-    borderWidth: 1,
-    borderColor: '#F5D76E',
-  },
-  explanationTitle: {
-    fontSize: 17,
-    fontWeight: '800',
-    color: '#E67E22',
-    marginBottom: 8,
-  },
-  explanationText: {
-    fontSize: 17,
-    color: '#333',
-    lineHeight: 26,
-    fontWeight: '500',
-  },
-  upgradeTeaser: {
-    marginTop: 12,
-    marginHorizontal: 16,
-    backgroundColor: '#EFF6FF',
-    borderRadius: 12,
-    paddingHorizontal: 16,
-    paddingVertical: 10,
-    borderWidth: 1,
-    borderColor: '#BFDBFE',
-    alignItems: 'center',
-  },
-  upgradeTeaserText: {
-    fontSize: 15,
-    color: '#1D4ED8',
     fontWeight: '600',
   },
   feedbackOverlay: {

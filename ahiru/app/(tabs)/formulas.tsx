@@ -291,6 +291,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 10,
     marginTop: 8,
+    overflow: 'hidden',
   },
   figureLabel: {
     fontSize: 10,
