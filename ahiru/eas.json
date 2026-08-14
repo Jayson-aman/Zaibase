@@ -16,11 +16,12 @@
     },
     "production": {
       "autoIncrement": true,
+      "environment": "production",
       "ios": {
         "buildConfiguration": "Release"
       },
       "android": {
-        "buildType": "apk"
+        "buildType": "app-bundle"
       }
     }
   },

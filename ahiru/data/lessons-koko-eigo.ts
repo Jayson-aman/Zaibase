@@ -1,6 +1,20 @@
 import type { Lesson } from './lesson-types';
+import { kokoEigoExt01Lessons } from './lessons-koko-eigo-ext01';
+import { kokoEigoExt02Lessons } from './lessons-koko-eigo-ext02';
+import { kokoEigoExt03Lessons } from './lessons-koko-eigo-ext03';
+import { kokoEigoExt04Lessons } from './lessons-koko-eigo-ext04';
+import { kokoEigoExt05Lessons } from './lessons-koko-eigo-ext05';
+import { kokoEigoExt06Lessons } from './lessons-koko-eigo-ext06';
+import { kokoEigoExt07Lessons } from './lessons-koko-eigo-ext07';
+import { kokoEigoExt08Lessons } from './lessons-koko-eigo-ext08';
+import { kokoEigoExt09Lessons } from './lessons-koko-eigo-ext09';
+import { kokoEigoExt10Lessons } from './lessons-koko-eigo-ext10';
+import { kokoEigoExt11Lessons } from './lessons-koko-eigo-ext11';
+import { kokoEigoExt12Lessons } from './lessons-koko-eigo-ext12';
 
-export const kokoEigoLessons: Lesson[] = [
+// 既存の総論レッスン（order 1〜22）。450セッションの拡張ユニットは
+// lessons-koko-eigo-ext01〜ext12（order 501〜950）にあり、下でまとめて結合する。
+const kokoEigoOverviewLessons: Lesson[] = [
   {
     id: 'koko_eigo_01_tense',
     subject: 'eigo',
@@ -4423,4 +4437,20 @@ Could you (　　) me your dictionary for a moment?
       },
     ],
   },
+];
+
+export const kokoEigoLessons: Lesson[] = [
+  ...kokoEigoOverviewLessons,
+  ...kokoEigoExt01Lessons,
+  ...kokoEigoExt02Lessons,
+  ...kokoEigoExt03Lessons,
+  ...kokoEigoExt04Lessons,
+  ...kokoEigoExt05Lessons,
+  ...kokoEigoExt06Lessons,
+  ...kokoEigoExt07Lessons,
+  ...kokoEigoExt08Lessons,
+  ...kokoEigoExt09Lessons,
+  ...kokoEigoExt10Lessons,
+  ...kokoEigoExt11Lessons,
+  ...kokoEigoExt12Lessons,
 ];

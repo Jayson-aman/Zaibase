@@ -21,5 +21,33 @@ service cloud.firestore {
     match /aiConversationUsage/{uid} {
       allow read, write: if false;
     }
+
+    // ── 全国ランキング ──
+    // 読み取りは本人の記録のみ。全体を読めるようにすると、誰でも全ユーザーの
+    // ID・スコア・最終学習日時を一覧できてしまう（子ども向けアプリでは避ける）。
+    // 順位の計算は Cloud Function（getMyRanking）が Admin 権限で行う。
+    // 書き込みは本人の文書のみで、スコアの形式（0〜100、correct<=total）も
+    // 検証してデタラメな値を弾く。
+    match /examLeaderboard/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow create, update: if request.auth != null
+        && request.auth.uid == uid
+        && request.resource.data.uid == uid
+        && request.resource.data.pct is int
+        && request.resource.data.pct >= 0
+        && request.resource.data.pct <= 100
+        && request.resource.data.correct is int
+        && request.resource.data.total is int
+        && request.resource.data.correct >= 0
+        && request.resource.data.total > 0
+        && request.resource.data.correct <= request.resource.data.total;
+      // アカウント削除時に本人の登録を消せるようにする
+      allow delete: if request.auth != null && request.auth.uid == uid;
+    }
+
+    // 上記以外は全て拒否（明示）
+    match /{document=**} {
+      allow read, write: if false;
+    }
   }
 }

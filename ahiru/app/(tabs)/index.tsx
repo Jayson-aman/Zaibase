@@ -65,30 +65,59 @@ const DIFFICULTY_OPTIONS: {
   { key: 'advanced', label: '発展', icon: '🔥', color: '#E74C3C', desc: '難関レベル' },
 ];
 
+// 件数は「科目×受験種別×コース×難易度」ごとに1回だけ数えて表に持つ。
+// 毎回 filter を鎖状につなぐと、コース一覧を描くだけで100万回以上の要素走査が
+// 発生し、ホーム画面が数百ミリ秒固まる（古い端末ほど顕著）。
+type CountIndex = {
+  // key: `${subject}|${examType}|${course}|${difficulty}`
+  counts: Map<string, number>;
+  generalCounts: Map<string, number>;
+};
+
+function buildCountIndex(
+  questionsBySubject: Record<SubjectKey, import('../../data/questions-meta').Question[]> | null,
+): CountIndex | null {
+  if (!questionsBySubject) return null;
+  const counts = new Map<string, number>();
+  const generalCounts = new Map<string, number>();
+
+  const bump = (m: Map<string, number>, k: string) => m.set(k, (m.get(k) ?? 0) + 1);
+
+  (Object.keys(questionsBySubject) as SubjectKey[]).forEach((subject) => {
+    for (const q of questionsBySubject[subject]) {
+      const examType = (q.examType ?? 'chugaku') as ExamType;
+      const generalKey = examType === 'koko' ? 'koko-general' : 'general';
+      const isGeneral = !q.course || q.course === generalKey;
+      const diff = q.difficulty;
+
+      if (isGeneral) {
+        // 「共通問題」はどのコースからも参照されるので別集計にする
+        bump(generalCounts, `${subject}|${examType}|all`);
+        bump(generalCounts, `${subject}|${examType}|${diff}`);
+      } else {
+        bump(counts, `${subject}|${examType}|${q.course}|all`);
+        bump(counts, `${subject}|${examType}|${q.course}|${diff}`);
+      }
+    }
+  });
+
+  return { counts, generalCounts };
+}
+
 function getQuestionCount(
   subject: SubjectKey,
   difficulty: Difficulty,
   examType: ExamType,
   course: CourseKey,
-  questionsBySubject: Record<SubjectKey, import('../../data/questions-meta').Question[]> | null,
+  index: CountIndex | null,
 ): number {
-  if (!questionsBySubject) return 0;
-  let qs = questionsBySubject[subject];
-  // Filter by examType
-  qs = qs.filter((q) => (q.examType ?? 'chugaku') === examType);
-  // Filter by course — for koko courses include koko-general as shared pool
-  const generalKey = examType === 'koko' ? 'koko-general' : 'general';
-  if (course === 'general' || course === 'koko-general') {
-    qs = qs.filter((q) => !q.course || q.course === generalKey);
-  } else {
-    const schoolQs = qs.filter((q) => q.course === course);
-    const generalQs = qs.filter((q) => !q.course || q.course === generalKey);
-    qs = [...schoolQs, ...generalQs];
-  }
-  if (difficulty !== 'all') {
-    qs = qs.filter((q) => q.difficulty === difficulty);
-  }
-  return qs.length;
+  if (!index) return 0;
+  const d = difficulty === 'all' ? 'all' : difficulty;
+  const general = index.generalCounts.get(`${subject}|${examType}|${d}`) ?? 0;
+  if (course === 'general' || course === 'koko-general') return general;
+  const school = index.counts.get(`${subject}|${examType}|${course}|${d}`) ?? 0;
+  // 学校別コースは「その学校の問題＋共通問題」を出題する
+  return school + general;
 }
 
 // ---------- Zaibase.Group logo header ----------
@@ -201,20 +230,32 @@ export default function HomeScreen() {
   }
 
   const { bySubject: questionsBySubject } = useQuestionsBySubjectMap();
+  const countIndex = React.useMemo(() => buildCountIndex(questionsBySubject), [questionsBySubject]);
   const listenInfo = listenSubject ? subjectInfo[listenSubject] : null;
   const { hasAccess: betaAccess } = useBetaAccess();
-  const { isPro, paywallVisible, setPaywallVisible, requirePro } = useProGate(betaAccess);
-  const { isMax: subIsMax } = useSubscription();
+  const { isPro, loading: proLoading, paywallVisible, setPaywallVisible, requirePro } = useProGate(betaAccess);
+  const { isMax: subIsMax, loading: maxLoading } = useSubscription();
   const isMax = subIsMax || betaAccess;
+  // 課金状態の取得中は isPro/isMax が初期値(false)のため、加入者でも
+  // MAX/PROロックの判定でペイウォールを誤表示してしまう。確定するまでは
+  // タップを無視する（requirePro/requireMax と同じ「読み込み中は何もしない」方針）。
+  const subLoading = proLoading || maxLoading;
   const selectedDiff = DIFFICULTY_OPTIONS.find((d) => d.key === difficulty)!;
   const courseInfo = getCourseInfo(selectedCourse);
 
   const listenQuestions = React.useMemo(() => {
+    // 聞き流しは問題そのものが要るので、集計表ではなく元データを使う
     if (listenSubject == null || !questionsBySubject) return [];
     const qs = difficulty === 'all'
       ? questionsBySubject[listenSubject]
       : questionsBySubject[listenSubject].filter((q) => q.difficulty === difficulty);
-    return [...qs].sort(() => Math.random() - 0.5);
+    // Fisher-Yates（sort(() => Math.random() - 0.5) は偏るため使わない）
+    const a = [...qs];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
   }, [listenSubject, difficulty, questionsBySubject]);
 
   // Courses that require MAX or Pro
@@ -226,25 +267,25 @@ export default function HomeScreen() {
     const SUBJECTS_KEYS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
     return KOKO_COURSES.filter((c) => {
       const total = SUBJECTS_KEYS.reduce(
-        (sum, s) => sum + getQuestionCount(s, 'all', 'koko', c.key, questionsBySubject),
+        (sum, s) => sum + getQuestionCount(s, 'all', 'koko', c.key, countIndex),
         0,
       );
       return total > 0;
     });
-  }, []);
+  }, [countIndex]);
 
   // Schools sorted by level then name（専用問題が実際にある学校のみ表示）
   const sortedSchools = React.useMemo(() => {
     const SUBJECTS_KEYS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
     const withData = SCHOOL_COURSES.filter((c) => {
       const total = SUBJECTS_KEYS.reduce(
-        (sum, s) => sum + getQuestionCount(s, 'all', 'chugaku', c.key, questionsBySubject),
+        (sum, s) => sum + getQuestionCount(s, 'all', 'chugaku', c.key, countIndex),
         0,
       );
       return total > 0;
     });
     return [...withData].sort((a, b) => LEVEL_ORDER[a.level] - LEVEL_ORDER[b.level]);
-  }, [questionsBySubject]);
+  }, [countIndex]);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -257,6 +298,24 @@ export default function HomeScreen() {
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
       >
+        {/* テスト対策：入試だけでなく学期末テスト・学力調査にも合わせて出題する */}
+        {!listenPickerActive && (
+          <TouchableOpacity
+            style={styles.testPrepCard}
+            activeOpacity={0.85}
+            onPress={() => router.push('/testprep')}
+          >
+            <View style={styles.vocabEntryTextWrap}>
+              <Text style={styles.testPrepBadge}>目的に合わせて出題</Text>
+              <Text style={styles.vocabEntryTitle}>📚 テスト対策</Text>
+              <Text style={styles.vocabEntrySub}>
+                学期末テスト・学力調査・レベル別ドリル・入試対策
+              </Text>
+            </View>
+            <Text style={styles.testPrepArrow}>›</Text>
+          </TouchableOpacity>
+        )}
+
         {/* 受験とは別枠の学習コンテンツへの入り口（英単語・英熟語・英会話・英検・TOEIC対策） */}
         {!listenPickerActive && (
           <TouchableOpacity
@@ -267,9 +326,24 @@ export default function HomeScreen() {
             <View style={styles.vocabEntryTextWrap}>
               <Text style={styles.vocabEntryBadge}>受験対策とは別の学習コンテンツ</Text>
               <Text style={styles.vocabEntryTitle}>🔤 英単語・英熟語・英会話</Text>
-              <Text style={styles.vocabEntrySub}>英検準2級〜1級・TOEIC800対応　単語5,000+・熟語4,000+</Text>
+              <Text style={styles.vocabEntrySub}>英検準2級〜1級・TOEIC800対応　単語4,800+・熟語4,000+</Text>
             </View>
             <Text style={styles.vocabEntryArrow}>›</Text>
+          </TouchableOpacity>
+        )}
+
+        {!listenPickerActive && (
+          <TouchableOpacity
+            style={styles.yojiEntryCard}
+            activeOpacity={0.85}
+            onPress={() => router.push('/yojijukugo')}
+          >
+            <View style={styles.vocabEntryTextWrap}>
+              <Text style={styles.yojiEntryBadge}>国語・漢字の学習コンテンツ</Text>
+              <Text style={styles.vocabEntryTitle}>📚 四字熟語</Text>
+              <Text style={styles.vocabEntrySub}>小学生レベル100・中学生レベル100を読み方・意味・例文つきで</Text>
+            </View>
+            <Text style={styles.yojiEntryArrow}>›</Text>
           </TouchableOpacity>
         )}
 
@@ -344,6 +418,7 @@ export default function HomeScreen() {
                         !isSelected && { borderColor: c.color + '66' },
                       ]}
                       onPress={() => {
+                        if (subLoading) return;
                         if (needsMax && !isMax) { setPaywallVisible(true); return; }
                         setSelectedCourse(c.key);
                       }}
@@ -383,6 +458,7 @@ export default function HomeScreen() {
                                 !isSelected && { borderColor: s.color + '55' },
                               ]}
                               onPress={() => {
+                                if (subLoading) return;
                                 if (needsMax && !isMax) { setPaywallVisible(true); return; }
                                 if (needsPro && !isPro) { setPaywallVisible(true); return; }
                                 setSelectedCourse(s.key);
@@ -550,6 +626,7 @@ export default function HomeScreen() {
           <TouchableOpacity
             style={[styles.dailyBtn, !isMax && styles.dailyBtnLocked]}
             onPress={() => {
+              if (subLoading) return;
               if (!isMax) {
                 setPaywallVisible(true);
                 return;
@@ -614,7 +691,7 @@ export default function HomeScreen() {
             <SubjectCard
               key={subject}
               subject={subject}
-              questionCount={getQuestionCount(subject, difficulty, examType, selectedCourse, questionsBySubject)}
+              questionCount={getQuestionCount(subject, difficulty, examType, selectedCourse, countIndex)}
               onPress={() =>
                 listenPickerActive
                   ? handleListenSubject(subject)
@@ -652,8 +729,19 @@ export default function HomeScreen() {
           <Text style={styles.infoText}>① コース・難易度・科目を選んでスタート</Text>
           <Text style={styles.infoText}>② 問題カードをタップして答えを確認</Text>
           <Text style={styles.infoText}>③ 解説を読んで「なぜその答えか」を理解</Text>
-          <Text style={styles.infoText}>④ 進捗タブで苦手分析を確認</Text>
+          <Text style={styles.infoText}>④ マイページで苦手分析を確認</Text>
         </View>
+
+        {/* マイページ（学習記録・ランキング・アカウント・規約）への導線。
+            タブには出していないため、ここから開けるようにしておく。 */}
+        <TouchableOpacity
+          style={styles.myPageCard}
+          onPress={() => router.push('/progress')}
+          activeOpacity={0.85}
+        >
+          <Text style={styles.myPageText}>👤 マイページ（記録・ランキング・アカウント設定）</Text>
+          <Text style={styles.myPageArrow}>›</Text>
+        </TouchableOpacity>
 
         <View style={styles.inspirationCard}>
           <Text style={styles.inspirationText}>
@@ -702,6 +790,27 @@ const styles = StyleSheet.create({
     paddingTop: 16,
     paddingBottom: 40,
   },
+  testPrepCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#FFFFFF',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#7DD3FC',
+    borderLeftWidth: 4,
+    borderLeftColor: '#0EA5E9',
+    paddingVertical: 14,
+    paddingHorizontal: 14,
+    marginBottom: 10,
+  },
+  testPrepBadge: {
+    fontSize: 10.5,
+    fontWeight: '800',
+    color: '#0369A1',
+    letterSpacing: 0.4,
+    marginBottom: 3,
+  },
+  testPrepArrow: { fontSize: 24, color: '#0EA5E9', fontWeight: '300', marginLeft: 6 },
   vocabEntryCard: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -736,6 +845,30 @@ const styles = StyleSheet.create({
   vocabEntryArrow: {
     fontSize: 28,
     color: '#A064DC',
+    fontWeight: '300',
+    marginLeft: 8,
+  },
+  yojiEntryCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: 'rgba(217,119,6,0.10)',
+    borderWidth: 1,
+    borderColor: 'rgba(217,119,6,0.35)',
+    borderRadius: 16,
+    paddingVertical: 14,
+    paddingHorizontal: 16,
+    marginBottom: 18,
+  },
+  yojiEntryBadge: {
+    fontSize: 10,
+    fontWeight: '700',
+    color: '#B45309',
+    letterSpacing: 0.5,
+    marginBottom: 4,
+  },
+  yojiEntryArrow: {
+    fontSize: 28,
+    color: '#B45309',
     fontWeight: '300',
     marginLeft: 8,
   },
@@ -1217,6 +1350,20 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: D.glassBorder,
   },
+  myPageCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: D.glassMid,
+    borderRadius: 12,
+    paddingHorizontal: 18,
+    paddingVertical: 16,
+    marginBottom: 14,
+    borderWidth: 1,
+    borderColor: D.glassBorder,
+  },
+  myPageText: { flex: 1, fontSize: 15, fontWeight: '700', color: D.white },
+  myPageArrow: { fontSize: 22, color: D.soft, fontWeight: '700' },
   infoTitle: {
     fontFamily: SERIF,
     fontSize: 18,

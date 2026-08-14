@@ -147,7 +147,7 @@ Muted:    #64748B
 ## Cloud Functions ルール
 
 - すべて v2（`firebase-functions/v2/https`）
-- すべての onCall に `enforceAppCheck: true`
+- すべての onCall に `enforceAppCheck: true`（**ahiru は例外**：クライアントの App Check が Web のみ実装でネイティブ未対応のため、iOS で全 AI 機能が弾かれる。ahiru/functions は `enforceAppCheck` を外し、Firebase Auth 必須＋Firestore の利用回数制限で担保している。ネイティブ App Check を実装したら戻すこと）
 - region: `"asia-northeast1"`
 - Secrets は `defineSecret()` で定義
 

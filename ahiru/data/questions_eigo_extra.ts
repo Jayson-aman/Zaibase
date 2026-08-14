@@ -1455,8 +1455,8 @@ export const eigoExtra: Question[] = [
     question: '「Baseball is played in many countries.」を能動態に直すと？',
     choices: ['Many countries play baseball.', 'Many countries plays baseball.', 'Many countries are playing baseball.', 'Many countries played baseball.'],
     answer: 'Many countries play baseball.',
-    hint: 'by の後の語（many countries）を主語にして能動態にします。',
-    explanation: '受動態 is played by many countries を能動態にすると、many countries が主語（複数）なので play（原形）を使い、Many countries play baseball. となります。',
+    hint: '「in many countries（多くの国で）」の many countries を主語に置きかえて考えます。',
+    explanation: 'Baseball is played in many countries. は「多くの国で野球が行われている」という意味。by ～ による行為者は書かれていませんが、「多くの国（で）」を動作をする側と考えて能動態に直すと Many countries play baseball. となります。many countries は複数なので動詞は plays ではなく play。played は過去形ではなく過去分詞なので、時制は現在のままです。',
     examFrequency: 'high',
   },
   {

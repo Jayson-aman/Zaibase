@@ -17,6 +17,7 @@ import {
   type SchoolExamType,
   type SchoolLevel,
 } from '../data/admissions';
+import HomeButton from '../components/HomeButton';
 
 const YEARS = ['2027年度', '2026年度', '2028年度'];
 
@@ -39,9 +40,15 @@ export default function AdmissionsScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backRow}>
-          <Text style={styles.backText}>← 戻る</Text>
-        </TouchableOpacity>
+        <View style={styles.headerTopRow}>
+          <TouchableOpacity
+            onPress={() => (router.canGoBack() ? router.back() : router.replace('/'))}
+            style={styles.backRow}
+          >
+            <Text style={styles.backText}>← 戻る</Text>
+          </TouchableOpacity>
+          <HomeButton variant="light" />
+        </View>
         <Text style={styles.title}>📋 募集要項（学校別）</Text>
         <Text style={styles.subtitle}>年度を選んで、公式の最新募集要項へ</Text>
       </View>
@@ -152,6 +159,7 @@ export default function AdmissionsScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#F0F9FF' },
   header: { paddingHorizontal: 20, paddingTop: 8, paddingBottom: 12, backgroundColor: '#0EA5E9' },
+  headerTopRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   backRow: { paddingVertical: 6 },
   backText: { color: 'rgba(255,255,255,0.95)', fontSize: 16, fontWeight: '700' },
   title: { color: '#fff', fontSize: 24, fontWeight: '800', marginTop: 4 },

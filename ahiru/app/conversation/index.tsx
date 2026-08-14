@@ -14,9 +14,8 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { chatEnglishConversation, type ConversationMessage } from '../../services/aiConversation';
+import HomeButton from '../../components/HomeButton';
 import { levelColor, levelLabel, type VocabLevel } from '../../data/vocab-meta';
-import { useVocabSubscription } from '../../hooks/useVocabSubscription';
-import { useSubscription } from '../../hooks/useSubscription';
 
 const LEVEL_OPTIONS: VocabLevel[] = ['eiken_pre2', 'eiken_2', 'eiken_1', 'toeic_800'];
 
@@ -43,10 +42,8 @@ const D = {
 
 export default function ConversationScreen() {
   const router = useRouter();
-  const { hasVocab } = useVocabSubscription();
-  const { isMax } = useSubscription();
-  // AI英会話は英語系コンテンツ：英単語Pro（vocab）またはMaxで開放。
-  const isPaid = hasVocab || isMax;
+  // AI英会話の有料判定（1日の回数上限）はサーバーが RevenueCat に問い合わせて行う。
+  // クライアントから申告すると詐称できるため、ここでは加入状態を送らない。
   const [level, setLevel] = useState<VocabLevel>('eiken_2');
   const [scenario, setScenario] = useState<string | undefined>(undefined);
   const [messages, setMessages] = useState<ConversationMessage[]>([]);
@@ -71,13 +68,14 @@ export default function ConversationScreen() {
         history: messages,
         level,
         scenario,
-        isPaid,
       });
       setMessages([...newMessages, { role: 'assistant', content: res.reply }]);
       setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 100);
     } catch (err: any) {
       const msg = err?.message ?? 'エラーが発生しました。もう一度試してください。';
-      Alert.alert('AIからの返信エラー', msg);
+      // 無料枠の上限で止まった場合は、エラーではなく案内として見せる
+      const isLimit = err?.code === 'functions/resource-exhausted';
+      Alert.alert(isLimit ? '本日の練習は終了です' : 'AIからの返信エラー', msg);
       setMessages(messages); // revert
     } finally {
       setLoading(false);
@@ -91,13 +89,19 @@ export default function ConversationScreen() {
   return (
     <SafeAreaView style={styles.safe}>
       <View style={styles.header}>
-        <TouchableOpacity style={styles.backBtn} onPress={() => router.back()}>
+        <TouchableOpacity
+          style={styles.backBtn}
+          onPress={() => (router.canGoBack() ? router.back() : router.replace('/'))}
+        >
           <Text style={styles.backBtnText}>‹ 戻る</Text>
         </TouchableOpacity>
         <Text style={styles.headerTitle}>🗣️ AI英会話練習</Text>
-        <TouchableOpacity style={styles.resetBtn} onPress={resetConversation}>
-          <Text style={styles.resetBtnText}>リセット</Text>
-        </TouchableOpacity>
+        <View style={styles.headerRightGroup}>
+          <TouchableOpacity style={styles.resetBtn} onPress={resetConversation}>
+            <Text style={styles.resetBtnText}>リセット</Text>
+          </TouchableOpacity>
+          <HomeButton variant="dark" />
+        </View>
       </View>
 
       {/* レベル選択 */}
@@ -214,6 +218,7 @@ const styles = StyleSheet.create({
   backBtn: { paddingVertical: 6, paddingRight: 10 },
   backBtnText: { color: D.soft, fontSize: 15 },
   headerTitle: { flex: 1, fontSize: 17, fontWeight: '800', color: D.gold, textAlign: 'center' },
+  headerRightGroup: { flexDirection: 'row', alignItems: 'center', gap: 10 },
   resetBtn: { paddingVertical: 6, paddingLeft: 10 },
   resetBtnText: { color: D.muted, fontSize: 13 },
   levelRow: { flexGrow: 0, marginTop: 10 },

@@ -17,6 +17,7 @@
 const { onCall, HttpsError } = require("firebase-functions/v2/https");
 const { getFirestore, FieldValue } = require("firebase-admin/firestore");
 const { defineSecret } = require("firebase-functions/params");
+const { REVENUECAT_SECRET_KEY, hasVocabAccess } = require("./revenuecat");
 
 const db = getFirestore();
 const OPENAI_API_KEY = defineSecret("OPENAI_API_KEY");
@@ -56,16 +57,32 @@ async function checkAndIncrementLimit(uid) {
 }
 
 exports.speakText = onCall(
-  { region: "asia-northeast1", enforceAppCheck: true, secrets: [OPENAI_API_KEY] },
+  { region: "asia-northeast1", secrets: [OPENAI_API_KEY, REVENUECAT_SECRET_KEY] },
   async (req) => {
     const uid = req.auth?.uid;
     if (!uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
-    const { text } = req.data || {};
+    // 課金判定はRevenueCatを正とする（英単語Pro・Maxプラン限定機能）。
+    // entitlement を集合で見るので、受験Proと英単語Proを両方買っている人も正しく通る。
+    const allowed = await hasVocabAccess(uid);
+    if (allowed !== true) {
+      throw new HttpsError(
+        "permission-denied",
+        "ネイティブ発音の聞き流しは英単語Pro・Maxプラン限定の機能です。"
+      );
+    }
+
+    const { text, speed } = req.data || {};
     if (!text || typeof text !== "string" || text.trim().length === 0) {
       throw new HttpsError("invalid-argument", "text は必須です");
     }
     const safeText = text.slice(0, MAX_CHARS);
+    // クライアントの速度スライダー由来。範囲外の値やAPI仕様外の速度を
+    // 送られても安全なように、実用域(0.6〜1.3)にクランプする。
+    const safeSpeed =
+      typeof speed === "number" && Number.isFinite(speed)
+        ? Math.min(1.3, Math.max(0.6, speed))
+        : 0.9;
 
     await checkAndIncrementLimit(uid);
 
@@ -80,7 +97,7 @@ exports.speakText = onCall(
         input: safeText,
         voice: "alloy",
         response_format: "mp3",
-        speed: 0.9,
+        speed: safeSpeed,
       }),
     });
 

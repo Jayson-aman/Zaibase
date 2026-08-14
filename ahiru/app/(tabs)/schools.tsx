@@ -106,7 +106,7 @@ const SCHOOL_GROUPS: SchoolGroup[] = [
 export default function SchoolsScreen() {
   const router = useRouter();
   const { hasAccess: betaAccess } = useBetaAccess();
-  const { tier: subTier } = useSubscription();
+  const { tier: subTier, loading: subLoading } = useSubscription();
   const isPro = subTier === 'pro' || subTier === 'max' || betaAccess;
   const isMax = subTier === 'max' || betaAccess;
 
@@ -118,6 +118,8 @@ export default function SchoolsScreen() {
   }
 
   function handleSchool(school: SchoolEntry) {
+    // 課金状態の取得中は加入者でも 'free' に見えるため、確定するまで待つ。
+    if (subLoading) return;
     if (!canAccess(school.tier)) {
       router.push('/paywall');
       return;

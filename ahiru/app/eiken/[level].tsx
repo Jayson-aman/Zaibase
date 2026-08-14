@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity } from 'react-na
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import MCQQuiz from '../../components/MCQQuiz';
 import CertPaywall from '../../components/CertPaywall';
+import HomeButton from '../../components/HomeButton';
 import { eikenQuestions } from '../../data/eiken_questions';
 import { VOCAB_MONTHLY_LABEL, VOCAB_YEARLY_LABEL } from '../../constants/pricing';
 
@@ -25,6 +26,12 @@ const CATEGORY_LABELS: Record<string, string> = {
 };
 
 export default function EikenLevelScreen() {
+  // 直接このURLを開いた場合は戻り先が無く router.back() が無反応になるため、
+  // その場合はホームへ逃がす。
+  function safeBack() {
+    if (router.canGoBack()) router.back();
+    else router.replace('/');
+  }
   const { level } = useLocalSearchParams<{ level: string }>();
   const router = useRouter();
   const info = LEVEL_INFO[level ?? ''] ?? { name: level, nameEn: '', emoji: '📖', color: '#7B1FA2', cefr: '' };
@@ -46,16 +53,19 @@ export default function EikenLevelScreen() {
     return (
       <SafeAreaView style={styles.safeArea}>
         <View style={[styles.header, { backgroundColor: info.color }]}>
-          <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
-            <Text style={styles.backBtnText}>← 戻る</Text>
-          </TouchableOpacity>
+          <View style={styles.headerTopRow}>
+            <TouchableOpacity onPress={() => safeBack()} style={styles.backBtn}>
+              <Text style={styles.backBtnText}>← 戻る</Text>
+            </TouchableOpacity>
+            <HomeButton variant="light" />
+          </View>
           <Text style={styles.headerTitle}>{info.emoji} {info.name}</Text>
         </View>
         <View style={styles.body}>
           <Text style={styles.emoji}>🚧</Text>
           <Text style={styles.title}>問題を準備中</Text>
           <Text style={styles.text}>{info.name}の問題は{'\n'}現在作成中です。近日公開予定。</Text>
-          <TouchableOpacity style={[styles.btn, { backgroundColor: info.color }]} onPress={() => router.back()}>
+          <TouchableOpacity style={[styles.btn, { backgroundColor: info.color }]} onPress={() => safeBack()}>
             <Text style={styles.btnText}>← 級一覧に戻る</Text>
           </TouchableOpacity>
         </View>
@@ -79,9 +89,12 @@ export default function EikenLevelScreen() {
         {(hasAccess: boolean) => (
         <>
         <View style={[styles.header, { backgroundColor: info.color }]}>
-          <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
-            <Text style={styles.backBtnText}>← 戻る</Text>
-          </TouchableOpacity>
+          <View style={styles.headerTopRow}>
+            <TouchableOpacity onPress={() => safeBack()} style={styles.backBtn}>
+              <Text style={styles.backBtnText}>← 戻る</Text>
+            </TouchableOpacity>
+            <HomeButton variant="light" />
+          </View>
           <Text style={styles.headerTitle}>{info.emoji} {info.name}</Text>
           <Text style={styles.headerSub}>{info.cefr}　{allQuestions.length}問収録</Text>
         </View>
@@ -96,7 +109,8 @@ export default function EikenLevelScreen() {
 const styles = StyleSheet.create({
   safeArea: { flex: 1, backgroundColor: '#F5F7FA' },
   header: { paddingHorizontal: 20, paddingVertical: 16 },
-  backBtn: { marginBottom: 8 },
+  headerTopRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 },
+  backBtn: {},
   backBtnText: { color: 'rgba(255,255,255,0.85)', fontSize: 14, fontWeight: '700' },
   headerTitle: { fontSize: 18, fontWeight: '900', color: '#FFFFFF' },
   headerSub: { fontSize: 12, color: 'rgba(255,255,255,0.7)', fontWeight: '600', marginTop: 2 },

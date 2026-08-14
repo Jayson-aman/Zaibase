@@ -1,6 +1,20 @@
 import type { Lesson } from './lesson-types';
+import { kokoKokugoExt01Lessons } from './lessons-koko-kokugo-ext01';
+import { kokoKokugoExt02Lessons } from './lessons-koko-kokugo-ext02';
+import { kokoKokugoExt03Lessons } from './lessons-koko-kokugo-ext03';
+import { kokoKokugoExt04Lessons } from './lessons-koko-kokugo-ext04';
+import { kokoKokugoExt05Lessons } from './lessons-koko-kokugo-ext05';
+import { kokoKokugoExt06Lessons } from './lessons-koko-kokugo-ext06';
+import { kokoKokugoExt07Lessons } from './lessons-koko-kokugo-ext07';
+import { kokoKokugoExt08Lessons } from './lessons-koko-kokugo-ext08';
+import { kokoKokugoExt09Lessons } from './lessons-koko-kokugo-ext09';
+import { kokoKokugoExt10Lessons } from './lessons-koko-kokugo-ext10';
+import { kokoKokugoExt11Lessons } from './lessons-koko-kokugo-ext11';
+import { kokoKokugoExt12Lessons } from './lessons-koko-kokugo-ext12';
 
-export const kokoKokugoLessons: Lesson[] = [
+// 既存の総論レッスン（order 1〜22）。450セッションの拡張ユニットは
+// lessons-koko-kokugo-ext01〜ext12（order 501〜950）にあり、下でまとめて結合する。
+const kokoKokugoOverviewLessons: Lesson[] = [
   {
     id: 'koko_kokugo_01_kanji',
     subject: 'kokugo',
@@ -4094,7 +4108,7 @@ B：「しかし」（逆接・欠点を述べる）
 次のア〜オを正しい順序に並べ替えなさい。
 ア）このような取り組みが各地に広がっている。
 イ）ある地域では、高齢者と学生が交流するイベントが開かれている。
-ウ）近年、地域social活動における世代間交流が注目されている。
+ウ）近年、地域の社会活動における世代間交流が注目されている。
 エ）そこでは、学生が高齢者から昔の暮らしについて話を聞く。
 オ）交流を通じて、双方が新たな気づきを得られるという声も多い。
 → 正解：ウ→イ→エ→オ→ア（話題提示→具体例→具体例の詳細→効果→まとめ）
@@ -4343,4 +4357,20 @@ B：「しかし」（逆接・欠点を述べる）
       },
     ],
   },
+];
+
+export const kokoKokugoLessons: Lesson[] = [
+  ...kokoKokugoOverviewLessons,
+  ...kokoKokugoExt01Lessons,
+  ...kokoKokugoExt02Lessons,
+  ...kokoKokugoExt03Lessons,
+  ...kokoKokugoExt04Lessons,
+  ...kokoKokugoExt05Lessons,
+  ...kokoKokugoExt06Lessons,
+  ...kokoKokugoExt07Lessons,
+  ...kokoKokugoExt08Lessons,
+  ...kokoKokugoExt09Lessons,
+  ...kokoKokugoExt10Lessons,
+  ...kokoKokugoExt11Lessons,
+  ...kokoKokugoExt12Lessons,
 ];

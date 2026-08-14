@@ -217,6 +217,15 @@ export default function ListenMode({
     }
   }, [visible, autoStart, startSession, stopAll]);
 
+  // アンマウント時にも必ず読み上げを止める。visible を false にせず親が
+  // 一気に破棄するケースでは上の !visible 分岐が走らないため、鳴りっぱなしになる。
+  useEffect(() => {
+    return () => {
+      stopAll();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   function handlePauseToggle() {
     if (!active && phase !== 'done') return;
 
@@ -254,10 +263,34 @@ export default function ListenMode({
     active ? '準備中…' :
     '停止中';
 
-  const historyLabel = getHistoryThemeLabel(q.id);
+  // 問題データの遅延読み込み中は questions が空になりうる。q が無いまま
+  // q.id を読むとクラッシュするので、読み込み中の表示に切り替える。
+  const historyLabel = q != null ? getHistoryThemeLabel(q.id) : null;
+
+  if (q == null) {
+    return (
+      <Modal visible={visible} animationType="slide" statusBarTranslucent onRequestClose={handleStop}>
+        <SafeAreaView style={styles.root}>
+          <View style={[styles.header, { backgroundColor: subjectColor }]}>
+            <Text style={styles.headerTitle}>
+              {subjectEmoji} {subjectName} 聞き流し
+            </Text>
+          </View>
+          <View style={styles.content}>
+            <Text style={styles.statusText}>問題を準備中です…</Text>
+          </View>
+          <View style={styles.controls}>
+            <TouchableOpacity style={[styles.controlBtn, styles.stopBtn]} onPress={handleStop}>
+              <Text style={[styles.controlBtnText, styles.stopBtnText]}>閉じる</Text>
+            </TouchableOpacity>
+          </View>
+        </SafeAreaView>
+      </Modal>
+    );
+  }
 
   return (
-    <Modal visible={visible} animationType="slide" statusBarTranslucent>
+    <Modal visible={visible} animationType="slide" statusBarTranslucent onRequestClose={handleStop}>
       <SafeAreaView style={styles.root}>
         <View style={[styles.header, { backgroundColor: subjectColor }]}>
           <Text style={styles.headerTitle}>

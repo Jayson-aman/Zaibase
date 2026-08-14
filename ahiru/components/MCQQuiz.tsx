@@ -39,7 +39,12 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 export default function MCQQuiz({ questions, accentColor = '#37474F', onComplete }: Props) {
-  const shuffled = useMemo(() => shuffle(questions), [questions]);
+  // questions は呼び出し側で毎回 slice() され新しい配列になるため、
+  // [questions] を依存にすると毎レンダーでシャッフルし直され、
+  // 回答中に問題がすり替わってしまう。中身が変わった時だけ引き直す。
+  const questionsKey = questions.map((q) => q.id).join('|');
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const shuffled = useMemo(() => shuffle(questions), [questionsKey]);
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<'A' | 'B' | 'C' | 'D' | null>(null);
   const [correctCount, setCorrectCount] = useState(0);
@@ -47,6 +52,8 @@ export default function MCQQuiz({ questions, accentColor = '#37474F', onComplete
   const [speaking, setSpeaking] = useState(false);
 
   const q = shuffled[index];
+  // ※ 範囲外チェックはこの関数の末尾（全フックの呼び出し後）にある `if (!q)` で行う。
+  //    ここで早期returnするとフック数がレンダーごとに変わり、Reactが落ちる。
 
   useEffect(() => {
     Speech.stop();

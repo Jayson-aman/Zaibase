@@ -72,6 +72,61 @@ export async function signOutUser(): Promise<void> {
   await logoutUser();
 }
 
+/**
+ * アカウントを完全に削除する。
+ *
+ * Appleのガイドライン5.1.1(v)により、アプリ内でアカウントを作成できる場合は
+ * アプリ内で削除もできる必要がある（無いと審査で却下される）。
+ *
+ * 直前にログインしていないとFirebaseが `auth/requires-recent-login` を返すため、
+ * その場合は再ログインを促すメッセージを出す。
+ */
+export async function deleteAccount(): Promise<void> {
+  if (!isFirebaseConfigured()) throw new AuthError('この機能は準備中です');
+  const auth = await getFirebaseAuth();
+  const user = auth.currentUser;
+  if (!user) throw new AuthError('ログインしていません。');
+
+  // 先にユーザーに紐づくデータを消してから認証アカウントを消す。
+  // 順序を逆にすると、認証が消えた時点で権限を失い消せなくなる。
+  const uid = user.uid;
+  try {
+    const { getFirestoreDb } = await import('./firebaseClient');
+    const db = await getFirestoreDb();
+    const { doc, deleteDoc } = await import('firebase/firestore');
+    // ランキング登録を削除（他コレクションはサーバー側の管理データで、
+    // クライアントからは削除権限が無いため対象外）
+    await deleteDoc(doc(db, 'examLeaderboard', uid)).catch(() => {});
+  } catch {
+    // Firestore未設定などでも認証アカウントの削除は続行する
+  }
+
+  const { deleteUser } = await import('firebase/auth');
+  try {
+    await deleteUser(user);
+  } catch (e: any) {
+    if (e?.code === 'auth/requires-recent-login') {
+      throw new AuthError(
+        'セキュリティのため、一度ログアウトしてもう一度ログインしてから削除してください。',
+      );
+    }
+    throw new AuthError(friendlyError(e?.code));
+  }
+
+  // 端末に残る学習記録・お試し回数なども消す。
+  // ⚠️ アカウント削除が成功した後に行うこと。先に消すと、再ログインが必要で
+  // 削除に失敗した場合に、アカウントは残ったまま学習記録だけ失われる。
+  try {
+    const AsyncStorage = (await import('@react-native-async-storage/async-storage')).default;
+    await AsyncStorage.clear();
+  } catch {
+    // 消せなくても続行
+  }
+  // 購読状況はApple/Googleのアカウントに紐づくため、アカウント削除では解約されない。
+  // 呼び出し側でその旨を必ず案内すること。
+  await logoutUser();
+}
+
 export async function sendResetEmail(email: string): Promise<void> {
   if (!isFirebaseConfigured()) throw new AuthError('この機能は準備中です');
   const auth = await getFirebaseAuth();

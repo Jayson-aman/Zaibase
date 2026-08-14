@@ -27,7 +27,9 @@ function getFirebaseApp(): FirebaseApp {
 let authPromise: Promise<Auth> | null = null;
 export async function getFirebaseAuth(): Promise<Auth> {
   if (!authPromise) {
-    authPromise = (async () => {
+    // 失敗した Promise をそのままキャッシュすると、一度でも初期化に失敗した時点で
+    // 以降すべてのAI機能・ランキングが永久に使えなくなる。失敗したら破棄して再試行可能にする。
+    const p = (async () => {
       const app = getFirebaseApp();
       if (Platform.OS === 'web') {
         const { getAuth } = await import('firebase/auth');
@@ -41,6 +43,10 @@ export async function getFirebaseAuth(): Promise<Auth> {
         persistence: authModule.getReactNativePersistence(AsyncStorage),
       });
     })();
+    p.catch(() => {
+      if (authPromise === p) authPromise = null;
+    });
+    authPromise = p;
   }
   return authPromise;
 }

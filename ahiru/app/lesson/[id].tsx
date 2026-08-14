@@ -6,6 +6,7 @@ import {
   StyleSheet,
   SafeAreaView,
   TouchableOpacity,
+  ActivityIndicator,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { getLessonById } from '../../data/lessons';
@@ -20,7 +21,9 @@ import { subjectInfo } from '../../data/questions-meta';
 export default function LessonDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
-  const { isPro: subIsPro, isMax: subIsMax } = useSubscription();
+  // loading を見ずに isPro/isMax だけで分岐すると、課金状態の取得が終わるまでの
+  // 一瞬、加入者にも「Proプランで閲覧できます」のロック画面が出てしまう。
+  const { isPro: subIsPro, isMax: subIsMax, loading: subLoading } = useSubscription();
   const { hasAccess: betaAccess } = useBetaAccess();
   const isPro = subIsPro || betaAccess;
   const isMax = subIsMax || betaAccess;
@@ -68,14 +71,19 @@ export default function LessonDetailScreen() {
       </View>
 
       <ScrollView style={styles.scroll} contentContainerStyle={styles.content}>
-        {!isPro && (
+        {subLoading && (
+          <View style={styles.center}>
+            <ActivityIndicator color={info.color} />
+          </View>
+        )}
+        {!subLoading && !isPro && (
           <View style={styles.lockedBanner}>
             <Text style={styles.lockedText}>
               🔒 このコンテンツはProプランで閲覧できます
             </Text>
           </View>
         )}
-        {isPro && (
+        {!subLoading && isPro && (
           <>
             {hasMaxContent && !isMax && (
               <View style={styles.maxTeaser}>
@@ -87,6 +95,12 @@ export default function LessonDetailScreen() {
             {lessonVideo != null && (
               <VideoPlayer url={lessonVideo.url} title={lessonVideo.title ?? '動画解説'} />
             )}
+            {lesson.intro != null && lesson.intro !== '' && (
+              <View style={styles.introBox}>
+                <Text style={styles.introLabel}>🌱 まずはここから</Text>
+                <Text style={styles.introText}>{lesson.intro}</Text>
+              </View>
+            )}
             <LessonRenderer sections={lesson.sections} isMax={isMax} />
             {lesson.keyPoints != null && lesson.keyPoints.length > 0 && (
               <View style={styles.keyPointsBox}>
@@ -95,6 +109,25 @@ export default function LessonDetailScreen() {
                   <View key={i} style={styles.keyPointRow}>
                     <Text style={styles.keyPointCheck}>✅</Text>
                     <Text style={styles.keyPointText}>{p}</Text>
+                  </View>
+                ))}
+              </View>
+            )}
+            {lesson.trapExamples != null && lesson.trapExamples.length > 0 && (
+              <View style={styles.trapBox}>
+                <Text style={styles.trapTitle}>⚠️ ひっかけ問題に注意</Text>
+                {lesson.trapExamples.map((t, i) => (
+                  <View key={i} style={[styles.trapItem, i > 0 && styles.trapItemSpacer]}>
+                    <Text style={styles.trapQuestionLabel}>問題</Text>
+                    <Text style={styles.trapQuestion}>{t.question}</Text>
+                    <View style={styles.trapWrongBox}>
+                      <Text style={styles.trapWrongLabel}>❌ こう間違えがち：{t.wrongAnswer}</Text>
+                      <Text style={styles.trapWrongText}>{t.trapExplanation}</Text>
+                    </View>
+                    <View style={styles.trapCorrectBox}>
+                      <Text style={styles.trapCorrectLabel}>✅ 正解：{t.correctAnswer}</Text>
+                      <Text style={styles.trapCorrectText}>{t.correctExplanation}</Text>
+                    </View>
                   </View>
                 ))}
               </View>
@@ -129,9 +162,9 @@ const styles = StyleSheet.create({
   },
   backBtnText: { fontSize: 16, color: '#1D4ED8', fontWeight: '700' },
   header: {
-    paddingHorizontal: 20,
-    paddingTop: 16,
-    paddingBottom: 24,
+    paddingHorizontal: 16,
+    paddingTop: 14,
+    paddingBottom: 18,
   },
   headerTopRow: {
     flexDirection: 'row',
@@ -146,24 +179,26 @@ const styles = StyleSheet.create({
   backArrow: { fontSize: 18, color: 'rgba(255,255,255,0.8)', fontWeight: '700' },
   backLabel: { fontSize: 14, color: 'rgba(255,255,255,0.8)', fontWeight: '600' },
   lessonTitle: {
-    fontSize: 24,
+    fontSize: 21,
     fontWeight: '900',
     color: '#FFFFFF',
-    marginBottom: 6,
+    marginBottom: 5,
+    letterSpacing: -0.4,
+    lineHeight: 28,
   },
-  lessonDesc: { fontSize: 14, color: 'rgba(255,255,255,0.85)', lineHeight: 22 },
+  lessonDesc: { fontSize: 13, color: 'rgba(255,255,255,0.88)', lineHeight: 19 },
   tier: {
-    marginTop: 10,
+    marginTop: 9,
     alignSelf: 'flex-start',
-    borderRadius: 8,
+    borderRadius: 4,
     paddingHorizontal: 10,
     paddingVertical: 4,
   },
   tierPro: { backgroundColor: 'rgba(255,255,255,0.2)' },
   tierMax: { backgroundColor: 'rgba(251,191,36,0.3)' },
-  tierText: { fontSize: 12, color: '#FFFFFF', fontWeight: '700' },
+  tierText: { fontSize: 11, color: '#FFFFFF', fontWeight: '800', letterSpacing: 0.2 },
   scroll: { flex: 1 },
-  content: { padding: 20, paddingBottom: 60 },
+  content: { padding: 16, paddingBottom: 56 },
   lockedBanner: {
     backgroundColor: '#EFF6FF',
     borderRadius: 12,
@@ -180,22 +215,78 @@ const styles = StyleSheet.create({
     borderColor: '#FDE68A',
   },
   maxTeaserText: { fontSize: 13, color: '#92400E', fontWeight: '600' },
+  // 導入（つかみ）。本文より先に読ませたいので、本文とは違う色面で目立たせる。
+  introBox: {
+    backgroundColor: '#F0F9FF',
+    borderRadius: 8,
+    padding: 14,
+    marginBottom: 16,
+    borderWidth: 1,
+    borderColor: '#BAE6FD',
+    borderLeftWidth: 4,
+    borderLeftColor: '#0EA5E9',
+  },
+  introLabel: {
+    fontSize: 12,
+    fontWeight: '900',
+    color: '#0369A1',
+    letterSpacing: 0.4,
+    marginBottom: 6,
+  },
+  introText: { fontSize: 14.5, color: '#0F172A', lineHeight: 23 },
   keyPointsBox: {
     backgroundColor: '#ECFDF5',
-    borderRadius: 14,
-    padding: 16,
+    borderRadius: 8,
+    padding: 14,
     marginTop: 8,
-    marginBottom: 16,
+    marginBottom: 14,
+    borderWidth: 1,
+    borderColor: '#A7F3D0',
     borderLeftWidth: 4,
     borderLeftColor: '#10B981',
   },
-  keyPointsTitle: { fontSize: 17, fontWeight: '800', color: '#065F46', marginBottom: 10 },
+  keyPointsTitle: { fontSize: 15, fontWeight: '900', color: '#065F46', marginBottom: 9, letterSpacing: 0.2 },
   keyPointRow: { flexDirection: 'row', alignItems: 'flex-start', marginBottom: 8 },
   keyPointCheck: { fontSize: 14, marginRight: 8, marginTop: 2 },
-  keyPointText: { flex: 1, fontSize: 15, color: '#064E3B', lineHeight: 23 },
+  keyPointText: { flex: 1, fontSize: 14, color: '#064E3B', lineHeight: 21 },
+  trapBox: {
+    backgroundColor: '#FFF7ED',
+    borderRadius: 8,
+    padding: 14,
+    marginTop: 8,
+    marginBottom: 14,
+    borderWidth: 1,
+    borderColor: '#FED7AA',
+    borderLeftWidth: 4,
+    borderLeftColor: '#F97316',
+  },
+  trapTitle: { fontSize: 15, fontWeight: '900', color: '#9A3412', marginBottom: 9, letterSpacing: 0.2 },
+  trapItem: {},
+  trapItemSpacer: { marginTop: 18, paddingTop: 18, borderTopWidth: 1, borderTopColor: '#FED7AA' },
+  trapQuestionLabel: { fontSize: 12, fontWeight: '800', color: '#C2410C', marginBottom: 4 },
+  trapQuestion: { fontSize: 14, color: '#1F2937', lineHeight: 21, marginBottom: 9 },
+  trapWrongBox: {
+    backgroundColor: '#FEF2F2',
+    borderRadius: 6,
+    padding: 11,
+    marginBottom: 7,
+    borderWidth: 1,
+    borderColor: '#FECACA',
+  },
+  trapWrongLabel: { fontSize: 13.5, fontWeight: '700', color: '#B91C1C', marginBottom: 4 },
+  trapWrongText: { fontSize: 13.5, color: '#7F1D1D', lineHeight: 20 },
+  trapCorrectBox: {
+    backgroundColor: '#ECFDF5',
+    borderRadius: 6,
+    padding: 11,
+    borderWidth: 1,
+    borderColor: '#A7F3D0',
+  },
+  trapCorrectLabel: { fontSize: 13.5, fontWeight: '700', color: '#047857', marginBottom: 4 },
+  trapCorrectText: { fontSize: 13.5, color: '#064E3B', lineHeight: 20 },
   practiceBtn: {
-    borderRadius: 14,
-    paddingVertical: 16,
+    borderRadius: 8,
+    paddingVertical: 15,
     alignItems: 'center',
     marginBottom: 28,
   },

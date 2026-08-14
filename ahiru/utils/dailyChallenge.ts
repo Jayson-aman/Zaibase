@@ -21,9 +21,12 @@ function seededShuffle<T>(arr: T[], seed: number): T[] {
   return result;
 }
 
-// Days since Unix epoch (UTC) — used for stable 5-day cycle
+// 日本時間（JST=UTC+9）基準の経過日数。
+// UTCのままだと日本の午前9時に切り替わってしまい、
+// 画面の「毎日午前0時に更新」という案内と食い違う。
+const JST_OFFSET_MS = 9 * 60 * 60 * 1000;
 function daysSinceEpoch(): number {
-  return Math.floor(Date.now() / 86400000);
+  return Math.floor((Date.now() + JST_OFFSET_MS) / 86400000);
 }
 
 // 5-day rotation index (0–4). Resets each week based on ISO week number.

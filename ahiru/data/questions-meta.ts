@@ -1,5 +1,14 @@
 import type { CourseKey, ExamType } from './courses';
 
+/** 複数の小問がある問題の、各小問（問1・問2…）。 */
+export type QuestionSubItem = {
+  /** 「問1」「(1)」などのラベル */
+  label: string;
+  prompt: string;
+  answer: string;
+  explanation?: string;
+};
+
 export type Question = {
   id: string;
   subject: 'sansu' | 'kokugo' | 'rika' | 'shakai' | 'eigo';
@@ -20,6 +29,12 @@ export type Question = {
   memoryTip?: string;
   pitfall?: string;
   videoUrl?: string;
+  /** 複数の小問に分かれた応用問題。question/passageを共通の設問文・資料として使う。 */
+  subQuestions?: QuestionSubItem[];
+  /** 記述式（自由記述）問題。answerには模範解答を入れる。 */
+  isWritten?: boolean;
+  /** 記述式問題の自己採点チェックリスト（模範解答にどんな要素が入っているべきか） */
+  rubricPoints?: string[];
 };
 
 export type SubjectKey = 'sansu' | 'kokugo' | 'rika' | 'shakai' | 'eigo';

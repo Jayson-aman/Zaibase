@@ -1,28 +1,21 @@
-import { useEffect, useState } from 'react';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+// クローズドβ用の先行開放フック。
+//
+// 【重要】本番リリースにあたり、この抜け道は無効化してある。
+// 有効なままだと、Web版（公開URL）でブラウザのlocalStorageに
+// `@ahiru/beta_v1` = '1' を書き込むだけで、Pro/Maxの有料コンテンツが
+// 全部無料で開いてしまう（コードはバンドルに含まれるため誰でも読める）。
+//
+// 再びβ配布をする場合は、端末のストレージ値ではなく
+// サーバー側で検証できる仕組み（Firestoreの許可リスト等）に置き換えること。
 
-const BETA_CODE = 'AHIRU2026';
-const KEY = '@ahiru/beta_v1';
+const BETA_ENABLED = false;
 
 export function useBetaAccess() {
-  const [hasAccess, setHasAccess] = useState(false);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    AsyncStorage.getItem(KEY)
-      .then((v) => setHasAccess(v === '1'))
-      .catch(() => {})
-      .finally(() => setLoading(false));
-  }, []);
-
-  async function unlock(code: string): Promise<boolean> {
-    if (code.trim().toUpperCase() === BETA_CODE) {
-      await AsyncStorage.setItem(KEY, '1');
-      setHasAccess(true);
-      return true;
-    }
-    return false;
-  }
-
-  return { hasAccess, loading, unlock };
+  return {
+    hasAccess: false,
+    loading: false,
+    unlock: async (_code: string): Promise<boolean> => false,
+  };
 }
+
+export { BETA_ENABLED };

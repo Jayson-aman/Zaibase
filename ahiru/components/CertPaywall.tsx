@@ -46,12 +46,16 @@ export default function CertPaywall({
   // 英検は「英単語Pro（vocab）」または全部入りのMaxで開放（受験専用Proは対象外）。
   const hasAccess = hasVocab || isMax;
 
-  const content = typeof children === 'function' ? children(hasAccess) : children;
+  const isFn = typeof children === 'function';
+  const content = isFn ? children(hasAccess) : children;
 
-  // 判定中はチラつき防止のため、とりあえずコンテンツ（未開放扱い）を表示
-  if (hasAccess || loading) {
-    return <>{content}</>;
-  }
+  if (hasAccess) return <>{content}</>;
+
+  // 判定中：関数形式の子は hasAccess=false を受け取るので未開放状態で描画でき、
+  // 素のReactNodeもそのまま描画する。空Viewにすると、画面全体を子として渡している
+  // 呼び出し元（英検トップなど）で戻るボタンごと消えて真っ白になってしまうため。
+  // 判定は数百ミリ秒で確定し、確定後は下の未加入表示に切り替わる。
+  if (loading) return <>{content}</>;
 
   // 未加入：無料分（freeLimit）を表示しつつ、下部に開放バナーを出す
   return (

@@ -80,9 +80,38 @@ export const civicsThemes: SubjectTheme[] = [
 ];
 
 // ── 生成された画像のマップ（初期は空。scripts/generate-subject-images.mjs が更新） ──
-export const rikaImages: Record<string, ImageSourcePropType> = {};
-export const historyImages: Record<string, ImageSourcePropType> = {};
-export const civicsImages: Record<string, ImageSourcePropType> = {};
+export const rikaImages: Record<string, ImageSourcePropType> = {
+  rika_human_body: require('../assets/subjects/rika_human_body.png'),
+  rika_plant: require('../assets/subjects/rika_plant.png'),
+  rika_creatures: require('../assets/subjects/rika_creatures.png'),
+  rika_space: require('../assets/subjects/rika_space.png'),
+  rika_weather: require('../assets/subjects/rika_weather.png'),
+  rika_chem: require('../assets/subjects/rika_chem.png'),
+  rika_electric: require('../assets/subjects/rika_electric.png'),
+  rika_force: require('../assets/subjects/rika_force.png'),
+  rika_light_sound: require('../assets/subjects/rika_light_sound.png'),
+  rika_earth: require('../assets/subjects/rika_earth.png'),
+};
+export const historyImages: Record<string, ImageSourcePropType> = {
+  hist_jomon: require('../assets/subjects/hist_jomon.png'),
+  hist_kofun: require('../assets/subjects/hist_kofun.png'),
+  hist_nara: require('../assets/subjects/hist_nara.png'),
+  hist_heian: require('../assets/subjects/hist_heian.png'),
+  hist_kamakura: require('../assets/subjects/hist_kamakura.png'),
+  hist_muromachi: require('../assets/subjects/hist_muromachi.png'),
+  hist_edo: require('../assets/subjects/hist_edo.png'),
+  hist_meiji: require('../assets/subjects/hist_meiji.png'),
+  hist_modern_war: require('../assets/subjects/hist_modern_war.png'),
+  hist_postwar: require('../assets/subjects/hist_postwar.png'),
+};
+export const civicsImages: Record<string, ImageSourcePropType> = {
+  civ_constitution: require('../assets/subjects/civ_constitution.png'),
+  civ_diet: require('../assets/subjects/civ_diet.png'),
+  civ_court: require('../assets/subjects/civ_court.png'),
+  civ_election: require('../assets/subjects/civ_election.png'),
+  civ_economy: require('../assets/subjects/civ_economy.png'),
+  civ_intl: require('../assets/subjects/civ_intl.png'),
+};
 
 function matchTheme(themes: SubjectTheme[], text: string): string | null {
   let bestId: string | null = null;

@@ -1,6 +1,20 @@
 import type { Lesson } from './lesson-types';
+import { kokoShakaiExt01Lessons } from './lessons-koko-shakai-ext01';
+import { kokoShakaiExt02Lessons } from './lessons-koko-shakai-ext02';
+import { kokoShakaiExt03Lessons } from './lessons-koko-shakai-ext03';
+import { kokoShakaiExt04Lessons } from './lessons-koko-shakai-ext04';
+import { kokoShakaiExt05Lessons } from './lessons-koko-shakai-ext05';
+import { kokoShakaiExt06Lessons } from './lessons-koko-shakai-ext06';
+import { kokoShakaiExt07Lessons } from './lessons-koko-shakai-ext07';
+import { kokoShakaiExt08Lessons } from './lessons-koko-shakai-ext08';
+import { kokoShakaiExt09Lessons } from './lessons-koko-shakai-ext09';
+import { kokoShakaiExt10Lessons } from './lessons-koko-shakai-ext10';
+import { kokoShakaiExt11Lessons } from './lessons-koko-shakai-ext11';
+import { kokoShakaiExt12Lessons } from './lessons-koko-shakai-ext12';
 
-export const kokoShakaiLessons: Lesson[] = [
+// 既存の総論レッスン（order 101〜122）。450セッションの拡張ユニットは
+// lessons-koko-shakai-ext01〜ext12（order 501〜950）にあり、下でまとめて結合する。
+const kokoShakaiOverviewLessons: Lesson[] = [
   {
     id: 'koko_shakai_01_japan_geo',
     keyPoints: [
@@ -4956,4 +4970,20 @@ export const kokoShakaiLessons: Lesson[] = [
       },
     ],
   },
+];
+
+export const kokoShakaiLessons: Lesson[] = [
+  ...kokoShakaiOverviewLessons,
+  ...kokoShakaiExt01Lessons,
+  ...kokoShakaiExt02Lessons,
+  ...kokoShakaiExt03Lessons,
+  ...kokoShakaiExt04Lessons,
+  ...kokoShakaiExt05Lessons,
+  ...kokoShakaiExt06Lessons,
+  ...kokoShakaiExt07Lessons,
+  ...kokoShakaiExt08Lessons,
+  ...kokoShakaiExt09Lessons,
+  ...kokoShakaiExt10Lessons,
+  ...kokoShakaiExt11Lessons,
+  ...kokoShakaiExt12Lessons,
 ];

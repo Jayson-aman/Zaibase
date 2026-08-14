@@ -10,7 +10,7 @@ export const chugaku2026Kokugo1: Question[] = [
     examType: 'chugaku',
     difficulty: 'basic',
     maxOnly: false,
-    question: '次の漢字の読み方をひらがなで答えなさい。①貯蔵　②警report報　③創造　④綿密　⑤操作',
+    question: '次の漢字の読み方をひらがなで答えなさい。①貯蔵　②警報　③創造　④綿密　⑤操作',
     answer: '①ちょぞう　②けいほう　③そうぞう　④めんみつ　⑤そうさ',
     hint: '②は「警」＋「報」で「危険を知らせる」の意。③「創」は「はじめてつくる」の意味を持つ漢字。④「綿密」の「綿」は「わた」ではなく「めん」と音読みする。',
     explanation: `【出題意図】

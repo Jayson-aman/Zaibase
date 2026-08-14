@@ -5,6 +5,7 @@ import {
 import { useRouter } from 'expo-router';
 import { LinearGradient } from 'expo-linear-gradient';
 import CertPaywall from '../../components/CertPaywall';
+import HomeButton from '../../components/HomeButton';
 import { VOCAB_MONTHLY_LABEL, VOCAB_YEARLY_LABEL } from '../../constants/pricing';
 import { eikenQuestions } from '../../data/eiken_questions';
 
@@ -70,9 +71,15 @@ export default function EikenScreen() {
         proFeatures={['英検2・3・4級 全問題アンロック', '語彙・文法・読解・リスニング 各カテゴリ対応', '全選択肢に日本語解説付き', 'ネイティブ音声（読み上げ）で実力養成']}
       >
         <LinearGradient colors={['#7B1FA2', '#4A0072']} style={styles.header}>
-          <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
-            <Text style={styles.backBtnText}>← 戻る</Text>
-          </TouchableOpacity>
+          <View style={styles.headerTopRow}>
+            <TouchableOpacity
+              onPress={() => (router.canGoBack() ? router.back() : router.replace('/'))}
+              style={styles.backBtn}
+            >
+              <Text style={styles.backBtnText}>← 戻る</Text>
+            </TouchableOpacity>
+            <HomeButton variant="light" />
+          </View>
           <Text style={styles.headerTitle}>🇬🇧 英検対策</Text>
           <Text style={styles.headerSub}>Eiken Test in Practical English Proficiency</Text>
         </LinearGradient>
@@ -136,7 +143,8 @@ export default function EikenScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#F5F7FA' },
   header: { paddingHorizontal: 20, paddingTop: 16, paddingBottom: 20 },
-  backBtn: { marginBottom: 8 },
+  headerTopRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 },
+  backBtn: {},
   backBtnText: { color: 'rgba(255,255,255,0.85)', fontSize: 14, fontWeight: '700' },
   headerTitle: { fontSize: 22, fontWeight: '900', color: '#FFFFFF', marginBottom: 4 },
   headerSub: { fontSize: 11, color: 'rgba(255,255,255,0.7)', fontWeight: '500' },

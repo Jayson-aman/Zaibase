@@ -97,6 +97,7 @@ const SCHOOL_META: Record<string, { name: string; emoji: string; hensachi: strin
   'koko-taki':        { name: '滝高校',              emoji: '🌿', hensachi: '66〜70', region: '愛知' },
   'koko-seinan':      { name: '西南学院高校',        emoji: '⛪', hensachi: '62〜66', region: '福岡' },
   'koko-nanzan':      { name: '南山高校',            emoji: '🌺', hensachi: '64〜68', region: '愛知' },
+  'koko-shitennoji':  { name: '四天王寺高校',        emoji: '🏯', hensachi: '64〜70', region: '大阪' },
   'koko-kankan':      { name: '関関同立系高校',      emoji: '🎓', hensachi: '60〜68', region: '関西' },
 };
 
@@ -164,7 +165,7 @@ export default function SchoolCurriculumScreen() {
   const { course } = useLocalSearchParams<{ course: string }>();
   const router = useRouter();
   const { hasAccess: betaAccess } = useBetaAccess();
-  const { tier: subTier } = useSubscription();
+  const { tier: subTier, loading: subLoading } = useSubscription();
   const isPro = subTier === 'pro' || subTier === 'max' || betaAccess;
   const isMax = subTier === 'max' || betaAccess;
 
@@ -186,7 +187,7 @@ export default function SchoolCurriculumScreen() {
       mogi: Math.min(all.length + general.filter((q) => q.difficulty === 'advanced').length, 30),
       kakomon: all.length,
     };
-  }, [course, activeSubject]);
+  }, [questions, course, activeSubject]);
 
   function hasAccess(tier: Stage['tier']): boolean {
     if (tier === 'free') return true;
@@ -195,6 +196,9 @@ export default function SchoolCurriculumScreen() {
   }
 
   function handleStage(stage: Stage) {
+    // 課金状態の取得中は加入者でも 'free' に見えるため、確定するまで待つ
+    // （さもないと加入者が一瞬タップしただけでペイウォール画面に飛ばされる）。
+    if (subLoading) return;
     if (!hasAccess(stage.tier)) {
       router.push('/paywall' as any);
       return;
@@ -227,7 +231,7 @@ export default function SchoolCurriculumScreen() {
       const generalQ = questions.filter((q) => (!q.course || q.course === 'general') && q.subject === s.key);
       return schoolQ.length > 0 || generalQ.length > 5;
     });
-  }, [course]);
+  }, [questions, course]);
 
   const pageTitle = `${meta.name}の過去問対策｜Zaibase受験`;
   const pageDescription =

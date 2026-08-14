@@ -12,6 +12,7 @@ import { subjectInfo, type SubjectKey } from '../../data/questions-meta';
 import type { ExamType } from '../../data/courses';
 import { topicsBySubject, questionMatchesTopic } from '../../data/topics';
 import { useSubjectQuestions } from '../../hooks/useSubjectQuestions';
+import HomeButton from '../../components/HomeButton';
 
 function isSubjectKey(v: string): v is SubjectKey {
   return ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'].includes(v);
@@ -40,9 +41,15 @@ export default function TopicPickerScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={[styles.header, { backgroundColor: info.color }]}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backRow}>
-          <Text style={styles.backText}>← 戻る</Text>
-        </TouchableOpacity>
+        <View style={styles.headerTopRow}>
+          <TouchableOpacity
+            onPress={() => (router.canGoBack() ? router.back() : router.replace('/'))}
+            style={styles.backRow}
+          >
+            <Text style={styles.backText}>← 戻る</Text>
+          </TouchableOpacity>
+          <HomeButton variant="light" />
+        </View>
         <Text style={styles.title}>
           {info.name}の単元をえらぶ
         </Text>
@@ -86,6 +93,7 @@ export default function TopicPickerScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#F0F9FF' },
   header: { paddingHorizontal: 20, paddingTop: 8, paddingBottom: 16 },
+  headerTopRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   backRow: { paddingVertical: 6 },
   backText: { color: 'rgba(255,255,255,0.95)', fontSize: 16, fontWeight: '700' },
   title: { color: '#fff', fontSize: 24, fontWeight: '800', marginTop: 4 },

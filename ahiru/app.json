@@ -3,14 +3,16 @@
     "name": "Zaibase受験",
     "slug": "entrance-exam",
     "scheme": "entrance-exam",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.zaibase.exam",
-      "buildNumber": "9"
+      "config": {
+        "usesNonExemptEncryption": false
+      }
     },
     "android": {
       "package": "com.zaibase.exam",
@@ -40,6 +42,11 @@
           "cameraPermission": "問題の写真を撮影してAI先生に質問するためにカメラへのアクセスが必要です。"
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "fee2f912-842f-470e-a90a-5f885535db09"
+      }
+    }
   }
 }

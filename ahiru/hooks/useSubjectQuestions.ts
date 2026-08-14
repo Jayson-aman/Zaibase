@@ -9,14 +9,26 @@ type QuestionsModule = {
 let cache: QuestionsModule | null = null;
 const listeners: Array<(mod: QuestionsModule) => void> = [];
 
+let inFlight: Promise<QuestionsModule> | null = null;
+
 function loadQuestionsModule(): Promise<QuestionsModule> {
   if (cache) return Promise.resolve(cache);
-  return import('../data/questions').then((mod) => {
-    cache = { questions: mod.questions, questionsBySubject: mod.questionsBySubject };
-    listeners.forEach((fn) => fn(cache!));
-    listeners.length = 0;
-    return cache;
-  });
+  // 読み込みに失敗したら再試行できるようにする（失敗を握ったままだと
+  // 問題が0件のまま二度と復帰しない）。
+  if (inFlight) return inFlight;
+  inFlight = import('../data/questions')
+    .then((mod) => {
+      cache = { questions: mod.questions, questionsBySubject: mod.questionsBySubject };
+      listeners.forEach((fn) => fn(cache!));
+      listeners.length = 0;
+      inFlight = null;
+      return cache;
+    })
+    .catch((err) => {
+      inFlight = null;
+      throw err;
+    });
+  return inFlight;
 }
 
 export function useSubjectQuestions(subject: SubjectKey) {

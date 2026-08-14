@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import {
   View,
   Text,
@@ -13,6 +13,7 @@ import { useSubjectQuestions } from '../../hooks/useSubjectQuestions';
 import { ALL_COURSES } from '../../data/courses';
 import type { CourseKey, ExamType } from '../../data/courses';
 import { getTopic, questionMatchesTopic } from '../../data/topics';
+import { getTestMode, buildTestSet, type TestModeKey, type LevelKey } from '../../data/test-modes';
 import { explanationsSansu } from '../../data/explanations_sansu';
 import { explanationsKokugo } from '../../data/explanations_kokugo';
 import { explanationsRika } from '../../data/explanations_rika';
@@ -103,16 +104,25 @@ function filterQuestions(
 }
 
 export default function QuizScreen() {
-  const { subject, difficulty: diffParam, mode, course: courseParam, examType: examTypeParam, topic: topicParam } =
-    useLocalSearchParams<{
+  const {
+    subject,
+    difficulty: diffParam,
+    mode,
+    course: courseParam,
+    examType: examTypeParam,
+    topic: topicParam,
+    testmode: testModeParam,
+  } = useLocalSearchParams<{
       subject: string;
       difficulty?: string;
       mode?: string;
       course?: string;
       examType?: string;
       topic?: string;
+      testmode?: string;
     }>();
   const router = useRouter();
+
 
   const subjectKey: SubjectKey = isSubjectKey(subject ?? '') ? (subject as SubjectKey) : 'sansu';
   const difficultyFilter: Difficulty | null =
@@ -120,12 +130,19 @@ export default function QuizScreen() {
   const isDaily = mode === 'daily';
   const isMock = mode === 'mock';
   const isKakomon = mode === 'kakomon';
+  // テスト対策モード（学期末・学力調査・レベル別・入試）。
+  // 種類ごとに難易度の配分と、記述式・複数小問（活用型）の比率を変える。
+  const testModeKey: TestModeKey | null =
+    testModeParam === 'term' || testModeParam === 'achievement' ||
+    testModeParam === 'level' || testModeParam === 'nyushi'
+      ? testModeParam
+      : null;
   const course: CourseKey = courseParam && isCourseKey(courseParam) ? courseParam : 'general';
   const examType: ExamType = examTypeParam && isExamType(examTypeParam) ? examTypeParam : 'chugaku';
   const info = subjectInfo[subjectKey];
 
   // isMax/isPro を useMemo より前に宣言しないと Temporal Dead Zone クラッシュが起きる
-  const { isPro: subIsPro, isMax: subIsMax } = useSubscription();
+  const { isPro: subIsPro, isMax: subIsMax, loading: subLoading } = useSubscription();
   const { hasAccess: betaAccess } = useBetaAccess();
   const isPro = subIsPro || betaAccess;
   const isMax = subIsMax || betaAccess;
@@ -150,6 +167,12 @@ export default function QuizScreen() {
         return shuffle(pool);
       }
     }
+    if (testModeKey) {
+      const tm = getTestMode(testModeKey);
+      let pool = all.filter((q) => (q.examType ?? 'chugaku') === examType);
+      if (!(isPro || isMax)) pool = pool.filter((q) => !q.maxOnly);
+      return buildTestSet(pool, tm, restartKey + 1, difficultyFilter as LevelKey | undefined);
+    }
     if (isMock) {
       // 模擬試験: 入試形式（学校別大問）を除いた一般問題のみ使用
       const generalKey = examType === 'koko' ? 'koko-general' : 'general';
@@ -167,7 +190,7 @@ export default function QuizScreen() {
     }
     const filtered = filterQuestions(all, examType, course, difficultyFilter, isPro || isMax);
     return shuffle(filtered);
-  }, [subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, course, examType, isPro, isMax, topicParam, restartKey]);
+  }, [subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, testModeKey, course, examType, isPro, isMax, topicParam, restartKey]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -178,7 +201,14 @@ export default function QuizScreen() {
   const [wrongIds, setWrongIds] = useState<string[]>([]);
   const [feedback, setFeedback] = useState<'correct' | 'wrong' | null>(null);
   const [waitingNext, setWaitingNext] = useState(false);
+  // 正解/不正解ボタンの二重タップ防止。二重に走ると currentIndex が2つ進み、
+  // 最後の2問で範囲外になって落ちる。
+  const answeringRef = useRef(false);
   const [showPaywall, setShowPaywall] = useState(false);
+  // 無料お試しの上限で止められたかどうか（ペイウォールを閉じた後の行き先を変える）
+  const [trialBlocked, setTrialBlocked] = useState(false);
+  // 画面を離れた後にタイマーが発火して未マウントの状態を触らないよう、破棄用に保持する
+  const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
   const [showTutorChat, setShowTutorChat] = useState(false);
   // 出題キュー（基礎問題の差し込みで伸びることがある）
   const [queue, setQueue] = useState<Question[]>([]);
@@ -244,8 +274,17 @@ export default function QuizScreen() {
     return true;
   }
 
+  // 画面を離れたら未発火のタイマーを止める（未マウントの状態更新を防ぐ）
+  useEffect(() => {
+    return () => {
+      timersRef.current.forEach(clearTimeout);
+      timersRef.current = [];
+    };
+  }, []);
+
   async function advanceOrFinish(currentScore: number, currentWrongIds: string[]) {
     setWaitingNext(false);
+    answeringRef.current = false;
     if (currentIndex + 1 >= total) {
       if (!savedProgress) {
         setSavedProgress(true);
@@ -262,11 +301,18 @@ export default function QuizScreen() {
   }
 
   async function handleAnswer(correct: boolean) {
-    // 無料ユーザーのお試し問題数チェック
-    if (!isPro && !isMax) {
+    if (answeringRef.current) return;
+    answeringRef.current = true;
+
+    // 無料ユーザーのお試し問題数チェック。
+    // 課金状態の取得中（subLoading）は加入者も未加入に見えるため、その間は
+    // 上限判定をしない（加入者がいきなりペイウォールで止められるのを防ぐ）。
+    if (!isPro && !isMax && !subLoading) {
       const expired = await isTrialExpired();
       if (expired) {
+        setTrialBlocked(true);
         setShowPaywall(true);
+        answeringRef.current = false;
         return;
       }
       await incrementTrialQuestions();
@@ -288,20 +334,20 @@ export default function QuizScreen() {
       }
       setRemedialJustInjected(injected);
       setFeedback('wrong');
-      setTimeout(() => {
+      timersRef.current.push(setTimeout(() => {
         setFeedback(null);
         setWaitingNext(true);
-      }, 400);
+      }, 400));
       return;
     }
 
     // 正解：連続不正解をリセットして花火を打ち上げる
     setWrongStreak(0);
     setShowFireworks(true);
-    setTimeout(async () => {
+    timersRef.current.push(setTimeout(async () => {
       setShowFireworks(false);
       await advanceOrFinish(newScore, newWrongIds);
-    }, 1100);
+    }, 1100));
   }
 
   async function handleRestart() {
@@ -309,6 +355,7 @@ export default function QuizScreen() {
     // useEffect が全ステートを初期化する（＝毎回ちがう順番で出題）。
     setShowPaywall(false);
     setShowTutorChat(false);
+    setTrialBlocked(false);
     setRestartKey((k) => k + 1);
   }
 
@@ -675,8 +722,24 @@ export default function QuizScreen() {
 
       <Paywall
         visible={showPaywall}
-        onClose={() => setShowPaywall(false)}
-        onPurchased={() => setShowPaywall(false)}
+        onClose={() => {
+          setShowPaywall(false);
+          // お試し上限に達した状態でペイウォールを閉じると、選択肢は選択済みで
+          // 無効・「次へ」も出ない行き止まりになる。閉じたら一覧へ戻す。
+          if (trialBlocked) {
+            if (router.canGoBack()) router.back();
+            else router.replace('/');
+          }
+        }}
+        onPurchased={() => {
+          setShowPaywall(false);
+          // 上限で止められた問題は選択肢が選択済み・「次へ」も無い状態のため、
+          // 購入後はそのカードに戻さず出題をやり直す。
+          if (trialBlocked) {
+            setTrialBlocked(false);
+            setRestartKey((k) => k + 1);
+          }
+        }}
       />
 
       <TutorChat
@@ -706,7 +769,7 @@ const styles = StyleSheet.create({
     minWidth: 60,
   },
   backBtnText: {
-    fontSize: 22,
+    fontSize: 15,
     color: '#FFFFFF',
     fontWeight: '700',
   },
@@ -718,16 +781,16 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   headerEmoji: {
-    fontSize: 30,
+    fontSize: 20,
   },
   headerTitle: {
-    fontSize: 28,
+    fontSize: 18,
     fontWeight: '800',
     color: '#FFFFFF',
-    letterSpacing: 1,
+    letterSpacing: 0.5,
   },
   headerDiff: {
-    fontSize: 20,
+    fontSize: 12,
     fontWeight: '700',
     color: 'rgba(255,255,255,0.9)',
     marginTop: 2,
@@ -749,7 +812,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   questionIndicator: {
-    fontSize: 22,
+    fontSize: 13,
     color: 'rgba(255,255,255,0.9)',
     fontWeight: '700',
   },
@@ -784,7 +847,7 @@ const styles = StyleSheet.create({
     borderColor: '#B8E6C8',
   },
   scoreBadgeText: {
-    fontSize: 22,
+    fontSize: 13,
     color: '#00A651',
     fontWeight: '700',
   },
@@ -797,7 +860,7 @@ const styles = StyleSheet.create({
     borderColor: '#C5D8F8',
   },
   remainBadgeText: {
-    fontSize: 22,
+    fontSize: 13,
     color: '#1E5FBE',
     fontWeight: '700',
   },
@@ -811,7 +874,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#00A651',
     borderRadius: 20,
-    paddingVertical: 26,
+    paddingVertical: 18,
     alignItems: 'center',
     shadowColor: '#00A651',
     shadowOffset: { width: 0, height: 4 },
@@ -820,7 +883,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   correctButtonText: {
-    fontSize: 36,
+    fontSize: 22,
     fontWeight: '900',
     color: '#FFFFFF',
     letterSpacing: 1,
@@ -829,7 +892,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#E74C3C',
     borderRadius: 20,
-    paddingVertical: 26,
+    paddingVertical: 18,
     alignItems: 'center',
     shadowColor: '#E74C3C',
     shadowOffset: { width: 0, height: 4 },
@@ -838,7 +901,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   wrongButtonText: {
-    fontSize: 36,
+    fontSize: 22,
     fontWeight: '900',
     color: '#FFFFFF',
     letterSpacing: 1,
@@ -849,7 +912,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   revealHintText: {
-    fontSize: 24,
+    fontSize: 14,
     color: '#AAA',
     fontWeight: '600',
   },
@@ -886,7 +949,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   explanationText: {
-    fontSize: 16,
+    fontSize: 17,
     color: '#333',
     lineHeight: 26,
     fontWeight: '500',
@@ -914,10 +977,10 @@ const styles = StyleSheet.create({
     zIndex: 999,
   },
   feedbackText: {
-    fontSize: 220,
+    fontSize: 150,
     fontWeight: '900',
     color: '#FFFFFF',
-    lineHeight: 260,
+    lineHeight: 180,
   },
   // Results screen styles
   resultsContainer: {
@@ -1058,7 +1121,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   wrongHeaderText: {
-    fontSize: 26,
+    fontSize: 18,
     fontWeight: '900',
     color: '#C0392B',
     letterSpacing: 1,

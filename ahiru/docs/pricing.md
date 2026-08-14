@@ -8,38 +8,38 @@
 
 | プラン | 月額 | 年額 | エンタイトルメント |
 |---|---|---|---|
-| PRO | **¥1,700/月** | — | `pro` |
-| MAX | **¥2,850/月** | — | `max` |
-| 英単語Pro（vocab） | **¥1,130/月** | **¥8,980/年** | `vocab` |
+| PRO | **¥1,980/月** | — | `pro` |
+| MAX | **¥2,890/月** | — | `max` |
+| 英単語Pro（vocab） | **¥1,680/月** | **¥13,800/年** | `vocab` |
 
 - 無料プラン：¥0（ずっと無料）。
-- 年額 ¥8,980 は月額 ¥1,130×12=¥13,560 に対して約 34%お得（約4.6か月分無料相当）。
+- 価格・Product IDは `constants/pricing.ts` と `services/subscription.ts` が唯一の情報源。本ドキュメントは必ずコードと同期させること（過去に本ドキュメントの記載が古いまま放置され、実際のコード・ストア設定と食い違っていたことがある）。
 
 ## 商品ID（3プラットフォームで対応させる）
 
 | プラン | App Store / Google Play の Product ID | RevenueCat Web の Package ID |
 |---|---|---|
-| PRO 月額 | `com.zaibase.exam.pro.monthly` | `pro_monthly` |
-| MAX 月額 | `com.zaibase.exam.max.monthly` | `max_monthly` |
-| 英単語 月額 | `com.zaibase.exam.vocab.monthly` | `vocab_monthly` |
-| 英単語 年額 | `com.zaibase.exam.vocab.yearly` | `vocab_yearly` |
+| PRO 月額 | `com.zaibase.exam.promonthly` | `pro_monthly` |
+| MAX 月額 | `com.zaibase.exam.maxmonthly` | `max_monthly` |
+| 英単語 月額 | `com.zaibase.exam.vocabmonthly` | `vocab_monthly` |
+| 英単語 年額 | `com.zaibase.exam.vocabyearly` | `vocab_yearly` |
 
-（定義元：`services/subscription.ts`）
+（定義元：`services/subscription.ts`。**ドットなし**の形式。Apple側のID再利用制限により、旧ドット付きID `com.zaibase.exam.pro.monthly` 等から変更された経緯があるため、新規に商品を作成する際は必ずこの表のドットなしIDを使うこと）
 
 ## 各ストアでの登録手順（同額にする）
 
 ### iOS（App Store Connect）
 - 自動更新サブスク4本を作成し、上表の Product ID を設定。
-- 価格は「価格ポイント（Price Point）」から**日本円で ¥1,700 / ¥2,850 / ¥1,130 / ¥8,980 に一致するもの**を選ぶ。基準通貨を日本にし、他国は自動換算でよい（「同額」は各国通貨での厳密一致ではなく、日本の表示額を指す）。
+- 価格は「価格ポイント（Price Point）」から**日本円で ¥1,980 / ¥2,890 / ¥1,680 / ¥13,800 に一致するもの**を選ぶ。基準通貨を日本にし、他国は自動換算でよい（「同額」は各国通貨での厳密一致ではなく、日本の表示額を指す）。
 - サブスクグループ：PRO と MAX は同一グループ（アップグレード/ダウングレード可能に）。英単語(vocab)は別グループ推奨。
 
 ### Android（Google Play Console）
 - 定期購入（サブスクリプション）4本を作成し、同じ Product ID を設定。
-- 基本プランの価格を**日本円で ¥1,700 / ¥2,850 / ¥1,130 / ¥8,980** に設定（Google Play は円を直接入力可）。
+- 基本プランの価格を**日本円で ¥1,980 / ¥2,890 / ¥1,680 / ¥13,800** に設定（Google Play は円を直接入力可）。
 - 年額は英単語のみ（`vocab_yearly`）。
 
 ### Web（RevenueCat Web Billing + Stripe）
-- Stripe の Product/Price を**円で ¥1,700 / ¥2,850 / ¥1,130 / ¥8,980** で作成。
+- Stripe の Product/Price を**円で ¥1,980 / ¥2,890 / ¥1,680 / ¥13,800** で作成。
 - RevenueCat の Web Billing で Package ID（`pro_monthly` 等）に紐付け。
 - 環境変数 `EXPO_PUBLIC_RC_API_KEY_WEB`（`rcb_...`）を設定。
 
@@ -50,6 +50,6 @@
 
 ## 表示について
 - アプリは各ストアが返す `priceString`（実際の登録額）を表示するため、上記のとおり同額で登録すれば全プラットフォームで同じ金額が表示される。
-- ストア価格の取得前・未設定時は `constants/pricing.ts` のフォールバック表示（¥1,700/月 等）が出る。よってフォールバックと実登録額を一致させておくこと。
+- ストア価格の取得前・未設定時は `constants/pricing.ts` のフォールバック表示（¥1,980/月 等）が出る。よってフォールバックと実登録額を一致させておくこと。
 
 > この表を変更したら `constants/pricing.ts` と各ストア登録額を必ず同時に更新する。

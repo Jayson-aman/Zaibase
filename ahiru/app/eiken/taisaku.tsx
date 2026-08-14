@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, ScrollView } from 'react-native';
 import { useRouter } from 'expo-router';
+import HomeButton from '../../components/HomeButton';
 
 type GuideSection = { id: string; emoji: string; title: string; body: string };
 
@@ -185,7 +186,12 @@ export default function EikenTaisakuScreen() {
   return (
     <SafeAreaView style={styles.safe}>
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()}><Text style={styles.back}>← 戻る</Text></TouchableOpacity>
+        <View style={styles.headerTopRow}>
+          <TouchableOpacity onPress={() => (router.canGoBack() ? router.back() : router.replace('/'))}>
+            <Text style={styles.back}>← 戻る</Text>
+          </TouchableOpacity>
+          <HomeButton variant="light" />
+        </View>
         <Text style={styles.title}>🎯 英検 二次・ライティング対策</Text>
         <Text style={styles.sub}>面接の流れ・解答の型・級別重要文法</Text>
       </View>
@@ -215,7 +221,8 @@ export default function EikenTaisakuScreen() {
 const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: '#F5F7FA' },
   header: { backgroundColor: '#4A0072', paddingHorizontal: 20, paddingVertical: 16 },
-  back: { color: 'rgba(255,255,255,0.85)', fontSize: 14, fontWeight: '700', marginBottom: 8 },
+  headerTopRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 },
+  back: { color: 'rgba(255,255,255,0.85)', fontSize: 14, fontWeight: '700' },
   title: { fontSize: 18, fontWeight: '900', color: '#FFFFFF' },
   sub: { fontSize: 12, color: 'rgba(255,255,255,0.75)', fontWeight: '600', marginTop: 2 },
   content: { padding: 16, paddingBottom: 40 },

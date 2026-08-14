@@ -25,6 +25,20 @@ export function isRevenueCatConfigured(): boolean {
   return key.length > 10 && !key.toUpperCase().includes('XXXX');
 }
 
+// Web版にはネイティブのようなCustomerInfo更新リスナーが無いため、購入・復元の直後に
+// useSubscription/useVocabSubscription へ明示的に通知して画面の権限表示を即座に更新する。
+type EntitlementListener = (info: unknown) => void;
+const entitlementListeners = new Set<EntitlementListener>();
+
+export function onEntitlementChanged(listener: EntitlementListener): () => void {
+  entitlementListeners.add(listener);
+  return () => entitlementListeners.delete(listener);
+}
+
+function emitEntitlementChanged(info: unknown): void {
+  entitlementListeners.forEach((listener) => listener(info));
+}
+
 async function getWebPurchases() {
   const { Purchases } = await import('@revenuecat/purchases-js');
   if (Purchases.isConfigured()) return Purchases.getSharedInstance();
@@ -123,7 +137,33 @@ export function initRevenueCat(): void {
       }
       const apiKey =
         Platform.select({ ios: RC_KEY_IOS, android: RC_KEY_ANDROID }) ?? RC_KEY_IOS;
+
+      // 先に匿名で configure してから logIn(uid) で紐付ける。
+      //
+      // configure({ appUserID }) を直接使ってはいけない：
+      //   configure は「そのIDで始める」だけで、既存の匿名IDに紐づいた購入を
+      //   引き継がない。既に購入済みの人が新バージョンを開くと別人扱いになり、
+      //   課金しているのに無料表示に戻ってしまう。
+      //   logIn は現在が匿名なら購入を新しいIDへ移し替える（エイリアス）ので、
+      //   既存購入者も、匿名のまま購入した人が後からログインする場合も救われる。
+      //
+      // uid を紐付ける目的：サーバー（Cloud Functions）は Firebase uid で
+      // RevenueCat に問い合わせるため、一致していないと課金者が無料扱いになる。
       Purchases.configure({ apiKey });
+
+      // 認証の待ちで configure 自体が遅れないよう、紐付けは後追いで行う。
+      // ネットワーク不調で認証が返らない場合に購入導線ごと死なせないため、
+      // タイムアウトを設ける。
+      try {
+        const { getAuthUid } = await import('./firebaseClient');
+        const uid = await Promise.race([
+          getAuthUid(),
+          new Promise<null>((resolve) => setTimeout(() => resolve(null), 8000)),
+        ]);
+        if (uid) await Purchases.logIn(uid);
+      } catch {
+        // 紐付けに失敗しても購入自体は可能。次回起動時に再試行される。
+      }
     } catch {
       // RevenueCat 未設定時は無視
     }
@@ -160,10 +200,13 @@ export async function getCustomerInfo(): Promise<unknown> {
   return Purchases.getCustomerInfo();
 }
 
-export const PRODUCT_ID_PRO = 'com.zaibase.exam.pro.monthly';
-export const PRODUCT_ID_MAX = 'com.zaibase.exam.max.monthly';
-export const PRODUCT_ID_VOCAB_MONTHLY = 'com.zaibase.exam.vocab.monthly';
-export const PRODUCT_ID_VOCAB_YEARLY = 'com.zaibase.exam.vocab.yearly';
+// ⚠️ 製品IDは App Store Connect で一度作成すると削除しても再利用不可（Apple仕様）。
+// アプリ誤削除→復元で旧ID（*.pro.monthly 等）が使用済みになったため、
+// ドット無しの新IDに変更。App Store Connect / RevenueCat 側もこのIDで作成すること。
+export const PRODUCT_ID_PRO = 'com.zaibase.exam.promonthly';
+export const PRODUCT_ID_MAX = 'com.zaibase.exam.maxmonthly';
+export const PRODUCT_ID_VOCAB_MONTHLY = 'com.zaibase.exam.vocabmonthly';
+export const PRODUCT_ID_VOCAB_YEARLY = 'com.zaibase.exam.vocabyearly';
 
 type WebPackageLike = {
   identifier: string;
@@ -263,13 +306,16 @@ export async function fetchVocabProducts(): Promise<{ monthly: unknown; yearly: 
 
 export async function purchaseProduct(product: unknown): Promise<unknown> {
   if (!isRevenueCatConfigured()) throw new Error('課金は準備中です');
+  let customerInfo: unknown;
   if (isWeb) {
     const purchases = await getWebPurchases();
     const result = await purchases.purchase({ rcPackage: unwrapWebPackage(product) as never });
-    return result.customerInfo;
+    customerInfo = result.customerInfo;
+  } else {
+    const Purchases = (await import('react-native-purchases')).default;
+    customerInfo = (await Purchases.purchaseStoreProduct(product as never)).customerInfo;
   }
-  const Purchases = (await import('react-native-purchases')).default;
-  const { customerInfo } = await Purchases.purchaseStoreProduct(product as never);
+  emitEntitlementChanged(customerInfo);
   return customerInfo;
 }
 
@@ -277,13 +323,16 @@ export async function purchasePackage(pkg: unknown): Promise<unknown> {
   if (!isRevenueCatConfigured()) {
     throw new Error('課金は準備中です');
   }
+  let customerInfo: unknown;
   if (isWeb) {
     const purchases = await getWebPurchases();
     const result = await purchases.purchase({ rcPackage: unwrapWebPackage(pkg) as never });
-    return result.customerInfo;
+    customerInfo = result.customerInfo;
+  } else {
+    const Purchases = (await import('react-native-purchases')).default;
+    customerInfo = (await Purchases.purchasePackage(pkg as never)).customerInfo;
   }
-  const Purchases = (await import('react-native-purchases')).default;
-  const { customerInfo } = await Purchases.purchasePackage(pkg as never);
+  emitEntitlementChanged(customerInfo);
   return customerInfo;
 }
 
@@ -291,11 +340,15 @@ export async function restorePurchases(): Promise<unknown> {
   if (!isRevenueCatConfigured()) {
     throw new Error('課金は準備中です');
   }
+  let customerInfo: unknown;
   if (isWeb) {
     // Web版は購入時のブラウザに紐づく匿名IDで管理されるため、最新の顧客情報を再取得する
     const purchases = await getWebPurchases();
-    return purchases.getCustomerInfo();
+    customerInfo = await purchases.getCustomerInfo();
+  } else {
+    const Purchases = (await import('react-native-purchases')).default;
+    customerInfo = await Purchases.restorePurchases();
   }
-  const Purchases = (await import('react-native-purchases')).default;
-  return Purchases.restorePurchases();
+  emitEntitlementChanged(customerInfo);
+  return customerInfo;
 }

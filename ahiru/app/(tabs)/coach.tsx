@@ -159,7 +159,9 @@ const lk = StyleSheet.create({
 export default function CoachScreen() {
   const { bySubject: questionsBySubject } = useQuestionsBySubjectMap();
   const [progressData, setProgressData] = useState<ProgressData>({});
-  const { isPro, isMax } = useSubscription();
+  // 課金状態の取得中は isPro/isMax が初期値(false)のため、loading を見ずに
+  // 分岐すると加入者にも一瞬「Proプランで解放」のロック画面が出てしまう。
+  const { isPro, isMax, loading: subLoading } = useSubscription();
   const [paywallVisible, setPaywallVisible] = useState(false);
 
   // つまずき分析 state
@@ -209,7 +211,9 @@ export default function CoachScreen() {
   }
 
   async function handleAskCoach() {
-    if (!isPro) { setPaywallVisible(true); return; }
+    // サーバー（getWeakPointCoaching）はMax限定。ここをProで通すと、
+    // Pro購入者がボタンを押した瞬間に「Maxにアップグレードして」と拒否される。
+    if (!isMax) { setPaywallVisible(true); return; }
     if (!worstSubject) {
       Alert.alert('まだデータがありません', '問題に挑戦するとAIが弱点を分析できるようになります。');
       return;
@@ -275,7 +279,9 @@ export default function CoachScreen() {
           badge="Pro"
           badgeColor={C.coral}
         >
-          {isPro ? (
+          {subLoading ? (
+            <ActivityIndicator color={C.coral} style={{ paddingVertical: 12 }} />
+          ) : isPro ? (
             <View>
               <Text style={s.sectionLabel}>科目別まちがい数</Text>
               {wrongCountBySubject.map(({ key, count }) => {
@@ -313,7 +319,9 @@ export default function CoachScreen() {
                     <ActivityIndicator color="#FFF" />
                   ) : (
                     <Text style={s.coachBtnText}>
-                      🤖 {subjectInfo[worstSubject].name}の弱点をAIに相談する
+                      {isMax
+                        ? `🤖 ${subjectInfo[worstSubject].name}の弱点をAIに相談する`
+                        : `🤖 AIに相談する（Maxプラン ${MAX_PRICE_LABEL}）`}
                     </Text>
                   )}
                 </TouchableOpacity>
@@ -348,7 +356,9 @@ export default function CoachScreen() {
           badge="Pro"
           badgeColor={C.primary}
         >
-          {isPro ? (
+          {subLoading ? (
+            <ActivityIndicator color={C.primary} style={{ paddingVertical: 12 }} />
+          ) : isPro ? (
             <View>
               {studiedSubjects.length === 0 ? (
                 <Text style={s.emptyHint}>
@@ -429,7 +439,9 @@ export default function CoachScreen() {
           badge="Max"
           badgeColor={C.purple}
         >
-          {isMax ? (
+          {subLoading ? (
+            <ActivityIndicator color={C.purple} style={{ paddingVertical: 12 }} />
+          ) : isMax ? (
             <View>
               <View style={s.essayLabelRow}>
                 <Text style={s.sectionLabel}>記述の答えを入力してください</Text>
@@ -478,7 +490,7 @@ export default function CoachScreen() {
           )}
         </StepCard>
 
-        <View style={{ height: 32 }} />
+        <View style={{ height: 120 }} />
       </ScrollView>
 
       <Paywall

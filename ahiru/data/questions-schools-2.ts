@@ -808,9 +808,9 @@ export const kansaiHokuyoQuestions: Question[] = [
     id: 'kansai_hokuyo_sansu_06', subject: 'sansu', difficulty: 'advanced',
     course: 'kansai-hokuyo', examType: 'chugaku',
     question: '1から50までの整数の中で、4の倍数の合計を求めなさい。',
-    answer: '324',
+    answer: '312',
     hint: '4、8、12…48。等差数列の和',
-    explanation: '【解法】4の倍数：4、8、12、…、48\n個数：48÷4 = 12個\n等差数列の和 = (最初+最後)×個数÷2\n= (4+48)×12÷2 = 52×6 = 312\n\n別計算：4+8+…+48 = 4(1+2+…+12) = 4×78 = 312\n※正確な答えは312。324は誤り→312が正解',
+    explanation: '【解法】50以下の4の倍数：4、8、12、…、48\n個数：48÷4 = 12個\n等差数列の和 = (最初+最後)×個数÷2\n= (4+48)×12÷2 = 52×6 = 312\n\n【別解】4+8+…+48 = 4×(1+2+…+12) = 4×78 = 312',
   },
   // --- 国語 ---
   {

@@ -853,4 +853,316 @@ export const lessonFigsKokoRika: Record<string, Figure> = {
     ],
     caption: '物体が完全に沈んだあとは、深さが増しても押しのける体積が変わらず浮力は一定',
   },
+
+  // ===== 追加バッチ：物理（力のつりあい・仕事・電力・光・運動・磁界・圧力浮力） =====
+  lf_krika_54: {
+    kind: 'polygon',
+    points: [
+      { x: 0, y: 0, label: 'A' },
+      { x: 4, y: 0, label: 'B' },
+      { x: 2, y: 3, label: 'C' },
+    ],
+    sideLabels: ['F1', 'F2', 'F3'],
+    caption: '3力のつりあい：力の矢印を頭と尾でつないでいくと閉じた三角形になる→合力はゼロ',
+  },
+  lf_krika_55: {
+    kind: 'coordinate',
+    xRange: [0, 4],
+    yRange: [0, 25],
+    polygon: [
+      { x: 0, y: 0 },
+      { x: 3, y: 0 },
+      { x: 3, y: 20 },
+      { x: 0, y: 20 },
+    ],
+    caption: '仕事 W=F×d はF-dグラフの面積：F=20N・d=3mのときW=20×3=60J',
+  },
+  lf_krika_56: {
+    kind: 'lineChart',
+    xLabel: '通電時間 (s)',
+    yLabel: '発熱量 Q (J)',
+    series: [
+      {
+        label: 'P=500W',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 180, y: 90000 },
+        ],
+      },
+    ],
+    caption: 'Q=Pt：100V・500Wの電熱器を3分（180秒）使うと発熱量は90000J（90kJ）',
+  },
+  lf_krika_57: {
+    kind: 'coordinate',
+    xRange: [-4, 4],
+    yRange: [-1, 4],
+    segments: [
+      [{ x: -3, y: 3 }, { x: 0, y: 0 }],
+      [{ x: 0, y: 0 }, { x: 3, y: 3 }],
+    ],
+    points: [
+      { x: -3, y: 3, label: '入射光' },
+      { x: 3, y: 3, label: '反射光' },
+    ],
+    caption: '反射の法則：入射角=反射角（角度は鏡の面に立てた法線＝縦軸から測る。横軸が鏡の面）',
+  },
+  lf_krika_58: {
+    kind: 'lineChart',
+    xLabel: '時間 t (s)',
+    yLabel: '速さ v (m/s)',
+    series: [
+      {
+        label: 'a=2m/s²（初速度0）',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 5, y: 10 },
+        ],
+      },
+    ],
+    caption: 'v-tグラフの傾き=加速度。5秒後にv=2×5=10m/s、この間の移動距離x=25m（グラフの面積）',
+  },
+  lf_krika_59: {
+    kind: 'lineChart',
+    xLabel: '加速度 a (m/s²)',
+    yLabel: '力 F (N)',
+    series: [
+      {
+        label: 'm=2kg',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 1, y: 2 },
+          { x: 2, y: 4 },
+          { x: 3, y: 6 },
+        ],
+      },
+    ],
+    caption: '運動方程式 F=ma：質量2kgの物体では力は加速度に比例する（a=2m/s²のときF=4N）',
+  },
+  lf_krika_60: {
+    kind: 'lineChart',
+    xLabel: '時間 (s)',
+    yLabel: '速さ (m/s)',
+    series: [
+      {
+        label: '衝突による減速',
+        markers: true,
+        points: [
+          { x: 0, y: 15 },
+          { x: 0.3, y: 0 },
+        ],
+      },
+    ],
+    caption: '質量1500kg・15m/sの自動車が0.3秒で停止：平均の力=運動量変化/時間=22500/0.3=75000N',
+  },
+  lf_krika_61: {
+    kind: 'lineChart',
+    xLabel: '水深 (m)',
+    yLabel: '水圧 (相対値)',
+    series: [
+      {
+        label: '水圧は水深に比例',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 5, y: 5 },
+          { x: 10, y: 10 },
+        ],
+      },
+    ],
+    caption: '水圧は水深に比例して大きくなる。あらゆる向きから同じ深さなら同じ大きさではたらく',
+  },
+  lf_krika_62: {
+    kind: 'pieChart',
+    slices: [
+      { label: '水中部分', value: 92 },
+      { label: '水面上', value: 8 },
+    ],
+    caption: '氷（密度0.92g/cm³）が水（密度1.00g/cm³）に浮くとき、体積の92%が水中、8%が水面上に出る',
+  },
+  lf_krika_63: {
+    kind: 'pieChart',
+    slices: [
+      { label: '海中部分', value: 89 },
+      { label: '海面上', value: 11 },
+    ],
+    caption: '氷山（氷0.92g/cm³・海水1.03g/cm³）：海面上に見えるのは全体のわずか約11%（「氷山の一角」）',
+  },
+  lf_krika_81: {
+    kind: 'lineChart',
+    xLabel: '磁石の強さ（相対値）',
+    yLabel: '導線が受ける力 (N)',
+    series: [
+      {
+        label: '電流一定',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 1, y: 1 },
+          { x: 2, y: 2 },
+        ],
+      },
+    ],
+    caption: 'フレミングの左手の法則：磁界(磁石)が強いほど、電流が磁界から受ける力は大きい（導線が磁界に垂直なとき最大）',
+  },
+
+  // ===== 追加バッチ：化学（密度・電池・モル計算） =====
+  lf_krika_64: {
+    kind: 'lineChart',
+    xLabel: '体積 (cm³)',
+    yLabel: '質量 (g)',
+    series: [
+      {
+        label: '密度2.7g/cm³（アルミニウム）',
+        markers: true,
+        points: [
+          { x: 0, y: 0 },
+          { x: 20, y: 54 },
+        ],
+      },
+    ],
+    caption: '密度=質量÷体積：質量54g・体積20cm³の金属→密度2.7g/cm³（アルミニウムと分かる）',
+  },
+  lf_krika_65: {
+    kind: 'chemEquation',
+    equation: '2H2 + O2 -> 2H2O',
+    caption: '燃料電池：水素と酸素の反応から化学エネルギーを直接電気エネルギーに変える（生成物は水のみ）',
+  },
+  lf_krika_66: {
+    kind: 'barChart',
+    yLabel: '質量変化 (g)',
+    bars: [
+      { label: '亜鉛（減少）', value: 2.6 },
+      { label: '銅（析出）', value: 2.56 },
+    ],
+    caption: 'ダニエル電池：亜鉛が2.6g（0.04mol）とけると、電子の数が等しいので銅は0.04mol=2.56g析出する',
+  },
+  lf_krika_67: {
+    kind: 'chemEquation',
+    equation: 'Cu + 2Ag+ -> Cu2+ + 2Ag',
+    caption: '金属樹：銅が電子を放出してとけ（Cu→Cu2++2e-）、銀イオンがその電子を受け取り銀が析出する',
+  },
+  lf_krika_68: {
+    kind: 'barChart',
+    yLabel: '分子量・式量',
+    bars: [
+      { label: 'H2O', value: 18 },
+      { label: 'CO2', value: 44 },
+      { label: 'NaCl', value: 58.5 },
+    ],
+    caption: '分子量・式量は原子量の総和：H2O=1×2+16=18、CO2=12+16×2=44、NaCl=23+35.5=58.5',
+  },
+  lf_krika_69: {
+    kind: 'barChart',
+    yLabel: '標準状態で1molの質量 (g)',
+    bars: [
+      { label: '水素H2', value: 2 },
+      { label: '酸素O2', value: 32 },
+      { label: '二酸化炭素CO2', value: 44 },
+    ],
+    caption: '気体は種類によらず標準状態(0℃・1気圧)で1molは22.4L。質量は分子量に等しい（アボガドロの法則）',
+  },
+  lf_krika_70: {
+    kind: 'barChart',
+    yLabel: '物質量 (mol)',
+    bars: [
+      { label: 'C（炭素）', value: 3 },
+      { label: 'O2（酸素）', value: 3 },
+      { label: 'CO2', value: 3 },
+    ],
+    caption: 'C+O2→CO2の係数比は1:1:1。炭素3molを完全燃焼させると酸素3molを消費し、CO2が3mol(132g)生成する',
+  },
+  lf_krika_71: {
+    kind: 'barChart',
+    yLabel: 'モル濃度 (mol/L)',
+    bars: [
+      { label: '希釈前(100mL)', value: 2.0 },
+      { label: '希釈後(500mL)', value: 0.4 },
+    ],
+    caption: '希釈しても溶質の物質量は変わらない：c1V1=c2V2 → 2.0×100=c2×500 → c2=0.4mol/L',
+  },
+
+  // ===== 追加バッチ：生物（葉・花・種子・遺伝の発展） =====
+  lf_krika_72: {
+    kind: 'bioDiagram',
+    template: 'leafCrossSection',
+    caption: '葉の断面：表皮・葉脈（道管は内側・師管は外側）・気孔のつくり',
+  },
+  lf_krika_73: {
+    kind: 'bioDiagram',
+    template: 'flower',
+    caption: '花のつくり：がく→花弁→おしべ(やく・花糸)→めしべ(柱頭・花柱・子房・胚珠)。受粉後、胚珠→種子、子房→果実になる',
+  },
+  lf_krika_74: {
+    kind: 'bioDiagram',
+    template: 'seed',
+    caption: '受精後、胚珠は種子になる。種子の中の胚（将来の子葉・幼根・幼芽）と種皮のつくり',
+  },
+  lf_krika_75: {
+    kind: 'barChart',
+    yLabel: '個体数の比',
+    bars: [
+      { label: '赤(RR)', value: 1 },
+      { label: '桃色(Rr)', value: 2 },
+      { label: '白(rr)', value: 1 },
+    ],
+    caption: '不完全優性(オシロイバナ)：Rr×Rrの子は表現型も遺伝子型と同じ1:2:1になる（ふつうの優性遺伝の3:1と異なる）',
+  },
+  lf_krika_76: {
+    kind: 'barChart',
+    yLabel: '子の血液型の比',
+    bars: [
+      { label: 'AB型', value: 1 },
+      { label: 'A型', value: 1 },
+      { label: 'B型', value: 1 },
+      { label: 'O型', value: 1 },
+    ],
+    caption: 'A型(IAi)の父×B型(IBi)の母の子：AB型・A型・B型・O型が1:1:1:1の割合ですべて生まれ得る',
+  },
+
+  // ===== 追加バッチ：理科総合・地学（時間配分・流水・惑星距離・変換効率） =====
+  lf_krika_77: {
+    kind: 'barChart',
+    yLabel: '目安時間 (分/問)',
+    bars: [
+      { label: '知識問題', value: 1 },
+      { label: '計算問題', value: 2.5 },
+      { label: '記述問題', value: 4 },
+      { label: '実験・グラフ考察', value: 3.5 },
+    ],
+    caption: '大問の時間配分の目安：計算・記述・実験考察の問題ほど時間をかけて解く',
+  },
+  lf_krika_78: {
+    kind: 'barChart',
+    yLabel: '流れの速さ（相対値）',
+    bars: [
+      { label: '上流', value: 3 },
+      { label: '中流', value: 2 },
+      { label: '下流', value: 1 },
+    ],
+    caption: '川の流れの速さ：上流(侵食・V字谷)＞中流(扇状地)＞下流(三角州、堆積が中心)の順にゆるやかになる',
+  },
+  lf_krika_79: {
+    kind: 'barChart',
+    yLabel: '太陽からの距離 (AU)',
+    bars: [
+      { label: '水星', value: 0.4 },
+      { label: '金星', value: 0.7 },
+      { label: '地球', value: 1.0 },
+      { label: '火星', value: 1.5 },
+      { label: '木星', value: 5.2 },
+      { label: '土星', value: 9.6 },
+    ],
+    caption: '太陽から遠い惑星ほど公転周期が長い（水星0.24年〜土星29年、ケプラーの法則の基礎）',
+  },
+  lf_krika_80: {
+    kind: 'pieChart',
+    slices: [
+      { label: '光として利用(60J)', value: 60 },
+      { label: '熱として損失(40J)', value: 40 },
+    ],
+    caption: '変換効率60%の電球：投入100Jのうち60Jが光に変換され、40Jは熱として失われる',
+  },
 };

@@ -1,6 +1,20 @@
 import type { Lesson } from './lesson-types';
+import { kokoRikaExt01Lessons } from './lessons-koko-rika-ext01';
+import { kokoRikaExt02Lessons } from './lessons-koko-rika-ext02';
+import { kokoRikaExt03Lessons } from './lessons-koko-rika-ext03';
+import { kokoRikaExt04Lessons } from './lessons-koko-rika-ext04';
+import { kokoRikaExt05Lessons } from './lessons-koko-rika-ext05';
+import { kokoRikaExt06Lessons } from './lessons-koko-rika-ext06';
+import { kokoRikaExt07Lessons } from './lessons-koko-rika-ext07';
+import { kokoRikaExt08Lessons } from './lessons-koko-rika-ext08';
+import { kokoRikaExt09Lessons } from './lessons-koko-rika-ext09';
+import { kokoRikaExt10Lessons } from './lessons-koko-rika-ext10';
+import { kokoRikaExt11Lessons } from './lessons-koko-rika-ext11';
+import { kokoRikaExt12Lessons } from './lessons-koko-rika-ext12';
 
-export const kokoRikaLessons: Lesson[] = [
+// 既存の総論レッスン（order 201〜222）。450セッションの拡張ユニットは
+// lessons-koko-rika-ext01〜ext12（order 501〜950）にあり、下でまとめて結合する。
+const kokoRikaOverviewLessons: Lesson[] = [
   {
     id: `koko_rika_01_physics`,
     keyPoints: [
@@ -22,6 +36,7 @@ export const kokoRikaLessons: Lesson[] = [
     sections: [
       {
         heading: `1. 力の種類とつりあい`,
+        figureId: 'lf_krika_54',
         level: 'kiso',
         body: `■ 力の種類と定義
 
@@ -101,6 +116,7 @@ F-x グラフ（比例直線）：
       },
       {
         heading: `3. 仕事とエネルギー保存`,
+        figureId: 'lf_krika_55',
         level: 'oyo',
         body: `■ 仕事の定義と計算
 
@@ -297,6 +313,7 @@ R1=6Ohm と R2=3Ohm を並列接続、電源電圧 V=12V のとき
       },
       {
         heading: `3. 電力・発熱量・電磁誘導`,
+        figureId: 'lf_krika_56',
         level: 'oyo',
         body: `■ 電力と電力量の関係
 
@@ -1138,6 +1155,7 @@ AaBb * AaBb の子の表現型比率：
       },
       {
         heading: `4. 入試レベル：複合問題と記述問題`,
+        figureId: 'lf_krika_77',
         level: 'nyushi',
         body: `■ 複合問題の解き方
 
@@ -1209,6 +1227,7 @@ AaBb * AaBb の子の表現型比率：
     sections: [
       {
         heading: `1. 光の反射と屈折`,
+        figureId: 'lf_krika_57',
         level: 'kiso',
         body: `■ 光の直進と反射の法則
 
@@ -1435,6 +1454,7 @@ AaBb * AaBb の子の表現型比率：
       },
       {
         heading: `2. 密度と気体の性質`,
+        figureId: 'lf_krika_64',
         level: 'oyo',
         body: `■ 密度の計算
 
@@ -1578,6 +1598,7 @@ AaBb * AaBb の子の表現型比率：
     sections: [
       {
         heading: `1. 根・茎・葉のつくり`,
+        figureId: 'lf_krika_72',
         level: 'kiso',
         body: `■ 根のつくりとはたらき
 
@@ -1652,6 +1673,7 @@ AaBb * AaBb の子の表現型比率：
       },
       {
         heading: `3. 花のつくりと植物の分類`,
+        figureId: 'lf_krika_73',
         level: 'oyo',
         body: `■ 花のつくり（外側から中心へ）
 
@@ -2125,6 +2147,7 @@ P波の速さ Vp、S波の速さ Vs、初期微動継続時間 t とすると、
       },
       {
         heading: `2. 等加速度直線運動の3公式`,
+        figureId: 'lf_krika_58',
         level: 'oyo',
         body: `■ 3つの基本公式
 
@@ -2156,6 +2179,7 @@ P波の速さ Vp、S波の速さ Vs、初期微動継続時間 t とすると、
       },
       {
         heading: `3. ニュートンの運動の3法則`,
+        figureId: 'lf_krika_59',
         level: 'oyo',
         body: `■ 第1法則：慣性の法則
 
@@ -2252,6 +2276,7 @@ P波の速さ Vp、S波の速さ Vs、初期微動継続時間 t とすると、
       },
       {
         heading: `6. 入試レベル：台車実験・衝突計算の応用`,
+        figureId: 'lf_krika_60',
         level: 'nyushi',
         body: `■ 斜面台車実験の考察
 
@@ -2365,6 +2390,7 @@ P波の速さ Vp、S波の速さ Vs、初期微動継続時間 t とすると、
       },
       {
         heading: `3. 磁界中の電流が受ける力（フレミングの左手の法則）`,
+        figureId: 'lf_krika_81',
         level: 'oyo',
         body: `■ 磁界の中の電流にはたらく力
 
@@ -2539,6 +2565,7 @@ U字形磁石のN極とS極の間に導線を置き電流を流すと、導線�
       },
       {
         heading: `3. 燃料電池と一次・二次電池`,
+        figureId: 'lf_krika_65',
         level: 'oyo',
         body: `■ 燃料電池
 
@@ -2566,6 +2593,7 @@ U字形磁石のN極とS極の間に導線を置き電流を流すと、導線�
       },
       {
         heading: `4. 入試レベル：電池の総合計算・考察`,
+        figureId: 'lf_krika_66',
         level: 'nyushi',
         body: `■ 電池の質量変化の計算
 
@@ -2600,6 +2628,7 @@ U字形磁石のN極とS極の間に導線を置き電流を流すと、導線�
       },
       {
         heading: `5. 入試レベル②：金属樹の実験と身のまわりの電池`,
+        figureId: 'lf_krika_67',
         level: 'nyushi',
         body: `■ 金属樹の実験
 
@@ -2656,6 +2685,7 @@ U字形磁石のN極とS極の間に導線を置き電流を流すと、導線�
     sections: [
       {
         heading: `1. 原子量・分子量・式量`,
+        figureId: 'lf_krika_68',
         level: 'kiso',
         body: `■ 原子量とは
 
@@ -2711,6 +2741,7 @@ U字形磁石のN極とS極の間に導線を置き電流を流すと、導線�
       },
       {
         heading: `3. 気体のモル体積とモル濃度`,
+        figureId: 'lf_krika_69',
         level: 'oyo',
         body: `■ 気体のモル体積
 
@@ -2744,6 +2775,7 @@ U字形磁石のN極とS極の間に導線を置き電流を流すと、導線�
       },
       {
         heading: `4. 入試レベル：化学反応式の量的関係とモル計算`,
+        figureId: 'lf_krika_70',
         level: 'nyushi',
         body: `■ 化学反応式の係数比＝物質量の比
 
@@ -2783,6 +2815,7 @@ U字形磁石のN極とS極の間に導線を置き電流を流すと、導線�
       },
       {
         heading: `5. 入試レベル②：濃度の希釈・混合とモル計算`,
+        figureId: 'lf_krika_71',
         level: 'nyushi',
         body: `■ 濃度の希釈計算
 
@@ -2897,6 +2930,7 @@ U字形磁石のN極とS極の間に導線を置き電流を流すと、導線�
       },
       {
         heading: `3. 植物の受精と種子形成`,
+        figureId: 'lf_krika_74',
         level: 'oyo',
         body: `■ 被子植物の受精のしくみ
 
@@ -3041,6 +3075,7 @@ U字形磁石のN極とS極の間に導線を置き電流を流すと、導線�
       },
       {
         heading: `2. 不完全優性`,
+        figureId: 'lf_krika_75',
         level: 'oyo',
         body: `■ 不完全優性とは
 
@@ -3121,6 +3156,7 @@ F1の遺伝子型はAa。検定交雑（aaとのかけ合わせ）で丸:しわ=
       },
       {
         heading: `5. 入試レベル③：複対立遺伝子とABO式血液型の発展`,
+        figureId: 'lf_krika_76',
         level: 'nyushi',
         body: `■ 複対立遺伝子とは
 
@@ -3474,6 +3510,7 @@ O型の子（ii）が生まれるには、両親とも少なくとも1つのi（
       },
       {
         heading: `5. 流水がつくる地形`,
+        figureId: 'lf_krika_78',
         level: 'oyo',
         body: `■ 川の3つのはたらき
 
@@ -3578,6 +3615,7 @@ O型の子（ii）が生まれるには、両親とも少なくとも1つのi（
       },
       {
         heading: `3. 惑星までの距離と公転周期`,
+        figureId: 'lf_krika_79',
         level: 'oyo',
         body: `■ 天文単位（AU）
 
@@ -3775,6 +3813,7 @@ O型の子（ii）が生まれるには、両親とも少なくとも1つのi（
       },
       {
         heading: `4. エネルギー変換効率と省エネルギー`,
+        figureId: 'lf_krika_80',
         level: 'oyo',
         body: `■ エネルギー変換効率
 
@@ -3889,6 +3928,7 @@ O型の子（ii）が生まれるには、両親とも少なくとも1つのi（
       },
       {
         heading: `2. 大気圧と水圧`,
+        figureId: 'lf_krika_61',
         level: 'oyo',
         body: `■ 大気圧
 
@@ -3949,6 +3989,7 @@ O型の子（ii）が生まれるには、両親とも少なくとも1つのi（
       },
       {
         heading: `4. 浮き沈みの判定`,
+        figureId: 'lf_krika_62',
         level: 'oyo',
         body: `■ 浮き沈みを決める条件
 
@@ -3981,6 +4022,7 @@ O型の子（ii）が生まれるには、両親とも少なくとも1つのi（
       },
       {
         heading: `5. 入試レベル：圧力・浮力の複合計算`,
+        figureId: 'lf_krika_63',
         level: 'nyushi',
         body: `■ 潜水艦・気球の浮き沈みの原理（応用）
 
@@ -4017,4 +4059,20 @@ O型の子（ii）が生まれるには、両親とも少なくとも1つのi（
       },
     ],
   },
+];
+
+export const kokoRikaLessons: Lesson[] = [
+  ...kokoRikaOverviewLessons,
+  ...kokoRikaExt01Lessons,
+  ...kokoRikaExt02Lessons,
+  ...kokoRikaExt03Lessons,
+  ...kokoRikaExt04Lessons,
+  ...kokoRikaExt05Lessons,
+  ...kokoRikaExt06Lessons,
+  ...kokoRikaExt07Lessons,
+  ...kokoRikaExt08Lessons,
+  ...kokoRikaExt09Lessons,
+  ...kokoRikaExt10Lessons,
+  ...kokoRikaExt11Lessons,
+  ...kokoRikaExt12Lessons,
 ];

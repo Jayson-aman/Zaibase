@@ -8,6 +8,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
 } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import { ERAS, EVENTS, type Era } from '../../data/timeline';
 import { getPortraitsForPerson, getEventImages } from '../../data/history-portraits';
@@ -37,24 +38,33 @@ export default function TimelineScreen() {
         </TouchableOpacity>
       </View>
 
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.eraScroll} contentContainerStyle={styles.eraScrollContent}>
-        {ERAS.map((era) => (
-          <TouchableOpacity
-            key={era.key}
-            style={[styles.eraChip, selectedEra === era.key && { backgroundColor: era.color }]}
-            onPress={() => setSelectedEra(era.key)}
-            activeOpacity={0.8}
-          >
-            <Text style={styles.eraChipEmoji}>{era.emoji}</Text>
-            <Text style={[styles.eraChipText, selectedEra === era.key && styles.eraChipTextActive]} numberOfLines={1}>
-              {era.key}
-            </Text>
-            <Text style={[styles.eraChipPeriod, selectedEra === era.key && { color: 'rgba(255,255,255,0.8)' }]}>
-              {era.period}
-            </Text>
-          </TouchableOpacity>
-        ))}
-      </ScrollView>
+      <View style={styles.eraScrollWrap}>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.eraScroll} contentContainerStyle={styles.eraScrollContent}>
+          {ERAS.map((era) => (
+            <TouchableOpacity
+              key={era.key}
+              style={[styles.eraChip, selectedEra === era.key && { backgroundColor: era.color }]}
+              onPress={() => setSelectedEra(era.key)}
+              activeOpacity={0.8}
+            >
+              <Text style={styles.eraChipEmoji}>{era.emoji}</Text>
+              <Text style={[styles.eraChipText, selectedEra === era.key && styles.eraChipTextActive]} numberOfLines={1}>
+                {era.key}
+              </Text>
+              <Text style={[styles.eraChipPeriod, selectedEra === era.key && { color: 'rgba(255,255,255,0.8)' }]}>
+                {era.period}
+              </Text>
+            </TouchableOpacity>
+          ))}
+        </ScrollView>
+        <LinearGradient
+          colors={['rgba(255,255,255,0)', '#FFFFFF']}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 0 }}
+          style={styles.eraScrollFade}
+          pointerEvents="none"
+        />
+      </View>
 
       <ScrollView style={styles.scroll} contentContainerStyle={styles.content}>
         <View style={[styles.eraHeader, { backgroundColor: eraInfo.color + '22', borderColor: eraInfo.color }]}>
@@ -91,6 +101,11 @@ export default function TimelineScreen() {
                     )}
                     <Text style={styles.eventTitle}>{ev.event}</Text>
                     <Text style={styles.eventNote}>{ev.note}</Text>
+                    {ev.goroawase != null && (
+                      <View style={styles.goroawaseBox}>
+                        <Text style={styles.goroawaseText}>🎵 {ev.goroawase}</Text>
+                      </View>
+                    )}
                   </View>
                   {images.length > 0 && (
                     <View style={styles.portraitStack}>
@@ -113,7 +128,7 @@ export default function TimelineScreen() {
         <TouchableOpacity onPress={() => router.push('/credits')} activeOpacity={0.7}>
           <Text style={styles.creditsLink}>画像クレジットを見る →</Text>
         </TouchableOpacity>
-        <View style={{ height: 40 }} />
+        <View style={{ height: 120 }} />
       </ScrollView>
     </SafeAreaView>
   );
@@ -134,8 +149,16 @@ const styles = StyleSheet.create({
   songBtn: { backgroundColor: 'rgba(255,255,255,0.25)', borderRadius: 999, paddingHorizontal: 12, paddingVertical: 8, maxWidth: 120 },
   songBtnText: { color: '#FFFFFF', fontWeight: '800', fontSize: 12, textAlign: 'center' },
   headerSub: { fontSize: 13, color: 'rgba(255,255,255,0.85)', fontWeight: '500', marginTop: 2 },
-  eraScroll: { flexGrow: 0, backgroundColor: '#FFFFFF', borderBottomWidth: 1, borderBottomColor: '#E5EAF0' },
-  eraScrollContent: { padding: 10, gap: 8, flexDirection: 'row' },
+  eraScrollWrap: { backgroundColor: '#FFFFFF', borderBottomWidth: 1, borderBottomColor: '#E5EAF0' },
+  eraScroll: { flexGrow: 0 },
+  eraScrollContent: { padding: 10, paddingRight: 30, gap: 8, flexDirection: 'row' },
+  eraScrollFade: {
+    position: 'absolute',
+    right: 0,
+    top: 0,
+    bottom: 0,
+    width: 28,
+  },
   eraChip: {
     alignItems: 'center',
     paddingHorizontal: 12,
@@ -219,4 +242,15 @@ const styles = StyleSheet.create({
   personChipText: { fontSize: 12, fontWeight: '800' },
   eventTitle: { fontSize: 16, fontWeight: '800', color: '#1A1A2E', marginBottom: 6 },
   eventNote: { fontSize: 13, color: '#555', lineHeight: 20, fontWeight: '400' },
+  goroawaseBox: {
+    backgroundColor: '#FFFBEB',
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#FDE68A',
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    marginTop: 8,
+    alignSelf: 'flex-start',
+  },
+  goroawaseText: { fontSize: 12.5, color: '#92400E', fontWeight: '700' },
 });

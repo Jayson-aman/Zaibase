@@ -30,8 +30,11 @@ import type {
   CircuitComponent,
   NetFigure,
   StratumFigure,
+  JapanMapFigure,
+  BioDiagramFigure,
   Pt,
 } from '../data/figures';
+import { prefectureShapes, JP_MAP_VIEWBOX } from '../data/japanPrefectures';
 
 // 内部描画座標系（viewBox）。Svgの実サイズは画面幅に合わせて拡大縮小する。
 const VBW = 320;
@@ -54,11 +57,33 @@ function useSize() {
 // ---------- 座標平面 ----------
 
 function niceStep(range: number): number {
-  const raw = range / 8;
-  const pow = Math.pow(10, Math.floor(Math.log10(raw)));
+  return niceStepFor(range, 8);
+}
+
+// 目盛りの本数を指定して「きりのよい」間隔を求める。
+// 本数が多すぎると軸ラベルが密集して読めなくなるため、
+// 棒グラフなど値ラベルを別に出す図では少なめ（5本程度）にする。
+function niceStepFor(range: number, targetTicks: number): number {
+  const raw = range / Math.max(1, targetTicks);
+  const pow = Math.pow(10, Math.floor(Math.log10(raw || 1)));
   const n = raw / pow;
   const step = n >= 5 ? 5 : n >= 2 ? 2 : 1;
   return step * pow;
+}
+
+// 目盛り値の表示桁数。刻みが小数のときに 0 と丸められてしまうのを防ぐ。
+function tickText(v: number, step: number): string {
+  const d = step >= 1 ? 0 : Math.min(3, Math.ceil(-Math.log10(step)));
+  return v.toFixed(d);
+}
+
+// SVG の描画枠からラベルがはみ出して切れるのを防ぐ。
+// 端に寄った文字は anchor を start/end に切り替えて内側へ収める。
+function clampLabelX(x: number, anchor: 'start' | 'middle' | 'end') {
+  const M = 3;
+  if (x < 34) return { x: Math.max(M, x), anchor: 'start' as const };
+  if (x > VBW - 34) return { x: Math.min(VBW - M, x), anchor: 'end' as const };
+  return { x, anchor };
 }
 
 function CoordinateFig({ fig, uid }: { fig: CoordFigure; uid: string }) {
@@ -661,28 +686,41 @@ function LineChartFig({ fig }: { fig: LineChartFigure }) {
 // ---------- 棒グラフ・ヒストグラム ----------
 
 function BarChartFig({ fig }: { fig: BarChartFigure }) {
-  const area: Area = { x0: 40, y0: 16, w: VBW - 56, h: VBH - 54 };
-  const yMax = fig.yMax ?? ((Math.max(...fig.bars.map((b) => b.value)) * 1.15) || 1);
+  const area: Area = { x0: 40, y0: 24, w: VBW - 56, h: VBH - 62 };
+  const yMax = fig.yMax ?? ((Math.max(...fig.bars.map((b) => b.value)) * 1.18) || 1);
   const n = fig.bars.length;
   const slot = area.w / n;
   const gap = fig.histogram ? 0 : slot * 0.28;
   const bw = slot - gap;
   const py = (v: number) => area.y0 + area.h - (v / yMax) * area.h;
   const els: React.ReactNode[] = [];
-  const sy = niceStep(yMax);
+  // 目盛りは5本前後に抑える。棒の上に実数を出すので、細かい目盛りは不要。
+  const sy = niceStepFor(yMax, 5);
   for (let y = 0; y <= yMax + 1e-9; y += sy) {
     els.push(<Line key={`gy${y}`} x1={area.x0} y1={py(y)} x2={area.x0 + area.w} y2={py(y)} stroke={GRID} strokeWidth={1} />);
-    els.push(<SvgText key={`gyl${y}`} x={area.x0 - 4} y={py(y) + 3} fontSize={9} fill={AXIS} textAnchor="end">{+y.toFixed(0)}</SvgText>);
+    els.push(<SvgText key={`gyl${y}`} x={area.x0 - 4} y={py(y) + 3} fontSize={9} fill={AXIS} textAnchor="end">{tickText(y, sy)}</SvgText>);
   }
   els.push(<Line key="xax" x1={area.x0} y1={area.y0 + area.h} x2={area.x0 + area.w} y2={area.y0 + area.h} stroke={AXIS} strokeWidth={1.6} />);
   els.push(<Line key="yax" x1={area.x0} y1={area.y0} x2={area.x0} y2={area.y0 + area.h} stroke={AXIS} strokeWidth={1.6} />);
   fig.bars.forEach((b, i) => {
     const x = area.x0 + slot * i + gap / 2;
     const color = b.color ?? PALETTE[i % PALETTE.length];
-    els.push(<Rect key={`b${i}`} x={x} y={py(b.value)} width={bw} height={area.y0 + area.h - py(b.value)} fill={color} opacity={0.82} stroke={fig.histogram ? '#fff' : color} strokeWidth={fig.histogram ? 1 : 0} />);
-    els.push(<SvgText key={`bl${i}`} x={x + bw / 2} y={area.y0 + area.h + 12} fontSize={9} fill={AXIS} textAnchor="middle">{b.label}</SvgText>);
+    // 桁の違う値が並ぶと小さい棒が消えてしまうので、最低限の高さを残す
+    const rawH = area.y0 + area.h - py(b.value);
+    const h = b.value > 0 ? Math.max(2, rawH) : rawH;
+    const top = area.y0 + area.h - h;
+    els.push(<Rect key={`b${i}`} x={x} y={top} width={bw} height={h} fill={color} opacity={0.82} stroke={fig.histogram ? '#fff' : color} strokeWidth={fig.histogram ? 1 : 0} />);
+    // 棒の上に実数を出す。目盛りを読まなくても値が分かるようにする。
+    if (!fig.histogram) {
+      els.push(
+        <SvgText key={`bv${i}`} x={x + bw / 2} y={top - 4} fontSize={9.5} fill={INK} textAnchor="middle" fontWeight="bold">
+          {b.value}
+        </SvgText>,
+      );
+    }
+    els.push(<SvgText key={`bl${i}`} x={x + bw / 2} y={area.y0 + area.h + 13} fontSize={9} fill={AXIS} textAnchor="middle">{b.label}</SvgText>);
   });
-  if (fig.yLabel) els.push(<SvgText key="ylab" x={12} y={area.y0 + area.h / 2} fontSize={10} fill={INK} textAnchor="middle" transform={`rotate(-90, 12, ${area.y0 + area.h / 2})`}>{fig.yLabel}</SvgText>);
+  if (fig.yLabel) els.push(<SvgText key="ylab" x={11} y={area.y0 + area.h / 2} fontSize={9.5} fill={INK} textAnchor="middle" transform={`rotate(-90, 11, ${area.y0 + area.h / 2})`}>{fig.yLabel}</SvgText>);
   return els;
 }
 
@@ -818,6 +856,52 @@ function NetFig({ fig }: { fig: NetFigure }) {
   return els;
 }
 
+// ---------- 日本地図 ----------
+
+function JapanMapFig({ fig }: { fig: JapanMapFigure }) {
+  const scale = Math.min(VBW / JP_MAP_VIEWBOX.w, VBH / JP_MAP_VIEWBOX.h);
+  const ox = (VBW - JP_MAP_VIEWBOX.w * scale) / 2;
+  const oy = (VBH - JP_MAP_VIEWBOX.h * scale) / 2;
+  const tx = (x: number) => ox + x * scale;
+  const ty = (y: number) => oy + y * scale;
+  const els: React.ReactNode[] = [];
+  els.push(
+    <G key="prefs" transform={`translate(${ox},${oy}) scale(${scale})`}>
+      {prefectureShapes.map((p) => (
+        <Path key={`pf${p.id}`} d={p.path} fill="rgba(34,197,94,0.28)" stroke={ACCENT} strokeWidth={1 / scale} />
+      ))}
+    </G>,
+  );
+  // ラベルどうしが重なると読めなくなるので、既に置いた位置と近い場合は上へ逃がす。
+  const placed: { x: number; y: number; half: number }[] = [];
+  fig.markers?.forEach((m, i) => {
+    const x = tx(m.x);
+    const y = ty(m.y);
+    els.push(<SvgCircle key={`mk${i}`} cx={x} cy={y} r={3.5} fill="#E11D48" stroke="#FFFFFF" strokeWidth={1} />);
+
+    const half = (m.label?.length ?? 0) * 2.8; // だいたいの文字幅の半分
+    let ly = y - 8;
+    for (let guard = 0; guard < 8; guard++) {
+      const hit = placed.some((p) => Math.abs(p.y - ly) < 11 && Math.abs(p.x - x) < p.half + half + 4);
+      if (!hit) break;
+      ly -= 12;
+    }
+    if (ly < 10) ly = y + 16; // 上に逃げきれないときは下側へ
+    const c = clampLabelX(x, 'middle');
+    placed.push({ x: c.x, y: ly, half });
+    els.push(
+      <SvgText key={`mkl${i}`} x={c.x} y={ly} fontSize={10} fill={INK} textAnchor={c.anchor} fontWeight="bold">
+        {m.label}
+      </SvgText>,
+    );
+    // 逃がした分だけ点から離れるので、引き出し線でどの点のラベルかを示す
+    if (Math.abs(ly - (y - 8)) > 2) {
+      els.push(<Line key={`mkc${i}`} x1={x} y1={y - 4} x2={c.x} y2={ly + 3} stroke={AXIS} strokeWidth={0.8} opacity={0.6} />);
+    }
+  });
+  return els;
+}
+
 // ---------- 地層・柱状図 ----------
 
 const STRATUM_FILL: Record<string, string> = {
@@ -846,6 +930,256 @@ function StratumFig({ fig }: { fig: StratumFigure }) {
   return els;
 }
 
+// ---------- 生物の構造図（花・種子・葉・こん虫・心臓・消化器官・目・耳） ----------
+
+function bioLabel(
+  hide: Set<string>,
+  key: string,
+  text: string,
+  lx1: number,
+  ly1: number,
+  lx2: number,
+  ly2: number,
+  anchor: 'start' | 'middle' | 'end' = 'start',
+): React.ReactNode[] {
+  const shown = hide.has(key) ? '？' : text;
+  const rawX = lx2 + (anchor === 'end' ? -2 : anchor === 'middle' ? 0 : 2);
+  // 端に寄ったラベルが枠外で切れないように内側へ寄せる
+  const c = clampLabelX(rawX, anchor);
+  return [
+    <Line key={`${key}_ld`} x1={lx1} y1={ly1} x2={lx2} y2={ly2} stroke={INK} strokeWidth={1} />,
+    // 図の線の上に文字が乗っても読めるように、白フチを敷く
+    <SvgText key={`${key}_lb`} x={c.x} y={ly2 + 3} fontSize={10} fill="#FFFFFF" stroke="#FFFFFF" strokeWidth={3} textAnchor={c.anchor}>
+      {shown}
+    </SvgText>,
+    <SvgText key={`${key}_lt`} x={c.x} y={ly2 + 3} fontSize={10} fill={INK} textAnchor={c.anchor}>
+      {shown}
+    </SvgText>,
+  ];
+}
+
+function BioFlower(hide: Set<string>): React.ReactNode[] {
+  const els: React.ReactNode[] = [];
+  els.push(<Line key="stem" x1={160} y1={232} x2={160} y2={150} stroke="#16A34A" strokeWidth={4} />);
+  els.push(<Path key="sepL" d="M160,150 C140,150 128,132 132,112 C142,124 152,138 160,150 Z" fill="#16A34A" opacity={0.85} />);
+  els.push(<Path key="sepR" d="M160,150 C180,150 192,132 188,112 C178,124 168,138 160,150 Z" fill="#16A34A" opacity={0.85} />);
+  [0, 72, 144, 216, 288].forEach((deg, i) => {
+    els.push(
+      <Ellipse key={`pet${i}`} cx={160} cy={72} rx={17} ry={34} fill="#F472B6" stroke="#DB2777" strokeWidth={1.2} transform={`rotate(${deg}, 160, 106)`} />,
+    );
+  });
+  els.push(<Line key="fil1" x1={160} y1={140} x2={132} y2={95} stroke="#CA8A04" strokeWidth={2} />);
+  els.push(<Line key="fil2" x1={160} y1={140} x2={188} y2={95} stroke="#CA8A04" strokeWidth={2} />);
+  els.push(<Line key="fil3" x1={160} y1={140} x2={145} y2={80} stroke="#CA8A04" strokeWidth={2} />);
+  els.push(<Line key="fil4" x1={160} y1={140} x2={175} y2={80} stroke="#CA8A04" strokeWidth={2} />);
+  els.push(<Ellipse key="ykA" cx={132} cy={90} rx={6} ry={9} fill="#FACC15" stroke="#A16207" strokeWidth={1} transform="rotate(-20, 132, 90)" />);
+  els.push(<Ellipse key="ykB" cx={188} cy={90} rx={6} ry={9} fill="#FACC15" stroke="#A16207" strokeWidth={1} transform="rotate(20, 188, 90)" />);
+  els.push(<Ellipse key="ykC" cx={145} cy={74} rx={6} ry={9} fill="#FACC15" stroke="#A16207" strokeWidth={1} transform="rotate(-12, 145, 74)" />);
+  els.push(<Ellipse key="ykD" cx={175} cy={74} rx={6} ry={9} fill="#FACC15" stroke="#A16207" strokeWidth={1} transform="rotate(12, 175, 74)" />);
+  els.push(<Ellipse key="shibou" cx={160} cy={142} rx={11} ry={15} fill="#BBF7D0" stroke="#16A34A" strokeWidth={1.6} />);
+  els.push(<SvgCircle key="hs1" cx={155} cy={145} r={2.2} fill="#166534" />);
+  els.push(<SvgCircle key="hs2" cx={165} cy={145} r={2.2} fill="#166534" />);
+  els.push(<SvgCircle key="hs3" cx={160} cy={138} r={2.2} fill="#166534" />);
+  els.push(<Line key="kachu" x1={160} y1={128} x2={160} y2={98} stroke="#16A34A" strokeWidth={3} />);
+  els.push(<SvgCircle key="chuto" cx={160} cy={92} r={6} fill="#86EFAC" stroke="#16A34A" strokeWidth={1.6} />);
+
+  els.push(...bioLabel(hide, 'gaku', 'がく', 120, 118, 90, 118, 'end'));
+  els.push(...bioLabel(hide, 'kaben', '花弁', 177, 60, 210, 50, 'start'));
+  els.push(...bioLabel(hide, 'yaku', 'やく', 132, 90, 100, 70, 'end'));
+  els.push(...bioLabel(hide, 'kashi', '花糸', 150, 115, 115, 100, 'end'));
+  els.push(...bioLabel(hide, 'chuto', '柱頭', 160, 92, 160, 63, 'middle'));
+  els.push(...bioLabel(hide, 'kachu', '花柱', 160, 112, 210, 112, 'start'));
+  els.push(...bioLabel(hide, 'shibou', '子房', 169, 142, 230, 150, 'start'));
+  els.push(...bioLabel(hide, 'haishu', '胚珠', 163, 145, 230, 180, 'start'));
+  return els;
+}
+
+function BioSeed(hide: Set<string>): React.ReactNode[] {
+  const els: React.ReactNode[] = [];
+  els.push(
+    <Path key="body" d="M120,60 C80,70 70,110 80,150 C90,190 130,210 165,205 C210,200 240,170 245,130 C250,90 220,55 175,50 C155,48 138,52 120,60 Z" fill="#FDE68A" stroke="#B45309" strokeWidth={2} />,
+  );
+  els.push(<Path key="split" d="M163,60 C150,90 150,160 163,200" fill="none" stroke="#B45309" strokeWidth={2} strokeDasharray="4 3" />);
+  els.push(<Ellipse key="embryo" cx={163} cy={128} rx={14} ry={20} fill="#86EFAC" stroke="#16A34A" strokeWidth={1.6} />);
+  els.push(<Path key="root" d="M163,148 C160,165 155,175 148,182" fill="none" stroke="#16A34A" strokeWidth={2.4} />);
+  els.push(<Path key="shoot" d="M163,108 C168,98 178,92 188,90" fill="none" stroke="#16A34A" strokeWidth={2.4} />);
+
+  els.push(...bioLabel(hide, 'shuhi', '種皮', 245, 120, 280, 105, 'start'));
+  els.push(...bioLabel(hide, 'shiyou', '子葉', 110, 90, 65, 70, 'end'));
+  els.push(...bioLabel(hide, 'youkon', '幼根', 148, 182, 130, 205, 'end'));
+  els.push(...bioLabel(hide, 'youga', '幼芽', 188, 90, 210, 70, 'start'));
+  return els;
+}
+
+function BioLeaf(hide: Set<string>): React.ReactNode[] {
+  const els: React.ReactNode[] = [];
+  els.push(<Rect key="epi1" x={40} y={40} width={240} height={14} fill="#DDD6FE" stroke={INK} strokeWidth={1} />);
+  els.push(<Rect key="palisade" x={40} y={54} width={240} height={40} fill="#86EFAC" stroke={INK} strokeWidth={1} />);
+  els.push(<Rect key="spongy" x={40} y={94} width={240} height={55} fill="#BBF7D0" stroke={INK} strokeWidth={1} />);
+  els.push(<Rect key="epi2" x={40} y={149} width={240} height={14} fill="#DDD6FE" stroke={INK} strokeWidth={1} />);
+  const dots: [number, number, number][] = [
+    [70, 70, 2.4], [95, 75, 2.4], [120, 68, 2.4], [150, 76, 2.4], [180, 70, 2.4], [210, 76, 2.4], [240, 70, 2.4],
+    [80, 115, 2], [130, 125, 2], [190, 118, 2], [230, 128, 2],
+  ];
+  dots.forEach(([x, y, r], i) => els.push(<SvgCircle key={`dot${i}`} cx={x} cy={y} r={r} fill="#166534" />));
+  els.push(<Ellipse key="vein" cx={160} cy={120} rx={20} ry={26} fill="#FDE68A" stroke="#B45309" strokeWidth={1.4} />);
+  els.push(<SvgCircle key="xylem" cx={160} cy={108} r={5} fill="#F59E0B" />);
+  els.push(<SvgCircle key="phloem" cx={160} cy={132} r={5} fill="#93C5FD" />);
+  els.push(<SvgCircle key="stomaOuter" cx={220} cy={156} r={5.5} fill="#fff" stroke={INK} strokeWidth={1.4} />);
+  els.push(<SvgCircle key="stomaInner" cx={220} cy={156} r={1.6} fill={INK} />);
+
+  els.push(...bioLabel(hide, 'hyohi', '表皮', 280, 47, 300, 35, 'start'));
+  els.push(...bioLabel(hide, 'youmyaku', '葉脈', 180, 120, 230, 95, 'start'));
+  els.push(...bioLabel(hide, 'doukan', '道管', 160, 108, 60, 105, 'end'));
+  els.push(...bioLabel(hide, 'shikan', '師管', 160, 132, 60, 135, 'end'));
+  els.push(...bioLabel(hide, 'kikou', '気孔', 220, 156, 250, 180, 'start'));
+  return els;
+}
+
+function BioInsect(hide: Set<string>): React.ReactNode[] {
+  const els: React.ReactNode[] = [];
+  els.push(<SvgCircle key="head" cx={70} cy={120} r={26} fill="#FDE68A" stroke={INK} strokeWidth={1.8} />);
+  els.push(<Ellipse key="thorax" cx={140} cy={120} rx={34} ry={26} fill="#FCA5A5" stroke={INK} strokeWidth={1.8} />);
+  els.push(<Ellipse key="abdomen" cx={230} cy={120} rx={60} ry={30} fill="#BBF7D0" stroke={INK} strokeWidth={1.8} />);
+  els.push(<Line key="ant1" x1={60} y1={98} x2={35} y2={70} stroke={INK} strokeWidth={1.6} />);
+  els.push(<Line key="ant2" x1={80} y1={98} x2={90} y2={65} stroke={INK} strokeWidth={1.6} />);
+  els.push(<SvgCircle key="cEye" cx={82} cy={112} r={7} fill="#1E293B" />);
+  els.push(<Path key="leg1" d="M120,140 L100,175" stroke={INK} strokeWidth={2} fill="none" />);
+  els.push(<Path key="leg2" d="M140,146 L130,182" stroke={INK} strokeWidth={2} fill="none" />);
+  els.push(<Path key="leg3" d="M160,140 L175,175" stroke={INK} strokeWidth={2} fill="none" />);
+  els.push(<Ellipse key="wing" cx={150} cy={90} rx={34} ry={14} fill="#BFDBFE" opacity={0.8} stroke="#3B82F6" strokeWidth={1.2} transform="rotate(-10, 150, 90)" />);
+  els.push(<SvgCircle key="sp1" cx={200} cy={105} r={2.2} fill={INK} />);
+  els.push(<SvgCircle key="sp2" cx={225} cy={100} r={2.2} fill={INK} />);
+  els.push(<SvgCircle key="sp3" cx={250} cy={102} r={2.2} fill={INK} />);
+
+  els.push(...bioLabel(hide, 'toubu', '頭部', 70, 146, 55, 175, 'end'));
+  els.push(...bioLabel(hide, 'kyoubu', '胸部', 140, 146, 140, 175, 'middle'));
+  els.push(...bioLabel(hide, 'fukubu', '腹部', 230, 150, 230, 185, 'middle'));
+  els.push(...bioLabel(hide, 'shokkaku', '触角', 35, 70, 20, 50, 'end'));
+  els.push(...bioLabel(hide, 'fukugan', '複眼', 82, 112, 60, 90, 'end'));
+  els.push(...bioLabel(hide, 'kimon', '気門', 225, 100, 225, 70, 'middle'));
+  return els;
+}
+
+function BioHeart(hide: Set<string>): React.ReactNode[] {
+  const els: React.ReactNode[] = [];
+  els.push(<Rect key="frame" x={90} y={50} width={140} height={150} rx={16} fill="none" stroke={INK} strokeWidth={1.6} strokeDasharray="3 3" />);
+  els.push(<Line key="vsep" x1={160} y1={50} x2={160} y2={200} stroke={INK} strokeWidth={2} />);
+  els.push(<Line key="hsep" x1={90} y1={120} x2={230} y2={120} stroke={INK} strokeWidth={2} />);
+  els.push(<Rect key="ra" x={93} y={53} width={64} height={64} fill="#FCA5A5" />);
+  els.push(<Rect key="la" x={163} y={53} width={64} height={64} fill="#F87171" />);
+  els.push(<Rect key="rv" x={93} y={120} width={64} height={77} fill="#EF4444" />);
+  els.push(<Rect key="lv" x={163} y={120} width={64} height={77} fill="#B91C1C" />);
+  els.push(<Line key="valveR" x1={93} y1={118} x2={157} y2={122} stroke="#fff" strokeWidth={3} />);
+  els.push(<Line key="valveL" x1={163} y1={122} x2={227} y2={118} stroke="#fff" strokeWidth={3} />);
+  els.push(<Path key="vesR" d="M120,50 L110,20" stroke="#3B82F6" strokeWidth={6} fill="none" />);
+  els.push(<Path key="vesL" d="M200,50 L210,20" stroke="#EF4444" strokeWidth={6} fill="none" />);
+
+  const wtext = (key: string, text: string, x: number, y: number) => (
+    <SvgText key={`${key}_wt`} x={x} y={y} textAnchor="middle" fontSize={11} fill="#fff" fontWeight="bold">
+      {hide.has(key) ? '？' : text}
+    </SvgText>
+  );
+  els.push(wtext('usinbou', '右心房', 125, 88));
+  els.push(wtext('sasinbou', '左心房', 195, 88));
+  els.push(wtext('usinshitsu', '右心室', 125, 162));
+  els.push(wtext('sasinshitsu', '左心室', 195, 162));
+  els.push(...bioLabel(hide, 'ben', '弁', 160, 120, 260, 140, 'start'));
+  return els;
+}
+
+function BioDigestive(hide: Set<string>): React.ReactNode[] {
+  const els: React.ReactNode[] = [];
+  els.push(
+    <Path
+      key="outline"
+      d="M140,10 C120,10 110,30 115,45 C90,55 70,90 90,130 C70,140 60,160 75,185 C95,210 150,215 180,195 C210,205 235,190 230,165 C250,150 245,120 220,110 C230,85 210,55 180,50 C185,30 165,10 140,10 Z"
+      fill="none" stroke="#CBD5E1" strokeWidth={1.4} strokeDasharray="3 3"
+    />,
+  );
+  els.push(<SvgCircle key="mouth" cx={140} cy={18} r={5} fill={INK} />);
+  els.push(<Line key="esophagus" x1={140} y1={23} x2={130} y2={55} stroke="#F59E0B" strokeWidth={4} />);
+  els.push(<Path key="stomach" d="M130,55 C110,60 95,80 105,100 C112,115 135,118 145,105 C155,92 150,65 130,55 Z" fill="#FCA5A5" stroke="#B91C1C" strokeWidth={1.6} />);
+  els.push(<Path key="liver" d="M150,60 C175,55 195,65 190,80 C185,92 160,90 150,80 Z" fill="#92400E" opacity={0.85} />);
+  els.push(<Ellipse key="pancreas" cx={150} cy={100} rx={22} ry={8} fill="#FBCFE8" stroke="#DB2777" strokeWidth={1.2} transform="rotate(10, 150, 100)" />);
+  els.push(
+    <Path
+      key="smallIntestine"
+      d="M110,105 C90,120 90,140 110,150 C130,160 150,145 145,130 C140,118 120,122 122,135 C124,145 138,142 136,132"
+      fill="none" stroke="#F97316" strokeWidth={5} strokeLinecap="round"
+    />,
+  );
+  els.push(<Path key="largeIntestine" d="M70,110 L70,190 L200,190 L200,100" fill="none" stroke="#7C3AED" strokeWidth={7} strokeLinecap="round" />);
+  els.push(<SvgCircle key="anus" cx={200} cy={195} r={4} fill={INK} />);
+
+  els.push(...bioLabel(hide, 'kuchi', '口', 140, 18, 100, 15, 'end'));
+  els.push(...bioLabel(hide, 'shokudou', '食道', 132, 40, 90, 35, 'end'));
+  els.push(...bioLabel(hide, 'i', '胃', 112, 90, 60, 80, 'end'));
+  els.push(...bioLabel(hide, 'kanzou', '肝臓', 175, 70, 225, 55, 'start'));
+  els.push(...bioLabel(hide, 'suizou', 'すい臓', 165, 102, 225, 100, 'start'));
+  els.push(...bioLabel(hide, 'shouchou', '小腸', 120, 140, 235, 130, 'start'));
+  els.push(...bioLabel(hide, 'daichou', '大腸', 200, 150, 250, 160, 'start'));
+  els.push(...bioLabel(hide, 'koumon', 'こう門', 200, 195, 230, 205, 'start'));
+  return els;
+}
+
+function BioEye(hide: Set<string>): React.ReactNode[] {
+  const els: React.ReactNode[] = [];
+  els.push(<SvgCircle key="ball" cx={150} cy={120} r={70} fill="#F1F5F9" stroke={INK} strokeWidth={2} />);
+  els.push(<Path key="cornea" d="M90,90 C70,105 70,135 90,150" fill="none" stroke="#38BDF8" strokeWidth={4} />);
+  els.push(<SvgCircle key="irisRing" cx={100} cy={120} r={18} fill="none" stroke={INK} strokeWidth={6} opacity={0.7} />);
+  els.push(<SvgCircle key="pupil" cx={100} cy={120} r={8} fill={INK} />);
+  els.push(<Ellipse key="lens" cx={118} cy={120} rx={10} ry={22} fill="#BAE6FD" stroke="#0369A1" strokeWidth={1.6} />);
+  els.push(<SvgCircle key="vitreous" cx={160} cy={120} r={58} fill="#E0F2FE" opacity={0.5} />);
+  els.push(<Path key="retina" d="M150,50 A70,70 0 0 1 150,190" fill="none" stroke="#DC2626" strokeWidth={4} />);
+  els.push(<Line key="opticNerve" x1={220} y1={120} x2={250} y2={120} stroke="#FACC15" strokeWidth={8} />);
+
+  els.push(...bioLabel(hide, 'kakumaku', '角膜', 78, 95, 55, 70, 'end'));
+  els.push(...bioLabel(hide, 'koushi', 'こう彩', 100, 120, 55, 120, 'end'));
+  els.push(...bioLabel(hide, 'suishoutai', '水晶体', 118, 98, 90, 60, 'end'));
+  els.push(...bioLabel(hide, 'moumaku', '網膜', 150, 52, 180, 25, 'start'));
+  els.push(...bioLabel(hide, 'sishinkei', '視神経', 235, 120, 260, 150, 'start'));
+  return els;
+}
+
+function BioEar(hide: Set<string>): React.ReactNode[] {
+  const els: React.ReactNode[] = [];
+  els.push(
+    <Path key="outer" d="M40,110 C20,90 30,50 60,45 C90,40 95,80 80,100 C95,105 95,130 75,135" fill="none" stroke={INK} strokeWidth={3} />,
+  );
+  els.push(<Line key="canal" x1={80} y1={100} x2={140} y2={105} stroke={INK} strokeWidth={6} />);
+  els.push(<Line key="eardrum" x1={140} y1={80} x2={140} y2={130} stroke="#DC2626" strokeWidth={4} />);
+  els.push(<SvgCircle key="oss1" cx={155} cy={95} r={5} fill="#F59E0B" />);
+  els.push(<SvgCircle key="oss2" cx={168} cy={90} r={4} fill="#F59E0B" />);
+  els.push(<SvgCircle key="oss3" cx={180} cy={100} r={4} fill="#F59E0B" />);
+  els.push(
+    <Path key="cochlea" d="M210,110 C230,100 245,110 240,125 C236,136 220,136 218,124 C216,115 226,110 232,116" fill="none" stroke="#7C3AED" strokeWidth={4} strokeLinecap="round" />,
+  );
+  els.push(<Path key="canal1" d="M195,70 C210,50 235,55 235,75" fill="none" stroke="#0EA5E9" strokeWidth={4} strokeLinecap="round" />);
+  els.push(<Path key="canal2" d="M205,65 C215,45 240,48 242,68" fill="none" stroke="#16A34A" strokeWidth={4} strokeLinecap="round" opacity={0.85} />);
+
+  els.push(...bioLabel(hide, 'komaku', '鼓膜', 140, 130, 130, 170, 'end'));
+  els.push(...bioLabel(hide, 'jishoukotsu', '耳小骨', 168, 90, 170, 60, 'start'));
+  els.push(...bioLabel(hide, 'uzumakikan', 'うずまき管', 228, 118, 250, 150, 'start'));
+  els.push(...bioLabel(hide, 'sanhankikan', '三半規管', 215, 60, 230, 30, 'start'));
+  return els;
+}
+
+function BioDiagramFig({ fig }: { fig: BioDiagramFigure }): React.ReactNode[] {
+  const hide = new Set(fig.hideParts ?? []);
+  switch (fig.template) {
+    case 'flower': return BioFlower(hide);
+    case 'seed': return BioSeed(hide);
+    case 'leafCrossSection': return BioLeaf(hide);
+    case 'insectBody': return BioInsect(hide);
+    case 'heart': return BioHeart(hide);
+    case 'digestiveSystem': return BioDigestive(hide);
+    case 'eye': return BioEye(hide);
+    case 'ear': return BioEar(hide);
+    default: return [];
+  }
+}
+
 // ---------- 公開コンポーネント ----------
 
 function buildParts(figure: Figure, uid: string): React.ReactNode[] {
@@ -863,6 +1197,8 @@ function buildParts(figure: Figure, uid: string): React.ReactNode[] {
     case 'circuit': return CircuitFig({ fig: figure });
     case 'net': return NetFig({ fig: figure });
     case 'stratum': return StratumFig({ fig: figure });
+    case 'japanMap': return JapanMapFig({ fig: figure });
+    case 'bioDiagram': return BioDiagramFig({ fig: figure });
     default: return [];
   }
 }
@@ -952,10 +1288,19 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
 }
 
 const styles = StyleSheet.create({
+  // 図は本文から独立した「図版」として、白地＋細い枠で囲って輪郭を出す。
+  // 枠がないと図が本文の中に溶けて、どこからどこまでが図か分かりにくい。
   wrap: {
     alignItems: 'center',
-    marginTop: 12,
-    marginBottom: 4,
+    marginTop: 10,
+    marginBottom: 12,
+    paddingTop: 8,
+    paddingBottom: 10,
+    backgroundColor: '#FFFFFF',
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
+    borderRadius: 8,
+    overflow: 'hidden',
   },
   canvas: {
     alignSelf: 'center',
@@ -964,17 +1309,19 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
   },
   caption: {
-    fontSize: 12,
-    color: '#64748B',
+    fontSize: 11.5,
+    color: '#475569',
     marginTop: 6,
     textAlign: 'center',
+    lineHeight: 17,
     paddingHorizontal: 12,
   },
   replayHint: {
-    fontSize: 11,
+    fontSize: 10.5,
     color: '#0EA5E9',
     marginTop: 4,
-    fontWeight: '600',
+    fontWeight: '700',
+    letterSpacing: 0.2,
   },
   progressTrack: {
     height: 3,

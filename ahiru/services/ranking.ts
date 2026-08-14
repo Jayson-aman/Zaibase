@@ -1,4 +1,9 @@
-import { getAuthUid, getFirestoreDb, isFirebaseConfigured } from './firebaseClient';
+import {
+  getAuthUid,
+  getFirestoreDb,
+  isFirebaseConfigured,
+  callFirebaseFunction,
+} from './firebaseClient';
 
 const COLLECTION = 'examLeaderboard';
 
@@ -27,37 +32,22 @@ export type RankingResult = {
   myPct: number;
 };
 
+/**
+ * 自分の順位を取得する。
+ *
+ * 順位の計算はサーバー（Cloud Function）で行う。クライアントで計算するには
+ * ランキング全体への読み取り権限が必要になり、「誰でも全ユーザーのIDとスコアと
+ * 最終学習日時を一覧できる」状態になってしまうため（子ども向けアプリでは避ける）。
+ */
 export async function fetchMyRanking(): Promise<RankingResult | null> {
   if (!isFirebaseConfigured()) return null;
-  const uid = await getAuthUid();
-  if (!uid) return null;
 
   try {
-    const db = await getFirestoreDb();
-    const {
-      doc,
-      getDoc,
-      collection,
-      getCountFromServer,
-      query,
-      where,
-    } = await import('firebase/firestore');
-
-    const mySnap = await getDoc(doc(db, COLLECTION, uid));
-    if (!mySnap.exists()) return null;
-
-    const myPct = mySnap.data().pct as number;
-
-    const [aboveSnap, totalSnap] = await Promise.all([
-      getCountFromServer(query(collection(db, COLLECTION), where('pct', '>', myPct))),
-      getCountFromServer(collection(db, COLLECTION)),
-    ]);
-
-    return {
-      rank: aboveSnap.data().count + 1,
-      totalUsers: totalSnap.data().count,
-      myPct,
-    };
+    const res = await callFirebaseFunction<
+      Record<string, never>,
+      { ok: true; ranking: RankingResult | null }
+    >('getMyRanking', {});
+    return res.ranking;
   } catch {
     return null;
   }

@@ -20,11 +20,20 @@ function capString(v, max) {
  * - 文字列コンテンツは maxContentLen で切り詰め
  * - 構造化コンテンツ（配列）はブロック数を制限、テキストは切り詰め、
  *   巨大画像ブロックは除外
+ * - maxImages で履歴に残す画像の総数を制限する。制限しないと毎ターン
+ *   過去の画像すべてを再送してしまい、1セッションのAPIコストが桁違いに膨らむ。
+ *   新しい方から数えて maxImages 枚だけ残す。
+ * - maxTotalChars で履歴全体の合計文字数に上限をかける。1件ずつの上限だけでは
+ *   「上限いっぱいのメッセージ×最大件数」で数十万トークンを送れてしまい、
+ *   1リクエストのAPI費用が桁違いになる。新しい方を優先して残す。
  */
-function sanitizeHistory(history, { maxTurns = 20, maxContentLen = 4000 } = {}) {
+function sanitizeHistory(
+  history,
+  { maxTurns = 20, maxContentLen = 4000, maxImages = Infinity, maxTotalChars = 60000 } = {},
+) {
   if (!Array.isArray(history)) return [];
   const trimmed = history.slice(-maxTurns * 2);
-  const out = [];
+  let out = [];
   for (const h of trimmed) {
     if (!h || typeof h !== "object") continue;
     const role = h.role === "assistant" ? "assistant" : "user";
@@ -55,6 +64,49 @@ function sanitizeHistory(history, { maxTurns = 20, maxContentLen = 4000 } = {}) 
     }
     out.push({ role, content });
   }
+
+  // 履歴全体の合計文字数に上限をかける（新しい方を優先して残す）。
+  if (Number.isFinite(maxTotalChars)) {
+    let used = 0;
+    let keepFrom = out.length;
+    for (let i = out.length - 1; i >= 0; i -= 1) {
+      const c = out[i].content;
+      const len = typeof c === "string"
+        ? c.length
+        : c.reduce((n, b) => n + (b.type === "text" ? (b.text ? b.text.length : 0) : 0), 0);
+      if (used + len > maxTotalChars) break;
+      used += len;
+      keepFrom = i;
+    }
+    if (keepFrom > 0) out.splice(0, keepFrom);
+  }
+
+  // 新しい方から数えて maxImages 枚だけ画像を残し、それより古い画像は落とす。
+  if (Number.isFinite(maxImages)) {
+    let seen = 0;
+    for (let i = out.length - 1; i >= 0; i -= 1) {
+      const c = out[i].content;
+      if (!Array.isArray(c)) continue;
+      const kept = [];
+      for (let j = c.length - 1; j >= 0; j -= 1) {
+        const b = c[j];
+        if (b.type === "image") {
+          if (seen >= maxImages) continue;
+          seen += 1;
+        }
+        kept.unshift(b);
+      }
+      if (kept.length) out[i] = { role: out[i].role, content: kept };
+      else out[i] = null;
+    }
+    out = out.filter(Boolean);
+  }
+
+  // 履歴の先頭が assistant だと Anthropic が 400 を返す（最初は user 必須）。
+  // 文字数の切り詰め・画像の除去でメッセージが落ちると先頭が assistant に
+  // なることがあるため、すべての除去処理の "後" に判定する。
+  while (out.length > 0 && out[0].role === "assistant") out.shift();
+
   return out;
 }
 

@@ -22,6 +22,13 @@ export default function RootLayout() {
   const isLegalRoute = ['/terms', '/privacy', '/tokusho', '/credits'].includes(pathname);
 
   useEffect(() => {
+    // 端末のマナー/サイレントスイッチがONでも読み上げ・メロディ・聞き流しが
+    // 聞こえるようにする（未設定だとexpo-speech等がスイッチに従って無音になる端末がある）。
+    if (Platform.OS !== 'web') {
+      import('expo-audio')
+        .then(({ setAudioModeAsync }) => setAudioModeAsync({ playsInSilentMode: true }))
+        .catch(() => {});
+    }
     initRevenueCat();
     // 起動時に既存ログインを復元し、RevenueCatを同一ユーザーに紐付け直す
     // （全端末で加入状態を共有＝二重課金防止）。
@@ -29,10 +36,18 @@ export default function RootLayout() {
     subscribeAuth(() => {})
       .then((fn) => { unsubAuth = fn; })
       .catch(() => {});
-    AsyncStorage.getItem(CONSENT_KEY).then((v) => {
-      if (v !== '1') setShowConsent(true);
-      setConsentChecked(true);
-    });
+    // 失敗しても consentChecked を必ず立てる。立てないと同意ゲートが永久に出ず、
+    // 画面が真っ白のまま進めなくなる。
+    AsyncStorage.getItem(CONSENT_KEY)
+      .then((v) => {
+        if (v !== '1') setShowConsent(true);
+      })
+      .catch(() => {
+        setShowConsent(true);
+      })
+      .finally(() => {
+        setConsentChecked(true);
+      });
     return () => { if (unsubAuth) unsubAuth(); };
   }, []);
 
@@ -48,7 +63,7 @@ export default function RootLayout() {
           <title>中学受験・高校受験の対策アプリ｜Zaibase受験 5科目13,000問＋動く図解</title>
           <meta
             name="description"
-            content="中学受験・高校受験の対策アプリ。算数・国語・理科・社会・英語の5科目13,000問以上、灘・開成・慶應など50校対応、図形やグラフが動く図解つき教科書とAI弱点コーチ。無料で今すぐ始められます。"
+            content="中学受験・高校受験の対策アプリ。算数・国語・理科・社会・英語の5科目13,000問以上、灘・開成・慶應など40校以上に対応、図形やグラフが動く図解つき教科書とAI弱点コーチ。無料で今すぐ始められます。"
           />
         </Head>
       )}
