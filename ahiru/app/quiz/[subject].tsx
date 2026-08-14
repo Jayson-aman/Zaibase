@@ -949,9 +949,9 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   explanationText: {
-    fontSize: 15,
+    fontSize: 17,
     color: '#333',
-    lineHeight: 24,
+    lineHeight: 26,
     fontWeight: '500',
   },
   upgradeTeaser: {

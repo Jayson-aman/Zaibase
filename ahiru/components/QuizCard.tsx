@@ -88,8 +88,8 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
   const choiceLabels = ['A', 'B', 'C', 'D'];
 
   // 長い問題文・解答ほど小さくして、折り返しで読みにくくならないようにする
-  const qFit = fitText(question.question, 20, 15);
-  const aFit = fitText(question.answer, 25, 16, 70);
+  const qFit = fitText(question.question, 21, 17);
+  const aFit = fitText(question.answer, 25, 17, 70);
   const answerAlign = question.answer.length > 18 ? 'left' : 'center';
 
   return (
@@ -542,10 +542,10 @@ const styles = StyleSheet.create({
   },
   choiceText: {
     flex: 1,
-    fontSize: 16,
+    fontSize: 17,
     fontWeight: '600',
     color: '#1A1A2E',
-    lineHeight: 24,
+    lineHeight: 26,
     fontFamily: SERIF,
   },
   choiceTextCorrect: {
@@ -708,7 +708,7 @@ const styles = StyleSheet.create({
     marginBottom: 6,
   },
   hintText: {
-    fontSize: 15,
+    fontSize: 17,
     color: '#78350F',
     lineHeight: 24,
   },
