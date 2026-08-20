@@ -134,7 +134,8 @@ export default function QuizScreen() {
   // 種類ごとに難易度の配分と、記述式・複数小問（活用型）の比率を変える。
   const testModeKey: TestModeKey | null =
     testModeParam === 'term' || testModeParam === 'achievement' ||
-    testModeParam === 'level' || testModeParam === 'nyushi'
+    testModeParam === 'level' || testModeParam === 'nyushi' ||
+    testModeParam === 'moshi'
       ? testModeParam
       : null;
   const course: CourseKey = courseParam && isCourseKey(courseParam) ? courseParam : 'general';

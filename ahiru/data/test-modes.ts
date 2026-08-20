@@ -9,7 +9,7 @@
 import type { Question } from './questions-meta';
 import type { ExamType } from '../store/examType';
 
-export type TestModeKey = 'term' | 'achievement' | 'level' | 'nyushi';
+export type TestModeKey = 'term' | 'achievement' | 'level' | 'nyushi' | 'moshi';
 
 export type LevelKey = 'basic' | 'standard' | 'advanced';
 
@@ -40,6 +40,8 @@ export type TestMode = {
   writtenRatio: number;
   /** 定期テスト対策の問題（term1_2026_ で始まるID）だけに絞るか */
   termOnly?: boolean;
+  /** 月例模試の問題（moshi_YYYY_MM_ で始まるID、当月分）だけに絞るか */
+  moshiOnly?: boolean;
 };
 
 export const TEST_MODES: TestMode[] = [
@@ -97,6 +99,20 @@ export const TEST_MODES: TestMode[] = [
     mix: { basic: 0.05, standard: 0.35, advanced: 0.6 },
     writtenRatio: 0.2,
   },
+  {
+    key: 'moshi',
+    title: '月例実力テスト',
+    summary: '毎月更新、本番形式の総合模試',
+    detail:
+      '毎月更新される、本番に近い形式の実力テストです。学年が上がり学習が進むにつれて、' +
+      '出題範囲も少しずつ広がっていきます。今の自分の実力を定期的にチェックするのに使ってください。',
+    emoji: '📅',
+    color: '#DC2626',
+    count: 15,
+    mix: { basic: 0.2, standard: 0.4, advanced: 0.4 },
+    writtenRatio: 0.15,
+    moshiOnly: true,
+  },
 ];
 
 export function getTestMode(key: TestModeKey): TestMode {
@@ -111,6 +127,41 @@ export function isApplied(q: Question): boolean {
 /** 定期テスト対策として作られた問題かどうか */
 export function isTermQuestion(q: Question): boolean {
   return q.id.startsWith('term1_2026_');
+}
+
+/** 月例模試として作られた問題かどうか（moshi_2026_09_ のようなID） */
+export function isMoshiQuestion(q: Question): boolean {
+  return q.id.startsWith('moshi_');
+}
+
+function moshiPrefixOf(id: string): string | null {
+  const m = id.match(/^moshi_(\d{4})_(\d{2})_/);
+  return m ? `moshi_${m[1]}_${m[2]}_` : null;
+}
+
+/** 当月の月例模試IDプレフィックス（例: moshi_2026_09_） */
+export function currentMoshiPrefix(now: Date = new Date()): string {
+  const y = now.getFullYear();
+  const m = String(now.getMonth() + 1).padStart(2, '0');
+  return `moshi_${y}_${m}_`;
+}
+
+/**
+ * 月例模試の出題プールから、当月号（無ければ配信済みで最新の号）を選ぶ。
+ * こうしておくと、新しい月号のデータを追加するだけで自動的に切り替わり、
+ * まだ当月分を配信できていない期間も「何も出ない」状態にならない。
+ */
+function pickMoshiPool(pool: Question[]): Question[] {
+  const moshiQs = pool.filter(isMoshiQuestion);
+  if (moshiQs.length === 0) return [];
+  const current = currentMoshiPrefix();
+  const exact = moshiQs.filter((q) => q.id.startsWith(current));
+  if (exact.length > 0) return exact;
+  const prefixes = Array.from(
+    new Set(moshiQs.map((q) => moshiPrefixOf(q.id)).filter((p): p is string => p != null)),
+  ).sort();
+  const latest = prefixes[prefixes.length - 1];
+  return latest ? moshiQs.filter((q) => q.id.startsWith(latest)) : [];
 }
 
 function shuffle<T>(arr: T[], seed: number): T[] {
@@ -144,6 +195,11 @@ export function buildTestSet(
     const termOnes = src.filter(isTermQuestion);
     // 定期テスト用の問題が足りない教科もあるので、無い場合は全体から出す
     if (termOnes.length >= Math.min(10, mode.count)) src = termOnes;
+  }
+  if (mode.moshiOnly) {
+    const moshiOnes = pickMoshiPool(src);
+    // 月例模試がまだ配信されていない教科は、通常の入試対策相当から出す
+    if (moshiOnes.length >= Math.min(10, mode.count)) src = moshiOnes;
   }
 
   const mix: Record<LevelKey, number> =
