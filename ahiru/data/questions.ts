@@ -79,6 +79,11 @@ import { kokoOyoShakai50 } from './koko_oyo_shakai_50';
 import { kokoOyoEigo50 } from './koko_oyo_eigo_50';
 import { kokoMoshiRika50 } from './koko_moshi_rika_50';
 import { kokoMoshiEigo50 } from './koko_moshi_eigo_50';
+import { moshi202609KokoKokugo } from './moshi_2026_09_koko_kokugo';
+import { moshi202609KokoEigo } from './moshi_2026_09_koko_eigo';
+import { moshi202609KokoShakai } from './moshi_2026_09_koko_shakai';
+import { moshi202609KokoSansu } from './moshi_2026_09_koko_sansu';
+import { moshi202609KokoRika } from './moshi_2026_09_koko_rika';
 import { kokoKankanEigo20 } from './koko_kankan_eigo_20';
 import { kokoKankanSansu20 } from './koko_kankan_sansu_20';
 import { kokoKankanKokugo20 } from './koko_kankan_kokugo_20';
@@ -3254,6 +3259,11 @@ export const questions: Question[] = [
   ...kokoOyoEigo50,
   ...kokoMoshiRika50,
   ...kokoMoshiEigo50,
+  ...moshi202609KokoKokugo,
+  ...moshi202609KokoEigo,
+  ...moshi202609KokoShakai,
+  ...moshi202609KokoSansu,
+  ...moshi202609KokoRika,
   // ── 学校別問題（大阪私学 最難関） ──
   ...seikoQuestions,
   ...seifuNankaiQuestions,
