@@ -8,7 +8,7 @@ import {
   SafeAreaView,
 } from 'react-native';
 import { useRouter } from 'expo-router';
-import { getLessonsBySubject } from '../../data/lessons';
+import { getLessonsBySubject, FREE_LESSON_LIMIT } from '../../data/lessons';
 import type { ExamType } from '../../data/courses';
 import type { Lesson } from '../../data/lessons';
 import { subjectInfo, type SubjectKey } from '../../data/questions-meta';
@@ -38,17 +38,23 @@ export default function TextbookScreen() {
   const { isPro: subIsPro, loading } = useSubscription();
   const isPro = subIsPro || betaAccess;
 
-  const { paywallVisible, setPaywallVisible, requirePro } = useProGate(betaAccess);
+  const { paywallVisible, setPaywallVisible } = useProGate(betaAccess);
 
   const [selectedSubject, setSelectedSubject] = useState<SubjectKey | null>(null);
   // 受験種別で絞らないと、中学受験の小学生に中1〜中3の内容が混ざって出てしまう。
   const [examType, setExamType] = useState<ExamType>('chugaku');
 
   function handleSubjectPress(key: SubjectKey) {
-    requirePro(() => setSelectedSubject(key));
+    // 各科目の最初のFREE_LESSON_LIMIT単元は無料で見られるため、一覧自体は
+    // Pro未加入でも開ける（実際のロックは単元ごと・詳細ページ側で行う）。
+    setSelectedSubject(key);
   }
 
-  function handleLessonPress(lesson: Lesson) {
+  function handleLessonPress(lesson: Lesson, idx: number) {
+    if (!isPro && idx >= FREE_LESSON_LIMIT) {
+      setPaywallVisible(true);
+      return;
+    }
     router.push(`/lesson/${lesson.id}` as any);
   }
 
@@ -66,8 +72,8 @@ export default function TextbookScreen() {
     ? getLessonsBySubject(selectedSubject).filter((l) => (l.examType ?? 'chugaku') === examType)
     : [];
 
-  const showEmpty = selectedSubject != null && isPro && lessons.length === 0;
-  const showList = selectedSubject != null && isPro && lessons.length > 0;
+  const showEmpty = selectedSubject != null && lessons.length === 0;
+  const showList = selectedSubject != null && lessons.length > 0;
 
   const listHeader = (
     <View>
@@ -79,7 +85,9 @@ export default function TextbookScreen() {
         </Text>
         {!isPro && (
           <View style={styles.proBanner}>
-            <Text style={styles.proBannerText}>🔒 Proプランで全解説を閲覧できます</Text>
+            <Text style={styles.proBannerText}>
+              🔒 各科目・受験種別ごとに最初の{FREE_LESSON_LIMIT}単元は無料。続きはProプランで
+            </Text>
           </View>
         )}
       </View>
@@ -118,7 +126,6 @@ export default function TextbookScreen() {
               style={[
                 styles.subjectTile,
                 isSelected && { borderColor: color, borderWidth: 3 },
-                !isPro && styles.subjectTileLocked,
               ]}
               onPress={() => handleSubjectPress(key)}
               activeOpacity={0.8}
@@ -132,14 +139,13 @@ export default function TextbookScreen() {
               ) : (
                 <Text style={styles.lessonCountPending}>準備中</Text>
               )}
-              {!isPro && <Text style={styles.lockIcon}>🔒</Text>}
             </TouchableOpacity>
           );
         })}
       </View>
 
       {/* Lesson List */}
-      {selectedSubject && isPro && (
+      {selectedSubject != null && (
         <Text style={styles.lessonListTitle}>
           {subjectLabel(selectedSubject, examType)} の単元一覧
         </Text>
@@ -169,34 +175,37 @@ export default function TextbookScreen() {
         windowSize={7}
         removeClippedSubviews
         ListFooterComponent={<View style={{ height: 40 }} />}
-        renderItem={({ item: lesson, index: idx }) => (
-          <TouchableOpacity
-            style={styles.lessonCard}
-            onPress={() => handleLessonPress(lesson)}
-            activeOpacity={0.8}
-          >
-            <View style={styles.lessonCardLeft}>
-              <Text style={styles.lessonNumber}>{String(idx + 1).padStart(2, '0')}</Text>
-            </View>
-            <View style={styles.lessonCardBody}>
-              <View style={styles.lessonTitleRow}>
-                <Text style={styles.lessonTitle}>{lesson.title}</Text>
-                {lesson.studyPeriod && (
-                  <View style={styles.periodChip}>
-                    <Text style={styles.periodChipText}>📅 {lesson.studyPeriod}</Text>
-                  </View>
+        renderItem={({ item: lesson, index: idx }) => {
+          const locked = !isPro && idx >= FREE_LESSON_LIMIT;
+          return (
+            <TouchableOpacity
+              style={styles.lessonCard}
+              onPress={() => handleLessonPress(lesson, idx)}
+              activeOpacity={0.8}
+            >
+              <View style={styles.lessonCardLeft}>
+                <Text style={styles.lessonNumber}>{String(idx + 1).padStart(2, '0')}</Text>
+              </View>
+              <View style={styles.lessonCardBody}>
+                <View style={styles.lessonTitleRow}>
+                  <Text style={styles.lessonTitle}>{lesson.title}</Text>
+                  {lesson.studyPeriod && (
+                    <View style={styles.periodChip}>
+                      <Text style={styles.periodChipText}>📅 {lesson.studyPeriod}</Text>
+                    </View>
+                  )}
+                </View>
+                <Text style={styles.lessonDesc} numberOfLines={2}>
+                  {lesson.description}
+                </Text>
+                {lesson.sections.some((s) => s.maxOnly) && (
+                  <Text style={styles.maxTag}>⭐ MAX深堀りあり</Text>
                 )}
               </View>
-              <Text style={styles.lessonDesc} numberOfLines={2}>
-                {lesson.description}
-              </Text>
-              {lesson.sections.some((s) => s.maxOnly) && (
-                <Text style={styles.maxTag}>⭐ MAX深堀りあり</Text>
-              )}
-            </View>
-            <Text style={styles.lessonArrow}>›</Text>
-          </TouchableOpacity>
-        )}
+              <Text style={styles.lessonArrow}>{locked ? '🔒' : '›'}</Text>
+            </TouchableOpacity>
+          );
+        }}
       />
 
       <Paywall
@@ -280,12 +289,10 @@ const styles = StyleSheet.create({
     borderColor: '#CBD5E1',
     position: 'relative',
   },
-  subjectTileLocked: { opacity: 0.7 },
   subjectEmoji: { fontSize: 26, marginBottom: 6 },
   subjectName: { fontSize: 14, fontWeight: '800', color: '#0F172A', marginBottom: 3 },
   lessonCount: { fontSize: 11.5, color: '#64748B', fontWeight: '700' },
   lessonCountPending: { fontSize: 11, color: '#94A3B8' },
-  lockIcon: { position: 'absolute', top: 6, right: 8, fontSize: 12 },
   lessonListTitle: {
     fontSize: 16,
     fontWeight: '900',

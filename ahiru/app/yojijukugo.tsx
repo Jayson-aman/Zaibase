@@ -10,6 +10,12 @@ import {
 import { useRouter } from 'expo-router';
 import { getYojijukugoByLevel, type YojijukugoLevel } from '../data/yojijukugo';
 import HomeButton from '../components/HomeButton';
+import { useProGate } from '../hooks/useProGate';
+import { useBetaAccess } from '../hooks/useBetaAccess';
+import Paywall from '../components/Paywall';
+
+// 無料で試せる語数。英単語Proなど他画面と同じ「一部無料・続きは加入」方式に揃える。
+const FREE_YOJIJUKUGO_LIMIT = 5;
 
 const LEVELS: { key: YojijukugoLevel; emoji: string; label: string; color: string }[] = [
   { key: 'elementary', emoji: '🎒', label: '小学生レベル', color: '#0EA5E9' },
@@ -18,9 +24,12 @@ const LEVELS: { key: YojijukugoLevel; emoji: string; label: string; color: strin
 
 export default function YojijukugoScreen() {
   const router = useRouter();
+  const { hasAccess: betaAccess } = useBetaAccess();
+  const { isPro, paywallVisible, setPaywallVisible } = useProGate(betaAccess);
   const [level, setLevel] = useState<YojijukugoLevel>('elementary');
   const levelInfo = LEVELS.find((l) => l.key === level)!;
   const list = useMemo(() => getYojijukugoByLevel(level), [level]);
+  const visibleList = isPro ? list : list.slice(0, FREE_YOJIJUKUGO_LIMIT);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -57,8 +66,20 @@ export default function YojijukugoScreen() {
         })}
       </View>
 
+      {!isPro && list.length > FREE_YOJIJUKUGO_LIMIT && (
+        <TouchableOpacity
+          style={styles.freeLimitBanner}
+          onPress={() => setPaywallVisible(true)}
+          activeOpacity={0.85}
+        >
+          <Text style={styles.freeLimitText}>
+            無料で{FREE_YOJIJUKUGO_LIMIT}語まで試せます。全{list.length}語はProプランで解放 ▸
+          </Text>
+        </TouchableOpacity>
+      )}
+
       <ScrollView contentContainerStyle={styles.scroll}>
-        {list.map((item, i) => (
+        {visibleList.map((item, i) => (
           <View key={item.id} style={styles.card}>
             <View style={styles.cardHeader}>
               <Text style={[styles.indexBadge, { color: levelInfo.color }]}>{i + 1}</Text>
@@ -74,14 +95,52 @@ export default function YojijukugoScreen() {
             </View>
           </View>
         ))}
+        {!isPro && list.length > FREE_YOJIJUKUGO_LIMIT && (
+          <TouchableOpacity
+            style={styles.moreLockedCard}
+            onPress={() => setPaywallVisible(true)}
+            activeOpacity={0.85}
+          >
+            <Text style={styles.moreLockedText}>
+              🔒 残り{list.length - FREE_YOJIJUKUGO_LIMIT}語はProプランで見られます
+            </Text>
+          </TouchableOpacity>
+        )}
         <View style={{ height: 40 }} />
       </ScrollView>
+
+      <Paywall
+        visible={paywallVisible}
+        onClose={() => setPaywallVisible(false)}
+        onPurchased={() => setPaywallVisible(false)}
+      />
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#F7F8FB' },
+  freeLimitBanner: {
+    marginHorizontal: 16,
+    marginBottom: 8,
+    backgroundColor: 'rgba(180,83,9,0.10)',
+    borderWidth: 1,
+    borderColor: 'rgba(180,83,9,0.35)',
+    borderRadius: 10,
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+  },
+  freeLimitText: { fontSize: 13, fontWeight: '700', color: '#B45309', textAlign: 'center' },
+  moreLockedCard: {
+    backgroundColor: '#FFFBEB',
+    borderRadius: 16,
+    padding: 20,
+    marginBottom: 12,
+    borderWidth: 1,
+    borderColor: '#FDE68A',
+    alignItems: 'center',
+  },
+  moreLockedText: { fontSize: 14, fontWeight: '700', color: '#B45309' },
   header: { paddingHorizontal: 20, paddingTop: 8, paddingBottom: 12 },
   headerTopRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   backRow: { flexDirection: 'row', alignItems: 'center', paddingVertical: 6 },

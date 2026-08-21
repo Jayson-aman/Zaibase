@@ -20,6 +20,12 @@ import { explanationsRika } from '../../data/explanations_rika';
 import { explanationsShakai } from '../../data/explanations_shakai';
 import { explanationsEigo } from '../../data/explanations_eigo';
 
+// 「レベル別ドリル」「入試対策」は問題プールから毎回ランダムに出題するため、
+// 個別の問題にmaxOnlyを付けて絞れない。代わりに1回のセッションで
+// 最初のN問だけを無料にする（セッションをまたいだ累計ではない）。
+const SESSION_FREE_LIMIT = 5;
+const SESSION_LIMITED_MODES: TestModeKey[] = ['level', 'nyushi'];
+
 const allExplanations: Record<string, string> = {
   ...explanationsSansu,
   ...explanationsKokugo,
@@ -306,6 +312,14 @@ export default function QuizScreen() {
     // 課金状態の取得中（subLoading）は加入者も未加入に見えるため、その間は
     // 上限判定をしない（加入者がいきなりペイウォールで止められるのを防ぐ）。
     if (!isPro && !isMax && !subLoading) {
+      // レベル別ドリル・入試対策は、アプリ全体の累計トライアルとは別に、
+      // 1回のセッションで最初のSESSION_FREE_LIMIT問だけ無料にする。
+      if (testModeKey != null && SESSION_LIMITED_MODES.includes(testModeKey) && currentIndex >= SESSION_FREE_LIMIT) {
+        setTrialBlocked(true);
+        setShowPaywall(true);
+        answeringRef.current = false;
+        return;
+      }
       const expired = await isTrialExpired();
       if (expired) {
         setTrialBlocked(true);

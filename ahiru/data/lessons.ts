@@ -38,3 +38,15 @@ export function getLessonsByExamType(examType: 'chugaku' | 'koko'): Lesson[] {
 export function getLessonById(id: string): Lesson | undefined {
   return allLessons.find((l) => l.id === id);
 }
+
+/** 教科書機能の無料お試し数。各科目・各受験種別ごとに最初のN単元まで無料。 */
+export const FREE_LESSON_LIMIT = 5;
+
+/** その単元が、無料お試し範囲（同じ科目・同じ受験種別の中で最初のN単元）に入っているか */
+export function isLessonFree(lesson: Lesson): boolean {
+  const siblings = getLessonsBySubject(lesson.subject).filter(
+    (l) => (l.examType ?? 'chugaku') === (lesson.examType ?? 'chugaku'),
+  );
+  const idx = siblings.findIndex((l) => l.id === lesson.id);
+  return idx >= 0 && idx < FREE_LESSON_LIMIT;
+}

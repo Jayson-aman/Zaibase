@@ -9,7 +9,7 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { getLessonById } from '../../data/lessons';
+import { getLessonById, isLessonFree } from '../../data/lessons';
 import LessonRenderer from '../../components/LessonRenderer';
 import VideoPlayer from '../../components/VideoPlayer';
 import { getLessonVideo } from '../../data/videos';
@@ -47,6 +47,9 @@ export default function LessonDetailScreen() {
   const info = subjectInfo[lesson.subject];
   const hasMaxContent = lesson.sections.some((s) => s.maxOnly);
   const lessonVideo = getLessonVideo(lesson.id);
+  // 各科目・各受験種別の最初の5単元は、Pro未加入でも無料で閲覧できる
+  const freeLesson = isLessonFree(lesson);
+  const contentUnlocked = isPro || freeLesson;
 
   return (
     <SafeAreaView style={styles.container}>
@@ -76,15 +79,22 @@ export default function LessonDetailScreen() {
             <ActivityIndicator color={info.color} />
           </View>
         )}
-        {!subLoading && !isPro && (
+        {!subLoading && !contentUnlocked && (
           <View style={styles.lockedBanner}>
             <Text style={styles.lockedText}>
               🔒 このコンテンツはProプランで閲覧できます
             </Text>
           </View>
         )}
-        {!subLoading && isPro && (
+        {!subLoading && contentUnlocked && (
           <>
+            {!isPro && freeLesson && (
+              <View style={styles.freeTeaser}>
+                <Text style={styles.freeTeaserText}>
+                  🎁 無料お試し単元です。他の単元はProプランで解放されます
+                </Text>
+              </View>
+            )}
             {hasMaxContent && !isMax && (
               <View style={styles.maxTeaser}>
                 <Text style={styles.maxTeaserText}>
@@ -215,6 +225,15 @@ const styles = StyleSheet.create({
     borderColor: '#FDE68A',
   },
   maxTeaserText: { fontSize: 13, color: '#92400E', fontWeight: '600' },
+  freeTeaser: {
+    backgroundColor: '#ECFDF5',
+    borderRadius: 10,
+    padding: 12,
+    marginBottom: 16,
+    borderWidth: 1,
+    borderColor: '#A7F3D0',
+  },
+  freeTeaserText: { fontSize: 13, color: '#047857', fontWeight: '600' },
   // 導入（つかみ）。本文より先に読ませたいので、本文とは違う色面で目立たせる。
   introBox: {
     backgroundColor: '#F0F9FF',
