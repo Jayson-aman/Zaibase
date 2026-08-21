@@ -218,6 +218,7 @@ x = 15 − 9 = 6
   },
   {
     id: 'moshi_2026_09_sansu_06',
+    maxOnly: true,
     subject: 'sansu',
     course: 'koko-general',
     examType: 'koko',
@@ -259,6 +260,7 @@ y = −2x + 3
   },
   {
     id: 'moshi_2026_09_sansu_07',
+    maxOnly: true,
     subject: 'sansu',
     course: 'koko-general',
     examType: 'koko',
@@ -307,6 +309,7 @@ x=14のとき：y=3(14)−2=42−2=40（満水）✓
   // ─── 図形の性質・証明（標準）2問 ─────────────────────────────────
   {
     id: 'moshi_2026_09_sansu_08',
+    maxOnly: true,
     subject: 'sansu',
     course: 'koko-general',
     examType: 'koko',
@@ -348,6 +351,7 @@ x=14のとき：y=3(14)−2=42−2=40（満水）✓
   },
   {
     id: 'moshi_2026_09_sansu_09',
+    maxOnly: true,
     subject: 'sansu',
     course: 'koko-general',
     examType: 'koko',
@@ -394,6 +398,7 @@ AB↔AC（①）、AE↔AD（②）で、間にはさまれる角がどちらも
   // ─── 図形の性質・データの活用・確率（応用）3問 ───────────────────
   {
     id: 'moshi_2026_09_sansu_10',
+    maxOnly: true,
     subject: 'sansu',
     course: 'koko-general',
     examType: 'koko',
@@ -449,6 +454,7 @@ BD = DB ……③
   },
   {
     id: 'moshi_2026_09_sansu_11',
+    maxOnly: true,
     subject: 'sansu',
     course: 'koko-general',
     examType: 'koko',
@@ -496,6 +502,7 @@ BD = DB ……③
   },
   {
     id: 'moshi_2026_09_sansu_12',
+    maxOnly: true,
     subject: 'sansu',
     course: 'koko-general',
     examType: 'koko',
@@ -541,6 +548,7 @@ BD = DB ……③
   // ─── 多項式の計算・平方根（応用）3問 ─────────────────────────────
   {
     id: 'moshi_2026_09_sansu_13',
+    maxOnly: true,
     subject: 'sansu',
     course: 'koko-general',
     examType: 'koko',
@@ -581,6 +589,7 @@ BD = DB ……③
   },
   {
     id: 'moshi_2026_09_sansu_14',
+    maxOnly: true,
     subject: 'sansu',
     course: 'koko-general',
     examType: 'koko',
@@ -622,6 +631,7 @@ x² − 4x − 12 = (x − 6)(x + 2)
   },
   {
     id: 'moshi_2026_09_sansu_15',
+    maxOnly: true,
     subject: 'sansu',
     course: 'koko-general',
     examType: 'koko',

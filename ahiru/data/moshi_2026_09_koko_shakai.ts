@@ -50,6 +50,7 @@ export const moshi202609KokoShakai: Question[] = [
   },
   {
     id: 'moshi_2026_09_shakai_04',
+    maxOnly: true,
     subject: 'shakai',
     course: 'koko-general',
     examType: 'koko',
@@ -66,6 +67,7 @@ export const moshi202609KokoShakai: Question[] = [
   },
   {
     id: 'moshi_2026_09_shakai_05',
+    maxOnly: true,
     subject: 'shakai',
     course: 'koko-general',
     examType: 'koko',
@@ -82,6 +84,7 @@ export const moshi202609KokoShakai: Question[] = [
   },
   {
     id: 'moshi_2026_09_shakai_06',
+    maxOnly: true,
     subject: 'shakai',
     course: 'koko-general',
     examType: 'koko',
@@ -114,6 +117,7 @@ export const moshi202609KokoShakai: Question[] = [
   },
   {
     id: 'moshi_2026_09_shakai_08',
+    maxOnly: true,
     subject: 'shakai',
     course: 'koko-general',
     examType: 'koko',
@@ -130,6 +134,7 @@ export const moshi202609KokoShakai: Question[] = [
   },
   {
     id: 'moshi_2026_09_shakai_09',
+    maxOnly: true,
     subject: 'shakai',
     course: 'koko-general',
     examType: 'koko',
@@ -146,6 +151,7 @@ export const moshi202609KokoShakai: Question[] = [
   },
   {
     id: 'moshi_2026_09_shakai_10',
+    maxOnly: true,
     subject: 'shakai',
     course: 'koko-general',
     examType: 'koko',
@@ -162,6 +168,7 @@ export const moshi202609KokoShakai: Question[] = [
   },
   {
     id: 'moshi_2026_09_shakai_11',
+    maxOnly: true,
     subject: 'shakai',
     course: 'koko-general',
     examType: 'koko',
@@ -178,6 +185,7 @@ export const moshi202609KokoShakai: Question[] = [
   },
   {
     id: 'moshi_2026_09_shakai_12',
+    maxOnly: true,
     subject: 'shakai',
     course: 'koko-general',
     examType: 'koko',
@@ -194,6 +202,7 @@ export const moshi202609KokoShakai: Question[] = [
   },
   {
     id: 'moshi_2026_09_shakai_13',
+    maxOnly: true,
     subject: 'shakai',
     course: 'koko-general',
     examType: 'koko',
@@ -225,6 +234,7 @@ export const moshi202609KokoShakai: Question[] = [
   },
   {
     id: 'moshi_2026_09_shakai_15',
+    maxOnly: true,
     subject: 'shakai',
     course: 'koko-general',
     examType: 'koko',

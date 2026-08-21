@@ -48,6 +48,7 @@ export const moshi202609KokoRika: Question[] = [
   },
   {
     id: 'moshi_2026_09_rika_04',
+    maxOnly: true,
     subject: 'rika',
     course: 'koko-general',
     examType: 'koko',
@@ -77,6 +78,7 @@ export const moshi202609KokoRika: Question[] = [
   },
   {
     id: 'moshi_2026_09_rika_06',
+    maxOnly: true,
     subject: 'rika',
     course: 'koko-general',
     examType: 'koko',
@@ -90,6 +92,7 @@ export const moshi202609KokoRika: Question[] = [
   },
   {
     id: 'moshi_2026_09_rika_07',
+    maxOnly: true,
     subject: 'rika',
     course: 'koko-general',
     examType: 'koko',
@@ -103,6 +106,7 @@ export const moshi202609KokoRika: Question[] = [
   },
   {
     id: 'moshi_2026_09_rika_08',
+    maxOnly: true,
     subject: 'rika',
     course: 'koko-general',
     examType: 'koko',
@@ -131,6 +135,7 @@ export const moshi202609KokoRika: Question[] = [
   },
   {
     id: 'moshi_2026_09_rika_10',
+    maxOnly: true,
     subject: 'rika',
     course: 'koko-general',
     examType: 'koko',
@@ -144,6 +149,7 @@ export const moshi202609KokoRika: Question[] = [
   },
   {
     id: 'moshi_2026_09_rika_11',
+    maxOnly: true,
     subject: 'rika',
     course: 'koko-general',
     examType: 'koko',
@@ -159,6 +165,7 @@ export const moshi202609KokoRika: Question[] = [
   // ========== 地学 4問 ==========
   {
     id: 'moshi_2026_09_rika_12',
+    maxOnly: true,
     subject: 'rika',
     course: 'koko-general',
     examType: 'koko',
@@ -173,6 +180,7 @@ export const moshi202609KokoRika: Question[] = [
   },
   {
     id: 'moshi_2026_09_rika_13',
+    maxOnly: true,
     subject: 'rika',
     course: 'koko-general',
     examType: 'koko',
@@ -186,6 +194,7 @@ export const moshi202609KokoRika: Question[] = [
   },
   {
     id: 'moshi_2026_09_rika_14',
+    maxOnly: true,
     subject: 'rika',
     course: 'koko-general',
     examType: 'koko',
@@ -199,6 +208,7 @@ export const moshi202609KokoRika: Question[] = [
   },
   {
     id: 'moshi_2026_09_rika_15',
+    maxOnly: true,
     subject: 'rika',
     course: 'koko-general',
     examType: 'koko',

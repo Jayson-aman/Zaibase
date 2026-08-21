@@ -69,6 +69,7 @@ export const moshi202609KokoKokugo: Question[] = [
   },
   {
     id: 'moshi_2026_09_kokugo_05',
+    maxOnly: true,
     subject: 'kokugo',
     course: 'koko-general',
     examType: 'koko',
@@ -84,6 +85,7 @@ export const moshi202609KokoKokugo: Question[] = [
   },
   {
     id: 'moshi_2026_09_kokugo_15',
+    maxOnly: true,
     subject: 'kokugo',
     course: 'koko-general',
     examType: 'koko',
@@ -101,6 +103,7 @@ export const moshi202609KokoKokugo: Question[] = [
   // ─── 文法 4問（中1〜中2範囲中心） ──────────────────────────────────────────
   {
     id: 'moshi_2026_09_kokugo_06',
+    maxOnly: true,
     subject: 'kokugo',
     course: 'koko-general',
     examType: 'koko',
@@ -116,6 +119,7 @@ export const moshi202609KokoKokugo: Question[] = [
   },
   {
     id: 'moshi_2026_09_kokugo_07',
+    maxOnly: true,
     subject: 'kokugo',
     course: 'koko-general',
     examType: 'koko',
@@ -130,6 +134,7 @@ export const moshi202609KokoKokugo: Question[] = [
   },
   {
     id: 'moshi_2026_09_kokugo_08',
+    maxOnly: true,
     subject: 'kokugo',
     course: 'koko-general',
     examType: 'koko',
@@ -145,6 +150,7 @@ export const moshi202609KokoKokugo: Question[] = [
   },
   {
     id: 'moshi_2026_09_kokugo_09',
+    maxOnly: true,
     subject: 'kokugo',
     course: 'koko-general',
     examType: 'koko',
@@ -162,6 +168,7 @@ export const moshi202609KokoKokugo: Question[] = [
   // ─── 現代文読解 4問（説明的文章2・文学的文章2、記述式2問を含む） ──────────────
   {
     id: 'moshi_2026_09_kokugo_10',
+    maxOnly: true,
     subject: 'kokugo',
     course: 'koko-general',
     examType: 'koko',
@@ -179,6 +186,7 @@ export const moshi202609KokoKokugo: Question[] = [
   },
   {
     id: 'moshi_2026_09_kokugo_11',
+    maxOnly: true,
     subject: 'kokugo',
     course: 'koko-general',
     examType: 'koko',
@@ -203,6 +211,7 @@ export const moshi202609KokoKokugo: Question[] = [
   },
   {
     id: 'moshi_2026_09_kokugo_12',
+    maxOnly: true,
     subject: 'kokugo',
     course: 'koko-general',
     examType: 'koko',
@@ -220,6 +229,7 @@ export const moshi202609KokoKokugo: Question[] = [
   },
   {
     id: 'moshi_2026_09_kokugo_13',
+    maxOnly: true,
     subject: 'kokugo',
     course: 'koko-general',
     examType: 'koko',
