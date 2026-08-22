@@ -17,6 +17,8 @@ export type CoordFigure = {
   segments?: [Pt, Pt][];
   polygon?: Pt[]; // 塗りつぶす領域（例：三角形OAB）
   caption?: string;
+  /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
+  steps?: string[];
 };
 
 // 多角形（三角形・四角形などの面積・合同・角度）
@@ -31,6 +33,8 @@ export type PolyFigure = {
   diagonals?: [number, number][]; // 対角線（頂点index対）
   heights?: { from: number; toEdge: [number, number]; label?: string }[]; // 高さ（垂線）
   caption?: string;
+  /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
+  steps?: string[];
 };
 
 // 円（円周角・中心角・弦・おうぎ形）
@@ -42,6 +46,8 @@ export type CircleFigure = {
   sector?: { from: number; to: number; label?: string }; // 塗りつぶすおうぎ形（度）
   showCenter?: boolean;
   caption?: string;
+  /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
+  steps?: string[];
 };
 
 // 立体（直方体・円柱・円すい・三角柱・球）
@@ -56,6 +62,8 @@ export type SolidFigure = {
     slant?: string;
   };
   caption?: string;
+  /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
+  steps?: string[];
 };
 
 // 数直線（不等式の解・範囲）
@@ -67,6 +75,8 @@ export type NumberLineFigure = {
   points?: { x: number; label?: string; open?: boolean }[];
   segments?: { from: number; to: number; fromOpen?: boolean; toOpen?: boolean }[];
   caption?: string;
+  /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
+  steps?: string[];
 };
 
 // 箱ひげ図
@@ -80,6 +90,8 @@ export type BoxplotFigure = {
   scaleMin?: number;
   scaleMax?: number;
   caption?: string;
+  /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
+  steps?: string[];
 };
 
 // 化学反応式（係数・添字を整形して表示）
@@ -88,6 +100,8 @@ export type ChemEqFigure = {
   // 例: "2H2 + O2 -> 2H2O"  /  "CH4 + 2O2 -> CO2 + 2H2O"
   equation: string;
   caption?: string;
+  /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
+  steps?: string[];
 };
 
 // 構造式（原子の座標＋結合）
@@ -96,6 +110,8 @@ export type ChemStructFigure = {
   atoms: { el: string; x: number; y: number }[];
   bonds: { from: number; to: number; order?: 1 | 2 | 3 }[];
   caption?: string;
+  /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
+  steps?: string[];
 };
 
 // 折れ線・曲線グラフ（複数系列・軸ラベル）。溶解度曲線・冷却曲線・電流電圧(I-V)・
@@ -114,6 +130,8 @@ export type LineChartFigure = {
     points: { x: number; y: number }[];
   }[];
   caption?: string;
+  /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
+  steps?: string[];
 };
 
 // 棒グラフ・ヒストグラム
@@ -125,6 +143,8 @@ export type BarChartFigure = {
   histogram?: boolean; // 棒を隙間なく並べる（度数分布）
   bars: { label: string; value: number; color?: string }[];
   caption?: string;
+  /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
+  steps?: string[];
 };
 
 // 円グラフ（割合）
@@ -132,6 +152,8 @@ export type PieChartFigure = {
   kind: 'pieChart';
   slices: { label: string; value: number; color?: string }[];
   caption?: string;
+  /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
+  steps?: string[];
 };
 
 // 回路図（電池・抵抗/電熱線・豆電球・スイッチ・電流計・電圧計）
@@ -146,6 +168,8 @@ export type CircuitFigure = {
   branches?: CircuitComponent[][]; // 並列の各枝（layout:'parallel'）
   battery?: { label?: string; cells?: number };
   caption?: string;
+  /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
+  steps?: string[];
 };
 
 // 展開図（立方体・直方体）
@@ -155,6 +179,8 @@ export type NetFigure = {
   faceLabels?: string[]; // 十字型に並ぶ6面のラベル（任意）
   dims?: { w: string; d: string; h: string }; // 直方体の寸法ラベル
   caption?: string;
+  /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
+  steps?: string[];
 };
 
 // 日本地図（都道府県の実形状＋任意のマーカー）。
@@ -165,6 +191,8 @@ export type JapanMapFigure = {
   kind: 'japanMap';
   markers?: { x: number; y: number; label: string }[];
   caption?: string;
+  /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
+  steps?: string[];
 };
 
 // 生物の構造図（花・種子・葉・こん虫・心臓・消化器官・目・耳など、名称が
@@ -185,6 +213,8 @@ export type BioDiagramFigure = {
   template: BioDiagramTemplate;
   hideParts?: string[]; // 隠したい部位キー（そのテンプレートの部位一覧はFigureView.tsx参照）
   caption?: string;
+  /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
+  steps?: string[];
 };
 
 // 地層・柱状図（複数地点の対比）
@@ -200,6 +230,8 @@ export type StratumFigure = {
     }[];
   }[];
   caption?: string;
+  /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
+  steps?: string[];
 };
 
 export type Figure =
@@ -265,6 +297,25 @@ import { figuresBioGap1 } from './figures-bio-gap-1';
 import { figuresBioGap2 } from './figures-bio-gap-2';
 
 export const figures: Record<string, Figure> = {
+  // 「解く順番の図解」の動作見本。長方形の面積・周の長さ・対角線を
+  // ①②③の手順付きで、動く図解の進行に合わせて順番に表示する。
+  chugaku_sansu_ex_01_006: {
+    kind: 'polygon',
+    points: [
+      { x: 0, y: 8 },
+      { x: 12, y: 8 },
+      { x: 12, y: 0 },
+      { x: 0, y: 0 },
+    ],
+    sideLabels: ['12cm', '8cm', null, null],
+    rightAngles: [0, 1, 2, 3],
+    diagonals: [[0, 2]],
+    steps: [
+      '面積 = 縦 × 横 = 8 × 12 = 96cm²',
+      '周の長さ = (縦 + 横) × 2 = (8 + 12) × 2 = 40cm',
+      '対角線 = √(8² + 12²) = √208 = 4√13 cm（三平方の定理）',
+    ],
+  },
   ...figuresSample,
   ...figuresCoreSansu,
   ...figuresCoreRika,

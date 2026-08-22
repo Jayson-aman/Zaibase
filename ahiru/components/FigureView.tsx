@@ -1210,6 +1210,39 @@ function easeOut(t: number): number {
   return 1 - Math.pow(1 - t, 3);
 }
 
+const CIRCLED_NUMBERS = ['①', '②', '③', '④', '⑤', '⑥', '⑦', '⑧', '⑨', '⑩'];
+
+// 解く手順（figure.steps）を、①②③…の番号付きで一覧表示する。
+// animated中は再生の進み具合に合わせて、まだ来ていない手順は薄く、
+// 今の手順を強調表示することで「今どこをやっているか」が分かるようにする。
+function StepsList({ steps, animated, progress }: { steps: string[]; animated: boolean; progress: number }) {
+  const total = steps.length;
+  const reachedCount = animated
+    ? Math.max(0, Math.min(total, Math.ceil(progress * total)))
+    : total;
+  return (
+    <View style={styles.stepsBox}>
+      {steps.map((step, i) => {
+        const reached = i < reachedCount;
+        const isCurrent = i === reachedCount - 1;
+        const label = CIRCLED_NUMBERS[i] ?? `${i + 1}.`;
+        return (
+          <Text
+            key={i}
+            style={[
+              styles.stepText,
+              !reached && styles.stepTextPending,
+              isCurrent && styles.stepTextCurrent,
+            ]}
+          >
+            {label} {step}
+          </Text>
+        );
+      })}
+    </View>
+  );
+}
+
 // 図解は要素が描かれた順に段階的に立ち上がる「動く解説」。
 // animated=true（解説側）で自動再生、タップで再生し直し。question側は静止。
 export default function FigureView({ figure, animated = false }: { figure: Figure; animated?: boolean }) {
@@ -1253,6 +1286,9 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
           <ChemEquationFig fig={figure as ChemEqFigure} />
         </TouchableOpacity>
         {animated && <Text style={styles.replayHint}>▶ タップで再生</Text>}
+        {figure.steps != null && figure.steps.length > 0 && (
+          <StepsList steps={figure.steps} animated={animated} progress={progress} />
+        )}
         {figure.caption != null && <Text style={styles.caption}>{figure.caption}</Text>}
       </View>
     );
@@ -1285,6 +1321,9 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
         </View>
       )}
       {animated && <Text style={styles.replayHint}>▶ タップで再生（動く解説）</Text>}
+      {figure.steps != null && figure.steps.length > 0 && (
+        <StepsList steps={figure.steps} animated={animated} progress={progress} />
+      )}
       {figure.caption != null && <Text style={styles.caption}>{figure.caption}</Text>}
     </View>
   );
@@ -1325,6 +1364,24 @@ const styles = StyleSheet.create({
     marginTop: 4,
     fontWeight: '700',
     letterSpacing: 0.2,
+  },
+  stepsBox: {
+    alignSelf: 'stretch',
+    marginTop: 8,
+    paddingHorizontal: 14,
+  },
+  stepText: {
+    fontSize: 13,
+    color: '#0F172A',
+    lineHeight: 20,
+    marginBottom: 2,
+  },
+  stepTextPending: {
+    color: '#CBD5E1',
+  },
+  stepTextCurrent: {
+    fontWeight: '800',
+    color: '#0369A1',
   },
   progressTrack: {
     height: 3,
