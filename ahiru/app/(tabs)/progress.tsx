@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   Alert,
   ActivityIndicator,
+  Linking,
 } from 'react-native';
 import { useFocusEffect, router } from 'expo-router';
 import { loadProgress, resetProgress, ProgressData } from '../../store/progress';
@@ -214,6 +215,37 @@ export default function ProgressScreen() {
       ? '順調に学習を続けています'
       : `⚠️ ${daysSinceStudy}日間学習していません`;
 
+  // メールアドレスはアプリ側で預からず、端末の標準メールアプリを開いて
+  // 送信は保護者・本人にしてもらう方式（新たな個人情報の収集・保存をしない）。
+  async function handleSendReportToParent() {
+    const today = new Date().toLocaleDateString('ja-JP');
+    const lines = [
+      '【Zaibase受験】学習成績のご報告',
+      '',
+      `総合正解率：${overallPct}%（${totalCorrect} / ${totalQuestions}問正解）`,
+      '',
+      '■ 科目別正解率',
+      ...SUBJECTS.filter((s) => (progressData[s]?.total ?? 0) > 0).map(
+        (s) => `${subjectInfo[s].name}：${subjectPct(s)}%（${progressData[s]?.correct ?? 0} / ${progressData[s]?.total ?? 0}問）`,
+      ),
+      '',
+      `送信日：${today}`,
+      '',
+      '※この成績は本人が自己採点した記録です。目安としてご確認ください。',
+    ];
+    const subject = encodeURIComponent('【Zaibase受験】学習成績のご報告');
+    const body = encodeURIComponent(lines.join('\n'));
+    const url = `mailto:?subject=${subject}&body=${body}`;
+    try {
+      await Linking.openURL(url);
+    } catch {
+      Alert.alert(
+        'メールを開けませんでした',
+        'この端末でメールアプリを開けませんでした。メールアプリが設定されているかご確認ください。',
+      );
+    }
+  }
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <ScrollView
@@ -305,6 +337,14 @@ export default function ProgressScreen() {
                 </View>
               )}
             </View>
+
+            <TouchableOpacity
+              style={styles.emailReportButton}
+              onPress={handleSendReportToParent}
+              activeOpacity={0.85}
+            >
+              <Text style={styles.emailReportButtonText}>📧 メールで保護者に送る</Text>
+            </TouchableOpacity>
 
             {worstSubject != null && (
               <View style={styles.coachSection}>
@@ -649,6 +689,18 @@ const styles = StyleSheet.create({
   },
   coachSection: {
     marginTop: 14,
+  },
+  emailReportButton: {
+    backgroundColor: '#1E5FBE',
+    borderRadius: 14,
+    paddingVertical: 14,
+    alignItems: 'center',
+    marginTop: 12,
+  },
+  emailReportButtonText: {
+    fontSize: 14,
+    fontWeight: '800',
+    color: '#FFFFFF',
   },
   coachButton: {
     backgroundColor: '#9B59B6',
