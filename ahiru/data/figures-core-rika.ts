@@ -63,6 +63,11 @@ export const figuresCoreRika: Record<string, Figure> = {
     ],
     battery: { label: '電池', cells: 1 },
     caption: '並列：1/R = 1/3 + 1/6 = 1/2 → R = 2Ω',
+    steps: [
+      '合成抵抗の式：1/R = 1/3 + 1/6',
+      '通分して計算：1/R = 2/6 + 1/6 = 3/6 = 1/2',
+      'R = 2Ω',
+    ],
   },
 
   // rika_29 光の屈折：空気→密な媒質では法線に近づく（入射角>屈折角）
@@ -111,6 +116,11 @@ export const figuresCoreRika: Record<string, Figure> = {
       [{ x: 20, y: 0 }, { x: 20, y: -3 }], // 90gのおもり
     ],
     caption: 'てこのつりあい：60×30 = 90×20 =1800（左右のモーメントが等しい）',
+    steps: [
+      '左側のモーメント = 60g × 30cm = 1800',
+      '右側は F × 20cm = 1800 とおく',
+      'F = 1800 ÷ 20 = 90g',
+    ],
   },
 
   // rika_39 太陽系の惑星：太陽に近い順（水金地火木土天海）
@@ -147,6 +157,11 @@ export const figuresCoreRika: Record<string, Figure> = {
       { label: 'しわ（劣性）', value: 1 },
     ],
     caption: 'F2の表現型比 丸:しわ = 3:1（遺伝子型 AA:Aa:aa = 1:2:1）',
+    steps: [
+      '親 丸(AA) × しわ(aa) → F1はすべてAa（丸）',
+      'F1(Aa)×F1(Aa) → F2の遺伝子型比 AA:Aa:aa = 1:2:1',
+      'AAとAaはどちらも丸 → 表現型比 丸:しわ = 3:1',
+    ],
   },
 
   // rika_43 天体の年周運動：同時刻の星は1か月で約30°西へ
@@ -159,6 +174,11 @@ export const figuresCoreRika: Record<string, Figure> = {
     ],
     sector: { from: 90, to: 120, label: '約30°' },
     caption: '同時刻に見ると星は1か月で約30°移動（1年＝365日で360°）',
+    steps: [
+      '地球は365日で360度公転 → 1か月(30日)では 360 ÷ 12 = 30度',
+      '同時刻の星は1か月で約30度西へ移動して見える',
+      '1年では 30 × 12 = 360度でもとの位置に戻る',
+    ],
   },
 
   // rika_44 てこ：100g×30cm = F×90cm → F≈33g
@@ -177,6 +197,11 @@ export const figuresCoreRika: Record<string, Figure> = {
       [{ x: 90, y: 0 }, { x: 90, y: -3 }],
     ],
     caption: 'てこ：100×30 = F×90 → F ≈ 33g',
+    steps: [
+      '支点から右端までの距離 = 120 − 30 = 90cm',
+      '左側のモーメント = 100g × 30cm = 3000',
+      'F × 90 = 3000 → F = 3000 ÷ 90 ≈ 33.3g',
+    ],
   },
 
   // rika_48 塩化銅水溶液の電気分解
@@ -184,6 +209,11 @@ export const figuresCoreRika: Record<string, Figure> = {
     kind: 'chemEquation',
     equation: 'CuCl2 -> Cu + Cl2',
     caption: '塩化銅水溶液の電気分解：陰極に銅(Cu)、陽極に塩素(Cl₂)',
+    steps: [
+      '水溶液中でCuCl₂はCu²⁺（＋）とCl⁻（－）に分かれる',
+      '陰極（－極）にCu²⁺が引かれ、銅(Cu)が析出する',
+      '陽極（＋極）にCl⁻が引かれ、塩素(Cl₂)が発生する',
+    ],
   },
 
   // rika_49 皆既月食：太陽－地球－月が一直線、月が地球の影に入る
@@ -198,6 +228,11 @@ export const figuresCoreRika: Record<string, Figure> = {
     ],
     segments: [[{ x: 0, y: 0 }, { x: 9, y: 0 }]],
     caption: '皆既月食：太陽－地球－月が一直線。満月が地球の本影に入る',
+    steps: [
+      '太陽－地球－月の順に一直線に並び、満月が地球の本影に完全に入る（皆既月食の条件）',
+      '地球の大気を通るとき、青い光は散乱されて失われる',
+      '散乱されにくい赤い光だけが屈折して月面に届き反射する → 月が赤黒く見える',
+    ],
   },
 
   // rika_50 フレミング左手の法則：親指=力・人差し指=磁界・中指=電流（互いに直角）
@@ -216,5 +251,10 @@ export const figuresCoreRika: Record<string, Figure> = {
       [{ x: 0, y: 0 }, { x: -2, y: -2 }],
     ],
     caption: 'フレミング左手の法則：親指・人差し指・中指が互いに直角',
+    steps: [
+      '親指 = 力（運動）の向き',
+      '人差し指 = 磁界の向き',
+      '中指 = 電流の向き',
+    ],
   },
 };

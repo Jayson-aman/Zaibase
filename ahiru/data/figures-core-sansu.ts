@@ -20,6 +20,10 @@ export const figuresCoreSansu: Record<string, Figure> = {
     lines: [{ a: 60, b: 0, label: 'y=60x' }],
     points: [{ x: 2.5, y: 150, label: '(2.5時間, 150km)' }],
     caption: '時速60km：2.5時間で150km',
+    steps: [
+      '2時間30分 = 2.5時間（30分 = 0.5時間）',
+      '距離 = 速さ × 時間 = 60 × 2.5 = 150km',
+    ],
   },
 
   // 1辺8cmの正方形と対角線AC。対角線 = 8√2 ≈ 11.31cm。
@@ -112,6 +116,10 @@ export const figuresCoreSansu: Record<string, Figure> = {
       { label: '女子 16人', value: 16 },
     ],
     caption: '男:女 = 3:2、全40人 → 男子24人',
+    steps: [
+      '比の合計 = 3 + 2 = 5',
+      '男子 = 40 × 3/5 = 24人',
+    ],
   },
 
   // 底面半径3cm・高さ10cmの円柱。体積 = 3.14×3²×10 = 282.6cm³。
@@ -120,6 +128,10 @@ export const figuresCoreSansu: Record<string, Figure> = {
     shape: 'cylinder',
     labels: { radius: '3cm', height: '10cm' },
     caption: '体積 = 3.14×3²×10 = 282.6cm³',
+    steps: [
+      '底面積 = 3 × 3 × 3.14 = 28.26㎠',
+      '体積 = 底面積 × 高さ = 28.26 × 10 = 282.6cm³',
+    ],
   },
 
   // 正六角形。1つの内角 = (6-2)×180÷6 = 120°。
@@ -135,14 +147,23 @@ export const figuresCoreSansu: Record<string, Figure> = {
     ],
     equalAngles: [[0, 1, 2, 3, 4, 5]],
     caption: '正六角形の1つの内角 = 120°',
+    steps: [
+      '六角形の内角の和 = (6−2) × 180 = 720度',
+      '正六角形は6つの角が等しいので、1つの内角 = 720 ÷ 6 = 120度',
+    ],
   },
 
-  // 面積が1辺6cmの正方形（36㎠）と等しい円。半径 ≈ 3.38cm。
+  // 面積が1辺6cmの正方形（36㎠）と等しい円。半径 ≈ 3.39cm。
   sansu_34: {
     kind: 'circle',
-    radiusLabel: '約3.38cm',
+    radiusLabel: '約3.39cm',
     showCenter: true,
-    caption: '面積 = 36㎠（1辺6cmの正方形と同じ）→ 半径≈3.38cm',
+    caption: '面積 = 36㎠（1辺6cmの正方形と同じ）→ 半径≈3.39cm',
+    steps: [
+      '正方形の面積 = 6 × 6 = 36㎠',
+      '半径 × 半径 = 36 ÷ 3.14 ≈ 11.46',
+      '3.39 × 3.39 ≈ 11.49 に近いので、半径 ≈ 3.39cm',
+    ],
   },
 
   // 直角をはさむ2辺が6cm・8cmの直角三角形。面積 = 6×8÷2 = 24㎠。
@@ -174,6 +195,11 @@ export const figuresCoreSansu: Record<string, Figure> = {
     ],
     showCenter: true,
     caption: '内接する正三角形の面積 = 75√3 ≈ 129.9㎠',
+    steps: [
+      '外接円の半径 R=10cm から、1辺 a = R√3 = 10√3 cm',
+      '正三角形の面積 = (√3/4) × a² = (√3/4) × 300 = 75√3 ㎠',
+      '75 × 1.732 ≈ 129.9㎠',
+    ],
   },
 
   // 等差数列 2,5,8,11,… は直線 y=3n-1 上の点。差が一定（3ずつ増える）。
@@ -189,5 +215,9 @@ export const figuresCoreSansu: Record<string, Figure> = {
       { x: 4, y: 11 },
     ],
     caption: '2,5,8,11,… 一定の差3ずつ増える等差数列',
+    steps: [
+      '第n項 = 2 + (n−1) × 3 = 3n − 1 なので、第100項 = 3×100 − 1 = 299',
+      '和 = (初項 + 末項) × 項数 ÷ 2 = (2+299) × 100 ÷ 2 = 15050',
+    ],
   },
 };

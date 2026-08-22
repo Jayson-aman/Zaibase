@@ -10,6 +10,11 @@ export const figuresMath5: Record<string, Figure> = {
     yRange: [-2, 20],
     parabolas: [{ a: 2 }],
     points: [{ x: -3, y: 18, label: '(-3, 18)' }],
+    steps: [
+      '(−3, 18) を代入: 18 = a×9 → a = 2',
+      'x=0で最小値0（変域内に含まれる）、x=−2でy=8、x=1でy=2 → 最大はy=8',
+      'yの変域: 0 ≤ y ≤ 8',
+    ],
   },
 
   // 一次関数 y=2x-3 のグラフ（式は問題文で与えられている）
@@ -30,6 +35,10 @@ export const figuresMath5: Record<string, Figure> = {
     max: 90,
     scaleMin: 0,
     scaleMax: 100,
+    steps: [
+      '四分位範囲 = Q3 − Q1 = 75 − 40 = 35（③は正しい）',
+      '範囲 = 最大値 − 最小値 = 90 − 20 = 70（④は正しい）',
+    ],
   },
 
   // 放物線 y=x² 上の動点 P と、x軸に下ろした垂線・台形
@@ -51,6 +60,12 @@ export const figuresMath5: Record<string, Figure> = {
       { x: 3, y: 0, label: 'H₂' },
     ],
     caption: '放物線 y=x² 上の点 P と垂線 PH',
+    steps: [
+      '上底 = P₁の y座標 = 1',
+      '下底 = P₂の y座標 = 9',
+      '高さ = H₂の x座標 − H₁の x座標 = 3 − 1 = 2',
+      '台形の面積 = (1 + 9) × 2 ÷ 2 = 10',
+    ],
   },
 
   // 一次関数 y=-2x+4 のグラフ（式は問題文で与えられている）
@@ -79,6 +94,12 @@ export const figuresMath5: Record<string, Figure> = {
       [5, 3],
     ],
     caption: '長方形ABCD（縦15cm・横20cm）',
+    steps: [
+      '△DAP = (1/2) × DA × AP = (1/2) × 15 × 8 = 60cm²',
+      '△BPQ = (1/2) × BP × BQ = (1/2) × 12 × 9 = 54cm²',
+      '△QCD = (1/2) × QC × CD = (1/2) × 6 × 20 = 60cm²',
+      '△DPQ = 長方形300cm² − 60 − 54 − 60 = 126cm²（長方形全体の21/50）',
+    ],
   },
 
   // 放物線 y=x² と直線 y=2x+3（囲まれた図形）
@@ -88,6 +109,11 @@ export const figuresMath5: Record<string, Figure> = {
     yRange: [-2, 12],
     parabolas: [{ a: 1 }],
     lines: [{ a: 2, b: 3 }],
+    steps: [
+      'x²=2x+3 → x²−2x−3=0 → (x−3)(x+1)=0 → x=3, x=−1 → 交点(3,9)と(−1,1)',
+      '面積 = ∫₋₁³ [(2x+3)−x²] dx = 32/3',
+      '点(2,4)での接線: y′=2x → x=2で傾き4 → y=4x−4',
+    ],
   },
 
   // 放物線 y=ax²（点(2,-8)を通る上に凸のグラフ／与えられたグラフ）
@@ -97,6 +123,11 @@ export const figuresMath5: Record<string, Figure> = {
     yRange: [-20, 3],
     parabolas: [{ a: -2 }],
     points: [{ x: 2, y: -8, label: '(2, -8)' }],
+    steps: [
+      '(2,−8)を代入: −8 = a×2² = 4a → a = −2',
+      'x=−3のとき: y = −2×(−3)² = −2×9 = −18',
+      'a=−2<0なので上に凸',
+    ],
   },
 
   // 3辺 x, x+1, x+2 の直角三角形（x+2 が斜辺）
@@ -126,6 +157,11 @@ export const figuresMath5: Record<string, Figure> = {
       { x: 5, y: 4, label: 'B' },
       { x: 1, y: 4, label: 'C' },
     ],
+    steps: [
+      'AB=√(4²+3²)=5、AC=√(0²+3²)=3、BC=√(4²+0²)=4',
+      'AC²+BC²=9+16=25=AB² → ∠C=90°（三平方の定理の逆）',
+      '面積 = AC×BC÷2 = 3×4÷2 = 6',
+    ],
   },
 
   // △ABC の∠Aの二等分線と辺BCの交点D（AB=8, AC=6, BC=10.5）
@@ -140,6 +176,11 @@ export const figuresMath5: Record<string, Figure> = {
     sideLabels: ['8cm', null, null, '6cm'],
     diagonals: [[0, 2]],
     caption: 'AD は∠Aの二等分線',
+    steps: [
+      '角の二等分線の定理: BD:DC = AB:AC = 8:6 = 4:3',
+      'BD = 10.5×4/7 = 6cm',
+      'DC = 10.5×3/7 = 4.5cm',
+    ],
   },
 
   // 円に内接する正六角形（対角線を表示）
@@ -165,6 +206,11 @@ export const figuresMath5: Record<string, Figure> = {
       [0, 2],
     ],
     caption: '円に内接する正六角形と対角線',
+    steps: [
+      '正六角形の1辺=外接円の半径 → 半径=6cm、直径=6×2=12cm',
+      '1つ飛ばしの対角線: 底辺の半分=6×sin60°=3√3cm',
+      '対角線 = 2×3√3 = 6√3cm',
+    ],
   },
 
   // 立方体（頂点・辺・面の数）
@@ -172,6 +218,12 @@ export const figuresMath5: Record<string, Figure> = {
     kind: 'solid',
     shape: 'cube',
     caption: '立方体',
+    steps: [
+      '頂点の数 V = 8（上面4個＋下面4個）',
+      '辺の数 E = 12（上面4本＋下面4本＋縦の辺4本）',
+      '面の数 F = 6',
+      'V−E+F = 8−12+6 = 2（オイラーの公式が成立）',
+    ],
   },
 
   // 1辺6cmの立方体（対角線を含む切断）
@@ -179,6 +231,10 @@ export const figuresMath5: Record<string, Figure> = {
     kind: 'solid',
     shape: 'cube',
     labels: { width: '6cm' },
+    steps: [
+      '面の対角線 = √(6²+6²) = √72 = 6√2cm',
+      '切り口の面積 = 6 × 6√2 = 36√2cm²',
+    ],
   },
 
   // 1辺4cmの立方体（頂点付近の切断）
@@ -186,6 +242,10 @@ export const figuresMath5: Record<string, Figure> = {
     kind: 'solid',
     shape: 'cube',
     labels: { width: '4cm' },
+    steps: [
+      '切り口の一辺 = 面の対角線 = 4×√2 = 4√2cm',
+      '正三角形の面積 = (√3/4)×(4√2)² = (√3/4)×32 = 8√3cm²',
+    ],
   },
 
   // 一次関数 y=2x-4 のグラフ（式は問題文で与えられている）
@@ -194,6 +254,11 @@ export const figuresMath5: Record<string, Figure> = {
     xRange: [-2, 5],
     yRange: [-6, 6],
     lines: [{ a: 2, b: -4 }],
+    steps: [
+      'x切片: y=0を代入 → 0=2x−4 → x=2 → (2,0)',
+      'y切片: x=0を代入 → y=2×0−4=−4 → (0,−4)',
+      '傾き = xの係数 = 2',
+    ],
   },
 
   // 二次関数 y=ax²+bx+c（頂点(2,-1)・点(0,3)を通る／与えられたグラフ）
@@ -206,6 +271,11 @@ export const figuresMath5: Record<string, Figure> = {
       { x: 0, y: 3, label: '(0, 3)' },
       { x: 2, y: -1, label: '頂点(2, -1)' },
     ],
+    steps: [
+      '頂点形式: y=a(x−2)²−1',
+      '(0,3)を代入: 3=4a−1 → a=1',
+      '展開: y=(x−2)²−1=x²−4x+3 → b=−4, c=3',
+    ],
   },
 
   // 時間（分）と2人の間の距離（m）のグラフ
@@ -216,5 +286,9 @@ export const figuresMath5: Record<string, Figure> = {
     lines: [{ a: 80, b: 0 }],
     points: [{ x: 12, y: 960, label: '(12, 960)' }],
     caption: '横軸：時間（分）／縦軸：2人の間の距離（m）',
+    steps: [
+      '2人の速さの和 = 960÷12 = 毎分80m',
+      '兄=x+10, 弟=xとして: x+(x+10)=80 → 2x=70 → x=35',
+    ],
   },
 };

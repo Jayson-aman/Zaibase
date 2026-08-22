@@ -13,6 +13,11 @@ export const figuresMath3: Record<string, Figure> = {
       { x: -2, y: 8 },
       { x: 2, y: 8 },
     ],
+    steps: [
+      'x = -2 のとき y = 2×(-2)² = 8',
+      'x = 2 のとき y = 2×2² = 8',
+      '変化の割合 = (8-8)/(2-(-2)) = 0',
+    ],
   },
 
   // y=-x²+4x+5 の放物線の概形（頂点・軸・最大値は答えなのでラベルを付けない）。
@@ -21,6 +26,11 @@ export const figuresMath3: Record<string, Figure> = {
     xRange: [-3, 7],
     yRange: [-2, 11],
     parabolas: [{ a: -1, b: 4, c: 5 }],
+    steps: [
+      '平方完成: y = -(x-2)²+9 → 頂点(2,9)、最大値9',
+      'x切片: -(x-2)²+9=0 → (x-2)²=9 → x=-1, 5',
+      'y切片: x=0 → y=5',
+    ],
   },
 
   // y=2x-1 と y=-x+5 の交点 P(2,3)。傾き3の直線（切片kが答え）は描かない。
@@ -33,6 +43,10 @@ export const figuresMath3: Record<string, Figure> = {
       { a: -1, b: 5 },
     ],
     points: [{ x: 2, y: 3, label: 'P' }],
+    steps: [
+      '交点P: 2x-1=-x+5 → 3x=6 → x=2, y=3 → P(2,3)',
+      '傾き3の直線 y=3x+k に P(2,3) を代入: 3=6+k → k=-3',
+    ],
   },
 
   // 台形ABCD：AB=6, CD=4, BC=5, ∠ABC=90°。面積は答えなので図示しない。
@@ -67,6 +81,10 @@ export const figuresMath3: Record<string, Figure> = {
     ],
     sideLabels: ['1', '2', null, null],
     diagonals: [[3, 1]],
+    steps: [
+      '底辺比 AP:PB = 1:2 → 面積比 △APC:△BPC = 1:2（高さ共通）',
+      '△ABC=30cm²を1:2に分割 → △APC = 30×1/3 = 10cm²',
+    ],
   },
 
   // 縦12m・横9mの長方形とその対角線。対角線の長さ・正方形の面積は答えなので図示しない。
@@ -81,6 +99,10 @@ export const figuresMath3: Record<string, Figure> = {
     sideLabels: ['9m', '12m', null, null],
     rightAngles: [0, 1, 2, 3],
     diagonals: [[0, 2]],
+    steps: [
+      'd² = 12²+9² = 225 → d = 15m（対角線）',
+      '正方形の面積 = 15² = 225m²',
+    ],
   },
 
   // 1辺6cmの正三角形（高さは答えなので図示しない）。
@@ -93,6 +115,11 @@ export const figuresMath3: Record<string, Figure> = {
     ],
     sideLabels: ['6cm', '6cm', '6cm'],
     equalSides: [[0, 1, 2]],
+    steps: [
+      '正三角形の高さ: h² = 6²-3² = 27 → h = 3√3cm',
+      '重心から頂点までの距離 = 3√3×2/3 = 2√3cm',
+      '正四面体の高さ: H² = 6²-(2√3)² = 24 → H = 2√6cm',
+    ],
   },
 
   // 半径13cmの円Oと、中心からの距離5cm・12cmの平行な2弦AB・CD。弦の長さは答えなので図示しない。
@@ -110,6 +137,10 @@ export const figuresMath3: Record<string, Figure> = {
       [2, 3],
     ],
     caption: '半径13cm・平行な2弦 AB, CD',
+    steps: [
+      'AM² = 13²-5² = 144 → AM = 12cm → AB = 2×12 = 24cm',
+      'CDの半弦 = √(13²-12²) = √25 = 5cm → CD = 2×5 = 10cm',
+    ],
   },
 
   // ∠C=90°の直角三角形（AC=9, BC=12）と、Cから斜辺ABへの垂線CH。CH・AH・BHは答えなので図示しない。
@@ -123,6 +154,12 @@ export const figuresMath3: Record<string, Figure> = {
     sideLabels: [null, '12cm', '9cm'],
     rightAngles: [2],
     heights: [{ from: 2, toEdge: [0, 1] }],
+    steps: [
+      'AB = √(9²+12²) = √225 = 15cm',
+      'CH = 9×12÷15 = 7.2cm（面積を2通りで表す）',
+      'AH = 9²÷15 = 5.4cm',
+      'BH = 12²÷15 = 9.6cm',
+    ],
   },
 
   // 底面の半径4cm・高さ9cmの円柱（体積は答えなので図示しない）。
@@ -146,6 +183,12 @@ export const figuresMath3: Record<string, Figure> = {
     xRange: [-3, 3],
     yRange: [-6, 6],
     lines: [{ a: 2, b: 0 }],
+    steps: [
+      'x = 0: y = 2×0 = 0',
+      'x = 1: y = 2×1 = 2',
+      'x = 2: y = 2×2 = 4',
+      'x = -1: y = 2×(-1) = -2',
+    ],
   },
 
   // 底面の半径5cm・母線13cmの円すい（高さ・体積は答えなので図示しない）。
@@ -153,6 +196,10 @@ export const figuresMath3: Record<string, Figure> = {
     kind: 'solid',
     shape: 'cone',
     labels: { radius: '5cm', slant: '13cm' },
+    steps: [
+      '高さ h: h²=13²-5²=169-25=144 → h=12cm',
+      '体積 = (1/3)×3.14×5²×12 = 314cm³',
+    ],
   },
 
   // 時間（分）と道のり（m）の折れ線グラフ。休憩後の速さは答えなので図示しない。
@@ -180,6 +227,11 @@ export const figuresMath3: Record<string, Figure> = {
       { x: 25, y: 2400 },
     ],
     caption: '横軸：時間（分）／縦軸：道のり（m）',
+    steps: [
+      '残りの道のり = 2400-1200 = 1200m',
+      '休憩後の時間 = 25-10-5 = 10分',
+      '速さ = 1200÷10 = 分速120m',
+    ],
   },
 
   // 2点(2,1),(-1,7)を通る一次関数。式（＝答え）を示す直線は描かず、2点のみ図示する。
@@ -190,6 +242,10 @@ export const figuresMath3: Record<string, Figure> = {
     points: [
       { x: 2, y: 1 },
       { x: -1, y: 7 },
+    ],
+    steps: [
+      '傾き a = (7-1)/(-1-2) = 6/(-3) = -2',
+      'y=-2x+b に (2,1) を代入: 1=-4+b → b=5 → y=-2x+5',
     ],
   },
 };

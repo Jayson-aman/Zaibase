@@ -25,6 +25,10 @@ export const figuresKokoRika: Record<string, Figure> = {
       { label: 'S波', color: '#EF4444', markers: true, points: [{ x: 0, y: 0 }, { x: 25, y: 100 }] },
     ],
     caption: '走時曲線：震源距離100kmにP波は5秒後、S波は25秒後に到達（傾きが速さ）',
+    steps: [
+      'P波：速さ = 距離 ÷ 時間 = 100km ÷ 5秒 = 20km/s',
+      'S波：速さ = 距離 ÷ 時間 = 100km ÷ 25秒 = 4km/s',
+    ],
   },
 
   // gen_05：メンデルF2の遺伝子型比 RR:Rr:rr = 1:2:1
@@ -37,6 +41,11 @@ export const figuresKokoRika: Record<string, Figure> = {
       { label: 'rr', value: 1, color: '#64748B' },
     ],
     caption: 'F₂の遺伝子型比 RR:Rr:rr = 1:2:1（表現型は 丸:しわ = 3:1）',
+    steps: [
+      '親 丸(RR) × しわ(rr) → F1はすべてRr（丸）',
+      'F1(Rr)×F1(Rr) → F2の遺伝子型比 RR:Rr:rr = 1:2:1',
+      '表現型比 丸:しわ = (RR+Rr):rr = 3:1',
+    ],
   },
 
   // gen_11：オームの法則（20Ωに100Vをかける）
@@ -72,6 +81,11 @@ export const figuresKokoRika: Record<string, Figure> = {
       { label: 'aa', value: 1, color: '#64748B' },
     ],
     caption: 'F₂の遺伝子型比 AA:Aa:aa = 1:2:1（表現型は 丸:しわ = 3:1）',
+    steps: [
+      '親 丸(AA) × しわ(aa) → F1はすべてAa（丸）',
+      'F1(Aa)×F1(Aa) → F2の遺伝子型比 AA:Aa:aa = 1:2:1',
+      '表現型比 丸:しわ = (AA+Aa):aa = 3:1',
+    ],
   },
 
   // === koko_oyo_rika（応用コア・理科 01〜50）===
@@ -87,6 +101,11 @@ export const figuresKokoRika: Record<string, Figure> = {
     sideLabels: ['水平面', '垂直（高さ）', '斜面'],
     rightAngles: [1],
     caption: '傾き30°の斜面。重力Wを斜面方向（Wsin30°）と斜面に垂直な方向（Wcos30°）に分解する',
+    steps: [
+      '重力 W = mg = 5kg × 9.8m/s² = 49N',
+      '斜面に平行な成分 = W sin30° = 49 × 0.5 = 24.5N',
+      '斜面に垂直な成分 = W cos30° = 49 × 0.866 ≈ 42.4N',
+    ],
   },
 
   // oyo_05：並列回路（6Ωと3Ω、電源100V）
@@ -99,6 +118,11 @@ export const figuresKokoRika: Record<string, Figure> = {
     ],
     battery: { label: '100V' },
     caption: '並列回路（電源100V）。各枝に同じ電圧、合成抵抗は 1/R=1/6+1/3',
+    steps: [
+      '合成抵抗：1/R = 1/6 + 1/3 = 1/2 → R = 2Ω',
+      '6Ω側の電流：I₁ = 100V ÷ 6Ω ≈ 16.7A',
+      '3Ω側の電流：I₂ = 100V ÷ 3Ω ≈ 33.3A',
+    ],
   },
 
   // oyo_11：直列回路（10Ω・20Ω・30Ω、電源12V）
@@ -112,6 +136,11 @@ export const figuresKokoRika: Record<string, Figure> = {
     ],
     battery: { label: '12V' },
     caption: '直列回路（電源12V）。合成抵抗は和、全体に同じ電流が流れ電圧が分圧される',
+    steps: [
+      '合成抵抗 = 10 + 20 + 30 = 60Ω',
+      '全体の電流 I = 12V ÷ 60Ω = 0.2A',
+      '各抵抗の電圧降下：10Ω→2V、20Ω→4V、30Ω→6V（V=IR）',
+    ],
   },
 
   // oyo_17：水素の燃焼（水の生成）
@@ -119,6 +148,11 @@ export const figuresKokoRika: Record<string, Figure> = {
     kind: 'chemEquation',
     equation: '2H2 + O2 -> 2H2O',
     caption: '係数比 = mol比（H₂ : H₂O = 2 : 2 = 1 : 1）',
+    steps: [
+      '水素4gの物質量：n = 4g ÷ 2g/mol = 2mol',
+      '係数比 H₂:H₂O = 2:2 = 1:1 → 生じる水は2mol',
+      '水の質量 = 2mol × 18g/mol = 36g',
+    ],
   },
 
   // oyo_22：硝酸カリウムの溶解度（与えられた2点。析出量は答えのため描かない）
@@ -137,6 +171,12 @@ export const figuresKokoRika: Record<string, Figure> = {
       },
     ],
     caption: 'KNO₃の溶解度（60℃で109g、20℃で32g／水100g）。冷却すると差の分だけ析出',
+    steps: [
+      '60℃の飽和溶液100g中の水の量 = 100 × 100/(100+109) ≈ 47.85g',
+      'この水に溶けているKNO₃ = 100 − 47.85 ≈ 52.15g',
+      '20℃でその水に溶けるKNO₃ = 32 × 47.85/100 ≈ 15.31g',
+      '析出量 = 52.15 − 15.31 ≈ 36.8g（約37g）',
+    ],
   },
 
   // oyo_24：同濃度の強酸(HCl)と弱酸(酢酸)のpH比較
@@ -149,6 +189,11 @@ export const figuresKokoRika: Record<string, Figure> = {
       { label: '酢酸(弱酸)', value: 2.9, color: '#0EA5E9' },
     ],
     caption: '同じ0.1mol/Lでも、完全電離する強酸はpHが低く（酸性が強い）、部分電離の弱酸はpHが高い',
+    steps: [
+      '塩酸(強酸)は完全電離 → [H⁺] = 0.1mol/L → pH = -log(0.1) = 1.0',
+      '酢酸(弱酸)は一部だけ電離 → [H⁺] ≈ 0.0013mol/L → pH ≈ 2.9',
+      '同じ濃度でも強酸の方がpHが低い（酸性が強い）',
+    ],
   },
 
   // oyo_28：並列回路（10Ωと20Ω、電源60V）
@@ -161,6 +206,11 @@ export const figuresKokoRika: Record<string, Figure> = {
     ],
     battery: { label: '60V' },
     caption: '並列回路（電源60V）。各枝に60Vがかかり、電流は枝ごとに分かれて足し合わさる',
+    steps: [
+      '10Ω側の電流：I₁ = 60V ÷ 10Ω = 6A',
+      '20Ω側の電流：I₂ = 60V ÷ 20Ω = 3A',
+      '全体の電流：I = I₁ + I₂ = 6 + 3 = 9A',
+    ],
   },
 
   // oyo_34：鉄の酸化（酸化鉄(III)の生成）
@@ -222,6 +272,11 @@ export const figuresKokoRika: Record<string, Figure> = {
       { from: 12, to: 14 },
     ],
     caption: 'CH₄（単結合）・C₂H₄（二重結合）・C₂H₂（三重結合）。不飽和結合ほど反応しやすい',
+    steps: [
+      'CH₄（メタン）：C-Hはすべて単結合（sp³混成・正四面体形）',
+      'C₂H₄（エチレン）：C=C二重結合が1つ（sp²混成・平面形）',
+      'C₂H₂（アセチレン）：C≡C三重結合が1つ（sp混成・直線形）',
+    ],
   },
 
   // oyo_40：触媒の効果（活性化エネルギーの反応経路図）
@@ -250,6 +305,11 @@ export const figuresKokoRika: Record<string, Figure> = {
       },
     ],
     caption: '触媒は山の高さ（活性化エネルギー）を下げる。反応物・生成物のエネルギーは変わらない',
+    steps: [
+      '活性化エネルギーは反応が進むために必要な最小のエネルギー（エネルギーの山の高さ）',
+      '触媒を使うと、この山（活性化エネルギー）が低くなる',
+      '山が低いほど反応できる分子が増える → 反応速度が速くなる（反応物・生成物のエネルギーは変わらない）',
+    ],
   },
 
   // oyo_41：ABO血液型 IAi × IBi の子の比 AB:A:B:O = 1:1:1:1
@@ -262,6 +322,11 @@ export const figuresKokoRika: Record<string, Figure> = {
       { label: 'O (ii)', value: 1, color: '#64748B' },
     ],
     caption: '父IAi × 母IBi の子 → AB : A : B : O = 1 : 1 : 1 : 1（O型が1/4で生まれうる）',
+    steps: [
+      'O型の子(ii)が生まれるには父・母ともに i を持つ必要がある',
+      '父はA型で i を持つ → IAi。母はB型で i を持つ → IBi',
+      'IAi × IBi の子：IAIB(AB):IAi(A):IBi(B):ii(O) = 1:1:1:1',
+    ],
   },
 
   // oyo_43：生態系のエネルギーピラミッド（栄養段階ごとに約1/10）
@@ -274,5 +339,10 @@ export const figuresKokoRika: Record<string, Figure> = {
       { label: '二次消費者', value: 1, color: '#64748B' },
     ],
     caption: 'エネルギーは一方向に流れ、栄養段階が上がるごとに約10〜20%しか伝わらない',
+    steps: [
+      '食物連鎖は一方向の「食う・食われる」の関係。食物網は複数の食物連鎖が網目状に絡み合ったもの',
+      'エネルギーは生産者から上位の消費者に移るほど減少し、各段階で約10〜20%しか次に伝わらない',
+      'そのため生物量（バイオマス）は生産者が最も多く、上位の消費者ほど少なくなる（ピラミッド状）',
+    ],
   },
 };

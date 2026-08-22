@@ -20,6 +20,12 @@ export const figuresMath6: Record<string, Figure> = {
       { x: -1.5, y: 0 },
     ],
     caption: `直線 y=2x+b と x軸・y軸で囲まれる三角形`,
+    steps: [
+      '(0,3)を通るのでb=3 → 直線: y=2x+3',
+      'x=4のとき: y=2×4+3=11',
+      'x軸との交点: 0=2x+3 → x=−3/2 → (−3/2,0)',
+      '面積 = 1/2×3×3/2 = 9/4',
+    ],
   },
 
   // 与えられた2点 A(−3, 9/2)・B(2, 2) を座標平面にプロット（放物線は答えa=1/2を示すため描かない）。
@@ -32,6 +38,10 @@ export const figuresMath6: Record<string, Figure> = {
       { x: 2, y: 2, label: 'B' },
     ],
     caption: `点A(−3, 9/2) と 点B(2, 2)`,
+    steps: [
+      'B(2,2)を代入: 2 = a×2² = 4a → a = 1/2',
+      'a=1/2でA(−3, 9/2)を確認: y=(1/2)×(−3)²=9/2 ✓ → Aも同じ放物線上にある',
+    ],
   },
 
   // △ABC の辺AB上のD、辺CA上のE。DE∥BC。AD=4, DB=2（BCは答えなので書かない）。
@@ -48,6 +58,11 @@ export const figuresMath6: Record<string, Figure> = {
     sideLabels: ['4', '2', null, null, null],
     diagonals: [[1, 4]],
     caption: `DE∥BC`,
+    steps: [
+      'AB = AD+DB = 4+2 = 6cm',
+      '相似比 AD:AB = 4:6 = 2:3 → DE:BC = 2:3',
+      'BC = DE×3/2 = 6×3/2 = 9cm',
+    ],
   },
 
   // 直径ABに対する円周角 ∠ACB=90°（タレスの定理）。AB=10, AC=6（BCは答えなので書かない）。
@@ -82,6 +97,10 @@ export const figuresMath6: Record<string, Figure> = {
       [1, 3],
     ],
     caption: `AD∥BC。対角線の交点がP`,
+    steps: [
+      '相似比 AD:CB = 4:10 = 2:5 → AP:PC = 2:5',
+      'PD:PB = AD:CB = 2:5 → PD = PB×2/5 = 15×2/5 = 6cm',
+    ],
   },
 
   // 円内で弦ABと弦CDが交わる。長さ(答え)は書かない。
@@ -130,6 +149,11 @@ export const figuresMath6: Record<string, Figure> = {
       [2, 3],
     ],
     caption: `弦ABと弦CDの交点がP`,
+    steps: [
+      '方べきの定理: x(x+2)=3×8 → x²+2x−24=0 → (x+6)(x−4)=0 → x=4（正の値）',
+      'AP=4cm、PB=x+2=6cm',
+      'AB=AP+PB=4+6=10cm',
+    ],
   },
 
   // 縦3cm・横4cm・高さ12cmの直方体（対角線の長さ13cmは答えなので書かない）。
@@ -146,6 +170,10 @@ export const figuresMath6: Record<string, Figure> = {
     shape: 'cone',
     labels: { radius: '2cm', slant: '8cm' },
     caption: `母線8cm・底面の半径2cmの円錐`,
+    steps: [
+      '底面の円周 = 2π×2 = 4π。おうぎ形の弧 = 2π×8×(θ/360) = 4π → θ=90°',
+      '展開図でPの2点間は90°、両辺6cmの直角二等辺三角形: 長さ² = 6²+6² = 72 → 長さ = 6√2cm',
+    ],
   },
 
   // 底面の半径10cm・高さ12cmの円錐（切断後の体積・表面積は答えなので書かない）。
@@ -154,5 +182,11 @@ export const figuresMath6: Record<string, Figure> = {
     shape: 'cone',
     labels: { radius: '10cm', height: '12cm' },
     caption: `底面の半径10cm・高さ12cmの円錐`,
+    steps: [
+      '母線 l = √(10²+12²) = √244 = 2√61cm。相似比(高さ比) = 3:12 = 1:4',
+      '小さい円錐: 半径=10×1/4=2.5cm、母線=2√61×1/4=√61/2cm',
+      '体積: 元の円錐400π、小さい円錐400π×1/64=25π/4 → 円錐台=400π−25π/4=1575π/4cm³',
+      '小さい円錐の表面積 = 側面積(5√61/4)π + 底面積25π/4 = (5√61+25)π/4cm²',
+    ],
   },
 };
