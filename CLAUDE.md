@@ -108,7 +108,7 @@ Zaibase/
 ### iOSビルド時の既知の落とし穴（2026/8/23）
 
 - **`app.json` にコミットされていないローカル差分が残っていることがある**（例：`ios.buildNumber` の書き込み）。EAS CLI が `appVersionSource: local` の場合、ビルドのたびに `app.json` にバージョン/ビルド番号を直接書き込むため、`git pull` 前に `git status` で確認し、必要なら `git stash` や `git checkout --` で退避・破棄してから pull すること。
-- **react-native-reanimated と react-native-worklets のバージョン不整合で `pod install` が失敗する**ことがある（2026/8/23に発生：reanimated 4.6.0 に対し worklets が 0.10.4 で非互換、`Please install Worklets 0.12.x or newer` エラー）。`ahiru/package.json` の `react-native-worklets` を `^0.12.1` に更新して解消済み。今後同様のエラーが出た場合は、EASビルドログの "Install pods" フェーズで `[Reanimated]` から始まるエラー行を確認し、`react-native-worklets` を要求バージョンに合わせる。
+- **react-native-reanimated と react-native-worklets のバージョン不整合でビルドが失敗する**ことがある（2026/8/23に発生）。原因は二段階：①`package-lock.json` を（このリポジトリ全体の方針で）コミットしていないため、`react-native-reanimated` を `^4.4.1` のようなレンジ指定にしていると、EASビルドのたびに最新版へ自動で引き上がり、手元の環境と組み合わせがずれる。②worklets 0.12.x では `executeSync` が `runSync` 系にリネームされて削除されており、reanimated 4.6.0（EASが引き上げた最新版）のネイティブコードがそれを呼び出そうとして `no member named 'executeSync' in 'worklets::WorkletRuntime'` でXcodeビルドが失敗する。対処：`ahiru/package.json` の `react-native-reanimated` と `react-native-worklets` を、範囲指定なしの完全固定バージョン（検証済み：`reanimated 4.5.3` + `worklets 0.11.1`、reanimatedのpeerDependenciesが明示する組み合わせ）にして解消済み。今後同様のエラーが出た場合は、EASビルドログの "Install pods" フェーズ（JSレベルの不整合）と "Run fastlane"/Xcodeビルドログ（C++レベルの不整合）の両方を確認し、`npm view react-native-reanimated@<version> peerDependencies` で要求されるworkletsバージョンと実際の固定バージョンを一致させる。
 
 ## 司令塔AI（複数プロダクト横断監督）— 保留中
 
