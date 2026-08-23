@@ -198,8 +198,10 @@ export function buildTestSet(
   }
   if (mode.moshiOnly) {
     const moshiOnes = pickMoshiPool(src);
-    // 月例模試がまだ配信されていない教科は、通常の入試対策相当から出す
-    if (moshiOnes.length >= Math.min(10, mode.count)) src = moshiOnes;
+    // 月例模試がまだ配信されていない教科（0問）だけ、通常の入試対策相当から出す。
+    // 無料ユーザーはmaxOnlyで事前に絞られてsrcが5問程度になることがあるため、
+    // 閾値を高く取ると無料ユーザー分だけ常にフォールバックしてしまう（実際にあったバグ）。
+    if (moshiOnes.length > 0) src = moshiOnes;
   }
 
   const mix: Record<LevelKey, number> =

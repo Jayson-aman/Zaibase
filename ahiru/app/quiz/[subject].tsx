@@ -37,6 +37,7 @@ import QuizCard from '../../components/QuizCard';
 import Paywall from '../../components/Paywall';
 import { saveProgress } from '../../store/progress';
 import { incrementTrialQuestions, isTrialExpired, TRIAL_QUESTION_LIMIT } from '../../store/trial';
+import { getSessionFreeUsed, incrementSessionFreeUsed } from '../../store/sessionLimit';
 import { submitRankingScore } from '../../services/ranking';
 import { maybeRequestReview } from '../../services/reviewPrompt';
 import { getDailyQuestions, getTodayDayLabel } from '../../utils/dailyChallenge';
@@ -210,6 +211,9 @@ export default function QuizScreen() {
   // 正解/不正解ボタンの二重タップ防止。二重に走ると currentIndex が2つ進み、
   // 最後の2問で範囲外になって落ちる。
   const answeringRef = useRef(false);
+  // レベル別ドリル・入試対策の「1日あたり無料N問」の消費数。画面を離れて
+  // 入り直すだけで無料枠が復活しないよう、AsyncStorageの永続値を読み込んで保持する。
+  const sessionFreeUsedRef = useRef(0);
   const [showPaywall, setShowPaywall] = useState(false);
   // 無料お試しの上限で止められたかどうか（ペイウォールを閉じた後の行き先を変える）
   const [trialBlocked, setTrialBlocked] = useState(false);
@@ -240,6 +244,22 @@ export default function QuizScreen() {
     setRemedialJustInjected(false);
     setShowFireworks(false);
   }, [baseQuestions]);
+
+  // レベル別ドリル・入試対策の「1日あたり無料N問」の消費数を読み込む。
+  // 画面を作り直すたびに0から数え直すと、離脱→再入室を繰り返すだけで
+  // 無料枠が無限に復活してしまうため、永続化された値から再開する。
+  useEffect(() => {
+    if (testModeKey != null && SESSION_LIMITED_MODES.includes(testModeKey)) {
+      let cancelled = false;
+      getSessionFreeUsed(`${testModeKey}_${subjectKey}`).then((n) => {
+        if (!cancelled) sessionFreeUsedRef.current = n;
+      });
+      return () => {
+        cancelled = true;
+      };
+    }
+    sessionFreeUsedRef.current = 0;
+  }, [testModeKey, subjectKey]);
 
   // ロード後の一瞬だけ queue が空になるのを避けるため baseQuestions をフォールバックに使う
   const activeQuestions = queue.length > 0 ? queue : baseQuestions;
@@ -313,8 +333,9 @@ export default function QuizScreen() {
     // 上限判定をしない（加入者がいきなりペイウォールで止められるのを防ぐ）。
     if (!isPro && !isMax && !subLoading) {
       // レベル別ドリル・入試対策は、アプリ全体の累計トライアルとは別に、
-      // 1回のセッションで最初のSESSION_FREE_LIMIT問だけ無料にする。
-      if (testModeKey != null && SESSION_LIMITED_MODES.includes(testModeKey) && currentIndex >= SESSION_FREE_LIMIT) {
+      // 1日あたり最初のSESSION_FREE_LIMIT問だけ無料にする（永続化された消費数で判定）。
+      const isSessionLimitedMode = testModeKey != null && SESSION_LIMITED_MODES.includes(testModeKey);
+      if (isSessionLimitedMode && sessionFreeUsedRef.current >= SESSION_FREE_LIMIT) {
         setTrialBlocked(true);
         setShowPaywall(true);
         answeringRef.current = false;
@@ -328,6 +349,9 @@ export default function QuizScreen() {
         return;
       }
       await incrementTrialQuestions();
+      if (isSessionLimitedMode) {
+        sessionFreeUsedRef.current = await incrementSessionFreeUsed(`${testModeKey}_${subjectKey}`);
+      }
     }
 
     const newScore = correct ? score + 1 : score;

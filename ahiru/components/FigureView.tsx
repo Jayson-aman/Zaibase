@@ -1224,7 +1224,7 @@ function StepsList({ steps, animated, progress }: { steps: string[]; animated: b
     <View style={styles.stepsBox}>
       {steps.map((step, i) => {
         const reached = i < reachedCount;
-        const isCurrent = i === reachedCount - 1;
+        const isCurrent = animated && i === reachedCount - 1;
         const label = CIRCLED_NUMBERS[i] ?? `${i + 1}.`;
         return (
           <Text
