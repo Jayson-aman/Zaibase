@@ -94,6 +94,22 @@ Zaibase/
 - **現在の最優先タスク（2026/6/16時点・収益化優先）**：受験アプリのRevenueCat課金を有効化する。必要な3つのアカウント（RevenueCat／Apple Developer Program／Google Play Console）はいずれも未作成のため、Claude Codeがステップバイステップで作成・設定を案内中。コードは`services/subscription.ts`・`constants/proAccess.ts`に実装済みでプレースホルダーキーの差し替えのみで動く想定。
 - 残タスク：ログイン方式の検討、既存の建設・法律相談と同様の監視・自動化フローへの組み込み。
 
+### ⚠️ ローカルクローンの罠：`~/ahiru` は別プロジェクト（QualiZ）（2026/8/23判明）
+
+ユーザーのMacのホーム直下 `~/ahiru` は、このリポジトリではなく**無関係の別アプリ「QualiZ」**（Bundle ID `com.jaysonaman.qualiz`、Expoプロジェクト `@masaya.nanjo/qualiz`）のローカルクローン。`cd ahiru` だけで移動すると誤ってQualiZ側でビルド・提出してしまう事故が実際に発生した（2026/8/23、EAS submitがQualiZ宛に実行され失敗して発覚）。
+
+- **正しいクローン**（すべて `jayson-aman/zaibase` を指す、`ahiru/app.json` の `bundleIdentifier` が `com.zaibase.exam`）：
+  - `~/zaibase-repo`（作業に使っているメイン）
+  - `~/Documents/GitHub/Zaibase`
+  - `~/Zaibase`（同名の入れ子 `~/Zaibase/Zaibase` も存在するが古い重複クローンの可能性、混同注意）
+- iOS ビルド・提出コマンドを案内する際は、必ず `cd ~/zaibase-repo/ahiru` のように絶対パスを明示すること。「`cd ahiru`」のような相対パスだけの指示は誤爆の原因になる。
+- ビルド前に `grep bundleIdentifier ahiru/app.json` で `com.zaibase.exam` になっていることを確認する運用を徹底する。
+
+### iOSビルド時の既知の落とし穴（2026/8/23）
+
+- **`app.json` にコミットされていないローカル差分が残っていることがある**（例：`ios.buildNumber` の書き込み）。EAS CLI が `appVersionSource: local` の場合、ビルドのたびに `app.json` にバージョン/ビルド番号を直接書き込むため、`git pull` 前に `git status` で確認し、必要なら `git stash` や `git checkout --` で退避・破棄してから pull すること。
+- **react-native-reanimated と react-native-worklets のバージョン不整合で `pod install` が失敗する**ことがある（2026/8/23に発生：reanimated 4.6.0 に対し worklets が 0.10.4 で非互換、`Please install Worklets 0.12.x or newer` エラー）。`ahiru/package.json` の `react-native-worklets` を `^0.12.1` に更新して解消済み。今後同様のエラーが出た場合は、EASビルドログの "Install pods" フェーズで `[Reanimated]` から始まるエラー行を確認し、`react-native-worklets` を要求バージョンに合わせる。
+
 ## 司令塔AI（複数プロダクト横断監督）— 保留中
 
 - 構想：建設・法律相談・受験（・将来の証券・物販）を横断的にチェックするAI（Claude Agent SDK / Managed Agentsの`multiagent`構成を想定）。
