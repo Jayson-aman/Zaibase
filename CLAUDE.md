@@ -105,10 +105,13 @@ Zaibase/
 - iOS ビルド・提出コマンドを案内する際は、必ず `cd ~/zaibase-repo/ahiru` のように絶対パスを明示すること。「`cd ahiru`」のような相対パスだけの指示は誤爆の原因になる。
 - ビルド前に `grep bundleIdentifier ahiru/app.json` で `com.zaibase.exam` になっていることを確認する運用を徹底する。
 
-### iOSビルド時の既知の落とし穴（2026/8/23）
+### iOSビルド時の既知の落とし穴（2026/8/23、解決済み）
 
-- **`app.json` にコミットされていないローカル差分が残っていることがある**（例：`ios.buildNumber` の書き込み）。EAS CLI が `appVersionSource: local` の場合、ビルドのたびに `app.json` にバージョン/ビルド番号を直接書き込むため、`git pull` 前に `git status` で確認し、必要なら `git stash` や `git checkout --` で退避・破棄してから pull すること。
-- **react-native-reanimated と react-native-worklets のバージョン不整合でビルドが失敗する**ことがある（2026/8/23に発生）。原因は二段階：①`package-lock.json` を（このリポジトリ全体の方針で）コミットしていないため、`react-native-reanimated` を `^4.4.1` のようなレンジ指定にしていると、EASビルドのたびに最新版へ自動で引き上がり、手元の環境と組み合わせがずれる。②worklets 0.12.x では `executeSync` が `runSync` 系にリネームされて削除されており、reanimated 4.6.0（EASが引き上げた最新版）のネイティブコードがそれを呼び出そうとして `no member named 'executeSync' in 'worklets::WorkletRuntime'` でXcodeビルドが失敗する。対処：`ahiru/package.json` の `react-native-reanimated` と `react-native-worklets` を、範囲指定なしの完全固定バージョン（検証済み：`reanimated 4.5.3` + `worklets 0.11.1`、reanimatedのpeerDependenciesが明示する組み合わせ）にして解消済み。今後同様のエラーが出た場合は、EASビルドログの "Install pods" フェーズ（JSレベルの不整合）と "Run fastlane"/Xcodeビルドログ（C++レベルの不整合）の両方を確認し、`npm view react-native-reanimated@<version> peerDependencies` で要求されるworkletsバージョンと実際の固定バージョンを一致させる。
+2026/8/23、iOSビルド・提出が3つの原因で何度も失敗し、同じやり取りを繰り返した。**`eas build --platform ios` が成功しビルド番号3で `.ipa` が生成されたことを確認済み**（buildNumber 1→2→3、最終的に成功）。次回同様の作業をするときは、まず以下を順にチェックすれば同じ堂々巡りは避けられるはず。
+
+1. **正しいディレクトリか確認する**：`~/ahiru` は無関係の別アプリ「QualiZ」（`com.jaysonaman.qualiz`）のクローンなので絶対に使わない。必ず `cd ~/zaibase-repo/ahiru` のように絶対パスで指定し、ビルド開始直後の表示で `Bundle Identifier: com.zaibase.exam` / `Project: @masaya.nanjo/entrance-exam` になっているか確認してから進める。
+2. **pull前にローカル差分を確認する**：EAS CLI（`appVersionSource: local`）はビルドのたびに `app.json` の `ios.buildNumber` を直接書き込むため、`git status` で `ahiru/app.json` に変更が残っていないか確認し、あれば `git checkout -- ahiru/app.json` してから `git pull` する。
+3. **reanimated / worklets のバージョンが固定されているか確認する**：`ahiru/package.json` はこの2つを範囲指定なしの完全固定にしてある（`react-native-reanimated: 4.5.3` / `react-native-worklets: 0.11.1`、検証済みの組み合わせ）。`package-lock.json` はこのリポジトリ全体の方針でコミットしていないため、どちらかを `^4.4.1` のようなレンジ指定に戻すと、EASビルドのたびに最新版へ自動で引き上がり、組み合わせがずれて `pod install` やXcodeビルドが失敗する（実際に発生：worklets 0.12.x で `executeSync` が `runSync` 系にリネームされて削除されており、reanimated 4.6.0がそれを呼び出そうとして `no member named 'executeSync' in 'worklets::WorkletRuntime'` で失敗した）。**この2つの依存関係は今後もレンジ指定に戻さないこと。** バージョンを上げる必要が出た場合は、`npm view react-native-reanimated@<version> peerDependencies` で要求される worklets バージョンを確認し、両方を新しい組み合わせに完全固定してから実機でビルド確認する。
 
 ## 司令塔AI（複数プロダクト横断監督）— 保留中
 
