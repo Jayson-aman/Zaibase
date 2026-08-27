@@ -39,7 +39,7 @@ export const gradeJ2SansuQuestions: Question[] = [
     grade: 'j2',
     difficulty: 'basic',
     question: '次の式を展開しなさい。\n(x + 3)(x − 5)',
-    answer: 'x² − 2x − 15',
+    answer: 'x²−2x−15',
     hint: '(x+a)(x+b) の展開公式 x²+(a+b)x+ab を使う。',
     explanation:
       '(x+a)(x+b)＝x²+(a+b)x+ab の公式を使う。ここではa＝3、b＝−5なので、x²の係数は1、xの係数はa+b＝3+(−5)＝−2、定数項はa×b＝3×(−5)＝−15。よって x²−2x−15 となる。',
