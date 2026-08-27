@@ -11,6 +11,7 @@ import { kokoMathExt09Lessons } from './lessons-koko-math-ext09';
 import { kokoMathExt10Lessons } from './lessons-koko-math-ext10';
 import { kokoMathExt11Lessons } from './lessons-koko-math-ext11';
 import { kokoMathExt12Lessons } from './lessons-koko-math-ext12';
+import { kokoMathNewGrade10Lessons } from './lessons-koko-math-newgrade10';
 
 // 既存の総論レッスン（order 101〜122）。450セッションの拡張ユニットは
 // lessons-koko-math-ext01〜ext12（order 501〜950）にあり、下でまとめて結合する。
@@ -5458,4 +5459,5 @@ export const kokoMathLessons: Lesson[] = [
   ...kokoMathExt10Lessons,
   ...kokoMathExt11Lessons,
   ...kokoMathExt12Lessons,
+  ...kokoMathNewGrade10Lessons,
 ];
