@@ -114,7 +114,7 @@ export default function AnimatedMascot({
 
 const styles = StyleSheet.create({
   fallback: {
-    backgroundColor: '#EEF4FF',
+    backgroundColor: '#F5EFE4',
     alignItems: 'center',
     justifyContent: 'center',
   },

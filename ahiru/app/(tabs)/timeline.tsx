@@ -135,7 +135,7 @@ export default function TimelineScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#F5F7FA' },
+  container: { flex: 1, backgroundColor: '#FAF7F2' },
   header: {
     paddingTop: 16,
     paddingBottom: 20,
@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
   songBtn: { backgroundColor: 'rgba(255,255,255,0.25)', borderRadius: 999, paddingHorizontal: 12, paddingVertical: 8, maxWidth: 120 },
   songBtnText: { color: '#FFFFFF', fontWeight: '800', fontSize: 12, textAlign: 'center' },
   headerSub: { fontSize: 13, color: 'rgba(255,255,255,0.85)', fontWeight: '500', marginTop: 2 },
-  eraScrollWrap: { backgroundColor: '#FFFFFF', borderBottomWidth: 1, borderBottomColor: '#E5EAF0' },
+  eraScrollWrap: { backgroundColor: '#FFFFFF', borderBottomWidth: 1, borderBottomColor: '#EBE4D8' },
   eraScroll: { flexGrow: 0 },
   eraScrollContent: { padding: 10, paddingRight: 30, gap: 8, flexDirection: 'row' },
   eraScrollFade: {
@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 8,
     borderRadius: 12,
-    backgroundColor: '#F0F3F7',
+    backgroundColor: '#F5EFE4',
     minWidth: 80,
   },
   eraChipEmoji: { fontSize: 18, marginBottom: 2 },
@@ -226,11 +226,11 @@ const styles = StyleSheet.create({
     width: 56,
     height: 74,
     borderRadius: 8,
-    backgroundColor: '#F0F3F7',
+    backgroundColor: '#F5EFE4',
     flexShrink: 0,
   },
-  portraitCaption: { fontSize: 11, color: '#94A3B8', marginTop: 8, fontStyle: 'italic' },
-  creditsLink: { fontSize: 12, color: '#64748B', textAlign: 'center', marginTop: 4, textDecorationLine: 'underline' },
+  portraitCaption: { fontSize: 11, color: '#9C9186', marginTop: 8, fontStyle: 'italic' },
+  creditsLink: { fontSize: 12, color: '#6E645C', textAlign: 'center', marginTop: 4, textDecorationLine: 'underline' },
   eventYear: { fontSize: 12, fontWeight: '800', marginBottom: 4 },
   personChip: {
     alignSelf: 'flex-start',
@@ -241,7 +241,7 @@ const styles = StyleSheet.create({
     marginBottom: 6,
   },
   personChipText: { fontSize: 12, fontWeight: '800' },
-  eventTitle: { fontSize: 16, fontWeight: '800', color: '#1A1A2E', marginBottom: 6 },
+  eventTitle: { fontSize: 16, fontWeight: '800', color: '#221C18', marginBottom: 6 },
   eventNote: { fontSize: 13, color: '#555', lineHeight: 20, fontWeight: '400' },
   goroawaseBox: {
     backgroundColor: '#FFFBEB',

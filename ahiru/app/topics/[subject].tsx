@@ -91,7 +91,7 @@ export default function TopicPickerScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#F0F9FF' },
+  container: { flex: 1, backgroundColor: '#FAF6EF' },
   header: { paddingHorizontal: 20, paddingTop: 8, paddingBottom: 16 },
   headerTopRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   backRow: { paddingVertical: 6 },
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
   title: { color: '#fff', fontSize: 24, fontWeight: '800', marginTop: 4 },
   subtitle: { color: 'rgba(255,255,255,0.9)', fontSize: 13, marginTop: 4 },
   scroll: { padding: 16 },
-  empty: { textAlign: 'center', color: '#64748B', marginTop: 40, fontSize: 15 },
+  empty: { textAlign: 'center', color: '#6E645C', marginTop: 40, fontSize: 15 },
   card: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
   },
   cardEmoji: { fontSize: 26, marginRight: 12 },
   cardBody: { flex: 1 },
-  cardLabel: { fontSize: 16, fontWeight: '700', color: '#0F172A' },
-  cardCount: { fontSize: 12, color: '#64748B', marginTop: 2 },
-  cardArrow: { fontSize: 24, color: '#94A3B8', fontWeight: '600' },
+  cardLabel: { fontSize: 16, fontWeight: '700', color: '#2B2420' },
+  cardCount: { fontSize: 12, color: '#6E645C', marginTop: 2 },
+  cardArrow: { fontSize: 24, color: '#9C9186', fontWeight: '600' },
 });

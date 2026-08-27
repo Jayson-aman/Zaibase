@@ -325,8 +325,8 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
     overflow: 'hidden',
     borderWidth: 1.5,
-    borderColor: '#CBD2DE',
-    shadowColor: '#0F1826',
+    borderColor: '#DCD3C5',
+    shadowColor: '#1F1912',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.05,
     shadowRadius: 8,
@@ -397,21 +397,21 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   subQRow: {
-    backgroundColor: '#F7F8FB',
+    backgroundColor: '#FAF7F2',
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#DDE2EC',
+    borderColor: '#DCD3C5',
     padding: 12,
   },
   subQLabel: {
     fontSize: 13,
     fontWeight: '900',
-    color: '#4A5A6B',
+    color: '#6E645C',
     marginBottom: 4,
   },
   subQPrompt: {
     fontSize: 15,
-    color: '#0F1826',
+    color: '#1F1912',
     lineHeight: 22,
   },
   subQAnswerList: {
@@ -428,7 +428,7 @@ const styles = StyleSheet.create({
   subQAnswerLabel: {
     fontSize: 13,
     fontWeight: '800',
-    color: '#4A5A6B',
+    color: '#6E645C',
     marginBottom: 4,
   },
   subQAnswerText: {
@@ -438,7 +438,7 @@ const styles = StyleSheet.create({
   },
   subQAnswerExpl: {
     fontSize: 13,
-    color: '#3A4A5A',
+    color: '#6E645C',
     lineHeight: 19,
     marginTop: 4,
   },
@@ -480,19 +480,19 @@ const styles = StyleSheet.create({
     paddingTop: 14,
   },
   sharedUnitWrap: {
-    backgroundColor: '#EEF4FF',
+    backgroundColor: '#F5EFE4',
     borderRadius: 8,
     paddingHorizontal: 14,
     paddingVertical: 6,
     alignSelf: 'flex-start',
     marginBottom: 8,
     borderWidth: 1,
-    borderColor: '#C5D8F8',
+    borderColor: '#E8DCC8',
   },
   sharedUnitText: {
     fontSize: 14,
     fontWeight: '700',
-    color: '#1E5FBE',
+    color: '#6B4226',
   },
   choicesWrap: {
     gap: 10,
@@ -501,7 +501,7 @@ const styles = StyleSheet.create({
   choiceBtn: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#FAFBFF',
+    backgroundColor: '#FAF7F2',
     borderWidth: 2,
     borderColor: '#D6E0FF',
     borderRadius: 16,
@@ -521,7 +521,7 @@ const styles = StyleSheet.create({
     width: 38,
     height: 38,
     borderRadius: 19,
-    backgroundColor: '#EEF4FF',
+    backgroundColor: '#F5EFE4',
     alignItems: 'center',
     justifyContent: 'center',
     flexShrink: 0,
@@ -535,7 +535,7 @@ const styles = StyleSheet.create({
   choiceLetterText: {
     fontSize: 15,
     fontWeight: '800',
-    color: '#1E5FBE',
+    color: '#6B4226',
   },
   choiceLetterTextResult: {
     color: '#FFFFFF',
@@ -544,7 +544,7 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 17,
     fontWeight: '600',
-    color: '#1A1A2E',
+    color: '#221C18',
     lineHeight: 26,
     fontFamily: SERIF,
   },
@@ -585,7 +585,7 @@ const styles = StyleSheet.create({
   questionText: {
     fontSize: 20,
     fontWeight: '700',
-    color: '#1A1A2E',
+    color: '#221C18',
     textAlign: 'left',
     lineHeight: 32,
     marginBottom: 20,
@@ -594,21 +594,21 @@ const styles = StyleSheet.create({
   questionTextChoice: {
     fontSize: 18,
     fontWeight: '700',
-    color: '#1A1A2E',
+    color: '#221C18',
     textAlign: 'left',
     lineHeight: 29,
     marginBottom: 4,
     fontFamily: SERIF,
   },
   tapHint: {
-    backgroundColor: '#EEF4FF',
+    backgroundColor: '#F5EFE4',
     paddingHorizontal: 20,
     paddingVertical: 12,
     borderRadius: 24,
   },
   tapHintText: {
     fontSize: 15,
-    color: '#1E5FBE',
+    color: '#6B4226',
     fontWeight: '600',
   },
   answerSide: {
@@ -627,7 +627,7 @@ const styles = StyleSheet.create({
   answerText: {
     fontSize: 25,
     fontWeight: '800',
-    color: '#1A1A2E',
+    color: '#221C18',
     textAlign: 'center',
     lineHeight: 40,
     marginBottom: 20,
@@ -667,7 +667,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     marginTop: 10,
     marginBottom: 4,
-    backgroundColor: '#F0F3F7',
+    backgroundColor: '#F5EFE4',
   },
   figureBox: {
     backgroundColor: '#F0F7FF',
@@ -682,13 +682,13 @@ const styles = StyleSheet.create({
   figureLabel: {
     fontSize: 14,
     fontWeight: '700',
-    color: '#1E5FBE',
+    color: '#6B4226',
     marginBottom: 6,
     letterSpacing: 1,
   },
   figureText: {
     fontSize: 13.5,
-    color: '#1A1A2E',
+    color: '#221C18',
     lineHeight: 22,
     fontFamily: Platform.OS === 'ios' ? 'Courier' : 'monospace',
   },
@@ -714,7 +714,7 @@ const styles = StyleSheet.create({
   },
   upgradeNudge: {
     fontSize: 12.5,
-    color: '#0284C7',
+    color: '#8B5A38',
     marginTop: 8,
     fontWeight: '600',
   },

@@ -283,7 +283,7 @@ export default function ProgressScreen() {
         <View style={styles.rankingCard}>
           <Text style={styles.rankingTitle}>🏆 全国ランキング</Text>
           {rankingLoading ? (
-            <ActivityIndicator color="#1E5FBE" style={{ marginVertical: 12 }} />
+            <ActivityIndicator color="#6B4226" style={{ marginVertical: 12 }} />
           ) : ranking != null ? (
             <>
               <View style={styles.rankingMain}>
@@ -461,7 +461,7 @@ export default function ProgressScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#F5F7FA',
+    backgroundColor: '#FAF7F2',
   },
   scroll: {
     flex: 1,
@@ -470,7 +470,7 @@ const styles = StyleSheet.create({
     paddingBottom: 40,
   },
   header: {
-    backgroundColor: '#1E5FBE',
+    backgroundColor: '#6B4226',
     paddingTop: 28,
     paddingBottom: 28,
     paddingHorizontal: 24,
@@ -495,17 +495,17 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     padding: 18,
     borderWidth: 1,
-    borderColor: '#BAE6FD',
+    borderColor: '#E8DCC8',
   },
-  accountLabel: { fontSize: 12, color: '#0EA5E9', fontWeight: '700' },
-  accountEmail: { fontSize: 16, color: '#0F172A', fontWeight: '700', marginTop: 4 },
-  accountNote: { fontSize: 12, color: '#64748B', marginTop: 6, lineHeight: 18 },
-  accountLogout: { marginTop: 12, alignSelf: 'flex-start', paddingVertical: 8, paddingHorizontal: 16, borderRadius: 10, backgroundColor: '#F1F5F9' },
-  accountLogoutText: { color: '#64748B', fontWeight: '700', fontSize: 14 },
+  accountLabel: { fontSize: 12, color: '#B5622E', fontWeight: '700' },
+  accountEmail: { fontSize: 16, color: '#2B2420', fontWeight: '700', marginTop: 4 },
+  accountNote: { fontSize: 12, color: '#6E645C', marginTop: 6, lineHeight: 18 },
+  accountLogout: { marginTop: 12, alignSelf: 'flex-start', paddingVertical: 8, paddingHorizontal: 16, borderRadius: 10, backgroundColor: '#F5EFE4' },
+  accountLogoutText: { color: '#6E645C', fontWeight: '700', fontSize: 14 },
   accountDelete: { marginTop: 8, alignSelf: 'flex-start', paddingVertical: 8, paddingHorizontal: 16, borderRadius: 10, borderWidth: 1, borderColor: '#FCA5A5' },
   accountDeleteText: { color: '#DC2626', fontWeight: '700', fontSize: 14 },
   accountCardCta: {
-    backgroundColor: '#0EA5E9',
+    backgroundColor: '#B5622E',
     marginHorizontal: 20,
     marginTop: 20,
     borderRadius: 16,
@@ -537,7 +537,7 @@ const styles = StyleSheet.create({
   summaryPct: {
     fontSize: 52,
     fontWeight: '900',
-    color: '#1E5FBE',
+    color: '#6B4226',
     lineHeight: 60,
   },
   summaryDetail: {
@@ -550,13 +550,13 @@ const styles = StyleSheet.create({
   overallBarTrack: {
     width: '100%',
     height: 10,
-    backgroundColor: '#E5EDF8',
+    backgroundColor: '#EBE4D8',
     borderRadius: 5,
     overflow: 'hidden',
   },
   overallBarFill: {
     height: '100%',
-    backgroundColor: '#1E5FBE',
+    backgroundColor: '#6B4226',
     borderRadius: 5,
   },
   rankingCard: {
@@ -577,7 +577,7 @@ const styles = StyleSheet.create({
   rankingTitle: {
     fontSize: 18,
     fontWeight: '900',
-    color: '#1A1A2E',
+    color: '#221C18',
     marginBottom: 12,
     letterSpacing: 0.5,
   },
@@ -595,13 +595,13 @@ const styles = StyleSheet.create({
   rankingNum: {
     fontSize: 72,
     fontWeight: '900',
-    color: '#1E5FBE',
+    color: '#6B4226',
     lineHeight: 80,
   },
   rankingUnit: {
     fontSize: 32,
     fontWeight: '800',
-    color: '#1E5FBE',
+    color: '#6B4226',
   },
   rankingTotal: {
     fontSize: 20,
@@ -650,7 +650,7 @@ const styles = StyleSheet.create({
   reportTitle: {
     fontSize: 14,
     fontWeight: '800',
-    color: '#1A1A2E',
+    color: '#221C18',
     marginBottom: 6,
   },
   reportEngagement: {
@@ -665,7 +665,7 @@ const styles = StyleSheet.create({
   },
   reportItem: {
     flex: 1,
-    backgroundColor: '#F5F7FA',
+    backgroundColor: '#FAF7F2',
     borderRadius: 12,
     padding: 12,
     alignItems: 'center',
@@ -679,19 +679,19 @@ const styles = StyleSheet.create({
   reportItemValue: {
     fontSize: 14,
     fontWeight: '800',
-    color: '#1A1A2E',
+    color: '#221C18',
     marginBottom: 2,
   },
   reportItemPct: {
     fontSize: 16,
     fontWeight: '900',
-    color: '#1E5FBE',
+    color: '#6B4226',
   },
   coachSection: {
     marginTop: 14,
   },
   emailReportButton: {
-    backgroundColor: '#1E5FBE',
+    backgroundColor: '#6B4226',
     borderRadius: 14,
     paddingVertical: 14,
     alignItems: 'center',
@@ -714,7 +714,7 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
   },
   coachAdviceBox: {
-    backgroundColor: '#F5F0FA',
+    backgroundColor: '#F5EFE4',
     borderRadius: 12,
     padding: 14,
     marginTop: 12,
@@ -730,7 +730,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 17,
     fontWeight: '800',
-    color: '#1A1A2E',
+    color: '#221C18',
     marginHorizontal: 20,
     marginTop: 24,
     marginBottom: 12,
@@ -769,7 +769,7 @@ const styles = StyleSheet.create({
   subjectName: {
     fontSize: 16,
     fontWeight: '800',
-    color: '#1A1A2E',
+    color: '#221C18',
     marginBottom: 2,
   },
   lastStudied: {
@@ -826,7 +826,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     alignItems: 'center',
     borderTopWidth: 1,
-    borderTopColor: '#E5EAF0',
+    borderTopColor: '#EBE4D8',
     paddingTop: 24,
   },
   legalFooterTitle: {

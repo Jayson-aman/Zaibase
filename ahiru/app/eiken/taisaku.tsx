@@ -219,7 +219,7 @@ export default function EikenTaisakuScreen() {
 }
 
 const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: '#F5F7FA' },
+  safe: { flex: 1, backgroundColor: '#FAF7F2' },
   header: { backgroundColor: '#4A0072', paddingHorizontal: 20, paddingVertical: 16 },
   headerTopRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 },
   back: { color: 'rgba(255,255,255,0.85)', fontSize: 14, fontWeight: '700' },
@@ -234,7 +234,7 @@ const styles = StyleSheet.create({
   cardHeader: { flexDirection: 'row', alignItems: 'center', padding: 16, gap: 12 },
   num: { width: 28, height: 28, borderRadius: 14, alignItems: 'center', justifyContent: 'center', backgroundColor: '#7B1FA2' },
   numText: { fontSize: 13, fontWeight: '900', color: '#FFFFFF' },
-  cardTitle: { flex: 1, fontSize: 15, fontWeight: '800', color: '#1A1A2E' },
+  cardTitle: { flex: 1, fontSize: 15, fontWeight: '800', color: '#221C18' },
   chevron: { fontSize: 16, color: '#999', fontWeight: '700' },
   cardBody: { paddingHorizontal: 18, paddingBottom: 18, borderTopWidth: 1, borderTopColor: '#F0F0F0' },
   bodyText: { fontSize: 13.5, color: '#333', lineHeight: 24, fontWeight: '500', paddingTop: 12 },

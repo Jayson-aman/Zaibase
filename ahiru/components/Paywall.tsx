@@ -126,7 +126,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
       presentationStyle="pageSheet"
       onRequestClose={onClose}
     >
-      <LinearGradient colors={['#FFFFFF', '#F2F5FA']} style={styles.container}>
+      <LinearGradient colors={['#FFFFFF', '#F5EFE4']} style={styles.container}>
         <TouchableOpacity style={styles.closeBtn} onPress={onClose}>
           <Text style={styles.closeBtnText}>✕</Text>
         </TouchableOpacity>
@@ -316,7 +316,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  closeBtnText: { color: '#0F1826', fontSize: 20, fontWeight: '700' },
+  closeBtnText: { color: '#1F1912', fontSize: 20, fontWeight: '700' },
   scroll: {
     paddingTop: 80,
     paddingHorizontal: 20,
@@ -325,10 +325,10 @@ const styles = StyleSheet.create({
   },
   spinner: { marginTop: 40 },
   crown: { fontSize: 64, marginBottom: 16 },
-  title: { fontSize: 36, fontWeight: '900', color: '#0F1826', marginBottom: 8 },
+  title: { fontSize: 36, fontWeight: '900', color: '#1F1912', marginBottom: 8 },
   subtitle: {
     fontSize: 20,
-    color: '#7A8798',
+    color: '#9C9186',
     marginBottom: 24,
     textAlign: 'center',
   },
@@ -342,8 +342,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     marginBottom: 24,
   },
-  loginBannerText: { color: '#1D4ED8', fontSize: 15, fontWeight: '700', textAlign: 'center', lineHeight: 22 },
-  loginBannerSub: { color: '#5A6B7E', fontSize: 12, fontWeight: '400' },
+  loginBannerText: { color: '#8B5A38', fontSize: 15, fontWeight: '700', textAlign: 'center', lineHeight: 22 },
+  loginBannerSub: { color: '#6E645C', fontSize: 12, fontWeight: '400' },
   card: {
     width: '100%',
     borderRadius: 24,
@@ -365,7 +365,7 @@ const styles = StyleSheet.create({
   cardBody: { padding: 20, gap: 10 },
   featureRow: { flexDirection: 'row', alignItems: 'flex-start', gap: 10 },
   featureCheck: { fontSize: 20, color: '#0B7A54', fontWeight: '800', lineHeight: 28 },
-  featureText: { fontSize: 18, color: '#0F1826', fontWeight: '600', flex: 1, lineHeight: 28 },
+  featureText: { fontSize: 18, color: '#1F1912', fontWeight: '600', flex: 1, lineHeight: 28 },
   includedBanner: {
     backgroundColor: '#EAF7EF',
     borderRadius: 12,
@@ -398,7 +398,7 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
   aiExplainTitle: { fontSize: 18, fontWeight: '800', color: '#A9821E', marginBottom: 8 },
-  aiExplainText: { fontSize: 16, color: '#4A5A6B', lineHeight: 26, fontWeight: '500' },
+  aiExplainText: { fontSize: 16, color: '#6E645C', lineHeight: 26, fontWeight: '500' },
   buyBtn: {
     borderRadius: 16,
     paddingVertical: 20,
@@ -424,10 +424,10 @@ const styles = StyleSheet.create({
     lineHeight: 24,
   },
   restoreBtn: { paddingVertical: 16 },
-  restoreBtnText: { color: '#8695AB', fontSize: 16, fontWeight: '600' },
+  restoreBtnText: { color: '#9C9186', fontSize: 16, fontWeight: '600' },
   terms: {
     fontSize: 13,
-    color: '#8695AB',
+    color: '#9C9186',
     textAlign: 'center',
     marginTop: 8,
     lineHeight: 20,
@@ -441,7 +441,7 @@ const styles = StyleSheet.create({
   },
   legalLinkText: {
     fontSize: 14,
-    color: '#7A8798',
+    color: '#9C9186',
     fontWeight: '600',
     textDecorationLine: 'underline',
   },

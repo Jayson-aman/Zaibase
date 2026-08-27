@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     elevation: 8,
   },
-  bannerTitle: { fontSize: 13, fontWeight: '800', color: '#1A1A2E', marginBottom: 4 },
+  bannerTitle: { fontSize: 13, fontWeight: '800', color: '#221C18', marginBottom: 4 },
   bannerFeature: { fontSize: 11, color: '#666', fontWeight: '500', marginBottom: 10 },
   bannerBtn: { borderRadius: 12, paddingVertical: 12, alignItems: 'center' },
   bannerBtnText: { fontSize: 14, fontWeight: '900', color: '#FFFFFF' },

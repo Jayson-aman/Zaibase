@@ -51,7 +51,7 @@ export default class ErrorBoundary extends React.Component<Props, State> {
 const styles = StyleSheet.create({
   safe: {
     flex: 1,
-    backgroundColor: '#040C1C',
+    backgroundColor: '#2B2420',
   },
   container: {
     flex: 1,

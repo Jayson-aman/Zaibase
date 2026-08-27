@@ -22,17 +22,17 @@ import { PRO_PRICE_LABEL, MAX_PRICE_LABEL } from '../../constants/pricing';
 
 // ─── palette ────────────────────────────────────────────────────────────────
 const C = {
-  bg: '#F5F8FF',
+  bg: '#FAF6EF',
   card: '#FFFFFF',
-  primary: '#0EA5E9',
+  primary: '#B5622E',
   coral: '#FF6B35',
   gold: '#F59E0B',
   green: '#10B981',
   purple: '#7C3AED',
-  text: '#1E293B',
-  sub: '#64748B',
-  muted: '#94A3B8',
-  divider: '#E2E8F0',
+  text: '#2B2420',
+  sub: '#6E645C',
+  muted: '#9C9186',
+  divider: '#EBE4D8',
 } as const;
 
 const SUBJECTS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
@@ -539,7 +539,7 @@ const s = StyleSheet.create({
 
   // advice box
   adviceBox: {
-    backgroundColor: '#F0F9FF',
+    backgroundColor: '#FAF6EF',
     borderRadius: 12,
     padding: 14,
     marginTop: 12,
@@ -575,7 +575,7 @@ const s = StyleSheet.create({
   subjectCell: {
     flex: 1,
     minWidth: 60,
-    backgroundColor: '#F8FAFF',
+    backgroundColor: '#FAF6EF',
     borderRadius: 10,
     padding: 10,
     alignItems: 'center',
@@ -591,7 +591,7 @@ const s = StyleSheet.create({
   charCount: { fontSize: 11, color: C.muted },
   charCountWarn: { color: C.coral },
   essayInput: {
-    backgroundColor: '#F8FAFF',
+    backgroundColor: '#FAF6EF',
     borderRadius: 10,
     padding: 12,
     fontSize: 14,

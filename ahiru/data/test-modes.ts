@@ -53,7 +53,7 @@ export const TEST_MODES: TestMode[] = [
       '学校で習った範囲の確認用です。教科書の単元順にそって、基礎から応用まで満遍なく出します。' +
       'テスト前の総復習に向いています。',
     emoji: '📝',
-    color: '#0EA5E9',
+    color: '#B5622E',
     count: 30,
     mix: { basic: 0.2, standard: 0.4, advanced: 0.4 },
     writtenRatio: 0.1,

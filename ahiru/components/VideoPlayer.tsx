@@ -100,12 +100,12 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 13,
     fontWeight: '700',
-    color: '#0369A1',
+    color: '#2B2420',
   },
   openBtn: {
     width: '100%',
     borderRadius: 12,
-    backgroundColor: '#0F172A',
+    backgroundColor: '#2B2420',
     alignItems: 'center',
     justifyContent: 'center',
   },

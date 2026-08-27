@@ -17,7 +17,7 @@ type Props = {
   strokeWidth?: number;
 };
 
-export default function SubjectIcon({ subject, size = 24, color = '#0F1826', strokeWidth = 1.75 }: Props) {
+export default function SubjectIcon({ subject, size = 24, color = '#1F1912', strokeWidth = 1.75 }: Props) {
   const common = {
     stroke: color,
     strokeWidth,

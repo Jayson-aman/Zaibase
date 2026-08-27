@@ -29,13 +29,13 @@ const SCENARIOS = [
 
 // 白基調（ミニマル幾何）パレット。白カード＋暗色テキスト。
 const D = {
-  bg:           '#F7F8FB',
+  bg:           '#FAF7F2',
   card:         '#FFFFFF',
-  cardBorder:   '#CBD2DE',
+  cardBorder:   '#DCD3C5',
   gold:         '#A9821E',
-  white:        '#0F1826',
-  soft:         '#4A5A6B',
-  muted:        '#8695AB',
+  white:        '#1F1912',
+  soft:         '#6E645C',
+  muted:        '#9C9186',
   purpleBorder: 'rgba(112,72,224,0.35)',
   purpleText:   '#6A3FD0',
 };
@@ -199,7 +199,7 @@ export default function ConversationScreen() {
               disabled={!canSend}
             >
               {loading ? (
-                <ActivityIndicator color="#040C1C" size="small" />
+                <ActivityIndicator color="#2B2420" size="small" />
               ) : (
                 <Text style={styles.sendBtnText}>送信</Text>
               )}
@@ -247,5 +247,5 @@ const styles = StyleSheet.create({
   textInput: { flex: 1, borderWidth: 1, borderColor: D.cardBorder, borderRadius: 12, padding: 10, fontSize: 15, color: D.white, maxHeight: 100, backgroundColor: D.card },
   sendBtn: { backgroundColor: D.gold, paddingHorizontal: 18, paddingVertical: 12, borderRadius: 12, justifyContent: 'center' },
   sendBtnDisabled: { opacity: 0.4 },
-  sendBtnText: { color: '#040C1C', fontSize: 15, fontWeight: '800' },
+  sendBtnText: { color: '#2B2420', fontSize: 15, fontWeight: '800' },
 });

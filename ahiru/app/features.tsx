@@ -18,24 +18,24 @@ const { width } = Dimensions.get('window');
 // ── Premium dark navy palette ──────────────────────────────
 // 白基調（ミニマル幾何）パレット。white=主要テキスト(ink)、glass=白カード。
 const C = {
-  bg:          '#F7F8FB',   // ページ背景（クールホワイト）
+  bg:          '#FAF7F2',   // ページ背景（クールホワイト）
   bgAlt:       '#FFFFFF',   // セクション（白）
   bgCard:      '#FFFFFF',   // カード背景
   gold:        '#A9821E',   // ゴールドアクセント（白背景で可読）
   goldLight:   '#8A6A1E',   // 濃いゴールド
   goldDim:     'rgba(169,130,30,0.10)',
   goldBorder:  'rgba(169,130,30,0.40)',
-  blue:        '#2B4ACB',   // アクセント青
-  blueLight:   '#2B4ACB',
+  blue:        '#8B5A38',   // アクセント青
+  blueLight:   '#8B5A38',
   red:         '#D14343',
-  white:       '#0F1826',   // 見出し・主要テキスト（ink）
-  soft:        '#4A5A6B',   // 本文
-  muted:       '#7A8798',   // 薄い文字
+  white:       '#1F1912',   // 見出し・主要テキスト（ink）
+  soft:        '#6E645C',   // 本文
+  muted:       '#9C9186',   // 薄い文字
   glass:       '#FFFFFF',            // 白カード
-  glassMid:    '#F2F5FA',
-  glassBorder: '#CBD2DE',            // 明確な境界線
+  glassMid:    '#F5EFE4',
+  glassBorder: '#DCD3C5',            // 明確な境界線
   glassHover:  '#EEF1F6',
-  divider:     '#E3E7EF',
+  divider:     '#EBE4D8',
 };
 
 const SERIF = Platform.select({
@@ -354,7 +354,7 @@ export default function FeaturesPage() {
         </View>
 
         {/* ─── 収録内容（事実ベース） ─────────────────────── */}
-        <View style={[styles.section, { backgroundColor: '#EEF2F8' }]}>
+        <View style={[styles.section, { backgroundColor: '#F5EFE4' }]}>
           <SectionLabel label="収録内容" goldMode />
           <Text style={[styles.sectionTitle, { color: C.white }]}>中身で選ぶ</Text>
           {CONTENT_FACTS.map((v, i) => (
@@ -419,7 +419,7 @@ export default function FeaturesPage() {
           {/* MAX */}
           <View style={[styles.planCard, styles.planCardMax, glassBlur]}>
             <View style={[styles.planBadge, { backgroundColor: C.gold }]}>
-              <Text style={[styles.planBadgeText, { color: '#060D1E' }]}>最上位</Text>
+              <Text style={[styles.planBadgeText, { color: '#221C18' }]}>最上位</Text>
             </View>
             <Text style={[styles.planName, { color: C.gold }]}>MAX プラン</Text>
             <View style={styles.planPriceRow}>
@@ -437,7 +437,7 @@ export default function FeaturesPage() {
               <Text key={f} style={[styles.planFeature, { color: C.goldLight }]}>{f}</Text>
             ))}
             <TouchableOpacity style={[styles.planBtn, { backgroundColor: C.gold }]} onPress={handleStart} activeOpacity={0.85}>
-              <Text style={[styles.planBtnText, { color: '#060D1E' }]}>MAX プランを始める</Text>
+              <Text style={[styles.planBtnText, { color: '#221C18' }]}>MAX プランを始める</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -606,7 +606,7 @@ const styles = StyleSheet.create({
   heroCtaText: {
     fontSize: 20,
     fontWeight: '800',
-    color: '#040C1C',
+    color: '#2B2420',
     letterSpacing: 0.5,
   },
   heroCtaSub: {
@@ -744,7 +744,7 @@ const styles = StyleSheet.create({
   subjectEmoji: { fontSize: 28 },
   subjectName: { fontSize: 20, fontWeight: '900', marginBottom: 6, textAlign: 'center' },
   subjectDesc: { fontSize: 13, color: C.muted, fontWeight: '400', lineHeight: 20, textAlign: 'center' },
-  subjectGo: { fontSize: 12, color: '#2B4ACB', fontWeight: '700', marginTop: 8, textAlign: 'center' },
+  subjectGo: { fontSize: 12, color: '#8B5A38', fontWeight: '700', marginTop: 8, textAlign: 'center' },
 
   // 特長
   featuresGrid: { gap: 16 },
@@ -915,7 +915,7 @@ const styles = StyleSheet.create({
 
   // Final CTA
   finalCta: {
-    backgroundColor: '#EEF2F8',
+    backgroundColor: '#F5EFE4',
     paddingHorizontal: 28,
     paddingVertical: 72,
     alignItems: 'center',
@@ -982,7 +982,7 @@ const styles = StyleSheet.create({
   finalCtaBtnText: {
     fontSize: 20,
     fontWeight: '800',
-    color: '#040C1C',
+    color: '#2B2420',
     letterSpacing: 0.5,
   },
 

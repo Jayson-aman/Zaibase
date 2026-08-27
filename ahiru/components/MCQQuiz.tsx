@@ -27,7 +27,7 @@ type Props = {
 };
 
 const CHOICE_KEYS: Array<'A' | 'B' | 'C' | 'D'> = ['A', 'B', 'C', 'D'];
-const CHOICE_COLORS = { A: '#1E5FBE', B: '#2E7D32', C: '#C62828', D: '#7B1FA2' };
+const CHOICE_COLORS = { A: '#6B4226', B: '#2E7D32', C: '#C62828', D: '#7B1FA2' };
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -38,7 +38,7 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-export default function MCQQuiz({ questions, accentColor = '#37474F', onComplete }: Props) {
+export default function MCQQuiz({ questions, accentColor = '#6E645C', onComplete }: Props) {
   // questions は呼び出し側で毎回 slice() され新しい配列になるため、
   // [questions] を依存にすると毎レンダーでシャッフルし直され、
   // 回答中に問題がすり替わってしまう。中身が変わった時だけ引き直す。
@@ -175,12 +175,12 @@ export default function MCQQuiz({ questions, accentColor = '#37474F', onComplete
 
           let bg = '#FFFFFF';
           let border = '#E0E0E0';
-          const textColor = '#1A1A2E';
+          const textColor = '#221C18';
           if (showResult) {
             if (isCorrect) { bg = '#E8F5E9'; border = '#2E7D32'; }
             else if (isSelected && !isCorrect) { bg = '#FFEBEE'; border = '#C62828'; }
           } else if (isSelected) {
-            bg = '#EEF4FF'; border = accentColor;
+            bg = '#F5EFE4'; border = accentColor;
           }
 
           return (
@@ -242,7 +242,7 @@ export default function MCQQuiz({ questions, accentColor = '#37474F', onComplete
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#F5F7FA' },
+  container: { flex: 1, backgroundColor: '#FAF7F2' },
   content: { padding: 16, paddingBottom: 40 },
   progressRow: { flexDirection: 'row', alignItems: 'center', marginBottom: 8, gap: 8 },
   progressText: { fontSize: 13, fontWeight: '700', color: '#666' },
@@ -252,10 +252,10 @@ const styles = StyleSheet.create({
   progressBar: { height: 4, backgroundColor: '#E0E0E0', borderRadius: 2, marginBottom: 16 },
   progressFill: { height: 4, borderRadius: 2 },
   questionBox: { backgroundColor: '#FFFFFF', borderRadius: 16, padding: 18, marginBottom: 16, shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.08, shadowRadius: 8, elevation: 3 },
-  questionText: { fontSize: 16, fontWeight: '700', color: '#1A1A2E', lineHeight: 26 },
+  questionText: { fontSize: 16, fontWeight: '700', color: '#221C18', lineHeight: 26 },
   playAudioBtn: { alignSelf: 'flex-start', borderRadius: 12, paddingVertical: 10, paddingHorizontal: 18, marginBottom: 14 },
   playAudioBtnText: { fontSize: 14, fontWeight: '800', color: '#FFFFFF' },
-  scriptBox: { backgroundColor: '#F5F7FA', borderRadius: 12, padding: 14, marginBottom: 12 },
+  scriptBox: { backgroundColor: '#FAF7F2', borderRadius: 12, padding: 14, marginBottom: 12 },
   scriptLabel: { fontSize: 12, fontWeight: '800', color: '#888', marginBottom: 6 },
   scriptText: { fontSize: 14, color: '#333', lineHeight: 22, fontStyle: 'italic' },
   choicesBox: { gap: 10, marginBottom: 16 },
@@ -277,7 +277,7 @@ const styles = StyleSheet.create({
   nextBtnText: { fontSize: 16, fontWeight: '900', color: '#FFF' },
   resultBox: { flexGrow: 1, alignItems: 'center', justifyContent: 'center', padding: 32, gap: 12 },
   resultEmoji: { fontSize: 72, marginBottom: 8 },
-  resultTitle: { fontSize: 24, fontWeight: '900', color: '#1A1A2E' },
+  resultTitle: { fontSize: 24, fontWeight: '900', color: '#221C18' },
   resultScore: { fontSize: 36, fontWeight: '900' },
   resultPct: { fontSize: 20, fontWeight: '700', color: '#666' },
   resultMsg: { fontSize: 15, color: '#555', textAlign: 'center', lineHeight: 24 },

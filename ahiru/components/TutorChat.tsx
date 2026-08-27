@@ -30,7 +30,7 @@ function generateSessionId() {
   return `${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
 }
 
-export default function TutorChat({ visible, onClose, initialQuestion, subjectColor = '#0EA5E9' }: Props) {
+export default function TutorChat({ visible, onClose, initialQuestion, subjectColor = '#B5622E' }: Props) {
   const [messages, setMessages] = useState<TutorMessage[]>([]);
   const [inputText, setInputText] = useState(initialQuestion ?? '');
   const [imageUri, setImageUri] = useState<string | null>(null);
@@ -161,7 +161,7 @@ export default function TutorChat({ visible, onClose, initialQuestion, subjectCo
     <Modal visible={visible} animationType="slide" presentationStyle="pageSheet" onRequestClose={handleClose}>
       <View style={styles.container}>
         {/* ヘッダー */}
-        <LinearGradient colors={[subjectColor, '#0369A1']} style={styles.header}>
+        <LinearGradient colors={[subjectColor, '#2B2420']} style={styles.header}>
           <View style={styles.headerContent}>
             <Text style={styles.headerTitle}>🤖 AI個別指導</Text>
             <Text style={styles.headerSub}>
@@ -250,7 +250,7 @@ export default function TutorChat({ visible, onClose, initialQuestion, subjectCo
                   value={inputText}
                   onChangeText={setInputText}
                   placeholder="ここがわからない…と入力"
-                  placeholderTextColor="#94A3B8"
+                  placeholderTextColor="#9C9186"
                   multiline
                   maxLength={500}
                   returnKeyType="default"
@@ -276,7 +276,7 @@ export default function TutorChat({ visible, onClose, initialQuestion, subjectCo
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#F8FAFC' },
+  container: { flex: 1, backgroundColor: '#FAF7F2' },
   flex: { flex: 1 },
   header: { paddingTop: 56, paddingBottom: 16, paddingHorizontal: 20, flexDirection: 'row', alignItems: 'flex-end' },
   headerContent: { flex: 1 },
@@ -288,27 +288,27 @@ const styles = StyleSheet.create({
   messageListContent: { padding: 16, gap: 12 },
   emptyState: { alignItems: 'center', paddingTop: 40, paddingHorizontal: 24 },
   emptyEmoji: { fontSize: 56, marginBottom: 16 },
-  emptyTitle: { fontSize: 20, fontWeight: '800', color: '#1E293B', marginBottom: 8, textAlign: 'center' },
-  emptyBody: { fontSize: 15, color: '#64748B', textAlign: 'center', lineHeight: 24 },
+  emptyTitle: { fontSize: 20, fontWeight: '800', color: '#2B2420', marginBottom: 8, textAlign: 'center' },
+  emptyBody: { fontSize: 15, color: '#6E645C', textAlign: 'center', lineHeight: 24 },
   bubble: { maxWidth: '85%', borderRadius: 16, padding: 14 },
-  userBubble: { alignSelf: 'flex-end', backgroundColor: '#0EA5E9' },
-  aiBubble: { alignSelf: 'flex-start', backgroundColor: '#fff', borderWidth: 1, borderColor: '#E2E8F0' },
-  aiLabel: { fontSize: 12, fontWeight: '700', color: '#64748B', marginBottom: 4 },
+  userBubble: { alignSelf: 'flex-end', backgroundColor: '#B5622E' },
+  aiBubble: { alignSelf: 'flex-start', backgroundColor: '#fff', borderWidth: 1, borderColor: '#EBE4D8' },
+  aiLabel: { fontSize: 12, fontWeight: '700', color: '#6E645C', marginBottom: 4 },
   bubbleText: { fontSize: 15, lineHeight: 22 },
   userText: { color: '#fff', fontWeight: '500' },
-  aiText: { color: '#1E293B' },
+  aiText: { color: '#2B2420' },
   limitBanner: { backgroundColor: '#FEF3C7', borderRadius: 14, padding: 14, marginTop: 8 },
   limitText: { fontSize: 14, color: '#92400E', lineHeight: 22, textAlign: 'center' },
-  inputArea: { backgroundColor: '#fff', borderTopWidth: 1, borderTopColor: '#E2E8F0', padding: 12, gap: 8 },
+  inputArea: { backgroundColor: '#fff', borderTopWidth: 1, borderTopColor: '#EBE4D8', padding: 12, gap: 8 },
   imagePreview: { position: 'relative', alignSelf: 'flex-start' },
   previewImg: { width: 80, height: 80, borderRadius: 10 },
   removeImg: { position: 'absolute', top: -6, right: -6, width: 22, height: 22, borderRadius: 11, backgroundColor: '#EF4444', alignItems: 'center', justifyContent: 'center' },
   removeImgText: { color: '#fff', fontSize: 12, fontWeight: '700' },
   photoButtons: { flexDirection: 'row', gap: 8 },
-  photoBtn: { flex: 1, borderWidth: 1, borderColor: '#CBD5E1', borderRadius: 10, paddingVertical: 8, alignItems: 'center' },
-  photoBtnText: { fontSize: 14, color: '#475569', fontWeight: '600' },
+  photoBtn: { flex: 1, borderWidth: 1, borderColor: '#DCD3C5', borderRadius: 10, paddingVertical: 8, alignItems: 'center' },
+  photoBtnText: { fontSize: 14, color: '#6E645C', fontWeight: '600' },
   textRow: { flexDirection: 'row', gap: 8, alignItems: 'flex-end' },
-  textInput: { flex: 1, borderWidth: 1, borderColor: '#CBD5E1', borderRadius: 12, padding: 10, fontSize: 15, color: '#1E293B', maxHeight: 100, backgroundColor: '#F8FAFC' },
+  textInput: { flex: 1, borderWidth: 1, borderColor: '#DCD3C5', borderRadius: 12, padding: 10, fontSize: 15, color: '#2B2420', maxHeight: 100, backgroundColor: '#FAF7F2' },
   sendBtn: { paddingHorizontal: 18, paddingVertical: 12, borderRadius: 12, justifyContent: 'center' },
   sendBtnDisabled: { opacity: 0.4 },
   sendBtnText: { color: '#fff', fontSize: 16, fontWeight: '800' },

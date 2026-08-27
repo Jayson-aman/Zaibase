@@ -39,12 +39,12 @@ import { prefectureShapes, JP_MAP_VIEWBOX } from '../data/japanPrefectures';
 // 内部描画座標系（viewBox）。Svgの実サイズは画面幅に合わせて拡大縮小する。
 const VBW = 320;
 const VBH = 240;
-const AXIS = '#334155';
-const GRID = '#E2E8F0';
-const INK = '#0F172A';
-const ACCENT = '#0EA5E9';
+const AXIS = '#6E645C';
+const GRID = '#EBE4D8';
+const INK = '#2B2420';
+const ACCENT = '#B5622E';
 const FILL = 'rgba(14,165,233,0.14)';
-const PALETTE = ['#0EA5E9', '#E11D48', '#16A34A', '#9333EA', '#F59E0B'];
+const PALETTE = ['#B5622E', '#E11D48', '#16A34A', '#9333EA', '#F59E0B'];
 
 type Area = { x0: number; y0: number; w: number; h: number };
 
@@ -1046,11 +1046,11 @@ function BioInsect(hide: Set<string>): React.ReactNode[] {
   els.push(<Ellipse key="abdomen" cx={230} cy={120} rx={60} ry={30} fill="#BBF7D0" stroke={INK} strokeWidth={1.8} />);
   els.push(<Line key="ant1" x1={60} y1={98} x2={35} y2={70} stroke={INK} strokeWidth={1.6} />);
   els.push(<Line key="ant2" x1={80} y1={98} x2={90} y2={65} stroke={INK} strokeWidth={1.6} />);
-  els.push(<SvgCircle key="cEye" cx={82} cy={112} r={7} fill="#1E293B" />);
+  els.push(<SvgCircle key="cEye" cx={82} cy={112} r={7} fill="#2B2420" />);
   els.push(<Path key="leg1" d="M120,140 L100,175" stroke={INK} strokeWidth={2} fill="none" />);
   els.push(<Path key="leg2" d="M140,146 L130,182" stroke={INK} strokeWidth={2} fill="none" />);
   els.push(<Path key="leg3" d="M160,140 L175,175" stroke={INK} strokeWidth={2} fill="none" />);
-  els.push(<Ellipse key="wing" cx={150} cy={90} rx={34} ry={14} fill="#BFDBFE" opacity={0.8} stroke="#3B82F6" strokeWidth={1.2} transform="rotate(-10, 150, 90)" />);
+  els.push(<Ellipse key="wing" cx={150} cy={90} rx={34} ry={14} fill="#BFDBFE" opacity={0.8} stroke="#B5622E" strokeWidth={1.2} transform="rotate(-10, 150, 90)" />);
   els.push(<SvgCircle key="sp1" cx={200} cy={105} r={2.2} fill={INK} />);
   els.push(<SvgCircle key="sp2" cx={225} cy={100} r={2.2} fill={INK} />);
   els.push(<SvgCircle key="sp3" cx={250} cy={102} r={2.2} fill={INK} />);
@@ -1075,7 +1075,7 @@ function BioHeart(hide: Set<string>): React.ReactNode[] {
   els.push(<Rect key="lv" x={163} y={120} width={64} height={77} fill="#B91C1C" />);
   els.push(<Line key="valveR" x1={93} y1={118} x2={157} y2={122} stroke="#fff" strokeWidth={3} />);
   els.push(<Line key="valveL" x1={163} y1={122} x2={227} y2={118} stroke="#fff" strokeWidth={3} />);
-  els.push(<Path key="vesR" d="M120,50 L110,20" stroke="#3B82F6" strokeWidth={6} fill="none" />);
+  els.push(<Path key="vesR" d="M120,50 L110,20" stroke="#B5622E" strokeWidth={6} fill="none" />);
   els.push(<Path key="vesL" d="M200,50 L210,20" stroke="#EF4444" strokeWidth={6} fill="none" />);
 
   const wtext = (key: string, text: string, x: number, y: number) => (
@@ -1097,7 +1097,7 @@ function BioDigestive(hide: Set<string>): React.ReactNode[] {
     <Path
       key="outline"
       d="M140,10 C120,10 110,30 115,45 C90,55 70,90 90,130 C70,140 60,160 75,185 C95,210 150,215 180,195 C210,205 235,190 230,165 C250,150 245,120 220,110 C230,85 210,55 180,50 C185,30 165,10 140,10 Z"
-      fill="none" stroke="#CBD5E1" strokeWidth={1.4} strokeDasharray="3 3"
+      fill="none" stroke="#DCD3C5" strokeWidth={1.4} strokeDasharray="3 3"
     />,
   );
   els.push(<SvgCircle key="mouth" cx={140} cy={18} r={5} fill={INK} />);
@@ -1128,11 +1128,11 @@ function BioDigestive(hide: Set<string>): React.ReactNode[] {
 
 function BioEye(hide: Set<string>): React.ReactNode[] {
   const els: React.ReactNode[] = [];
-  els.push(<SvgCircle key="ball" cx={150} cy={120} r={70} fill="#F1F5F9" stroke={INK} strokeWidth={2} />);
-  els.push(<Path key="cornea" d="M90,90 C70,105 70,135 90,150" fill="none" stroke="#38BDF8" strokeWidth={4} />);
+  els.push(<SvgCircle key="ball" cx={150} cy={120} r={70} fill="#F5EFE4" stroke={INK} strokeWidth={2} />);
+  els.push(<Path key="cornea" d="M90,90 C70,105 70,135 90,150" fill="none" stroke="#C9A47E" strokeWidth={4} />);
   els.push(<SvgCircle key="irisRing" cx={100} cy={120} r={18} fill="none" stroke={INK} strokeWidth={6} opacity={0.7} />);
   els.push(<SvgCircle key="pupil" cx={100} cy={120} r={8} fill={INK} />);
-  els.push(<Ellipse key="lens" cx={118} cy={120} rx={10} ry={22} fill="#BAE6FD" stroke="#0369A1" strokeWidth={1.6} />);
+  els.push(<Ellipse key="lens" cx={118} cy={120} rx={10} ry={22} fill="#E8DCC8" stroke="#2B2420" strokeWidth={1.6} />);
   els.push(<SvgCircle key="vitreous" cx={160} cy={120} r={58} fill="#E0F2FE" opacity={0.5} />);
   els.push(<Path key="retina" d="M150,50 A70,70 0 0 1 150,190" fill="none" stroke="#DC2626" strokeWidth={4} />);
   els.push(<Line key="opticNerve" x1={220} y1={120} x2={250} y2={120} stroke="#FACC15" strokeWidth={8} />);
@@ -1158,7 +1158,7 @@ function BioEar(hide: Set<string>): React.ReactNode[] {
   els.push(
     <Path key="cochlea" d="M210,110 C230,100 245,110 240,125 C236,136 220,136 218,124 C216,115 226,110 232,116" fill="none" stroke="#7C3AED" strokeWidth={4} strokeLinecap="round" />,
   );
-  els.push(<Path key="canal1" d="M195,70 C210,50 235,55 235,75" fill="none" stroke="#0EA5E9" strokeWidth={4} strokeLinecap="round" />);
+  els.push(<Path key="canal1" d="M195,70 C210,50 235,55 235,75" fill="none" stroke="#B5622E" strokeWidth={4} strokeLinecap="round" />);
   els.push(<Path key="canal2" d="M205,65 C215,45 240,48 242,68" fill="none" stroke="#16A34A" strokeWidth={4} strokeLinecap="round" opacity={0.85} />);
 
   els.push(...bioLabel(hide, 'komaku', '鼓膜', 140, 130, 130, 170, 'end'));
@@ -1340,7 +1340,7 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     backgroundColor: '#FFFFFF',
     borderWidth: 1,
-    borderColor: '#E2E8F0',
+    borderColor: '#EBE4D8',
     borderRadius: 8,
     overflow: 'hidden',
   },
@@ -1352,7 +1352,7 @@ const styles = StyleSheet.create({
   },
   caption: {
     fontSize: 11.5,
-    color: '#475569',
+    color: '#6E645C',
     marginTop: 6,
     textAlign: 'center',
     lineHeight: 17,
@@ -1360,7 +1360,7 @@ const styles = StyleSheet.create({
   },
   replayHint: {
     fontSize: 10.5,
-    color: '#0EA5E9',
+    color: '#B5622E',
     marginTop: 4,
     fontWeight: '700',
     letterSpacing: 0.2,
@@ -1372,21 +1372,21 @@ const styles = StyleSheet.create({
   },
   stepText: {
     fontSize: 13,
-    color: '#0F172A',
+    color: '#2B2420',
     lineHeight: 20,
     marginBottom: 2,
   },
   stepTextPending: {
-    color: '#CBD5E1',
+    color: '#DCD3C5',
   },
   stepTextCurrent: {
     fontWeight: '800',
-    color: '#0369A1',
+    color: '#2B2420',
   },
   progressTrack: {
     height: 3,
     borderRadius: 2,
-    backgroundColor: '#E2E8F0',
+    backgroundColor: '#EBE4D8',
     marginTop: 8,
     overflow: 'hidden',
     alignSelf: 'center',
@@ -1394,7 +1394,7 @@ const styles = StyleSheet.create({
   progressFill: {
     height: 3,
     borderRadius: 2,
-    backgroundColor: '#0EA5E9',
+    backgroundColor: '#B5622E',
   },
   chemRow: {
     flexDirection: 'row',

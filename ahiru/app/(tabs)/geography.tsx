@@ -32,7 +32,7 @@ export default function GeographyScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#F5F7FA' },
+  container: { flex: 1, backgroundColor: '#FAF7F2' },
   header: {
     backgroundColor: '#F39C12',
     paddingHorizontal: 20,
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
   tipTitle: {
     fontSize: 15,
     fontWeight: '800',
-    color: '#1A1A2E',
+    color: '#221C18',
     marginBottom: 10,
   },
   tipText: {

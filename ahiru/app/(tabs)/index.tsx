@@ -27,16 +27,16 @@ import { primeSpeech } from '../../utils/speech';
 
 // ── スカイブルーカラーパレット（明るいテーマ） ──────────────────
 const D = {
-  bg:          '#F0F9FF',
+  bg:          '#FAF6EF',
   glass:       'rgba(14,165,233,0.07)',
   glassMid:    'rgba(14,165,233,0.13)',
   glassBorder: 'rgba(14,165,233,0.25)',
-  gold:        '#0EA5E9',
+  gold:        '#B5622E',
   goldDim:     'rgba(14,165,233,0.14)',
   goldBorder:  'rgba(14,165,233,0.40)',
   white:       '#0C2A43',
-  soft:        '#0369A1',
-  muted:       '#64748B',
+  soft:        '#2B2420',
+  muted:       '#6E645C',
   divider:     'rgba(14,165,233,0.15)',
 };
 const SERIF = Platform.select({
@@ -59,7 +59,7 @@ const DIFFICULTY_OPTIONS: {
   color: string;
   desc: string;
 }[] = [
-  { key: 'all', label: 'すべて', icon: '📚', color: '#1E5FBE', desc: '全問題' },
+  { key: 'all', label: 'すべて', icon: '📚', color: '#6B4226', desc: '全問題' },
   { key: 'basic', label: '基礎', icon: '🌱', color: '#27AE60', desc: '基礎レベル' },
   { key: 'standard', label: '標準', icon: '⭐', color: '#F39C12', desc: '標準レベル' },
   { key: 'advanced', label: '発展', icon: '🔥', color: '#E74C3C', desc: '難関レベル' },
@@ -796,9 +796,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: '#7DD3FC',
+    borderColor: '#D9C6AE',
     borderLeftWidth: 4,
-    borderLeftColor: '#0EA5E9',
+    borderLeftColor: '#B5622E',
     paddingVertical: 14,
     paddingHorizontal: 14,
     marginBottom: 10,
@@ -806,11 +806,11 @@ const styles = StyleSheet.create({
   testPrepBadge: {
     fontSize: 10.5,
     fontWeight: '800',
-    color: '#0369A1',
+    color: '#2B2420',
     letterSpacing: 0.4,
     marginBottom: 3,
   },
-  testPrepArrow: { fontSize: 24, color: '#0EA5E9', fontWeight: '300', marginLeft: 6 },
+  testPrepArrow: { fontSize: 24, color: '#B5622E', fontWeight: '300', marginLeft: 6 },
   vocabEntryCard: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -1024,8 +1024,8 @@ const styles = StyleSheet.create({
     borderColor: D.glassBorder,
   },
   courseTabActive: {
-    backgroundColor: '#1E5FBE',
-    borderColor: '#1E5FBE',
+    backgroundColor: '#6B4226',
+    borderColor: '#6B4226',
   },
   courseTabText: {
     fontSize: 14,
@@ -1332,13 +1332,13 @@ const styles = StyleSheet.create({
   topicChip: {
     backgroundColor: '#FFFFFF',
     borderWidth: 1,
-    borderColor: '#BAE6FD',
+    borderColor: '#E8DCC8',
     borderRadius: 999,
     paddingHorizontal: 14,
     paddingVertical: 9,
   },
   topicChipText: {
-    color: '#0369A1',
+    color: '#2B2420',
     fontSize: 14,
     fontWeight: '700',
   },

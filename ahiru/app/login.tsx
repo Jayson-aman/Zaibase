@@ -85,7 +85,7 @@ export default function LoginScreen() {
           <TextInput
             style={styles.input}
             placeholder="メールアドレス"
-            placeholderTextColor="#94A3B8"
+            placeholderTextColor="#9C9186"
             autoCapitalize="none"
             keyboardType="email-address"
             autoComplete="email"
@@ -96,7 +96,7 @@ export default function LoginScreen() {
           <TextInput
             style={styles.input}
             placeholder="パスワード（6文字以上）"
-            placeholderTextColor="#94A3B8"
+            placeholderTextColor="#9C9186"
             secureTextEntry
             autoComplete={isSignup ? 'new-password' : 'current-password'}
             value={password}
@@ -143,39 +143,39 @@ export default function LoginScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#F0F9FF' },
+  container: { flex: 1, backgroundColor: '#FAF6EF' },
   scroll: { padding: 24, paddingTop: 12, alignItems: 'center' },
   closeBtn: { alignSelf: 'flex-end', padding: 8 },
-  closeText: { fontSize: 22, color: '#64748B', fontWeight: '600' },
+  closeText: { fontSize: 22, color: '#6E645C', fontWeight: '600' },
   logo: { fontSize: 52, marginTop: 8 },
-  title: { fontSize: 26, fontWeight: '800', color: '#0369A1', marginTop: 8 },
-  subtitle: { fontSize: 14, color: '#475569', textAlign: 'center', marginTop: 10, lineHeight: 21 },
+  title: { fontSize: 26, fontWeight: '800', color: '#2B2420', marginTop: 8 },
+  subtitle: { fontSize: 14, color: '#6E645C', textAlign: 'center', marginTop: 10, lineHeight: 21 },
   infoBox: {
-    backgroundColor: '#E0F2FE',
+    backgroundColor: '#F5EFE4',
     borderRadius: 12,
     padding: 14,
     marginTop: 18,
     marginBottom: 6,
     alignSelf: 'stretch',
   },
-  infoText: { fontSize: 13, color: '#0369A1', lineHeight: 20 },
+  infoText: { fontSize: 13, color: '#2B2420', lineHeight: 20 },
   input: {
     alignSelf: 'stretch',
     backgroundColor: '#fff',
     borderWidth: 1,
-    borderColor: '#BAE6FD',
+    borderColor: '#E8DCC8',
     borderRadius: 12,
     paddingHorizontal: 16,
     paddingVertical: 14,
     fontSize: 16,
-    color: '#0F172A',
+    color: '#2B2420',
     marginTop: 12,
   },
   error: { color: '#DC2626', fontSize: 14, marginTop: 12, alignSelf: 'stretch' },
   notice: { color: '#059669', fontSize: 14, marginTop: 12, alignSelf: 'stretch' },
   primaryBtn: {
     alignSelf: 'stretch',
-    backgroundColor: '#0EA5E9',
+    backgroundColor: '#B5622E',
     borderRadius: 14,
     paddingVertical: 16,
     alignItems: 'center',
@@ -183,8 +183,8 @@ const styles = StyleSheet.create({
   },
   primaryBtnText: { color: '#fff', fontSize: 17, fontWeight: '700' },
   linkBtn: { marginTop: 16, padding: 4 },
-  linkText: { color: '#0284C7', fontSize: 14, fontWeight: '600' },
+  linkText: { color: '#8B5A38', fontSize: 14, fontWeight: '600' },
   switchRow: { flexDirection: 'row', alignItems: 'center', marginTop: 28, flexWrap: 'wrap', justifyContent: 'center' },
-  switchLabel: { color: '#64748B', fontSize: 14 },
-  switchAction: { color: '#0EA5E9', fontSize: 14, fontWeight: '800', marginLeft: 6 },
+  switchLabel: { color: '#6E645C', fontSize: 14 },
+  switchAction: { color: '#B5622E', fontSize: 14, fontWeight: '800', marginLeft: 6 },
 });

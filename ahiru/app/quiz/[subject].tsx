@@ -477,7 +477,7 @@ export default function QuizScreen() {
     }
 
     return (
-      <SafeAreaView style={[styles.safeArea, { backgroundColor: '#F5F7FA' }]}>
+      <SafeAreaView style={[styles.safeArea, { backgroundColor: '#FAF7F2' }]}>
         <View style={styles.resultsContainer}>
           <View style={[styles.resultsHeader, { backgroundColor: isDaily ? '#C0392B' : info.color }]}>
             <SubjectIcon subject={subjectKey} size={44} color="#FFFFFF" strokeWidth={2} />
@@ -776,7 +776,7 @@ export default function QuizScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#F5F7FA',
+    backgroundColor: '#FAF7F2',
   },
   header: {
     flexDirection: 'row',
@@ -873,16 +873,16 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   remainBadge: {
-    backgroundColor: '#EEF4FF',
+    backgroundColor: '#F5EFE4',
     paddingHorizontal: 18,
     paddingVertical: 8,
     borderRadius: 20,
     borderWidth: 1,
-    borderColor: '#C5D8F8',
+    borderColor: '#E8DCC8',
   },
   remainBadgeText: {
     fontSize: 13,
-    color: '#1E5FBE',
+    color: '#6B4226',
     fontWeight: '700',
   },
   answerButtons: {
@@ -990,7 +990,7 @@ const styles = StyleSheet.create({
     height: 120,
     borderRadius: 60,
     marginBottom: 8,
-    backgroundColor: '#EEF4FF',
+    backgroundColor: '#F5EFE4',
   },
   resultEmoji: {
     fontSize: 60,
@@ -999,7 +999,7 @@ const styles = StyleSheet.create({
   resultMessage: {
     fontSize: 20,
     fontWeight: '800',
-    color: '#1A1A2E',
+    color: '#221C18',
     marginBottom: 16,
   },
   resultScoreRow: {
@@ -1010,7 +1010,7 @@ const styles = StyleSheet.create({
   resultScore: {
     fontSize: 44,
     fontWeight: '900',
-    color: '#1A1A2E',
+    color: '#221C18',
   },
   resultScoreSep: {
     fontSize: 28,
@@ -1120,18 +1120,18 @@ const styles = StyleSheet.create({
   },
   explanationUpgradeBtn: {
     marginTop: 12,
-    backgroundColor: '#EFF6FF',
+    backgroundColor: '#FAF6EF',
     borderRadius: 10,
     paddingVertical: 10,
     paddingHorizontal: 16,
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#BFDBFE',
+    borderColor: '#DCD3C5',
   },
   explanationUpgradeBtnText: {
     fontSize: 15,
     fontWeight: '700',
-    color: '#1D4ED8',
+    color: '#8B5A38',
   },
   cheerCard: {
     backgroundColor: '#EAF7EF',
@@ -1169,7 +1169,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   wrongFigureCard: {
-    backgroundColor: '#F7FBFF',
+    backgroundColor: '#FAF7F2',
     borderRadius: 16,
     padding: 14,
     borderWidth: 1,
@@ -1209,7 +1209,7 @@ const styles = StyleSheet.create({
   upgradeBanner: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#1A1A2E',
+    backgroundColor: '#221C18',
     borderRadius: 16,
     paddingVertical: 16,
     paddingHorizontal: 18,
@@ -1257,11 +1257,11 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
   },
   tutorChatBtn: {
-    backgroundColor: '#0EA5E9',
+    backgroundColor: '#B5622E',
     borderRadius: 16,
     paddingVertical: 16,
     alignItems: 'center',
-    shadowColor: '#0EA5E9',
+    shadowColor: '#B5622E',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 8,

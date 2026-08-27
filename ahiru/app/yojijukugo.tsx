@@ -18,7 +18,7 @@ import Paywall from '../components/Paywall';
 const FREE_YOJIJUKUGO_LIMIT = 5;
 
 const LEVELS: { key: YojijukugoLevel; emoji: string; label: string; color: string }[] = [
-  { key: 'elementary', emoji: '🎒', label: '小学生レベル', color: '#0EA5E9' },
+  { key: 'elementary', emoji: '🎒', label: '小学生レベル', color: '#B5622E' },
   { key: 'juniorhigh', emoji: '📘', label: '中学生レベル', color: '#B45309' },
 ];
 
@@ -119,7 +119,7 @@ export default function YojijukugoScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#F7F8FB' },
+  container: { flex: 1, backgroundColor: '#FAF7F2' },
   freeLimitBanner: {
     marginHorizontal: 16,
     marginBottom: 8,
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
   backRow: { flexDirection: 'row', alignItems: 'center', paddingVertical: 6 },
   backArrow: { fontSize: 18, color: '#B45309', fontWeight: '700' },
   backLabel: { fontSize: 16, color: '#B45309', fontWeight: '700' },
-  title: { fontSize: 26, fontWeight: '800', color: '#1F2937', marginTop: 6 },
+  title: { fontSize: 26, fontWeight: '800', color: '#2B2420', marginTop: 6 },
   subtitle: { fontSize: 13, color: '#6B7280', marginTop: 4 },
   levelRow: { flexDirection: 'row', paddingHorizontal: 16, gap: 8, marginBottom: 8 },
   levelBtn: {
@@ -155,10 +155,10 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     backgroundColor: '#FFFFFF',
     borderWidth: 1.5,
-    borderColor: '#DDE2EC',
+    borderColor: '#DCD3C5',
     alignItems: 'center',
   },
-  levelBtnText: { fontSize: 14, fontWeight: '700', color: '#374151' },
+  levelBtnText: { fontSize: 14, fontWeight: '700', color: '#6E645C' },
   levelBtnTextActive: { color: '#FFFFFF' },
   scroll: { padding: 16 },
   card: {
@@ -176,11 +176,11 @@ const styles = StyleSheet.create({
   },
   cardHeader: { flexDirection: 'row', alignItems: 'flex-start', marginBottom: 8, gap: 10 },
   indexBadge: { fontSize: 13, fontWeight: '800', width: 24 },
-  word: { fontSize: 22, fontWeight: '800', color: '#1F2937' },
+  word: { fontSize: 22, fontWeight: '800', color: '#2B2420' },
   reading: { fontSize: 13, color: '#6B7280', marginTop: 2 },
-  meaning: { fontSize: 14.5, color: '#374151', lineHeight: 22 },
+  meaning: { fontSize: 14.5, color: '#6E645C', lineHeight: 22 },
   exampleBox: {
-    backgroundColor: '#F9FAFB',
+    backgroundColor: '#FAF7F2',
     borderLeftWidth: 3,
     borderRadius: 8,
     paddingHorizontal: 12,
@@ -188,5 +188,5 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   exampleTag: { fontSize: 11, fontWeight: '800', color: '#9CA3AF', marginBottom: 2 },
-  exampleText: { fontSize: 13.5, color: '#374151', lineHeight: 20 },
+  exampleText: { fontSize: 13.5, color: '#6E645C', lineHeight: 20 },
 });

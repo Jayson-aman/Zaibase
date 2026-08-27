@@ -113,7 +113,7 @@ export default function AdmissionsScreen() {
       <TextInput
         style={styles.search}
         placeholder="学校名・都道府県で検索"
-        placeholderTextColor="#94A3B8"
+        placeholderTextColor="#9C9186"
         value={query}
         onChangeText={setQuery}
       />
@@ -157,8 +157,8 @@ export default function AdmissionsScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#F0F9FF' },
-  header: { paddingHorizontal: 20, paddingTop: 8, paddingBottom: 12, backgroundColor: '#0EA5E9' },
+  container: { flex: 1, backgroundColor: '#FAF6EF' },
+  header: { paddingHorizontal: 20, paddingTop: 8, paddingBottom: 12, backgroundColor: '#B5622E' },
   headerTopRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   backRow: { paddingVertical: 6 },
   backText: { color: 'rgba(255,255,255,0.95)', fontSize: 16, fontWeight: '700' },
@@ -167,35 +167,35 @@ const styles = StyleSheet.create({
   notice: { backgroundColor: '#FEF3C7', padding: 12, marginHorizontal: 16, marginTop: 12, borderRadius: 10 },
   noticeText: { color: '#92400E', fontSize: 12, lineHeight: 18 },
   tabRow: { flexDirection: 'row', gap: 8, paddingHorizontal: 16, marginTop: 12 },
-  tab: { flex: 1, paddingVertical: 10, borderRadius: 12, backgroundColor: '#E2E8F0', alignItems: 'center' },
-  tabActiveJhs: { backgroundColor: '#0EA5E9' },
+  tab: { flex: 1, paddingVertical: 10, borderRadius: 12, backgroundColor: '#EBE4D8', alignItems: 'center' },
+  tabActiveJhs: { backgroundColor: '#B5622E' },
   tabActiveHs: { backgroundColor: '#7C3AED' },
-  tabText: { fontSize: 15, fontWeight: '700', color: '#475569' },
+  tabText: { fontSize: 15, fontWeight: '700', color: '#6E645C' },
   tabTextActive: { color: '#fff' },
   levelRow: { flexDirection: 'row', gap: 8, paddingHorizontal: 16, marginTop: 12 },
-  levelChip: { flex: 1, paddingVertical: 8, borderRadius: 999, backgroundColor: '#fff', borderWidth: 1, borderColor: '#CBD5E1', alignItems: 'center' },
-  levelChipActive: { backgroundColor: '#0369A1', borderColor: '#0369A1' },
-  levelText: { fontSize: 13, fontWeight: '700', color: '#475569' },
+  levelChip: { flex: 1, paddingVertical: 8, borderRadius: 999, backgroundColor: '#fff', borderWidth: 1, borderColor: '#DCD3C5', alignItems: 'center' },
+  levelChipActive: { backgroundColor: '#2B2420', borderColor: '#2B2420' },
+  levelText: { fontSize: 13, fontWeight: '700', color: '#6E645C' },
   levelTextActive: { color: '#fff' },
   yearRow: { flexDirection: 'row', gap: 8, paddingHorizontal: 16, marginTop: 10 },
-  yearChip: { paddingVertical: 7, paddingHorizontal: 14, borderRadius: 999, backgroundColor: '#fff', borderWidth: 1, borderColor: '#CBD5E1' },
-  yearChipActive: { backgroundColor: '#0369A1', borderColor: '#0369A1' },
-  yearText: { fontSize: 13, fontWeight: '700', color: '#475569' },
+  yearChip: { paddingVertical: 7, paddingHorizontal: 14, borderRadius: 999, backgroundColor: '#fff', borderWidth: 1, borderColor: '#DCD3C5' },
+  yearChipActive: { backgroundColor: '#2B2420', borderColor: '#2B2420' },
+  yearText: { fontSize: 13, fontWeight: '700', color: '#6E645C' },
   yearTextActive: { color: '#fff' },
   search: {
     marginHorizontal: 16,
     marginTop: 12,
     backgroundColor: '#fff',
     borderWidth: 1,
-    borderColor: '#BAE6FD',
+    borderColor: '#E8DCC8',
     borderRadius: 12,
     paddingHorizontal: 14,
     paddingVertical: 11,
     fontSize: 15,
-    color: '#0F172A',
+    color: '#2B2420',
   },
   scroll: { padding: 16 },
-  empty: { textAlign: 'center', color: '#64748B', marginTop: 30 },
+  empty: { textAlign: 'center', color: '#6E645C', marginTop: 30 },
   card: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -211,12 +211,12 @@ const styles = StyleSheet.create({
   },
   cardBody: { flex: 1 },
   schoolNameRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
-  schoolName: { fontSize: 16, fontWeight: '700', color: '#0F172A' },
+  schoolName: { fontSize: 16, fontWeight: '700', color: '#2B2420' },
   levelBadge: { paddingHorizontal: 8, paddingVertical: 2, borderRadius: 999, backgroundColor: '#FEF3C7' },
-  levelBadgeStandard: { backgroundColor: '#DBEAFE' },
+  levelBadgeStandard: { backgroundColor: '#EBE4D8' },
   levelBadgeText: { fontSize: 11, fontWeight: '800', color: '#92400E' },
-  levelBadgeTextStandard: { color: '#1D4ED8' },
-  schoolMeta: { fontSize: 12, color: '#64748B', marginTop: 3 },
-  cardLink: { fontSize: 13, color: '#0369A1', fontWeight: '800' },
-  footNote: { fontSize: 12, color: '#64748B', marginTop: 8, lineHeight: 18 },
+  levelBadgeTextStandard: { color: '#8B5A38' },
+  schoolMeta: { fontSize: 12, color: '#6E645C', marginTop: 3 },
+  cardLink: { fontSize: 13, color: '#2B2420', fontWeight: '800' },
+  footNote: { fontSize: 12, color: '#6E645C', marginTop: 8, lineHeight: 18 },
 });

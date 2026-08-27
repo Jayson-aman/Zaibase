@@ -141,7 +141,7 @@ export default function EikenScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#F5F7FA' },
+  container: { flex: 1, backgroundColor: '#FAF7F2' },
   header: { paddingHorizontal: 20, paddingTop: 16, paddingBottom: 20 },
   headerTopRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 },
   backBtn: {},
@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
   headerSub: { fontSize: 11, color: 'rgba(255,255,255,0.7)', fontWeight: '500' },
   scroll: { flex: 1 },
   content: { paddingHorizontal: 16, paddingTop: 20, paddingBottom: 40 },
-  sectionTitle: { fontSize: 15, fontWeight: '800', color: '#1A1A2E', marginBottom: 16 },
+  sectionTitle: { fontSize: 15, fontWeight: '800', color: '#221C18', marginBottom: 16 },
   card: { borderRadius: 18, marginBottom: 14, shadowColor: '#000', shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.15, shadowRadius: 10, elevation: 5 },
   cardGradient: { borderRadius: 18, padding: 18, flexDirection: 'row', alignItems: 'flex-start', gap: 14 },
   cardEmoji: { fontSize: 36, marginTop: 2 },
@@ -164,6 +164,6 @@ const styles = StyleSheet.create({
   cardMeta: { fontSize: 11, color: 'rgba(255,255,255,0.55)', fontWeight: '500', marginTop: 6 },
   cardArrow: { fontSize: 28, color: 'rgba(255,255,255,0.4)', alignSelf: 'center' },
   infoBox: { backgroundColor: '#FFF', borderRadius: 14, padding: 16, marginTop: 8, shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.06, shadowRadius: 6, elevation: 2 },
-  infoTitle: { fontSize: 14, fontWeight: '800', color: '#1A1A2E', marginBottom: 8 },
+  infoTitle: { fontSize: 14, fontWeight: '800', color: '#221C18', marginBottom: 8 },
   infoText: { fontSize: 12, color: '#555', lineHeight: 20 },
 });

@@ -174,7 +174,7 @@ export default function FormulasScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#F7F8FB' },
+  container: { flex: 1, backgroundColor: '#FAF7F2' },
   header: {
     paddingTop: 16,
     paddingBottom: 20,
@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: '#FFFFFF',
     borderBottomWidth: 1.5,
-    borderBottomColor: '#CBD2DE',
+    borderBottomColor: '#DCD3C5',
     padding: 10,
     gap: 8,
   },
@@ -204,7 +204,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     backgroundColor: '#FFFFFF',
     borderWidth: 1.5,
-    borderColor: '#DDE2EC',
+    borderColor: '#DCD3C5',
   },
   subjectBtnEmoji: { fontSize: 18 },
   subjectBtnText: { fontSize: 14, fontWeight: '700', color: '#666' },
@@ -216,7 +216,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginTop: 14,
     borderWidth: 1.5,
-    borderColor: '#CBD2DE',
+    borderColor: '#DCD3C5',
     overflow: 'hidden',
   },
   section: {
@@ -225,7 +225,7 @@ const styles = StyleSheet.create({
     marginBottom: 14,
     overflow: 'hidden',
     borderWidth: 1.5,
-    borderColor: '#CBD2DE',
+    borderColor: '#DCD3C5',
   },
   sectionTitle: {
     fontSize: 16,
@@ -234,11 +234,11 @@ const styles = StyleSheet.create({
     paddingTop: 14,
     paddingBottom: 10,
     borderBottomWidth: 1,
-    borderBottomColor: '#F0F3F7',
+    borderBottomColor: '#F5EFE4',
   },
   sectionIntro: {
     fontSize: 12.5,
-    color: '#5A6B7B',
+    color: '#6E645C',
     lineHeight: 19,
     paddingHorizontal: 16,
     paddingTop: 10,
@@ -246,7 +246,7 @@ const styles = StyleSheet.create({
   },
   formulaRow: {
     borderBottomWidth: 1,
-    borderBottomColor: '#F0F3F7',
+    borderBottomColor: '#F5EFE4',
     paddingHorizontal: 16,
     paddingVertical: 14,
   },
@@ -261,7 +261,7 @@ const styles = StyleSheet.create({
     color: '#333',
   },
   formulaBox: {
-    backgroundColor: '#F8FAFF',
+    backgroundColor: '#FAF6EF',
     borderRadius: 8,
     paddingHorizontal: 12,
     paddingVertical: 8,
@@ -279,7 +279,7 @@ const styles = StyleSheet.create({
   },
   explanation: {
     fontSize: 13,
-    color: '#3A4A5A',
+    color: '#6E645C',
     lineHeight: 20,
     marginTop: 8,
   },
@@ -310,12 +310,12 @@ const styles = StyleSheet.create({
     width: '100%',
     aspectRatio: 1,
     borderRadius: 10,
-    backgroundColor: '#F0F3F7',
+    backgroundColor: '#F5EFE4',
   },
   stepsBox: {
-    backgroundColor: '#F8FAFF',
+    backgroundColor: '#FAF6EF',
     borderWidth: 1,
-    borderColor: '#E2E8F5',
+    borderColor: '#EBE4D8',
     borderRadius: 8,
     paddingHorizontal: 12,
     paddingVertical: 10,
@@ -324,7 +324,7 @@ const styles = StyleSheet.create({
   stepsLine: {
     fontSize: 13,
     lineHeight: 21,
-    color: '#2A3A4A',
+    color: '#2B2420',
     fontVariant: ['tabular-nums'],
   },
   exampleBox: {
@@ -356,7 +356,7 @@ const styles = StyleSheet.create({
     color: '#C0894A',
   },
   checkBox: {
-    backgroundColor: '#F4FAFF',
+    backgroundColor: '#FAF6EF',
     borderRadius: 8,
     paddingHorizontal: 12,
     paddingVertical: 10,
@@ -380,7 +380,7 @@ const styles = StyleSheet.create({
   checkText: {
     flex: 1,
     fontSize: 12.5,
-    color: '#3A4A5A',
+    color: '#6E645C',
     lineHeight: 19,
   },
 });

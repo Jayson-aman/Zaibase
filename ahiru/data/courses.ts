@@ -91,7 +91,7 @@ export const ALL_COURSES: CourseInfo[] = [
     name: '中学受験 一般',
     shortName: '一般',
     emoji: '📚',
-    color: '#1E5FBE',
+    color: '#6B4226',
     level: '基礎〜標準',
     targetSchools: ['私立中学（一般）', '公立中高一貫'],
     description: '中学受験の基礎・標準レベルを幅広くカバー',

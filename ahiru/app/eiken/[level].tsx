@@ -107,7 +107,7 @@ export default function EikenLevelScreen() {
 }
 
 const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: '#F5F7FA' },
+  safeArea: { flex: 1, backgroundColor: '#FAF7F2' },
   header: { paddingHorizontal: 20, paddingVertical: 16 },
   headerTopRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 },
   backBtn: {},
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
   headerSub: { fontSize: 12, color: 'rgba(255,255,255,0.7)', fontWeight: '600', marginTop: 2 },
   body: { flex: 1, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 32 },
   emoji: { fontSize: 64, marginBottom: 16 },
-  title: { fontSize: 22, fontWeight: '900', color: '#1A1A2E', marginBottom: 12 },
+  title: { fontSize: 22, fontWeight: '900', color: '#221C18', marginBottom: 12 },
   text: { fontSize: 14, color: '#666', textAlign: 'center', lineHeight: 22, marginBottom: 32 },
   btn: { borderRadius: 14, paddingVertical: 14, paddingHorizontal: 32 },
   btnText: { fontSize: 15, fontWeight: '800', color: '#FFFFFF' },

@@ -396,7 +396,7 @@ export default function ListenMode({
 }
 
 const styles = StyleSheet.create({
-  root: { flex: 1, backgroundColor: '#F5F7FA' },
+  root: { flex: 1, backgroundColor: '#FAF7F2' },
   header: {
     alignItems: 'center',
     paddingHorizontal: 20,
@@ -409,7 +409,7 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
   },
   progressRow: { alignItems: 'center', paddingVertical: 8 },
-  progressText: { fontSize: 16, fontWeight: '800', color: '#1A1A2E' },
+  progressText: { fontSize: 16, fontWeight: '800', color: '#221C18' },
   progressTrack: { height: 4, backgroundColor: 'rgba(0,0,0,0.1)' },
   progressFill: { height: '100%', borderRadius: 2 },
   content: { padding: 20, paddingBottom: 40 },
@@ -423,7 +423,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: '100%',
     borderRadius: 14,
-    backgroundColor: '#EEF4FF',
+    backgroundColor: '#F5EFE4',
   },
   mascotImage: {
     width: 88,
@@ -431,7 +431,7 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     backgroundColor: '#FFFFFF',
     borderWidth: 2,
-    borderColor: '#E0E8F5',
+    borderColor: '#EBE4D8',
   },
   historyBanner: {
     textAlign: 'center',
@@ -460,7 +460,7 @@ const styles = StyleSheet.create({
   questionText: {
     fontSize: 20,
     fontWeight: '700',
-    color: '#1A1A2E',
+    color: '#221C18',
     lineHeight: 32,
   },
   statusRow: {
@@ -495,7 +495,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     borderRadius: 20,
     borderWidth: 1.5,
-    borderColor: '#D5DCE6',
+    borderColor: '#DCD3C5',
     backgroundColor: '#FFFFFF',
   },
   speedBtnText: {
@@ -528,7 +528,7 @@ const styles = StyleSheet.create({
   pauseBtn: {
     backgroundColor: '#FFFFFF',
     borderWidth: 2,
-    borderColor: '#1E5FBE',
+    borderColor: '#6B4226',
   },
   stopBtn: {
     backgroundColor: '#E74C3C',
@@ -536,7 +536,7 @@ const styles = StyleSheet.create({
   controlBtnText: {
     fontSize: 16,
     fontWeight: '800',
-    color: '#1E5FBE',
+    color: '#6B4226',
   },
   stopBtnText: {
     fontSize: 16,
@@ -544,13 +544,13 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
   },
   tipBox: {
-    backgroundColor: '#EEF4FF',
+    backgroundColor: '#F5EFE4',
     borderRadius: 12,
     padding: 16,
   },
   tipText: {
     fontSize: 13,
-    color: '#1E5FBE',
+    color: '#6B4226',
     fontWeight: '600',
     lineHeight: 22,
     textAlign: 'center',

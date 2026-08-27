@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255,255,255,0.22)',
   },
   btnDark: {
-    backgroundColor: '#EFF6FF',
+    backgroundColor: '#FAF6EF',
   },
   text: {
     fontSize: 13,
@@ -59,6 +59,6 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
   },
   textDark: {
-    color: '#1D4ED8',
+    color: '#8B5A38',
   },
 });

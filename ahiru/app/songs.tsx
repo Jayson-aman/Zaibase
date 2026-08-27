@@ -35,7 +35,7 @@ function releasePlayback(stop: () => void) {
 const CATEGORIES: { key: SongCategory; emoji: string; color: string }[] = [
   { key: '地理', emoji: '🗾', color: '#F59E0B' },
   { key: '歴史', emoji: '📜', color: '#B45309' },
-  { key: '公民', emoji: '⚖️', color: '#0EA5E9' },
+  { key: '公民', emoji: '⚖️', color: '#B5622E' },
 ];
 
 export default function SongsScreen() {
@@ -303,8 +303,8 @@ const styles = StyleSheet.create({
   },
   melodyText: { fontSize: 12, fontWeight: '700' },
   melodyChipDisabled: { opacity: 0.6 },
-  songTitle: { fontSize: 20, fontWeight: '800', color: '#1F2937', marginBottom: 10 },
-  lyrics: { fontSize: 17, color: '#111827', lineHeight: 30 },
+  songTitle: { fontSize: 20, fontWeight: '800', color: '#2B2420', marginBottom: 10 },
+  lyrics: { fontSize: 17, color: '#2B2420', lineHeight: 30 },
   speakBtn: {
     alignSelf: 'flex-start',
     borderWidth: 1.5,
@@ -326,5 +326,5 @@ const styles = StyleSheet.create({
     borderLeftColor: '#F59E0B',
   },
   pointsLabel: { fontSize: 13, fontWeight: '700', color: '#92400E', marginBottom: 4 },
-  pointsText: { fontSize: 14, color: '#374151', lineHeight: 21 },
+  pointsText: { fontSize: 14, color: '#6E645C', lineHeight: 21 },
 });

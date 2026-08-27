@@ -30,7 +30,7 @@ const CHOICES: {
     label: '中学受験',
     target: '小学4年〜6年',
     detail: '算数・国語・理科・社会・英語',
-    color: '#0EA5E9',
+    color: '#B5622E',
     emoji: '🎒',
   },
   {
@@ -38,7 +38,7 @@ const CHOICES: {
     label: '高校受験',
     target: '中学1年〜3年',
     detail: '数学・国語・理科・社会・英語',
-    color: '#6366F1',
+    color: '#6B4226',
     emoji: '🏫',
   },
 ];
@@ -61,7 +61,7 @@ export default function EntryPage() {
     return (
       <SafeAreaView style={styles.root}>
         <View style={styles.center}>
-          <ActivityIndicator color="#0EA5E9" />
+          <ActivityIndicator color="#B5622E" />
         </View>
       </SafeAreaView>
     );
@@ -118,25 +118,25 @@ export default function EntryPage() {
 }
 
 const styles = StyleSheet.create({
-  root: { flex: 1, backgroundColor: '#F7FAFC' },
+  root: { flex: 1, backgroundColor: '#FAF7F2' },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   inner: { flex: 1, paddingHorizontal: 20, paddingTop: 28, justifyContent: 'center' },
 
   head: { alignItems: 'center', marginBottom: 34 },
   icon: { width: 76, height: 76, borderRadius: 17, marginBottom: 12 },
-  appName: { fontSize: 15, fontWeight: '800', color: '#0F172A', letterSpacing: 0.2 },
+  appName: { fontSize: 15, fontWeight: '800', color: '#2B2420', letterSpacing: 0.2 },
 
   question: {
     fontSize: 24,
     fontWeight: '900',
-    color: '#0F172A',
+    color: '#2B2420',
     textAlign: 'center',
     letterSpacing: -0.4,
     marginBottom: 8,
   },
   note: {
     fontSize: 12.5,
-    color: '#64748B',
+    color: '#6E645C',
     textAlign: 'center',
     lineHeight: 19,
     marginBottom: 24,
@@ -164,14 +164,14 @@ const styles = StyleSheet.create({
   cardEmoji: { fontSize: 24 },
   cardBody: { flex: 1 },
   cardLabel: { fontSize: 19, fontWeight: '900', letterSpacing: -0.3, marginBottom: 2 },
-  cardTarget: { fontSize: 12.5, fontWeight: '700', color: '#475569' },
-  cardDetail: { fontSize: 11.5, color: '#94A3B8', marginTop: 2 },
+  cardTarget: { fontSize: 12.5, fontWeight: '700', color: '#6E645C' },
+  cardDetail: { fontSize: 11.5, color: '#9C9186', marginTop: 2 },
   cardArrow: { fontSize: 26, fontWeight: '300', marginLeft: 6 },
 
   featuresLink: { marginTop: 28, alignItems: 'center', paddingVertical: 10 },
   featuresLinkText: {
     fontSize: 13,
-    color: '#0369A1',
+    color: '#2B2420',
     fontWeight: '700',
     textDecorationLine: 'underline',
   },

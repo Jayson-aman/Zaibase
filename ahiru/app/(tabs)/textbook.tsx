@@ -22,7 +22,7 @@ const SUBJECTS: { key: SubjectKey; emoji: string; color: string }[] = [
   { key: 'kokugo', emoji: '📖', color: '#8B5CF6' },
   { key: 'rika', emoji: '🔬', color: '#10B981' },
   { key: 'shakai', emoji: '🌏', color: '#F59E0B' },
-  { key: 'eigo', emoji: '🌐', color: '#3B82F6' },
+  { key: 'eigo', emoji: '🌐', color: '#B5622E' },
 ];
 
 // 中学受験は「算数」、高校受験は「数学」。同じ subject キーを共有しているため
@@ -218,18 +218,18 @@ export default function TextbookScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#F0F9FF' },
+  container: { flex: 1, backgroundColor: '#FAF6EF' },
   scroll: { flex: 1 },
   scrollContent: { paddingBottom: 40 },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  loadingText: { fontSize: 18, color: '#64748B' },
+  loadingText: { fontSize: 18, color: '#6E645C' },
   header: {
-    backgroundColor: '#0369A1',
+    backgroundColor: '#2B2420',
     paddingHorizontal: 16,
     paddingTop: 18,
     paddingBottom: 18,
     borderBottomWidth: 3,
-    borderBottomColor: '#0C4A6E',
+    borderBottomColor: '#221C18',
   },
   headerTitle: {
     fontSize: 22,
@@ -238,7 +238,7 @@ const styles = StyleSheet.create({
     marginBottom: 2,
     letterSpacing: -0.3,
   },
-  headerSub: { fontSize: 12.5, color: '#BAE6FD', fontWeight: '600' },
+  headerSub: { fontSize: 12.5, color: '#E8DCC8', fontWeight: '600' },
   proBanner: {
     backgroundColor: 'rgba(255,255,255,0.15)',
     borderRadius: 6,
@@ -251,7 +251,7 @@ const styles = StyleSheet.create({
   sectionLabel: {
     fontSize: 12,
     fontWeight: '800',
-    color: '#0369A1',
+    color: '#2B2420',
     letterSpacing: 0.6,
     marginHorizontal: 16,
     marginTop: 18,
@@ -265,10 +265,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#FFFFFF',
     borderWidth: 1,
-    borderColor: '#CBD5E1',
+    borderColor: '#DCD3C5',
   },
-  examTypeBtnActive: { backgroundColor: '#0EA5E9', borderColor: '#0EA5E9' },
-  examTypeText: { fontSize: 13.5, fontWeight: '800', color: '#475569' },
+  examTypeBtnActive: { backgroundColor: '#B5622E', borderColor: '#B5622E' },
+  examTypeText: { fontSize: 13.5, fontWeight: '800', color: '#6E645C' },
   examTypeTextActive: { color: '#FFFFFF' },
   subjectGrid: {
     flexDirection: 'row',
@@ -286,13 +286,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     // ぼかした影よりヘアラインの方が輪郭がはっきり出る
     borderWidth: 1,
-    borderColor: '#CBD5E1',
+    borderColor: '#DCD3C5',
     position: 'relative',
   },
   subjectEmoji: { fontSize: 26, marginBottom: 6 },
-  subjectName: { fontSize: 14, fontWeight: '800', color: '#0F172A', marginBottom: 3 },
-  lessonCount: { fontSize: 11.5, color: '#64748B', fontWeight: '700' },
-  lessonCountPending: { fontSize: 11, color: '#94A3B8' },
+  subjectName: { fontSize: 14, fontWeight: '800', color: '#2B2420', marginBottom: 3 },
+  lessonCount: { fontSize: 11.5, color: '#6E645C', fontWeight: '700' },
+  lessonCountPending: { fontSize: 11, color: '#9C9186' },
   lessonListTitle: {
     fontSize: 16,
     fontWeight: '900',
@@ -308,7 +308,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginHorizontal: 16,
   },
-  emptyText: { fontSize: 15, color: '#94A3B8', textAlign: 'center', lineHeight: 24 },
+  emptyText: { fontSize: 15, color: '#9C9186', textAlign: 'center', lineHeight: 24 },
   lessonCard: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -320,13 +320,13 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
     // 影ではなく境界線で分ける。数百件が並ぶ画面では影は重く、輪郭もぼやける
     borderWidth: 1,
-    borderColor: '#E2E8F0',
+    borderColor: '#EBE4D8',
   },
   lessonCardLeft: {
     width: 30,
     height: 30,
     borderRadius: 6,
-    backgroundColor: '#0EA5E9',
+    backgroundColor: '#B5622E',
     alignItems: 'center',
     justifyContent: 'center',
     marginRight: 11,
@@ -334,10 +334,10 @@ const styles = StyleSheet.create({
   lessonNumber: { fontSize: 12.5, fontWeight: '900', color: '#FFFFFF' },
   lessonCardBody: { flex: 1 },
   lessonTitleRow: { flexDirection: 'row', alignItems: 'flex-start', flexWrap: 'wrap', gap: 6, marginBottom: 2 },
-  lessonTitle: { fontSize: 15, fontWeight: '800', color: '#0F172A', flexShrink: 1, letterSpacing: -0.2 },
-  periodChip: { backgroundColor: '#EEF4FF', borderRadius: 4, paddingHorizontal: 6, paddingVertical: 1.5, borderWidth: 1, borderColor: '#C7D7F5' },
+  lessonTitle: { fontSize: 15, fontWeight: '800', color: '#2B2420', flexShrink: 1, letterSpacing: -0.2 },
+  periodChip: { backgroundColor: '#F5EFE4', borderRadius: 4, paddingHorizontal: 6, paddingVertical: 1.5, borderWidth: 1, borderColor: '#C7D7F5' },
   periodChipText: { fontSize: 9.5, fontWeight: '800', color: '#3B55A0' },
-  lessonDesc: { fontSize: 12.5, color: '#64748B', lineHeight: 18 },
+  lessonDesc: { fontSize: 12.5, color: '#6E645C', lineHeight: 18 },
   maxTag: { fontSize: 11, color: '#92400E', fontWeight: '700', marginTop: 4 },
-  lessonArrow: { fontSize: 24, color: '#94A3B8', paddingLeft: 8 },
+  lessonArrow: { fontSize: 24, color: '#9C9186', paddingLeft: 8 },
 });

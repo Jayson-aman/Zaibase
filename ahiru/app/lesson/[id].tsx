@@ -161,16 +161,16 @@ export default function LessonDetailScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#F8FAFC' },
+  container: { flex: 1, backgroundColor: '#FAF7F2' },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 24 },
-  notFound: { fontSize: 18, color: '#64748B', marginBottom: 16 },
+  notFound: { fontSize: 18, color: '#6E645C', marginBottom: 16 },
   backBtn: {
-    backgroundColor: '#EFF6FF',
+    backgroundColor: '#FAF6EF',
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 12,
   },
-  backBtnText: { fontSize: 16, color: '#1D4ED8', fontWeight: '700' },
+  backBtnText: { fontSize: 16, color: '#8B5A38', fontWeight: '700' },
   header: {
     paddingHorizontal: 16,
     paddingTop: 14,
@@ -210,12 +210,12 @@ const styles = StyleSheet.create({
   scroll: { flex: 1 },
   content: { padding: 16, paddingBottom: 56 },
   lockedBanner: {
-    backgroundColor: '#EFF6FF',
+    backgroundColor: '#FAF6EF',
     borderRadius: 12,
     padding: 20,
     alignItems: 'center',
   },
-  lockedText: { fontSize: 15, color: '#1D4ED8', fontWeight: '600', textAlign: 'center' },
+  lockedText: { fontSize: 15, color: '#8B5A38', fontWeight: '600', textAlign: 'center' },
   maxTeaser: {
     backgroundColor: '#FFFBEB',
     borderRadius: 10,
@@ -236,23 +236,23 @@ const styles = StyleSheet.create({
   freeTeaserText: { fontSize: 13, color: '#047857', fontWeight: '600' },
   // 導入（つかみ）。本文より先に読ませたいので、本文とは違う色面で目立たせる。
   introBox: {
-    backgroundColor: '#F0F9FF',
+    backgroundColor: '#FAF6EF',
     borderRadius: 8,
     padding: 14,
     marginBottom: 16,
     borderWidth: 1,
-    borderColor: '#BAE6FD',
+    borderColor: '#E8DCC8',
     borderLeftWidth: 4,
-    borderLeftColor: '#0EA5E9',
+    borderLeftColor: '#B5622E',
   },
   introLabel: {
     fontSize: 12,
     fontWeight: '900',
-    color: '#0369A1',
+    color: '#2B2420',
     letterSpacing: 0.4,
     marginBottom: 6,
   },
-  introText: { fontSize: 14.5, color: '#0F172A', lineHeight: 23 },
+  introText: { fontSize: 14.5, color: '#2B2420', lineHeight: 23 },
   keyPointsBox: {
     backgroundColor: '#ECFDF5',
     borderRadius: 8,
@@ -283,7 +283,7 @@ const styles = StyleSheet.create({
   trapItem: {},
   trapItemSpacer: { marginTop: 18, paddingTop: 18, borderTopWidth: 1, borderTopColor: '#FED7AA' },
   trapQuestionLabel: { fontSize: 12, fontWeight: '800', color: '#C2410C', marginBottom: 4 },
-  trapQuestion: { fontSize: 14, color: '#1F2937', lineHeight: 21, marginBottom: 9 },
+  trapQuestion: { fontSize: 14, color: '#2B2420', lineHeight: 21, marginBottom: 9 },
   trapWrongBox: {
     backgroundColor: '#FEF2F2',
     borderRadius: 6,

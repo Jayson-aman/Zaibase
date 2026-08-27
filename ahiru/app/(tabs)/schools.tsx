@@ -13,16 +13,16 @@ import { useBetaAccess } from '../../hooks/useBetaAccess';
 import { useSubscription } from '../../hooks/useSubscription';
 
 const D = {
-  bg:          '#040C1C',
+  bg:          '#2B2420',
   glass:       'rgba(255,255,255,0.05)',
   glassBorder: 'rgba(255,255,255,0.09)',
   gold:        '#C8A84B',
   goldDim:     'rgba(200,168,75,0.15)',
   goldBorder:  'rgba(200,168,75,0.35)',
-  white:       '#EDF4FF',
+  white:       '#F5EFE4',
   soft:        '#7FA8CC',
-  muted:       '#3E5870',
-  pro:         '#3B82F6',
+  muted:       '#6E645C',
+  pro:         '#B5622E',
   max:         '#A855F7',
 };
 
@@ -69,7 +69,7 @@ const SCHOOL_GROUPS: SchoolGroup[] = [
   {
     label: '大阪 有力校',
     icon: '📚',
-    color: '#3B82F6',
+    color: '#B5622E',
     schools: [
       { key: 'kansai-hokuyo', name: '関西大学北陽', emoji: '🎓', hensachi: '54〜58', gender: '共学', tier: 'pro' },
       { key: 'myojo',         name: '明星',         emoji: '✨', hensachi: '56〜62', gender: '男子', tier: 'pro' },
@@ -217,7 +217,7 @@ const styles = StyleSheet.create({
     fontSize: 13,
   },
   admissionCta: {
-    backgroundColor: '#0EA5E9',
+    backgroundColor: '#B5622E',
     borderRadius: 14,
     padding: 16,
     marginHorizontal: 16,
