@@ -14,6 +14,7 @@ import { ALL_COURSES } from '../../data/courses';
 import type { CourseKey, ExamType } from '../../data/courses';
 import { getTopic, questionMatchesTopic } from '../../data/topics';
 import { getTestMode, buildTestSet, type TestModeKey, type LevelKey } from '../../data/test-modes';
+import { GRADE_ORDER, type GradeKey } from '../../data/grades';
 import { explanationsSansu } from '../../data/explanations_sansu';
 import { explanationsKokugo } from '../../data/explanations_kokugo';
 import { explanationsRika } from '../../data/explanations_rika';
@@ -61,6 +62,10 @@ function isDifficulty(value: string): value is Difficulty {
   return ['basic', 'standard', 'advanced'].includes(value);
 }
 
+function isGrade(value: string): value is GradeKey {
+  return GRADE_ORDER.includes(value as GradeKey);
+}
+
 function isCourseKey(value: string): value is CourseKey {
   return ALL_COURSES.some((c) => c.key === value);
 }
@@ -91,6 +96,7 @@ function filterQuestions(
   course: CourseKey,
   difficultyFilter: Difficulty | null,
   isPaid: boolean = false,
+  gradeFilter: GradeKey | null = null,
 ): Question[] {
   let qs = all.filter((q) => (q.examType ?? 'chugaku') === examType);
   const generalKey = examType === 'koko' ? 'koko-general' : 'general';
@@ -107,6 +113,10 @@ function filterQuestions(
   if (difficultyFilter) {
     qs = qs.filter((q) => q.difficulty === difficultyFilter);
   }
+  if (gradeFilter) {
+    // grade未指定の既存問題は全学年扱いとして残す
+    qs = qs.filter((q) => !q.grade || q.grade === gradeFilter);
+  }
   return qs;
 }
 
@@ -119,6 +129,7 @@ export default function QuizScreen() {
     examType: examTypeParam,
     topic: topicParam,
     testmode: testModeParam,
+    grade: gradeParam,
   } = useLocalSearchParams<{
       subject: string;
       difficulty?: string;
@@ -127,6 +138,7 @@ export default function QuizScreen() {
       examType?: string;
       topic?: string;
       testmode?: string;
+      grade?: string;
     }>();
   const router = useRouter();
 
@@ -147,6 +159,7 @@ export default function QuizScreen() {
       : null;
   const course: CourseKey = courseParam && isCourseKey(courseParam) ? courseParam : 'general';
   const examType: ExamType = examTypeParam && isExamType(examTypeParam) ? examTypeParam : 'chugaku';
+  const gradeFilter: GradeKey | null = gradeParam && isGrade(gradeParam) ? gradeParam : null;
   const info = subjectInfo[subjectKey];
 
   // isMax/isPro を useMemo より前に宣言しないと Temporal Dead Zone クラッシュが起きる
@@ -172,6 +185,7 @@ export default function QuizScreen() {
         pool = pool.filter((q) => questionMatchesTopic(q, topic));
         if (!(isPro || isMax)) pool = pool.filter((q) => !q.maxOnly);
         if (difficultyFilter) pool = pool.filter((q) => q.difficulty === difficultyFilter);
+        if (gradeFilter) pool = pool.filter((q) => !q.grade || q.grade === gradeFilter);
         return shuffle(pool);
       }
     }
@@ -179,6 +193,7 @@ export default function QuizScreen() {
       const tm = getTestMode(testModeKey);
       let pool = all.filter((q) => (q.examType ?? 'chugaku') === examType);
       if (!(isPro || isMax)) pool = pool.filter((q) => !q.maxOnly);
+      if (gradeFilter) pool = pool.filter((q) => !q.grade || q.grade === gradeFilter);
       return buildTestSet(pool, tm, restartKey + 1, difficultyFilter as LevelKey | undefined);
     }
     if (isMock) {
@@ -196,9 +211,9 @@ export default function QuizScreen() {
       if (schoolQ.length > 0) return shuffle(schoolQ);
       return shuffle(filterQuestions(all, examType, course, 'advanced', true));
     }
-    const filtered = filterQuestions(all, examType, course, difficultyFilter, isPro || isMax);
+    const filtered = filterQuestions(all, examType, course, difficultyFilter, isPro || isMax, gradeFilter);
     return shuffle(filtered);
-  }, [subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, testModeKey, course, examType, isPro, isMax, topicParam, restartKey]);
+  }, [subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, testModeKey, course, examType, isPro, isMax, topicParam, restartKey, gradeFilter]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);

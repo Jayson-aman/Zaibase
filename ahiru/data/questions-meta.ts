@@ -1,4 +1,5 @@
 import type { CourseKey, ExamType } from './courses';
+import type { GradeKey } from './grades';
 
 /** 複数の小問がある問題の、各小問（問1・問2…）。 */
 export type QuestionSubItem = {
@@ -21,6 +22,8 @@ export type Question = {
   figureDescription?: string;
   passage?: string;
   examType?: ExamType;
+  /** 学年区分（小4〜中3）。未指定の問題は学年フィルターの対象外＝全学年扱い。 */
+  grade?: GradeKey;
   questionReading?: string;
   answerReading?: string;
   maxOnly?: boolean;

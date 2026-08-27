@@ -17,6 +17,7 @@ import { useRouter } from 'expo-router';
 import { subjectInfo, type SubjectKey } from '../data/questions-meta';
 import { TEST_MODES, levelLabel, type TestModeKey, type LevelKey } from '../data/test-modes';
 import { useExamType, examTypeLabel, subjectDisplayName } from '../store/examType';
+import { GRADE_ORDER, GRADE_SHORT_LABELS, examTypeOfGrade, type GradeKey } from '../data/grades';
 import HomeButton from '../components/HomeButton';
 
 const SUBJECTS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
@@ -27,14 +28,20 @@ export default function TestPrepScreen() {
   const { examType, loading } = useExamType();
   const [modeKey, setModeKey] = useState<TestModeKey | null>(null);
   const [level, setLevel] = useState<LevelKey>('basic');
+  const [grade, setGrade] = useState<GradeKey | null>(null);
 
   const mode = useMemo(() => TEST_MODES.find((m) => m.key === modeKey) ?? null, [modeKey]);
   const et = examType ?? 'chugaku';
+  const gradesForExamType = useMemo(
+    () => GRADE_ORDER.filter((g) => examTypeOfGrade(g) === et),
+    [et],
+  );
 
   function start(subject: SubjectKey) {
     if (!mode) return;
     const lv = mode.key === 'level' ? `&difficulty=${level}` : '';
-    router.push(`/quiz/${subject}?testmode=${mode.key}&examType=${et}${lv}` as any);
+    const gr = grade ? `&grade=${grade}` : '';
+    router.push(`/quiz/${subject}?testmode=${mode.key}&examType=${et}${lv}${gr}` as any);
   }
 
   if (loading) return <SafeAreaView style={styles.root} />;
@@ -91,9 +98,38 @@ export default function TestPrepScreen() {
           );
         })}
 
+        {mode && (
+          <>
+            <Text style={styles.sectionLabel}>② 学年（任意・絞り込み）</Text>
+            <View style={styles.levelRow}>
+              <TouchableOpacity
+                style={[styles.levelBtn, grade === null && styles.levelBtnActive]}
+                onPress={() => setGrade(null)}
+                activeOpacity={0.85}
+              >
+                <Text style={[styles.levelText, grade === null && styles.levelTextActive]}>
+                  全学年
+                </Text>
+              </TouchableOpacity>
+              {gradesForExamType.map((g) => (
+                <TouchableOpacity
+                  key={g}
+                  style={[styles.levelBtn, grade === g && styles.levelBtnActive]}
+                  onPress={() => setGrade(g)}
+                  activeOpacity={0.85}
+                >
+                  <Text style={[styles.levelText, grade === g && styles.levelTextActive]}>
+                    {GRADE_SHORT_LABELS[g]}
+                  </Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+          </>
+        )}
+
         {mode?.key === 'level' && (
           <>
-            <Text style={styles.sectionLabel}>② 難易度</Text>
+            <Text style={styles.sectionLabel}>③ 難易度</Text>
             <View style={styles.levelRow}>
               {LEVELS.map((lv) => (
                 <TouchableOpacity
@@ -114,7 +150,7 @@ export default function TestPrepScreen() {
         {mode && (
           <>
             <Text style={styles.sectionLabel}>
-              {mode.key === 'level' ? '③' : '②'} 教科を選ぶ
+              {mode.key === 'level' ? '④' : '③'} 教科を選ぶ
             </Text>
             <View style={styles.subjectGrid}>
               {SUBJECTS.map((k) => (
