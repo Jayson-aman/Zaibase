@@ -227,6 +227,7 @@ import { gradeE4SansuQuestions } from './grade_e4_sansu';
 import { gradeJ1SansuQuestions } from './grade_j1_sansu';
 import { gradeE6SansuQuestions } from './grade_e6_sansu';
 import { gradeJ2SansuQuestions } from './grade_j2_sansu';
+import { gradeJ3SansuQuestions } from './grade_j3_sansu';
 
 export const questions: Question[] = [
   // ============================================================
@@ -3465,6 +3466,7 @@ export const questions: Question[] = [
   ...gradeJ1SansuQuestions,
   ...gradeE6SansuQuestions,
   ...gradeJ2SansuQuestions,
+  ...gradeJ3SansuQuestions,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {
