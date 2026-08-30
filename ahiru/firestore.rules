@@ -45,6 +45,20 @@ service cloud.firestore {
       allow delete: if request.auth != null && request.auth.uid == uid;
     }
 
+    // ── 無料/Pro/MAXユーザーの課金対象モード・ペイウォール到達ログ ──
+    // 「無料ユーザーが有料限定モードに何人到達したか」を後から数えられるように
+    // するための集計専用ログ。書き込みは本人分のみ・作成のみ（追記式で編集不可）。
+    // 他人の行動を推測されないよう、クライアントからの読み取りは一切許可しない
+    // （集計はFirebase ConsoleかCloud Functionから行う）。
+    match /accessEvents/{docId} {
+      allow read, update, delete: if false;
+      allow create: if request.auth != null
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.event is string
+        && request.resource.data.mode is string
+        && request.resource.data.tier in ['free', 'pro', 'max'];
+    }
+
     // 上記以外は全て拒否（明示）
     match /{document=**} {
       allow read, write: if false;

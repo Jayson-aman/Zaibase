@@ -39,6 +39,7 @@ import Paywall from '../../components/Paywall';
 import { saveProgress } from '../../store/progress';
 import { incrementTrialQuestions, isTrialExpired, TRIAL_QUESTION_LIMIT } from '../../store/trial';
 import { getSessionFreeUsed, incrementSessionFreeUsed } from '../../store/sessionLimit';
+import { logAccessEvent, type AccessTier } from '../../services/analytics';
 import { submitRankingScore } from '../../services/ranking';
 import { maybeRequestReview } from '../../services/reviewPrompt';
 import { getDailyQuestions, getTodayDayLabel } from '../../utils/dailyChallenge';
@@ -220,6 +221,22 @@ export default function QuizScreen() {
     return shuffle(filtered);
   }, [subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, testModeKey, course, examType, isPro, isMax, topicParam, restartKey, gradeFilter]);
 
+  // 無料/Pro/MAXユーザーがMAX限定モードにどれだけ到達しているかを集計できるよう記録する。
+  // baseQuestions（useMemo）はレンダー中に副作用を起こしたくないため、別のeffectで発火する。
+  useEffect(() => {
+    if (questionsLoading || subLoading) return;
+    if (!isDaily && !isMock && !isKakomon) return;
+    const tier: AccessTier = isMax ? 'max' : isPro ? 'pro' : 'free';
+    const mode = isDaily ? 'daily' : isMock ? 'mock' : 'kakomon';
+    logAccessEvent('max_gated_mode_view', {
+      mode,
+      subject: subjectKey,
+      examType,
+      tier,
+      blocked: !isMax,
+    });
+  }, [isDaily, isMock, isKakomon, isMax, isPro, subLoading, questionsLoading, subjectKey, examType]);
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [revealed, setRevealed] = useState(false);
@@ -359,6 +376,12 @@ export default function QuizScreen() {
         setTrialBlocked(true);
         setShowPaywall(true);
         answeringRef.current = false;
+        logAccessEvent('session_limit_paywall_shown', {
+          mode: testModeKey ?? 'unknown',
+          subject: subjectKey,
+          examType,
+          tier: 'free',
+        });
         return;
       }
       const expired = await isTrialExpired();
@@ -366,6 +389,12 @@ export default function QuizScreen() {
         setTrialBlocked(true);
         setShowPaywall(true);
         answeringRef.current = false;
+        logAccessEvent('trial_limit_paywall_shown', {
+          mode: testModeKey ?? (isDaily ? 'daily' : isMock ? 'mock' : isKakomon ? 'kakomon' : 'normal'),
+          subject: subjectKey,
+          examType,
+          tier: 'free',
+        });
         return;
       }
       await incrementTrialQuestions();
