@@ -31,7 +31,10 @@ export const figuresGradeE5Sansu: Record<string, Figure> = {
     labels: { width: '9cm', depth: '12cm', height: '？cm' },
     caption: '体積540cm³から高さを求める',
     steps: [
-      '底面積 = 12 × 9 = 108cm²',
+      '縦の長さを確認する：12cm',
+      '横の長さを確認する：9cm',
+      '底面積 = 縦×横 = 12×9 = 108cm²',
+      '高さ = 体積 ÷ 底面積で求められる',
       '高さ = 540 ÷ 108 = 5cm',
     ],
   },
@@ -43,9 +46,14 @@ export const figuresGradeE5Sansu: Record<string, Figure> = {
     labels: { width: '30cm', depth: '20cm', height: '15cm' },
     caption: '水の体積 = 20×30×15 = 9000cm³ = 9L',
     steps: [
-      '底面積 = 20 × 30 = 600cm²',
+      '縦の長さを確認する：20cm',
+      '横の長さを確認する：30cm',
+      '底面積 = 縦×横 = 20×30 = 600cm²',
+      '水の深さを確認する：15cm',
+      '水の体積 = 底面積 × 深さで求められる',
       '水の体積 = 600 × 15 = 9000cm³',
-      '1000cm³ = 1Lなので、9000cm³ = 9L',
+      '1000cm³ = 1Lという関係を使う',
+      '9000cm³ = 9L',
     ],
   },
 
@@ -56,8 +64,12 @@ export const figuresGradeE5Sansu: Record<string, Figure> = {
     labels: { width: '10cm', depth: '10cm', height: '10cm' },
     caption: '水の体積は移しかえても変わらない',
     steps: [
+      'はじめの容器は1辺10cmの立方体',
       'はじめの水の体積 = 10×10×10 = 1000cm³',
+      '水を移しかえても体積は変わらない',
+      '新しい容器の底面（縦8cm・横10cm）を確認する',
       '新しい容器の底面積 = 8×10 = 80cm²',
+      '深さ = 水の体積 ÷ 底面積で求められる',
       '水の深さ = 1000 ÷ 80 = 12.5cm',
     ],
   },
@@ -116,10 +128,14 @@ export const figuresGradeE5Sansu: Record<string, Figure> = {
     diagonals: [[0, 2]],
     caption: 'AB=AD、BC=DC、ACは共通の辺 → 3組の辺がそれぞれ等しい',
     steps: [
-      'AB = AD（問題文より）',
-      'BC = DC（問題文より）',
-      'AC = AC（2つの三角形に共通の辺）',
-      '3組の辺がそれぞれ等しいので、三角形ABCと三角形ACDは合同',
+      '三角形ABCと三角形ACDの3組の辺を比べる',
+      '1組目：AB = AD（問題文より）',
+      '2組目：BC = DC（問題文より）',
+      '3組目はACとAC',
+      'ACは2つの三角形に共通な辺である',
+      '共通の辺なので AC = AC',
+      '3組の辺（AB・AD、BC・DC、AC・AC）がすべて等しい',
+      'よって、三角形ABCと三角形ACDは合同',
     ],
   },
 
@@ -159,7 +175,9 @@ export const figuresGradeE5Sansu: Record<string, Figure> = {
     caption: '∠A=50度、∠B=65度のとき、∠C = 180−50−65 = 65度',
     steps: [
       '三角形の内角の和は180度',
-      '残りの角 = 180 − 50 − 65 = 65度',
+      'わかっている2つの角は50度と65度',
+      '180 − 50 = 130度',
+      '130 − 65 = 65度',
     ],
   },
 
@@ -176,7 +194,9 @@ export const figuresGradeE5Sansu: Record<string, Figure> = {
     caption: '∠A=80度、∠B=95度、∠C=110度のとき、∠D = 360−80−95−110 = 75度',
     steps: [
       '四角形の内角の和は360度',
-      '残りの角 = 360 − (80+95+110) = 360 − 285 = 75度',
+      'わかっている3つの角80度・95度・110度を足す',
+      '80 + 95 + 110 = 285度',
+      '残りの角 = 360 − 285 = 75度',
     ],
   },
 
@@ -196,7 +216,9 @@ export const figuresGradeE5Sansu: Record<string, Figure> = {
     ],
     caption: '1つの頂点から対角線を2本ひくと3つの三角形に分けられる',
     steps: [
-      '五角形は1つの頂点から対角線2本で3つの三角形に分けられる',
+      '五角形の1つの頂点から対角線を2本ひく',
+      '五角形は3つの三角形に分けられる',
+      '三角形1つの内角の和は180度',
       '内角の和 = 180 × 3 = 540度',
     ],
   },
@@ -241,9 +263,13 @@ export const figuresGradeE5Sansu: Record<string, Figure> = {
     ],
     caption: '(140×15 + 136×10) ÷ 25 = 138.4cm',
     steps: [
+      '男子15人の平均身長は140cm',
       '男子の合計 = 140 × 15 = 2100cm',
+      '女子10人の平均身長は136cm',
       '女子の合計 = 136 × 10 = 1360cm',
+      '全体の合計は男子と女子の合計を足す',
       '全体の合計 = 2100 + 1360 = 3460cm',
+      '全体の人数は25人',
       '全体の平均 = 3460 ÷ 25 = 138.4cm',
     ],
   },
@@ -272,8 +298,11 @@ export const figuresGradeE5Sansu: Record<string, Figure> = {
     ],
     caption: '(82×4 + 98) ÷ 5 = 85.2点',
     steps: [
+      'はじめの4回の平均は82点',
       'はじめの4回の合計 = 82 × 4 = 328点',
+      '5回目にとった点数は98点',
       '5回の合計 = 328 + 98 = 426点',
+      '5回全体の人数は5回',
       '5回全体の平均 = 426 ÷ 5 = 85.2点',
     ],
   },
@@ -288,7 +317,12 @@ export const figuresGradeE5Sansu: Record<string, Figure> = {
     lines: [{ a: 30, b: 0, label: 'y=30x' }],
     points: [{ x: 2, y: 60, label: '(2時間, 60km)' }],
     caption: '時速30km：2時間で60km',
-    steps: ['速さ = 道のり ÷ 時間 = 60 ÷ 2 = 30', '時速30km'],
+    steps: [
+      '速さ = 道のり ÷ 時間という公式を使う',
+      '道のりは60km、時間は2時間',
+      '速さ = 60 ÷ 2 = 30',
+      '時速30km',
+    ],
   },
 
   grade_e5_sansu_35: {
@@ -298,7 +332,11 @@ export const figuresGradeE5Sansu: Record<string, Figure> = {
     lines: [{ a: 45, b: 0, label: 'y=45x' }],
     points: [{ x: 3, y: 135, label: '(3時間, 135km)' }],
     caption: '時速45km：3時間で135km',
-    steps: ['道のり = 速さ × 時間 = 45 × 3 = 135km'],
+    steps: [
+      '道のり = 速さ × 時間という公式を使う',
+      '速さは時速45km、時間は3時間',
+      '道のり = 45 × 3 = 135km',
+    ],
   },
 
   grade_e5_sansu_36: {
@@ -308,7 +346,11 @@ export const figuresGradeE5Sansu: Record<string, Figure> = {
     lines: [{ a: 70, b: 0, label: 'y=70x' }],
     points: [{ x: 3, y: 210, label: '(3時間, 210km)' }],
     caption: '時速70km：210kmで3時間',
-    steps: ['時間 = 道のり ÷ 速さ = 210 ÷ 70 = 3時間'],
+    steps: [
+      '時間 = 道のり ÷ 速さという公式を使う',
+      '道のりは210km、速さは時速70km',
+      '時間 = 210 ÷ 70 = 3時間',
+    ],
   },
 
   grade_e5_sansu_37: {
@@ -328,7 +370,12 @@ export const figuresGradeE5Sansu: Record<string, Figure> = {
       { label: '100gあたり', value: 280 },
     ],
     caption: '1gあたり420÷150=2.8円 → 100gあたり280円',
-    steps: ['1gあたり = 420 ÷ 150 = 2.8円', '100gあたり = 2.8 × 100 = 280円'],
+    steps: [
+      '150gで420円であることを確認する',
+      '1gあたりの値段 = 420 ÷ 150 = 2.8円',
+      '100gあたりの値段を求めるには2.8円を100倍する',
+      '100gあたり = 2.8 × 100 = 280円',
+    ],
   },
 
   grade_e5_sansu_39: {
@@ -341,8 +388,11 @@ export const figuresGradeE5Sansu: Record<string, Figure> = {
     ],
     caption: 'B町の方が人口密度が高い（350人/km²）',
     steps: [
-      'A町 = 13500 ÷ 45 = 300人/km²',
-      'B町 = 21000 ÷ 60 = 350人/km²',
+      'A町の面積は45km²、人口は13500人',
+      'A町の人口密度 = 13500 ÷ 45 = 300人/km²',
+      'B町の面積は60km²、人口は21000人',
+      'B町の人口密度 = 21000 ÷ 60 = 350人/km²',
+      '300人/km²と350人/km²を比べる',
       '300 < 350なので、B町の方が人口密度が高い',
     ],
   },
@@ -388,7 +438,12 @@ export const figuresGradeE5Sansu: Record<string, Figure> = {
       { label: '売値', value: 1500 },
     ],
     caption: '値引き額500円 ÷ 定価2000円 = 25%',
-    steps: ['値引き額 = 2000 − 1500 = 500円', '500 ÷ 2000 = 0.25 = 25%'],
+    steps: [
+      '定価2000円と売値1500円を確認する',
+      '値引き額 = 2000 − 1500 = 500円',
+      '値引き額が定価の何割か求める：500 ÷ 2000 = 0.25',
+      '0.25を百分率に直すと25%',
+    ],
   },
 
   grade_e5_sansu_45: {
@@ -417,7 +472,12 @@ export const figuresGradeE5Sansu: Record<string, Figure> = {
     radiusLabel: '10cm（直径20cm）',
     showCenter: true,
     caption: '面積 = 10×10×3.14 = 314cm²',
-    steps: ['直径20cmなので半径 = 20÷2 = 10cm', '面積 = 10×10×3.14 = 314cm²'],
+    steps: [
+      '直径は20cm',
+      '半径 = 直径 ÷ 2 = 20 ÷ 2 = 10cm',
+      '面積の公式「面積=半径×半径×円周率」にあてはめる',
+      '面積 = 10×10×3.14 = 314cm²',
+    ],
   },
 
   grade_e5_sansu_48: {
@@ -434,7 +494,12 @@ export const figuresGradeE5Sansu: Record<string, Figure> = {
     ],
     equalAngles: [[0, 1, 2, 3, 4, 5, 6, 7]],
     caption: '正八角形の1つの内角 = 135度',
-    steps: ['内角の和 = (8−2)×180 = 1080度', '1つの内角 = 1080 ÷ 8 = 135度'],
+    steps: [
+      '八角形の内角の和の公式「(角の数−2)×180」を使う',
+      '内角の和 = (8−2)×180 = 1080度',
+      '正八角形は8つの角がすべて等しい',
+      '1つの内角 = 1080 ÷ 8 = 135度',
+    ],
   },
 
   // ============================================================
@@ -452,7 +517,9 @@ export const figuresGradeE5Sansu: Record<string, Figure> = {
     labels: { radius: '4cm', height: '10cm' },
     caption: '側面の展開図（長方形）の横の長さ = 底面の円周',
     steps: [
-      '底面の円周 = (4×2) × 3.14 = 25.12cm',
+      '底面の半径は4cmなので、直径は 4×2 = 8cm',
+      '円周 = 直径 × 円周率という公式を使う',
+      '底面の円周 = 8 × 3.14 = 25.12cm',
       'これが展開図の側面（長方形）の横の長さになる',
     ],
   },
