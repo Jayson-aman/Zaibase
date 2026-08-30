@@ -138,7 +138,7 @@ const STAGES: Stage[] = [
     emoji: '⚡',
     desc: '入試頻出の発展問題・思考力問題',
     color: D.orange,
-    tier: 'pro',
+    tier: 'free',
     difficultyLabel: '応用',
   },
   {
