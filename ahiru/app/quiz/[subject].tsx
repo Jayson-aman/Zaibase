@@ -175,7 +175,10 @@ export default function QuizScreen() {
 
   const baseQuestions = useMemo(() => {
     if (questionsLoading) return [];
-    if (isDaily) return getDailyQuestions(subjectPool, subjectKey, 30, course, examType);
+    // 日替わり30問・模擬試験・過去入試問題はMAXプラン限定の機能（school/[course].tsxのSTAGESで
+    // tier: 'max'として案内している）。一覧画面のタップ時だけでなく、このクイズ画面自体でも
+    // 判定しないと、URLを直接開かれた場合にMAX限定コンテンツが誰でも見られてしまう。
+    if (isDaily) return isMax ? getDailyQuestions(subjectPool, subjectKey, 30, course, examType) : [];
     const all = subjectPool;
     // 単元別モード：コースを問わず、その単元に該当する問題だけを出題
     if (topicParam) {
@@ -197,7 +200,8 @@ export default function QuizScreen() {
       return buildTestSet(pool, tm, restartKey + 1, difficultyFilter as LevelKey | undefined);
     }
     if (isMock) {
-      // 模擬試験: 入試形式（学校別大問）を除いた一般問題のみ使用
+      // 模擬試験（MAXプラン限定）: 入試形式（学校別大問）を除いた一般問題のみ使用
+      if (!isMax) return [];
       const generalKey = examType === 'koko' ? 'koko-general' : 'general';
       const pool = all.filter((q) => {
         if ((q.examType ?? 'chugaku') !== examType) return false;
@@ -206,10 +210,11 @@ export default function QuizScreen() {
       return shuffle(pool).slice(0, 30);
     }
     if (isKakomon) {
-      // 入試試験: 学校別問題のみ（大問形式）。学校ごとに同じ順番にならないようシャッフル。
+      // 過去入試問題（MAXプラン限定）: 学校別問題のみ（大問形式）。学校ごとに同じ順番にならないようシャッフル。
+      if (!isMax) return [];
       const schoolQ = all.filter((q) => q.course === course && (q.examType ?? 'chugaku') === examType);
       if (schoolQ.length > 0) return shuffle(schoolQ);
-      return shuffle(filterQuestions(all, examType, course, 'advanced', true));
+      return shuffle(filterQuestions(all, examType, course, 'advanced', isMax));
     }
     const filtered = filterQuestions(all, examType, course, difficultyFilter, isPro || isMax, gradeFilter);
     return shuffle(filtered);
@@ -446,7 +451,16 @@ export default function QuizScreen() {
           </View>
         </View>
         <View style={styles.emptyWrap}>
-          <Text style={styles.emptyText}>この難易度の問題はありません</Text>
+          {(isDaily || isMock || isKakomon) && !isMax && !subLoading ? (
+            <>
+              <Text style={styles.emptyText}>🔒 MAXプラン限定のコンテンツです</Text>
+              <TouchableOpacity style={styles.backButton} onPress={() => router.push('/paywall' as any)}>
+                <Text style={styles.backButtonText}>👑 MAXプランを見る</Text>
+              </TouchableOpacity>
+            </>
+          ) : (
+            <Text style={styles.emptyText}>この難易度の問題はありません</Text>
+          )}
           <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
             <Text style={styles.backButtonText}>← 戻る</Text>
           </TouchableOpacity>
