@@ -228,6 +228,26 @@ import { gradeJ1SansuQuestions } from './grade_j1_sansu';
 import { gradeE6SansuQuestions } from './grade_e6_sansu';
 import { gradeJ2SansuQuestions } from './grade_j2_sansu';
 import { gradeJ3SansuQuestions } from './grade_j3_sansu';
+import { gradeE4KokugoQuestions } from './grade_e4_kokugo';
+import { gradeE4EigoQuestions } from './grade_e4_eigo';
+import { gradeE4RikaQuestions } from './grade_e4_rika';
+import { gradeE4ShakaiQuestions } from './grade_e4_shakai';
+import { gradeE5EigoQuestions } from './grade_e5_eigo';
+import { gradeE5KokugoQuestions } from './grade_e5_kokugo';
+import { gradeE5ShakaiQuestions } from './grade_e5_shakai';
+import { gradeE6KokugoQuestions } from './grade_e6_kokugo';
+import { gradeE6ShakaiQuestions } from './grade_e6_shakai';
+import { gradeJ1ShakaiQuestions } from './grade_j1_shakai';
+import { gradeJ3ShakaiQuestions } from './grade_j3_shakai';
+import { gradeE5RikaQuestions } from './grade_e5_rika';
+import { gradeE6RikaQuestions } from './grade_e6_rika';
+import { gradeJ1RikaQuestions } from './grade_j1_rika';
+import { gradeJ2RikaQuestions } from './grade_j2_rika';
+import { gradeJ1KokugoQuestions } from './grade_j1_kokugo';
+import { gradeJ2ShakaiQuestions } from './grade_j2_shakai';
+import { gradeJ3RikaQuestions } from './grade_j3_rika';
+import { gradeJ2KokugoQuestions } from './grade_j2_kokugo';
+import { gradeJ3KokugoQuestions } from './grade_j3_kokugo';
 
 export const questions: Question[] = [
   // ============================================================
@@ -3467,6 +3487,26 @@ export const questions: Question[] = [
   ...gradeE6SansuQuestions,
   ...gradeJ2SansuQuestions,
   ...gradeJ3SansuQuestions,
+  ...gradeE4KokugoQuestions,
+  ...gradeE4EigoQuestions,
+  ...gradeE4RikaQuestions,
+  ...gradeE4ShakaiQuestions,
+  ...gradeE5EigoQuestions,
+  ...gradeE5KokugoQuestions,
+  ...gradeE5ShakaiQuestions,
+  ...gradeE6KokugoQuestions,
+  ...gradeE6ShakaiQuestions,
+  ...gradeJ1ShakaiQuestions,
+  ...gradeJ3ShakaiQuestions,
+  ...gradeE5RikaQuestions,
+  ...gradeE6RikaQuestions,
+  ...gradeJ1RikaQuestions,
+  ...gradeJ2RikaQuestions,
+  ...gradeJ1KokugoQuestions,
+  ...gradeJ2ShakaiQuestions,
+  ...gradeJ3RikaQuestions,
+  ...gradeJ2KokugoQuestions,
+  ...gradeJ3KokugoQuestions,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {

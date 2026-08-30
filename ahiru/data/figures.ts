@@ -301,6 +301,12 @@ import { figuresGradeJ1Sansu } from './figures-grade-j1-sansu';
 import { figuresGradeE6Sansu } from './figures-grade-e6-sansu';
 import { figuresGradeJ2Sansu } from './figures-grade-j2-sansu';
 import { figuresGradeJ3Sansu } from './figures-grade-j3-sansu';
+import { figuresGradeE4Rika } from './figures-grade-e4-rika';
+import { figuresGradeE5Rika } from './figures-grade-e5-rika';
+import { figuresGradeE6Rika } from './figures-grade-e6-rika';
+import { figuresGradeJ1Rika } from './figures-grade-j1-rika';
+import { figuresGradeJ2Rika } from './figures-grade-j2-rika';
+import { figuresGradeJ3Rika } from './figures-grade-j3-rika';
 
 export const figures: Record<string, Figure> = {
   // 「解く順番の図解」の動作見本。長方形の面積・周の長さ・対角線を
@@ -370,6 +376,12 @@ export const figures: Record<string, Figure> = {
   ...figuresGradeE6Sansu,
   ...figuresGradeJ2Sansu,
   ...figuresGradeJ3Sansu,
+  ...figuresGradeE4Rika,
+  ...figuresGradeE5Rika,
+  ...figuresGradeE6Rika,
+  ...figuresGradeJ1Rika,
+  ...figuresGradeJ2Rika,
+  ...figuresGradeJ3Rika,
 };
 
 export function getFigure(questionId: string): Figure | null {
