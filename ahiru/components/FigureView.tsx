@@ -1215,11 +1215,9 @@ const CIRCLED_NUMBERS = ['①', '②', '③', '④', '⑤', '⑥', '⑦', '⑧',
 // 解く手順（figure.steps）を、①②③…の番号付きで一覧表示する。
 // animated中は再生の進み具合に合わせて、まだ来ていない手順は薄く、
 // 今の手順を強調表示することで「今どこをやっているか」が分かるようにする。
-function StepsList({ steps, animated, progress }: { steps: string[]; animated: boolean; progress: number }) {
+function StepsList({ steps, animated, stepReached }: { steps: string[]; animated: boolean; stepReached: number }) {
   const total = steps.length;
-  const reachedCount = animated
-    ? Math.max(0, Math.min(total, Math.ceil(progress * total)))
-    : total;
+  const reachedCount = animated ? Math.max(0, Math.min(total, stepReached)) : total;
   return (
     <View style={styles.stepsBox}>
       {steps.map((step, i) => {
@@ -1251,27 +1249,45 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
   const uid = rawId.replace(/[^a-zA-Z0-9]/g, '');
   const parts = useMemo(() => buildParts(figure, uid), [figure, uid]);
 
+  const totalSteps = figure.steps?.length ?? 0;
   const [progress, setProgress] = useState(animated ? 0 : 1);
+  const [stepReached, setStepReached] = useState(animated ? 0 : totalSteps);
   const rafRef = useRef<number | null>(null);
+  const stepTimersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+
+  // 図形自体はすぐに描き上がるが、①②③…の解く手順は
+  // スライドショーのように一定間隔でゆっくり切り替える（読む時間を確保する）。
+  const DRAW_DUR = 1400;
+  const STEP_INTERVAL = 2200;
 
   const play = useCallback(() => {
     if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
-    const DUR = 1700;
+    stepTimersRef.current.forEach(clearTimeout);
+    stepTimersRef.current = [];
+
     let startTs: number | null = null;
     const tick = (ts: number) => {
       if (startTs == null) startTs = ts;
-      const t = Math.min(1, (ts - startTs) / DUR);
+      const t = Math.min(1, (ts - startTs) / DRAW_DUR);
       setProgress(easeOut(t));
       if (t < 1) rafRef.current = requestAnimationFrame(tick);
     };
     setProgress(0);
     rafRef.current = requestAnimationFrame(tick);
-  }, []);
+
+    setStepReached(0);
+    const steps = figure.steps ?? [];
+    for (let i = 1; i <= steps.length; i++) {
+      const delay = DRAW_DUR * 0.6 + i * STEP_INTERVAL;
+      stepTimersRef.current.push(setTimeout(() => setStepReached(i), delay));
+    }
+  }, [figure.steps]);
 
   useEffect(() => {
     if (animated) play();
     return () => {
       if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
+      stepTimersRef.current.forEach(clearTimeout);
     };
   }, [animated, play]);
 
@@ -1287,7 +1303,7 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
         </TouchableOpacity>
         {animated && <Text style={styles.replayHint}>▶ タップで再生</Text>}
         {figure.steps != null && figure.steps.length > 0 && (
-          <StepsList steps={figure.steps} animated={animated} progress={progress} />
+          <StepsList steps={figure.steps} animated={animated} stepReached={stepReached} />
         )}
         {figure.caption != null && <Text style={styles.caption}>{figure.caption}</Text>}
       </View>
@@ -1322,7 +1338,7 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
       )}
       {animated && <Text style={styles.replayHint}>▶ タップで再生（動く解説）</Text>}
       {figure.steps != null && figure.steps.length > 0 && (
-        <StepsList steps={figure.steps} animated={animated} progress={progress} />
+        <StepsList steps={figure.steps} animated={animated} stepReached={stepReached} />
       )}
       {figure.caption != null && <Text style={styles.caption}>{figure.caption}</Text>}
     </View>
