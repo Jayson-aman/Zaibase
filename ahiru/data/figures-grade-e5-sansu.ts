@@ -136,6 +136,7 @@ export const figuresGradeE5Sansu: Record<string, Figure> = {
       '共通の辺なので AC = AC',
       '3組の辺（AB・AD、BC・DC、AC・AC）がすべて等しい',
       'よって、三角形ABCと三角形ACDは合同',
+      '合同条件は「3組の辺がそれぞれ等しい」',
     ],
   },
 
