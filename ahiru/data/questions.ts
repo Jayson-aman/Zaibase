@@ -248,6 +248,10 @@ import { gradeJ2ShakaiQuestions } from './grade_j2_shakai';
 import { gradeJ3RikaQuestions } from './grade_j3_rika';
 import { gradeJ2KokugoQuestions } from './grade_j2_kokugo';
 import { gradeJ3KokugoQuestions } from './grade_j3_kokugo';
+import { gradeJ1EigoQuestions } from './grade_j1_eigo';
+import { gradeJ2EigoQuestions } from './grade_j2_eigo';
+import { gradeE6EigoQuestions } from './grade_e6_eigo';
+import { gradeJ3EigoQuestions } from './grade_j3_eigo';
 
 export const questions: Question[] = [
   // ============================================================
@@ -3507,6 +3511,10 @@ export const questions: Question[] = [
   ...gradeJ3RikaQuestions,
   ...gradeJ2KokugoQuestions,
   ...gradeJ3KokugoQuestions,
+  ...gradeJ1EigoQuestions,
+  ...gradeJ2EigoQuestions,
+  ...gradeE6EigoQuestions,
+  ...gradeJ3EigoQuestions,
 ];
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {
