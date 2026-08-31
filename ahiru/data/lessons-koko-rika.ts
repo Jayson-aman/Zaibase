@@ -12,6 +12,8 @@ import { kokoRikaExt10Lessons } from './lessons-koko-rika-ext10';
 import { kokoRikaExt11Lessons } from './lessons-koko-rika-ext11';
 import { kokoRikaExt12Lessons } from './lessons-koko-rika-ext12';
 import { lessonsNew20J1Rika } from './lessons-new20-j1-rika';
+import { lessonsNew20J2Rika } from './lessons-new20-j2-rika';
+import { lessonsNew20J3Rika } from './lessons-new20-j3-rika';
 
 // 既存の総論レッスン（order 201〜222）。450セッションの拡張ユニットは
 // lessons-koko-rika-ext01〜ext12（order 501〜950）にあり、下でまとめて結合する。
@@ -4077,4 +4079,6 @@ export const kokoRikaLessons: Lesson[] = [
   ...kokoRikaExt11Lessons,
   ...kokoRikaExt12Lessons,
   ...lessonsNew20J1Rika,
+  ...lessonsNew20J2Rika,
+  ...lessonsNew20J3Rika,
 ];
