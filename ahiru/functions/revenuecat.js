@@ -91,6 +91,57 @@ async function fetchEntitlements(uid) {
 }
 
 /**
+ * 消費型（Consumable）商品の購入回数を取得する。
+ *
+ * なぜ必要か:
+ *   公式集・新規追加単元の¥50/¥100買い切りロックは、商品IDが1つ
+ *   （どの公式・どの単元でも同じproduct_id）で、購入するたびに複数回
+ *   買えるコンビニ的な"回数券"モデル。RevenueCatのentitlementsは
+ *   サブスク向けの概念で、消費型の購入回数はsubscriber.non_subscriptionsに
+ *   商品IDごとの購入履歴配列として入っている。
+ *
+ * @returns {Promise<number | null>}
+ *   購入回数（sandbox購入は本番の課金判定に使わないため除外）。
+ *   null = 判定不能（キー未設定・API障害など）。呼び出し元はフォールバックを使う。
+ */
+async function fetchNonSubscriptionPurchaseCount(uid, productId) {
+  if (!uid || !productId) return null;
+
+  let key = "";
+  try {
+    key = REVENUECAT_SECRET_KEY.value();
+  } catch {
+    console.error("revenuecat: REVENUECAT_SECRET_KEY が読み出せません（未設定の可能性）");
+    return null;
+  }
+  if (!key) {
+    console.error("revenuecat: REVENUECAT_SECRET_KEY が空です。購入判定ができません");
+    return null;
+  }
+
+  let json;
+  try {
+    const res = await fetch(
+      `https://api.revenuecat.com/v1/subscribers/${encodeURIComponent(uid)}`,
+      { headers: { Authorization: `Bearer ${key}`, Accept: "application/json" } }
+    );
+    if (res.status === 404) return 0;
+    if (!res.ok) {
+      console.error(`revenuecat: API が ${res.status} を返しました。購入判定ができません`);
+      return null;
+    }
+    json = await res.json();
+  } catch (err) {
+    console.error("revenuecat: API 呼び出しに失敗しました", err);
+    return null;
+  }
+
+  const purchases = json?.subscriber?.non_subscriptions?.[productId] ?? [];
+  if (!Array.isArray(purchases)) return 0;
+  return purchases.filter((p) => !p?.is_sandbox).length;
+}
+
+/**
  * 英語系コンテンツ（英単語Pro相当）が使えるか。
  * Max は全部入りなので当然含む。pro だけの人は対象外。
  */
@@ -124,6 +175,7 @@ async function fetchTierFromRevenueCat(uid) {
 module.exports = {
   REVENUECAT_SECRET_KEY,
   fetchEntitlements,
+  fetchNonSubscriptionPurchaseCount,
   hasVocabAccess,
   hasMaxAccess,
   fetchTierFromRevenueCat,

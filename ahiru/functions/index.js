@@ -29,3 +29,7 @@ exports.chatEnglishConversation = aiConversation.chatEnglishConversation;
 // ── 全国ランキング（順位計算はサーバー側。全ユーザーの一覧を公開しないため） ──
 const ranking = require("./ranking");
 exports.getMyRanking = ranking.getMyRanking;
+
+// ── 公式集(¥50)・新規追加単元(¥100)の買い切り解放（RevenueCatの購入実績をサーバー側で検証） ──
+const contentUnlock = require("./contentUnlock");
+exports.unlockContent = contentUnlock.unlockContent;

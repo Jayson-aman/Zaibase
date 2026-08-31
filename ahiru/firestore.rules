@@ -60,28 +60,20 @@ service cloud.firestore {
     }
 
     // ── 公式集（学年別の無料5個超）を¥50買い切りで解放した記録 ──
-    // RevenueCatが購入を確認したあとにクライアントから書き込む。本人分のみ
-    // 読み書き可能。決済の真正性はサーバー側で検証していない（他の課金外
-    // 機能と同水準の信頼モデル）ため、悪意あるクライアントが直接書き込めば
-    // 理論上は無料解放できてしまう点は既知の制約。
+    // 書き込みはCloud Function（unlockContent）専用。クライアントはRevenueCatの
+    // 購入実績と突き合わせた上で解放されるここのデータを読むだけで、直接
+    // 書き込むことはできない（Firestoreルールでは購入の真正性を検証できないため、
+    // 検証済みのサーバー側だけに書き込みを限定している）。
     match /formulaUnlocks/{uid} {
       allow read: if request.auth != null && request.auth.uid == uid;
-      allow create, update: if request.auth != null
-        && request.auth.uid == uid
-        && request.resource.data.uid == uid
-        && request.resource.data.unlocked is list;
-      allow delete: if false;
+      allow write: if false;
     }
 
     // ── 新規追加単元（学年×科目ごと20個、無料5個超）を¥100買い切りで解放した記録 ──
-    // formulaUnlocksと同じ設計・同じ信頼モデル。
+    // formulaUnlocksと同じ設計：書き込みはCloud Function（unlockContent）専用。
     match /unitUnlocks/{uid} {
       allow read: if request.auth != null && request.auth.uid == uid;
-      allow create, update: if request.auth != null
-        && request.auth.uid == uid
-        && request.resource.data.uid == uid
-        && request.resource.data.unlocked is list;
-      allow delete: if false;
+      allow write: if false;
     }
 
     // 上記以外は全て拒否（明示）

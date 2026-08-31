@@ -1,4 +1,4 @@
-import { getAuthUid, getFirestoreDb, isFirebaseConfigured } from './firebaseClient';
+import { getAuthUid, getFirestoreDb, isFirebaseConfigured, callFirebaseFunction } from './firebaseClient';
 
 const COLLECTION = 'formulaUnlocks';
 
@@ -22,18 +22,14 @@ export async function getUnlockedFormulaIds(): Promise<Set<string>> {
 }
 
 /**
- * 購入成功（RevenueCatが決済を確認した）後に呼び、その公式を恒久的に解放済みとして記録する。
- * 書き込みに失敗した場合は呼び出し元で再試行できるよう例外を投げる。
+ * 購入成功（RevenueCatが決済を確認した）後に呼ぶ。クライアントから直接Firestoreへ
+ * 書き込むのではなく、Cloud Function（unlockContent）にRevenueCatの購入実績との
+ * 突き合わせを行わせてから解放してもらう。購入が確認できない場合は例外を投げる。
  */
 export async function markFormulaUnlocked(figureId: string): Promise<void> {
   if (!isFirebaseConfigured()) return;
-  const uid = await getAuthUid();
-  if (!uid) throw new Error('ログインが確認できませんでした');
-  const db = await getFirestoreDb();
-  const { doc, setDoc, arrayUnion, serverTimestamp } = await import('firebase/firestore');
-  await setDoc(
-    doc(db, COLLECTION, uid),
-    { uid, unlocked: arrayUnion(figureId), updatedAt: serverTimestamp() },
-    { merge: true }
-  );
+  await callFirebaseFunction<{ type: 'formula'; itemId: string }, { ok: true }>('unlockContent', {
+    type: 'formula',
+    itemId: figureId,
+  });
 }
