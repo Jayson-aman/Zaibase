@@ -90,3 +90,22 @@ export function isKoushikiFormulaFree(figureId: string): boolean {
 export function getAllKoushikiFormulas(): KoushikiFormulaInfo[] {
   return FORMULA_LIST;
 }
+
+// 例題データ生成時のスラッグ表記ゆれ（1件のみ確認済み）。
+// 例題id: koushiki_c4tairyoku2_ensui_tenkai_* / Lesson側figureId: lf_koushiki_c4tairyoku2_ensui_soku_tenkai
+const QUESTION_SLUG_ALIASES: Record<string, string> = {
+  koushiki_c4tairyoku2_ensui_tenkai: 'koushiki_c4tairyoku2_ensui_soku_tenkai',
+};
+
+/**
+ * 公式集の例題Question（id: koushiki_<cluster>_<slug>_ex1/ex2/oyo1/oyo2）から、
+ * 対応するLessonSectionのfigureId（lf_koushiki_<cluster>_<slug>）を逆算する。
+ * 公式集の例題でなければnullを返す。
+ */
+export function getKoushikiFormulaIdForQuestion(questionId: string): string | null {
+  if (!questionId.startsWith('koushiki_')) return null;
+  const base = questionId.replace(/_(ex1|ex2|oyo1|oyo2)$/, '');
+  if (base === questionId) return null;
+  const resolved = QUESTION_SLUG_ALIASES[base] ?? base;
+  return `lf_${resolved}`;
+}

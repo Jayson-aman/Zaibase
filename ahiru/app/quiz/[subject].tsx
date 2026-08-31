@@ -15,6 +15,8 @@ import type { CourseKey, ExamType } from '../../data/courses';
 import { getTopic, questionMatchesTopic } from '../../data/topics';
 import { getTestMode, buildTestSet, type TestModeKey, type LevelKey } from '../../data/test-modes';
 import { GRADE_ORDER, type GradeKey } from '../../data/grades';
+import { getKoushikiFormulaIdForQuestion, isKoushikiFormulaFree } from '../../data/koushiki-access';
+import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
 import { explanationsSansu } from '../../data/explanations_sansu';
 import { explanationsKokugo } from '../../data/explanations_kokugo';
 import { explanationsRika } from '../../data/explanations_rika';
@@ -170,17 +172,29 @@ export default function QuizScreen() {
   const isMax = subIsMax || betaAccess;
 
   const { questions: subjectPool, loading: questionsLoading } = useSubjectQuestions(subjectKey);
+  const { unlockedIds: unlockedFormulaIds } = useFormulaUnlocks();
 
   // 「もう一度チャレンジ」で毎回シャッフルし直すためのキー
   const [restartKey, setRestartKey] = useState(0);
 
   const baseQuestions = useMemo(() => {
     if (questionsLoading) return [];
+    // 公式集の例題（koushiki_*_ex1/ex2/oyo1/oyo2）は、対応する公式がLesson側で
+    // ロック（¥50買い切り）対象の場合、クイズにも出さない。ここで除外しておけば、
+    // 以降のどの出題モードにも波及する（maxOnlyの絞り込みと同じ考え方）。
+    const koushikiAllowed = (q: Question) => {
+      const figureId = getKoushikiFormulaIdForQuestion(q.id);
+      if (figureId == null) return true;
+      if (isPro || isMax) return true;
+      if (isKoushikiFormulaFree(figureId)) return true;
+      return unlockedFormulaIds.has(figureId);
+    };
+    const subjectPoolAllowed = subjectPool.filter(koushikiAllowed);
     // 日替わり30問・模擬試験・過去入試問題はMAXプラン限定の機能（school/[course].tsxのSTAGESで
     // tier: 'max'として案内している）。一覧画面のタップ時だけでなく、このクイズ画面自体でも
     // 判定しないと、URLを直接開かれた場合にMAX限定コンテンツが誰でも見られてしまう。
-    if (isDaily) return isMax ? getDailyQuestions(subjectPool, subjectKey, 30, course, examType) : [];
-    const all = subjectPool;
+    if (isDaily) return isMax ? getDailyQuestions(subjectPoolAllowed, subjectKey, 30, course, examType) : [];
+    const all = subjectPoolAllowed;
     // 単元別モード：コースを問わず、その単元に該当する問題だけを出題
     if (topicParam) {
       const topic = getTopic(subjectKey, topicParam);
@@ -219,7 +233,7 @@ export default function QuizScreen() {
     }
     const filtered = filterQuestions(all, examType, course, difficultyFilter, isPro || isMax, gradeFilter);
     return shuffle(filtered);
-  }, [subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, testModeKey, course, examType, isPro, isMax, topicParam, restartKey, gradeFilter]);
+  }, [subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, testModeKey, course, examType, isPro, isMax, topicParam, restartKey, gradeFilter, unlockedFormulaIds]);
 
   // 無料/Pro/MAXユーザーがMAX限定モードにどれだけ到達しているかを集計できるよう記録する。
   // baseQuestions（useMemo）はレンダー中に副作用を起こしたくないため、別のeffectで発火する。
