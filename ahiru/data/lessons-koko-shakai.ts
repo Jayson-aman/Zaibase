@@ -11,6 +11,7 @@ import { kokoShakaiExt09Lessons } from './lessons-koko-shakai-ext09';
 import { kokoShakaiExt10Lessons } from './lessons-koko-shakai-ext10';
 import { kokoShakaiExt11Lessons } from './lessons-koko-shakai-ext11';
 import { kokoShakaiExt12Lessons } from './lessons-koko-shakai-ext12';
+import { lessonsNew20J1Shakai } from './lessons-new20-j1-shakai';
 
 // 既存の総論レッスン（order 101〜122）。450セッションの拡張ユニットは
 // lessons-koko-shakai-ext01〜ext12（order 501〜950）にあり、下でまとめて結合する。
@@ -4986,4 +4987,5 @@ export const kokoShakaiLessons: Lesson[] = [
   ...kokoShakaiExt10Lessons,
   ...kokoShakaiExt11Lessons,
   ...kokoShakaiExt12Lessons,
+  ...lessonsNew20J1Shakai,
 ];
