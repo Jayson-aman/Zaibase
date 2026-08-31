@@ -1,0 +1,165 @@
+import type { Figure } from './figures';
+
+export const figuresKoushikiOyoK5En2: Record<string, Figure> = {
+  koushiki_k5en2_naisetsu_oyo1: {
+    kind: 'circle',
+    points: [
+      { angle: 100, label: 'A' },
+      { angle: 190, label: 'B' },
+      { angle: 280, label: 'C' },
+      { angle: 10, label: 'D' },
+    ],
+    chords: [
+      [0, 1],
+      [1, 2],
+      [2, 3],
+      [3, 0],
+      [0, 2],
+      [1, 3],
+    ],
+    caption: '円に内接する四角形ABCD。対角線ACとBDの交点をPとする(∠CAD=24°、∠ABD=46°、∠BCD=98°)',
+    steps: [
+      '円に内接する四角形ABCDにおいて、対角線ACとBDの交点をPとする',
+      '円に内接する四角形の性質より、∠BAD+∠BCD=180°',
+      '∠BCD=98°を代入する：∠BAD+98°=180°',
+      '計算する：∠BAD=82°',
+      '対角線ACが∠BADを∠BACと∠CADの2つに分けることを確認し、∠BAC=∠BAD-∠CAD=82°-24°を計算する',
+      '∠BAC=58°を求める',
+      '△ABPに着目し、∠BAP=∠BAC=58°、∠ABP=∠ABD=46°であることを確認する',
+      '三角形の内角の和より∠APB=180°-58°-46°=76°を求める',
+    ],
+  },
+
+  koushiki_k5en2_naisetsu_oyo2: {
+    kind: 'circle',
+    points: [
+      { angle: 100, label: 'A' },
+      { angle: 190, label: 'B' },
+      { angle: 280, label: 'C' },
+      { angle: 10, label: 'D' },
+    ],
+    chords: [
+      [0, 1],
+      [1, 2],
+      [2, 3],
+      [3, 0],
+      [0, 2],
+      [1, 3],
+    ],
+    caption: '四角形ABCD。対角線ACとBDの交点P。∠CAD=∠CBD=40°、AB=BP、∠BCD=95°',
+    steps: [
+      '四角形ABCDにおいて、∠CAD(対角線ACと辺ADがつくる角)と∠CBD(対角線BDと辺BCがつくる角)が、ともに線分CDを同じ側(A、Bがある側)から見る角であることを確認する',
+      '∠CAD=∠CBD=40°であることを確認する',
+      '円周角の定理の逆(1つの線分を同じ側から等しい角度で見る点は同一円周上にある)より、4点A、B、C、Dが1つの円周上にあることを結論づける',
+      '四角形ABCDが円に内接することから、対角の和∠BAD+∠BCD=180°を確認する',
+      '∠BCD=95°を代入する：∠BAD+95°=180°',
+      '計算する：∠BAD=85°',
+      '対角線ACが∠BADを∠BACと∠CADに分けることを用いて∠BAC=∠BAD-∠CAD=85°-40°=45°を求める',
+      '対角線ACとBDの交点Pにおいて、△ABPがAB=BPの二等辺三角形であることから底角∠BAP=∠BPA=45°であることを確認する',
+      '三角形の内角の和より∠ABP=180°-45°-45°=90°を求め、∠ABD=∠ABPより∠ABD=90°であることを結論づける',
+    ],
+  },
+
+  koushiki_k5en2_sessen_oyo1: {
+    kind: 'circle',
+    points: [
+      { angle: 0, label: 'A' },
+      { angle: 90, label: 'B' },
+      { angle: 180, label: 'C' },
+      { angle: 260, label: 'D' },
+    ],
+    chords: [
+      [0, 1],
+      [1, 2],
+      [2, 3],
+      [3, 0],
+      [1, 3],
+    ],
+    sector: { from: 0, to: 90, label: '劣弧AB(接線ℓと弦ABがつくる角にふくまれる弧)' },
+    caption: '接線ℓ(点Aで接する)と弦ABがつくる角(劣弧ABをふくむ)=48°。円に内接する四角形ABCD(∠BCD=125°)。対角線BD',
+    steps: [
+      '点Aにおける接線ℓと弦ABがつくる角のうち、劣弧AB(色をつけた弧)をふくむ角が48°であることを確認する',
+      '点Dは優弧AB上にあるので、接弦定理よりこの48°は∠ADBに等しいことを求める：∠ADB=48°',
+      '四角形ABCDが円に内接していることから、対角の和∠BAD+∠BCD=180°を確認する',
+      '∠BCD=125°を代入する：∠BAD+125°=180°',
+      '計算する：∠BAD=55°',
+      '△ABDに着目し、三角形の内角の和∠ABD+∠ADB+∠BAD=180°を使う式を立てる',
+      '∠ADB=48°、∠BAD=55°を代入する：∠ABD=180°-48°-55°',
+      '計算する：∠ABD=77°',
+    ],
+  },
+
+  koushiki_k5en2_sessen_oyo2: {
+    kind: 'circle',
+    points: [
+      { angle: 90, label: 'T' },
+      { angle: 200, label: 'A' },
+      { angle: 330, label: 'B' },
+    ],
+    chords: [
+      [0, 1],
+      [0, 2],
+      [1, 2],
+    ],
+    caption: '円外の点Pから、接点Tにおける接線PTと、円と2点A、B(PA<PB)で交わる割線を引く(P、A、Bはこの順に一直線上)',
+    steps: [
+      '円外の点Pから、接点Tで円に接する接線PTと、円と2点A、B(PA<PB)で交わる割線を引くことを確認する',
+      '接弦定理を用いて、∠PTA(接線PTと弦TAがつくる角)が弧TA(Bをふくまない側)に対する円周角∠TBAに等しいことを示す：∠PTA=∠TBA=∠PBT',
+      '△PTAと△PBTにおいて、∠TPA(=∠TPB)は共通の角であることを確認する',
+      '2組の角(∠PTA=∠PBT、∠TPA=∠TPB)がそれぞれ等しいことから、△PTA∽△PBTを導く',
+      '相似な図形の対応する辺の比より、PT:PB=PA:PTという比例式を立てる(対応関係P↔P、T↔B、A↔T)',
+      '比例式の内側の項の積=外側の項の積の性質から、PT²=PA×PBを導く',
+      'PT=12cm、PA=8cmを代入する：12²=8×PB',
+      '計算する：144=8×PB、PB=18cm',
+    ],
+  },
+
+  koushiki_k5en2_houbeki_oyo1: {
+    kind: 'circle',
+    showCenter: true,
+    points: [
+      { angle: 180, label: 'A' },
+      { angle: 0, label: 'B' },
+      { angle: 90, label: 'T' },
+    ],
+    chords: [[0, 1]],
+    caption: '直径AB(中心Oを通る)。円外の点Pは直線ABの延長上にあり、OP=25cm、半径7cm。接点Tから引いた接線PT',
+    steps: [
+      '円Oの半径をOA=OB=7cmとし、直線ABが中心Oを通る直径であることを確認する',
+      '円外の点Pは、この直径を延長した直線上にあり、OP=25cmであることを確認する',
+      'PA=OP-OA=25-7=18cm、PB=OP+OB=25+7=32cmであることを求める',
+      '点Pから円Oに引いた接線の接点をTとし、方べきの定理(接線の場合)PT²=PA×PBを確認する',
+      '数値を代入する：PT²=18×32=576',
+      '576=24²であることから、PT=24cm(1)の答えを求める',
+      '接線PTと接点Tにおける半径OTが垂直に交わることから、△OTPが∠OTP=90°の直角三角形であることを確認する',
+      '三平方の定理PT²=OP²-OT²=25²-7²=625-49=576を計算し、PT=24cmと(1)の結果が一致することを確かめる',
+    ],
+  },
+
+  koushiki_k5en2_houbeki_oyo2: {
+    kind: 'circle',
+    points: [
+      { angle: 90, label: 'T' },
+      { angle: 170, label: 'A' },
+      { angle: 230, label: 'B' },
+      { angle: 280, label: 'C' },
+      { angle: 340, label: 'D' },
+    ],
+    chords: [
+      [1, 2],
+      [3, 4],
+    ],
+    caption: '円外の点Pから、接点Tにおける接線PTと、2本の割線PAB・PCDを引く(PT=6cm、PA=xcm、PB=(x+5)cm、PC=3cm)',
+    steps: [
+      '円外の点Pから、接点Tにおける接線PTと、円と2点A、B(PA<PB)で交わる割線を引くことを確認する',
+      'PT=6cm、PA=xcm、PB=(x+5)cmとし、方べきの定理(接線の場合)PT²=PA×PBの式を立てる',
+      '数値を代入して2次方程式を作る：6²=x(x+5)より36=x²+5x、整理してx²+5x-36=0',
+      '積が-36、和が5になる2数9と-4を見つけ、(x+9)(x-4)=0と因数分解する',
+      'x=-9、4が出るが、xは長さなのでx>0を満たすx=4だけを採用し、PA=4cm、PB=9cmと確定する',
+      '検算する：PT²=6²=36、PA×PB=4×9=36で一致する',
+      '同じ点Pから引いた別の割線が円と2点C、D(PC<PD)で交わるとき、方べきの定理よりPC×PDも同じ値PT²=36になることを確認する(どの直線を選んでもPからの距離の積は一定)',
+      'PC=3cmを代入する：3×PD=36',
+      '計算する：PD=12cm',
+    ],
+  },
+};
