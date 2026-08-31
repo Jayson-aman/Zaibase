@@ -207,6 +207,11 @@ export const PRODUCT_ID_PRO = 'com.zaibase.exam.promonthly';
 export const PRODUCT_ID_MAX = 'com.zaibase.exam.maxmonthly';
 export const PRODUCT_ID_VOCAB_MONTHLY = 'com.zaibase.exam.vocabmonthly';
 export const PRODUCT_ID_VOCAB_YEARLY = 'com.zaibase.exam.vocabyearly';
+// ⚠️ 公式集（無料5個超）を1個¥50で買い切り解放する消費型（Consumable）商品。
+// Pro/Maxの月額課金とは別枠。App Store Connect / Google Play Console / RevenueCat の
+// いずれにも「このID・消費型・¥50」で新規登録するまでは fetchFormulaUnlockProduct が
+// 空を返し続け、購入ボタンは「準備中」表示のままになる。
+export const PRODUCT_ID_FORMULA_UNLOCK = 'com.zaibase.exam.formulaunlock';
 
 type WebPackageLike = {
   identifier: string;
@@ -301,6 +306,19 @@ export async function fetchVocabProducts(): Promise<{ monthly: unknown; yearly: 
     };
   } catch {
     return { monthly: null, yearly: null };
+  }
+}
+
+// Web Billing（RevenueCat Web SDK）はサブスク用のオファリングPackageしか
+// 扱えず、消費型のワンタイム商品には現状対応していないため、Web版では常にnullを返す。
+export async function fetchFormulaUnlockProduct(): Promise<unknown> {
+  if (!isRevenueCatConfigured() || isWeb) return null;
+  try {
+    const Purchases = (await import('react-native-purchases')).default;
+    const products = await Purchases.getProducts([PRODUCT_ID_FORMULA_UNLOCK]);
+    return products[0] ?? null;
+  } catch {
+    return null;
   }
 }
 

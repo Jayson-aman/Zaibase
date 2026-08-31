@@ -21,6 +21,8 @@ export const PRICES = {
   // 英単語Pro：英単語4,800+・熟語4,000+・英会話・英検5,160問・ネイティブ発音・AI英会話。
   vocabMonthly: 1680,
   vocabYearly: 13800,
+  // 公式集：学年ごとに無料5個を超えた分を1個ずつ買い切りで解放する消費型課金。
+  formulaUnlock: 50,
 } as const;
 
 /** 3桁区切りの円表記（Hermes でも安全なように手動フォーマット） */
@@ -32,3 +34,5 @@ export const PRO_PRICE_LABEL = `${formatYen(PRICES.proMonthly)}/月`;
 export const MAX_PRICE_LABEL = `${formatYen(PRICES.maxMonthly)}/月`;
 export const VOCAB_MONTHLY_LABEL = `${formatYen(PRICES.vocabMonthly)}/月`;
 export const VOCAB_YEARLY_LABEL = `${formatYen(PRICES.vocabYearly)}/年`;
+/** 買い切り（1回のみ）なので期間表記を付けない */
+export const FORMULA_UNLOCK_PRICE_LABEL = formatYen(PRICES.formulaUnlock);

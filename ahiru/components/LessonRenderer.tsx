@@ -1,12 +1,20 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, ActivityIndicator } from 'react-native';
 import type { LessonSection } from '../data/lesson-types';
 import { getLessonFigure } from '../data/lesson-figures';
+import { getKoushikiFormulaInfo } from '../data/koushiki-access';
 import FigureView from './FigureView';
 
 type Props = {
   sections: LessonSection[];
   isMax: boolean;
+  /** Pro/Max加入者は公式集の買い切りロックを常にバイパスする */
+  bypassFormulaLock?: boolean;
+  unlockedFormulaIds?: Set<string>;
+  formulaUnlockPriceLabel?: string;
+  formulaUnlockProductReady?: boolean;
+  purchasingFigureId?: string | null;
+  onUnlockFormula?: (figureId: string, heading: string) => void;
 };
 
 function renderBody(body: string): React.ReactNode[] {
@@ -58,30 +66,78 @@ function renderBody(body: string): React.ReactNode[] {
   });
 }
 
-export default function LessonRenderer({ sections, isMax }: Props) {
+export default function LessonRenderer({
+  sections,
+  isMax,
+  bypassFormulaLock = false,
+  unlockedFormulaIds,
+  formulaUnlockPriceLabel,
+  formulaUnlockProductReady = false,
+  purchasingFigureId = null,
+  onUnlockFormula,
+}: Props) {
   const visibleSections = isMax ? sections : sections.filter((s) => !s.maxOnly);
 
   return (
     <View>
-      {visibleSections.map((section, idx) => (
-        <View key={idx} style={[styles.section, section.maxOnly && styles.maxSection]}>
-          {section.maxOnly && (
-            <View style={styles.maxBadge}>
-              <Text style={styles.maxBadgeText}>⭐ MAX限定</Text>
+      {visibleSections.map((section, idx) => {
+        const formulaInfo = section.figureId != null ? getKoushikiFormulaInfo(section.figureId) : null;
+        const isLockedFormula =
+          formulaInfo != null &&
+          !formulaInfo.isFree &&
+          !bypassFormulaLock &&
+          !(unlockedFormulaIds?.has(section.figureId as string) ?? false);
+
+        if (isLockedFormula) {
+          const figureId = section.figureId as string;
+          const isPurchasing = purchasingFigureId === figureId;
+          return (
+            <View key={idx} style={styles.lockedSection}>
+              {section.heading && <Text style={styles.heading}>{section.heading}</Text>}
+              <View style={styles.lockCard}>
+                <Text style={styles.lockIcon}>🔒</Text>
+                <Text style={styles.lockText}>
+                  この公式は買い切りで解放できます（{formulaUnlockPriceLabel ?? '¥50'}・1回のみ）
+                </Text>
+                <TouchableOpacity
+                  style={[styles.unlockBtn, (!formulaUnlockProductReady || isPurchasing) && styles.unlockBtnDisabled]}
+                  activeOpacity={0.85}
+                  disabled={!formulaUnlockProductReady || isPurchasing}
+                  onPress={() => onUnlockFormula?.(figureId, section.heading ?? '')}
+                >
+                  {isPurchasing ? (
+                    <ActivityIndicator color="#FFFFFF" />
+                  ) : (
+                    <Text style={styles.unlockBtnText}>
+                      {formulaUnlockProductReady ? `${formulaUnlockPriceLabel ?? '¥50'}で解放する` : '準備中です'}
+                    </Text>
+                  )}
+                </TouchableOpacity>
+              </View>
             </View>
-          )}
-          {section.heading && (
-            <Text style={[styles.heading, section.maxOnly && styles.maxHeading]}>
-              {section.heading}
-            </Text>
-          )}
-          {renderBody(section.body)}
-          {section.figureId != null && (() => {
-            const fig = getLessonFigure(section.figureId);
-            return fig != null ? <FigureView figure={fig} animated /> : null;
-          })()}
-        </View>
-      ))}
+          );
+        }
+
+        return (
+          <View key={idx} style={[styles.section, section.maxOnly && styles.maxSection]}>
+            {section.maxOnly && (
+              <View style={styles.maxBadge}>
+                <Text style={styles.maxBadgeText}>⭐ MAX限定</Text>
+              </View>
+            )}
+            {section.heading && (
+              <Text style={[styles.heading, section.maxOnly && styles.maxHeading]}>
+                {section.heading}
+              </Text>
+            )}
+            {renderBody(section.body)}
+            {section.figureId != null && (() => {
+              const fig = getLessonFigure(section.figureId);
+              return fig != null ? <FigureView figure={fig} animated /> : null;
+            })()}
+          </View>
+        );
+      })}
     </View>
   );
 }
@@ -184,5 +240,44 @@ const styles = StyleSheet.create({
   },
   spacer: {
     height: 8,
+  },
+  lockedSection: {
+    marginBottom: 20,
+  },
+  lockCard: {
+    backgroundColor: '#FAF6EF',
+    borderRadius: 12,
+    padding: 18,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#E8DCC8',
+    borderStyle: 'dashed',
+  },
+  lockIcon: {
+    fontSize: 28,
+    marginBottom: 6,
+  },
+  lockText: {
+    fontSize: 14,
+    color: '#6E645C',
+    textAlign: 'center',
+    marginBottom: 12,
+    lineHeight: 21,
+  },
+  unlockBtn: {
+    backgroundColor: '#B5622E',
+    borderRadius: 8,
+    paddingVertical: 11,
+    paddingHorizontal: 24,
+    minWidth: 160,
+    alignItems: 'center',
+  },
+  unlockBtnDisabled: {
+    backgroundColor: '#C7B9A6',
+  },
+  unlockBtnText: {
+    color: '#FFFFFF',
+    fontSize: 14.5,
+    fontWeight: '800',
   },
 });

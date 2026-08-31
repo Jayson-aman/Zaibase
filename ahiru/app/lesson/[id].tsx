@@ -7,6 +7,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
   ActivityIndicator,
+  Alert,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { getLessonById, isLessonFree } from '../../data/lessons';
@@ -16,6 +17,7 @@ import { getLessonVideo } from '../../data/videos';
 import HomeButton from '../../components/HomeButton';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
+import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
 import { subjectInfo } from '../../data/questions-meta';
 
 export default function LessonDetailScreen() {
@@ -27,8 +29,24 @@ export default function LessonDetailScreen() {
   const { hasAccess: betaAccess } = useBetaAccess();
   const isPro = subIsPro || betaAccess;
   const isMax = subIsMax || betaAccess;
+  const {
+    unlockedIds: unlockedFormulaIds,
+    productReady: formulaUnlockProductReady,
+    priceLabel: formulaUnlockPriceLabel,
+    purchasingFigureId,
+    unlockFormula,
+  } = useFormulaUnlocks();
 
   const lesson = id ? getLessonById(id) : undefined;
+
+  async function handleUnlockFormula(figureId: string, heading: string) {
+    const result = await unlockFormula(figureId);
+    if (!result.ok) {
+      Alert.alert('購入できませんでした', result.message);
+      return;
+    }
+    Alert.alert('解放しました', `「${heading}」はこれ以降ずっと無料で見られます。`);
+  }
 
   if (!lesson) {
     return (
@@ -111,7 +129,16 @@ export default function LessonDetailScreen() {
                 <Text style={styles.introText}>{lesson.intro}</Text>
               </View>
             )}
-            <LessonRenderer sections={lesson.sections} isMax={isMax} />
+            <LessonRenderer
+              sections={lesson.sections}
+              isMax={isMax}
+              bypassFormulaLock={isPro || isMax}
+              unlockedFormulaIds={unlockedFormulaIds}
+              formulaUnlockPriceLabel={formulaUnlockPriceLabel}
+              formulaUnlockProductReady={formulaUnlockProductReady}
+              purchasingFigureId={purchasingFigureId}
+              onUnlockFormula={handleUnlockFormula}
+            />
             {lesson.keyPoints != null && lesson.keyPoints.length > 0 && (
               <View style={styles.keyPointsBox}>
                 <Text style={styles.keyPointsTitle}>📌 覚える要点</Text>
