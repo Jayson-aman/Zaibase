@@ -260,6 +260,7 @@ import { gradeKoushikiC6SojiQuestions } from './grade_koushiki_c6soji';
 import { gradeKoushikiK2HeikouQuestions } from './grade_koushiki_k2heikou';
 import { gradeKoushikiK4En1Questions } from './grade_koushiki_k4en1';
 import { gradeKoushikiK5En2Questions } from './grade_koushiki_k5en2';
+import { gradeKoushikiK1GodoQuestions } from './grade_koushiki_k1godo';
 
 export const questions: Question[] = [
   ...gradeKoushikiC1MensekiQuestions,
@@ -270,6 +271,7 @@ export const questions: Question[] = [
   ...gradeKoushikiK2HeikouQuestions,
   ...gradeKoushikiK4En1Questions,
   ...gradeKoushikiK5En2Questions,
+  ...gradeKoushikiK1GodoQuestions,
   // ============================================================
   // 算数 (sansu) - 50問
   // ============================================================
