@@ -19,6 +19,7 @@ import { lessonsKoushikiC2En } from './lessons-koushiki-c2en';
 import { lessonsKoushikiC3Tairyoku1 } from './lessons-koushiki-c3tairyoku1';
 import { lessonsKoushikiC4Tairyoku2 } from './lessons-koushiki-c4tairyoku2';
 import { lessonsKoushikiC6Soji } from './lessons-koushiki-c6soji';
+import { lessonsKoushikiC5Kakudo } from './lessons-koushiki-c5kakudo';
 
 const sansuOverviewLessons: Lesson[] = [
   {
@@ -7326,4 +7327,5 @@ export const sansuLessons: Lesson[] = [
   ...lessonsKoushikiC3Tairyoku1,
   ...lessonsKoushikiC4Tairyoku2,
   ...lessonsKoushikiC6Soji,
+  ...lessonsKoushikiC5Kakudo,
 ];

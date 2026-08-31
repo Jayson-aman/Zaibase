@@ -133,6 +133,7 @@ import { lessonFigsKoushikiC2En } from './lesson-figs-koushiki-c2en';
 import { lessonFigsKoushikiC3Tairyoku1 } from './lesson-figs-koushiki-c3tairyoku1';
 import { lessonFigsKoushikiC4Tairyoku2 } from './lesson-figs-koushiki-c4tairyoku2';
 import { lessonFigsKoushikiC6Soji } from './lesson-figs-koushiki-c6soji';
+import { lessonFigsKoushikiC5Kakudo } from './lesson-figs-koushiki-c5kakudo';
 import { lessonFigsKoushikiK2Heikou } from './lesson-figs-koushiki-k2heikou';
 import { lessonFigsKoushikiK4En1 } from './lesson-figs-koushiki-k4en1';
 import { lessonFigsKoushikiK5En2 } from './lesson-figs-koushiki-k5en2';
@@ -146,6 +147,7 @@ export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsKoushikiC3Tairyoku1,
   ...lessonFigsKoushikiC4Tairyoku2,
   ...lessonFigsKoushikiC6Soji,
+  ...lessonFigsKoushikiC5Kakudo,
   ...lessonFigsKoushikiK2Heikou,
   ...lessonFigsKoushikiK4En1,
   ...lessonFigsKoushikiK5En2,
