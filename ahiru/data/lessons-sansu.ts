@@ -17,6 +17,7 @@ import { sansuNewGrade10Lessons } from './lessons-sansu-newgrade10';
 import { lessonsKoushikiC1Menseki } from './lessons-koushiki-c1menseki';
 import { lessonsKoushikiC2En } from './lessons-koushiki-c2en';
 import { lessonsKoushikiC3Tairyoku1 } from './lessons-koushiki-c3tairyoku1';
+import { lessonsKoushikiC4Tairyoku2 } from './lessons-koushiki-c4tairyoku2';
 
 const sansuOverviewLessons: Lesson[] = [
   {
@@ -7322,4 +7323,5 @@ export const sansuLessons: Lesson[] = [
   ...lessonsKoushikiC1Menseki,
   ...lessonsKoushikiC2En,
   ...lessonsKoushikiC3Tairyoku1,
+  ...lessonsKoushikiC4Tairyoku2,
 ];
