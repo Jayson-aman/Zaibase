@@ -212,6 +212,10 @@ export const PRODUCT_ID_VOCAB_YEARLY = 'com.zaibase.exam.vocabyearly';
 // いずれにも「このID・消費型・¥50」で新規登録するまでは fetchFormulaUnlockProduct が
 // 空を返し続け、購入ボタンは「準備中」表示のままになる。
 export const PRODUCT_ID_FORMULA_UNLOCK = 'com.zaibase.exam.formulaunlock';
+// ⚠️ 学年×科目ごとに追加した新規単元（無料5個超）を1個¥100で買い切り解放する消費型商品。
+// 上記と同様、App Store Connect / Google Play Console / RevenueCat にこのIDで
+// 新規登録するまでは購入ボタンが「準備中」表示のままになる。
+export const PRODUCT_ID_UNIT_UNLOCK = 'com.zaibase.exam.unitunlock';
 
 type WebPackageLike = {
   identifier: string;
@@ -316,6 +320,17 @@ export async function fetchFormulaUnlockProduct(): Promise<unknown> {
   try {
     const Purchases = (await import('react-native-purchases')).default;
     const products = await Purchases.getProducts([PRODUCT_ID_FORMULA_UNLOCK]);
+    return products[0] ?? null;
+  } catch {
+    return null;
+  }
+}
+
+export async function fetchUnitUnlockProduct(): Promise<unknown> {
+  if (!isRevenueCatConfigured() || isWeb) return null;
+  try {
+    const Purchases = (await import('react-native-purchases')).default;
+    const products = await Purchases.getProducts([PRODUCT_ID_UNIT_UNLOCK]);
     return products[0] ?? null;
   } catch {
     return null;

@@ -73,6 +73,17 @@ service cloud.firestore {
       allow delete: if false;
     }
 
+    // ── 新規追加単元（学年×科目ごと20個、無料5個超）を¥100買い切りで解放した記録 ──
+    // formulaUnlocksと同じ設計・同じ信頼モデル。
+    match /unitUnlocks/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow create, update: if request.auth != null
+        && request.auth.uid == uid
+        && request.resource.data.uid == uid
+        && request.resource.data.unlocked is list;
+      allow delete: if false;
+    }
+
     // 上記以外は全て拒否（明示）
     match /{document=**} {
       allow read, write: if false;
