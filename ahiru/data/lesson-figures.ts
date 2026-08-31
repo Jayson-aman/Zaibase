@@ -166,6 +166,7 @@ import { lessonFigsNew20J2Sansu } from './lesson-figs-new20-j2-sansu';
 import { lessonFigsNew20J2Kokugo } from './lesson-figs-new20-j2-kokugo';
 import { lessonFigsNew20J2Shakai } from './lesson-figs-new20-j2-shakai';
 import { lessonFigsNew20J3Sansu } from './lesson-figs-new20-j3-sansu';
+import { lessonFigsNew20J3Shakai } from './lesson-figs-new20-j3-shakai';
 
 export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsKoushikiC1Menseki,
@@ -206,6 +207,7 @@ export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsNew20J2Kokugo,
   ...lessonFigsNew20J2Shakai,
   ...lessonFigsNew20J3Sansu,
+  ...lessonFigsNew20J3Shakai,
   ...lessonFigsSansu,
   ...lessonFigsRika,
   ...lessonFigsKokoMath,
