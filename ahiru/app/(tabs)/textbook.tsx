@@ -11,11 +11,36 @@ import { useRouter } from 'expo-router';
 import { getLessonsBySubject, FREE_LESSON_LIMIT } from '../../data/lessons';
 import type { ExamType } from '../../data/courses';
 import type { Lesson } from '../../data/lessons';
+import { isNew20Unit, isNew20UnitFree } from '../../data/new20-access';
 import { subjectInfo, type SubjectKey } from '../../data/questions-meta';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
+import { useUnitUnlocks } from '../../hooks/useUnitUnlocks';
 import Paywall from '../../components/Paywall';
 import { useProGate } from '../../hooks/useProGate';
+
+// 公式集（koushiki_で始まるid）は、レッスン単位では常に開ける。個々の公式（セクション）
+// ごとの無料/¥50買い切り判定は詳細画面（LessonRenderer）に一任する。
+function isKoushikiLesson(lessonId: string): boolean {
+  return lessonId.startsWith('koushiki_');
+}
+
+// 一覧画面での🔒表示・タップブロック判定。new20は学年×科目クラスターごとの
+// 先頭5単元だけ無料（購入済みなら常に解放）、koushikiは常に開放、それ以外は
+// 科目内で最初のFREE_LESSON_LIMIT件だけ無料という、旧来のidx基準の判定を使う。
+function isLockedForBrowse(
+  lesson: Lesson,
+  idx: number,
+  isPro: boolean,
+  unlockedUnitIds: Set<string>
+): boolean {
+  if (isPro) return false;
+  if (isNew20Unit(lesson.id)) {
+    return !isNew20UnitFree(lesson.id) && !unlockedUnitIds.has(lesson.id);
+  }
+  if (isKoushikiLesson(lesson.id)) return false;
+  return idx >= FREE_LESSON_LIMIT;
+}
 
 const SUBJECTS: { key: SubjectKey; emoji: string; color: string }[] = [
   { key: 'sansu', emoji: '🔢', color: '#EF4444' },
@@ -37,6 +62,7 @@ export default function TextbookScreen() {
   const { hasAccess: betaAccess } = useBetaAccess();
   const { isPro: subIsPro, loading } = useSubscription();
   const isPro = subIsPro || betaAccess;
+  const { unlockedIds: unlockedUnitIds } = useUnitUnlocks();
 
   const { paywallVisible, setPaywallVisible } = useProGate(betaAccess);
 
@@ -51,7 +77,7 @@ export default function TextbookScreen() {
   }
 
   function handleLessonPress(lesson: Lesson, idx: number) {
-    if (!isPro && idx >= FREE_LESSON_LIMIT) {
+    if (isLockedForBrowse(lesson, idx, isPro, unlockedUnitIds)) {
       setPaywallVisible(true);
       return;
     }
@@ -176,7 +202,7 @@ export default function TextbookScreen() {
         removeClippedSubviews
         ListFooterComponent={<View style={{ height: 40 }} />}
         renderItem={({ item: lesson, index: idx }) => {
-          const locked = !isPro && idx >= FREE_LESSON_LIMIT;
+          const locked = isLockedForBrowse(lesson, idx, isPro, unlockedUnitIds);
           return (
             <TouchableOpacity
               style={styles.lessonCard}

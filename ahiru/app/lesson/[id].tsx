@@ -91,7 +91,13 @@ export default function LessonDetailScreen() {
   const isNew20 = isNew20Unit(lesson.id);
   const new20Free = isNew20 && isNew20UnitFree(lesson.id);
   const new20Unlocked = isNew20 && unlockedUnitIds.has(lesson.id);
-  const contentUnlocked = isPro || (isNew20 ? new20Free || new20Unlocked : freeLesson);
+  // 公式集（koushiki_で始まるid）は、旧来の「科目内で最初の5レッスンだけ無料」判定の
+  // 対象外。このレッスン自体は常に開き、公式（セクション）ごとの無料/¥50買い切り判定は
+  // LessonRenderer側（koushiki-access.ts）に一任する。ここでブロックすると、公式集全体が
+  // 非Pro・非Maxユーザーだけでなく¥50を支払った購入者からも閲覧できなくなってしまう。
+  const isKoushiki = lesson.id.startsWith('koushiki_');
+  const contentUnlocked =
+    isPro || (isNew20 ? new20Free || new20Unlocked : isKoushiki ? true : freeLesson);
 
   return (
     <SafeAreaView style={styles.container}>
