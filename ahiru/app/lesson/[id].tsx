@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { getLessonById, isLessonFree } from '../../data/lessons';
+import { isNew20Unit, isNew20UnitFree } from '../../data/new20-access';
 import LessonRenderer from '../../components/LessonRenderer';
 import VideoPlayer from '../../components/VideoPlayer';
 import { getLessonVideo } from '../../data/videos';
@@ -18,6 +19,7 @@ import HomeButton from '../../components/HomeButton';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
+import { useUnitUnlocks } from '../../hooks/useUnitUnlocks';
 import { subjectInfo } from '../../data/questions-meta';
 
 export default function LessonDetailScreen() {
@@ -36,6 +38,14 @@ export default function LessonDetailScreen() {
     purchasingFigureId,
     unlockFormula,
   } = useFormulaUnlocks();
+  const {
+    unlockedIds: unlockedUnitIds,
+    loading: unitUnlocksLoading,
+    productReady: unitUnlockProductReady,
+    priceLabel: unitUnlockPriceLabel,
+    purchasingLessonId,
+    unlockUnit,
+  } = useUnitUnlocks();
 
   const lesson = id ? getLessonById(id) : undefined;
 
@@ -46,6 +56,15 @@ export default function LessonDetailScreen() {
       return;
     }
     Alert.alert('解放しました', `「${heading}」はこれ以降ずっと無料で見られます。`);
+  }
+
+  async function handleUnlockUnit(lessonId: string, title: string) {
+    const result = await unlockUnit(lessonId);
+    if (!result.ok) {
+      Alert.alert('購入できませんでした', result.message);
+      return;
+    }
+    Alert.alert('解放しました', `「${title}」はこれ以降ずっと無料で見られます。`);
   }
 
   if (!lesson) {
@@ -67,7 +86,12 @@ export default function LessonDetailScreen() {
   const lessonVideo = getLessonVideo(lesson.id);
   // 各科目・各受験種別の最初の5単元は、Pro未加入でも無料で閲覧できる
   const freeLesson = isLessonFree(lesson);
-  const contentUnlocked = isPro || freeLesson;
+  // 学年×科目で追加した新規単元（new20_で始まるid）は、上記のPro一括ロードとは別枠で、
+  // 学年×科目クラスターごとに最初の5単元は無料、それ以降は¥100買い切りで解放する。
+  const isNew20 = isNew20Unit(lesson.id);
+  const new20Free = isNew20 && isNew20UnitFree(lesson.id);
+  const new20Unlocked = isNew20 && unlockedUnitIds.has(lesson.id);
+  const contentUnlocked = isPro || (isNew20 ? new20Free || new20Unlocked : freeLesson);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -92,21 +116,52 @@ export default function LessonDetailScreen() {
       </View>
 
       <ScrollView style={styles.scroll} contentContainerStyle={styles.content}>
-        {subLoading && (
+        {(subLoading || (isNew20 && unitUnlocksLoading)) && (
           <View style={styles.center}>
             <ActivityIndicator color={info.color} />
           </View>
         )}
-        {!subLoading && !contentUnlocked && (
+        {!subLoading && !(isNew20 && unitUnlocksLoading) && !contentUnlocked && isNew20 && (
+          <View style={styles.lockedBanner}>
+            <Text style={styles.lockedText}>
+              🔒 この単元は買い切りで解放できます（{unitUnlockPriceLabel}・1回のみ）
+            </Text>
+            <TouchableOpacity
+              style={[
+                styles.unlockUnitBtn,
+                (!unitUnlockProductReady || purchasingLessonId === lesson.id) && styles.unlockUnitBtnDisabled,
+              ]}
+              activeOpacity={0.85}
+              disabled={!unitUnlockProductReady || purchasingLessonId === lesson.id}
+              onPress={() => handleUnlockUnit(lesson.id, lesson.title)}
+            >
+              {purchasingLessonId === lesson.id ? (
+                <ActivityIndicator color="#FFFFFF" />
+              ) : (
+                <Text style={styles.unlockUnitBtnText}>
+                  {unitUnlockProductReady ? `${unitUnlockPriceLabel}で解放する` : '準備中です'}
+                </Text>
+              )}
+            </TouchableOpacity>
+          </View>
+        )}
+        {!subLoading && !(isNew20 && unitUnlocksLoading) && !contentUnlocked && !isNew20 && (
           <View style={styles.lockedBanner}>
             <Text style={styles.lockedText}>
               🔒 このコンテンツはProプランで閲覧できます
             </Text>
           </View>
         )}
-        {!subLoading && contentUnlocked && (
+        {!subLoading && !(isNew20 && unitUnlocksLoading) && contentUnlocked && (
           <>
-            {!isPro && freeLesson && (
+            {isNew20 && !isPro && new20Free && (
+              <View style={styles.freeTeaser}>
+                <Text style={styles.freeTeaserText}>
+                  🎁 無料お試し単元です。同じ学年・科目の他の単元は買い切りで解放できます
+                </Text>
+              </View>
+            )}
+            {!isNew20 && !isPro && freeLesson && (
               <View style={styles.freeTeaser}>
                 <Text style={styles.freeTeaserText}>
                   🎁 無料お試し単元です。他の単元はProプランで解放されます
@@ -243,6 +298,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   lockedText: { fontSize: 15, color: '#8B5A38', fontWeight: '600', textAlign: 'center' },
+  unlockUnitBtn: {
+    backgroundColor: '#B5622E',
+    borderRadius: 8,
+    paddingVertical: 11,
+    paddingHorizontal: 24,
+    minWidth: 160,
+    alignItems: 'center',
+    marginTop: 14,
+  },
+  unlockUnitBtnDisabled: { backgroundColor: '#C7B9A6' },
+  unlockUnitBtnText: { color: '#FFFFFF', fontSize: 14.5, fontWeight: '800' },
   maxTeaser: {
     backgroundColor: '#FFFBEB',
     borderRadius: 10,
