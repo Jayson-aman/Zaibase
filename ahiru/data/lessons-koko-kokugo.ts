@@ -12,6 +12,7 @@ import { kokoKokugoExt10Lessons } from './lessons-koko-kokugo-ext10';
 import { kokoKokugoExt11Lessons } from './lessons-koko-kokugo-ext11';
 import { kokoKokugoExt12Lessons } from './lessons-koko-kokugo-ext12';
 import { lessonsNew20J1Kokugo } from './lessons-new20-j1-kokugo';
+import { lessonsNew20J2Kokugo } from './lessons-new20-j2-kokugo';
 
 // 既存の総論レッスン（order 1〜22）。450セッションの拡張ユニットは
 // lessons-koko-kokugo-ext01〜ext12（order 501〜950）にあり、下でまとめて結合する。
@@ -4375,4 +4376,5 @@ export const kokoKokugoLessons: Lesson[] = [
   ...kokoKokugoExt11Lessons,
   ...kokoKokugoExt12Lessons,
   ...lessonsNew20J1Kokugo,
+  ...lessonsNew20J2Kokugo,
 ];
