@@ -132,12 +132,16 @@ import { lessonFigsKoushikiC1Menseki } from './lesson-figs-koushiki-c1menseki';
 import { lessonFigsKoushikiC2En } from './lesson-figs-koushiki-c2en';
 import { lessonFigsKoushikiC3Tairyoku1 } from './lesson-figs-koushiki-c3tairyoku1';
 import { lessonFigsKoushikiC4Tairyoku2 } from './lesson-figs-koushiki-c4tairyoku2';
+import { lessonFigsKoushikiC6Soji } from './lesson-figs-koushiki-c6soji';
+import { lessonFigsKoushikiK2Heikou } from './lesson-figs-koushiki-k2heikou';
 
 export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsKoushikiC1Menseki,
   ...lessonFigsKoushikiC2En,
   ...lessonFigsKoushikiC3Tairyoku1,
   ...lessonFigsKoushikiC4Tairyoku2,
+  ...lessonFigsKoushikiC6Soji,
+  ...lessonFigsKoushikiK2Heikou,
   ...lessonFigsSansu,
   ...lessonFigsRika,
   ...lessonFigsKokoMath,

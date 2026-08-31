@@ -311,12 +311,16 @@ import { figuresKoushikiC1Menseki } from './figures-koushiki-c1menseki';
 import { figuresKoushikiC2En } from './figures-koushiki-c2en';
 import { figuresKoushikiC3Tairyoku1 } from './figures-koushiki-c3tairyoku1';
 import { figuresKoushikiC4Tairyoku2 } from './figures-koushiki-c4tairyoku2';
+import { figuresKoushikiC6Soji } from './figures-koushiki-c6soji';
+import { figuresKoushikiK2Heikou } from './figures-koushiki-k2heikou';
 
 export const figures: Record<string, Figure> = {
   ...figuresKoushikiC1Menseki,
   ...figuresKoushikiC2En,
   ...figuresKoushikiC3Tairyoku1,
   ...figuresKoushikiC4Tairyoku2,
+  ...figuresKoushikiC6Soji,
+  ...figuresKoushikiK2Heikou,
   // 「解く順番の図解」の動作見本。長方形の面積・周の長さ・対角線を
   // ①②③の手順付きで、動く図解の進行に合わせて順番に表示する。
   chugaku_sansu_ex_01_006: {
