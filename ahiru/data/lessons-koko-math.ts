@@ -20,6 +20,7 @@ import { lessonsKoushikiK3Souji } from './lessons-koushiki-k3souji';
 import { lessonsKoushikiK6Sanpei } from './lessons-koushiki-k6sanpei';
 import { lessonsNew20J1Sansu } from './lessons-new20-j1-sansu';
 import { lessonsNew20J2Sansu } from './lessons-new20-j2-sansu';
+import { lessonsNew20J3Sansu } from './lessons-new20-j3-sansu';
 
 // 既存の総論レッスン（order 101〜122）。450セッションの拡張ユニットは
 // lessons-koko-math-ext01〜ext12（order 501〜950）にあり、下でまとめて結合する。
@@ -5476,4 +5477,5 @@ export const kokoMathLessons: Lesson[] = [
   ...lessonsKoushikiK6Sanpei,
   ...lessonsNew20J1Sansu,
   ...lessonsNew20J2Sansu,
+  ...lessonsNew20J3Sansu,
 ];
