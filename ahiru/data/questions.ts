@@ -264,8 +264,10 @@ import { gradeKoushikiK5En2Questions } from './grade_koushiki_k5en2';
 import { gradeKoushikiK1GodoQuestions } from './grade_koushiki_k1godo';
 import { gradeKoushikiK3SoujiQuestions } from './grade_koushiki_k3souji';
 import { gradeKoushikiK6SanpeiQuestions } from './grade_koushiki_k6sanpei';
+import { gradeKoushikiOyoC3Tairyoku1Questions } from './grade_koushiki_oyo_c3tairyoku1';
 
 export const questions: Question[] = [
+  ...gradeKoushikiOyoC3Tairyoku1Questions,
   ...gradeKoushikiC1MensekiQuestions,
   ...gradeKoushikiC2EnQuestions,
   ...gradeKoushikiC3Tairyoku1Questions,
