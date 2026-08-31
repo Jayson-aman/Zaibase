@@ -13,6 +13,7 @@ import { rikaExt09Lessons } from './lessons-rika-ext09';
 import { rikaExt10Lessons } from './lessons-rika-ext10';
 import { rikaExt11Lessons } from './lessons-rika-ext11';
 import { rikaExt12Lessons } from './lessons-rika-ext12';
+import { lessonsNew20E4Rika } from './lessons-new20-e4-rika';
 
 const rikaOverviewLessons: Lesson[] = [
   {
@@ -4902,4 +4903,5 @@ export const rikaLessons: Lesson[] = [
   ...rikaExt10Lessons,
   ...rikaExt11Lessons,
   ...rikaExt12Lessons,
+  ...lessonsNew20E4Rika,
 ];
