@@ -129,9 +129,11 @@ import { lessonFigsKokoEigoExt10 } from './lesson-figs-koko-eigo-ext10';
 import { lessonFigsKokoEigoExt11 } from './lesson-figs-koko-eigo-ext11';
 import { lessonFigsKokoEigoExt12 } from './lesson-figs-koko-eigo-ext12';
 import { lessonFigsKoushikiC1Menseki } from './lesson-figs-koushiki-c1menseki';
+import { lessonFigsKoushikiC2En } from './lesson-figs-koushiki-c2en';
 
 export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsKoushikiC1Menseki,
+  ...lessonFigsKoushikiC2En,
   ...lessonFigsSansu,
   ...lessonFigsRika,
   ...lessonFigsKokoMath,

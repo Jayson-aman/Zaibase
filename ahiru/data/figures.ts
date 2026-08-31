@@ -308,9 +308,11 @@ import { figuresGradeJ1Rika } from './figures-grade-j1-rika';
 import { figuresGradeJ2Rika } from './figures-grade-j2-rika';
 import { figuresGradeJ3Rika } from './figures-grade-j3-rika';
 import { figuresKoushikiC1Menseki } from './figures-koushiki-c1menseki';
+import { figuresKoushikiC2En } from './figures-koushiki-c2en';
 
 export const figures: Record<string, Figure> = {
   ...figuresKoushikiC1Menseki,
+  ...figuresKoushikiC2En,
   // 「解く順番の図解」の動作見本。長方形の面積・周の長さ・対角線を
   // ①②③の手順付きで、動く図解の進行に合わせて順番に表示する。
   chugaku_sansu_ex_01_006: {

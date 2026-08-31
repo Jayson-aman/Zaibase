@@ -253,9 +253,11 @@ import { gradeJ2EigoQuestions } from './grade_j2_eigo';
 import { gradeE6EigoQuestions } from './grade_e6_eigo';
 import { gradeJ3EigoQuestions } from './grade_j3_eigo';
 import { gradeKoushikiC1MensekiQuestions } from './grade_koushiki_c1menseki';
+import { gradeKoushikiC2EnQuestions } from './grade_koushiki_c2en';
 
 export const questions: Question[] = [
   ...gradeKoushikiC1MensekiQuestions,
+  ...gradeKoushikiC2EnQuestions,
   // ============================================================
   // 算数 (sansu) - 50問
   // ============================================================
