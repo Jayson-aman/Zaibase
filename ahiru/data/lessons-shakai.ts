@@ -13,6 +13,9 @@ import { shakaiExt09Lessons } from './lessons-shakai-ext09';
 import { shakaiExt10Lessons } from './lessons-shakai-ext10';
 import { shakaiExt11Lessons } from './lessons-shakai-ext11';
 import { shakaiExt12Lessons } from './lessons-shakai-ext12';
+import { lessonsNew20E4Shakai } from './lessons-new20-e4-shakai';
+import { lessonsNew20E5Shakai } from './lessons-new20-e5-shakai';
+import { lessonsNew20E6Shakai } from './lessons-new20-e6-shakai';
 
 const shakaiOverviewLessons: Lesson[] = [
   {
@@ -4543,4 +4546,7 @@ export const shakaiLessons: Lesson[] = [
   ...shakaiExt10Lessons,
   ...shakaiExt11Lessons,
   ...shakaiExt12Lessons,
+  ...lessonsNew20E4Shakai,
+  ...lessonsNew20E5Shakai,
+  ...lessonsNew20E6Shakai,
 ];

@@ -148,6 +148,14 @@ import { lessonFigsNew20E5Eigo } from './lesson-figs-new20-e5-eigo';
 import { lessonFigsNew20E5Kokugo } from './lesson-figs-new20-e5-kokugo';
 import { lessonFigsNew20E6Eigo } from './lesson-figs-new20-e6-eigo';
 import { lessonFigsNew20J1Eigo } from './lesson-figs-new20-j1-eigo';
+import { lessonFigsNew20E4Shakai } from './lesson-figs-new20-e4-shakai';
+import { lessonFigsNew20E5Sansu } from './lesson-figs-new20-e5-sansu';
+import { lessonFigsNew20E5Shakai } from './lesson-figs-new20-e5-shakai';
+import { lessonFigsNew20E6Kokugo } from './lesson-figs-new20-e6-kokugo';
+import { lessonFigsNew20E6Rika } from './lesson-figs-new20-e6-rika';
+import { lessonFigsNew20E6Shakai } from './lesson-figs-new20-e6-shakai';
+import { lessonFigsNew20J1Kokugo } from './lesson-figs-new20-j1-kokugo';
+import { lessonFigsNew20J1Sansu } from './lesson-figs-new20-j1-sansu';
 
 export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsKoushikiC1Menseki,
@@ -170,6 +178,14 @@ export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsNew20E5Kokugo,
   ...lessonFigsNew20E6Eigo,
   ...lessonFigsNew20J1Eigo,
+  ...lessonFigsNew20E4Shakai,
+  ...lessonFigsNew20E5Sansu,
+  ...lessonFigsNew20E5Shakai,
+  ...lessonFigsNew20E6Kokugo,
+  ...lessonFigsNew20E6Rika,
+  ...lessonFigsNew20E6Shakai,
+  ...lessonFigsNew20J1Kokugo,
+  ...lessonFigsNew20J1Sansu,
   ...lessonFigsSansu,
   ...lessonFigsRika,
   ...lessonFigsKokoMath,

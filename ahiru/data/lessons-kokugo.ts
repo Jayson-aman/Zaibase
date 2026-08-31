@@ -15,6 +15,7 @@ import { kokugoExt11Lessons } from './lessons-kokugo-ext11';
 import { kokugoExt12Lessons } from './lessons-kokugo-ext12';
 import { lessonsNew20E4Kokugo } from './lessons-new20-e4-kokugo';
 import { lessonsNew20E5Kokugo } from './lessons-new20-e5-kokugo';
+import { lessonsNew20E6Kokugo } from './lessons-new20-e6-kokugo';
 
 const kokugoOverviewLessons: Lesson[] = [
   {
@@ -4187,4 +4188,5 @@ export const kokugoLessons: Lesson[] = [
   ...kokugoExt12Lessons,
   ...lessonsNew20E4Kokugo,
   ...lessonsNew20E5Kokugo,
+  ...lessonsNew20E6Kokugo,
 ];
