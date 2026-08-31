@@ -330,6 +330,7 @@ import { figuresKoushikiOyoC1Menseki } from './figures-koushiki-oyo-c1menseki';
 import { figuresKoushikiOyoK3Souji } from './figures-koushiki-oyo-k3souji';
 import { figuresKoushikiOyoK2Heikou } from './figures-koushiki-oyo-k2heikou';
 import { figuresKoushikiOyoK1Godo } from './figures-koushiki-oyo-k1godo';
+import { figuresKoushikiOyoC5Kakudo } from './figures-koushiki-oyo-c5kakudo';
 
 export const figures: Record<string, Figure> = {
   ...figuresKoushikiOyoC3Tairyoku1,
@@ -343,6 +344,7 @@ export const figures: Record<string, Figure> = {
   ...figuresKoushikiOyoK3Souji,
   ...figuresKoushikiOyoK2Heikou,
   ...figuresKoushikiOyoK1Godo,
+  ...figuresKoushikiOyoC5Kakudo,
   ...figuresKoushikiC1Menseki,
   ...figuresKoushikiC2En,
   ...figuresKoushikiC3Tairyoku1,

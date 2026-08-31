@@ -275,6 +275,7 @@ import { gradeKoushikiOyoC1MensekiQuestions } from './grade_koushiki_oyo_c1mense
 import { gradeKoushikiOyoK3SoujiQuestions } from './grade_koushiki_oyo_k3souji';
 import { gradeKoushikiOyoK2HeikouQuestions } from './grade_koushiki_oyo_k2heikou';
 import { gradeKoushikiOyoK1GodoQuestions } from './grade_koushiki_oyo_k1godo';
+import { gradeKoushikiOyoC5KakudoQuestions } from './grade_koushiki_oyo_c5kakudo';
 
 export const questions: Question[] = [
   ...gradeKoushikiOyoC3Tairyoku1Questions,
@@ -288,6 +289,7 @@ export const questions: Question[] = [
   ...gradeKoushikiOyoK3SoujiQuestions,
   ...gradeKoushikiOyoK2HeikouQuestions,
   ...gradeKoushikiOyoK1GodoQuestions,
+  ...gradeKoushikiOyoC5KakudoQuestions,
   ...gradeKoushikiC1MensekiQuestions,
   ...gradeKoushikiC2EnQuestions,
   ...gradeKoushikiC3Tairyoku1Questions,
