@@ -382,38 +382,42 @@ export default function QuizScreen() {
     // 無料ユーザーのお試し問題数チェック。
     // 課金状態の取得中（subLoading）は加入者も未加入に見えるため、その間は
     // 上限判定をしない（加入者がいきなりペイウォールで止められるのを防ぐ）。
+    // 上限に達していても、ここでは即ペイウォールを出さず、まず〇/×の結果を
+    // 見せてから（下の正誤処理を素通りさせて）ペイウォールへつなぐ。結果も
+    // わからないままいきなり課金画面に飛ばすと、何が起きたか分からず離脱を招くため。
+    let hitLimit = false;
     if (!isPro && !isMax && !subLoading) {
       // レベル別ドリル・入試対策は、アプリ全体の累計トライアルとは別に、
       // 1日あたり最初のSESSION_FREE_LIMIT問だけ無料にする（永続化された消費数で判定）。
       const isSessionLimitedMode = testModeKey != null && SESSION_LIMITED_MODES.includes(testModeKey);
       if (isSessionLimitedMode && sessionFreeUsedRef.current >= SESSION_FREE_LIMIT) {
-        setTrialBlocked(true);
-        setShowPaywall(true);
-        answeringRef.current = false;
+        hitLimit = true;
         logAccessEvent('session_limit_paywall_shown', {
           mode: testModeKey ?? 'unknown',
           subject: subjectKey,
           examType,
           tier: 'free',
         });
-        return;
+      } else {
+        const expired = await isTrialExpired();
+        if (expired) {
+          hitLimit = true;
+          logAccessEvent('trial_limit_paywall_shown', {
+            mode: testModeKey ?? (isDaily ? 'daily' : isMock ? 'mock' : isKakomon ? 'kakomon' : 'normal'),
+            subject: subjectKey,
+            examType,
+            tier: 'free',
+          });
+        } else {
+          await incrementTrialQuestions();
+          if (isSessionLimitedMode) {
+            sessionFreeUsedRef.current = await incrementSessionFreeUsed(`${testModeKey}_${subjectKey}`);
+          }
+        }
       }
-      const expired = await isTrialExpired();
-      if (expired) {
+      if (hitLimit) {
         setTrialBlocked(true);
-        setShowPaywall(true);
         answeringRef.current = false;
-        logAccessEvent('trial_limit_paywall_shown', {
-          mode: testModeKey ?? (isDaily ? 'daily' : isMock ? 'mock' : isKakomon ? 'kakomon' : 'normal'),
-          subject: subjectKey,
-          examType,
-          tier: 'free',
-        });
-        return;
-      }
-      await incrementTrialQuestions();
-      if (isSessionLimitedMode) {
-        sessionFreeUsedRef.current = await incrementSessionFreeUsed(`${testModeKey}_${subjectKey}`);
       }
     }
 
@@ -425,9 +429,9 @@ export default function QuizScreen() {
     if (!correct) {
       const newStreak = wrongStreak + 1;
       setWrongStreak(newStreak);
-      // 3回連続で間違えたら、やさしく基礎問題に戻す
+      // 3回連続で間違えたら、やさしく基礎問題に戻す（上限到達後はどうせ続けられないので差し込まない）
       let injected = false;
-      if (newStreak >= 3) {
+      if (!hitLimit && newStreak >= 3) {
         injected = injectRemedialBasics();
         if (injected) setWrongStreak(0);
       }
@@ -445,7 +449,11 @@ export default function QuizScreen() {
     setShowFireworks(true);
     timersRef.current.push(setTimeout(async () => {
       setShowFireworks(false);
-      await advanceOrFinish(newScore, newWrongIds);
+      if (hitLimit) {
+        setShowPaywall(true);
+      } else {
+        await advanceOrFinish(newScore, newWrongIds);
+      }
     }, 1100));
   }
 
@@ -745,10 +753,18 @@ export default function QuizScreen() {
 
             <TouchableOpacity
               style={[styles.nextQuestionBtn, { backgroundColor: info.color }]}
-              onPress={() => advanceOrFinish(score, wrongIds)}
+              onPress={() => {
+                if (trialBlocked) {
+                  setShowPaywall(true);
+                } else {
+                  advanceOrFinish(score, wrongIds);
+                }
+              }}
               activeOpacity={0.85}
             >
-              <Text style={styles.nextQuestionBtnText}>次の問題へ →</Text>
+              <Text style={styles.nextQuestionBtnText}>
+                {trialBlocked ? '🔒 つづきを見る →' : '次の問題へ →'}
+              </Text>
             </TouchableOpacity>
           </View>
         )}

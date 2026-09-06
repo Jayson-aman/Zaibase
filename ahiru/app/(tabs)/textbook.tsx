@@ -215,6 +215,16 @@ export default function TextbookScreen() {
               <View style={styles.lessonCardBody}>
                 <View style={styles.lessonTitleRow}>
                   <Text style={styles.lessonTitle}>{lesson.title}</Text>
+                  {isKoushikiLesson(lesson.id) && (
+                    <View style={styles.koushikiChip}>
+                      <Text style={styles.koushikiChipText}>🔖 公式集</Text>
+                    </View>
+                  )}
+                  {isNew20Unit(lesson.id) && (
+                    <View style={styles.new20Chip}>
+                      <Text style={styles.new20ChipText}>🆕 新単元</Text>
+                    </View>
+                  )}
                   {lesson.studyPeriod && (
                     <View style={styles.periodChip}>
                       <Text style={styles.periodChipText}>📅 {lesson.studyPeriod}</Text>
@@ -363,6 +373,10 @@ const styles = StyleSheet.create({
   lessonTitle: { fontSize: 15, fontWeight: '800', color: '#2B2420', flexShrink: 1, letterSpacing: -0.2 },
   periodChip: { backgroundColor: '#F5EFE4', borderRadius: 4, paddingHorizontal: 6, paddingVertical: 1.5, borderWidth: 1, borderColor: '#C7D7F5' },
   periodChipText: { fontSize: 9.5, fontWeight: '800', color: '#3B55A0' },
+  koushikiChip: { backgroundColor: '#FEF3C7', borderRadius: 4, paddingHorizontal: 6, paddingVertical: 1.5, borderWidth: 1, borderColor: '#FBBF24' },
+  koushikiChipText: { fontSize: 9.5, fontWeight: '800', color: '#92400E' },
+  new20Chip: { backgroundColor: '#ECFDF5', borderRadius: 4, paddingHorizontal: 6, paddingVertical: 1.5, borderWidth: 1, borderColor: '#6EE7B7' },
+  new20ChipText: { fontSize: 9.5, fontWeight: '800', color: '#047857' },
   lessonDesc: { fontSize: 12.5, color: '#6E645C', lineHeight: 18 },
   maxTag: { fontSize: 11, color: '#92400E', fontWeight: '700', marginTop: 4 },
   lessonArrow: { fontSize: 24, color: '#9C9186', paddingLeft: 8 },
