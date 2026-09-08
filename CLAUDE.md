@@ -8,6 +8,7 @@
 | **ahiru収益化＋弁護士確認後** | **弁護士法72条確認完了後 → 以下3機能を開放する。** Firestoreの `platformConfig/features` に `legalFeaturesEnabled: true` を設定するだけで有効化可能。①`⚖️ 許認可・法令チェック`（kyoninkaScreen・AI法的判断）②`🛡️ 信頼スコア`（complianceGateScreen・弁護士確認前β）③`Zaibase法律相談バナー`（弁護士紹介に該当する可能性・弁護士法72条⑤グループ割引）。確認事項は `docs/legal/lawyer-checklist.md` の③④⑤。財源はahiru（受験アプリ）の収益で賄う予定。 | Claude Code |
 | **Stripe審査通過後** | **建設の課金を再開する。** Firestoreの `platformConfig/features` に `billingEnabled: true` を設定するだけで有料プラン申込・Stripe決済が開放される。現在は料金プランページ・Stripe画面への導線・`doStripeCheckout()` をすべて停止中。 | Claude Code |
 | **弁護士確認後（経営支援ツール）** | **資金繰りシミュレーター・価格転嫁交渉サポートを開放する。** ①Firestoreの `platformConfig/features` に `cashFlowEnabled: true` / `priceNegotiationEnabled: true` を設定。②`priceNegotiationEnabled` は Claude API（`generateNegotiationLetter` Cloud Function）を使用するため、事前に `firebase functions:secrets:set ANTHROPIC_API_KEY` でシークレットを設定してからデプロイする。実装: `kensetsu/frontend/Zaibase.html`・`kensetsu/functions/management_tools.js`。 | Claude Code |
+| **ahiru Web版の会員登録・課金に実際の需要が出てから（2026/9/8時点で保留）** | **ahiru Web版（exam.zaibase.group）で、公式集（¥50）・単元解放（¥100）の買い切りを開放する。** 現状RevenueCatのWeb Billingは消費型（買い切り）商品に対応していないため、`services/subscription.ts` の `fetchFormulaUnlockProduct`/`fetchUnitUnlockProduct` はWeb版では常に`null`を返し、ボタンは「準備中」表示のまま（iOS/Androidアプリ版は対応済み・問題なし）。開放するにはRevenueCatを介さず、Stripeへの直接ワンタイム決済（Checkout Session作成用Cloud Function＋決済完了Webhook）を新規実装する必要がある（体感数時間規模）。Web版のPro/Max月額課金自体もまだRevenueCat側のWeb Billing設定（Stripe連携＋`pro_monthly`/`max_monthly`パッケージ作成）が未完了で「準備中」のままなので、まずそちらを先に有効化すること。 | Claude Code |
 
 > このリマインダーは完了したら削除する。
 
