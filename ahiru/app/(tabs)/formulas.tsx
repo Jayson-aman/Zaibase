@@ -8,6 +8,7 @@ import {
   StyleSheet,
   SafeAreaView,
   TouchableOpacity,
+  Dimensions,
 } from 'react-native';
 import { FORMULAS, SUBJECTS, type Subject } from '../../data/formulas';
 import SubjectIcon, { type IconSubject } from '../../components/SubjectIcon';
@@ -16,6 +17,14 @@ import { formulaImages } from '../../data/formulaImages';
 
 // 公式タブの教科名（算数/理科/社会）→ アイコンキー
 const SUBJ_ICON: Record<Subject, IconSubject> = { 算数: 'sansu', 理科: 'rika', 社会: 'shakai' };
+
+// 図解画像の一辺のサイズをあらかじめ画面幅から計算しておく。width:'100%'をFlatList内の
+// Imageに使うと、リスト仮想化中のレイアウト計測タイミングによっては一瞬（あるいは
+// 端末によっては継続的に）実際のコンテナ幅より大きいサイズで描画され、画面端からはみ出す
+// ちらつき・崩れが起きることがあるため、固定px値で確実にサイズを決める。
+// content(padding:16)×2 + figureBox(paddingHorizontal:12, borderWidth:1)×2 を差し引く。
+const SCREEN_WIDTH = Dimensions.get('window').width;
+const FORMULA_IMAGE_SIZE = SCREEN_WIDTH - (16 + 12 + 1) * 2;
 
 
 // 1項目分の描画。FlatListの行として使う。
@@ -307,8 +316,8 @@ const styles = StyleSheet.create({
     fontFamily: 'monospace',
   },
   formulaImage: {
-    width: '100%',
-    aspectRatio: 1,
+    width: FORMULA_IMAGE_SIZE,
+    height: FORMULA_IMAGE_SIZE,
     borderRadius: 10,
     backgroundColor: '#F5EFE4',
   },
