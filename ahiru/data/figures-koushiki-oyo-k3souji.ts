@@ -155,4 +155,30 @@ export const figuresKoushikiOyoK3Souji: Record<string, Figure> = {
       '四角形EBCGの面積=△ABC-△AEG=162-50=112cm²(検算:8+42+112=162で一致)',
     ],
   },
+  koushiki_k3souji_cheva_oyo1: {
+    kind: 'polygon',
+    points: [
+      { x: 6, y: 10, label: 'A' },
+      { x: 3, y: 5, label: 'F' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 4.8, y: 0, label: 'D' },
+      { x: 12, y: 0, label: 'C' },
+      { x: 8.4, y: 6, label: 'E' },
+    ],
+    sideLabels: ['AF', 'FB', 'BD=4cm', 'DC=6cm', 'CE=3cm', 'EA=2cm'],
+    diagonals: [
+      [0, 3],
+      [2, 5],
+      [4, 1],
+    ],
+    caption:
+      '△ABCの内部の点Pを通る3直線AD、BE、CF。BD=4cm、DC=6cm、CE=3cm、EA=2cm（AF:FBは求める値なので図には示さない）',
+    steps: [
+      '直線AP、BP、CPをそれぞれのばして、対辺BC、CA、ABとの交点をD、E、Fとする',
+      'BD:DC=4:6=2:3、CE:EA=3:2が与えられている',
+      'チェバの定理(BD/DC)×(CE/EA)×(AF/FB)=1に代入すると(2/3)×(3/2)×(AF/FB)=1',
+      '(2/3)×(3/2)=1なので、AF/FB=1、つまりAF:FB=1:1（FはABの中点）',
+      '逆に、この3つの比をかけると1になることから、チェバの定理の逆により3直線AD、BE、CFが1点で交わることが確認できる',
+    ],
+  },
 };
