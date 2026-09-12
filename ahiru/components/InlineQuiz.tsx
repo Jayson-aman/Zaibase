@@ -1,24 +1,52 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import type { Question } from '../data/questions-meta';
+import type { Question, QuestionSubItem } from '../data/questions-meta';
+import type { Figure } from '../data/figures';
 import { getFigure } from '../data/figures';
 import FigureView from './FigureView';
 
+/**
+ * 公式集（koushiki・Question由来）と公式まとめ（formulas・手書きの一問一答）の
+ * どちらからも同じ見た目で出せるように正規化した1問分。
+ */
+export type InlineQuizItem = {
+  question: string;
+  answer: string;
+  explanation?: string;
+  figure?: Figure | null;
+  /** 記述式（模範解答＋自己採点） */
+  isWritten?: boolean;
+  rubricPoints?: string[];
+  subQuestions?: QuestionSubItem[];
+};
+
+export function questionsToQuizItems(questions: Question[]): InlineQuizItem[] {
+  return questions.map((q) => ({
+    question: q.question,
+    answer: q.answer,
+    explanation: q.explanation,
+    figure: getFigure(q.id),
+    isWritten: q.isWritten,
+    rubricPoints: q.rubricPoints,
+    subQuestions: q.subQuestions,
+  }));
+}
+
 type Props = {
-  questions: Question[];
+  items: InlineQuizItem[];
   /** 見出しのラベル（既定：「この公式の一問一答」） */
   label?: string;
 };
 
-export default function InlineQuiz({ questions, label = 'この公式の一問一答' }: Props) {
+export default function InlineQuiz({ items, label = 'この公式の一問一答' }: Props) {
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
 
-  if (questions.length === 0) return null;
+  if (items.length === 0) return null;
 
-  const total = questions.length;
-  const q = questions[Math.min(index, total - 1)];
-  const figure = getFigure(q.id);
+  const total = items.length;
+  const q = items[Math.min(index, total - 1)];
+  const figure = q.figure;
 
   function go(next: number) {
     setIndex(next);

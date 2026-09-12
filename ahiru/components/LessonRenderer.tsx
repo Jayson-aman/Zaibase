@@ -7,7 +7,7 @@ import { getMangaScript } from '../data/manga-scripts';
 import { getKoushikiQuestionsForFigure } from '../data/koushiki-questions';
 import FigureView from './FigureView';
 import MangaDialogue from './MangaDialogue';
-import InlineQuiz from './InlineQuiz';
+import InlineQuiz, { questionsToQuizItems } from './InlineQuiz';
 
 type Props = {
   sections: LessonSection[];
@@ -149,7 +149,7 @@ export default function LessonRenderer({
                 買い切り前の公式の問題が漏れることはない。 */}
             {section.figureId != null && (() => {
               const qs = getKoushikiQuestionsForFigure(section.figureId);
-              return qs.length > 0 ? <InlineQuiz questions={qs} /> : null;
+              return qs.length > 0 ? <InlineQuiz items={questionsToQuizItems(qs)} /> : null;
             })()}
           </View>
         );

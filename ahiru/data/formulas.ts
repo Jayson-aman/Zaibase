@@ -21,4 +21,4 @@ export const FORMULAS: Record<Subject, FormulaSection[]> = {
   社会: shakaiFormulas,
 };
 
-export type { FormulaSection, FormulaItem, FormulaExample } from './formulas-types';
+export type { FormulaSection, FormulaItem, FormulaExample, FormulaQuizItem } from './formulas-types';

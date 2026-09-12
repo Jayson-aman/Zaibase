@@ -12,9 +12,10 @@ import {
   Alert,
   Dimensions,
 } from 'react-native';
-import { FORMULAS, SUBJECTS, type Subject } from '../../data/formulas';
+import { FORMULAS, SUBJECTS, type Subject, type FormulaItem } from '../../data/formulas';
 import SubjectIcon, { type IconSubject } from '../../components/SubjectIcon';
 import FigureView from '../../components/FigureView';
+import InlineQuiz from '../../components/InlineQuiz';
 import { formulaImages } from '../../data/formulaImages';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
 import { useSubscription } from '../../hooks/useSubscription';
@@ -43,7 +44,7 @@ function FormulaRow({
   purchasing,
   onUnlock,
 }: {
-  item: any;
+  item: FormulaItem;
   accent: string;
   bypassLock: boolean;
   isUnlocked: boolean;
@@ -156,6 +157,17 @@ function FormulaRow({
               </View>
             ))}
           </View>
+        )}
+
+        {item.quiz && item.quiz.length > 0 && (
+          <InlineQuiz
+            label={`「${item.label}」の一問一答`}
+            items={item.quiz.map((qz) => ({
+              question: qz.q,
+              answer: qz.a,
+              explanation: qz.explanation,
+            }))}
+          />
         )}
       </View>
   );

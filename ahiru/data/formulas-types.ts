@@ -17,6 +17,21 @@ export type FormulaExample = {
   a: string;
 };
 
+/**
+ * 項目の下にその場で出す一問一答。
+ * 公式集（koushiki）と違い、こちらは問題プールとのID紐づけがないので、
+ * 「この項目のための問題」をここに直接書く（何の単元を解いているか
+ * 分からなくならないようにするため、汎用の問題プールには混ぜない）。
+ */
+export type FormulaQuizItem = {
+  /** 問題文 */
+  q: string;
+  /** 答え */
+  a: string;
+  /** なぜそうなるか（任意） */
+  explanation?: string;
+};
+
 export type FormulaItem = {
   /** 公式・項目名（例：三角形の面積）。買い切りロックの識別キーも兼ねるので、
    * 教科内で重複しないようにする */
@@ -41,6 +56,8 @@ export type FormulaItem = {
   asciiFigure?: string;
   /** 例題＋解答 */
   example?: FormulaExample;
+  /** その場で解ける一問一答（項目の一番下に表示） */
+  quiz?: FormulaQuizItem[];
   /** テストで狙われるチェックポイント・ミスしやすい点 */
   checkpoints?: string[];
 };
