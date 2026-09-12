@@ -7,6 +7,8 @@ export type LessonSection = {
   level?: 'kiso' | 'oyo' | 'moshi' | 'nyushi';
   /** 動く図解のID（data/lesson-figures.ts に登録）。セクション本文の下に描画される */
   figureId?: string;
+  /** 討論・探求型解説マンガのID（data/manga-scripts.ts に登録）。図解のさらに下に描画される */
+  mangaId?: string;
 };
 
 export type StudyPeriod =

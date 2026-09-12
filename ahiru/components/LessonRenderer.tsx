@@ -3,7 +3,9 @@ import { View, Text, StyleSheet, ScrollView, TouchableOpacity, ActivityIndicator
 import type { LessonSection } from '../data/lesson-types';
 import { getLessonFigure } from '../data/lesson-figures';
 import { getKoushikiFormulaInfo } from '../data/koushiki-access';
+import { getMangaScript } from '../data/manga-scripts';
 import FigureView from './FigureView';
+import MangaDialogue from './MangaDialogue';
 
 type Props = {
   sections: LessonSection[];
@@ -134,6 +136,10 @@ export default function LessonRenderer({
             {section.figureId != null && (() => {
               const fig = getLessonFigure(section.figureId);
               return fig != null ? <FigureView figure={fig} animated /> : null;
+            })()}
+            {section.mangaId != null && (() => {
+              const script = getMangaScript(section.mangaId);
+              return script != null ? <MangaDialogue script={script} /> : null;
             })()}
           </View>
         );
