@@ -155,6 +155,31 @@ export const figuresKoushikiOyoK3Souji: Record<string, Figure> = {
       '四角形EBCGの面積=△ABC-△AEG=162-50=112cm²(検算:8+42+112=162で一致)',
     ],
   },
+  koushiki_k3souji_soujijoken_oyo3: {
+    kind: 'polygon',
+    points: [
+      { x: 2.5, y: 4.33, label: 'A' },
+      { x: 0.6, y: 1.04, label: 'P' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 2, y: 0, label: 'Q' },
+      { x: 5, y: 0, label: 'C' },
+    ],
+    sideLabels: [null, null, 'BQ=2cm', 'QC=3cm', 'CA=5cm'],
+    diagonals: [
+      [3, 1],
+      [3, 0],
+    ],
+    caption:
+      '1辺5cmの正三角形ABCで、辺AB上の点P、辺BC上の点Qについて∠AQP=60°。BQ=2cmのとき△ACQ∽△QBPを使ってBPを求める',
+    steps: [
+      '正三角形ABCの辺AB上に点P、辺BC上に点Qをとり、∠AQP=60°とする。BQ=2cmより、CQ=5-2=3cm',
+      '正三角形の内角はすべて60°なので∠ACQ(∠C)=∠QBP(∠B)=60°',
+      '△ACQの頂点Qの外角∠BQAは、隣り合わない2つの内角の和∠CAQ+∠ACQに等しい',
+      '一方、∠BQAは∠BQPと∠AQP(=60°)に分けられるので∠BQA=∠BQP+60°。2つの表し方を比べると∠CAQ+60°=∠BQP+60°となり、∠CAQ=∠BQP',
+      '2組の角(∠ACQ=∠QBP、∠CAQ=∠BQP)がそれぞれ等しいので△ACQ∽△QBP(AA相似)',
+      '対応する頂点の順(A↔Q、C↔B、Q↔P)を保って比例式を立てるとCQ:BP=CA:QB。3:BP=5:2を解くとBP=6/5cm',
+    ],
+  },
   koushiki_k3souji_cheva_oyo1: {
     kind: 'polygon',
     points: [
