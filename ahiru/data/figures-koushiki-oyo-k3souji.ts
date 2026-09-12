@@ -252,4 +252,170 @@ export const figuresKoushikiOyoK3Souji: Record<string, Figure> = {
       '間の角(対頂角で等しい)と、その両側の辺の比がそれぞれ等しいので、SAS相似の条件から△AEC∽△BED',
     ],
   },
+  koushiki_k3souji_menseki_hi_oyo1: {
+    kind: 'polygon',
+    points: [
+      { x: 6, y: 10, label: 'A' },
+      { x: 3.429, y: 5.714, label: 'D' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 12, y: 0, label: 'C' },
+      { x: 8.571, y: 5.714, label: 'E' },
+    ],
+    sideLabels: ['AD=3', 'DB=4', null, 'CE=4', 'EA=3'],
+    diagonals: [[1, 4]],
+    caption:
+      '△ABCの辺AB上の点D、辺AC上の点E。DE∥BC、AD:DB=3:4。△ABC=98cm²のとき△ADEの面積を求める',
+    steps: [
+      'DE∥BCより∠ADE=∠ABC(同位角)、∠Aは共通なので△ADE∽△ABC(AA相似)',
+      'AD:DB=3:4なのでAD:AB=3:7',
+      '面積比は相似比の2乗になるので△ADE:△ABC=3²:7²=9:49',
+      '△ABC=98cm²のとき、△ADE=98×9/49=18cm²、四角形DBCE=98-18=80cm²',
+      '別の例：面積比45:80は9:16に約分でき、これは3²:4²の形なので相似比は3:4',
+    ],
+  },
+  koushiki_k3souji_menseki_hi_oyo2: {
+    kind: 'polygon',
+    points: [
+      { x: 6, y: 10, label: 'A' },
+      { x: 2, y: 3.333, label: 'D' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 12, y: 0, label: 'C' },
+      { x: 10, y: 3.333, label: 'E' },
+    ],
+    sideLabels: ['AD=2', 'DB=1', null, 'EC=1', 'EA=2'],
+    diagonals: [[1, 4]],
+    caption:
+      '面積27cm²の△ABC。辺AB上の点D、辺AC上の点E(AD:DB=AE:EC=2:1、DE∥BC)で△ADEの面積を求める（拡大図△A′B′C′・縮図△A″B″C″は図には示さない）',
+    steps: [
+      '△ABCを3倍に拡大すると、面積比は1²:3²=1:9になるので、面積は27×9=243cm²',
+      '△ABCを1/3倍に縮小すると、面積比は1²:(1/3)²=1:1/9になるので、面積は27×1/9=3cm²',
+      '図のようにAD:DB=2:1のときAD:AB=2:3。DE∥BCより△ADE∽△ABC、相似比2:3の面積比は2²:3²=4:9',
+      '△ADE=27×4/9=12cm²',
+    ],
+  },
+  koushiki_k3souji_taiseki_hi_oyo1: {
+    kind: 'solid',
+    shape: 'cone',
+    labels: { radius: '9cm', height: '12cm' },
+    caption:
+      '底面の半径9cm、高さ12cmの円すいを、頂点から4cmの位置で底面に平行な平面で切る',
+    steps: [
+      '円すいの頂点をAとし、AH=12cm(高さ)、底面の半径9cm',
+      '頂点Aから4cmの位置で底面に平行な平面で切ると、頂点Aを共有するもう一回り小さい相似な三角形(円すい)ができる(AA相似)',
+      '高さの比は4:12=1:3なので、これが相似比。相似な立体の体積比は相似比の3乗になるので、小さい円すい:もとの円すい=1³:3³=1:27',
+      'もとの円すいの体積=(1/3)×π×9²×12=324π(cm³)、小さい円すいの体積=324π×1/27=12π(cm³)',
+      '円すい台(下部)の体積=324π-12π=312π(cm³)。もとの円すいの体積に対する比は312:324=26:27',
+    ],
+  },
+  koushiki_k3souji_taiseki_hi_oyo2: {
+    kind: 'polygon',
+    points: [
+      { x: 6, y: 10, label: 'A' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 12, y: 0, label: 'D' },
+      { x: 6, y: 3, label: 'C' },
+      { x: 6, y: 6.5, label: 'P' },
+    ],
+    sideLabels: [null, null, null, 'PC', 'AP'],
+    diagonals: [
+      [0, 2],
+      [1, 3],
+    ],
+    caption:
+      '正四面体ABCDの見取図（辺AB, BD, DC, CA, AD, BCの2次元での模式図）。辺AC上の点Pを通り底面BCDに平行な平面で切ると、切り口の面積は△BCDの面積の1/4になる（切り口の他の2頂点Q(辺AB上)、R(辺AD上)は図には示さない）',
+    steps: [
+      '正四面体ABCDの辺AC上に点Pをとり、Pを通り底面BCDに平行な平面で切ると、辺AB, AD上にもそれぞれ交点Q, Rができ、切り口は小さい三角形になる',
+      '底面BCDに平行な平面で切っているので、頂点Aを共有し対応する角が等しくなることから、切り口の三角形は底面の三角形BCDと相似である',
+      '切り口の面積が△BCDの面積の1/4であることから、相似比の2乗が1/4なので相似比は1/2。相似比はAP:ACと一致するのでAP:AC=1:2、つまりAP:PC=1:1(Pは辺ACの中点)',
+      '頂点Aを含む小さい四面体は、もとの四面体と相似比1:2の相似な立体。体積比は相似比の3乗になるので1³:2³=1:8',
+      'もとの四面体の体積が240cm³のとき、頂点Aを含む小さい四面体の体積=240×1/8=30cm³',
+      '点Aを含まない方の立体(底面BCDを含む残りの部分)の体積=240-30=210cm³',
+    ],
+  },
+  koushiki_k3souji_kage_suna_oyo1: {
+    kind: 'polygon',
+    points: [
+      { x: 0, y: 3, label: 'A' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 4, y: 0, label: 'P' },
+    ],
+    sideLabels: ['AB=1.2m', 'BP=1.6m', null],
+    rightAngles: [1],
+    caption:
+      '棒の先端A、根もとB、影の先端Pでできる直角三角形ABP。同じ時刻、電柱(先端C・根もとD・影の先端Q、図には示さない)も太陽光線が平行なため相似な直角三角形CDQをつくる。電柱の影DQ=10m',
+    steps: [
+      '棒は地面に垂直に立っているので∠ABP=90°。電柱も地面に垂直なので∠CDQ=90°(図には示さない)',
+      '太陽の光線は平行とみなせるので、地面という同じ直線に対する同位角の関係から∠APB=∠CQD',
+      '2組の角がそれぞれ等しいので△ABP∽△CDQ(AA相似)',
+      'AB:CD=BP:DQなので、1.2:CD=1.6:10。1.6×CD=1.2×10=12より、CD=7.5m',
+    ],
+  },
+  koushiki_k3souji_sen_men_hi_oyo1: {
+    kind: 'polygon',
+    points: [
+      { x: 6, y: 10, label: 'A' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 7.2, y: 0, label: 'D' },
+      { x: 12, y: 0, label: 'C' },
+      { x: 7.5, y: 7.5, label: 'E' },
+    ],
+    sideLabels: [null, 'BD=3', 'DC=2', 'CE=3', 'EA=1'],
+    diagonals: [
+      [0, 2],
+      [1, 4],
+    ],
+    caption:
+      '△ABCの辺BC上の点D(BD:DC=3:2)、辺AC上の点E(AE:EC=1:3)。線分ADと線分BEの交点をP(図には示さない)とする',
+    steps: [
+      '△ABDと△ACD、△PBDと△PCDはそれぞれ頂点A・Pを共有し底辺BD:DC=3:2が共通なので、比の性質より△ABP:△APC=3:2',
+      '△ABEと△CBE、△APEと△CPEはそれぞれ頂点B・Pを共有し底辺AE:EC=1:3が共通なので、比の性質より△ABP:△CBP=1:3',
+      '2つの比を組み合わせると△ABP:△APC:△CBP=3:2:9。△ABC=140cm²のとき△ABP=140×3/14=30cm²',
+      '△CBP=90cm²をBD:DC=3:2で分けると△PDC=90×2/5=36cm²。△APC=20cm²をAE:EC=1:3で分けると△EPC=20×3/4=15cm²',
+      '四角形PDCE=△PDC+△EPC=36+15=51cm²',
+    ],
+  },
+  koushiki_k3souji_sen_men_hi_oyo2: {
+    kind: 'polygon',
+    points: [
+      { x: 6, y: 10, label: 'A' },
+      { x: 4, y: 6.667, label: 'D' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 4.8, y: 0, label: 'E' },
+      { x: 12, y: 0, label: 'C' },
+    ],
+    sideLabels: ['AD=1', 'DB=2', 'BE=2', 'EC=3', null],
+    diagonals: [
+      [1, 3],
+      [1, 4],
+    ],
+    caption:
+      '△ABCの辺AB上の点D(AD:DB=1:2)、辺BC上の点E(BE:EC=2:3)。線分DE、線分DCをひくと△ABCが△ADC、△DBE、△DECの3つの部分に分けられる',
+    steps: [
+      '△DBCと△ABCは頂点Cを共有し底辺DB:AB=2:3(同一直線AB上)なので△DBC:△ABC=2:3',
+      '△ADCと△ABCも頂点Cを共有し底辺AD:AB=1:3なので△ADC:△ABC=1:3',
+      '△DBEと△DECは頂点Dを共有し底辺BE:EC=2:3(同一直線BC上)なので△DBE:△DEC=2:3、よって△DBE:△DBC=2:5',
+      '△ABC=Sとすると△DBC=(2/3)S、△DBE=(2/5)×(2/3)S=(4/15)S、△ADC=(1/3)S=(5/15)S',
+      '△DBE:△ADC=4:5、△DBE:△ABC=4:15',
+    ],
+  },
+  koushiki_k3souji_menelaus_oyo1: {
+    kind: 'polygon',
+    points: [
+      { x: 6, y: 10, label: 'A' },
+      { x: 2.4, y: 4, label: 'F' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 12, y: 0, label: 'C' },
+      { x: 8.25, y: 6.25, label: 'E' },
+    ],
+    sideLabels: ['AF=3', 'FB=2', null, 'CE=5', 'EA=3'],
+    diagonals: [[1, 4]],
+    caption:
+      '△ABCの辺AB上の点F(AF:FB=3:2)、辺CA上の点E(CE:EA=5:3)。直線FEを延長すると辺BCの延長上(B側の外部)の点D(図には示さない)で交わる。D, E, Fが同一直線上にあることを利用する',
+    steps: [
+      'メネラウスの定理(BD/DC)×(CE/EA)×(AF/FB)=1に、CE:EA=5:3、AF:FB=3:2を代入する',
+      '(BD/DC)×(5/3)×(3/2)=1より、(BD/DC)×(5/2)=1なのでBD/DC=2/5、BD:DC=2:5',
+      '逆に、BD:DC=2:5、CE:EA=5:3、AF:FB=3:2の3つの比をかけ合わせると(2/5)×(5/3)×(3/2)=1になる',
+      'メネラウスの定理の逆より、3点D, E, Fは同一直線上にあることが確認できる',
+    ],
+  },
 };
