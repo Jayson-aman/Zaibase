@@ -232,4 +232,24 @@ export const figuresKoushikiOyoK3Souji: Record<string, Figure> = {
       'Eの高さ（EFの長さ）は6-6×3/8=3.75cm。AB:EF=6:3.75を整数比に直すと8:5',
     ],
   },
+  koushiki_k3souji_soujijoken_oyo4: {
+    kind: 'polygon',
+    points: [
+      { x: -4, y: 4, label: 'A' },
+      { x: 0, y: 0, label: 'E' },
+      { x: 6, y: -6, label: 'B' },
+      { x: -6, y: -6, label: 'D' },
+      { x: 0, y: 0 },
+      { x: 4, y: 4, label: 'C' },
+    ],
+    sideLabels: ['AE=4', 'EB=6', null, 'DE=12', 'EC=8', null],
+    caption:
+      '線分ABと線分CDが点Eで交わっている。AE=4cm、EB=6cm、CE=8cm、DE=12cm',
+    steps: [
+      '線分ABと線分CDは1点Eで交わっている。AE=4cm、EB=6cm、CE=8cm、DE=12cm',
+      'ABとCDが1点Eで交わる直線なので、∠AECと∠BEDは対頂角の関係にあり、常に等しい',
+      'AE:EB=4:6=2:3、CE:ED=8:12=2:3で、この2つの比が一致している',
+      '間の角(対頂角で等しい)と、その両側の辺の比がそれぞれ等しいので、SAS相似の条件から△AEC∽△BED',
+    ],
+  },
 };
