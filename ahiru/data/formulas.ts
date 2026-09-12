@@ -5,6 +5,7 @@
 import type { FormulaSection } from './formulas-types';
 import { sansuFormulas } from './formulas-sansu';
 import { rikaFormulas } from './formulas-rika';
+import { rikaButsuriKagakuFormulas } from './formulas-rika-butsuri-kagaku';
 import { shakaiFormulas } from './formulas-shakai';
 
 export type Subject = '算数' | '理科' | '社会';
@@ -17,7 +18,9 @@ export const SUBJECTS: { key: Subject; emoji: string; color: string }[] = [
 
 export const FORMULAS: Record<Subject, FormulaSection[]> = {
   算数: sansuFormulas,
-  理科: rikaFormulas,
+  // 既存の無料項目（rikaFormulas）はそのまま。あとから足した物理・化学は
+  // 買い切り（locked: true）の別ファイルとして後ろに連結する。
+  理科: [...rikaFormulas, ...rikaButsuriKagakuFormulas],
   社会: shakaiFormulas,
 };
 
