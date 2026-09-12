@@ -231,7 +231,7 @@ export default function FormulasScreen() {
             onPress={() => setSubject(s.key)}
             activeOpacity={0.8}
           >
-            <SubjectIcon subject={SUBJ_ICON[s.key]} size={18} color={subject === s.key ? '#FFFFFF' : s.color} strokeWidth={2} />
+            <SubjectIcon subject={SUBJ_ICON[s.key]} size={16} color={subject === s.key ? '#FFFFFF' : s.color} strokeWidth={2} />
             <Text style={[styles.subjectBtnText, subject === s.key && styles.subjectBtnTextActive]}>
               {s.key}
             </Text>
@@ -295,14 +295,15 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1.5,
     borderBottomColor: '#DCD3C5',
     padding: 10,
-    gap: 8,
+    // 5教科ぶんを1行に並べるので、狭い端末でも入るよう余白は詰めてある
+    gap: 6,
   },
   subjectBtn: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 6,
+    gap: 4,
     paddingVertical: 10,
     borderRadius: 8,
     backgroundColor: '#FFFFFF',
