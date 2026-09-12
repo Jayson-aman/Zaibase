@@ -18,8 +18,15 @@ export type FormulaExample = {
 };
 
 export type FormulaItem = {
-  /** 公式・項目名（例：三角形の面積） */
+  /** 公式・項目名（例：三角形の面積）。買い切りロックの識別キーも兼ねるので、
+   * 教科内で重複しないようにする */
   label: string;
+  /**
+   * trueの場合、koushikiの公式集と同じ¥50買い切り（PRODUCT_ID_FORMULA_UNLOCK）で
+   * ロックする。既存項目に後から追加した新規項目だけに付け、既存の無料項目には
+   * 絶対に付けないこと（無料だったものが急に有料になるとユーザーの信頼を損なう）。
+   */
+  locked?: boolean;
   /** 公式そのもの（例：底辺 × 高さ ÷ 2） */
   formula: string;
   /** 一行の補足メモ（既存互換） */

@@ -8,12 +8,17 @@ import {
   StyleSheet,
   SafeAreaView,
   TouchableOpacity,
+  ActivityIndicator,
+  Alert,
   Dimensions,
 } from 'react-native';
 import { FORMULAS, SUBJECTS, type Subject } from '../../data/formulas';
 import SubjectIcon, { type IconSubject } from '../../components/SubjectIcon';
 import FigureView from '../../components/FigureView';
 import { formulaImages } from '../../data/formulaImages';
+import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
+import { useSubscription } from '../../hooks/useSubscription';
+import { useBetaAccess } from '../../hooks/useBetaAccess';
 
 // 公式タブの教科名（算数/理科/社会）→ アイコンキー
 const SUBJ_ICON: Record<Subject, IconSubject> = { 算数: 'sansu', 理科: 'rika', 社会: 'shakai' };
@@ -28,7 +33,55 @@ const FORMULA_IMAGE_SIZE = SCREEN_WIDTH - (16 + 12 + 1) * 2;
 
 
 // 1項目分の描画。FlatListの行として使う。
-function FormulaRow({ item, accent }: { item: any; accent: string }) {
+function FormulaRow({
+  item,
+  accent,
+  bypassLock,
+  isUnlocked,
+  priceLabel,
+  productReady,
+  purchasing,
+  onUnlock,
+}: {
+  item: any;
+  accent: string;
+  bypassLock: boolean;
+  isUnlocked: boolean;
+  priceLabel: string;
+  productReady: boolean;
+  purchasing: boolean;
+  onUnlock: () => void;
+}) {
+  if (item.locked && !bypassLock && !isUnlocked) {
+    return (
+      <View style={styles.formulaRow}>
+        <View style={[styles.formulaLabel, { borderLeftColor: accent }]}>
+          <Text style={styles.formulaLabelText}>{item.label}</Text>
+        </View>
+        <View style={styles.lockCard}>
+          <Text style={styles.lockIcon}>🔒</Text>
+          <Text style={styles.lockText}>
+            この項目は買い切りで解放できます（{priceLabel}・1回のみ）
+          </Text>
+          <TouchableOpacity
+            style={[styles.unlockBtn, { backgroundColor: accent }, (!productReady || purchasing) && styles.unlockBtnDisabled]}
+            activeOpacity={0.85}
+            disabled={!productReady || purchasing}
+            onPress={onUnlock}
+          >
+            {purchasing ? (
+              <ActivityIndicator color="#FFFFFF" />
+            ) : (
+              <Text style={styles.unlockBtnText}>
+                {productReady ? `${priceLabel}で解放する` : '準備中です'}
+              </Text>
+            )}
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  }
+
   return (
       <View style={styles.formulaRow}>
         <View style={[styles.formulaLabel, { borderLeftColor: accent }]}>
@@ -113,6 +166,26 @@ export default function FormulasScreen() {
   const sections = FORMULAS[subject];
   const subjectInfo = SUBJECTS.find((s) => s.key === subject)!;
 
+  const { isPro, isMax } = useSubscription();
+  const { hasAccess: betaAccess } = useBetaAccess();
+  const bypassLock = isPro || isMax || betaAccess;
+  const {
+    unlockedIds,
+    productReady,
+    priceLabel,
+    purchasingFigureId,
+    unlockFormula,
+  } = useFormulaUnlocks();
+
+  async function handleUnlock(label: string) {
+    const result = await unlockFormula(label);
+    if (!result.ok) {
+      Alert.alert('購入できませんでした', result.message);
+      return;
+    }
+    Alert.alert('解放しました', `「${label}」はこれ以降ずっと無料で見られます。`);
+  }
+
   // セクション見出しと項目を1本のリストにならし、FlatListで仮想化できるようにする
   type Row =
     | { kind: 'header'; key: string; title: string; intro?: string }
@@ -174,7 +247,16 @@ export default function FormulasScreen() {
               {row.intro != null && <Text style={styles.sectionIntro}>{row.intro}</Text>}
             </View>
           ) : (
-            <FormulaRow item={row.item} accent={subjectInfo.color} />
+            <FormulaRow
+              item={row.item}
+              accent={subjectInfo.color}
+              bypassLock={bypassLock}
+              isUnlocked={unlockedIds.has(row.item.label)}
+              priceLabel={priceLabel}
+              productReady={productReady}
+              purchasing={purchasingFigureId === row.item.label}
+              onUnlock={() => handleUnlock(row.item.label)}
+            />
           )
         }
       />
@@ -269,6 +351,26 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     color: '#333',
   },
+  lockCard: {
+    backgroundColor: '#FAF6EF',
+    borderRadius: 12,
+    padding: 18,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#E8DCC8',
+    borderStyle: 'dashed',
+  },
+  lockIcon: { fontSize: 28, marginBottom: 6 },
+  lockText: { fontSize: 14, color: '#6E645C', textAlign: 'center', marginBottom: 12, lineHeight: 21 },
+  unlockBtn: {
+    borderRadius: 8,
+    paddingVertical: 11,
+    paddingHorizontal: 24,
+    minWidth: 160,
+    alignItems: 'center',
+  },
+  unlockBtnDisabled: { backgroundColor: '#C7B9A6' },
+  unlockBtnText: { color: '#FFFFFF', fontSize: 14.5, fontWeight: '800' },
   formulaBox: {
     backgroundColor: '#FAF6EF',
     borderRadius: 8,
