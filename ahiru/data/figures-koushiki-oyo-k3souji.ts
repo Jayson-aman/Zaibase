@@ -206,4 +206,30 @@ export const figuresKoushikiOyoK3Souji: Record<string, Figure> = {
       '逆に、この3つの比をかけると1になることから、チェバの定理の逆により3直線AD、BE、CFが1点で交わることが確認できる',
     ],
   },
+  koushiki_k3souji_heikousen_oyo3: {
+    kind: 'polygon',
+    points: [
+      { x: 0, y: 0, label: 'B' },
+      { x: 3, y: 0, label: 'F' },
+      { x: 8, y: 0, label: 'D' },
+      { x: 8, y: 10, label: 'C' },
+      { x: 3, y: 3.75, label: 'E' },
+      { x: 0, y: 6, label: 'A' },
+    ],
+    sideLabels: [null, null, 'CD=10cm', null, null, 'AB=6cm'],
+    diagonals: [
+      [0, 4],
+      [4, 2],
+      [4, 1],
+    ],
+    caption:
+      'AB⊥BD、CD⊥BDで、AB=6cm、CD=10cm。対角線ADとBCの交点をEとし、EからBDに垂線を下ろした足をFとするとAB∥EF∥CD',
+    steps: [
+      'B, D上にそれぞれ垂直に辺AB=6cm、CD=10cmを立て、対角線ADとBCの交点をEとする',
+      'EからBDに垂線を下ろした点をFとすると、AB∥EF∥CD（すべてBDに垂直だから平行）',
+      'BD上でBからの距離の割合をtとすると、直線AD上の高さは6-6t、直線BC上の高さは10t。Eではこの2つが一致するので6-6t=10tよりt=3/8',
+      'よってBF:BD=3:8、FD:BD=5:8なので、BF:FD=3:5',
+      'Eの高さ（EFの長さ）は6-6×3/8=3.75cm。AB:EF=6:3.75を整数比に直すと8:5',
+    ],
+  },
 };
