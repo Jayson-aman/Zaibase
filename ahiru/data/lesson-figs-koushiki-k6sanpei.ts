@@ -102,4 +102,18 @@ export const lessonFigsKoushikiK6Sanpei: Record<string, Figure> = {
       '以上より、3本の中線AMa・BMb・CMcは1点（重心G）で交わり、その点は各中線を頂点から2:1に分けることが、具体的な座標計算から確認できる',
     ],
   },
+  lf_koushiki_k6sanpei_kukan_zukei: {
+    kind: 'solid',
+    shape: 'cuboid',
+    labels: { width: '2cm', depth: '3cm', height: '6cm' },
+    caption: '直方体の対角線AG。AB=2cm、AD=3cm、AE=6cmのとき、対角線AG=√(2²+3²+6²)=√49=7cm',
+    steps: [
+      '底面の長方形ABCDに注目し、対角線ACを求める。AB=2cm、AD=3cmより、三平方の定理よりAC²=2²+3²=4+9=13',
+      '次に三角形ACGに注目する。CG=AE=6cm(直方体の高さ)であり、CGは底面に垂直なのでAC⊥CGが成り立つ',
+      '三平方の定理より AG²=AC²+CG²=13+36=49',
+      'AG²=49より、AG=√49=7cm',
+      'この結果は、AG²=AB²+AD²+AE²=2²+3²+6²=4+9+36=49という「直方体の対角線の公式」とも一致する',
+      'このように、直方体の対角線は三平方の定理を2回使う(または3辺の2乗の和の平方根を1回で計算する)ことで求められる',
+    ],
+  },
 };

@@ -1,3 +1,23 @@
 import type { MangaScript } from './manga-types';
 
-export const mangaScriptsKoushikiK5En2: Record<string, MangaScript> = {};
+export const mangaScriptsKoushikiK5En2: Record<string, MangaScript> = {
+  koushiki_k5en2_futatsu_no_en_manga: {
+    id: 'koushiki_k5en2_futatsu_no_en_manga',
+    title: '二つの円の位置関係を発見しよう',
+    panels: [
+      { speaker: 't', line: '2つの円を用意して、片方をだんだん近づけていくよ。最初はすごく離れているとする。' },
+      { speaker: 's1', line: '全然重ならないから、交わる点はないですね。' },
+      { speaker: 's2', line: '接線を引いてみると…外側に2本、間を横切るように2本、合計4本引けます!' },
+      { speaker: 't', line: 'いいところに気づいたね。じゃあ、だんだん近づけて、ちょうど外側からくっついた瞬間はどうなる?' },
+      { speaker: 's1', line: 'あ、接する点が1つだけできました!接線も、間を横切る2本が1本にくっついちゃって、合計3本になった気がします。' },
+      { speaker: 't', line: 'その通り。このとき中心間の距離dは、ちょうどr₁+r₂(2つの半径の和)になっているんだ。' },
+      { speaker: 's2', line: 'もっと近づけたら、2点で交わりそうですね。円が重なり始めたら…間を横切る接線はもう引けなくなりそうです。' },
+      { speaker: 't', line: 'そう。円が重なっているところを直線が横切ろうとすると、必ずどちらかの円の中を通ってしまうから、接線としては使えなくなる。だから交わっているときは接線が2本だけになる。' },
+      { speaker: 's1', line: 'さらに近づけて、片方がもう片方の中にすっぽり入って接するときは?' },
+      { speaker: 's2', line: '今度は中心間の距離が、半径の差(大きい方から小さい方を引いた値)と同じになりそうです!' },
+      { speaker: 't', line: 'd>r₁+r₂:離れている(4本) / d=r₁+r₂:外接(3本) / |r₁−r₂|<d<r₁+r₂:2点で交わる(2本) / d=|r₁−r₂|:内接(1本) / d<|r₁−r₂|:内部にある(0本)', emphasis: true },
+      { speaker: 's1', line: 'dの値ひとつで、円同士の関係も接線の本数も全部決まっちゃうんですね!' },
+      { speaker: 't', line: 'そういうこと。d、r₁、r₂の3つの数を比べるだけで、5パターンすべて判定できる。この対応表を覚えておけば、円の位置関係の問題はもう怖くない。' },
+    ],
+  },
+};
