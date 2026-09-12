@@ -239,4 +239,30 @@ export const figuresKoushikiOyoK6Sanpei: Record<string, Figure> = {
       'Oを原点、Pを(0,0,15)、Aを(8,0,0)とすると、空間の2点間の距離の公式よりPA=√(8²+0²+15²)=√(64+225)=√289=17cmとなり、はじめの条件と一致する',
     ],
   },
+  koushiki_k6sanpei_sanpeihou_oyo3: {
+    kind: 'polygon',
+    points: [
+      { x: 3.667, y: 5.963, label: 'A' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 3.667, y: 0, label: 'H' },
+      { x: 9, y: 0, label: 'C' },
+    ],
+    sideLabels: ['AB=7cm', null, null, 'CA=8cm'],
+    diagonals: [[0, 2]],
+    heights: [{ from: 0, toEdge: [1, 3], label: 'AH' }],
+    regions: [
+      { indices: [0, 1, 2], color: '#FEF3C7' },
+      { indices: [0, 2, 3], color: '#DBEAFE' },
+    ],
+    caption:
+      'AB=7cm、BC=9cm、CA=8cmの△ABCで、AからBCに垂線AHを引く。△ABH(黄)と△ACH(青)の2つの直角三角形に分かれる',
+    steps: [
+      'AB=7cm、BC=9cm、CA=8cmの△ABC。AからBCに垂線AHを引き、BH=xcmとする',
+      '直角三角形ABH(黄)で三平方の定理より AH²=7²−x²',
+      '直角三角形ACH(青)で、CH=9−xなので三平方の定理より AH²=8²−(9−x)²',
+      '2つの式は同じAH²を表しているので、7²−x²=8²−(9−x)²という方程式が立てられる',
+      'これを解くとx=11/3。AH²=49−(11/3)²=320/9より、AH=(8√5)/3cm',
+      '△ABC=(1/2)×BC×AH=(1/2)×9×(8√5)/3=12√5cm²',
+    ],
+  },
 };

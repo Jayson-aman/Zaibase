@@ -273,6 +273,19 @@ function PolygonFig({ fig }: { fig: PolyFigure }) {
   const c = centroid(P);
   const els: React.ReactNode[] = [];
 
+  // 部分図形の色分け塗りつぶし（本体の下に敷く。参考書の「比べている三角形を色で塗る」表現）
+  const REGION_PALETTE = ['#FEF3C7', '#DBEAFE', '#FCE7F3', '#DCFCE7', '#EDE9FE'];
+  fig.regions?.forEach((r, k) => {
+    els.push(
+      <SvgPolygon
+        key={`rg${k}`}
+        points={r.indices.map((i) => `${P[i].x},${P[i].y}`).join(' ')}
+        fill={r.color ?? REGION_PALETTE[k % REGION_PALETTE.length]}
+        stroke="none"
+      />,
+    );
+  });
+
   // 本体
   els.push(
     <SvgPolygon

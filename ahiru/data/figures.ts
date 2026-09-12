@@ -32,6 +32,12 @@ export type PolyFigure = {
   equalAngles?: number[][]; // 等しい角のグループ（頂点index）
   diagonals?: [number, number][]; // 対角線（頂点index対）
   heights?: { from: number; toEdge: [number, number]; label?: string }[]; // 高さ（垂線）
+  /**
+   * 図の中の部分三角形・部分図形を色分けして塗りつぶす（参考書のように、比べている
+   * 2つ・3つの三角形をそれぞれ別の色で塗ると、どことどこを比べているか一目で分かる）。
+   * indicesはpointsの頂点indexを結んで塗る部分図形（3つ以上）。colorは省略時パレットを順に使う。
+   */
+  regions?: { indices: number[]; color?: string }[];
   caption?: string;
   /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
   steps?: string[];
