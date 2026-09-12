@@ -22,7 +22,13 @@ import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 
 // 公式タブの教科名（算数/理科/社会）→ アイコンキー
-const SUBJ_ICON: Record<Subject, IconSubject> = { 算数: 'sansu', 理科: 'rika', 社会: 'shakai' };
+const SUBJ_ICON: Record<Subject, IconSubject> = {
+  算数: 'sansu',
+  国語: 'kokugo',
+  理科: 'rika',
+  社会: 'shakai',
+  英語: 'eigo',
+};
 
 // 図解画像の一辺のサイズをあらかじめ画面幅から計算しておく。width:'100%'をFlatList内の
 // Imageに使うと、リスト仮想化中のレイアウト計測タイミングによっては一瞬（あるいは
