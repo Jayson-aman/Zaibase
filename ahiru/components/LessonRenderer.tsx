@@ -4,8 +4,10 @@ import type { LessonSection } from '../data/lesson-types';
 import { getLessonFigure } from '../data/lesson-figures';
 import { getKoushikiFormulaInfo } from '../data/koushiki-access';
 import { getMangaScript } from '../data/manga-scripts';
+import { getKoushikiQuestionsForFigure } from '../data/koushiki-questions';
 import FigureView from './FigureView';
 import MangaDialogue from './MangaDialogue';
+import InlineQuiz from './InlineQuiz';
 
 type Props = {
   sections: LessonSection[];
@@ -140,6 +142,14 @@ export default function LessonRenderer({
             {section.mangaId != null && (() => {
               const script = getMangaScript(section.mangaId);
               return script != null ? <MangaDialogue script={script} /> : null;
+            })()}
+            {/* 「何の問題を解いているか分からない」を防ぐため、公式集は
+                その公式の例題・応用問題をこの場に出す。ロック中のセクションは
+                上のisLockedFormula分岐でこの行まで到達しないので、
+                買い切り前の公式の問題が漏れることはない。 */}
+            {section.figureId != null && (() => {
+              const qs = getKoushikiQuestionsForFigure(section.figureId);
+              return qs.length > 0 ? <InlineQuiz questions={qs} /> : null;
             })()}
           </View>
         );
