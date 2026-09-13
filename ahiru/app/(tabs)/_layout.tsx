@@ -27,11 +27,12 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <TabBarIcon name="quiz" color={color} />,
         }}
       />
+      {/* 教科書はホームの一番上から開く。下のタブからは外してある
+          （ここを href: null にしても画面自体は残るので、遷移はできる）。 */}
       <Tabs.Screen
         name="textbook"
         options={{
-          title: 'テキスト',
-          tabBarIcon: ({ color }) => <TabBarIcon name="textbook" color={color} />,
+          href: null,
         }}
       />
       <Tabs.Screen
