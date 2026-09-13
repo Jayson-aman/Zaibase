@@ -51,6 +51,12 @@ function renderBody(body: string): React.ReactNode[] {
     while (j < lines.length && (isArtLine(lines[j]) || (lines[j].trim() === '' && j + 1 < lines.length && isArtLine(lines[j + 1])))) {
       j++;
     }
+    // 1行だけのものは図ではなく、絶対値の式（|x−y|）などのことが多い。
+    // 等幅の箱に入れると本文から浮くので、ふつうの本文として扱う。
+    if (j - i < 2) {
+      out.push(renderLine(lines[i], i));
+      continue;
+    }
     // 図に付いている短いラベル行（「C（頂点）」「左辺　右辺」「（∠A = 45°）」など）も
     // 同じ等幅の箱に入れる。別々に描くと、ラベルだけ字幅がずれて図から離れて見える。
     let start = i;
