@@ -13,6 +13,7 @@ import { kokugoExt09Lessons } from './lessons-kokugo-ext09';
 import { kokugoExt10Lessons } from './lessons-kokugo-ext10';
 import { kokugoExt11Lessons } from './lessons-kokugo-ext11';
 import { kokugoExt12Lessons } from './lessons-kokugo-ext12';
+import { kokugoExt13Lessons } from './lessons-kokugo-ext13';
 import { lessonsNew20E4Kokugo } from './lessons-new20-e4-kokugo';
 import { lessonsNew20E5Kokugo } from './lessons-new20-e5-kokugo';
 import { lessonsNew20E6Kokugo } from './lessons-new20-e6-kokugo';
@@ -4186,6 +4187,7 @@ export const kokugoLessons: Lesson[] = [
   ...kokugoExt10Lessons,
   ...kokugoExt11Lessons,
   ...kokugoExt12Lessons,
+  ...kokugoExt13Lessons,
   ...lessonsNew20E4Kokugo,
   ...lessonsNew20E5Kokugo,
   ...lessonsNew20E6Kokugo,
