@@ -641,11 +641,10 @@ Our school has a sports day in October. Students run races and play tug-of-war. 
     maxOnly: true,
     question: `次の時間割表を見て、質問に答えなさい。
 
-| 時限 | 月曜日 | 火曜日 |
-|---|---|---|
-| 1 | Math | English |
-| 2 | English | Science |
-| 3 | Science | Math |
+　時限／月曜日／火曜日
+　1 … 月曜日はMath／火曜日はEnglish
+　2 … 月曜日はEnglish／火曜日はScience
+　3 … 月曜日はScience／火曜日はMath
 
 ① What subject does he/she have first on Monday?
 ② How many English classes are there in this table?`,
@@ -959,11 +958,10 @@ Question: What do you want to do this summer? And why?
 
 Emi is planning a weekend with her friends. Look at the plan below.
 
-| Day | Activity | Time |
-|---|---|---|
-| Saturday | Shopping | 10:00 a.m. |
-| Saturday | Movie | 2:00 p.m. |
-| Sunday | Picnic | 11:00 a.m. |
+　Day／Activity／Time
+　Saturday … ActivityはShopping／Timeは10:00 a.m.
+　Saturday … ActivityはMovie／Timeは2:00 p.m.
+　Sunday … ActivityはPicnic／Timeは11:00 a.m.
 
 Emi and her friends will go shopping first, and then they will watch a movie in the afternoon. On Sunday, they are going to have a picnic in the park.
 

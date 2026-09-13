@@ -62,8 +62,8 @@ export const gradeJ1ShakaiQuestions: Question[] = [
     examType: 'koko',
     grade: 'j1',
     difficulty: 'basic',
-    question: '日本の標準時の基準となる経線（日本標準時子午線）は東経何度で、兵庫県の何市を通るか。',
-    answer: '東経135度、兵庫県明石市',
+    question: '東経135度の日本標準時子午線が通る、兵庫県の市はどこか。',
+    answer: '兵庫県明石市',
     hint: '「時のまち」として知られる、天文科学館がある都市。',
     explanation:
       '【解説】\n日本の標準時は東経135度の経線を基準に決められており、この経線は兵庫県明石市を通る。日本の時刻（日本標準時）は、この経線での太陽の位置をもとに定められている。',
