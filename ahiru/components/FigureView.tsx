@@ -1263,15 +1263,68 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
   const parts = useMemo(() => buildParts(figure, uid), [figure, uid]);
 
   const totalSteps = figure.steps?.length ?? 0;
+  // 手順がある解説図は、1手順＝1枚のスライドとして送る。図のほうも
+  // スライドが進むにつれて描き足されていくので、見ていて動きがある。
+  // 手順が無い図（や問題側の静止図）は、これまでどおり単純な描画のみ。
+  const slideMode = animated && totalSteps > 0;
   const [progress, setProgress] = useState(animated ? 0 : 1);
   const [stepReached, setStepReached] = useState(animated ? 0 : totalSteps);
+  const [slide, setSlide] = useState(0);
+  const [autoPlay, setAutoPlay] = useState(true);
   const rafRef = useRef<number | null>(null);
   const stepTimersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+  const autoTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // アニメーション中の現在値。setProgressだけだと次のフレームで
+  // 古い値から補間してしまうので、refでも持っておく。
+  const progressRef = useRef(animated ? 0 : 1);
 
-  // 図形自体はすぐに描き上がるが、①②③…の解く手順は
-  // スライドショーのように一定間隔でゆっくり切り替える（読む時間を確保する）。
   const DRAW_DUR = 1400;
   const STEP_INTERVAL = 2200;
+  /** 1枚のスライドを自動で送るまでの時間 */
+  const SLIDE_DUR = 4200;
+  /** 図を描き終えるまでに使うスライド枚数（前半で描き上げ、後半は説明に使う） */
+  const buildSlides = Math.max(1, Math.ceil(totalSteps / 2));
+  const targetProgress = slideMode ? Math.min(1, (slide + 1) / buildSlides) : 1;
+
+  // スライドが変わるたびに、図の描画量を今の値から目標値までなめらかに動かす
+  useEffect(() => {
+    if (!slideMode) return;
+    let startTs: number | null = null;
+    const from = progressRef.current;
+    const tick = (ts: number) => {
+      if (startTs == null) startTs = ts;
+      const t = Math.min(1, (ts - startTs) / 600);
+      const v = from + (targetProgress - from) * easeOut(t);
+      progressRef.current = v;
+      setProgress(v);
+      if (t < 1) rafRef.current = requestAnimationFrame(tick);
+    };
+    rafRef.current = requestAnimationFrame(tick);
+    return () => {
+      if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
+    };
+  }, [slideMode, targetProgress]);
+
+  // 自動再生。最後のスライドまで来たら止まる。手で送ったら自動送りはやめる。
+  useEffect(() => {
+    if (!slideMode || !autoPlay || slide >= totalSteps - 1) return;
+    autoTimerRef.current = setTimeout(() => setSlide((s) => Math.min(totalSteps - 1, s + 1)), SLIDE_DUR);
+    return () => {
+      if (autoTimerRef.current != null) clearTimeout(autoTimerRef.current);
+    };
+  }, [slideMode, autoPlay, slide, totalSteps]);
+
+  function goToSlide(next: number) {
+    setAutoPlay(false);
+    setSlide(Math.max(0, Math.min(totalSteps - 1, next)));
+  }
+
+  function replay() {
+    progressRef.current = 0;
+    setProgress(0);
+    setSlide(0);
+    setAutoPlay(true);
+  }
 
   const play = useCallback(() => {
     if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
@@ -1297,12 +1350,13 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
   }, [figure.steps]);
 
   useEffect(() => {
-    if (animated) play();
+    // スライド送りのときは、上のスライド用アニメーションが図の描画を受け持つ
+    if (animated && !slideMode) play();
     return () => {
-      if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
+      if (!slideMode && rafRef.current != null) cancelAnimationFrame(rafRef.current);
       stepTimersRef.current.forEach(clearTimeout);
     };
-  }, [animated, play]);
+  }, [animated, slideMode, play]);
 
   if (figure.kind === 'chemEquation') {
     return (
@@ -1335,7 +1389,7 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
     <View style={styles.wrap}>
       <TouchableOpacity
         activeOpacity={animated ? 0.85 : 1}
-        onPress={animated ? play : undefined}
+        onPress={slideMode ? replay : animated ? play : undefined}
         style={[styles.canvas, { width: w, height: h }]}
       >
         <Svg width="100%" height="100%" viewBox={`0 0 ${VBW} ${VBH}`}>
@@ -1344,13 +1398,51 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
           ))}
         </Svg>
       </TouchableOpacity>
-      {animated && (
+
+      {slideMode && (
+        <View style={[styles.slideBox, { width: w }]}>
+          <View style={styles.slideDots}>
+            {(figure.steps ?? []).map((_, i) => (
+              <View
+                key={i}
+                style={[styles.slideDot, i === slide && styles.slideDotActive, i < slide && styles.slideDotDone]}
+              />
+            ))}
+          </View>
+          <View style={styles.slideHeaderRow}>
+            <Text style={styles.slideCounter}>{slide + 1} / {totalSteps}</Text>
+            {autoPlay && slide < totalSteps - 1 && <Text style={styles.slideAuto}>自動で進みます</Text>}
+          </View>
+          <Text style={styles.slideText}>{(figure.steps ?? [])[slide]}</Text>
+          <View style={styles.slideNav}>
+            <TouchableOpacity
+              style={[styles.slideBtn, styles.slideBtnBack, slide === 0 && styles.slideBtnDisabled]}
+              onPress={() => goToSlide(slide - 1)}
+              disabled={slide === 0}
+              activeOpacity={0.8}
+            >
+              <Text style={[styles.slideBtnText, styles.slideBtnBackText]}>◀ もどる</Text>
+            </TouchableOpacity>
+            {slide < totalSteps - 1 ? (
+              <TouchableOpacity style={styles.slideBtn} onPress={() => goToSlide(slide + 1)} activeOpacity={0.8}>
+                <Text style={styles.slideBtnText}>つぎへ ▶</Text>
+              </TouchableOpacity>
+            ) : (
+              <TouchableOpacity style={styles.slideBtn} onPress={replay} activeOpacity={0.8}>
+                <Text style={styles.slideBtnText}>🔁 最初から</Text>
+              </TouchableOpacity>
+            )}
+          </View>
+        </View>
+      )}
+
+      {animated && !slideMode && (
         <View style={[styles.progressTrack, { width: w }]}>
           <View style={[styles.progressFill, { width: Math.round(w * progress) }]} />
         </View>
       )}
-      {animated && <Text style={styles.replayHint}>▶ タップで再生（動く解説）</Text>}
-      {figure.steps != null && figure.steps.length > 0 && (
+      {animated && !slideMode && <Text style={styles.replayHint}>▶ タップで再生（動く解説）</Text>}
+      {!slideMode && figure.steps != null && figure.steps.length > 0 && (
         <StepsList steps={figure.steps} animated={animated} stepReached={stepReached} />
       )}
       {figure.caption != null && <Text style={styles.caption}>{figure.caption}</Text>}
@@ -1376,6 +1468,60 @@ const styles = StyleSheet.create({
   canvas: {
     alignSelf: 'center',
   },
+  // 手順を1枚ずつ送るスライド。図の下に置き、いま何枚目かを常に見せる。
+  slideBox: {
+    alignSelf: 'center',
+    marginTop: 10,
+    paddingHorizontal: 12,
+    paddingTop: 10,
+    paddingBottom: 12,
+    backgroundColor: '#FAF6EF',
+    borderTopWidth: 1,
+    borderTopColor: '#EBE4D8',
+  },
+  slideDots: {
+    flexDirection: 'row',
+    gap: 3,
+    marginBottom: 8,
+  },
+  slideDot: {
+    flex: 1,
+    height: 3,
+    borderRadius: 2,
+    backgroundColor: '#E8DCC8',
+  },
+  slideDotDone: { backgroundColor: '#C7B9A6' },
+  slideDotActive: { backgroundColor: '#B5622E' },
+  slideHeaderRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 6,
+  },
+  slideCounter: { fontSize: 12, fontWeight: '800', color: '#8B5A38' },
+  slideAuto: { fontSize: 11, color: '#9C9186' },
+  slideText: {
+    fontSize: 15,
+    lineHeight: 24,
+    color: '#2B2420',
+    minHeight: 72,
+  },
+  slideNav: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    gap: 8,
+    marginTop: 10,
+  },
+  slideBtn: {
+    backgroundColor: '#B5622E',
+    borderRadius: 8,
+    paddingVertical: 9,
+    paddingHorizontal: 16,
+  },
+  slideBtnBack: { backgroundColor: '#EFE7D8' },
+  slideBtnDisabled: { opacity: 0.4 },
+  slideBtnText: { color: '#FFFFFF', fontWeight: '800', fontSize: 13.5 },
+  slideBtnBackText: { color: '#8B5A38' },
   chemCanvas: {
     paddingVertical: 14,
   },
