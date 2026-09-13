@@ -25,11 +25,17 @@ type Props = {
 // 等幅フォントで桁をそろえる前提で書かれている。ふつうの本文と同じ
 // 可変幅フォントで出すと桁がずれて何の図か分からなくなるので、
 // 連続する罫線の行はまとめて等幅・横スクロールの箱で出す。
-const BOX_DRAWING = /[┌┐└┘├┤┬┴┼─━│┃╱╲╳]/;
+const BOX_DRAWING = /[┌┐└┘├┤┬┴┼─━│┃╱╲╳|/\\＼]/;
 const MONO = Platform.select({ ios: 'Courier', android: 'monospace', default: 'monospace' });
 
 function isArtLine(line: string): boolean {
-  return BOX_DRAWING.test(line);
+  const t = line.replace(/[　\s]/g, '');
+  if (t === '' || !BOX_DRAWING.test(t)) return false;
+  // 「know ／ no」「big（large）／ small」のような単語の並びは図ではないので、
+  // 単語（小文字が2つ以上続く）や日本語が入っている行は本文として扱う。
+  if (/[a-z]{2,}/.test(t)) return false;
+  if (/[ぁ-んァ-ヶ一-龥]/.test(t)) return false;
+  return true;
 }
 
 function renderBody(body: string): React.ReactNode[] {
@@ -45,12 +51,23 @@ function renderBody(body: string): React.ReactNode[] {
     while (j < lines.length && (isArtLine(lines[j]) || (lines[j].trim() === '' && j + 1 < lines.length && isArtLine(lines[j + 1])))) {
       j++;
     }
+    // 図に付いている短いラベル行（「C（頂点）」「左辺　右辺」「（∠A = 45°）」など）も
+    // 同じ等幅の箱に入れる。別々に描くと、ラベルだけ字幅がずれて図から離れて見える。
+    let start = i;
+    const isLabel = (l: string) =>
+      l.trim() !== '' && l.replace(/[　\s]/g, '').length <= 14 && !/^\s*[■●例★→⚠]/.test(l);
+    while (start > 0 && out.length > 0 && isLabel(lines[start - 1])) {
+      start--;
+      out.pop();
+    }
+    let end = j;
+    while (end < lines.length && isLabel(lines[end])) end++;
     out.push(
-      <ScrollView key={`art${i}`} horizontal showsHorizontalScrollIndicator={false} style={styles.artBox}>
-        <Text style={styles.artText}>{lines.slice(i, j).join('\n')}</Text>
+      <ScrollView key={`art${start}`} horizontal showsHorizontalScrollIndicator={false} style={styles.artBox}>
+        <Text style={styles.artText}>{lines.slice(start, end).join('\n')}</Text>
       </ScrollView>,
     );
-    i = j - 1;
+    i = end - 1;
   }
   return out;
 }
