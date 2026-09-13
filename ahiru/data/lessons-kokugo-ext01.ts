@@ -8,7 +8,7 @@ import type { Lesson } from './lesson-types';
 // 図解は「漢字そのものを描けない」教科の性質上、位置関係・分類・数値など
 // 図にして本当に意味がある箇所だけに付けてある（lesson-figs-kokugo-ext01.ts）。
 export const kokugoExt01Lessons: Lesson[] = [
-  // ───────────────────── 1. 音読み・訓読み（s001〜s005） ─────────────────────
+  //  1. 音読み・訓読み（s001〜s005） 
   {
     id: 'kokugo_s001',
     subject: 'kokugo',
@@ -428,7 +428,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 2. 部首と成り立ち（s006〜s010） ─────────────────────
+  //  2. 部首と成り立ち（s006〜s010） 
   {
     id: 'kokugo_s006',
     subject: 'kokugo',
@@ -899,7 +899,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 3. 同音異義語（s011〜s016） ─────────────────────
+  //  3. 同音異義語（s011〜s016） 
   {
     id: 'kokugo_s011',
     subject: 'kokugo',
@@ -1442,7 +1442,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 4. 同訓異字（s017〜s022） ─────────────────────
+  //  4. 同訓異字（s017〜s022） 
   {
     id: 'kokugo_s017',
     subject: 'kokugo',
@@ -1958,7 +1958,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 5. 送りがな（s023〜s026） ─────────────────────
+  //  5. 送りがな（s023〜s026） 
   {
     id: 'kokugo_s023',
     subject: 'kokugo',
@@ -2336,7 +2336,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 6. 特別な読み・熟字訓（s027〜s030） ─────────────────────
+  //  6. 特別な読み・熟字訓（s027〜s030） 
   {
     id: 'kokugo_s027',
     subject: 'kokugo',
@@ -2708,7 +2708,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 7. 書き誤りやすい漢字（s031〜s035） ─────────────────────
+  //  7. 書き誤りやすい漢字（s031〜s035） 
   {
     id: 'kokugo_s031',
     subject: 'kokugo',
@@ -3193,7 +3193,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 8. 入試頻出漢字演習（s036〜s040） ─────────────────────
+  //  8. 入試頻出漢字演習（s036〜s040） 
   {
     id: 'kokugo_s036',
     subject: 'kokugo',

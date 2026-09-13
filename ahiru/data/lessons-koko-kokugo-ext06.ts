@@ -8,7 +8,7 @@ import type { Lesson } from './lesson-types';
 // 図解は lesson-figs-koko-kokugo-ext06.ts。心情の変化（lineChart）・人物関係（coordinate）・
 // 場面の展開（numberLine）など、図にすることで本当に理解が進む箇所にだけ付けてある（35課中15課）。
 export const kokoKokugoExt06Lessons: Lesson[] = [
-  // ───────────────── 1. 人物像のとらえ方（s196〜s200 / order 696〜700） ─────────────────
+  //  1. 人物像のとらえ方（s196〜s200 / order 696〜700） 
   {
     id: 'koko_kokugo_s196',
     subject: 'kokugo',
@@ -255,8 +255,8 @@ export const kokoKokugoExt06Lessons: Lesson[] = [
 　母は、台所で洗い物をしながら、そう言って笑った。まるでほめているような言い方だった。
 　姉の私は、返事をしなかった。修二が要領が悪いのは本当だ。宿題を写させてくれと頼まれれば貸すし、掃除の分担でいちばん面倒な流し場をいつも引き受けている。損ばかりしている。
 　その夜、私は自分の部屋で修二の筆箱を見つけた。中に、小さく折りたたまれた紙が入っていた。開くと、うちのクラスの座席表だった。名前の横に、細かい字で書きこみがある。
-「山本さん──いつも三時間目に保健室」
-「太田くん──弟が入院」
+「山本さんいつも三時間目に保健室」
+「太田くん弟が入院」
 　私はしばらく動けなかった。修二は、要領が悪いのではなかった。ただ、人のことを見すぎていて、見てしまった以上、放っておけないだけだった。
 　翌朝、修二はまた流し場に立っていた。私は黙って隣に並び、蛇口をもう一つひねった。
 
@@ -497,7 +497,7 @@ export const kokoKokugoExt06Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────── 2. 主題の読み取り（s201〜s206 / order 701〜706） ─────────────────
+  //  2. 主題の読み取り（s201〜s206 / order 701〜706） 
   {
     id: 'koko_kokugo_s201',
     subject: 'kokugo',
@@ -1105,7 +1105,7 @@ export const kokoKokugoExt06Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 3. 視点（語り手）と人称（s207〜s211 / order 707〜711） ─────────────
+  //  3. 視点（語り手）と人称（s207〜s211 / order 707〜711） 
   {
     id: 'koko_kokugo_s207',
     subject: 'kokugo',
@@ -1613,7 +1613,7 @@ export const kokoKokugoExt06Lessons: Lesson[] = [
     ],
   },
 
-  // ───── 4. 表現技法（比喩・擬人法・倒置・体言止め・反復）（s212〜s217 / order 712〜717） ─────
+  //  4. 表現技法（比喩・擬人法・倒置・体言止め・反復）（s212〜s217 / order 712〜717） 
   {
     id: 'koko_kokugo_s212',
     subject: 'kokugo',
@@ -2242,7 +2242,7 @@ export const kokoKokugoExt06Lessons: Lesson[] = [
     ],
   },
 
-  // ───────── 5. 象徴的な事物の読み取り（s218〜s222 / order 718〜722） ─────────
+  //  5. 象徴的な事物の読み取り（s218〜s222 / order 718〜722） 
   {
     id: 'koko_kokugo_s218',
     subject: 'kokugo',
@@ -2789,7 +2789,7 @@ export const kokoKokugoExt06Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 6. 伏線と回収（s223〜s226 / order 723〜726） ─────────────
+  //  6. 伏線と回収（s223〜s226 / order 723〜726） 
   {
     id: 'koko_kokugo_s223',
     subject: 'kokugo',
@@ -2822,7 +2822,7 @@ export const kokoKokugoExt06Lessons: Lesson[] = [
 　→ 家具の説明として細かすぎる。あとで開けられる。
 
 ■ 目印③：不自然な言い残し・中断
-例）　「あのとき、本当は──」と言いかけて、母は口をつぐんだ。
+例）　「あのとき、本当は」と言いかけて、母は口をつぐんだ。
 　→ 言いかけて止めた内容は、必ずあとで明かされる。
 
 ■ 目印④：唐突な回想・連想
@@ -3249,7 +3249,7 @@ export const kokoKokugoExt06Lessons: Lesson[] = [
     ],
   },
 
-  // ───────── 7. 記述で心情を説明する（s227〜s230 / order 727〜730） ─────────
+  //  7. 記述で心情を説明する（s227〜s230 / order 727〜730） 
   {
     id: 'koko_kokugo_s227',
     subject: 'kokugo',

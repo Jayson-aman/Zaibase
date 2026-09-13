@@ -7,7 +7,7 @@ import type { Lesson } from './lesson-types';
 // 図解（lesson-figs-eigo-ext05.ts）は、語順そのものが得点を左右する箇所と、
 // 「確信の強さ」「義務の強さ」「ていねいさ」のように目盛りで比べると理解が進む箇所だけに付けてある（35課中15課）。
 export const eigoExt05Lessons: Lesson[] = [
-  // ───────────────────── 1. can / be able to（s156〜s159） ─────────────────────
+  //  1. can / be able to（s156〜s159） 
   {
     id: 'eigo_s156',
     subject: 'eigo',
@@ -333,7 +333,7 @@ must be 〜（〜にちがいない） ⇔ can't be 〜（〜のはずがない�
     ],
   },
 
-  // ───────────────────── 2. may / might（s160〜s162） ─────────────────────
+  //  2. may / might（s160〜s162） 
   {
     id: 'eigo_s160',
     subject: 'eigo',
@@ -579,7 +579,7 @@ B: I'm sorry, but my friend is coming.（すみません、友達が来るので
       },
     ],
   },
-  // ───────────────────── 3. must / have to（s163〜s167） ─────────────────────
+  //  3. must / have to（s163〜s167） 
   {
     id: 'eigo_s163',
     subject: 'eigo',
@@ -1006,7 +1006,7 @@ You must be Tom's sister.（トムのお姉さんにちがいない）＝推量
     ],
   },
 
-  // ───────────────────── 4. should / had better（s168〜s170） ─────────────────────
+  //  4. should / had better（s168〜s170） 
   {
     id: 'eigo_s168',
     subject: 'eigo',
@@ -1263,7 +1263,7 @@ B: Sounds good. Let's meet at the gate.（いいね。門のところで待ち�
       },
     ],
   },
-  // ───────────────────── 5. will / would（s171〜s173） ─────────────────────
+  //  5. will / would（s171〜s173） 
   {
     id: 'eigo_s171',
     subject: 'eigo',
@@ -1799,7 +1799,7 @@ B: Sounds good.（いいですね）
     ],
   },
 
-  // ───────────────────── 7. 依頼・許可の会話表現（s177〜s180） ─────────────────────
+  //  7. 依頼・許可の会話表現（s177〜s180） 
   {
     id: 'eigo_s177',
     subject: 'eigo',
@@ -2156,7 +2156,7 @@ I'd like to, but 〜（行きたいのですが〜）は、断り方としてと
       },
     ],
   },
-  // ───────────────────── 8. 命令文（s181〜s184） ─────────────────────
+  //  8. 命令文（s181〜s184） 
   {
     id: 'eigo_s181',
     subject: 'eigo',
@@ -2525,7 +2525,7 @@ If you hurry up, you will catch the bus.
     ],
   },
 
-  // ───────────────────── 9. 感嘆文（s185〜s187） ─────────────────────
+  //  9. 感嘆文（s185〜s187） 
   {
     id: 'eigo_s185',
     subject: 'eigo',
@@ -2811,7 +2811,7 @@ How old is this temple?（疑問文・動詞→主語）
     ],
   },
 
-  // ───────────────────── 10. 付加疑問・否定疑問（s188〜s190） ─────────────────────
+  //  10. 付加疑問・否定疑問（s188〜s190） 
   {
     id: 'eigo_s188',
     subject: 'eigo',

@@ -7,7 +7,7 @@ import type { Lesson } from './lesson-types';
 // 図解は「漢字そのものを描けない」国語の性質上、分類の割合・意味の広がり・年代・数値など
 // 図にすることで本当に理解が進む箇所にだけ付けてある（40課中17課）。
 export const kokoKokugoExt01Lessons: Lesson[] = [
-  // ───────── 1. 漢字の読み書き（同音異義語・同訓異字）s001〜s008 ─────────
+  //  1. 漢字の読み書き（同音異義語・同訓異字）s001〜s008 
   {
     id: 'koko_kokugo_s001',
     subject: 'kokugo',
@@ -758,7 +758,7 @@ export const kokoKokugoExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────── 2. 熟語の構成 s009〜s014 ─────────
+  //  2. 熟語の構成 s009〜s014 
   {
     id: 'koko_kokugo_s009',
     subject: 'kokugo',
@@ -1336,7 +1336,7 @@ export const kokoKokugoExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────── 3. 四字熟語 s015〜s020 ─────────
+  //  3. 四字熟語 s015〜s020 
   {
     id: 'koko_kokugo_s015',
     subject: 'kokugo',
@@ -1990,7 +1990,7 @@ export const kokoKokugoExt01Lessons: Lesson[] = [
       },
     ],
   },
-  // ───────── 4. 慣用句・ことわざ・故事成語 s021〜s028 ─────────
+  //  4. 慣用句・ことわざ・故事成語 s021〜s028 
   {
     id: 'koko_kokugo_s021',
     subject: 'kokugo',
@@ -2869,7 +2869,7 @@ export const kokoKokugoExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────── 5. 類義語・対義語 s029〜s033 ─────────
+  //  5. 類義語・対義語 s029〜s033 
   {
     id: 'koko_kokugo_s029',
     subject: 'kokugo',
@@ -3403,7 +3403,7 @@ export const kokoKokugoExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────── 6. 和語・漢語・外来語 s034〜s037 ─────────
+  //  6. 和語・漢語・外来語 s034〜s037 
   {
     id: 'koko_kokugo_s034',
     subject: 'kokugo',
@@ -3855,7 +3855,7 @@ export const kokoKokugoExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────── 7. 入試頻出語彙演習 s038〜s040 ─────────
+  //  7. 入試頻出語彙演習 s038〜s040 
   {
     id: 'koko_kokugo_s038',
     subject: 'kokugo',

@@ -8,7 +8,7 @@ import type { Lesson } from './lesson-types';
 // 図解は 40 課中 18 課（45%）。語順ボックス（polygon）と修飾範囲の線（numberLine）だけを使い、
 // 英文はスペル・冠詞・三単現・時制を検算してある（lesson-figs-koko-eigo-ext09.ts）。
 export const kokoEigoExt09Lessons: Lesson[] = [
-  // ───────── 1. 関係代名詞 who（主格）（s296〜s299） ─────────
+  //  1. 関係代名詞 who（主格）（s296〜s299） 
   {
     id: 'koko_eigo_s296',
     subject: 'eigo',
@@ -373,7 +373,7 @@ who lives in Canada がひとかたまりで a friend を説明している。�
     ],
   },
 
-  // ───────── 2. 関係代名詞 which（主格・目的格）（s300〜s303） ─────────
+  //  2. 関係代名詞 which（主格・目的格）（s300〜s303） 
   {
     id: 'koko_eigo_s300',
     subject: 'eigo',
@@ -739,7 +739,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     ],
   },
 
-  // ───────── 3. that の用法（s304〜s307） ─────────
+  //  3. that の用法（s304〜s307） 
   {
     id: 'koko_eigo_s304',
     subject: 'eigo',
@@ -1123,7 +1123,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     ],
   },
 
-  // ───────── 4. 目的格の省略（s308〜s311） ─────────
+  //  4. 目的格の省略（s308〜s311） 
   {
     id: 'koko_eigo_s308',
     subject: 'eigo',
@@ -1514,7 +1514,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     ],
   },
 
-  // ───────── 5. 関係代名詞と分詞の書きかえ（s312〜s314） ─────────
+  //  5. 関係代名詞と分詞の書きかえ（s312〜s314） 
   {
     id: 'koko_eigo_s312',
     subject: 'eigo',
@@ -1806,7 +1806,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     ],
   },
 
-  // ───────── 6. 等位接続詞と「命令文, and/or 〜」（s315〜s318） ─────────
+  //  6. 等位接続詞と「命令文, and/or 〜」（s315〜s318） 
   {
     id: 'koko_eigo_s315',
     subject: 'eigo',
@@ -2195,7 +2195,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     ],
   },
 
-  // ───────── 7. 従属接続詞 when / if / because / though（s319〜s322） ─────────
+  //  7. 従属接続詞 when / if / because / though（s319〜s322） 
   {
     id: 'koko_eigo_s319',
     subject: 'eigo',
@@ -2601,7 +2601,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     ],
   },
 
-  // ───────── 8. that節と時制の一致（s323〜s326） ─────────
+  //  8. that節と時制の一致（s323〜s326） 
   {
     id: 'koko_eigo_s323',
     subject: 'eigo',
@@ -2988,7 +2988,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     ],
   },
 
-  // ───────── 9. 間接疑問（s327〜s331） ─────────
+  //  9. 間接疑問（s327〜s331） 
   {
     id: 'koko_eigo_s327',
     subject: 'eigo',
@@ -3495,7 +3495,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     ],
   },
 
-  // ───────── 10. 相関接続詞（s332〜s335） ─────────
+  //  10. 相関接続詞（s332〜s335） 
   {
     id: 'koko_eigo_s332',
     subject: 'eigo',

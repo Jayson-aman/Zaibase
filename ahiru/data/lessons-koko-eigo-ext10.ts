@@ -9,7 +9,7 @@ import type { Lesson } from './lesson-types';
 // 図解（lesson-figs-koko-eigo-ext10.ts）は、英文中の数値をそのままグラフにしたものだけを
 // 付けてあり、図の数値と英文の記述は完全に一致させてある（40課中18課に付与）。
 export const kokoEigoExt10Lessons: Lesson[] = [
-  // ───────────── 1. 読解の基本姿勢（s336〜s339） ─────────────
+  //  1. 読解の基本姿勢（s336〜s339） 
   {
     id: 'koko_eigo_s336',
     subject: 'eigo',
@@ -365,7 +365,7 @@ Now it is the smallest one. の it は the science club、one は club である
     ],
   },
 
-  // ───────────── 2. 主語と動詞を見つける（s340〜s344） ─────────────
+  //  2. 主語と動詞を見つける（s340〜s344） 
   {
     id: 'koko_eigo_s340',
     subject: 'eigo',
@@ -842,7 +842,7 @@ It took them six months to collect enough signatures.
       },
     ],
   },
-  // ───────────── 3. 代名詞の指示内容（s345〜s348） ─────────────
+  //  3. 代名詞の指示内容（s345〜s348） 
   {
     id: 'koko_eigo_s345',
     subject: 'eigo',
@@ -1232,7 +1232,7 @@ twenty students from three cities（3つの市から来た20人の生徒）を�
     ],
   },
 
-  // ───────────── 4. つなぎ語から展開を読む（s349〜s353） ─────────────
+  //  4. つなぎ語から展開を読む（s349〜s353） 
   {
     id: 'koko_eigo_s349',
     subject: 'eigo',
@@ -1715,7 +1715,7 @@ fewer は few の比較級で「より少ない数の」。「授業中に寝る
       },
     ],
   },
-  // ───────────── 5. 段落の主題文（s354〜s357） ─────────────
+  //  5. 段落の主題文（s354〜s357） 
   {
     id: 'koko_eigo_s354',
     subject: 'eigo',
@@ -2103,7 +2103,7 @@ When we buy food that was grown far away, we are also using the water of that co
     ],
   },
 
-  // ───────────── 6. 物語文の読解（s358〜s362） ─────────────
+  //  6. 物語文の読解（s358〜s362） 
   {
     id: 'koko_eigo_s358',
     subject: 'eigo',
@@ -2600,7 +2600,7 @@ A：毎朝見かけていた花売りのおばあさんがいなくなり、そ�
       },
     ],
   },
-  // ───────────── 7. 説明文・論説文の読解（s363〜s367） ─────────────
+  //  7. 説明文・論説文の読解（s363〜s367） 
   {
     id: 'koko_eigo_s363',
     subject: 'eigo',
@@ -3098,7 +3098,7 @@ Something clearly changed after 2000, and that something was a school activity c
     ],
   },
 
-  // ───────────── 8. 図表つき読解（s368〜s372） ─────────────
+  //  8. 図表つき読解（s368〜s372） 
   {
     id: 'koko_eigo_s368',
     subject: 'eigo',
@@ -3593,7 +3593,7 @@ A：Because the museum opened at night once a month and made all the labels in t
       },
     ],
   },
-  // ───────────── 9. 内容一致と要旨把握（s373〜s375） ─────────────
+  //  9. 内容一致と要旨把握（s373〜s375） 
   {
     id: 'koko_eigo_s373',
     subject: 'eigo',

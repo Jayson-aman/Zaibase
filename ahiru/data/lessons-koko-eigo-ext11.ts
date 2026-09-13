@@ -12,7 +12,7 @@ import type { Lesson } from './lesson-types';
 // 図解は道案内の地図（coordinate）・時刻や順序（numberLine）・語数の配分（barChart）・
 // 英作文の骨組み（polygon）に絞って付けてある（40課中19課）。
 export const kokoEigoExt11Lessons: Lesson[] = [
-  // ───────────── 1. 会話文の読解（s376〜s383） ─────────────
+  //  1. 会話文の読解（s376〜s383） 
   {
     id: 'koko_eigo_s376',
     subject: 'eigo',
@@ -772,7 +772,7 @@ it・that・one・so が何を指すかは、原則としてその直前の文�
     ],
   },
 
-  // ───────────── 2. 会話の定型表現と応答（s384〜s388） ─────────────
+  //  2. 会話の定型表現と応答（s384〜s388） 
   {
     id: 'koko_eigo_s384',
     subject: 'eigo',
@@ -1272,7 +1272,7 @@ Could you help me?／I'm in trouble.／I'm lost.（道に迷いました）
     ],
   },
 
-  // ───────────── 3. 空所補充の解き方（s389〜s392） ─────────────
+  //  3. 空所補充の解き方（s389〜s392） 
   {
     id: 'koko_eigo_s389',
     subject: 'eigo',
@@ -1668,7 +1668,7 @@ However,（しかしながら）／Also,（また）／For example,（たとえ�
     ],
   },
 
-  // ───────────── 4. リスニングの解き方（s393〜s397） ─────────────
+  //  4. リスニングの解き方（s393〜s397） 
   {
     id: 'koko_eigo_s393',
     subject: 'eigo',
@@ -2177,7 +2177,7 @@ What did 〜 do → 動詞を書いた行
     ],
   },
 
-  // ───────────── 5. 和文英訳の手順（s398〜s401） ─────────────
+  //  5. 和文英訳の手順（s398〜s401） 
   {
     id: 'koko_eigo_s398',
     subject: 'eigo',
@@ -2603,7 +2603,7 @@ be動詞は「＝」の意味なので、一般動詞と並べることはでき
     ],
   },
 
-  // ───────────── 6. 語順並べかえの解き方（s402〜s405） ─────────────
+  //  6. 語順並べかえの解き方（s402〜s405） 
   {
     id: 'koko_eigo_s402',
     subject: 'eigo',
@@ -3033,7 +3033,7 @@ This room is not used now.
       },
     ],
   },
-  // ───────────── 7. 条件英作文（s406〜s410） ─────────────
+  //  7. 条件英作文（s406〜s410） 
   {
     id: 'koko_eigo_s406',
     subject: 'eigo',
@@ -3570,7 +3570,7 @@ Thank you for your e-mail. I want to take you to Nara Park. You can see many dee
       },
     ],
   },
-  // ───────────── 8. 自由英作文（s411〜s415） ─────────────
+  //  8. 自由英作文（s411〜s415） 
   {
     id: 'koko_eigo_s411',
     subject: 'eigo',

@@ -10,7 +10,7 @@ import type { Lesson } from './lesson-types';
 // 説明用の作例はすべてオリジナルとしてある。
 // 図解は lesson-figs-koko-kokugo-ext07.ts（35課中15課＝約43%）。
 export const kokoKokugoExt07Lessons: Lesson[] = [
-  // ───────────── 1. 随筆の読み方（事実と感想の区別）s231〜s236 ─────────────
+  //  1. 随筆の読み方（事実と感想の区別）s231〜s236 
   {
     id: 'koko_kokugo_s231',
     subject: 'kokugo',
@@ -506,7 +506,7 @@ export const kokoKokugoExt07Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 2. 詩の形式（s237〜s240） ─────────────
+  //  2. 詩の形式（s237〜s240） 
   {
     id: 'koko_kokugo_s237',
     subject: 'kokugo',
@@ -876,7 +876,7 @@ export const kokoKokugoExt07Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 3. 詩の表現技法と鑑賞（s241〜s246） ─────────────
+  //  3. 詩の表現技法と鑑賞（s241〜s246） 
   {
     id: 'koko_kokugo_s241',
     subject: 'kokugo',
@@ -1445,7 +1445,7 @@ export const kokoKokugoExt07Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 4. 短歌の形式・句切れ・枕詞（s247〜s251） ─────────────
+  //  4. 短歌の形式・句切れ・枕詞（s247〜s251） 
   {
     id: 'koko_kokugo_s247',
     subject: 'kokugo',
@@ -1932,7 +1932,7 @@ export const kokoKokugoExt07Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 5. 短歌の鑑賞（s252〜s255） ─────────────
+  //  5. 短歌の鑑賞（s252〜s255） 
   {
     id: 'koko_kokugo_s252',
     subject: 'kokugo',
@@ -2319,7 +2319,7 @@ export const kokoKokugoExt07Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 6. 俳句の形式・季語・切れ字（s256〜s260） ─────────────
+  //  6. 俳句の形式・季語・切れ字（s256〜s260） 
   {
     id: 'koko_kokugo_s256',
     subject: 'kokugo',
@@ -2795,7 +2795,7 @@ export const kokoKokugoExt07Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 7. 俳句の鑑賞（s261〜s265） ─────────────
+  //  7. 俳句の鑑賞（s261〜s265） 
   {
     id: 'koko_kokugo_s261',
     subject: 'kokugo',

@@ -9,7 +9,7 @@ import type { Lesson } from './lesson-types';
 // 図にすることで判別の手順そのものが身につく箇所に付けてある。
 // 時差の計算はすべて「経度15度＝1時間」で検算済み。統計は概数で、出典と年次を明記している。
 export const kokoShakaiExt01Lessons: Lesson[] = [
-  // ───────── 1. 地球のすがた・緯度経度・時差（s001〜s006） ─────────
+  //  1. 地球のすがた・緯度経度・時差（s001〜s006） 
   {
     id: 'koko_shakai_s001',
     subject: 'shakai',
@@ -563,7 +563,7 @@ export const kokoShakaiExt01Lessons: Lesson[] = [
       },
     ],
   },
-  // ───────── 2. 世界の気候帯と雨温図（s007〜s012） ─────────
+  //  2. 世界の気候帯と雨温図（s007〜s012） 
   {
     id: 'koko_shakai_s007',
     subject: 'shakai',
@@ -1126,7 +1126,7 @@ export const kokoShakaiExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────── 3. 世界の宗教と言語（s013〜s015） ─────────
+  //  3. 世界の宗教と言語（s013〜s015） 
   {
     id: 'koko_shakai_s013',
     subject: 'shakai',
@@ -1410,7 +1410,7 @@ export const kokoShakaiExt01Lessons: Lesson[] = [
       },
     ],
   },
-  // ───────── 4. アジア州（s016〜s021） ─────────
+  //  4. アジア州（s016〜s021） 
   {
     id: 'koko_shakai_s016',
     subject: 'shakai',
@@ -1958,7 +1958,7 @@ export const kokoShakaiExt01Lessons: Lesson[] = [
       },
     ],
   },
-  // ───────── 5. ヨーロッパ州とEU（s022〜s026） ─────────
+  //  5. ヨーロッパ州とEU（s022〜s026） 
   {
     id: 'koko_shakai_s022',
     subject: 'shakai',
@@ -2429,7 +2429,7 @@ EUの決定は加盟国の法律より優先される分野があり、農業・
     ],
   },
 
-  // ───────── 6. アフリカ州（s027〜s030） ─────────
+  //  6. アフリカ州（s027〜s030） 
   {
     id: 'koko_shakai_s027',
     subject: 'shakai',
@@ -2805,7 +2805,7 @@ EUの決定は加盟国の法律より優先される分野があり、農業・
       },
     ],
   },
-  // ───────── 7. 北アメリカ州（s031〜s034） ─────────
+  //  7. 北アメリカ州（s031〜s034） 
   {
     id: 'koko_shakai_s031',
     subject: 'shakai',
@@ -3167,7 +3167,7 @@ EUの決定は加盟国の法律より優先される分野があり、農業・
     ],
   },
 
-  // ───────── 8. 南アメリカ州（s035〜s037） ─────────
+  //  8. 南アメリカ州（s035〜s037） 
   {
     id: 'koko_shakai_s035',
     subject: 'shakai',
@@ -3451,7 +3451,7 @@ EUの決定は加盟国の法律より優先される分野があり、農業・
     ],
   },
 
-  // ───────── 9. オセアニア州（s038〜s040） ─────────
+  //  9. オセアニア州（s038〜s040） 
   {
     id: 'koko_shakai_s038',
     subject: 'shakai',

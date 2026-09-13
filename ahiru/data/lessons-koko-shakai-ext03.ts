@@ -7,7 +7,7 @@ import type { Lesson } from './lesson-types';
 // 統計は年次を明記した概数のみを用いる（農林水産省・経済産業省・財務省貿易統計・総務省国勢調査）。
 // 図解キーは lesson-figs-koko-shakai-ext03.ts の lf_kokoshakaiext03_XXX と対応。
 export const kokoShakaiExt03Lessons: Lesson[] = [
-  // ───────────────── 1. 農業（s076〜s082） ─────────────────
+  //  1. 農業（s076〜s082） 
   {
     id: 'koko_shakai_s076',
     subject: 'shakai',
@@ -573,7 +573,7 @@ export const kokoShakaiExt03Lessons: Lesson[] = [
       },
     ],
   },
-  // ───────────────── 2. 畜産と水産業（s083〜s087） ─────────────────
+  //  2. 畜産と水産業（s083〜s087） 
   {
     id: 'koko_shakai_s083',
     subject: 'shakai',
@@ -988,7 +988,7 @@ export const kokoShakaiExt03Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────── 3. 食料自給率と食料問題（s088〜s091） ─────────────────
+  //  3. 食料自給率と食料問題（s088〜s091） 
   {
     id: 'koko_shakai_s088',
     subject: 'shakai',
@@ -1332,7 +1332,7 @@ export const kokoShakaiExt03Lessons: Lesson[] = [
       },
     ],
   },
-  // ───────────────── 4. 工業地帯・工業地域（s092〜s097） ─────────────────
+  //  4. 工業地帯・工業地域（s092〜s097） 
   {
     id: 'koko_shakai_s092',
     subject: 'shakai',
@@ -1850,7 +1850,7 @@ export const kokoShakaiExt03Lessons: Lesson[] = [
       },
     ],
   },
-  // ───────────────── 5. 工業の変化（s098〜s101） ─────────────────
+  //  5. 工業の変化（s098〜s101） 
   {
     id: 'koko_shakai_s098',
     subject: 'shakai',
@@ -2208,7 +2208,7 @@ IC・半導体、コンピュータ、産業用ロボット、医薬品・バイ
     ],
   },
 
-  // ───────────────── 6. 第三次産業と商業（s102〜s105） ─────────────────
+  //  6. 第三次産業と商業（s102〜s105） 
   {
     id: 'koko_shakai_s102',
     subject: 'shakai',
@@ -2579,7 +2579,7 @@ IC・半導体、コンピュータ、産業用ロボット、医薬品・バイ
       },
     ],
   },
-  // ───────────────── 7. 貿易（s106〜s110） ─────────────────
+  //  7. 貿易（s106〜s110） 
   {
     id: 'koko_shakai_s106',
     subject: 'shakai',

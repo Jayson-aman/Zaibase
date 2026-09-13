@@ -8,7 +8,7 @@ import type { Lesson } from './lesson-types';
 // 図解は語順（polygon の四辺を①→④の箱に見立てる）と、頻度・範囲・分類など
 // 数量で示せる箇所だけに付けてある（lesson-figs-eigo-ext06.ts、35課中16課）。
 export const eigoExt06Lessons: Lesson[] = [
-  // ─────────────── 1. Yes/No疑問文の作り方（s191〜s195） ───────────────
+  //  1. Yes/No疑問文の作り方（s191〜s195） 
   {
     id: 'eigo_s191',
     subject: 'eigo',
@@ -449,7 +449,7 @@ Yes の答えでは短縮できない。Yes, it is.（× Yes, it's.）／Yes, I 
     ],
   },
 
-  // ─────────────── 2. what / which（もの・選択）（s196〜s199） ───────────────
+  //  2. what / which（もの・選択）（s196〜s199） 
   {
     id: 'eigo_s196',
     subject: 'eigo',
@@ -803,7 +803,7 @@ What about 〜? / How about 〜?（〜はどうですか）はどちらもよく
     ],
   },
 
-  // ─────────────── 3. who / whose / whom（人・所有）（s200〜s203） ───────────────
+  //  3. who / whose / whom（人・所有）（s200〜s203） 
   {
     id: 'eigo_s200',
     subject: 'eigo',
@@ -1164,7 +1164,7 @@ I → mine／you → yours／he → his／she → hers／we → ours／they → 
     ],
   },
 
-  // ─────────────── 4. when / where（時・場所）（s204〜s206） ───────────────
+  //  4. when / where（時・場所）（s204〜s206） 
   {
     id: 'eigo_s204',
     subject: 'eigo',
@@ -1441,7 +1441,7 @@ in the morning（一般的な午前中）
     ],
   },
 
-  // ─────────────── 5. why と because / How come（s207〜s209） ───────────────
+  //  5. why と because / How come（s207〜s209） 
   {
     id: 'eigo_s207',
     subject: 'eigo',
@@ -1720,7 +1720,7 @@ What 〜 for?（何のために）
     ],
   },
 
-  // ─────────────── 6. how の基本と How ＋ 形容詞・副詞（s210〜s215） ───────────────
+  //  6. how の基本と How ＋ 形容詞・副詞（s210〜s215） 
   {
     id: 'eigo_s210',
     subject: 'eigo',
@@ -2285,7 +2285,7 @@ How old → years old（年齢）
     ],
   },
 
-  // ─────────────── 7. 疑問詞が主語になる疑問文（s216〜s218） ───────────────
+  //  7. 疑問詞が主語になる疑問文（s216〜s218） 
   {
     id: 'eigo_s216',
     subject: 'eigo',
@@ -2571,7 +2571,7 @@ Who broke this window? — Ken broke it.
     ],
   },
 
-  // ─────────────── 8. 間接疑問文（s219〜s222） ───────────────
+  //  8. 間接疑問文（s219〜s222） 
   {
     id: 'eigo_s219',
     subject: 'eigo',
@@ -2965,7 +2965,7 @@ I don't know who broke the window.（who broke はもとから主語＋動詞）
     ],
   },
 
-  // ─────────────── 9. 否定文と部分否定・全体否定（s223〜s225） ───────────────
+  //  9. 否定文と部分否定・全体否定（s223〜s225） 
   {
     id: 'eigo_s223',
     subject: 'eigo',

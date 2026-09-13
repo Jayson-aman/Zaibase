@@ -8,7 +8,7 @@ import type { Lesson } from './lesson-types';
 // 図解は lesson-figs-koko-kokugo-ext12.ts（40課中20課）。配点・時間配分の数値と、
 // 解答用紙・記述の骨組みなど「枠」で理解が進く箇所に付けてある。
 export const kokoKokugoExt12Lessons: Lesson[] = [
-  // ───────── 1. 公立入試の大問構成と時間配分（s411〜s416） ─────────
+  //  1. 公立入試の大問構成と時間配分（s411〜s416） 
   {
     id: 'koko_kokugo_s411',
     subject: 'kokugo',
@@ -589,7 +589,7 @@ export const kokoKokugoExt12Lessons: Lesson[] = [
       },
     ],
   },
-  // ───────── 2. 難関私立の出題傾向（s417〜s421） ─────────
+  //  2. 難関私立の出題傾向（s417〜s421） 
   {
     id: 'koko_kokugo_s417',
     subject: 'kokugo',
@@ -1128,7 +1128,7 @@ export const kokoKokugoExt12Lessons: Lesson[] = [
     ],
   },
 
-  // ───────── 3. 選択肢問題の消去法（s422〜s427） ─────────
+  //  3. 選択肢問題の消去法（s422〜s427） 
   {
     id: 'koko_kokugo_s422',
     subject: 'kokugo',
@@ -1751,7 +1751,7 @@ export const kokoKokugoExt12Lessons: Lesson[] = [
       },
     ],
   },
-  // ───────── 4. 紛らわしい選択肢の見分け方（s428〜s433） ─────────
+  //  4. 紛らわしい選択肢の見分け方（s428〜s433） 
   {
     id: 'koko_kokugo_s428',
     subject: 'kokugo',
@@ -2399,7 +2399,7 @@ export const kokoKokugoExt12Lessons: Lesson[] = [
     ],
   },
 
-  // ───────── 5. 設問の順序と解く順番（s434〜s437） ─────────
+  //  5. 設問の順序と解く順番（s434〜s437） 
   {
     id: 'koko_kokugo_s434',
     subject: 'kokugo',
@@ -2855,7 +2855,7 @@ export const kokoKokugoExt12Lessons: Lesson[] = [
       },
     ],
   },
-  // ───────── 6. 漢字と文法で確実に取る（s438〜s441） ─────────
+  //  6. 漢字と文法で確実に取る（s438〜s441） 
   {
     id: 'koko_kokugo_s438',
     subject: 'kokugo',
@@ -3330,7 +3330,7 @@ export const kokoKokugoExt12Lessons: Lesson[] = [
     ],
   },
 
-  // ───────── 7. 記述を空欄にしないための最低限の書き方（s442〜s445） ─────────
+  //  7. 記述を空欄にしないための最低限の書き方（s442〜s445） 
   {
     id: 'koko_kokugo_s442',
     subject: 'kokugo',
@@ -3809,7 +3809,7 @@ export const kokoKokugoExt12Lessons: Lesson[] = [
     ],
   },
 
-  // ───────── 8. 見直しの技術（s446〜s448） ─────────
+  //  8. 見直しの技術（s446〜s448） 
   {
     id: 'koko_kokugo_s446',
     subject: 'kokugo',
@@ -4153,7 +4153,7 @@ export const kokoKokugoExt12Lessons: Lesson[] = [
     ],
   },
 
-  // ───────── 9. 直前期の総整理（s449〜s450） ─────────
+  //  9. 直前期の総整理（s449〜s450） 
   {
     id: 'koko_kokugo_s449',
     subject: 'kokugo',

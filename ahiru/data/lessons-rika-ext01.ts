@@ -4,7 +4,7 @@ import type { Lesson } from './lesson-types';
 // 既存の lessons-rika.ts（rika_01_shokubutsu 等・order 1〜22）とは独立したファイル。
 // order は 501〜535 とし、既存レッスンより後ろに並ぶようにしてある。
 export const rikaExt01Lessons: Lesson[] = [
-  // ───────────────────────── 1. 植物の細胞のつくり ─────────────────────────
+  //  1. 植物の細胞のつくり 
   {
     id: 'rika_s001',
     subject: 'rika',
@@ -180,7 +180,7 @@ export const rikaExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────────── 2. 光合成のしくみ ─────────────────────────
+  //  2. 光合成のしくみ 
   {
     id: 'rika_s004',
     subject: 'rika',
@@ -460,7 +460,7 @@ export const rikaExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────────── 3. 呼吸と光合成の関係 ─────────────────────────
+  //  3. 呼吸と光合成の関係 
   {
     id: 'rika_s009',
     subject: 'rika',
@@ -703,7 +703,7 @@ export const rikaExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────────── 4. 蒸散のしくみと気孔 ─────────────────────────
+  //  4. 蒸散のしくみと気孔 
   {
     id: 'rika_s013',
     subject: 'rika',
@@ -943,7 +943,7 @@ export const rikaExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────────── 5. 道管・師管と維管束 ─────────────────────────
+  //  5. 道管・師管と維管束 
   {
     id: 'rika_s017',
     subject: 'rika',
@@ -1107,7 +1107,7 @@ export const rikaExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────────── 6. 単子葉類と双子葉類の違い ─────────────────────────
+  //  6. 単子葉類と双子葉類の違い 
   {
     id: 'rika_s020',
     subject: 'rika',
@@ -1282,7 +1282,7 @@ export const rikaExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────────── 7. 花のつくりと受粉 ─────────────────────────
+  //  7. 花のつくりと受粉 
   {
     id: 'rika_s023',
     subject: 'rika',
@@ -1505,7 +1505,7 @@ export const rikaExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────────── 8. 種子のつくりと発芽の条件 ─────────────────────────
+  //  8. 種子のつくりと発芽の条件 
   {
     id: 'rika_s027',
     subject: 'rika',
@@ -1720,7 +1720,7 @@ export const rikaExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────────── 9. 植物の分類 ─────────────────────────
+  //  9. 植物の分類 
   {
     id: 'rika_s031',
     subject: 'rika',
@@ -1888,7 +1888,7 @@ export const rikaExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────────── 10. 植物の入試実戦演習 ─────────────────────────
+  //  10. 植物の入試実戦演習 
   {
     id: 'rika_s034',
     subject: 'rika',

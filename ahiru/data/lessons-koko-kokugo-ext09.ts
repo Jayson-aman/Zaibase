@@ -10,7 +10,7 @@ import type { Lesson } from './lesson-types';
 // 「有レ朋自二遠方一來」のように字の直後に置いて示す。
 // 図解は lesson-figs-koko-kokugo-ext09.ts（30課中13課）。
 export const kokoKokugoExt09Lessons: Lesson[] = [
-  // ───────────────────── 1. 訓読のきまり（s306〜s311） ─────────────────────
+  //  1. 訓読のきまり（s306〜s311） 
   {
     id: 'koko_kokugo_s306',
     subject: 'kokugo',
@@ -579,7 +579,7 @@ export const kokoKokugoExt09Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 2. 返り点（s312〜s317） ─────────────────────
+  //  2. 返り点（s312〜s317） 
   {
     id: 'koko_kokugo_s312',
     subject: 'kokugo',
@@ -1168,7 +1168,7 @@ export const kokoKokugoExt09Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 3. 書き下し文のルール（s318〜s322） ─────────────────────
+  //  3. 書き下し文のルール（s318〜s322） 
   {
     id: 'koko_kokugo_s318',
     subject: 'kokugo',
@@ -1678,7 +1678,7 @@ export const kokoKokugoExt09Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 4. 再読文字（s323〜s325） ─────────────────────
+  //  4. 再読文字（s323〜s325） 
   {
     id: 'koko_kokugo_s323',
     subject: 'kokugo',
@@ -2009,7 +2009,7 @@ export const kokoKokugoExt09Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 5. 重要句形（s326〜s330） ─────────────────────
+  //  5. 重要句形（s326〜s330） 
   {
     id: 'koko_kokugo_s326',
     subject: 'kokugo',
@@ -2549,7 +2549,7 @@ Aは動作をする人、Bはその動作。訓読文ではAに「ヲシテ」�
     ],
   },
 
-  // ───────────────────── 6. 故事成語の由来（s331〜s335） ─────────────────────
+  //  6. 故事成語の由来（s331〜s335） 
   {
     id: 'koko_kokugo_s331',
     subject: 'kokugo',
