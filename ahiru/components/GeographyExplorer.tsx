@@ -383,6 +383,11 @@ function RegionDetail({
   const regionMountains = mountainRanges.filter(
     (m) => m.region.includes(regionKey) || regionKey.includes(m.region),
   );
+  // 川も同じように、その地方を流れるものだけを出す。
+  // 一覧へ誘導するだけの案内文では中身が薄く、選んだ地域の話になっていなかった。
+  const regionRivers = rivers.filter(
+    (r) => r.region.includes(regionKey) || regionKey.includes(r.region),
+  );
 
   return (
     <ScrollView style={styles.detailCard} showsVerticalScrollIndicator={false}>
@@ -418,10 +423,24 @@ function RegionDetail({
               items={['この地域には日本アルプスのような大きな山脈はありません。全国のおもな山地・山脈は、地図の下の一覧で位置とあわせて確認できます。']}
             />
           )}
-          <DetailSection
-            title="💧 川について"
-            items={['全国のおもな川（信濃川・利根川など）は、地図の下の「主要な川（長い順）」一覧で、つくる平野や河口とあわせて確認できます。']}
-          />
+          {regionRivers.length > 0 ? (
+            <DetailSection
+              title="💧 この地域を流れるおもな川"
+              items={regionRivers.map(
+                (r) =>
+                  `${r.name}（${r.reading}）／全長 ${r.lengthKm}km${r.rank ? `・${r.rank}` : ''}${
+                    r.nickname ? `・別名「${r.nickname}」` : ''
+                  } — ${r.note}（つくる平野：${r.plain}／河口：${r.mouth}）`,
+              )}
+            />
+          ) : (
+            <DetailSection
+              title="💧 川について"
+              items={[
+                'この地域には、全国の長さ上位に入るような大きな川はありません。山地から海までの距離が短いため、短くて流れの急な川が多くなります。全国のおもな川は、地図の下の「主要な川（長い順）」一覧で、つくる平野や河口とあわせて確認できます。',
+              ]}
+            />
+          )}
         </>
       )}
 
