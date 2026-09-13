@@ -11,6 +11,7 @@ import {
   ActivityIndicator,
   Alert,
   Dimensions,
+  Platform,
 } from 'react-native';
 import { FORMULAS, SUBJECTS, type Subject, type FormulaItem } from '../../data/formulas';
 import SubjectIcon, { type IconSubject } from '../../components/SubjectIcon';
@@ -65,10 +66,13 @@ function FormulaRow({
         <View style={[styles.formulaLabel, { borderLeftColor: accent }]}>
           <Text style={styles.formulaLabelText}>{item.label}</Text>
         </View>
+        <View style={[styles.formulaBox, { borderColor: accent + '55' }]}>
+          <Text style={[styles.formulaText, { color: accent }]}>{item.formula}</Text>
+        </View>
         <View style={styles.lockCard}>
           <Text style={styles.lockIcon}>🔒</Text>
           <Text style={styles.lockText}>
-            この項目は買い切りで解放できます（{priceLabel}・1回のみ）
+            くわしい説明・図解・例題・一問一答は買い切りで解放できます（{priceLabel}・1回のみ）
           </Text>
           <TouchableOpacity
             style={[styles.unlockBtn, { backgroundColor: accent }, (!productReady || purchasing) && styles.unlockBtnDisabled]}
@@ -255,8 +259,11 @@ export default function FormulasScreen() {
         // 画面に入った分だけ描画・保持する。
         initialNumToRender={4}
         maxToRenderPerBatch={4}
-        windowSize={5}
-        removeClippedSubviews
+        windowSize={7}
+        // removeClippedSubviews はiOSでスクロール中に行が外れて描き直され、
+        // 画像の多い社会で画面が点滅する。メモリ対策として効くのはAndroid側なので、
+        // Androidだけに限定する（iOSは windowSize の仮想化だけで足りる）。
+        removeClippedSubviews={Platform.OS === 'android'}
         ListFooterComponent={<View style={{ height: 120 }} />}
         renderItem={({ item: row }) =>
           row.kind === 'header' ? (
