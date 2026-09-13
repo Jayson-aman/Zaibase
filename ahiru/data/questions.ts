@@ -3194,15 +3194,6 @@ export const questions: Question[] = [
     explanation: '①She studies ten hours every day to become a doctor.\nevery day があり習慣を表すので現在形。主語が She なので study→studies（〈子音字＋y〉なので y を i に変えて es）。\n「医者になるために」は目的を表す不定詞の副詞的用法 to become a doctor（in order to become でもよい）。職業名には a をつける。\n②If it rains tomorrow, I will stay home.\n「もし明日雨なら」は実際に起こりうる条件なので、if のあとは未来のことでも現在形で表す（×If it will rain）。天気を表す主語は it で、三人称単数なので rain→rains。\n主節は未来のことなので will stay とする。「家にいる」は stay home または stay at home。',
     difficulty: 'advanced',
   },
-  {
-    id: 'eigo_ex_10',
-    subject: 'eigo',
-    question: '次の英文を日本語に訳せ。"Having finished his homework, he went out to play. Despite being tired, he ran for two more kilometers."',
-    answer: '宿題を終えて（終えてから）、彼は外へ遊びに出かけた。疲れていたにもかかわらず、彼はさらに2キロ走った。',
-    explanation: '1文目 Having finished his homework, he went out to play.\nHaving finished は分詞構文の完了形で、主節よりも前に起きたことを表す。「宿題を終えてから、彼は遊びに出かけた」。接続詞を使えば After he had finished his homework, 〜 と書きかえられる。\nwent out to play の to play は「遊ぶために」という目的を表す不定詞。\n2文目 Despite being tired, he ran for two more kilometers.\nDespite は「〜にもかかわらず」という前置詞なので、うしろには名詞か動名詞（〜ing）が来る。ここでは being tired（疲れていること）。接続詞を使えば Although he was tired, 〜 と同じ意味になる。\ntwo more kilometers は「さらに2キロ」。\n全体の訳は「宿題を終えて、彼は外へ遊びに出かけた。疲れていたにもかかわらず、彼はさらに2キロ走った」。',
-    difficulty: 'advanced',
-  },
-
   // ── 英語 最難関10問 ──
   {
     id: 'eigo_yotsuya_01',

@@ -757,17 +757,6 @@ export const sansuExtra2: Question[] = [
     examFrequency: 'high' as const,
   },
   {
-    id: 'sx2_069',
-    subject: 'sansu' as const,
-    question: '秒速15mを時速に直しなさい。',
-    answer: '時速54km',
-    hint: '1秒速→時速は×3600÷1000 します。',
-    explanation: '【解説】\n15×3600=54000m/時=54km/時',
-    difficulty: 'basic' as const,
-    examType: 'chugaku' as const,
-    examFrequency: 'high' as const,
-  },
-  {
     id: 'sx2_070',
     subject: 'sansu' as const,
     question: 'A地点からB地点まで時速4kmで歩くと2時間かかります。時速6kmで歩くと何時間かかりますか。',

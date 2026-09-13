@@ -5,23 +5,6 @@ export const chugaku2026Eigo2: Question[] = [
   // Q061–Q069: 基礎（difficulty: 'basic'）
   // ============================================================
   {
-    id: 'chugaku2026_eigo_061',
-    subject: 'eigo',
-    examType: 'chugaku',
-    difficulty: 'basic',
-    maxOnly: false,
-    question: `次の（　）に適切なbe動詞を入れなさい。
-
-① I (　) a student.
-② She (　) happy.
-③ We (　) friends.`,
-    answer: `① am　② is　③ are`,
-    hint: `主語がI→am、3人称単数(she/he/it)→is、複数(we/you/they)→are。`,
-    explanation: `【出題意図】be動詞am/is/areの基本的な使い分けを問う。【解説】主語によってbe動詞は変わる。I→am、She(3人称単数)→is、We(複数)→are。【注意点】areはyou・we・theyや複数の主語で使う。isはhe/she/itや単数の名詞で使う。【関連知識】be動詞の過去形はwas(am/isの過去)・were(areの過去)。`,
-    pitfall: `She areやWe isのように、主語とbe動詞の組み合わせを間違えない。`,
-    memoryTip: `「I am、You are、He/She/It is、We/You/They are」の順番をリズムで覚える。`,
-  },
-  {
     id: 'chugaku2026_eigo_062',
     subject: 'eigo',
     examType: 'chugaku',
@@ -164,23 +147,6 @@ export const chugaku2026Eigo2: Question[] = [
   // ============================================================
   // Q070–Q084: 標準（difficulty: 'standard'）
   // ============================================================
-  {
-    id: 'chugaku2026_eigo_070',
-    subject: 'eigo',
-    examType: 'chugaku',
-    difficulty: 'standard',
-    maxOnly: false,
-    question: `次の動詞を過去形にしなさい。
-
-① play → (　)
-② study → (　)
-③ stop → (　)`,
-    answer: `① played　② studied　③ stopped`,
-    hint: `基本はed、子音字+yはyをiに変えてed、短母音+子音1字は子音を重ねてed。`,
-    explanation: `【出題意図】規則動詞の過去形の作り方(3パターン)を問う。【解説】①playは母音字+yで終わるのでそのままedをつける→played。②studyは子音字+yで終わるのでyをiに変えてed→studied。③stopは短母音+子音1字で終わるので子音を重ねてed→stopped。【注意点】発音のルール(-edの発音がト/ド/イドの3種類)も合わせて覚えるとよい。【関連知識】eで終わる動詞はdだけをつける(like→liked)。`,
-    pitfall: `stopをstopedとしない。短母音+子音1字で終わる動詞は子音を重ねてedをつける。`,
-    memoryTip: `「母音字+y→ed」「子音字+y→yをiにしてed」「短母音+子音1字→子音を重ねてed」の3パターンを覚える。`,
-  },
   {
     id: 'chugaku2026_eigo_071',
     subject: 'eigo',

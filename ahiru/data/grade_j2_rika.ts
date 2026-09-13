@@ -160,18 +160,6 @@ export const gradeJ2RikaQuestions: Question[] = [
 
   // ───────────────────── 酸化・還元 #10-17 ─────────────────────
   {
-    id: 'grade_j2_rika_10',
-    subject: 'rika',
-    examType: 'koko',
-    grade: 'j2',
-    difficulty: 'basic',
-    question: '物質が酸素と結びつく化学変化を何というか。',
-    answer: '酸化',
-    hint: '「酸」の字が入っている化学変化の名前を考える。',
-    explanation:
-      '物質が酸素と結びつく化学変化を酸化といい、酸化によってできた物質を酸化物という。例えば鉄がさびて酸化鉄になったり、マグネシウムが燃えて酸化マグネシウムになったりするのは酸化の例である。',
-  },
-  {
     id: 'grade_j2_rika_11',
     subject: 'rika',
     examType: 'koko',

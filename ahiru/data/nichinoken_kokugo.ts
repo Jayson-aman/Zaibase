@@ -390,15 +390,6 @@ export const nichinokenKokugo: Question[] = [
     difficulty: 'basic',
   },
   {
-    id: 'nk_kokugo_goi_02',
-    subject: 'kokugo',
-    question: '「原因」の対義語を答えなさい。',
-    answer: '結果',
-    hint: '何かが起きた「もと」↔起きた「あと」。',
-    explanation: '原因（げんいん）↔結果（けっか）。「原因と結果」はセットで覚える。',
-    difficulty: 'basic',
-  },
-  {
     id: 'nk_kokugo_goi_03',
     subject: 'kokugo',
     question: '「勝利」の対義語を答えなさい。',

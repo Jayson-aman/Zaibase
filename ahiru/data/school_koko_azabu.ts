@@ -305,17 +305,6 @@ export const schoolKokoAzabu: Question[] = [
     examType: 'koko',
   },
   {
-    id: 'azabu_kokugo_10',
-    subject: 'kokugo',
-    question: '「客観」の対義語を答えなさい。',
-    answer: '主観',
-    hint: '自分自身の見方・感じ方に基づく立場を表す言葉を考える',
-    explanation: '【解説】\n「客観」は自分の考えを離れ、誰にとっても共通する立場から物事を捉えることを指す。これに対して「主観」は自分自身の見方・感じ方に基づいて物事を捉えることを指し、両者は対義語の関係にある。',
-    difficulty: 'standard',
-    course: 'koko-azabu',
-    examType: 'koko',
-  },
-  {
     id: 'azabu_kokugo_11',
     subject: 'kokugo',
     question: '次のA・Bの文はどちらも比喩表現を含んでいる。それぞれの比喩の種類(直喩・隠喩)を答えなさい。A「彼の心は氷のように冷たかった。」B「彼の心は氷だった。」',
