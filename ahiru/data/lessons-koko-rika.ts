@@ -12,6 +12,7 @@ import { kokoRikaExt10Lessons } from './lessons-koko-rika-ext10';
 import { kokoRikaExt11Lessons } from './lessons-koko-rika-ext11';
 import { kokoRikaExt12Lessons } from './lessons-koko-rika-ext12';
 import { kokoRikaExt13Lessons } from './lessons-koko-rika-ext13';
+import { kokoRikaExt14Lessons } from './lessons-koko-rika-ext14';
 import { lessonsNew20J1Rika } from './lessons-new20-j1-rika';
 import { lessonsNew20J2Rika } from './lessons-new20-j2-rika';
 import { lessonsNew20J3Rika } from './lessons-new20-j3-rika';
@@ -3960,6 +3961,7 @@ export const kokoRikaLessons: Lesson[] = [
   ...kokoRikaExt11Lessons,
   ...kokoRikaExt12Lessons,
   ...kokoRikaExt13Lessons,
+  ...kokoRikaExt14Lessons,
   ...lessonsNew20J1Rika,
   ...lessonsNew20J2Rika,
   ...lessonsNew20J3Rika,
