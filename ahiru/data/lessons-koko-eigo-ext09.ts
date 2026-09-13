@@ -128,12 +128,12 @@ export const kokoEigoExt09Lessons: Lesson[] = [
         body: `関係代名詞が出てきたら、まず「どこまでが説明か」を決める。
 
 例）I have a friend who lives in Canada.
-　　　　　　　　　└──── ここから文末まで ────┘
+　　who lives in Canada が、ここから文末までのひとかたまりです。
 
 who lives in Canada がひとかたまりで a friend を説明している。先行詞と合わせた a friend who lives in Canada 全体が「カナダに住んでいる友達」という大きな名詞のかたまりになり、これが have の目的語である。
 
 例）The man who lives next to us is a doctor.
-　　　　　　└─── 関係詞節 ───┘
+　　who lives next to us の部分が関係詞節です。
 文全体の主語は The man who lives next to us（私たちの隣に住んでいる男の人）で、述語動詞は is。関係詞節の中の lives を文全体の動詞だと思うと、そのあとの is が余って混乱する。
 
 ■ 範囲の決め方

@@ -16,8 +16,7 @@ export const lessonsKoushikiK1Godo: Lesson[] = [
       {
         heading: '三角形の合同条件',
         figureId: 'lf_koushiki_k1godo_goudoujoken',
-        body: `━━━━━━━━━━━━━━━━━━━
-■ 合同条件（3つ）
+        body: `■ 合同条件（3つ）
 ① 3組の辺がそれぞれ等しい（SSS）
 ② 2組の辺とその間の角がそれぞれ等しい（SAS）
 ③ 1組の辺とその両端の角がそれぞれ等しい（ASA）
@@ -66,8 +65,7 @@ ASA（1辺とその両端の角）の場合：まず1つの辺の長さを直線
       {
         heading: '直角三角形の合同条件',
         figureId: 'lf_koushiki_k1godo_chokkaku',
-        body: `━━━━━━━━━━━━━━━━━━━
-■ 合同条件（2つ）
+        body: `■ 合同条件（2つ）
 ① 斜辺と1鋭角がそれぞれ等しい
 ② 斜辺と他の1辺がそれぞれ等しい
 
@@ -110,8 +108,7 @@ ASA（1辺とその両端の角）の場合：まず1つの辺の長さを直線
       {
         heading: '二等辺三角形の性質とその逆',
         figureId: 'lf_koushiki_k1godo_nitouhen',
-        body: `━━━━━━━━━━━━━━━━━━━
-■ 性質（2つ）
+        body: `■ 性質（2つ）
 ① 2つの底角は等しい
 ② 頂角の二等分線は、底辺を垂直に二等分する
 

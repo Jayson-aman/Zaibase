@@ -14,8 +14,7 @@ export const lessonsKoushikiC1Menseki: Lesson[] = [
       {
         heading: '三角形の面積',
         figureId: 'lf_koushiki_c1menseki_sankakukei',
-        body: `━━━━━━━━━━━━━━━━━━━
-■ 公式
+        body: `■ 公式
 三角形の面積 ＝ 底辺 × 高さ ÷ 2
 
 「底辺」は面積を求めるときに基準として選んだ1つの辺のこと、「高さ」はその底辺と、底辺の反対側にある頂点との間を、底辺に対してまっすぐ垂直に測った距離のことです。底辺に沿って測った長さではないので注意してください。
@@ -50,8 +49,7 @@ export const lessonsKoushikiC1Menseki: Lesson[] = [
       {
         heading: '平行四辺形の面積',
         figureId: 'lf_koushiki_c1menseki_heikou',
-        body: `━━━━━━━━━━━━━━━━━━━
-■ 公式
+        body: `■ 公式
 平行四辺形の面積 ＝ 底辺 × 高さ
 
 平行四辺形では、向かい合う2組の辺がそれぞれ平行になっています。面積を求めるときに基準にする1組の辺を「底辺」とし、底辺からもう一方の辺までの、底辺に垂直な距離を「高さ」とします。斜めになっている辺の長さそのものは高さではありません。
@@ -84,8 +82,7 @@ export const lessonsKoushikiC1Menseki: Lesson[] = [
       {
         heading: '台形の面積',
         figureId: 'lf_koushiki_c1menseki_daikei',
-        body: `━━━━━━━━━━━━━━━━━━━
-■ 公式
+        body: `■ 公式
 台形の面積 ＝（上底 ＋ 下底）× 高さ ÷ 2
 
 台形は、1組の辺だけが平行になっている四角形です。平行な2辺のうち、短い方（多くの場合は上にかく方）を「上底」、長い方（下にかく方）を「下底」と呼びます。「高さ」は上底と下底の間を垂直に測った距離です。
@@ -120,8 +117,7 @@ export const lessonsKoushikiC1Menseki: Lesson[] = [
       {
         heading: 'ひし形の面積',
         figureId: 'lf_koushiki_c1menseki_hishigata',
-        body: `━━━━━━━━━━━━━━━━━━━
-■ 公式
+        body: `■ 公式
 ひし形の面積 ＝ 対角線 × 対角線 ÷ 2
 
 ひし形は、4つの辺の長さがすべて等しい四角形です。ひし形の中には2本の対角線（向かい合う頂点どうしを結んだ線）を引くことができ、この2本の対角線は必ず垂直に交わるという性質があります。面積の公式には、この2本の対角線の長さを使います。

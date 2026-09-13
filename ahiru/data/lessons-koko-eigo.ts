@@ -1928,7 +1928,7 @@ We stayed home because it was very cold.
         body: `■ 形式主語の it（本当の主語を後ろに置く）
 to不定詞や that 節が主語だと頭が重いので、it を仮に置いて後ろに回す。
   It is important to study every day.
-   └仮主語     └────真の主語────┘
+　　It が仮主語、to study every day が真の主語です。
   It is difficult for me to answer this question.
    （for me ＝ to不定詞の意味上の主語）
 
