@@ -11,6 +11,7 @@ import { kokoKokugoExt09Lessons } from './lessons-koko-kokugo-ext09';
 import { kokoKokugoExt10Lessons } from './lessons-koko-kokugo-ext10';
 import { kokoKokugoExt11Lessons } from './lessons-koko-kokugo-ext11';
 import { kokoKokugoExt12Lessons } from './lessons-koko-kokugo-ext12';
+import { kokoKokugoExt13Lessons } from './lessons-koko-kokugo-ext13';
 import { lessonsNew20J1Kokugo } from './lessons-new20-j1-kokugo';
 import { lessonsNew20J2Kokugo } from './lessons-new20-j2-kokugo';
 import { lessonsNew20J3Kokugo } from './lessons-new20-j3-kokugo';
@@ -4254,6 +4255,7 @@ export const kokoKokugoLessons: Lesson[] = [
   ...kokoKokugoExt10Lessons,
   ...kokoKokugoExt11Lessons,
   ...kokoKokugoExt12Lessons,
+  ...kokoKokugoExt13Lessons,
   ...lessonsNew20J1Kokugo,
   ...lessonsNew20J2Kokugo,
   ...lessonsNew20J3Kokugo,
