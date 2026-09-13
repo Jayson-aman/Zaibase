@@ -159,11 +159,11 @@ export const schoolKokoKeioFill: Question[] = [
   {
     id: 'keio_kokugo_11',
     subject: 'kokugo',
-    question: '「具体」の対義語を答えなさい。',
-    answer: '抽象',
-    hint: '個々の事物から共通する性質だけを取り出して考えることを何というか',
+    question: '「必然」の対義語を答えなさい。',
+    answer: '偶然',
+    hint: 'そうなると決まっていたわけではなく、たまたまそうなったことを表す言葉を考える',
     explanation:
-      '【解説】\n「具体」は形や姿がはっきりしていて実際に知覚できることを指し、「抽象」はいくつかの事物から共通する性質を取り出し一般化することを指す。両者は対義語の関係にある。',
+      '【解説】\n「必然」は必ずそうなると決まっていることを指し、「偶然」はたまたまそうなった、そうならない可能性もあったことを指す。両者は対義語の関係にある。',
     difficulty: 'standard',
     course: 'koko-keio',
     examType: 'koko',
