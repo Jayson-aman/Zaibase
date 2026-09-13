@@ -11,6 +11,7 @@ import { kokoShakaiExt09Lessons } from './lessons-koko-shakai-ext09';
 import { kokoShakaiExt10Lessons } from './lessons-koko-shakai-ext10';
 import { kokoShakaiExt11Lessons } from './lessons-koko-shakai-ext11';
 import { kokoShakaiExt12Lessons } from './lessons-koko-shakai-ext12';
+import { kokoShakaiExt13Lessons } from './lessons-koko-shakai-ext13';
 import { lessonsNew20J1Shakai } from './lessons-new20-j1-shakai';
 import { lessonsNew20J2Shakai } from './lessons-new20-j2-shakai';
 import { lessonsNew20J3Shakai } from './lessons-new20-j3-shakai';
@@ -4803,6 +4804,7 @@ export const kokoShakaiLessons: Lesson[] = [
   ...kokoShakaiExt10Lessons,
   ...kokoShakaiExt11Lessons,
   ...kokoShakaiExt12Lessons,
+  ...kokoShakaiExt13Lessons,
   ...lessonsNew20J1Shakai,
   ...lessonsNew20J2Shakai,
   ...lessonsNew20J3Shakai,
