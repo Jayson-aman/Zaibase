@@ -48,12 +48,17 @@ const PALETTE = ['#B5622E', '#E11D48', '#16A34A', '#9333EA', '#F59E0B'];
 
 type Area = { x0: number; y0: number; w: number; h: number };
 
-function useSize() {
-  // 呼び出し元によって左右の余白（マージン＋パディング）の合計が異なる。
-  // 一番余白が大きい画面（公式・まとめ: 16*2 + 16*2 + 12*2 = 88px）でも
-  // はみ出さないよう、余白は多めに見積もっておく。
-  const cardW = Math.min(Dimensions.get('window').width - 88, 460);
-  const w = Math.max(220, cardW);
+/**
+ * 図の表示サイズ。
+ * Dimensions は起動時の画面幅を1回読むだけなので、置かれた場所の余白が
+ * 想定より大きかったり、横向き・分割表示で幅が変わったりすると図がはみ出す。
+ * そこで、実際に置かれた場所の幅を onLayout で測ってそれに合わせる。
+ * 測り終わるまでは Dimensions からの控えめな見積もりを使う。
+ */
+function useSize(measured: number | null) {
+  const fallback = Math.min(Dimensions.get('window').width - 88, 460);
+  const base = measured != null && measured > 0 ? measured : fallback;
+  const w = Math.max(220, Math.min(base, 460));
   return { w, h: (w * VBH) / VBW };
 }
 
@@ -1257,7 +1262,8 @@ function StepsList({ steps, animated, stepReached }: { steps: string[]; animated
 // 図解は要素が描かれた順に段階的に立ち上がる「動く解説」。
 // animated=true（解説側）で自動再生、タップで再生し直し。question側は静止。
 export default function FigureView({ figure, animated = false }: { figure: Figure; animated?: boolean }) {
-  const { w, h } = useSize();
+  const [boxWidth, setBoxWidth] = useState<number | null>(null);
+  const { w, h } = useSize(boxWidth);
   const rawId = useId();
   const uid = rawId.replace(/[^a-zA-Z0-9]/g, '');
   const parts = useMemo(() => buildParts(figure, uid), [figure, uid]);
@@ -1360,7 +1366,10 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
 
   if (figure.kind === 'chemEquation') {
     return (
-      <View style={styles.wrap}>
+      <View
+        style={styles.wrap}
+        onLayout={(e) => setBoxWidth(e.nativeEvent.layout.width - 16)}
+      >
         <TouchableOpacity
           activeOpacity={animated ? 0.7 : 1}
           onPress={animated ? play : undefined}
@@ -1386,7 +1395,10 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
   };
 
   return (
-    <View style={styles.wrap}>
+    <View
+      style={styles.wrap}
+      onLayout={(e) => setBoxWidth(e.nativeEvent.layout.width - 16)}
+    >
       <TouchableOpacity
         activeOpacity={animated ? 0.85 : 1}
         onPress={slideMode ? replay : animated ? play : undefined}

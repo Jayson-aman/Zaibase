@@ -60,6 +60,10 @@ function FormulaRow({
   purchasing: boolean;
   onUnlock: () => void;
 }) {
+  // 図解画像の大きさは、置かれた枠の実寸から決める。起動時の画面幅から
+  // 計算して固定すると、横向き・分割表示・余白の想定違いではみ出す。
+  const [imageSize, setImageSize] = useState(FORMULA_IMAGE_SIZE);
+
   if (item.locked && !bypassLock && !isUnlocked) {
     return (
       <View style={styles.formulaRow}>
@@ -116,11 +120,14 @@ function FormulaRow({
         )}
 
         {!item.figure && formulaImages[item.label] && (
-          <View style={styles.figureBox}>
+          <View
+            style={styles.figureBox}
+            onLayout={(e) => setImageSize(Math.round(e.nativeEvent.layout.width - 24))}
+          >
             <Text style={styles.figureLabel}>図解</Text>
             <Image
               source={formulaImages[item.label]}
-              style={styles.formulaImage}
+              style={[styles.formulaImage, { width: imageSize, height: imageSize }]}
               resizeMode="cover"
             />
           </View>
@@ -444,8 +451,6 @@ const styles = StyleSheet.create({
     fontFamily: 'monospace',
   },
   formulaImage: {
-    width: FORMULA_IMAGE_SIZE,
-    height: FORMULA_IMAGE_SIZE,
     borderRadius: 10,
     backgroundColor: '#F5EFE4',
   },
