@@ -152,6 +152,8 @@ export default function QuizScreen() {
   const isDaily = mode === 'daily';
   const isMock = mode === 'mock';
   const isKakomon = mode === 'kakomon';
+  // MAX限定コンテンツを未加入でも試せる問題数
+  const PREVIEW_COUNT = 3;
   // テスト対策モード（学期末・学力調査・レベル別・入試）。
   // 種類ごとに難易度の配分と、記述式・複数小問（活用型）の比率を変える。
   const testModeKey: TestModeKey | null =
@@ -170,6 +172,8 @@ export default function QuizScreen() {
   const { hasAccess: betaAccess } = useBetaAccess();
   const isPro = subIsPro || betaAccess;
   const isMax = subIsMax || betaAccess;
+
+  const isPreview = (isMock || isKakomon) && !isMax;
 
   const { questions: subjectPool, loading: questionsLoading } = useSubjectQuestions(subjectKey);
   const { unlockedIds: unlockedFormulaIds } = useFormulaUnlocks();
@@ -215,21 +219,24 @@ export default function QuizScreen() {
       return buildTestSet(pool, tm, restartKey + 1, difficultyFilter as LevelKey | undefined);
     }
     if (isMock) {
-      // 模擬試験（MAXプラン限定）: 入試形式（学校別大問）を除いた一般問題のみ使用
-      if (!isMax) return [];
+      // 模擬試験（MAXプラン）: 入試形式（学校別大問）を除いた一般問題のみ使用。
+      // 未加入でも最初のPREVIEW_COUNT問だけは解けるようにする（どんな問題か
+      // 分からないまま課金画面に飛ばされると、検討のしようがないため）。
       const generalKey = examType === 'koko' ? 'koko-general' : 'general';
       const pool = all.filter((q) => {
         if ((q.examType ?? 'chugaku') !== examType) return false;
         return !q.course || q.course === generalKey;
       });
-      return shuffle(pool).slice(0, 30);
+      const set = shuffle(pool).slice(0, 30);
+      return isMax ? set : set.slice(0, PREVIEW_COUNT);
     }
     if (isKakomon) {
-      // 過去入試問題（MAXプラン限定）: 学校別問題のみ（大問形式）。学校ごとに同じ順番にならないようシャッフル。
-      if (!isMax) return [];
+      // 過去入試問題（MAXプラン）: 学校別問題のみ（大問形式）。学校ごとに同じ順番にならないようシャッフル。
       const schoolQ = all.filter((q) => q.course === course && (q.examType ?? 'chugaku') === examType);
-      if (schoolQ.length > 0) return shuffle(schoolQ);
-      return shuffle(filterQuestions(all, examType, course, 'advanced', isMax));
+      const set = schoolQ.length > 0
+        ? shuffle(schoolQ)
+        : shuffle(filterQuestions(all, examType, course, 'advanced', true));
+      return isMax ? set : set.slice(0, PREVIEW_COUNT);
     }
     const filtered = filterQuestions(all, examType, course, difficultyFilter, isPro || isMax, gradeFilter);
     return shuffle(filtered);
@@ -574,6 +581,22 @@ export default function QuizScreen() {
               </View>
             </View>
 
+            {isPreview && (
+              <View style={styles.previewCard}>
+                <Text style={styles.previewTitle}>ここまでがお試しの{PREVIEW_COUNT}問です</Text>
+                <Text style={styles.previewText}>
+                  {isKakomon ? '過去入試問題' : '模擬試験'}の続きはMAXプランで解けます。
+                </Text>
+                <TouchableOpacity
+                  style={styles.previewBtn}
+                  onPress={() => router.push('/paywall' as any)}
+                  activeOpacity={0.85}
+                >
+                  <Text style={styles.previewBtnText}>👑 MAXプランを見る</Text>
+                </TouchableOpacity>
+              </View>
+            )}
+
             <TouchableOpacity
               style={[styles.restartButton, { backgroundColor: info.color }]}
               onPress={handleRestart}
@@ -622,6 +645,14 @@ export default function QuizScreen() {
           </Text>
         </View>
       </View>
+
+      {isPreview && (
+        <View style={styles.previewBanner}>
+          <Text style={styles.previewBannerText}>
+            お試し{PREVIEW_COUNT}問（{isKakomon ? '過去入試問題' : '模擬試験'}の続きはMAXプラン）
+          </Text>
+        </View>
+      )}
 
       {/* Progress bar */}
       <View style={styles.progressTrack}>
@@ -1117,6 +1148,32 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     minWidth: 8,
   },
+  previewCard: {
+    backgroundColor: '#FFFBEB',
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: '#FDE68A',
+    padding: 16,
+    marginBottom: 14,
+    alignItems: 'center',
+  },
+  previewTitle: { fontSize: 15, fontWeight: '900', color: '#92400E', marginBottom: 6 },
+  previewText: { fontSize: 13.5, color: '#92400E', textAlign: 'center', marginBottom: 12, lineHeight: 20 },
+  previewBtn: {
+    backgroundColor: '#B5622E',
+    borderRadius: 8,
+    paddingVertical: 11,
+    paddingHorizontal: 24,
+  },
+  previewBtnText: { color: '#FFFFFF', fontSize: 14.5, fontWeight: '800' },
+  previewBanner: {
+    backgroundColor: '#FFFBEB',
+    borderBottomWidth: 1,
+    borderBottomColor: '#FDE68A',
+    paddingVertical: 7,
+    paddingHorizontal: 14,
+  },
+  previewBannerText: { fontSize: 12.5, color: '#92400E', fontWeight: '700', textAlign: 'center' },
   restartButton: {
     borderRadius: 16,
     paddingVertical: 18,
