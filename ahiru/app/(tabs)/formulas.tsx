@@ -23,6 +23,9 @@ import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 
 // 公式タブの教科名（算数/理科/社会）→ アイコンキー
+// 毎回作り直すとリスト全体の再描画のきっかけになるので、定数にしておく
+const LIST_FOOTER = <View style={{ height: 120 }} />;
+
 const SUBJ_ICON: Record<Subject, IconSubject> = {
   算数: 'sansu',
   国語: 'kokugo',
@@ -212,6 +215,12 @@ export default function FormulasScreen() {
   type Row =
     | { kind: 'header'; key: string; title: string; intro?: string }
     | { kind: 'item'; key: string; item: (typeof sections)[number]['items'][number] };
+  // 画像を多く含む教科かどうか（描画の刻み方を変えるため）
+  const heavyImages = React.useMemo(
+    () => sections.reduce((n, sec) => n + sec.items.filter((it) => !it.figure && formulaImages[it.label]).length, 0) > 20,
+    [sections],
+  );
+
   const rows: Row[] = React.useMemo(() => {
     const out: Row[] = [];
     sections.forEach((section, si) => {
@@ -254,17 +263,18 @@ export default function FormulasScreen() {
         contentContainerStyle={styles.content}
         data={rows}
         keyExtractor={(r) => r.key}
-        // 画像を含む項目が多く（社会は75枚）、全部を一度に描画すると
-        // 640×640の画像がまとめて展開されて低メモリ端末で落ちる。
-        // 画面に入った分だけ描画・保持する。
-        initialNumToRender={4}
-        maxToRenderPerBatch={4}
-        windowSize={7}
-        // removeClippedSubviews はiOSでスクロール中に行が外れて描き直され、
-        // 画像の多い社会で画面が点滅する。メモリ対策として効くのはAndroid側なので、
-        // Androidだけに限定する（iOSは windowSize の仮想化だけで足りる）。
-        removeClippedSubviews={Platform.OS === 'android'}
-        ListFooterComponent={<View style={{ height: 120 }} />}
+        // 行の高さがばらばらなリストを少しずつ描画すると、スクロールのたびに
+        // 測り直しと描き直しが走り、画面が点滅する。
+        // 画像を持たない教科（国語・英語など）は項目数も少ないので、
+        // 刻まずに一度に描いてしまい、仮想化そのものを避ける。
+        // 画像が多い教科（理科・社会）だけは、まとめて展開するとメモリを
+        // 使いすぎるので従来どおり画面に入った分だけ描く（刻み幅は大きめ）。
+        initialNumToRender={heavyImages ? 6 : rows.length}
+        maxToRenderPerBatch={heavyImages ? 6 : 20}
+        windowSize={heavyImages ? 9 : 41}
+        updateCellsBatchingPeriod={100}
+        removeClippedSubviews={heavyImages && Platform.OS === 'android'}
+        ListFooterComponent={LIST_FOOTER}
         renderItem={({ item: row }) =>
           row.kind === 'header' ? (
             <View style={styles.sectionHeader}>
