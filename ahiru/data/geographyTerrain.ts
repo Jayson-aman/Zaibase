@@ -208,7 +208,7 @@ export const rivers: River[] = [
     labelX: 214, labelY: 153.9,
   },
   {
-    id: 'kiso',
+    id: 'kisogawa',
     name: '木曽川',
     reading: 'きそがわ',
     lengthKm: 229,

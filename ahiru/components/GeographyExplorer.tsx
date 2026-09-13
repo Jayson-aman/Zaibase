@@ -340,7 +340,7 @@ export default function GeographyExplorer(_props: Props) {
         {selected && (
           <View style={styles.modalRoot}>
             <View style={[styles.modalHeader, { backgroundColor: selected.color }]}>
-              <Text style={styles.modalHeaderTitle}>{selected.emoji} {selected.name}</Text>
+              <Text style={styles.modalHeaderTitle} numberOfLines={1}>{selected.emoji} {selected.name}</Text>
               <TouchableOpacity onPress={() => resetView()} style={styles.modalCloseBtn}>
                 <Text style={styles.modalCloseBtnText}>✕ 閉じる</Text>
               </TouchableOpacity>
@@ -396,7 +396,7 @@ function RegionDetail({
   return (
     <ScrollView style={styles.detailCard} showsVerticalScrollIndicator={false}>
       <View style={styles.detailHeader}>
-        <Text style={styles.detailTitle}>{region.emoji} {region.name}</Text>
+        <Text style={styles.detailTitle} numberOfLines={1}>{region.emoji} {region.name}</Text>
         <TouchableOpacity onPress={onClose}>
           <Text style={styles.detailClose}>✕ 閉じる</Text>
         </TouchableOpacity>
@@ -737,6 +737,9 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: '900',
     color: '#FFFFFF',
+    // 「九州・沖縄」のような長い名前でも、閉じるボタンを画面外へ押し出さない
+    flexShrink: 1,
+    marginRight: 8,
   },
   modalCloseBtn: {
     backgroundColor: 'rgba(0,0,0,0.2)',
@@ -777,7 +780,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 12,
   },
-  detailTitle: { fontSize: 20, fontWeight: '900', color: '#221C18' },
+  detailTitle: { fontSize: 20, fontWeight: '900', color: '#221C18', flexShrink: 1, marginRight: 8 },
   detailClose: { fontSize: 14, fontWeight: '700', color: '#6B4226' },
   detailSection: { marginBottom: 14 },
   detailSectionTitle: { fontSize: 16, fontWeight: '800', color: '#6B4226', marginBottom: 8 },
