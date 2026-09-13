@@ -389,6 +389,10 @@ function RegionDetail({
     (r) => r.region.includes(regionKey) || regionKey.includes(r.region),
   );
 
+  // 地形・漁業・工業のタブには絵が1枚もなく、文字だけだった。
+  // geographyImages に「地形：四国」のような名前で登録したイラストを、各タブの先頭に出す。
+  const tabImage = (prefix: string) => geographyImages[`${prefix}：${region.name.replace(/（.*）/, '')}`];
+
   return (
     <ScrollView style={styles.detailCard} showsVerticalScrollIndicator={false}>
       <View style={styles.detailHeader}>
@@ -409,6 +413,9 @@ function RegionDetail({
 
       {layer === 'mountains' && (
         <>
+          {tabImage('地形') && (
+            <Image source={tabImage('地形')} style={styles.tabImage} resizeMode="cover" />
+          )}
           <DetailSection title="🏔 地形" items={[region.terrain]} />
           {regionMountains.length > 0 ? (
             <DetailSection
@@ -474,6 +481,9 @@ function RegionDetail({
 
       {layer === 'fishery' && (
         <>
+          {tabImage('漁業') && (
+            <Image source={tabImage('漁業')} style={styles.tabImage} resizeMode="cover" />
+          )}
           <DetailSection title="🌊 漁場" items={fi.fishingGrounds} />
           <DetailSection title="🐟 主要魚種" items={fi.mainCatch} />
           <DetailSection title="🏗 養殖" items={fi.aquaculture} />
@@ -486,6 +496,9 @@ function RegionDetail({
 
       {layer === 'factory' && (
         <>
+          {tabImage('工業') && (
+            <Image source={tabImage('工業')} style={styles.tabImage} resizeMode="cover" />
+          )}
           <DetailSection title="🏢 主な工業" items={region.industries} />
           {region.industrialZones.map((zone) => (
             <View key={zone.name} style={styles.factoryBlock}>
@@ -769,6 +782,13 @@ const styles = StyleSheet.create({
   detailSection: { marginBottom: 14 },
   detailSectionTitle: { fontSize: 16, fontWeight: '800', color: '#6B4226', marginBottom: 8 },
   detailItem: { fontSize: 14, color: '#333', lineHeight: 24 },
+  tabImage: {
+    width: '100%',
+    height: 170,
+    borderRadius: 12,
+    marginBottom: 12,
+    backgroundColor: '#F5EFE4',
+  },
   spotlightSection: { marginBottom: 14 },
   spotlightHeader: { fontSize: 16, fontWeight: '800', color: '#D97706', marginBottom: 8 },
   spotlightCard: {

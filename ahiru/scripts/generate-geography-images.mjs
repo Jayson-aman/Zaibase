@@ -70,6 +70,60 @@ const PRODUCTS = [
     prompt: `Bright orange mikan (mandarin oranges) on trees growing on terraced stone slopes by the sea in Wakayama, sunny. ${STYLE}` },
   { key: 'nanko-ume', spotlight: '南高梅〔梅〕（和歌山・みなべ町）',
     prompt: `Plump green and blushing-pink ume (Japanese plum/apricot) fruits on a branch in a Wakayama plum orchard, spring blossoms nearby. ${STYLE}` },
+
+  // ── 地形（「山と川」タブの先頭に出す、地域の地形イラスト）──
+  { key: 'terrain-hokkaido', spotlight: '地形：北海道',
+    prompt: `Aerial view of Hokkaido landscape: vast checkered farm fields on a wide plain, the Hidaka mountain range in the distance, and pack ice floating on the sea at the far coast. ${STYLE}` },
+  { key: 'terrain-tohoku', spotlight: '地形：東北',
+    prompt: `Tohoku landscape: a long north-south mountain range down the center, golden rice paddies spreading on both sides, and a deeply indented rias coastline with calm bays on the right. ${STYLE}` },
+  { key: 'terrain-kanto', spotlight: '地形：関東',
+    prompt: `Kanto landscape: an enormous flat plain stretching to the horizon, a very wide river winding across it, low reddish-brown upland fields, distant mountains on the left and the sea on the right. ${STYLE}` },
+  { key: 'terrain-chubu', spotlight: '地形：中部',
+    prompt: `Chubu landscape: three rows of high sharp snow-capped mountain ranges (Japanese Alps), a symmetrical snow-topped volcano to the right, and a flat river plain reaching the sea in front. ${STYLE}` },
+  { key: 'terrain-kinki', spotlight: '地形：近畿',
+    prompt: `Kinki landscape: a very large blue lake in the center with a river flowing out of it toward a city plain and a bay, steep forested mountains in the south, and an indented bay coastline. ${STYLE}` },
+  { key: 'terrain-chugoku', spotlight: '地形：中国',
+    prompt: `Chugoku landscape: an east-west mountain range through the middle, a calm inland sea dotted with many small green islands on the near side, and rippled sand dunes by the sea on the far side. ${STYLE}` },
+  { key: 'terrain-shikoku', spotlight: '地形：四国',
+    prompt: `Shikoku landscape: rugged mountains running east to west across the island, a wide river flowing east through a green plain to the sea, small irrigation ponds scattered on the dry northern plain, and terraced citrus orchards on sunny slopes. ${STYLE}` },
+  { key: 'terrain-kyushu', spotlight: '地形：九州・沖縄',
+    prompt: `Kyushu landscape: a huge volcanic caldera basin with fields inside it, a smoking volcano across a bay, pale ash plateaus in the south, and a turquoise coral-reef sea in the far distance. ${STYLE}` },
+
+  // ── 漁業（「漁業」タブ用）──
+  { key: 'fishery-hokkaido', spotlight: '漁業：北海道',
+    prompt: `Hokkaido fishery scene: a small fishing boat among floating pack ice on a cold sea, scallop-farming ropes being hauled up, snowy shore behind. ${STYLE}` },
+  { key: 'fishery-tohoku', spotlight: '漁業：東北',
+    prompt: `Sanriku rias-coast fishery: calm narrow bay surrounded by green hills, rows of floating rafts growing wakame seaweed and oysters, small boats tending them. ${STYLE}` },
+  { key: 'fishery-kanto', spotlight: '漁業：関東',
+    prompt: `Tokyo bay fishery: nori seaweed nets standing in shallow water at low tide, a fishing boat harvesting, a big port with cranes far behind. ${STYLE}` },
+  { key: 'fishery-chubu', spotlight: '漁業：中部',
+    prompt: `Suruga bay fishery: tiny pink sakura shrimp and translucent whitebait spread out to dry on nets by the shore, deep blue bay and a snow-capped volcano behind. ${STYLE}` },
+  { key: 'fishery-kinki', spotlight: '漁業：近畿',
+    prompt: `Kinki fishery: pearl-farming rafts floating in a quiet indented bay, an opened oyster shell showing a round pearl in the foreground, forested capes around. ${STYLE}` },
+  { key: 'fishery-chugoku', spotlight: '漁業：中国',
+    prompt: `Seto inland sea oyster farming: long wooden rafts with hanging ropes of oysters, calm water with small green islands, a boat pulling up a rope thick with shells. ${STYLE}` },
+  { key: 'fishery-shikoku', spotlight: '漁業：四国',
+    prompt: `Tosa bay fishery: fishermen pole-and-line fishing for skipjack tuna from a boat, big silvery fish flying through spray, bright blue Pacific ocean. ${STYLE}` },
+  { key: 'fishery-kyushu', spotlight: '漁業：九州・沖縄',
+    prompt: `Kyushu fishery: wide tidal flats of the Ariake sea at low tide with nori seaweed nets on poles, small flat boats, and a warm coral-reef sea in the far distance. ${STYLE}` },
+
+  // ── 工業（「工業」タブ用）──
+  { key: 'industry-hokkaido', spotlight: '工業：北海道',
+    prompt: `Hokkaido food-processing factory: clean bright production line filling milk bottles and packing butter and cheese, stainless steel tanks, workers in white caps. ${STYLE}` },
+  { key: 'industry-tohoku', spotlight: '工業：東北',
+    prompt: `Tohoku industry: a craftsman pouring molten iron into a mold to make a cast-iron kettle in a workshop, and a modern electronics assembly bench beside it. ${STYLE}` },
+  { key: 'industry-kanto', spotlight: '工業：関東',
+    prompt: `Kanto industry: a large printing press running rolls of paper inside a factory, and through the window a waterfront industrial zone with cranes and tanks. ${STYLE}` },
+  { key: 'industry-chubu', spotlight: '工業：中部',
+    prompt: `Chubu industry: a car assembly line with robot arms welding car bodies, rows of finished cars beyond, bright clean factory interior. ${STYLE}` },
+  { key: 'industry-kinki', spotlight: '工業：近畿',
+    prompt: `Kinki industry: a small neighborhood machine workshop, a skilled worker at a lathe shaping a precise metal part, tools neatly arranged on the wall. ${STYLE}` },
+  { key: 'industry-chugoku', spotlight: '工業：中国',
+    prompt: `Chugoku industry: a large petrochemical complex of pipes and tanks on reclaimed land beside a calm inland sea, and a ship under construction in a dock nearby. ${STYLE}` },
+  { key: 'industry-shikoku', spotlight: '工業：四国',
+    prompt: `Shikoku industry: a paper mill with huge rolls of white paper, and beside it a loom weaving soft white towels, warm daylight. ${STYLE}` },
+  { key: 'industry-kyushu', spotlight: '工業：九州・沖縄',
+    prompt: `Kyushu industry: engineers in white cleanroom suits handling a shiny silicon wafer of integrated circuits, and a steelworks with glowing molten metal seen in the background. ${STYLE}` },
 ];
 
 async function generateImage(apiKey, modelId, prompt) {
@@ -151,8 +205,14 @@ async function main() {
     if (fs.existsSync(path.join(OUT_DIR, `${p.key}.png`))) generated.add(p.key);
   }
 
+  const force = process.argv.includes('--force');
   for (const p of PRODUCTS) {
     const outPath = path.join(OUT_DIR, `${p.key}.png`);
+    // すでにあるものは作り直さない。作り直すと既存の絵が別物に変わってしまうため。
+    if (!force && fs.existsSync(outPath)) {
+      console.log(`Skip ${p.key} (already exists)`);
+      continue;
+    }
     process.stdout.write(`Generating ${p.key} (${p.spotlight})... `);
     try {
       const raw = await generateImage(apiKey, modelId, p.prompt);
