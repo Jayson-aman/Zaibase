@@ -314,6 +314,41 @@ const PRODUCTS = [
   { key: 'shakai-un-agencies', label: '国連の専門機関', prompt: `Children sitting together studying with books and a small globe on the table, warm and hopeful. ${SHAKAI_STYLE}` },
   { key: 'shakai-pko-cooperation', label: 'PKOと国際協力', prompt: `Peacekeepers in blue helmets helping build a well in a friendly village setting, humanitarian scene. ${SHAKAI_STYLE}` },
   { key: 'shakai-sdgs-environment', label: '地球環境問題とSDGs', prompt: `A healthy green Earth globe glowing softly, surrounded by small icons of solar panels and wind turbines, symbolic sustainability. ${SHAKAI_STYLE}` },
+  // ───────── 理科：生物（実験・からだのしくみ・生態系） ─────────
+  { key: 'rika-saliva-experiment', label: 'だ液のはたらきを調べる実験', prompt: `Two test tubes standing in a rack inside a warm water bath beaker, one tube slightly bluish and one reddish-brown. ${RIKA_STYLE}` },
+  { key: 'rika-blood-components', label: '血液の成分とはたらき', prompt: `A cross-section view inside a blood vessel showing round red cells, a few larger pale round cells and tiny fragments floating in yellowish liquid. ${RIKA_STYLE}` },
+  { key: 'rika-kidney-liver', label: 'じん臓・かん臓のはたらき（排出）', prompt: `A simplified human torso outline showing a large reddish-brown organ on the upper right and a pair of bean-shaped organs lower down, connected by tubes to a small sac. ${RIKA_STYLE}` },
+  { key: 'rika-bone-muscle', label: '骨と筋肉のしくみ', prompt: `A bent human arm shown in cutaway, with the upper muscle bulging and shortened and the opposite muscle stretched thin, attached across the elbow joint. ${RIKA_STYLE}` },
+  { key: 'rika-insect-body', label: 'こん虫のからだのつくりと育ち方', prompt: `A grasshopper seen from the side, its body clearly divided into three parts with all six legs attached to the middle part. ${RIKA_STYLE}` },
+  { key: 'rika-food-chain', label: '食物連鎖と生態系のつり合い', prompt: `A chain of four creatures arranged left to right on a meadow: grass, a grasshopper, a frog, and a hawk, each slightly larger than the last. ${RIKA_STYLE}` },
+  { key: 'rika-medaka-egg', label: 'メダカの卵の育ち方（観察）', prompt: `Three transparent fish eggs under a magnifying lens, each showing a more developed tiny fish curled inside with a large eye. ${RIKA_STYLE}` },
+
+  // ───────── 理科：地学（地層・岩石・気圧と風・台風・化石） ─────────
+  { key: 'rika-strata-formation', label: '地層のでき方と堆積岩の分類', prompt: `A cliff face cut away to show horizontal layers of different colours and grain sizes, coarse pebbles at the bottom and fine mud at the top. ${RIKA_STYLE}` },
+  { key: 'rika-igneous-rocks', label: '火成岩の分類', prompt: `Two rock samples side by side on a plain surface, the left one with large visible crystals and the right one fine-grained with a few scattered crystals. ${RIKA_STYLE}` },
+  { key: 'rika-river-erosion', label: '流れる水のはたらき（しん食・運搬・堆積）', prompt: `A river seen from above curving through land, the outer bank of the bend cut into a steep cliff and the inner bank forming a gentle sandy beach. ${RIKA_STYLE}` },
+  { key: 'rika-pressure-wind', label: '高気圧・低気圧と風のふき方', prompt: `Two swirling cloud systems over a map-like sea, the left one spiralling outward clockwise and the right one spiralling inward counter-clockwise. ${RIKA_STYLE}` },
+  { key: 'rika-stationary-front', label: '停滞前線と閉塞前線・前線の一生', prompt: `A long band of rain clouds stretching horizontally across the sky with a cold air mass below and warm air riding over it, cutaway side view. ${RIKA_STYLE}` },
+  { key: 'rika-typhoon-path', label: '台風の進路と風のふき方', prompt: `A large spiral storm with a clear circular eye at its centre, seen from space above a group of islands. ${RIKA_STYLE}` },
+  { key: 'rika-fossils', label: '示相化石と示準化石', prompt: `Two fossils embedded in rock slabs side by side, the left a coiled shell and the right a trilobite-like segmented creature. ${RIKA_STYLE}` },
+
+  // ───────── 理科：物理（熱・電気の利用・光と力の応用） ─────────
+  { key: 'rika-heat-transfer', label: '熱の伝わり方（伝導・対流・放射）', prompt: `A metal pot of water on a flame, with a spoon heating in the pot, swirling currents rising inside the water, and warmth radiating outward from the flame. ${RIKA_STYLE}` },
+  { key: 'rika-heat-quantity', label: '熱量と温度変化の計算', prompt: `A beaker of water on a stand being warmed by a small heater coil, a thermometer standing in the water. ${RIKA_STYLE}` },
+  { key: 'rika-heating-wire', label: '電熱線の発熱（太さ・長さと発熱量）', prompt: `Two beakers of water side by side, each with a coiled wire heater inside, the left coil noticeably thicker than the right, both connected to batteries. ${RIKA_STYLE}` },
+  { key: 'rika-bulb-brightness', label: '豆電球の明るさとつなぎ方', prompt: `Two simple circuits side by side, the left with two small bulbs in a single loop glowing dimly, the right with two bulbs on branching wires glowing brightly. ${RIKA_STYLE}` },
+  { key: 'rika-combined-pulley', label: '組み合わせ滑車（動滑車が複数）', prompt: `A hanging weight supported by a system of two movable pulleys and a fixed pulley on a ceiling beam, rope threaded through them. ${RIKA_STYLE}` },
+  { key: 'rika-springs-series', label: 'ばねの直列つなぎ・並列つなぎ', prompt: `Two arrangements side by side, the left with two coil springs joined end to end hanging one weight, the right with two springs side by side holding one weight between them. ${RIKA_STYLE}` },
+  { key: 'rika-mirror-image', label: '鏡にうつる像', prompt: `A person standing before a tall flat mirror with their reflection appearing at an equal distance behind the mirror surface. ${RIKA_STYLE}` },
+  { key: 'rika-virtual-image', label: '凸レンズの虚像（虫めがね）', prompt: `A magnifying glass held close over a small leaf, the leaf appearing much larger and upright through the lens. ${RIKA_STYLE}` },
+
+  // ───────── 理科：化学（状態変化・再結晶・金属と水溶液・燃焼の重さ） ─────────
+  { key: 'rika-three-states', label: '水の三態変化と温度のグラフ', prompt: `Three glass containers in a row: one holding ice cubes, one holding clear water, one with steam rising from it. ${RIKA_STYLE}` },
+  { key: 'rika-recrystallization', label: '再結晶で出てくる結晶の重さ', prompt: `A beaker of clear solution cooling in a bowl of ice, with sparkling crystals forming and settling at the bottom. ${RIKA_STYLE}` },
+  { key: 'rika-metal-acid', label: '金属と水溶液の反応（水素の発生）', prompt: `A test tube containing a small metal piece in clear liquid, vigorous bubbles rising to the surface, a delivery tube leading to an inverted tube over water. ${RIKA_STYLE}` },
+  { key: 'rika-combustion-mass', label: '燃焼と重さの変化', prompt: `A pan balance with a tuft of steel wool glowing red on the left pan and an identical unburned tuft on the right pan, the left pan tipping down. ${RIKA_STYLE}` },
+  { key: 'rika-gas-identification', label: '気体の見分け方（まとめ）', prompt: `Four gas jars in a row, one with cloudy white liquid at the bottom, one with a glowing splint inside, one with a small flame at its mouth, one with damp paper at its mouth. ${RIKA_STYLE}` },
+  { key: 'rika-neutralization-calc', label: '中和の計算と残る固体', prompt: `A conical flask of pale green liquid under a burette dripping clear liquid into it, beside an evaporating dish with white crystals. ${RIKA_STYLE}` },
 ];
 
 async function generateImage(apiKey, modelId, prompt) {
