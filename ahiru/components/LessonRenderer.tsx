@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, ActivityIndicator } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, ActivityIndicator, Platform } from 'react-native';
 import type { LessonSection } from '../data/lesson-types';
 import { getLessonFigure } from '../data/lesson-figures';
 import { getKoushikiFormulaInfo } from '../data/koushiki-access';
@@ -21,9 +21,42 @@ type Props = {
   onUnlockFormula?: (figureId: string, heading: string) => void;
 };
 
+// 本文に直接書かれた罫線の図（┌─┐│└┘ を使った枠や樹形図）は、
+// 等幅フォントで桁をそろえる前提で書かれている。ふつうの本文と同じ
+// 可変幅フォントで出すと桁がずれて何の図か分からなくなるので、
+// 連続する罫線の行はまとめて等幅・横スクロールの箱で出す。
+const BOX_DRAWING = /[┌┐└┘├┤┬┴┼─━│┃╱╲╳]/;
+const MONO = Platform.select({ ios: 'Courier', android: 'monospace', default: 'monospace' });
+
+function isArtLine(line: string): boolean {
+  return BOX_DRAWING.test(line);
+}
+
 function renderBody(body: string): React.ReactNode[] {
-  // Split by double newline for paragraphs
-  return body.split('\n').map((line, i) => {
+  const lines = body.split('\n');
+  const out: React.ReactNode[] = [];
+  for (let i = 0; i < lines.length; i++) {
+    if (!isArtLine(lines[i])) {
+      out.push(renderLine(lines[i], i));
+      continue;
+    }
+    // 罫線の行が続くあいだをひとかたまりの図として取り出す
+    let j = i;
+    while (j < lines.length && (isArtLine(lines[j]) || (lines[j].trim() === '' && j + 1 < lines.length && isArtLine(lines[j + 1])))) {
+      j++;
+    }
+    out.push(
+      <ScrollView key={`art${i}`} horizontal showsHorizontalScrollIndicator={false} style={styles.artBox}>
+        <Text style={styles.artText}>{lines.slice(i, j).join('\n')}</Text>
+      </ScrollView>,
+    );
+    i = j - 1;
+  }
+  return out;
+}
+
+function renderLine(line: string, i: number): React.ReactNode {
+  {
     if (line.startsWith('■ ') || line.startsWith('● ')) {
       return (
         <Text key={i} style={styles.bullet}>
@@ -67,7 +100,7 @@ function renderBody(body: string): React.ReactNode[] {
         {line}
       </Text>
     );
-  });
+  }
 }
 
 export default function LessonRenderer({
@@ -256,6 +289,21 @@ const styles = StyleSheet.create({
   },
   spacer: {
     height: 8,
+  },
+  artBox: {
+    backgroundColor: '#FAF6EF',
+    borderWidth: 1,
+    borderColor: '#E8DCC8',
+    borderRadius: 8,
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    marginVertical: 8,
+  },
+  artText: {
+    fontFamily: MONO,
+    fontSize: 13,
+    lineHeight: 19,
+    color: '#2B2420',
   },
   lockedSection: {
     marginBottom: 20,
