@@ -113,7 +113,7 @@ Zaibase/
 2026/8/23、iOSビルド・提出が3つの原因で何度も失敗し、同じやり取りを繰り返した。**`eas build --platform ios` が成功しビルド番号3で `.ipa` が生成されたことを確認済み**（buildNumber 1→2→3、最終的に成功）。次回同様の作業をするときは、まず以下を順にチェックすれば同じ堂々巡りは避けられるはず。
 
 1. **正しいディレクトリか確認する**：`~/ahiru` は無関係の別アプリ「QualiZ」（`com.jaysonaman.qualiz`）のクローンなので絶対に使わない。必ず `cd ~/zaibase-repo/ahiru` のように絶対パスで指定し、ビルド開始直後の表示で `Bundle Identifier: com.zaibase.exam` / `Project: @masaya.nanjo/entrance-exam` になっているか確認してから進める。
-2. **pull前にローカル差分を確認する**：EAS CLI（`appVersionSource: local`）はビルドのたびに `app.json` の `ios.buildNumber` を直接書き込むため、`git status` で `ahiru/app.json` に変更が残っていないか確認し、あれば `git checkout -- ahiru/app.json` してから `git pull` する。
+2. **ビルド番号はEAS側で管理している（2026/9/13変更）**：`eas.json` を `appVersionSource: "remote"` にしたため、EASはもう `app.json` の `ios.buildNumber` を書き換えない。したがってビルド前の `git checkout -- ahiru/app.json` は不要になった。<br>それまでは `local` だったため、EASが書いたビルド番号を毎回 `git checkout` で捨てる運用になっており、次のビルドでも必ず1→2と採番されて**同じ番号で二度提出しようとして失敗する**事故が実際に起きた（1.2.9(2)で発生）。`remote` ではEASが採番を覚えているので、この衝突は起きない。バージョン（1.2.10など）を上げるときだけ `app.json` を編集する。
 3. **reanimated / worklets のバージョンが固定されているか確認する**：`ahiru/package.json` はこの2つを範囲指定なしの完全固定にしてある（`react-native-reanimated: 4.5.3` / `react-native-worklets: 0.11.1`、検証済みの組み合わせ）。`package-lock.json` はこのリポジトリ全体の方針でコミットしていないため、どちらかを `^4.4.1` のようなレンジ指定に戻すと、EASビルドのたびに最新版へ自動で引き上がり、組み合わせがずれて `pod install` やXcodeビルドが失敗する（実際に発生：worklets 0.12.x で `executeSync` が `runSync` 系にリネームされて削除されており、reanimated 4.6.0がそれを呼び出そうとして `no member named 'executeSync' in 'worklets::WorkletRuntime'` で失敗した）。**この2つの依存関係は今後もレンジ指定に戻さないこと。** バージョンを上げる必要が出た場合は、`npm view react-native-reanimated@<version> peerDependencies` で要求される worklets バージョンを確認し、両方を新しい組み合わせに完全固定してから実機でビルド確認する。
 
 ## 司令塔AI（複数プロダクト横断監督）— 保留中
