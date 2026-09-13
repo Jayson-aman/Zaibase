@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
   ActivityIndicator,
   Alert,
-  Dimensions,
+  useWindowDimensions,
   Platform,
 } from 'react-native';
 import { FORMULAS, SUBJECTS, type Subject, type FormulaItem } from '../../data/formulas';
@@ -31,17 +31,11 @@ const SUBJ_ICON: Record<Subject, IconSubject> = {
   英語: 'eigo',
 };
 
-// 図解画像の一辺のサイズをあらかじめ画面幅から計算しておく。width:'100%'をFlatList内の
-// Imageに使うと、リスト仮想化中のレイアウト計測タイミングによっては一瞬（あるいは
-// 端末によっては継続的に）実際のコンテナ幅より大きいサイズで描画され、画面端からはみ出す
-// ちらつき・崩れが起きることがあるため、固定px値で確実にサイズを決める。
-// content(padding:16)×2 + figureBox(paddingHorizontal:12, borderWidth:1)×2 を差し引く。
-const SCREEN_WIDTH = Dimensions.get('window').width;
-const FORMULA_IMAGE_SIZE = SCREEN_WIDTH - (16 + 12 + 1) * 2;
-
 
 // 1項目分の描画。FlatListの行として使う。
-function FormulaRow({
+// メモ化しないと、画面のどこかの状態が変わるたびに全行が描き直され、
+// 図解画像の多い理科・社会で画面が点滅する。
+const FormulaRow = React.memo(function FormulaRow({
   item,
   accent,
   bypassLock,
@@ -50,6 +44,7 @@ function FormulaRow({
   productReady,
   purchasing,
   onUnlock,
+  imageSize,
 }: {
   item: FormulaItem;
   accent: string;
@@ -58,12 +53,9 @@ function FormulaRow({
   priceLabel: string;
   productReady: boolean;
   purchasing: boolean;
-  onUnlock: () => void;
+  onUnlock: (label: string) => void;
+  imageSize: number;
 }) {
-  // 図解画像の大きさは、置かれた枠の実寸から決める。起動時の画面幅から
-  // 計算して固定すると、横向き・分割表示・余白の想定違いではみ出す。
-  const [imageSize, setImageSize] = useState(FORMULA_IMAGE_SIZE);
-
   if (item.locked && !bypassLock && !isUnlocked) {
     return (
       <View style={styles.formulaRow}>
@@ -82,7 +74,7 @@ function FormulaRow({
             style={[styles.unlockBtn, { backgroundColor: accent }, (!productReady || purchasing) && styles.unlockBtnDisabled]}
             activeOpacity={0.85}
             disabled={!productReady || purchasing}
-            onPress={onUnlock}
+            onPress={() => onUnlock(item.label)}
           >
             {purchasing ? (
               <ActivityIndicator color="#FFFFFF" />
@@ -120,10 +112,7 @@ function FormulaRow({
         )}
 
         {!item.figure && formulaImages[item.label] && (
-          <View
-            style={styles.figureBox}
-            onLayout={(e) => setImageSize(Math.round(e.nativeEvent.layout.width - 24))}
-          >
+          <View style={styles.figureBox}>
             <Text style={styles.figureLabel}>図解</Text>
             <Image
               source={formulaImages[item.label]}
@@ -188,10 +177,14 @@ function FormulaRow({
         )}
       </View>
   );
-}
+});
 
 export default function FormulasScreen() {
   const [subject, setSubject] = useState<Subject>('算数');
+  // 図解画像の一辺。画面幅から1回だけ決める。行ごとに測り直すと、
+  // スクロールで行が外れて戻るたびに測り直しが走り、画像が点滅する。
+  const { width: winWidth } = useWindowDimensions();
+  const imageSize = Math.max(200, winWidth - (16 + 12 + 1) * 2);
   const sections = FORMULAS[subject];
   const subjectInfo = SUBJECTS.find((s) => s.key === subject)!;
 
@@ -206,14 +199,14 @@ export default function FormulasScreen() {
     unlockFormula,
   } = useFormulaUnlocks();
 
-  async function handleUnlock(label: string) {
+  const handleUnlock = React.useCallback(async (label: string) => {
     const result = await unlockFormula(label);
     if (!result.ok) {
       Alert.alert('購入できませんでした', result.message);
       return;
     }
     Alert.alert('解放しました', `「${label}」はこれ以降ずっと無料で見られます。`);
-  }
+  }, [unlockFormula]);
 
   // セクション見出しと項目を1本のリストにならし、FlatListで仮想化できるようにする
   type Row =
@@ -287,7 +280,8 @@ export default function FormulasScreen() {
               priceLabel={priceLabel}
               productReady={productReady}
               purchasing={purchasingFigureId === row.item.label}
-              onUnlock={() => handleUnlock(row.item.label)}
+              onUnlock={handleUnlock}
+              imageSize={imageSize}
             />
           )
         }

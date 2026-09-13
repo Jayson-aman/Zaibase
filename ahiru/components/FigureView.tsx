@@ -1368,7 +1368,12 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
     return (
       <View
         style={styles.wrap}
-        onLayout={(e) => setBoxWidth(e.nativeEvent.layout.width - 16)}
+        onLayout={(e) => {
+          // 数pxの違いで測り直すと、そのたびに描き直されて図がちらつく。
+          // はっきり違うときだけ反映する。
+          const w = e.nativeEvent.layout.width - 16;
+          setBoxWidth((prev) => (prev == null || Math.abs(prev - w) > 8 ? w : prev));
+        }}
       >
         <TouchableOpacity
           activeOpacity={animated ? 0.7 : 1}
@@ -1397,7 +1402,10 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
   return (
     <View
       style={styles.wrap}
-      onLayout={(e) => setBoxWidth(e.nativeEvent.layout.width - 16)}
+      onLayout={(e) => {
+        const w = e.nativeEvent.layout.width - 16;
+        setBoxWidth((prev) => (prev == null || Math.abs(prev - w) > 8 ? w : prev));
+      }}
     >
       <TouchableOpacity
         activeOpacity={animated ? 0.85 : 1}
