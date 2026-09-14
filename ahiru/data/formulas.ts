@@ -12,6 +12,7 @@ import { shakaiFormulas } from './formulas-shakai';
 import { shakaiTsuikaFormulas } from './formulas-shakai-tsuika';
 import { kokoShakaiFormulas } from './formulas-koko-shakai';
 import { kokugoFormulas } from './formulas-kokugo';
+import { kokoKokugoFormulas } from './formulas-koko-kokugo';
 import { eigoFormulas } from './formulas-eigo';
 
 export type Subject = '算数' | '国語' | '理科' | '社会' | '英語';
@@ -29,7 +30,7 @@ export const SUBJECTS: { key: Subject; emoji: string; color: string }[] = [
 // 編集しないので、無料だった項目が誤って有料になることがない。
 export const FORMULAS: Record<Subject, FormulaSection[]> = {
   算数: [...sansuFormulas, ...kokoSugakuFormulas],
-  国語: kokugoFormulas,
+  国語: [...kokugoFormulas, ...kokoKokugoFormulas],
   理科: [...rikaFormulas, ...rikaButsuriKagakuFormulas, ...kokoRikaFormulas],
   社会: [...shakaiFormulas, ...shakaiTsuikaFormulas, ...kokoShakaiFormulas],
   英語: eigoFormulas,
