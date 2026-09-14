@@ -283,17 +283,27 @@ info('同じ本文の中で40字以上がそっくり繰り返されている（
 // これは壊れているわけではないので件数が0になることはないが、
 // **減らしていく数字**として出す。増えたら書き方が後戻りしている。
 const WHY_WORD = /なぜ|だから|ので|ため|理由|わけ|から。|からで|という意味|つまり|もともと|考える|くらべ|比べ/;
+// 「解説そのものが無い」は不具合なので check（0にできる）。
+// 「理由が書いていない」は書き方の質なので info（0にはならない）。
+// ── 検出語で見ているので、歴史のように出来事をそのまま述べる文は
+//    理由が書けていても拾われる。社会は構造的に残る件数が多い。
+//    増えたら後戻り、減れば前進、という目安として見ること。
+const noExpQuiz: string[] = [];
 const thinQuiz: string[] = [];
 for (const [subj, secs] of Object.entries(FORMULAS))
   for (const sec of secs)
     for (const it of sec.items ?? [])
       for (const z of it.quiz ?? []) {
-        const e = String(z.explanation ?? '');
+        const e = String(z.explanation ?? '').trim();
+        if (!e) { noExpQuiz.push(`${subj} / ${it.label} / ${z.q.slice(0, 20)}…`); continue; }
         const words = e.replace(/[0-9０-９＋－×÷＝=()（）。、,.\s+\-*/^²³°%a-zA-Z]/g, '');
-        if (!e || !WHY_WORD.test(e) || words.length < 12)
+        if (!WHY_WORD.test(e) || words.length < 12)
           thinQuiz.push(`${subj} / ${it.label} / ${z.q.slice(0, 20)}…`);
       }
-info('一問一答の解説が式だけで理由が書いていない（減らしていく数字）', thinQuiz, 3);
+// ★これは0にできる欠陥。埋め終わったら info ではなく check に変えて、
+//   以後は1件でも出たらコミットを止めるようにすること（現在は残債があるため info）。
+info('一問一答に解説がない（0にすべき欠陥・残債）', noExpQuiz, 3);
+info('一問一答の解説が理由まで書けていない（減らしていく数字）', thinQuiz, 3);
 
 // 公式集の一問一答そのものの品質。
 // 「答えが自分自身を打ち消している」「答えが説明文になっている」といった、
