@@ -191,6 +191,25 @@ for (const { key } of SUBJECTS)
 check('公式集→教科書リンクの参照切れ', relBroken);
 check('公式集→教科書リンクの受験種別ちがい', relMismatch);
 
+// 公式集の一問一答そのものの品質。
+// 「答えが自分自身を打ち消している」「答えが説明文になっている」といった、
+// 書いた本人には気づきにくい欠陥を拾う。
+// （正四角錐の高さの問題で、解説が正しい√7を出しながら「ではなく」と否定して
+//   側面の三角形の高さ4cmを答えにしていた事故があったため）
+const quizBad: string[] = [];
+for (const { key } of SUBJECTS)
+  for (const sec of FORMULAS[key])
+    for (const it of sec.items)
+      for (const qz of it.quiz ?? []) {
+        const at = String(qz.a ?? '');
+        const where = `${key}/${it.label}`;
+        if (!at.trim()) quizBad.push(`${where}（答えが空）`);
+        else if (at.length > 60) quizBad.push(`${where}（答えが長すぎる）`);
+        else if (/…/.test(at)) quizBad.push(`${where}（答えに省略記号）`);
+        if (qz.q?.trim() === at.trim()) quizBad.push(`${where}（問いと答えが同じ）`);
+      }
+check('公式集の一問一答の欠陥', quizBad);
+
 // ── E. 表示（等幅の箱・記号） ──────────────────────────
 console.log('\n=== E. 表示 ===');
 // LessonRenderer.isArtLine と同じ判定。罫線を含み、小文字2つ以上も日本語も
