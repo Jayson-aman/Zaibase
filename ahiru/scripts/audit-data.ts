@@ -276,6 +276,25 @@ for (const l of L)
   }
 info('同じ本文の中で40字以上がそっくり繰り返されている（要目視）', spliced, 4);
 
+// 一問一答の解説が、式と答えをなぞるだけで「なぜそうなるか」を言っていないもの。
+// （「頂角が40度の二等辺三角形の底角は」に対して「底角は2つとも等しいので
+//   (180−40)÷2＝70度」とだけ書いてあり、なぜ底角が等しいのかも、
+//   140度が2つぶんの合計だという肝心なところも書いていなかった）
+// これは壊れているわけではないので件数が0になることはないが、
+// **減らしていく数字**として出す。増えたら書き方が後戻りしている。
+const WHY_WORD = /なぜ|だから|ので|ため|理由|わけ|から。|からで|という意味|つまり|もともと|考える|くらべ|比べ/;
+const thinQuiz: string[] = [];
+for (const [subj, secs] of Object.entries(FORMULAS))
+  for (const sec of secs)
+    for (const it of sec.items ?? [])
+      for (const z of it.quiz ?? []) {
+        const e = String(z.explanation ?? '');
+        const words = e.replace(/[0-9０-９＋－×÷＝=()（）。、,.\s+\-*/^²³°%a-zA-Z]/g, '');
+        if (!e || !WHY_WORD.test(e) || words.length < 12)
+          thinQuiz.push(`${subj} / ${it.label} / ${z.q.slice(0, 20)}…`);
+      }
+info('一問一答の解説が式だけで理由が書いていない（減らしていく数字）', thinQuiz, 3);
+
 // 公式集の一問一答そのものの品質。
 // 「答えが自分自身を打ち消している」「答えが説明文になっている」といった、
 // 書いた本人には気づきにくい欠陥を拾う。
