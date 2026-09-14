@@ -18,6 +18,7 @@ const SERIF = Platform.select({
 import { Question, subjectInfo } from '../data/questions-meta';
 import SubjectIcon from './SubjectIcon';
 import { getHistoryThemeLabel } from '../data/images';
+import { explanationText, hintText } from '../utils/explanation';
 import { getSubjectThemeLabel, getSubjectIllustration } from '../data/subjectImages';
 import { getFigure } from '../data/figures';
 import FigureView from './FigureView';
@@ -216,10 +217,10 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             <View style={styles.hintBox}>
               <Text style={styles.hintLabel}>📖 解説</Text>
               <Text style={styles.hintText}>
-                {isPro ? (question.explanation ?? question.hint) : (question.hint ?? question.explanation?.split('\n')[0])}
+                {explanationText(question)}
               </Text>
-              {!isPro && question.explanation && !question.hint && (
-                <Text style={styles.upgradeNudge}>🔒 詳細解説はProプランで</Text>
+              {hintText(question) !== '' && (
+                <Text style={styles.hintText}>💡 {hintText(question)}</Text>
               )}
             </View>
           )}
@@ -305,10 +306,10 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             <View style={styles.hintBox}>
               <Text style={styles.hintLabel}>📖 解説</Text>
               <Text style={styles.hintText}>
-                {isPro ? (question.explanation ?? question.hint) : (question.hint ?? question.explanation?.split('\n')[0])}
+                {explanationText(question)}
               </Text>
-              {!isPro && question.explanation && !question.hint && (
-                <Text style={styles.upgradeNudge}>🔒 詳細解説はProプランで</Text>
+              {hintText(question) !== '' && (
+                <Text style={styles.hintText}>💡 {hintText(question)}</Text>
               )}
             </View>
           )}

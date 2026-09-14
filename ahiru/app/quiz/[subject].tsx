@@ -17,6 +17,7 @@ import { getTestMode, buildTestSet, type TestModeKey, type LevelKey } from '../.
 import { GRADE_ORDER, type GradeKey } from '../../data/grades';
 import { getKoushikiFormulaIdForQuestion, isKoushikiFormulaFree } from '../../data/koushiki-access';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
+import { explanationText, hintText } from '../../utils/explanation';
 import { explanationsSansu } from '../../data/explanations_sansu';
 import { explanationsKokugo } from '../../data/explanations_kokugo';
 import { explanationsRika } from '../../data/explanations_rika';
@@ -729,10 +730,11 @@ export default function QuizScreen() {
               <View style={styles.wrongExplanationCard}>
                 <Text style={styles.wrongExplanationTitle}>📖 くわしい解説</Text>
                 <Text style={styles.wrongExplanationText}>
-                  {isPro || isMax
-                    ? (currentQuestion.explanation ?? allExplanations[currentQuestion.id] ?? currentQuestion.hint)
-                    : (currentQuestion.hint ?? currentQuestion.explanation?.split('\n')[0] ?? allExplanations[currentQuestion.id]?.split('\n')[0])}
+                  {explanationText(currentQuestion, allExplanations[currentQuestion.id])}
                 </Text>
+                {hintText(currentQuestion) !== '' && (
+                  <Text style={styles.wrongExplanationText}>💡 {hintText(currentQuestion)}</Text>
+                )}
                 {(isPro || isMax) && currentQuestion.memoryTip && (
                   <View style={styles.tipRow}>
                     <Text style={styles.tipLabel}>💡 覚え方</Text>
@@ -745,13 +747,13 @@ export default function QuizScreen() {
                     <Text style={styles.tipText}>{currentQuestion.pitfall}</Text>
                   </View>
                 )}
-                {!isPro && !isMax && (currentQuestion.explanation || allExplanations[currentQuestion.id]) && (
+                {!isPro && !isMax && (currentQuestion.memoryTip || currentQuestion.pitfall) && (
                   <TouchableOpacity
                     style={styles.explanationUpgradeBtn}
                     onPress={() => setShowPaywall(true)}
                     activeOpacity={0.85}
                   >
-                    <Text style={styles.explanationUpgradeBtnText}>🔒 図解つき詳細解説を見る（Pro/Max）</Text>
+                    <Text style={styles.explanationUpgradeBtnText}>💡 覚え方・⚠️ ひっかけ注意も見る（Pro/Max）</Text>
                   </TouchableOpacity>
                 )}
               </View>

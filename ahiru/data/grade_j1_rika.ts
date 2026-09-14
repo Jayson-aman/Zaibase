@@ -197,7 +197,7 @@ export const gradeJ1RikaQuestions: Question[] = [
     question: '面積が2m²の板に、垂直に40Nの力が加わっている。この板が受ける圧力は何Paか。',
     answer: '20Pa',
     hint: '圧力(Pa)＝力(N)÷面積(m²)',
-    explanation: '【解説】\n圧力＝力÷面積＝40N÷2m²＝20Pa',
+    explanation: '【解説】\n圧力とは「1m²あたりにかかる力」のこと。40Nの力を2m²で分け合うことになるので、1m²あたりは 40 ÷ 2 ＝ 20N。これが20Pa（パスカル）。同じ力でも受ける面積がせまいほど圧力は大きくなる。',
     figureDescription: '面積2m²の板に40Nの力が加わっているようすを示した図',
   },
   {

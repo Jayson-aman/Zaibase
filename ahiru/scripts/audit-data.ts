@@ -13,6 +13,7 @@ import { FORMULAS, SUBJECTS } from '../data/formulas';
 import { getLessonFigure } from '../data/lesson-figures';
 import { getMangaScript } from '../data/manga-scripts';
 import { questions } from '../data/questions';
+import { explanationText } from '../utils/explanation';
 
 type Lesson = (typeof allLessons)[number] & Record<string, any>;
 const L = allLessons as Lesson[];
@@ -134,6 +135,20 @@ check(
 check(
   '選択肢が重複している問題',
   Q.filter((q) => Array.isArray(q.choices) && dupes(q.choices).length > 0).map((q) => q.id),
+);
+
+// 問題集の解説が、画面に出したときに短すぎないか。
+//
+// 長いあいだ、無料ユーザーには hint（中央値34字）だけが「📖 解説」という
+// 見出しで出ていて、本当の解説（中央値167字）は Pro でしか読めなかった。
+// さらにヒントの無い532問では explanation の1行目だけが出ていたため、
+// そこが「【解説】」という見出しの文字しか無い問題では画面に
+// 「【(1)の解説】」とだけ表示され、裏の1,000字超の解説が読めなかった。
+// 2026/9/14に解説は無料で全文を出すよう変更し、あわせて式だけの26問も書き直した。
+// ここは utils/explanation.ts の同じ関数を通して、画面に出る文そのものを測る。
+check(
+  '問題集の解説が画面上で短すぎる（20字以下）',
+  Q.filter((q) => explanationText(q).length <= 20).map((q) => `${q.id}(${explanationText(q).length}字)`),
 );
 
 // ── D. 重複 ───────────────────────────────────

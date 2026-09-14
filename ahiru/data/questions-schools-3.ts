@@ -796,7 +796,7 @@ export const otaniQuestions: Question[] = [
     question: 'あるクラスの平均点が72点で40人のクラスの合計点は何点か。',
     answer: '2880点',
     hint: '合計=平均×人数',
-    explanation: '合計点=72×40=2880点',
+    explanation: '【解説】\n平均点とは「全員が同じ点だったとしたら何点になるか」にならした数のこと。だから合計を人数でわった値が平均になる。逆にたどれば、平均×人数でもとの合計にもどせる。72 × 40 ＝ 2880点。',
   },
   {
     id: 'otani_sansu_04', subject: 'sansu', difficulty: 'advanced',
