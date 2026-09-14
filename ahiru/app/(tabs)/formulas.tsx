@@ -13,6 +13,7 @@ import {
   useWindowDimensions,
 } from 'react-native';
 import { FORMULAS, SUBJECTS, type Subject, type FormulaItem } from '../../data/formulas';
+import { STUDY_PERIOD_ORDER, type StudyPeriod } from '../../data/formulas-types';
 import SubjectIcon, { type IconSubject } from '../../components/SubjectIcon';
 import FigureView from '../../components/FigureView';
 import InlineQuiz from '../../components/InlineQuiz';
@@ -187,8 +188,28 @@ export default function FormulasScreen() {
   // スクロールで行が外れて戻るたびに測り直しが走り、画像が点滅する。
   const { width: winWidth } = useWindowDimensions();
   const imageSize = Math.max(200, winWidth - (16 + 12 + 1) * 2);
-  const sections = FORMULAS[subject];
   const subjectInfo = SUBJECTS.find((s) => s.key === subject)!;
+
+  // 学年（学習時期）のしぼりこみ。null は「すべて」。
+  const [period, setPeriod] = useState<StudyPeriod | null>(null);
+  const allSections = FORMULAS[subject];
+
+  // その教科に実際にあるものだけをチップに出す（空の学年を押せても意味がない）
+  const periods = React.useMemo(() => {
+    const s = new Set(allSections.map((sec) => sec.studyPeriod).filter(Boolean) as StudyPeriod[]);
+    return STUDY_PERIOD_ORDER.filter((p) => s.has(p));
+  }, [allSections]);
+
+  // 選んだ学年がその教科に無いときは「すべて」に戻す。
+  // （算数で「小4」を選んだまま英語に切りかえると、中身が空になってしまう）
+  React.useEffect(() => {
+    if (period != null && !periods.includes(period)) setPeriod(null);
+  }, [period, periods]);
+
+  const sections = React.useMemo(
+    () => (period == null ? allSections : allSections.filter((sec) => sec.studyPeriod === period)),
+    [allSections, period],
+  );
 
   const { isPro, isMax } = useSubscription();
   const { hasAccess: betaAccess } = useBetaAccess();
@@ -212,24 +233,43 @@ export default function FormulasScreen() {
 
   // セクション見出しと項目を1本のリストにならし、FlatListで仮想化できるようにする
   type Row =
-    | { kind: 'header'; key: string; title: string; intro?: string }
+    | { kind: 'header'; key: string; title: string; intro?: string; period?: StudyPeriod }
     | { kind: 'item'; key: string; item: (typeof sections)[number]['items'][number] };
-  // 画像を多く含む教科かどうか（描画の刻み方を変えるため）
-  const heavyImages = React.useMemo(
-    () => sections.reduce((n, sec) => n + sec.items.filter((it) => !it.figure && formulaImages[it.label]).length, 0) > 20,
+  // いま表示するぶんに図解画像（PNG）が何枚あるか。学年でしぼると減るので、
+  // 全教科まとめてではなく、しぼったあとの実数で数える。
+  const shownImageCount = React.useMemo(
+    () =>
+      sections.reduce(
+        (n, sec) => n + sec.items.filter((it) => !it.figure && formulaImages[it.label]).length,
+        0,
+      ),
     [sections],
   );
 
   const rows: Row[] = React.useMemo(() => {
     const out: Row[] = [];
     sections.forEach((section, si) => {
-      out.push({ kind: 'header', key: `h${si}`, title: section.title, intro: section.intro });
+      out.push({
+        kind: 'header',
+        key: `h${si}`,
+        title: section.title,
+        intro: section.intro,
+        period: section.studyPeriod,
+      });
       section.items.forEach((item, ii) => {
         out.push({ kind: 'item', key: `i${si}_${ii}`, item });
       });
     });
     return out;
   }, [sections]);
+
+  // 点滅の正体は仮想化による行の付け外し（と、そのたびの測り直し）なので、
+  // 可能なかぎり全行を出しっぱなしにする。画像は640×640で1枚あたりの
+  // メモリが大きいため、枚数が多いときだけ仮想化に戻す。
+  // 学年をしぼればほとんどの組み合わせがこの閾値を下回り、点滅しない。
+  // 例：理科 小6前半=24枚 → 全行描画／社会 小6後半・直前=30枚 → 仮想化。
+  const MAX_IMAGES_WITHOUT_VIRTUALIZATION = 25;
+  const virtualize = shownImageCount > MAX_IMAGES_WITHOUT_VIRTUALIZATION;
 
   return (
     <SafeAreaView style={styles.container}>
@@ -257,6 +297,33 @@ export default function FormulasScreen() {
         ))}
       </View>
 
+      {periods.length > 1 && (
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          style={styles.periodRow}
+          contentContainerStyle={styles.periodRowContent}
+        >
+          <TouchableOpacity
+            style={[styles.periodChip, period == null && { backgroundColor: subjectInfo.color, borderColor: subjectInfo.color }]}
+            onPress={() => setPeriod(null)}
+            activeOpacity={0.8}
+          >
+            <Text style={[styles.periodChipText, period == null && styles.periodChipTextActive]}>すべて</Text>
+          </TouchableOpacity>
+          {periods.map((p) => (
+            <TouchableOpacity
+              key={p}
+              style={[styles.periodChip, period === p && { backgroundColor: subjectInfo.color, borderColor: subjectInfo.color }]}
+              onPress={() => setPeriod(p)}
+              activeOpacity={0.8}
+            >
+              <Text style={[styles.periodChipText, period === p && styles.periodChipTextActive]}>{p}</Text>
+            </TouchableOpacity>
+          ))}
+        </ScrollView>
+      )}
+
       <FlatList
         style={styles.scroll}
         contentContainerStyle={styles.content}
@@ -270,9 +337,9 @@ export default function FormulasScreen() {
         // 使いすぎるので画面に入った分だけ描く。ただし刻みが細かいと、
         // 前後の余裕が足りずスクロール中に空セルが見えて点滅になるため、
         // メモリが許す範囲で前後を厚めに持たせる。
-        initialNumToRender={heavyImages ? 10 : rows.length}
-        maxToRenderPerBatch={heavyImages ? 10 : 20}
-        windowSize={heavyImages ? 21 : 41}
+        initialNumToRender={virtualize ? 10 : rows.length}
+        maxToRenderPerBatch={virtualize ? 10 : 20}
+        windowSize={virtualize ? 21 : 41}
         updateCellsBatchingPeriod={50}
         // removeClippedSubviews は画面外のセルをビュー階層から切り離すので、
         // 戻ってきたときに一瞬空白になる。理科・社会の点滅の原因なので使わない。
@@ -281,7 +348,14 @@ export default function FormulasScreen() {
         renderItem={({ item: row }) =>
           row.kind === 'header' ? (
             <View style={styles.sectionHeader}>
-              <Text style={[styles.sectionTitle, { color: subjectInfo.color }]}>{row.title}</Text>
+              <View style={styles.sectionTitleRow}>
+                <Text style={[styles.sectionTitle, { color: subjectInfo.color }]}>{row.title}</Text>
+                {row.period != null && (
+                  <View style={styles.sectionPeriodChip}>
+                    <Text style={styles.sectionPeriodChipText}>📅 {row.period}</Text>
+                  </View>
+                )}
+              </View>
               {row.intro != null && <Text style={styles.sectionIntro}>{row.intro}</Text>}
             </View>
           ) : (
@@ -341,6 +415,26 @@ const styles = StyleSheet.create({
   subjectBtnText: { fontSize: 14, fontWeight: '700', color: '#666' },
   subjectBtnTextActive: { color: '#FFFFFF' },
   scroll: { flex: 1 },
+  periodRow: { flexGrow: 0, borderBottomWidth: 1, borderBottomColor: '#EFE7DA', backgroundColor: '#FFFFFF' },
+  periodRowContent: { paddingHorizontal: 12, paddingVertical: 8, gap: 6, alignItems: 'center' },
+  periodChip: {
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 999,
+    borderWidth: 1,
+    borderColor: '#DDD2C0',
+    backgroundColor: '#FFFFFF',
+  },
+  periodChipText: { fontSize: 13, fontWeight: '700', color: '#6B5B45' },
+  periodChipTextActive: { color: '#FFFFFF' },
+  sectionTitleRow: { flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap', gap: 8 },
+  sectionPeriodChip: {
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 999,
+    backgroundColor: '#F3EDE2',
+  },
+  sectionPeriodChipText: { fontSize: 11, fontWeight: '700', color: '#7A6A52' },
   content: { padding: 16 },
   sectionHeader: {
     backgroundColor: '#FFFFFF',

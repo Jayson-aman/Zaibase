@@ -12,6 +12,7 @@ import type { FormulaSection } from './formulas-types';
 export const shakaiTsuikaFormulas: FormulaSection[] = [
   {
     title: '地理の資料の読み取り（地形図・雨温図・輸送）',
+    studyPeriod: '小5後半',
     intro:
       '入試では「覚えているか」だけでなく「資料を読めるか」が必ず問われます。地形図・雨温図・輸送手段のグラフは、見るポイントさえ決めておけば毎回同じ手順で読み取れます。',
     items: [
@@ -210,6 +211,7 @@ export const shakaiTsuikaFormulas: FormulaSection[] = [
 
   {
     title: '歴史の流れでつかむ（文化史・土地制度・江戸の交通）',
+    studyPeriod: '小6後半・直前',
     intro:
       '歴史は人物と年号だけでなく、「どんな文化が、だれの力で、どこの影響を受けて生まれたか」で問われます。時代ごとの文化と、土地や交通のしくみの移り変わりをまとめます。',
     items: [
@@ -401,6 +403,7 @@ export const shakaiTsuikaFormulas: FormulaSection[] = [
 
   {
     title: '政治・経済のしくみ（選挙・裁判・為替）',
+    studyPeriod: '小6後半・直前',
     intro:
       '選挙のやり方、裁判の種類、円高円安は「しくみ」を説明させる問題が出ます。用語を覚えるだけでなく、なぜそうなるかを一言で言えるようにしておきます。',
     items: [

@@ -62,10 +62,46 @@ export type FormulaItem = {
   checkpoints?: string[];
 };
 
+/**
+ * 学習時期。教科書単元（Lesson.studyPeriod）と同じ語をそのまま使う。
+ * 公式集の画面で学年を選べるようにするための区分。
+ */
+export type StudyPeriod =
+  | '小4'
+  | '小5前半'
+  | '小5後半'
+  | '小6前半'
+  | '小6後半・直前'
+  | '中1'
+  | '中2'
+  | '中3前半'
+  | '中3夏'
+  | '中3秋〜直前';
+
+/** 画面の学年チップに出す順番。ここに無い値は末尾にまわす。 */
+export const STUDY_PERIOD_ORDER: StudyPeriod[] = [
+  '小4',
+  '小5前半',
+  '小5後半',
+  '小6前半',
+  '小6後半・直前',
+  '中1',
+  '中2',
+  '中3前半',
+  '中3夏',
+  '中3秋〜直前',
+];
+
 export type FormulaSection = {
   /** セクション見出し（例：面積・体積） */
   title: string;
   /** セクションの導入・全体像の一言 */
   intro?: string;
+  /**
+   * そのセクションを学ぶ時期。画面の学年チップで絞りこむのに使う。
+   * 未設定のセクションは「すべて」にだけ出る（絞りこみから漏れないよう、
+   * 新しいセクションを足すときは必ず付けること）。
+   */
+  studyPeriod?: StudyPeriod;
   items: FormulaItem[];
 };

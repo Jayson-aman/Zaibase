@@ -3,6 +3,7 @@ import type { FormulaSection } from './formulas-types';
 export const sansuFormulas: FormulaSection[] = [
   {
     title: '面積・体積の基本',
+    studyPeriod: '小5前半',
     intro: '図形の広さ（面積）と、かさ（体積）を求める土台となる公式です。どこが底辺・高さ・半径かを正しく見つけることが一番大事です。',
     items: [
       {
@@ -280,6 +281,7 @@ export const sansuFormulas: FormulaSection[] = [
   },
   {
     title: '速さ（旅人算・流水算・通過算・時計算）',
+    studyPeriod: '小5後半',
     intro: '速さ・時間・道のりの関係が基本。線分図やダイヤグラムをかくと、追いかけ・出会い・電車・時計の問題がぐっと解きやすくなります。',
     items: [
       {
@@ -512,6 +514,7 @@ export const sansuFormulas: FormulaSection[] = [
   },
   {
     title: '割合・比の基本',
+    studyPeriod: '小5前半',
     intro: '「くらべる量・もとにする量・割合」の関係が土台。百分率（％）や歩合（割・分・厘）、比への直し方をおさえましょう。',
     items: [
       {
@@ -747,6 +750,7 @@ export const sansuFormulas: FormulaSection[] = [
   },
   {
     title: '数列・規則性',
+    studyPeriod: '小6前半',
     intro: 'ならんだ数のきまりを見つけて、○番目や合計を一気に求めます。等差数列と、階段状に増える三角数がよく出ます。',
     items: [
       {
@@ -945,6 +949,7 @@ export const sansuFormulas: FormulaSection[] = [
   },
   {
     title: '場合の数',
+    studyPeriod: '小6後半・直前',
     intro: 'ならべ方（順列）と選び方（組み合わせ）を数えます。順番が関係あるかどうかで数え方が変わるのがポイントです。',
     items: [
       {
@@ -1144,6 +1149,7 @@ export const sansuFormulas: FormulaSection[] = [
   },
   {
     title: '特殊算（つるかめ・和差・過不足・年齢）',
+    studyPeriod: '小5後半',
     intro: '中学受験でおなじみの文章題たち。線分図や面積図をかいて、わからない数を求めるパターンを身につけます。',
     items: [
       {
@@ -1343,6 +1349,7 @@ export const sansuFormulas: FormulaSection[] = [
   },
   {
     title: '仕事算・ニュートン算',
+    studyPeriod: '小6前半',
     intro: '全体の仕事量を1（または最小公倍数）とおいて、1あたりの働きで考える文章題です。ニュートン算は「増えながら減る」のがポイント。',
     items: [
       {
@@ -1510,6 +1517,7 @@ export const sansuFormulas: FormulaSection[] = [
   },
   {
     title: '平面図形（角度・多角形）',
+    studyPeriod: '小4',
     intro: '三角形・多角形の角の和や、平行線の錯角・同位角を使って角度を求めます。内角・外角の関係が定番です。',
     items: [
       {
@@ -1723,6 +1731,7 @@ export const sansuFormulas: FormulaSection[] = [
   },
   {
     title: '相似と図形の面積比',
+    studyPeriod: '小6前半',
     intro: '形が同じで大きさだけちがう図形（相似）では、辺の比・面積比・体積比がきれいな関係になります。',
     items: [
       {
@@ -1903,6 +1912,7 @@ export const sansuFormulas: FormulaSection[] = [
   },
   {
     title: '数の性質（約数・倍数・素数）',
+    studyPeriod: '小5前半',
     intro: '約数・倍数・素数・分数の基本。最大公約数と最小公倍数は文章題の道具として何度も使います。',
     items: [
       {
