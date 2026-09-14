@@ -15,6 +15,7 @@ import {
 } from 'react-native';
 import { FORMULAS, SUBJECTS, type Subject, type FormulaItem } from '../../data/formulas';
 import { STUDY_PERIOD_ORDER, type StudyPeriod } from '../../data/formulas-types';
+import { useExamType, examTypeLabel, type ExamType } from '../../store/examType';
 import SubjectIcon, { type IconSubject } from '../../components/SubjectIcon';
 import FigureView from '../../components/FigureView';
 import InlineQuiz from '../../components/InlineQuiz';
@@ -183,6 +184,11 @@ const FormulaRow = React.memo(function FormulaRow({
   );
 });
 
+// 中学受験は「算数」、高校受験は「数学」。データのキーは共通なので表示名だけ変える。
+function subjectLabel(key: Subject, examType: ExamType): string {
+  return key === '算数' && examType === 'koko' ? '数学' : key;
+}
+
 export default function FormulasScreen() {
   const [subject, setSubject] = useState<Subject>('算数');
   // 図解画像の一辺。画面幅から1回だけ決める。行ごとに測り直すと、
@@ -201,9 +207,25 @@ export default function FormulasScreen() {
   }, [winWidth]);
   const subjectInfo = SUBJECTS.find((s) => s.key === subject)!;
 
+  // 受験種別。入口で選んだ値を初期値にし、この画面でも切りかえられるようにする。
+  // これが無いと、高校受験の生徒が公式集を開いたときに
+  // 小4〜小6の内容ばかりが並んでしまう。
+  const { examType: savedExamType } = useExamType();
+  const [examType, setExamType] = useState<ExamType>('chugaku');
+  const examTypePicked = React.useRef(false);
+  React.useEffect(() => {
+    // 保存値の読みこみは非同期。まだ手で切りかえていないときだけ反映する。
+    if (savedExamType && !examTypePicked.current) setExamType(savedExamType);
+  }, [savedExamType]);
+
   // 学年（学習時期）のしぼりこみ。null は「すべて」。
   const [period, setPeriod] = useState<StudyPeriod | null>(null);
-  const allSections = FORMULAS[subject];
+
+  // examType 未設定のセクションは「どちらにも出す」（英語がこれにあたる）
+  const allSections = React.useMemo(
+    () => FORMULAS[subject].filter((s) => s.examType == null || s.examType === examType),
+    [subject, examType],
+  );
 
   // その教科に実際にあるものだけをチップに出す（空の学年を押せても意味がない）
   const periods = React.useMemo(() => {
@@ -351,7 +373,28 @@ export default function FormulasScreen() {
           >
             <SubjectIcon subject={SUBJ_ICON[s.key]} size={16} color={subject === s.key ? '#FFFFFF' : s.color} strokeWidth={2} />
             <Text style={[styles.subjectBtnText, subject === s.key && styles.subjectBtnTextActive]}>
-              {s.key}
+              {subjectLabel(s.key, examType)}
+            </Text>
+          </TouchableOpacity>
+        ))}
+      </View>
+
+      <View style={styles.examTypeRow}>
+        {(['chugaku', 'koko'] as ExamType[]).map((t) => (
+          <TouchableOpacity
+            key={t}
+            style={[
+              styles.examTypeBtn,
+              examType === t && { backgroundColor: subjectInfo.color, borderColor: subjectInfo.color },
+            ]}
+            onPress={() => {
+              examTypePicked.current = true;
+              setExamType(t);
+            }}
+            activeOpacity={0.85}
+          >
+            <Text style={[styles.examTypeText, examType === t && styles.examTypeTextActive]}>
+              {examTypeLabel[t]}
             </Text>
           </TouchableOpacity>
         ))}
@@ -406,6 +449,14 @@ export default function FormulasScreen() {
         removeClippedSubviews={false}
         ListFooterComponent={LIST_FOOTER}
         renderItem={renderRow}
+        ListEmptyComponent={
+          <View style={styles.emptyBox}>
+            <Text style={styles.emptyTitle}>準備中です</Text>
+            <Text style={styles.emptyText}>
+              {`${examTypeLabel[examType]}の${subjectLabel(subject, examType)}は、いま作成中です。\nほかの教科、または${examTypeLabel[examType === 'chugaku' ? 'koko' : 'chugaku']}に切りかえてご覧ください。`}
+            </Text>
+          </View>
+        }
       />
     </SafeAreaView>
   );
@@ -449,6 +500,28 @@ const styles = StyleSheet.create({
   subjectBtnText: { fontSize: 14, fontWeight: '700', color: '#666' },
   subjectBtnTextActive: { color: '#FFFFFF' },
   scroll: { flex: 1 },
+  examTypeRow: {
+    flexDirection: 'row',
+    gap: 8,
+    paddingHorizontal: 12,
+    paddingTop: 10,
+    paddingBottom: 8,
+    backgroundColor: '#FFFFFF',
+  },
+  examTypeBtn: {
+    flex: 1,
+    paddingVertical: 8,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#DDD2C0',
+    backgroundColor: '#FFFFFF',
+    alignItems: 'center',
+  },
+  examTypeText: { fontSize: 14, fontWeight: '800', color: '#6B5B45' },
+  examTypeTextActive: { color: '#FFFFFF' },
+  emptyBox: { padding: 28, alignItems: 'center', gap: 8 },
+  emptyTitle: { fontSize: 16, fontWeight: '800', color: '#6B5B45' },
+  emptyText: { fontSize: 13, color: '#8A7A62', textAlign: 'center', lineHeight: 20 },
   periodRow: { flexGrow: 0, borderBottomWidth: 1, borderBottomColor: '#EFE7DA', backgroundColor: '#FFFFFF' },
   periodRowContent: { paddingHorizontal: 12, paddingVertical: 8, gap: 6, alignItems: 'center' },
   periodChip: {

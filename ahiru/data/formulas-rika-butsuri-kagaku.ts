@@ -13,6 +13,7 @@ export const rikaButsuriKagakuFormulas: FormulaSection[] = [
   {
     title: '熱・電気の利用（伝わり方・発熱・明るさ）',
     studyPeriod: '小6後半・直前',
+    examType: 'chugaku',
     intro:
       '熱がどう伝わるか、電気が熱や光に変わるときに何で決まるか。計算問題としても、実験の結果を説明させる問題としてもよく出ます。',
     items: [
@@ -321,6 +322,7 @@ export const rikaButsuriKagakuFormulas: FormulaSection[] = [
   {
     title: '化学（状態変化・再結晶・金属と水溶液・燃焼の重さ）',
     studyPeriod: '小6後半・直前',
+    examType: 'chugaku',
     intro:
       '「重さはどうなるか」「何gとけ残るか」を計算させる問題が中心です。実験のようすから何が起きたかを説明させる問題も頻出です。',
     items: [

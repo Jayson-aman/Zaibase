@@ -11,6 +11,7 @@ export const shakaiFormulas: FormulaSection[] = [
   {
     title: '日本の地形・気候',
     studyPeriod: '小5前半',
+    examType: 'chugaku',
     intro: '日本は山が多く川が短く急で、南北に長いため気候も地方ごとに大きくちがいます。地形と気候の名前と位置をセットで覚えましょう。',
     items: [
       {
@@ -213,6 +214,7 @@ export const shakaiFormulas: FormulaSection[] = [
   {
     title: '日本の農業・水産業',
     studyPeriod: '小5前半',
+    examType: 'chugaku',
     intro: '土地や気候に合わせた農業の工夫（促成・抑制・輪作など）と、水産業の種類、そして食料自給率の問題を学びます。',
     items: [
       {
@@ -374,6 +376,7 @@ export const shakaiFormulas: FormulaSection[] = [
   {
     title: '日本の工業・貿易',
     studyPeriod: '小5後半',
+    examType: 'chugaku',
     intro: '太平洋ベルトに集まる工業地帯・地域の特色と、加工貿易から変化してきた日本の貿易のしくみを学びます。',
     items: [
       {
@@ -532,6 +535,7 @@ export const shakaiFormulas: FormulaSection[] = [
   {
     title: '世界の国々・時差',
     studyPeriod: '小5後半',
+    examType: 'chugaku',
     intro: '世界の六大陸・三大洋や緯度・経度、そして経度から時差を計算する方法を学びます。時差の計算は入試の定番です。',
     items: [
       {
@@ -717,6 +721,7 @@ export const shakaiFormulas: FormulaSection[] = [
   {
     title: '古代〜中世（飛鳥・奈良・平安・鎌倉・室町）',
     studyPeriod: '小6前半',
+    examType: 'chugaku',
     intro: '天皇中心の国づくりから、貴族の摂関政治、そして武士の世（幕府）へと、権力がだれの手に移っていったかの流れをつかみます。',
     items: [
       {
@@ -901,6 +906,7 @@ export const shakaiFormulas: FormulaSection[] = [
   {
     title: '近世（安土桃山・江戸）',
     studyPeriod: '小6前半',
+    examType: 'chugaku',
     intro: '天下統一の流れと、江戸幕府が約260年もの平和を保つために作ったさまざまなしくみ（参勤交代・鎖国など）を学びます。',
     items: [
       {
@@ -1083,6 +1089,7 @@ export const shakaiFormulas: FormulaSection[] = [
   {
     title: '近代（明治・大正・昭和戦前）',
     studyPeriod: '小6前半',
+    examType: 'chugaku',
     intro: '開国から明治維新で近代国家をつくり、日清・日露戦争を経て、やがて世界大戦へと向かう流れをおさえます。',
     items: [
       {
@@ -1241,6 +1248,7 @@ export const shakaiFormulas: FormulaSection[] = [
   {
     title: '現代（戦後）',
     studyPeriod: '小6後半・直前',
+    examType: 'chugaku',
     intro: '敗戦後の民主化改革から、高度経済成長、そして現在の日本へ。日本国憲法の制定と国際社会への復帰が大きな節目です。',
     items: [
       {
@@ -1375,6 +1383,7 @@ export const shakaiFormulas: FormulaSection[] = [
   {
     title: '頻出年号ゴロ合わせ',
     studyPeriod: '小6後半・直前',
+    examType: 'chugaku',
     intro: 'テストによく出る年号は、語呂（ごろ）合わせで覚えると忘れません。数字の並びと出来事をセットで頭に入れましょう。',
     items: [
       {
@@ -1536,6 +1545,7 @@ export const shakaiFormulas: FormulaSection[] = [
   {
     title: '憲法と人権',
     studyPeriod: '小6後半・直前',
+    examType: 'chugaku',
     intro: '日本国憲法の三大原則と、私たちが持つ基本的人権の種類を学びます。国の最高法規である憲法の役割を理解しましょう。',
     items: [
       {
@@ -1690,6 +1700,7 @@ export const shakaiFormulas: FormulaSection[] = [
   {
     title: '三権分立と政治のしくみ',
     studyPeriod: '小6後半・直前',
+    examType: 'chugaku',
     intro: '国会・内閣・裁判所が権力を分け合い、たがいにチェックする三権分立と、それぞれの役割を学びます。',
     items: [
       {
@@ -1872,6 +1883,7 @@ export const shakaiFormulas: FormulaSection[] = [
   {
     title: '経済・財政・税',
     studyPeriod: '小6後半・直前',
+    examType: 'chugaku',
     intro: '価格が決まるしくみ（需要と供給）や、国の家計である財政、税金の種類を学びます。景気との関係もおさえましょう。',
     items: [
       {
@@ -2030,6 +2042,7 @@ export const shakaiFormulas: FormulaSection[] = [
   {
     title: '国際社会・国連',
     studyPeriod: '小6後半・直前',
+    examType: 'chugaku',
     intro: '世界の平和と協力を支える国際連合のしくみや、主な専門機関、地球規模の課題への取り組みを学びます。',
     items: [
       {

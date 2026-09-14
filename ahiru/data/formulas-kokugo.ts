@@ -12,6 +12,7 @@ export const kokugoFormulas: FormulaSection[] = [
   {
     title: '漢字・語句',
     studyPeriod: '小4',
+    examType: 'chugaku',
     intro: '漢字や言葉の問題は、覚える量が多いように見えても「きまり」で整理するとぐっと楽になります。組み立て・意味・部首の3つの見方を身につけましょう。',
     items: [
       {
@@ -193,6 +194,7 @@ export const kokugoFormulas: FormulaSection[] = [
   {
     title: 'ことわざ・慣用句・四字熟語',
     studyPeriod: '小4',
+    examType: 'chugaku',
     intro: '意味を丸暗記するより、「どんな場面で使うか」をセットで覚えると忘れません。意味をとりちがえやすい言葉は入試でねらわれます。',
     items: [
       {
@@ -338,6 +340,7 @@ export const kokugoFormulas: FormulaSection[] = [
   {
     title: '文法',
     studyPeriod: '小5前半',
+    examType: 'chugaku',
     intro: '文法は「見分ける手順」を覚えてしまえば得点源になります。品詞→活用→敬語の順に、手順をなぞって練習しましょう。',
     items: [
       {
@@ -490,6 +493,7 @@ export const kokugoFormulas: FormulaSection[] = [
   {
     title: '読解の技法',
     studyPeriod: '小5後半',
+    examType: 'chugaku',
     intro: '読解は「なんとなく」ではなく、本文の中に必ず根拠があります。探す場所と確かめ方を手順にしておくと、初めて読む文章でも点が取れます。',
     items: [
       {
@@ -715,6 +719,7 @@ export const kokugoFormulas: FormulaSection[] = [
   {
     title: '詩・短歌・俳句',
     studyPeriod: '小6前半',
+    examType: 'chugaku',
     intro: '詩や俳句は、短い言葉にこめられた工夫を見つける問題が出ます。表現技法の名前と、季語・切れ字のきまりを覚えましょう。',
     items: [
       {
@@ -797,6 +802,7 @@ export const kokugoFormulas: FormulaSection[] = [
   {
     title: '古文の基礎',
     studyPeriod: '小6前半',
+    examType: 'chugaku',
     intro: '中学受験で出る古文はごく基本的なものです。かなづかいの直し方と係り結びだけでも知っておくと、大きな差がつきます。',
     items: [
       {
@@ -881,6 +887,7 @@ export const kokugoFormulas: FormulaSection[] = [
   {
     title: '記述問題の書き方',
     studyPeriod: '小6後半・直前',
+    examType: 'chugaku',
     intro: '記述は書き方の型を守るだけで点が上がります。何を聞かれているかを見て、文末と字数をそろえるのが基本です。',
     items: [
       {
