@@ -12,6 +12,7 @@ export const lessonsKoushikiC3Tairyoku1: Lesson[] = [
     sections: [
       {
         heading: '立方体・直方体の体積と表面積',
+        mangaId: 'koushiki_c3tairyoku1_hyoumen_manga',
         figureId: 'lf_koushiki_c3tairyoku1_chokuhoutai',
         body: `直方体や立方体は、身のまわりの箱・角砂糖・ティッシュ箱など、最も身近な立体です。ここでは体積（かさ）と表面積（表面全体の面積）の2つの公式を、なぜその式になるのかという理由まで含めてしっかり理解します。
 
@@ -65,6 +66,7 @@ export const lessonsKoushikiC3Tairyoku1: Lesson[] = [
       },
       {
         heading: '角柱の体積と表面積',
+        mangaId: 'koushiki_c3tairyoku1_chu_manga',
         figureId: 'lf_koushiki_c3tairyoku1_kakuchuu',
         body: `三角柱・四角柱・五角柱など、底面が多角形で、その形のまま真上にまっすぐ伸びた柱状の立体をまとめて「角柱」といいます。直方体（四角柱の仲間）で学んだ「底面積×高さ」の考え方は、実はどんな角柱にもそのまま使える、とても応用範囲の広い公式です。
 

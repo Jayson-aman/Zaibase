@@ -15,6 +15,7 @@ export const lessonsKoushikiK2Heikou: Lesson[] = [
     sections: [
       {
         heading: '平行四辺形になるための5つの条件',
+        mangaId: 'koushiki_k2heikou_joken_manga',
         figureId: 'lf_koushiki_k2heikou_heikou5jouken',
         body: `■ 5つの条件（一覧）
 四角形ABCDが平行四辺形であることを示すには、次の5つの条件のうち、どれか1つだけを示せばよい。5つすべてをそろえる必要はなく、問題の設定に合わせて一番使いやすい条件を1つ選んで証明するのが基本の考え方である。
@@ -70,6 +71,7 @@ AD∥BC、AD＝BCが成り立っているとする。対角線ACを引くと、A
       },
       {
         heading: '長方形・ひし形・正方形になるための条件',
+        mangaId: 'koushiki_k2heikou_tokubetsu_manga',
         figureId: 'lf_koushiki_k2heikou_tokubetsu4kakukei',
         body: `■ 基本の考え方（平行四辺形＋追加の1条件）
 長方形・ひし形・正方形は、どれも平行四辺形の仲間である。つまり「平行四辺形の性質（対辺が平行・対辺が等しい・対角が等しい・対角線が中点で交わる）」はすべて受け継いだ上で、さらに次のどちらかの追加条件が加わることで、より特別な四角形になる。

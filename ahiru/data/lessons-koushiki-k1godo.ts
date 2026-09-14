@@ -15,6 +15,7 @@ export const lessonsKoushikiK1Godo: Lesson[] = [
     sections: [
       {
         heading: '三角形の合同条件',
+        mangaId: 'koushiki_k1godo_joken_manga',
         figureId: 'lf_koushiki_k1godo_goudoujoken',
         body: `■ 合同条件（3つ）
 ① 3組の辺がそれぞれ等しい（SSS）
@@ -107,6 +108,7 @@ ASA（1辺とその両端の角）の場合：まず1つの辺の長さを直線
       },
       {
         heading: '二等辺三角形の性質とその逆',
+        mangaId: 'koushiki_k1godo_nitouhen_manga',
         figureId: 'lf_koushiki_k1godo_nitouhen',
         body: `■ 性質（2つ）
 ① 2つの底角は等しい

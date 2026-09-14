@@ -11,6 +11,7 @@
 import { allLessons, getLessonsBySubject } from '../data/lessons';
 import { FORMULAS, SUBJECTS } from '../data/formulas';
 import { getLessonFigure } from '../data/lesson-figures';
+import { getMangaScript } from '../data/manga-scripts';
 import { questions } from '../data/questions';
 
 type Lesson = (typeof allLessons)[number] & Record<string, any>;
@@ -70,6 +71,18 @@ check(
       .map((s: any) => `${l.id}:${s.figureId}`),
   ),
 );
+// mangaId がレジストリに無いと、節にマンガのボタンが出ないまま黙って消える
+check(
+  'マンガの参照切れ',
+  L.flatMap((l) =>
+    (l.sections ?? [])
+      .filter((s: any) => s.mangaId && !getMangaScript(s.mangaId))
+      .map((s: any) => `${l.id}:${s.mangaId}`),
+  ),
+);
+// 同じ台本を2か所から指していたら、どちらかが結線ミス
+const mangaIds = L.flatMap((l) => (l.sections ?? []).map((s: any) => s.mangaId).filter(Boolean));
+check('同じマンガを複数の節が参照', dupes(mangaIds as string[]));
 
 // ── B. 矛盾（受験種別・学年・並び順の食いちがい） ─────────────
 console.log('\n=== B. 矛盾 ===');

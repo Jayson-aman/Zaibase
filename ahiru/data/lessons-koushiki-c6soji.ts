@@ -48,6 +48,7 @@ export const lessonsKoushikiC6Soji: Lesson[] = [
       },
       {
         heading: '縮尺',
+        mangaId: 'koushiki_c6soji_shukushaku_manga',
         figureId: 'lf_koushiki_c6soji_shukushaku',
         body: `実際の長さを、地図や図面の上に縮めて表すときの縮める割合を「縮尺」といいます。縮尺は、地図上の長さと実際の長さの比という形で表されます。
 
@@ -85,6 +86,7 @@ export const lessonsKoushikiC6Soji: Lesson[] = [
       },
       {
         heading: '相似な図形の面積比・体積比(相似比の2乗・3乗)',
+        mangaId: 'koushiki_c6soji_menseki_manga',
         figureId: 'lf_koushiki_c6soji_menseki_taiseki_hi',
         body: `相似な図形どうしでは、辺の長さの比(相似比)がわかれば、面積の比・体積の比も計算だけで求めることができます。
 

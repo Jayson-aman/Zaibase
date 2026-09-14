@@ -13,6 +13,7 @@ export const lessonsKoushikiC2En: Lesson[] = [
     sections: [
       {
         heading: '円の面積',
+        mangaId: 'koushiki_c2en_enmenseki_manga',
         figureId: 'lf_koushiki_c2en_en_menseki',
         body: `円の面積は「半径×半径×円周率」で求められます。ふだん円周率は3.14という数を使います。この公式がどこから出てくるのか、そして入試でどう使われるのかを、順を追って身につけましょう。
 
@@ -109,6 +110,7 @@ export const lessonsKoushikiC2En: Lesson[] = [
       },
       {
         heading: 'おうぎ形の面積',
+        mangaId: 'koushiki_c2en_ougi_manga',
         figureId: 'lf_koushiki_c2en_ougigata_menseki',
         body: `おうぎ形の面積は、円の面積に「中心角÷360°」をかけて求めます。弧の長さの公式と考え方はまったく同じで、「円全体のうち、どれだけの割合を切り取っているか」を、円の面積にかけ合わせます。弧の長さの公式（1次元）と面積の公式（2次元）の違いを区別しながら整理しましょう。
 

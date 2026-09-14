@@ -13,6 +13,7 @@ export const lessonsKoushikiC1Menseki: Lesson[] = [
     sections: [
       {
         heading: '三角形の面積',
+        mangaId: 'koushiki_c1menseki_sankaku_manga',
         figureId: 'lf_koushiki_c1menseki_sankakukei',
         body: `■ 公式
 三角形の面積 ＝ 底辺 × 高さ ÷ 2
@@ -81,6 +82,7 @@ export const lessonsKoushikiC1Menseki: Lesson[] = [
       },
       {
         heading: '台形の面積',
+        mangaId: 'koushiki_c1menseki_daikei_manga',
         figureId: 'lf_koushiki_c1menseki_daikei',
         body: `■ 公式
 台形の面積 ＝（上底 ＋ 下底）× 高さ ÷ 2

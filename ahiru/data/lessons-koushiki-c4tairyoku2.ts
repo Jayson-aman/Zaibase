@@ -13,6 +13,7 @@ export const lessonsKoushikiC4Tairyoku2: Lesson[] = [
     sections: [
       {
         heading: '角錐の体積',
+        mangaId: 'koushiki_c4tairyoku2_sui_manga',
         figureId: 'lf_koushiki_c4tairyoku2_kakusui_taiseki',
         body: `角錐（三角錐・四角錐など、底面が多角形で頂点が1つの立体）の体積は、次の公式で求めます。
 
@@ -68,6 +69,7 @@ export const lessonsKoushikiC4Tairyoku2: Lesson[] = [
       },
       {
         heading: '円錐の側面積と展開図（おうぎ形の中心角の求め方）',
+        mangaId: 'koushiki_c4tairyoku2_sokumen_manga',
         figureId: 'lf_koushiki_c4tairyoku2_ensui_soku_tenkai',
         body: `円錐の展開図をかくと、底面の円と、側面を切り開いた1つのおうぎ形に分かれます。このおうぎ形の中心角を求める公式と、側面積の公式をセットで押さえましょう。
 

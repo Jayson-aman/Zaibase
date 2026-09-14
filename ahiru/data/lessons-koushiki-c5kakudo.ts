@@ -20,6 +20,7 @@ export const lessonsKoushikiC5Kakudo: Lesson[] = [
     sections: [
       {
         heading: '三角形の内角の和',
+        mangaId: 'koushiki_c5kakudo_naikaku_manga',
         figureId: 'lf_koushiki_c5kakudo_sankaku',
         body: `三角形の3つの内角（頂点にできる角）をすべて足すと、どんな三角形でも必ず180°になります。これは中学受験算数の中でもいちばん基本的で、いちばん使用頻度の高い公式です。
 
@@ -53,6 +54,7 @@ export const lessonsKoushikiC5Kakudo: Lesson[] = [
       },
       {
         heading: '多角形の内角の和と外角の和',
+        mangaId: 'koushiki_c5kakudo_gaikaku_manga',
         figureId: 'lf_koushiki_c5kakudo_takakukei',
         body: `三角形の内角の和が180°であることを土台にすると、四角形・五角形・六角形…どんな多角形の内角の和も、三角形に分割することで求められます。また、多角形の外角の和は、内角の和とは違い、頂点の数に関係なく常に360°になります。
 
