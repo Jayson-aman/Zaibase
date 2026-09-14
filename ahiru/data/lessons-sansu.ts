@@ -13,6 +13,7 @@ import { sansuExt09Lessons } from './lessons-sansu-ext09';
 import { sansuExt10Lessons } from './lessons-sansu-ext10';
 import { sansuExt11Lessons } from './lessons-sansu-ext11';
 import { sansuExt12Lessons } from './lessons-sansu-ext12';
+import { sansuExt13Lessons } from './lessons-sansu-ext13';
 import { sansuNewGrade10Lessons } from './lessons-sansu-newgrade10';
 import { lessonsNew20E4Sansu } from './lessons-new20-e4-sansu';
 import { lessonsNew20E5Sansu } from './lessons-new20-e5-sansu';
@@ -6362,6 +6363,7 @@ export const sansuLessons: Lesson[] = [
   ...sansuExt10Lessons,
   ...sansuExt11Lessons,
   ...sansuExt12Lessons,
+  ...sansuExt13Lessons,
   ...sansuNewGrade10Lessons,
   ...lessonsKoushikiC1Menseki,
   ...lessonsKoushikiC2En,
