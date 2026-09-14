@@ -468,6 +468,64 @@ function CircleFig({ fig }: { fig: CircleFigure }) {
 
 // ---------- 立体 ----------
 
+/** 「いま描いたところ」を示す強調色。ふだんの線（ACCENT）と区別できる色にする。 */
+const HILITE = '#E11D48';
+
+/**
+ * 図の部品を1つ描く。
+ *
+ * 描いたばかりの部品には、同じ形をひとまわり太い強調色でかさねて、
+ * どこが増えたのかが一目で分かるようにする。強調はしばらくすると引いていく。
+ * 図形ごとに手を入れなくてよいよう、部品の種類（線か文字か）だけで
+ * かさね方を決めている。
+ */
+function renderPart(
+  el: React.ReactNode,
+  i: number,
+  opacity: number,
+  hilite: number,
+): React.ReactNode {
+  if (opacity <= 0) return <G key={`p${i}`} opacity={0} />;
+  if (hilite <= 0.02 || !React.isValidElement(el)) {
+    return (
+      <G key={`p${i}`} opacity={opacity}>
+        {el}
+      </G>
+    );
+  }
+  const p = el.props as Record<string, any>;
+  // 線で描かれた部品 → 太い強調色の線をうしろにかさねる
+  if (p.stroke != null && p.stroke !== 'none') {
+    return (
+      <G key={`p${i}`} opacity={opacity}>
+        {React.cloneElement(el as React.ReactElement<any>, {
+          stroke: HILITE,
+          strokeWidth: (typeof p.strokeWidth === 'number' ? p.strokeWidth : 1.5) + 2.5,
+          strokeDasharray: undefined,
+          fill: 'none',
+          opacity: hilite * 0.55,
+        })}
+        {el}
+      </G>
+    );
+  }
+  // 文字や塗りだけの部品 → 強調が乗っているあいだ色を変える
+  if (p.fill != null && p.fill !== 'none') {
+    return (
+      <G key={`p${i}`} opacity={opacity}>
+        {React.cloneElement(el as React.ReactElement<any>, {
+          fill: hilite > 0.35 ? HILITE : p.fill,
+        })}
+      </G>
+    );
+  }
+  return (
+    <G key={`p${i}`} opacity={opacity}>
+      {el}
+    </G>
+  );
+}
+
 function SolidFig({ fig }: { fig: SolidFigure }) {
   const els: React.ReactNode[] = [];
   const L = fig.labels ?? {};
@@ -1284,7 +1342,12 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
   // 古い値から補間してしまうので、refでも持っておく。
   const progressRef = useRef(animated ? 0 : 1);
 
-  const DRAW_DUR = 1400;
+  // 描き終えるまでの時間は、部品の数に合わせて伸ばす。
+  // 以前は部品が何個あっても1.4秒で、部品の多い図では1つあたり0.1秒も
+  // なく、全部が同時にぼんやり現れたように見えていた。
+  // 1部品におよそ0.36秒を当てて、増えた部分が目で追えるようにする。
+  // 長い図でも待たされすぎないよう7秒で打ち止めにする。
+  const DRAW_DUR = Math.min(7000, 900 + Math.max(parts.length, 1) * 360);
   const STEP_INTERVAL = 2200;
   /** 1枚のスライドを自動で送るまでの時間 */
   const SLIDE_DUR = 4200;
@@ -1292,14 +1355,19 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
   const buildSlides = Math.max(1, Math.ceil(totalSteps / 2));
   const targetProgress = slideMode ? Math.min(1, (slide + 1) / buildSlides) : 1;
 
-  // スライドが変わるたびに、図の描画量を今の値から目標値までなめらかに動かす
+  // スライドが変わるたびに、図の描画量を今の値から目標値までなめらかに動かす。
+  // かかる時間は「そのスライドで増える部品の数」に比例させる。
+  // 一律600msだと、部品が5個増えるスライドでは1個あたり0.12秒しかなく、
+  // まとめてパッと出たようにしか見えなかった。
   useEffect(() => {
     if (!slideMode) return;
     let startTs: number | null = null;
     const from = progressRef.current;
+    const added = Math.max(0, targetProgress - from) * Math.max(parts.length, 1);
+    const dur = Math.min(3200, 420 + added * 360);
     const tick = (ts: number) => {
       if (startTs == null) startTs = ts;
-      const t = Math.min(1, (ts - startTs) / 600);
+      const t = Math.min(1, (ts - startTs) / dur);
       const v = from + (targetProgress - from) * easeOut(t);
       progressRef.current = v;
       setProgress(v);
@@ -1309,7 +1377,7 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
     return () => {
       if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
     };
-  }, [slideMode, targetProgress]);
+  }, [slideMode, targetProgress, parts.length]);
 
   // 自動再生。最後のスライドまで来たら止まる。手で送ったら自動送りはやめる。
   useEffect(() => {
@@ -1341,7 +1409,10 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
     const tick = (ts: number) => {
       if (startTs == null) startTs = ts;
       const t = Math.min(1, (ts - startTs) / DRAW_DUR);
-      setProgress(easeOut(t));
+      // 等速で進める。easeOut にすると最初の数部品が一気に出て、
+      // 最後の1個だけが長く残るという、見ていて分かりにくい動きになる。
+      // 1部品ずつ同じ速さで描かれるほうが、順序を目で追える。
+      setProgress(t);
       if (t < 1) rafRef.current = requestAnimationFrame(tick);
     };
     setProgress(0);
@@ -1392,11 +1463,33 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
   }
 
   const N = Math.max(parts.length, 1);
-  const WINDOW = Math.max(3, Math.round(N * 0.18));
+
+  // 【この図はどこまで描けたか】
+  // 以前は「進行度に応じて部品を薄く重ねていく」だけだったので、
+  // 図全体がぼんやり現れて終わり、何の説明にもなっていなかった。
+  //
+  // いまは 1部品ずつ順に描き、描いたばかりの部品をしばらく強調する。
+  // こうすると「底面 → 母線 → 高さ → 寸法」のように、図が組み立てられて
+  // いく過程が目で追える。データ（図形の定義）は一切変えずに、
+  // すべての図でこの動きになる。
+  //
+  // pos: いま何番目の部品まで描けたか（小数。0.0〜N）
+  const pos = animated ? progress * N : N;
+  /** その部品の不透明度。描き終わったものは 1、描きかけは途中、まだのものは 0 */
   const opacityOf = (i: number) => {
     if (!animated) return 1;
-    const t = progress * (N + WINDOW) - i;
-    return Math.max(0, Math.min(1, t / WINDOW));
+    // 1部品ぶんの登場に使う割合。短すぎるとパッと出て見えるので少し長めに取る
+    const t = (pos - i) / 0.75;
+    return Math.max(0, Math.min(1, t));
+  };
+  /** その部品を「いま描いたところ」として強調する度合い。0〜1 */
+  const highlightOf = (i: number) => {
+    if (!animated) return 0;
+    const t = pos - i;
+    if (t < 0) return 0;
+    if (t < 0.75) return t / 0.75; // 現れながら強調が乗る
+    // 描き終えたあと、1.6部品ぶんかけて強調が引いていく
+    return Math.max(0, 1 - (t - 0.75) / 1.6);
   };
 
   return (
@@ -1413,9 +1506,7 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
         style={[styles.canvas, { width: w, height: h }]}
       >
         <Svg width="100%" height="100%" viewBox={`0 0 ${VBW} ${VBH}`}>
-          {parts.map((el, i) => (
-            <G key={`p${i}`} opacity={opacityOf(i)}>{el}</G>
-          ))}
+          {parts.map((el, i) => renderPart(el, i, opacityOf(i), highlightOf(i)))}
         </Svg>
       </TouchableOpacity>
 
