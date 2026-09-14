@@ -11,6 +11,7 @@ import { eigoExt09Lessons } from './lessons-eigo-ext09';
 import { eigoExt10Lessons } from './lessons-eigo-ext10';
 import { eigoExt11Lessons } from './lessons-eigo-ext11';
 import { eigoExt12Lessons } from './lessons-eigo-ext12';
+import { eigoExt13Lessons } from './lessons-eigo-ext13';
 import { lessonsNew20E4Eigo } from './lessons-new20-e4-eigo';
 import { lessonsNew20E5Eigo } from './lessons-new20-e5-eigo';
 import { lessonsNew20E6Eigo } from './lessons-new20-e6-eigo';
@@ -5218,6 +5219,7 @@ export const eigoLessons: Lesson[] = [
   ...eigoExt10Lessons,
   ...eigoExt11Lessons,
   ...eigoExt12Lessons,
+  ...eigoExt13Lessons,
   ...lessonsNew20E4Eigo,
   ...lessonsNew20E5Eigo,
   ...lessonsNew20E6Eigo,
