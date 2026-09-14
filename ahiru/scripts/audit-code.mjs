@@ -65,6 +65,26 @@ report(
   'data は useMemo、renderItem は useCallback、行は React.memo にする',
 );
 
+// 3) useWindowDimensions の値をそのままサイズに使うと、Web版で
+//    縦スクロールバーが出入りしただけで窓幅が十数px変わり、
+//    全行が別のサイズで描き直されて画像がちらつき、行の高さが変わって
+//    スクロール位置まで巻き戻る。上限（Math.min）か丸め（Math.round(x/N)*N）
+//    のどちらかで、小さな変化を吸収すること。
+report(
+  'useWindowDimensions を丸めずにサイズへ使用',
+  files.flatMap((f) => {
+    const src = fs.readFileSync(f, 'utf8');
+    if (!src.includes('useWindowDimensions')) return [];
+    // 窓幅から計算しているのに、上限も丸めも無い行を拾う
+    return src.split('\n').flatMap((l, i) => {
+      if (!/(?:winWidth|windowWidth|width)\s*-\s*\d/.test(l)) return [];
+      if (/Math\.min|Math\.round\s*\([^)]*\/\s*\d+\s*\)\s*\*/.test(l)) return [];
+      return [`${rel(f)}:${i + 1}  ${l.trim().slice(0, 60)}`];
+    });
+  }),
+  'Math.min で上限をつけるか、Math.round(x/32)*32 のように丸める',
+);
+
 // ── C. バグ（フックの規則） ────────────────────────────
 console.log('\n=== C. バグ ===');
 

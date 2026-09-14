@@ -6,6 +6,7 @@ import {
   FlatList,
   StyleSheet,
   SafeAreaView,
+  Platform,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { getLessonsBySubject, FREE_LESSON_LIMIT } from '../../data/lessons';
@@ -288,14 +289,19 @@ export default function TextbookScreen() {
         data={showList ? lessons : []}
         keyExtractor={(l) => l.id}
         ListHeaderComponent={listHeader}
-        // 単元数が数百に達する科目もあるため、全件を一度に描画せず
-        // 画面に入った分だけ描画・保持する（低メモリ端末での動作対策）。
+        // 単元数が数百に達する科目もあるため、ネイティブでは全件を一度に
+        // 描画せず、画面に入った分だけ描画・保持する（低メモリ端末対策）。
         // ただし刻みが細かすぎると、スクロールのたびに空セルが出てから
         // 埋まるのが点滅に見える。1行は画像のない軽いカードなので、
         // 前後に十分な余裕を持たせておく。
-        initialNumToRender={16}
+        //
+        // Web版は仮想化しない。ブラウザは数百個の軽い要素を持っていても
+        // 平気な一方、セルが増えるたびに全体の高さが測り直されて
+        // スクロール位置が巻き戻る（Macで報告された症状）。
+        // 1教科あたり最大604単元で、画像も持たないので全部出してよい。
+        initialNumToRender={Platform.OS === 'web' ? lessons.length || 1 : 16}
         maxToRenderPerBatch={16}
-        windowSize={21}
+        windowSize={Platform.OS === 'web' ? 101 : 21}
         // removeClippedSubviews は画面外のセルをビュー階層から切り離すため、
         // 戻ってきたときに一瞬空白になる。点滅の直接の原因なので使わない。
         removeClippedSubviews={false}

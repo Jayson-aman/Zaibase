@@ -10,6 +10,7 @@ import {
   TouchableOpacity,
   ActivityIndicator,
   Alert,
+  Platform,
   useWindowDimensions,
 } from 'react-native';
 import { FORMULAS, SUBJECTS, type Subject, type FormulaItem } from '../../data/formulas';
@@ -187,7 +188,17 @@ export default function FormulasScreen() {
   // 図解画像の一辺。画面幅から1回だけ決める。行ごとに測り直すと、
   // スクロールで行が外れて戻るたびに測り直しが走り、画像が点滅する。
   const { width: winWidth } = useWindowDimensions();
-  const imageSize = Math.max(200, winWidth - (16 + 12 + 1) * 2);
+  // 図解画像の一辺。
+  // ① 上限をつける。元画像が640×640なので、それ以上に広げても粗くなるだけ。
+  //    Macのブラウザ（幅1400px前後）では上限に張りつくので、窓幅が多少
+  //    変わっても値が変わらない。
+  // ② 32pxきざみに丸める。丸めないと、縦スクロールバーが出入りしただけで
+  //    窓幅が十数px変わり、全行が別のimageSizeで描き直されて画像がちらつき、
+  //    行の高さが変わってスクロール位置まで巻き戻る（Web版で実際に発生）。
+  const imageSize = React.useMemo(() => {
+    const avail = winWidth - (16 + 12 + 1) * 2;
+    return Math.min(460, Math.max(200, Math.round(avail / 32) * 32));
+  }, [winWidth]);
   const subjectInfo = SUBJECTS.find((s) => s.key === subject)!;
 
   // 学年（学習時期）のしぼりこみ。null は「すべて」。
@@ -268,8 +279,15 @@ export default function FormulasScreen() {
   // メモリが大きいため、枚数が多いときだけ仮想化に戻す。
   // 学年をしぼればほとんどの組み合わせがこの閾値を下回り、点滅しない。
   // 例：理科 小6前半=24枚 → 全行描画／社会 小6後半・直前=30枚 → 仮想化。
+  //
+  // ただしWeb版では枚数によらず仮想化しない。ブラウザは画面外の要素を
+  // 持っていても平気な一方、仮想化でセルが増えるたびに全体の高さが
+  // 測り直され、そのぶんスクロール位置が巻き戻ってしまう
+  // （Macで「社会が点滅して元のページに戻る」と報告された症状）。
+  // メモリが限られるのはネイティブ側なので、制限もそちらだけでよい。
   const MAX_IMAGES_WITHOUT_VIRTUALIZATION = 25;
-  const virtualize = shownImageCount > MAX_IMAGES_WITHOUT_VIRTUALIZATION;
+  const virtualize =
+    Platform.OS !== 'web' && shownImageCount > MAX_IMAGES_WITHOUT_VIRTUALIZATION;
 
   // renderItem を毎回作りなおすと、FlatList が全セルを描き直す。
   // FormulaRow 自体はメモ化してあるが、見出し側は素通りしてしまうので
@@ -570,6 +588,9 @@ const styles = StyleSheet.create({
   formulaImage: {
     borderRadius: 10,
     backgroundColor: '#F5EFE4',
+    // 画像の一辺には上限（460px）があるので、PCのような広い画面では
+    // 枠のほうが広くなる。左に寄ると間が抜けて見えるため中央に置く。
+    alignSelf: 'center',
   },
   stepsBox: {
     backgroundColor: '#FAF6EF',
