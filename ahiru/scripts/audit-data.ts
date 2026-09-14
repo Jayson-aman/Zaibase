@@ -191,6 +191,51 @@ for (const { key } of SUBJECTS)
 check('公式集→教科書リンクの参照切れ', relBroken);
 check('公式集→教科書リンクの受験種別ちがい', relMismatch);
 
+// 図解の段階説明が、実際の描画より先走っていないかを見る。
+//
+// 図の部品は決まった順に描かれるので、説明の文が「いまから〜を引く」と
+// 言っていても、その部品がすでに出ていることがある。
+// （台形で「対角線ACを1本引く」と2枚目に書いたが、対角線は描画順の
+//   2番目なので1枚目からすでに見えていた）
+// これから現れるかのような言い方を拾い、目視の手がかりにする。
+// 図の部品の名前を名指しして「引く」と言っている短い文だけを見る。
+// 「三角定規で垂線を引くときは…」のような描き方の手順や、
+// 「要素を足す」のような図と無関係な文まで拾うと、正当なものばかりが
+// 並んで検査の意味がなくなる（実際にそれで6件すべて誤検出になった）。
+// 対象は polygon の対角線だけ。ここは PolygonFig の描画順が
+// 「本体 → 対角線 → 高さ → 辺ラベル → 頂点ラベル」と分かっているので、
+// 対角線が何枚目のスライドで現れるかを正確に計算できる。
+// （他の図形は並び順を追えていないので見ていない。検査の範囲はここまで）
+const DIAG = /対角線[^。]{0,12}引く。?$/;
+const stepLate: string[] = [];
+for (const l of L)
+  for (const s of l.sections ?? []) {
+    const fig = (s.figureId ? getLessonFigure(s.figureId) : null) as {
+      kind?: string; steps?: string[]; buildSteps?: number;
+      points?: unknown[]; diagonals?: unknown[]; heights?: unknown[]; sideLabels?: unknown[];
+    } | null;
+    if (fig?.kind !== 'polygon' || !fig.steps || !(fig.diagonals?.length)) continue;
+    const st = fig.steps;
+    const build = fig.buildSteps ?? Math.max(1, st.length - 1);
+    // 部品の総数と、対角線が何番目か（0始まり）
+    const nParts =
+      1 + fig.diagonals.length + (fig.heights?.length ?? 0) * 2 +
+      (fig.sideLabels ?? []).filter(Boolean).length +
+      (fig.points ?? []).filter((p) => (p as { label?: string }).label).length;
+    const diagIdx = 1; // 本体のすぐあと
+    // その対角線が最初に出そろうスライド（FigureView の opacityOf と同じ式）
+    let appearAt = st.length;
+    for (let sl = 0; sl < st.length; sl++) {
+      const pos = Math.min(1, (sl + 1) / build) * nParts;
+      if ((pos - diagIdx) / 0.75 >= 1) { appearAt = sl + 1; break; }
+    }
+    st.forEach((t, i) => {
+      if (DIAG.test(String(t)) && i + 1 > appearAt)
+        stepLate.push(`${s.figureId}：${i + 1}枚目で「引く」と書いてあるが、${appearAt}枚目でもう出ている`);
+    });
+  }
+info('図解の説明が、すでに描かれた線を「引く」と言っている（要目視）', stepLate, 4);
+
 // 公式集の一問一答そのものの品質。
 // 「答えが自分自身を打ち消している」「答えが説明文になっている」といった、
 // 書いた本人には気づきにくい欠陥を拾う。
