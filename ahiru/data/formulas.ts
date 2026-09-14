@@ -10,6 +10,7 @@ import { rikaButsuriKagakuFormulas } from './formulas-rika-butsuri-kagaku';
 import { kokoRikaFormulas } from './formulas-koko-rika';
 import { shakaiFormulas } from './formulas-shakai';
 import { shakaiTsuikaFormulas } from './formulas-shakai-tsuika';
+import { kokoShakaiFormulas } from './formulas-koko-shakai';
 import { kokugoFormulas } from './formulas-kokugo';
 import { eigoFormulas } from './formulas-eigo';
 
@@ -30,7 +31,7 @@ export const FORMULAS: Record<Subject, FormulaSection[]> = {
   算数: [...sansuFormulas, ...kokoSugakuFormulas],
   国語: kokugoFormulas,
   理科: [...rikaFormulas, ...rikaButsuriKagakuFormulas, ...kokoRikaFormulas],
-  社会: [...shakaiFormulas, ...shakaiTsuikaFormulas],
+  社会: [...shakaiFormulas, ...shakaiTsuikaFormulas, ...kokoShakaiFormulas],
   英語: eigoFormulas,
 };
 
