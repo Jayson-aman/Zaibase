@@ -560,14 +560,31 @@ function SolidFig({ fig }: { fig: SolidFigure }) {
       els.push(<SvgText key="lr" x={cx + rx / 2} y={top - 5} fontSize={11} fill={INK} textAnchor="middle">{L.radius}</SvgText>);
     }
   } else if (fig.shape === 'cone') {
+    // 部品を出す順番は、そのまま「動く図解」で描かれる順番になる。
+    // 底面 → 母線 → 母線の長さ → 半径 → 高さ → 直角 → 高さの長さ
+    // という、解説の流れと同じ順にそろえてある。
     const rx = 56, ry = 16, apexY = 40, baseY = 188;
     els.push(<Ellipse key="base" cx={cx} cy={baseY} rx={rx} ry={ry} fill="rgba(14,165,233,0.10)" stroke={ACCENT} strokeWidth={1.8} />);
     els.push(<Line key="lft" x1={cx - rx} y1={baseY} x2={cx} y2={apexY} stroke={ACCENT} strokeWidth={1.8} />);
     els.push(<Line key="rgt" x1={cx + rx} y1={baseY} x2={cx} y2={apexY} stroke={ACCENT} strokeWidth={1.8} />);
-    els.push(<Line key="axis" x1={cx} y1={apexY} x2={cx} y2={baseY} stroke={AXIS} strokeWidth={1} strokeDasharray="3 3" />);
-    if (L.height) els.push(<SvgText key="lh" x={cx + 5} y={(apexY + baseY) / 2} fontSize={11} fill={INK}>{L.height}</SvgText>);
-    if (L.radius) els.push(<SvgText key="lr" x={cx + rx / 2} y={baseY - 5} fontSize={11} fill={INK} textAnchor="middle">{L.radius}</SvgText>);
     if (L.slant) els.push(<SvgText key="ls" x={cx - rx / 2 - 12} y={(apexY + baseY) / 2} fontSize={11} fill={INK} textAnchor="end">{L.slant}</SvgText>);
+    // 半径は線を引かないと、断面にできる直角三角形が図に見えてこない。
+    if (L.radius) {
+      els.push(<Line key="rl" x1={cx} y1={baseY} x2={cx + rx} y2={baseY} stroke={ACCENT} strokeWidth={1.6} />);
+      els.push(<SvgText key="lr" x={cx + rx / 2} y={baseY - 5} fontSize={11} fill={INK} textAnchor="middle">{L.radius}</SvgText>);
+    }
+    els.push(<Line key="axis" x1={cx} y1={apexY} x2={cx} y2={baseY} stroke={ACCENT} strokeWidth={1.6} strokeDasharray="4 3" />);
+    // 底面の中心にできる直角のしるし。ここが直角だから三平方が使える。
+    els.push(
+      <Path
+        key="rightangle"
+        d={`M${cx},${baseY - 11} L${cx + 11},${baseY - 11} L${cx + 11},${baseY}`}
+        fill="none"
+        stroke={AXIS}
+        strokeWidth={1.2}
+      />,
+    );
+    if (L.height) els.push(<SvgText key="lh" x={cx + 5} y={(apexY + baseY) / 2} fontSize={11} fill={INK}>{L.height}</SvgText>);
   } else if (fig.shape === 'triangularPrism') {
     const w = 120, h = 96, x = cx - w / 2 - dx / 2, y = 70;
     const F = [ { x: x + w / 2, y }, { x: x + w, y: y + h }, { x, y: y + h } ];
@@ -1351,8 +1368,16 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
   const STEP_INTERVAL = 2200;
   /** 1枚のスライドを自動で送るまでの時間 */
   const SLIDE_DUR = 4200;
-  /** 図を描き終えるまでに使うスライド枚数（前半で描き上げ、後半は説明に使う） */
-  const buildSlides = Math.max(1, Math.ceil(totalSteps / 2));
+  // 図を描き終えるのが何枚目のスライドか。
+  // 以前は「全体の半分で描き上げる」という決め打ちだったため、説明より先に
+  // 図ができあがってしまっていた（円錐で「半径は6cm」と言っている時点で
+  // 高さの8cmまで出ていた）。
+  // 図ごとに buildSteps で指定できるようにし、省略時は「最後の1枚手前まで
+  // かけて描く」を既定にする。最後のスライドは結論を述べるのに使う。
+  const buildSlides = Math.max(
+    1,
+    Math.min(totalSteps, (figure as { buildSteps?: number }).buildSteps ?? Math.max(1, totalSteps - 1)),
+  );
   const targetProgress = slideMode ? Math.min(1, (slide + 1) / buildSlides) : 1;
 
   // スライドが変わるたびに、図の描画量を今の値から目標値までなめらかに動かす。
