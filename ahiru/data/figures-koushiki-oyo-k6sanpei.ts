@@ -247,8 +247,7 @@ export const figuresKoushikiOyoK6Sanpei: Record<string, Figure> = {
       { x: 3.667, y: 0, label: 'H' },
       { x: 9, y: 0, label: 'C' },
     ],
-    sideLabels: ['AB=7cm', null, null, 'CA=8cm'],
-    diagonals: [[0, 2]],
+    sideLabels: ['AB=7cm', 'BH=x', 'CH=9−x', 'CA=8cm'],
     heights: [{ from: 0, toEdge: [1, 3], label: 'AH' }],
     regions: [
       { indices: [0, 1, 2], color: '#FEF3C7' },
@@ -264,5 +263,6 @@ export const figuresKoushikiOyoK6Sanpei: Record<string, Figure> = {
       'これを解くとx=11/3。AH²=49−(11/3)²=320/9より、AH=(8√5)/3cm',
       '△ABC=(1/2)×BC×AH=(1/2)×9×(8√5)/3=12√5cm²',
     ],
+    buildSteps: 3,
   },
 };
