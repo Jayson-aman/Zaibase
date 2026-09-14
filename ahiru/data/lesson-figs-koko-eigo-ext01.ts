@@ -19,6 +19,14 @@ export const lessonFigsKokoEigoExt01: Record<string, Figure> = {
     ],
     caption:
       '本文で挙げた ea の語16語の内訳。[iː] が eat・sea・teach・easy・please・meat・speak・read の8語、[e] が head・bread・ready・weather・heavy の5語、[eɪ] は great・break・steak の3語だけ。少数派の [e] と [eɪ] を語ごと覚えるのが早い',
+    steps: [
+      "よこじくは「ea の発音」、たてじくは「語数」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「[iː]」で8（語数）。",
+      "いちばん小さいのは「[eɪ]」で3。差は5。",
+      "大きい順にならべると [iː] → [e] → [eɪ]。棒の高さを見比べて確かめる。",
+      "本文で挙げた ea の語16語の内訳。[iː] が eat・sea・teach・easy・please・meat・speak・read の8語、[e] が head・bread・ready・weather・heavy の5語、[eɪ] は great・break・steak の3語だけ。少数派の [e] と [eɪ] を語ごと覚えるのが早い",
+    ],
+    buildSteps: 4,
   },
 
   // s006：名詞と動詞でアクセントが移る語（アクセントのある音節の番号）
@@ -37,6 +45,14 @@ export const lessonFigsKokoEigoExt01: Record<string, Figure> = {
     ],
     caption:
       'つづりが同じでも品詞でアクセントが移る語。名詞は第1音節（薄い色）、動詞は第2音節（濃い色）に来る。「名前は前、動くと後ろ」と覚える。increase・progress も同じ動き方をする',
+    steps: [
+      "よこじくは「語（名＝名詞・動＝動詞）」、たてじくは「アクセントのある音節（先頭から）」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「present 動」で2（アクセントのある音節（先頭から））。",
+      "いちばん小さいのは「present 名」で1。差は1。",
+      "大きい順にならべると present 動 → record 動 → object 動 → present 名 → record 名 → object 名。棒の高さを見比べて確かめる。",
+      "つづりが同じでも品詞でアクセントが移る語。名詞は第1音節（薄い色）、動詞は第2音節（濃い色）に来る。「名前は前、動くと後ろ」と覚える。increase・progress も同じ動き方をする",
+    ],
+    buildSteps: 4,
   },
 
   // s007：語尾ごとに、アクセントが語末から何番目の音節に来るか
@@ -55,6 +71,14 @@ export const lessonFigsKokoEigoExt01: Record<string, Figure> = {
     ],
     caption:
       '語尾で決まるアクセントの位置。2＝語末から二つ目（in-for-MA-tion、e-LEC-tric、of-FI-cial）、3＝語末から三つ目（a-BIL-i-ty、e-co-NOM-i-cal、pho-TOG-ra-phy）。語尾そのものを強く読むわけではない点に注意',
+    steps: [
+      "よこじくは「語尾」、たてじくは「語末から数えた音節の番号」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「-ity」で3（語末から数えた音節の番号）。",
+      "いちばん小さいのは「-tion」で2。差は1。",
+      "大きい順にならべると -ity → -ical → -graphy → -tion → -ic → -ial。棒の高さを見比べて確かめる。",
+      "語尾で決まるアクセントの位置。2＝語末から二つ目（in-for-MA-tion、e-LEC-tric、of-FI-cial）、3＝語末から三つ目（a-BIL-i-ty、e-co-NOM-i-cal、pho-TOG-ra-phy）。語尾そのものを強く読むわけではない点に注意",
+    ],
+    buildSteps: 4,
   },
 
   // s009：カタカナ語になっている語の、英語でのアクセント位置
@@ -75,6 +99,14 @@ export const lessonFigsKokoEigoExt01: Record<string, Figure> = {
     ],
     caption:
       'カタカナで知っている語の、英語でのアクセント位置。volunteer だけ第3音節、hotel・guitar・percent は第2音節、calendar・orange・energy・camera は第1音節。日本語の長音（ー）の位置とはまったく対応しない',
+    steps: [
+      "よこじくは「語」、たてじくは「アクセントのある音節（先頭から）」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「volunteer」で3（アクセントのある音節（先頭から））。",
+      "いちばん小さいのは「calendar」で1。差は2。",
+      "大きいほうから volunteer → hotel → guitar → percent と続く。上位がどれかをおさえる。",
+      "カタカナで知っている語の、英語でのアクセント位置。volunteer だけ第3音節、hotel・guitar・percent は第2音節、calendar・orange・energy・camera は第1音節。日本語の長音（ー）の位置とはまったく対応しない",
+    ],
+    buildSteps: 4,
   },
 
   // s010：語尾 -s／-es の発音の内訳（本文に挙げた28語）
@@ -87,6 +119,14 @@ export const lessonFigsKokoEigoExt01: Record<string, Figure> = {
     ],
     caption:
       '本文で挙げた -s／-es の語28語の内訳。有声音の後の [z] が12語、歯擦音の後の [ɪz] が9語、無声音の後の [s] が7語。分かれ目は -s の直前の音であって、つづりの文字ではない',
+    steps: [
+      "円全体を100%として、それぞれが全体のどれくらいかを表した円グラフ。",
+      "いちばん大きいのは「[z]」で、全体のおよそ42.9%。",
+      "内わけは [z] 42.9%、[ɪz] 32.1%、[s] 25%。",
+      "割合は「部分 ÷ 全体 × 100」で求める。全部たすと100%になることを確かめる。",
+      "本文で挙げた -s／-es の語28語の内訳。有声音の後の [z] が12語、歯擦音の後の [ɪz] が9語、無声音の後の [s] が7語。分かれ目は -s の直前の音であって、つづりの文字ではない",
+    ],
+    buildSteps: 4,
   },
 
   // s011：語尾 -ed の発音の内訳（本文に挙げた34語）
@@ -99,6 +139,14 @@ export const lessonFigsKokoEigoExt01: Record<string, Figure> = {
     ],
     caption:
       '本文で挙げた -ed の語34語の内訳。有声音の後は [d]、無声音の後は [t]、[t]／[d] の後だけが [ɪd] になって音節が一つ増える。音節が増えるのは wanted・needed の仲間だけである',
+    steps: [
+      "円全体を100%として、それぞれが全体のどれくらいかを表した円グラフ。",
+      "いちばん大きいのは「[d]」で、全体のおよそ41.2%。",
+      "内わけは [d] 41.2%、[t] 29.4%、[ɪd] 29.4%。",
+      "割合は「部分 ÷ 全体 × 100」で求める。全部たすと100%になることを確かめる。",
+      "本文で挙げた -ed の語34語の内訳。有声音の後は [d]、無声音の後は [t]、[t]／[d] の後だけが [ɪd] になって音節が一つ増える。音節が増えるのは wanted・needed の仲間だけである",
+    ],
+    buildSteps: 4,
   },
 
   // s013：複数形のつくり方4種類と、本文に挙げた語数
@@ -115,6 +163,14 @@ export const lessonFigsKokoEigoExt01: Record<string, Figure> = {
     ],
     caption:
       '複数形のつくり方は四通り（本文に挙げた35語の内訳）。-es になるのは s・x・ch・sh・o で終わる語、ies になるのは「子音字＋y」の語だけで、boy・day のような「母音字＋y」は -s のままである',
+    steps: [
+      "よこじくは「つくり方」、たてじくは「語数」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「-es」で11（語数）。",
+      "いちばん小さいのは「-s」で8。差は3。",
+      "大きい順にならべると -es → -s → y→ies → f→ves。棒の高さを見比べて確かめる。",
+      "複数形のつくり方は四通り（本文に挙げた35語の内訳）。-es になるのは s・x・ch・sh・o で終わる語、ies になるのは「子音字＋y」の語だけで、boy・day のような「母音字＋y」は -s のままである",
+    ],
+    buildSteps: 4,
   },
 
   // s014：不規則な複数形・単複同形の型別（本文に挙げた15語）
@@ -130,6 +186,14 @@ export const lessonFigsKokoEigoExt01: Record<string, Figure> = {
     ],
     caption:
       '-s を付けない複数形（本文に挙げた15語）。母音が変わるのは man・woman・foot・tooth・goose・mouse の6語、-en が付くのは child・ox の2語、単複同形は sheep・deer・fish・Japanese・Chinese・yen・aircraft の7語',
+    steps: [
+      "よこじくは「型」、たてじくは「語数」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「単複同形」で7（語数）。",
+      "いちばん小さいのは「-en が付く」で2。差は5。",
+      "大きい順にならべると 単複同形 → 母音が変わる → -en が付く。棒の高さを見比べて確かめる。",
+      "-s を付けない複数形（本文に挙げた15語）。母音が変わるのは man・woman・foot・tooth・goose・mouse の6語、-en が付くのは child・ox の2語、単複同形は sheep・deer・fish・Japanese・Chinese・yen・aircraft の7語",
+    ],
+    buildSteps: 4,
   },
 
   // s017：不規則動詞の型別のおおよその割合
@@ -143,6 +207,14 @@ export const lessonFigsKokoEigoExt01: Record<string, Figure> = {
     ],
     caption:
       '中学で学ぶ不規則動詞（およそ100語）の型別のおおよその割合。過去形と過去分詞が同じ A－B－B 型が半分近くを占め、三つとも異なる A－B－C 型がそれに次ぐ。A－A－A と A－B－A を合わせても二割ほどしかない',
+    steps: [
+      "円全体を100%として、それぞれが全体のどれくらいかを表した円グラフ。",
+      "いちばん大きいのは「A－B－B」で、全体のおよそ45%。",
+      "内わけは A－B－B 45%、A－B－C 35%、A－A－A 12%、A－B－A 8%。",
+      "割合は「部分 ÷ 全体 × 100」で求める。全部たすと100%になることを確かめる。",
+      "中学で学ぶ不規則動詞（およそ100語）の型別のおおよその割合。過去形と過去分詞が同じ A－B－B 型が半分近くを占め、三つとも異なる A－B－C 型がそれに次ぐ。A－A－A と A－B－A を合わせても二割ほどしかない",
+    ],
+    buildSteps: 4,
   },
 
   // s022：自動詞・他動詞のペア（lie／lay、rise／raise）を2軸に配置
@@ -174,6 +246,13 @@ export const lessonFigsKokoEigoExt01: Record<string, Figure> = {
     ],
     caption:
       '温度を表す形容詞は四段階に並ぶ。反意語になるのは両端どうし（cold ⇔ hot）と内側どうし（cool ⇔ warm）で、cold の反対がいつでも warm というわけではない',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から10まで、1きざみで目もりがふってある。",
+      "印がついているのは cold、cool、warm、hot。位置を目もりで確かめる。",
+      "温度を表す形容詞は四段階に並ぶ。反意語になるのは両端どうし（cold ⇔ hot）と内側どうし（cool ⇔ warm）で、cold の反対がいつでも warm というわけではない",
+    ],
+    buildSteps: 3,
   },
 
   // s031：頻度を表す副詞のおおよその強さ
@@ -192,6 +271,13 @@ export const lessonFigsKokoEigoExt01: Record<string, Figure> = {
     ],
     caption:
       '頻度を表す副詞のおおよその強さ（％はあくまで目安）。always → usually → often → sometimes → seldom → never の順に減る。読解では usually と sometimes の取りちがえが内容一致問題の失点につながる',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から100まで、20きざみで目もりがふってある。",
+      "印がついているのは never、seldom、sometimes、often。位置を目もりで確かめる。",
+      "頻度を表す副詞のおおよその強さ（％はあくまで目安）。always → usually → often → sometimes → seldom → never の順に減る。読解では usually と sometimes の取りちがえが内容一致問題の失点につながる",
+    ],
+    buildSteps: 3,
   },
 
   // s033：数量を表す語の強さ（a の有無で肯定・否定が入れかわる）
@@ -209,6 +295,13 @@ export const lessonFigsKokoEigoExt01: Record<string, Figure> = {
     ],
     caption:
       '数量を表す語の並び。a が付かない few・little は「ほとんどない」で0に近く、a が付いた a few・a little は「少しある」で肯定的になる。a 一文字で意味が正反対に動く',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から10まで、1きざみで目もりがふってある。",
+      "印がついているのは no、few / little、a few / a little、some。位置を目もりで確かめる。",
+      "数量を表す語の並び。a が付かない few・little は「ほとんどない」で0に近く、a が付いた a few・a little は「少しある」で肯定的になる。a 一文字で意味が正反対に動く",
+    ],
+    buildSteps: 3,
   },
 
   // s034：by（期限）と until（継続）のちがい
@@ -221,6 +314,14 @@ export const lessonFigsKokoEigoExt01: Record<string, Figure> = {
     points: [{ x: 5, label: 'five' }],
     caption:
       '太線が until five（5時までずっと続く）。by five は5時という点までのどこかで動作が終わればよく、線ではなく期限を表す。だから wait・stay には until、finish・come には by を使う',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から8まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 0以上 かつ 5以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは five。位置を目もりで確かめる。",
+      "太線が until five（5時までずっと続く）。by five は5時という点までのどこかで動作が終わればよく、線ではなく期限を表す。だから wait・stay には until、finish・come には by を使う",
+    ],
+    buildSteps: 4,
   },
 
   // s035：「見る」「聞く」の語を、目か耳か・意識の強さの2軸に配置

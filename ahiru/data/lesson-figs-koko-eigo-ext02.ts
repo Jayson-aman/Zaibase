@@ -243,6 +243,13 @@ export const lessonFigsKokoEigoExt02: Record<string, Figure> = {
     ],
     fill: true,
     caption: '第4文型 SVOO。My father gave me a watch. は「人 → 物」の順に並べる。me（人）と a watch（物）は別のものなので、O が2つ続く',
+    steps: [
+      "図にある点は A・B・C・D・E・F・G・H・I・J。どの点がどこにあるかを最初におさえる。",
+      "辺に書かれている長さは S 主語、V 動詞、O1 人（〜に）、O2 物（〜を）。どの辺のことかを図で確かめる。",
+      "対角線を引くと、三角形に分けて考えられる。",
+      "第4文型 SVOO。My father gave me a watch. は「人 → 物」の順に並べる。me（人）と a watch（物）は別のものなので、O が2つ続く",
+    ],
+    buildSteps: 3,
   },
 
   // s057：SVOO → SVO ＋ to の書きかえ

@@ -115,6 +115,13 @@ export const lessonFigsKokoEigoExt11: Record<string, Figure> = {
       { x: 16, label: 'club activities' },
     ],
     caption: '学校を舞台にした会話に出る時刻の目安。時刻は「時＋分」を続けて読む（eight thirty＝8時30分）。half past eight も8時30分、a quarter to nine は9時15分前＝8時45分',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は8から17まで、1きざみで目もりがふってある。",
+      "印がついているのは homeroom 8:30、first period、lunch、school is over。位置を目もりで確かめる。",
+      "学校を舞台にした会話に出る時刻の目安。時刻は「時＋分」を続けて読む（eight thirty＝8時30分）。half past eight も8時30分、a quarter to nine は9時15分前＝8時45分",
+    ],
+    buildSteps: 3,
   },
 
   // s385：依頼の丁寧さの段階
@@ -130,6 +137,13 @@ export const lessonFigsKokoEigoExt11: Record<string, Figure> = {
       { x: 4, label: 'Would you ~?' },
     ],
     caption: '依頼表現の丁寧さの段階（右へ行くほど丁寧）。助動詞を過去形（could・would）にすると一段丁寧になるが、過去の意味は持たない。許可を求めるときは主語を I にして Can I ＜ Could I ＜ May I の順になる',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から5まで、1きざみで目もりがふってある。",
+      "印がついているのは Can you ~?、Will you ~?、Could you ~?、Would you ~?。位置を目もりで確かめる。",
+      "依頼表現の丁寧さの段階（右へ行くほど丁寧）。助動詞を過去形（could・would）にすると一段丁寧になるが、過去の意味は持たない。許可を求めるときは主語を I にして Can I ＜ Could I ＜ May I の順になる",
+    ],
+    buildSteps: 3,
   },
 
   // s389：空所補充で使う手がかりの優先順位
@@ -171,6 +185,13 @@ export const lessonFigsKokoEigoExt11: Record<string, Figure> = {
       { x: 35, label: '実際 7:35' },
     ],
     caption: '7時台の分を数直線にしたもの。The train was going to leave at seven fifteen, but it was twenty minutes late. 予定の7:15に20分を足して、実際の出発は7:35。聞こえた数字がそのまま答えになるとはかぎらない',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から60まで、10きざみで目もりがふってある。",
+      "印がついているのは 予定 7:15、実際 7:35。位置を目もりで確かめる。",
+      "7時台の分を数直線にしたもの。The train was going to leave at seven fifteen, but it was twenty minutes late. 予定の7:15に20分を足して、実際の出発は7:35。聞こえた数字がそのまま答えになるとはかぎらない",
+    ],
+    buildSteps: 3,
   },
 
   // s395：リスニングの地図問題（2つ目の角を左折）
@@ -214,6 +235,13 @@ export const lessonFigsKokoEigoExt11: Record<string, Figure> = {
       { x: 11, label: '映画 11:00' },
     ],
     caption: '長い対話では最初の予定が変更される。Can we make it thirty minutes earlier? なら10:00から30分引いて9:30。earlier は引き算、later は足し算。メモは上書きせず矢印でつなぐと最終形が一目でわかる',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は9から12まで、1きざみで目もりがふってある。",
+      "印がついているのは 新 9:30、元 10:00、映画 11:00。位置を目もりで確かめる。",
+      "長い対話では最初の予定が変更される。Can we make it thirty minutes earlier? なら10:00から30分引いて9:30。earlier は引き算、later は足し算。メモは上書きせず矢印でつなぐと最終形が一目でわかる",
+    ],
+    buildSteps: 3,
   },
 
   // s398：和文英訳の骨組み S V O M
@@ -284,6 +312,14 @@ export const lessonFigsKokoEigoExt11: Record<string, Figure> = {
       { label: '3文目', value: 9, color: '#0369A1' },
     ],
     caption: '「25語以上30語以内」の条件英作文の設計図。本文の模範解答 My town has a big park near the station.（9語）／Many people run there or walk their dogs every morning.（10語）／I like the park because it is always quiet.（9語）で合計28語になり、条件を満たす',
+    steps: [
+      "よこじくは「文」、たてじくは「語数」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「2文目」で10（語数）。",
+      "いちばん小さいのは「1文目」で9。差は1。",
+      "大きい順にならべると 2文目 → 1文目 → 3文目。棒の高さを見比べて確かめる。",
+      "「25語以上30語以内」の条件英作文の設計図。本文の模範解答 My town has a big park near the station.（9語）／Many people run there or walk their dogs every morning.（10語）／I like the park because it is always quiet.（9語）で合計28語になり、条件を満たす",
+    ],
+    buildSteps: 4,
   },
 
   // s411：自由英作文の四文の型
@@ -313,6 +349,14 @@ export const lessonFigsKokoEigoExt11: Record<string, Figure> = {
       { label: 'まとめ', value: 6, color: '#64748B' },
     ],
     caption: '「30語程度」の自由英作文の配分。本文の模範解答 I think students should study English every day.（8語）／First, we can learn new words more easily.（8語）／Second, English is useful when we travel abroad.（8語）／So I study English every day.（6語）で合計30語ちょうどになる',
+    steps: [
+      "よこじくは「文の役割」、たてじくは「語数」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「意見」で8（語数）。",
+      "いちばん小さいのは「まとめ」で6。差は2。",
+      "大きい順にならべると 意見 → 理由① → 理由② → まとめ。棒の高さを見比べて確かめる。",
+      "「30語程度」の自由英作文の配分。本文の模範解答 I think students should study English every day.（8語）／First, we can learn new words more easily.（8語）／Second, English is useful when we travel abroad.（8語）／So I study English every day.（6語）で合計30語ちょうどになる",
+    ],
+    buildSteps: 4,
   },
 
   // s415：50語の配分（模範解答と一致）
@@ -328,5 +372,13 @@ export const lessonFigsKokoEigoExt11: Record<string, Figure> = {
       { label: 'まとめ', value: 13, color: '#64748B' },
     ],
     caption: '「50語程度」の自由英作文の配分。本文の模範解答 I agree that all students should wear a school uniform.（10語）／First, we do not have to think about what to wear every morning.（13語）／Second, a uniform makes us feel that we are members of the same school.（14語）／For these two reasons, I think a school uniform is a good idea.（13語）で合計50語ちょうど',
+    steps: [
+      "よこじくは「文の役割」、たてじくは「語数」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「理由②」で14（語数）。",
+      "いちばん小さいのは「意見」で10。差は4。",
+      "大きい順にならべると 理由② → 理由① → まとめ → 意見。棒の高さを見比べて確かめる。",
+      "「50語程度」の自由英作文の配分。本文の模範解答 I agree that all students should wear a school uniform.（10語）／First, we do not have to think about what to wear every morning.（13語）／Second, a uniform makes us feel that we are members of the same school.（14語）／For these two reasons, I think a school uniform is a good idea.（13語）で合計50語ちょうど",
+    ],
+    buildSteps: 4,
   },
 };

@@ -96,6 +96,14 @@ export const lessonFigsKokoEigoExt05: Record<string, Figure> = {
     ],
     caption:
       '「彼は疲れている」と推量するときの確信度のおおよその目安。must（〜にちがいない）が最も強く、might（ひょっとすると）が最も弱い。否定側で「〜のはずがない」と言い切るときは can\'t を使う（must not は禁止の意味になる）',
+    steps: [
+      "棒の高さが数の大きさを表している。まず何を比べた図かをつかむ。",
+      "いちばん大きいのは「must」で95（確信の度合い（％・目安））。",
+      "いちばん小さいのは「might」で25。差は70。",
+      "大きい順にならべると must → will → should → may → might。棒の高さを見比べて確かめる。",
+      "「彼は疲れている」と推量するときの確信度のおおよその目安。must（〜にちがいない）が最も強く、might（ひょっとすると）が最も弱い。否定側で「〜のはずがない」と言い切るときは can't を使う（must not は禁止の意味になる）",
+    ],
+    buildSteps: 4,
   },
 
   // s160：義務・助言を表す表現の強さの段階
@@ -111,6 +119,14 @@ export const lessonFigsKokoEigoExt05: Record<string, Figure> = {
     ],
     caption:
       'すすめる強さの目安。should（〜したほうがよい）がいちばんおだやかで、had better は「そうしないとまずい」という警告、have to は外の事情による必要、must は話し手の強い判断。目上の人への助言には should や Why don\'t you 〜? を使う',
+    steps: [
+      "棒の高さが数の大きさを表している。まず何を比べた図かをつかむ。",
+      "いちばん大きいのは「must」で95（強さの目安（％））。",
+      "いちばん小さいのは「should」で50。差は45。",
+      "大きい順にならべると must → have to → had better → should。棒の高さを見比べて確かめる。",
+      "すすめる強さの目安。should（〜したほうがよい）がいちばんおだやかで、had better は「そうしないとまずい」という警告、have to は外の事情による必要、must は話し手の強い判断。目上の人への助言には should や Why don't you 〜? を使う",
+    ],
+    buildSteps: 4,
   },
 
   // s163：will と be going to は「いつ決めたか」で分かれる
@@ -126,6 +142,13 @@ export const lessonFigsKokoEigoExt05: Record<string, Figure> = {
     ],
     caption:
       '横軸は時間の流れ（左が過去、右が未来）。be going to は左の点、つまり話す前にすでに決まっていた予定を表す。will は 0 の点、つまり話しながらその場で決めた意志を表す。実行するのはどちらも右の未来である',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は-3から3まで、1きざみで目もりがふってある。",
+      "印がついているのは 前から決めていた、話す瞬間、実行する未来。位置を目もりで確かめる。",
+      "横軸は時間の流れ（左が過去、右が未来）。be going to は左の点、つまり話す前にすでに決まっていた予定を表す。will は 0 の点、つまり話しながらその場で決めた意志を表す。実行するのはどちらも右の未来である",
+    ],
+    buildSteps: 3,
   },
 
   // s165：依頼・希望を表す言い方の丁寧さ
@@ -141,6 +164,14 @@ export const lessonFigsKokoEigoExt05: Record<string, Figure> = {
     ],
     caption:
       'want to より would like to、Will you より Would you のほうが丁寧になる。would は will の過去形だが過去の意味はなく、過去形にして一歩引くことで丁寧さを作っている。Would you like 〜? は相手へのすすめ、Would you 〜? は自分のための依頼',
+    steps: [
+      "棒の高さが数の大きさを表している。まず何を比べた図かをつかむ。",
+      "いちばん大きいのは「Would you」で80（丁寧さの目安（％））。",
+      "いちばん小さいのは「want to」で30。差は50。",
+      "大きい順にならべると Would you → would like to → Will you → want to。棒の高さを見比べて確かめる。",
+      "want to より would like to、Will you より Would you のほうが丁寧になる。would は will の過去形だが過去の意味はなく、過去形にして一歩引くことで丁寧さを作っている。Would you like 〜? は相手へのすすめ、Would you 〜? は自分のための依頼",
+    ],
+    buildSteps: 4,
   },
 
   // s166：used to / would often が表す時間の範囲
@@ -153,6 +184,14 @@ export const lessonFigsKokoEigoExt05: Record<string, Figure> = {
     points: [{ x: 8.5, label: '現在' }],
     caption:
       '太い線の部分が used to / would often の表す時期。過去のある期間くり返していた動作（または続いていた状態）を指し、右端の現在ではもうしていない、という含みがある。状態を表すときは would が使えず、used to だけになる',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から10まで、2きざみで目もりがふってある。",
+      "色のついた範囲は 1以上 かつ 5以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは 現在。位置を目もりで確かめる。",
+      "太い線の部分が used to / would often の表す時期。過去のある期間くり返していた動作（または続いていた状態）を指し、右端の現在ではもうしていない、という含みがある。状態を表すときは would が使えず、used to だけになる",
+    ],
+    buildSteps: 4,
   },
 
   // s167：Shall I と Shall we は答え方まで別
@@ -194,6 +233,14 @@ export const lessonFigsKokoEigoExt05: Record<string, Figure> = {
     ],
     caption:
       '相手に何かを頼む表現の丁寧さの目安。can → could、will → would と過去形にすると一歩引いた言い方になり、相手に断る余地が生まれる。いちばん右は Would you mind 〜ing?（〜していただけませんか）で、引き受ける答えは Not at all.',
+    steps: [
+      "棒の高さが数の大きさを表している。まず何を比べた図かをつかむ。",
+      "いちばん大きいのは「mind 〜ing」で90（丁寧さの目安（％））。",
+      "いちばん小さいのは「Can you」で30。差は60。",
+      "大きい順にならべると mind 〜ing → Would you → Could you → Will you → Can you。棒の高さを見比べて確かめる。",
+      "相手に何かを頼む表現の丁寧さの目安。can → could、will → would と過去形にすると一歩引いた言い方になり、相手に断る余地が生まれる。いちばん右は Would you mind 〜ing?（〜していただけませんか）で、引き受ける答えは Not at all.",
+    ],
+    buildSteps: 4,
   },
 
   // s172：許可を求める表現の丁寧さ
@@ -210,6 +257,13 @@ export const lessonFigsKokoEigoExt05: Record<string, Figure> = {
     ],
     caption:
       '許可を求める表現の丁寧さの目安（右へ行くほど改まった言い方）。友だちには Can I 〜?、店や先生には May I 〜? / Could I 〜? を使う。May I と Could I の丁寧さはほぼ同じで、May I のほうがあらたまった響きになる',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から100まで、25きざみで目もりがふってある。",
+      "印がついているのは Can I、Is it OK if I、May I、Could I。位置を目もりで確かめる。",
+      "許可を求める表現の丁寧さの目安（右へ行くほど改まった言い方）。友だちには Can I 〜?、店や先生には May I 〜? / Could I 〜? を使う。May I と Could I の丁寧さはほぼ同じで、May I のほうがあらたまった響きになる",
+    ],
+    buildSteps: 3,
   },
 
   // s175：命令文から依頼へ——強制力と丁寧さ

@@ -19,6 +19,14 @@ export const lessonFigsEigoExt08: Record<string, Figure> = {
     ],
     caption:
       '七月の一か月を数直線にした図。at は時刻という一点（at 7:00）、on は十五日という一日ぶんの幅（on July 15）、in は七月ぜんたいという広い幅（in July）を表す。at ＜ on ＜ in の順に時間の幅が大きくなる',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は1から31まで、5きざみで目もりがふってある。",
+      "色のついた範囲は 15以上 かつ 16以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは at 7:00（時刻＝点）。位置を目もりで確かめる。",
+      "七月の一か月を数直線にした図。at は時刻という一点（at 7:00）、on は十五日という一日ぶんの幅（on July 15）、in は七月ぜんたいという広い幅（in July）を表す。at ＜ on ＜ in の順に時間の幅が大きくなる",
+    ],
+    buildSteps: 4,
   },
 
   // s263：一日二十四時間のどこで in と at が入れかわるか
@@ -38,6 +46,14 @@ export const lessonFigsEigoExt08: Record<string, Figure> = {
     ],
     caption:
       '一日を時刻の数直線で表した図。三本の帯は左から in the morning（朝）・in the afternoon（午後）・in the evening（夕方）で、いずれも the が必要。正午と真夜中は一点なので at noon・at midnight となり、夜は例外的に at night と表す',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から24まで、3きざみで目もりがふってある。",
+      "色のついた範囲は 6以上 かつ 12以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは at noon、at midnight。位置を目もりで確かめる。",
+      "一日を時刻の数直線で表した図。三本の帯は左から in the morning（朝）・in the afternoon（午後）・in the evening（夕方）で、いずれも the が必要。正午と真夜中は一点なので at noon・at midnight となり、夜は例外的に at night と表す",
+    ],
+    buildSteps: 4,
   },
 
   // s265：場所の at（点）・on（接している面）・in（内部）を箱で示す
@@ -263,6 +279,14 @@ export const lessonFigsEigoExt08: Record<string, Figure> = {
     ],
     caption:
       '左の帯は「三時間」という長さそのもの（for three hours）、右の帯は「夏休み」という名前のついた期間（during the vacation）。後ろに数字が来たら for、the ＋ 行事や季節の名前が来たら during と、後ろの語で決められる',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から10まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 0以上 かつ 3以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは for three hours、during the vacation。位置を目もりで確かめる。",
+      "左の帯は「三時間」という長さそのもの（for three hours）、右の帯は「夏休み」という名前のついた期間（during the vacation）。後ろに数字が来たら for、the ＋ 行事や季節の名前が来たら during と、後ろの語で決められる",
+    ],
+    buildSteps: 4,
   },
 
   // s279：since（起点）と for（長さ）は同じことを別の言い方で表す
@@ -278,6 +302,14 @@ export const lessonFigsEigoExt08: Record<string, Figure> = {
     segments: [{ from: 2020, to: 2026 }],
     caption:
       '現在完了の文で使う since と for。since は始まった一点（since 2020）、for はその一点から今までの長さ（for six years）を表し、同じことを二通りに言える。since が見えたら動詞が have ＋ 過去分詞になっているかを確かめる',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は2020から2026まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 2020以上 かつ 2026以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは since 2020（起点）、now。位置を目もりで確かめる。",
+      "現在完了の文で使う since と for。since は始まった一点（since 2020）、for はその一点から今までの長さ（for six years）を表し、同じことを二通りに言える。since が見えたら動詞が have ＋ 過去分詞になっているかを確かめる",
+    ],
+    buildSteps: 4,
   },
 
   // s280：until（続く線の終わり）と by（締め切りの点）
@@ -290,6 +322,14 @@ export const lessonFigsEigoExt08: Record<string, Figure> = {
     segments: [{ from: 1, to: 5 }],
     caption:
       '五時を境にした図。until five は帯のように五時まで動作が続くことを表し（wait, stay, sleep）、by five は五時という点までに一度すればよい期限を表す（come, finish, return）。日本語の「まで」と「までに」の一字のちがいがこの差になる',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は1から9まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 1以上 かつ 5以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは five o'clock。位置を目もりで確かめる。",
+      "五時を境にした図。until five は帯のように五時まで動作が続くことを表し（wait, stay, sleep）、by five は五時という点までに一度すればよい期限を表す（come, finish, return）。日本語の「まで」と「までに」の一字のちがいがこの差になる",
+    ],
+    buildSteps: 4,
   },
 
   // s286：命令文, and 〜 ／ 命令文, or 〜 の二本の分かれ道
@@ -329,5 +369,13 @@ export const lessonFigsEigoExt08: Record<string, Figure> = {
     segments: [{ from: 3, to: 7 }],
     caption:
       '「彼が来たら伝えます」は未来の話だが、時を表す接続詞の節の中では will を使わず現在形で書く（When he comes, I will tell him.）。主となる文だけが will になる。if・before・after・until・as soon as も同じ規則',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から10まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 3以上 かつ 7以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは now、彼が来る（未来）。位置を目もりで確かめる。",
+      "「彼が来たら伝えます」は未来の話だが、時を表す接続詞の節の中では will を使わず現在形で書く（When he comes, I will tell him.）。主となる文だけが will になる。if・before・after・until・as soon as も同じ規則",
+    ],
+    buildSteps: 4,
   },
 };

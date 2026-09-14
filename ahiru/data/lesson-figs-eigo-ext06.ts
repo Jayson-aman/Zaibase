@@ -49,6 +49,14 @@ export const lessonFigsEigoExt06: Record<string, Figure> = {
     ],
     caption:
       '助動詞で始まる疑問文のていねいさのイメージ。過去形の could / would を使うと遠回しになり、ていねいな言い方になる。May I 〜? は「〜してもよろしいですか」と許可を求める言い方',
+    steps: [
+      "棒の高さが数の大きさを表している。まず何を比べた図かをつかむ。",
+      "いちばん大きいのは「Would you」で85（ていねいさ）。",
+      "いちばん小さいのは「Can you」で40。差は45。",
+      "大きい順にならべると Would you → May I → Could you → Will you → Can you。棒の高さを見比べて確かめる。",
+      "助動詞で始まる疑問文のていねいさのイメージ。過去形の could / would を使うと遠回しになり、ていねいな言い方になる。May I 〜? は「〜してもよろしいですか」と許可を求める言い方",
+    ],
+    buildSteps: 4,
   },
 
   // s196：疑問詞つき疑問文の語順ボックス
@@ -76,6 +84,14 @@ export const lessonFigsEigoExt06: Record<string, Figure> = {
     ],
     caption:
       '円の中の三つが「目の前に示された選択肢」。この決まった範囲から選ばせるときは Which を使う（Which do you want, coffee, tea or juice?）。範囲を決めずに自由に答えさせるときは What（What do you want to drink?）',
+    steps: [
+      "円全体を100%として、それぞれが全体のどれくらいかを表した円グラフ。",
+      "いちばん大きいのは「coffee」で、全体のおよそ34%。",
+      "内わけは coffee 34%、tea 33%、juice 33%。",
+      "割合は「部分 ÷ 全体 × 100」で求める。全部たすと100%になることを確かめる。",
+      "円の中の三つが「目の前に示された選択肢」。この決まった範囲から選ばせるときは Which を使う（Which do you want, coffee, tea or juice?）。範囲を決めずに自由に答えさせるときは What（What do you want to drink?）",
+    ],
+    buildSteps: 4,
   },
 
   // s201：Whose + 名詞 の語順ボックス
@@ -121,6 +137,14 @@ export const lessonFigsEigoExt06: Record<string, Figure> = {
     ],
     caption:
       '時をあらわす前置詞は「はばの大きさ」で決まる。点のようにせまい時刻には at、一日分の広さの曜日・日付には on、月・季節・年のように広いものには in を使う',
+    steps: [
+      "棒の高さが数の大きさを表している。まず何を比べた図かをつかむ。",
+      "いちばん大きいのは「in 2026年」で11（時のはばの大きさ（イメージ））。",
+      "いちばん小さいのは「at 七時」で1。差は10。",
+      "大きい順にならべると in 2026年 → in 四月 → on 月曜日 → at 七時。棒の高さを見比べて確かめる。",
+      "時をあらわす前置詞は「はばの大きさ」で決まる。点のようにせまい時刻には at、一日分の広さの曜日・日付には on、月・季節・年のように広いものには in を使う",
+    ],
+    buildSteps: 4,
   },
 
   // s211：How many と How much の使い分け（数えられる名詞・数えられない名詞）
@@ -132,6 +156,14 @@ export const lessonFigsEigoExt06: Record<string, Figure> = {
     ],
     caption:
       '名詞は大きく二つに分かれる。book・apple・student のように一つ二つと数えられる名詞には How many＋複数形、water・money・time・milk のように形が決まっていない名詞には How much を使う',
+    steps: [
+      "円全体を100%として、それぞれが全体のどれくらいかを表した円グラフ。",
+      "いちばん大きいのは「数えられる名詞（How many）」で、全体のおよそ70%。",
+      "内わけは 数えられる名詞（How many） 70%、数えられない名詞（How much） 30%。",
+      "割合は「部分 ÷ 全体 × 100」で求める。全部たすと100%になることを確かめる。",
+      "名詞は大きく二つに分かれる。book・apple・student のように一つ二つと数えられる名詞には How many＋複数形、water・money・time・milk のように形が決まっていない名詞には How much を使う",
+    ],
+    buildSteps: 4,
   },
 
   // s212：How long は「はじめから終わりまでのはば」をたずねる
@@ -147,6 +179,14 @@ export const lessonFigsEigoExt06: Record<string, Figure> = {
     segments: [{ from: 10, to: 40 }],
     caption:
       '目もりは分。How long 〜? は矢印の「はば」（10分から40分までの30分）をたずねる言い方で、答えは It takes thirty minutes. となる。一方 What time 〜? は目もりの上の「一点」をたずねる',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から60まで、10きざみで目もりがふってある。",
+      "色のついた範囲は 10以上 かつ 40以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは 家を出る、学校に着く。位置を目もりで確かめる。",
+      "目もりは分。How long 〜? は矢印の「はば」（10分から40分までの30分）をたずねる言い方で、答えは It takes thirty minutes. となる。一方 What time 〜? は目もりの上の「一点」をたずねる",
+    ],
+    buildSteps: 4,
   },
 
   // s213：頻度をあらわす副詞の度合い
@@ -164,6 +204,14 @@ export const lessonFigsEigoExt06: Record<string, Figure> = {
     ],
     caption:
       'How often 〜? に答えるときの頻度の副詞の目安。always（いつも）から never（一度もない）まで段階がある。これらの副詞は一般動詞の前、be動詞のうしろに置く',
+    steps: [
+      "棒の高さが数の大きさを表している。まず何を比べた図かをつかむ。",
+      "いちばん大きいのは「always」で100（どれくらいの割合か（％））。",
+      "いちばん小さいのは「never」で0。差は100。",
+      "大きい順にならべると always → usually → often → sometimes → seldom → never。棒の高さを見比べて確かめる。",
+      "How often 〜? に答えるときの頻度の副詞の目安。always（いつも）から never（一度もない）まで段階がある。これらの副詞は一般動詞の前、be動詞のうしろに置く",
+    ],
+    buildSteps: 4,
   },
 
   // s215：How + 形容詞・副詞 が何をたずねるかの分類
@@ -179,6 +227,14 @@ export const lessonFigsEigoExt06: Record<string, Figure> = {
     ],
     caption:
       'How のうしろに形容詞・副詞を置くと「どれくらい〜か」をたずねる形になる。何をたずねているかは、うしろに置いた語で決まる。まとめて覚えると、聞かれたことと答え方がずれなくなる',
+    steps: [
+      "円全体を100%として、それぞれが全体のどれくらいかを表した円グラフ。",
+      "いちばん大きいのは「数 How many」で、全体のおよそ18%。",
+      "内わけは 数 How many 18%、量・値段 How much 18%、長さ・期間 How long 16%、距離 How far 16% …。",
+      "割合は「部分 ÷ 全体 × 100」で求める。全部たすと100%になることを確かめる。",
+      "How のうしろに形容詞・副詞を置くと「どれくらい〜か」をたずねる形になる。何をたずねているかは、うしろに置いた語で決まる。まとめて覚えると、聞かれたことと答え方がずれなくなる",
+    ],
+    buildSteps: 4,
   },
 
   // s216：疑問詞が主語のときは語順が変わらない（三つの箱）
@@ -234,5 +290,13 @@ export const lessonFigsEigoExt06: Record<string, Figure> = {
     ],
     caption:
       'Not all the students came. は「全員が来たわけではない」という部分否定で、来た生徒もいる（図の青い部分）。全員が来なかった＝全体否定は None of the students came. と表す',
+    steps: [
+      "円全体を100%として、それぞれが全体のどれくらいかを表した円グラフ。",
+      "いちばん大きいのは「来た生徒」で、全体のおよそ60%。",
+      "内わけは 来た生徒 60%、来なかった生徒 40%。",
+      "割合は「部分 ÷ 全体 × 100」で求める。全部たすと100%になることを確かめる。",
+      "Not all the students came. は「全員が来たわけではない」という部分否定で、来た生徒もいる（図の青い部分）。全員が来なかった＝全体否定は None of the students came. と表す",
+    ],
+    buildSteps: 4,
   },
 };

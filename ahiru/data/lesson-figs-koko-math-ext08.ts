@@ -153,6 +153,13 @@ export const lessonFigsKokoMathExt08: Record<string, Figure> = {
     sideLabels: ['3cm', null, '5cm'],
     rightAngles: [1],
     caption: '円Oの外の点Pから引いた接線の接点がA。半径OAと接線PAは垂直なので、△OAPは∠A＝90°の直角三角形',
+    steps: [
+      "頂点を順に O・A・P と結んだ三角形。まず形と頂点の名前をおさえる。",
+      "辺に書かれている長さは 3cm、5cm。どの辺のことかを図で確かめる。",
+      "A のところが直角。直角があれば三平方の定理や面積の式が使える。",
+      "円Oの外の点Pから引いた接線の接点がA。半径OAと接線PAは垂直なので、△OAPは∠A＝90°の直角三角形",
+    ],
+    buildSteps: 3,
   },
 
   // s295：円外の点Pから2本の接線。PA=PB=4cm, OA=OB=3cm（半径）, OP=5cm
@@ -171,6 +178,14 @@ export const lessonFigsKokoMathExt08: Record<string, Figure> = {
       [1, 2],
     ],
     caption: '点Pから円Oに引いた2本の接線と接点A・B。PA＝PB、OA＝OB（半径）、∠OAP＝∠OBP＝90°の凧形',
+    steps: [
+      "頂点を順に P・A・O・B と結んだ四角形。まず形と頂点の名前をおさえる。",
+      "辺に書かれている長さは 4cm、3cm、3cm、4cm。どの辺のことかを図で確かめる。",
+      "A・B のところが直角。直角があれば三平方の定理や面積の式が使える。",
+      "同じ印のついた辺は長さが等しい。二等辺や正多角形の性質が使える。",
+      "点Pから円Oに引いた2本の接線と接点A・B。PA＝PB、OA＝OB（半径）、∠OAP＝∠OBP＝90°の凧形",
+    ],
+    buildSteps: 4,
   },
 
   // s299：円の内部で交わる2弦ABとCD。交点をPとすると△APC∽△DPB
@@ -200,6 +215,13 @@ export const lessonFigsKokoMathExt08: Record<string, Figure> = {
     sideLabels: ['5cm', null, '3cm'],
     rightAngles: [2],
     caption: '中心Oから弦ABに引いた垂線の足がM（Mは弦ABの中点）。半径OA＝5cm、OM＝3cmの直角三角形OMAで三平方の定理を使う',
+    steps: [
+      "頂点を順に O・A・M と結んだ三角形。まず形と頂点の名前をおさえる。",
+      "辺に書かれている長さは 5cm、3cm。どの辺のことかを図で確かめる。",
+      "M のところが直角。直角があれば三平方の定理や面積の式が使える。",
+      "中心Oから弦ABに引いた垂線の足がM（Mは弦ABの中点）。半径OA＝5cm、OM＝3cmの直角三角形OMAで三平方の定理を使う",
+    ],
+    buildSteps: 3,
   },
 
   // s303：半径5cmの円の平行な2弦 AB=8cm（中心から3cm）・CD=6cm（中心から4cm）。中心をはさんで反対側
@@ -255,5 +277,12 @@ export const lessonFigsKokoMathExt08: Record<string, Figure> = {
     sideLabels: ['5cm', '4cm', '3cm'],
     rightAngles: [2],
     caption: '∠C＝90°、AC＝3cm・BC＝4cm・AB＝5cmの直角三角形。この三角形の内接円と外接円の半径を考える',
+    steps: [
+      "頂点を順に A・B・C と結んだ三角形。まず形と頂点の名前をおさえる。",
+      "辺に書かれている長さは 5cm、4cm、3cm。どの辺のことかを図で確かめる。",
+      "C のところが直角。直角があれば三平方の定理や面積の式が使える。",
+      "∠C＝90°、AC＝3cm・BC＝4cm・AB＝5cmの直角三角形。この三角形の内接円と外接円の半径を考える",
+    ],
+    buildSteps: 3,
   },
 };

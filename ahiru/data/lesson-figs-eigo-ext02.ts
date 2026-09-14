@@ -87,6 +87,14 @@ export const lessonFigsEigoExt02: Record<string, Figure> = {
       { label: 'y→ies', value: 5, color: '#16A34A' },
     ],
     caption: '三単現の形の作り方の内わけの目安。大部分はそのまま -s を付けるだけで、-es や y→ies になるのはごく一部（goes・does・watches・teaches・washes・studies など）。例外のほうを数少ないものとして覚えるのが効率がよい',
+    steps: [
+      "円全体を100%として、それぞれが全体のどれくらいかを表した円グラフ。",
+      "いちばん大きいのは「そのまま -s」で、全体のおよそ85%。",
+      "内わけは そのまま -s 85%、-es（s,x,ch,sh,o） 10%、y→ies 5%。",
+      "割合は「部分 ÷ 全体 × 100」で求める。全部たすと100%になることを確かめる。",
+      "三単現の形の作り方の内わけの目安。大部分はそのまま -s を付けるだけで、-es や y→ies になるのはごく一部（goes・does・watches・teaches・washes・studies など）。例外のほうを数少ないものとして覚えるのが効率がよい",
+    ],
+    buildSteps: 4,
   },
 
   // s056：一般動詞の否定文の語順
@@ -156,6 +164,14 @@ export const lessonFigsEigoExt02: Record<string, Figure> = {
       { label: '第4文型 SVOO', value: 3, color: '#EF4444' },
     ],
     caption: '英文にあらわれる文型のおおよその割合の目安。SVO・SV・SVC の三つでほとんどを占める。SVOO と SVOC は使える動詞が give・buy・call・make などに限られるため数は少ないが、入試では書きかえ問題として集中的に問われる',
+    steps: [
+      "円全体を100%として、それぞれが全体のどれくらいかを表した円グラフ。",
+      "いちばん大きいのは「第3文型 SVO」で、全体のおよそ50%。",
+      "内わけは 第3文型 SVO 50%、第1文型 SV 20%、第2文型 SVC 20%、第5文型 SVOC 7% …。",
+      "割合は「部分 ÷ 全体 × 100」で求める。全部たすと100%になることを確かめる。",
+      "英文にあらわれる文型のおおよその割合の目安。SVO・SV・SVC の三つでほとんどを占める。SVOO と SVOC は使える動詞が give・buy・call・make などに限られるため数は少ないが、入試では書きかえ問題として集中的に問われる",
+    ],
+    buildSteps: 4,
   },
 
   // s067：第2文型 SVC（S＝C）。等しいしるしの付いた二辺がイコールの関係を表す
@@ -197,6 +213,13 @@ export const lessonFigsEigoExt02: Record<string, Figure> = {
     sideLabels: ['①S 主語', '②V 動詞', '③O1 人（〜に）', '④O2 もの（〜を）'],
     fill: true,
     caption: '第4文型 SVOO の語順。③人→④ものの順で、入れかえられない（× He gave a book me.）。③と④はイコールにならないので、O＝C になる第5文型と区別できる',
+    steps: [
+      "頂点を順に A・B・C・D と結んだ四角形。まず形と頂点の名前をおさえる。",
+      "辺に書かれている長さは ①S 主語、②V 動詞、③O1 人（〜に）、④O2 もの（〜を）。どの辺のことかを図で確かめる。",
+      "四角形の内角の和は360°。角度を求めるときの手がかりになる。",
+      "第4文型 SVOO の語順。③人→④ものの順で、入れかえられない（× He gave a book me.）。③と④はイコールにならないので、O＝C になる第5文型と区別できる",
+    ],
+    buildSteps: 3,
   },
 
   // s074：SVOO → SVO＋to＋人 への書きかえ

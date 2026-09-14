@@ -19,6 +19,14 @@ export const lessonFigsKokoEigoExt06: Record<string, Figure> = {
     ],
     caption:
       '代表的な名詞20語の分類。可算・普通名詞8＝book, apple, student, dog, car, chair, egg, question／可算・集合名詞3＝family, team, class／不可算・物質名詞4＝water, bread, paper, money／不可算・抽象名詞4＝information, advice, homework, news／固有名詞1＝Japan。20語中11語が可算、9語が不可算',
+    steps: [
+      "円全体を100%として、それぞれが全体のどれくらいかを表した円グラフ。",
+      "いちばん大きいのは「可算・普通名詞 8語」で、全体のおよそ40%。",
+      "内わけは 可算・普通名詞 8語 40%、可算・集合名詞 3語 15%、不可算・物質名詞 4語 20%、不可算・抽象名詞 4語 20% …。",
+      "割合は「部分 ÷ 全体 × 100」で求める。全部たすと100%になることを確かめる。",
+      "代表的な名詞20語の分類。可算・普通名詞8＝book, apple, student, dog, car, chair, egg, question／可算・集合名詞3＝family, team, class／不可算・物質名詞4＝water, bread, paper, money／不可算・抽象名詞4＝information, advice, homework, news／固有名詞1＝Japan。20語中11語が可算、9語が不可算",
+    ],
+    buildSteps: 4,
   },
 
   // s183：不可算名詞15語を三つのタイプ（物質・抽象・固有）に分けた内訳
@@ -31,6 +39,14 @@ export const lessonFigsKokoEigoExt06: Record<string, Figure> = {
     ],
     caption:
       '不可算名詞15語のタイプ別内訳。物質名詞6＝water, milk, bread, paper, rice, money／抽象名詞6＝information, advice, homework, news, work, peace／固有名詞3＝Japan, Tom, Monday。どれも「輪郭がなく1つ2つと切り分けられない」という点で共通する',
+    steps: [
+      "円全体を100%として、それぞれが全体のどれくらいかを表した円グラフ。",
+      "いちばん大きいのは「物質名詞 6語」で、全体のおよそ40%。",
+      "内わけは 物質名詞 6語 40%、抽象名詞 6語 40%、固有名詞 3語 20%。",
+      "割合は「部分 ÷ 全体 × 100」で求める。全部たすと100%になることを確かめる。",
+      "不可算名詞15語のタイプ別内訳。物質名詞6＝water, milk, bread, paper, rice, money／抽象名詞6＝information, advice, homework, news, work, peace／固有名詞3＝Japan, Tom, Monday。どれも「輪郭がなく1つ2つと切り分けられない」という点で共通する",
+    ],
+    buildSteps: 4,
   },
 
   // s186：容器を表す単位語の容量めやす（どの語を選ぶかは器の大きさで決まる）
@@ -47,6 +63,14 @@ export const lessonFigsKokoEigoExt06: Record<string, Figure> = {
     ],
     caption:
       '容器で数える単位語と容量のめやす。カップ約150mL、コップ約200mL、缶約350mL、ペットボトル約500mL。温かい飲み物は cup、冷たい飲み物は glass を使う。複数にするときは cups / glasses のように単位語のほうに -s を付け、of の後ろの不可算名詞は裸のまま変えない',
+    steps: [
+      "よこじくは「容器を表す単位語」、たてじくは「容量のめやす（mL）」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「a bottle of（水）」で500（容量のめやす（mL））。",
+      "いちばん小さいのは「a cup of（コーヒー）」で150。差は350。",
+      "大きい順にならべると a bottle of（水） → a can of（ジュース） → a glass of（水） → a cup of（コーヒー）。棒の高さを見比べて確かめる。",
+      "容器で数える単位語と容量のめやす。カップ約150mL、コップ約200mL、缶約350mL、ペットボトル約500mL。温かい飲み物は cup、冷たい飲み物は glass を使う。複数にするときは cups / glasses のように単位語のほうに -s を付け、of の後ろの不可算名詞は裸のまま変えない",
+    ],
+    buildSteps: 4,
   },
 
   // s188：数量形容詞を「可算か不可算か」×「量の多少」の二軸に配置
@@ -178,6 +202,14 @@ export const lessonFigsKokoEigoExt06: Record<string, Figure> = {
     segments: [{ from: 1, to: 3 }],
     caption:
       'and で人を並べるときの順序は「2人称 → 3人称 → 1人称」。自分（I）を最後に置くのが英語の習慣である。例）You, Tom and I are in the same class.／Tom and I went to the museum. ただし悪いことを述べるときだけ I and Tom broke the window. のように自分を先に置く',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から4まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 1以上 かつ 3以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは you（2人称）、he / she（3人称）、I（1人称）。位置を目もりで確かめる。",
+      "and で人を並べるときの順序は「2人称 → 3人称 → 1人称」。自分（I）を最後に置くのが英語の習慣である。例）You, Tom and I are in the same class.／Tom and I went to the museum. ただし悪いことを述べるときだけ I and Tom broke the window. のように自分を先に置く",
+    ],
+    buildSteps: 4,
   },
 
   // s203：再帰代名詞を「人称」×「単数・複数」の二軸で示す
@@ -241,6 +273,14 @@ export const lessonFigsKokoEigoExt06: Record<string, Figure> = {
     segments: [{ from: 1, to: 3 }],
     caption:
       '3つあるときの並び：one → another → the other。まだ残りがあるうちは another（＝an+other）、これで最後という特定できる1つには the other を使う。2つしかないときは one 〜, the other … となり、4つ以上で「1つと残り全部」を言うときは one 〜, the others … となる',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から4まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 1以上 かつ 3以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは one（1つ目）、another（残りのうちの1つ）、the other（最後の1つ）。位置を目もりで確かめる。",
+      "3つあるときの並び：one → another → the other。まだ残りがあるうちは another（＝an+other）、これで最後という特定できる1つには the other を使う。2つしかないときは one 〜, the other … となり、4つ以上で「1つと残り全部」を言うときは one 〜, the others … となる",
+    ],
+    buildSteps: 4,
   },
 
   // s213：形容詞を並べる順序（主観から客観へ）
@@ -261,6 +301,14 @@ export const lessonFigsKokoEigoExt06: Record<string, Figure> = {
     segments: [{ from: 1, to: 7 }],
     caption:
       '形容詞を並べる順序は「主観 → 客観」。名詞に近いほど、その物と切りはなせない性質が来る。例）a beautiful small old Japanese doll（①②③⑥＋名詞）／a big round wooden table（②④⑦＋名詞）。限定語（a/the/my）は必ずこの列よりさらに前、数量を表す語（three, many）は評価より前に置く',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から8まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 1以上 かつ 7以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは ①評価（beautiful）、②大きさ（small）、③新旧（old）、④形（round）。位置を目もりで確かめる。",
+      "形容詞を並べる順序は「主観 → 客観」。名詞に近いほど、その物と切りはなせない性質が来る。例）a beautiful small old Japanese doll（①②③⑥＋名詞）／a big round wooden table（②④⑦＋名詞）。限定語（a/the/my）は必ずこの列よりさらに前、数量を表す語（three, many）は評価より前に置く",
+    ],
+    buildSteps: 4,
   },
 
   // s215：-thing 型の代名詞を修飾するときの語順
@@ -277,6 +325,14 @@ export const lessonFigsKokoEigoExt06: Record<string, Figure> = {
     segments: [{ from: 1, to: 3 }],
     caption:
       '-thing / -one / -body で終わる代名詞は、形容詞を後ろに置く。something cold to drink（何か冷たい飲み物）のように「代名詞 → 形容詞 → to 不定詞」の順で、後ろへ後ろへ情報を足していく。else が入るときは anything else to say のように形容詞よりさらに後ろに置く',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から4まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 1以上 かつ 3以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは something（-thing 型の代名詞）、cold（形容詞は後ろ）、to drink（to 不定詞はさらに後ろ）。位置を目もりで確かめる。",
+      "-thing / -one / -body で終わる代名詞は、形容詞を後ろに置く。something cold to drink（何か冷たい飲み物）のように「代名詞 → 形容詞 → to 不定詞」の順で、後ろへ後ろへ情報を足していく。else が入るときは anything else to say のように形容詞よりさらに後ろに置く",
+    ],
+    buildSteps: 4,
   },
 
   // s217：頻度を表す副詞の度合い（always 100 〜 never 0）
@@ -295,6 +351,14 @@ export const lessonFigsKokoEigoExt06: Record<string, Figure> = {
     ],
     caption:
       '頻度を表す副詞の度合いのめやす。always（100％）から never（0％）まで段階的に並ぶ。置き場所はどれも共通で「一般動詞の前、be動詞・助動詞の後ろ」＝not と同じ位置。seldom・rarely は 10％程度で、それ自体が否定の意味を持つため don\'t と重ねてはいけない',
+    steps: [
+      "よこじくは「頻度を表す副詞」、たてじくは「おおよその頻度（％）」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「always（いつも）」で100（おおよその頻度（％））。",
+      "いちばん小さいのは「never（決して〜ない）」で0。差は100。",
+      "大きい順にならべると always（いつも） → usually（たいてい） → often（よく） → sometimes（ときどき） → seldom / rarely（めったに〜ない） → never（決して〜ない）。棒の高さを見比べて確かめる。",
+      "頻度を表す副詞の度合いのめやす。always（100％）から never（0％）まで段階的に並ぶ。置き場所はどれも共通で「一般動詞の前、be動詞・助動詞の後ろ」＝not と同じ位置。seldom・rarely は 10％程度で、それ自体が否定の意味を持つため don't と重ねてはいけない",
+    ],
+    buildSteps: 4,
   },
 
   // s219：副詞（句）を並べる順序（様態 → 場所 → 時）
@@ -311,5 +375,13 @@ export const lessonFigsKokoEigoExt06: Record<string, Figure> = {
     segments: [{ from: 1, to: 3 }],
     caption:
       '副詞（句）が重なるときの順序は「様態 → 場所 → 時」。例）He played soccer well in the park yesterday.（彼は昨日、公園で上手にサッカーをした）。日本語は「時 → 場所 → 様態」の順が多く、英語とちょうど逆になる。場所や時が二つ重なるときは、小さい単位から大きい単位へ並べる（in Osaka in Japan／at seven on Monday）',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から4まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 1以上 かつ 3以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは 様態 well（どのように）、場所 in the park（どこで）、時 yesterday（いつ）。位置を目もりで確かめる。",
+      "副詞（句）が重なるときの順序は「様態 → 場所 → 時」。例）He played soccer well in the park yesterday.（彼は昨日、公園で上手にサッカーをした）。日本語は「時 → 場所 → 様態」の順が多く、英語とちょうど逆になる。場所や時が二つ重なるときは、小さい単位から大きい単位へ並べる（in Osaka in Japan／at seven on Monday）",
+    ],
+    buildSteps: 4,
   },
 };

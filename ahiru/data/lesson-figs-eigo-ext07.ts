@@ -21,6 +21,13 @@ export const lessonFigsEigoExt07: Record<string, Figure> = {
     ],
     caption:
       '形容詞をならべる順番。①冠詞・所有格・数 →②評価 →③大きさ →④新旧 →⑤色 →⑥名詞。色は名詞のいちばん近くに置く（two big red apples）。a・my・two は必ず先頭で、new my bike とは言わない',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は1から6まで、1きざみで目もりがふってある。",
+      "印がついているのは ①a/my/two、②nice、③big、④new。位置を目もりで確かめる。",
+      "形容詞をならべる順番。①冠詞・所有格・数 →②評価 →③大きさ →④新旧 →⑤色 →⑥名詞。色は名詞のいちばん近くに置く（two big red apples）。a・my・two は必ず先頭で、new my bike とは言わない",
+    ],
+    buildSteps: 3,
   },
 
   // s232：a few / few / a little / little の「量の度合い」を数直線で対比する
@@ -38,6 +45,13 @@ export const lessonFigsEigoExt07: Record<string, Figure> = {
     ],
     caption:
       '数量表現の度合い。a が付く a few・a little は「少しはある」（プラス）、a の付かない few・little は「ほとんどない」（マイナス）。数えられる名詞には few、数えられない名詞には little を使う',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から10まで、1きざみで目もりがふってある。",
+      "印がついているのは no / not any、few / little、a few / a little、some。位置を目もりで確かめる。",
+      "数量表現の度合い。a が付く a few・a little は「少しはある」（プラス）、a の付かない few・little は「ほとんどない」（マイナス）。数えられる名詞には few、数えられない名詞には little を使う",
+    ],
+    buildSteps: 3,
   },
 
   // s237：副詞をならべる順番（様態→場所→時）を語順の一列として示す
@@ -54,6 +68,13 @@ export const lessonFigsEigoExt07: Record<string, Figure> = {
     ],
     caption:
       '副詞の語順。〈動詞＋目的語〉のかたまりのあとに、様態（どのように）→場所（どこで）→時（いつ）の順でならべる。日本語は「昨日公園で」と時を先に言うので、英語では逆になる点に注意',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は1から4まで、1きざみで目もりがふってある。",
+      "印がついているのは played tennis、hard(様態)、in the park(場所)、yesterday(時)。位置を目もりで確かめる。",
+      "副詞の語順。〈動詞＋目的語〉のかたまりのあとに、様態（どのように）→場所（どこで）→時（いつ）の順でならべる。日本語は「昨日公園で」と時を先に言うので、英語では逆になる点に注意",
+    ],
+    buildSteps: 3,
   },
 
   // s238：頻度の副詞の度合い（このユニットで最も図解が効く箇所）
@@ -72,6 +93,14 @@ export const lessonFigsEigoExt07: Record<string, Figure> = {
     ],
     caption:
       '頻度の副詞のおおよその度合い。always（いつも）＞ usually（たいてい）＞ often（よく）＞ sometimes（ときどき）＞ seldom・rarely（めったに〜ない）＞ never（決して〜ない）。usually を「ときどき」と訳す誤りが多い',
+    steps: [
+      "よこじくは「頻度の副詞」、たてじくは「どれくらいの割合か(%)」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「always」で100（どれくらいの割合か(%)）。",
+      "いちばん小さいのは「never」で0。差は100。",
+      "大きい順にならべると always → usually → often → sometimes → seldom → never。棒の高さを見比べて確かめる。",
+      "頻度の副詞のおおよその度合い。always（いつも）＞ usually（たいてい）＞ often（よく）＞ sometimes（ときどき）＞ seldom・rarely（めったに〜ない）＞ never（決して〜ない）。usually を「ときどき」と訳す誤りが多い",
+    ],
+    buildSteps: 4,
   },
 
   // s239：頻度の副詞を置く位置（be動詞・助動詞のあと／一般動詞の前）
@@ -88,6 +117,13 @@ export const lessonFigsEigoExt07: Record<string, Figure> = {
     ],
     caption:
       '頻度の副詞の位置。be動詞・助動詞があるときはそのあと（He is always busy. / I will always help you.）。be動詞も助動詞もない文では一般動詞の前（He always goes to school.）に置く',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は1から4まで、1きざみで目もりがふってある。",
+      "印がついているのは 主語 He、is / will、always、busy / help。位置を目もりで確かめる。",
+      "頻度の副詞の位置。be動詞・助動詞があるときはそのあと（He is always busy. / I will always help you.）。be動詞も助動詞もない文では一般動詞の前（He always goes to school.）に置く",
+    ],
+    buildSteps: 3,
   },
 
   // s241：原級・比較級・最上級を、3人の身長の実例で対応させる
@@ -103,6 +139,14 @@ export const lessonFigsEigoExt07: Record<string, Figure> = {
     ],
     caption:
       '比較の三つの形。Ken is tall.（原級）／Ken is taller than Yuki.（比較級・than が必要）／Ken is the tallest of the three.（最上級・the と of が必要）。Tom は Yuki ほど背が高くないので Tom is not as tall as Yuki. とも言える',
+    steps: [
+      "よこじくは「3人の身長」、たてじくは「身長(cm)」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「Ken」で160（身長(cm)）。",
+      "いちばん小さいのは「Tom」で145。差は15。",
+      "大きい順にならべると Ken → Yuki → Tom。棒の高さを見比べて確かめる。",
+      "比較の三つの形。Ken is tall.（原級）／Ken is taller than Yuki.（比較級・than が必要）／Ken is the tallest of the three.（最上級・the と of が必要）。Tom は Yuki ほど背が高くないので Tom is not as tall as Yuki. とも言える",
+    ],
+    buildSteps: 4,
   },
 
   // s242：語の長さ（音節数）で -er 型か more 型かが決まることを示す
@@ -118,6 +162,13 @@ export const lessonFigsEigoExt07: Record<string, Figure> = {
     ],
     caption:
       '横軸は音節（母音のかたまり）の数。1音節は -er / -est、3音節以上は more / most。2音節は -y で終われば -er 型（easy→easier）、それ以外は more 型（famous→more famous）に分かれる',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は1から3まで、1きざみで目もりがふってある。",
+      "印がついているのは 1音節 tall→taller、2音節 easy→easier / famous→more、3音節以上 beautiful→more。位置を目もりで確かめる。",
+      "横軸は音節（母音のかたまり）の数。1音節は -er / -est、3音節以上は more / most。2音節は -y で終われば -er 型（easy→easier）、それ以外は more 型（famous→more famous）に分かれる",
+    ],
+    buildSteps: 3,
   },
 
   // s249：as 〜 as は「同じくらい」＝二つの棒が同じ高さ
@@ -132,6 +183,13 @@ export const lessonFigsEigoExt07: Record<string, Figure> = {
     ],
     caption:
       '二つが同じ程度のときは as 〜 as を使う。Ken is as tall as Tom.（ケンはトムと同じくらい背が高い）。as と as の間に入るのは必ず原級で、as taller as とはしない',
+    steps: [
+      "よこじくは「2人の身長」、たてじくは「身長(cm)」を表している。まず何と何を比べた図かをつかむ。",
+      "どの棒も同じ高さで、値はすべて155（身長(cm)）。",
+      "差がないことがこの図の要点。等しいことを読み取る。",
+      "二つが同じ程度のときは as 〜 as を使う。Ken is as tall as Tom.（ケンはトムと同じくらい背が高い）。as と as の間に入るのは必ず原級で、as taller as とはしない",
+    ],
+    buildSteps: 3,
   },
 
   // s250：not as 〜 as は「〜ほど…ない」＝as のあとのほうが上
@@ -146,6 +204,14 @@ export const lessonFigsEigoExt07: Record<string, Figure> = {
     ],
     caption:
       'Tom is not as tall as Ken.（トムはケンほど背が高くない）。棒が低いほうが主語になる。上なのは as のあとのケンなので、比較級で書くと Ken is taller than Tom. となる',
+    steps: [
+      "よこじくは「2人の身長」、たてじくは「身長(cm)」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「Ken」で165（身長(cm)）。",
+      "いちばん小さいのは「Tom」で150。差は15。",
+      "2本を見比べて、どちらがどれだけ大きいかをつかむ。",
+      "Tom is not as tall as Ken.（トムはケンほど背が高くない）。棒が低いほうが主語になる。上なのは as のあとのケンなので、比較級で書くと Ken is taller than Tom. となる",
+    ],
+    buildSteps: 4,
   },
 
   // s252：倍数表現は「何倍か」を棒の高さの比で見る
@@ -160,6 +226,14 @@ export const lessonFigsEigoExt07: Record<string, Figure> = {
     ],
     caption:
       'This box is twice as heavy as that one.（この箱はあの箱の2倍の重さだ）。倍数は最初の as の前に置き、as と as の間は原級のまま。twice heavier than とはしない',
+    steps: [
+      "よこじくは「2つの箱の重さ」、たてじくは「重さ(kg)」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「this box」で6（重さ(kg)）。",
+      "いちばん小さいのは「that box」で3。差は3。",
+      "2本を見比べて、どちらがどれだけ大きいかをつかむ。",
+      "This box is twice as heavy as that one.（この箱はあの箱の2倍の重さだ）。倍数は最初の as の前に置き、as と as の間は原級のまま。twice heavier than とはしない",
+    ],
+    buildSteps: 4,
   },
 
   // s254：much は差が大きいときの強調。very は比較級には使えない
@@ -174,6 +248,14 @@ export const lessonFigsEigoExt07: Record<string, Figure> = {
     ],
     caption:
       '差が大きいときは比較級を強めて Ken is much taller than Tom.（ケンはトムよりずっと背が高い）と言う。強調には much・far・a lot を使い、very は使えない。very が強めるのは原級（very tall）',
+    steps: [
+      "よこじくは「2人の身長」、たてじくは「身長(cm)」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「Ken」で180（身長(cm)）。",
+      "いちばん小さいのは「Tom」で150。差は30。",
+      "2本を見比べて、どちらがどれだけ大きいかをつかむ。",
+      "差が大きいときは比較級を強めて Ken is much taller than Tom.（ケンはトムよりずっと背が高い）と言う。強調には much・far・a lot を使い、very は使えない。very が強めるのは原級（very tall）",
+    ],
+    buildSteps: 4,
   },
 
   // s255：比較級 and 比較級は「一定の方向へ変化が進む」ことを表す
@@ -199,6 +281,14 @@ export const lessonFigsEigoExt07: Record<string, Figure> = {
     ],
     caption:
       'グラフのように一定の方向へ変化が進むことを〈比較級＋and＋比較級〉で表す。It is getting hotter and hotter.（だんだん暑くなってきている）。more 型の語では more and more popular のように more だけをくり返す',
+    steps: [
+      "よこじくは「月」、たてじくは「気温(℃)」。点をつないだ線が、どう変わっていくかを表している。",
+      "はじめは（4, 15）、終わりは（8, 31）。",
+      "全体として16だけ増えている。右上がりなら増加、右下がりなら減少と読む。",
+      "かたむきが急なところほど、変わり方が大きい。",
+      "グラフのように一定の方向へ変化が進むことを〈比較級＋and＋比較級〉で表す。It is getting hotter and hotter.（だんだん暑くなってきている）。more 型の語では more and more popular のように more だけをくり返す",
+    ],
+    buildSteps: 4,
   },
 
   // s257：最上級の範囲を示す in と of の使い分け
@@ -214,6 +304,14 @@ export const lessonFigsEigoExt07: Record<string, Figure> = {
     ],
     caption:
       '同じ内容でも範囲の示し方で前置詞が変わる。集団や場所を一つのまとまりとして示すときは in（Ken is the tallest in my class.）、数や仲間の集まりで示すときは of（Ken is the tallest of the three.）',
+    steps: [
+      "よこじくは「my class の3人」、たてじくは「身長(cm)」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「Ken」で162（身長(cm)）。",
+      "いちばん小さいのは「Yuki」で148。差は14。",
+      "大きい順にならべると Ken → Tom → Yuki。棒の高さを見比べて確かめる。",
+      "同じ内容でも範囲の示し方で前置詞が変わる。集団や場所を一つのまとまりとして示すときは in（Ken is the tallest in my class.）、数や仲間の集まりで示すときは of（Ken is the tallest of the three.）",
+    ],
+    buildSteps: 4,
   },
 
   // s258：one of the 最上級＋複数名詞（日本の高い山の実データ）
@@ -229,6 +327,14 @@ export const lessonFigsEigoExt07: Record<string, Figure> = {
     ],
     caption:
       'いちばんは一つだけなので Mt. Fuji is the highest mountain in Japan.。2番目以降を含めて言うときは Mt. Kita is one of the highest mountains in Japan. と、名詞を複数形にする',
+    steps: [
+      "よこじくは「日本の高い山」、たてじくは「標高(m)」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「富士山」で3776（標高(m)）。",
+      "いちばん小さいのは「奥穂高岳」で3190。差は586。",
+      "大きい順にならべると 富士山 → 北岳 → 奥穂高岳。棒の高さを見比べて確かめる。",
+      "いちばんは一つだけなので Mt. Fuji is the highest mountain in Japan.。2番目以降を含めて言うときは Mt. Kita is one of the highest mountains in Japan. と、名詞を複数形にする",
+    ],
+    buildSteps: 4,
   },
 
   // s260：総合演習。タイムは「数値が小さいほど速い」という読みかえに注意
@@ -244,5 +350,13 @@ export const lessonFigsEigoExt07: Record<string, Figure> = {
     ],
     caption:
       'タイムは数値が小さいほど速い。棒がいちばん低いケンが Ken runs the fastest of the three.。サムについては Sam does not run as fast as Ken.（サムはケンほど速く走らない）とも言える。数値の大小と速さの大小が逆になる点が読み取りの落とし穴',
+    steps: [
+      "よこじくは「50m走のタイム」、たてじくは「タイム(秒)」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「Sam」で9（タイム(秒)）。",
+      "いちばん小さいのは「Ken」で8。差は1。",
+      "大きい順にならべると Sam → Tom → Ken。棒の高さを見比べて確かめる。",
+      "タイムは数値が小さいほど速い。棒がいちばん低いケンが Ken runs the fastest of the three.。サムについては Sam does not run as fast as Ken.（サムはケンほど速く走らない）とも言える。数値の大小と速さの大小が逆になる点が読み取りの落とし穴",
+    ],
+    buildSteps: 4,
   },
 };

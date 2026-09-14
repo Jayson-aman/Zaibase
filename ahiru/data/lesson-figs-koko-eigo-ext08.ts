@@ -15,6 +15,14 @@ export const lessonFigsKokoEigoExt08: Record<string, Figure> = {
       { label: '形容詞的用法', value: 20, color: '#16A34A' },
     ],
     caption: '中学教科書・高校入試の英文に現れる不定詞のおおよその内訳。名詞的用法（want to〜 など動詞の目的語）が最も多く、次いで副詞的用法（〜するために・〜して）。形容詞的用法（something to eat など）は比較的少ないが、語順を問う問題として出やすい',
+    steps: [
+      "円全体を100%として、それぞれが全体のどれくらいかを表した円グラフ。",
+      "いちばん大きいのは「名詞的用法」で、全体のおよそ45%。",
+      "内わけは 名詞的用法 45%、副詞的用法 35%、形容詞的用法 20%。",
+      "割合は「部分 ÷ 全体 × 100」で求める。全部たすと100%になることを確かめる。",
+      "中学教科書・高校入試の英文に現れる不定詞のおおよその内訳。名詞的用法（want to〜 など動詞の目的語）が最も多く、次いで副詞的用法（〜するために・〜して）。形容詞的用法（something to eat など）は比較的少ないが、語順を問う問題として出やすい",
+    ],
+    buildSteps: 4,
   },
 
   // s257：主語になる不定詞の語順（動詞は必ず単数扱い）
@@ -43,6 +51,13 @@ export const lessonFigsKokoEigoExt08: Record<string, Figure> = {
     sideLabels: ['①1語の修飾語（cold）', '②名詞（water）', '③2語以上のかたまり（to drink）', '④＝cold water to drink'],
     fill: true,
     caption: '英語の修飾の位置。名詞を説明する語は、1語なら名詞の前（①）、2語以上のかたまりなら名詞の後ろ（③）に置く。to＋原形は必ず2語以上なので、不定詞の形容詞的用法は例外なく名詞の後ろに来る。分詞（a sleeping baby ／ a baby sleeping in the bed）も同じ原則で位置が決まる',
+    steps: [
+      "頂点を順に A・B・C・D と結んだ四角形。まず形と頂点の名前をおさえる。",
+      "辺に書かれている長さは ①1語の修飾語（cold）、②名詞（water）、③2語以上のかたまり（to drink）、④＝cold water to drink。どの辺のことかを図で確かめる。",
+      "四角形の内角の和は360°。角度を求めるときの手がかりになる。",
+      "英語の修飾の位置。名詞を説明する語は、1語なら名詞の前（①）、2語以上のかたまりなら名詞の後ろ（③）に置く。to＋原形は必ず2語以上なので、不定詞の形容詞的用法は例外なく名詞の後ろに来る。分詞（a sleeping baby ／ a baby sleeping in the bed）も同じ原則で位置が決まる",
+    ],
+    buildSteps: 3,
   },
 
   // s261：-thing ＋ 形容詞 ＋ to不定詞 の語順
@@ -194,6 +209,14 @@ export const lessonFigsKokoEigoExt08: Record<string, Figure> = {
       { label: '両方とれる 5語', value: 5, color: '#16A34A' },
     ],
     caption: '中学で覚える20語の内訳。動名詞のみ8語＝enjoy・finish・stop・mind・practice・keep・give up・avoid／不定詞のみ7語＝want・hope・decide・promise・wish・expect・plan／両方5語＝like・love・begin・start・continue。動名詞のみが最大の40%を占める',
+    steps: [
+      "円全体を100%として、それぞれが全体のどれくらいかを表した円グラフ。",
+      "いちばん大きいのは「動名詞のみ 8語」で、全体のおよそ40%。",
+      "内わけは 動名詞のみ 8語 40%、不定詞のみ 7語 35%、両方とれる 5語 25%。",
+      "割合は「部分 ÷ 全体 × 100」で求める。全部たすと100%になることを確かめる。",
+      "中学で覚える20語の内訳。動名詞のみ8語＝enjoy・finish・stop・mind・practice・keep・give up・avoid／不定詞のみ7語＝want・hope・decide・promise・wish・expect・plan／両方5語＝like・love・begin・start・continue。動名詞のみが最大の40%を占める",
+    ],
+    buildSteps: 4,
   },
 
   // s290：to不定詞（これから）と動名詞（すでに）の対比
@@ -224,6 +247,13 @@ export const lessonFigsKokoEigoExt08: Record<string, Figure> = {
     sideLabels: ['①冠詞・所有格（a / the / my）', '②分詞1語（sleeping・broken）', '③名詞（baby・window）', '④＝a sleeping baby'],
     fill: true,
     caption: '分詞が1語だけのときの語順。ふつうの形容詞と同じく②のように名詞の前に置く。冠詞は分詞よりさらに前（①）。語句が付いて2語以上になった瞬間、かたまりは名詞の後ろに回る（a baby sleeping in the bed）',
+    steps: [
+      "頂点を順に A・B・C・D と結んだ四角形。まず形と頂点の名前をおさえる。",
+      "辺に書かれている長さは ①冠詞・所有格（a / the / my）、②分詞1語（sleeping・broken）、③名詞（baby・window）、④＝a sleeping baby。どの辺のことかを図で確かめる。",
+      "四角形の内角の和は360°。角度を求めるときの手がかりになる。",
+      "分詞が1語だけのときの語順。ふつうの形容詞と同じく②のように名詞の前に置く。冠詞は分詞よりさらに前（①）。語句が付いて2語以上になった瞬間、かたまりは名詞の後ろに回る（a baby sleeping in the bed）",
+    ],
+    buildSteps: 3,
   },
 
   // s294：分詞が2語以上なら名詞の後ろ
