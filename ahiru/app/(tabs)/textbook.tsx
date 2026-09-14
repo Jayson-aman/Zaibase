@@ -178,20 +178,15 @@ export default function TextbookScreen() {
     [isPro, unlockedUnitIds, handleLessonPress],
   );
 
-  if (loading) {
-    return (
-      <SafeAreaView style={styles.container}>
-        <View style={styles.center}>
-          <Text style={styles.loadingText}>読み込み中...</Text>
-        </View>
-      </SafeAreaView>
-    );
-  }
-
   const showEmpty = selectedSubject != null && lessons.length === 0;
   const showList = selectedSubject != null && lessons.length > 0;
 
-  const listHeader = (
+  // ヘッダーを毎回作りなおすと、科目タイルごと描き直される。
+  // 中身が変わる条件だけに絞ってメモ化する。
+  // ※ 早期returnより前に置くこと。後ろに置くと、読み込み中とそうでないときで
+  //   フックの呼び出し数が変わり、Reactが状態を取りちがえる。
+  const listHeader = useMemo(
+    () => (
     <View>
       {/* Header */}
       <View style={styles.header}>
@@ -271,7 +266,19 @@ export default function TextbookScreen() {
         </View>
       )}
     </View>
+    ),
+    [isPro, examType, selectedSubject, subjectCounts, showEmpty],
   );
+
+  if (loading) {
+    return (
+      <SafeAreaView style={styles.container}>
+        <View style={styles.center}>
+          <Text style={styles.loadingText}>読み込み中...</Text>
+        </View>
+      </SafeAreaView>
+    );
+  }
 
   return (
     <SafeAreaView style={styles.container}>

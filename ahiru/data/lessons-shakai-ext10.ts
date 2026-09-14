@@ -397,7 +397,7 @@ export const shakaiExt10Lessons: Lesson[] = [
     subject: 'shakai',
     examType: 'chugaku',
     order: 847,
-    title: '日本国憲法の三大原則',
+    title: '日本国憲法の三大原則と天皇の地位',
     description: '国民主権・基本的人権の尊重・平和主義と、大日本帝国憲法との違い',
     intro: '「この国で主権をもつのはだれですか」と聞かれたら、みなさんは何と答えますか。大日本帝国憲法では天皇、日本国憲法では国民です。たった一語のちがいに見えて、戦争や人権の考え方まで大きく変わりました。その違いから三大原則を見ていきます。',
     studyPeriod: '小6後半・直前',

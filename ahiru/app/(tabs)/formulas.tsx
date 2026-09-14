@@ -271,6 +271,48 @@ export default function FormulasScreen() {
   const MAX_IMAGES_WITHOUT_VIRTUALIZATION = 25;
   const virtualize = shownImageCount > MAX_IMAGES_WITHOUT_VIRTUALIZATION;
 
+  // renderItem を毎回作りなおすと、FlatList が全セルを描き直す。
+  // FormulaRow 自体はメモ化してあるが、見出し側は素通りしてしまうので
+  // ここでもメモ化しておく。
+  const renderRow = React.useCallback(
+    ({ item: row }: { item: Row }) =>
+      row.kind === 'header' ? (
+        <View style={styles.sectionHeader}>
+          <View style={styles.sectionTitleRow}>
+            <Text style={[styles.sectionTitle, { color: subjectInfo.color }]}>{row.title}</Text>
+            {row.period != null && (
+              <View style={styles.sectionPeriodChip}>
+                <Text style={styles.sectionPeriodChipText}>📅 {row.period}</Text>
+              </View>
+            )}
+          </View>
+          {row.intro != null && <Text style={styles.sectionIntro}>{row.intro}</Text>}
+        </View>
+      ) : (
+        <FormulaRow
+          item={row.item}
+          accent={subjectInfo.color}
+          bypassLock={bypassLock}
+          isUnlocked={unlockedIds.has(row.item.label)}
+          priceLabel={priceLabel}
+          productReady={productReady}
+          purchasing={purchasingFigureId === row.item.label}
+          onUnlock={handleUnlock}
+          imageSize={imageSize}
+        />
+      ),
+    [
+      subjectInfo.color,
+      bypassLock,
+      unlockedIds,
+      priceLabel,
+      productReady,
+      purchasingFigureId,
+      handleUnlock,
+      imageSize,
+    ],
+  );
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={[styles.header, { backgroundColor: subjectInfo.color }]}>
@@ -345,33 +387,7 @@ export default function FormulasScreen() {
         // 戻ってきたときに一瞬空白になる。理科・社会の点滅の原因なので使わない。
         removeClippedSubviews={false}
         ListFooterComponent={LIST_FOOTER}
-        renderItem={({ item: row }) =>
-          row.kind === 'header' ? (
-            <View style={styles.sectionHeader}>
-              <View style={styles.sectionTitleRow}>
-                <Text style={[styles.sectionTitle, { color: subjectInfo.color }]}>{row.title}</Text>
-                {row.period != null && (
-                  <View style={styles.sectionPeriodChip}>
-                    <Text style={styles.sectionPeriodChipText}>📅 {row.period}</Text>
-                  </View>
-                )}
-              </View>
-              {row.intro != null && <Text style={styles.sectionIntro}>{row.intro}</Text>}
-            </View>
-          ) : (
-            <FormulaRow
-              item={row.item}
-              accent={subjectInfo.color}
-              bypassLock={bypassLock}
-              isUnlocked={unlockedIds.has(row.item.label)}
-              priceLabel={priceLabel}
-              productReady={productReady}
-              purchasing={purchasingFigureId === row.item.label}
-              onUnlock={handleUnlock}
-              imageSize={imageSize}
-            />
-          )
-        }
+        renderItem={renderRow}
       />
     </SafeAreaView>
   );

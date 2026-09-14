@@ -42,7 +42,8 @@
     "web": "expo start --web",
     "generate:sitemap": "node scripts/generate-sitemap.js",
     "generate:history-images": "node scripts/generate-history-images.mjs",
-    "generate:history-images:pro": "node scripts/generate-history-images.mjs --model pro"
+    "generate:history-images:pro": "node scripts/generate-history-images.mjs --model pro",
+    "audit": "bash scripts/audit.sh"
   },
   "private": true
 }
