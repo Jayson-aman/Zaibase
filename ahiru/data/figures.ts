@@ -47,6 +47,16 @@ export type PolyFigure = {
    * indicesはpointsの頂点indexを結んで塗る部分図形（3つ以上）。colorは省略時パレットを順に使う。
    */
   regions?: { indices: number[]; color?: string }[];
+  /**
+   * 図の中に描く円（points と同じ座標系。レンダラーが points ごと自動フィットする）。
+   * 2円の共通接線のように「円＋補助三角形」を1枚で見せたいときに使う。
+   */
+  circles?: { x: number; y: number; r: number; label?: string }[];
+  /**
+   * 頂点を結ぶ辺とは別に引く補助線（points と同じ座標系）。
+   * 接線・半径など、多角形の辺ではない線分を足すときに使う。
+   */
+  segments?: { from: Pt; to: Pt; label?: string; dashed?: boolean }[];
   caption?: string;
   /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
   steps?: string[];

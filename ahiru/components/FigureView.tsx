@@ -273,10 +273,24 @@ function centroid(pts: { x: number; y: number }[]) {
 function PolygonFig({ fig }: { fig: PolyFigure }) {
   const pad = 34;
   const area: Area = { x0: pad, y0: pad, w: VBW - pad * 2, h: VBH - pad * 2 };
-  const map = fitPoints(fig.points, area);
+  // 円・補助線も入る大きさに収める（縮尺は縦横そろっているので円は円のまま描かれる）
+  const bounds: Pt[] = [...fig.points];
+  fig.circles?.forEach((cc) => {
+    bounds.push({ x: cc.x - cc.r, y: cc.y }, { x: cc.x + cc.r, y: cc.y }, { x: cc.x, y: cc.y - cc.r }, { x: cc.x, y: cc.y + cc.r });
+  });
+  fig.segments?.forEach((sg) => bounds.push(sg.from, sg.to));
+  const map = fitPoints(bounds, area);
   const P = fig.points.map(map);
+  const scale = map({ x: 1, y: 0 }).x - map({ x: 0, y: 0 }).x;
   const c = centroid(P);
   const els: React.ReactNode[] = [];
+
+  // 円（本体より先に描いて下地にする）
+  fig.circles?.forEach((cc, k) => {
+    const m = map({ x: cc.x, y: cc.y });
+    els.push(<SvgCircle key={`cc${k}`} cx={m.x} cy={m.y} r={Math.abs(cc.r * scale)} fill="none" stroke={AXIS} strokeWidth={1.5} />);
+    if (cc.label) els.push(<SvgText key={`ccl${k}`} x={m.x} y={m.y - Math.abs(cc.r * scale) - 5} fontSize={11} fill={INK} textAnchor="middle" fontWeight="bold">{cc.label}</SvgText>);
+  });
 
   // 部分図形の色分け塗りつぶし（本体の下に敷く。参考書の「比べている三角形を色で塗る」表現）
   const REGION_PALETTE = ['#FEF3C7', '#DBEAFE', '#FCE7F3', '#DCFCE7', '#EDE9FE'];
@@ -302,6 +316,25 @@ function PolygonFig({ fig }: { fig: PolyFigure }) {
       strokeLinejoin="round"
     />,
   );
+
+  // 補助線（多角形の辺ではない線分）
+  fig.segments?.forEach((sg, k) => {
+    const a = map(sg.from);
+    const b = map(sg.to);
+    els.push(
+      <Line
+        key={`xs${k}`}
+        x1={a.x}
+        y1={a.y}
+        x2={b.x}
+        y2={b.y}
+        stroke={ACCENT}
+        strokeWidth={1.6}
+        strokeDasharray={sg.dashed ? '4 3' : undefined}
+      />,
+    );
+    if (sg.label) els.push(<SvgText key={`xsl${k}`} x={(a.x + b.x) / 2 + 6} y={(a.y + b.y) / 2 - 4} fontSize={11} fill={INK}>{sg.label}</SvgText>);
+  });
 
   // 対角線
   fig.diagonals?.forEach(([i, j], k) => {

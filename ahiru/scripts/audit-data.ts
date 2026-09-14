@@ -203,9 +203,13 @@ check('公式集→教科書リンクの受験種別ちがい', relMismatch);
 // 「要素を足す」のような図と無関係な文まで拾うと、正当なものばかりが
 // 並んで検査の意味がなくなる（実際にそれで6件すべて誤検出になった）。
 // 対象は polygon の対角線だけ。ここは PolygonFig の描画順が
-// 「本体 → 対角線 → 高さ → 辺ラベル → 頂点ラベル」と分かっているので、
-// 対角線が何枚目のスライドで現れるかを正確に計算できる。
+// 「円 → 部分塗り → 本体 → 補助線 → 対角線 → 高さ → 辺ラベル → 頂点ラベル」と
+// 分かっているので、対角線が何枚目のスライドで現れるかを計算できる。
 // （他の図形は並び順を追えていないので見ていない。検査の範囲はここまで）
+// 直角マーク・等辺ティックは部品数に入れていない。入れないと nParts が
+// 少なめに出て「まだ描かれていない」寄りに判定されるので、誤検出は増えない。
+// 逆に、対角線より前に来る円・補助線・部分塗りは必ず数える（数え落とすと
+// 対角線の位置が早すぎることになり、正当な文を誤って拾ってしまう）。
 const DIAG = /対角線[^。]{0,12}引く。?$/;
 const stepLate: string[] = [];
 for (const l of L)
@@ -213,16 +217,21 @@ for (const l of L)
     const fig = (s.figureId ? getLessonFigure(s.figureId) : null) as {
       kind?: string; steps?: string[]; buildSteps?: number;
       points?: unknown[]; diagonals?: unknown[]; heights?: unknown[]; sideLabels?: unknown[];
+      circles?: { label?: string }[]; segments?: { label?: string }[]; regions?: unknown[];
     } | null;
     if (fig?.kind !== 'polygon' || !fig.steps || !(fig.diagonals?.length)) continue;
     const st = fig.steps;
     const build = fig.buildSteps ?? Math.max(1, st.length - 1);
+    const withLabel = (a: { label?: string }[] | undefined) =>
+      (a ?? []).reduce((n, x) => n + (x.label ? 2 : 1), 0);
+    // 対角線より前に描かれる部品の数
+    const before = withLabel(fig.circles) + (fig.regions?.length ?? 0) + 1 + withLabel(fig.segments);
     // 部品の総数と、対角線が何番目か（0始まり）
     const nParts =
-      1 + fig.diagonals.length + (fig.heights?.length ?? 0) * 2 +
+      before + fig.diagonals.length + (fig.heights?.length ?? 0) * 2 +
       (fig.sideLabels ?? []).filter(Boolean).length +
       (fig.points ?? []).filter((p) => (p as { label?: string }).label).length;
-    const diagIdx = 1; // 本体のすぐあと
+    const diagIdx = before; // 本体・補助線のすぐあと
     // その対角線が最初に出そろうスライド（FigureView の opacityOf と同じ式）
     let appearAt = st.length;
     for (let sl = 0; sl < st.length; sl++) {
@@ -235,6 +244,37 @@ for (const l of L)
     });
   }
 info('図解の説明が、すでに描かれた線を「引く」と言っている（要目視）', stepLate, 4);
+
+// 一括置換を失敗すると、別の文がまるごと文の途中に差しこまれて本文が壊れる。
+// （「二つの円の位置関係」で、③の一文が④と⑤の途中に入りこみ、
+//   「④d= … r₁−r₂はr₁−r₂／<d<r₁+r₂のとき:2つの円は2点で交わる。…は(r₁≠r₂)のとき:」
+//   という読めない文になっていた。tsc も expo export も通ってしまう）
+// 文の切れ目に関係なく「同じ本文の中に40字以上そっくり同じ並びが2回出る」を見る。
+// 文単位の突き合わせでは、差しこまれた側の前後がくっついて別の文になるため
+// 捕まえられなかった（実際に試して0件だった）。
+// 正当な繰り返し（例文の再掲・同じ課題文を二度出す国語の演習）も拾うので ℹ 扱い。
+// 件数が増えたときだけ中身を見ればよい。
+const KANA_ANY = /[ぁ-んァ-ヶ一-龥]/;
+const SPLICE_W = 40;
+const spliced: string[] = [];
+for (const l of L)
+  for (const s of l.sections ?? []) {
+    const b = String(s.body ?? '').replace(/\s+/g, ' ');
+    if (b.length < SPLICE_W * 2) continue;
+    const at = new Map<string, number>();
+    for (let i = 0; i + SPLICE_W <= b.length; i++) {
+      const w = b.slice(i, i + SPLICE_W);
+      if (!KANA_ANY.test(w)) continue;
+      if (/^[+\-|＋－｜=＝*・…\s]+$/.test(w)) continue;
+      const prev = at.get(w);
+      if (prev === undefined) at.set(w, i);
+      else if (i - prev >= SPLICE_W) {
+        spliced.push(`${l.id} / ${s.heading ?? ''}：「${w.slice(0, 30)}…」が本文内で2回以上`);
+        i = b.length;
+      }
+    }
+  }
+info('同じ本文の中で40字以上がそっくり繰り返されている（要目視）', spliced, 4);
 
 // 公式集の一問一答そのものの品質。
 // 「答えが自分自身を打ち消している」「答えが説明文になっている」といった、
