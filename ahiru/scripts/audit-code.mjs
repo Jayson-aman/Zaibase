@@ -116,6 +116,7 @@ report('早期returnより後ろのフック', hookAfterReturn, 'フックは早
 console.log('\n=== A. 失敗 ===');
 const dataDir = path.join(ROOT, 'data');
 const dataFiles = fs.readdirSync(dataDir).filter((f) => f.endsWith('.ts'));
+
 const unwired = [];
 for (const f of dataFiles.filter((f) => /^lessons-.*ext\d+\.ts$/.test(f))) {
   const base = f.slice(0, -3);

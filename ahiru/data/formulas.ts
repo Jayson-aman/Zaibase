@@ -14,6 +14,7 @@ import { kokoShakaiFormulas } from './formulas-koko-shakai';
 import { kokugoFormulas } from './formulas-kokugo';
 import { kokoKokugoFormulas } from './formulas-koko-kokugo';
 import { eigoFormulas } from './formulas-eigo';
+import { eigoKokoFormulas } from './formulas-eigo-koko';
 
 export type Subject = '算数' | '国語' | '理科' | '社会' | '英語';
 
@@ -33,7 +34,7 @@ export const FORMULAS: Record<Subject, FormulaSection[]> = {
   国語: [...kokugoFormulas, ...kokoKokugoFormulas],
   理科: [...rikaFormulas, ...rikaButsuriKagakuFormulas, ...kokoRikaFormulas],
   社会: [...shakaiFormulas, ...shakaiTsuikaFormulas, ...kokoShakaiFormulas],
-  英語: eigoFormulas,
+  英語: [...eigoFormulas, ...eigoKokoFormulas],
 };
 
 export type { FormulaSection, FormulaItem, FormulaExample, FormulaQuizItem } from './formulas-types';
