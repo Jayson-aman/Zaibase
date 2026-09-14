@@ -13,6 +13,7 @@ import {
   Platform,
   useWindowDimensions,
 } from 'react-native';
+import { useRouter } from 'expo-router';
 import { FORMULAS, SUBJECTS, type Subject, type FormulaItem } from '../../data/formulas';
 import { STUDY_PERIOD_ORDER, type StudyPeriod } from '../../data/formulas-types';
 import { useExamType, examTypeLabel, type ExamType } from '../../store/examType';
@@ -190,6 +191,7 @@ function subjectLabel(key: Subject, examType: ExamType): string {
 }
 
 export default function FormulasScreen() {
+  const router = useRouter();
   const [subject, setSubject] = useState<Subject>('算数');
   // 図解画像の一辺。画面幅から1回だけ決める。行ごとに測り直すと、
   // スクロールで行が外れて戻るたびに測り直しが走り、画像が点滅する。
@@ -266,7 +268,14 @@ export default function FormulasScreen() {
 
   // セクション見出しと項目を1本のリストにならし、FlatListで仮想化できるようにする
   type Row =
-    | { kind: 'header'; key: string; title: string; intro?: string; period?: StudyPeriod }
+    | {
+        kind: 'header';
+        key: string;
+        title: string;
+        intro?: string;
+        period?: StudyPeriod;
+        relatedLessons?: { id: string; label: string }[];
+      }
     | { kind: 'item'; key: string; item: (typeof sections)[number]['items'][number] };
   // いま表示するぶんに図解画像（PNG）が何枚あるか。学年でしぼると減るので、
   // 全教科まとめてではなく、しぼったあとの実数で数える。
@@ -288,6 +297,7 @@ export default function FormulasScreen() {
         title: section.title,
         intro: section.intro,
         period: section.studyPeriod,
+        relatedLessons: section.relatedLessons,
       });
       section.items.forEach((item, ii) => {
         out.push({ kind: 'item', key: `i${si}_${ii}`, item });
@@ -327,6 +337,18 @@ export default function FormulasScreen() {
             )}
           </View>
           {row.intro != null && <Text style={styles.sectionIntro}>{row.intro}</Text>}
+          {row.relatedLessons?.map((rl) => (
+            <TouchableOpacity
+              key={rl.id}
+              style={[styles.relatedBtn, { borderColor: subjectInfo.color }]}
+              onPress={() => router.push(`/lesson/${rl.id}` as any)}
+              activeOpacity={0.8}
+            >
+              <Text style={[styles.relatedBtnText, { color: subjectInfo.color }]}>
+                {`📘 ${rl.label} →`}
+              </Text>
+            </TouchableOpacity>
+          ))}
         </View>
       ) : (
         <FormulaRow
@@ -342,6 +364,7 @@ export default function FormulasScreen() {
         />
       ),
     [
+      router,
       subjectInfo.color,
       bypassLock,
       unlockedIds,
@@ -534,6 +557,16 @@ const styles = StyleSheet.create({
   },
   periodChipText: { fontSize: 13, fontWeight: '700', color: '#6B5B45' },
   periodChipTextActive: { color: '#FFFFFF' },
+  relatedBtn: {
+    marginTop: 8,
+    alignSelf: 'flex-start',
+    paddingHorizontal: 12,
+    paddingVertical: 7,
+    borderRadius: 999,
+    borderWidth: 1.5,
+    backgroundColor: '#FFFFFF',
+  },
+  relatedBtnText: { fontSize: 13, fontWeight: '700' },
   sectionTitleRow: { flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap', gap: 8 },
   sectionPeriodChip: {
     paddingHorizontal: 8,

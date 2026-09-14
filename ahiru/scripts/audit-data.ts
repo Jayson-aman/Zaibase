@@ -162,6 +162,22 @@ check(
   ),
 );
 
+// 公式集から教科書単元へのリンク。参照切れだと、押しても何も起きない。
+// 受験種別がちがうと、中学受験の生徒を中3の単元に飛ばしてしまう。
+const lessonById = new Map(L.map((l) => [l.id, l]));
+const relBroken: string[] = [];
+const relMismatch: string[] = [];
+for (const { key } of SUBJECTS)
+  for (const sec of FORMULAS[key])
+    for (const rl of sec.relatedLessons ?? []) {
+      const les = lessonById.get(rl.id);
+      if (!les) { relBroken.push(`${key}/${sec.title} → ${rl.id}`); continue; }
+      if ((sec.examType ?? 'chugaku') !== (les.examType ?? 'chugaku'))
+        relMismatch.push(`${key}/${sec.title} → ${rl.id}`);
+    }
+check('公式集→教科書リンクの参照切れ', relBroken);
+check('公式集→教科書リンクの受験種別ちがい', relMismatch);
+
 // ── E. 表示（等幅の箱・記号） ──────────────────────────
 console.log('\n=== E. 表示 ===');
 // LessonRenderer.isArtLine と同じ判定。罫線を含み、小文字2つ以上も日本語も

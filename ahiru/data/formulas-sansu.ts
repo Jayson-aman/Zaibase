@@ -6,6 +6,12 @@ export const sansuFormulas: FormulaSection[] = [
     studyPeriod: '小5前半',
     examType: 'chugaku',
     intro: '図形の広さ（面積）と、かさ（体積）を求める土台となる公式です。どこが底辺・高さ・半径かを正しく見つけることが一番大事です。',
+    relatedLessons: [
+      { id: 'koushiki_c1menseki', label: '平面図形の面積（動く図解つき）' },
+      { id: 'koushiki_c2en', label: '円とおうぎ形（動く図解つき）' },
+      { id: 'koushiki_c3tairyoku1', label: '立体の体積と表面積①（柱）' },
+      { id: 'koushiki_c4tairyoku2', label: '立体の体積と表面積②（錐）' },
+    ],
     items: [
       {
         label: '長方形・正方形の面積',
@@ -1527,6 +1533,9 @@ export const sansuFormulas: FormulaSection[] = [
     studyPeriod: '小4',
     examType: 'chugaku',
     intro: '三角形・多角形の角の和や、平行線の錯角・同位角を使って角度を求めます。内角・外角の関係が定番です。',
+    relatedLessons: [
+      { id: 'koushiki_c5kakudo', label: '角度と多角形（動く図解つき）' },
+    ],
     items: [
       {
         label: '三角形の内角の和',
@@ -1742,6 +1751,9 @@ export const sansuFormulas: FormulaSection[] = [
     studyPeriod: '小6前半',
     examType: 'chugaku',
     intro: '形が同じで大きさだけちがう図形（相似）では、辺の比・面積比・体積比がきれいな関係になります。',
+    relatedLessons: [
+      { id: 'koushiki_c6soji', label: '拡大図・縮図と相似（動く図解つき）' },
+    ],
     items: [
       {
         label: '相似な図形の辺の比',
