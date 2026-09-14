@@ -11,7 +11,6 @@ import {
   ActivityIndicator,
   Alert,
   useWindowDimensions,
-  Platform,
 } from 'react-native';
 import { FORMULAS, SUBJECTS, type Subject, type FormulaItem } from '../../data/formulas';
 import SubjectIcon, { type IconSubject } from '../../components/SubjectIcon';
@@ -268,12 +267,16 @@ export default function FormulasScreen() {
         // 画像を持たない教科（国語・英語など）は項目数も少ないので、
         // 刻まずに一度に描いてしまい、仮想化そのものを避ける。
         // 画像が多い教科（理科・社会）だけは、まとめて展開するとメモリを
-        // 使いすぎるので従来どおり画面に入った分だけ描く（刻み幅は大きめ）。
-        initialNumToRender={heavyImages ? 6 : rows.length}
-        maxToRenderPerBatch={heavyImages ? 6 : 20}
-        windowSize={heavyImages ? 9 : 41}
-        updateCellsBatchingPeriod={100}
-        removeClippedSubviews={heavyImages && Platform.OS === 'android'}
+        // 使いすぎるので画面に入った分だけ描く。ただし刻みが細かいと、
+        // 前後の余裕が足りずスクロール中に空セルが見えて点滅になるため、
+        // メモリが許す範囲で前後を厚めに持たせる。
+        initialNumToRender={heavyImages ? 10 : rows.length}
+        maxToRenderPerBatch={heavyImages ? 10 : 20}
+        windowSize={heavyImages ? 21 : 41}
+        updateCellsBatchingPeriod={50}
+        // removeClippedSubviews は画面外のセルをビュー階層から切り離すので、
+        // 戻ってきたときに一瞬空白になる。理科・社会の点滅の原因なので使わない。
+        removeClippedSubviews={false}
         ListFooterComponent={LIST_FOOTER}
         renderItem={({ item: row }) =>
           row.kind === 'header' ? (
