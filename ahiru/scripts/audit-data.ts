@@ -152,6 +152,24 @@ check(
   Q.filter((q) => explanationText(q).length <= 20).map((q) => `${q.id}(${explanationText(q).length}字)`),
 );
 
+// 中学受験（小学生）の算数・理科に、中学以上でしか習わない内容が出ていないか。
+//
+// 平方根（√）は中学3年で習う。中学受験の算数でも使わない。
+// ところが「1辺8cmの正方形の対角線は8√2cm」のように、小学生には出せない
+// 答えの問題が42問あった。子どもが見る問題文・答えだけでなく、
+// 解説・ヒント・覚え方・ひっかけ注意まで見ないと取りこぼす
+// （実際、解説だけ直しても覚え方の欄に「√の整理」が残っていた）。
+// 2026/9/15に全42問を、√を使わない設問・解き方に書き直して0件にした。
+const SQRT = /√|平方根/;
+const ELEM_FIELDS = ['question', 'answer', 'hint', 'explanation', 'memoryTip', 'pitfall', 'figureDescription'];
+check(
+  '小学生向けの問題に平方根が出ている',
+  Q.filter((q) => (q.examType ?? 'chugaku') === 'chugaku' && !/^j/.test(String(q.grade ?? '')))
+    .filter((q) => q.subject === 'sansu' || q.subject === 'rika')
+    .filter((q) => ELEM_FIELDS.some((k) => SQRT.test(String(q[k] ?? ''))))
+    .map((q) => q.id),
+);
+
 // 「⚡ はやく解くコツ」の参照切れと、いまの本数。
 // コツは問題idで引くので、問題を消したり id を変えたりすると黙って出なくなる。
 check(

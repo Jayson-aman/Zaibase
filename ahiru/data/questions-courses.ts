@@ -72,11 +72,11 @@ export const kankanQuestions: Question[] = [
   {
     id: 'kankan_sansu_09', subject: 'sansu', difficulty: 'advanced',
     course: 'kankan', examType: 'chugaku',
-    question: '下の図で、三角形ABCはAB=AC=10cm、BC=12cmの二等辺三角形。点Dは辺BC上にあり、BD=4cm。ADの長さは何cm？',
+    question: '三角形ABCはAB＝AC＝10cm、BC＝12cmの二等辺三角形です。AからBCに垂直な線AHを下ろすと、BH＝6cm、AH＝8cmになります。点Dは辺BC上にあり、BD＝4cmです。三角形ABDの面積を求めなさい。',
     figureDescription: '頂点Aが上、底辺BCが下にある二等辺三角形ABC。左下がB、右下がC、AB=AC=10cm、BC=12cm。底辺BC上の左寄り（BからみてBD=4cmの位置）に点Dがあり、頂点Aと点Dを結んだ線分ADが引かれている。',
-    answer: '2√17 cm ≈ 8.25cm',
-    hint: 'Aから垂線を下ろしてピタゴラスの定理を2回使う',
-    explanation: '【解法】AからBCに垂線AHを下ろす（二等辺三角形なのでHはBCの中点）。\nBH=BC÷2=6cm\nAH²=AB²−BH²=100−36=64 → AH=8cm\n\nDはBD=4cmの位置なので、HD=BH−BD=6−4=2cm\n\n直角三角形AHDで三平方の定理：\nAD²=AH²+HD²=64+4=68\nAD=√68=2√17≈8.25cm',
+    answer: '16cm²',
+    hint: '三角形ABDの底辺をBDと見ると、高さはAHがそのまま使える。',
+    explanation: '【解説】\n三角形ABDの底辺をBD（4cm）と見る。頂点Aから底辺BCへ下ろした垂直な線がAH（8cm）なので、これがそのまま高さになる。BDもBCの一部なので、高さは変わらない。\n4 × 8 ÷ 2 ＝ 16cm²\n【なぜAH＝8cm？】二等辺三角形なのでHはBCのまん中に来て、BH＝12÷2＝6cm。直角三角形ABHは 6 : 8 : 10（3 : 4 : 5 の2倍）の形になるので、AH＝8cm。\n【こつ】同じ直線の上に底辺をとる三角形は、高さを使い回せる。三角形ABCと三角形ABDは高さが共通なので、面積の比は底辺の比 12 : 4 ＝ 3 : 1 でもある。',
   },
   {
     id: 'kankan_sansu_10', subject: 'sansu', difficulty: 'advanced',

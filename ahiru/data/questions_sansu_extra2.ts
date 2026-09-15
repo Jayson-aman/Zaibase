@@ -648,10 +648,10 @@ export const sansuExtra2: Question[] = [
   {
     id: 'sx2_059',
     subject: 'sansu' as const,
-    question: '1辺10cmの正三角形の面積を求めなさい。（√3≒1.732）',
+    question: '1辺10cmの正三角形があります。この正三角形の高さは8.66cmです。面積を求めなさい。',
     answer: '43.3cm²',
-    hint: '正三角形の面積=一辺²×√3/4',
-    explanation: '【解説】\n正三角形の面積=10²×1.732/4=100×1.732/4=43.3cm²',
+    hint: '底辺×高さ÷2。底辺は1辺の長さ。',
+    explanation: '【解説】\n底辺10cm、高さ8.66cmなので\n10 × 8.66 ÷ 2 ＝ 86.6 ÷ 2 ＝ 43.3cm²\n【こつ】正三角形と聞くと特別な公式がいる気がするが、高さが分かっていれば ふつうの三角形とまったく同じ。「底辺×高さ÷2」だけでよい。\n【関連】正三角形の高さは1辺のおよそ0.866倍。10×0.866＝8.66 で問題文の値と合う。',
     difficulty: 'basic' as const,
     examType: 'chugaku' as const,
     examFrequency: 'medium' as const,
