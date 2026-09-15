@@ -1362,7 +1362,8 @@ export const eigoExtra2: Question[] = [
     question: '「ここで写真を撮ってもいいですか？」を英語にしなさい。',
     answer: 'May I take a picture here?',
     hint: '"May I ...?" で許可を求めます',
-    explanation: '【解説】\n"May I ...?"（～してもよいですか？）は許可を求める丁寧な表現です。"take a picture"（写真を撮る）は重要表現です。',
+    explanation:
+      '【答え】May I take a picture here?\n\n【May I 〜? の意味】「〜してもよろしいですか」。許可を求める、ていねいな言い方である。\n\n【許可を求める言い方の丁寧さ】下にいくほどていねいになる。\n・Can I 〜?（友達や家族に）\n・May I 〜?（初めての人や目上の人に）\n・Could I 〜?／Would it be all right if 〜?（最もていねい）\nCan は「できるか」を聞く形、May は「許されるか」を聞く形なので、May のほうがあらたまった響きになる。\n\n【答え方】\n・Sure. ／ Of course. ／ Certainly.（どうぞ）\n・I am sorry, you cannot.（申し訳ありませんが、できません）\n・No, you may not. は強い断り方なので、ふつうは避ける\n\n【take のいろいろな意味】\n・take a picture（写真を撮る）\n・take a bus（バスに乗る）\n・take a bath（風呂に入る）\n・take a walk（散歩する）\n・It takes ten minutes.（10分かかる）\ntake は「取る」だけでなく、非常に広く使われる。\n\n【may のもう一つの意味】「〜かもしれない」という推量にも使う。It may rain tomorrow.\n\n【例文】May I use your dictionary? — Sure, go ahead.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1384,7 +1385,8 @@ export const eigoExtra2: Question[] = [
     question: '「あなたは学校に遅刻してはいけません」を英語にしなさい。',
     answer: 'You must not be late for school.',
     hint: '"must not" で禁止を表します',
-    explanation: '【解説】\n"must not"（短縮形：mustn\'t）は「～してはいけない」という禁止を表します。"be late for school"（学校に遅刻する）を使います。',
+    explanation:
+      '【答え】You must not be late for school.\n\n【must not の意味】「〜してはいけない」。強い禁止を表す。短縮形は mustn\'t で、t を1つ発音しない（マスント）。\n\n【must not と do not have to】ここが最も問われる。意味が正反対である。\n・You must not go.（行ってはいけない。禁止）\n・You do not have to go.（行かなくてよい。不要）\nmust の否定は「禁止」、have to の否定は「不要」になる。取りちがえると意味が逆になるので、必ず対で覚える。\n\n【be late for 〜】「〜に遅れる」。前置詞は for である。\n・be late for school／for the meeting／for the train\n・be in time for 〜（〜に間に合う）\n\n【禁止のいろいろな言い方】\n・You must not 〜.（強い）\n・Do not 〜.（命令）\n・No parking.（掲示など）\n・You should not 〜.（やわらかい）\n\n【be動詞の原形】must の後なので be になる。must is とは言わない。助動詞の後は必ず原形である。\n\n【例文】\n・You must not run in the hallway.\n・You do not have to come early tomorrow.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1395,7 +1397,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女は今日学校を休んでもいいです」を英語にしなさい。',
     answer: 'She may stay home from school today.',
     hint: '"may" で許可を表します',
-    explanation: '【解説】\n"may"（～してよい）は許可を表します。"stay home from school"（学校を休む）という表現を使います。',
+    explanation:
+      '【答え】She may stay home from school today.\n\n【may の2つの意味】\n・許可 …「〜してもよい」。She may stay home.\n・推量 …「〜かもしれない」。It may rain.\nどちらの意味かは場面で判断する。\n\n【許可を表す語の強さ】\n・may … 許可を与える。ややあらたまった言い方\n・can … 許可を与える。くだけた言い方\n目上の人が目下の人に許可を与えるときに may を使うことが多い。\n\n【stay home】「家にいる」。home は副詞なので at をつけないのがふつうである。\n・stay home（アメリカ英語でふつう）\n・stay at home（イギリス英語で多い）\nどちらも使われる。\n\n【学校を休むときの言い方】\n・be absent from school（欠席する）\n・take a day off（1日休む）\n・stay home from school（学校を休んで家にいる）\n・反対は be present（出席している）\n\n【may の否定】may not。短縮形はふつう使わない。\n・You may not go.（行ってはいけない）\n\n【例文】\n・You may sit down.\n・He may be sick. He looks pale.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -1406,7 +1409,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼はもっと運動すべきです」を英語にしなさい。',
     answer: 'He should exercise more.',
     hint: '"should" でアドバイスを表します',
-    explanation: '【解説】\n"exercise"（運動する）は動詞として使えます。"should exercise more"（もっと運動すべきだ）が正解です。',
+    explanation:
+      '【答え】He should exercise more.\n\n【exercise は動詞にも名詞にもなる】\n・動詞 … exercise every day（毎日運動する）\n・名詞 … do some exercise（運動をする）\n名詞のときは数えられない名詞として扱うことが多い。ただし「練習問題」の意味では数えられる（exercises 1 to 5）。\n\n【more の位置】動詞を説明する副詞なので、動詞の後に置く。\n・He should exercise more.（もっと運動すべきだ）\n・more は much の比較級で、「もっと多く」という意味になる\n\n【should の意味】「〜すべきだ、〜したほうがよい」。助言や提案に使う。must より弱い。\n\n【健康に関わる表現】\n・exercise（運動する）・keep healthy（健康を保つ）・stay up late（夜ふかしする）・get enough sleep（十分な睡眠をとる）・eat well（しっかり食べる）\n・take care of yourself（体に気をつけて）\n\n【助言のいろいろな言い方】\n・You should 〜.\n・Why don\'t you 〜?（〜したらどうですか）\n・How about 〜ing?（〜するのはどうですか）\n・It is a good idea to 〜.\n\n【例文】You should get more sleep. You look tired.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -1428,7 +1432,8 @@ export const eigoExtra2: Question[] = [
     question: '「あなたは英語が話せますか？」を英語にしなさい。',
     answer: 'Can you speak English?',
     hint: '"Can + 主語 + 動詞の原形?" の形です',
-    explanation: '【解説】\n"can" の疑問文は "Can + 主語 + 動詞の原形?" の形です。"Can you speak English?" が正解です。',
+    explanation:
+      '【答え】Can you speak English?\n\n【助動詞の疑問文】助動詞を主語の前に出すだけでよい。do や does は使わない。\n・You can speak English. → Can you speak English?\n・Can、Will、Must、Should、May すべて同じ作り方である\n\n【動詞は原形のまま】Can you speaks 〜? は誤りである。助動詞の後は必ず原形になる。\n\n【答え方】\n・Yes, I can. ／ No, I cannot.\n聞かれた助動詞で答える。Yes, I do. は誤りである。\n\n【Can you speak と Do you speak】ていねいさにちがいがある。\n・Can you speak English? … 能力をたずねる。場面によっては、できないことを前提にしているように響くことがある\n・Do you speak English? … より自然でていねいな聞き方\n実際の会話では Do you speak 〜? のほうがよく使われる。\n\n【Can you 〜? の2つの意味】\n・能力 … Can you swim?（泳げますか）\n・依頼 … Can you help me?（手伝ってくれますか）\n場面で判断する。\n\n【例文】\n・Can you play the guitar? — Yes, a little.\n・Can you open the door? — Sure.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -1439,7 +1444,8 @@ export const eigoExtra2: Question[] = [
     question: '「荷物を持つのを手伝ってもらえますか？」を英語にしなさい。',
     answer: 'Can you help me carry my luggage?',
     hint: '"Can you ...?" で依頼を表します',
-    explanation: '【解説】\n"Can you help me ...?"（～するのを手伝ってもらえますか？）は依頼の表現です。"carry luggage"（荷物を運ぶ）を使います。',
+    explanation:
+      '【答え】Can you help me carry my luggage?\n\n【help ＋ 人 ＋ 動詞の原形】help は、後ろに「人」と「動詞の原形」を続けられる、めずらしい形をとる。\n・help me carry（運ぶのを手伝う）\n・help me to carry も正しいが、to を省くほうがふつうである\n・help ＋ 人 ＋ with ＋ 名詞 の形もある … help me with my homework\n\n【原形が続く動詞】help のほかに、使役動詞と知覚動詞がある。\n・make ＋ 人 ＋ 原形（〜させる）\n・let ＋ 人 ＋ 原形（〜させてやる）\n・have ＋ 人 ＋ 原形（〜してもらう）\n・see／hear ＋ 人 ＋ 原形（〜するのを見る・聞く）\nto のつかない不定詞（原形不定詞）といい、中学の後半で学ぶ大事な形である。\n\n【luggage は数えられない】\n・luggage／baggage（荷物）… 数えられない名詞\n・a luggage とは言わない。数えるときは a piece of luggage、two pieces of luggage\n・bag、suitcase は数えられる\n\n【依頼の言い方】Can you 〜? はくだけた言い方。ていねいにするなら Could you 〜? を使う。\n\n【例文】Can you help me with my homework? — Sure.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -1450,7 +1456,8 @@ export const eigoExtra2: Question[] = [
     question: '「あなたはここに座ってもいいです」を英語にしなさい。',
     answer: 'You may sit here.',
     hint: '"may" で許可を与えます',
-    explanation: '【解説】\n"may"（～してよい）は許可を与える表現です。"sit here"（ここに座る）を使います。',
+    explanation:
+      '【答え】You may sit here.\n\n【may で許可を与える】may は「〜してよい」という許可を表す。目上の人が許可を与えるときに使うことが多く、ややあらたまった響きがある。\n\n【can との使い分け】\n・You can sit here.（くだけた言い方。友達にも使える）\n・You may sit here.（あらたまった言い方）\n意味はほぼ同じだが、may のほうが改まった場面に合う。\n\n【sit と sit down】\n・sit … すわっている状態、またはすわる\n・sit down … すわる動作（立っている人が腰を下ろす）\n・Please sit down.（おすわりください）\n・Please have a seat.（よりていねい）\n\n【here と there】\n・here（ここに）・there（そこに、あそこに）\n・どちらも副詞なので、前置詞をつけない。in here、to there は誤り\n・ただし over here、over there（あちらのほうに）という言い方はある\n\n【教室でよく使う表現】\n・May I come in?（入ってもいいですか）\n・May I go to the restroom?\n・Please stand up. ／ Please sit down.\n\n【例文】You may use this computer.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -1461,7 +1468,8 @@ export const eigoExtra2: Question[] = [
     question: '「私たちは環境を守らなければなりません」を英語にしなさい。',
     answer: 'We must protect the environment.',
     hint: '"must" で義務を表します',
-    explanation: '【解説】\n"protect the environment"（環境を守る）は重要な表現です。"must"（～しなければならない）で義務を表します。',
+    explanation:
+      '【答え】We must protect the environment.\n\n【the environment に the がつく理由】「地球の環境」という、はっきり決まった一つのものを指すので the をつける。\n・the environment（環境）・the earth（地球）・the sun（太陽）・the moon（月）・the world（世界）\n世界に一つしかないもの、だれもが分かっているものには the がつく。\n\n【環境に関わる語】入試の長文でよく出るので、まとめて覚える。\n・environment（環境）・pollution（汚染）・global warming（地球温暖化）・recycle（再利用する）・reduce（減らす）・reuse（再使用する）・waste（ごみ、むだにする）・energy（エネルギー）・natural resources（天然資源）・endangered species（絶滅のおそれのある種）\n・3R … reduce、reuse、recycle\n\n【protect の使い方】\n・protect ＋ 目的語 … 守る\n・protect A from B … A を B から守る。protect children from danger\n\n【must の意味】強い義務。話し手がそうすべきだと考えていることを表す。環境の話題では、この must がよく使われる。\n\n【例文】\n・We must reduce plastic waste.\n・We should protect animals in danger.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -1472,7 +1480,8 @@ export const eigoExtra2: Question[] = [
     question: '「あなたは毎日歯を磨くべきです」を英語にしなさい。',
     answer: 'You should brush your teeth every day.',
     hint: '「歯を磨く」は "brush your teeth" です',
-    explanation: '【解説】\n"brush your teeth"（歯を磨く）は重要表現です。"should"（～すべきだ）でアドバイスを表します。',
+    explanation:
+      '【答え】You should brush your teeth every day.\n\n【your をつける理由】英語では、体の一部を言うとき、だれのものかをはっきりさせる。\n・brush your teeth（正しい）\n・brush the teeth（不自然）\n・wash your hands、wash your face、cut your hair\n日本語では「歯をみがく」と言えるが、英語では「あなたの歯」と所有を示すのがふつうである。\n\n【teeth は tooth の複数形】不規則な複数形である。\n・tooth → teeth、foot → feet、goose → geese\n・man → men、woman → women、child → children、mouse → mice\n歯は何本もあるので、teeth と複数形にする。\n\n【every day のつづり】2語に分けて書く。everyday（1語）は「毎日の」という形容詞である。\n\n【生活習慣に関わる表現】\n・brush your teeth（歯をみがく）・wash your face（顔を洗う）・take a bath（風呂に入る）・take a shower（シャワーを浴びる）・change your clothes（着がえる）・make your bed（ベッドを整える）\n\n【should の意味】「〜したほうがよい」。助言に使う。\n\n【例文】You should wash your hands before eating.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -1484,7 +1493,8 @@ export const eigoExtra2: Question[] = [
     question: '「私の兄は私より背が高いです」を英語にしなさい。',
     answer: 'My brother is taller than me.',
     hint: '比較級は形容詞に "-er" をつけ、"than" を続けます',
-    explanation: '【解説】\n比較級は形容詞・副詞に "-er" をつけ、"than"（～より）を続けます。"tall" → "taller than"。',
+    explanation:
+      '【答え】My brother is taller than me.\n\n【比較級の作り方】短い形容詞には er をつける。\n・tall → taller、long → longer、old → older、young → younger、fast → faster\n・e で終わる語 … r だけ。large → larger、nice → nicer\n・子音と y で終わる語 … y を i に変えて er。easy → easier、happy → happier、busy → busier\n・短い母音と子音で終わる語 … 子音を重ねて er。big → bigger、hot → hotter、thin → thinner\nこの決まりは、ing のつけ方や過去形の作り方とよく似ている。\n\n【than の後の形】\n・than me（くだけた言い方。会話ではふつう）\n・than I am（かたい言い方。正式にはこちら）\nどちらも使われるが、学校のテストでは than I am の形が求められることもある。\n\n【不規則に変化するもの】\n・good／well → better → best\n・bad → worse → worst\n・many／much → more → most\n・little → less → least\nこの4組は特別なので必ず覚える。\n\n【例文】\n・He is taller than his father.\n・This book is more interesting than that one.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -1495,7 +1505,8 @@ export const eigoExtra2: Question[] = [
     question: '「この問題はあの問題より難しいです」を英語にしなさい。',
     answer: 'This question is more difficult than that one.',
     hint: '長い形容詞の比較級は "more" を前に置きます',
-    explanation: '【解説】\n音節の多い形容詞（3音節以上や一部の2音節語）の比較級は "more + 形容詞" の形にします。"difficult" → "more difficult"。',
+    explanation:
+      '【答え】This question is more difficult than that one.\n\n【more を使う形容詞】音節の多い語（3音節以上、および一部の2音節語）は er をつけず、前に more を置く。\n・difficult → more difficult\n・beautiful → more beautiful\n・important → more important\n・interesting → more interesting\n・popular → more popular\n・expensive → more expensive\n・careful → more careful\nmore difficulter のように、両方つけてはいけない。これは最も多いまちがいである。\n\n【見分け方のめやす】\n・1音節の語 … er（tall → taller）\n・ly で終わる副詞 … more（slowly → more slowly）\n・ful、ous、ing、ed、ive で終わる語 … more\n・2音節で y で終わる語 … er（easy → easier、happy → happier）\n\n【one の使い方】前に出た名詞のくり返しを避けるために使う。\n・that one ＝ that question\n・a red one、the big one\n同じ語をくり返さない工夫で、英語ではよく使われる。\n\n【例文】\n・Math is more difficult than English for me.\n・This bag is more expensive than that one.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -1517,7 +1528,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女はクラスで一番人気があります」を英語にしなさい。',
     answer: 'She is the most popular in her class.',
     hint: '長い形容詞の最上級は "the most + 形容詞" です',
-    explanation: '【解説】\n音節の多い形容詞の最上級は "the most + 形容詞" の形です。"popular" → "the most popular"。',
+    explanation:
+      '【答え】She is the most popular in her class.\n\n【最上級の作り方】\n・短い語 … the ＋ est。tall → the tallest\n・長い語 … the most ＋ 形容詞。popular → the most popular\n比較級で more を使う語は、最上級では most を使う。組になっている。\n\n【the を忘れない】最上級には the をつける。「いちばん」は1つに決まるので、特定するための the が必要になる。\n・the most popular（正しい）\n・most popular（誤り）\n\n【in と of の使い分け】ここが必ず問われる。\n・in ＋ 場所・団体 … in her class、in Japan、in the world、in my family\n・of ＋ 複数のもの … of the three、of all the students、of us all\nあとに続くのが場所や集団なら in、数や複数のものなら of と覚える。\n\n【副詞の最上級】副詞のときは the を省くこともある。\n・He runs (the) fastest in his class.\n形容詞のときは the が必要である。\n\n【比較の3つの形】\n・原級 … as 〜 as（同じくらい）\n・比較級 … 〜er than／more 〜 than（より）\n・最上級 … the 〜est／the most 〜（いちばん）\n\n【例文】This is the most beautiful place in Japan.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1528,7 +1540,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は彼と同じくらい速く走れます」を英語にしなさい。',
     answer: 'I can run as fast as him.',
     hint: '"as + 形容詞/副詞 + as" で同等比較を表します',
-    explanation: '【解説】\n"as ... as"（～と同じくらい）は同等比較を表します。"I can run as fast as him." が正解です。',
+    explanation:
+      '【答え】I can run as fast as him.\n\n【as 〜 as の形】2つの as の間には、形容詞や副詞のもとの形（原級）を入れる。\n・as fast as（正しい）\n・as faster as（誤り）\n比較級にしないことが最も大事な点である。\n\n【否定の形】\n・not as 〜 as … 〜ほど…ではない\n・I cannot run as fast as him.（彼ほど速く走れない）\n・not so 〜 as という形もある\n否定にすると「〜ほどではない」という意味になり、比較級と同じ内容を表せる。\n・He is not as tall as I am. ＝ I am taller than he is.\nこの書きかえは試験でよく出る。\n\n【as 〜 as を使った表現】\n・as soon as possible（できるだけ早く）\n・as much as you like（好きなだけ）\n・as soon as 〜（〜するとすぐに）\n\n【than／as の後の形】\n・as him（くだけた言い方）\n・as he is（正式な言い方）\nどちらも使われる。\n\n【倍数を表す】\n・twice as large as（2倍の大きさ）\n・three times as long as（3倍の長さ）\n数を as の前に置く。\n\n【例文】This box is as heavy as that one.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1539,7 +1552,8 @@ export const eigoExtra2: Question[] = [
     question: '「このケーキはあのケーキよりおいしいです」を英語にしなさい。',
     answer: 'This cake is more delicious than that one.',
     hint: '"delicious" は長い形容詞なので "more" を使います',
-    explanation: '【解説】\n"delicious"（おいしい）は3音節の形容詞なので "more delicious" と比較級を作ります。',
+    explanation:
+      '【答え】This cake is more delicious than that one.\n\n【delicious は more を使う】3音節の長い語なので、er ではなく more をつける。deliciouser とは言わない。\n\n【delicious の使い方の注意】delicious はそれ自体で「とてもおいしい」という強い意味を持つ。\n・very delicious … 不自然とされることが多い\n・really delicious は使える\n同じように、それ自体が強い意味を持つ語には very をつけにくい。\n・perfect（完全な）・excellent（すばらしい）・huge（巨大な）・freezing（凍えるような）\nこれらには very ではなく absolutely、really を使う。\n\n【おいしさを表す語】\n・delicious（とてもおいしい）・tasty（味がよい）・good（おいしい）・sweet（あまい）・sour（すっぱい）・bitter（にがい）・salty（しょっぱい）・spicy（からい）\n・It tastes good.（おいしい味がする）\n\n【one の使い方】that one は that cake のこと。同じ名詞のくり返しを避ける言い方である。\n\n【例文】\n・This cake is more delicious than the one I made.\n・Your soup tastes very good.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1550,7 +1564,8 @@ export const eigoExtra2: Question[] = [
     question: '「今日は昨日より寒いです」を英語にしなさい。',
     answer: 'Today is colder than yesterday.',
     hint: '"cold" の比較級は "colder" です',
-    explanation: '【解説】\n"cold"（寒い）の比較級は "colder"、最上級は "coldest" です。天気の比較でよく使います。',
+    explanation:
+      '【答え】Today is colder than yesterday.\n\n【cold の変化】cold - colder - coldest。1音節の短い語なので er、est をつける。\n\n【天気・気温を表す語】\n・hot（暑い）・warm（暖かい）・cool（すずしい）・cold（寒い）\n・sunny（晴れ）・cloudy（くもり）・rainy（雨）・snowy（雪）・windy（風の強い）\n・hot → hotter（子音を重ねる）、big → bigger と同じ決まりである\n\n【天気を言うときの it】主語に it を置く。意味のない it である。\n・It is cold today.\n・It is raining.\nただしこの問題では Today を主語にしているので、It is colder today than yesterday. と言いかえることもできる。\n\n【比較の相手を省くことがある】\n・It is colder today.（than yesterday を言わなくても伝わる）\n文脈から分かるときは than 以下を省ける。\n\n【気温の言い方】\n・It is twenty degrees.（20度です）\n・below zero（氷点下）\n\n【例文】\n・Today is colder than yesterday, so wear a coat.\n・Hokkaido is colder than Okinawa.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1594,7 +1609,8 @@ export const eigoExtra2: Question[] = [
     question: '「AとBではどちらが大きいですか？」を英語にしなさい。',
     answer: 'Which is larger, A or B?',
     hint: '"Which is + 比較級, A or B?" の形です',
-    explanation: '【解説】\n"Which is + 比較級, A or B?" は2つを比べる疑問文です。"large" の比較級は "larger" です。',
+    explanation:
+      '【答え】Which is larger, A or B?\n\n【2つを比べてたずねる形】Which is ＋ 比較級, A or B? という形になる。\n・Which is larger, the sun or the earth?\n・Which do you like better, tea or coffee?\n\n【which と what】\n・which … 選ぶ範囲が決まっているとき。2つ、または限られた数から選ぶ\n・what … 範囲が決まっていないとき\n・Which sport do you like, soccer or baseball?（2つから）\n・What sport do you like?（どんなスポーツでも）\n\n【3つ以上なら最上級】\n・2つを比べる … Which is larger, A or B?\n・3つ以上から選ぶ … Which is the largest of the three?\n比べる数で比較級か最上級かが決まる。\n\n【like better と like the best】\n・Which do you like better, A or B?（2つ）\n・Which do you like the best of all?（3つ以上）\nlike の比較には better、best を使う。more、most ではない。\n\n【large と big】\n・large … 面積・量。ややかたい\n・big … 大きさ全般。くだけた言い方\n\n【例文】Which is bigger, Japan or Germany?',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1605,7 +1621,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女は私の妹より2歳年上です」を英語にしなさい。',
     answer: 'She is two years older than my sister.',
     hint: '「～だけ...より」は "数字 + 比較級 + than" で表します',
-    explanation: '【解説】\n差の大きさを表すときは "数字 + 比較級 + than" を使います。"two years older than"（2歳年上）が正解です。',
+    explanation:
+      '【答え】She is two years older than my sister.\n\n【差を表す言い方】比較級の前に、差の大きさを置く。\n・two years older（2歳年上）\n・three centimeters taller（3センチ高い）\n・five minutes earlier（5分早い）\n差の大きさ → 比較級 → than の順になる。older two years とは言わない。\n\n【差を表すほかの語】\n・much／far／a lot ＋ 比較級 … ずっと〜。much older（ずっと年上）\n・a little ＋ 比較級 … 少し〜。a little older\n・very は比較級につけられない。very older は誤りである\n比較級を強めるのは much、very ではない。ここは試験でねらわれる。\n\n【年齢の言い方】\n・She is fifteen years old.\n・She is fifteen.（years old を省ける）\n・How old are you?\n・two years older than 〜（〜より2歳年上）\n\n【older と elder】\n・older … 年上（ふつうこちらを使う）\n・elder … 兄弟姉妹の年長を表す。my elder brother。イギリス英語で使うことが多い\n\n【例文】My brother is three years younger than I am.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -1638,7 +1655,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼はクラスで一番足が速い」を英語にしなさい。',
     answer: 'He runs the fastest in his class.',
     hint: '"fast" の最上級は "fastest" です',
-    explanation: '【解説】\n"fast"（速い・速く）の比較級は "faster"、最上級は "fastest" です。"run the fastest"（一番速く走る）を使います。',
+    explanation:
+      '【答え】He runs the fastest in his class.\n\n【副詞の最上級】fast は形容詞にも副詞にもなる語である。ここでは runs（走る）を説明しているので副詞である。\n・fast - faster - fastest\n\n【the をつけるかどうか】\n・形容詞の最上級 … the が必要。He is the fastest runner.\n・副詞の最上級 … the を省くことができる。He runs (the) fastest.\n学校のテストでは the をつけて書けば安全である。\n\n【in と of】\n・in ＋ 場所・団体 … in his class、in Japan\n・of ＋ 複数のもの … of the five、of all\n\n【言いかえ】同じ内容を別の形でも言える。\n・He runs the fastest in his class.\n・He is the fastest runner in his class.\n・No one runs faster than he does.\n・He runs faster than any other student in his class.\n最上級と比較級の書きかえは入試でよく出るので、この4つの形をまとめて覚える。\n\n【fast と early】\n・fast … 速度が速い\n・early … 時刻が早い\n日本語ではどちらも「はやい」なので、取りちがえやすい。\n\n【例文】She swims the fastest of all the members.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1650,7 +1668,8 @@ export const eigoExtra2: Question[] = [
     question: '「本は机の上にあります」を英語にしなさい。',
     answer: 'The book is on the desk.',
     hint: '「～の上に（接触して）」は "on" を使います',
-    explanation: '【解説】\n前置詞 "on"（～の上に、接触して）、"in"（～の中に）、"under"（～の下に）、"by"（～のそばに）を区別しましょう。',
+    explanation:
+      '【答え】The book is on the desk.\n\n【場所を表す前置詞】絵にして覚えるとよい。\n・on … 表面に接している。on the desk（机の上に）、on the wall（壁に）、on the ceiling（天井に）\n・in … 中に入っている。in the box、in the room\n・under … 真下に。under the desk\n・over … 真上に（接していない）。over the bridge\n・by／near … そばに。by the window\n・between … 2つの間に。between A and B\n・among … 3つ以上の間に\n・in front of … 前に\n・behind … 後ろに\n・next to … となりに\n\n【on は「上」とはかぎらない】ここが大事である。on は「接している」ことを表すので、壁や天井にも使える。\n・a picture on the wall（壁にかかった絵）\n・a fly on the ceiling（天井にとまったハエ）\n上下ではなく、くっついているかどうかで決まる。\n\n【the をつける理由】どの机かが話し手と聞き手の間で分かっているので the をつける。\n\n【例文】\n・There is a cat under the table.\n・The picture is on the wall.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -1661,7 +1680,8 @@ export const eigoExtra2: Question[] = [
     question: '「猫は箱の中にいます」を英語にしなさい。',
     answer: 'The cat is in the box.',
     hint: '「～の中に」は "in" を使います',
-    explanation: '【解説】\n"in"（～の中に）は内部にあることを表します。"The cat is in the box." が正解です。',
+    explanation:
+      '【答え】The cat is in the box.\n\n【in の意味】「中に」。囲まれた空間の内側にあることを表す。\n・in the box、in the room、in the bag、in the water\n\n【in と on の使い分け】\n・in … 囲まれた中に。in the box\n・on … 表面に接して。on the box（箱の上に乗っている）\n同じ箱でも、中にいるか上にいるかで前置詞が変わる。\n\n【乗り物での使い分け】\n・in a car、in a taxi（小さくて囲まれた乗り物）\n・on a bus、on a train、on a plane、on a bike（大きい、またはまたがる乗り物）\n立って歩ける大きさなら on、と考えると分かりやすい。\n\n【There is の文】この文は There is a cat in the box. とも言える。\n・The cat is in the box.（その猫がどこにいるかを言う）\n・There is a cat in the box.（箱の中に猫がいることを新しく知らせる）\nすでに話に出たものには The 〜 is、初めて出すものには There is を使う。日本語の「は」と「が」の使い分けと同じ考え方である。\n\n【例文】\n・There is some water in the glass.\n・My pencil is in my bag.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1672,7 +1692,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は学校の前で友達を待ちました」を英語にしなさい。',
     answer: 'I waited for my friend in front of the school.',
     hint: '「～の前で」は "in front of" を使います',
-    explanation: '【解説】\n"in front of"（～の前に）、"behind"（～の後ろに）、"next to"（～の隣に）、"between"（～の間に）を覚えましょう。',
+    explanation:
+      '【答え】I waited for my friend in front of the school.\n\n【wait for 〜】「〜を待つ」。for が必要である。\n・wait for my friend（正しい）\n・wait my friend（誤り）\n\n【前置詞が必要な動詞】日本語では「〜を」なのに、英語では前置詞がいるものがある。\n・wait for 〜（〜を待つ）\n・look for 〜（〜をさがす）\n・listen to 〜（〜を聞く）\n・look at 〜（〜を見る）\n・arrive at／in 〜（〜に着く）\n・agree with 〜（〜に賛成する）\n日本語の助詞につられてまちがえやすいので、まとめて覚える。\n\n【逆に、前置詞がいらない動詞】\n・discuss 〜（〜について話し合う。about は不要）\n・reach 〜（〜に着く。to は不要）\n・enter 〜（〜に入る。into は不要）\n・marry 〜（〜と結婚する。with は不要）\n・visit 〜（〜を訪れる。to は不要）\nこちらも取りちがえやすい。\n\n【位置を表す語】in front of（前に）、behind（後ろに）、next to（となりに）、between A and B（AとBの間に）、across from（向かいに）。\n\n【例文】I am looking for my key. Can you help me?',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1705,7 +1726,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は疲れていたので、早く寝ました」を英語にしなさい。',
     answer: 'I went to bed early because I was tired.',
     hint: '「なぜなら」は "because" を使います',
-    explanation: '【解説】\n"because"（なぜなら～だから）は理由を表す接続詞です。"go to bed early"（早く寝る）は重要表現です。',
+    explanation:
+      '【答え】I went to bed early because I was tired.\n\n【because の使い方】理由を表す接続詞。後ろには主語と動詞のある文が続く。\n・because I was tired（主語 I ＋ 動詞 was）\n・because of ＋ 名詞 … 名詞が続くときは of が必要。because of the rain\n後ろが文なら because、名詞なら because of と使い分ける。\n\n【because と so】原因と結果、どちらを先に言うかで変わる。\n・I went to bed early because I was tired.（結果 → 原因）\n・I was tired, so I went to bed early.（原因 → 結果）\n同じ内容を2通りで言える。書きかえ問題としてよく出る。\n\n【because で文を始めるとき】\n・Because I was tired, I went to bed early.\n前に置くときは、区切りにコンマを打つ。\n\n【Why への答え】Why 〜? に答えるときは、Because 〜. だけで文にできる。\n・Why did you go to bed early? — Because I was tired.\n\n【理由を表すほかの語】\n・since、as … because よりやや弱い\n・That is why 〜（だから〜）\n・The reason is that 〜（理由は〜）\n\n【例文】I could not go out because it was raining.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1727,7 +1749,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼が来たとき、私は勉強していました」を英語にしなさい。',
     answer: 'When he came, I was studying.',
     hint: '「～したとき」は "when" を使います',
-    explanation: '【解説】\n"when"（～のとき）は時を表す接続詞です。"When he came, I was studying." は過去進行形と過去形を組み合わせた文です。',
+    explanation:
+      '【答え】When he came, I was studying.\n\n【過去進行形】was／were ＋ ing 形で「（そのとき）〜していた」を表す。\n・I was studying.／They were studying.\n\n【2つの時制の組み合わせ】この文には2つの動作がある。\n・I was studying … ずっと続いていた動作（背景）\n・he came … その途中で起きた動作（できごと）\n続いていた動作は進行形、途中で起きた動作は過去形にする。これが時の表し方の基本の形である。\n\n【when の位置】\n・When he came, I was studying.（前に置くときはコンマ）\n・I was studying when he came.（後ろに置くときはコンマ不要）\nどちらでも意味は同じである。\n\n【while との使い分け】\n・when … 〜したとき（一時点）\n・while … 〜している間に（期間）\n・While I was studying, he came.\nwhile の後ろには進行形が来ることが多い。\n\n【接続詞の後は未来形にしない】時や条件を表す接続詞の後ろでは、未来のことでも現在形を使う。\n・When he comes, I will tell him.（will comes ではない）\nこれは中学英語の大事な決まりである。\n\n【例文】I was watching TV when the phone rang.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1738,7 +1761,8 @@ export const eigoExtra2: Question[] = [
     question: '「私はサッカーが好きですが、野球は好きではありません」を英語にしなさい。',
     answer: 'I like soccer, but I do not like baseball.',
     hint: '「しかし」は "but" を使います',
-    explanation: '【解説】\n"but"（しかし・でも）は逆接の接続詞です。"I like soccer, but I do not like baseball." が正解です。',
+    explanation:
+      '【答え】I like soccer, but I do not like baseball.\n\n【but の使い方】前と反対の内容をつなぐ接続詞である。前にコンマを打つのがふつうである。\n\n【接続詞の種類】まとめて覚える。\n・and … そして（並べる）\n・but … しかし（反対）\n・or … または（選ぶ）\n・so … だから（結果）\n・because … なぜなら（理由）\n・if … もし（条件）\n・when … 〜のとき（時）\n・that … 〜ということ\n\n【and・but・or・so の使い分け】\n・I like soccer and baseball.（両方好き）\n・I like soccer, but I do not like baseball.（一方だけ）\n・Do you like soccer or baseball?（どちらか）\n・I like soccer, so I joined the team.（結果）\n\n【スポーツの語】soccer、baseball、basketball、volleyball、tennis、swimming、table tennis、rugby。\n・play ＋ スポーツ（the をつけない）\n・swimming、skiing のように ing で終わるものは play を使わず、go swimming、go skiing という\n\n【否定の言い方】\n・I do not like baseball.（好きではない）\n・I do not like baseball very much.（あまり好きではない）\n・I hate baseball.（大きらい。強い言い方）\n\n【例文】I studied hard, but I could not answer the last question.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1749,7 +1773,8 @@ export const eigoExtra2: Question[] = [
     question: '「もし明日晴れたら、ピクニックに行きましょう」を英語にしなさい。',
     answer: "If it is sunny tomorrow, let's go on a picnic.",
     hint: '「もし～なら」は "if" を使います',
-    explanation: '【解説】\n"if"（もし～なら）は条件を表す接続詞です。"let\'s go on a picnic"（ピクニックに行きましょう）の "let\'s" は提案を表します。',
+    explanation:
+      '【答え】If it is sunny tomorrow, let\'s go on a picnic.\n\n【if の後は現在形】ここが最も大事である。未来のことでも、if の後ろでは現在形を使う。\n・If it is sunny tomorrow（正しい）\n・If it will be sunny tomorrow（誤り）\n\n【なぜ現在形なのか】if や when のような、時や条件を表す接続詞の後では、未来のことも現在形で表すという決まりがある。\n・When he comes, I will tell him.\n・If it rains, we will stay home.\n・主の文（後半）のほうは will を使ってよい\n条件の部分は現在形、結果の部分は未来形と覚える。\n\n【let\'s の使い方】let us の短縮形で、「〜しましょう」と提案する言い方である。後ろは動詞の原形。\n・Let\'s go.／Let\'s play tennis.\n・答え方 … Yes, let\'s.（そうしましょう）／ No, let\'s not.\n\n【go on a picnic】「ピクニックに行く」。同じ形の表現をまとめる。\n・go on a trip（旅行に行く）\n・go on a hike（ハイキングに行く）\n・go shopping、go fishing、go swimming（ing の形）\n\n【天気の it】It is sunny. の it は意味を持たない主語である。\n\n【例文】If you are free tomorrow, let\'s go to the museum.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1762,7 +1787,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は英語を勉強したいです」を英語にしなさい。',
     answer: 'I want to study English.',
     hint: '"want to + 動詞の原形" で「～したい」を表します',
-    explanation: '【解説】\n"want to + 動詞の原形"（～したい）は重要表現です。"to" 以下は不定詞の名詞的用法で "want" の目的語になります。',
+    explanation:
+      '【答え】I want to study English.\n\n【want to ＋ 動詞の原形】「〜したい」。to の後ろは必ず原形である。\n・I want to study.（正しい）\n・I want to studying.（誤り）\n・I want studying.（誤り。want は動名詞をとらない）\n\n【不定詞の3つの使い方】to ＋ 動詞の原形の形を不定詞といい、3つのはたらきがある。\n・名詞のはたらき … 〜すること。I want to study.（study することを want している）\n・形容詞のはたらき … 〜するための。something to eat（食べるもの）\n・副詞のはたらき … 〜するために。I went there to see him.\nこの問題は名詞のはたらきである。\n\n【動名詞との使い分け】動詞によって、後ろにとる形が決まっている。\n・to だけ … want、hope、decide、wish、plan、promise\n・ing だけ … enjoy、finish、stop、practice、mind\n・どちらも … like、love、start、begin\nwant には ing を続けないと覚える。\n\n【would like to】want to のていねいな言い方である。\n・I would like to study English.\n・What would you like?（何になさいますか）\n\n【例文】I want to be a teacher in the future.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -1795,7 +1821,8 @@ export const eigoExtra2: Question[] = [
     question: '「私には解決すべき問題がたくさんあります」を英語にしなさい。',
     answer: 'I have many problems to solve.',
     hint: '不定詞の形容詞的用法で "問題を解決する" を名詞の後に続けます',
-    explanation: '【解説】\n不定詞の形容詞的用法は「～するための（名詞）」という意味で名詞を修飾します。"problems to solve"（解決すべき問題）が正解です。',
+    explanation:
+      '【答え】I have many problems to solve.\n\n【不定詞の形容詞のはたらき】to ＋ 原形が、前の名詞を後ろから説明する形である。\n・problems to solve（解決すべき問題）\n・something to drink（飲むもの）\n・time to go（行く時間）\n・a book to read（読む本）\n説明する語が名詞の後ろに来るのが英語の特徴である。日本語では「解決すべき問題」と前に来るので、語順が逆になる。\n\n【something／anything ＋ 形容詞 ＋ to 〜】\n・something cold to drink（何か冷たい飲み物）\n・-thing で終わる語は、形容詞が後ろに来る。cold something とは言わない\n・さらに不定詞はその後ろに置く\n語順は something → 形容詞 → to 不定詞である。試験でよく問われる。\n\n【many problems】problem は数えられる名詞なので複数形にする。many の後は必ず複数形である。\n\n【solve の使い方】\n・solve a problem（問題を解く・解決する）\n・answer a question（質問に答える）\n・問題を「解く」は solve、質問に「答える」は answer である\n\n【例文】I have a lot of homework to do today.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1806,7 +1833,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼は友達を喜ばせるために面白い話をしました」を英語にしなさい。',
     answer: 'He told a funny story to make his friends happy.',
     hint: '不定詞の副詞的用法（目的）で「～するために」を表します',
-    explanation: '【解説】\n"to + 動詞の原形" が目的を表す副詞的用法として使われます。"to make his friends happy"（友達を喜ばせるために）が正解です。',
+    explanation:
+      '【答え】He told a funny story to make his friends happy.\n\n【不定詞の副詞のはたらき（目的）】to ＋ 原形で「〜するために」を表す。\n・to make his friends happy（友達を喜ばせるために）\n・I went to the library to study.（勉強するために）\n\n【目的をはっきり示す言い方】\n・in order to ＋ 原形\n・so as to ＋ 原形\nどちらも「〜するために」で、to だけより意味がはっきりする。\n\n【make ＋ 人 ＋ 形容詞】「人を〜の状態にする」。\n・make his friends happy（友達を幸せにする）\n・make me sad、make her angry\n・Music makes me happy.\n目的語の後ろに形容詞が来る形で、中学の後半で学ぶ大事な形である。\n\n【tell の使い方】\n・tell ＋ 人 ＋ もの … tell me the truth\n・tell a story（話をする）\n・say、speak、talk との使い分けにも注意する。tell の後には相手が来るのが特徴である\n\n【funny と interesting】\n・funny … 笑える\n・interesting … 興味深い\n日本語ではどちらも「おもしろい」なので、使い分けを意識する。\n\n【例文】I studied hard to pass the exam.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1817,7 +1845,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女は英語を話すことが得意です」を英語にしなさい。',
     answer: 'She is good at speaking English.',
     hint: '"be good at + 動名詞" で「～が得意だ」を表します',
-    explanation: '【解説】\n"be good at + -ing"（～が得意だ）は重要表現です。前置詞 "at" の後なので動名詞（-ing 形）を使います。',
+    explanation:
+      '【答え】She is good at speaking English.\n\n【前置詞の後は動名詞】at は前置詞なので、後ろには名詞の形が来る。動詞を続けるときは ing 形（動名詞）にする。\n・good at speaking（正しい）\n・good at to speak（誤り）\n・good at speak（誤り）\n前置詞の後ろに to 不定詞は置けないという決まりがある。\n\n【前置詞 ＋ ing の表現】まとめて覚える。\n・be good at 〜ing（〜が得意だ）\n・be interested in 〜ing（〜に興味がある）\n・be afraid of 〜ing（〜するのがこわい）\n・thank you for 〜ing（〜してくれてありがとう）\n・look forward to 〜ing（〜を楽しみにする）\n・How about 〜ing?（〜するのはどうですか）\n・before／after 〜ing（〜する前に・後に）\nlook forward to の to は前置詞なので ing が続く。不定詞の to と取りちがえやすく、試験でねらわれる。\n\n【動名詞の3つのはたらき】\n・主語 … Playing tennis is fun.\n・目的語 … I enjoy playing tennis.\n・前置詞の後 … good at playing tennis\n\n【例文】I am looking forward to seeing you again.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -1828,7 +1857,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は宿題を終えてから遊びに行きます」を英語にしなさい。',
     answer: 'I will go out to play after finishing my homework.',
     hint: '"after + -ing" で「～した後で」を表します',
-    explanation: '【解説】\n"after + -ing"（～した後で）は接続詞 "after" + 動名詞の形です。"finish my homework"（宿題を終える）を使います。',
+    explanation:
+      '【答え】I will go out to play after finishing my homework.\n\n【after ＋ ing】after は前置詞としても接続詞としても使える。\n・前置詞として … after finishing my homework（後ろは ing）\n・接続詞として … after I finish my homework（後ろは主語と動詞）\nどちらでも同じ意味になる。前置詞なら ing、接続詞なら文が続く。\n\n【before も同じ】\n・before going to bed ＝ before I go to bed\n・Wash your hands before eating.\n\n【接続詞の後は未来形にしない】接続詞として使うときは、未来のことでも現在形にする。\n・after I finish my homework（will finish ではない）\nif、when、before、after、until などの後では、この決まりが働く。\n\n【go out の意味】\n・go out … 外出する、遊びに行く\n・go out to play … 遊びに出かける\n・come in ／ go in … 入る\n\n【finish の後は ing】finish は動名詞をとる動詞である。\n・finish doing my homework（正しい）\n・finish to do（誤り）\n・ing だけをとる動詞 … enjoy、finish、stop、practice、mind、give up\n\n【例文】I always brush my teeth after eating.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
