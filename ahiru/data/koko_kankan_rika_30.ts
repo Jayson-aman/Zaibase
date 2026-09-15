@@ -274,11 +274,11 @@ export const kokoKankanRika30: Question[] = [
     course: 'koko-kankan',
     difficulty: 'advanced',
     maxOnly: true,
-    question: '純水に硫酸（H₂SO₄）を溶かして0.1mol/L溶液を作った。この溶液のpHを求めよ。H₂SO₄は強酸で完全電離するものとする。',
+    question: '【高校先取り】純水に硫酸（H₂SO₄）を溶かして0.1mol/L溶液を作った。この溶液のpHを求めよ。H₂SO₄は強酸で完全電離するものとする。',
     answer: 'pH≈0.7（−log₁₀0.2）',
     hint: 'H₂SO₄→2H⁺＋SO₄²⁻。[H⁺]=2×0.1=0.2mol/L。pH=−log₁₀0.2≈0.7。',
     explanation: '【出題意図】強酸の電離とpH計算を問う発展問題。【解説】H₂SO₄は2価の酸で[H⁺]=0.2mol/L。pH=−log₁₀0.2=−log₁₀(2×10⁻¹)=1−log₁₀2≈1−0.30=0.70。【注意点】H₂SO₄は2価の酸なのでH⁺濃度は2倍になる。1価の酸（HCl等）0.1mol/LのpH＝1と混同しないこと。【関連知識】pH7が中性、7未満が酸性、7超がアルカリ性。',
-    pitfall: 'H₂SO₄は2価の酸でH⁺が2個出ることを忘れないこと。',
+    pitfall: 'log（対数）は高校2年で習う内容で、高校入試には出ない。中学では、指数の計算までが範囲。 H₂SO₄は2価の酸でH⁺が2個出ることを忘れないこと。',
     memoryTip: '2価の酸＝H⁺濃度を2倍にしてからpH計算。',
   },
   {

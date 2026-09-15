@@ -151,7 +151,7 @@ export const kokoMaxSansu: Question[] = [
   {
     id: 'koko_max_sansu_13',
     subject: 'sansu',
-    question: '△ABC において AB = 5、BC = 7、CA = 6 のとき、cos B の値と△ABC の面積を求めなさい。',
+    question: '【高校先取り】△ABC において AB = 5、BC = 7、CA = 6 のとき、cos B の値と△ABC の面積を求めなさい。',
     answer: 'cos B = 19/35、面積 = 3√6',
     hint: '余弦定理で cos B を求め、sin B = √(1-cos²B) から面積 = (1/2)AB・BC・sin B。',
     explanation: '余弦定理：CA² = AB² + BC² - 2·AB·BC·cos B\n36 = 25 + 49 - 70 cos B\n36 = 74 - 70 cos B\n70 cos B = 38\ncos B = 38/70 = 19/35\n\nsin²B = 1 - (19/35)² = 1 - 361/1225 = 864/1225\nsin B = √(864/1225) = 12√6/35（sin B > 0）\n\n面積 = (1/2) × 5 × 7 × (12√6/35)\n= (1/2) × 35 × 12√6/35\n= 6√6',
@@ -159,6 +159,7 @@ export const kokoMaxSansu: Question[] = [
     course: 'koko-general',
     examType: 'koko',
     maxOnly: true,
+    pitfall: 'sin・cos・tan は高校で習う内容で、高校入試には出ない。中学では、直角三角形の辺の長さは三平方の定理と、3:4:5 などの整数比で求める。',
   },
   {
     id: 'koko_max_sansu_14',
@@ -296,7 +297,7 @@ export const kokoMaxSansu: Question[] = [
   {
     id: 'koko_max_sansu_25',
     subject: 'sansu',
-    question: 'sin 30°、cos 45°、tan 60° の値をそれぞれ答えなさい。また sin²θ + cos²θ = 1 を使って、sin 60° から cos 60° を求めなさい。',
+    question: '【高校先取り】sin 30°、cos 45°、tan 60° の値をそれぞれ答えなさい。また sin²θ + cos²θ = 1 を使って、sin 60° から cos 60° を求めなさい。',
     answer: 'sin 30° = 1/2、cos 45° = √2/2、tan 60° = √3。cos 60° = 1/2（sin 60° = √3/2 より）',
     hint: '特殊角の三角比は暗記。sin²60° + cos²60° = 1 を使う。',
     explanation: 'sin 30° = 1/2、cos 45° = √2/2、tan 60° = √3\n\nsin 60° = √3/2\nsin²60° + cos²60° = 1\n(3/4) + cos²60° = 1\ncos²60° = 1/4\ncos 60° = 1/2（0° < 60° < 90° より正）',
@@ -304,6 +305,7 @@ export const kokoMaxSansu: Question[] = [
     course: 'koko-general',
     examType: 'koko',
     maxOnly: true,
+    pitfall: 'sin・cos・tan は高校で習う内容で、高校入試には出ない。中学では、直角三角形の辺の長さは三平方の定理と、3:4:5 などの整数比で求める。',
   },
   {
     id: 'koko_max_sansu_26',
@@ -417,7 +419,7 @@ export const kokoMaxSansu: Question[] = [
   {
     id: 'koko_max_sansu_35',
     subject: 'sansu',
-    question: '1次変換（行列）の問題：行列 A = [[2,1],[1,3]] によって点 (1,2) がどの点に移されるか求めなさい。',
+    question: '【高校先取り】1次変換（行列）の問題：行列 A = [[2,1],[1,3]] によって点 (1,2) がどの点に移されるか求めなさい。',
     answer: '(4, 7)',
     hint: '行列 A と列ベクトル (1,2)^T の積を計算する。',
     explanation: 'A × v = [[2,1],[1,3]] × [1,2]\n= [2×1 + 1×2, 1×1 + 3×2]\n= [2+2, 1+6]\n= [4, 7]\nよって点 (4, 7) に移される。',
@@ -425,6 +427,7 @@ export const kokoMaxSansu: Question[] = [
     course: 'koko-general',
     examType: 'koko',
     maxOnly: true,
+    pitfall: 'ベクトルと行列は高校以降で習う内容（行列は現在の高校課程では扱わない）で、高校入試には出ない。中学では、座標の差や図形の分割で考える。',
   },
   {
     id: 'koko_max_sansu_36',
@@ -490,7 +493,7 @@ export const kokoMaxSansu: Question[] = [
   {
     id: 'koko_max_sansu_41',
     subject: 'sansu',
-    question: 'Σ記号を使って表した ∑(k=1 to 5) (2k-1) の値を計算しなさい。',
+    question: '【高校先取り】Σ記号を使って表した ∑(k=1 to 5) (2k-1) の値を計算しなさい。',
     answer: '25',
     hint: '各 k = 1,2,3,4,5 に対して 2k-1 を計算して合計する。',
     explanation: 'k=1: 2(1)-1 = 1\nk=2: 2(2)-1 = 3\nk=3: 2(3)-1 = 5\nk=4: 2(4)-1 = 7\nk=5: 2(5)-1 = 9\n合計：1+3+5+7+9 = 25\n\n（1から始まる奇数n個の和 = n²。n=5: 5²=25）',
@@ -498,6 +501,7 @@ export const kokoMaxSansu: Question[] = [
     course: 'koko-general',
     examType: 'koko',
     maxOnly: true,
+    pitfall: 'Σ（シグマ）記号と数列の公式は高校で習う内容で、高校入試には出ない。中学では、規則を見つけて書き出すか、両はしをペアにして和を求める。',
   },
   {
     id: 'koko_max_sansu_42',
@@ -574,7 +578,7 @@ export const kokoMaxSansu: Question[] = [
   {
     id: 'koko_max_sansu_48',
     subject: 'sansu',
-    question: 'log₂ 8 + log₂ 4 - log₂ 2 の値を求めなさい。',
+    question: '【高校先取り】log₂ 8 + log₂ 4 - log₂ 2 の値を求めなさい。',
     answer: '4',
     hint: 'logₐ aⁿ = n を使う。log₂ 8 = log₂ 2³ = 3。',
     explanation: 'log₂ 8 = log₂ 2³ = 3\nlog₂ 4 = log₂ 2² = 2\nlog₂ 2 = 1\n\n3 + 2 - 1 = 4',
@@ -582,6 +586,7 @@ export const kokoMaxSansu: Question[] = [
     course: 'koko-general',
     examType: 'koko',
     maxOnly: true,
+    pitfall: 'log（対数）は高校2年で習う内容で、高校入試には出ない。中学では、指数の計算までが範囲。',
   },
   {
     id: 'koko_max_sansu_49',
