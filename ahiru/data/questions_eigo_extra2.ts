@@ -900,7 +900,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は昨日映画を見ました」を英語にしなさい。',
     answer: 'I saw a movie yesterday.',
     hint: '"see" の過去形は "saw" です（不規則変化）',
-    explanation: '【解説】\n"see"（見る）の過去形は "saw" です（不規則変化）。映画は "a movie" または "a film" と言います。',
+    explanation:
+      '【答え】I saw a movie yesterday.\n\n【不規則動詞】ed をつけずに形が変わる動詞を不規則動詞という。see の過去形は saw で、これは覚えるしかない。\n\n【変化の型で覚える】不規則動詞は、原形・過去形・過去分詞の3つを並べて覚える。型に分けると覚えやすい。\n・3つとも同じ … put - put - put、cut - cut - cut、read - read - read\n・2つが同じ … come - came - come、run - ran - run、buy - bought - bought\n・3つとも別 … see - saw - seen、go - went - gone、write - wrote - written、eat - ate - eaten\n中学で覚える不規則動詞はおよそ100語である。毎日少しずつ声に出すのが近道である。\n\n【映画の言い方】\n・see a movie … 映画館で見る\n・watch a movie … 家で見る\n・a movie（アメリカ英語）／a film（イギリス英語）\n映画館は a movie theater（アメリカ）、a cinema（イギリス）という。\n\n【see・look・watch】\n・see … 目に入る\n・look at … 目を向ける\n・watch … 動くものを見続ける\n\n【例文】I saw a good movie last weekend.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -922,7 +923,8 @@ export const eigoExtra2: Question[] = [
     question: '「あなたは昨日何をしましたか？」を英語にしなさい。',
     answer: 'What did you do yesterday?',
     hint: '過去形の疑問文は "did" を使います',
-    explanation: '【解説】\n過去形の疑問文は "Did + 主語 + 動詞の原形?" の形です。疑問詞がある場合は "疑問詞 + did + 主語 + 動詞の原形?" となります。',
+    explanation:
+      '【答え】What did you do yesterday?\n\n【過去形の疑問文】did を使う。そして動詞は必ず原形に戻す。\n・You did your homework. → Did you do your homework?\n・現在形の does と同じしくみで、did が過去を表すので、動詞は原形でよい\n\n【2つの do】この文には do が2回出てくる。はたらきがちがう。\n・did … 疑問文をつくるための助動詞\n・do … 「する」という意味の動詞\n形が同じなので混乱しやすいが、役割はまったく別である。What did you do? は「あなたは何をしましたか」という意味になる。\n\n【did を使ったら原形】最も多いまちがいがここである。\n・What did you do?（正しい）\n・What did you did?（誤り）\n・Did he went to school?（誤り。go が正しい）\n過去を表すのは did なので、動詞は原形に戻す。\n\n【答え方】疑問詞があるので Yes / No では答えない。\n・I played tennis. ／ I studied at home.\n\n【過去を表す語】yesterday、last night、last week、two days ago、then。これらがあれば過去形にする。\n\n【例文】What did you eat for lunch? — I ate a sandwich.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -933,7 +935,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は先週京都に行きました」を英語にしなさい。',
     answer: 'I went to Kyoto last week.',
     hint: '"go" の過去形は "went" です（不規則変化）',
-    explanation: '【解説】\n"go"（行く）の過去形は "went" です。"last week"（先週）、"last month"（先月）、"last year"（昨年）を覚えましょう。',
+    explanation:
+      '【答え】I went to Kyoto last week.\n\n【go の変化】go - went - gone。最もよく使う不規則動詞の一つである。過去形の went は、もともと別の動詞（wend）の過去形が入りこんだものとされ、go とまったく形が似ていない。だから丸ごと覚えるしかない。\n\n【last の使い方】last ＋ 時を表す語で「この前の〜」を表す。\n・last week（先週）・last month（先月）・last year（昨年）・last night（昨夜）・last Sunday（この前の日曜日）\n・last の前に in や on はつけない。in last week は誤りである\n・ago は数と一緒に使う … three days ago（3日前）、a week ago（1週間前）\n\n【yesterday も前置詞なし】yesterday、today、tomorrow、last 〜、next 〜 には前置詞をつけない。これらはそれ自体が副詞のはたらきをするからである。\n\n【go to の to】方向を表す。ただし home、there、abroad には to をつけない。\n・go to Kyoto（正しい）\n・go home（正しい。go to home は誤り）\n\n【have been と have gone】\n・I have been to Kyoto.（行ったことがある）\n・He has gone to Kyoto.（行ってしまって、今ここにいない）\n現在完了で学ぶ大事な区別である。\n\n【例文】We went to the zoo last Sunday.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -944,7 +947,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女は昨日私に手紙を書きました」を英語にしなさい。',
     answer: 'She wrote me a letter yesterday.',
     hint: '"write" の過去形は "wrote" です（不規則変化）',
-    explanation: '【解説】\n"write"（書く）の過去形は "wrote" です。"write + 人 + もの"（人にものを書く）という形に注意しましょう。',
+    explanation:
+      '【答え】She wrote me a letter yesterday.\n\n【write の変化】write - wrote - written。3つとも形がちがう型である。つづりに注意。wrote の w は発音しない。\n・w を発音しない語 … write、wrong、wrap、answer、sword、two\n\n【目的語を2つとる動詞】write は「人に」「ものを」の2つを続けられる。\n・She wrote me a letter.（人 → もの の順）\n・She wrote a letter to me.（もの → to ＋ 人 の順）\n2通りの言い方ができ、書きかえ問題としてよく出る。\n\n【to を使うか for を使うか】\n・to を使う … give、show、tell、teach、send、write、lend（相手が必要な動作）\n・for を使う … buy、make、cook、get、find（相手がいなくてもできる動作）\n・I bought a book for her.（to ではない）\nこの使い分けは試験でねらわれる。相手がいないと成り立たない動作なら to、と考えると分かりやすい。\n\n【手紙に関わる語】letter（手紙）、postcard（はがき）、e-mail（電子メール）、stamp（切手）、envelope（封筒）、address（住所）。\n\n【例文】\n・He gave me a present.\n・He gave a present to me.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -955,7 +959,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は昨晩夕食を作りました」を英語にしなさい。',
     answer: 'I made dinner last night.',
     hint: '"make" の過去形は "made" です（不規則変化）',
-    explanation: '【解説】\n"make"（作る）の過去形は "made" です。"last night"（昨晩）は重要な時を表す表現です。',
+    explanation:
+      '【答え】I made dinner last night.\n\n【make の変化】make - made - made。過去形と過去分詞が同じ型である。\n\n【make の意味の広さ】\n・作る … make dinner、make a cake\n・〜させる … make him happy（彼を喜ばせる）\n・〜を…にする … Music makes me happy.\nmake ＋ 人 ＋ 形容詞の形は、中学の後半で学ぶ大事な形である。\n\n【食事に関わる表現】\n・breakfast（朝食）・lunch（昼食）・dinner（夕食）・supper（軽い夕食）\n・食事名には a も the もつけない。have breakfast、make dinner\n・ただし形容詞がつくと a がつく … have a big breakfast\n\n【cook と make のちがい】\n・cook … 火を使って料理する。cook rice、cook fish\n・make … 火を使わなくてもよい。make a salad、make coffee\nサラダは切って混ぜるだけなので make を使う。\n\n【last night の位置】文末に置くのがふつうである。文頭に置くときはコンマを打つ。\n\n【例文】\n・My mother made a cake for my birthday.\n・I cook dinner every Sunday.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -966,7 +971,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼は昨日たくさん食べました」を英語にしなさい。',
     answer: 'He ate a lot yesterday.',
     hint: '"eat" の過去形は "ate" です（不規則変化）',
-    explanation: '【解説】\n"eat"（食べる）の過去形は "ate" です。"a lot"（たくさん）は副詞として使えます。',
+    explanation:
+      '【答え】He ate a lot yesterday.\n\n【eat の変化】eat - ate - eaten。3つとも形がちがう型である。ate の発音はエイトで、数の eight と同じ音になる。\n\n【a lot の使い方】\n・副詞として … He ate a lot.（たくさん食べた）\n・a lot of ＋ 名詞 … a lot of books、a lot of water\na lot だけなら副詞、a lot of なら後ろに名詞が来る。\n\n【many・much・a lot of】\n・many ＋ 数えられる名詞の複数形\n・much ＋ 数えられない名詞\n・a lot of … どちらにも使える\nmuch は、肯定文ではあまり使わず、疑問文・否定文で使うことが多い。ふつうの文では a lot of を使うほうが自然である。\n\n【食べることに関わる語】\n・eat（食べる）・drink（飲む）・have（食べる・飲む）・taste（味がする）\n・delicious（とてもおいしい）・hungry（空腹の）・full（おなかいっぱいの）\n・delicious はそれ自体が「とてもおいしい」なので、very delicious とはあまり言わない\n\n【例文】\n・He ate a lot of rice.\n・I did not eat much for breakfast.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -977,7 +983,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は昨日本を2冊読みました」を英語にしなさい。',
     answer: 'I read two books yesterday.',
     hint: '"read" の過去形は "read"（発音：レッド）です',
-    explanation: '【解説】\n"read"（読む）は現在形も過去形も綴りは同じですが、発音が違います。現在形は /riːd/（リード）、過去形は /rɛd/（レッド）です。',
+    explanation:
+      '【答え】I read two books yesterday.\n\n【つづりは同じ、発音がちがう】read の変化は read - read - read で、3つとも同じつづりである。しかし発音が変わる。\n・現在形 read … リード（long i の音）\n・過去形・過去分詞 read … レッド（短い e の音）\nつづりでは区別できないので、文の中の他の語（yesterday、last week など）で時制を判断する。この問題では yesterday があるので過去形だと分かる。\n\n【同じつづりで発音が変わる語】\n・read（リード・レッド）\n・live（リヴ＝住む・ライヴ＝生の）\n・wind（ウィンド＝風・ワインド＝巻く）\n・tear（ティア＝涙・テア＝引き裂く）\nこれらは発音問題で出る。\n\n【つづりが変わらない不規則動詞】\n・put - put - put、cut - cut - cut、let - let - let、set - set - set、hit - hit - hit、shut - shut - shut、cost - cost - cost、read - read - read\nread 以外は発音も変わらない。\n\n【two books と複数形】2冊なので books になる。数を表す語の後は必ず形を確かめる。\n\n【例文】\n・I read this book last month.（レッドと読む）\n・I read books every day.（リードと読む）',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -988,7 +995,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女は昨日新しい服を買いました」を英語にしなさい。',
     answer: 'She bought new clothes yesterday.',
     hint: '"buy" の過去形は "bought" です（不規則変化）',
-    explanation: '【解説】\n"buy"（買う）の過去形は "bought" です。"clothes"（服）は常に複数形で使います。',
+    explanation:
+      '【答え】She bought new clothes yesterday.\n\n【buy の変化】buy - bought - bought。ought のつづりで終わる不規則動詞はいくつかあるので、まとめて覚える。\n・buy - bought、bring - brought、think - thought、fight - fought、catch - caught、teach - taught\n・ough、augh の部分は「オー」と読み、gh は発音しない\n\n【clothes はいつも複数形】ここが最も問われる。\n・clothes（服）… いつも複数形。a clothe とは言わない\n・数えるときは a piece of clothing のように言う\n・発音はクロウズで、close（閉める）とほぼ同じ音になる\n\n【いつも複数形で使う名詞】\n・clothes（服）・glasses（めがね）・scissors（はさみ）・pants／trousers（ズボン）・shoes（くつ）・socks（くつした）・chopsticks（はし）\n・2つの部分が組になっているもの、または集まりとして扱うものが多い\n・数えるときは a pair of を使う … a pair of shoes、a pair of glasses\n\n【cloth・clothes・clothing】\n・cloth … 布（数えられない）\n・clothes … 服（複数形）\n・clothing … 衣類（数えられない、まとめた言い方）\n\n【例文】I bought a pair of shoes last week.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -999,7 +1007,8 @@ export const eigoExtra2: Question[] = [
     question: '「私たちは昨日一緒に歌を歌いました」を英語にしなさい。',
     answer: 'We sang songs together yesterday.',
     hint: '"sing" の過去形は "sang" です（不規則変化）',
-    explanation: '【解説】\n"sing"（歌う）の過去形は "sang" です。"together"（一緒に）は副詞です。',
+    explanation:
+      '【答え】We sang songs together yesterday.\n\n【sing の変化】sing - sang - sung。i が a、u と変わる型である。同じ型の動詞をまとめて覚えると効率がよい。\n・sing - sang - sung\n・drink - drank - drunk\n・swim - swam - swum\n・begin - began - begun\n・ring - rang - rung\nどれも i → a → u と変わる。この規則性に気づくと、暗記の負担が大きく減る。\n\n【songs を複数形にする理由】何曲か歌ったので複数形にする。1曲なら a song となる。\n\n【sing と song】\n・sing … 動詞（歌う）\n・song … 名詞（歌）\n・singer … 歌う人\n動詞から名詞、名詞から人を表す語をつくる形は英語に多い。\n\n【together の位置】副詞なので、ふつう文の最後のほうに置く。\n・We sang songs together.\n・We played together in the park.\n\n【音楽に関わる語】music（音楽）、band（バンド）、chorus（合唱）、concert（コンサート）、instrument（楽器）。\n\n【例文】\n・We sang the school song at the ceremony.\n・She sings very well.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -1010,7 +1019,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼は昨日5時間眠りました」を英語にしなさい。',
     answer: 'He slept for five hours yesterday.',
     hint: '"sleep" の過去形は "slept" です（不規則変化）',
-    explanation: '【解説】\n"sleep"（眠る）の過去形は "slept" です。"for + 時間"（～の間）という表現を使います。',
+    explanation:
+      '【答え】He slept for five hours yesterday.\n\n【sleep の変化】sleep - slept - slept。ee が e に短くなる型である。同じ型をまとめる。\n・sleep - slept、keep - kept、feel - felt、meet - met、leave - left、sweep - swept\nいずれも母音が短くなり、t で終わる。\n\n【for ＋ 時間の長さ】for は期間の長さを表す。\n・for five hours（5時間）・for two weeks（2週間）・for a long time（長い間）\n\n【for と since のちがい】現在完了でも大事になる。\n・for … 期間の長さ。for three years（3年間）\n・since … 始まった時点。since 2020（2020年から）\n「どれだけの長さか」なら for、「いつから」なら since である。\n\n【時間の言い方】\n・hour（時間）・minute（分）・second（秒）・day（日）・week（週）・month（月）・year（年）\n・an hour … h を発音しないので、a ではなく an をつける。音で決まるという決まりの代表例である\n\n【sleep と go to bed】\n・go to bed … 寝床に入る\n・sleep … 眠っている\n・fall asleep … 眠りにおちる\n\n【例文】I slept for eight hours last night.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -1043,7 +1053,8 @@ export const eigoExtra2: Question[] = [
     question: '「あなたは何時に起きましたか？」を英語にしなさい。',
     answer: 'What time did you get up?',
     hint: '"What time did ..." で時刻を尋ねます',
-    explanation: '【解説】\n"What time did you get up?" は「何時に起きましたか？」という疑問文です。"get up" は「起きる」という句動詞です。',
+    explanation:
+      '【答え】What time did you get up?\n\n【3か所に注意】\n①What time が先頭\n②過去なので did\n③did があるので動詞は原形 get（got ではない）\n\n【did を使ったら原形】最も多いまちがいである。\n・What time did you get up?（正しい）\n・What time did you got up?（誤り）\n過去を表すのは did なので、動詞は原形に戻す。does のときとまったく同じしくみである。\n\n【句動詞の語順】get up は2語で1つの意味なので、間に別の語を入れない。\n\n【What time と When】\n・What time … 時刻をたずねる。答えは at seven など\n・When … 時を広くたずねる。答えは on Sunday、in May などでもよい\n\n【答え方】\n・I got up at six.（got と過去形にする）\n・At six.（短く答えてもよい）\n質問では原形だが、答えでは過去形になる。ここも取りちがえやすい。\n\n【朝の行動を表す表現】\n・wake up（目が覚める）・get up（起きる）・wash my face（顔を洗う）・brush my teeth（歯をみがく）・have breakfast（朝食をとる）・leave home（家を出る）\n\n【例文】What time did you go to bed last night? — I went to bed at eleven.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1066,7 +1077,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は今勉強しています」を英語にしなさい。',
     answer: 'I am studying now.',
     hint: '現在進行形は "be動詞 + 動詞のing形" です',
-    explanation: '【解説】\n現在進行形は "be動詞 + 動詞の -ing 形" で表します。"study" → "studying"（y → ying）。今まさにしている動作を表します。',
+    explanation:
+      '【答え】I am studying now.\n\n【現在進行形】be動詞 ＋ 動詞の ing 形で、「今〜している」を表す。\n・I am studying.／He is studying.／They are studying.\n主語によって be動詞が変わるところは、ふつうの be動詞の文と同じである。\n\n【ing のつけ方】3つの決まりがある。\n・ふつう … そのまま ing。study → studying、play → playing、read → reading\n・e で終わる語 … e を取って ing。make → making、write → writing、come → coming、have → having\n・短い母音と子音で終わる語 … 子音を重ねて ing。run → running、swim → swimming、sit → sitting、begin → beginning\nstudy は y で終わるが、y は取らずにそのまま ing をつける。三単現（studies）や過去形（studied）とちがうので注意する。\n\n【現在形とのちがい】\n・I study English.（ふだんの習慣）\n・I am studying English.（今まさにしている）\n\n【進行形にしない動詞】状態を表す動詞は進行形にしない。\n・know、like、love、want、have（持っている）、see、hear\n・I am knowing は誤り\nただし have が「食べる」の意味のときは進行形にできる（I am having lunch.）。\n\n【例文】Listen. The birds are singing.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -1077,7 +1089,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼は今本を読んでいます」を英語にしなさい。',
     answer: 'He is reading a book now.',
     hint: '現在進行形を使います',
-    explanation: '【解説】\n"He is reading a book now." は現在進行形を使った文です。"read"（読む）→ "reading" となります。',
+    explanation:
+      '【答え】He is reading a book now.\n\n【現在進行形の形】be動詞 ＋ ing 形。主語が he なので is を使う。\n・I am reading／He is reading／They are reading\n\n【read の ing 形】そのまま ing をつけて reading となる。e で終わる語ではないので e を取る必要はない。\n\n【now の位置】文末に置くのがふつうである。文頭に置いてコンマを打つこともできる。now があると、今まさにしていることだとはっきりする。\n\n【現在進行形を使う3つの場面】\n・今している動作 … He is reading a book now.\n・最近続けていること … I am reading a long novel these days.\n・近い未来の予定 … I am leaving tomorrow.（出発することになっている）\n3つ目は少し進んだ使い方だが、会話ではよく使う。\n\n【疑問文・否定文】be動詞の文と同じ作り方である。\n・Is he reading a book? — Yes, he is. / No, he is not.\n・He is not reading a book.\ndo や does は使わない。ここが一般動詞の文とちがう点である。\n\n【例文】\n・What are you doing? — I am doing my homework.\n・She is not watching TV. She is studying.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -1099,7 +1112,8 @@ export const eigoExtra2: Question[] = [
     question: '「私の犬は今走っています」を英語にしなさい。',
     answer: 'My dog is running now.',
     hint: '短い母音 + 子音で終わる動詞は子音を重ねてから -ing をつけます',
-    explanation: '【解説】\n"run"（走る）のように短い母音 + 子音で終わる動詞は、最後の子音を重ねて -ing をつけます。"run" → "running"。',
+    explanation:
+      '【答え】My dog is running now.\n\n【子音を重ねる決まり】run の ing 形は running で、n を2つ重ねる。重ねるのは、次の3つがそろったときである。\n・母音1つ ＋ 子音1つで終わる\n・その母音が短く読まれる\n・最後の音節にアクセントがある\nrun は u（短い母音）＋ n（子音）で終わるので、n を重ねる。\n\n【子音を重ねる語】\n・run → running、swim → swimming、sit → sitting、get → getting、put → putting、stop → stopping、begin → beginning、shop → shopping、cut → cutting\n\n【重ねない語】\n・rain → raining（母音が2つ ai なので重ねない）\n・read → reading（同じ理由）\n・listen → listening（アクセントが前にあるので重ねない）\n・visit → visiting（同じ理由）\n見分け方は、母音が1つか2つかを見ることである。\n\n【過去形でも同じ決まり】stop → stopped、plan → planned。ing 形と過去形で同じ規則が働いている。\n\n【My dog に is を使う理由】dog は1ぴきなので単数。三人称単数なので is になる。\n\n【例文】The children are running in the park.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1121,7 +1135,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は明日京都を訪れるつもりです」を英語にしなさい。（be going to を使う）',
     answer: 'I am going to visit Kyoto tomorrow.',
     hint: '"be going to + 動詞の原形" で近い未来の予定を表します',
-    explanation: '【解説】\n"be going to + 動詞の原形" は、あらかじめ決めている予定や計画を表します。"tomorrow"（明日）は未来を表す時の副詞です。',
+    explanation:
+      '【答え】I am going to visit Kyoto tomorrow.\n\n【be going to の形】be動詞 ＋ going to ＋ 動詞の原形。\n・I am going to visit ／ He is going to visit ／ They are going to visit\n\n【be going to と will のちがい】ここが最も問われる。\n・be going to … 前から決めていた予定・計画。すでに準備が進んでいる\n・will … その場で決めた意志、または単なる予測\n例）\n・I am going to buy a new bike.（前から決めていた）\n・The phone is ringing. — I will get it.（今決めた）\n前から決めていたかどうかで使い分ける。\n\n【もう一つの使い分け】\n・目の前の様子から予測するときは be going to を使う。Look at those clouds. It is going to rain.（雲を見て判断している）\n・根拠のない予測は will。I think it will rain tomorrow.\n\n【go の ing 形と重ならないか】I am going to go to Kyoto. のように going to go と続くこともある。不自然に感じるが、正しい英語である。ただし I am going to Kyoto. だけでも「京都へ行く予定だ」という意味になる。\n\n【疑問文】Are you going to visit Kyoto? — Yes, I am.\n\n【例文】We are going to have a party next Saturday.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -1132,7 +1147,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女は来週ピアノの発表会があります」を英語にしなさい。（will を使わない）',
     answer: 'She is going to have a piano recital next week.',
     hint: '"be going to" で計画を表します',
-    explanation: '【解説】\n"be going to" は計画や予定を表します。"have a piano recital"（ピアノの発表会がある）という表現を使います。',
+    explanation:
+      '【答え】She is going to have a piano recital next week.\n\n【なぜ be going to なのか】発表会は前から日程が決まっている。その場で思いついたことではなく、すでに予定として決まっているので be going to を使う。will はその場で決めた意志や、単なる予測に使う。\n\n【have の広い意味】ここでは「（行事が）ある」という意味である。\n・have a party（パーティーを開く）\n・have a meeting（会議がある）\n・have a test（テストがある）\n・have a good time（楽しい時を過ごす）\nhave は「持つ」だけでなく、行事や経験にも使える。\n\n【next の使い方】\n・next week（来週）・next month（来月）・next year（来年）・next Sunday（今度の日曜）\n・next には前置詞をつけない。in next week は誤りである\n・last 〜 と同じ決まりである\n\n【音楽の行事に関わる語】\n・recital（発表会）・concert（コンサート）・contest（コンクール）・performance（演奏・公演）・audience（聴衆）・stage（舞台）\n\n【主語が she なので is】be going to の be動詞は主語に合わせる。\n\n【例文】I am going to take a piano lesson this afternoon.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -1143,7 +1159,8 @@ export const eigoExtra2: Question[] = [
     question: '「私はきっと英語が上手になるでしょう」を英語にしなさい。（will を使う）',
     answer: 'I will become good at English.',
     hint: '"will + 動詞の原形" で意志や予測を表します',
-    explanation: '【解説】\n"will + 動詞の原形" は意志や予測を表します。"become good at ..."（～が上手になる）という表現を使います。',
+    explanation:
+      '【答え】I will become good at English.\n\n【will の形】will ＋ 動詞の原形。主語が何であっても will の形は変わらない。\n・I will／He will／They will（wills とはならない）\n・助動詞（will、can、must、should、may）はすべて、主語によって形が変わらない\n\n【will の2つの意味】\n・意志 … その場で決めた「〜するつもりだ」。I will help you.\n・予測 … 「〜だろう」。It will be sunny tomorrow.\nこの文は「きっと〜でしょう」なので、予測に近い意味である。\n\n【be good at 〜】「〜が得意だ」。at の後ろは名詞か動名詞（ing 形）が来る。\n・I am good at English.\n・I am good at playing tennis.（to play ではなく playing）\n・反対は be poor at、be bad at\n前置詞の後ろは名詞の形にする、という決まりがあるので、動詞を続けるときは ing 形にする。\n\n【become と get】\n・become ＋ 名詞・形容詞 … become a doctor、become famous\n・get ＋ 形容詞 … get better、get angry（変化を表す、くだけた言い方）\n\n【否定と疑問】\n・I will not（won\'t）become 〜\n・Will you become 〜?\n\n【例文】I will be a good English speaker someday.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1177,7 +1194,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女は今泳いでいます」を英語にしなさい。',
     answer: 'She is swimming now.',
     hint: '"swim" は子音を重ねて -ing をつけます',
-    explanation: '【解説】\n"swim"（泳ぐ）のように短母音 + 子音で終わる動詞は子音を重ねて -ing をつけます。"swim" → "swimming"。',
+    explanation:
+      '【答え】She is swimming now.\n\n【子音を重ねる決まり】swim は i（短い母音）＋ m（子音）で終わるので、m を重ねて swimming となる。母音1つ＋子音1つで終わり、そこにアクセントがあるときに重ねる。\n\n【まちがえやすい ing 形】\n・swim → swimming（m を重ねる）\n・run → running、sit → sitting、get → getting、begin → beginning\n・come → coming（e を取る。m は重ねない）\n・make → making、write → writing、take → taking、use → using\n・die → dying（ie を y に変える。lie → lying、tie → tying も同じ）\ndie の変化は特別なので、そのまま覚える。\n\n【主語が she なので is】She is swimming. となる。\n\n【水に関わる動作の語】\n・swim（泳ぐ）・dive（飛びこむ）・float（浮かぶ）・sink（沈む）\n・swimming pool（プール）・swimsuit（水着）・beach（浜辺）\n\n【swim の変化】swim - swam - swum。sing - sang - sung と同じ型である。\n\n【例文】\n・She is swimming in the pool now.\n・She swam 500 meters yesterday.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1188,7 +1206,8 @@ export const eigoExtra2: Question[] = [
     question: '「私たちは今夕食を食べているところです」を英語にしなさい。',
     answer: 'We are having dinner now.',
     hint: '"have" は -e を取って -ing をつけます',
-    explanation: '【解説】\n"have"（食べる・持つ）のように -e で終わる動詞は e を取って -ing をつけます。"have" → "having"。',
+    explanation:
+      '【答え】We are having dinner now.\n\n【e を取って ing】have は e で終わるので、e を取って having となる。\n・have → having、make → making、write → writing、come → coming、take → taking、use → using、give → giving\n・haveing とは書かない\n\n【have は進行形にできるのか】ここが大事である。\n・「持っている」の意味では進行形にしない … I am having a car は誤り\n・「食べる・飲む」「（行事を）行う」「（時を）過ごす」の意味では進行形にできる … We are having dinner.\n状態を表すか、動作を表すかで決まる。状態は進行形にしない。\n\n【進行形にしない動詞】know、like、love、want、need、see、hear、belong。どれも「している」というより「そういう状態である」ことを表す。\n\n【have dinner と eat dinner】\n・have dinner … ふつうの言い方\n・eat dinner … 食べる動作を強調\nどちらも使えるが、have のほうがよく使われる。\n\n【食事名に冠詞をつけない】have dinner、have lunch、have breakfast。a も the もつけない。\n\n【例文】\n・We are having a party now.\n・I have two brothers.（この have は進行形にしない）',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1210,7 +1229,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は明日友達と映画を見に行くつもりです」を英語にしなさい。',
     answer: 'I am going to see a movie with my friend tomorrow.',
     hint: '"be going to" で予定を表します',
-    explanation: '【解説】\n"be going to" は事前に決めた予定を表します。"see a movie"（映画を見る）、"with my friend"（友達と）を使います。',
+    explanation:
+      '【答え】I am going to see a movie with my friend tomorrow.\n\n【語順のしくみ】英語の語順は「だれが → する → 何を → だれと → いつ」の順に並ぶ。\n・I（だれが）／am going to see（する）／a movie（何を）／with my friend（だれと）／tomorrow（いつ）\n日本語は「明日 友達と 映画を 見る つもりだ」と順序が逆になることが多い。英語は動作を先に、くわしい説明を後に置くと覚える。\n\n【場所と時の順序】両方あるときは、場所が先、時が後である。\n・I played tennis in the park yesterday.（場所 → 時）\n・I played tennis yesterday in the park.（不自然）\n\n【with の使い方】\n・with my friend … 友達と一緒に\n・with a pen … ペンを使って（道具）\n・a girl with long hair … 長い髪の女の子（特徴）\n同じ with でも、後ろに来る語で意味が変わる。\n\n【see a movie】映画館で見るときは see、家で見るときは watch を使うことが多い。\n\n【tomorrow に前置詞をつけない】yesterday、today、tomorrow はそれ自体が副詞なので、on や in をつけない。\n\n【例文】I am going to study with my friends at the library this afternoon.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1221,7 +1241,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼らは来年アメリカに引越す予定ですか？」を英語にしなさい。',
     answer: 'Are they going to move to America next year?',
     hint: '"be going to" の疑問文は be動詞を先頭に置きます',
-    explanation: '【解説】\n"be going to" の疑問文は "Are/Is/Am + 主語 + going to + 動詞の原形?" の形です。',
+    explanation:
+      '【答え】Are they going to move to America next year?\n\n【be going to の疑問文】be動詞を主語の前に出すだけでよい。\n・They are going to move. → Are they going to move?\n・going to の部分はそのまま動かさない\n\n【答え方】\n・Yes, they are. ／ No, they are not.\nbe動詞で聞かれているので、be動詞で答える。\n\n【move の意味】\n・引っ越す … move to America\n・動く・動かす … The car moved slowly.\n・感動させる … The story moved me.（心を動かす）\n同じ語に、体の動きと心の動きの両方の意味がある。日本語の「感動」も「心が動く」と書くので、発想が同じである。\n\n【move to の to】方向を表す。移動先には to を使う。\n・move to America（アメリカへ引っ越す）\n・move from Osaka to Tokyo（大阪から東京へ）\n\n【国名に the をつけるかどうか】\n・つけない … America、Japan、China、France\n・つける … the United States、the Netherlands、the Philippines\n複数形の形をしている国名や、連合・共和国を表す語を含む国名には the がつく。\n\n【例文】Is she going to join the club? — Yes, she is.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -1232,7 +1253,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼は将来医者になるでしょう」を英語にしなさい。',
     answer: 'He will be a doctor in the future.',
     hint: '"will" で未来の予測を表します',
-    explanation: '【解説】\n"will be"（～になるでしょう）、"in the future"（将来）を使います。"will + 動詞の原形" で未来を表します。',
+    explanation:
+      '【答え】He will be a doctor in the future.\n\n【will の後は原形】will ＋ 動詞の原形。be動詞の原形は be である。\n・He will be a doctor.（is ではなく be）\n・He will is a doctor.（誤り）\nbe動詞の原形が be だということを、ここで確かめておく。am、is、are はすべて be が変化した形である。\n\n【助動詞の後はいつも原形】\n・will be、can be、must be、should be、may be\n・can swim、must go、should eat\n助動詞（will、can、must、should、may）の後ろは必ず原形である。この決まりはすべての助動詞に共通する。\n\n【in the future】「将来」。the がつくことに注意する。\n・in the future（将来）\n・in the past（過去に）\n・at present（現在）\n\n【職業に a をつける】a doctor のように、職業には a か an をつける。\n\n【will の否定と疑問】\n・He will not（won\'t）be a doctor.\n・Will he be a doctor? — Yes, he will.\nwon\'t のつづりは will not からかなり変わるので、そのまま覚える。\n\n【例文】I will be fifteen years old next month.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1243,7 +1265,8 @@ export const eigoExtra2: Question[] = [
     question: '「窓を開けてもらえますか？」を英語にしなさい。',
     answer: 'Will you open the window?',
     hint: '"Will you ...?" で依頼を表します',
-    explanation: '【解説】\n"Will you ...?" は「～してもらえますか？」という依頼の表現です。"Can you ...?" よりも丁寧な表現とも言われます。',
+    explanation:
+      '【答え】Will you open the window?\n\n【Will you 〜? の2つの意味】\n・依頼 … 「〜してくれませんか」。Will you open the window?\n・意志をたずねる … 「〜するつもりですか」\nどちらの意味かは場面で決まる。\n\n【ものを頼む言い方の丁寧さ】下にいくほど丁寧になる。\n・Open the window.（命令。ぶっきらぼう）\n・Will you open the window?\n・Can you open the window?\n・Would you open the window?\n・Could you open the window?\n・Would you mind opening the window?（最も丁寧）\n過去形の would・could を使うと丁寧になるのが英語の特徴である。直接的な言い方を避けて、遠回しにするためである。日本語で「〜していただけますでしょうか」と長くするほど丁寧になるのと似ている。\n\n【Will you と Shall I】\n・Will you 〜? … 相手にしてもらう\n・Shall I 〜? … 自分がしましょうか。Shall I open the window?\n・Shall we 〜? … 一緒にしませんか\n主語がだれかで意味が変わる。\n\n【答え方】\n・Sure. ／ All right. ／ OK. ／ Of course.\n・I am sorry, I cannot.（断るとき）\n\n【例文】Will you help me with my homework? — Sure.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1254,7 +1277,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女は今電話で話しています」を英語にしなさい。',
     answer: 'She is talking on the phone now.',
     hint: '「電話で」は "on the phone" です',
-    explanation: '【解説】\n"talk on the phone"（電話で話す）は重要表現です。"talk"（話す）→ "talking"（-ing 形）。',
+    explanation:
+      '【答え】She is talking on the phone now.\n\n【on the phone】「電話で」。電話に関わる表現は前置詞が決まっているので、まとめて覚える。\n・talk on the phone（電話で話す）\n・answer the phone（電話に出る）\n・on the phone（電話中で）\n\n【手段を表す前置詞】\n・on … on the phone、on the Internet、on TV、on the radio\n・by … by e-mail、by letter、by bus\n・in … in English、in Japanese（言語で）\n・with … with a pen（道具で）\n手段の言い方は語ごとに決まっているので、表現ごと覚えるのが早い。\n\n【talk・speak・say・tell の使い分け】必ず問われる。\n・talk … 話し合う。talk with ／ talk about\n・speak … （言語を）話す。speak English\n・say … 言葉を言う。say hello、say that 〜\n・tell … 人に伝える。tell me the truth、tell a story\ntell の後には必ず相手が来るのが特徴である。\n\n【talk の ing 形】talking。e で終わっていないので、そのまま ing をつける。\n\n【例文】\n・I talked with my friend on the phone for an hour.\n・Can you speak English? — Yes, a little.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -1265,7 +1289,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼らは今サッカーをしていますか？」を英語にしなさい。',
     answer: 'Are they playing soccer now?',
     hint: '現在進行形の疑問文です',
-    explanation: '【解説】\n"Are they playing soccer now?" は現在進行形の疑問文です。"play" → "playing"（そのまま -ing をつける）。',
+    explanation:
+      '【答え】Are they playing soccer now?\n\n【現在進行形の疑問文】be動詞を主語の前に出す。ing 形はそのまま動かさない。\n・They are playing soccer. → Are they playing soccer?\n\n【do や does を使わない】ここが最も多いまちがいである。\n・Are they playing soccer?（正しい）\n・Do they playing soccer?（誤り）\n進行形の文は be動詞の文なので、疑問文も be動詞を前に出す。\n\n【答え方】\n・Yes, they are. ／ No, they are not.\nbe動詞で聞かれたら be動詞で答える。\n\n【現在形と進行形の質問のちがい】\n・Do you play soccer?（ふだんサッカーをしますか）\n・Are you playing soccer?（今サッカーをしていますか）\n意味がまったくちがう。\n\n【play の ing 形】playing。y で終わるが、y は取らずにそのまま ing をつける。study → studying も同じである。\n・ただし過去形・三単現では y が i に変わる … studied、studies\n・ing のときだけ y をそのまま残す、と覚える\n\n【例文】\n・What are you doing? — I am reading a book.\n・Is it raining now? — No, it is not.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1276,7 +1301,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は今宿題をしていません」を英語にしなさい。',
     answer: 'I am not doing my homework now.',
     hint: '現在進行形の否定文は "be動詞 + not + 動詞の -ing 形" です',
-    explanation: '【解説】\n現在進行形の否定文は be動詞の後に "not" を置きます。"I am not doing my homework now." が正解です。',
+    explanation:
+      '【答え】I am not doing my homework now.\n\n【現在進行形の否定文】be動詞の後ろに not を置く。\n・I am doing my homework. → I am not doing my homework.\n\n【do や does を使わない】\n・I am not doing 〜（正しい）\n・I do not doing 〜（誤り）\n進行形は be動詞の文なので、否定も be動詞の後に not を置くだけである。\n\n【2つの do】この文には do が2回あるように見えるが、実は1つだけである。doing は「する」という意味の動詞 do の ing 形である。\n・do my homework … 宿題をする\n・I am doing my homework … 宿題をしているところだ\n\n【do を使う決まった言い方】\n・do my homework（宿題をする）\n・do the dishes（皿を洗う）\n・do my best（最善をつくす）\n・do the shopping（買い物をする）\nいずれも make ではなく do を使う。\n\n【短縮形】\n・I am not → I\'m not\n・he is not → he isn\'t ／ he\'s not\n・they are not → they aren\'t ／ they\'re not\n\n【例文】She is not sleeping. She is studying.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1288,7 +1314,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は速く泳ぐことができます」を英語にしなさい。',
     answer: 'I can swim fast.',
     hint: '"can + 動詞の原形" で能力を表します',
-    explanation: '【解説】\n"can"（できる）は助動詞で、後ろには動詞の原形が来ます。"I can swim fast." で「私は速く泳げます」となります。',
+    explanation:
+      '【答え】I can swim fast.\n\n【can の使い方】can ＋ 動詞の原形で「〜できる」を表す。\n・I can swim.／He can swim.（cans とはならない）\n・助動詞は主語によって形が変わらない\n\n【can の2つの意味】\n・能力 … I can swim fast.（泳げる）\n・許可 … You can use my pen.（使ってよい）\n・Can I 〜? は許可を求める言い方になる。Can I use your pen?\n\n【can の言いかえ】be able to ＋ 原形でも同じ意味になる。\n・I can swim. ＝ I am able to swim.\n・未来や完了の形では can が使えないので、be able to を使う … I will be able to swim.\n\n【否定文と疑問文】\n・I cannot（can\'t）swim.\n・Can you swim? — Yes, I can. / No, I cannot.\n・cannot は1語で書くのがふつうである\n\n【fast の位置】副詞なので動詞の後に置く。\n\n【助動詞のまとめ】\n・can（できる）・will（〜だろう、〜するつもり）・must（しなければならない）・should（すべきだ）・may（してもよい、かもしれない）\nどれも後ろは動詞の原形である。\n\n【例文】She can play the piano very well.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -1299,7 +1326,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女は3か国語を話すことができます」を英語にしなさい。',
     answer: 'She can speak three languages.',
     hint: '"can" は主語が何であっても形が変わりません',
-    explanation: '【解説】\n助動詞 "can" は主語が三人称単数でも "cans" にはなりません。"three languages"（3か国語）と複数形を使います。',
+    explanation:
+      '【答え】She can speak three languages.\n\n【can は形が変わらない】主語が三人称単数でも cans にはならない。後ろの動詞にも s はつかない。\n・She can speak（正しい）\n・She cans speak（誤り）\n・She can speaks（誤り）\n助動詞が来たら、動詞は必ず原形である。この決まりは will、must、should、may でも同じである。\n\n【三単現の s がつかない場面】s がつかない場合をまとめておくと混乱しない。\n・助動詞の後 … She can speak\n・does を使う疑問文・否定文 … Does she speak? ／ She does not speak\n・過去形 … She spoke\n・主語が I / you / we / they のとき\nつまり s がつくのは、現在形で主語が三人称単数のときだけである。\n\n【three languages】3つなので複数形にする。\n・language（言語）・English、Japanese、Chinese、French、Spanish\n\n【speak の使い方】\n・speak ＋ 言語 … speak English\n・speak to ／ speak with ＋ 人 … 人と話す\n・say、tell、talk との使い分けにも注意する\n\n【例文】He can speak English, Chinese, and Korean.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1310,7 +1338,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は今日早く起きなければなりません」を英語にしなさい。',
     answer: 'I must get up early today.',
     hint: '"must + 動詞の原形" で義務を表します',
-    explanation: '【解説】\n"must"（～しなければならない）は義務を表す助動詞です。"must" の後は動詞の原形が来ます。',
+    explanation:
+      '【答え】I must get up early today.\n\n【must の意味】「〜しなければならない」。強い義務を表す。後ろは動詞の原形である。\n\n【must と have to のちがい】ここが問われる。\n・must … 話し手の気持ちからくる義務。自分がそう思っている\n・have to … 外からの決まりや事情による義務\n例）I must study.（自分でそうすべきだと思う）／ I have to study.（明日テストがあるから）\n意味は近いので、多くの場合は入れかえられる。\n\n【否定にすると意味が大きく変わる】ここが最も重要である。\n・must not … 〜してはいけない（強い禁止）\n・do not have to … 〜する必要がない（不要）\nまったく反対の意味になるので、取りちがえると意味が通じなくなる。\n・You must not go.（行ってはいけない）\n・You do not have to go.（行かなくてよい）\n\n【must は過去形がない】過去のことを言うときは had to を使う。\n・I had to get up early yesterday.\n\n【must のもう一つの意味】「〜にちがいない」という強い推量にも使う。He must be tired.（疲れているにちがいない）\n\n【例文】You must wash your hands before eating.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1321,7 +1350,8 @@ export const eigoExtra2: Question[] = [
     question: '「あなたはもっと野菜を食べるべきです」を英語にしなさい。',
     answer: 'You should eat more vegetables.',
     hint: '"should + 動詞の原形" でアドバイスや義務を表します',
-    explanation: '【解説】\n"should"（～すべきだ・～したほうがよい）はアドバイスを表す助動詞です。"more vegetables"（もっと多くの野菜）を使います。',
+    explanation:
+      '【答え】You should eat more vegetables.\n\n【should の意味】「〜すべきだ、〜したほうがよい」。must より弱く、助言や提案に使う。後ろは動詞の原形である。\n\n【義務の強さの順】\n・must（〜しなければならない）… 最も強い\n・have to（〜しなければならない）… 外からの事情\n・should（〜したほうがよい）… 助言\n・had better（〜したほうがよい）… should より強く、警告に近い\nhad better は「そうしないとまずいことになる」という含みがあるので、目上の人には使わない。ていねいに助言するなら should を使う。\n\n【more の使い方】many・much の比較級である。\n・many／much → more → most\n・more vegetables（もっと多くの野菜）\n・more は「もっと多くの」という意味で、数えられる名詞にも数えられない名詞にも使える\n\n【vegetables を複数形にする理由】野菜という種類全体を指すので複数形にする。I like animals. と同じ考え方である。\n\n【助言の言い方】\n・You should 〜.\n・Why don\'t you 〜?（〜したらどうですか）\n・How about 〜ing?（〜するのはどうですか）\n\n【例文】You should go to bed early. You look tired.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
