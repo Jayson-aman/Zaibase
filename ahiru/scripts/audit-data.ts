@@ -363,9 +363,9 @@ for (const [subj, secs] of Object.entries(FORMULAS))
         if (!WHY_WORD.test(e) || words.length < 12)
           thinQuiz.push(`${subj} / ${it.label} / ${z.q.slice(0, 20)}…`);
       }
-// ★これは0にできる欠陥。埋め終わったら info ではなく check に変えて、
-//   以後は1件でも出たらコミットを止めるようにすること（現在は残債があるため info）。
-info('一問一答に解説がない（0にすべき欠陥・残債）', noExpQuiz, 3);
+// 2026/9/15に残債0件を達成したので、info から check に変えた。
+// 以後は1件でも出たらコミットが止まる。**解説を書かずに一問一答を足さないこと。**
+check('一問一答に解説がない', noExpQuiz, 3);
 info('一問一答の解説が理由まで書けていない（減らしていく数字）', thinQuiz, 3);
 
 // 公式集の一問一答そのものの品質。
