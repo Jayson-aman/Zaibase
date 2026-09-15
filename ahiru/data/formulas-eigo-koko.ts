@@ -128,7 +128,7 @@ export const eigoKokoFormulas: FormulaSection[] = [
         formula:
           "数えられる名詞は a/an か複数形 ／ 数えられない名詞は a をつけず複数形にもしない",
         explanation:
-          "water, money, information, homework, advice は数えられない名詞です。量を表すときは a glass of water のように単位をつけます。a は初めて出てくるもの、the は話し手と聞き手の両方が分かっているものにつけます。",
+          "名詞は、数えられる可算名詞と、数えられない不可算名詞に分かれます。可算名詞は a をつけたり複数形にしたりできます（a book / two books）。不可算名詞は water, money, information, homework, advice のように、形の決まっていないものや目に見えないものが多く、a をつけず複数形にもしません。量を表すときは a glass of water, two pieces of paper のように入れ物や単位を借ります。a は初めて出てくるもの、the は話し手と聞き手の両方が分かっているものにつけます。",
         steps: [
           "数えられない名詞: water, milk, money, time, information, homework, advice, news",
           "量を表すには単位をつける: a glass of water, two pieces of paper",
