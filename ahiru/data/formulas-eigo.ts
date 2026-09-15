@@ -79,7 +79,8 @@ export const eigoFormulas: FormulaSection[] = [
           {
             q: '誤りを直しなさい。She does not plays the guitar.',
             a: 'She does not play the guitar.',
-            explanation: 'does をつけたら、後ろの動詞は必ず原形。s を二重につけないようにします。',
+            explanation:
+              'She does not play the guitar. does をつけたら、後ろの動詞は必ず原形にする。主語が3人称単数であることは does がすでに表しているので、play にもう一度 s をつけると二重になってしまうからである。「s を持てるのは1か所だけ」と覚えると、does not plays のようなまちがいを防げる。',
           },
         ],
         checkpoints: [
@@ -110,12 +111,14 @@ export const eigoFormulas: FormulaSection[] = [
           {
             q: 'Are you a student? に「はい」と答えなさい。',
             a: 'Yes, I am.',
-            explanation: 'Are you 〜? と聞かれたら、答えの主語は I になり、be動詞も am に変わります。',
+            explanation:
+              'Yes, I am. Are you 〜? は「あなたは〜ですか」と相手にたずねる文なので、答えるのは自分になり、主語は you ではなく I に変わるからである。主語が I になれば be動詞も am にそろえる。Yes, you are. としてしまうのがよくあるまちがい。',
           },
           {
             q: '誤りを直しなさい。Does she likes music?',
             a: 'Does she like music?',
-            explanation: 'Does を使ったら後ろは原形。s は Does がすでに引き受けています。',
+            explanation:
+              'Does she like music? Does を使ったら、後ろの動詞は必ず原形。3人称単数の s は Does がすでに引き受けているので、like にもつけると二重になるからである。Do / Does / Did で始まる疑問文を見たら、後ろは原形、と決めてしまってよい。',
           },
         ],
         checkpoints: [
@@ -142,17 +145,20 @@ export const eigoFormulas: FormulaSection[] = [
           {
             q: '「ここで走ってはいけません」を英語に直しなさい。',
             a: 'Do not run here.（Don\'t run here.）',
-            explanation: '打ち消しの命令文は Do not ＋ 原形。主語は書きません。',
+            explanation:
+              'Do not run here.（短縮した形にしてもよい）。打ち消しの命令文は Do not ＋ 動詞の原形で作る。命令文は目の前の相手に言う文なので、主語の You は言わなくても分かるから書かないのである。「〜しなさい」なら原形だけ、「〜してはいけません」なら Do not をつける。',
           },
           {
             q: '「窓を開けてください」とていねいに言いなさい。',
             a: 'Please open the window.（Open the window, please. でもよい）',
-            explanation: '文の後ろに置くときは、コンマをつけて , please. とします。',
+            explanation:
+              'Please open the window.（Open the window, please. でもよい）。命令文はそのままだと強い言い方になるので、please を添えてやわらげる。文の前に置くときはそのまま続け、後ろに置くときはコンマをつけて , please. とするのが決まりである。',
           },
           {
             q: '誤りを直しなさい。You are kind to old people.（「お年寄りに親切にしなさい」という意味にする）',
             a: 'Be kind to old people.',
-            explanation: '命令文は主語を取り、be動詞も原形の Be にします。are のままにしないよう注意します。',
+            explanation:
+              'Be kind to old people. 命令文では主語を取り、動詞は原形にする。are は be動詞が変化した形なので、原形の Be にもどす必要があるからである。are のまま残すと「あなたは親切だ」という事実を述べる文になってしまい、命令にならない。',
           },
         ],
         checkpoints: [
@@ -179,12 +185,14 @@ export const eigoFormulas: FormulaSection[] = [
           {
             q: '「公園に大きな木があります」を英語に直しなさい。',
             a: 'There is a big tree in the park.',
-            explanation: 'a big tree は1本なので There is を使います。',
+            explanation:
+              'There is a big tree in the park. There is / There are は「〜がある」と、相手がまだ知らないものの存在を伝える言い方。a big tree は1本なので There is を使う。be動詞の形を決めるのは There ではなく、後ろに来る名詞のほうだからである。',
           },
           {
             q: 'かっこに入る語を答えなさい。There ( ) some students in the classroom.',
             a: 'are',
-            explanation: 'students と複数なので are です。',
+            explanation:
+              'are。There is / There are の be動詞は、後ろに来る名詞の数に合わせて決まるからである。students と複数なので are になる。There が主語のように見えるが、本当の主語は後ろの名詞のほう、と考えるとまちがえない。',
           },
           {
             q: '誤りを直しなさい。There are a cat under the table.',
@@ -226,7 +234,8 @@ export const eigoFormulas: FormulaSection[] = [
           {
             q: '「彼女は先週その映画を見ました」を英語に直しなさい。',
             a: 'She saw the movie last week.',
-            explanation: 'see の過去形は saw。last week（先週）が過去の目印です。',
+            explanation:
+              'She saw the movie last week. see の過去形は saw で、ed をつけない不規則動詞。last week（先週）が過去を表す目印になっているので、過去形を使うと判断できる。yesterday, last 〜, 〜 ago が出てきたら過去形、と目印で見分ける。',
           },
           {
             q: 'study の過去形を答えなさい。',
@@ -236,7 +245,8 @@ export const eigoFormulas: FormulaSection[] = [
           {
             q: '誤りを直しなさい。Did you went to school yesterday?',
             a: 'Did you go to school yesterday?',
-            explanation: 'Did を使ったら、後ろの動詞は必ず原形。過去は Did がすでに表しています。',
+            explanation:
+              'Did you go to school yesterday? Did を使ったら、後ろの動詞は必ず原形にする。過去であることは Did がすでに表しているので、went にすると過去を二重に表すことになるからである。Do / Does / Did のあとは原形、という決まりは疑問文でも否定文でも同じ。',
           },
         ],
         checkpoints: [
@@ -268,7 +278,8 @@ export const eigoFormulas: FormulaSection[] = [
           {
             q: 'かっこに入る語を答えなさい。He will ( ) fifteen years old next month.',
             a: 'be',
-            explanation: 'will の後ろは原形。is ではなく原形の be になります。',
+            explanation:
+              'be。will のような助動詞のあとは必ず動詞の原形が来る決まりだからである。is や am や are はすべて be が変化した形なので、原形の be にもどす。will is とは絶対に言わない、と覚えておくとよい。',
           },
           {
             q: '誤りを直しなさい。I will going to buy a new bike.',
@@ -343,12 +354,14 @@ export const eigoFormulas: FormulaSection[] = [
           {
             q: 'かっこに入る語を答えなさい。Have you ( ) been to Kyoto?（今までに京都へ行ったことがありますか）',
             a: 'ever',
-            explanation: '経験をたずねる疑問文では ever（今までに）を使います。',
+            explanation:
+              'ever。ever は「今までに」という意味で、経験をたずねる疑問文で使う。現在完了は完了・経験・継続の3つの意味を持つため、どの意味かを示す語を添えて区別するからである。経験なら ever / never / 回数、完了なら just / already / yet、継続なら for / since が目印になる。',
           },
           {
             q: '誤りを直しなさい。I have finished my homework yesterday.',
             a: 'I finished my homework yesterday.',
-            explanation: 'yesterday のようにはっきり過去を指す語は現在完了と一緒に使えません。ふつうの過去形にします。',
+            explanation:
+              'I finished my homework yesterday. yesterday のようにはっきり過去の一点を指す語は、現在完了と一緒には使えない。現在完了は「過去の出来事が今とつながっている」ことを表す形なので、過去の一点に目を向ける語とかみ合わないからである。こういうときはふつうの過去形にする。',
           },
         ],
         checkpoints: [
@@ -385,17 +398,20 @@ export const eigoFormulas: FormulaSection[] = [
           {
             q: '「あなたはもっと熱心に勉強すべきです」を英語に直しなさい。',
             a: 'You should study harder.',
-            explanation: '「〜すべきだ」は should。後ろは原形 study です。',
+            explanation:
+              'You should study harder. 「〜すべきだ」は should で表す。助動詞なので後ろは原形の study になる。hard（熱心に）の比較級は harder で、「もっと」を表している。must（〜しなければならない）より弱く、助言する言い方になる。',
           },
           {
             q: 'かっこに入る語を答えなさい。You ( ) not open this door.（このドアを開けてはいけません）',
             a: 'must',
-            explanation: 'must not は強い禁止「〜してはいけない」を表します。',
+            explanation:
+              'must。must not は「〜してはいけない」という強い禁止を表すからである。似た形の do not have to は「〜する必要はない」で、意味がまったく逆になるので取りちがえないこと。must not は「するな」、do not have to は「しなくてよい」。',
           },
           {
             q: '誤りを直しなさい。She can plays the violin.',
             a: 'She can play the violin.',
-            explanation: '助動詞のあとは必ず原形。主語が3人称単数でも s はつけません。',
+            explanation:
+              'She can play the violin. can などの助動詞のあとは必ず動詞の原形が来るからである。主語が3人称単数でも、助動詞があれば s はつけない。can plays, will goes, must takes などはすべて同じまちがいで、助動詞を見たら後ろは原形と決めてよい。',
           },
         ],
         checkpoints: [
@@ -423,17 +439,20 @@ export const eigoFormulas: FormulaSection[] = [
           {
             q: '「私は皿を洗わなければなりません」を英語に直しなさい。',
             a: 'I have to wash the dishes.',
-            explanation: 'I must wash the dishes. でも同じ意味です。',
+            explanation:
+              'I have to wash the dishes.（I must wash the dishes. でも同じ意味）。have to は「〜しなければならない」を表す言い方で、to のあとは原形が来る。must とのいちばん大きなちがいは打ち消したときで、must not は「してはいけない」という禁止、do not have to は「しなくてよい」という不要になり、意味が正反対になるからである。ここが最も問われる。',
           },
           {
             q: 'You do not have to come early. を日本語に直しなさい。',
             a: 'あなたは早く来る必要はありません。',
-            explanation: 'do not have to は「しなくてよい」。「来てはいけない」なら You must not come early. です。',
+            explanation:
+              'あなたは早く来る必要はありません。do not have to は「〜する必要はない」という意味で、禁止ではないからである。「来てはいけない」と言いたいなら You must not come early. になる。肯定文では must と have to はほぼ同じ意味なのに、打ち消すと意味が正反対になる点が最も問われる。',
           },
           {
             q: '誤りを直しなさい。She has to studies English every day.',
             a: 'She has to study English every day.',
-            explanation: 'to のあとは必ず原形。s は has がすでに引き受けています。',
+            explanation:
+              'She has to study English every day. to のあとは必ず動詞の原形が来るからである。主語が3人称単数であることは has がすでに表しているので、studies にすると s が二重になる。have to / has to のどちらでも、後ろは原形。',
           },
         ],
         checkpoints: [
@@ -469,7 +488,8 @@ export const eigoFormulas: FormulaSection[] = [
           {
             q: '「富士山は日本でいちばん高い山です」を英語に直しなさい。',
             a: 'Mt. Fuji is the highest mountain in Japan.',
-            explanation: '最上級には the をつけ、範囲を表すときは in Japan のように in を使います。',
+            explanation:
+              'Mt. Fuji is the highest mountain in Japan. 最上級には the をつける。「いちばん」はただ一つに決まるものなので、特定を表す the が必要になるからである。範囲を示すときは、場所や集団なら in（in Japan, in my class）、「〜の中で」と数えられるものを並べるなら of（of the five）を使う。',
           },
           {
             q: 'かっこの語を正しい形に直しなさい。He runs ( fast ) than Ken.',
@@ -507,17 +527,20 @@ export const eigoFormulas: FormulaSection[] = [
           {
             q: '「この箱はあの箱ほど重くありません」を英語に直しなさい。',
             a: 'This box is not as heavy as that one.',
-            explanation: 'That box is heavier than this one. と書きかえられます。',
+            explanation:
+              'This box is not as heavy as that one. not as 〜 as … は「…ほど〜ではない」という意味で、比べて劣っていることを表すからである。同じ内容を比較級で言うと That box is heavier than this one.（あの箱のほうが重い）となる。どちらが重いのかを取りちがえないよう、書きかえて確かめるとよい。',
           },
           {
             q: 'good の比較級と最上級を答えなさい。',
             a: 'better, best',
-            explanation: '不規則変化です。well（じょうずに）も同じく better / best になります。',
+            explanation:
+              'better, best。er / est をつけずに形そのものが変わる不規則変化だからである。よく使う語ほど古い形が残りやすく、good もその一つ。well（じょうずに・元気で）も同じく better / best になるので、2つまとめて覚える。bad は worse / worst、many と much は more / most。',
           },
           {
             q: '誤りを直しなさい。She can swim as faster as Tom.',
             a: 'She can swim as fast as Tom.',
-            explanation: 'as と as の間は比較級ではなく原級。er をつけてはいけません。',
+            explanation:
+              'She can swim as fast as Tom. as と as の間には、比較級ではなくもとの形（原級）を置くからである。as 〜 as は「同じくらい」と対等であることを表す言い方なので、差を表す比較級とはかみ合わない。er や more をつけてはいけない。',
           },
         ],
         checkpoints: [
@@ -563,7 +586,8 @@ export const eigoFormulas: FormulaSection[] = [
           {
             q: '誤りを直しなさい。This picture was take by my father.',
             a: 'This picture was taken by my father.',
-            explanation: 'be動詞のあとは過去分詞。take → took → taken の3番目の形を使います。',
+            explanation:
+              'This picture was taken by my father. 受動態は be動詞 ＋ 過去分詞で作るので、原形の take ではなく過去分詞の taken を使うからである。take → took → taken の3番目の形。不規則動詞は3つの形をひとそろいで覚えておかないと、ここでまちがえる。',
           },
         ],
         checkpoints: [
@@ -591,17 +615,20 @@ export const eigoFormulas: FormulaSection[] = [
           {
             q: '「この国では英語は話されていません」を英語に直しなさい。',
             a: 'English is not spoken in this country.',
-            explanation: '受動態の否定は be動詞のあとに not。does not は使いません。',
+            explanation:
+              'English is not spoken in this country. 受動態の否定は、be動詞のあとに not を置いて作るからである。文の中心になっている動詞は be動詞なので、does not や do not は使わない。「be動詞の文は not を be動詞の後ろに」という原則がそのまま当てはまる。',
           },
           {
             q: 'かっこに入る語を答えなさい。The mountain is covered ( ) snow.（その山は雪におおわれています）',
             a: 'with',
-            explanation: 'be covered with は by を使わない決まった言い方です。',
+            explanation:
+              'with。受動態では動作をした相手を by で示すのがふつうだが、be covered with のように by 以外を使う決まった言い方がいくつかあるからである。雪は山をおおう動作をした相手というより、おおっている材料にあたる、と考えると納得しやすい。be interested in, be known to, be made of なども同じ仲間。',
           },
           {
             q: '誤りを直しなさい。Was this letter wrote by Tom?',
             a: 'Was this letter written by Tom?',
-            explanation: '過去形の wrote ではなく過去分詞の written を使います。',
+            explanation:
+              'Was this letter written by Tom? 受動態は be動詞 ＋ 過去分詞なので、過去形の wrote ではなく過去分詞の written を使うからである。write → wrote → written の3番目の形。過去形と過去分詞が別の形になる動詞では、ここが最も問われる。',
           },
         ],
         checkpoints: [
@@ -637,7 +664,8 @@ export const eigoFormulas: FormulaSection[] = [
           {
             q: '「彼は何か飲むものがほしい」を英語に直しなさい。',
             a: 'He wants something to drink.',
-            explanation: 'something を後ろから説明する形容詞的用法です。語順は something to drink の順になります。',
+            explanation:
+              'He wants something to drink. to drink が something を後ろから説明している、形容詞的用法の不定詞。英語では、語句のまとまりで名詞を説明するときは後ろに置く決まりだからである。something cold to drink のように形容詞がつく場合も、something → cold → to drink の順になる。',
           },
           {
             q: '「私は友だちに会うために東京へ行きました」を英語に直しなさい。',
@@ -647,7 +675,8 @@ export const eigoFormulas: FormulaSection[] = [
           {
             q: '誤りを直しなさい。I like to playing the piano.',
             a: 'I like to play the piano.（または I like playing the piano.）',
-            explanation: 'to のあとは必ず原形。to と ing を同時に使うことはできません。',
+            explanation:
+              'I like to play the piano.（または I like playing the piano.）。to のあとは必ず原形が来るので、to と ing を同時に使うことはできないからである。like は to 〜 と ing のどちらでもよい動詞なので、どちらか一方に決めて書く。',
           },
         ],
         checkpoints: [
@@ -674,17 +703,20 @@ export const eigoFormulas: FormulaSection[] = [
           {
             q: '「早起きすることは私には難しい」を英語に直しなさい。',
             a: 'It is difficult for me to get up early.',
-            explanation: 'It は形だけの主語で、本当の主語は to get up early です。',
+            explanation:
+              'It is difficult for me to get up early. この It は形だけの主語で、本当の主語は to get up early のほうである。英語では長い主語を文の先頭に置くと読みにくいので、いったん It で受けておいて、中身をあとから示すからである。「〜にとって」は for で表す。',
           },
           {
             q: '「私はとてもつかれていて歩けませんでした」を too 〜 to 〜 を使って英語に直しなさい。',
             a: 'I was too tired to walk.',
-            explanation: 'not がなくても「歩けなかった」という打ち消しの意味になります。',
+            explanation:
+              'I was too tired to walk. too は「〜すぎる」という意味で、程度をこえてしまってできない、という含みを持つからである。だから not がなくても「歩けなかった」という打ち消しの意味になる。書きかえると I was so tired that I could not walk. となる。',
           },
           {
             q: '誤りを直しなさい。It is easy of me to swim.',
             a: 'It is easy for me to swim.',
-            explanation: '「〜にとって」は for を使います。of ではありません。',
+            explanation:
+              'It is easy for me to swim. 「〜にとって」を表すのは for だからである。of を使うのは kind, nice, careless, foolish のように、人の性質を表す形容詞のときだけで（It is kind of you to help me.）、easy や difficult は for を使う。',
           },
         ],
         checkpoints: [
@@ -711,17 +743,20 @@ export const eigoFormulas: FormulaSection[] = [
           {
             q: '「彼は話すのをやめました」を英語に直しなさい。',
             a: 'He stopped talking.',
-            explanation: 'stop のあとは ing形です。',
+            explanation:
+              'He stopped talking. stop のあとに動名詞（ing形）を置くと「〜するのをやめる」になる。動名詞はすでにしていることを表すので、それをやめる、という意味になるからである。なお stop to talk とすると「話すために立ち止まる」という別の意味になるので、使い分けに注意する。',
           },
           {
             q: 'かっこの語を正しい形に直しなさい。She finished ( do ) her homework.',
             a: 'doing',
-            explanation: 'finish のあとは ing形だけです。',
+            explanation:
+              'doing。finish のあとには動名詞（ing形）しか置けないからである。finish は「すでに始めていたことを終える」という意味なので、これからすることを表す to 不定詞とはかみ合わない。enjoy, stop, finish は ing形だけ、と3つまとめて覚える。',
           },
           {
             q: '誤りを直しなさい。I want going to America.',
             a: 'I want to go to America.',
-            explanation: 'want のあとは to ＋ 原形だけ。ing形は置けません。',
+            explanation:
+              'I want to go to America. want のあとは to ＋ 原形だけで、ing形は置けないからである。want は「これからしたい」という、まだしていないことを表す動詞なので、これから先を指す to 不定詞とかみ合う。want, hope, decide は to 不定詞だけ。',
           },
         ],
         checkpoints: [
@@ -853,7 +888,8 @@ export const eigoFormulas: FormulaSection[] = [
           {
             q: '誤りを直しなさい。If it will be sunny tomorrow, I will go fishing.',
             a: 'If it is sunny tomorrow, I will go fishing.',
-            explanation: 'if や when が作るかたまりの中では、未来のことでも will を使わず現在形にします。',
+            explanation:
+              'If it is sunny tomorrow, I will go fishing. if や when が作るかたまりの中では、未来のことでも will を使わず現在形にする決まりだからである。条件や時を表すかたまりは、いつのことかを主節のほうが決めているので、重ねて未来を示す必要がない。主節のほうには will を使ってよい。',
           },
         ],
         checkpoints: [
@@ -881,17 +917,20 @@ export const eigoFormulas: FormulaSection[] = [
           {
             q: '「彼女が何をほしがっているか教えてください」を英語に直しなさい。',
             a: 'Please tell me what she wants.',
-            explanation: '疑問詞 what のあとは she wants と「主語 ＋ 動詞」の順にします。',
+            explanation:
+              'Please tell me what she wants. 疑問文を文の一部に組みこむと、疑問文の語順ではなく「疑問詞 ＋ 主語 ＋ 動詞」の順になるからである。What does she want? という形のまま入れてはいけない。does が消えるので、動詞に3人称単数の s をつけ忘れないこと。',
           },
           {
             q: '語を正しい順にならべなさい。( who / is / know / I / she )',
             a: 'I know who she is.',
-            explanation: 'who のあとは she is の順。Who is she? の語順のままにしないようにします。',
+            explanation:
+              'I know who she is. 疑問詞 who のあとは she is と「主語 ＋ 動詞」の順にする。文の一部になった疑問文は、もう問いかけではなく名詞のかたまりとしてはたらくので、ふつうの語順にもどるからである。Who is she? の語順のまま入れないよう注意する。',
           },
           {
             q: '誤りを直しなさい。I do not know where does he live.',
             a: 'I do not know where he lives.',
-            explanation: '文の中に入れた疑問文は、疑問文の語順にしません。does を消し、live に s をつけます。',
+            explanation:
+              'I do not know where he lives. 文の中に入れた疑問文は、疑問文の語順にしないからである。does を消して「where ＋ he ＋ lives」の順にする。このとき does が消えるぶん、3人称単数の s は動詞のほうにつけなければならない。消し忘れと、つけ忘れの両方が起きやすい。',
           },
         ],
         checkpoints: [
@@ -928,12 +967,14 @@ export const eigoFormulas: FormulaSection[] = [
           {
             q: '電話で「もしもし、ケンです。トムさんをお願いします」を英語に直しなさい。',
             a: 'Hello. This is Ken. May I speak to Tom?',
-            explanation: '電話では I am Ken. とは言わず This is Ken. と名乗ります。',
+            explanation:
+              'Hello. This is Ken. May I speak to Tom? 電話では I am Ken. とは言わず This is Ken. と名乗る。相手に姿が見えず、声だけが届いている場面なので、「こちらは〜です」と自分を指し示す言い方をするからである。相手を確かめるときも Are you Tom? ではなく Is this Tom? になる。',
           },
           {
             q: '「映画に行くのはどうですか」を How about を使って英語に直しなさい。',
             a: 'How about going to the movies?',
-            explanation: 'さそうときの決まり文句です。答えは That sounds good. などになります。',
+            explanation:
+              'How about going to the movies? How about のあとは名詞か動名詞（ing形）を置く。about は前置詞で、前置詞のあとには名詞のはたらきをする語しか来られないからである。to go とはできない。さそいの返事は That sounds good. / Sure. などになる。',
           },
           {
             q: '誤りを直しなさい。How about to go shopping?',

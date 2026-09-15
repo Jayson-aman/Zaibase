@@ -59,19 +59,19 @@ export const eigoKokoFormulas: FormulaSection[] = [
             q: "She looks happy. は何文型ですか。",
             a: "SVC",
             explanation:
-              "She ＝ happy の関係です。look は SVC をとる動詞で、後ろには形容詞が来ます。",
+              "SVC。She ＝ happy という関係が成り立つからである。look は「〜に見える」という意味で、後ろに主語の様子を説明する語（補語）をとる。このとき補語になるのは形容詞なので、She looks happily. とはしない。become, feel, sound, get も同じ仲間。",
           },
           {
             q: "I gave him a book. を to を使って書きかえなさい。",
             a: "I gave a book to him.",
             explanation:
-              "SVOO は SVO＋to/for に書きかえられます。give, show, teach, send は to、buy, make, cook は for を使います。",
+              "I gave a book to him. SVOO（人 ＋ 物の順）は、SVO ＋ to / for（物 ＋ 人の順）に書きかえられる。to と for のどちらを使うかは動詞で決まっていて、相手がいないと成り立たない動作には to、相手がいなくてもできる動作には for を使うからである。give, show, teach, send は to、buy, make, cook は for。",
           },
           {
             q: "SVC と SVOC の見分け方を答えなさい。",
             a: "SVCは主語＝補語、SVOCは目的語＝補語",
             explanation:
-              "He is a teacher. は He＝teacher、We call him Ken. は him＝Ken です。イコールで結べるのがどちらかを見ます。",
+              "SVCは主語＝補語、SVOCは目的語＝補語。イコールで結べるのがどちらかを見れば区別できるからである。He is a teacher. は He ＝ teacher なので SVC、We call him Ken. は him ＝ Ken なので SVOC。動詞の後ろにある語どうしの関係をたしかめるのがこつ。",
           },
         ],
         checkpoints: [
@@ -102,12 +102,13 @@ export const eigoKokoFormulas: FormulaSection[] = [
             q: "There is my bag on the table. は正しいですか。",
             a: "正しくない（My bag is on the table. とする）",
             explanation:
-              "There 構文は不特定のものに使います。my や the がつく特定のものには使えません。",
+              "正しくない（My bag is on the table. とする）。There 構文は「〜があります」と、相手がまだ知らないものの存在を新しく知らせる言い方だからである。my や the がついたものは、すでに相手も分かっているものなので、この構文とはかみ合わない。特定のものは、ふつうに主語にして be動詞の文にする。",
           },
           {
             q: "Are there any students in the room? に No で答えなさい。",
             a: "No, there are not.（No, there aren't.）",
-            explanation: "there を使って答えます。主語を they にしないよう注意します。",
+            explanation:
+              "No, there are not.（短縮した形でもよい）。There 構文でたずねられたら、答えるときも there を使う決まりだからである。主語を they にして No, they are not. とすると、その they が何を指すのか分からなくなってしまう。聞かれた形をそのまま使って答える、と考えるとよい。",
           },
           {
             q: "There ＿ a lot of water in the glass. に入る be動詞は何ですか。",
@@ -150,13 +151,13 @@ export const eigoKokoFormulas: FormulaSection[] = [
             q: "a と the の使い分けを一言で答えなさい。",
             a: "a は初めて出るもの、the はすでに分かっているもの",
             explanation:
-              "I saw a dog. The dog was very big. のように、2回目からは the になります。",
+              "a は初めて出るもの、the はすでに分かっているもの。a は「たくさんある中の1つ」を表すのに対し、the は「どれのことか相手も分かっている」ことを示すからである。I saw a dog. The dog was very big. のように、1回目は a、2回目からは the になる。話し手と聞き手の間で特定できているかどうかが分かれ目。",
           },
           {
             q: "「コップ1杯の水」を英語で書きなさい。",
             a: "a glass of water",
             explanation:
-              "数えられない名詞は、入れ物や単位を使って量を表します。紙なら a piece of paper です。",
+              "a glass of water。water は数えられない名詞なので、a water や two waters とは言えないからである。そこで、入れ物や単位を使って量を表す。紙なら a piece of paper、パンなら a loaf of bread、コーヒーなら a cup of coffee。2杯なら two glasses of water と、数えるのは入れ物のほうになる。",
           },
         ],
         checkpoints: [
@@ -199,7 +200,7 @@ export const eigoKokoFormulas: FormulaSection[] = [
             q: "This is mine book. の誤りを直しなさい。",
             a: "This is my book.（または This book is mine.）",
             explanation:
-              "所有代名詞 mine の後ろに名詞は置けません。名詞をつけるなら所有格 my を使います。",
+              "This is my book.（または This book is mine.）。mine は「私のもの」という意味を1語で表す所有代名詞なので、後ろに名詞を置くと「私のもの本」となって重なってしまうからである。名詞をつけるなら所有格の my を使う。my book ＝ mine と、同じ内容を2通りで言い表せる。",
           },
         ],
         checkpoints: [
@@ -237,12 +238,14 @@ export const eigoKokoFormulas: FormulaSection[] = [
           {
             q: "We finished ＿ (clean) the room. を正しい形にしなさい。",
             a: "cleaning",
-            explanation: "finish は動名詞のみをとります。to clean は誤りです。",
+            explanation:
+              "cleaning。finish は動名詞（ing形）だけをとる動詞だからである。finish は「すでに始めていたことを終える」という意味なので、これから先のことを表す to 不定詞とはかみ合わない。enjoy, stop, finish は ing形だけ、と3つまとめて覚えるとよい。",
           },
           {
             q: "He decided ＿ (go) abroad. を正しい形にしなさい。",
             a: "to go",
-            explanation: "decide は不定詞のみをとります。これから先のことを表す動詞です。",
+            explanation:
+              "to go。decide は不定詞だけをとる動詞だからである。「決める」のはこれからすることについてなので、未来を向いている to 不定詞とかみ合う。want, hope, decide, plan も同じ仲間。動詞の意味が過去向きか未来向きかで、ing形か to 不定詞かが決まる、と考えると覚えやすい。",
           },
           {
             q: "不定詞をとる動詞と動名詞をとる動詞の傾向を答えなさい。",
@@ -280,7 +283,7 @@ export const eigoKokoFormulas: FormulaSection[] = [
             q: "Remember to lock the door. の意味を答えなさい。",
             a: "忘れずにドアにかぎをかけなさい（これからすること）",
             explanation:
-              "remember doing なら「かぎをかけたのを覚えている」と過去のことになります。",
+              "忘れずにドアにかぎをかけなさい（これからすること）。to 不定詞はこれからすることを表すので、remember to do は「これからするのを覚えておく」という意味になるからである。いっぽう remember doing なら「かぎをかけたのを覚えている」と、すでにしたことの話になる。to は未来向き、ing は過去向きと覚える。",
           },
           {
             q: "She stopped talking. と She stopped to talk. の意味のちがいを答えなさい。",
@@ -291,7 +294,8 @@ export const eigoKokoFormulas: FormulaSection[] = [
           {
             q: "forget to do と forget doing のちがいを答えなさい。",
             a: "to do はこれからするのを忘れる、doing は過去にしたのを忘れる",
-            explanation: "remember と同じ使い分けです。セットで覚えます。",
+            explanation:
+              "to do はこれからするのを忘れる、doing は過去にしたのを忘れる。to 不定詞が未来を向き、動名詞がすでにしたことを表すという性質のちがいから生まれる区別だからである。I forgot to call him.（電話するのを忘れた）と I forgot calling him.（電話したことを忘れていた）。remember と同じ使い分けなので、セットで覚える。",
           },
         ],
         checkpoints: [
@@ -322,12 +326,14 @@ export const eigoKokoFormulas: FormulaSection[] = [
           {
             q: "Please tell me ＿ ＿ get to the station.（駅への行き方）を完成させなさい。",
             a: "how to",
-            explanation: "how to ＋ 動詞の原形 で「〜のしかた」を表します。",
+            explanation:
+              "how to。how to ＋ 動詞の原形 で「〜のしかた」を表すからである。疑問詞に to 不定詞をつけると、「何を〜すべきか」「いつ〜すべきか」といった意味のまとまりになる。what to do（何をすべきか）、where to go（どこへ行くべきか）、when to start（いつ始めるべきか）も同じ形。",
           },
           {
             q: "疑問詞＋不定詞は、文の中でどんなはたらきをしますか。",
             a: "名詞のはたらき（動詞の目的語などになる）",
-            explanation: "I know how to swim. では know の目的語になっています。",
+            explanation:
+              "名詞のはたらき（動詞の目的語などになる）。ひとまとまりで「〜のしかた」「何をすべきか」という中身を表すので、名詞と同じように扱えるからである。I know how to swim. では know の目的語、How to use it is difficult. なら主語になる。名詞のかたまりだと分かれば、文のどこに置けるかが決まる。",
           },
           {
             q: "why to do という形はありますか。",
@@ -363,19 +369,20 @@ export const eigoKokoFormulas: FormulaSection[] = [
           {
             q: "Let me to know. の誤りを直しなさい。",
             a: "Let me know.",
-            explanation: "let の後ろは to のつかない原形です。",
+            explanation:
+              "Let me know. let の後ろは to のつかない原形（原形不定詞）を使う決まりだからである。make, let, have の3つは同じ形をとり、使役動詞と呼ばれる。help は to があってもなくてもよい。to をつけるかどうかは動詞ごとに決まっているので、この3つは特別あつかいで覚える。",
           },
           {
             q: "I saw him ＿ (cross) the street. を正しい形にしなさい。",
             a: "cross（または crossing）",
             explanation:
-              "知覚動詞は原形をとります。動作の途中を表すなら crossing も使えます。",
+              "cross（または crossing）。see, hear, feel などの知覚動詞は、後ろに to のつかない原形をとるからである。原形なら「渡りきるところまで見た」、crossing なら「渡っている途中を見た」と、動作のどこを見たのかがちがってくる。どちらも正しいが、意味に差が出る点をおさえる。",
           },
           {
             q: "He was made ＿ (go) there. を正しい形にしなさい。",
             a: "to go",
             explanation:
-              "受動態にすると to が復活します。make の受動態でよく問われるところです。",
+              "to go。能動態では make him go と原形を使うが、受動態にすると to が復活して be made to do の形になるからである。原形のままだと、動詞が2つ並んで見えて文の切れ目が分からなくなるため、to を置いて区切っていると考えるとよい。make の受動態でよく問われるところ。",
           },
         ],
         checkpoints: [
@@ -420,7 +427,7 @@ export const eigoKokoFormulas: FormulaSection[] = [
             q: "関係代名詞が省略されているかどうかを見分ける方法を答えなさい。",
             a: "名詞の直後に「主語＋動詞」が続いていれば省略されている",
             explanation:
-              "直後が動詞なら主格で、省略されていません。この見分けが長文読解の速さを決めます。",
+              "名詞の直後に「主語＋動詞」が続いていれば省略されている。省略できるのは目的格の関係代名詞だけで、そのときは後ろに主語と動詞がそろっているからである。逆に名詞の直後がいきなり動詞なら、それは主格なので省略できない。The book I read（省略あり）と The book which is on the desk（省略なし）。この見分けが長文読解の速さを決める。",
           },
           {
             q: "This is the house which I live in. の which は省略できますか。",
@@ -468,7 +475,8 @@ export const eigoKokoFormulas: FormulaSection[] = [
           {
             q: "what の前に先行詞を置けますか。",
             a: "置けない（what が先行詞をふくんでいるため）",
-            explanation: "the thing what という形は誤りです。",
+            explanation:
+              "置けない（what が先行詞をふくんでいるため）。what は「〜するもの・こと」という意味で、the thing which の2語ぶんをまとめて1語で表しているからである。だから the thing what という形は、同じ内容を二重に言うことになって誤りになる。What he said is true. のように、what から始まるかたまりがそのまま主語や目的語になる。",
           },
         ],
         checkpoints: [
@@ -504,13 +512,13 @@ export const eigoKokoFormulas: FormulaSection[] = [
             q: "現在分詞と過去分詞は、何で使い分けますか。",
             a: "その名詞が動作をする側か、される側か",
             explanation:
-              "a boy running（走る側）、a book written（書かれる側）です。",
+              "その名詞が動作をする側か、される側か。現在分詞（ing形）は「〜している」と動作をする側、過去分詞は「〜される」と動作を受ける側を表すからである。a boy running（走っているのは少年自身）、a book written（書かれたのは本のほうで、書いたのは別の人）。名詞と動詞の関係がどちら向きかを確かめる。",
           },
           {
             q: "長い主語の文で、まず何を探しますか。",
             a: "文全体の動詞",
             explanation:
-              "動詞が見つかれば、その前までが主語だと決まります。分詞や関係代名詞で主語が長い文を読むこつです。",
+              "文全体の動詞。動詞が見つかれば、その前までがまとめて主語だと決まるからである。分詞や関係代名詞で説明が足されると主語が長くなり、どこで切れるのか分からなくなるが、動詞を目印にすれば区切れる。The boy running in the park is my brother. なら is が文の動詞で、その前までが主語。",
           },
         ],
         checkpoints: [
@@ -539,7 +547,8 @@ export const eigoKokoFormulas: FormulaSection[] = [
           {
             q: "I do not know what is this. の誤りを直しなさい。",
             a: "I do not know what this is.",
-            explanation: "疑問詞の後ろは 主語＋動詞 の順です。",
+            explanation:
+              "I do not know what this is. 文の中に組みこまれた疑問文は、もう問いかけではなく名詞のかたまりとしてはたらくので、疑問文の語順にはせず「疑問詞 ＋ 主語 ＋ 動詞」の順にするからである。What is this? の語順のまま入れてはいけない。be動詞が最後に来る形になる。",
           },
           {
             q: "Tell me who ＿ (come) here yesterday. を正しい形にしなさい。",
@@ -591,18 +600,19 @@ export const eigoKokoFormulas: FormulaSection[] = [
             q: "than any other の後ろは単数形と複数形のどちらですか。",
             a: "単数形",
             explanation:
-              "any other students ではなく any other student です。よく問われます。",
+              "単数形。any other は「ほかのどの1つと比べても」という意味で、1つずつ取り出して比べる言い方だからである。だから any other students ではなく any other student になる。Ken is taller than any other student in his class. は、最上級の Ken is the tallest student in his class. と同じ内容を表す。",
           },
           {
             q: "in と of の使い分けを答えなさい。",
             a: "in は場所や集団、of は複数のものの中で",
             explanation:
-              "in my class, in Japan / of the four, of all the students のように使います。",
+              "in は場所や集団、of は複数のものの中で。in のあとには、その範囲を一つのまとまりとしてとらえられる語が来るからである（in my class, in Japan, in the world）。of のあとには、数えられるものを並べた語が来る（of the four, of all the students）。範囲か、数の集まりかで決まる。",
           },
           {
             q: "No other boy in this class is as tall as Ken. を最上級で書きかえなさい。",
             a: "Ken is the tallest boy in this class.",
-            explanation: "否定＋原級の形は、最上級の言いかえです。",
+            explanation:
+              "Ken is the tallest boy in this class. 「ほかのどの少年もケンほど背が高くない」ということは、ケンがいちばん高いということだからである。否定＋原級、否定＋比較級、比較級＋than any other、最上級の4つは同じ内容を表す言いかえで、入試でくり返し問われる。書きかえたら、だれがいちばんなのかを確かめる。",
           },
         ],
         checkpoints: [
@@ -632,19 +642,20 @@ export const eigoKokoFormulas: FormulaSection[] = [
           {
             q: "This box is twice ＿ ＿ ＿ that one.（2倍の大きさ）を完成させなさい。",
             a: "as large as",
-            explanation: "倍数は as 〜 as の前に置きます。",
+            explanation:
+              "as large as。倍数を表す語は as 〜 as のかたまりの前に置く決まりだからである。twice as large as（2倍）、three times as large as（3倍）となる。なお「2倍」は twice、「3倍」以上は three times のように times を使い、half as large as なら半分になる。",
           },
           {
             q: "as soon as possible の意味を答えなさい。",
             a: "できるだけ早く",
             explanation:
-              "as soon as he can とも言えます。possible と can の言いかえも問われます。",
+              "できるだけ早く。as 〜 as possible で「できるかぎり〜」を表すからである。possible の代わりに主語に合わせた can を使って as soon as he can とも言え、この言いかえも問われる。as soon as は「〜するとすぐに」という接続詞の使い方もあるので、後ろが possible か文かで見分ける。",
           },
           {
             q: "not as 〜 as を比較級で言いかえると、主語はどうなりますか。",
             a: "入れかわる",
             explanation:
-              "A is not as tall as B. → B is taller than A. 主語が逆になる点が要注意です。",
+              "入れかわる。not as tall as は「〜ほど背が高くない」という意味で、比べた相手のほうが高いことを表しているからである。だから比較級で言うときは、高いほうを主語に立てなおす必要がある。A is not as tall as B. → B is taller than A. 主語が逆になる点が要注意。",
           },
         ],
         checkpoints: [
@@ -681,12 +692,13 @@ export const eigoKokoFormulas: FormulaSection[] = [
             q: "This book is so easy that I can read it. を enough で書きかえなさい。",
             a: "This book is easy enough for me to read.",
             explanation:
-              "enough は形容詞の後ろに置きます。easy enough であって enough easy ではありません。",
+              "This book is easy enough for me to read. enough は形容詞の後ろに置く決まりなので、enough easy とはしないからである（名詞につくときは enough books と前に置く）。「だれにとって」は for me、「〜するには」は to read で表す。so 〜 that … と 〜 enough to … は同じ内容の言いかえになる。",
           },
           {
             q: "Shall we go? と同じ意味の表現を1つ答えなさい。",
             a: "Let us go.（Why do not we go? も可）",
-            explanation: "勧誘を表す3つの形は、書きかえでよく問われます。",
+            explanation:
+              "Let us go.（Why do not we go? も可）。3つとも「一緒に行きましょう」と相手をさそう言い方で、形はちがっても伝える内容が同じだからである。書きかえでよく問われる。答え方は Yes, let us. / Sure. などになる。How about going? も似たさそい方だが、こちらは後ろが ing形になる点がちがう。",
           },
         ],
         checkpoints: [
@@ -726,19 +738,19 @@ export const eigoKokoFormulas: FormulaSection[] = [
             q: "知らない単語が出てきたらどうしますか。",
             a: "前後から意味を推測し、そこで止まらずに読み進める",
             explanation:
-              "1語で止まると時間が足りなくなります。全体の流れがつかめれば解ける設問が多くあります。",
+              "前後から意味を推測し、そこで止まらずに読み進める。1語で止まってしまうと時間が足りなくなるうえ、その単語が設問に関係しないことも多いからである。実際、全体の流れさえつかめれば解ける設問が多い。前後の文や、その語がプラスの意味かマイナスの意味かだけでも見当をつけて先へ進む。",
           },
           {
             q: "選択肢を選ぶとき、何をしますか。",
             a: "本文の該当箇所と照らして、合わないものを消す",
             explanation:
-              "「本文に書かれていない」「言いすぎている」選択肢を消すと残りが絞れます。",
+              "本文の該当箇所と照らして、合わないものを消す。正しいものを一つ選ぼうとすると、どれももっともらしく見えて迷うが、消すべき理由はたいてい一つはっきりしているからである。「本文に書かれていない」「言いすぎている（always, all, never）」「本文と逆になっている」選択肢を消すと残りが絞れる。",
           },
           {
             q: "段落ごとにメモを取るのはなぜですか。",
             a: "設問に関係する段落をすぐ見つけられるようにするため",
             explanation:
-              "探し直す時間が大きく減ります。一言で十分です。",
+              "設問に関係する段落をすぐ見つけられるようにするため。長文では、設問を読んでから答えの場所をさがし直すのに最も時間がかかるからである。段落の横に「筆者の体験」「反対意見」のように一言だけ書いておけば、探し直す時間が大きく減る。長く書く必要はない。",
           },
         ],
         checkpoints: [
@@ -767,13 +779,14 @@ export const eigoKokoFormulas: FormulaSection[] = [
           {
             q: "they が指すものを探すとき、単数と複数のどちらの名詞を探しますか。",
             a: "複数",
-            explanation: "数が合わないものは候補から外せます。",
+            explanation:
+              "複数。they は複数を受ける代名詞なので、数の合わない単数の名詞は最初から候補から外せるからである。同じように it なら単数、he なら男性の単数、と数と性で候補をしぼれる。代名詞の指す内容を問われたら、まず数を確かめてから前をさがすと速い。",
           },
           {
             q: "this や that が指すのは名詞だけですか。",
             a: "文全体を指すこともある",
             explanation:
-              "前の文の内容全体を受けることがあります。名詞だけを探して見つからないときは、文を疑います。",
+              "文全体を指すこともある。this や that は、直前に述べられた内容をまるごと受けることができるからである。He failed the test. This made him sad. の This は「テストに落ちたこと」全体を指している。名詞だけを探して見つからないときは、前の文の内容そのものを疑う。",
           },
           {
             q: "日本語で答える問題で「それ」と書いてよいですか。",
@@ -809,18 +822,19 @@ export const eigoKokoFormulas: FormulaSection[] = [
             q: "英作文を書き終えたあと、確かめる項目を3つ答えなさい。",
             a: "主語と動詞／時制と三単現のs／大文字とピリオド",
             explanation:
-              "内容が合っていても、この3つのミスで失点することが非常に多くあります。",
+              "主語と動詞／時制と三単現のs／大文字とピリオド。内容が合っていても、この3つのミスで失点することが非常に多いからである。とくに主語を書き忘れる、過去の話なのに現在形のまま、文の最初を小文字で始める、というミスは見直せば必ず気づける。書き終えたら必ずこの順で見直す。",
           },
           {
             q: "語数の条件が「20語以上」のとき、15語で書いてよいですか。",
             a: "よくない（条件を満たさないと減点される）",
-            explanation: "内容の前に、まず条件を満たすことが必要です。",
+            explanation:
+              "よくない（条件を満たさないと減点される）。条件英作文は、内容だけでなく条件を守れているかも採点の対象になっているからである。語数が足りないと、その時点で減点や0点になることもある。内容を考える前に、まず条件（語数・使う語・書く内容）を確かめる。",
           },
           {
             q: "書けない単語があるとき、どうしますか。",
             a: "知っている別の言い方にする",
             explanation:
-              "たとえば「祖父」が書けなければ my father's father と表せます。",
+              "知っている別の言い方にする。英作文で大事なのは、正しい英語で内容を伝えることであって、難しい単語を使うことではないからである。「祖父」が書けなければ my father's father、「病院」が出てこなければ a place for sick people のように言いかえられる。書けない語にこだわって手が止まるほうが損。",
           },
         ],
         checkpoints: [
@@ -849,13 +863,14 @@ export const eigoKokoFormulas: FormulaSection[] = [
           {
             q: "リスニングで必ずメモすべきものを3つ答えなさい。",
             a: "数字・時刻（曜日）・場所",
-            explanation: "記憶だけにたよると、選択肢を見ている間に忘れます。",
+            explanation:
+              "数字・時刻（曜日）・場所。この3つは設問で問われやすいうえ、覚えておくのが難しく、選択肢を見ている間に忘れてしまうからである。記憶だけにたよらず、聞こえたらすぐ書き取る。とくに数字は、複数出てきたときにどちらがどちらか混ざりやすいので、何の数字かも添えて書く。",
           },
           {
             q: "聞き取れない部分があったらどうしますか。",
             a: "そこで止まらず、次を聞く",
             explanation:
-              "1か所にこだわると、その後がすべて聞けなくなります。",
+              "そこで止まらず、次を聞く。音声は待ってくれないので、1か所にこだわっているあいだに、その後の内容がすべて聞けなくなってしまうからである。聞き取れなかった部分も、全体の流れが分かれば見当がつくことが多い。切りかえて次に集中するほうが、結果として正答数は増える。",
           },
           {
             q: "会話の答えは、どのあたりに出てくることが多いですか。",
@@ -891,17 +906,20 @@ export const eigoKokoFormulas: FormulaSection[] = [
           {
             q: "電話で「ケンをお願いします」は英語でどう言いますか。",
             a: "May I speak to Ken?",
-            explanation: "自分を名乗るときは This is Ken speaking. です。",
+            explanation:
+              "May I speak to Ken? 電話では相手の姿が見えないので、直接呼ぶのではなく「話してもよいですか」とたずねる形で取りつぐのが決まった言い方だからである。自分を名乗るときも I am Ken. ではなく This is Ken speaking. となる。電話の場面は表現がほぼ決まっているので、そのまま覚える。",
           },
           {
             q: "How about going to the movies? への肯定的な答えを1つ書きなさい。",
             a: "That sounds good.（Sure. / That is a good idea. も可）",
-            explanation: "sounds の s を落とさないよう注意します。",
+            explanation:
+              "That sounds good.（Sure. / That is a good idea. も可）。sound は「〜に聞こえる」という意味で、相手の提案を聞いた感想を述べる言い方だからである。主語が That と3人称単数なので、sounds の s を落とさないよう注意する。断るときは Sorry, I cannot. などになる。",
           },
           {
             q: "道案内で「2つ目の角を左に曲がってください」を英語で書きなさい。",
             a: "Turn left at the second corner.",
-            explanation: "at the ＋ 序数 ＋ corner の形をそのまま覚えます。",
+            explanation:
+              "Turn left at the second corner. at the ＋ 序数 ＋ corner の形で「〜つ目の角で」を表す。角は地点なので、点を指す前置詞の at を使うからである。序数には the がつく。道案内では Go straight（まっすぐ行く）、Turn right（右に曲がる）、on your left（左手に）もあわせて覚えておくとよい。",
           },
         ],
         checkpoints: [
