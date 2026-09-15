@@ -224,6 +224,44 @@ info(
   4,
 );
 
+// 「区別すべき2語」が、公式集で並べて説明されているか。
+//
+// 同じ言葉づかいでまとめてしまうと、子どもは区別できないまま覚える。
+// 実際に「氷がとける（融解）」と「食塩がとける（溶解）」が区別されておらず、
+// 公式集に「融解」が1件も無かった。ほかにも 蒸発／沸騰、領海／排他的経済水域、
+// 体積／容積 が抜けていた（2026/9/15にすべて追加）。
+//
+// **問題集には出ているのに公式集で並べて説明していない対**を拾う。
+// 正当なもの（別の単元で扱うのが自然な対）も混ざるので ℹ 扱い。
+const CONFUSABLE: [string, string][] = [
+  ['融解', '溶解'], ['蒸発', '沸騰'], ['溶質', '溶媒'], ['有機物', '無機物'],
+  ['状態変化', '化学変化'], ['質量', '重力'], ['仕事', '仕事率'], ['電力', '電力量'],
+  ['示相化石', '示準化石'], ['火山岩', '深成岩'], ['公転', '自転'], ['恒星', '惑星'],
+  ['被告', '被告人'], ['控訴', '上告'], ['国庫支出金', '地方交付税'], ['歳入', '歳出'],
+  ['扇状地', '三角州'], ['促成栽培', '抑制栽培'], ['過疎', '過密'],
+  ['領海', '排他的経済水域'], ['直接税', '間接税'], ['条例', '法律'],
+  ['体積', '容積'], ['合同', '相似'], ['順列', '組み合わせ'], ['比例', '反比例'],
+  ['平均値', '中央値'], ['尊敬語', '謙譲語'], ['直喩', '隠喩'],
+  ['形容詞', '形容動詞'], ['不定詞', '動名詞'],
+];
+// SUBJECTS は { key, emoji, color } の配列なので、そのまま添字にはできない。
+// ほかの検査と同じく Object.entries(FORMULAS) で回す。
+const itemBlobs = Object.entries(FORMULAS).flatMap(([, secs]) =>
+  (secs as any[]).flatMap((sec: any) =>
+    (sec.items ?? []).map((it: any) => ({
+      label: it.label as string,
+      text: [it.formula, it.explanation, ...(it.steps ?? []), ...(it.checkpoints ?? []),
+             ...(it.quiz ?? []).flatMap((z: any) => [z.q, z.a, z.explanation])].filter(Boolean).join('\n'),
+    })),
+  ),
+);
+const qBlob = Q.map((q) => `${q.question}\n${q.answer}\n${q.explanation ?? ''}`).join('\n');
+const notPaired = CONFUSABLE.filter(([a, b]) => {
+  if (!qBlob.includes(a) || !qBlob.includes(b)) return false; // 扱っていない対は見ない
+  return !itemBlobs.some((x) => x.text.includes(a) && x.text.includes(b));
+}).map(([a, b]) => `${a}／${b}`);
+info('区別すべき2語を、公式集で並べて説明していない（要目視）', notPaired, 6);
+
 // ── D. 重複 ───────────────────────────────────
 console.log('\n=== D. 重複 ===');
 check('レッスンid重複', dupes(L.map((l) => l.id)));
