@@ -9,7 +9,8 @@ export const eigoExtra2: Question[] = [
     question: '「犬」を英語で何と言いますか？',
     answer: 'dog',
     hint: 'ペットとして人気の動物です',
-    explanation: '【解説】\n「犬」は英語で "dog" と言います。複数形は "dogs" です。',
+    explanation:
+      '【答え】dog\n\n【発音とつづり】ドッグ。dog は3文字で、o は「オ」に近い短い音。dog（犬）と dig（掘る）はつづりが1字ちがいなので、書くときに気をつける。\n\n【数えられる名詞】dog は数えられる名詞なので、\n・1ぴきなら a dog（a をつける）\n・2ひき以上なら dogs（s をつける）\n英語では「1つか、2つ以上か」をいつもはっきりさせる。日本語にはない考え方なので、ここが最初のつまずきどころになる。\n\n【関わりのある語】\n・puppy … 子犬\n・bark … ほえる（Dogs bark.）\n・walk the dog … 犬の散歩をする\n\n【犬を使った言い方】\n・It is raining cats and dogs. … 雨がどしゃぶりに降っている\n・Every dog has its day. … だれにでもよい日はある\n英語にも、動物を使ったことわざが多い。\n\n【例文】\n・I have a dog. （犬を1ぴき飼っています）\n・My dog is very friendly. （うちの犬はとても人なつこい）\n・There are three dogs in the park. （公園に犬が3びきいます）',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -20,7 +21,8 @@ export const eigoExtra2: Question[] = [
     question: '「猫」を英語で何と言いますか？',
     answer: 'cat',
     hint: 'ニャーと鳴く動物です',
-    explanation: '【解説】\n「猫」は英語で "cat" と言います。複数形は "cats" です。',
+    explanation:
+      '【答え】cat\n\n【発音とつづり】キャット。a は「ア」と「エ」の中間の音で、日本語の「ア」より口を横に開く。cat・cap・cup はつづりが似ているので、書き分けに注意する。\n\n【数えられる名詞】\n・1ぴき … a cat\n・2ひき以上 … cats\n\n【関わりのある語】\n・kitten … 子猫\n・pet … ペット\n\n【猫を使った言い方】\n・Let the cat out of the bag. … うっかり秘密をもらす\n・Curiosity killed the cat. … 好奇心もほどほどに\n・rain cats and dogs … どしゃぶりに降る\n\n【a と the のちがい】ここは中学英語でずっと問われる。\n・a cat … どれでもよい1ぴきの猫。初めて話に出すとき\n・the cat … 相手も分かっている、あの猫。2回目以降\n例）I have a cat. The cat is white.（猫を飼っています。その猫は白いです）\n日本語の「が」と「は」の使い分けと同じ考え方である。初めて出すものには a、すでに話に出たものには the。\n\n【例文】\n・I like cats. （猫が好きです。種類全体をいうときは複数形）\n・The cat is sleeping on the sofa.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -31,7 +33,8 @@ export const eigoExtra2: Question[] = [
     question: '「鳥」を英語で何と言いますか？',
     answer: 'bird',
     hint: '空を飛ぶ動物です',
-    explanation: '【解説】\n「鳥」は英語で "bird" と言います。複数形は "birds" です。',
+    explanation:
+      '【答え】bird\n\n【発音とつづり】バード。ir の部分は、口をあまり開けずに「アー」とのばす音である。bird・girl・shirt・first はすべて同じ ir の音なので、まとめて覚えると発音が安定する。\n\n【数えられる名詞】a bird ／ birds。\n\n【関わりのある語】\n・wing … つばさ\n・fly … 飛ぶ\n・nest … 巣\n・feather … 羽\n\n【鳥を使った言い方】国語の学習ともつながる。\n・Kill two birds with one stone. … 一石二鳥。国語の四字熟語「一石二鳥」は、この英語のことわざを訳したものである\n・Birds of a feather flock together. … 同じ羽の鳥は群れる。国語の「類は友を呼ぶ」にあたる\n・The early bird catches the worm. … 早起きは三文の徳\n国語のことわざと英語のことわざが対応しているものが多い。両方まとめて覚えると効率がよい。\n\n【例文】\n・A bird is singing in the tree. （木で鳥が鳴いている）\n・Birds fly in the sky. （鳥は空を飛ぶ）\n・I saw many birds at the lake.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -42,7 +45,8 @@ export const eigoExtra2: Question[] = [
     question: '「魚」を英語で何と言いますか？',
     answer: 'fish',
     hint: '水の中に住む生き物です',
-    explanation: '【解説】\n「魚」は英語で "fish" と言います。複数形も "fish"（変化なし）が一般的です。',
+    explanation:
+      '【答え】fish\n\n【複数形に注意】ここが最も問われる。fish は単数も複数も同じ形である。\n・one fish（1ぴき）／ three fish（3びき）\n・fishes という形もあるが、これは魚の種類が複数あるときに使う特別な言い方である\n\n【単複同形の名詞】まとめて覚える。\n・fish（魚）・sheep（羊）・deer（しか）・Japanese（日本人）・Chinese（中国人）\n群れで数えるものや、国名から来た語に多い。\n\n【不規則な複数形】英語の複数形は s をつけるだけではない。\n・man → men、woman → women、child → children\n・foot → feet、tooth → teeth、mouse → mice\n・leaf → leaves、knife → knives（f・fe が ves に変わる）\n・city → cities（子音＋y は ies に変わる）\n・potato → potatoes、tomato → tomatoes（o で終わる語は es）\n規則どおりでないものを先に覚えるのが近道である。\n\n【食べ物としての fish】料理としての魚は数えられない名詞として扱われることがある。I ate fish for dinner.\n\n【例文】\n・I caught three fish. （魚を3びきつかまえた）\n・Fish live in water. （魚は水の中にすむ）',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -53,7 +57,8 @@ export const eigoExtra2: Question[] = [
     question: '「馬」を英語で何と言いますか？',
     answer: 'horse',
     hint: '乗ることができる大きな動物です',
-    explanation: '【解説】\n「馬」は英語で "horse" と言います。競馬では "horse racing" と言います。',
+    explanation:
+      '【答え】horse\n\n【発音とつづり】ホース。or は「オー」とのばす音で、horse・short・north・sport が同じ音である。日本語の「ホース（水をまく管）」は hose で別の語なので、つづりに注意する。\n\n【数えられる名詞】a horse ／ horses。\n\n【関わりのある語】\n・ride a horse … 馬に乗る\n・horse racing … 競馬\n・pony … 小型の馬\n・stable … 馬小屋\n\n【馬を使った言い方】\n・Hold your horses. … 落ち着いて、あわてないで\n・You can lead a horse to water, but you cannot make it drink. … 馬を水辺に連れて行けても、水を飲ませることはできない。本人にその気がなければ、まわりが何をしても変わらないという意味\n\n【乗り物の言い方】前置詞に注意する。\n・on a horse／on a bike／on a bus／on a train（またがる、または大きな乗り物）\n・in a car／in a taxi（囲まれた小さな乗り物）\nまたがるか、中に入るかで on と in を使い分ける。これは試験でよく出る。\n\n【例文】\n・I can ride a horse. （馬に乗れます）\n・Horses run very fast.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -75,7 +80,8 @@ export const eigoExtra2: Question[] = [
     question: '「バナナ」を英語で何と言いますか？',
     answer: 'banana',
     hint: '黄色い細長い果物です',
-    explanation: '【解説】\n「バナナ」は英語で "banana" と言います。スペルに注意：b-a-n-a-n-a です。',
+    explanation:
+      '【答え】banana\n\n【つづりの注意】b-a-n-a-n-a。a が3つ、n が2つである。「バナナ」と日本語で書くと3拍なので、つい n の数をまちがえる。a と n が交互に並ぶと覚えるとよい。\n\n【発音】バナーナに近く、真ん中の na を強く読む。日本語のように平らに「バナナ」と読むと通じにくい。英語は、どこを強く読むか（アクセント）が大切である。\n\n【数えられる名詞】a banana ／ two bananas。\n\n【果物の名前】\n・apple（りんご）・orange（オレンジ）・grape（ぶどう）・peach（もも）・strawberry（いちご）・watermelon（すいか）\n・an apple、an orange … 母音（アイウエオの音）で始まる語には a ではなく an をつける\na か an かは、つづりではなく音で決める。an hour（h を読まないので母音の音で始まる）、a university（ユと読むので子音の音）。\n\n【果物全体をいうとき】I like bananas. のように複数形にする。種類全体をいうときは複数形にするのが英語の習慣である。\n\n【例文】\n・I eat a banana every morning.\n・Bananas come from warm countries.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -86,7 +92,8 @@ export const eigoExtra2: Question[] = [
     question: '「パン」を英語で何と言いますか？',
     answer: 'bread',
     hint: '小麦粉で作られた食べ物です',
-    explanation: '【解説】\n「パン」は英語で "bread" と言います。フランス語の "pain" から来ていますが、英語では "bread" です。',
+    explanation:
+      '【答え】bread\n\n【数えられない名詞】ここが最も大切である。bread は数えられない名詞なので、a bread とも breads とも言わない。数えるときは入れ物や形を表す語を使う。\n・a piece of bread … パン1切れ\n・a slice of bread … 薄く切ったパン1枚\n・a loaf of bread … パン1かたまり\nもとの形がはっきりしないもの、切り分けて使うものは数えられない名詞になりやすい。\n\n【数えられない名詞の代表】\n・食べ物 … bread、rice、meat、cheese、butter、sugar、salt\n・飲み物 … water、milk、coffee、tea\n・材料 … paper、wood、glass\n・目に見えないもの … information、advice、news、homework、music\nhomework と news は、日本語の感覚では数えられそうなので、特に問われる。a homework とは言わない。\n\n【発音とつづり】ブレッド。ea を「エ」と読む。bread・head・ready・weather が同じ。いっぽう eat・sea・tea は「イー」と読む。同じ ea でも読み方が2通りある。\n\n【「パン」はどこから来たか】日本語の「パン」はポルトガル語から入った語である。英語では bread なので、そのままでは通じない。\n\n【例文】I had two slices of bread for breakfast.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -97,7 +104,8 @@ export const eigoExtra2: Question[] = [
     question: '「牛乳」を英語で何と言いますか？',
     answer: 'milk',
     hint: '白い飲み物です',
-    explanation: '【解説】\n「牛乳」は英語で "milk" と言います。"a glass of milk"（牛乳一杯）という表現をよく使います。',
+    explanation:
+      '【答え】milk\n\n【数えられない名詞】液体なので数えられない。a milk とも milks とも言わない。数えるときは入れ物を使う。\n・a glass of milk … コップ1杯の牛乳\n・a bottle of milk … びん1本\n・a carton of milk … 紙パック1本\n「入れ物 of もの」の形は必ず覚える。\n\n【いろいろな入れ物の言い方】\n・a glass of water／milk（コップ）\n・a cup of coffee／tea（カップ）\n・a bottle of juice（びん）\n・a piece of cake（1切れ）\n・a sheet of paper（紙1枚）\n・a slice of bread／cheese（薄切り1枚）\n入れ物や形で数えるという考え方は、日本語の「1杯」「1枚」「1切れ」と同じである。\n\n【動詞としての milk】milk a cow で「牛の乳をしぼる」。名詞と同じ形が動詞にもなる語は英語に多い（water、book、name、hand）。\n\n【発音とつづり】ミルク。l の音は、舌先を上の歯ぐきにつけて出す。\n\n【例文】\n・I drink a glass of milk every morning.\n・Would you like some milk? （数えられない名詞には some をつける）',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -108,7 +116,8 @@ export const eigoExtra2: Question[] = [
     question: '「水」を英語で何と言いますか？',
     answer: 'water',
     hint: '飲み物の基本です',
-    explanation: '【解説】\n「水」は英語で "water" と言います。"a glass of water"（水一杯）という表現をよく使います。',
+    explanation:
+      '【答え】water\n\n【数えられない名詞】液体なので数えられない。数えるときは a glass of water、two bottles of water のように入れ物を使う。\n\n【発音】ウォーター。t の音がアメリカ英語では「ラ」に近く聞こえる。イギリス英語でははっきり t と発音する。聞き取りで戸惑いやすいところである。\n\n【some と any】数えられない名詞にもつく。\n・some … ふつうの文（肯定文）で使う。I want some water.\n・any … 疑問文・否定文で使う。Do you have any water? ／ I do not have any water.\n・ただし、相手にすすめるときの疑問文では some を使う。Would you like some water?（お水はいかがですか）\nすすめる・お願いするときは some、というのが試験でよく問われる例外である。\n\n【動詞としての water】water the flowers で「花に水をやる」。\n\n【水に関わる語】\n・ice（氷）・steam（蒸気）・rain（雨）・river（川）・sea（海）・lake（湖）\n・waterfall（滝）は water と fall を合わせた語。2つの語を合わせた複合語は意味が分かりやすい\n\n【例文】\n・Can I have some water? （水をもらえますか）\n・Water is very important for life.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -119,7 +128,8 @@ export const eigoExtra2: Question[] = [
     question: '「本」を英語で何と言いますか？',
     answer: 'book',
     hint: '読んで勉強するものです',
-    explanation: '【解説】\n「本」は英語で "book" と言います。"bookstore"（本屋）、"bookmark"（しおり）など多くの複合語があります。',
+    explanation:
+      '【答え】book\n\n【発音とつづり】ブック。oo は「ウ」と短く読む。book・look・cook・good・foot が同じ短い音。いっぽう school・moon・food・soon は「ウー」とのばす。同じ oo でも2通りあるので、語ごとに覚える。\n\n【数えられる名詞】a book ／ books。\n\n【book から広がる語】\n・bookstore … 本屋（book と store）\n・bookshelf … 本だな（book と shelf）\n・bookmark … しおり（book と mark）\n・notebook … ノート（note と book）\n・textbook … 教科書\n2つの語をつなげて新しい語をつくる（複合語）のは英語のふつうのやり方である。意味が予想できるので、知らない語でも見当がつく。\n\n【動詞としての book】「予約する」という意味がある。I booked a room.（部屋を予約した）もとは「帳簿に書きこむ」ことから来ている。\n\n【日本語の「ノート」に注意】日本語の「ノート（帳面）」は英語では notebook である。英語の note は「メモ・覚え書き」の意味なので、そのままでは通じない。\n\n【例文】\n・I read a book every week.\n・This book is very interesting.\n・She has many books about animals.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -130,7 +140,8 @@ export const eigoExtra2: Question[] = [
     question: '「鉛筆」を英語で何と言いますか？',
     answer: 'pencil',
     hint: '書くための文房具です',
-    explanation: '【解説】\n「鉛筆」は英語で "pencil" と言います。"pen"（ペン）と区別しましょう。',
+    explanation:
+      '【答え】pencil\n\n【つづりの注意】p-e-n-c-i-l。c を s と書かないこと。pencil の c は「ス」と読む。c は、後ろに e・i・y が来ると「ス」の音になり、それ以外では「ク」の音になる。\n・「ス」… pencil、city、cent、ice、face\n・「ク」… cat、cup、cold、school\nこの決まりを知っていると、初めて見る語の読み方が予想できる。\n\n【pen との関係】pencil と pen は別の語である。pen はラテン語で「羽」を意味する語から来ており、昔は鳥の羽根をペンにしていたなごりである。\n\n【文房具の語】\n・eraser（消しゴム）・ruler（定規）・scissors（はさみ）・glue（のり）・notebook（ノート）・pencil case（筆箱）\n・scissors はいつも複数形。2枚の刃が組になっているためである。同じ理由で glasses（めがね）、pants（ズボン）、shoes（くつ）も複数形で使う\n\n【数えるとき】a pencil ／ two pencils。scissors を数えるときは a pair of scissors（1ちょう）という。pair は「組」の意味。\n\n【例文】\n・I have three pencils.\n・May I borrow your pencil?',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -141,7 +152,8 @@ export const eigoExtra2: Question[] = [
     question: '「椅子」を英語で何と言いますか？',
     answer: 'chair',
     hint: '座る家具です',
-    explanation: '【解説】\n「椅子」は英語で "chair" と言います。背もたれのない椅子は "stool" と言います。',
+    explanation:
+      '【答え】chair\n\n【発音とつづり】チェア。ch は「チ」の音である。chair・child・cheese・chicken・church が同じ。ただし school・Christmas の ch は「ク」と読むので注意する。\n\n【いすの種類】\n・chair … 背もたれのあるいす\n・stool … 背もたれのないいす\n・sofa … ソファ\n・bench … ベンチ\n\n【chairperson】会議の議長のことを chairperson、または chair という。議長がいすにすわって会を進めることから来ている。昔は chairman と言ったが、男性を表す man を避けて chairperson を使うようになった。英語では、男女を区別しない言い方に改める動きが進んでいる。\n・policeman → police officer\n・fireman → firefighter\n・stewardess → flight attendant\nこの言いかえは入試でも出題される。\n\n【前置詞に注意】\n・sit on a chair … いすにすわる（上にのる感じ）\n・sit in an armchair … ひじかけいすにすわる（囲まれる感じ）\nどんな形のいすかで前置詞が変わる。\n\n【例文】\n・Please sit on this chair.\n・There are six chairs around the table.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -152,7 +164,8 @@ export const eigoExtra2: Question[] = [
     question: '「テーブル」を英語で何と言いますか？',
     answer: 'table',
     hint: '食事をするときに使う家具です',
-    explanation: '【解説】\n「テーブル」は英語で "table" と言います。"dining table"（食卓）、"coffee table"（コーヒーテーブル）などがあります。',
+    explanation:
+      '【答え】table\n\n【もう一つの意味】table には「表（ひょう）」という意味もある。\n・timetable … 時間割、時刻表\n・a table of contents … 目次\n数や言葉を並べて整理したものという意味で、算数・理科の「表」もこの語である。\n\n【desk とのちがい】ここが問われる。\n・table … 食事をしたり、物を置いたりする台。みんなで囲む\n・desk … 勉強や仕事をするための机。ふつう引き出しがある\n日本語ではどちらも「つくえ」「テーブル」と言えてしまうので、使い分けを意識する。\n\n【前置詞】\n・on the table … テーブルの上に\n・under the table … テーブルの下に\n・at the table … テーブルについて（食事中）\nat は「その場にいる」感じを表す。We are at the table. は「食事中です」という意味になる。\n\n【組み合わせ】dining table（食卓）、coffee table（低いテーブル）、table tennis（卓球）。table tennis は「テーブルの上のテニス」で、そのままの名前である。\n\n【例文】\n・The book is on the table.\n・Please set the table. （食卓の用意をしてください）',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -163,7 +176,8 @@ export const eigoExtra2: Question[] = [
     question: '「窓」を英語で何と言いますか？',
     answer: 'window',
     hint: '外の景色が見えるガラスの部分です',
-    explanation: '【解説】\n「窓」は英語で "window" と言います。"window shopping"（ウィンドウショッピング）という表現もあります。',
+    explanation:
+      '【答え】window\n\n【語のなりたち】もとは古い北欧の言葉で、wind（風）と eye（目）を合わせた「風の目」という意味だった。ガラスのない時代、壁に開けた穴から風が入ってきたことに由来する。語の成り立ちを知ると、つづりが覚えやすくなる。\n\n【発音とつづり】ウィンドウ。w-i-n-d-o-w で、w が2つある。最後の w を忘れやすい。\n\n【家に関わる語】\n・door（ドア）・wall（壁）・floor（床）・ceiling（天井）・roof（屋根）・stairs（階段）\n・kitchen（台所）・bedroom（寝室）・bathroom（浴室）・living room（居間）\n\n【window を使った言い方】\n・window shopping … 見るだけの買い物\n・a window seat … 窓ぎわの席\n・open the window ／ close the window … 窓を開ける・閉める\n\n【教室でよく使う表現】\n・Please open the window. （窓を開けてください）\n・May I close the window? （窓を閉めてもいいですか）\n・Could you open the window? （より ていねいな頼み方）\nMay I 〜? は許可を求める、Could you 〜? は相手に頼む。この2つのちがいは試験で問われる。\n\n【例文】Look out of the window. （窓の外を見て）',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -175,7 +189,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は学生です」を英語にしなさい。',
     answer: 'I am a student.',
     hint: '主語が "I" のとき be動詞は "am" を使います',
-    explanation: '【解説】\n主語が "I"（私）のとき、be動詞は "am" を使います。"I am a student." が正解です。短縮形は "I\'m a student." です。',
+    explanation:
+      '【答え】I am a student.\n\n【be動詞の使い分け】主語によって3つに分かれる。これがすべての土台になる。\n・I → am\n・he / she / it / 単数の名詞 → is\n・you / we / they / 複数の名詞 → are\n「I だけ am、you は are」と、まずこの2つを確実にする。\n\n【短縮形】会話ではふつう短くする。I am は I\'m、he is は he\'s、they are は they\'re となる。\n\n【a を忘れない】student は数えられる名詞なので、1人なら a をつける。日本語には a にあたる言葉がないので、最も忘れやすいところである。\n・I am a student.（正しい）\n・I am student.（誤り）\n・We are students.（複数形なら a はつけない）\n\n【be動詞の意味】「〜です」「〜にいる・ある」の2つがある。\n・I am a student.（〜です）\n・I am in the classroom.（〜にいる）\n\n【疑問文と否定文】\n・疑問文 … be動詞を前に出す。Are you a student?\n・否定文 … be動詞の後に not。I am not a student.\n一般動詞とちがい、do を使わないのが大事な点である。',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -197,7 +212,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女は医者です」を英語にしなさい。',
     answer: 'She is a doctor.',
     hint: '主語が "She" のとき be動詞は "is" を使います',
-    explanation: '【解説】\n主語が "She"（彼女）のとき、be動詞は "is" を使います。"She is a doctor." が正解です。',
+    explanation:
+      '【答え】She is a doctor.\n\n【なぜ is なのか】主語が she（三人称単数）だから。三人称単数とは、自分（I）でも相手（you）でもない、1人・1つのものをいう。he、she、it、Tom、my father、this book などがすべて当てはまる。\n\n【be動詞の表（もう一度）】\n・I → am\n・he / she / it / 単数の名詞 → is\n・you / we / they / 複数の名詞 → are\n\n【a doctor の a】職業を言うときは a をつける。1人の医者という意味だからである。\n・She is a doctor.（正しい）\n・She is doctor.（誤り）\n職業・身分を表す名詞には必ず a か an をつけると覚えておく。\n\n【職業の語】\n・teacher（先生）・doctor（医者）・nurse（看護師）・driver（運転手）・cook（料理人）・singer（歌手）・writer（作家）・police officer（警察官）\n・動詞に er をつけて「〜する人」になる語が多い。teach → teacher、sing → singer、write → writer、drive → driver。この形を知っていると、知らない語も意味が分かる。\n\n【疑問文】Is she a doctor? — Yes, she is. / No, she is not.\n\n【例文】My sister is a nurse.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -208,7 +224,8 @@ export const eigoExtra2: Question[] = [
     question: '「あなたは親切です」を英語にしなさい。',
     answer: 'You are kind.',
     hint: '主語が "You" のとき be動詞は "are" を使います',
-    explanation: '【解説】\n主語が "You"（あなた）のとき、be動詞は "are" を使います。"You are kind." が正解です。',
+    explanation:
+      '【答え】You are kind.\n\n【なぜ are なのか】主語が you だから。you は1人でも複数でも are を使う。これは英語の特徴で、日本語のように「あなた」「あなたたち」で形が変わらない。\n\n【a をつけない場合】ここが前の問題とちがうところである。\n・You are kind.（kind は形容詞なので a はつけない）\n・You are a student.（student は名詞なので a をつける）\n名詞には a がいる、形容詞にはいらない。この区別が、be動詞の文で最も問われる。\n\n【形容詞の位置】英語の形容詞は2つの場所に置ける。\n・be動詞の後 … You are kind.（あなたは親切だ）\n・名詞の前 … a kind person（親切な人）\n日本語では「親切だ」「親切な」と形が変わるが、英語は kind のままである。\n\n【人を表す形容詞】\n・kind（親切な）・friendly（人なつこい）・honest（正直な）・brave（勇敢な）・quiet（静かな）・cheerful（明るい）・shy（はずかしがりの）\n\n【ほめるときの表現】\n・You are very kind. Thank you.\n・That is kind of you. （ご親切に、ありがとう）\n\n【例文】She is kind to everyone. （彼女はだれにでも親切だ）',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -219,7 +236,8 @@ export const eigoExtra2: Question[] = [
     question: '「私たちは友達です」を英語にしなさい。',
     answer: 'We are friends.',
     hint: '主語が "We" のとき be動詞は "are" を使います',
-    explanation: '【解説】\n主語が "We"（私たち）のとき、be動詞は "are" を使います。"We are friends." が正解です。friends は複数形です。',
+    explanation:
+      '【答え】We are friends.\n\n【2か所に注意】この文には気をつける点が2つある。\n①主語が we なので be動詞は are\n②friends と複数形にする\n\n【なぜ friends と複数にするのか】ここが最も問われる。we（私たち）は2人以上いる。その全員が友達なのだから、friend も2人以上になる。\n・We are friends.（正しい）\n・We are friend.（誤り）\n主語が複数なら、続く名詞も複数になるという対応がある。\n・They are students.\n・We are brothers.\n・You are good players.\n\n【a をつけない】複数形には a をつけない。a は「1つの」という意味だからである。\n\n【friend を使う表現】\n・a friend of mine … 私の友達の1人\n・make friends with 〜 … 〜と友達になる。friends と複数形になるのは、友達関係は2人以上で成り立つからである\n・best friend … 親友\n\n【複数形の作り方】\n・ふつうは s … friends、books\n・s・x・ch・sh で終わる語は es … buses、boxes、watches、dishes\n・子音と y で終わる語は y を i に変えて es … cities、countries\n\n【例文】Tom and I are good friends.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -230,7 +248,8 @@ export const eigoExtra2: Question[] = [
     question: '「この本は面白いです」を英語にしなさい。',
     answer: 'This book is interesting.',
     hint: '主語が "This book" のとき be動詞は "is" を使います',
-    explanation: '【解説】\n「この本」は "this book"、「面白い」は "interesting" です。単数の名詞が主語なので "is" を使います。',
+    explanation:
+      '【答え】This book is interesting.\n\n【なぜ is なのか】主語は this book で、1冊の本である。単数なので is を使う。\n・This book is 〜（1冊）\n・These books are 〜（2冊以上）\n主語の名詞が単数か複数かで be動詞が決まる。he や she だけでなく、ものの名前でも同じである。\n\n【this と these】\n・this（この・これ）が these（これらの）になる\n・that（あの・あれ）が those（あれらの）になる\nthis と these、that と those は組にして覚える。\n\n【interesting の意味】「おもしろい」。笑えるという意味ではなく、興味深いという意味である。笑えるおもしろさは funny という。\n・interesting book … 読んで興味深い本\n・funny story … 笑える話\n日本語の「おもしろい」は両方の意味をもつので、英語では使い分ける。\n\n【interesting と interested】必ず問われる。\n・interesting … ものが「興味を起こさせる」。This book is interesting.\n・interested … 人が「興味をもっている」。I am interested in this book.\nものは ing、人は ed。exciting と excited、surprising と surprised、boring と bored も同じ形である。\n\n【例文】I am interested in science.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -241,7 +260,8 @@ export const eigoExtra2: Question[] = [
     question: '「これらの花は美しいです」を英語にしなさい。',
     answer: 'These flowers are beautiful.',
     hint: '複数のものが主語のとき be動詞は "are" を使います',
-    explanation: '【解説】\n「これらの花」は "these flowers"（複数形）なので、be動詞は "are" を使います。"beautiful" は「美しい」という形容詞です。',
+    explanation:
+      '【答え】These flowers are beautiful.\n\n【2か所に注意】\n①these flowers は複数なので are\n②flower を flowers と複数形にする\n\n【this から these への変化】\n・this flower（この花・1本）が these flowers（これらの花・2本以上）になる\n・that flower（あの花）が those flowers（あれらの花）になる\nthis と these、that と those。単数と複数で形が変わるので、必ず組にして覚える。\n\n【beautiful に a はつけない】beautiful は形容詞なので a はいらない。\n・These flowers are beautiful.（正しい）\n・These flowers are a beautiful.（誤り）\n\n【beautiful の使い方】\n・be動詞の後 … The flowers are beautiful.\n・名詞の前 … beautiful flowers\n\n【美しさを表す語の使い分け】\n・beautiful … 美しい。人にも物にも使える。女性や風景に使うことが多い\n・pretty … かわいらしい、きれい\n・handsome … 男性に使うことが多い\n・cute … かわいい\n・nice … すてきな。軽く使える\n\n【例文】\n・These flowers are beautiful. Where did you buy them?\n・Look at those beautiful mountains.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -252,7 +272,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は疲れています」を英語にしなさい。',
     answer: 'I am tired.',
     hint: '「疲れている」は "tired" という形容詞です',
-    explanation: '【解説】\n"tired" は「疲れた」という形容詞です。"I am tired." または "I\'m tired." が正解です。',
+    explanation:
+      '【答え】I am tired.\n\n【tired は形容詞】「疲れた」という状態を表す形容詞である。もとは動詞 tire（疲れさせる）から来ていて、その受け身の形が形容詞として使われるようになった。\n\n【a をつけない】tired は形容詞なので a はいらない。\n・I am tired.（正しい）\n・I am a tired.（誤り）\n\n【気持ち・状態を表す形容詞】be動詞と一緒に使う語をまとめて覚える。\n・tired（疲れた）・hungry（空腹の）・thirsty（のどがかわいた）・sleepy（眠い）・sick（病気の）・busy（忙しい）・free（ひまな）・happy（幸せな）・sad（悲しい）・angry（怒った）・afraid（こわい）\n\n【ed で終わる気持ちの形容詞】\n・tired（疲れた）・excited（わくわくした）・interested（興味をもった）・surprised（驚いた）・bored（退屈した）\n人の気持ちは ed、その原因になるものは ing。\n・I am tired.（私が疲れている）／ The work is tiring.（その仕事が疲れさせる）\n\n【程度を表す語】\n・very tired（とても疲れた）・a little tired（少し疲れた）・so tired（とても）・too tired（疲れすぎて）\n\n【例文】I am very tired today. I want to go to bed early.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -274,7 +295,8 @@ export const eigoExtra2: Question[] = [
     question: '「あなたは日本人ですか？」を英語にしなさい。',
     answer: 'Are you Japanese?',
     hint: '"You" に対する疑問文では "Are" を先頭に置きます',
-    explanation: '【解説】\n"You are Japanese." の疑問文は "Are you Japanese?" です。"Japanese" は形容詞として使われています。',
+    explanation:
+      '【答え】Are you Japanese?\n\n【be動詞の疑問文の作り方】be動詞を主語の前に出すだけでよい。\n・You are Japanese.（ふつうの文）\n・Are you Japanese?（疑問文）\n語順を入れかえるだけで、do や does は使わない。ここが一般動詞の文とのいちばんのちがいである。\n\n【一般動詞との比較】\n・be動詞 … Are you a student?（be動詞を前へ）\n・一般動詞 … Do you play tennis?（do を前に置く）\n動詞が be動詞か一般動詞かで、疑問文の作り方がまったくちがう。まず、その文の動詞を確かめるのが手順である。\n\n【答え方】\n・Yes, I am. ／ No, I am not.\n質問が are you なら、答えは I am になる。you で聞かれたら I で答える、という対応に注意する。\n\n【Japanese の使い方】\n・形容詞として … I am Japanese.（日本人だ）\n・名詞として … a Japanese（日本人1人）、the Japanese（日本人全体）、Japanese（日本語）\n・複数形も Japanese（単複同形）。two Japanese\n\n【国と国民の言い方】\n・Japan と Japanese、China と Chinese、America と American、France と French、England と English\n\n【例文】Are you from Osaka? — Yes, I am.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -296,7 +318,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女は幸せではありません」を英語にしなさい。',
     answer: 'She is not happy.',
     hint: '「幸せな」は "happy" です',
-    explanation: '【解説】\n"She is not happy." または "She isn\'t happy." が正解です。"isn\'t" は "is not" の短縮形です。',
+    explanation:
+      '【答え】She is not happy.\n\n【be動詞の否定文の作り方】be動詞の後ろに not を置くだけでよい。\n・She is happy.（ふつうの文）\n・She is not happy.（否定文）\n語順は変えず、not を入れるだけ。do や does は使わない。\n\n【短縮形】\n・is not は isn\'t\n・are not は aren\'t\n・am not には短縮形がない（I am not のまま、または I\'m not）\nam not だけ短縮形がないのは、試験で問われることがある。\n\n【一般動詞との比較】\n・be動詞 … She is not happy.（not を置くだけ）\n・一般動詞 … She does not play tennis.（do／does が必要）\nbe動詞の文には do を使わない。She does not be happy. は誤りである。\n\n【happy の反対】\n・happy（幸せな）の反対は sad（悲しい）、unhappy（不幸な）\n・un をつけて反対の意味にする語は多い。happy → unhappy、kind → unkind\n・ほかの打ち消し … impossible（不可能な）、incorrect（正しくない）、dislike（きらう）\n\n【例文】\n・She is not happy with the result.\n・I am not hungry now.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -307,7 +330,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼らは学生です」を英語にしなさい。',
     answer: 'They are students.',
     hint: '複数の人が主語のとき be動詞は "are" を使います',
-    explanation: '【解説】\n"They"（彼ら）が主語のとき、be動詞は "are" を使います。"students" は複数形です。',
+    explanation:
+      '【答え】They are students.\n\n【2か所に注意】\n①they は複数なので are\n②student を students と複数形にする\n\n【they の使い方】they は「彼ら・彼女ら・それら」で、人にも物にも使える。\n・Tom and Ken are my friends. They are students.（人）\n・I have two cats. They are white.（動物・物）\n日本語では「それら」とあまり言わないので、物に they を使うのを忘れやすい。\n\n【人称代名詞の表】まとめて覚える。左から主格・所有格・目的格・所有代名詞。\n・I, my, me, mine\n・you, your, you, yours\n・he, his, him, his\n・she, her, her, hers\n・it, its, it, its\n・we, our, us, ours\n・they, their, them, theirs\nこの4つをセットで覚えると、文法問題に強くなる。\n\n【its と it\'s】つづりの取りちがえが多い。\n・its … その（所有格）。The cat wagged its tail.\n・it\'s … it is の短縮形\nアポストロフィがあれば it is の短縮である。\n\n【例文】They are my classmates.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -318,7 +342,8 @@ export const eigoExtra2: Question[] = [
     question: '「それは何ですか？」を英語にしなさい。',
     answer: 'What is it?',
     hint: '疑問詞 "What" で始まる疑問文です',
-    explanation: '【解説】\n"What is it?" は「それは何ですか？」という疑問文です。疑問詞 "What" を先頭に置き、続けて "is it?" とします。',
+    explanation:
+      '【答え】What is it?\n\n【疑問詞のある疑問文の作り方】\n①ふつうの文 … It is a book.\n②be動詞を前に出す … Is it a book?\n③たずねたい部分を疑問詞にかえて、文の先頭に置く … What is it?\n疑問詞は必ず文の先頭に来る。これが基本の形である。\n\n【疑問詞の一覧】\n・what（何）・who（だれ）・when（いつ）・where（どこ）・why（なぜ）・which（どちら）・whose（だれの）・how（どのように）\n5つの W と1つの H でまとめて覚える。\n\n【答え方】疑問詞のある疑問文には、Yes や No で答えない。\n・What is it? — It is a pen.（正しい）\n・What is it? — Yes, it is.（誤り）\n何を聞かれているかを答える。ここは必ず問われる。\n\n【how を使った表現】how は組み合わせで意味が変わる。\n・how old（何歳）・how many（いくつ）・how much（いくら）・how long（どのくらい長い）・how far（どのくらい遠い）・how often（どのくらいの頻度で）\n\n【例文】\n・What is this? — It is my notebook.\n・What is your name? — My name is Ken.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -329,7 +354,8 @@ export const eigoExtra2: Question[] = [
     question: '「あなたはどこ出身ですか？」を英語にしなさい。',
     answer: 'Where are you from?',
     hint: '場所を聞くときは "Where" を使います',
-    explanation: '【解説】\n"Where are you from?" は「どこ出身ですか？」という表現です。出身地を答えるときは "I\'m from Japan." のように言います。',
+    explanation:
+      '【答え】Where are you from?\n\n【文のしくみ】\n・もとの文 … You are from Japan.\n・be動詞を前に … Are you from Japan?\n・場所をたずねる where を先頭に … Where are you from?\n\n【from の意味】「〜から」。出身を表すときによく使う。\n・I am from Japan. … 日本の出身です\n・Where are you from? … どちらのご出身ですか\nbe from で「〜の出身である」という決まった言い方として覚える。\n\n【似た表現との使い分け】\n・Where are you from? … 出身地をたずねる\n・Where do you live? … 今住んでいる場所をたずねる\n・Where are you going? … 今どこへ行くところかをたずねる\nbe動詞か一般動詞かで、do がいるかどうかが変わる。\n\n【前置詞の使い分け】\n・from Japan（日本出身）\n・in Japan（日本に住んでいる）\n・to Japan（日本へ行く）\nfrom は出発点、to は到着点、in は中にいる状態。絵にすると覚えやすい。\n\n【初対面の会話】\n・Nice to meet you.（はじめまして）\n・Where are you from? — I am from Osaka.\n・What do you do?（お仕事は何ですか）',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -341,7 +367,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は毎日学校に行きます」を英語にしなさい。',
     answer: 'I go to school every day.',
     hint: '「行く」は "go"、「毎日」は "every day" です',
-    explanation: '【解説】\n主語が "I" のとき、一般動詞はそのままの形を使います。"go to school"（学校に行く）、"every day"（毎日）を覚えましょう。',
+    explanation:
+      '【答え】I go to school every day.\n\n【一般動詞の文】be動詞ではなく、動作を表す動詞（一般動詞）を使う文である。\n・主語が I / you / we / they のとき … 動詞はそのままの形。I go\n・主語が he / she / it のとき … 動詞に s をつける。He goes\n\n【go to school の to】「〜へ」という方向を表す。\n・go to school（学校へ行く）・go to the park（公園へ行く）\n・ただし go home には to をつけない。home は「家へ」という意味をすでに持っているためである。go to home は誤り\n・同じく go there、go abroad も to をつけない\n\n【school に the をつけない理由】ここが問われる。go to school は「勉強しに学校へ行く」という本来の目的を表すので、a も the もつけない。建物としての学校へ行く場合は go to the school となる。\n・go to bed（寝る）と go to the bed（ベッドの所へ行く）\n・go to church（礼拝に行く）\n目的で行くときは冠詞をつけないという決まりがある。\n\n【every day のつづり】2語に分けて書く。everyday（1語）は「毎日の」という形容詞で、意味がちがう。\n・I study every day.（毎日勉強する）\n・everyday life（日常生活）\n\n【例文】I go to school by bike every day.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -352,7 +379,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼は英語を話します」を英語にしなさい。',
     answer: 'He speaks English.',
     hint: '主語が三人称単数のとき動詞に -s をつけます',
-    explanation: '【解説】\n主語が三人称単数（he/she/it）のとき、動詞に -s をつけます。"speak" → "speaks" となります。',
+    explanation:
+      '【答え】He speaks English.\n\n【三人称単数現在の s】主語が he / she / it や1人・1つの名前のとき、現在の文では動詞に s をつける。これを三単現の s という。\n・I speak English.（s なし）\n・He speaks English.（s あり）\n\n【なぜ s がつくのか】英語には、動詞の形で主語を示す仕組みが昔あり、その名残である。いまはこの1か所だけに残っているので、忘れやすく、試験で最もよく問われる。\n\n【s のつけ方】\n・ふつうは s … speaks、plays、likes\n・s・x・ch・sh・o で終わる語は es … watches、washes、goes、does\n・子音と y で終わる語は y を i にして es … study → studies、cry → cries\n・母音と y で終わる語はそのまま s … play → plays、enjoy → enjoys\n・have だけ特別。have → has\n\n【疑問文・否定文では s が消える】ここが最も大事である。\n・He speaks English.\n・Does he speak English?（does に s が移るので、動詞は原形）\n・He does not speak English.\ndoes を使ったら動詞は原形に戻す。Does he speaks 〜? は誤りである。\n\n【例文】She studies math every day.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -363,7 +391,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は音楽が好きです」を英語にしなさい。',
     answer: 'I like music.',
     hint: '「好きです」は "like" を使います',
-    explanation: '【解説】\n"like"（好きです）は一般動詞です。"I like music." で「私は音楽が好きです」となります。',
+    explanation:
+      '【答え】I like music.\n\n【like の使い方】「〜が好きだ」。日本語では「が」だが、英語では目的語（〜を）として置く。I like music. で「私は音楽を好む」という組み立てになっている。\n\n【like の後の形】3通りある。\n・名詞 … I like music.\n・動名詞（ing の形）… I like reading books.（読むことが好き）\n・不定詞（to と動詞）… I like to read books.\n動名詞と不定詞のどちらも使える動詞である。like、love、start、begin は両方使える。\n\n【music に a や the をつけない理由】music は数えられない名詞だからである。\n・数えられない … music、water、bread、homework、information、news\n・種類全体をいうときも、数えられる名詞なら複数形にする … I like dogs.（犬が好き）\nmusic は複数形にしない、dogs は複数形にする。この使い分けが問われる。\n\n【好き・きらいの言い方】程度の順に並べる。\n・love（大好き）、like（好き）、do not like（好きではない）、hate（大きらい）\n・like 〜 very much（とても好き）\n\n【疑問文】Do you like music? — Yes, I do. / No, I do not.\n\n【例文】I like listening to music.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -374,7 +403,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女はピアノを弾きます」を英語にしなさい。',
     answer: 'She plays the piano.',
     hint: '楽器の前には "the" をつけます',
-    explanation: '【解説】\n"play the piano"（ピアノを弾く）は重要表現です。楽器名の前には "the" をつけます。主語が "she" なので "plays" となります。',
+    explanation:
+      '【答え】She plays the piano.\n\n【2か所に注意】\n①主語が she なので plays（三単現の s）\n②楽器の前に the をつける\n\n【楽器に the をつける理由】play the piano のように、楽器を演奏するときは the をつけるのが決まりである。楽器という種類全体を代表して指すため、と説明される。\n・play the piano／the guitar／the violin／the flute\n\n【スポーツには the をつけない】ここが必ず問われる対比である。\n・play the piano（楽器なので the がいる）\n・play soccer（スポーツなので the はいらない）\n・play tennis、play baseball、play basketball\n楽器には the、スポーツには何もつけない。セットで覚える。\n\n【play のいろいろな意味】\n・演奏する … play the piano\n・スポーツをする … play soccer\n・遊ぶ … Children are playing in the park.\n・役を演じる … play the role of Hamlet\n\n【音楽に関わる語】\n・musician（音楽家）・singer（歌手）・song（歌）・concert（コンサート）・band（バンド）\n・listen to music（音楽を聴く）。listen には to がいるが、hear にはいらない\n\n【例文】My brother plays the guitar and I play tennis.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
