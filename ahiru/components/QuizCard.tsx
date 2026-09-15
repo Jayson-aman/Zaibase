@@ -19,6 +19,7 @@ import { Question, subjectInfo } from '../data/questions-meta';
 import SubjectIcon from './SubjectIcon';
 import { getHistoryThemeLabel } from '../data/images';
 import { explanationText, hintText } from '../utils/explanation';
+import { getQuickTrick } from '../data/quick-tricks';
 import { getSubjectThemeLabel, getSubjectIllustration } from '../data/subjectImages';
 import { getFigure } from '../data/figures';
 import FigureView from './FigureView';
@@ -222,6 +223,12 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
               {hintText(question) !== '' && (
                 <Text style={styles.hintText}>💡 {hintText(question)}</Text>
               )}
+              {getQuickTrick(question.id) != null && (
+                <View style={styles.trickBox}>
+                  <Text style={styles.trickLabel}>⚡ はやく解くコツ</Text>
+                  <Text style={styles.trickText}>{getQuickTrick(question.id)}</Text>
+                </View>
+              )}
             </View>
           )}
         </View>
@@ -310,6 +317,12 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
               </Text>
               {hintText(question) !== '' && (
                 <Text style={styles.hintText}>💡 {hintText(question)}</Text>
+              )}
+              {getQuickTrick(question.id) != null && (
+                <View style={styles.trickBox}>
+                  <Text style={styles.trickLabel}>⚡ はやく解くコツ</Text>
+                  <Text style={styles.trickText}>{getQuickTrick(question.id)}</Text>
+                </View>
               )}
             </View>
           )}
@@ -713,6 +726,17 @@ const styles = StyleSheet.create({
     color: '#78350F',
     lineHeight: 24,
   },
+  trickBox: {
+    marginTop: 10,
+    backgroundColor: '#FFF7ED',
+    borderLeftWidth: 4,
+    borderLeftColor: '#F59E0B',
+    borderRadius: 10,
+    padding: 10,
+    gap: 4,
+  },
+  trickLabel: { fontSize: 13, fontWeight: '900', color: '#B45309' },
+  trickText: { fontSize: 14, lineHeight: 22, color: '#7C2D12', fontWeight: '500' },
   upgradeNudge: {
     fontSize: 12.5,
     color: '#8B5A38',

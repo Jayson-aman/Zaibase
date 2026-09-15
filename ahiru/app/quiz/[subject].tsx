@@ -18,6 +18,7 @@ import { GRADE_ORDER, type GradeKey } from '../../data/grades';
 import { getKoushikiFormulaIdForQuestion, isKoushikiFormulaFree } from '../../data/koushiki-access';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
 import { explanationText, hintText } from '../../utils/explanation';
+import { getQuickTrick } from '../../data/quick-tricks';
 import { explanationsSansu } from '../../data/explanations_sansu';
 import { explanationsKokugo } from '../../data/explanations_kokugo';
 import { explanationsRika } from '../../data/explanations_rika';
@@ -735,6 +736,12 @@ export default function QuizScreen() {
                 {hintText(currentQuestion) !== '' && (
                   <Text style={styles.wrongExplanationText}>💡 {hintText(currentQuestion)}</Text>
                 )}
+                {getQuickTrick(currentQuestion.id) != null && (
+                  <View style={styles.tipRow}>
+                    <Text style={styles.trickLabel}>⚡ はやく解くコツ</Text>
+                    <Text style={styles.tipText}>{getQuickTrick(currentQuestion.id)}</Text>
+                  </View>
+                )}
                 {(isPro || isMax) && currentQuestion.memoryTip && (
                   <View style={styles.tipRow}>
                     <Text style={styles.tipLabel}>💡 覚え方</Text>
@@ -1250,6 +1257,7 @@ const styles = StyleSheet.create({
     lineHeight: 28,
     fontWeight: '500',
   },
+  trickLabel: { fontSize: 13, fontWeight: '900', color: '#B45309' },
   explanationUpgradeBtn: {
     marginTop: 12,
     backgroundColor: '#FAF6EF',

@@ -14,6 +14,7 @@ import { getLessonFigure } from '../data/lesson-figures';
 import { getMangaScript } from '../data/manga-scripts';
 import { questions } from '../data/questions';
 import { explanationText } from '../utils/explanation';
+import { quickTricks } from '../data/quick-tricks';
 
 type Lesson = (typeof allLessons)[number] & Record<string, any>;
 const L = allLessons as Lesson[];
@@ -150,6 +151,14 @@ check(
   '問題集の解説が画面上で短すぎる（20字以下）',
   Q.filter((q) => explanationText(q).length <= 20).map((q) => `${q.id}(${explanationText(q).length}字)`),
 );
+
+// 「⚡ はやく解くコツ」の参照切れと、いまの本数。
+// コツは問題idで引くので、問題を消したり id を変えたりすると黙って出なくなる。
+check(
+  'はやく解くコツの参照切れ',
+  Object.keys(quickTricks).filter((id) => !Q.some((q) => q.id === id)),
+);
+info('はやく解くコツが付いている問題（増やしていく数字）', Object.keys(quickTricks), 3);
 
 // ── D. 重複 ───────────────────────────────────
 console.log('\n=== D. 重複 ===');
