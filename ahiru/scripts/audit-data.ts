@@ -227,6 +227,27 @@ check(
   '【問題集】ヒントが答えそのもの',
   Q.filter((q) => qn(q.answer) && qn(q.hint) && qn(q.answer) === qn(q.hint)).map((q) => q.id),
 );
+// 画面に出る文にマークダウン記法が混ざっていないか。
+//
+// 解説・ヒント・問題文・答えはすべて素の <Text> で描いているので、
+// マークダウンは解釈されず ** がそのまま画面に出る。
+// 2026/9/15、解説を書き直したときに強調のつもりで ** を書いてしまい、
+// 11行に混入した（figure の steps では以前にも同じ失敗をしている）。
+const mdBad: string[] = [];
+for (const q of Q as any[]) {
+  const fields: Array<[string, unknown]> = [
+    ['問題文', q.question], ['答え', q.answer], ['ヒント', q.hint],
+    ['解説', q.explanation], ['覚え方', q.memoryTip], ['ひっかけ', q.pitfall],
+  ];
+  for (const [name, v] of fields) if (String(v ?? '').includes('**')) mdBad.push(`${q.id}(${name})`);
+  for (const sub of (q.subQuestions ?? []) as any[]) {
+    if (`${sub.prompt ?? ''}${sub.answer ?? ''}${sub.explanation ?? ''}`.includes('**')) {
+      mdBad.push(`${q.id}:${sub.label}`);
+    }
+  }
+}
+check('【問題集】画面に出る文にマークダウンの ** が混ざっている', mdBad);
+
 // 小問（subQuestions）が画面に出ているか。
 //
 // 89問（小問353問）が subQuestions を持つのに、QuizCard が描いていなかった。

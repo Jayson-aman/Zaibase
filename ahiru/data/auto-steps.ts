@@ -322,7 +322,7 @@ function numberLineSteps(f: Extract<Figure, { kind: 'numberLine' }>): string[] {
 function stratumSteps(f: Extract<Figure, { kind: 'stratum' }>): string[] {
   const cols = f.columns ?? [];
   const out: string[] = ['地層の柱状図。地面を掘ったときに、どの層がどの順で重なっているかを棒で表したもの。'];
-  out.push('地層は下から順に積もるので、**下にある層ほど古い**。いちばん上が最も新しい。');
+  out.push('地層は下から順に積もるので、下にある層ほど古い。いちばん上が最も新しい。');
   const names = cols.map((c) => c.label).filter(Boolean) as string[];
   if (names.length > 1) {
     out.push(`${names.join('・')} の${names.length}地点を並べてある。同じ層をさがして横に結ぶと、地層のかたむきが分かる。`);
@@ -418,7 +418,7 @@ function barChartSteps(f: Extract<Figure, { kind: 'barChart' }>): string[] {
       : '棒グラフの図。棒の高さで量の大小をくらべる。',
   ];
   out.push(
-    `たての目もりは${f.yLabel ?? '量'}、横は${f.xLabel ?? '項目'}。**目もりが0から始まっているか**をまず確かめる。途中から始まっていると、小さな差が大きく見えてしまう。`,
+    `たての目もりは${f.yLabel ?? '量'}、横は${f.xLabel ?? '項目'}。目もりが0から始まっているかをまず確かめる。途中から始まっていると、小さな差が大きく見えてしまう。`,
   );
   out.push(`ならんでいるのは ${bars.map((b) => b.label).join('・')} の${bars.length}本。`);
   const max = bars.reduce((a, b) => (b.value > a.value ? b : a), bars[0]!);
