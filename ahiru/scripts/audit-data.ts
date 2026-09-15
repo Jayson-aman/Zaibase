@@ -209,7 +209,14 @@ const qShort: string[] = [];
 for (const q of Q) {
   const e = explanationText(q);
   const words = e.replace(/[0-9０-９＋－×÷＝=()（）。、,.\s+\-*/^²³°%a-zA-Z]/g, '');
-  if (e.length <= 60) qShort.push(`${q.id}(${e.length}字)`);
+  // ⚠️記述式は「模範解答」そのものが解説にあたり、小問には小問ごとの解説がある。
+  //   解説の欄だけを測ると、実際は十分に説明されている問題まで薄いと数えてしまう。
+  //   画面に出る文章の総量（解説＋長い模範解答＋小問の解説）で測る。
+  const answerLen = String(q.answer ?? '').length;
+  const subLen = ((q.subQuestions ?? []) as any[]).reduce(
+    (a, sub) => a + String(sub.explanation ?? '').length, 0);
+  const shown = e.length + (answerLen > 60 ? answerLen : 0) + subLen;
+  if (shown <= 80) qShort.push(`${q.id}(${shown}字)`);
   if (!Q_WHY.test(e) || words.length < 12) qThin.push(`${q.subject}/${q.id}`);
 }
 // ヒントが答えそのものになっていないか。
@@ -239,7 +246,7 @@ for (const q of Q) {
 check('【問題集】小問に設問・答え・解説のどれかが無い', subBad);
 
 info('【問題集】解説が理由まで書けていない（減らしていく数字）', qThin, 3);
-info('【問題集】解説が60字以下（減らしていく数字）', qShort, 3);
+info('【問題集】画面に出る説明が80字以下（減らしていく数字）', qShort, 3);
 const qnorm = (x: string) => String(x ?? '').replace(/\s+/g, '').replace(/[。、．，]/g, '');
 const qdup = new Map<string, string[]>();
 for (const q of Q) {
