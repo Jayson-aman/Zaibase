@@ -244,6 +244,22 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
           )}
           <Text style={styles.questionLabel}>問 題</Text>
           <Text style={[styles.questionText, qFit]}>{question.question}</Text>
+          {/*
+            小問（問1〜問4）。これを出していなかったため、たとえば
+            「1辺が6cmの立方体の容器があります。1L＝1000cm³とします。」だけが
+            問題として表示され、**何を聞かれているのかが画面のどこにも無い**状態だった。
+            答えの側には「問1 216cm³ / 問2 216cm² …」と出るので、
+            見えない設問への答えだけが並ぶことになっていた（89問・小問353問）。
+          */}
+          {question.subQuestions != null && question.subQuestions.length > 0 && (
+            <View style={styles.subList}>
+              {question.subQuestions.map((sub, i) => (
+                <Text key={i} style={styles.subPrompt}>
+                  {sub.label} {sub.prompt}
+                </Text>
+              ))}
+            </View>
+          )}
           {figure != null ? (
             <FigureView figure={figure} />
           ) : illustration != null ? (
@@ -291,6 +307,20 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
                 {question.answer}
               </Text>
             </>
+          )}
+          {/* 小問ごとの答えと解説。まとめた1行だけでは、どの問がどうしてそうなるのか分からない */}
+          {question.subQuestions != null && question.subQuestions.length > 0 && (
+            <View style={styles.subAnswerList}>
+              {question.subQuestions.map((sub, i) => (
+                <View key={i} style={styles.subAnswerBox}>
+                  <Text style={styles.subAnswerLabel}>{sub.label}</Text>
+                  <Text style={styles.subAnswerText}>{sub.answer}</Text>
+                  {sub.explanation != null && sub.explanation !== '' && (
+                    <Text style={styles.subAnswerExpl}>{sub.explanation}</Text>
+                  )}
+                </View>
+              ))}
+            </View>
           )}
           {question.isWritten && question.rubricPoints != null && question.rubricPoints.length > 0 && (
             <View style={styles.rubricBox}>
@@ -456,6 +486,20 @@ const styles = StyleSheet.create({
     lineHeight: 19,
     marginTop: 4,
   },
+  subList: { marginTop: 10, gap: 6, alignSelf: 'stretch' },
+  subPrompt: { fontSize: 15, lineHeight: 24, color: '#1F2937', fontWeight: '600' },
+  subAnswerList: { marginTop: 12, gap: 10, alignSelf: 'stretch' },
+  subAnswerBox: {
+    backgroundColor: '#F0F9FF',
+    borderRadius: 12,
+    padding: 12,
+    borderLeftWidth: 4,
+    borderLeftColor: '#0EA5E9',
+    gap: 4,
+  },
+  subAnswerLabel: { fontSize: 13, fontWeight: '900', color: '#0369A1' },
+  subAnswerText: { fontSize: 15, lineHeight: 23, color: '#0F172A', fontWeight: '700' },
+  subAnswerExpl: { fontSize: 14, lineHeight: 22, color: '#334155', fontWeight: '500' },
   rubricBox: {
     backgroundColor: '#FFFBEB',
     borderRadius: 12,

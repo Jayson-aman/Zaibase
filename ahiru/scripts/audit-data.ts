@@ -220,6 +220,24 @@ check(
   '【問題集】ヒントが答えそのもの',
   Q.filter((q) => qn(q.answer) && qn(q.hint) && qn(q.answer) === qn(q.hint)).map((q) => q.id),
 );
+// 小問（subQuestions）が画面に出ているか。
+//
+// 89問（小問353問）が subQuestions を持つのに、QuizCard が描いていなかった。
+// そのため「1辺が6cmの立方体の容器があります。1L＝1000cm³とします。」だけが
+// 問題として表示され、**何を聞かれているのかが画面のどこにも無かった**。
+// 答えの側には「問1 216cm³ / 問2 216cm² …」と出るので、
+// 見えない設問への答えだけが並んでいた。2026/9/15に QuizCard で描くようにした。
+// ここでは、小問に prompt・answer・explanation がそろっているかを見る。
+const subBad: string[] = [];
+for (const q of Q) {
+  for (const sub of (q.subQuestions ?? []) as any[]) {
+    if (!String(sub.prompt ?? '').trim()) subBad.push(`${q.id}:${sub.label}(設問なし)`);
+    else if (!String(sub.answer ?? '').trim()) subBad.push(`${q.id}:${sub.label}(答えなし)`);
+    else if (!String(sub.explanation ?? '').trim()) subBad.push(`${q.id}:${sub.label}(解説なし)`);
+  }
+}
+check('【問題集】小問に設問・答え・解説のどれかが無い', subBad);
+
 info('【問題集】解説が理由まで書けていない（減らしていく数字）', qThin, 3);
 info('【問題集】解説が60字以下（減らしていく数字）', qShort, 3);
 const qnorm = (x: string) => String(x ?? '').replace(/\s+/g, '').replace(/[。、．，]/g, '');
