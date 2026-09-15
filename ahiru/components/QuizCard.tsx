@@ -304,7 +304,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             </View>
           )}
           {figure != null ? (
-            <FigureView figure={figure} animated />
+            <FigureView figure={figure} animated question={question} />
           ) : illustration != null ? (
             <Image source={illustration} style={styles.subjectImage} resizeMode="cover" />
           ) : null}

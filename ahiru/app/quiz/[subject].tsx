@@ -723,7 +723,7 @@ export default function QuizScreen() {
             {currentFigure != null && (
               <View style={styles.wrongFigureCard}>
                 <Text style={styles.wrongFigureLabel}>📐 図解でチェック</Text>
-                <FigureView figure={currentFigure} animated />
+                <FigureView figure={currentFigure} animated question={currentQuestion} />
               </View>
             )}
 

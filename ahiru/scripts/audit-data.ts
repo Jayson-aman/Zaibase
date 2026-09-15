@@ -15,6 +15,8 @@ import { getMangaScript } from '../data/manga-scripts';
 import { questions } from '../data/questions';
 import { explanationText } from '../utils/explanation';
 import { quickTricks } from '../data/quick-tricks';
+import { figures as FIGS } from '../data/figures';
+import { autoSteps } from '../data/auto-steps';
 
 type Lesson = (typeof allLessons)[number] & Record<string, any>;
 const L = allLessons as Lesson[];
@@ -198,6 +200,29 @@ check(
   Object.keys(quickTricks).filter((id) => !Q.some((q) => q.id === id)),
 );
 info('はやく解くコツが付いている問題（増やしていく数字）', Object.keys(quickTricks), 3);
+
+// 問題集の図に、動く図解の説明文がついているか。
+//
+// 図1,320枚のうち798枚（60%）は steps を持たず、画面では線がすうっと
+// 現れて終わりだった。何の図なのか、どの数がどこの長さなのかが、
+// 文字では一切示されていなかった。
+// 2026/9/15に data/auto-steps.ts を入れ、steps が無い図には
+// **図形データそのものから**説明文を組み立てるようにした
+// （figure の中にある値しか読まないので、図と文章が食いちがわない）。
+// 手書きの steps があれば必ずそちらが優先される。
+// ここでは「手書きも自動生成も無く、説明が1文字も出ない図」を数える。
+const figEntries = Object.entries(FIGS as Record<string, any>);
+const qById = new Map(Q.map((q) => [q.id, q]));
+const silentFigs = figEntries
+  .filter(([id, f]) => !f?.steps?.length && !autoSteps(f, qById.get(id)))
+  .map(([id, f]) => `${id}(${f?.kind})`);
+const autoFigs = figEntries.filter(([id, f]) => !f?.steps?.length && autoSteps(f, qById.get(id)));
+const handFigs = figEntries.filter(([, f]) => f?.steps?.length);
+info(
+  `図解の説明（手書き${handFigs.length}・自動${autoFigs.length}）／説明が出ない図`,
+  silentFigs,
+  4,
+);
 
 // ── D. 重複 ───────────────────────────────────
 console.log('\n=== D. 重複 ===');

@@ -35,6 +35,7 @@ import type {
   Pt,
 } from '../data/figures';
 import { prefectureShapes, JP_MAP_VIEWBOX } from '../data/japanPrefectures';
+import { autoSteps, autoBuildSteps, type FigureQuestion } from '../data/auto-steps';
 
 // 内部描画座標系（viewBox）。Svgの実サイズは画面幅に合わせて拡大縮小する。
 const VBW = 320;
@@ -1369,8 +1370,28 @@ function StepsList({ steps, animated, stepReached }: { steps: string[]; animated
 
 // 図解は要素が描かれた順に段階的に立ち上がる「動く解説」。
 // animated=true（解説側）で自動再生、タップで再生し直し。question側は静止。
-export default function FigureView({ figure, animated = false }: { figure: Figure; animated?: boolean }) {
+export default function FigureView({
+  figure: rawFigure,
+  animated = false,
+  question,
+}: {
+  figure: Figure;
+  animated?: boolean;
+  /** 図に添える問題。あると「何を聞かれているか」「答え」まで説明に入る */
+  question?: FigureQuestion;
+}) {
   const [boxWidth, setBoxWidth] = useState<number | null>(null);
+
+  // steps が書かれていない図は、図形データそのものから説明文を組み立てる。
+  // 問題集の図1,320枚のうち798枚に steps が無く、線がすうっと現れて終わりだった。
+  // 手書きの steps があれば必ずそちらが優先される（ここには入ってこない）。
+  const figure = useMemo<Figure>(() => {
+    if (rawFigure.steps?.length) return rawFigure;
+    const auto = autoSteps(rawFigure, question);
+    if (!auto) return rawFigure;
+    return { ...rawFigure, steps: auto, buildSteps: autoBuildSteps(auto, question) } as Figure;
+  }, [rawFigure, question]);
+
   const { w, h } = useSize(boxWidth);
   const rawId = useId();
   const uid = rawId.replace(/[^a-zA-Z0-9]/g, '');
