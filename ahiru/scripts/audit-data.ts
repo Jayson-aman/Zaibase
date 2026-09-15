@@ -212,6 +212,14 @@ for (const q of Q) {
   if (e.length <= 60) qShort.push(`${q.id}(${e.length}字)`);
   if (!Q_WHY.test(e) || words.length < 12) qThin.push(`${q.subject}/${q.id}`);
 }
+// ヒントが答えそのものになっていないか。
+// これがあると、考える前に答えが見えてしまい、ヒントの意味がなくなる。
+// 2026/9/15にユーザーの指摘で2問見つかった（漢字の読み・対義語）。
+const qn = (x: any) => String(x ?? '').replace(/\s+/g, '').replace(/[。、．，]/g, '');
+check(
+  '【問題集】ヒントが答えそのもの',
+  Q.filter((q) => qn(q.answer) && qn(q.hint) && qn(q.answer) === qn(q.hint)).map((q) => q.id),
+);
 info('【問題集】解説が理由まで書けていない（減らしていく数字）', qThin, 3);
 info('【問題集】解説が60字以下（減らしていく数字）', qShort, 3);
 const qnorm = (x: string) => String(x ?? '').replace(/\s+/g, '').replace(/[。、．，]/g, '');
