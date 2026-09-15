@@ -151,11 +151,11 @@ export const kokoSansuEx13: Question[] = [
     course: 'koko-todaiji',
     difficulty: 'standard',
     maxOnly: true,
-    question: '直角三角形 ABC（∠C=90°）で AC=5、BC=12 のとき tan A、sin A、cos A を求めよ。',
+    question: '【高校先取り】直角三角形 ABC（∠C=90°）で AC=5、BC=12 のとき tan A、sin A、cos A を求めよ。',
     answer: 'tan A=12/5、sin A=12/13、cos A=5/13',
     hint: 'AB=√(5²+12²)=13（5:12:13の比）。三角比の定義に代入する。',
     explanation: '【出題意図】三角比の定義（sin・cos・tan）を直角三角形で確認する。【解説】AB=13。tan A=対辺/隣辺=BC/AC=12/5。sin A=BC/AB=12/13。cos A=AC/AB=5/13。【注意点】tan は対辺/隣辺、sin は対辺/斜辺、cos は隣辺/斜辺の定義を正確に使う。【関連知識】SOH-CAH-TOA：sin=Opposite/Hypotenuse、cos=Adjacent/Hypotenuse、tan=Opposite/Adjacent。',
-    pitfall: 'tan A=AC/BC=5/12 と隣辺と対辺を逆にするミスに注意。',
+    pitfall: 'sin・cos・tan は高校で習う内容で、高校入試には出ない。中学では、直角三角形の辺の長さは三平方の定理と、3:4:5 などの整数比で求める。 tan A=AC/BC=5/12 と隣辺と対辺を逆にするミスに注意。',
     memoryTip: '「サインは斜辺分の対辺、コサインは斜辺分の隣辺、タンジェントは隣辺分の対辺」。',
   },
   {

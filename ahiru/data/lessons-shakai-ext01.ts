@@ -5,7 +5,7 @@ import type { Lesson } from './lesson-types';
 // order は 501〜535 とし、既存レッスンより後ろに並ぶようにしてある。
 // 気候の数値は気象庁の平年値（1991〜2020年）をもとにした概数。
 export const shakaiExt01Lessons: Lesson[] = [
-  // ───────────────────── 1. 日本の位置・国土（s001〜s004） ─────────────────────
+  //  1. 日本の位置・国土（s001〜s004） 
   {
     id: 'shakai_s001',
     subject: 'shakai',
@@ -228,7 +228,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 2. 山地・山脈（s005〜s009） ─────────────────────
+  //  2. 山地・山脈（s005〜s009） 
   {
     id: 'shakai_s005',
     subject: 'shakai',
@@ -522,7 +522,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 3. 平野・盆地（s010〜s014） ─────────────────────
+  //  3. 平野・盆地（s010〜s014） 
   {
     id: 'shakai_s010',
     subject: 'shakai',
@@ -815,7 +815,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 4. 河川・扇状地・三角州（s015〜s019） ─────────────────────
+  //  4. 河川・扇状地・三角州（s015〜s019） 
   {
     id: 'shakai_s015',
     subject: 'shakai',
@@ -1144,7 +1144,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 5. 海岸地形（s020〜s023） ─────────────────────
+  //  5. 海岸地形（s020〜s023） 
   {
     id: 'shakai_s020',
     subject: 'shakai',
@@ -1382,7 +1382,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 6. 気候区分（s024〜s030） ─────────────────────
+  //  6. 気候区分（s024〜s030） 
   {
     id: 'shakai_s024',
     subject: 'shakai',
@@ -1891,7 +1891,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 7. 雨温図の読み取り（s031〜s033） ─────────────────────
+  //  7. 雨温図の読み取り（s031〜s033） 
   {
     id: 'shakai_s031',
     subject: 'shakai',
@@ -2083,7 +2083,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 8. 入試実戦（s034〜s035） ─────────────────────
+  //  8. 入試実戦（s034〜s035） 
   {
     id: 'shakai_s034',
     subject: 'shakai',

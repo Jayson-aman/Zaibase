@@ -8,7 +8,7 @@ import type { Lesson } from './lesson-types';
 // 図解は「語順」を主役に据え、長方形を区切った語順ボックスで S・V・O・C の並びを示す
 // （lesson-figs-koko-eigo-ext02.ts／35課中16課）。
 export const kokoEigoExt02Lessons: Lesson[] = [
-  // ─────────────── 1. be動詞と一般動詞の区別（s036〜s040） ───────────────
+  //  1. be動詞と一般動詞の区別（s036〜s040） 
   {
     id: 'koko_eigo_s036',
     subject: 'eigo',
@@ -429,7 +429,7 @@ ing形は「〜している」という状態を表す形になっており、be
       },
     ],
   },
-  // ─────────────── 2. 否定文・疑問文の作り方（s041〜s046） ───────────────
+  //  2. 否定文・疑問文の作り方（s041〜s046） 
   {
     id: 'koko_eigo_s041',
     subject: 'eigo',
@@ -951,7 +951,7 @@ Does に三単現の s、Did に過去の意味がすでに含まれているの
       },
     ],
   },
-  // ─────────────── 3. 第1文型SV・第2文型SVC（s047〜s051） ───────────────
+  //  3. 第1文型SV・第2文型SVC（s047〜s051） 
   {
     id: 'koko_eigo_s047',
     subject: 'eigo',
@@ -1409,7 +1409,7 @@ go, come, run, walk, swim, live, work, stay, sit, stand, sleep, happen, rise, fa
       },
     ],
   },
-  // ─────────────── 4. 第3文型SVO（s052〜s055） ───────────────
+  //  4. 第3文型SVO（s052〜s055） 
   {
     id: 'koko_eigo_s052',
     subject: 'eigo',
@@ -1774,7 +1774,7 @@ look のうしろに名詞をそのまま置くことはできない。
       },
     ],
   },
-  // ─────────── 5. 第4文型SVOO と書きかえ（to / for）（s056〜s060） ───────────
+  //  5. 第4文型SVOO と書きかえ（to / for）（s056〜s060） 
   {
     id: 'koko_eigo_s056',
     subject: 'eigo',
@@ -2229,7 +2229,7 @@ say は第4文型を作らない動詞である。
       },
     ],
   },
-  // ─────────────── 6. 第5文型SVOC（s061〜s065） ───────────────
+  //  6. 第5文型SVOC（s061〜s065） 
   {
     id: 'koko_eigo_s061',
     subject: 'eigo',
@@ -2688,7 +2688,7 @@ O と原形の間に、主語と述語の関係が成り立っている。
       },
     ],
   },
-  // ─────────────── 7. There is / are 構文（s066〜s068） ───────────────
+  //  7. There is / are 構文（s066〜s068） 
   {
     id: 'koko_eigo_s066',
     subject: 'eigo',
@@ -2970,7 +2970,7 @@ There is a cat under the table. を「そこにネコがいます」と訳して
     ],
   },
 
-  // ─────────────── 8. 自動詞と他動詞の区別（s069〜s070） ───────────────
+  //  8. 自動詞と他動詞の区別（s069〜s070） 
   {
     id: 'koko_eigo_s069',
     subject: 'eigo',

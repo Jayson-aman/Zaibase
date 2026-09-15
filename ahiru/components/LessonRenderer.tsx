@@ -1,9 +1,13 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, ActivityIndicator } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, ActivityIndicator, Platform } from 'react-native';
 import type { LessonSection } from '../data/lesson-types';
 import { getLessonFigure } from '../data/lesson-figures';
 import { getKoushikiFormulaInfo } from '../data/koushiki-access';
+import { getMangaScript } from '../data/manga-scripts';
+import { getKoushikiQuestionsForFigure } from '../data/koushiki-questions';
 import FigureView from './FigureView';
+import MangaDialogue from './MangaDialogue';
+import InlineQuiz, { questionsToQuizItems } from './InlineQuiz';
 
 type Props = {
   sections: LessonSection[];
@@ -17,9 +21,70 @@ type Props = {
   onUnlockFormula?: (figureId: string, heading: string) => void;
 };
 
+// 本文に直接書かれた罫線の図（┌─┐│└┘ を使った枠や樹形図）は、
+// 等幅フォントで桁をそろえる前提で書かれている。ふつうの本文と同じ
+// 可変幅フォントで出すと桁がずれて何の図か分からなくなるので、
+// 連続する罫線の行はまとめて等幅・横スクロールの箱で出す。
+const BOX_DRAWING = /[┌┐└┘├┤┬┴┼─━│┃╱╲╳|/\\＼]/;
+const MONO = Platform.select({ ios: 'Courier', android: 'monospace', default: 'monospace' });
+
+function isArtLine(line: string): boolean {
+  const t = line.replace(/[　\s]/g, '');
+  if (t === '' || !BOX_DRAWING.test(t)) return false;
+  // 「know ／ no」「big（large）／ small」のような単語の並びは図ではないので、
+  // 単語（小文字が2つ以上続く）や日本語が入っている行は本文として扱う。
+  if (/[a-z]{2,}/.test(t)) return false;
+  if (/[ぁ-んァ-ヶ一-龥]/.test(t)) return false;
+  // 「1/3 ＝ 4/12」「S = 100 − 20×(5/3)」のような計算式は、分数の斜線が
+  // 罫線と同じ文字なので図に見えてしまう。等号と数字が入っていれば式なので、
+  // 箱に入れず本文として出す（算数の通分・約分の説明が66単元で箱に
+  // 入ってしまっていた）。
+  if (/[=＝]/.test(t) && /[0-9０-９]/.test(t)) return false;
+  return true;
+}
+
 function renderBody(body: string): React.ReactNode[] {
-  // Split by double newline for paragraphs
-  return body.split('\n').map((line, i) => {
+  const lines = body.split('\n');
+  const out: React.ReactNode[] = [];
+  for (let i = 0; i < lines.length; i++) {
+    if (!isArtLine(lines[i])) {
+      out.push(renderLine(lines[i], i));
+      continue;
+    }
+    // 罫線の行が続くあいだをひとかたまりの図として取り出す
+    let j = i;
+    while (j < lines.length && (isArtLine(lines[j]) || (lines[j].trim() === '' && j + 1 < lines.length && isArtLine(lines[j + 1])))) {
+      j++;
+    }
+    // 1行だけのものは図ではなく、絶対値の式（|x−y|）などのことが多い。
+    // 等幅の箱に入れると本文から浮くので、ふつうの本文として扱う。
+    if (j - i < 2) {
+      out.push(renderLine(lines[i], i));
+      continue;
+    }
+    // 図に付いている短いラベル行（「C（頂点）」「左辺　右辺」「（∠A = 45°）」など）も
+    // 同じ等幅の箱に入れる。別々に描くと、ラベルだけ字幅がずれて図から離れて見える。
+    let start = i;
+    const isLabel = (l: string) =>
+      l.trim() !== '' && l.replace(/[　\s]/g, '').length <= 14 && !/^\s*[■●例★→⚠]/.test(l);
+    while (start > 0 && out.length > 0 && isLabel(lines[start - 1])) {
+      start--;
+      out.pop();
+    }
+    let end = j;
+    while (end < lines.length && isLabel(lines[end])) end++;
+    out.push(
+      <ScrollView key={`art${start}`} horizontal showsHorizontalScrollIndicator={false} style={styles.artBox}>
+        <Text style={styles.artText}>{lines.slice(start, end).join('\n')}</Text>
+      </ScrollView>,
+    );
+    i = end - 1;
+  }
+  return out;
+}
+
+function renderLine(line: string, i: number): React.ReactNode {
+  {
     if (line.startsWith('■ ') || line.startsWith('● ')) {
       return (
         <Text key={i} style={styles.bullet}>
@@ -63,7 +128,7 @@ function renderBody(body: string): React.ReactNode[] {
         {line}
       </Text>
     );
-  });
+  }
 }
 
 export default function LessonRenderer({
@@ -134,6 +199,18 @@ export default function LessonRenderer({
             {section.figureId != null && (() => {
               const fig = getLessonFigure(section.figureId);
               return fig != null ? <FigureView figure={fig} animated /> : null;
+            })()}
+            {section.mangaId != null && (() => {
+              const script = getMangaScript(section.mangaId);
+              return script != null ? <MangaDialogue script={script} /> : null;
+            })()}
+            {/* 「何の問題を解いているか分からない」を防ぐため、公式集は
+                その公式の例題・応用問題をこの場に出す。ロック中のセクションは
+                上のisLockedFormula分岐でこの行まで到達しないので、
+                買い切り前の公式の問題が漏れることはない。 */}
+            {section.figureId != null && (() => {
+              const qs = getKoushikiQuestionsForFigure(section.figureId);
+              return qs.length > 0 ? <InlineQuiz items={questionsToQuizItems(qs)} /> : null;
             })()}
           </View>
         );
@@ -240,6 +317,21 @@ const styles = StyleSheet.create({
   },
   spacer: {
     height: 8,
+  },
+  artBox: {
+    backgroundColor: '#FAF6EF',
+    borderWidth: 1,
+    borderColor: '#E8DCC8',
+    borderRadius: 8,
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    marginVertical: 8,
+  },
+  artText: {
+    fontFamily: MONO,
+    fontSize: 13,
+    lineHeight: 19,
+    color: '#2B2420',
   },
   lockedSection: {
     marginBottom: 20,

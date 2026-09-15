@@ -35,6 +35,7 @@ import type {
   Pt,
 } from '../data/figures';
 import { prefectureShapes, JP_MAP_VIEWBOX } from '../data/japanPrefectures';
+import { autoSteps, autoBuildSteps, type FigureQuestion } from '../data/auto-steps';
 
 // 内部描画座標系（viewBox）。Svgの実サイズは画面幅に合わせて拡大縮小する。
 const VBW = 320;
@@ -48,12 +49,17 @@ const PALETTE = ['#B5622E', '#E11D48', '#16A34A', '#9333EA', '#F59E0B'];
 
 type Area = { x0: number; y0: number; w: number; h: number };
 
-function useSize() {
-  // 呼び出し元によって左右の余白（マージン＋パディング）の合計が異なる。
-  // 一番余白が大きい画面（公式・まとめ: 16*2 + 16*2 + 12*2 = 88px）でも
-  // はみ出さないよう、余白は多めに見積もっておく。
-  const cardW = Math.min(Dimensions.get('window').width - 88, 460);
-  const w = Math.max(220, cardW);
+/**
+ * 図の表示サイズ。
+ * Dimensions は起動時の画面幅を1回読むだけなので、置かれた場所の余白が
+ * 想定より大きかったり、横向き・分割表示で幅が変わったりすると図がはみ出す。
+ * そこで、実際に置かれた場所の幅を onLayout で測ってそれに合わせる。
+ * 測り終わるまでは Dimensions からの控えめな見積もりを使う。
+ */
+function useSize(measured: number | null) {
+  const fallback = Math.min(Dimensions.get('window').width - 88, 460);
+  const base = measured != null && measured > 0 ? measured : fallback;
+  const w = Math.max(220, Math.min(base, 460));
   return { w, h: (w * VBH) / VBW };
 }
 
@@ -268,10 +274,37 @@ function centroid(pts: { x: number; y: number }[]) {
 function PolygonFig({ fig }: { fig: PolyFigure }) {
   const pad = 34;
   const area: Area = { x0: pad, y0: pad, w: VBW - pad * 2, h: VBH - pad * 2 };
-  const map = fitPoints(fig.points, area);
+  // 円・補助線も入る大きさに収める（縮尺は縦横そろっているので円は円のまま描かれる）
+  const bounds: Pt[] = [...fig.points];
+  fig.circles?.forEach((cc) => {
+    bounds.push({ x: cc.x - cc.r, y: cc.y }, { x: cc.x + cc.r, y: cc.y }, { x: cc.x, y: cc.y - cc.r }, { x: cc.x, y: cc.y + cc.r });
+  });
+  fig.segments?.forEach((sg) => bounds.push(sg.from, sg.to));
+  const map = fitPoints(bounds, area);
   const P = fig.points.map(map);
+  const scale = map({ x: 1, y: 0 }).x - map({ x: 0, y: 0 }).x;
   const c = centroid(P);
   const els: React.ReactNode[] = [];
+
+  // 円（本体より先に描いて下地にする）
+  fig.circles?.forEach((cc, k) => {
+    const m = map({ x: cc.x, y: cc.y });
+    els.push(<SvgCircle key={`cc${k}`} cx={m.x} cy={m.y} r={Math.abs(cc.r * scale)} fill="none" stroke={AXIS} strokeWidth={1.5} />);
+    if (cc.label) els.push(<SvgText key={`ccl${k}`} x={m.x} y={m.y - Math.abs(cc.r * scale) - 5} fontSize={11} fill={INK} textAnchor="middle" fontWeight="bold">{cc.label}</SvgText>);
+  });
+
+  // 部分図形の色分け塗りつぶし（本体の下に敷く。参考書の「比べている三角形を色で塗る」表現）
+  const REGION_PALETTE = ['#FEF3C7', '#DBEAFE', '#FCE7F3', '#DCFCE7', '#EDE9FE'];
+  fig.regions?.forEach((r, k) => {
+    els.push(
+      <SvgPolygon
+        key={`rg${k}`}
+        points={r.indices.map((i) => `${P[i].x},${P[i].y}`).join(' ')}
+        fill={r.color ?? REGION_PALETTE[k % REGION_PALETTE.length]}
+        stroke="none"
+      />,
+    );
+  });
 
   // 本体
   els.push(
@@ -284,6 +317,25 @@ function PolygonFig({ fig }: { fig: PolyFigure }) {
       strokeLinejoin="round"
     />,
   );
+
+  // 補助線（多角形の辺ではない線分）
+  fig.segments?.forEach((sg, k) => {
+    const a = map(sg.from);
+    const b = map(sg.to);
+    els.push(
+      <Line
+        key={`xs${k}`}
+        x1={a.x}
+        y1={a.y}
+        x2={b.x}
+        y2={b.y}
+        stroke={ACCENT}
+        strokeWidth={1.6}
+        strokeDasharray={sg.dashed ? '4 3' : undefined}
+      />,
+    );
+    if (sg.label) els.push(<SvgText key={`xsl${k}`} x={(a.x + b.x) / 2 + 6} y={(a.y + b.y) / 2 - 4} fontSize={11} fill={INK}>{sg.label}</SvgText>);
+  });
 
   // 対角線
   fig.diagonals?.forEach(([i, j], k) => {
@@ -450,6 +502,64 @@ function CircleFig({ fig }: { fig: CircleFigure }) {
 
 // ---------- 立体 ----------
 
+/** 「いま描いたところ」を示す強調色。ふだんの線（ACCENT）と区別できる色にする。 */
+const HILITE = '#E11D48';
+
+/**
+ * 図の部品を1つ描く。
+ *
+ * 描いたばかりの部品には、同じ形をひとまわり太い強調色でかさねて、
+ * どこが増えたのかが一目で分かるようにする。強調はしばらくすると引いていく。
+ * 図形ごとに手を入れなくてよいよう、部品の種類（線か文字か）だけで
+ * かさね方を決めている。
+ */
+function renderPart(
+  el: React.ReactNode,
+  i: number,
+  opacity: number,
+  hilite: number,
+): React.ReactNode {
+  if (opacity <= 0) return <G key={`p${i}`} opacity={0} />;
+  if (hilite <= 0.02 || !React.isValidElement(el)) {
+    return (
+      <G key={`p${i}`} opacity={opacity}>
+        {el}
+      </G>
+    );
+  }
+  const p = el.props as Record<string, any>;
+  // 線で描かれた部品 → 太い強調色の線をうしろにかさねる
+  if (p.stroke != null && p.stroke !== 'none') {
+    return (
+      <G key={`p${i}`} opacity={opacity}>
+        {React.cloneElement(el as React.ReactElement<any>, {
+          stroke: HILITE,
+          strokeWidth: (typeof p.strokeWidth === 'number' ? p.strokeWidth : 1.5) + 2.5,
+          strokeDasharray: undefined,
+          fill: 'none',
+          opacity: hilite * 0.55,
+        })}
+        {el}
+      </G>
+    );
+  }
+  // 文字や塗りだけの部品 → 強調が乗っているあいだ色を変える
+  if (p.fill != null && p.fill !== 'none') {
+    return (
+      <G key={`p${i}`} opacity={opacity}>
+        {React.cloneElement(el as React.ReactElement<any>, {
+          fill: hilite > 0.35 ? HILITE : p.fill,
+        })}
+      </G>
+    );
+  }
+  return (
+    <G key={`p${i}`} opacity={opacity}>
+      {el}
+    </G>
+  );
+}
+
 function SolidFig({ fig }: { fig: SolidFigure }) {
   const els: React.ReactNode[] = [];
   const L = fig.labels ?? {};
@@ -484,14 +594,31 @@ function SolidFig({ fig }: { fig: SolidFigure }) {
       els.push(<SvgText key="lr" x={cx + rx / 2} y={top - 5} fontSize={11} fill={INK} textAnchor="middle">{L.radius}</SvgText>);
     }
   } else if (fig.shape === 'cone') {
+    // 部品を出す順番は、そのまま「動く図解」で描かれる順番になる。
+    // 底面 → 母線 → 母線の長さ → 半径 → 高さ → 直角 → 高さの長さ
+    // という、解説の流れと同じ順にそろえてある。
     const rx = 56, ry = 16, apexY = 40, baseY = 188;
     els.push(<Ellipse key="base" cx={cx} cy={baseY} rx={rx} ry={ry} fill="rgba(14,165,233,0.10)" stroke={ACCENT} strokeWidth={1.8} />);
     els.push(<Line key="lft" x1={cx - rx} y1={baseY} x2={cx} y2={apexY} stroke={ACCENT} strokeWidth={1.8} />);
     els.push(<Line key="rgt" x1={cx + rx} y1={baseY} x2={cx} y2={apexY} stroke={ACCENT} strokeWidth={1.8} />);
-    els.push(<Line key="axis" x1={cx} y1={apexY} x2={cx} y2={baseY} stroke={AXIS} strokeWidth={1} strokeDasharray="3 3" />);
-    if (L.height) els.push(<SvgText key="lh" x={cx + 5} y={(apexY + baseY) / 2} fontSize={11} fill={INK}>{L.height}</SvgText>);
-    if (L.radius) els.push(<SvgText key="lr" x={cx + rx / 2} y={baseY - 5} fontSize={11} fill={INK} textAnchor="middle">{L.radius}</SvgText>);
     if (L.slant) els.push(<SvgText key="ls" x={cx - rx / 2 - 12} y={(apexY + baseY) / 2} fontSize={11} fill={INK} textAnchor="end">{L.slant}</SvgText>);
+    // 半径は線を引かないと、断面にできる直角三角形が図に見えてこない。
+    if (L.radius) {
+      els.push(<Line key="rl" x1={cx} y1={baseY} x2={cx + rx} y2={baseY} stroke={ACCENT} strokeWidth={1.6} />);
+      els.push(<SvgText key="lr" x={cx + rx / 2} y={baseY - 5} fontSize={11} fill={INK} textAnchor="middle">{L.radius}</SvgText>);
+    }
+    els.push(<Line key="axis" x1={cx} y1={apexY} x2={cx} y2={baseY} stroke={ACCENT} strokeWidth={1.6} strokeDasharray="4 3" />);
+    // 底面の中心にできる直角のしるし。ここが直角だから三平方が使える。
+    els.push(
+      <Path
+        key="rightangle"
+        d={`M${cx},${baseY - 11} L${cx + 11},${baseY - 11} L${cx + 11},${baseY}`}
+        fill="none"
+        stroke={AXIS}
+        strokeWidth={1.2}
+      />,
+    );
+    if (L.height) els.push(<SvgText key="lh" x={cx + 5} y={(apexY + baseY) / 2} fontSize={11} fill={INK}>{L.height}</SvgText>);
   } else if (fig.shape === 'triangularPrism') {
     const w = 120, h = 96, x = cx - w / 2 - dx / 2, y = 70;
     const F = [ { x: x + w / 2, y }, { x: x + w, y: y + h }, { x, y: y + h } ];
@@ -1243,22 +1370,114 @@ function StepsList({ steps, animated, stepReached }: { steps: string[]; animated
 
 // 図解は要素が描かれた順に段階的に立ち上がる「動く解説」。
 // animated=true（解説側）で自動再生、タップで再生し直し。question側は静止。
-export default function FigureView({ figure, animated = false }: { figure: Figure; animated?: boolean }) {
-  const { w, h } = useSize();
+export default function FigureView({
+  figure: rawFigure,
+  animated = false,
+  question,
+}: {
+  figure: Figure;
+  animated?: boolean;
+  /** 図に添える問題。あると「何を聞かれているか」「答え」まで説明に入る */
+  question?: FigureQuestion;
+}) {
+  const [boxWidth, setBoxWidth] = useState<number | null>(null);
+
+  // steps が書かれていない図は、図形データそのものから説明文を組み立てる。
+  // 問題集の図1,320枚のうち798枚に steps が無く、線がすうっと現れて終わりだった。
+  // 手書きの steps があれば必ずそちらが優先される（ここには入ってこない）。
+  const figure = useMemo<Figure>(() => {
+    if (rawFigure.steps?.length) return rawFigure;
+    const auto = autoSteps(rawFigure, question);
+    if (!auto) return rawFigure;
+    return { ...rawFigure, steps: auto, buildSteps: autoBuildSteps(auto, question) } as Figure;
+  }, [rawFigure, question]);
+
+  const { w, h } = useSize(boxWidth);
   const rawId = useId();
   const uid = rawId.replace(/[^a-zA-Z0-9]/g, '');
   const parts = useMemo(() => buildParts(figure, uid), [figure, uid]);
 
   const totalSteps = figure.steps?.length ?? 0;
+  // 手順がある解説図は、1手順＝1枚のスライドとして送る。図のほうも
+  // スライドが進むにつれて描き足されていくので、見ていて動きがある。
+  // 手順が無い図（や問題側の静止図）は、これまでどおり単純な描画のみ。
+  const slideMode = animated && totalSteps > 0;
   const [progress, setProgress] = useState(animated ? 0 : 1);
   const [stepReached, setStepReached] = useState(animated ? 0 : totalSteps);
+  const [slide, setSlide] = useState(0);
+  const [autoPlay, setAutoPlay] = useState(true);
   const rafRef = useRef<number | null>(null);
   const stepTimersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+  const autoTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // アニメーション中の現在値。setProgressだけだと次のフレームで
+  // 古い値から補間してしまうので、refでも持っておく。
+  const progressRef = useRef(animated ? 0 : 1);
 
-  // 図形自体はすぐに描き上がるが、①②③…の解く手順は
-  // スライドショーのように一定間隔でゆっくり切り替える（読む時間を確保する）。
-  const DRAW_DUR = 1400;
+  // 描き終えるまでの時間は、部品の数に合わせて伸ばす。
+  // 以前は部品が何個あっても1.4秒で、部品の多い図では1つあたり0.1秒も
+  // なく、全部が同時にぼんやり現れたように見えていた。
+  // 1部品におよそ0.36秒を当てて、増えた部分が目で追えるようにする。
+  // 長い図でも待たされすぎないよう7秒で打ち止めにする。
+  const DRAW_DUR = Math.min(7000, 900 + Math.max(parts.length, 1) * 360);
   const STEP_INTERVAL = 2200;
+  /** 1枚のスライドを自動で送るまでの時間 */
+  const SLIDE_DUR = 4200;
+  // 図を描き終えるのが何枚目のスライドか。
+  // 以前は「全体の半分で描き上げる」という決め打ちだったため、説明より先に
+  // 図ができあがってしまっていた（円錐で「半径は6cm」と言っている時点で
+  // 高さの8cmまで出ていた）。
+  // 図ごとに buildSteps で指定できるようにし、省略時は「最後の1枚手前まで
+  // かけて描く」を既定にする。最後のスライドは結論を述べるのに使う。
+  const buildSlides = Math.max(
+    1,
+    Math.min(totalSteps, (figure as { buildSteps?: number }).buildSteps ?? Math.max(1, totalSteps - 1)),
+  );
+  const targetProgress = slideMode ? Math.min(1, (slide + 1) / buildSlides) : 1;
+
+  // スライドが変わるたびに、図の描画量を今の値から目標値までなめらかに動かす。
+  // かかる時間は「そのスライドで増える部品の数」に比例させる。
+  // 一律600msだと、部品が5個増えるスライドでは1個あたり0.12秒しかなく、
+  // まとめてパッと出たようにしか見えなかった。
+  useEffect(() => {
+    if (!slideMode) return;
+    let startTs: number | null = null;
+    const from = progressRef.current;
+    const added = Math.max(0, targetProgress - from) * Math.max(parts.length, 1);
+    const dur = Math.min(3200, 420 + added * 360);
+    const tick = (ts: number) => {
+      if (startTs == null) startTs = ts;
+      const t = Math.min(1, (ts - startTs) / dur);
+      const v = from + (targetProgress - from) * easeOut(t);
+      progressRef.current = v;
+      setProgress(v);
+      if (t < 1) rafRef.current = requestAnimationFrame(tick);
+    };
+    rafRef.current = requestAnimationFrame(tick);
+    return () => {
+      if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
+    };
+  }, [slideMode, targetProgress, parts.length]);
+
+  // 自動再生。最後のスライドまで来たら止まる。手で送ったら自動送りはやめる。
+  useEffect(() => {
+    if (!slideMode || !autoPlay || slide >= totalSteps - 1) return;
+    autoTimerRef.current = setTimeout(() => setSlide((s) => Math.min(totalSteps - 1, s + 1)), SLIDE_DUR);
+    return () => {
+      if (autoTimerRef.current != null) clearTimeout(autoTimerRef.current);
+    };
+  }, [slideMode, autoPlay, slide, totalSteps]);
+
+  function goToSlide(next: number) {
+    setAutoPlay(false);
+    setSlide(Math.max(0, Math.min(totalSteps - 1, next)));
+  }
+
+  function replay() {
+    progressRef.current = 0;
+    setProgress(0);
+    setSlide(0);
+    setAutoPlay(true);
+  }
 
   const play = useCallback(() => {
     if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
@@ -1269,7 +1488,10 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
     const tick = (ts: number) => {
       if (startTs == null) startTs = ts;
       const t = Math.min(1, (ts - startTs) / DRAW_DUR);
-      setProgress(easeOut(t));
+      // 等速で進める。easeOut にすると最初の数部品が一気に出て、
+      // 最後の1個だけが長く残るという、見ていて分かりにくい動きになる。
+      // 1部品ずつ同じ速さで描かれるほうが、順序を目で追える。
+      setProgress(t);
       if (t < 1) rafRef.current = requestAnimationFrame(tick);
     };
     setProgress(0);
@@ -1284,16 +1506,25 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
   }, [figure.steps]);
 
   useEffect(() => {
-    if (animated) play();
+    // スライド送りのときは、上のスライド用アニメーションが図の描画を受け持つ
+    if (animated && !slideMode) play();
     return () => {
-      if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
+      if (!slideMode && rafRef.current != null) cancelAnimationFrame(rafRef.current);
       stepTimersRef.current.forEach(clearTimeout);
     };
-  }, [animated, play]);
+  }, [animated, slideMode, play]);
 
   if (figure.kind === 'chemEquation') {
     return (
-      <View style={styles.wrap}>
+      <View
+        style={styles.wrap}
+        onLayout={(e) => {
+          // 数pxの違いで測り直すと、そのたびに描き直されて図がちらつく。
+          // はっきり違うときだけ反映する。
+          const w = e.nativeEvent.layout.width - 16;
+          setBoxWidth((prev) => (prev == null || Math.abs(prev - w) > 8 ? w : prev));
+        }}
+      >
         <TouchableOpacity
           activeOpacity={animated ? 0.7 : 1}
           onPress={animated ? play : undefined}
@@ -1311,33 +1542,97 @@ export default function FigureView({ figure, animated = false }: { figure: Figur
   }
 
   const N = Math.max(parts.length, 1);
-  const WINDOW = Math.max(3, Math.round(N * 0.18));
+
+  // 【この図はどこまで描けたか】
+  // 以前は「進行度に応じて部品を薄く重ねていく」だけだったので、
+  // 図全体がぼんやり現れて終わり、何の説明にもなっていなかった。
+  //
+  // いまは 1部品ずつ順に描き、描いたばかりの部品をしばらく強調する。
+  // こうすると「底面 → 母線 → 高さ → 寸法」のように、図が組み立てられて
+  // いく過程が目で追える。データ（図形の定義）は一切変えずに、
+  // すべての図でこの動きになる。
+  //
+  // pos: いま何番目の部品まで描けたか（小数。0.0〜N）
+  const pos = animated ? progress * N : N;
+  /** その部品の不透明度。描き終わったものは 1、描きかけは途中、まだのものは 0 */
   const opacityOf = (i: number) => {
     if (!animated) return 1;
-    const t = progress * (N + WINDOW) - i;
-    return Math.max(0, Math.min(1, t / WINDOW));
+    // 1部品ぶんの登場に使う割合。短すぎるとパッと出て見えるので少し長めに取る
+    const t = (pos - i) / 0.75;
+    return Math.max(0, Math.min(1, t));
+  };
+  /** その部品を「いま描いたところ」として強調する度合い。0〜1 */
+  const highlightOf = (i: number) => {
+    if (!animated) return 0;
+    const t = pos - i;
+    if (t < 0) return 0;
+    if (t < 0.75) return t / 0.75; // 現れながら強調が乗る
+    // 描き終えたあと、1.6部品ぶんかけて強調が引いていく
+    return Math.max(0, 1 - (t - 0.75) / 1.6);
   };
 
   return (
-    <View style={styles.wrap}>
+    <View
+      style={styles.wrap}
+      onLayout={(e) => {
+        const w = e.nativeEvent.layout.width - 16;
+        setBoxWidth((prev) => (prev == null || Math.abs(prev - w) > 8 ? w : prev));
+      }}
+    >
       <TouchableOpacity
         activeOpacity={animated ? 0.85 : 1}
-        onPress={animated ? play : undefined}
+        onPress={slideMode ? replay : animated ? play : undefined}
         style={[styles.canvas, { width: w, height: h }]}
       >
         <Svg width="100%" height="100%" viewBox={`0 0 ${VBW} ${VBH}`}>
-          {parts.map((el, i) => (
-            <G key={`p${i}`} opacity={opacityOf(i)}>{el}</G>
-          ))}
+          {parts.map((el, i) => renderPart(el, i, opacityOf(i), highlightOf(i)))}
         </Svg>
       </TouchableOpacity>
-      {animated && (
+
+      {slideMode && (
+        <View style={[styles.slideBox, { width: w }]}>
+          <View style={styles.slideDots}>
+            {(figure.steps ?? []).map((_, i) => (
+              <View
+                key={i}
+                style={[styles.slideDot, i === slide && styles.slideDotActive, i < slide && styles.slideDotDone]}
+              />
+            ))}
+          </View>
+          <View style={styles.slideHeaderRow}>
+            <Text style={styles.slideCounter}>{slide + 1} / {totalSteps}</Text>
+            {autoPlay && slide < totalSteps - 1 && <Text style={styles.slideAuto}>自動で進みます</Text>}
+          </View>
+          <Text style={styles.slideText}>{(figure.steps ?? [])[slide]}</Text>
+          <View style={styles.slideNav}>
+            <TouchableOpacity
+              style={[styles.slideBtn, styles.slideBtnBack, slide === 0 && styles.slideBtnDisabled]}
+              onPress={() => goToSlide(slide - 1)}
+              disabled={slide === 0}
+              activeOpacity={0.8}
+            >
+              <Text style={[styles.slideBtnText, styles.slideBtnBackText]}>◀ もどる</Text>
+            </TouchableOpacity>
+            {slide < totalSteps - 1 ? (
+              <TouchableOpacity style={styles.slideBtn} onPress={() => goToSlide(slide + 1)} activeOpacity={0.8}>
+                <Text style={styles.slideBtnText}>つぎへ ▶</Text>
+              </TouchableOpacity>
+            ) : (
+              <TouchableOpacity style={styles.slideBtn} onPress={replay} activeOpacity={0.8}>
+                <Text style={styles.slideBtnText}>🔁 最初から</Text>
+              </TouchableOpacity>
+            )}
+          </View>
+        </View>
+      )}
+
+      {animated && !slideMode && (
         <View style={[styles.progressTrack, { width: w }]}>
           <View style={[styles.progressFill, { width: Math.round(w * progress) }]} />
         </View>
       )}
-      {animated && <Text style={styles.replayHint}>▶ タップで再生（動く解説）</Text>}
-      {figure.steps != null && figure.steps.length > 0 && (
+      {animated && !slideMode && <Text style={styles.replayHint}>▶ タップで再生（動く解説）</Text>}
+      {!slideMode && figure.steps != null && figure.steps.length > 0 && (
         <StepsList steps={figure.steps} animated={animated} stepReached={stepReached} />
       )}
       {figure.caption != null && <Text style={styles.caption}>{figure.caption}</Text>}
@@ -1363,6 +1658,60 @@ const styles = StyleSheet.create({
   canvas: {
     alignSelf: 'center',
   },
+  // 手順を1枚ずつ送るスライド。図の下に置き、いま何枚目かを常に見せる。
+  slideBox: {
+    alignSelf: 'center',
+    marginTop: 10,
+    paddingHorizontal: 12,
+    paddingTop: 10,
+    paddingBottom: 12,
+    backgroundColor: '#FAF6EF',
+    borderTopWidth: 1,
+    borderTopColor: '#EBE4D8',
+  },
+  slideDots: {
+    flexDirection: 'row',
+    gap: 3,
+    marginBottom: 8,
+  },
+  slideDot: {
+    flex: 1,
+    height: 3,
+    borderRadius: 2,
+    backgroundColor: '#E8DCC8',
+  },
+  slideDotDone: { backgroundColor: '#C7B9A6' },
+  slideDotActive: { backgroundColor: '#B5622E' },
+  slideHeaderRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 6,
+  },
+  slideCounter: { fontSize: 12, fontWeight: '800', color: '#8B5A38' },
+  slideAuto: { fontSize: 11, color: '#9C9186' },
+  slideText: {
+    fontSize: 15,
+    lineHeight: 24,
+    color: '#2B2420',
+    minHeight: 72,
+  },
+  slideNav: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    gap: 8,
+    marginTop: 10,
+  },
+  slideBtn: {
+    backgroundColor: '#B5622E',
+    borderRadius: 8,
+    paddingVertical: 9,
+    paddingHorizontal: 16,
+  },
+  slideBtnBack: { backgroundColor: '#EFE7D8' },
+  slideBtnDisabled: { opacity: 0.4 },
+  slideBtnText: { color: '#FFFFFF', fontWeight: '800', fontSize: 13.5 },
+  slideBtnBackText: { color: '#8B5A38' },
   chemCanvas: {
     paddingVertical: 14,
   },

@@ -340,7 +340,7 @@ export default function GeographyExplorer(_props: Props) {
         {selected && (
           <View style={styles.modalRoot}>
             <View style={[styles.modalHeader, { backgroundColor: selected.color }]}>
-              <Text style={styles.modalHeaderTitle}>{selected.emoji} {selected.name}</Text>
+              <Text style={styles.modalHeaderTitle} numberOfLines={1}>{selected.emoji} {selected.name}</Text>
               <TouchableOpacity onPress={() => resetView()} style={styles.modalCloseBtn}>
                 <Text style={styles.modalCloseBtnText}>✕ 閉じる</Text>
               </TouchableOpacity>
@@ -383,11 +383,20 @@ function RegionDetail({
   const regionMountains = mountainRanges.filter(
     (m) => m.region.includes(regionKey) || regionKey.includes(m.region),
   );
+  // 川も同じように、その地方を流れるものだけを出す。
+  // 一覧へ誘導するだけの案内文では中身が薄く、選んだ地域の話になっていなかった。
+  const regionRivers = rivers.filter(
+    (r) => r.region.includes(regionKey) || regionKey.includes(r.region),
+  );
+
+  // 地形・漁業・工業のタブには絵が1枚もなく、文字だけだった。
+  // geographyImages に「地形：四国」のような名前で登録したイラストを、各タブの先頭に出す。
+  const tabImage = (prefix: string) => geographyImages[`${prefix}：${region.name.replace(/（.*）/, '')}`];
 
   return (
     <ScrollView style={styles.detailCard} showsVerticalScrollIndicator={false}>
       <View style={styles.detailHeader}>
-        <Text style={styles.detailTitle}>{region.emoji} {region.name}</Text>
+        <Text style={styles.detailTitle} numberOfLines={1}>{region.emoji} {region.name}</Text>
         <TouchableOpacity onPress={onClose}>
           <Text style={styles.detailClose}>✕ 閉じる</Text>
         </TouchableOpacity>
@@ -404,6 +413,9 @@ function RegionDetail({
 
       {layer === 'mountains' && (
         <>
+          {tabImage('地形') && (
+            <Image source={tabImage('地形')} style={styles.tabImage} resizeMode="cover" />
+          )}
           <DetailSection title="🏔 地形" items={[region.terrain]} />
           {regionMountains.length > 0 ? (
             <DetailSection
@@ -418,10 +430,24 @@ function RegionDetail({
               items={['この地域には日本アルプスのような大きな山脈はありません。全国のおもな山地・山脈は、地図の下の一覧で位置とあわせて確認できます。']}
             />
           )}
-          <DetailSection
-            title="💧 川について"
-            items={['全国のおもな川（信濃川・利根川など）は、地図の下の「主要な川（長い順）」一覧で、つくる平野や河口とあわせて確認できます。']}
-          />
+          {regionRivers.length > 0 ? (
+            <DetailSection
+              title="💧 この地域を流れるおもな川"
+              items={regionRivers.map(
+                (r) =>
+                  `${r.name}（${r.reading}）／全長 ${r.lengthKm}km${r.rank ? `・${r.rank}` : ''}${
+                    r.nickname ? `・別名「${r.nickname}」` : ''
+                  } — ${r.note}（つくる平野：${r.plain}／河口：${r.mouth}）`,
+              )}
+            />
+          ) : (
+            <DetailSection
+              title="💧 川について"
+              items={[
+                'この地域には、地図に線で示した主要な川はありません。中国地方では江の川（ごうのかわ）が最も長く、中国山地を横切って日本海にそそいでいます。全国のおもな川は、地図の下の「主要な川（長い順）」一覧で、つくる平野や河口とあわせて確認できます。',
+              ]}
+            />
+          )}
         </>
       )}
 
@@ -455,6 +481,9 @@ function RegionDetail({
 
       {layer === 'fishery' && (
         <>
+          {tabImage('漁業') && (
+            <Image source={tabImage('漁業')} style={styles.tabImage} resizeMode="cover" />
+          )}
           <DetailSection title="🌊 漁場" items={fi.fishingGrounds} />
           <DetailSection title="🐟 主要魚種" items={fi.mainCatch} />
           <DetailSection title="🏗 養殖" items={fi.aquaculture} />
@@ -467,6 +496,9 @@ function RegionDetail({
 
       {layer === 'factory' && (
         <>
+          {tabImage('工業') && (
+            <Image source={tabImage('工業')} style={styles.tabImage} resizeMode="cover" />
+          )}
           <DetailSection title="🏢 主な工業" items={region.industries} />
           {region.industrialZones.map((zone) => (
             <View key={zone.name} style={styles.factoryBlock}>
@@ -705,6 +737,9 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: '900',
     color: '#FFFFFF',
+    // 「九州・沖縄」のような長い名前でも、閉じるボタンを画面外へ押し出さない
+    flexShrink: 1,
+    marginRight: 8,
   },
   modalCloseBtn: {
     backgroundColor: 'rgba(0,0,0,0.2)',
@@ -745,11 +780,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 12,
   },
-  detailTitle: { fontSize: 20, fontWeight: '900', color: '#221C18' },
+  detailTitle: { fontSize: 20, fontWeight: '900', color: '#221C18', flexShrink: 1, marginRight: 8 },
   detailClose: { fontSize: 14, fontWeight: '700', color: '#6B4226' },
   detailSection: { marginBottom: 14 },
   detailSectionTitle: { fontSize: 16, fontWeight: '800', color: '#6B4226', marginBottom: 8 },
   detailItem: { fontSize: 14, color: '#333', lineHeight: 24 },
+  tabImage: {
+    width: '100%',
+    height: 170,
+    borderRadius: 12,
+    marginBottom: 12,
+    backgroundColor: '#F5EFE4',
+  },
   spotlightSection: { marginBottom: 14 },
   spotlightHeader: { fontSize: 16, fontWeight: '800', color: '#D97706', marginBottom: 8 },
   spotlightCard: {

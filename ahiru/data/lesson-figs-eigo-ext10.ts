@@ -78,6 +78,14 @@ export const lessonFigsEigoExt10: Record<string, Figure> = {
       { label: '両方あり', value: 15, color: '#16A34A' },
     ],
     caption: '食べ物を表す語の分類。apple・egg など形のはっきりしたものは数えられ、water・bread・rice など材料や液体は数えられない。chicken（とり肉／にわとり）のように両方の使い方を持つ語もある',
+    steps: [
+      "円全体を100%として、それぞれが全体のどれくらいかを表した円グラフ。",
+      "いちばん大きいのは「数えられる」で、全体のおよそ45%。",
+      "内わけは 数えられる 45%、数えられない 40%、両方あり 15%。",
+      "割合は「部分 ÷ 全体 × 100」で求める。全部たすと100%になることを確かめる。",
+      "食べ物を表す語の分類。apple・egg など形のはっきりしたものは数えられ、water・bread・rice など材料や液体は数えられない。chicken（とり肉／にわとり）のように両方の使い方を持つ語もある",
+    ],
+    buildSteps: 4,
   },
 
   // s345：家の間取り。部屋の名前と位置関係を示す
@@ -124,6 +132,13 @@ export const lessonFigsEigoExt10: Record<string, Figure> = {
       { x: 3, label: 'graduation ceremony' },
     ],
     caption: '学校行事と月の対応（数字は月）。行事の時期を言うときは in April のように月には in、on April 8 のように日付には on を使う',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は1から12まで、1きざみで目もりがふってある。",
+      "印がついているのは entrance ceremony、summer vacation、sports day、school festival。位置を目もりで確かめる。",
+      "学校行事と月の対応（数字は月）。行事の時期を言うときは in April のように月には in、on April 8 のように日付には on を使う",
+    ],
+    buildSteps: 3,
   },
 
   // s352：月ごとの雨の日数。天気を話題にする練習と barChart の読み取り
@@ -141,6 +156,14 @@ export const lessonFigsEigoExt10: Record<string, Figure> = {
       { label: 'Dec.', value: 4, color: '#16A34A' },
     ],
     caption: '日本のある都市の月ごとの雨の日数（例）。6月は梅雨（the rainy season）で最も多い。「6月は雨が多い」は We have a lot of rain in June. または It rains a lot in June. と表す',
+    steps: [
+      "よこじくは「月」、たてじくは「雨の日数」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「Jun.」で16（雨の日数）。",
+      "いちばん小さいのは「Dec.」で4。差は12。",
+      "大きい順にならべると Jun. → Aug. → Oct. → Apr. → Jan. → Dec.。棒の高さを見比べて確かめる。",
+      "日本のある都市の月ごとの雨の日数（例）。6月は梅雨（the rainy season）で最も多い。「6月は雨が多い」は We have a lot of rain in June. または It rains a lot in June. と表す",
+    ],
+    buildSteps: 4,
   },
 
   // s353：四季と月の対応
@@ -156,6 +179,13 @@ export const lessonFigsEigoExt10: Record<string, Figure> = {
       { x: 1, label: 'winter' },
     ],
     caption: '四季と月の対応（数字は月）。春は3〜5月、夏は6〜8月、秋は9〜11月、冬は12〜2月とするのがふつう。季節の前には in を使う（in spring）。秋は fall（アメリカ英語）と autumn（イギリス英語）の両方が正しい',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は1から12まで、1きざみで目もりがふってある。",
+      "印がついているのは spring、summer、fall / autumn、winter。位置を目もりで確かめる。",
+      "四季と月の対応（数字は月）。春は3〜5月、夏は6〜8月、秋は9〜11月、冬は12〜2月とするのがふつう。季節の前には in を使う（in spring）。秋は fall（アメリカ英語）と autumn（イギリス英語）の両方が正しい",
+    ],
+    buildSteps: 3,
   },
 
   // s355：序数を数直線に置き、つづりが変わるものを目立たせる
@@ -174,6 +204,13 @@ export const lessonFigsEigoExt10: Record<string, Figure> = {
       { x: 12, label: 'twelfth' },
     ],
     caption: '序数のうち、つづりに注意が必要なもの。first・second・third は特別な形、fifth（ve→f）・ninth（e が消える）・twelfth（ve→f）・eighth（t を重ねない）は形が変わる。ほかは -th を付けるだけ',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は1から12まで、1きざみで目もりがふってある。",
+      "印がついているのは first、second、third、fifth。位置を目もりで確かめる。",
+      "序数のうち、つづりに注意が必要なもの。first・second・third は特別な形、fifth（ve→f）・ninth（e が消える）・twelfth（ve→f）・eighth（t を重ねない）は形が変わる。ほかは -th を付けるだけ",
+    ],
+    buildSteps: 3,
   },
 
   // s356：一週間を円に見立て、曜日の並びを示す
@@ -236,6 +273,14 @@ export const lessonFigsEigoExt10: Record<string, Figure> = {
       { label: 'no / not any', value: 0, color: '#DC2626' },
     ],
     caption: '数量を表す語の度合い。a few / a little は「少しはある」、a のない few / little は「ほとんどない」で意味が正反対になる。数えられる名詞には many・a few・few、数えられない名詞には much・a little・little を使う',
+    steps: [
+      "棒の高さが数の大きさを表している。まず何を比べた図かをつかむ。",
+      "いちばん大きいのは「a lot of」で90（量・数の多さ）。",
+      "いちばん小さいのは「no / not any」で0。差は90。",
+      "大きい順にならべると a lot of → many / much → some → a few / a little → few / little → no / not any。棒の高さを見比べて確かめる。",
+      "数量を表す語の度合い。a few / a little は「少しはある」、a のない few / little は「ほとんどない」で意味が正反対になる。数えられる名詞には many・a few・few、数えられない名詞には much・a little・little を使う",
+    ],
+    buildSteps: 4,
   },
 
   // s363：町の地図。建物の位置関係を表す語を確認する
@@ -323,6 +368,14 @@ export const lessonFigsEigoExt10: Record<string, Figure> = {
       { x: 9, label: 'at seven（一点）' },
     ],
     caption: '時を表す前置詞は時間の幅で決まる。いちばん長い帯が in（年・月・季節・午前午後）、短い帯が on（日付・曜日）、点が at（時刻）。in → on → at と幅がせまくなる。night だけは at night と at を使う',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から10まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 0以上 かつ 8以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは in 2026 / in May（広い）、at seven（一点）。位置を目もりで確かめる。",
+      "時を表す前置詞は時間の幅で決まる。いちばん長い帯が in（年・月・季節・午前午後）、短い帯が on（日付・曜日）、点が at（時刻）。in → on → at と幅がせまくなる。night だけは at night と at を使う",
+    ],
+    buildSteps: 4,
   },
 
   // s376：時間帯とあいさつの対応（0〜24時）
@@ -338,6 +391,13 @@ export const lessonFigsEigoExt10: Record<string, Figure> = {
       { x: 23, label: 'Good night.（別れ）' },
     ],
     caption: '一日の時間帯とあいさつ（数字は時刻）。朝〜正午が Good morning.、正午〜夕方が Good afternoon.、夕方以降に会ったときが Good evening.。Good night. は「おやすみなさい」で、会ったときではなく別れるときに使う',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から24まで、2きざみで目もりがふってある。",
+      "印がついているのは Good morning.、Good afternoon.、Good evening.、Good night.（別れ）。位置を目もりで確かめる。",
+      "一日の時間帯とあいさつ（数字は時刻）。朝〜正午が Good morning.、正午〜夕方が Good afternoon.、夕方以降に会ったときが Good evening.。Good night. は「おやすみなさい」で、会ったときではなく別れるときに使う",
+    ],
+    buildSteps: 3,
   },
 
   // s380：道案内の地図。序数と right / left の読み取り

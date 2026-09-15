@@ -521,19 +521,6 @@ export const gradeJ3ShakaiQuestions: Question[] = [
 
   // ==================== 公民：政治のしくみの応用 ====================
   {
-    id: 'grade_j3_shakai_38',
-    subject: 'shakai',
-    examType: 'koko',
-    grade: GRADE,
-    difficulty: 'standard',
-    question:
-      '内閣が国会の信任にもとづいて成立し、国会に対して連帯して責任を負うしくみを何というか。',
-    answer: '議院内閣制',
-    hint: '衆議院で内閣不信任決議が可決されると、内閣は総辞職か衆議院解散を選ぶ。',
-    explanation:
-      '議院内閣制は、内閣が国会(特に衆議院)の信任にもとづいて成立し、国会に対して連帯して責任を負うしくみ。衆議院で内閣不信任決議案が可決(または信任決議案が否決)された場合、内閣は10日以内に衆議院を解散するか、総辞職しなければならない(憲法第69条)。',
-  },
-  {
     id: 'grade_j3_shakai_39',
     subject: 'shakai',
     examType: 'koko',

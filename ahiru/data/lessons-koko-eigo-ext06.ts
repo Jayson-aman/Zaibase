@@ -8,7 +8,7 @@ import type { Lesson } from './lesson-types';
 // 図解は lesson-figs-koko-eigo-ext06.ts。名詞の分類（pieChart）・格変化の表（coordinate）・
 // 頻度の副詞の度合い（barChart）など、図にすることで本当に理解が進む箇所にだけ付けてある（40課中18課）。
 export const kokoEigoExt06Lessons: Lesson[] = [
-  // ─────────── 1. 可算名詞と不可算名詞（s181〜s185 / order 681〜685） ───────────
+  //  1. 可算名詞と不可算名詞（s181〜s185 / order 681〜685） 
   {
     id: 'koko_eigo_s181',
     subject: 'eigo',
@@ -484,7 +484,7 @@ police（警察）／people（人々）は複数扱いをする。
     ],
   },
 
-  // ─────────── 2. 不可算名詞の数え方（s186〜s189 / order 686〜689） ───────────
+  //  2. 不可算名詞の数え方（s186〜s189 / order 686〜689） 
   {
     id: 'koko_eigo_s186',
     subject: 'eigo',
@@ -890,7 +890,7 @@ How many の後ろは必ず可算名詞の複数形になる。× How many book
     ],
   },
 
-  // ─────────── 3. a/an と the の使い分け（s190〜s195 / order 690〜695） ───────────
+  //  3. a/an と the の使い分け（s190〜s195 / order 690〜695） 
   {
     id: 'koko_eigo_s190',
     subject: 'eigo',
@@ -1466,7 +1466,7 @@ information, advice, furniture, homework, news, work, money, water, time（時�
     ],
   },
 
-  // ─────────── 4. 無冠詞になる場合（s196〜s198 / order 696〜698） ───────────
+  //  4. 無冠詞になる場合（s196〜s198 / order 696〜698） 
   {
     id: 'koko_eigo_s196',
     subject: 'eigo',
@@ -1773,7 +1773,7 @@ at school（学校で・授業中）／at home（家で）／at work（仕事中
     ],
   },
 
-  // ─────────── 5. 人称代名詞の格変化（s199〜s202 / order 699〜702） ───────────
+  //  5. 人称代名詞の格変化（s199〜s202 / order 699〜702） 
   {
     id: 'koko_eigo_s199',
     subject: 'eigo',
@@ -2192,7 +2192,7 @@ it ＝ 彼がパーティーに来なかったこと（名詞1語ではない）
     ],
   },
 
-  // ─────────── 6. 再帰代名詞・指示代名詞（s203〜s205 / order 703〜705） ───────────
+  //  6. 再帰代名詞・指示代名詞（s203〜s205 / order 703〜705） 
   {
     id: 'koko_eigo_s203',
     subject: 'eigo',
@@ -2512,7 +2512,7 @@ this ＝ 今に近い時、that ＝ 過去・離れた時
     ],
   },
 
-  // ─────────── 7. 不定代名詞（s206〜s211 / order 706〜711） ───────────
+  //  7. 不定代名詞（s206〜s211 / order 706〜711） 
   {
     id: 'koko_eigo_s206',
     subject: 'eigo',
@@ -3147,7 +3147,7 @@ not only A but also B → B に合わせる
     ],
   },
 
-  // ─────────── 8. 形容詞の用法と語順（s212〜s215 / order 712〜715） ───────────
+  //  8. 形容詞の用法と語順（s212〜s215 / order 712〜715） 
   {
     id: 'koko_eigo_s212',
     subject: 'eigo',
@@ -3564,7 +3564,7 @@ much ＋ 比較級・最上級・過去分詞
     ],
   },
 
-  // ─────────── 9. 副詞の位置と頻度の副詞（s216〜s220 / order 716〜720） ───────────
+  //  9. 副詞の位置と頻度の副詞（s216〜s220 / order 716〜720） 
   {
     id: 'koko_eigo_s216',
     subject: 'eigo',

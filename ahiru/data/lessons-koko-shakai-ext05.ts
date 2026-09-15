@@ -10,7 +10,7 @@ import type { Lesson } from './lesson-types';
 // pieChart・barChart で土地制度や負担の数量を示す（40課中19課）。
 // 年号は確実なもののみを記し、諸説あるものは「〜世紀ごろ」としてある。
 export const kokoShakaiExt05Lessons: Lesson[] = [
-  // ────────── 1. 人類の出現と文明のおこり（s151〜s155） ──────────
+  //  1. 人類の出現と文明のおこり（s151〜s155） 
   {
     id: 'koko_shakai_s151',
     subject: 'shakai',
@@ -364,7 +364,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
     ],
   },
 
-  // ────────── 2. 縄文・弥生（s156〜s159） ──────────
+  //  2. 縄文・弥生（s156〜s159） 
   {
     id: 'koko_shakai_s156',
     subject: 'shakai',
@@ -657,7 +657,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
     ],
   },
 
-  // ────────── 3. 古墳とヤマト政権（s160〜s163） ──────────
+  //  3. 古墳とヤマト政権（s160〜s163） 
   {
     id: 'koko_shakai_s160',
     subject: 'shakai',
@@ -957,7 +957,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
     ],
   },
 
-  // ────────── 4. 聖徳太子と飛鳥文化（s164〜s167） ──────────
+  //  4. 聖徳太子と飛鳥文化（s164〜s167） 
   {
     id: 'koko_shakai_s164',
     subject: 'shakai',
@@ -1264,7 +1264,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
     ],
   },
 
-  // ────────── 5. 大化の改新と律令国家（s168〜s173） ──────────
+  //  5. 大化の改新と律令国家（s168〜s173） 
   {
     id: 'koko_shakai_s168',
     subject: 'shakai',
@@ -1745,7 +1745,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
     ],
   },
 
-  // ────────── 6. 奈良時代と天平文化（s174〜s178） ──────────
+  //  6. 奈良時代と天平文化（s174〜s178） 
   {
     id: 'koko_shakai_s174',
     subject: 'shakai',
@@ -2145,7 +2145,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
     ],
   },
 
-  // ────────── 7. 平安遷都と摂関政治（s179〜s184） ──────────
+  //  7. 平安遷都と摂関政治（s179〜s184） 
   {
     id: 'koko_shakai_s179',
     subject: 'shakai',
@@ -2626,7 +2626,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
     ],
   },
 
-  // ────────── 8. 国風文化（s185〜s187） ──────────
+  //  8. 国風文化（s185〜s187） 
   {
     id: 'koko_shakai_s185',
     subject: 'shakai',
@@ -2867,7 +2867,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
     ],
   },
 
-  // ────────── 9. 院政と武士のおこり（s188〜s190） ──────────
+  //  9. 院政と武士のおこり（s188〜s190） 
   {
     id: 'koko_shakai_s188',
     subject: 'shakai',

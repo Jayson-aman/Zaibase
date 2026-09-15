@@ -8,7 +8,7 @@ import type { Lesson } from './lesson-types';
 // 図解は lesson-figs-eigo-ext11.ts（40課中17課）。語順・修飾の位置関係、時間の流れ、
 // 図表読解の実データという「図にしないと伝わらない」箇所だけに付けてある。
 export const eigoExt11Lessons: Lesson[] = [
-  // ───────────────── 1. 読解の基本姿勢（s386〜s388） ─────────────────
+  //  1. 読解の基本姿勢（s386〜s388） 
   {
     id: 'eigo_s386',
     subject: 'eigo',
@@ -243,7 +243,7 @@ Many animals sleep through the winter. This long sleep is called hibernation. Be
     ],
   },
 
-  // ───────────────── 2. 主語と動詞を見つける（s389〜s392） ─────────────────
+  //  2. 主語と動詞を見つける（s389〜s392） 
   {
     id: 'eigo_s389',
     subject: 'eigo',
@@ -609,7 +609,7 @@ He is looking for a house to live in.（彼は住むための家をさがして�
     ],
   },
 
-  // ───────────────── 3. 代名詞の指示内容をたどる（s393〜s396） ─────────────────
+  //  3. 代名詞の指示内容をたどる（s393〜s396） 
   {
     id: 'eigo_s393',
     subject: 'eigo',
@@ -980,7 +980,7 @@ Which is your bag? — The one on the chair.（いすの上のもの）
     ],
   },
 
-  // ───────────────── 4. つなぎ語から展開を読む（s397〜s400） ─────────────────
+  //  4. つなぎ語から展開を読む（s397〜s400） 
   {
     id: 'eigo_s397',
     subject: 'eigo',
@@ -1349,7 +1349,7 @@ Volunteer work is popular among students in our town. There are three main activ
     ],
   },
 
-  // ───────────────── 5. 段落の主題文を見つける（s401〜s403） ─────────────────
+  //  5. 段落の主題文を見つける（s401〜s403） 
   {
     id: 'eigo_s401',
     subject: 'eigo',
@@ -1623,7 +1623,7 @@ Do you know how many kinds of insects live on the earth? Scientists have found a
     ],
   },
 
-  // ───────────────── 6. 物語文の読解（s404〜s407） ─────────────────
+  //  6. 物語文の読解（s404〜s407） 
   {
     id: 'eigo_s404',
     subject: 'eigo',
@@ -1994,7 +1994,7 @@ Last month, our class had a chorus contest. I was chosen as the pianist, and at 
     ],
   },
 
-  // ───────────────── 7. 説明文の読解（s408〜s411） ─────────────────
+  //  7. 説明文の読解（s408〜s411） 
   {
     id: 'eigo_s408',
     subject: 'eigo',
@@ -2361,7 +2361,7 @@ Do you know how much water we use every day? One person in Japan uses about 220 
     ],
   },
 
-  // ───────────────── 8. 図表・グラフつき読解（s412〜s415） ─────────────────
+  //  8. 図表・グラフつき読解（s412〜s415） 
   {
     id: 'eigo_s412',
     subject: 'eigo',
@@ -2756,7 +2756,7 @@ Emi and her friends are going to visit the science museum on Saturday. They will
     ],
   },
 
-  // ───────────────── 9. 会話文の読解（s416〜s420） ─────────────────
+  //  9. 会話文の読解（s416〜s420） 
   {
     id: 'eigo_s416',
     subject: 'eigo',
@@ -3252,7 +3252,7 @@ Lucy: Really? That would be a great help. Thank you, Ken.
     ],
   },
 
-  // ───────────────── 10. 未知語の意味を文脈から推測する（s421〜s423） ─────────────────
+  //  10. 未知語の意味を文脈から推測する（s421〜s423） 
   {
     id: 'eigo_s421',
     subject: 'eigo',
@@ -3536,7 +3536,7 @@ Long ago, a terrible drought hit the village. For three months, no rain fell. Th
     ],
   },
 
-  // ───────────────── 11. 内容一致問題・要旨把握（s424〜s425） ─────────────────
+  //  11. 内容一致問題・要旨把握（s424〜s425） 
   {
     id: 'eigo_s424',
     subject: 'eigo',

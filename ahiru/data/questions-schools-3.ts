@@ -40,10 +40,10 @@ export const myojoQuestions: Question[] = [
   {
     id: 'myojo_sansu_05', subject: 'sansu', difficulty: 'advanced',
     course: 'myojo', examType: 'chugaku',
-    question: '正六角形の1辺が6cmのとき、面積は何cm²か。（√3=1.732として計算）',
-    answer: '約93.53cm²',
-    hint: '正六角形は正三角形6個分。正三角形の面積=（辺²×√3）÷4',
-    explanation: '【解法】正三角形1個の面積：6²×1.732÷4=36×1.732÷4=15.588cm²\n6個分：15.588×6=93.53cm²',
+    question: '【明星中学校 算数⑤】1辺6cmの正六角形は、1辺6cmの正三角形6個に分けられます。この正三角形1個の面積が15.59cm²のとき、正六角形の面積は何cm²ですか。',
+    answer: '約93.54cm²',
+    hint: '正六角形は、中心と6つの頂点を結ぶと合同な正三角形6個に分かれる。',
+    explanation: '【解法】\n正六角形の中心から6つの頂点へ線を引くと、合同な正三角形が6個できる。\nこのとき、中心から頂点までの長さは正六角形の1辺と同じになるので、どの三角形も3辺が6cmの正三角形になる。\nだから 正六角形の面積 ＝ 正三角形1個 × 6。\n15.59 × 6 ＝ 93.54cm²\n【こつ】正六角形は「正三角形6個のかたまり」と見るのが基本。面積も、まわりの長さも、この分け方ですべて片づく。',
   },
   {
     id: 'myojo_sansu_06', subject: 'sansu', difficulty: 'advanced',
@@ -796,7 +796,7 @@ export const otaniQuestions: Question[] = [
     question: 'あるクラスの平均点が72点で40人のクラスの合計点は何点か。',
     answer: '2880点',
     hint: '合計=平均×人数',
-    explanation: '合計点=72×40=2880点',
+    explanation: '【解説】\n平均点とは「全員が同じ点だったとしたら何点になるか」にならした数のこと。だから合計を人数でわった値が平均になる。逆にたどれば、平均×人数でもとの合計にもどせる。72 × 40 ＝ 2880点。',
   },
   {
     id: 'otani_sansu_04', subject: 'sansu', difficulty: 'advanced',

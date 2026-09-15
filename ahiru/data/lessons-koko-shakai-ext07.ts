@@ -8,7 +8,7 @@ import type { Lesson } from './lesson-types';
 // 図解は年表（numberLine）・組織図（polygon）・割合（pieChart）・地図（japanMap）など、
 // 図にすることで順序や位置関係が定着する箇所に絞って付けてある（40課中18課）。
 export const kokoShakaiExt07Lessons: Lesson[] = [
-  // ─────────────── 1. ヨーロッパ人の来航と大航海時代（s226〜s229） ───────────────
+  //  1. ヨーロッパ人の来航と大航海時代（s226〜s229） 
   {
     id: 'koko_shakai_s226',
     subject: 'shakai',
@@ -313,7 +313,7 @@ export const kokoShakaiExt07Lessons: Lesson[] = [
     ],
   },
 
-  // ─────────────── 2. 織田信長と豊臣秀吉（s230〜s235） ───────────────
+  //  2. 織田信長と豊臣秀吉（s230〜s235） 
   {
     id: 'koko_shakai_s230',
     subject: 'shakai',
@@ -802,7 +802,7 @@ export const kokoShakaiExt07Lessons: Lesson[] = [
       },
     ],
   },
-  // ─────────────── 3. 江戸幕府の成立と大名統制（s236〜s240） ───────────────
+  //  3. 江戸幕府の成立と大名統制（s236〜s240） 
   {
     id: 'koko_shakai_s236',
     subject: 'shakai',
@@ -1217,7 +1217,7 @@ export const kokoShakaiExt07Lessons: Lesson[] = [
     ],
   },
 
-  // ─────────────── 4. 鎖国への歩みと四つの窓口（s241〜s245） ───────────────
+  //  4. 鎖国への歩みと四つの窓口（s241〜s245） 
   {
     id: 'koko_shakai_s241',
     subject: 'shakai',
@@ -1614,7 +1614,7 @@ export const kokoShakaiExt07Lessons: Lesson[] = [
       },
     ],
   },
-  // ─────────────── 5. 身分制度と農村（s246〜s249） ───────────────
+  //  5. 身分制度と農村（s246〜s249） 
   {
     id: 'koko_shakai_s246',
     subject: 'shakai',
@@ -1941,7 +1941,7 @@ export const kokoShakaiExt07Lessons: Lesson[] = [
     ],
   },
 
-  // ─────────────── 6. 産業と交通の発達（s250〜s253） ───────────────
+  //  6. 産業と交通の発達（s250〜s253） 
   {
     id: 'koko_shakai_s250',
     subject: 'shakai',
@@ -2295,7 +2295,7 @@ export const kokoShakaiExt07Lessons: Lesson[] = [
     ],
   },
 
-  // ─────────────── 7. 元禄文化（s254〜s256） ───────────────
+  //  7. 元禄文化（s254〜s256） 
   {
     id: 'koko_shakai_s254',
     subject: 'shakai',
@@ -2541,7 +2541,7 @@ export const kokoShakaiExt07Lessons: Lesson[] = [
       },
     ],
   },
-  // ─────────────── 8. 三大改革と田沼政治（s257〜s262） ───────────────
+  //  8. 三大改革と田沼政治（s257〜s262） 
   {
     id: 'koko_shakai_s257',
     subject: 'shakai',
@@ -3076,7 +3076,7 @@ export const kokoShakaiExt07Lessons: Lesson[] = [
     ],
   },
 
-  // ─────────────── 9. 化政文化と新しい学問（s263〜s265） ───────────────
+  //  9. 化政文化と新しい学問（s263〜s265） 
   {
     id: 'koko_shakai_s263',
     subject: 'shakai',

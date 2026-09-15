@@ -124,4 +124,25 @@ export const figuresKoushikiOyoK4En1: Record<string, Figure> = {
       '∠BAC=∠BDC(同じ側)であることと円周角の定理の逆より、4点A,B,C,Dは同一円周上にあると結論できる。',
     ],
   },
+
+  koushiki_k4en1_gaishin_naishin_suishin_oyo1: {
+    kind: 'polygon',
+    points: [
+      { x: 6.6, y: 11.2, label: 'A' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 15, y: 0, label: 'C' },
+    ],
+    sideLabels: ['13cm', '15cm', '14cm'],
+    caption:
+      '三角形ABC(AB=13cm、BC=15cm、CA=14cm、面積84cm²)。∠Bの二等分線と∠Cの二等分線の交点を内心Iとする(Iは図には示さない)',
+    steps: [
+      '∠Bの二等分線上の点は、辺BA・BCまでの距離が等しい。∠Cの二等分線上の点は、辺CB・CAまでの距離が等しい',
+      'この2本の二等分線の交点をIとすると、Iの辺AB・BCまでの距離が等しく、Iの辺BC・CAまでの距離も等しいので、Iの辺AB・CAまでの距離も等しくなる',
+      'これは∠Aの二等分線上にある条件そのものなので、Iは∠Aの二等分線上にもある。よって3本の内角の二等分線は1点(内心I)で交わる',
+      '三角形ABCの面積は、内心Iと3頂点を結んでできる△IAB・△IBC・△ICAの面積の和として、(1/2)×r×(AB+BC+CA)=r×半周長で表せる(rは内接円の半径)',
+      '半周長=(13+15+14)÷2=21',
+      '面積84cm²を用いると、84=r×21よりr=4',
+      'よって内接円の半径は4cm',
+    ],
+  },
 };

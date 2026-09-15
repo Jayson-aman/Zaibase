@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import {
   View,
   Text,
@@ -182,6 +182,14 @@ export default function HomeScreen() {
   const [listenVisible, setListenVisible] = useState(false);
   const [listenSubject, setListenSubject] = useState<SubjectKey | null>(null);
   const [difficulty, setDifficulty] = useState<Difficulty>('all');
+  // 「基礎問題」「応用問題」を押したら、難易度を決めたうえで
+  // 科目えらびの位置まで自動で送る（押しても画面が変わらないと伝わらないため）。
+  const scrollRef = useRef<ScrollView>(null);
+  const subjectSectionY = useRef(0);
+  function startLevel(level: Difficulty) {
+    setDifficulty(level);
+    scrollRef.current?.scrollTo({ y: Math.max(0, subjectSectionY.current - 12), animated: true });
+  }
   const [examType, setExamType] = useState<ExamType>('chugaku');
   const [selectedCourse, setSelectedCourse] = useState<CourseKey>('general');
   const [courseTab, setCourseTab] = useState<'category' | 'school'>('school');
@@ -294,10 +302,60 @@ export default function HomeScreen() {
       </View>
 
       <ScrollView
+        ref={scrollRef}
         style={styles.scroll}
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
       >
+        {/* まず読んで学ぶところ（教科書・公式集）を一番上に置く。
+            問題を解く前に開く場所なので、下のタブではなくここから入る。 */}
+        {!listenPickerActive && (
+          <View style={styles.learnRow}>
+            <TouchableOpacity
+              style={[styles.learnCard, { borderColor: '#4A90D9' }]}
+              activeOpacity={0.85}
+              onPress={() => router.push('/(tabs)/textbook' as any)}
+            >
+              <Text style={styles.learnEmoji}>📖</Text>
+              <Text style={[styles.learnTitle, { color: '#2C6BA8' }]}>教科書</Text>
+              <Text style={styles.learnSub}>単元ごとの解説</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.learnCard, { borderColor: '#B5622E' }]}
+              activeOpacity={0.85}
+              onPress={() => router.push('/(tabs)/formulas' as any)}
+            >
+              <Text style={styles.learnEmoji}>📐</Text>
+              <Text style={[styles.learnTitle, { color: '#8B5A38' }]}>公式集</Text>
+              <Text style={styles.learnSub}>図解と一問一答</Text>
+            </TouchableOpacity>
+          </View>
+        )}
+
+        {/* 読んだあとに解く入口。難易度を選んでから科目を選ぶ手順を1タップにまとめる。 */}
+        {!listenPickerActive && (
+          <View style={styles.learnRow}>
+            <TouchableOpacity
+              style={[styles.levelCard, { backgroundColor: '#27AE60' }]}
+              activeOpacity={0.85}
+              onPress={() => startLevel('basic')}
+            >
+              <Text style={styles.levelEmoji}>🌱</Text>
+              <Text style={styles.levelTitle}>基礎問題</Text>
+              <Text style={styles.levelSub}>まずはここから</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.levelCard, { backgroundColor: '#E74C3C' }]}
+              activeOpacity={0.85}
+              onPress={() => startLevel('advanced')}
+            >
+              <Text style={styles.levelEmoji}>🔥</Text>
+              <Text style={styles.levelTitle}>応用問題</Text>
+              <Text style={styles.levelSub}>入試レベルに挑戦</Text>
+            </TouchableOpacity>
+          </View>
+        )}
+
         {/* テスト対策：入試だけでなく学期末テスト・学力調査にも合わせて出題する */}
         {!listenPickerActive && (
           <TouchableOpacity
@@ -674,7 +732,10 @@ export default function HomeScreen() {
           </>
         )}
 
-        <Text style={[styles.sectionTitle, listenPickerActive ? undefined : { marginTop: 16 }]}>
+        <Text
+          onLayout={(e) => { subjectSectionY.current = e.nativeEvent.layout.y; }}
+          style={[styles.sectionTitle, listenPickerActive ? undefined : { marginTop: 16 }]}
+        >
           {listenPickerActive
             ? '聞き流しする科目を選んでください'
             : '科目を選んでスタート！'}
@@ -1246,6 +1307,33 @@ const styles = StyleSheet.create({
   },
 
   // Section title
+  learnRow: {
+    flexDirection: 'row',
+    gap: 12,
+    marginBottom: 14,
+  },
+  learnCard: {
+    flex: 1,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 14,
+    borderWidth: 2,
+    paddingVertical: 24,
+    paddingHorizontal: 12,
+    alignItems: 'center',
+  },
+  levelCard: {
+    flex: 1,
+    borderRadius: 14,
+    paddingVertical: 24,
+    paddingHorizontal: 12,
+    alignItems: 'center',
+  },
+  levelEmoji: { fontSize: 40, marginBottom: 8 },
+  levelTitle: { fontSize: 21, fontWeight: '900', color: '#FFFFFF', marginBottom: 4 },
+  levelSub: { fontSize: 13, color: 'rgba(255,255,255,0.9)' },
+  learnEmoji: { fontSize: 40, marginBottom: 8 },
+  learnTitle: { fontSize: 21, fontWeight: '900', marginBottom: 4 },
+  learnSub: { fontSize: 13, color: '#6E645C' },
   sectionTitle: {
     fontFamily: SERIF,
     fontSize: 22,

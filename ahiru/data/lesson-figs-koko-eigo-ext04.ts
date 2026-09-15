@@ -21,6 +21,14 @@ export const lessonFigsKokoEigoExt04: Record<string, Figure> = {
     ],
     caption:
       'He has lived in Osaka since 2016.（＝for ten years）現在完了の継続用法は、始まった時点から今までの「幅」を表す。2016年から2026年の今まで10年間、途切れずに続いている。過去形 He lived in Osaka. なら、この矢印は今に届かず途中で切れる',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は2016から2026まで、2きざみで目もりがふってある。",
+      "色のついた範囲は 2016以上 かつ 2026以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは 2016年 住み始めた、今。位置を目もりで確かめる。",
+      "He has lived in Osaka since 2016.（＝for ten years）現在完了の継続用法は、始まった時点から今までの「幅」を表す。2016年から2026年の今まで10年間、途切れずに続いている。過去形 He lived in Osaka. なら、この矢印は今に届かず途中で切れる",
+    ],
+    buildSteps: 4,
   },
 
   // s112：for（矢印の長さ）と since（左端の点）の役割分担
@@ -36,6 +44,14 @@ export const lessonFigsKokoEigoExt04: Record<string, Figure> = {
     ],
     caption:
       'since は左端の「点（いつから）」、for は矢印全体の「長さ（どれだけの間）」を指す。2020年から今（2026年）までなので since 2020 ＝ for six years。同じ幅を、点で言うか長さで言うかのちがいにすぎない',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は2020から2026まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 2020以上 かつ 2026以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは since 2020（起点の点）、今。位置を目もりで確かめる。",
+      "since は左端の「点（いつから）」、for は矢印全体の「長さ（どれだけの間）」を指す。2020年から今（2026年）までなので since 2020 ＝ for six years。同じ幅を、点で言うか長さで言うかのちがいにすぎない",
+    ],
+    buildSteps: 4,
   },
 
   // s115：「〜して…年になる」の4通りの言いかえ（2021年に亡くなって今2026年＝5年）
@@ -51,6 +67,14 @@ export const lessonFigsKokoEigoExt04: Record<string, Figure> = {
     ],
     caption:
       'He died five years ago.（点・過去形）＝ He has been dead for five years.（幅・現在完了）＝ It has been five years since he died. ＝ Five years have passed since he died. 2021年から今（2026年）までの5年間を、点で言うか長さで言うかのちがい。die は一瞬の動作なので has died for 〜 とは言えず、状態を表す dead を使う',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は2020から2026まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 2021以上 かつ 2026以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは 2021年 彼が亡くなった、今。位置を目もりで確かめる。",
+      "He died five years ago.（点・過去形）＝ He has been dead for five years.（幅・現在完了）＝ It has been five years since he died. ＝ Five years have passed since he died. 2021年から今（2026年）までの5年間を、点で言うか長さで言うかのちがい。die は一瞬の動作なので has died for 〜 とは言えず、状態を表す dead を使う",
+    ],
+    buildSteps: 4,
   },
 
   // s116：完了用法＝今のすぐ手前で終わった1点（横軸は時間の流れ・右が現在）
@@ -66,6 +90,14 @@ export const lessonFigsKokoEigoExt04: Record<string, Figure> = {
     ],
     caption:
       '横軸は時間の流れ（右が現在）。I have just finished lunch.（ちょうど昼食を食べ終えたところだ）。完了用法は、動作が終わった時点が今のすぐ手前にあり、右端が必ず「今」で止まる。だから ago や yesterday のように今から離れた一点を示す語とは同じ文に置けない',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から10まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 9以上 かつ 10以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは 食べ終わった、今。位置を目もりで確かめる。",
+      "横軸は時間の流れ（右が現在）。I have just finished lunch.（ちょうど昼食を食べ終えたところだ）。完了用法は、動作が終わった時点が今のすぐ手前にあり、右端が必ず「今」で止まる。だから ago や yesterday のように今から離れた一点を示す語とは同じ文に置けない",
+    ],
+    buildSteps: 4,
   },
 
   // s117：already（すでに点がある）と yet（まだ点が打てていない）
@@ -81,6 +113,14 @@ export const lessonFigsKokoEigoExt04: Record<string, Figure> = {
     ],
     caption:
       'I have already finished my homework.（もう終わった＝今より前に完了の点が打ててある）。一方 I have not finished it yet.（まだ終わっていない）は、今の時点までにこの点が打てていない状態を指す。位置は already が have と過去分詞の間、yet は文末',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から10まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 7以上 かつ 10以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは already：もう済んだ、今。位置を目もりで確かめる。",
+      "I have already finished my homework.（もう終わった＝今より前に完了の点が打ててある）。一方 I have not finished it yet.（まだ終わっていない）は、今の時点までにこの点が打てていない状態を指す。位置は already が have と過去分詞の間、yet は文末",
+    ],
+    buildSteps: 4,
   },
 
   // s119：have been to（行って帰ってきた）と have gone to（行ったきり）
@@ -96,6 +136,13 @@ export const lessonFigsKokoEigoExt04: Record<string, Figure> = {
     ],
     caption:
       'He has been to Canada.（行ったことがある）は、出発と帰国の両方の点があり、今は話し手と同じ場所にいる。これに対し He has gone to Canada.（行ってしまった）は帰ってきた点がなく、今ここにいない。been か gone かで「今どこにいるか」が変わる',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から10まで、1きざみで目もりがふってある。",
+      "印がついているのは 出発した、帰ってきた、今ここにいる。位置を目もりで確かめる。",
+      "He has been to Canada.（行ったことがある）は、出発と帰国の両方の点があり、今は話し手と同じ場所にいる。これに対し He has gone to Canada.（行ってしまった）は帰ってきた点がなく、今ここにいない。been か gone かで「今どこにいるか」が変わる",
+    ],
+    buildSteps: 3,
   },
 
   // s120：結果用法＝過去の出来事の結果が今も残っている
@@ -111,6 +158,14 @@ export const lessonFigsKokoEigoExt04: Record<string, Figure> = {
     ],
     caption:
       'I have lost my key.（かぎをなくして、今も手元にない）。結果用法は「過去に起きたことの結果が今も続いている」ことを表すので、矢印が今まで伸びる。I lost my key yesterday. なら点だけで矢印がなく、今見つかったかどうかには触れていない',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から10まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 5以上 かつ 10以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは かぎをなくした、今も見つかっていない。位置を目もりで確かめる。",
+      "I have lost my key.（かぎをなくして、今も手元にない）。結果用法は「過去に起きたことの結果が今も続いている」ことを表すので、矢印が今まで伸びる。I lost my key yesterday. なら点だけで矢印がなく、今見つかったかどうかには触れていない",
+    ],
+    buildSteps: 4,
   },
 
   // s121：経験用法＝過去に散らばる「点の数」を数える
@@ -126,6 +181,13 @@ export const lessonFigsKokoEigoExt04: Record<string, Figure> = {
     ],
     caption:
       'I have visited Kyoto twice.（京都を2回訪れたことがある）。経験用法は「今までに何回その点があったか」を数える用法で、点がいつ打たれたかは問題にしない。だから last year のような日付の語とはいっしょに使えない。継続の「幅」、完了の「今の直前の1点」との形のちがいに注目する',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から10まで、1きざみで目もりがふってある。",
+      "印がついているのは 1回目、2回目、今。位置を目もりで確かめる。",
+      "I have visited Kyoto twice.（京都を2回訪れたことがある）。経験用法は「今までに何回その点があったか」を数える用法で、点がいつ打たれたかは問題にしない。だから last year のような日付の語とはいっしょに使えない。継続の「幅」、完了の「今の直前の1点」との形のちがいに注目する",
+    ],
+    buildSteps: 3,
   },
 
   // s122：never＝点が0個、ever＝点が1つでもあるか
@@ -137,6 +199,13 @@ export const lessonFigsKokoEigoExt04: Record<string, Figure> = {
     points: [{ x: 10, label: '今（点は0個）' }],
     caption:
       'I have never been abroad.（一度も海外へ行ったことがない）。never は「経験の点が0個」の状態を表すので、not を重ねる必要はない。Have you ever been abroad? は「今までのどこかに点が1つでもあるか」をたずねている。never も ever も have と過去分詞の間に置く',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から10まで、1きざみで目もりがふってある。",
+      "印がついているのは 今（点は0個）。位置を目もりで確かめる。",
+      "I have never been abroad.（一度も海外へ行ったことがない）。never は「経験の点が0個」の状態を表すので、not を重ねる必要はない。Have you ever been abroad? は「今までのどこかに点が1つでもあるか」をたずねている。never も ever も have と過去分詞の間に置く",
+    ],
+    buildSteps: 3,
   },
 
   // s123：回数の言い方（once／twice／three times）
@@ -153,6 +222,13 @@ export const lessonFigsKokoEigoExt04: Record<string, Figure> = {
     ],
     caption:
       'I have seen this movie three times.（この映画を3回見たことがある）。点が3つあるので three times。1回は once、2回は twice という専用の語を使い、3回以上から 〜 times を使う。回数をたずねるときは How many times have you 〜? と聞く',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から10まで、1きざみで目もりがふってある。",
+      "印がついているのは 1回目、2回目、3回目、今。位置を目もりで確かめる。",
+      "I have seen this movie three times.（この映画を3回見たことがある）。点が3つあるので three times。1回は once、2回は twice という専用の語を使い、3回以上から 〜 times を使う。回数をたずねるときは How many times have you 〜? と聞く",
+    ],
+    buildSteps: 3,
   },
 
   // s126：現在完了進行形＝右端が今に届き、そこで切れずに続いている
@@ -168,6 +244,14 @@ export const lessonFigsKokoEigoExt04: Record<string, Figure> = {
     ],
     caption:
       'It has been raining since this morning.（今朝からずっと雨が降っている）。現在完了進行形 have/has been ＋ -ing は、動作が今もなお続いている最中であることを強調する。矢印の右端が今に届き、そこで終わらずさらに先へ続いていくのが特徴',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から10まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 3以上 かつ 10以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは 今朝 降り始めた、今も降っている。位置を目もりで確かめる。",
+      "It has been raining since this morning.（今朝からずっと雨が降っている）。現在完了進行形 have/has been ＋ -ing は、動作が今もなお続いている最中であることを強調する。矢印の右端が今に届き、そこで終わらずさらに先へ続いていくのが特徴",
+    ],
+    buildSteps: 4,
   },
 
   // s128：過去形（今と切れた点）と現在完了（今までつながる矢印）の対比
@@ -183,6 +267,14 @@ export const lessonFigsKokoEigoExt04: Record<string, Figure> = {
     ],
     caption:
       '同じ出来事でも、過去形 I went to Canada in 2020. は左の点だけを見ていて今とは切れている。現在完了 I have been to Canada. は点から今まで矢印がつながり、「その経験を今もっている」ことを表す。だから in 2020 のような過去の一点を示す語は現在完了と並べられない',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から10まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 3以上 かつ 10以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは 2020年 カナダへ行った、今。位置を目もりで確かめる。",
+      "同じ出来事でも、過去形 I went to Canada in 2020. は左の点だけを見ていて今とは切れている。現在完了 I have been to Canada. は点から今まで矢印がつながり、「その経験を今もっている」ことを表す。だから in 2020 のような過去の一点を示す語は現在完了と並べられない",
+    ],
+    buildSteps: 4,
   },
 
   // s129：現在完了と共存できない語（ago・yesterday）は今から切り離された点
@@ -198,6 +290,13 @@ export const lessonFigsKokoEigoExt04: Record<string, Figure> = {
     ],
     caption:
       '現在完了は右端が必ず「今」に届く表現である。ago・yesterday・last week・in 2020・When 〜? は、今から切り離された過去の一点だけを指定する語なので、現在完了とは同じ文に置けない。× I have finished it two days ago. → ○ I finished it two days ago.',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から10まで、1きざみで目もりがふってある。",
+      "印がついているのは two days ago（過去形のみ）、yesterday（過去形のみ）、今。位置を目もりで確かめる。",
+      "現在完了は右端が必ず「今」に届く表現である。ago・yesterday・last week・in 2020・When 〜? は、今から切り離された過去の一点だけを指定する語なので、現在完了とは同じ文に置けない。× I have finished it two days ago. → ○ I finished it two days ago.",
+    ],
+    buildSteps: 3,
   },
 
   // s130：ago（過去形・点）と since / for（現在完了・幅）の書きかえ
@@ -213,6 +312,14 @@ export const lessonFigsKokoEigoExt04: Record<string, Figure> = {
     ],
     caption:
       'He came to Japan six years ago.（過去形・点）＝ He has been in Japan for six years.（現在完了・幅）＝ He has been in Japan since 2020.（起点）。ago は「今から何年前か」を表すので過去形と、for / since は幅と起点を表すので現在完了と組む。2026年の6年前は2020年。come（来る）を be in（いる）に変えるのが書きかえの要点',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は2019から2026まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 2020以上 かつ 2026以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは 2020年＝six years ago、今。位置を目もりで確かめる。",
+      "He came to Japan six years ago.（過去形・点）＝ He has been in Japan for six years.（現在完了・幅）＝ He has been in Japan since 2020.（起点）。ago は「今から何年前か」を表すので過去形と、for / since は幅と起点を表すので現在完了と組む。2026年の6年前は2020年。come（来る）を be in（いる）に変えるのが書きかえの要点",
+    ],
+    buildSteps: 4,
   },
 
   // s131：3用法を1本の時間軸で整理する（幅・点の数・今の直前の1点）
@@ -230,6 +337,14 @@ export const lessonFigsKokoEigoExt04: Record<string, Figure> = {
     ],
     caption:
       '現在完了の3用法を1本の時間軸で整理する。継続＝左端から今までの「幅」（for / since / How long）、経験＝途中に打たれた「点の数」（ever / never / 〜 times / before）、完了・結果＝今のすぐ手前で終わった「1点」（just / already / yet）。どの用法でも右端は必ず「今」に届いているので、ago や yesterday とは使えない',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から10まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 1以上 かつ 10以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは 継続：ここから今まで、経験：点の数、完了：今の直前、今。位置を目もりで確かめる。",
+      "現在完了の3用法を1本の時間軸で整理する。継続＝左端から今までの「幅」（for / since / How long）、経験＝途中に打たれた「点の数」（ever / never / 〜 times / before）、完了・結果＝今のすぐ手前で終わった「1点」（just / already / yet）。どの用法でも右端は必ず「今」に届いているので、ago や yesterday とは使えない",
+    ],
+    buildSteps: 4,
   },
 
   // s137：受動態の時制は be動詞で決まる（過去・現在・未来）
@@ -245,6 +360,13 @@ export const lessonFigsKokoEigoExt04: Record<string, Figure> = {
     ],
     caption:
       '受動態の時制を決めるのは be動詞だけで、過去分詞は形を変えない。過去＝was/were＋過去分詞（This school was built in 1950.）、現在＝am/is/are＋過去分詞（This room is used every day.）、未来＝will be＋過去分詞（A new library will be built next year.）。will の後ろは原形 be になる',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から12まで、2きざみで目もりがふってある。",
+      "印がついているのは was built（過去）、is used（今）、will be built（未来）。位置を目もりで確かめる。",
+      "受動態の時制を決めるのは be動詞だけで、過去分詞は形を変えない。過去＝was/were＋過去分詞（This school was built in 1950.）、現在＝am/is/are＋過去分詞（This room is used every day.）、未来＝will be＋過去分詞（A new library will be built next year.）。will の後ろは原形 be になる",
+    ],
+    buildSteps: 3,
   },
 
   // s138：現在完了の受動態（1976年発表→2026年の今まで50年間ずっと愛されている）
@@ -260,5 +382,13 @@ export const lessonFigsKokoEigoExt04: Record<string, Figure> = {
     ],
     caption:
       'This song has been loved by young people for fifty years.（この歌は50年間、若い人たちに愛され続けている）。現在完了の受動態は have/has been ＋ 過去分詞。have/has が「今までつながっている」ことを、been ＋ 過去分詞が「される側」であることを担当する。1976年から2026年までで50年',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は1976から2026まで、10きざみで目もりがふってある。",
+      "色のついた範囲は 1976以上 かつ 2026以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは 1976年 発表された、今。位置を目もりで確かめる。",
+      "This song has been loved by young people for fifty years.（この歌は50年間、若い人たちに愛され続けている）。現在完了の受動態は have/has been ＋ 過去分詞。have/has が「今までつながっている」ことを、been ＋ 過去分詞が「される側」であることを担当する。1976年から2026年までで50年",
+    ],
+    buildSteps: 4,
   },
 };

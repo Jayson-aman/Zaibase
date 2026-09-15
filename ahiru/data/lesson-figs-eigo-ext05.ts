@@ -20,6 +20,13 @@ export const lessonFigsEigoExt05: Record<string, Figure> = {
       { x: 4, label: 'その他' },
     ],
     caption: '目盛りは語順の位置を表す。助動詞の文は「主語＋助動詞＋動詞の原形＋そのほか」。例）She(①) can(②) play(③) the piano(④). 主語が三人称単数でも can に s は付かず、play にも s は付かない',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から5まで、1きざみで目もりがふってある。",
+      "印がついているのは 主語、助動詞、原形、その他。位置を目もりで確かめる。",
+      "目盛りは語順の位置を表す。助動詞の文は「主語＋助動詞＋動詞の原形＋そのほか」。例）She(①) can(②) play(③) the piano(④). 主語が三人称単数でも can に s は付かず、play にも s は付かない",
+    ],
+    buildSteps: 3,
   },
 
   // s157：can の疑問文の語順（Do / Does は使わない）
@@ -35,6 +42,13 @@ export const lessonFigsEigoExt05: Record<string, Figure> = {
       { x: 4, label: 'その他' },
     ],
     caption: '助動詞の疑問文は、助動詞を主語の前に出すだけ。例）Can(①) you(②) play(③) the guitar(④)? Do / Does は使わない。答えも Yes, I can. / No, I can\'t. と can で受ける',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から5まで、1きざみで目もりがふってある。",
+      "印がついているのは 助動詞、主語、原形、その他。位置を目もりで確かめる。",
+      "助動詞の疑問文は、助動詞を主語の前に出すだけ。例）Can(①) you(②) play(③) the guitar(④)? Do / Does は使わない。答えも Yes, I can. / No, I can't. と can で受ける",
+    ],
+    buildSteps: 3,
   },
 
   // s158：can の時制（過去 could ／ 現在 can ／ 未来 will be able to）
@@ -49,6 +63,13 @@ export const lessonFigsEigoExt05: Record<string, Figure> = {
       { x: 3, label: 'will be able to' },
     ],
     caption: '「〜できる」の時間軸。左が過去、右が未来。can に未来形はないので、未来は will be able to で表す（× will can）。過去に一回だけやりとげたことは was / were able to を使う',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から4まで、1きざみで目もりがふってある。",
+      "印がついているのは could、can、will be able to。位置を目もりで確かめる。",
+      "「〜できる」の時間軸。左が過去、右が未来。can に未来形はないので、未来は will be able to で表す（× will can）。過去に一回だけやりとげたことは was / were able to を使う",
+    ],
+    buildSteps: 3,
   },
 
   // s161：推量を表す助動詞の「確信の強さ」
@@ -64,6 +85,14 @@ export const lessonFigsEigoExt05: Record<string, Figure> = {
       { label: "can't", value: 5, color: '#64748B' },
     ],
     caption: '棒の高さは「そうである可能性がどれくらいと話し手が思っているか」の目安。must（〜にちがいない）が最も強く、might（ひょっとすると）は弱い。can\'t は「〜のはずがない」で、ほぼないと打ち消している',
+    steps: [
+      "棒の高さが数の大きさを表している。まず何を比べた図かをつかむ。",
+      "いちばん大きいのは「must」で95（確信(%)）。",
+      "いちばん小さいのは「can't」で5。差は90。",
+      "大きい順にならべると must → will → may → might → can't。棒の高さを見比べて確かめる。",
+      "棒の高さは「そうである可能性がどれくらいと話し手が思っているか」の目安。must（〜にちがいない）が最も強く、might（ひょっとすると）は弱い。can't は「〜のはずがない」で、ほぼないと打ち消している",
+    ],
+    buildSteps: 4,
   },
 
   // s164：have to の疑問文の語順（一般動詞なので do が必要）
@@ -80,6 +109,13 @@ export const lessonFigsEigoExt05: Record<string, Figure> = {
       { x: 5, label: 'その他' },
     ],
     caption: 'have to の have は一般動詞なので、疑問文には Do / Does が必要。例）Do(①) you(②) have to(③) go(④) now(⑤)? 助動詞 must なら Must you go now? となり do は使わない',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から6まで、1きざみで目もりがふってある。",
+      "印がついているのは Do、主語、have to、原形。位置を目もりで確かめる。",
+      "have to の have は一般動詞なので、疑問文には Do / Does が必要。例）Do(①) you(②) have to(③) go(④) now(⑤)? 助動詞 must なら Must you go now? となり do は使わない",
+    ],
+    buildSteps: 3,
   },
 
   // s166：must not と don't have to は正反対（義務の数直線）
@@ -94,6 +130,13 @@ export const lessonFigsEigoExt05: Record<string, Figure> = {
       { x: 100, label: 'must' },
     ],
     caption: '右へ行くほど「しなければならない」、左へ行くほど「してはいけない」。don\'t have to はまん中の0で「してもしなくてもよい」。must not は左端の禁止なので、don\'t have to とは正反対の意味になる',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は-120から120まで、60きざみで目もりがふってある。",
+      "印がついているのは must not、don't have to、must。位置を目もりで確かめる。",
+      "右へ行くほど「しなければならない」、左へ行くほど「してはいけない」。don't have to はまん中の0で「してもしなくてもよい」。must not は左端の禁止なので、don't have to とは正反対の意味になる",
+    ],
+    buildSteps: 3,
   },
 
   // s167：助動詞を「推量の強さ」×「義務の強さ」の二軸で整理する
@@ -124,6 +167,14 @@ export const lessonFigsEigoExt05: Record<string, Figure> = {
       { label: 'could', value: 25, color: '#64748B' },
     ],
     caption: '「〜したほうがよい／しなければならない」の強さの目安。had better は should より強く、「そうしないと困ったことになる」という警告のひびきがあるので、目上の人には使わない',
+    steps: [
+      "棒の高さが数の大きさを表している。まず何を比べた図かをつかむ。",
+      "いちばん大きいのは「must」で100（強さ）。",
+      "いちばん小さいのは「could」で25。差は75。",
+      "大きい順にならべると must → have to → had better → should → could。棒の高さを見比べて確かめる。",
+      "「〜したほうがよい／しなければならない」の強さの目安。had better は should より強く、「そうしないと困ったことになる」という警告のひびきがあるので、目上の人には使わない",
+    ],
+    buildSteps: 4,
   },
 
   // s173：依頼表現のていねいさくらべ
@@ -139,6 +190,14 @@ export const lessonFigsEigoExt05: Record<string, Figure> = {
       { label: 'Could you', value: 85, color: '#0369A1' },
     ],
     caption: '人にものを頼むときのていねいさの目安。友達には Will you / Can you、目上の人や初対面の人には Would you / Could you を使う。文末に please を付けると、さらにていねいになる',
+    steps: [
+      "棒の高さが数の大きさを表している。まず何を比べた図かをつかむ。",
+      "いちばん大きいのは「Could you」で85（ていねいさ）。",
+      "いちばん小さいのは「命令文」で10。差は75。",
+      "大きい順にならべると Could you → Would you → Can you → Will you → 命令文。棒の高さを見比べて確かめる。",
+      "人にものを頼むときのていねいさの目安。友達には Will you / Can you、目上の人や初対面の人には Would you / Could you を使う。文末に please を付けると、さらにていねいになる",
+    ],
+    buildSteps: 4,
   },
 
   // s179：依頼（相手がする）と許可（自分がする）を二軸で整理する
@@ -169,6 +228,13 @@ export const lessonFigsEigoExt05: Record<string, Figure> = {
       { x: 3, label: 'その他' },
     ],
     caption: '命令文は主語 You を書かず、動詞の原形から始める。例）Open(①) the window(②). be動詞の文は原形の Be を使い、You are quiet. → Be quiet. となる',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から4まで、1きざみで目もりがふってある。",
+      "印がついているのは 動詞の原形、目的語、その他。位置を目もりで確かめる。",
+      "命令文は主語 You を書かず、動詞の原形から始める。例）Open(①) the window(②). be動詞の文は原形の Be を使い、You are quiet. → Be quiet. となる",
+    ],
+    buildSteps: 3,
   },
 
   // s183：please の位置は文頭か文末の二か所だけ
@@ -184,6 +250,13 @@ export const lessonFigsEigoExt05: Record<string, Figure> = {
       { x: 4, label: ', please' },
     ],
     caption: 'please を置けるのは文頭（①）か文末（④）だけ。文末に置くときは直前にコンマを入れる。例）Please open the door. ＝ Open the door, please. 文の途中には入れられない',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から5まで、1きざみで目もりがふってある。",
+      "印がついているのは Please、原形、目的語、, please。位置を目もりで確かめる。",
+      "please を置けるのは文頭（①）か文末（④）だけ。文末に置くときは直前にコンマを入れる。例）Please open the door. ＝ Open the door, please. 文の途中には入れられない",
+    ],
+    buildSteps: 3,
   },
 
   // s185：What で始まる感嘆文の語順
@@ -200,6 +273,13 @@ export const lessonFigsEigoExt05: Record<string, Figure> = {
       { x: 5, label: '主語+動詞' },
     ],
     caption: 'What の感嘆文の語順。例）What a beautiful flower this is! 数えられる名詞の単数には a / an が必要で、複数形や数えられない名詞には付けない。文末の「主語＋動詞」は省略できる',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から6まで、1きざみで目もりがふってある。",
+      "印がついているのは What、a(an)、形容詞、名詞。位置を目もりで確かめる。",
+      "What の感嘆文の語順。例）What a beautiful flower this is! 数えられる名詞の単数には a / an が必要で、複数形や数えられない名詞には付けない。文末の「主語＋動詞」は省略できる",
+    ],
+    buildSteps: 3,
   },
 
   // s186：How で始まる感嘆文の語順
@@ -214,6 +294,13 @@ export const lessonFigsEigoExt05: Record<string, Figure> = {
       { x: 3, label: '主語+動詞' },
     ],
     caption: 'How の感嘆文の語順。例）How fast he runs! ／ How kind she is! How のうしろは形容詞か副詞ひとつだけで、名詞も a / an も入らない。主語と動詞は疑問文の語順にしない',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から4まで、1きざみで目もりがふってある。",
+      "印がついているのは How、形容詞・副詞、主語+動詞。位置を目もりで確かめる。",
+      "How の感嘆文の語順。例）How fast he runs! ／ How kind she is! How のうしろは形容詞か副詞ひとつだけで、名詞も a / an も入らない。主語と動詞は疑問文の語順にしない",
+    ],
+    buildSteps: 3,
   },
 
   // s188：付加疑問文の作り方
@@ -229,5 +316,12 @@ export const lessonFigsEigoExt05: Record<string, Figure> = {
       { x: 4, label: '代名詞?' },
     ],
     caption: '付加疑問文の作り方。本文が肯定なら否定の短縮形、否定なら肯定の形をコンマのあとに置き、主語を代名詞にかえて ? で終える。例）You are tired, aren\'t you? ／ Tom can\'t swim, can he?',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から5まで、1きざみで目もりがふってある。",
+      "印がついているのは 本文、コンマ、反対の形、代名詞?。位置を目もりで確かめる。",
+      "付加疑問文の作り方。本文が肯定なら否定の短縮形、否定なら肯定の形をコンマのあとに置き、主語を代名詞にかえて ? で終える。例）You are tired, aren't you? ／ Tom can't swim, can he?",
+    ],
+    buildSteps: 3,
   },
 };

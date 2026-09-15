@@ -19,6 +19,14 @@ export const lessonFigsKokoEigoExt07: Record<string, Figure> = {
     ],
     caption:
       '同じデータを3通りで言える。比較級：Tom is taller than Ken.（トムはケンより高い）／最上級：Bob is the tallest of the three.（ボブが3人でいちばん高い）／原級の否定：Ken is not as tall as Tom.（ケンはトムほど高くない）。差を言うなら Bob is 16 centimeters taller than Ken.（168−152＝16）',
+    steps: [
+      "よこじくは「3人の身長」、たてじくは「身長（cm）」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「Bob 168」で168（身長（cm））。",
+      "いちばん小さいのは「Ken 152」で152。差は16。",
+      "大きい順にならべると Bob 168 → Tom 160 → Ken 152。棒の高さを見比べて確かめる。",
+      "同じデータを3通りで言える。比較級：Tom is taller than Ken.（トムはケンより高い）／最上級：Bob is the tallest of the three.（ボブが3人でいちばん高い）／原級の否定：Ken is not as tall as Tom.（ケンはトムほど高くない）。差を言うなら Bob is 16 centimeters taller than Ken.（168−152＝16）",
+    ],
+    buildSteps: 4,
   },
 
   // s222：e で終わる語（large）の3通り。箱の容積 10 / 18 / 25 L
@@ -34,6 +42,14 @@ export const lessonFigsKokoEigoExt07: Record<string, Figure> = {
     ],
     caption:
       'large は e で終わるので -r / -st だけを付ける。比較級：Box B is larger than Box A.／最上級：Box C is the largest of the three.／原級の否定：Box A is not as large as Box B.。× largeer × largeest と e を二つ書かないこと',
+    steps: [
+      "よこじくは「3つの箱の大きさ」、たてじくは「容積（L）」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「Box C 25」で25（容積（L））。",
+      "いちばん小さいのは「Box A 10」で10。差は15。",
+      "大きい順にならべると Box C 25 → Box B 18 → Box A 10。棒の高さを見比べて確かめる。",
+      "large は e で終わるので -r / -st だけを付ける。比較級：Box B is larger than Box A.／最上級：Box C is the largest of the three.／原級の否定：Box A is not as large as Box B.。× largeer × largeest と e を二つ書かないこと",
+    ],
+    buildSteps: 4,
   },
 
   // s224：more / most 型（expensive）。かばんの値段 3,000 / 8,000 / 15,000 円
@@ -49,6 +65,14 @@ export const lessonFigsKokoEigoExt07: Record<string, Figure> = {
     ],
     caption:
       'expensive は ex-pen-sive と音節が三つある長い語なので more / the most を前に置く。比較級：Bag B is more expensive than Bag A.／最上級：Bag C is the most expensive of the three.／原級の否定：Bag A is not as expensive as Bag B.。15000÷3000＝5 なので Bag C is five times as expensive as Bag A. とも言える',
+    steps: [
+      "よこじくは「3つのかばんの値段」、たてじくは「値段（円）」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「Bag C 15000」で15000（値段（円））。",
+      "いちばん小さいのは「Bag A 3000」で3000。差は12000。",
+      "大きい順にならべると Bag C 15000 → Bag B 8000 → Bag A 3000。棒の高さを見比べて確かめる。",
+      "expensive は ex-pen-sive と音節が三つある長い語なので more / the most を前に置く。比較級：Bag B is more expensive than Bag A.／最上級：Bag C is the most expensive of the three.／原級の否定：Bag A is not as expensive as Bag B.。15000÷3000＝5 なので Bag C is five times as expensive as Bag A. とも言える",
+    ],
+    buildSteps: 4,
   },
 
   // s227：good / well － better － best（テストの点 72 / 85 / 94 点）
@@ -64,6 +88,14 @@ export const lessonFigsKokoEigoExt07: Record<string, Figure> = {
     ],
     caption:
       "good / well はどちらも better － best に変化する。比較級：Ken's score is better than Aya's.／最上級：Mika's score is the best of the three.／原級の否定：Aya's score is not as good as Ken's.。比べる相手は Aya ではなく Aya's（＝Aya's score）と、同じ種類にそろえる",
+    steps: [
+      "よこじくは「3人のテストの点」、たてじくは「得点（点）」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「Mika 94」で94（得点（点））。",
+      "いちばん小さいのは「Aya 72」で72。差は22。",
+      "大きい順にならべると Mika 94 → Ken 85 → Aya 72。棒の高さを見比べて確かめる。",
+      "good / well はどちらも better － best に変化する。比較級：Ken's score is better than Aya's.／最上級：Mika's score is the best of the three.／原級の否定：Aya's score is not as good as Ken's.。比べる相手は Aya ではなく Aya's（＝Aya's score）と、同じ種類にそろえる",
+    ],
+    buildSteps: 4,
   },
 
   // s228：many / much － more － most（持っている本 12 / 20 / 31 冊）
@@ -79,6 +111,14 @@ export const lessonFigsKokoEigoExt07: Record<string, Figure> = {
     ],
     caption:
       'many（数）も much（量）も比較級は more、最上級は most。比較級：Yuka has more books than Ken.／最上級：Sho has the most books of the three.／原級の否定：Ken doesn\'t have as many books as Yuka.。原級に戻すときだけ many か much かを選び直す（books は数えられるので many）',
+    steps: [
+      "よこじくは「3人が持っている本」、たてじくは「冊数（冊）」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「Sho 31」で31（冊数（冊））。",
+      "いちばん小さいのは「Ken 12」で12。差は19。",
+      "大きい順にならべると Sho 31 → Yuka 20 → Ken 12。棒の高さを見比べて確かめる。",
+      "many（数）も much（量）も比較級は more、最上級は most。比較級：Yuka has more books than Ken.／最上級：Sho has the most books of the three.／原級の否定：Ken doesn't have as many books as Yuka.。原級に戻すときだけ many か much かを選び直す（books は数えられるので many）",
+    ],
+    buildSteps: 4,
   },
 
   // s230：as 〜 as（身長 165 / 165 / 172 cm。ケンとトムが同じ）
@@ -94,6 +134,14 @@ export const lessonFigsKokoEigoExt07: Record<string, Figure> = {
     ],
     caption:
       'ケンとトムは同じ165cm。原級：Ken is as tall as Tom.（同じくらい高い）／比較級：Bob is taller than Ken.／原級の否定：Ken is not as tall as Bob.（ボブほど高くない）。as と as の間にはさむのは必ず原級 tall で、× as taller as とはしない',
+    steps: [
+      "よこじくは「3人の身長」、たてじくは「身長（cm）」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「Bob 172」で172（身長（cm））。",
+      "いちばん小さいのは「Ken 165」で165。差は7。",
+      "大きい順にならべると Bob 172 → Ken 165 → Tom 165。棒の高さを見比べて確かめる。",
+      "ケンとトムは同じ165cm。原級：Ken is as tall as Tom.（同じくらい高い）／比較級：Bob is taller than Ken.／原級の否定：Ken is not as tall as Bob.（ボブほど高くない）。as と as の間にはさむのは必ず原級 tall で、× as taller as とはしない",
+    ],
+    buildSteps: 4,
   },
 
   // s232：not as 〜 as ⇔ 比較級（かばんの重さ 2 / 5 / 8 kg）
@@ -109,6 +157,14 @@ export const lessonFigsKokoEigoExt07: Record<string, Figure> = {
     ],
     caption:
       '書きかえの関係。Bag A is not as heavy as Bag B.（原級の否定）＝ Bag B is heavier than Bag A.（主語を入れかえて比較級）＝ Bag A is lighter than Bag B.（主語はそのままで反対語）。最上級では Bag C is the heaviest of the three.',
+    steps: [
+      "よこじくは「3つのかばんの重さ」、たてじくは「重さ（kg）」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「Bag C 8」で8（重さ（kg））。",
+      "いちばん小さいのは「Bag A 2」で2。差は6。",
+      "大きい順にならべると Bag C 8 → Bag B 5 → Bag A 2。棒の高さを見比べて確かめる。",
+      "書きかえの関係。Bag A is not as heavy as Bag B.（原級の否定）＝ Bag B is heavier than Bag A.（主語を入れかえて比較級）＝ Bag A is lighter than Bag B.（主語はそのままで反対語）。最上級では Bag C is the heaviest of the three.",
+    ],
+    buildSteps: 4,
   },
 
   // s234：倍数（本の冊数 5 / 10 / 15 冊。ちょうど2倍と3倍）
@@ -124,6 +180,14 @@ export const lessonFigsKokoEigoExt07: Record<string, Figure> = {
     ],
     caption:
       '倍数は割り算で確かめる。10÷5＝2 なので Yuka has twice as many books as Ken.、15÷5＝3 なので Sho has three times as many books as Ken.。倍数は as 〜 as のかたまりの前に置く（× as twice many books as）。差で言うなら 15−5＝10 で Sho has ten more books than Ken.',
+    steps: [
+      "よこじくは「3人が持っている本」、たてじくは「冊数（冊）」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「Sho 15」で15（冊数（冊））。",
+      "いちばん小さいのは「Ken 5」で5。差は10。",
+      "大きい順にならべると Sho 15 → Yuka 10 → Ken 5。棒の高さを見比べて確かめる。",
+      "倍数は割り算で確かめる。10÷5＝2 なので Yuka has twice as many books as Ken.、15÷5＝3 なので Sho has three times as many books as Ken.。倍数は as 〜 as のかたまりの前に置く（× as twice many books as）。差で言うなら 15−5＝10 で Sho has ten more books than Ken.",
+    ],
+    buildSteps: 4,
   },
 
   // s236：much / far による比較級の強調（人口 5万 / 6万 / 30万人）
@@ -139,6 +203,14 @@ export const lessonFigsKokoEigoExt07: Record<string, Figure> = {
     ],
     caption:
       '差が小さいか大きいかで強調語を変える。City B is a little larger than City A.（6万と5万＝差が小さい）／City C is much larger than City A.（30万と5万＝差が大きい）。× very larger とは言えない。very が付くのは原級（very large）だけ',
+    steps: [
+      "よこじくは「3つの市の人口」、たてじくは「人口（千人）」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「City C 300」で300（人口（千人））。",
+      "いちばん小さいのは「City A 50」で50。差は250。",
+      "大きい順にならべると City C 300 → City B 60 → City A 50。棒の高さを見比べて確かめる。",
+      "差が小さいか大きいかで強調語を変える。City B is a little larger than City A.（6万と5万＝差が小さい）／City C is much larger than City A.（30万と5万＝差が大きい）。× very larger とは言えない。very が付くのは原級（very large）だけ",
+    ],
+    buildSteps: 4,
   },
 
   // s240：最上級と in（クラスの3人の身長 165 / 170 / 178 cm）
@@ -154,6 +226,14 @@ export const lessonFigsKokoEigoExt07: Record<string, Figure> = {
     ],
     caption:
       '同じ一位でも範囲の示し方は二通り。Ken is the tallest in his class.（in ＋ 場所・集団を表す単数の語）／Ken is the tallest of the three.（of ＋ 複数を表す語）。名詞を残すなら Ken is the tallest student in his class. と the を最初に置く',
+    steps: [
+      "よこじくは「同じクラスの3人の身長」、たてじくは「身長（cm）」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「Ken 178」で178（身長（cm））。",
+      "いちばん小さいのは「Bob 165」で165。差は13。",
+      "大きい順にならべると Ken 178 → Tom 170 → Bob 165。棒の高さを見比べて確かめる。",
+      "同じ一位でも範囲の示し方は二通り。Ken is the tallest in his class.（in ＋ 場所・集団を表す単数の語）／Ken is the tallest of the three.（of ＋ 複数を表す語）。名詞を残すなら Ken is the tallest student in his class. と the を最初に置く",
+    ],
+    buildSteps: 4,
   },
 
   // s241：最上級の of と in（日本の川の長さ 367 / 322 / 268 km）
@@ -169,6 +249,14 @@ export const lessonFigsKokoEigoExt07: Record<string, Figure> = {
     ],
     caption:
       'in と of の使い分け。The Shinano River is the longest river in Japan.（Japan は場所なので in）／The Shinano River is the longest of the three.（the three は複数なので of）。二位は序数を使って The Tone River is the second longest river in Japan.',
+    steps: [
+      "よこじくは「日本の川の長さ」、たてじくは「長さ（km）」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「信濃川 367」で367（長さ（km））。",
+      "いちばん小さいのは「石狩川 268」で268。差は99。",
+      "大きい順にならべると 信濃川 367 → 利根川 322 → 石狩川 268。棒の高さを見比べて確かめる。",
+      "in と of の使い分け。The Shinano River is the longest river in Japan.（Japan は場所なので in）／The Shinano River is the longest of the three.（the three は複数なので of）。二位は序数を使って The Tone River is the second longest river in Japan.",
+    ],
+    buildSteps: 4,
   },
 
   // s244：one of the 最上級（世界の高い山 8849 / 8611 / 8586 m）
@@ -184,6 +272,14 @@ export const lessonFigsKokoEigoExt07: Record<string, Figure> = {
     ],
     caption:
       '一位を言うか、上位グループの一員と言うかで形が変わる。Everest is the highest mountain in the world.（単数）／K2 is one of the highest mountains in the world.（one of のあとは必ず複数形）／K2 is the second highest mountain in the world.（序数＋最上級）',
+    steps: [
+      "よこじくは「世界の高い山」、たてじくは「標高（m）」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「Everest 8849」で8849（標高（m））。",
+      "いちばん小さいのは「Kangchenjunga 8586」で8586。差は263。",
+      "大きい順にならべると Everest 8849 → K2 8611 → Kangchenjunga 8586。棒の高さを見比べて確かめる。",
+      "一位を言うか、上位グループの一員と言うかで形が変わる。Everest is the highest mountain in the world.（単数）／K2 is one of the highest mountains in the world.（one of のあとは必ず複数形）／K2 is the second highest mountain in the world.（序数＋最上級）",
+    ],
+    buildSteps: 4,
   },
 
   // s247：比較級 ＋ than any other（日本の都市の人口 1400 / 377 / 275 万人）
@@ -199,6 +295,14 @@ export const lessonFigsKokoEigoExt07: Record<string, Figure> = {
     ],
     caption:
       '一位を4通りで表す。Tokyo is the largest city in Japan.／Tokyo is larger than any other city in Japan.（any other のあとは単数）／No other city in Japan is larger than Tokyo.／No other city in Japan is as large as Tokyo.（as にはさむのは原級）',
+    steps: [
+      "よこじくは「日本の主な都市の人口」、たてじくは「人口（万人）」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「東京都 1400」で1400（人口（万人））。",
+      "いちばん小さいのは「大阪市 275」で275。差は1125。",
+      "大きい順にならべると 東京都 1400 → 横浜市 377 → 大阪市 275。棒の高さを見比べて確かめる。",
+      "一位を4通りで表す。Tokyo is the largest city in Japan.／Tokyo is larger than any other city in Japan.（any other のあとは単数）／No other city in Japan is larger than Tokyo.／No other city in Japan is as large as Tokyo.（as にはさむのは原級）",
+    ],
+    buildSteps: 4,
   },
 
   // s250：四通り言いかえの総合（好きなスポーツ サッカー18 / 野球12 / テニス6人）
@@ -214,6 +318,14 @@ export const lessonFigsKokoEigoExt07: Record<string, Figure> = {
     ],
     caption:
       '①Soccer is the most popular sport in my class. ②Soccer is more popular than any other sport in my class. ③No other sport in my class is more popular than soccer. ④No other sport in my class is as popular as soccer.。倍数は 18÷6＝3 で three times as many、差は 18−12＝6 で six more students',
+    steps: [
+      "よこじくは「クラス36人が好きなスポーツ」、たてじくは「人数（人）」を表している。まず何と何を比べた図かをつかむ。",
+      "いちばん大きいのは「サッカー 18」で18（人数（人））。",
+      "いちばん小さいのは「テニス 6」で6。差は12。",
+      "大きい順にならべると サッカー 18 → 野球 12 → テニス 6。棒の高さを見比べて確かめる。",
+      "①Soccer is the most popular sport in my class. ②Soccer is more popular than any other sport in my class. ③No other sport in my class is more popular than soccer. ④No other sport in my class is as popular as soccer.。倍数は 18÷6＝3 で three times as many、差は 18−12＝6 で six more students",
+    ],
+    buildSteps: 4,
   },
 
   // s251：the 比較級, the 比較級（練習時間と得点の関係）
@@ -240,5 +352,13 @@ export const lessonFigsKokoEigoExt07: Record<string, Figure> = {
     ],
     caption:
       '練習時間が増えるほど得点も上がる、という二つの変化の連動を表すのが the ＋ 比較級, the ＋ 比較級 の形。The more you practice, the better you become.（練習すればするほどうまくなる）。比較級なのに the が付く数少ない形で、前半は未来のことでも現在形にする',
+    steps: [
+      "よこじくは「1日の練習時間（時間）」、たてじくは「テストの得点（点）」。点をつないだ線が、どう変わっていくかを表している。",
+      "はじめは（0, 40）、終わりは（5, 86）。",
+      "全体として46だけ増えている。右上がりなら増加、右下がりなら減少と読む。",
+      "かたむきが急なところほど、変わり方が大きい。",
+      "練習時間が増えるほど得点も上がる、という二つの変化の連動を表すのが the ＋ 比較級, the ＋ 比較級 の形。The more you practice, the better you become.（練習すればするほどうまくなる）。比較級なのに the が付く数少ない形で、前半は未来のことでも現在形にする",
+    ],
+    buildSteps: 4,
   },
 };

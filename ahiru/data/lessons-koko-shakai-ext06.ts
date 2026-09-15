@@ -7,7 +7,7 @@ import type { Lesson } from './lesson-types';
 //       産業の発達と惣・一揆(4)／室町文化(3)／応仁の乱と戦国大名(2)
 // 図解は lesson-figs-koko-shakai-ext06.ts（numberLine＝年表、polygon＝幕府のしくみ、japanMap＝場所）。
 export const kokoShakaiExt06Lessons: Lesson[] = [
-  // ───────────── 1. 鎌倉幕府の成立と御恩奉公（s191〜s196） ─────────────
+  //  1. 鎌倉幕府の成立と御恩奉公（s191〜s196） 
   {
     id: 'koko_shakai_s191',
     subject: 'shakai',
@@ -484,7 +484,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 2. 執権政治と承久の乱（s197〜s200） ─────────────
+  //  2. 執権政治と承久の乱（s197〜s200） 
   {
     id: 'koko_shakai_s197',
     subject: 'shakai',
@@ -824,7 +824,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 3. 元寇と幕府の衰え（s201〜s204） ─────────────
+  //  3. 元寇と幕府の衰え（s201〜s204） 
   {
     id: 'koko_shakai_s201',
     subject: 'shakai',
@@ -1159,7 +1159,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 4. 鎌倉文化と新しい仏教（s205〜s209） ─────────────
+  //  4. 鎌倉文化と新しい仏教（s205〜s209） 
   {
     id: 'koko_shakai_s205',
     subject: 'shakai',
@@ -1590,7 +1590,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 5. 建武の新政と南北朝（s210〜s212） ─────────────
+  //  5. 建武の新政と南北朝（s210〜s212） 
   {
     id: 'koko_shakai_s210',
     subject: 'shakai',
@@ -1839,7 +1839,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 6. 室町幕府と守護大名（s213〜s216） ─────────────
+  //  6. 室町幕府と守護大名（s213〜s216） 
   {
     id: 'koko_shakai_s213',
     subject: 'shakai',
@@ -2175,7 +2175,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 7. 産業の発達と惣・一揆（s217〜s220） ─────────────
+  //  7. 産業の発達と惣・一揆（s217〜s220） 
   {
     id: 'koko_shakai_s217',
     subject: 'shakai',
@@ -2539,7 +2539,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 8. 室町文化（s221〜s223） ─────────────
+  //  8. 室町文化（s221〜s223） 
   {
     id: 'koko_shakai_s221',
     subject: 'shakai',
@@ -2806,7 +2806,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 9. 応仁の乱と戦国大名（s224〜s225） ─────────────
+  //  9. 応仁の乱と戦国大名（s224〜s225） 
   {
     id: 'koko_shakai_s224',
     subject: 'shakai',

@@ -27,6 +27,8 @@ export type River = {
   name: string;
   reading: string;
   lengthKm: number;
+  /** その川が流れるおもな地方（地図で地域を選んだときの絞りこみに使う） */
+  region: string;
   rank?: string; // 「日本一長い」など
   nickname?: string; // 「坂東太郎」など
   plain: string; // つくる平野
@@ -157,6 +159,7 @@ export const rivers: River[] = [
     name: '信濃川',
     reading: 'しなのがわ',
     lengthKm: 367,
+    region: '中部',
     rank: '日本一長い川',
     plain: '越後平野（新潟平野）',
     mouth: '日本海',
@@ -169,6 +172,7 @@ export const rivers: River[] = [
     name: '利根川',
     reading: 'とねがわ',
     lengthKm: 322,
+    region: '関東',
     rank: '流域面積 日本一',
     nickname: '坂東太郎（ばんどうたろう）',
     plain: '関東平野',
@@ -182,6 +186,7 @@ export const rivers: River[] = [
     name: '石狩川',
     reading: 'いしかりがわ',
     lengthKm: 268,
+    region: '北海道',
     rank: '日本3位',
     plain: '石狩平野',
     mouth: '日本海',
@@ -194,6 +199,7 @@ export const rivers: River[] = [
     name: '北上川',
     reading: 'きたかみがわ',
     lengthKm: 249,
+    region: '東北',
     rank: '東北で最長',
     plain: '仙台平野・北上盆地',
     mouth: '太平洋',
@@ -202,10 +208,11 @@ export const rivers: River[] = [
     labelX: 214, labelY: 153.9,
   },
   {
-    id: 'kiso',
+    id: 'kisogawa',
     name: '木曽川',
     reading: 'きそがわ',
     lengthKm: 229,
+    region: '中部',
     plain: '濃尾平野（のうびへいや）',
     mouth: '伊勢湾',
     note: '長良川・揖斐川とあわせて「木曽三川（きそさんせん）」とよばれる。濃尾平野をつくり、洪水を防ぐ「輪中（わじゅう）」という集落が有名。',
@@ -217,6 +224,7 @@ export const rivers: River[] = [
     name: '最上川',
     reading: 'もがみがわ',
     lengthKm: 229,
+    region: '東北',
     rank: '山形県を代表する川',
     plain: '庄内平野',
     mouth: '日本海',
@@ -229,11 +237,12 @@ export const rivers: River[] = [
     name: '吉野川',
     reading: 'よしのがわ',
     lengthKm: 194,
+    region: '四国',
     rank: '四国で最長',
     nickname: '四国三郎（しこくさぶろう）',
     plain: '徳島平野',
     mouth: '紀伊水道',
-    note: '四国でいちばん長い川。あばれ川として「四国三郎」とよばれた。徳島平野をつくる。',
+    note: '四国でいちばん長い川。大雨のたびに氾濫したことから、あばれ川として「四国三郎（しこくさぶろう）」とよばれた。上流には大歩危・小歩危という深い谷があり、下流の徳島平野では、染料になる藍（あい）の栽培が古くからさかんだった。',
     path: 'M 99.5 256.8 L 104.7 254.9 L 109.9 253.6',
     labelX: 104.7, labelY: 262,
   },
@@ -242,6 +251,7 @@ export const rivers: River[] = [
     name: '筑後川',
     reading: 'ちくごがわ',
     lengthKm: 143,
+    region: '九州・沖縄',
     rank: '九州で最長',
     nickname: '筑紫二郎（つくしじろう）',
     plain: '筑紫平野（つくしへいや）',
@@ -255,6 +265,7 @@ export const rivers: River[] = [
     name: '淀川',
     reading: 'よどがわ',
     lengthKm: 75,
+    region: '近畿',
     plain: '大阪平野',
     mouth: '大阪湾',
     note: '日本一大きい湖「琵琶湖（びわこ）」から流れ出て、京都・大阪を通り大阪湾にそそぐ。近畿地方の飲み水や工業用水として大切な川。',

@@ -13,6 +13,9 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import { getLessonById, isLessonFree } from '../../data/lessons';
 import { isNew20Unit, isNew20UnitFree } from '../../data/new20-access';
 import LessonRenderer from '../../components/LessonRenderer';
+import InlineQuiz, { questionsToQuizItems } from '../../components/InlineQuiz';
+import { getRelatedQuestions } from '../../data/lesson-questions';
+import { useSubjectQuestions } from '../../hooks/useSubjectQuestions';
 import VideoPlayer from '../../components/VideoPlayer';
 import { getLessonVideo } from '../../data/videos';
 import HomeButton from '../../components/HomeButton';
@@ -48,6 +51,14 @@ export default function LessonDetailScreen() {
   } = useUnitUnlocks();
 
   const lesson = id ? getLessonById(id) : undefined;
+
+  // 公式集は公式ごとに専用の問題を出しているので、こちらの「関係する問題」は不要。
+  const isKoushikiLesson = lesson?.id.startsWith('koushiki_') ?? false;
+  const { questions: subjectPool } = useSubjectQuestions(lesson?.subject ?? 'sansu');
+  const relatedQuestions = React.useMemo(() => {
+    if (lesson == null || isKoushikiLesson) return [];
+    return getRelatedQuestions(lesson, subjectPool, { isMax });
+  }, [lesson, isKoushikiLesson, subjectPool, isMax]);
 
   async function handleUnlockFormula(figureId: string, heading: string) {
     const result = await unlockFormula(figureId);
@@ -229,6 +240,12 @@ export default function LessonDetailScreen() {
                   </View>
                 ))}
               </View>
+            )}
+            {relatedQuestions.length > 0 && (
+              <InlineQuiz
+                label="この単元に関係する一問一答"
+                items={questionsToQuizItems(relatedQuestions)}
+              />
             )}
             <TouchableOpacity
               style={[styles.practiceBtn, { backgroundColor: info.color }]}

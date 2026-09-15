@@ -42,6 +42,14 @@ export const lessonFigsKokoEigoExt09: Record<string, Figure> = {
     segments: [{ from: 3, to: 6 }],
     caption:
       'I have a friend who lives in Canada.（私にはカナダに住んでいる友達がいます）太線の who lives in Canada が先行詞 a friend を説明する関係詞節で、who から文末までがひとかたまり。日本語には後ろから前へ戻して訳す',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から6まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 3以上 かつ 6以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは I、have、a friend、who。位置を目もりで確かめる。",
+      "I have a friend who lives in Canada.（私にはカナダに住んでいる友達がいます）太線の who lives in Canada が先行詞 a friend を説明する関係詞節で、who から文末までがひとかたまり。日本語には後ろから前へ戻して訳す",
+    ],
+    buildSteps: 4,
   },
 
   // s301：目的格の関係詞節。動詞のあとに目的語がない「欠け」を示す
@@ -62,6 +70,14 @@ export const lessonFigsKokoEigoExt09: Record<string, Figure> = {
     segments: [{ from: 3, to: 6 }],
     caption:
       'This is the book which I bought yesterday.（これは私が昨日買った本です）which の直後が I bought と〈主語＋動詞〉で、bought の目的語が抜けている（もとは I bought the book）。この「欠け」を先行詞 the book が埋めるのが目的格。主格は who の直後がいきなり動詞になる点がちがう',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から6まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 3以上 かつ 6以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは This、is、the book、which。位置を目もりで確かめる。",
+      "This is the book which I bought yesterday.（これは私が昨日買った本です）which の直後が I bought と〈主語＋動詞〉で、bought の目的語が抜けている（もとは I bought the book）。この「欠け」を先行詞 the book が埋めるのが目的格。主格は who の直後がいきなり動詞になる点がちがう",
+    ],
+    buildSteps: 4,
   },
 
   // s302：主格か目的格かは「関係代名詞の直後の形」だけで決まる、という語順ボックス
@@ -111,6 +127,14 @@ export const lessonFigsKokoEigoExt09: Record<string, Figure> = {
     segments: [{ from: 1, to: 4 }],
     caption:
       'The movie (which) we saw last night was exciting.（私たちが昨夜見た映画はわくわくした）白丸の which は目的格なので省略できる。省略すると〈名詞 The movie＋主語 we＋動詞 saw〉と名詞のすぐ後ろに主語が並ぶ形になる。文全体の動詞は太線の外にある was',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から6まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 1以上 かつ 4以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは The movie、(which)、we、saw。位置を目もりで確かめる。",
+      "The movie (which) we saw last night was exciting.（私たちが昨夜見た映画はわくわくした）白丸の which は目的格なので省略できる。省略すると〈名詞 The movie＋主語 we＋動詞 saw〉と名詞のすぐ後ろに主語が並ぶ形になる。文全体の動詞は太線の外にある was",
+    ],
+    buildSteps: 4,
   },
 
   // s309：主格は省略できない（○×の語順ボックス）
@@ -144,6 +168,14 @@ export const lessonFigsKokoEigoExt09: Record<string, Figure> = {
     segments: [{ from: 1, to: 2 }],
     caption:
       'The cake my mother made was delicious.（母が作ったケーキはおいしかった）名詞 The cake のすぐ後ろに〈主語 my mother＋動詞 made〉が来たら、目的格の関係代名詞が省略されている合図。太線が関係詞節で、文全体の動詞はその外の was',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から4まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 1以上 かつ 2以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは The cake、my mother、made、was。位置を目もりで確かめる。",
+      "The cake my mother made was delicious.（母が作ったケーキはおいしかった）名詞 The cake のすぐ後ろに〈主語 my mother＋動詞 made〉が来たら、目的格の関係代名詞が省略されている合図。太線が関係詞節で、文全体の動詞はその外の was",
+    ],
+    buildSteps: 4,
   },
 
   // s312：主格の関係代名詞＋be動詞 は現在分詞の後置修飾に書きかえられる
@@ -214,6 +246,14 @@ export const lessonFigsKokoEigoExt09: Record<string, Figure> = {
     segments: [{ from: 0.5, to: 1.5 }],
     caption:
       '時制の一致。He says that he is busy. の says を said にすると、that節の内容も同じ「過去の時点」の話になるので is → was に変わる（He said that he was busy.）。日本語では「忙しいと言った」と現在のように訳すが、英語では過去形にそろえる',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から4まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 0.5以上 かつ 1.5以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは 過去：said＝was busy、現在：says＝is busy。位置を目もりで確かめる。",
+      "時制の一致。He says that he is busy. の says を said にすると、that節の内容も同じ「過去の時点」の話になるので is → was に変わる（He said that he was busy.）。日本語では「忙しいと言った」と現在のように訳すが、英語では過去形にそろえる",
+    ],
+    buildSteps: 4,
   },
 
   // s327：間接疑問の語順ボックス（○の語順と×の語順）
@@ -287,6 +327,14 @@ export const lessonFigsKokoEigoExt09: Record<string, Figure> = {
     segments: [{ from: 3, to: 5 }],
     caption:
       'Please tell me what he said.（彼が何と言ったのか教えてください）太線の what he said が〈疑問詞＋主語＋動詞〉のかたまりで、これ全体が tell の二つ目の目的語になっている。かたまりの中は平叙文の語順、文末は主節が命令文なので「?」ではなく「.」',
+    steps: [
+      "数直線は、右へ行くほど数が大きくなる。目もりの1つ分がいくつかを最初に確かめる。",
+      "この数直線は0から5まで、1きざみで目もりがふってある。",
+      "色のついた範囲は 3以上 かつ 5以下。●はその数をふくみ、○はふくまない。",
+      "印がついているのは Please、tell、me、what。位置を目もりで確かめる。",
+      "Please tell me what he said.（彼が何と言ったのか教えてください）太線の what he said が〈疑問詞＋主語＋動詞〉のかたまりで、これ全体が tell の二つ目の目的語になっている。かたまりの中は平叙文の語順、文末は主節が命令文なので「?」ではなく「.」",
+    ],
+    buildSteps: 4,
   },
 
   // s333：either/neither の動詞の一致は「近い方」

@@ -156,17 +156,6 @@ export const shakaiExtra2a: Question[] = [
     examFrequency: 'high' as const,
   },
   {
-    id: 'she2_015',
-    subject: 'shakai' as const,
-    question: '石川県の県庁所在地はどこか？',
-    answer: '金沢市',
-    hint: '「加賀百万石」の城下町',
-    explanation: '【解説】\n金沢市は石川県の県庁所在地。兼六園（日本三名園）や金沢城で有名な歴史的都市。',
-    difficulty: 'basic' as const,
-    examType: 'chugaku' as const,
-    examFrequency: 'high' as const,
-  },
-  {
     id: 'she2_016',
     subject: 'shakai' as const,
     question: '山梨県の県庁所在地はどこか？',

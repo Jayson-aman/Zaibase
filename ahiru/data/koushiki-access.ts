@@ -98,13 +98,17 @@ const QUESTION_SLUG_ALIASES: Record<string, string> = {
 };
 
 /**
- * 公式集の例題Question（id: koushiki_<cluster>_<slug>_ex1/ex2/oyo1/oyo2）から、
+ * 公式集の例題Question（id: koushiki_<cluster>_<slug>_ex1/ex2/oyo1/oyo2/oyo3/oyo4）から、
  * 対応するLessonSectionのfigureId（lf_koushiki_<cluster>_<slug>）を逆算する。
  * 公式集の例題でなければnullを返す。
+ * ⚠️ 1つの公式にex1・ex2・oyo1・oyo2の4問しか入らない設計だったが、応用例題を
+ * 増やす際に足りなくなったためoyo3・oyo4まで許可している。今後さらに増やす場合は
+ * この末尾リストにも追加すること（追加を忘れると、その問題は買い切りロックの
+ * 対象外＝誰でも見られる状態になってしまう）。
  */
 export function getKoushikiFormulaIdForQuestion(questionId: string): string | null {
   if (!questionId.startsWith('koushiki_')) return null;
-  const base = questionId.replace(/_(ex1|ex2|oyo1|oyo2)$/, '');
+  const base = questionId.replace(/_(ex1|ex2|oyo1|oyo2|oyo3|oyo4)$/, '');
   if (base === questionId) return null;
   const resolved = QUESTION_SLUG_ALIASES[base] ?? base;
   return `lf_${resolved}`;

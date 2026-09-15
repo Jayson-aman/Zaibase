@@ -9,7 +9,7 @@ import type { Lesson } from './lesson-types';
 // 図解は「段落の並び」「主張の位置」「語の出現回数」など、構造が目で見えると理解が進む箇所に付けてある
 //（lesson-figs-koko-kokugo-ext03.ts、40課中17課）。
 export const kokoKokugoExt03Lessons: Lesson[] = [
-  // ───────────────────── 1. 指示語の指す内容（s081〜s086） ─────────────────────
+  //  1. 指示語の指す内容（s081〜s086） 
   {
     id: 'koko_kokugo_s081',
     subject: 'kokugo',
@@ -503,7 +503,7 @@ export const kokoKokugoExt03Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 2. 接続語と論の展開（s087〜s092） ─────────────────────
+  //  2. 接続語と論の展開（s087〜s092） 
   {
     id: 'koko_kokugo_s087',
     subject: 'kokugo',
@@ -1049,7 +1049,7 @@ export const kokoKokugoExt03Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 3. 段落の役割と関係（s093〜s098） ─────────────────────
+  //  3. 段落の役割と関係（s093〜s098） 
   {
     id: 'koko_kokugo_s093',
     subject: 'kokugo',
@@ -1604,7 +1604,7 @@ export const kokoKokugoExt03Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 4. 話題と主題の見つけ方（s099〜s103） ─────────────────────
+  //  4. 話題と主題の見つけ方（s099〜s103） 
   {
     id: 'koko_kokugo_s099',
     subject: 'kokugo',
@@ -2071,7 +2071,7 @@ export const kokoKokugoExt03Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 5. キーワードと繰り返し（s104〜s107） ─────────────────────
+  //  5. キーワードと繰り返し（s104〜s107） 
   {
     id: 'koko_kokugo_s104',
     subject: 'kokugo',
@@ -2457,7 +2457,7 @@ export const kokoKokugoExt03Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 6. 文と文の関係（s108〜s112） ─────────────────────
+  //  6. 文と文の関係（s108〜s112） 
   {
     id: 'koko_kokugo_s108',
     subject: 'kokugo',
@@ -2938,7 +2938,7 @@ export const kokoKokugoExt03Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 7. 傍線部説明問題の解き方（s113〜s117） ─────────────────────
+  //  7. 傍線部説明問題の解き方（s113〜s117） 
   {
     id: 'koko_kokugo_s113',
     subject: 'kokugo',
@@ -3441,7 +3441,7 @@ export const kokoKokugoExt03Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 8. 内容一致問題の解き方（s118〜s120） ─────────────────────
+  //  8. 内容一致問題の解き方（s118〜s120） 
   {
     id: 'koko_kokugo_s118',
     subject: 'kokugo',

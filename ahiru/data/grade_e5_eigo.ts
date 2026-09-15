@@ -13,33 +13,6 @@ export const gradeE5EigoQuestions: Question[] = [
   // 曜日（days of the week） 6問 (01-06)
   // ============================================================
   {
-    id: 'grade_e5_eigo_01',
-    subject: 'eigo',
-    difficulty: 'basic',
-    examType: 'chugaku',
-    grade: GRADE,
-    question: '「月曜日」を英語で言うと？',
-    answer: 'Monday',
-    choices: ['Monday', 'Tuesday', 'Sunday', 'Friday'],
-    hint: '1週間の最初の平日。',
-    explanation:
-      '【解説】\n「月曜日」は英語で Monday（マンデー）。\n曜日はいつも最初の文字を大文字で書く。\n答え：Monday',
-    memoryTip: '曜日の英語は文の途中でも必ず大文字で始める（例：I like Monday.）。',
-  },
-  {
-    id: 'grade_e5_eigo_02',
-    subject: 'eigo',
-    difficulty: 'basic',
-    examType: 'chugaku',
-    grade: GRADE,
-    question: '「土曜日」を英語で言うと？',
-    answer: 'Saturday',
-    choices: ['Saturday', 'Sunday', 'Thursday', 'Wednesday'],
-    hint: '週末の最初の日。',
-    explanation:
-      '【解説】\n「土曜日」は英語で Saturday（サタデー）。\n答え：Saturday',
-  },
-  {
     id: 'grade_e5_eigo_03',
     subject: 'eigo',
     difficulty: 'standard',

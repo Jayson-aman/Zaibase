@@ -218,11 +218,10 @@ export const ktSansu: Question[] = [
     course: 'koko-top',
     examType: 'koko',
     difficulty: 'advanced',
-    question: '△ABC において AB＝6cm、AC＝8cm、∠A＝90° のとき、tan B の値と BC の長さを求めよ。',
-    answer: 'tan B＝4/3、BC＝10cm',
-    hint: '∠A＝90° なので BC が斜辺。tan B は∠B の対辺÷隣辺。',
-    explanation:
-      '【解法】\n∠A＝90° より、∠B から見ると:\n・対辺 ＝ AC ＝ 8cm\n・隣辺 ＝ AB ＝ 6cm\ntan B ＝ 8/6 ＝ 4/3\n\nBC（斜辺）: BC²＝6²＋8²＝36＋64＝100 → BC＝10cm',
+    question: '△ABC において AB＝6cm、AC＝8cm、∠A＝90° です。BCの長さと、△ABCの面積を求めよ。',
+    answer: 'BC＝10cm、面積＝24cm²',
+    hint: '∠A＝90°なのでBCが斜辺。面積は直角をはさむ2辺から出せる。',
+    explanation: '【解法】\n（BCの長さ）∠A＝90°なので、BCが斜辺。三平方の定理より\n　BC×BC ＝ 6×6 ＋ 8×8 ＝ 36 ＋ 64 ＝ 100\n100は10×10なので BC＝10cm。\n（面積）直角をはさむ2辺が底辺と高さになるので\n　6 × 8 ÷ 2 ＝ 24cm²\n【こつ】6 : 8 : 10 は 3 : 4 : 5 を2倍したもの。この形に気づけば、計算せずに斜辺が10cmと分かる。\n【注意】斜辺がどれかを先に決める。直角の向かい側の辺が斜辺で、いちばん長くなる。',
   },
   {
     id: 'kt_sansu_09',

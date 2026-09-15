@@ -17,11 +17,8 @@ import { getTestMode, buildTestSet, type TestModeKey, type LevelKey } from '../.
 import { GRADE_ORDER, type GradeKey } from '../../data/grades';
 import { getKoushikiFormulaIdForQuestion, isKoushikiFormulaFree } from '../../data/koushiki-access';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
-import { explanationsSansu } from '../../data/explanations_sansu';
-import { explanationsKokugo } from '../../data/explanations_kokugo';
-import { explanationsRika } from '../../data/explanations_rika';
-import { explanationsShakai } from '../../data/explanations_shakai';
-import { explanationsEigo } from '../../data/explanations_eigo';
+import { explanationText, hintText } from '../../utils/explanation';
+import { getQuickTrick } from '../../data/quick-tricks';
 
 // 「レベル別ドリル」「入試対策」は問題プールから毎回ランダムに出題するため、
 // 個別の問題にmaxOnlyを付けて絞れない。代わりに1回のセッションで
@@ -29,13 +26,14 @@ import { explanationsEigo } from '../../data/explanations_eigo';
 const SESSION_FREE_LIMIT = 5;
 const SESSION_LIMITED_MODES: TestModeKey[] = ['level', 'nyushi'];
 
-const allExplanations: Record<string, string> = {
-  ...explanationsSansu,
-  ...explanationsKokugo,
-  ...explanationsRika,
-  ...explanationsShakai,
-  ...explanationsEigo,
-};
+// 予備の解説（data/explanations_*.ts）は2026/9/15に配線を外した。
+// 全313件のうち、実際に画面へ出るものが1件も無かった（問題側に解説が
+// 入っているので、explanationText のフォールバックまで到達しない）。
+// それだけなら無害だが、中身が問題の書きかえに追随しておらず、
+// sansu_42 は「36√2 ≈ 50.9cm³」という誤った値のまま残っていた
+// （正しくは18√2 ≈ 25.5cm³。ちょうど2倍になっていた）。
+// 問題側の解説が1件でも消えれば、この古い値が画面に出てしまう。
+// **使われていない予備データは、正しさを保てないので持たない。**
 import QuizCard from '../../components/QuizCard';
 import Paywall from '../../components/Paywall';
 import { saveProgress } from '../../store/progress';
@@ -152,6 +150,8 @@ export default function QuizScreen() {
   const isDaily = mode === 'daily';
   const isMock = mode === 'mock';
   const isKakomon = mode === 'kakomon';
+  // MAX限定コンテンツを未加入でも試せる問題数
+  const PREVIEW_COUNT = 3;
   // テスト対策モード（学期末・学力調査・レベル別・入試）。
   // 種類ごとに難易度の配分と、記述式・複数小問（活用型）の比率を変える。
   const testModeKey: TestModeKey | null =
@@ -170,6 +170,8 @@ export default function QuizScreen() {
   const { hasAccess: betaAccess } = useBetaAccess();
   const isPro = subIsPro || betaAccess;
   const isMax = subIsMax || betaAccess;
+
+  const isPreview = (isMock || isKakomon) && !isMax;
 
   const { questions: subjectPool, loading: questionsLoading } = useSubjectQuestions(subjectKey);
   const { unlockedIds: unlockedFormulaIds } = useFormulaUnlocks();
@@ -215,21 +217,24 @@ export default function QuizScreen() {
       return buildTestSet(pool, tm, restartKey + 1, difficultyFilter as LevelKey | undefined);
     }
     if (isMock) {
-      // 模擬試験（MAXプラン限定）: 入試形式（学校別大問）を除いた一般問題のみ使用
-      if (!isMax) return [];
+      // 模擬試験（MAXプラン）: 入試形式（学校別大問）を除いた一般問題のみ使用。
+      // 未加入でも最初のPREVIEW_COUNT問だけは解けるようにする（どんな問題か
+      // 分からないまま課金画面に飛ばされると、検討のしようがないため）。
       const generalKey = examType === 'koko' ? 'koko-general' : 'general';
       const pool = all.filter((q) => {
         if ((q.examType ?? 'chugaku') !== examType) return false;
         return !q.course || q.course === generalKey;
       });
-      return shuffle(pool).slice(0, 30);
+      const set = shuffle(pool).slice(0, 30);
+      return isMax ? set : set.slice(0, PREVIEW_COUNT);
     }
     if (isKakomon) {
-      // 過去入試問題（MAXプラン限定）: 学校別問題のみ（大問形式）。学校ごとに同じ順番にならないようシャッフル。
-      if (!isMax) return [];
+      // 過去入試問題（MAXプラン）: 学校別問題のみ（大問形式）。学校ごとに同じ順番にならないようシャッフル。
       const schoolQ = all.filter((q) => q.course === course && (q.examType ?? 'chugaku') === examType);
-      if (schoolQ.length > 0) return shuffle(schoolQ);
-      return shuffle(filterQuestions(all, examType, course, 'advanced', isMax));
+      const set = schoolQ.length > 0
+        ? shuffle(schoolQ)
+        : shuffle(filterQuestions(all, examType, course, 'advanced', true));
+      return isMax ? set : set.slice(0, PREVIEW_COUNT);
     }
     const filtered = filterQuestions(all, examType, course, difficultyFilter, isPro || isMax, gradeFilter);
     return shuffle(filtered);
@@ -382,38 +387,42 @@ export default function QuizScreen() {
     // 無料ユーザーのお試し問題数チェック。
     // 課金状態の取得中（subLoading）は加入者も未加入に見えるため、その間は
     // 上限判定をしない（加入者がいきなりペイウォールで止められるのを防ぐ）。
+    // 上限に達していても、ここでは即ペイウォールを出さず、まず〇/×の結果を
+    // 見せてから（下の正誤処理を素通りさせて）ペイウォールへつなぐ。結果も
+    // わからないままいきなり課金画面に飛ばすと、何が起きたか分からず離脱を招くため。
+    let hitLimit = false;
     if (!isPro && !isMax && !subLoading) {
       // レベル別ドリル・入試対策は、アプリ全体の累計トライアルとは別に、
       // 1日あたり最初のSESSION_FREE_LIMIT問だけ無料にする（永続化された消費数で判定）。
       const isSessionLimitedMode = testModeKey != null && SESSION_LIMITED_MODES.includes(testModeKey);
       if (isSessionLimitedMode && sessionFreeUsedRef.current >= SESSION_FREE_LIMIT) {
-        setTrialBlocked(true);
-        setShowPaywall(true);
-        answeringRef.current = false;
+        hitLimit = true;
         logAccessEvent('session_limit_paywall_shown', {
           mode: testModeKey ?? 'unknown',
           subject: subjectKey,
           examType,
           tier: 'free',
         });
-        return;
+      } else {
+        const expired = await isTrialExpired();
+        if (expired) {
+          hitLimit = true;
+          logAccessEvent('trial_limit_paywall_shown', {
+            mode: testModeKey ?? (isDaily ? 'daily' : isMock ? 'mock' : isKakomon ? 'kakomon' : 'normal'),
+            subject: subjectKey,
+            examType,
+            tier: 'free',
+          });
+        } else {
+          await incrementTrialQuestions();
+          if (isSessionLimitedMode) {
+            sessionFreeUsedRef.current = await incrementSessionFreeUsed(`${testModeKey}_${subjectKey}`);
+          }
+        }
       }
-      const expired = await isTrialExpired();
-      if (expired) {
+      if (hitLimit) {
         setTrialBlocked(true);
-        setShowPaywall(true);
         answeringRef.current = false;
-        logAccessEvent('trial_limit_paywall_shown', {
-          mode: testModeKey ?? (isDaily ? 'daily' : isMock ? 'mock' : isKakomon ? 'kakomon' : 'normal'),
-          subject: subjectKey,
-          examType,
-          tier: 'free',
-        });
-        return;
-      }
-      await incrementTrialQuestions();
-      if (isSessionLimitedMode) {
-        sessionFreeUsedRef.current = await incrementSessionFreeUsed(`${testModeKey}_${subjectKey}`);
       }
     }
 
@@ -425,9 +434,9 @@ export default function QuizScreen() {
     if (!correct) {
       const newStreak = wrongStreak + 1;
       setWrongStreak(newStreak);
-      // 3回連続で間違えたら、やさしく基礎問題に戻す
+      // 3回連続で間違えたら、やさしく基礎問題に戻す（上限到達後はどうせ続けられないので差し込まない）
       let injected = false;
-      if (newStreak >= 3) {
+      if (!hitLimit && newStreak >= 3) {
         injected = injectRemedialBasics();
         if (injected) setWrongStreak(0);
       }
@@ -445,7 +454,11 @@ export default function QuizScreen() {
     setShowFireworks(true);
     timersRef.current.push(setTimeout(async () => {
       setShowFireworks(false);
-      await advanceOrFinish(newScore, newWrongIds);
+      if (hitLimit) {
+        setShowPaywall(true);
+      } else {
+        await advanceOrFinish(newScore, newWrongIds);
+      }
     }, 1100));
   }
 
@@ -566,6 +579,22 @@ export default function QuizScreen() {
               </View>
             </View>
 
+            {isPreview && (
+              <View style={styles.previewCard}>
+                <Text style={styles.previewTitle}>ここまでがお試しの{PREVIEW_COUNT}問です</Text>
+                <Text style={styles.previewText}>
+                  {isKakomon ? '過去入試問題' : '模擬試験'}の続きはMAXプランで解けます。
+                </Text>
+                <TouchableOpacity
+                  style={styles.previewBtn}
+                  onPress={() => router.push('/paywall' as any)}
+                  activeOpacity={0.85}
+                >
+                  <Text style={styles.previewBtnText}>👑 MAXプランを見る</Text>
+                </TouchableOpacity>
+              </View>
+            )}
+
             <TouchableOpacity
               style={[styles.restartButton, { backgroundColor: info.color }]}
               onPress={handleRestart}
@@ -614,6 +643,14 @@ export default function QuizScreen() {
           </Text>
         </View>
       </View>
+
+      {isPreview && (
+        <View style={styles.previewBanner}>
+          <Text style={styles.previewBannerText}>
+            お試し{PREVIEW_COUNT}問（{isKakomon ? '過去入試問題' : '模擬試験'}の続きはMAXプラン）
+          </Text>
+        </View>
+      )}
 
       {/* Progress bar */}
       <View style={styles.progressTrack}>
@@ -682,18 +719,25 @@ export default function QuizScreen() {
             {currentFigure != null && (
               <View style={styles.wrongFigureCard}>
                 <Text style={styles.wrongFigureLabel}>📐 図解でチェック</Text>
-                <FigureView figure={currentFigure} animated />
+                <FigureView figure={currentFigure} animated question={currentQuestion} />
               </View>
             )}
 
-            {(currentQuestion.hint || currentQuestion.explanation || allExplanations[currentQuestion.id]) && (
+            {(currentQuestion.hint || currentQuestion.explanation) && (
               <View style={styles.wrongExplanationCard}>
                 <Text style={styles.wrongExplanationTitle}>📖 くわしい解説</Text>
                 <Text style={styles.wrongExplanationText}>
-                  {isPro || isMax
-                    ? (currentQuestion.explanation ?? allExplanations[currentQuestion.id] ?? currentQuestion.hint)
-                    : (currentQuestion.hint ?? currentQuestion.explanation?.split('\n')[0] ?? allExplanations[currentQuestion.id]?.split('\n')[0])}
+                  {explanationText(currentQuestion)}
                 </Text>
+                {hintText(currentQuestion) !== '' && (
+                  <Text style={styles.wrongExplanationText}>💡 {hintText(currentQuestion)}</Text>
+                )}
+                {getQuickTrick(currentQuestion.id) != null && (
+                  <View style={styles.tipRow}>
+                    <Text style={styles.trickLabel}>⚡ はやく解くコツ</Text>
+                    <Text style={styles.tipText}>{getQuickTrick(currentQuestion.id)}</Text>
+                  </View>
+                )}
                 {(isPro || isMax) && currentQuestion.memoryTip && (
                   <View style={styles.tipRow}>
                     <Text style={styles.tipLabel}>💡 覚え方</Text>
@@ -706,13 +750,13 @@ export default function QuizScreen() {
                     <Text style={styles.tipText}>{currentQuestion.pitfall}</Text>
                   </View>
                 )}
-                {!isPro && !isMax && (currentQuestion.explanation || allExplanations[currentQuestion.id]) && (
+                {!isPro && !isMax && (currentQuestion.memoryTip || currentQuestion.pitfall) && (
                   <TouchableOpacity
                     style={styles.explanationUpgradeBtn}
                     onPress={() => setShowPaywall(true)}
                     activeOpacity={0.85}
                   >
-                    <Text style={styles.explanationUpgradeBtnText}>🔒 図解つき詳細解説を見る（Pro/Max）</Text>
+                    <Text style={styles.explanationUpgradeBtnText}>💡 覚え方・⚠️ ひっかけ注意も見る（Pro/Max）</Text>
                   </TouchableOpacity>
                 )}
               </View>
@@ -745,10 +789,18 @@ export default function QuizScreen() {
 
             <TouchableOpacity
               style={[styles.nextQuestionBtn, { backgroundColor: info.color }]}
-              onPress={() => advanceOrFinish(score, wrongIds)}
+              onPress={() => {
+                if (trialBlocked) {
+                  setShowPaywall(true);
+                } else {
+                  advanceOrFinish(score, wrongIds);
+                }
+              }}
               activeOpacity={0.85}
             >
-              <Text style={styles.nextQuestionBtnText}>次の問題へ →</Text>
+              <Text style={styles.nextQuestionBtnText}>
+                {trialBlocked ? '🔒 つづきを見る →' : '次の問題へ →'}
+              </Text>
             </TouchableOpacity>
           </View>
         )}
@@ -1101,6 +1153,32 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     minWidth: 8,
   },
+  previewCard: {
+    backgroundColor: '#FFFBEB',
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: '#FDE68A',
+    padding: 16,
+    marginBottom: 14,
+    alignItems: 'center',
+  },
+  previewTitle: { fontSize: 15, fontWeight: '900', color: '#92400E', marginBottom: 6 },
+  previewText: { fontSize: 13.5, color: '#92400E', textAlign: 'center', marginBottom: 12, lineHeight: 20 },
+  previewBtn: {
+    backgroundColor: '#B5622E',
+    borderRadius: 8,
+    paddingVertical: 11,
+    paddingHorizontal: 24,
+  },
+  previewBtnText: { color: '#FFFFFF', fontSize: 14.5, fontWeight: '800' },
+  previewBanner: {
+    backgroundColor: '#FFFBEB',
+    borderBottomWidth: 1,
+    borderBottomColor: '#FDE68A',
+    paddingVertical: 7,
+    paddingHorizontal: 14,
+  },
+  previewBannerText: { fontSize: 12.5, color: '#92400E', fontWeight: '700', textAlign: 'center' },
   restartButton: {
     borderRadius: 16,
     paddingVertical: 18,
@@ -1175,6 +1253,7 @@ const styles = StyleSheet.create({
     lineHeight: 28,
     fontWeight: '500',
   },
+  trickLabel: { fontSize: 13, fontWeight: '900', color: '#B45309' },
   explanationUpgradeBtn: {
     marginTop: 12,
     backgroundColor: '#FAF6EF',

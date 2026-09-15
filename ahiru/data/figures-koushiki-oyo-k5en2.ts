@@ -162,4 +162,25 @@ export const figuresKoushikiOyoK5En2: Record<string, Figure> = {
       '計算する：PD=12cm',
     ],
   },
+
+  koushiki_k5en2_futatsu_no_en_oyo1: {
+    kind: 'polygon',
+    points: [
+      { x: 0, y: 0, label: 'O₁' },
+      { x: 12, y: 0, label: 'C' },
+      { x: 12, y: 5, label: 'O₂' },
+    ],
+    rightAngles: [1],
+    sideLabels: [null, 'r₂−r₁=5cm', 'd=13cm'],
+    caption:
+      '共通外接線上の接点をA、Bとし、O₁を通り接線ABに平行な直線がO₂Bと交わる点をC(A、Bは図には示さない)。四角形AO₁CBは長方形になり、O₁C=AB(共通外接線の長さ)、CO₂=r₂−r₁、O₁O₂=d。直角三角形O₁CO₂に三平方の定理を使う',
+    steps: [
+      '2つの円の共通外接線の接点をそれぞれA(円O₁上)、B(円O₂上)とする。接線は接点における半径と垂直に交わるので、O₁A⊥AB、O₂B⊥ABが成り立つ',
+      'O₁を通り接線ABに平行な直線を引き、O₂Bとの交点をCとする。四角形AO₁CBは3つの角が90°になる長方形になるので、O₁C=AB(共通外接線の長さ)、CB=AO₁=r₁',
+      'O₂C=O₂B−CB=r₂−r₁。r₁=4cm、r₂=9cmなのでO₂C=9−4=5cm',
+      '直角三角形O₁CO₂に注目する(∠O₁CO₂=90°)。斜辺はO₁O₂=d=13cm、もう1辺はO₂C=5cm',
+      '三平方の定理より O₁C²=O₁O₂²−O₂C²=13²−5²=169−25=144',
+      'O₁C=√144=12cm。O₁C=AB(共通外接線の長さ)なので、共通外接線の長さは12cm',
+    ],
+  },
 };

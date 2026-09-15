@@ -11,6 +11,7 @@ import { eigoExt09Lessons } from './lessons-eigo-ext09';
 import { eigoExt10Lessons } from './lessons-eigo-ext10';
 import { eigoExt11Lessons } from './lessons-eigo-ext11';
 import { eigoExt12Lessons } from './lessons-eigo-ext12';
+import { eigoExt13Lessons } from './lessons-eigo-ext13';
 import { lessonsNew20E4Eigo } from './lessons-new20-e4-eigo';
 import { lessonsNew20E5Eigo } from './lessons-new20-e5-eigo';
 import { lessonsNew20E6Eigo } from './lessons-new20-e6-eigo';
@@ -383,16 +384,15 @@ I wish ＋ 仮定法過去完了：「〜だったらよかったのになぁ」
         body: `人称代名詞は文の中での役割（格）によって形が変わる。入試では空欄補充で格を選ぶ問題が頻出。
 
 ■ 格変化一覧表
-| 人称 | 主格（〜は/が） | 所有格（〜の） | 目的格（〜を/に） | 所有代名詞（〜のもの） |
-|------|---------|---------|---------|---------|
-| 1人称単数 | I | my | me | mine |
-| 2人称単数 | you | your | you | yours |
-| 3人称単数（男） | he | his | him | his |
-| 3人称単数（女） | she | her | her | hers |
-| 3人称単数（もの） | it | its | it | ― |
-| 1人称複数 | we | our | us | ours |
-| 2人称複数 | you | your | you | yours |
-| 3人称複数 | they | their | them | theirs |
+　人称／主格（〜は/が）／所有格（〜の）／目的格（〜を/に）／所有代名詞（〜のもの）
+　1人称単数 … 主格（〜は/が）はI／所有格（〜の）はmy／目的格（〜を/に）はme／所有代名詞（〜のもの）はmine
+　2人称単数 … 主格（〜は/が）はyou／所有格（〜の）はyour／目的格（〜を/に）はyou／所有代名詞（〜のもの）はyours
+　3人称単数（男） … 主格（〜は/が）はhe／所有格（〜の）はhis／目的格（〜を/に）はhim／所有代名詞（〜のもの）はhis
+　3人称単数（女） … 主格（〜は/が）はshe／所有格（〜の）はher／目的格（〜を/に）はher／所有代名詞（〜のもの）はhers
+　3人称単数（もの） … 主格（〜は/が）はit／所有格（〜の）はits／目的格（〜を/に）はit／所有代名詞（〜のもの）は―
+　1人称複数 … 主格（〜は/が）はwe／所有格（〜の）はour／目的格（〜を/に）はus／所有代名詞（〜のもの）はours
+　2人称複数 … 主格（〜は/が）はyou／所有格（〜の）はyour／目的格（〜を/に）はyou／所有代名詞（〜のもの）はyours
+　3人称複数 … 主格（〜は/が）はthey／所有格（〜の）はtheir／目的格（〜を/に）はthem／所有代名詞（〜のもの）はtheirs
 
 ■ 格の使い方
 ・主格：動詞の主語になる → He is my brother.
@@ -1707,15 +1707,14 @@ ph →「フ」（phone 電話）／ ck →「ク」（duck あひる）
 
 ■ 訓令式とヘボン式のちがい（重要）
 学校のテストは「訓令式」が基本だが、パスポートや駅名などの実生活では「ヘボン式」が使われる。ちがう部分だけ覚えよう。
-| 音 | 訓令式 | ヘボン式 |
-|----|--------|----------|
-| し | si | shi |
-| ち | ti | chi |
-| つ | tu | tsu |
-| ふ | hu | fu |
-| じ | zi | ji |
-| しゃ | sya | sha |
-| ちゃ | tya | cha |
+　音／訓令式／ヘボン式
+　し … 訓令式はsi／ヘボン式はshi
+　ち … 訓令式はti／ヘボン式はchi
+　つ … 訓令式はtu／ヘボン式はtsu
+　ふ … 訓令式はhu／ヘボン式はfu
+　じ … 訓令式はzi／ヘボン式はji
+　しゃ … 訓令式はsya／ヘボン式はsha
+　ちゃ … 訓令式はtya／ヘボン式はcha
 例）ふじさん → 訓令式 huzisan ／ ヘボン式 Fujisan
 
 ■ のばす音・つまる音・「ん」の書き方
@@ -1863,12 +1862,11 @@ iamtom
 be動詞は「〜です・〜にいる／ある」という意味を表す動詞。主語（〜は）によって形が変わる。
 
 ■ be動詞の使い分け（現在形）
-| 主語 | be動詞 | 例文 |
-|------|--------|------|
-| I（私は） | am | I am a student.（私は生徒です） |
-| you（あなたは） | are | You are kind.（あなたは親切です） |
-| he / she / it（彼・彼女・それは） | is | He is my friend.（彼は私の友達です） |
-| we / you / they（私たち・あなたたち・彼らは） | are | They are teachers.（彼らは先生です） |
+　主語／be動詞／例文
+　I（私は） … be動詞はam／例文はI am a student.（私は生徒です）
+　you（あなたは） … be動詞はare／例文はYou are kind.（あなたは親切です）
+　he / she / it（彼・彼女・それは） … be動詞はis／例文はHe is my friend.（彼は私の友達です）
+　we / you / they（私たち・あなたたち・彼らは） … be動詞はare／例文はThey are teachers.（彼らは先生です）
 
 ★ 覚え方：「I は am」「he/she/it は is」「you と複数は are」。
 
@@ -2008,12 +2006,11 @@ do not → don't ／ does not → doesn't
         body: `be動詞と一般動詞を正しく区別できるかが、英文法の第一関門。問題で確認しよう。
 
 ■ 使い分けのまとめ表
-|  | be動詞（am/is/are） | 一般動詞（play/like等） |
-|--|------|------|
-| 意味 | 〜です・いる/ある | 動作・状態 |
-| 否定文 | be動詞＋not | do/does not＋原形 |
-| 疑問文 | be動詞を前へ | Do/Doesを前へ＋原形 |
-| 答え | Yes, I am. | Yes, I do. |
+　be動詞（am/is/are）／一般動詞（play/like等）
+　意味 … 一般動詞（play/like等）は〜です・いる/ある／動作・状態
+　否定文 … 一般動詞（play/like等）はbe動詞＋not／do/does not＋原形
+　疑問文 … 一般動詞（play/like等）はbe動詞を前へ／Do/Doesを前へ＋原形
+　答え … 一般動詞（play/like等）はYes, I am.／Yes, I do.
 
 【問題1】（　）に am / is / are のどれかを入れなさい。
 ① I (   ) a soccer fan.　② She (   ) very kind.　③ They (   ) my classmates.
@@ -2216,15 +2213,14 @@ be動詞を使った特別な形。「（場所に）〜がある／いる」を
 ★ 答え方：mine（私の）／ yours（あなたの）／ Tom's（トムの）など所有を表す語。
 
 ■ 疑問詞のまとめ表
-| 疑問詞 | 意味 | 答えの例 |
-|--------|------|----------|
+　疑問詞／意味／答えの例
 | what | なに | It's a pen. |
-| who | だれ | She is my sister. |
-| where | どこ | In Osaka. |
-| when | いつ | On Sunday. |
+　who／だれ／She is my sister.
+　where … だれはどこ／She is my sister.はIn Osaka.
+　when … だれはいつ／She is my sister.はOn Sunday.
 | why | なぜ | Because it's fun. |
 | how | どうやって/どのくらい | By bus. / I'm fine. |
-| which | どちら | This one. |
+　which／どちら／This one.
 | whose | だれの | It's mine. |
 
 ⚠ 注意：疑問詞疑問文には Yes/No で答えず、たずねられた内容を答える。これが最重要ルール。`,
@@ -2773,11 +2769,10 @@ spring（春）, summer（夏）, fall / autumn（秋）, winter（冬）
 ・お礼：Thank you. — You're welcome.
 
 ■ ていねいさの段階（同じ内容でも表現で印象が変わる）
-| カジュアル | ふつう | ていねい |
-|----|----|----|
-| Open the window. | Can you open the window? | Could you open the window? |
+　カジュアル／ふつう／ていねい
+　Open the window. … ふつうはCan you open the window?／ていねいはCould you open the window?
 | I want water. | I'd like water. | I'd like some water, please. |
-| What? | Pardon? | I beg your pardon? |
+　What?／Pardon?／I beg your pardon?
 ★ 入試のリスニング・会話問題では、場面（店・電話・食事・道案内）と、ていねいさのレベルを聞き分ける力が問われる。決まり文句をかたまりで覚えておくと即得点につながる。`,
         maxOnly: true,
       },
@@ -4843,11 +4838,10 @@ Bを特に強調する表現。動詞はBに一致させる。
 例）His sisters as well as Tom are coming.（トムだけでなく彼の姉妹たちも来る）※こちらは動詞をB（先に来る語）に一致させる
 
 ■ 相関接続詞の動詞の一致まとめ
-| 相関接続詞 | 意味 | 動詞の一致 |
-|---|---|---|
-| both A and B | AとB両方 | 常に複数 |
-| either A or B | AかBどちらか | Bに一致 |
-| neither A nor B | AもBも〜ない | Bに一致 |
+　相関接続詞／意味／動詞の一致
+　both A and B … 意味はAとB両方／動詞の一致は常に複数
+　either A or B … 意味はAかBどちらか／動詞の一致はBに一致
+　neither A nor B … 意味はAもBも〜ない／動詞の一致はBに一致
 | not only A but also B | AだけでなくBも | Bに一致 |`,
       },
       {
@@ -5225,6 +5219,7 @@ export const eigoLessons: Lesson[] = [
   ...eigoExt10Lessons,
   ...eigoExt11Lessons,
   ...eigoExt12Lessons,
+  ...eigoExt13Lessons,
   ...lessonsNew20E4Eigo,
   ...lessonsNew20E5Eigo,
   ...lessonsNew20E6Eigo,

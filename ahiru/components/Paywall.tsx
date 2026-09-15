@@ -118,6 +118,16 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
     priceString ? `${priceString}/月` : fallback;
   const proPrice = withPeriod((proProd as any)?.priceString, PRO_PRICE_LABEL);
   const maxPrice = withPeriod((maxProd as any)?.priceString, MAX_PRICE_LABEL);
+  // 導入オファー（¥500・7日間のPay Up Front等）がApp Store Connect側で設定されて
+  // いれば、RevenueCatが product.introPrice として返す。ここで「まず¥500で7日間」
+  // のように明示しないと、Appleガイドライン3.1.2（トライアル・オファー条件の明示）に
+  // 反するだけでなく、ユーザーが通常価格でいきなり課金されると誤解する。
+  const introPriceLabel = (product: unknown): string | null => {
+    const intro = (product as any)?.introPrice as { priceString?: string } | null | undefined;
+    return intro?.priceString ?? null;
+  };
+  const proIntro = introPriceLabel(proProd);
+  const maxIntro = introPriceLabel(maxProd);
 
   return (
     <Modal
@@ -162,7 +172,12 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                     <Text style={styles.cardName}>PRO</Text>
                     <Text style={styles.cardTagline}>基本機能フルセット</Text>
                   </View>
-                  <Text style={styles.cardPrice}>{proPrice}</Text>
+                  <View style={styles.priceCol}>
+                    {proIntro && (
+                      <Text style={styles.introPrice}>まず{proIntro}で7日間</Text>
+                    )}
+                    <Text style={styles.cardPrice}>{proPrice}</Text>
+                  </View>
                 </LinearGradient>
                 <View style={styles.cardBody}>
                   {PRO_FEATURES.map((f) => (
@@ -185,7 +200,11 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                       <ActivityIndicator color="#fff" />
                     ) : (
                       <Text style={styles.buyBtnText}>
-                        {proProd ? 'PRO プランを始める' : '準備中'}
+                        {proProd
+                          ? proIntro
+                            ? `${proIntro}で7日間お試し`
+                            : 'PRO プランを始める'
+                          : '準備中'}
                       </Text>
                     )}
                   </TouchableOpacity>
@@ -202,7 +221,12 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                     <Text style={styles.cardName}>MAX</Text>
                     <Text style={styles.cardTagline}>プロ全機能＋AIコーチ</Text>
                   </View>
-                  <Text style={styles.cardPrice}>{maxPrice}</Text>
+                  <View style={styles.priceCol}>
+                    {maxIntro && (
+                      <Text style={styles.introPrice}>まず{maxIntro}で7日間</Text>
+                    )}
+                    <Text style={styles.cardPrice}>{maxPrice}</Text>
+                  </View>
                 </LinearGradient>
                 <View style={styles.cardBody}>
                   {/* Proの機能（含まれている） */}
@@ -245,7 +269,11 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                       <ActivityIndicator color="#fff" />
                     ) : (
                       <Text style={styles.buyBtnText}>
-                        {maxProd ? 'MAX プランを始める' : '準備中'}
+                        {maxProd
+                          ? maxIntro
+                            ? `${maxIntro}で7日間お試し`
+                            : 'MAX プランを始める'
+                          : '準備中'}
                       </Text>
                     )}
                   </TouchableOpacity>
@@ -362,6 +390,8 @@ const styles = StyleSheet.create({
   cardName: { fontSize: 28, fontWeight: '900', color: '#fff' },
   cardTagline: { fontSize: 16, color: 'rgba(255,255,255,0.8)', fontWeight: '600', marginTop: 2 },
   cardPrice: { fontSize: 24, fontWeight: '800', color: '#fff' },
+  priceCol: { alignItems: 'flex-end' },
+  introPrice: { fontSize: 12, fontWeight: '700', color: '#fff', marginBottom: 2 },
   cardBody: { padding: 20, gap: 10 },
   featureRow: { flexDirection: 'row', alignItems: 'flex-start', gap: 10 },
   featureCheck: { fontSize: 20, color: '#0B7A54', fontWeight: '800', lineHeight: 28 },

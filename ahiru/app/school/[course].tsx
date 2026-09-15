@@ -199,7 +199,11 @@ export default function SchoolCurriculumScreen() {
     // 課金状態の取得中は加入者でも 'free' に見えるため、確定するまで待つ
     // （さもないと加入者が一瞬タップしただけでペイウォール画面に飛ばされる）。
     if (subLoading) return;
-    if (!hasAccess(stage.tier)) {
+    // 模擬試験・過去入試問題は、未加入でも最初の数問だけ解けるようにしてある
+    // （クイズ画面側でお試し分に絞る）。いきなり課金画面に飛ばすと、
+    // どんな問題なのか分からないまま判断させることになるため。
+    const previewable = stage.key === 'mogi' || stage.key === 'kakomon';
+    if (!hasAccess(stage.tier) && !previewable) {
       router.push('/paywall' as any);
       return;
     }

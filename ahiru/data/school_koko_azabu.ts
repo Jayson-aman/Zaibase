@@ -305,17 +305,6 @@ export const schoolKokoAzabu: Question[] = [
     examType: 'koko',
   },
   {
-    id: 'azabu_kokugo_10',
-    subject: 'kokugo',
-    question: '「客観」の対義語を答えなさい。',
-    answer: '主観',
-    hint: '自分自身の見方・感じ方に基づく立場を表す言葉を考える',
-    explanation: '【解説】\n「客観」は自分の考えを離れ、誰にとっても共通する立場から物事を捉えることを指す。これに対して「主観」は自分自身の見方・感じ方に基づいて物事を捉えることを指し、両者は対義語の関係にある。',
-    difficulty: 'standard',
-    course: 'koko-azabu',
-    examType: 'koko',
-  },
-  {
     id: 'azabu_kokugo_11',
     subject: 'kokugo',
     question: '次のA・Bの文はどちらも比喩表現を含んでいる。それぞれの比喩の種類(直喩・隠喩)を答えなさい。A「彼の心は氷のように冷たかった。」B「彼の心は氷だった。」',
@@ -649,8 +638,8 @@ export const schoolKokoAzabu: Question[] = [
   {
     id: 'azabu_shakai_08',
     subject: 'shakai',
-    question: '日本国憲法の三大原則を答えなさい。',
-    answer: '国民主権・基本的人権の尊重・平和主義',
+    question: '日本国憲法の三大原則を答え、それぞれが憲法のどこに示されているかも書きなさい。',
+    answer: '国民主権（前文・第1条）・基本的人権の尊重（第11条など）・平和主義（第9条）',
     hint: '「主権は誰にあるか」「個人の権利」「戦争との関係」の3つの観点で考える',
     explanation: '【解説】\n日本国憲法は、主権が国民にあるとする「国民主権」、人が生まれながらに持つ権利を保障する「基本的人権の尊重」、戦争放棄を定めた「平和主義」の3つを基本原則としている。',
     difficulty: 'standard',

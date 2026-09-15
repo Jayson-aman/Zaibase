@@ -8,7 +8,7 @@ import type { Lesson } from './lesson-types';
 // 宇治拾遺物語・古今和歌集・百人一首など）から引用し、出典名と現代語訳を添えてある。
 // 図解は lesson-figs-koko-kokugo-ext08.ts（40課中17課）。
 export const kokoKokugoExt08Lessons: Lesson[] = [
-  // ───────────────── 1. 歴史的仮名遣い（s266〜s271） ─────────────────
+  //  1. 歴史的仮名遣い（s266〜s271） 
   {
     id: 'koko_kokugo_s266',
     subject: 'kokugo',
@@ -505,7 +505,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────── 2. 重要古語（s272〜s279） ─────────────────
+  //  2. 重要古語（s272〜s279） 
   {
     id: 'koko_kokugo_s272',
     subject: 'kokugo',
@@ -1257,7 +1257,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────── 3. 古文特有の省略（s280〜s285） ─────────────────
+  //  3. 古文特有の省略（s280〜s285） 
   {
     id: 'koko_kokugo_s280',
     subject: 'kokugo',
@@ -1806,7 +1806,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────── 4. 係り結び（s286〜s289） ─────────────────
+  //  4. 係り結び（s286〜s289） 
   {
     id: 'koko_kokugo_s286',
     subject: 'kokugo',
@@ -2195,7 +2195,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────── 5. 助動詞の基礎（s290〜s294） ─────────────────
+  //  5. 助動詞の基礎（s290〜s294） 
   {
     id: 'koko_kokugo_s290',
     subject: 'kokugo',
@@ -2689,7 +2689,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────── 6. 敬語から主語を判断する（s295〜s298） ─────────────────
+  //  6. 敬語から主語を判断する（s295〜s298） 
   {
     id: 'koko_kokugo_s295',
     subject: 'kokugo',
@@ -3067,7 +3067,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────── 7. 和歌の修辞（s299〜s301） ─────────────────
+  //  7. 和歌の修辞（s299〜s301） 
   {
     id: 'koko_kokugo_s299',
     subject: 'kokugo',
@@ -3375,7 +3375,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────── 8. 出典別の読解（s302〜s305） ─────────────────
+  //  8. 出典別の読解（s302〜s305） 
   {
     id: 'koko_kokugo_s302',
     subject: 'kokugo',

@@ -7,7 +7,7 @@ import type { Lesson } from './lesson-types';
 //       球の表面積と体積(3)／回転体(3)／立体の切断(3)／立体と三平方(5)
 // 図解は lesson-figs-koko-math-ext09.ts（solid・net を主役にした17課）。
 export const kokoMathExt09Lessons: Lesson[] = [
-  // ───────────────── 1. 直線と平面の位置関係（s306〜s309） ─────────────────
+  //  1. 直線と平面の位置関係（s306〜s309） 
   {
     id: 'koko_math_s306',
     subject: 'sansu',
@@ -341,7 +341,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────── 2. 立体の分類・投影図（s310〜s312） ─────────────────
+  //  2. 立体の分類・投影図（s310〜s312） 
   {
     id: 'koko_math_s310',
     subject: 'sansu',
@@ -608,7 +608,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────── 3. 展開図（s313〜s317） ─────────────────
+  //  3. 展開図（s313〜s317） 
   {
     id: 'koko_math_s313',
     subject: 'sansu',
@@ -1055,7 +1055,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────── 4. 角柱・円柱の表面積と体積（s318〜s321） ─────────────────
+  //  4. 角柱・円柱の表面積と体積（s318〜s321） 
   {
     id: 'koko_math_s318',
     subject: 'sansu',
@@ -1419,7 +1419,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────── 5. 角すい・円すいの表面積と体積（s322〜s326） ─────────────────
+  //  5. 角すい・円すいの表面積と体積（s322〜s326） 
   {
     id: 'koko_math_s322',
     subject: 'sansu',
@@ -1877,7 +1877,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────── 6. 球の表面積と体積（s327〜s329） ─────────────────
+  //  6. 球の表面積と体積（s327〜s329） 
   {
     id: 'koko_math_s327',
     subject: 'sansu',
@@ -2154,7 +2154,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────── 7. 回転体（s330〜s332） ─────────────────
+  //  7. 回転体（s330〜s332） 
   {
     id: 'koko_math_s330',
     subject: 'sansu',
@@ -2423,7 +2423,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────── 8. 立体の切断（s333〜s335） ─────────────────
+  //  8. 立体の切断（s333〜s335） 
   {
     id: 'koko_math_s333',
     subject: 'sansu',
@@ -2684,7 +2684,7 @@ BD、DE、EB はいずれも立方体の面の対角線なので、長さは √
     ],
   },
 
-  // ───────────────── 9. 立体と三平方（s336〜s340） ─────────────────
+  //  9. 立体と三平方（s336〜s340） 
   {
     id: 'koko_math_s336',
     subject: 'sansu',

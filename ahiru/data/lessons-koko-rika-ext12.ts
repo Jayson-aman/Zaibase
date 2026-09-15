@@ -8,7 +8,7 @@ import type { Lesson } from './lesson-types';
 // 図解は lesson-figs-koko-rika-ext12.ts（18課に付与）。飽和水蒸気量曲線・前線の断面図・
 // 天球上の太陽の道すじ・月と金星の位置など、図にしないと理解できない箇所に絞ってある。
 export const kokoRikaExt12Lessons: Lesson[] = [
-  // ───────────── 1. 気象観測と天気図記号（s416〜s418） ─────────────
+  //  1. 気象観測と天気図記号（s416〜s418） 
   {
     id: 'koko_rika_s416',
     subject: 'rika',
@@ -253,7 +253,7 @@ export const kokoRikaExt12Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 2. 湿度と飽和水蒸気量の計算（s419〜s423） ─────────────
+  //  2. 湿度と飽和水蒸気量の計算（s419〜s423） 
   {
     id: 'koko_rika_s419',
     subject: 'rika',
@@ -685,7 +685,7 @@ export const kokoRikaExt12Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 3. 雲のでき方と露点（s424〜s426） ─────────────
+  //  3. 雲のでき方と露点（s424〜s426） 
   {
     id: 'koko_rika_s424',
     subject: 'rika',
@@ -939,7 +939,7 @@ export const kokoRikaExt12Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 4. 前線と天気の変化（s427〜s431） ─────────────
+  //  4. 前線と天気の変化（s427〜s431） 
   {
     id: 'koko_rika_s427',
     subject: 'rika',
@@ -1365,7 +1365,7 @@ export const kokoRikaExt12Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 5. 日本の四季と気団（s432〜s435） ─────────────
+  //  5. 日本の四季と気団（s432〜s435） 
   {
     id: 'koko_rika_s432',
     subject: 'rika',
@@ -1691,7 +1691,7 @@ export const kokoRikaExt12Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 6. 地球の自転と日周運動（s436〜s439） ─────────────
+  //  6. 地球の自転と日周運動（s436〜s439） 
   {
     id: 'koko_rika_s436',
     subject: 'rika',
@@ -2046,7 +2046,7 @@ export const kokoRikaExt12Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 7. 地球の公転と年周運動・季節（s440〜s443） ─────────────
+  //  7. 地球の公転と年周運動・季節（s440〜s443） 
   {
     id: 'koko_rika_s440',
     subject: 'rika',
@@ -2394,7 +2394,7 @@ export const kokoRikaExt12Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 8. 太陽の動きと南中高度の計算（s444〜s447） ─────────────
+  //  8. 太陽の動きと南中高度の計算（s444〜s447） 
   {
     id: 'koko_rika_s444',
     subject: 'rika',
@@ -2766,7 +2766,7 @@ export const kokoRikaExt12Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────── 9. 月の満ち欠けと金星の見え方（s448〜s450） ─────────────
+  //  9. 月の満ち欠けと金星の見え方（s448〜s450） 
   {
     id: 'koko_rika_s448',
     subject: 'rika',

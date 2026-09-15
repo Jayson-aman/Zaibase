@@ -89,7 +89,7 @@ export const kokoMaxRika: Question[] = [
   {
     id: 'koko_max_rika_08',
     subject: 'rika',
-    question: '斜面上に置かれた質量 5.0 kg の物体が，斜面に沿って 8.0 m 滑り下りた。斜面の傾きが 30° のとき，重力が物体にした仕事（J）を求めなさい（g = 9.8 m/s²，sin 30° = 0.5）。',
+    question: '【高校先取り】斜面上に置かれた質量 5.0 kg の物体が，斜面に沿って 8.0 m 滑り下りた。斜面の傾きが 30° のとき，重力が物体にした仕事（J）を求めなさい（g = 9.8 m/s²，sin 30° = 0.5）。',
     answer: '196 J',
     hint: '斜面方向の重力成分 = mg sin θ，仕事 = 力 × 距離（斜面に沿って）',
     explanation: '【解説】\n斜面に沿った重力成分 F = mg sin 30° = 5.0 × 9.8 × 0.5 = 24.5 N\n\n仕事 W = F × d = 24.5 × 8.0 = 196 J\n\n別解（位置エネルギー変化から）：高さの変化 h = 8.0 × sin 30° = 4.0 m\nW = mgh = 5.0 × 9.8 × 4.0 = 196 J ✓\n\n摩擦なしの斜面では，重力がした仕事は位置エネルギーの減少に等しくなります。',
@@ -97,6 +97,7 @@ export const kokoMaxRika: Question[] = [
     course: 'koko-general',
     examType: 'koko',
     maxOnly: true,
+    pitfall: 'sin・cos・tan は高校で習う内容で、高校入試には出ない。中学では、直角三角形の辺の長さは三平方の定理と、3:4:5 などの整数比で求める。',
   },
   {
     id: 'koko_max_rika_09',
@@ -577,7 +578,7 @@ export const kokoMaxRika: Question[] = [
   {
     id: 'koko_max_rika_48',
     subject: 'rika',
-    question: '光の屈折について，スネルの法則（n₁ sin θ₁ = n₂ sin θ₂）を説明しなさい。空気（n = 1.0）からガラス（n = 1.5）に光が入射角 30° で入射したとき，屈折角を求めなさい（sin 30° = 0.5）。',
+    question: '【高校先取り】光の屈折について，スネルの法則（n₁ sin θ₁ = n₂ sin θ₂）を説明しなさい。空気（n = 1.0）からガラス（n = 1.5）に光が入射角 30° で入射したとき，屈折角を求めなさい（sin 30° = 0.5）。',
     answer: '屈折角 θ₂ = arcsin(1/3) ≈ 19.5°（または sin θ₂ = 1/3）',
     hint: 'n₁ sin θ₁ = n₂ sin θ₂ に数値を代入します。',
     explanation: '【解説】\nスネルの法則：n₁ sin θ₁ = n₂ sin θ₂\n光が密度の高い媒質（屈折率が大きい）に入ると，法線に近づく（屈折角 < 入射角）方向に曲がります。\n\n代入：\n1.0 × sin 30° = 1.5 × sin θ₂\n1.0 × 0.5 = 1.5 × sin θ₂\nsin θ₂ = 0.5 / 1.5 = 1/3 ≈ 0.333\nθ₂ = arcsin(1/3) ≈ 19.5°\n\nn が大きい媒質（ガラス，水）に入ると光は法線に向かって曲がります。逆に，ガラスから空気に出る際に入射角が「全反射の臨界角」を超えると全反射が起こります。',
@@ -585,6 +586,7 @@ export const kokoMaxRika: Question[] = [
     course: 'koko-general',
     examType: 'koko',
     maxOnly: true,
+    pitfall: 'sin・cos・tan は高校で習う内容で、高校入試には出ない。中学では、直角三角形の辺の長さは三平方の定理と、3:4:5 などの整数比で求める。',
   },
   {
     id: 'koko_max_rika_49',

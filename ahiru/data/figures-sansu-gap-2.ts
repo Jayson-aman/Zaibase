@@ -758,11 +758,11 @@ export const figuresSansuGap2: Record<string, Figure> = {
   koko_sansu_ex_08_002: {
     kind: 'polygon',
     points: [
-      { x: 0, y: 5, label: 'A' },
+      { x: 0, y: 7, label: 'A' },
       { x: 0, y: 0, label: 'B' },
-      { x: 12, y: 0, label: 'C' },
+      { x: 24, y: 0, label: 'C' },
     ],
-    sideLabels: ['5cm', null, '13cm'],
+    sideLabels: ['7cm', null, '25cm'],
     rightAngles: [1],
   },
   // 半径5cmの円、弦AB=8cmが与えられている。中心Oから弦ABまでの距離は解答。

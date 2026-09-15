@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import {
   View,
   Text,
@@ -6,6 +6,7 @@ import {
   FlatList,
   StyleSheet,
   SafeAreaView,
+  Platform,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { getLessonsBySubject, FREE_LESSON_LIMIT } from '../../data/lessons';
@@ -50,6 +51,62 @@ const SUBJECTS: { key: SubjectKey; emoji: string; color: string }[] = [
   { key: 'eigo', emoji: '🌐', color: '#B5622E' },
 ];
 
+// 毎回new Viewを作るとFlatListがフッターを作りなおすので、定数にしておく。
+const LIST_FOOTER = <View style={{ height: 40 }} />;
+
+// 1単元分のカード。メモ化しておかないと、購読状態や解放済みIDなど画面のどこかが
+// 変わるたびに数百行すべてが描き直され、社会・理科のような長い一覧で点滅する。
+const LessonCard = React.memo(function LessonCard({
+  lesson,
+  idx,
+  locked,
+  onPress,
+}: {
+  lesson: Lesson;
+  idx: number;
+  locked: boolean;
+  onPress: (lesson: Lesson, idx: number) => void;
+}) {
+  return (
+    <TouchableOpacity
+      style={styles.lessonCard}
+      onPress={() => onPress(lesson, idx)}
+      activeOpacity={0.8}
+    >
+      <View style={styles.lessonCardLeft}>
+        <Text style={styles.lessonNumber}>{String(idx + 1).padStart(2, '0')}</Text>
+      </View>
+      <View style={styles.lessonCardBody}>
+        <View style={styles.lessonTitleRow}>
+          <Text style={styles.lessonTitle}>{lesson.title}</Text>
+          {isKoushikiLesson(lesson.id) && (
+            <View style={styles.koushikiChip}>
+              <Text style={styles.koushikiChipText}>🔖 公式集</Text>
+            </View>
+          )}
+          {isNew20Unit(lesson.id) && (
+            <View style={styles.new20Chip}>
+              <Text style={styles.new20ChipText}>🆕 新単元</Text>
+            </View>
+          )}
+          {lesson.studyPeriod && (
+            <View style={styles.periodChip}>
+              <Text style={styles.periodChipText}>📅 {lesson.studyPeriod}</Text>
+            </View>
+          )}
+        </View>
+        <Text style={styles.lessonDesc} numberOfLines={2}>
+          {lesson.description}
+        </Text>
+        {lesson.sections.some((s) => s.maxOnly) && (
+          <Text style={styles.maxTag}>⭐ MAX深堀りあり</Text>
+        )}
+      </View>
+      <Text style={styles.lessonArrow}>{locked ? '🔒' : '›'}</Text>
+    </TouchableOpacity>
+  );
+});
+
 // 中学受験は「算数」、高校受験は「数学」。同じ subject キーを共有しているため
 // 表示名だけ受験種別で差しかえる。
 function subjectLabel(key: SubjectKey, examType: ExamType): string {
@@ -70,38 +127,67 @@ export default function TextbookScreen() {
   // 受験種別で絞らないと、中学受験の小学生に中1〜中3の内容が混ざって出てしまう。
   const [examType, setExamType] = useState<ExamType>('chugaku');
 
+  // getLessonsBySubject は毎回 5,000件超をfilter+sortして新しい配列を返す。
+  // メモ化しないと再描画のたびに配列の同一性が変わり、FlatListが全行を
+  // 作りなおすため、単元数の多い社会・理科で画面が点滅する。
+  // （早期returnより前に置くこと。フックの呼び出し順が変わってしまう）
+  const lessons = useMemo(
+    () =>
+      selectedSubject
+        ? getLessonsBySubject(selectedSubject).filter((l) => (l.examType ?? 'chugaku') === examType)
+        : [],
+    [selectedSubject, examType],
+  );
+
+  // 科目タイルの単元数。5科目ぶんを毎回数えなおすと、上のlessonsと合わせて
+  // 1回の描画で全単元を6周することになる。受験種別が変わったときだけ数える。
+  const subjectCounts = useMemo(() => {
+    const m = {} as Record<SubjectKey, number>;
+    for (const { key } of SUBJECTS) {
+      m[key] = getLessonsBySubject(key).filter((l) => (l.examType ?? 'chugaku') === examType).length;
+    }
+    return m;
+  }, [examType]);
+
   function handleSubjectPress(key: SubjectKey) {
     // 各科目の最初のFREE_LESSON_LIMIT単元は無料で見られるため、一覧自体は
     // Pro未加入でも開ける（実際のロックは単元ごと・詳細ページ側で行う）。
     setSelectedSubject(key);
   }
 
-  function handleLessonPress(lesson: Lesson, idx: number) {
-    if (isLockedForBrowse(lesson, idx, isPro, unlockedUnitIds)) {
-      setPaywallVisible(true);
-      return;
-    }
-    router.push(`/lesson/${lesson.id}` as any);
-  }
+  const handleLessonPress = useCallback(
+    (lesson: Lesson, idx: number) => {
+      if (isLockedForBrowse(lesson, idx, isPro, unlockedUnitIds)) {
+        setPaywallVisible(true);
+        return;
+      }
+      router.push(`/lesson/${lesson.id}` as any);
+    },
+    [isPro, unlockedUnitIds, setPaywallVisible, router],
+  );
 
-  if (loading) {
-    return (
-      <SafeAreaView style={styles.container}>
-        <View style={styles.center}>
-          <Text style={styles.loadingText}>読み込み中...</Text>
-        </View>
-      </SafeAreaView>
-    );
-  }
-
-  const lessons = selectedSubject
-    ? getLessonsBySubject(selectedSubject).filter((l) => (l.examType ?? 'chugaku') === examType)
-    : [];
+  // renderItemを毎回作りなおすとFlatListが全行を描き直すので、こちらもメモ化する。
+  const renderLesson = useCallback(
+    ({ item, index }: { item: Lesson; index: number }) => (
+      <LessonCard
+        lesson={item}
+        idx={index}
+        locked={isLockedForBrowse(item, index, isPro, unlockedUnitIds)}
+        onPress={handleLessonPress}
+      />
+    ),
+    [isPro, unlockedUnitIds, handleLessonPress],
+  );
 
   const showEmpty = selectedSubject != null && lessons.length === 0;
   const showList = selectedSubject != null && lessons.length > 0;
 
-  const listHeader = (
+  // ヘッダーを毎回作りなおすと、科目タイルごと描き直される。
+  // 中身が変わる条件だけに絞ってメモ化する。
+  // ※ 早期returnより前に置くこと。後ろに置くと、読み込み中とそうでないときで
+  //   フックの呼び出し数が変わり、Reactが状態を取りちがえる。
+  const listHeader = useMemo(
+    () => (
     <View>
       {/* Header */}
       <View style={styles.header}>
@@ -141,10 +227,7 @@ export default function TextbookScreen() {
       <Text style={styles.sectionLabel}>科目を選んでください</Text>
       <View style={styles.subjectGrid}>
         {SUBJECTS.map(({ key, emoji, color }) => {
-
-          const count = getLessonsBySubject(key).filter(
-            (l) => (l.examType ?? 'chugaku') === examType,
-          ).length;
+          const count = subjectCounts[key];
           const isSelected = selectedSubject === key;
           return (
             <TouchableOpacity
@@ -184,7 +267,19 @@ export default function TextbookScreen() {
         </View>
       )}
     </View>
+    ),
+    [isPro, examType, selectedSubject, subjectCounts, showEmpty],
   );
+
+  if (loading) {
+    return (
+      <SafeAreaView style={styles.container}>
+        <View style={styles.center}>
+          <Text style={styles.loadingText}>読み込み中...</Text>
+        </View>
+      </SafeAreaView>
+    );
+  }
 
   return (
     <SafeAreaView style={styles.container}>
@@ -194,44 +289,24 @@ export default function TextbookScreen() {
         data={showList ? lessons : []}
         keyExtractor={(l) => l.id}
         ListHeaderComponent={listHeader}
-        // 単元数が数百に達する科目もあるため、全件を一度に描画せず
-        // 画面に入った分だけ描画・保持する（低メモリ端末での動作対策）。
-        initialNumToRender={12}
-        maxToRenderPerBatch={12}
-        windowSize={7}
-        removeClippedSubviews
-        ListFooterComponent={<View style={{ height: 40 }} />}
-        renderItem={({ item: lesson, index: idx }) => {
-          const locked = isLockedForBrowse(lesson, idx, isPro, unlockedUnitIds);
-          return (
-            <TouchableOpacity
-              style={styles.lessonCard}
-              onPress={() => handleLessonPress(lesson, idx)}
-              activeOpacity={0.8}
-            >
-              <View style={styles.lessonCardLeft}>
-                <Text style={styles.lessonNumber}>{String(idx + 1).padStart(2, '0')}</Text>
-              </View>
-              <View style={styles.lessonCardBody}>
-                <View style={styles.lessonTitleRow}>
-                  <Text style={styles.lessonTitle}>{lesson.title}</Text>
-                  {lesson.studyPeriod && (
-                    <View style={styles.periodChip}>
-                      <Text style={styles.periodChipText}>📅 {lesson.studyPeriod}</Text>
-                    </View>
-                  )}
-                </View>
-                <Text style={styles.lessonDesc} numberOfLines={2}>
-                  {lesson.description}
-                </Text>
-                {lesson.sections.some((s) => s.maxOnly) && (
-                  <Text style={styles.maxTag}>⭐ MAX深堀りあり</Text>
-                )}
-              </View>
-              <Text style={styles.lessonArrow}>{locked ? '🔒' : '›'}</Text>
-            </TouchableOpacity>
-          );
-        }}
+        // 単元数が数百に達する科目もあるため、ネイティブでは全件を一度に
+        // 描画せず、画面に入った分だけ描画・保持する（低メモリ端末対策）。
+        // ただし刻みが細かすぎると、スクロールのたびに空セルが出てから
+        // 埋まるのが点滅に見える。1行は画像のない軽いカードなので、
+        // 前後に十分な余裕を持たせておく。
+        //
+        // Web版は仮想化しない。ブラウザは数百個の軽い要素を持っていても
+        // 平気な一方、セルが増えるたびに全体の高さが測り直されて
+        // スクロール位置が巻き戻る（Macで報告された症状）。
+        // 1教科あたり最大604単元で、画像も持たないので全部出してよい。
+        initialNumToRender={Platform.OS === 'web' ? lessons.length || 1 : 16}
+        maxToRenderPerBatch={16}
+        windowSize={Platform.OS === 'web' ? 101 : 21}
+        // removeClippedSubviews は画面外のセルをビュー階層から切り離すため、
+        // 戻ってきたときに一瞬空白になる。点滅の直接の原因なので使わない。
+        removeClippedSubviews={false}
+        ListFooterComponent={LIST_FOOTER}
+        renderItem={renderLesson}
       />
 
       <Paywall
@@ -363,6 +438,10 @@ const styles = StyleSheet.create({
   lessonTitle: { fontSize: 15, fontWeight: '800', color: '#2B2420', flexShrink: 1, letterSpacing: -0.2 },
   periodChip: { backgroundColor: '#F5EFE4', borderRadius: 4, paddingHorizontal: 6, paddingVertical: 1.5, borderWidth: 1, borderColor: '#C7D7F5' },
   periodChipText: { fontSize: 9.5, fontWeight: '800', color: '#3B55A0' },
+  koushikiChip: { backgroundColor: '#FEF3C7', borderRadius: 4, paddingHorizontal: 6, paddingVertical: 1.5, borderWidth: 1, borderColor: '#FBBF24' },
+  koushikiChipText: { fontSize: 9.5, fontWeight: '800', color: '#92400E' },
+  new20Chip: { backgroundColor: '#ECFDF5', borderRadius: 4, paddingHorizontal: 6, paddingVertical: 1.5, borderWidth: 1, borderColor: '#6EE7B7' },
+  new20ChipText: { fontSize: 9.5, fontWeight: '800', color: '#047857' },
   lessonDesc: { fontSize: 12.5, color: '#6E645C', lineHeight: 18 },
   maxTag: { fontSize: 11, color: '#92400E', fontWeight: '700', marginTop: 4 },
   lessonArrow: { fontSize: 24, color: '#9C9186', paddingLeft: 8 },

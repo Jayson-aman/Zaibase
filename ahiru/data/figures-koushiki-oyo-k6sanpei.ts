@@ -173,4 +173,96 @@ export const figuresKoushikiOyoK6Sanpei: Record<string, Figure> = {
       '確かめ算:18+18+18=54で、三角形ABC全体の面積と一致する',
     ],
   },
+  koushiki_k6sanpei_kukan_zukei_oyo1: {
+    kind: 'coordinate',
+    xRange: [-4, 5],
+    yRange: [-2, 6],
+    points: [
+      { x: -3, y: -1, label: 'A' },
+      { x: 3, y: -1, label: 'B' },
+      { x: 4, y: 1.2, label: 'C' },
+      { x: -2, y: 1.2, label: 'D' },
+      { x: 0.5, y: 0.1, label: 'O' },
+      { x: 0.5, y: 4.5, label: 'P' },
+    ],
+    segments: [
+      [
+        { x: -3, y: -1 },
+        { x: 3, y: -1 },
+      ],
+      [
+        { x: 3, y: -1 },
+        { x: 4, y: 1.2 },
+      ],
+      [
+        { x: 4, y: 1.2 },
+        { x: -2, y: 1.2 },
+      ],
+      [
+        { x: -2, y: 1.2 },
+        { x: -3, y: -1 },
+      ],
+      [
+        { x: 0.5, y: 4.5 },
+        { x: -3, y: -1 },
+      ],
+      [
+        { x: 0.5, y: 4.5 },
+        { x: 3, y: -1 },
+      ],
+      [
+        { x: 0.5, y: 4.5 },
+        { x: 4, y: 1.2 },
+      ],
+      [
+        { x: 0.5, y: 4.5 },
+        { x: -2, y: 1.2 },
+      ],
+      [
+        { x: 0.5, y: 4.5 },
+        { x: 0.5, y: 0.1 },
+      ],
+      [
+        { x: 0.5, y: 0.1 },
+        { x: -3, y: -1 },
+      ],
+    ],
+    caption:
+      '正四角錐P-ABCD(底面の対角線16cm、側辺PA=PB=PC=PD=17cm)。底面の対角線の交点をOとする。△POAは∠POA=90°の直角三角形になる',
+    steps: [
+      '正四角錐P-ABCDの底面ABCDは正方形で、対角線の長さは16cm、側辺PA=PB=PC=PD=17cmとする',
+      '正方形の対角線の交点Oは対角線をちょうど2等分するので、OA=16÷2=8cm',
+      '頂点Pから底面へおろした垂線の足はOと一致し、△POAは∠POA=90°の直角三角形になる',
+      '斜辺PA=17cm、もう1辺OA=8cmなので、三平方の定理よりPO²=17²−8²=289−64=225',
+      'PO=√225=15cm(正四角錐の高さ)',
+      '底面積=対角線×対角線÷2=16×16÷2=128cm²、体積=(1/3)×128×15=640cm³',
+      'Oを原点、Pを(0,0,15)、Aを(8,0,0)とすると、空間の2点間の距離の公式よりPA=√(8²+0²+15²)=√(64+225)=√289=17cmとなり、はじめの条件と一致する',
+    ],
+  },
+  koushiki_k6sanpei_sanpeihou_oyo3: {
+    kind: 'polygon',
+    points: [
+      { x: 3.667, y: 5.963, label: 'A' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 3.667, y: 0, label: 'H' },
+      { x: 9, y: 0, label: 'C' },
+    ],
+    sideLabels: ['AB=7cm', 'BH=x', 'CH=9−x', 'CA=8cm'],
+    heights: [{ from: 0, toEdge: [1, 3], label: 'AH' }],
+    regions: [
+      { indices: [0, 1, 2], color: '#FEF3C7' },
+      { indices: [0, 2, 3], color: '#DBEAFE' },
+    ],
+    caption:
+      'AB=7cm、BC=9cm、CA=8cmの△ABCで、AからBCに垂線AHを引く。△ABH(黄)と△ACH(青)の2つの直角三角形に分かれる',
+    steps: [
+      'AB=7cm、BC=9cm、CA=8cmの△ABC。AからBCに垂線AHを引き、BH=xcmとする',
+      '直角三角形ABH(黄)で三平方の定理より AH²=7²−x²',
+      '直角三角形ACH(青)で、CH=9−xなので三平方の定理より AH²=8²−(9−x)²',
+      '2つの式は同じAH²を表しているので、7²−x²=8²−(9−x)²という方程式が立てられる',
+      'これを解くとx=11/3。AH²=49−(11/3)²=320/9より、AH=(8√5)/3cm',
+      '△ABC=(1/2)×BC×AH=(1/2)×9×(8√5)/3=12√5cm²',
+    ],
+    buildSteps: 3,
+  },
 };

@@ -8,7 +8,7 @@ import type { Lesson } from './lesson-types';
 // 図解は3者の大小関係を barChart で示し、同じデータを原級・比較級・最上級の
 // 3通りで言いかえられることを見せる箇所を中心に付けてある（35課中15課）。
 export const kokoEigoExt07Lessons: Lesson[] = [
-  // ───────── 1. 比較級・最上級のつくり方（s221〜s226） ─────────
+  //  1. 比較級・最上級のつくり方（s221〜s226） 
   {
     id: 'koko_eigo_s221',
     subject: 'eigo',
@@ -568,7 +568,7 @@ He is a good pianist.（形容詞：じょうずなピアニスト）
     ],
   },
 
-  // ───────── 2. 不規則変化（s227〜s229） ─────────
+  //  2. 不規則変化（s227〜s229） 
   {
     id: 'koko_eigo_s227',
     subject: 'eigo',
@@ -849,7 +849,7 @@ old － older / elder － oldest / eldest（古い・年上の）
     ],
   },
 
-  // ───────── 3. 原級比較 as 〜 as（s230〜s234） ─────────
+  //  3. 原級比較 as 〜 as（s230〜s234） 
   {
     id: 'koko_eigo_s230',
     subject: 'eigo',
@@ -1319,7 +1319,7 @@ Yuka has twice as many books as Ken. で、ユカが10冊なら、ケンは 10 �
     ],
   },
 
-  // ───────── 4. 比較級 ＋ than と強調（s235〜s239） ─────────
+  //  4. 比較級 ＋ than と強調（s235〜s239） 
   {
     id: 'koko_eigo_s235',
     subject: 'eigo',
@@ -1796,7 +1796,7 @@ that of は〈the ＋ 名詞 ＋ of〉の名詞部分のくり返しで、数え
     ],
   },
 
-  // ───────── 5. 最上級と in / of（s240〜s243） ─────────
+  //  5. 最上級と in / of（s240〜s243） 
   {
     id: 'koko_eigo_s240',
     subject: 'eigo',
@@ -2177,7 +2177,7 @@ This is the most interesting book that I have ever read.
     ],
   },
 
-  // ───────── 6. one of the 最上級（s244〜s246） ─────────
+  //  6. one of the 最上級（s244〜s246） 
   {
     id: 'koko_eigo_s244',
     subject: 'eigo',
@@ -2465,7 +2465,7 @@ one of the ~est を「いちばん〜だ」と読んでしまうと、内容一�
     ],
   },
 
-  // ───────── 7. 比較級を使った最上級の言いかえ（s247〜s250） ─────────
+  //  7. 比較級を使った最上級の言いかえ（s247〜s250） 
   {
     id: 'koko_eigo_s247',
     subject: 'eigo',
@@ -2861,7 +2861,7 @@ Baseball is one of the most popular sports in my class.（人気のあるスポ�
     ],
   },
 
-  // ───────── 8. 比較を含む慣用表現（s251〜s255） ─────────
+  //  8. 比較を含む慣用表現（s251〜s255） 
   {
     id: 'koko_eigo_s251',
     subject: 'eigo',

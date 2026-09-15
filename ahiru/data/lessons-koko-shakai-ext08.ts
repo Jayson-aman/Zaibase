@@ -8,7 +8,7 @@ import type { Lesson } from './lesson-types';
 // 図解は lesson-figs-koko-shakai-ext08.ts（年表 numberLine を中心に、割合は pieChart／barChart、
 // 時系列の量は lineChart。40課中18課に付けてある）。
 export const kokoShakaiExt08Lessons: Lesson[] = [
-  // ───────── 1. 欧米の市民革命と産業革命（s266〜s270） ─────────
+  //  1. 欧米の市民革命と産業革命（s266〜s270） 
   {
     id: 'koko_shakai_s266',
     subject: 'shakai',
@@ -359,7 +359,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
     ],
   },
 
-  // ───────── 2. 開国と不平等条約（s271〜s274） ─────────
+  //  2. 開国と不平等条約（s271〜s274） 
   {
     id: 'koko_shakai_s271',
     subject: 'shakai',
@@ -651,7 +651,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
       },
     ],
   },
-  // ───────── 3. 明治維新と三大改革（s275〜s280） ─────────
+  //  3. 明治維新と三大改革（s275〜s280） 
   {
     id: 'koko_shakai_s275',
     subject: 'shakai',
@@ -1098,7 +1098,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
     ],
   },
 
-  // ───────── 4. 文明開化と殖産興業（s281〜s283） ─────────
+  //  4. 文明開化と殖産興業（s281〜s283） 
   {
     id: 'koko_shakai_s281',
     subject: 'shakai',
@@ -1323,7 +1323,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
       },
     ],
   },
-  // ───────── 5. 自由民権運動と大日本帝国憲法（s284〜s289） ─────────
+  //  5. 自由民権運動と大日本帝国憲法（s284〜s289） 
   {
     id: 'koko_shakai_s284',
     subject: 'shakai',
@@ -1811,7 +1811,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
       },
     ],
   },
-  // ───────── 6. 日清・日露戦争（s290〜s295） ─────────
+  //  6. 日清・日露戦争（s290〜s295） 
   {
     id: 'koko_shakai_s290',
     subject: 'shakai',
@@ -2276,7 +2276,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
     ],
   },
 
-  // ───────── 7. 条約改正と産業革命（s296〜s299） ─────────
+  //  7. 条約改正と産業革命（s296〜s299） 
   {
     id: 'koko_shakai_s296',
     subject: 'shakai',
@@ -2576,7 +2576,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
       },
     ],
   },
-  // ───────── 8. 第一次世界大戦と日本（s300〜s302） ─────────
+  //  8. 第一次世界大戦と日本（s300〜s302） 
   {
     id: 'koko_shakai_s300',
     subject: 'shakai',
@@ -2606,7 +2606,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
 
 産業革命を経て国力を高めたドイツが、植民地と海軍力の拡大を進めたことに、イギリスやフランスが警戒を強めたことが背景にある。
 
-■ バルカン半島 ──「ヨーロッパの火薬庫」
+■ バルカン半島 「ヨーロッパの火薬庫」
 オスマン帝国の勢力が弱まったバルカン半島では、多くの民族が独立を求めて争い、そこにオーストリアとロシアの思惑が重なっていた。いつ火がついてもおかしくない状態だったことから「ヨーロッパの火薬庫」と呼ばれた。
 
 ■ サラエボ事件（1914年6月）
@@ -2825,7 +2825,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
     ],
   },
 
-  // ───────── 9. 大正デモクラシーと社会運動（s303〜s305） ─────────
+  //  9. 大正デモクラシーと社会運動（s303〜s305） 
   {
     id: 'koko_shakai_s303',
     subject: 'shakai',

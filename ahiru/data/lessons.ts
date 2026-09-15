@@ -32,7 +32,10 @@ export function getLessonsBySubject(subject: string): Lesson[] {
 }
 
 export function getLessonsByExamType(examType: 'chugaku' | 'koko'): Lesson[] {
-  return allLessons.filter((l) => l.examType === examType);
+  // examTypeを持たない初期の基幹単元は中学受験あつかいにする。
+  // textbook.tsx・isLessonFree と既定値をそろえないと、同じ単元が
+  // 画面には出るのにこの関数では拾えない、という食いちがいが起きる。
+  return allLessons.filter((l) => (l.examType ?? 'chugaku') === examType);
 }
 
 export function getLessonById(id: string): Lesson | undefined {

@@ -6,7 +6,7 @@ import type { Lesson } from './lesson-types';
 //       絵・写真の描写(3)／誤文訂正(3)／リスニング設問(2)／総合実戦演習(3)
 // 図解は lesson-figs-eigo-ext12.ts（語順・時制の幅・語数配分など、図にして意味のある10課のみ）。
 export const eigoExt12Lessons: Lesson[] = [
-  // ───────────────── 1. 和文英訳の手順（s426〜s428） ─────────────────
+  //  1. 和文英訳の手順（s426〜s428） 
   {
     id: 'eigo_s426',
     subject: 'eigo',
@@ -245,7 +245,7 @@ for のあとには長さ（three years, ten minutes）、since のあとには�
     ],
   },
 
-  // ───────────────── 2. 主語の扱い（s429〜s430） ─────────────────
+  //  2. 主語の扱い（s429〜s430） 
   {
     id: 'eigo_s429',
     subject: 'eigo',
@@ -415,7 +415,7 @@ There are not any chairs in this room.（There are no chairs in this room. も�
     ],
   },
 
-  // ───────────────── 3. 語順並べかえ（s431〜s433） ─────────────────
+  //  3. 語順並べかえ（s431〜s433） 
   {
     id: 'eigo_s431',
     subject: 'eigo',
@@ -674,7 +674,7 @@ beautiful, interesting, difficult, popular, important のような長い語は m
     ],
   },
 
-  // ───────────────── 4. 条件英作文（s434〜s436） ─────────────────
+  //  4. 条件英作文（s434〜s436） 
   {
     id: 'eigo_s434',
     subject: 'eigo',
@@ -934,7 +934,7 @@ I'm going to visit my aunt tomorrow.
     ],
   },
 
-  // ───────────────── 5. 自由英作文（s437〜s439） ─────────────────
+  //  5. 自由英作文（s437〜s439） 
   {
     id: 'eigo_s437',
     subject: 'eigo',
@@ -1191,7 +1191,7 @@ study English / like math / in summer
     ],
   },
 
-  // ───────────────── 6. 絵・写真の描写（s440〜s442） ─────────────────
+  //  6. 絵・写真の描写（s440〜s442） 
   {
     id: 'eigo_s440',
     subject: 'eigo',
@@ -1466,7 +1466,7 @@ A boy wearing glasses is reading a book.（めがねをかけた男の子が本�
     ],
   },
 
-  // ───────────────── 7. 誤文訂正（s443〜s445） ─────────────────
+  //  7. 誤文訂正（s443〜s445） 
   {
     id: 'eigo_s443',
     subject: 'eigo',
@@ -1745,7 +1745,7 @@ Come to here.（誤）→ Come here.
     ],
   },
 
-  // ───────────────── 8. リスニング（s446〜s447） ─────────────────
+  //  8. リスニング（s446〜s447） 
   {
     id: 'eigo_s446',
     subject: 'eigo',
@@ -1932,7 +1932,7 @@ Osaka と Okayama は音が似ているうえ、二人の行き先が入れか�
     ],
   },
 
-  // ───────────────── 9. 総合実戦演習（s448〜s450） ─────────────────
+  //  9. 総合実戦演習（s448〜s450） 
   {
     id: 'eigo_s448',
     subject: 'eigo',

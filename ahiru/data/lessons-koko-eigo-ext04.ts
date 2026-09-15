@@ -9,7 +9,7 @@ import type { Lesson } from './lesson-types';
 // （lesson-figs-koko-eigo-ext04.ts）。継続＝幅、完了＝右端の1点、経験＝点の数、
 // 過去形＝今と切れた点、という対比が一目でわかることをねらっている。
 export const kokoEigoExt04Lessons: Lesson[] = [
-  // ───────────────── 1. 現在完了・継続（s111〜s115） ─────────────────
+  //  1. 現在完了・継続（s111〜s115） 
   {
     id: 'koko_eigo_s111',
     subject: 'eigo',
@@ -459,7 +459,7 @@ It began to rain two hours ago.
     ],
   },
 
-  // ───────────────── 2. 現在完了・完了／結果（s116〜s120） ─────────────────
+  //  2. 現在完了・完了／結果（s116〜s120） 
   {
     id: 'koko_eigo_s116',
     subject: 'eigo',
@@ -931,7 +931,7 @@ She has grown tall.（背が伸びて、今は高い）
     ],
   },
 
-  // ───────────────── 3. 現在完了・経験（s121〜s125） ─────────────────
+  //  3. 現在完了・経験（s121〜s125） 
   {
     id: 'koko_eigo_s121',
     subject: 'eigo',
@@ -1426,7 +1426,7 @@ such a ＋ 形容詞：such a big / such an interesting
     ],
   },
 
-  // ───────────────── 4. 現在完了進行形（s126〜s127） ─────────────────
+  //  4. 現在完了進行形（s126〜s127） 
   {
     id: 'koko_eigo_s126',
     subject: 'eigo',
@@ -1614,7 +1614,7 @@ It started to rain three hours ago. It is still raining now.
     ],
   },
 
-  // ───────────────── 5. 現在完了と過去形の使い分け（s128〜s131） ─────────────────
+  //  5. 現在完了と過去形の使い分け（s128〜s131） 
   {
     id: 'koko_eigo_s128',
     subject: 'eigo',
@@ -2013,7 +2013,7 @@ lose（なくす）→ not have（持っていない）
     ],
   },
 
-  // ───────────────── 6. 受動態の基本（s132〜s136） ─────────────────
+  //  6. 受動態の基本（s132〜s136） 
   {
     id: 'koko_eigo_s132',
     subject: 'eigo',
@@ -2525,7 +2525,7 @@ He was laughed at by everyone. のように、at と by が並ぶ形になる。
     ],
   },
 
-  // ───────────────── 7. 受動態の時制・疑問文・否定文（s137〜s140） ─────────────────
+  //  7. 受動態の時制・疑問文・否定文（s137〜s140） 
   {
     id: 'koko_eigo_s137',
     subject: 'eigo',
@@ -2927,7 +2927,7 @@ The music could be heard from far away.
     ],
   },
 
-  // ───────────────── 8. by以外の前置詞をとる受動態（s141〜s143） ─────────────────
+  //  8. by以外の前置詞をとる受動態（s141〜s143） 
   {
     id: 'koko_eigo_s141',
     subject: 'eigo',
@@ -3234,7 +3234,7 @@ up of → 構成要素
     ],
   },
 
-  // ───────────────── 9. SVOO・SVOCの受動態（s144〜s145） ─────────────────
+  //  9. SVOO・SVOCの受動態（s144〜s145） 
   {
     id: 'koko_eigo_s144',
     subject: 'eigo',

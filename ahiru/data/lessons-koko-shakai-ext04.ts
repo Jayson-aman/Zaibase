@@ -8,7 +8,7 @@ import type { Lesson } from './lesson-types';
 // 図解は japanMap（位置）・barChart／pieChart（産業データ）・lineChart（出荷時期・断面図）を
 // 全40セッションの50%にあたる20セッションに付けた（lesson-figs-koko-shakai-ext04.ts）。
 export const kokoShakaiExt04Lessons: Lesson[] = [
-  // ───────────────────── 1. 九州地方（s111〜s115） ─────────────────────
+  //  1. 九州地方（s111〜s115） 
   {
     id: 'koko_shakai_s111',
     subject: 'shakai',
@@ -391,7 +391,7 @@ export const kokoShakaiExt04Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 2. 中国・四国地方（s116〜s120） ─────────────────────
+  //  2. 中国・四国地方（s116〜s120） 
   {
     id: 'koko_shakai_s116',
     subject: 'shakai',
@@ -778,7 +778,7 @@ export const kokoShakaiExt04Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 3. 近畿地方（s121〜s125） ─────────────────────
+  //  3. 近畿地方（s121〜s125） 
   {
     id: 'koko_shakai_s121',
     subject: 'shakai',
@@ -1163,7 +1163,7 @@ export const kokoShakaiExt04Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 4. 中部地方（s126〜s130） ─────────────────────
+  //  4. 中部地方（s126〜s130） 
   {
     id: 'koko_shakai_s126',
     subject: 'shakai',
@@ -1578,7 +1578,7 @@ export const kokoShakaiExt04Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 5. 関東地方（s131〜s135） ─────────────────────
+  //  5. 関東地方（s131〜s135） 
   {
     id: 'koko_shakai_s131',
     subject: 'shakai',
@@ -2012,7 +2012,7 @@ export const kokoShakaiExt04Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 6. 東北地方（s136〜s139） ─────────────────────
+  //  6. 東北地方（s136〜s139） 
   {
     id: 'koko_shakai_s136',
     subject: 'shakai',
@@ -2366,7 +2366,7 @@ export const kokoShakaiExt04Lessons: Lesson[] = [
     ],
   },
 
-  // ───────────────────── 7. 北海道地方（s140〜s143） ─────────────────────
+  //  7. 北海道地方（s140〜s143） 
   {
     id: 'koko_shakai_s140',
     subject: 'shakai',
@@ -2709,7 +2709,7 @@ export const kokoShakaiExt04Lessons: Lesson[] = [
       },
     ],
   },
-  // ───────────────────── 8. 地形図の読み取り（s144〜s150） ─────────────────────
+  //  8. 地形図の読み取り（s144〜s150） 
   {
     id: 'koko_shakai_s144',
     subject: 'shakai',

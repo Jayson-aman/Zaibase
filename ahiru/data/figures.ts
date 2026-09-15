@@ -19,6 +19,15 @@ export type CoordFigure = {
   caption?: string;
   /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
   steps?: string[];
+  /**
+   * 図を描き終えるのが steps の何番目か（1始まり）。
+   * これより後ろの手順は、図が完成した状態のまま計算や結論を述べるのに使う。
+   * 省略すると steps の最後の1つ手前までで描き終える。
+   *
+   * 指定しないと、説明より先に図ができあがってしまうことがある。
+   * （円錐で「半径は6cm」と言っている時点で高さの8cmまで出ていた）
+   */
+  buildSteps?: number;
 };
 
 // 多角形（三角形・四角形などの面積・合同・角度）
@@ -32,9 +41,34 @@ export type PolyFigure = {
   equalAngles?: number[][]; // 等しい角のグループ（頂点index）
   diagonals?: [number, number][]; // 対角線（頂点index対）
   heights?: { from: number; toEdge: [number, number]; label?: string }[]; // 高さ（垂線）
+  /**
+   * 図の中の部分三角形・部分図形を色分けして塗りつぶす（参考書のように、比べている
+   * 2つ・3つの三角形をそれぞれ別の色で塗ると、どことどこを比べているか一目で分かる）。
+   * indicesはpointsの頂点indexを結んで塗る部分図形（3つ以上）。colorは省略時パレットを順に使う。
+   */
+  regions?: { indices: number[]; color?: string }[];
+  /**
+   * 図の中に描く円（points と同じ座標系。レンダラーが points ごと自動フィットする）。
+   * 2円の共通接線のように「円＋補助三角形」を1枚で見せたいときに使う。
+   */
+  circles?: { x: number; y: number; r: number; label?: string }[];
+  /**
+   * 頂点を結ぶ辺とは別に引く補助線（points と同じ座標系）。
+   * 接線・半径など、多角形の辺ではない線分を足すときに使う。
+   */
+  segments?: { from: Pt; to: Pt; label?: string; dashed?: boolean }[];
   caption?: string;
   /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
   steps?: string[];
+  /**
+   * 図を描き終えるのが steps の何番目か（1始まり）。
+   * これより後ろの手順は、図が完成した状態のまま計算や結論を述べるのに使う。
+   * 省略すると steps の最後の1つ手前までで描き終える。
+   *
+   * 指定しないと、説明より先に図ができあがってしまうことがある。
+   * （円錐で「半径は6cm」と言っている時点で高さの8cmまで出ていた）
+   */
+  buildSteps?: number;
 };
 
 // 円（円周角・中心角・弦・おうぎ形）
@@ -48,6 +82,15 @@ export type CircleFigure = {
   caption?: string;
   /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
   steps?: string[];
+  /**
+   * 図を描き終えるのが steps の何番目か（1始まり）。
+   * これより後ろの手順は、図が完成した状態のまま計算や結論を述べるのに使う。
+   * 省略すると steps の最後の1つ手前までで描き終える。
+   *
+   * 指定しないと、説明より先に図ができあがってしまうことがある。
+   * （円錐で「半径は6cm」と言っている時点で高さの8cmまで出ていた）
+   */
+  buildSteps?: number;
 };
 
 // 立体（直方体・円柱・円すい・三角柱・球）
@@ -64,6 +107,15 @@ export type SolidFigure = {
   caption?: string;
   /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
   steps?: string[];
+  /**
+   * 図を描き終えるのが steps の何番目か（1始まり）。
+   * これより後ろの手順は、図が完成した状態のまま計算や結論を述べるのに使う。
+   * 省略すると steps の最後の1つ手前までで描き終える。
+   *
+   * 指定しないと、説明より先に図ができあがってしまうことがある。
+   * （円錐で「半径は6cm」と言っている時点で高さの8cmまで出ていた）
+   */
+  buildSteps?: number;
 };
 
 // 数直線（不等式の解・範囲）
@@ -77,6 +129,15 @@ export type NumberLineFigure = {
   caption?: string;
   /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
   steps?: string[];
+  /**
+   * 図を描き終えるのが steps の何番目か（1始まり）。
+   * これより後ろの手順は、図が完成した状態のまま計算や結論を述べるのに使う。
+   * 省略すると steps の最後の1つ手前までで描き終える。
+   *
+   * 指定しないと、説明より先に図ができあがってしまうことがある。
+   * （円錐で「半径は6cm」と言っている時点で高さの8cmまで出ていた）
+   */
+  buildSteps?: number;
 };
 
 // 箱ひげ図
@@ -92,6 +153,15 @@ export type BoxplotFigure = {
   caption?: string;
   /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
   steps?: string[];
+  /**
+   * 図を描き終えるのが steps の何番目か（1始まり）。
+   * これより後ろの手順は、図が完成した状態のまま計算や結論を述べるのに使う。
+   * 省略すると steps の最後の1つ手前までで描き終える。
+   *
+   * 指定しないと、説明より先に図ができあがってしまうことがある。
+   * （円錐で「半径は6cm」と言っている時点で高さの8cmまで出ていた）
+   */
+  buildSteps?: number;
 };
 
 // 化学反応式（係数・添字を整形して表示）
@@ -102,6 +172,15 @@ export type ChemEqFigure = {
   caption?: string;
   /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
   steps?: string[];
+  /**
+   * 図を描き終えるのが steps の何番目か（1始まり）。
+   * これより後ろの手順は、図が完成した状態のまま計算や結論を述べるのに使う。
+   * 省略すると steps の最後の1つ手前までで描き終える。
+   *
+   * 指定しないと、説明より先に図ができあがってしまうことがある。
+   * （円錐で「半径は6cm」と言っている時点で高さの8cmまで出ていた）
+   */
+  buildSteps?: number;
 };
 
 // 構造式（原子の座標＋結合）
@@ -112,6 +191,15 @@ export type ChemStructFigure = {
   caption?: string;
   /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
   steps?: string[];
+  /**
+   * 図を描き終えるのが steps の何番目か（1始まり）。
+   * これより後ろの手順は、図が完成した状態のまま計算や結論を述べるのに使う。
+   * 省略すると steps の最後の1つ手前までで描き終える。
+   *
+   * 指定しないと、説明より先に図ができあがってしまうことがある。
+   * （円錐で「半径は6cm」と言っている時点で高さの8cmまで出ていた）
+   */
+  buildSteps?: number;
 };
 
 // 折れ線・曲線グラフ（複数系列・軸ラベル）。溶解度曲線・冷却曲線・電流電圧(I-V)・
@@ -132,6 +220,15 @@ export type LineChartFigure = {
   caption?: string;
   /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
   steps?: string[];
+  /**
+   * 図を描き終えるのが steps の何番目か（1始まり）。
+   * これより後ろの手順は、図が完成した状態のまま計算や結論を述べるのに使う。
+   * 省略すると steps の最後の1つ手前までで描き終える。
+   *
+   * 指定しないと、説明より先に図ができあがってしまうことがある。
+   * （円錐で「半径は6cm」と言っている時点で高さの8cmまで出ていた）
+   */
+  buildSteps?: number;
 };
 
 // 棒グラフ・ヒストグラム
@@ -145,6 +242,15 @@ export type BarChartFigure = {
   caption?: string;
   /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
   steps?: string[];
+  /**
+   * 図を描き終えるのが steps の何番目か（1始まり）。
+   * これより後ろの手順は、図が完成した状態のまま計算や結論を述べるのに使う。
+   * 省略すると steps の最後の1つ手前までで描き終える。
+   *
+   * 指定しないと、説明より先に図ができあがってしまうことがある。
+   * （円錐で「半径は6cm」と言っている時点で高さの8cmまで出ていた）
+   */
+  buildSteps?: number;
 };
 
 // 円グラフ（割合）
@@ -154,6 +260,15 @@ export type PieChartFigure = {
   caption?: string;
   /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
   steps?: string[];
+  /**
+   * 図を描き終えるのが steps の何番目か（1始まり）。
+   * これより後ろの手順は、図が完成した状態のまま計算や結論を述べるのに使う。
+   * 省略すると steps の最後の1つ手前までで描き終える。
+   *
+   * 指定しないと、説明より先に図ができあがってしまうことがある。
+   * （円錐で「半径は6cm」と言っている時点で高さの8cmまで出ていた）
+   */
+  buildSteps?: number;
 };
 
 // 回路図（電池・抵抗/電熱線・豆電球・スイッチ・電流計・電圧計）
@@ -170,6 +285,15 @@ export type CircuitFigure = {
   caption?: string;
   /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
   steps?: string[];
+  /**
+   * 図を描き終えるのが steps の何番目か（1始まり）。
+   * これより後ろの手順は、図が完成した状態のまま計算や結論を述べるのに使う。
+   * 省略すると steps の最後の1つ手前までで描き終える。
+   *
+   * 指定しないと、説明より先に図ができあがってしまうことがある。
+   * （円錐で「半径は6cm」と言っている時点で高さの8cmまで出ていた）
+   */
+  buildSteps?: number;
 };
 
 // 展開図（立方体・直方体）
@@ -181,6 +305,15 @@ export type NetFigure = {
   caption?: string;
   /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
   steps?: string[];
+  /**
+   * 図を描き終えるのが steps の何番目か（1始まり）。
+   * これより後ろの手順は、図が完成した状態のまま計算や結論を述べるのに使う。
+   * 省略すると steps の最後の1つ手前までで描き終える。
+   *
+   * 指定しないと、説明より先に図ができあがってしまうことがある。
+   * （円錐で「半径は6cm」と言っている時点で高さの8cmまで出ていた）
+   */
+  buildSteps?: number;
 };
 
 // 日本地図（都道府県の実形状＋任意のマーカー）。
@@ -193,6 +326,15 @@ export type JapanMapFigure = {
   caption?: string;
   /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
   steps?: string[];
+  /**
+   * 図を描き終えるのが steps の何番目か（1始まり）。
+   * これより後ろの手順は、図が完成した状態のまま計算や結論を述べるのに使う。
+   * 省略すると steps の最後の1つ手前までで描き終える。
+   *
+   * 指定しないと、説明より先に図ができあがってしまうことがある。
+   * （円錐で「半径は6cm」と言っている時点で高さの8cmまで出ていた）
+   */
+  buildSteps?: number;
 };
 
 // 生物の構造図（花・種子・葉・こん虫・心臓・消化器官・目・耳など、名称が
@@ -215,6 +357,15 @@ export type BioDiagramFigure = {
   caption?: string;
   /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
   steps?: string[];
+  /**
+   * 図を描き終えるのが steps の何番目か（1始まり）。
+   * これより後ろの手順は、図が完成した状態のまま計算や結論を述べるのに使う。
+   * 省略すると steps の最後の1つ手前までで描き終える。
+   *
+   * 指定しないと、説明より先に図ができあがってしまうことがある。
+   * （円錐で「半径は6cm」と言っている時点で高さの8cmまで出ていた）
+   */
+  buildSteps?: number;
 };
 
 // 地層・柱状図（複数地点の対比）
@@ -232,6 +383,15 @@ export type StratumFigure = {
   caption?: string;
   /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
   steps?: string[];
+  /**
+   * 図を描き終えるのが steps の何番目か（1始まり）。
+   * これより後ろの手順は、図が完成した状態のまま計算や結論を述べるのに使う。
+   * 省略すると steps の最後の1つ手前までで描き終える。
+   *
+   * 指定しないと、説明より先に図ができあがってしまうことがある。
+   * （円錐で「半径は6cm」と言っている時点で高さの8cmまで出ていた）
+   */
+  buildSteps?: number;
 };
 
 export type Figure =
@@ -331,6 +491,7 @@ import { figuresKoushikiOyoK3Souji } from './figures-koushiki-oyo-k3souji';
 import { figuresKoushikiOyoK2Heikou } from './figures-koushiki-oyo-k2heikou';
 import { figuresKoushikiOyoK1Godo } from './figures-koushiki-oyo-k1godo';
 import { figuresKoushikiOyoC5Kakudo } from './figures-koushiki-oyo-c5kakudo';
+import { figuresQuizAdd01 } from './figures-quiz-add01';
 
 export const figures: Record<string, Figure> = {
   ...figuresKoushikiOyoC3Tairyoku1,
@@ -430,6 +591,7 @@ export const figures: Record<string, Figure> = {
   ...figuresGradeJ1Rika,
   ...figuresGradeJ2Rika,
   ...figuresGradeJ3Rika,
+  ...figuresQuizAdd01,
 };
 
 export function getFigure(questionId: string): Figure | null {
