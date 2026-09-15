@@ -193,6 +193,38 @@ check(
     .map((q) => q.id),
 );
 
+// 問題集15,199問そのものの健全さ。
+//
+// ⚠️これまでの監査は、公式集1,770問ばかりを見ていた。
+// 子どもが毎日解くのは問題集のほうで、そちらは「20字以下」という
+// 弱い検査しか当てていなかった。2026/9/15に全問を測り直した結果：
+//   ・計算のまちがい … 実質0（scripts/verify-arithmetic.ts で1,874式を検算）
+//   ・解説が理由まで書けていない … 8,374問（55%）← いちばん大きい残債
+//   ・解説が60字以下 … 926問
+//   ・問題文も答えも同じ重複 … 2組4問
+// **「0件・すべて通過」と言えるのは、ここの数字も見たときだけ。**
+const Q_WHY = /なぜ|だから|ので|ため|理由|わけ|から。|からで|という意味|つまり|もともと|考える/;
+const qThin: string[] = [];
+const qShort: string[] = [];
+for (const q of Q) {
+  const e = explanationText(q);
+  const words = e.replace(/[0-9０-９＋－×÷＝=()（）。、,.\s+\-*/^²³°%a-zA-Z]/g, '');
+  if (e.length <= 60) qShort.push(`${q.id}(${e.length}字)`);
+  if (!Q_WHY.test(e) || words.length < 12) qThin.push(`${q.subject}/${q.id}`);
+}
+info('【問題集】解説が理由まで書けていない（減らしていく数字）', qThin, 3);
+info('【問題集】解説が60字以下（減らしていく数字）', qShort, 3);
+const qnorm = (x: string) => String(x ?? '').replace(/\s+/g, '').replace(/[。、．，]/g, '');
+const qdup = new Map<string, string[]>();
+for (const q of Q) {
+  if (qnorm(q.question).length < 12) continue;
+  // ⚠️長文問題は設問文（「（ ）に入る接続語を選びなさい」など）が同じでも、
+  //   本文がちがえば別の問題。passage を入れないと誤検出する。
+  const k = qnorm(q.passage) + '||' + qnorm(q.question) + '||' + qnorm(q.answer);
+  qdup.set(k, [...(qdup.get(k) ?? []), q.id]);
+}
+check('【問題集】問題文も答えも同じ重複', [...qdup.values()].filter((v) => v.length > 1).map((v) => v.join('/')));
+
 // 「⚡ はやく解くコツ」の参照切れと、いまの本数。
 // コツは問題idで引くので、問題を消したり id を変えたりすると黙って出なくなる。
 check(
