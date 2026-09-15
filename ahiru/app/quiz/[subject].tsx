@@ -19,11 +19,6 @@ import { getKoushikiFormulaIdForQuestion, isKoushikiFormulaFree } from '../../da
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
 import { explanationText, hintText } from '../../utils/explanation';
 import { getQuickTrick } from '../../data/quick-tricks';
-import { explanationsSansu } from '../../data/explanations_sansu';
-import { explanationsKokugo } from '../../data/explanations_kokugo';
-import { explanationsRika } from '../../data/explanations_rika';
-import { explanationsShakai } from '../../data/explanations_shakai';
-import { explanationsEigo } from '../../data/explanations_eigo';
 
 // 「レベル別ドリル」「入試対策」は問題プールから毎回ランダムに出題するため、
 // 個別の問題にmaxOnlyを付けて絞れない。代わりに1回のセッションで
@@ -31,13 +26,14 @@ import { explanationsEigo } from '../../data/explanations_eigo';
 const SESSION_FREE_LIMIT = 5;
 const SESSION_LIMITED_MODES: TestModeKey[] = ['level', 'nyushi'];
 
-const allExplanations: Record<string, string> = {
-  ...explanationsSansu,
-  ...explanationsKokugo,
-  ...explanationsRika,
-  ...explanationsShakai,
-  ...explanationsEigo,
-};
+// 予備の解説（data/explanations_*.ts）は2026/9/15に配線を外した。
+// 全313件のうち、実際に画面へ出るものが1件も無かった（問題側に解説が
+// 入っているので、explanationText のフォールバックまで到達しない）。
+// それだけなら無害だが、中身が問題の書きかえに追随しておらず、
+// sansu_42 は「36√2 ≈ 50.9cm³」という誤った値のまま残っていた
+// （正しくは18√2 ≈ 25.5cm³。ちょうど2倍になっていた）。
+// 問題側の解説が1件でも消えれば、この古い値が画面に出てしまう。
+// **使われていない予備データは、正しさを保てないので持たない。**
 import QuizCard from '../../components/QuizCard';
 import Paywall from '../../components/Paywall';
 import { saveProgress } from '../../store/progress';
@@ -727,11 +723,11 @@ export default function QuizScreen() {
               </View>
             )}
 
-            {(currentQuestion.hint || currentQuestion.explanation || allExplanations[currentQuestion.id]) && (
+            {(currentQuestion.hint || currentQuestion.explanation) && (
               <View style={styles.wrongExplanationCard}>
                 <Text style={styles.wrongExplanationTitle}>📖 くわしい解説</Text>
                 <Text style={styles.wrongExplanationText}>
-                  {explanationText(currentQuestion, allExplanations[currentQuestion.id])}
+                  {explanationText(currentQuestion)}
                 </Text>
                 {hintText(currentQuestion) !== '' && (
                   <Text style={styles.wrongExplanationText}>💡 {hintText(currentQuestion)}</Text>

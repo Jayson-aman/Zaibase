@@ -317,6 +317,23 @@ const notPaired = CONFUSABLE.filter(([a, b]) => {
 }).map(([a, b]) => `${a}／${b}`);
 info('区別すべき2語を、公式集で並べて説明していない（要目視）', notPaired, 6);
 
+// 画面に出ないまま残っている「予備データ」が無いか。
+//
+// data/explanations_*.ts（5教科・計313件）は、問題側に解説が無いときの
+// フォールバックとして配線されていたが、**実際に出るものが1件も無かった**。
+// それだけなら無害だが、中身が問題の書きかえに追随しておらず、
+// sansu_42 は「36√2 ≈ 50.9cm³」という誤った値のまま残っていた
+// （正しくは18√2 ≈ 25.5cm³。ちょうど2倍）。問題側の解説が1件でも消えれば、
+// この古い値が画面に出る。2026/9/15に配線ごと削除した。
+// **使われていない予備データは、正しさを保てないので持たない。**
+// ここでは「二度と生えていないこと」を見張る。
+import { existsSync } from 'fs';
+import { join } from 'path';
+const deadFiles = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo']
+  .map((s) => `data/explanations_${s}.ts`)
+  .filter((f) => existsSync(join(__dirname, '..', f)));
+check('削除したはずの予備の解説ファイルが復活している', deadFiles);
+
 // ── D. 重複 ───────────────────────────────────
 console.log('\n=== D. 重複 ===');
 check('レッスンid重複', dupes(L.map((l) => l.id)));
