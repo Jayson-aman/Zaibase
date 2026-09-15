@@ -1891,7 +1891,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼らはそこで遊ぶことを楽しみました」を英語にしなさい。',
     answer: 'They enjoyed playing there.',
     hint: '"enjoy + -ing" で「～することを楽しむ」を表します',
-    explanation: '【解説】\n"enjoy"（楽しむ）の後には必ず動名詞（-ing 形）が来ます。不定詞（to）は使えません。"enjoy playing"（遊ぶことを楽しむ）が正解です。',
+    explanation:
+      '【答え】They enjoyed playing there.\n\n【enjoy の後は必ず ing】enjoy は動名詞だけをとる動詞である。to 不定詞は続けられない。\n・enjoy playing（正しい）\n・enjoy to play（誤り）\n\n【後ろの形が決まっている動詞】まとめて覚えるのが最も効率がよい。\n・ing だけ … enjoy、finish、stop、practice、mind、give up、avoid、keep\n・to だけ … want、hope、wish、decide、plan、promise、expect、agree\n・どちらも … like、love、begin、start、continue\n覚え方として、ing をとる動詞には「すでに起きていること」を表すものが多く、to をとる動詞には「これからのこと」を表すものが多い、という説明がある。want（これから欲しい）は to、enjoy（今している）は ing である。\n\n【意味が変わる動詞】stop は後ろの形で意味が変わる。\n・stop playing … 遊ぶのをやめる\n・stop to play … 遊ぶために立ち止まる\n前者は動名詞（目的語）、後者は不定詞（目的）である。試験でねらわれる。\n\n【there に前置詞をつけない】there は副詞なので、to there とは言わない。\n\n【例文】I enjoyed talking with you.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1913,7 +1914,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女は医者になりたかったです」を英語にしなさい。',
     answer: 'She wanted to be a doctor.',
     hint: '"want" の過去形を使い、後ろには不定詞を続けます',
-    explanation: '【解説】\n"want"（したい）の過去形は "wanted" です。"want to be"（～になりたい）→ "wanted to be"（～になりたかった）。',
+    explanation:
+      '【答え】She wanted to be a doctor.\n\n【want to の過去形】want を過去形 wanted にする。to の後ろは原形のままである。\n・She wanted to be a doctor.（正しい）\n・She wanted to was a doctor.（誤り）\nto の後はいつでも原形で、時制は前の動詞が受け持つ。\n\n【be動詞の原形は be】\n・am、is、are は be が変化した形\n・to be、will be、can be、must be … すべて be になる\n\n【want の使い方】\n・want ＋ 名詞 … I want a new bike.\n・want to ＋ 原形 … I want to go.\n・want ＋ 人 ＋ to ＋ 原形 … I want you to come.（あなたに来てほしい）\n3つ目の形は中学の後半で学ぶ大事な形である。だれにしてほしいのかをはさむ。\n\n【become と be】\n・want to be a doctor（医者になりたい）\n・want to become a doctor（同じ意味）\nどちらも使えるが、be のほうがよく使われる。\n\n【ていねいな言い方】would like to は want to のていねいな形である。\n\n【例文】\n・I wanted to go, but I was busy.\n・I want you to help me.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1924,7 +1926,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼は英語を学ぶことが難しいと感じました」を英語にしなさい。',
     answer: 'He found it difficult to learn English.',
     hint: '"find it + 形容詞 + to 不定詞" の形式目的語構文です',
-    explanation: '【解説】\n"find it + 形容詞 + to 不定詞"（～することが...だとわかる）は形式目的語構文です。"it" は to 以下を指しています。',
+    explanation:
+      '【答え】He found it difficult to learn English.\n\n【形式目的語の it】この it は「それ」という意味ではない。後ろの to 以下を指す代わりの語である。\n・He found it difficult to learn English.\n・it ＝ to learn English（英語を学ぶこと）\n\n【なぜ it を置くのか】英語では、長いかたまりを文の途中に置くのを嫌う。to learn English をそのまま目的語の位置に置くと、\n・He found to learn English difficult.\nとなって、文の形が分かりにくくなる。そこで、まず it を置いて形を決め、長い中身は後ろに回す。この it を形式目的語という。\n\n【同じ形の動詞】\n・find it ＋ 形容詞 ＋ to 〜（〜するのが…だと分かる）\n・think it ＋ 形容詞 ＋ to 〜\n・make it ＋ 形容詞 ＋ to 〜\n\n【形式主語の it】主語のときも同じ考え方をする。\n・It is difficult to learn English.\n・It ＝ to learn English\nこちらのほうが先に習う形である。形式主語と形式目的語は同じ発想である。\n\n【例文】\n・It is important to study every day.\n・I think it hard to get up early.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -1935,7 +1938,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は親切にしてくれた彼に感謝しました」を英語にしなさい。',
     answer: 'I thanked him for being kind to me.',
     hint: '"thank + 人 + for + -ing" で「～してくれて感謝する」を表します',
-    explanation: '【解説】\n"thank + 人 + for + -ing"（～してくれて感謝する）は重要構文です。"for" の後は動名詞（-ing 形）を使います。',
+    explanation:
+      '【答え】I thanked him for being kind to me.\n\n【thank ＋ 人 ＋ for ＋ ing】感謝する理由を for で示す。for は前置詞なので、後ろは ing 形になる。\n・Thank you for coming.（来てくれてありがとう）\n・Thank you for your help.（名詞でもよい）\n・thank you for to come（誤り）\n\n【be kind to 〜】「〜に親切である」。前置詞は to である。\n・be kind to me\n・be nice to 〜、be friendly to 〜 も同じ\n\n【前置詞 ＋ ing の表現】まとめて覚える。\n・thank you for 〜ing\n・be good at 〜ing\n・be interested in 〜ing\n・be afraid of 〜ing\n・look forward to 〜ing\n・How about 〜ing?\n・before／after 〜ing\n・without 〜ing（〜しないで）\n前置詞の後ろに to 不定詞は置けないという決まりが共通している。\n\n【thank の使い方】\n・thank ＋ 人（人に感謝する）\n・thanks to 〜（〜のおかげで）\n・be thankful for 〜\n\n【例文】Thank you for helping me with my homework.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -1958,7 +1962,8 @@ export const eigoExtra2: Question[] = [
     question: '「この本は多くの人に読まれています」を英語にしなさい。',
     answer: 'This book is read by many people.',
     hint: '受動態は "be動詞 + 過去分詞 (+ by ...)" の形です',
-    explanation: '【解説】\n受動態（受け身）は "be動詞 + 過去分詞" で表します。「誰によって」を示すときは "by + 人" を続けます。',
+    explanation:
+      '【答え】This book is read by many people.\n\n【受け身（受動態）の形】be動詞 ＋ 過去分詞。「〜される」を表す。\n・能動態 … Many people read this book.（多くの人がこの本を読む）\n・受動態 … This book is read by many people.\n動作を受けるものを主語にする言い方である。\n\n【書きかえの手順】\n①能動態の目的語（this book）を主語にする\n②動詞を be動詞 ＋ 過去分詞にする\n③もとの主語を by の後ろに置く\n\n【read の発音に注意】この文の read は過去分詞なので、レッドと読む。つづりは現在形と同じだが発音が変わる。read - read - read。\n\n【by を省くとき】だれがしたかが重要でない、または分からないときは by 以下を省く。\n・English is spoken in many countries.（だれが話すかは重要でない）\n・My bike was stolen.（だれが盗んだか分からない）\n受け身は「する人」を言わなくてよいのが便利なところである。\n\n【by 以外を使う受け身】\n・be interested in 〜（〜に興味がある）\n・be covered with 〜（〜におおわれている）\n・be known to 〜（〜に知られている）\n\n【例文】This song is loved by young people.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -1969,7 +1974,8 @@ export const eigoExtra2: Question[] = [
     question: '「この歌は世界中で歌われています」を英語にしなさい。',
     answer: 'This song is sung all over the world.',
     hint: '"sing" の過去分詞は "sung" です',
-    explanation: '【解説】\n"sing"（歌う）の過去分詞は "sung" です（sing-sang-sung）。"all over the world"（世界中で）は重要表現です。',
+    explanation:
+      '【答え】This song is sung all over the world.\n\n【sing の変化】sing - sang - sung。受け身では過去分詞 sung を使う。\n\n【i が a、u と変わる型】まとめて覚えると効率がよい。\n・sing - sang - sung\n・drink - drank - drunk\n・swim - swam - swum\n・begin - began - begun\n・ring - rang - rung\n原形は i、過去形は a、過去分詞は u という規則性がある。この型に気づくと、5語まとめて覚えられる。\n\n【all over the world】「世界中で」。決まった言い方である。\n・all over the world ＝ around the world ＝ throughout the world\n・all over Japan（日本中で）\n\n【the world に the がつく理由】世界は一つしかないので the をつける。the sun、the moon、the earth と同じである。\n\n【受け身にする理由】だれが歌うかは問題ではなく、「歌われている」という事実が中心だからである。動作をする人が特定できない、または重要でないときに受け身を使う。\n\n【例文】\n・This story is known all over the world.\n・Rice is grown in many Asian countries.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1980,7 +1986,8 @@ export const eigoExtra2: Question[] = [
     question: '「この建物は100年前に建てられました」を英語にしなさい。',
     answer: 'This building was built 100 years ago.',
     hint: '過去の受動態は "was/were + 過去分詞" です',
-    explanation: '【解説】\n過去の受動態は "was/were + 過去分詞" を使います。"build"（建てる）の過去分詞は "built"（build-built-built）。',
+    explanation:
+      '【答え】This building was built 100 years ago.\n\n【過去の受け身】was／were ＋ 過去分詞。\n・主語が単数 … was built\n・主語が複数 … were built\n\n【build の変化】build - built - built。過去形と過去分詞が同じ型である。\n・同じ型 … build - built - built、send - sent - sent、spend - spent - spent、lend - lent - lent\n・d や t で終わる語に多い\n\n【ago の使い方】\n・100 years ago（100年前）\n・ago は必ず数や期間の後ろに置く。ago 100 years とは言わない\n・ago は過去形と一緒に使い、現在完了とは使えない。I have seen him three days ago は誤りである\n・現在完了では before や for、since を使う\n\n【建物に関わる語】\n・building（建物）・castle（城）・temple（寺）・shrine（神社）・bridge（橋）・tower（塔）\n・be built（建てられる）・be destroyed（こわされる）・be rebuilt（建て直される）\n\n【時制の一致】文全体が過去なので、be動詞も was になる。現在なら is built（建てられている）となり、意味が変わる。\n\n【例文】This temple was built about 300 years ago.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -1991,7 +1998,8 @@ export const eigoExtra2: Question[] = [
     question: '「その手紙は英語で書かれていました」を英語にしなさい。',
     answer: 'The letter was written in English.',
     hint: '"write" の過去分詞は "written" です',
-    explanation: '【解説】\n"write"（書く）の過去分詞は "written"（write-wrote-written）。"in English"（英語で）は言語を表す前置詞表現です。',
+    explanation:
+      '【答え】The letter was written in English.\n\n【write の変化】write - wrote - written。3つとも形がちがう型である。written は t を2つ書くことに注意する。\n\n【in English の in】言語を表すときは in を使う。\n・write in English（英語で書く）\n・speak in Japanese（日本語で話す）\n・say it in English\n・by English、with English は誤りである\n\n【手段を表す前置詞のまとめ】\n・in ＋ 言語・材料 … in English、in ink\n・with ＋ 道具 … with a pen、with a knife\n・by ＋ 手段・方法 … by bus、by e-mail\n言語は in、道具は with、手段は by と整理する。\n\n【受け身にする理由】だれが書いたかが分からない、または重要でないときに受け身を使う。手紙の話では、内容のほうが関心の中心になる。\n\n【手紙に関わる語】letter（手紙）、e-mail（電子メール）、postcard（はがき）、stamp（切手）、envelope（封筒）、address（あて名）、send（送る）、receive（受け取る）。\n\n【例文】\n・This book was written by a famous writer.\n・The sign is written in three languages.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -2002,7 +2010,8 @@ export const eigoExtra2: Question[] = [
     question: '「この写真はいつ撮られましたか？」を英語にしなさい。',
     answer: 'When was this picture taken?',
     hint: '受動態の疑問文は "be動詞 + 主語 + 過去分詞?" の形です',
-    explanation: '【解説】\n受動態の疑問文は be動詞を先頭に移動します。"take"（撮る）の過去分詞は "taken"（take-took-taken）。',
+    explanation:
+      '【答え】When was this picture taken?\n\n【受け身の疑問文】be動詞を主語の前に出す。疑問詞があれば、さらにその前に置く。\n・This picture was taken last year.\n・Was this picture taken last year?\n・When was this picture taken?\n疑問詞 → be動詞 → 主語 → 過去分詞の順である。\n\n【take の変化】take - took - taken。過去分詞は taken である。\n\n【take a picture】「写真を撮る」。take を使う表現をまとめる。\n・take a picture（写真を撮る）・take a bath（風呂に入る）・take a bus（バスに乗る）・take a walk（散歩する）・take care of（世話をする）・take off（脱ぐ、離陸する）\n\n【答え方】\n・It was taken last year. ／ Last year.\n疑問詞があるので Yes / No では答えない。\n\n【受け身の疑問文でよく使う形】\n・When was it built?（いつ建てられましたか）\n・Where was it made?（どこで作られましたか）\n・What is this called in English?（これは英語で何といいますか）\n最後の形は会話でとても役に立つ。\n\n【例文】Where was this made? — It was made in Japan.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -2013,7 +2022,8 @@ export const eigoExtra2: Question[] = [
     question: '「その窓は生徒によって割られました」を英語にしなさい。',
     answer: 'The window was broken by a student.',
     hint: '"break" の過去分詞は "broken" です',
-    explanation: '【解説】\n"break"（壊す）の変化は break-broke-broken です。受動態 "was broken by"（～によって割られた）を使います。',
+    explanation:
+      '【答え】The window was broken by a student.\n\n【break の変化】break - broke - broken。3つとも形がちがう型である。\n・同じ型 … speak - spoke - spoken、steal - stole - stolen、choose - chose - chosen、freeze - froze - frozen\n過去形は o、過去分詞は o ＋ en という規則性がある。\n\n【by を使うとき】だれがしたかをはっきり示したいときに by を使う。この文では「生徒によって」と、した人を示している。\n\n【broken の形容詞としての使い方】過去分詞は形容詞のようにも使える。\n・a broken window（割れた窓）\n・a used car（中古車）\n・boiled eggs（ゆで卵）\n過去分詞は「〜された」という意味で名詞を説明できる。\n\n【break の意味の広さ】\n・break a window（窓を割る）\n・break a promise（約束を破る）\n・break a record（記録を破る）\n・break down（故障する）\n・take a break（休憩する）\n\n【a student の a】どの生徒かは特定していないので a を使う。特定の生徒なら the student となる。\n\n【例文】My bike was stolen last night.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -2024,7 +2034,8 @@ export const eigoExtra2: Question[] = [
     question: '「英語は世界中で話されています」を英語にしなさい。',
     answer: 'English is spoken all over the world.',
     hint: '"speak" の過去分詞は "spoken" です',
-    explanation: '【解説】\n"speak"（話す）の変化は speak-spoke-spoken です。受動態 "is spoken"（話されている）を使います。',
+    explanation:
+      '【答え】English is spoken all over the world.\n\n【speak の変化】speak - spoke - spoken。break - broke - broken と同じ型である。\n\n【by を省く理由】だれが話すかは特定できないし、重要でもない。「世界中で話されている」という事実が中心である。受け身は、する人を言わなくてよいときに便利に使える。\n\n【by を省く典型的な場合】\n・だれがしたか分からない … My bag was stolen.\n・だれでもよい、一般の人 … English is spoken here.\n・言う必要がない … Rice is grown in Japan.\n\n【is spoken と speaks】取りちがえに注意する。\n・English is spoken.（英語が話される）\n・He speaks English.（彼が英語を話す）\n主語が「する側」か「される側」かで、能動態か受動態かが決まる。\n\n【言語に関わる語】\n・native language／mother tongue（母語）・foreign language（外国語）・official language（公用語）・communicate（意思を伝え合う）\n\n【all over the world】世界中で。around the world とも言える。\n\n【例文】\n・French is spoken in Canada, too.\n・Japanese is not spoken in many countries.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -2046,7 +2057,8 @@ export const eigoExtra2: Question[] = [
     question: '「その本はまだ読まれていません」を英語にしなさい。',
     answer: 'The book has not been read yet.',
     hint: '現在完了の受動態は "have/has been + 過去分詞" です',
-    explanation: '【解説】\n現在完了の受動態は "have/has been + 過去分詞" を使います。"yet"（まだ）は否定文で使います。',
+    explanation:
+      '【答え】The book has not been read yet.\n\n【現在完了の受け身】have／has been ＋ 過去分詞。2つの形が重なっている。\n・現在完了 … have／has ＋ 過去分詞\n・受け身 … be動詞 ＋ 過去分詞\n・重ねると … have／has ＋ been ＋ 過去分詞\nbeen は be の過去分詞である。\n\n【否定文】have／has の後に not を置く。\n・The book has not been read yet.\n・短縮形は hasn\'t been read\n\n【yet の使い方】\n・否定文 … まだ。The book has not been read yet.\n・疑問文 … もう。Have you read it yet?\n・ふつうの文では already を使う … I have already read it.\nyet は否定文と疑問文、already はふつうの文で使い分ける。位置はどちらも文末が基本である（already は動詞の前にも置ける）。\n\n【read の発音】ここでは過去分詞なのでレッドと読む。\n\n【現在完了の3つの意味】\n・完了 … just、already、yet と使う\n・経験 … ever、never、once、three times と使う\n・継続 … for、since と使う\n一緒に使う語で、どの意味かが分かる。\n\n【例文】Have you finished your homework yet? — Not yet.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -2080,7 +2092,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼が好きな本はとても面白いです」を英語にしなさい。（関係代名詞 that を使う）',
     answer: 'The book that he likes is very interesting.',
     hint: '"that" は人にも物にも使える関係代名詞です',
-    explanation: '【解説】\n関係代名詞 "that" は人にも物にも使えます。"The book that he likes"（彼が好きな本）が主語となります。',
+    explanation:
+      '【答え】The book that he likes is very interesting.\n\n【関係代名詞のはたらき】2つの文を1つにつなぎ、名詞をくわしく説明する。\n・The book is very interesting.\n・He likes the book.\n・つなぐと … The book that he likes is very interesting.\n\n【文の組み立て】\n・The book（主語）\n・that he likes（The book を説明する部分）\n・is very interesting（述語）\n説明の部分が主語と述語の間にはさまるので、文が長く見えて混乱しやすい。まず主語と述語を見つけるのが読み方のこつである。この文の述語は is である。\n\n【that の省略】目的語のはたらきをする関係代名詞は省ける。\n・The book he likes is very interesting.（that を省いた形）\n・likes の後に目的語がないので、that があったと分かる\n目的格は省ける、主格は省けないというのが大事な決まりである。\n\n【which・who・that の使い分け】\n・人 … who、that\n・もの … which、that\n・that はどちらにも使える\n\n【例文】This is the movie that I saw last week.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -2102,7 +2115,8 @@ export const eigoExtra2: Question[] = [
     question: '「フランス語を話せる女性を知っていますか？」を英語にしなさい。',
     answer: 'Do you know a woman who can speak French?',
     hint: '人を修飾する関係代名詞 "who" を使います',
-    explanation: '【解説】\n"a woman who can speak French"（フランス語を話せる女性）のように関係代名詞節が先行詞を修飾します。',
+    explanation:
+      '【答え】Do you know a woman who can speak French?\n\n【主格の関係代名詞 who】who の後ろにすぐ動詞が来ている。この who は、説明する部分の中で主語のはたらきをしている。\n・a woman who can speak French\n・who ＝ the woman（その女性が話せる）\n\n【主格は省略できない】\n・a woman who can speak French（正しい）\n・a woman can speak French（誤り。文が2つつながって意味が通らない）\n目的格は省けるが、主格は省けない。これが最も大事な区別である。\n\n【主格か目的格かの見分け方】\n・関係代名詞のすぐ後ろが動詞 → 主格（省略できない）\n・関係代名詞のすぐ後ろが主語 → 目的格（省略できる）\n・who can speak … 後ろが動詞なので主格\n・that he likes … 後ろが he（主語）なので目的格\n\n【動詞の形】先行詞（a woman）が単数なので、後ろの動詞も単数に合わせる。ただし can は形が変わらない。\n・a woman who speaks French（speaks になる）\n・women who speak French（複数なら speak）\n\n【例文】I have a friend who lives in America.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -2113,7 +2127,8 @@ export const eigoExtra2: Question[] = [
     question: '「これは日本で最も人気のある歌です」を英語にしなさい。（関係代名詞を使わない）',
     answer: 'This is the most popular song in Japan.',
     hint: '最上級 "the most popular" を使います',
-    explanation: '【解説】\n最上級 "the most popular"（最も人気のある）を使い、"in Japan"（日本で）を後に続けます。',
+    explanation:
+      '【答え】This is the most popular song in Japan.\n\n【最上級の作り方】popular は長い語なので、the most をつける。\n・popular → more popular → the most popular\n\n【the を忘れない】最上級には the が必要である。「いちばん」は1つに決まるので、特定する the がつく。\n\n【in と of】\n・in ＋ 場所・団体 … in Japan、in my class、in the world\n・of ＋ 複数のもの … of the three、of all\n場所なら in、数なら of と覚える。\n\n【関係代名詞を使わない理由】問題文に「関係代名詞を使わない」とあるので、最上級だけで表す。関係代名詞を使うなら、This is the song that is the most popular in Japan. のようになるが、遠回しで不自然である。簡単に言えるときは簡単に言うのが英語の書き方の基本である。\n\n【song に関わる語】song（歌）、music（音楽）、singer（歌手）、hit song（ヒット曲）、lyrics（歌詞）、melody（旋律）。\n\n【popular の使い方】\n・be popular with 〜（〜に人気がある）。前置詞は with または among\n・This song is popular with young people.\n\n【例文】Mt. Fuji is the highest mountain in Japan.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -2135,7 +2150,8 @@ export const eigoExtra2: Question[] = [
     question: '「あなたが読んでいる本のタイトルは何ですか？」を英語にしなさい。',
     answer: 'What is the title of the book that you are reading?',
     hint: '関係代名詞節を含む疑問文です',
-    explanation: '【解説】\n"the book that you are reading"（あなたが読んでいる本）の "title"（タイトル）を "What is ..." で尋ねます。',
+    explanation:
+      '【答え】What is the title of the book that you are reading?\n\n【文の組み立て】長い文だが、分けて考えると簡単である。\n・What is 〜?（〜は何ですか）\n・the title of the book（その本のタイトル）\n・that you are reading（あなたが読んでいる）\n後ろから説明が重なっていくのが英語の特徴である。\n\n【of の使い方】「〜の」。所有や所属を表す。\n・the title of the book（本のタイトル）\n・the name of the street\n・ものには of、人には アポストロフィ s を使うことが多い … Tom\'s book\n\n【that は省略できる】you are reading の you が主語なので、この that は目的格である。目的格は省略できる。\n・the book you are reading でもよい\n\n【関係代名詞の中の時制】説明の部分では、必要な時制を自由に使える。\n・the book that you are reading（今読んでいる）\n・the book that you read yesterday（昨日読んだ）\n・the book that you will read（これから読む）\n\n【疑問文との組み合わせ】関係代名詞を含む部分は1つのかたまりとして扱うので、疑問文の作り方は変わらない。\n\n【例文】What is the name of the girl who is standing there?',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -2146,7 +2162,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女は赤い帽子をかぶっている少女です」を英語にしなさい。',
     answer: 'She is the girl who is wearing a red hat.',
     hint: '関係代名詞 "who" の後に現在進行形を続けます',
-    explanation: '【解説】\n"the girl who is wearing a red hat"（赤い帽子をかぶっている少女）のように関係代名詞節の中に現在進行形を使えます。',
+    explanation:
+      '【答え】She is the girl who is wearing a red hat.\n\n【主格の who ＋ 進行形】説明の部分の中に、進行形を入れることができる。\n・who is wearing a red hat（赤い帽子をかぶっている）\n・who の後ろが is（動詞）なので主格である\n\n【wear と put on】必ず問われる区別である。\n・wear … 身につけている状態。She is wearing a hat.\n・put on … 身につける動作。She put on her hat.\nwear は状態、put on は動作である。進行形にすると、wear は「着ている最中」ではなく「着ている状態」を表す。\n・反対は take off（脱ぐ）\n\n【wear が使えるもの】服だけでなく、身につけるものすべてに使える。\n・wear a hat（帽子）・wear glasses（めがね）・wear shoes（くつ）・wear a watch（腕時計）・wear perfume（香水）・wear a smile（笑顔でいる）\n\n【関係代名詞を使わない言い方】分詞を使って短くもできる。\n・the girl wearing a red hat\nwho is を省いた形で、中学の後半で学ぶ。\n\n【例文】Do you know the boy who is playing the guitar?',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -2157,7 +2174,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼が作った料理はとてもおいしかったです」を英語にしなさい。',
     answer: 'The food that he made was very delicious.',
     hint: '「彼が作った料理」を関係代名詞を使って表します',
-    explanation: '【解説】\n"The food that he made"（彼が作った料理）が主語です。過去形の動詞 "was" を使います。',
+    explanation:
+      '【答え】The food that he made was very delicious.\n\n【文の骨組みを見つける】長い文では、まず主語と述語を探す。\n・主語 … The food（説明の that he made がついている）\n・述語 … was\n・that he made は The food を説明しているだけで、文の述語ではない\n説明の部分の動詞（made）を文の述語とまちがえないことが、読み取りで最も大事である。\n\n【that は省略できる】he が主語なので目的格である。\n・The food he made was very delicious.\n\n【時制をそろえる】\n・he made（作った。過去）\n・was（だった。過去）\n文全体が過去のことなので、両方とも過去形になる。\n\n【food は数えられない】\n・food（食べ物）… ふつう数えられない名詞\n・a food とは言わない。種類を言うときは foods とすることもある\n・a lot of food、much food\n\n【delicious の使い方】それ自体が「とてもおいしい」という強い意味を持つので、very をつけるのは不自然だとされることがある。ただし、実際の会話では very delicious も使われる。\n\n【例文】The cake that my mother made was really good.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -2168,7 +2186,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は東京から来た学生たちに会いました」を英語にしなさい。',
     answer: 'I met students who came from Tokyo.',
     hint: '関係代名詞 "who" で "students" を修飾します',
-    explanation: '【解説】\n"students who came from Tokyo"（東京から来た学生たち）のように関係代名詞 "who" で複数の名詞も修飾できます。',
+    explanation:
+      '【答え】I met students who came from Tokyo.\n\n【先行詞が複数のとき】who の後ろの動詞は、先行詞（students）に合わせる。ここでは過去形なので形は変わらないが、現在形なら come になる。\n・students who come from Tokyo（複数なので come）\n・a student who comes from Tokyo（単数なので comes）\n説明の部分の動詞は、説明される名詞に合わせる。\n\n【come from の意味】\n・come from 〜 … 〜の出身である、〜から来る\n・be from 〜 … 〜の出身である\nどちらも使える。I come from Osaka. ＝ I am from Osaka.\n\n【meet と see】\n・meet … 初めて会う、待ち合わせて会う\n・see … 会う（すでに知っている人に）\n・Nice to meet you.（初対面）／ Nice to see you.（再会）\n初対面かどうかで使い分ける。\n\n【meet の変化】meet - met - met。sleep - slept - slept と同じ型である。\n\n【関係代名詞を使わない言い方】\n・students from Tokyo\n・who came を省いて、前置詞句だけで説明できる場合もある\n\n【例文】I know a girl who plays the violin very well.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -2191,7 +2210,8 @@ export const eigoExtra2: Question[] = [
     question: '「私はまだ昼食を食べていません」を英語にしなさい。',
     answer: 'I have not eaten lunch yet.',
     hint: '現在完了の否定文に "yet"（まだ）を文末に置きます',
-    explanation: '【解説】\n現在完了の否定文は "have not（haven\'t）+ 過去分詞" です。"yet"（まだ）は否定文や疑問文で文末に置きます。',
+    explanation:
+      '【答え】I have not eaten lunch yet.\n\n【現在完了の形】have／has ＋ 過去分詞。否定文は have の後に not を置く。\n・I have not eaten.（短縮形は haven\'t eaten）\n・He has not eaten.（短縮形は hasn\'t eaten）\n\n【現在完了の3つの意味】一緒に使う語で見分ける。\n・完了・結果 … just（ちょうど）、already（もう）、yet（まだ・もう）\n・経験 … ever（今までに）、never（一度も〜ない）、once、twice、〜 times、before\n・継続 … for（〜の間）、since（〜から）\nこの文は yet があるので完了の意味である。\n\n【yet の位置と使い方】\n・否定文で「まだ」… I have not eaten lunch yet.\n・疑問文で「もう」… Have you eaten lunch yet?\n・ふつうの文では already を使う\n・yet は文末に置く\n\n【eat の変化】eat - ate - eaten。過去分詞は eaten である。\n\n【過去形とのちがい】\n・I did not eat lunch.（昼食を食べなかった。過去の事実）\n・I have not eaten lunch yet.（まだ食べていない。今もその状態）\n現在完了は、今とつながっているのが特徴である。\n\n【例文】I have not finished my homework yet.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -2202,7 +2222,8 @@ export const eigoExtra2: Question[] = [
     question: '「あなたはもう電車に乗りましたか？」を英語にしなさい。',
     answer: 'Have you taken the train yet?',
     hint: '現在完了の疑問文では "yet"（もう）を文末に置きます',
-    explanation: '【解説】\n現在完了の疑問文は "Have/Has + 主語 + 過去分詞?" の形です。"yet"（もう・まだ）は疑問文や否定文で文末に置きます。',
+    explanation:
+      '【答え】Have you taken the train yet?\n\n【現在完了の疑問文】Have／Has を主語の前に出す。\n・You have taken the train. → Have you taken the train?\n・do や does は使わない\n\n【答え方】\n・Yes, I have. ／ No, I have not.\n聞かれた語で答える。Yes, I did. は現在完了の答えとしては誤りである。\n\n【yet の意味】疑問文では「もう」という意味になる。\n・Have you eaten lunch yet?（もう昼食を食べましたか）\n・否定文では「まだ」… I have not eaten yet.\n同じ語なのに、文の種類で訳が変わるのがおもしろいところである。\n\n【already との使い分け】\n・already … ふつうの文で「もう」。I have already eaten.\n・疑問文で already を使うと「もう食べたの？」という驚きを表す\n\n【take の変化】take - took - taken。\n\n【過去形との使い分け】\n・Did you take the train?（電車に乗りましたか。過去の事実）\n・Have you taken the train yet?（もう乗りましたか。今の状況を聞いている）\n・過去を表す語（yesterday、ago）があるときは現在完了を使えない。\n\n【例文】Have you ever been to Kyoto? — Yes, I have.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -2213,7 +2234,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女は3年間日本に住んでいます」を英語にしなさい。',
     answer: 'She has lived in Japan for three years.',
     hint: '現在完了の継続用法では "for + 期間" を使います',
-    explanation: '【解説】\n現在完了の継続用法（状態や動作が現在まで続いている）では "for + 期間"（～の間）または "since + 起点"（～から）を使います。',
+    explanation:
+      '【答え】She has lived in Japan for three years.\n\n【継続の用法】過去から今までずっと続いていることを表す。\n・She has lived in Japan for three years.（3年間住んでいて、今も住んでいる）\n\n【for と since】\n・for ＋ 期間の長さ … for three years、for a long time、for two weeks\n・since ＋ 始まった時点 … since 2020、since last week、since I was a child\n「どれだけの長さか」なら for、「いつから」なら since である。\n・since の後ろには文を続けることもできる … since I came to Japan\n\n【過去形とのちがい】ここが最も大事である。\n・She lived in Japan for three years.（3年間住んでいた。今はもう住んでいない）\n・She has lived in Japan for three years.（3年間住んでいて、今も住んでいる）\n現在完了は今とつながっているので、意味がまったくちがう。\n\n【継続でよく使う動詞】live、know、want、be、study、work。状態を表す動詞が多い。\n・動作を表す動詞では、現在完了進行形（have been ＋ ing）を使うことが多い\n\n【How long でたずねる】How long have you lived in Japan?\n\n【例文】I have known him since we were children.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -2224,7 +2246,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼は先週からずっと病気です」を英語にしなさい。',
     answer: 'He has been sick since last week.',
     hint: '現在完了の継続用法では "since + 起点" を使います',
-    explanation: '【解説】\n"since"（～から・～以来）は現在完了と一緒に使われ、状態が始まった時点を示します。"since last week"（先週から）が正解です。',
+    explanation:
+      '【答え】He has been sick since last week.\n\n【has been の形】be動詞の過去分詞は been である。\n・is → has been\n・are → have been\n・「ずっと〜である」という状態の継続を表す\n\n【since の使い方】「〜から、〜以来」。始まった時点を示す。\n・since last week（先週から）\n・since 2020（2020年から）\n・since Monday（月曜から）\n・since I was a child（子どものころから。後ろに文も続けられる）\n\n【for との使い分け】\n・for a week（1週間）… 長さ\n・since last week（先週から）… 始まった時点\n同じ状況を2通りで言える。He has been sick for a week. とも言える。\n\n【現在完了と一緒に使う】since は現在完了と組で使うのが基本である。\n・He has been sick since last week.（正しい）\n・He was sick since last week.（不自然）\n\n【sick の意味】\n・アメリカ英語 … 病気の、気分が悪い\n・イギリス英語 … ill をよく使う。sick は「吐き気がする」の意味になることがある\n\n【例文】I have been busy since last month.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -2235,7 +2258,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は一度もロンドンに行ったことがありません」を英語にしなさい。',
     answer: 'I have never been to London.',
     hint: '現在完了の経験用法では "never" で「一度も～ない」を表します',
-    explanation: '【解説】\n現在完了の経験用法（過去から現在までの経験）では "have been to"（～に行ったことがある）と "never"（一度も～ない）を使います。',
+    explanation:
+      '【答え】I have never been to London.\n\n【経験の用法】今までにしたことがあるかどうかを表す。\n・never … 一度も〜ない\n・ever … 今までに（疑問文で使う）\n・once、twice、three times … 回数\n・before … 以前に\n\n【never の位置】have と過去分詞の間に置く。\n・I have never been to London.（正しい）\n・I never have been（不自然）\n\n【have been to と have gone to】必ず問われる区別である。\n・have been to 〜 … 〜へ行ったことがある（経験）。今はここにいる\n・have gone to 〜 … 〜へ行ってしまった（結果）。今ここにいない\n・He has been to America.（行ったことがある）\n・He has gone to America.（行ってしまって、今いない）\nまったく意味がちがうので、取りちがえないこと。\n\n【have been to のもう一つの意味】「〜へ行ってきたところだ」という完了の意味にもなる。\n・I have just been to the post office.（郵便局へ行ってきたところだ）\n\n【never は否定語】never があれば、not はいらない。I have not never been は誤りである。\n\n【例文】I have never eaten natto.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -2246,7 +2270,8 @@ export const eigoExtra2: Question[] = [
     question: '「あなたは今まで寿司を食べたことがありますか？」を英語にしなさい。',
     answer: 'Have you ever eaten sushi?',
     hint: '現在完了の疑問文に "ever"（今までに）を加えます',
-    explanation: '【解説】\n"ever"（今までに）は現在完了の経験用法の疑問文でよく使われます。"Have you ever eaten sushi?" が正解です。',
+    explanation:
+      '【答え】Have you ever eaten sushi?\n\n【ever の意味と位置】「今までに」。疑問文で使い、have と過去分詞の間に置く。\n・Have you ever eaten sushi?（正しい）\n・Have you eaten ever sushi?（誤り）\n\n【答え方】\n・Yes, I have.（あります）\n・No, I have never.（一度もありません）\n・No, I have not.（ありません）\n・Yes, I have. Once.（1回あります）\n\n【回数の言い方】\n・once（1回）・twice（2回）・three times（3回）・many times（何度も）\n・1回と2回だけ特別な語があり、3回からは数 ＋ times になる\n\n【経験を表す表現】\n・Have you ever 〜?（〜したことがありますか）\n・I have been to 〜（〜へ行ったことがある）\n・I have never 〜（一度も〜ない）\n・This is the first time I have 〜（〜するのは初めてだ）\n\n【sushi に a をつけない理由】料理名は数えられない名詞として扱うことが多い。\n・eat sushi、eat rice、eat bread\n\n【例文】\n・Have you ever seen a koala? — Yes, I have. I saw one at the zoo.\n・Have you ever been abroad?',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -2257,7 +2282,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼は2時間ずっとテレビを見ています」を英語にしなさい。',
     answer: 'He has been watching TV for two hours.',
     hint: '現在完了進行形は "have/has been + -ing" の形です',
-    explanation: '【解説】\n現在完了進行形 "have/has been + -ing" は「（ずっと）～し続けている」を表します。継続している動作を強調します。',
+    explanation:
+      '【答え】He has been watching TV for two hours.\n\n【現在完了進行形】have／has been ＋ ing 形。動作がずっと続いていて、今もしていることを表す。\n\n【現在完了（継続）とのちがい】\n・現在完了 … 状態の継続。live、know、be など状態を表す動詞に使う。He has lived here for two years.\n・現在完了進行形 … 動作の継続。watch、study、play、rain など動作を表す動詞に使う。He has been watching TV for two hours.\n状態は現在完了、動作は現在完了進行形と使い分ける。\n\n【動作が続いている感じが強い】現在完了進行形には「今もまだ続いている」という感じが強く出る。\n・It has been raining since morning.（朝からずっと降っていて、今も降っている）\n\n【進行形にしない動詞】know、like、want、have（持つ）などは進行形にしないので、現在完了進行形にもしない。\n・I have known him for ten years.（正しい）\n・I have been knowing him（誤り）\n\n【for two hours】期間の長さを表す。since なら始まった時点を示す。\n\n【例文】I have been studying English for three hours.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -2279,7 +2305,8 @@ export const eigoExtra2: Question[] = [
     question: '「私はこの町に3回来たことがあります」を英語にしなさい。',
     answer: 'I have been to this town three times.',
     hint: '現在完了の経験用法で "times"（回）を使います',
-    explanation: '【解説】\n"have been to"（～に行ったことがある）は経験を表します。"three times"（3回）のように回数を表す表現と一緒に使います。',
+    explanation:
+      '【答え】I have been to this town three times.\n\n【have been to の意味】「〜へ行ったことがある」。経験を表す。\n\n【回数の言い方】\n・once（1回）・twice（2回）・three times（3回）・four times（4回）・many times（何度も）\n・1回と2回だけ特別な語があり、3回からは数 ＋ times になる\n・回数は文末に置くのがふつうである\n\n【have been to と have gone to】\n・have been to … 行ったことがある。今はここにいる\n・have gone to … 行ってしまった。今ここにいない\nこの文は経験を表しているので have been to を使う。\n\n【現在完了で使えない語】過去の一時点を表す語とは一緒に使えない。\n・yesterday、last week、three days ago、when I was young\n・I have been there yesterday.（誤り）\n・I went there yesterday.（正しい）\n現在完了は今とつながっているので、「いつ」を限定する語と合わない。ここは入試で必ず問われる。\n\n【How many times でたずねる】\n・How many times have you been to Kyoto? — Three times.\n\n【例文】I have read this book twice.',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
