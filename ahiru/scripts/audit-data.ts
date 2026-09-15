@@ -227,6 +227,34 @@ check(
   '【問題集】ヒントが答えそのもの',
   Q.filter((q) => qn(q.answer) && qn(q.hint) && qn(q.answer) === qn(q.hint)).map((q) => q.id),
 );
+// 画面に出る文に、よその国の文字がまぎれこんでいないか。
+//
+// 一括置換用の下書きを書いているとき、ロシア語（замен・высокий）が2度まぎれこんだ。
+// 「日本語の中に英単語が挟まっている」の検査はラテン文字しか見ないので、
+// キリル文字・ハングル・アラビア文字などは素通りしてしまう。
+// 数学のギリシャ文字（α・π・θ）や上付き数字（²・³）は正当に使うので、
+// 「許す文字を並べる」のではなく「受験教材にまず出てこない文字体系」を名指しで弾く。
+const ALIEN_SCRIPT =
+  /[\u0400-\u04ff\u0500-\u052f\u0530-\u058f\u0590-\u05ff\u0600-\u06ff\u0700-\u074f\u0900-\u097f\u0e00-\u0e7f\u1100-\u11ff\u10a0-\u10ff\uac00-\ud7af]/;
+const alienBad: string[] = [];
+for (const q of Q as any[]) {
+  const fields: Array<[string, unknown]> = [
+    ['問題文', q.question], ['答え', q.answer], ['ヒント', q.hint],
+    ['解説', q.explanation], ['覚え方', q.memoryTip], ['ひっかけ', q.pitfall],
+    ['課題文', q.passage],
+  ];
+  for (const [name, v] of fields) {
+    const alien = [...String(v ?? '')].filter((c) => ALIEN_SCRIPT.test(c));
+    if (alien.length) alienBad.push(`${q.id}(${name}:${[...new Set(alien)].join('')})`);
+  }
+  for (const sub of (q.subQuestions ?? []) as any[]) {
+    const t = `${sub.prompt ?? ''}${sub.answer ?? ''}${sub.explanation ?? ''}`;
+    const alien = [...t].filter((c) => ALIEN_SCRIPT.test(c));
+    if (alien.length) alienBad.push(`${q.id}:${sub.label}(${[...new Set(alien)].join('')})`);
+  }
+}
+check('【問題集】画面に出る文によその国の文字がまぎれている', alienBad);
+
 // 画面に出る文にマークダウン記法が混ざっていないか。
 //
 // 解説・ヒント・問題文・答えはすべて素の <Text> で描いているので、
