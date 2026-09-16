@@ -357,7 +357,7 @@ export const figuresGradeE4Sansu: Record<string, Figure> = {
     ],
   },
 
-  // 縦8cm・横15cmの長方形。面積 = 8×15 = 120c㎡。
+  // 縦8cm・横15cmの長方形。面積 = 8×15 = 120cm²。
   grade_e4_sansu_31: {
     kind: 'polygon',
     points: [
@@ -368,10 +368,10 @@ export const figuresGradeE4Sansu: Record<string, Figure> = {
     ],
     sideLabels: ['15cm', '8cm', null, null],
     rightAngles: [0, 1, 2, 3],
-    caption: '面積 = 8 × 15 = 120c㎡',
+    caption: '面積 = 8 × 15 = 120cm²',
   },
 
-  // 1辺12cmの正方形。面積 = 12×12 = 144c㎡。
+  // 1辺12cmの正方形。面積 = 12×12 = 144cm²。
   grade_e4_sansu_32: {
     kind: 'polygon',
     points: [
@@ -382,10 +382,10 @@ export const figuresGradeE4Sansu: Record<string, Figure> = {
     ],
     sideLabels: ['12cm', '12cm', null, null],
     rightAngles: [0, 1, 2, 3],
-    caption: '面積 = 12 × 12 = 144c㎡',
+    caption: '面積 = 12 × 12 = 144cm²',
   },
 
-  // 面積96c㎡・縦8cmの長方形。横の長さを求める(96÷8=12cm)。
+  // 面積96cm²・縦8cmの長方形。横の長さを求める(96÷8=12cm)。
   grade_e4_sansu_33: {
     kind: 'polygon',
     points: [
@@ -396,7 +396,7 @@ export const figuresGradeE4Sansu: Record<string, Figure> = {
     ],
     sideLabels: ['?', '8cm', null, null],
     rightAngles: [0, 1, 2, 3],
-    caption: '面積96c㎡、縦8cm → 横 = 96 ÷ 8 = 12cm',
+    caption: '面積96cm²、縦8cm → 横 = 96 ÷ 8 = 12cm',
   },
 
   // 10m×14mの土地から4m×6mを切り取ったL字形。残りの面積 = 116㎡。
@@ -515,31 +515,31 @@ export const figuresGradeE4Sansu: Record<string, Figure> = {
     ],
   },
 
-  // 1辺4cmの立方体。体積 = 4×4×4 = 64c㎥。
+  // 1辺4cmの立方体。体積 = 4×4×4 = 64cm³。
   grade_e4_sansu_46: {
     kind: 'solid',
     shape: 'cube',
     labels: { width: '4cm', depth: '4cm', height: '4cm' },
-    caption: '体積 = 4 × 4 × 4 = 64c㎥',
+    caption: '体積 = 4 × 4 × 4 = 64cm³',
   },
 
-  // たて3cm・横5cm・高さ6cmの直方体。体積 = 90c㎥。
+  // たて3cm・横5cm・高さ6cmの直方体。体積 = 90cm³。
   grade_e4_sansu_47: {
     kind: 'solid',
     shape: 'cuboid',
     labels: { width: '5cm', depth: '3cm', height: '6cm' },
-    caption: '体積 = 3 × 5 × 6 = 90c㎥',
+    caption: '体積 = 3 × 5 × 6 = 90cm³',
   },
 
-  // 体積120c㎥、たて4cm、横5cmの直方体。高さを求める(6cm)。
+  // 体積120cm³、たて4cm、横5cmの直方体。高さを求める(6cm)。
   grade_e4_sansu_48: {
     kind: 'solid',
     shape: 'cuboid',
     labels: { width: '5cm', depth: '4cm', height: '?' },
-    caption: '体積120c㎥ ÷ 底面積(4×5=20c㎡) = 高さ6cm',
+    caption: '体積120cm³ ÷ 底面積(4×5=20cm²) = 高さ6cm',
     steps: [
       'たて×横の面（底面）の面積を求める',
-      '4 × 5 = 20c㎡',
+      '4 × 5 = 20cm²',
       '体積＝底面積×高さなので、高さ＝体積÷底面積',
       '120 ÷ 20 = 6',
       'よって高さは6cm',

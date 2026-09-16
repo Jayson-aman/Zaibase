@@ -219,7 +219,7 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
     kind: 'circle',
     radiusLabel: '9cm',
     showCenter: true,
-    caption: '円の面積＝半径×半径×3.14＝9×9×3.14＝254.34c㎡',
+    caption: '円の面積＝半径×半径×3.14＝9×9×3.14＝254.34cm²',
   },
 
   // s137: おうぎ形の弧の長さ（半径6cm、中心角120°）
@@ -235,7 +235,7 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
     kind: 'circle',
     radiusLabel: '8cm',
     sector: { from: 0, to: 45, label: '45°' },
-    caption: '半径8cm、中心角45°のおうぎ形の面積＝8×8×3.14×45/360＝25.12c㎡',
+    caption: '半径8cm、中心角45°のおうぎ形の面積＝8×8×3.14×45/360＝25.12cm²',
   },
 
   // s139: 半円の周りの長さ（半径4cm）
@@ -251,7 +251,7 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
     kind: 'circle',
     radiusLabel: '4cm',
     sector: { from: 0, to: 180, label: '半円' },
-    caption: '長方形(8cm×5cm)の上に直径8cmの半円をのせた複合図形。半円部分＝4×4×3.14÷2＝25.12c㎡。長方形40c㎡と合わせて合計65.12c㎡',
+    caption: '長方形(8cm×5cm)の上に直径8cmの半円をのせた複合図形。半円部分＝4×4×3.14÷2＝25.12cm²。長方形40cm²と合わせて合計65.12cm²',
   },
 
   // ===== 4. 三角形の面積の公式と応用 =====
@@ -267,12 +267,12 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
     sideLabels: ['底辺8cm', null, null],
     heights: [{ from: 2, toEdge: [0, 1], label: '高さ5cm' }],
     fill: true,
-    caption: '三角形の面積＝底辺×高さ÷2＝8×5÷2＝20c㎡',
+    caption: '三角形の面積＝底辺×高さ÷2＝8×5÷2＝20cm²',
     steps: [
       "頂点を順に B・C・A と結んだ三角形。まず形と頂点の名前をおさえる。",
       "辺に書かれている長さは 底辺8cm。どの辺のことかを図で確かめる。",
       "点線は高さ。面積を出すときは、底辺に垂直な長さを使う。",
-      "三角形の面積＝底辺×高さ÷2＝8×5÷2＝20c㎡",
+      "三角形の面積＝底辺×高さ÷2＝8×5÷2＝20cm²",
     ],
     buildSteps: 3,
   },
@@ -287,12 +287,12 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
     ],
     sideLabels: ['AB＝5cm', '底辺3cm', null],
     heights: [{ from: 0, toEdge: [1, 2], label: '高さ3cm' }],
-    caption: '頂点Aは底辺BCの外側にあるが、直線BCを延長して垂線を下ろせば高さが求められる。面積＝3×3÷2＝4.5c㎡（辺AB＝5cmは高さではない）',
+    caption: '頂点Aは底辺BCの外側にあるが、直線BCを延長して垂線を下ろせば高さが求められる。面積＝3×3÷2＝4.5cm²（辺AB＝5cmは高さではない）',
     steps: [
       "頂点を順に A・B・C と結んだ三角形。まず形と頂点の名前をおさえる。",
       "辺に書かれている長さは AB＝5cm、底辺3cm。どの辺のことかを図で確かめる。",
       "点線は高さ。面積を出すときは、底辺に垂直な長さを使う。",
-      "頂点Aは底辺BCの外側にあるが、直線BCを延長して垂線を下ろせば高さが求められる。面積＝3×3÷2＝4.5c㎡（辺AB＝5cmは高さではない）",
+      "頂点Aは底辺BCの外側にあるが、直線BCを延長して垂線を下ろせば高さが求められる。面積＝3×3÷2＝4.5cm²（辺AB＝5cmは高さではない）",
     ],
     buildSteps: 3,
   },
@@ -331,12 +331,12 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
     sideLabels: ['底辺6cm', null, null],
     heights: [{ from: 2, toEdge: [0, 1], label: '高さ4cm' }],
     fill: true,
-    caption: '底辺AB＝7−1＝6cm、高さ＝5−1＝4cm（Cのy座標とABのy座標の差）。面積＝6×4÷2＝12c㎡',
+    caption: '底辺AB＝7−1＝6cm、高さ＝5−1＝4cm（Cのy座標とABのy座標の差）。面積＝6×4÷2＝12cm²',
     steps: [
       "頂点を順に A・B・C と結んだ三角形。まず形と頂点の名前をおさえる。",
       "辺に書かれている長さは 底辺6cm。どの辺のことかを図で確かめる。",
       "点線は高さ。面積を出すときは、底辺に垂直な長さを使う。",
-      "底辺AB＝7−1＝6cm、高さ＝5−1＝4cm（Cのy座標とABのy座標の差）。面積＝6×4÷2＝12c㎡",
+      "底辺AB＝7−1＝6cm、高さ＝5−1＝4cm（Cのy座標とABのy座標の差）。面積＝6×4÷2＝12cm²",
     ],
     buildSteps: 3,
   },
@@ -355,12 +355,12 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
     sideLabels: ['底辺6cm', null, null, '5cm'],
     heights: [{ from: 3, toEdge: [0, 1], label: '高さ4cm' }],
     fill: true,
-    caption: '平行四辺形の面積＝底辺×高さ＝6×4＝24c㎡（斜辺AD＝5cmは高さではない）',
+    caption: '平行四辺形の面積＝底辺×高さ＝6×4＝24cm²（斜辺AD＝5cmは高さではない）',
     steps: [
       "頂点を順に A・B・C・D と結んだ四角形。まず形と頂点の名前をおさえる。",
       "辺に書かれている長さは 底辺6cm、5cm。どの辺のことかを図で確かめる。",
       "点線は高さ。面積を出すときは、底辺に垂直な長さを使う。",
-      "平行四辺形の面積＝底辺×高さ＝6×4＝24c㎡（斜辺AD＝5cmは高さではない）",
+      "平行四辺形の面積＝底辺×高さ＝6×4＝24cm²（斜辺AD＝5cmは高さではない）",
     ],
     buildSteps: 3,
   },
@@ -381,7 +381,7 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
     // 図の上で見せるために、この線が要る。
     diagonals: [[0, 2]],
     fill: true,
-    caption: '台形の面積＝(上底+下底)×高さ÷2＝(5+9)×4÷2＝28c㎡',
+    caption: '台形の面積＝(上底+下底)×高さ÷2＝(5+9)×4÷2＝28cm²',
     // 公式をただ当てはめるのではなく、なぜ (上底＋下底) になるのかを
     // 対角線で2つの三角形に分けて示す。
     steps: [
@@ -412,7 +412,7 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
     ],
     equalSides: [[0, 1, 2, 3]],
     fill: true,
-    caption: 'ひし形の面積＝対角線×対角線÷2＝10×6÷2＝30c㎡（対角線AC＝10cm、対角線BD＝6cm）',
+    caption: 'ひし形の面積＝対角線×対角線÷2＝10×6÷2＝30cm²（対角線AC＝10cm、対角線BD＝6cm）',
     // 公式をただ当てはめるのではなく、なぜ「対角線×対角線÷2」なのかを
     // 「ひし形をすっぽり囲む長方形のちょうど半分」という見方で説明する。
     // 台形を対角線で2つの三角形に分けた考え方と、同じ道すじ。
@@ -443,7 +443,7 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
       [1, 3],
     ],
     fill: true,
-    caption: '対角線が垂直に交わる四角形（凧形）は、ひし形と同じ「対角線×対角線÷2」の公式が使える：対角線AC＝12cm、対角線BD＝7cmより12×7÷2＝42c㎡',
+    caption: '対角線が垂直に交わる四角形（凧形）は、ひし形と同じ「対角線×対角線÷2」の公式が使える：対角線AC＝12cm、対角線BD＝7cmより12×7÷2＝42cm²',
     // ひし形と同じ「囲む長方形の半分」で説明する。
     // 大事なのは、4辺が等しいことではなく、対角線が垂直に交わることが
     // 公式の条件だという点。凧形でも同じ式が使えるのはそのため。
@@ -479,12 +479,12 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
       { x: 3, y: 5, label: 'A' },
       { x: 6, y: 5, label: "A'" },
     ],
-    caption: '頂点をBCに平行な直線上でAからA′へ動かしても、底辺BC(8cm)と高さ(5cm)は変わらないので、△ABCと△A′BCの面積はどちらも8×5÷2＝20c㎡で等しい',
+    caption: '頂点をBCに平行な直線上でAからA′へ動かしても、底辺BC(8cm)と高さ(5cm)は変わらないので、△ABCと△A′BCの面積はどちらも8×5÷2＝20cm²で等しい',
     steps: [
       "よこじくが x、たてじくが y。点の位置は（x, y）の順で読む。",
       "図の点は B、C、A。",
       "交点を求めるときは、2つの式を連立方程式として解く。",
-      "頂点をBCに平行な直線上でAからA′へ動かしても、底辺BC(8cm)と高さ(5cm)は変わらないので、△ABCと△A′BCの面積はどちらも8×5÷2＝20c㎡で等しい",
+      "頂点をBCに平行な直線上でAからA′へ動かしても、底辺BC(8cm)と高さ(5cm)は変わらないので、△ABCと△A′BCの面積はどちらも8×5÷2＝20cm²で等しい",
     ],
     buildSteps: 3,
   },
@@ -504,12 +504,12 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
       { from: 3, toEdge: [0, 2], label: '高さ5cm' },
     ],
     fill: true,
-    caption: '対角線ACで四角形ABCDを△ABCと△ACDに分ける。共通の底辺AC＝9cmに対し高さはそれぞれ2cmと5cm。△ABC＝9×2÷2＝9c㎡、△ACD＝9×5÷2＝22.5c㎡、合計31.5c㎡',
+    caption: '対角線ACで四角形ABCDを△ABCと△ACDに分ける。共通の底辺AC＝9cmに対し高さはそれぞれ2cmと5cm。△ABC＝9×2÷2＝9cm²、△ACD＝9×5÷2＝22.5cm²、合計31.5cm²',
     steps: [
       "頂点を順に A・B・C・D と結んだ四角形。まず形と頂点の名前をおさえる。",
       "点線は高さ。面積を出すときは、底辺に垂直な長さを使う。",
       "対角線を引くと、三角形に分けて考えられる。",
-      "対角線ACで四角形ABCDを△ABCと△ACDに分ける。共通の底辺AC＝9cmに対し高さはそれぞれ2cmと5cm。△ABC＝9×2÷2＝9c㎡、△ACD＝9×5÷2＝22.5c㎡、合計31.5c㎡",
+      "対角線ACで四角形ABCDを△ABCと△ACDに分ける。共通の底辺AC＝9cmに対し高さはそれぞれ2cmと5cm。△ABC＝9×2÷2＝9cm²、△ACD＝9×5÷2＝22.5cm²、合計31.5cm²",
     ],
     buildSteps: 3,
   },
@@ -528,12 +528,12 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
     rightAngles: [0, 1, 2, 3, 4, 5],
     sideLabels: ['10cm', null, '4cm', '3cm', null, '8cm'],
     fill: true,
-    caption: 'L字型の土地は、大きな長方形(10cm×8cm)から欠けた部分の長方形(4cm×3cm)を引いて求める：10×8－4×3＝80－12＝68c㎡',
+    caption: 'L字型の土地は、大きな長方形(10cm×8cm)から欠けた部分の長方形(4cm×3cm)を引いて求める：10×8－4×3＝80－12＝68cm²',
     steps: [
       "図にある点は A・B・C・D・E・F。どの点がどこにあるかを最初におさえる。",
       "辺に書かれている長さは 10cm、4cm、3cm、8cm。どの辺のことかを図で確かめる。",
       "A・B・C・D・E・F のところが直角。直角があれば三平方の定理や面積の式が使える。",
-      "L字型の土地は、大きな長方形(10cm×8cm)から欠けた部分の長方形(4cm×3cm)を引いて求める：10×8－4×3＝80－12＝68c㎡",
+      "L字型の土地は、大きな長方形(10cm×8cm)から欠けた部分の長方形(4cm×3cm)を引いて求める：10×8－4×3＝80－12＝68cm²",
     ],
     buildSteps: 3,
   },
@@ -562,12 +562,12 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
       { x: 0, y: 5, label: 'D' },
       { x: 13.2, y: 5, label: 'E' },
     ],
-    caption: '対角線ACに平行な直線をBから引き、DCの延長との交点をEとすると、△ADEの面積は四角形ABCDの面積と等しい（等積変形）。四角形ABCD＝33c㎡ → △ADE＝13.2×5÷2＝33c㎡',
+    caption: '対角線ACに平行な直線をBから引き、DCの延長との交点をEとすると、△ADEの面積は四角形ABCDの面積と等しい（等積変形）。四角形ABCD＝33cm² → △ADE＝13.2×5÷2＝33cm²',
     steps: [
       "よこじくが x、たてじくが y。点の位置は（x, y）の順で読む。",
       "図の点は A、B、C。",
       "ぬられた部分の面積を出すときは、じくに平行な線を底辺にとると計算が楽になる。",
-      "対角線ACに平行な直線をBから引き、DCの延長との交点をEとすると、△ADEの面積は四角形ABCDの面積と等しい（等積変形）。四角形ABCD＝33c㎡ → △ADE＝13.2×5÷2＝33c㎡",
+      "対角線ACに平行な直線をBから引き、DCの延長との交点をEとすると、△ADEの面積は四角形ABCDの面積と等しい（等積変形）。四角形ABCD＝33cm² → △ADE＝13.2×5÷2＝33cm²",
     ],
     buildSteps: 3,
   },
@@ -594,12 +594,12 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
       { x: 1, y: 5, label: 'D' },
       { x: 16, y: 0, label: 'E' },
     ],
-    caption: '台形ABCD(上底6cm・下底10cm・高さ5cm)の底辺ABを、上底の長さ(6cm)だけ延長した点をEとすると、△ADEの面積は台形と等しい：(6+10)×5÷2＝16×5÷2＝40c㎡',
+    caption: '台形ABCD(上底6cm・下底10cm・高さ5cm)の底辺ABを、上底の長さ(6cm)だけ延長した点をEとすると、△ADEの面積は台形と等しい：(6+10)×5÷2＝16×5÷2＝40cm²',
     steps: [
       "よこじくが x、たてじくが y。点の位置は（x, y）の順で読む。",
       "図の点は A、B、C。",
       "ぬられた部分の面積を出すときは、じくに平行な線を底辺にとると計算が楽になる。",
-      "台形ABCD(上底6cm・下底10cm・高さ5cm)の底辺ABを、上底の長さ(6cm)だけ延長した点をEとすると、△ADEの面積は台形と等しい：(6+10)×5÷2＝16×5÷2＝40c㎡",
+      "台形ABCD(上底6cm・下底10cm・高さ5cm)の底辺ABを、上底の長さ(6cm)だけ延長した点をEとすると、△ADEの面積は台形と等しい：(6+10)×5÷2＝16×5÷2＝40cm²",
     ],
     buildSteps: 3,
   },
@@ -685,12 +685,12 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
       { x: -1.2, y: 2, label: 'D' },
       { x: 2.4, y: 2, label: 'E' },
     ],
-    caption: '△ADE∽△ABCで相似比AD:AB＝3:5→面積比＝3²:5²＝9:25。△ADEが27c㎡のとき、△ABC＝27×25/9＝75c㎡',
+    caption: '△ADE∽△ABCで相似比AD:AB＝3:5→面積比＝3²:5²＝9:25。△ADEが27cm²のとき、△ABC＝27×25/9＝75cm²',
     steps: [
       "よこじくが x、たてじくが y。点の位置は（x, y）の順で読む。",
       "図の点は A、B、C。",
       "ぬられた部分の面積を出すときは、じくに平行な線を底辺にとると計算が楽になる。",
-      "△ADE∽△ABCで相似比AD:AB＝3:5→面積比＝3²:5²＝9:25。△ADEが27c㎡のとき、△ABC＝27×25/9＝75c㎡",
+      "△ADE∽△ABCで相似比AD:AB＝3:5→面積比＝3²:5²＝9:25。△ADEが27cm²のとき、△ABC＝27×25/9＝75cm²",
     ],
     buildSteps: 3,
   },
@@ -794,12 +794,12 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
       { x: -2, y: 3, label: 'D' },
       { x: 2, y: 3, label: 'E' },
     ],
-    caption: 'D、EはそれぞれAB、ACの中点。中点連結定理よりDE//BC、DE＝BC÷2（相似比1:2）。△ADEの面積は△ABCの(1/2)²＝1/4。△ABC＝48c㎡のとき△ADE＝12c㎡、台形DBCE＝48−12＝36c㎡で、△ADE:台形DBCE＝1:3',
+    caption: 'D、EはそれぞれAB、ACの中点。中点連結定理よりDE//BC、DE＝BC÷2（相似比1:2）。△ADEの面積は△ABCの(1/2)²＝1/4。△ABC＝48cm²のとき△ADE＝12cm²、台形DBCE＝48−12＝36cm²で、△ADE:台形DBCE＝1:3',
     steps: [
       "よこじくが x、たてじくが y。点の位置は（x, y）の順で読む。",
       "図の点は A、B、C。",
       "ぬられた部分の面積を出すときは、じくに平行な線を底辺にとると計算が楽になる。",
-      "D、EはそれぞれAB、ACの中点。中点連結定理よりDE//BC、DE＝BC÷2（相似比1:2）。△ADEの面積は△ABCの(1/2)²＝1/4。△ABC＝48c㎡のとき△ADE＝12c㎡、台形DBCE＝48−12＝36c㎡で、△ADE:台形DBCE＝1:3",
+      "D、EはそれぞれAB、ACの中点。中点連結定理よりDE//BC、DE＝BC÷2（相似比1:2）。△ADEの面積は△ABCの(1/2)²＝1/4。△ABC＝48cm²のとき△ADE＝12cm²、台形DBCE＝48−12＝36cm²で、△ADE:台形DBCE＝1:3",
     ],
     buildSteps: 3,
   },
