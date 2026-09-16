@@ -1580,4 +1580,99 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
     ],
     buildSteps: 2,
   },
+
+  // s157：台形ABCD（AB∥DC、AB=10、DC=4）の対角線の交点O。錯角で △OAB∽△OCD、相似比5:2
+  sext04_s157_naze: {
+    kind: 'polygon',
+    points: [
+      { x: 0, y: 0, label: 'A' },
+      { x: 10, y: 0, label: 'B' },
+      { x: 7, y: 4, label: 'C' },
+      { x: 3, y: 4, label: 'D' },
+    ],
+    sideLabels: ['下底AB 10', null, '上底DC 4', null],
+    diagonals: [[0, 2], [1, 3]],
+    caption: '台形 ABCD（AB ∥ DC）の対角線 AC・BD の交点を O とする。錯角で角 OAB＝角 OCD、角 OBA＝角 ODC なので △OAB ∽ △OCD（砂時計型）。相似比は AB:DC＝10:4＝5:2 で、OA:OC＝OB:OD＝5:2。△OAB と △OAD は A を共有し底辺が直線 BD 上なので面積比は OB:OD＝5:2（2 乗しない）。4 つの三角形の面積比は 25:10:10:4。',
+    steps: [
+      '台形 ABCD。下底 AB＝10、上底 DC＝4 で平行。対角線 AC と BD を引き、交点を O とする。',
+      'AB ∥ DC なので、AC を横断線と見ると角 OAB と角 OCD は錯角で等しい。BD を横断線と見ると角 OBA と角 ODC も等しい。',
+      '2 組の角が等しいので △OAB ∽ △OCD。対応は A↔C、B↔D。相似比は AB:DC＝5:2 なので OA:OC＝OB:OD＝5:2。大きい三角形の辺 OA が長い。',
+      '△OAB と △OAD は相似ではなく、頂点 A を共有して底辺 OB・OD が同じ直線上。高さ共通なので面積比は OB:OD＝5:2。相似な △OAB:△OCD は 25:4。',
+      '検算：4 つの三角形は △OAB:△OAD:△OBC:△OCD＝25:10:10:4。左右の △OAD と △OBC は面積が等しい。高さ 7 の台形（面積 49）なら 25・10・10・4 が実際に出る。',
+    ],
+    buildSteps: 3,
+  },
+
+  // s158：線分ACとBDがOで交わり AB∥CD。対頂角＋錯角で △OAB∽△OCD、相似比 AB:CD=4:6
+  sext04_s158_naze: {
+    kind: 'polygon',
+    points: [
+      { x: 0, y: 4, label: 'A' },
+      { x: 4, y: 4, label: 'B' },
+      { x: -1, y: -1, label: 'D' },
+      { x: 5, y: -1, label: 'C' },
+    ],
+    sideLabels: ['AB 4cm', null, 'CD 6cm', null],
+    caption: '線分 AC と BD が O で交わり、AB ∥ CD。対頂角 角 AOB＝角 COD はいつでも等しいが、それだけでは 1 組。AB ∥ CD の錯角 角 OAB＝角 OCD で 2 組そろって △OAB ∽ △OCD。相似比 AB:CD＝4:6＝2:3 で OA:OC＝OB:OD＝2:3。OA＝3 なら OC＝4.5。平行でなければ相似は言えない。',
+    steps: [
+      '線分 AC と線分 BD が点 O で交わる砂時計の形。上の AB と下の CD は平行。',
+      '角 AOB と角 COD は対頂角で、平行に関係なく等しい。でも相似には等しい角が 2 組必要で、これは 1 組だけ。',
+      'AB ∥ CD なので、AC を横断線と見ると角 OAB と角 OCD は錯角で等しい。2 組そろって △OAB ∽ △OCD。対応は A↔C、B↔D。',
+      '相似比は AB:CD＝4:6＝2:3。OA:OC＝2:3 なので OA＝3cm なら OC＝3×3/2＝4.5cm。大きい三角形の辺 OC が長い。3×2/3＝2 は比を逆にかけた誤り。',
+      '検算：OA:OC＝3:4.5＝2:3＝AB:CD で一致。OB:OD も 2:3。平行の印が無い図では対頂角しか無く、相似は使えない。',
+    ],
+    buildSteps: 1,
+  },
+
+  // s159：同じ時刻の影。棒2mの影3m、木の影15m。相似な直角三角形なので 木の高さ＝15×2/3＝10m
+  sext04_s159_naze: {
+    kind: 'polygon',
+    points: [
+      { x: 5, y: 0, label: '' },
+      { x: 20, y: 0, label: '' },
+      { x: 5, y: 10, label: '木のてっぺん' },
+    ],
+    sideLabels: ['木の影15m', '光', '木の高さ10m'],
+    rightAngles: [0],
+    segments: [
+      { from: { x: 0, y: 0 }, to: { x: 0, y: 2 }, label: '棒2m' },
+      { from: { x: 0, y: 0 }, to: { x: 3, y: 0 }, label: '影3m' },
+      { from: { x: 0, y: 2 }, to: { x: 3, y: 0 }, label: '光', dashed: true },
+    ],
+    caption: '同じ時刻の太陽光は平行なので、棒（高さ 2m・影 3m）の直角三角形と木（影 15m）の直角三角形は、直角と光の角が等しく相似。高さ:影 の比がどちらも同じなので 2:3＝x:15、x＝10m。高さどうし・影どうしを対応させ、cm と m はそろえてから比を作る。',
+    steps: [
+      '左の小さい直角三角形が棒（高さ 2m）と影（3m）。右の大きい直角三角形が木とその影（15m）。',
+      '太陽は遠いので光は平行。光の線が地面と作る角は棒でも木でも同じ。直角ももちろん同じ。2 組の角が等しいので 2 つの三角形は相似。',
+      '相似なら対応する辺の比が同じ。棒の高さ:棒の影 ＝ 木の高さ:木の影 → 2:3＝x:15。',
+      '外項の積 ＝ 内項の積 で 3x＝30、x＝10m。影は高さの 1.5 倍という関係がどの物でも同じ、と考えてもよい（15÷1.5＝10）。',
+      '検算：10:15＝2:3 で棒の比に戻る。影のほうが長いので木は影より低い（10 ＜ 15）。80cm の棒なら 0.8m にそろえてから比を作る（600m にはならない）。',
+    ],
+    buildSteps: 3,
+  },
+
+  // s160：△ABCの辺AB・ACの中点D・E。DE∥BC、DE＝BC÷2、面積は1:4。3辺の中点で合同な4つに分かれる
+  sext04_s160_naze: {
+    kind: 'polygon',
+    points: [
+      { x: 4, y: 6, label: 'A' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 8, y: 0, label: 'C' },
+    ],
+    sideLabels: [null, 'BC', null],
+    equalSides: [[0, 2]],
+    segments: [
+      { from: { x: 2, y: 3 }, to: { x: 6, y: 3 }, label: 'DE＝BC÷2（平行）' },
+      { from: { x: 2, y: 3 }, to: { x: 4, y: 0 }, dashed: true },
+      { from: { x: 6, y: 3 }, to: { x: 4, y: 0 }, dashed: true },
+    ],
+    caption: 'D・E が AB・AC の中点なら、AD:AB＝AE:AC＝1:2 で △ADE ∽ △ABC（相似比 1:2）。だから DE ∥ BC、DE＝BC÷2、面積は 1²:2²＝1:4。BC の中点とも結ぶと（点線）合同な 4 つの三角形に分かれ、△ADE は 1 つ、台形 DBCE は 3 つ。△ADE:台形＝1:3。',
+    steps: [
+      '△ABC。辺 AB の中点 D と辺 AC の中点 E を結ぶ。',
+      'AD:AB＝1:2、AE:AC＝1:2 で、はさむ角 A が共通。△ADE ∽ △ABC（相似比 1:2）。だから DE ∥ BC、DE は BC の半分。',
+      '面積比は相似比の 2 乗で 1:4。△ABC を 4 とすると △ADE は 1。台形 DBCE は残りの 4−1＝3。',
+      'BC の中点も結ぶ（点線）と、合同な小さい三角形 4 つに分かれる。△ADE が 1 つ、台形が 3 つで 1:3 が目で見える。',
+      '検算：△ABC＝48 なら △ADE＝12、台形＝36、12＋36＝48。長さの比 1:2 をそのまま面積に使った 1:2 や 24 は誤り。',
+    ],
+    buildSteps: 3,
+  },
 };
