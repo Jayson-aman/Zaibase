@@ -92,10 +92,10 @@ export const schoolKokoAzabu: Question[] = [
   {
     id: 'azabu_sansu_08',
     subject: 'sansu',
-    question: '1辺の長さがxcmの正方形がある。縦を3cm長く、横を2cm短くしてできる長方形の面積は、元の正方形の面積より8㎠大きい。xの値を求めなさい。ただし、x>2とする。',
+    question: '1辺の長さがxcmの正方形がある。縦を3cm長く、横を2cm短くしてできる長方形の面積は、元の正方形の面積より8cm²大きい。xの値を求めなさい。ただし、x>2とする。',
     answer: 'x=14(cm)',
     hint: '新しい長方形の面積を(x+3)(x-2)と表し、元の正方形の面積 x² と比較する式を作る',
-    explanation: '【解説】\n新しい長方形の面積は (x+3)(x-2)=x²+x-6。\nこれが元の正方形の面積 x² より8㎠大きいので、\nx²+x-6=x²+8\nx-6=8\nx=14\nx=14は x>2 を満たすので適する。',
+    explanation: '【解説】\n新しい長方形の面積は (x+3)(x-2)=x²+x-6。\nこれが元の正方形の面積 x² より8cm²大きいので、\nx²+x-6=x²+8\nx-6=8\nx=14\nx=14は x>2 を満たすので適する。',
     difficulty: 'advanced',
     course: 'koko-azabu',
     examType: 'koko',

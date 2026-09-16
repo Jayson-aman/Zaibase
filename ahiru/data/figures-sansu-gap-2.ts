@@ -606,12 +606,12 @@ export const figuresSansuGap2: Record<string, Figure> = {
     shape: 'cylinder',
     labels: { radius: '3cm', height: '10cm' },
   },
-  // 底面が1辺6cmの正三角形（面積15.6㎠は問題文で与えられている）、高さ10cmの三角柱。体積は解答。
+  // 底面が1辺6cmの正三角形（面積15.6cm²は問題文で与えられている）、高さ10cmの三角柱。体積は解答。
   kiso_sansu_055: {
     kind: 'solid',
     shape: 'triangularPrism',
     labels: { width: '6cm', height: '10cm' },
-    caption: '底面は1辺6cmの正三角形（面積15.6㎠が問題文で与えられている）。高さ10cm。体積は解答。',
+    caption: '底面は1辺6cmの正三角形（面積15.6cm²が問題文で与えられている）。高さ10cm。体積は解答。',
   },
   // 底面の半径4cm、高さ6cmの円柱。表面積は解答。
   kiso_sansu_056: {
