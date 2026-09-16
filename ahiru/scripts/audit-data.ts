@@ -265,16 +265,23 @@ const qThin: string[] = [];
 const qShort: string[] = [];
 for (const q of Q) {
   const e = explanationText(q);
-  const words = e.replace(/[0-9０-９＋－×÷＝=()（）。、,.\s+\-*/^²³°%a-zA-Z]/g, '');
   // ⚠️記述式は「模範解答」そのものが解説にあたり、小問には小問ごとの解説がある。
   //   解説の欄だけを測ると、実際は十分に説明されている問題まで薄いと数えてしまう。
   //   画面に出る文章の総量（解説＋長い模範解答＋小問の解説）で測る。
-  const answerLen = String(q.answer ?? '').length;
-  const subLen = ((q.subQuestions ?? []) as any[]).reduce(
-    (a, sub) => a + String(sub.explanation ?? '').length, 0);
-  const shown = e.length + (answerLen > 60 ? answerLen : 0) + subLen;
+  //
+  // ⚠️2026/9/16：この直し方は「80字以下」の検査だけに入っていて、
+  //   「理由まで書けていない」のほうは解説の欄しか見ていなかった。
+  //   そのため、問題文が「なぜ〜か説明しなさい」で**答えの欄に理由が全部書いてある**
+  //   記述問題（wcr_002 など）まで「理由が書けていない」と数えていた。
+  //   同じ直しは、同じ材料を測るすべての検査に当てること。
+  const answer = String(q.answer ?? '');
+  const subText = ((q.subQuestions ?? []) as any[])
+    .map((sub) => String(sub.explanation ?? '')).join('\n');
+  const shownText = `${e}\n${answer.length > 60 ? answer : ''}\n${subText}`;
+  const shown = e.length + (answer.length > 60 ? answer.length : 0) + subText.length;
+  const words = shownText.replace(/[0-9０-９＋－×÷＝=()（）。、,.\s+\-*/^²³°%a-zA-Z]/g, '');
   if (shown <= 80) qShort.push(`${q.id}(${shown}字)`);
-  if (!Q_WHY.test(e) || words.length < 12) qThin.push(`${q.subject}/${q.id}`);
+  if (!Q_WHY.test(shownText) || words.length < 12) qThin.push(`${q.subject}/${q.id}`);
 }
 // ヒントが答えそのものになっていないか。
 // これがあると、考える前に答えが見えてしまい、ヒントの意味がなくなる。
@@ -462,6 +469,26 @@ const latexBad: string[] = [];
 for (const [id, t] of jpItems)
   for (const m of t.matchAll(LATEX)) latexBad.push(`${id}「${m[0]}」`);
 check('【問題集】画面に出る文に数式の書き方（LaTeX）が残っている', latexBad);
+
+// 自社のサービス名や、よそのプロダクトの話が教材にまぎれていないか。
+//
+// 2026/9/16、ユーザーから「これは中学高校受験のためのものなので、
+// 建設や官公庁の話とは切り離してほしい」と言われて調べた。
+// 国語の敬語の単元に「Zaibase の山田と申します。」という例文があり、
+// **受験教材の中に自社サービス名が出ていた**。
+// 敬語の例文に会社名を出す必要はまったくなく、学校名で十分である。
+//
+// ahiru は中学受験・高校受験の教材であって、Zaibase建設や法律相談とは別のもの。
+// 教材の中に自社名・決済サービス名・他プロダクトの話を書かないこと。
+//
+// ⚠️ 「建設」「工事」という語そのものは弾かない。社会科では建設業が
+//   第二次産業の例として正当に出てくる（産業別人口の問題など）。
+//   弾くのは固有名詞だけにする。
+const OWN_BRAND = /Zaibase|ザイベース|zaisai|ahiru（|RevenueCat|Stripe|Firebase|Vercel|zaibase\.group/gi;
+const brandBad: string[] = [];
+for (const [id, t] of jpItems)
+  for (const m of t.matchAll(OWN_BRAND)) brandBad.push(`${id}「${m[0]}」`);
+check('【問題集・単元】教材に自社サービス名が出ている', brandBad);
 
 
 // 学年別の問題セットに、その学年より上で習う内容が入っていないか。
