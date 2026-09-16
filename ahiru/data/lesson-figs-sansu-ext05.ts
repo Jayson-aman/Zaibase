@@ -1542,4 +1542,29 @@ export const lessonFigsSansuExt05: Record<string, Figure> = {
     ],
     buildSteps: 3,
   },
+
+  // s194：AD:DB=2:3、DE∥BC、FはBCの中点。△ADE=8（相似）、△DBC=30（底辺の比）、△DBF=15（中点で半分）
+  sext05_s194_naze: {
+    kind: 'polygon',
+    points: [
+      { x: 6, y: 10, label: 'A' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 15, y: 0, label: 'C' },
+    ],
+    sideLabels: [null, 'BC（Fは中点）', null],
+    segments: [
+      { from: { x: 3.6, y: 6 }, to: { x: 9.6, y: 6 }, label: 'DE∥BC（△ADE 8）' },
+      { from: { x: 3.6, y: 6 }, to: { x: 15, y: 0 }, label: 'DC（△DBC 30）', dashed: true },
+      { from: { x: 3.6, y: 6 }, to: { x: 7.5, y: 0 }, label: 'DF（△DBF 15）', dashed: true },
+    ],
+    caption: '△ABC＝50cm²。AD:DB＝2:3 の D を通り BC に平行な DE で、△ADE ∽ △ABC（相似比 2:5、面積比 4:25）→ △ADE＝8。△ADC と △DBC は頂点 C からの高さが共通で面積比 AD:DB＝2:3 → △DBC＝30。F は BC の中点なので △DBF＝30÷2＝15。台形 DBCE（42）の半分 21 ではない。',
+    steps: [
+      '△ABC（50cm²）。辺 AB 上に AD:DB＝2:3 の点 D。D を通り BC に平行な線が AC と交わる点 E。BC の中点 F。',
+      'DE ∥ BC なので △ADE ∽ △ABC。相似比 AD:AB＝2:5、面積比 4:25。△ADE＝50×4/25＝8cm²。台形 DBCE は 42。',
+      '△DBF は相似の相手ではない。D と C を結ぶ（点線）。△ADC と △DBC は頂点 C から辺 AB への高さが共通なので、面積比 AD:DB＝2:3。△DBC＝50×3/5＝30（DB ↔ 3）。',
+      'F は BC の中点。△DBF と △DFC は底辺 BF＝FC・頂点 D からの高さが共通で等しい。△DBF＝30÷2＝15cm²。',
+      '検算：台形の内訳 DBF 15 ＋ DFC 15 ＋ DEC 12 ＝ 42、8＋42＝50。DEC は △ADC 20 を AE:EC＝2:3 で分けた 12。',
+    ],
+    buildSteps: 3,
+  },
 };
