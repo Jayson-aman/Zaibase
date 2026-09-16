@@ -309,6 +309,43 @@ for (const l of L) {
 }
 check('【問題集・単元】中国語の簡体字がまぎれている', chineseBad);
 
+// 日本語そのものが壊れていないか。
+//
+// 2026/9/16、ユーザーの「日本語も合ってるか確認して」という指摘で全数を調べた。
+//   ・文字化け1件 … 「相当範(U+FFFD)囲」。範囲の字がこわれて画面に出ていた
+//   ・半角カタカナ1件 … 理科の表で「えら･皮膚」の中点が半角だった
+//   ・かぎかっこの数が合わない3件 … ee2_133 の問題文に余分な「、
+//     koko_kiso_shakai_b_35 の覚え方に閉じ忘れ、rika_s430 に余分な】
+// どれも tsc も expo export も通るので、型検査では絶対に見つからない。
+const MOJIBAKE = new RegExp(String.fromCharCode(0xfffd));
+const HANKAKU_KANA = /[\uff61-\uff9f]/;
+const jpBroken: string[] = [];
+const jpKana: string[] = [];
+const jpQuote: string[] = [];
+const cnt = (t: string, c: string) => t.split(c).length - 1;
+const jpItems: Array<[string, string]> = [];
+for (const q of Q as any[]) {
+  const fields: Array<[string, unknown]> = [
+    ['問題文', q.question], ['答え', q.answer], ['ヒント', q.hint],
+    ['解説', q.explanation], ['覚え方', q.memoryTip], ['ひっかけ', q.pitfall], ['課題文', q.passage],
+  ];
+  for (const [name, v] of fields) if (v) jpItems.push([`${q.id}(${name})`, String(v)]);
+  for (const sub of (q.subQuestions ?? []) as any[])
+    jpItems.push([`${q.id}:${sub.label}`, `${sub.prompt ?? ''}\n${sub.answer ?? ''}\n${sub.explanation ?? ''}`]);
+}
+for (const l of L) jpItems.push([`${l.id}(単元)`, lessonText(l)]);
+for (const [id, t] of jpItems) {
+  if (MOJIBAKE.test(t)) jpBroken.push(id);
+  if (HANKAKU_KANA.test(t)) jpKana.push(id);
+  // ⚠️ 原稿用紙・作文・漢文の単元は、かぎかっこそのものを説明するので数が合わない。
+  //   これは正当なので、合否には数えず一覧だけ出す。
+  for (const [o, c] of [['【', '】'], ['「', '」'], ['『', '』']])
+    if (cnt(t, o) !== cnt(t, c)) { jpQuote.push(`${id} ${o}${cnt(t, o)} ${c}${cnt(t, c)}`); break; }
+}
+check('【問題集・単元】文字化けした文字が画面に出ている', jpBroken);
+check('【問題集・単元】半角カタカナが画面に出ている', jpKana);
+info('かぎかっこ・すみつきかっこの数が合わない（要目視）', jpQuote);
+
 // 問題集の日本語の中に、書きかけの英単語が残っていないか。
 //
 // 単元（L）側には前から同じ検査があったが、問題集（Q）側には無かった。

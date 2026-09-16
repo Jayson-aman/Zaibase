@@ -1573,7 +1573,7 @@ export const eigoExtra2: Question[] = [
   {
     id: 'ee2_133',
     subject: 'eigo' as const,
-    question: '「"good" の比較級と最上級を答えなさい。',
+    question: '"good" の比較級と最上級を答えなさい。',
     answer: 'better, best',
     hint: '"good" は不規則変化します',
     explanation: '【解説】\n不規則変化する形容詞：good → better → best、bad → worse → worst、many/much → more → most、little → less → least。',
