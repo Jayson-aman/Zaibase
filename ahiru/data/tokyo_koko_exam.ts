@@ -469,7 +469,7 @@ export const tokyoWasedaSansu: Question[] = [
     examType: 'koko',
     difficulty: 'advanced',
     maxOnly: true,
-    question: `【大問1】（場合の数・確率）
+    question: `【高校先取り】【大問1】（場合の数・確率）
 
 問1. A〜Eの5人から3人を選ぶ選び方は何通りか。
 
@@ -490,6 +490,8 @@ C(5,3)＝5!/(3!×2!)＝(5×4)/(2×1)＝10通り。
 確率＝5/36。`,
   },
   {
+    pitfall:
+      '組み合わせの記号（C(n,r)・nCr）は高校で習う書き方で、高校入試には出ない。中学では「まず順番をつけてかけ算し、そのあと選んだ個数の並べ方でわって重なりを消す」と、言葉と式で数える。',
     id: 'koko_waseda_sansu_02',
     subject: 'sansu',
     course: 'koko-waseda',
