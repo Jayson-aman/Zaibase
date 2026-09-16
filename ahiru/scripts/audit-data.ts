@@ -255,6 +255,93 @@ for (const q of Q as any[]) {
 }
 check('【問題集】画面に出る文によその国の文字がまぎれている', alienBad);
 
+// ⚠️ 上の検査は問題集（Q）しか見ていなかったため、単元（L）の本文に入りこんだ
+//   ハングル「친しい友人」（正しくは「親しい」）を何度も素通りしていた。
+//   2026/9/16にユーザーの指摘で発覚。単元側も同じ目で見る。
+const alienLesson: string[] = [];
+for (const l of L) {
+  const alien = [...lessonText(l)].filter((c) => ALIEN_SCRIPT.test(c));
+  if (alien.length) alienLesson.push(`${l.id}(${[...new Set(alien)].join('')})`);
+}
+check('【単元】本文によその国の文字がまぎれている', alienLesson);
+
+// 中国の簡体字がまぎれこんでいないか。
+//
+// 2026/9/16、画面に「発音记号」（正しくは記号）「燃焼时に」（正しくは時に）と
+// 中国語の簡体字が出ていた。日本語と同じ漢字を使う言語なので、
+// 「よその国の文字」の検査（文字体系で弾く方式）ではまったく引っかからない。
+//
+// ⚠️ 日本語にもある漢字を1つでも入れると、正しい本文が大量に誤検出される。
+//   最初のリストには 与（1618回）・写（1158回）・随（406回）・儿（ひとあし。部首名として正当）が
+//   まじっていて使い物にならなかった。
+//   **リストを足したら、必ずデータ全体での出現回数を数えて確かめること。**
+//   何百回も出てくる字は、まちがいなく正しい日本語である。
+const CHINESE_ONLY = new Set(
+  ('汉语说话讲词谁请读课谢试认论议评计记讨训译诗谈调证识该详讯许设访诉谓谋谱谅' +
+   '们从众亿仅优传价债伤仓侨俭这进过远还达迁违运选递' +
+   '东车马鸟鱼见贝页门问间闻开关闭长张帐账时实习' +
+   '热爱头际农业产权义资费贵买卖钱银铁钢级纪经济营养卫药师纸红绿蓝样标备战线终续绝练' +
+   '击图馆员团园边么怎虽为给应发变对难观现场电龙岁风飞乐专术无' +
+   '铜镜锅钟铃锦钉钩键锻链镇钥锁饭饮饱饲馒' +
+   '纲纯纷纹组细织绍络统绕绣继绩维绪轮软转轻载较辆输铺锐错' +
+   '妈爷奶爸闹阅阔队阴阳阶陆陈险隐乡丛丝').split(''),
+);
+const chineseBad: string[] = [];
+const chineseIn = (t: string) => [...new Set([...t].filter((c) => CHINESE_ONLY.has(c)))];
+for (const q of Q as any[]) {
+  const fields: Array<[string, unknown]> = [
+    ['問題文', q.question], ['答え', q.answer], ['ヒント', q.hint],
+    ['解説', q.explanation], ['覚え方', q.memoryTip], ['ひっかけ', q.pitfall],
+    ['課題文', q.passage],
+  ];
+  for (const [name, v] of fields) {
+    const hit = chineseIn(String(v ?? ''));
+    if (hit.length) chineseBad.push(`${q.id}(${name}:${hit.join('')})`);
+  }
+  for (const sub of (q.subQuestions ?? []) as any[]) {
+    const hit = chineseIn(`${sub.prompt ?? ''}${sub.answer ?? ''}${sub.explanation ?? ''}`);
+    if (hit.length) chineseBad.push(`${q.id}:${sub.label}(${hit.join('')})`);
+  }
+}
+for (const l of L) {
+  const hit = chineseIn(lessonText(l));
+  if (hit.length) chineseBad.push(`${l.id}(${hit.join('')})`);
+}
+check('【問題集・単元】中国語の簡体字がまぎれている', chineseBad);
+
+// 問題集の日本語の中に、書きかけの英単語が残っていないか。
+//
+// 単元（L）側には前から同じ検査があったが、問題集（Q）側には無かった。
+// 2026/9/16にユーザーの指摘で全数を見たところ、残っていたのは
+// SDGs・NIEs・mRNA・iPS・Brexit・hPa・RuBisCO のような略語と、
+// mod・gcd・arcsin・xmol のような数学・化学の記号だけだった。
+//
+// ⚠️ 弾きすぎないための決まり：
+//   ・大文字を1つでも含む語は、略語・化学式・図形の頂点なので見ない
+//     （SDGs・NaOH・AaBb・cosA・AMa など）
+//   ・3文字以下も見ない（mod・gcd・abc・xcm のような記号）
+//   ・数学の関数名は許す
+//   こうすると、本物の事故（「technique は使わない」「short く書きとめる」
+//   「health を損なう」）だけが残る。
+const Q_LEAK = /[ぁ-んァ-ヶ一-龥][ 　]?([a-z]{4,})[ 　]?[ぁ-んァ-ヶ一-龥]/g;
+const Q_LEAK_OK = /^(?:arcsin|arccos|arctan|sinh|cosh|tanh|xmol|ymol|zmol|aabb|food)$/;
+const qLeak: string[] = [];
+for (const q of Q as any[]) {
+  if (q.subject === 'eigo') continue;
+  const fields: Array<[string, unknown]> = [
+    ['問題文', q.question], ['答え', q.answer], ['ヒント', q.hint],
+    ['解説', q.explanation], ['覚え方', q.memoryTip], ['ひっかけ', q.pitfall], ['課題文', q.passage],
+  ];
+  for (const [name, v] of fields) {
+    for (const m of String(v ?? '').matchAll(Q_LEAK)) {
+      if (Q_LEAK_OK.test(m[1])) continue;
+      qLeak.push(`${q.id}(${name}:${m[1]})`);
+      break;
+    }
+  }
+}
+info('【問題集】日本語の中に英単語が挟まっている（要目視）', qLeak);
+
 // 画面に出る文にマークダウン記法が混ざっていないか。
 //
 // 解説・ヒント・問題文・答えはすべて素の <Text> で描いているので、
@@ -771,10 +858,17 @@ info('意図せず等幅の箱になる本文（要目視）', [...new Set(boxed
 // 大文字だけの並びは、図形の頂点（三角形ABC・四角形ABCD）と
 // 略語（PKO・GDP・DNA・GHQ・EEZ）で、どちらも正当なので除く。
 // 単位（km・mL・pH …）も除く。
-const LEAK = /[ぁ-んァ-ヶ一-龥][ 　]?([A-Za-z]{3,})[ 　]?[ぁ-んァ-ヶ一-龥]/g;
+// ⚠️ 2026/9/16に判定をしぼった。大文字を含む語（SDGs・hPa・RrYy・BtoC・AMa）と
+//   3文字以下（xcm・mol）は、略語・記号・文字式で正当なので見ない。
+//   小文字4文字以上だけを見ると、本物の事故（「満water になる」「both使われる」
+//   「practiceする」「north 側」「競争relationshipにある」＝2026/9/16に5件発見）
+//   だけが残る。外来語・ローマ字を教える単元は、英語を出すのが目的なので除く。
+const LEAK = /[ぁ-んァ-ヶ一-龥][ 　]?([a-z]{4,})[ 　]?[ぁ-んァ-ヶ一-龥]/g;
 const UNITS = /^(?:km|cm|mm|kg|mg|mL|dL|kL|ha|cc|pH|ppm|kWh)$/i;
+const LEAK_LESSON_OK = /外来語|和製英語|ローマ字|カタカナ語/;
 const latin = L.filter((l) => {
   if (l.subject === 'eigo') return false;
+  if (LEAK_LESSON_OK.test(lessonText(l))) return false;
   for (const m of lessonText(l).matchAll(LEAK)) {
     const w = m[1];
     if (w === w.toUpperCase()) continue; // ABCD・PKO などは正当
