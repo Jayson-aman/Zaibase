@@ -925,7 +925,8 @@ export const eigoExtra: Question[] = [
     choices: ['library は本を売る場所、bookstore は本を借りる場所', 'library は本を借りる場所、bookstore は本を売る場所', '両方とも本を売る場所', '両方とも本を借りる場所'],
     answer: 'library は本を借りる場所、bookstore は本を売る場所',
     hint: 'library は「図書館」、bookstore は「書店」です。',
-    explanation: 'library（図書館）は本を無料で借りる場所、bookstore（書店）は本を購入する場所です。',
+    explanation:
+      '【答え】library は本を借りる場所、bookstore は本を売る場所\n\n【つづりと意味】\n・library … 図書館。ラテン語の liber（本）から来ている\n・bookstore … 書店。book（本）＋ store（店）\nbookstore は2つの語を合わせた複合語なので、意味がそのまま分かる。\n\n【日本語のカタカナ語に注意】日本語では「ライブラリー」を「本の集まり」の意味で使うことがあるが、英語の library は建物としての図書館を指すのがふつうである。\n\n【店を表す語】\n・bookstore／bookshop（書店）・bakery（パン屋）・butcher shop（肉屋）・drugstore（薬局）・supermarket・department store・convenience store\n・イギリス英語では shop、アメリカ英語では store を使うことが多い\n\n【図書館に関わる語】\n・borrow（借りる）・return（返す）・lend（貸す）・due date（返却期限）・librarian（司書）\n・borrow と lend の区別が問われる。borrow は借りる側、lend は貸す側\n・May I borrow this book?（借りてもいいですか）\n・Can you lend me your pen?（貸してくれますか）\n\n【例文】I borrowed three books from the library.',
     examFrequency: 'high',
   },
   {
@@ -964,7 +965,8 @@ export const eigoExtra: Question[] = [
     choices: ['生物学', '心理学', '技術・テクノロジー', '哲学'],
     answer: '技術・テクノロジー',
     hint: 'スマートフォンやAIもこれの産物です。',
-    explanation: 'technology は「技術、テクノロジー」です。biology は生物学、psychology は心理学、philosophy は哲学。',
+    explanation:
+      '【答え】技術・テクノロジー\n\n【ほかの選択肢】\n・biology … 生物学\n・psychology … 心理学\n・philosophy … 哲学\n\n【logy の意味】ギリシャ語で「学問」を表す。logy がついたら学問と覚えると、多くの語が分かる。\n・biology（生物学）… bio（生命）\n・geology（地質学）… geo（地球）\n・psychology（心理学）… psycho（心）\n・zoology（動物学）… zoo（動物）\n・ecology（生態学）… eco（環境）\n・technology（技術）… techno（技術）\n語のつくりを知ると、初めて見る語も意味が推測できる。\n\n【接頭語も覚える】\n・bio（生命）・geo（地球）・tele（遠い）・auto（自分で）・micro（小さい）・inter（間の）\n・telephone（遠くの音）・television（遠くを見る）・automobile（自分で動く）・microscope（小さいものを見る）・international（国と国の間の）\n分解すると意味が見えてくる。\n\n【technology に関わる語】computer・Internet・smartphone・artificial intelligence（人工知能）・robot・digital。\n\n【例文】Technology has changed our lives.',
     examFrequency: 'high',
   },
   {
@@ -977,7 +979,8 @@ export const eigoExtra: Question[] = [
     choices: ['攻撃する', '守る・保護する', '破壊する', '無視する'],
     answer: '守る・保護する',
     hint: 'protection（保護）の動詞形です。',
-    explanation: 'protect は「守る、保護する」という意味です。attack は攻撃する、destroy は破壊する、ignore は無視する。',
+    explanation:
+      '【答え】守る・保護する\n\n【ほかの選択肢】\n・attack … 攻撃する\n・destroy … 破壊する\n・ignore … 無視する\n\n【protect の使い方】\n・protect ＋ 目的語 … 守る\n・protect A from B … A を B から守る。protect children from danger\nfrom とセットで使う形を覚えておくと、長文で役に立つ。\n\n【名詞と形容詞】\n・protect（動詞）→ protection（名詞・保護）→ protective（形容詞・保護する）\n動詞・名詞・形容詞をまとめて覚えると、語彙が3倍に増える。\n・achieve → achievement\n・develop → development\n・decide → decision\n・explain → explanation\n\n【環境に関わる語】protect は環境の話題でよく出る。\n・protect the environment（環境を守る）\n・protect endangered species（絶滅のおそれのある生き物を守る）\n・protect nature、protect the forest\n\n【似た意味の語】\n・protect … 危険から守る\n・defend … 攻撃から防ぐ\n・save … 救う、とっておく\n・preserve … そのままの状態で保つ\n\n【例文】We must protect the environment for the future.',
     examFrequency: 'high',
   },
   {
@@ -990,7 +993,8 @@ export const eigoExtra: Question[] = [
     choices: ['不必要な', '必要な', '十分な', '可能な'],
     answer: '必要な',
     hint: 'unnecessary が反意語です。',
-    explanation: 'necessary は「必要な」という意味です。unnecessary は不必要な、enough/sufficient は十分な、possible は可能な。',
+    explanation:
+      '【答え】必要な\n\n【反対の意味の語】unnecessary（不必要な）。un をつけて反対の意味にする形である。\n・necessary ⇔ unnecessary\n・happy ⇔ unhappy\n・kind ⇔ unkind\n・known ⇔ unknown\n\n【打ち消しの接頭語】語によって、つく語がちがう。\n・un … unhappy、unkind、unnecessary\n・im … impossible、impolite（m・p の前は im）\n・in … incorrect、invisible\n・dis … dislike、disagree、disappear\n・non … nonstop、nonsense\nm や p の前では im になるという決まりがある。発音しやすくするためである。\n\n【necessary の使い方】\n・It is necessary to 〜（〜することが必要だ）\n・if necessary（必要なら）\n・necessity（名詞・必要）\n\n【つづりの注意】necessary は c が1つ、s が2つである。まちがえやすいので、区切って覚える。\n\n【似た意味の語】\n・necessary … なくてはならない\n・important … 大切な\n・essential … 欠かせない。necessary より強い\n\n【例文】It is necessary to study every day.',
     examFrequency: 'high',
   },
   {
@@ -1003,7 +1007,8 @@ export const eigoExtra: Question[] = [
     choices: ['専門家', 'ボランティア・自発的に行動する人', '従業員', '顧客'],
     answer: 'ボランティア・自発的に行動する人',
     hint: '報酬なしで自発的に活動する人です。',
-    explanation: 'volunteer は「ボランティア、志願者、自発的に活動する人」です。expert は専門家、employee は従業員、customer は顧客。',
+    explanation:
+      '【答え】ボランティア・自発的に活動する人\n\n【語のなりたち】ラテン語の voluntas（意志）から来ている。自分の意志で進んで行うという意味が語の中心にある。\n・volunteer（名詞・動詞）\n・voluntary（形容詞・自発的な）\n\n【日本語との意味のちがい】日本語の「ボランティア」は、無償で人の役に立つ活動をする人を指すことが多い。英語の volunteer は、報酬の有無より「自分から進んで申し出る」ことが中心である。\n・volunteer to help（進んで手伝いを申し出る）\n・a volunteer army（志願兵の軍隊）\n日本語になったカタカナ語は、意味がせまくなっていることがある。\n\n【ほかの選択肢】\n・expert … 専門家\n・employee … 従業員（employ ＋ ee）\n・customer … 顧客\n・ee がつくと「〜される人」になる。employer（雇う人）／employee（雇われる人）\n\n【ボランティアに関わる語】\n・charity（慈善）・donate（寄付する）・support（支える）・community（地域社会）・help the elderly（高齢者を助ける）\n\n【例文】She works as a volunteer at the hospital.',
     examFrequency: 'high',
   },
   {
@@ -1016,7 +1021,8 @@ export const eigoExtra: Question[] = [
     choices: ['一般的な', '唯一の・独特な', '普通の', '同じような'],
     answer: '唯一の・独特な',
     hint: 'ラテン語の unus（一つ）が語源です。',
-    explanation: 'unique は「唯一の、独特な、ユニークな」という意味です。common/ordinary は普通の・一般的な、similar は同じような。',
+    explanation:
+      '【答え】唯一の・独特な\n\n【語のなりたち】ラテン語の unus（1つ）から来ている。ほかに同じものがないという意味である。\n・uni（1つ）を含む語 … unique、uniform（同じ形）、unity（統一）、unite（結ぶ）、universe（宇宙）、union（連合）\nuni を見たら「1つ」と覚えると、多くの語が分かる。\n\n【数を表す接頭語】\n・uni（1）… unique、unicycle（一輪車）\n・bi（2）… bicycle（二輪車）、bilingual（2言語を話す）\n・tri（3）… triangle（三角形）、tricycle（三輪車）\n・自転車は bicycle（2つの輪）、一輪車は unicycle、三輪車は tricycle。数え方が語に入っている\n\n【unique の使い方の注意】「唯一の」という意味なので、程度を表す語をつけにくい。\n・very unique（△）… ほかにないものに「とても」はつけにくい\n・quite unique、truly unique（○）\nただし日常では very unique も使われる。\n\n【a unique になる理由】unique は「ユ」の音で始まるので、母音の字でも a を使う。a か an かは音で決まる。\n\n【ほかの選択肢】common／ordinary（普通の）・similar（似た）。\n\n【例文】Each person has a unique way of thinking.',
     examFrequency: 'high',
   },
   {
@@ -1029,7 +1035,8 @@ export const eigoExtra: Question[] = [
     choices: ['失敗する', '達成する・成し遂げる', '諦める', '挑戦する'],
     answer: '達成する・成し遂げる',
     hint: 'achievement（達成、業績）の動詞形です。',
-    explanation: 'achieve は「達成する、成し遂げる」という意味です。fail は失敗する、give up は諦める、challenge は挑戦する。',
+    explanation:
+      '【答え】達成する・成し遂げる\n\n【名詞形】achievement（達成・業績）。ment をつけて名詞にする形である。\n・achieve → achievement\n・develop → development\n・move → movement\n・govern → government\n\n【achieve の使い方】\n・achieve a goal（目標を達成する）\n・achieve success（成功をおさめる）\n・achieve one\'s dream（夢をかなえる）\n努力して手に入れるという意味なので、苦労なく得たものには使わない。\n\n【ほかの選択肢】\n・fail … 失敗する\n・give up … あきらめる\n・challenge … 挑戦する\n\n【challenge の意味に注意】日本語の「チャレンジする」と英語の challenge はずれている。\n・日本語 … 「試験にチャレンジする」＝挑戦する\n・英語の challenge … 「異議を唱える、難題を与える」が中心の意味\n・英語で「挑戦する」は try、take on。「I will challenge the exam.」は不自然である\n日本語になったカタカナ語は、そのまま英語で使えないことがある。\n\n【例文】She achieved her goal after years of effort.',
     examFrequency: 'high',
   },
   {
@@ -1042,7 +1049,8 @@ export const eigoExtra: Question[] = [
     choices: ['A よりも B を好む', 'B よりも A を好む', 'A と B を同じくらい好む', 'A も B も好まない'],
     answer: 'B よりも A を好む',
     hint: '「to」は比較の基準を示します。A が好みの対象です。',
-    explanation: 'prefer A to B は「B よりも A を好む」という意味です。I prefer coffee to tea. = 私はお茶よりコーヒーが好きです。',
+    explanation:
+      '【答え】B よりも A を好む\n\n【prefer A to B の形】A が好きなほうである。\n・I prefer coffee to tea.（お茶よりコーヒーが好き）\n・前に来るほうが好きと覚える\n\n【なぜ than ではなく to なのか】ここが最も問われる。prefer という語がもともと「〜より前に置く」という意味で、比較級ではないからである。だから than ではなく to を使う。\n・prefer A to B（正しい）\n・prefer A than B（誤り）\n\n【to を使うほかの比較表現】\n・be superior to 〜（〜よりすぐれている）\n・be inferior to 〜（〜より劣っている）\n・be senior to 〜（〜より年上である）\n・be junior to 〜（〜より年下である）\nラテン語から入った語は to を使うという共通点がある。まとめて覚える。\n\n【prefer のほかの使い方】\n・prefer to 〜（〜するほうを好む）… I prefer to walk.\n・would rather A than B（B よりむしろ A したい）… こちらは than を使う\n\n【似た言い方】\n・I like coffee better than tea.（同じ意味のやさしい言い方）\n\n【例文】I prefer summer to winter.',
     examFrequency: 'very-high',
   },
   {
@@ -1055,7 +1063,8 @@ export const eigoExtra: Question[] = [
     choices: ['余剰', '不足', '供給', '需要'],
     answer: '不足',
     hint: 'short（短い・足りない）から来ています。',
-    explanation: 'shortage は「不足、欠乏」という意味です。surplus/excess は余剰、supply は供給、demand は需要。',
+    explanation:
+      '【答え】不足\n\n【語のなりたち】short（足りない）＋ age（名詞をつくる語尾）。short には「短い」だけでなく「足りない」という意味がある。\n・be short of money（お金が足りない）\n・in short（要するに）\n\n【age がつく語】\n・shortage（不足）・package（包み）・damage（損害）・percentage（割合）・storage（保管）・usage（使い方）\n動詞や形容詞を名詞にする語尾である。\n\n【ほかの選択肢】\n・surplus／excess … 余り\n・supply … 供給\n・demand … 需要\nsupply and demand（需要と供給）は社会科でも学ぶ言葉である。英語では「供給と需要」の順で言う。\n\n【社会の話題でよく出る語】\n・food shortage（食料不足）・water shortage（水不足）・labor shortage（人手不足）・energy shortage\n入試の長文では、環境や社会の問題が題材になることが多い。\n\n【反対の意味】\n・shortage ⇔ surplus（余剰）\n・supply ⇔ demand\n\n【例文】There is a serious water shortage in that country.',
     examFrequency: 'medium',
   },
   {
@@ -1068,7 +1077,8 @@ export const eigoExtra: Question[] = [
     choices: ['内気な', '自信のある', '不安な', '恥ずかしい'],
     answer: '自信のある',
     hint: 'confidence（自信）の形容詞形です。',
-    explanation: 'confident は「自信のある、確信している」という意味です。shy は内気な、anxious は不安な、embarrassed は恥ずかしい。',
+    explanation:
+      '【答え】自信のある\n\n【名詞形】confidence（自信・信頼）。\n・confident（形容詞）→ confidence（名詞）\n・ent が ence になる形は多い。different → difference、important → importance、silent → silence\n\n【confident の使い方】\n・be confident of 〜／be confident that 〜（〜を確信している）\n・I am confident that I can do it.\n\n【まぎらわしい語】\n・confident … 自信のある\n・confidential … 秘密の、内密の\n似たつづりで意味がまったくちがう。\n\n【ほかの選択肢】\n・shy … 内気な\n・anxious／nervous … 不安な・緊張した\n・embarrassed … はずかしい\n\n【気持ちを表す形容詞】\n・happy・sad・angry・excited・nervous・anxious・confident・proud・disappointed・surprised\n・ed で終わるものは人の気持ち、ing で終わるものは原因\n・I am excited.（わくわくしている）／The game is exciting.（わくわくさせる）\n\n【反対の意味】\n・confident ⇔ shy、nervous、unsure\n\n【例文】She is confident about her English.',
     examFrequency: 'high',
   },
   {
@@ -1081,7 +1091,8 @@ export const eigoExtra: Question[] = [
     choices: ['工業', '農業', '漁業', '林業'],
     answer: '農業',
     hint: 'agri（畑）+ culture（耕す）が語源です。',
-    explanation: 'agriculture は「農業」です。industry は工業、fishery は漁業、forestry は林業。',
+    explanation:
+      '【答え】農業\n\n【語のなりたち】agri（畑・土地）＋ culture（耕す）で「土地を耕すこと」という意味である。\n・culture は今では「文化」の意味だが、もとは「耕す」という意味だった。心を耕すことが文化、という発想である\n・agriculture（農業）・cultivate（耕す）・culture（文化）\n語のもとをたどると、意味のつながりが見えてくる。\n\n【ほかの選択肢】\n・industry … 工業、産業\n・fishery … 漁業\n・forestry … 林業\n社会科の産業の分類と同じなので、まとめて覚える。\n\n【産業の分類】社会科の学習とつながる。\n・第一次産業 … agriculture（農業）、forestry（林業）、fishery（漁業）\n・第二次産業 … manufacturing（製造業）、construction（建設業）\n・第三次産業 … service industry（サービス業）、commerce（商業）\n\n【農業に関わる語】farm（農場）・farmer（農家）・crop（作物）・harvest（収穫）・grow（育てる）・field（畑）・rice field（田）。\n\n【例文】Agriculture is an important industry in this area.',
     examFrequency: 'medium',
   },
   {
@@ -1094,7 +1105,8 @@ export const eigoExtra: Question[] = [
     choices: ['喜ばせる', 'がっかりさせる', '驚かせる', '怒らせる'],
     answer: 'がっかりさせる',
     hint: 'disappointed（がっかりした）の動詞形です。',
-    explanation: 'disappoint は「がっかりさせる、失望させる」という意味です。please は喜ばせる、surprise は驚かせる、anger は怒らせる。',
+    explanation:
+      '【答え】がっかりさせる\n\n【動詞と形容詞】\n・disappoint（動詞）… がっかりさせる\n・disappointed（形容詞）… がっかりした（人の気持ち）\n・disappointing（形容詞）… がっかりさせるような（原因）\n・disappointment（名詞）… 失望\ned は人、ing は原因という決まりがここでも働いている。\n・I was disappointed.（私はがっかりした）\n・The result was disappointing.（結果はがっかりさせるものだった）\n\n【dis の意味】打ち消しや反対を表す接頭語である。\n・disappoint（appoint＝任命する、の反対から）\n・dislike（きらう）・disagree（反対する）・disappear（消える）・discover（発見する）\n・discover は「おおい（cover）を取る」で、打ち消しから「発見する」の意味になった\n\n【ほかの選択肢】\n・please … 喜ばせる\n・surprise … 驚かせる\n・anger … 怒らせる\nどれも「人の気持ちを〜させる」という動詞である。英語では、気持ちを表すのに「させる」形の動詞を使うことが多い。\n\n【例文】I was disappointed at the news.',
     examFrequency: 'high',
   },
   {
@@ -1107,7 +1119,8 @@ export const eigoExtra: Question[] = [
     choices: ['危険', '機会・チャンス', '問題', '解決策'],
     answer: '機会・チャンス',
     hint: 'chance と同じ意味のフォーマルな単語です。',
-    explanation: 'opportunity は「機会、チャンス」です。danger は危険、problem は問題、solution は解決策。',
+    explanation:
+      '【答え】機会・チャンス\n\n【chance との使い分け】\n・opportunity … よい機会。あらたまった言い方\n・chance … 機会。また「偶然・見込み」の意味もある\n・by chance（偶然に）… opportunity には この意味はない\nopportunity のほうが「生かすべきよい機会」という感じが強い。\n\n【使い方】\n・have an opportunity to 〜（〜する機会がある）\n・take an opportunity（機会をとらえる）\n・miss an opportunity（機会を逃す）\n・a golden opportunity（またとない機会）\n\n【ほかの選択肢】\n・danger … 危険\n・problem … 問題\n・solution … 解決策\n・problem と solution は対で覚える。長文で「問題とその解決策」という組み立てがよく出る\n\n【つづりの注意】opportunity は p が2つある。長い語なので、op-por-tu-ni-ty と区切って覚える。\n\n【関連することわざ】Opportunity knocks but once.（好機は一度しか訪れない）。\n\n【例文】This is a good opportunity to practice English.',
     examFrequency: 'high',
   },
   // ============================================================
@@ -1123,7 +1136,8 @@ export const eigoExtra: Question[] = [
     choices: ['現在形', '現在進行形', '過去形', '現在完了形'],
     answer: '過去形',
     hint: 'last year（去年）と一緒に使う時制は？',
-    explanation: 'visited は visit の過去形で、last year（去年）という過去を示す語句と共に使われているため過去形です。',
+    explanation:
+      '【答え】過去形\n\n【判断のしかた】2つの手がかりがある。\n①動詞の形 … visited は visit の過去形（ed がついている）\n②時を表す語 … last year（去年）は過去を表す\nこの2つが一致しているか確かめる。\n\n【過去を表す語】これらがあれば過去形を使う。\n・yesterday、last night、last week、last year\n・〜 ago（two days ago、a week ago）\n・then、at that time\n・in 2020（過ぎた年）\n\n【現在完了と使えない語】ここが大事である。\n・yesterday、last year、〜 ago は現在完了と一緒に使えない\n・I have visited Tokyo last year.（誤り）\n・I visited Tokyo last year.（正しい）\n現在完了は今とつながっているので、「いつ」を限定する語と合わない。入試で必ず問われる。\n\n【visit の使い方】\n・visit ＋ 場所（to はいらない）。visit Tokyo（正しい）／visit to Tokyo（誤り）\n・前置詞のいらない動詞 … visit、discuss、reach、enter、marry\n\n【例文】I visited Tokyo last year. I have visited Tokyo three times.',
     examFrequency: 'high',
   },
   {
@@ -1136,7 +1150,8 @@ export const eigoExtra: Question[] = [
     choices: ['現在形', '現在進行形', '過去形', '未来形'],
     answer: '現在進行形',
     hint: 'now（今）と be動詞 + -ing の組み合わせです。',
-    explanation: 'is reading は be動詞 + 動詞の -ing 形で、現在進行形です。now（今）が現在の動作中であることを示しています。',
+    explanation:
+      '【答え】現在進行形\n\n【判断のしかた】\n①be動詞 ＋ ing 形 … is reading\n②now（今） … 今していることを表す語\n形と、時を表す語の両方で確かめる。\n\n【現在進行形の意味】「今まさに〜している」ことを表す。\n・She is reading a book now.（今読んでいる）\n・She reads a book every night.（毎晩読む習慣）\n現在形と意味がまったくちがう。\n\n【進行形にしない動詞】状態を表す動詞は進行形にしない。\n・know、like、love、want、need、have（持っている）、see、hear、belong\n・I am knowing（誤り）\nただし have が「食べる」の意味なら進行形にできる（I am having lunch.）。\n\n【時制の見分け方のまとめ】\n・現在形 … 動詞の原形または s。every day、always と使う\n・現在進行形 … be動詞 ＋ ing。now と使う\n・過去形 … ed または不規則な形。yesterday、last 〜 と使う\n・過去進行形 … was／were ＋ ing。then、at that time と使う\n・未来 … will または be going to。tomorrow、next 〜 と使う\n・現在完了 … have／has ＋ 過去分詞。for、since、just、already、yet、ever、never と使う\n一緒に使う語で時制が分かる。\n\n【例文】She is reading a book now.',
     examFrequency: 'high',
   },
   {
@@ -1149,7 +1164,8 @@ export const eigoExtra: Question[] = [
     choices: ['goed', 'went', 'gone', 'goes'],
     answer: 'went',
     hint: 'go は不規則動詞です。go - went - gone と変化します。',
-    explanation: 'go の過去形は went（不規則変化）です。I went to school yesterday. のように使います。gone は過去分詞です。',
+    explanation:
+      '【答え】went\n\n【go の変化】go - went - gone。3つとも形がちがう型である。\n・現在 … go／goes\n・過去 … went\n・過去分詞 … gone\n\n【なぜ形が似ていないのか】went はもともと別の動詞（wend＝進む）の過去形だったものが、go の過去形として使われるようになったとされる。だから go とまったく形が似ていない。理屈で覚えられないので、そのまま覚える。\n\n【gone がまちがいな理由】gone は過去分詞で、単独では過去形として使えない。\n・I gone to school.（誤り）\n・I have gone to school.（現在完了なら正しい）\n・I went to school.（正しい）\n過去形と過去分詞のちがいをはっきりさせておく。\n\n【have been to と have gone to】\n・have been to 〜 … 行ったことがある（今ここにいる）\n・have gone to 〜 … 行ってしまった（今ここにいない）\nまったく意味がちがう。\n\n【不規則動詞の型】\n・3つとも別 … go - went - gone、see - saw - seen、write - wrote - written\n・2つが同じ … come - came - come、buy - bought - bought\n・3つとも同じ … put、cut、read\n\n【例文】I went to the library yesterday.',
     examFrequency: 'very-high',
   },
   {
@@ -1162,7 +1178,8 @@ export const eigoExtra: Question[] = [
     choices: ['富士山は六甲山より高い。', '六甲山は富士山より高い。', '富士山と六甲山は同じ高さだ。', '富士山は日本で一番高い。'],
     answer: '富士山は六甲山より高い。',
     hint: 'A is 比較級 than B で「A は B より～だ」という意味です。',
-    explanation: 'higher than は「～より高い」という比較級の表現です。Mt. Fuji（主語）が比較の対象（Mt. Rokko）より高いことを示しています。',
+    explanation:
+      '【答え】富士山は六甲山より高い\n\n【比較級の読み方】A is 比較級 than B で「A は B より〜だ」。\n・主語（A）のほうが上である\n・than の後（B）が比べる相手\n主語がどちらかを見るのが読み取りのこつである。\n\n【high の変化】high - higher - highest。短い語なので er、est をつける。\n\n【high と tall の使い分け】\n・tall … 細長いものの高さ。人・木・建物\n・high … 地面からの高さ、位置の高さ。山・空・値段\n・a tall man（背の高い人）／a high mountain（高い山）\n・山には high、人には tall\nただし建物はどちらも使える（a tall building／a high building）。\n\n【比較級の書きかえ】同じ内容を別の形で言える。\n・Mt. Fuji is higher than Mt. Rokko.\n・Mt. Rokko is not as high as Mt. Fuji.（六甲山は富士山ほど高くない）\n・Mt. Rokko is lower than Mt. Fuji.\nこの書きかえは入試でよく出る。\n\n【Mt. の読み方】Mount と読む。Mt. Fuji ＝ Mount Fuji。\n\n【例文】Mt. Fuji is the highest mountain in Japan.',
     examFrequency: 'very-high',
   },
   {
@@ -1175,7 +1192,8 @@ export const eigoExtra: Question[] = [
     choices: ['gooder', 'more good', 'better', 'best'],
     answer: 'better',
     hint: 'good は不規則変化する形容詞です。',
-    explanation: 'good の比較級は better（最上級は best）です。不規則変化なので要注意。bad → worse → worst も同様に不規則です。',
+    explanation:
+      '【答え】better\n\n【不規則に変化する語】ここは必ず覚える。\n・good／well → better → best\n・bad／ill → worse → worst\n・many／much → more → most\n・little → less → least\nこの4組だけ特別なので、まとめて覚える。\n\n【good と well の両方が better になる】\n・good（形容詞）… This is good. → This is better.\n・well（副詞）… He plays well. → He plays better.\n形容詞でも副詞でも比較級は better である。\n\n【best の使い方】\n・the best（形容詞の最上級には the をつける）\n・like 〜 the best（〜がいちばん好き）\n・like の比較には better、best を使う。more、most ではない\n・Which do you like better, tea or coffee?（2つ）\n・Which do you like the best?（3つ以上）\n\n【まちがえやすい形】gooder、more good、bestest はすべて誤りである。\n\n【関連する言い方】\n・better than nothing（ないよりまし）\n・Do your best.（全力をつくして）\n・get better（よくなる、回復する）\n\n【例文】This book is better than that one.',
     examFrequency: 'very-high',
   },
   {
@@ -1188,7 +1206,8 @@ export const eigoExtra: Question[] = [
     choices: ['東京は日本の中で最も人口が多い都市だ。', '東京は日本の中で人口が多い都市の一つだ。', '東京は日本の都市の中で人口が少ない。', '東京は世界で最も人口が多い都市だ。'],
     answer: '東京は日本の中で最も人口が多い都市だ。',
     hint: 'the most + 形容詞 が最上級を表します。',
-    explanation: 'the most populous は populous（人口の多い）の最上級で「最も人口の多い」という意味です。in Japan はその範囲を示します。',
+    explanation:
+      '【答え】東京は日本の中で最も人口が多い都市だ\n\n【最上級の読み方】the most ＋ 形容詞 ＋ in／of 〜 で「〜の中で最も…」。\n\n【in と of の使い分け】ここが必ず問われる。\n・in ＋ 場所・団体 … in Japan、in my class、in the world\n・of ＋ 複数のもの … of the three、of all the students\nあとに続くのが場所や集団なら in、数や複数のものなら of。\n\n【the を忘れない】最上級には the をつける。「いちばん」は1つに決まるので、特定する the が必要である。\n\n【populous の変化】populous は長い語なので、more、most を使う。\n・populous → more populous → the most populous\n\n【population との関係】\n・population（名詞・人口）\n・populous（形容詞・人口の多い）\n・人口が多い・少ないは large／small で表す。many／few ではない\n・The population of Tokyo is large.（正しい）\n・The population of Tokyo is many.（誤り）\nこれは試験でよく問われる。\n\n【最上級の書きかえ】\n・Tokyo is the most populous city in Japan.\n・No other city in Japan is as populous as Tokyo.\n・Tokyo is more populous than any other city in Japan.\n\n【例文】Mt. Fuji is the highest mountain in Japan.',
     examFrequency: 'high',
   },
   {
@@ -1214,7 +1233,8 @@ export const eigoExtra: Question[] = [
     choices: ['most tall', 'tallest', 'taller', 'most tallest'],
     answer: 'tallest',
     hint: '短い形容詞の最上級は -est をつけます。',
-    explanation: 'tall（背が高い）の比較級は taller、最上級は tallest です。短い（1〜2音節の）形容詞には -er/-est をつけます。',
+    explanation:
+      '【答え】tallest\n\n【最上級の作り方】短い形容詞には est をつける。比較級は er である。\n・tall → taller → tallest\n・long → longer → longest\n・e で終わる語 … large → larger → largest（r、st だけ）\n・子音と y … easy → easier → easiest（y を i に）\n・短い母音と子音 … big → bigger → biggest（子音を重ねる）\ning 形や過去形の作り方と、同じ規則が働いている。\n\n【most tall がまちがいな理由】tall は1音節の短い語なので、most は使わない。\n・most tallest は、most と est を両方つけているので二重のまちがいである\n\n【er と more の見分け方】\n・1音節 … er（tall → taller）\n・ly で終わる副詞 … more（slowly → more slowly）\n・ful、ous、ing、ed、ive で終わる語 … more\n・2音節で y で終わる語 … er（easy → easier、happy → happier）\n\n【the をつける】形容詞の最上級には the が必要である。副詞の最上級では省くこともある。\n\n【tall の使い方】人・木・建物など、細長いものに使う。山には high を使う。\n\n【例文】He is the tallest student in our class.',
     examFrequency: 'high',
   },
   {
@@ -1227,7 +1247,8 @@ export const eigoExtra: Question[] = [
     choices: ['私は昨日あなたに電話した。', '私は今あなたに電話している。', '私は明日あなたに電話します。', '私はあなたにいつも電話します。'],
     answer: '私は明日あなたに電話します。',
     hint: 'will + 動詞の原形 は未来を表します。',
-    explanation: 'will call は未来形（will + 動詞の原形）で「電話します」という意味です。tomorrow（明日）が未来を示しています。',
+    explanation:
+      '【答え】私は明日あなたに電話します\n\n【will の形】will ＋ 動詞の原形。主語が何であっても will の形は変わらない。\n・I will／He will／They will（wills とはならない）\n\n【will の2つの意味】\n・意志 … その場で決めた「〜するつもりだ」。I will call you.\n・予測 … 「〜だろう」。It will rain tomorrow.\n\n【be going to との使い分け】ここが最も問われる。\n・will … その場で決めた意志、または単なる予測\n・be going to … 前から決めていた予定・計画\n例）\n・The phone is ringing. — I will get it.（今決めた）\n・I am going to buy a new bike.（前から決めていた）\n\n【call の使い方】\n・call ＋ 人 … 電話する。call you（to はいらない）\n・call ＋ 人 ＋ 名前 … 〜と呼ぶ。We call him Ken.\n\n【未来を表す語】tomorrow、next week、next year、soon、someday。\n・tomorrow に前置詞はつけない\n\n【短縮形】I will → I\'ll。will not → won\'t。\n\n【例文】I will call you tomorrow. Don\'t worry.',
     examFrequency: 'high',
   },
   {
@@ -1279,7 +1300,8 @@ export const eigoExtra: Question[] = [
     choices: ['interestinger', 'more interesting', 'interestingest', 'most interesting'],
     answer: 'more interesting',
     hint: '音節が多い（3音節以上の）形容詞は more + 形容詞で比較級を作ります。',
-    explanation: 'interesting のように長い（3音節以上の）形容詞は、-er ではなく more をつけて比較級を作ります。most interesting が最上級。',
+    explanation:
+      '【答え】more interesting\n\n【more を使う形容詞】音節の多い語（3音節以上、および一部の2音節語）は、er ではなく more をつける。\n・interesting → more interesting → the most interesting\n・beautiful、important、difficult、popular、expensive、careful、useful\n\n【二重につけない】\n・more interestinger（誤り）\n・most interestingest（誤り）\nmore と er、most と est を両方つけてはいけない。最も多いまちがいである。\n\n【見分け方のめやす】\n・1音節 … er、est\n・ly で終わる副詞 … more、most\n・ful、ous、ing、ed、ive、able で終わる語 … more、most\n・2音節で y で終わる語 … er、est（easy → easier）\n\n【interesting と interested】\n・interesting … ものが興味を起こさせる。This book is interesting.\n・interested … 人が興味をもっている。I am interested in this book.\nものは ing、人は ed。同じ形の語をまとめて覚える（exciting／excited、boring／bored、surprising／surprised）。\n\n【例文】This book is more interesting than that one.',
     examFrequency: 'high',
   },
   {
@@ -1292,7 +1314,8 @@ export const eigoExtra: Question[] = [
     choices: ['comed', 'came', 'come', 'comes'],
     answer: 'came',
     hint: 'come は不規則動詞です。come - came - come と変化します。',
-    explanation: 'come の過去形は came です（不規則変化）。過去分詞も come と同じ形です。She came to school early. のように使います。',
+    explanation:
+      '【答え】came\n\n【come の変化】come - came - come。原形と過去分詞が同じ形である。\n・現在 … come／comes\n・過去 … came\n・過去分詞 … come\n\n【同じ型の動詞】\n・come - came - come\n・run - ran - run\n・become - became - become\n原形と過去分詞が同じという、めずらしい型である。\n\n【過去形と過去分詞を取りちがえない】\n・I came to school early.（過去形）\n・I have come to school early.（現在完了なので過去分詞 come）\n形が同じなので、文の形で判断する。have があれば過去分詞である。\n\n【come と go】\n・come … 話し手（または相手）のほうへ近づく\n・go … 話し手から離れていく\n・Dinner is ready. — I\'m coming.（日本語では「今行く」だが、英語では coming）\n日本語の「来る・行く」とずれることがあるので注意する。\n\n【come を使った言い方】\n・come true（実現する）・come back（もどる）・come from（〜の出身である）・How come?（どうして？）\n\n【例文】She came to school early this morning.',
     examFrequency: 'very-high',
   },
   {
@@ -1305,7 +1328,8 @@ export const eigoExtra: Question[] = [
     choices: ['（現在）～している', '（過去に）～した', '（未来に）～するつもりだ・～する予定だ', '（もしも）～するなら'],
     answer: '（未来に）～するつもりだ・～する予定だ',
     hint: '意図や計画を持った未来の表現です。',
-    explanation: 'be going to + 動詞の原形 は「（すでに決めた計画・意図として）～するつもりだ、～する予定だ」という意味の未来表現です。',
+    explanation:
+      '【答え】（未来に）〜するつもりだ・〜する予定だ\n\n【形】be動詞 ＋ going to ＋ 動詞の原形。be動詞は主語に合わせる。\n・I am going to／He is going to／They are going to\n\n【will との使い分け】ここが最も問われる。\n・be going to … 前から決めていた予定・計画。すでに準備が進んでいる\n・will … その場で決めた意志、または単なる予測\n例）\n・I am going to visit Kyoto next month.（前から計画していた）\n・The phone is ringing. — I will get it.（今決めた）\n\n【目の前の様子から予測するとき】be going to を使う。\n・Look at those clouds. It is going to rain.（雲を見て判断している）\n・I think it will rain tomorrow.（根拠のない予測）\n目に見える根拠があるかどうかで使い分ける。\n\n【疑問文と否定文】be動詞の文と同じ作り方である。\n・Are you going to 〜? — Yes, I am.\n・I am not going to 〜\ndo は使わない。\n\n【going to go】I am going to go to Kyoto. のように続くこともある。不自然に感じるが正しい英語である。\n\n【例文】We are going to have a party next Saturday.',
     examFrequency: 'very-high',
   },
   {
@@ -1331,7 +1355,8 @@ export const eigoExtra: Question[] = [
     choices: ['knowed', 'knew', 'known', 'knows'],
     answer: 'knew',
     hint: 'know は不規則動詞です。know - knew - known と変化します。',
-    explanation: 'know の過去形は knew です（不規則変化）。過去分詞は known。I knew the answer. = 私はその答えを知っていた。',
+    explanation:
+      '【答え】knew\n\n【know の変化】know - knew - known。3つとも形がちがう型である。\n\n【k を発音しない】know の k は書くが読まない。同じ形の語をまとめて覚える。\n・know、knife、knee、knock、knot、knowledge\nkn で始まる語は k を読まないという決まりがある。\n\n【発音しない文字の語】英語には多い。\n・k を読まない … know、knife、knee\n・w を読まない … write、wrong、wrap、answer、sword\n・b を読まない … climb、comb、lamb、doubt\n・l を読まない … walk、talk、half、calm\n・h を読まない … hour、honest\n歴史の中で発音だけが変わり、つづりが残ったためである。\n\n【know の名詞形】knowledge（知識）。つづりが大きく変わるので注意する。\n\n【know と understand の区別】\n・know … 知っている（情報を持っている）\n・understand … 理解している（意味が分かる）\n日本語ではどちらも「分かる」と言えてしまう。\n\n【進行形にしない】know は状態を表す動詞なので、I am knowing とは言わない。\n\n【例文】I knew the answer, but I could not say it.',
     examFrequency: 'high',
   },
   {
