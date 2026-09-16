@@ -276,6 +276,41 @@ for (const q of Q as any[]) {
 }
 check('【問題集】画面に出る文にマークダウンの ** が混ざっている', mdBad);
 
+// 中学受験（小学生）向けの問題に、高校で習う記号が出ていないか。
+//
+// 2026/9/16、場合の数の問題34問に C(9,3)・₇C₂・8C3・5!・P(9,3)・nCr といった
+// 高校の記号が使われていた。小学生はこの記号を習わないので、
+// 式の意味が読み取れず、解説が解説として働いていなかった。
+// 平方根のときと同じ種類の失敗（小学生向けに中学以上の内容が出ていた）である。
+// 書きかえの型：まず順番を考えてかけ算し、選んだ個数の並べ方でわって重なりを消す、
+// と言葉で書く。階乗は 5×4×3×2×1 とそのまま並べる。
+//
+// ⚠️ 座標の点（A(0,4)・C(6,4)）と、図形の頂点（A2B2C2）は正当なので弾かない。
+//   ・C(…) は後ろに = か 通り が続くときだけ組み合わせとみなす
+//   ・2C2 のように前が英字のものは頂点の名前なので見ない
+const HIGH_SCHOOL_NOTATION: Array<[string, RegExp]> = [
+  ['階乗', /\d\s*!/],
+  ['組み合わせ', /(?<![A-Za-z])[0-9n]\s*C\s*[0-9r]/],
+  ['順列', /(?<![A-Za-z])[0-9n]\s*P\s*[0-9r]/],
+  ['添字つき', /[₀-₉][CP][₀-₉]/],
+  ['組み合わせ記号', /[CP]\(\d+\s*,\s*\d+\)\s*(?:[=＝]|通り)/],
+];
+const hsBad: string[] = [];
+for (const q of Q as any[]) {
+  if (q.examType !== 'chugaku') continue;
+  const fields: Array<[string, unknown]> = [
+    ['問題文', q.question], ['答え', q.answer], ['ヒント', q.hint],
+    ['解説', q.explanation], ['覚え方', q.memoryTip], ['ひっかけ', q.pitfall],
+  ];
+  for (const [name, v] of fields) {
+    const s = String(v ?? '');
+    for (const [kind, re] of HIGH_SCHOOL_NOTATION) {
+      if (re.test(s)) { hsBad.push(`${q.id}(${name}:${kind})`); break; }
+    }
+  }
+}
+check('【問題集】中学受験の問題に高校で習う記号が出ている', hsBad);
+
 // 小問（subQuestions）が画面に出ているか。
 //
 // 89問（小問353問）が subQuestions を持つのに、QuizCard が描いていなかった。
