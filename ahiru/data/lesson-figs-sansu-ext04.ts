@@ -1455,4 +1455,129 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
     ],
     buildSteps: 3,
   },
+
+  // s152：四角形ABCD。Bを通り対角線ACに平行な直線と、辺DCの延長との交点E。△ACB＝△ACE なので 四角形＝△ADE
+  sext04_s152_naze: {
+    kind: 'polygon',
+    points: [
+      { x: 2, y: 5, label: 'A' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 6, y: 0, label: 'C' },
+      { x: 8, y: 4, label: 'D' },
+    ],
+    diagonals: [[0, 2]],
+    segments: [
+      { from: { x: 0, y: 0 }, to: { x: 3.69, y: -4.62 }, label: 'ACに平行', dashed: true },
+      { from: { x: 6, y: 0 }, to: { x: 3.69, y: -4.62 }, label: 'DCの延長 E', dashed: true },
+      { from: { x: 2, y: 5 }, to: { x: 3.69, y: -4.62 }, dashed: true },
+    ],
+    caption: '四角形 ABCD に対角線 AC を引く。B を通り AC に平行な直線（点線）と、辺 DC を C の先へ延長した直線の交点を E とする。B と E は AC に平行な同じ直線上なので △ACB＝△ACE。四角形 ABCD＝△ACD＋△ACB＝△ACD＋△ACE＝△ADE。三角形の底辺は DE 全体。',
+    steps: [
+      '四角形 ABCD。対角線 AC を引いて △ACD と △ACB に分ける。',
+      'B を通り、対角線 AC に平行な直線を引く（点線）。この線の上なら、B を動かしても AC までの高さが変わらない。',
+      '辺 DC を C の先へ延長し、平行線との交点を E とする。B を E まで動かした △ACE は △ACB と同じ面積。',
+      '△ACD と △ACE は辺 AC を共有し、D・C・E が 1 直線上にあるので、合わせて 1 つの三角形 ADE になる。四角形 ABCD＝△ADE。',
+      '検算：DC＝8、CE＝5.2、A から DE までの高さ 5 なら △ADE＝13.2×5÷2＝33。CE だけの 13 や DC だけの 20 ではない。垂直な線で B を動かすと高さが変わり使えない。',
+    ],
+    buildSteps: 3,
+  },
+
+  // s153：台形ABCD（下底AB=10、上底DC=6、高さ5）。下底を上底ぶん延長してE。DCEBは平行四辺形なので △DCB＝△DBE、台形＝△ADE
+  sext04_s153_naze: {
+    kind: 'polygon',
+    points: [
+      { x: 0, y: 0, label: 'A' },
+      { x: 10, y: 0, label: 'B' },
+      { x: 8, y: 5, label: 'C' },
+      { x: 2, y: 5, label: 'D' },
+    ],
+    sideLabels: ['下底10cm', null, '上底6cm', null],
+    diagonals: [[1, 3]],
+    heights: [{ from: 3, toEdge: [0, 1], label: '高さ5cm' }],
+    segments: [
+      { from: { x: 10, y: 0 }, to: { x: 16, y: 0 }, label: 'BE＝6cm（上底と同じ）', dashed: true },
+      { from: { x: 2, y: 5 }, to: { x: 16, y: 0 }, label: 'DE', dashed: true },
+    ],
+    caption: '台形 ABCD の下底 AB を、上底 DC と同じ 6cm だけ延長して E とする。DC と BE は平行で長さも同じなので DCEB は平行四辺形、対角線 DB で分けた △DCB と △DBE は合同。切り取る △DCB と付け足す △DBE が同じなので、台形 ABCD＝△ADE。底辺 AE＝10＋6＝16、高さ 5 で 40cm²＝(6＋10)×5÷2。',
+    steps: [
+      '台形 ABCD。下底 AB＝10cm、上底 DC＝6cm、高さ 5cm。対角線 DB を引く。',
+      '下底 AB を B の先へ、上底と同じ 6cm だけ延長して E（点線）。BE＝DC＝6cm で平行なので、DCEB は平行四辺形。',
+      '平行四辺形 DCEB は対角線 DB で合同な 2 つの三角形に分かれる。△DCB＝△DBE（どちらも 6×5÷2＝15）。',
+      'D と E を結ぶ。台形から △DCB を切り取り、△DBE を付け足した形が △ADE。切った分と足した分が同じなので面積は変わらない。',
+      '検算：△ADE＝(10＋6)×5÷2＝40、台形の公式 (6＋10)×5÷2＝40 で一致。台形の公式はこの三角形の面積そのもの。延長を 10cm にすると 50 になり合わない。',
+    ],
+    buildSteps: 4,
+  },
+
+  // s154：相似な2つの三角形（相似比1:2）。角はすべて等しく、辺はすべて2倍
+  sext04_s154_naze: {
+    kind: 'polygon',
+    points: [
+      { x: 0, y: 0, label: 'A' },
+      { x: 3, y: 0, label: 'B' },
+      { x: 1, y: 2, label: 'C' },
+    ],
+    sideLabels: ['3', null, null],
+    segments: [
+      { from: { x: 5, y: 0 }, to: { x: 11, y: 0 }, label: "A′B′＝6", dashed: false },
+      { from: { x: 11, y: 0 }, to: { x: 7, y: 4 }, dashed: false },
+      { from: { x: 7, y: 4 }, to: { x: 5, y: 0 }, label: "△A′B′C′", dashed: false },
+    ],
+    caption: '△ABC と △A′B′C′ は相似比 1:2。対応する角 A＝A′、B＝B′、C＝C′ がすべて等しく、対応する辺の比 AB:A′B′＝BC:B′C′＝CA:C′A′＝1:2 がすべて同じ。三角形は 2 組の角が等しければ 3 組目も等しくなる（内角の和 180°）ので、角だけで相似が決まる。',
+    steps: [
+      '左の △ABC と右の △A′B′C′。形が同じで大きさがちがう。',
+      '対応する角はすべて等しい。角 A＝角 A′、角 B＝角 B′、角 C＝角 C′。',
+      '対応する辺の比はすべて 1:2。AB＝3 に対して A′B′＝6。他の 2 辺も 2 倍。',
+      '三角形は内角の和が 180° なので、2 組の角が等しければ 3 組目も等しい。だから角 2 組だけで相似と言える。辺の比を使うなら、はさまれた角が等しいか、3 組の辺の比が等しいこと。',
+      '検算：対応する辺の比を 3 組とも計算して同じ 1:2 になるか。長方形は角が全部 90° でも辺の比がちがえば相似ではない。',
+    ],
+    buildSteps: 3,
+  },
+
+  // s155：△ABCの中に BC に平行な DE。AD:DB=3:4 なので相似比は AD:AB=3:7、DE=BC×3/7
+  sext04_s155_naze: {
+    kind: 'polygon',
+    points: [
+      { x: 3, y: 7, label: 'A' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 7, y: 0, label: 'C' },
+    ],
+    sideLabels: [null, 'BC 21cm', null],
+    regions: [
+      { indices: [0, 1, 2] },
+    ],
+    segments: [
+      { from: { x: 1.714, y: 4 }, to: { x: 4.714, y: 4 }, label: 'DE（BCに平行）9cm', dashed: false },
+    ],
+    caption: '辺 AB 上の D、辺 AC 上の E で DE ∥ BC。同位角と共通の角 A で △ADE ∽ △ABC。AD:DB＝3:4 なら相似比は AD:AB＝3:7（部分:全体）。DE＝BC×3/7＝21×3/7＝9cm。AD:DB の 3:4 をそのまま使った 21×3/4＝15.75 は誤り。AE:EC も 3:4。',
+    steps: [
+      '△ABC。辺 AB 上に D、辺 AC 上に E をとり、DE を BC に平行に引く。',
+      'DE ∥ BC なので同位角が等しく、角 ADE＝角 ABC、角 AED＝角 ACB。角 A は共通。2 組の角が等しいので △ADE ∽ △ABC。',
+      '相似比は対応する辺の比 AD:AB。AD:DB＝3:4 なら AD:AB＝3:(3＋4)＝3:7。DB は三角形の 1 辺ではないので AD:DB は相似比ではない。',
+      'DE:BC＝AD:AB＝3:7。BC＝21cm なら DE＝21×3/7＝9cm。AE:AC も 3:7 で、AE:EC＝3:4。',
+      '検算：対応する辺の比を 2 組計算して同じか。DE 9 ＜ BC 21。AD＝4・DB＝6・AE＝6 なら EC＝6×6/4＝9、AE＋EC＝15＝AC。',
+    ],
+    buildSteps: 2,
+  },
+
+  // s156：相似比3:5。長さは3:5のまま、面積は3²:5²＝9:25
+  sext04_s156_naze: {
+    kind: 'barChart',
+    yMax: 28,
+    bars: [
+      { label: '小の辺 3', value: 3, color: '#0EA5E9' },
+      { label: '大の辺 5', value: 5, color: '#0EA5E9' },
+      { label: '小の面積 3×3=9', value: 9, color: '#C0392B' },
+      { label: '大の面積 5×5=25', value: 25, color: '#C0392B' },
+    ],
+    caption: '相似比 3:5 の図形は、たても よこも 3:5。面積は「長さ × 長さ」なので 3×3:5×5＝9:25 と 2 乗の比になる。小さい方が 27cm² なら 1 あたり 3cm² で大きい方は 75cm²。相似比をそのまま使った 45cm² は長さの倍率しかかかっていない。',
+    steps: [
+      '青の棒は辺の長さ。相似比 3:5 なので、すべての長さが 3:5。周りの長さや弧の長さもこの比。',
+      '面積はたて × よこ（底辺 × 高さ ÷ 2）で、長さを 2 つかける。小は 3×3＝9、大は 5×5＝25（赤の棒）。',
+      '面積比は 9:25＝3²:5²。長さが 5/3 倍なら面積は 5/3×5/3＝25/9 倍（約 2.8 倍）。',
+      '小の面積 27cm² が比の 9 なら 1 あたり 3cm²。大は 3×25＝75cm²。台形（差の部分）は 25−9＝16 で 48cm²。',
+      '検算：75÷27＝25/9＝(5/3)²。面積比 4:9 から長さの比に戻すときは 2 乗のもとの数で 2:3。体積なら 3 乗。',
+    ],
+    buildSteps: 2,
+  },
 };
