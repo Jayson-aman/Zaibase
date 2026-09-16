@@ -437,7 +437,8 @@ export const eigoExtra: Question[] = [
     choices: ['is not', 'is not I', 'are not', 'am not'],
     answer: 'is not',
     hint: 'isn\'t は is と not の短縮形です。',
-    explanation: 'isn\'t は is not の短縮形です。同様に aren\'t は are not の短縮形。',
+    explanation:
+      '【答え】is not\n\n【短縮形の作り方】アポストロフィは、省かれた文字の場所に置く。\n・is not → isn\'t（o が省かれた）\n・are not → aren\'t（o が省かれた）\n・do not → don\'t（o が省かれた）\n・did not → didn\'t\n・cannot → can\'t（no が省かれた）\n・will not → won\'t（形が大きく変わるので特別）\n\n【am not に短縮形はない】\n・is not → isn\'t（○）\n・are not → aren\'t（○）\n・am not → amn\'t（×）\nam not だけ短縮形がないので、I\'m not の形を使う。\n\n【2通りの短縮がある形】\n・he is not → he isn\'t ／ he\'s not\n・they are not → they aren\'t ／ they\'re not\nbe動詞側を短くするか、not 側を短くするかの2通りある。\n\n【使うときの注意】短縮形は話し言葉や くだけた文章で使う。あらたまった文章では、短縮しない形を使うのがふつうである。\n\n【例文】This isn\'t my bag. It\'s his.',
     examFrequency: 'high',
   },
   {
@@ -450,7 +451,8 @@ export const eigoExtra: Question[] = [
     choices: ['That is not a cat.', 'That not is a cat.', 'That does not is a cat.', 'Is not that a cat.'],
     answer: 'That is not a cat.',
     hint: 'be動詞の後ろに not を置きます。',
-    explanation: 'be動詞 is の後ろに not を置いて「That is not a cat.」となります。短縮形では That isn\'t a cat. とも書けます。',
+    explanation:
+      '【答え】That is not a cat.\n\n【be動詞の否定文】be動詞のすぐ後ろに not を置く。語順は変えない。\n\n【ほかの選択肢がまちがいな理由】\n・That not is 〜 … not の位置がちがう\n・That does not is 〜 … be動詞の文に does は使わない\n・Is not that 〜 … これは疑問文の語順になっている\n\n【短縮形】That isn\'t a cat. とも書ける。\n\n【this と that】\n・this … 話し手に近いもの。「これ」\n・that … 話し手から遠いもの。「あれ」\n・複数形は these、those\n\n【a と the】\n・a cat … どれでもよい1ぴきの猫。初めて話に出すとき\n・the cat … 相手も分かっている、あの猫\n日本語の「が」と「は」の使い分けと同じ考え方である。\n\n【一般動詞との比較】\n・be動詞 … That is not a cat.（not を置くだけ）\n・一般動詞 … He does not like cats.（does not が必要）\nまず動詞の種類を見きわめる。\n\n【例文】That is not a cat. It is a rabbit.',
     examFrequency: 'high',
   },
   {
@@ -463,7 +465,8 @@ export const eigoExtra: Question[] = [
     choices: ['What', 'Who', 'Where', 'When'],
     answer: 'What',
     hint: '名前を尋ねるときに使う疑問詞は？',
-    explanation: '名前を尋ねるときは What を使います。「What is your name?」で「あなたの名前は何ですか？」。',
+    explanation:
+      '【答え】What\n\n【疑問詞の使い分け】\n・what（何）… ものごとをたずねる。What is your name?\n・who（だれ）… 人をたずねる。Who is that man?\n・where（どこ）… 場所をたずねる。Where do you live?\n・when（いつ）… 時をたずねる。When is your birthday?\n・why（なぜ）… 理由をたずねる\n・which（どちら）… 限られた中から選ぶ\n・whose（だれの）… 持ち主をたずねる\n・how（どのように）… 方法・状態をたずねる\n\n【なぜ名前は what なのか】日本語では「あなたはだれですか」と言えるが、英語で Who are you? と聞くと「お前は何者だ」という強い言い方になることがある。名前は「何という名か」とたずねるので what を使う。\n・What is your name?（ふつうの聞き方）\n・May I have your name?（よりていねい）\n\n【答え方】疑問詞のある疑問文には Yes / No で答えない。\n・What is your name? — My name is Ken. ／ I\'m Ken.\n\n【例文】What is your name? — My name is Yuki.',
     examFrequency: 'very-high',
   },
   {
@@ -476,7 +479,8 @@ export const eigoExtra: Question[] = [
     choices: ['am', 'is', 'are', 'be'],
     answer: 'are',
     hint: '主語が You のとき be動詞は？',
-    explanation: '主語が you のときは常に are を使います（単数でも複数でも）。',
+    explanation:
+      '【答え】are\n\n【you はいつも are】you は1人でも複数でも are を使う。これは英語の特徴である。\n・You are kind.（あなたは親切だ）\n・You are students.（あなたたちは学生だ）\nどちらを指しているかは文脈で決まる。\n\n【なぜそうなったのか】昔の英語では、1人のときは thou、複数のときは you と分かれていた。しかし thou が使われなくなり、you に一本化された。そのなごりで、you だけ be動詞が are のままになっている。\n\n【kind に a をつけない】kind は形容詞なので a はいらない。\n・You are kind.（正しい）\n・You are a kind.（誤り）\n・You are a kind person.（名詞 person があるので a が必要）\n名詞には a、形容詞にはつけない。\n\n【kind の2つの意味】\n・親切な（形容詞）… a kind person\n・種類（名詞）… What kind of music do you like?\n同じ語で品詞も意味も変わる。\n\n【ほめる言い方】That is kind of you.（ご親切に）。\n\n【例文】You are very kind. Thank you.',
     examFrequency: 'very-high',
   },
   {
@@ -502,7 +506,8 @@ export const eigoExtra: Question[] = [
     choices: ['No, he isn\'t.', 'No, I isn\'t.', 'No, he aren\'t.', 'No, he not is.'],
     answer: 'No, he isn\'t.',
     hint: 'he で聞かれたら he で答え、be動詞も合わせます。',
-    explanation: 'Is he ...? への否定の答えは No, he isn\'t. または No, he is not. です。',
+    explanation:
+      '【答え】No, he isn\'t.\n\n【答え方の決まり】\n・質問の主語をそのまま使う … he で聞かれたら he で答える\n・be動詞も主語に合わせる … he なので is\n・否定なら not をつける\n\n【ほかの選択肢がまちがいな理由】\n・No, I isn\'t. … 主語がちがう。I なら am\n・No, he aren\'t. … he に aren\'t は使えない\n・No, he not is. … 語順がちがう\n\n【短縮しない形】No, he is not. も正しい。あらたまった文章では短縮しない。\n\n【you で聞かれたときだけ主語が変わる】\n・Are you 〜? → Yes, I am.（you → I に変わる）\n・Is he 〜? → Yes, he is.（そのまま）\nyou のときだけ立場を入れかえるのがポイントである。\n\n【答えの後に説明を続ける】会話では、Yes / No だけで終えず、ひとこと足すと自然になる。\n・No, he isn\'t. He is a doctor.\n・Yes, he is. He teaches math.\n英語の会話では、聞かれたことに一言足すのがふつうである。\n\n【例文】Is he a teacher? — No, he isn\'t. He is a student.',
     examFrequency: 'high',
   },
   {
@@ -515,7 +520,8 @@ export const eigoExtra: Question[] = [
     choices: ['am', 'is', 'are', 'be'],
     answer: 'is',
     hint: '主語が The cat（三人称単数）のとき be動詞は？',
-    explanation: 'The cat は三人称単数なので be動詞は is です。',
+    explanation:
+      '【答え】is\n\n【主語が名詞のとき】he や she だけでなく、1つのものを表す名詞も三人称単数である。\n・The cat is 〜（1ぴき）\n・The cats are 〜（2ひき以上）\n・My father is 〜／My parents are 〜\n主語が単数か複数かを見るのが手順である。\n\n【on the table】前置詞 on は「接している」ことを表す。上とはかぎらない。\n・on the table（テーブルの上に）\n・on the wall（壁に）\n・on the ceiling（天井に）\n上下ではなく、くっついているかどうかで決まる。\n\n【場所を表す前置詞】\n・on … 接している\n・in … 中に\n・under … 真下に\n・by／near … そばに\n・between … 2つの間に\n・in front of … 前に\n・behind … 後ろに\n絵にして覚えると確実である。\n\n【There is の文】この文は There is a cat on the table. とも言える。\n・The cat is 〜 … その猫がどこにいるかを言う\n・There is a cat 〜 … 猫がいることを新しく知らせる\nすでに話に出たものには The、初めてなら There is。\n\n【例文】The cat is on the table. It is sleeping.',
     examFrequency: 'high',
   },
   {
@@ -528,7 +534,8 @@ export const eigoExtra: Question[] = [
     choices: ['あなたはどこにいますか？', 'あなたはどこに行きますか？', 'あなたはどこの出身ですか？', 'あなたはどこから来たのですか（過去）？'],
     answer: 'あなたはどこの出身ですか？',
     hint: 'from は出身を表します。',
-    explanation: 'Where are you from? は「あなたはどこの出身ですか？」という意味です。I\'m from Japan. のように答えます。',
+    explanation:
+      '【答え】あなたはどこの出身ですか\n\n【be from の意味】「〜の出身である」。決まった言い方として覚える。\n・I am from Japan.（日本の出身です）\n・Where are you from?（どちらのご出身ですか）\n\n【似た表現との使い分け】ここが最も問われる。\n・Where are you from? … 出身地をたずねる\n・Where are you? … 今どこにいるかをたずねる\n・Where do you live? … 今住んでいる場所をたずねる\n・Where are you going? … これからどこへ行くかをたずねる\n・Where did you come from? … どこから来たか（経路）をたずねる\nbe動詞か一般動詞か、そして時制で、意味がまったく変わる。\n\n【from の意味】「〜から」。出発点を表す。\n・from Japan（日本出身）\n・in Japan（日本にいる）\n・to Japan（日本へ）\nfrom は出発点、to は到着点、in は中にいる状態。\n\n【初対面の会話】\n・Nice to meet you.\n・Where are you from? — I am from Osaka.\n・What do you do?（お仕事は何ですか）\n\n【例文】Where are you from? — I\'m from Hokkaido.',
     examFrequency: 'very-high',
   },
   {
@@ -541,7 +548,8 @@ export const eigoExtra: Question[] = [
     choices: ['am', 'is', 'are', 'be'],
     answer: 'are',
     hint: '「My sister and I」は複数（私たち）です。',
-    explanation: 'My sister and I は「私の姉と私」で複数扱いなので are を使います。',
+    explanation:
+      '【答え】are\n\n【and でつないだ主語は複数】「My sister and I」は2人なので複数である。だから are を使う。\n・My sister and I are students.\n・Tom and Ken are my friends.\nand でつなぐと2つ以上になるので、be動詞は are になる。\n\n【語順の決まり】英語では、自分（I）を最後に置くのがていねいとされる。\n・My sister and I（正しい）\n・I and my sister（あまり使わない）\n自分をへりくだって後に置くという考え方で、日本語の敬語の発想に近い。\n\n【まちがえやすい主語】\n・My sister and I → 複数（are）\n・My sister → 単数（is）\n・Both of them → 複数\n・Each of them → 単数（each は1つずつ）\n・Everyone → 単数（every は1つずつ）\neveryone、everybody、each は単数扱いなのが、最も取りちがえやすい。\n\n【答えるときは we】\n・My sister and I are students. → We are students.\n自分を含む複数は we になる。\n\n【例文】My brother and I are in the same club.',
     examFrequency: 'high',
   },
   {
@@ -554,7 +562,8 @@ export const eigoExtra: Question[] = [
     choices: ['あなたはどこに住んでいますか？', 'あなたは何歳ですか？', 'あなたは元気ですか？', 'あなたの名前は何ですか？'],
     answer: 'あなたは何歳ですか？',
     hint: 'old は「古い」のほかに「年齢」の意味があります。',
-    explanation: 'How old are you? は「あなたは何歳ですか？」という意味です。I\'m 12 years old. のように答えます。',
+    explanation:
+      '【答え】あなたは何歳ですか\n\n【How ＋ 形容詞】how は後ろに語をつけると、たずねる内容が変わる。\n・How old（何歳・築何年）\n・How tall（身長・高さ）\n・How long（長さ・期間）\n・How far（距離）\n・How many ＋ 複数名詞（数）\n・How much（量・値段）\n・How often（頻度）\n・How about 〜?（〜はどうですか）\nhow は組み合わせの数が最も多い疑問詞なので、表にして覚える。\n\n【答え方】\n・I am twelve (years old).\n・years old は省くことができる\n\n【old のもう一つの意味】ものにも使える。\n・How old is this building? — It is about 100 years old.\n建物や物の「築何年」にも使う。\n\n【年齢の言い方】\n・I am twelve years old.\n・a twelve-year-old boy（12歳の少年）… 形容詞として使うときは year が単数になり、ハイフンでつなぐ。ここは試験で問われる\n\n【How are you? との区別】こちらは調子をたずねる決まり文句である。\n\n【例文】How old are you? — I\'m thirteen.',
     examFrequency: 'very-high',
   },
   // ============================================================
@@ -570,7 +579,8 @@ export const eigoExtra: Question[] = [
     choices: ['Do you like soccer?', 'Are you like soccer?', 'Does you like soccer?', 'Like you soccer?'],
     answer: 'Do you like soccer?',
     hint: '一般動詞の疑問文は文頭に Do を置きます。',
-    explanation: '一般動詞の疑問文は主語の前に Do（主語が三人称単数なら Does）を置きます。I → you に変えることも忘れずに。',
+    explanation:
+      '【答え】Do you like soccer?\n\n【一般動詞の疑問文】主語の前に Do または Does を置く。\n・I / you / we / they が主語 … Do\n・he / she / it が主語 … Does\n\n【ほかの選択肢がまちがいな理由】\n・Are you like soccer? … be動詞と一般動詞を混ぜている。最も多いまちがい\n・Does you like 〜? … you に does は使わない\n・Like you soccer? … be動詞のように動詞を前に出しているが、一般動詞ではできない\n\n【I を you に変える】自分のことを言った文を相手への質問にするので、主語も変える。\n・I like soccer.（私はサッカーが好きだ）\n・Do you like soccer?（あなたはサッカーが好きですか）\n日本語でも「私は」を「あなたは」に変えるのと同じである。\n\n【答え方】\n・Yes, I do. ／ No, I don\'t.\ndo で聞かれたら do で答える。Yes, I am. は誤りである。\n\n【動詞の種類を見きわめる】\n・be動詞（am、is、are）… そのまま前に出す\n・一般動詞（like、play、go など）… do／does を使う\n\n【例文】Do you like soccer? — Yes, I do. I play it every day.',
     examFrequency: 'very-high',
   },
   {
@@ -583,7 +593,8 @@ export const eigoExtra: Question[] = [
     choices: ['He doesn\'t play tennis.', 'He don\'t play tennis.', 'He doesn\'t plays tennis.', 'He not plays tennis.'],
     answer: 'He doesn\'t play tennis.',
     hint: '三人称単数の否定は doesn\'t + 動詞の原形。',
-    explanation: '三人称単数（he/she/it）の否定文は doesn\'t（does not）+ 動詞の原形。doesn\'t の後の動詞は原形に戻します。',
+    explanation:
+      '【答え】He doesn\'t play tennis.\n\n【三人称単数の否定文】doesn\'t（does not）＋ 動詞の原形。\n\n【ほかの選択肢がまちがいな理由】\n・He don\'t play 〜 … he には doesn\'t を使う\n・He doesn\'t plays 〜 … doesn\'t の後は原形なので plays は誤り\n・He not plays 〜 … 一般動詞の否定に not だけは使えない\n\n【s が消える理由】ここが最も大事である。\n・He plays tennis.（s あり）\n・He does not play tennis.（play に s がない）\ndoes がすでに三人称単数を表しているので、動詞に s は不要になる。s が does に移ったと考えると分かりやすい。\n\n【疑問文でも同じ】\n・Does he play tennis?（plays ではない）\n\n【短縮形】\n・do not → don\'t\n・does not → doesn\'t\n\n【be動詞との比較】\n・be動詞 … He is not a student.（not を置くだけ）\n・一般動詞 … He does not play tennis.（does not が必要）\nHe is not play tennis. のように混ぜるのが最も多いまちがいである。\n\n【例文】He doesn\'t play tennis, but he plays soccer.',
     examFrequency: 'very-high',
   },
   {
@@ -596,7 +607,8 @@ export const eigoExtra: Question[] = [
     choices: ['studys', 'studies', 'studyes', 'study'],
     answer: 'studies',
     hint: '子音 + y で終わる動詞は y を i に変えて -es をつけます。',
-    explanation: 'study は子音 + y で終わるので y を i に変えて es をつけ studies になります。例：cry → cries、fly → flies。',
+    explanation:
+      '【答え】studies\n\n【y で終わる動詞の変化】直前が子音か母音かで変わる。\n・子音と y … y を i に変えて es。study → studies、cry → cries、carry → carries、try → tries、fly → flies\n・母音と y … そのまま s。play → plays、enjoy → enjoys、stay → stays、buy → buys\nstudy は d（子音）と y なので studies、play は a（母音）と y なので plays となる。直前の1文字を見るだけで決まる。\n\n【過去形でも同じ決まり】\n・study → studied、cry → cried\n・play → played、enjoy → enjoyed\n三単現と過去形で、同じ規則が働いている。まとめて覚えると効率がよい。\n\n【ing 形では y はそのまま】\n・study → studying、cry → crying、play → playing\ning のときだけ y を変えない。ここが例外なので注意する。\n\n【三単現の s のつけ方まとめ】\n・ふつう … s\n・s・x・ch・sh・o で終わる … es（watches、washes、goes、does）\n・子音と y … y を i にして es\n・have → has（特別）\n\n【例文】She studies English every day.',
     examFrequency: 'very-high',
   },
   {
@@ -609,7 +621,8 @@ export const eigoExtra: Question[] = [
     choices: ['Yes, she does.', 'Yes, she do.', 'Yes, she speaks.', 'Yes, she is.'],
     answer: 'Yes, she does.',
     hint: 'Does で聞かれたら does で答えます。',
-    explanation: 'Does ...? への肯定の答えは Yes, 主語 + does. です。動詞を繰り返す必要はありません。',
+    explanation:
+      '【答え】Yes, she does.\n\n【答え方の決まり】聞かれた語で答える。\n・Does she 〜? → Yes, she does. ／ No, she doesn\'t.\n・Do you 〜? → Yes, I do. ／ No, I don\'t.\n・Is she 〜? → Yes, she is. ／ No, she isn\'t.\n\n【ほかの選択肢がまちがいな理由】\n・Yes, she do. … she には does を使う\n・Yes, she speaks. … 動詞をくり返さない。does でまとめる\n・Yes, she is. … be動詞で聞かれていないので使えない\n\n【なぜ動詞をくり返さないのか】does が、すでに speak English の代わりをしている。英語では、同じ内容をくり返さず、助動詞だけで受けるのがふつうである。\n・Do you like it? — Yes, I do.（＝ I like it.）\n・Can you swim? — Yes, I can.（＝ I can swim.）\n日本語では「はい、好きです」と動詞を言うが、英語では do だけでよい。\n\n【答えの後に説明を足す】Yes, she does. She speaks it very well. のように、ひとこと足すと自然になる。\n\n【例文】Does she speak English? — Yes, she does.',
     examFrequency: 'very-high',
   },
   {
@@ -622,7 +635,8 @@ export const eigoExtra: Question[] = [
     choices: ['gos', 'goes', 'goies', 'go'],
     answer: 'goes',
     hint: '-o で終わる動詞は -es をつけます。',
-    explanation: 'go は -o で終わるので goes になります。同様に do → does。',
+    explanation:
+      '【答え】goes\n\n【o で終わる動詞】es をつける。\n・go → goes、do → does\nこの2つが代表例である。\n\n【なぜ es なのか】s だけでは発音しにくいためである。実際に gos と言ってみると発音しづらい。発音のしやすさが、つづりの決まりを生んでいる。\n\n【es をつける動詞】\n・s で終わる … pass → passes\n・x で終わる … fix → fixes\n・ch で終わる … watch → watches、teach → teaches\n・sh で終わる … wash → washes、finish → finishes\n・o で終わる … go → goes、do → does\ns・x・ch・sh・o と覚える。\n\n【does の2つのはたらき】\n・「する」という意味の動詞 … He does his homework.\n・疑問文・否定文をつくる助動詞 … Does he play tennis?\n形は同じでも、はたらきがちがう。What does he do? のように、1つの文に両方出てくることもある。\n\n【go の変化】go - went - gone。過去形はまったく別の形になる不規則動詞である。\n\n【例文】He goes to school by bike.',
     examFrequency: 'very-high',
   },
   {
@@ -635,7 +649,8 @@ export const eigoExtra: Question[] = [
     choices: ['私は知っています。', '私は知りません。', '私は行きません。', '私は分かりません（すべて同じ）。'],
     answer: '私は知りません。',
     hint: 'don\'t は do not の短縮形で否定を表します。',
-    explanation: 'I don\'t know. は「私は知りません。」という意味です。don\'t = do not で一般動詞の否定を作ります。',
+    explanation:
+      '【答え】私は知りません\n\n【don\'t の意味】do not の短縮形で、一般動詞の否定をつくる。\n\n【know と understand の区別】選択肢にあった「分かりません」との使い分けが大事である。\n・I don\'t know. … 知らない、情報を持っていない\n・I don\'t understand. … 理解できない、意味が分からない\n例）\n・Where is the station? — I don\'t know.（知らない）\n・説明を聞いた後で … I don\'t understand.（分からない）\n日本語ではどちらも「分かりません」と言えてしまうので、使い分けを意識する。\n\n【I don\'t know の使い方の注意】質問に対して I don\'t know. とだけ答えると、そっけなく聞こえることがある。\n・I\'m not sure.（はっきりとは分かりません）\n・I\'m afraid I don\'t know.（申し訳ありませんが分かりません）\nやわらかい言い方を知っておくとよい。\n\n【know の変化】know - knew - known。k を発音しない（knife、knee、knock も同じ）。\n\n【例文】I don\'t know his name.',
     examFrequency: 'very-high',
   },
   {
@@ -648,7 +663,8 @@ export const eigoExtra: Question[] = [
     choices: ['watchs', 'watches', 'watchies', 'watch'],
     answer: 'watches',
     hint: '-ch、-sh、-s、-x、-o で終わる動詞は -es をつけます。',
-    explanation: 'watch は -ch で終わるので -es をつけて watches になります。同様に teach → teaches、wash → washes。',
+    explanation:
+      '【答え】watches\n\n【ch で終わる動詞】es をつける。\n・watch → watches、teach → teaches、catch → catches、touch → touches\n\n【es をつける5つの場合】\n・s … pass → passes\n・x … fix → fixes\n・ch … watch → watches\n・sh … wash → washes\n・o … go → goes\ns・x・ch・sh・o と覚える。どれも s だけでは発音しにくい音である。\n\n【名詞の複数形も同じ決まり】\n・bus → buses、box → boxes、watch → watches、dish → dishes、potato → potatoes\n動詞の三単現と名詞の複数形で、同じ規則が働いている。まとめて覚えると効率がよい。\n\n【watch の2つの意味】\n・見る（動詞）… watch TV\n・腕時計（名詞）… a wrist watch\n同じ語が動詞にも名詞にもなる。もとは「見張る」という意味で、時間を見張る道具だから時計になった。\n\n【see・look・watch】\n・see … 目に入る\n・look at … 目を向ける\n・watch … 動くものを見続ける\n\n【例文】She watches TV after dinner.',
     examFrequency: 'high',
   },
   {
@@ -661,7 +677,8 @@ export const eigoExtra: Question[] = [
     choices: ['あなたは今何をしていますか？', 'あなたは何が好きですか？', 'あなたの職業は何ですか？', 'あなたはどこに行きますか？'],
     answer: 'あなたの職業は何ですか？',
     hint: '繰り返す do は職業（仕事）を尋ねる表現です。',
-    explanation: 'What do you do? は「あなたの職業（仕事）は何ですか？」という意味の決まり文句です。I\'m a student. などと答えます。',
+    explanation:
+      '【答え】あなたの職業は何ですか\n\n【なぜ職業をたずねる意味になるのか】直訳すると「あなたは何をしますか」だが、これで「どんな仕事をしていますか」という決まった言い方になる。ふだん何をしているか、つまり職業をたずねているのである。\n\n【2つの do】この文には do が2回出てくる。はたらきがちがう。\n・1つ目の do … 疑問文をつくる助動詞\n・2つ目の do … 「する」という意味の動詞\n形が同じでも役割は別である。\n\n【似た表現との区別】ここが最も問われる。\n・What do you do? … 職業をたずねる\n・What are you doing? … 今していることをたずねる\n現在形か進行形かで、意味がまったくちがう。現在形は習慣、進行形は今していることを表すからである。\n\n【答え方】\n・I\'m a student.\n・I work at a bank.\n・I teach English.\n職業には a をつけるのを忘れない。\n\n【よりていねいな聞き方】What do you do for a living? ／ May I ask what you do?\n\n【例文】What do you do? — I\'m a nurse.',
     examFrequency: 'high',
   },
   {
@@ -674,7 +691,8 @@ export const eigoExtra: Question[] = [
     choices: ['She likes cats.', 'She like cats.', 'She likies cats.', 'She do likes cats.'],
     answer: 'She likes cats.',
     hint: 'She は三人称単数なので動詞に -s または -es をつけます。',
-    explanation: 'She は三人称単数なので like に -s をつけて likes とします。She likes cats. が正解。',
+    explanation:
+      '【答え】She likes cats.\n\n【なぜ likes なのか】主語が she（三人称単数）なので、現在形では動詞に s をつける。\n\n【ほかの選択肢がまちがいな理由】\n・She like cats. … s がついていない\n・She likies cats. … つづりが誤り。like は e を取らずに s をつけるだけ\n・She do likes cats. … do は不要。ふつうの文に do は使わない\n\n【cats と複数形にする理由】「猫が好き」というのは、特定の1ぴきではなく猫という種類全体が好きだという意味である。種類全体をいうとき、数えられる名詞は複数形にする。\n・I like cats.／I like dogs.／I like apples.\n・数えられない名詞は複数にしない … I like music.\n\n【do を使う場合】強調するときには使える。\n・She does like cats.（本当に猫が好きなんです）\nただし中学では、ふつうの文に do は使わないと覚えてよい。\n\n【三単現の s がつかない場合】\n・疑問文・否定文（Does she like 〜?）\n・助動詞の後（She can like）\n・過去形（She liked）\n\n【例文】She likes cats, but her brother likes dogs.',
     examFrequency: 'very-high',
   },
   {
@@ -687,7 +705,8 @@ export const eigoExtra: Question[] = [
     choices: ['No, I don\'t.', 'No, I doesn\'t.', 'No, you don\'t.', 'No, I not do.'],
     answer: 'No, I don\'t.',
     hint: 'Do you ...? で聞かれたら I で答え、否定は don\'t を使います。',
-    explanation: 'Do you ...? への否定の答えは No, I don\'t. です。don\'t = do not。',
+    explanation:
+      '【答え】No, I don\'t.\n\n【答え方の決まり】\n・Do you 〜? → I で答える\n・do で聞かれたら do（否定なら don\'t）で答える\n\n【ほかの選択肢がまちがいな理由】\n・No, I doesn\'t. … I には don\'t を使う\n・No, you don\'t. … 主語がちがう。相手のことを答えてしまっている\n・No, I not do. … 語順がちがう\n\n【短縮しない形】No, I do not. も正しい。\n\n【play the piano の the】楽器を演奏するときは the をつける。\n・play the piano、play the guitar\n・スポーツには the をつけない … play soccer、play tennis\n楽器には the、スポーツには何もつけない。対にして覚える。\n\n【答えの後に説明を足す】\n・No, I don\'t. But I play the guitar.\n英語の会話では、否定で終わらせず、ひとこと足すのが自然である。\n\n【can との区別】\n・Do you play the piano?（ふだん弾きますか）\n・Can you play the piano?（弾けますか）\n習慣か能力かで使い分ける。\n\n【例文】Do you play the piano? — No, I don\'t.',
     examFrequency: 'very-high',
   },
   {
@@ -700,7 +719,8 @@ export const eigoExtra: Question[] = [
     choices: ['haves', 'hases', 'has', 'have'],
     answer: 'has',
     hint: 'have だけは特別な変化をします。',
-    explanation: 'have の三人称単数現在形は has です（規則変化ではなく不規則）。He has a car. のように使います。',
+    explanation:
+      '【答え】has\n\n【have だけ特別】三人称単数で形そのものが変わるのは have だけである。\n・I have／You have／We have／They have\n・He has／She has／It has\nhaves とは言わない。\n\n【疑問文・否定文では have に戻る】\n・Does he have a car?（has ではない）\n・He does not have a car.\ndoes を使ったら動詞は原形、という決まりがここでも働いている。\n\n【have の意味の広さ】英語で最もよく使う動詞の一つで、意味が広い。\n・持っている … I have a pen.\n・飼っている … She has a dog.\n・家族がいる … I have two brothers.\n・食べる・飲む … I have breakfast at seven.\n・病気にかかる … I have a cold.\n・時を過ごす … Have a good day.\n日本語ではまったくちがう言い方になるものが、英語ではすべて have で言える。\n\n【have got】イギリス英語では、持っているという意味で have got をよく使う。I\'ve got a car.\n\n【例文】He has a new bike. Does he have a helmet?',
     examFrequency: 'very-high',
   },
   {
@@ -713,7 +733,8 @@ export const eigoExtra: Question[] = [
     choices: ['彼女はねこが好きです。', '彼女はねこが好きではありません。', '彼女はねこを飼っています。', '彼女はねこを飼っていません。'],
     answer: '彼女はねこが好きではありません。',
     hint: 'doesn\'t は does not で否定を表します。',
-    explanation: 'She doesn\'t like cats. は「彼女はねこが好きではありません。」という意味です。doesn\'t の後の動詞は原形 like になります。',
+    explanation:
+      '【答え】彼女はねこが好きではありません\n\n【doesn\'t の後は原形】\n・She likes cats.（s あり）\n・She doesn\'t like cats.（likes ではない）\ndoes がすでに三人称単数を表しているので、動詞は原形に戻る。\n\n【like と have の区別】選択肢にあった「飼っています」との使い分けが大事である。\n・like cats … 猫が好き\n・have a cat … 猫を飼っている\n好きなことと、飼っていることは別である。\n\n【cats と複数形にする理由】猫という種類全体を指すので複数形にする。\n\n【否定の程度】\n・She doesn\'t like cats.（好きではない）\n・She doesn\'t like cats very much.（あまり好きではない）\n・She hates cats.（大きらい）\nvery much を加えると、否定がやわらぐのがおもしろいところである。\n\n【短縮形】doesn\'t ＝ does not。\n\n【be動詞との比較】\n・She is not happy.（be動詞。not を置くだけ）\n・She doesn\'t like cats.（一般動詞。does not が必要）\n\n【例文】She doesn\'t like cats, but she likes dogs.',
     examFrequency: 'high',
   },
   {
@@ -726,7 +747,8 @@ export const eigoExtra: Question[] = [
     choices: ['彼は朝食を食べますか？', '彼は朝食に何を食べますか？', '彼は何時に朝食を食べますか？', '彼はどこで朝食を食べますか？'],
     answer: '彼は朝食に何を食べますか？',
     hint: 'What は「何を」、for breakfast は「朝食に」という意味です。',
-    explanation: 'What does he eat for breakfast? は「彼は朝食に何を食べますか？」という意味です。',
+    explanation:
+      '【答え】彼は朝食に何を食べますか\n\n【文の組み立て】\n・What（何を）\n・does he eat（彼は食べますか）\n・for breakfast（朝食に）\n疑問詞 → does → 主語 → 動詞（原形）の順である。\n\n【eat が原形である理由】does を使っているので、動詞は原形に戻る。eats ではない。\n\n【for breakfast の for】「〜として、〜に」という意味で、食事を表すときに使う。\n・for breakfast（朝食に）・for lunch（昼食に）・for dinner（夕食に）\n・食事名には a も the もつけない\n\n【時をたずねる場合との区別】\n・What does he eat 〜?（何を食べるか）\n・What time does he eat 〜?（何時に食べるか）\n・Where does he eat 〜?（どこで食べるか）\n・Why does he eat 〜?（なぜ食べるか）\n疑問詞が変わると、たずねる内容が変わる。\n\n【答え方】\n・He eats rice and miso soup.（eats と s をつける）\n質問では原形だが、答えでは s をつける。ここも取りちがえやすい。\n\n【例文】What does he eat for breakfast? — He eats bread and eggs.',
     examFrequency: 'high',
   },
   {
@@ -739,7 +761,8 @@ export const eigoExtra: Question[] = [
     choices: ['名詞', '形容詞', '動詞', '副詞'],
     answer: '動詞',
     hint: '「好きだ」という意味で使われています。',
-    explanation: 'この文の like は「好きだ」という意味の動詞です。I like music. = 私は音楽が好きです。',
+    explanation:
+      '【答え】動詞\n\n【なぜ動詞か】「好きだ」という意味で、主語 I の動作（心のはたらき）を表しているからである。\n\n【like のもう一つの使い方】like は前置詞にもなる。\n・動詞 … I like music.（好きだ）\n・前置詞 … He runs like the wind.（風のように走る）\n・look like 〜（〜のように見える）\n・What is it like?（それはどんなものですか）\n同じ語が、文の中での位置によって品詞が変わる。後ろに名詞が来て「〜のような」の意味なら前置詞である。\n\n【品詞の見分け方】\n・その語が文の中で何をしているかを見る\n・動作や状態を表して述語になっていれば動詞\n・名詞の前に置かれて「〜のような」なら前置詞\n\n【英語の品詞】名詞・代名詞・動詞・形容詞・副詞・前置詞・接続詞・冠詞・感動詞。\n\n【like の使い方】\n・like ＋ 名詞 … I like music.\n・like ＋ ing … I like reading.\n・like ＋ to 不定詞 … I like to read.\n動名詞と不定詞のどちらも使える動詞である。\n\n【例文】I like music. She sings like a professional.',
     examFrequency: 'medium',
   },
   {
@@ -778,7 +801,8 @@ export const eigoExtra: Question[] = [
     choices: ['teachs', 'teaches', 'teachies', 'teach'],
     answer: 'teaches',
     hint: '-ch で終わる動詞は -es をつけます。',
-    explanation: 'teach は -ch で終わるので -es をつけて teaches になります。He teaches math. のように使います。',
+    explanation:
+      '【答え】teaches\n\n【ch で終わる動詞】es をつける。\n・teach → teaches、watch → watches、catch → catches\n\n【teach の使い方】目的語を2つとれる。\n・teach ＋ 人 ＋ もの … She teaches us English.\n・teach ＋ もの ＋ to ＋ 人 … She teaches English to us.\n2通りの言い方ができるので、書きかえ問題としてよく出る。\n\n【to を使うか for を使うか】\n・to … give、show、tell、teach、send、lend（相手が必要な動作）\n・for … buy、make、cook、get（相手がいなくてもできる動作）\n・I bought a book for her.（to ではない）\n相手がいないと成り立たない動作なら to と考えると分かりやすい。\n\n【teach の変化】teach - taught - taught。au のつづりになるのは、catch - caught、buy - bought、think - thought、bring - brought も同じである。\n\n【teach と learn】\n・teach … 教える\n・learn … 学ぶ\n日本語の「教わる」は learn である。teach と取りちがえないこと。\n\n【例文】Mr. Sato teaches math at our school.',
     examFrequency: 'high',
   },
   {
@@ -791,7 +815,8 @@ export const eigoExtra: Question[] = [
     choices: ['私は毎朝走ります。', '私は毎朝走りました。', '私は今朝走っています。', '私は毎朝走るつもりです。'],
     answer: '私は毎朝走ります。',
     hint: '現在形は習慣や繰り返しの動作を表します。',
-    explanation: '「I run every morning.」は現在形で「私は毎朝走ります（習慣）」という意味です。every morning が習慣を示しています。',
+    explanation:
+      '【答え】私は毎朝走ります\n\n【現在形が表すもの】現在形は、いつもくり返していること（習慣）や、変わらない事実を表す。「今まさにしている」という意味ではない。\n・I run every morning.（毎朝走る習慣がある）\n・The sun rises in the east.（変わらない事実）\n\n【現在形と現在進行形の区別】ここが最も大事である。\n・I run every morning. … 習慣。今走っているとはかぎらない\n・I am running now. … 今まさに走っている\n日本語の「走ります」は両方の意味になりうるので、英語では形で区別する。\n\n【習慣を表す語】現在形と一緒によく使う。\n・every day、every morning、always、usually、often、sometimes、never\n・on Sundays（日曜日にはいつも）\nこれらの語があれば現在形と判断できる。\n\n【頻度を表す副詞の位置】\n・be動詞の後 … I am always busy.\n・一般動詞の前 … I always run in the morning.\n位置が決まっているので、並べかえ問題で問われる。\n\n【例文】I run every morning. I am running now.',
     examFrequency: 'high',
   },
   {
@@ -830,7 +855,8 @@ export const eigoExtra: Question[] = [
     choices: ['cute', 'ugly', 'pretty', 'nice'],
     answer: 'ugly',
     hint: '「美しい」の反対は？',
-    explanation: 'beautiful（美しい）の反意語は ugly（醜い、きたない）です。cute/pretty/nice はどれも良い意味です。',
+    explanation:
+      '【答え】ugly\n\n【反対の意味の語】\n・beautiful（美しい）⇔ ugly（みにくい）\n\n【ほかの選択肢】どれも よい意味の語である。\n・cute … かわいい。小さいものや子どもに使う\n・pretty … きれい、かわいらしい\n・nice … すてきな。軽く使える\n似た意味の語の中から、反対の意味の語を選ぶ形の問題である。\n\n【美しさを表す語の使い分け】\n・beautiful … 美しい。人にも風景にも使える\n・pretty … かわいらしい。beautiful より軽い\n・handsome … 男性に使うことが多い\n・cute … かわいい\n・good-looking … 見た目がよい\n\n【反対の意味の語のつくり方】\n・un をつける … happy → unhappy、kind → unkind、known → unknown\n・im・in をつける … possible → impossible、correct → incorrect\n・dis をつける … like → dislike、agree → disagree\n・まったく別の語 … beautiful → ugly、big → small、hot → cold\nun をつければよいとはかぎらないので、語ごとに覚える。\n\n【例文】The sunset was beautiful.',
     examFrequency: 'high',
   },
   {
@@ -843,7 +869,8 @@ export const eigoExtra: Question[] = [
     choices: ['芸術家', '医師', '科学者', '教師'],
     answer: '科学者',
     hint: 'science（科学）+ ist（人）で成り立っています。',
-    explanation: 'scientist は「科学者」です。artist は芸術家、doctor/physician は医師、teacher は教師。',
+    explanation:
+      '【答え】科学者\n\n【語のつくり】science（科学）＋ ist（人）で「科学をする人」となる。語のつくりが分かると、知らない語も意味が推測できる。\n\n【ist がつく語】\n・artist（芸術家）・pianist（ピアニスト）・dentist（歯科医）・journalist（記者）・tourist（観光客）・novelist（小説家）・specialist（専門家）\n\n【「人」を表すほかの語尾】\n・er … teacher、singer、writer、driver、player、worker\n・or … actor、doctor、director、visitor\n・ian … musician、politician、librarian、magician\n動詞や名詞に語尾をつけて「人」を表すのが英語のつくり方である。\n\n【語のつくりを知る利点】初めて見る語でも、\n・science → scientist（科学者）\n・music → musician（音楽家）\n・politics → politician（政治家）\nのように、もとの語から意味が分かる。単語を1つずつ覚えるより、つくりを知るほうが効率がよい。\n\n【science に関わる語】science（科学）・scientific（科学的な）・experiment（実験）・research（研究）・discover（発見する）。\n\n【例文】She wants to be a scientist.',
     examFrequency: 'high',
   },
   {
@@ -856,7 +883,8 @@ export const eigoExtra: Question[] = [
     choices: ['政府', '環境', '教育', '経済'],
     answer: '環境',
     hint: 'environ（囲む）が語源で、私たちを取り巻くものです。',
-    explanation: 'environment は「環境」です。government は政府、education は教育、economy は経済。',
+    explanation:
+      '【答え】環境\n\n【語のなりたち】environ（取り巻く）＋ ment（名詞をつくる語尾）で、私たちを取り巻くものという意味になる。\n\n【ment がつく語】動詞を名詞にする語尾である。\n・govern（治める）→ government（政府）\n・develop（発達する）→ development（発達）\n・move（動く）→ movement（動き・運動）\n・agree（同意する）→ agreement（合意）\n・judge（判断する）→ judgement（判断）\n語尾を知ると、品詞が見分けられる。\n\n【the environment に the がつく】地球の環境という、はっきり決まったものを指すので the をつける。\n\n【環境に関わる語】入試の長文で最もよく出る分野である。\n・pollution（汚染）・global warming（地球温暖化）・climate change（気候変動）\n・recycle（再利用する）・reduce（減らす）・reuse（再使用する）\n・waste（ごみ、むだにする）・energy（エネルギー）\n・endangered species（絶滅のおそれのある種）\n・sustainable（持続可能な）\n社会科の学習内容と重なるので、両方合わせて覚えると理解が深まる。\n\n【例文】We must protect the environment.',
     examFrequency: 'high',
   },
   {
@@ -869,7 +897,8 @@ export const eigoExtra: Question[] = [
     choices: ['興奮した', 'くたくたに疲れた', '怒った', '悲しい'],
     answer: 'くたくたに疲れた',
     hint: 'tired より程度が強い疲労を表します。',
-    explanation: 'exhausted は「くたくたに疲れた、疲れ果てた」という意味です。excited は興奮した、angry は怒った、sad は悲しい。',
+    explanation:
+      '【答え】くたくたに疲れた\n\n【tired との程度のちがい】\n・tired … 疲れた。ふつうの疲れ\n・exhausted … 疲れ果てた。もう動けないほど\nexhausted のほうがずっと強い。\n\n【それ自体が強い意味をもつ語】exhausted は「非常に疲れた」という意味をすでに含むので、very をつけにくい。\n・very tired（○）\n・very exhausted（△）… absolutely exhausted、completely exhausted と言う\n同じ形の語をまとめて覚える。\n・good → excellent、great（すばらしい）\n・big → huge、enormous（巨大な）\n・cold → freezing（凍えるような）\n・hot → boiling（焼けつくような）\n・hungry → starving（飢えるような）\n・angry → furious（激怒した）\n強い意味の語には very ではなく absolutely、really を使う。\n\n【ed で終わる気持ちの形容詞】exhausted、tired、excited、interested、surprised、bored。\n・人の気持ちは ed、原因になるものは ing。exhausting work（疲れさせる仕事）\n\n【例文】I was exhausted after the marathon.',
     examFrequency: 'high',
   },
   {
@@ -882,7 +911,8 @@ export const eigoExtra: Question[] = [
     choices: ['現代の', '古代の', '未来の', '最近の'],
     answer: '古代の',
     hint: 'ancient Rome（古代ローマ）のように使います。',
-    explanation: 'ancient は「古代の、大昔の」という意味です。modern は現代の、future は未来の、recent は最近の。',
+    explanation:
+      '【答え】古代の\n\n【ほかの選択肢】\n・modern … 現代の\n・future … 未来の\n・recent … 最近の\n\n【時を表す形容詞】まとめて覚える。\n・ancient（古代の）… ancient Rome、ancient Egypt\n・medieval（中世の）\n・modern（現代の、近代の）\n・contemporary（同時代の、現代の）\n・recent（最近の）\n・future（未来の）\n・past（過去の）・present（現在の）\n歴史の学習と合わせて覚えると、社会科の内容とつながる。\n\n【ancient の使い方】\n・ancient Rome（古代ローマ）\n・ancient Egypt（古代エジプト）\n・ancient civilization（古代文明）\n・an ancient temple（古い寺）\n文明や遺跡について語るときによく使う。\n\n【old との区別】\n・old … 古い。ものにも人にも使える\n・ancient … 大昔の。何千年も前のことに使う\n・an old house（古い家）／an ancient ruin（古代の遺跡）\n時間のへだたりがまったくちがう。\n\n【例文】We learned about ancient Egypt in social studies.',
     examFrequency: 'high',
   },
   {
