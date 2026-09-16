@@ -900,4 +900,134 @@ export const lessonFigsSansuExt05: Record<string, Figure> = {
     ],
     buildSteps: 3,
   },
+
+  // s168：長方形の角Bを折り目EF（EB=5、FB=3）で折る。角BEF=角B′EF=31°、角AEB′=180−31×2=118°
+  sext05_s168_naze: {
+    kind: 'polygon',
+    points: [
+      { x: 0, y: 8, label: 'A' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 10, y: 0, label: 'C' },
+      { x: 10, y: 8, label: 'D' },
+    ],
+    segments: [
+      { from: { x: 0, y: 5 }, to: { x: 3, y: 0 }, label: '折り目EF' },
+      { from: { x: 0, y: 5 }, to: { x: 4.41, y: 2.65 }, label: "EB′", dashed: true },
+      { from: { x: 3, y: 0 }, to: { x: 4.41, y: 2.65 }, label: "FB′", dashed: true },
+    ],
+    caption: '長方形の角 B を、辺 AB 上の E と辺 BC 上の F を結ぶ折り目 EF で折ると B は B′ に重なる。角 BEF＝角 B′EF＝31°（折り目の両側に同じ角）。A・E・B は一直線なので角 AEB′＝180−31−31＝118°。直角も保たれて角 EB′F＝90°、EB′＝EB＝5、FB′＝FB＝3。',
+    steps: [
+      '長方形 ABCD。辺 AB 上の点 E（EB＝5cm）と辺 BC 上の点 F（FB＝3cm）を結ぶ折り目 EF。',
+      '折り目 EF で角 B を折ると、三角形 EBF が裏返って三角形 EB′F（点線）に重なる。',
+      '折り返しは線対称移動なので、角 BEF＝角 B′EF＝31°。折り目の両側に同じ角が 1 つずつできる。',
+      'A・E・B は一直線で 180°。点 E のまわりは角 AEB′＋角 B′EF＋角 FEB＝180 なので、角 AEB′＝180−31−31＝118°。1 回だけ引いた 149° は折った後の角の数え忘れ。',
+      '検算：118＋31＋31＝180。EB′＝EB＝5cm、FB′＝FB＝3cm、角 EB′F＝90°。三角形 EB′F の角は 31・90・59 で折る前と同じ。',
+    ],
+    buildSteps: 2,
+  },
+
+  // s169：長方形ABCD（8×5）を対角線ACで折る。折られた辺ABとDCの交点E。錯角＋折り返しで角EAC＝角ECA＝32°、△AECは二等辺三角形
+  sext05_s169_naze: {
+    kind: 'polygon',
+    points: [
+      { x: 0, y: 0, label: 'A' },
+      { x: 8, y: 0, label: 'B' },
+      { x: 8, y: 5, label: 'C' },
+      { x: 0, y: 5, label: 'D' },
+    ],
+    sideLabels: ['AB 8cm', 'BC 5cm', null, null],
+    diagonals: [[0, 2]],
+    segments: [
+      { from: { x: 0, y: 0 }, to: { x: 3.51, y: 7.19 }, label: "折られた辺 AB′（DC と E で交わる）", dashed: true },
+      { from: { x: 8, y: 5 }, to: { x: 3.51, y: 7.19 }, label: "CB′", dashed: true },
+    ],
+    caption: '長方形 ABCD を対角線 AC で折ると、辺 AB は AB′ に移り、辺 DC と点 E で交わる。AB ∥ DC の錯角で角 ACD＝角 BAC＝32°、折り返しで角 EAC＝角 BAC＝32°。三角形 AEC は 2 つの角が 32° の二等辺三角形（EA＝EC）で、頂角 AEC＝180−32×2＝116°。直角は B′ に移っていて E の角は直角ではない。',
+    steps: [
+      '長方形 ABCD（AB＝8、BC＝5）。対角線 AC を折り目にする。角 BAC＝32°。',
+      'AB ∥ DC なので、AC を横断線と見た錯角で角 ACD＝角 BAC＝32°。',
+      'AC で折ると辺 AB は AB′（点線）に移り、角 EAC＝角 BAC＝32°（折り返しで重なる角）。AB′ は辺 DC と点 E で交わる。',
+      '三角形 AEC は角 EAC＝角 ECA＝32° なので二等辺三角形（EA＝EC）。頂角 AEC＝180−32−32＝116°。32＋32＝64 は底角の和（外角）。',
+      '検算：32＋32＋116＝180。外角 180−116＝64＝32＋32。角 BAC が変わっても頂角＝180−2×その角。',
+    ],
+    buildSteps: 3,
+  },
+
+  // s170：1辺12cmの正方形を中線で折り、さらに対角線で折る。面積は144→72→36、層は1→2→4
+  sext05_s170_naze: {
+    kind: 'barChart',
+    yMax: 160,
+    yLabel: 'cm²',
+    bars: [
+      { label: '0回 144(1層)', value: 144, color: '#0EA5E9' },
+      { label: '1回 72(2層)', value: 72, color: '#F59E0B' },
+      { label: '2回 36(4層)', value: 36, color: '#C0392B' },
+      { label: '3回 18(8層)', value: 18, color: '#94A3B8' },
+    ],
+    caption: '1 辺 12cm の正方形（144cm²）を中線 MN で折ると合同な長方形 2 つが重なり 72cm²・2 層。その長方形を対角線で折ると合同な直角三角形 2 つが重なり 36cm²・4 層。折り目が図形を合同な 2 つに分けるとき、折るたびに面積は半分、層は 2 倍。見えている面積 × 層 ＝ 144 のまま。',
+    steps: [
+      '青の棒がもとの正方形 12×12＝144cm²、紙は 1 層。',
+      '中点を結ぶ線 MN で折る。MN は正方形を合同な 6×12 の長方形 2 つに分けるので、ぴったり重なって 72cm²・2 層（オレンジ）。',
+      'その長方形を対角線で折る。対角線は長方形を合同な直角三角形 2 つに分けるので、また半分の 36cm²・4 層（赤）。12×6÷2＝36 でも同じ。',
+      '3 回目も合同に折れば 18cm²・8 層（灰色）。面積は ÷2、層は ×2 の列。層は「回数」ではなく 2 の回数乗。',
+      '検算：36×4＝144、72×2＝144、18×8＝144。見えている面積 × 層 ＝ もとの面積。合同に分けない折り目では半分にならない。',
+    ],
+    buildSteps: 3,
+  },
+
+  // s171：直角三角形ABC（A=90°、AB=6、AC=8、BC=10）。中点E・Fを結ぶ折り目で A を折ると BC 上の D に重なる。ED=AE=3、FD=AF=4
+  sext05_s171_naze: {
+    kind: 'polygon',
+    points: [
+      { x: 0, y: 0, label: 'A' },
+      { x: 0, y: 6, label: 'B' },
+      { x: 8, y: 0, label: 'C' },
+    ],
+    sideLabels: ['AB 6cm', 'BC 10cm', 'AC 8cm'],
+    rightAngles: [0],
+    segments: [
+      { from: { x: 0, y: 3 }, to: { x: 4, y: 0 }, label: '折り目EF＝5cm' },
+      { from: { x: 0, y: 3 }, to: { x: 2.88, y: 3.84 }, label: 'ED＝3', dashed: true },
+      { from: { x: 4, y: 0 }, to: { x: 2.88, y: 3.84 }, label: 'FD＝4', dashed: true },
+    ],
+    caption: '直角三角形 ABC の辺 AB の中点 E、辺 AC の中点 F を結ぶ折り目 EF で頂点 A を折ると、A は辺 BC 上の点 D に重なる。折り目の上の E・F は動かず、動くのは A だけ。ED＝AE＝3cm、FD＝AF＝4cm。EF は中点連結なので BC に平行で半分の 5cm。三角形 EDF と EAF は 3・4・5 で合同。',
+    steps: [
+      '直角三角形 ABC（角 A＝90°、AB＝6、AC＝8、BC＝10）。AB の中点 E（AE＝3）、AC の中点 F（AF＝4）。',
+      'E と F を結ぶ折り目 EF。中点連結定理から EF ∥ BC、EF＝BC÷2＝5cm。',
+      'EF で折ると、折り目の上の E・F は動かず、A だけが EF の反対側へ移る。A から EF までのきょりは A から BC までの半分なので、ちょうど BC の上の点 D に落ちる。',
+      '折り返しは長さを変えないので ED＝AE＝3cm、FD＝AF＝4cm（点線）。AB の 6cm を ED にしない。',
+      '検算：三角形 EDF は 3・4・5 で三角形 EAF と合同、角 EDF＝90°。EF＝5＝10÷2、AE＝3＝6÷2、AF＝4＝8÷2 の 3 か所とも半分。',
+    ],
+    buildSteps: 2,
+  },
+
+  // s172：長方形ABCD（AB=6、BC=10）を折り目AF（BF=6）で折ると B は AD 上の G に重なる。△ABF=18、残り AFCD=60−18=42
+  sext05_s172_naze: {
+    kind: 'polygon',
+    points: [
+      { x: 0, y: 6, label: 'A' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 6, y: 0, label: 'F' },
+      { x: 10, y: 0, label: 'C' },
+      { x: 10, y: 6, label: 'D' },
+    ],
+    sideLabels: ['AB 6cm', 'BF 6cm', 'FC 4cm', null, 'AD 10cm'],
+    rightAngles: [1, 3],
+    regions: [
+      { indices: [0, 1, 2] },
+      { indices: [0, 2, 3, 4] },
+    ],
+    segments: [
+      { from: { x: 0, y: 6 }, to: { x: 6, y: 0 }, label: '折り目AF' },
+      { from: { x: 6, y: 0 }, to: { x: 6, y: 6 }, label: 'B→G（AG＝AB＝6）', dashed: true },
+    ],
+    caption: '長方形 ABCD（AB＝6、BC＝10）を、A から辺 BC 上の F（BF＝6）へ引いた折り目 AF で折ると、三角形 ABF が持ち上がり、B は辺 AD 上の G（AG＝6）に重なる。三角形 ABF は直角をはさむ 2 辺が 6・6 で 18cm²。残った四角形 AFCD は 60−18＝42cm²（台形 (10＋4)×6÷2 でも 42）。折っても面積は増えない。',
+    steps: [
+      '長方形 ABCD。AB＝6cm、BC＝10cm、面積 60cm²。辺 BC 上に BF＝6cm の点 F。',
+      '折り目 AF で折る。三角形 ABF（色の部分）が裏返って持ち上がる。AB＝BF＝6 なので直角二等辺三角形、角 BAF＝45°。',
+      '折ると角 GAF も 45° で、B は AD の方向にぴったり倒れ、AG＝AB＝6cm の点 G（点線）に重なる。AD＝10 より短いのではみ出さない。',
+      '三角形 ABF は直角をはさむ 2 辺 6・6 なので 6×6÷2＝18cm²（36 は ÷2 忘れ）。残った四角形 AFCD＝60−18＝42cm²。60＋18＝78 は折って紙が増えたことになり誤り。',
+      '検算：18＋42＝60。四角形 AFCD は台形（AD＝10、FC＝4、高さ 6）で (10＋4)×6÷2＝42。残った部分は全体より小さい。',
+    ],
+    buildSteps: 3,
+  },
 };
