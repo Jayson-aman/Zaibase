@@ -6,8 +6,13 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import type { Question } from '../data/questions-meta';
-import { answerMode, judge, reviewWriting, diffHint } from '../utils/grading';
+import {
+  answerMode,
+  judge,
+  reviewWriting,
+  diffHint,
+  type GradableQuestion,
+} from '../utils/grading';
 
 // ───────────────────────────────────────────────────────────────
 // 答えを自分で書いてもらう欄。
@@ -29,13 +34,23 @@ export type SubmitResult = {
 };
 
 type Props = {
-  question: Question;
+  question: GradableQuestion;
   onSubmit: (r: SubmitResult) => void;
   /** 採点ずみのときは、書いた答えと添削を出したまま入力を閉じる */
   submitted?: SubmitResult | null;
+  /**
+   * 見た目の色づかい。問題集は青、単元ページの一問一答は茶色。
+   * 同じ部品を2か所で使うので、まわりの画面になじむように切りかえる。
+   */
+  tone?: 'blue' | 'brown';
+  /** まわりのカードにすでに余白があるとき、横の余白を取る */
+  flush?: boolean;
 };
 
-export default function AnswerInput({ question, onSubmit, submitted }: Props) {
+export default function AnswerInput({ question, onSubmit, submitted, tone = 'blue', flush = false }: Props) {
+  const c = tone === 'brown'
+    ? { accent: '#8B5A38', btn: '#B5622E', border: '#E8DCC8', bg: '#FAF6EF' }
+    : { accent: '#0369A1', btn: '#0EA5E9', border: '#BAE6FD', bg: '#F8FAFC' };
   const [text, setText] = useState('');
   const mode = answerMode(question);
   const isWriting = mode === 'writing';
@@ -54,8 +69,8 @@ export default function AnswerInput({ question, onSubmit, submitted }: Props) {
       : { hit: [], miss: [] };
     const hint = submitted.result === 'wrong' ? diffHint(submitted.input, question.answer) : null;
     return (
-      <View style={styles.wrap}>
-        <Text style={styles.label}>あなたの答え</Text>
+      <View style={[styles.wrap, { borderColor: c.border }, flush && styles.wrapFlush]}>
+        <Text style={[styles.label, { color: c.accent }]}>あなたの答え</Text>
         <View
           style={[
             styles.yourAnswerBox,
@@ -78,7 +93,7 @@ export default function AnswerInput({ question, onSubmit, submitted }: Props) {
 
         {isWriting && (
           <View style={styles.reviewBox}>
-            <Text style={styles.reviewTitle}>じぶんで見くらべてみよう</Text>
+            <Text style={[styles.reviewTitle, { color: c.accent }]}>じぶんで見くらべてみよう</Text>
             <Text style={styles.reviewNote}>
               記述の答えは、書き方がちがっても正しいことがあります。模範解答とくらべて、
               足りないところをおぎなってみましょう。
@@ -115,12 +130,12 @@ export default function AnswerInput({ question, onSubmit, submitted }: Props) {
 
   // ── 採点する前：答えを書いてもらう ──
   return (
-    <View style={styles.wrap}>
-      <Text style={styles.label}>
+    <View style={[styles.wrap, { borderColor: c.border }, flush && styles.wrapFlush]}>
+      <Text style={[styles.label, { color: c.accent }]}>
         {isWriting ? '答えを書いてみよう（文で答える問題）' : '答えを書いてみよう'}
       </Text>
       <TextInput
-        style={[styles.input, isWriting && styles.inputTall]}
+        style={[styles.input, isWriting && styles.inputTall, { borderColor: c.border, backgroundColor: c.bg }]}
         value={text}
         onChangeText={setText}
         placeholder={isWriting ? 'ここに自分の言葉で書いてね' : 'ここに答えを書いてね'}
@@ -135,7 +150,7 @@ export default function AnswerInput({ question, onSubmit, submitted }: Props) {
         blurOnSubmit={!isWriting}
       />
       <TouchableOpacity
-        style={[styles.submitBtn, !text.trim() && styles.submitBtnOff]}
+        style={[styles.submitBtn, { backgroundColor: c.btn }, !text.trim() && styles.submitBtnOff]}
         onPress={handleSubmit}
         disabled={!text.trim()}
         activeOpacity={0.85}
@@ -160,6 +175,12 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     borderWidth: 1,
     borderColor: '#E2E8F0',
+  },
+  wrapFlush: {
+    marginHorizontal: 0,
+    padding: 0,
+    borderWidth: 0,
+    backgroundColor: 'transparent',
   },
   label: {
     fontSize: 14,

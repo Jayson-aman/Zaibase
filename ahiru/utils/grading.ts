@@ -1,5 +1,3 @@
-import type { Question } from '../data/questions-meta';
-
 // ───────────────────────────────────────────────────────────────
 // 書いた答えの採点
 //
@@ -34,12 +32,23 @@ export type Judgement =
  * この問題にどう答えてもらうかを決める。
  *
  * ・選択肢があれば、タップして答える
- * ・小問がある、答えが長い、答えが何行にもわたる → 記述として見くらべる
+ * ・記述式の印がある、小問がある、答えが長い、答えが何行にもわたる → 見くらべる
  * ・それ以外は書いて判定する
+ *
+ * ⚠️ 問題集（Question）と単元ページの一問一答（InlineQuizItem）は別の型なので、
+ *    どちらからも使えるよう、必要な欄だけを受け取る形にしてある。
  */
-export function answerMode(q: Question): AnswerMode {
+export type GradableQuestion = {
+  answer: string;
+  choices?: string[];
+  subQuestions?: unknown[];
+  isWritten?: boolean;
+};
+
+export function answerMode(q: GradableQuestion): AnswerMode {
   if ((q.choices ?? []).length > 0) return 'choice';
   const a = String(q.answer ?? '');
+  if (q.isWritten) return 'writing';
   if ((q.subQuestions ?? []).length > 0) return 'writing';
   if (a.includes('\n') || a.length > 40) return 'writing';
   return 'input';
