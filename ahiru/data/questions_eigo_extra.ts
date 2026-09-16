@@ -14,7 +14,8 @@ export const eigoExtra: Question[] = [
     choices: ['cat', 'dog', 'bird', 'fish'],
     answer: 'dog',
     hint: 'ペットとして人気の動物です。',
-    explanation: '「犬」は英語で dog といいます。cat は猫、bird は鳥、fish は魚。',
+    explanation:
+      '【答え】dog\n\n【ほかの選択肢】\n・cat … 猫\n・bird … 鳥\n・fish … 魚\nどれも身近な動物なので、まとめて覚えておく。\n\n【数え方に注意】\n・dog、cat、bird … 数えられる名詞。a dog、two dogs\n・fish … 単数も複数も同じ形。one fish、three fish\n\n【動物の子どもの言い方】英語では、子どもに別の語があるものが多い。\n・dog → puppy（子犬）\n・cat → kitten（子猫）\n・cow → calf（子牛）\n・sheep → lamb（子羊）\n・horse → foal（子馬）\n日本語では「子〜」とつけるだけだが、英語は別の語になるのがおもしろいところである。\n\n【鳴き声も言語でちがう】\n・犬 … 日本語ではワンワン、英語では bow-wow\n・猫 … ニャー、meow\n・牛 … モー、moo\n同じ音を聞いても、言語によって書き表し方がちがう。\n\n【例文】I have a dog. My dog is very friendly.',
     examFrequency: 'high',
   },
   {
@@ -27,7 +28,8 @@ export const eigoExtra: Question[] = [
     choices: ['blue', 'green', 'red', 'yellow'],
     answer: 'red',
     hint: 'りんごや血の色です。',
-    explanation: '「赤」は英語で red といいます。blue は青、green は緑、yellow は黄色。',
+    explanation:
+      '【答え】red\n\n【ほかの選択肢】\n・blue … 青\n・green … 緑\n・yellow … 黄色\n\n【色の語をまとめて覚える】\n・red（赤）・blue（青）・yellow（黄）・green（緑）・black（黒）・white（白）・brown（茶）・purple（紫）・pink（桃）・orange（だいだい）・gray（灰）\n・light blue（水色）・dark green（濃い緑）\nlight をつけると薄く、dark をつけると濃くなる。\n\n【色を使った言い方】\n・feel blue … 気分が沈む。英語では青が悲しみの色である\n・see red … かっとなる\n・in the red … 赤字である。赤字・黒字という言い方は英語から来ている\n・green with envy … うらやましがる\n色の表す気持ちは、言語によってちがう。日本語で「顔が青くなる」のは驚きや恐れだが、英語の blue は悲しみを表す。\n\n【つづりの注意】yellow は l が2つ。green は e が2つ。\n\n【例文】My favorite color is red. I have a red bike.',
     examFrequency: 'high',
   },
   {
@@ -40,7 +42,8 @@ export const eigoExtra: Question[] = [
     choices: ['きりん', 'ぞう', 'うま', 'くま'],
     answer: 'ぞう',
     hint: '鼻がとても長い大きな動物です。',
-    explanation: 'elephant は「ぞう（象）」です。giraffe はきりん、horse はうま、bear はくま。',
+    explanation:
+      '【答え】ぞう\n\n【ほかの選択肢】\n・giraffe … きりん\n・horse … うま\n・bear … くま\n\n【つづりの注意】elephant は ph を「フ」と読む。ph はいつも「フ」の音になる。\n・elephant、phone、photo、graph、alphabet、dolphin\nph を見たら「フ」と読む、これを知っていると初めて見る語も読める。\n\n【動物の語】\n・lion（ライオン）・tiger（とら）・bear（くま）・monkey（さる）・giraffe（きりん）・zebra（しまうま）・panda（パンダ）・rabbit（うさぎ）・mouse（ねずみ）\n・mouse の複数形は mice（不規則）\n\n【ぞうを使った言い方】\n・an elephant in the room … 誰もが気づいているのに、話題にしない大きな問題\n・部屋にぞうがいれば気づかないはずがないのに、みんな見ないふりをしている、という意味である。英語らしい表現である\n\n【ぞうについて】陸上で最も大きな動物で、鼻は上くちびると鼻がのびたものである。耳が大きいのは、体の熱を逃がすためとされる。\n\n【例文】An elephant has a long nose.',
     examFrequency: 'high',
   },
   {
@@ -53,7 +56,8 @@ export const eigoExtra: Question[] = [
     choices: ['Sunday', 'Monday', 'Tuesday', 'Wednesday'],
     answer: 'Monday',
     hint: '週の始まりの日（日本では月曜が週の最初）。',
-    explanation: '「月曜日」は Monday です。Sunday は日曜、Tuesday は火曜、Wednesday は水曜。',
+    explanation:
+      '【答え】Monday\n\n【曜日の名前の由来】曜日の名前には、天体と北欧の神々の名が使われている。\n・Sunday … sun（太陽）の日\n・Monday … moon（月）の日\n・Tuesday … 北欧の神ティールの日\n・Wednesday … 北欧の神オーディンの日\n・Thursday … 雷神トールの日\n・Friday … 女神フリッグの日\n・Saturday … 土星（Saturn）の日\n日本語の曜日も、日・月・火・水・木・金・土という天体の名前である。もともとは同じ考え方から来ている。\n\n【曜日は大文字で始める】Monday、Tuesday のように、曜日と月の名前は必ず大文字で書き始める。これは書き取りで減点されやすい。\n\n【曜日に使う前置詞】on を使う。on Monday、on Sunday。\n・every Monday（毎週月曜に）… every がつくと前置詞はいらない\n\n【つづりの注意】Wednesday は d を忘れやすい。ウェドネスデイと区切って覚えるとよい。\n\n【例文】I have piano lessons on Monday.',
     examFrequency: 'high',
   },
   {
@@ -66,7 +70,8 @@ export const eigoExtra: Question[] = [
     choices: ['10', '11', '12', '13'],
     answer: '12',
     hint: '10 は ten、11 は eleven の次の数です。',
-    explanation: 'twelve は 12 です。ten=10、eleven=11、thirteen=13。',
+    explanation:
+      '【答え】12\n\n【数の言い方】1から20までは、形が不規則なものが多い。\n・one、two、three、four、five、six、seven、eight、nine、ten\n・eleven（11）、twelve（12）… この2つは特別な形\n・thirteen（13）から nineteen（19）… teen をつける\n・three → thirteen、five → fifteen と、形が変わるものに注意する\n\n【teen の意味】13から19までを teenager（ティーンエイジャー）という。teen がつく年齢という意味である。12歳と20歳は含まない。\n\n【20以上】\n・twenty（20）・thirty（30）・forty（40）・fifty（50）・sixty（60）・seventy（70）・eighty（80）・ninety（90）\n・forty のつづりに注意。four には u があるが、forty には u がない\n・21から99は twenty-one のようにハイフンでつなぐ\n\n【12が特別な理由】昔は12を一つのまとまりとして数えた（1ダース＝12）。時計が12時間、1年が12か月なのも同じ流れである。\n\n【例文】I am twelve years old.',
     examFrequency: 'high',
   },
   {
@@ -79,7 +84,8 @@ export const eigoExtra: Question[] = [
     choices: ['father', 'brother', 'mother', 'sister'],
     answer: 'mother',
     hint: 'お母さんのことです。',
-    explanation: '「母」は mother です。father は父、brother は兄弟、sister は姉妹。',
+    explanation:
+      '【答え】mother\n\n【ほかの選択肢】\n・father … 父\n・brother … 兄・弟\n・sister … 姉・妹\n\n【日本語とちがうところ】英語では、兄と弟、姉と妹を区別しない。\n・brother … 兄でも弟でも brother\n・sister … 姉でも妹でも sister\n・区別したいときは older brother（兄）、younger sister（妹）のように言う\n日本語のほうが家族の呼び名が細かいのは、上下の関係を重んじる文化と関わっているとも言われる。\n\n【家族の語】\n・father（父）・mother（母）・parents（両親）・brother・sister\n・grandfather（祖父）・grandmother（祖母）・grandparents（祖父母）\n・uncle（おじ）・aunt（おば）・cousin（いとこ）・nephew（おい）・niece（めい）\n・uncle は父方でも母方でも uncle。日本語の「伯父・叔父」の区別もない\n\n【呼びかけの言い方】Mom、Mommy（アメリカ）／Mum（イギリス）。Dad、Daddy。\n\n【例文】My mother is a teacher. She has two brothers.',
     examFrequency: 'high',
   },
   {
@@ -92,7 +98,8 @@ export const eigoExtra: Question[] = [
     choices: ['いす', 'まど', 'つくえ', 'とびら'],
     answer: 'つくえ',
     hint: '勉強するときに使う家具です。',
-    explanation: 'desk は「つくえ（机）」です。chair はいす、window はまど、door はとびら。',
+    explanation:
+      '【答え】つくえ\n\n【ほかの選択肢】\n・chair … いす\n・window … まど\n・door … とびら\n\n【desk と table のちがい】ここが問われる。\n・desk … 勉強や仕事のための机。ふつう引き出しがある\n・table … 食事をしたり物を置いたりする台。みんなで囲む\n日本語ではどちらも「つくえ」「テーブル」と言えてしまうので、使い分けを意識する。\n\n【教室にあるものの語】\n・desk（机）・chair（いす）・blackboard（黒板）・whiteboard・window（窓）・door（ドア）・floor（床）・wall（壁）・clock（時計）・calendar\n\n【前置詞に注意】\n・on the desk … 机の上に\n・in the desk … 机の中（引き出し）に\n・under the desk … 机の下に\n・at the desk … 机に向かって（勉強中）\n同じ机でも、前置詞で位置がまったく変わる。\n\n【desk を使った言い方】\n・desk work … 事務仕事\n・a desk lamp … 電気スタンド\n\n【例文】My textbook is on the desk.',
     examFrequency: 'high',
   },
   {
@@ -105,7 +112,8 @@ export const eigoExtra: Question[] = [
     choices: ['orange', 'apple', 'grape', 'banana'],
     answer: 'apple',
     hint: 'アダムとイブの話でも登場する果物です。',
-    explanation: '「りんご」は apple です。orange はオレンジ、grape はぶどう、banana はバナナ。',
+    explanation:
+      '【答え】apple\n\n【ほかの選択肢】\n・orange … オレンジ\n・grape … ぶどう\n・banana … バナナ\n\n【an apple になる理由】apple は母音（アの音）で始まるので、a ではなく an をつける。\n・an apple、an orange、an egg、an umbrella\n・a banana、a grape、a peach\na か an かは、つづりではなく音で決める。\n・an hour（h を読まないので母音の音）\n・a university（ユと読むので子音の音）\nこの2つは例外としてよく問われる。\n\n【果物の語】apple（りんご）・orange・grape（ぶどう）・banana・peach（もも）・strawberry（いちご）・watermelon（すいか）・melon・pear（なし）・cherry（さくらんぼ）。\n・grape は1粒、grapes で房を表す。ふつう複数形で使う\n\n【apple を使った言い方】\n・the apple of one\'s eye … とても大切な人\n・An apple a day keeps the doctor away. … 1日1個のりんごで医者いらず\n\n【例文】I eat an apple every morning.',
     examFrequency: 'high',
   },
   {
@@ -118,7 +126,8 @@ export const eigoExtra: Question[] = [
     choices: ['あし', 'て', 'め', 'みみ'],
     answer: 'て',
     hint: '5本の指がついている体の部位です。',
-    explanation: 'hand は「て（手）」です。foot/leg はあし、eye はめ、ear はみみ。',
+    explanation:
+      '【答え】て\n\n【ほかの選択肢】\n・foot／leg … あし\n・eye … め\n・ear … みみ\n\n【foot と leg のちがい】日本語ではどちらも「あし」だが、英語では区別する。\n・foot … くるぶしから下。足首から先\n・leg … ももからくるぶしまで。脚全体\n日本語より細かく分ける例である。手も、hand（手首から先）と arm（腕）に分かれる。\n\n【複数形に注意】\n・foot → feet（不規則）\n・tooth → teeth\n・hand → hands（規則どおり）\n\n【体の部分の語】head（頭）・face（顔）・eye（目）・ear（耳）・nose（鼻）・mouth（口）・hair（髪）・neck（首）・shoulder（肩）・arm（腕）・hand（手）・finger（指）・leg（脚）・foot（足）・knee（ひざ）。\n\n【hand を使った言い方】\n・give someone a hand … 手を貸す、手伝う\n・on the other hand … 一方で\n・hands-on … 実際に手を使う\n日本語の「手を貸す」とまったく同じ言い方があるのはおもしろいところである。\n\n【例文】Please raise your hand.',
     examFrequency: 'high',
   },
   {
@@ -131,7 +140,8 @@ export const eigoExtra: Question[] = [
     choices: ['January', 'February', 'March', 'April'],
     answer: 'March',
     hint: '日本では卒業式がある月です。',
-    explanation: '「3月」は March です。January は1月、February は2月、April は4月。',
+    explanation:
+      '【答え】March\n\n【月の名前の由来】ローマの神や皇帝の名が多い。\n・January … 門の神ヤヌスの月。前と後ろを同時に見る神で、年の変わり目にふさわしい\n・March … 軍神マルスの月。春になり戦いが始まる時期\n・July … ユリウス・カエサルの月\n・August … 皇帝アウグストゥスの月\n・September〜December … もとは7・8・9・10の意味。ラテン語の septem（7）、octo（8）、novem（9）、decem（10）から\nなぜ9月なのに「7」なのか。昔のローマの暦は3月から始まっていたため、2か月ずれている。言葉に歴史が残っている例である。\n\n【月は大文字で始める】January、March のように、必ず大文字で書き始める。\n\n【月に使う前置詞】in を使う。in March、in May。日付がつくと on になる（on March 3）。\n\n【つづりの注意】February は r が2つある。フェブ・ル・アリーと区切って覚える。\n\n【例文】We have a graduation ceremony in March.',
     examFrequency: 'high',
   },
   {
@@ -144,7 +154,8 @@ export const eigoExtra: Question[] = [
     choices: ['くろ', 'しろ', 'あか', 'あお'],
     answer: 'しろ',
     hint: '雪やコピー用紙の色です。',
-    explanation: 'white は「しろ（白）」です。black はくろ、red はあか、blue はあお。',
+    explanation:
+      '【答え】しろ\n\n【ほかの選択肢】\n・black … くろ\n・red … あか\n・blue … あお\n\n【白と黒を使った言い方】\n・black and white … 白黒。「はっきりしている」という意味にもなる\n・a white lie … 悪意のないうそ。相手を傷つけないためのうそ\n・black tea … 紅茶。「赤いお茶」ではない\n・blackboard … 黒板\n・white-collar／blue-collar … 事務職／現場職\nblack tea は日本語の「紅茶」と色の呼び方がちがうので、試験でも出る。\n\n【つづりの注意】white の h を忘れやすい。wh で始まる語をまとめて覚える。\n・white、what、when、where、which、why、who、wheel\n・who だけ「フ」と読み、w を発音しない\n\n【色の名詞と形容詞】色の語は、名詞にも形容詞にもなる。\n・White is my favorite color.（名詞）\n・I have a white shirt.（形容詞）\n\n【例文】Snow is white. I like white shoes.',
     examFrequency: 'high',
   },
   {
@@ -157,7 +168,8 @@ export const eigoExtra: Question[] = [
     choices: ['Monday', 'Tuesday', 'Wednesday', 'Thursday'],
     answer: 'Wednesday',
     hint: '週の真ん中の曜日です。',
-    explanation: '「水曜日」は Wednesday です。Monday は月曜、Tuesday は火曜、Thursday は木曜。',
+    explanation:
+      '【答え】Wednesday\n\n【つづりが最も難しい曜日】Wednesday は、d を発音しないのに書く。\n・発音 … ウェンズデイ（3音）\n・つづり … W-e-d-n-e-s-d-a-y（9文字）\n「ウェド・ネス・デイ」と区切って読みながら覚えるのが定番の方法である。\n\n【なぜ d を書くのか】北欧の神オーディン（Woden）の日という由来だからである。もとの形が残っているために、発音とつづりがずれた。英語には、このように歴史が残ってつづりが難しくなった語が多い。\n・knife（k を発音しない）・write（w を発音しない）・island（s を発音しない）\n\n【曜日の順】Sunday、Monday、Tuesday、Wednesday、Thursday、Friday、Saturday。\n・英語では日曜日が週の初めとされることが多い。カレンダーも日曜から始まる\n\n【曜日の略し方】Sun.、Mon.、Tue.、Wed.、Thu.、Fri.、Sat.\n\n【前置詞】on Wednesday。\n\n【例文】We have music class on Wednesday.',
     examFrequency: 'medium',
   },
   {
@@ -170,7 +182,8 @@ export const eigoExtra: Question[] = [
     choices: ['パン', 'ごはん', 'めん', 'スープ'],
     answer: 'ごはん',
     hint: '日本食の主食です。',
-    explanation: 'rice は「ごはん（米・ご飯）」です。bread はパン、noodles はめん、soup はスープ。',
+    explanation:
+      '【答え】ごはん\n\n【rice の使い方】rice は数えられない名詞である。\n・a rice、two rices とは言わない\n・数えるときは a bowl of rice（茶わん1杯）、a grain of rice（米1粒）\n\n【rice が表すもの】英語の rice は、稲・米・ご飯のすべてを指す。\n・日本語では、稲・米・ご飯・ライスと細かく分ける\n・日本人にとって身近なものほど、日本語の語が細かいという例である\n・逆に、英語では牛の呼び名が細かい（cow、bull、ox、calf、cattle、beef）\nその文化で大切なものほど、語が細かく分かれる。\n\n【ほかの選択肢】\n・bread … パン。数えられない\n・noodles … めん。ふつう複数形\n・soup … スープ。数えられない\n主食に関わる語は、数えられない名詞が多い。\n\n【食事の語】breakfast（朝食）・lunch（昼食）・dinner（夕食）・meal（食事）。\n・食事名には a も the もつけない。have breakfast\n\n【例文】I eat rice every day. Would you like some rice?',
     examFrequency: 'high',
   },
   {
@@ -183,7 +196,8 @@ export const eigoExtra: Question[] = [
     choices: ['ねこ', 'いぬ', 'うさぎ', 'さる'],
     answer: 'うさぎ',
     hint: '長い耳とふわふわの尻尾が特徴の動物です。',
-    explanation: 'rabbit は「うさぎ」です。cat はねこ、dog はいぬ、monkey はさる。',
+    explanation:
+      '【答え】うさぎ\n\n【ほかの選択肢】\n・cat … ねこ\n・dog … いぬ\n・monkey … さる\n\n【つづりの注意】rabbit は b が2つある。短い母音の後で子音を重ねるという決まりがあり、英語には この形の語が多い。\n・rabbit、bottle、button、happy、summer、dinner、letter\n\n【rabbit と hare】英語では2種類に分ける。\n・rabbit … あなうさぎ。穴を掘って暮らす。ペットのうさぎ\n・hare … のうさぎ。地上で暮らし、足が速い\n日本語ではどちらも「うさぎ」だが、英語では別の動物として扱う。\n\n【うさぎを使った言い方】\n・The Tortoise and the Hare … 「うさぎとかめ」。イソップ物語\n・as quick as a rabbit … うさぎのようにすばやい\n\n【日本語のうさぎの数え方】うさぎは「1羽、2羽」と鳥と同じように数える。昔、四つ足の動物を食べてはいけない時期に、鳥だと言いなして食べたからという説がある。言葉には歴史が残っている。\n\n【例文】I have a white rabbit as a pet.',
     examFrequency: 'medium',
   },
   {
@@ -196,7 +210,8 @@ export const eigoExtra: Question[] = [
     choices: ['uncle', 'grandfather', 'father', 'brother'],
     answer: 'grandfather',
     hint: 'お父さんやお母さんのお父さんのことです。',
-    explanation: '「祖父」は grandfather です。uncle はおじ、father は父、brother は兄弟。',
+    explanation:
+      '【答え】grandfather\n\n【ほかの選択肢】\n・uncle … おじ\n・father … 父\n・brother … 兄・弟\n\n【grand の意味】「一世代上（または下）」を表す。\n・grandfather（祖父）・grandmother（祖母）・grandparents（祖父母）\n・grandson（孫息子）・granddaughter（孫娘）・grandchildren（孫たち）\n・great-grandfather（曽祖父）… great をつけると、もう一世代さかのぼる\ngrand と great の組み合わせで、何世代でも表せる。\n\n【日本語とのちがい】英語では father と母方・父方を区別しない。\n・日本語 … 祖父・おじいさん・父方の祖父\n・英語 … grandfather だけ\n逆に日本語では、兄と弟を区別するので、細かさの方向がちがう。\n\n【呼びかけの言い方】Grandpa、Granddad（おじいちゃん）／Grandma、Granny（おばあちゃん）。\n\n【家系を表す語】family（家族）・relative（親せき）・ancestor（先祖）・descendant（子孫）。\n\n【例文】My grandfather is eighty years old.',
     examFrequency: 'medium',
   },
   {
@@ -209,7 +224,8 @@ export const eigoExtra: Question[] = [
     choices: ['12', '20', '21', '22'],
     answer: '20',
     hint: 'teen がつかない最初の大きな数です。',
-    explanation: 'twenty は 20 です。twelve=12、twenty-one=21、twenty-two=22。',
+    explanation:
+      '【答え】20\n\n【twelve と twenty の区別】発音が似ているので、聞き取りで取りちがえやすい。\n・twelve（12）… トウェルヴ\n・twenty（20）… トウェンティ\nl の音があるかどうかで聞き分ける。\n\n【もっとまぎらわしい組み合わせ】\n・thirteen（13）と thirty（30）\n・fourteen（14）と forty（40）\n・fifteen（15）と fifty（50）\nteen と ty のちがいである。聞き分けのこつは、どこを強く読むかである。\n・thirteen … 後ろの teen を強く読む\n・thirty … 前の thir を強く読む\nアクセントの位置がちがうので、それで聞き分ける。試験のリスニングで必ず出る。\n\n【つづりの注意】\n・forty には u がない（four には u がある）\n・この不規則さは、よく問われる\n\n【20以上の数】twenty-one、twenty-two のようにハイフンでつなぐ。\n\n【例文】I am twenty years old. There are twelve months in a year.',
     examFrequency: 'high',
   },
   {
@@ -222,7 +238,8 @@ export const eigoExtra: Question[] = [
     choices: ['くち', 'はな', 'め', 'みみ'],
     answer: 'はな',
     hint: '顔の真ん中にあり、においをかぐ器官です。',
-    explanation: 'nose は「はな（鼻）」です。mouth はくち、eye はめ、ear はみみ。',
+    explanation:
+      '【答え】はな\n\n【ほかの選択肢】\n・mouth … くち\n・eye … め\n・ear … みみ\n\n【顔の部分の語】face（顔）・eye（目）・ear（耳）・nose（鼻）・mouth（口）・cheek（ほお）・chin（あご）・forehead（ひたい）・eyebrow（まゆ）・eyelash（まつげ）・tooth（歯）。\n・tooth の複数形は teeth（不規則）\n\n【nose を使った言い方】\n・runny nose … 鼻水が出ている\n・have a good nose for … 〜をかぎ分ける力がある\n・right under one\'s nose … すぐ目の前に。日本語の「灯台下暗し」に近い\n・turn up one\'s nose … 鼻であしらう\n日本語にも「鼻が高い」「鼻につく」があり、鼻を使った言い方は両方の言語にある。\n\n【つづりの注意】nose の e は読まないが、前の o を「オウ」と長く読ませるはたらきをする。\n・nose、note、home、rose、hope\n最後の e が、前の母音を長く読ませるという決まりがある。これを知っていると、初めて見る語も読める。\n\n【例文】An elephant has a long nose.',
     examFrequency: 'high',
   },
   {
@@ -235,7 +252,8 @@ export const eigoExtra: Question[] = [
     choices: ['けしゴム', 'えんぴつ', 'ものさし', 'ノート'],
     answer: 'えんぴつ',
     hint: '木でできた筆記具です。',
-    explanation: 'pencil は「えんぴつ（鉛筆）」です。eraser はけしゴム、ruler はものさし、notebook はノート。',
+    explanation:
+      '【答え】えんぴつ\n\n【ほかの選択肢】\n・eraser … 消しゴム\n・ruler … ものさし\n・notebook … ノート\n\n【日本語の「ノート」に注意】日本語の「ノート（帳面）」は、英語では notebook である。英語の note は「メモ・覚え書き」の意味なので、そのままでは通じない。\nこのような、日本語になっているが英語では意味のちがう語をまとめて覚える。\n・ノート → notebook\n・コンセント → outlet\n・ホッチキス → stapler\n・シャープペンシル → mechanical pencil\n・マンション → apartment、condominium\n・アルバイト → part-time job\n日本語の中のカタカナ語が、そのまま英語で通じるとはかぎらない。\n\n【文房具の語】pencil・pen・eraser・ruler・scissors（はさみ）・glue（のり）・pencil case（筆箱）・textbook（教科書）・dictionary（辞書）。\n・scissors はいつも複数形。数えるときは a pair of scissors\n\n【つづりの注意】pencil の c は「ス」と読む。c は e・i・y の前で「ス」になる。\n\n【例文】May I borrow your pencil?',
     examFrequency: 'high',
   },
   {
@@ -248,7 +266,8 @@ export const eigoExtra: Question[] = [
     choices: ['Friday', 'Saturday', 'Sunday', 'Thursday'],
     answer: 'Saturday',
     hint: '日曜日の前の日です。',
-    explanation: '「土曜日」は Saturday です。Friday は金曜、Sunday は日曜、Thursday は木曜。',
+    explanation:
+      '【答え】Saturday\n\n【曜日の名前の由来】Saturday は土星（Saturn）の日である。日本語の「土曜日」も土星から来ているので、由来が同じである。\n・Sunday（太陽）・Monday（月）・Saturday（土星）… この3つは天体の名前\n・Tuesday・Wednesday・Thursday・Friday … 北欧の神々の名前\nもとは7つの天体（日・月・火星・水星・木星・金星・土星）に由来していたが、英語では一部が北欧の神に置きかわった。日本語は天体の名前のまま残っている。\n\n【週末の言い方】\n・weekend … 週末（土曜と日曜）\n・weekday … 平日（月曜から金曜）\n・on weekends、on the weekend（週末に）\n・アメリカ英語では on the weekend、イギリス英語では at the weekend を使うことが多い\n\n【つづりの注意】Saturday は a が2つ。サ・ター・デイと区切って覚える。\n\n【例文】I play soccer on Saturday. What do you do on weekends?',
     examFrequency: 'high',
   },
   {
@@ -261,7 +280,8 @@ export const eigoExtra: Question[] = [
     choices: ['みず', 'ぎゅうにゅう', 'ジュース', 'おちゃ'],
     answer: 'ぎゅうにゅう',
     hint: '牛からとれる白い飲み物です。',
-    explanation: 'milk は「ぎゅうにゅう（牛乳）」です。water はみず、juice はジュース、tea はおちゃ。',
+    explanation:
+      '【答え】ぎゅうにゅう\n\n【ほかの選択肢】\n・water … 水\n・juice … ジュース\n・tea … お茶\nどれも数えられない名詞である。液体は数えられない。\n\n【数え方】入れ物を使って数える。\n・a glass of milk（コップ1杯）\n・a cup of tea（カップ1杯）\n・a bottle of juice（びん1本）\n・a carton of milk（紙パック1本）\n「入れ物 of もの」の形は必ず覚える。日本語の「1杯」「1本」と同じ考え方である。\n\n【some と any】\n・some … ふつうの文。I want some milk.\n・any … 疑問文・否定文。Do you have any milk?\n・すすめるときの疑問文では some … Would you like some milk?\n\n【飲み物の語】water・milk・juice・tea・coffee・green tea（緑茶）・black tea（紅茶）・soda。\n・black tea が紅茶である。日本語と色の言い方がちがう\n\n【例文】I drink a glass of milk every morning.',
     examFrequency: 'high',
   },
   // ============================================================
@@ -277,7 +297,8 @@ export const eigoExtra: Question[] = [
     choices: ['am', 'is', 'are', 'be'],
     answer: 'am',
     hint: '主語が I のとき be動詞は？',
-    explanation: '主語が I のときは am を使います。is は he/she/it、are は you/we/they に使います。',
+    explanation:
+      '【答え】am\n\n【be動詞の使い分け】これが英語のすべての土台になる。\n・I → am\n・he / she / it / 単数の名詞 → is\n・you / we / they / 複数の名詞 → are\n「I だけ am」と、まずこれを確実にする。\n\n【be はなぜ答えにならないか】be は原形で、そのままでは文の述語にならない。原形を使うのは、助動詞の後（will be、can be、must be）や不定詞（to be）のときである。\n\n【a student の a】student は数えられる名詞なので、1人なら a をつける。日本語には a にあたる言葉がないので、最も忘れやすい。\n\n【be動詞の意味】\n・〜です … I am a student.\n・〜にいる・ある … I am in the classroom.\n2つの意味がある。\n\n【疑問文と否定文】\n・疑問文 … be動詞を前に出す。Am I 〜?\n・否定文 … be動詞の後に not。I am not 〜\ndo は使わない。ここが一般動詞の文とのちがいである。\n\n【例文】I am a student. I am from Japan.',
     examFrequency: 'very-high',
   },
   {
@@ -290,7 +311,8 @@ export const eigoExtra: Question[] = [
     choices: ['am', 'is', 'are', 'be'],
     answer: 'is',
     hint: '主語が He（三人称単数）のとき be動詞は？',
-    explanation: '主語が he/she/it（三人称単数）のときは is を使います。',
+    explanation:
+      '【答え】is\n\n【三人称単数とは】自分（I）でも相手（you）でもない、1人・1つのものをいう。\n・he、she、it\n・Tom、my father、this book、the cat\n人でなくても、1つのものなら三人称単数である。\n\n【be動詞の表】\n・I → am\n・he / she / it / 単数の名詞 → is\n・you / we / they / 複数の名詞 → are\n\n【my friend の a】この文では my がついているので a はいらない。\n・He is my friend.（my があるので a は不要）\n・He is a friend.（my がないときは a が必要）\nmy、your、his、this、that がつくと、a や the はつけない。a my friend は誤りである。これは中学英語でよく問われる。\n\n【所有を表す語】my、your、his、her、its、our、their。\n・a friend of mine（私の友達の1人）という言い方もある\n\n【疑問文と否定文】\n・Is he my friend? — Yes, he is.\n・He is not my friend.（短縮形は isn\'t）\n\n【例文】He is my friend. She is my sister.',
     examFrequency: 'very-high',
   },
   {
@@ -303,7 +325,8 @@ export const eigoExtra: Question[] = [
     choices: ['am', 'is', 'are', 'be'],
     answer: 'are',
     hint: '主語が They（複数）のとき be動詞は？',
-    explanation: '主語が you/we/they（複数または you）のときは are を使います。',
+    explanation:
+      '【答え】are\n\n【they の使い方】they は「彼ら・彼女ら・それら」で、人にも物にも使える。\n・Tom and Ken are my friends. They are students.（人）\n・I have two cats. They are white.（動物・物）\n日本語では「それら」とあまり言わないので、物に they を使うのを忘れやすい。\n\n【be動詞の表】\n・I → am\n・he / she / it / 単数 → is\n・you / we / they / 複数 → are\n\n【happy に a をつけない】happy は形容詞なので a はいらない。\n・They are happy.（正しい）\n・They are a happy.（誤り）\n名詞には a がいる、形容詞にはいらない。これが be動詞の文で最も問われる区別である。\n・They are students.（名詞なので複数形）\n・They are happy.（形容詞なのでそのまま）\n\n【感情を表す形容詞】happy・sad・angry・tired・hungry・busy・excited・nervous。\n\n【例文】They are happy. They are good friends.',
     examFrequency: 'very-high',
   },
   {
@@ -316,7 +339,8 @@ export const eigoExtra: Question[] = [
     choices: ['I am not a teacher.', 'I not am a teacher.', 'Not I am a teacher.', 'I do not am a teacher.'],
     answer: 'I am not a teacher.',
     hint: 'be動詞の後ろに not を置きます。',
-    explanation: 'be動詞の否定文は be動詞の直後に not を置きます。「I am not a teacher.」が正解。',
+    explanation:
+      '【答え】I am not a teacher.\n\n【be動詞の否定文】be動詞のすぐ後ろに not を置く。語順は変えない。\n・I am a teacher. → I am not a teacher.\n\n【ほかの選択肢がまちがいな理由】\n・I not am 〜 … not の位置がちがう。be動詞の前には置かない\n・Not I am 〜 … 文の先頭に not は置かない\n・I do not am 〜 … be動詞の文に do は使わない\n\n【一般動詞との比較】ここが最も大事である。\n・be動詞 … I am not a teacher.（not を置くだけ）\n・一般動詞 … I do not play tennis.（do not が必要）\nまず、その文の動詞が be動詞か一般動詞かを見きわめる。両方を混ぜるのが最も多いまちがいである。\n\n【短縮形】\n・is not → isn\'t\n・are not → aren\'t\n・am not には短縮形がない（I\'m not とは言える）\n\n【例文】I am not a teacher. I am a student.',
     examFrequency: 'very-high',
   },
   {
@@ -329,7 +353,8 @@ export const eigoExtra: Question[] = [
     choices: ['Is she a doctor?', 'She is a doctor?', 'Does she is a doctor?', 'Is doctor she a?'],
     answer: 'Is she a doctor?',
     hint: 'be動詞を文頭に移動させます。',
-    explanation: 'be動詞の疑問文は be動詞を文頭に移動させます。「Is she a doctor?」が正解。',
+    explanation:
+      '【答え】Is she a doctor?\n\n【be動詞の疑問文】be動詞を主語の前に出すだけでよい。\n・She is a doctor. → Is she a doctor?\n・最後に クエスチョンマーク をつける\n\n【ほかの選択肢がまちがいな理由】\n・She is a doctor? … 語順を変えていない。話し言葉では通じるが、正しい疑問文ではない\n・Does she is 〜? … be動詞の文に does は使わない\n・Is doctor she a? … 語順がめちゃくちゃ\n\n【一般動詞との比較】\n・be動詞 … Is she a doctor?（be動詞を前へ）\n・一般動詞 … Does she play tennis?（does を前に置き、動詞は原形）\n動詞の種類で作り方がまったくちがう。\n\n【答え方】\n・Yes, she is. ／ No, she is not.\n聞かれた形で答える。Yes, she does. は誤りである。\n\n【疑問詞をつける】さらに何かをたずねたいときは、疑問詞を先頭に置く。\n・What is she?（職業をたずねる）\n・Where is she?（場所をたずねる）\n\n【例文】Is she a doctor? — Yes, she is. She works at a hospital.',
     examFrequency: 'very-high',
   },
   {
@@ -342,7 +367,8 @@ export const eigoExtra: Question[] = [
     choices: ['Yes, I am.', 'Yes, you are.', 'Yes, I be.', 'Yes, am I.'],
     answer: 'Yes, I am.',
     hint: 'you で聞かれたら I で答えます。',
-    explanation: 'Are you ...? と聞かれたら Yes, I am. または No, I am not. と答えます。',
+    explanation:
+      '【答え】Yes, I am.\n\n【答え方の決まり】you で聞かれたら I で答える。\n・Are you 〜? → Yes, I am.\n・Is he 〜? → Yes, he is.\n・Are they 〜? → Yes, they are.\n質問の主語をそのまま答えに使うのではなく、立場を入れかえる。日本語でも「あなたは学生ですか」と聞かれて「はい、私は学生です」と答えるのと同じである。\n\n【ほかの選択肢がまちがいな理由】\n・Yes, you are. … 相手のことを答えてしまっている\n・Yes, I be. … be は原形なので使えない\n・Yes, am I. … 語順がちがう。答えの文は ふつうの語順に戻す\n\n【否定の答え方】\n・No, I am not.（短縮形は No, I\'m not.）\n・am not には短縮形がないので、I\'m not の形にする\n\n【複数で聞かれたとき】\n・Are you students?（あなたたちは）→ Yes, we are.\n・you は1人でも複数でも you なので、答えで I か we かが決まる\n\n【例文】Are you from Japan? — Yes, I am. I am from Osaka.',
     examFrequency: 'very-high',
   },
   {
@@ -355,7 +381,8 @@ export const eigoExtra: Question[] = [
     choices: ['am', 'is', 'are', 'were'],
     answer: 'are',
     hint: '主語が We（複数）のとき be動詞は？',
-    explanation: '主語が we のときは are を使います。現在形での話です。',
+    explanation:
+      '【答え】are\n\n【be動詞の表】\n・I → am\n・he / she / it / 単数 → is\n・you / we / they / 複数 → are\n\n【were がまちがいな理由】were は are の過去形である。この文は現在のことを言っているので、現在形の are を使う。\n・現在 … We are students.\n・過去 … We were students.（以前は学生だった）\n時制を確かめるのが手順である。\n\n【be動詞の過去形】\n・am、is → was\n・are → were\nこの2つしかないので、確実に覚える。\n\n【students と複数形にする理由】we（私たち）は2人以上なので、student も複数形になる。\n・We are students.（正しい）\n・We are student.（誤り）\n主語が複数なら、続く名詞も複数という対応がある。\n\n【a をつけない】複数形には a をつけない。a は「1つの」という意味だからである。\n\n【例文】We are students. We are in the same class.',
     examFrequency: 'high',
   },
   {
@@ -368,7 +395,8 @@ export const eigoExtra: Question[] = [
     choices: ['amn\'t', 'ain\'t', '\'mn\'t', '短縮形はない'],
     answer: '短縮形はない',
     hint: 'is not → isn\'t、are not → aren\'t だが、am not は？',
-    explanation: 'am not に標準的な短縮形はありません（ain\'t は非標準）。これは入試でよく問われる知識です。',
+    explanation:
+      '【答え】短縮形はない\n\n【be動詞の短縮形】\n・is not → isn\'t\n・are not → aren\'t\n・was not → wasn\'t\n・were not → weren\'t\n・am not → 短縮形なし\n\n【なぜ am not だけないのか】amn\'t という形は発音しにくいため、英語では定着しなかったとされる。かわりに、\n・I\'m not … I am を短くして not をそのまま残す\nという形を使う。つまり、短くする場所が前にずれている。\n\n【ain\'t について】ain\'t という語はあるが、標準的な英語ではないとされ、試験では使わない。歌や話し言葉では出てくる。\n\n【疑問文での例外】「私は〜ではないですね」と確かめる付加疑問では、慣用として aren\'t I? という形を使う。\n・I am right, aren\'t I?\nam not の代わりに aren\'t を使うという、めずらしい例外である。\n\n【短縮形のまとめ】\n・I am → I\'m、he is → he\'s、they are → they\'re\n・is not → isn\'t、are not → aren\'t\n・do not → don\'t、does not → doesn\'t、did not → didn\'t\n・will not → won\'t（形が大きく変わるので注意）',
     examFrequency: 'high',
   },
   {
@@ -381,7 +409,8 @@ export const eigoExtra: Question[] = [
     choices: ['I am', 'I is', 'I are', 'I was'],
     answer: 'I am',
     hint: 'アポストロフィ（\'）は文字が省略されていることを示します。',
-    explanation: 'I\'m は I am の短縮形です。m は am の am から a が省略されたものです。',
+    explanation:
+      '【答え】I am\n\n【アポストロフィのはたらき】アポストロフィは、文字が省かれたことを示す印である。\n・I am → I\'m（a が省かれた）\n・he is → he\'s（i が省かれた）\n・they are → they\'re（a が省かれた）\n・do not → don\'t（o が省かれた）\n・cannot → can\'t（no が省かれた）\n省かれた文字の場所にアポストロフィを置くという決まりである。\n\n【短縮形の一覧】\n・I\'m、you\'re、he\'s、she\'s、it\'s、we\'re、they\'re\n・isn\'t、aren\'t、don\'t、doesn\'t、didn\'t、can\'t、won\'t、wouldn\'t\n・won\'t は will not の短縮形で、形が大きく変わる\n\n【it\'s と its】最も取りちがえやすい。\n・it\'s … it is の短縮形。アポストロフィがある\n・its … その（所有格）。The cat wagged its tail.\nアポストロフィがあれば it is と覚える。\n\n【所有のアポストロフィ】名詞につけると「〜の」を表す。\n・Tom\'s book（トムの本）\n・省略とはちがうはたらきなので区別する\n\n【例文】I\'m a student. I\'m from Japan.',
     examFrequency: 'very-high',
   },
   {
@@ -394,7 +423,8 @@ export const eigoExtra: Question[] = [
     choices: ['These are books.', 'These is books.', 'This are books.', 'These are book.'],
     answer: 'These are books.',
     hint: 'This → These、is → are、book → books と変わります。',
-    explanation: 'This（これ）が複数になると These（これら）、be動詞は are になり、book も books と複数形にします。',
+    explanation:
+      '【答え】These are books.\n\n【3か所を同時に変える】単数から複数にするときは、変わる場所が3つある。\n・This → These\n・is → are\n・a book → books（a を取って s をつける）\n1か所でも直し忘れると誤りになる。これが この問題の要点である。\n\n【ほかの選択肢がまちがいな理由】\n・These is books … be動詞が単数のまま\n・This are books … 主語が単数のまま\n・These are book … 名詞が単数のまま\nどれも1か所ずつ直し忘れている。\n\n【this と these】\n・this（これ・この）→ these（これら・これらの）\n・that（あれ・あの）→ those（あれら・あれらの）\nthis と these、that と thoseを組にして覚える。\n\n【複数形の作り方】\n・ふつう … s。books、pens\n・s・x・ch・sh で終わる語 … es。buses、boxes、watches、dishes\n・子音と y … y を i にして es。cities、countries\n・f・fe … ves。leaves、knives\n・不規則 … men、women、children、feet、teeth、mice\n\n【例文】These are my books. Those are her pens.',
     examFrequency: 'high',
   },
   {
