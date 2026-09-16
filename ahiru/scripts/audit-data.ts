@@ -311,6 +311,37 @@ for (const q of Q as any[]) {
 }
 check('【問題集】中学受験の問題に高校で習う記号が出ている', hsBad);
 
+// 書いた本人が答えを出しきれていない解説が、そのまま出荷されていないか。
+//
+// 2026/9/16、解説の中に「…の計算過程を再確認すると」「本問の設定で解答欄を384で示す」
+// 「厳密には168通りは再確認が必要です」「条件再確認が必要だが」という文が残った問題が
+// 5問あり、そのすべてで答えか問題文がまちがっていた（灘07・灘10・明星max01・
+// 東京法政max01・関関同立r01・中学受験ex_01_023）。
+// 逃げ道を書いた時点で、書き手は導けていない。**それは必ず中身のまちがいとして残る。**
+//
+// ⚠️ 「前後で」「後で」「厳密には」「矛盾」は正当な言い回し（質量保存の法則・
+//   古文の「やがて」・選択肢が本文と矛盾する説明）なので入れない。誤検出が数百件出る。
+const UNFINISHED: Array<[string, RegExp]> = [
+  ['再確認', /再確認すると|再確認が必要|再確認する必要/],
+  ['修正メモ', /これを修正|の修正：|実際の正解|実際の正答|正答は/],
+  ['出題の不備', /出題ミス|別解が生じ|解答欄を/],
+  ['書きかけ', /TODO|FIXME|とりあえず|仮に答え/],
+];
+const unfinished: string[] = [];
+for (const q of Q as any[]) {
+  const fields: Array<[string, unknown]> = [
+    ['問題文', q.question], ['答え', q.answer], ['ヒント', q.hint],
+    ['解説', q.explanation], ['覚え方', q.memoryTip], ['ひっかけ', q.pitfall],
+  ];
+  for (const [name, v] of fields) {
+    const s = String(v ?? '');
+    for (const [kind, re] of UNFINISHED) {
+      if (re.test(s)) { unfinished.push(`${q.id}(${name}:${kind})`); break; }
+    }
+  }
+}
+check('【問題集】答えを出しきれていない解説が残っている', unfinished);
+
 // 小問（subQuestions）が画面に出ているか。
 //
 // 89問（小問353問）が subQuestions を持つのに、QuizCard が描いていなかった。

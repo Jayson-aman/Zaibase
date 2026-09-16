@@ -151,10 +151,14 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_12',
     subject: 'eigo',
-    question: '次の語句を並べ替えて、意味の通る英文を作りなさい。（1語不要な語が含まれています）\n\n【語群】nobody / the / who / knows / man / where / is / lives / he',
-    answer: 'Nobody knows where he lives.',
-    hint: '「誰も知らない」から始まり、「どこに住んでいるか」という間接疑問文の語順を考えましょう。不要な語が1つあります。',
-    explanation: '正解：Nobody knows where he lives.\n（誰も彼がどこに住んでいるか知らない）\n不要な語：the、man、who のうち the と man と who — 実際には who、the、man の3語が余分です。\n\n※ 正確には：不要な語は who、the、man（3語）の中から「1語不要」という出題なら出題ミスの可能性がありますが、正しい文としては：\n Nobody knows where he lives.\n\n【間接疑問文の語順】\n疑問詞を使った名詞節（間接疑問文）では、語順が平叙文と同じになります。\n\n直接疑問：Where does he live?（疑問文の語順：疑問詞 + 助動詞 + 主語）\n間接疑問：where he lives（平叙文の語順：疑問詞 + 主語 + 動詞）\n\n直接疑問文を knows の目的語として埋め込む場合：\n×Nobody knows where does he live.（誤り：疑問文の語順のまま）\n○Nobody knows where he lives.（正解：平叙文の語順）\n\n間接疑問文の注意点：do/does/did は使わず、時制も主節に合わせる必要がある。',
+    question:
+      '次の語句を並べ替えて、意味の通る英文を作りなさい。（1語不要な語が含まれています）\n\n【語群】nobody / knows / where / does / he / lives',
+    answer:
+      'Nobody knows where he lives.（不要な語：does）',
+    hint:
+      '「どこに住んでいるか」を knows の目的語にする。文の中に入った疑問文は、疑問文の語順のままにしないことがポイント。',
+    explanation:
+      '【答え】Nobody knows where he lives.（だれも彼がどこに住んでいるか知らない）\n不要な語は does である。\n\n【なぜ does がいらないのか】疑問詞のまとまりが文の一部（knows の目的語）になると、中の語順はふつうの文と同じになる。これを間接疑問文という。\n・直接の疑問文 … Where does he live?（疑問詞 ＋ does ＋ 主語 ＋ 動詞の原形）\n・文の中に入ると … where he lives（疑問詞 ＋ 主語 ＋ 動詞）\ndoes が消えて、そのぶん動詞に s がつくのが要点である。does が持っていた「三人称単数・現在」のしるしが、動詞そのものに戻るからである。\n\n【まちがいの例】\n・× Nobody knows where does he live.（疑問文の語順のまま）\n・× Nobody knows where he live.（s をつけ忘れ）\n・○ Nobody knows where he lives.\n\n【時制も主節に合わせる】\n・I know where he lives.\n・I knew where he lived.（主節が過去なら、中も過去にそろえる）\n\n【nobody の使い方】\n・nobody は「だれも〜ない」という意味を1語で表すので、not をさらに足さない。\n・× Nobody does not know 〜\n・nobody は単数あつかいなので、動詞は knows になる\n\n【間接疑問文になる動詞】know、tell、ask、wonder、remember などの後ろによく置かれる。\n・Can you tell me where the station is?（駅がどこにあるか教えてくれますか）\n・Where is the station? の語順を残さないのが、この形の最大の急所である。',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
