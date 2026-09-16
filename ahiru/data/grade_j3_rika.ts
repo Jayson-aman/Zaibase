@@ -218,7 +218,7 @@ export const gradeJ3RikaQuestions: Question[] = [
     grade: 'j3',
     difficulty: 'advanced',
     question:
-      '一つの物体に、大きさがどちらも10Nの2つの力が、60°の角度をなしてはたらいている。この2力の合力の大きさを求めなさい(√3=1.73とする)。',
+      '【高校先取り】一つの物体に、大きさがどちらも10Nの2つの力が、60°の角度をなしてはたらいている。この2力の合力の大きさを求めなさい(√3=1.73とする)。',
     answer: '17.3N',
     hint: '大きさが等しい2つの力Fが角度θではたらくとき、合力の大きさは 2F×cos(θ/2) で求められる。',
     explanation:
@@ -228,6 +228,8 @@ export const gradeJ3RikaQuestions: Question[] = [
 
   // ==================== 水溶液とイオン ====================
   {
+    pitfall:
+      'sin・cos・tan（三角比）は高校で習う内容で、高校入試には出ない。中学では、直角三角形の辺の長さは三平方の定理と、1:2:√3・1:1:√2・3:4:5 などの比で求める。',
     id: 'grade_j3_rika_16',
     subject: 'rika',
     examType: 'koko',

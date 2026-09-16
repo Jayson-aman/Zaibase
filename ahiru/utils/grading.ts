@@ -165,10 +165,36 @@ export function acceptedAnswers(answer: string): string[] {
 }
 
 /**
+ * 模範解答が「文で書かれた答え」かどうか。
+ *
+ * ⚠️ 文の答えは、同じ内容でも書き方がいくらでも変わる。
+ *    実際に、まったく同じ問題が別のファイルにあって答えの言い回しだけちがう組が
+ *    21組見つかった（「平和主義」と「平和主義（戦争放棄）」、
+ *    「一つの行動で二つの利益を得ること」と「一つの行動で二つの利益や目的を
+ *    同時に達成すること」など）。
+ *    こういう答えを1文字ちがいで×にすると、正しく分かっている子が×をもらう。
+ *    だから、文の答えは「合っていれば○、合わなければ見くらべ」にする。
+ */
+export function isProse(answer: string): boolean {
+  const a = String(answer ?? '').trim();
+  if (a.length < 8) return false;
+  if (/^[0-9０-９\-−]/.test(a)) return false;                    // 数から始まる答えは判定できる
+  if (/[。]/.test(a)) return true;                              // 句点がある＝文
+  if (/(?:こと|ため|から|ようす|様子|しくみ|仕組み|はたらき|働き)$/u.test(a)) return true;
+  if (/[、，][^、，]+[、，]/.test(a)) return true;                 // 3つ以上を読点で並べている
+  // 助詞をはさんで語がつながっている＝文になっている
+  if (a.length >= 12 && /[ぁ-ん一-龥][はがをにへとでもより][ぁ-ん一-龥]/.test(a)) return true;
+  return false;
+}
+
+/**
  * 書かれた答えを採点する。
  *
  * 迷ったら正解に寄せる。合っているのに×にするほうが、
  * まちがっているのに○にするより、子どもにとってずっと害が大きい。
+ *
+ * 合わなかったとき、模範解答が文で書かれていれば 'review'（見くらべ）を返す。
+ * 機械には言いかえの正誤が決められないので、×をつけずに自分で見くらべてもらう。
  */
 export function judge(input: string, answer: string): Judgement {
   const got = normalize(input);
@@ -182,7 +208,7 @@ export function judge(input: string, answer: string): Judgement {
     const b = numericCore(ok);
     if (a != null && b != null && a.num === b.num && (a.unit === '' || a.unit === b.unit)) return 'correct';
   }
-  return 'wrong';
+  return isProse(answer) ? 'review' : 'wrong';
 }
 
 /**

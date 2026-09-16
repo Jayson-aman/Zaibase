@@ -527,7 +527,7 @@ C(5,3)＝5!/(3!×2!)＝(5×4)/(2×1)＝10通り。
     examType: 'koko',
     difficulty: 'advanced',
     maxOnly: true,
-    question: `【大問3】（二次関数と面積の最大・最小）
+    question: `【高校先取り】【大問3】（二次関数と面積の最大・最小）
 
 問1. y＝x²－4x＋3 の頂点の座標を求めよ。
 
@@ -556,6 +556,8 @@ x＝1 のとき y＝0、x＝4 のとき y＝3。
 
 export const tokyoWasedaKokugo: Question[] = [
   {
+    pitfall:
+      '積分（∫）は高校で習う内容で、高校入試には出ない。中学では、放物線と直線で囲まれた図形の面積は、座標から三角形や台形に分けて求める。',
     id: 'koko_waseda_kokugo_01',
     subject: 'kokugo',
     course: 'koko-waseda',
@@ -1003,7 +1005,7 @@ x/4 － x/6 ＝ 1/2（30分＝0.5時間）。
     course: 'koko-meidai',
     examType: 'koko',
     difficulty: 'advanced',
-    question: `【大問2】（一次・二次関数のグラフ）
+    question: `【高校先取り】【大問2】（一次・二次関数のグラフ）
 
 問1. y＝x² と y＝2x＋3 の交点を求めよ。
 
@@ -1029,6 +1031,8 @@ x＝2 のとき傾き＝4。
 接線：y－4＝4(x－2) → y＝4x－4。`,
   },
   {
+    pitfall:
+      '微分・増減表・極値は高校で習う内容で、高校入試には出ない。中学では、グラフの形は何点かの座標を計算して調べる。',
     id: 'koko_meidai_sansu_03',
     subject: 'sansu',
     course: 'koko-meidai',

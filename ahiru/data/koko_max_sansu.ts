@@ -55,7 +55,7 @@ export const kokoMaxSansu: Question[] = [
   {
     id: 'koko_max_sansu_05',
     subject: 'sansu',
-    question: 'n 番目の項が 3n - 1 で表される数列の、第 1 項から第 20 項までの和を求めなさい。',
+    question: '【高校先取り】n 番目の項が 3n - 1 で表される数列の、第 1 項から第 20 項までの和を求めなさい。',
     answer: '610',
     hint: '等差数列の和の公式 S = n(a₁ + aₙ)/2 を使う。a₁ = 2、a₂₀ = 59。',
     explanation: 'aₙ = 3n - 1\na₁ = 3(1) - 1 = 2\na₂₀ = 3(20) - 1 = 59\n等差数列の和：S₂₀ = 20(2 + 59)/2 = 20 × 61/2 = 10 × 61 = 610',
@@ -63,6 +63,8 @@ export const kokoMaxSansu: Question[] = [
     course: 'koko-general',
     examType: 'koko',
     maxOnly: true,
+    pitfall:
+      '等差数列・等比数列という言い方と、一般項や和の公式は高校で習う内容で、高校入試には出ない。中学では「何ずつ増えているか」を調べて、はじめの数＋増える数×（何番目−1）と、言葉と式で組み立てる。',
   },
   {
     id: 'koko_max_sansu_06',
@@ -79,7 +81,7 @@ export const kokoMaxSansu: Question[] = [
   {
     id: 'koko_max_sansu_07',
     subject: 'sansu',
-    question: '放物線 y = x² と直線 y = 2x + 3 の交点の座標を求め、2つの交点と放物線で囲まれた図形の面積を求めなさい。',
+    question: '【高校先取り】放物線 y = x² と直線 y = 2x + 3 の交点の座標を求め、2つの交点と放物線で囲まれた図形の面積を求めなさい。',
     answer: '交点：(-1, 1) と (3, 9)、面積：32/3',
     hint: '交点は x² = 2x + 3 を解く。面積は ∫(上-下)dx で計算。',
     explanation: 'x² = 2x + 3 → x² - 2x - 3 = 0 → (x+1)(x-3) = 0\n交点：x = -1 → y = 1、x = 3 → y = 9\n交点：(-1, 1)、(3, 9)\n\n面積 = ∫₋₁³ (2x + 3 - x²) dx\n= [x² + 3x - x³/3]₋₁³\n= (9 + 9 - 9) - (1 - 3 + 1/3)\n= 9 - (-5/3)\n= 9 + 5/3 = 32/3',
@@ -87,11 +89,13 @@ export const kokoMaxSansu: Question[] = [
     course: 'koko-general',
     examType: 'koko',
     maxOnly: true,
+    pitfall:
+      '積分（∫）は高校で習う内容で、高校入試には出ない。中学では、放物線と直線で囲まれた図形の面積は、座標から三角形や台形に分けて求める。',
   },
   {
     id: 'koko_max_sansu_08',
     subject: 'sansu',
-    question: '正三角形 ABC の辺 BC を 1:2 に内分する点を D とするとき、AD の長さを辺の長さ a で表しなさい。',
+    question: '【高校先取り】正三角形 ABC の辺 BC を 1:2 に内分する点を D とするとき、AD の長さを辺の長さ a で表しなさい。',
     answer: 'AD = (√7/3)a',
     hint: '余弦定理を使う。BD = a/3、∠B = 60°、AB = a。',
     explanation: 'BD = a/3（BC を 1:2 に内分）、AB = a、∠B = 60°\n余弦定理：AD² = AB² + BD² - 2·AB·BD·cos(∠B)\n= a² + (a/3)² - 2·a·(a/3)·cos60°\n= a² + a²/9 - 2·a²/3·(1/2)\n= a² + a²/9 - a²/3\n= a²(1 + 1/9 - 3/9)\n= a²(9/9 + 1/9 - 3/9)\n= a²(7/9)\nAD = a√(7/9) = (√7/3)a',
@@ -99,6 +103,8 @@ export const kokoMaxSansu: Question[] = [
     course: 'koko-general',
     examType: 'koko',
     maxOnly: true,
+    pitfall:
+      'sin・cos・tan（三角比）は高校で習う内容で、高校入試には出ない。中学では、直角三角形の辺の長さは三平方の定理と、1:2:√3・1:1:√2・3:4:5 などの比で求める。',
   },
   {
     id: 'koko_max_sansu_09',
@@ -314,7 +320,7 @@ export const kokoMaxSansu: Question[] = [
   {
     id: 'koko_max_sansu_26',
     subject: 'sansu',
-    question: '等比数列の初項が 3、公比が 2 のとき、第 8 項の値と第 1 項から第 8 項までの和を求めなさい。',
+    question: '【高校先取り】等比数列の初項が 3、公比が 2 のとき、第 8 項の値と第 1 項から第 8 項までの和を求めなさい。',
     answer: '第8項 = 384、和 = 765',
     hint: '等比数列：aₙ = a₁ × r^(n-1)、和 = a₁(rⁿ - 1)/(r - 1)',
     explanation: 'a₈ = 3 × 2^(8-1) = 3 × 128 = 384\nS₈ = 3 × (2⁸ - 1)/(2 - 1) = 3 × (256 - 1)/1 = 3 × 255 = 765',
@@ -322,6 +328,8 @@ export const kokoMaxSansu: Question[] = [
     course: 'koko-general',
     examType: 'koko',
     maxOnly: true,
+    pitfall:
+      '等差数列・等比数列という言い方と、一般項や和の公式は高校で習う内容で、高校入試には出ない。中学では「何ずつ増えているか」を調べて、はじめの数＋増える数×（何番目−1）と、言葉と式で組み立てる。',
   },
   {
     id: 'koko_max_sansu_27',
@@ -572,7 +580,7 @@ export const kokoMaxSansu: Question[] = [
   {
     id: 'koko_max_sansu_47',
     subject: 'sansu',
-    question: '関数 y = x³ - 3x について、増減表を作り極値を求めなさい。',
+    question: '【高校先取り】関数 y = x³ - 3x について、増減表を作り極値を求めなさい。',
     answer: '極大：x = -1 で y = 2、極小：x = 1 で y = -2',
     hint: 'y\' = 3x² - 3 = 3(x²-1) = 3(x+1)(x-1)。y\' = 0 の解が極値の候補。',
     explanation: 'y\' = 3x² - 3 = 3(x-1)(x+1)\ny\' = 0: x = ±1\n\n増減表：\nx:  ... -1 ... 1 ...\ny\': + 0  - 0  +\ny:↗ 極大 ↘ 極小 ↗\n\nx = -1: y = (-1)³ - 3(-1) = -1+3 = 2（極大値 2）\nx = 1: y = 1 - 3 = -2（極小値 -2）',
@@ -580,6 +588,8 @@ export const kokoMaxSansu: Question[] = [
     course: 'koko-general',
     examType: 'koko',
     maxOnly: true,
+    pitfall:
+      '微分・増減表・極値は高校で習う内容で、高校入試には出ない。中学では、グラフの形は何点かの座標を計算して調べる。',
   },
   {
     id: 'koko_max_sansu_48',

@@ -58,13 +58,15 @@ export default function AnswerInput({ question, onSubmit, submitted, tone = 'blu
   function handleSubmit() {
     const input = text.trim();
     if (!input) return;
-    const result = isWriting ? 'review' : (judge(input, question.answer) as 'correct' | 'wrong');
+    // 文で書かれた模範解答は、合わなくても×をつけず 'review'（見くらべ）になる
+    const result = isWriting ? 'review' : judge(input, question.answer);
     onSubmit({ input, result });
   }
 
   // ── 採点したあと：書いた答えと添削を見せる ──
   if (submitted != null) {
-    const { hit, miss } = isWriting
+    const needsReview = submitted.result === 'review';
+    const { hit, miss } = needsReview
       ? reviewWriting(submitted.input, question.answer)
       : { hit: [], miss: [] };
     const hint = submitted.result === 'wrong' ? diffHint(submitted.input, question.answer) : null;
@@ -91,11 +93,12 @@ export default function AnswerInput({ question, onSubmit, submitted, tone = 'blu
           </View>
         )}
 
-        {isWriting && (
+        {needsReview && (
           <View style={styles.reviewBox}>
             <Text style={[styles.reviewTitle, { color: c.accent }]}>じぶんで見くらべてみよう</Text>
             <Text style={styles.reviewNote}>
-              記述の答えは、書き方がちがっても正しいことがあります。模範解答とくらべて、
+              文で答える問題は、書き方がちがっても正しいことがあります。
+              機械では正誤を決められないので、模範解答とくらべて、
               足りないところをおぎなってみましょう。
             </Text>
             {hit.length > 0 && (
