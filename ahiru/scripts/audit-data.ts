@@ -656,7 +656,10 @@ check('【問題集】小問に設問・答え・解説のどれかが無い', s
 
 info('【問題集】解説が理由まで書けていない（減らしていく数字）', qThin, 3);
 info('【問題集】画面に出る説明が80字以下（減らしていく数字）', qShort, 3);
-const qnorm = (x: string) => String(x ?? '').replace(/\s+/g, '').replace(/[。、．，]/g, '');
+// ⚠️ 2026/9/16まで「？」と「！」を落としていなかったため、
+//   「100以下の3の倍数は何個ありますか？」と「〜ありますか。」が
+//   別の問題として数えられ、まったく同じ問題が3組すり抜けていた。
+const qnorm = (x: string) => String(x ?? '').replace(/\s+|　/g, '').replace(/[。、．，！？!?・]/g, '');
 const qdup = new Map<string, string[]>();
 for (const q of Q) {
   if (qnorm(q.question).length < 12) continue;

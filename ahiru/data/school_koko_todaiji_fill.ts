@@ -899,7 +899,7 @@ export const schoolKokoTodaijiFill: Question[] = [
       '(自由英作文・模範解答例) "I think it is good for students to have a part-time job because they can learn how to manage time and money. This experience will also help them communicate with different kinds of people."',
     hint: 'State your opinion clearly first (I think.../I don\'t think...), then give one clear reason using "because."',
     explanation:
-      '【解説】\nこれは唯一の正解がない自由英作文問題。採点にあたっては、①意見が明確に述べられているか、②理由が"because"などを使って論理的に示されているか、③文法・語彙の正確さ、の3点を評価するとよい。模範解答はあくまで一例であり、賛成・反対どちらの立場でも、理由が論理的であれば正答となり得る。',
+      '【この問題の答え方】これは正解が1つに決まらない自由英作文である。賛成でも反対でも、理由が筋道立っていれば正答になる。\n\n【書く順番】この形を守れば、どの題でも書ける。\n①立場をはっきり言う … I think 〜 / I do not think 〜\n②理由を言う … because 〜\n③理由をもう一歩くわしくする … For example 〜 / Also 〜\n\n【この題（学生のアルバイト）の書き方】\n・賛成の理由 … 時間やお金の管理を学べる／いろいろな人と話す経験ができる／働くことの大変さが分かる\n・反対の理由 … 勉強の時間が減る／夜おそくなると体に負担がかかる／学生の本分は勉強である\nどちらの立場でも、理由を2つ思いうかべてから書きはじめると、語数がそろう。\n\n【語数について】30〜40語という指示なので、3文くらいが目安である。1文を長くしすぎると文法をまちがえやすい。短い文を3つ並べるほうが安全である。\n\n【採点で見られるところ】\n①意見がはっきり書かれているか\n②理由が because などで示されているか\n③文法と語いが正しいか\nこの3つのうち、①をいちばん先に書くのが得点のこつである。立場が最後まで分からない答案は点が伸びない。\n\n【使える言い回し】\n・I think that 〜 because …\n・One reason is that 〜\n・For these reasons, I think 〜（まとめ）',
     difficulty: 'advanced',
     course: 'koko-todaiji',
     examType: 'koko',
