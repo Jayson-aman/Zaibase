@@ -392,6 +392,99 @@ for (const [ev, ok] of YEAR_FACTS) {
 }
 check('【問題集・単元】歴史の年号が出来事と食いちがう', yearBad);
 
+// 全教科の「決まった事実」が、本文と食いちがっていないか。
+//
+// 2026/9/16、ユーザーの「他の科目、全科目に間違いがあるかないか確認を」という
+// 指摘で、教科ごとに正解表を作って全20,863か所を照合した。結果は0件だったが、
+// 同じ検査を残しておけば、これから足す問題で取りちがえたときに止められる。
+//
+// ⚠️ 判定は「すぐ隣に書かれた組」だけを見る。離れた語まで拾うと、
+//   正しい本文が大量に誤検出される（ゆるい条件では340件出て、本物は0件だった）。
+type FactRule = { label: string; table: Record<string, string[]>; pats: (k: string) => RegExp[] };
+const FACT_RULES: FactRule[] = [
+  {
+    label: '社会：県庁所在地',
+    table: {
+      北海道: ['札幌'], 岩手県: ['盛岡'], 宮城県: ['仙台'], 茨城県: ['水戸'], 栃木県: ['宇都宮'],
+      群馬県: ['前橋'], 埼玉県: ['さいたま'], 神奈川県: ['横浜'], 石川県: ['金沢'], 山梨県: ['甲府'],
+      愛知県: ['名古屋'], 三重県: ['津'], 滋賀県: ['大津'], 兵庫県: ['神戸'], 島根県: ['松江'],
+      香川県: ['高松'], 愛媛県: ['松山'], 沖縄県: ['那覇'],
+    },
+    // 「？」や「」がまじる問いかけの文は見ない
+    pats: (k) => [new RegExp(`${k}(?:の県庁所在地|の道庁所在地)(?:は|＝|:|：)\\s*([一-龥ぁ-んァ-ヶ]{2,6}?)市`, 'g')],
+  },
+  {
+    label: '理科：元素記号',
+    table: {
+      水素: ['H'], 酸素: ['O'], 窒素: ['N'], 炭素: ['C'], 硫黄: ['S'], ナトリウム: ['Na'],
+      塩素: ['Cl'], カルシウム: ['Ca'], 鉄: ['Fe'], 銅: ['Cu'], アルミニウム: ['Al'],
+      亜鉛: ['Zn'], マグネシウム: ['Mg'], 銀: ['Ag'], 金: ['Au'], カリウム: ['K'], 鉛: ['Pb'],
+    },
+    // ⚠️「二酸化炭素（X）」の中の「炭素」、「亜鉛（Zn）」の中の「鉛」を拾わないよう、
+    //   直前が漢字・カタカナでないことを条件にする。X・Y・Z は穴うめなので除く。
+    pats: (k) => [
+      new RegExp(`(?<![一-龥ァ-ヶー])${k}(?:の元素記号|の記号)(?:は|＝|:|：)\\s*(?![XYZ][^a-z])([A-Z][a-z]?)`, 'g'),
+      new RegExp(`(?<![一-龥ァ-ヶー])${k}\\s*[（(]\\s*(?![XYZ][)）])([A-Z][a-z]?)\\s*[)）]`, 'g'),
+    ],
+  },
+  {
+    label: '理科：化学式',
+    table: {
+      水: ['H2O', 'H₂O'], 二酸化炭素: ['CO2', 'CO₂'], 塩化ナトリウム: ['NaCl'],
+      アンモニア: ['NH3', 'NH₃'], 塩酸: ['HCl'], 硫酸: ['H2SO4', 'H₂SO₄'],
+      水酸化ナトリウム: ['NaOH'], 酸化銅: ['CuO'], 酸化マグネシウム: ['MgO'],
+    },
+    pats: (k) => [new RegExp(`${k}(?:の化学式|の分子式)(?:は|＝|:|：)\\s*([A-Za-z0-9₀-₉]{2,8})`, 'g')],
+  },
+  {
+    label: '英語：不規則動詞',
+    table: {
+      go: ['went'], come: ['came'], see: ['saw'], eat: ['ate'], take: ['took'], give: ['gave'],
+      write: ['wrote'], speak: ['spoke'], break: ['broke'], buy: ['bought'], bring: ['brought'],
+      teach: ['taught'], catch: ['caught'], think: ['thought'], make: ['made'], find: ['found'],
+      run: ['ran'], swim: ['swam'], sing: ['sang'], drink: ['drank'], begin: ['began'],
+      know: ['knew'], grow: ['grew'], throw: ['threw'], leave: ['left'], keep: ['kept'],
+      sleep: ['slept'], feel: ['felt'], meet: ['met'],
+    },
+    // ⚠️ 活用表（go - went - gone）の形だけを見る。区切りの前後に空白を必ず求めると、
+    //   "take-make-waste" のような英語のひとかたまりの語を拾わずにすむ。
+    pats: (k) => [new RegExp(`\\b${k}\\s+[-–—→⇒]\\s+([a-z]+)\\s+[-–—→⇒]\\s+[a-z]+`, 'g')],
+  },
+  {
+    label: '英語：不規則な複数形',
+    table: {
+      man: ['men'], woman: ['women'], child: ['children'], foot: ['feet'], tooth: ['teeth'],
+      mouse: ['mice'], leaf: ['leaves'], knife: ['knives'], life: ['lives'], wife: ['wives'],
+      city: ['cities'], country: ['countries'], baby: ['babies'], potato: ['potatoes'],
+    },
+    pats: (k) => [new RegExp(`\\b${k}\\s*[-–—→⇒]\\s*([a-z]+)`, 'g')],
+  },
+  {
+    label: '社会：世界の首都',
+    table: {
+      アメリカ: ['ワシントン', 'ワシントンD.C.', 'ワシントンDC'], イギリス: ['ロンドン'],
+      フランス: ['パリ'], ドイツ: ['ベルリン'], イタリア: ['ローマ'], ロシア: ['モスクワ'],
+      中国: ['ペキン', '北京'], 韓国: ['ソウル'], ブラジル: ['ブラジリア'],
+      オーストラリア: ['キャンベラ'], エジプト: ['カイロ'], カナダ: ['オタワ'], タイ: ['バンコク'],
+    },
+    pats: (k) => [new RegExp(`${k}の首都(?:は|＝|:|：)\\s*(?!どこ|なに|何|どちら)([^\\s。、（(]{2,10}?)(?:です|である|。|、)`, 'g')],
+  },
+];
+const factBad: string[] = [];
+for (const rule of FACT_RULES)
+  for (const [key, ok] of Object.entries(rule.table))
+    for (const re of rule.pats(key))
+      for (const [id, t] of yearItems)
+        for (const m of t.matchAll(re)) {
+          const got = (m[1] ?? '').trim();
+          const i = m.index ?? 0;
+          const around = t.slice(Math.max(0, i - 45), i + 55);
+          // まちがいを「まちがい」として教えている本文は見ない
+          if (!got || ok.includes(got) || /誤り|まちが|間違|ではない|×|✗/.test(around)) continue;
+          factBad.push(`${id} ${rule.label} ${key}→${got}(正:${ok.join('・')})`);
+        }
+check('【問題集・単元】教科の決まった事実と食いちがう', factBad);
+
 // 問題集の日本語の中に、書きかけの英単語が残っていないか。
 //
 // 単元（L）側には前から同じ検査があったが、問題集（Q）側には無かった。
