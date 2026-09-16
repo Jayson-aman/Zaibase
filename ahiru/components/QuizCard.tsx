@@ -33,6 +33,16 @@ type Props = {
   choices?: string[];
   onChoiceSelect?: (correct: boolean) => void;
   isPro?: boolean;
+  /**
+   * 答えを書く前にカードをめくって答えを見てしまわないようにする。
+   * 自分で答えを書く方式にしたので、書き終えるまでは答え側に返せない。
+   */
+  lockFlip?: boolean;
+  /**
+   * 答え合わせをしたら、タップを待たずに答え側を見せる。
+   * カードは自分で表裏の状態を持っているので、外から開けるようにしておく。
+   */
+  forceReveal?: boolean;
 };
 
 const { width } = Dimensions.get('window');
@@ -56,8 +66,9 @@ function fitText(text: string, max: number, min: number, longAt = 90) {
   return { fontSize, lineHeight: Math.round(fontSize * 1.6) };
 }
 
-export default function QuizCard({ question, onReveal, choices, onChoiceSelect, isPro = false }: Props) {
-  const [revealed, setRevealed] = useState(false);
+export default function QuizCard({ question, onReveal, choices, onChoiceSelect, isPro = false, lockFlip = false, forceReveal = false }: Props) {
+  const [flipped, setFlipped] = useState(false);
+  const revealed = flipped || forceReveal;
   const [selectedChoice, setSelectedChoice] = useState<string | null>(null);
   const info = subjectInfo[question.subject];
   // 単元テーマ判定（理科・社会）：問題文＋解説からキーワードで自動分類
@@ -75,8 +86,8 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
   const video = getQuestionVideo(question.id, question.videoUrl);
 
   function handlePress() {
-    if (choices != null || revealed) return;
-    setRevealed(true);
+    if (choices != null || revealed || lockFlip) return;
+    setFlipped(true);
     onReveal?.();
   }
 
@@ -97,7 +108,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
   return (
     <TouchableOpacity
       onPress={handlePress}
-      activeOpacity={choices != null ? 1 : 0.9}
+      activeOpacity={choices != null || lockFlip ? 1 : 0.9}
       style={[styles.card, choices == null && revealed && styles.cardRevealed]}
     >
       <View style={styles.subjectChipRow}>

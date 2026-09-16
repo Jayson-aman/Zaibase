@@ -48,6 +48,7 @@ import { useBetaAccess } from '../../hooks/useBetaAccess';
 import TutorChat from '../../components/TutorChat';
 import HomeButton from '../../components/HomeButton';
 import Fireworks from '../../components/Fireworks';
+import AnswerInput, { type SubmitResult } from '../../components/AnswerInput';
 import { getFigure } from '../../data/figures';
 import FigureView from '../../components/FigureView';
 import { pickEncouragement, pickStreakEncouragement } from '../../data/encouragements';
@@ -264,6 +265,12 @@ export default function QuizScreen() {
   const [wrongIds, setWrongIds] = useState<string[]>([]);
   const [feedback, setFeedback] = useState<'correct' | 'wrong' | null>(null);
   const [waitingNext, setWaitingNext] = useState(false);
+  // いま解いている問題に、自分で書いた答え（まだ書いていなければ null）
+  const [typed, setTyped] = useState<SubmitResult | null>(null);
+  // あとで採点・添削を見せるための記録。1問ごとに「問題・自分の答え・結果」を残す
+  const [answerLog, setAnswerLog] = useState<
+    Array<{ id: string; question: string; answer: string; input: string; result: SubmitResult['result'] }>
+  >([]);
   // 正解/不正解ボタンの二重タップ防止。二重に走ると currentIndex が2つ進み、
   // 最後の2問で範囲外になって落ちる。
   const answeringRef = useRef(false);
@@ -299,6 +306,8 @@ export default function QuizScreen() {
     setWrongStreak(0);
     setRemedialJustInjected(false);
     setShowFireworks(false);
+    setTyped(null);
+    setAnswerLog([]);
   }, [baseQuestions]);
 
   // レベル別ドリル・入試対策の「1日あたり無料N問」の消費数を読み込む。
@@ -377,10 +386,64 @@ export default function QuizScreen() {
     } else {
       setCurrentIndex((i) => i + 1);
       setRevealed(false);
+      // 次の問題に進んだら、書いた答えの欄をからにする
+      setTyped(null);
     }
   }
 
-  async function handleAnswer(correct: boolean) {
+  /**
+   * 書いた答えを受け取って採点する。
+   *
+   * 記述問題（result が 'review'）は機械で正誤を決められないので、点数には
+   * 数えず、模範解答を出して自分で見くらべてもらう。
+   * 短い答えは、ここで正誤が決まる。合っていれば花火が上がる。
+   */
+  function handleSubmitTyped(r: SubmitResult) {
+    if (typed != null) return;
+    setTyped(r);
+    setRevealed(true);
+    setAnswerLog((log) => [
+      ...log,
+      {
+        id: currentQuestion.id,
+        question: currentQuestion.question,
+        answer: currentQuestion.answer,
+        input: r.input,
+        result: r.result,
+      },
+    ]);
+    if (r.result === 'review') {
+      // 正誤をつけないので「✗ 不正解！」の帯は出さない。
+      // ただし無料枠の消費は他の問題と同じように行う。
+      handleAnswer(false, 'review');
+      return;
+    }
+    handleAnswer(r.result === 'correct');
+  }
+
+  /** 選択肢をタップして答えたとき。こちらも記録に残す */
+  function handleChoiceAnswer(correct: boolean) {
+    setAnswerLog((log) => [
+      ...log,
+      {
+        id: currentQuestion.id,
+        question: currentQuestion.question,
+        answer: currentQuestion.answer,
+        input: correct ? currentQuestion.answer : '（えらんだ答えがちがいました）',
+        result: correct ? 'correct' : 'wrong',
+      },
+    ]);
+    handleAnswer(correct);
+  }
+
+  /**
+   * 答えたあとの処理。
+   *
+   * kind が 'review'（記述問題）のときは、正誤をつけず点数にも数えないが、
+   * 無料枠の消費だけは同じように行う。ここを素通りさせると、
+   * 記述問題4,312問がいくらでも無料で解けてしまう。
+   */
+  async function handleAnswer(correct: boolean, kind: 'scored' | 'review' = 'scored') {
     if (answeringRef.current) return;
     answeringRef.current = true;
 
@@ -424,6 +487,14 @@ export default function QuizScreen() {
         setTrialBlocked(true);
         answeringRef.current = false;
       }
+    }
+
+    if (kind === 'review') {
+      // 記述問題：正誤をつけず、点数にも数えない。
+      // カードが模範解答を見せ、「見くらべたので次へ」で自分で進む。
+      answeringRef.current = false;
+      if (hitLimit) setShowPaywall(true);
+      return;
     }
 
     const newScore = correct ? score + 1 : score;
@@ -579,6 +650,47 @@ export default function QuizScreen() {
               </View>
             </View>
 
+            {/*
+              採点・添削。「どこが間違えたか分かるようにしてほしい」という要望で追加。
+              自分の書いた答えと正しい答えを並べ、記述問題は正誤をつけずに見くらべる形にする。
+            */}
+            {answerLog.length > 0 && (
+              <View style={styles.reviewListCard}>
+                <Text style={styles.reviewListTitle}>採点・添削</Text>
+                <Text style={styles.reviewListNote}>
+                  自分の書いた答えと、正しい答えを見くらべてみましょう。
+                  文で答える問題は正誤をつけていません。
+                </Text>
+                {answerLog.map((a, i) => (
+                  <View
+                    key={`${a.id}_${i}`}
+                    style={[
+                      styles.reviewItem,
+                      a.result === 'correct' && styles.reviewItemCorrect,
+                      a.result === 'wrong' && styles.reviewItemWrong,
+                    ]}
+                  >
+                    <Text style={styles.reviewItemHead}>
+                      {a.result === 'correct' ? '○ 正解' : a.result === 'wrong' ? '● 見直そう' : '― 記述'}
+                      {'　'}
+                      {i + 1}問目
+                    </Text>
+                    <Text style={styles.reviewItemQ} numberOfLines={3}>
+                      {a.question}
+                    </Text>
+                    {a.result !== 'correct' && (
+                      <>
+                        <Text style={styles.reviewItemLabel}>あなたの答え</Text>
+                        <Text style={styles.reviewItemMine}>{a.input}</Text>
+                        <Text style={styles.reviewItemLabel}>正しい答え</Text>
+                        <Text style={styles.reviewItemRight}>{a.answer}</Text>
+                      </>
+                    )}
+                  </View>
+                ))}
+              </View>
+            )}
+
             {isPreview && (
               <View style={styles.previewCard}>
                 <Text style={styles.previewTitle}>ここまでがお試しの{PREVIEW_COUNT}問です</Text>
@@ -686,8 +798,10 @@ export default function QuizScreen() {
           question={currentQuestion}
           questionIndex={currentIndex}
           onReveal={handleReveal}
+          lockFlip={!currentChoices && typed == null}
+          forceReveal={typed != null}
           choices={currentChoices}
-          onChoiceSelect={handleAnswer}
+          onChoiceSelect={handleChoiceAnswer}
           isPro={isPro}
         />
 
@@ -805,32 +919,33 @@ export default function QuizScreen() {
           </View>
         )}
 
-        {/* Answer buttons - only shown in flip-card mode after reveal (hide when waiting for next) */}
-        {revealed && !currentChoices && !waitingNext && (
-          <View style={styles.answerButtons}>
-            <TouchableOpacity
-              style={styles.correctButton}
-              onPress={() => handleAnswer(true)}
-              activeOpacity={0.85}
-            >
-              <Text style={styles.correctButtonText}>✓ 正解</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.wrongButton}
-              onPress={() => handleAnswer(false)}
-              activeOpacity={0.85}
-            >
-              <Text style={styles.wrongButtonText}>✗ 不正解</Text>
-            </TouchableOpacity>
-          </View>
+        {/*
+          答えを自分で書く欄。
+          もとは「✓正解 / ✗不正解」を自分で押す作りだったが、それでは答えを
+          見てから判断することになり、本当に解けたのかが分からなかった。
+          先に書いてもらい、機械が採点する（記述問題は正誤をつけず見くらべる）。
+        */}
+        {!currentChoices && (
+          <AnswerInput
+            key={currentQuestion.id}
+            question={currentQuestion}
+            onSubmit={handleSubmitTyped}
+            submitted={typed}
+          />
         )}
 
-        {!revealed && !currentChoices && (
-          <View style={styles.revealHint}>
-            <Text style={styles.revealHintText}>
-              カードをタップして答えを確認してね 👆
-            </Text>
-          </View>
+        {/* 記述問題は正誤をつけないので、模範解答を見たら自分で次へ進む */}
+        {!currentChoices && typed?.result === 'review' && (
+          <TouchableOpacity
+            style={styles.reviewNextBtn}
+            onPress={() => {
+              setWaitingNext(false);
+              advanceOrFinish(score, wrongIds);
+            }}
+            activeOpacity={0.85}
+          >
+            <Text style={styles.reviewNextBtnText}>見くらべたので次へ →</Text>
+          </TouchableOpacity>
         )}
       </ScrollView>
 
@@ -994,57 +1109,82 @@ const styles = StyleSheet.create({
     color: '#6B4226',
     fontWeight: '700',
   },
-  answerButtons: {
-    flexDirection: 'row',
-    gap: 14,
-    paddingHorizontal: 16,
-    marginTop: 20,
+  reviewListCard: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 14,
+    padding: 16,
+    marginTop: 16,
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
   },
-  correctButton: {
-    flex: 1,
-    backgroundColor: '#00A651',
-    borderRadius: 20,
-    paddingVertical: 18,
-    alignItems: 'center',
-    shadowColor: '#00A651',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 8,
-    elevation: 5,
+  reviewListTitle: {
+    fontSize: 17,
+    fontWeight: '700',
+    color: '#0369A1',
   },
-  correctButtonText: {
-    fontSize: 22,
-    fontWeight: '900',
-    color: '#FFFFFF',
-    letterSpacing: 1,
+  reviewListNote: {
+    fontSize: 12,
+    color: '#64748B',
+    lineHeight: 18,
+    marginTop: 4,
+    marginBottom: 10,
   },
-  wrongButton: {
-    flex: 1,
-    backgroundColor: '#E74C3C',
-    borderRadius: 20,
-    paddingVertical: 18,
-    alignItems: 'center',
-    shadowColor: '#E74C3C',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 8,
-    elevation: 5,
+  reviewItem: {
+    borderRadius: 10,
+    padding: 12,
+    marginBottom: 8,
+    backgroundColor: '#F8FAFC',
+    borderLeftWidth: 4,
+    borderLeftColor: '#CBD5E1',
   },
-  wrongButtonText: {
-    fontSize: 22,
-    fontWeight: '900',
-    color: '#FFFFFF',
-    letterSpacing: 1,
+  reviewItemCorrect: {
+    backgroundColor: '#F0FDF4',
+    borderLeftColor: '#22C55E',
   },
-  revealHint: {
-    marginTop: 24,
-    alignItems: 'center',
-    paddingHorizontal: 16,
+  reviewItemWrong: {
+    backgroundColor: '#FFFBEB',
+    borderLeftColor: '#F59E0B',
   },
-  revealHintText: {
+  reviewItemHead: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: '#334155',
+    marginBottom: 4,
+  },
+  reviewItemQ: {
     fontSize: 14,
-    color: '#AAA',
-    fontWeight: '600',
+    color: '#0F172A',
+    lineHeight: 21,
+  },
+  reviewItemLabel: {
+    fontSize: 11,
+    fontWeight: '700',
+    color: '#64748B',
+    marginTop: 8,
+  },
+  reviewItemMine: {
+    fontSize: 15,
+    color: '#B45309',
+    lineHeight: 22,
+  },
+  reviewItemRight: {
+    fontSize: 15,
+    fontWeight: '700',
+    color: '#15803D',
+    lineHeight: 22,
+  },
+  reviewNextBtn: {
+    marginHorizontal: 16,
+    marginTop: 12,
+    backgroundColor: '#0369A1',
+    borderRadius: 10,
+    paddingVertical: 14,
+    alignItems: 'center',
+  },
+  reviewNextBtnText: {
+    color: '#FFFFFF',
+    fontSize: 16,
+    fontWeight: '700',
   },
   feedbackOverlay: {
     ...StyleSheet.absoluteFill,
