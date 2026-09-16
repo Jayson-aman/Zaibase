@@ -41,7 +41,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'D',
     hint: 'A, B, C, ... と順番に声に出して言ってみよう。',
     explanation:
-      'アルファベットの順番は A, B, C, D, E, F ... と続く。\n"C"の次は"D"。',
+      '【答え】D\n\n【アルファベットの順番】A, B, C, D, E, F, G ... と続く。Cの次はDである。\n\n【なぜ順番を覚えるのか】ただの暗記ではなく、実際に役に立つからである。\n・辞書は、アルファベット順に単語が並んでいる\n・名簿・図書館の本・電話帳も、この順に並んでいる\n順番を知っていれば、さがしたいものを早く見つけられる。\n\n【26文字ぜんぶ】\n・A B C D E F G\n・H I J K L M N\n・O P Q R S T U V\n・W X Y Z\n7文字・7文字・8文字・4文字に区切ると、歌のリズムと同じで覚えやすい。\n\n【前後をすぐ言えるようにする】テストでは「次の文字」「前の文字」がよく問われる。\n・歌で覚えると、前の文字が出てきにくいという弱点がある\n・「Cの前は？」と聞かれてAから数え直すのでは時間がかかる\n・3文字ずつ区切って言う練習（ABC・DEF・GHI …）をすると、前後がすぐ出てくる\n\n【大文字と小文字】どの文字にも大文字と小文字がある。\n・C → c\n・D → d\n形がまったくちがうもの（A→a、G→g、R→r）は、とくに練習が必要である。\n\n【書くときの注意】Cは左に開いた曲線、Dはたて棒＋右にふくらむ曲線。向きを反対に書かないように気をつける。',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -54,7 +54,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'L',
     hint: '... J, K, L, M, N ... の順番を思い出そう。',
     explanation:
-      'アルファベットの順番は ... J, K, L, M, N ... と続いている。\n"M"の1つ前の文字は"L"。',
+      '【答え】L\n\n【アルファベットの順番】... J, K, L, M, N ... と続く。Mの1つ前はLである。\n\n【「前の文字」がむずかしい理由】アルファベットの歌は前から後ろへ流れるので、「前の文字」は思い出しにくい。\n・「Mの前は？」と聞かれてAから数えていては時間がかかる\n・区切りで覚えておくと、その場ですぐ出てくる\n\n【区切って覚える】\n・A B C D E F G\n・H I J K L M N\n・O P Q R S T U V\n・W X Y Z\nMは2行目のうしろから2番目と場所で覚えると、前がL、次がNだとすぐ分かる。\n\n【ちょうど真ん中は】26文字なので、真ん中は13番目のMと14番目のNの間である。\n・A から M までが13文字（前半）\n・N から Z までが13文字（後半）\nMとNの間で半分に分かれる。これを知っておくと、だいたいの位置がつかめる。\n\n【よくまちがえる組】形が似ていて取りちがえやすい。\n・M と N … 山が2つか1つか\n・M と W … 上下をひっくり返した形\n・b と d … 丸が右か左か\n・p と q … 丸が右か左か\nb・d・p・q は小学生がいちばん取りちがえるので、ゆっくりていねいに書く。\n\n【小文字】M → m、L → l、N → n。小文字の l（エル）は、数字の1や大文字の I（アイ）と見分けにくいので注意する。',
     difficulty: 'standard',
     examType: 'chugaku',
     grade: 'e4',
@@ -67,7 +67,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '26',
     hint: 'AからZまで数えてみよう。',
     explanation:
-      '英語のアルファベットはAからZまであり、全部で26文字。\n日本語の「あいうえお」のように、英語の文字はこの26種類の組み合わせでできている。',
+      '【答え】26\n\n【アルファベットとは】英語を書き表すための文字で、AからZまでの26文字である。\n\n【日本語とくらべる】ここがおもしろいところである。\n・日本語 … ひらがな約46字、カタカナ約46字、漢字は数千字。全部で膨大な数\n・英語 … たったの26文字\n英語は文字の数がとても少ない。そのかわり、文字を組み合わせて音を表す。\n\n【なぜ26文字ですむのか】アルファベットは1文字が1つの音を表す文字（表音文字）だからである。\n・日本語の漢字は、1文字が意味を表す（表意文字）ので、たくさん必要になる\n・ひらがなは1文字が1つの音（か・き・く）を表すので46字\n・アルファベットはもっと細かい音（k と a）を表すので、組み合わせで多くの音が作れる\n文字の考え方がちがうので、数もちがってくる。\n\n【母音と子音】26文字は2つに分けられる。\n・母音字 … A, E, I, O, U の 5つ\n・子音字 … 残りの21文字\nどの単語にも、ふつう母音字が入っている。（例外的に my・by のように y が母音のはたらきをすることもある）\n\n【大文字と小文字】26文字それぞれに大文字と小文字があるので、形としては52通り覚えることになる。\n・大文字を使うところ … 文の最初、人の名前、国や都市の名前、曜日や月の名前、I（わたし）\n・I はいつも大文字。文のとちゅうでも大文字で書く\n\n【確かめ】A から Z まで、指を折りながら数えると26になる。',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -79,7 +79,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'i',
     hint: '大文字は形が大きく角ばっているものが多いよ。',
     explanation:
-      '"G"・"H"・"K"は大文字、"i"だけが小文字。\n小文字は大文字より小さく、丸みのある形をしていることが多い（"i"の上には点がつく）。',
+      '【答え】i\n\n【大文字と小文字】アルファベットには2つの形がある。\n・大文字（G・H・K）… 背が高く、形が角ばっているものが多い\n・小文字（i・a・o）… 小さく、丸みのあるものが多い\n\n【この問題の見分け方】\n・G・H・K は大文字\n・i だけが小文字\n\n【小文字の i の特徴】上に点がある。大文字の I（アイ）には点がない。\n・大文字 … I\n・小文字 … i（点がつく）\n点を書き忘れると、別の文字に見えてしまう。\n\n【大文字を使う場面】ここは決まりがあるので覚える。\n・文のはじめ … This is a pen.\n・人の名前 … Ken、Tom\n・国・都市の名前 … Japan、Tokyo\n・曜日・月の名前 … Sunday、April\n・「わたし」を表す I … いつでも大文字\n日本語には大文字・小文字の区別がないので、ここは英語ならではの決まりである。\n\n【形が大きく変わる組】大文字と小文字で形がちがうものは、とくに練習する。\n・A → a、B → b、D → d、E → e、G → g、Q → q、R → r\n【形が似ている組】\n・C → c、O → o、S → s、X → x、Z → z（大きさだけのちがい）\n\n【書く位置にも決まりがある】4本線のノートを使うと分かりやすい。\n・a・c・e・o … 真ん中の部屋だけ\n・b・d・h・k・l … 上にのびる\n・g・j・p・q・y … 下にのびる\nどこに書くかまでそろえると、読みやすい字になる。',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -92,7 +92,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'Z',
     hint: '「エービーシーディー…」と歌ってみると分かりやすいよ。',
     explanation:
-      'アルファベットはAから始まりZで終わる。\nA, B, C, ... X, Y, Zと26文字続き、いちばん最後の文字は"Z"。',
+      '【答え】Z\n\n【アルファベットの最後】A から始まり、... W, X, Y, Z で終わる。全部で26文字で、Zが26番目である。\n\n【最後の4文字】W, X, Y, Z。この4つはひとまとまりにして覚えると、順番がまざらない。\n\n【Zの読み方】国によってちがう。\n・アメリカ英語 … ズィー（zee）\n・イギリス英語 … ゼッド（zed）\n同じ英語でも、国によって読み方がちがうことがある。ほかにも、\n・schedule … スケジュール（米）／シェジュール（英）\n・tomato … トメイトウ（米）／トマートウ（英）\n\n【Zで始まる単語は少ない】辞書を開くと、Zのページはとても少ない。\n・zoo（動物園）・zero（ゼロ）・zebra（シマウマ）\nよく使う単語が少ないので、辞書のいちばん後ろはうすくなっている。\n\n【最初と最後の言い方】\n・from A to Z … 「最初から最後まで」「すべて」という意味の言い方\n・日本語の「いろはのい」や「あいうえおの あ」に近い感じ方である\n\n【26文字のまとめ】\n・1番目 … A\n・13番目 … M（前半の最後）\n・14番目 … N（後半の最初）\n・26番目 … Z\n両はしと真ん中を覚えておくと、だいたいの位置がつかめる。\n\n【小文字】Z → z。大文字と小文字で形が同じで、大きさだけがちがう。',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -105,7 +105,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'A, B, C',
     hint: 'A, B, C, D... の順番を思い出して、3つの文字がどこにあるか探そう。',
     explanation:
-      'アルファベットの並び方はA, B, C, D...の順。\n"C"、"A"、"B"をこの順番に並べかえると、A, B, Cになる。',
+      '【答え】A, B, C\n\n【アルファベット順とは】A, B, C, D ... という、アルファベットが並ぶ決まった順番のことである。\n\n【並べかえ方】3つの文字がアルファベットの何番目かを考える。\n・A … 1番目\n・B … 2番目\n・C … 3番目\n・小さい番号から順に並べる → A, B, C\n\n【なぜアルファベット順が大事なのか】暗記のためではなく、さがすためである。\n・辞書 … 単語がアルファベット順に並んでいる\n・名簿・出席簿 … 名前がこの順\n・図書館の本 … 作者名がこの順\nこの順番を知らないと、辞書が引けない。\n\n【辞書の引き方】単語をさがすときは、1文字目から順にくらべていく。\n・cat と cup なら、1文字目はどちらも c\n・2文字目をくらべる … a と u → a のほうが先\n・だから cat が先に出てくる\n1文字目が同じなら2文字目、それも同じなら3文字目と、順にくらべていく。\n\n【練習してみる】次の単語をアルファベット順に並べると、\n・dog、apple、cat → apple, cat, dog\n・book、bag、bird → 1文字目はすべて b。2文字目をくらべると a, i, o → bag, bird, book\n\n【前後をすぐ言えるようにする】\n・3文字ずつ区切って言う練習（ABC・DEF・GHI・JKL …）\n・歌だけだと「前の文字」が出てこないので、区切りでも覚える\n\n【確かめ】並べたあと、A, B, C と声に出して読んでみる。',
     difficulty: 'standard',
     examType: 'chugaku',
     grade: 'e4',
@@ -119,7 +119,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'こんにちは',
     hint: '英語で人に会ったときに使う、いちばん基本的なあいさつだよ。',
     explanation:
-      '"Hello"は人に会ったときに使う「こんにちは」という意味のあいさつ。\n"Hi"も同じように「やあ」「こんにちは」という意味で使われる、より気軽な言い方。',
+      '【答え】こんにちは\n\n【意味】Hello は、人に会ったときに使ういちばん基本のあいさつである。日本語の「こんにちは」にあたる。\n\n【いつでも使える】日本語のあいさつは時間で変わるが、Hello は朝でも昼でも夜でも使える。\n・おはよう … Good morning（朝）\n・こんにちは … Good afternoon（昼）\n・こんばんは … Good evening（夜）\n・Hello … いつでも\n迷ったら Hello でよいというのが便利なところである。\n\n【Hi とのちがい】\n・Hello … ふつうのあいさつ。初めて会う人にも使える\n・Hi … もっと気軽な言い方。友だちや家族に使う\n相手や場面によって使い分ける。先生や目上の人には Hello のほうがよい。\n\n【つづりに注意】h-e-l-l-o。l（エル）が2つである。「ハロー」と3拍で読むので、つい l を1つにしてしまう。\n\n【電話でも使う】電話に出るときも Hello と言う。日本語の「もしもし」にあたる。\n\n【あいさつのやりとり】\n・A: Hello! How are you?（こんにちは。元気ですか）\n・B: I am fine, thank you. And you?（元気です、ありがとう。あなたは）\n・A: I am fine, too.（わたしも元気です）\nAnd you? と聞き返すのが、会話を続けるこつである。\n\n【別れるとき】Goodbye / Bye / See you（またね）。会ったときと別れるときをセットで覚える。',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -133,7 +133,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'さようなら',
     hint: '人と別れるときに使うあいさつだよ。',
     explanation:
-      '"Goodbye"は人と別れるときに言う「さようなら」という意味のあいさつ。\n短く"Bye"と言うこともよくある。',
+      '【答え】さようなら\n\n【意味】Goodbye は、人と別れるときに使うあいさつである。日本語の「さようなら」にあたる。\n\n【もとの意味】もともとは God be with you（神があなたとともにありますように）という言葉だった。それが長い年月をかけて縮まり、Goodbye になった。\n旅立つ人の無事をいのる言葉が、別れのあいさつになったのである。\n\n【いろいろな別れの言い方】場面によって使い分ける。\n・Goodbye … ふつうの「さようなら」。しばらく会わないときにも使う\n・Bye / Bye-bye … 短くした気軽な言い方\n・See you. … 「またね」。また近いうちに会うとき\n・See you later. … 「また後でね」（同じ日のうちに会うとき）\n・See you tomorrow. … 「また明日」\n・Good night. … 「おやすみなさい」（夜に別れるとき、寝る前）\nGood night は「こんばんは」ではない。夜のあいさつは Good evening で、Good night は別れるときに使う。ここはよく取りちがえる。\n\n【つづりに注意】g-o-o-d-b-y-e。o が2つ、最後に e がつく。\n・Goodbye と1語で書くことも、Good-bye とハイフンでつなぐこともある\n\n【会ったときと別れるとき】セットで覚える。\n・会ったとき … Hello / Hi / Good morning\n・別れるとき … Goodbye / Bye / See you\n\n【返事のしかた】相手が Goodbye と言ったら、同じように Goodbye や Bye と返す。',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -255,7 +255,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '20',
     hint: '10ずつのまとまりの数を表す単語だよ。',
     explanation:
-      '"twenty"は数字の20を表す英単語。\n10はten、20はtwenty、30はthirtyのように、10のまとまりごとに専用の言い方がある。',
+      '【答え】20\n\n【twenty の意味】twenty は数の 20 を表す英単語である。\n\n【10のまとまりの言い方】10ごとに、それぞれ専用の言い方がある。\n・10 … ten\n・20 … twenty\n・30 … thirty\n・40 … forty\n・50 … fifty\n・60 … sixty\n・70 … seventy\n・80 … eighty\n・90 … ninety\n20から90までは、ぜんぶ ty で終わる。\n\n【もとの数との関係】\n・two（2）→ twenty（20）\n・three（3）→ thirty（30）… three とつづりがちがうので注意\n・four（4）→ forty（40）… u が消える。いちばんまちがえやすい\n・five（5）→ fifty（50）… ve が f に変わる\n・six → sixty、seven → seventy、eight → eighty、nine → ninety\nthirty・forty・fifty の3つだけ、もとの形から変わる。ここが最重要である。\n\n【teen とのちがい】13から19は teen で終わる。取りちがえやすい。\n・thirteen（13）と thirty（30）\n・fourteen（14）と forty（40）\n・fifteen（15）と fifty（50）\nteen なら10いくつ、ty なら何十と覚える。聞き取りでは、強く読む場所でも見分けられる（thirTEEN は後ろを、THIRty は前を強く読む）。\n\n【21から99の作り方】十の位と一の位をハイフンでつなぐ。\n・21 … twenty-one\n・35 … thirty-five\n・99 … ninety-nine',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -310,7 +310,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'one hundred',
     hint: '"hundred"は「100」という意味の単語だよ。',
     explanation:
-      '100は英語で"one hundred"（またはただ"hundred"）という。\n"hundred"1語だけで「100」という意味を表す。',
+      '【答え】one hundred\n\n【意味】hundred は「100」を表す英単語である。数を言うときは前に one をつけて one hundred という。\n\n【大きな数の単位】英語は3けたごとにまとまる。ここが日本語と大きくちがう。\n・hundred … 100（0が2つ）\n・thousand … 1000（0が3つ）\n・million … 100万（0が6つ）\n・billion … 10億（0が9つ）\n\n【日本語とのちがい】\n・日本語 … 万・億・兆と、4けたごとに単位が変わる\n・英語 … thousand・million・billion と、3けたごとに変わる\nこの「4けたと3けた」のずれが、大きな数を英語で言うときのいちばんの難しさである。だから 10,000 は「ten thousand（千が10個）」と言う。\n\n【数字のコンマ】英語の数字は3けたごとにコンマを打つ。\n・1,000 … one thousand\n・100,000 … one hundred thousand\n・1,000,000 … one million\nコンマの位置が、そのまま単位の区切りになっている。\n\n【s をつけない】数を言うとき、hundred や thousand に s をつけない。\n・○ two hundred（200）\n・× two hundreds\n前に数がつくときは複数形にしないという決まりである。\n・ただし「何百もの」とばくぜんと言うときは hundreds of〜 と s をつける\n\n【and の入れ方】イギリス英語では百の位のあとに and を入れる。\n・105 … one hundred and five（英）／ one hundred five（米）\n\n【100より大きい数】\n・150 … one hundred fifty\n・365 … three hundred sixty-five',
     difficulty: 'standard',
     examType: 'chugaku',
     grade: 'e4',
@@ -339,7 +339,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '赤',
     hint: '信号機の「止まれ」の色だよ。',
     explanation:
-      '"red"は「赤」という意味の色の単語。\n信号の「止まれ」やりんごの色などでよく使われる。',
+      '【答え】赤\n\n【red の意味】red は「赤」を表す色の単語である。\n\n【つづりと発音】r-e-d の3文字。\n・r の音が日本語にはない。舌をどこにもつけずに、口の中で丸めて出す\n・l（エル）とのちがいに注意。l は舌先を上の歯ぐきにつける\n・red（赤）と led（導いた）は別の単語である\n\n【赤いもの】\n・りんご … an apple\n・いちご … a strawberry\n・トマト … a tomato\n・信号の「止まれ」… a red light\n\n【赤が表すもの】色にはそれぞれイメージがある。\n・危険・止まれ … 信号、消火器、非常ボタン\n・熱・情熱 … 気持ちが高ぶるようす\n・怒り … see red で「かっとなる」\n\n【色を使った言い方】\n・in the red … 赤字である（お金が足りない）\n・red-hot … 真っ赤に熱した、とても人気のある\n日本語の「赤字」と同じ言い方があるのがおもしろい。\n\n【色を表す言葉のならべ方】色の単語は、名詞の前に置く。\n・a red apple（赤いりんご）\n・The apple is red.（そのりんごは赤い）\n名詞の前に置くか、be動詞の後に置くかの2通りがある。日本語の「赤いりんご」「りんごは赤い」と同じである。\n\n【おもな色】red（赤）・blue（青）・yellow（黄）・green（緑）・white（白）・black（黒）・brown（茶）・pink（ピンク）・purple（むらさき）・orange（オレンジ）・gray（灰色）',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -353,7 +353,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '青',
     hint: '空や海の色だよ。',
     explanation:
-      '"blue"は「青」という意味の色の単語。\n晴れた空や海の色を表すときによく使われる。',
+      '【答え】青\n\n【blue の意味】blue は「青」を表す色の単語である。\n\n【つづりと発音】b-l-u-e。\n・最後の e は読まない。「ブルー」と読む\n・l（エル）の音は、舌先を上の歯ぐきにつけて出す\n・blue と blew（吹いた）は同じ発音でつづりがちがう単語である\n\n【青いもの】\n・空 … the sky\n・海 … the sea\n・信号の「進め」… green light（日本語では「青信号」だが、英語では緑という）\n日本語と英語で色の言い方がちがう例である。日本語では昔から緑のものを「青」と呼ぶことがあり、青葉・青リンゴなどもその名残である。\n\n【青が表すもの】\n・落ち着き・冷たさ … 水や空の色\n・悲しさ … feel blue で「気分が落ちこんでいる」\n日本語では悲しいとき「青ざめる」と言うが、英語の feel blue は「ゆううつ」という意味で、少しちがう。\n\n【色を使った言い方】\n・out of the blue … とつぜん、思いがけなく\n・once in a blue moon … めったにない\n\n【使い方の例】\n・The sky is blue.（空は青い）\n・I have a blue pen.（青いペンを持っています）\n・My favorite color is blue.（好きな色は青です）\n\n【好きな色をたずねる】\n・What color do you like?（何色が好きですか）\n・I like blue.（青が好きです）',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -367,7 +367,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'yellow',
     hint: 'バナナやひまわりの色だよ。',
     explanation:
-      '「黄色」は英語で"yellow"という。\nバナナやひまわり、レモンなどの色を表すときによく使われる。',
+      '【答え】yellow\n\n【つづりに注意】y-e-l-l-o-w。l（エル）が2つ、最後は w で終わる。\n・「イエロー」と読むので、つい l を1つにしてしまう\n・hello も l が2つなので、あわせて覚えるとよい\n\n【黄色いもの】\n・バナナ … a banana\n・ひまわり … a sunflower\n・レモン … a lemon\n・信号の「注意」… a yellow light\n\n【y の音】yellow の y は「ヤ・ユ・ヨ」に近い音を表す。\n・yes、you、year、yellow、young\ny は単語のはじめでは子音、終わりでは母音のはたらきをする（my、happy）。1つの文字で2つの役目を持つのが y の特ちょうである。\n\n【黄色が表すもの】\n・注意 … 信号の黄、工事現場の看板\n・明るさ・元気 … 太陽の色\n\n【色を使った言い方】\n・yellow card … サッカーなどの警告。日本語でもそのまま使う\n\n【使い方の例】\n・I like yellow flowers.（黄色い花が好きです）\n・The banana is yellow.（そのバナナは黄色い）\n\n【色を表す言葉の位置】\n・名詞の前 … a yellow bag（黄色いかばん）\n・be動詞の後 … The bag is yellow.（そのかばんは黄色い）\n\n【色をたずねる】\n・What color is it?（それは何色ですか）\n・It is yellow.（黄色です）\ncolor のつづりにも注意。アメリカ英語は color、イギリス英語は colour と書く。',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -381,7 +381,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'green',
     hint: '草や木の葉の色だよ。',
     explanation:
-      '「緑」は英語で"green"という。\n草や木の葉、信号の「進め」の色などを表すときに使われる。',
+      '【答え】green\n\n【つづりと発音】g-r-e-e-n。e が2つ並ぶと「イー」とのばす音になる。\n・green、tree、see、three、week、sleep\nee を見たら「イー」と覚えると、読める単語が一気に増える。\n\n【緑のもの】\n・草 … grass\n・木の葉 … leaves\n・きゅうり … a cucumber\n・信号の「進め」… a green light\n\n【日本語の「青信号」】日本語では「青信号」と言うが、英語では green light という。\n・日本語では昔から、緑のものを「青」と呼ぶ習慣があった\n・青葉・青リンゴ・青菜なども、実際の色は緑である\n言葉による色の分け方は、国によってちがう。\n\n【緑が表すもの】\n・自然・植物 … 森や草原の色\n・環境にやさしい … green energy（自然にやさしいエネルギー）\n・進め・許可 … green light には「ゴーサイン」という意味もある\n\n【色を使った言い方】\n・green thumb … 植物を育てるのが上手なこと（直訳すると「緑の親指」）\n・give the green light … 許可を出す\n\n【使い方の例】\n・The leaves are green.（葉は緑色です）\n・I want a green pencil.（緑のえんぴつがほしい）\n\n【まぎらわしい単語】\n・green（緑）と grain（穀物）、grass（草）\ngr で始まる単語は形が似ているので、つづりをていねいに覚える。',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -395,7 +395,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'white',
     hint: '雪の色だよ。"black"（黒）と反対の色だね。',
     explanation:
-      '「白」は英語で"white"という。\n反対の色である「黒」は"black"という単語で表す。',
+      '【答え】white\n\n【つづりと発音】w-h-i-t-e。\n・wh で始まる単語のなかま … white、what、where、when、why、which、who\n・最後の e は読まない。この e は前の i を「アイ」とのばして読ませるはたらきをする\n\n【最後の e のはたらき】これは英語のとても大事な決まりである。\n・hat（帽子）→ hate（にくむ）… a が「ア」から「エイ」に変わる\n・bit（少し）→ bite（かむ）… i が「イ」から「アイ」に変わる\n・not（〜でない）→ note（メモ）… o が「オ」から「オウ」に変わる\n最後の e は読まないが、前の母音の読み方を変える。これを知っていると、初めて見る単語も読めるようになる。\n\n【白いもの】\n・雪 … snow\n・牛乳 … milk\n・紙 … paper\n・雲 … a cloud\n\n【反対の色】\n・white（白）⇔ black（黒）\nセットで覚える。\n\n【白が表すもの】\n・清らかさ・きれいさ … 結婚式のドレス\n・降参 … white flag（白旗）\n・うそ … white lie（相手を傷つけないための軽いうそ）\n\n【使い方の例】\n・Snow is white.（雪は白い）\n・I have a white cat.（白い猫を飼っています）\n・白黒（モノクロ）は英語では black and white と、黒を先に言う\n日本語の「白黒」と順番が逆なのがおもしろい点である。',
     difficulty: 'standard',
     examType: 'chugaku',
     grade: 'e4',
@@ -409,7 +409,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '黒',
     hint: '夜の空の色だよ。"white"（白）と反対の色だね。',
     explanation:
-      '"black"は「黒」という意味の色の単語。\n"white"（白）とは反対の色として、セットで覚えておくとよい。',
+      '【答え】黒\n\n【black の意味】black は「黒」を表す色の単語である。\n\n【つづりと発音】b-l-a-c-k。\n・ck で「ク」の1つの音を表す。2文字で1つの音になる\n・ck のなかま … black、back、duck、clock、rock、pick\n短い母音のあとは ck、長い母音のあとは k（book、week）という決まりがある\n\n【黒いもの】\n・夜の空 … the night sky\n・からす … a crow\n・すみ … ink\n・こしょう … pepper\n\n【反対の色】\n・black（黒）⇔ white（白）\nこの2つはいつもセットで出題される。\n\n【白黒の言い方】日本語は「白黒」だが、英語は black and white と黒を先に言う。\n・a black and white photo（白黒写真）\n言葉の順番が日本語と逆になるものは、ほかにもある。\n・right and left（左右）… 日本語は「左右」、英語は「右左」\n・north and south（南北）… 日本語は「南北」、英語は「北南」\n英語は大きいほう・強いほうを先に言うことが多い。\n\n【黒が表すもの】\n・夜・暗さ\n・正式さ … 黒のスーツ\n・もうけ … in the black で「黒字」。反対は in the red（赤字）\n日本語の「黒字・赤字」と同じ言い方があるのがおもしろい。\n\n【使い方の例】\n・I have a black cat.（黒い猫を飼っています）\n・The night sky is black.（夜空は黒い）',
     difficulty: 'standard',
     examType: 'chugaku',
     grade: 'e4',
@@ -425,7 +425,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '犬',
     hint: '「ワンワン」と鳴く、人気のペットだよ。',
     explanation:
-      '"dog"は「犬」という意味の英単語。\nペットとしてとても人気のある動物。',
+      '【答え】犬\n\n【dog の意味】dog は「犬」を表す英単語である。\n\n【つづりと発音】d-o-g の3文字。\n・o は「オ」に近い短い音\n・dog（犬）と dig（掘る）は1文字ちがい。つづりをていねいに書く\n\n【数え方】犬は数えられるものなので、\n・1ぴき … a dog（a をつける）\n・2ひき以上 … dogs（s をつける）\n英語は「1つか、2つ以上か」をいつもはっきりさせる。日本語にはない考え方なので、はじめにつまずきやすい。\n\n【犬に関わる単語】\n・puppy … 子犬\n・bark … ほえる\n・tail … しっぽ\n・pet … ペット\n・walk the dog … 犬の散歩をする\n\n【動物の鳴き声の言い方】国によって聞こえ方がちがう。\n・犬 … 日本語「ワンワン」／英語 bow-wow、woof\n・猫 … 日本語「ニャー」／英語 meow\n・牛 … 日本語「モー」／英語 moo\n・にわとり … 日本語「コケコッコー」／英語 cock-a-doodle-doo\n同じ鳴き声でも、言葉によって聞こえ方のうつしかたがちがう。\n\n【犬を使った言い方】\n・It is raining cats and dogs. … 雨がどしゃぶりに降っている\n・Every dog has its day. … だれにでもよい日はある\n\n【使い方の例】\n・I have a dog.（犬を1ぴき飼っています）\n・The dog is very cute.（その犬はとてもかわいい）',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -439,7 +439,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '猫',
     hint: '「ニャーニャー」と鳴く動物だよ。',
     explanation:
-      '"cat"は「猫」という意味の英単語。\n犬と同じく、ペットとしてよく飼われている動物。',
+      '【答え】猫\n\n【cat の意味】cat は「猫」を表す英単語である。\n\n【つづりと発音】c-a-t の3文字。\n・a は「ア」と「エ」の中間の音。日本語の「ア」より口を横に開く\n・cat・cap（ぼうし）・cup（コップ）はつづりが似ているので、書き分けに注意する\n\n【c の2つの音】c には2通りの読み方がある。\n・「ク」の音 … cat、cup、cold、cook（後ろが a・o・u のとき）\n・「ス」の音 … city、cent、ice、pencil（後ろが e・i・y のとき）\n後ろにくる文字で読み方が決まる。この決まりを知っていると、初めて見る単語も読める。\n\n【数え方】\n・1ぴき … a cat\n・2ひき以上 … cats\n\n【猫に関わる単語】\n・kitten … 子猫\n・meow … ニャーと鳴く\n・paw … 動物の足（肉球のある足）\n・whiskers … ひげ\n\n【猫を使った言い方】\n・Let the cat out of the bag. … うっかり秘密をもらす\n・Curiosity killed the cat. … 好奇心もほどほどに\n・rain cats and dogs … どしゃぶりに降る\n\n【a と the のちがい】中学でも ずっと問われる大事な区別である。\n・a cat … どれでもよい1ぴきの猫。初めて話に出すとき\n・the cat … 相手も分かっている、あの猫。2回目以降\n例）I have a cat. The cat is white.（猫を飼っています。その猫は白いです）\n\n【使い方の例】I like cats.（猫が好きです。種類全体をいうときは複数形）',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -453,7 +453,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '鳥',
     hint: '空を飛ぶ動物だよ。',
     explanation:
-      '"bird"は「鳥」という意味の英単語。\n羽があり、空を飛ぶことができる動物をまとめて指すことばでもある。',
+      '【答え】鳥\n\n【bird の意味】bird は「鳥」を表す英単語である。すずめ・つばめ・はとなど、羽があって空を飛ぶ動物をまとめて指す。\n\n【つづりと発音】b-i-r-d。\n・ir は、口をあまり開けずに「アー」とのばす音である\n・ir のなかま … bird、girl、shirt、first、third\n同じ ir の音をまとめて覚えると、発音が安定する。\n\n【似た音のつづり】ir・er・ur は、どれも同じような「アー」の音になる。\n・ir … bird、girl\n・er … her、水を表す water の er\n・ur … turn、hurt\n音が同じでつづりがちがうので、単語ごとに覚えるしかない。\n\n【鳥に関わる単語】\n・wing … つばさ\n・fly … 飛ぶ\n・nest … 巣\n・feather … 羽\n・egg … たまご\n\n【鳥を使った言い方】国語の学習ともつながる。\n・Kill two birds with one stone. … 一石二鳥\n国語で習う四字熟語「一石二鳥」は、この英語のことわざを訳したものである\n・Birds of a feather flock together. … 同じ羽の鳥は群れる ＝ 類は友を呼ぶ\n・The early bird catches the worm. … 早起きは三文の徳\n国語のことわざと英語のことわざが対応しているものは多い。両方まとめて覚えると効率がよい。\n\n【使い方の例】\n・A bird is singing.（鳥が鳴いています）\n・Birds fly in the sky.（鳥は空を飛びます）',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -467,7 +467,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '魚',
     hint: '水の中を泳ぐ動物だよ。',
     explanation:
-      '"fish"は「魚」という意味の英単語。\n水の中で生活し、えらで呼吸をする動物。',
+      '【答え】魚\n\n【fish の意味】fish は「魚」を表す英単語である。\n\n【複数形にとくべつな決まりがある】ここがこの単語のいちばん大事なところである。\n・fish は、1ぴきでも何びきでも同じ形を使う\n・one fish（1ぴき）／ three fish（3びき）\n・× three fishes\ns をつけない。\n\n【単数と複数が同じ形の単語】まとめて覚える。\n・fish（魚）・sheep（羊）・deer（しか）\n・Japanese（日本人）・Chinese（中国人）\n群れで数えるものや、国名から来た言葉に多い。\n\n【ふつうの複数形とくらべる】\n・ふつうは s をつける … dogs、cats、books\n・s・x・ch・sh で終わる語は es … buses、boxes、watches、dishes\n・形が変わるもの … man → men、woman → women、child → children、foot → feet、tooth → teeth、mouse → mice\n決まりどおりでないものを先に覚えるのが近道である。\n\n【魚に関わる単語】\n・swim … 泳ぐ\n・sea … 海\n・river … 川\n・fishing … つり\n・gill … えら\n\n【つづりと発音】f-i-s-h。\n・sh で「シュ」の1つの音になる。2文字で1つの音である\n・sh のなかま … fish、she、shop、ship、wash、dish\n\n【使い方の例】\n・I caught three fish.（魚を3びきつかまえました）\n・Fish live in water.（魚は水の中にすんでいます）',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -481,7 +481,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'ぞう',
     hint: '長い鼻を持つ、体の大きな動物だよ。',
     explanation:
-      '"elephant"は「ぞう」という意味の英単語。\n長い鼻と大きな体が特徴の動物で、動物園でも人気がある。',
+      '【答え】ぞう\n\n【elephant の意味】elephant は「ぞう」を表す英単語である。長い鼻と大きな体が特ちょうで、陸の上でいちばん大きな動物である。\n\n【つづりに注意】e-l-e-p-h-a-n-t の8文字。長いので、音のまとまりで分けて覚える。\n・el - e - phant（エ・レ・ファント）\n\n【ph の読み方】ここが大事である。ph は「フ」と読む。\n・elephant、phone（電話）、photo（写真）、alphabet\np と h が並ぶと「プ」「フ」ではなく「フ」の1つの音になる。もとがギリシャ語の言葉に多い。\n\n【a か an か】elephant は母音の音（エ）で始まるので、a ではなく an をつける。\n・an elephant（ぞう1頭）\n・an apple、an orange、an egg、an hour\na か an かは、つづりではなく音で決める。\n・an hour … h を読まないので、母音の音で始まる\n・a university … 「ユ」と読むので、子音の音で始まる\n\n【ぞうに関わる単語】\n・trunk … ぞうの鼻（木の幹という意味もある）\n・tusk … きば\n・ear … 耳（ぞうは耳がとても大きい）\n・heavy … 重い\n・zoo … 動物園\n\n【ぞうを使った言い方】\n・an elephant in the room … だれもが気づいているのに、話題にしない大きな問題\n\n【使い方の例】\n・I saw an elephant at the zoo.（動物園でぞうを見ました）\n・Elephants are very big.（ぞうはとても大きいです）',
     difficulty: 'standard',
     examType: 'chugaku',
     grade: 'e4',
@@ -495,7 +495,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'うさぎ',
     hint: '長い耳とぴょんぴょん跳ねる動きが特徴の動物だよ。',
     explanation:
-      '"rabbit"は「うさぎ」という意味の英単語。\n長い耳とふわふわの毛が特徴で、ぴょんぴょんと跳ねて移動する。',
+      '【答え】うさぎ\n\n【rabbit の意味】rabbit は「うさぎ」を表す英単語である。長い耳と、ぴょんぴょんはねる動きが特ちょうである。\n\n【つづりに注意】r-a-b-b-i-t。b が2つである。\n・「ラビット」と読むので、つい b を1つにしてしまう\n・同じ文字が2つ続く単語は、つづりのまちがいが多い。hello（l が2つ）、yellow（l が2つ）、summer（m が2つ）\n\n【なぜ文字が2つ続くのか】前の母音を短く読ませるためである。\n・rabbit の a は「ア」と短く読む\n・もし rabit なら、a を「エイ」と長く読んでしまう\n子音を2つ重ねると、前の母音が短くなるという決まりがある。\n\n【r の音】日本語にない音である。\n・舌をどこにもつけず、口の中で少し丸めて出す\n・l（エル）は舌先を上の歯ぐきにつけるので、まったくちがう音である\n・rabbit と label のように、r と l をふくむ単語で練習するとよい\n\n【うさぎに関わる単語】\n・ear … 耳\n・jump / hop … はねる\n・carrot … にんじん\n・soft … やわらかい\n・fur … 毛\n\n【うさぎを使った言い方】\n・as fast as a rabbit … うさぎのように速い\n・イギリスでは野うさぎを hare（ヘア）といい、飼いうさぎの rabbit と区別する\n\n【日本の物語とのつながり】「うさぎとかめ」は英語で The Tortoise and the Hare（かめとうさぎ）という。日本語と順番が逆である。\n\n【使い方の例】I have a white rabbit.（白いうさぎを飼っています）',
     difficulty: 'standard',
     examType: 'chugaku',
     grade: 'e4',
@@ -511,7 +511,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'お母さん',
     hint: '自分を産んで育ててくれる女の人だよ。',
     explanation:
-      '"mother"は「お母さん」「母」という意味の英単語。\n呼びかけるときは"Mom"や"Mommy"と言うこともある。',
+      '【答え】お母さん\n\n【mother の意味】mother は「お母さん・母」を表す英単語である。\n\n【つづりと発音】m-o-t-h-e-r。\n・th の音は、上下の歯の間に舌先を少し出して出す。日本語にない音である\n・th には2つの音がある\n　・にごる音 … mother、father、this、that、they\n　・にごらない音 … think、three、thank、bath\nmother の th はにごる音である。\n\n【呼びかけるとき】家族に話しかけるときは、短い言い方を使う。\n・Mom / Mommy（アメリカ）\n・Mum / Mummy（イギリス）\n・ふだんの会話では Mother より Mom のほうがふつうである\n\n【家族を表す単語】まとめて覚える。\n・mother（母）／ father（父）\n・sister（姉・妹）／ brother（兄・弟）\n・grandmother（祖母）／ grandfather（祖父）\n・aunt（おば）／ uncle（おじ）\n・cousin（いとこ）\n・parents（両親）／ son（息子）／ daughter（娘）\n\n【日本語とのちがい】ここがおもしろい点である。\n・日本語 … 姉と妹、兄と弟を区別する\n・英語 … どちらも sister、どちらも brother\n・区別したいときは、big sister / little sister、older brother / younger brother と言う\n言葉によって、何を区別するかがちがう。\n\n【grand のつくり方】\n・grand ＋ mother ＝ grandmother（祖母）\n・great ＋ grandmother ＝ great-grandmother（曾祖母）\n前に足していくだけで世代が上がる。\n\n【使い方の例】This is my mother.（こちらはわたしの母です）',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -525,7 +525,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'お父さん',
     hint: '"mother"（お母さん）とペアで覚える単語だよ。',
     explanation:
-      '"father"は「お父さん」「父」という意味の英単語。\n呼びかけるときは"Dad"や"Daddy"と言うこともある。',
+      '【答え】お父さん\n\n【father の意味】father は「お父さん・父」を表す英単語である。\n\n【mother とセットで覚える】\n・mother（母）／ father（父）\n・つづりも -other の部分が同じで、m と f だけがちがう\n・brother（兄弟）も同じ -other の形である\n形の似た単語をまとめて覚えると、記おくに残りやすい。\n\n【つづりと発音】f-a-t-h-e-r。\n・th はにごる音（mother と同じ）。上下の歯の間に舌先を少し出す\n・f の音は、上の歯を下くちびるに当てて息を出す。日本語の「フ」とはちがう\n・f と h … father（父）と hat（ぼうし）で、音のちがいを確かめてみるとよい\n\n【呼びかけるとき】\n・Dad / Daddy\n・ふだんの会話では Father より Dad のほうがふつうである\n・Father は改まった言い方で、少しかたい感じがする\n\n【父の日・母の日】\n・Father\'s Day … 父の日（6月の第3日曜日）\n・Mother\'s Day … 母の日（5月の第2日曜日）\nアポストロフィ と s をつけて「〜の」という意味を表す。\n\n【所有を表す言い方】\n・my father（わたしの父）\n・my father\'s car（わたしの父の車）\n人を表す言葉には、アポストロフィ と s をつけて「〜の」を表す。\n\n【家族をしょうかいする言い方】\n・This is my father.（こちらはわたしの父です）\n・He is a teacher.（彼は先生です）\n2文目からは he（彼）や she（彼女）に置きかえるのが自然である。同じ言葉をくり返さないのが英語の習慣である。',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -568,7 +568,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '家族',
     hint: 'お父さん、お母さん、きょうだいなどをまとめて呼ぶことばだよ。',
     explanation:
-      '"family"は「家族」という意味の英単語。\nお父さん、お母さん、きょうだいなど、いっしょに暮らす人たちをまとめて指すことば。',
+      '【答え】家族\n\n【family の意味】family は「家族」を表す英単語である。お父さん・お母さん・きょうだいなど、いっしょに暮らす人たちをまとめて指す。\n\n【つづりと発音】f-a-m-i-l-y の6文字。\n・「ファミリー」と3拍で読むが、英語ではファ・ミ・リィと最初を強く読む\n・最後の y は「イ」の音になる。単語の終わりの y は母音のはたらきをする\n・y で終わるなかま … family、happy、baby、city、study\n\n【複数形の作り方】子音 ＋ y で終わる語は、y を i に変えて es をつける。\n・family → families\n・city → cities、baby → babies、country → countries\n・ただし母音 ＋ yなら、そのまま s … boy → boys、day → days\ny の前が母音か子音かで決まる。\n\n【まとまりを表す言葉】family のように、たくさんの人やものをひとまとめにして表す言葉がある。\n・family（家族）・class（クラス）・team（チーム）・group（グループ）\n\n【家族に関わる単語】\n・parents … 両親（いつも複数形）\n・children … 子どもたち（child の複数形）\n・home … 家庭\n・house … 建物としての家\nhome と house のちがいは問われやすい。home は「帰る場所・家庭」、house は「建物」である。\n\n【家族をしょうかいする言い方】\n・How many people are there in your family?（何人家族ですか）\n・There are four people in my family.（4人家族です）\n・I have a sister.（姉が1人います）\n\n【使い方の例】I love my family.（家族が大好きです）',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -598,7 +598,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'えんぴつ',
     hint: '字を書くときに使う、木でできた文ぼうぐだよ。',
     explanation:
-      '"pencil"は「えんぴつ」という意味の英単語。\n教室でよく使う文ぼうぐの1つ。',
+      '【答え】えんぴつ\n\n【pencil の意味】pencil は「えんぴつ」を表す英単語である。\n\n【つづりに注意】p-e-n-c-i-l。c を s と書かないこと。\n・pencil の c は「ス」と読む\n・c は、後ろに e・i・y がくると「ス」の音になる\n　・「ス」… pencil、city、cent、ice、face\n　・「ク」… cat、cup、cold、school\nこの決まりを知っていると、初めて見る単語の読み方が予想できる。\n\n【pen との関係】pencil と pen は別の単語である。pen はラテン語で「羽」を意味する言葉から来ていて、昔は鳥の羽根をペンにしていたなごりである。\n\n【文ぼうぐの単語】まとめて覚える。\n・pencil（えんぴつ）・pen（ペン）・eraser（消しゴム）\n・ruler（定規）・scissors（はさみ）・glue（のり）\n・notebook（ノート）・pencil case（筆箱）\n・textbook（教科書）・crayon（クレヨン）\n\n【いつも複数形の単語】scissors（はさみ）はいつも複数形で使う。2枚の刃が組になっているからである。\n・同じ理由で glasses（めがね）、pants（ズボン）、shoes（くつ）も複数形\n・数えるときは a pair of scissors（はさみ1ちょう）という。pair は「組」の意味\n\n【数え方】a pencil ／ two pencils。\n\n【日本語の「ノート」に注意】日本語の「ノート（帳面）」は英語では notebook である。英語の note は「メモ・覚え書き」の意味なので、そのままでは通じない。\n\n【使い方の例】May I borrow your pencil?（えんぴつを借りてもいいですか）',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -612,7 +612,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '本',
     hint: '文字や絵が印刷された、読むためのものだよ。',
     explanation:
-      '"book"は「本」という意味の英単語。\n図書室にたくさんある、読むためのもの。',
+      '【答え】本\n\n【book の意味】book は「本」を表す英単語である。\n\n【つづりと発音】b-o-o-k。\n・oo は「ウ」と短く読む。book、look、cook、good、foot\n・いっぽう school、moon、food、soon の oo は「ウー」と長くのばす\n同じ oo でも2通りの読み方があるので、単語ごとに覚える。\n\n【book から広がる単語】\n・bookstore … 本屋（book ＋ store）\n・bookshelf … 本だな（book ＋ shelf）\n・bookmark … しおり（book ＋ mark）\n・notebook … ノート（note ＋ book）\n・textbook … 教科書（text ＋ book）\n2つの単語をつなげて新しい言葉をつくるのは、英語のふつうのやり方である。意味が予想できるので、知らない単語でも見当がつく。\n\n【ほかの複合語の例】\n・rainbow（rain ＋ bow）… にじ\n・classroom（class ＋ room）… 教室\n・birthday（birth ＋ day）… たんじょう日\n・basketball（basket ＋ ball）… バスケットボール\n分けて考えると、意味が見えてくる。\n\n【動詞としての book】book には「予約する」という意味もある。\n・I booked a room.（部屋を予約しました）\n・もとは「帳簿に書きこむ」ことから来ている\n\n【数え方】a book ／ books。\n\n【本に関わる単語】\n・read … 読む\n・library … 図書館\n・page … ページ\n・story … 物語\n\n【使い方の例】I read a book every week.（毎週1冊本を読みます）',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -626,7 +626,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'つくえ',
     hint: '教室で、いすとセットで使う家具だよ。',
     explanation:
-      '"desk"は「つくえ」という意味の英単語。\n教科書やノートを広げて勉強するときに使う家具。',
+      '【答え】つくえ\n\n【desk の意味】desk は「つくえ」を表す英単語である。勉強や仕事をするために使う机を指す。\n\n【table とのちがい】ここが問われやすい。\n・desk … 勉強や仕事をするための机。ふつう引き出しがある。1人で使う\n・table … 食事をしたり、物を置いたりする台。みんなで囲む\n日本語ではどちらも「つくえ」「テーブル」と言えてしまうので、使い分けを意識する。\n\n【つづりと発音】d-e-s-k。\n・sk で終わる単語 … desk、ask、mask、task\n・短い単語なので、つづりはやさしい\n\n【教室にあるものの単語】\n・desk（つくえ）・chair（いす）・blackboard（黒板）\n・window（窓）・door（ドア）・clock（時計）\n・teacher（先生）・student（生徒）・classroom（教室）\n\n【場所を表す言い方】ものの位置を表す言葉（前置詞）とセットで使う。\n・on the desk … つくえの上に\n・under the desk … つくえの下に\n・by the desk … つくえのそばに\n・in the desk … つくえの中（引き出しの中）に\non は「くっついて上に」、in は「中に」という感じである。\n\n【table のときの前置詞】\n・on the table … テーブルの上に\n・at the table … テーブルについて（食事中）\nat は「その場にいる」感じを表す。\n\n【数え方】a desk ／ desks。\n\n【使い方の例】\n・My book is on the desk.（わたしの本はつくえの上にあります）\n・Please sit at your desk.（自分のつくえにつきなさい）',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -640,7 +640,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'かばん',
     hint: '教科書やお弁当を入れて学校に持っていくものだよ。',
     explanation:
-      '"bag"は「かばん」という意味の英単語。\nランドセルや手さげぶくろなど、物を入れて持ち運ぶものをまとめて指すことば。',
+      '【答え】かばん\n\n【bag の意味】bag は「かばん・ふくろ」を表す英単語である。ランドセル・手さげぶくろ・買い物ぶくろなど、物を入れて持ち運ぶものをまとめて指す。\n\n【つづりと発音】b-a-g の3文字。\n・a は「ア」と「エ」の中間の音。口を横に開く\n・bag・big・bug・beg は1文字ちがいで、すべて別の単語である\n　・bag（かばん）・big（大きい）・bug（虫）・beg（たのむ）\n母音1文字で意味が変わるので、ていねいに読み書きする。\n\n【かばんの種類】\n・school bag … 通学かばん\n・shopping bag … 買い物ぶくろ\n・paper bag … 紙ぶくろ\n・backpack … リュックサック\n・pencil case … 筆箱\nランドセルは日本だけのものなので、英語にぴったり合う単語がない。school bag と説明することが多い。\n\n【日本語になっている英語に注意】日本語の「バッグ」は英語の bag から来ているが、日本語だけの使い方になっているものもある。\n・「マイバッグ」は日本で作られた言い方で、英語では reusable bag や eco bag という\nカタカナの言葉が、そのまま英語で通じるとはかぎらない。\n\n【数え方】a bag ／ bags。\n\n【使い方の例】\n・I have a red bag.（赤いかばんを持っています）\n・My bag is heavy.（わたしのかばんは重いです）\n・What is in your bag?（かばんの中に何が入っていますか）\n\n【in と on のちがい】\n・in my bag … かばんの中に\n・on my bag … かばんの上に',
     difficulty: 'standard',
     examType: 'chugaku',
     grade: 'e4',
@@ -654,7 +654,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '消しゴム',
     hint: 'えんぴつで書いた字を消すときに使う道具だよ。',
     explanation:
-      '"eraser"は「消しゴム」という意味の英単語。\n"erase"（消す）ということばから来ていて、「消すもの」＝「消しゴム」という意味になる。',
+      '【答え】消しゴム\n\n【eraser の意味】eraser は「消しゴム」を表す英単語である。\n\n【言葉の成り立ち】ここがこの単語のおもしろいところである。\n・erase … 「消す」という動詞\n・それに -er をつけて eraser ＝ 「消すもの」\n動詞 ＋ er で「〜する人・〜するもの」になる、という作り方である。\n\n【同じ作り方の単語】たくさんある。\n・teach（教える）→ teacher（先生）\n・play（する）→ player（選手）\n・sing（歌う）→ singer（歌手）\n・write（書く）→ writer（作家）\n・drive（運転する）→ driver（運転手）\n・wash（洗う）→ washer（洗うもの）\nこの形を知っていると、知らない単語でも意味が想像できる。\n\n【つづりの注意】erase の最後の e は、er をつけるときにそのまま残る（eraser）。\n・ただし多くの語では e が消える … write → writer（e が1つに）、make → maker\n\n【アメリカとイギリスでちがう】\n・アメリカ英語 … eraser\n・イギリス英語 … rubber（ラバー）\n同じものでも国によって言い方がちがう例である。ほかにも、\n・消しゴム … eraser（米）／ rubber（英）\n・サッカー … soccer（米）／ football（英）\n・エレベーター … elevator（米）／ lift（英）\n・アパート … apartment（米）／ flat（英）\n\n【数え方】an eraser（e で始まるので an）／ erasers。\n\n【使い方の例】May I use your eraser?（消しゴムを使ってもいいですか）',
     difficulty: 'standard',
     examType: 'chugaku',
     grade: 'e4',
