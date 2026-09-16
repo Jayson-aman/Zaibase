@@ -324,8 +324,11 @@ check('【問題集】中学受験の問題に高校で習う記号が出てい�
 const UNFINISHED: Array<[string, RegExp]> = [
   ['再確認', /再確認すると|再確認が必要|再確認する必要/],
   ['修正メモ', /これを修正|の修正：|実際の正解|実際の正答|正答は/],
-  ['出題の不備', /出題ミス|別解が生じ|解答欄を/],
+  ['出題の不備', /出題ミス|別解が生じ|解答欄を|とあるのは誤り/],
   ['書きかけ', /TODO|FIXME|とりあえず|仮に答え/],
+  // 「問題のヒント答え11は間違い、正しくは13」のように、
+  // 答えの欄が誤っていると本文で認めながら、欄を直していない書き置き。
+  ['答えの欄への言い訳', /問題のヒント|ヒント答え|ヒントが.{1,15}としていたが/],
 ];
 const unfinished: string[] = [];
 for (const q of Q as any[]) {
@@ -341,6 +344,34 @@ for (const q of Q as any[]) {
   }
 }
 check('【問題集】答えを出しきれていない解説が残っている', unfinished);
+
+// 答えの欄と、解説の結びの数が食いちがっていないか。
+//
+// 2026/9/16、解説は正しく導いているのに答えの欄だけ古い値のまま、という問題が
+// 5問見つかった（koko_moshi_sansu_09 2√10→4√5、同10 a=1/2→3/2、同41 2500→3000円、
+// 同46 11→13、term1_2026_chugaku_sansu_048 3:7→5:11、koko_oyo_sansu_42 24→18cm³）。
+// 画面には答えの欄が出るので、子どもは正しい解説を読んだうえで「答えが合わない」
+// という一番こわい状態になる。
+//
+// 誤検出を避けるため、対象は「答えが1つの数だけ」の問題にしぼり、
+// 解説の結び（【答え】…／答え：…）に その数が1つも出てこないときだけ拾う。
+// 答えを2つ以上並べた問題は、解説が1つ目だけを言うのがふつうなので見ない。
+const z2h = (s: string) => s.replace(/[０-９]/g, (c) => '0123456789'['０１２３４５６７８９'.indexOf(c)]);
+const numsOf = (s: string) => (z2h(s).match(/\d+(?:\.\d+)?/g) ?? []).filter((x) => x !== '0');
+const answerGap: string[] = [];
+for (const q of Q as any[]) {
+  const raw = String(q.answer ?? '').trim();
+  if (/[\n、，：:／]|および|また|または/.test(raw)) continue;
+  const an = numsOf(raw);
+  if (an.length !== 1 || raw.length > 14) continue;
+  const exp = z2h(explanationText(q));
+  const ms = [...exp.matchAll(/【答え】\s*([^\n]{1,40})|(?:^|\n)答え\s*[：:]\s*([^\n]{1,40})/g)];
+  if (ms.length !== 1) continue;
+  const said = numsOf(ms[0][1] ?? ms[0][2] ?? '');
+  if (!said.length || said.includes(an[0])) continue;
+  answerGap.push(`${q.id}(欄:${raw})`);
+}
+check('【問題集】答えの欄と解説の結びが食いちがう', answerGap);
 
 // 小問（subQuestions）が画面に出ているか。
 //
