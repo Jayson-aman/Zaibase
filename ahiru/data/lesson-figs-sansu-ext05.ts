@@ -1283,4 +1283,136 @@ export const lessonFigsSansuExt05: Record<string, Figure> = {
     ],
     buildSteps: 3,
   },
+
+  // s183：1辺12cmの正方形に内接する円（半径6）、その円に内接する正六角形（1辺6）。正方形−正六角形＝144−93.54＝50.46
+  sext05_s183_naze: {
+    kind: 'polygon',
+    points: [
+      { x: 0, y: 0, label: '' },
+      { x: 12, y: 0, label: '' },
+      { x: 12, y: 12, label: '' },
+      { x: 0, y: 12, label: '' },
+    ],
+    sideLabels: ['正方形 1辺12cm', null, null, null],
+    circles: [{ x: 6, y: 6, r: 6, label: '半径6cm' }],
+    segments: [
+      { from: { x: 12, y: 6 }, to: { x: 9, y: 11.2 }, label: '正六角形 1辺6cm' },
+      { from: { x: 9, y: 11.2 }, to: { x: 3, y: 11.2 } },
+      { from: { x: 3, y: 11.2 }, to: { x: 0, y: 6 } },
+      { from: { x: 0, y: 6 }, to: { x: 3, y: 0.8 } },
+      { from: { x: 3, y: 0.8 }, to: { x: 9, y: 0.8 } },
+      { from: { x: 9, y: 0.8 }, to: { x: 12, y: 6 } },
+    ],
+    caption: '1 辺 12cm の正方形に円がぴったり内接するので、円の直径 ＝ 12cm、半径 6cm。その円に正六角形が内接するので、正六角形の 1 辺 ＝ 半径 ＝ 6cm。正六角形は 1 辺 6cm の正三角形 6 個（15.59×6＝93.54cm²）。正方形 − 正六角形 ＝ 144−93.54 ＝ 50.46cm²。円 − 正六角形 の 19.5 は弓形 6 つぶんで、問われた差ではない。',
+    steps: [
+      '1 辺 12cm の正方形。面積 144cm²。',
+      '円が 4 辺に接して内接する。円の左はしから右はしまでが正方形の幅なので、直径 ＝ 12cm、半径 ＝ 6cm（12cm ではない）。',
+      '円に正六角形が内接する。正六角形の 1 辺 ＝ 円の半径 ＝ 6cm。1 辺 6cm の正三角形 6 個なので面積 15.59×6 ＝ 93.54cm²。',
+      '正方形 − 正六角形 ＝ 144−93.54 ＝ 50.46cm²。円は橋わたしに使っただけで、この引き算には出てこない。',
+      '検算：正方形 144 ＞ 円 113.04 ＞ 正六角形 93.54 と外から順に小さい。(144−113.04)＋(113.04−93.54)＝30.96＋19.5＝50.46。',
+    ],
+    buildSteps: 3,
+  },
+
+  // s184：△ABC（40cm²）の辺BC上に BD:DC=2:3 の点D。高さ共通なので △ABD:△ADC=2:3、16と24
+  sext05_s184_naze: {
+    kind: 'polygon',
+    points: [
+      { x: 4, y: 6, label: 'A' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 4, y: 0, label: 'D' },
+      { x: 10, y: 0, label: 'C' },
+    ],
+    sideLabels: [null, 'BD 2', 'DC 3', null],
+    regions: [
+      { indices: [0, 1, 2] },
+      { indices: [0, 2, 3] },
+    ],
+    heights: [{ from: 0, toEdge: [1, 3], label: '高さ共通' }],
+    caption: '△ABC（40cm²）の辺 BC 上に BD:DC＝2:3 の点 D。△ABD と △ADC は頂点 A からの高さが共通なので、面積比 ＝ 底辺の比 ＝ 2:3。全体を比の和 5 でわって 1 あたり 8cm²。△ABD＝16cm²（底辺 BD ↔ 2）、△ADC＝24cm²（底辺 DC ↔ 3）。',
+    steps: [
+      '△ABC の面積 40cm²。辺 BC 上に BD:DC＝2:3 となる点 D をとり、A と結ぶ。',
+      '△ABD と △ADC は、同じ頂点 A から同じ直線 BC への高さが共通（点線）。',
+      '面積 ＝ 底辺 × 高さ ÷ 2 の「高さ ÷ 2」が同じなので、面積比 ＝ 底辺の比 ＝ BD:DC ＝ 2:3。',
+      '全体 40 を 2＋3＝5 でわって 1 あたり 8。△ABD（底辺 BD）＝8×2＝16cm²、△ADC（底辺 DC）＝8×3＝24cm²。比の数字は底辺の名前と結びつける。',
+      '検算：16＋24＝40。16:24＝2:3。BC＝10・高さ 8 とすると 4×8÷2＝16、6×8÷2＝24。',
+    ],
+    buildSteps: 3,
+  },
+
+  // s185：底辺BCが共通な△ABC（高さ6）と△DBC（高さ10）。面積比＝高さの比＝3:5。24cm²→40cm²
+  sext05_s185_naze: {
+    kind: 'polygon',
+    points: [
+      { x: 0, y: 0, label: 'B' },
+      { x: 8, y: 0, label: 'C' },
+      { x: 2, y: 6, label: 'A' },
+    ],
+    sideLabels: ['BC（共通の底辺）', null, null],
+    heights: [{ from: 2, toEdge: [0, 1], label: '高さ6' }],
+    segments: [
+      { from: { x: 0, y: 0 }, to: { x: 6, y: 10 }, label: 'D（高さ10）', dashed: true },
+      { from: { x: 8, y: 0 }, to: { x: 6, y: 10 }, dashed: true },
+    ],
+    caption: '△ABC と △DBC（点線）は底辺 BC を共有。A からの高さ 6cm、D からの高さ 10cm。面積 ＝ 底辺 × 高さ ÷ 2 の「底辺 ÷ 2」が同じなので、面積比 ＝ 高さの比 ＝ 6:10 ＝ 3:5。△ABC が 24cm² なら △DBC ＝ 24×5/3 ＝ 40cm²（高いほうが大きい）。底辺がちがう三角形にはこの関係は使えない。',
+    steps: [
+      '△ABC と △DBC は同じ底辺 BC（8cm）を共有している。',
+      'A から BC までの高さは 6cm（点線）、D から BC までの高さは 10cm。',
+      '面積 ＝ 底辺 × 高さ ÷ 2 で「底辺 ÷ 2」が同じなので、面積比 ＝ 高さの比 ＝ 6:10 ＝ 3:5。',
+      '△ABC＝24cm² が比の 3 なので、△DBC＝24×5/3＝40cm²。高い D のほうが大きい。24×3/5＝14.4 は逆。',
+      '検算：24÷6＝4、40÷10＝4 で「底辺 ÷ 2」が同じ（底辺 8）。底辺がちがう三角形（8×6 と 10×10）は 24:50 で高さの比 3:5 にならない。',
+    ],
+    buildSteps: 3,
+  },
+
+  // s186：△ABC（60cm²）。BD:DC=1:2 の D で △ABD=20、AD 上の AE:ED=3:1 の E で △ABE=20×3/4=15
+  sext05_s186_naze: {
+    kind: 'polygon',
+    points: [
+      { x: 3, y: 6, label: 'A' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 3, y: 0, label: 'D' },
+      { x: 9, y: 0, label: 'C' },
+    ],
+    sideLabels: [null, 'BD 1', 'DC 2', null],
+    regions: [
+      { indices: [0, 1, 2] },
+    ],
+    segments: [
+      { from: { x: 3, y: 6 }, to: { x: 3, y: 0 }, label: 'AD' },
+      { from: { x: 0, y: 0 }, to: { x: 3, y: 1.5 }, label: 'BE（AE:ED＝3:1）', dashed: true },
+    ],
+    caption: '△ABC（60cm²）。1 段階目：BD:DC＝1:2 で △ABD ＝ 60×1/3 ＝ 20cm²（色の部分）。2 段階目：AE:ED＝3:1 は線分 AD の比なので、AD を辺に持つ △ABD を分ける。△ABE ＝ 20×3/4 ＝ 15cm²。全体 60 に 3/4 をかけた 45 は誤り。',
+    steps: [
+      '△ABC の面積 60cm²。辺 BC 上に BD:DC＝1:2 の点 D。',
+      '△ABD と △ADC は A からの高さが共通。面積比 1:2 なので △ABD ＝ 60×1/3 ＝ 20cm²（色の部分）。',
+      '線分 AD 上に AE:ED＝3:1 の点 E。この比が分けるのは AD を辺に持つ △ABD（B からの高さが共通）。',
+      '△ABE:△EBD ＝ AE:ED ＝ 3:1。△ABE ＝ 20×3/4 ＝ 15cm²。AE ↔ ABE なので比の 3 を使う（1 を使った 5 は逆）。',
+      '検算：ABE 15 ＋ EBD 5 ＋ ADC 40 ＝ 60。1 つの式では 60×1/3×3/4＝15。ABE ≦ ABD ≦ ABC。',
+    ],
+    buildSteps: 3,
+  },
+
+  // s187：DE∥BC、AD:DB=2:3。相似比は AD:AB=2:5。DE=15×2/5=6、面積は 4:25 で 50×4/25=8
+  sext05_s187_naze: {
+    kind: 'polygon',
+    points: [
+      { x: 6, y: 10, label: 'A' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 15, y: 0, label: 'C' },
+    ],
+    sideLabels: [null, 'BC 15cm', null],
+    segments: [
+      { from: { x: 3.6, y: 6 }, to: { x: 9.6, y: 6 }, label: 'DE 6cm（BCに平行）' },
+    ],
+    caption: '辺 AB 上の D、辺 AC 上の E で DE ∥ BC。AD:DB＝2:3 なので相似比は AD:AB＝2:(2＋3)＝2:5（部分:全体）。DE ＝ BC×2/5 ＝ 15×2/5 ＝ 6cm。面積比は相似比の 2 乗 4:25 で、△ABC＝50cm² なら △ADE＝50×4/25＝8cm²。AD:DB をそのまま使った 10cm や、長さの比を面積に使った 20cm² は誤り。',
+    steps: [
+      '△ABC。辺 AB 上の D と辺 AC 上の E を結ぶ DE は BC に平行。AD:DB＝2:3。',
+      'DE ∥ BC の同位角と共通の角 A で △ADE ∽ △ABC。相似比は対応する辺 AD:AB ＝ 2:5（DB は三角形の辺ではない）。',
+      'DE:BC ＝ 2:5 なので DE ＝ 15×2/5 ＝ 6cm。15×2/3＝10 は部分:部分を使った誤り。',
+      '底辺（DE と BC）も高さも 2:5 で縮んでいるので、面積比は 2²:5² ＝ 4:25。△ADE ＝ 50×4/25 ＝ 8cm²。台形 DBCE は 50−8 ＝ 42。',
+      '検算：AD:AB＝2:5 と DE:BC＝6:15＝2:5 が一致。高さ 20/3 の 2/5 は 8/3 で 6×8/3÷2＝8。8÷50＝(2/5)²。',
+    ],
+    buildSteps: 2,
+  },
 };
