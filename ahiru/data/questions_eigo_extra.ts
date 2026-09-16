@@ -1382,7 +1382,8 @@ export const eigoExtra: Question[] = [
     choices: ['seed', 'saw', 'seen', 'sees'],
     answer: 'saw',
     hint: 'see は不規則動詞です。see - saw - seen と変化します。',
-    explanation: 'see の過去形は saw です（不規則変化）。過去分詞は seen。I saw a beautiful rainbow. = 私は美しい虹を見た。',
+    explanation:
+      '【答え】saw\n\n【see の変化】see - saw - seen。3つとも形がちがう型である。\n\n【seen がまちがいな理由】seen は過去分詞で、単独では過去形として使えない。\n・I seen a rainbow.（誤り）\n・I have seen a rainbow.（現在完了なら正しい）\n・I saw a rainbow.（正しい）\nhave があれば過去分詞、なければ過去形と考える。\n\n【see・look・watch の使い分け】\n・see … 自然に目に入る。見える。I can see Mt. Fuji from here.\n・look at … 意識してそちらへ目を向ける。Look at the blackboard.\n・watch … 動くものをじっと見続ける。watch TV、watch a game\n意識して見るかどうか、動いているかどうかで分ける。\n\n【see のほかの意味】\n・会う … See you tomorrow.\n・分かる … I see.（なるほど）\n・調べる … Let me see.（ええと）\nsee は「見る」だけでなく、理解するという意味でも使う。日本語でも「分かる」を「見える」と言うことがあり、発想が似ている。\n\n【saw のもう一つの意味】saw には「のこぎり」という名詞の意味もある。\n\n【例文】I saw a beautiful rainbow yesterday.',
     examFrequency: 'very-high',
   },
   {
@@ -1411,7 +1412,8 @@ export const eigoExtra: Question[] = [
     choices: ['この本は多くの人が書いた。', 'この本は多くの人に読まれている。', 'この本は多くの人に売られている。', 'この本は多くの人から贈られた。'],
     answer: 'この本は多くの人に読まれている。',
     hint: 'is read は受動態（be動詞 + 過去分詞）です。',
-    explanation: 'is read by ... は受動態（受け身）の表現で「...によって読まれている」という意味です。by は「～によって」という動作の主体を示します。',
+    explanation:
+      '【答え】この本は多くの人に読まれている\n\n【受け身（受動態）の形】be動詞 ＋ 過去分詞。「〜される」を表す。\n・能動態 … Many people read this book.\n・受動態 … This book is read by many people.\n動作を受けるものを主語にする言い方である。\n\n【read の発音に注意】この文の read は過去分詞なのでレッドと読む。つづりは現在形と同じだが発音が変わる。read - read - read。\n\n【by の意味】「〜によって」。動作をする人を示す。\n\n【by を省くとき】だれがしたかが重要でない、または分からないときは省く。\n・English is spoken in many countries.\n・My bike was stolen.\n受け身は「する人」を言わなくてよいのが便利なところである。\n\n【書きかえの手順】\n①能動態の目的語を主語にする\n②動詞を be動詞 ＋ 過去分詞にする\n③もとの主語を by の後ろに置く\n時制は be動詞で表す。過去なら was／were を使う。\n\n【by 以外を使う受け身】\n・be interested in（興味がある）・be covered with（おおわれている）・be known to（知られている）・be surprised at（驚く）\n\n【例文】This song is loved by young people.',
     examFrequency: 'very-high',
   },
   {
@@ -1437,7 +1439,8 @@ export const eigoExtra: Question[] = [
     choices: ['名詞的用法（～すること）', '形容詞的用法（～するための）', '副詞的用法（～するために）', '副詞的用法（～して…の感情）'],
     answer: '名詞的用法（～すること）',
     hint: 'want の目的語になっているのは？',
-    explanation: 'want to become は「なりたい」という意味で、to become が want の目的語（～すること）になっています。これが不定詞の名詞的用法です。',
+    explanation:
+      '【答え】名詞的用法（〜すること）\n\n【なぜ名詞的用法か】to become が want の目的語になっているからである。\n・I want to become a doctor.（医者になることを望む）\n・to become a doctor が、名詞と同じはたらきをしている\n\n【不定詞の3つの用法】\n・名詞的用法（〜すること）… 主語・目的語・補語になる\n　I want to go.／To read books is fun.／My dream is to be a doctor.\n・形容詞的用法（〜するための・〜すべき）… 名詞を後ろから説明する\n　something to eat／homework to do\n・副詞的用法（〜するために・〜して）… 動詞や形容詞を説明する\n　I went there to see him.／I am glad to hear that.\n\n【見分け方の手順】\n①to 不定詞の直前を見る\n②直前が名詞なら形容詞的用法\n③動詞の目的語になっていれば名詞的用法\n④それ以外（目的・感情の原因）なら副詞的用法\nまず「直前に名詞があるか」を見るのが確実である。\n\n【want の後は to だけ】want に ing は続けられない。I want going（誤り）。\n\n【例文】I want to become a doctor in the future.',
     examFrequency: 'very-high',
   },
   {
@@ -1463,7 +1466,8 @@ export const eigoExtra: Question[] = [
     choices: ['名詞的用法（～すること）', '形容詞的用法（～するべき・～するための）', '副詞的用法（目的）', '副詞的用法（感情の原因）'],
     answer: '形容詞的用法（～するべき・～するための）',
     hint: '直前の名詞（homework）を修飾しています。',
-    explanation: 'to do は直前の homework（宿題）を修飾している形容詞的用法の不定詞です。「すべき宿題」という意味です。',
+    explanation:
+      '【答え】形容詞的用法（〜すべき・〜するための）\n\n【なぜ形容詞的用法か】to do が直前の名詞 homework を後ろから説明しているからである。\n・a lot of homework to do（すべき宿題）\n英語では、説明する語が名詞の後ろに来る。日本語では「すべき宿題」と前に来るので、語順が逆になる。\n\n【形容詞的用法の例】\n・something to drink（飲むもの）\n・time to go（行く時間）\n・a book to read（読む本）\n・nothing to do（することがない）\n・a chance to try（試す機会）\n\n【something ＋ 形容詞 ＋ to 〜】語順が問われる。\n・something cold to drink（何か冷たい飲み物）\n・-thing で終わる語は、形容詞が後ろに来る。cold something とは言わない\n・さらに不定詞はその後ろに置く\nsomething → 形容詞 → to 不定詞の順である。\n\n【homework は数えられない】a homework、homeworks とは言わない。\n・much homework、a lot of homework\n・日本語の感覚では数えられそうなので、特に問われる\n\n【例文】I have a lot of homework to do today.',
     examFrequency: 'very-high',
   },
   {
@@ -1593,7 +1597,8 @@ export const eigoExtra: Question[] = [
     choices: ['エッフェル塔は1889年に建てられた。', 'エッフェル塔は1889年に建てた。', 'エッフェル塔は1889年から建てている。', 'エッフェル塔は1889年に崩れた。'],
     answer: 'エッフェル塔は1889年に建てられた。',
     hint: 'was built は受動態の過去形です。',
-    explanation: 'was built は build（建てる）の受動態の過去形で「建てられた」という意味です。エッフェル塔は1889年に完成しました。',
+    explanation:
+      '【答え】エッフェル塔は1889年に建てられた\n\n【過去の受け身】was／were ＋ 過去分詞。\n・主語が単数 … was built\n・主語が複数 … were built\n\n【build の変化】build - built - built。過去形と過去分詞が同じ型である。\n・同じ型 … send - sent - sent、spend - spent - spent、lend - lent - lent\nd や t で終わる語に多い。\n\n【なぜ受け身にするのか】だれが建てたかより、建物がいつできたかが知りたい情報だからである。受け身は、動作をする人が重要でないときに使う。\n\n【in 1889 の in】年には in を使う。\n・in 1889（年）・in May（月）・in summer（季節）\n・on May 5（日）・at seven（時刻）\n範囲の広いものほど in。\n\n【年の読み方】1889 は eighteen eighty-nine と2けたずつ区切って読む。\n\n【建物に関わる語】building・castle・temple・shrine・bridge・tower・monument。\n・be built（建てられる）・be destroyed（こわされる）・be rebuilt（建て直される）\n\n【選択肢の見分け方】\n・「建てた」なら built（能動態）\n・「建てられた」なら was built（受動態）\nbe動詞があるかどうかで判断する。\n\n【例文】This temple was built about 300 years ago.',
     examFrequency: 'high',
   },
   {
@@ -1606,7 +1611,8 @@ export const eigoExtra: Question[] = [
     choices: ['名詞的用法', '形容詞的用法', '副詞的用法（感情の原因）', '副詞的用法（目的）'],
     answer: '副詞的用法（感情の原因）',
     hint: 'glad（うれしい）という感情の原因を説明しています。',
-    explanation: 'to hear は glad という感情の原因を表す副詞的用法の不定詞です。「それを聞いて（うれしい）」という意味で感情の原因を示します。',
+    explanation:
+      '【答え】副詞的用法（感情の原因）\n\n【なぜ感情の原因か】glad（うれしい）という感情を表す形容詞の後ろに to 不定詞が来ているからである。「それを聞いて（うれしい）」と、うれしくなった理由を示している。\n\n【感情の原因を表す形】この形をまとめて覚える。\n・be glad to 〜（〜してうれしい）\n・be happy to 〜\n・be sad to 〜（〜して悲しい）\n・be surprised to 〜（〜して驚く）\n・be sorry to 〜（〜して残念だ・気の毒だ）\n・be excited to 〜\n感情の形容詞 ＋ to 不定詞という組み合わせである。\n\n【副詞的用法の3つの意味】\n・目的（〜するために）… I went there to see him.\n・感情の原因（〜して）… I am glad to hear that.\n・判断の根拠（〜するとは）… He must be kind to say so.\n直前に感情の形容詞があれば原因と判断できる。\n\n【目的との見分け方】\n・目的 … 「〜するために」と訳して意味が通る\n・感情の原因 … 直前に glad、happy、sad などがある\n直前の語を見るのが手順である。\n\n【例文】I am glad to hear that you are fine.',
     examFrequency: 'high',
   },
   {
@@ -1687,7 +1693,8 @@ export const eigoExtra: Question[] = [
     choices: ['is', 'are', 'am', 'be'],
     answer: 'are',
     hint: 'many students は複数なので be動詞は？',
-    explanation: 'There is/are 構文では、後に来る名詞が複数形なら are、単数なら is を使います。many students は複数なので are です。',
+    explanation:
+      '【答え】are\n\n【There is／There are の使い分け】後ろに来る名詞に合わせる。\n・単数 … There is a student in the gym.\n・複数 … There are many students in the gym.\n主語は there ではなく、後ろの名詞である。ここが最も大事な点である。\n\n【数えられない名詞】is を使う。\n・There is some water in the glass.\n\n【何のために使うのか】初めて話に出すものの存在を知らせるときに使う。\n・There is a cat in the box.（箱の中に猫がいることを新しく知らせる）\n・The cat is in the box.（その猫がどこにいるかを言う）\nすでに話に出たものには There is を使わない。\n・There is my bag on the desk.（不自然）\n・My bag is on the desk.（正しい）\nmy、the、this がついたものには使わないと覚える。日本語の「が」と「は」の使い分けとよく似ている。\n\n【疑問文と否定文】\n・Is there a station near here?\n・There are not any students.／There are no students.\n\n【過去形】There was／There were。\n\n【例文】There are many students in the gym.',
     examFrequency: 'high',
   },
   {
@@ -1726,7 +1733,8 @@ export const eigoExtra: Question[] = [
     choices: ['「まだ」という意味で文末に置く', '「もう・すでに」という意味で have と過去分詞の間に置く', '「今」という意味で文頭に置く', '「まだ」という意味で have と過去分詞の間に置く'],
     answer: '「もう・すでに」という意味で have と過去分詞の間に置く',
     hint: '肯定文で使われる already です。',
-    explanation: 'already は「もう、すでに」という意味で、肯定文の現在完了では have と過去分詞の間（または文末）に置きます。yet は否定文・疑問文で使います。',
+    explanation:
+      '【答え】「もう・すでに」という意味で、have と過去分詞の間に置く\n\n【already の使い方】\n・ふつうの文（肯定文）で使う\n・have と過去分詞の間、または文末に置く\n・I have already finished my homework.\n・I have finished my homework already.\n\n【yet との使い分け】ここが最も問われる。\n・already … ふつうの文で「もう」\n・yet … 否定文で「まだ」、疑問文で「もう」。文末に置く\n・I have already eaten.（もう食べた）\n・I have not eaten yet.（まだ食べていない）\n・Have you eaten yet?（もう食べましたか）\n使う文の種類と置く場所がちがう。\n\n【疑問文で already を使うと】驚きを表す。\n・Have you already finished?（もう終わったの？早いね）\nふつうは yet を使い、already を使うと意外だという気持ちがこもる。\n\n【現在完了の3つの意味】一緒に使う語で見分ける。\n・完了 … just、already、yet\n・経験 … ever、never、once、〜 times、before\n・継続 … for、since\n\n【just の位置】already と同じく、have と過去分詞の間に置く。\n\n【例文】I have already finished my homework.',
     examFrequency: 'very-high',
   },
   {
@@ -1778,7 +1786,8 @@ export const eigoExtra: Question[] = [
     choices: ['まだ', 'もう・すでに', 'ちょうど・たった今', '以前に'],
     answer: 'ちょうど・たった今',
     hint: '完了用法の現在完了でよく使われます。',
-    explanation: 'just は現在完了の完了用法で「ちょうど、たった今」という意味です。She has just arrived. = 彼女はたった今到着した。',
+    explanation:
+      '【答え】ちょうど・たった今\n\n【just の使い方】現在完了の完了用法で使い、have と過去分詞の間に置く。\n・She has just arrived.（たった今着いた）\n・I have just finished.\n\n【完了用法で使う3つの語】\n・just … ちょうど、たった今\n・already … もう、すでに（ふつうの文）\n・yet … まだ（否定文）、もう（疑問文）。文末に置く\njust と already は動詞の前、yet は文末という位置のちがいがある。\n\n【現在完了と過去形のちがい】\n・She has just arrived.（着いたところで、今ここにいる）\n・She arrived an hour ago.（1時間前に着いた。過去の事実）\n現在完了は今とつながっているのが特徴である。\n\n【just のほかの意味】\n・ちょうど … just now、just then\n・ただ〜だけ … I just want to help.\n・まさに … That is just what I wanted.\n文脈で意味が変わる。\n\n【just now の注意】「たった今」の意味では過去形と使うことが多い。\n・He arrived just now.（過去形）\n・He has just arrived.（現在完了）\nどちらも使えるが、形がちがう。\n\n【例文】She has just arrived at the station.',
     examFrequency: 'very-high',
   },
   {
@@ -1791,7 +1800,8 @@ export const eigoExtra: Question[] = [
     choices: ['あなたはどれくらい英語を勉強しましたか（過去）？', 'あなたはどれくらいの間英語を勉強し続けていますか？', 'あなたはどれほど英語が得意ですか？', 'あなたは何時間英語を勉強しますか？'],
     answer: 'あなたはどれくらいの間英語を勉強し続けていますか？',
     hint: 'How long have you ...? は継続期間を尋ねます。',
-    explanation: 'How long have you + 過去分詞? は「どれくらいの間（ずっと）～していますか？」という継続の期間を尋ねる現在完了の疑問文です。',
+    explanation:
+      '【答え】あなたはどれくらいの間、英語を勉強し続けていますか\n\n【How long ＋ 現在完了】期間の長さをたずねる。\n・How long have you studied English?\n・答え … For five years.／Since I was ten.\n\n【for と since】\n・for ＋ 期間の長さ … for five years、for a long time\n・since ＋ 始まった時点 … since 2020、since I was ten\n「どれだけの長さか」なら for、「いつから」なら since。\n\n【現在完了進行形との使い分け】\n・How long have you studied English?（継続）\n・How long have you been studying English?（現在完了進行形）\n動作を表す動詞では、進行形のほうが「今も続いている」感じが強い。study はどちらでも使える。\n\n【過去形との区別】\n・How long did you study English?（過去のある期間。今はもうしていない）\n・How long have you studied English?（今も続いている）\n現在完了は今とつながっている。\n\n【How の組み合わせ】How long（期間・長さ）・How often（頻度）・How many times（回数）・How far（距離）・How much（量・値段）。\n\n【例文】How long have you lived here? — For ten years.',
     examFrequency: 'high',
   },
   {
@@ -1830,7 +1840,8 @@ export const eigoExtra: Question[] = [
     choices: ['これはどのバッグですか？', 'これは誰のバッグですか？', 'このバッグはどこにありますか？', 'このバッグはいくらですか？'],
     answer: 'これは誰のバッグですか？',
     hint: 'Whose は「誰の」という所有を尋ねる疑問詞です。',
-    explanation: 'Whose は「誰の」という所有を尋ねる疑問詞です。Whose bag is this? = これは誰のバッグですか？',
+    explanation:
+      '【答え】これはだれのかばんですか\n\n【whose の意味】「だれの」。持ち主をたずねる疑問詞である。\n・whose ＋ 名詞 … Whose bag is this?（だれのかばん）\n・whose だけ … Whose is this bag?（このかばんはだれのもの）\nどちらの言い方もできる。\n\n【答え方】\n・It is mine.（私のです）\n・It is Tom\'s.（トムのです）\n・It is my brother\'s.\n所有を表すには、アポストロフィ s をつける。\n\n【所有を表す語】\n・my → mine（私のもの）\n・your → yours\n・his → his\n・her → hers\n・our → ours\n・their → theirs\n・his だけ、所有格と所有代名詞が同じ形である\n\n【whose のもう一つの使い方】関係代名詞としても使える。\n・I know a boy whose father is a doctor.（お父さんが医者である少年）\n中学の後半で学ぶ形である。\n\n【疑問詞のまとめ】what（何）・who（だれ）・whose（だれの）・which（どちら）・when（いつ）・where（どこ）・why（なぜ）・how（どのように）。\n\n【例文】Whose bag is this? — It\'s mine.',
     examFrequency: 'high',
   },
   {
@@ -1843,7 +1854,8 @@ export const eigoExtra: Question[] = [
     choices: ['このジャケットはどれくらい重いですか？', 'このジャケットはいくらですか？', 'このジャケットはどこで買えますか？', 'このジャケットはどんな素材ですか？'],
     answer: 'このジャケットはいくらですか？',
     hint: 'How much は値段を尋ねるときに使います。',
-    explanation: 'How much is ...? は「～はいくらですか？」という値段を尋ねる表現です。It\'s 3,000 yen. などと答えます。',
+    explanation:
+      '【答え】このジャケットはいくらですか\n\n【How much の2つの意味】\n・値段 … How much is this?（いくらですか）\n・量 … How much water do you need?（どのくらいの水）\n後ろに名詞があるかどうかで見分ける。\n\n【How many との使い分け】\n・How many ＋ 数えられる名詞の複数形 … How many books?\n・How much ＋ 数えられない名詞 … How much water?\n数えられるかどうかで決まる。\n\n【答え方】\n・It is 3,000 yen.\n・Three thousand yen.\n・yen は複数形にしない。three thousand yens は誤りである\n・dollar は複数形にする … three dollars\n\n【買い物で使う表現】\n・How much is it?（いくらですか）\n・It\'s too expensive.（高すぎます）\n・Can I try it on?（試着してもいいですか）\n・I\'ll take it.（これにします）\n・Do you take credit cards?\nまとめて覚えると、会話の問題に強くなる。\n\n【値段に関わる語】expensive（高い）・cheap（安い）・reasonable（手ごろな）・free（無料の）・sale（安売り）・discount（値引き）。\n\n【例文】How much is this jacket? — It\'s 5,000 yen.',
     examFrequency: 'high',
   },
   {
@@ -1908,7 +1920,8 @@ export const eigoExtra: Question[] = [
     choices: ['I exercise at the gym.', 'I exercise three times a week.', 'I exercise for one hour.', 'I started exercising last year.'],
     answer: 'I exercise three times a week.',
     hint: 'How often は頻度（どれくらいの頻度で）を尋ねています。',
-    explanation: 'How often は「どれくらいの頻度で」という頻度を尋ねる表現です。three times a week（週3回）のように頻度で答えます。',
+    explanation:
+      '【答え】I exercise three times a week.\n\n【How often の意味】「どれくらいの頻度で」。回数や頻度をたずねる。\n\n【ほかの選択肢がまちがいな理由】\n・I exercise at the gym. … 場所を答えている（Where の答え）\n・I exercise for one hour. … 時間の長さを答えている（How long の答え）\n・I started exercising last year. … いつ始めたかを答えている（When の答え）\n疑問詞が何をたずねているかを確かめて、それに合う答えを選ぶ。\n\n【頻度の答え方】\n・every day（毎日）\n・three times a week（週3回）\n・twice a month（月2回）\n・once a year（年1回）\n・a week、a month の a は「〜につき」という意味である。per week とも言える\n\n【頻度を表す副詞】\n・always（いつも）＞ usually（たいてい）＞ often（よく）＞ sometimes（ときどき）＞ rarely／seldom（めったに〜ない）＞ never（決して〜ない）\n・位置 … be動詞の後、一般動詞の前。I always get up at six.\n\n【How の組み合わせ】How often（頻度）・How long（期間）・How many times（回数）。\n\n【例文】How often do you exercise? — Twice a week.',
     examFrequency: 'high',
   },
   {
@@ -1978,7 +1991,8 @@ export const eigoExtra: Question[] = [
     choices: ['私は飛ぶことができる。', '私は飛べたらいいのに（でも実際には飛べない）。', '私は飛ぶつもりだ。', '私は飛ぶことを願っている。'],
     answer: '私は飛べたらいいのに（でも実際には飛べない）。',
     hint: 'I wish + 仮定法過去 で「～だったらいいのに」という非現実の願いを表します。',
-    explanation: 'I wish + 仮定法過去（could fly）は「飛べたらいいのに」という現実とは異なる願いを表します。実際には飛べないという含意があります。',
+    explanation:
+      '【答え】私は飛べたらいいのに（でも実際には飛べない）\n\n【仮定法とは】事実と反することを言うときの言い方である。\n・I wish I could fly.（飛べたらいいのに）\n・実際には飛べないという意味が含まれている\n\n【なぜ過去形を使うのか】ここが仮定法の要点である。事実と反することを言うために、わざと時制を一つ過去にずらす。\n・現在の事実と反する … 過去形を使う（仮定法過去）\n・I wish I could fly.（can ではなく could）\n・I wish I had more time.（have ではなく had）\n時制をずらすことで、現実から距離を置くという発想である。日本語でも「〜だったらなあ」と過去形で言うことがあり、似ている。\n\n【I wish と I hope】\n・I wish … 実現しそうにないことを願う。I wish I were a bird.\n・I hope … 実現しそうなことを願う。I hope you will come.\n実現の見こみがあるかどうかで使い分ける。\n\n【be動詞は were を使う】仮定法では、主語が I や he でも were を使うのが本来の形である。\n・If I were a bird（もし私が鳥なら）\n\n【例文】I wish I could speak English like you.',
     examFrequency: 'high',
   },
   {
@@ -2121,7 +2135,8 @@ export const eigoExtra: Question[] = [
     choices: ['英語を5年間続けること', 'もっと難しい英会話を習得すること', '来年留学すること', '外国人と友達になること'],
     answer: '来年留学すること',
     hint: 'His goal is ... の部分を確認しましょう。',
-    explanation: '本文の最後に His goal is to study abroad next year. （彼の目標は来年留学することです）とあります。',
+    explanation:
+      '【答え】来年留学すること\n\n【本文のどこから読み取れるか】最後の一文にそのまま書かれている。\n・His goal is to study abroad next year.（彼の目標は来年留学することです）\ngoal（目標）という語が、設問の「目標」と対応している。\n\n【長文問題の解き方】\n①設問を先に読み、何を聞かれているかをつかむ\n②本文からその語（ここでは goal）を探す\n③その前後をていねいに読む\n本文を全部訳す必要はない。必要な部分を探すのが解き方である。\n\n【ほかの選択肢がまちがいな理由】\n・英語を5年間続けること … これは今までしてきたこと（has been studying for five years）で、目標ではない\n・もっと難しい英会話 … 本文に書かれていない\n・外国人と友達になること … can hold a conversation with foreigners とあるが、これは今できることで目標ではない\n「すでにしたこと」と「これからの目標」を区別する。\n\n【本文の時制に注目】\n・has been studying（現在完了進行形）… 今まで続けてきた\n・can now hold（現在）… 今できること\n・His goal is to study abroad next year.（未来の目標）\n時制が、内容の時間の区別を示している。\n\n【study abroad】留学する。abroad に to はつけない。',
     examFrequency: 'high',
   },
   // ============================================================
@@ -2176,7 +2191,8 @@ export const eigoExtra: Question[] = [
     choices: ['may', 'might', 'must', 'could'],
     answer: 'must',
     hint: '法律なので「しなければならない」という強い義務を表す語は？',
-    explanation: 'must は「～しなければならない」という強い義務・必然性を表します。法律（It\'s the law.）に言及しているので must が最も適切です。',
+    explanation:
+      '【答え】must\n\n【なぜ must か】It\'s the law.（法律である）とあるので、しなければならないという強い義務を表す must が合う。\n\n【ほかの選択肢がまちがいな理由】\n・may … 〜してもよい（許可）、〜かもしれない（推量）\n・might … 〜かもしれない（may より弱い推量）\n・could … 〜できた（can の過去）、〜かもしれない（弱い推量）\nどれも義務を表さない。\n\n【助動詞の意味と強さ】\n・must … しなければならない（強い義務）\n・have to … しなければならない（外からの事情）\n・should … したほうがよい（助言）\n・may／can … してもよい（許可）\n・might／could … かもしれない（弱い推量）\n\n【空所補充の解き方】\n①前後の文から、何を表す語が必要かを考える\n②この問題では It\'s the law. が決め手になる\n③選択肢の意味を一つずつ当てはめる\n理由となる文が近くにあることが多いので、そこを探す。\n\n【must not と do not have to】\n・must not … してはいけない（禁止）\n・do not have to … しなくてよい（不要）\n正反対の意味なので、取りちがえないこと。\n\n【例文】You must wear a seatbelt. It\'s the law.',
     examFrequency: 'high',
   },
   {
