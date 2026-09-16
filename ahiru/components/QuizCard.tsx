@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { rich } from './RichText';
 import {
   View,
   Text,
@@ -229,10 +230,10 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             <View style={styles.hintBox}>
               <Text style={styles.hintLabel}>📖 解説</Text>
               <Text style={styles.hintText}>
-                {explanationText(question)}
+                {rich(explanationText(question))}
               </Text>
               {hintText(question) !== '' && (
-                <Text style={styles.hintText}>💡 {hintText(question)}</Text>
+                <Text style={styles.hintText}>💡 {rich(hintText(question))}</Text>
               )}
               {getQuickTrick(question.id) != null && (
                 <View style={styles.trickBox}>
@@ -354,10 +355,10 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             <View style={styles.hintBox}>
               <Text style={styles.hintLabel}>📖 解説</Text>
               <Text style={styles.hintText}>
-                {explanationText(question)}
+                {rich(explanationText(question))}
               </Text>
               {hintText(question) !== '' && (
-                <Text style={styles.hintText}>💡 {hintText(question)}</Text>
+                <Text style={styles.hintText}>💡 {rich(hintText(question))}</Text>
               )}
               {getQuickTrick(question.id) != null && (
                 <View style={styles.trickBox}>

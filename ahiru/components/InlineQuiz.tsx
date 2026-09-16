@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { rich } from './RichText';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import type { Question, QuestionSubItem } from '../data/questions-meta';
 import type { Figure } from '../data/figures';
@@ -117,7 +118,7 @@ export default function InlineQuiz({ items, label = 'この公式の一問一答
               <View key={i} style={styles.subAnswer}>
                 <Text style={styles.subAnswerLabel}>{sub.label}</Text>
                 <Text style={styles.answerText}>{sub.answer}</Text>
-                {sub.explanation != null && <Text style={styles.explanationText}>{sub.explanation}</Text>}
+                {sub.explanation != null && <Text style={styles.explanationText}>{rich(sub.explanation)}</Text>}
               </View>
             ))}
 
@@ -135,7 +136,7 @@ export default function InlineQuiz({ items, label = 'この公式の一問一答
           {q.explanation != null && q.explanation !== '' && (
             <View style={styles.explanationBox}>
               <Text style={styles.explanationTitle}>💡 解説</Text>
-              <Text style={styles.explanationText}>{q.explanation}</Text>
+              <Text style={styles.explanationText}>{rich(q.explanation)}</Text>
             </View>
           )}
         </View>

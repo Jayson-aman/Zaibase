@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
+import { rich } from '../../components/RichText';
 import {
   View,
   Text,
@@ -841,10 +842,10 @@ export default function QuizScreen() {
               <View style={styles.wrongExplanationCard}>
                 <Text style={styles.wrongExplanationTitle}>📖 くわしい解説</Text>
                 <Text style={styles.wrongExplanationText}>
-                  {explanationText(currentQuestion)}
+                  {rich(explanationText(currentQuestion))}
                 </Text>
                 {hintText(currentQuestion) !== '' && (
-                  <Text style={styles.wrongExplanationText}>💡 {hintText(currentQuestion)}</Text>
+                  <Text style={styles.wrongExplanationText}>💡 {rich(hintText(currentQuestion))}</Text>
                 )}
                 {getQuickTrick(currentQuestion.id) != null && (
                   <View style={styles.tipRow}>

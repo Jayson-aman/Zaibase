@@ -1,4 +1,5 @@
 import React from 'react';
+import { rich } from '../../components/RichText';
 import {
   View,
   Text,
@@ -217,7 +218,7 @@ export default function LessonDetailScreen() {
                 {lesson.keyPoints.map((p, i) => (
                   <View key={i} style={styles.keyPointRow}>
                     <Text style={styles.keyPointCheck}>✅</Text>
-                    <Text style={styles.keyPointText}>{p}</Text>
+                    <Text style={styles.keyPointText}>{rich(p)}</Text>
                   </View>
                 ))}
               </View>
@@ -228,14 +229,14 @@ export default function LessonDetailScreen() {
                 {lesson.trapExamples.map((t, i) => (
                   <View key={i} style={[styles.trapItem, i > 0 && styles.trapItemSpacer]}>
                     <Text style={styles.trapQuestionLabel}>問題</Text>
-                    <Text style={styles.trapQuestion}>{t.question}</Text>
+                    <Text style={styles.trapQuestion}>{rich(t.question)}</Text>
                     <View style={styles.trapWrongBox}>
                       <Text style={styles.trapWrongLabel}>❌ こう間違えがち：{t.wrongAnswer}</Text>
-                      <Text style={styles.trapWrongText}>{t.trapExplanation}</Text>
+                      <Text style={styles.trapWrongText}>{rich(t.trapExplanation)}</Text>
                     </View>
                     <View style={styles.trapCorrectBox}>
                       <Text style={styles.trapCorrectLabel}>✅ 正解：{t.correctAnswer}</Text>
-                      <Text style={styles.trapCorrectText}>{t.correctExplanation}</Text>
+                      <Text style={styles.trapCorrectText}>{rich(t.correctExplanation)}</Text>
                     </View>
                   </View>
                 ))}

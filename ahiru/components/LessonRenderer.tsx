@@ -1,4 +1,5 @@
 import React from 'react';
+import { rich } from './RichText';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, ActivityIndicator, Platform } from 'react-native';
 import type { LessonSection } from '../data/lesson-types';
 import { getLessonFigure } from '../data/lesson-figures';
@@ -88,35 +89,35 @@ function renderLine(line: string, i: number): React.ReactNode {
     if (line.startsWith('■ ') || line.startsWith('● ')) {
       return (
         <Text key={i} style={styles.bullet}>
-          {line}
+          {rich(line)}
         </Text>
       );
     }
     if (line.startsWith('→ ')) {
       return (
         <Text key={i} style={styles.arrow}>
-          {line}
+          {rich(line)}
         </Text>
       );
     }
     if (line.startsWith('例）') || line.startsWith('例：') || line.startsWith('【例】')) {
       return (
         <View key={i} style={styles.exampleBox}>
-          <Text style={styles.exampleText}>{line}</Text>
+          <Text style={styles.exampleText}>{rich(line)}</Text>
         </View>
       );
     }
     if (line.startsWith('⚠') || line.startsWith('注意') || line.startsWith('【注意】')) {
       return (
         <View key={i} style={styles.warningBox}>
-          <Text style={styles.warningText}>{line}</Text>
+          <Text style={styles.warningText}>{rich(line)}</Text>
         </View>
       );
     }
     if (line.startsWith('★') || line.startsWith('✓') || line.startsWith('【ポイント】')) {
       return (
         <View key={i} style={styles.pointBox}>
-          <Text style={styles.pointText}>{line}</Text>
+          <Text style={styles.pointText}>{rich(line)}</Text>
         </View>
       );
     }
@@ -125,7 +126,7 @@ function renderLine(line: string, i: number): React.ReactNode {
     }
     return (
       <Text key={i} style={styles.body}>
-        {line}
+        {rich(line)}
       </Text>
     );
   }

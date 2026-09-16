@@ -172,6 +172,25 @@ check(
     .map((q) => q.id),
 );
 
+// 教科書（単元）側も同じ検査をする。
+// 問題集だけ見ていて単元を見ていなかったため、小4の「約数」の単元に
+// 「もとの数の平方根を超えたら終了」、小6の「最短距離」に「斜辺＝√(6×6＋8×8)」など
+// 14単元（30か所）が残っていた（2026/9/16）。同じ検査は問題集と単元の両方に必ず当てる。
+// 書きかえの型は問題集と同じ：「同じ数を2回かけてもとの数になる数」と言う／3:4:5・5:12:13 の比で読む。
+check(
+  '【単元】小学生向けの単元に平方根が出ている',
+  L.filter((l) => (l.examType ?? 'chugaku') === 'chugaku' && (l.subject === 'sansu' || l.subject === 'rika'))
+    .filter((l) =>
+      SQRT.test(
+        [l.title, l.description, l.intro, ...((l.sections ?? []) as any[]).map((s) => s.body), ...((l.keyPoints ?? []) as string[]),
+          ...((l.trapExamples ?? []) as any[]).flatMap((t) => [t.question, t.wrongAnswer, t.trapExplanation, t.correctAnswer, t.correctExplanation])]
+          .map((x) => String(x ?? ''))
+          .join('\n'),
+      ),
+    )
+    .map((l) => l.id),
+);
+
 // 中学受験（小学生）向けの理科に、中学・高校の生物の用語が出ていないか。
 //
 // 平方根のときとまったく同じ種類の失敗の6回目。中学受験の理科に
@@ -768,20 +787,42 @@ info('【問題集】日本語の中に英単語が挟まっている（要目�
 // マークダウンは解釈されず ** がそのまま画面に出る。
 // 2026/9/15、解説を書き直したときに強調のつもりで ** を書いてしまい、
 // 11行に混入した（figure の steps では以前にも同じ失敗をしている）。
+//
+// 2026/9/16に方針が変わった。ユーザーから「大切なところ・テストによく出るところは
+// 太字か赤字に」と指示され、components/RichText.tsx を作って **強調** を太字の赤で描くようにした。
+// 解説・ヒント・覚え方・ひっかけ・小問の解説・単元本文・要点・ひっかけ例題は rich() を通る。
+// だからこれらの欄では ** を使ってよい。見張るのは「閉じ忘れ（** の数が奇数）」だけになった。
+//
+// ⚠️ 問題文・答え・小問の設問と答えは rich() を通らない。答えは採点（utils/grading.ts）の
+//    照合にそのまま使われるので、** が入ると正解が × になる。ここは今までどおり1つでも出たら止める。
+const odd = (s: unknown) => String(s ?? '').split('**').length % 2 === 0;
+const has = (s: unknown) => String(s ?? '').includes('**');
 const mdBad: string[] = [];
 for (const q of Q as any[]) {
-  const fields: Array<[string, unknown]> = [
-    ['問題文', q.question], ['答え', q.answer], ['ヒント', q.hint],
-    ['解説', q.explanation], ['覚え方', q.memoryTip], ['ひっかけ', q.pitfall],
+  if (has(q.question)) mdBad.push(`${q.id}(問題文)`);
+  if (has(q.answer)) mdBad.push(`${q.id}(答え)`);
+  const richFields: Array<[string, unknown]> = [
+    ['ヒント', q.hint], ['解説', q.explanation], ['覚え方', q.memoryTip], ['ひっかけ', q.pitfall],
   ];
-  for (const [name, v] of fields) if (String(v ?? '').includes('**')) mdBad.push(`${q.id}(${name})`);
+  for (const [name, v] of richFields) if (odd(v)) mdBad.push(`${q.id}(${name}:閉じ忘れ)`);
   for (const sub of (q.subQuestions ?? []) as any[]) {
-    if (`${sub.prompt ?? ''}${sub.answer ?? ''}${sub.explanation ?? ''}`.includes('**')) {
-      mdBad.push(`${q.id}:${sub.label}`);
-    }
+    if (has(sub.prompt) || has(sub.answer)) mdBad.push(`${q.id}:${sub.label}(設問か答え)`);
+    if (odd(sub.explanation)) mdBad.push(`${q.id}:${sub.label}(解説:閉じ忘れ)`);
   }
 }
-check('【問題集】画面に出る文にマークダウンの ** が混ざっている', mdBad);
+check('【問題集】採点や問題文に ** が入っている／強調の ** が閉じていない', mdBad);
+
+const mdLessonBad: string[] = [];
+for (const l of L) {
+  if (has(l.title) || has(l.description) || has(l.intro)) mdLessonBad.push(`${l.id}(題名・説明・導入)`);
+  for (const s of (l.sections ?? []) as any[]) if (odd(s.body) || has(s.heading)) mdLessonBad.push(`${l.id}(本文)`);
+  for (const k of (l.keyPoints ?? []) as string[]) if (odd(k)) mdLessonBad.push(`${l.id}(要点)`);
+  for (const t of (l.trapExamples ?? []) as any[]) {
+    if (has(t.wrongAnswer) || has(t.correctAnswer)) mdLessonBad.push(`${l.id}(ひっかけの答え)`);
+    if (odd(t.question) || odd(t.trapExplanation) || odd(t.correctExplanation)) mdLessonBad.push(`${l.id}(ひっかけ:閉じ忘れ)`);
+  }
+}
+check('【単元】強調の ** が閉じていない／描けない欄に ** が入っている', [...new Set(mdLessonBad)]);
 
 // 中学受験（小学生）向けの問題に、高校で習う記号が出ていないか。
 //
@@ -900,6 +941,21 @@ check('【問題集】小問に設問・答え・解説のどれかが無い', s
 
 info('【問題集】解説が理由まで書けていない（減らしていく数字）', qThin, 3);
 info('【問題集】画面に出る説明が80字以下（減らしていく数字）', qShort, 3);
+
+// 教科書（単元）の本文が、手順と例をなぞるだけで「なぜそのきまりなのか」を言っていないもの。
+// 問題集の解説と同じ基準で測る。ユーザーから「問題を濃く書くなら教科書も同様で、
+// 同等以上の品質にすべき」と指示された（2026/9/16）。
+// 「四則計算はかけ算が先」と手順だけ書いてあり、なぜ先なのか（かけ算はまとまりを表すから）が
+// 書かれていない単元が、5,664件中1,328件あった。
+// 壊れているわけではないので0にはならないが、**減らしていく数字**として出す。増えたら後戻り。
+// ⚠️ 本文の長さは intro を含めない。intro は「つかみ」であって説明ではない。
+// ⚠️ 600字は「短いから薄い」の目安であって、長ければ濃いわけではない。理由の語も同時に見る。
+const LESSON_WHY = /なぜ|理由|ので|ため|から(?:です|である|だ|。)|わけ|しくみ|仕組み|よって|したがって|だから|つまり|すなわち|ゆえに/;
+const lessonThin = L.filter((l) => {
+  const body = ((l.sections ?? []) as any[]).map((s) => String(s.body ?? '')).join('\n');
+  return body.length <= 600 || !LESSON_WHY.test(body);
+}).map((l) => `${l.subject}/${l.id}`);
+info('【単元】本文が理由まで書けていない（減らしていく数字）', lessonThin, 3);
 // ⚠️ 2026/9/16まで「？」と「！」を落としていなかったため、
 //   「100以下の3の倍数は何個ありますか？」と「〜ありますか。」が
 //   別の問題として数えられ、まったく同じ問題が3組すり抜けていた。
