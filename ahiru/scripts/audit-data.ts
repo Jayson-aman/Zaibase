@@ -309,6 +309,49 @@ check(
     .map((q) => q.id),
 );
 
+// 中学受験（小学生）向けの理科に、中2〜高校の物理（電気・力学）がそのまま出ていないか（9回目の同種の失敗）。
+//
+// 中学受験の電気は「電池1個・豆電球1個の電流を①、豆電球1個分の抵抗を1」とし、
+// 電流＝電池の数÷抵抗、発熱（明るさ）＝電流×電流×抵抗、で比で解く。
+// 電圧（V）・Ω・オームの法則・電力（W）・ジュール・合成抵抗の逆数公式・電圧計は中2の内容。
+// 磁界・右ねじの法則・フレミングの左手/右手・電磁誘導・誘導電流も中2。
+//   → 磁力・磁力線、方位磁針のふれ方、右手の法則（コイル）、「磁石を動かしているあいだだけ電流」と言葉で書く。
+// 力学の 加速度・ニュートンの運動の法則・慣性・等速直線運動・作用反作用・仕事率・エネルギー保存・Pa は中3〜高校。
+//   → 中学受験の「斜面を転がる球と木片」「ふりこ」「動滑車・輪軸・斜面（力×長さは同じ）」「浮力＝おしのけた水の重さ」に差しかえる。
+//
+// ⚠️ 「電流」「抵抗」「アンペア（A・mA）」「電流計」は中学受験でも使う正当な語なので弾かない。
+// ⚠️ 「電力会社」（社会）と hPa（気圧）は弾かない。数字＋V は「6V」のような電圧の表記だけを見る（V字谷は弾かない）。
+// ⚠️ 「逆数」は小6算数で習うので弾かない。弾くのは「逆数公式」「逆数の和」だけ。
+// ⚠️ 「斑状組織・等粒状組織」は中学受験でも火成岩のつくりとして教えるので弾かない。
+const CHUGAKU_PHYS_NG =
+  /Ω|オームの法則|(?<![A-Za-z0-9.])[0-9]+(?:\.[0-9]+)?\s?V\b|ボルト|ワット|ジュール|電力(?!会社)|電圧|合成抵抗|逆数公式|逆数の和|磁界|磁場|フレミング|電磁誘導|誘導電流|右ねじ|起電力|加速度|ニュートン|運動エネルギー|位置エネルギー|力学的エネルギー|仕事率|慣性|等速直線|作用・?反作用|(?<![A-Za-z])Pa\b|F＝ma|F=ma|レンツ|スネル|屈折率/;
+check(
+  '【単元】中学受験の理科に、中2〜高校の物理（電圧・Ω・オームの法則・磁界・フレミング・電磁誘導・加速度・エネルギー）が出ている',
+  L.filter((l) => l.subject === 'rika' && (l.examType ?? 'chugaku') !== 'koko')
+    .filter((l) => {
+      const texts: unknown[] = [l.title, l.description, l.intro, ...(l.keyPoints ?? [])];
+      for (const sec of (l.sections ?? []) as any[]) {
+        texts.push(sec.heading, sec.body);
+        const fig = sec.figureId ? getLessonFigure(sec.figureId) : null;
+        if (fig) texts.push(JSON.stringify(fig));
+      }
+      for (const t of (l.trapExamples ?? []) as any[]) texts.push(t.question, t.trapExplanation, t.correctAnswer, t.correctExplanation);
+      return texts.some((t) => CHUGAKU_PHYS_NG.test(String(t ?? '')));
+    })
+    .map((l) => l.id),
+);
+check(
+  '【問題集】中学受験の理科に、中2〜高校の物理（電圧・Ω・オームの法則・磁界・フレミング・電磁誘導・加速度・エネルギー）が出ている',
+  (Q as any[])
+    .filter((q) => q.subject === 'rika' && (q.examType ?? 'chugaku') !== 'koko')
+    .filter((q) =>
+      [...ELEM_FIELDS, 'questionReading', 'answerReading'].some((k) => CHUGAKU_PHYS_NG.test(String(q[k] ?? ''))) ||
+      ((q.choices ?? []) as unknown[]).some((c) => CHUGAKU_PHYS_NG.test(String(c))) ||
+      ((q.subQuestions ?? []) as any[]).some((s) => ['question', 'answer', 'explanation'].some((k) => CHUGAKU_PHYS_NG.test(String(s[k] ?? '')))),
+    )
+    .map((q) => q.id),
+);
+
 // 高校受験（中学生）向けの問題に、高校以上の内容が印なしで出ていないか。
 //
 // sin/cos/tan・微分積分・Σ・ベクトル・行列・log は高校の内容で、高校入試には出ない。

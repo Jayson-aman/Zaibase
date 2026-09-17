@@ -1825,7 +1825,7 @@ export const tokyoHoseiRika: Question[] = [
 問3. N極とS極を入れ替える方法：
   ①電流の向きを逆にする（電池の＋と−を入れ替える）
   ②コイルの巻き方向を逆にする
-  どちらも磁場の方向が逆になり、N極とS極が入れ替わる。`,
+  どちらも磁力の向きが逆になり、N極とS極が入れ替わる。`,
     difficulty: 'advanced',
     course: 'tokyo-hosei',
     examType: 'chugaku',
