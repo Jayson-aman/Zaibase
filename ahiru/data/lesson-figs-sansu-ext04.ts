@@ -1,5 +1,5 @@
 // 平面図形 前半（角度・面積・等積変形・相似）— sansu_s126〜sansu_s160 用の図解データ。
-// 座標はすべて distance formula / shoelace 公式で検算済み（生成時の検証スクリプト参照）。
+// 位置はすべて distance formula / shoelace 公式で検算済み（生成時の検証スクリプト参照）。
 import type { Figure } from './figures';
 
 export const lessonFigsSansuExt04: Record<string, Figure> = {
@@ -320,7 +320,7 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
     buildSteps: 4,
   },
 
-  // s144: 座標上の三角形の面積
+  // s144: 方眼上の三角形の面積
   lf_sansu_ext04_144: {
     kind: 'polygon',
     points: [
@@ -331,12 +331,12 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
     sideLabels: ['底辺6cm', null, null],
     heights: [{ from: 2, toEdge: [0, 1], label: '高さ4cm' }],
     fill: true,
-    caption: '底辺AB＝7−1＝6cm、高さ＝5−1＝4cm（Cのy座標とABのy座標の差）。面積＝6×4÷2＝12cm²',
+    caption: '底辺AB＝7−1＝6cm、高さ＝5−1＝4cm（Cのたての目もりとABのたての目もりの差）。面積＝6×4÷2＝12cm²',
     steps: [
       "頂点を順に A・B・C と結んだ三角形。まず形と頂点の名前をおさえる。",
       "辺に書かれている長さは 底辺6cm。どの辺のことかを図で確かめる。",
       "点線は高さ。面積を出すときは、底辺に垂直な長さを使う。",
-      "底辺AB＝7−1＝6cm、高さ＝5−1＝4cm（Cのy座標とABのy座標の差）。面積＝6×4÷2＝12cm²",
+      "底辺AB＝7−1＝6cm、高さ＝5−1＝4cm（Cのたての目もりとABのたての目もりの差）。面積＝6×4÷2＝12cm²",
     ],
     buildSteps: 3,
   },
@@ -1238,7 +1238,7 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
     buildSteps: 3,
   },
 
-  // s144：座標 A(1,1)・B(7,1)・C(3,5)。ABが水平で底辺6、高さは 5−1=4。面積12
+  // s144：位置 A(1,1)・B(7,1)・C(3,5)。ABが水平で底辺6、高さは 5−1=4。面積12
   sext04_s144_naze: {
     kind: 'coordinate',
     xRange: [0, 8],
@@ -1251,12 +1251,12 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
     segments: [
       [{ x: 3, y: 5 }, { x: 3, y: 1, label: '高さ4' }],
     ],
-    caption: 'A(1,1) と B(7,1) は y 座標が同じなので AB は水平。底辺 AB ＝ 7−1 ＝ 6。高さは C の y 座標と底辺の y 座標の差 5−1 ＝ 4（5 ではない）。面積 ＝ 6×4÷2 ＝ 12。',
+    caption: 'A(1,1) と B(7,1) は たての目もりが同じなので AB は水平。底辺 AB ＝ 7−1 ＝ 6。高さは C の たての目もりと底辺の たての目もりの差 5−1 ＝ 4（5 ではない）。面積 ＝ 6×4÷2 ＝ 12。',
     steps: [
-      '座標平面に A(1,1)・B(7,1)・C(3,5) をとる。',
-      'A と B は y 座標がどちらも 1 なので、辺 AB は水平。長さは x 座標の差 7−1＝6。これを底辺にする。',
-      '高さは C から底辺 AB までの垂直なきょり。C の y 座標 5 から底辺の y 座標 1 を引いて 4。',
-      '面積 ＝ 6×4÷2 ＝ 12。C の y 座標 5 をそのまま高さにすると 15 になる。底辺は y＝1 の高さにあるので差を取る。',
+      '方眼に A(1,1)・B(7,1)・C(3,5) をとる。',
+      'A と B は たての目もりがどちらも 1 なので、辺 AB は水平。長さは 横の目もりの差 7−1＝6。これを底辺にする。',
+      '高さは C から底辺 AB までの垂直なきょり。C の たての目もり 5 から底辺の たての目もり 1 を引いて 4。',
+      '面積 ＝ 6×4÷2 ＝ 12。C の たての目もり 5 をそのまま高さにすると 15 になる。底辺は y＝1 の高さにあるので差を取る。',
       '検算：囲む長方形 6×4＝24 の半分。3 点を y 方向に −1 ずらすと A(1,0)・B(7,0)・C(3,4) で高さ 4 がそのまま読める。',
     ],
     buildSteps: 3,
