@@ -37,8 +37,8 @@ export const figuresCoreRika: Record<string, Figure> = {
   // rika_23 中和：塩酸＋水酸化ナトリウム → 塩化ナトリウム＋水
   rika_23: {
     kind: 'chemEquation',
-    equation: 'HCl + NaOH -> NaCl + H2O',
-    caption: '塩酸と水酸化ナトリウム水溶液の中和',
+    equation: '塩酸 ＋ 水酸化ナトリウム → 塩化ナトリウム（食塩）＋ 水',
+    caption: '塩酸と水酸化ナトリウム水溶液の中和。酸とアルカリが打ち消し合って、塩と水ができる',
   },
 
   // rika_24 直列回路：3Ω＋6Ω＝9Ω

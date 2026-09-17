@@ -58,13 +58,13 @@ export const lessonFigsRikaExt09: Record<string, Figure> = {
       { label: '燃焼前（鉄）', value: 1.68 },
       { label: '燃焼後（酸化鉄）', value: 2.32 },
     ],
-    caption: '鉄1.68gを完全に酸化させると酸化鉄(Fe₃O₄)2.32gになる。増えた0.64gは結びついた酸素の重さ',
+    caption: '鉄1.68gを完全に酸化させると酸化鉄2.32gになる。増えた0.64gは結びついた酸素の重さ',
     steps: [
       "よこじくは「状態」、たてじくは「質量（g）」を表している。まず何と何を比べた図かをつかむ。",
       "いちばん大きいのは「燃焼後（酸化鉄）」で2.32（質量（g））。",
       "いちばん小さいのは「燃焼前（鉄）」で1.68。差は0.64。",
       "2本を見比べて、どちらがどれだけ大きいかをつかむ。",
-      "鉄1.68gを完全に酸化させると酸化鉄(Fe₃O₄)2.32gになる。増えた0.64gは結びついた酸素の重さ",
+      "鉄1.68gを完全に酸化させると酸化鉄2.32gになる。増えた0.64gは結びついた酸素の重さ",
     ],
     buildSteps: 4,
   },
@@ -93,7 +93,7 @@ export const lessonFigsRikaExt09: Record<string, Figure> = {
   // s303: ろうそくの燃焼（炭化水素の燃焼と同じしくみ）
   r9_303: {
     kind: 'chemEquation',
-    equation: 'CH4 + 2O2 -> CO2 + 2H2O',
+    equation: 'メタン ＋ 酸素 → 二酸化炭素 ＋ 水',
     caption: 'メタンの燃焼。ろう（炭素と水素からなる物質）が燃えるのも同じしくみ：炭素→二酸化炭素、水素→水になる',
   },
 
@@ -141,8 +141,8 @@ export const lessonFigsRikaExt09: Record<string, Figure> = {
   // s307: 石灰水と二酸化炭素の反応
   r9_307: {
     kind: 'chemEquation',
-    equation: 'Ca(OH)2 + CO2 -> CaCO3 + H2O',
-    caption: '石灰水が白くにごる反応。白い沈殿の正体は炭酸カルシウム(CaCO₃)',
+    equation: '水酸化カルシウム（石灰水）＋ 二酸化炭素 → 炭酸カルシウム（白い沈殿）＋ 水',
+    caption: '石灰水が白くにごる反応。白い沈殿の正体は炭酸カルシウム',
   },
 
   // s308: 集気びんの中の酸素濃度の時間変化
@@ -196,7 +196,7 @@ export const lessonFigsRikaExt09: Record<string, Figure> = {
   // s311: 酸素の発生（過酸化水素水＋二酸化マンガン）
   r9_311: {
     kind: 'chemEquation',
-    equation: '2H2O2 -> 2H2O + O2',
+    equation: '過酸化水素 → 水 ＋ 酸素',
     caption: '過酸化水素水（うすいオキシドール）の分解。触媒：二酸化マンガン（反応前後で変化しない）',
   },
 
@@ -242,7 +242,7 @@ export const lessonFigsRikaExt09: Record<string, Figure> = {
   // s314: 酸素中での鉄（スチールウール）の激しい燃焼
   r9_314: {
     kind: 'chemEquation',
-    equation: '3Fe + 2O2 -> Fe3O4',
+    equation: '鉄 ＋ 酸素 → 酸化鉄（黒色）',
     caption: '純粋な酸素中では鉄（スチールウール）も火花を散らして激しく燃える',
   },
 
@@ -269,7 +269,7 @@ export const lessonFigsRikaExt09: Record<string, Figure> = {
   // s316: 二酸化炭素の発生（石灰石＋塩酸）
   r9_316: {
     kind: 'chemEquation',
-    equation: 'CaCO3 + 2HCl -> CaCl2 + H2O + CO2',
+    equation: '炭酸カルシウム（石灰石）＋ 塩酸 → 塩化カルシウム ＋ 水 ＋ 二酸化炭素',
     caption: '石灰石（炭酸カルシウム）にうすい塩酸を加えると二酸化炭素が発生する',
   },
 
@@ -280,7 +280,7 @@ export const lessonFigsRikaExt09: Record<string, Figure> = {
     yLabel: '大気中の二酸化炭素濃度（ppm・およその値）',
     series: [
       {
-        label: '大気中CO₂濃度',
+        label: '大気中二酸化炭素濃度',
         markers: true,
         points: [
           { x: 1960, y: 315 },
@@ -323,14 +323,14 @@ export const lessonFigsRikaExt09: Record<string, Figure> = {
   // s321: 水素の発生（亜鉛＋塩酸）
   r9_321: {
     kind: 'chemEquation',
-    equation: 'Zn + 2HCl -> ZnCl2 + H2',
+    equation: '亜鉛 ＋ 塩酸 → 塩化亜鉛 ＋ 水素',
     caption: '亜鉛にうすい塩酸を加えると水素が発生する',
   },
 
   // s322: 水素の燃焼（燃焼実験の確認反応）
   r9_322: {
     kind: 'chemEquation',
-    equation: '2H2 + O2 -> 2H2O',
+    equation: '水素 ＋ 酸素 → 水（水素と酸素は体積2：1で結びつく）',
     caption: '水素が燃えると水ができる。火のついたマッチを近づけると「ポン」と音を立てて燃える',
   },
 
@@ -357,7 +357,7 @@ export const lessonFigsRikaExt09: Record<string, Figure> = {
   // s325: アンモニアの発生（塩化アンモニウム＋水酸化カルシウム）
   r9_325: {
     kind: 'chemEquation',
-    equation: '2NH4Cl + Ca(OH)2 -> CaCl2 + 2H2O + 2NH3',
+    equation: '塩化アンモニウム ＋ 水酸化カルシウム → 塩化カルシウム ＋ 水 ＋ アンモニア',
     caption: '塩化アンモニウムと水酸化カルシウムを混ぜて加熱すると発生する',
   },
 

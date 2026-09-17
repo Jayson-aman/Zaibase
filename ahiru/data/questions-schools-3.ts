@@ -108,10 +108,10 @@ export const myojoQuestions: Question[] = [
   {
     id: 'myojo_rika_01', subject: 'rika', difficulty: 'advanced',
     course: 'myojo', examType: 'chugaku',
-    question: '塩酸（HCl）と水酸化ナトリウム（NaOH）を混ぜると中和反応が起きる。生成される塩と水の化学式を答えよ。',
-    answer: '塩：NaCl（塩化ナトリウム）、水：H₂O',
-    hint: 'HCl + NaOH → ? + H₂O',
-    explanation: 'HCl + NaOH → NaCl + H₂O\n酸の水素イオン（H⁺）とアルカリの水酸化物イオン（OH⁻）が結合して水（H₂O）になり、残った塩素イオン（Cl⁻）とナトリウムイオン（Na⁺）が塩（NaCl）を作る。',
+    question: '塩酸と水酸化ナトリウム水溶液を混ぜると中和反応が起きる。できる塩（えん）の名前と、この中和を言葉の式で答えよ。',
+    answer: '塩：塩化ナトリウム（食塩）。塩酸 ＋ 水酸化ナトリウム → 塩化ナトリウム ＋ 水',
+    hint: '塩酸 ＋ 水酸化ナトリウム → ？ ＋ 水',
+    explanation: '塩酸 ＋ 水酸化ナトリウム → 塩化ナトリウム ＋ 水\n酸の性質のもととアルカリの性質のもとが結びついて水になり、残った部分が塩（えん）である塩化ナトリウム（食塩）を作る。ちょうど中和すると中性になり、BTB液は緑色になる。',
   },
   {
     id: 'myojo_rika_02', subject: 'rika', difficulty: 'advanced',
@@ -133,9 +133,9 @@ export const myojoQuestions: Question[] = [
     id: 'myojo_rika_04', subject: 'rika', difficulty: 'advanced',
     course: 'myojo', examType: 'chugaku',
     question: '炭酸水素ナトリウム（重曹）を加熱すると何という気体が発生するか。また発生する気体を確認する方法を答えよ。',
-    answer: '二酸化炭素（CO₂）。石灰水に通すと白く濁る。',
-    hint: '2NaHCO₃ → Na₂CO₃ + H₂O + CO₂',
-    explanation: '加熱反応：2NaHCO₃ → Na₂CO₃ + H₂O + CO₂\n発生するCO₂の確認：石灰水（水酸化カルシウム水溶液）に通すと白濁する。\nCO₂ + Ca(OH)₂ → CaCO₃↓ + H₂O',
+    answer: '二酸化炭素。石灰水に通すと白く濁る。',
+    hint: '炭酸水素ナトリウム → 炭酸ナトリウム ＋ 水 ＋ 二酸化炭素',
+    explanation: '加熱反応：炭酸水素ナトリウム → 炭酸ナトリウム ＋ 水 ＋ 二酸化炭素\n発生する二酸化炭素の確認：石灰水（水酸化カルシウム水溶液）に通すと白濁する。\n二酸化炭素 ＋ 水酸化カルシウム（石灰水）→ 炭酸カルシウム（白い沈殿）＋ 水',
   },
   {
     id: 'myojo_rika_05', subject: 'rika', difficulty: 'advanced',
@@ -151,7 +151,7 @@ export const myojoQuestions: Question[] = [
     question: '地球の大気の主成分を多い順に3つ答えよ。それぞれの割合（概数）も答えよ。',
     answer: '窒素（約78%）、酸素（約21%）、アルゴン（約1%）',
     hint: '残りの約0.04%は二酸化炭素など',
-    explanation: '大気の組成（体積比）：\n窒素（N₂）：約78%\n酸素（O₂）：約21%\nアルゴン（Ar）：約0.93%\n二酸化炭素（CO₂）：約0.04%\nその他微量気体',
+    explanation: '大気の組成（体積比）：\n窒素：約78%\n酸素：約21%\nアルゴン：約0.93%\n二酸化炭素：約0.04%\nその他微量気体',
   },
 
   // --- 社会 ---
@@ -402,17 +402,17 @@ export const tezukayamaQuestions: Question[] = [
     id: 'tezukayama_rika_05', subject: 'rika', difficulty: 'advanced',
     course: 'tezukayama', examType: 'chugaku',
     question: '地球温暖化の主な原因となっている温室効果ガスの名前を3つ答えよ。',
-    answer: '二酸化炭素（CO₂）、メタン（CH₄）、フロン（CFC）など',
+    answer: '二酸化炭素、メタン、フロンなど',
     hint: '化石燃料の燃焼・農業・冷媒などが発生源',
-    explanation: '主な温室効果ガス：\n①二酸化炭素（CO₂）：化石燃料燃焼、最も影響が大きい\n②メタン（CH₄）：畜産、水田、天然ガス漏洩\n③フロン類（CFC）：冷蔵庫・エアコンの冷媒（オゾン層破壊も）\nその他：一酸化二窒素（N₂O）、水蒸気',
+    explanation: '主な温室効果ガス：\n①二酸化炭素：化石燃料燃焼、最も影響が大きい\n②メタン：畜産、水田、天然ガス漏洩\n③フロン類：冷蔵庫・エアコンの冷媒（オゾン層破壊も）\nその他：一酸化二窒素、水蒸気',
   },
   {
     id: 'tezukayama_rika_06', subject: 'rika', difficulty: 'advanced',
     course: 'tezukayama', examType: 'chugaku',
     question: 'BTB溶液の色の変化について、酸性・中性・アルカリ性それぞれの色を答えよ。',
     answer: '酸性：黄色、中性：緑色、アルカリ性：青色',
-    hint: '黄→緑→青の順でpHが上がる',
-    explanation: 'BTB（ブロモチモールブルー）溶液：\n酸性（pH7未満）：黄色\n中性（pH=7）：緑色\nアルカリ性（pH7超）：青色\n暗記法：「き（黄/酸）・み（緑/中）・あ（青/アル）」',
+    hint: '黄→緑→青の順でアルカリ性が強くなる',
+    explanation: 'BTB（ブロモチモールブルー）溶液：\n酸性：黄色\n中性：緑色\nアルカリ性：青色\n暗記法：「き（黄/酸）・み（緑/中）・あ（青/アル）」',
   },
 
   // --- 社会 ---
@@ -452,9 +452,9 @@ export const tezukayamaQuestions: Question[] = [
     id: 'tezukayama_shakai_05', subject: 'shakai', difficulty: 'advanced',
     course: 'tezukayama', examType: 'chugaku',
     question: '環境問題に関して、「酸性雨」が発生するメカニズムを説明せよ。',
-    answer: '工場・自動車から排出される硫黄酸化物（SO₂）や窒素酸化物（NOx）が大気中の水分と反応して硫酸・硝酸となり、pH5.6以下の雨として降る。',
+    answer: '工場・自動車から排出される硫黄酸化物（SO₂）や窒素酸化物（NOx）が大気中の水分と反応して硫酸・硝酸となり、酸性の強い雨として降る。',
     hint: '化石燃料の燃焼が原因',
-    explanation: '酸性雨の発生：\n①化石燃料（石炭・石油）の燃焼→SO₂・NOx放出\n②大気中で酸化→硫酸（H₂SO₄）・硝酸（HNO₃）に変化\n③雨水に溶けてpH5.6以下の酸性雨になる\n影響：森林枯死・湖沼の酸性化・建物・文化財の損傷',
+    explanation: '酸性雨の発生：\n①化石燃料（石炭・石油）の燃焼→SO₂・NOx放出\n②大気中で酸化→硫酸（H₂SO₄）・硝酸（HNO₃）に変化\n③雨水に溶けて酸性の強い酸性雨になる\n影響：森林枯死・湖沼の酸性化・建物・文化財の損傷',
   },
   {
     id: 'tezukayama_shakai_06', subject: 'shakai', difficulty: 'advanced',
@@ -908,7 +908,7 @@ export const otaniQuestions: Question[] = [
     question: '火山の噴火によって噴き出すものを3つ答えよ。',
     answer: '溶岩（ようがん）・火山灰・火山ガス（水蒸気・二酸化炭素・硫化水素など）',
     hint: '固体・液体・気体のそれぞれ',
-    explanation: '火山噴出物：\n液体状：溶岩（マグマが地表に出たもの）\n固体：火山灰（細かい粒）・火山弾・軽石（かるいし）・火山礫（かざんれき）\n気体：火山ガス（主に水蒸気、CO₂、SO₂、H₂Sなど）',
+    explanation: '火山噴出物：\n液体状：溶岩（マグマが地表に出たもの）\n固体：火山灰（細かい粒）・火山弾・軽石（かるいし）・火山礫（かざんれき）\n気体：火山ガス（主に水蒸気、二酸化炭素、二酸化硫黄など）',
   },
   {
     id: 'otani_rika_05', subject: 'rika', difficulty: 'advanced',

@@ -263,6 +263,49 @@ check(
     .map((l) => l.id),
 );
 
+// 2026/9/17、同じ種類の失敗の8回目。中学受験の理科に、中2〜高校の化学がそのまま出ていた
+// （単元94・問題約90）。光合成の化学反応式 6CO₂＋6H₂O→C₆H₁₂O₆＋6O₂、中和の HCl＋NaOH→NaCl＋H₂O、
+// 「化学反応式の係数をそろえる練習」という単元、イオン・電気分解・イオン化傾向・mol・周期表・
+// 原子の構造・核融合を問う問題まであった。小学生は元素記号を習わないので、式が読めない。
+// 化学式は「言葉の式」（二酸化炭素＋水→（光）→デンプン＋酸素）に、元素記号は物質名に直し、
+// イオン・mol などは中学受験範囲の問題（金属と塩酸・備長炭電池・蒸発皿の残りもの・溶解度）に差しかえた。
+// 「質量保存の法則」は「重さの保存（結びつく前後で全体の重さは変わらない）」と言いかえる。
+//
+// ⚠️ F₁・F₂（力の合成）・V₁（体積）のような「英字1文字＋下付き数字」は式ではないので、
+//   化学式とみなすのは C・H・O・N・S で始まるもの（CO₂・H₂O・O₂・N₂・SO₂）と、
+//   2文字の元素記号（Na・Cl・Ca・Fe・Cu・Zn・Mg …）＋下付き数字だけにする。
+// ⚠️ 「原子力」は社会科でも使う正当な語なので「原子」の検出から外す。「ライオン」は「イオン」から外す。
+// ⚠️ 「触媒」「密度」「溶解度」「濃度」「中和」「酸化」は中学受験でも使うので弾かない。
+// ⚠️ 分数の「分子」（算数）があるので「分子」は弾かない。粒の意味なら「粒」と書く。
+const CHUGAKU_CHEM_NG =
+  /[A-Z][a-z][₀-₉]|(?<![A-Za-z])[CHONS][₀-₉]|\b(?:CO2|H2O2?|O2|N2|H2|NaCl|NaOH|HCl|CaCO3|MgO|CuO|SO2|NH3|CH4|ZnCl2|CaCl2|BaSO4|Na2SO4|SiO2|C6H12O6)\b|化学反応式|化学式|元素記号|(?<!ラ)イオン|電気分解|\bmol\b|原子(?!力)|還元|質量保存|周期表|核分裂|核融合|半減期|定比例|活性化エネルギー|電離|電解質|イオン化傾向/;
+check(
+  '【単元】中学受験の理科に、中学・高校の化学の用語や化学式が出ている',
+  L.filter((l) => l.subject === 'rika' && (l.examType ?? 'chugaku') !== 'koko')
+    .filter((l) => {
+      const texts: unknown[] = [l.title, l.description, l.intro, ...(l.keyPoints ?? [])];
+      for (const sec of (l.sections ?? []) as any[]) {
+        texts.push(sec.heading, sec.body);
+        const fig = sec.figureId ? getLessonFigure(sec.figureId) : null;
+        if (fig) texts.push(JSON.stringify(fig));
+      }
+      for (const t of (l.trapExamples ?? []) as any[]) texts.push(t.question, t.trapExplanation, t.correctAnswer, t.correctExplanation);
+      return texts.some((t) => CHUGAKU_CHEM_NG.test(String(t ?? '')));
+    })
+    .map((l) => l.id),
+);
+check(
+  '【問題集】中学受験の理科に、中学・高校の化学の用語や化学式が出ている',
+  (Q as any[])
+    .filter((q) => q.subject === 'rika' && (q.examType ?? 'chugaku') !== 'koko')
+    .filter((q) =>
+      [...ELEM_FIELDS, 'questionReading', 'answerReading'].some((k) => CHUGAKU_CHEM_NG.test(String(q[k] ?? ''))) ||
+      ((q.choices ?? []) as unknown[]).some((c) => CHUGAKU_CHEM_NG.test(String(c))) ||
+      ((q.subQuestions ?? []) as any[]).some((s) => ['question', 'answer', 'explanation'].some((k) => CHUGAKU_CHEM_NG.test(String(s[k] ?? '')))),
+    )
+    .map((q) => q.id),
+);
+
 // 高校受験（中学生）向けの問題に、高校以上の内容が印なしで出ていないか。
 //
 // sin/cos/tan・微分積分・Σ・ベクトル・行列・log は高校の内容で、高校入試には出ない。
