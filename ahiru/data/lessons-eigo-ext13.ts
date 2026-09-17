@@ -1515,6 +1515,20 @@ every day（毎日）／today（今日）／tomorrow（明日）／yesterday（�
 
 ⚠ 注意：日本語の「〜に」はすべて同じだが、英語では at・on・in を使い分ける。時こくか、日か、月かを先に決めてから語を選ぶこと。`,
       },
+      {
+        heading: 'なぜ「せまい順に at・on・in」なのか',
+        body: `at・on・in は、場所を表すときの意味がそのまま時にも使われています。at は「一点で」（at the station）、on は「面に触れて」（on the desk）、in は「中に」（in the room）。時に当てはめると、時こくは時計の針が一か所を指す**点**なので at、日は一日という**面**なので on、月・季節・年は**中に入っている広い幅**なので in。だから「点→面→中」の順に at・on・in と並び、せまい順に覚えると忘れません。
+
+night だけ at なのは、昔から夜を「活動する幅」ではなく一日の区切りの「点」のように扱ってきた習慣です。every day・today・tomorrow に前置詞を付けないのは、これらの語がそれ自体で「いつ」を表しているからです。日本語の「〜に」はどれも同じですが、英語では時こくか、日か、月かを先に決めてから語を選びます。
+
+■ 確かめのしかた
+①「〜に」の中身が**時こく（点）か、日（面）か、月から上（幅）か**を言う。at nine／on Sunday／in April。
+②朝・午後・夕方は in the 〜、夜だけ at night。日が決まると on が勝つ（on Monday morning）。
+③every day・today・tomorrow・yesterday・this morning・next week に前置詞を付けていないか（× in every day）。
+④場所でも同じ順（at the station／on the desk／in the room）。決まった言い方（on time・in time）は形ごと覚える。
+
+★ ここがポイント：at は**点**、on は**面**、in は**中**で、場所と同じ意味が時にも使われている。だから**時こく→日→月**の順に at・on・in。every day には付けない。`,
+      },
     ],
     trapExamples: [
       {
@@ -1629,6 +1643,20 @@ how のあとに語をつけて、たずねる内容をくわしくする。
 質問：When is your birthday?
 
 ⚠ 注意：職業をたずねるときは What を使う。What is your father? は「お父さんの仕事は何ですか」という意味になる。Who is your father? は「どの人がお父さんですか」という意味である。`,
+      },
+      {
+        heading: 'なぜたずねる語は先頭で、なぜ Yes／No で答えないのか',
+        body: `what・where・when・who・how は、**知りたいことそのもの**を表す語です。英語ではいちばん知りたいことを文の先頭に置き、そのあとにふつうのたずねる文（do you like／does he live）を続けます。だから「たずねる語＋ふつうのたずねる文」の形になり、Does を使えばうしろの動詞はもとの形です。
+
+Yes／No で答えないのは、これらの質問が「はい・いいえ」を聞いているのではなく、**中身（何・どこ・いつ・だれ・どのように）を聞いている**からです。Where do you live? に Yes, I do. と答えても、どこに住んでいるかは伝わりません。Yes／No で答えるのは Do・Are で始まる質問だけです。職業を What でたずねるのは、What が「何（をする人）か」を聞く語で、Who は「どの人か」を聞く語だからです。
+
+■ 確かめのしかた
+①知りたいことを言う：何→what、どこ→where、いつ→when、だれ→who、どのように・どれくらい→how。**先頭**に置く。
+②うしろが**ふつうのたずねる文**の形か。Where does he live?（Does のあとは live）。
+③答えが**中身**になっているか。Where do you live?→I live in Tokyo.（× Yes, I do.）。
+④how の組み合わせ：How old／How many（＋複数形）／How much／How long／How tall。職業→What is your father?、どの人→Who。
+
+★ ここがポイント：たずねる語は**知りたいことそのもの**なので先頭。**中身を聞いている**ので Yes／No では答えない。How many のあとは複数形、職業は What。`,
       },
     ],
     trapExamples: [
@@ -1837,6 +1865,20 @@ My favorite sport is soccer.（好きなスポーツはサッカーです）
 I am on the soccer team.（サッカー部に入っています）
 
 ⚠ 注意：「テレビを見る」は watch TV で、TV に the をつけない。一方「ラジオを聞く」は listen to the radio で the をつける。決まった言い方として覚えること。`,
+      },
+      {
+        heading: 'なぜ楽器には the が付き、スポーツには付かないのか',
+        body: `楽器は、**ピアノという種類の楽器そのもの**を指して「その楽器をひく」と言う習慣があり、the を付けて play the piano とします。スポーツは「サッカーという活動をする」という意味で、活動の名前には冠詞を付けません。理屈より、英語の長い習慣で決まった形なので、「楽器は the あり、スポーツは the なし」の一点で覚えます。
+
+swim・run・ski に play を使わないのは、これらが**それ自体で「泳ぐ・走る」という動作を表す動詞**だからです。play は「ボールなどを使うスポーツをする」「楽器をひく」ときの動詞で、動作そのものが動詞になっているものには要りません。柔道や空手のような武道は do を使います。
+
+■ 確かめのしかた
+①楽器→**play the 〇〇**（play the piano／the guitar／the violin）。スポーツ→**play 〇〇**（play soccer／tennis）。× play piano、× play the soccer。
+②動作そのものが動詞のもの（swim・run・ski・skate・ride a bike）には play を付けない。× play swimming。
+③武道は do（do judo／do karate／do kendo）。
+④「見る」は watch soccer、「サッカー選手」は a soccer player。watch TV（the なし）、listen to the radio（the あり）は決まった言い方。
+
+★ ここがポイント：**楽器は the あり、スポーツは the なし**の一点。swim・run は**それ自体が動詞**なので play を付けず、武道は do。`,
       },
     ],
     trapExamples: [
@@ -2289,6 +2331,20 @@ corner（角）／traffic light（信号）／crossing（こうさ点）／bridg
 
 ⚠ 注意：Turn right のあとに to は入れない。ただし「右へ行く」は go to the right と言うこともある。turn のときは to をつけない、と覚えること。`,
       },
+      {
+        heading: 'なぜ三つの言い方で道案内ができるのか、なぜ Turn に to が要らないのか',
+        body: `道順は、どんなに複雑でも「**まっすぐ進む・曲がる・着く**」の三つの動きの組み合わせです。だから Go straight（進む）、Turn right／left at 〜（曲がる）、It's on your right／next to 〜（着く）の三つの言い方があれば、たいていの道を説明できます。目印（corner・traffic light・bridge）を at 〜 で足せば、どこで曲がるかも伝わります。
+
+Turn right に to が要らないのは、right が「右に」という**向きを表す副詞**で、それだけで動詞 turn を説明できるからです。to を付けると「右という場所へ」となって不自然です。「歩いて」が on foot なのは、by のあとに置けるのが乗り物の名前だけで、足は乗り物ではないからです。
+
+■ 確かめのしかた
+①たずねるときは **Excuse me.** から。Where is 〜?／How can I get to 〜?／Is there a 〜 near here?
+②道順を三つの動きで組み立てる：Go straight (for two blocks)→Turn right at the corner→It's on your right／next to the bank。
+③× Turn to right→Turn right。× by the bus→by bus。× by foot→on foot（または I walk to school.）。
+④分からないときは I'm sorry. I don't know.／I'm not from here.、聞き返すときは Pardon?／Could you say that again?
+
+★ ここがポイント：道順は**進む・曲がる・着く**の三つの動きなので、Go straight・Turn right／left・It's on your right で説明できる。right は向きの副詞なので **Turn right（to なし）**、歩くのは **on foot**。`,
+      },
     ],
     trapExamples: [
       {
@@ -2411,6 +2467,20 @@ Thank you.
 ・最後に Thank you. と言う
 
 ⚠ 注意：Nice to meet you. は初めて会ったときだけに使う。二回目からは Nice to see you. または How are you? を使う。`,
+      },
+      {
+        heading: 'なぜ話す順番を決めておくのか、なぜ too を付けるのか',
+        body: `自己しょうかいは、聞く側が**名前→好きなもの→できること**の順で情報を受け取ると、相手の人物像を組み立てやすくなります。話す側も順番が決まっていれば、その場で考えずに、空らんをうめるだけで話せます。「〜になりたい」が want to be なのは、want（〜したい）のあとに動作を続けるには to＋動詞のもとの形が要り、「〜である」の動詞が be だからです。I want be は to が抜けて文になりません。
+
+Nice to meet you. に Nice to meet you, too. と返すのは、相手が先に言った「会えてうれしい」に「**私もです**」と気持ちを重ねるからです。too（〜も）が無いと、相手の言葉をただくり返しただけになります。初めて会ったときだけに使い、二回目からは Nice to see you. か How are you? です。
+
+■ 確かめのしかた
+①**あいさつ→名前→好きなもの→できること→なりたいもの→Thank you.** の順で言えるか。
+②I'm ten years old.（years に s）、I want **to** be a teacher.（to を落とさない）。
+③Nice to meet you. と言われたら **Nice to meet you, too.**（コンマと too）。二回目以降は Nice to see you.
+④あいづち（Really?／Me too.／That's nice.）を入れると会話が続く。発表は大きな声でゆっくり、相手の顔を見て、最後に Thank you.
+
+★ ここがポイント：**名前→好きなもの→できること**の順は、聞く側が人物像を組み立てやすい順。want のあとは **to＋もとの形**（want to be）。Nice to meet you. には**「私も」の too** を付けて返す。`,
       },
     ],
     trapExamples: [
@@ -2743,7 +2813,7 @@ Ken
 手紙の形
 ・Dear ~,（〜さんへ）で始める
 ・本文
-・Your friend, / Your friend,（友だちの〜より）
+・Your friend,（友だちの〜より）
 ・自分の名前
 
 ★ ポイント：時こく・曜日・always などの語に印をつけながら読むと、内容が整理される。`,
@@ -2783,6 +2853,20 @@ never（一度も〜ない）
 ・手紙の Dear のあとのコンマを忘れる
 
 ⚠ 注意：never は「一度も〜ない」という意味で、それだけで打ち消しを表す。I never don't eat ~ のように don't を重ねてはいけない。`,
+      },
+      {
+        heading: 'なぜ表に整理しながら読み、なぜ never には don\'t を重ねないのか',
+        body: `一日の生活の文には時こくが次々に出てくるので、読みながら「何時に何をするか」を表にすると、あとで What time does he get up? と聞かれたときに表を見るだけで答えられます。時こく・曜日・ひんどの語（always・usually・sometimes）に印をつけるのは、設問がそこを聞くからです。
+
+never が「一度も〜ない」で don't を重ねないのは、never が**それ自体に打ち消しの意味を持つ語**だからです。I never don't eat 〜 と書くと打ち消しが二重になります。ひんどの語が一般動詞の前に置かれるのは、動詞の「どれくらいの頻度で」を説明する語だからで、be動詞のときはそのうしろ（I am always busy.）に置きます。always→usually→often→sometimes→never の順に少なくなります。
+
+■ 確かめのしかた
+①読みながら**時こく・曜日・ひんどの語に印**をつけ、「何時に何を」を表にする。
+②ひんどの語の位置：**一般動詞の前**（I sometimes play tennis.）、**be動詞のあと**（I am always busy.）。× I play sometimes tennis。
+③never は単独で打ち消し（I never eat natto.＝一度も食べない）。× I never don't eat。always（いつも）と取りちがえていないか。
+④手紙の形：Dear 〇〇,（コンマ）→本文→Your friend,→自分の名前。Please write to me soon.
+
+★ ここがポイント：時こく・ひんどの語に**印をつけて表にする**と設問にすぐ答えられる。never は**それ自体が打ち消し**なので don't を重ねず、ひんどの語は**一般動詞の前・be動詞のあと**。`,
       },
     ],
     trapExamples: [
