@@ -352,6 +352,44 @@ check(
     .map((q) => q.id),
 );
 
+// 中学受験（小学生）向けの算数に、中学以上の解き方・記号がそのまま出ていないか（同種の失敗の10回目）。
+//
+// 方程式・連立方程式・移項・文字式・負の数・絶対値・余事象・階乗記号（5！・n！）・C(n,r)・nCr は中学〜高校。
+// 中学受験では 逆算（□）・①でおく倍数算・和差算・つるかめ算・消去算・差集め算・時間の逆比・てんびん法 で解く。
+//   → 「x を求めよ」の x 自体（小6「文字と式」）は弾かない。弾くのは「方程式を立てる」「連立」「移項」という言葉と、
+//     「4x＋12＝40 → 4x＝28」のような移項の計算、「−4x＝−16」のような負の数の式。
+// ⚠️ 「階乗」という語そのものは「高校では階乗とよび 5！ と書く」という紹介が正当なので弾かない。弾くのは記号（数字＋！・n！・(n−1)！）。
+//   ただし「高校では「5！」と書く」の紹介は許すため、直後が「」」のものは除く。
+// ⚠️ 負の数の結果（＝ −1）は、対称移動の単元（座標に負の数）が残っているので ℹ（要目視）にとどめる。
+// ⚠️ 面積 cm²・相似比 a²:b² は中学受験でも使うので、² そのものは弾かない。
+// ⚠️ 座標の点 C(1,3) と「ちょうど1/3！」の感嘆符は正当。C(…) は後ろに ＝ か 通り が続くときだけ、！は後ろに ＝・÷・×・通 が続くときだけ拾う。
+const CHUGAKU_SANSU_NG =
+  /方程式|連立|移項|文字式|負の数|絶対値|余事象|(?:[0-9]|\)|(?<![A-Za-z])[a-z])！(?=\s*[=＝÷×通]|\s*$)|(?<![A-Za-z])[0-9]!(?![=＝])|\bnCr\b|C\([0-9]+,[0-9]+\)\s*(?:[=＝]|通り)|[₀-₉]C[₀-₉]|\bn!|\br!/;
+const CHUGAKU_SANSU_NEG = /[=＝]\s*[−-][0-9]/;
+const sansuLessonTexts = (l: any): string[] => {
+  const texts: string[] = [l.title, l.description, l.intro, ...(l.keyPoints ?? [])];
+  for (const sec of (l.sections ?? []) as any[]) {
+    texts.push(sec.heading, sec.body);
+    const fig = sec.figureId ? getLessonFigure(sec.figureId) : null;
+    if (fig) texts.push(JSON.stringify(fig));
+  }
+  for (const t of (l.trapExamples ?? []) as any[]) texts.push(t.question, t.trapExplanation, t.correctAnswer, t.correctExplanation);
+  return texts.map((t) => String(t ?? ''));
+};
+const sansuQuestionTexts = (q: any): string[] => [
+  ...[...ELEM_FIELDS, 'questionReading', 'answerReading'].map((k) => String(q[k] ?? '')),
+  ...((q.choices ?? []) as unknown[]).map((c) => String(c)),
+  ...((q.subQuestions ?? []) as any[]).flatMap((s) => ['question', 'answer', 'explanation'].map((k) => String(s[k] ?? ''))),
+];
+const sansuL = L.filter((l) => l.subject === 'sansu' && (l.examType ?? 'chugaku') !== 'koko');
+const sansuQ = (Q as any[]).filter((q) => q.subject === 'sansu' && (q.examType ?? 'chugaku') !== 'koko');
+check('【単元】中学受験の算数に、中学以上の解き方・記号（方程式・連立・移項・文字式・階乗記号・nCr）が出ている', sansuL.filter((l) => sansuLessonTexts(l).some((t) => CHUGAKU_SANSU_NG.test(t))).map((l) => l.id));
+check('【問題集】中学受験の算数に、中学以上の解き方・記号（方程式・連立・移項・文字式・階乗記号・nCr）が出ている', sansuQ.filter((q) => sansuQuestionTexts(q).some((t) => CHUGAKU_SANSU_NG.test(t))).map((q) => q.id));
+info('【単元・問題集】中学受験の算数で、計算の結果が負の数になっている（要目視。座標の対称移動は残債）', [
+  ...sansuL.filter((l) => sansuLessonTexts(l).some((t) => CHUGAKU_SANSU_NEG.test(t))).map((l) => l.id),
+  ...sansuQ.filter((q) => sansuQuestionTexts(q).some((t) => CHUGAKU_SANSU_NEG.test(t))).map((q) => q.id),
+]);
+
 // 高校受験（中学生）向けの問題に、高校以上の内容が印なしで出ていないか。
 //
 // sin/cos/tan・微分積分・Σ・ベクトル・行列・log は高校の内容で、高校入試には出ない。
