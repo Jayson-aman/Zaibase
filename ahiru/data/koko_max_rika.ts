@@ -4,6 +4,7 @@ export const kokoMaxRika: Question[] = [
   // ===== 物理 (Physics) =====
   {
     id: 'koko_max_rika_01',
+    pitfall: '加速度と等加速度運動の公式は高校で習う内容で、高校入試には出ない。中学では、速さが一定の割合で増える運動は速さと時間のグラフの面積で距離を読む。',
     subject: 'rika',
     question:
       '【高校先取り】静止していた物体が一定の加速度 2.0 m/s² で直線運動をした。出発から 5.0 秒後の速さ（m/s）と，その間に移動した距離（m）をそれぞれ求めなさい。',
@@ -119,6 +120,7 @@ export const kokoMaxRika: Question[] = [
   },
   {
     id: 'koko_max_rika_10',
+    pitfall: '加速度は高校で習う内容で、高校入試には出ない。減速は加速度が負。距離は速さと時間のグラフの面積で読む。',
     subject: 'rika',
     question:
       '【高校先取り】10 m/s で走っている自動車が急ブレーキをかけ，5.0 秒後に静止した。この間の加速度（m/s²）と，ブレーキをかけてから止まるまでの走行距離（m）を求めなさい。',
@@ -135,6 +137,7 @@ export const kokoMaxRika: Question[] = [
   // ===== 化学 (Chemistry) =====
   {
     id: 'koko_max_rika_11',
+    pitfall: '原子番号・質量数は高校で習う内容で、高校入試には出ない。中学では「原子は原子核（陽子と中性子）と電子でできていて、陽子と電子の数が同じ」まで。',
     subject: 'rika',
     question:
       '【高校先取り】炭素原子（C）の原子番号は 6，質量数は 12 である。陽子の数，中性子の数，電子の数をそれぞれ答えなさい。',
@@ -149,6 +152,7 @@ export const kokoMaxRika: Question[] = [
   },
   {
     id: 'koko_max_rika_12',
+    pitfall: 'mol は高校で習う単位で、高校入試には出ない。中学では「水素分子2個と酸素分子1個から水分子2個」と分子の数の比で考える。',
     subject: 'rika',
     question:
       '【高校先取り】水素 H₂ と酸素 O₂ が反応して水 H₂O が生成する反応を化学反応式で表しなさい。また，水素 4 mol と過剰な酸素が反応した場合，生成する水は何 mol か。',
@@ -189,6 +193,7 @@ export const kokoMaxRika: Question[] = [
   },
   {
     id: 'koko_max_rika_15',
+    pitfall: 'mol 濃度は高校で習う内容で、高校入試には出ない。中学では「同じ濃さなら、ちょうど中和する体積は比例する」で考える。',
     subject: 'rika',
     question:
       '【高校先取り】塩酸（HCl）10 mL を中和するのに 0.1 mol/L の NaOH 水溶液が 20 mL 必要だった。この塩酸のモル濃度（mol/L）を求めなさい。',
@@ -241,6 +246,7 @@ export const kokoMaxRika: Question[] = [
   },
   {
     id: 'koko_max_rika_19',
+    pitfall: '有機化合物の構造式は高校で習う内容で、高校入試には出ない。中学では「エタノールを燃やすと二酸化炭素と水ができる（石灰水が白くにごる・水滴がつく）」まで。',
     subject: 'rika',
     question:
       '【高校先取り】エタノール（C₂H₅OH）とメタノール（CH₃OH）はどちらもアルコールの一種である。構造式の違いを炭素数で説明し，エタノールの完全燃焼反応式を書きなさい。',
@@ -281,6 +287,7 @@ export const kokoMaxRika: Question[] = [
   },
   {
     id: 'koko_max_rika_22',
+    pitfall: '光反応・カルビン回路・チラコイド・ストロマは高校で習う内容で、高校入試には出ない。中学では「二酸化炭素＋水→（光）→デンプン＋酸素、場所は葉緑体」まで。',
     subject: 'rika',
     question:
       '【高校先取り】光合成の全体反応式を書きなさい（水，二酸化炭素，光エネルギー，グルコース，酸素を使うこと）。また，葉緑体のどの構造で光反応と暗反応（カルビン回路）がそれぞれ起こるか答えなさい。',
@@ -295,6 +302,7 @@ export const kokoMaxRika: Question[] = [
   },
   {
     id: 'koko_max_rika_23',
+    pitfall: 'ATP・解糖系・クエン酸回路・電子伝達系は高校で習う内容で、高校入試には出ない。中学では「養分＋酸素→二酸化炭素＋水＋エネルギー」まで。',
     subject: 'rika',
     question:
       '【高校先取り】細胞呼吸（好気呼吸）の全体反応式を書きなさい。また，グルコース 1 mol の分解で生じる ATP は最大何 mol か（概算値で答えよ）。',
@@ -323,6 +331,7 @@ export const kokoMaxRika: Question[] = [
   },
   {
     id: 'koko_max_rika_25',
+    pitfall: '2つの形質を同時に考える遺伝（独立の法則、9：3：3：1）は高校で習う内容で、高校入試には出ない。中学では1つの形質の 3：1 まで。',
     subject: 'rika',
     question:
       '【高校先取り】エンドウで種子の色（黄 Y／緑 y）と形（丸 R／しわ r）の 2 形質を考える。両親 YYRR × yyrr を交配した F₁ の遺伝子型と表現型を答えなさい。さらに F₁ 同士の交配（F₁ × F₁）で生じる F₂ の表現型の比を答えなさい。',
@@ -337,6 +346,7 @@ export const kokoMaxRika: Question[] = [
   },
   {
     id: 'koko_max_rika_26',
+    pitfall: 'ABO式血液型の遺伝は高校で習う内容で、高校入試には出ない。父は A か B のどちらか1つ、母は O を渡す。',
     subject: 'rika',
     question:
       '【高校先取り】ヒトの ABO 式血液型の遺伝で，A 型の遺伝子型は AA または AO，B 型は BB または BO，AB 型は AB，O 型は OO である。AB 型の父と O 型の母の間の子の血液型として出現しうる血液型をすべて答えなさい。',
@@ -351,6 +361,7 @@ export const kokoMaxRika: Question[] = [
   },
   {
     id: 'koko_max_rika_27',
+    pitfall: '静止電位・活動電位・神経伝達物質は高校で習う内容で、高校入試には出ない。中学では「感覚神経→脊髄・脳→運動神経、反射は脊髄で折り返す」まで。',
     subject: 'rika',
     question:
       '【高校先取り】神経細胞（ニューロン）の静止電位と活動電位について説明しなさい。また，興奮が伝達される方向と，シナプスでの化学物質の役割を述べなさい。',
@@ -390,6 +401,7 @@ export const kokoMaxRika: Question[] = [
   },
   {
     id: 'koko_max_rika_30',
+    pitfall: 'B細胞・T細胞・自然免疫と獲得免疫の区別は高校で習う内容で、高校入試には出ない。中学では「白血球が細菌を食べる」「血液の成分」まで。',
     subject: 'rika',
     question:
       '【高校先取り】免疫の仕組みについて，自然免疫と獲得免疫（適応免疫）の違いを説明し，B 細胞と T 細胞の役割をそれぞれ述べなさい。',
@@ -406,6 +418,7 @@ export const kokoMaxRika: Question[] = [
   // ===== 地学 (Earth Science) =====
   {
     id: 'koko_max_rika_31',
+    pitfall: 'トランスフォーム断層と3種類の境界の分類は高校で習う内容で、高校入試には出ない。中学では「海溝でプレートがしずみこみ、地震と火山が起こる」まで。',
     subject: 'rika',
     question:
       '【高校先取り】プレートテクトニクス理論において，海溝・中央海嶺・トランスフォーム断層の 3 つのプレート境界の特徴をそれぞれ説明しなさい。',
