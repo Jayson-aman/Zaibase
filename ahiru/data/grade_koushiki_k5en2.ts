@@ -62,9 +62,10 @@ export const gradeKoushikiK5En2Questions: Question[] = [
     question:
       '円Oの内部で2本の弦ACとBDが点Pで交わっている。PA=6cm、PC=4cm、PB=3cmのとき、PDの長さを求めなさい。',
     answer: '8cm',
-    hint: '方べきの定理：PA×PC=PB×PD',
+    hint:
+      '△PABと△PDCは、対頂角と円周角（弧BCに対する∠BAC＝∠BDC）が等しいので相似。対応する辺の比から PA：PD＝PB：PC。',
     explanation:
-      '【解法】\n方べきの定理（弦の交点の場合）：円の内部で2本の弦AC、BDが点Pで交わるとき、PA×PC=PB×PDが成り立つ。\n数値を代入する。\nPA×PC=6×4=24\nPB×PD=3×PD\n方べきの定理より、24=3×PD\nPD=24÷3=8\nよってPD=8cm。',
+      '【何を聞かれているか】円の内部で交わる2本の弦の、交点から各端までの長さの関係を使ってPDを求める。\n【なぜその式なのか】AとB、CとDを結ぶと、△PABと△PDCは**対頂角（∠APB＝∠DPC）が等しく、弧BCに対する円周角（∠BAC＝∠BDC）も等しい**ので、2組の角がそれぞれ等しく相似になる。相似な三角形は対応する辺の比が等しいので PA：PD＝PB：PC、つまり **PA×PC＝PB×PD** がいつも成り立つ（高校ではこれを方べきの定理と呼ぶ）。\n【ステップ1】PA×PC＝6×4＝24。\n【ステップ2】PB×PD＝3×PD＝24。\n【ステップ3】PD＝24÷3＝8cm。\n【答え】8cm\n【確かめ】PA：PD＝6：8＝3：4、PB：PC＝3：4 で相似比が一致する。\n【よくあるまちがい】PA×PB＝PC×PD のように、同じ弦の両側の長さをかけずに組み合わせる。かけるのは**同じ弦の、交点の両側の長さ**（PAとPC、PBとPD）。',
   },
   {
     id: 'koushiki_k5en2_houbeki_ex2',
