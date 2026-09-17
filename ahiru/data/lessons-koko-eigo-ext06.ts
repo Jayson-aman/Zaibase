@@ -662,6 +662,20 @@ a piece of furniture → a desk / a chair（具体名）
 
 ★ ポイント：英作文では、単位語が出てこないときに「可算名詞に言いかえる」逃げ道を持っておくと減点を防げる。`,
       },
+      {
+        heading: 'なぜ形で単位語が決まり、なぜ複数形にするのは単位語だけなのか',
+        body: `紙・パン・アドバイスのような不可算名詞は、それ自体には区切りがありません。数えるには**区切りを表す語**（単位語）を借ります。単位語は「もとの形と切り方」を表すので、薄く平らなら sheet、薄く切ったら slice、焼いたかたまりなら loaf、棒状なら bar、二つで一組なら pair、それ以外の「ひとつ・一片」は piece。形から決められるので丸暗記が要りません。
+
+複数形にするのが単位語だけなのは、数えられているのが**単位のほう**だからです。two pieces of paper は「紙の一片が二つ」であって、紙が二つではありません。だから × two pieces of papers、× two advices です。単位語が思い出せないときは、可算名詞に言いかえる（advice→suggestion、work→job）と減点を防げます。
+
+■ 確かめのしかた
+①名詞の**形と切り方**を言う：薄く平ら→sheet（paper・glass）、薄切り→slice（bread・cheese・ham）、かたまり→loaf（bread）・bar（chocolate・soap）、二つ一組→pair（shoes・glasses・scissors）、それ以外→piece。
+②複数は**単位語に -s**：two pieces of advice、three slices of cheese、two loaves of bread（f→v）。× advices、× informations。
+③a news／an information／an advice になっていないか→a piece of news。
+④抽象名詞×piece（advice・information・news・work）と furniture／baggage×piece を例文ごと確かめる。
+
+★ ここがポイント：不可算名詞は**区切りを表す単位語**を借りて数え、単位語は**形と切り方**で決まる。数えているのは単位なので**複数形にするのは単位語だけ**。`,
+      },
     ],
     trapExamples: [
       {
@@ -1254,6 +1268,20 @@ the sun／the moon／the earth／the sky／the sea／the world／the universe／
 例）The sooner, the better.（早ければ早いほどよい）
 
 ★ ポイント：the + 形容詞と the 比較級の構文は、意味も形も入試頻出。「the の後ろが形容詞なら人々の意味を疑う」と覚えておく。`,
+      },
+      {
+        heading: 'なぜ最上級や序数に the が付き、なぜ the young は複数なのか',
+        body: `the は「相手にどれのことか分かる」ことを示す語です。世界に一つしかないもの（the sun）、いちばん〜なもの（the highest）、〇番目のもの（the first）、方角（the north）は、言った瞬間に**どれか一つに決まる**ので、文脈を考えなくても the が付きます。楽器の the piano や年代の the 1990s も、英語の習慣で決まった形です。決まりとして覚えれば、冠詞問題で悩む時間が減ります。
+
+the＋形容詞が「〜な人々」で複数扱いになるのは、the young が「若い人たち全体」というまとまりを指すからです。形は単数に見えても意味は複数なので、The young are 〜 です。一人なら a young person。体の部位に the を使う（caught me by the arm）のは、動作の対象が人（me）で、部位はどこに触れたかを示すだけだからで、所有格は使いません。
+
+■ 確かめのしかた
+①**言った瞬間に一つに決まるか**：唯一のもの・最上級・序数・方角→the。副詞の最上級は the を省いてもよい（runs (the) fastest）。
+②the＋形容詞は**複数扱い**：The rich are 〜。× The rich is。一人なら a rich person。
+③体の部位は「人＋前置詞＋the＋部位」：He tapped me on the shoulder.／caught me by the arm. 所有格にしない。
+④the same／the only／the very、the 比較級 the 比較級（The sooner, the better.）も the が決まった形。
+
+★ ここがポイント：the は**どれか一つに決まる**印なので、唯一・最上級・序数・方角は自動的に the。**the＋形容詞は人々（複数扱い）**、体の部位は「人＋前置詞＋the＋部位」。`,
       },
     ],
     trapExamples: [
@@ -3867,6 +3895,20 @@ before：過去のある時点から見て「以前に」。現在完了・過�
 ⚠ 注意：ago は必ず「期間 + ago」の形で使い、単独では使わない。× I met him ago.
 
 ★ ポイント：already / yet / still は現在完了の単元でも問われる。「肯定＝already、否定＝yet、継続中＝still」と三点セットで覚える。`,
+      },
+      {
+        heading: 'なぜ肯定と否定で語が替わるのか',
+        body: `too と either は、どちらも「〜も」ですが、英語では**肯定文の「も」と否定文の「も」を別の語で表します**。I like it, too.／I don't like it, either. と、文の形で語が決まるので、日本語の「も」を too に一対一で置きかえると否定文で誤ります。already／yet／still も同じで、「すでに」は肯定文の already、「まだ〜ない」は否定文の yet、「もう〜したか」は疑問文の yet、「まだ〜している」は肯定でも否定でも still。**文の形（肯定・否定・疑問）を見てから語を選ぶ**のがこの単元の核です。
+
+ago が現在完了と使えないのは、ago が「今から〇だけ前の一点」を指す語で、過去形とだけ組むからです。before は「以前に」とだけ言って時点を指さないので、現在完了と組めます。ago は必ず「期間＋ago」の形で使います。
+
+■ 確かめのしかた
+①「〜も」：肯定文→too（文末）、否定文→either（文末）、ややかたい→also（一般動詞の前・be動詞のあと）。× I don't like it, too.
+②「すでに・まだ・もう」：肯定→already、否定→yet（まだ〜ない）、疑問→yet（もう）、続いている→still（not の前）。× hasn't come already→yet。
+③短い返事：Me too.（肯定）／Me neither.・Neither do I.（否定）。
+④「〇前に」→期間＋ago（過去形）。「以前に」→before（現在完了）。× I have met him three days ago。
+
+★ ここがポイント：英語は**肯定・否定・疑問で「も」「まだ」の語が替わる**（too／either、already／yet／still）ので、文の形を見てから選ぶ。ago は**過去の一点**なので過去形とだけ。`,
       },
     ],
     trapExamples: [

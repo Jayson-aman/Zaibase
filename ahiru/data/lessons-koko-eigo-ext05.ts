@@ -2505,6 +2505,20 @@ Would you mind 〜? のほうが丁寧だが、答え方は同じである。
 ①場面（店・道・電話・教室）を確認する　②話し手の立場（店員か客か、かける側か受ける側か）を確認する　③その場面の決まり文句から選ぶ
 選択肢を一つずつ訳すより、この三段階のほうが速く正確である。`,
       },
+      {
+        heading: 'なぜ電話では I am Ken. と言わず、なぜ場面で選ぶと速いのか',
+        body: `電話では相手に顔が見えないので、英語では「今話しているこの声が」という意味で **This is Ken.** と言い、「私です」も **Speaking.** と答えます。I am Ken. は目の前で自己紹介するときの言い方で、電話の習慣ではありません。Here you are. が品物を手渡すときだけの言葉なのは、「はい、これがあなたのものです」と物を差し出す動作そのものを表すからで、行動を許す Go ahead. とは場面がちがいます。
+
+会話文の空所補充を「場面→話し手の立場→決まり文句」の三段階で解くのは、会話の決まり文句が**場面と立場で決まっている**からです。店員か客か、かける側か受ける側かが分かれば、候補は数個にしぼれます。選択肢を一つずつ訳すより速く、正確です。
+
+■ 確かめのしかた
+①**場面**（店・道・電話）と**話し手の立場**を先に確かめてから決まり文句を選ぶ。
+②電話：This is Ken.（× I am Ken.）／Speaking.（× I am.）／May I speak to 〜?／Hold on, please.／Can I take a message?
+③買い物：May I help you?→Yes, please. I'm looking for 〜.／No, thank you. I'm just looking.／Can I try it on?／I'll take it. 手渡すときは Here you are.（Yes, please. は頼む側）。
+④道案内：Could you tell me the way to 〜?／Shall I show you the way?／I'm a stranger here. 聞き返しは Pardon?／Could you say that again?
+
+★ ここがポイント：電話は顔が見えないので **This is 〜／Speaking.**。会話の決まり文句は**場面と立場で決まる**ので、三段階で選ぶ。Here you are. は**手渡す動作**の言葉。`,
+      },
     ],
     trapExamples: [
       {

@@ -81,6 +81,20 @@ run — ran — run　　　　become — became — become
 
 ★ ポイント：現在完了で誤りが出るときは、たいてい過去分詞のところで過去形を書いてしまっている。まず過去分詞の欄を口に出して確かめる習慣をつける。`,
       },
+      {
+        heading: 'なぜ現在完了という形があり、なぜ has のあとに s を付けないのか',
+        body: `「大阪に住んで10年です」は、10年前に始まって**今も続いている**ことです。過去形（lived）は今と切れた過去の事実、現在形（lives）は今だけの事実で、どちらも「過去から今までの幅」を表せません。過去と今をつなぐためだけに用意された形が現在完了（have／has＋過去分詞）で、数直線の矢印の右端が必ず「今」に届いています。右端が今に届かない話（He lived in Osaka for ten years.＝今は住んでいない）には使えません。
+
+has は「三単現の s」が付いた形ではなく、**have の3人称単数形**です。主語に合わせて形を変える役目は has が引き受けているので、そのあとの過去分詞は lived のままで、× has lives とはなりません。現在完了で誤りが出るのは、たいてい過去分詞の欄に過去形を書いてしまうとき（× have saw→have seen）です。
+
+■ 確かめのしかた
+①since・for・「ずっと」があれば現在完了。since 2016 に lives（現在形）を入れていないか→has lived。
+②主語が3人称単数なら has、それ以外は have。has のあとに s を付けない。
+③過去分詞を口に出して確かめる：過去形と同じもの（had・made・bought・taught・found）と、ちがうもの（been・gone・done・seen・eaten・taken・written・spoken・known・given）。原形＝過去分詞の come・run・become に注意。
+④状態動詞（know・live・be・have・want・like）は進行形にしない。× I am knowing→I have known。
+
+★ ここがポイント：現在完了は**過去と今をつなぐ**ための形で、矢印の右端が今に届く。has は**have の3人称単数形**なので過去分詞に s を付けない。誤りはたいてい過去分詞の欄で起きる。`,
+      },
     ],
     trapExamples: [
       {
@@ -1208,6 +1222,20 @@ When 〜? → 過去の一点 → 過去形で答える（現在完了とは使�
 
 ★ ポイント：疑問詞ごとに「どの用法とセットか」を覚えておくと、長文の設問でも答えの形をすぐ決められる。`,
       },
+      {
+        heading: 'なぜ1回・2回だけ once・twice なのか、なぜ How many times と How long を分けるのか',
+        body: `once と twice は、古い英語から残った**1回・2回専用の語**です。two times でも通じますが、英語では twice が自然で、入試の答えも twice です。3回以上は「数＋times」で規則的に作ります。回数は文末に置き、いつのことかは問わないので、経験用法（過去に打たれた点の数）と相性が合います。
+
+How many times（何回）と How long（どのくらいの期間）を分けるのは、たずねているものが**回数**（経験用法）か**期間**（継続用法）かで、答え方も Three times.／For three years. と変わるからです。When は過去の一点をたずねるので、過去形とだけ組み、現在完了とは組めません。疑問詞のあとは疑問文の語順（have／has＋主語＋過去分詞）です。
+
+■ 確かめのしかた
+①1回→once、2回→twice、3回以上→〇 times。× two times（入試では twice）。位置は文末。
+②下線部が**回数**なら How many times、**期間**（for 〇 years）なら How long、**時点**なら When（過去形）。
+③How many times のあとが**疑問文の語順**か（× How many times you have been→have you been）。
+④How often は現在形と組むと頻度（Twice a week.）。once a week・twice a month・once upon a time も確かめる。
+
+★ ここがポイント：once・twice は**1回・2回専用の古い語**で、3回以上は数＋times。**回数は How many times（経験）、期間は How long（継続）、時点は When（過去形）**と、たずねるものと用法をセットにする。`,
+      },
     ],
     trapExamples: [
       {
@@ -2316,6 +2344,20 @@ We were invited to the party.
 
 ★ ポイント：受動態の問題で空所に入るのはほぼ必ず過去分詞である。空所の前に be動詞があったら、迷わず3番目の欄を思い出す。`,
       },
+      {
+        heading: 'なぜ受動態の失敗は文法ではなく過去分詞で起きるのか',
+        body: `受動態の手順（目的語を主語に→be動詞→過去分詞→by）は数行で覚えられます。しかし過去分詞が出てこなければ、手順を知っていても文が書けません。不規則動詞は数が多いですが、変化のしかたは A-A-A（put・cut・read）、A-B-B（make－made－made）、A-B-C（write－wrote－written）、A-B-A（come－came－come）の**4つの型**しかありません。型でまとめると、一つの動詞から同じ型の仲間が引き出せ、負担が一気に減ります。
+
+受動態で使うのは3番目の欄だけです。A-B-C 型で過去形（broke）を入れてしまうのは、2番目で止まって3番目まで確認していないからです。-en で終わる過去分詞（written・spoken・broken・eaten・taken・given）は受動態で頻出なので、原形と過去分詞を対にして声に出します。
+
+■ 確かめのしかた
+①空所の前に **be動詞があれば3番目の欄**。過去形（broke）を入れていないか→broken。
+②-ed を付けていないか（× builded→built）。型で仲間を確認（build・buy・teach・catch＝A-B-B）。
+③つづり：written・forgotten は t が2つ、grown・known の n を落とさない、read は3つとも同じつづりで発音がレッド。
+④A-B-A 型（come・run・become）は原形と過去分詞が同じ。頻出の受動態（was built・was written・is spoken・was taken・was broken・is known・were held）を例文ごと確かめる。
+
+★ ここがポイント：受動態の失敗は**過去分詞が出てこないこと**で起きるので、不規則動詞を**4つの型**でまとめる。be動詞のあとは**3番目の欄**、A-B-C 型で2番目（過去形）で止めない。`,
+      },
     ],
     trapExamples: [
       {
@@ -2905,6 +2947,20 @@ The music could be heard from far away.
 ⚠ 注意：be being ＋ 過去分詞 の being を落として × The house is built now. とすると「今建てられる」という習慣の意味になり、進行の意味が消える。
 
 ★ ポイント：助動詞・進行形・完了形のどれと組み合わせても、受動態の核は「be ＋ 過去分詞」で変わらない。be の形（be / being / been / is / was）だけが変化する。`,
+      },
+      {
+        heading: 'なぜ助動詞のあとは be で、なぜ「見える」が受動態になるのか',
+        body: `助動詞のあとは必ず動詞の原形が来ます。受動態の be動詞も動詞なので、助動詞のあとでは**原形 be** になります。だから can be seen・must be finished・should be sent と、助動詞＋be＋過去分詞の3語で1セットです。be を落とした × can seen は、助動詞のあとに過去分詞が直接来ていて文になりません。進行形の受動態（is being built）や完了形の受動態（has been built）でも、核の「be＋過去分詞」は変わらず、be の形（be・being・been・is・was）だけが変わります。
+
+「ここから富士山が見える」が Mt. Fuji can be seen from here. と受動態になるのは、英語では「富士山が（人に）見られうる」と、**見られる側（富士山）を主語にして状況を説明する**言い方が自然だからです。I can see Mt. Fuji. も誤りではありませんが、看板や案内のように「だれが」を言わない状況説明では受動態が使われます。
+
+■ 確かめのしかた
+①助動詞＋**be**＋過去分詞の3語がそろっているか。× can seen、× can is seen→can be seen。
+②否定は助動詞＋not＋be＋過去分詞（cannot be seen・must not be broken）、疑問は助動詞を主語の前に（Can this word be used?）。
+③能動態に書きかえるときは by のあとを主語にし、助動詞のあとは**原形**（× must used→must use）。by がなければ we／people を補う。
+④進行形の受動態は being を落とさない（is being built＝今建てられている／is built＝建てられる習慣）。核の be＋過去分詞は、どの形でも変わらない。
+
+★ ここがポイント：助動詞のあとは原形なので受動態の be動詞も**原形 be**（助動詞＋be＋過去分詞）。「見える」は**見られる側を主語にした状況説明**なので受動態が自然。どの形でも核は be＋過去分詞。`,
       },
     ],
     trapExamples: [

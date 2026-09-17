@@ -500,6 +500,20 @@ am not には isn't のような1語の短縮形が存在しない。主語と b
 
 ⚠ 注意：「〜ではありません」という日本語だけを見て be動詞の否定を選ばないこと。「サッカーをしません」なら一般動詞の否定、「サッカー選手ではありません」なら be動詞の否定になる。うしろが動作か名詞かで見分ける。`,
       },
+      {
+        heading: 'なぜ not は be動詞の直後で、なぜ amn\'t がないのか',
+        body: `be動詞は「〜である」という意味を自分で持つ語なので、否定するにはそのすぐうしろに not を置くだけで足ります。日本語の「忙しくありません」は打ち消しが文末に来ますが、英語では**打ち消したい語（be動詞）の直後**に not を置くので、位置が前に来ます。一般動詞は自分で not を受けられないので、do／does／did を借りて don't play とし、動詞は原形に戻します。この二つを混ぜた He isn't play soccer. は、be動詞と一般動詞が並んで動詞が二つになり誤りです。
+
+am not に amn't がないのは、英語の歴史の中でこの形が定着しなかったからで、理屈ではなく事実として覚えます。短縮するなら主語のほうと縮めて I'm not とします。He isn't と He's not のように、be動詞と not を縮めるか、主語と be動詞を縮めるかは、どちらでもよく意味は同じです。
+
+■ 確かめのしかた
+①述語が am／is／are／was／were なら、**その直後に not**。それ以外（一般動詞）なら don't／doesn't／didn't＋原形。
+②× I amn't→I'm not。isn't／aren't／wasn't／weren't は可。
+③× He isn't play soccer.→動詞が二つ並んでいる→He doesn't play soccer.「〜しません」（動作）は一般動詞の否定、「〜ではありません」（名詞・形容詞）は be動詞の否定。
+④never は単独で打ち消し（He is never late.）、not 〜 any＝no＋名詞。
+
+★ ここがポイント：not は**打ち消したい語（be動詞）の直後**に置くので、日本語より前に来る。一般動詞は do を借りる。**amn't は存在しない**ので I'm not。うしろが動作か名詞かで、どちらの否定かを決める。`,
+      },
     ],
     trapExamples: [
       {
@@ -1477,6 +1491,20 @@ go, come, run, walk, swim, live, work, stay, sit, stand, sleep, happen, rise, fa
 　目的語の位置に置く代名詞は me / you / him / her / it / us / them の形にする。
 
 ⚠ 注意：動詞と目的語の間に副詞をはさむと不自然になる。× I like very much music. は誤りで、○ I like music very much. とする。「動詞のすぐうしろに目的語」を守る。`,
+      },
+      {
+        heading: 'なぜ S ≠ O で見分け、なぜ「〜に」でも前置詞が要らないのか',
+        body: `第2文型（He is a teacher.）も第3文型（He knows a teacher.）も、動詞のあとに名詞が一つ来る形は同じです。ちがいは、その名詞が**主語とイコールか**（C）、**動作の相手か**（O）です。He＝a teacher なら第2文型、He≠a teacher なら第3文型。イコールで結べるかどうかが、形では見えない区別をつける唯一の手がかりです。
+
+call him・marry her・enter the room で前置詞が要らないのは、これらが**目的語を直接とる動詞（他動詞）**だからです。日本語では「彼に電話する」「彼女と結婚する」「部屋に入る」と助詞が「を」ではありませんが、英語の他動詞かどうかは日本語の助詞と無関係に、動詞ごとに決まっています。語順が S→V→O に固定されているのは、英語には助詞がなく、**位置だけで「だれが・何を」を示す**からです。Ken likes Yumi. と Yumi likes Ken. は語順で意味が変わります。
+
+■ 確かめのしかた
+①動詞のあとの名詞が**主語とイコールか**。イコール→C（第2文型）、ちがう→O（第3文型）。
+②「〜に・〜と」と訳す動詞でも、他動詞なら前置詞を入れない：call him、marry her、enter the room、resemble her mother。× called to him。
+③語順 S→V→O を崩さない。副詞（M）を動詞と目的語の間にはさまない（× I like very much music.→I like music very much.）。
+④目的語の代名詞は**目的格**（me・you・him・her・it・us・them）。× I know he.→I know him.
+
+★ ここがポイント：第2・第3文型は**主語とイコールか**で見分ける。他動詞は**日本語の助詞と無関係に**目的語を直接とる（call him）。英語は**位置で「だれが・何を」を示す**ので語順を崩さず、目的語の代名詞は目的格。`,
       },
     ],
     trapExamples: [
@@ -2669,6 +2697,20 @@ O と原形の間に、主語と述語の関係が成り立っている。
 受け身では make のあとにも to が付く。
 
 ⚠ 注意：want のうしろに that 節は置けない。× I want that you come. は誤りで、○ I want you to come. とする。日本語の「〜してほしいと思う」を that で表そうとしないこと。`,
+      },
+      {
+        heading: 'なぜ make には to が要らず want には要るのか',
+        body: `make・let・have（使役動詞）と see・hear・feel（知覚動詞）は、O がする動作を**そのまま目の前の出来事として**表します。「私が掃除する」「彼が入る」という主語・述語の関係を、動詞の原形でじかに置きます。いっぽう want・tell・ask は「O に〜してほしい・〜するように言う」と、**これからの動作へ向かう**意味なので、未来へ向かう to＋原形と組みます。to の有無は動詞ごとに決まっているので、グループで覚えます。help はどちらの形もとれます。
+
+受け身になると I was made to clean the room. と to が現れるのは、受け身では「させられて→掃除する」という向きが表に出て、to で結ぶ必要があるからです。want のうしろに that 節が置けないのは、want が「人に〜してほしい」を O＋to で表す動詞だからで、日本語の「〜してほしいと思う」の「と」を that にしてはいけません。
+
+■ 確かめのしかた
+①原形をとるグループを言えるか：**make／let／have（使役）、see／watch／hear／feel（知覚）、help（どちらも可）**。それ以外は to。
+②× made me to clean→made me clean。× wants me help→wants me to help。
+③O と動詞の間に「O が〜する」の関係があるか（made me clean→私が掃除する）。否定は not を to の前に（told me not to go）。
+④受け身にすると to が現れる（was made to clean）。× I want that you come.→I want you to come.
+
+★ ここがポイント：使役・知覚動詞は O の動作を**目の前の出来事としてじかに置く**ので原形、want／tell／ask は**これからの動作へ向かう**ので to。グループで覚え、受け身では to が現れる。`,
       },
     ],
     trapExamples: [

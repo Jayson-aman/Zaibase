@@ -449,6 +449,20 @@ good/well → better → best、bad/ill → worse → worst、many/much → more
 
 ★ ポイント：整序英作文で more が語群にあるかどうかを先に確認すると、どちらの型で答えるべきかがすぐわかる。語群に more がなければ -er 型で作るしかない。`,
       },
+      {
+        heading: 'なぜ音節数と語尾で -er 型か more 型かが決まるのか',
+        body: `-er／-est を付けると語が長くなるので、英語はもともと短い語（一音節）には -er を付け、長い語（三音節以上）には前に more／most を置いて発音しやすくしてきました。二音節の語はその境目にあり、**語尾が軽い音**（-y・-er・-le・-ow）なら -er を付けても言いやすいので -er 型、-ful・-ous・-ing・-ed・-ive のように**それ自体が重い接尾語**なら more 型になります。だから famous は二音節でも more famous、pretty は二音節でも prettier です。
+
+文字数と音節数がちがうことに注意します。great は5文字でも一音節、busy は4文字でも二音節です。quiet・polite・common のように両方の形が使える語もあり、整序英作文では語群に more があるかで判断します。
+
+■ 確かめのしかた
+①**音節数**を数える：一音節→-er、三音節以上→more。
+②二音節は**語尾**で：-y・-er・-le・-ow→-er 型（easier・cleverer・simpler・narrower）、-ful・-ous・-ing・-ed・-ive→more 型（more useful・more famous・more boring・more tired・more active）。
+③つづり：子音字＋y は y→i（prettier・busier）、e で終わる語は -r（nicer）、短母音＋子音字一つは重ねる（bigger）。
+④不規則（good／well・bad／ill・many／much・little・far）はどちらの型でもない。語群に more があるかを先に見る。
+
+★ ここがポイント：-er は**短い語**、more は**長い語**という発音しやすさの原則から決まり、二音節は**語尾**（y・er・le・ow は -er、ful・ous・ing・ed・ive は more）で分ける。文字数ではなく音節数。`,
+      },
     ],
     trapExamples: [
       {
@@ -544,6 +558,20 @@ He is a good pianist.（形容詞：じょうずなピアニスト）
 ⑤一音節なら、e で終わるか／子音字＋y か／短母音＋子音字1つか、を確認してつづりを整える。
 
 ★ ポイント：この五段階を頭の中で流せるようになれば、初めて見る語でも正しい形を作れる。丸暗記だけに頼らないことが、上位校の語形変化問題を落とさないコツである。`,
+      },
+      {
+        heading: 'なぜ fast は形容詞でも副詞でも同じで、なぜ slowly は more なのか',
+        body: `fast・hard・early・late・high・near は、もともと**形容詞と副詞が同じ形**の語で、-ly を付けずに副詞になります。だから比較の形も同じ（faster・harder・earlier）です。いっぽう slowly・carefully は「形容詞＋-ly」で作った副詞で、-ly が付いた時点で語が長くなっているので、more／most 型になります。early は例外で、もともと一語なので earlier です。
+
+hard に -ly を付けた hardly は「ほとんど〜ない」という**別の語**で、hard（熱心に）の副詞形ではありません。late／lately（最近）、near／nearly（ほとんど）も同じで、-ly が付くと意味が変わる語は長文でも失点のもとです。副詞の最上級で the を省けるのは、the が本来「名詞を限定する」語で、副詞は名詞を修飾しないからです。形容詞の最上級（the fastest runner）は名詞を修飾するので the が要ります。
+
+■ 確かめのしかた
+①その語が**形容詞と副詞で同形**か（fast・hard・early・late・high・near）→変化も同じ。
+②-ly の副詞は more 型（more slowly・more carefully）。× slowlier。early だけ earlier。
+③hardly（ほとんど〜ない）・lately（最近）・nearly（ほとんど）は別語。意味を取りちがえていないか。
+④the：**副詞の最上級は省略可**（runs (the) fastest）、**形容詞の最上級は必要**（the fastest runner）。well／good はどちらも better・best。判断の順は①不規則か→②-ly か→③音節→④語尾→⑤つづり。
+
+★ ここがポイント：**形容詞と副詞が同形の語**（fast・hard・early）は変化も同じ、**-ly で作った副詞**は more 型。-ly で意味が変わる語（hardly・lately・nearly）は別語。the は名詞を限定する語なので**副詞の最上級では省略できる**。`,
       },
     ],
     trapExamples: [
@@ -1011,6 +1039,20 @@ as のあとは名詞・代名詞のほか、〈主語＋助動詞・do〉でも
 
 例）This car is not as expensive as that one. → どちらが高い？ → that one（あの車）`,
       },
+      {
+        heading: 'なぜ not as 〜 as は「同じでない」ではなく「〜ほどでない」なのか',
+        body: `as tall as Bob は「ボブの高さに達している」という意味です。それを not で打ち消すと「ボブの高さに**達していない**」、つまりケンはボブより低い、という上下関係まで決まります。「同じ高さではない」と訳すと、ケンが高い可能性も残って意味がぼやけます。日本語の「〜ほど…ない」と同じ感覚で、**as のあとに来るほうが上**です。
+
+一つ目の as を so にできるのが否定文だけなのは、so 〜 as が否定の形でだけ残った古い言い方だからです。肯定文では必ず as 〜 as です。名詞をはさむ形（not as many books as／not as much homework as）も、数か量かで many・much を選び分けるだけで考え方は同じです。
+
+■ 確かめのしかた
+①not as 〜 as を見たら、**as のあとが上**と即座に言う。Emi is not as old as Kenta.→Kenta が年上。「同い年ではない」は×。
+②比較級に書きかえて確かめる：Ken is not as tall as Bob.＝Bob is taller than Ken.（主語が入れかわる）。
+③so 〜 as は**否定文だけ**。× Ken is so tall as Bob.
+④名詞をはさむときは数→many、量→much（not as many books as／not as much money as）。三単現の否定は doesn't。
+
+★ ここがポイント：not as 〜 as は「**その程度に達していない**」なので上下関係まで決まり、**as のあとが上**。so 〜 as は否定文専用。`,
+      },
     ],
     trapExamples: [
       {
@@ -1295,6 +1337,20 @@ Yuka has twice as many books as Ken. で、ユカが10冊なら、ケンは 10 �
 どちらを基準にしているかは「as のあとに来るほう」で決まる。as のあとが基準である。
 
 ★ ポイント：英文から数値を求める問題では、まず基準（as のあとの語）を丸で囲む。そのうえで、かけるのか割るのかを判断する。`,
+      },
+      {
+        heading: 'なぜ倍数は as 〜 as の前に置き、なぜ基準は as のあとなのか',
+        body: `twice as large as that one は「あれと同じ大きさ（as large as that one）」というかたまりの前に「その2倍（twice）」を貼りつけた形です。as 〜 as のかたまりが「同じくらい」という単位を作り、倍数はその単位を何倍にするかを表すので、かたまりの**前**に置きます。かたまりの中に twice を差しこむ（× as twice many）と、単位そのものがこわれます。
+
+基準が as のあとなのは、as 〜 as の二つ目の as が「〜と比べて」という比べる相手を示すからです。Yuka has twice as many books as Ken. なら基準はケンで、ユカはケンの2倍。数値を求めるときは、基準を丸で囲んでから、かけるのか割るのかを決めます（ケン6冊なら6×3＝18）。2倍が twice なのは、once・twice が1回・2回専用の古い語だからです。
+
+■ 確かめのしかた
+①倍数は **as 〜 as のかたまりの前**：twice as large as、three times as many books as。× as twice many、× as many twice books。
+②2倍→twice、3倍以上→数＋times、半分→half。
+③**基準は as のあと**を丸で囲む。「Yuka has three times as many CDs as Ken.」でケン6枚→ユカ18枚（×3）。基準が逆なら割る。
+④倍数は原級 as 〜 as と組む（× twice larger than）。差を言うなら比較級の前に数を置く（two years older than）。別の言い方：twice the size of 〜。
+
+★ ここがポイント：as 〜 as が「同じくらい」の**単位**を作り、倍数はその**前**に貼りつける。**基準は二つ目の as のあと**なので、数値問題は基準を丸で囲んでからかけるか割るかを決める。`,
       },
     ],
     trapExamples: [
@@ -1870,6 +1926,20 @@ in Japan（日本で）／in the world（世界で）／in my class（私のク�
 ★ ポイント：「〜の中で」にあたる語句を落とすと、何と比べているのかが伝わらない。英作文では必ず in ~ / of ~ を付ける習慣をつける。
 
 例）並べかえ：( in / the / is / Japan / highest / Mt. Fuji / mountain ) → Mt. Fuji is the highest mountain in Japan.`,
+      },
+      {
+        heading: 'なぜ最上級には範囲が要り、なぜ形容詞の最上級の the は落とせないのか',
+        body: `「いちばん高い」は、**どの範囲の中で**いちばんかが決まってはじめて意味を持ちます。日本でいちばんか、世界でいちばんかで答えが変わるからです。だから最上級の文には in Japan・in my class・of the three のような範囲の語句が付き、落とすと何と比べているかが伝わらず減点されることがあります。in のあとには場所や集団を表す単数の語が来ます。
+
+形容詞の最上級に the が要るのは、the tallest student のように**名詞を「一つに決める」役目**を the が果たすからです。副詞の最上級（runs (the) fastest）は名詞を修飾しないので the を省いてもよく、この区別を混ぜて × Ken is tallest student としてはいけません。
+
+■ 確かめのしかた
+①最上級の文に**範囲**（in 〜／of 〜）があるか。文末に置く。
+②形容詞の最上級に **the** があるか（the tallest student）。副詞の最上級だけ省略可。
+③つづり：e で終わる語は -st（largest・nicest・widest）。× largeest。主語が複数なら are と複数形（These are the oldest buildings）。
+④疑問文：Which is the highest mountain in Japan?→Mt. Fuji is. What 〇〇 do you like the best?→I like 〇〇 the best.
+
+★ ここがポイント：最上級は**どの範囲の中でか**が決まって意味を持つので範囲の語句を付ける。the は**名詞を一つに決める**役目なので、形容詞の最上級では落とさない（副詞は省略可）。`,
       },
     ],
     trapExamples: [
@@ -2940,6 +3010,20 @@ The more I read this book, the more interesting it becomes.
 
 ★ ポイント：英作文でこの形を使えると、表現力の評価が上がる。まず一つ、The more you practice, the better you become. を丸ごと暗記して、単語を入れかえて応用するとよい。`,
       },
+      {
+        heading: 'なぜ比較級なのに the が付き、なぜ名詞ごと前に出すのか',
+        body: `The more you practice, the better you become. は、もともと You practice more.／You become better. という二つの文の比較級を**文の先頭に出して並べ、二つの変化が連動している**ことを示す形です。このときの the は冠詞ではなく「その分だけ」という意味の古い語で、「練習が多くなればその分だけうまくなる」を表します。だから比較級に the を付けないという原則の、数少ない例外になります。
+
+名詞ごと前に出す（The more books you read）のは、比較級 more が books を修飾していて、**more books でひとかたまり**だからです。more だけを前に出して books を残すと、かたまりがこわれます。前半が条件を表すので、未来のことでも現在形（The sooner you leave, the earlier you will arrive.）にするのは、if・when の節と同じ規則です。
+
+■ 確かめのしかた
+①もとの二つの文を書き、**それぞれの比較級を先頭に出して the を付け、コンマでつなぐ**。
+②比較級が名詞を修飾していれば**名詞ごと**前に出す：The more books you read, 〜。× The more you read books。
+③**前半は現在形**、後半は will でよい。× The harder you will study。
+④両方の the とコンマを落としていないか。短い決まり文句：The sooner, the better.／The more, the better.
+
+★ ここがポイント：この the は「**その分だけ**」を表す古い語なので比較級に付く。**比較級＋名詞はかたまりごと前に出し**、前半は条件なので現在形。まず一文を丸ごと覚えて入れかえる。`,
+      },
     ],
     trapExamples: [
       {
@@ -3128,6 +3212,20 @@ no がつくと気持ち（多い・少ないと感じている）が入り、no
 数値そのものより、書き手が「多い」と感じているのか「少ない」と感じているのかを読み取ることが大切である。
 
 ★ ポイント：no more than / no less than は上位校で問われる。「no がついたら気持ちが入る」「more は多い、less は少ない、no がつくと逆の驚きを表す」と整理すると覚えやすい。`,
+      },
+      {
+        heading: 'なぜ more than 30 は30を含まず、なぜ no less than は「〜も」なのか',
+        body: `more than 30 は「30より多い」で、**30そのものは含みません**。日本語の「30以上」は30を含むので、範囲がずれます。資料読み取り問題では、この一語の差で選択肢の正誤が決まるので、「より多い（含まない）」「少なくとも（含む）」を日本語でも区別します。at least（少なくとも）・at most（多くても）は含みます。
+
+no less than が「〜も（多い）」になるのは、no が「少なくない」と**書き手の気持ち**（多いと感じている）を打ち消しで強めるからです。no more than は「多くない＝たった〜しか」。not が付く not more than／not less than は気持ちの入らない単なる範囲（at most／at least）です。as many as 50 も、数字が続けば「50人も」という多さの強調です。
+
+■ 確かめのしかた
+①more than（含まない・より多い）／less than（未満）／at least（含む・少なくとも）／at most（多くても）を日本語で言い分ける。
+②資料問題は**全体の数を確認して半分を計算**してから more than half かを判断する（30人中18人→15より多い→more than half）。
+③no less than＝〜も（多い）、no more than＝たった〜しか（少ない）。not less than＝at least、not more than＝at most。「no は気持ちが入る」。
+④as many as＋数字＝「〜もの」（多さの強調）。数字がなければ原級比較の「同じくらい多く」。
+
+★ ここがポイント：more than は**含まない**、at least は**含む**。**no が付くと書き手の気持ち**（no less than＝〜も、no more than＝たった）が入り、not は単なる範囲。資料問題は全体の数から半分を計算する。`,
       },
     ],
     trapExamples: [

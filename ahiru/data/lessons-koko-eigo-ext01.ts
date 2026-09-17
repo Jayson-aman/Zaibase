@@ -2534,6 +2534,20 @@ free（ひまな）⇔ busy ／ free（無料の）⇔ expensive
 
 ⚠ 注意：cheap には「安っぽい・質が悪い」という悪い意味が含まれることがある。値段が手ごろだと言いたいときは inexpensive や reasonable を使うほうが自然である。`,
       },
+      {
+        heading: 'なぜ反意語は「意味ごと」に持ち、なぜ「高い」が expensive になるのか',
+        body: `light には「軽い」と「明るい」という**別々の意味**があり、それぞれに反対語（heavy・dark）があります。日本語では別の語なので一対一で覚えたくなりますが、英語の一語が複数の意味を持つとき、反意語はその意味ごとに決まります。hard（難しい⇔easy／かたい⇔soft）、right（正しい⇔wrong／右⇔left）、free（ひまな⇔busy／無料の⇔expensive）も同じです。
+
+「この本は高い」を high と言えないのは、high が**高さ**（背・位置）を表す語で、物の値段の高さは expensive という別の語が受け持つからです。値段そのものを主語にすれば The price is high. と言えます。日本語の「高い」が英語では expensive（物が主語）と high（値段が主語）に分かれます。cheap に「安っぽい」の響きがあるのは、値段の安さから質の低さを連想させるからで、手ごろだと言いたいときは inexpensive・reasonable を使います。
+
+■ 確かめのしかた
+①反意語を答えるとき、**その文でどの意味か**を先に言う。This bag is light.（軽い）→heavy。The room is light.（明るい）→dark。
+②温度は cold－cool－warm－hot の四段階で、両端どうし・内側どうしが対。
+③「高い・安い」は主語で分ける：物が主語→expensive／cheap、price が主語→high／low。× This bike is high.
+④対をセットで声に出す：long-short、high-low、old-new（物）／old-young（人）、easy-difficult、safe-dangerous、full-empty。
+
+★ ここがポイント：反意語は**その語の意味ごと**に持つ（light＝heavy／dark）。「高い」は**高さなら high、値段の高さは expensive**（price が主語なら high）。`,
+      },
     ],
     trapExamples: [
       {
