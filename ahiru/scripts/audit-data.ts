@@ -352,6 +352,39 @@ check(
     .map((q) => q.id),
 );
 
+// 中学受験（小学生）向けの理科に、高校の地学の用語・記号がそのまま出ていないか（同種の失敗の11回目。2026/9/17、
+// 薄い単元に節を足す作業中に 続成作用・膠結・基底れき岩・背斜・向斜・気圧傾度・断熱膨張・ケプラーの法則・級化層理・
+// 大森公式の「D＝k×T」・緯度の「φ」・影の長さの「tan」を見つけた。物理・化学・生物の検査はあったが地学が無かった）。
+// ⚠ 「融点」「地層累重の法則」「朔望月」「恒星月」「大森公式」は中学受験の教材にもふつうに出るので弾かない。
+const CHUGAKU_CHIGAKU_NG =
+  /続成作用|膠結|基底れき岩|背斜|向斜|気圧傾度|断熱膨張|ケプラー|級化層理|比例定数|潮汐固定|赤方偏移|ドップラー|スペクトル|年周視差|太陽定数|扁平率|収束境界|発散境界|(?:tan|sin|cos)\s?\(|(?<![A-Za-z])[DTk]\s?[＝=]\s?[A-Za-z]|[φθ]/;
+check(
+  '【単元】中学受験の理科に、高校の地学の用語・記号（続成作用・背斜・気圧傾度・級化層理・比例定数・tan・φ）が出ている',
+  L.filter((l) => l.subject === 'rika' && (l.examType ?? 'chugaku') !== 'koko')
+    .filter((l) => {
+      const texts: unknown[] = [l.title, l.description, l.intro, ...(l.keyPoints ?? [])];
+      for (const sec of (l.sections ?? []) as any[]) {
+        texts.push(sec.heading, sec.body);
+        const fig = sec.figureId ? getLessonFigure(sec.figureId) : null;
+        if (fig) texts.push(JSON.stringify(fig));
+      }
+      for (const t of (l.trapExamples ?? []) as any[]) texts.push(t.question, t.trapExplanation, t.correctAnswer, t.correctExplanation);
+      return texts.some((t) => CHUGAKU_CHIGAKU_NG.test(String(t ?? '')));
+    })
+    .map((l) => l.id),
+);
+check(
+  '【問題集】中学受験の理科に、高校の地学の用語・記号（続成作用・背斜・気圧傾度・級化層理・比例定数・tan・φ）が出ている',
+  (Q as any[])
+    .filter((q) => q.subject === 'rika' && (q.examType ?? 'chugaku') !== 'koko')
+    .filter((q) =>
+      [...ELEM_FIELDS, 'questionReading', 'answerReading'].some((k) => CHUGAKU_CHIGAKU_NG.test(String(q[k] ?? ''))) ||
+      ((q.choices ?? []) as unknown[]).some((c) => CHUGAKU_CHIGAKU_NG.test(String(c))) ||
+      ((q.subQuestions ?? []) as any[]).some((s) => ['question', 'answer', 'explanation'].some((k) => CHUGAKU_CHIGAKU_NG.test(String(s[k] ?? '')))),
+    )
+    .map((q) => q.id),
+);
+
 // 中学受験（小学生）向けの算数に、中学以上の解き方・記号がそのまま出ていないか（同種の失敗の10回目）。
 //
 // 方程式・連立方程式・移項・文字式・負の数・絶対値・余事象・階乗記号（5！・n！）・C(n,r)・nCr は中学〜高校。

@@ -3,7 +3,7 @@ import type { Figure } from './figures';
 // 中学受験理科 拡張ユニットXII「地学：地層・地震・火山」（rika_s411〜rika_s450）
 // 専用の図解データ。数値はすべて lessons-rika-ext12.ts 本文中の実データと一致させてある。
 export const lessonFigsRikaExt12: Record<string, Figure> = {
-  // ===== 411. 堆積のしくみと分級作用（級化層理） =====
+  // ===== 411. 堆積のしくみと分級作用 =====
   lf_rika_ext12_411: {
     kind: 'stratum',
     columns: [
@@ -17,7 +17,7 @@ export const lessonFigsRikaExt12: Record<string, Figure> = {
         ],
       },
     ],
-    caption: '1回の堆積でできた層（級化層理）では、重く大きい粒（れき）ほど先に沈むため下に、軽く小さい粒（泥）ほど後まで水中に残るため上にたまる',
+    caption: '1回の堆積でできた層では、重く大きい粒（れき）ほど先に沈むため下に、軽く小さい粒（泥）ほど後まで水中に残るため上にたまる',
   },
 
   // ===== 412. 堆積の場所と粒の大きさ（河口〜沖合の粒径変化） =====
