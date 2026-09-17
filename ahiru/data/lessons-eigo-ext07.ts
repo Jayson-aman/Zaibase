@@ -161,6 +161,20 @@ a・an・the・my・your・his・two・three・some などは、形容詞より�
 
 ⚠ 注意：「たくさんの美しい花」を beautiful many flowers としないこと。many のような数量の語は必ず前に出す。`,
       },
+      {
+        heading: 'なぜ形容詞の順番が決まっているのか',
+        body: `英語では、**名詞に近い形容詞ほど、その名詞と切りはなせない性質**を表します。色や材料（red・Japanese）はそのものの変わらない性質なので名詞のすぐ前、大きさや新しさは見た印象、評価（nice・beautiful）は話し手の気持ちなので名詞から遠くに置きます。数や a・my はそもそも「どれ・いくつ」を決める語なので列の先頭です。話し手は考えずにこの順で口にしているので、順番を変えると英語らしくなくなります。
+
+同じ種類の形容詞（どちらも大きさ、どちらも性格）を and でつなぐのは、**同じ種類は順番がつけられない**からです。big と heavy はどちらも見た印象なので a big and heavy bag、big と red は種類がちがうので a big red ball と並べます。
+
+■ 確かめのしかた
+①**数・冠詞・所有格は先頭**か。× new my bike→my new bike。× beautiful many flowers→many beautiful flowers。
+②**色は名詞のいちばん近く**か。× three red big apples→three big red apples。
+③二つの形容詞が同じ種類なら and、ちがう種類ならそのまま並べる。a big and heavy bag／a big white dog。
+④三つ以上並べるときはコンマでつなぎ、最後だけ and（kind, cheerful, and honest）。
+
+★ ここがポイント：**名詞に近いほど、その名詞と切りはなせない性質**（色・材料）を表すので順番が決まる。**数・a・my は先頭、色は名詞のとなり**の二点で入試はほぼ解ける。同じ種類は and でつなぐ。`,
+      },
     ],
     trapExamples: [
       {
@@ -454,6 +468,20 @@ much は否定文・疑問文でよく使われるが、ふつうの肯定文で
 例）How much is this bag?（このかばんはいくらですか）
 
 ⚠ 注意：How many のあとの名詞は必ず複数形（How many book ではなく How many books）。`,
+      },
+      {
+        heading: 'なぜ homework は数えられず、なぜ肯定文で much を避けるのか',
+        body: `英語で「数えられる」とは、**形がはっきりしていて一つ二つと区切れる**ことです。water や bread は区切りがなく、homework・information・news・advice は目に見えない「まとまり」なので、英語では数えません。日本語では「宿題が三つ」と数えるので、そのまま many homeworks と書いてしまいますが、英語の感覚では区切れないものです。数えたいときは a glass of water・two pieces of homework のように**容器や単位で区切ります**。
+
+many と much を使い分けるのは、many が「数」、much が「量」を表す語だからです。much が肯定文でかたく響くのは、英語の習慣として much は否定文・疑問文（I don't have much time. ／ How much 〜?）で使われることが多く、肯定文では a lot of が自然だからです。many は肯定文でもふつうに使えます。
+
+■ 確かめのしかた
+①名詞が**数えられるか**を先に決める。homework・information・news・advice・furniture・money・time は数えられない。
+②数えられる→many＋複数形（many books）、数えられない→much（much water）。× many waters、× much friends。
+③肯定文なら a lot of（I have a lot of homework.）。much は否定文・疑問文で。
+④数をたずねる→How many＋複数形、量・値段をたずねる→How much。× How many book。
+
+★ ここがポイント：英語の「数えられる」は**形がはっきりして区切れる**こと。homework・information は区切れないので複数形にせず、much か a lot of。**肯定文は a lot of、否定・疑問は much**が自然。`,
       },
     ],
     trapExamples: [
@@ -2071,6 +2099,20 @@ better・the best は目的語のあとに置く。
 
 ⚠ 注意：2つを比べるときは better、3つ以上なら the best。「どちらが」なら better、「どれがいちばん」なら the best と判断する。`,
       },
+      {
+        heading: 'なぜ good の比較級は gooder ではないのか',
+        body: `good・bad・well のように、**もっともよく使う語ほど不規則な形**をしています。よく使う語は昔の形がそのまま残りやすく、規則で作った gooder・badder に置きかわらなかったからです。better・best はもともと別の語で、good の比較級・最上級として使われるようになりました。だから音ごと覚えるしかなく、more good・more better のように more を付けると、比較級を二重にしたことになって誤りです。
+
+形容詞の good と副詞の well が同じ better・best になるので、文の中でどちらの意味かは**何を修飾しているか**で決めます。This book is better（本がよい→形容詞）、He swims better（泳ぎ方が上手→副詞）。like A better than B は「B より A が好き」で、better は目的語（A）のあとに置きます。
+
+■ 確かめのしかた
+①good／well→**better→best**、bad／ill→**worse→worst**。gooder・weller・badder・more good は存在しない。
+②比較級を作ったら、**more が重なっていないか**。× more well、× more better。
+③like A better than B（2つを比べる）、like A the best（3つ以上）。「どちらが」なら better、「どれがいちばん」なら the best。
+④better の位置は目的語のあと。× I like better soccer than baseball。× I like soccer than baseball（better の落とし）。
+
+★ ここがポイント：よく使う語ほど**昔の形が残って不規則**（good→better→best、bad→worse→worst）。不規則な語に **more を重ねない**。like A better than B は「B より A が好き」で、better は目的語のあと。`,
+      },
     ],
     trapExamples: [
       {
@@ -2169,6 +2211,20 @@ little には「小さい」という意味もあり、その場合は smaller�
 例）a little dog（小さな犬）→ a smaller dog
 
 ⚠ 注意：less time（時間が少ない）を littler time としない。littler という形は数量の意味では使わない。`,
+      },
+      {
+        heading: 'なぜ many も much も more になり、なぜ little は less なのか',
+        body: `many（数が多い）と much（量が多い）は、肯定の原級では数と量で語を分けますが、**比較すると「もっと多い」という一つの意味**にまとまるので、比較級・最上級は more・most の一つの形になります。more books（数）も more water（量）も同じ more です。逆に「少ない」は、比較しても数（fewer books）と量（less water）を分けたままなので、few→fewer→fewest、little→less→least と別々に変化します。
+
+more に二つの働き（many/much の比較級と、長い形容詞の比較級を作る語）があるので、**more のあとに名詞が来るか、形容詞が来るか**で読み分けます。more books は「本の数が多い」、more beautiful は「美しさの程度が上」です。数量の little の比較級を規則どおり littler としないのは、less という別の語が決まっているからです。
+
+■ 確かめのしかた
+①数が多い：many→more→most。量が多い：much→more→most。「あなたより多くの本」→more books than you（× many books than）。
+②数が少ない：few→fewer→fewest（fewer students）。量が少ない：little→less→least（less time）。× littler time。
+③more のあとが**名詞**なら「より多くの」、**形容詞・副詞**なら「もっと〜」。
+④「小さい」の little は smaller・smallest（a smaller dog）。数量の little とは別の変化。
+
+★ ここがポイント：比較すると数も量も「もっと多い」にまとまるので **many/much→more→most**。「少ない」は数（few→fewer）と量（little→less）を分けたまま。more は**あとの語（名詞か形容詞か）**で読み分ける。`,
       },
     ],
     trapExamples: [
@@ -2474,6 +2530,20 @@ Ken is as tall as Tom.（同じくらい）
 Ken is not as tall as Tom.（トムのほうが上）
 
 ⚠ 注意：書きかえ問題では、まず「どちらが上か」を日本語で確かめてから英文を作る。主語の入れかえを機械的にできるようにしておく。`,
+      },
+      {
+        heading: 'なぜ not as 〜 as は「as のあとが上」で、なぜ書きかえで主語が入れかわるのか',
+        body: `as tall as は「ケンと同じ高さに達している」という意味です。それに not を付けると「**その高さに達していない**」＝「ケンほど高くない」になります。「同じくらい高くない（二人とも低い）」ではなく、「ケンの高さにおよばない」なので、as のあとの人（ケン）のほうが上です。not as 〜 as を見たら「as のあとが上」と反射的に判断します。
+
+比較級に書きかえるとき主語が入れかわるのは、比較級の文（B is taller than A.）が**上のほうを主語にして言う形**だからです。not as 〜 as では下のほう（Tom）が主語、上のほう（Ken）が as のあと。同じ関係を比較級で言うと、上の Ken を主語にして Ken is taller than Tom. になります。主語をそのままにして Tom is taller than Ken. とすると、上下が逆転して意味が反対になります。
+
+■ 確かめのしかた
+①not as 〜 as の文を訳したら、**どちらが上か**を日本語で言う。Tom is not as tall as Ken.→ケンが上。「同じくらい〜ない」は×。
+②比較級に書きかえるとき、**上のほうを主語**にする。Ken is taller than Tom.
+③逆に比較級→not as 〜 as も主語を入れかえる。Ken is taller than Tom.＝Tom is not as tall as Ken.
+④三つの形を並べて確かめる：Ken is taller than Tom.（ケンが上）／Ken is as tall as Tom.（同じ）／Ken is not as tall as Tom.（トムが上）。一般動詞は don't / doesn't で否定（He doesn't run as fast as I do.）。
+
+★ ここがポイント：not as 〜 as は「**その高さに達していない**」なので **as のあとが上**。比較級は**上のほうを主語にする形**なので、書きかえでは**主語を入れかえる**。まず「どちらが上か」を日本語で確かめてから書く。`,
       },
     ],
     trapExamples: [

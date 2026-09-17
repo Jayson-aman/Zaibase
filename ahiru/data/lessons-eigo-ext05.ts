@@ -898,6 +898,20 @@ I didn't have to work last Sunday.（先週の日曜は働かなくてよかっ�
 
 ⚠ 注意：和訳問題で don't have to を「してはいけない」と書くと、正解にはならない。逆に must not を「しなくてよい」と書いても同じ。訳を書き終えたら、「禁止か、不要か」を必ず読み返して確認する。`,
       },
+      {
+        heading: 'なぜ must と have to は否定になると意味が正反対になるのか',
+        body: `肯定文の must と have to はどちらも「しなければならない」ですが、**not が打ち消す相手がちがいます**。must not の not は、うしろの動作（go・eat）を打ち消して「行くな・食べるな」という禁止になります。don't have to の not は、have to（しなければならないという義務）を打ち消して「その義務はない」＝「しなくてよい」になります。同じ「〜ない」で終わる日本語に見えても、英語では打ち消す相手がちがうので、意味が正反対になります。
+
+Must I go? の No が No, you don't have to. になるのも同じ理由です。「行かなければなりませんか」に「いいえ」と答えるのは「その義務はない」という意味なので、義務を打ち消す don't have to を使います。No, you mustn't. は「行ってはいけない」という別の答えになります。
+
+■ 確かめのしかた
+①訳を書いたら、**禁止か、不要か**を読み返す。must not→してはいけない（禁止）、don't have to→しなくてよい（不要）。
+②「〜なくてよい」を英語にするとき、must not を選んでいないか。You don't have to come tomorrow.
+③Must I 〜? への答え：Yes, you must. ／ No, you don't have to.（× No, you mustn't.）
+④言いかえで確かめる：禁止＝Don't 〜.／You can't 〜.、不要＝You need not 〜.／There is no need to 〜.。過去の不要は didn't have to。
+
+★ ここがポイント：**must not は動作を、don't have to は義務を打ち消す**ので意味が正反対（禁止／不要）。Must I? の No は「義務がない」ので **don't have to**。訳を書いたら禁止か不要かを必ず読み返す。`,
+      },
     ],
     trapExamples: [
       {

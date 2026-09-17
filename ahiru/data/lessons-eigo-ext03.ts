@@ -2099,6 +2099,20 @@ go to school／go to bed／by bus／at home／have lunch／play tennis／play th
 
 ⚠ 注意：名詞の前に my・your・this・that・数字・some・any があるときは、a も the も付けない。× the my book／× a two books。冠詞を入れる前に、名詞の前に何があるかを必ず見る。`,
       },
+      {
+        heading: 'なぜ三つの手順で冠詞が決まるのか',
+        body: `冠詞は、名詞について**「数えられるか」「一つか」「相手にどれか分かるか」**という三つの情報を相手に伝える語です。a は「数えられるものが一つで、どれでもよい」、the は「相手にどれのことか分かる」、冠詞なしは「数えられない、または複数で、特定していない」。だから、この三つの情報を順に確かめれば、a・the・無冠詞のどれかが一つに決まります。勘で選ぶと、太陽（世界に一つ→相手に分かる→the）を a sun と書いたり、coffee（数えられない）を a coffee と書いたりします。
+
+決まった言い方（play the piano・go to school・by bus）を手順より優先するのは、これらが**理屈ではなく習慣で固まった形**だからです。手順で考え直すとかえって迷うので、形ごと覚えます。名詞の前に my・this・数字があるときに a / the を付けないのは、それらがすでに「どれか」を示しているからです。
+
+■ 確かめのしかた
+①**数えられるか**：water・music・homework・coffee→数えられない→a は使えない。
+②**単数か複数か**：単数→a か the、複数→the か冠詞なし。
+③**相手にどれか分かるか**：すでに出た／その場に一つ／後ろに説明が付く／世界に一つ→the。初めて出す・どれでもよい→単数なら a、複数・不可算なら冠詞なし。
+④名詞の前に my・your・this・数字・some があれば冠詞は付けない。決まった言い方（play the piano／play tennis／go to bed／in the morning）は形ごと覚える。
+
+★ ここがポイント：冠詞は**数えられるか・一つか・相手に分かるか**の三つの情報を伝える語なので、**三つの手順を最後まで進める**と一つに決まる（the sun は「世界に一つ」で the）。決まった言い方は手順より優先。`,
+      },
     ],
     trapExamples: [
       {
@@ -2391,6 +2405,20 @@ I stayed at my uncle’s.（おじの家に泊まった）
 ※ 後ろの office や house が省略された形である。
 
 ★ ポイント：「生き物なら ’s、物なら of」が原則。ただし時を表す語（today’s, this year’s）は例外的に ’s を使う。`,
+      },
+      {
+        heading: 'なぜ所有格に冠詞を重ねず、なぜ物には of を使うのか',
+        body: `my・your・his のような所有格は、「だれのものか」を示すことで、**その名詞がどれのことかをすでに決めています**。a は「どれでもよい一つ」、the は「相手に分かるあれ」を示す語なので、所有格と重ねると「どれでもよくて、私のもの」のように矛盾します。だから a my book とは言えず、両方言いたければ a book of mine と形を変えます。
+
+生き物には 's、物には of が多いのは、**'s が「持ち主」を表す形**だからです。人や動物は持ち主になれますが、車や山は何かを「持つ」わけではないので、the color of the car のように of で「〜の一部・〜に属する」と言います。today's のように時を表す語が 's を使うのは例外として覚えます。its と it's の区別は、**アポストロフィは短縮の印**で、所有格には付かない、と考えれば迷いません。
+
+■ 確かめのしかた
+①所有格（my・his・their）を付けたら、その前に a・the が残っていないか。× a my book。
+②「〜の」が二つある日本語（私の父の車）は、英語でも二つ必要か。my father's car（my→father、father's→car）。
+③人・動物→'s（Ken's book、the dog's name）。複数の -s で終わる語→' だけ（the students' room）。-s で終わらない複数→'s（children's books）。物→of（the top of the mountain）。
+④its（それの）と it's（it is）を文に入れて確かめる。The dog wagged its tail.（それの）／It's cold.（it is）。
+
+★ ここがポイント：所有格は**どれのことかをすでに決めている**ので冠詞を重ねない。**'s は持ち主の形**なので生き物に使い、物は of。アポストロフィは短縮の印なので所有格の its には付かない。`,
       },
     ],
     trapExamples: [
@@ -3066,6 +3094,20 @@ person（1人） → two people（2人）
 police officer（警察官1人） → three police officers（警察官3人）
 family（1家族） → two families（2家族）
 それぞれ、数えるときにどの語を使うかを確かめておく。`,
+      },
+      {
+        heading: 'なぜ family は単数で、people は複数なのか',
+        body: `family・team・class は、何人かの人を**ひとまとまりとして見た名前**です。まとまりが一つなら単数なので My family is large. と is を使い、まとまりが二つ以上（ten families）ならふつうに複数形にします。「私の家族は5人です」を My family is five. と言えないのは、family は「まとまり」であって「人数」ではないからで、人数を言うなら There are five people in my family. と人（people）を数えます。
+
+people は形に -s がありませんが、**person の複数にあたる語**で、それ自体が「人々」という複数の意味を持っています。だから動詞は are / were で、-s を付けると「諸民族」という別の語になります。police も「警察官たち」を表す語で複数あつかいです。警察官一人は a police officer と言います。形に -s があるかどうかではなく、その語が何を表しているかで単複が決まります。
+
+■ 確かめのしかた
+①family・team・class・group・club は**まとまり一つ→is / has**。まとまりが二つ以上→families・teams。
+②人数を言うときは people を数える：There are five people in my family. ／ I have a family of five.
+③people・police は**-s が無くても複数あつかい**：Many people were there. ／ The police are coming.
+④× many peoples（諸民族の意味になる）、× a police（→a police officer）。person（1人）→two people（2人）と数える。
+
+★ ここがポイント：family は**まとまりの名前**なので一つなら単数、people は**person の複数にあたる語**なので -s が無くても複数。形の -s ではなく**その語が何を表すか**で動詞を決める。`,
       },
     ],
     trapExamples: [
