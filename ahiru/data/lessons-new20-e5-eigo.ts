@@ -1027,6 +1027,20 @@ tooやalsoが出てきたときは、直前に述べられた人物と同じ動�
 ■ グラフ読解のコツ
 このタイプの読解問題では、「一番多い項目」「一番少ない項目」「2位の項目」「全体の何割か」という4つの角度から質問されることが多いです。文章中に出てくる数字と項目名を丁寧にメモしながら読み、the most popular（最も人気）とthe second most popular（2番目に人気）を取りちがえないように注意しましょう。`,
       },
+      {
+        heading: 'なぜ人数・順位・割合の三つの言い方を分けて覚えるのか',
+        body: `アンケートの結果は、**人数**（Ten students like math the best.）、**順位**（Soccer is the most popular.／The second most popular is science.）、**割合**（Half of the students 〜／Most students 〜／A few students 〜）の三つの言い方で発表されます。設問もこの三つの角度（一番多い項目・一番少ない項目・2位の項目・全体の何割か）から作られるので、三つの言い方を分けて覚えておくと、どの表現がどの設問に対応するかがすぐ分かります。
+
+the most popular と the second most popular を取りちがえやすいのは、どちらも most を含むからです。second が付けば「2番目」です。グラフや表とセットで出るときは、文の数字（人数）と項目（教科名）を一つずつ対応させながら読みます。
+
+■ 確かめのしかた
+①たずね方：What's your favorite 〇〇?／What 〇〇 do you like the best?／Which 〇〇 do you like the best, A, B, or C?
+②**人数**：〇 students like 〜 the best.／〇 students chose 〜.／Nobody chose 〜.
+③**順位**：the most popular（1位）、the second most popular（2位）、comes in third place（3位）。second を見落としていないか。
+④**割合**：half of（半分）、most（ほとんど）、a few（少数）、no one（だれも〜ない）。数字と項目名をメモしながら読む。
+
+★ ここがポイント：結果は**人数・順位・割合**の三つの言い方で発表され、設問もその三つから出る。**the most popular（1位）と the second most popular（2位）**を取りちがえない。`,
+      },
     ],
   },
   {

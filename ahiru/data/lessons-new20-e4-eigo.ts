@@ -1276,6 +1276,20 @@ B: They are books.（本だよ）
 
 ★ ポイントまとめ：this/that、these/thoseは「近い・遠い」と「単数・複数」の2つの区別が同時に関わってくる。表にして整理しながら覚えると混乱しにくい。`,
       },
+      {
+        heading: 'なぜ this と that、these と those を分けるのか',
+        body: `英語では、ものを指すときに**話し手からの距離**と**数**の二つを言葉で区別します。近くにあれば this、離れていれば that。日本語の「これ・あれ」と同じ区別です。さらに、指すものが二つ以上なら these・those と形が変わり、答えの It's 〜. も They are 〜. に変わります。日本語では「これ」と「これら」をあまり使い分けませんが、英語では単数と複数で文の形が全部変わるので、対応表で整理しておきます。
+
+What's が What is の短縮形なのは、会話では短く言うほうが自然だからです。答えの a と an は、次の語が母音（a・i・u・e・o の音）で始まるかどうかで決まります（an apple・an orange）。
+
+■ 確かめのしかた
+①指すものが**近いか遠いか**：近い→this／these、遠い→that／those。
+②**一つか二つ以上か**：一つ→What's this?→It's a 〇〇.、二つ以上→What are these?→They are 〇〇s.
+③答えの a／an は次の語の**最初の音**で決める（a pen、an orange）。
+④対応表で確かめる：this⇔these、that⇔those、It's⇔They are。
+
+★ ここがポイント：英語は**距離（this／that）と数（単数／複数）の二つ**を言葉で区別する。**複数になると質問も答えも形が変わる**（What are these?→They are 〜.）。`,
+      },
     ],
     keyPoints: [
       `近くのものは What's this? — It's a/an 〜.`,
@@ -1552,6 +1566,20 @@ Find a friend who can whistle.（口笛をふける友達を見つけよう）�
 ・I can't 〜.：できないことを伝える
 ・Can you 〜?：たずねる（答えはYes, I can. / No, I can't.）
 ・canのあとの動詞は必ず原形のまま`,
+      },
+      {
+        heading: 'なぜ can のあとは原形で、なぜ Can you? に can で答えるのか',
+        body: `can は「〜できる」という意味を動詞に**足す**語（助動詞）です。主語に合わせて形を変える役目は can が引き受けるので、あとの動詞はそのままの形（原形）でよく、He can swim. のように三人称でも s を付けません。s や ing を付けるのは、can が「動詞のかわりに形を担当している」ことを忘れているからです。
+
+たずねる文が Can you swim? と can を主語の前に出す形なのは、be動詞の疑問文（Are you 〜?）と同じ作り方です。答えは、質問に使った can をくり返して Yes, I can. / No, I can't. と言います。can't は cannot の短縮形で、それ自体に打ち消しが入っています。
+
+■ 確かめのしかた
+①can のあとの動詞が**原形**か。He can swim.（× can swims、× can swimming）。
+②たずねる文は **can を主語の前**に：Can you swim?
+③答えは **Yes, I can. / No, I can't.**（質問の can をくり返す）。
+④できないことは I can't 〇〇.、程度は well（I can play soccer well.）、広くたずねるなら What can you do?
+
+★ ここがポイント：can は動詞に「できる」を**足す語**で、形の変化を can が引き受けるので**あとは原形**。たずねるときは can を前に出し、答えは **can をくり返す**。`,
       },
     ],
     keyPoints: [

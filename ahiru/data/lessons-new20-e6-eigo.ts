@@ -723,6 +723,20 @@ My dog, Momo, is smaller than my friend's dog, but she is much smarter. She is t
 
 ★ ポイント：than anyone else（他の誰よりも）、I have ever seen（今まで見た中で）は最上級を強めるときに便利な決まり文句。使いこなせると、比較表現の作文が一段レベルアップする。`,
       },
+      {
+        heading: 'なぜ比較の対象をはっきりさせ、なぜ very で比較級を強められないのか',
+        body: `「兄は背が高い」だけでは、どれくらい高いのかが読み手に伝わりません。「私より高い」「家族の中で一番高い」と**比べる相手**を示してはじめて、兄の背の高さが具体的に分かります。比較級は二つを比べる形（taller than）、最上級は三つ以上の中で一番を言う形（the tallest in）、as 〜 as は同じくらいを言う形で、比べる相手や範囲（than me・in my family・of the three）をそろえて書きます。
+
+very が比較級を強められないのは、very が「程度が高い」ことを表す語で、比較級が表す**二つの差**には付けられないからです。差を強めるには「差が大きい」と言う much・a lot・far を使います。than のあとに代名詞を置くとき、書き言葉では than I（am）、会話では than me が一般的で、入試では than me でも問題ないことが多いですが、文法問題では than I の形も覚えておきます。
+
+■ 確かめのしかた
+①二つ→**比較級＋than**、三つ以上→**the＋最上級＋in／of**、同じくらい→**as 〜 as**。比べる相手・範囲が書かれているか。
+②つづり：funny→funniest（y を i に）、good／well→best（不規則）。
+③強めるときは much／a lot／far＋比較級（much taller）。× very taller。
+④最上級を強める決まり文句：than anyone else（他の誰よりも）、I have ever seen（今まで見た中で）。見た目・性格・特技をそれぞれ比較で言うと紹介文に具体性が出る。
+
+★ ここがポイント：比較表現は**比べる相手や範囲をそろえて書く**ことで具体性が出る。very は程度の語なので**差の形（比較級）には much／a lot／far**。`,
+      },
     ],
   },
 
@@ -1073,6 +1087,20 @@ Officer: Enjoy your stay.
 （審査官：パスポートを見せていただけますか。　旅行者：はい、どうぞ。　審査官：訪問の目的は何ですか。　旅行者：観光です。美術館や公園を訪れたいと思っています。　審査官：この国にはどのくらい滞在しますか。　旅行者：5日間です。　審査官：良い滞在を。）
 
 ★ ポイント：入国審査では What's the purpose of your visit?（目的）と How long will you stay?（期間）の2つがほぼ必ず聞かれる。この2つへの答え方さえ準備しておけば、リスニング問題でも慌てずに対応できる。`,
+      },
+      {
+        heading: 'なぜ旅行英語は場面ごとに覚えると得点しやすいのか',
+        body: `空港や機内の会話は、**聞かれることがほぼ決まっています**。チェックインでは「パスポートとチケット」「窓側か通路側か」「預ける荷物はいくつか」、機内では「飲み物はいかがですか」「シートベルトを締めて」、入国審査では「訪問の目的」「滞在期間」「滞在先」。決まった質問には決まった答え方があるので、場面順にセットで覚えれば、リスニングで知らない語が出ても、どの場面かが分かれば内容を推測できます。
+
+Would you like 〜? が Do you want 〜? よりていねいなのは、would が「もしよろしければ」というやわらかさを足す語だからで、接客の場面ではこちらが使われます。check in は「チェックインする・（荷物を）預ける」の動詞句、check-in（ハイフンあり）は名詞で、形で区別します。
+
+■ 確かめのしかた
+①**チェックイン**：May I see your passport and ticket?→Here you are.／Window or aisle seat?／How many bags are you checking in?→Just one.
+②**機内**：Would you like something to drink?→〇〇, please.／Please fasten your seatbelt.／We will be landing soon.
+③**入国審査**：What's the purpose of your visit?→Sightseeing.／I'm here on business.、How long will you stay?→For one week.、Where will you be staying?→At a hotel.
+④場面が分かれば、質問の中身を先に予想して聞く。Would you like 〜? は「いかがですか」（すすめる）。
+
+★ ここがポイント：旅行英語は**聞かれることが場面ごとに決まっている**ので、場面順に質問と答えをセットで覚える。入国審査は**目的と期間**の二つがほぼ必ず聞かれる。`,
       },
     ],
   },
