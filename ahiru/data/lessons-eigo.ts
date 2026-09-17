@@ -2213,15 +2213,15 @@ be動詞を使った特別な形。「（場所に）〜がある／いる」を
 ★ 答え方：mine（私の）／ yours（あなたの）／ Tom's（トムの）など所有を表す語。
 
 ■ 疑問詞のまとめ表
-　疑問詞／意味／答えの例
-| what | なに | It's a pen. |
-　who／だれ／She is my sister.
-　where … だれはどこ／She is my sister.はIn Osaka.
-　when … だれはいつ／She is my sister.はOn Sunday.
-| why | なぜ | Because it's fun. |
-| how | どうやって/どのくらい | By bus. / I'm fine. |
-　which／どちら／This one.
-| whose | だれの | It's mine. |
+（疑問詞／意味／答えの例）
+・what … なに／It's a pen.
+・who … だれ／She is my sister.
+・where … どこ／In Osaka.
+・when … いつ／On Sunday.
+・why … なぜ／Because it's fun.
+・how … どうやって/どのくらい／By bus. / I'm fine.
+・which … どちら／This one.
+・whose … だれの／It's mine.
 
 ⚠ 注意：疑問詞疑問文には Yes/No で答えず、たずねられた内容を答える。これが最重要ルール。`,
       },
@@ -2769,10 +2769,10 @@ spring（春）, summer（夏）, fall / autumn（秋）, winter（冬）
 ・お礼：Thank you. — You're welcome.
 
 ■ ていねいさの段階（同じ内容でも表現で印象が変わる）
-　カジュアル／ふつう／ていねい
-　Open the window. … ふつうはCan you open the window?／ていねいはCould you open the window?
-| I want water. | I'd like water. | I'd like some water, please. |
-　What?／Pardon?／I beg your pardon?
+（カジュアル／ふつう／ていねい）
+・Open the window. … Can you open the window?／Could you open the window?
+・I want water. … I'd like water.／I'd like some water, please.
+・What? … Pardon?／I beg your pardon?
 ★ 入試のリスニング・会話問題では、場面（店・電話・食事・道案内）と、ていねいさのレベルを聞き分ける力が問われる。決まり文句をかたまりで覚えておくと即得点につながる。`,
         maxOnly: true,
       },
@@ -4838,11 +4838,11 @@ Bを特に強調する表現。動詞はBに一致させる。
 例）His sisters as well as Tom are coming.（トムだけでなく彼の姉妹たちも来る）※こちらは動詞をB（先に来る語）に一致させる
 
 ■ 相関接続詞の動詞の一致まとめ
-　相関接続詞／意味／動詞の一致
-　both A and B … 意味はAとB両方／動詞の一致は常に複数
-　either A or B … 意味はAかBどちらか／動詞の一致はBに一致
-　neither A nor B … 意味はAもBも〜ない／動詞の一致はBに一致
-| not only A but also B | AだけでなくBも | Bに一致 |`,
+（相関接続詞／意味／動詞の一致）
+・both A and B … AとB両方／常に複数
+・either A or B … AかBどちらか／Bに一致
+・neither A nor B … AもBも〜ない／Bに一致
+・not only A but also B … AだけでなくBも／Bに一致`,
       },
       {
         heading: '3. 等位接続詞と並列の原則（品詞・時制をそろえる）',

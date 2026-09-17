@@ -1095,6 +1095,20 @@ be(was/were―been)／begin(began―begun)／break(broke―broken)／bring(broug
 
 ⚠ 注意：受動態や現在完了で「過去形」を書いてしまう誤りが非常に多い。× This letter was wrote by Ken. は誤り。was の後ろは過去分詞 written である。過去形と過去分詞が違う語（write / wrote / written、take / took / taken、see / saw / seen）は特に注意する。`,
       },
+      {
+        heading: 'なぜ「直前の1語」で変化先が決まるのか',
+        body: `（　）に動詞が与えられたとき、変化先は三単現・過去形・過去分詞・-ing・原形の5つしかありません。しかもどれになるかは、**直前の語が何を要求しているか**で決まります。be動詞は過去分詞（受動態）か -ing（進行形）を、have／has は過去分詞（現在完了）を、助動詞・to・do／does／did は原形を、前置詞は動名詞（-ing）を要求します。直前に名詞があれば、それは文の動詞ではなく後置修飾の分詞（〜している→-ing、〜された→過去分詞）です。だから（　）の直前の1語を見れば候補は2つ以下に絞れます。
+
+後置修飾の正答率が低いのは、名詞の直後に動詞が来ている形を「文の動詞」と読んでしまうからです。Look at the girl running over there. の文の動詞は Look で、running は the girl を説明しているだけです。名詞の直後に動詞が現れたら後置修飾を疑います。
+
+■ 確かめのしかた
+①（　）の**直前の語**を見る：be動詞→過去分詞か -ing／have・has→過去分詞／助動詞・to・do→原形／前置詞→-ing／名詞→後置修飾の分詞。
+②時を表す語（yesterday・last・ago→過去形、every→現在形＋三単現）と主語の数を確かめる。
+③受動態・現在完了に過去形を書いていないか（× was wrote→written、× have know→known）。書き分けが要る不規則動詞（write／wrote／written、take／took／taken、see／saw／seen）。
+④形容詞なら than→比較級、the＋of／in→最上級、動詞を修飾→-ly。書いたあと主語との一致（三単現・単複）を確認。
+
+★ ここがポイント：変化先は**直前の語が要求する形**で決まる（be→過去分詞・-ing、have→過去分詞、助動詞→原形、前置詞→-ing、名詞→後置修飾）。名詞の直後の動詞は文の動詞ではない。`,
+      },
     ],
     trapExamples: [
       {

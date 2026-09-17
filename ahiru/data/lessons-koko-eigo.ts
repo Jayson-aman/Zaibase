@@ -1454,45 +1454,635 @@ nation→national→nationally→nationality のように、一つの語幹か�
       （もっと勉強していたら、試験に合格していたのに）
       → 現実：勉強せず、合格しなかった
 
-+----------------+----------------------------+----------------------------+
-（仮定法過去／過去形（were 等）／would/could + 原形）
-・■ if を使わない仮定表現 Without your help, I couldn't have finished it. （あなたの助けがなければ、終えられなかっただろう） = If it had not been for your help, … With a little more time, I could do better. （もう少し時間があれば、もっとうまくできるのに） ⚠注意：仮定法過去完了の主節は "would have + 過去分詞"。 × would passed × would have pass などの語順・形のミスに注意。`, }, { heading: '3. 間接疑問文（疑問詞の後は肯定文の語順）', level: 'oyo', body: `■ 間接疑問文とは 疑問文が文の一部（目的語など）に組み込まれた形。 例）Where does he live?（彼はどこに住んでいますか）＝独立した疑問文 I don't know where he lives.（彼がどこに住んでいるか知らない）＝間接疑問 ■ 最重要ルール：疑問詞の後ろは「肯定文の語順」に戻す 直接疑問文では〈疑問詞＋do/does/did＋主語＋動詞〉だが、 間接疑問文では〈疑問詞＋主語＋動詞〉の語順になり、do/does/did は消える。 Where does he live?     → I know where he lives. What time is it?        → Do you know what time it is? When did she come?      → Tell me when she came. ★ポイント：三単現の s や過去形は動詞側に残る。 Where does he live? の does は消えるが、live → lives と s が復活する。 ⚠注意：× I know where does he live.（誤り。do/does/did を残さない） ■ Yes/No 疑問文の間接疑問（if / whether を使う） 疑問詞がない疑問文を組み込むときは if または whether（〜かどうか）を使う。 Is he busy? → I don't know if he is busy. Did she call? → Tell me whether she called (or not). ★ポイント：whether は "whether or not" の形や、文頭・to不定詞の前でも使える。 if は主に動詞の目的語の位置でのみ使う。 ■ 間接疑問を導く主な表現 I don't know 〜（〜を知らない） Do you know 〜?（〜を知っていますか） Tell me 〜（〜を教えて） I'm not sure 〜（〜か確信がない） Can you tell me 〜?（〜を教えてもらえますか） ■ 疑問詞が主語の場合（語順はそのまま） 疑問詞自体が主語のときは、もともと〈疑問詞＋動詞〉なので語順は変わらない。 Who broke the window? → Do you know who broke the window? What happened? → Tell me what happened. ■ 丁寧な依頼としての間接疑問（会話頻出） Could you tell me how I can get to the station? （駅への行き方を教えていただけますか） Do you know where the restroom is? （お手洗いがどこにあるかご存知ですか）`, }, { heading: '4. 話法の転換と入試問題例', level: 'nyushi', body: `■ 直接話法と間接話法 直接話法：発言をそのまま "…" で引用する。 He said, "I am tired." 間接話法：発言を that 節などに直して伝える。 He said (that) he was tired. ■ 平叙文の話法転換4ステップ ① コンマと引用符 " " を取り、that でつなぐ（that は省略可） ② 代名詞を話し手の立場に合わせて変える（I → he など） ③ 時制の一致：伝達動詞が過去なら、被伝達部の動詞も1つ過去にずらす ④ 副詞・指示語を変える（下の対応表）
-　直接話法／間接話法／直接話法／間接話法
-（now／then／today／that day）
-・例）She said, "I will meet you here tomorrow." → She said that she would meet me there the next day. ■ 疑問文の話法転換 伝達動詞を ask に変え、間接疑問（疑問詞＋主語＋動詞）の語順にする。 疑問詞あり：He said to me, "Where do you live?" → He asked me where I lived. Yes/No：She said to me, "Are you busy?" → She asked me if I was busy. ■ 命令文の話法転換 伝達動詞を tell（命令）／ask（依頼）に変え、to不定詞を使う。 She said to me, "Open the door." → She told me to open the door. 否定命令は not to 〜： He said, "Don't be late." → He told me not to be late. 📝入試問題例 【問1】日本語に合うように（　）に適語を入れなさい。 「もし私が鳥なら、あなたのところへ飛んでいくのに。」 If I (　　) a bird, I (　　) fly to you. → 答え：were / would 【問2】次の2文をほぼ同じ意味にしなさい。 I'm sorry I can't play the piano well. = I (　　) I (　　) play the piano well. → 答え：wish / could 【問3】間接疑問文に書き換えなさい。 Where does she come from? （Do you know で始める） → 答え：Do you know where she comes from? 【問4】次の文を間接話法に直しなさい。 He said to me, "I visited Kyoto yesterday." → 答え：He told me that he had visited Kyoto the day before. 【問5】（　）に入る最も適切なものを選びなさい。 If I had left home earlier, I (　　) the train. ① catch  ② will catch  ③ would have caught  ④ have caught → 答え：③（過去の事実に反する仮定＝仮定法過去完了）`, }, ], }, { id: 'koko_eigo_08_conjunction', subject: 'eigo', examType: 'koko', order: 8, studyPeriod: '中2', title: '接続詞と文構造', description: '接続詞と文構造を理解して複雑な文を正確に読み書きする', keyPoints: [ `等位接続詞 and/but/or/so、相関接続詞 both A and B／either A or B／not only A but also B／neither A nor B`, `従属接続詞：時(when/while/until)／条件(if/unless)／理由(because/since/as)／譲歩(though/although)`, `that節は名詞節「〜ということ」。so＋形容詞/副詞＋that…「とても〜なので…」、such＋(a)＋名詞＋that`, `時・条件を表す副詞節では未来のことでも現在形を使う`, `重文（等位接続詞で結ぶ）と複文（従属節を含む）を見分け、主節と従属節を把握する`, `not only A but also B が主語のときは動詞をB（後ろ）に一致させる`, ], sections: [ { heading: '1. 等位接続詞と相関接続詞', level: 'kiso', body: `■ 等位接続詞（対等なものをつなぐ） 語と語、句と句、節と節を対等な関係で結ぶ接続詞。
-　接続詞／意味／例文
-（and／そして・〜と／Tom and I are friends.）
-・★ポイント：and / but / or は前後で「同じ品詞・同じ形」をつなぐ（並列の一致）。 I like reading books and playing games.（動名詞＋動名詞で揃える） ⚠注意：× I like reading books and to play games.（形が不揃いで誤り） ■ 命令文 + and / or（入試頻出） 命令文, and 〜（…しなさい、そうすれば〜） Hurry up, and you'll catch the bus.（急げば間に合う） 命令文, or 〜（…しなさい、さもないと〜） Hurry up, or you'll miss the bus.（急がないと乗り遅れる） ★ポイント：and＝「そうすれば（良い結果）」、or＝「さもないと（悪い結果）」。 If you hurry up, you'll catch the bus. と書き換えられる。 ■ 相関接続詞（ペアで使う接続詞） both A and B（AとBの両方）→ 動詞は複数扱い Both Ken and Tom are kind. not only A but also B（AだけでなくBも） She is not only smart but also kind. either A or B（AかBのどちらか）→ 動詞はBに一致 Either you or I am wrong. neither A nor B（AもBも〜ない）→ 動詞はBに一致 Neither he nor I was there. not A but B（AではなくB） He is not a teacher but a doctor. ⚠注意：主語に相関接続詞が来ると動詞の数の一致がややこしい。
-・both A and B は常に複数。either/neither/not only … but も基本はBに合わせる。`, }, { heading: '2. 従属接続詞（時・条件・理由・譲歩）', level: 'oyo', body: `■ 従属接続詞とは 主節に対して従属節（副詞節）を導く接続詞。「いつ・なぜ・もし・〜だけれど」などを表す。 ■ 時を表す接続詞 when（〜するとき）: When I got home, my mother was cooking. while（〜する間）: While I was reading, he was sleeping. before（〜する前に）/ after（〜した後に） as soon as（〜するとすぐに）: As soon as she saw me, she smiled. until / till（〜するまで（ずっと））: Wait here until I come back. since（〜して以来）: It has been raining since I got up. ★ポイント：時・条件を表す副詞節の中では未来のことも現在形（第1章の復習）。 I will call you when I get there.（× when I will get there） ■ 条件を表す接続詞 if（もし〜なら）: If you are free, let's go out. unless（〜でない限り・〜しなければ）: You'll fail unless you study.
-・★ unless = if … not。Unless it rains（＝If it doesn't rain） as long as（〜する限り・〜さえすれば）: You can stay as long as you are quiet. ■ 理由を表す接続詞 because（〜だから）: I stayed home because I was sick. since（〜だから）: Since it was late, we went home. as（〜なので）: As it was raining, we canceled the trip. ⚠注意：because は「新情報の理由（相手が知らない理由）」、 since / as は「既知・当然の理由」を述べるときに使う傾向がある。 Why 〜? への答えは必ず because を使う（Since で答えない）。 ■ 譲歩を表す接続詞 although / though（〜だけれども） Although it was cold, he went out without a coat. even if（たとえ〜でも） Even if it rains, we will go. even though（〜であるにもかかわらず・事実） Even though he was tired, he kept working. ★ポイント：日本語につられて but を重ねない。 ⚠注意：× Although it was cold, but he went out.（although と but の重複は誤り） 〇 Although it was cold, he went out. / It was cold, but he went out.`, }, { heading: '3. that 節・so〜that・such〜that', level: 'oyo', body: `■ 名詞節を導く that（〜ということ） that 節は「〜ということ」という意味のカタマリ（名詞節）を作り、 動詞の目的語・主語・補語になる。 目的語：I think that he is honest.（彼は正直だと思う） 主語：That he passed the exam is true.（彼が合格したことは本当だ） → 形式主語 It を使うのが普通：It is true that he passed the exam. 補語：The problem is that we have no time. ★ポイント：think / know / believe / hope / say などの後の that は省略できる。 I think (that) he is right. ■ so + 形容詞/副詞 + that …（とても〜なので…） He is so kind that everyone likes him. （彼はとても親切なので、みんなに好かれる） I was so tired that I couldn't walk. （とても疲れていたので歩けなかった） ■ such + (a/an) + 形容詞 + 名詞 + that … so と意味は同じだが、後ろに「名詞」が来るときは such を使う。 It was such a beautiful day that we went for a walk. （とても良い天気だったので散歩に出かけた）
-　so  + 形容詞・副詞／so tired / so kindly
-　such + (a) 形容詞+名詞 … so tired / so kindlyはsuch a nice day / such kind men
-（★ポイント：so … that は「too … to 〜」で書き換えられる場合がある。）
-・意味 … 可算名詞に／不可算名詞に
-　たくさんの／many／much
-　少しある（肯定） … manyはa few／muchはa little
-　ほとんどない … manyはfew／muchはlittle
-　たくさん（両方） … manyはa lot of / lots of / plenty of
-（例）many books / much water / a few friends / a little time）
-・人称 … 主格／所有格／目的格／所有代名詞
-　私／I／my／me／mine
-　あなた … Iはyou／myはyour／meはyou／mineはyours
-　彼 … Iはhe／myはhis／meはhim／mineはhis
-　彼女 … Iはshe／myはher／meはher／mineはhers
-　それ … Iはit／myはits／meはit／mineは―
-　私たち … Iはwe／myはour／meはus／mineはours
-　彼ら … Iはthey／myはtheir／meはthem／mineはtheirs
-（⚠注意：its（それの・所有格）と it's（it is / it has の短縮）を混同しない。）
-・疑問詞 … 尋ねる内容／例文
-　what／何／What is this?
-　who … 何は誰／What is this?はWho is that man?
-　whose … 何は誰の／What is this?はWhose bag is this?
-　which … 何はどれ・どちら／What is this?はWhich do you like, tea or coffee?
-　when … 何はいつ／What is this?はWhen did you come?
-　where … 何はどこ／What is this?はWhere do you live?
-　why … 何はなぜ／What is this?はWhy are you late?
-　how … 何はどのように／What is this?はHow do you go to school?
-（■ 疑問詞が主語になる疑問文（do/does を使わない））
+（種類／if 節／主節）
+・仮定法過去 … 過去形（were 等）／would/could + 原形
+・仮定法過去完了 … had + 過去分詞／would/could + have + 過去分詞
+
+■ if を使わない仮定表現
+  Without your help, I couldn't have finished it.
+  （あなたの助けがなければ、終えられなかっただろう）
+  = If it had not been for your help, …
+  With a little more time, I could do better.
+  （もう少し時間があれば、もっとうまくできるのに）
+
+⚠注意：仮定法過去完了の主節は "would have + 過去分詞"。
+  × would passed × would have pass などの語順・形のミスに注意。`,
+      },
+      {
+        heading: '3. 間接疑問文（疑問詞の後は肯定文の語順）',
+        level: 'oyo',
+        body: `■ 間接疑問文とは
+疑問文が文の一部（目的語など）に組み込まれた形。
+  例）Where does he live?（彼はどこに住んでいますか）＝独立した疑問文
+      I don't know where he lives.（彼がどこに住んでいるか知らない）＝間接疑問
+
+■ 最重要ルール：疑問詞の後ろは「肯定文の語順」に戻す
+直接疑問文では〈疑問詞＋do/does/did＋主語＋動詞〉だが、
+間接疑問文では〈疑問詞＋主語＋動詞〉の語順になり、do/does/did は消える。
+
+  Where does he live?     → I know where he lives.
+  What time is it?        → Do you know what time it is?
+  When did she come?      → Tell me when she came.
+
+★ポイント：三単現の s や過去形は動詞側に残る。
+  Where does he live? の does は消えるが、live → lives と s が復活する。
+  ⚠注意：× I know where does he live.（誤り。do/does/did を残さない）
+
+■ Yes/No 疑問文の間接疑問（if / whether を使う）
+疑問詞がない疑問文を組み込むときは if または whether（〜かどうか）を使う。
+  Is he busy? → I don't know if he is busy.
+  Did she call? → Tell me whether she called (or not).
+
+  ★ポイント：whether は "whether or not" の形や、文頭・to不定詞の前でも使える。
+    if は主に動詞の目的語の位置でのみ使う。
+
+■ 間接疑問を導く主な表現
+  I don't know 〜（〜を知らない）
+  Do you know 〜?（〜を知っていますか）
+  Tell me 〜（〜を教えて）
+  I'm not sure 〜（〜か確信がない）
+  Can you tell me 〜?（〜を教えてもらえますか）
+
+■ 疑問詞が主語の場合（語順はそのまま）
+疑問詞自体が主語のときは、もともと〈疑問詞＋動詞〉なので語順は変わらない。
+  Who broke the window? → Do you know who broke the window?
+  What happened? → Tell me what happened.
+
+■ 丁寧な依頼としての間接疑問（会話頻出）
+  Could you tell me how I can get to the station?
+  （駅への行き方を教えていただけますか）
+  Do you know where the restroom is?
+  （お手洗いがどこにあるかご存知ですか）`,
+      },
+      {
+        heading: '4. 話法の転換と入試問題例',
+        level: 'nyushi',
+        body: `■ 直接話法と間接話法
+  直接話法：発言をそのまま "…" で引用する。
+    He said, "I am tired."
+  間接話法：発言を that 節などに直して伝える。
+    He said (that) he was tired.
+
+■ 平叙文の話法転換4ステップ
+  ① コンマと引用符 " " を取り、that でつなぐ（that は省略可）
+  ② 代名詞を話し手の立場に合わせて変える（I → he など）
+  ③ 時制の一致：伝達動詞が過去なら、被伝達部の動詞も1つ過去にずらす
+  ④ 副詞・指示語を変える（下の対応表）
+
+（直接話法／間接話法）
+・now … then
+・today … that day
+・ago … before
+・tomorrow … the next day
+・this … that
+・yesterday … the day before
+・here … there
+・tonight … that night
+
+  例）She said, "I will meet you here tomorrow."
+      → She said that she would meet me there the next day.
+
+■ 疑問文の話法転換
+伝達動詞を ask に変え、間接疑問（疑問詞＋主語＋動詞）の語順にする。
+  疑問詞あり：He said to me, "Where do you live?"
+    → He asked me where I lived.
+  Yes/No：She said to me, "Are you busy?"
+    → She asked me if I was busy.
+
+■ 命令文の話法転換
+伝達動詞を tell（命令）／ask（依頼）に変え、to不定詞を使う。
+  She said to me, "Open the door."
+    → She told me to open the door.
+  否定命令は not to 〜：
+  He said, "Don't be late." → He told me not to be late.
+
+📝入試問題例
+
+【問1】日本語に合うように（　）に適語を入れなさい。
+「もし私が鳥なら、あなたのところへ飛んでいくのに。」
+If I (　　) a bird, I (　　) fly to you.
+→ 答え：were / would
+
+【問2】次の2文をほぼ同じ意味にしなさい。
+I'm sorry I can't play the piano well.
+= I (　　) I (　　) play the piano well.
+→ 答え：wish / could
+
+【問3】間接疑問文に書き換えなさい。
+Where does she come from? （Do you know で始める）
+→ 答え：Do you know where she comes from?
+
+【問4】次の文を間接話法に直しなさい。
+He said to me, "I visited Kyoto yesterday."
+→ 答え：He told me that he had visited Kyoto the day before.
+
+【問5】（　）に入る最も適切なものを選びなさい。
+If I had left home earlier, I (　　) the train.
+① catch  ② will catch  ③ would have caught  ④ have caught
+→ 答え：③（過去の事実に反する仮定＝仮定法過去完了）`,
+      },
+    ],
+  },
+
+  {
+    id: 'koko_eigo_08_conjunction',
+    subject: 'eigo',
+    examType: 'koko',
+    order: 8,
+    studyPeriod: '中2',
+    title: '接続詞と文構造',
+    description: '接続詞と文構造を理解して複雑な文を正確に読み書きする',
+    keyPoints: [
+      `等位接続詞 and/but/or/so、相関接続詞 both A and B／either A or B／not only A but also B／neither A nor B`,
+      `従属接続詞：時(when/while/until)／条件(if/unless)／理由(because/since/as)／譲歩(though/although)`,
+      `that節は名詞節「〜ということ」。so＋形容詞/副詞＋that…「とても〜なので…」、such＋(a)＋名詞＋that`,
+      `時・条件を表す副詞節では未来のことでも現在形を使う`,
+      `重文（等位接続詞で結ぶ）と複文（従属節を含む）を見分け、主節と従属節を把握する`,
+      `not only A but also B が主語のときは動詞をB（後ろ）に一致させる`,
+    ],
+    sections: [
+      {
+        heading: '1. 等位接続詞と相関接続詞',
+        level: 'kiso',
+        body: `■ 等位接続詞（対等なものをつなぐ）
+語と語、句と句、節と節を対等な関係で結ぶ接続詞。
+
+（接続詞／意味／例文）
+・and … そして・〜と／Tom and I are friends.
+・but … しかし／It's small but useful.
+・or … または／Tea or coffee?
+・so … だから／I was tired, so I went to bed.
+・for … というのは／He stayed home, for he was sick.
+
+★ポイント：and / but / or は前後で「同じ品詞・同じ形」をつなぐ（並列の一致）。
+  I like reading books and playing games.（動名詞＋動名詞で揃える）
+  ⚠注意：× I like reading books and to play games.（形が不揃いで誤り）
+
+■ 命令文 + and / or（入試頻出）
+  命令文, and 〜（…しなさい、そうすれば〜）
+    Hurry up, and you'll catch the bus.（急げば間に合う）
+  命令文, or 〜（…しなさい、さもないと〜）
+    Hurry up, or you'll miss the bus.（急がないと乗り遅れる）
+
+★ポイント：and＝「そうすれば（良い結果）」、or＝「さもないと（悪い結果）」。
+  If you hurry up, you'll catch the bus. と書き換えられる。
+
+■ 相関接続詞（ペアで使う接続詞）
+  both A and B（AとBの両方）→ 動詞は複数扱い
+    Both Ken and Tom are kind.
+  not only A but also B（AだけでなくBも）
+    She is not only smart but also kind.
+  either A or B（AかBのどちらか）→ 動詞はBに一致
+    Either you or I am wrong.
+  neither A nor B（AもBも〜ない）→ 動詞はBに一致
+    Neither he nor I was there.
+  not A but B（AではなくB）
+    He is not a teacher but a doctor.
+
+⚠注意：主語に相関接続詞が来ると動詞の数の一致がややこしい。
+  both A and B は常に複数。either/neither/not only … but も基本はBに合わせる。`,
+      },
+      {
+        heading: '2. 従属接続詞（時・条件・理由・譲歩）',
+        level: 'oyo',
+        body: `■ 従属接続詞とは
+主節に対して従属節（副詞節）を導く接続詞。「いつ・なぜ・もし・〜だけれど」などを表す。
+
+■ 時を表す接続詞
+  when（〜するとき）: When I got home, my mother was cooking.
+  while（〜する間）: While I was reading, he was sleeping.
+  before（〜する前に）/ after（〜した後に）
+  as soon as（〜するとすぐに）: As soon as she saw me, she smiled.
+  until / till（〜するまで（ずっと））: Wait here until I come back.
+  since（〜して以来）: It has been raining since I got up.
+
+★ポイント：時・条件を表す副詞節の中では未来のことも現在形（第1章の復習）。
+  I will call you when I get there.（× when I will get there）
+
+■ 条件を表す接続詞
+  if（もし〜なら）: If you are free, let's go out.
+  unless（〜でない限り・〜しなければ）: You'll fail unless you study.
+    ★ unless = if … not。Unless it rains（＝If it doesn't rain）
+  as long as（〜する限り・〜さえすれば）: You can stay as long as you are quiet.
+
+■ 理由を表す接続詞
+  because（〜だから）: I stayed home because I was sick.
+  since（〜だから）: Since it was late, we went home.
+  as（〜なので）: As it was raining, we canceled the trip.
+
+  ⚠注意：because は「新情報の理由（相手が知らない理由）」、
+    since / as は「既知・当然の理由」を述べるときに使う傾向がある。
+    Why 〜? への答えは必ず because を使う（Since で答えない）。
+
+■ 譲歩を表す接続詞
+  although / though（〜だけれども）
+    Although it was cold, he went out without a coat.
+  even if（たとえ〜でも）
+    Even if it rains, we will go.
+  even though（〜であるにもかかわらず・事実）
+    Even though he was tired, he kept working.
+
+★ポイント：日本語につられて but を重ねない。
+  ⚠注意：× Although it was cold, but he went out.（although と but の重複は誤り）
+  〇 Although it was cold, he went out. / It was cold, but he went out.`,
+      },
+      {
+        heading: '3. that 節・so〜that・such〜that',
+        level: 'oyo',
+        body: `■ 名詞節を導く that（〜ということ）
+that 節は「〜ということ」という意味のカタマリ（名詞節）を作り、
+動詞の目的語・主語・補語になる。
+
+  目的語：I think that he is honest.（彼は正直だと思う）
+  主語：That he passed the exam is true.（彼が合格したことは本当だ）
+    → 形式主語 It を使うのが普通：It is true that he passed the exam.
+  補語：The problem is that we have no time.
+
+★ポイント：think / know / believe / hope / say などの後の that は省略できる。
+  I think (that) he is right.
+
+■ so + 形容詞/副詞 + that …（とても〜なので…）
+  He is so kind that everyone likes him.
+  （彼はとても親切なので、みんなに好かれる）
+  I was so tired that I couldn't walk.
+  （とても疲れていたので歩けなかった）
+
+■ such + (a/an) + 形容詞 + 名詞 + that …
+so と意味は同じだが、後ろに「名詞」が来るときは such を使う。
+  It was such a beautiful day that we went for a walk.
+  （とても良い天気だったので散歩に出かけた）
+
+（表現／例）
+・so + 形容詞・副詞 … so tired / so kindly
+・such + (a) 形容詞 + 名詞 … such a nice day / such kind men
+
+★ポイント：so … that は「too … to 〜」で書き換えられる場合がある。
+  He is so young that he can't drive.
+  = He is too young to drive.（運転するには若すぎる）
+
+■ so that 〜 can / will（〜するために・目的）
+  He studies hard so that he can pass the exam.
+  （合格できるように一生懸命勉強する）
+  = He studies hard in order to pass the exam.
+  = He studies hard to pass the exam.
+
+⚠注意：〈so + 形容詞 + that〉（結果・程度）と〈so that + can/will〉（目的）を混同しないこと。
+  形容詞や副詞が so の直後にあれば「程度・結果」、なければ「目的」。`,
+      },
+      {
+        heading: '4. 重文・複文と文の構造把握（入試問題例）',
+        level: 'nyushi',
+        body: `■ 単文・重文・複文の区別
+文の構造を意識すると長文読解の精度が上がる。
+
+  単文（Simple）：主語＋動詞の組が1つ。
+    I like music.
+  重文（Compound）：等位接続詞（and/but/or/so）で対等な節を並べる。
+    I like music, and my sister likes sports.
+  複文（Complex）：従属接続詞・関係詞で主節＋従属節を作る。
+    I know that he is honest.（that節は主節の一部）
+    When it rains, I stay home.
+
+★ポイント：長文では1文の中で「主節はどれか」を見抜くことが重要。
+  従属節（when / if / because / that / who … など）を［　］でくくると、
+  残りが主節になり、文の骨格（主語・動詞）が見えてくる。
+
+■ 節の見つけ方（構造分析の手順）
+  ① 接続詞・関係詞（that/when/because/who/which…）に印をつける
+  ② その節がどこで終わるか（次の動詞や句読点）を見極める
+  ③ 従属節を［　］でくくり、主節の S・V を確定する
+  ④ 主節の意味を先につかみ、従属節で補足する
+
+  例）［When I was walking in the park,］ I saw a dog ［which was very big.］
+    骨格：I saw a dog（私は犬を見た）
+    ＋ いつ：公園を歩いていたとき ＋ どんな犬：とても大きい犬
+
+■ 接続詞と前置詞の混同に注意（入試頻出）
+  because（接続詞）＋ 主語＋動詞：because it was cold
+  because of（前置詞句）＋ 名詞：because of the cold
+  though（接続詞）＋ 主語＋動詞：though he is young
+  despite / in spite of（前置詞）＋ 名詞：in spite of the rain
+  while（接続詞）＋ 主語＋動詞：while I was young
+  during（前置詞）＋ 名詞：during the vacation
+
+⚠注意：接続詞の後ろは〈主語＋動詞〉、前置詞の後ろは〈名詞・動名詞〉。
+  × because of it was cold（誤り）／ 〇 because it was cold
+
+📝入試問題例
+
+【問1】ほぼ同じ意味になるように（　）に適語を入れなさい。
+Study hard, or you will fail the exam.
+= (　　) you (　　) study hard, you will fail the exam.
+→ 答え：If / don't（unless you study hard も可）
+
+【問2】2文を1文にしなさい。
+He was very busy. He couldn't take a rest.（so … that を使って）
+→ 答え：He was so busy that he couldn't take a rest.
+
+【問3】（　）に入る最も適切なものを選びなさい。
+(　　) it was raining hard, they continued the game.
+① Because  ② Although  ③ If  ④ So
+→ 答え：② Although（譲歩）
+
+【問4】次の文を because of を使って書き換えなさい。
+We stayed home because it was very cold.
+→ 答え：We stayed home because of the very cold weather.（because of の後は名詞）`,
+      },
+    ],
+  },
+
+  {
+    id: 'koko_eigo_09_noun_article',
+    subject: 'eigo',
+    examType: 'koko',
+    order: 9,
+    studyPeriod: '中1',
+    title: '名詞・冠詞・代名詞',
+    description: '名詞・冠詞・代名詞の使い分けで細かな減点を防ぐ',
+    keyPoints: [
+      `不可算名詞（water/information/advice/furniture）はa/an・複数形不可。数えるには a piece of〜`,
+      `many/(a) few＋可算名詞、much/(a) little＋不可算名詞`,
+      `冠詞 a/an（初出・1つの）、the（特定・世界に1つ・楽器）。無冠詞（食事・スポーツ・by＋交通手段）`,
+      `代名詞の格：主格／所有格（名詞の前）／目的格／所有代名詞（名詞の代わり）、再帰代名詞 -self`,
+      `it（特定のもの）と one（不特定の同種のもの）、another/other/the other/others の使い分け`,
+      `形式主語 it（It is … to〜／that〜）、there is/are 構文`,
+    ],
+    sections: [
+      {
+        heading: '1. 可算名詞・不可算名詞と数量表現',
+        level: 'kiso',
+        body: `■ 可算名詞と不可算名詞
+  可算名詞（数えられる）：a book / two books のように a(n) がつき複数形になる。
+  不可算名詞（数えられない）：a や複数形にならない。単数扱い（動詞は is）。
+
+■ 主な不可算名詞（入試で狙われる）
+  液体・物質：water, milk, tea, coffee, bread, paper, money
+  抽象概念：information, news, advice, homework, work, music, peace
+  総称・集合：furniture, baggage/luggage
+
+  ⚠注意：これらは a をつけず、複数形にもしない。
+  × an information × two advices × many homeworks（すべて誤り）
+  〇 a piece of information / some advice / a lot of homework
+
+■ 不可算名詞を数える「単位表現」
+  a glass of water（コップ1杯の水）
+  a cup of coffee（カップ1杯のコーヒー）
+  a piece of paper / advice / information（1枚の紙／1つの助言／情報）
+  a slice of bread（1切れのパン）
+  two glasses of milk（牛乳2杯）← 単位語 glass を複数形にする
+
+■ 数量を表す形容詞（可算・不可算で使い分け）
+
+（意味／可算名詞に／不可算名詞に）
+・たくさんの … many／much
+・少しある（肯定） … a few／a little
+・ほとんどない … few／little
+・たくさん（両方） … a lot of / lots of / plenty of
+
+  例）many books / much water / a few friends / a little time
+  ★ポイント：much は肯定文ではやや不自然で、疑問文・否定文でよく使う。
+    肯定文の「たくさん」は a lot of が万能（可算・不可算どちらもOK）。
+
+  ⚠注意：a few（少しはある・肯定的）と few（ほとんどない・否定的）の差。
+    I have a few friends.（友達が数人いる）
+    I have few friends.（友達がほとんどいない）`,
+      },
+      {
+        heading: '2. 冠詞 a / an / the の使い分け',
+        level: 'oyo',
+        body: `■ 不定冠詞 a / an（不特定の1つ）
+初めて話題に出す・不特定の「1つの」可算名詞単数の前につける。
+  a：子音の「音」で始まる語の前（a book, a university ← ユ[j]の音）
+  an：母音の「音」で始まる語の前（an apple, an hour ← h は無音）
+
+  ⚠注意：つづりではなく「発音」で決める。
+    a university（ユニバーシティ）／ an hour（アワー）／ an honest man
+
+■ 定冠詞 the（特定の・お互いに分かっている）
+  ① 一度出た名詞を再び指すとき
+    I have a dog. The dog is white.（2回目は the）
+  ② 状況から特定できるとき（この世に1つ・その場で分かる）
+    Please open the window.（その部屋の窓）
+  ③ 唯一のもの：the sun, the moon, the earth, the sky
+  ④ 最上級・序数の前：the tallest, the first
+  ⑤ 楽器を演奏する：play the piano / the guitar
+
+■ 冠詞をつけない場合（無冠詞）
+  ① スポーツ：play soccer / play tennis（← 楽器の the と対比）
+  ② 食事：have breakfast / lunch / dinner
+  ③ 交通・通信手段（by 〜）：by bus / by train / by e-mail
+  ④ 教科・言語：study math / speak English
+  ⑤ go to school / go to bed（本来の目的で使う建物・行為）
+
+★ポイント：go to school（勉強しに行く）と go to the school（建物に用事で行く）の違い。
+  My son goes to school.（通学している）
+  I went to the school to meet the teacher.（学校という建物へ行った）
+
+■ by + 交通手段は無冠詞
+  I go to school by bus.（× by a bus）
+  ⚠注意：ただし on foot（徒歩で）は by を使わない特別表現。`,
+      },
+      {
+        heading: '3. 代名詞（人称・所有・再帰・it/one）',
+        level: 'oyo',
+        body: `■ 人称代名詞の格変化表（必ず暗記）
+
+（人称／主格／所有格／目的格／所有代名詞）
+・私 … I／my／me／mine
+・あなた … you／your／you／yours
+・彼 … he／his／him／his
+・彼女 … she／her／her／hers
+・それ … it／its／it／―
+・私たち … we／our／us／ours
+・彼ら … they／their／them／theirs
+
+  ⚠注意：its（それの・所有格）と it's（it is / it has の短縮）を混同しない。
+    The dog wagged its tail.（所有格）／ It's raining.（it is）
+
+■ 所有代名詞（〜のもの）
+  This is my book. = This book is mine.
+  a friend of mine（私の友達の一人）← 二重所有格
+
+■ 再帰代名詞（〜自身）
+  myself / yourself / himself / herself / itself /
+  ourselves / yourselves / themselves
+
+  ① 目的語が主語と同じとき：I hurt myself.（自分を傷つけた）
+  ② 強調：I did it myself.（自分自身でやった）
+  ③ 慣用表現：by oneself（一人で）／ enjoy oneself（楽しむ）／
+     help oneself to 〜（〜を自由に取って食べる）／ for oneself（独力で）
+
+■ 指示代名詞 it / one / that の使い分け（入試頻出）
+  it：前に出た「その物そのもの（特定）」
+    I lost my pen. I found it under the desk.（なくしたそのペン）
+  one：前に出た名詞と「同種の別の物（不特定）」
+    This pen is broken. I need a new one.（別の新しいペン）
+  that / those：前の名詞の繰り返しを避ける（比較文で頻出）
+    The population of Tokyo is larger than that of Osaka.
+    （東京の人口は大阪のそれ（人口）より多い）
+
+★ポイント：every / each / another は単数扱い。
+  Each student has a book.（× have）／ Every country has its own flag.
+
+⚠注意：both / all / some / most などの数の一致にも注意。
+  Both of them are kind.（both は複数扱い）`,
+      },
+      {
+        heading: '4. 形式主語 it・there 構文と入試問題例',
+        level: 'nyushi',
+        body: `■ 形式主語の it（本当の主語を後ろに置く）
+to不定詞や that 節が主語だと頭が重いので、it を仮に置いて後ろに回す。
+  It is important to study every day.
+　　It が仮主語、to study every day が真の主語です。
+  It is difficult for me to answer this question.
+   （for me ＝ to不定詞の意味上の主語）
+
+★ポイント：It … for 人 to 〜（人が〜するのは…だ）は最頻出。
+  It is easy for him to swim.（彼が泳ぐのは簡単だ）
+  ⚠注意：人の性質を表す形容詞（kind/nice/foolish 等）は for でなく of。
+    It is kind of you to help me.（助けてくれるとはあなたは親切だ）
+
+■ 時間・天候・距離・明暗を表す it（非人称の it）
+主語がない日本語を英語にするとき、形式的に it を主語に置く。
+  時刻：It is three o'clock.
+  曜日：It is Monday today.
+  天候：It is raining. / It was sunny yesterday.
+  距離：It is two kilometers from here to the station.
+  明暗：It gets dark early in winter.
+
+■ There is / are 構文（〜がある・いる）
+「（不特定の）ものが存在する」ことを表す。be動詞は後ろの名詞に一致。
+  There is a book on the desk.（単数→ is）
+  There are some books on the desk.（複数→ are）
+  過去：There was / There were 〜
+
+  ⚠注意：the / my / this など「特定」を表す語がついた名詞は There 構文に使わない。
+    × There is my book on the desk.
+    〇 My book is on the desk.
+
+★ポイント：There 構文の疑問文・否定文
+  Is there a park near here?（近くに公園はありますか）
+  There isn't any water in the bottle.（水が全然ない）
+  How many students are there in your class?（何人いますか）
+
+📝入試問題例
+
+【問1】（　）に much か many の適切な方を入れなさい。
+I don't have (　　) money, so I can't buy it.
+→ 答え：much（money は不可算）
+
+【問2】下線部を1語の代名詞にしなさい。
+This bag is too small. I want a bigger ( 　 ).
+→ 答え：one（同種の別の物）
+
+【問3】ほぼ同じ意味にしなさい。
+To learn a foreign language is not easy.
+= (　　) is not easy (　　) learn a foreign language.
+→ 答え：It / to（形式主語）
+
+【問4】（　）に適語を入れなさい。
+The weather in Okinawa is warmer than (　　) in Hokkaido.
+→ 答え：that（the weather の繰り返しを避ける）
+
+【問5】次の文の誤りを正しなさい。
+There is my two pens on the table.
+→ 答え：My two pens are on the table.（特定＋複数なので There 構文は不可）`,
+      },
+    ],
+  },
+
+  {
+    id: 'koko_eigo_10_sentence_types',
+    subject: 'eigo',
+    examType: 'koko',
+    order: 10,
+    studyPeriod: '中1',
+    title: '文の種類（疑問文・命令文・感嘆文）',
+    description: '疑問文・命令文・感嘆文・付加疑問など文の形を完全整理する',
+    keyPoints: [
+      `疑問文：be動詞は主語の前へ、一般動詞は do/does/did＋主語＋原形、疑問詞は文頭。間接疑問は平叙文の語順`,
+      `命令文は動詞の原形で始める。否定は Don't＋原形、Let's＋原形「〜しよう」`,
+      `感嘆文 What(＋a/an)＋形容詞＋名詞！／How＋形容詞・副詞！`,
+      `付加疑問：肯定文→否定の付加(, isn't it?)、否定文→肯定の付加(, do you?)`,
+      `否定疑問文の答えは中身で判断（する＝Yes、しない＝No）で、日本語の「はい/いいえ」と逆になる`,
+      `選択疑問文 A or B は Yes/No で答えず、どちらかを答える`,
+    ],
+    sections: [
+      {
+        heading: '1. 疑問文の作り方（be動詞・一般動詞・疑問詞）',
+        level: 'kiso',
+        body: `■ 疑問文の基本ルール
+  be動詞の文：be動詞を主語の前に出す。
+    You are a student. → Are you a student?
+  一般動詞の文：do/does/did を文頭に置き、動詞は原形に戻す。
+    You play tennis. → Do you play tennis?
+    She plays tennis. → Does she play tennis?（plays → play）
+    He went there. → Did he go there?（went → go）
+
+★ポイント：助動詞（can/will/must 等）がある文は、その助動詞を前に出す。
+  He can swim. → Can he swim?
+
+■ 疑問詞（WH語）で始まる疑問文
+情報を尋ねる疑問文は〈疑問詞 ＋ 疑問文の語順〉。答えは Yes/No でなく具体的に。
+
+（疑問詞／尋ねる内容／例文）
+・what … 何／What is this?
+・who … 誰／Who is that man?
+・whose … 誰の／Whose bag is this?
+・which … どれ・どちら／Which do you like, tea or coffee?
+・when … いつ／When did you come?
+・where … どこ／Where do you live?
+・why … なぜ／Why are you late?
+・how … どのように／How do you go to school?
+
+■ 疑問詞が主語になる疑問文（do/does を使わない）
+who / what / which が主語のときは〈疑問詞＋動詞〉で、do/does/did は不要。
+  Who broke the window?（誰が窓を割ったの）← × Who did break …
+  What happened?（何が起きたの）
+
+■ how を使った重要表現（数量・程度）
+  How many + 複数名詞（いくつ）: How many books do you have?
+  How much（いくら・どのくらい）: How much is this? / How much water?
+  How long（どのくらいの長さ・期間）: How long is the bridge?
+  How old（何歳）: How old are you?
+  How far（どのくらい遠い）: How far is it to the station?
+  How often（どのくらいの頻度）: How often do you play tennis?
+
+★ポイント：How many の後は「複数名詞」、How much の後は「不可算名詞」。
+  ⚠注意：× How many money（誤り）→ How much money`,
+      },
+      {
+        heading: '2. 命令文・感嘆文',
+        level: 'kiso',
+        body: `■ 命令文（〜しなさい）
+主語 You を省略し、動詞の原形で始める。
+  Open the door.（ドアを開けなさい）
+  Be quiet.（静かにしなさい）← be動詞の命令文は Be で始める
+
+■ 否定の命令文（〜してはいけない）
+  Don't + 動詞の原形。
+  Don't run here.（ここで走ってはいけない）
+  Don't be afraid.（怖がらないで）
+
+■ 丁寧な命令・依頼
+  Please をつける：Please sit down. / Sit down, please.
+  Let's + 原形（〜しましょう）：Let's play soccer.
+    → 否定は Let's not 〜（〜するのはやめよう）
+
+★ポイント：Let me / Let him など〈Let ＋ 目的語 ＋ 原形〉は「〜させる」（使役）。
+  Let me help you.（手伝わせてください）
+
+■ 感嘆文（なんて〜だろう！）
+驚き・感動を表す。What と How の2種類があり、後ろに来る品詞で使い分ける。
+
+  What ＋ (a/an) ＋ 形容詞 ＋ 名詞 ＋ 主語 ＋ 動詞!
+    What a beautiful flower this is!（なんて美しい花だろう）
+    What kind people they are!（複数名詞なので a はつかない）
+
+  How ＋ 形容詞/副詞 ＋ 主語 ＋ 動詞!
+    How beautiful this flower is!（なんて美しいのだろう）
+    How fast he runs!（なんて速く走るのだろう）
+
 ・後ろに「名詞」がある → What … What a big dog!
 ・後ろが「形容詞/副詞」→ How … How big this dog is!
 
@@ -2288,8 +2878,8 @@ ask や tell のように「人＋もの」の2つの目的語をとる動詞の
 
 （直接的（ややカジュアル）／間接的・丁寧）
 ・Where is the station? … Could you tell me where the station is?
-・What time does it start? … Could you tell me where the stationはDo you know what time it starts?
-・Can you help me? … Could you tell me where the stationはI was wondering if you could help me.
+・What time does it start? … Do you know what time it starts?
+・Can you help me? … I was wondering if you could help me.
 
 ★ポイント：丁寧な依頼表現ほど文が長くなり、間接疑問（語順が変わらない）を使う。
   面接・道案内・電話など、フォーマルな場面の会話文で頻出。
@@ -2327,12 +2917,16 @@ ask や tell のように「人＋もの」の2つの目的語をとる動詞の
     〇 He suggested that I (should) go. / He suggested going.
 
 ■ 話法転換での時・場所を表す語の変化（総整理表）
-（直接話法／間接話法／直接話法／間接話法）
-・now … then／this week／that week
-・today … that day／next week／the following
-・yesterday … the day before／week
-・tomorrow … the next day／last week／the week before
-・here … there／this／that
+（直接話法／間接話法）
+・now … then
+・today … that day
+・yesterday … the day before
+・tomorrow … the next day
+・here … there
+・this week … that week
+・next week … the following week
+・last week … the week before
+・this … that
 
 ★ポイント：これらの変化は「発言した時点」と「伝える時点」がずれることに由来する。
   実際の入試では、文脈上ずれがない場合（同じ日に伝える場合など）は

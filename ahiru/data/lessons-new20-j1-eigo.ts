@@ -932,6 +932,20 @@ There is / are の文では、文末に場所を表す前置詞句を置くの�
 
 ⚠ 注意：between と among を「2つ」か「3つ以上」かで機械的に区別するのが基本だが、間にはさまれる対象が具体的な2つのグループ（国と国、チームとチームなど）であれば、数が多くても between を使うことがある（between the two teams など）。まずは基本の使い分けから確実に覚える。`,
       },
+      {
+        heading: 'なぜ between は2つで among は3つ以上なのか、なぜ There is の文は前置詞句が文末なのか',
+        body: `between は「二つのものに**はさまれて**」という語で、tw（two と同じ「二」）が語の中に入っています。だから between A and B と二つを名指しします。among は「多くのものの**中に混じって**」という語なので、三つ以上の集団に使います。国と国、チームとチームのように「二つのグループ」なら数が多くても between です。under（真下・覆われた位置）と over、in front of と behind、near（近い）と by（すぐそば）のように、位置の語は対で覚えると意味の幅が分かります。
+
+There is／are の文で前置詞句が文末に来るのは、この文が「（どこそこに）〜がある」と**存在を告げてから場所を足す**形だからです。There is a cat under the table. と、まず a cat の存在、次に位置。日本語の語順（テーブルの下にねこがいる）のまま前置詞句を前に出さないのが基本です。
+
+■ 確かめのしかた
+①位置の語を**対**で言えるか：under／over、in front of／behind、near／by、between（2つ）／among（3つ以上）、next to＝beside。
+②between は **A and B の二つを名指し**、among は集団。「30人の中で」→among the students。
+③There is／are＋名詞＋**前置詞句（文末）**。be動詞はあとの名詞の数に合わせる（There are some flowers between the two trees.）。
+④「いすの下に」を in にしていないか。in は囲まれた空間の中で、上下関係は表せない→under。
+
+★ ここがポイント：between は語の中に「二」を含むので**二つにはさまれて**、among は**集団の中**。位置の語は対で覚え、There is の文は**存在を告げてから場所を足す**ので前置詞句は文末。`,
+      },
     ],
     trapExamples: [
       {
@@ -1287,6 +1301,20 @@ A: Really? This is my sister. She's ten years old.
 
 ⚠ 注意：「兄弟が2人います」という文で、名詞の複数形を忘れる誤りが多い。I have two brother. ではなく、two のあとの名詞は必ず複数形にして I have two brothers. とする。`,
       },
+      {
+        heading: 'なぜ紹介は This is で、なぜ「兄弟がいる」は have なのか',
+        body: `写真や目の前の人を指して紹介するときは、「これ（この人）は」と指し示す This is を使います。紹介したあとは同じ人を he／she で受け、my father を何度もくり返しません。複数なら These are。英語の brother・sister には兄弟・姉妹の上下の区別がなく、上下を言いたいときだけ older／younger を付けます。
+
+「妹が一人います」を I am a sister. と言えないのは、be動詞が「私＝妹」というイコールを作ってしまうからです。家族の存在は「持っている」の have で表し、I have a sister. とします。日本語の「います」に引きずられて be動詞を使わない、と型で覚えます。two のあとの名詞は必ず複数形（two brothers）です。
+
+■ 確かめのしかた
+①紹介は **This is my 〜.**（複数は These are）→そのあとは he／she で説明を続ける。
+②人数は **I have＋数＋brother(s)／sister(s).** × I am a sister。一人っ子は I don't have any brothers or sisters.／I'm an only child.
+③数詞のあとの名詞が**複数形**か（× two brother→two brothers）。
+④たずね方 Do you have any brothers or sisters?→Yes, I have one brother.／No, I don't. 上下は older／younger brother。
+
+★ ここがポイント：指し示す紹介は **This is**、家族の存在は**「持っている」の have**（be動詞はイコールを作ってしまう）。数詞のあとは複数形。`,
+      },
     ],
     trapExamples: [
       {
@@ -1464,6 +1492,20 @@ What club are you in?（何部に入っていますか）
 How many times a week do you have practice?（週に何回練習がありますか）
 
 ⚠ 注意：「〜部に入っています」を I am 〜 club. のように club の前に in を忘れて言ってしまう誤りが多い。club という「場所・グループ」に入っている、というイメージで前置詞 in を必ず入れる。`,
+      },
+      {
+        heading: 'なぜ授業は have で言い、なぜ at のあとは -ing なのか',
+        body: `「月曜日に数学がある」は、時間割という**自分の持ち物として授業を持っている**という発想で I have math on Monday. と言います。日本語の「ある」につられて There is を使うより、have の型で覚えるほうが会話でそのまま使えます。「何時間目」は period（時間割の1コマ）を序数と組み合わせて in the first period です。
+
+be good at のあとが -ing になるのは、at が**前置詞**で、前置詞のあとには名詞（動名詞）しか置けないからです。教科名（math）はそのまま名詞なので I'm good at math.、動作なら I'm good at singing.。「〜部に入っている」が I'm in the 〜 club. なのは、部を「グループという場所」ととらえて in で「その中にいる」と言うからで、in を落とすと「私は美術部です」という別の文になります。
+
+■ 確かめのしかた
+①教科をたずねる What subject do you like?／What's your favorite subject?→I like math the best.／My favorite subject is science.
+②授業は **have**：I have math on Monday.（曜日は on）／We have P.E. in the third period.
+③be good at＋**名詞か -ing**（× at sing→at singing）。苦手は be poor at／not good at。
+④部活は **I'm in the 〜 club.**／I belong to the 〜 club.（in と the を落とさない）。教科名の English・Japanese は大文字。
+
+★ ここがポイント：授業は**持ち物として持っている**発想で have。at は**前置詞なので -ing**。部活は**グループの中にいる**ので in。`,
       },
     ],
     trapExamples: [

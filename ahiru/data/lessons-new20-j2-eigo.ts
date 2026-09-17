@@ -408,7 +408,7 @@ May で始まる疑問文は「May I 〜?」の形が非常に多い。選択肢
     keyPoints: [
       'SVOOの基本語順は〈主語＋動詞＋人（〜に）＋物（〜を）〉。',
       'give, show, teach, tell, send, buy, make などがSVOOをとる代表的な動詞。',
-      '人が代名詞のときも語順は変わらない（give me it ではなく give it to me が自然）。',
+      '物が代名詞（it / them）のときは SVOO のままにせず、give it to me の形にする（give me it は不自然）。',
       'SVOOはSVO＋to/forの文に書きかえられる（動詞によってtoかforを使い分ける）。',
       'ask は書きかえのときに of を使う特別な動詞。',
       '疑問文・否定文でも「人＋物」の順は崩れない。',
@@ -451,6 +451,20 @@ May で始まる疑問文は「May I 〜?」の形が非常に多い。選択肢
 例題）（ it / to / give / me )
 → Give it to me.
 ★ポイント：itを見た瞬間に「SVOOのままではなく、to/forを使う形かもしれない」と考える習慣をつける。`,
+      },
+      {
+        heading: 'なぜ人が先で、なぜ物が代名詞だと to／for にするのか',
+        body: `give・teach・show・tell は「相手に向かって何かをわたす」動作なので、英語では**受け取る相手（人）を先に、わたす中身（物）をあとに**言います。動詞を見つけたら直後に人、最後に物、と機械的に置けば、日本語の「〜を〜に」の順に引きずられずにすみます。疑問文（Did you send her the letter?）でも否定文（He didn't tell me the truth.）でも、この順は崩れません。
+
+物が it・them のような代名詞のときに Give it to me. と形を変えるのは、英語では**新しい情報や重い情報を文の後ろに置く**習慣があり、軽い代名詞 it を最後に置く Give me it. が不自然に響くからです。並べかえの語群に it と to（for）が両方あれば、この形が正解の可能性が高いと判断します。
+
+■ 確かめのしかた
+①動詞の直後に**人**、最後に**物**（× Please give the book me→give me the book）。
+②物が **it／them** なら SVO＋to／for（Give it to me.）。語群に to・for があるか先に見る。
+③疑問文・否定文でも人→物の順はそのまま（Did you send her the letter?／He didn't tell me the truth.）。
+④to をとる動詞（give・tell・show・send・teach）と for をとる動詞（buy・make・cook）、ask は of。
+
+★ ここがポイント：SVOO は**受け取る人が先、物があと**で、疑問文・否定文でも崩れない。物が代名詞なら**軽い語を最後に置かない**ので Give it to me.（語群に to・for があるのが合図）。`,
       },
     ],
     trapExamples: [
@@ -515,6 +529,20 @@ May で始まる疑問文は「May I 〜?」の形が非常に多い。選択肢
 → Keep the room clean.（部屋をきれいに保ちなさい）
 
 ⚠注意：Keep the room cleanly. のように副詞を補語の位置に置いてしまうミスが非常に多い。補語には形容詞のcleanを使い、副詞のcleanlyは使わない。`,
+      },
+      {
+        heading: 'なぜ O＝C で見分け、なぜ補語に副詞を置けないのか',
+        body: `SVOO（I gave him a book.）と SVOC（We call him Ken.）は、動詞のあとに語が二つ並ぶ点で形が同じです。ちがいは二つの語の**関係**で、SVOO は「彼」と「本」が別物（O≠O）、SVOC は「彼＝ケン」「彼女＝幸せ」とイコールが成り立ちます（O＝C）。並べかえで迷ったら、二つの語の間に「＝」を入れて意味が通るかを確かめると、どちらの文型かが決まります。
+
+補語 C に副詞を置けないのは、C が**O の状態や名前を説明する語**だからです。「部屋がきれいな状態」を表すのは形容詞 clean で、副詞 cleanly は動作のしかた（きれいに掃除する）を表す語なので、O の状態を説明できません。Keep the room clean. が正しく、Keep the room cleanly. は誤りです。
+
+■ 確かめのしかた
+①動詞のあとの二つの語に**「＝」を入れて通るか**。通る→SVOC（call・name・make・keep・find・leave）、通らない→SVOO。
+②語順は**動詞→O→C**（× made sad me→made me sad）。me＝sad が成り立つか確かめる。
+③C の位置は**名詞か形容詞**。副詞（cleanly・happily）を置いていないか。
+④「物・事」が主語の文（This movie made me happy.）も同じ型。
+
+★ ここがポイント：SVOO と SVOC は**二つの語がイコールか**で見分ける（O＝C なら SVOC）。C は**O の状態を説明する語**なので名詞か形容詞で、副詞は置けない。`,
       },
     ],
     trapExamples: [
@@ -1077,6 +1105,20 @@ May で始まる疑問文は「May I 〜?」の形が非常に多い。選択肢
 ■ 共通する見つけ方のコツ
 There is/areと受動態のどちらも、be動詞を選ぶときは「文の本当の主語（There is/areでは後ろの名詞、受動態では文頭の主語）」の数を確認するという同じ手順を使う。`,
       },
+      {
+        heading: 'なぜ There is／are と受動態は同じ手順で確かめられるのか',
+        body: `There is／are の文では、There は主語ではなく「〜がある」と告げる合図で、**本当の主語はあとの名詞**です。だから be動詞は There ではなく、あとの名詞の数に合わせます（There are many students）。受動態でも be動詞は**文頭の主語**の数と時制に合わせます（These bags were made）。どちらも「文の本当の主語を見つけて、その数に合わせる」という同じ手順です。
+
+There is／are を the・my・this の付いた名詞に使えないのは、There is が「相手の知らないものを新しく持ち出す」文だからです。特定できる名詞は、その名詞を主語にして The cat is on the sofa. と言います。受動態で過去分詞を原形や -ing のままにすると、be動詞＋形容詞や進行形と区別がつかず、受動態になりません。not の位置は be動詞の直後です。
+
+■ 確かめのしかた
+①There is／are の be動詞は**あとの名詞の数**に（× There is many students→There are）。
+②the・my・this が付いた名詞に There is を使っていないか（→その名詞を主語に）。疑問文は be動詞を There の前へ。
+③受動態は **be動詞＋過去分詞**（× is clean by→is cleaned by）。be動詞は**主語の数と時制**に（× These bags was→were）。not は be動詞の直後（× is sung not→is not sung）。
+④一文に誤りが二つあることがある。前半を直しても後半（they was→were）まで読み切る。
+
+★ ここがポイント：There is／are は**あとの名詞が本当の主語**、受動態は**文頭の主語**。どちらも「本当の主語の数に be動詞を合わせる」同じ手順。特定できる名詞に There is は使わない。`,
+      },
     ],
     trapExamples: [
       {
@@ -1356,6 +1398,20 @@ if / whenで始まる節（または文中に出てくるif / when）を見た�
 例題）This is the most popular song in Japan.
 → This song is more popular than any other song in Japan.
 → No other song is more popular than this song in Japan.`,
+      },
+      {
+        heading: 'なぜ書きかえで主語が入れかわり、なぜ any other のあとは単数なのか',
+        body: `比較級（Tom is taller than Ken.）は**上のほうを主語**にして言う形、not as 〜 as（Ken is not as tall as Tom.）は**下のほうを主語**にして「〜ほどではない」と言う形です。同じ事実を別の側から言うので、書きかえると主語が入れかわり、than のあとにあった語が新しい主語になります。書きかえの前に「どちらが上か」を確かめるのは、この入れかえで上下を逆にしないためです。
+
+any other のあとの名詞が単数なのは、any が「他の**どの一つ**をとっても」という意味で、一つ一つの山と比べているからです。Mt. Fuji is higher than any other mountain in Japan. で「他のどの一つの山よりも高い」＝一番高い、になります。No other boy in his class is taller than Ken. も「他のどの一人の少年も」なので単数です。
+
+■ 確かめのしかた
+①もとの文で**どちらが上か**を先に言う（比較級なら than の前が上）。
+②比較級⇔not as 〜 as：**下のほうを主語**にし、上を as のあとへ。上下関係が保たれているか。
+③最上級⇔比較級：than **any other＋単数名詞**（× mountains）／No other＋単数名詞＋is 比較級 than 〜。
+④三つの形（the tallest／taller than any other boy／No other boy is taller than）で同じ事実を言えるか。
+
+★ ここがポイント：比較級は**上を主語**、not as 〜 as は**下を主語**にした言い方なので、書きかえで主語が入れかわる。any other は「**他のどの一つ**」なので単数名詞。`,
       },
     ],
     trapExamples: [
