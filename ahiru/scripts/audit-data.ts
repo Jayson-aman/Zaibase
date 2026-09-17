@@ -725,6 +725,62 @@ for (const l of L) {
 }
 check('【問題集・単元】化学式や単位に全角の数字を使っている', zenFormula);
 
+// 表を文字に直した行が「混ざって」いないか（2026/9/17）。
+//
+// 旧ファイルでは罫線の表を「名前 … 見出し1は値1／見出し2は値2」の形に直してある。
+// この形は正しい。壊れているのは次の3つで、英語28表＋13表＋4表、社会・理科・国語の
+// 12表、数学の絶対値 |x| 約85行に残っていた。
+//   ①見出しに「項目」の列が無い表で、接頭語が1列ずれる
+//     「年月日 … 二・二六事件は1932年5月15日／1936年2月26日」（正しくは 五・一五事件は…／二・二六事件は…）
+//   ②罫線つきの表で、見出しではなく「直前の行の値」が接頭語になる
+//     「where … だれはどこ／She is my sister.はIn Osaka.」
+//   ③絶対値の | が表の区切りと誤認され「／t／」になり、2行続くと2行目が潰れる
+//     「面積＝6× … tはt／。は÷2＝3／t／＝15」
+// ここでは①②と、罫線（+--- や | 始まりの行）が残っているものを数える。
+// 見出しの行が無い「XはA／YはB」形式（水俣病 … 場所は熊本県／原因物質は有機水銀）は正当なので数えない。
+const ROWMIX: string[] = [];
+{
+  const isRow = (l: string) =>
+    (l.startsWith('　') && (l.includes('／') || l.includes(' … '))) || l.startsWith('|') || l.startsWith('+--');
+  const PFX = /^[^は／]{1,30}は/;
+  const tableRow = (s: string) => {
+    if (!s.includes(' … ')) return false;
+    const segs = s.split(' … ')[1].split('／').map((x) => x.trim());
+    return segs.length >= 2 && segs.some((x) => PFX.test(x));
+  };
+  for (const l of L) {
+    for (const s of ((l as any).sections ?? []) as any[]) {
+      const lines = String(s.body ?? '').split('\n');
+      let i = 0;
+      while (i < lines.length) {
+        if (!isRow(lines[i])) { i++; continue; }
+        let j = i;
+        while (j < lines.length && isRow(lines[j])) j++;
+        const blk = lines.slice(i, j);
+        i = j;
+        if (!blk.some((x) => tableRow(x.trim())) && !blk.some((x) => x.startsWith('|') || x.startsWith('+--'))) continue;
+        if (blk.some((x) => x.startsWith('|') || x.startsWith('+--'))) {
+          ROWMIX.push(`${l.id}「${blk[0].trim().slice(0, 30)}」罫線が残っている`);
+          continue;
+        }
+        let hdr: string[] | null = null;
+        let bad = '';
+        for (const x of blk) {
+          const t = x.trim();
+          if (!t.includes(' … ') && t.includes('／')) { if (!hdr) hdr = t.split('／').map((y) => y.trim()); continue; }
+          if (!tableRow(t) || !hdr) continue;
+          const segs = t.split(' … ')[1].split('／').map((y) => y.trim());
+          const exp = hdr.slice(1);
+          if (segs.length !== exp.length) { bad = `列数 ${segs.length}/${exp.length}`; break; }
+          if (segs.some((y, k) => !y.startsWith(exp[k] + 'は'))) { bad = '接頭語が見出しと合わない'; break; }
+        }
+        if (bad) ROWMIX.push(`${l.id}「${blk[0].trim().slice(0, 30)}」${bad}`);
+      }
+    }
+  }
+}
+check('【単元】表を文字に直した行が混ざっている（接頭語が見出しと合わない・罫線が残る）', ROWMIX);
+
 // 面積・体積の単位に「組文字」（㎠ ㎤ ㎡ ㎢）を使っていないか。
 //
 // 2026/9/16、ユーザーの「重複・矛盾も確認して」という指摘で調べていて見つかった。

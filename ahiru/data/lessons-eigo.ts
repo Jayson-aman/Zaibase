@@ -2006,11 +2006,11 @@ do not → don't ／ does not → doesn't
         body: `be動詞と一般動詞を正しく区別できるかが、英文法の第一関門。問題で確認しよう。
 
 ■ 使い分けのまとめ表
-　be動詞（am/is/are）／一般動詞（play/like等）
-　意味 … 一般動詞（play/like等）は〜です・いる/ある／動作・状態
-　否定文 … 一般動詞（play/like等）はbe動詞＋not／do/does not＋原形
-　疑問文 … 一般動詞（play/like等）はbe動詞を前へ／Do/Doesを前へ＋原形
-　答え … 一般動詞（play/like等）はYes, I am.／Yes, I do.
+　項目／be動詞（am/is/are）／一般動詞（play/like等）
+　意味 … be動詞（am/is/are）は〜です・いる/ある／一般動詞（play/like等）は動作・状態
+　否定文 … be動詞（am/is/are）はbe動詞＋not／一般動詞（play/like等）はdo/does not＋原形
+　疑問文 … be動詞（am/is/are）はbe動詞を前へ／一般動詞（play/like等）はDo/Doesを前へ＋原形
+　答え … be動詞（am/is/are）はYes, I am.／一般動詞（play/like等）はYes, I do.
 
 【問題1】（　）に am / is / are のどれかを入れなさい。
 ① I (   ) a soccer fan.　② She (   ) very kind.　③ They (   ) my classmates.
