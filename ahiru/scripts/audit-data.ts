@@ -385,7 +385,7 @@ const sansuL = L.filter((l) => l.subject === 'sansu' && (l.examType ?? 'chugaku'
 const sansuQ = (Q as any[]).filter((q) => q.subject === 'sansu' && (q.examType ?? 'chugaku') !== 'koko');
 check('【単元】中学受験の算数に、中学以上の解き方・記号（方程式・連立・移項・文字式・階乗記号・nCr）が出ている', sansuL.filter((l) => sansuLessonTexts(l).some((t) => CHUGAKU_SANSU_NG.test(t))).map((l) => l.id));
 check('【問題集】中学受験の算数に、中学以上の解き方・記号（方程式・連立・移項・文字式・階乗記号・nCr）が出ている', sansuQ.filter((q) => sansuQuestionTexts(q).some((t) => CHUGAKU_SANSU_NG.test(t))).map((q) => q.id));
-info('【単元・問題集】中学受験の算数で、計算の結果が負の数になっている（要目視。座標の対称移動は残債）', [
+info('【単元・問題集】中学受験の算数で、計算の結果が負の数になっている（要目視）', [
   ...sansuL.filter((l) => sansuLessonTexts(l).some((t) => CHUGAKU_SANSU_NEG.test(t))).map((l) => l.id),
   ...sansuQ.filter((q) => sansuQuestionTexts(q).some((t) => CHUGAKU_SANSU_NEG.test(t))).map((q) => q.id),
 ]);
