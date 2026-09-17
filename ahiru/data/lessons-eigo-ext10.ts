@@ -402,6 +402,20 @@ It's delicious.（とてもおいしい。）
 
 ★ ポイント：すすめるときは any ではなく some を使う（Would you like some …?）。`,
       },
+      {
+        heading: 'なぜパンや水は数えられず、なぜ単位で数えるのか',
+        body: `英語で「数えられる」のは、**形が決まっていて、一つ二つと区切れるもの**です。りんごや卵は一つの形があるので an apple・two eggs。水・牛乳・パン・ごはん・肉は、量はあっても決まった形がなく、どこで一つと区切るかが決まりません。だから a も -s も付けません。数えたいときは、コップ・カップ・切れ・ボウルという**容器や単位で区切って**、a glass of water・two pieces of cake と言います。数が増えたら単位のほう（glasses・pieces）に -s を付けます。
+
+two cakes と言うと「ホールケーキ2台」の意味になるのは、cake を形のある一つのものとして数えたことになるからです。切り分けた一部は piece で数えます。「多い」を表す語も、数えられる名詞には many、数えられない名詞には much、どちらにも a lot of と分かれます。
+
+■ 確かめのしかた
+①食べ物の語を見たら、**一つの形があるか**を言う。apple・egg・tomato→数えられる。water・bread・rice・meat・cheese→数えられない。
+②数えられない語に a や -s を付けていないか（× a milk、× breads）。数えるなら単位：a slice of bread、a bowl of rice、two pieces of cake。
+③How many＋数えられる複数形、How much＋数えられない名詞。How much water 〜?
+④食事名（breakfast・lunch・dinner）には冠詞を付けない。好きなものは複数形（I like apples.）。すすめるときは some（Would you like some tea?）。
+
+★ ここがポイント：数えられるのは**形が決まっていて区切れるもの**。区切れないもの（水・パン・ごはん）は**容器や単位で区切って**数え、-s は単位のほうに付ける。many／much／a lot of もこの区別で決まる。`,
+      },
     ],
     trapExamples: [
       {
@@ -767,6 +781,20 @@ go → went（行った）／have → had（〜があった・食べた）／see
 ★ ポイント：感想は I enjoyed it very much.／It was exciting.／I had a good time. のどれかを覚えておけば必ず書ける。
 
 ⚠ 注意：enjoy の後ろに動詞を置くときは -ing にする。I enjoyed swimming in the sea.（× enjoyed to swim）`,
+      },
+      {
+        heading: 'なぜ行事は二語で表し、なぜ enjoy のあとは -ing なのか',
+        body: `運動会・修学旅行のような日本の学校行事には、そのまま当てはまる英語の一語がありません。英語では「スポーツの日」「学校の旅行」のように**説明する二語**（sports day・school trip）で表します。行事が「ある」と言うとき have を使うのは、行事を「持っている・経験する」ものとしてとらえるからで、We have a sports day in October. と言います。月には in（幅のある期間）、日付には on（一日）を使います。
+
+enjoy のあとの動詞を -ing にするのは、enjoy が「（今している・したこと）を楽しむ」という動詞で、**すでに起きている動作**を目的語にとるからです。-ing は「している最中の動作」を名詞にした形なので、enjoy と相性が合います。反対に want・hope・decide は「これからすること」を目的語にとるので、未来へ向かう to＋原形と組みます。enjoy -ing はセットで覚えます。
+
+■ 確かめのしかた
+①行事は二語で：entrance ceremony／sports day／school trip／school festival／graduation ceremony。「〜がある」は We have ＋ 行事。
+②**月→in、日付→on、時刻→at**：in October／on October 10／at seven。× on October。
+③思い出は過去形で：went・had・saw・ate・took・ran・sang・won・was・were。
+④enjoy・finish・stop のあとは -ing（enjoyed swimming）。want・hope・decide のあとは to＋原形。× enjoyed to swim。
+
+★ ここがポイント：行事は**説明する二語**で表し、「ある」は have。**月は in、日付は on**。enjoy は**すでにしていることを楽しむ**動詞なので -ing をとる。`,
       },
     ],
     trapExamples: [
@@ -1257,7 +1285,7 @@ cold（寒い）／snow（雪）／skiing（スキー）／New Year's Day（元�
     targetLevel: 'kiso',
     keyPoints: [
       '13〜19 は -teen、20〜90 は -ty で終わる。thirteen と thirty を区別する。',
-      'つづり注意：four → forty（u が消える）、five → fifteen / fifty、nine → ninety（e が消える）。',
+      'つづり注意：four → forty（u が消える）、five → fifteen / fifty、nine → ninth（e が消える。ninety は e が残る）。',
       '21以上はハイフンでつなぐ。twenty-one, thirty-five。',
       '百は hundred、千は thousand。数詞のあとの hundred には -s を付けない（three hundred）。',
       '百の位と十の位の間に and を入れることがある（two hundred and five）。',
@@ -1282,7 +1310,7 @@ three → thirteen, thirty（形が大きく変わる）
 four → fourteen（u あり）／forty（u が消える！）
 five → fifteen, fifty（ve が f に変わる）
 eight → eighteen, eighty（t が一つになる）
-nine → nineteen（e あり）／ninety（e が消える）
+nine → nineteen, ninety（e は残る）／ninth（e が消える）
 
 ■ 21以上
 twenty-one（21）／thirty-five（35）／forty-eight（48）／ninety-nine（99）
@@ -1319,6 +1347,20 @@ hundred（100）／thousand（1,000）／million（1,000,000）
 
 ⚠ 注意：0 の読み方は zero が基本だが、電話番号やスポーツの得点では oh（オー）と読むこともある。`,
       },
+      {
+        heading: 'なぜ forty に u がなく、hundred に -s が付かないのか',
+        body: `13〜19 の -teen は「10 と〜」、20〜90 の -ty は「〜十」という意味の語尾で、もとの数の語にくっついています。くっつくときに音が変わった語は、つづりも変わりました。four は fourteen では u が残りますが、forty では発音が変わって u が消えました。five は fifteen・fifty で ve が f に、three は thirteen・thirty で形が大きく変わります。eight＋teen は t が重なるので一つにします。**ただし nine は nineteen・ninety のどちらも e が残ります**（e が消えるのは ninth）。変わる語だけを名指しで覚えます。
+
+three hundred に -s が付かないのは、数の語（three）が前にあるとき、hundred・thousand・million が**「百」という単位の名前**としてはたらくからです。単位は数えません（三百＝三つの百、と言わない）。「何百もの」と漠然と言うときだけ hundreds of people と -s と of が付きます。数のあとの名詞（students）は複数形です。
+
+■ 確かめのしかた
+①変わる語を名指しで：three→thirteen／thirty、four→fourteen（u あり）／forty（u なし）、five→fifteen／fifty、eight→eighteen／eighty（t 一つ）。nine→nineteen／ninety は e が残る。
+②-teen は後ろを強く、-ty は前を強く読む。thirteen と thirty の聞き分け。
+③21以上はハイフン（twenty-one）。数のあとの hundred・thousand に -s を付けない（three hundred students）。漠然とした「何百もの」だけ hundreds of。
+④数のあとの名詞は複数形（three books）。年号は二けたずつ（nineteen eighty-five）。
+
+★ ここがポイント：-teen・-ty がくっついて**音が変わった語だけつづりが変わる**（forty・fifty・thirty）。nine は ninety でも e が残る。数の語のあとの hundred は**単位の名前**なので -s を付けない。`,
+      },
     ],
     trapExamples: [
       {
@@ -1327,7 +1369,7 @@ hundred（100）／thousand（1,000）／million（1,000,000）
         trapExplanation: '4 が four なので、そのまま -ty を付ければよいと考えてしまう。14 が fourteen と u を残す形なので、よけいに混乱する。',
         correctAnswer: 'forty',
         correctExplanation:
-          '40 は four の u が消えて forty になる。14 の fourteen には u が残るので、この二つは必ずセットで確認する。ほかにも five → fifteen / fifty（ve が f に変わる）、nine → ninety（e が消える）が同じ型のひっかけである。',
+          '40 は four の u が消えて forty になる。14 の fourteen には u が残るので、この二つは必ずセットで確認する。ほかにも five → fifteen / fifty（ve が f に変わる）、nine → ninth（e が消える。ninety は e が残る）が同じ型のひっかけである。',
       },
       {
         question: '「私たちの学校には生徒が300人います。」を英語にしなさい。',
@@ -1691,6 +1733,20 @@ minute（分）／hour（時間）／second（秒）／noon（正午）／midnig
 
 ⚠ 注意：What time is it? に I am seven. とは答えない。It is seven. である。I am seven. は「私は7歳です」の意味になってしまう。`,
       },
+      {
+        heading: 'なぜ時刻の主語が It で、なぜ to のあとは次の時刻なのか',
+        body: `英語の文には必ず主語が要ります。「七時です」には「何が」にあたる語がないので、天気や曜日と同じく、**訳さない It を主語に置いて形を整えます**。I am seven. と言うと「私は7歳です」になってしまうので、時刻は It is seven. です。o'clock は「〜時ちょうど」を表す語なので、分が付くとき（nine thirty）には付けません。
+
+past と to の言い方は、**時計の針の動き**をそのまま言葉にしたものです。30分までは「〇時を過ぎて〇分」なので ten past seven、30分を過ぎたら「次の〇時まであと〇分」と数えるので ten to eight。7:50 を ten to seven と言うと 6:50 の意味になります。to のあとには必ず次の時刻が来る、と覚えます。
+
+■ 確かめのしかた
+①時刻の文の主語は **It**。What time is it?→It is seven.（× I am seven.）
+②**ちょうどのときだけ o'clock**。It is nine o'clock.／It is nine thirty.（× nine thirty o'clock）
+③past は30分まで、to は30分過ぎ。**to のあとは次の時刻**：7:45→a quarter to eight、7:50→ten to eight。
+④時刻には at（at seven／at noon／at midnight）。分が10より小さいときは oh（seven oh five）。
+
+★ ここがポイント：時刻の文は**訳さない It が主語**で、o'clock は**ちょうどのときだけ**。to は「次の時刻まであと〇分」なので、**to のあとは次の時刻**（7:50＝ten to eight）。`,
+      },
     ],
     trapExamples: [
       {
@@ -1862,6 +1918,20 @@ high … 山・かべ・空など、高さそのものに注目するもの
 big → bigger → biggest（g を重ねる）／large → larger → largest（e を足すだけ）／heavy → heavier → heaviest（y を i に）／long → longer → longest（そのまま）
 
 ⚠ 注意：good → better → best、bad → worse → worst は形が大きく変わる。`,
+      },
+      {
+        heading: 'なぜ tall と high を分け、なぜ bigger は g を重ねるのか',
+        body: `tall は**細長く立っているものの背の高さ**、high は**地面からの高さそのもの**を表します。人・木・タワーは形が細長いので tall、山・かべ・空は高さに注目するので high。日本語ではどちらも「高い」なので、形をイメージして選びます。反対語も tall⇔short、high⇔low と別の組です。square が名詞（正方形）にも形容詞（四角い）にもなるのは、英語では同じ形の語が文の中の位置で品詞を変えるからで、a square（名詞）と is square（形容詞）を位置で見分けます。
+
+big→bigger で g を重ねるのは、**短母音＋子音字一つ**で終わる語にそのまま -er を付けると、母音の読み方が変わって見えてしまうからです。子音字を重ねて「短い母音のまま」と示します（big→bigger、hot→hotter）。large のように e で終わる語は -r だけ、heavy のように y で終わる語は y を i に変えます。
+
+■ 確かめのしかた
+①「高い」を英語にするとき、**細長く立っているものか、高さそのものか**。人・木・タワー→tall。山・かべ・空→high。
+②反対の組で確かめる：big⇔small、long⇔short、tall⇔short、high⇔low、wide⇔narrow、heavy⇔light、thick⇔thin、deep⇔shallow。
+③比較級のつづり：短母音＋子音字一つ→重ねる（bigger・hotter）、e で終わる→-r（larger）、y で終わる→i（heavier）、それ以外→-er（longer）。
+④good→better→best、bad→worse→worst は形が変わる。形をたずねるのは What shape is it?
+
+★ ここがポイント：tall は**細長く立っているもの**、high は**高さそのもの**。比較級は**短母音＋子音字一つなら重ねる**（bigger）、e で終わるなら -r、y は i に。`,
       },
     ],
     trapExamples: [
@@ -2142,6 +2212,20 @@ Are there any restaurants around here?（この辺りにレストランはあり
 
 ⚠ 注意：「駅の前」は in front of the station。「駅前で」を before the station とは言わない。before は時間の「前」に使う。`,
       },
+      {
+        heading: 'なぜ go to school は the が付かず、なぜ before は場所に使えないのか',
+        body: `go to the station は「駅という建物へ行く」ですが、go to school は「勉強しに行く（通学する）」という**目的**を表します。school・church・bed・hospital のような語は、建物ではなく本来の目的（勉強・礼拝・睡眠・治療）で使うときに冠詞を付けません。建物として指すとき（弟に会いに学校の建物へ行く）は go to the school と the を付けます。冠詞の有無で、建物か目的かが分かれます。
+
+before が場所に使えないのは、before が**時間の「前」**（before dinner）を表す語だからです。場所の「前」は in front of、後ろは behind。日本語ではどちらも「前」なので区別できませんが、英語では時間（before／after）と場所（in front of／behind）で語が分かれています。
+
+■ 確かめのしかた
+①school・church・bed が**目的**なら冠詞なし（go to school／go to bed）、**建物**なら the（go to the school to see my brother）。ふつうの建物は the（go to the station）。
+②「〜の前」が時間か場所か。時間→before／after。場所→in front of／behind。× before the station。
+③位置の語：near／next to／across from／between A and B／on the corner of。
+④There is／There are は**あとの名詞の数**に合わせる。Are there any restaurants 〜?（複数）。マンションは apartment（mansion は大邸宅）。
+
+★ ここがポイント：school・bed は**目的なら冠詞なし、建物なら the**。「前」は**時間なら before、場所なら in front of**。There is／are はあとの名詞の数で決める。`,
+      },
     ],
     trapExamples: [
       {
@@ -2233,6 +2317,20 @@ How far is it from here to the station?（ここから駅までどれくらい�
 例）It takes ten minutes by bike.（自転車で10分かかる。）
 
 ⚠ 注意：get on は「大きい乗り物・またがる乗り物」に、get in は「車・タクシー」に使う。`,
+      },
+      {
+        heading: 'なぜ by bus には冠詞が付かず、なぜ「歩いて」は on foot なのか',
+        body: `by bus の bus は、**特定のバス（あのバス）ではなく「バスという手段」**を表しています。手段として言うときは、どのバスかは問題にしないので、a も the も付けません。特定の乗り物の中にいることを言うときは、in a car・on the train のように in／on と冠詞を使います。「歩いて」が on foot なのは、walk が動詞であって乗り物の名前ではないからです。by のあとに置けるのは乗り物の名前だけで、足（foot）を使う手段は on foot という決まった形になります。
+
+get on と get in を分けるのは、乗り物の**大きさと形**によります。バス・電車のように中で立てる乗り物、自転車のようにまたがる乗り物には on、車・タクシーのように屋根のある小さな乗り物には in。降りるときも get off／get out of と対になります。
+
+■ 確かめのしかた
+①**手段**なら by＋乗り物（冠詞なし）：by bus／by train／by bike。× by a bus。**特定の乗り物の中**なら on the train／in a taxi。
+②「歩いて」→on foot（× by walk、× on feet）。または I walk to school.
+③乗る・降りる：get on／get off（バス・電車・自転車）、get in／get out of（車・タクシー）。乗りかえは change trains（複数形）。
+④「時間がかかる」の主語は It：It takes twenty minutes by bike. たずね方は How do you go to 〜?／How long does it take?
+
+★ ここがポイント：by bus は**手段**なので冠詞なし、特定の乗り物の中は on／in。「歩いて」は乗り物ではないので **on foot**。乗り物の大きさで get on／get in を分ける。`,
       },
     ],
     trapExamples: [
@@ -2506,6 +2604,20 @@ How long does it take from here to the station?（ここから駅までどれく
 ■ そのほか
 take part in（〜に参加する）／take out（取り出す・持ち帰る）／take away（持ち去る）
 例）I took part in the speech contest.（スピーチコンテストに参加した。）`,
+      },
+      {
+        heading: 'なぜ take が「する」を表し、なぜ時間の主語が It なのか',
+        body: `take の中心の意味は「手に取る」です。そこから「（機会や行動を）取る」に広がり、take a bath（入浴という行動を取る）、take a walk（散歩を取る）、take a picture（写真を取る）のように、**名詞で表した行動を「取る＝する」**と言えるようになりました。take a bus は「バスという手段を取る」、take care of は「世話という役目を引き受ける」です。だから日本語の「する」から do を選ばず、take ＋ 名詞のかたまりで覚えます。
+
+「時間がかかる」の主語が It なのは、時刻や天気と同じで**「何が」にあたる語がない**からです。「私は20分かかる」と日本語で言えても、英語では時間を取るのは「私」ではなく状況なので、It takes twenty minutes. とし、人を入れるなら It takes me twenty minutes to 〜 の形にします。お金がかかるときは take ではなく cost を使います。
+
+■ 確かめのしかた
+①take＋名詞のかたまりで言えるか：take a bath／shower／picture／walk／rest／seat／test。「絵をかく」は draw a picture。
+②take care of＝look after。「世話をする」の「する」を do にしていないか。
+③時間がかかる→主語は **It**：It takes＋時間、It takes＋人＋時間＋to＋原形。× I take twenty minutes to school。
+④お金→cost（It costs 500 yen.）。take off（ぬぐ・離陸する）⇔ put on。take part in（参加する）。過去形 took、過去分詞 taken。
+
+★ ここがポイント：take は「手に取る」から**「行動を取る＝する」**に広がった動詞なので、take＋名詞のかたまりで覚える。時間がかかる文は**「何が」がないので It が主語**、お金は cost。`,
       },
     ],
     trapExamples: [

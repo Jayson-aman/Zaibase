@@ -221,6 +221,20 @@ in time は「ぎりぎりでも間に合った」、on time は「ぴったり�
 
 ⚠ 注意：「三日後に会いましょう」は See you in three days. である。after three days としないよう気をつける。`,
       },
+      {
+        heading: 'なぜ朝は in で夜は at なのか、なぜ「〜後に」が in なのか',
+        body: `in は「幅のある時間の中に」、at は「一点の時刻に」を表します。朝・午後・夕方は活動する時間の幅としてとらえるので in the morning、時刻（seven）・正午（noon）・真夜中（midnight）は時計の針が一か所を指す一点なので at です。night が at なのは、昔から夜を活動の「幅」ではなく、一日の区切りの「点」のようにとらえてきたからで、理屈より決まった形として覚えます。
+
+「〜後に」が in なのは、in three days が「三日という幅を過ぎたところで」という意味だからです。今を出発点にして未来のことを言うときに使います。after は「〜のあとで」と、過去の出来事を語るときに使います（He came back after two hours.）。日本語の辞書で「後に」を引くと after が出るので、未来にも after を使ってしまう誤りが多く、「未来は in、過去は after」と対で覚えます。
+
+■ 確かめのしかた
+①**幅なら in、一点なら at**：in the morning／in the afternoon／in the evening（the が要る）、at seven／at noon／at midnight／at night（the は付けない）。
+②時刻と時間帯を重ねるときは、せまい方を先に：at six in the morning。
+③「今から〇後に」（未来）→in＋期間（I will be back in two hours.）。過去の話→after＋期間。
+④in time（間に合って）と on time（時間どおりに）を区別する。
+
+★ ここがポイント：in は**幅**、at は**一点**（朝・午後は幅、時刻・正午・夜は点）。「〜後に」は**未来なら in＋期間、過去なら after＋期間**。`,
+      },
     ],
     trapExamples: [
       {
@@ -1897,6 +1911,20 @@ be made into ＋ 製品（〜に作りかえられる）：Milk is made into che
 例）There were about fifty people.（五十人ほどいました。）
 
 ⚠ 注意：「約十分間」は for about ten minutes の順に書く。about for とはしない。`,
+      },
+      {
+        heading: 'なぜ of は語順が逆になり、なぜ of と from を使い分けるのか',
+        body: `英語は「中心になる語を先に言い、説明をあとに足す」ことばです。「その部屋のドア」なら、中心は「ドア」なので the door を先に言い、どの部屋のドアかを of the room であとから足します。だから「A の B」は B of A の順になり、日本語の順のまま the room of the door と書くと、中心が「部屋」になって意味が逆転します。長い日本語ほど、うしろから訳すと英語の順になります。
+
+be made of と be made from の区別は、**材料の形が残っているか**で決まります。木の机は見れば木だと分かるので of、チーズは見ても牛乳だと分からないので from。of は「そのものの一部・材料そのまま」、from は「出発点から変化した」という前置詞の意味のちがいがそのまま表れています。about が「約」を表すときは、about ten minutes のように数のすぐ前に置くので、for about ten minutes の順になります。
+
+■ 確かめのしかた
+①「A の B」を英語にしたら、**中心の語（B）が先**か。the title of this book（この本の題名）。
+②材料は**見て分かるか**。分かる（wood・paper・stone・glass）→of。分からない（milk・grapes）→from。
+③about が「約」なら、**数のすぐ前**に置く。for about thirty minutes（× about for）。at about seven、in about a week。
+④of の三つの使い方：所有（the name of the city）、部分・分量（a cup of tea）、材料（made of wood）。
+
+★ ここがポイント：英語は**中心の語を先に言う**ので「A の B」は **B of A**。材料は**見て分かるなら of、分からないなら from**。「約」の about は数のすぐ前。`,
       },
     ],
     trapExamples: [

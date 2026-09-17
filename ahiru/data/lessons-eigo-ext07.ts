@@ -2970,6 +2970,20 @@ much と very は使う場所が正反対だと覚えるとよい。
 
 ⚠ 注意：Thank you much. は誤りで Thank you very much. が正しい。much を単独で動詞の強調に使わない。`,
       },
+      {
+        heading: 'なぜ very は比較級を強められないのか',
+        body: `very は「とても」と、**その性質の程度が高い**ことを表す語です。tall（背が高い）の程度を上げて very tall と言えます。ところが taller（〜より高い）は、程度ではなく**二つの差**を表す形です。差を強めるには「差が大きい」と言う必要があり、それを表すのが much・far・a lot（ずっと・はるかに）です。very は程度の語なので、差の形（比較級）には付けられません。逆に much は差の語なので、原級（tall）には付けられません。だから使う場所が正反対になります。
+
+最上級を強める by far も「他と比べて差が大きい」という意味で、比較級と同じ仲間です。動詞を強めるときに very much と二語になるのは、much だけでは動詞の程度を表せないからで、Thank you much. は誤りです。
+
+■ 確かめのしかた
+①強めたい語が**原級か比較級か**を見る。原級→very（very tall）。比較級→much / far / a lot / even（much taller）。
+②× very taller、× much tall になっていないか。
+③最上級→by far（by far the best）。動詞→very much（like it very much）。
+④a little（少し）も比較級に付く（a little heavier）。even は「さらに」（even better）。
+
+★ ここがポイント：very は**程度**、much は**差**を表す語なので、**原級には very、比較級には much**（very tall／much taller）。最上級は by far、動詞は very much。`,
+      },
     ],
     trapExamples: [
       {

@@ -3403,7 +3403,7 @@ sit（すわる）→ sitting　／　eat（食べる）→ eating
     keyPoints: [
       'four は u があるが、forty には u がない（fourty は誤り）。',
       'five → fifteen／fifty、twelve → twelfth のように、ve が f に変わる。',
-      'nine → ninth、ninety は e が消える（nineth は誤り）。ただし nineteen は e が残る。',
+      'nine → ninth は e が消える（nineth は誤り）。nineteen・ninety は e が残る。',
       'eight → eighth は t が1つ（eightth ではない）。',
       '序数は th を付けるのが基本。first・second・third だけ形がちがう。',
     ],
@@ -3426,7 +3426,7 @@ twenty, thirty, forty, fifty, sixty, seventy, eighty, ninety
 ・four → forty（u が消える。fourty は誤り。ここが最頻出のまちがい）
 ・five → fifty（ve が f になる）
 ・eight → eighty（t は1つ）
-・nine → ninety（e が消える）
+・nine → ninety（e は残る。e が消えるのは ninth）
 
 ■ 大きな数
 hundred（100）, thousand（1000）
@@ -3473,7 +3473,7 @@ thirty → thirtieth／forty → fortieth／ninety → ninetieth
           '4は four、14は fourteen と、どちらも u があるため、40も同じように u を入れてしまう。発音でも u の有無は聞き分けられないので、知識がないと必ずまちがえる。',
         correctAnswer: 'forty',
         correctExplanation:
-          '40 は forty で、u を書かない。four（4）と fourteen（14）には u があるのに、forty（40）だけ u がないという例外である。同じ仲間の変化に five→fifteen／fifty、nine→ninety（e が消える）がある。数の語の中で最もまちがえやすい語なので、単独で覚える。',
+          '40 は forty で、u を書かない。four（4）と fourteen（14）には u があるのに、forty（40）だけ u がないという例外である。同じ仲間の変化に five→fifteen／fifty、nine→ninth（e が消える。ninety は e が残る）がある。数の語の中で最もまちがえやすい語なので、単独で覚える。',
       },
       {
         question: '「9番目」を表す序数を書きなさい。',
