@@ -3314,6 +3314,20 @@ I will stay here until Friday.（金曜までここにいる）← 継続
 before dinner（夕食前に）／after school（放課後に）
 後ろに動詞を置くときは -ing にする。before going to bed（ねる前に）`,
       },
+      {
+        heading: 'なぜ時間の幅で in・on・at が決まり、なぜ until と by がちがうのか',
+        body: `in は「広い範囲の中に」、on は「その日に触れて」、at は「一点で」という前置詞の本来の意味です。年・月・季節は幅が広いので in、日付・曜日は一日という区切りなので on、時刻は針が一か所を指す点なので at。幅の大小で並べると、一つずつ暗記しなくても思い出せます。「日曜日の朝」で on が勝つのは、日が決まった時点で「その日に」という on の意味が優先されるからです。this・last・next・every が付いた語に前置詞を付けないのは、これらの語がすでに「いつ」を決めているからです。
+
+until と by のちがいは、**動作が続くか、一度で終わるか**です。until は「その時までずっと」と状態が続く（stay・wait）、by は「その時までには一度」と期限を示す（finish・come・send）。for と during は、うしろが「数字＋単位」（長さ）なら for、「名前の付いた期間」なら during です。
+
+■ 確かめのしかた
+①幅の大小で選ぶ：年・月・季節・午前→in、日付・曜日→on、時刻・正午・夜→at。日が決まったら on（on Sunday morning）。
+②this・last・next・every・today・tomorrow・yesterday に前置詞を付けていないか（× on last Sunday）。
+③うしろが**数字＋単位**なら for（for three days）、**名前の付いた期間**なら during（during the vacation）。
+④動作が**続く**なら until（stay until Friday）、**一度で終わる**なら by（finish by Friday）。since は「〜以来」で現在完了と。before・after のあとに動詞を置くなら -ing。
+
+★ ここがポイント：in は**幅**、on は**日**、at は**点**で、幅の大小で並べて覚える。until は**続く**、by は**期限**。for は**数字の長さ**、during は**名前の付いた期間**。`,
+      },
     ],
     trapExamples: [
       {
@@ -3897,6 +3911,20 @@ block（区画）／corner（角）／traffic light, signal（信号）／crossi
 ★ ポイント：角の数え方は序数を使う。at the first corner（1つ目の角で）／at the second traffic light（2つ目の信号で）。first・second・third を正確に読み取ることが得点の分かれ目になる。
 
 ⚠ 注意：on your right（あなたの右手に）の your を落とさない。on the right とも言うが、on right とは言わない。`,
+      },
+      {
+        heading: 'なぜ答える側が難しく、なぜ序数を使うのか',
+        body: `たずねる側は Excuse me. How can I get to 〜? と決まり文句一つで足りますが、答える側は**相手の位置から見た向き**で道順を組み立てなければなりません。Turn right の right は、説明する自分ではなく、歩く相手から見た右です。だから地図問題では、出発点と向いている方向を確認し、曲がるたびに指でたどります。頭の中だけで回すと、下を向いているときの right が地図上の左になることを忘れて、右と左が入れかわります。
+
+「2つ目の角」を the second corner と序数で言うのは、角を**数えるのではなく順番で指している**からです。two corners は「角が二つ」という数であって、どの角かを指せません。first・second・third を正確に読み取ることが、目的地を決める鍵です。序数の前には the を付けます。
+
+■ 確かめのしかた
+①たずねるときは **Excuse me.** から始める。How can I get to 〜?／Where is 〜?／Is there a 〜 near here?
+②道順の語を順にたどる：Go straight（for two blocks）→Turn right/left at the 〇th corner→It's on your right/left・next to・across from。
+③「〇つ目」は**序数＋the**（at the second corner）。× at the two corner。
+④距離・時間は It's about five minutes on foot.／It takes ten minutes by bus. 答えられないときは I'm sorry, I'm a stranger here.（この土地に不案内）。
+
+★ ここがポイント：道案内は**歩く相手から見た向き**で組み立てるので、地図の上で指でたどる。「〇つ目の角」は**順番なので序数（the second corner）**。最初は Excuse me.、終わりは You're welcome.。`,
       },
     ],
     trapExamples: [

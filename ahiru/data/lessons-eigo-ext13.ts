@@ -524,6 +524,20 @@ I go to bed at nine thirty.（9時30分にねます）
 
 ⚠ 注意：7時30分を It's seven thirty o'clock. とは言わない。o'clock はちょうどの時こくだけにつける。`,
       },
+      {
+        heading: 'なぜ答えは It\'s で始め、なぜ o\'clock はちょうどのときだけなのか',
+        body: `英語の文には必ず主語が要ります。「7時です」には「何が」にあたることばがないので、**形をそろえるための It** を主語に置きます。この It は「それ」という意味ではなく、天気や曜日を言うときと同じ決まった言い方です。I is 〜 や This is 〜 とはしません。「〜時に」に at を使うのは、時こくが時計の針が一か所を指す**点**だからで、幅のある月や季節には in、日には on を使います。
+
+o'clock は「〜時ちょうど」という意味のことばです。だから分があるとき（seven thirty）には付けられません。分が1けたのときに 0 を oh と読む（ten oh five）のは、時こくを数字の並びとして読む決まりです。past・to の言い方は、まず数字をそのまま読む形を確実にしてから覚えます。
+
+■ 確かめのしかた
+①答えが **It's** で始まっているか。What time is it?→It's seven.
+②**ちょうどのときだけ o'clock**。It's seven o'clock.／It's seven thirty.（× seven thirty o'clock）。
+③時→分の順に数字を読む。分が1けたなら oh（It's ten oh five.）。
+④「〜時に」は **at**（I get up at six.）。曜日・日付は on、月・年・季節は in。× I get up in seven.
+
+★ ここがポイント：時こくの文は**主語が無いので It's で形をそろえる**。o'clock は**ちょうどのときだけ**。「〜時に」は時こくが**点**なので at。`,
+      },
     ],
     trapExamples: [
       {
@@ -767,6 +781,20 @@ go のあとに to を入れる。
 He や She が主語のときは、動詞の形が変わる。これは次の単元で学ぶ。
 
 ⚠ 注意：like のあとに来る動物や食べ物は、ふつう複数形にする。I like dog. だと「犬の肉が好き」という意味になってしまう。I like dogs. が正しい。`,
+      },
+      {
+        heading: 'なぜ英語は「だれが→どうする→何を」の順で、なぜ am と play を並べないのか',
+        body: `日本語は「わたしは サッカーを します」と、動作を最後に言います。英語は「わたしは します サッカーを」と、**だれが何をするかを先に言い、そのあとに相手を足す**ことばです。だから語順は主語→動詞→そのほか。この順を声に出しながら並べると、日本語のまま I soccer play と書く誤りが減ります。
+
+am・is・are（be動詞）は「〜です・〜がいる」を表す語で、play・like（一般動詞）は「〜します」を表す語です。一つの文には動詞が一つなので、I am play tennis. のように両方入れると、「です」と「します」が重なって意味が通りません。「です」の文なら be動詞、「します」の文なら一般動詞と分けます。go のあとに to が要るのは、go が「行く」という動きだけを表し、「どこへ」を表す語が別に必要だからです。home は「家へ」という意味をすでに持つので to を付けません。
+
+■ 確かめのしかた
+①**だれが→どうする→何を**の順か。I play soccer.（× I soccer play.）
+②文の中に動詞が一つか。× I am play tennis.→I play tennis.「です」なら be動詞、「します」なら一般動詞。
+③go のあとに **to** があるか（go to school／go to the park）。home には付けない（go home）。
+④楽器には the（play the piano）、好きなものは複数形（I like dogs. ／ I like dog. は犬の肉）。at school・every day・after school は文の終わりに。
+
+★ ここがポイント：英語は**だれが何をするかを先に言う**ので、主語→動詞→そのほか。**一つの文に動詞は一つ**なので be動詞と一般動詞を並べない。go は「どこへ」の to が要る（home は不要）。`,
       },
     ],
     trapExamples: [
@@ -1106,6 +1134,20 @@ be動詞の文では、be動詞を先頭に出す。
 
 ⚠ 注意：Does he likes ~? としてしまう誤りが最も多い。Does を書いた時点で、うしろの動詞はもとの形と決まっている。`,
       },
+      {
+        heading: 'なぜ Do のうしろは s なしで、なぜ答えの語をそろえるのか',
+        body: `be動詞の文は、be動詞を先頭に出せばたずねる文になります（Are you 〜?）。一般動詞は先頭に出せないので、**「これからたずねます」という合図の語 Do を先頭に置きます**。主語が he・she・it・1人・1つのときは、その s の役目を Do が引き受けて Does になります。だから Does のうしろの動詞にはもう s は要りません。Does he likes 〜? は s が二重になっています。
+
+答えの語をそろえるのは、答えが**質問の動詞をくり返している**からです。Do you like music? への Yes, I do. は「Yes, I (like music)」の do です。Are you 〜? への Yes, I am. は am をくり返しています。Do でたずねられたのに Yes, I am. と答えると、何をくり返しているのか分からなくなります。答えるときに名前を he・she・they に変えるのも、同じ人を二度名前で呼ばないためです。
+
+■ 確かめのしかた
+①主語が I・you・we・they→**Do**、he・she・it・1人・1つ→**Does**。
+②Does のうしろの動詞が**もとの形**か。× Does she plays→Does she play。
+③答えの語が質問とそろっているか。Do→do／don't、Does→does／doesn't、Are→am／are、Is→is。× Do you like music?→Yes, I am.
+④答えでは名前を代名詞に（Does Ken 〜?→Yes, he does.）。文末に ? があるか。A or B? には Yes/No で答えない。
+
+★ ここがポイント：Do／Does は**たずねる合図の語**で、Does が s の役目を引き受けるので動詞は**もとの形**。答えは**質問の語をくり返す**ので Do→do、Are→am とそろえる。`,
+      },
     ],
     trapExamples: [
       {
@@ -1229,6 +1271,20 @@ Let's は Let us を短くした形である。
 ・Be quiet.（お静かに）
 
 ⚠ 注意：Let's のあとは、必ず動詞のもとの形が来る。Let's playing や Let's to play は誤りである。`,
+      },
+      {
+        heading: 'なぜ命令する文に主語がなく、なぜ Be quiet. なのか',
+        body: `命令する文は、**目の前の相手（you）に向かって言う**ので、だれに言っているかは分かりきっています。だから主語を書かず、動詞から始めます。逆に言えば、動詞から始まる文を見たら命令する文だと分かります。動詞が「もとの形」なのは、主語が無いので主語に合わせて形を変える必要がないからです。be動詞のもとの形は be なので、「静かにしなさい」は Be quiet. です。am・is・are は主語に合わせて変わった形なので、主語のない命令文では使いません。
+
+Let's のあとに動詞のもとの形が来るのは、Let's が Let us（私たちに〜させて）を短くした形で、let のあとには動詞のもとの形を置く決まりがあるからです。Let's to play や Let's playing は誤りです。「〜しないで」は動詞の前に Don't を置き、Don't のあとも動詞のもとの形です。
+
+■ 確かめのしかた
+①命令する文に **You** を付けていないか。動詞（もとの形）から始まっているか。
+②be動詞の命令文は **Be**（Be quiet.／Be careful.）。× Are quiet.
+③Let's のあとが**もとの形**か。Let's play soccer.（× Let's to play、× Let's playing）。
+④ていねいさ：Open the window.→Please open the window.／Open the window, please.→Can you open the window? の順にていねいになる。Don't のあとももとの形。
+
+★ ここがポイント：命令する文は**目の前の you に言うので主語を書かず**、動詞は**もとの形**（be動詞は Be）。Let's は Let us なので、あとは**もとの形**。`,
       },
     ],
     trapExamples: [
