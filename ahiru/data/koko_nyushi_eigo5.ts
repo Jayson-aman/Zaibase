@@ -74,26 +74,8 @@ export const kokoNyushiEigo5: Question[] = [
     choices: ['① more', '② most', '③ the most', '④ much more'],
     answer: '③ the most',
     hint: '「この地域のすべての川の中で」という範囲を表す表現があるので最上級を使う。',
-    explanation: `【出題意図】
-最上級の形（the most + 形容詞）を正確に使えるかを問う問題。定冠詞 the の必要性がポイント。
-
-【解説】
-「Of all the rivers in this area（この地域のすべての川の中で）」は範囲を示す表現で、その中での「一番」を表すには最上級が必要。polluted は3音節以上とみなされる語で more/most 型を使う。
-・① more → 比較級（2つを比べる表現。範囲を示す of all と合わない）
-・② most → 最上級だが the が抜けている（最上級には必ず the が必要）
-・③ the most → 正しい最上級（✓）
-・④ much more → 比較級を強調する形（最上級ではない）
-
-日本語訳：「この地域のすべての川の中で、この川が一番汚染されている。」
-
-【文法ポイント】
-最上級には必ず the をつける：the + most + 形容詞、または the + 形容詞-est。
-「of all〜」「in〜」などの範囲を示す語句は最上級のサイン。
-
-【入試頻出】
-・This is the most important lesson we learned about the environment.
-・Of all the students, she studies the hardest.
-・This is the cleanest beach in the country.`,
+    explanation:
+      '【何を聞かれているか】「Of all the rivers in this area, this one is ( ) polluted.」の空所に入る適切な語句を選ぶ。\n【なぜthe mostになるのか】「Of all the rivers in this area（この地域のすべての川の中で）」という範囲を示す表現があるため、その中での「一番」を表す最上級が必要で、pollutedは長い形容詞なのでthe mostを使うから。\n【ポイント1】Of all〜という範囲を示す表現は最上級のサイン。pollutedは3音節以上とみなされる語なのでmore/most型を使う。\n【ポイント2】①more（比較級、範囲を示すof allと合わない）、②most（theが抜けている）、④much more（比較級の強調で最上級ではない）はどれも誤り。\n【ポイント3】③the most（正しい最上級）が正解。最上級には必ずtheが必要。\n【答え】③ the most\n【確かめ】the mostのtheが抜けていないかを確認する。\n【よくあるまちがい】②mostのようにtheをつけ忘れてしまう。\n【ここが絶対】最上級には必ずtheをつける。長い形容詞はthe most＋形容詞、短い形容詞はthe＋形容詞-estの形にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -169,25 +151,8 @@ avoid（避ける）、enjoy（楽しむ）、finish（終える）、stop（や
     choices: ['① will collect', '② has collected', '③ will have collected', '④ collected'],
     answer: '③ will have collected',
     hint: '「このプログラムが終わるまでには」という未来の時点での完了を表す時制を選ぶ。',
-    explanation: `【出題意図】
-未来完了形（will have + 過去分詞）の用法を問う問題。「未来のある時点での完了」を表す時制の識別。
-
-【解説】
-「By the time this recycling program ends（このプログラムが終わるまでには）」は未来の時点を示す。その時点までに「100万本以上のペットボトルを集め終えていることになる」という完了を表すには未来完了形を使う。
-・① will collect → 単純未来（完了の意味を表せない）
-・② has collected → 現在完了（未来の時点には使えない）
-・③ will have collected → 未来完了（✓）
-・④ collected → 過去形（文脈に合わない）
-
-日本語訳：「このリサイクル計画が終わるまでには、この市は100万本以上のペットボトルを回収し終えていることになる。」
-
-【文法ポイント】
-未来完了形＝will have + 過去分詞。目印の語句：by the time〜 / by then / by next〜 / by the end of〜。
-
-【入試頻出】
-・By next year, we will have planted a thousand trees.
-・She will have finished the project by Friday.
-・By the time you get home, I will have cleaned the house.`,
+    explanation:
+      '【何を聞かれているか】「By the time this recycling program ends, the city ( ) more than one million plastic bottles.」の空所に入る適切な時制を選ぶ。\n【なぜwill have collectedになるのか】「このプログラムが終わるまでには」という未来のある時点で「100万本以上集め終えていることになる」という完了を表すには、未来完了形（will have＋過去分詞）を使う必要があるから。\n【ポイント1】By the time this recycling program ends（このプログラムが終わるまでには）は未来の時点を示す表現。\n【ポイント2】①will collect（単純未来）、②has collected（現在完了、未来の時点には使えない）、④collected（過去形）はどれも文脈に合わない。\n【ポイント3】③will have collected（未来完了）が正解。目印はby the time〜、by then、by next〜、by the end of〜。\n【答え】③ will have collected\n【確かめ】By the timeの節の動詞が現在形（ends）になっており、主節が未来完了（will have collected）になっているかを確認する。\n【よくあるまちがい】has collected（現在完了）を選んでしまう。現在完了は現在を基準にするので、未来の時点には使えない。\n【ここが絶対】未来のある時点での完了にはwill have＋過去分詞（未来完了形）を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -200,25 +165,8 @@ avoid（避ける）、enjoy（楽しむ）、finish（終える）、stop（や
     choices: ['① will keep', '② keep', '③ kept', '④ keeping'],
     answer: '② keep',
     hint: '条件を表す if 節の中では、未来のことでも現在形を使う。',
-    explanation: `【出題意図】
-条件節（if 節）での時制のルール「未来のことでも現在形を使う」を問う問題。入試最頻出文法の一つ。
-
-【解説】
-「If people 〜, marine life will continue」は条件文。英語では if 節などの副詞節の中では、未来のことであっても will を使わず現在形を使う。
-・① will keep → if 節内で will は使えない（×）
-・② keep → 現在形（✓）if 節内では現在形で未来を表す
-・③ kept → 過去形（仮定法になり文意が変わる）
-・④ keeping → 動詞の原形が必要な位置で分詞は使えない
-
-日本語訳：「もし人々が海にプラスチックを捨て続ければ、海の生き物は苦しみ続けるだろう。」
-
-【文法ポイント】
-時・条件を表す副詞節の中では未来のことでも現在形：if（もし〜なら）/ when（〜するとき）/ until（〜まで）/ as soon as（〜したらすぐ）。
-
-【入試頻出】
-・If we reduce plastic waste, the ocean will become cleaner.
-・When people recycle more, less garbage will go to landfills.
-・As soon as the rain stops, we will start the clean-up.`,
+    explanation:
+      '【何を聞かれているか】「If people ( ) throwing plastic into the ocean, marine life will continue to suffer.」の空所に入る適切な語を選ぶ。\n【なぜkeepになるのか】条件を表すif節の中では、未来のことでもwillを使わず現在形を使うという決まりがあるから。\n【ポイント1】if節などの副詞節の中では、未来のことでも現在形で表す。①will keepはif節の中では使えない。\n【ポイント2】③kept（過去形、仮定法になり文意が変わる）、④keeping（動詞の原形が必要な位置で分詞は使えない）はどちらも誤り。\n【ポイント3】②keep（現在形）が正解。「もし人々が海にプラスチックを捨て続ければ」という条件を表す。\n【答え】② keep\n【確かめ】主節にwillが使われている（marine life will continue）ことと、if節が現在形（keep）になっていることのバランスを確認する。\n【よくあるまちがい】if節の中にもwillを入れてしまう。\n【ここが絶対】時・条件を表す副詞節の中では、未来のことでも現在形を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -356,25 +304,8 @@ stop + 動名詞：〜するのをやめる。stop + 不定詞：〜するため
     choices: ['① study', '② have studied', '③ have been studying', '④ studied'],
     answer: '③ have been studying',
     hint: '「10年以上にわたって」という継続を表す語句から時制を判断する。',
-    explanation: `【出題意図】
-現在完了進行形（have been + Ving）の用法を問う問題。長期にわたる継続的な動作を表す時制の識別が目標。
-
-【解説】
-「for over a decade（10年以上にわたって）」は継続を表す語句。過去から現在まで「研究し続けている」という進行中の継続動作を表すには現在完了進行形を使う。
-・① study → 現在形（継続の意味が出ない）
-・② have studied → 現在完了形（動作の完了・経験の意味が強く、継続の強調には弱い）
-・③ have been studying → 現在完了進行形（✓）
-・④ studied → 過去形（継続を表せない）
-
-日本語訳：「科学者たちは10年以上にわたってマイクロプラスチックが魚に与える影響を研究し続けている。」
-
-【文法ポイント】
-現在完了進行形＝have/has been + 動詞-ing。「for〜（〜の間）」「since〜（〜以来）」とセットで使われることが多い。
-
-【入試頻出】
-・We have been working on this environmental project for three years.
-・She has been collecting data since last spring.
-・They have been trying to reduce food waste for a long time.`,
+    explanation:
+      '【何を聞かれているか】「Scientists ( ) the effects of microplastics on fish for over a decade.」の空所に入る適切な時制を選ぶ。\n【なぜhave been studyingになるのか】「10年以上にわたって」という長期間続いている進行中の動作を強調するには、現在完了進行形（have been＋動詞のing形）を使う必要があるから。\n【ポイント1】for over a decade（10年以上にわたって）は継続を表す語句。\n【ポイント2】①study（現在形、継続の意味が出ない）、②have studied（現在完了形、継続の強調には弱い）、④studied（過去形、継続を表せない）はどれも文脈に合わない。\n【ポイント3】③have been studying（現在完了進行形）が正解。for〜（〜の間）、since〜（〜以来）とセットで使われることが多い。\n【答え】③ have been studying\n【確かめ】for over a decadeという継続の期間を表す語句と、have been＋Vingの組み合わせがセットになっていることを確認する。\n【よくあるまちがい】have studied（現在完了形）を選んでしまう。現在完了進行形の方が「今も続いている」ことをより強調する。\n【ここが絶対】長期間にわたって続いている進行中の動作を強調するときは現在完了進行形（have/has been＋Ving）を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -453,26 +384,8 @@ give up を含む頻出表現：give up smoking（喫煙をやめる）、give u
     choices: ['① go', '② run', '③ use', '④ get'],
     answer: '② run',
     hint: 'run out of〜 で「〜を使い果たす」という熟語。',
-    explanation: `【出題意図】
-句動詞 run out of〜（〜を使い果たす、〜が尽きる）を正確に知っているかを問う問題。
-
-【解説】
-run out of〜 は「〜がなくなる、〜を使い果たす」という重要イディオム。
-・① go → go out of は「外に出る」の意味にはなるが、この熟語では使わない
-・② run → run out of〜（✓）
-・③ use → use out of という表現は存在しない
-・④ get → get out of〜 は「〜から抜け出す」という別の意味
-
-日本語訳：「もし私たちがこのままの速さで資源を使い続ければ、いつかきれいな水を使い果たしてしまうだろう。」
-
-【文法ポイント】
-run out of〜：資源・時間・お金などが尽きることを表す頻出表現。
-似た表現：run short of〜（〜が不足する）
-
-【入試頻出】
-・We are running out of time to solve this problem.
-・The world may run out of fossil fuels in the future.
-・Don't run out of patience when recycling takes extra effort.`,
+    explanation:
+      '【何を聞かれているか】「If we keep using resources so quickly, we will ( ) out of clean water someday.」の空所に入る適切な語を選ぶ。\n【なぜrunになるのか】「〜を使い果たす、〜がなくなる」という意味は、動詞runを使ったrun out of〜という決まったイディオムで表すから。\n【ポイント1】run out of〜は「〜がなくなる、〜を使い果たす」という重要イディオム。\n【ポイント2】①go out of（「外に出る」の意味にはなるが、この熟語では使わない）、③use out of（存在しない表現）、④get out of〜（「〜から抜け出す」という別の意味）はどれも誤り。\n【ポイント3】②run（run out of〜の形）が正解。似た表現にrun short of〜（〜が不足する）がある。\n【答え】② run\n【確かめ】run out of clean waterで「きれいな水を使い果たす」という意味になっているかを確認する。\n【よくあるまちがい】go out ofとrun out ofを混同してしまう。\n【ここが絶対】「資源・時間・お金が尽きる」はrun out of〜という決まった形で覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -485,26 +398,8 @@ run out of〜：資源・時間・お金などが尽きることを表す頻出�
     choices: ['① of', '② from', '③ by', '④ with'],
     answer: '② from',
     hint: '材料が加工されて元の形が分からなくなる場合の前置詞を選ぶ。',
-    explanation: `【出題意図】
-be made of〜 と be made from〜 の使い分けを問う問題。材料が「見た目のまま」か「変化しているか」がポイント。
-
-【解説】
-be made of〜：材料が加工されても元の見た目や性質がそのまま分かる場合（例：made of wood）。
-be made from〜：材料が化学的・物理的に変化し、見た目が変わっている場合（ペットボトル→新しいプラスチック製品）。
-・① of → 材料が変化していない場合に使う
-・② from → 材料が加工されて別のものに変化している場合（✓）
-・③ by → 動作主を表す（受動態のby〜）で材料には使わない
-・④ with → 手段・道具を表す前置詞で材料表現には不適切
-
-日本語訳：「このエコバッグはリサイクルされたペットボトルから作られている。」
-
-【文法ポイント】
-be made of〜（見た目が変わらない材料）、be made from〜（見た目が変わる材料）、be made by〜（作った人・会社）。
-
-【入試頻出】
-・This chair is made of wood.
-・Paper is made from trees.
-・This product was made by a local company.`,
+    explanation:
+      '【何を聞かれているか】「This eco-friendly bag is made ( ) recycled plastic bottles.」の空所に入る適切な前置詞を選ぶ。\n【なぜfromになるのか】ペットボトルが加工されて別のもの（バッグ）に変化しており、材料が見た目のまま分からなくなっているため、be made from〜（材料が変化している場合）を使う必要があるから。\n【ポイント1】be made of〜は材料が加工されても元の見た目や性質がそのまま分かる場合に使う（例：made of wood）。\n【ポイント2】be made from〜は材料が化学的・物理的に変化し、見た目が変わっている場合に使う（ペットボトル→新しいプラスチック製品）。\n【ポイント3】③by（動作主を表す）、④with（手段・道具を表す）はどちらも材料表現には使わない。②from（材料が変化している場合）が正解。\n【答え】② from\n【確かめ】recycled plastic bottlesがバッグに加工されて見た目が変わっていることから、fromが正しいことを確認する。\n【よくあるまちがい】be made of〜とbe made from〜を混同し、材料が変化しているかどうかを見分けずにofを使ってしまう。\n【ここが絶対】材料の見た目が変わらない場合はof、変わる場合はfromを使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -646,25 +541,8 @@ make a difference：良い影響・効果を与えるという意味で環境や
     choices: ['① who', '② which', '③ whom', '④ whose'],
     answer: '① who',
     hint: '先行詞は「人」、関係代名詞節内での役割は「主語」。',
-    explanation: `【出題意図】
-関係代名詞の選択（who / which / whom / whose）を問う問題。先行詞が人か物か、節内の役割の識別が目標。
-
-【解説】
-先行詞は「The doctor（医師）」= 人。関係代名詞節内で「works（働いている）」の主語の役割を果たしている。
-・① who → 先行詞が人・主格（✓）
-・② which → 先行詞が物や動物
-・③ whom → 先行詞が人・目的格
-・④ whose → 先行詞が人または物・所有格
-
-日本語訳：「この診療所で働く医師は、毎月お年寄りに無料の健康診断を行っている。」
-
-【文法ポイント】
-関係代名詞まとめ：人・主格はwho、人・目的格はwhom、物・主格/目的格はwhich、人/物・所有格はwhose。that はwho/whichの代わりに使えるがwhoseの代わりにはならない。
-
-【入試頻出】
-・The nurse who helped me was very kind.
-・The scientist who studies climate change gave a speech.
-・The volunteer whose idea started the project is my neighbor.`,
+    explanation:
+      '【何を聞かれているか】「The doctor ( ) works at this clinic gives free health checkups to elderly people every month.」の空所に入る適切な関係代名詞を選ぶ。\n【なぜwhoになるのか】先行詞The doctor（医師）は人で、関係代名詞節の中でworks（働いている）の主語の役割をしているため、先行詞が人・主格のときに使うwhoを選ぶ必要があるから。\n【ポイント1】先行詞がThe doctor（人）で、関係代名詞節内でworksの主語になっている（主格）。\n【ポイント2】②whichは先行詞が物や動物、③whomは先行詞が人・目的格、④whoseは所有格で、どれも文脈に合わない。\n【ポイント3】関係代名詞まとめ：人・主格はwho、人・目的格はwhom、物・主格/目的格はwhich、人/物・所有格はwhose。\n【答え】① who\n【確かめ】whoのあとに動詞（works）が続いている（主語の役割）ことを確認する。\n【よくあるまちがい】先行詞が人なのにwhichを選んでしまう。\n【ここが絶対】関係代名詞は、先行詞が人か物かと、節内での役割（主格・目的格・所有格）の両方で決まる。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -677,27 +555,8 @@ make a difference：良い影響・効果を与えるという意味で環境や
     choices: ['① who', '② which', '③ where', '④ whom'],
     answer: '② which',
     hint: '先行詞は「物（袋）」。関係代名詞節内で used の目的語になっている。',
-    explanation: `【出題意図】
-関係代名詞 which（先行詞が物・目的格）の用法を問う問題。that との言い換えも理解する。
-
-【解説】
-先行詞は「The plastic bag（プラスチック袋）」= 物。関係代名詞節内で I used ( )（私が使った）の目的語になっている。
-・① who → 先行詞が人のとき使う
-・② which → 先行詞が物・目的格（✓）I used which = それを使った
-・③ where → 関係副詞（場所を表す先行詞に使う）
-・④ whom → 先行詞が人・目的格
-
-which は省略可（thatに置き換え可）：The plastic bag (that) I used yesterday〜
-
-日本語訳：「私が昨日使ったプラスチック袋は、結局家の近くの川を汚染することになった。」
-
-【文法ポイント】
-目的格の関係代名詞は省略可能。先行詞＋関係代名詞（目的格）＋主語＋動詞〜という構造を確認する。
-
-【入試頻出】
-・The bottle (which) she threw away was still full.
-・The straw (that) I used is not recyclable.
-・The trash (which) they collected filled ten bags.`,
+    explanation:
+      '【何を聞かれているか】「The plastic bag ( ) I used yesterday ended up polluting the river near my house.」の空所に入る適切な関係代名詞を選ぶ。\n【なぜwhichになるのか】先行詞The plastic bag（プラスチック袋）は物で、関係代名詞節の中でI used（　）の目的語の役割をしているため、先行詞が物・目的格のときに使うwhichを選ぶ必要があるから。\n【ポイント1】先行詞がThe plastic bag（物）で、関係代名詞節内でI usedの目的語になっている（目的格）。\n【ポイント2】①whoは先行詞が人、③whereは関係副詞、④whomは先行詞が人・目的格で、どれも文脈に合わない。\n【ポイント3】whichは省略も可能で、thatに置きかえることもできる：The plastic bag (that) I used yesterday〜。\n【答え】② which\n【確かめ】whichのあとにI used（主語＋動詞）が続いている（目的語の役割）ことを確認する。\n【よくあるまちがい】先行詞が物なのにwhoを選んでしまう。\n【ここが絶対】目的格の関係代名詞は省略できる。先行詞が物ならwhich（thatはどちらにも使える）。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -740,27 +599,8 @@ which は省略可（thatに置き換え可）：The plastic bag (that) I used y
     question: '次の2文を1文に書き換えなさい。（関係代名詞を使って）\n\nI know a scientist.\nHer research is about ocean pollution.',
     answer: 'I know a scientist whose research is about ocean pollution.',
     hint: '2つの文をつなぐとき、Her（彼女の）を所有格の関係代名詞 whose に変える。',
-    explanation: `【出題意図】
-所有格の関係代名詞 whose を使って2文を1文に結合する問題。
-
-【解説】
-「I know a scientist.」と「Her research is about ocean pollution.」の Her は a scientist を指している。この「Her（その科学者の）」という所有の関係を表すのが関係代名詞の所有格 whose。
-
-変換の手順：
-1. 先行詞を特定：a scientist（人）
-2. Her（所有格）→ whose に置き換える
-3. whose を先行詞 a scientist の直後に置く
-→ I know a scientist whose research is about ocean pollution.
-
-日本語訳：「私は、研究が海洋汚染についてである科学者を知っている。」
-
-【文法ポイント】
-whose の使い方：先行詞（人・物）の所有格を表す。先行詞＋whose＋名詞＋動詞〜という構造。
-
-【入試頻出】
-・He is a teacher whose classes are very popular.
-・I met a family whose house runs entirely on solar power.
-・This is the company whose products are all made of recycled materials.`,
+    explanation:
+      '【何を聞かれているか】「I know a scientist. Her research is about ocean pollution.」を関係代名詞を使って1文にする。\n【なぜwhoseを使うのか】2つ目の文のHer（彼女の）がa scientist（1つ目の文の名詞）の所有を表しているため、この所有の関係を表す所有格の関係代名詞whoseに置きかえる必要があるから。\n【ポイント1】先行詞を特定する：a scientist（人）。\n【ポイント2】Her（所有格）をwhoseに置きかえ、先行詞a scientistの直後に置く。\n【ポイント3】I know a scientist whose research is about ocean pollution.（私は、研究が海洋汚染についてである科学者を知っている）。\n【答え】I know a scientist whose research is about ocean pollution.\n【確かめ】whoseのあとにresearch（名詞）、is（動詞）と続いているかを確認する。\n【よくあるまちがい】whoseのかわりにwhoを使ってしまう。所有の関係にはwhoseを使う。\n【ここが絶対】whoseは先行詞の所有格を表す関係代名詞。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -930,25 +770,8 @@ for vs since：for＋期間（for ten years）、since＋起点（since our chil
     question: '次の語を並べ替えて正しい英文を作れ。\n（ gave / him / the / doctor / some / advice / health ）\n「その医者は彼に健康に関するアドバイスをいくつか与えた。」',
     answer: 'The doctor gave him some health advice.',
     hint: 'give + 人 + 物 の語順（第4文型 SVOO）を使う。',
-    explanation: `【出題意図】
-第4文型（SVOO：主語＋動詞＋間接目的語＋直接目的語）の語順を問う整序問題。give の用法を確認する。
-
-【解説】
-give + 人 + 物 = 人に物を与える（第4文型）。
-The doctor（S）+ gave（V）+ him（IO: 間接目的語）+ some health advice（DO: 直接目的語）
-
-語順：The doctor gave him some health advice.
-第3文型への書き換え：The doctor gave some health advice to him.（to を使う）
-
-日本語訳：「その医者は彼に健康に関するアドバイスをいくつか与えた。」
-
-【文法ポイント】
-第4文型（SVOO）の動詞：give / send / show / teach / tell + 人 + 物（間接目的語が to で書き換え可）。
-
-【入試頻出】
-・The teacher gave us some advice about recycling.
-・She showed him a chart about air pollution.
-・He told the students some facts about climate change.`,
+    explanation:
+      '【何を聞かれているか】gave / him / the / doctor / some / advice / health を並べ替えて「その医者は彼に健康に関するアドバイスをいくつか与えた。」という英文を作る。\n【なぜhim some health adviceという語順になるのか】give＋人＋物は「人に物を与える」という第4文型（SVOO）の形で、間接目的語（人）を直接目的語（物）より先に置くという決まりがあるから。\n【ポイント1】give＋人＋物＝人に物を与える（第4文型）。The doctor（S）+ gave（V）+ him（間接目的語）+ some health advice（直接目的語）。\n【ポイント2】語順はThe doctor gave him some health advice.になる。\n【ポイント3】第3文型に書きかえるとThe doctor gave some health advice to him.（toを使う）になる。同じ仲間の動詞にsend、show、teach、tellがある。\n【答え】The doctor gave him some health advice.\n【確かめ】him（人）がsome health advice（物）より先に置かれているかを確認する。\n【よくあるまちがい】gave some health advice himのように、物を人より先に置いてしまう。\n【ここが絶対】give＋人＋物の第4文型では、人（間接目的語）を先に、物（直接目的語）をあとに置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -988,25 +811,8 @@ The doctor（S）+ gave（V）+ him（IO: 間接目的語）+ some health advice
     question: '次の語を並べ替えて正しい英文を作れ。\n（ I / the / man / met / yesterday / is / who / doctor / the ）\n「私が昨日会った男性はその医者です。」',
     answer: 'The man who I met yesterday is the doctor.',
     hint: '関係代名詞 who を使って先行詞「the man」を修飾する節を作る。',
-    explanation: `【出題意図】
-関係代名詞 who（目的格）を使った語順整序問題。先行詞と関係代名詞節の位置関係が鍵。
-
-【解説】
-文の骨格：The man is the doctor.（その男性は医者だ）
-修飾部：who I met yesterday（私が昨日会った）
-
-組み合わせ：The man [who I met yesterday] is the doctor.
-who はここでは目的格（met の目的語）として使われている。= The man (whom/that) I met yesterday is the doctor.（省略も可）
-
-日本語訳：「私が昨日会った男性はその医者です。」
-
-【文法ポイント】
-関係代名詞節の位置：先行詞の直後に置く。主節の動詞（is）は関係代名詞節の後に続く。
-
-【入試頻出】
-・The woman who spoke at the seminar is an environmental scientist.
-・The boy who collected the most cans won a prize.
-・The man whom I saw at the recycling center works there.`,
+    explanation:
+      '【何を聞かれているか】I / the / man / met / yesterday / is / who / doctor / the を並べ替えて「私が昨日会った男性はその医者です。」という英文を作る。\n【なぜwhoが目的格として使えるのか】whoは本来主格の関係代名詞だが、口語では目的格（whomの代わり）としてもよく使われ、先行詞The manのうしろに「who I met yesterday」という節を置いて修飾できるから。\n【ポイント1】文の骨格はThe man is the doctor.（その男性は医者だ）。\n【ポイント2】修飾部はwho I met yesterday（私が昨日会った）。ここでのwhoはmetの目的語にあたる目的格の働きをしている。\n【ポイント3】組み合わせるとThe man who I met yesterday is the doctor.になる。＝The man (whom/that) I met yesterday is the doctor.（省略も可）。\n【答え】The man who I met yesterday is the doctor.\n【確かめ】関係代名詞節（who I met yesterday）が先行詞The manの直後に置かれ、そのあとに主節の動詞is the doctorが続いているかを確認する。\n【よくあるまちがい】関係代名詞節を先行詞から離れた位置に置いてしまう。\n【ここが絶対】関係代名詞節は必ず先行詞の直後に置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1018,23 +824,8 @@ who はここでは目的格（met の目的語）として使われている。
     question: '次の語を並べ替えて正しい英文を作れ。\n（ air / clean / is / enough / to / this / for / everyone / breathe ）\n「この空気はみんなが呼吸できるほどきれいだ。」',
     answer: 'This air is clean enough for everyone to breathe.',
     hint: '「〜が…するのに十分〜だ」は 形容詞 + enough + for + 人 + to 動詞 の形。',
-    explanation: `【出題意図】
-enough to 構文に「for + 人」が加わった形の語順を問う問題。「〜が…するほど十分〜だ」という表現の完全形を問う。
-
-【解説】
-構文：主語 + be + 形容詞 + enough + for + 人 + to + 動詞原形。「for + 人」は不定詞の意味上の主語を示す。
-
-正しい語順：This air is clean enough for everyone to breathe.
-
-日本語訳：「この空気はみんなが呼吸できるほどきれいだ。」
-
-【文法ポイント】
-「形容詞 + enough + for + 人 + to + 動詞」構文：The water is safe enough for children to drink.（子どもが飲めるくらい安全だ）のように使う。「too + 形容詞 + for + 人 + to + 動詞」との対比も確認する。
-
-【入試頻出】
-・The lake is clean enough for people to swim in.
-・This area is safe enough for animals to live in.
-・The soil is not rich enough for these plants to grow.`,
+    explanation:
+      '【何を聞かれているか】air / clean / is / enough / to / this / for / everyone / breathe を並べ替えて「この空気はみんなが呼吸できるほどきれいだ。」という英文を作る。\n【なぜfor＋人が入るのか】「〜が…するのに十分〜だ」と、動作をする人を明示するには、〈形容詞＋enough＋for＋人＋to＋動詞原形〉という構文を使い、for＋人が不定詞の意味上の主語を示すから。\n【ポイント1】構文は主語＋be＋形容詞＋enough＋for＋人＋to＋動詞原形。\n【ポイント2】This air is clean enough for everyone to breathe.（この空気はみんなが呼吸できるほどきれいだ）。\n【ポイント3】反対の意味を表す〈too＋形容詞＋for＋人＋to＋動詞〉（〜すぎて…できない）とセットで覚える。\n【答え】This air is clean enough for everyone to breathe.\n【確かめ】for everyoneがenoughとtoの間に正しく置かれているかを確認する。\n【よくあるまちがい】for everyoneを文の最後に置いてしまう。\n【ここが絶対】「形容詞＋enough＋for＋人＋to＋動詞」の語順を1つのまとまりとして覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1083,27 +874,8 @@ should を使った助言表現：You should + 動詞原形〜（〜した方が
     choices: ['① It\'s about two kilometers away.', '② I recycle them almost every week.', '③ I don\'t like plastic bottles.', '④ The bin is very large.'],
     answer: '② I recycle them almost every week.',
     hint: 'How often〜? は頻度を尋ねる表現。頻度で答えている選択肢を選ぶ。',
-    explanation: `【出題意図】
-How often〜?（頻度を尋ねる表現）への適切な応答を問う問題。
-
-【解説】
-How often do you〜? は「どのくらいの頻度で〜しますか？」という頻度を尋ねる表現。返答には頻度を表す語句（every week / once a month など）が必要。
-・① about two kilometers away → 距離を答えている（× How far〜? への答え）
-・② I recycle them almost every week. → 頻度を答えている（✓）
-・③ I don't like plastic bottles. → 好き嫌いの話で質問とずれる
-・④ The bin is very large. → 大きさの話で質問と無関係
-
-日本語訳：
-A：どのくらいの頻度でペットボトルをリサイクルボックスに持って行きますか？
-B：ほぼ毎週リサイクルに出しています。
-
-【文法ポイント】
-How often〜?（頻度）と How far〜?（距離）、How long〜?（時間・長さ）を区別する。頻度の答え方：every day / once a week / twice a month など。
-
-【入試頻出】
-・How often do you exercise? — I exercise three times a week.
-・How often does the recycling truck come? — It comes every Tuesday.
-・How far is it to the recycling center? — It's about one kilometer.`,
+    explanation:
+      '【何を聞かれているか】「How often do you take your plastic bottles to the recycling bin?」への適切な返答を選ぶ。\n【なぜI recycle them almost every week.が正しいのか】How often〜?は「どのくらいの頻度で〜するか」を尋ねる表現で、これには頻度を表す語句（every week、once a monthなど）で答える決まりがあるから。\n【ポイント1】①about two kilometers awayは距離を答えており、How far〜?への返答にあたる。\n【ポイント2】③I don\'t like plastic bottles.は好き嫌いの話で質問とずれる。④The bin is very large.は大きさの話で無関係。\n【ポイント3】②I recycle them almost every week.が正しい。頻度を答えている。\n【答え】② I recycle them almost every week.\n【確かめ】質問がHow often（頻度）を尋ねているのに対し、選んだ返答が頻度を答えているかを確認する。\n【よくあるまちがい】How often〜?とHow far〜?を混同し、距離を答えてしまう。\n【ここが絶対】頻度を尋ねるHow often〜?には、every day、once a weekのような頻度を表す語句で答える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1116,27 +888,8 @@ How often〜?（頻度）と How far〜?（距離）、How long〜?（時間・�
     choices: ['① Don\'t give up.', '② That\'s too bad.', '③ I\'m sorry to hear that.', '④ Never mind.'],
     answer: '① Don\'t give up.',
     hint: '後に続く「まだ4週間ある」という励ましの言葉に合う返答を選ぶ。',
-    explanation: `【出題意図】
-励ましの表現と、会話の流れ・文脈から適切な応答を選ぶ問題。
-
-【解説】
-Aは「マラソンに出たいが練習が足りない」と不安を口にしている。Bは「まだ4週間ある」と励ましている。前置きとして最適なのは「Don't give up.（諦めないで）」。
-・① Don't give up. → 諦めないで（励まし）（✓）
-・② That's too bad. → それは残念だね（同情。励ましではない）
-・③ I'm sorry to hear that. → それは残念です（同情。後の励ましと繋がりが弱い）
-・④ Never mind. → 気にしないで（軽い謝りへの返答で不自然）
-
-日本語訳：
-A：来月のマラソンに本当に出たいんだけど、練習が足りていないんだ。
-B：諦めないで。まだ練習する時間が4週間あるよ。
-
-【文法ポイント】
-励まし・応援の表現：Don't give up.（諦めないで）、You can do it!（あなたならできる）、I'm sure you'll do well.（きっとうまくいくよ）。
-
-【入試頻出】
-・Don't give up on your dream.
-・Cheer up! You still have time.
-・I'm sure you can finish the race.`,
+    explanation:
+      '【何を聞かれているか】「I really want to run in the marathon next month, but I haven\'t trained enough.」に対するBの返答（このあとYou still have four weeks to practice.と続く）に合う表現を選ぶ。\n【なぜDon\'t give up.が正しいのか】Aが練習不足を不安に思っていることを伝えており、そのあとBが「まだ4週間ある」と励ましているため、その前置きとしては「諦めないで」という励ましの表現が自然につながるから。\n【ポイント1】①Don\'t give up.（諦めないで）は励ましの表現で、後に続くYou still have four weeks to practice.（まだ4週間ある）と自然につながる。\n【ポイント2】②That\'s too bad.と③I\'m sorry to hear that.はどちらも同情・慰めの表現で、励ましの流れには合わない。\n【ポイント3】④Never mind.（気にしないで）は軽い謝罪への返答で、この文脈には不自然。\n【答え】① Don\'t give up.\n【確かめ】選んだ返答のあとにYou still have four weeks to practice.が自然に続くかを確認する。\n【よくあるまちがい】②That\'s too bad.のように、同情の表現を励ましの場面で使ってしまう。\n【ここが絶対】対話文の空所は、その後に続く文とのつながりを見て、共感なのか励ましなのかを判断する。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1183,25 +936,8 @@ A：ありがとう。
     choices: ['① see', '② saw', '③ seen', '④ seeing'],
     answer: '③ seen',
     hint: '現在完了形（have/has + 過去分詞）の経験用法。see の過去分詞を選ぶ。',
-    explanation: `【出題意図】
-現在完了形（経験用法）の形と、see の活用（see-saw-seen）を正確に使えるかを問う問題。
-
-【解説】
-never は現在完了形の経験用法で「一度も〜したことがない」を表す。現在完了形：have/has + 過去分詞。see の活用：see（原形）→ saw（過去形）→ seen（過去分詞）。
-・① see → 原形（have の後ろに原形は来ない）
-・② saw → 過去形（have の後ろに過去形は来ない）
-・③ seen → 過去分詞（✓）have seen
-・④ seeing → 現在分詞（have been seeing なら合うが、この文脈には不自然）
-
-日本語訳：「私はこれまでの人生で、これほど汚染された空気を見たことがない。」
-
-【文法ポイント】
-現在完了形（経験）の目印の語句：ever（これまでに）、never（一度も〜ない）、before（以前に）。不規則動詞の過去分詞：see-saw-seen、go-went-gone、take-took-taken。
-
-【入試頻出】
-・Have you ever seen such a beautiful sunset over a clean beach?
-・I have never seen so much litter on this street before.
-・She has never seen a river this polluted.`,
+    explanation:
+      '【何を聞かれているか】「I have never ( ) such polluted air in my life.」の空所に入る適切な形を選ぶ。\n【なぜseenになるのか】neverを使った現在完了形の経験用法「一度も〜したことがない」は、have/has＋過去分詞の形にする必要があり、seeの過去分詞はseenだから。\n【ポイント1】neverは現在完了形の経験用法で「一度も〜したことがない」を表す。現在完了形はhave/has＋過去分詞。\n【ポイント2】seeの活用：see（原形）→saw（過去形）→seen（過去分詞）。①see（原形）、②saw（過去形）はhaveのあとに使えない。\n【ポイント3】④seeing（現在分詞）はhave been seeingなら合うが、この文脈には不自然。③seen（過去分詞）が正解。\n【答え】③ seen\n【確かめ】haveのあとに過去分詞seenが続いているかを確認する。\n【よくあるまちがい】have sawのように、haveのあとに過去形をそのまま続けてしまう。\n【ここが絶対】現在完了形はhave/has＋過去分詞。不規則動詞の活用（see-saw-seen）を正確に覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1214,25 +950,8 @@ never は現在完了形の経験用法で「一度も〜したことがない�
     choices: ['① in', '② at', '③ on', '④ by'],
     answer: '③ on',
     hint: '曜日・特定の日には前置詞 on を使う。',
-    explanation: `【出題意図】
-時を表す前置詞（in / at / on）の使い分けを問う問題。入試最頻出文法の一つ。
-
-【解説】
-「the first Sunday of every month（毎月の第1日曜日）」という特定の日・曜日には on を使う。
-・① in → 月・年・季節・午前/午後に使う（in July / in the morning）
-・② at → 時刻・特定の時点に使う（at 7 p.m.）
-・③ on → 曜日・特定の日に使う（✓）
-・④ by → 期限を表す（by Friday = 金曜日までに）
-
-日本語訳：「この街の清掃イベントは毎月第1日曜日に開催される。」
-
-【文法ポイント】
-時を表す前置詞まとめ：at（時刻・時点）、on（曜日・日付・特定の日）、in（月・年・季節・時間帯）。
-
-【入試頻出】
-・The recycling truck comes on Mondays and Thursdays.
-・The festival is held on the third Saturday of March.
-・We clean the park on the last day of every month.`,
+    explanation:
+      '【何を聞かれているか】「The city\'s clean-up event will be held ( ) the first Sunday of every month.」の空所に入る適切な前置詞を選ぶ。\n【なぜonになるのか】the first Sunday of every month（毎月の第1日曜日）のような特定の日・曜日を表すときは、前置詞onを使うという決まりがあるから。\n【ポイント1】①in（月・年・季節・時間帯に使う）、②at（時刻・特定の時点に使う）はどちらも「特定の日」には使わない。\n【ポイント2】③on（曜日・特定の日に使う）が正解。\n【ポイント3】④by（期限「〜までに」）も文脈に合わない。時を表す前置詞まとめ：at＝時刻・時点、on＝曜日・日付、in＝月・年・季節。\n【答え】③ on\n【確かめ】the first Sunday of every monthが「特定の日」にあたることから、onが正しいことを確認する。\n【よくあるまちがい】inやatを、日付を表す前置詞として使ってしまう。\n【ここが絶対】時を表す前置詞は、atは時刻・時点、onは曜日・日付、inは月・年・季節、と使い分ける。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',

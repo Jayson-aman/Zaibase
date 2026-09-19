@@ -968,31 +968,8 @@ A：ありがとうございます。
     choices: ['① try', '② tried', '③ tries', '④ trying'],
     answer: '② tried',
     hint: '現在完了形（have/has＋過去分詞）の経験用法。try の過去分詞を選ぶ。',
-    explanation: `【出題意図】
-現在完了形（経験用法）の形と、try の活用（try-tried-tried）を正確に使えるかを問う問題。
-
-【解説】
-neverは現在完了形の経験用法で「一度も〜したことがない」を表す。
-現在完了形：have/has＋過去分詞
-tryの活用：try（原形）→tried（過去形）→tried（過去分詞）
-
-・① try → 原形（haveの後ろに原形は来ない）
-・② tried → 過去分詞（✓）have tried
-・③ tries → 3単現の現在形（haveの後ろには来ない）
-・④ trying → 現在分詞（have been trying なら現在完了進行形だが、この文には合わない）
-
-日本語訳：「私はこんなにおいしい麺を今まで食べたことがない。」
-
-【文法ポイント】
-現在完了形（経験）の目印の語句：
-・ever（これまでに）：Have you ever tried Thai food?
-・never（一度も〜ない）：I have never been abroad.
-・before（以前に）：I have seen this dish before.
-
-【入試頻出】
-・Have you ever visited a foreign country?
-・I have never seen such a beautiful sunset.
-・She has tried many kinds of local dishes during her trip.`,
+    explanation:
+      '【何を聞かれているか】「I have never ( ) such delicious noodles before.」の空所に入る適切な形を選ぶ。\n【なぜtriedになるのか】neverを使った現在完了形の経験用法「一度も〜したことがない」は、have/has＋過去分詞の形にする必要があり、tryの過去分詞はtriedだから。\n【ポイント1】neverは現在完了形の経験用法で「一度も〜したことがない」を表す。現在完了形はhave/has＋過去分詞。\n【ポイント2】tryの活用：try（原形）→tried（過去形）→tried（過去分詞）。①try（原形）、③tries（3単現）はhaveのあとに使えない。\n【ポイント3】④trying（現在分詞）はhave been tryingなら現在完了進行形になるが、この文には合わない。②tried（過去分詞）が正解。\n【答え】② tried\n【確かめ】haveのあとに過去分詞triedが続いているかを確認する。\n【よくあるまちがい】have triesのように、haveのあとに3単現の現在形をそのまま続けてしまう。\n【ここが絶対】現在完了形はhave/has＋過去分詞。tryのようにyをiに変えて-edをつける動詞の活用を正確に覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1039,29 +1016,8 @@ tryの活用：try（原形）→tried（過去形）→tried（過去分詞）
     choices: ['① take off', '② to take off', '③ taking off', '④ took off'],
     answer: '② to take off',
     hint: 'ask＋人＋to do（人に〜するよう頼む）という構文。',
-    explanation: `【出題意図】
-「ask＋人＋to＋動詞」という第5文型（SVOC）の用法を問う問題。
-
-【解説】
-ask＋人＋to do＝「人に〜するよう頼む」という重要構文。
-・① take off → 原形のみ（askの第5文型ではtoが必要）
-・② to take off → ask＋人＋to do（✓）
-・③ taking off → 動名詞（ask＋人＋doingという形は存在しない）
-・④ took off → 過去形（文法的に合わない）
-
-日本語訳：「私たちのホストマザーは、家に入る前に靴を脱ぐよう私たちに頼んだ。」
-
-【文法ポイント】
-「動詞＋人＋to do」の構文：
-・ask＋人＋to do：人に〜するよう頼む
-・tell＋人＋to do：人に〜するよう言う
-・want＋人＋to do：人に〜してほしい
-・allow＋人＋to do：人が〜するのを許可する
-
-【入試頻出】
-・She asked me to close the window.
-・He told us to be quiet in the temple.
-・My host family allowed me to use their kitchen.`,
+    explanation:
+      '【何を聞かれているか】「Our host mother asked us ( ) our shoes before entering the house.」の空所に入る適切な形を選ぶ。\n【なぜto take offになるのか】「人に〜するよう頼む」はask＋人＋to doという決まった構文で表し、人のあとには必ず不定詞（to＋原形）が続くから。\n【ポイント1】ask＋人＋to do＝「人に〜するよう頼む」という重要構文。\n【ポイント2】①take off（原形のみ）、③taking off（動名詞）、④took off（過去形）はどれもask＋人のあとの形として使えない。\n【ポイント3】同じ仲間の構文：tell＋人＋to do（人に〜するよう言う）、want＋人＋to do（人に〜してほしい）、allow＋人＋to do（人が〜するのを許可する）。\n【答え】② to take off\n【確かめ】Our host mother asked us to take off our shoes.という文全体を読み、「ホストマザーは私たちに靴を脱ぐよう頼んだ」という意味になっているかを確認する。\n【よくあるまちがい】ask＋人のあとに原形をそのまま続けてしまう。\n【ここが絶対】ask＋人＋to doの形では、人のあとに必ずtoが必要。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1074,32 +1030,8 @@ ask＋人＋to do＝「人に〜するよう頼む」という重要構文。
     choices: ['① this', '② that', '③ it', '④ what'],
     answer: '③ it',
     hint: '形式目的語 it を使った「find it + 形容詞 + to 動詞」の構文。',
-    explanation: `【出題意図】
-形式目的語 it（仮の目的語）を使った構文を問う問題。find it〜to do の形が正解。
-
-【解説】
-この文は「I found it very exciting to communicate with people from different cultures.」という構造。
-it は to communicate with people from different cultures（異なる文化の人々と交流すること）を指す形式目的語（仮目的語）。
-
-・① this → I found this very exciting to〜 は文法的に成立しない
-・② that → I found that very exciting to〜 も不自然
-・③ it → 形式目的語のit（✓）
-・④ what → I found what very exciting to〜 は成立しない
-
-日本語訳：「私は異なる文化の人々と交流することはとても刺激的だと感じた。」
-
-全体の構造：I found [it very exciting] [to communicate with people from different cultures].
-
-【文法ポイント】
-形式目的語（仮目的語）itの構文：
-find it＋形容詞＋to＋動詞〜＝〜することを（形容詞）だと感じる
-例：I find it interesting to learn about other cultures.
-例：She found it difficult to understand the local accent.
-
-【入試頻出】
-・I found it helpful to use a translation app while traveling.
-・He thinks it important to learn basic phrases before visiting a country.
-・We found it fun to try new foods every day.`,
+    explanation:
+      '【何を聞かれているか】「I found ( ) very exciting to communicate with people from different cultures.」の空所に入る適切な語を選ぶ。\n【なぜitになるのか】to communicate with people from different cultures（異なる文化の人々と交流すること）という長い内容を先に置くと文のバランスが悪くなるため、その内容を指す形式目的語itを先に置いて、本当の中身をあとに回すという英語の決まりがあるから。\n【ポイント1】this、that、whatはこの位置に置いても文法的に成立しない。\n【ポイント2】③it（形式目的語）が正解。itはto communicate with people from different culturesを指す。\n【ポイント3】形式目的語itの基本構文：find it＋形容詞＋to＋動詞〜＝「〜することを（形容詞）だと感じる」（例：I find it interesting to learn about other cultures.）。\n【答え】③ it\n【確かめ】itがto communicate with people from different culturesを指していることを確認する。\n【よくあるまちがい】thisやthatを使ってしまう。形式目的語には必ずitを使う。\n【ここが絶対】find/think/believeなどの動詞のあとで「〜することを…だと思う」を表すときは、形式目的語itを使い、本当の中身（to不定詞）は後ろに置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1115,30 +1047,8 @@ find it＋形容詞＋to＋動詞〜＝〜することを（形容詞）だと�
     question: '次の日本文を英語に訳せ。\n「私は今までにこんなに大きなお祭りを見たことがありません。」',
     answer: 'I have never seen such a big festival before.',
     hint: '「〜したことがない」は現在完了の経験用法（have never＋過去分詞）。「こんなに大きな」は such a＋形容詞＋名詞。',
-    explanation: `【出題意図】
-現在完了形（経験）の否定文と、such a＋形容詞＋名詞（こんなに〜な…）という強調表現を組み合わせた英作文。
-
-【解説】
-「〜したことがない」＝have/has never＋過去分詞（現在完了・経験の否定）
-「こんなに大きなお祭り」＝such a big festival（such a＋形容詞＋名詞の語順に注意。so big a festivalという語順は誤り）
-
-組み合わせ：
-I have never seen such a big festival before.
-
-注意：
-× I have never seen so big festival.（soの語順が誤り）
-○ I have never seen such a big festival.（such a＋形容詞＋名詞が正しい語順）
-
-日本語訳の英訳：I have never seen such a big festival before.
-
-【文法ポイント】
-such a＋形容詞＋名詞：こんなに〜な…（単数名詞の前）
-so＋形容詞＋a＋名詞：同じ意味だが語順が異なる（It was so big a festival that〜）
-
-【入試頻出】
-・I have never eaten such spicy food before.
-・She had never seen such a beautiful view in her life.
-・We have never experienced such a warm welcome.`,
+    explanation:
+      '【何を聞かれているか】「私は今までにこんなに大きなお祭りを見たことがありません。」を英語に訳す。\n【なぜsuch aとneverを使うのか】「こんなに大きな〜」という強調はsuch a＋形容詞＋名詞の形で表し、「〜したことがない」は現在完了形の経験用法の否定（have never＋過去分詞）で表す必要があるから。\n【ポイント1】「〜したことがない」＝have/has never＋過去分詞（現在完了・経験の否定）。\n【ポイント2】「こんなに大きなお祭り」＝such a big festival（such a＋形容詞＋名詞の語順に注意。so big a festivalという語順とは異なる）。\n【ポイント3】I have never seen such a big festival before.\n【答え】I have never seen such a big festival before.\n【確かめ】such aのあとに形容詞（big）、名詞（festival）の順で続いているかを確認する。\n【よくあるまちがい】I have never seen so big festival.のようにsuch aを使わずsoだけにしてしまう。\n【ここが絶対】such a＋形容詞＋名詞（単数名詞の前）という語順を正確に覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1150,32 +1060,8 @@ so＋形容詞＋a＋名詞：同じ意味だが語順が異なる（It was so b
     question: '次の日本文を英語に訳せ。\n「彼が撮った写真を私に見せてもらえませんか？」',
     answer: 'Could you show me the photos that he took? / Could you show me the photos he took?',
     hint: '「見せてもらえませんか」は Could you show me〜?、「彼が撮った」は関係代名詞（that / which、省略も可）で修飾。',
-    explanation: `【出題意図】
-依頼表現（Could you〜?）と関係代名詞（目的格）を組み合わせた英作文。
-
-【解説】
-2つのポイント：
-1. 丁寧な依頼：Could you show me〜?＝「〜を見せていただけますか？」（show＋人＋物の第4文型）
-2. 「彼が撮った（写真）」＝the photos that/which he took（関係代名詞・目的格。省略も可）
-
-組み合わせ：
-Could you show me the photos (that) he took?
-
-別解：
-・Could you let me see the photos he took?
-・May I see the photos that he took?
-
-日本語訳確認：「彼が撮った写真を私に見せてもらえませんか？」
-
-【文法ポイント】
-Could you〜?＝Can you〜?の丁寧版
-show＋人＋物：人に物を見せる（第4文型）
-the photos (that) he took：関係代名詞（目的格）he took the photosの構造
-
-【入試頻出】
-・Could you show me the map you printed?
-・This is the picture (that) I took at the festival.
-・She showed me the postcards she had collected.`,
+    explanation:
+      '【何を聞かれているか】「彼が撮った写真を私に見せてもらえませんか？」を英語に訳す。\n【なぜCould you〜?とthat/whichを組み合わせるのか】丁寧な依頼にはCould you〜?を使い、「彼が撮った」という説明を加えるには、the photosのうしろに関係代名詞（目的格）でtook節をつなげる必要があるから。\n【ポイント1】丁寧な依頼：Could you show me〜?＝「〜を見せていただけますか？」（show＋人＋物の第4文型）。\n【ポイント2】「彼が撮った（写真）」＝the photos that/which he took（関係代名詞・目的格、省略も可）。\n【ポイント3】組み合わせるとCould you show me the photos (that) he took?になる。\n【答え】Could you show me the photos that he took? / Could you show me the photos he took?\n【確かめ】the photosのあとにhe took（主語＋動詞）が続いており、takeの目的語がthe photosであることを確認する。\n【よくあるまちがい】Could you〜?のかわりにCan you〜?を使ってしまい、ていねいさが弱くなる。\n【ここが絶対】Could you〜?はCan you〜?の丁寧版。目的格の関係代名詞は省略できる。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1224,31 +1110,8 @@ there is/are構文：「〜がある/いる」
     question: '次の日本文を英語に訳せ。\n「もし私があなたなら、地元の料理を試してみるでしょう。」',
     answer: 'If I were you, I would try the local food.',
     hint: '仮定法過去（現実とは逆の仮定）：If＋主語＋were/動詞の過去形, 主語＋would＋動詞原形。I were が正しい。',
-    explanation: `【出題意図】
-仮定法過去（If I were you, I would〜）の形を問う英作文。入試英作文最頻出構文の一つ。
-
-【解説】
-「もし私があなたなら」＝現実と異なる仮定（実際には私はあなたではない）→仮定法過去を使う
-
-仮定法過去の形：
-If＋主語＋動詞の過去形（be動詞はwere）, 主語＋would／could／might＋動詞原形
-
-重要：If I were you〜（×If I was you は入試では不正解。仮定法ではbe動詞は人称に関わらずwereを使う）
-
-「試してみる」＝try
-
-完成した文：If I were you, I would try the local food.
-
-【文法ポイント】
-仮定法過去：現在または未来の事実に反する仮定
-If＋主語＋過去形（were）, 主語＋would＋動詞原形
-・If I had more time, I would stay longer in this city.
-・If she were here, she would enjoy this festival.
-
-【入試頻出】
-・If I were you, I would ask the staff for help.
-・If I had a chance, I would study abroad.
-・If she were more confident, she could speak up in English.`,
+    explanation:
+      '【何を聞かれているか】「もし私があなたなら、地元の料理を試してみるでしょう。」を英語に訳す。\n【なぜwereを使うのか】「もし私があなたならば」は現実とは異なる仮定（実際には私はあなたではない）なので、仮定法過去を使い、be動詞は主語に関係なくwereにするという決まりがあるから。\n【ポイント1】仮定法過去の形：If＋主語＋動詞の過去形（be動詞はwere）, 主語＋would/could/might＋動詞原形。\n【ポイント2】If I were you〜（If I was youは入試では不正解とされる）。「試してみる」＝try。\n【ポイント3】If I were you, I would try the local food.\n【答え】If I were you, I would try the local food.\n【確かめ】be動詞がwasではなくwereになっているかを確認する。\n【よくあるまちがい】If I was you, I would〜のようにwasを使ってしまう。\n【ここが絶対】仮定法過去のif節ではbe動詞は必ずwereを使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1260,34 +1123,8 @@ If＋主語＋過去形（were）, 主語＋would＋動詞原形
     question: '次の日本文を英語に訳せ。\n「この祭りは観光客だけでなく、地元の人々にも人気があります。」',
     answer: 'This festival is popular not only with tourists but also with local people. / This festival is popular not only among tourists but also among local people.',
     hint: '「〜だけでなく…も」は not only A but also B の構文。「〜に人気がある」は popular with/among〜。',
-    explanation: `【出題意図】
-相関接続詞 not only A but also B（〜だけでなく…も）の構文と、popular with/among〜を使った英作文。
-
-【解説】
-2つのポイント：
-1. 「〜だけでなく…も」＝not only A but also B
-2. 「〜に人気がある」＝be popular with〜 または be popular among〜
-
-組み合わせ：
-This festival is popular not only with tourists but also with local people.
-または
-This festival is popular not only among tourists but also among local people.
-
-注意：not only A but also BのAとBは文法的に同じ形（並列）である必要がある。
-
-【文法ポイント】
-相関接続詞：
-・not only A but also B：AだけでなくBも
-・both A and B：AもBも
-
-popular with／popular among：
-・with：特定の人（popular with children）
-・among：グループの中で（popular among students）
-
-【入試頻出】
-・This dish is popular not only with children but also with adults.
-・The event is loved by not only residents but also visitors.
-・This song is popular among young travelers.`,
+    explanation:
+      '【何を聞かれているか】「この祭りは観光客だけでなく、地元の人々にも人気があります。」を英語に訳す。\n【なぜnot only A but also Bを使うのか】「〜だけでなく…も」という意味は、相関接続詞not only A but also Bという決まった形で表し、「〜に人気がある」はbe popular with/among〜で表すから。\n【ポイント1】「〜だけでなく…も」＝not only A but also B。AとBは文法的に同じ形（並列）にする必要がある。\n【ポイント2】「〜に人気がある」＝be popular with〜（特定の人）またはbe popular among〜（グループの中で）。\n【ポイント3】This festival is popular not only with tourists but also with local people.\n【答え】This festival is popular not only with tourists but also with local people. / This festival is popular not only among tourists but also among local people.\n【確かめ】not only のあとと、but also のあとが同じ形（with tourists／with local people）になっているかを確認する。\n【よくあるまちがい】not only とbut alsoのあとの形をそろえず、withとamongを混ぜて使ってしまう。\n【ここが絶対】not only A but also BのAとBは文法的に同じ形にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1409,27 +1246,8 @@ popular with／popular among：
     choices: ['① 語学交換アプリは世界中のネイティブスピーカーとユーザーをつなげる。', '② 多くの利用者は教科書だけで学ぶより実際の人と話す方が役立つと感じている。', '③ アプリは現地の文化についての質問はできない。', '④ 専門家はアプリが実際の体験を完全に代わることはできないと述べている。'],
     answer: '③ アプリは現地の文化についての質問はできない。',
     hint: '本文中の "Some apps also let users ask questions about local culture" という一文を確認する。',
-    explanation: `【出題意図】
-「本文と合っていないものを選ぶ」という誤文識別型の読解問題。細部の読み取りと選択肢の正確な解釈が必要。
-
-【解説】
-各選択肢を本文と照合する：
-① 「世界中のネイティブスピーカーとつなげる」→ 本文に "These apps connect users with native speakers around the world" とある（✓本文と一致）
-② 「教科書だけで学ぶより実際の人と話す方が役立つ」→ 本文に "talking with a real person is more helpful than only studying textbooks" とある（✓本文と一致）
-③ 「現地の文化についての質問はできない」→ 本文には "Some apps also let users ask questions about local culture"（一部のアプリは現地の文化について質問することもできる）とあり、本文の内容と正反対（×本文と不一致）
-④ 「実際の体験を完全に代わることはできない」→ 本文に "apps cannot completely replace real experience" とある（✓本文と一致）
-
-正解：③
-
-【文法ポイント】
-「合っていないものを選べ」問題のアプローチ：
-1. 選択肢の語句を一つずつ本文と照合する
-2. 本文の否定表現（cannot）と選択肢の内容が矛盾していないか確認する
-3. 本文に書かれている内容を逆にした選択肢が誤答（本文と不一致）として出やすい
-
-【入試頻出】
-・「合っていないものを選べ」問題では、本文の一部だけを取り出して意味を反転させた選択肢に注意する
-・"cannot" "not" などの否定語の対象を正確に把握することが解答の鍵`,
+    explanation:
+      '【何を聞かれているか】語学交換アプリについてのパッセージを読んで、内容と合っていない選択肢を1つ選ぶ。\n【なぜ③が不一致なのか】本文には"Some apps also let users ask questions about local culture"（一部のアプリは現地の文化について質問することもできる）と書かれており、これは③「現地の文化についての質問はできない」と正反対の内容だから。\n【ポイント1】①「世界中のネイティブスピーカーとつなげる」は本文の"These apps connect users with native speakers around the world"と一致する。\n【ポイント2】②「教科書だけで学ぶより実際の人と話す方が役立つ」は本文の"talking with a real person is more helpful than only studying textbooks"と一致する。④「実際の体験を完全に代わることはできない」も本文の"apps cannot completely replace real experience"と一致する。\n【ポイント3】③は本文の記述と正反対のため不一致の選択肢。\n【答え】③ アプリは現地の文化についての質問はできない。\n【確かめ】本文の該当箇所（Some apps also let users ask questions about local culture）を読み直し、③の内容と正反対であることを確認する。\n【よくあるまちがい】本文の一部を取り出して意味を反転させた選択肢に気づかず、正しいと判断してしまう。\n【ここが絶対】「合っていないものを選べ」問題では、本文の内容を逆にした選択肢が誤答（不一致）としてよく出る。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
