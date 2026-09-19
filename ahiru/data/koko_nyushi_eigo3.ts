@@ -1016,31 +1016,8 @@ in：月・年・季節・時間帯（in April / in 2026 / in spring）
     question: '次の日本文を英語に訳せ。\n「私は今までにこんなに素晴らしい合唱を聞いたことがありません。」',
     answer: 'I have never heard such a wonderful chorus. / I have never heard such a wonderful chorus before.',
     hint: '「〜したことがない」は現在完了の経験用法（have never + 過去分詞）。「こんなに素晴らしい〜」は such a wonderful〜。',
-    explanation: `【出題意図】
-現在完了形（経験）の否定文と、such a + 形容詞 + 名詞（こんなに〜な…）という強調表現を問う問題。
-
-【解説】
-「〜したことがない」= have/has never + 過去分詞（現在完了・経験の否定）
-「こんなに素晴らしい合唱」= such a wonderful chorus
-
-hear の活用：hear-heard-heard
-
-完成した文：
-I have never heard such a wonderful chorus.
-または文末に before を加えてもよい：I have never heard such a wonderful chorus before.
-
-日本語訳の英訳：
-I have never heard such a wonderful chorus.
-
-【文法ポイント】
-such a/an + 形容詞 + 名詞：こんなに〜な…
-例：such a beautiful song, such an exciting match
-現在完了（経験）の否定：have never + 過去分詞
-
-【入試頻出】
-・I have never seen such a moving performance.
-・She has never played such a difficult piece.
-・We have never had such a close game.`,
+    explanation:
+      '【何を聞かれているか】「私は今までにこんなに素晴らしい合唱を聞いたことがありません。」を英語に訳す。\n【なぜsuch aとneverを使うのか】「こんなに素晴らしい〜」という強調はsuch a＋形容詞＋名詞の形で表し、「〜したことがない」は現在完了形の経験用法の否定（have never＋過去分詞）で表す必要があるから。\n【ポイント1】「〜したことがない」＝have/has never＋過去分詞（現在完了・経験の否定）。\n【ポイント2】「こんなに素晴らしい合唱」＝such a wonderful chorus。hearの活用：hear-heard-heard。\n【ポイント3】I have never heard such a wonderful chorus.（文末にbeforeを加えてもよい）。\n【答え】I have never heard such a wonderful chorus. / I have never heard such a wonderful chorus before.\n【確かめ】haveのあとにheard（過去分詞）が使われているか、such aのあとに形容詞＋名詞が続いているかを確認する。\n【よくあるまちがい】such a wonderful chorusをa such wonderful chorusのように語順を逆にしてしまう。\n【ここが絶対】such a/an＋形容詞＋名詞の語順（aとsuchの順番）を正確に覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1052,34 +1029,8 @@ such a/an + 形容詞 + 名詞：こんなに〜な…
     question: '次の日本文を英語に訳せ。\n「彼女が撮ったその写真を私に見せてもらえませんか？」',
     answer: 'Could you show me the picture that she took? / Could you show me the picture she took?',
     hint: '「見せてもらえませんか」は Could you show me〜?、「彼女が撮った」は関係代名詞（that / which）で修飾。',
-    explanation: `【出題意図】
-依頼表現（Could you〜?）と関係代名詞（目的格）を組み合わせた英作文。
-
-【解説】
-2つのポイント：
-1. 丁寧な依頼：Could you show me〜? = 「〜を見せていただけますか？」
-   show + 人 + 物（第4文型）
-2. 「彼女が撮った（写真）」= the picture that/which she took（関係代名詞・目的格）
-   → 目的格の関係代名詞は省略可能
-
-組み合わせ：
-Could you show me the picture (that) she took?
-
-別解：
-・Could you let me see the picture she took?
-・May I see the picture that she took?
-
-日本語訳確認：「彼女が撮ったその写真を私に見せてもらえませんか？」
-
-【文法ポイント】
-Could you〜? = Can you〜? の丁寧版（より礼儀正しい依頼）
-show + 人 + 物：人に物を見せる（第4文型 SVOO）
-the picture (that) she took：関係代名詞（目的格）she took the picture の構造
-
-【入試頻出】
-・Could you show me the video you recorded?
-・This is the trophy (that) our team won last year.
-・He showed me the photos he had taken during the trip.`,
+    explanation:
+      '【何を聞かれているか】「彼女が撮ったその写真を私に見せてもらえませんか？」を英語に訳す。\n【なぜCould you〜?とthat/whichを組み合わせるのか】丁寧な依頼にはCould you〜?を使い、「彼女が撮った」という説明を加えるには、the pictureのうしろに関係代名詞（目的格）でtook節をつなげる必要があるから。\n【ポイント1】丁寧な依頼：Could you show me〜?＝「〜を見せていただけますか？」。show＋人＋物（第4文型）。\n【ポイント2】「彼女が撮った（写真）」＝the picture that/which she took（関係代名詞・目的格）。目的格の関係代名詞は省略も可能。\n【ポイント3】組み合わせるとCould you show me the picture (that) she took?になる。\n【答え】Could you show me the picture that she took? / Could you show me the picture she took?\n【確かめ】the pictureのあとにshe took（主語＋動詞）が続いており、takeの目的語がthe pictureであることを確認する。\n【よくあるまちがい】Could you〜?のかわりにCan you〜?を使ってしまい、ていねいさが弱くなる。\n【ここが絶対】Could you〜?はCan you〜?の丁寧版。目的格の関係代名詞は省略できる。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1091,33 +1042,8 @@ the picture (that) she took：関係代名詞（目的格）she took the picture
     question: '次の日本文を英語に訳せ。\n「私が中学生だったころ、この学校にはテニス部がありませんでした。」',
     answer: 'When I was a junior high school student, there was no tennis club in this school. / There was no tennis club in this school when I was a junior high school student.',
     hint: '「〜がなかった」は there was not / there was no〜。中学生のころ = when I was a junior high school student。',
-    explanation: `【出題意図】
-there is/are 構文の過去の否定形と、when 節（〜のとき）を組み合わせた英作文。
-
-【解説】
-ポイント：
-1. 「中学生だったころ」= when I was a junior high school student
-2. 「〜がなかった」= there was no〜 / there was not any〜（tennis club は単数扱い）
-3. 「この学校に」= in this school
-
-組み合わせ：
-When I was a junior high school student, there was no tennis club in this school.
-または
-There was no tennis club in this school when I was a junior high school student.
-
-注意：
-× there was not tennis club（× no か any が必要）
-○ there was no tennis club / there wasn't any tennis club
-
-【文法ポイント】
-there is/are 構文：「〜がある/いる」
-・過去の否定：there was no + 単数名詞 / there were no + 複数名詞
-・there was not any〜 も同じ意味で使える
-
-【入試頻出】
-・There was no swimming pool at our school ten years ago.
-・When I was small, there were no smartphones in my house.
-・There wasn't any club activity on Sundays before.`,
+    explanation:
+      '【何を聞かれているか】「私が中学生だったころ、この学校にはテニス部がありませんでした。」を英語に訳す。\n【なぜthere was noを使うのか】「〜がなかった」という過去の存在の否定は、there is/are構文の過去形there wasを使い、あとにno＋名詞（または not any＋名詞）を続けるという決まりがあるから。\n【ポイント1】「中学生だったころ」＝when I was a junior high school student。\n【ポイント2】「〜がなかった」＝there was no〜（tennis clubは単数扱い）。there was not any〜も同じ意味で使える。\n【ポイント3】When I was a junior high school student, there was no tennis club in this school.（whenの節を後ろに置いてもよい）。\n【答え】When I was a junior high school student, there was no tennis club in this school. / There was no tennis club in this school when I was a junior high school student.\n【確かめ】there was not tennis clubのように、noやanyを抜かしていないかを確認する。\n【よくあるまちがい】there was not tennis clubのように、no/anyを入れずに否定文を作ってしまう。\n【ここが絶対】there is/are構文の否定は、there is/are no＋名詞、またはthere is/are not any＋名詞の形にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1129,35 +1055,8 @@ there is/are 構文：「〜がある/いる」
     question: '次の日本文を英語に訳せ。\n「もし私があなたなら、部長にもっと早く相談するでしょう。」',
     answer: 'If I were you, I would talk to the club captain sooner. / If I were you, I would consult the club captain sooner.',
     hint: '仮定法過去（現実とは逆の仮定）：If + 主語 + were/動詞の過去形, 主語 + would + 動詞原形。I were が正しい（I was ではない）。',
-    explanation: `【出題意図】
-仮定法過去（If I were you, I would〜）の形を問う英作文。入試英作文最頻出構文の一つ。
-
-【解説】
-「もし私があなたならば」= 現実と異なる仮定（実際には私はあなたではない）→ 仮定法過去を使う
-
-仮定法過去の形：
-If + 主語 + 動詞の過去形（be動詞は were）, 主語 + would/could/might + 動詞原形
-
-重要：If I were you〜（× If I was you は入試では不正解）
-仮定法では be 動詞は人称に関わらず were を使う。
-
-「相談する」= talk to〜 / consult〜（どちらも可）
-「もっと早く」= sooner
-
-完成した文：
-If I were you, I would talk to the club captain sooner.
-= If I were you, I would consult the club captain sooner.
-
-【文法ポイント】
-仮定法過去：現在または未来の事実に反する仮定
-If + 主語 + 過去形（were）, 主語 + would + 動詞原形
-・If I had more free time, I would practice every day.
-・If she were the captain, she would change the schedule.
-
-【入試頻出】
-・If I were you, I would apologize to the team.
-・If I had a chance, I would join the drama club.
-・If he were faster, he could be on the relay team.`,
+    explanation:
+      '【何を聞かれているか】「もし私があなたなら、部長にもっと早く相談するでしょう。」を英語に訳す。\n【なぜwereを使うのか】「もし私があなたならば」は現実とは異なる仮定（実際には私はあなたではない）なので、仮定法過去を使い、be動詞は主語に関係なくwereにするという決まりがあるから。\n【ポイント1】仮定法過去の形：If＋主語＋動詞の過去形（be動詞はwere）, 主語＋would/could/might＋動詞原形。\n【ポイント2】If I were you〜（If I was youは入試では不正解とされる）。「相談する」＝talk to〜／consult〜、「もっと早く」＝sooner。\n【ポイント3】If I were you, I would talk to the club captain sooner.\n【答え】If I were you, I would talk to the club captain sooner. / If I were you, I would consult the club captain sooner.\n【確かめ】be動詞がwasではなくwereになっているかを確認する。\n【よくあるまちがい】If I was you, I would〜のようにwasを使ってしまう。\n【ここが絶対】仮定法過去のif節ではbe動詞は必ずwereを使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1169,37 +1068,8 @@ If + 主語 + 過去形（were）, 主語 + would + 動詞原形
     question: '次の日本文を英語に訳せ。\n「この部活は初心者だけでなく、経験者にも人気があります。」',
     answer: 'This club is popular not only with beginners but also with experienced students. / This club is popular not only among beginners but also among experienced students.',
     hint: '「〜だけでなく…も」は not only A but also B の構文。「〜に人気がある」は popular with/among〜。',
-    explanation: `【出題意図】
-相関接続詞 not only A but also B（〜だけでなく…も）の構文と、popular with/among〜 を使った英作文。
-
-【解説】
-2つのポイント：
-1. 「〜だけでなく…も」= not only A but also B
-2. 「〜に人気がある」= be popular with〜 または be popular among〜
-
-組み合わせ：
-This club is popular not only with beginners but also with experienced students.
-または
-This club is popular not only among beginners but also among experienced students.
-
-「経験者」= experienced students / experienced members
-
-注意：not only A but also B の A と B は文法的に同じ形（並列）である必要がある。
-
-【文法ポイント】
-相関接続詞：
-・not only A but also B：AだけでなくBも
-・both A and B：AもBも
-・either A or B：AかBのどちらか
-
-popular with / popular among：
-・with：特定の人（be popular with beginners）
-・among：グループの中で（be popular among students）
-
-【入試頻出】
-・This sport is popular not only with boys but also with girls.
-・She is respected not only by her teammates but also by her rivals.
-・This song is popular among high school students.`,
+    explanation:
+      '【何を聞かれているか】「この部活は初心者だけでなく、経験者にも人気があります。」を英語に訳す。\n【なぜnot only A but also Bを使うのか】「〜だけでなく…も」という意味は、相関接続詞not only A but also Bという決まった形で表し、「〜に人気がある」はbe popular with/among〜で表すから。\n【ポイント1】「〜だけでなく…も」＝not only A but also B。AとBは文法的に同じ形（並列）にする必要がある。\n【ポイント2】「〜に人気がある」＝be popular with〜（特定の人）またはbe popular among〜（グループの中で）。\n【ポイント3】This club is popular not only with beginners but also with experienced students.（「経験者」はexperienced students／experienced members）。\n【答え】This club is popular not only with beginners but also with experienced students. / This club is popular not only among beginners but also among experienced students.\n【確かめ】not only のあとと、but also のあとが同じ形（with beginners／with experienced students）になっているかを確認する。\n【よくあるまちがい】not only とbut alsoのあとの形をそろえず、withとamongを混ぜて使ってしまう。\n【ここが絶対】not only A but also BのAとBは文法的に同じ形にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1217,27 +1087,8 @@ popular with / popular among：
     choices: ['① 部活動の目的は試合や大会に勝つことだけだ。', '② チームメートと協力することはコミュニケーション能力を育てる。', '③ 練習の結果はすぐに出ることが多い。', '④ 友情よりトロフィーの方が価値があると本文は述べている。'],
     answer: '② チームメートと協力することはコミュニケーション能力を育てる。',
     hint: '本文中の "working with teammates teaches you how to communicate well" という文を探す。',
-    explanation: `【出題意図】
-英文読解で内容一致問題を解く力を問う問題。細部の読み取りと選択肢との照合が目標。
-
-【解説】
-各選択肢を本文と照合する：
-① 「勝つことだけが目的」→ 本文冒頭で "not only about winning" と否定されている（×）
-② 「チームメートとの協力がコミュニケーション能力を育てる」→ 本文に "working with teammates teaches you how to communicate well with different kinds of people." とある（✓）
-③ 「結果はすぐに出ることが多い」→ 本文には "even when you do not see quick results（すぐに結果が見えなくても）" とあり逆の内容（×）
-④ 「友情よりトロフィーの方が価値がある」→ 本文には "friendships and skills〜are often more valuable than any trophy" と逆の内容が書かれている（×）
-
-【文法ポイント】
-内容一致問題のアプローチ：
-1. 選択肢を先に読んでキーワードを把握
-2. 本文で該当箇所を探す
-3. 本文の語句と選択肢の語句を慎重に比較（言い換え・否定に注意）
-
-【入試頻出】
-内容一致問題では：
-・本文の否定表現を見落とさない
-・比較表現（more valuable than〜）の方向を正確に読み取る
-・本文の言い換え表現に気づくことが正解への鍵`,
+    explanation:
+      '【何を聞かれているか】部活動についてのパッセージを読んで、内容と合っている選択肢を1つ選ぶ。\n【なぜ②が正解なのか】本文に"working with teammates teaches you how to communicate well with different kinds of people."とあり、これが②「チームメートと協力することはコミュニケーション能力を育てる」と一致するから。\n【ポイント1】①「勝つことだけが目的」は本文冒頭の"not only about winning"（勝つことだけではない）という否定と矛盾する。\n【ポイント2】③「結果はすぐに出ることが多い」は本文の"even when you do not see quick results"（すぐに結果が見えなくても）と逆の内容。\n【ポイント3】④「友情よりトロフィーの方が価値がある」は本文の"friendships and skills〜are often more valuable than any trophy"（友情や技術がトロフィーより価値がある）と逆の内容。\n【答え】② チームメートと協力することはコミュニケーション能力を育てる。\n【確かめ】本文の該当箇所と選択肢②の内容が一致していることを確認する。\n【よくあるまちがい】比較表現（more valuable than〜）の方向を逆に読み取ってしまう。\n【ここが絶対】内容一致問題では、本文の否定表現や比較表現の方向を正確に読み取る。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1251,31 +1102,8 @@ popular with / popular among：
     choices: ['① 恵美が部活で優勝した経験', '② 恵美がバドミントンの技術を上達させた経験', '③ 上級部員たちが恵美に親切に接し、彼女が変わっていった経験', '④ 恵美が新しい学校に転校した経験'],
     answer: '③ 上級部員たちが恵美に親切に接し、彼女が変わっていった経験',
     hint: '"This experience" は直前までに描かれてきた、恵美と部員たちのやり取り全体を指す。',
-    explanation: `【出題意図】
-指示語（This experience）が何を指すかを本文全体の流れから特定する指示語問題。段落全体を要約する力が問われる。
-
-【解説】
-指示語の前までの内容を確認する：
-・新入部員の恵美が最初は緊張していた
-・上級部員が毎日話しかけ、昼食に誘った
-・数週間後、恵美は自信を持って練習できるようになった
-・恵美は「みんなが親切にしてくれた」と語った
-
-これら一連の出来事全体が「This experience（この経験）」が指す内容。
-→ ③ 「上級部員たちが恵美に親切に接し、彼女が変わっていった経験」が正解。
-
-① 優勝の話は本文に記述なし（×）
-② 技術の上達については触れていない（×）
-④ 転校の話ではなく、新入部員としての参加（×）
-
-【文法ポイント】
-指示語問題のアプローチ：
-1. 指示語（this / these / it）が段落の最後や結論部分にある場合、段落全体の内容を指すことが多い
-2. 「小さな親切が大きな違いを生む」という結論と対応する内容を選ぶ
-
-【入試頻出】
-・段落末尾の this experience / this story は、その段落全体の出来事を指すことが多い
-・「教訓・結論」の直前にある this は、それまでの出来事全体をまとめている`,
+    explanation:
+      '【何を聞かれているか】本文中の下線部"This experience"が指す内容として最も適切なものを選ぶ。\n【なぜ③が正解なのか】"This experience"の前までに、新入部員の恵美が緊張していたこと、上級部員が毎日話しかけ昼食に誘ったこと、数週間後に恵美が自信を持てるようになったことが描かれており、この一連の出来事全体を指しているから。\n【ポイント1】指示語の前までの内容を確認する：新入部員の恵美が最初は緊張していた→上級部員が親切に接した→恵美が自信を持てるようになった。\n【ポイント2】これら一連の出来事全体が"This experience（この経験）"が指す内容。①優勝、②技術の上達、④転校はどれも本文に記述がない。\n【ポイント3】段落の最後や結論部分にある指示語は、段落全体の内容を指すことが多い。\n【答え】③ 上級部員たちが恵美に親切に接し、彼女が変わっていった経験\n【確かめ】"This experience"を選んだ内容に置きかえて文を読み直し、意味が通ることを確認する。\n【よくあるまちがい】指示語の直前の1文だけを見て、段落全体の流れを見落としてしまう。\n【ここが絶対】段落末尾や結論部分の指示語は、それまでの出来事全体をまとめていることが多い。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1289,32 +1117,8 @@ popular with / popular among：
     choices: ['① 日本の学校の部活動における外部コーチ導入の背景と効果', '② 日本の教員の労働時間に関する統計データ', '③ 生徒がスポーツで勝つことの重要性', '④ 週末に部活動を行うことの是非についての法律'],
     answer: '① 日本の学校の部活動における外部コーチ導入の背景と効果',
     hint: '本文全体の流れ（問題提起→変化の紹介→効果→生徒の感想）を把握して、何が最も中心的に述べられているかを考える。',
-    explanation: `【出題意図】
-長文全体を通読して主題（テーマ）を把握する力を問う問題。細部ではなく文章全体の「言いたいこと」を読み取る。
-
-【解説】
-本文の構造：
-1. 問題提起：これまで教員が毎日・週末も部活を監督し、負担が大きかった
-2. 変化の紹介：一部の学校がプロの外部コーチを導入し始めた
-3. 効果：生徒はより効果的な指導を受けられ、教員は休息や授業準備の時間を得られる
-4. 生徒の感想：勝つことだけでなく学びと楽しさを両立できるようになった
-
-全体を通して「外部コーチ導入の背景と効果」が中心テーマ → ①が正解
-
-② 統計データ：本文に数値データは含まれていない（×）
-③ 勝つことの重要性：本文はむしろ勝つことだけを重視しない方向を述べている（×）
-④ 法律の話：本文に法律についての記述はない（×）
-
-【文法ポイント】
-主題問題（main topic / main idea）のアプローチ：
-1. 冒頭と末尾を特に注意深く読む
-2. 繰り返し登場するキーワードを見つける（→ club activities, outside coaches, teachers, students）
-3. 選択肢が本文の一部のみに対応している場合は主題ではない
-
-【入試頻出】
-・主題問題では「一番多く書かれていること」を選ぶ
-・本文の一部しか触れていない選択肢は不正解になることが多い
-・過度に具体的・専門的な選択肢は主題にならないことが多い`,
+    explanation:
+      '【何を聞かれているか】部活動と外部コーチについてのパッセージを読んで、本文の主題として最も適切なものを選ぶ。\n【なぜ①が正解なのか】本文全体が「教員の負担→外部コーチ導入→効果→生徒の感想」という流れで一貫して「外部コーチ導入の背景と効果」について述べているから。\n【ポイント1】本文の構造を確認する：①問題提起（教員の負担）②変化の紹介（外部コーチ導入）③効果（生徒・教員双方へのメリット）④生徒の感想。\n【ポイント2】②「統計データ」は本文に数値の記述がなく、③「勝つことの重要性」はむしろ本文が否定している内容、④「法律」は本文に記述がない。\n【ポイント3】全体を通して中心にあるのは「外部コーチ導入の背景と効果」なので①が正解。\n【答え】① 日本の学校の部活動における外部コーチ導入の背景と効果\n【確かめ】選んだ選択肢が、本文の一部だけでなく全体を通して繰り返し述べられている内容と一致しているかを確認する。\n【よくあるまちがい】本文の一部にしか書かれていない具体的な内容を主題だと誤解してしまう。\n【ここが絶対】主題問題は「本文の一部」ではなく「文章全体を通して繰り返し述べられていること」を選ぶ。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1328,28 +1132,8 @@ popular with / popular among：
     choices: ['① ユウタとケンジは小学校からの親友である。', '② 2年生のとき、ケンジがスタメンに選ばれ、ユウタはベンチだった。', '③ ケンジは最初、嫉妬してユウタを避けていた。', '④ 2人は正直に話し合った後、以前より強い友情を築いた。'],
     answer: '② 2年生のとき、ケンジがスタメンに選ばれ、ユウタはベンチだった。',
     hint: '本文では「ユウタだけがスタメンに選ばれ、ケンジはベンチに残った」と述べている。選択肢②が本文の内容と合っているか確認する。',
-    explanation: `【出題意図】
-「本文と合っていないものを選ぶ」という誤文識別型の読解問題。細部の読み取りと選択肢の正確な解釈が必要。
-
-【解説】
-各選択肢を本文と照合する：
-① 「小学校からの親友」→ 本文に "had been best friends since elementary school" とある（✓ 本文と一致）
-② 「ケンジがスタメンに選ばれ、ユウタはベンチだった」→ 本文には "only Yuta was chosen for the starting lineup, while Kenji had to stay on the bench"（ユウタだけがスタメンに選ばれ、ケンジはベンチに残った）とあり、選手が逆になっている（× 本文と不一致）
-③ 「ケンジは最初、嫉妬してユウタを避けていた」→ 本文に "Kenji felt jealous and started to avoid talking to Yuta" とある（✓ 本文と一致）
-④ 「正直に話し合った後、以前より強い友情を築いた」→ 本文に "Their friendship became even stronger than before." とある（✓ 本文と一致）
-
-正解：②
-
-【文法ポイント】
-「合っていないものを選べ」問題のアプローチ：
-1. 選択肢の語句を一つずつ本文と照合
-2. 主語と目的語が入れ替わっている選択肢に注意（今回のように人物名が逆になっているパターン）
-3. 本文にない情報・事実の歪曲を含む選択肢が正解（不一致の選択肢）
-
-【入試頻出】
-・「合っていないものを選べ」では登場人物の役割が入れ替わっていないか特に注意する
-・本文の否定表現と選択肢の肯定表現（またはその逆）に注意
-・感情の変化（jealous → understood each other better）の流れを正確に追う`,
+    explanation:
+      '【何を聞かれているか】友人関係についてのパッセージを読んで、内容と合っていない選択肢を1つ選ぶ。\n【なぜ②が不一致なのか】本文には"only Yuta was chosen for the starting lineup, while Kenji had to stay on the bench"（ユウタだけがスタメンに選ばれ、ケンジはベンチに残った）とあり、これは②「ケンジがスタメンに選ばれ、ユウタはベンチだった」と人物が逆になっているから。\n【ポイント1】①「小学校からの親友」は本文の"had been best friends since elementary school"と一致する。\n【ポイント2】③「ケンジは最初、嫉妬してユウタを避けていた」は本文の"Kenji felt jealous and started to avoid talking to Yuta"と一致する。④「以前より強い友情を築いた」も本文の"Their friendship became even stronger than before."と一致する。\n【ポイント3】②はスタメンとベンチの人物が本文と逆になっているため不一致。\n【答え】② 2年生のとき、ケンジがスタメンに選ばれ、ユウタはベンチだった。\n【確かめ】本文の該当箇所を読み直し、スタメンに選ばれたのがユウタであることを確認する。\n【よくあるまちがい】登場人物の名前が入れかわっている選択肢を、内容が似ているというだけで正しいと判断してしまう。\n【ここが絶対】「合っていないものを選べ」問題では、登場人物の役割が入れかわっていないか特に注意する。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
