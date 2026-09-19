@@ -763,24 +763,8 @@ A：ありがとう。
     choices: ['① see', '② saw', '③ seen', '④ seeing'],
     answer: '③ seen',
     hint: '現在完了形（have/has + 過去分詞）の経験用法。see の過去分詞を選ぶ。',
-    explanation: `【出題意図】
-現在完了形（経験用法）の形と、see の活用（see-saw-seen）を正確に使えるかを問う問題。
-
-【解説】
-never は現在完了形の経験用法で「一度も〜したことがない」を表す。現在完了形＝have/has + 過去分詞。see の活用：see（原形）→ saw（過去形）→ seen（過去分詞）。
-・① see → 原形（have の後ろに原形は来ない）
-・② saw → 過去形（have の後ろに過去形は来ない）
-・③ seen → 過去分詞（✓）have seen
-・④ seeing → 現在分詞（have been seeing なら別の意味）
-
-日本語訳：「私はこれほど高性能なロボットを一度も見たことがない。」
-
-【文法ポイント】
-現在完了形（経験）の目印の語句：ever、never、before、〜times。不規則動詞の過去分詞：see-saw-seen / take-took-taken / write-wrote-written。
-
-【入試頻出】
-・I have never seen such a fast computer.
-・Have you ever seen a real rocket launch?`,
+    explanation:
+      '【何を聞かれているか】「I have never ( ) such an advanced robot before.」の空所に入る適切な形を選ぶ。\n【なぜseenになるのか】neverを使った現在完了形の経験用法「一度も〜したことがない」は、have/has＋過去分詞の形にする必要があり、seeの過去分詞はseenだから。\n【ポイント1】neverは現在完了形の経験用法で「一度も〜したことがない」を表す。現在完了形はhave/has＋過去分詞。\n【ポイント2】seeの活用：see（原形）→saw（過去形）→seen（過去分詞）。①see（原形）、②saw（過去形）はhaveのあとに使えない。\n【ポイント3】④seeing（現在分詞）はhave been seeingなら別の意味になり、この文には合わない。③seen（過去分詞）が正解。\n【答え】③ seen\n【確かめ】haveのあとに過去分詞seenが続いているかを確認する。\n【よくあるまちがい】have sawのように、haveのあとに過去形をそのまま続けてしまう。\n【ここが絶対】現在完了形はhave/has＋過去分詞。不規則動詞の活用（see-saw-seen）を正確に覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -793,24 +777,8 @@ never は現在完了形の経験用法で「一度も〜したことがない�
     choices: ['① in', '② at', '③ on', '④ by'],
     answer: '③ on',
     hint: '特定の日付には前置詞 on を使う。',
-    explanation: `【出題意図】
-時を表す前置詞（in / at / on）の使い分けを問う問題。入試最頻出文法の一つ。
-
-【解説】
-「April 15th（4月15日）」という特定の日付には on を使う。
-・① in → 月・年・季節・時間帯（in April / in 2026）
-・② at → 時刻・特定の時点（at noon / at 9 a.m.）
-・③ on → 曜日・日付・特定の日（on April 15th）（✓）
-・④ by → 期限（by April 15th＝4月15日までに）→ 意味が異なる
-
-日本語訳：「その新しいスマートフォンは4月15日に発売される予定だ。」
-
-【文法ポイント】
-時を表す前置詞まとめ：at（時刻）、on（曜日・日付）、in（月・年・季節・時間帯）。
-
-【入試頻出】
-・The event will be held on May 3rd.
-・The rocket is scheduled to launch on Monday morning.`,
+    explanation:
+      '【何を聞かれているか】「The new smartphone will be released ( ) April 15th.」の空所に入る適切な前置詞を選ぶ。\n【なぜonになるのか】April 15th（4月15日）のような特定の日付を表すときは、前置詞onを使うという決まりがあるから。\n【ポイント1】①in（月・年・季節・時間帯に使う）、②at（時刻・特定の時点に使う）はどちらも「特定の日付」には使わない。\n【ポイント2】③on（曜日・日付・特定の日に使う）が正解。\n【ポイント3】④by（期限「〜までに」）は意味が異なる。時を表す前置詞まとめ：at＝時刻、on＝曜日・日付、in＝月・年・季節。\n【答え】③ on\n【確かめ】April 15thが「特定の日付」にあたることから、onが正しいことを確認する。\n【よくあるまちがい】inやatを、日付を表す前置詞として使ってしまう。\n【ここが絶対】時を表す前置詞は、atは時刻・時点、onは曜日・日付、inは月・年・季節、と使い分ける。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -823,24 +791,8 @@ never は現在完了形の経験用法で「一度も〜したことがない�
     choices: ['① turn off', '② to turn off', '③ turning off', '④ turned off'],
     answer: '② to turn off',
     hint: 'ask + 人 + to do（人に〜するよう頼む）という構文。',
-    explanation: `【出題意図】
-「ask + 人 + to + 動詞」という第5文型（SVOC）の用法を問う問題。
-
-【解説】
-ask + 人 + to do＝「人に〜するよう頼む」という重要構文。
-・① turn off → 原形のみ（ask の第5文型では to が必要）
-・② to turn off → ask + 人 + to do（✓）
-・③ turning off → 動名詞（ask + 人 + doing という形は存在しない）
-・④ turned off → 過去分詞（文法的に合わない）
-
-日本語訳：「先生は実験が始まる前に、生徒たちにノートパソコンの電源を切るよう頼んだ。」
-
-【文法ポイント】
-「動詞 + 人 + to do」の構文：ask（頼む）、tell（言う）、want（〜してほしい）、allow（許可する）。
-
-【入試頻出】
-・She asked me to help with the experiment.
-・The scientist told the students to be careful with the chemicals.`,
+    explanation:
+      '【何を聞かれているか】「The teacher asked the students ( ) their laptops before the experiment began.」の空所に入る適切な形を選ぶ。\n【なぜto turn offになるのか】「人に〜するよう頼む」はask＋人＋to doという決まった構文で表し、人のあとには必ず不定詞（to＋原形）が続くから。\n【ポイント1】ask＋人＋to do＝「人に〜するよう頼む」という重要構文。\n【ポイント2】①turn off（原形のみ）、③turning off（動名詞）、④turned off（過去分詞）はどれもask＋人のあとの形として使えない。\n【ポイント3】同じ仲間の構文：tell＋人＋to do（人に〜するよう言う）、want＋人＋to do（人に〜してほしい）、allow＋人＋to do（人が〜するのを許可する）。\n【答え】② to turn off\n【確かめ】The teacher asked the students to turn off their laptops.という文全体を読み、「先生は生徒たちにノートパソコンの電源を切るよう頼んだ」という意味になっているかを確認する。\n【よくあるまちがい】ask＋人のあとに原形をそのまま続けてしまう。\n【ここが絶対】ask＋人＋to doの形では、人のあとに必ずtoが必要。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -853,24 +805,8 @@ ask + 人 + to do＝「人に〜するよう頼む」という重要構文。
     choices: ['① this', '② that', '③ it', '④ what'],
     answer: '③ it',
     hint: '形式主語 it を使った「it is + 形容詞 + to 動詞」の構文。',
-    explanation: `【出題意図】
-形式主語 it（仮の主語）を使った構文を問う問題。I think (that) it is〜 の形が正解。
-
-【解説】
-この文は「I think [that] it is essential to test new technology〜」という構造。it は to test new technology carefully（新しい技術を注意深くテストすること）を指す形式主語。
-・① this → I think this essential to〜 は文法的に成立しない
-・② that → I think that essential to〜 も不自然
-・③ it → 形式主語の it（✓）
-・④ what → I think what essential to〜 は成立しない
-
-日本語訳：「新しい技術を一般公開する前に注意深くテストすることは不可欠だと私は思う。」
-
-【文法ポイント】
-形式主語（仮主語）it の構文：It is + 形容詞 + to + 動詞〜＝〜することは（形容詞）だ。
-
-【入試頻出】
-・I think it is important to protect personal data.
-・He found it difficult to fix the broken drone.`,
+    explanation:
+      '【何を聞かれているか】「I think ( ) essential to test new technology carefully before releasing it to the public.」の空所に入る適切な語を選ぶ。\n【なぜitになるのか】to test new technology carefully（新しい技術を注意深くテストすること）という長い内容を先に置くと文のバランスが悪くなるため、その内容を指す形式主語itを先に置いて、本当の中身をあとに回すという英語の決まりがあるから。\n【ポイント1】this、that、whatはこの位置に置いても文法的に成立しない。\n【ポイント2】③it（形式主語）が正解。itはto test new technology carefully before releasing it to the publicを指す。\n【ポイント3】形式主語itの基本構文：It is＋形容詞＋to＋動詞〜＝「〜することは（形容詞）だ」（例：It is important to protect personal data.）。\n【答え】③ it\n【確かめ】itがto test new technology carefully〜を指していることを確認する。\n【よくあるまちがい】thisやthatを使ってしまう。形式主語には必ずitを使う。\n【ここが絶対】「〜することは…だ」を表すときは、形式主語itを使い、本当の中身（to不定詞）は後ろに置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -886,25 +822,8 @@ ask + 人 + to do＝「人に〜するよう頼む」という重要構文。
     question: '次の日本文を英語に訳せ。\n「私は今までにロボットに会ったことがありません。」',
     answer: 'I have never met a robot before.',
     hint: '「〜したことがない」は現在完了の経験用法（have never + 過去分詞）。',
-    explanation: `【出題意図】
-現在完了形（経験）の否定文を正確に作れるかを問う英作文問題。
-
-【解説】
-「〜したことがない」＝have/has never + 過去分詞（現在完了・経験の否定）。meet の活用：meet-met-met。
-
-完成した文：
-I have never met a robot before.
-
-「before（以前に）」は文末に添えて経験を強調する語で、なくても文法的には正しいが、入試では入れるとより自然。
-
-日本語訳の確認：「私は今までにロボットに会ったことがありません。」
-
-【文法ポイント】
-現在完了形（経験）の否定：have/has + never + 過去分詞。meet-met-met のように原形・過去形・過去分詞が同じ形の不規則動詞に注意。
-
-【入試頻出】
-・I have never used this kind of software before.
-・She has never seen a robot like this.`,
+    explanation:
+      '【何を聞かれているか】「私は今までにロボットに会ったことがありません。」を英語に訳す。\n【なぜnever met a robotになるのか】「〜したことがない」という現在完了形の経験用法の否定は、have/has never＋過去分詞の形で表す必要があり、meetの過去分詞はmetだから。\n【ポイント1】「〜したことがない」＝have/has never＋過去分詞（現在完了・経験の否定）。\n【ポイント2】meetの活用：meet-met-met（原形・過去形・過去分詞が同じ形の不規則動詞）。\n【ポイント3】I have never met a robot before.（beforeは文末に添えて経験を強調する語で、なくても文法的に正しいが入れるとより自然）。\n【答え】I have never met a robot before.\n【確かめ】haveのあとにmet（過去分詞）が続いているかを確認する。\n【よくあるまちがい】meetをmeetedのように誤って規則動詞化してしまう。\n【ここが絶対】現在完了形（経験）の否定はhave/has＋never＋過去分詞。meet-met-metのように原形・過去形・過去分詞が同じ形の不規則動詞に注意する。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -916,27 +835,8 @@ I have never met a robot before.
     question: '次の日本文を英語に訳せ。\n「彼が発明した機械を私に見せてもらえませんか？」',
     answer: 'Could you show me the machine that he invented? / Could you show me the machine he invented?',
     hint: '「見せてもらえませんか」は Could you show me〜?、「彼が発明した」は関係代名詞（that / which）で修飾。',
-    explanation: `【出題意図】
-依頼表現（Could you〜?）と関係代名詞（目的格）を組み合わせた英作文。
-
-【解説】
-2つのポイント：
-1. 丁寧な依頼：Could you show me〜?＝「〜を見せていただけますか？」show + 人 + 物（第4文型）
-2. 「彼が発明した（機械）」＝the machine that/which he invented（関係代名詞・目的格、省略可）
-
-組み合わせ：
-Could you show me the machine (that) he invented?
-
-別解：Could you let me see the machine he invented?
-
-日本語訳確認：「彼が発明した機械を私に見せてもらえませんか？」
-
-【文法ポイント】
-Could you〜?＝Can you〜? の丁寧版。the machine (that) he invented＝he invented the machine の構造。
-
-【入試頻出】
-・Could you show me the app you created?
-・This is the device (that) she designed for the science fair.`,
+    explanation:
+      '【何を聞かれているか】「彼が発明した機械を私に見せてもらえませんか？」を英語に訳す。\n【なぜCould you〜?とthat/whichを組み合わせるのか】丁寧な依頼にはCould you〜?を使い、「彼が発明した」という説明を加えるには、the machineのうしろに関係代名詞（目的格）でinvented節をつなげる必要があるから。\n【ポイント1】丁寧な依頼：Could you show me〜?＝「〜を見せていただけますか？」（show＋人＋物の第4文型）。\n【ポイント2】「彼が発明した（機械）」＝the machine that/which he invented（関係代名詞・目的格、省略も可）。\n【ポイント3】組み合わせるとCould you show me the machine (that) he invented?になる。\n【答え】Could you show me the machine that he invented? / Could you show me the machine he invented?\n【確かめ】the machineのあとにhe invented（主語＋動詞）が続いており、inventの目的語がthe machineであることを確認する。\n【よくあるまちがい】Could you〜?のかわりにCan you〜?を使ってしまい、ていねいさが弱くなる。\n【ここが絶対】Could you〜?はCan you〜?の丁寧版。目的格の関係代名詞は省略できる。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -980,27 +880,8 @@ few＋可算名詞（ほとんど〜ない）／a few＋可算名詞（少しは
     question: '次の日本文を英語に訳せ。\n「もし私がその科学者なら、その実験をもう一度行うでしょう。」',
     answer: 'If I were that scientist, I would do the experiment again.',
     hint: '仮定法過去（現実とは逆の仮定）：If + 主語 + were/動詞の過去形, 主語 + would + 動詞原形。',
-    explanation: `【出題意図】
-仮定法過去（If I were〜, I would〜）の形を問う英作文。入試英作文最頻出構文の一つ。
-
-【解説】
-「もし私がその科学者なら」＝現実と異なる仮定（実際には私はその科学者ではない）→仮定法過去を使う。
-
-仮定法過去の形：
-If + 主語 + 動詞の過去形（be動詞は were）, 主語 + would + 動詞原形
-
-重要：If I were that scientist〜（× If I was〜 は入試では不正解になりやすい）
-仮定法では be 動詞は人称に関わらず were を使う。
-
-完成した文：
-If I were that scientist, I would do the experiment again.
-
-【文法ポイント】
-仮定法過去：現在の事実に反する仮定。If + 主語 + were, 主語 + would + 動詞原形。
-
-【入試頻出】
-・If I were an engineer, I would design safer robots.
-・If she had more data, she could finish the research faster.`,
+    explanation:
+      '【何を聞かれているか】「もし私がその科学者なら、その実験をもう一度行うでしょう。」を英語に訳す。\n【なぜwereを使うのか】「もし私がその科学者ならば」は現実とは異なる仮定（実際には私はその科学者ではない）なので、仮定法過去を使い、be動詞は主語に関係なくwereにするという決まりがあるから。\n【ポイント1】仮定法過去の形：If＋主語＋動詞の過去形（be動詞はwere）, 主語＋would＋動詞原形。\n【ポイント2】If I were that scientist〜（If I was〜は入試では不正解になりやすい）。\n【ポイント3】If I were that scientist, I would do the experiment again.\n【答え】If I were that scientist, I would do the experiment again.\n【確かめ】be動詞がwasではなくwereになっているかを確認する。\n【よくあるまちがい】If I was that scientist, I would〜のようにwasを使ってしまう。\n【ここが絶対】仮定法過去のif節ではbe動詞は必ずwereを使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1012,25 +893,8 @@ If I were that scientist, I would do the experiment again.
     question: '次の日本文を英語に訳せ。\n「この発明は大人だけでなく、子どもにも人気があります。」',
     answer: 'This invention is popular not only with adults but also with children. / This invention is popular not only among adults but also among children.',
     hint: '「〜だけでなく…も」は not only A but also B の構文。「〜に人気がある」は popular with/among〜。',
-    explanation: `【出題意図】
-相関接続詞 not only A but also B（〜だけでなく…も）の構文と、popular with/among〜 を使った英作文。
-
-【解説】
-2つのポイント：
-1. 「〜だけでなく…も」＝not only A but also B
-2. 「〜に人気がある」＝be popular with〜 または be popular among〜
-
-組み合わせ：
-This invention is popular not only with adults but also with children.
-
-注意：not only A but also B の A と B は文法的に同じ形（並列）である必要がある。
-
-【文法ポイント】
-相関接続詞：not only A but also B（AだけでなくBも）、both A and B（AもBも）。popular with（特定の人）／popular among（グループの中で）。
-
-【入試頻出】
-・This robot is loved not only by children but also by adults.
-・The app is useful not only for students but also for teachers.`,
+    explanation:
+      '【何を聞かれているか】「この発明は大人だけでなく、子どもにも人気があります。」を英語に訳す。\n【なぜnot only A but also Bを使うのか】「〜だけでなく…も」という意味は、相関接続詞not only A but also Bという決まった形で表し、「〜に人気がある」はbe popular with/among〜で表すから。\n【ポイント1】「〜だけでなく…も」＝not only A but also B。AとBは文法的に同じ形（並列）にする必要がある。\n【ポイント2】「〜に人気がある」＝be popular with〜（特定の人）またはbe popular among〜（グループの中で）。\n【ポイント3】This invention is popular not only with adults but also with children.\n【答え】This invention is popular not only with adults but also with children. / This invention is popular not only among adults but also among children.\n【確かめ】not only のあとと、but also のあとが同じ形（with adults／with children）になっているかを確認する。\n【よくあるまちがい】not only とbut alsoのあとの形をそろえず、withとamongを混ぜて使ってしまう。\n【ここが絶対】not only A but also BのAとBは文法的に同じ形にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1077,24 +941,8 @@ This invention is popular not only with adults but also with children.
     choices: ['① ロケットの新しい設計', '② 火星に水が存在した可能性を示す鉱物の発見', '③ ロボットのカメラの性能', '④ 地球にサンプルを持ち帰る計画'],
     answer: '② 火星に水が存在した可能性を示す鉱物の発見',
     hint: '"This finding" は直前の文「scientists found minerals that usually form in water」を指す。',
-    explanation: `【出題意図】
-指示語（This finding）が何を指すかを本文から特定する指示語問題。入試長文読解の頻出問題形式。
-
-【解説】
-指示語の前後を確認する：
-"This finding" の直前には："scientists found minerals that usually form in water"（科学者たちは通常水の中で形成される鉱物を発見した）とある。
-→ ②「火星に水が存在した可能性を示す鉱物の発見」が正解。
-
-① ロケットの新しい設計：本文に記述なし（×）
-③ ロボットのカメラの性能：カメラは道具として言及されているだけで、finding の内容ではない（×）
-④ サンプルを持ち帰る計画：This finding よりも後に出てくる別の話題（×）
-
-【文法ポイント】
-指示語問題のアプローチ：this/these/it/they が出たら直前の文を確認し、単数・複数、内容の性質を照合する。
-
-【入試頻出】
-・「this/these が指すものを選べ」→直前の内容を探す。
-・段落の途中の this は直前の1文の内容をまとめることが多い。`,
+    explanation:
+      '【何を聞かれているか】本文中の下線部"This finding"が指す内容として最も適切なものを選ぶ。\n【なぜ②が正解なのか】"This finding"の直前に"scientists found minerals that usually form in water"（科学者たちは通常水の中で形成される鉱物を発見した）とあり、"This finding"はこの発見を指しているから。\n【ポイント1】指示語の直前を確認する：科学者が水の中で形成される鉱物を発見したという出来事が直前に書かれている。\n【ポイント2】①ロケットの新しい設計は本文に記述がない。③カメラは道具として言及されているだけでfindingの内容ではない。④サンプルを持ち帰る計画はThis findingよりも後に出てくる別の話題。\n【ポイント3】"This finding"が指すのは②「火星に水が存在した可能性を示す鉱物の発見」。\n【答え】② 火星に水が存在した可能性を示す鉱物の発見\n【確かめ】"This finding"を②の内容に置きかえて文を読み直し、意味が通ることを確認する。\n【よくあるまちがい】指示語の直前ではなく、離れた場所の内容から答えを探してしまう。\n【ここが絶対】指示語問題では、指示語の直前の文を確認し、代入して意味が通るかを確かめる。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
