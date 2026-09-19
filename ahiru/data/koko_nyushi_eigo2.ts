@@ -1013,26 +1013,8 @@ such + (a/an) + 形容詞 + 名詞：「こんなに〜な…」
     question: '次の日本文を英語に訳せ。\n「太陽があまりにも眩しくて、私は目を開けていられない。」',
     answer: 'The sun is too bright for me to keep my eyes open. / The sun is so bright that I can\'t keep my eyes open.',
     hint: '「あまりにも〜すぎて…できない」は too〜to構文、または so〜that構文で表す。',
-    explanation: `【出題意図】
-too〜to構文（あまりにも〜すぎて…できない）と、so〜that構文への言い換えを問う英作文問題。
-
-【解説】
-「あまりにも〜すぎて…できない」の2つの表し方：
-1. too + 形容詞 + for + 人 + to + 動詞：The sun is too bright for me to keep my eyes open.
-2. so + 形容詞 + that + 主語 + can't + 動詞：The sun is so bright that I can't keep my eyes open.
-
-どちらも同じ意味を表す重要な書き換えパターン。「目を開けていられない」= keep my eyes open（keep + O + C の第5文型）で表現する。
-
-日本語訳確認：「太陽があまりにも眩しくて、私は目を開けていられない。」
-
-【文法ポイント】
-too + 形容詞 + for + 人 + to do = so + 形容詞 + that + 主語 + can't do
-keep + O + 形容詞：Oを〜の状態に保つ（例：keep the door open）
-
-【入試頻出】
-・The wind was too strong for us to open the umbrella.
-・The snow was so deep that we couldn't walk any farther.
-・It was too cold for the children to play outside.`,
+    explanation:
+      '【何を聞かれているか】「太陽があまりにも眩しくて、私は目を開けていられない。」を英語に訳す。\n【なぜtoo〜toとso〜thatの2通りで書けるのか】「あまりにも〜すぎて…できない」という意味は、too＋形容詞＋for＋人＋to＋動詞（不定詞を使う言い方）と、so＋形容詞＋that＋主語＋can\'t＋動詞（that節を使う言い方）の2つの決まった構文で表せるから。\n【ポイント1】too＋形容詞＋for＋人＋to＋動詞：The sun is too bright for me to keep my eyes open.\n【ポイント2】so＋形容詞＋that＋主語＋can\'t＋動詞：The sun is so bright that I can\'t keep my eyes open。どちらも同じ意味を表す重要な書きかえパターン。\n【ポイント3】「目を開けていられない」はkeep my eyes open（keep＋O＋Cの第5文型、「Oを〜の状態に保つ」）で表現する。\n【答え】The sun is too bright for me to keep my eyes open. / The sun is so bright that I can\'t keep my eyes open.\n【確かめ】too〜to構文とso〜that構文が同じ意味になっていることを確認する。\n【よくあるまちがい】too〜to構文でforを抜かしてThe sun is too bright to keep my eyes open.（意味上の主語が不明）としてしまう。\n【ここが絶対】too＋形容詞＋for＋人＋to＋動詞＝so＋形容詞＋that＋主語＋can\'t＋動詞、という書きかえパターンを覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1078,30 +1060,8 @@ If + 主語 + 過去形（were）, 主語 + would + 動詞原形
     question: '次の日本文を英語に訳せ。\n「この祭りは夏だけでなく、秋にも人気があります。」',
     answer: 'This festival is popular not only in summer but also in autumn.',
     hint: '「〜だけでなく…も」は not only A but also B の構文。',
-    explanation: `【出題意図】
-相関接続詞 not only A but also B（〜だけでなく…も）の構文を使った英作文。
-
-【解説】
-「〜だけでなく…も」= not only A but also B
-A と B の部分には文法的に同じ形（この文では前置詞句 in summer / in autumn）が並列される必要がある。
-
-組み合わせ：
-This festival is popular not only in summer but also in autumn.
-
-注意：not only A but also B の A と B は品詞・形をそろえること（前置詞句なら前置詞句同士など）。
-
-日本語訳確認：「この祭りは夏だけでなく、秋にも人気があります。」
-
-【文法ポイント】
-相関接続詞：
-・not only A but also B：AだけでなくBも
-・both A and B：AもBも
-・either A or B：AかBのどちらか
-
-【入試頻出】
-・This flower blooms not only in spring but also in early summer.
-・The typhoon affected not only the coast but also the mountain areas.
-・Autumn leaves are loved not only in Japan but also around the world.`,
+    explanation:
+      '【何を聞かれているか】「この祭りは夏だけでなく、秋にも人気があります。」を英語に訳す。\n【なぜnot only A but also Bを使うのか】「〜だけでなく…も」という意味は、相関接続詞not only A but also Bという決まった形で表し、AとBには文法的に同じ形（この文では前置詞句in summer／in autumn）を並べる必要があるから。\n【ポイント1】「〜だけでなく…も」＝not only A but also B。\n【ポイント2】AとBの部分には同じ形（前置詞句なら前置詞句どうし）を並べる。This festival is popular not only in summer but also in autumn.\n【ポイント3】相関接続詞の仲間：both A and B（AもBも）、either A or B（AかBのどちらか）。\n【答え】This festival is popular not only in summer but also in autumn.\n【確かめ】not onlyのあとと、but alsoのあとが同じ形（in summer／in autumn）になっているかを確認する。\n【よくあるまちがい】not onlyのあとと、but alsoのあとの形をそろえず、in summer と autumn（前置詞なし）のように混ぜてしまう。\n【ここが絶対】not only A but also BのAとBは文法的に同じ形にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1152,27 +1112,8 @@ This festival is popular not only in summer but also in autumn.
     choices: ['① 桜が咲く様子', '② 山々の紅葉', '③ 雪が降る様子', '④ 花火大会の様子'],
     answer: '② 山々の紅葉',
     hint: '"this beautiful sight" の直前の文で述べられている、山の様子を確認する。',
-    explanation: `【出題意図】
-指示語（this beautiful sight）が何を指すかを本文から特定する指示語問題。入試長文読解の頻出問題形式。
-
-【解説】
-指示語の直前を確認する：
-"In autumn, the mountains turn red and yellow as the leaves change color, attracting many visitors who want to see this beautiful sight."
-この文の中で "this beautiful sight" は、直前で説明されている「山が赤や黄色に色づく（紅葉する）様子」を指している。
-
-① 桜が咲く様子：春の話題であり、この文の直前の内容ではない（×）
-② 山々の紅葉：直前の文の内容と一致する（✓）
-③ 雪が降る様子：冬の話題で、別の文で述べられている（×）
-④ 花火大会の様子：夏の話題で、別の文で述べられている（×）
-
-【文法ポイント】
-指示語問題のアプローチ：
-1. 指示語（this / these / it）が出たら直前の文を確認
-2. 指示語を含む文に「指示内容」を代入して意味が通るか確認
-
-【入試頻出】
-・「this が指すものを選べ」→ 直前の内容（多くは直前の文全体や一部）を探す
-・指示語の前の文の主語・動詞・目的語のどこを指しているかを丁寧に見極める`,
+    explanation:
+      '【何を聞かれているか】本文中の下線部"this beautiful sight"が指す内容として最も適切なものを選ぶ。\n【なぜ指示語の直前を確認するのか】this、these、itなどの指示語は、直前の文で述べられている内容を指すことがほとんどなので、その部分を正確に読み取る必要があるから。\n【ポイント1】"this beautiful sight"の直前の文："In autumn, the mountains turn red and yellow as the leaves change color, attracting many visitors who want to see this beautiful sight."\n【ポイント2】この文の中で"this beautiful sight"は、直前で説明されている「山が赤や黄色に色づく（紅葉する）様子」を指している。\n【ポイント3】①桜（春の話題）、③雪（冬の話題）、④花火大会（夏の話題）はどれもこの文の直前の内容とは異なる。\n【答え】② 山々の紅葉\n【確かめ】"this beautiful sight"を「山々の紅葉」に置きかえて文を読み直し、意味が通ることを確認する。\n【よくあるまちがい】指示語の直前ではなく、本文の別の場所（春や冬の話題）から答えを探してしまう。\n【ここが絶対】指示語問題では、指示語の直前の文を確認し、代入して意味が通るかを確かめる。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1224,26 +1165,8 @@ This festival is popular not only in summer but also in autumn.
     choices: ['① 台風は主に8月から10月にかけて日本を訪れることが多い。', '② 台風の際は川や海岸に近づくべきではないとされている。', '③ 台風の接近が予想されても学校が休みになることはない。', '④ 事前に備えている地域は被害が少ない傾向にある。'],
     answer: '③ 台風の接近が予想されても学校が休みになることはない。',
     hint: '本文中の "Some schools even close early or cancel classes when a typhoon is expected to be especially dangerous." という部分と選択肢③を比較する。',
-    explanation: `【出題意図】
-「本文と合っていないものを選ぶ」という誤文識別型の読解問題。細部の読み取りと選択肢の正確な解釈が必要。
-
-【解説】
-各選択肢を本文と照合する：
-① 「8月から10月にかけて日本を訪れることが多い」→ 本文に "especially between August and October" とある（✓ 本文と一致）
-② 「川や海岸に近づくべきではない」→ 本文に "avoid going near rivers or the coast" とある（✓ 本文と一致）
-③ 「学校が休みになることはない」→ 本文には "Some schools even close early or cancel classes when a typhoon is expected to be especially dangerous.（特に危険が予想されるときは早めに下校させたり休校にしたりする学校もある）" とあり、本文の内容と矛盾する（× 本文と不一致）
-④ 「事前に備えている地域は被害が少ない傾向にある」→ 本文の最後の文 "Communities that practice these safety habits tend to suffer less damage" と一致する（✓ 本文と一致）
-
-正解：③
-
-【文法ポイント】
-「合っていないものを選べ」問題のアプローチ：
-1. 選択肢の語句を一つずつ本文と照合
-2. 本文の否定表現（never, not）と選択肢の肯定表現（またはその逆）に注意
-
-【入試頻出】
-・「合っていないものを選べ」では本文の語句と選択肢の語句を丁寧に比較する
-・「〜することはない」のような断定的な選択肢は誤答になりやすい`,
+    explanation:
+      '【何を聞かれているか】台風についてのパッセージを読んで、内容と合っていない選択肢を1つ選ぶ。\n【なぜ③が不一致なのか】本文には「特に危険が予想されるときは早めに下校させたり休校にしたりする学校もある（Some schools even close early or cancel classes〜）」と書かれており、これは③「学校が休みになることはない」という断定と矛盾するから。\n【ポイント1】①「8月から10月にかけて多い」は本文の"especially between August and October"と一致する。\n【ポイント2】②「川や海岸に近づくべきではない」は本文の"avoid going near rivers or the coast"と一致する。④「事前に備えている地域は被害が少ない」も本文最後の文と一致する。\n【ポイント3】③は本文の「休校にする学校もある」という記述と矛盾するため、不一致の選択肢。\n【答え】③ 台風の接近が予想されても学校が休みになることはない。\n【確かめ】本文の該当箇所（Some schools even close early or cancel classes〜）を読み直し、③の内容と矛盾していることを確認する。\n【よくあるまちがい】「〜することはない」のような断定的な選択肢を、本文をよく読まずに正しいと判断してしまう。\n【ここが絶対】「合っていないものを選べ」問題では、断定的な言い切りの選択肢ほど本文と丁寧に照合する。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',

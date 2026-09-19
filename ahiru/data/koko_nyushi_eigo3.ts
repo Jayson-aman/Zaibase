@@ -11,27 +11,8 @@ export const kokoNyushiEigo3: Question[] = [
     choices: ['① is', '② was', '③ has been', '④ will be'],
     answer: '③ has been',
     hint: '「4月からずっと」という継続を表す現在完了進行形を作る助動詞を選ぶ。',
-    explanation: `【出題意図】
-現在完了進行形（have/has been + Ving）の助動詞部分を問う問題。継続を示す since との組み合わせを見抜けるかが目標。
-
-【解説】
-「since April（4月から）」は継続の起点を示す表現。文末の practicing（Ving）と組み合わせて「ずっと練習し続けている」という継続を表すには、has been + Ving（現在完了進行形）が必要。
-・① is → is practicing なら現在進行形だが、since と結びつかない
-・② was → 過去進行形。過去の一時点の動作を表すのみ
-・③ has been → has been practicing（✓）現在完了進行形
-・④ will be → will be practicing なら未来進行形。since と合わない
-
-日本語訳：「私たちのバドミントン部は4月から大会に向けて練習し続けている。」
-
-【文法ポイント】
-現在完了進行形 = have/has been + 動詞-ing
-→ 過去に始まり現在も続いている動作を強調する。
-sinceは「起点」、forは「期間」を表し、どちらも現在完了（進行）形の目印になる。
-
-【入試頻出】
-・The tennis team has been training hard since last month.
-・She has been practicing the violin for two hours.
-・They have been waiting for the bus since noon.`,
+    explanation:
+      '【何を聞かれているか】「Our badminton club ( ) practicing for the tournament since April.」の空所に入る適切な助動詞を選ぶ。\n【なぜhas beenになるのか】「4月からずっと」という継続を表すには、sinceと組み合わせて使う現在完了進行形（has been＋動詞のing形）にする必要があるから。\n【ポイント1】since April（4月から）は継続の起点を示す表現。文末のpracticing（-ing形）と組み合わせて「ずっと練習し続けている」を表すには、has been＋Vingが必要。\n【ポイント2】①is（現在進行形ならis practicingだが、sinceと結びつかない）、②was（過去進行形、過去の一時点のみ）、④will be（未来進行形、sinceと合わない）はどれも文脈に合わない。\n【ポイント3】③has been（現在完了進行形）が正解。sinceは「起点」、forは「期間」を表し、どちらも現在完了（進行）形の目印になる。\n【答え】③ has been\n【確かめ】since Aprilという起点を示す語句と、has been＋Vingの組み合わせがセットになっていることを確認する。\n【よくあるまちがい】is practicingのように現在進行形にしてしまい、sinceとの組み合わせができなくなる。\n【ここが絶対】過去に始まり現在も続いている動作を強調するときは現在完了進行形（have/has been＋Ving）を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -208,27 +189,8 @@ suggest は「suggest that + 主語 + (should) + 動詞原形」の形でも表�
     choices: ['① will clean', '② have cleaned', '③ will have cleaned', '④ cleaned'],
     answer: '③ will have cleaned',
     hint: '「新学期が始まるまでには」という未来のある時点での完了を表す時制を選ぶ。',
-    explanation: `【出題意図】
-未来完了形（will have + 過去分詞）の用法を問う問題。「by the time〜」という未来の基準点を読み取れるかが鍵。
-
-【解説】
-「By the time the new term starts（新学期が始まるまでには）」は未来のある時点を示す表現。その時点までに「掃除を終えていることになる」という完了を表すには未来完了形を使う。
-・① will clean → 単純未来（完了のニュアンスがない）
-・② have cleaned → 現在完了（未来の基準点には使えない）
-・③ will have cleaned → 未来完了（✓）
-・④ cleaned → 過去形（文脈に合わない）
-
-日本語訳：「新学期が始まるまでには、私たちは新しい教室の掃除を終えているだろう。」
-
-【文法ポイント】
-未来完了形 = will have + 過去分詞
-目印：by the time〜, by then, by next〜, when〜（未来の基準点を示す語句）
-「by the time + 主語 + 動詞（現在形）」の副詞節内は現在形を使うことにも注意。
-
-【入試頻出】
-・By the time you get home, I will have finished cooking.
-・She will have lived here for ten years by next spring.
-・By next week, we will have practiced the song many times.`,
+    explanation:
+      '【何を聞かれているか】「By the time the new term starts, we ( ) our new classroom.」の空所に入る適切な時制を選ぶ。\n【なぜwill have cleanedになるのか】「新学期が始まるまでには」という未来のある時点で「掃除を終えていることになる」という完了を表すには、未来完了形（will have＋過去分詞）を使う必要があるから。\n【ポイント1】By the time the new term starts（新学期が始まるまでには）は未来のある時点を示す表現。\n【ポイント2】①will clean（単純未来、完了のニュアンスがない）、②have cleaned（現在完了、未来の基準点には使えない）、④cleaned（過去形）はどれも文脈に合わない。\n【ポイント3】③will have cleaned（未来完了）が正解。目印はby the time〜、by then、by next〜、when〜。by the time＋主語＋動詞（現在形）の副詞節内は現在形を使う点にも注意。\n【答え】③ will have cleaned\n【確かめ】By the timeの節の動詞が現在形（starts）になっており、主節が未来完了（will have cleaned）になっているかを確認する。\n【よくあるまちがい】have cleaned（現在完了）を選んでしまう。現在完了は現在を基準にするので、未来の時点には使えない。\n【ここが絶対】未来のある時点での完了にはwill have＋過去分詞（未来完了形）を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -241,26 +203,8 @@ suggest は「suggest that + 主語 + (should) + 動詞原形」の形でも表�
     choices: ['① is', '② will be', '③ was', '④ has been'],
     answer: '① is',
     hint: '条件を表す if 節の中では、未来のことでも現在形を使う。',
-    explanation: `【出題意図】
-条件節（if 節）での時制のルール「未来のことでも現在形を使う」を、学校行事の場面で問う問題。
-
-【解説】
-「if 節、we will hold〜」という条件文の構造。時・条件を表す副詞節（if節）の中では、未来のことでも will を使わず現在形を使う。
-・① is → 現在形（✓）if 節内では現在形で未来を表す
-・② will be → if 節内でwillは使えない（×）
-・③ was → 過去形（仮定法や過去の話になってしまう）
-・④ has been → 現在完了（文脈に合わない）
-
-日本語訳：「もし運動会の日に雨が降れば、私たちは体育館で種目を行います。」
-
-【文法ポイント】
-時・条件を表す副詞節の中では未来のことでも現在形：
-if（もし〜なら）/ when（〜するとき）/ before（〜する前に）/ as soon as（〜したらすぐ）
-
-【入試頻出】
-・If it rains tomorrow, the game will be canceled.
-・When the bell rings, please come back to the classroom.
-・As soon as club activities end, I will go home.`,
+    explanation:
+      '【何を聞かれているか】「If it ( ) rainy on sports day, we will hold the events in the gym.」の空所に入る適切な語を選ぶ。\n【なぜisになるのか】条件を表すif節の中では、未来のことでもwillを使わず現在形を使うという決まりがあるから。\n【ポイント1】if節などの副詞節の中では、未来のことでも現在形で表す。②will beはif節の中では使えない。\n【ポイント2】③was（過去形、仮定法や過去の話になってしまう）、④has been（現在完了、文脈に合わない）はどちらも誤り。\n【ポイント3】①is（現在形）が正解。「もし運動会の日に雨が降れば」という条件を表す。\n【答え】① is\n【確かめ】主節にwillが使われている（we will hold）ことと、if節が現在形（is）になっていることのバランスを確認する。\n【よくあるまちがい】if節の中にもwillを入れてしまう。\n【ここが絶対】時・条件を表す副詞節の中では、未来のことでも現在形を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -339,29 +283,8 @@ than があるので比較級が必要。exciting は3音節の形容詞なの�
     choices: ['① try', '② trying', '③ to try', '④ tried'],
     answer: '③ to try',
     hint: 'encourage + 人 + to do（人に〜するよう励ます）という構文。',
-    explanation: `【出題意図】
-「encourage + 人 + to + 動詞」という第5文型（SVOC）の用法を問う問題。
-
-【解説】
-encourage + 人 + to do = 「人に〜するよう励ます・勧める」という重要構文。
-・① try → 原形のみ（encourageの第5文型ではtoが必要）
-・② trying → 動名詞（encourage + 人 + doingという形は存在しない）
-・③ to try → encourage + 人 + to do（✓）
-・④ tried → 過去形（文法的に合わない）
-
-日本語訳：「私たちの担任の先生はいつも私たちに新しいことに挑戦するよう励ましてくれる。」
-
-【文法ポイント】
-「動詞 + 人 + to do」の構文：
-・encourage + 人 + to do：人に〜するよう励ます
-・ask + 人 + to do：人に〜するよう頼む
-・tell + 人 + to do：人に〜するよう言う
-・want + 人 + to do：人に〜してほしい
-
-【入試頻出】
-・She encouraged her teammates to keep practicing.
-・The coach told the players to run faster.
-・My friend encouraged me to join the drama club.`,
+    explanation:
+      '【何を聞かれているか】「Our homeroom teacher always encourages us ( ) new things.」の空所に入る適切な形を選ぶ。\n【なぜto tryになるのか】「人に〜するよう励ます」はencourage＋人＋to doという決まった構文で表し、人のあとには必ず不定詞（to＋原形）が続くから。\n【ポイント1】encourage＋人＋to do＝「人に〜するよう励ます・勧める」という重要構文。\n【ポイント2】①try（原形のみ）、②trying（動名詞）、④tried（過去形）はどれもencourage＋人のあとの形として使えない。\n【ポイント3】同じ仲間の構文：ask＋人＋to do（人に〜するよう頼む）、tell＋人＋to do（人に〜するよう言う）、want＋人＋to do（人に〜してほしい）。\n【答え】③ to try\n【確かめ】Our homeroom teacher always encourages us to try new things.という文全体を読み、「先生はいつも私たちに新しいことに挑戦するよう励ましてくれる」という意味になっているかを確認する。\n【よくあるまちがい】encourage＋人のあとに原形をそのまま続けてしまう。\n【ここが絶対】encourage＋人＋to doの形では、人のあとに必ずtoが必要。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -645,27 +568,8 @@ come up with〜：（考え・計画・解決策を）思いつく
     choices: ['① since', '② from', '③ at', '④ during'],
     answer: '② from',
     hint: '「〜から…まで」という期間を示す表現 from A to B を選ぶ。',
-    explanation: `【出題意図】
-期間を表す前置詞 from A to B の用法を問う問題。似た意味を持つ since / during との区別が目標。
-
-【解説】
-「4時から6時まで」という開始から終了までの期間を表すには from A to B を使う。
-・① since → 「〜以来」（現在完了と共に使う起点。to とセットでは使わない）
-・② from → from A to B（✓）「AからBまで」
-・③ at → 特定の時刻を表す（範囲は表せない）
-・④ during → during + 名詞（期間全体を通して。from〜to〜のペアとしては使わない）
-
-日本語訳：「吹奏楽部は平日毎日午後4時から6時まで練習する。」
-
-【文法ポイント】
-from A to B：AからBまで（時間・場所どちらにも使う）
-during + 名詞：〜の間ずっと（例：during the summer vacation）
-since + 起点：〜以来（現在完了形と共に使う）
-
-【入試頻出】
-・The library is open from 9 a.m. to 5 p.m.
-・We practiced soccer during the summer vacation.
-・She has lived in this town since 2015.`,
+    explanation:
+      '【何を聞かれているか】「The brass band practices ( ) 4 p.m. to 6 p.m. every weekday.」の空所に入る適切な前置詞を選ぶ。\n【なぜfromになるのか】「4時から6時まで」という開始から終了までの期間を表すには、from A to Bという決まった形を使う必要があるから。\n【ポイント1】from A to Bは「AからBまで」を表し、時間・場所どちらにも使える。\n【ポイント2】①since（「〜以来」、現在完了と共に使う起点でtoとセットにはしない）、③at（特定の時刻、範囲は表せない）、④during（〜の間ずっと、from〜to〜のペアとしては使わない）はどれも文脈に合わない。\n【ポイント3】②from（from A to Bの形）が正解。「4時から6時まで練習する」という意味になる。\n【答え】② from\n【確かめ】fromとtoがペアで使われている（from 4 p.m. to 6 p.m.）ことを確認する。\n【よくあるまちがい】sinceを「〜から」という意味だけで覚え、to Bとセットで使えると誤解してしまう。\n【ここが絶対】「AからBまで」の期間を表すときはfrom A to Bを使う。sinceは現在完了形とともに起点を表すときに使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -682,29 +586,8 @@ since + 起点：〜以来（現在完了形と共に使う）
     choices: ['① who', '② which', '③ whom', '④ whose'],
     answer: '① who',
     hint: '先行詞は「人」、関係代名詞節内での役割は「主語」。',
-    explanation: `【出題意図】
-関係代名詞の選択（who / which / whom / whose）を問う問題。先行詞が人であることと節内での主格の役割の識別が目標。
-
-【解説】
-先行詞は「The boy（少年）」= 人。関係代名詞節内で「is running（走っている）」の主語の役割を果たしている。
-・① who → 先行詞が人・主格（✓）
-・② which → 先行詞が物や動物
-・③ whom → 先行詞が人・目的格
-・④ whose → 先行詞が人または物・所有格
-
-日本語訳：「陸上部で一番速く走っている少年は私のクラスメートです。」
-
-【文法ポイント】
-関係代名詞まとめ：
-　　　　主格　　目的格　　所有格
-人：　　who　　whom　　whose
-物：　　which　which　　whose
-that は who / which の代わりに使えるが所有格・前置詞の後ろでは使えない。
-
-【入試頻出】
-・The girl who plays the piano well is in the music club.
-・The student who won first prize was very happy.
-・I have a friend who is good at basketball.`,
+    explanation:
+      '【何を聞かれているか】「The boy ( ) is running the fastest on the track team is my classmate.」の空所に入る適切な関係代名詞を選ぶ。\n【なぜwhoになるのか】先行詞The boy（少年）は人で、関係代名詞節の中でis running（走っている）の主語の役割をしているため、先行詞が人・主格のときに使うwhoを選ぶ必要があるから。\n【ポイント1】先行詞がThe boy（人）で、関係代名詞節内でis runningの主語になっている（主格）。\n【ポイント2】②whichは先行詞が物や動物、③whomは先行詞が人・目的格、④whoseは所有格で、どれも文脈に合わない。\n【ポイント3】関係代名詞まとめ：人（主格who、目的格whom、所有格whose）、物（主格・目的格which、所有格whose）。thatはwho/whichの代わりに使えるが所有格・前置詞の後ろでは使えない。\n【答え】① who\n【確かめ】whoのあとに動詞（is running）が続いている（主語の役割）ことを確認する。\n【よくあるまちがい】先行詞が人なのにwhichを選んでしまう。\n【ここが絶対】関係代名詞は、先行詞が人か物かと、節内での役割（主格・目的格・所有格）の両方で決まる。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -717,29 +600,8 @@ that は who / which の代わりに使えるが所有格・前置詞の後ろ�
     choices: ['① who', '② which', '③ whom', '④ where'],
     answer: '② which',
     hint: '先行詞は「物（歌）」。関係代名詞節内で sang の目的語になっている。',
-    explanation: `【出題意図】
-関係代名詞 which（先行詞が物・目的格）の用法を問う問題。that との言い換えも理解する。
-
-【解説】
-先行詞は「The song（歌）」= 物。関係代名詞節内で our chorus club sang ( )（合唱部が歌った）の目的語になっている。
-・① who → 先行詞が人のとき
-・② which → 先行詞が物・目的格（✓）
-・③ whom → 先行詞が人・目的格
-・④ where → 関係副詞（場所を表す先行詞に使う）
-
-which は省略可能（that に置き換え可）：The song (that) our chorus club sang〜
-
-日本語訳：「私たちの合唱部がコンクールで歌った歌は有名な作曲家によって書かれたものだ。」
-
-【文法ポイント】
-目的格の関係代名詞は省略可能：
-・The song (which/that) we sang was beautiful.
-先行詞 + 関係代名詞（目的格）+ 主語 + 動詞〜という語順になる。
-
-【入試頻出】
-・The picture (which) our art club painted won an award.
-・The story (that) she wrote impressed everyone.
-・This is the ball (which) our baseball team used last year.`,
+    explanation:
+      '【何を聞かれているか】「The song ( ) our chorus club sang at the contest was written by a famous composer.」の空所に入る適切な関係代名詞を選ぶ。\n【なぜwhichになるのか】先行詞The song（歌）は物で、関係代名詞節の中でour chorus club sang（　）の目的語の役割をしているため、先行詞が物・目的格のときに使うwhichを選ぶ必要があるから。\n【ポイント1】先行詞がThe song（物）で、関係代名詞節内でour chorus club sangの目的語になっている（目的格）。\n【ポイント2】①whoは先行詞が人、③whomは先行詞が人・目的格、④whereは関係副詞で、どれも文脈に合わない。\n【ポイント3】whichは省略も可能で、thatに置きかえることもできる：The song (that) our chorus club sang〜。\n【答え】② which\n【確かめ】whichのあとにour chorus club sang（主語＋動詞）が続いている（目的語の役割）ことを確認する。\n【よくあるまちがい】先行詞が物なのにwhoを選んでしまう。\n【ここが絶対】目的格の関係代名詞は省略できる。先行詞が物ならwhich（thatはどちらにも使える）。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -785,29 +647,8 @@ which は省略可能（that に置き換え可）：The song (that) our chorus 
     question: '次の2文を1文に書き換えなさい。（関係代名詞を使って）\n\nI have a classmate.\nHer sister is the captain of the swimming team.',
     answer: 'I have a classmate whose sister is the captain of the swimming team.',
     hint: '2つの文をつなぐとき、Her（彼女の）を所有格の関係代名詞 whose に変える。',
-    explanation: `【出題意図】
-所有格の関係代名詞 whose を使って2文を1文に結合する問題。
-
-【解説】
-「I have a classmate.」と「Her sister is the captain of the swimming team.」の Her は a classmate を指している。この「Her（クラスメートの）」という所有の関係を表すのが関係代名詞の所有格 whose。
-
-変換の手順：
-1. 先行詞を特定：a classmate（人）
-2. Her（所有格）→ whose に置き換える
-3. whose を先行詞 a classmate の直後に置く
-→ I have a classmate whose sister is the captain of the swimming team.
-
-日本語訳：「私には妹が水泳部のキャプテンであるクラスメートがいる。」
-
-【文法ポイント】
-whose の使い方：先行詞（人・物）の所有格を表す
-・先行詞が人：I know a boy whose father is a P.E. teacher.
-・先行詞が物：This is the club whose members practice every day.
-
-【入試頻出】
-・She has a friend whose brother plays in the baseball club.
-・He is a student whose grades are always excellent.
-・This is the team whose uniform is blue and white.`,
+    explanation:
+      '【何を聞かれているか】「I have a classmate. Her sister is the captain of the swimming team.」を関係代名詞を使って1文にする。\n【なぜwhoseを使うのか】2つ目の文のHer（彼女の）がa classmate（1つ目の文の名詞）の所有を表しているため、この所有の関係を表す所有格の関係代名詞whoseに置きかえる必要があるから。\n【ポイント1】先行詞を特定する：a classmate（人）。\n【ポイント2】Her（所有格）をwhoseに置きかえ、先行詞a classmateの直後に置く。\n【ポイント3】I have a classmate whose sister is the captain of the swimming team.（私には妹が水泳部のキャプテンであるクラスメートがいる）。\n【答え】I have a classmate whose sister is the captain of the swimming team.\n【確かめ】whoseのあとにsister（名詞）、is（動詞）と続いているかを確認する。\n【よくあるまちがい】whoseのかわりにwhoを使ってしまう。所有の関係にはwhoseを使う。\n【ここが絶対】whoseは先行詞の所有格を表す関係代名詞。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -819,30 +660,8 @@ whose の使い方：先行詞（人・物）の所有格を表す
     question: '次の文を間接疑問文に書き換えなさい。\n\n直接疑問文：What time does the club activity start?\n「あなたは部活が何時に始まるか知っていますか？」',
     answer: 'Do you know what time the club activity starts?',
     hint: '間接疑問文では疑問詞の後ろが「主語＋動詞」の語順に戻り、do/does は消える。',
-    explanation: `【出題意図】
-間接疑問文（疑問詞 + 主語 + 動詞の語順）への書き換えを問う問題。語順の変化が最大のポイント。
-
-【解説】
-直接疑問文「What time does the club activity start?」を間接疑問文にする手順：
-1. 疑問詞 what time はそのまま使う
-2. 疑問詞の後ろは「主語 + 動詞」の平叙文語順に変える
-3. does は消えて、動詞に3単現の s がつく
-4. 全体を「Do you know + 間接疑問」にする
-
-× Do you know what time does the club activity start?（誤り）
-○ Do you know what time the club activity starts?（正解）
-
-日本語訳：「あなたは部活が何時に始まるか知っていますか？」
-
-【文法ポイント】
-間接疑問文の語順：疑問詞 + 主語 + 動詞〜（平叙文語順）
-例：Where does she practice? → Do you know where she practices?
-例：Who is that coach? → I wonder who that coach is.
-
-【入試頻出】
-・Do you know when the tournament will be held?
-・Can you tell me where the club activity takes place?
-・I wonder why the practice was canceled today.`,
+    explanation:
+      '【何を聞かれているか】「What time does the club activity start?」（あなたは部活が何時に始まるか知っていますか？）を間接疑問文に書きかえる。\n【なぜdoesが消えるのか】疑問文が他の文（Do you know〜）の一部に組み込まれると、疑問文特有の助動詞doesを使わず、ふつうの文と同じ〈疑問詞＋主語＋動詞〉の語順に戻すというルールがあるから。\n【ポイント1】疑問詞what timeはそのまま使う。\n【ポイント2】疑問詞の後ろを「主語＋動詞」の平叙文語順に変える。doesは消えて、動詞に3単現のsがつく（starts）。\n【ポイント3】全体をDo you know＋間接疑問の形にする。Do you know what time the club activity starts?\n【答え】Do you know what time the club activity starts?\n【確かめ】doesが消えて、動詞がstartではなくstartsになっているかを確認する。\n【よくあるまちがい】Do you know what time does the club activity start?のように疑問文の語順のままにしてしまう。\n【ここが絶対】間接疑問文の語順は〈疑問詞＋主語＋動詞〉の平叙文語順にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -894,30 +713,8 @@ whose の使い方：先行詞（人・物）の所有格を表す
     question: '次の語を並べ替えて正しい英文を作れ。\n（ know / you / do / which / club / she / joined ）\n「彼女がどの部活に入ったか知っていますか？」',
     answer: 'Do you know which club she joined?',
     hint: '間接疑問文：疑問詞（which club）の後ろは主語＋動詞の語順。全体は疑問文なので Do で始める。',
-    explanation: `【出題意図】
-間接疑問文の語順整序問題。「疑問詞（句）+ 主語 + 動詞」という間接疑問の語順と、全体が疑問文になることを確認する。
-
-【解説】
-ポイントは2つ：
-1. 全体が「Do you know〜?」という疑問文
-2. know の目的語（間接疑問）は「which club she joined」（平叙文語順）
-
-× Do you know which club did she join?（誤り）
-○ Do you know which club she joined?（正解）
-
-語句の組み立て：
-Do you know / which club / she joined？
-
-日本語訳：「彼女がどの部活に入ったか知っていますか？」
-
-【文法ポイント】
-間接疑問の語順：疑問詞（句）+ 主語 + 動詞
-全体が疑問文の場合：Do/Can/Could + 主語 + 動詞 + 疑問詞 + 主語 + 動詞〜?
-
-【入試頻出】
-・Do you know which team will win the game?
-・Can you tell me which player scored the goal?
-・I want to know which club is the most popular.`,
+    explanation:
+      '【何を聞かれているか】know / you / do / which / club / she / joined を並べ替えて「彼女がどの部活に入ったか知っていますか？」という英文を作る。\n【なぜshe joinedという語順になるのか】全体はDo you know〜?という疑問文だが、knowの目的語になる部分（間接疑問）は疑問文の語順ではなく、〈疑問詞句（which club）＋主語＋動詞〉という平叙文の語順にする必要があるから。\n【ポイント1】全体の骨組みはDo you know〜?という疑問文。\n【ポイント2】knowの目的語（間接疑問）はwhich club she joined（疑問文の語順ではなく平叙文語順）。\n【ポイント3】組み立てるとDo you know which club she joined?になる。\n【答え】Do you know which club she joined?\n【確かめ】which clubのあとがdid she joinではなくshe joined（平叙文語順）になっているかを確認する。\n【よくあるまちがい】Do you know which club did she join?のように疑問文の語順のままにしてしまう。\n【ここが絶対】間接疑問文の中は、疑問詞（句）のあとを〈主語＋動詞〉の平叙文語順にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -964,30 +761,8 @@ for vs since：
     question: '次の語を並べ替えて正しい英文を作れ。\n（ enough / not / to / good / he / is / play / in the match ）\n「彼はその試合で出場するほど上手ではない。」',
     answer: 'He is not good enough to play in the match.',
     hint: '「〜するのに十分〜だ」は 形容詞 + enough + to 動詞 の語順。',
-    explanation: `【出題意図】
-「形容詞 + enough + to 動詞」の語順を問う整序問題。enough の位置が鍵。
-
-【解説】
-「〜するのに十分〜だ」は：主語 + be + 形容詞 + enough + to + 動詞原形
-・enough は形容詞の後ろに置く（× enough good は誤り）
-・否定文：not が be 動詞の後ろに来る
-
-正しい語順：
-He is not good enough to play in the match.
-
-日本語訳：「彼はその試合に出場できるほど上手ではない。」
-
-【文法ポイント】
-形容詞 + enough + to 動詞：「〜するのに十分〜だ」
-例：She is fast enough to run in the relay.（リレーで走れるほど速い）
-
-too + 形容詞 + to 動詞：「〜すぎて〜できない」（enough と対で覚える）
-例：He is too weak to lift the box.（弱すぎて箱を持ち上げられない）
-
-【入試頻出】
-・She is skilled enough to join the varsity team.
-・He is not tall enough to reach the net.
-・They practiced hard enough to win the tournament.`,
+    explanation:
+      '【何を聞かれているか】enough / not / to / good / he / is / play / in the match を並べ替えて「彼はその試合に出場するほど上手ではない。」という英文を作る。\n【なぜenoughを形容詞のあとに置くのか】「〜するのに十分〜だ」は〈形容詞＋enough＋to動詞〉という決まった語順で表し、enoughは必ず形容詞のあとに置くというルールがあるから。\n【ポイント1】「〜するのに十分〜だ」は主語＋be＋形容詞＋enough＋to＋動詞原形の形。enoughは形容詞のあとに置く（enough goodは誤り）。\n【ポイント2】否定文ではnotがbe動詞のあとに来る。He is not good enough to play in the match.\n【ポイント3】反対の意味を表すtoo＋形容詞＋to動詞（〜すぎて〜できない）とセットで覚える。\n【答え】He is not good enough to play in the match.\n【確かめ】enoughがgoodのあとに置かれているか（enough goodになっていないか）を確認する。\n【よくあるまちがい】enough goodのように、enoughを形容詞の前に置いてしまう。\n【ここが絶対】enoughは必ず形容詞・副詞のあとに置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1033,32 +808,8 @@ buy + 人 + 物 = 人のために物を買う（第4文型）
     question: '次の語を並べ替えて正しい英文を作れ。\n（ without / left / the gym / anyone / he / telling ）\n「彼は誰にも言わずに体育館を出た。」',
     answer: 'He left the gym without telling anyone.',
     hint: 'without の後には動名詞（〜ing）が来る。without + 動名詞 = 〜せずに。',
-    explanation: `【出題意図】
-前置詞 without + 動名詞 の用法と、語順整序を問う問題。
-
-【解説】
-前置詞の後ろには名詞・動名詞が来る（不定詞は来ない）。
-「〜せずに」= without + 動名詞（〜ing）
-
-正しい語順：
-He left the gym without telling anyone.
-
-× without to tell（× 前置詞の後ろに不定詞は来ない）
-○ without telling（✓ 前置詞 + 動名詞）
-
-日本語訳：「彼は誰にも言わずに体育館を出た。」
-
-【文法ポイント】
-前置詞 + 動名詞 の頻出パターン：
-・without + ing：〜せずに（without saying anything）
-・before + ing：〜する前に（before starting practice）
-・after + ing：〜した後で（after finishing the game）
-・for + ing：〜したことで（thank you for helping）
-
-【入試頻出】
-・She left the classroom without saying goodbye.
-・He scored the goal without looking at the goalkeeper.
-・Thank you for supporting our team.`,
+    explanation:
+      '【何を聞かれているか】without / left / the gym / anyone / he / telling を並べ替えて「彼は誰にも言わずに体育館を出た。」という英文を作る。\n【なぜwithoutのあとが動名詞になるのか】前置詞のあとには名詞・動名詞が来るという決まりがあり、不定詞（to＋原形）は前置詞のあとには置けないため、「〜せずに」はwithout＋動名詞（〜ing）の形にする必要があるから。\n【ポイント1】前置詞の後ろには名詞・動名詞が来る（不定詞は来ない）。「〜せずに」＝without＋動名詞（〜ing）。\n【ポイント2】He left the gym without telling anyone.（彼は誰にも言わずに体育館を出た）。\n【ポイント3】同じパターン：before＋ing（〜する前に）、after＋ing（〜した後で）、for＋ing（〜したことで）。\n【答え】He left the gym without telling anyone.\n【確かめ】withoutのあとがtell（原形）やto tell（不定詞）ではなくtelling（動名詞）になっているかを確認する。\n【よくあるまちがい】without to tellのように、前置詞のあとに不定詞を置いてしまう。\n【ここが絶対】前置詞のあとに動詞を続けるときは必ず動名詞（-ing）にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1070,30 +821,8 @@ He left the gym without telling anyone.
     question: '次の語を並べ替えて正しい英文を作れ。\n（ the / girl / I / at / met / is / lunch / captain / who / the ）\n「私が昼食のときに会った女の子はキャプテンです。」',
     answer: 'The girl who I met at lunch is the captain.',
     hint: '関係代名詞 who を使って先行詞「the girl」を修飾する節を作る。',
-    explanation: `【出題意図】
-関係代名詞 who（目的格）を使った語順整序問題。先行詞と関係代名詞節の位置関係が鍵。
-
-【解説】
-文の骨格：The girl is the captain.（その女の子はキャプテンだ）
-修飾部：who I met at lunch（私が昼食のときに会った）
-
-組み合わせ：
-The girl [who I met at lunch] is the captain.
-
-who はここでは目的格（met の目的語）として使われている。
-= The girl (whom / that) I met at lunch is the captain.（省略も可）
-
-日本語訳：「私が昼食のときに会った女の子はキャプテンです。」
-
-【文法ポイント】
-関係代名詞節の位置：先行詞の直後に置く。
-The girl who〜 / The boy that〜 のように、先行詞と関係代名詞節はセット。
-主節の動詞（is）は関係代名詞節の後に続く。
-
-【入試頻出】
-・The boy who sits next to me plays in the tennis club.
-・The teacher who I respect the most is our coach.
-・The player who scored the goal was very happy.`,
+    explanation:
+      '【何を聞かれているか】the / girl / I / at / met / is / lunch / captain / who / the を並べ替えて「私が昼食のときに会った女の子はキャプテンです。」という英文を作る。\n【なぜwhoが目的格として使えるのか】whoは本来主格の関係代名詞だが、口語では目的格（whomの代わり）としてもよく使われ、先行詞The girlのうしろに「who I met at lunch」という節を置いて修飾できるから。\n【ポイント1】文の骨格はThe girl is the captain.（その女の子はキャプテンだ）。\n【ポイント2】修飾部はwho I met at lunch（私が昼食のときに会った）。ここでのwhoはmetの目的語にあたる目的格の働きをしている。\n【ポイント3】組み合わせるとThe girl who I met at lunch is the captain.になる。＝The girl (whom/that) I met at lunch is the captain.（省略も可）。\n【答え】The girl who I met at lunch is the captain.\n【確かめ】関係代名詞節（who I met at lunch）が先行詞The girlの直後に置かれ、そのあとに主節の動詞is the captainが続いているかを確認する。\n【よくあるまちがい】関係代名詞節を先行詞から離れた位置に置いてしまう。\n【ここが絶対】関係代名詞節は必ず先行詞の直後に置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1105,28 +834,8 @@ The girl who〜 / The boy that〜 のように、先行詞と関係代名詞節�
     question: '次の語を並べ替えて正しい英文を作れ。\n（ to / easy / this / follow / enough / is / dance / for / members / new ）\n「この振り付けは新しい部員が覚えるのに十分簡単だ。」',
     answer: 'This dance is easy enough for new members to follow.',
     hint: '「〜が…するのに十分〜だ」は 形容詞 + enough + for + 人 + to 動詞 の形。',
-    explanation: `【出題意図】
-enough to 構文に「for + 人」が加わった形の語順を問う問題。「〜が…するほど十分〜だ」という表現の完全形を問う。
-
-【解説】
-構文：主語 + be + 形容詞 + enough + for + 人 + to + 動詞原形
-「for + 人」は不定詞の意味上の主語を示す。
-
-正しい語順：
-This dance is easy enough for new members to follow.
-
-日本語訳：「この振り付けは新しい部員が覚えるのに十分簡単だ。」
-
-【文法ポイント】
-「形容詞 + enough + for + 人 + to + 動詞」構文：
-例：The song is simple enough for beginners to sing.（初心者が歌えるくらい簡単だ）
-「too + 形容詞 + for + 人 + to + 動詞」構文との対比：
-例：The choreography is too difficult for beginners to learn.（難しすぎて初心者は覚えられない）
-
-【入試頻出】
-・This rule is clear enough for everyone to understand.
-・The court is big enough for both teams to practice.
-・The story is short enough for us to read in one class.`,
+    explanation:
+      '【何を聞かれているか】to / easy / this / follow / enough / is / dance / for / members / new を並べ替えて「この振り付けは新しい部員が覚えるのに十分簡単だ。」という英文を作る。\n【なぜfor＋人が入るのか】「〜が…するのに十分〜だ」と、動作をする人を明示するには、〈形容詞＋enough＋for＋人＋to＋動詞原形〉という構文を使い、for＋人が不定詞の意味上の主語を示すから。\n【ポイント1】構文は主語＋be＋形容詞＋enough＋for＋人＋to＋動詞原形。\n【ポイント2】This dance is easy enough for new members to follow.（この振り付けは新しい部員が覚えるのに十分簡単だ）。\n【ポイント3】反対の意味を表す〈too＋形容詞＋for＋人＋to＋動詞〉（〜すぎて…できない）とセットで覚える。\n【答え】This dance is easy enough for new members to follow.\n【確かめ】for new membersがenoughとtoの間に正しく置かれているかを確認する。\n【よくあるまちがい】for new membersを文の最後に置いてしまう。\n【ここが絶対】「形容詞＋enough＋for＋人＋to＋動詞」の語順を1つのまとまりとして覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1143,32 +852,8 @@ This dance is easy enough for new members to follow.
     choices: ['① No, I don\'t.', '② Yes, I\'d love to.', '③ I like art.', '④ Yes, I would like.'],
     answer: '② Yes, I\'d love to.',
     hint: 'Would you like to〜? は「〜しませんか」という誘いの表現。適切な受け方を選ぶ。',
-    explanation: `【出題意図】
-Would you like to〜?（勧誘・誘い）への適切な応答を問う問題。日常会話・対話文頻出表現。
-
-【解説】
-Would you like to〜? は「〜しませんか？」という丁寧な誘い・勧誘の表現。
-・① No, I don't. → 文法的にも不自然な断り方（Would you like to〜? には No, I don't. で答えない）
-・② Yes, I'd love to. → 正しい受け答え（✓）「ぜひそうしたいです」
-・③ I like art. → 誘いへの直接の返答としてはずれる
-・④ Yes, I would like. → like の後ろに目的語やto do が必要
-
-誘いへの返答：
-・受ける：Yes, I'd love to. / Sure, I'd like to.
-・断る：I'm sorry, I can't. / I'd love to, but I'm busy.
-
-日本語訳：
-A：今年、私たちの美術部に入りませんか？
-B：はい、ぜひ入りたいです。
-
-【文法ポイント】
-Would you like to〜?（誘い）vs Do you like〜?（好み・趣味を尋ねる）
-I'd love to. は「ぜひそうしたい」という前向きな返事の定型表現。
-
-【入試頻出】
-・Would you like to come to our practice? — Yes, I'd love to.
-・Would you like to try out for the team? — Sure, I'd like to.
-・Can you join us tomorrow? — I'd love to, but I have a piano lesson.`,
+    explanation:
+      '【何を聞かれているか】「Would you like to join our art club this year?」への適切な返答を選ぶ。\n【なぜ「Yes, I\'d love to.」が正しいのか】Would you like to〜?は「〜しませんか」という丁寧な誘いの表現で、受けるときはYes, I\'d love to.という決まった返答をするから。\n【ポイント1】①No, I don\'t.はWould you like to〜?への返答としては文法的にも不自然。\n【ポイント2】③I like art.は誘いへの直接の返答としてはずれる。④Yes, I would like.はlikeのあとに目的語やto doが必要。\n【ポイント3】②Yes, I\'d love to.が正しい。「ぜひそうしたい」という前向きな返事の定型表現。断るときはI\'d love to, but I\'m busy.のように言う。\n【答え】② Yes, I\'d love to.\n【確かめ】Would you like to〜?（誘い）とDo you like〜?（好み）を混同していないかを確認する。\n【よくあるまちがい】Would you like to〜?への返答をNo, I don\'t.のようにしてしまう。\n【ここが絶対】誘いへの返答はYes, I\'d love to.（受ける）／I\'d love to, but〜（断る）で覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1181,31 +866,8 @@ I'd love to. は「ぜひそうしたい」という前向きな返事の定型�
     choices: ['① It\'s about two hundred meters.', '② It takes about five minutes on foot.', '③ You should hurry up.', '④ The gym is very large.'],
     answer: '② It takes about five minutes on foot.',
     hint: 'How long does it take to〜? は「〜するのにどのくらいかかりますか」という所要時間を尋ねる表現。',
-    explanation: `【出題意図】
-「It takes + 時間 + to + 動詞」という所要時間を表す構文と、How long does it take to〜? への適切な応答を問う問題。
-
-【解説】
-How long does it take to〜? = 「〜するのにどのくらい時間がかかりますか？」
-返答は「It takes + 時間」の形が正しい。
-・① about two hundred meters → 距離を答えている（×）How far〜? への答え
-・② It takes about five minutes on foot. → 所要時間を答えている（✓）
-・③ You should hurry up. → 提案（質問の答えになっていない）
-・④ The gym is very large. → 無関係
-
-日本語訳：
-A：教室から体育館までどのくらいかかりますか？
-B：歩いて約5分かかります。
-
-【文法ポイント】
-所要時間の表現：
-It takes + 時間 + to + 動詞〜 = 〜するのに〜の時間がかかる
-例：It takes ten minutes to walk to the gym.
-on foot：歩いて（= by walking）
-
-【入試頻出】
-・How long does it take to get to the stadium?
-・It takes about twenty minutes by bike.
-・It took us an hour to set up the tent.`,
+    explanation:
+      '【何を聞かれているか】「How long does it take to get to the gym from the classroom?」への適切な返答を選ぶ。\n【なぜIt takes about five minutes on foot.が正しいのか】How long does it take to〜?は「〜するのにどのくらい時間がかかるか」を尋ねる表現で、これにはIt takes＋時間という所要時間を答える形で返す決まりがあるから。\n【ポイント1】①about two hundred metersは距離を答えており、How far〜?への返答にあたる。\n【ポイント2】③You should hurry up.は提案であり、質問（所要時間）の答えになっていない。④The gym is very large.は無関係。\n【ポイント3】②It takes about five minutes on foot.が正しい。on footは「歩いて」（＝by walking）。\n【答え】② It takes about five minutes on foot.\n【確かめ】質問がHow long（時間）を尋ねているのに対し、選んだ返答が時間を答えているかを確認する。\n【よくあるまちがい】How long〜?とHow far〜?を混同し、距離を答えてしまう。\n【ここが絶対】所要時間を尋ねるHow long does it take to〜?にはIt takes＋時間で答える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1218,31 +880,8 @@ on foot：歩いて（= by walking）
     choices: ['① Don\'t worry.', '② That\'s too bad.', '③ I\'m sorry to hear that.', '④ Never mind.'],
     answer: '① Don\'t worry.',
     hint: '後に続く「You gave it your best shot.（全力を尽くしたじゃないか）」という励ましの言葉に合う返答を選ぶ。',
-    explanation: `【出題意図】
-励ましの表現と、会話の流れ・文脈から適切な応答を選ぶ問題。
-
-【解説】
-Aが「リレーで負けて落ち込んでいる」と言っているのに対し、Bは「You gave it your best shot.（全力を尽くしたじゃないか）」と励ましている。前置きとして最適なのは「Don't worry.（心配しないで）」。
-・① Don't worry. → 心配しないで（励まし）（✓）
-・② That's too bad. → それは残念だね（共感・慰め。励ましではない）
-・③ I'm sorry to hear that. → それは残念です（同情。だが後の励ましと繋がりが弱い）
-・④ Never mind. → 気にしないで（軽い謝りへの返答。励ましとしては不自然）
-
-日本語訳：
-A：今日リレーで負けてしまって、すごく落ち込んでいるんだ。
-B：心配しないで。全力を尽くしたじゃない。
-
-【文法ポイント】
-励まし・応援の表現：
-・Don't worry. / Don't worry about it.：心配しないで
-・You did your best.：あなたは全力を尽くした
-・Cheer up!：元気出して！
-・You'll do better next time.：次はもっとうまくいくよ
-
-【入試頻出】
-・Don't worry. You'll do better next time.
-・Cheer up! The next game is coming soon.
-・I'm sure you'll win the next match.`,
+    explanation:
+      '【何を聞かれているか】「I lost the relay race today, and I feel terrible.」に対するBの返答（このあとYou gave it your best shot.と続く）に合う表現を選ぶ。\n【なぜDon\'t worry.が正しいのか】Aがリレーに負けて落ち込んでいることを伝えており、そのあとBが「全力を尽くしたじゃないか」と励ましているため、その前置きとしては「心配しないで」という励ましの表現が自然につながるから。\n【ポイント1】①Don\'t worry.（心配しないで）は励ましの表現で、後に続くYou gave it your best shot.（全力を尽くしたじゃないか）と自然につながる。\n【ポイント2】②That\'s too bad.と③I\'m sorry to hear that.はどちらも同情・慰めの表現で、励ましの流れには合わない。\n【ポイント3】④Never mind.（気にしないで）は軽い謝罪への返答で、この文脈には不自然。\n【答え】① Don\'t worry.\n【確かめ】選んだ返答のあとにYou gave it your best shot.が自然に続くかを確認する。\n【よくあるまちがい】②That\'s too bad.のように、同情の表現を励ましの場面で使ってしまう。\n【ここが絶対】対話文の空所は、その後に続く文とのつながりを見て、共感なのか励ましなのかを判断する。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1293,36 +932,11 @@ A：どうもありがとうございます。
     id: 'koko_nyushi_eigo3_38',
     subject: 'eigo',
     question: '次の英文の（　）に入る最も適切な語を選べ。  I have never ( ) such a difficult piece on the piano before.',
-    choices: ['① play', '② played', '③ playing', '④ playing'],
+    choices: ['① play', '② played', '③ playing', '④ plays'],
     answer: '② played',
     hint: '現在完了形（have/has + 過去分詞）の経験用法。play の過去分詞を選ぶ。',
-    explanation: `【出題意図】
-現在完了形（経験用法）の形と、play の活用（play-played-played）を正確に使えるかを問う問題。
-
-【解説】
-never は現在完了形の経験用法で「一度も〜したことがない」を表す。
-現在完了形：have/has + 過去分詞
-play の活用：play（原形）→ played（過去形）→ played（過去分詞）
-
-・① play → 原形（have の後ろに原形は来ない）
-・② played → 過去分詞（✓）have played
-・③ playing → 現在分詞（この文脈には合わない）
-・④ playing → 同上（選択肢重複）
-
-日本語訳：「私はピアノでこんなに難しい曲を今まで一度も弾いたことがない。」
-
-【文法ポイント】
-現在完了形（経験）の目印の語句：
-・ever（これまでに）：Have you ever played this piece?
-・never（一度も〜ない）：I have never seen such a big stage.
-・before（以前に）：I have played this song before.
-
-規則動詞の過去分詞は過去形と同じ形（-ed）になる：play-played-played, practice-practiced-practiced
-
-【入試頻出】
-・Have you ever performed on such a big stage?
-・I have never watched such an exciting match.
-・She has practiced this piece many times.`,
+    explanation:
+      '【何を聞かれているか】「I have never ( ) such a difficult piece on the piano before.」の空所に入る適切な形を選ぶ。\n【なぜplayedになるのか】neverを使った現在完了形の経験用法「一度も〜したことがない」は、have/has＋過去分詞の形にする必要があり、playは規則動詞で過去分詞もplayedだから。\n【ポイント1】neverは現在完了形の経験用法で「一度も〜したことがない」を表す。現在完了形はhave/has＋過去分詞。\n【ポイント2】playの活用：play（原形）→played（過去形）→played（過去分詞、規則動詞なので過去形と同じ形）。①play（原形）はhaveのあとに使えない。\n【ポイント3】③playing（現在分詞）、④plays（三人称単数現在）もhaveのあとの形としては使えない。②played（過去分詞）が正解。\n【答え】② played\n【確かめ】haveのあとに過去分詞playedが続いているかを確認する。\n【よくあるまちがい】不規則動詞（seeなど）と混同して、playにも特別な過去分詞形があると思い込んでしまう。\n【ここが絶対】規則動詞の過去分詞は過去形と同じ-edの形になる（play-played-played）。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1371,29 +985,8 @@ in：月・年・季節・時間帯（in April / in 2026 / in spring）
     choices: ['① go', '② to go', '③ going', '④ went'],
     answer: '② to go',
     hint: 'allow + 人 + to do（人が〜するのを許可する）という構文。',
-    explanation: `【出題意図】
-「allow + 人 + to + 動詞」という第5文型（SVOC）の用法を問う問題。
-
-【解説】
-allow + 人 + to do = 「人が〜するのを許可する」という重要構文。
-・① go → 原形のみ（allowの第5文型ではtoが必要）
-・② to go → allow + 人 + to do（✓）
-・③ going → 動名詞（allow + 人 + doingという形は存在しない）
-・④ went → 過去形（文法的に合わない）
-
-日本語訳：「私たちのコーチは長い練習の後、私たちが早く家に帰るのを許可してくれた。」
-
-【文法ポイント】
-「動詞 + 人 + to do」の構文（第5文型 SVOC）：
-・allow + 人 + to do：人が〜するのを許可する
-・ask + 人 + to do：人に〜するよう頼む
-・want + 人 + to do：人に〜してほしい
-・expect + 人 + to do：人が〜することを期待する
-
-【入試頻出】
-・The teacher allowed us to leave early.
-・My parents allowed me to join the ski club.
-・The coach expects us to arrive on time.`,
+    explanation:
+      '【何を聞かれているか】「Our coach allowed us ( ) home early after the long practice.」の空所に入る適切な形を選ぶ。\n【なぜto goになるのか】「人が〜するのを許可する」はallow＋人＋to doという決まった構文で表し、人のあとには必ず不定詞（to＋原形）が続くから。\n【ポイント1】allow＋人＋to do＝「人が〜するのを許可する」という重要構文。\n【ポイント2】①go（原形のみ）、③going（動名詞）、④went（過去形）はどれもallow＋人のあとの形として使えない。\n【ポイント3】同じ仲間の構文：ask＋人＋to do（人に〜するよう頼む）、want＋人＋to do（人に〜してほしい）、expect＋人＋to do（人が〜することを期待する）。\n【答え】② to go\n【確かめ】Our coach allowed us to go home early.という文全体を読み、「コーチは私たちが早く帰るのを許可してくれた」という意味になっているかを確認する。\n【よくあるまちがい】allow＋人のあとに原形をそのまま続けてしまう。\n【ここが絶対】allow＋人＋to doの形では、人のあとに必ずtoが必要。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1406,33 +999,8 @@ allow + 人 + to do = 「人が〜するのを許可する」という重要構�
     choices: ['① this', '② that', '③ it', '④ what'],
     answer: '③ it',
     hint: '形式主語 it を使った「it is + 形容詞 + to 動詞」の構文。',
-    explanation: `【出題意図】
-形式主語 it（仮の主語）を使った構文を問う問題。I think (that) it is〜 の形が正解。
-
-【解説】
-この文は「I think [that] it is important for club members to support each other.」という構造。
-it は to support each other（お互いを支えること）を指す形式主語（仮主語）。
-
-・① this → I think this important to〜 は文法的に成立しない
-・② that → I think that important to〜 も文法的に不自然
-・③ it → 形式主語の it（✓）
-・④ what → I think what important to〜 は成立しない
-
-日本語訳：「私は部員がお互いを支え合うことは大切だと思う。」
-
-全体の構造：
-I think [that it is important for club members to support each other].
-
-【文法ポイント】
-形式主語（仮主語）it の構文：
-It is + 形容詞 + to + 動詞〜 = 〜することは（形容詞）だ
-例：It is important to practice every day.
-「for + 人」は不定詞の意味上の主語を示す。
-
-【入試頻出】
-・It is fun to play sports with good friends.
-・I think it is necessary for us to keep trying.
-・He found it exciting to compete in the final match.`,
+    explanation:
+      '【何を聞かれているか】「I think ( ) important for club members to support each other.」の空所に入る適切な語を選ぶ。\n【なぜitになるのか】for club members to support each other（部員がお互いを支え合うこと）という長い内容を先に置くと文のバランスが悪くなるため、その内容を指す形式主語itを先に置いて、本当の中身をあとに回すという英語の決まりがあるから。\n【ポイント1】this、that、whatはこの位置に置いても文法的に成立しない。\n【ポイント2】③it（形式主語）が正解。itはfor club members to support each otherを指す。\n【ポイント3】形式主語itの基本構文：It is＋形容詞＋to＋動詞〜＝「〜することは（形容詞）だ」。for＋人は不定詞の意味上の主語を示す（例：It is important for us to practice every day.）。\n【答え】③ it\n【確かめ】itがfor club members to support each otherを指していることを確認する。\n【よくあるまちがい】thisやthatを使ってしまう。形式主語には必ずitを使う。\n【ここが絶対】「〜することは…だ」を表すときは、形式主語itを使い、本当の中身（to不定詞）は後ろに置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
