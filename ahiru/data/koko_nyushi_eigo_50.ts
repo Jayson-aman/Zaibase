@@ -11,27 +11,8 @@ export const kokoNyushiEigo50: Question[] = [
     choices: ['① plays', '② played', '③ has played', '④ had been playing'],
     answer: '④ had been playing',
     hint: '「私が着いたとき」という過去の時点より前から続いていた動作を表す時制を選ぶ。',
-    explanation: `【出題意図】
-過去完了進行形（had been + Ving）の用法を問う問題。過去のある時点まで継続していた動作を表す時制の識別が目標。
-
-【解説】
-「I arrived（私が着いたとき）」は過去の時点。その時点より前（=さらに過去）から「ピアノを弾き続けていた」という継続動作を表すには、過去完了進行形 had been playing を使う。
-・① plays → 現在形（文脈に合わない）
-・② played → 過去形（継続の意味が出ない）
-・③ has played → 現在完了形（過去の基準点には使えない）
-・④ had been playing → 過去完了進行形（✓）
-
-日本語訳：「私が着いたとき、彼女は3時間ピアノを弾き続けていた。」
-
-【文法ポイント】
-過去完了進行形 = had been + 動詞-ing
-→ 過去のある時点よりもさらに前から、その時点まで継続していた動作に使う。
-「for〜（〜の間）」「since〜（〜以来）」などの継続を示す表現とセットで出やすい。
-
-【入試頻出】
-・She had been waiting for an hour when the bus came.
-・They had been playing soccer since noon when it started to rain.
-「when＋過去形」の主節に過去完了（進行）形を使うパターンを押さえよ。`,
+    explanation:
+      '【何を聞かれているか】「She ( ) the piano for three hours when I arrived.」の空所に入る適切な時制を選ぶ。\n【なぜ過去完了進行形になるのか】「私が着いたとき」という過去の時点よりさらに前から「ピアノを弾き続けていた」という継続動作を表すには、過去のある時点までの継続を表す過去完了進行形（had been＋動詞のing形）を使う必要があるから。\n【ポイント1】I arrived（私が着いたとき）は過去の1つの時点。その時点よりも前から継続していた動作を表すには、さらに過去を示す時制が必要。\n【ポイント2】①plays（現在形）、②played（過去形、継続の意味が出ない）、③has played（現在完了形、過去の基準点には使えない）はどれも文脈に合わない。\n【ポイント3】④had been playing（過去完了進行形）が正解。「私が着いたとき、彼女は3時間ピアノを弾き続けていた」という意味になる。\n【答え】④ had been playing\n【確かめ】「when＋過去形」の文で、主節に過去完了（進行）形が使われる典型パターンであることを確認する。\n【よくあるまちがい】has played（現在完了形）を選んでしまう。現在完了は「現在」を基準にするので、過去の基準点（I arrived）には使えない。\n【ここが絶対】過去のある時点よりもさらに前から、その時点まで継続していた動作には過去完了進行形を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -115,31 +96,8 @@ should：義務より軽い推奨（「〜した方がいい」）
     choices: ['① high', '② higher', '③ the highest', '④ most high'],
     answer: '③ the highest',
     hint: '「日本で一番〜」は最上級。最上級の前には the が必要。',
-    explanation: `【出題意図】
-比較表現（原級・比較級・最上級）の使い分けと、最上級に定冠詞 the が必要なことを問う問題。
-
-【解説】
-「in Japan（日本で）」は範囲を示す表現で、その中で「一番」を表すには最上級が必要。
-・① high → 原級（比較なし）
-・② higher → 比較級（2つを比べる）
-・③ the highest → 最上級（✓）「一番高い」
-・④ most high → 最上級の作り方が誤り（high は -est 型、most は使わない）
-
-日本語訳：「富士山は日本で最も高い山です。」
-
-【文法ポイント】
-比較級：形容詞 + -er（shorter / taller）または more + 形容詞（more beautiful）
-最上級：the + 形容詞 + -est（the shortest）または the most + 形容詞（the most beautiful）
-最上級には必ず the が必要！
-
-比較級・最上級の作り方：
-・1音節・2音節一部：-er / -est（tall→taller→tallest）
-・2音節以上：more / most（beautiful→more beautiful→most beautiful）
-
-【入試頻出】
-・Tokyo is the largest city in Japan.
-・This is the most interesting book I have ever read.
-・She runs faster than anyone else in the class.（比較級で最上級の意味）`,
+    explanation:
+      '【何を聞かれているか】「Mt. Fuji is ( ) mountain in Japan.」の空所に入る適切な比較表現を選ぶ。\n【なぜthe highestになるのか】「in Japan（日本で）」という範囲の中で「一番〜」を表すには最上級を使い、最上級には必ずtheをつけるという決まりがあるから。\n【ポイント1】①high（原級、比較なし）、②higher（比較級、2つを比べるとき使う）はどちらも「一番」の意味を表せない。\n【ポイント2】③the highest（最上級）が正解。「一番高い」という意味になる。\n【ポイント3】④most high（最上級の作り方の誤り）。highは-est型の形容詞なのでmostは使わない。比較級・最上級の作り方：1・2音節の一部は-er/-est、2音節以上はmore/most。\n【答え】③ the highest\n【確かめ】the highestのtheが抜けていないかを確認する。最上級には必ずtheが必要。\n【よくあるまちがい】④most highのように、-est型の形容詞にmostをつけてしまう。\n【ここが絶対】最上級には必ずtheが必要。形容詞の音節の長さによって-est型かmost型かが決まる。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -187,32 +145,8 @@ should：義務より軽い推奨（「〜した方がいい」）
     choices: ['① play', '② to play', '③ playing', '④ played'],
     answer: '③ playing',
     hint: 'enjoy の後ろには動名詞（〜ing）が来る。',
-    explanation: `【出題意図】
-動名詞のみを目的語にとる動詞（enjoy）を正しく使えるかを問う問題。不定詞との区別が核心。
-
-【解説】
-enjoy は目的語に動名詞（〜ing）だけを取り、不定詞（to +原形）は取らない。
-・① play → 原形（enjoyの後ろには使えない）
-・② to play → 不定詞（enjoyの後ろには来ない）
-・③ playing → 動名詞（✓）enjoy + 動名詞
-・④ played → 過去形（目的語にはなれない）
-
-日本語訳：「彼は友達とサッカーをするのを楽しんだ。」
-
-【文法ポイント】
-動名詞のみを目的語にとる動詞（入試頻出）：
-enjoy（楽しむ）、finish（終える）、stop（やめる）、mind（気にする）、give up（諦める）、practice（練習する）
-
-不定詞のみを目的語にとる動詞：
-want（望む）、hope（望む）、decide（決める）、wish（望む）
-
-どちらも可（意味が変わるものもある）：
-like / love / start / begin / continue
-
-【入試頻出】
-・She finished doing her homework.
-・He stopped smoking last year.
-・Do you mind opening the window?`,
+    explanation:
+      '【何を聞かれているか】「He enjoyed ( ) soccer with his friends.」の空所に入る適切な形を選ぶ。\n【なぜplayingになるのか】enjoyは動名詞（-ing）だけを目的語に取り、不定詞（to＋原形）は目的語に取らないという決まりがあるから。\n【ポイント1】①play（原形）、②to play（不定詞）はどちらもenjoyの後ろには使えない。\n【ポイント2】③playing（動名詞）が正解。enjoy＋動名詞の形。\n【ポイント3】④played（過去形）は目的語の位置には使えない。動名詞のみを目的語に取る動詞にはほかにfinish、stop、mind、give up、practiceなどがある。\n【答え】③ playing\n【確かめ】enjoyのあとが動詞のing形になっているかを確認する。\n【よくあるまちがい】enjoyのあとにto playを続けてしまう。enjoyは不定詞を取らない。\n【ここが絶対】enjoyは動名詞のみを目的語に取る動詞として覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -225,29 +159,8 @@ like / love / start / begin / continue
     choices: ['① will live', '② have lived', '③ will have lived', '④ lived'],
     answer: '③ will have lived',
     hint: '「来年3月までには」という未来の時点での完了を表す時制を選ぶ。',
-    explanation: `【出題意図】
-未来完了形（will have + 過去分詞）の用法を問う問題。「未来のある時点での完了・継続」を表す時制の識別。
-
-【解説】
-「by next March（来年3月までには）」は未来の時点。その時点で「5年間住んでいることになる」という継続の完了を表すには未来完了形を使う。
-・① will live → 単純未来（継続の完了を表せない）
-・② have lived → 現在完了（未来の時点には使えない）
-・③ will have lived → 未来完了（✓）
-・④ lived → 過去形（文脈に合わない）
-
-日本語訳：「来年3月までには、私はここに5年間住んでいることになる。」
-
-【文法ポイント】
-未来完了形 = will have + 過去分詞
-用法：①未来のある時点での完了（by〜, when〜などと共に）
-      ②未来のある時点まで継続していること
-
-目印の語句：by the time〜 / by then / by next〜 / when〜（未来の時点を示す）
-
-【入試頻出】
-・I will have finished this work by tomorrow.
-・She will have been a teacher for ten years by 2030.
-・By the time you arrive, I will have cooked dinner.`,
+    explanation:
+      '【何を聞かれているか】「I ( ) here for five years by next March.」の空所に入る適切な時制を選ぶ。\n【なぜwill have livedになるのか】「来年3月までには」という未来のある時点で「5年間住んでいることになる」という継続の完了を表すには、未来完了形（will have＋過去分詞）を使う必要があるから。\n【ポイント1】by next March（来年3月までには）は未来の時点を示す目印の語句。\n【ポイント2】①will live（単純未来）、②have lived（現在完了、未来の時点には使えない）、④lived（過去形）はどれも文脈に合わない。\n【ポイント3】③will have lived（未来完了）が正解。「来年3月までには、私はここに5年間住んでいることになる」という意味。\n【答え】③ will have lived\n【確かめ】by next Marchのような未来の時点を示す語句と、will have＋過去分詞の組み合わせがセットになっていることを確認する。\n【よくあるまちがい】have lived（現在完了）を選んでしまう。現在完了は現在を基準にするので、未来の時点（by next March）には使えない。\n【ここが絶対】未来のある時点での完了・継続にはwill have＋過去分詞（未来完了形）を使う。目印はby〜、by the time〜、when〜など。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',

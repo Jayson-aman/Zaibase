@@ -161,7 +161,7 @@ export const ktEigo: Question[] = [
       '①私が生まれた都市はとても有名だ。(in whichは場所を示す関係詞句) ②What surprised me was that he came early.',
     hint: '前置詞+which=which+...+前置詞。Whatは先行詞を含む関係代名詞「〜すること・もの」',
     explanation:
-      '①前置詞+関係代名詞：in which = where（場所を示す関係副詞と同義）。"the city where I was born"と書き換え可。②Whatは先行詞を含む関係代名詞(=the thing which)。What surprised me「私を驚かせたこと」が主語→述語はwas→補語はthat節「彼が早く来たこと」。',
+      '【何を聞かれているか】①「The city in which I was born is very famous.」を「The city which I was born in」の形に書きかえて意味を日本語にする。②「What surprised me was（　　）。」（彼が早く来たこと）を完成させる。\n【なぜin whichやwhatを使うのか】①は前置詞＋関係代名詞（in which）が場所を表す関係副詞whereと同じ働きをするため、前置詞を後ろに残す形にも書きかえられる。②のwhatは「先行詞を含む関係代名詞」で、「〜すること・もの」という意味のかたまりを作れるから。\n【ポイント1】①in which＝where（場所を示す関係副詞と同義）。the city where I was bornと書きかえられる。\n【ポイント2】①前置詞を後ろに残す形にすると、The city which I was born inとなり、意味は変わらない。\n【ポイント3】②Whatは先行詞を含む関係代名詞（＝the thing which）。What surprised me「私を驚かせたこと」が主語、wasが述語、補語にthat節「彼が早く来たこと」を置く。What surprised me was that he came early.\n【答え】①私が生まれた都市はとても有名だ。(in whichは場所を示す関係詞句) ②What surprised me was that he came early.\n【確かめ】①の2つの文（in whichの形とwhich〜inの形）が同じ意味になっているかを確認する。\n【よくあるまちがい】前置詞を後ろに残すとき、前置詞を消し忘れて2つとも残してしまう。\n【ここが絶対】前置詞＋関係代名詞は、前置詞を関係詞節の最後に移動させても同じ意味になる。',
     difficulty: 'advanced',
     course: 'koko-top',
     examType: 'koko',
@@ -215,7 +215,7 @@ export const ktEigo: Question[] = [
     answer: 'She told me that she would help me the next day.',
     hint: 'said to → told。I→she、will→would、you→me、tomorrow→the next day',
     explanation:
-      '話法転換のルール：①said to+人→told+人②I→she(話者に合わせる)③you→me(聞き手に合わせる)④時制を1つ過去にずらす(will→would)⑤時の表現変換：tomorrow→the next day, now→then, today→that day, yesterday→the day before。',
+      '【何を聞かれているか】「She said to me, "I will help you tomorrow."」を間接話法に書きかえる。\n【なぜ人称や時制が変わるのか】間接話法では、せりふの中の人称（I/you）を実際の話し手・聞き手に合わせ、主節（said）が過去形であることに合わせて時制も1つ過去にずらすという決まりがあるから。\n【ポイント1】said to＋人はtold＋人に変わる。\n【ポイント2】I（話者She自身）はsheに、you（聞き手＝話している相手・私）はmeに変わる。willはwouldになる（時制の一致）。\n【ポイント3】時の表現も変わる：tomorrow→the next day、now→then、today→that day、yesterday→the day before。\n【答え】She told me that she would help me the next day.\n【確かめ】もとの文のI（She自身）とyou（聞き手）が、それぞれ正しくsheとmeに置きかわっているかを確認する。\n【よくあるまちがい】youをyouのままにしてしまう、またはwillをwouldに変え忘れる。\n【ここが絶対】間接話法では、人称代名詞は実際の話し手・聞き手に合わせ、時制は主節の過去形に合わせて1つ過去にずらす。',
     difficulty: 'advanced',
     course: 'koko-top',
     examType: 'koko',
@@ -228,7 +228,7 @@ export const ktEigo: Question[] = [
     answer: 'He has been living in Japan for long.',
     hint: '現在完了進行形：have/has been -ing。for+期間',
     explanation:
-      '現在完了進行形：S+have/has+been+-ing（今もずっと〜し続けている）。He has been living in Japan「ずっと日本に住んでいる」。for long / for a long time「長い間」。語順：S(He)+has+been+living(動詞)+in Japan(場所)+for long(期間)。',
+      '【何を聞かれているか】[ been / long / Japan / for / in / he / has / living ]を並べ替えて正しい英文を作る。\n【なぜhas been livingという形になるのか】「今もずっと〜し続けている」という継続の動作を強調するには、現在完了進行形（have/has＋been＋動詞のing形）を使う必要があるから。\n【ポイント1】現在完了進行形の形はS＋have/has＋been＋-ing。\n【ポイント2】He has been living in Japanで「ずっと日本に住んでいる」という意味になる。\n【ポイント3】for long（またはfor a long time）で「長い間」という期間を表す。語順はS(He)+has+been+living(動詞)+in Japan(場所)+for long(期間)。\n【答え】He has been living in Japan for long.\n【確かめ】has been livingの語順（has→been→-ing）が正しく並んでいるかを確認する。\n【よくあるまちがい】has living beenのように語順を入れかえてしまう。\n【ここが絶対】現在完了進行形は必ずhave/has→been→動詞のingの順番で並べる。',
     difficulty: 'advanced',
     course: 'koko-top',
     examType: 'koko',
@@ -241,7 +241,7 @@ export const ktEigo: Question[] = [
     answer: '細心の注意を払う・几帳面な・緻密な（細部まで注意深い）',
     hint: '後に続く説明文から意味を推測する。checked every detail, never made careless mistakes',
     explanation:
-      '語彙推測の戦略：①ターゲット語の前後の文脈を読む②肯定的/否定的文脈を判断③具体的な行動（checked every detail, never made careless mistakes）から抽象的な意味を推測。meticulous=非常に細心・几帳面な（英語の語感：micro=細かい、curious=好奇心→combined: very careful about details）。',
+      '【何を聞かれているか】「The scientist was very meticulous in her work. She checked every detail twice and never made careless mistakes.」の下線部meticulousの意味を文脈から推測する。\n【なぜ前後の文から推測できるのか】未知の単語の意味は、その語の前後に書かれている具体的な行動や説明から推測できることが多く、この問題ではchecked every detail twice（細部を2回確認した）、never made careless mistakes（不注意なミスを一度もしなかった）という具体例がmeticulousの意味を裏づけているから。\n【ポイント1】ターゲット語meticulousの前後の文脈を読む。\n【ポイント2】文脈が肯定的か否定的かを判断する。checked every detail twice、never made careless mistakesはどちらも「注意深さ」を示す肯定的な内容。\n【ポイント3】具体的な行動（細部を2回確認する、ミスをしない）から、抽象的な意味「非常に細心・几帳面」を推測する。\n【答え】細心の注意を払う・几帳面な・緻密な（細部まで注意深い）\n【確かめ】meticulousを「細心の注意を払う」に置きかえて文を読み直し、意味が通ることを確認する。\n【よくあるまちがい】前後の文脈を読まずに、単語の見た目や一部の文字だけから意味を推測してしまう。\n【ここが絶対】未知の単語の意味は、その前後にある具体的な説明や行動から推測する。',
     difficulty: 'advanced',
     course: 'koko-top',
     examType: 'koko',
@@ -254,7 +254,7 @@ export const ktEigo: Question[] = [
     answer: 'B → D → A → C',
     hint: '話の流れ：問題提起→具体的政策→結果→効果の順になる',
     explanation:
-      '段落整序のポイント：①最初の文＝トピック導入（BのOne city decided...が話の出発点）②具体的措置（DのCars were charged...がpolicyの説明）③結果（Aのmore people started...がAs a resultで始まる=因果）④最終結論（Cのcleaner air...がThis led to=さらなる結果）。接続表現(As a result, This led to)が順序のヒント。',
+      '【何を聞かれているか】4つの文A〜Dを正しい順序に並べ替える段落整序問題。\n【なぜこの順序になるのか】文章にはふつう「話題の導入→具体的な内容→結果→さらなる効果」という論理の流れがあり、As a resultやThis led toのような接続表現が、その文がどの段階にあたるかを教えてくれるから。\n【ポイント1】Bの「One city decided to introduce a new policy」が話題の導入（問題提起）にあたる。\n【ポイント2】Dの「Cars were charged a fee」が、Bで述べた政策の具体的な内容の説明にあたる。\n【ポイント3】Aの「As a result（その結果）」が政策による直接の結果、Cの「This led to（これが〜につながった）」がさらなる効果を表しており、この2つの接続表現の意味から順序が決まる。\n【答え】B → D → A → C\n【確かめ】各文の接続表現（As a result、This led to）が、前の文とのつながりを正しく示しているかを見直す。\n【よくあるまちがい】接続表現に注目せず、内容だけを見て順序を決めようとしてしまう。\n【ここが絶対】段落整序ではAs a result、This led toのような接続表現が、文と文のつながりを示す手がかりになる。',
     difficulty: 'advanced',
     course: 'koko-top',
     examType: 'koko',

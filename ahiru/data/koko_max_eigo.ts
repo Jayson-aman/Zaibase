@@ -142,7 +142,8 @@ export const kokoMaxEigo: Question[] = [
     question: '次の語句を並べ替えて、意味の通る英文を作りなさい。\n\n【語群】the / that / I / think / problem / difficult / solve / is / to',
     answer: 'I think that the problem is difficult to solve.',
     hint: '「私は〜だと思う」という構文から始め、「解くのが難しい問題」をどう表現するか考えましょう。',
-    explanation: '正解：I think that the problem is difficult to solve.\n（私はその問題は解くのが難しいと思います）\n\n【構文分析】\nI think（私は思う）\n+ that（接続詞：〜と）\n+ the problem is difficult to solve（その問題は解くのが難しい）\n\n【difficult to solve について】\n「形容詞 + to不定詞」の構文。\nthe problem is difficult to solve\n= It is difficult to solve the problem（この問題を解くことは難しい）の変形。\n\nこの構文では、不定詞の意味上の目的語が文の主語になっています（the problem が solve の対象）。同様の形容詞：easy（簡単な）、hard（難しい）、interesting（面白い）、dangerous（危険な）など。\n\n語順のポイント：\n①主節の語順：I + think\n②that節の語順：the problem + is + difficult + to solve\nthat は省略可能：I think the problem is difficult to solve.',
+    explanation:
+      '【何を聞かれているか】the / that / I / think / problem / difficult / solve / is / to を並べ替えて意味の通る英文を作る。\n【なぜdifficult to solveという形になるのか】「〜することが難しい」を表すときは、〈形容詞＋to不定詞〉の構文を使い、不定詞の意味上の目的語（この場合the problem）を文の主語にするという決まりがあるから。\n【ポイント1】I think（私は思う）＋that（接続詞：〜と）＋the problem is difficult to solve（その問題は解くのが難しい）という骨組みを作る。\n【ポイント2】the problem is difficult to solveは、It is difficult to solve the problem（この問題を解くことは難しい）の変形で、the problemがsolveの対象（意味上の目的語）になっている。\n【ポイント3】同様の形容詞にはeasy（簡単な）、hard（難しい）、interesting（面白い）、dangerous（危険な）などがある。thatは省略可能。\n【答え】I think that the problem is difficult to solve.\n【確かめ】the problemがsolveの対象になっている（the problem is difficult to solve it のようにitを重ねて言わない）ことを確認する。\n【よくあるまちがい】the problem is difficult to solve itのように、solveのあとに不要な目的語itをつけてしまう。\n【ここが絶対】〈形容詞＋to不定詞〉の構文では、主語がその不定詞の意味上の目的語になるので、不定詞のあとに重ねて目的語を置かない。',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
@@ -167,10 +168,12 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_13',
     subject: 'eigo',
-    question: '次の語句を並べ替えて、意味の通る英文を作りなさい。\n\n【語群】you / have / must / left / home / you / before / the / by',
+    question:
+      '次の語句を並べ替えて、意味の通る英文を作りなさい。\n\n【語群】you / have / must / left / home / before / the / time',
     answer: 'You must have left home before the time.',
     hint: '「〜したに違いない」という過去の推量を表す助動詞の構文を考えましょう。',
-    explanation: '正解：You must have left home before the time.\n（あなたは時間より前に家を出たに違いない）\n\n【must have + 過去分詞】\n「〜したに違いない」という過去の出来事に対する強い推量を表す。\n\n例：\n• must have been：〜だったに違いない\n• must have gone：行ったに違いない\n• must have left：出発したに違いない\n\n【助動詞 + have + 過去分詞のパターン】\n• must have pp：〜したに違いない（強い推量）\n• may have pp：〜したかもしれない（弱い推量）\n• can\'t have pp：〜したはずがない（否定の推量）\n• should have pp：〜すべきだったのに（後悔・非難）\n• could have pp：〜できたはずなのに（実現しなかった可能性）\n\nleft は leave の過去分詞（leave–left–left：不規則変化）。',
+    explanation:
+      '【何を聞かれているか】you / have / must / left / home / before / the / time を並べ替えて意味の通る英文を作る。\n【なぜmust have + 過去分詞になるのか】「〜したに違いない」という過去の出来事に対する強い推量を表すには、〈must have＋過去分詞〉という決まった形を使う必要があるから。\n【ポイント1】must have＋過去分詞は「〜したに違いない」という過去の出来事に対する強い推量を表す。\n【ポイント2】leftはleaveの過去分詞（leave–left–left：不規則変化）。You must have left homeで「あなたは家を出たに違いない」。\n【ポイント3】before the timeで「その時間より前に」という意味を加える。You must have left home before the time.\n【答え】You must have left home before the time.\n【確かめ】leftがleaveの過去分詞として正しく使われているか、mustのあとにhave＋過去分詞が続いているかを確認する。\n【よくあるまちがい】must leftのように、haveを抜かして過去分詞を直接mustにつなげてしまう。\n【ここが絶対】過去の出来事への推量はmust have＋過去分詞の形で表す。似た形にmay have pp（〜したかもしれない）、can\'t have pp（〜したはずがない）、should have pp（〜すべきだったのに）がある。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -194,7 +197,8 @@ export const kokoMaxEigo: Question[] = [
     question: '次の語句を並べ替えて、意味の通る英文を作りなさい。\n\n【語群】wish / I / speak / could / I / fluently / English / more',
     answer: 'I wish I could speak English more fluently.',
     hint: '「〜だったらいいのに」という現実には叶わない願望を表す構文を考えましょう。',
-    explanation: '正解：I wish I could speak English more fluently.\n（もっと流暢に英語が話せたらいいのに）\n\n【I wish + 仮定法過去】\n現実には叶わない願望を表す。\n形：I wish + 主語 + 動詞の過去形（be動詞は were）\n\n例：\n• I wish I were taller.（もっと背が高かったらいいのに）\n• I wish I had more time.（もっと時間があったらいいのに）\n• I wish I could fly.（飛べたらいいのに）\n\n過去の叶わなかった願望は：\nI wish I had + 過去分詞（〜していたらよかったのに）\n例：I wish I had studied harder.（もっと一生懸命勉強していたらよかった）\n\nfluently（流暢に）は副詞。more fluently で「よりいっそう流暢に」。\nfluent（形容詞）→ fluently（副詞）',
+    explanation:
+      '【何を聞かれているか】wish / I / speak / could / I / fluently / English / more を並べ替えて意味の通る英文を作る。\n【なぜI wish＋仮定法過去になるのか】「〜だったらいいのに」という現実には叶わない願望を表すには、I wishのあとに仮定法過去（動詞の過去形）を続けるという決まりがあるから。\n【ポイント1】I wish＋主語＋動詞の過去形（be動詞はwere）で、現実には叶わない願望を表す。\n【ポイント2】I wish I could speak English more fluently.（もっと流暢に英語が話せたらいいのに）。fluently（流暢に）はfluent（形容詞）から作られる副詞で、moreをつけて「よりいっそう流暢に」となる。\n【ポイント3】過去の叶わなかった願望はI wish I had＋過去分詞（〜していたらよかったのに）で表す（例：I wish I had studied harder.）。\n【答え】I wish I could speak English more fluently.\n【確かめ】I wishのあとの動詞がcould（過去形の助動詞）になっているかを確認する。\n【よくあるまちがい】I wish I can speak English more fluently.のように現在形のまま使ってしまう。\n【ここが絶対】I wishのあとは必ず仮定法過去（動詞の過去形）を使う。',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
@@ -206,7 +210,8 @@ export const kokoMaxEigo: Question[] = [
     question: '次の語句を並べ替えて、意味の通る英文を作りなさい。\n\n【語群】to / there / seems / be / something / wrong / with / the / computer',
     answer: 'There seems to be something wrong with the computer.',
     hint: '「〜のようだ」という構文と「There is 〜」の組み合わせを考えましょう。',
-    explanation: '正解：There seems to be something wrong with the computer.\n（そのコンピューターには何か問題があるようだ）\n\n【構文分析】\nIt seems that there is something wrong with the computer.\n（コンピューターに何か問題があるようだ）\n\nこれを変形すると：\nThere seems to be something wrong with the computer.\n（There + seems + to be = It seems that there is の書き換え）\n\n【seem to + 動詞原形】\n「〜のようだ・〜らしい」\n例：He seems to be tired.（彼は疲れているようだ）\n= It seems that he is tired.\n\n【something wrong with 〜】\n「〜に何か問題がある」という慣用表現。\n例：Is there something wrong with you?（どこか具合が悪いですか）\n\nwrong は形容詞で、something を後置修飾している（something + 形容詞の語順）。',
+    explanation:
+      '【何を聞かれているか】to / there / seems / be / something / wrong / with / the / computer を並べ替えて意味の通る英文を作る。\n【なぜThere seems to beという形になるのか】「〜のようだ」という推測を表すseem to＋動詞原形と、「〜がある」を表すThere is〜の構文を組み合わせることで、There seems to be〜（〜があるようだ）という表現ができるから。\n【ポイント1】It seems that there is something wrong with the computer.（コンピューターに何か問題があるようだ）を変形すると、There seems to be something wrong with the computer.になる。\n【ポイント2】seem to＋動詞原形は「〜のようだ・〜らしい」（例：He seems to be tired.＝It seems that he is tired.）。\n【ポイント3】something wrong with〜は「〜に何か問題がある」という慣用表現。wrongは形容詞でsomethingを後ろから修飾する（something＋形容詞の語順）。\n【答え】There seems to be something wrong with the computer.\n【確かめ】wrongがsomethingの後ろに置かれているか（wrong somethingではなくsomething wrongの語順）を確認する。\n【よくあるまちがい】something wrongの語順を逆にしてwrong somethingとしてしまう。\n【ここが絶対】something、anything、nothingなどを形容詞で修飾するときは、形容詞をあとに置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -218,7 +223,8 @@ export const kokoMaxEigo: Question[] = [
     question: '次の語句を並べ替えて、意味の通る英文を作りなさい。\n\n【語群】no / have / I / idea / what / she / talking / is / about',
     answer: 'I have no idea what she is talking about.',
     hint: '「何について話しているのか全くわからない」という意味の文を作りましょう。間接疑問文の語順に注意。',
-    explanation: '正解：I have no idea what she is talking about.\n（彼女が何について話しているのか全くわからない）\n\n【I have no idea (that) 〜 / I have no idea what/where/why 〜】\n「〜について全くわからない」という慣用表現。\nI don\'t know what she is talking about. と同じ意味。\n\n【間接疑問文の語順（再確認）】\n直接疑問：What is she talking about?（彼女は何について話しているの？）\n間接疑問：what she is talking about（語順が平叙文に変わる）\n\n×I have no idea what is she talking about.（誤り：疑問文の語順）\n○I have no idea what she is talking about.（正解：平叙文の語順）\n\n【talk about 〜】\n「〜について話す」= talk about + 名詞（about は前置詞）\nwhat she is talking about の about は文末に来る（前置詞の残留）。',
+    explanation:
+      '【何を聞かれているか】no / have / I / idea / what / she / talking / is / about を並べ替えて意味の通る英文を作る。\n【なぜshe is talkingという語順になるのか】疑問文（What is she talking about?）が別の文（I have no idea）の一部に組み込まれる間接疑問文になると、疑問文特有の倒置ではなく、ふつうの文と同じ〈疑問詞＋主語＋動詞〉の語順に戻すというルールがあるから。\n【ポイント1】I have no idea（that）〜／I have no idea what/where/why〜は「〜について全くわからない」という慣用表現で、I don\'t know what she is talking about.と同じ意味。\n【ポイント2】直接疑問What is she talking about?を間接疑問にすると、語順が平叙文に変わりwhat she is talking aboutになる。\n【ポイント3】talk about〜「〜について話す」のaboutは前置詞で、間接疑問文の中でも文末に残る（前置詞の残留）。\n【答え】I have no idea what she is talking about.\n【確かめ】what のあとがis sheではなくshe isの語順（平叙文の語順）になっているかを確認する。\n【よくあるまちがい】I have no idea what is she talking about.のように疑問文の語順のままにしてしまう。\n【ここが絶対】間接疑問文の中は、疑問文のような倒置を使わず〈疑問詞＋主語＋動詞〉の語順にする。',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
@@ -270,7 +276,8 @@ export const kokoMaxEigo: Question[] = [
     question: '次の日本語を英語に訳しなさい。\n\n「もし明日雨が降ったら、私たちはピクニックを中止しなければなりません。」',
     answer: 'If it rains tomorrow, we will have to cancel our picnic.',
     hint: '「もし〜したら（実現可能な未来の条件）」という条件文では、if節の中は現在形を使います。',
-    explanation: '正解：If it rains tomorrow, we will have to cancel our picnic.\n\n【条件文（1st conditional：実現可能な条件）】\nIf + 主語 + 現在形 〜, 主語 + will + 動詞原形 〜\n\n重要ポイント：\n①if節の中では未来のことでも現在形を使う\n（×If it will rain tomorrow → ○If it rains tomorrow）\n\n②主節では will を使って未来を表す\n\n【have to の使い方】\nhave to + 動詞原形＝「〜しなければならない」（義務・必要性）\n未来形：will have to（〜しなければならないだろう）\n\n【cancel の使い方】\ncancel + 名詞（〜をキャンセルする）\nour picnic（私たちのピクニック）= the picnic でも可\n\n別解：\n• If it rains tomorrow, we must cancel our picnic.（must を使う場合）\n• If it rains tomorrow, we won\'t be able to have our picnic.（開催できないという表現）',
+    explanation:
+      '【何を聞かれているか】「もし明日雨が降ったら、私たちはピクニックを中止しなければなりません。」を英語に訳す。\n【なぜif節が現在形になるのか】実現可能な未来の条件を表す条件文（1st conditional）では、if節の中は未来のことでも現在形を使い、主節でwillを使って未来を表すという決まりがあるから。\n【ポイント1】条件文の形：If＋主語＋現在形〜, 主語＋will＋動詞原形〜。if節の中では未来のことでも現在形を使う（If it will rain tomorrowは誤り）。\n【ポイント2】have to＋動詞原形＝「〜しなければならない」。未来形はwill have to（〜しなければならないだろう）。\n【ポイント3】cancel＋名詞（〜をキャンセルする）。our picnic（私たちのピクニック）。\n【答え】If it rains tomorrow, we will have to cancel our picnic.\n【確かめ】if節の動詞がrains（現在形）になっており、willがrainsではなくhave toの前についていることを確認する。\n【よくあるまちがい】if節の中にwillを入れてIf it will rain tomorrowとしてしまう。\n【ここが絶対】実現可能な条件を表すif節の中では、未来のことでも現在形を使う。',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
@@ -282,7 +289,8 @@ export const kokoMaxEigo: Question[] = [
     question: '次の日本語を英語に訳しなさい。\n\n「私は昨日から何も食べていません。とてもお腹がすいています。」',
     answer: "I haven't eaten anything since yesterday. I'm very hungry.",
     hint: '「昨日から〜していない」という継続を表す現在完了の否定形を使いましょう。',
-    explanation: "正解：I haven't eaten anything since yesterday. I'm very hungry.\n\n【解説】\n「昨日から何も食べていない」→ 現在完了形の否定・継続用法\nhave not + 過去分詞（haven't eaten）\n\n【現在完了の否定文】\n肯定：I have eaten breakfast.（朝食を食べた）\n否定：I haven't eaten breakfast.（朝食を食べていない）\n\n【anything と nothing の使い分け】\n否定文の中では not ... anything（否定語 + anything）を使う。\n×I haven't eaten nothing.（二重否定：誤り）\n○I haven't eaten anything.（正しい）\n○I have eaten nothing.（nothing のみを使う場合も正しいが、二重否定にならないよう注意）\n\n【since の使い方】\nsince + 時点（特定の時刻・日など）\nsince yesterday（昨日から）\nsince this morning（今朝から）\nsince 2020（2020年から）\n\n【hungry の表現】\nbe hungry（お腹がすいている）、be very hungry（とてもお腹がすいている）",
+    explanation:
+      '【何を聞かれているか】「私は昨日から何も食べていません。とてもお腹がすいています。」を英語に訳す。\n【なぜhave not eatenという形になるのか】「昨日から〜していない」という継続を表すには現在完了形の否定（have not＋過去分詞）を使い、否定文の中でanythingを使うことで「何も〜ない」を正しく表せるから。\n【ポイント1】「昨日から何も食べていない」は現在完了形の否定・継続用法。have not＋過去分詞（haven\'t eaten）。\n【ポイント2】否定文の中ではnot...anything（否定語＋anything）を使う。I haven\'t eaten nothing.のような二重否定は誤り。I haven\'t eaten anything.が正しい。\n【ポイント3】since＋時点（since yesterday＝昨日から）。hungryは「お腹がすいている」、very hungryで「とてもお腹がすいている」。\n【答え】I haven\'t eaten anything since yesterday. I\'m very hungry.\n【確かめ】否定文の中でanythingが使われている（nothingになっていない）ことを確認する。\n【よくあるまちがい】I haven\'t eaten nothing.のように、haven\'tとnothingを両方使って二重否定にしてしまう。\n【ここが絶対】否定文の中では「何も〜ない」をnot...anythingで表す。nothingを使うときはnotを重ねない。',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
@@ -306,7 +314,8 @@ export const kokoMaxEigo: Question[] = [
     question: '次の日本語を英語に訳しなさい。\n\n「あなたはその映画を見に行くべきだったのに。とても感動的でしたよ。」',
     answer: 'You should have gone to see the movie. It was very moving.',
     hint: '「〜すべきだったのに（しなかった）」という後悔を表す助動詞の構文を使いましょう。',
-    explanation: 'You should have gone to see the movie. It was very moving.\n\n【should have + 過去分詞】\n「〜すべきだったのに（実際にはしなかった）」という過去の行動に対する後悔や非難を表す。\n\n例：\n• You should have studied harder.（もっと勉強すべきだったのに）\n• I should have called her.（彼女に電話すべきだったのに）\n\n【go to see / go and see / go see】\n「見に行く」という表現：\n• go to see（最も一般的）\n• go and see（イギリス英語で一般的）\n• go see（アメリカ英語のくだけた表現）\n\n【moving の意味】\nmoving（形容詞）：感動的な\n他の感情を表す形容詞：\n• exciting（わくわくする）\n• touching（心に触れる、感動的な）\n• impressive（印象的な）\n• thrilling（スリリングな）\n\n別解：\n• You ought to have gone to see the movie.（ought to have も可）',
+    explanation:
+      '【何を聞かれているか】「あなたはその映画を見に行くべきだったのに。とても感動的でしたよ。」を英語に訳す。\n【なぜshould have + 過去分詞を使うのか】「〜すべきだったのに（実際にはしなかった）」という過去の行動に対する後悔や非難を表すには、〈should have＋過去分詞〉という決まった形を使う必要があるから。\n【ポイント1】should have＋過去分詞は「〜すべきだったのに（実際にはしなかった）」という過去の行動への後悔・非難を表す（例：You should have studied harder.）。\n【ポイント2】「見に行く」はgo to see（最も一般的）、go and see（イギリス英語）、go see（アメリカ英語のくだけた表現）のいずれかで表せる。\n【ポイント3】movingは「感動的な」という意味の形容詞。ほかにtouching（心に触れる）、impressive（印象的な）などがある。\n【答え】You should have gone to see the movie. It was very moving.\n【確かめ】should haveのあとにgoの過去分詞gone（原形goではなく）が使われているかを確認する。\n【よくあるまちがい】should goのようにhaveと過去分詞を抜かしてしまう。\n【ここが絶対】過去の行動への後悔・非難はshould have＋過去分詞で表す。',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
@@ -342,7 +351,8 @@ export const kokoMaxEigo: Question[] = [
     question: '次の日本語を英語に訳しなさい。\n\n「スマートフォンが発明されて以来、人々のコミュニケーションの仕方は大きく変わってきました。」',
     answer: 'Since smartphones were invented, the way people communicate has changed greatly.',
     hint: '「〜して以来」という現在完了の継続用法と、受動態（発明された）を組み合わせましょう。',
-    explanation: '正解例：\nSince smartphones were invented, the way people communicate has changed greatly.\n\nまたは：\nEver since the smartphone was invented, the way people communicate has changed dramatically.\n\n【Since + 過去形 〜, 主語 + have + pp】\n「〜して以来、（今まで）…だ」\nSince（接続詞）+ 過去形の節 → 主節は現在完了形\n\n例：Since she moved here, I haven\'t seen her much.\n\n【the way 〜】\n「〜する方法、〜する仕方」\n• the way + 主語 + 動詞（関係副詞のように機能）\n• the way people communicate = how people communicate（人々がコミュニケーションをとる方法）\n\n【語彙ポイント】\n• invent（発明する）→ was invented（発明された：受動態）\n• communicate（コミュニケーションをとる、意思疎通する）\n• change greatly / significantly / dramatically（大きく変わる）\n\n注：「スマートフォン」は複数形 smartphones が一般的。',
+    explanation:
+      '【何を聞かれているか】「スマートフォンが発明されて以来、人々のコミュニケーションの仕方は大きく変わってきました。」を英語に訳す。\n【なぜSince＋過去形、現在完了の組み合わせになるのか】「〜して以来、（今まで）…だ」という意味を表すには、Since＋過去形の節で起点を示し、主節を現在完了形にして「その後ずっと続いている変化」を表すという決まりがあるから。\n【ポイント1】Since＋過去形〜, 主語＋have＋過去分詞の形。Since smartphones were invented（スマートフォンが発明されて以来、受動態）。\n【ポイント2】主節はthe way people communicate has changed greatly（人々がコミュニケーションをとる方法が大きく変わった）。the way＋主語＋動詞で「〜する方法」を表す。\n【ポイント3】invent（発明する）は受動態was invented（発明された）にする。communicate（コミュニケーションをとる）、change greatly（大きく変わる）。\n【答え】Since smartphones were invented, the way people communicate has changed greatly.\n【確かめ】Sinceのあとの節が過去形（were invented）、主節が現在完了形（has changed）になっているかを確認する。\n【よくあるまちがい】Since節も主節も同じ時制にしてしまう。Since節は過去形、主節は現在完了形という組み合わせが基本。\n【ここが絶対】「〜して以来ずっと…だ」はSince＋過去形、主節＋現在完了形の組み合わせで表す。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -354,7 +364,8 @@ export const kokoMaxEigo: Question[] = [
     question: '次の日本語を英語に訳しなさい。\n\n「私はあなたがそんなに親切にしてくれるとは思っていませんでした。」',
     answer: 'I did not think (that) you would be so kind to me.',
     hint: '「〜するとは思っていなかった」という過去の予想外の出来事を表す文を考えましょう。時制の一致に注意。',
-    explanation: "正解：I didn't think (that) you would be so kind to me.\n\n【時制の一致】\n主節が過去形（didn't think）の場合、that節の中も過去形を使う。\n現在形 will → 過去形 would\n\n例：\n• I thought she would come.（彼女が来ると思っていた）\n• He said it was raining.（雨が降っていると言った）\n\n【think の否定】\n「〜とは思っていなかった」\n× I thought that you wouldn't be so kind.（思っていた＝肯定文。not を that節に入れるのは不自然）\n○ I didn't think (that) you would be so kind.（「そんなに親切だとは思っていなかった」という否定は主節に置く）\n\n英語では「think」「believe」「suppose」などの動詞は否定を主節に置く傾向がある。\n\n【be kind to 〜】\n「〜に親切にする」\nso kind = that kind of kind（そんなに親切な）\n\n別解：\n• I never expected you to be so kind to me.（expect を使う場合）",
+    explanation:
+      '【何を聞かれているか】「私はあなたがそんなに親切にしてくれるとは思っていませんでした。」を英語に訳す。\n【なぜ否定を主節に置くのか】英語ではthink、believe、supposeなどの動詞は、日本語で「〜ではないと思う」という内容でも、否定語notを主節（thinkの前）に置く傾向があり、さらに主節が過去形なのでthat節の中も時制の一致で過去形にする必要があるから。\n【ポイント1】主節が過去形（didn\'t think）の場合、that節の中も過去形を使う。現在形willは過去形wouldになる。\n【ポイント2】「〜するとは思っていなかった」は、notをthat節ではなく主節thinkの前に置く。I thought that you wouldn\'t be so kind.（不自然）ではなく、I didn\'t think (that) you would be so kind.が自然。\n【ポイント3】be kind to〜「〜に親切にする」。so kindで「そんなに親切な」。\n【答え】I did not think (that) you would be so kind to me.\n【確かめ】notがthink（主節）の前に置かれていて、that節の中にはnotが入っていないかを確認する。\n【よくあるまちがい】I thought that you wouldn\'t be so kind.のように、that節の中にnotを入れてしまう。\n【ここが絶対】think/believe/supposeなどの動詞は、否定を主節に置く傾向がある。',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
@@ -378,7 +389,8 @@ export const kokoMaxEigo: Question[] = [
     question: '次の日本語を英語に訳しなさい。\n\n「彼女が何年もかけて積み上げてきた経験こそが、今の彼女の強みになっています。」',
     answer: 'The experience she has built up over many years is what makes her strong today.',
     hint: '「〜こそが…だ」という強調の表現と、関係代名詞 what の使い方を考えましょう。',
-    explanation: '正解例：\nThe experience she has built up over many years is what makes her strong today.\n\nまたは：\nWhat makes her strong today is the experience she has accumulated over many years.\n\n【関係代名詞 what（the thing which）】\nwhat = the thing(s) that/which\n「〜すること・〜するもの」\nwhat makes her strong = the thing that makes her strong（彼女を強くするもの）\n\n【現在完了の継続】\nshe has built up（彼女が積み上げてきた）\nbuild up = 積み上げる、蓄積する\nover many years（何年もかけて）\n\n【構文のバリエーション】\n①強調構文（It is 〜 that ...）：\nIt is the experience that she has built up over many years that makes her strong.\n\n②関係代名詞 what を使った強調：\nWhat makes her strong is the experience (that) she has built up over many years.\n\n語彙：\n• build up = accumulate（積み上げる）\n• strength（強み）→ strong（形容詞）\n• experience（経験）：不可算名詞として使う場合と、可算名詞（具体的な経験）として使う場合がある',
+    explanation:
+      '【何を聞かれているか】「彼女が何年もかけて積み上げてきた経験こそが、今の彼女の強みになっています。」を英語に訳す。\n【なぜwhatを使うのか】「〜すること・〜するもの」という意味のかたまりを作る関係代名詞what（＝the thing which）を使うことで、「彼女を強くするもの」というひとまとまりの主語（または補語）を作れるから。\n【ポイント1】what＝the thing(s) that/which。what makes her strongで「彼女を強くするもの」という意味になる。\n【ポイント2】she has built up（彼女が積み上げてきた）は現在完了の継続用法。build upは「積み上げる、蓄積する」、over many years（何年もかけて）。\n【ポイント3】The experience she has built up over many years is what makes her strong today.、または語順を入れかえてWhat makes her strong today is the experience she has accumulated over many years.でも同じ意味になる。\n【答え】The experience she has built up over many years is what makes her strong today.\n【確かめ】whatのあとにmakes her strong（動詞から始まる節）が続いており、「〜するもの」という意味のかたまりになっているかを確認する。\n【よくあるまちがい】whatのかわりにwhichを使ってしまう。whichは先行詞が必要だが、whatはそれ自体が「〜するもの」という意味を含む。\n【ここが絶対】関係代名詞whatは先行詞を含み、「〜すること・もの」という意味のかたまりを作る。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -486,7 +498,8 @@ export const kokoMaxEigo: Question[] = [
     question: '【長文読解⑧】上のパッセージを読んで、次の問いに日本語で答えなさい。\n\n問1：睡眠中に脳はどのようなことをしていますか。\n問2：睡眠不足になると、どのような影響がありますか。3つ挙げなさい。\n問3：日本人の睡眠時間が少ない原因として、専門家はどのような要因を挙げていますか。',
     answer: '問1：記憶を定着させる（短期記憶から長期記憶に情報を移す）。\n問2：①集中力の低下、②意思決定の障害、③感情のコントロールの障害。\n問3：長い労働時間と、休息よりも仕事を優先するという社会的プレッシャー。',
     hint: '睡眠の役割・影響・日本の事情という順序で内容を整理しましょう。',
-    explanation: '【パッセージの構成】\n①睡眠の重要性と推奨時間（1・2文目）\n②睡眠中の脳の働き（3文目）\n③睡眠不足の影響（4文目）\n④日本人の睡眠時間の現状（5文目）\n⑤原因（最終文）\n\n【各問の解答根拠】\n問1：「the brain consolidates memories — transferring information from short-term to long-term storage」\n→ 記憶を定着（短期→長期記憶への転送）\n\n問2：「Lack of sleep impairs concentration, decision-making, and emotional regulation」\n→ 集中力・意思決定・感情調節の3つの障害\n\n問3：「long working hours and the social pressure to prioritize work over rest」\n→ 長時間労働と仕事優先の社会的プレッシャー\n\n【語彙】\n• consolidate（定着させる、強化する）\n• impair（障害を与える、低下させる）\n• emotional regulation（感情調節）\n• attribute A to B（Aの原因をBに帰する）\n• prioritize A over B（BよりAを優先する）',
+    explanation:
+      '【何を聞かれているか】睡眠についてのパッセージを読んで、問1（睡眠中の脳の働き）、問2（睡眠不足の影響を3つ）、問3（日本人の睡眠時間が少ない原因）に日本語で答える。\n【なぜ本文の該当箇所を探すのか】長文読解の問題では、質問に対応する具体的な記述が本文の中に必ずあるため、その部分を正確に見つけて日本語に直すことが解答の基本になるから。\n【ポイント1】問1の根拠は「the brain consolidates memories — transferring information from short-term to long-term storage」。記憶を定着させる（短期記憶から長期記憶に情報を移す）。\n【ポイント2】問2の根拠は「Lack of sleep impairs concentration, decision-making, and emotional regulation」。集中力・意思決定・感情調節の3つの障害。\n【ポイント3】問3の根拠は「long working hours and the social pressure to prioritize work over rest」。長時間労働と、休息より仕事を優先する社会的プレッシャー。\n【答え】問1：記憶を定着させる（短期記憶から長期記憶に情報を移す）。問2：①集中力の低下、②意思決定の障害、③感情のコントロールの障害。問3：長い労働時間と、休息よりも仕事を優先するという社会的プレッシャー。\n【確かめ】それぞれの答えが本文中の該当箇所の意味と一致しているかを見直す。\n【よくあるまちがい】問2で3つのうち1つや2つしか答えず、本文にある残りの内容を見落としてしまう。\n【ここが絶対】長文読解では、質問のキーワード（睡眠中・睡眠不足・原因など）に対応する本文の箇所を正確に探す。',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
@@ -499,7 +512,8 @@ export const kokoMaxEigo: Question[] = [
     question: '【長文読解⑨】上のパッセージを読んで、次の問いに日本語で答えなさい。\n\n問1：「線形経済（リニアエコノミー）」とはどのような仕組みですか。\n問2：「循環経済（サーキュラーエコノミー）」の目的は何ですか。\n問3：循環経済の原則を採用する企業はどのような取り組みをしていますか。3つ挙げなさい。',
     answer: '問1：原材料を採取し、製品を作り、使用し、廃棄するという一方向的な生産モデル。\n問2：製品を耐久性・再利用・リサイクルを念頭に設計することで、資源をできる限り長く利用し続けること。\n問3：①修理サービスの提供、②製品を販売せずリースすること、③古い製品を回収して再製造すること。',
     hint: '対比（線形経済 vs 循環経済）を意識しながら読みましょう。',
-    explanation: '【パッセージの対比構造】\n線形経済（Linear Economy）→ take-make-waste\n循環経済（Circular Economy）→ 資源を長く使い続ける\n\n【各問の解答根拠】\n問1：「raw materials are extracted, made into products, used, and then discarded」\n→ 採取→製造→使用→廃棄という一方通行の流れ\n\n問2：「aims to keep resources in use for as long as possible by designing products for durability, reuse, and recycling」\n→ 耐久性・再利用・リサイクルを念頭に設計し、資源を長く使う\n\n問3：「offering repair services / leasing products instead of selling them / collecting old products to remanufacture」\n→ ①修理サービス、②リース、③回収・再製造\n\n【語彙】\n• circular economy（循環型経済）\n• raw materials（原材料）\n• extract（採取する）\n• discard（廃棄する）\n• durability（耐久性）\n• remanufacture（再製造する）\n• lease（リースする、貸す）',
+    explanation:
+      '【何を聞かれているか】線形経済と循環経済についてのパッセージを読んで、問1（線形経済の仕組み）、問2（循環経済の目的）、問3（循環経済を採用する企業の取り組みを3つ）に日本語で答える。\n【なぜ対比構造に注目するのか】このパッセージは線形経済（take-make-waste）と循環経済（資源を長く使い続ける）を対比する構造になっており、それぞれの説明箇所を正確に区別して読むことが正しい解答につながるから。\n【ポイント1】問1の根拠は「raw materials are extracted, made into products, used, and then discarded」。採取→製造→使用→廃棄という一方通行の流れ。\n【ポイント2】問2の根拠は「aims to keep resources in use for as long as possible by designing products for durability, reuse, and recycling」。耐久性・再利用・リサイクルを念頭に設計し、資源をできる限り長く使い続けること。\n【ポイント3】問3の根拠は「offering repair services / leasing products instead of selling them / collecting old products to remanufacture」。①修理サービスの提供、②製品をリースすること、③古い製品を回収して再製造すること。\n【答え】問1：原材料を採取し、製品を作り、使用し、廃棄するという一方向的な生産モデル。問2：製品を耐久性・再利用・リサイクルを念頭に設計することで、資源をできる限り長く利用し続けること。問3：①修理サービスの提供、②製品を販売せずリースすること、③古い製品を回収して再製造すること。\n【確かめ】線形経済の説明と循環経済の説明を取り違えていないか、対比構造を意識して見直す。\n【よくあるまちがい】線形経済と循環経済の内容を逆に覚えてしまう。\n【ここが絶対】対比構造の文章では、どちらの説明かを常に意識しながら根拠となる文を探す。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -591,7 +605,8 @@ export const kokoMaxEigo: Question[] = [
     question: '次の英文の空所（　）に最も適切な語句を入れなさい。\n\n(a) It is important ( ) us to protect the environment for future generations.\n(b) She was kind enough ( ) show me the way to the station.',
     answer: '(a) for  (b) to',
     hint: '「for + 意味上の主語 + to不定詞」と「形容詞 + enough + to不定詞」の構文を確認しましょう。',
-    explanation: '正解：(a) for  (b) to\n\n【(a) It is 形容詞 for 人 to 動詞原形】\n「（人）が〜することは…です」\n\n形式主語の構文：\nIt is important for us to protect the environment.\n↓（意味的に）\nFor us to protect the environment is important.\n（私たちが環境を守ることは重要だ）\n\nfor + 人（us）= 不定詞の意味上の主語\n\n【(b) 形容詞 + enough + to不定詞】\n「〜するほど十分に…だ」\n\nShe was kind enough to show me the way.\n（彼女は私に道を教えてくれるほど親切だった）\n= She was so kind that she showed me the way.（so 〜 that 構文に書き換え可）\n\n【enough の位置】\n形容詞の後：kind enough / tall enough / smart enough\n名詞の前：enough time / enough money\n\n【for と of の使い分け】\n通常は for + 人。ただし、形容詞が人の性格・評価を表す場合は of + 人：\n• It is kind of you to help me.（you が kind であることを評価）\n• It is careless of him to lose his keys.（him が careless であることを指摘）',
+    explanation:
+      '【何を聞かれているか】(a)「It is important ( ) us to protect the environment for future generations.」(b)「She was kind enough ( ) show me the way to the station.」の空所を埋める。\n【なぜforとtoが入るのか】(a)は形式主語構文It is 形容詞 for 人 to 動詞原形で、forのあとに不定詞の意味上の主語（人）を置くから。(b)は形容詞＋enough＋to不定詞で「〜するほど十分に…だ」という意味になるから。\n【ポイント1】(a)It is important for us to protect the environment.は、For us to protect the environment is important.（私たちが環境を守ることは重要だ）と同じ意味。for＋人（us）が不定詞の意味上の主語。\n【ポイント2】(b)She was kind enough to show me the way.＝She was so kind that she showed me the way.（彼女は私に道を教えてくれるほど親切だった）。enoughは形容詞のあとに置く（kind enough）。\n【ポイント3】forとofの使い分け：通常はfor＋人だが、形容詞が人の性格・評価を表す場合はof＋人を使う（例：It is kind of you to help me.）。\n【答え】(a) for  (b) to\n【確かめ】(a)のimportantは人の性格を表す形容詞ではない（物事の性質を表す）のでforが正しいことを確認する。\n【よくあるまちがい】(a)でforのかわりにofを使ってしまう。importantのような性質を表す形容詞にはforを使う。\n【ここが絶対】形式主語構文はIt is 形容詞 for/of 人 to 動詞原形。形容詞が人の性格・評価を表すときだけofを使う。',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
@@ -604,7 +619,8 @@ export const kokoMaxEigo: Question[] = [
     choices: ['① No wonder you\'re tired!', '② That must be exciting!', '③ How lucky you are!', '④ It doesn\'t matter.'],
     answer: '① No wonder you\'re tired!',
     hint: '「3日間一睡もせずに仕事をしていた」と聞いたときの自然な反応を考えましょう。',
-    explanation: "正解は① No wonder you're tired!\n（疲れているのも無理はないよ！）\n\n【No wonder 〜】\n「〜も無理はない、〜も当然だ」\n= It is no wonder that 〜 の省略形\n\n例：\n• No wonder she failed.（彼女が失敗したのも無理はない）\n• No wonder he's angry.（彼が怒るのも当然だ）\n\n【会話の文脈】\nBが3日間寝ずに仕事をしていると言っている\n→ Aが「疲れているのも無理はない」と共感する ✓\n→ その後「休んで」と勧める\n\n【各選択肢の検討】\n② That must be exciting!（それはわくわくするに違いない！）\n→ 睡眠なしの3日間の仕事を「わくわく」と表現するのは不適切。\n\n③ How lucky you are!（なんて幸運なんだ！）\n→ 文脈に合わない。\n\n④ It doesn't matter.（それは関係ない・たいしたことない）\n→ 相手の苦労を否定するような表現で不適切。\n\n【関連表現】\n• I'm not surprised.（驚かないよ）\n• That's understandable.（それは理解できる）\n• Of course you're tired.（もちろん疲れるよ）",
+    explanation:
+      '【何を聞かれているか】3日間寝ずに仕事をしていると言うBに対する、Aの自然な返答を選ぶ。\n【なぜ「No wonder you\'re tired!」が正しいのか】Bが「3日間一睡もせずに仕事をしていた」と大変な状況を伝えており、そのあとAが「休んで」と勧めていることから、間の返答は「疲れているのも無理はない」という共感の表現が文脈に合うから。\n【ポイント1】No wonder〜は「〜も無理はない、〜も当然だ」という意味で、It is no wonder that〜の省略形（例：No wonder she failed.）。\n【ポイント2】Bの発言（3日間寝ていない）を受けて、Aが共感し、そのあとYou should take a break and get some rest.（休んで）と勧める、という自然な会話の流れになる。\n【ポイント3】②「わくわくするに違いない」、③「なんて幸運なんだ」、④「たいしたことない」はどれも文脈に合わない（大変な状況への共感になっていない）。\n【答え】① No wonder you\'re tired!\n【確かめ】選んだ返答のあとにYou should take a break（休んで）と自然につながるかを確認する。\n【よくあるまちがい】②のThat must be exciting!のように、大変な状況を「わくわくする」と誤って解釈してしまう。\n【ここが絶対】対話文の空所は、その前後の発言とつじつまが合う自然な返答を選ぶ。',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
