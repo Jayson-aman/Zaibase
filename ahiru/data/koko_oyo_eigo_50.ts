@@ -804,7 +804,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: 'I hope he will come. / I want him to come.',
     hint: 'hope は "that節"、want は "O + to 不定詞" の構文を使う。',
     explanation:
-      '【解法のコツ】\n2つの構文を使い分けよう：\n① hope + that節：I hope (that) he will come.\n② want + O + to 不定詞：I want him to come.\n\nhope の後ろに "him to come" は使えない点に注意（hope は that節のみ）。\nwant は "want + O + to 動詞原形"。\n英語は必ずできるようになる！hope と want の使い方の違いを覚えておこう！',
+      '【何を聞かれているか】\n「私は彼が来ることを望んでいます。」という日本語を、"I hope～"または"I want～"を使って英語にする問題。\n\n【なぜ2つの構文を使い分けるのか】\nhopeとwantは同じ「望む」という意味でも、後ろに続く形が違う。hopeは「そうなってほしい」という願望をthat節で表し、wantは「（自分の意志で）〜してほしい」という気持ちをO+to不定詞で表す、という文型上の決まりがある。\n\n【ポイント1】hope+that節\n"I hope (that) he will come."＝「彼が来ることを望む」。hopeの後ろは主語＋動詞のある文（that節）が続く。willは未来の出来事に対する願望を表す。\n\n【ポイント2】want+O+to不定詞\n"I want him to come."＝「彼に来てほしい」。wantの後ろは「人＋to＋動詞の原形」という形になる。\n\n【ポイント3】hopeの後ろにO+to不定詞は使えない\n"I hope him to come."という形は文法的に誤り。hopeはthat節のみを取り、want/ask/tellのようにO+to不定詞を取ることはできない。\n\n【答え】\nI hope he will come. / I want him to come.\n\n【確かめ】\nhopeを使った文はthat節（he will come）になっているか、wantを使った文はO+to不定詞（him to come）になっているかをそれぞれ確認する。\n\n【よくあるまちがい】\n"I hope him to come."のように、hopeの後ろにwantと同じ形を使ってしまうミス。hopeとwantで後ろに続く形が違うことを覚えておく。\n\n【ここが絶対】\nhope→that節（I hope that S will V）、want→O to V（I want O to V）。この違いをセットで覚える。',
     pitfall:
       'I hope him to come. は✗。hope の後は that節（that S V）のみ。want / ask / tell などは "O to 不定詞" を使える動詞。',
     memoryTip:
@@ -818,11 +818,11 @@ export const kokoOyoEigo50: Question[] = [
     difficulty: 'advanced',
     maxOnly: true,
     question:
-      '次の語句を並べ替えて、正しい英文を作りなさい。（１語不要）\n\n[ had / I / have / studied / math / harder / if / would / passed ]\n\nIf I _____ _____ _____ harder, I _____ _____ the exam.',
+      '次の語句を並べ替えて、正しい英文を作りなさい。（１語不要）\n\n[ had / studied / would / have / passed / math ]\n\nIf I （　）（　） harder, I （　）（　）（　） the exam.',
     answer: 'If I had studied harder, I would have passed the exam.',
     hint: '仮定法過去完了：If + had + 過去分詞, would have + 過去分詞',
     explanation:
-      '【解法のコツ】\n仮定法過去完了の公式：\nIf ＋ S ＋ had ＋ 過去分詞 ～, S ＋ would have ＋ 過去分詞 ～\n\n"If I had studied harder, I would have passed the exam."\n＝「もっと一生懸命勉強していたら、試験に合格していたのに（実際はしなかった）」\n\n不要語：have（if節に単独では使わない）\n英語は必ずできるようになる！had studied ＋ would have passed の組み合わせが仮定法過去完了のサイン！',
+      '【何を聞かれているか】\n語句を並べ替えて、仮定法過去完了を使った正しい英文を作る問題（１語不要）。\n\n【なぜ仮定法過去完了を使うのか】\n「もっと勉強していたら合格していたのに（実際はしなかった）」という、過去の事実に反する内容を表すときは、仮定法過去完了（If+had+過去分詞, would have+過去分詞）を使う。\n\n【ポイント1】仮定法過去完了の公式を確認する\nIf＋主語＋had＋過去分詞〜, 主語＋would have＋過去分詞〜。\n\n【ポイント2】if節を組み立てる\n「もし〜していたら」の部分は"If I had studied harder"（もしもっと一生懸命勉強していたら）。hadとstudiedを組み合わせる。\n\n【ポイント3】主節を組み立てる\n「合格していたのに」の部分は"I would have passed the exam"。would・have・passedの3語を組み合わせる。\n\n【答え】\nIf I had studied harder, I would have passed the exam.\n\n【確かめ】\nif節が"had+過去分詞"、主節が"would have+過去分詞"になっているかを確認し、"math"が使われずに余っていることを確認する。\n\n【よくあるまちがい】\nif節に"have studied"（hadを使わない形）を使ってしまうミス。仮定法過去完了のif節は必ず"had+過去分詞"にする。\n\n【ここが絶対】\n仮定法過去完了の合言葉は「If+had→would have」。ifのhadと主節のwould haveをセットで覚える。',
     pitfall:
       '仮定法過去完了のif節は "had + 過去分詞"（had studied）で、"have + 過去分詞"（have studied）ではない。had を必ず使う。',
     memoryTip:
@@ -862,7 +862,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '④ take a day off from',
     hint: '「今日は学校を（　）」という文脈。体調不良で学校を休む表現は？',
     explanation:
-      '【解法のコツ】\n"take a day off from school"（学校を1日休む）が文脈に最も合う。\n① take a chance on「～に賭ける・試してみる」\n② take part in「～に参加する」\n③ take care of「～の世話をする」\n④ take a day off from「～を1日休む」→ ✓\n\n"I\'m not feeling well"（体調が良くない）という状況から「休む」を選べる。\n英語は必ずできるようになる！体調不良の場面で使う表現として "take a day off" は必須！',
+      '【何を聞かれているか】\n体調不良で学校を休むという文脈に合う、正しい熟語を選ぶ問題。\n\n【なぜtake a day offが正しいのか】\n文の前半で"I\'m not feeling well today."（今日は体調が良くない）と述べられているので、後半には「休む」という意味の熟語が続くのが自然な流れになる。\n\n【ポイント1】選択肢の意味を確認する\n①take a chance on「〜に賭ける・試してみる」、②take part in「〜に参加する」、③take care of「〜の世話をする」、④take a day off from「〜を1日休む」。\n\n【ポイント2】文脈と一致する熟語を選ぶ\n体調不良→学校を休む、という流れに合うのは④のみ。①②③はいずれも体調不良とは関係のない意味。\n\n【ポイント3】fromの役割を確認する\n"take a day off from school"のfromは「何を休むか」を示す。fromを省いても「休む」という意味は通じるが、fromがあることで対象が明確になる。\n\n【答え】\n④ take a day off from\n\n【確かめ】\n"I think I\'ll take a day off from school."を訳し、「学校を1日休もうと思う」という、体調不良の文脈に合う自然な意味になっているか確認する。\n\n【よくあるまちがい】\n"take off"（離陸する・脱ぐ）という意味と混同し、文脈に合わない意味で解釈してしまうミス。"take a day off"は「休暇を取る」という別の意味を持つ熟語。\n\n【ここが絶対】\n"take a day off (from)"＝1日休む、という体調不良の場面で使う定番の熟語として覚えておく。',
     pitfall:
       'take a day off from school の from を忘れないこと。take a day off だけでも「休む」の意味はあるが、from があることで「どこを休むか」を明示できる。',
     memoryTip:
@@ -916,7 +916,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '② at',
     hint: '"be good ＋ 前置詞 ＋ 動名詞" の組み合わせ。何の前置詞が使われる？',
     explanation:
-      '【解法のコツ】\n"be good at ～"（～が得意だ）は頻出の重要熟語。at の後ろには名詞または動名詞（-ing形）が来る。\n"She is very good at playing the violin."\n＝「彼女はバイオリンを弾くのがとても得意だ」\n\n他の前置詞との違い：\n・be good for「～に良い（健康・何かの用途に）」\n・be good in「一般的にある分野で良い」（あまり使わない）\n・be good on「～の上で良い」（文脈による）\n英語は必ずできるようになる！"be good at" は絶対に覚えるべき超頻出熟語！',
+      '【何を聞かれているか】\n「バイオリンを弾くのが得意だ」という文の空欄に入る、正しい前置詞を選ぶ問題。\n\n【なぜatを使うのか】\n"be good at 〜"は「〜が得意だ」という意味を表す決まった熟語で、技術やスキルについて述べるときにatを使うと決まっている。\n\n【ポイント1】"be good at"の形を確認する\nbe good at＋名詞または動名詞（-ing形）。"good at playing the violin"＝「バイオリンを弾くのが得意」。\n\n【ポイント2】他の前置詞との意味の違いを確認する\n"be good for"は「〜に良い（健康や用途について）」、"be good in"や"be good on"は一般的な熟語としては使われない。\n\n【ポイント3】反対の意味も一緒に覚える\n"be bad at 〜ing"＝「〜するのが苦手」。goodとbadをセットで覚えると使い分けやすい。\n\n【答え】\n② at\n\n【確かめ】\n"She is very good at playing the violin."を訳し、「彼女はバイオリンを弾くのがとても得意だ」という意味になっていることを確認する。\n\n【よくあるまちがい】\n"good for"（健康に良いなどの意味）と"good at"（技術が得意という意味）を混同してしまうミス。前置詞によって意味が大きく変わることに注意する。\n\n【ここが絶対】\n"be good at 〜ing"＝〜するのが得意、は超頻出の熟語。「得意・スキル→at」とセットで覚える。',
     pitfall:
       '"be good for" は「健康に良い（good for your health）」、"be good at" は「得意だ（技術・スキルに使う）」。文脈によって使い分けよう。',
     memoryTip:
