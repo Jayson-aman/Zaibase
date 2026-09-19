@@ -307,7 +307,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の（　）に make / do のうち適切な方を入れなさい。\n① (　) your homework（宿題をする）\n② (　) a mistake（間違いをする）\n③ (　) a speech（スピーチをする）\n④ (　) the dishes（皿を洗う）',
     answer: '① do　② make　③ make　④ do',
     hint: 'do = 作業・活動全般（do homework, do business）。make = 何かを作り出す（make a plan, make friends）。',
-    explanation: '【文法ポイント】\ndo と make はどちらも「する」と訳せるが、英語では使い分けがある。英語は慣れれば大丈夫！\n\n【do を使う主な表現】\n・do homework（宿題をする）\n・do the dishes（皿を洗う）\n・do exercise（運動する）\n・do your best（ベストを尽くす）\n・do business（ビジネスをする）\n\n【make を使う主な表現】\n・make a mistake（間違える）\n・make a speech（スピーチをする）\n・make a plan（計画を立てる）\n・make friends（友達を作る）\n・make progress（進歩する）\n\n【答え】\n① do　② make　③ make　④ do',
+    explanation:
+      '【何を聞かれているか】①宿題をする②間違いをする③スピーチをする④皿を洗う、の空所にmake／doのうち適切な方を入れる。\n【なぜdoとmakeを使い分けるのか】doは作業・活動全般（決まった仕事をこなす）を表し、makeは何かを新しく作り出すことを表すという、それぞれの語のイメージのちがいがあるから。\n【ポイント1】doを使う表現：do homework（宿題をする）、do the dishes（皿を洗う）、do exercise（運動する）。\n【ポイント2】makeを使う表現：make a mistake（間違える）、make a speech（スピーチをする）、make a plan（計画を立てる）。\n【ポイント3】①④は決まった作業（宿題・皿洗い）なのでdo、②③は何かを生み出す動作（ミス・スピーチ）なのでmake。\n【答え】① do　② make　③ make　④ do\n【確かめ】makeを使う表現がすべて「何かを新しく生み出す」イメージになっているかを確認する。\n【よくあるまちがい】make homework、do a mistakeのように、do/makeを逆にしてしまう。\n【ここが絶対】do＝作業・ルーティン、make＝何かを産み出す、というイメージの違いでdo/make熟語をセットで覚える。',
     pitfall: '「make homework」「do a mistake」のように逆にするミスが多い。do/makeの熟語はセットで暗記！',
     memoryTip: 'do = 作業・ルーティン（宿題・皿洗い）、make = 何かを産み出す（ミス・スピーチ・友達）。「作り出す感覚」があればmake！',
   },
@@ -321,7 +322,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の（　）に適切な語をA〜Dから選びなさい。\n① The (　) of this mountain is 3,776 meters.\nA. length　B. height　C. depth　D. width\n② She has a (　) to be a doctor when she grows up.\nA. dream　B. sleep　C. hope　D. luck',
     answer: '① B（height）　② A（dream）',
     hint: 'height = 高さ。length = 長さ、depth = 深さ、width = 幅。dream = 夢、hope = 希望。',
-    explanation: '【文法ポイント】\n寸法・大きさを表す名詞と、将来の目標を表す名詞の語彙を確認しよう。このパターンを覚えるだけでOK！\n\n【寸法を表す語】\n・height（高さ）→ high の名詞形\n・length（長さ）→ long の名詞形\n・depth（深さ）→ deep の名詞形\n・width（幅）→ wide の名詞形\n\n【将来・希望に関する語】\n・dream（夢）：将来なりたいもの・やりたいこと（to be / of -ing）\n・hope（希望）：実現可能なことへの期待（to do）\n・wish（願い）：実現困難なことへの願望\n\n【例文】\n○ What is the height of Tokyo Tower?\n○ My dream is to become a musician.\n\n【答え】\n① B（height）　② A（dream）',
+    explanation:
+      '【何を聞かれているか】①「The (　) of this mountain is 3,776 meters.」②「She has a (　) to be a doctor when she grows up.」の空所に適切な語を選ぶ。\n【なぜheightとdreamになるのか】①は山の「高さ」を表す語heightが必要で、②は「将来なりたいもの」を表す語dreamが最も自然だから。\n【ポイント1】①寸法を表す語：height（高さ）、length（長さ）、depth（深さ）、width（幅）。山の高さなのでheight。\n【ポイント2】②dream（夢）は将来なりたいもの・やりたいことを表す。hope（希望）は実現可能なことへの期待感が強い語で、この文脈にはdreamがより自然。\n【ポイント3】My dream is to become a musician.のように、dreamはto不定詞やof -ingと共に使われる。\n【答え】① B（height）　② A（dream）\n【確かめ】3,776メートルが実際の富士山の高さと一致していることを確認する。\n【よくあるまちがい】②でhopeを選んでしまう。将来の夢・目標を表すにはdreamがより自然。\n【ここが絶対】寸法を表す名詞（height/length/depth/width）は元になる形容詞（high/long/deep/wide）とセットで覚える。',
     pitfall: '② で hope を選びたくなるが、「将来の夢・目標」にはdreamが最も自然。hopeは実現への期待感が強い。',
     memoryTip: '「山の高さ = height（ハイト=ハイ=high→高い）」。「夢がある = have a dream（マーティン・ルーサー・キングの名言！）」で覚えよう！',
   },
@@ -335,7 +337,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の日本語に合う英語のイディオムを（　）に書きなさい。\n① 〜と連絡を取る → keep (　) (　) 〜\n② 〜に同意する → (　) (　) 〜\n③ 〜に慣れる → get (　) (　) 〜',
     answer: '① keep in touch with　② agree with　③ get used to',
     hint: 'keep in touch with（連絡を保つ）、agree with（同意する）、get used to（慣れる）。',
-    explanation: '【文法ポイント】\n熟語は前後の単語とセットで覚えよう。英語は慣れれば大丈夫！\n\n【覚えておきたい熟語】\n・keep in touch with：〜と連絡を取り合う（= stay in contact with）\n・agree with：〜に同意する（人・意見と使う。agree to = 提案・計画に同意）\n・get used to + -ing / 名詞：〜に慣れる（used to V = 以前は〜していた、と区別！）\n・be used to + -ing / 名詞：〜に慣れている（状態）\n\n【例文】\n○ Please keep in touch with me while I\'m abroad.\n○ I agree with your opinion.\n○ I\'m getting used to waking up early.\n\n【答え】\n① keep in touch with　② agree with　③ get used to',
+    explanation:
+      '【何を聞かれているか】①「〜と連絡を取る」②「〜に同意する」③「〜に慣れる」の日本語に合う英語のイディオムを書く。\n【なぜこの熟語を使うのか】これらは前後の単語とセットで決まった意味を持つイディオムで、単語を分解せず1つのまとまりとして覚える必要があるから。\n【ポイント1】①「〜と連絡を取り合う」＝keep in touch with〜（＝stay in contact with）。\n【ポイント2】②「〜に同意する」＝agree with〜（人・意見に使う。agree toは提案・計画に同意するときに使う）。\n【ポイント3】③「〜に慣れる」＝get used to〜（toは前置詞なので後ろは名詞・動名詞。used to Vの「以前は〜していた」と区別する）。\n【答え】① keep in touch with　② agree with　③ get used to\n【確かめ】get used toのあとに動詞が続く場合、-ing形になっているかを確認する。\n【よくあるまちがい】get used toのtoを不定詞のtoと勘違いし、あとに動詞の原形を続けてしまう。\n【ここが絶対】get used to〜のtoは前置詞なので、あとには名詞または動名詞（-ing）が続く。',
     pitfall: '「get used to」の後は動詞の-ing形。「get used to wake up」ではなく「get used to waking up」！',
     memoryTip: 'get used to の「to」は前置詞なので後ろは名詞/動名詞。「to不定詞のto」ではないことに注意！',
   },
@@ -349,7 +352,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の（　）に適切な語をA〜Dから選びなさい。\n① The teacher was very (　) with the students\' performance.\nA. please　B. pleased　C. pleasing　D. pleasure\n② This film is (　). I fell asleep.\nA. bored　B. boring　C. bore　D. boredom',
     answer: '① B（pleased）　② B（boring）',
     hint: '人が感じる → -ed形。物・出来事が引き起こす → -ing形。',
-    explanation: '【文法ポイント】\n-ed と -ing の感情形容詞の使い分けは最頻出問題！このパターンを覚えるだけでOK！\n\n・-ed（人が感じている）：I am bored.（退屈している）\n・-ing（物・出来事が引き起こす）：The movie is boring.（退屈させる）\n\n【主な感情形容詞ペア】\n・interested / interesting（興味がある/おもしろい）\n・excited / exciting（興奮している/わくわくさせる）\n・surprised / surprising（驚いている/驚くべき）\n・satisfied / satisfying（満足している/満足させる）\n・pleased / pleasing（喜んでいる/喜ばせる）\n\n【例文】\n○ She was interested in the story.（彼女はその話に興味を持った）\n○ The story was interesting.（その話はおもしろかった）\n\n【答え】\n① B（pleased）　② B（boring）',
+    explanation:
+      '【何を聞かれているか】①「The teacher was very (　) with the students\' performance.」②「This film is (　). I fell asleep.」の空所に適切な感情形容詞を選ぶ。\n【なぜ-edと-ingを使い分けるのか】人が感じている感情は-ed形（pleased）で、物・出来事がその感情を引き起こす性質は-ing形（boring）で表すという決まりがあるから。\n【ポイント1】①The teacher（人）が感じているのでpleased（喜んでいる）。\n【ポイント2】②This film（物）が「眠ってしまうほど退屈させる」性質を表すのでboring。\n【ポイント3】interested/interesting、excited/excitingのように、同じ組が多数ある。\n【答え】① B（pleased）　② B（boring）\n【確かめ】①が人の感情（pleased）、②が物の性質（boring）になっているかを確認する。\n【よくあるまちがい】I am very interesting.のように、人の感情を表すのに-ing形を使ってしまい、「私は面白い人物だ」という別の意味になってしまう。\n【ここが絶対】人が感じる感情は-ed形、物・出来事が引き起こす性質は-ing形で表す。',
     pitfall: '「I am very interesting」は「私はとても面白い人物だ」という意味になってしまう。「I am interested」が正しい。',
     memoryTip: '人はed（されている）、物・状況はing（させる）。「ボア-d=退屈している人」「ボア-ing=退屈させる映画」とイメージ！',
   },
@@ -363,7 +367,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の（　）に for / since / during / while のうち適切なものを入れなさい。\n① I studied English (　) two hours.（2時間英語を勉強した）\n② She has been in Japan (　) last year.（昨年から日本にいる）\n③ He slept (　) the lesson.（授業中に眠った）\n④ I read a book (　) she was cooking.（彼女が料理している間、本を読んだ）',
     answer: '① for　② since　③ during　④ while',
     hint: 'for=期間、since=起点（〜から）、during=名詞の期間中、while=S+Vの節。',
-    explanation: '【文法ポイント】\n「〜の間」を表す語は4つある。後ろに何が来るかで選ぶ。英語は慣れれば大丈夫！\n\n・for + 数字の期間：for three days / for an hour\n・since + 過去の時点：since Monday / since 2022\n・during + 名詞（特定の期間）：during the summer / during the class\n・while + 主語 + 動詞：while I was sleeping\n\n【例文】\n○ I lived in Tokyo for five years.\n○ She has worked here since April.\n○ He came in during the movie.\n○ She listened to music while walking.\n\n【答え】\n① for　② since　③ during　④ while',
+    explanation:
+      '【何を聞かれているか】①「I studied English (　) two hours.」②「She has been in Japan (　) last year.」③「He slept (　) the lesson.」④「I read a book (　) she was cooking.」の空所にfor/since/during/whileのうち適切なものを入れる。\n【なぜこの4つを使い分けるのか】for（数字の期間）、since（過去の起点）、during（名詞の期間）、while（主語＋動詞の節）というように、あとに続く語の種類によって使い分けが決まっているから。\n【ポイント1】①two hours（数字の期間）が続くのでfor。②last year（過去の起点）が続くのでsince。\n【ポイント2】③the lesson（名詞）が続くのでduring。④she was cooking（主語＋動詞）が続くのでwhile。\n【ポイント3】during＋名詞、while＋主語＋動詞、というように「後ろに何が来るか」で判断する。\n【答え】① for　② since　③ during　④ while\n【確かめ】duringのあとが名詞、whileのあとが〈主語＋動詞〉になっているかを確認する。\n【よくあるまちがい】during I was sleepingのように、duringのあとに主語＋動詞の節を続けてしまう。\n【ここが絶対】duringのあとは名詞、whileのあとは主語＋動詞、という違いで使い分ける。',
     pitfall: '「during I was sleeping」はNG。duringの後は名詞のみ。主語+動詞の節が来るならwhileを使う。',
     memoryTip: 'during + 名詞、while + 主語+動詞。「どっちを使う？→後ろを見る！名詞かS+Vか」。後ろで判断！',
   },
@@ -377,7 +382,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の会話文の（　）に最も適切な表現をA〜Dから選びなさい。\nA: Could you help me with this math problem?\nB: (　)\nA.Of course! Let me take a look.\nB.You\'re welcome.\nC.That\'s too bad.\nD.I don\'t think so.',
     answer: 'A（Of course! Let me take a look.）',
     hint: 'Could you ...? は丁寧な依頼。承諾するときは "Of course" "Sure" "No problem" など。',
-    explanation: '【文法ポイント】\n「Could you ...?」への返答パターンを覚えよう。このパターンを覚えるだけでOK！\n\n【承諾の返答】\n・Of course! / Sure! / No problem!\n・Certainly! / I\'d be happy to!\n\n【断りの返答（丁寧）】\n・I\'m sorry, but I\'m busy right now.\n・I\'m afraid I can\'t.\n\n【各選択肢の意味】\nA. Of course! Let me take a look. → 承諾（正解）\nB. You\'re welcome. → お礼を言われたときの返し\nC. That\'s too bad. → 残念だねという同情表現\nD. I don\'t think so. → そう思わない\n\n【例文】\n○ A: Could you pass the salt? B: Of course!\n\n【答え】\nA',
+    explanation:
+      '【何を聞かれているか】「Could you help me with this math problem?」への適切な返答をA〜Dから選ぶ。\n【なぜAが正しいのか】Could you〜?は丁寧な依頼の表現で、承諾するときはOf course!やSure!のような表現を使う決まりがあるから。\n【ポイント1】B You\'re welcome.はお礼（Thank you）を言われたときの返しで、依頼への返答には使わない。\n【ポイント2】C That\'s too bad.は同情を表す表現で、この文脈に合わない。D I don\'t think so.は依頼への返答として不自然。\n【ポイント3】A Of course! Let me take a look.が正しい。承諾の表現Of course!/Sure!/No problem!のいずれかを使う。\n【答え】A（Of course! Let me take a look.）\n【確かめ】Could you〜?への返答として、承諾の表現になっているかを確認する。\n【よくあるまちがい】You\'re welcome.を依頼への返答に使ってしまう。これはお礼への返しである。\n【ここが絶対】依頼への返答はOf course/Sure/No problemの3つを押さえておく。',
     pitfall: 'B「You\'re welcome」はお礼（Thank you）の返しに使う表現。依頼への返答には使わない。',
     memoryTip: '依頼への返答は「Of course / Sure / No problem」の3つを押さえておけば試験はOK！',
   },
@@ -391,7 +397,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の会話の（　）に適切な表現を入れなさい。\nA: I\'m thinking of going to Canada next summer.\nB: (　)! That sounds exciting.\nA: Thanks! I\'m really looking forward to it.',
     answer: 'That\'s great! / How exciting! / Wonderful! / Nice! など',
     hint: '嬉しいニュースへの反応表現。「いいね！」「すごい！」に相当する英語は複数ある。',
-    explanation: '【文法ポイント】\n英会話では相手の話に適切に反応する「あいづち・感嘆表現」が大切！英語は慣れれば大丈夫！\n\n【よく使う感嘆・反応表現】\n・That\'s great! / That\'s wonderful!（すごいね！）\n・How exciting! / How interesting!（なんてわくわくする！）\n・Really? / No way!（本当に？・まさか！）\n・Sounds fun! / Sounds amazing!（楽しそう！・すごそう！）\n・Good for you!（よかったね！）\n\n【例文】\n○ A: I passed the exam! B: That\'s great! I\'m so happy for you!\n○ A: I\'m going to study abroad. B: Really? How exciting!\n\n【答え】\nThat\'s great! / How exciting! / Wonderful! など',
+    explanation:
+      '【何を聞かれているか】「I\'m thinking of going to Canada next summer.」に対する（　）を埋める。このあとThat sounds exciting.と続く。\n【なぜThat\'s great!のような表現が正しいのか】相手の嬉しいニュースに対しては、That\'s great!やHow exciting!のような感嘆・反応表現で応じるのが自然な会話の流れだから。\n【ポイント1】That\'s + 形容詞!（That\'s great!/That\'s wonderful!）やHow + 形容詞!（How exciting!）の2つのパターンで感嘆を表せる。\n【ポイント2】このあとThat sounds exciting.と続くことから、（　）も同じように嬉しさ・驚きを表す表現が自然。\n【ポイント3】Really?/No way!（本当に？）、Good for you!（よかったね！）なども同じグループの表現。\n【答え】That\'s great! / How exciting! / Wonderful! / Nice! など\n【確かめ】選んだ表現のあとにThat sounds exciting.が自然に続くかを確認する。\n【よくあるまちがい】You are exciting.のように主語を人にしてしまい、「あなたは（人を）興奮させる」という意味になってしまう。\n【ここが絶対】嬉しいニュースへの反応はThat\'s + 形容詞!／How + 形容詞!の形で表す。',
     pitfall: '「You are exciting」など主語を人にしてしまうと「あなたは（人を）興奮させる」という意味になってしまう。反応はThat\'s ... や How ...! の形で！',
     memoryTip: '「That\'s + 形容詞!」「How + 形容詞!」の2パターンで感嘆できる。great / nice / wonderful / exciting を入れ替えるだけ！',
   },
@@ -405,7 +412,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の会話の（　）に最も適切なものをA〜Dから選びなさい。\nA: Excuse me. How do I get to the nearest station?\nB: (　)\nA.It\'s about a ten-minute walk from here. Go straight and turn left.\nB.You should take the bus.\nC.I like walking.\nD.The station is very busy.',
     answer: 'A',
     hint: '道案内の質問に対して適切に答える表現。Go straight / turn left / right が基本。',
-    explanation: '【文法ポイント】\n道案内の表現は会話問題の定番。このパターンを覚えるだけでOK！\n\n【道案内の基本表現】\n・Go straight.（まっすぐ進む）\n・Turn left / right at the traffic light.（信号を左/右に曲がる）\n・It\'s about a 10-minute walk.（徒歩約10分）\n・It\'s on your left / right.（左手/右手にある）\n・You can\'t miss it.（すぐわかります）\n\n【会話の流れ】\n質問：How do I get to ...?（〜にはどうやって行きますか）\n返答：距離・方向・所要時間を含む具体的な案内\n\n選択肢Bは「バスに乗るべき」で道案内にはなっているが、Aの方が具体的で適切。\n\n【答え】\nA',
+    explanation:
+      '【何を聞かれているか】「Excuse me. How do I get to the nearest station?」への適切な返答をA〜Dから選ぶ。\n【なぜAが正しいのか】道を尋ねる質問How do I get to〜?には、距離・方向・所要時間を含む具体的な道案内で答えるのが自然だから。\n【ポイント1】B You should take the bus.は道案内にはなっているが、Aのように具体的な道順（まっすぐ進んで左に曲がる）ではない。\n【ポイント2】C I like walking.は個人の感想で質問に答えていない。D The station is very busy.も無関係。\n【ポイント3】A It\'s about a ten-minute walk from here. Go straight and turn left.が最も具体的で適切な道案内。\n【答え】A\n【確かめ】選んだ返答が距離・方向・所要時間などの具体的な道案内になっているかを確認する。\n【よくあるまちがい】質問に直接答えていない選択肢（個人の感想など）を選んでしまう。\n【ここが絶対】道案内の定番表現：Go straight→Turn→It\'s on your leftの流れを覚えておく。',
     pitfall: '方向を尋ねられているのに「I like walking」（Cは個人の感想）は論外。質問に答えていない選択肢を排除しよう。',
     memoryTip: '道案内の定番表現：「Go straight → Turn → It\'s on your left」の流れを体で覚えよう！',
   },
@@ -419,7 +427,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の会話の空欄に適切な表現を入れなさい。\nA: I failed my test again.\nB: (　). Don\'t give up. I\'m sure you\'ll do better next time.\nA: Thanks. That makes me feel better.',
     answer: 'That\'s too bad. / I\'m sorry to hear that. / Oh no. など',
     hint: '悪いニュースへの共感・同情表現。That\'s too bad / I\'m sorry to hear that が定番。',
-    explanation: '【文法ポイント】\n悪いニュースへの反応も会話問題に頻出。英語は慣れれば大丈夫！\n\n【悪いニュースへの共感表現】\n・That\'s too bad.（それは残念だね）\n・I\'m sorry to hear that.（それは気の毒に）\n・Oh no! / That\'s awful!（えー！/それはひどい！）\n・What a shame!（なんて残念な！）\n\n【続けるときの励まし表現】\n・Don\'t give up!（あきらめないで！）\n・I\'m sure you can do it.（絶対できるよ）\n・Better luck next time!（次はうまくいくよ！）\n\n【例文】\n○ A: I didn\'t get the job. B: That\'s too bad. Keep trying!\n\n【答え】\nThat\'s too bad. / I\'m sorry to hear that. など',
+    explanation:
+      '【何を聞かれているか】「I failed my test again.」に対する（　）を埋める。このあとDon\'t give up. I\'m sure you\'ll do better next time.と続く。\n【なぜThat\'s too bad.のような表現が正しいのか】相手の悪いニュースに対しては、That\'s too bad.やI\'m sorry to hear that.のような共感・同情表現で応じるのが自然な会話の流れだから。\n【ポイント1】That\'s too bad.（それは残念だね）、I\'m sorry to hear that.（それは気の毒に）は悪いニュースへの共感表現。\n【ポイント2】このあとDon\'t give up.という励ましが続くことから、（　）は同情を示す表現が自然。\n【ポイント3】Oh no!/That\'s awful!（それはひどい！）なども同じグループの表現。\n【答え】That\'s too bad. / I\'m sorry to hear that. / Oh no. など\n【確かめ】選んだ表現のあとにDon\'t give up.という励ましが自然に続くかを確認する。\n【よくあるまちがい】You\'re welcome.やThat\'s great.のように、正反対のトーンの表現を選んでしまう。\n【ここが絶対】悪いニュースへの反応はThat\'s too bad./I\'m sorry to hear that.のような共感表現を使う。',
     pitfall: '「You\'re welcome」「That\'s great」など正反対の反応を選ばないよう、会話の流れをしっかり読む。',
     memoryTip: '悲しいニュース → 「That\'s too bad」「I\'m sorry to hear that」。会話問題は「前の発言のトーン」に合わせて選ぶ！',
   },
@@ -433,7 +442,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の会話の（　）に最も適切なものをA〜Dから選びなさい。\nA: Would you like some more cake?\nB: (　) I\'m already full, thank you.\nA.Yes, please.\nB.No, thank you.\nC.Sorry, I don\'t know.\nD.That\'s a good idea.',
     answer: 'B（No, thank you.）',
     hint: '「already full（お腹いっぱい）」というBのセリフから断っていることがわかる。丁寧な断り方はNo, thank you.',
-    explanation: '【文法ポイント】\n飲食物の勧めへの返答パターン。日本語でも「いいえ、結構です」と礼儀よく断るのと同じ！\n\n【勧めへの返答】\n・受け入れる：Yes, please. / That would be great, thank you.\n・断る：No, thank you. / I\'m fine, thanks. / I\'m good.\n\n【Would you like ...?】\n= 「〜はいかがですか？」と丁寧に提案するときの表現\n※ Do you want ...? よりも丁寧\n\n【例文】\n○ A: Would you like some tea? B: Yes, please. / No, thank you.\n○ A: Would you like to join us? B: I\'d love to! / I\'m sorry, I can\'t.\n\n【答え】\nB（No, thank you.）',
+    explanation:
+      '【何を聞かれているか】「Would you like some more cake?」への返答（　）を選ぶ。このあとI\'m already full, thank you.と続く。\n【なぜNo, thank you.が正しいのか】I\'m already full（もうお腹いっぱい）という発言から、この人は勧めを断っていることがわかるため、丁寧な断りの表現No, thank you.が必要だから。\n【ポイント1】A Yes, please.は受け入れる表現で、あとに続く「もうお腹いっぱい」と矛盾する。\n【ポイント2】C Sorry, I don\'t know.、D That\'s a good idea.はどちらも食べ物の勧めへの返答として不自然。\n【ポイント3】B No, thank you.が正しい。飲食物の勧めを断るときの決まった表現。\n【答え】B（No, thank you.）\n【確かめ】選んだ返答のあとに続く「もうお腹いっぱい」という発言と矛盾していないかを確認する。\n【よくあるまちがい】I\'m already full.という発言を読まずに、Yes, please.を選んでしまう。\n【ここが絶対】飲食物の勧めを断るときはNo, thank you.、受けるときはYes, please.を使う。',
     pitfall: '「I\'m already full」と言った直後に「Yes, please」を選ぶのは矛盾。前後のセリフを必ず読んでから選ぼう！',
     memoryTip: '勧めを断るときは「No, thank you.」が黄金表現。丁寧に断れると会話がスムーズ！',
   },
@@ -447,7 +457,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の会話の（　）に適切な表現をA〜Dから選びなさい。\nA: What\'s the matter? You look upset.\nB: I lost my wallet on the way to school.\nA: (　)!\nA.Good job!\nB.That\'s wonderful!\nC.What a pity!\nD.Congratulations!',
     answer: 'C（What a pity!）',
     hint: '財布をなくしたというネガティブな話への共感・同情表現を選ぶ。What a pity! = かわいそうに！',
-    explanation: '【文法ポイント】\n状況に合った感嘆文を選ぶ問題。感嘆文のパターンを覚えよう。このパターンを覚えるだけでOK！\n\n【感嘆文の形】\n・What + (a/an) + 形容詞 + 名詞! → What a pity! / What a beautiful day!\n・How + 形容詞! → How terrible! / How wonderful!\n\n【各選択肢の意味と使う場面】\nA. Good job! → よくやった！（褒めるとき）\nB. That\'s wonderful! → すばらしい！（良いニュース）\nC. What a pity! → かわいそうに！（同情・残念）★正解\nD. Congratulations! → おめでとう！（お祝い）\n\n【例文】\n○ What a pity! Is there anything I can do to help?\n○ How terrible! Are you okay?\n\n【答え】\nC（What a pity!）',
+    explanation:
+      '【何を聞かれているか】「What\'s the matter? You look upset.」「I lost my wallet on the way to school.」に続くAの発言（　）を選ぶ。\n【なぜWhat a pity!が正しいのか】財布をなくしたというネガティブな話に対しては、同情を表すWhat a pity!（かわいそうに）のような表現で応じるのが自然だから。\n【ポイント1】A Good job!（よくやった）、D Congratulations!（おめでとう）はどちらも良いことを褒める表現で、この文脈に合わない。\n【ポイント2】B That\'s wonderful!も良いニュースへの反応であり、財布をなくした話には合わない。\n【ポイント3】C What a pity!（かわいそうに）が正しい。感嘆文の形What + (a/an) + 形容詞 + 名詞!で表す。\n【答え】C（What a pity!）\n【確かめ】選んだ表現が「財布をなくした」という悪い出来事に対する同情の反応になっているかを確認する。\n【よくあるまちがい】Good job!やCongratulations!のように、良いことへの反応を悲しい話に使ってしまう。\n【ここが絶対】感嘆文はWhat + (a/an) + 形容詞 + 名詞!またはHow + 形容詞!の形。状況（良い・悪い）に合った表現を選ぶ。',
     pitfall: 'Good job / Congratulations は良いことへの反応。悲しい話に使うと失礼になるので注意！',
     memoryTip: '「pity = 気の毒・かわいそう」。What a pity! は相手が困っているとき・残念なときの定番表現！',
   },
@@ -461,7 +472,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の会話の（　）に適切な表現をA〜Dから選びなさい。\nA: Excuse me. Is this seat taken?\nB: (　) Please sit down.\nA.Yes, it is.\nB.No, go ahead.\nC.Sorry, I don\'t know.\nD.That\'s mine.',
     answer: 'B（No, go ahead.）',
     hint: '空席かどうかの確認。「go ahead」は「どうぞ」と許可・促す表現。',
-    explanation: '【文法ポイント】\n日常会話の許可・促し表現。英語は慣れれば大丈夫！\n\n【Is this seat taken?】\n= 「この席、使っていますか？」（空席か確認する）\n\n【返答のパターン】\n・空いている → No, go ahead. / No, please sit down.\n・使っている → Yes, I\'m sorry. / Yes, someone is sitting here.\n\n【go ahead の使い方】\n・許可を与える：「どうぞ」（Please go ahead.）\n・相手に先を促す：「続けて」「先にどうぞ」\n\n【例文】\n○ A: May I borrow your pen? B: Sure, go ahead!\n○ A: Can I start eating? B: Of course, go ahead!\n\n【答え】\nB（No, go ahead.）',
+    explanation:
+      '【何を聞かれているか】「Excuse me. Is this seat taken?」への返答（　）を選ぶ。このあとPlease sit down.と続く。\n【なぜNo, go ahead.が正しいのか】Is this seat taken?（この席は使われていますか）という質問に対し、あとにPlease sit down.（座ってください）と続くことから、席が空いていることを伝える返答が必要だから。\n【ポイント1】A Yes, it is.は「使われています」という意味になり、Please sit down.と矛盾する。\n【ポイント2】C Sorry, I don\'t know.、D That\'s mine.もこの文脈に合わない。\n【ポイント3】B No, go ahead.が正しい。「（使われて）いません、どうぞ」という意味で、go aheadは「どうぞ」と促す表現。\n【答え】B（No, go ahead.）\n【確かめ】選んだ返答のあとにPlease sit down.が自然に続くかを確認する。\n【よくあるまちがい】Noを「席が空いていない」という否定だと勘違いしてしまう。ここでのNoは「使われていない」という意味。\n【ここが絶対】Is this seat taken? への返答はNo, go ahead.（空いています、どうぞ）というセットで覚える。',
     pitfall: '「No」が「空いていない」という否定と混同しやすい。ここでの「No」は「（使われて）ないよ、どうぞ」という意味。',
     memoryTip: '「Is this seat taken? → No, go ahead.」をセリフとして丸ごと覚えよう！電車や図書館で使える実用フレーズ。',
   },
@@ -475,7 +487,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の会話の（　）に最も適切なものをA〜Dから選びなさい。\nA: I\'m sorry I\'m late. I missed the bus.\nB: (　) Next time, try to leave home earlier.\nA.That\'s all right.\nB.You\'re welcome.\nC.I\'m sorry to hear that.\nD.What a good idea.',
     answer: 'A（That\'s all right.）',
     hint: '謝罪（I\'m sorry）への返答。許す・許容する表現を選ぶ。',
-    explanation: '【文法ポイント】\n謝罪への返答表現を覚えよう。このパターンを覚えるだけでOK！\n\n【謝罪への返答（許す）】\n・That\'s all right.（大丈夫ですよ）★\n・That\'s OK. / No problem.\n・Don\'t worry about it.\n・It\'s all right. / Never mind.\n\n【各選択肢の分析】\nA. That\'s all right. → 謝罪への許容（正解）\nB. You\'re welcome. → お礼（Thank you）への返し\nC. I\'m sorry to hear that. → 悲しいニュースへの同情\nD. What a good idea. → 提案・アイデアへの反応\n\n【例文】\n○ A: I\'m sorry for being rude. B: That\'s all right. I understand.\n\n【答え】\nA（That\'s all right.）',
+    explanation:
+      '【何を聞かれているか】「I\'m sorry I\'m late. I missed the bus.」への返答（　）を選ぶ。このあとNext time, try to leave home earlier.と続く。\n【なぜThat\'s all right.が正しいのか】I\'m sorry（謝罪）に対しては、許す・受け入れる表現That\'s all right.（大丈夫ですよ）で応じるのが自然だから。\n【ポイント1】B You\'re welcome.はお礼（Thank you）への返しで、謝罪への返答には使わない。\n【ポイント2】C I\'m sorry to hear that.は悲しいニュースへの同情、D What a good idea.は提案への反応で、どちらも文脈に合わない。\n【ポイント3】A That\'s all right.が正しい。謝罪への返答として、That\'s OK./No problem./Don\'t worry about it.などが使える。\n【答え】A（That\'s all right.）\n【確かめ】謝罪（I\'m sorry）に対して、許す・受け入れる表現になっているかを確認する。\n【よくあるまちがい】You\'re welcome.を謝罪への返答に使ってしまう。これはお礼への返しである。\n【ここが絶対】I\'m sorry→That\'s OK/That\'s all right/No problem、Thank you→You\'re welcome、という対応を整理する。',
     pitfall: '「You\'re welcome」はThank youへの返し。謝罪への返答と混同しないよう注意！',
     memoryTip: 'I\'m sorry → That\'s OK / That\'s all right / No problem。Thank you → You\'re welcome。この対応を整理しよう！',
   },
@@ -489,7 +502,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の（　）に適切な語を入れ、電話表現を完成させなさい。\nA: Hello. (　) I (　) to Tom, please?（トムをお願いできますか）\nB: I\'m sorry, he\'s out right now. (　) I (　) a message?（伝言を承りましょうか）',
     answer: 'A: May / speak　B: May / take（またはCan / leave）',
     hint: '電話での依頼：May I speak to ...? 伝言を申し出る：May I take a message? / Shall I take a message?',
-    explanation: '【文法ポイント】\n電話の定番表現はセリフごとそのまま覚えよう！英語は慣れれば大丈夫！\n\n【電話表現の定番】\n・Hello, this is Ken speaking.（こちらケンです）\n・May I speak to Ms. Tanaka?（田中さんをお願いできますか）\n・Speaking.（私です）\n・He\'s out right now.（今席を外しています）\n・May / Shall I take a message?（伝言を承りましょうか）\n・Can I leave a message?（伝言をお願いできますか）\n・I\'ll call back later.（あとでかけ直します）\n\n【例文】\n○ A: Hello, may I speak to Dr. Kim? B: I\'m sorry, she\'s busy. Can I take a message?\n\n【答え】\nMay I speak to / May I take a message',
+    explanation:
+      '【何を聞かれているか】「A: Hello. (　) I (　) to Tom, please?」「B: I\'m sorry, he\'s out right now. (　) I (　) a message?」の空所を埋め、電話表現を完成させる。\n【なぜMay I speak to〜?とMay I take a message?を使うのか】電話で人を呼び出すときはMay I speak to〜?、相手が不在のときに伝言を申し出るときはMay I take a message?という決まった表現を使うから。\n【ポイント1】「トムをお願いできますか」＝May I speak to Tom, please?。電話ではtalkではなくspeak toを使う。\n【ポイント2】「伝言を承りましょうか」＝May I take a message?（またはShall I take a message?/Can I leave a message?）。\n【ポイント3】電話表現の定番：Hello, this is 〜 speaking.（こちら〜です）、He\'s out right now.（今席を外しています）。\n【答え】A: May / speak　B: May / take（またはCan / leave）\n【確かめ】May I speak to〜?とMay I take a message?がそれぞれ正しい場面で使われているかを確認する。\n【よくあるまちがい】May I talk to〜?のように、電話特有のspeak toではなくtalk toを使ってしまう。\n【ここが絶対】電話表現May I speak to〜?とMay I take a message?はセリフごと丸ごと覚える。',
     pitfall: '「Can I speak to」も通じるが、電話での丁寧な依頼はMay I ...?が一般的。試験ではMayが模範解答になることが多い。',
     memoryTip: '「May I speak to ...?」「May I take a message?」の2文は電話英語の最重要フレーズ！ドラマや映画でも頻出。',
   },
@@ -503,7 +517,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の語句を並べかえて、正しい英文にしなさい。（文頭の語も小文字にしてある）\n① [ spoken / is / English / many countries / in ]\n② [ have / I / never / eaten / durian ]',
     answer: '① English is spoken in many countries.\n② I have never eaten durian.',
     hint: '① 受動態の語順：主語 + be動詞 + 過去分詞 + 修飾語。② 現在完了の否定：have + never + 過去分詞。',
-    explanation: '【文法ポイント】\n並べかえ問題は「文型の骨格」を先に作ろう。このパターンを覚えるだけでOK！\n\n① 受動態の語順：S + be + pp（+ by / 前置詞句）\n  English（主語）+ is spoken（be+pp）+ in many countries（場所）\n\n② 現在完了否定の語順：S + have + never + pp\n  I（主語）+ have never（助動詞+否定副詞）+ eaten（過去分詞）+ durian（目的語）\n\n【例文】\n○ French is spoken in Canada.\n○ I have never been to Europe.\n\n【答え】\n① English is spoken in many countries.\n② I have never eaten durian.',
+    explanation:
+      '【何を聞かれているか】① spoken/is/English/many countries/in ② have/I/never/eaten/durian を並べ替えて正しい英文を作る。\n【なぜこの語順になるのか】①は受動態（主語＋be動詞＋過去分詞＋修飾語）、②は現在完了の否定（主語＋have＋never＋過去分詞）という決まった語順の型があるから。\n【ポイント1】①English（主語）+ is spoken（be動詞＋過去分詞）+ in many countries（場所）。English is spoken in many countries.\n【ポイント2】②I（主語）+ have never（助動詞＋否定副詞）+ eaten（過去分詞）+ durian（目的語）。I have never eaten durian.\n【ポイント3】並べ替え問題では、まず動詞のかたまり（is spoken、have never eaten）を固めてから前後を組み立てるとよい。\n【答え】① English is spoken in many countries.　② I have never eaten durian.\n【確かめ】①の語順が主語＋be動詞＋過去分詞＋場所になっているかを確認する。\n【よくあるまちがい】spoken English isのように、受動態の語順を変えてしまう。\n【ここが絶対】並べ替えは「主語→動詞→目的語→修飾語」の順に組み立てる。動詞のかたまりを先に固める。',
     pitfall: '①「spoken English is」「in many countries English is spoken」のように語順を変えてしまうミス。主語+be動詞+過去分詞の順が基本。',
     memoryTip: '並べかえは「主語→動詞→目的語→修飾語」の順に組み立てる。まず動詞グループ（is spoken / have never eaten）を固めてから前後を埋める！',
   },
@@ -517,7 +532,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の語句を並べかえて、正しい英文にしなさい。（文頭の語も小文字にしてある）\n① [ to / she / wants / become / a / nurse ]\n② [ most / this / the / is / difficult / question / in / exam / the ]',
     answer: '① She wants to become a nurse.\n② This is the most difficult question in the exam.',
     hint: '① want to V（〜したい）。② the + most + 形容詞 + 名詞 が最上級の形。',
-    explanation: '【文法ポイント】\n② 最上級の語順に注意。英語は慣れれば大丈夫！\n\n① want + to不定詞：She wants to become a nurse.\n  S + V + to V（目的）の基本形\n\n② 最上級の形：the + most + 形容詞 + 名詞\n  This is（主語+動詞）+ the most difficult question（最上級の名詞句）+ in the exam（範囲）\n\n【例文】\n○ He wants to study abroad.\n○ This is the most popular restaurant in Osaka.\n\n【答え】\n① She wants to become a nurse.\n② This is the most difficult question in the exam.',
+    explanation:
+      '【何を聞かれているか】① to/she/wants/become/a/nurse ② most/this/the/is/difficult/question/in/exam/the を並べ替えて正しい英文を作る。\n【なぜこの語順になるのか】①はwant to V（〜したい）という決まった形、②はthe＋most＋形容詞＋名詞という最上級の決まった語順があるから。\n【ポイント1】①She wants to become a nurse.（S＋V＋to V（目的）の基本形）。\n【ポイント2】②This is（主語＋動詞）+ the most difficult question（最上級の名詞句）+ in the exam（範囲）。\n【ポイント3】最上級はthe＋most/-est＋形容詞＋名詞の形で、theは必ずセットにする。\n【答え】① She wants to become a nurse.　② This is the most difficult question in the exam.\n【確かめ】②でthe most difficultがquestionの直前に置かれているかを確認する。\n【よくあるまちがい】the question most difficultのように、形容詞の位置を間違えてしまう。\n【ここが絶対】最上級はthe＋most（または-est）＋形容詞＋名詞の順で、形容詞は名詞の前に置く。',
     pitfall: '②「the question most difficult」のように形容詞の位置を間違えるミス。most difficultは名詞（question）の前に置く。',
     memoryTip: '最上級は「the + most/形容詞er + 名詞」。theは必ずセット！「the most = 最大のセット」と覚えよう。',
   },
@@ -531,7 +547,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の語句を並べかえて、正しい英文にしなさい。（文頭の語も小文字にしてある）\n① [ the / that / girl / runs / fast / is / my / sister ]\n② [ who / do / you / know / any / speaks / one / French ]',
     answer: '① The girl that runs fast is my sister.\n② Do you know anyone who speaks French?',
     hint: '① 関係代名詞thatが「runs fast（速く走る）」という節をgirl（先行詞）に続ける。② 疑問文の語順に注意。',
-    explanation: '【文法ポイント】\n関係代名詞を含む並べかえは「先行詞 + 関係代名詞 + 動詞」の塊を作ろう。このパターンを覚えるだけでOK！\n\n① The girl（先行詞）+ that runs fast（関係代名詞節）+ is my sister（述語）\n② Do you know（疑問文の骨格）+ anyone（目的語）+ who speaks French（関係代名詞節）\n\n【例文】\n○ The book that I bought yesterday is interesting.\n○ Is there anyone who can speak Japanese here?\n\n【答え】\n① The girl that runs fast is my sister.\n② Do you know anyone who speaks French?',
+    explanation:
+      '【何を聞かれているか】① the/that/girl/runs/fast/is/my/sister ② who/do/you/know/any/speaks/one/French を並べ替えて正しい英文を作る。\n【なぜこの語順になるのか】関係代名詞を含む文では、先行詞のすぐ後ろに関係代名詞節を置くという決まった構造があるから。\n【ポイント1】①The girl（先行詞）+ that runs fast（関係代名詞節）+ is my sister（述語）。The girl that runs fast is my sister.\n【ポイント2】②Do you know（疑問文の骨格）+ anyone（目的語）+ who speaks French（関係代名詞節）。Do you know anyone who speaks French?\n【ポイント3】関係代名詞の並べ替えは「先行詞＋who/which/that＋動詞」のかたまりを先に作るのがコツ。\n【答え】① The girl that runs fast is my sister.　② Do you know anyone who speaks French?\n【確かめ】関係代名詞節が先行詞（The girl／anyone）の直後に置かれているかを確認する。\n【よくあるまちがい】The girl is my sister that runs fast.のように、関係代名詞節を主節の後に持ってきてしまう。\n【ここが絶対】関係代名詞は必ず先行詞の直後に置く。',
     pitfall: '①「The girl is my sister that runs fast」のように関係代名詞節を主節の後に持ってきてしまうミス。関係代名詞は必ず先行詞の直後！',
     memoryTip: '関係代名詞の並べかえ：「先行詞+who/which/that+動詞」の塊を先に作るのがコツ！',
   },
@@ -573,7 +590,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の（　）に正しい語を入れ、SVOC の文型を完成させなさい。\n① My teacher made (　) study hard.（先生は私に一生懸命勉強させた）\n② We heard the birds (　) in the trees.（私たちは鳥が木の中で歌うのを聞いた）',
     answer: '① me　② singing（またはsing）',
     hint: '使役動詞make + O + 動詞原形。知覚動詞hear + O + -ing（または動詞原形）。',
-    explanation: '【文法ポイント】\n使役動詞・知覚動詞の後ろの形はセットで覚えよう。英語は慣れれば大丈夫！\n\n【使役動詞 + O + 動詞原形（原形不定詞）】\n・make + O + V：（強制的に）〜させる\n・let + O + V：〜させてあげる（許可）\n・have + O + V：〜してもらう\n→ 後ろはtoなしの動詞原形！\n\n【知覚動詞 + O + -ing / 動詞原形】\n・hear / see / watch / feel + O + -ing（進行中）または動詞原形（全体）\n→ singは歌っている最中を見た、または歌うという行為全体\n\n【例文】\n○ She made me clean the room.（部屋を掃除させた）\n○ I saw him running in the park.（公園で走っているのを見た）\n\n【答え】\n① me　② singing（またはsing）',
+    explanation:
+      '【何を聞かれているか】①「My teacher made (　) study hard.」②「We heard the birds (　) in the trees.」の空所を埋め、SVOCの文型を完成させる。\n【なぜ動詞原形や-ing形を使うのか】使役動詞make＋O＋動詞原形（toなし）は「Oに〜させる」を表し、知覚動詞hear＋O＋-ing（または動詞原形）は「Oが〜しているのを聞く」を表すという決まった構文があるから。\n【ポイント1】使役動詞make/let/have＋O＋動詞原形：後ろはtoなしの原形。①My teacher made me study hard.\n【ポイント2】知覚動詞hear/see/watch/feel＋O＋-ing（進行中）または動詞原形（行為全体）。②We heard the birds singing in the trees.\n【ポイント3】singは「歌っている最中」を強調する-ing形、sing（原形）でも「歌うという行為全体」を表せる。\n【答え】① me　② singing（またはsing）\n【確かめ】makeのあとにtoが入っていない（toなしの原形になっている）ことを確認する。\n【よくあるまちがい】made me to studyのように、使役動詞のあとにtoをつけてしまう。\n【ここが絶対】使役動詞（make/let/have）＋O＋原形不定詞（toなし）。知覚動詞（see/hear）＋O＋-ingまたは原形。',
     pitfall: '「made me to study」のようにmakeの後のtoをつけてしまうミス。使役動詞のあとはtoなしの原形！',
     memoryTip: '使役（make/let/have）+ O + 原形不定詞。知覚（see/hear）+ O + -ing or 原形。どちらもOの後ろに注目！',
   },
@@ -587,7 +605,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の（　）に適切な語をA〜Dから選びなさい。\n① The concert was (　). We really enjoyed it.\nA. amazing　B. amazed　C. amaze　D. amazement\n② She felt (　) when she heard the test results.\nA. relieving　B. relieved　C. relieve　D. relief',
     answer: '① A（amazing）　② B（relieved）',
     hint: '物・出来事が引き起こす感情 → -ing形。人が感じる感情 → -ed形。',
-    explanation: '【文法ポイント】\n感情形容詞の-ing/-edの使い分けを再確認！このパターンを覚えるだけでOK！\n\n① the concert（コンサート=物）が引き起こす → amazing（驚くほどすばらしい）\n② she（人）が感じている → relieved（安心した）\n\n【感情形容詞ペア早見表】\n・boring / bored（退屈させる/退屈している）\n・exciting / excited（興奮させる/興奮している）\n・surprising / surprised（驚かせる/驚いている）\n・amazing / amazed（驚嘆させる/驚嘆している）\n・relieving / relieved（安心させる/安心している）\n\n【例文】\n○ The result was surprising. / We were surprised.\n○ The news was relieving. / She was relieved.\n\n【答え】\n① A（amazing）　② B（relieved）',
+    explanation:
+      '【何を聞かれているか】①「The concert was (　). We really enjoyed it.」②「She felt (　) when she heard the test results.」の空所に適切な感情形容詞を選ぶ。\n【なぜ-ingと-edを使い分けるのか】物・出来事（コンサート）が引き起こす感情は-ing形、人（she）が感じている感情は-ed形で表すという決まりがあるから。\n【ポイント1】①The concert（物）が引き起こす感情なのでamazing（驚くほどすばらしい）。\n【ポイント2】②She（人）が感じている感情なのでrelieved（安心した）。\n【ポイント3】感情形容詞ペア：boring/bored、exciting/excited、surprising/surprised、amazing/amazed、relieving/relieved。\n【答え】① A（amazing）　② B（relieved）\n【確かめ】①が物（concert）で-ing形、②が人（she）で-ed形になっているかを確認する。\n【よくあるまちがい】She felt relieving.のように、人が感じる側なのに-ing形を使ってしまう。\n【ここが絶対】物/出来事が引き起こす感情は-ing形、人が感じる感情は-ed形。',
     pitfall: '「She felt relieving」は「彼女は（人を）安心させる感じがした」という不自然な意味になる。人が感じる側はed形！',
     memoryTip: '物/出来事=ing（させる側）、人=ed（される側）。「コンサートがamazing → 私はamazed」と因果関係で覚えよう！',
   },
@@ -601,7 +620,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の（　）に適切な語句をA〜Dから選びなさい。\n① She has been studying English (　) she was ten.\nA. for　B. since　C. when　D. during\n② I (　) this town for thirty years before I moved.\nA. lived in　B. have lived in　C. had lived in　D. live in',
     answer: '① B（since）　② C（had lived in）',
     hint: '① sinceは「起点＋現在完了」。② 引っ越す前という「過去の過去」は過去完了（had + 過去分詞）。',
-    explanation: '【文法ポイント】\n時制の区別を問う問題。英語は慣れれば大丈夫！\n\n① since + 時点（〜から）：現在完了または過去完了と一緒に使う\n  she was ten → 10歳のときから（過去の起点）\n  has been studying（現在完了進行形）と合わせてsince\n\n② before I moved（引っ越した＝過去形）よりさらに前\n  → 過去完了（had + 過去分詞）を使う\n  had lived in this town for thirty years（その前の30年間住んでいた）\n\n【例文】\n○ She has studied French since she was twelve.\n○ He had worked there for ten years before he retired.\n\n【答え】\n① B（since）　② C（had lived in）',
+    explanation:
+      '【何を聞かれているか】①「She has been studying English (　) she was ten.」②「I (　) this town for thirty years before I moved.」の空所に適切な語句を選ぶ。\n【なぜsinceとhad lived inになるのか】①は現在完了進行形とともに「10歳のときから」という起点を表すのでsince、②は「引っ越した（過去）」よりもさらに前の期間を表すので過去完了had lived inを使う必要があるから。\n【ポイント1】①she was ten（過去の起点）とhas been studying（現在完了進行形）が組み合わさるのでsince。\n【ポイント2】②before I moved（過去形）よりもさらに前の期間を表すには過去完了（had＋過去分詞）を使う。\n【ポイント3】have livedを選ぶと「今も住み続けている」という意味になり、「引っ越す前」という文脈と合わなくなる。\n【答え】① B（since）　② C（had lived in）\n【確かめ】②が「引っ越す前」という過去よりもさらに前の期間を表していることを確認する。\n【よくあるまちがい】②でhave livedを選んでしまい、「今も住んでいる」という意味になってしまう。\n【ここが絶対】2つの過去が登場したら「どちらが先か」を考えて、先の方を過去完了（had＋過去分詞）にする。',
     pitfall: '②でhave lived を選ぶと「現在まで住んでいる」という意味になってしまい、「引っ越す前」という文脈と合わなくなる。',
     memoryTip: '2つの過去が登場したら「どちらが先か」を考えてhad + 過去分詞！「過去の過去 = 過去完了」を合言葉に！',
   },
@@ -615,7 +635,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の日本語を英語にしなさい。\n① 彼女が書いた本は世界中で読まれている。\n② これは私がこれまでに見た中で最もわくわくする映画だ。',
     answer: '① The book (which/that) she wrote is read all over the world.\n② This is the most exciting movie (that) I have ever seen.',
     hint: '①関係代名詞+受動態の組み合わせ。②最上級+現在完了+everの組み合わせ。',
-    explanation: '【文法ポイント】\n複数の文法事項を組み合わせた作文問題。一つずつ確認しよう。このパターンを覚えるだけでOK！\n\n①\n・The book（先行詞）+ which she wrote（関係代名詞節）+ is read（受動態）+ all over the world\n・「世界中で」= all over the world / around the world\n\n②\n・This is the most exciting movie（最上級）\n・that I have ever seen（現在完了+ever=これまでで）\n・最上級 + 現在完了 + ever のセットは頻出！\n\n【例文】\n○ The song which she sang won a prize.\n○ She is the kindest person I have ever met.\n\n【答え】\n① The book she wrote is read all over the world.\n② This is the most exciting movie I have ever seen.',
+    explanation:
+      '【何を聞かれているか】①「彼女が書いた本は世界中で読まれている。」②「これは私がこれまでに見た中で最もわくわくする映画だ。」を英語に訳す。\n【なぜ関係代名詞・受動態・最上級・現在完了を組み合わせるのか】①は「彼女が書いた」という説明を関係代名詞で加え、「読まれている」を受動態で表す必要があり、②は最上級と、「これまでに」を表す現在完了＋everを組み合わせる必要があるから。\n【ポイント1】①The book（先行詞）+ which she wrote（関係代名詞節）+ is read（受動態）+ all over the world。\n【ポイント2】②This is the most exciting movie（最上級）+ that I have ever seen（現在完了+ever＝これまでで）。\n【ポイント3】「the＋最上級＋…＋I have ever＋過去分詞」は試験の頻出パターン。\n【答え】① The book (which/that) she wrote is read all over the world.　② This is the most exciting movie (that) I have ever seen.\n【確かめ】②でhave、ever、過去分詞（seen）の3点セットがそろっているかを確認する。\n【よくあるまちがい】②でthe most exciting movie I ever see.のように、seeを現在形にしてしまう。\n【ここが絶対】「the＋最上級＋that＋主語＋have ever＋過去分詞」の形をセットで覚える。',
     pitfall: '②「the most exciting movie I ever see」のようにseeを現在形にするミス。haveとevenと過去分詞（seen）の3点セットが必要！',
     memoryTip: '「the + 最上級 + ... + I have ever + 過去分詞」は試験の頻出パターン！全体を1つの文として音読して覚えよう！',
   },
@@ -629,7 +650,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の（　）に if を使った条件文（仮定法ではない）を完成させなさい。\n① (　) you (　) hard, you will pass the exam.（一生懸命勉強すれば、試験に合格するだろう）\n② (　) it (　) tomorrow, we will cancel the picnic.（明日雨が降れば、ピクニックを中止する）',
     answer: '① If / study　② If / rains',
     hint: 'if節（条件節）は現在形で未来を表す。「if + 現在形 → 未来形（will）」。',
-    explanation: '【文法ポイント】\nif を使った条件文のルール。英語は慣れれば大丈夫！\n\n【条件文のルール（直説法）】\n・if節（条件）→ 現在形を使う（willを使わない！）\n・主節（結果）→ will + 動詞原形\n\n【例文】\n○ If you eat too much, you will get sick.\n○ If she calls, I will answer right away.\n\n【日本語との違い】\n「もし明日雨が降れば」と言いたいとき、「降るだろう」とは言わず「降れば（現在形）」で表す点が英語の特徴。\n\n【答え】\n① If you study　② If it rains',
+    explanation:
+      '【何を聞かれているか】①「(　) you (　) hard, you will pass the exam.」②「(　) it (　) tomorrow, we will cancel the picnic.」の空所を埋め、ifを使った条件文を完成させる。\n【なぜif節が現在形になるのか】条件を表すif節の中では、未来のことでもwillを使わず現在形を使うという決まりがあるから。\n【ポイント1】①「一生懸命勉強すれば」＝If you study hard（現在形）。\n【ポイント2】②「明日雨が降れば」＝If it rains tomorrow（現在形）。\n【ポイント3】if節（条件）は現在形、主節（結果）はwill＋動詞原形という決まった組み合わせ。\n【答え】① If / study　② If / rains\n【確かめ】if節の動詞が現在形（study、rains）になっているかを確認する。\n【よくあるまちがい】If it will rain tomorrowのように、if節の中にwillを入れてしまう。\n【ここが絶対】if節の中はwillなし（現在形）、主節はwillあり、という組み合わせを覚える。',
     pitfall: '「If it will rain」のようにif節にwillを入れてしまうミスが最も多い。if節の中はwillは使わない！',
     memoryTip: 'if節 = willなし（現在形）、主節 = willあり。「ifの中にwillを入れると×！」と覚えよう。',
   },
@@ -657,7 +679,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の（　）に適切な語句を入れ、間接疑問文を完成させなさい。\n① I don\'t know (　) she (　). （彼女がどこに住んでいるか知らない）\n② Can you tell me (　) the meeting (　)? （会議がいつ始まるか教えてもらえますか）',
     answer: '① where / lives　② when / starts（またはwill start）',
     hint: '間接疑問文 = 疑問詞 + 主語 + 動詞（疑問文の語順ではない！）。',
-    explanation: '【文法ポイント】\n間接疑問文は疑問詞の後が「主語+動詞」の平叙文の語順になる！英語は慣れれば大丈夫！\n\n【普通の疑問文と間接疑問文の比較】\n・Where does she live?（疑問文）\n→ I don\'t know where she lives.（間接疑問文）\n  ※ does が消えてlivesに戻る（3単現のs）\n\n・When does the meeting start?\n→ Can you tell me when the meeting starts?\n\n【例文】\n○ I wonder what time it is.\n○ Do you know where the post office is?\n\n【日本語との違い】\n日本語は「どこに住んでいるか」と自然な語順だが、英語の疑問文語順（Does she live where）は間接疑問では使えない。\n\n【答え】\n① where she lives　② when the meeting starts',
+    explanation:
+      '【何を聞かれているか】①「I don\'t know (　) she (　).」②「Can you tell me (　) the meeting (　)?」の空所を埋め、間接疑問文を完成させる。\n【なぜ疑問文の語順に戻らないのか】疑問文が他の文（I don\'t know〜／Can you tell me〜）の一部に組み込まれると、疑問文特有の助動詞（does）を使わず、ふつうの文と同じ〈疑問詞＋主語＋動詞〉の語順に戻すというルールがあるから。\n【ポイント1】①Where does she live?→doesが消えて動詞に3単現のsがつく：where she lives。\n【ポイント2】②When does the meeting start?→when the meeting starts。\n【ポイント3】間接疑問文の語順は必ず〈疑問詞＋主語＋動詞〉の平叙文語順にする。\n【答え】① where / lives　② when / starts（またはwill start）\n【確かめ】doesが消えて、動詞に3単現のsがついているかを確認する。\n【よくあるまちがい】I don\'t know where does she live.のように、間接疑問文に疑問文の語順を使ってしまう。\n【ここが絶対】間接疑問文の語順は疑問詞＋主語＋動詞（平叙文の語順）。',
     pitfall: '「I don\'t know where does she live」のように間接疑問文に疑問文の語順（does + she）を使うミスが非常に多い。疑問詞の後は普通の文の語順！',
     memoryTip: '間接疑問 = 疑問詞 + S + V（普通の順）。「I don\'t know where S + V」と唱えて覚えよう！',
   },
@@ -671,7 +694,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の日本語の意味に合うよう、（　）に適切な語を入れなさい。\n① この問題は難しすぎて私には解けない。\n→ This problem is (　) (　) (　) me to solve.\n② 彼女は十分賢いのでその試験に合格できる。\n→ She is (　) (　) (　) pass the exam.',
     answer: '① too difficult for　② smart enough to',
     hint: 'too ... for + 人 + to V（〜すぎて人には〜できない）。enough to V（〜するのに十分）。',
-    explanation: '【文法ポイント】\ntoo...to と enough to の2つは超頻出！このパターンを覚えるだけでOK！\n\n【too ... for 人 to V】\n・「〜すぎて（人には）〜できない」\n・This is too hot for me to eat.（熱すぎて食べられない）\n\n【形容詞 enough to V】\n・「〜するのに十分なほど…だ」\n・She is old enough to drive.（運転できる年齢だ）\n・enough は形容詞の後に置く（enough smart は×）\n\n【書きかえ：too と enough の相互変換】\n○ He is too young to drive. ≒ He is not old enough to drive.\n\n【答え】\n① too difficult for　② smart enough to',
+    explanation:
+      '【何を聞かれているか】①「この問題は難しすぎて私には解けない。」②「彼女は十分賢いのでその試験に合格できる。」の空所を埋める。\n【なぜtoo…forとenough toを使うのか】「〜すぎて（人には）〜できない」はtoo＋形容詞＋for＋人＋to Vという決まった形で、「〜するのに十分…だ」は形容詞＋enough to Vという決まった形で表すから。\n【ポイント1】①「難しすぎて私には解けない」＝too difficult for me to solve。forのあとに人（意味上の主語）を置く。\n【ポイント2】②「十分賢いので合格できる」＝smart enough to pass。enoughは形容詞のあとに置く（enough smartは誤り）。\n【ポイント3】too…to（〜すぎてできない）とenough to（十分〜できる）は反対の意味で対比して覚える。\n【答え】① too difficult for　② smart enough to\n【確かめ】②でenoughがsmartのあとに置かれているか（enough smartになっていないか）を確認する。\n【よくあるまちがい】enough smart toのように、enoughを形容詞の前に置いてしまう。\n【ここが絶対】too＋形容詞＋for＋人＋to Vはネガティブ（〜すぎてできない）、形容詞＋enough to Vはポジティブ（十分〜できる）と対比して覚える。',
     pitfall: '「enough smart to」のようにenoughを形容詞の前に置くミスが多い。smartの後ろにenoughを置くのが正しい語順。',
     memoryTip: '「too ... to」= ネガティブ（〜すぎてできない）、「enough to」= ポジティブ（十分に〜できる）。反対の意味で対比して覚えよう！',
   },
