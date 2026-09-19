@@ -352,7 +352,8 @@ export const seikoQuestions: Question[] = [
     question: '次の英文を読んで質問に答えなさい。\n"Taro likes soccer very much. He practices it every day after school. His dream is to become a professional soccer player."\n\nQ: What does Taro want to be in the future?',
     answer: 'He wants to be a professional soccer player.',
     hint: 'His dream is to... の部分に答えがある',
-    explanation: '【解説】\n"His dream is to become a professional soccer player."という文から、\n太郎の将来の夢はプロサッカー選手になることとわかります。\n答え方：He wants to be a professional soccer player.\nまたはHe wants to become a professional soccer player.',
+    explanation:
+      '【何を聞かれているか】\n英文を読んで、「太郎が将来何になりたいか」を英語で答える読解問題。\n\n【なぜ"His dream is to〜"に注目するのか】\n「彼の夢は〜になることだ」という文がそのまま「将来なりたいもの」を表しているので、設問の答えに直結する。\n\n【ポイント1】該当する文を確認する\n"His dream is to become a professional soccer player."（彼の夢はプロサッカー選手になることだ）。\n\n【ポイント2】設問の疑問文の形を確認する\n"What does Taro want to be in the future?"（太郎は将来何になりたいか）という問いに対しては、"He wants to be〜"の形で答えるのが自然。\n\n【ポイント3】"become"と"be"の言い換えを確認する\n"become a professional soccer player"は"be a professional soccer player"（〜になる／〜である）とほぼ同じ内容を表す。\n\n【答え】\nHe wants to be a professional soccer player. （またはHe wants to become a professional soccer player.）\n\n【確かめ】\n"His dream is to become a professional soccer player."の内容が、書いた答えの"He wants to be a professional soccer player."ときちんと対応しているか確認する。\n\n【よくあるまちがい】\n設問がWhatで始まる疑問文であることを意識せず、"Yes/No"のような答え方をしてしまうミス。What（何）で聞かれたら、具体的な内容（職業名など）で答える。\n\n【ここが絶対】\n"His/Her dream is to〜"＝「彼/彼女の夢は〜することだ」という表現は、将来の希望を答える読解問題の定番の手がかり。',
     difficulty: 'advanced',
     course: 'seiko',
     examType: 'chugaku',
@@ -363,7 +364,8 @@ export const seikoQuestions: Question[] = [
     question: '次の日本語を英語に直しなさい。\n「私は昨日、図書館で本を3冊読みました。」',
     answer: 'I read three books at the library yesterday.',
     hint: 'readの過去形もread（発音はレッド）',
-    explanation: '【解説】\n・read（現在）→ read（過去）発音は[red]\n・数の表現：three books（3冊）\n・場所：at the library\n・時：yesterday（文末に置くことが多い）\nI read three books at the library yesterday.',
+    explanation:
+      '【何を聞かれているか】\n「私は昨日、図書館で本を3冊読みました。」という日本語を英語にする問題。\n\n【なぜreadの過去形がreadになるのか】\nreadは原形・過去形・過去分詞がすべて同じ綴り"read"になる不規則動詞。ただし発音が変わり、過去形・過去分詞は[red]（レッド）と発音する。\n\n【ポイント1】動詞の形を確認する\n"read"（現在形、発音[riːd]リード）→"read"（過去形、発音[red]レッド）。綴りは同じでも発音が変わることに注意。\n\n【ポイント2】数の表現を確認する\n「3冊」は"three books"。bookを複数形にする。\n\n【ポイント3】場所と時を表す語句を確認する\n場所は"at the library"、時は"yesterday"（文末に置くことが多い）。\n\n【答え】\nI read three books at the library yesterday.\n\n【確かめ】\n"read"（過去形）→"three books"（数）→"at the library"（場所）→"yesterday"（時）の順になっているか確認する。\n\n【よくあるまちがい】\nreadの過去形を"readed"のように誤って活用させてしまうミス。readは原形・過去形・過去分詞が同じ綴りの不規則動詞。\n\n【ここが絶対】\nread（現在）→read（過去、発音[red]）という特殊な不規則動詞の活用をセットで覚えておく。',
     difficulty: 'advanced',
     course: 'seiko',
     examType: 'chugaku',
@@ -711,7 +713,8 @@ export const seifuNankaiQuestions: Question[] = [
     question: '次の（　）に不定詞または動名詞を入れなさい。\n①"I want (   ) play soccer."（不定詞）\n②"She enjoys (   ) music."（動名詞）\n③"He decided (   ) study abroad."（不定詞）',
     answer: '①to play　②listening to　③to study',
     hint: 'want・decide→不定詞、enjoy→動名詞（-ing形）',
-    explanation: '【解説】\n不定詞（to + 動詞原形）を取る動詞：\nwant, hope, decide, plan, wish, promise など\n動名詞（動詞-ing形）を取る動詞：\nenjoy, finish, stop, mind, give up など\n両方取れる動詞：like, love, start, begin など\n①want → to play ②enjoy → listening to ③decide → to study',
+    explanation:
+      '【何を聞かれているか】\nそれぞれの動詞の後ろに、不定詞（to+動詞の原形）または動名詞（動詞のing形）のどちらを入れるべきかを答える文法問題。\n\n【なぜ動詞によって不定詞・動名詞が決まっているのか】\n英語の動詞には、後ろに「不定詞だけを取る動詞」「動名詞だけを取る動詞」「どちらも取れる動詞」という3つのグループがあり、それぞれ決まっている。\n\n【ポイント1】不定詞を取る動詞を確認する\nwant（〜したい）、hope（〜を望む）、decide（〜すると決める）、plan（〜する予定だ）、wish（〜を願う）、promiseなどは、後ろに不定詞（to+動詞の原形）を取る。\n\n【ポイント2】動名詞を取る動詞を確認する\nenjoy（〜を楽しむ）、finish（〜を終える）、stop（〜をやめる）、mind（〜を気にする）、give upなどは、後ろに動名詞（動詞のing形）を取る。\n\n【ポイント3】両方取れる動詞も確認する\nlike、love、start、beginなどは、不定詞・動名詞のどちらを続けてもほぼ同じ意味になる。\n\n【答え】\n①to play　②listening to　③to study\n\n【確かめ】\nwant→to play（不定詞）、enjoy→listening to（動名詞）、decide→to study（不定詞）と、それぞれ正しいグループの形になっているか確認する。\n\n【よくあるまちがい】\nenjoyの後ろに不定詞（to listen）を使ってしまうミス。enjoyは動名詞だけを取る動詞なので、-ing形にする必要がある。\n\n【ここが絶対】\n不定詞を取る動詞（want/hope/decide/plan/wish/promise）と動名詞を取る動詞（enjoy/finish/stop/mind/give up）はグループごとにセットで覚える。',
     difficulty: 'advanced',
     course: 'seifu-nankai',
     examType: 'chugaku',
@@ -733,7 +736,8 @@ export const seifuNankaiQuestions: Question[] = [
     question: '次の英文を読んで答えなさい。\n"Japan is a country surrounded by the sea. Japanese people have eaten fish for thousands of years. Recently, however, young people prefer meat to fish."\n\nQ: How has the eating habit of Japanese young people changed?',
     answer: 'They now prefer meat to fish (rather than fish).',
     hint: 'prefer A to B = BよりAが好き',
-    explanation: '【解説】\n本文最後の文："young people prefer meat to fish"\nprefer A to B = BよりAを好む\n→ 若者は魚よりも肉を好むようになった\n答え：They prefer meat to fish. / They like meat better than fish.\n（現在完了を使う場合）Their eating habits have changed from fish to meat.',
+    explanation:
+      '【何を聞かれているか】\n英文を読んで、「日本の若者の食習慣がどう変化したか」を英語で答える読解問題。\n\n【なぜprefer A to Bに注目するのか】\n"prefer A to B"は「BよりAを好む」という意味の重要熟語で、本文の最後の文に日本の若者の食習慣の変化がまとめられている。\n\n【ポイント1】該当する文を確認する\n"young people prefer meat to fish"（若者は魚より肉を好む）という最後の文が、設問の答えの手がかり。\n\n【ポイント2】"prefer A to B"の意味を確認する\n"prefer meat to fish"＝「魚より肉を好む」。Bのfishより、Aのmeatを好むという意味。\n\n【ポイント3】答え方を確認する\n「魚から肉へと食習慣が変わった」という変化を、"They now prefer meat to fish."や"Their eating habits have changed from fish to meat."のように表す。\n\n【答え】\nThey now prefer meat to fish.\n\n【確かめ】\n本文の"prefer meat to fish"という表現が、書いた答えに正しく反映されているか確認する。\n\n【よくあるまちがい】\n"prefer A to B"の語順を逆にして、「魚を肉より好む」という誤った意味にしてしまうミス。Aが好きなもの、Bが比べられるもの、という順番を守る。\n\n【ここが絶対】\n"prefer A to B"＝「BよりAを好む」という重要熟語をセットで覚える。',
     difficulty: 'advanced',
     course: 'seifu-nankai',
     examType: 'chugaku',
@@ -744,7 +748,8 @@ export const seifuNankaiQuestions: Question[] = [
     question: '次の日本語を英語に直しなさい。\n「私は去年からずっとこの学校で勉強しています。」',
     answer: 'I have been studying at this school since last year.',
     hint: '現在完了進行形：have/has been + 動詞-ing',
-    explanation: '【解説】\n現在完了進行形（継続の動作）：have/has been + 動詞-ing\n「〜からずっと〜している」= have been -ing since 〜\nI have been studying at this school since last year.\nsince = 〜から（起点を表す） ⟵ last year（去年から）',
+    explanation:
+      '【何を聞かれているか】\n「私は去年からずっとこの学校で勉強しています。」という日本語を、現在完了進行形を使って英語にする問題。\n\n【なぜ現在完了進行形を使うのか】\n「（過去のある時点から）ずっと〜し続けている」という、今も継続している動作を表すときは、現在完了進行形（have/has been+動詞のing形）を使う。\n\n【ポイント1】現在完了進行形の公式を確認する\nhave/has been＋動詞のing形。「ずっと〜し続けている」という継続中の動作を表す。\n\n【ポイント2】起点を表すsinceを確認する\n"since last year"（去年から）のように、sinceは「いつから続いているか」という起点を表す。\n\n【ポイント3】文を組み立てる\n"I have been studying at this school since last year."＝「私は去年からずっとこの学校で勉強している」。\n\n【答え】\nI have been studying at this school since last year.\n\n【確かめ】\n"have been studying"という現在完了進行形の形になっていること、また"since last year"が起点を正しく表していることを確認する。\n\n【よくあるまちがい】\n現在完了進行形を使うべきところを、単純な現在形（study）や過去形（studied）にしてしまうミス。「ずっと〜し続けている」という継続のニュアンスは進行形の形でしか表せない。\n\n【ここが絶対】\n"have/has been -ing since〜"＝「〜からずっと〜し続けている」という現在完了進行形の形をセットで覚える。',
     difficulty: 'advanced',
     course: 'seifu-nankai',
     examType: 'chugaku',
@@ -1103,7 +1108,8 @@ export const takatsukiQuestions: Question[] = [
     question: '仮定法過去の文を完成させなさい。\n「もし私が鳥だったら、空を飛べるのに。」\n"If I (   ) a bird, I (   ) fly in the sky."',
     answer: 'If I were a bird, I could fly in the sky.',
     hint: '仮定法過去：If + 主語 + 動詞の過去形（beはwere）、主語 + could/would + 動詞原形',
-    explanation: '【解説】\n仮定法過去（現在の事実に反する仮定）：\nIf + 主語 + 動詞の過去形, 主語 + would/could/might + 動詞原形\n\n注意：beの場合は主語に関わらずwereを使う（口語ではwasも可）\nIf I were a bird, I could fly in the sky.\n（実際は鳥ではない→現実と反対の仮定）',
+    explanation:
+      '【何を聞かれているか】\n「もし私が鳥だったら、空を飛べるのに。」という日本語に合うように、仮定法過去の文を完成させる問題。\n\n【なぜbe動詞をwereにするのか】\n仮定法過去では、be動詞は主語が何であっても（Iやheでも）wereを使うという伝統的なルールがある（口語ではwasも使われることがある）。\n\n【ポイント1】仮定法過去の公式を確認する\nIf＋主語＋動詞の過去形〜, 主語＋would/could/might＋動詞の原形〜。\n\n【ポイント2】if節を組み立てる\n「もし私が鳥だったら」は"If I were a bird"。beの過去形はwereを使う。\n\n【ポイント3】主節を組み立てる\n「空を飛べるのに」は"I could fly in the sky"。可能性を表すcouldを使う。\n\n【答え】\nIf I were a bird, I could fly in the sky.\n\n【確かめ】\nif節のbe動詞がwasではなくwereになっていること、また「実際は鳥ではない」という現実と反対の内容になっていることを確認する。\n\n【よくあるまちがい】\n"If I was a bird"のように、主語Iに合わせてwasを使ってしまうミス。仮定法のif節では、主語が単数でもwereを使うのが原則。\n\n【ここが絶対】\n仮定法過去では、be動詞は主語に関係なくwereを使う。「もし〜だったら」という現実と反対の仮定を表す公式とセットで覚える。',
     difficulty: 'advanced',
     course: 'takatsuki',
     examType: 'chugaku',
@@ -1114,7 +1120,8 @@ export const takatsukiQuestions: Question[] = [
     question: '次の語を並べかえて正しい英文を作りなさい。\n[ the, is, this, visited, museum, that, I, yesterday ]',
     answer: 'This is the museum that I visited yesterday.',
     hint: '関係代名詞thatを使った整序作文。先行詞はmuseum',
-    explanation: '【解説】\n整序作文の手順：\n①動詞を見つける：is, visited（2つ）→ 関係代名詞節がある\n②主文の主語：This, 動詞：is\n③先行詞（名詞）：museum\n④関係代名詞節：that I visited yesterday\n\n完成文：This is the museum that I visited yesterday.\n（これは私が昨日訪れた博物館です）',
+    explanation:
+      '【何を聞かれているか】\n語句を並べ替えて、関係代名詞thatを使った正しい英文を作る問題。\n\n【なぜ関係代名詞thatを使うのか】\n「私が昨日訪れた博物館」のように、名詞（museum）を後ろから説明する文をつなげるときは、関係代名詞（この場合はthat）を使って2つの文を1つにまとめる。\n\n【ポイント1】動詞を見つけて構造を把握する\n語群の中に"is"と"visited"という2つの動詞がある。これは主文の動詞（is）と、関係代名詞節の中の動詞（visited）があることを示すサイン。\n\n【ポイント2】主文と先行詞を確認する\n主文の主語はThis、動詞はis。先行詞（説明される名詞）はmuseum。\n\n【ポイント3】関係代名詞節を組み立てる\n"that I visited yesterday"（私が昨日訪れた）がmuseumを後ろから説明する。\n\n【答え】\nThis is the museum that I visited yesterday.\n\n【確かめ】\n"the museum"の直後に"that I visited yesterday"が続いて、museumを正しく説明しているか確認する。\n\n【よくあるまちがい】\n2つの動詞（is, visited）があることに気づかず、関係代名詞節を見落として文をうまく組み立てられないミス。\n\n【ここが絶対】\n整序作文で動詞が2つある場合は、関係代名詞節が含まれているサイン。「主文の動詞」と「節の中の動詞」を見分けることが解法の鍵。',
     difficulty: 'advanced',
     course: 'takatsuki',
     examType: 'chugaku',
@@ -1122,10 +1129,14 @@ export const takatsukiQuestions: Question[] = [
   {
     id: 'takatsuki_eigo_05',
     subject: 'eigo',
-    question: '次の語を並べかえて正しい英文を作りなさい。\n[ you, I, if, free, were, would, come, to, my, party ]',
-    answer: 'If you were free, I would come to my party. → 正しくは: If you were free, would you come to my party? または I would invite you to my party if you were free.',
-    hint: '仮定法過去の整序問題。「もし暇なら私のパーティーに来ませんか」',
-    explanation: '【解説】\n仮定法過去の整序：\nIf you were free, I would come to my party.\n※この文は文法上「もし君が暇なら、私は（君の）パーティーに来るのに」となり少し不自然。\n自然な英語：If you were free, would you come to my party?\nまたは：I would invite you to my party if you were free.\n整序問題では与えられた単語を全て使うことが条件です。',
+    question:
+      '次の語を並べかえて正しい英文を作りなさい。\n[ you, I, if, free, were, would, come, to, the, party ]',
+    answer:
+      'If you were free, I would come to the party.',
+    hint:
+      '仮定法過去の整序問題。「もし暇なら、私はパーティーに来るのに」',
+    explanation:
+      '【何を聞かれているか】\n語句を並べ替えて、仮定法過去を使った正しい英文を作る問題。\n\n【なぜwereを使うのか】\n仮定法過去では、be動詞は主語に関係なくwereを使うという決まりがある。「もし〜だったら」という現実と反対の仮定を表す。\n\n【ポイント1】仮定法過去の公式を確認する\nIf＋主語＋動詞の過去形〜, 主語＋would＋動詞の原形〜。\n\n【ポイント2】if節を組み立てる\n「もしあなたが暇なら」は"If you were free"。\n\n【ポイント3】主節を組み立てる\n「私はパーティーに来るのに」は"I would come to the party"。\n\n【答え】\nIf you were free, I would come to the party.\n\n【確かめ】\nif節のbe動詞がwereになっていること、また与えられた語をすべて過不足なく使えているかを確認する。\n\n【よくあるまちがい】\nif節の中でwouldを使ってしまうミス。仮定法過去では、if節は過去形（were）、主節はwould+原形という役割分担がある。\n\n【ここが絶対】\n仮定法過去の公式（If+過去形, would+原形）をセットで覚える。be動詞はwereを使うことも忘れずに。',
     difficulty: 'advanced',
     course: 'takatsuki',
     examType: 'chugaku',

@@ -682,7 +682,8 @@ By the end of the day, Yuki realized something important: she had been so afraid
     choices: ['① has', '② had', '③ have', '④ will have'],
     answer: '② had',
     hint: '時制の一致（話法）を考えよう。"told（過去）" という主節の動詞に合わせて、従属節の現在完了は何に変わる？',
-    explanation: '【文法のポイント】間接話法（話法）における時制の一致のルールです。主節が過去形（told）の場合、従属節の現在完了（has been）は過去完了（had been）に変化します。"She told me that she had been waiting for over an hour."（1時間以上待っていたと彼女は言った）',
+    explanation:
+      '【何を聞かれているか】\n間接話法（伝聞）の文の空欄に入る、正しい動詞の形を選ぶ文法問題。\n\n【なぜ過去完了にするのか】\n間接話法では、主節の動詞（told＝過去形）に合わせて、引用内容の時制も1段階過去にずらす「時制の一致」のルールがある。現在完了（has been）は、間接話法では過去完了（had been）になる。\n\n【ポイント1】時制の一致の対応を確認する\n主節がtold（過去形）のとき、現在完了（has/have+過去分詞）は過去完了（had+過去分詞）に変わる。\n\n【ポイント2】直接話法との違いを確認する\n直接話法では"I have been waiting for over an hour."（現在完了進行形）だったものが、間接話法でtoldに合わせてhadに変わる。\n\n【ポイント3】他の選択肢を消去する\n①"has"は現在完了のままで時制の一致がされていない。③"have"も同様。④"will have"は未来完了で時制が合わない。\n\n【答え】\n② had\n\n【確かめ】\n"She told me that she had been waiting for over an hour."を訳し、「彼女は1時間以上待っていたと言った」という意味になっていることを確認する。\n\n【よくあるまちがい】\n主節がtoldという過去形であることに気づかず、現在完了（has been）のまま選んでしまうミス。\n\n【ここが絶対】\n時制の一致：主節が過去形→現在完了は過去完了に変化する。この対応をセットで覚える。',
     pitfall: '直接話法だと "I have been waiting for over an hour"（現在完了進行形）だが、間接話法で主節が過去形になると過去完了になる。',
     memoryTip: '時制の一致：主節が過去形 → 従属節の現在→過去、現在完了→過去完了、過去→過去完了に変化する！',
   },
@@ -696,7 +697,8 @@ By the end of the day, Yuki realized something important: she had been so afraid
     question: '次の文のSVOCを答えなさい。\n「The teacher found the classroom very noisy.」',
     answer: 'S=The teacher, V=found, O=the classroom, C=very noisy',
     hint: '"find + 目的語 + 形容詞" の第5文型（SVOC）。Cは目的語の状態を説明する補語。',
-    explanation: '【文法のポイント】"find + O + C" は「OがCだとわかる・感じる」という第5文型（SVOC）です。"The teacher" が S、"found" が V、"the classroom" が O（目的語）、"very noisy" が C（補語）。補語Cは目的語Oの状態を説明します（教室がとても騒がしい）。',
+    explanation:
+      '【何を聞かれているか】\n"The teacher found the classroom very noisy."という文のSVOCを答える問題。\n\n【なぜfind+O+Cという形になるのか】\n"find"は「〜だとわかる・感じる」という意味で使われるとき、目的語（O）の状態を補語（C）で説明するSVOC（第5文型）を作る動詞の一つ。\n\n【ポイント1】文を要素に分ける\n"The teacher(S) found(V) the classroom(O) very noisy(C)."と分けられる。\n\n【ポイント2】OとCの関係を確認する\nthe classroom（教室）＝very noisy（とても騒がしい）という、目的語と補語がイコールの関係になっている。\n\n【ポイント3】他のSVOC動詞と一緒に覚える\nfind（〜だとわかる）以外にも、make（〜にする）、keep（〜のままにする）、leave（〜のままにしておく）がSVOCを作る代表的な動詞。\n\n【答え】\nS=The teacher, V=found, O=the classroom, C=very noisy\n\n【確かめ】\n"the classroom = very noisy"（教室＝とても騒がしい）という関係が成り立つかを確認する。\n\n【よくあるまちがい】\n"very noisy"を"found"を修飾する副詞句だと誤解してしまうミス。ここでは目的語the classroomの状態を説明する形容詞（補語）として使われている。\n\n【ここが絶対】\nSVOCのmake/find/keep/leave+O+C（形容詞）というパターンは入試必須。O＝Cの関係になっているかを確認する。',
     pitfall: '"very noisy" を副詞句と混同しないこと。これは目的語 "the classroom" を説明する形容詞（補語）。',
     memoryTip: 'SVOC構文の make/find/keep/leave + O + C（形容詞）パターンは入試必須！',
   },
@@ -714,7 +716,8 @@ By the end of the day, Yuki realized something important: she had been so afraid
     question: '次の日本語を英語にしなさい。\n「私は昨日、図書館で3時間勉強しました。」',
     answer: 'I studied at the library for three hours yesterday.',
     hint: '時制は過去形。場所（図書館で）・時間（3時間）・時（昨日）を英語でどう表すか考えよう。',
-    explanation: '【文法のポイント】"study" の過去形 "studied"、場所は "at the library"、時間の長さは "for three hours"、時は "yesterday" を使います。語順は「動詞 + 場所 + 時間の長さ + 時」が自然な英語の語順です。',
+    explanation:
+      '【何を聞かれているか】\n「私は昨日、図書館で3時間勉強しました。」という日本語を英語にする問題。\n\n【なぜこの語順にするのか】\n英語では副詞（場所・時間の長さ・時点を表す語句）を並べるとき、「場所→時間の長さ→時点」の順に置くのが自然な語順というルールがある。\n\n【ポイント1】動詞を過去形にする\n"study"の過去形は"studied"。\n\n【ポイント2】場所と時間の長さを表す\n場所は"at the library"、時間の長さ（3時間）は"for three hours"。\n\n【ポイント3】時点を表す語を最後に置く\n"yesterday"（昨日）は文末に置くのが一般的。\n\n【答え】\nI studied at the library for three hours yesterday.\n\n【確かめ】\n"studied"（過去形）→"at the library"（場所）→"for three hours"（時間の長さ）→"yesterday"（時点）の順になっているか確認する。\n\n【よくあるまちがい】\n場所と時間の長さの順番を逆にしてしまうミス（for three hours at the library のような語順）。英語では場所が先、時間の長さが後という順番が自然。\n\n【ここが絶対】\n英語の副詞語順：場所→時間の長さ→時点。「どこで・どのくらい・いつ」の順に並べる。',
     pitfall: '"yesterday" を文頭に置いても間違いではないが、一般的には文末に置くことが多い。',
     memoryTip: '英語の副詞語順：場所→時間の長さ→時点。「どこで・どのくらい・いつ」の順に並べよう！',
   },
@@ -728,7 +731,8 @@ By the end of the day, Yuki realized something important: she had been so afraid
     question: '次の語句を正しい順序に並べて英文を作りなさい。\n[ to / is / have / important / it / friends / good ]',
     answer: 'It is important to have good friends.',
     hint: '"It is + 形容詞 + to + 動詞の原形" の形式主語構文（仮主語のit）を使おう。',
-    explanation: '【文法のポイント】"It is + 形容詞 + to + 動詞の原形" は「〜することは…だ」という形式主語（仮主語）の構文です。本来の主語は "to have good friends" ですが、長い主語を文末に移し、形式主語の "It" を文頭に置きます。',
+    explanation:
+      '【何を聞かれているか】\n語句を並べ替えて、形式主語のitを使った正しい英文を作る問題。\n\n【なぜ形式主語のitを使うのか】\n"to have good friends"（良い友達を持つこと）のように、to不定詞が主語になると長くなりすぎる場合、英語では本来の主語を文末に回し、代わりに形式的な主語"It"を文頭に置くという決まりがある。\n\n【ポイント1】形式主語構文の公式を確認する\n"It is＋形容詞＋to＋動詞の原形"＝「〜することは…だ」。\n\n【ポイント2】本来の主語を見つける\n本来の主語は"to have good friends"（良い友達を持つこと）で、これを文末に移動させる。\n\n【ポイント3】文を組み立てる\n"It is important to have good friends."＝「良い友達を持つことは大切だ」。\n\n【答え】\nIt is important to have good friends.\n\n【確かめ】\n"It"が形式的な主語で、実際の内容（to have good friends）が文末にあることを確認する。\n\n【よくあるまちがい】\n"To have good friends is important."のように、to不定詞をそのまま主語にしてしまうミス。文法的には間違いではないが、英語では形式主語のIt is...の形がより自然でよく使われる。\n\n【ここが絶対】\n"It is+形容詞+to do"＝「〜することは…だ」。to不定詞が長い主語になるときはこの形を使う。',
     pitfall: '"To have good friends is important." も文法的に正しいが、英語では形式主語の "It is ..." の形が自然でよく使われる。',
     memoryTip: '"It is + 形容詞 + to do" → 「〜することは...だ」。to不定詞が長い主語のときに使う！',
   },
@@ -739,10 +743,12 @@ By the end of the day, Yuki realized something important: she had been so afraid
     examType: 'koko',
     difficulty: 'advanced',
     maxOnly: true,
-    question: '次の語句を正しい順序に並べて英文を作りなさい。（1語不要）\n[ the / have / I / to / never / seen / been / movie / this ]',
+    question:
+      '次の語句を正しい順序に並べて英文を作りなさい。（1語不要）\n[ I / have / never / seen / been / movie / this ]',
     answer: 'I have never seen this movie.',
     hint: '現在完了形 "have + 過去分詞" で「一度も〜したことがない（経験）」を表す文を作ろう。不要な語は1つ。',
-    explanation: '【文法のポイント】"have never + 過去分詞" で「一度も〜したことがない」という経験の否定を表します。正しい文：I have never seen this movie. 不要な語は "been"（have been to = 〜に行ったことがある、という別の表現で "been" を混ぜた引っかけ）。',
+    explanation:
+      '【何を聞かれているか】\n語句を並べ替えて、現在完了（経験）を使った正しい英文を作る問題（1語不要）。\n\n【なぜhave never seenを使うのか】\n「一度も〜したことがない」という経験の否定は、現在完了の否定形"have never＋過去分詞"で表す。\n\n【ポイント1】現在完了（経験）の公式を確認する\nhave/has＋過去分詞。neverを入れると「一度も〜したことがない」という否定の経験を表す。\n\n【ポイント2】seeの活用を確認する\nsee（原形）→saw（過去形）→seen（過去分詞）という不規則変化。現在完了には過去分詞seenを使う。\n\n【ポイント3】不要な語を見つける\n"been"は"have been to〜"（〜に行ったことがある）という別の経験表現で使う語で、この文脈では使わない引っかけの語。\n\n【答え】\nI have never seen this movie.\n\n【確かめ】\n"have never seen"（見たことがない）という形になっていること、また"been"が使われずに余っていることを確認する。\n\n【よくあるまちがい】\n"have been to"（行ったことがある）と"have seen"（見たことがある）という2つの経験表現を混同し、beenを使ってしまうミス。\n\n【ここが絶対】\n"have never seen〜"＝〜を見たことがない、"have never been to〜"＝〜に行ったことがない、という2つの経験表現をセットで区別して覚える。',
     pitfall: '"have been to" と "have seen" を混同させる引っかけ問題。"seen" と "been" の両方があるときはどちらが正しい文脈かを判断しよう。',
     memoryTip: '"have never seen" = 見たことがない（経験の否定）。"have never been to" = 行ったことがない（経験の否定）。',
   },
@@ -756,7 +762,8 @@ By the end of the day, Yuki realized something important: she had been so afraid
     question: '次の条件に従って英語で書きなさい。\n条件：「あなたが環境のためにできることを1つ挙げ、その理由も含めて2文以上の英語で書きなさい。」',
     answer: '（例）I can use a reusable bag instead of a plastic bag when I go shopping. This will help reduce plastic waste and protect the ocean.',
     hint: '"I can ..." で始めて、続いて "because" や "This will ..." で理由・効果を説明しよう。',
-    explanation: '【文法のポイント】条件英作文では①指示通りの文の形にすること②英語として自然な文にすること③スペルミスをしないことが大切です。"instead of（〜の代わりに）" "This will help ..." などの表現を使うと説得力のある文になります。',
+    explanation:
+      '【何を聞かれているか】\n「環境のためにできることを1つ挙げ、その理由も含めて2文以上」という条件に従って英語で書く自由英作文問題。\n\n【なぜ2文構成にするのか】\n条件英作文では、指示された条件（今回は「理由を含めて2文以上」）を満たすことが採点上とても重要。1文で「何をするか」だけ書いても、理由が抜けていると条件を満たしたことにならない。\n\n【ポイント1】1文目で行動を述べる\n"I can use a reusable bag instead of a plastic bag when I go shopping."（買い物のときにビニール袋の代わりに繰り返し使える袋を使うことができる）のように、"I can〜"の形で具体的な行動を書く。\n\n【ポイント2】2文目で理由・効果を述べる\n"This will help reduce plastic waste and protect the ocean."のように、"This will〜"や"because〜"を使って、その行動がなぜ環境に良いのかを説明する。\n\n【ポイント3】文法・スペルミスに注意する\n条件を満たしていても、文法やスペルの誤りがあると減点対象になるため、書いたあとに見直す習慣をつける。\n\n【答え】\n（例）I can use a reusable bag instead of a plastic bag when I go shopping. This will help reduce plastic waste and protect the ocean.\n\n【確かめ】\n「何をするか（行動）」と「なぜそれが良いのか（理由・効果）」の両方が2文以上で書けているかを見直す。\n\n【よくあるまちがい】\n行動だけを1文書いて終わりにしてしまうミス。「理由も含めて2文以上」という条件を満たすには、必ず理由・効果の文を加える。\n\n【ここが絶対】\n条件英作文の基本形：①主張（I can/I will）→②理由・効果（because/This will）の2文構成を守る。',
     pitfall: '一文しか書かないと減点される。「何をするか」＋「なぜか・どんな効果があるか」の2文構成を守ろう。',
     memoryTip: '条件英作文の基本：①主張（I can / I will）→②理由・効果（because / This will）の2文構成！',
   },
@@ -781,10 +788,12 @@ By the end of the day, Yuki realized something important: she had been so afraid
     examType: 'koko',
     difficulty: 'advanced',
     maxOnly: true,
-    question: '次の語句を正しい順序に並べて英文を作りなさい。\n[ you / do / how / English / long / been / studying / have ]?',
+    question:
+      '次の語句を正しい順序に並べて英文を作りなさい。\n[ you / how / English / long / been / studying / have ]?',
     answer: 'How long have you been studying English?',
     hint: '現在完了進行形の疑問文の語順：How long + have + 主語 + been + 動詞-ing？',
-    explanation: '【文法のポイント】"How long have you been + 動詞-ing?" は「どのくらいの間〜し続けていますか」という現在完了進行形の疑問文です。開始時から現在まで継続している動作を尋ねます。この形は高校入試で頻出の問題形式です。',
+    explanation:
+      '【何を聞かれているか】\n語句を並べ替えて、現在完了進行形の疑問文を作る問題。\n\n【なぜ現在完了進行形の疑問文の語順にするのか】\n「どのくらいの間〜し続けていますか」という、過去から現在まで続く動作の長さを尋ねるときは、現在完了進行形（have/has been＋動詞-ing）の疑問文を使う。\n\n【ポイント1】現在完了進行形の疑問文の語順を確認する\nHow long＋have＋主語＋been＋動詞-ing？という語順になる。\n\n【ポイント2】文を組み立てる\n"How long have you been studying English?"＝「あなたはどのくらいの間英語を勉強していますか」。\n\n【ポイント3】現在形の疑問文との違いを確認する\n"How long do you study English?"は現在形の疑問文で「習慣的にどのくらい勉強するか」という別の意味になり、継続を表す現在完了進行形とは意味が異なる。\n\n【答え】\nHow long have you been studying English?\n\n【確かめ】\n"have"→"been"→"studying"という現在完了進行形の語順になっているか確認する。\n\n【よくあるまちがい】\n現在形の疑問文（do you study）と混同してしまうミス。「ずっと〜し続けている」という継続の意味を尋ねるときは、現在完了進行形を使う。\n\n【ここが絶対】\n"How long have you been -ing?"＝「どのくらい〜し続けていますか」という、継続を尋ねる現在完了進行形の疑問文としてセットで覚える。',
     pitfall: '"How long do you study English?" は現在完了ではなく現在形の疑問文なので意味が異なる（習慣的にどのくらい勉強するか）。',
     memoryTip: 'How long have you been -ing? = 「どのくらい〜し続けていますか」→ 継続を表す現在完了進行形！',
   },
@@ -798,7 +807,8 @@ By the end of the day, Yuki realized something important: she had been so afraid
     question: '次の日本語を英語にしなさい。\n「もし明日雨が降れば、私たちはその試合を中止します。」',
     answer: 'If it rains tomorrow, we will cancel the game.',
     hint: '「もし〜なら（これから起こりうること）」は直説法の条件文。条件節の中は未来でも現在形を使う！',
-    explanation: '【文法のポイント】"If + 現在形, 主語 + will + 動詞の原形" は「もし〜なら…するだろう」という条件文です。条件を表す "if" 節の中では未来のことでも現在形（rains）を使うのが英語のルールです。後半（主節）では will を使います。',
+    explanation:
+      '【何を聞かれているか】\n「もし明日雨が降れば、私たちはその試合を中止します。」という日本語を、条件文を使って英語にする問題。\n\n【なぜif節の中で現在形を使うのか】\n英語では、if（もし〜なら）で始まる条件節の中では、たとえ未来のことを表していても現在形を使うという決まりがある。未来の助動詞willはif節の中では使わない。\n\n【ポイント1】条件文の公式を確認する\nIf＋主語＋現在形〜, 主語＋will＋動詞の原形〜。\n\n【ポイント2】if節を組み立てる\n「もし明日雨が降れば」は"If it rains tomorrow"。tomorrow（未来のこと）でも動詞は現在形rainsを使う。\n\n【ポイント3】主節を組み立てる\n「私たちはその試合を中止します」は"we will cancel the game"。主節ではwillを使う。\n\n【答え】\nIf it rains tomorrow, we will cancel the game.\n\n【確かめ】\nif節の動詞が現在形（rains）になっていて、willが使われていないことを確認する。\n\n【よくあるまちがい】\n"If it will rain tomorrow..."のように、if節の中でもwillを使ってしまうミス。未来のことでも、if節の中は現在形にするのがルール。\n\n【ここが絶対】\n条件を表すif節の中はwillを使わず現在形にする。「もし明日雨が降れば→If it rains tomorrow」とセットで覚える。',
     pitfall: '"If it will rain..." とwillを使うのは間違い。条件節（if節）の中はwillを使わず現在形にする！',
     memoryTip: 'If節の中はwillを使わない！「もし明日雨が降れば → If it rains tomorrow」と覚えよう。',
   },
@@ -834,10 +844,12 @@ Mother: You've been in your room for three hours. What are you doing?
 Tom: I'm finishing my science project. It's due tomorrow.
 Mother: Oh, I didn't know that. Okay, finish it and then come eat. I'll keep your food warm.
 Tom: Thanks, Mom. I'll be done in about 20 minutes.`,
-    question: 'この対話の内容と一致するものを選びなさい。\n① Tomは3時間テレビを見ていた。\n② 科学の課題は明後日が締め切りだ。\n③ TomはあとおよそBig20分で作業を終える予定だ。\n④ 母親は夕食をテーブルに出してしまった。',
+    question:
+      'この対話の内容と一致するものを選びなさい。\n① Tomは3時間テレビを見ていた。\n② 科学の課題は明後日が締め切りだ。\n③ Tomはあとおよそ20分で作業を終える予定だ。\n④ 母親は夕食をテーブルに出してしまった。',
     answer: '③',
     hint: '"I\'ll be done in about 20 minutes." という表現を確認しよう。',
-    explanation: '【読解のポイント】③は "I\'ll be done in about 20 minutes（あと約20分で終わる）" と一致します。①Tomがしていたのは科学の課題（not テレビ）。②締め切りは "tomorrow（明日）"、明後日ではない。④母親は "I\'ll keep your food warm（温かく保っておく）" と言っており、まだ食卓に出すとは言っていない。',
+    explanation:
+      '【何を聞かれているか】\n対話文を読んで、内容と一致する選択肢を選ぶ問題。\n\n【なぜdueという語に注目するのか】\n"due"は「（期限が）〜である」という意味を表す重要単語で、締め切りに関する内容一致問題では特に注目すべきキーワードになる。\n\n【ポイント1】該当する文を確認する\n"I\'ll be done in about 20 minutes."（あと約20分で終わる）という発言が、選択肢③の内容と一致する。\n\n【ポイント2】他の選択肢を本文と照合する\n①Tomがしていたのはテレビではなく科学の課題。②締め切りは"due tomorrow"（明日）であり明後日ではない。④母親は"I\'ll keep your food warm"（温かく保っておく）と言っており、まだ食卓に出していない。\n\n【ポイント3】"in about 〜 minutes"の意味を確認する\n「あと約〜分で」という所要時間の見込みを表す表現。\n\n【答え】\n③\n\n【確かめ】\n選んだ選択肢が"I\'ll be done in about 20 minutes"の内容とそのまま一致していることを確認する。\n\n【よくあるまちがい】\n"due tomorrow"（明日締め切り）を「明後日」のように読み違えてしまうミス。dueは「期限」を表す重要単語として正確に読み取る。\n\n【ここが絶対】\n"due+日時"＝「〜が締め切りだ」という表現を覚えておく。内容一致問題は本文の具体的な表現と選択肢を1つずつ照合する。',
     pitfall: '②「due tomorrow（明日締め切り）」と「明後日」を混同しないこと。dueは「期限」を表す重要単語。',
     memoryTip: '"due + 日時" = 「〜が締め切りだ」。due tomorrow / due next week など入試頻出表現！',
   },
@@ -859,7 +871,8 @@ Visitor: Got it. Thank you.`,
     choices: ['① 2,400円', '② 3,100円', '③ 3,500円', '④ 2,700円'],
     answer: '② 3,100円',
     hint: '大人チケット2枚（1,200円×2）＋学生チケット1枚（700円）を計算しよう。',
-    explanation: '【読解のポイント】計算問題です。大人チケット：1,200円 × 2 = 2,400円。学生チケット：700円 × 1 = 700円。合計：2,400 + 700 = 3,100円。本文の "that will be 3,100 yen in total" でも確認できます。',
+    explanation:
+      '【何を聞かれているか】\n対話文（チケット購入の場面）を読んで、Visitorが支払う合計金額を計算する問題。\n\n【なぜ計算が必要なのか】\n英語の読解問題の中には、本文中の数字を正確に読み取って計算する問題がある。英単語の意味だけでなく、数量（何枚か）を正確に把握することが重要。\n\n【ポイント1】チケットの単価と枚数を確認する\n大人チケットは1,200円で2枚、学生チケットは700円で1枚。\n\n【ポイント2】それぞれの合計を計算する\n大人チケット：1,200円×2＝2,400円。学生チケット：700円×1＝700円。\n\n【ポイント3】全体の合計を計算する\n2,400円＋700円＝3,100円。本文の"that will be 3,100 yen in total"という表現でも確認できる。\n\n【答え】\n② 3,100円\n\n【確かめ】\n1,200×2＋700×1＝3,100という計算が正しいか、本文の"3,100 yen in total"という表現と一致しているかを確認する。\n\n【よくあるまちがい】\n「2枚」と「1枚」という数量を読み間違えて、誤った金額を計算してしまうミス。英語の数字問題は数量を正確にメモしてから計算する。\n\n【ここが絶対】\n英語の金額・計算問題は、聞き取った（読み取った）数字と数量を素早く正確にメモする習慣をつける。',
     pitfall: '計算自体は簡単だが、「2枚と1枚」という数量を正確に把握してから計算しよう。',
     memoryTip: '英語の金額・計算問題は聞き取った数字を素早くメモする習慣をつけよう！',
   },
@@ -880,7 +893,8 @@ Visitor: Got it. Thank you.`,
     question: '3階の特別展示に関して正しいものを選びなさい。\n① 本日は閉館している。\n② 博物館全体と同じ時間に閉まる。\n③ 博物館全体よりも1時間早く閉まる。\n④ 本日は特別に無料で見られる。',
     answer: '③',
     hint: '"it closes at 5 p.m., which is one hour earlier than the rest of the museum" という表現を確認しよう。',
-    explanation: '【読解のポイント】③は "one hour earlier than the rest of the museum（博物館の他の部分より1時間早く閉まる）" と一致します。①は "Yes, it is（本日は開いている）" と矛盾。②は「同じ時間」ではなく「1時間早い」のが正しい。④無料とは述べられていない。',
+    explanation:
+      '【何を聞かれているか】\n博物館の3階の特別展示に関する説明を読んで、内容と一致する選択肢を選ぶ問題。\n\n【なぜ比較級の表現に注目するのか】\n"one hour earlier than〜"（〜より1時間早く）という比較級の表現が、選択肢の正誤を分ける決め手になっている。\n\n【ポイント1】該当する文を確認する\n"it closes at 5 p.m., which is one hour earlier than the rest of the museum"（午後5時に閉まり、これは博物館の他の部分より1時間早い）。\n\n【ポイント2】他の選択肢を本文と照合する\n①本文の"Yes, it is"（本日は開いている）と矛盾。②「同じ時間」ではなく「1時間早い」が正しい。④無料とは述べられていない。\n\n【ポイント3】earlierの意味を確認する\nearlyの比較級で「より早く」という意味。\n\n【答え】\n③\n\n【確かめ】\n選んだ選択肢が"one hour earlier than the rest of the museum"の内容と一致していることを確認する。\n\n【よくあるまちがい】\n"Yes, it is"（開いている）という肯定の返答を見落とし、①「本日は閉館している」を選んでしまうミス。\n\n【ここが絶対】\n"〜 earlier than…"＝「…より〜早く」という比較級の表現に注目して、本文の具体的な時間の違いを正確に読み取る。',
     pitfall: '①を選んでしまう生徒が多いが、"Yes, it is"（開いている）という肯定の返答を見落とさないように。',
     memoryTip: '"one hour earlier than ～" = 「〜より1時間早い」比較級の表現。earlier = early の比較級！',
   },
@@ -919,10 +933,12 @@ Ryo: I know! I was surprised because I didn't know she could sing like that. Did
 Sakura: I missed it. I arrived late because of the train delay. Was it good?
 Ryo: It was incredible. He made a coin disappear and then found it inside an orange. The audience went wild.
 Sakura: Wow, I wish I had seen it. Maybe he'll perform again at the cultural festival.`,
-    question: '対話の内容と一致するものを選びなさい。\n① SakuraはHinaの歌が嫌いだった。\n② RyoはKentaのマジックを見なかった。\n③ KentaはオレンジのなかからコインをBig見つけた。\n④ SakuraはKentaのマジックを最初から見た。',
+    question:
+      '対話の内容と一致するものを選びなさい。\n① SakuraはHinaの歌が嫌いだった。\n② RyoはKentaのマジックを見なかった。\n③ Kentaはオレンジのなかからコインを見つけた。\n④ SakuraはKentaのマジックを最初から見た。',
     answer: '③',
     hint: '"He made a coin disappear and then found it inside an orange." という表現を確認しよう。',
-    explanation: '【読解のポイント】③は "He made a coin disappear and then found it inside an orange（コインを消してオレンジの中から見つけた）" と一致します。①Sakuraは "amazing" や "beautiful voice" とポジティブに述べている。②Ryoはマジックを見て "incredible" と言っている。④SakuraはKentaのショーを "missed it（見逃した）" と述べている。',
+    explanation:
+      '【何を聞かれているか】\n対話文を読んで、内容と一致する選択肢を選ぶ問題。\n\n【なぜmakeを使った表現に注目するのか】\n"make+O+動詞の原形"（Oを〜させる）という使役動詞の構文が、マジックの内容を説明する重要な部分になっている。\n\n【ポイント1】該当する文を確認する\n"He made a coin disappear and then found it inside an orange."（コインを消して、それからオレンジの中から見つけた）が選択肢③の内容と一致する。\n\n【ポイント2】他の選択肢を本文と照合する\n①Sakuraは"amazing"や"beautiful voice"とポジティブに述べている。②Ryoはマジックを見て"incredible"と言っている。④Sakuraは"missed it"（見逃した）と述べており、最初から見ていたわけではない。\n\n【ポイント3】使役動詞makeの意味を確認する\n"make a coin disappear"＝「コインを消す（消えさせる）」。\n\n【答え】\n③\n\n【確かめ】\n選んだ選択肢が"made a coin disappear and then found it inside an orange"の内容と一致していることを確認する。\n\n【よくあるまちがい】\n対話形式で、誰が何を経験し、どう感じたかを混同してしまうミス。登場人物ごとに発言を整理してから答える。\n\n【ここが絶対】\n"make+O+動詞の原形"＝Oを〜させる、という使役動詞の構文を正確に読み取る。対話問題は「誰が・何を・どう思ったか」を整理する。',
     pitfall: '対話形式では誰が何を経験したかを混同しやすい。「誰が・何を・どう思ったか」を整理してから答えよう。',
     memoryTip: '"make + O + 動詞の原形（原形不定詞）" = OをVさせる（使役動詞）。"make a coin disappear" = コインを消す（消えさせる）。',
   },
@@ -944,7 +960,8 @@ Teacher: The school will cover most of the expenses. Participants will need to p
     question: 'このプログラムについて正しいものを選びなさい。\n① 来年の秋に行われる予定だ。\n② 3週間のカナダ研修だ。\n③ 参加希望者は今月末までに申込書を提出する。\n④ 費用はすべて参加者が負担する。',
     answer: '③',
     hint: '"Students who are interested need to submit an application form by the end of this month." という一文を確認しよう。',
-    explanation: '【読解のポイント】③は "submit an application form by the end of this month（今月末までに申込書を提出する）" と一致します。①春（next spring）に行われる予定で秋ではない。②2週間（two weeks）で3週間ではない。④学校が大部分の費用を負担し（"The school will cover most of the expenses"）、参加者は5万円のみ負担する。',
+    explanation:
+      '【何を聞かれているか】\n海外研修プログラムの説明を読んで、内容と一致する選択肢を選ぶ問題。\n\n【なぜ数字や期間に注目するのか】\nプログラムの説明文では、時期・期間・費用などの数字情報が選択肢で少しだけ変えられていることが多く、本文と正確に照合する必要がある。\n\n【ポイント1】該当する文を確認する\n"Students who are interested need to submit an application form by the end of this month."（希望者は今月末までに申込書を提出する必要がある）が選択肢③と一致する。\n\n【ポイント2】他の選択肢を本文と照合する\n①実施は「来年の春（next spring）」で秋ではない。②期間は「2週間（two weeks）」で3週間ではない。④"The school will cover most of the expenses"（学校が費用の大部分を負担する）とあり、参加者がすべて負担するわけではない。\n\n【ポイント3】"submit an application form"の意味を確認する\n「申込書を提出する」という意味の重要表現。\n\n【答え】\n③\n\n【確かめ】\n選んだ選択肢が"submit an application form by the end of this month"の内容と一致していることを確認する。\n\n【よくあるまちがい】\n"two weeks"（2週間）と「3週間」のように、似た数字表現を読み違えてしまうミス。\n\n【ここが絶対】\nプログラムの説明文は「時期・期間・費用」の数字情報を本文と1つずつ照合して答える。',
     pitfall: '数字や期間の読み違いが多い設問。"two weeks"（2週間）と "three weeks"（3週間）など似た表現に注意。',
     memoryTip: '"submit an application form" = 申込書を提出する。"by the end of this month" = 今月末までに。英語の締め切り表現は重要！',
   },
