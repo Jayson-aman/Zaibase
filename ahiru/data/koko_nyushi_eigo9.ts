@@ -11,25 +11,8 @@ export const kokoNyushiEigo9: Question[] = [
     choices: ['① watches', '② watched', '③ has watched', '④ had been watching'],
     answer: '④ had been watching',
     hint: '「発見した」という過去の一点よりもさらに前から続いていた動作を表す時制を選ぶ。',
-    explanation: `【出題意図】
-過去完了進行形（had been + Ving）の用法を問う問題。過去の基準点よりも前から継続していた動作を識別できるかが目標。
-
-【解説】
-「discovered（発見した）」は過去の一点。その一点よりもさらに前の時点から「星を観測し続けていた」という継続動作を表すには過去完了進行形を使う。
-・① watches → 現在形（文脈に合わない）
-・② watched → 過去形（継続の意味が弱い）
-・③ has watched → 現在完了形（過去の基準点には使えない）
-・④ had been watching → 過去完了進行形（✓）
-
-日本語訳：「その天文学者は、ついに新しい惑星を発見したとき、10年以上も星を観測し続けていた。」
-
-【文法ポイント】
-過去完了進行形＝had been + 動詞-ing。過去のある時点よりもさらに前から、その時点まで継続していた動作に使う。「for〜」「since〜」など継続を示す語句とセットで出やすい。
-
-【入試頻出】
-・He had been studying physics for five years when he entered university.
-・They had been developing the software since the project began.
-・「過去の一点＋when節」の後に過去完了（進行）形が来るパターンを押さえよ。`,
+    explanation:
+      '【何を聞かれているか】「The astronomer ( ) the stars for over ten years when she finally discovered the new planet.」の空所に入る適切な時制を選ぶ。\n【なぜhad been watchingになるのか】「発見した」という過去の一点よりさらに前から「星を観測し続けていた」という継続動作を表すには、過去完了進行形（had been＋動詞のing形）を使う必要があるから。\n【ポイント1】discovered（発見した）は過去の1つの時点。その時点よりも前から継続していた動作を表すには、さらに過去を示す時制が必要。\n【ポイント2】①watches（現在形）、②watched（過去形、継続の意味が弱い）、③has watched（現在完了、過去の基準点には使えない）はどれも文脈に合わない。\n【ポイント3】④had been watching（過去完了進行形）が正解。「10年以上も星を観測し続けていた」という意味になる。\n【答え】④ had been watching\n【確かめ】「for over ten years」という継続の期間を表す語句と、過去完了進行形の組み合わせがセットになっていることを確認する。\n【よくあるまちがい】has watched（現在完了形）を選んでしまう。現在完了は現在を基準にするので、過去の基準点には使えない。\n【ここが絶対】過去のある時点よりもさらに前から、その時点まで継続していた動作には過去完了進行形を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -102,24 +85,8 @@ have to：外部の規則・状況による義務。must：話者の主観的な
     choices: ['① powerful', '② more powerful', '③ the most powerful', '④ most powerful'],
     answer: '③ the most powerful',
     hint: '「これまでに作られた中で一番〜」は最上級。最上級には the が必要。',
-    explanation: `【出題意図】
-最上級の形と、最上級には定冠詞 the が必要なことを問う問題。
-
-【解説】
-「that scientists have ever built（科学者がこれまでに作った中で）」は範囲を示し、その中での「一番」を表すには最上級が必要。
-・① powerful → 原級（比較なし）
-・② more powerful → 比較級（2つの比較）
-・③ the most powerful → 最上級（✓）
-・④ most powerful → the が抜けている（誤り）
-
-日本語訳：「これは科学者たちがこれまでに作った中で最も強力な望遠鏡だ。」
-
-【文法ポイント】
-最上級：the + most + 形容詞（多音節語）または the + 形容詞 + est（短い語）。最上級には必ず the が必要。
-
-【入試頻出】
-・This is the fastest computer in the world.
-・That is the smallest robot I have ever seen.`,
+    explanation:
+      '【何を聞かれているか】「This is ( ) telescope that scientists have ever built.」の空所に入る適切な比較表現を選ぶ。\n【なぜthe most powerfulになるのか】「that scientists have ever built（科学者がこれまでに作った中で）」という範囲を示す表現があるため、その中での「一番」を表す最上級が必要で、powerfulは長い形容詞なのでthe mostを使うから。\n【ポイント1】①powerful（原級）、②more powerful（比較級）はどちらも「一番」の意味を表せない。\n【ポイント2】③the most powerful（最上級）が正解。\n【ポイント3】④most powerful（theが抜けている誤り）。最上級には必ずtheが必要。\n【答え】③ the most powerful\n【確かめ】the most powerfulのtheが抜けていないかを確認する。\n【よくあるまちがい】④most powerfulのようにtheをつけ忘れてしまう。\n【ここが絶対】最上級には必ずtheをつける。多音節語はthe most＋形容詞の形にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -162,24 +129,8 @@ have to：外部の規則・状況による義務。must：話者の主観的な
     choices: ['① test', '② to test', '③ testing', '④ tested'],
     answer: '③ testing',
     hint: 'finish の後ろには動名詞（〜ing）が来る。',
-    explanation: `【出題意図】
-動名詞のみを目的語にとる動詞（finish）を正しく使えるかを問う問題。
-
-【解説】
-finish は目的語に動名詞（〜ing）のみを取り、不定詞は取らない。
-・① test → 原形（finishの後ろには使えない）
-・② to test → 不定詞（finishの後ろには来ない）
-・③ testing → 動名詞（✓）finish + 動名詞
-・④ tested → 過去形（目的語にはなれない）
-
-日本語訳：「そのプログラマーは締め切り前に新しいアプリのテストを終えた。」
-
-【文法ポイント】
-動名詞のみを目的語にとる動詞（入試頻出）：finish（終える）、enjoy（楽しむ）、stop（やめる）、practice（練習する）、give up（諦める）。
-
-【入試頻出】
-・She finished writing the code last night.
-・He gave up fixing the broken drone.`,
+    explanation:
+      '【何を聞かれているか】「The programmer finished ( ) the new app before the deadline.」の空所に入る適切な形を選ぶ。\n【なぜtestingになるのか】finishは動名詞（-ing）だけを目的語に取り、不定詞（to＋原形）は目的語に取らないという決まりがあるから。\n【ポイント1】①test（原形）、②to test（不定詞）はどちらもfinishの後ろには使えない。\n【ポイント2】③testing（動名詞）が正解。finish＋動名詞の形。\n【ポイント3】④tested（過去形）は目的語の位置には使えない。動名詞のみを目的語に取る動詞にはほかにenjoy、stop、practice、give upなどがある。\n【答え】③ testing\n【確かめ】finishのあとが動詞のing形になっているかを確認する。\n【よくあるまちがい】finishのあとにto testを続けてしまう。\n【ここが絶対】finishは動名詞のみを目的語に取る動詞として覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -192,24 +143,8 @@ finish は目的語に動名詞（〜ing）のみを取り、不定詞は取ら�
     choices: ['① will discover', '② will have discovered', '③ have discovered', '④ discovered'],
     answer: '② will have discovered',
     hint: '「2030年までには」という未来の時点での完了を表す時制を選ぶ。',
-    explanation: `【出題意図】
-未来完了形（will have + 過去分詞）の用法を問う問題。未来のある時点での完了を表す時制の識別。
-
-【解説】
-「By the year 2030（2030年までには）」は未来の時点。その時点までに「発見を終えていることになる」という未来完了を表す。
-・① will discover → 単純未来（完了の意味がない）
-・② will have discovered → 未来完了（✓）
-・③ have discovered → 現在完了（未来の時点には使えない）
-・④ discovered → 過去形（文脈に合わない）
-
-日本語訳：「2030年までには、科学者たちはAIの助けを借りて多くの病気の治療法を発見しているだろう。」
-
-【文法ポイント】
-未来完了形＝will have + 過去分詞。目印の語句：by the time〜／by then／by 2030 など未来の時点を示す語。
-
-【入試頻出】
-・By next year, they will have completed the new space station module.
-・She will have finished her research by the time she graduates.`,
+    explanation:
+      '【何を聞かれているか】「By the year 2030, scientists ( ) a cure for many diseases with the help of AI.」の空所に入る適切な時制を選ぶ。\n【なぜwill have discoveredになるのか】「2030年までには」という未来のある時点で「発見を終えていることになる」という完了を表すには、未来完了形（will have＋過去分詞）を使う必要があるから。\n【ポイント1】By the year 2030（2030年までには）は未来の時点を示す表現。\n【ポイント2】①will discover（単純未来）、③have discovered（現在完了、未来の時点には使えない）、④discovered（過去形）はどれも文脈に合わない。\n【ポイント3】②will have discovered（未来完了）が正解。目印はby the time〜、by then、by 2030など。\n【答え】② will have discovered\n【確かめ】By the year 2030という未来の時点を示す語句と、will have＋過去分詞の組み合わせがセットになっていることを確認する。\n【よくあるまちがい】have discovered（現在完了）を選んでしまう。現在完了は現在を基準にするので、未来の時点には使えない。\n【ここが絶対】未来のある時点での完了にはwill have＋過去分詞（未来完了形）を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -222,24 +157,8 @@ finish は目的語に動名詞（〜ing）のみを取り、不定詞は取ら�
     choices: ['① is', '② will be', '③ was', '④ has been'],
     answer: '① is',
     hint: '条件を表す if 節の中では、未来のことでも現在形を使う。',
-    explanation: `【出題意図】
-条件節（if 節）での時制のルール「未来のことでも現在形を使う」を問う問題。入試最頻出文法の一つ。
-
-【解説】
-「If the rocket launch 〜, it will be」は条件文。時・条件を表す副詞節の中では、未来のことでも will を使わず現在形を使う。
-・① is → 現在形（✓）if 節内では現在形で未来を表す
-・② will be → if 節内で will は使えない
-・③ was → 過去形（仮定法になり文意が変わる）
-・④ has been → 現在完了（文脈に合わない）
-
-日本語訳：「もし明日のロケット打ち上げが成功すれば、それは宇宙探査にとって歴史的な瞬間になるだろう。」
-
-【文法ポイント】
-時・条件を表す副詞節の中では未来のことでも現在形：if／when／until／as soon as／before／after。
-
-【入試頻出】
-・If the experiment succeeds, we will publish the results.
-・When the satellite reaches orbit, it will start sending data.`,
+    explanation:
+      '【何を聞かれているか】「If the rocket launch ( ) successful tomorrow, it will be a historic moment for space exploration.」の空所に入る適切な語を選ぶ。\n【なぜisになるのか】条件を表すif節の中では、未来のことでもwillを使わず現在形を使うという決まりがあるから。\n【ポイント1】if節などの副詞節の中では、未来のことでも現在形で表す。②will beはif節の中では使えない。\n【ポイント2】③was（過去形、仮定法になり文意が変わる）、④has been（現在完了、文脈に合わない）はどちらも誤り。\n【ポイント3】①is（現在形）が正解。「もし明日のロケット打ち上げが成功すれば」という条件を表す。\n【答え】① is\n【確かめ】主節にwillが使われている（it will be）ことと、if節が現在形（is）になっていることのバランスを確認する。\n【よくあるまちがい】if節の中にもwillを入れてしまう。\n【ここが絶対】時・条件を表す副詞節の中では、未来のことでも現在形を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -312,24 +231,8 @@ than があれば比較級が必要。powerful は3音節の形容詞なので m
     choices: ['① watch', '② watched', '③ watching', '④ to watch'],
     answer: '② watched',
     hint: '現在完了形（have/has + 過去分詞）の経験用法。watch の過去分詞を選ぶ。',
-    explanation: `【出題意図】
-現在完了形（経験用法）の形と、ever（これまでに）を使った疑問文の作り方を問う問題。
-
-【解説】
-Have you ever ( )? は「これまでに〜したことがありますか」という現在完了の経験用法。過去分詞が必要。
-・① watch → 原形（have の後ろに原形は来ない）
-・② watched → 過去分詞（✓）watch-watched-watched（規則動詞）
-・③ watching → 現在分詞（have been watching なら別の意味）
-・④ to watch → 不定詞（現在完了の形には合わない）
-
-日本語訳：「これまでにブラックホールについてのドキュメンタリーを見たことがありますか？」
-
-【文法ポイント】
-現在完了（経験）の目印：ever（これまでに）、never（一度も〜ない）、before（以前に）、〜times（〜回）。
-
-【入試頻出】
-・Have you ever used a 3D printer?
-・She has never seen a real rocket launch.`,
+    explanation:
+      '【何を聞かれているか】「Have you ever ( ) a documentary about black holes?」の空所に入る適切な形を選ぶ。\n【なぜwatchedになるのか】Have you ever〜?は「これまでに〜したことがありますか」という現在完了の経験用法の疑問文で、have/hasのあとには過去分詞が必要だから。\n【ポイント1】①watch（原形）はhaveの後ろに来ない。\n【ポイント2】③watching（現在分詞）はhave been watchingなら別の意味になり、この文には合わない。④to watch（不定詞）も現在完了の形には合わない。\n【ポイント3】②watched（過去分詞）が正解。watchは規則動詞でwatch-watched-watchedと活用する。\n【答え】② watched\n【確かめ】haveのあとに過去分詞watchedが続いているかを確認する。\n【よくあるまちがい】haveのあとに原形をそのまま続けてしまう。\n【ここが絶対】現在完了の経験用法Have you ever〜?のあとは必ず過去分詞を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -406,24 +309,8 @@ be interested in〜 は「〜に興味がある」という意味のイディオ
     choices: ['① make', '② have', '③ take', '④ give'],
     answer: '③ take',
     hint: 'take part in〜 で「〜に参加する」という熟語。',
-    explanation: `【出題意図】
-動詞 take を含む重要熟語 take part in〜 を正確に知っているかを問う問題。
-
-【解説】
-take part in〜 は「〜に参加する」という重要イディオム。
-・① make → make part in は存在しない
-・② have → have part in は存在しない
-・③ take → take part in〜（✓）
-・④ give → give part in は存在しない
-
-日本語訳：「今年、多くの生徒が科学フェアに参加することに決めた。」
-
-【文法ポイント】
-take を含む頻出熟語：take part in〜（参加する）、take care of〜（世話をする）、take a look at〜（見る）、take place（行われる）。
-
-【入試頻出】
-・Our class will take part in the robot contest.
-・The presentation takes place next Friday.`,
+    explanation:
+      '【何を聞かれているか】「Many students decided to ( ) part in the science fair this year.」の空所に入る適切な動詞を選ぶ。\n【なぜtakeになるのか】「〜に参加する」という意味は、動詞takeを使ったtake part in〜という決まったイディオムで表すから。\n【ポイント1】take part in〜は「〜に参加する」という重要イディオム。\n【ポイント2】①make part in、②have part in、④give part inはどれも存在しない表現。\n【ポイント3】takeを含む頻出熟語：take care of〜（世話をする）、take a look at〜（見る）、take place（行われる）。\n【答え】③ take\n【確かめ】take part in the science fairで「科学フェアに参加する」という意味になっているかを確認する。\n【よくあるまちがい】make part inのように、他の動詞をあてはめてしまう。\n【ここが絶対】「〜に参加する」はtake part in〜という決まった形で覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -466,24 +353,8 @@ look の句動詞：look for〜（探す）、look into〜（調べる）、look
     choices: ['① to', '② at', '③ in', '④ on'],
     answer: '② at',
     hint: '惑星のような到達地点には arrive at を使う。',
-    explanation: `【出題意図】
-arrive at の用法を問う問題。到達点としての場所を示す前置詞の選択。
-
-【解説】
-arrive の後ろの前置詞は場所の捉え方によって使い分ける。惑星や目的地点として捉える場合は arrive at を使う（駅・空港などの特定地点と同じ扱い）。
-・① to → arrive to という形は使わない
-・② at → 到達地点を示す前置詞（✓）
-・③ in → 都市や国など広い範囲に入り込む場合に使う
-・④ on → arrive on は使わない
-
-日本語訳：「その探査機は6年間の旅の末、ついに木星に到着した。」
-
-【文法ポイント】
-arrive at〜（特定の地点・目的地）：arrive at the station / arrive at Mars。arrive in〜（広い範囲）：arrive in Tokyo。
-
-【入試頻出】
-・The rover arrived at the landing site safely.
-・We arrived at the airport two hours early.`,
+    explanation:
+      '【何を聞かれているか】「The space probe finally arrived ( ) Jupiter after a six-year journey.」の空所に入る適切な前置詞を選ぶ。\n【なぜatになるのか】木星のような特定の到達地点を表すときは、arrive atという決まった形を使う必要があるから（駅・空港などの特定地点と同じ扱い）。\n【ポイント1】arrive atは特定の地点・目的地に到着することを表す（例：arrive at the station）。\n【ポイント2】①to（arrive toという形は使わない）、③in（都市や国など広い範囲に入り込む場合に使う）、④on（arrive onは使わない）はどれも誤り。\n【ポイント3】②at（到達地点を示す前置詞）が正解。arrive in〜は都市や国などの広い範囲に使う（例：arrive in Tokyo）。\n【答え】② at\n【確かめ】Jupiter（木星）が特定の到達地点として捉えられていることを確認する。\n【よくあるまちがい】arrive atとarrive inを混同してしまう。\n【ここが絶対】arrive at〜（特定の地点・目的地）、arrive in〜（広い範囲）を使い分ける。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -556,24 +427,8 @@ be known for〜（業績・理由）／be known as〜（肩書き）／be famous
     choices: ['① turn off', '② turn down', '③ turn up', '④ turn over'],
     answer: '① turn off',
     hint: '会議前に電源を「切る」という意味の句動詞を選ぶ。',
-    explanation: `【出題意図】
-turn を使った句動詞の使い分けを問う問題。turn off / turn down / turn up / turn over の意味の違いが目標。
-
-【解説】
-「会議が始まる前にスマートフォンの電源を切る」という文脈から turn off（電源を切る）を選ぶ。
-・① turn off → 電源を切る（✓）
-・② turn down → 音量を下げる／申し出を断る
-・③ turn up → 音量を上げる／現れる
-・④ turn over → ひっくり返す
-
-日本語訳：「会議が始まる前に、スマートフォンの電源を切ることを忘れないでください。」
-
-【文法ポイント】
-turn の句動詞：turn on/off（つける／消す）、turn up/down（上げる／下げる）、turn over（ひっくり返す）。
-
-【入試頻出】
-・Please turn off the computer before you leave the lab.
-・Can you turn down the volume of the speaker?`,
+    explanation:
+      '【何を聞かれているか】「Please remember to ( ) your smartphone before the meeting starts.」の空所に入る適切な句動詞を選ぶ。\n【なぜturn offになるのか】「電源を切る」という意味は、turn offという決まった句動詞で表すから。\n【ポイント1】①turn off（電源を切る）が正解。\n【ポイント2】②turn down（音量を下げる／申し出を断る）、③turn up（音量を上げる／現れる）、④turn over（ひっくり返す）はどれもこの文脈に合わない。\n【ポイント3】turnの句動詞：turn on/off（つける／消す）、turn up/down（上げる／下げる）。\n【答え】① turn off\n【確かめ】会議前にスマートフォンの「電源を切る」という文脈にturn offが合っているかを確認する。\n【よくあるまちがい】turn downとturn offを混同してしまう。\n【ここが絶対】turn on/off（電源のつける・消す）、turn up/down（音量の上げる・下げる）を区別して覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -586,24 +441,8 @@ turn の句動詞：turn on/off（つける／消す）、turn up/down（上げ�
     choices: ['① in', '② at', '③ on', '④ of'],
     answer: '③ on',
     hint: 'depend の後ろに来る前置詞を選ぶ。',
-    explanation: `【出題意図】
-熟語 depend on〜（〜次第である、〜に依存する）の前置詞を問う問題。
-
-【解説】
-depend on〜 は「〜次第である、〜に左右される」という重要イディオム。前置詞 on が固定。
-・① in → depend in は存在しない
-・② at → depend at は存在しない
-・③ on → depend on〜（✓）
-・④ of → depend of は存在しない
-
-日本語訳：「その宇宙ミッションの成功は、計算の正確さにかかっている。」
-
-【文法ポイント】
-depend on〜（〜次第である）：rely on〜（頼る）も類似の意味で使われる。
-
-【入試頻出】
-・Whether the launch succeeds depends on the weather.
-・You can always depend on this software.`,
+    explanation:
+      '【何を聞かれているか】「The success of the space mission depends ( ) the accuracy of the calculations.」の空所に入る適切な前置詞を選ぶ。\n【なぜonになるのか】「〜次第である、〜に依存する」という意味は、depend on〜という前置詞onが固定された決まったイディオムで表すから。\n【ポイント1】depend on〜は「〜次第である、〜に左右される」という重要イディオムで前置詞onが固定される。\n【ポイント2】①in、②at、④ofはどれもdependのあとに続く前置詞としては存在しない組み合わせ。\n【ポイント3】似た意味の表現にrely on〜（頼る）がある。\n【答え】③ on\n【確かめ】depend on the accuracy of the calculationsで「計算の正確さにかかっている」という意味になっているかを確認する。\n【よくあるまちがい】depend inやdepend ofのように別の前置詞を使ってしまう。\n【ここが絶対】depend on〜は前置詞onが固定された決まった形として覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -620,24 +459,8 @@ depend on〜（〜次第である）：rely on〜（頼る）も類似の意味�
     choices: ['① who', '② which', '③ whom', '④ whose'],
     answer: '① who',
     hint: '先行詞は「人」、関係代名詞節内での役割は「主語」。',
-    explanation: `【出題意図】
-関係代名詞の選択（who / which / whom / whose）を問う問題。先行詞が人か物か、節内の役割の識別が目標。
-
-【解説】
-先行詞は「The scientist（科学者）」＝人。関係代名詞節内で「works（働く）」の主語の役割を果たしている。
-・① who → 先行詞が人・主格（✓）
-・② which → 先行詞が物や動物
-・③ whom → 先行詞が人・目的格
-・④ whose → 先行詞が人または物・所有格
-
-日本語訳：「NASAで働くその科学者はブラックホールについての講演を行った。」
-
-【文法ポイント】
-関係代名詞まとめ：人＝who（主格）／whom（目的格）／whose（所有格）。物＝which（主格・目的格）／whose（所有格）。
-
-【入試頻出】
-・The engineer who designed this robot is very famous.
-・I know a researcher who studies deep-sea creatures.`,
+    explanation:
+      '【何を聞かれているか】「The scientist ( ) works at NASA gave a lecture about black holes.」の空所に入る適切な関係代名詞を選ぶ。\n【なぜwhoになるのか】先行詞The scientist（科学者）は人で、関係代名詞節の中でworks（働く）の主語の役割をしているため、先行詞が人・主格のときに使うwhoを選ぶ必要があるから。\n【ポイント1】先行詞がThe scientist（人）で、関係代名詞節内でworksの主語になっている（主格）。\n【ポイント2】②whichは先行詞が物や動物、③whomは先行詞が人・目的格、④whoseは所有格で、どれも文脈に合わない。\n【ポイント3】関係代名詞まとめ：人＝who（主格）／whom（目的格）／whose（所有格）、物＝which（主格・目的格）／whose（所有格）。\n【答え】① who\n【確かめ】whoのあとに動詞（works）が続いている（主語の役割）ことを確認する。\n【よくあるまちがい】先行詞が人なのにwhichを選んでしまう。\n【ここが絶対】関係代名詞は、先行詞が人か物かと、節内での役割（主格・目的格・所有格）の両方で決まる。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -650,26 +473,8 @@ depend on〜（〜次第である）：rely on〜（頼る）も類似の意味�
     choices: ['① which', '② who', '③ whom', '④ where'],
     answer: '① which',
     hint: '先行詞は「物（スマートフォン）」。関係代名詞節内で bought の目的語になっている。',
-    explanation: `【出題意図】
-関係代名詞 which（先行詞が物・目的格）の用法を問う問題。that との言い換えも理解する。
-
-【解説】
-先行詞は「The smartphone（スマートフォン）」＝物。関係代名詞節内で I bought ( )（私が買った）の目的語になっている。
-・① which → 先行詞が物・目的格（✓）
-・② who → 先行詞が人のとき
-・③ whom → 先行詞が人・目的格
-・④ where → 関係副詞（場所を表す先行詞に使う）
-
-which は省略可（that に置き換え可）：The smartphone (that) I bought last year〜
-
-日本語訳：「私が去年買ったスマートフォンは、もう時代遅れに感じられる。」
-
-【文法ポイント】
-目的格の関係代名詞は省略可能：The device (which/that) I ordered was delivered yesterday.
-
-【入試頻出】
-・The laptop (which) she uses is very old.
-・The app (that) I downloaded doesn't work well.`,
+    explanation:
+      '【何を聞かれているか】「The smartphone ( ) I bought last year already feels outdated.」の空所に入る適切な関係代名詞を選ぶ。\n【なぜwhichになるのか】先行詞The smartphone（スマートフォン）は物で、関係代名詞節の中でI bought（　）の目的語の役割をしているため、先行詞が物・目的格のときに使うwhichを選ぶ必要があるから。\n【ポイント1】先行詞がThe smartphone（物）で、関係代名詞節内でI boughtの目的語になっている（目的格）。\n【ポイント2】②whoは先行詞が人、③whomは先行詞が人・目的格、④whereは関係副詞で、どれも文脈に合わない。\n【ポイント3】whichは省略も可能で、thatに置きかえることもできる：The smartphone (that) I bought last year〜。\n【答え】① which\n【確かめ】whichのあとにI bought（主語＋動詞）が続いている（目的語の役割）ことを確認する。\n【よくあるまちがい】先行詞が物なのにwhoを選んでしまう。\n【ここが絶対】目的格の関係代名詞は省略できる。先行詞が物ならwhich（thatはどちらにも使える）。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -711,26 +516,8 @@ which は省略可（that に置き換え可）：The smartphone (that) I bought
     question: '次の2文を1文に書き換えなさい。（関係代名詞を使って）\n\nI met a scientist.\nHer research is about renewable energy.',
     answer: 'I met a scientist whose research is about renewable energy.',
     hint: '2つの文をつなぐとき、Her（彼女の）を所有格の関係代名詞 whose に変える。',
-    explanation: `【出題意図】
-所有格の関係代名詞 whose を使って2文を1文に結合する問題。
-
-【解説】
-「I met a scientist.」と「Her research is about renewable energy.」の Her は a scientist を指している。この「Her（その科学者の）」という所有の関係を表すのが関係代名詞の所有格 whose。
-
-変換の手順：
-1. 先行詞を特定：a scientist（人）
-2. Her（所有格）→ whose に置き換える
-3. whose を先行詞 a scientist の直後に置く
-→ I met a scientist whose research is about renewable energy.
-
-日本語訳：「私は研究テーマが再生可能エネルギーである科学者に会った。」
-
-【文法ポイント】
-whose の使い方：先行詞（人・物）の所有格を表す。whose 節の構造＝先行詞 + whose + 名詞 + 動詞〜。
-
-【入試頻出】
-・I know an engineer whose invention won an award.
-・This is the company whose products are used worldwide.`,
+    explanation:
+      '【何を聞かれているか】「I met a scientist. Her research is about renewable energy.」を関係代名詞を使って1文にする。\n【なぜwhoseを使うのか】2つ目の文のHer（彼女の）がa scientist（1つ目の文の名詞）の所有を表しているため、この所有の関係を表す所有格の関係代名詞whoseに置きかえる必要があるから。\n【ポイント1】先行詞を特定する：a scientist（人）。\n【ポイント2】Her（所有格）をwhoseに置きかえ、先行詞a scientistの直後に置く。\n【ポイント3】I met a scientist whose research is about renewable energy.（私は研究テーマが再生可能エネルギーである科学者に会った）。\n【答え】I met a scientist whose research is about renewable energy.\n【確かめ】whoseのあとにresearch（名詞）、is（動詞）と続いているかを確認する。\n【よくあるまちがい】whoseのかわりにwhoを使ってしまう。所有の関係にはwhoseを使う。\n【ここが絶対】whoseは先行詞の所有格を表す関係代名詞。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -742,26 +529,8 @@ whose の使い方：先行詞（人・物）の所有格を表す。whose 節�
     question: '次の文を間接疑問文に書き換えなさい。\n\n直接疑問文：What time will the rocket launch?\n「そのロケットが何時に打ち上げられるか知っていますか？」',
     answer: 'Do you know what time the rocket will launch?',
     hint: '間接疑問文では疑問詞の後ろが「主語＋動詞」の語順に戻る。',
-    explanation: `【出題意図】
-間接疑問文（疑問詞 + 主語 + 動詞の語順）への書き換えを問う問題。語順の変化が最大のポイント。
-
-【解説】
-直接疑問文「What time will the rocket launch?」を間接疑問文にする手順：
-1. 疑問詞 What time はそのまま使う
-2. 疑問詞の後ろは「主語 + 動詞」の平叙文語順に変える（疑問文の語順に戻さない）
-3. 全体を「Do you know + 間接疑問」にする
-
-× Do you know what time will the rocket launch?（誤り：疑問文の語順のまま）
-○ Do you know what time the rocket will launch?（正解：平叙文語順）
-
-日本語訳：「そのロケットが何時に打ち上げられるか知っていますか？」
-
-【文法ポイント】
-間接疑問文の語順：疑問詞 + 主語 + 動詞〜（平叙文語順）。
-
-【入試頻出】
-・Do you know when the satellite will be launched?
-・Can you tell me how this machine works?`,
+    explanation:
+      '【何を聞かれているか】「What time will the rocket launch?」（そのロケットが何時に打ち上げられるか知っていますか？）を間接疑問文に書きかえる。\n【なぜwillの位置が変わるのか】疑問文が他の文（Do you know〜）の一部に組み込まれると、疑問文特有の倒置ではなく、ふつうの文と同じ〈疑問詞＋主語＋動詞〉の語順に戻すというルールがあるから。\n【ポイント1】疑問詞What timeはそのまま使う。\n【ポイント2】疑問詞の後ろを「主語＋動詞」の平叙文語順に変える。the rocket will launchという順にする。\n【ポイント3】全体をDo you know＋間接疑問の形にする。Do you know what time the rocket will launch?\n【答え】Do you know what time the rocket will launch?\n【確かめ】what timeのあとがwill the rocket launchではなくthe rocket will launch（平叙文語順）になっているかを確認する。\n【よくあるまちがい】Do you know what time will the rocket launch?のように疑問文の語順のままにしてしまう。\n【ここが絶対】間接疑問文の語順は〈疑問詞＋主語＋動詞〉の平叙文語順にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -807,25 +576,8 @@ whose の使い方：先行詞（人・物）の所有格を表す。whose 節�
     question: '次の語を並べ替えて正しい英文を作れ。\n（ know / you / do / how / this / works / robot ）\n「このロボットがどのように動くか知っていますか？」',
     answer: 'Do you know how this robot works?',
     hint: '間接疑問文：疑問詞（how）の後ろは主語＋動詞の語順。全体は疑問文なので Do で始める。',
-    explanation: `【出題意図】
-間接疑問文の語順整序問題。「疑問詞 + 主語 + 動詞」という間接疑問の語順と、全体が疑問文になることを同時に確認する。
-
-【解説】
-ポイントは2つ：
-1. 全体が「Do you know〜?」という疑問文
-2. know の目的語（間接疑問）は「how this robot works」（疑問文の語順ではなく平叙文語順）
-
-× Do you know how does this robot work?（誤り）
-○ Do you know how this robot works?（正解）
-
-日本語訳：「このロボットがどのように動くか知っていますか？」
-
-【文法ポイント】
-間接疑問の語順：疑問詞 + 主語 + 動詞。全体が疑問文の場合：Do/Can/Could + 主語 + 動詞 + 疑問詞 + 主語 + 動詞〜?
-
-【入試頻出】
-・Do you know how this app works?
-・Can you tell me why the system stopped?`,
+    explanation:
+      '【何を聞かれているか】know / you / do / how / this / works / robot を並べ替えて「このロボットがどのように動くか知っていますか？」という英文を作る。\n【なぜthis robot worksという語順になるのか】全体はDo you know〜?という疑問文だが、knowの目的語になる部分（間接疑問）は疑問文の語順ではなく、〈疑問詞（how）＋主語＋動詞〉という平叙文の語順にする必要があるから。\n【ポイント1】全体の骨組みはDo you know〜?という疑問文。\n【ポイント2】knowの目的語（間接疑問）はhow this robot works（疑問文の語順ではなく平叙文語順）。\n【ポイント3】組み立てるとDo you know how this robot works?になる。\n【答え】Do you know how this robot works?\n【確かめ】howのあとがdoes this robot workではなくthis robot works（平叙文語順）になっているかを確認する。\n【よくあるまちがい】Do you know how does this robot work?のように疑問文の語順のままにしてしまう。\n【ここが絶対】間接疑問文の中は、疑問詞のあとを〈主語＋動詞〉の平叙文語順にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -867,26 +619,8 @@ for + 期間（for three years）／since + 起点（since 2020）。現在完�
     question: '次の語を並べ替えて正しい英文を作れ。\n（ enough / drone / to / carry / light / this / is ）\n「このドローンは持ち運べるほど軽い。」',
     answer: 'This drone is light enough to carry.',
     hint: '「〜するのに十分〜だ」は 形容詞 + enough + to 動詞 の語順。',
-    explanation: `【出題意図】
-「形容詞 + enough + to 動詞」の語順を問う整序問題。enough の位置が鍵。
-
-【解説】
-「〜するのに十分〜だ」は：主語 + be + 形容詞 + enough + to + 動詞原形。enough は形容詞の後ろに置く（× enough light は誤り）。
-
-正しい語順：
-This drone is light enough to carry.
-
-日本語訳：「このドローンは持ち運べるほど軽い。」
-
-【文法ポイント】
-形容詞 + enough + to 動詞：「〜するのに十分〜だ」。
-例：The box is small enough to fit in the bag.（かばんに入るくらい小さい）
-
-too + 形容詞 + to 動詞：「〜すぎて〜できない」（enough と対で覚える）
-
-【入試頻出】
-・This tablet is thin enough to carry easily.
-・The signal is strong enough to reach the station.`,
+    explanation:
+      '【何を聞かれているか】enough / drone / to / carry / light / this / is を並べ替えて「このドローンは持ち運べるほど軽い。」という英文を作る。\n【なぜenoughを形容詞のあとに置くのか】「〜するのに十分〜だ」は〈形容詞＋enough＋to動詞〉という決まった語順で表し、enoughは必ず形容詞のあとに置くというルールがあるから。\n【ポイント1】「〜するのに十分〜だ」は主語＋be＋形容詞＋enough＋to＋動詞原形の形。enoughは形容詞のあとに置く（enough lightは誤り）。\n【ポイント2】This drone is light enough to carry.（このドローンは持ち運べるほど軽い）。\n【ポイント3】反対の意味を表すtoo＋形容詞＋to動詞（〜すぎて〜できない）とセットで覚える。\n【答え】This drone is light enough to carry.\n【確かめ】enoughがlightのあとに置かれているか（enough lightになっていないか）を確認する。\n【よくあるまちがい】enough lightのように、enoughを形容詞の前に置いてしまう。\n【ここが絶対】enoughは必ず形容詞・副詞のあとに置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -898,25 +632,8 @@ too + 形容詞 + to 動詞：「〜すぎて〜できない」（enough と対�
     question: '次の語を並べ替えて正しい英文を作れ。\n（ the / gave / engineers / robot / new / commands / the ）\n「技術者たちはそのロボットに新しい命令を与えた。」',
     answer: 'The engineers gave the robot new commands.',
     hint: 'give + 人（物）+ 物 の語順（第4文型 SVOO）を使う。',
-    explanation: `【出題意図】
-第4文型（SVOO：主語＋動詞＋間接目的語＋直接目的語）の語順を問う整序問題。give の用法も確認。
-
-【解説】
-give + 対象（ロボット）+ 物（命令）＝対象に物を与える（第4文型）。
-・The engineers（S）+ gave（V）+ the robot（IO：間接目的語）+ new commands（DO：直接目的語）
-
-語順：The engineers gave the robot new commands.
-
-第3文型への書き換え：The engineers gave new commands to the robot.（to を使う）
-
-日本語訳：「技術者たちはそのロボットに新しい命令を与えた。」
-
-【文法ポイント】
-第4文型（SVOO）の動詞：give / send / show / teach + 人 + 物（to で書き換え可）。
-
-【入試頻出】
-・The teacher showed the students a new experiment.
-・She sent her colleague the data file.`,
+    explanation:
+      '【何を聞かれているか】the / gave / engineers / robot / new / commands / the を並べ替えて「技術者たちはそのロボットに新しい命令を与えた。」という英文を作る。\n【なぜthe robot new commandsという語順になるのか】give＋対象＋物は「対象に物を与える」という第4文型（SVOO）の形で、間接目的語を直接目的語より先に置くという決まりがあるから。\n【ポイント1】give＋対象＋物＝対象に物を与える（第4文型）。The engineers（S）+ gave（V）+ the robot（間接目的語）+ new commands（直接目的語）。\n【ポイント2】語順はThe engineers gave the robot new commands.になる。\n【ポイント3】第3文型に書きかえるとThe engineers gave new commands to the robot.（toを使う）になる。\n【答え】The engineers gave the robot new commands.\n【確かめ】the robot（対象）がnew commands（物）より先に置かれているかを確認する。\n【よくあるまちがい】gave new commands the robotのように、物を対象より先に置いてしまう。\n【ここが絶対】give＋対象＋物の第4文型では、対象（間接目的語）を先に、物（直接目的語）をあとに置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -928,27 +645,8 @@ give + 対象（ロボット）+ 物（命令）＝対象に物を与える（�
     question: '次の語を並べ替えて正しい英文を作れ。\n（ tested / engineers / it / carefully / before / launching / the / satellite ）\n「衛星を打ち上げる前に、技術者たちはそれを注意深く検査した。」',
     answer: 'Engineers tested it carefully before launching the satellite.',
     hint: 'before の後には動名詞（〜ing）が来る。before + 動名詞＝〜する前に。',
-    explanation: `【出題意図】
-前置詞 before + 動名詞 の用法と、語順整序を問う問題。
-
-【解説】
-前置詞の後ろには名詞・動名詞が来る（不定詞は来ない）。「〜する前に」＝before + 動名詞（〜ing）。
-
-正しい語順：
-Engineers tested it carefully before launching the satellite.
-（＝Before launching the satellite, engineers tested it carefully.）
-
-× before to launch（前置詞の後ろに不定詞は来ない）
-○ before launching（✓ 前置詞 + 動名詞）
-
-日本語訳：「衛星を打ち上げる前に、技術者たちはそれを注意深く検査した。」
-
-【文法ポイント】
-前置詞 + 動名詞の頻出パターン：before + ing（〜する前に）、after + ing（〜した後で）、without + ing（〜せずに）。
-
-【入試頻出】
-・She checked the data before submitting the report.
-・He left the lab without turning off the computer.`,
+    explanation:
+      '【何を聞かれているか】tested / engineers / it / carefully / before / launching / the / satellite を並べ替えて「衛星を打ち上げる前に、技術者たちはそれを注意深く検査した。」という英文を作る。\n【なぜbeforeのあとが動名詞になるのか】前置詞のあとには名詞・動名詞が来るという決まりがあり、不定詞（to＋原形）は前置詞のあとには置けないため、「〜する前に」はbefore＋動名詞（〜ing）の形にする必要があるから。\n【ポイント1】前置詞の後ろには名詞・動名詞が来る（不定詞は来ない）。「〜する前に」＝before＋動名詞（〜ing）。\n【ポイント2】Engineers tested it carefully before launching the satellite.（＝Before launching the satellite, engineers tested it carefully.と同じ意味）。\n【ポイント3】同じパターン：after＋ing（〜した後で）、without＋ing（〜せずに）。\n【答え】Engineers tested it carefully before launching the satellite.\n【確かめ】beforeのあとがlaunch（原形）やto launch（不定詞）ではなくlaunching（動名詞）になっているかを確認する。\n【よくあるまちがい】before to launchのように、前置詞のあとに不定詞を置いてしまう。\n【ここが絶対】前置詞のあとに動詞を続けるときは必ず動名詞（-ing）にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -960,27 +658,8 @@ Engineers tested it carefully before launching the satellite.
     question: '次の語を並べ替えて正しい英文を作れ。\n（ the / who / I / met / scientist / conference / at / the / is / famous ）\n「私が学会で会った科学者は有名です。」',
     answer: 'The scientist who I met at the conference is famous.',
     hint: '関係代名詞 who を使って先行詞「the scientist」を修飾する節を作る。',
-    explanation: `【出題意図】
-関係代名詞 who（目的格）を使った語順整序問題。先行詞と関係代名詞節の位置関係が鍵。
-
-【解説】
-文の骨格：The scientist is famous.（その科学者は有名だ）
-修飾部：who I met at the conference（私が学会で会った）
-
-組み合わせ：
-The scientist [who I met at the conference] is famous.
-
-who はここでは目的格（met の目的語）として使われている。
-＝The scientist (whom/that) I met at the conference is famous.（省略も可）
-
-日本語訳：「私が学会で会った科学者は有名です。」
-
-【文法ポイント】
-関係代名詞節の位置：先行詞の直後に置く。主節の動詞（is）は関係代名詞節の後に続く。
-
-【入試頻出】
-・The engineer who(m) I interviewed works at a robotics company.
-・The researcher who wrote this paper is well known.`,
+    explanation:
+      '【何を聞かれているか】the / who / I / met / scientist / conference / at / the / is / famous を並べ替えて「私が学会で会った科学者は有名です。」という英文を作る。\n【なぜwhoが目的格として使えるのか】whoは本来主格の関係代名詞だが、口語では目的格（whomの代わり）としてもよく使われ、先行詞The scientistのうしろに「who I met at the conference」という節を置いて修飾できるから。\n【ポイント1】文の骨格はThe scientist is famous.（その科学者は有名だ）。\n【ポイント2】修飾部はwho I met at the conference（私が学会で会った）。ここでのwhoはmetの目的語にあたる目的格の働きをしている。\n【ポイント3】組み合わせるとThe scientist who I met at the conference is famous.になる。＝The scientist (whom/that) I met at the conference is famous.（省略も可）。\n【答え】The scientist who I met at the conference is famous.\n【確かめ】関係代名詞節（who I met at the conference）が先行詞The scientistの直後に置かれ、そのあとに主節の動詞is famousが続いているかを確認する。\n【よくあるまちがい】関係代名詞節を先行詞から離れた位置に置いてしまう。\n【ここが絶対】関係代名詞節は必ず先行詞の直後に置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -992,27 +671,8 @@ who はここでは目的格（met の目的語）として使われている。
     question: '次の語を並べ替えて正しい英文を作れ。\n（ simple / this / for / experiment / enough / beginners / to / try / is ）\n「この実験は初心者が挑戦できるほど簡単だ。」',
     answer: 'This experiment is simple enough for beginners to try.',
     hint: '「〜が…するのに十分〜だ」は 形容詞 + enough + for + 人 + to 動詞 の形。',
-    explanation: `【出題意図】
-enough to 構文に「for + 人」が加わった形の語順を問う問題。「〜が…するほど十分〜だ」という表現の完全形を問う。
-
-【解説】
-構文：主語 + be + 形容詞 + enough + for + 人 + to + 動詞原形。「for + 人」は不定詞の意味上の主語を示す。
-
-正しい語順：
-This experiment is simple enough for beginners to try.
-
-日本語訳：「この実験は初心者が挑戦できるほど簡単だ。」
-
-【文法ポイント】
-「形容詞 + enough + for + 人 + to + 動詞」構文：
-・This app is easy enough for children to use.（子どもが使えるほど簡単だ）
-
-「too + 形容詞 + for + 人 + to + 動詞」との対比：
-・The theory is too difficult for students to understand.（難しすぎて理解できない）
-
-【入試頻出】
-・This device is simple enough for anyone to operate.
-・The instructions are clear enough for beginners to follow.`,
+    explanation:
+      '【何を聞かれているか】simple / this / for / experiment / enough / beginners / to / try / is を並べ替えて「この実験は初心者が挑戦できるほど簡単だ。」という英文を作る。\n【なぜfor＋人が入るのか】「〜が…するのに十分〜だ」と、動作をする人を明示するには、〈形容詞＋enough＋for＋人＋to＋動詞原形〉という構文を使い、for＋人が不定詞の意味上の主語を示すから。\n【ポイント1】構文は主語＋be＋形容詞＋enough＋for＋人＋to＋動詞原形。\n【ポイント2】This experiment is simple enough for beginners to try.（この実験は初心者が挑戦できるほど簡単だ）。\n【ポイント3】反対の意味を表す〈too＋形容詞＋for＋人＋to＋動詞〉（〜すぎて…できない）とセットで覚える（例：The theory is too difficult for students to understand.）。\n【答え】This experiment is simple enough for beginners to try.\n【確かめ】for beginnersがenoughとtoの間に正しく置かれているかを確認する。\n【よくあるまちがい】for beginnersを文の最後に置いてしまう。\n【ここが絶対】「形容詞＋enough＋for＋人＋to＋動詞」の語順を1つのまとまりとして覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1029,26 +689,8 @@ This experiment is simple enough for beginners to try.
     choices: ['① Sure, no problem.', '② No, I don\'t.', '③ I\'d like a telescope.', '④ Yes, I would like.'],
     answer: '① Sure, no problem.',
     hint: 'Could you〜? は丁寧な依頼表現。自然な引き受け方を選ぶ。',
-    explanation: `【出題意図】
-Could you〜?（丁寧な依頼）への適切な応答を問う問題。日常会話・対話文頻出表現。
-
-【解説】
-Could you〜? は「〜していただけますか」という丁寧な依頼表現。
-・① Sure, no problem. → 快く引き受ける自然な返答（✓）
-・② No, I don't. → Could you〜? への返答として文法的に不自然
-・③ I'd like a telescope. → 依頼への返答としてはずれる（新たな要望になる）
-・④ Yes, I would like. → like の後ろに目的語が必要で不自然
-
-日本語訳：
-A：この望遠鏡を組み立てるのを手伝ってもらえますか？
-B：もちろん、いいですよ。
-
-【文法ポイント】
-依頼への返答：受ける（Sure. / Of course. / No problem.）、断る（I'm sorry, I can't.）。
-
-【入試頻出】
-・Could you check my code? — Sure, no problem.
-・Can you help me carry this box? — Of course.`,
+    explanation:
+      '【何を聞かれているか】「Could you help me set up this telescope?」への適切な返答を選ぶ。\n【なぜ「Sure, no problem.」が正しいのか】Could you〜?は「〜していただけますか」という丁寧な依頼表現で、快く引き受けるときはSure, no problem.のような自然な返答をするから。\n【ポイント1】②No, I don\'t.はCould you〜?への返答として文法的に不自然。\n【ポイント2】③I\'d like a telescope.は依頼への返答としてはずれる（新たな要望になる）。④Yes, I would like.はlikeのあとに目的語が必要で不自然。\n【ポイント3】①Sure, no problem.が正しい。依頼を受けるときはSure. / Of course. / No problem.のような表現を使う。\n【答え】① Sure, no problem.\n【確かめ】Could you〜?への返答として自然な形になっているかを確認する。\n【よくあるまちがい】依頼と噛み合わない返答を選んでしまう。\n【ここが絶対】依頼への返答はSure. / Of course. / No problem.（受ける）、I\'m sorry, I can\'t.（断る）で覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1060,26 +702,8 @@ B：もちろん、いいですよ。
     question: '次の対話の（　）に最も適切な文を選べ。\n\nA: How long does it take to charge this electric car?\nB: ( )\n\n① It\'s about 300 kilometers.\n② It takes about thirty minutes with a fast charger.\n③ You should charge it at night.\n④ The car is very expensive.',
     answer: '② It takes about thirty minutes with a fast charger.',
     hint: 'How long does it take to〜? は所要時間を尋ねる表現。',
-    explanation: `【出題意図】
-「It takes + 時間 + to + 動詞」という所要時間を表す構文と、How long does it take to〜? への適切な応答を問う問題。
-
-【解説】
-How long does it take to〜?＝「〜するのにどのくらい時間がかかりますか？」返答は「It takes + 時間」の形が正しい。
-・① about 300 kilometers → 距離を答えている（How far〜? への答え）
-・② It takes about thirty minutes with a fast charger. → 所要時間を答えている（✓）
-・③ You should charge it at night. → 提案（質問の答えになっていない）
-・④ The car is very expensive. → 無関係
-
-日本語訳：
-A：この電気自動車を充電するのにどれくらい時間がかかりますか？
-B：急速充電器を使えば約30分かかります。
-
-【文法ポイント】
-所要時間の表現：It takes + 時間 + to + 動詞〜＝〜するのに〜の時間がかかる。
-
-【入試頻出】
-・How long does it take to charge your phone?
-・It takes about two hours to fully charge the battery.`,
+    explanation:
+      '【何を聞かれているか】「How long does it take to charge this electric car?」への適切な返答を選ぶ。\n【なぜIt takes about thirty minutes with a fast charger.が正しいのか】How long does it take to〜?は「〜するのにどのくらい時間がかかるか」を尋ねる表現で、これにはIt takes＋時間という所要時間を答える形で返す決まりがあるから。\n【ポイント1】①about 300 kilometersは距離を答えており、How far〜?への返答にあたる。\n【ポイント2】③You should charge it at night.は提案であり、質問（所要時間）の答えになっていない。④The car is very expensive.は無関係。\n【ポイント3】②It takes about thirty minutes with a fast charger.が正しい。所要時間を答えている。\n【答え】② It takes about thirty minutes with a fast charger.\n【確かめ】質問がHow long（時間）を尋ねているのに対し、選んだ返答が時間を答えているかを確認する。\n【よくあるまちがい】How long〜?とHow far〜?を混同し、距離を答えてしまう。\n【ここが絶対】所要時間を尋ねるHow long does it take to〜?にはIt takes＋時間で答える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1092,26 +716,8 @@ B：急速充電器を使えば約30分かかります。
     choices: ['① Don\'t worry.', '② That\'s too bad.', '③ I\'m sorry to hear that.', '④ Never mind.'],
     answer: '① Don\'t worry.',
     hint: '後に続く「You\'ve prepared so well.（よく準備したじゃないか）」という励ましの言葉に合う返答を選ぶ。',
-    explanation: `【出題意図】
-励ましの表現と、会話の流れ・文脈から適切な応答を選ぶ問題。
-
-【解説】
-Aが「緊張している」と言っているのに対し、Bは「You've prepared so well.（よく準備したじゃないか）」と励ましている。前置きとして最適なのは「Don't worry.（心配しないで）」。
-・① Don't worry. → 心配しないで（励まし）（✓）
-・② That's too bad. → それは残念だね（共感・慰め。励ましではない）
-・③ I'm sorry to hear that. → それは残念です（同情。後の励ましと繋がりが弱い）
-・④ Never mind. → 気にしないで（軽い謝罪への返答。励ましとしては不自然）
-
-日本語訳：
-A：明日、理科の自由研究を発表するんだけど、本当に緊張しているんだ。
-B：心配しないで。あなたはよく準備したじゃないか。
-
-【文法ポイント】
-励まし・応援の表現：Don't worry. / You can do it! / I'm sure you'll do well.
-
-【入試頻出】
-・Don't worry. Everything will be fine.
-・I'm sure your presentation will go well.`,
+    explanation:
+      '【何を聞かれているか】「I\'m going to present my science project tomorrow, but I\'m really nervous.」に対するBの返答（このあとYou\'ve prepared so well.と続く）に合う表現を選ぶ。\n【なぜDon\'t worry.が正しいのか】Aが発表への不安を伝えており、そのあとBが「よく準備したじゃないか」と励ましているため、その前置きとしては「心配しないで」という励ましの表現が自然につながるから。\n【ポイント1】①Don\'t worry.（心配しないで）は励ましの表現で、後に続くYou\'ve prepared so well.（よく準備したじゃないか）と自然につながる。\n【ポイント2】②That\'s too bad.と③I\'m sorry to hear that.はどちらも同情・慰めの表現で、励ましの流れには合わない。\n【ポイント3】④Never mind.（気にしないで）は軽い謝罪への返答で、この文脈には不自然。\n【答え】① Don\'t worry.\n【確かめ】選んだ返答のあとにYou\'ve prepared so well.が自然に続くかを確認する。\n【よくあるまちがい】②That\'s too bad.のように、同情の表現を励ましの場面で使ってしまう。\n【ここが絶対】対話文の空所は、その後に続く文とのつながりを見て、共感なのか励ましなのかを判断する。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',

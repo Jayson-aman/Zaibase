@@ -1073,24 +1073,8 @@ there is/are 構文：「〜がある/いる」。過去：There was + 単数名
     choices: ['① 単純なデータ入力のような仕事は将来なくなる可能性がある。', '② 技術や創造性に関連する新しい仕事も生まれつつある。', '③ 専門家は20年後にどんな仕事が存在するか正確に予測できると述べている。', '④ 専門家は新しいことを素早く学ぶ力を身につけるべきだと提案している。'],
     answer: '③ 専門家は20年後にどんな仕事が存在するか正確に予測できると述べている。',
     hint: '本文では「20年後にどんな仕事が存在するか正確に予測することは不可能だ」と専門家が述べている。',
-    explanation: `【出題意図】
-「本文と合っていないものを選ぶ」という誤文識別型の読解問題。細部の読み取りと選択肢の正確な解釈が必要。
-
-【解説】
-各選択肢を本文と照合する：
-① 「単純なデータ入力のような仕事は将来なくなる可能性がある」→ 本文に "certain jobs, such as simple data entry, may disappear" とある（✓ 一致）
-② 「技術や創造性に関連する新しい仕事も生まれつつある」→ 本文に "new kinds of jobs are also being created, especially in fields related to technology and creativity" とある（✓ 一致）
-③ 「専門家は20年後にどんな仕事が存在するか正確に予測できると述べている」→ 本文には "it is impossible to predict exactly which jobs will exist in twenty years"（正確に予測することは不可能だ）とあり、真逆の内容（× 不一致）
-④ 「新しいことを素早く学ぶ力を身につけるべきだと提案している」→ 本文に "they should develop the ability to learn new things quickly" とある（✓ 一致）
-
-正解：③
-
-【文法ポイント】
-「合っていないものを選べ」問題のアプローチ：本文の否定表現（impossible）と選択肢の肯定表現（can predict）が逆転していないか注意する。
-
-【入試頻出】
-・本文の "impossible" "cannot" などの否定語と選択肢の言い換えの対応関係を丁寧に確認する
-・「専門家によると」という選択肢は、本文の専門家の発言内容と正確に一致するか照合する`,
+    explanation:
+      '【何を聞かれているか】将来の仕事についてのパッセージを読んで、内容と合っていない選択肢を1つ選ぶ。\n【なぜ③が不一致なのか】本文には"it is impossible to predict exactly which jobs will exist in twenty years"（20年後にどんな仕事が存在するか正確に予測することは不可能だ）と書かれており、これは③「専門家は正確に予測できると述べている」という内容と正反対だから。\n【ポイント1】①「単純なデータ入力の仕事はなくなる可能性がある」は本文の"certain jobs, such as simple data entry, may disappear"と一致する。\n【ポイント2】②「技術や創造性に関連する新しい仕事も生まれつつある」は本文の"new kinds of jobs are also being created, especially in fields related to technology and creativity"と一致する。④「新しいことを素早く学ぶ力を身につけるべき」も本文の"they should develop the ability to learn new things quickly"と一致する。\n【ポイント3】③は本文の「予測することは不可能だ」という記述と正反対のため不一致の選択肢。\n【答え】③ 専門家は20年後にどんな仕事が存在するか正確に予測できると述べている。\n【確かめ】本文の該当箇所（it is impossible to predict exactly〜）を読み直し、③の内容と正反対であることを確認する。\n【よくあるまちがい】本文の否定表現（impossible）を見落とし、選択肢の肯定表現をそのまま正しいと判断してしまう。\n【ここが絶対】「合っていないものを選べ」問題では、本文の否定表現（impossible、cannotなど）と選択肢の内容が逆転していないか注意する。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
