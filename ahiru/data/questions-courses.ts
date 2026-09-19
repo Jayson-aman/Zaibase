@@ -884,7 +884,8 @@ export const shitennojiQuestions: Question[] = [
     question: '次の文を受動態（be動詞 + 過去分詞）に書き換えよ。①「Many people read this book.」②「My mother made this cake.」',
     answer: '①This book is read by many people.　②This cake was made by my mother.',
     hint: '受動態：目的語→主語、動詞→be+過去分詞、主語→by〜（省略可）。時制に注意。',
-    explanation: '【解説】受動態の作り方：\n\n能動態 → 受動態 の手順：\n①目的語（O）を新しい主語にする\n②動詞を be動詞 + 過去分詞（p.p.）にする\n③元の主語を「by + 〜」にする（省略できる場合も）\n\n【時制と be動詞の形】\n現在形：am/is/are + p.p.\n過去形：was/were + p.p.\n未来形：will be + p.p.\n\n①能動態（現在）：Many people read this book.\nS=Many people, V=read（現在）, O=this book\n受動態：This book is read by many people.\n（O→主語, read→is read, Many people→by many people）\n\n②能動態（過去）：My mother made this cake.\nS=My mother, V=made（過去）, O=this cake\n受動態：This cake was made by my mother.\n（O→主語, made→was made, My mother→by my mother）\n\n【「by」の省略】\n動作者が不明・一般の人々の場合は「by 〜」を省略することが多い。\n例：English is spoken in many countries.（「by people」は省略）',
+    explanation:
+      '【何を聞かれているか】①「Many people read this book.」②「My mother made this cake.」を受動態に書きかえる。\n【なぜ主語と目的語が入れかわるのか】受動態は「〜される」という動作を受ける側を主語にする文で、能動態の目的語を主語の位置に移動させ、動詞をbe動詞＋過去分詞にし、もとの主語はbyのあとに置くという決まりがあるから。\n【ポイント1】①は現在形の文なので、This book is read by many people.（目的語this book→主語、read→is read、Many people→by many people）。\n【ポイント2】②は過去形の文なので、This cake was made by my mother.（目的語this cake→主語、made→was made、My mother→by my mother）。\n【ポイント3】動作者が不明・一般の人々の場合はby〜を省略することが多い（例：English is spoken in many countries.）。\n【答え】①This book is read by many people.　②This cake was made by my mother.\n【確かめ】①はbe動詞がis（現在形）、②はwas（過去形）になっているか、もとの文の時制と対応しているかを確認する。\n【よくあるまちがい】②で過去形の文なのにbe動詞をisのままにしてしまう。もとの文の時制に合わせてbe動詞を選ぶ。\n【ここが絶対】受動態のbe動詞は、もとの能動態の文の時制に必ず合わせる。',
   },
   {
     id: 'shitennoji_eigo_05', subject: 'eigo', difficulty: 'advanced',
@@ -900,7 +901,8 @@ export const shitennojiQuestions: Question[] = [
     question: '動名詞（-ing形）と不定詞（to+原形）の使い分けについて、①動名詞のみを目的語に取る動詞を3つ②不定詞のみを目的語に取る動詞を3つ③両方取れるが意味が変わる動詞を1つ挙げ、例文で意味の違いを示せ。',
     answer: '①enjoy/finish/mind（avoid, giveup等も可）　②want/hope/decide（plan, promise等も可）　③remember：I remember locking（施錠したことを覚えている）/ I remembered to lock（施錠することを忘れずにした）',
     hint: '動名詞好き：enjoy・finish・mind・avoid・give up。不定詞好き：want・hope・decide・plan。',
-    explanation: '【解説】動名詞と不定詞の使い分け：\n\n【動名詞のみを目的語に取る動詞（MEGAFISH の語呂合わせ等）】\nenjoy（楽しむ）：I enjoy swimming.\nfinish（終える）：He finished eating.\nmind（気にする）：Do you mind opening the window?\navoid（避ける）：She avoids meeting him.\ngive up（あきらめる）：I gave up smoking.\nconsider（検討する）、admit（認める）など\n\n【不定詞のみを目的語に取る動詞（WIVES の語呂合わせ等）】\nwant（欲しい）：I want to go.\nhope（望む）：She hopes to win.\ndecide（決める）：He decided to leave.\nplan（計画する）：We plan to visit.\npromise（約束する）、refuse（断る）など\n\n【両方取れて意味が変わる動詞】\nremember：\n・remember + 動名詞：（過去の行動を）覚えている\n例：I remember locking the door.（鍵を締めたことを覚えている）\n・remember + 不定詞：（これからすることを）忘れずにする\n例：I remembered to lock the door.（忘れずに鍵を締めた）\n\nforget・try・stopも同様に意味が変わる。',
+    explanation:
+      '【何を聞かれているか】①動名詞のみを目的語に取る動詞を3つ、②不定詞のみを目的語に取る動詞を3つ、③両方取れるが意味が変わる動詞を1つ挙げ、例文で意味の違いを示す。\n【なぜ動詞によって形が決まっているのか】英語では動詞ごとに「あとに動名詞（-ing）が続くか、不定詞（to＋原形）が続くか」が決まっており、これは理屈で導けるものではなく、動詞とセットで覚える必要があるから。\n【ポイント1】動名詞のみを目的語に取る動詞：enjoy（楽しむ、I enjoy swimming.）、finish（終える、He finished eating.）、mind（気にする、Do you mind opening the window?）。ほかにavoid、give upなど。\n【ポイント2】不定詞のみを目的語に取る動詞：want（欲しい、I want to go.）、hope（望む、She hopes to win.）、decide（決める、He decided to leave.）。ほかにplan、promiseなど。\n【ポイント3】両方取れて意味が変わる動詞remember：remember＋動名詞は「（過去の行動を）覚えている」（I remember locking the door.＝鍵を締めたことを覚えている）、remember＋不定詞は「（これからすることを）忘れずにする」（I remembered to lock the door.＝忘れずに鍵を締めた）。forget・try・stopも同様に意味が変わる。\n【答え】①enjoy/finish/mind（avoid, giveup等も可）　②want/hope/decide（plan, promise等も可）　③remember：I remember locking（施錠したことを覚えている）/ I remembered to lock（施錠することを忘れずにした）\n【確かめ】rememberの2つの例文を比べて、動名詞では「過去にした行動」、不定詞では「これからすべきこと」を表しているかを確認する。\n【よくあるまちがい】enjoy to swimのように、動名詞のみを取る動詞に不定詞をつけてしまう。\n【ここが絶対】動詞ごとに動名詞・不定詞のどちらを取るかが決まっているので、動詞とセットで覚える。',
   },
   {
     id: 'shitennoji_eigo_07', subject: 'eigo', difficulty: 'advanced',
@@ -908,7 +910,8 @@ export const shitennojiQuestions: Question[] = [
     question: '時制の一致について、次の文を間接話法に直す前に、主節が過去形になったとき従属節の時制がどう変わるかを答えよ。①「She said, "I am busy."」→間接話法　②「He said, "I will come tomorrow."」→間接話法',
     answer: '①She said (that) she was busy.　②He said (that) he would come the next day.',
     hint: '主節が過去形→従属節も過去形に移行。will→would、am→was、tomorrow→the next day。',
-    explanation: '【解説】時制の一致（間接話法）：\n\n直接話法 → 間接話法への変換ルール：\n\n①時制の変化（主節が過去形のとき）：\n現在形（am/is/are）→ 過去形（was/were）\n現在進行形（am -ing）→ 過去進行形（was -ing）\n現在完了（have p.p.）→ 過去完了（had p.p.）\n過去形 → 過去完了（had p.p.）\nwill → would　can → could　may → might\n\n②時・場所を表す語の変化：\ntomorrow → the next day\nyesterday → the day before\nnow → then\nhere → there\nthis → that\n\n【変換例】\n①直接：She said, \"I am busy.\"\n→ 間接：She said (that) she was busy.\n（am → was に変化）\n\n②直接：He said, \"I will come tomorrow.\"\n→ 間接：He said (that) he would come the next day.\n（will → would、tomorrow → the next day に変化）\n\n【注意】\nthink/know/believe など思考動詞でも同じルールが適用される。\n普遍の真理・現在も続く事実は時制の一致の例外（変化しない）。',
+    explanation:
+      '【何を聞かれているか】主節が過去形になったとき従属節の時制がどう変わるかを、①「She said, "I am busy."」②「He said, "I will come tomorrow."」の間接話法への書きかえで答える。\n【なぜ時制がずれるのか】直接話法を間接話法に直すとき、主節（said）が過去形であることに合わせて、従属節の時制も1つ過去にずらすという「時制の一致」のルールがあるから。\n【ポイント1】時制の変化：現在形（am/is/are）→過去形（was/were）、will→would、can→could、may→might。\n【ポイント2】時・場所を表す語も変化する：tomorrow→the next day、yesterday→the day before、now→then、here→there、this→that。\n【ポイント3】①She said, "I am busy."→She said (that) she was busy.（am→wasに変化）。②He said, "I will come tomorrow."→He said (that) he would come the next day.（will→would、tomorrow→the next dayに変化）。\n【答え】①She said (that) she was busy.　②He said (that) he would come the next day.\n【確かめ】主節のsaid（過去形）に合わせて、従属節の動詞や時を表す語がすべて1段階過去・遠い方にずれているかを見直す。\n【よくあるまちがい】②でtomorrowをそのまま残してしまう。時制だけでなく時を表す語も変える必要がある。\n【ここが絶対】普遍の真理・現在も続く事実は時制の一致の例外で、変化しない。',
   },
   {
     id: 'shitennoji_eigo_08', subject: 'eigo', difficulty: 'advanced',
@@ -924,7 +927,8 @@ export const shitennojiQuestions: Question[] = [
     question: '仮定法過去について、①仮定法過去の文の形（公式）②「もし私がもっとお金を持っていたら、新しいパソコンを買うのに。」を英語にせよ　③直説法（現実を述べる文）との違いを例文で示せ。',
     answer: '①If + S + were/動詞の過去形, S + would/could/might + 動詞の原形　②If I had more money, I would buy a new computer.　③直説法：If it rains, I will stay home.（本当に雨かもしれない）仮定法：If it rained, I would stay home.（実際は雨ではないと思っている）',
     hint: '仮定法過去=現在の事実と反対の仮定。be動詞はwere（主語に関係なく）。',
-    explanation: '【解説】仮定法過去：\n\n①公式：\nIf + S + were / 動詞の過去形, S + would / could / might + 動詞の原形\n\n・条件節（if節）：動詞を1つ過去にずらす（be動詞はwere）\n・帰結節（主節）：would/could/might + 動詞の原形\n\n②解答：\nIf I had more money, I would buy a new computer.\n（「持っている」現在の文→ have → had に）\n（「買うだろう」→ would buy）\n\n③直説法 vs 仮定法の違い：\n\n直説法（条件文）：\nIf it rains tomorrow, I will stay home.\n→「明日雨かもしれない」という現実の可能性を述べる。\n→ if節は現在形、主節はwill\n\n仮定法過去（反事実的仮定）：\nIf it rained, I would stay home.\n→「（実際は雨ではないが）もし雨だったら」という現実と反する仮定。\n→ if節は過去形（rained）、主節はwould\n\n【be動詞の注意点】\n仮定法では主語に関係なく be動詞は were を使う。\n（口語ではI was も使われるが、試験ではwereが正解）\n例：If I were you, I wouldn\'t do that.',
+    explanation:
+      '【何を聞かれているか】①仮定法過去の文の形（公式）、②「もし私がもっとお金を持っていたら、新しいパソコンを買うのに。」の英訳、③直説法との違いを例文で示す。\n【なぜ動詞を過去形にするのか】仮定法過去は「現在の事実と反対のこと」を仮定する言い方で、実際にはそうではないという気持ちを、わざと動詞を1つ過去にずらすことで表す決まりになっているから。\n【ポイント1】公式：If＋S＋were／動詞の過去形, S＋would／could／might＋動詞の原形。条件節（if節）は動詞を1つ過去にずらし（be動詞はwere）、帰結節（主節）はwould/could/might＋動詞の原形にする。\n【ポイント2】②「持っている」を現在の文にするとhaveだが、仮定法過去ではhadにする。If I had more money, I would buy a new computer.\n【ポイント3】③直説法（本当に起こりうること）：If it rains tomorrow, I will stay home.（明日雨かもしれないという現実の可能性）。仮定法過去（反事実的仮定）：If it rained, I would stay home.（実際は雨ではないが、もし雨だったら）。\n【答え】①If + S + were/動詞の過去形, S + would/could/might + 動詞の原形　②If I had more money, I would buy a new computer.　③直説法：If it rains, I will stay home.（本当に雨かもしれない）仮定法：If it rained, I would stay home.（実際は雨ではないと思っている）\n【確かめ】②の文でbe動詞を使う場合はwereになっているか（If I were you, I wouldn\'t do that.のように）確認する。\n【よくあるまちがい】仮定法でbe動詞をwasにしてしまう。試験ではwereを使うのが正解とされる。\n【ここが絶対】仮定法過去では主語に関係なくbe動詞はwereを使う。',
   },
   {
     id: 'shitennoji_eigo_10', subject: 'eigo', difficulty: 'advanced',
@@ -932,7 +936,8 @@ export const shitennojiQuestions: Question[] = [
     question: '次の語を並べ替えて正しい英文を作れ。①（to / what / know / do / I / don\'t）②（the / book / which / gave / me / you / is / interesting）③（seen / have / I / him / never）',
     answer: '①I don\'t know what to do.　②The book which you gave me is interesting.　③I have never seen him.',
     hint: '①疑問詞+to不定詞。②関係代名詞節の語順。③現在完了の否定（never）の位置。',
-    explanation: '【解説】整序問題のポイント：\n\n①「I don\'t know what to do.」\n疑問詞 + to不定詞 = 名詞節（〜すべきか）\nwhat to do = 「何をすべきか」\n→ I don\'t know [what to do].（動詞knowの目的語）\n同様：how to do（やり方）、when to go（いつ行くか）、where to go（どこに行くか）\n\n②「The book which you gave me is interesting.」\n関係代名詞節の語順：先行詞 + which + S + V\n「The book」←「which you gave me」が修飾\n→ The book [which you gave me] is interesting.\n（あなたが私にくれた本は面白い）\n文全体の主語：The book → 動詞：is（単数）\n\n③「I have never seen him.」\n現在完了の否定・頻度副詞の位置：\nhave/has + 副詞（never/ever/already/yet等）+ 過去分詞\n→ I have [never] seen him.\n（私は彼に一度も会ったことがない）\nnever は have と過去分詞の間に置く。\n\n【整序問題の解き方】\n①動詞を探し、主語・時制を確認\n②関係代名詞・接続詞・疑問詞+不定詞などの構文を見つける\n③残った語句を当てはめる',
+    explanation:
+      '【何を聞かれているか】①（to / what / know / do / I / don\'t）②（the / book / which / gave / me / you / is / interesting）③（seen / have / I / him / never）の語を並べ替えて正しい英文を作る。\n【なぜこの順番になるのか】それぞれの文には「疑問詞＋to不定詞」「関係代名詞節」「現在完了の否定の副詞の位置」という決まった構文があり、その構文の型に沿って語を並べる必要があるから。\n【ポイント1】①「疑問詞＋to不定詞」は「〜すべきか」という名詞節を作る。what to do＝「何をすべきか」なので、I don\'t know what to do.（knowの目的語になる）。\n【ポイント2】②関係代名詞節の語順は「先行詞＋which＋S＋V」。The book（先行詞）をwhich you gave meが説明し、文全体の主語The bookに動詞is（単数）が対応する。The book which you gave me is interesting.\n【ポイント3】③現在完了の否定・頻度副詞（never/ever/already/yetなど）はhave/hasと過去分詞の間に置く。I have never seen him.\n【答え】①I don\'t know what to do.　②The book which you gave me is interesting.　③I have never seen him.\n【確かめ】並べ替えた文の動詞を探し、主語と時制が一致しているか（②のisがThe bookに対応しているかなど）を確認する。\n【よくあるまちがい】③でneverをseenのあとに置いてしまう（I have seen never him.は誤り）。neverはhaveと過去分詞の間に置く。\n【ここが絶対】整序問題はまず動詞を探して主語・時制を確認し、構文（関係代名詞・疑問詞+不定詞など）を見つけてから残りを当てはめる。',
   },
 ];
 
@@ -1438,7 +1443,8 @@ export const kokoGeneralQuestions: Question[] = [
     question: '次の文を現在完了形に書き換えなさい。\n① I visit Kyoto. (three times / experience)\n② She lives in Osaka. (for five years / continuation)\n③ He finishes his homework. (just / completion)',
     answer: '① I have visited Kyoto three times. ② She has lived in Osaka for five years. ③ He has just finished his homework.',
     hint: '現在完了形は「have/has + 過去分詞」の形です。経験・継続・完了で使うキーワードが違います。',
-    explanation: '【解説】\n現在完了形（Present Perfect）: have/has + 過去分詞\n\n【経験】"〜したことがある"\nキーワード：ever, never, once, twice, three times, before\n① I have visited Kyoto three times.\n（私は京都を3回訪れたことがある）\n\n【継続】"ずっと〜している"\nキーワード：for（〜の間）, since（〜から）\n② She has lived in Osaka for five years.\n（彼女は5年間大阪に住んでいる）\n\n【完了】"〜したところだ"\nキーワード：just（ちょうど）, already（すでに）, yet（もう/まだ）\n③ He has just finished his homework.\n（彼はちょうど宿題を終えたところだ）\n\n主語が三人称単数（he/she/it）の場合は has を使うことに注意！',
+    explanation:
+      '【何を聞かれているか】①「I visit Kyoto.」（three times/experience）②「She lives in Osaka.」（for five years/continuation）③「He finishes his homework.」（just/completion）を現在完了形に書きかえる。\n【なぜhave/has+過去分詞にするのか】現在完了形は「経験」「継続」「完了」という3つの意味を表す形で、それぞれの意味に応じたキーワード（three times、for、justなど）と組み合わせて使うことで、意味を正確に伝えられるから。\n【ポイント1】経験「〜したことがある」：キーワードはever, never, once, twice, three times, before。① I have visited Kyoto three times.（私は京都を3回訪れたことがある）。\n【ポイント2】継続「ずっと〜している」：キーワードはfor（〜の間）, since（〜から）。② She has lived in Osaka for five years.（彼女は5年間大阪に住んでいる）。\n【ポイント3】完了「〜したところだ」：キーワードはjust（ちょうど）, already（すでに）, yet（もう/まだ）。③ He has just finished his homework.（彼はちょうど宿題を終えたところだ）。主語が三人称単数（he/she/it）の場合はhasを使う。\n【答え】① I have visited Kyoto three times. ② She has lived in Osaka for five years. ③ He has just finished his homework.\n【確かめ】それぞれの文にキーワード（three times、for five years、just）が正しく対応しているかを見直す。\n【よくあるまちがい】主語が三人称単数（she、he）なのにhaveを使ってしまう。三人称単数はhasを使う。\n【ここが絶対】現在完了形は経験・継続・完了の3つの意味があり、それぞれキーワードとセットで覚える。',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
@@ -1449,7 +1455,8 @@ export const kokoGeneralQuestions: Question[] = [
     question: '次の文を関係代名詞（which または who）を使って1文にしなさい。\n① I have a dog. The dog has long ears.\n② She is a teacher. The teacher is very kind.',
     answer: '① I have a dog which has long ears. ② She is a teacher who is very kind.',
     hint: 'ものに使う場合はwhich、人に使う場合はwhoを使います。',
-    explanation: '【解説】\n関係代名詞（Relative Pronouns）：\n\n①先行詞が「もの・動物」の場合 → which を使う\n"I have a dog." + "The dog has long ears."\n→ The dog（先行詞）を which に置き換えて後ろの文に：\n→ I have a dog which has long ears.\n（私は長い耳を持つ犬を飼っている）\n\n②先行詞が「人」の場合 → who を使う\n"She is a teacher." + "The teacher is very kind."\n→ The teacher → who に置き換えて：\n→ She is a teacher who is very kind.\n（彼女はとても親切な先生だ）\n\n補足：\n・that は人・ものどちらにも使える（which/who の代わりに可）\n・目的格の場合は省略できる（The book (which) I read was interesting.）\n・先行詞が「人」でも所有格は whose を使う（The girl whose hair is long…）',
+    explanation:
+      '【何を聞かれているか】①「I have a dog. The dog has long ears.」②「She is a teacher. The teacher is very kind.」を関係代名詞（whichまたはwho）を使って1文にする。\n【なぜwhichとwhoを使い分けるのか】関係代名詞は2つ目の文の主語（The dog／The teacher）を置きかえて1つ目の文の名詞のうしろにつなげる語で、先行詞が「もの・動物」か「人」かによって使う語が決まっているから。\n【ポイント1】①先行詞が「もの・動物」（The dog）の場合はwhichを使う。"I have a dog." + "The dog has long ears."→I have a dog which has long ears.（私は長い耳を持つ犬を飼っている）。\n【ポイント2】②先行詞が「人」（The teacher）の場合はwhoを使う。"She is a teacher." + "The teacher is very kind."→She is a teacher who is very kind.（彼女はとても親切な先生だ）。\n【ポイント3】thatは人・ものどちらにも使え、目的格の場合は省略できる（The book (which) I read was interesting.）。先行詞が「人」でも所有格はwhoseを使う。\n【答え】① I have a dog which has long ears. ② She is a teacher who is very kind.\n【確かめ】①の先行詞が動物（dog）でwhich、②の先行詞が人（teacher）でwhoになっているかを確認する。\n【よくあるまちがい】先行詞が人なのにwhichを使ってしまう。\n【ここが絶対】先行詞が人ならwho、もの・動物ならwhichを使う（thatはどちらにも使える）。',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
@@ -1460,7 +1467,8 @@ export const kokoGeneralQuestions: Question[] = [
     question: "次の文を間接疑問文に書き換えなさい。\n① Where does she live? → I don't know ___.\n② What time is it? → Can you tell me ___?",
     answer: "① I don't know where she lives. ② Can you tell me what time it is?",
     hint: '間接疑問文では語順が「疑問詞 + 主語 + 動詞」の語順になります（助動詞doは使わない）。',
-    explanation: "【解説】\n間接疑問文（Indirect Questions）：\n疑問文が別の文の一部に組み込まれる形。\n\n【ルール】疑問詞 + 主語 + 動詞（平叙文の語順）\n・助動詞 do/does/did は使わない\n・be動詞も主語の後ろに来る\n\n① Where does she live?\n→ 間接疑問：where she lives\n（does を消して、動詞 live に三単現の -s をつける）\n→ I don't know where she lives.\n（私は彼女がどこに住んでいるか知らない）\n\n② What time is it?\n→ 間接疑問：what time it is\n（be動詞 is を主語 it の後ろに移動）\n→ Can you tell me what time it is?\n（何時か教えてもらえますか？）\n\nよく使う表現：\n・I don't know + 間接疑問\n・Do you know + 間接疑問?\n・Can you tell me + 間接疑問?",
+    explanation:
+      '【何を聞かれているか】①「Where does she live?」②「What time is it?」を間接疑問文に書きかえる。\n【なぜdoやdoesを使わないのか】疑問文が別の文の一部（動詞の目的語）に組み込まれると、疑問文特有の助動詞do/does/didを使う語順ではなく、ふつうの文と同じ〈疑問詞＋主語＋動詞〉の語順に戻すというルールがあるから。\n【ポイント1】①Where does she live?→doesを消して動詞を主語sheに合わせた形（lives）に戻す。where she lives→I don\'t know where she lives.（私は彼女がどこに住んでいるか知らない）。\n【ポイント2】②What time is it?→be動詞isを主語itのうしろに移動する。what time it is→Can you tell me what time it is?（何時か教えてもらえますか）。\n【ポイント3】よく使う表現：I don\'t know＋間接疑問、Do you know＋間接疑問?、Can you tell me＋間接疑問?。\n【答え】① I don\'t know where she lives. ② Can you tell me what time it is?\n【確かめ】①でdoesが消えて動詞がlivesになっているか、②でisがitのうしろに来ているかを確認する。\n【よくあるまちがい】疑問文の語順のままI don\'t know where does she live.のようにしてしまう。\n【ここが絶対】間接疑問文の語順は〈疑問詞＋主語＋動詞〉で、疑問文のような倒置は使わない。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1471,7 +1479,8 @@ export const kokoGeneralQuestions: Question[] = [
     question: '次の文の（　）に不定詞か動名詞の適切な形を入れなさい。\n① I enjoy ( play ) soccer.\n② She decided ( go ) to Tokyo.\n③ He is good at ( swim ).',
     answer: '① playing ② to go ③ swimming',
     hint: 'enjoy, finish, mind などは動名詞を取ります。decide, want, hope などは不定詞を取ります。',
-    explanation: '【解説】\n不定詞（to + 動詞の原形）と動名詞（動詞 + -ing）の使い分け：\n\n【動名詞のみを目的語にとる動詞（主なもの）】\nenjoy（楽しむ）、finish（終える）、mind（気にする）、give up（やめる）、stop（やめる）、avoid（避ける）\n\n① I enjoy playing soccer.\n（私はサッカーをするのを楽しむ）\nenjoy → 動名詞\n\n【不定詞のみを目的語にとる動詞（主なもの）】\ndecide（決める）、want（〜したい）、hope（〜を望む）、plan（〜する計画をする）、promise（約束する）\n\n② She decided to go to Tokyo.\n（彼女は東京へ行くことを決めた）\ndecide → 不定詞\n\n【前置詞の後は動名詞】\nbe good at（〜が得意だ）のatは前置詞 → 後ろは動名詞\n\n③ He is good at swimming.\n（彼は水泳が得意だ）\n\n両方OKな動詞：like, love, start, begin（意味はほぼ同じ）',
+    explanation:
+      '【何を聞かれているか】①「I enjoy ( play ) soccer.」②「She decided ( go ) to Tokyo.」③「He is good at ( swim ).」の空欄に不定詞か動名詞の適切な形を入れる。\n【なぜ動名詞と不定詞を使い分けるのか】動詞や前置詞によって、あとに続く形が動名詞（-ing）か不定詞（to＋原形）かが決まっており、その決まりに従って正しい形を選ぶ必要があるから。\n【ポイント1】①enjoyは動名詞のみを目的語に取る動詞。I enjoy playing soccer.（私はサッカーをするのを楽しむ）。ほかにfinish、mind、give up、stop、avoidなど。\n【ポイント2】②decideは不定詞のみを目的語に取る動詞。She decided to go to Tokyo.（彼女は東京へ行くことを決めた）。ほかにwant、hope、plan、promiseなど。\n【ポイント3】③be good atのatは前置詞で、前置詞のあとは動名詞になる。He is good at swimming.（彼は水泳が得意だ）。like、love、start、beginは両方OKでほぼ同じ意味。\n【答え】① playing ② to go ③ swimming\n【確かめ】enjoy to play、decided goingのように逆にしていないかを確認する。\n【よくあるまちがい】前置詞atのあとに動詞の原形をそのまま置いてしまう（is good at swimが誤り）。\n【ここが絶対】前置詞のあとに動詞が続くときは必ず動名詞（-ing）にする。',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
@@ -1482,7 +1491,8 @@ export const kokoGeneralQuestions: Question[] = [
     question: '次の比較表現を完成させなさい。\n① Mt. Fuji is ___ mountain in Japan. (high / 最上級)\n② Yuki runs ___ fast ___ Kenji. (同等比較)\n③ Tokyo is ___ crowded ___ Osaka. (比較級)',
     answer: '① the highest ② as fast as ③ more crowded than',
     hint: '最上級は「the + 形容詞 + -est」または「the most + 形容詞」。同等比較は「as + 原級 + as」。',
-    explanation: '【解説】\n比較表現の3つの形：\n\n①最上級（Superlative）：〜の中で最も〜\n形式：the + 形容詞 + -est  または  the most + 形容詞\nhigh → higher → highest（不規則変化ではなく規則変化）\n→ Mt. Fuji is the highest mountain in Japan.\n（富士山は日本で最も高い山だ）\n\n②同等比較（as...as）：〜と同じくらい〜\n形式：as + 形容詞/副詞の原級 + as\n→ Yuki runs as fast as Kenji.\n（ユキはケンジと同じくらい速く走る）\n否定：not as fast as（〜ほど速くない）\n\n③比較級（Comparative）：〜より〜\n形式：形容詞 + -er + than  または  more + 形容詞 + than\ncrowded（2音節以上の多音節語）→ more crowded\n→ Tokyo is more crowded than Osaka.\n（東京は大阪より混んでいる）\n\n不規則変化：good→better→best、bad→worse→worst、many→more→most',
+    explanation:
+      '【何を聞かれているか】①「Mt. Fuji is （　　） mountain in Japan.」（high/最上級）②「Yuki runs （　　） fast （　　） Kenji.」（同等比較）③「Tokyo is （　　） crowded （　　） Osaka.」（比較級）の比較表現を完成させる。\n【なぜ形がそれぞれちがうのか】比較表現には「最上級（〜の中でいちばん）」「同等比較（〜と同じくらい）」「比較級（〜より）」の3つの形があり、比べ方によって使う形が決まっているから。\n【ポイント1】①最上級はthe＋形容詞＋-estまたはthe most＋形容詞。high→highest。Mt. Fuji is the highest mountain in Japan.（富士山は日本で最も高い山だ）。\n【ポイント2】②同等比較はas＋原級＋as。Yuki runs as fast as Kenji.（ユキはケンジと同じくらい速く走る）。否定はnot as fast as（〜ほど速くない）。\n【ポイント3】③比較級は形容詞＋-er＋thanまたはmore＋形容詞＋than。crowdedは2音節以上の語なのでmore crowded。Tokyo is more crowded than Osaka.（東京は大阪より混んでいる）。\n【答え】① the highest ② as fast as ③ more crowded than\n【確かめ】crowdedにmoreをつけてmore crowdedになっているか（crowdederのように-erをつけていないか）を確認する。\n【よくあるまちがい】crowdedのような長い形容詞にmoreをつけずに-erをつけてしまう。\n【ここが絶対】音節の長い形容詞（crowded、interestingなど）はmore/mostを使い、短い形容詞は-er/-estを使う。',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
@@ -1515,7 +1525,8 @@ export const kokoGeneralQuestions: Question[] = [
     question: '次の（　）に when / while / after のいずれか適切な接続詞を入れなさい。\n① ( ) I was walking home, it started to rain.\n② ( ) finishing dinner, he watched TV.\n③ ( ) I grow up, I want to be a doctor.',
     answer: '① While ② After ③ When',
     hint: 'while は「〜している間」、after は「〜した後」、when は「〜するとき（将来の場合も現在形で）」です。',
-    explanation: '【解説】\n時を表す接続詞：\n\n【when】〜するとき\n・ある時点の動作・状態に使う\n・未来のことでも現在形を使う（will は使わない）\n③ When I grow up, I want to be a doctor.\n（大人になったとき、医者になりたい）\n×When I will grow up → ○When I grow up\n\n【while】〜している間に\n・同時進行する2つの動作に使う\n・whileの後には継続的な動作が来ることが多い\n① While I was walking home, it started to rain.\n（家に歩いて帰っていた間に、雨が降り始めた）\n\n【after】〜した後に\n・時間的な順序（後の動作）を示す\n・動名詞もとれる（after finishing = after he finished）\n② After finishing dinner, he watched TV.\n（夕食を終えた後、彼はテレビを見た）\n\n他の時の接続詞：before（〜する前に）、until（〜するまで）、as soon as（〜するとすぐに）',
+    explanation:
+      '【何を聞かれているか】①「( ) I was walking home, it started to rain.」②「( ) finishing dinner, he watched TV.」③「( ) I grow up, I want to be a doctor.」にwhen/while/afterのいずれか適切な接続詞を入れる。\n【なぜ使い分けが必要なのか】時を表す接続詞はそれぞれ表す時間的な関係（同時進行・順序・ある時点）がちがうため、文の意味に合わせて選ぶ必要があるから。\n【ポイント1】whenは「〜するとき」である時点の動作・状態に使う。未来のことでも現在形を使い、willは使わない。③When I grow up, I want to be a doctor.（大人になったとき、医者になりたい）。\n【ポイント2】whileは「〜している間に」で同時進行する2つの動作に使う。①While I was walking home, it started to rain.（家に歩いて帰っていた間に、雨が降り始めた）。\n【ポイント3】afterは「〜した後に」で時間的な順序を示す。動名詞も取れる。②After finishing dinner, he watched TV.（夕食を終えた後、彼はテレビを見た）。\n【答え】① While ② After ③ When\n【確かめ】①がwas walking（過去進行形）と組み合わさっていることから同時進行を表すwhileが適切だと確認する。\n【よくあるまちがい】③でWhen I will grow upのようにwillを使ってしまう。未来のことでも現在形を使う。\n【ここが絶対】未来を表す時の副詞節（when、after、beforeなど）の中ではwillを使わず現在形にする。',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
@@ -2036,7 +2047,8 @@ export const kokoGeneralQuestions: Question[] = [
     question: '次の英文の空欄を埋めなさい。\n①He has ( ) to Tokyo twice. (行ったことがある)\n②She ( ) in Osaka for ten years. (10年間住んでいる)\n③The book ( ) ( ) last night. (昨夜書かれた)',
     answer: '①been　②has lived　③was written',
     hint: '①現在完了経験用法、②現在完了継続用法、③受動態（過去形）',
-    explanation: '【解説】\n①現在完了・経験用法：have/has + 過去分詞\n"have been to ～" = ～に行ったことがある（go の現在完了は been）\nHe has been to Tokyo twice.\n\n②現在完了・継続用法：has lived (for ten years)\nShe has lived in Osaka for ten years.\n\n③受動態（過去形）：was/were + 過去分詞\n"be written"（書かれる）→ 過去形 "was written"\nThe book was written last night.',
+    explanation:
+      '【何を聞かれているか】①「He has ( ) to Tokyo twice.」（行ったことがある）②「She ( ) in Osaka for ten years.」（10年間住んでいる）③「The book ( ) ( ) last night.」（昨夜書かれた）の空欄を埋める。\n【なぜこの形になるのか】①②は現在完了形（経験・継続）、③は受動態（過去形）というそれぞれ異なる文法事項を使うため、それぞれの決まった形に沿って空欄を埋める必要があるから。\n【ポイント1】①「〜に行ったことがある」はhave/has been to〜という決まった言い方を使う（goの現在完了はbeen）。He has been to Tokyo twice.\n【ポイント2】②現在完了の継続用法。She has lived in Osaka for ten years.（forのあとに期間が続く）。\n【ポイント3】③受動態の過去形はwas/were＋過去分詞。「書かれる」はbe written、過去形はwas written。The book was written last night.\n【答え】①been　②has lived　③was written\n【確かめ】①でgoではなくbeenが使われているか、③でwrittenがwriteの過去分詞として正しく使われているかを確認する。\n【よくあるまちがい】①でhas gone to Tokyoとしてしまう。has gone toは「行ってしまって今はいない」という意味になり、経験を表すhas been toとは異なる。\n【ここが絶対】「〜に行ったことがある」という経験は have/has been to〜 で表す。',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
@@ -2047,7 +2059,8 @@ export const kokoGeneralQuestions: Question[] = [
     question: '次の英語の意味を答えなさい。\n①despite　②nevertheless　③whereas　④consequently　⑤furthermore',
     answer: '①〜にもかかわらず　②それにもかかわらず　③〜である一方で（対比）　④その結果　⑤さらに',
     hint: '高校入試・大学入試で頻出の接続表現です。文の流れを把握するのに重要です。',
-    explanation: '【解説】\n①despite（前置詞）：〜にもかかわらず\n= in spite of / notwithstanding\n例：Despite the rain, we went out.\n\n②nevertheless（副詞）：それにもかかわらず\n= however / yet / nonetheless\n例：It was raining; nevertheless, we went out.\n\n③whereas（接続詞）：〜である一方で（対比・対照）\n例：He is tall, whereas his brother is short.\n\n④consequently（副詞）：その結果\n= as a result / therefore\n例：She worked hard; consequently, she passed the exam.\n\n⑤furthermore（副詞）：さらに、その上\n= moreover / in addition\n例：It was expensive. Furthermore, it was slow.',
+    explanation:
+      '【何を聞かれているか】①despite②nevertheless③whereas④consequently⑤furthermoreの意味を答える。\n【なぜこれらの語を覚える必要があるのか】これらは文と文の関係（逆接・対比・結果・追加）を示す接続表現で、意味を知らないと文章全体の論理の流れを正しく読み取れなくなるから。\n【ポイント1】①despite（前置詞）＝〜にもかかわらず（in spite of / notwithstandingと同じ）。例：Despite the rain, we went out.\n【ポイント2】②nevertheless（副詞）＝それにもかかわらず（however / yet / nonethelessと同じ）。③whereas（接続詞）＝〜である一方で（対比・対照）。例：He is tall, whereas his brother is short.\n【ポイント3】④consequently（副詞）＝その結果（as a result / thereforeと同じ）。⑤furthermore（副詞）＝さらに、その上（moreover / in additionと同じ）。\n【答え】①〜にもかかわらず　②それにもかかわらず　③〜である一方で（対比）　④その結果　⑤さらに\n【確かめ】それぞれの語を似た意味の語（despite=in spite of、nevertheless=however など）と結びつけて覚えられているか確認する。\n【よくあるまちがい】despiteとdespite of（前置詞despiteのあとにofをつけてしまう誤り）を混同する。despiteのあとに直接名詞が続く。\n【ここが絶対】文章の論理の流れ（逆接・対比・結果・追加）を示す接続表現は、似た意味の語とグループにして覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -2058,7 +2071,8 @@ export const kokoGeneralQuestions: Question[] = [
     question: '次の日本語を英語に訳しなさい。\n①「私はピアノを弾くのが好きです。」\n②「彼女は英語を話すのが得意です。」',
     answer: '①I like playing the piano.　②She is good at speaking English.',
     hint: '①like の後の動詞は〜ing 形（動名詞）。②be good at の後は〜ing 形。',
-    explanation: '【解説】\n①I like playing the piano.\n・like の後には動名詞（〜ing）または不定詞（to〜）が来る。\n・playing the piano（ピアノを弾くこと）= 動名詞\n\n②She is good at speaking English.\n・be good at 〜：〜が得意\n・at の後は名詞か動名詞（〜ing）\n・speaking English（英語を話すこと）\n\n動名詞を目的語に取る動詞：enjoy/finish/stop/mind/avoidなど\n不定詞を目的語に取る動詞：want/hope/decide/try など',
+    explanation:
+      '【何を聞かれているか】①「私はピアノを弾くのが好きです。」②「彼女は英語を話すのが得意です。」を英語に訳す。\n【なぜ動名詞を使うのか】likeのあとや前置詞atのあとに動詞を続けるときは、動名詞（-ing）または不定詞（to〜）という決まった形にする必要があるから。\n【ポイント1】①likeのあとには動名詞（〜ing）または不定詞（to〜）が来る。playing the piano（ピアノを弾くこと）＝動名詞。I like playing the piano.\n【ポイント2】②be good at〜「〜が得意」のatは前置詞で、あとは名詞か動名詞（〜ing）になる。speaking English（英語を話すこと）。She is good at speaking English.\n【ポイント3】動名詞を目的語に取る動詞にはenjoy/finish/stop/mind/avoidなど、不定詞を目的語に取る動詞にはwant/hope/decide/tryなどがある。\n【答え】①I like playing the piano.　②She is good at speaking English.\n【確かめ】②のatのあとがspeak（原形）ではなくspeaking（動名詞）になっているかを確認する。\n【よくあるまちがい】be good at speakを、原形のまま使ってしまう。前置詞のあとは必ず動名詞にする。\n【ここが絶対】前置詞のあとに動詞を続けるときは必ず動名詞（-ing）にする。',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
@@ -2102,7 +2116,8 @@ export const kokoGeneralQuestions: Question[] = [
     question: '次の会話の（　）に適切な表現を入れなさい。\nA: Excuse me, could you ( ) me the way to the nearest station?\nB: Sure! ( ) this street and turn left at the second traffic light.\nA: Thank you so much!\nB: You\'re ( )!',
     answer: '①tell　②Go down (Take / Follow)　③welcome',
     hint: '道案内の定番フレーズです。',
-    explanation: '【解説】\n①Could you tell me the way to ～?\n＝ ～への道を教えていただけますか？\n（Could you show me / direct me to ～? も可）\n\n②Go down this street：この道をまっすぐ進む\nほかに：Take / Follow this street も可\n\n③You\'re welcome.：どういたしまして\n\n道案内の頻出表現：\n・Go straight：まっすぐ進む\n・Turn right/left：右/左に曲がる\n・at the traffic light：信号で\n・on your right/left：右手/左手に',
+    explanation:
+      '【何を聞かれているか】道案内の会話「could you ( ) me the way...」「( ) this street...」「You\'re ( )!」の空欄に適切な表現を入れる。\n【なぜこれらの表現を覚える必要があるのか】道案内には決まった定番フレーズがあり、その型を知っていれば、たずねる側も答える側も自然な会話ができるから。\n【ポイント1】①Could you tell me the way to〜?＝〜への道を教えていただけますか？（Could you show me / direct me to〜?も可）。\n【ポイント2】②Go down this street：この道をまっすぐ進む（Take / Follow this streetも可）。\n【ポイント3】③You\'re welcome.：どういたしまして。ほかの道案内の頻出表現：Go straight（まっすぐ進む）、Turn right/left（右/左に曲がる）、at the traffic light（信号で）、on your right/left（右手/左手に）。\n【答え】①tell　②Go down (Take / Follow)　③welcome\n【確かめ】会話全体を通して読み、道をたずねる→説明する→お礼を言う→どういたしましてという自然な流れになっているかを確認する。\n【よくあるまちがい】お礼への返事You\'re welcome.をYou\'re kindのように誤った語にしてしまう。\n【ここが絶対】道案内の会話表現は、決まった型（tell me the way / Go down〜 / You\'re welcome.）をセットで覚える。',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
@@ -2124,7 +2139,8 @@ export const kokoGeneralQuestions: Question[] = [
     question: '次の英文の意味を答えなさい。また、仮定法過去の特徴を説明しなさい。\n"If I were a bird, I could fly anywhere."',
     answer: '意味：「もし私が鳥だったら、どこへでも飛べるのに。」現実ではないことを仮定する表現で、if節に過去形（were）、主節に could/would + 動詞原形を使う。',
     hint: '現実には鳥ではない。「〜だったらなあ」という願望・反実仮想の表現です。',
-    explanation: '【解説】\n仮定法過去：現在の事実と反対のことを仮定する\n形式：If 主語 + 過去形, 主語 + would/could/might + 動詞原形\n\n"If I were a bird, I could fly anywhere."\n（もし私が鳥だったら、どこへでも飛べるのに）\n※事実：私は鳥ではない → 飛べない\n\n特徴：\n・If節の be動詞は主語に関係なく were を使う（口語では was も可）\n・主節には could/would/might + 動詞の原形\n\n直説法（事実）との違い：\n仮定法：If I were you, I would study harder.\n直説法：If you are hungry, eat something.',
+    explanation:
+      '【何を聞かれているか】「If I were a bird, I could fly anywhere.」の意味を答え、仮定法過去の特徴を説明する。\n【なぜwereとcouldを使うのか】仮定法過去は現在の事実と反対のことを仮定する言い方で、実際にはそうではないという気持ちを示すために、if節の動詞を過去形（be動詞は主語に関係なくwere）にし、主節にはwould/could/mightを使うという決まりがあるから。\n【ポイント1】形式：If 主語＋過去形, 主語＋would/could/might＋動詞原形。\n【ポイント2】"If I were a bird, I could fly anywhere."＝「もし私が鳥だったら、どこへでも飛べるのに」。事実は「私は鳥ではない→飛べない」。\n【ポイント3】If節のbe動詞は主語に関係なくwereを使う（口語ではwasも可）。主節にはcould/would/might＋動詞の原形。直説法（事実）との違い：仮定法If I were you, I would study harder. / 直説法If you are hungry, eat something.\n【答え】意味：「もし私が鳥だったら、どこへでも飛べるのに。」現実ではないことを仮定する表現で、if節に過去形（were）、主節にcould/would+動詞原形を使う。\n【確かめ】この文が現実の話（直説法）ではなく、あり得ない仮定（仮定法）であることを、be動詞がwereになっている点から確認する。\n【よくあるまちがい】If I am a bird, I can fly anywhere.のように現在形のまま書いてしまう。\n【ここが絶対】仮定法過去のif節ではbe動詞は必ずwereを使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -2135,7 +2151,8 @@ export const kokoGeneralQuestions: Question[] = [
     question: '次の日本文を英語に訳しなさい。\n「彼は昨日からずっと熱があります。昨日病院に行ったのですが、医者は今日休むよう言いました。」',
     answer: 'He has had a fever since yesterday. He went to the hospital yesterday, and the doctor told him to rest today.',
     hint: '①「ずっと〜している」は現在完了（has had）+ since。②「〜するよう言う」はtell+人+to不定詞。',
-    explanation: '【解説】\n①He has had a fever since yesterday.\n・「昨日からずっと熱がある」= 継続の現在完了 have had + since yesterday\n・have a fever: 熱がある\n\n②He went to the hospital yesterday,\n・「昨日病院に行った」= 過去形 went\n\nand the doctor told him to rest today.\n・「医者は〜するよう言った」= tell + 人 + to 動詞原形\n・told him to rest: 彼に休むよう言った\n\n構文のポイント：\n・現在完了 vs 過去形の使い分け\n・SVOC構文：tell/ask/want + 人 + to + 動詞原形',
+    explanation:
+      '【何を聞かれているか】「彼は昨日からずっと熱があります。昨日病院に行ったのですが、医者は今日休むよう言いました。」を英語に訳す。\n【なぜ現在完了と過去形を使い分けるのか】「昨日からずっと」という継続には現在完了、「昨日行った」という単発の過去の出来事には過去形を使うというように、時間的な意味のちがいによって時制を使い分ける必要があるから。\n【ポイント1】「昨日からずっと熱がある」は継続の現在完了have had＋since yesterday。He has had a fever since yesterday.（have a feverは「熱がある」）。\n【ポイント2】「昨日病院に行った」は過去の1回の出来事なので過去形went。He went to the hospital yesterday。\n【ポイント3】「医者は〜するよう言った」はtell＋人＋to不定詞の形。the doctor told him to rest today.（彼に今日休むよう言った）。\n【答え】He has had a fever since yesterday. He went to the hospital yesterday, and the doctor told him to rest today.\n【確かめ】「ずっと〜している」（継続・現在完了）と「〜した」（1回の出来事・過去形）を文中で正しく使い分けられているかを見直す。\n【よくあるまちがい】「昨日病院に行った」を現在完了has goneで表してしまう。yesterdayのようにはっきりした過去の一時点を表す語がある場合は過去形を使う。\n【ここが絶対】はっきりした過去の一時点（yesterdayなど）が示されているときは過去形、「ずっと」という継続には現在完了を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',

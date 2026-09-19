@@ -22,7 +22,7 @@ export const kkEigo: Question[] = [
       'I have been studying English for three years. （または I have studied English for three years.）',
     hint: '継続を表す現在完了：have/has + 過去分詞。期間はfor、起点はsince',
     explanation:
-      '現在完了（継続）：have/has+p.p.。for+期間(for three years)、since+起点(since 2021)。継続動作を強調するなら現在完了進行形(have been -ing)が自然。I have studied=3年間の学習(完了・継続)、I have been studying=今もずっと勉強中(継続強調)。',
+      '【何を聞かれているか】「私は3年間ずっと英語を勉強しています（現在も継続中）」を現在完了形で英語にする。\n【なぜforを使うのか】「3年間」という期間の長さを表すにはfor＋期間を使い、「2021年から」のような起点を表すにはsince＋起点を使うという使い分けのルールがあるから。\n【ポイント1】継続を表す現在完了はhave/has＋過去分詞。期間はfor（for three years）、起点はsince（since 2021）を使う。\n【ポイント2】I have studied English for three years.は「3年間の学習」という完了・継続を表す。\n【ポイント3】継続動作をより強調したいときは現在完了進行形（have been -ing）を使うのが自然。I have been studying English for three years.は「今もずっと勉強中」という継続を強調する。\n【答え】I have been studying English for three years. （または I have studied English for three years.）\n【確かめ】「3年間」という期間を表す語にforが使われているか（sinceになっていないか）を確認する。\n【よくあるまちがい】期間を表すのにsinceを使ってしまう（since three yearsは誤り）。\n【ここが絶対】forは期間、sinceは起点に使うと覚える。',
     difficulty: 'advanced',
     course: 'koko-kankan',
     examType: 'koko',
@@ -49,7 +49,7 @@ export const kkEigo: Question[] = [
     answer: 'I met a student who won the science prize.',
     hint: '先行詞が人→who。先行詞が物→which/that',
     explanation:
-      '関係代名詞whoは先行詞が人のとき使い、後に続く節（won the science prize）が先行詞(a student)を修飾する。she→who（同じ人物を指す）。I met a student who won...「科学賞を取った生徒に会った」。先行詞が物ならwhich/that。',
+      '【何を聞かれているか】「I met a student. She won the science prize.」を関係代名詞を使って1文にする。\n【なぜwhoを使うのか】2つ目の文の主語She（人）が1つ目の文の名詞a student（人）と同じものを指しているため、その主語を関係代名詞に置きかえて先行詞a studentのうしろにつなげることができ、先行詞が人の場合はwhoを使うというルールがあるから。\n【ポイント1】関係代名詞whoは先行詞が人のときに使う。\n【ポイント2】後に続く節（won the science prize）が先行詞（a student）を修飾する。sheがwhoに置きかわり、同じ人物を指している。\n【ポイント3】I met a student who won the science prize.＝「科学賞を取った生徒に会った」。先行詞が物ならwhich/thatを使う。\n【答え】I met a student who won the science prize.\n【確かめ】もとの2つの文（I met a student. / She won the science prize.）に分けて、Sheがwhoに置きかわったことを確認する。\n【よくあるまちがい】先行詞が人（a student）なのにwhichを使ってしまう。\n【ここが絶対】先行詞が人のときはwhoを使う。',
     difficulty: 'advanced',
     course: 'koko-kankan',
     examType: 'koko',
@@ -63,7 +63,7 @@ export const kkEigo: Question[] = [
       '①Tokyo is larger than Osaka. ②Mt. Fuji is the highest mountain in Japan. ③She runs three times as fast as he (does).',
     hint: '比較級-er than / more+形容詞 than。最上級the -est / the most。倍数+as...as',
     explanation:
-      '比較級：形容詞にerまたはmore。large→larger(1音節はer)。最上級：the+形容詞est/the most。high→highest。倍数：数+times as+原級+as（3倍速い=three times as fast as）。',
+      '【何を聞かれているか】①「東京は大阪よりも大きい。」②「富士山は日本で一番高い山だ。」③「彼女は彼の3倍速く走る。」を比較の文で完成させる。\n【なぜそれぞれ形がちがうのか】①は比較級（2つを比べる）、②は最上級（3つ以上の中でいちばん）、③は倍数比較（何倍かを表す）という、比べ方がそれぞれちがう表現だから。\n【ポイント1】①比較級は形容詞に-erまたはmoreをつける。large（1音節）→larger。Tokyo is larger than Osaka.\n【ポイント2】②最上級はthe＋形容詞-estまたはthe most。high→highest。Mt. Fuji is the highest mountain in Japan.\n【ポイント3】③倍数比較は「数＋times as＋原級＋as」。3倍速い＝three times as fast as。She runs three times as fast as he (does).\n【答え】①Tokyo is larger than Osaka. ②Mt. Fuji is the highest mountain in Japan. ③She runs three times as fast as he (does).\n【確かめ】①でlargeにrだけを足してlarger（すでに語尾がeなので）になっているかを確認する。\n【よくあるまちがい】①でlargeerのように、すでにeで終わる語にさらにeをつけてerを重ねてしまう。\n【ここが絶対】倍数比較は「数字+times as+原級+as」の形で覚える。',
     difficulty: 'advanced',
     course: 'koko-kankan',
     examType: 'koko',
@@ -76,7 +76,7 @@ export const kkEigo: Question[] = [
     answer: "I don't know where he lives.",
     hint: '間接疑問文：疑問詞+主語+動詞（疑問文語順にしない）',
     explanation:
-      "直接疑問文(Where does he live?)を他の文に組み込む場合、語順を平叙文と同じにする。Where does he live? → where he lives（does消えて3単現sが動詞につく）。I don't know + where he lives.。Do you know what time it is?なども同じ構造。",
+      '【何を聞かれているか】「Where does he live?」を「I don\'t know （　　）.」の形の間接疑問文に書きかえる。\n【なぜdoesが消えるのか】直接疑問文を他の文に組み込むとき（間接疑問文）、語順を平叙文と同じ〈疑問詞＋主語＋動詞〉に戻すため、疑問文特有の助動詞doesは不要になり、そのかわり動詞に三人称単数のsをつけるというルールがあるから。\n【ポイント1】Where does he live?を間接疑問文にすると、doesが消えて動詞にsがつき、where he livesの形になる。\n【ポイント2】I don\'t know＋where he lives.で1つの文にする。\n【ポイント3】Do you know what time it is?なども同じ構造（疑問詞＋主語＋動詞）になる。\n【答え】I don\'t know where he lives.\n【確かめ】doesが消えて、動詞がliveではなくlives（三人称単数のs付き）になっているかを確認する。\n【よくあるまちがい】I don\'t know where does he live.のように疑問文の語順のままにしてしまう。\n【ここが絶対】間接疑問文ではdo/does/didを使わず、動詞を主語に合わせた形に戻す。',
     difficulty: 'advanced',
     course: 'koko-kankan',
     examType: 'koko',
@@ -101,10 +101,10 @@ export const kkEigo: Question[] = [
     question:
       "対話文の空所を補え。A: \"Have you ever been to Kyoto?\" B: \"( ①　).\" A: \"Really? I went there last year. It was beautiful.\" B: \"I'd like to go someday. ( ②　)?\" A: \"I recommend Kinkakuji Temple.\"",
     answer:
-      "①No, I haven't. （または Yes, I have.） ②What do you recommend? （または What should I visit?）",
+      '①No, I haven\'t. ②What do you recommend? （または What should I visit?）',
     hint: "Have you ever been to~?はhave+過去分詞の現在完了疑問文。応答はYes/No+have/haven't",
     explanation:
-      "Have you ever been to~?「〜に行ったことがありますか」→現在完了の経験。返答：Yes, I have. / No, I haven't.。②の空所：A's answer「金閣寺をおすすめします」から逆算→「何をおすすめしますか」What do you recommend?が自然。",
+      '【何を聞かれているか】対話文「A: Have you ever been to Kyoto? B: (①). A: Really? I went there last year. It was beautiful. B: I\'d like to go someday. (②)? A: I recommend Kinkakuji Temple.」の空所を補う。\n【なぜNo, I haven\'tが正しいのか】この後B自身が「I\'d like to go someday.（いつか行ってみたい）」と言っており、これはまだ京都に行ったことがない人の発言として自然なので、①はNo, I haven\'t.（行ったことがない）が会話全体の流れと合う。\n【ポイント1】Have you ever been to〜?＝「〜に行ったことがありますか」という現在完了の経験用法の疑問文。\n【ポイント2】①の返答はYes/No＋have/haven\'tの形。今回はB自身が後で「いつか行ってみたい」と言っているので、まだ行ったことがないNo, I haven\'t.が文脈に合う。\n【ポイント3】②はAの答え「金閣寺をおすすめします」から逆算する。「何をおすすめしますか」What do you recommend?が自然な質問になる。\n【答え】①No, I haven\'t. ②What do you recommend? （または What should I visit?）\n【確かめ】①をNo, I haven\'t.にした場合、そのあとの「I\'d like to go someday.」（まだ行ったことがないから、いつか行きたい）と矛盾しないことを確認する。\n【よくあるまちがい】①をYes, I have.にしてしまうと、後の「I\'d like to go someday.」（いつか行きたい＝まだ行っていない）と話がかみ合わなくなる。\n【ここが絶対】対話文の空所は、その前後の文とつじつまが合うかどうかで判断する。',
     difficulty: 'advanced',
     course: 'koko-kankan',
     examType: 'koko',
@@ -117,7 +117,7 @@ export const kkEigo: Question[] = [
     answer: 'I have never been to London.',
     hint: '現在完了：have/has + p.p.。副詞neverはhave/hasの直後',
     explanation:
-      '現在完了の語順：主語+have/has(+副詞)+p.p.。neverはhaveの直後に置く。been to+場所「〜に行ったことがある」。I have never been to London.「私はロンドンに行ったことがない」(経験の否定)。',
+      '【何を聞かれているか】[ never / have / to / I / been / London ]を正しい語順に並べ替える。\n【なぜneverをhaveの直後に置くのか】現在完了の文で頻度を表す副詞（never/ever/alreadyなど）は、have/hasと過去分詞の間に置くという決まった位置があるから。\n【ポイント1】現在完了の基本語順は「主語＋have/has（＋副詞）＋過去分詞」。\n【ポイント2】neverはhaveの直後に置く。been to＋場所で「〜に行ったことがある」。\n【ポイント3】I have never been to London.＝「私はロンドンに行ったことがない」（経験の否定）。\n【答え】I have never been to London.\n【確かめ】neverがhaveの直後、過去分詞been の前に置かれているかを確認する。\n【よくあるまちがい】neverをbeenのあとに置いてI have been never to London.としてしまう。\n【ここが絶対】現在完了の否定・頻度の副詞はhave/hasと過去分詞の間に置く。',
     difficulty: 'advanced',
     course: 'koko-kankan',
     examType: 'koko',
@@ -147,7 +147,7 @@ export const ktEigo: Question[] = [
     answer: '①sleeping ②Having finished',
     hint: '現在分詞(〜している)が名詞を修飾。分詞構文の完了形：Having+過去分詞',
     explanation:
-      '①分詞による名詞修飾：sleeping baby「眠っている赤ちゃん」（現在分詞が形容詞的に使われる）。②分詞構文：主文の動詞より前の動作をHaving+p.p.で表す（完了形分詞構文）。Having finished his homework(宿題を終えてから)→he went outside。分詞構文の主語は主文の主語と同じ(he)。',
+      '【何を聞かれているか】①「眠っている赤ちゃんを起こさないでください。」②「宿題を終えてから、彼は外に出た。」の空所を、分詞・分詞構文を使って補う。\n【なぜ分詞を使うのか】①は「赤ちゃん」を「眠っている」という状態で修飾するために現在分詞を使い、②は主文より前に完了した動作を1語で表すために、分詞構文の完了形（Having+過去分詞）を使うという決まりがあるから。\n【ポイント1】①分詞による名詞修飾：sleeping baby＝「眠っている赤ちゃん」（現在分詞が形容詞的に使われる）。Don\'t wake up the baby sleeping.\n【ポイント2】②分詞構文：主文の動詞より前の動作をHaving＋過去分詞で表す（完了形分詞構文）。Having finished his homework（宿題を終えてから）→he went outside。\n【ポイント3】分詞構文の主語は主文の主語と同じ（he）であることを確認する。\n【答え】①sleeping ②Having finished\n【確かめ】②の文で「宿題を終えた」のが主文の動作（外に出た）より前であることから、Having＋過去分詞（完了形）が使われているかを確認する。\n【よくあるまちがい】②でHaving finishedではなくFinishing（単なる現在分詞）にしてしまい、「終える」と「外に出る」が同時であるかのような形にしてしまう。\n【ここが絶対】主文より前に完了した動作を分詞構文で表すときはHaving＋過去分詞を使う。',
     difficulty: 'advanced',
     course: 'koko-top',
     examType: 'koko',
