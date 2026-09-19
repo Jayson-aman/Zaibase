@@ -11,7 +11,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の（　）に適切な語を入れ、現在完了形の文を完成させなさい。\n① I (　) (　) this book before. （私はこの本を以前読んだことがある）\n② She (　) (　) her keys. （彼女は鍵をなくしてしまった）',
     answer: '① have read　② has lost',
     hint: '現在完了形は「have / has + 過去分詞」。主語が3人称単数のときは has を使う。',
-    explanation: '【文法ポイント】\n現在完了形は「have/has + 過去分詞」で作る。主語がI/you/we/theyならhave、he/she/itなら has を使う。英語は慣れれば大丈夫！\n\n【例文】\n○ I have visited Kyoto once.（一度行ったことがある）\n○ He has broken the window.（窓を割ってしまった）\n\n【日本語との違い】\n日本語の「読んだことがある」「なくしてしまった」は過去形のように見えるが、英語では「今に影響している」というニュアンスで現在完了を使う。\n\n【答え】\n① have read　② has lost',
+    explanation:
+      '【何を聞かれているか】①「I (　) (　) this book before.」（私はこの本を以前読んだことがある）②「She (　) (　) her keys.」（彼女は鍵をなくしてしまった）の空所を現在完了形で埋める。\n【なぜhave/hasと過去分詞を使うのか】「以前〜したことがある」「〜してしまった（今もその状態が続く）」という、過去の出来事が今に影響しているという意味を表すには、現在完了形（have/has＋過去分詞）を使う必要があるから。\n【ポイント1】現在完了形はhave/has＋過去分詞で作る。主語がI/you/we/theyならhave、he/she/itならhasを使う。\n【ポイント2】①の主語はI（1人称）なのでhave、readの過去分詞はread（原形と同じつづりだが発音が変わる）。①have read。\n【ポイント3】②の主語はShe（3人称単数）なのでhas、loseの過去分詞はlost。②has lost。\n【答え】① have read　② has lost\n【確かめ】主語がI（have）、She（has）とそれぞれ正しく対応しているかを確認する。\n【よくあるまちがい】She have lostのように、3人称単数の主語にhaveを使ってしまう。\n【ここが絶対】現在完了形はhave/has＋過去分詞。主語がhe/she/itのときは必ずhasを使う。',
     pitfall: '「She have lost」のようにheads/sheにhaveを使ってしまうミス。3単現はhas！',
     memoryTip: 'have/has + 過去分詞。主語がI/You/We/They → have、He/She/It → has。このセットを丸ごと覚えよう！',
   },
@@ -25,7 +26,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の（　）に ever / never / already / yet のうち最も適切なものを入れなさい。\n① Have you (　) tried sushi? （寿司を食べたことがありますか）\n② I have (　) finished my homework. （私はもう宿題を終えた）\n③ He has (　) seen a panda. （彼はパンダを一度も見たことがない）\n④ Have you finished lunch (　)? （もうお昼は終わりましたか）',
     answer: '① ever　② already　③ never　④ yet',
     hint: 'ever=経験の疑問文、already=完了の肯定文、never=経験の否定、yet=疑問文・否定文の末尾。',
-    explanation: '【文法ポイント】\n現在完了のキーワード4つを使い分けよう。パターンを覚えるだけでOK！\n\n・ever → 疑問文で「これまでに〜したことがある？」\n・never → 否定文で「一度も〜したことがない」\n・already → 肯定文で「もう〜した」\n・yet → 疑問文・否定文の文末で「もう〜した？」「まだ〜していない」\n\n【例文】\n○ Have you ever been to Paris?\n○ I\'ve already eaten.\n○ I haven\'t eaten yet.\n○ She has never tried skiing.\n\n【日本語との違い】\n「もう」はalready（肯定）とyet（疑問）で使い分ける点が日本語と異なる。\n\n【答え】\n① ever　② already　③ never　④ yet',
+    explanation:
+      '【何を聞かれているか】①「Have you (　) tried sushi?」②「I have (　) finished my homework.」③「He has (　) seen a panda.」④「Have you finished lunch (　)?」の空所にever/never/already/yetのうち最も適切なものを入れる。\n【なぜこの語を使い分けるのか】ever（疑問文で経験を尋ねる）、never（否定文で経験がないことを表す）、already（肯定文で完了を表す）、yetは（疑問文・否定文の文末で使う）というように、それぞれ使う文の種類と意味が決まっているから。\n【ポイント1】①は疑問文で「これまでに〜したことがある？」を尋ねているのでever。\n【ポイント2】②は肯定文で「もう〜した」を表しているのでalready。③は「一度も〜したことがない」という否定の意味を動詞句hasのあとに直接組み込むのでnever。\n【ポイント3】④は疑問文の文末で「もう〜した？」を表しているのでyet。\n【答え】① ever　② already　③ never　④ yet\n【確かめ】already（肯定文で使う）とyet（疑問文・否定文の文末で使う）を混同していないか見直す。\n【よくあるまちがい】疑問文の「もう〜？」でalreadyを使ってしまう。疑問文の文末はyetを使う。\n【ここが絶対】ever＝疑問文、never＝否定的経験、already＝肯定的完了、yet＝疑問文・否定文の文末、とセットで覚える。',
     pitfall: '「Have you finished yet」の yet を already に言い換えるミス。疑問文の「もう〜？」は yet、肯定文の「もう〜した」は already。',
     memoryTip: '「ever=疑問、never=否定経験、already=肯定完了、yet=末尾（疑問・否定）」。4つをセットで歌のように覚えよう！',
   },
@@ -53,7 +55,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の（　）に is / are / was / were のうち適切なものを選び、受動態の文を完成させなさい。\n① English (　) spoken in many countries.（英語は多くの国で話されている）\n② The book (　) published last year.（その本は去年出版された）',
     answer: '① is　② was',
     hint: '現在の受動態 → is/are + 過去分詞。過去の受動態 → was/were + 過去分詞。',
-    explanation: '【文法ポイント】\n受動態の時制はbe動詞で表す。このパターンを覚えるだけでOK！\n\n・現在の受動態：is/are + 過去分詞\n・過去の受動態：was/were + 過去分詞\n\n主語が単数 → is/was、複数 → are/were\n\n【例文】\n○ This park is used by many people.（現在）\n○ This bridge was built in 1990.（過去）\n\n【日本語との違い】\n日本語は「話されている」「出版された」と時制が言葉に含まれるが、英語はbe動詞の形で時制を表す。\n\n【答え】\n① is　② was',
+    explanation:
+      '【何を聞かれているか】①「English (　) spoken in many countries.」②「The book (　) published last year.」の空所を受動態のbe動詞で埋める。\n【なぜbe動詞の時制で使い分けるのか】受動態はbe動詞＋過去分詞の形で表し、be動詞の時制（is/are＝現在、was/were＝過去）によって「いつのことか」を表すから。\n【ポイント1】①は「英語は（今も）多くの国で話されている」という現在の内容で、Englishは単数扱いなのでis。\n【ポイント2】②は「去年出版された」という過去の内容で、The bookは単数なのでwas。\n【ポイント3】現在の受動態はis/are＋過去分詞、過去の受動態はwas/were＋過去分詞。主語の単数・複数も確認する。\n【答え】① is　② was\n【確かめ】①がEnglish（単数扱い）でis、②がThe book（単数）でwasになっているかを確認する。\n【よくあるまちがい】English are spokenのように、Englishを複数扱いしてareを使ってしまう。\n【ここが絶対】受動態のbe動詞は時制（現在か過去か）と主語の単数・複数の両方で決まる。',
     pitfall: '「English are spoken」のように複数扱いしてしまうミス。English は単数なので is を使う。',
     memoryTip: '受動態のbe動詞 → 時制で選ぶ。現在=is/are、過去=was/were。主語の単複も確認！',
   },
@@ -67,7 +70,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の（　）に to不定詞か動名詞（-ing）の正しい形を入れなさい。\n① I want (　) (　) soccer. （サッカーがしたい）\n② She enjoys (　) books. （彼女は本を読むのを楽しむ）\n③ He decided (　) (　) to Tokyo. （彼は東京に行くことを決めた）',
     answer: '① to play　② reading　③ to go',
     hint: 'want / decide / hope → to不定詞。enjoy / finish / practice → 動名詞（-ing）。',
-    explanation: '【文法ポイント】\n動詞によって後ろに来る形が決まっている。これはパターン暗記がいちばん効く！\n\n・to不定詞（to + 動詞原形）を取る動詞：\n  want / wish / hope / decide / plan / promise / try\n・動名詞（動詞-ing）を取る動詞：\n  enjoy / finish / stop / practice / give up / mind\n・両方OK：like / love / hate / start / begin\n\n【例文】\n○ I want to eat pizza.\n○ She finished doing her homework.\n○ I like playing / to play tennis.\n\n【日本語との違い】\n日本語ではどちらも「〜すること」と訳せるが、英語では動詞ごとに決まった形がある。\n\n【答え】\n① to play　② reading　③ to go',
+    explanation:
+      '【何を聞かれているか】①「I want (　) (　) soccer.」②「She enjoys (　) books.」③「He decided (　) (　) to Tokyo.」の空所を不定詞か動名詞の正しい形で埋める。\n【なぜ動詞によって形が決まっているのか】英語では動詞ごとに「あとに不定詞（to＋原形）が続くか、動名詞（-ing）が続くか」が決まっており、want・decideは不定詞を、enjoyは動名詞を目的語に取るというルールがあるから。\n【ポイント1】want、hope、decide、plan、promise、tryは不定詞（to＋動詞原形）を取る動詞。①want to play、③decided to go。\n【ポイント2】enjoy、finish、stop、practice、give up、mindは動名詞（-ing）を取る動詞。②enjoys reading。\n【ポイント3】like、love、hate、start、beginは両方OK。\n【答え】① to play　② reading　③ to go\n【確かめ】want・decideのあとにto＋原形が、enjoyのあとに-ing形が使われているかを確認する。\n【よくあるまちがい】I enjoy to readのように、enjoyのあとにto不定詞を置いてしまう。\n【ここが絶対】動詞ごとに不定詞・動名詞のどちらを取るかが決まっているので、動詞とセットで覚える。',
     pitfall: '「I enjoy to read」のようにenjoyの後にto不定詞を置くミス。enjoyは必ず-ing形！',
     memoryTip: 'enjoy・finish・stop・practice → 全部-ing（「えんじょい、ふぃにっしゅ、すとっぷ、ぷらくてぃす」と音読暗記！）',
   },
@@ -109,7 +113,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の（　）に who / which / that のうち適切な関係代名詞を入れなさい。\n① The boy (　) lives next door is my friend.（隣に住んでいる男の子は私の友達だ）\n② I have a cat (　) has white fur.（毛が白い猫を飼っている）\n③ She bought a bag (　) was made in Italy.（彼女はイタリア製のバッグを買った）',
     answer: '① who（またはthat）　② which（またはthat）　③ which（またはthat）',
     hint: '先行詞が「人」→ who/that、「物・動物」→ which/that。that は両方OK。',
-    explanation: '【文法ポイント】\n関係代名詞は「先行詞（説明したい名詞）が何か」で選ぶ。このパターンを覚えるだけでOK！\n\n・先行詞が人 → who / that\n・先行詞が物・動物 → which / that\n・that は人にも物にも使える万能選手\n\n【例文】\n○ I know a girl who can speak French.（フランス語が話せる女の子を知っている）\n○ This is the book which I bought yesterday.（昨日買った本）\n○ The dog that barks is harmless.（吠えている犬は無害だ）\n\n【日本語との違い】\n日本語では「〜の（名詞）」と前から修飾するが、英語は名詞の後ろからwho/which節で修飾する。\n\n【答え】\n① who（またはthat）　② which（またはthat）　③ which（またはthat）',
+    explanation:
+      '【何を聞かれているか】①「The boy (　) lives next door is my friend.」②「I have a cat (　) has white fur.」③「She bought a bag (　) was made in Italy.」の空所に適切な関係代名詞を入れる。\n【なぜ先行詞で使い分けるのか】関係代名詞は先行詞（説明したい名詞）が人か物・動物かによって使う語が決まっているから。\n【ポイント1】①の先行詞The boyは人なのでwho（またはthat）を使う。\n【ポイント2】②の先行詞a catと③の先行詞a bagはどちらも物・動物なのでwhich（またはthat）を使う。\n【ポイント3】thatは人にも物にも使える万能の関係代名詞。\n【答え】① who（またはthat）　② which（またはthat）　③ which（またはthat）\n【確かめ】①が人（who）、②③が物・動物（which）になっているかを確認する。\n【よくあるまちがい】The boy which lives next doorのように、先行詞が人なのにwhichを使ってしまう。\n【ここが絶対】先行詞が人ならwho、物・動物ならwhich、どちらでもthatが使えると覚える。',
     pitfall: '先行詞が人なのに which を使う「The boy which lives...」というミス。人 → who / that が原則。',
     memoryTip: '人 → who（ウー人）、物 → which（ウィッチはモノ）、that は両方OK。覚え方は「人にはwho、物にはwhich」！',
   },
@@ -123,7 +128,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の2文を関係代名詞を使って1文にしなさい。\n① I have a friend. He speaks three languages.\n② This is the movie. I want to see it.',
     answer: '① I have a friend who speaks three languages.\n② This is the movie (which/that) I want to see.',
     hint: '① 先行詞は人（friend）→ who。② 先行詞は物（movie）→ which/that。目的格関係代名詞は省略可。',
-    explanation: '【文法ポイント】\n関係代名詞で2文をつなぐとき、共通する名詞（＝先行詞）に注目する。英語は慣れれば大丈夫！\n\n【作り方】\n1. 共通する名詞を見つける（friend / movie）\n2. 2文目の代名詞（he → who、it → which/that）を関係代名詞に変える\n3. 先行詞の直後に関係代名詞節を続ける\n\n【例文】\n○ She is the teacher who helped me.（私を助けてくれた先生）\n○ The book (which) he wrote is famous.（彼が書いた本は有名だ）\n\n【日本語との違い】\n日本語は「3言語話す友達」と前から修飾するが、英語はa friend → who speaks の順で後から修飾する。\n\n【答え】\n① I have a friend who speaks three languages.\n② This is the movie (which/that) I want to see.',
+    explanation:
+      '【何を聞かれているか】①「I have a friend. He speaks three languages.」②「This is the movie. I want to see it.」を関係代名詞を使ってそれぞれ1文にする。\n【なぜ関係代名詞でつなげられるのか】2文目の代名詞（He／it）が、1文目に出てきた名詞（a friend／the movie）と同じものを指しているため、その代名詞を関係代名詞に置きかえて1文目の名詞のうしろにつなげることができるから。\n【ポイント1】①先行詞a friend（人）のHeをwhoに置きかえる。I have a friend who speaks three languages.\n【ポイント2】②先行詞the movie（物）のitをwhich/thatに置きかえる。This is the movie (which/that) I want to see.\n【ポイント3】②のitは動詞seeの目的語にあたるので、目的格の関係代名詞は省略も可能。\n【答え】① I have a friend who speaks three languages.　② This is the movie (which/that) I want to see.\n【確かめ】もとの文の代名詞（He／it）が、それぞれ正しい関係代名詞に置きかわっていることを確認する。\n【よくあるまちがい】I have a friend who he speaksのように、関係代名詞と代名詞（he）を両方残してしまう。\n【ここが絶対】関係代名詞は先行詞の直後に置いて後ろから説明する。もとの代名詞は関係代名詞に完全に置きかわり、両方残さない。',
     pitfall: '「I have a friend who he speaks」のように関係代名詞と代名詞（he）を両方残してしまうミス。どちらか一方にする。',
     memoryTip: '関係代名詞 = 「つなぎ言葉」。先行詞の直後に置いて後ろから説明！「the 名詞 + who/which + 動詞」の流れを体に覚えさせよう。',
   },
@@ -137,7 +143,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の（　）に must / should / may / need のうち最も適切なものを入れなさい。\n① You (　) brush your teeth every day. （毎日歯を磨かなければならない）\n② You (　) use your phone here. （ここでは携帯を使ってもいいよ）\n③ You (　) eat more vegetables. （もっと野菜を食べた方がいいよ）',
     answer: '① must（またはhave to）　② may（またはcan）　③ should',
     hint: 'must = 義務（〜しなければならない）、may = 許可（〜してよい）、should = 助言（〜した方がいい）。',
-    explanation: '【文法ポイント】\n助動詞はニュアンス（強さ）が違う。3つのレベルで整理しよう。このパターンを覚えるだけでOK！\n\n・must / have to：強い義務「〜しなければならない」\n・should / ought to：アドバイス「〜した方がいい」\n・may / can：許可「〜してもよい」\n\n【例文】\n○ You must wear a uniform.（制服を着なければならない）\n○ You should sleep early.（早く寝た方がいい）\n○ You may sit here.（ここに座ってもいいよ）\n\n【日本語との違い】\n日本語の「〜してよい」と「〜しなければ」ははっきり別の表現だが、英語は助動詞のニュアンス変化で表す。\n\n【答え】\n① must（またはhave to）　② may（またはcan）　③ should',
+    explanation:
+      '【何を聞かれているか】①「You (　) brush your teeth every day.」（義務）②「You (　) use your phone here.」（許可）③「You (　) eat more vegetables.」（アドバイス）の空所に適切な助動詞を入れる。\n【なぜ助動詞を使い分けるのか】must（強い義務）、may（許可）、should（アドバイス）はそれぞれ表す意味の強さがちがい、日本語の意味に対応する助動詞を選ぶ必要があるから。\n【ポイント1】①「毎日歯を磨かなければならない」という義務にはmust（またはhave to）を使う。\n【ポイント2】②「ここでは携帯を使ってもいいよ」という許可にはmay（またはcan）を使う。\n【ポイント3】③「もっと野菜を食べた方がいいよ」というアドバイスにはshouldを使う。\n【答え】① must（またはhave to）　② may（またはcan）　③ should\n【確かめ】義務・許可・アドバイスという3つの異なるニュアンスがそれぞれ正しい助動詞に対応しているかを確認する。\n【よくあるまちがい】shouldとmustを混同して、アドバイスのつもりで強い義務のmustを使ってしまう。\n【ここが絶対】must／have to＝強い義務、should／ought to＝アドバイス、may／can＝許可、と3段階で使い分ける。',
     pitfall: 'should と must を混同して「You must sleep early」（義務になってしまう）と書くミス。アドバイスなら should が自然。',
     memoryTip: '義務=must、助言=should、許可=may。「ムスト・シュッド・メイ」を強さの順に3段階で覚えよう！',
   },
@@ -151,7 +158,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の（　）に must not / don\'t have to のうち正しい方を入れなさい。\n① You (　) tell anyone my secret. （私の秘密を誰にも言ってはいけない）\n② You (　) come tomorrow. It\'s a holiday. （明日は来なくてもいいよ。休みだから）',
     answer: '① must not（mustn\'t）　② don\'t have to',
     hint: 'must not = 禁止（〜してはいけない）、don\'t have to = 不必要（〜しなくていい）。',
-    explanation: '【文法ポイント】\nmust の否定形が2種類あり、意味が全然違う！英語は慣れれば大丈夫！\n\n・must not（mustn\'t）：「〜してはいけない」（禁止・強い命令）\n・don\'t have to：「〜しなくてもよい」（不必要・義務なし）\n\n【例文】\n○ You must not run in the hallway.（廊下で走ってはいけない）\n○ You don\'t have to study tonight.（今夜は勉強しなくてもいいよ）\n\n【日本語との違い】\n日本語では「〜しなくていい」を「〜しなくてはいけない」と混同しやすいが、英語では文法が明確に区別される。\n\n【答え】\n① must not（mustn\'t）　② don\'t have to',
+    explanation:
+      '【何を聞かれているか】①「You (　) tell anyone my secret.」（禁止）②「You (　) come tomorrow. It\'s a holiday.」（不必要）の空所にmust notかdon\'t have toのうち正しい方を入れる。\n【なぜこの2つの意味がちがうのか】must not（禁止・してはいけない）とdon\'t have to（不必要・しなくてもよい）はどちらもmustに関係する否定表現だが、まったく逆の意味を表すから。\n【ポイント1】①「秘密を誰にも言ってはいけない」という禁止にはmust not（mustn\'t）を使う。\n【ポイント2】②「明日は来なくてもいいよ」という不必要にはdon\'t have toを使う。\n【ポイント3】must not＝「〜してはいけない」（禁止）、don\'t have to＝「〜しなくてもよい」（不必要）と、意味が正反対であることを区別する。\n【答え】① must not（mustn\'t）　② don\'t have to\n【確かめ】①が禁止、②が不必要という異なる意味になっているかを確認する。\n【よくあるまちがい】You must not come tomorrow.と書いてしまい、「来てはいけない」という禁止の意味に変わってしまう。\n【ここが絶対】must not＝絶対ダメ（禁止）、don\'t have to＝やらなくていい（不必要）。逆に使うと意味が正反対になるので要注意。',
     pitfall: '「You must not come tomorrow」と書いてしまうと「来てはいけない」という禁止になってしまう大きなミス。不必要ならdon\'t have to！',
     memoryTip: 'must not = 絶対ダメ（赤信号）、don\'t have to = やらなくていい（青信号）。逆に使うと大変なことになるので要注意！',
   },
@@ -165,7 +173,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の（　）に er / more を使って比較級にしなさい。また最上級も書きなさい。\n① tall → 比較級:(　)　最上級:(　)\n② beautiful → 比較級:(　)　最上級:(　)\n③ good → 比較級:(　)　最上級:(　)',
     answer: '① taller / tallest　② more beautiful / most beautiful　③ better / best',
     hint: '短い形容詞（1〜2音節）→ -er/-est。長い形容詞（3音節以上）→ more/most。good/badは不規則変化。',
-    explanation: '【文法ポイント】\n比較変化のルールは3種類。このパターンを覚えるだけでOK！\n\n① -er/-est 型：short / fast / happy / large / big など短い語\n② more/most 型：beautiful / interesting / important など長い語\n③ 不規則変化：\n  good → better → best\n  bad → worse → worst\n  many/much → more → most\n  little → less → least\n\n【例文】\n○ She is taller than me.（彼女は私より背が高い）\n○ This is the most interesting book I\'ve read.（最もおもしろい本）\n○ He is the best player on the team.（チームで一番上手い）\n\n【答え】\n① taller / tallest　② more beautiful / most beautiful　③ better / best',
+    explanation:
+      '【何を聞かれているか】①tall、②beautiful、③goodの比較級と最上級を作る。\n【なぜ形が変わるのか】形容詞の長さ（音節数）によって-er/-est型かmore/most型かが決まり、goodのような一部の形容詞はまったく別の形に不規則変化するから。\n【ポイント1】①tallは短い形容詞（1音節）なので-er/-est型：taller/tallest。\n【ポイント2】②beautifulは長い形容詞（3音節以上）なのでmore/most型：more beautiful/most beautiful。\n【ポイント3】③goodは不規則変化：good→better→best。\n【答え】① taller / tallest　② more beautiful / most beautiful　③ better / best\n【確かめ】beautifulにerをつけていない（beautifulerにしていない）ことを確認する。\n【よくあるまちがい】more tallerのように、-erとmoreを両方つけてしまう（二重比較）。\n【ここが絶対】短い形容詞は-er/-est型、長い形容詞はmore/most型、good/bad/many/littleは不規則変化と覚える。',
     pitfall: '「more taller」のようにerとmoreを両方つけるミス（二重比較）は絶対NG！どちらか一方だけ。',
     memoryTip: '「goodはbetter→best！」と3回言おう。不規則変化の3語（good/bad/many）だけ特別扱いで暗記！',
   },
@@ -179,7 +188,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の（　）に as / than / the のうち正しいものを入れ、文を完成させなさい。\n① Mt. Fuji is (　) highest mountain in Japan.（富士山は日本一高い山だ）\n② Tom is taller (　) Ken.（トムはケンより背が高い）\n③ She runs as fast (　) her brother.（彼女は兄と同じくらい速く走る）',
     answer: '① the　② than　③ as',
     hint: '最上級の前にはthe。比較級はthan。as … as = 同じくらい。',
-    explanation: '【文法ポイント】\n比較表現には3つのセット表現がある。英語は慣れれば大丈夫！\n\n・比較級 + than：「〜より…だ」\n・the + 最上級 + in/of：「〜の中で最も…だ」\n・as + 原級 + as：「〜と同じくらい…だ」（否定はnot as … as）\n\n【例文】\n○ She is smarter than me.\n○ He is the tallest student in our class.\n○ I can swim as well as you.\n\n【日本語との違い】\n最上級は必ず the を付ける点が日本語にはない感覚。「the best」を1セットで覚えよう。\n\n【答え】\n① the　② than　③ as',
+    explanation:
+      '【何を聞かれているか】①「Mt. Fuji is (　) highest mountain in Japan.」②「Tom is taller (　) Ken.」③「She runs as fast (　) her brother.」の空所にas/than/theのうち正しいものを入れる。\n【なぜこの3つを使い分けるのか】最上級にはthe、比較級にはthan、同等比較にはas〜asという、それぞれの比較表現に決まった組み合わせがあるから。\n【ポイント1】①highestという最上級の前には必ずtheをつける。\n【ポイント2】②tallerという比較級のあとには比べる相手を示すthanを使う。\n【ポイント3】③as fast（原級）のあとに比べる相手を示すasを使う（as〜as＝「〜と同じくらい…」）。\n【答え】① the　② than　③ as\n【確かめ】①にthe、②にthan、③にasが正しく対応しているかを確認する。\n【よくあるまちがい】She is tallestのように、最上級の前のtheを忘れてしまう。\n【ここが絶対】最上級の前には必ずthe、比較級のあとにはthan、as〜asは同等比較を表す、とセットで覚える。',
     pitfall: '最上級で「She is tallest」のようにtheを忘れるミスが多い。最上級の前は必ずthe！',
     memoryTip: '「the 最上級」は黄金セット。「as … as」はサンドイッチ（前後にas）。この2つは入試頻出！',
   },
@@ -193,7 +203,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の（　）に過去完了形（had + 過去分詞）の動詞の正しい形を入れなさい。\n① When I arrived at the station, the train (　) already (　). （私が駅に着いたとき、電車はすでに出発していた）\n② She (　) never (　) pizza before she visited Italy. （イタリアを訪れる前、彼女はピザを一度も食べたことがなかった）',
     answer: '① had already left　② had never eaten',
     hint: '過去完了形は「had + 過去分詞」。過去のある時点よりさらに前に起きたことを表す。',
-    explanation: '【文法ポイント】\n過去完了形は「過去のある時点より前のこと」を表す。時間の流れを整理しよう。このパターンを覚えるだけでOK！\n\n【時間の流れ】\n① 電車が出発（過去完了）→ 私が到着（過去）\n② ピザを食べていない（過去完了）→ イタリア訪問（過去）\n\n【例文】\n○ I had already eaten when she called.（彼女が電話してきたとき、すでに食べていた）\n○ He had studied French before moving to Paris.（パリに引っ越す前にフランス語を勉強していた）\n\n【日本語との違い】\n日本語では「〜していた」とひとつの表現で済むが、英語は「2つの過去のどちらが先か」をhad + 過去分詞で明示する。\n\n【答え】\n① had already left　② had never eaten',
+    explanation:
+      '【何を聞かれているか】①「When I arrived at the station, the train (　) already (　).」②「She (　) never (　) pizza before she visited Italy.」の空所を過去完了形で埋める。\n【なぜhad＋過去分詞を使うのか】過去のある時点（駅に着いたとき、イタリアを訪れる前）よりもさらに前に起きたことを表すには、過去完了形（had＋過去分詞）を使う必要があるから。\n【ポイント1】①電車の出発（過去完了）→私の到着（過去）という順序を表す。had already left。\n【ポイント2】②ピザを食べていない（過去完了）→イタリア訪問（過去）という順序を表す。had never eaten。\n【ポイント3】2つの過去の出来事のうち、より前に起きた方をhad＋過去分詞にする。\n【答え】① had already left　② had never eaten\n【確かめ】2つの出来事のうち、どちらが先に起きたかを確認し、先に起きた方が過去完了になっているかを見直す。\n【よくあるまちがい】When I arrived, the train already left.のように過去形で書いてしまい、どちらが先かが不明確になる。\n【ここが絶対】過去完了は「過去の過去」。2つの過去がある文では、先に起きた方をhad＋過去分詞にする。',
     pitfall: '「When I arrived, the train already left」のように過去形で書いてしまうと「順番」が不明確になる。hadを付けて過去完了にすることが大切。',
     memoryTip: '過去完了 = 「過去の過去」。2つの過去がある文を見たら「どちらが先か」を考えてhad + 過去分詞！',
   },
@@ -207,7 +218,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の文の下線部の誤りを正しく直しなさい。\n① She was surprising to hear the news.\n② The window was broke by the ball.\n③ I have went to Okinawa twice.',
     answer: '① surprised　② broken　③ gone',
     hint: '感情を表す受動態はsurprised/excited/tired。過去分詞を正確に覚えよう。',
-    explanation: '【文法ポイント】\n受動態と現在完了でよく出る過去分詞の誤りに注意！英語は慣れれば大丈夫！\n\n① surprising（〜を驚かせる）vs surprised（〜に驚く）\n  感情を受ける側（人）はsurprised、驚かせる側（物・出来事）はsurprising\n② break の過去分詞は broken（不規則変化）\n  broke は過去形。was broke × → was broken ○\n③ go の過去分詞は gone（不規則変化）\n  went は過去形。have went × → have gone ○\n\n【例文】\n○ I was excited by the news.（そのニュースに興奮した）\n○ The glass was broken.（ガラスが割れた）\n○ I have gone to the library.（図書館に行ってしまった）\n\n【答え】\n① surprised　② broken　③ gone',
+    explanation:
+      '【何を聞かれているか】①「She was surprising to hear the news.」②「The window was broke by the ball.」③「I have went to Okinawa twice.」の下線部の誤りを正しく直す。\n【なぜ間違っているのか】①は感情を「感じる」側（人）にはsurprised（驚かされた）を使うべきなのにsurprising（驚かせる）になっている。②③はbreak、goの過去分詞が過去形と違う不規則動詞であることを見落としている。\n【ポイント1】①感情を受ける側（人）はsurprised、驚かせる側（物・出来事）はsurprising。ここでは「彼女が驚いた」のでsurprisedが正しい。\n【ポイント2】②breakの過去分詞はbroken（不規則変化）。brokeは過去形なので、be動詞のあとには使えない。\n【ポイント3】③goの過去分詞はgone（不規則変化）。wentは過去形なので、haveのあとには使えない。\n【答え】① surprised　② broken　③ gone\n【確かめ】①が「人が感じる」文脈でsurprisedになっているか、②③がbe動詞・haveのあとに正しい過去分詞（broken、gone）が続いているかを確認する。\n【よくあるまちがい】surprising／broke／wentはすべて文法的に存在する語なので、スペルチェックでは誤りに気づけない。意味と用法を確認することが大事。\n【ここが絶対】感情の受け身（人が感じる側）はed形（surprised）、原因（物・出来事）はing形（surprising）。break-broke-broken、go-went-goneの活用を正確に覚える。',
     pitfall: '「surprising / broke / went」はすべて文法的に存在する語なのでスペルチェックでは引っかからない。意味と用法を確認することが大事。',
     memoryTip: '感情の受け身（人が感じる側）はed形（surprised/excited/tired）。物・出来事が原因のときはing形（surprising/exciting）。',
   },
@@ -221,7 +233,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の単語の意味として最も近いものをA〜Dから選びなさい。\n① carefully\nA.丁寧に　B.注意深く　C.幸運に　D.急いで\n② enormous\nA.ふつうの　B.小さな　C.巨大な　D.感情的な\n③ obtain\nA.失う　B.届ける　C.得る　D.借りる',
     answer: '① B　② C　③ C',
     hint: 'care（注意）＋-ful＋-ly。enorm-（巨大）はenormous。obtainはget/acquireと同義。',
-    explanation: '【文法ポイント】\n語根（ルート）から意味を推測できると語彙力が伸びる！英語は慣れれば大丈夫！\n\n① careful（注意深い）→ carefully（注意深く）\n  care = 気にかける。-ful = 〜に満ちた。-ly = 副詞語尾\n② enormous（巨大な）\n  enorm- はラテン語で「規格外」。huge / gigantic と同じ意味グループ\n③ obtain（得る）\n  = get / acquire / gain。「ob-（に向かって）+ tain（保つ）」が語源\n\n【例文】\n○ Please listen carefully.（注意深く聞いて）\n○ An enormous amount of work awaits.（膨大な仕事が待っている）\n○ She obtained a scholarship.（奨学金を得た）\n\n【答え】\n① B（注意深く）　② C（巨大な）　③ C（得る）',
+    explanation:
+      '【何を聞かれているか】①carefully、②enormous、③obtainの意味に最も近いものをA〜Dから選ぶ。\n【なぜ語根から意味を推測できるのか】careful（注意深い）＋ly（副詞語尾）でcarefully（注意深く）になるように、単語の構成要素（語根・接尾語）から意味を組み立てられることが多いから。\n【ポイント1】①carefully：care（気にかける）＋ful（〜に満ちた）＋ly（副詞語尾）＝「注意深く」でB。\n【ポイント2】②enormous：「規格外の」という語源を持ち、huge／giganticと同じ「巨大な」という意味のグループでC。\n【ポイント3】③obtain：get／acquire／gainと同じ「得る」という意味でC。\n【答え】① B　② C　③ C\n【確かめ】enormousをemotional（感情的）と混同していないかを確認する。\n【よくあるまちがい】enormousをemotionalと見た目が似ているために混同してしまう。\n【ここが絶対】単語の語根・接尾語から意味を推測する習慣をつけると語彙力が伸びる。',
     pitfall: 'enormous を emotional（感情的）と混同しやすい。「em-」で始まる単語は別物なので注意。',
     memoryTip: 'enormous = 巨大。「エノーマス = えのきより大きい」と語呂で覚えてもOK！obtainはget の格式張った言い方と覚えよう。',
   },
@@ -235,7 +248,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の（　）に適切な前置詞を入れなさい。\n① I\'m interested (　) science.（科学に興味がある）\n② She is good (　) cooking.（彼女は料理が得意だ）\n③ He is afraid (　) dogs.（彼は犬が怖い）\n④ We are proud (　) our team.（私たちはチームを誇りに思う）',
     answer: '① in　② at　③ of　④ of',
     hint: '熟語は形容詞+前置詞のセットで丸暗記。interested in / good at / afraid of / proud of。',
-    explanation: '【文法ポイント】\n形容詞＋前置詞のコンビは丸暗記が基本。このパターンを覚えるだけでOK！\n\n主な形容詞＋前置詞セット：\n・interested in（〜に興味がある）\n・good at / bad at（〜が得意/苦手）\n・afraid of（〜が怖い）\n・proud of（〜を誇りに思う）\n・fond of（〜が好き）\n・tired of（〜に飽きた）\n・full of（〜でいっぱい）\n・different from（〜と異なる）\n\n【例文】\n○ I\'m good at math but bad at art.\n○ She is afraid of speaking in public.\n\n【答え】\n① in　② at　③ of　④ of',
+    explanation:
+      '【何を聞かれているか】①「I\'m interested (　) science.」②「She is good (　) cooking.」③「He is afraid (　) dogs.」④「We are proud (　) our team.」の空所に適切な前置詞を入れる。\n【なぜ前置詞を使い分けるのか】形容詞＋前置詞のセットはそれぞれ決まった組み合わせがあり、interested in、good at、afraid of、proud ofのように前置詞が固定されているから。\n【ポイント1】interested inは「〜に興味がある」、good atは「〜が得意」。\n【ポイント2】afraid ofは「〜が怖い」、proud ofは「〜を誇りに思う」。\n【ポイント3】似た形にfond of（〜が好き）、tired of（〜に飽きた）、full of（〜でいっぱい）、different from（〜と異なる）がある。\n【答え】① in　② at　③ of　④ of\n【確かめ】interested aboutやgood inのように誤った前置詞を使っていないかを確認する。\n【よくあるまちがい】interested aboutやgood inのように前置詞を間違えてしまう。\n【ここが絶対】形容詞＋前置詞のコンビは1セットとして丸ごと覚える。',
     pitfall: '「interested about」「good in」のように前置詞を間違えるミスが多い。セットで覚えること！',
     memoryTip: '「in=中に入り込む興味（interested in）」「at=ピンポイントで得意（good at）」「of=属性・対象（afraid of / proud of）」とイメージで覚えよう！',
   },
@@ -263,7 +277,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の英文の（　）に入る最も適切な語をA〜Dから選びなさい。\n① The weather here changes very (　). Don\'t forget your umbrella.\nA.quickly　B.slow　C.hard　D.quiet\n② She spoke so (　) that nobody could hear her.\nA.loud　B.softly　C.fast　D.careful',
     answer: '① A（quickly）　② B（softly）',
     hint: '副詞は動詞・形容詞・他の副詞を修飾する。-ly がついた形が多い。文脈で正しい意味を選ぼう。',
-    explanation: '【文法ポイント】\n副詞の選択問題は「文脈（前後の意味）」と「品詞」の両方を確認しよう。英語は慣れれば大丈夫！\n\n① 天気が変わりやすい → quickly（すばやく・急に）が最適\n  slow は形容詞（副詞形はslowly）、quiet は形容詞（副詞形はquietly）\n② 聞こえなかった → softly（やわらかく・小さな声で）が適切\n  loud（大きな声で）は逆の意味\n\n【形容詞→副詞の作り方】\n・quick → quickly\n・soft → softly\n・careful → carefully\n・例外：fast → fast（変化なし）、hard → hard（変化なし）\n\n【答え】\n① A（quickly）　② B（softly）',
+    explanation:
+      '【何を聞かれているか】①「The weather here changes very (　). Don\'t forget your umbrella.」②「She spoke so (　) that nobody could hear her.」の空所に適切な副詞を選ぶ。\n【なぜ文脈で判断するのか】副詞の選択問題は、前後の意味（文脈）と品詞の両方を確認して、意味の通る語を選ぶ必要があるから。\n【ポイント1】①天気が変わりやすいので傘を忘れないで、という文脈から、quickly（すばやく・急に）が最適。slowやquietは形容詞（副詞形はslowly、quietly）。\n【ポイント2】②「誰にも聞こえなかった」という結果から、softly（やわらかく・小さな声で）が適切。loud（大きな声で）は逆の意味。\n【ポイント3】形容詞から副詞を作るときは、quick→quickly、soft→softlyのように-lyをつける（fast、hardのように変化しない例外もある）。\n【答え】① A（quickly）　② B（softly）\n【確かめ】①②それぞれの文脈（傘を忘れないで／誰にも聞こえなかった）と選んだ副詞の意味が合っているかを確認する。\n【よくあるまちがい】She spoke so soft.のように、softlyの代わりに形容詞softを使ってしまう。\n【ここが絶対】動詞を修飾するときは副詞（多くは-ly形）を使う。fast、hard、lateは形容詞と副詞が同じ形になる例外。',
     pitfall: '「She spoke so soft」のようにsoftlyの代わりにsoftを使うミス。動詞を修飾するときは副詞（-ly形）を使う。',
     memoryTip: '動詞の直後や文末に副詞を置くのが基本。形容詞にlyをつけると副詞になることが多い。ただしfast / hard / lateは変化なし（例外）。',
   },
@@ -277,7 +292,8 @@ export const kokoKisoEigo50b: Question[] = [
     question: '次の（　）に at / in / on のうち適切な前置詞を入れなさい。\n① (　) Monday（月曜日に）\n② (　) July（7月に）\n③ (　) noon（正午に）\n④ (　) 2025（2025年に）\n⑤ (　) the morning（午前中に）',
     answer: '① on　② in　③ at　④ in　⑤ in',
     hint: '時間の前置詞：at（時刻・特定の時点）、on（曜日・日付）、in（月・年・季節・一日の部分）。',
-    explanation: '【文法ポイント】\n時間を表す前置詞は3種類。「大きさ」で覚えよう。このパターンを覚えるだけでOK！\n\n・at：点（時刻・特定の時点）→ at 3 o\'clock / at noon / at night\n・on：面（曜日・特定の日）→ on Monday / on July 4th / on my birthday\n・in：広がり（月・年・季節・一日の部分）→ in July / in 2025 / in summer / in the morning\n\n【例文】\n○ The class starts at 9 a.m.\n○ She was born on April 5th.\n○ It\'s cold in December.\n\n【答え】\n① on　② in　③ at　④ in　⑤ in',
+    explanation:
+      '【何を聞かれているか】①Monday②July③noon④2025⑤the morningの空所にat/in/onのうち適切な前置詞を入れる。\n【なぜ「大きさ」で使い分けるのか】時間を表す前置詞は、atが点（時刻・特定の時点）、onが面（曜日・特定の日）、inが広がり（月・年・季節・一日の部分）というように、表す時間の「大きさ」によって決まっているから。\n【ポイント1】①Monday（曜日）はon、③noon（時刻）はat。\n【ポイント2】②July（月）、④2025（年）、⑤the morning（一日の部分）はすべてin。\n【ポイント3】at 3 o\'clock（時刻）、on my birthday（特定の日）、in summer（季節）のように、それぞれの型を覚える。\n【答え】① on　② in　③ at　④ in　⑤ in\n【確かめ】曜日（on）、時刻（at）、月・年・一日の部分（in）が正しく対応しているかを確認する。\n【よくあるまちがい】in Monday、on July、at the morningのように前置詞を混同してしまう。\n【ここが絶対】at＝時刻・時点、on＝曜日・日付、in＝月・年・季節・一日の部分、という3つの型をセットで覚える。',
     pitfall: '「in Monday」「on July」「at the morning」のように混同するミスが多い。「at=時刻、on=曜日・日、in=月・年」の3セットを丸暗記！',
     memoryTip: '「3時にat（時計の針がさすポイント）」「月曜日にon（カレンダーの面）」「7月にin（カレンダーのページの中）」とイメージしよう！',
   },

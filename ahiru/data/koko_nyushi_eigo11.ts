@@ -635,28 +635,8 @@ be interested in〜／be known for〜・as〜／be filled with〜
     question: '次の文を間接疑問文に書き換えなさい。\n\n直接疑問文：How did people celebrate this festival long ago?\n「あなたは、昔の人々がこの祭りをどのように祝っていたか知っていますか？」',
     answer: 'Do you know how people celebrated this festival long ago?',
     hint: '間接疑問文では疑問詞の後ろが「主語＋動詞」の語順に戻り、did は消える。',
-    explanation: `【出題意図】
-間接疑問文（疑問詞 + 主語 + 動詞の語順）への書き換えを問う問題。語順の変化が最大のポイント。
-
-【解説】
-直接疑問文 How did people celebrate this festival long ago? を間接疑問文にする手順：
-①疑問詞 How はそのまま使う
-②後ろを主語 + 動詞の平叙文語順に変える
-③did は消えて動詞は過去形（celebrated）にする
-④Do you know＋間接疑問の形にする
-
-× Do you know how did people celebrate this festival long ago?（誤り）
-○ Do you know how people celebrated this festival long ago?（正解）
-
-日本語訳：「あなたは、昔の人々がこの祭りをどのように祝っていたか知っていますか？」
-
-【文法ポイント】
-間接疑問文の語順：疑問詞 + 主語 + 動詞〜（平叙文語順）
-
-【入試頻出】
-・Do you know why this tradition started?
-・I wonder how the castle was built without modern machines.
-・Can you tell me who founded this shrine?`,
+    explanation:
+      '【何を聞かれているか】「How did people celebrate this festival long ago?」（あなたは、昔の人々がこの祭りをどのように祝っていたか知っていますか？）を間接疑問文に書きかえる。\n【なぜdidが消えるのか】疑問文が他の文（Do you know〜）の一部に組み込まれると、疑問文特有の助動詞didを使わず、ふつうの文と同じ〈疑問詞＋主語＋動詞〉の語順に戻すというルールがあるから。\n【ポイント1】疑問詞Howはそのまま使う。\n【ポイント2】疑問詞の後ろを「主語＋動詞」の平叙文語順に変える。didは消えて、動詞は過去形（celebrated）にする。\n【ポイント3】全体をDo you know＋間接疑問の形にする。Do you know how people celebrated this festival long ago?\n【答え】Do you know how people celebrated this festival long ago?\n【確かめ】didが消えて、動詞がcelebrateではなくcelebratedになっているかを確認する。\n【よくあるまちがい】Do you know how did people celebrate〜?のように疑問文の語順のままにしてしまう。\n【ここが絶対】間接疑問文の語順は〈疑問詞＋主語＋動詞〉の平叙文語順にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -705,23 +685,8 @@ be interested in〜／be known for〜・as〜／be filled with〜
     question: '次の語を並べ替えて正しい英文を作れ。\n（ tell / me / when / this / festival / began / can / you ）\n「この祭りがいつ始まったか教えてくれますか？」',
     answer: 'Can you tell me when this festival began?',
     hint: '間接疑問文：疑問詞（when）の後ろは主語＋動詞の語順。全体はCanで始まる疑問文。',
-    explanation: `【出題意図】
-間接疑問文の語順整序問題。「疑問詞＋主語＋動詞」の語順と、全体が疑問文になる構造を同時に確認する。
-
-【解説】
-全体は Can you tell me〜? という疑問文。tell me の目的語（間接疑問）は when this festival began（平叙文語順）。
-×Can you tell me when did this festival begin?（誤り）
-○Can you tell me when this festival began?（正解）
-語の組み立て：Can you tell me／when／this festival began？
-
-日本語訳：「この祭りがいつ始まったか教えてくれますか？」
-
-【文法ポイント】
-Can/Could you tell me＋疑問詞＋主語＋動詞〜?の形は依頼表現として入試頻出。
-
-【入試頻出】
-・Can you tell me where the swimming pool is?
-・Could you tell me how the game ended?`,
+    explanation:
+      '【何を聞かれているか】tell / me / when / this / festival / began / can / you を並べ替えて「この祭りがいつ始まったか教えてくれますか？」という英文を作る。\n【なぜthis festival beganという語順になるのか】全体はCan you tell me〜?という疑問文だが、tell meの目的語になる部分（間接疑問）は疑問文の語順ではなく、〈疑問詞（when）＋主語＋動詞〉という平叙文の語順にする必要があるから。\n【ポイント1】全体の骨組みはCan you tell me〜?という疑問文。\n【ポイント2】tell meの目的語（間接疑問）はwhen this festival began（疑問文の語順ではなく平叙文語順）。\n【ポイント3】組み立てるとCan you tell me when this festival began?になる。\n【答え】Can you tell me when this festival began?\n【確かめ】whenのあとがdid this festival beginではなくthis festival began（平叙文語順）になっているかを確認する。\n【よくあるまちがい】Can you tell me when did this festival begin?のように疑問文の語順のままにしてしまう。\n【ここが絶対】Can/Could you tell me＋疑問詞＋主語＋動詞〜?の形は依頼表現として重要。間接疑問の部分は平叙文語順にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -737,28 +702,8 @@ Can/Could you tell me＋疑問詞＋主語＋動詞〜?の形は依頼表現と�
     choices: ['① Yes, I have. It was fascinating.', '② Yes, I do.', '③ No, I don\'t have.', '④ Yes, I saw ever.'],
     answer: '① Yes, I have. It was fascinating.',
     hint: '現在完了形の疑問文（経験）には現在完了形で答える。',
-    explanation: `【出題意図】
-現在完了形の経験用法（Have you ever〜?）に対する適切な応答を問う問題。会話文頻出表現。
-
-【解説】
-Have you ever〜? は「これまでに〜したことがありますか」という経験を尋ねる現在完了形の疑問文。答えも現在完了形で行う。
-・① Yes, I have. It was fascinating. → 現在完了形で正しく答え、感想も添えている（✓）
-・② Yes, I do. → 一般動詞の現在形の答え方であり時制が合わない
-・③ No, I don't have. → have の後ろに目的語が必要な形になっており不自然（No, I haven't. が正しい）
-・④ Yes, I saw ever. → ever は疑問文・否定文で使い、肯定文の答えには使わない
-
-日本語訳：
-A：能の公演を見たことがありますか？
-B：はい、あります。とても魅力的でした。
-
-【文法ポイント】
-現在完了形（経験）の疑問文と応答：
-Have you ever〜? — Yes, I have. / No, I haven't (never have).
-
-【入試頻出】
-・Have you ever tried a tea ceremony? — Yes, I have.
-・Have you ever visited Kyoto? — No, I haven't, but I want to.
-・Has she ever worn a kimono? — Yes, she has.`,
+    explanation:
+      '【何を聞かれているか】「Have you ever seen a Noh performance?」への適切な返答を選ぶ。\n【なぜ①が正しいのか】Have you ever〜?は現在完了形の経験用法の疑問文で、答えも現在完了形（Yes, I have./No, I haven\'t.）で行う必要があるから。\n【ポイント1】②Yes, I do.は一般動詞の現在形の答え方で時制が合わない。③No, I don\'t have.はhaveのあとに目的語が必要な形になっており不自然（No, I haven\'t.が正しい）。\n【ポイント2】④Yes, I saw ever.はeverが疑問文・否定文で使う語であり、肯定文の答えには使わない。\n【ポイント3】①Yes, I have. It was fascinating.が正解。現在完了形で正しく答え、感想も添えている。\n【答え】① Yes, I have. It was fascinating.\n【確かめ】質問の時制（現在完了）と答えの時制が一致しているかを確認する。\n【よくあるまちがい】Have you ever〜?への返答をYes, I do.のように一般動詞の現在形にしてしまう。\n【ここが絶対】現在完了形（経験）の疑問文Have you ever〜?には、Yes, I have./No, I haven\'t.のように現在完了形で答える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -839,28 +784,8 @@ A：ありがとう。
     question: '次の対話文の（　）に最も適切なものを選べ。\n\nA: What time does the lantern festival start tonight?\nB: ( )\n① It\'s about five kilometers away.  ② It starts at seven, right after sunset.  ③ It started last week.  ④ The lanterns are very beautiful.',
     answer: '② It starts at seven, right after sunset.',
     hint: 'What time does〜start? は開始時刻を尋ねる質問。時刻で答える。',
-    explanation: `【出題意図】
-What time does〜?（開始時刻を尋ねる）への適切な応答を問う問題。距離・過去の出来事・感想との混同を避ける識別力が目標。
-
-【解説】
-What time does the lantern festival start tonight? = 「今夜のランタン祭りは何時に始まりますか？」という時刻を尋ねる質問。
-・① about five kilometers away → 距離を答えている（How far〜? への答え）
-・② It starts at seven, right after sunset. → 時刻を正しく答えている（✓）
-・③ It started last week. → 過去の出来事（質問は「今夜」の開始時刻）
-・④ The lanterns are very beautiful. → 感想であり質問と噛み合わない
-
-日本語訳：
-A：今夜のランタン祭りは何時に始まりますか？
-B：日没直後の7時に始まります。
-
-【文法ポイント】
-What time does/do + 主語 + 動詞〜?：開始・終了の時刻を尋ねる
-応答：It starts/ends at + 時刻
-
-【入試頻出】
-・What time does the parade begin? — It begins at six.
-・What time does the shrine open? — It opens at nine in the morning.
-・What time will the fireworks end? — They will end around nine thirty.`,
+    explanation:
+      '【何を聞かれているか】「What time does the lantern festival start tonight?」への適切な返答を選ぶ。\n【なぜ②が正しいのか】What time does〜start?は開始時刻を尋ねる表現で、これにはIt starts at＋時刻という形で答える決まりがあるから。\n【ポイント1】①about five kilometers awayは距離を答えており、How far〜?への返答にあたる。\n【ポイント2】③It started last week.は過去の出来事で、質問は「今夜」の開始時刻についてなので合わない。④The lanterns are very beautiful.は感想であり質問と噛み合わない。\n【ポイント3】②It starts at seven, right after sunset.が正しい。時刻を正しく答えている。\n【答え】② It starts at seven, right after sunset.\n【確かめ】質問がWhat time（時刻）を尋ねているのに対し、選んだ返答が時刻を答えているかを確認する。\n【よくあるまちがい】質問の内容（今夜の開始時刻）とは無関係な情報（距離や感想）を答えてしまう。\n【ここが絶対】What time does/do＋主語＋動詞〜?（開始・終了の時刻を尋ねる）には、It starts/ends at＋時刻で答える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -937,28 +862,8 @@ at：時刻・時点／on：曜日・特定の日／in：月・年・季節・�
     choices: ['① clean', '② to clean', '③ cleaning', '④ cleaned'],
     answer: '② to clean',
     hint: 'ask + 人 + to do（人に〜するよう頼む）という構文。',
-    explanation: `【出題意図】
-「ask + 人 + to + 動詞」という第5文型（SVOC）の用法を問う問題。
-
-【解説】
-ask + 人 + to do = 「人に〜するよう頼む」という重要構文。
-・① clean → 原形のみ（ask の第5文型では to が必要）
-・② to clean → ask + 人 + to do（✓）
-・③ cleaning → 動名詞（ask + 人 + doing という形は存在しない）
-・④ cleaned → 過去分詞（文法的に合わない）
-
-日本語訳：「長老たちは若いボランティアたちに、儀式の前に神社の門を掃除するよう頼んだ。」
-
-【文法ポイント】
-「動詞 + 人 + to do」の構文（依頼・命令・期待）：
-・ask + 人 + to do：人に〜するよう頼む
-・tell + 人 + to do：人に〜するよう言う
-・want + 人 + to do：人に〜してほしい
-
-【入試頻出】
-・She asked the students to prepare the festival costumes.
-・The priest told the children to be quiet during the ceremony.
-・The mayor wanted the town to preserve its old traditions.`,
+    explanation:
+      '【何を聞かれているか】「The elders asked the young volunteers ( ) the shrine gate before the ceremony.」の空所に入る適切な形を選ぶ。\n【なぜto cleanになるのか】「人に〜するよう頼む」はask＋人＋to doという決まった構文で表し、人のあとには必ず不定詞（to＋原形）が続くから。\n【ポイント1】ask＋人＋to do＝「人に〜するよう頼む」という重要構文。\n【ポイント2】①clean（原形のみ）、③cleaning（動名詞）、④cleaned（過去分詞）はどれもask＋人のあとの形として使えない。\n【ポイント3】同じ仲間の構文：tell＋人＋to do（人に〜するよう言う）、want＋人＋to do（人に〜してほしい）。\n【答え】② to clean\n【確かめ】The elders asked the young volunteers to clean the shrine gate.という文全体を読み、「長老たちは若いボランティアたちに神社の門を掃除するよう頼んだ」という意味になっているかを確認する。\n【よくあるまちがい】ask＋人のあとに原形をそのまま続けてしまう。\n【ここが絶対】ask＋人＋to doの形では、人のあとに必ずtoが必要。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1041,28 +946,8 @@ I have never taken part in a real tea ceremony.
     question: '次の日本文を英語に訳せ。\n「祖父が語ってくれたその物語を、もう一度聞かせてもらえますか？」',
     answer: 'Could you tell me the story that my grandfather told me once more? / Could you tell me again the story my grandfather told me?',
     hint: '「聞かせてもらえますか」は Could you tell me〜?、「祖父が語ってくれた」は関係代名詞（that）で修飾。',
-    explanation: `【出題意図】
-依頼表現（Could you〜?）と関係代名詞（目的格）を組み合わせた英作文。
-
-【解説】
-2つのポイント：
-1. 丁寧な依頼：Could you tell me〜? = 「〜を話していただけますか？」
-2. 「祖父が語ってくれた（物語）」= the story that/which my grandfather told me（関係代名詞・目的格）
-   → 目的格の関係代名詞は省略可
-
-組み合わせ：
-Could you tell me the story (that) my grandfather told me once more?
-
-別解：Could you tell me again the story my grandfather told me?
-
-【文法ポイント】
-Could you〜? = Can you〜? の丁寧版
-the story (that) my grandfather told me：関係代名詞（目的格）my grandfather told me the story の構造
-
-【入試頻出】
-・Could you show me the picture that my grandmother drew?
-・This is the legend (that) the elders told us.
-・He repeated the story his teacher had told him.`,
+    explanation:
+      '【何を聞かれているか】「祖父が語ってくれたその物語を、もう一度聞かせてもらえますか？」を英語に訳す。\n【なぜCould you〜?とthatを組み合わせるのか】丁寧な依頼にはCould you tell me〜?を使い、「祖父が語ってくれた」という説明を加えるには、the storyのうしろに関係代名詞（目的格）でtold節をつなげる必要があるから。\n【ポイント1】丁寧な依頼：Could you tell me〜?＝「〜を話していただけますか？」。\n【ポイント2】「祖父が語ってくれた（物語）」＝the story that/which my grandfather told me（関係代名詞・目的格、省略も可）。\n【ポイント3】組み合わせるとCould you tell me the story (that) my grandfather told me once more?になる。\n【答え】Could you tell me the story that my grandfather told me once more? / Could you tell me again the story my grandfather told me?\n【確かめ】the storyのあとにmy grandfather told me（主語＋動詞＋目的語）が続いており、tellの目的語がthe storyであることを確認する。\n【よくあるまちがい】Could you〜?のかわりにCan you〜?を使ってしまい、ていねいさが弱くなる。\n【ここが絶対】Could you〜?はCan you〜?の丁寧版。目的格の関係代名詞は省略できる。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1110,28 +995,8 @@ there is/are 構文：「〜がある/いる」
     question: '次の日本文を英語に訳せ。\n「もし私が江戸時代に生きていたら、侍になりたいと思うでしょう。」',
     answer: 'If I lived in the Edo period, I would want to become a samurai. / If I lived in the Edo period, I would want to be a samurai.',
     hint: '現実にはあり得ない仮定：If + 主語 + 動詞の過去形, 主語 + would + 動詞原形。',
-    explanation: `【出題意図】
-仮定法過去（If + 過去形, would + 動詞原形）の形を問う英作文。現実にはあり得ない時代への仮定を表す構文。
-
-【解説】
-「もし江戸時代に生きていたら」= 現実と異なる仮定（実際には現代に生きている）→ 仮定法過去を使う
-
-仮定法過去の形：
-If + 主語 + 動詞の過去形, 主語 + would + 動詞原形
-
-「〜になりたいと思うだろう」= would want to become / would want to be
-
-完成した文：
-If I lived in the Edo period, I would want to become a samurai.
-
-【文法ポイント】
-仮定法過去：現在の事実に反する仮定
-If + 主語 + 過去形, 主語 + would + 動詞原形
-
-【入試頻出】
-・If I lived long ago, I would want to see the old capital.
-・If I were a craftsman, I would make traditional pottery.
-・If she had more time, she would visit every shrine in the city.`,
+    explanation:
+      '【何を聞かれているか】「もし私が江戸時代に生きていたら、侍になりたいと思うでしょう。」を英語に訳す。\n【なぜlivedとwouldを使うのか】「もし江戸時代に生きていたら」は現実とは異なる仮定（実際には現代に生きている）なので、仮定法過去（if節は過去形、主節はwould＋動詞原形）を使う必要があるから。\n【ポイント1】仮定法過去の形：If＋主語＋動詞の過去形〜, 主語＋would＋動詞原形。\n【ポイント2】「〜になりたいと思うだろう」＝would want to become／would want to be。\n【ポイント3】If I lived in the Edo period, I would want to become a samurai.\n【答え】If I lived in the Edo period, I would want to become a samurai. / If I lived in the Edo period, I would want to be a samurai.\n【確かめ】if節の動詞がlived（過去形）になっているか、主節がwould＋動詞原形になっているかを確認する。\n【よくあるまちがい】If I live in the Edo period, I will want to〜のように現在形のまま書いてしまう。\n【ここが絶対】現在の事実に反する仮定は仮定法過去（if節は過去形、主節はwould＋動詞原形）で表す。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1143,29 +1008,8 @@ If + 主語 + 過去形, 主語 + would + 動詞原形
     question: '次の日本文を英語に訳せ。\n「この祭りは地元の人々だけでなく、海外からの観光客にも人気があります。」',
     answer: 'This festival is popular not only with local people but also with tourists from overseas. / This festival is popular not only among local people but also among foreign tourists.',
     hint: '「〜だけでなく…も」は not only A but also B の構文。「〜に人気がある」は popular with/among〜。',
-    explanation: `【出題意図】
-相関接続詞 not only A but also B（〜だけでなく…も）の構文と、popular with/among〜 を使った英作文。
-
-【解説】
-2つのポイント：
-1. 「〜だけでなく…も」= not only A but also B
-2. 「〜に人気がある」= be popular with〜 または be popular among〜
-
-組み合わせ：
-This festival is popular not only with local people but also with tourists from overseas.
-または
-This festival is popular not only among local people but also among foreign tourists.
-
-注意：not only A but also B の A と B は文法的に同じ形（並列）である必要がある。
-
-【文法ポイント】
-相関接続詞：not only A but also B：AだけでなくBも
-popular with / popular among：with は特定の人、among はグループの中で
-
-【入試頻出】
-・This craft is loved not only by Japanese people but also by people abroad.
-・The event attracts not only families but also students from other countries.
-・This dance is enjoyed not only by adults but also by children.`,
+    explanation:
+      '【何を聞かれているか】「この祭りは地元の人々だけでなく、海外からの観光客にも人気があります。」を英語に訳す。\n【なぜnot only A but also Bを使うのか】「〜だけでなく…も」という意味は、相関接続詞not only A but also Bという決まった形で表し、「〜に人気がある」はbe popular with/among〜で表すから。\n【ポイント1】「〜だけでなく…も」＝not only A but also B。AとBは文法的に同じ形（並列）にする必要がある。\n【ポイント2】「〜に人気がある」＝be popular with〜（特定の人）またはbe popular among〜（グループの中で）。\n【ポイント3】This festival is popular not only with local people but also with tourists from overseas.\n【答え】This festival is popular not only with local people but also with tourists from overseas. / This festival is popular not only among local people but also among foreign tourists.\n【確かめ】not only のあとと、but also のあとが同じ形になっているかを確認する。\n【よくあるまちがい】not only とbut alsoのあとの形をそろえず、withとamongを混ぜて使ってしまう。\n【ここが絶対】not only A but also BのAとBは文法的に同じ形にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
