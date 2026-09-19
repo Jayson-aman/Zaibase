@@ -11,26 +11,8 @@ export const kokoNyushiEigo2: Question[] = [
     choices: ['① snows', '② snowed', '③ has snowed', '④ had been snowing'],
     answer: '④ had been snowing',
     hint: '「山を出発した」という過去の時点より前から続いていた動作を表す時制を選ぶ。',
-    explanation: `【出題意図】
-過去完了進行形（had been + Ving）の用法を問う問題。過去のある時点まで継続していた動作を正しく表現できるかが目標。
-
-【解説】
-「we finally left the mountain（私たちがついに山を出発した）」は過去の一時点。その時点よりもさらに前から「雪が降り続けていた」という継続動作を表すには過去完了進行形を使う。
-・① snows → 現在形（文脈に合わない）
-・② snowed → 過去形（継続の意味が出ない）
-・③ has snowed → 現在完了形（過去の基準点には使えない）
-・④ had been snowing → 過去完了進行形（✓）
-
-日本語訳：「私たちがついに山を出発する前、3時間ずっと雪が降り続いていた。」
-
-【文法ポイント】
-過去完了進行形 = had been + 動詞-ing
-→ 過去のある時点よりもさらに前から、その時点まで継続していた動作を表す。「for〜（〜の間）」とセットで出やすい。
-
-【入試頻出】
-・She had been studying for two hours when the storm started.
-・They had been waiting for the bus since noon when it began to rain.
-「before / when + 過去形」の主節に過去完了進行形を使うパターンを押さえよ。`,
+    explanation:
+      '【何を聞かれているか】「It ( ) for three hours before we finally left the mountain.」の空所に入る適切な時制を選ぶ。\n【なぜ過去完了進行形になるのか】「私たちが山を出発した」という過去の時点よりさらに前から「雪が降り続いていた」という継続動作を表すには、過去のある時点までの継続を表す過去完了進行形（had been＋動詞のing形）を使う必要があるから。\n【ポイント1】we finally left the mountain（私たちがついに山を出発した）は過去の1つの時点。その時点よりも前から継続していた動作を表すには、さらに過去を示す時制が必要。\n【ポイント2】①snows（現在形）、②snowed（過去形、継続の意味が出ない）、③has snowed（現在完了形、過去の基準点には使えない）はどれも文脈に合わない。\n【ポイント3】④had been snowing（過去完了進行形）が正解。「私たちがついに山を出発する前、3時間ずっと雪が降り続いていた」という意味になる。\n【答え】④ had been snowing\n【確かめ】「for三時間」という継続の期間を表す語句と、過去完了進行形の組み合わせがセットになっていることを確認する。\n【よくあるまちがい】has snowed（現在完了形）を選んでしまう。現在完了は現在を基準にするので、過去の基準点（we left the mountain）には使えない。\n【ここが絶対】過去のある時点よりもさらに前から、その時点まで継続していた動作には過去完了進行形を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -108,28 +90,8 @@ give の変化：give → gave → given（過去分詞）
     choices: ['① hot', '② hotter', '③ the hottest', '④ most hot'],
     answer: '③ the hottest',
     hint: '「1年で一番〜」は最上級。最上級の前には the が必要。',
-    explanation: `【出題意図】
-最上級の正しい形と、最上級に定冠詞 the が必要なことを問う問題。
-
-【解説】
-「of the year（1年のうちで）」は範囲を示す表現で、その中で「一番暑い」を表すには最上級が必要。
-・① hot → 原級（比較なし）
-・② hotter → 比較級（2つを比べる）
-・③ the hottest → 最上級（✓）「一番暑い」
-・④ most hot → 最上級の作り方が誤り（hot は -est 型、most は使わない）
-
-日本語訳：「8月は日本のほとんどの地域で1年のうちで最も暑い月だ。」
-
-【文法ポイント】
-最上級の作り方：
-・短い形容詞（1音節など）：-est（hot→hottest ※子音字重複に注意）
-・長い形容詞：the most +形容詞
-最上級には必ず the が必要。
-
-【入試頻出】
-・Winter is the coldest season in Hokkaido.
-・This is the driest region in the country.
-・September is often the busiest month for typhoons.`,
+    explanation:
+      '【何を聞かれているか】「August is ( ) month of the year in most parts of Japan.」の空所に入る適切な比較表現を選ぶ。\n【なぜthe hottestになるのか】「of the year（1年のうちで）」という範囲の中で「一番暑い」を表すには最上級を使い、最上級には必ずtheをつける必要があるから。\n【ポイント1】①hot（原級）、②hotter（比較級）はどちらも「一番」の意味を表せない。\n【ポイント2】③the hottest（最上級）が正解。「一番暑い」という意味になる。\n【ポイント3】④most hot（最上級の作り方の誤り）。hotは-est型の形容詞（子音字を重ねてhottest）なのでmostは使わない。\n【答え】③ the hottest\n【確かめ】the hottestのtheが抜けていないかを確認する。\n【よくあるまちがい】④most hotのように、-est型の形容詞にmostをつけてしまう。\n【ここが絶対】最上級には必ずtheが必要。短い形容詞は-est型、長い形容詞はmost型になる。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -174,26 +136,8 @@ in order to〜 は同じ意味だがより書き言葉的。
     choices: ['① eat', '② to eat', '③ eating', '④ ate'],
     answer: '③ eating',
     hint: 'enjoy の後ろには動名詞（〜ing）が来る。',
-    explanation: `【出題意図】
-動名詞のみを目的語にとる動詞（enjoy）を正しく使えるかを問う問題。不定詞との区別が核心。
-
-【解説】
-enjoy は目的語に動名詞（〜ing）だけを取り、不定詞（to +原形）は取らない。
-・① eat → 原形（enjoyの後ろには使えない）
-・② to eat → 不定詞（enjoyの後ろには来ない）
-・③ eating → 動名詞（✓）enjoy + 動名詞
-・④ ate → 過去形（目的語にはなれない）
-
-日本語訳：「毎年春、日本の多くの人々は桜の下で食事を楽しむ。」
-
-【文法ポイント】
-動名詞のみを目的語にとる動詞（入試頻出）：
-enjoy（楽しむ）、finish（終える）、stop（やめる）、mind（気にする）、practice（練習する）
-
-【入試頻出】
-・We enjoyed watching the fireworks last night.
-・She finished raking the fallen leaves.
-・Do you mind waiting until the rain stops?`,
+    explanation:
+      '【何を聞かれているか】「Every spring, many people in Japan enjoy ( ) under the cherry blossoms.」の空所に入る適切な形を選ぶ。\n【なぜeatingになるのか】enjoyは動名詞（-ing）だけを目的語に取り、不定詞（to＋原形）は目的語に取らないという決まりがあるから。\n【ポイント1】①eat（原形）、②to eat（不定詞）はどちらもenjoyの後ろには使えない。\n【ポイント2】③eating（動名詞）が正解。enjoy＋動名詞の形。\n【ポイント3】④ate（過去形）は目的語の位置には使えない。動名詞のみを目的語に取る動詞にはほかにfinish、stop、mind、practiceなどがある。\n【答え】③ eating\n【確かめ】enjoyのあとが動詞のing形になっているかを確認する。\n【よくあるまちがい】enjoyのあとにto eatを続けてしまう。\n【ここが絶対】enjoyは動名詞のみを目的語に取る動詞として覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -206,26 +150,8 @@ enjoy（楽しむ）、finish（終える）、stop（やめる）、mind（気�
     choices: ['① will end', '② has ended', '③ will have ended', '④ ended'],
     answer: '③ will have ended',
     hint: '「今月末までには」という未来の時点での完了を表す時制を選ぶ。',
-    explanation: `【出題意図】
-未来完了形（will have + 過去分詞）の用法を問う問題。「未来のある時点での完了」を表す時制の識別。
-
-【解説】
-「by the end of this month（今月末までには）」は未来の時点。その時点で「梅雨が終わっていることになる」という完了を表すには未来完了形を使う。
-・① will end → 単純未来（完了の意味を表せない）
-・② has ended → 現在完了（未来の時点には使えない）
-・③ will have ended → 未来完了（✓）
-・④ ended → 過去形（文脈に合わない）
-
-日本語訳：「今月末までには、こちらの梅雨は終わっているだろう。」
-
-【文法ポイント】
-未来完了形 = will have + 過去分詞
-目印の語句：by the time〜 / by then / by next〜 / by the end of〜（未来の時点を示す）
-
-【入試頻出】
-・By tomorrow morning, the snow will have stopped.
-・By next week, the leaves will have all fallen.
-・By the time you arrive, the storm will have passed.`,
+    explanation:
+      '【何を聞かれているか】「By the end of this month, the rainy season ( ) here.」の空所に入る適切な時制を選ぶ。\n【なぜwill have endedになるのか】「今月末までには」という未来のある時点で「梅雨が終わっていることになる」という完了を表すには、未来完了形（will have＋過去分詞）を使う必要があるから。\n【ポイント1】by the end of this month（今月末までには）は未来の時点を示す目印の語句。\n【ポイント2】①will end（単純未来）、②has ended（現在完了、未来の時点には使えない）、④ended（過去形）はどれも文脈に合わない。\n【ポイント3】③will have ended（未来完了）が正解。「今月末までには、こちらの梅雨は終わっているだろう」という意味。\n【答え】③ will have ended\n【確かめ】by the end of〜のような未来の時点を示す語句と、will have＋過去分詞の組み合わせがセットになっていることを確認する。\n【よくあるまちがい】has ended（現在完了）を選んでしまう。現在完了は現在を基準にするので、未来の時点には使えない。\n【ここが絶対】未来のある時点での完了にはwill have＋過去分詞（未来完了形）を使う。目印はby the time〜、by then、by the end of〜など。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -238,26 +164,8 @@ enjoy（楽しむ）、finish（終える）、stop（やめる）、mind（気�
     choices: ['① rains', '② will rain', '③ rained', '④ is raining'],
     answer: '① rains',
     hint: '条件を表す if 節の中では、未来のことでも現在形を使う。',
-    explanation: `【出題意図】
-条件節（if 節）での時制のルール「未来のことでも現在形を使う」を問う問題。入試最頻出文法の一つ。
-
-【解説】
-「If it 〜, the festival will be canceled」は条件文。英語では if 節などの副詞節の中では、未来のことであっても will を使わず現在形を使う。
-・① rains → 現在形（✓）if 節内では現在形で未来を表す
-・② will rain → if 節内で will は使えない（×）
-・③ rained → 過去形（仮定法になってしまう）
-・④ is raining → 進行形（文脈に合わない）
-
-日本語訳：「もし明日激しく雨が降れば、屋外の祭りは中止になる。」
-
-【文法ポイント】
-時・条件を表す副詞節の中では未来のことでも現在形：
-if（もし〜なら）/ when（〜するとき）/ until（〜まで）/ as soon as（〜したらすぐ）
-
-【入試頻出】
-・If the sky clears up, we will go hiking.
-・When the snow melts, the flowers will bloom.
-・As soon as the typhoon passes, we will start cleaning up.`,
+    explanation:
+      '【何を聞かれているか】「If it ( ) heavily tomorrow, the outdoor festival will be canceled.」の空所に入る適切な語を選ぶ。\n【なぜrainsになるのか】条件を表すif節の中では、未来のことでもwillを使わず現在形を使うという決まりがあるから。\n【ポイント1】if節などの副詞節の中では、未来のことでも現在形で表す。②will rainはif節の中では使えない。\n【ポイント2】③rained（過去形）は仮定法になってしまい、④is raining（進行形）は文脈に合わない。①rains（現在形）が正解。\n【ポイント3】同じルールが使われる接続詞：when（〜するとき）、until（〜まで）、as soon as（〜したらすぐ）。\n【答え】① rains\n【確かめ】主節にwillが使われている（the festival will be canceled）ことと、if節が現在形（rains）になっていることのバランスを確認する。\n【よくあるまちがい】if節の中にもwillを入れてしまう。\n【ここが絶対】時・条件を表す副詞節の中では、未来のことでも現在形を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -438,26 +346,8 @@ be proud of〜：〜を誇りに思う
     choices: ['① to see', '② to seeing', '③ see', '④ seeing'],
     answer: '② to seeing',
     hint: 'look forward to のあとの to は前置詞なので、後ろには動名詞が来る。',
-    explanation: `【出題意図】
-look forward to〜ing（〜するのを楽しみにする）の to が前置詞であることを問う問題。不定詞の to との混同を防ぐ入試頻出ポイント。
-
-【解説】
-look forward to〜 の to は不定詞の to ではなく前置詞の to。前置詞の後ろには動名詞（〜ing）が来る。
-・① to see → to が不定詞になっており誤り
-・② to seeing → 前置詞 to + 動名詞（✓）
-・③ see → 原形のみでは文法的に不完全
-・④ seeing → to が抜けている
-
-日本語訳：「私は今年最初の雪が降るのを本当に楽しみにしている。」
-
-【文法ポイント】
-look forward to〜ing：〜するのを楽しみにする
-同じ形の他の表現：be used to〜ing（〜に慣れている）、be good at〜ing（〜が得意）
-
-【入試頻出】
-・We are looking forward to visiting the ski resort.
-・She is looking forward to seeing the autumn leaves.
-・I look forward to hearing from you soon.`,
+    explanation:
+      '【何を聞かれているか】「I am really looking forward ( ) the first snow of the year.」の空所に入る適切な形を選ぶ。\n【なぜto seeingになるのか】look forward to〜のtoは不定詞のtoではなく前置詞のtoで、前置詞のあとには動名詞（-ing）が続くという決まりがあるから。\n【ポイント1】look forward to〜のtoは前置詞。前置詞のあとには動名詞（-ing）が来る。\n【ポイント2】①to see（toが不定詞になっている）、③see（原形のみ）、④seeing（toが抜けている）はどれも誤り。\n【ポイント3】②to seeing（前置詞to＋動名詞）が正解。同じ形の表現にbe used to〜ing（〜に慣れている）、be good at〜ing（〜が得意）がある。\n【答え】② to seeing\n【確かめ】look forward toのtoが不定詞ではなく前置詞であることを、あとに動名詞が続いていることから確認する。\n【よくあるまちがい】toを不定詞だと思い込み、あとに動詞の原形（see）を続けてしまう。\n【ここが絶対】look forward to〜ingは、toが前置詞であることに注意し、あとは必ず動名詞にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -537,29 +427,8 @@ turn を使った句動詞：
     choices: ['① filled', '② covered', '③ full', '④ made'],
     answer: '② covered',
     hint: 'be covered with〜（〜で覆われている）という表現を選ぶ。',
-    explanation: `【出題意図】
-熟語 be covered with〜（〜で覆われている）の用法を問う問題。似た意味の表現との区別。
-
-【解説】
-be covered with〜 は「（表面が）〜で覆われている」という状態を表すイディオム。
-・① filled → be filled with〜（〜でいっぱいだ、中身が満たされている）は容器・空間に使う
-・② covered → be covered with〜（✓）表面が覆われている状態
-・③ full → be full of〜（〜でいっぱい）の形なら可だが with とは結びつかない
-・④ made → be made of〜（〜でできている、材料）
-
-日本語訳：「大きな嵐の後、町全体が厚い雪で覆われていた。」
-
-【文法ポイント】
-be + 過去分詞 + with/of〜 の使い分け：
-・be covered with〜：〜で覆われている
-・be filled with〜：〜で満たされている
-・be made of〜：〜でできている（材料）
-・be known for〜：〜で知られている
-
-【入試頻出】
-・The mountain top is covered with snow all year round.
-・The glass was filled with rainwater.
-・This area is known for its clear blue sky.`,
+    explanation:
+      '【何を聞かれているか】「After the big storm, the whole town was ( ) with thick snow.」の空所に入る適切な語を選ぶ。\n【なぜcoveredになるのか】「（表面が）〜で覆われている」という状態を表すには、be covered with〜という決まったイディオムを使う必要があるから。\n【ポイント1】be covered with〜は「表面が〜で覆われている」状態を表す。\n【ポイント2】①filledはbe filled with〜（〜で満たされている、容器・空間に使う）、③fullはbe full of〜（withとは結びつかない）、④madeはbe made of〜（〜でできている）で、どれも文脈に合わない。\n【ポイント3】be＋過去分詞＋with/of〜の使い分け：be covered with〜（覆われている）、be filled with〜（満たされている）、be made of〜（材料）、be known for〜（〜で知られている）。\n【答え】② covered\n【確かめ】townの表面が雪で「覆われている」という状態を表すのにcoveredが適していることを確認する。\n【よくあるまちがい】be filled with〜と混同してfilledを選んでしまう。\n【ここが絶対】be covered with〜（覆われている）とbe filled with〜（満たされている）は意味がちがうので使い分ける。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -676,28 +545,8 @@ run を使った句動詞：
     choices: ['① who', '② which', '③ whom', '④ whose'],
     answer: '① who',
     hint: '先行詞は「人」、関係代名詞節内での役割は「主語」。',
-    explanation: `【出題意図】
-関係代名詞の選択（who / which / whom / whose）を問う問題。先行詞が人か物か、節内の役割の識別が目標。
-
-【解説】
-先行詞は「People（人々）」= 人。関係代名詞節内で「live in snowy areas（雪の多い地域に住んでいる）」の主語の役割を果たしている。
-・① who → 先行詞が人・主格（✓）
-・② which → 先行詞が物や動物
-・③ whom → 先行詞が人・目的格
-・④ whose → 先行詞が人または物・所有格
-
-日本語訳：「雪の多い地域に住んでいる人々は、冬に特別なタイヤをよく使う。」
-
-【文法ポイント】
-関係代名詞まとめ：
-主格：who（人）/ which（物）/ that（両方）
-目的格：whom（人）/ which（物）/ that（両方）
-所有格：whose（人・物）
-
-【入試頻出】
-・Farmers who work in the fields watch the weather carefully.
-・Animals that live in cold regions have thick fur.
-・I have a friend whose house was damaged by the flood.`,
+    explanation:
+      '【何を聞かれているか】「People ( ) live in snowy areas often use special tires in winter.」の空所に入る適切な関係代名詞を選ぶ。\n【なぜwhoになるのか】先行詞People（人々）は人で、関係代名詞節の中でlive in snowy areas（雪の多い地域に住んでいる）の主語の役割をしているため、先行詞が人・主格のときに使うwhoを選ぶ必要があるから。\n【ポイント1】先行詞がPeople（人）で、関係代名詞節内でliveの主語になっている（主格）。\n【ポイント2】②whichは先行詞が物や動物、③whomは先行詞が人・目的格、④whoseは所有格で、どれも文脈に合わない。\n【ポイント3】関係代名詞まとめ：主格who（人）/which（物）/that（両方）、目的格whom（人）/which（物）/that（両方）、所有格whose（人・物）。\n【答え】① who\n【確かめ】whoのあとに動詞（live）が続いている（主語の役割）ことを確認する。\n【よくあるまちがい】先行詞が人なのにwhichを選んでしまう。\n【ここが絶対】関係代名詞は、先行詞が人か物かと、節内での役割（主格・目的格・所有格）の両方で決まる。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -710,28 +559,8 @@ run を使った句動詞：
     choices: ['① who', '② which', '③ whom', '④ where'],
     answer: '② which',
     hint: '先行詞は「物（記事）」。関係代名詞節内で read の目的語になっている。',
-    explanation: `【出題意図】
-関係代名詞 which（先行詞が物・目的格）の用法を問う問題。that との言い換えも理解する。
-
-【解説】
-先行詞は「the article（記事）」= 物。関係代名詞節内で I read ( )（私が読んだ）の目的語になっている。
-・① who → 先行詞が人のとき
-・② which → 先行詞が物・目的格（✓）I read which = それを読んだ
-・③ whom → 先行詞が人・目的格
-・④ where → 関係副詞（場所を表す先行詞に使う）
-
-which は省略可（that に置き換え可）：The article (that) I read yesterday〜
-
-日本語訳：「私が昨日読んだその記事は気候変動の影響についてだった。」
-
-【文法ポイント】
-目的格の関係代名詞は省略可能：
-The book (which/that) I read was interesting.
-
-【入試頻出】
-・The report (which) she wrote was about global warming.
-・The photo (that) he took shows a beautiful rainbow.
-・The data (which) scientists collected surprised everyone.`,
+    explanation:
+      '【何を聞かれているか】「The article ( ) I read yesterday was about the effects of climate change.」の空所に入る適切な関係代名詞を選ぶ。\n【なぜwhichになるのか】先行詞the article（記事）は物で、関係代名詞節の中でI read（　）の目的語の役割をしているため、先行詞が物・目的格のときに使うwhichを選ぶ必要があるから。\n【ポイント1】先行詞がthe article（物）で、関係代名詞節内でI readの目的語になっている（目的格）。\n【ポイント2】①whoは先行詞が人、③whomは先行詞が人・目的格、④whereは関係副詞で、どれも文脈に合わない。\n【ポイント3】whichは省略も可能で、thatに置きかえることもできる：The article (that) I read yesterday〜。\n【答え】② which\n【確かめ】whichのあとにI read（主語＋動詞）が続いている（目的語の役割）ことを確認する。\n【よくあるまちがい】先行詞が物なのにwhoを選んでしまう。\n【ここが絶対】目的格の関係代名詞は省略できる。先行詞が物ならwhich（thatはどちらにも使える）。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -780,29 +609,8 @@ a country where it snows = a country in which it snows
     question: '次の2文を1文に書き換えなさい。（関係代名詞を使って）\n\nI have never been to a country.\nIts winters are extremely long and cold.',
     answer: 'I have never been to a country whose winters are extremely long and cold.',
     hint: '2つの文をつなぐとき、Its（その国の）を所有格の関係代名詞 whose に変える。',
-    explanation: `【出題意図】
-所有格の関係代名詞 whose を使って2文を1文に結合する問題。
-
-【解説】
-「I have never been to a country.」と「Its winters are extremely long and cold.」の Its は a country を指している。
-この「Its（その国の）」という所有の関係を表すのが関係代名詞の所有格 whose。
-
-変換の手順：
-1. 先行詞を特定：a country（物）
-2. Its（所有格）→ whose に置き換える
-3. whose を先行詞 a country の直後に置く
-→ I have never been to a country whose winters are extremely long and cold.
-
-日本語訳：「私は冬がとても長くて寒い国に行ったことがない。」
-
-【文法ポイント】
-whose の使い方：先行詞（人・物）の所有格を表す。物の場合でも whose を使える点に注意。
-・先行詞が物：I visited a town whose streets were covered with snow.
-
-【入試頻出】
-・She lives in a country whose climate is very dry.
-・This is a region whose winters are mild.
-・He studies a species whose habitat is disappearing due to warming.`,
+    explanation:
+      '【何を聞かれているか】「I have never been to a country. Its winters are extremely long and cold.」を関係代名詞を使って1文にする。\n【なぜwhoseを使うのか】2つ目の文のIts（その国の）がa country（1つ目の文の名詞）の所有を表しているため、この所有の関係を表す所有格の関係代名詞whoseに置きかえる必要があるから。\n【ポイント1】先行詞を特定する：a country（物）。物の場合でもwhoseを使える点に注意。\n【ポイント2】Its（所有格）をwhoseに置きかえ、先行詞a countryの直後に置く。\n【ポイント3】I have never been to a country whose winters are extremely long and cold.（私は冬がとても長くて寒い国に行ったことがない）。\n【答え】I have never been to a country whose winters are extremely long and cold.\n【確かめ】whoseのあとにwinters（名詞）、are（動詞）と続いているかを確認する。\n【よくあるまちがい】先行詞が物（a country）だからwhichを使えると考え、whichのあとにIts（所有格）を残してしまう。\n【ここが絶対】whoseは先行詞が人でも物でも、その所有格を表すのに使える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -886,30 +694,8 @@ whose の使い方：先行詞（人・物）の所有格を表す。物の場�
     question: '次の語を並べ替えて正しい英文を作れ。\n（ know / you / do / how / it / will / cold / be / tomorrow ）\n「明日どのくらい寒くなるか知っていますか？」',
     answer: 'Do you know how cold it will be tomorrow?',
     hint: '間接疑問文：疑問詞（how cold）の後ろは主語＋動詞の語順。全体は疑問文なので Do で始める。',
-    explanation: `【出題意図】
-間接疑問文の語順整序問題。「疑問詞（how + 形容詞） + 主語 + 動詞」という間接疑問の語順と、全体が疑問文になることを同時に確認する。
-
-【解説】
-ポイントは2つ：
-1. 全体が「Do you know〜?」という疑問文
-2. know の目的語（間接疑問）は「how cold it will be tomorrow」（疑問文の語順ではなく平叙文語順）
-
-× Do you know how cold will it be tomorrow?（誤り）
-○ Do you know how cold it will be tomorrow?（正解）
-
-語句の組み立て：
-Do you know / how cold / it will be / tomorrow？
-
-日本語訳：「明日どのくらい寒くなるか知っていますか？」
-
-【文法ポイント】
-間接疑問の語順：疑問詞（+形容詞）+ 主語 + 動詞
-全体が疑問文の場合：Do/Can/Could + 主語 + 動詞 + 疑問詞 + 主語 + 動詞〜?
-
-【入試頻出】
-・Do you know how hot it will get this summer?
-・Can you tell me how long the rain will continue?
-・I wonder how much snow will fall tonight.`,
+    explanation:
+      '【何を聞かれているか】know / you / do / how / it / will / cold / be / tomorrow を並べ替えて「明日どのくらい寒くなるか知っていますか？」という英文を作る。\n【なぜit will beという語順になるのか】全体はDo you know〜?という疑問文だが、knowの目的語になる部分（間接疑問）は疑問文の語順ではなく、〈疑問詞（how cold）＋主語＋動詞〉という平叙文の語順にする必要があるから。\n【ポイント1】全体の骨組みはDo you know〜?という疑問文。\n【ポイント2】knowの目的語（間接疑問）はhow cold it will be tomorrow（疑問文の語順ではなく平叙文語順）。\n【ポイント3】組み立てるとDo you know how cold it will be tomorrow?になる。\n【答え】Do you know how cold it will be tomorrow?\n【確かめ】how coldのあとがwill it beではなくit will be（平叙文語順）になっているかを確認する。\n【よくあるまちがい】Do you know how cold will it be tomorrow?のように疑問文の語順のままにしてしまう。\n【ここが絶対】間接疑問文の中は、疑問詞（＋形容詞）のあとを〈主語＋動詞〉の平叙文語順にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -953,29 +739,8 @@ since + 起点：since this morning / since last week / since 2020（〜以来�
     question: '次の語を並べ替えて正しい英文を作れ。\n（ enough / not / the / ice / is / thick / to / walk on ）\n「その氷は歩くのに十分な厚さではない。」',
     answer: 'The ice is not thick enough to walk on.',
     hint: '「〜するのに十分〜だ」は 形容詞 + enough + to 動詞 の語順。',
-    explanation: `【出題意図】
-「形容詞 + enough + to 動詞」の語順を問う整序問題。enough の位置が鍵。
-
-【解説】
-「〜するのに十分〜だ」は：主語 + be + 形容詞 + enough + to + 動詞原形
-・enough は形容詞の後ろに置く（× enough thick = 誤り）
-・否定文：not が be 動詞の後ろに来る
-・walk on〜（〜の上を歩く）という句動詞の on を忘れずに残す
-
-正しい語順：
-The ice is not thick enough to walk on.
-
-日本語訳：「その氷は歩くのに十分な厚さではない。」
-
-【文法ポイント】
-形容詞 + enough + to 動詞：「〜するのに十分〜だ」
-too + 形容詞 + to 動詞：「〜すぎて〜できない」（enough と対で覚える）
-例：The ice is too thin to walk on.（薄すぎて歩けない）
-
-【入試頻出】
-・The river is not deep enough to swim in.
-・The wind was strong enough to break the umbrella.
-・The snow was too soft to make a snowman.`,
+    explanation:
+      '【何を聞かれているか】enough / not / the / ice / is / thick / to / walk on を並べ替えて「その氷は歩くのに十分な厚さではない。」という英文を作る。\n【なぜenoughを形容詞のあとに置くのか】「〜するのに十分〜だ」は〈形容詞＋enough＋to動詞〉という決まった語順で表し、enoughは必ず形容詞のあとに置くというルールがあるから。\n【ポイント1】「〜するのに十分〜だ」は主語＋be＋形容詞＋enough＋to＋動詞原形の形。enoughは形容詞のあとに置く（enough thickは誤り）。\n【ポイント2】否定文ではnotがbe動詞のあとに来る。The ice is not thick enough to walk on.\n【ポイント3】walk on〜（〜の上を歩く）という句動詞のonを忘れずに残す。反対の意味を表すtoo＋形容詞＋to動詞（〜すぎて〜できない）とセットで覚える。\n【答え】The ice is not thick enough to walk on.\n【確かめ】enoughがthickのあとに置かれているか、walk onのonが抜けていないかを確認する。\n【よくあるまちがい】walk onのonを忘れてwalkだけにしてしまう。\n【ここが絶対】enoughは必ず形容詞のあとに置く。句動詞の前置詞（walk onのonなど）を忘れずに残す。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -987,28 +752,8 @@ too + 形容詞 + to 動詞：「〜すぎて〜できない」（enough と対�
     question: '次の語を並べ替えて正しい英文を作れ。\n（ us / the / wind / brought / cool / air ）\n「その風は私たちに涼しい空気をもたらした。」',
     answer: 'The wind brought us cool air.',
     hint: 'bring + 人 + 物 の語順（第4文型 SVOO）を使う。',
-    explanation: `【出題意図】
-第4文型（SVOO：主語＋動詞＋間接目的語＋直接目的語）の語順を問う整序問題。bring の用法も確認。
-
-【解説】
-bring + 人 + 物 = 人に物を持ってくる（第4文型）
-・The wind（S）+ brought（V）+ us（IO: 間接目的語）+ cool air（DO: 直接目的語）
-
-語順：The wind brought us cool air.
-
-第3文型への書き換え：The wind brought cool air to us.（to を使う）
-
-日本語訳：「その風は私たちに涼しい空気をもたらした。」
-
-【文法ポイント】
-第4文型（SVOO）の動詞：
-・give / send / show / bring / teach + 人 + 物（間接目的語が to で書き換え可）
-例：The rain brought us a rainbow. = The rain brought a rainbow to us.
-
-【入試頻出】
-・The storm brought the town a lot of damage.
-・Spring brings us warm sunshine and blooming flowers.
-・Can you show me the weather map for tomorrow?`,
+    explanation:
+      '【何を聞かれているか】us / the / wind / brought / cool / air を並べ替えて「その風は私たちに涼しい空気をもたらした。」という英文を作る。\n【なぜus cool airという語順になるのか】bring＋人＋物は「人に物を持ってくる」という第4文型（SVOO）の形で、間接目的語（人）を直接目的語（物）より先に置くという決まりがあるから。\n【ポイント1】bring＋人＋物＝人に物を持ってくる（第4文型）。The wind（S）+ brought（V）+ us（間接目的語）+ cool air（直接目的語）。\n【ポイント2】語順はThe wind brought us cool air.になる。\n【ポイント3】第3文型に書きかえるとThe wind brought cool air to us.（toを使う）になる。同じ仲間の動詞にgive、send、show、teachなどがある。\n【答え】The wind brought us cool air.\n【確かめ】us（人）がcool air（物）より先に置かれているかを確認する。\n【よくあるまちがい】brought cool air usのように、物を人より先に置いてしまう。\n【ここが絶対】bring＋人＋物の第4文型では、人（間接目的語）を先に、物（直接目的語）をあとに置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1020,32 +765,8 @@ bring + 人 + 物 = 人に物を持ってくる（第4文型）
     question: '次の語を並べ替えて正しい英文を作れ。\n（ home / will / we / go / after / watching / the fireworks ）\n「花火を見た後、私たちは家に帰ります。」',
     answer: 'We will go home after watching the fireworks.',
     hint: '前置詞 after の後には動名詞（〜ing）が来る。',
-    explanation: `【出題意図】
-前置詞 after + 動名詞 の用法と、語順整序を問う問題。
-
-【解説】
-前置詞の後ろには名詞・動名詞が来る（不定詞は来ない）。
-「〜した後で」= after + 動名詞（〜ing）
-
-正しい語順：
-We will go home after watching the fireworks.
-（= After watching the fireworks, we will go home.）
-
-× after to watch（× 前置詞の後ろに不定詞は来ない）
-○ after watching（✓ 前置詞 + 動名詞）
-
-日本語訳：「花火を見た後、私たちは家に帰ります。」
-
-【文法ポイント】
-前置詞 + 動名詞 の頻出パターン：
-・before + ing：〜する前に
-・after + ing：〜した後で
-・without + ing：〜せずに
-
-【入試頻出】
-・She left the beach before the storm arrived.
-・He came home without getting wet in the rain.
-・Thank you for warning us about the typhoon.`,
+    explanation:
+      '【何を聞かれているか】home / will / we / go / after / watching / the fireworks を並べ替えて「花火を見た後、私たちは家に帰ります。」という英文を作る。\n【なぜafterのあとが動名詞になるのか】前置詞のあとには名詞・動名詞が来るという決まりがあり、不定詞（to＋原形）は前置詞のあとには置けないため、「〜した後で」はafter＋動名詞（〜ing）の形にする必要があるから。\n【ポイント1】前置詞の後ろには名詞・動名詞が来る（不定詞は来ない）。「〜した後で」＝after＋動名詞（〜ing）。\n【ポイント2】We will go home after watching the fireworks.（＝After watching the fireworks, we will go home.と同じ意味）。\n【ポイント3】同じパターン：before＋ing（〜する前に）、without＋ing（〜せずに）。\n【答え】We will go home after watching the fireworks.\n【確かめ】afterのあとがwatch（原形）やto watch（不定詞）ではなくwatching（動名詞）になっているかを確認する。\n【よくあるまちがい】after to watchのように、前置詞のあとに不定詞を置いてしまう。\n【ここが絶対】前置詞のあとに動詞を続けるときは必ず動名詞（-ing）にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1057,28 +778,8 @@ We will go home after watching the fireworks.
     question: '次の語を並べ替えて正しい英文を作れ。\n（ who / the scientist / climate / studies / is / famous ）\n「気候を研究しているその科学者は有名だ。」',
     answer: 'The scientist who studies climate is famous.',
     hint: '関係代名詞 who を使って先行詞「the scientist」を修飾する節を作る。',
-    explanation: `【出題意図】
-関係代名詞 who（主格）を使った語順整序問題。先行詞と関係代名詞節の位置関係が鍵。
-
-【解説】
-文の骨格：The scientist is famous.（その科学者は有名だ）
-修飾部：who studies climate（気候を研究している）
-
-組み合わせ：
-The scientist [who studies climate] is famous.
-
-who はここでは主格（studies の主語）として使われている。主節の動詞（is）は関係代名詞節の後に続く。
-
-日本語訳：「気候を研究しているその科学者は有名だ。」
-
-【文法ポイント】
-関係代名詞節の位置：先行詞の直後に置く。
-The scientist who〜 のように、先行詞と関係代名詞節はセット。
-
-【入試頻出】
-・The woman who studies typhoons works at a university.
-・The boy who collects rainwater is my classmate.
-・The man who predicts the weather appears on TV every morning.`,
+    explanation:
+      '【何を聞かれているか】who / the scientist / climate / studies / is / famous を並べ替えて「気候を研究しているその科学者は有名だ。」という英文を作る。\n【なぜwho studiesという語順になるのか】関係代名詞whoを使って、先行詞The scientistのうしろにwho studies climate（気候を研究している）という節を置くことで、The scientistを説明できるから。\n【ポイント1】文の骨格はThe scientist is famous.（その科学者は有名だ）。\n【ポイント2】修飾部はwho studies climate（気候を研究している）。ここでのwhoはstudiesの主語（主格）にあたる。\n【ポイント3】組み合わせるとThe scientist who studies climate is famous.になる。主節の動詞（is）は関係代名詞節のあとに続く。\n【答え】The scientist who studies climate is famous.\n【確かめ】関係代名詞節（who studies climate）が先行詞The scientistの直後に置かれ、そのあとに主節の動詞isが続いているかを確認する。\n【よくあるまちがい】関係代名詞節を先行詞から離れた位置に置いてしまう。\n【ここが絶対】関係代名詞節は必ず先行詞の直後に置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1090,29 +791,8 @@ The scientist who〜 のように、先行詞と関係代名詞節はセット�
     question: '次の語を並べ替えて正しい英文を作れ。\n（ shallow / the river / enough / is / for / children / to / cross ）\n「その川は子供が渡れるくらい浅い。」',
     answer: 'The river is shallow enough for children to cross.',
     hint: '「〜が…するのに十分〜だ」は 形容詞 + enough + for + 人 + to 動詞 の形。',
-    explanation: `【出題意図】
-enough to 構文に「for + 人」が加わった形の語順を問う問題。「〜が…するほど十分〜だ」という表現の完全形を問う。
-
-【解説】
-構文：主語 + be + 形容詞 + enough + for + 人 + to + 動詞原形
-「for + 人」は不定詞の意味上の主語を示す。
-
-正しい語順：
-The river is shallow enough for children to cross.
-
-日本語訳：「その川は子供が渡れるくらい浅い。」
-
-【文法ポイント】
-「形容詞 + enough + for + 人 + to + 動詞」構文：
-・The ice was thick enough for us to skate on.（私たちがスケートできるくらい厚かった）
-
-「too + 形容詞 + for + 人 + to + 動詞」との対比：
-・The river is too deep for children to cross.（深すぎて子供は渡れない）
-
-【入試頻出】
-・The wind was calm enough for the boat to sail.
-・The sun was warm enough for us to swim in the sea.
-・The path was too icy for anyone to walk on.`,
+    explanation:
+      '【何を聞かれているか】shallow / the river / enough / is / for / children / to / cross を並べ替えて「その川は子供が渡れるくらい浅い。」という英文を作る。\n【なぜfor＋人が入るのか】「〜が…するのに十分〜だ」と、動作をする人を明示するには、〈形容詞＋enough＋for＋人＋to＋動詞原形〉という構文を使い、for＋人が不定詞の意味上の主語を示すから。\n【ポイント1】構文は主語＋be＋形容詞＋enough＋for＋人＋to＋動詞原形。\n【ポイント2】The river is shallow enough for children to cross.（その川は子供が渡れるくらい浅い）。\n【ポイント3】反対の意味を表す〈too＋形容詞＋for＋人＋to＋動詞〉（〜すぎて…できない）とセットで覚える（例：The river is too deep for children to cross.）。\n【答え】The river is shallow enough for children to cross.\n【確かめ】for childrenがenoughとtoの間に正しく置かれているかを確認する。\n【よくあるまちがい】for childrenを文の最後に置いてしまう。\n【ここが絶対】「形容詞＋enough＋for＋人＋to＋動詞」の語順を1つのまとまりとして覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1129,31 +809,8 @@ The river is shallow enough for children to cross.
     choices: ['① No, I don\'t.', '② Yes, I\'d love to.', '③ I don\'t like sunny.', '④ Yes, I would like.'],
     answer: '② Yes, I\'d love to.',
     hint: 'Would you like to〜? は「〜しませんか」という誘いの表現。適切な受け方を選ぶ。',
-    explanation: `【出題意図】
-Would you like to〜?（誘い）への適切な応答を問う問題。日常会話・対話文頻出表現。
-
-【解説】
-Would you like to〜? は「〜しませんか？」という丁寧な誘いの表現。
-・① No, I don't. → Would you like to〜? への否定応答としては不自然（No, thank you. や I'd love to, but〜 が自然）
-・② Yes, I'd love to. → 正しい受け答え（✓）
-・③ I don't like sunny. → 質問への直接的な答えになっていない
-・④ Yes, I would like. → like の後ろに目的語（to や名詞）が必要
-
-誘いへの返答：
-・受ける：Yes, I'd love to. / Sure, that sounds fun.
-・断る：I'd love to, but I have other plans.
-
-日本語訳：
-A：もし晴れたら、今週末ピクニックに行きませんか？
-B：はい、ぜひ行きたいです。
-
-【文法ポイント】
-Would you like to〜?（誘い）vs Do you like〜?（好み）
-I'd love to. は I would love to (go). の省略形。
-
-【入試頻出】
-・Would you like to see the cherry blossoms with us? — Yes, I'd love to.
-・Would you like to join the stargazing event? — Sure, that sounds fun.`,
+    explanation:
+      '【何を聞かれているか】「Would you like to go on a picnic this weekend if it is sunny?」への適切な返答を選ぶ。\n【なぜ「Yes, I\'d love to.」が正しいのか】Would you like to〜?は「〜しませんか」という丁寧な誘いの表現で、受けるときはYes, I\'d love to.、断るときはI\'d love to, but〜という決まった返答をするから。\n【ポイント1】①No, I don\'t.はWould you like to〜?への返答としては不自然。\n【ポイント2】③I don\'t like sunny.は質問への直接的な答えになっていない。④Yes, I would like.はlikeのあとに目的語が必要。\n【ポイント3】②Yes, I\'d love to.が正しい受け答え。I\'d love to.はI would love to (go).の省略形。\n【答え】② Yes, I\'d love to.\n【確かめ】Would you like to〜?（誘い）とDo you like〜?（好み）を混同していないかを確認する。\n【よくあるまちがい】Would you like to〜?への返答をNo, I don\'t.のようにしてしまう。\n【ここが絶対】誘いへの返答はYes, I\'d love to.（受ける）／I\'d love to, but〜（断る）で覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1165,28 +822,8 @@ I'd love to. は I would love to (go). の省略形。
     question: '次の対話の（　）に最も適切な文を選べ。\n\nA: How long do you think this rain will last?\nB: ( )\n\n① It\'s about five kilometers away.\n② It should stop by evening, according to the forecast.\n③ You should bring an umbrella.\n④ The rain is falling very hard.',
     answer: '② It should stop by evening, according to the forecast.',
     hint: 'How long〜last? は「どのくらい続くか」という継続時間を尋ねる表現。',
-    explanation: `【出題意図】
-「How long will 〜 last?（〜はどのくらい続きますか）」への適切な応答を問う問題。所要時間・継続時間の表現。
-
-【解説】
-How long do you think this rain will last? = 「この雨はどのくらい続くと思いますか？」継続する期間・終わる時間を答える必要がある。
-・① about five kilometers away → 距離の答え（×）How far〜? への答え
-・② It should stop by evening, according to the forecast. → 継続時間・終わりの見込みを答えている（✓）
-・③ You should bring an umbrella. → アドバイス（質問の答えになっていない）
-・④ The rain is falling very hard. → 雨の強さの説明（質問とずれる）
-
-日本語訳：
-A：この雨はどのくらい続くと思いますか？
-B：予報によると夕方までにはやむはずです。
-
-【文法ポイント】
-継続時間を尋ねる表現：How long will〜last? / How long does〜continue?
-should は「〜のはずだ」という推量の意味でも使われる。
-
-【入試頻出】
-・How long will the typhoon stay near Japan?
-・How long does the rainy season usually last?
-・It should clear up by tomorrow morning.`,
+    explanation:
+      '【何を聞かれているか】「How long do you think this rain will last?」への適切な返答を選ぶ。\n【なぜ②が正しいのか】How long〜last?は「〜はどのくらい続くか」という継続時間を尋ねる表現で、これには継続する期間や終わる見込みを答える必要があるから。\n【ポイント1】①about five kilometers awayは距離を答えており、How far〜?への返答にあたる。\n【ポイント2】③You should bring an umbrella.はアドバイスであり、質問（継続時間）の答えになっていない。④The rain is falling very hard.は雨の強さの説明で質問とずれる。\n【ポイント3】②It should stop by evening, according to the forecast.が正しい。継続時間・終わりの見込みを答えている。shouldは「〜のはずだ」という推量の意味でも使われる。\n【答え】② It should stop by evening, according to the forecast.\n【確かめ】質問がHow long（継続時間）を尋ねているのに対し、選んだ返答が継続時間や終わりの見込みを答えているかを確認する。\n【よくあるまちがい】How long〜?とHow far〜?を混同し、距離を答えてしまう。\n【ここが絶対】継続時間を尋ねるHow long will〜last?には、続く期間や終わる見込みで答える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1270,34 +907,8 @@ A：ありがとう。
     choices: ['① see', '② saw', '③ seen', '④ seeing'],
     answer: '③ seen',
     hint: '現在完了形（have/has + 過去分詞）の経験用法。see の過去分詞を選ぶ。',
-    explanation: `【出題意図】
-現在完了形（経験用法）の形と、see の活用（see-saw-seen）を正確に使えるかを問う問題。
-
-【解説】
-never は現在完了形の経験用法で「一度も〜したことがない」を表す。
-現在完了形：have/has + 過去分詞
-see の活用：see（原形）→ saw（過去形）→ seen（過去分詞）
-
-・① see → 原形（have の後ろに原形は来ない）
-・② saw → 過去形（have の後ろに過去形は来ない）
-・③ seen → 過去分詞（✓）have seen
-・④ seeing → 現在分詞（have been seeing なら別の意味になり、この文には合わない）
-
-日本語訳：「私はこんなに美しい虹を今まで一度も見たことがない。」
-
-【文法ポイント】
-現在完了形（経験）の目印の語句：
-・ever（これまでに）：Have you ever seen a shooting star?
-・never（一度も〜ない）：I have never seen snow in April.
-・before（以前に）：I have seen this kind of cloud before.
-
-不規則動詞の過去分詞（頻出）：
-see-saw-seen / go-went-gone / take-took-taken / write-wrote-written
-
-【入試頻出】
-・Have you ever seen a total solar eclipse?
-・I have never experienced such a hot summer.
-・She has seen the northern lights twice.`,
+    explanation:
+      '【何を聞かれているか】「I have never ( ) such a beautiful rainbow before.」の空所に入る適切な形を選ぶ。\n【なぜseenになるのか】neverを使った現在完了形の経験用法「一度も〜したことがない」は、have/has＋過去分詞の形にする必要があり、seeの過去分詞はseenだから。\n【ポイント1】neverは現在完了形の経験用法で「一度も〜したことがない」を表す。現在完了形はhave/has＋過去分詞。\n【ポイント2】seeの活用：see（原形）→saw（過去形）→seen（過去分詞）。①see（原形）、②saw（過去形）はhaveのあとに使えない。\n【ポイント3】④seeing（現在分詞）はhave been seeingなら別の意味になり、この文には合わない。③seen（過去分詞）が正解。\n【答え】③ seen\n【確かめ】haveのあとに過去分詞seenが続いているかを確認する。\n【よくあるまちがい】have sawのように、haveのあとに過去形をそのまま続けてしまう。\n【ここが絶対】現在完了形はhave/has＋過去分詞。不規則動詞の活用（see-saw-seen）を正確に覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1310,28 +921,8 @@ see-saw-seen / go-went-gone / take-took-taken / write-wrote-written
     choices: ['① in', '② at', '③ on', '④ by'],
     answer: '③ on',
     hint: '特定の日には前置詞 on を使う。',
-    explanation: `【出題意図】
-時を表す前置詞（in / at / on）の使い分けを問う問題。入試最頻出文法の一つ。
-
-【解説】
-「New Year's Day（元日）」という特定の日には on を使う。
-・① in → 月・年・季節・午前/午後（in January / in 2025 / in winter）
-・② at → 時刻・特定の時点（at noon / at midnight）
-・③ on → 曜日・特定の日（on New Year's Day / on Christmas Day）（✓）
-・④ by → 期限（by January = 1月までに）
-
-日本語訳：「今年は元日に雪が降り始めた。」
-
-【文法ポイント】
-時を表す前置詞まとめ：
-at：時刻・時点（at noon / at midnight）
-on：曜日・日付・特定の日（on Monday / on my birthday / on New Year's Day）
-in：月・年・季節・時間帯（in March / in 2020 / in winter）
-
-【入試頻出】
-・The first snow usually falls in December.
-・The typhoon hit the coast on a Sunday morning.
-・We had a heavy frost at dawn.`,
+    explanation:
+      '【何を聞かれているか】「It started snowing ( ) New Year\'s Day this year.」の空所に入る適切な前置詞を選ぶ。\n【なぜonになるのか】New Year\'s Day（元日）のような特定の日を表すときは、前置詞onを使うという決まりがあるから。\n【ポイント1】①in（月・年・季節・時間帯に使う）、②at（時刻・特定の時点に使う）はどちらも「特定の日」には使わない。\n【ポイント2】③on（曜日・特定の日に使う）が正解。on New Year\'s Day、on Christmas Dayのように使う。\n【ポイント3】④by（期限「〜までに」）も文脈に合わない。時を表す前置詞まとめ：at＝時刻・時点、on＝曜日・日付、in＝月・年・季節。\n【答え】③ on\n【確かめ】New Year\'s Dayが「特定の日」にあたることから、onが正しいことを確認する。\n【よくあるまちがい】inやatを、日付を表す前置詞として使ってしまう。\n【ここが絶対】時を表す前置詞は、atは時刻・時点、onは曜日・日付、inは月・年・季節、と使い分ける。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1344,28 +935,8 @@ in：月・年・季節・時間帯（in March / in 2020 / in winter）
     choices: ['① close', '② to close', '③ closing', '④ closed'],
     answer: '② to close',
     hint: 'ask + 人 + to do（人に〜するよう頼む）という構文。',
-    explanation: `【出題意図】
-「ask + 人 + to + 動詞」という第5文型（SVOC）の用法を問う問題。
-
-【解説】
-ask + 人 + to do = 「人に〜するよう頼む」という重要構文。
-・① close → 原形のみ（× ask の第5文型では to が必要）
-・② to close → ask + 人 + to do（✓）
-・③ closing → 動名詞（ask + 人 + doing という形は存在しない）
-・④ closed → 過去分詞（文法的に合わない）
-
-日本語訳：「彼女は嵐が来る前に窓を閉めるよう私に頼んだ。」
-
-【文法ポイント】
-「動詞 + 人 + to do」の構文（依頼・使役に近い意味）：
-・ask + 人 + to do：人に〜するよう頼む
-・tell + 人 + to do：人に〜するよう言う
-・want + 人 + to do：人に〜してほしい
-
-【入試頻出】
-・He told us to stay inside during the thunderstorm.
-・My mother wants me to bring an umbrella.
-・The teacher asked the students to check the weather forecast.`,
+    explanation:
+      '【何を聞かれているか】「She asked me ( ) the windows before the storm arrived.」の空所に入る適切な形を選ぶ。\n【なぜto closeになるのか】「人に〜するよう頼む」はask＋人＋to doという決まった構文で表し、人のあとには必ず不定詞（to＋原形）が続くから。\n【ポイント1】ask＋人＋to do＝「人に〜するよう頼む」という重要構文。\n【ポイント2】①close（原形のみ）、③closing（動名詞）、④closed（過去分詞）はどれもask＋人のあとの形として使えない。\n【ポイント3】同じ仲間の構文：tell＋人＋to do（人に〜するよう言う）、want＋人＋to do（人に〜してほしい）。\n【答え】② to close\n【確かめ】She asked me to close the windows.という文全体を読み、「彼女は私に窓を閉めるよう頼んだ」という意味になっているかを確認する。\n【よくあるまちがい】ask＋人のあとに原形をそのまま続けてしまう。\n【ここが絶対】ask＋人＋to doの形では、人のあとに必ずtoが必要。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1378,33 +949,8 @@ ask + 人 + to do = 「人に〜するよう頼む」という重要構文。
     choices: ['① this', '② that', '③ it', '④ what'],
     answer: '③ it',
     hint: '形式主語 it を使った「it is + 形容詞 + to 動詞」の構文。',
-    explanation: `【出題意図】
-形式主語 it（仮の主語）を使った構文を問う問題。I think (that) it is〜 の形が正解。
-
-【解説】
-この文は「I think [that] it is important to check the weather forecast before climbing a mountain.」という構造。
-it は to check the weather forecast〜（天気予報を確認すること）を指す形式主語（仮主語）。
-
-・① this → I think this important to〜 は文法的に成立しない
-・② that → I think that important to〜 も不自然
-・③ it → 形式主語の it（✓）
-・④ what → 成立しない
-
-日本語訳：「私は山に登る前に天気予報を確認することが大切だと思う。」
-
-全体の構造：
-I think [that it is important to check the weather forecast before climbing a mountain].
-
-【文法ポイント】
-形式主語（仮主語）it の構文：
-It is + 形容詞 + to + 動詞〜 = 〜することは（形容詞）だ
-例：It is dangerous to go outside during a typhoon.
-例：It is exciting to watch the stars on a clear night.
-
-【入試頻出】
-・It is important to prepare for natural disasters.
-・I think it is wise to carry a raincoat in summer.
-・He found it difficult to predict the sudden weather change.`,
+    explanation:
+      '【何を聞かれているか】「I think ( ) important to check the weather forecast before climbing a mountain.」の空所に入る適切な語を選ぶ。\n【なぜitになるのか】to check the weather forecast〜（天気予報を確認すること）という長い内容を先に置くと文のバランスが悪くなるため、その内容を指す形式主語itを先に置いて、本当の中身をあとに回すという英語の決まりがあるから。\n【ポイント1】this、that、whatはこの位置に置いても文法的に成立しない。\n【ポイント2】③it（形式主語）が正解。itはto check the weather forecast before climbing a mountainを指す。\n【ポイント3】形式主語itの基本構文：It is＋形容詞＋to＋動詞〜＝「〜することは（形容詞）だ」（例：It is important to prepare for natural disasters.）。\n【答え】③ it\n【確かめ】itがto check the weather forecast〜を指していることを確認する。\n【よくあるまちがい】thisやthatを使ってしまう。形式主語には必ずitを使う。\n【ここが絶対】「〜することは…だ」を表すときは、形式主語itを使い、本当の中身（to不定詞）は後ろに置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1454,29 +1000,8 @@ such + (a/an) + 形容詞 + 名詞：「こんなに〜な…」
     question: '次の日本文を英語に訳せ。\n「あの嵐の間に彼が撮ったその写真を見せてもらえませんか？」',
     answer: 'Could you show me the photo that he took during the storm? / Could you show me the photo he took during the storm?',
     hint: '「見せてもらえませんか」は Could you show me〜?、「彼が撮った」は関係代名詞（that / which）で修飾。',
-    explanation: `【出題意図】
-依頼表現（Could you〜?）と関係代名詞（目的格）を組み合わせた英作文。
-
-【解説】
-2つのポイント：
-1. 丁寧な依頼：Could you show me〜? = 「〜を見せていただけますか？」
-   show + 人 + 物（第4文型）
-2. 「彼が撮った（写真）」= the photo that/which he took（関係代名詞・目的格）
-   → 目的格の関係代名詞は省略可
-3. 「あの嵐の間に」= during the storm（前置詞 during + 名詞）
-
-組み合わせ：
-Could you show me the photo (that) he took during the storm?
-
-別解：
-・Could you let me see the photo he took during the storm?
-
-日本語訳確認：「あの嵐の間に彼が撮ったその写真を見せてもらえませんか？」
-
-【文法ポイント】
-Could you〜? = Can you〜? の丁寧版
-during + 名詞：「〜の間に」（whileは後ろに文が続く点と区別）
-the photo (that) he took：関係代名詞（目的格）he took the photo の構造`,
+    explanation:
+      '【何を聞かれているか】「あの嵐の間に彼が撮ったその写真を見せてもらえませんか？」を英語に訳す。\n【なぜCould you〜?とthat/whichを組み合わせるのか】丁寧な依頼にはCould you〜?を使い、「彼が撮った」という説明を加えるには、the photoのうしろに関係代名詞（目的格）でtook節をつなげる必要があるから。\n【ポイント1】丁寧な依頼：Could you show me〜?＝「〜を見せていただけますか？」。show＋人＋物（第4文型）。\n【ポイント2】「彼が撮った（写真）」＝the photo that/which he took（関係代名詞・目的格）。目的格の関係代名詞は省略も可能。\n【ポイント3】「あの嵐の間に」＝during the storm（前置詞during＋名詞）。組み合わせるとCould you show me the photo (that) he took during the storm?になる。\n【答え】Could you show me the photo that he took during the storm? / Could you show me the photo he took during the storm?\n【確かめ】the photoのあとにhe took（主語＋動詞）が続いており、takeの目的語がthe photoであることを確認する。\n【よくあるまちがい】duringのかわりにwhile（あとに文が続く語）を使ってしまう。duringのあとは名詞。\n【ここが絶対】during＋名詞、while＋文、という使い分けを覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
