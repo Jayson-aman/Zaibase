@@ -388,7 +388,8 @@ export const kankanQuestions: Question[] = [
     question: '次の文を英語に直せ。「私は昨日からずっと勉強しています。」',
     answer: 'I have been studying since yesterday.',
     hint: '現在完了進行形：have been + -ing（過去から現在まで継続）',
-    explanation: '【解説】現在完了進行形：\n過去のある時点から現在まで継続している動作を表す。\n形：have/has + been + 動詞のing形\n\n時制の使い分け：\n・since + 起点（yesterday, 2020, etc.）「〜以来ずっと」\n・for + 期間（two hours, a week）「〜の間ずっと」\n\n例文：\nI have been studying for three hours.\n（3時間ずっと勉強している）\nShe has been living in Osaka since 2019.\n（2019年からずっと大阪に住んでいる）',
+    explanation:
+      '【何を聞かれているか】「私は昨日からずっと勉強しています。」を英語に直す。\n【なぜ現在完了進行形を使うのか】過去のある時点（昨日）から現在まで動作がずっと続いていることを表すには、「継続」を強調する現在完了進行形（have/has been+動詞のing形）を使う必要があるから。\n【ポイント1】形は「have/has＋been＋動詞のing形」。\n【ポイント2】since＋起点（yesterday, 2020など）は「〜以来ずっと」、for＋期間（two hours, a weekなど）は「〜の間ずっと」を表す。今回はsince yesterdayで起点を表す。\n【ポイント3】文を組み立てる。I（主語）+ have been studying（現在完了進行形）+ since yesterday（昨日から）。\n【答え】I have been studying since yesterday.\n【確かめ】sinceのあとが「起点（いつから）」になっているか、forのあとが「期間（どれだけ）」になっているかを区別して確認する。\n【よくあるまちがい】sinceとforを逆に使ってしまう（since three hoursのように期間にsinceを使うのは誤り）。\n【ここが絶対】sinceは起点、forは期間に使うと覚える。',
   },
   {
     id: 'kankan_eigo_02', subject: 'eigo', difficulty: 'advanced',
@@ -396,7 +397,8 @@ export const kankanQuestions: Question[] = [
     question: '次の文を受動態に直せ。「Many people love this singer.」',
     answer: 'This singer is loved by many people.',
     hint: '受動態：be動詞 + 過去分詞 (+by+動作主)',
-    explanation: '【解説】受動態（受け身）の作り方：\n能動態：主語 + 動詞 + 目的語\nThis singer ← Many people love 〔this singer〕.\n\n受動態：目的語→主語 + be動詞 + 過去分詞 + by + 元の主語\nThis singer is loved by many people.\n\n時制別の受動態：\n現在：is/am/are + 過去分詞\n過去：was/were + 過去分詞\n未来：will be + 過去分詞\n現在完了：has/have been + 過去分詞',
+    explanation:
+      '【何を聞かれているか】「Many people love this singer.」を受動態に直す。\n【なぜ主語と目的語が入れかわるのか】受動態は「〜される」という動作を受ける側を主語にする文で、能動態の目的語（this singer）を主語の位置に移動させ、もとの主語（Many people）はbyのあとに置くという決まりがあるから。\n【ポイント1】能動態：主語（Many people）＋動詞（love）＋目的語（this singer）。\n【ポイント2】受動態にするときは、目的語を主語にし、be動詞＋過去分詞＋by＋元の主語という形にする。This singer is loved by many people.\n【ポイント3】時制によってbe動詞が変わる。現在はis/am/are、過去はwas/were、未来はwill be、現在完了はhas/have beenの後に過去分詞を続ける。\n【答え】This singer is loved by many people.\n【確かめ】This singer（単数）に合わせてbe動詞がisになっているか、過去分詞（loved）が正しい形かを確認する。\n【よくあるまちがい】主語がThis singer（単数）なのにbe動詞をareにしてしまう。\n【ここが絶対】受動態は「目的語→主語＋be動詞＋過去分詞＋by＋元の主語」の順に組み立てる。',
   },
   {
     id: 'kankan_eigo_03', subject: 'eigo', difficulty: 'advanced',
@@ -404,7 +406,8 @@ export const kankanQuestions: Question[] = [
     question: '次の空欄に適切な語を入れよ。「I want you ( ) help me with this problem.」',
     answer: 'to',
     hint: 'want + 人 + to do「人に〜してほしい」',
-    explanation: '【解説】want + 人 + to do：\n「（人）に〜してほしい」という表現。\n不定詞（to + 動詞の原形）を使う。\n\n同じ構文：\n・ask + 人 + to do「人に〜するよう頼む」\n・tell + 人 + to do「人に〜するよう言う」\n・allow + 人 + to do「人が〜するのを許可する」\n・help + 人 + (to) do「人が〜するのを手伝う」（toは省略可）\n\n例文：\nMy mother told me to clean my room.\nThe teacher asked us to be quiet.',
+    explanation:
+      '【何を聞かれているか】「I want you ( ) help me with this problem.」の空欄に入る適切な語を答える。\n【なぜtoが入るのか】want＋人＋to doは「（人）に〜してほしい」という決まった形で、人のあとには必ず不定詞（to＋動詞の原形）が続くという文型のルールがあるから。\n【ポイント1】want＋人＋to doの形を確認する。「（人）に〜してほしい」という意味になる。\n【ポイント2】同じ構文には、ask＋人＋to do「人に〜するよう頼む」、tell＋人＋to do「人に〜するよう言う」などがある。\n【ポイント3】allow＋人＋to do「人が〜するのを許可する」、help＋人＋(to) do「人が〜するのを手伝う」（toは省略可）も同じ仲間。\n【答え】to\n【確かめ】I want you to help me with this problem.という文全体を読み、「あなたにこの問題を手伝ってほしい」という意味になっているか確認する。\n【よくあるまちがい】toを入れずにhelpをそのまま原形で置いてしまう、またはthatを入れて別の構文と混同してしまう。\n【ここが絶対】want＋人＋to doの形では、人のあとに必ずtoが必要。',
   },
   {
     id: 'kankan_eigo_04', subject: 'eigo', difficulty: 'advanced',
@@ -428,7 +431,8 @@ export const kankanQuestions: Question[] = [
     question: '比較表現を使って日本語を英訳せよ。①「彼女は私の3倍速く走れる。」②「東京は大阪ほど古くない。」',
     answer: '①She can run three times as fast as me (I can). ②Tokyo is not as old as Osaka.',
     hint: '①倍数+as...as。②not as...as「〜ほど...でない」',
-    explanation: '【解説】比較表現：\n①倍数比較：数字 + times as + 形容詞/副詞 + as\n3倍速い → three times as fast as\nShe can run three times as fast as me.\n※as...as の2番目のasの後は目的格（me）または主格+助動詞（I can）\n\n②同等比較の否定（not as...as）：\n「〜ほど...でない」→ not as + 形容詞 + as\nTokyo is not as old as Osaka.\n（東京は大阪ほど古くない）\n＝Osaka is older than Tokyo.',
+    explanation:
+      '【何を聞かれているか】①「彼女は私の3倍速く走れる。」②「東京は大阪ほど古くない。」を比較表現を使って英訳する。\n【なぜas...asの形を使うのか】①は「何倍か」を表す倍数比較、②は「〜ほど...でない」という同等比較の否定で、どちらもas...asの形を基本にして、その前に数字や否定語を加えることで意味を調整するから。\n【ポイント1】①倍数比較は「数字＋times as＋形容詞/副詞＋as」の形。3倍速い→three times as fast as。\n【ポイント2】①She can run three times as fast as me.のas...asの2番目のasのあとは目的格（me）または主格＋助動詞（I can）を使う。\n【ポイント3】②「〜ほど...でない」はnot as＋形容詞＋asの形。Tokyo is not as old as Osaka.（＝Osaka is older than Tokyo.と同じ意味）。\n【答え】①She can run three times as fast as me (I can). ②Tokyo is not as old as Osaka.\n【確かめ】②の文をOsaka is older than Tokyo.のように比較級で書きかえても同じ意味になることを確認する。\n【よくあるまちがい】②でnotを入れ忘れ、Tokyo is as old as Osaka.（東京は大阪と同じくらい古い）という別の意味の文にしてしまう。\n【ここが絶対】倍数比較は「数字+times as...as」、「〜ほど...でない」はnotをasの前につける。',
   },
   {
     id: 'kankan_eigo_07', subject: 'eigo', difficulty: 'advanced',
@@ -436,7 +440,8 @@ export const kankanQuestions: Question[] = [
     question: '次の文の関係代名詞を選べ。「The book ( ) I read yesterday was interesting.」①who ②which ③whom ④whose',
     answer: '②which（またはthat）',
     hint: '先行詞がThe book（物）→which/that',
-    explanation: '【解説】関係代名詞の使い分け：\n先行詞が「人」→ who（主格）、whom（目的格）、whose（所有格）\n先行詞が「物・動物」→ which（主格・目的格）、whose（所有格）\n先行詞が「人・物どちらも可」→ that\n\nThe book which/that I read yesterday was interesting.\n「I read yesterday」がThe bookを修飾する関係節。\nI read _（目的語の空所）→ 目的格の関係代名詞which/that\n目的格のwhich/thatは省略可能。\n\n正解：which（またはthat）→ ②which',
+    explanation:
+      '【何を聞かれているか】「The book ( ) I read yesterday was interesting.」の空欄に入る関係代名詞を選ぶ。\n【なぜwhichが正しいのか】先行詞The book（物）を修飾する関係代名詞は、先行詞が人か物・動物かで使い分けが決まっており、物にはwhichまたはthatを使うというルールがあるから。\n【ポイント1】先行詞が「人」→who（主格）、whom（目的格）、whose（所有格）。先行詞が「物・動物」→which（主格・目的格）、whose（所有格）。「人・物どちらも可」→that。\n【ポイント2】The book which/that I read yesterday was interesting.の「I read yesterday」がThe bookを修飾する関係節。\n【ポイント3】I read _（目的語の空所）となっているので、これは目的格の関係代名詞which/thatが入る形。目的格のwhich/thatは省略も可能。\n【答え】②which（またはthat）\n【確かめ】I read the book yesterday.という文からthe bookが抜け出して先行詞になったと考えると、目的格の関係代名詞が入ることが確認できる。\n【よくあるまちがい】先行詞が物なのにwho（①）を選んでしまう。\n【ここが絶対】先行詞が物・動物のときはwhichかthatを使う。',
   },
   {
     id: 'kankan_eigo_08', subject: 'eigo', difficulty: 'advanced',
@@ -444,7 +449,8 @@ export const kankanQuestions: Question[] = [
     question: '次の文を間接疑問文に直せ。「Where does she live?」→「Do you know ( )?」',
     answer: 'Do you know where she lives?',
     hint: '間接疑問文：疑問詞 + 主語 + 動詞（疑問文語順にしない）',
-    explanation: '【解説】間接疑問文：\n疑問文が別の文の一部（目的語）になるとき、語順が変わる。\n\n直接疑問文：Where does she live?\n間接疑問文：where + 主語 + 動詞（疑問文の語順は×）\n\nDo you know where she lives?（○）\nDo you know where does she live?（×）\n\n間接疑問文の語順：疑問詞 + 主語 + 動詞\n（疑問文のような倒置は使わない）\n\n例：\nI don\'t know what he is doing.\nPlease tell me when she will arrive.',
+    explanation:
+      '【何を聞かれているか】「Where does she live?」を「Do you know ( )?」の間接疑問文に直す。\n【なぜ語順が変わるのか】疑問文が別の文の一部（目的語）になると、疑問文特有の倒置（does she）ではなく、ふつうの文と同じ〈疑問詞＋主語＋動詞〉の語順に戻すという間接疑問文のルールがあるから。\n【ポイント1】直接疑問文Where does she live?は、疑問詞Whereのあとにdoesという助動詞が来て、主語と動詞が倒置された疑問文の語順になっている。\n【ポイント2】間接疑問文にするときはdoesを使わず、動詞を主語に合わせた形（lives）に戻して〈疑問詞＋主語＋動詞〉の順にする。\n【ポイント3】文を組み立てる。Do you know where she lives?（○）。Do you know where does she live?のように疑問文の語順のままにするのは誤り（×）。\n【答え】Do you know where she lives?\n【確かめ】doesが消えて、動詞がsheに合わせたlivesの形になっているかを確認する。\n【よくあるまちがい】doesをそのまま残して、Do you know where does she live?のように疑問文の語順にしてしまう。\n【ここが絶対】間接疑問文の語順は〈疑問詞＋主語＋動詞〉で、疑問文のような倒置は使わない。',
   },
   {
     id: 'kankan_eigo_09', subject: 'eigo', difficulty: 'advanced',
@@ -460,7 +466,8 @@ export const kankanQuestions: Question[] = [
     question: '仮定法過去の文を完成させよ。「もし私が鳥だったら、あなたのところへ飛んでいけるのに。」',
     answer: 'If I were a bird, I could fly to you.',
     hint: '仮定法過去：If + 主語 + were/動詞の過去形, 主語 + would/could + 動詞の原形',
-    explanation: '【解説】仮定法過去：\n現実ではないことを仮定する（現在の事実に反する仮定）。\n\n形：If + 主語 + were/動詞の過去形, 主語 + would/could/might + 動詞原形\n\nIf I were a bird, I could fly to you.\n「（実際は鳥ではないが）もし鳥だったら、飛んでいけるのに」\n\nポイント：\n・be動詞は主語に関わらず「were」を使う（口語ではwasも可）\n・仮定法は動詞が1つ過去にずれる\n・直説法との違い：\n直説法：If it rains, I will stay home.（本当に雨かもしれない）\n仮定法：If it rained, I would stay home.（実際は雨ではないと思いながら）',
+    explanation:
+      '【何を聞かれているか】「もし私が鳥だったら、あなたのところへ飛んでいけるのに。」を仮定法過去の文で完成させる。\n【なぜwereや過去形を使うのか】仮定法過去は「現実ではないこと」を仮定する言い方で、現在の事実に反することをわざと過去形で表すことで「実際はそうではない」という気持ちを示すルールになっているから。\n【ポイント1】形は「If＋主語＋were/動詞の過去形, 主語＋would/could/might＋動詞原形」。\n【ポイント2】If I were a bird, I could fly to you.＝「（実際は鳥ではないが）もし鳥だったら、飛んでいけるのに」。be動詞は主語に関わらずwereを使う（口語ではwasも可）。\n【ポイント3】直説法（本当に起こりうること）との違いを確認する。直説法：If it rains, I will stay home.（本当に雨かもしれない）。仮定法：If it rained, I would stay home.（実際は雨ではないと思いながら）。\n【答え】If I were a bird, I could fly to you.\n【確かめ】be動詞がwasではなくwereになっているか、主節の動詞がcould（過去形の助動詞）になっているかを確認する。\n【よくあるまちがい】If I am a bird, I can fly to you.のように現在形のまま書いてしまう。仮定法は動詞が1つ過去にずれる。\n【ここが絶対】仮定法過去はbe動詞を必ずwereにし、主節にはwould/could/mightを使う。',
   },
 ];
 
@@ -850,7 +857,8 @@ export const shitennojiQuestions: Question[] = [
     question: '次の文を比較級・最上級に直せ。①「This book is interesting.」（比較級：that bookと比べて）②「Mt. Fuji is high.」（最上級：日本の山の中で）',
     answer: '①This book is more interesting than that book.　②Mt. Fuji is the highest mountain in Japan.',
     hint: 'interesting は長い形容詞→more/most。high は短い→-er/-est。',
-    explanation: '【解説】比較級・最上級の作り方：\n\n【短い形容詞（1〜2音節）】\n→ 語尾に -er / -est をつける\n例：high → higher / highest\n　　tall → taller / tallest\n　　big → bigger / biggest（子音字を重ねる）\n\n【長い形容詞（3音節以上）】\n→ more / most を前につける\n例：interesting → more interesting / most interesting\n　　beautiful → more beautiful / most beautiful\n\n【解答の形】\n①比較級の文型：A is + 比較級 + than B\nThis book is more interesting than that book.\n\n②最上級の文型：A is the + 最上級 + in/of 〜\nMt. Fuji is the highest mountain in Japan.\n（「in Japan」は範囲を示す前置詞→場所・グループ）\n\n【注意】比較級の文に「the」は不要。最上級の文には「the」が必要。',
+    explanation:
+      '【何を聞かれているか】①「This book is interesting.」を比較級に、②「Mt. Fuji is high.」を最上級に直す。\n【なぜ-erやmoreの使い分けがあるのか】形容詞の音節（区切り）の長さによって、比較級・最上級の作り方（語尾に-er/-estをつけるか、前にmore/mostをつけるか）が変わるルールがあるから。\n【ポイント1】短い形容詞（1〜2音節）は語尾に-er/-estをつける。high→higher/highest、tall→taller/tallest、big→bigger/biggest（子音字を重ねる）。\n【ポイント2】長い形容詞（3音節以上）はmore/mostを前につける。interesting→more interesting/most interesting、beautiful→more beautiful/most beautiful。\n【ポイント3】比較級の文型はA is＋比較級＋than B。最上級の文型はA is the＋最上級＋in/of〜。①This book is more interesting than that book. ②Mt. Fuji is the highest mountain in Japan.（in Japanは範囲を示す場所）。\n【答え】①This book is more interesting than that book.　②Mt. Fuji is the highest mountain in Japan.\n【確かめ】①の文にtheが入っていないか（比較級にtheは不要）、②の文にtheが入っているか（最上級には必要）を確認する。\n【よくあるまちがい】interestingのような長い形容詞にmoreをつけずに、interestinger のように-erをつけてしまう。\n【ここが絶対】比較級の文にtheは不要、最上級の文には必ずtheが必要。',
   },
   {
     id: 'shitennoji_eigo_02', subject: 'eigo', difficulty: 'advanced',
@@ -858,7 +866,8 @@ export const shitennojiQuestions: Question[] = [
     question: '次の日本語を現在完了進行形（have/has been + -ing）を使って英語に訳せ。「私は3時間ずっと英語を勉強しています。」',
     answer: 'I have been studying English for three hours.',
     hint: '現在完了進行形：have/has + been + 動詞-ing。期間には「for」。',
-    explanation: '【解説】現在完了進行形：\n\n形：主語 + have/has + been + 動詞-ing\n\n意味：過去のある時点から現在まで「ずっと〜し続けている」\n（動作の継続を強調する）\n\n【現在完了との違い】\n現在完了：I have studied English for three hours.\n→「3時間英語を勉強した（してきた）」（状態・結果・経験）\n現在完了進行形：I have been studying English for three hours.\n→「3時間ずっと英語を勉強し続けている」（継続的な動作を強調）\n\n【時間の前置詞】\n期間（〜の間）：for + 期間（for three hours / for two days）\n起点（〜から）：since + 時点（since yesterday / since 2020）\n\n【解答の解説】\nI（主語）+ have been studying（現在完了進行形）\n+ English（目的語）+ for three hours（3時間の間）.',
+    explanation:
+      '【何を聞かれているか】「私は3時間ずっと英語を勉強しています。」を現在完了進行形（have/has been+-ing）を使って英訳する。\n【なぜ現在完了進行形を使うのか】過去のある時点から現在まで「ずっと〜し続けている」という動作の継続を強調するには、ただの現在完了（状態・結果・経験を表す）ではなく、動作が今も続いていることを示す現在完了進行形を使う必要があるから。\n【ポイント1】形は「主語＋have/has＋been＋動詞-ing」。\n【ポイント2】現在完了I have studied English for three hours.（3時間英語を勉強した）と、現在完了進行形I have been studying English for three hours.（3時間ずっと勉強し続けている）の意味の違いを確認する。\n【ポイント3】期間（〜の間）はfor＋期間（for three hours）、起点（〜から）はsince＋時点（since yesterday）を使う。今回は「3時間」という期間なのでforを使う。\n【ポイント4】文を組み立てる。I（主語）+ have been studying（現在完了進行形）+ English（目的語）+ for three hours（3時間の間）。\n【答え】I have been studying English for three hours.\n【確かめ】「3時間」が期間を表しているのでforが使われているかを確認する。\n【よくあるまちがい】forの代わりにsinceを使ってしまう。sinceは「〜から」という起点、forは「〜の間」という期間に使う。\n【ここが絶対】期間にはfor、起点にはsinceを使い分ける。',
   },
   {
     id: 'shitennoji_eigo_03', subject: 'eigo', difficulty: 'advanced',
@@ -866,7 +875,8 @@ export const shitennojiQuestions: Question[] = [
     question: '関係代名詞を使って2文を1文にせよ。①「The boy is my brother. He is playing soccer.」②「I have a dog. It has white spots.」',
     answer: '①The boy who is playing soccer is my brother.　②I have a dog that/which has white spots.',
     hint: '人→who。物・動物→which/that。先行詞の直後に関係代名詞節を置く。',
-    explanation: '【解説】関係代名詞の使い方：\n\n関係代名詞：2つの文を1つにつなぐ（後ろの文が前の名詞を説明する）\n\n【種類】\n人を修飾：who（または that）\n物・動物を修飾：which（または that）\n\n①The boy + He is playing soccer.\n「He」が指すのは「The boy」（人）→ who\nThe boy [who is playing soccer] is my brother.\n（サッカーをしている男の子は私の兄弟だ）\n\n②I have a dog + It has white spots.\n「It」が指すのは「a dog」（動物）→ which / that\nI have a dog [that/which has white spots].\n（私は白い斑点のある犬を飼っている）\n\n【関係代名詞節の位置】\n先行詞（修飾される名詞）の直後に置く。\n文全体の動詞は先行詞に合わせる（①の文全体の主語はThe boy→is）。\n\n【「that」の特徴】\nwho/which の代わりにほとんどの場合使える万能型。\n※前にコンマがある場合（非制限用法）はthatは使えない。',
+    explanation:
+      '【何を聞かれているか】関係代名詞を使って①「The boy is my brother. He is playing soccer.」②「I have a dog. It has white spots.」をそれぞれ1文にする。\n【なぜ関係代名詞でつなげられるのか】2つ目の文の主語（He／It）が、1つ目の文に出てきた名詞（The boy／a dog）と同じものを指しているため、その主語を関係代名詞に置きかえて1つ目の文の名詞のうしろにつなげることができるから。\n【ポイント1】①The boy＋He is playing soccer.のHeが指すのはThe boy（人）なのでwhoを使う。The boy who is playing soccer is my brother.（サッカーをしている男の子は私の兄弟だ）。\n【ポイント2】②I have a dog＋It has white spots.のItが指すのはa dog（動物）なのでwhich／thatを使う。I have a dog that/which has white spots.（私は白い斑点のある犬を飼っている）。\n【ポイント3】関係代名詞節は先行詞（修飾される名詞）の直後に置き、文全体の動詞は先行詞に合わせる（①の文全体の主語はThe boy→is）。\n【答え】①The boy who is playing soccer is my brother.　②I have a dog that/which has white spots.\n【確かめ】①でHeがwho、②でItがthat/whichに置きかわっていることを、もとの2文と見比べて確認する。\n【よくあるまちがい】先行詞が人（The boy）なのにwhichを使ってしまう、または先行詞が動物（a dog）なのにwhoを使ってしまう。\n【ここが絶対】関係代名詞は「もとの文で主語だった代名詞（He/It）」が置きかわったものだと考える。',
   },
   {
     id: 'shitennoji_eigo_04', subject: 'eigo', difficulty: 'advanced',

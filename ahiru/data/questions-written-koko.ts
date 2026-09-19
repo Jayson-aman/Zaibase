@@ -1502,7 +1502,7 @@ export const writtenKokoQuestions: Question[] = [
       '全体が現在形で統一され、文の最初が大文字、文末にピリオドがある',
     ],
     explanation:
-      '紹介文は「①事実→②くわしい説明→③自分の感想」の順に並べると書きやすくなります。students eat のように主語が複数なら動詞に s はつけず、it is のように三人称単数なら is を使います。serve it to everyone の it は school lunch を指します。',
+      '【何を聞かれているか】外国の生徒に日本の中学校の給食を紹介する英文を3文以上で書く。\n【なぜこの順番で書くのか】紹介文は「①事実→②くわしい説明→③自分の感想」の順に並べると、読み手が話の流れをつかみやすくなるから。\n【ポイント1】事実：In Japan, most junior high school students eat school lunch.（日本では多くの中学生が給食を食べる）。studentsが複数なので動詞にsはつけない。\n【ポイント2】くわしい説明：We eat it in our classroom with our classmates. Students carry the food from the kitchen and serve it to everyone.（教室で食べる、生徒が配膳する）。serve it to everyoneのitはschool lunchを指す。\n【ポイント3】感想：I like school lunch because it is healthy and delicious.（健康的でおいしいから好き）。it isのitはschool lunchを指す三人称単数なのでisを使う。\n【答え】In Japan, most junior high school students eat school lunch. We eat it in our classroom with our classmates. Students carry the food from the kitchen and serve it to everyone. I like school lunch because it is healthy and delicious.\n【確かめ】students（複数）の動詞にsがついていないか、it（単数）の動詞にはisやsがついているかを見直す。\n【よくあるまちがい】students eats のように複数の主語に三人称単数のsをつけてしまう。\n【ここが絶対】紹介文は「事実→説明→感想」の順に並べ、主語の単数・複数と動詞の形を対応させる。',
   },
   {
     id: 'wk_050',
@@ -1557,7 +1557,7 @@ export const writtenKokoQuestions: Question[] = [
       '提案の疑問文なので、文末がクエスチョンマークになっている',
     ],
     explanation:
-      '模範解答は短縮形を使うと Then why don\'t we go to the movies next Saturday? となります。Why don\'t we 〜? は「〜しませんか」という誘いの表現で、あとには動詞の原形がきます。How about going to the movies next Saturday? と書く場合、How about のあとは動名詞（going）になる点に注意します。next Saturday には on をつけません。',
+      '【何を聞かれているか】対話の空欄に、「それなら、来週の土曜日に行くのはどうですか」という意味の英文を6語以上で書く。\n【なぜWhy don\'t we ~?を使うのか】「〜しませんか」という誘いの表現として最も自然に使われる形がWhy don\'t we 〜?であり、あとに動詞の原形を続けることで「一緒に〜しよう」という提案になるから。\n【ポイント1】Then「それなら」で相手の発言（今週末は忙しい）を受ける。\n【ポイント2】Why don\'t we 〜?は「〜しませんか」という誘いの表現で、あとには動詞の原形が続く。模範解答は短縮形を使うとThen why don\'t we go to the movies next Saturday?となる。\n【ポイント3】別解としてHow about going to the movies next Saturday?と書く場合、How aboutのあとは動名詞（going）になる点に注意する。next Saturdayにはonをつけない。\n【答え】Then why do not we go to the movies next Saturday?\n【確かめ】語数を数えて6語以上あるか、Why don\'t weのあとが動詞の原形（go）になっているかを確認する。\n【よくあるまちがい】How about のあとに動詞の原形（go）を続けてしまう。How aboutのあとは動名詞（going）にする。\n【ここが絶対】Why don\'t we + 動詞の原形、How about + 動名詞、という形の違いを区別する。',
   },
   {
     id: 'wk_053',
@@ -1858,6 +1858,6 @@ export const writtenKokoQuestions: Question[] = [
     answer:
       '問1 May I speak to Mr. Tanaka, please? / 問2 May I try this on? / 問3 Could you tell me how to get to the station? / 問4 Thank you very much. That is very kind of you.',
     explanation:
-      '場面別の会話表現は、May I 〜?（自分がしてよいか）と Could you 〜?（相手にしてもらう）の区別が要点です。問3と問4のように、やりとりの流れで覚えると使えるようになります。',
+      '【何を聞かれているか】場面ごとに使う英語表現を書く（問1〜問4）。\n【なぜMay I〜?とCould you〜?を区別するのか】May I〜?は「自分がしてよいか」を相手にたずねる表現、Could you〜?は「相手にしてもらう」ことを依頼する表現で、たずねる相手がどちらの動作をするかによって使い分ける必要があるから。\n【ポイント1】問1：電話で「田中さんをお願いします」→May I speak to Mr. Tanaka, please?。電話ではtalkではなくspeak toを使う。\n【ポイント2】問2：店で「試着してもいいですか」→May I try this on?。try onは「試着する」で、代名詞（this）はtryとonの間に入れる。\n【ポイント3】問3：道で「行き方を教えてください」→Could you tell me how to get to the station?。〈how to＋動詞の原形〉で「〜のしかた」。問4：お礼→Thank you very much. That is very kind of you.。相手はYou are welcome.と返す。\n【答え】問1 May I speak to Mr. Tanaka, please? / 問2 May I try this on? / 問3 Could you tell me how to get to the station? / 問4 Thank you very much. That is very kind of you.\n【確かめ】自分がする動作（試着する・電話で話す）にはMay I、相手にしてもらう動作（教えてもらう）にはCould youが使われているか見直す。\n【よくあるまちがい】try onの間に代名詞を入れず、try this onではなくtry on thisと書いてしまう。\n【ここが絶対】自分がする動作を許可してもらうときはMay I〜?、相手に何かをしてもらうときはCould you〜?を使う。',
   },
 ];

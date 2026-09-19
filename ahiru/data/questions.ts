@@ -2279,7 +2279,8 @@ export const questions: Question[] = [
     subject: 'eigo',
     question: '月を英語で1月から12月まで言うと？',
     answer: 'January, February, March, April, May, June, July, August, September, October, November, December',
-    explanation: 'January, February, March, April, May, June, July, August, September, October, November, December。\n月の名前も必ず大文字で書き始める。\nつづりの難所は February（r が2つ）、August（gu）、September から December までの語尾 -ber。\n「〜月に」は in を使って in April（4月に）、「〜月〜日に」は on を使って on May 5（5月5日に）と言う。\n日付は序数で読む（May 5 は May fifth と読む）。',
+    explanation:
+      '【何を聞かれているか】1月から12月までの月の名前を英語で正しく言えるかを問う。\n【なぜ大文字で書き始めるのか】英語では月の名前は「固有の呼び名」として特別あつかいされるため、文の途中であっても必ず大文字で書き始める決まりになっている。\n【ポイント1】1月〜12月：January, February, March, April, May, June, July, August, September, October, November, December。\n【ポイント2】つづりの難所を確認する。February は r が2つ（Feb-r-uar-y）、August は gu のつづり、September〜December は語尾が -ber でそろっている。\n【ポイント3】「〜月に」は前置詞in（in April）、「〜月〜日に」はon（on May 5）を使い分ける。日付は序数で読む（May 5＝May fifth）。\n【答え】January, February, March, April, May, June, July, August, September, October, November, December\n【確かめ】12個すべて書き出し、頭文字が大文字になっているか、Februaryのrが2つ入っているかを1つずつ見直す。\n【よくあるまちがい】文の途中だからと小文字でjanuaryのように書いてしまう、Februaryのrを1つ抜かしてしまう。\n【ここが絶対】月の名前は曜日と同じく必ず大文字で書き始める固有の語である。',
     difficulty: 'basic',
   },
   {
@@ -2287,7 +2288,8 @@ export const questions: Question[] = [
     subject: 'eigo',
     question: '「I」「you」「he」「she」「we」「they」「it」を日本語で言うと？',
     answer: '私・あなた・彼・彼女・私たち・彼ら（彼女ら）・それ（物や動物）',
-    explanation: 'I＝私、you＝あなた（あなたたち）、he＝彼、she＝彼女、we＝私たち、they＝彼ら・彼女ら・それら、it＝それ（物や動物）。\nこれらは名前のかわりに使う語で、人称代名詞の主格（「〜は・〜が」の形）という。\nyou は「あなた」も「あなたたち」も同じ形。they は人にも物にも使える。\n大切なのは主語によって be動詞が変わること。I→am、he / she / it→is、you / we / they→are と覚える。',
+    explanation:
+      '【何を聞かれているか】I, you, he, she, we, they, itの日本語の意味を問う。\n【なぜこの形で覚えるのか】これらは名前のかわりに使う語（人称代名詞の主格＝「〜は・〜が」の形）で、あとに続くbe動詞の形が主語によって変わるため、意味とセットでbe動詞の対応も覚える必要がある。\n【ポイント1】I＝私、you＝あなた（あなたたち）、he＝彼、she＝彼女。\n【ポイント2】we＝私たち、they＝彼ら・彼女ら・それら、it＝それ（物や動物）。\n【ポイント3】youは単数「あなた」でも複数「あなたたち」でも同じ形。theyは人にも物にも使える。\n【答え】私・あなた・彼・彼女・私たち・彼ら（彼女ら）・それ（物や動物）\n【確かめ】それぞれの代名詞に対応するbe動詞（I→am、he/she/it→is、you/we/they→are）を実際に言えるか確認する。\n【よくあるまちがい】itを「彼」「彼女」のように人に対して使ってしまう。itは物や動物を指す。\n【ここが絶対】主語が変わるとbe動詞も変わることを、代名詞の意味とセットで覚える。',
     difficulty: 'basic',
   },
   {
@@ -2367,7 +2369,8 @@ export const questions: Question[] = [
     subject: 'eigo',
     question: '「Please」「Sorry」「Excuse me」「Yes」「No」「OK」の意味は？',
     answer: 'お願い/どうぞ・ごめんなさい・すみません（呼びかけ）・はい・いいえ・大丈夫/了解',
-    explanation: 'Please＝どうぞ・〜してください、Sorry＝ごめんなさい、Excuse me＝すみません（呼びかけ・軽い断り）、Yes＝はい、No＝いいえ、OK＝いいですよ・了解。\n大事なのは Sorry と Excuse me の使い分け。あやまるときは Sorry、人に話しかけたり前を通ったりするときは Excuse me を使う。\nPlease は文の最初か最後につけると、命令文がていねいなお願いになる（Open the door, please.）。\nお礼を言われたら You\'re welcome. と返す。',
+    explanation:
+      '【何を聞かれているか】Please, Sorry, Excuse me, Yes, No, OKの意味を問う。\n【なぜ使い分けが必要なのか】SorryとExcuse meはどちらも日本語では「すみません」と訳されがちだが、使う場面がまったく違うため、意味だけでなく使う状況とセットで覚える必要がある。\n【ポイント1】Please＝どうぞ・〜してください、Sorry＝ごめんなさい（あやまるとき）、Excuse me＝すみません（呼びかけ・軽い断りのとき）。\n【ポイント2】Yes＝はい、No＝いいえ、OK＝いいですよ・了解。\n【ポイント3】Pleaseは文の最初か最後につけると、命令文がていねいなお願いになる（Open the door, please.）。\n【答え】お願い/どうぞ・ごめんなさい・すみません（呼びかけ）・はい・いいえ・大丈夫/了解\n【確かめ】「人にぶつかってしまったとき」はSorry、「人に道をたずねるとき」はExcuse meを使う場面をそれぞれ想像して確かめる。\n【よくあるまちがい】SorryとExcuse meを区別せず、どちらの場面でも同じ語を使ってしまう。\n【ここが絶対】あやまるときはSorry、話しかける・軽く断るときはExcuse meと覚える。',
     difficulty: 'basic',
   },
   {
@@ -2433,7 +2436,8 @@ export const questions: Question[] = [
     subject: 'eigo',
     question: '「She is taller than her sister.」を日本語に訳すと？また「the tallest」を使った文に直すと？',
     answer: '彼女は姉（妹）より背が高い。She is the tallest in her family. など',
-    explanation: 'She is taller than her sister. は「彼女は姉（妹）より背が高い」。\ntall（高い）に -er をつけると比較級「より高い」になり、than（〜よりも）で比べる相手を示す。\n3つ以上の中でいちばんを表すときは最上級を使い、〈the＋形容詞＋-est〉の形にする。\n例：She is the tallest in her family.（彼女は家族の中でいちばん背が高い）。\n範囲を表すには、場所や集団には in、複数のものには of を使う（the tallest of the three）。最上級には the をつけるのを忘れないこと。',
+    explanation:
+      '【何を聞かれているか】「She is taller than her sister.」の日本語訳と、「the tallest」を使った文への書きかえを問う。\n【なぜ-erや-estをつけるのか】2つを比べるときは比較級（-er）、3つ以上の中でいちばんを表すときは最上級（the -est）というように、比べる対象の数によって形を変える決まりがあるため。\n【ポイント1】tall（高い）に-erをつけると比較級「より高い」になり、than（〜よりも）で比べる相手を示す。\n【ポイント2】3つ以上の中でいちばんを表すときは〈the＋形容詞＋-est〉の形にする。例：She is the tallest in her family.\n【ポイント3】範囲を表すには、場所や集団にはin、複数のものにはofを使う（the tallest of the three）。最上級には必ずtheをつける。\n【答え】彼女は姉（妹）より背が高い。She is the tallest in her family. など\n【確かめ】書きかえた文にtheが入っているか、あとにin（またはof）で範囲が示されているかを確認する。\n【よくあるまちがい】最上級の文でtheを忘れてしまう、比較級の文に不要なtheをつけてしまう。\n【ここが絶対】比較級はthan、最上級はthe＋in/ofとセットで覚える。',
     difficulty: 'standard',
   },
   {
@@ -2449,7 +2453,8 @@ export const questions: Question[] = [
     subject: 'eigo',
     question: '「Can you swim?」に Yes/No で答えると？また Can を使った文の意味は？',
     answer: 'Yes, I can. / No, I can\'t.（cannot）。Can ～ ? は「～できますか？」という能力・許可を尋ねる',
-    explanation: 'Can you swim? には Yes, I can. / No, I can\'t. と答える。can で聞かれたら can で答えるのがルール。\ncan\'t は cannot の短縮形で、cannot は1語で書くのがふつう。\ncan は「〜できる」という能力のほかに、Can I use this?（使ってもいいですか）のような許可、Can you help me?（手伝ってくれますか）のような依頼も表す。\ncan のあとの動詞は必ず原形で、主語が三人称単数でも s はつかない（He can swim.）。\nていねいに言うときは Could you 〜? を使う。',
+    explanation:
+      '【何を聞かれているか】「Can you swim?」への答え方と、Canを使った文の意味を問う。\n【なぜcanで答えるのか】疑問文で使われている助動詞（この場合can）を、そのまま答えの文でも使うのが英語のルールだから。\n【ポイント1】Can you swim?にはYes, I can.／No, I can\'t.（cannot）と答える。\n【ポイント2】canは「〜できる」という能力のほかに、Can I use this?（使ってもいいですか）のような許可、Can you help me?（手伝ってくれますか）のような依頼も表す。\n【ポイント3】canのあとの動詞は必ず原形で、主語が三人称単数でもsはつかない（He can swim.）。ていねいに言うときはCould you 〜?を使う。\n【答え】Yes, I can. / No, I can\'t.（cannot）。Can ～ ? は「～できますか？」という能力・許可を尋ねる\n【確かめ】He can swims.のようにsをつけていないか、答えの文でcanをそのまま使っているかを見直す。\n【よくあるまちがい】canのあとの動詞に三人称単数のsをつけてしまう（He can swims.は誤り）。\n【ここが絶対】疑問文で使われた助動詞は、答えの文でもそのまま使う。',
     difficulty: 'standard',
   },
   {
@@ -2529,7 +2534,8 @@ export const questions: Question[] = [
     subject: 'eigo',
     question: '前置詞：「on（〜の上に）」「in（〜の中に）」「under（〜の下に）」「near（〜の近くに）」「between（〜の間に）」を使った例文を1つずつ書け。',
     answer: 'The book is on the desk. / The cat is in the box. / The ball is under the chair. / The park is near my house. / The bank is between the post office and the school.',
-    explanation: '前置詞は名詞の前に置いて、場所や時などを表す語。\non＝接して上に：The book is on the desk.（本は机の上にある）。かべや天井でも、接していれば on を使う。\nin＝囲まれた中に：The cat is in the box.（ねこは箱の中にいる）。\nunder＝真下に：The ball is under the chair.（ボールはいすの下にある）。\nnear＝近くに：The park is near my house.（公園は私の家の近くにある）。\nbetween＝2つの間に：The bank is between the post office and the school.（銀行は郵便局と学校の間にある）。between A and B の形で使い、3つ以上に囲まれた「間」には among を使う。',
+    explanation:
+      '【何を聞かれているか】on, in, under, near, betweenを使った例文をそれぞれ1つずつ書けるかを問う。\n【なぜ使い分けが必要なのか】前置詞は物の位置関係を正確に表す語で、それぞれ「接しているか」「囲まれているか」「間にあるか」など表す関係がちがうため、意味に合わせて使い分ける必要がある。\n【ポイント1】on＝接して上に（The book is on the desk.）。かべや天井でも、接していればonを使う。\n【ポイント2】in＝囲まれた中に（The cat is in the box.）、under＝真下に（The ball is under the chair.）、near＝近くに（The park is near my house.）。\n【ポイント3】between＝2つの間に（The bank is between the post office and the school.）。between A and Bの形で使い、3つ以上に囲まれた「間」にはamongを使う。\n【答え】The book is on the desk. / The cat is in the box. / The ball is under the chair. / The park is near my house. / The bank is between the post office and the school.\n【確かめ】betweenの文でA and Bの形になっているか、3つ以上を表す場合にamongを使う必要がないかを確認する。\n【よくあるまちがい】2つの間なのにamongを使ってしまう、または3つ以上の中の位置関係にbetweenを使ってしまう。\n【ここが絶対】betweenは2つの間、amongは3つ以上の中で使う。',
     difficulty: 'standard',
   },
   {
@@ -2555,7 +2561,8 @@ export const questions: Question[] = [
     subject: 'eigo',
     question: '次の英文を読み、質問に答えよ。「Tom gets up at seven every morning. He eats breakfast and then walks to school. He studies hard and plays soccer after school.」Tomはどのような1日を過ごしているか日本語で説明せよ。',
     answer: 'トムは毎朝7時に起きて朝食を食べ、歩いて学校に行きます。一生懸命勉強し、放課後はサッカーをしています。',
-    explanation: '1文ずつ意味をとると、Tom gets up at seven every morning.（トムは毎朝7時に起きる）、He eats breakfast and then walks to school.（朝食を食べ、それから歩いて学校へ行く）、He studies hard and plays soccer after school.（一生けんめい勉強し、放課後にサッカーをする）。\nまとめると「トムは毎朝7時に起き、朝食をとってから歩いて登校し、しっかり勉強して、放課後はサッカーをして過ごしている」となる。\n読み取りのポイントは、gets, eats, walks, studies, plays と動詞がすべて s のついた現在形であること。これは「毎日くり返している習慣」を表す。\nand then は「そしてそれから」と順序を、after school は「放課後」を表す。',
+    explanation:
+      '【何を聞かれているか】英文を読み、Tomの1日の過ごし方を日本語で説明する。\n【なぜ動詞にsがついているのか】gets, eats, walks, studies, playsとすべての動詞にsがついているのは、現在形で「毎日くり返している習慣」を表しているからで、この読み取りが文全体の意味を理解するカギになる。\n【ポイント1】Tom gets up at seven every morning.＝「トムは毎朝7時に起きる」。\n【ポイント2】He eats breakfast and then walks to school.＝「朝食を食べ、それから歩いて学校へ行く」。and thenは「そしてそれから」と順序を表す。\n【ポイント3】He studies hard and plays soccer after school.＝「一生けんめい勉強し、放課後にサッカーをする」。after schoolは「放課後」を表す。\n【答え】トムは毎朝7時に起きて朝食を食べ、歩いて学校に行きます。一生懸命勉強し、放課後はサッカーをしています。\n【確かめ】3つの文をつなげたときに、時間の順序（起きる→食べる→登校する→勉強する→サッカーをする）が正しくつながっているか確認する。\n【よくあるまちがい】動詞のsを見落として、これが習慣を表す現在形であることに気づかない。\n【ここが絶対】動詞にsがついた現在形は「いつもそうしている」という習慣を表す。',
     difficulty: 'advanced',
   },
   {
@@ -2579,7 +2586,8 @@ export const questions: Question[] = [
     subject: 'eigo',
     question: '次の3文を日本語に訳せ。①「I think that she is kind.」②「It is important to study English.」③「When I was young, I lived in Osaka.」',
     answer: '①私は彼女が優しいと思います。②英語を勉強することは大切です。③若い頃、私は大阪に住んでいました。',
-    explanation: '①I think that she is kind.＝「私は彼女が優しいと思います」。この that は「〜ということ」を表す接続詞で、省略することもできる（I think she is kind.）。\n②It is important to study English.＝「英語を勉強することは大切です」。この It は形式的な主語（形式主語）で「それ」とは訳さず、本当の主語は to study English。\n③When I was young, I lived in Osaka.＝「若い頃、私は大阪に住んでいました」。When 〜 は「〜のとき」を表す接続詞で、文の前に置くときはコンマで区切る。\n3つとも、2つの文（節）をつなぐ語の働きを見ぬくことがポイント。',
+    explanation:
+      '【何を聞かれているか】3つの英文をそれぞれ日本語に訳す。\n【なぜ節をつなぐ語に注目するのか】3つの文はいずれも2つの文（節）を1つにつないでおり、that、It...to、Whenといった「つなぐ語」の働きを見ぬくことが正しい訳につながるから。\n【ポイント1】①I think that she is kind.のthatは「〜ということ」を表す接続詞で、省略することもできる（I think she is kind.）。訳は「私は彼女が優しいと思います」。\n【ポイント2】②It is important to study English.のItは形式的な主語（形式主語）で「それ」とは訳さず、本当の主語はto study English。訳は「英語を勉強することは大切です」。\n【ポイント3】③When I was young, I lived in Osaka.のWhen〜は「〜のとき」を表す接続詞で、文の前に置くときはコンマで区切る。訳は「若い頃、私は大阪に住んでいました」。\n【答え】①私は彼女が優しいと思います。②英語を勉強することは大切です。③若い頃、私は大阪に住んでいました。\n【確かめ】②のItを「それ」と訳していないか、本当の主語（to study English）を見つけられているかを確認する。\n【よくあるまちがい】②のItを「それは英語を勉強することが大切です」のように「それ」と訳してしまう。\n【ここが絶対】It is 〜 to do...の形では、Itは「それ」と訳さず、本当の主語はto以下にある。',
     difficulty: 'advanced',
   },
   {
@@ -2587,7 +2595,8 @@ export const questions: Question[] = [
     subject: 'eigo',
     question: '関係代名詞 who, which, that の使い分けを説明し、それぞれ例文を書け。',
     answer: 'who: 先行詞が人。The girl who lives next door is kind. / which: 先行詞が物・動物。I have a dog which is very cute. / that: 人・物どちらにも使える。The book that I read was interesting.',
-    explanation: '関係代名詞は、2つの文をつなぎ、前の名詞（先行詞）をうしろから説明する働きをする。\nwho…先行詞が人のとき。The girl who lives next door is kind.（となりに住んでいるその女の子は親切だ）。\nwhich…先行詞が物や動物のとき。I have a dog which is very cute.（私はとてもかわいい犬を飼っている）。\nthat…人にも物にも使える万能型。The book that I read was interesting.（私が読んだその本はおもしろかった）。\nうしろに動詞が続けば主格、〈主語＋動詞〉が続けば目的格。目的格の関係代名詞は省略できる（The book I read was interesting.）。\n日本語とちがい、説明が名詞のうしろに来るのが英語の特ちょう。',
+    explanation:
+      '【何を聞かれているか】関係代名詞who, which, thatの使い分けを説明し、それぞれ例文を書く。\n【なぜ使い分けが必要なのか】関係代名詞は前の名詞（先行詞）をうしろから説明する働きをするが、先行詞が人か物・動物かによって使える語がちがうため。\n【ポイント1】who…先行詞が人のとき。The girl who lives next door is kind.（となりに住んでいるその女の子は親切だ）。\n【ポイント2】which…先行詞が物や動物のとき。I have a dog which is very cute.（私はとてもかわいい犬を飼っている）。\n【ポイント3】that…人にも物にも使える万能型。The book that I read was interesting.（私が読んだその本はおもしろかった）。うしろに動詞が続けば主格、〈主語＋動詞〉が続けば目的格で、目的格は省略できる。\n【答え】who: 先行詞が人。The girl who lives next door is kind. / which: 先行詞が物・動物。I have a dog which is very cute. / that: 人・物どちらにも使える。The book that I read was interesting.\n【確かめ】それぞれの例文の先行詞が人か物・動物かを確認し、使った関係代名詞と対応しているかを見直す。\n【よくあるまちがい】先行詞が人なのにwhichを使ってしまう、または先行詞が物なのにwhoを使ってしまう。\n【ここが絶対】先行詞が人ならwho、物・動物ならwhich、どちらでもthatが使えると覚える。',
     difficulty: 'advanced',
   },
   {
@@ -3467,7 +3476,8 @@ export const questions: Question[] = [
     subject: 'eigo',
     question: '関係代名詞 who / which / that の使い分けを説明し、例文を1つ作れ。',
     answer: 'who=人・which=物や動物・that=どちらにも使える。例: The boy who is playing soccer is my friend.',
-    explanation: '関係代名詞は、代名詞と接続詞の2つの働きを兼ねる語で、前の名詞（先行詞）をうしろから説明する。\nwho…先行詞が人のとき。which…先行詞が物や動物のとき。that…人にも物にも使える。\n例：The boy who is playing soccer is my friend.（サッカーをしているその男の子は私の友達です）。\nこの文では The boy が先行詞で、who is playing soccer が The boy を説明している。\n文の骨組みは The boy is my friend. で、その間に説明が割りこんだ形になっている。\n先行詞に the only や最上級、all などがつくときは that が好まれる。目的格の関係代名詞は省略できる。',
+    explanation:
+      '【何を聞かれているか】関係代名詞who / which / thatの使い分けを説明し、例文を1つ作る。\n【なぜ2つの働きを兼ねるのか】関係代名詞は、代名詞と接続詞の2つの働きを兼ねる語で、前の名詞（先行詞）をうしろから説明するために、先行詞の種類に応じて使い分ける必要があるから。\n【ポイント1】who…先行詞が人のとき。which…先行詞が物や動物のとき。that…人にも物にも使える。\n【ポイント2】例：The boy who is playing soccer is my friend.（サッカーをしているその男の子は私の友達です）。The boyが先行詞で、who is playing soccerがThe boyを説明している。\n【ポイント3】文の骨組みはThe boy is my friend.で、その間に説明が割りこんだ形になっている。先行詞にthe onlyや最上級、allなどがつくときはthatが好まれる。\n【答え】who=人・which=物や動物・that=どちらにも使える。例: The boy who is playing soccer is my friend.\n【確かめ】例文の骨組み（The boy is my friend.）と、割りこんだ説明部分（who is playing soccer）を分けて確認する。\n【よくあるまちがい】先行詞が人なのにwhichを使ってしまう。\n【ここが絶対】関係代名詞は先行詞（人か物・動物か）に合わせて選ぶ。',
     difficulty: 'advanced',
   },
   {
@@ -3540,7 +3550,8 @@ export const questions: Question[] = [
     subject: 'eigo',
     question: '「関係代名詞」とは何か説明し、who, which, thatの使い分けを答えよ。また例文を1つ作れ。',
     answer: '関係代名詞: 二つの文をつなぎ、名詞を修飾する代名詞。who=人に使う、which=物・動物に使う、that=どちらにも使える。例: The boy who is playing soccer is my friend.',
-    explanation: '関係代名詞は、2つの文をつなぐ接続詞の働きと、名詞のかわりをする代名詞の働きを合わせ持つ語。前にある名詞（先行詞）をうしろから説明する。\nwho…先行詞が人のとき。which…先行詞が物・動物のとき。that…人にも物にも使える。\n例：The boy who is playing soccer is my friend.（サッカーをしているその男の子は私の友達です）。\nもとは The boy is my friend. と He is playing soccer. の2文。2つ目の He を who に変えて、先行詞 The boy のうしろにつなげた形になっている。\nうしろに動詞が続けば主格、〈主語＋動詞〉が続けば目的格。目的格の関係代名詞は省略できる。',
+    explanation:
+      '【何を聞かれているか】関係代名詞とは何かを説明し、who, which, thatの使い分けを答え、例文を1つ作る。\n【なぜ2つの文をつなげられるのか】関係代名詞は、2つの文をつなぐ接続詞の働きと、名詞のかわりをする代名詞の働きを合わせ持つ語で、前にある名詞（先行詞）をうしろから説明するために使われるから。\n【ポイント1】who…先行詞が人のとき。which…先行詞が物・動物のとき。that…人にも物にも使える。\n【ポイント2】例：The boy who is playing soccer is my friend.（サッカーをしているその男の子は私の友達です）。もとはThe boy is my friend.とHe is playing soccer.の2文。\n【ポイント3】2つ目の文のHeをwhoに変えて、先行詞The boyのうしろにつなげた形になっている。うしろに動詞が続けば主格、〈主語＋動詞〉が続けば目的格で、目的格は省略できる。\n【答え】関係代名詞: 二つの文をつなぎ、名詞を修飾する代名詞。who=人に使う、which=物・動物に使う、that=どちらにも使える。例: The boy who is playing soccer is my friend.\n【確かめ】もとの2つの文（The boy is my friend. / He is playing soccer.）に分けて、Heがwhoに置きかわったことを確認する。\n【よくあるまちがい】もとの2文がどう1つにまとまったのかを意識せず、例文だけ丸暗記してしまう。\n【ここが絶対】関係代名詞は「もとの2つの文のどちらかの主語や目的語が置きかわった語」だと理解する。',
     difficulty: 'advanced',
   },
   {
