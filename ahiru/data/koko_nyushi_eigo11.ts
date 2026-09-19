@@ -11,26 +11,8 @@ export const kokoNyushiEigo11: Question[] = [
     choices: ['① wait', '② waited', '③ have waited', '④ had been waiting'],
     answer: '④ had been waiting',
     hint: '「花火が始まったとき」という過去の時点より前から続いていた動作を表す時制を選ぶ。',
-    explanation: `【出題意図】
-過去完了進行形（had been + Ving）の用法を問う問題。過去のある時点まで継続していた動作を正しく識別できるかが目標。
-
-【解説】
-「the fireworks started（花火が始まった）」は過去の一時点。その時点より前から「列に並び続けていた」という継続動作を表すには過去完了進行形を使う。
-・① wait → 原形（時制が不明）
-・② waited → 過去形（単発の動作に見え、継続の意味が弱い）
-・③ have waited → 現在完了形（過去の基準点には使えない）
-・④ had been waiting → 過去完了進行形（✓）
-
-日本語訳：「花火が始まったときには、私たちは3時間も列に並び続けていた。」
-
-【文法ポイント】
-過去完了進行形 = had been + 動詞-ing
-→ 過去のある時点よりもさらに前から、その時点まで継続していた動作に使う。for〜（〜の間）と相性がよい。
-
-【入試頻出】
-・She had been waiting for the parade for two hours when it finally began.
-・They had been dancing since noon when the rain started.
-・「when/by the time＋過去形」の主節に過去完了（進行）形を使うパターンを押さえよ。`,
+    explanation:
+      '【何を聞かれているか】「By the time the fireworks started, we ( ) in line for three hours.」の空所に入る適切な時制を選ぶ。\n【なぜhad been waitingになるのか】「花火が始まった」という過去の時点よりさらに前から「列に並び続けていた」という継続動作を表すには、過去完了進行形（had been＋動詞のing形）を使う必要があるから。\n【ポイント1】the fireworks started（花火が始まった）は過去の1つの時点。その時点よりも前から継続していた動作を表すには、さらに過去を示す時制が必要。\n【ポイント2】①wait（原形）、②waited（過去形、単発の動作に見え継続の意味が弱い）、③have waited（現在完了、過去の基準点には使えない）はどれも文脈に合わない。\n【ポイント3】④had been waiting（過去完了進行形）が正解。「花火が始まったときには、私たちは3時間も列に並び続けていた」という意味になる。\n【答え】④ had been waiting\n【確かめ】「for three hours」という継続の期間を表す語句と、過去完了進行形の組み合わせがセットになっていることを確認する。\n【よくあるまちがい】have waited（現在完了形）を選んでしまう。現在完了は現在を基準にするので、過去の基準点には使えない。\n【ここが絶対】過去のある時点よりもさらに前から、その時点まで継続していた動作には過去完了進行形を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -108,27 +90,8 @@ used to：過去に繰り返していたが今はしていない習慣
     choices: ['① famous', '② more famous', '③ the most famous', '④ most famous'],
     answer: '③ the most famous',
     hint: '「one of ＋最上級＋複数名詞」という定型表現。最上級には the が必要。',
-    explanation: `【出題意図】
-「one of the + 最上級 + 複数名詞」という頻出構文と、最上級に the が必要なことを問う問題。
-
-【解説】
-「one of〜（〜のうちの1つ）」の後ろには「the + 最上級 + 複数名詞」が来るのが基本形。
-・① famous → 原級（比較の意味が出ない）
-・② more famous → 比較級（2つを比べる場合に使う。one of と相性が悪い）
-・③ the most famous → 最上級＋the（✓）
-・④ most famous → 最上級だが the が欠けており不完全
-
-日本語訳：「金閣寺は京都で最も有名な寺院の1つです。」
-
-【文法ポイント】
-one of the + 最上級 + 複数名詞：「最も〜な…のうちの1つ」
-例：Tokyo is one of the largest cities in the world.
-最上級を作る語尾が3音節以上・2音節の一部の形容詞は more/most を使う（famous→more famous→most famous）。
-
-【入試頻出】
-・This is one of the oldest shrines in Japan.
-・He is one of the most popular actors in Japan.
-・That is one of the biggest festivals in the region.`,
+    explanation:
+      '【何を聞かれているか】「Kinkaku-ji is one of ( ) temples in Kyoto.」の空所に入る適切な比較表現を選ぶ。\n【なぜthe most famousになるのか】「one of〜（〜のうちの1つ）」のあとには「the＋最上級＋複数名詞」という決まった形が続くから。\n【ポイント1】①famous（原級）、②more famous（比較級）はどちらもone ofと組み合わせて「最も〜な…のうちの1つ」を表せない。\n【ポイント2】③the most famous（最上級＋the）が正解。\n【ポイント3】④most famous（theが欠けている）は不完全な形。famousのような長い形容詞はmore/mostを使う。\n【答え】③ the most famous\n【確かめ】the most famousのtheが抜けていないかを確認する。\n【よくあるまちがい】④most famousのようにtheをつけ忘れてしまう。\n【ここが絶対】one of the＋最上級＋複数名詞＝「最も〜な…のうちの1つ」という決まった形で覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -173,26 +136,8 @@ one of the + 最上級 + 複数名詞：「最も〜な…のうちの1つ」
     choices: ['① paint', '② to paint', '③ painting', '④ painted'],
     answer: '③ painting',
     hint: 'finish の後ろには動名詞（〜ing）が来る。',
-    explanation: `【出題意図】
-動名詞のみを目的語にとる動詞（finish）を正しく使えるかを問う問題。不定詞との区別が核心。
-
-【解説】
-finish は目的語に動名詞（〜ing）だけを取り、不定詞（to +原形）は取らない。
-・① paint → 原形（finish の後ろには使えない）
-・② to paint → 不定詞（finish の後ろには来ない）
-・③ painting → 動名詞（✓）finish + 動名詞
-・④ painted → 過去形（目的語にはなれない）
-
-日本語訳：「その職人は、先祖たちがしてきたのと同じように、その漆器を手作業で塗り終えた。」
-
-【文法ポイント】
-動名詞のみを目的語にとる動詞（入試頻出）：
-finish（終える）、enjoy（楽しむ）、stop（やめる）、practice（練習する）、give up（諦める）、avoid（避ける）
-
-【入試頻出】
-・She finished making the paper lantern.
-・He practiced beating the taiko drum every day.
-・They gave up trying to repair the old gate.`,
+    explanation:
+      '【何を聞かれているか】「The craftsman finished ( ) the lacquerware by hand, just as his ancestors had done.」の空所に入る適切な形を選ぶ。\n【なぜpaintingになるのか】finishは動名詞（-ing）だけを目的語に取り、不定詞（to＋原形）は目的語に取らないという決まりがあるから。\n【ポイント1】①paint（原形）、②to paint（不定詞）はどちらもfinishの後ろには使えない。\n【ポイント2】③painting（動名詞）が正解。finish＋動名詞の形。\n【ポイント3】④painted（過去形）は目的語の位置には使えない。動名詞のみを目的語に取る動詞にはほかにenjoy、stop、practice、give up、avoidなどがある。\n【答え】③ painting\n【確かめ】finishのあとが動詞のing形になっているかを確認する。\n【よくあるまちがい】finishのあとにto paintを続けてしまう。\n【ここが絶対】finishは動名詞のみを目的語に取る動詞として覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -205,26 +150,8 @@ finish（終える）、enjoy（楽しむ）、stop（やめる）、practice（
     choices: ['① will stand', '② will have stood', '③ has stood', '④ stood'],
     answer: '② will have stood',
     hint: '「2030年までには」という未来の時点での継続の完了を表す時制を選ぶ。',
-    explanation: `【出題意図】
-未来完了形（will have + 過去分詞）の用法を問う問題。「未来のある時点までの継続」を表す時制の識別が目標。
-
-【解説】
-「By 2030（2030年までには）」は未来の時点。その時点で「ちょうど1000年間建ち続けていることになる」という継続の完了を表すには未来完了形を使う。
-・① will stand → 単純未来（継続の完了を表せない）
-・② will have stood → 未来完了（✓）
-・③ has stood → 現在完了（未来の時点には使えない）
-・④ stood → 過去形（文脈に合わない）
-
-日本語訳：「2030年までには、この神社はちょうど1000年間建ち続けていることになる。」
-
-【文法ポイント】
-未来完了形 = will have + 過去分詞
-目印の語句：by〜 / by the time〜 / by then（未来の時点を示す）
-
-【入試頻出】
-・By next year, she will have lived here for a decade.
-・By the time we arrive, the festival will have ended.
-・He will have finished the project by next spring.`,
+    explanation:
+      '【何を聞かれているか】「By 2030, this shrine ( ) for exactly one thousand years.」の空所に入る適切な時制を選ぶ。\n【なぜwill have stoodになるのか】「2030年までには」という未来のある時点で「ちょうど1000年間建ち続けていることになる」という継続の完了を表すには、未来完了形（will have＋過去分詞）を使う必要があるから。\n【ポイント1】By 2030（2030年までには）は未来の時点を示す表現。\n【ポイント2】①will stand（単純未来、継続の完了を表せない）、③has stood（現在完了、未来の時点には使えない）、④stood（過去形）はどれも文脈に合わない。\n【ポイント3】②will have stood（未来完了）が正解。目印はby〜、by the time〜、by thenなど。\n【答え】② will have stood\n【確かめ】By 2030という未来の時点を示す語句と、will have＋過去分詞の組み合わせがセットになっていることを確認する。\n【よくあるまちがい】has stood（現在完了）を選んでしまう。現在完了は現在を基準にするので、未来の時点には使えない。\n【ここが絶対】未来のある時点での継続の完了にはwill have＋過去分詞（未来完了形）を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -237,26 +164,8 @@ finish（終える）、enjoy（楽しむ）、stop（やめる）、practice（
     choices: ['① is', '② will be', '③ was', '④ has been'],
     answer: '① is',
     hint: '条件を表す if 節の中では、未来のことでも現在形を使う。',
-    explanation: `【出題意図】
-条件節（if 節）での時制のルール「未来のことでも現在形を使う」を問う問題。入試最頻出文法の一つ。
-
-【解説】
-「If the weather 〜, more people will come」は条件文。英語では if 節などの「副詞節」の中では、未来のことであっても will を使わず現在形を使う。
-・① is → 現在形（✓）if 節内では現在形で未来を表す
-・② will be → if 節内で will は使えない（×）
-・③ was → 過去形（仮定法過去に見えてしまい文意に合わない）
-・④ has been → 現在完了（未来の一時点の天気を表すには不自然）
-
-日本語訳：「もし祭りの日に天気が良ければ、もっと多くの人がパレードを見に来るだろう。」
-
-【文法ポイント】
-時・条件を表す副詞節の中では未来のことでも現在形：
-if（もし〜なら）/ when（〜するとき）/ before（〜する前に）/ as soon as（〜したらすぐ）
-
-【入試頻出】
-・If it is sunny tomorrow, we will hold the event outside.
-・When the sun sets, the lanterns will be lit.
-・As soon as the drums start, the dancers will begin.`,
+    explanation:
+      '【何を聞かれているか】「If the weather ( ) fine on the day of the festival, more people will come to see the parade.」の空所に入る適切な語を選ぶ。\n【なぜisになるのか】条件を表すif節の中では、未来のことでもwillを使わず現在形を使うという決まりがあるから。\n【ポイント1】if節などの副詞節の中では、未来のことでも現在形で表す。②will beはif節の中では使えない。\n【ポイント2】③was（過去形、仮定法過去に見えてしまい文意に合わない）、④has been（現在完了、未来の一時点の天気には不自然）はどちらも誤り。\n【ポイント3】①is（現在形）が正解。「もし祭りの日に天気が良ければ」という条件を表す。\n【答え】① is\n【確かめ】主節にwillが使われている（more people will come）ことと、if節が現在形（is）になっていることのバランスを確認する。\n【よくあるまちがい】if節の中にもwillを入れてしまう。\n【ここが絶対】時・条件を表す副詞節の中では、未来のことでも現在形を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -436,28 +345,8 @@ be famous for〜 は「〜で有名だ」という意味のイディオム。前
     choices: ['① make', '② have', '③ take', '④ do'],
     answer: '③ take',
     hint: 'take part in〜で「〜に参加する」という熟語。',
-    explanation: `【出題意図】
-動詞 take を含む重要熟語 take part in〜 を正確に知っているかを問う問題。
-
-【解説】
-take part in〜 は「〜に参加する」という重要イディオム。
-・① make → make part in は存在しない
-・② have → have part in は存在しない
-・③ take → take part in〜（✓）
-・④ do → do part in は存在しない
-
-日本語訳：「毎年夏、何百人もの地元の人々が伝統的な踊りのパレードに参加する。」
-
-【文法ポイント】
-take を含む頻出熟語：
-・take part in〜：〜に参加する（= join / participate in）
-・take place：行われる、起こる
-・take care of〜：〜の世話をする
-
-【入試頻出】
-・Many students take part in the school festival.
-・The event takes place every October.
-・She took part in the traditional tea ceremony.`,
+    explanation:
+      '【何を聞かれているか】「Every summer, hundreds of local people ( ) part in the traditional dance parade.」の空所に入る適切な動詞を選ぶ。\n【なぜtakeになるのか】「〜に参加する」という意味は、動詞takeを使ったtake part in〜という決まったイディオムで表すから。\n【ポイント1】take part in〜は「〜に参加する」（＝join／participate in）という重要イディオム。\n【ポイント2】①make part in、②have part in、④do part inはどれも存在しない表現。\n【ポイント3】takeを含む頻出熟語：take place（行われる）、take care of〜（世話をする）。\n【答え】③ take\n【確かめ】take part in the traditional dance paradeで「伝統的な踊りのパレードに参加する」という意味になっているかを確認する。\n【よくあるまちがい】make part inのように、他の動詞をあてはめてしまう。\n【ここが絶対】「〜に参加する」はtake part in〜という決まった形で覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -670,28 +559,8 @@ be interested in〜／be known for〜・as〜／be filled with〜
     choices: ['① who', '② which', '③ whom', '④ whose'],
     answer: '① who',
     hint: '先行詞は「人」、関係代名詞節内での役割は「主語」。',
-    explanation: `【出題意図】
-関係代名詞の選択（who / which / whom / whose）を問う問題。先行詞が人か物か、節内の役割の識別が目標。
-
-【解説】
-先行詞は「The woman（女性）」= 人。関係代名詞節内で「is wearing（着ている）」の主語の役割を果たしている。
-・① who → 先行詞が人・主格（✓）
-・② which → 先行詞が物や動物
-・③ whom → 先行詞が人・目的格
-・④ whose → 先行詞が人または物・所有格
-
-日本語訳：「その写真の中で着物を着ている女性は私の祖母です。」
-
-【文法ポイント】
-関係代名詞まとめ：
-　　　　主格　　目的格　　所有格
-人：　　who　　whom　　whose
-物：　　which　which　　whose
-
-【入試頻出】
-・The man who is playing the drum is my uncle.
-・The girl who wore a yukata was my classmate.
-・The priest who led the ceremony was very old.`,
+    explanation:
+      '【何を聞かれているか】「The woman ( ) is wearing a kimono in that photo is my grandmother.」の空所に入る適切な関係代名詞を選ぶ。\n【なぜwhoになるのか】先行詞The woman（女性）は人で、関係代名詞節の中でis wearing（着ている）の主語の役割をしているため、先行詞が人・主格のときに使うwhoを選ぶ必要があるから。\n【ポイント1】先行詞がThe woman（人）で、関係代名詞節内でis wearingの主語になっている（主格）。\n【ポイント2】②whichは先行詞が物や動物、③whomは先行詞が人・目的格、④whoseは所有格で、どれも文脈に合わない。\n【ポイント3】関係代名詞まとめ：人（主格who、目的格whom、所有格whose）、物（主格・目的格which、所有格whose）。\n【答え】① who\n【確かめ】whoのあとに動詞（is wearing）が続いている（主語の役割）ことを確認する。\n【よくあるまちがい】先行詞が人なのにwhichを選んでしまう。\n【ここが絶対】関係代名詞は、先行詞が人か物かと、節内での役割（主格・目的格・所有格）の両方で決まる。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -704,28 +573,8 @@ be interested in〜／be known for〜・as〜／be filled with〜
     choices: ['① who', '② which', '③ whom', '④ where'],
     answer: '② which',
     hint: '先行詞は「物・行事（festival）」。関係代名詞節内で saw の目的語になっている。',
-    explanation: `【出題意図】
-関係代名詞 which（先行詞が物・目的格）の用法を問う問題。that との言い換えも理解する。
-
-【解説】
-先行詞は「the festival（祭り）」= 物・行事。関係代名詞節内で we saw ( )（私たちが見た）の目的語になっている。
-・① who → 先行詞が人のとき
-・② which → 先行詞が物・目的格（✓）
-・③ whom → 先行詞が人・目的格
-・④ where → 関係副詞
-
-which は省略可（that に置き換え可）：The festival (that) we saw last summer〜
-
-日本語訳：「私たちが去年の夏に見た祭りは、毎年8月に開催される。」
-
-【文法ポイント】
-目的格の関係代名詞は省略可能。
-先行詞 + 関係代名詞（目的格）+ 主語 + 動詞〜
-
-【入試頻出】
-・The parade (which) we watched was very colorful.
-・The song (that) she sang moved everyone.
-・The castle (which) we visited was built long ago.`,
+    explanation:
+      '【何を聞かれているか】「The festival ( ) we saw last summer is held every August.」の空所に入る適切な関係代名詞を選ぶ。\n【なぜwhichになるのか】先行詞The festival（祭り）は物・行事で、関係代名詞節の中でwe saw（　）の目的語の役割をしているため、先行詞が物・目的格のときに使うwhichを選ぶ必要があるから。\n【ポイント1】先行詞がThe festival（物・行事）で、関係代名詞節内でwe sawの目的語になっている（目的格）。\n【ポイント2】①whoは先行詞が人、③whomは先行詞が人・目的格、④whereは関係副詞で、どれも文脈に合わない。\n【ポイント3】whichは省略も可能で、thatに置きかえることもできる：The festival (that) we saw last summer〜。\n【答え】② which\n【確かめ】whichのあとにwe saw（主語＋動詞）が続いている（目的語の役割）ことを確認する。\n【よくあるまちがい】先行詞が物・行事なのにwhoを選んでしまう。\n【ここが絶対】目的格の関係代名詞は省略できる。先行詞が物・行事ならwhich（thatはどちらにも使える）。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -773,26 +622,8 @@ which は省略可（that に置き換え可）：The festival (that) we saw las
     question: '次の2文を1文に書き換えなさい。（関係代名詞を使って）\n\nI visited a temple.\nIts history goes back more than a thousand years.',
     answer: 'I visited a temple whose history goes back more than a thousand years.',
     hint: '2つの文をつなぐとき、Its（その〜の）を所有格の関係代名詞 whose に変える。',
-    explanation: `【出題意図】
-所有格の関係代名詞 whose を使って2文を1文に結合する問題。
-
-【解説】
-「I visited a temple.」と「Its history goes back more than a thousand years.」の Its は a temple を指している。
-この「Its（その寺の）」という所有の関係を表すのが関係代名詞の所有格 whose。
-
-変換の手順：①先行詞 a temple を特定 ②Its→whoseに置き換える ③whoseを先行詞の直後に置く
-→ I visited a temple whose history goes back more than a thousand years.
-
-日本語訳：「私は歴史が千年以上さかのぼる寺を訪れた。」
-
-【文法ポイント】
-whose の使い方：先行詞（人・物）の所有格を表す
-先行詞 + whose + 名詞 + 動詞〜
-
-【入試頻出】
-・I know a shrine whose gate is painted bright red.
-・She is a craftsman whose works are displayed in the museum.
-・This is the castle whose walls survived the fire.`,
+    explanation:
+      '【何を聞かれているか】「I visited a temple. Its history goes back more than a thousand years.」を関係代名詞を使って1文にする。\n【なぜwhoseを使うのか】2つ目の文のIts（その〜の）がa temple（1つ目の文の名詞）の所有を表しているため、この所有の関係を表す所有格の関係代名詞whoseに置きかえる必要があるから。\n【ポイント1】先行詞を特定する：a temple（物）。\n【ポイント2】Its（所有格）をwhoseに置きかえ、先行詞a templeの直後に置く。\n【ポイント3】I visited a temple whose history goes back more than a thousand years.（私は歴史が千年以上さかのぼる寺を訪れた）。\n【答え】I visited a temple whose history goes back more than a thousand years.\n【確かめ】whoseのあとにhistory（名詞）、goes（動詞）と続いているかを確認する。\n【よくあるまちがい】先行詞が物（a temple）だからwhichを使えると考え、whichのあとにIts（所有格）を残してしまう。\n【ここが絶対】whoseは先行詞が人でも物でも、その所有格を表すのに使える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
