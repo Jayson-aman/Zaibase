@@ -173,29 +173,8 @@ should：義務より軽い推奨（「〜した方がいい」）
     choices: ['① rains', '② will rain', '③ rained', '④ is raining'],
     answer: '① rains',
     hint: '条件を表す if 節の中では、未来のことでも現在形を使う。',
-    explanation: `【出題意図】
-条件節（if 節）での時制のルール「未来のことでも現在形を使う」を問う問題。入試最頻出文法の一つ。
-
-【解説】
-「If it 〜, we will cancel」は条件文（仮定法ではない直説法）。英語では if 節・when 節などの「副詞節」の中では、未来のことであっても will を使わず現在形を使う。
-・① rains → 現在形（✓）if 節内では現在形で未来を表す
-・② will rain → if 節内で will は使えない（×）
-・③ rained → 過去形（仮定法になってしまう）
-・④ is raining → 進行形（文脈に合わない）
-
-日本語訳：「もし明日雨が降れば、私たちはピクニックを中止します。」
-
-【文法ポイント】
-時・条件を表す副詞節の中では未来のことでも現在形：
-if（もし〜なら）/ when（〜するとき）/ until（〜まで）/ as soon as（〜したらすぐ）/ before（〜する前に）/ after（〜した後）
-
-例：When he comes, I will tell him the news.（彼が来たら知らせます）
-例：Wait here until she returns.（彼女が戻るまでここで待て）
-
-【入試頻出】
-・If you study hard, you will pass the exam.
-・When I get home, I will call you.
-・As soon as she arrives, we will start the meeting.`,
+    explanation:
+      '【何を聞かれているか】「If it ( ) tomorrow, we will cancel the picnic.」の空所に入る適切な語を選ぶ。\n【なぜrainsになるのか】条件を表すif節の中では、未来のことであってもwillを使わず現在形を使うという決まりがあるから。\n【ポイント1】if節・when節などの副詞節の中では、未来のことでも現在形で表す。②will rainはif節の中では使えない。\n【ポイント2】③rained（過去形）は仮定法になってしまい、④is raining（進行形）は文脈に合わない。①rains（現在形）が正解。\n【ポイント3】同じルールが使われる接続詞：when（〜するとき）、until（〜まで）、as soon as（〜したらすぐ）、before（〜する前に）、after（〜した後）。\n【答え】① rains\n【確かめ】主節にwillが使われている（we will cancel）ことと、if節が現在形（rains）になっていることのバランスを確認する。\n【よくあるまちがい】if節の中にもwillを入れてIf it will rain tomorrowとしてしまう。\n【ここが絶対】時・条件を表す副詞節の中では、未来のことでも現在形を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -389,31 +368,8 @@ be interested in〜 は「〜に興味がある」という意味のイディオ
     choices: ['① make', '② have', '③ take', '④ give'],
     answer: '③ take',
     hint: 'take care of〜 で「〜の世話をする」という熟語。',
-    explanation: `【出題意図】
-動詞 take を含む重要熟語 take care of〜 を正確に知っているかを問う問題。
-
-【解説】
-take care of〜 は「〜の世話をする、〜に気をつける」という重要イディオム。
-・① make → make care of は存在しない
-・② have → have care of は存在しない
-・③ take → take care of〜（✓）
-・④ give → give care of は存在しない
-
-日本語訳：「私がいない間、私の犬の世話をしてください。」
-
-【文法ポイント】
-take を含む頻出熟語：
-・take care of〜：〜の世話をする
-・take a look at〜：〜を見る
-・take part in〜：〜に参加する
-・take place：行われる、起こる
-・take off：脱ぐ、離陸する
-・take turns：交代でやる
-
-【入試頻出】
-・Can you take care of my sister?
-・The festival takes place every summer.
-・Please take part in our event.`,
+    explanation:
+      '【何を聞かれているか】「Please ( ) care of my dog while I am away.」の空所に入る適切な動詞を選ぶ。\n【なぜtakeになるのか】「〜の世話をする」という意味は、動詞takeを使ったtake care of〜という決まったイディオムで表すから。\n【ポイント1】take care of〜は「〜の世話をする、〜に気をつける」という重要イディオム。\n【ポイント2】①make care of、②have care of、④give care ofはどれも存在しない表現。\n【ポイント3】takeを含む頻出熟語：take a look at〜（〜を見る）、take part in〜（〜に参加する）、take place（行われる）、take off（脱ぐ、離陸する）。\n【答え】③ take\n【確かめ】take care of my dogで「私の犬の世話をする」という意味になっているかを確認する。\n【よくあるまちがい】make care ofのように、他の動詞をあてはめてしまう。\n【ここが絶対】「〜の世話をする」はtake care of〜という決まった形で覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -426,31 +382,8 @@ take を含む頻出熟語：
     choices: ['① after', '② for', '③ at', '④ into'],
     answer: '② for',
     hint: 'look for〜 は「〜を探す」という意味の熟語。',
-    explanation: `【出題意図】
-句動詞 look + 前置詞 の使い分けを問う問題。look for / look after / look at などの区別が目標。
-
-【解説】
-「眼鏡を探している」という文脈から look for〜（〜を探す）を選ぶ。
-・① after → look after〜 = 〜の世話をする
-・② for → look for〜 = 〜を探す（✓）
-・③ at → look at〜 = 〜を見る
-・④ into → look into〜 = 〜を調べる、〜を覗き込む
-
-日本語訳：「眼鏡を探しています。見かけましたか？」
-
-【文法ポイント】
-look の句動詞まとめ（入試最頻出）：
-・look at〜：〜を見る（視線を向ける）
-・look for〜：〜を探す
-・look after〜：〜の世話をする（= take care of）
-・look like〜：〜に似ている、〜のように見える
-・look forward to〜ing：〜を楽しみにしている
-・look into〜：〜を調べる
-
-【入試頻出】
-・I am looking for my keys.
-・She looks after her little brother.
-・I look forward to seeing you again.`,
+    explanation:
+      '【何を聞かれているか】「I am looking ( ) my glasses. Have you seen them?」の空所に入る適切な前置詞を選ぶ。\n【なぜforになるのか】「〜を探す」という意味を表すには、動詞lookのあとに前置詞forをつけたlook for〜という句動詞を使う必要があるから。\n【ポイント1】「眼鏡を探している」という文脈から、look for〜（〜を探す）を選ぶ。\n【ポイント2】①look after〜は「〜の世話をする」、③look at〜は「〜を見る」、④look into〜は「〜を調べる」で、どれも文脈に合わない。\n【ポイント3】lookの句動詞まとめ：look like〜（〜に似ている）、look forward to〜ing（〜を楽しみにしている）。\n【答え】② for\n【確かめ】look forを「〜を探す」という意味で文に当てはめ、文全体の意味が通ることを確認する。\n【よくあるまちがい】look at（見る）とlook for（探す）を混同してしまう。\n【ここが絶対】look＋前置詞の句動詞は、前置詞ごとに意味が決まっているのでセットで覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -501,31 +434,8 @@ get to Osaka / get to the station
     choices: ['① She can speak three languages.', '② She should speak three languages.', '③ She must speak three languages.', '④ She will speak three languages.'],
     answer: '① She can speak three languages.',
     hint: 'be able to = can（〜できる・能力）の言い換え。',
-    explanation: `【出題意図】
-be able to と助動詞 can の同義表現を問う問題。言い換え表現の識別が目標。
-
-【解説】
-be able to do は「〜することができる」という能力・可能性を表す表現で、助動詞 can と同義。
-・① can speak → be able to speak と同義（✓）
-・② should speak → 「〜すべきだ」（義務・推奨）→ 意味が異なる
-・③ must speak → 「〜しなければならない」（強い義務）→ 意味が異なる
-・④ will speak → 「〜するだろう」（未来・意志）→ 意味が異なる
-
-日本語訳：「彼女は3つの言語を話すことができる。」
-
-【文法ポイント】
-can = be able to（〜できる）
-can には過去形 could があるが、be able to は全時制で使える：
-・過去：could = was/were able to
-・未来：will be able to（will can とは言えない！）
-・完了：have been able to
-
-例：She will be able to drive next year.（来年は運転できるようになるだろう）
-
-【入試頻出】
-・I am able to swim.（= I can swim.）
-・He was able to solve the problem.（= He could solve the problem.）
-・Will you be able to come?`,
+    explanation:
+      '【何を聞かれているか】「She is able to speak three languages.」と意味が最も近い文を選ぶ。\n【なぜcanが同義になるのか】be able to doは「〜することができる」という能力・可能性を表す表現で、助動詞canとほぼ同じ意味になるから。\n【ポイント1】①can speak→be able to speakと同義。②should speak（〜すべきだ）、③must speak（〜しなければならない）、④will speak（〜するだろう）はどれも意味がちがう。\n【ポイント2】can＝be able to（〜できる）。canには過去形couldがあるが、be able toはすべての時制で使える。過去：was/were able to、未来：will be able to（will canとは言えない）。\n【ポイント3】完了形ではhave been able toを使う。\n【答え】① She can speak three languages.\n【確かめ】他の選択肢（should、must、will）がそれぞれ「べき」「ねばならない」「だろう」という別の意味を表していることを見直す。\n【よくあるまちがい】未来のbe able toをwill canのように誤って表現してしまう。\n【ここが絶対】can＝be able to。ただしwill canとは言えず、will be able toを使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -648,31 +558,8 @@ be different from〜 は「〜と異なる、〜とは違う」という意味�
     choices: ['① who', '② which', '③ whom', '④ whose'],
     answer: '① who',
     hint: '先行詞は「人」、関係代名詞節内での役割は「主語」。',
-    explanation: `【出題意図】
-関係代名詞の選択（who / which / whom / whose）を問う問題。先行詞が人か物か、節内の役割（主格・目的格・所有格）の識別が目標。
-
-【解説】
-先行詞は「The girl（少女）」= 人。関係代名詞節内で「is singing（歌っている）」の主語の役割を果たしている。
-・① who → 先行詞が人・主格（✓）
-・② which → 先行詞が物や動物
-・③ whom → 先行詞が人・目的格（I met whom = met の目的語）
-・④ whose → 先行詞が人または物・所有格（whose bag = 〜のバッグ）
-
-日本語訳：「舞台で歌っている少女は私のいとこです。」
-
-【文法ポイント】
-関係代名詞まとめ：
-　　　　主格　　目的格　　所有格
-人：　　who　　whom　　whose
-物：　　which　which　　whose / of which
-どちらも：that　that　　─
-
-that は who / which の代わりに使えるが、whose や前置詞の後ろには使えない。
-
-【入試頻出】
-・The boy who won the race is my friend.（主格）
-・The man whom I met was kind.（目的格）
-・I have a friend whose father is a doctor.（所有格）`,
+    explanation:
+      '【何を聞かれているか】「The girl ( ) is singing on the stage is my cousin.」の空所に入る適切な関係代名詞を選ぶ。\n【なぜwhoになるのか】先行詞The girl（少女）は人で、関係代名詞節の中でis singing（歌っている）の主語の役割をしているため、先行詞が人・主格のときに使うwhoを選ぶ必要があるから。\n【ポイント1】先行詞がThe girl（人）で、関係代名詞節内でis singingの主語になっている（主格）。\n【ポイント2】②whichは先行詞が物や動物、③whomは先行詞が人・目的格、④whoseは所有格で、どれも文脈に合わない。\n【ポイント3】関係代名詞のまとめ：人（主格who、目的格whom、所有格whose）、物（主格・目的格which、所有格whose/of which）。thatはwho/whichの代わりに使えるが、whoseや前置詞の後ろには使えない。\n【答え】① who\n【確かめ】whoのあとに動詞（is singing）が続いている（主語の役割）ことを確認する。\n【よくあるまちがい】先行詞が人なのにwhichを選んでしまう。\n【ここが絶対】関係代名詞は、先行詞が人か物かと、節内での役割（主格・目的格・所有格）の両方で決まる。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -685,33 +572,8 @@ that は who / which の代わりに使えるが、whose や前置詞の後ろ�
     choices: ['① who', '② which', '③ whom', '④ where'],
     answer: '② which',
     hint: '先行詞は「物（本）」。関係代名詞節内で bought の目的語になっている。',
-    explanation: `【出題意図】
-関係代名詞 which（先行詞が物・目的格）の用法を問う問題。that との言い換えも理解する。
-
-【解説】
-先行詞は「the book（本）」= 物。関係代名詞節内で I bought ( )（私が買った）の目的語になっている。
-・① who → 先行詞が人のとき
-・② which → 先行詞が物・目的格（✓）I bought which = that を買った
-・③ whom → 先行詞が人・目的格
-・④ where → 関係副詞（場所を表す先行詞に使う）
-
-which は省略可（that に置き換え可）：This is the book (that) I bought yesterday.
-
-日本語訳：「これは私が昨日買った本です。」
-
-【文法ポイント】
-目的格の関係代名詞は省略可能：
-・The book (which/that) I read was interesting.
-・The man (whom/that) I met was kind.
-
-先行詞を修飾する形：
-先行詞 + 関係代名詞 + 主語 + 動詞〜
-先行詞 + 関係代名詞（目的格）+ 動詞〜（関係代名詞が目的語の場合は省略可）
-
-【入試頻出】
-・The movie (that) I watched was exciting.
-・This is the song (which) she likes.
-・The letter (that) she wrote was long.`,
+    explanation:
+      '【何を聞かれているか】「This is the book ( ) I bought yesterday.」の空所に入る適切な関係代名詞を選ぶ。\n【なぜwhichになるのか】先行詞the book（本）は物で、関係代名詞節の中でI bought（　）の目的語の役割をしているため、先行詞が物・目的格のときに使うwhichを選ぶ必要があるから。\n【ポイント1】先行詞がthe book（物）で、関係代名詞節内でI boughtの目的語になっている（目的格）。\n【ポイント2】①whoは先行詞が人、③whomは先行詞が人・目的格、④whereは関係副詞で、どれも文脈に合わない。\n【ポイント3】whichは省略も可能で、thatに置きかえることもできる：This is the book (that) I bought yesterday.\n【答え】② which\n【確かめ】whichのあとにI bought（主語＋動詞）が続いている（目的語の役割）ことを確認する。\n【よくあるまちがい】先行詞が物なのにwhoを選んでしまう。\n【ここが絶対】目的格の関係代名詞は省略できる。先行詞が物ならwhich、人ならwhom（thatはどちらにも使える）。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -761,33 +623,8 @@ the city where she was born = the city in which she was born
     question: '次の2文を1文に書き換えなさい。（関係代名詞を使って）\n\nI have a friend.\nHis father is a famous musician.',
     answer: 'I have a friend whose father is a famous musician.',
     hint: '2つの文をつなぐとき、His（彼の）を所有格の関係代名詞 whose に変える。',
-    explanation: `【出題意図】
-所有格の関係代名詞 whose を使って2文を1文に結合する問題。
-
-【解説】
-「I have a friend.」と「His father is a famous musician.」の His は a friend を指している。
-この「His（友達の）」という所有の関係を表すのが関係代名詞の所有格 whose。
-
-変換の手順：
-1. 先行詞を特定：a friend（人）
-2. His（所有格）→ whose に置き換える
-3. whose を先行詞 a friend の直後に置く
-→ I have a friend whose father is a famous musician.
-
-日本語訳：「私にはお父さんが有名なミュージシャンである友達がいる。」
-
-【文法ポイント】
-whose の使い方：先行詞（人・物）の所有格を表す
-・先行詞が人：I know a girl whose name is Alice.
-・先行詞が物：I bought a car whose color is red.（= a car of which the color is red）
-
-whose 節の構造：
-先行詞 + whose + 名詞 + 動詞〜
-
-【入試頻出】
-・She has a dog whose ears are very long.
-・He is a writer whose books are read worldwide.
-・This is the building whose roof was damaged.`,
+    explanation:
+      '【何を聞かれているか】「I have a friend. His father is a famous musician.」を関係代名詞を使って1文にする。\n【なぜwhoseを使うのか】2つ目の文のHis（彼の）がa friend（1つ目の文の名詞）の所有を表しているため、この所有の関係を表す所有格の関係代名詞whoseに置きかえる必要があるから。\n【ポイント1】先行詞を特定する：a friend（人）。\n【ポイント2】His（所有格）をwhoseに置きかえ、先行詞a friendの直後に置く。\n【ポイント3】I have a friend whose father is a famous musician.（私にはお父さんが有名なミュージシャンである友達がいる）。whose節の構造は「先行詞＋whose＋名詞＋動詞〜」。\n【答え】I have a friend whose father is a famous musician.\n【確かめ】whoseのあとにfather（名詞）、is（動詞）と続いているかを確認する。\n【よくあるまちがい】whoseのかわりにwhoを使ってしまう。所有の関係にはwhoseを使う。\n【ここが絶対】whoseは先行詞（人・物どちらも可）の所有格を表す関係代名詞。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -799,33 +636,8 @@ whose 節の構造：
     question: '次の文を間接疑問文に書き換えなさい。\n\n直接疑問文：Where does she live?\n「あなたは彼女がどこに住んでいるか知っていますか？」',
     answer: 'Do you know where she lives?',
     hint: '間接疑問文では疑問詞の後ろが「主語＋動詞」の語順に戻り、do/does は消える。',
-    explanation: `【出題意図】
-間接疑問文（疑問詞 + 主語 + 動詞の語順）への書き換えを問う問題。語順の変化が最大のポイント。
-
-【解説】
-直接疑問文「Where does she live?」を間接疑問文にする手順：
-1. 疑問詞 Where はそのまま使う
-2. 疑問詞の後ろは「主語 + 動詞」の平叙文語順に変える（疑問文の語順ではない！）
-3. does は消えて、代わりに動詞に3単現の s がつく
-4. 全体を「Do you know + 間接疑問」にする
-
-× Do you know where does she live?（誤り：疑問文の語順のまま）
-○ Do you know where she lives?（正解：平叙文語順）
-
-日本語訳：「あなたは彼女がどこに住んでいるか知っていますか？」
-
-【文法ポイント】
-間接疑問文の語順：
-疑問詞 + 主語 + 動詞〜（平叙文語順）
-
-例：What time is it? → Do you know what time it is?
-例：Who is that man? → I wonder who that man is.
-例：Why did she cry? → I don't know why she cried.
-
-【入試頻出】
-・Do you know where he lives?
-・Can you tell me what time the train leaves?
-・I wonder why she was absent.`,
+    explanation:
+      '【何を聞かれているか】「Where does she live?」（あなたは彼女がどこに住んでいるか知っていますか？）を間接疑問文に書きかえる。\n【なぜdoesが消えるのか】疑問文が他の文（Do you know〜）の一部に組み込まれると、疑問文特有の助動詞doesを使わず、ふつうの文と同じ〈疑問詞＋主語＋動詞〉の語順に戻すというルールがあるから。\n【ポイント1】疑問詞Whereはそのまま使う。\n【ポイント2】疑問詞の後ろを「主語＋動詞」の平叙文語順に変える。doesは消えて、代わりに動詞に3単現のsがつく（lives）。\n【ポイント3】全体をDo you know＋間接疑問の形にする。Do you know where she lives?\n【答え】Do you know where she lives?\n【確かめ】doesが消えて、動詞がliveではなくlivesになっているかを確認する。\n【よくあるまちがい】Do you know where does she live?のように疑問文の語順のままにしてしまう。\n【ここが絶対】間接疑問文の語順は〈疑問詞＋主語＋動詞〉の平叙文語順にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -878,33 +690,12 @@ whose 節の構造：
   {
     id: 'koko_nyushi_eigo_27',
     subject: 'eigo',
-    question: '次の語を並べ替えて正しい英文を作れ。\n（ know / you / that / do / he / where / lives ）\n「彼がどこに住んでいるか知っていますか？」',
+    question:
+      '次の語を並べ替えて正しい英文を作れ。\n（ know / you / do / he / where / lives ）\n「彼がどこに住んでいるか知っていますか？」',
     answer: 'Do you know where he lives?',
     hint: '間接疑問文：疑問詞（where）の後ろは主語＋動詞の語順。全体は疑問文なので Do で始める。',
-    explanation: `【出題意図】
-間接疑問文の語順整序問題。「疑問詞 + 主語 + 動詞」という間接疑問の語順と、全体が疑問文になることを同時に確認する。
-
-【解説】
-ポイントは2つ：
-1. 全体が「Do you know〜?」という疑問文
-2. know の目的語（間接疑問）は「where he lives」（疑問文の語順ではなく平叙文語順）
-
-× Do you know where does he live?（誤り）
-○ Do you know where he lives?（正解）
-
-語句の組み立て：
-Do you know / where / he lives？
-
-日本語訳：「彼がどこに住んでいるか知っていますか？」
-
-【文法ポイント】
-間接疑問の語順：疑問詞 + 主語 + 動詞
-全体が疑問文の場合：Do / Can / Could + 主語 + 動詞 + 疑問詞 + 主語 + 動詞〜?
-
-【入試頻出】
-・Can you tell me what time it is?
-・Do you know why she was absent?
-・Could you tell me how to get there?`,
+    explanation:
+      '【何を聞かれているか】know / you / do / he / where / lives を並べ替えて「彼がどこに住んでいるか知っていますか？」という英文を作る。\n【なぜこの語順になるのか】全体はDo you know〜?という疑問文だが、knowの目的語になる部分（間接疑問）は疑問文の語順ではなく、〈疑問詞＋主語＋動詞〉という平叙文の語順にする必要があるから。\n【ポイント1】全体の骨組みはDo you know〜?という疑問文。\n【ポイント2】knowの目的語（間接疑問）はwhere he lives（疑問文の語順ではなく平叙文語順）。\n【ポイント3】組み立てるとDo you know where he lives?になる。\n【答え】Do you know where he lives?\n【確かめ】whereのあとがdoes he liveではなくhe lives（平叙文語順）になっているかを確認する。\n【よくあるまちがい】Do you know where does he live?のように疑問文の語順のままにしてしまう。\n【ここが絶対】全体が疑問文でも、中に組み込まれた間接疑問の部分は平叙文の語順にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -953,32 +744,8 @@ have/has + been + 動詞-ing（継続的な動作に使う）
     question: '次の語を並べ替えて正しい英文を作れ。\n（ enough / not / to / old / he / is / drive ）\n「彼は車を運転するのに十分な年齢ではない。」',
     answer: 'He is not old enough to drive.',
     hint: '「〜するのに十分〜だ」は 形容詞 + enough + to 動詞 の語順。',
-    explanation: `【出題意図】
-「形容詞 + enough + to 動詞」の語順を問う整序問題。enough の位置が鍵。
-
-【解説】
-「〜するのに十分〜だ」は：主語 + be + 形容詞 + enough + to + 動詞原形
-・enough は形容詞の後ろに置く（× enough old = 誤り）
-・否定文：not が be 動詞の後ろに来る
-
-正しい語順：
-He is not old enough to drive.
-
-日本語訳：「彼は運転できる年齢に達していない。」
-
-【文法ポイント】
-形容詞 + enough + to 動詞：「〜するのに十分〜だ」
-例：She is tall enough to reach the shelf.（棚に届くくらい背が高い）
-例：He is rich enough to buy that car.（あの車を買えるほど金持ちだ）
-
-too + 形容詞 + to 動詞：「〜すぎて〜できない」（enough と対で覚える）
-例：She is too young to drive.（若すぎて運転できない）
-= She is not old enough to drive.（どちらも同じ意味）
-
-【入試頻出】
-・He is strong enough to lift that box.
-・She is too tired to study.
-・The water is warm enough to swim in.`,
+    explanation:
+      '【何を聞かれているか】enough / not / to / old / he / is / drive を並べ替えて「彼は車を運転するのに十分な年齢ではない。」という英文を作る。\n【なぜenoughを形容詞のあとに置くのか】「〜するのに十分〜だ」は〈形容詞＋enough＋to動詞〉という決まった語順で表し、enoughは必ず形容詞のあとに置くというルールがあるから。\n【ポイント1】「〜するのに十分〜だ」は主語＋be＋形容詞＋enough＋to＋動詞原形の形。enoughは形容詞のあとに置く（enough oldは誤り）。\n【ポイント2】否定文ではnotがbe動詞のあとに来る。He is not old enough to drive.\n【ポイント3】反対の意味を表すtoo＋形容詞＋to動詞（〜すぎて〜できない）とセットで覚える（例：She is too young to drive.＝She is not old enough to drive.と同じ意味）。\n【答え】He is not old enough to drive.\n【確かめ】enoughがoldのあとに置かれているか（enough oldになっていないか）を確認する。\n【よくあるまちがい】enough oldのように、enoughを形容詞の前に置いてしまう。\n【ここが絶対】enoughは必ず形容詞・副詞のあとに置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1022,37 +789,12 @@ make + 人 + 物 = 人のために物を作る（第4文型）
   {
     id: 'koko_nyushi_eigo_31',
     subject: 'eigo',
-    question: '次の語を並べ替えて正しい英文を作れ。\n（ reading / finish / to / I / my / homework / after / will / go ）\n「私は宿題を読み終えた後、出かけます。」',
+    question:
+      '次の語を並べ替えて正しい英文を作れ。\n（ I / will / go / out / after / finishing / my / homework ）\n「私は宿題を終えた後、出かけます。」',
     answer: 'I will go out after finishing my homework.',
     hint: 'after の後には動名詞（〜ing）が来る。after + 動名詞 = 〜した後で。',
-    explanation: `【出題意図】
-前置詞 after + 動名詞 の用法と、語順整序を問う問題。
-
-【解説】
-前置詞の後ろには名詞・動名詞が来る（不定詞は来ない）。
-「〜した後で」= after + 動名詞（〜ing）
-
-正しい語順：
-I will go out after finishing my homework.
-（= After finishing my homework, I will go out.）
-
-× after to finish（× 前置詞の後ろに不定詞は来ない）
-○ after finishing（✓ 前置詞 + 動名詞）
-
-日本語訳：「宿題を終えた後、私は出かけます。」
-
-【文法ポイント】
-前置詞 + 動名詞 の頻出パターン：
-・before + ing：〜する前に（before leaving）
-・after + ing：〜した後で（after eating）
-・without + ing：〜せずに（without saying goodbye）
-・for + ing：〜したことで（thank you for coming）
-・in + ing：〜するにあたって（in doing so）
-
-【入試頻出】
-・He left without saying anything.
-・Thank you for helping me.
-・Before going to bed, brush your teeth.`,
+    explanation:
+      '【何を聞かれているか】I / will / go / out / after / finishing / my / homework を並べ替えて「私は宿題を終えた後、出かけます。」という英文を作る。\n【なぜafterのあとが動名詞になるのか】前置詞のあとには名詞・動名詞が来るという決まりがあり、不定詞（to＋原形）は前置詞のあとには置けないため、「〜した後で」はafter＋動名詞（〜ing）の形にする必要があるから。\n【ポイント1】前置詞の後ろには名詞・動名詞が来る（不定詞は来ない）。「〜した後で」＝after＋動名詞（〜ing）。\n【ポイント2】I will go out after finishing my homework.（＝After finishing my homework, I will go out.と同じ意味）。\n【ポイント3】同じパターン：before＋ing（〜する前に）、without＋ing（〜せずに）、for＋ing（〜したことで）。\n【答え】I will go out after finishing my homework.\n【確かめ】afterのあとがfinish（原形）やto finish（不定詞）ではなくfinishing（動名詞）になっているかを確認する。\n【よくあるまちがい】after to finishのように、前置詞のあとに不定詞を置いてしまう。\n【ここが絶対】前置詞のあとに動詞を続けるときは必ず動名詞（-ing）にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1064,30 +806,8 @@ I will go out after finishing my homework.
     question: '次の語を並べ替えて正しい英文を作れ。\n（ I / the / woman / saw / yesterday / is / the / who / teacher ）\n「私が昨日会った女性はその先生です。」',
     answer: 'The woman who I saw yesterday is the teacher.',
     hint: '関係代名詞 who を使って先行詞「the woman」を修飾する節を作る。',
-    explanation: `【出題意図】
-関係代名詞 who（目的格）を使った語順整序問題。先行詞と関係代名詞節の位置関係が鍵。
-
-【解説】
-文の骨格：The woman is the teacher.（その女性は先生だ）
-修飾部：who I saw yesterday（私が昨日会った）
-
-組み合わせ：
-The woman [who I saw yesterday] is the teacher.
-
-who はここでは目的格（saw の目的語）として使われている。
-= The woman (whom / that) I saw yesterday is the teacher.（省略も可）
-
-日本語訳：「私が昨日会った女性はその先生です。」
-
-【文法ポイント】
-関係代名詞節の位置：先行詞の直後に置く。
-The woman who〜 / The book which〜 のように、先行詞と関係代名詞節はセット。
-主節の動詞（is）は関係代名詞節の後に続く。
-
-【入試頻出】
-・The boy who lives next door is friendly.
-・The letter that she wrote was very long.
-・The man who(m) I met at the party was a doctor.`,
+    explanation:
+      '【何を聞かれているか】I / the / woman / saw / yesterday / is / the / who / teacher を並べ替えて「私が昨日会った女性はその先生です。」という英文を作る。\n【なぜwhoが目的格として使えるのか】whoは本来主格の関係代名詞だが、口語では目的格（whomの代わり）としてもよく使われ、先行詞The womanのうしろに「who I saw yesterday」という節を置いて修飾できるから。\n【ポイント1】文の骨格はThe woman is the teacher.（その女性は先生だ）。\n【ポイント2】修飾部はwho I saw yesterday（私が昨日会った）。ここでのwhoはsawの目的語にあたる目的格の働きをしている。\n【ポイント3】組み合わせるとThe woman who I saw yesterday is the teacher.になる。＝The woman (whom/that) I saw yesterday is the teacher.（省略も可）。\n【答え】The woman who I saw yesterday is the teacher.\n【確かめ】関係代名詞節（who I saw yesterday）が先行詞The womanの直後に置かれ、そのあとに主節の動詞is the teacherが続いているかを確認する。\n【よくあるまちがい】関係代名詞節を先行詞から離れた位置に置いてしまう。\n【ここが絶対】関係代名詞節は必ず先行詞の直後に置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1099,30 +819,8 @@ The woman who〜 / The book which〜 のように、先行詞と関係代名詞�
     question: '次の語を並べ替えて正しい英文を作れ。\n（ to / easy / this / understand / enough / is / problem / for / students / all ）\n「この問題はすべての生徒が理解できるほど簡単だ。」',
     answer: 'This problem is easy enough for all students to understand.',
     hint: '「〜が…するのに十分〜だ」は 形容詞 + enough + for + 人 + to 動詞 の形。',
-    explanation: `【出題意図】
-enough to 構文に「for + 人」が加わった形の語順を問う問題。「〜が…するほど十分〜だ」という表現の完全形を問う。
-
-【解説】
-構文：主語 + be + 形容詞 + enough + for + 人 + to + 動詞原形
-「for + 人」は不定詞の意味上の主語を示す。
-
-正しい語順：
-This problem is easy enough for all students to understand.
-
-日本語訳：「この問題はすべての生徒が理解できるほど簡単だ。」
-
-【文法ポイント】
-「形容詞 + enough + for + 人 + to + 動詞」構文：
-・The box is light enough for children to carry.（子どもが運べるくらい軽い）
-・The question is simple enough for anyone to answer.
-
-「too + 形容詞 + for + 人 + to + 動詞」との対比：
-・The problem is too difficult for students to solve.（難しすぎて解けない）
-
-【入試頻出】
-・This movie is interesting enough for children to enjoy.
-・The bag is too heavy for her to carry.
-・The water is warm enough for us to swim in.`,
+    explanation:
+      '【何を聞かれているか】to / easy / this / understand / enough / is / problem / for / students / all を並べ替えて「この問題はすべての生徒が理解できるほど簡単だ。」という英文を作る。\n【なぜfor＋人が入るのか】「〜が…するのに十分〜だ」と、動作をする人を明示するには、〈形容詞＋enough＋for＋人＋to＋動詞原形〉という構文を使い、for＋人が不定詞の意味上の主語を示すから。\n【ポイント1】構文は主語＋be＋形容詞＋enough＋for＋人＋to＋動詞原形。\n【ポイント2】This problem is easy enough for all students to understand.（この問題はすべての生徒が理解できるほど簡単だ）。\n【ポイント3】反対の意味を表す〈too＋形容詞＋for＋人＋to＋動詞〉（〜すぎて…できない）とセットで覚える（例：The problem is too difficult for students to solve.）。\n【答え】This problem is easy enough for all students to understand.\n【確かめ】for all studentsがenoughとtoの間に正しく置かれているかを確認する。\n【よくあるまちがい】for all studentsを文の最後に置いてしまい、enough to understand for all studentsのような不自然な語順にしてしまう。\n【ここが絶対】「形容詞＋enough＋for＋人＋to＋動詞」の語順を1つのまとまりとして覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1139,32 +837,8 @@ This problem is easy enough for all students to understand.
     choices: ['① No, I don\'t.', '② Yes, please. Thank you.', '③ I\'d like tea.', '④ Yes, I would like.'],
     answer: '② Yes, please. Thank you.',
     hint: 'Would you like〜? は「〜はいかがですか」という丁寧な申し出。適切な受け方を選ぶ。',
-    explanation: `【出題意図】
-Would you like〜?（申し出・勧め）への適切な応答を問う問題。日常会話・対話文頻出表現。
-
-【解説】
-Would you like〜? は「〜はいかがですか？」という丁寧な提案・申し出の表現。
-・① No, I don't. → Would you like〜? への否定は No, thank you. が正しい（don't は使わない）
-・② Yes, please. Thank you. → 正しい受け答え（✓）
-・③ I'd like tea. → 申し出への返答としてはずれる（新たなリクエストになる）
-・④ Yes, I would like. → like の後ろに目的語が必要（× I would like some. なら可）
-
-申し出への返答：
-・受ける：Yes, please. / Yes, please. Thank you.
-・断る：No, thank you. / No, I'm fine, thank you.
-
-日本語訳：
-A：もう少しお茶はいかがですか？
-B：はい、ぜひ。ありがとうございます。
-
-【文法ポイント】
-Would you like〜?（申し出）vs Do you like〜?（好み・趣味を尋ねる）
-Would you like to〜?（〜しませんか？）：招待・誘い
-
-【入試頻出】
-・Would you like some cake? — Yes, please.
-・Would you like to join us? — I'd love to.
-・Can I help you? — Yes, please.`,
+    explanation:
+      '【何を聞かれているか】「Would you like some more tea?」に対する適切な返答を選ぶ。\n【なぜ「Yes, please. Thank you.」が正しいのか】Would you like〜?は「〜はいかがですか」という丁寧な申し出の表現で、受けるときはYes, please.、断るときはNo, thank you.という決まった返答をするから。\n【ポイント1】①No, I don\'t.はWould you like〜?への返答としては不自然（否定にはNo, thank you.を使う）。\n【ポイント2】③I\'d like tea.は申し出への返答としてはずれており、新たなリクエストのように聞こえる。④Yes, I would like.はlikeのあとに目的語が必要。\n【ポイント3】②Yes, please. Thank you.が正しい受け答え。申し出を断るときはNo, thank you.を使う。\n【答え】② Yes, please. Thank you.\n【確かめ】Would you like〜?（申し出）とDo you like〜?（好みをたずねる）を混同していないかを確認する。\n【よくあるまちがい】Would you like〜?への否定をNo, I don\'t.にしてしまう。\n【ここが絶対】申し出への返答はYes, please.（受ける）／No, thank you.（断る）で覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1176,34 +850,8 @@ Would you like to〜?（〜しませんか？）：招待・誘い
     question: '次の対話の（　）に最も適切な文を選べ。\n\nA: How long does it take to get to Tokyo Station from here?\nB: ( )\n\n① It\'s about ten kilometers.\n② It takes about thirty minutes by train.\n③ You should go by bus.\n④ The station is very big.',
     answer: '② It takes about thirty minutes by train.',
     hint: 'How long does it take to〜? は「〜するのにどのくらいかかりますか」という所要時間を尋ねる表現。',
-    explanation: `【出題意図】
-「It takes + 時間 + to + 動詞」という所要時間を表す構文と、How long does it take to〜? への適切な応答を問う問題。
-
-【解説】
-How long does it take to〜? = 「〜するのにどのくらい時間がかかりますか？」
-返答は「It takes + 時間」の形が正しい。
-・① about ten kilometers → 距離を答えている（×）How far〜? への答え
-・② It takes about thirty minutes by train. → 所要時間を答えている（✓）
-・③ You should go by bus. → 提案（質問の答えになっていない）
-・④ The station is very big. → 無関係
-
-日本語訳：
-A：ここから東京駅までどのくらいかかりますか？
-B：電車で約30分かかります。
-
-【文法ポイント】
-所要時間の表現：
-It takes + 時間 + to + 動詞〜
-= 〜するのに〜の時間がかかる
-例：It takes twenty minutes to walk to school.（学校まで歩いて20分かかる）
-例：It took two hours to finish the homework.（宿題を終えるのに2時間かかった）
-
-How long does it take to〜?：所要時間を尋ねる定型表現
-
-【入試頻出】
-・How long does it take to get to the airport?
-・It takes about an hour by car.
-・It took me two hours to read the book.`,
+    explanation:
+      '【何を聞かれているか】「How long does it take to get to Tokyo Station from here?」への適切な返答を選ぶ。\n【なぜIt takes about thirty minutes by train.が正しいのか】How long does it take to〜?は「〜するのにどのくらい時間がかかるか」を尋ねる表現で、これにはIt takes＋時間という所要時間を答える形で返す決まりがあるから。\n【ポイント1】①about ten kilometersは距離を答えており、How far〜?への返答にあたる。\n【ポイント2】③You should go by bus.は提案であり、質問（所要時間）の答えになっていない。④The station is very big.は無関係。\n【ポイント3】②It takes about thirty minutes by train.が正しい。It takes＋時間＋to＋動詞〜＝「〜するのに〜の時間がかかる」。\n【答え】② It takes about thirty minutes by train.\n【確かめ】質問がHow long（時間）を尋ねているのに対し、選んだ返答が時間を答えているかを確認する。\n【よくあるまちがい】How long〜?とHow far〜?を混同し、距離を答えてしまう。\n【ここが絶対】所要時間を尋ねるHow long does it take to〜?にはIt takes＋時間で答える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1216,32 +864,8 @@ How long does it take to〜?：所要時間を尋ねる定型表現
     choices: ['① Don\'t worry.', '② That\'s too bad.', '③ I\'m sorry to hear that.', '④ Never mind.'],
     answer: '① Don\'t worry.',
     hint: '後に続く「You\'ve studied really hard.（一生懸命勉強したじゃないか）」という励ましの言葉に合う返答を選ぶ。',
-    explanation: `【出題意図】
-励ましの表現と、会話の流れ・文脈から適切な応答を選ぶ問題。
-
-【解説】
-Aが「自信がない」と言っているのに対し、Bは「You've studied really hard.（一生懸命勉強したじゃないか）」と励ましている。前置きとして最適なのは「Don't worry.（心配しないで）」。
-・① Don't worry. → 心配しないで（励まし）（✓）
-・② That's too bad. → それは残念だね（共感・慰め。励ましではない）
-・③ I'm sorry to hear that. → それは残念です（同情。だが後の励ましと繋がりが弱い）
-・④ Never mind. → 気にしないで（軽い謝りへの返答。励ましとしては不自然）
-
-日本語訳：
-A：明日英語のテストがあるんだけど、自信がないなあ。
-B：心配しないで。本当に一生懸命勉強したじゃないか。
-
-【文法ポイント】
-励まし・応援の表現：
-・Don't worry. / Don't worry about it.：心配しないで
-・You can do it!：あなたならできる！
-・I'm sure you'll do well.：きっとうまくいくよ
-・Cheer up!：元気出して！
-・Good luck!：頑張って！
-
-【入試頻出】
-・Don't worry. Everything will be all right.
-・Cheer up! You'll feel better soon.
-・I'm sure you can pass the exam.`,
+    explanation:
+      '【何を聞かれているか】「I\'m going to take the English test tomorrow, but I\'m not confident.」に対するBの返答（このあとYou\'ve studied really hard.と続く）に合う表現を選ぶ。\n【なぜDon\'t worry.が正しいのか】Aが不安を口にしていることに対し、Bはそのあと「一生懸命勉強したじゃないか」と励ましているため、その前置きとしては「心配しないで」という励ましの表現が自然につながるから。\n【ポイント1】①Don\'t worry.（心配しないで）は励ましの表現で、後に続くYou\'ve studied really hard.（一生懸命勉強したじゃないか）と自然につながる。\n【ポイント2】②That\'s too bad.（それは残念だね）と③I\'m sorry to hear that.（それは残念です）はどちらも同情・慰めの表現で、励ましの流れには合わない。\n【ポイント3】④Never mind.（気にしないで）は軽い謝罪への返答で、この文脈には不自然。\n【答え】① Don\'t worry.\n【確かめ】選んだ返答のあとにYou\'ve studied really hard.が自然に続くかを確認する。\n【よくあるまちがい】②That\'s too bad.のように、同情の表現を励ましの場面で使ってしまう。\n【ここが絶対】対話文の空所は、その後に続く文とのつながりを見て、共感なのか励ましなのかを判断する。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1298,35 +922,8 @@ A：ありがとう。
     choices: ['① eat', '② ate', '③ eaten', '④ eating'],
     answer: '③ eaten',
     hint: '現在完了形（have/has + 過去分詞）の経験用法。eat の過去分詞を選ぶ。',
-    explanation: `【出題意図】
-現在完了形（経験用法）の形と、eat の活用（eat-ate-eaten）を正確に使えるかを問う問題。
-
-【解説】
-never は現在完了形の経験用法で「一度も〜したことがない」を表す。
-現在完了形：have/has + 過去分詞
-eat の活用：eat（原形）→ ate（過去形）→ eaten（過去分詞）
-
-・① eat → 原形（have の後ろに原形は来ない）
-・② ate → 過去形（have の後ろに過去形は来ない）
-・③ eaten → 過去分詞（✓）have eaten
-・④ eating → 現在分詞（have been eating なら現在完了進行形だが、この文には合わない）
-
-日本語訳：「私は一度もお寿司を食べたことがない。」
-
-【文法ポイント】
-現在完了形（経験）の目印の語句：
-・ever（これまでに）：Have you ever eaten sushi?
-・never（一度も〜ない）：I have never been to France.
-・once / twice / 〜 times（〜回）：I have been there twice.
-・before（以前に）：I have seen this movie before.
-
-不規則動詞の過去分詞（頻出）：
-eat-ate-eaten / go-went-gone / see-saw-seen / take-took-taken / write-wrote-written
-
-【入試頻出】
-・Have you ever visited Kyoto?
-・I have never seen such a beautiful sunset.
-・She has eaten sushi three times.`,
+    explanation:
+      '【何を聞かれているか】「I have never ( ) sushi before.」の空所に入る適切な形を選ぶ。\n【なぜeatenになるのか】neverを使った現在完了形の経験用法「一度も〜したことがない」は、have/has＋過去分詞の形にする必要があり、eatの過去分詞はeatenだから。\n【ポイント1】neverは現在完了形の経験用法で「一度も〜したことがない」を表す。現在完了形はhave/has＋過去分詞。\n【ポイント2】eatの活用：eat（原形）→ate（過去形）→eaten（過去分詞）。①eat（原形）、②ate（過去形）はhaveのあとに使えない。\n【ポイント3】④eating（現在分詞）はhave been eatingなら現在完了進行形になるが、この文には合わない。③eaten（過去分詞）が正解。\n【答え】③ eaten\n【確かめ】haveのあとに過去分詞eatenが続いているかを確認する。\n【よくあるまちがい】have ateのように、haveのあとに過去形をそのまま続けてしまう。\n【ここが絶対】現在完了形はhave/has＋過去分詞。不規則動詞の活用（eat-ate-eaten）を正確に覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1375,31 +972,8 @@ in：月・年・季節・時間帯（in March / in 2020 / in summer / in the mo
     choices: ['① open', '② to open', '③ opening', '④ opened'],
     answer: '② to open',
     hint: 'ask + 人 + to do（人に〜するよう頼む）という構文。',
-    explanation: `【出題意図】
-「ask + 人 + to + 動詞」という第5文型（SVOC）の用法を問う問題。
-
-【解説】
-ask + 人 + to do = 「人に〜するよう頼む」という重要構文。
-・① open → 原形のみ（× ask の第5文型では to が必要）
-・② to open → ask + 人 + to do（✓）
-・③ opening → 動名詞（ask + 人 + doing という形は存在しない）
-・④ opened → 過去分詞（文法的に合わない）
-
-日本語訳：「彼女は私にドアを開けるよう頼んだ。」
-
-【文法ポイント】
-「動詞 + 人 + to do」の構文（SVOC = 使役・知覚・依頼）：
-・ask + 人 + to do：人に〜するよう頼む
-・tell + 人 + to do：人に〜するよう言う（命令）
-・want + 人 + to do：人に〜してほしい
-・allow + 人 + to do：人が〜するのを許可する
-・expect + 人 + to do：人が〜することを期待する
-
-【入試頻出】
-・She asked me to help her.
-・He told us to be quiet.
-・My parents want me to become a doctor.
-・She allowed me to use her computer.`,
+    explanation:
+      '【何を聞かれているか】「She asked me ( ) the door.」の空所に入る適切な形を選ぶ。\n【なぜto openになるのか】「人に〜するよう頼む」はask＋人＋to doという決まった構文で表し、人のあとには必ず不定詞（to＋原形）が続くから。\n【ポイント1】ask＋人＋to do＝「人に〜するよう頼む」という重要構文。\n【ポイント2】①open（原形のみ）、③opening（動名詞）、④opened（過去分詞）はどれもask＋人のあとの形として使えない。\n【ポイント3】同じ仲間の構文：tell＋人＋to do（人に〜するよう言う）、want＋人＋to do（人に〜してほしい）、allow＋人＋to do（人が〜するのを許可する）。\n【答え】② to open\n【確かめ】She asked me to open the door.という文全体を読み、「彼女は私にドアを開けるよう頼んだ」という意味になっているかを確認する。\n【よくあるまちがい】ask＋人のあとに原形をそのまま続けてしまう。\n【ここが絶対】ask＋人＋to doの形では、人のあとに必ずtoが必要。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1412,36 +986,8 @@ ask + 人 + to do = 「人に〜するよう頼む」という重要構文。
     choices: ['① this', '② that', '③ it', '④ what'],
     answer: '③ it',
     hint: '形式主語 it を使った「it is + 形容詞 + to 動詞」の構文。',
-    explanation: `【出題意図】
-形式主語 it（仮の主語）を使った構文を問う問題。I think (that) it is〜 の形が正解。
-
-【解説】
-この文は「I think [that] it is very important to keep our environment clean.」という構造。
-it は to keep our environment clean（環境を清潔に保つこと）を指す形式主語（仮主語）。
-
-・① this → I think this very important to〜 は文法的に成立しない
-・② that → I think that very important to〜 も文法的に不自然
-・③ it → 形式主語の it（✓）
-・④ what → I think what very important to〜 は成立しない
-
-日本語訳：「私は環境を清潔に保つことはとても大切だと思います。」
-
-全体の構造：
-I think [that it is very important to keep our environment clean].
-
-【文法ポイント】
-形式主語（仮主語）it の構文：
-It is + 形容詞 + to + 動詞〜 = 〜することは（形容詞）だ
-例：It is important to study English.
-例：It is difficult to solve this problem.
-例：It is fun to play tennis.
-
-I think it is〜 / I find it〜 / I feel it〜 などの文の中にも使われる。
-
-【入試頻出】
-・It is easy to make friends online.
-・I think it is wrong to tell a lie.
-・He found it difficult to understand the text.`,
+    explanation:
+      '【何を聞かれているか】「I think ( ) very important to keep our environment clean.」の空所に入る適切な語を選ぶ。\n【なぜitになるのか】to keep our environment clean（環境を清潔に保つこと）という長い内容を先に置くと文のバランスが悪くなるため、その内容を指す形式主語itを先に置いて、本当の中身をあとに回すという英語の決まりがあるから。\n【ポイント1】this、that、whatはこの位置に置いても文法的に成立しない。\n【ポイント2】③it（形式主語）が正解。itはto keep our environment cleanを指す。この文はthink＋it＋（is）＋形容詞＋to不定詞という形（あるいはI think that it is very important to〜のthatが省略された形）と理解できる。\n【ポイント3】形式主語itの基本構文：It is＋形容詞＋to＋動詞〜＝「〜することは（形容詞）だ」（例：It is important to study English.）。\n【答え】③ it\n【確かめ】itがto keep our environment cleanを指していることを確認する。\n【よくあるまちがい】thisやthatを使ってしまう。形式主語には必ずitを使う。\n【ここが絶対】「〜することは…だ」を表すときは、形式主語itを使い、本当の中身（to不定詞）は後ろに置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1457,34 +1003,8 @@ I think it is〜 / I find it〜 / I feel it〜 などの文の中にも使われ
     question: '次の日本文を英語に訳せ。\n「私は今までに外国へ行ったことがありません。」',
     answer: 'I have never been to a foreign country. / I have never been abroad.',
     hint: '「〜したことがない」は現在完了の経験用法（have never + 過去分詞）。「外国へ行く」は go ではなく been to を使う。',
-    explanation: `【出題意図】
-現在完了形（経験）の否定文と、「外国へ行ったことがある」に be to〜 を使う慣用表現を問う問題。
-
-【解説】
-「〜したことがない」= have/has never + 過去分詞（現在完了・経験の否定）
-「外国へ行ったことがある/ない」= have been to a foreign country / abroad
-
-注意：
-× I have never gone to a foreign country.（gone を使うと「行ったまま戻ってこない」ニュアンス）
-○ I have never been to a foreign country.（been to = 行ったことがある）
-
-別解：I have never been abroad.（abroad = 海外に、外国へ）
-
-日本語訳の英訳：
-I have never been to a foreign country. または I have never been abroad.
-
-【文法ポイント】
-be to〜：〜に行ったことがある（経験）
-go to〜 の現在完了：have gone to〜 = 行ってしまった（今ここにいない）
-have been to〜：（行って帰ってきた）経験・訪問経験
-
-abroad：副詞「海外に・外国へ」（前置詞不要）
-to abroad とは言わない。
-
-【入試頻出】
-・Have you ever been to Paris?
-・She has been to many countries.
-・I have never traveled abroad.`,
+    explanation:
+      '【何を聞かれているか】「私は今までに外国へ行ったことがありません。」を英語に訳す。\n【なぜbeenを使うのか】「〜に行ったことがある（ない）」という経験を表すときは、goではなくbe動詞の過去分詞been toを使うのが決まりで、have goneを使うと「行ってしまって今はいない」という別の意味になってしまうから。\n【ポイント1】「〜したことがない」＝have/has never＋過去分詞（現在完了・経験の否定）。\n【ポイント2】「外国へ行ったことがある（ない）」＝have been to a foreign country / abroad。have gone to a foreign country（行ってしまった）とは意味が異なる。\n【ポイント3】abroadは副詞「海外に・外国へ」で前置詞は不要（to abroadとは言わない）。\n【答え】I have never been to a foreign country. / I have never been abroad.\n【確かめ】beenが使われている（goneになっていない）ことを確認する。\n【よくあるまちがい】I have never gone to a foreign country.としてしまう。goneは「行ってしまって今ここにいない」という意味になる。\n【ここが絶対】「〜に行ったことがある」という経験はhave been to〜で表す。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1496,34 +1016,8 @@ to abroad とは言わない。
     question: '次の日本文を英語に訳せ。\n「彼女が書いたその手紙を私に見せてもらえませんか？」',
     answer: 'Could you show me the letter that she wrote? / Could you show me the letter she wrote?',
     hint: '「見せてもらえませんか」は Could you show me〜?、「彼女が書いた」は関係代名詞（that / which）で修飾。',
-    explanation: `【出題意図】
-依頼表現（Could you〜?）と関係代名詞（目的格）を組み合わせた英作文。
-
-【解説】
-2つのポイント：
-1. 丁寧な依頼：Could you show me〜? = 「〜を見せていただけますか？」
-   show + 人 + 物（第4文型）
-2. 「彼女が書いた（手紙）」= the letter that/which she wrote（関係代名詞・目的格）
-   → 目的格の関係代名詞は省略可
-
-組み合わせ：
-Could you show me the letter (that) she wrote?
-
-別解：
-・Could you let me see the letter she wrote?
-・May I see the letter that she wrote?
-
-日本語訳確認：「彼女が書いたその手紙を私に見せてもらえませんか？」
-
-【文法ポイント】
-Could you〜? = Can you〜? の丁寧版（より礼儀正しい依頼）
-show + 人 + 物：人に物を見せる（第4文型 SVOO）
-the letter (that) she wrote：関係代名詞（目的格）she wrote the letter の構造
-
-【入試頻出】
-・Could you show me your passport?
-・This is the picture (that) I took in Kyoto.
-・He showed me the photos he had taken.`,
+    explanation:
+      '【何を聞かれているか】「彼女が書いたその手紙を私に見せてもらえませんか？」を英語に訳す。\n【なぜCould you〜?とthat/whichを組み合わせるのか】丁寧な依頼にはCould you〜?を使い、「彼女が書いた」という説明を加えるには、the letterのうしろに関係代名詞（目的格）でwrote節をつなげる必要があるから。\n【ポイント1】丁寧な依頼：Could you show me〜?＝「〜を見せていただけますか？」。show＋人＋物（第4文型）。\n【ポイント2】「彼女が書いた（手紙）」＝the letter that/which she wrote（関係代名詞・目的格）。目的格の関係代名詞は省略も可能。\n【ポイント3】組み合わせるとCould you show me the letter (that) she wrote?になる。\n【答え】Could you show me the letter that she wrote? / Could you show me the letter she wrote?\n【確かめ】the letterのあとにshe wrote（主語＋動詞）が続いており、writeの目的語がthe letterであることを確認する。\n【よくあるまちがい】Could you〜?のかわりにCan you〜?を使ってしまい、ていねいさが弱くなる（誤りではないが、より丁寧なのはCould you〜?）。\n【ここが絶対】Could you〜?はCan you〜?の丁寧版。目的格の関係代名詞は省略できる。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1580,34 +1074,8 @@ there is/are 構文：「〜がある/いる」
     question: '次の日本文を英語に訳せ。\n「もし私があなたならば、その仕事を断るでしょう。」',
     answer: 'If I were you, I would refuse that job. / If I were you, I would turn down that job.',
     hint: '仮定法過去（現実とは逆の仮定）：If + 主語 + were/動詞の過去形, 主語 + would + 動詞原形。I were が正しい（I was ではない）。',
-    explanation: `【出題意図】
-仮定法過去（If I were you, I would〜）の形を問う英作文。入試英作文最頻出構文の一つ。
-
-【解説】
-「もし私があなたならば」= 現実と異なる仮定（実際には私はあなたではない）→ 仮定法過去を使う
-
-仮定法過去の形：
-If + 主語 + 動詞の過去形（be動詞は were）, 主語 + would / could / might + 動詞原形
-
-重要：If I were you〜（× If I was you は入試では不正解）
-仮定法では be 動詞は人称に関わらず were を使う（口語では was も使われるが、入試では were が標準）。
-
-「断る」= refuse / turn down（どちらも可）
-
-完成した文：
-If I were you, I would refuse that job.
-= If I were you, I would turn down that job.
-
-【文法ポイント】
-仮定法過去：現在または未来の事実に反する仮定
-If + 主語 + 過去形（were）, 主語 + would + 動詞原形
-・If I had more time, I would study abroad.（もっと時間があれば留学するのに）
-・If she were here, she would help us.（彼女がここにいれば助けてくれるのに）
-
-【入試頻出】
-・If I were you, I would apologize.
-・If I had a million dollars, I would travel around the world.
-・If she were taller, she could be a model.`,
+    explanation:
+      '【何を聞かれているか】「もし私があなたならば、その仕事を断るでしょう。」を英語に訳す。\n【なぜwereを使うのか】「もし私があなたならば」は現実とは異なる仮定（実際には私はあなたではない）なので、仮定法過去を使い、be動詞は主語に関係なくwereにするという決まりがあるから。\n【ポイント1】仮定法過去の形：If＋主語＋動詞の過去形（be動詞はwere）, 主語＋would/could/might＋動詞原形。\n【ポイント2】If I were you〜（If I was youは入試では不正解とされる）。仮定法では人称に関わらずwereを使う。\n【ポイント3】「断る」＝refuseまたはturn down。If I were you, I would refuse that job.\n【答え】If I were you, I would refuse that job. / If I were you, I would turn down that job.\n【確かめ】be動詞がwasではなくwereになっているかを確認する。\n【よくあるまちがい】If I was you, I would refuse that job.のようにwasを使ってしまう。\n【ここが絶対】仮定法過去のif節ではbe動詞は必ずwereを使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1619,38 +1087,8 @@ If + 主語 + 過去形（were）, 主語 + would + 動詞原形
     question: '次の日本文を英語に訳せ。\n「この映画は若者だけでなく、お年寄りにも人気があります。」',
     answer: 'This movie is popular not only with young people but also with old people. / This movie is popular not only among young people but also among elderly people.',
     hint: '「〜だけでなく…も」は not only A but also B の構文。「〜に人気がある」は popular with/among〜。',
-    explanation: `【出題意図】
-相関接続詞 not only A but also B（〜だけでなく…も）の構文と、popular with/among〜 を使った英作文。
-
-【解説】
-2つのポイント：
-1. 「〜だけでなく…も」= not only A but also B
-2. 「〜に人気がある」= be popular with〜 または be popular among〜
-
-組み合わせ：
-This movie is popular not only with young people but also with old people.
-または
-This movie is popular not only among young people but also among elderly people.
-
-「お年寄り」= old people / elderly people（より丁寧）/ senior citizens
-
-注意：not only A but also B の A と B は文法的に同じ形（並列）である必要がある。
-
-【文法ポイント】
-相関接続詞：
-・not only A but also B：AだけでなくBも
-・both A and B：AもBも
-・either A or B：AかBのどちらか
-・neither A nor B：AもBも〜ない
-
-popular with / popular among：
-・with：特定の人（be popular with children）
-・among：グループの中で（be popular among students）
-
-【入試頻出】
-・This book is popular not only with children but also with adults.
-・She is loved by not only her family but also her friends.
-・This song is popular among teenagers.`,
+    explanation:
+      '【何を聞かれているか】「この映画は若者だけでなく、お年寄りにも人気があります。」を英語に訳す。\n【なぜnot only A but also Bを使うのか】「〜だけでなく…も」という意味は、相関接続詞not only A but also Bという決まった形で表し、「〜に人気がある」はbe popular with/among〜で表すから。\n【ポイント1】「〜だけでなく…も」＝not only A but also B。AとBは文法的に同じ形（並列）にする必要がある。\n【ポイント2】「〜に人気がある」＝be popular with〜（特定の人）またはbe popular among〜（グループの中で）。\n【ポイント3】組み合わせるとThis movie is popular not only with young people but also with old people.になる。「お年寄り」はold people／elderly people（より丁寧）。\n【答え】This movie is popular not only with young people but also with old people. / This movie is popular not only among young people but also among elderly people.\n【確かめ】not only のあとと、but also のあとが同じ形（with young people／with old people）になっているかを確認する。\n【よくあるまちがい】not only とbut alsoのあとの形をそろえず、withとamongを混ぜて使ってしまう。\n【ここが絶対】not only A but also BのAとBは文法的に同じ形にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1745,32 +1183,8 @@ these = 複数 → 直前の2つの理由が対応
     choices: ['① 高齢者の一人暮らしが日本で増えている数値的な報告', '② 地域社会が高齢者の孤独に対処するための取り組みとその効果', '③ ボランティア活動が日本の若者に与える影響', '④ 高齢化社会に対応するための政府の政策'],
     answer: '② 地域社会が高齢者の孤独に対処するための取り組みとその効果',
     hint: '本文全体の流れ（問題提起→取り組みの紹介→効果→専門家の意見）を把握して、何が最も中心的に述べられているかを考える。',
-    explanation: `【出題意図】
-長文全体を通読して主題（テーマ）を把握する力を問う問題。細部ではなく文章全体の「言いたいこと」を読み取る。
-
-【解説】
-本文の構造：
-1. 問題提起：日本で高齢者の一人暮らしが増え、深刻な社会問題になっている
-2. 取り組みの紹介：地域がボランティア訪問・コミュニティセンターなどのプログラムを始めた
-3. 効果：孤独感が減り、コミュニティとのつながりが感じられるようになっている
-4. 専門家の意見：つながりは心身の健康に重要。今後もこのような支援が必要
-
-全体を通して「地域の取り組みと効果」が中心テーマ → ②が正解
-
-① 数値的な報告：本文に数値は含まれていない（×）
-③ 若者への影響：本文に記述なし（×）
-④ 政府の政策：本文にあるのは地域・コミュニティの取り組みであり、政府の政策ではない（×）
-
-【文法ポイント】
-主題問題（main topic / main idea）のアプローチ：
-1. 冒頭と末尾を特に注意深く読む（主題は最初か最後に述べられることが多い）
-2. 繰り返し登場するキーワードを見つける（→ elderly people, community, programs, connected）
-3. 選択肢が本文の一部のみに対応している場合は主題ではない
-
-【入試頻出】
-・主題問題では「一番多く書かれていること」を選ぶ
-・本文の一部しか触れていない選択肢は不正解になることが多い
-・過度に具体的・数値的な選択肢は主題にならないことが多い`,
+    explanation:
+      '【何を聞かれているか】長文を読んで、本文の主題として最も適切なものを選ぶ。\n【なぜ②が正解なのか】長文全体を通読すると「問題提起（高齢者の孤独）→地域の取り組みの紹介→効果→専門家の意見」という流れで一貫して「地域社会の取り組みとその効果」が述べられており、これが文章全体の中心テーマになっているから。\n【ポイント1】本文の構造を確認する：①問題提起（高齢者の一人暮らしの増加）②取り組みの紹介（ボランティア訪問・コミュニティセンター）③効果（孤独感の減少）④専門家の意見（つながりの重要性）。\n【ポイント2】①「数値的な報告」は本文に数値の記述がなく不適切。③「若者への影響」、④「政府の政策」も本文に記述がなく、一部にしか関係しない内容。\n【ポイント3】全体を通して中心にあるのは「地域の取り組みとその効果」なので②が正解。\n【答え】② 地域社会が高齢者の孤独に対処するための取り組みとその効果\n【確かめ】選んだ選択肢が、本文の一部だけでなく全体を通して繰り返し述べられている内容と一致しているかを確認する。\n【よくあるまちがい】本文の一部にしか書かれていない具体的な内容（数値や若者への影響など）を主題だと誤解してしまう。\n【ここが絶対】主題問題は「本文の一部」ではなく「文章全体を通して繰り返し述べられていること」を選ぶ。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
