@@ -1130,19 +1130,8 @@ want to＋動詞原形：〜したい。主語が3人称単数のときは動詞
     question: `本文の内容と一致するものを選べ。\n① Sora quit the volleyball team because she was too short.\n② Sora's teammates laughed at her when she joined.\n③ Sora used her speed to become a key defensive player.\n④ Sora's team lost the final match of the tournament.`,
     answer: `③ Sora used her speed to become a key defensive player.`,
     hint: `空（そら）がどのように自分の弱点を克服したかという部分に注目する。`,
-    explanation: `【出題意図】
-長文の内容一致問題。因果関係（身長の低さ→スピードを生かす→守備の要になる）を正確に読み取れているかを確認する。
-
-【解説】
-本文には「By using her speed instead of her height, Sora became an important defensive player for the team.（身長の代わりにスピードを生かすことで、空はチームの重要な守備選手になった）」とあり、③と一致する。①「短すぎてチームを辞めた」は本文になく誤り。②「入部したときチームメートに笑われた」は本文の"Her teammates never made fun of her"と正反対。④「決勝で負けた」は誤りで、本文では彼女がチームの勝利に貢献したと書かれている。
-
-日本語訳：「4月にバレーボール部に入ったとき、空は一番背が低い選手で、練習中よく緊張していた。チームメートは彼女をからかうことは決してなく、代わりに素早く動く方法やボールの方向を読む方法を教えてくれた。身長の代わりにスピードを生かすことで、空はチームの重要な守備選手になった。トーナメントの決勝戦で、彼女はチームの勝利につながる3本の難しいボールを拾った。試合後、キャプテンは彼女に『このスポーツでは体の大きさがすべてじゃないって証明したね』と言った。空は今、毎回の練習が楽しみで、いつか自分がキャプテンになりたいと思っている。」
-
-【文法ポイント】
-内容一致問題は、本文の因果関係（〜によって〜になった）や比較（〜ではなく〜）の表現に注意して選択肢と照合する。
-
-【入試頻出】
-長文中のinstead of〜（〜の代わりに）、by〜ing（〜することによって）などの表現に注目した内容把握問題は頻出。`,
+    explanation:
+      '【何を聞かれているか】バレーボール部の空（そら）についての長文を読んで、本文の内容と一致するものを選ぶ。\n【なぜ③が正解なのか】本文に"By using her speed instead of her height, Sora became an important defensive player for the team."（身長の代わりにスピードを生かすことで、空はチームの重要な守備選手になった）とあり、これが③「空はスピードを生かして守備の要になった」と一致するから。\n【ポイント1】①「短すぎてチームを辞めた」は本文にない内容。\n【ポイント2】②「入部したときチームメートに笑われた」は本文の"Her teammates never made fun of her"（チームメートは彼女を決してからかわなかった）と正反対。\n【ポイント3】④「決勝で負けた」は誤りで、本文では彼女が3本の難しいボールを拾ってチームの勝利に貢献したと書かれている。\n【答え】③ Sora used her speed to become a key defensive player.\n【確かめ】本文の該当箇所（By using her speed instead of her height〜）と選択肢③が一致していることを確認する。\n【よくあるまちがい】本文の因果関係（〜によって〜になった）を正確に読み取らず、表面的な語句の一致だけで判断してしまう。\n【ここが絶対】内容一致問題は、本文の因果関係や比較の表現（instead of〜、by〜ingなど）に注意して選択肢と照合する。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',

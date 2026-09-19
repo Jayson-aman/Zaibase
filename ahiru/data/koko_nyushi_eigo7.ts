@@ -11,25 +11,8 @@ export const kokoNyushiEigo7: Question[] = [
     choices: ['① cooks', '② cooked', '③ has cooked', '④ had been cooking'],
     answer: '④ had been cooking',
     hint: '「私が帰宅したとき」より前から続いていた動作を表す時制を選ぶ。',
-    explanation: `【出題意図】
-過去完了進行形（had been + Ving）の用法を、家庭内の場面を通して問う問題。過去のある時点よりさらに前から継続していた動作を識別できるかがポイント。
-
-【解説】
-「I got home（私が帰宅した）」は過去の一時点。それより前から母が夕食を作り続けていたという継続動作を表すには過去完了進行形が必要。
-・① cooks → 現在形（時制が合わない）
-・② cooked → 過去形（継続の意味が出ない）
-・③ has cooked → 現在完了（過去の基準点には使えない）
-・④ had been cooking → 過去完了進行形（✓）
-
-日本語訳：「私が帰宅したとき、母は2時間夕食を作り続けていた。」
-
-【文法ポイント】
-過去完了進行形＝had been＋動詞-ing。過去の基準時点よりさらに前から、その時点まで続いていた動作に使う。for〜（〜の間）とセットで出やすい。
-
-【入試頻出】
-・She had been cleaning the kitchen for an hour when her father came home.
-・They had been waiting for the bus since noon.
-・My grandmother had been knitting a sweater when I visited her.`,
+    explanation:
+      '【何を聞かれているか】「My mother ( ) dinner for two hours when I got home.」の空所に入る適切な時制を選ぶ。\n【なぜhad been cookingになるのか】「私が帰宅した」という過去の時点よりさらに前から「母が夕食を作り続けていた」という継続動作を表すには、過去完了進行形（had been＋動詞のing形）を使う必要があるから。\n【ポイント1】I got home（私が帰宅した）は過去の1つの時点。その時点よりも前から継続していた動作を表すには、さらに過去を示す時制が必要。\n【ポイント2】①cooks（現在形）、②cooked（過去形、継続の意味が出ない）、③has cooked（現在完了、過去の基準点には使えない）はどれも文脈に合わない。\n【ポイント3】④had been cooking（過去完了進行形）が正解。「私が帰宅したとき、母は2時間夕食を作り続けていた」という意味になる。\n【答え】④ had been cooking\n【確かめ】「for two hours」という継続の期間を表す語句と、過去完了進行形の組み合わせがセットになっていることを確認する。\n【よくあるまちがい】has cooked（現在完了形）を選んでしまう。現在完了は現在を基準にするので、過去の基準点には使えない。\n【ここが絶対】過去のある時点よりもさらに前から、その時点まで継続していた動作には過去完了進行形を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -42,25 +25,8 @@ export const kokoNyushiEigo7: Question[] = [
     choices: ['① must', '② should', '③ can', '④ may'],
     answer: '① must',
     hint: '「〜しなければケーキが作れない」という強い必要性を表す助動詞を選ぶ。',
-    explanation: `【出題意図】
-助動詞 must の「強い義務・必要性」の用法を、買い物の場面で問う問題。他の助動詞との意味の違いの識別が目標。
-
-【解説】
-「or we won't be able to make the cake（さもないとケーキが作れない）」という強い条件から、話者自身が強く感じている必要性＝must が適切。
-・① must → 「〜しなければならない」強い義務（✓）
-・② should → 「〜すべきだ」推奨レベルで弱すぎる
-・③ can → 「〜できる」可能を表すだけで義務の意味がない
-・④ may → 「〜してもよい」許可を表すだけ
-
-日本語訳：「帰り道に卵を買わなければ、ケーキが作れなくなる。」
-
-【文法ポイント】
-must：話者の主観による強い義務。否定文 must not は「〜してはいけない」（禁止）になる点に注意（don't have to「〜しなくてよい」との違いが頻出）。
-
-【入試頻出】
-・You must wash your hands before dinner.
-・You must not eat before your sister arrives.
-・We must hurry, or we will miss the store's closing time.`,
+    explanation:
+      '【何を聞かれているか】「We ( ) buy some eggs on the way home, or we won\'t be able to make the cake.」の空所に入る適切な助動詞を選ぶ。\n【なぜmustになるのか】「さもないとケーキが作れない」という強い条件から、話者自身が強く感じている必要性を表すmustが適切だから。\n【ポイント1】②should（〜すべきだ、推奨レベルで弱すぎる）、③can（能力）、④may（許可）はどれもこの強い必要性を表せない。\n【ポイント2】①must（〜しなければならない、強い義務）が正解。\n【ポイント3】mustは話者の主観による強い義務を表す。否定文must notは「〜してはいけない」（禁止）という別の意味になる点に注意（don\'t have to「〜しなくてよい」との違いが頻出）。\n【答え】① must\n【確かめ】"or we won\'t be able to make the cake"という結果が、強い必要性（must）と自然につながっているかを確認する。\n【よくあるまちがい】mustとhave toの意味は近いが、shouldを選んでしまい、強さの違いを見落とす。\n【ここが絶対】must：話者の主観による強い義務。「〜しなければ…できない」という強い条件にはmustを使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -197,25 +163,8 @@ finish は目的語に動名詞のみをとり、不定詞（to +原形）はと
     choices: ['① will finish', '② have finished', '③ will have finished', '④ finished'],
     answer: '③ will have finished',
     hint: '「両親が帰宅するまでには」という未来の時点での完了を表す時制を選ぶ。',
-    explanation: `【出題意図】
-未来完了形（will have + 過去分詞）を、家事を終える場面で問う問題。未来の時点までの完了を表す時制の識別が目標。
-
-【解説】
-「By the time my parents come home（両親が帰宅するまでには）」は未来の一時点を示す。その時点までに「掃除を終えている」という完了を表すには未来完了形を使う。
-・① will finish → 単純未来（完了の意味が出ない）
-・② have finished → 現在完了（未来の時点には使えない）
-・③ will have finished → 未来完了（✓）
-・④ finished → 過去形（文脈に合わない）
-
-日本語訳：「両親が帰宅するまでには、私は掃除をすべて終えているだろう。」
-
-【文法ポイント】
-未来完了形＝will have＋過去分詞。by the time〜、by then、by next〜 など未来の時点を示す語句とセットで使う。
-
-【入試頻出】
-・By next month, she will have finished knitting the scarf.
-・By the time you wake up, I will have cooked breakfast.
-・He will have left home by seven tomorrow.`,
+    explanation:
+      '【何を聞かれているか】「By the time my parents come home, I ( ) all the cleaning.」の空所に入る適切な時制を選ぶ。\n【なぜwill have finishedになるのか】「両親が帰宅するまでには」という未来のある時点で「掃除を終えていることになる」という完了を表すには、未来完了形（will have＋過去分詞）を使う必要があるから。\n【ポイント1】By the time my parents come home（両親が帰宅するまでには）は未来の時点を示す表現。\n【ポイント2】①will finish（単純未来）、②have finished（現在完了、未来の時点には使えない）、④finished（過去形）はどれも文脈に合わない。\n【ポイント3】③will have finished（未来完了）が正解。目印はby the time〜、by then、by next〜。\n【答え】③ will have finished\n【確かめ】By the timeの節の動詞が現在形（come）になっており、主節が未来完了（will have finished）になっているかを確認する。\n【よくあるまちがい】have finished（現在完了）を選んでしまう。現在完了は現在を基準にするので、未来の時点には使えない。\n【ここが絶対】未来のある時点での完了にはwill have＋過去分詞（未来完了形）を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -228,25 +177,8 @@ finish は目的語に動名詞のみをとり、不定詞（to +原形）はと
     choices: ['① doesn’t', '② won’t', '③ didn’t', '④ isn’t'],
     answer: '① doesn’t',
     hint: '条件を表す if 節の中では、未来のことでも現在形を使う。',
-    explanation: `【出題意図】
-時・条件を表す副詞節（if 節）の中では未来でも現在形を使うという入試最頻出ルールを、買い物の予定を通して問う問題。
-
-【解説】
-「if it ( ) rain tomorrow」は条件節。主節に will があっても、if 節の中では未来を表すのに現在形を使う。
-・① doesn't → 現在形の否定（✓）「雨が降らなければ」
-・② won't → if 節内で will/won't は使えない
-・③ didn't → 過去形（仮定法過去になり文脈に合わない）
-・④ isn't → be動詞で、rain（動詞）と一致しない
-
-日本語訳：「もし明日雨が降らなければ、私たちは午後買い物に行きます。」
-
-【文法ポイント】
-時・条件の副詞節（if / when / as soon as / until など）の中では、未来のことでも現在形を使う。
-
-【入試頻出】
-・If she doesn't come by five, we will start dinner without her.
-・When my mother finishes cooking, we will eat together.
-・As soon as the store opens, let's go buy some fruit.`,
+    explanation:
+      '【何を聞かれているか】「If it ( ) rain tomorrow, we will go grocery shopping in the afternoon.」の空所に入る適切な語を選ぶ。\n【なぜdoesn\'tになるのか】条件を表すif節の中では、未来のことでもwillを使わず現在形を使うという決まりがあり、この文は否定の条件（雨が降らなければ）なので現在形の否定doesn\'tを使う必要があるから。\n【ポイント1】if節などの副詞節の中では、未来のことでも現在形で表す。②won\'tはif節の中では使えない。\n【ポイント2】③didn\'t（過去形、仮定法過去になり文脈に合わない）、④isn\'t（be動詞でrainという動詞と一致しない）はどちらも誤り。\n【ポイント3】①doesn\'t（現在形の否定）が正解。「もし明日雨が降らなければ」という条件を表す。\n【答え】① doesn\'t\n【確かめ】主節にwillが使われている（we will go）ことと、if節が現在形の否定（doesn\'t）になっていることのバランスを確認する。\n【よくあるまちがい】if節の中にもwon\'tを入れてしまう。\n【ここが絶対】時・条件を表す副詞節の中では、未来のことでも現在形（否定ならdoesn\'t/don\'t）を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -290,25 +222,8 @@ finish は目的語に動名詞のみをとり、不定詞（to +原形）はと
     choices: ['① early', '② earlier', '③ the earliest', '④ more early'],
     answer: '③ the earliest',
     hint: '「家族の中で一番」という範囲を示す語句があるので最上級を使う。',
-    explanation: `【出題意図】
-最上級の正しい形と、the の必要性を家族内の比較を通して問う問題。
-
-【解説】
-「Of all my family members（家族全員の中で）」は範囲を示す表現で、その中での「一番」を表すには最上級が必要。
-・① early → 原級
-・② earlier → 比較級（2者比較のみ）
-・③ the earliest → 最上級（✓）
-・④ more early → 誤った形（early は -er/-est 型）
-
-日本語訳：「家族の中で、母が一番早く起きる。」
-
-【文法ポイント】
-最上級には the をつける。early のような -y で終わる副詞・形容詞は y→i にして -est（early→earliest）。範囲を示す of all〜、in my family などが最上級の目印になる。
-
-【入試頻出】
-・Of all the shops in town, this one is the cheapest.
-・She cooks the best in my family.
-・My grandmother wakes up the earliest every morning.`,
+    explanation:
+      '【何を聞かれているか】「Of all my family members, my mother gets up ( ).」の空所に入る適切な比較表現を選ぶ。\n【なぜthe earliestになるのか】「Of all my family members（家族全員の中で）」という範囲を示す表現があるため、その中での「一番」を表す最上級が必要だから。\n【ポイント1】①early（原級）、②earlier（比較級、2者比較のみ）はどちらも「一番」の意味を表せない。\n【ポイント2】③the earliest（最上級）が正解。earlyのような-yで終わる語はyをiにかえて-estをつける（early→earliest）。\n【ポイント3】④more early（誤った形）。earlyは-er/-est型の語なのでmoreは使わない。\n【答え】③ the earliest\n【確かめ】the earliestのtheが抜けていないかを確認する。\n【よくあるまちがい】④more earlyのように、-er/-est型の語にmoreをつけてしまう。\n【ここが絶対】最上級には必ずtheをつける。範囲を示すof all〜、in〜などが最上級の目印になる。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -511,25 +426,8 @@ at＋比較的小さい・特定の地点（at the store, at the station）／in
     choices: ['① My cooking style is the same as my mother’s.', '② My cooking style is like my mother’s.', '③ My cooking style is different from my mother’s.', '④ My cooking style is better than my mother’s.'],
     answer: '② My cooking style is like my mother’s.',
     hint: 'be similar to〜 は「〜に似ている」という意味。完全に同一という意味ではない。',
-    explanation: `【出題意図】
-be similar to〜（〜に似ている）の意味を正しく理解し、近い意味の表現を選べるかを問う問題。
-
-【解説】
-be similar to〜 は「似ている」であり「全く同じ」ではない点に注意。
-・① the same as〜 → 「〜と全く同じ」で意味が強すぎる
-・② like〜 → 「〜のようだ、〜に似ている」で similar to とほぼ同義（✓）
-・③ different from〜 → 「異なる」で正反対の意味
-・④ better than〜 → 優劣を表し、similar の意味とは異なる
-
-日本語訳：「私の料理のスタイルは母の料理のスタイルに似ている。」
-
-【文法ポイント】
-be similar to〜＝be like〜（〜に似ている）。be the same as〜（全く同じ）や be different from〜（異なる）との意味の強さの違いを区別する。
-
-【入試頻出】
-・Her handwriting is similar to her sister's.
-・This recipe is like the one my grandmother uses.
-・His opinion is different from mine.`,
+    explanation:
+      '【何を聞かれているか】「My cooking style is similar to my mother\'s.」と意味が最も近い文を選ぶ。\n【なぜlikeが同義になるのか】be similar to〜は「〜に似ている」という意味で、「全く同じ」ではなく、be like〜とほぼ同じ意味を表すから。\n【ポイント1】①the same as〜（〜と全く同じ）は意味が強すぎる。③different from〜（異なる）は正反対の意味。④better than〜（〜より良い）は優劣を表し、similarとは異なる。\n【ポイント2】②like〜（〜のようだ、〜に似ている）がsimilar toとほぼ同義（✓）。\n【ポイント3】be similar to〜＝be like〜。be the same as〜やbe different from〜との意味の強さの違いを区別する。\n【答え】② My cooking style is like my mother\'s.\n【確かめ】similarが「似ている」であって「全く同じ」ではないことを確認する。\n【よくあるまちがい】similarをthe sameと同じ意味だと誤解してしまう。\n【ここが絶対】be similar to〜＝be like〜（似ている）。be the same as〜（全く同じ）とは意味の強さがちがう。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -639,25 +537,8 @@ in time for〜／to do：〜に間に合って。on time：時間通りに（定
     choices: ['① who', '② which', '③ whom', '④ whose'],
     answer: '① who',
     hint: '先行詞は「人」、関係代名詞節内での役割は「主語」。',
-    explanation: `【出題意図】
-関係代名詞 who（先行詞が人・主格）の用法を、台所にいる家族という場面で問う問題。
-
-【解説】
-先行詞は「The woman（女性）」＝人。関係代名詞節内で「is cooking」の主語の役割をしている。
-・① who → 先行詞が人・主格（✓）
-・② which → 先行詞が物・動物
-・③ whom → 先行詞が人・目的格
-・④ whose → 所有格
-
-日本語訳：「台所で料理をしている女性は私のおばです。」
-
-【文法ポイント】
-主格の関係代名詞は先行詞の直後に置き、その後に動詞が続く（who is cooking）。that で置き換えても可。
-
-【入試頻出】
-・The man who is washing the car is my uncle.
-・The girl who lives next door is my cousin.
-・I have a friend who cooks very well.`,
+    explanation:
+      '【何を聞かれているか】「The woman ( ) is cooking in the kitchen is my aunt.」の空所に入る適切な関係代名詞を選ぶ。\n【なぜwhoになるのか】先行詞The woman（女性）は人で、関係代名詞節の中でis cooking（料理をしている）の主語の役割をしているため、先行詞が人・主格のときに使うwhoを選ぶ必要があるから。\n【ポイント1】先行詞がThe woman（人）で、関係代名詞節内でis cookingの主語になっている（主格）。\n【ポイント2】②whichは先行詞が物や動物、③whomは先行詞が人・目的格、④whoseは所有格で、どれも文脈に合わない。\n【ポイント3】主格の関係代名詞は先行詞の直後に置き、その後に動詞が続く（who is cooking）。thatで置きかえても可。\n【答え】① who\n【確かめ】whoのあとに動詞（is cooking）が続いている（主語の役割）ことを確認する。\n【よくあるまちがい】先行詞が人なのにwhichを選んでしまう。\n【ここが絶対】関係代名詞は、先行詞が人か物かと、節内での役割（主格・目的格・所有格）の両方で決まる。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -670,27 +551,8 @@ in time for〜／to do：〜に間に合って。on time：時間通りに（定
     choices: ['① who', '② which', '③ whom', '④ where'],
     answer: '② which',
     hint: '先行詞は「物（バッグ）」。関係代名詞節内で bought の目的語になっている。',
-    explanation: `【出題意図】
-関係代名詞 which（先行詞が物・目的格）の用法を、買い物の場面で問う問題。
-
-【解説】
-先行詞は「The bag（バッグ）」＝物。関係代名詞節内で「my mother bought ( )」の目的語になっている。
-・① who → 先行詞が人のとき
-・② which → 先行詞が物・目的格（✓）
-・③ whom → 先行詞が人・目的格
-・④ where → 関係副詞（場所を表す先行詞に使う）
-
-which は省略可（that に置き換え可）：The bag (that) my mother bought〜
-
-日本語訳：「母がモールで買ったバッグはとても高かった。」
-
-【文法ポイント】
-目的格の関係代名詞は省略できる：先行詞＋（関係代名詞）＋主語＋動詞〜。
-
-【入試頻出】
-・The shoes (which) I bought yesterday are too small.
-・The cake (that) my sister made was delicious.
-・This is the umbrella (which) I left at the store.`,
+    explanation:
+      '【何を聞かれているか】「The bag ( ) my mother bought at the mall was very expensive.」の空所に入る適切な関係代名詞を選ぶ。\n【なぜwhichになるのか】先行詞The bag（バッグ）は物で、関係代名詞節の中でmy mother bought（　）の目的語の役割をしているため、先行詞が物・目的格のときに使うwhichを選ぶ必要があるから。\n【ポイント1】先行詞がThe bag（物）で、関係代名詞節内でmy mother boughtの目的語になっている（目的格）。\n【ポイント2】①whoは先行詞が人、③whomは先行詞が人・目的格、④whereは関係副詞で、どれも文脈に合わない。\n【ポイント3】whichは省略も可能で、thatに置きかえることもできる：The bag (that) my mother bought at the mall〜。\n【答え】② which\n【確かめ】whichのあとにmy mother bought（主語＋動詞）が続いている（目的語の役割）ことを確認する。\n【よくあるまちがい】先行詞が物なのにwhoを選んでしまう。\n【ここが絶対】目的格の関係代名詞は省略できる。先行詞が物ならwhich（thatはどちらにも使える）。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -703,25 +565,8 @@ which は省略可（that に置き換え可）：The bag (that) my mother bough
     choices: ['① which', '② who', '③ where', '④ when'],
     answer: '③ where',
     hint: '先行詞は「場所（store）」で、関係副詞を使う。',
-    explanation: `【出題意図】
-関係副詞 where（先行詞が場所）の用法を、思い出の商店という場面で問う問題。関係代名詞との区別も含む。
-
-【解説】
-先行詞は「the store（店）」＝場所。節内では「my grandmother used to buy vegetables at the store」の at the store が関係副詞 where に変わった構造。
-・① which → 物に使う関係代名詞（前置詞が必要になる）
-・② who → 人に使う
-・③ where → 場所を先行詞にとる関係副詞（✓）
-・④ when → 時を先行詞にとる関係副詞
-
-日本語訳：「祖母が野菜を買っていた店を私は今でも覚えている。」
-
-【文法ポイント】
-関係副詞 where＝前置詞＋which。the store where〜＝the store at/in which〜。
-
-【入試頻出】
-・This is the shop where my father used to work.
-・I know a restaurant where we can eat cheap and delicious food.
-・That is the house where my parents grew up.`,
+    explanation:
+      '【何を聞かれているか】「I still remember the store ( ) my grandmother used to buy vegetables.」の空所に入る適切な語を選ぶ。\n【なぜwhereになるのか】先行詞the store（店）は場所を表し、関係詞節の中に前置詞（at the store）が隠れているため、「前置詞＋which」の働きをする関係副詞whereを使う必要があるから。\n【ポイント1】先行詞the storeは場所。節の元の形はmy grandmother used to buy vegetables at the storeで、at the storeがwhereに置きかわっている。\n【ポイント2】①which（物に使う関係代名詞で前置詞が必要）、②who（人に使う）、④when（時を先行詞にとる）はどれも文脈に合わない。\n【ポイント3】③where（場所を先行詞にとる関係副詞）が正解。\n【答え】③ where\n【確かめ】whereの節の中に前置詞が抜けている（at the storeのatが不要になっている）ことを確認する。\n【よくあるまちがい】先行詞が場所なのに、前置詞を補わずにwhichを使ってしまう。\n【ここが絶対】関係副詞where＝前置詞＋which。先行詞が場所のときに使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -733,27 +578,8 @@ which は省略可（that に置き換え可）：The bag (that) my mother bough
     question: '次の2文を1文に書き換えなさい。（関係代名詞を使って）\n\nI have a cousin.\nHer mother runs a small bakery.',
     answer: 'I have a cousin whose mother runs a small bakery.',
     hint: '2つの文をつなぐとき、Her（彼女の）を所有格の関係代名詞 whose に変える。',
-    explanation: `【出題意図】
-所有格の関係代名詞 whose を使って2文を1文に結合する問題。家族関係の場面で確認する。
-
-【解説】
-「I have a cousin.」と「Her mother runs a small bakery.」の Her は a cousin を指している。この所有の関係を表すのが whose。
-
-変換の手順：
-1. 先行詞を特定：a cousin（人）
-2. Her（所有格）→ whose に置き換える
-3. whose を先行詞 a cousin の直後に置く
-→ I have a cousin whose mother runs a small bakery.
-
-日本語訳：「私にはお母さんが小さなパン屋を営んでいるいとこがいる。」
-
-【文法ポイント】
-whose の構造：先行詞＋whose＋名詞＋動詞〜。所有格代名詞（her, his, their など）を whose に置き換えるのが変換の核心。
-
-【入試頻出】
-・I know a boy whose father is a famous chef.
-・She has an uncle whose house is near the station.
-・He is a student whose sister works at that shop.`,
+    explanation:
+      '【何を聞かれているか】「I have a cousin. Her mother runs a small bakery.」を関係代名詞を使って1文にする。\n【なぜwhoseを使うのか】2つ目の文のHer（彼女の）がa cousin（1つ目の文の名詞）の所有を表しているため、この所有の関係を表す所有格の関係代名詞whoseに置きかえる必要があるから。\n【ポイント1】先行詞を特定する：a cousin（人）。\n【ポイント2】Her（所有格）をwhoseに置きかえ、先行詞a cousinの直後に置く。\n【ポイント3】I have a cousin whose mother runs a small bakery.（私にはお母さんが小さなパン屋を営んでいるいとこがいる）。\n【答え】I have a cousin whose mother runs a small bakery.\n【確かめ】whoseのあとにmother（名詞）、runs（動詞）と続いているかを確認する。\n【よくあるまちがい】whoseのかわりにwhoを使ってしまう。所有の関係にはwhoseを使う。\n【ここが絶対】whoseは先行詞の所有格を表す関係代名詞。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -765,28 +591,8 @@ whose の構造：先行詞＋whose＋名詞＋動詞〜。所有格代名詞（
     question: '次の文を間接疑問文に書き換えなさい。\n\n直接疑問文：What time does the supermarket close?\n「そのスーパーが何時に閉まるか知っていますか？」',
     answer: 'Do you know what time the supermarket closes?',
     hint: '間接疑問文では疑問詞の後ろが「主語＋動詞」の語順に戻り、do/does は消える。',
-    explanation: `【出題意図】
-間接疑問文（疑問詞＋主語＋動詞の語順）への書き換えを、買い物の場面で問う問題。語順の変化が最大のポイント。
-
-【解説】
-直接疑問文「What time does the supermarket close?」を間接疑問文にする手順：
-1. 疑問詞 What time はそのまま使う
-2. 疑問詞の後ろは「主語＋動詞」の平叙文語順に変える
-3. does は消えて、動詞に3単現の s がつく（close→closes）
-4. 全体を「Do you know＋間接疑問」にする
-
-× Do you know what time does the supermarket close?（誤り）
-○ Do you know what time the supermarket closes?（正解）
-
-日本語訳：「そのスーパーが何時に閉まるか知っていますか？」
-
-【文法ポイント】
-間接疑問文の語順：疑問詞＋主語＋動詞〜（平叙文語順）。
-
-【入試頻出】
-・Do you know what time the store opens?
-・Can you tell me where the nearest bakery is?
-・I wonder why the shop was closed today.`,
+    explanation:
+      '【何を聞かれているか】「What time does the supermarket close?」（そのスーパーが何時に閉まるか知っていますか？）を間接疑問文に書きかえる。\n【なぜdoesが消えるのか】疑問文が他の文（Do you know〜）の一部に組み込まれると、疑問文特有の助動詞doesを使わず、ふつうの文と同じ〈疑問詞＋主語＋動詞〉の語順に戻すというルールがあるから。\n【ポイント1】疑問詞What timeはそのまま使う。\n【ポイント2】疑問詞の後ろを「主語＋動詞」の平叙文語順に変える。doesは消えて、動詞に3単現のsがつく（closes）。\n【ポイント3】全体をDo you know＋間接疑問の形にする。Do you know what time the supermarket closes?\n【答え】Do you know what time the supermarket closes?\n【確かめ】doesが消えて、動詞がcloseではなくclosesになっているかを確認する。\n【よくあるまちがい】Do you know what time does the supermarket close?のように疑問文の語順のままにしてしまう。\n【ここが絶対】間接疑問文の語順は〈疑問詞＋主語＋動詞〉の平叙文語順にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -833,28 +639,8 @@ which＋名詞（which vegetables, which bag）で「どの〜」という限定
     question: '次の語を並べ替えて正しい英文を作れ。\n（ know / you / do / where / my / father / bought / this / table ）\n「父がこのテーブルをどこで買ったか知っていますか？」',
     answer: 'Do you know where my father bought this table?',
     hint: '間接疑問文：疑問詞（where）の後ろは主語＋動詞の語順。全体は疑問文なので Do で始める。',
-    explanation: `【出題意図】
-間接疑問文の語順整序問題。「疑問詞＋主語＋動詞」という間接疑問の語順と、全体が疑問文になることを同時に確認する。
-
-【解説】
-ポイントは2つ：
-1. 全体が「Do you know〜?」という疑問文
-2. know の目的語（間接疑問）は「where my father bought this table」（平叙文語順）
-
-× Do you know where did my father buy this table?（誤り）
-○ Do you know where my father bought this table?（正解）
-
-語句の組み立て：Do you know / where / my father bought this table？
-
-日本語訳：「父がこのテーブルをどこで買ったか知っていますか？」
-
-【文法ポイント】
-間接疑問の語順：疑問詞＋主語＋動詞。全体が疑問文の場合：Do/Can/Could＋主語＋動詞＋疑問詞＋主語＋動詞〜?
-
-【入試頻出】
-・Do you know where she bought that dress?
-・Can you tell me why my brother is angry?
-・I don't know how my mother made this soup.`,
+    explanation:
+      '【何を聞かれているか】know / you / do / where / my / father / bought / this / table を並べ替えて「父がこのテーブルをどこで買ったか知っていますか？」という英文を作る。\n【なぜmy father boughtという語順になるのか】全体はDo you know〜?という疑問文だが、knowの目的語になる部分（間接疑問）は疑問文の語順ではなく、〈疑問詞（where）＋主語＋動詞〉という平叙文の語順にする必要があるから。\n【ポイント1】全体の骨組みはDo you know〜?という疑問文。\n【ポイント2】knowの目的語（間接疑問）はwhere my father bought this table（疑問文の語順ではなく平叙文語順）。\n【ポイント3】組み立てるとDo you know where my father bought this table?になる。\n【答え】Do you know where my father bought this table?\n【確かめ】whereのあとがdid my father buyではなくmy father bought（平叙文語順）になっているかを確認する。\n【よくあるまちがい】Do you know where did my father buy this table?のように疑問文の語順のままにしてしまう。\n【ここが絶対】間接疑問文の中は、疑問詞のあとを〈主語＋動詞〉の平叙文語順にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -896,24 +682,8 @@ for＋期間（for an hour, for two days）／since＋起点（since noon, since
     question: '次の語を並べ替えて正しい英文を作れ。\n（ enough / not / old / is / my / sister / to / go shopping alone ）\n「私の妹は一人で買い物に行くのに十分な年齢ではない。」',
     answer: 'My sister is not old enough to go shopping alone.',
     hint: '「〜するのに十分〜だ」は 形容詞＋enough＋to 動詞 の語順。',
-    explanation: `【出題意図】
-「形容詞＋enough＋to 動詞」の語順を問う整序問題。enough の位置が鍵。
-
-【解説】
-「〜するのに十分〜だ」は：主語＋be＋形容詞＋enough＋to＋動詞原形。enough は形容詞の後ろに置く（× enough old は誤り）。否定文では not が be動詞の後ろに来る。
-
-正しい語順：
-My sister is not old enough to go shopping alone.
-
-日本語訳：「私の妹は一人で買い物に行くのに十分な年齢ではない。」
-
-【文法ポイント】
-形容詞＋enough＋to動詞：「〜するのに十分〜だ」。too＋形容詞＋to動詞（〜すぎて〜できない）と対で覚える。
-
-【入試頻出】
-・He is tall enough to reach the top shelf.
-・She is old enough to cook dinner by herself.
-・The bag is light enough for me to carry.`,
+    explanation:
+      '【何を聞かれているか】enough / not / old / is / my / sister / to / go shopping alone を並べ替えて「私の妹は一人で買い物に行くのに十分な年齢ではない。」という英文を作る。\n【なぜenoughを形容詞のあとに置くのか】「〜するのに十分〜だ」は〈形容詞＋enough＋to動詞〉という決まった語順で表し、enoughは必ず形容詞のあとに置くというルールがあるから。\n【ポイント1】「〜するのに十分〜だ」は主語＋be＋形容詞＋enough＋to＋動詞原形の形。enoughは形容詞のあとに置く（enough oldは誤り）。\n【ポイント2】否定文ではnotがbe動詞のあとに来る。My sister is not old enough to go shopping alone.\n【ポイント3】反対の意味を表すtoo＋形容詞＋to動詞（〜すぎて〜できない）とセットで覚える。\n【答え】My sister is not old enough to go shopping alone.\n【確かめ】enoughがoldのあとに置かれているか（enough oldになっていないか）を確認する。\n【よくあるまちがい】enough oldのように、enoughを形容詞の前に置いてしまう。\n【ここが絶対】enoughは必ず形容詞・副詞のあとに置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -953,31 +723,12 @@ buy＋人＋物＝人のために物を買う（第4文型）。
   {
     id: 'koko_nyushi_eigo7_31',
     subject: 'eigo',
-    question: '次の語を並べ替えて正しい英文を作れ。\n（ family / after / we / dinner / will / talk / finishing / our ）\n「夕食を終えた後、私たちは家族で話をするつもりだ。」',
+    question:
+      '次の語を並べ替えて正しい英文を作れ。\n（ family / after / we / dinner / will / talk / finishing / our / with ）\n「夕食を終えた後、私たちは家族で話をするつもりだ。」',
     answer: 'We will talk with our family after finishing dinner.',
     hint: 'after の後には動名詞（〜ing）が来る。after＋動名詞＝〜した後で。',
-    explanation: `【出題意図】
-前置詞 after＋動名詞 の用法と、語順整序を問う問題。
-
-【解説】
-前置詞の後ろには名詞・動名詞が来る（不定詞は来ない）。「〜した後で」＝after＋動名詞（〜ing）。
-
-正しい語順：
-We will talk with our family after finishing dinner.
-（＝After finishing dinner, we will talk with our family.）
-
-× after to finish（前置詞の後ろに不定詞は来ない）
-○ after finishing（✓ 前置詞＋動名詞）
-
-日本語訳：「夕食を終えた後、私たちは家族で話をするつもりだ。」
-
-【文法ポイント】
-前置詞＋動名詞の頻出パターン：before＋ing／after＋ing／without＋ing／for＋ing。
-
-【入試頻出】
-・She left the table without finishing her meal.
-・Thank you for helping me with the shopping.
-・Before going to bed, we always talk about our day.`,
+    explanation:
+      '【何を聞かれているか】family / after / we / dinner / will / talk / finishing / our / with を並べ替えて「夕食を終えた後、私たちは家族で話をするつもりだ。」という英文を作る。\n【なぜafterのあとが動名詞になるのか】前置詞のあとには名詞・動名詞が来るという決まりがあり、不定詞（to＋原形）は前置詞のあとには置けないため、「〜した後で」はafter＋動名詞（〜ing）の形にする必要があるから。\n【ポイント1】前置詞の後ろには名詞・動名詞が来る（不定詞は来ない）。「〜した後で」＝after＋動名詞（〜ing）。\n【ポイント2】「家族で話す」はtalk with our family（talkは自動詞でwithが必要）。We will talk with our family after finishing dinner.\n【ポイント3】同じパターン：before＋ing（〜する前に）、without＋ing（〜せずに）。\n【答え】We will talk with our family after finishing dinner.\n【確かめ】talkのあとにwith（前置詞）が正しく続いているかを確認する。\n【よくあるまちがい】talkのあとのwithを抜かして、talk our familyのように直接名詞を続けてしまう。\n【ここが絶対】talkは自動詞なので「〜と話す」はtalk with/to〜という前置詞とセットで使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -986,30 +737,12 @@ We will talk with our family after finishing dinner.
   {
     id: 'koko_nyushi_eigo7_32',
     subject: 'eigo',
-    question: '次の語を並べ替えて正しい英文を作れ。\n（ the / who / is / man / at / next / lives / us / to / kind ）\n「私たちの隣に住んでいる男性は親切だ。」',
+    question:
+      '次の語を並べ替えて正しい英文を作れ。\n（ the / who / is / man / next / lives / us / to / kind ）\n「私たちの隣に住んでいる男性は親切だ。」',
     answer: 'The man who lives next to us is kind.',
     hint: '関係代名詞 who を使って先行詞「the man」を修飾する節を作る。',
-    explanation: `【出題意図】
-関係代名詞 who（主格）を使った語順整序問題。先行詞と関係代名詞節の位置関係が鍵。
-
-【解説】
-文の骨格：The man is kind.（その男性は親切だ）
-修飾部：who lives next to us（私たちの隣に住んでいる）
-
-組み合わせ：
-The man [who lives next to us] is kind.
-
-who はここでは主格（lives の主語）として使われている。
-
-日本語訳：「私たちの隣に住んでいる男性は親切だ。」
-
-【文法ポイント】
-関係代名詞節の位置：先行詞の直後に置く。主節の動詞（is）は関係代名詞節の後に続く。next to〜（〜の隣に）という前置詞句もセットで確認する。
-
-【入試頻出】
-・The woman who works at the bakery is very friendly.
-・The boy who helps his mother every day is my classmate.
-・The family who moved next door has three children.`,
+    explanation:
+      '【何を聞かれているか】the / who / is / man / next / lives / us / to / kind を並べ替えて「私たちの隣に住んでいる男性は親切だ。」という英文を作る。\n【なぜwho livesという語順になるのか】関係代名詞whoを使って、先行詞The manのうしろにwho lives next to us（私たちの隣に住んでいる）という節を置くことで、The manを説明できるから。\n【ポイント1】文の骨格はThe man is kind.（その男性は親切だ）。\n【ポイント2】修飾部はwho lives next to us（私たちの隣に住んでいる）。ここでのwhoはlivesの主語（主格）にあたる。next to〜は「〜の隣に」という前置詞句。\n【ポイント3】組み合わせるとThe man who lives next to us is kind.になる。\n【答え】The man who lives next to us is kind.\n【確かめ】関係代名詞節（who lives next to us）が先行詞The manの直後に置かれ、そのあとに主節の動詞isが続いているかを確認する。\n【よくあるまちがい】next toの語順を逆にしてto nextとしてしまう。\n【ここが絶対】「〜の隣に」はnext to〜という決まった語順で覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1272,25 +1005,8 @@ not A but B：AではなくB。ones は「物」を指す代名詞で、繰り�
     choices: ['① Sure, let’s get some.', '② No, I have already eaten them.', '③ Yes, I sold them yesterday.', '④ Sorry, I can’t hear you.'],
     answer: '① Sure, let’s get some.',
     hint: '直後の「今日は少し高いけど」という続きに自然につながる、賛成の返答を選ぶ。',
-    explanation: `【出題意図】
-買い物中の提案とそれへの賛成の応答の自然な流れを問う問題。
-
-【解説】
-Aが「いちごを買おうか？」と提案し、Bの返答の後に「ただ今日は少し高いけど」と続く。この流れに自然につながるのは、いったん賛成する返答。
-・① Sure, let's get some. → 「いいね、買おう」（✓）その後の但し書き（少し高い）に自然につながる
-・② No, I have already eaten them. → 「もう食べた」は買い物の提案と噛み合わない
-・③ Yes, I sold them yesterday. → 「昨日売った」は文脈と無関係
-・④ Sorry, I can't hear you. → 「聞こえない」は会話の流れと無関係
-
-日本語訳：「A：このいちご、新鮮そうだね。買おうか？　B：うん、買おう。でも今日は少し高いね。」
-
-【文法ポイント】
-Should we〜?（〜しようか）という提案表現。though を文末に置いて「〜だけど」という軽い逆接を添える用法も入試頻出。
-
-【入試頻出】
-・Should we buy some apples? Sure, let's get some.
-・Should we take the bus? Sure. It's raining, though.
-・Shall we cook dinner together? Sure, that sounds fun.`,
+    explanation:
+      '【何を聞かれているか】「These strawberries look fresh. Should we buy some?」への返答（このあとThey\'re a little expensive today, though.と続く）に合う表現を選ぶ。\n【なぜ①が正解なのか】Aが「いちごを買おうか」と提案し、そのあと「ただ今日は少し高いけど」という但し書きが続くことから、間にはいったん賛成する返答が入るはずだから。\n【ポイント1】①Sure, let\'s get some.（いいね、買おう）は、そのあとの但し書き（少し高いけど）に自然につながる。\n【ポイント2】②「もう食べた」は買い物の提案と噛み合わない。③「昨日売った」は文脈と無関係。④「聞こえない」は会話の流れと無関係。\n【ポイント3】Should we〜?（〜しようか）という提案表現。thoughを文末に置いて「〜だけど」という軽い逆接を添える。\n【答え】① Sure, let\'s get some.\n【確かめ】選んだ返答のあとにThey\'re a little expensive today, though.が自然に続くかを確認する。\n【よくあるまちがい】提案と噛み合わない返答を選んでしまう。\n【ここが絶対】対話文の空所は、その後に続く文とのつながりを見て自然な流れになる返答を選ぶ。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1362,23 +1078,8 @@ This is the chair my grandfather made for me.
     question: '次の日本語を英語にしなさい。\n\n「私たちは新しい冷蔵庫を買うかどうかまだ決めていません。」',
     answer: 'We have not decided whether we will buy a new refrigerator yet.',
     hint: '「〜かどうか」は whether を使い、現在完了の否定形「まだ決めていない」を組み合わせる。',
-    explanation: `【出題意図】
-現在完了形の否定（have not decided）と、名詞節を導く whether（〜かどうか）を組み合わせた英作文力を問う問題。
-
-【解説】
-「まだ〜していない」は have/has not＋過去分詞＋yet で表す。「〜かどうか」は whether（または if）で名詞節を作り、decide の目的語にする。
-We have not decided whether we will buy a new refrigerator yet.
-（yet は文末に置くのが一般的）
-
-日本語訳の確認：「私たちは新しい冷蔵庫を買うかどうかまだ決めていません。」
-
-【文法ポイント】
-whether（〜かどうか）は名詞節を導く接続詞で、decide、know、wonder などの目的語になる。現在完了の否定＋yet「まだ〜していない」もセットで確認する。
-
-【入試頻出】
-・I have not decided whether I will join the club yet.
-・She hasn't decided whether she will go shopping today.
-・We haven't decided where to go for the trip yet.`,
+    explanation:
+      '【何を聞かれているか】「私たちは新しい冷蔵庫を買うかどうかまだ決めていません。」を英語に訳す。\n【なぜwhetherを使うのか】「〜かどうか」という意味は接続詞whether（またはif）で名詞節を作って表し、「まだ〜していない」は現在完了形の否定＋yetで表す必要があるから。\n【ポイント1】「まだ〜していない」＝have/has not＋過去分詞＋yet。\n【ポイント2】「〜かどうか」＝whether（またはif）で名詞節を作り、decideの目的語にする。\n【ポイント3】We have not decided whether we will buy a new refrigerator yet.（yetは文末に置くのが一般的）。\n【答え】We have not decided whether we will buy a new refrigerator yet.\n【確かめ】whetherのあとが〈主語＋動詞〉の文の形になっているかを確認する。\n【よくあるまちがい】whetherを使わずthatを使ってしまう。「〜かどうか」にはwhether（またはif）を使う。\n【ここが絶対】whether（〜かどうか）は名詞節を導く接続詞で、decide、know、wonderなどの目的語になる。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1390,22 +1091,8 @@ whether（〜かどうか）は名詞節を導く接続詞で、decide、know、
     question: '次の日本語を英語にしなさい。\n\n「この店で売られている野菜は、他の店の野菜より新鮮だ。」',
     answer: 'The vegetables sold at this store are fresher than those at other stores.',
     hint: '過去分詞の後置修飾（sold at this store）と比較級（fresher than）を組み合わせる。',
-    explanation: `【出題意図】
-過去分詞の後置修飾と比較級を組み合わせた、やや高度な英作文力を問う問題。同じ名詞の繰り返しを避ける those の使い方も含む。
-
-【解説】
-「この店で売られている野菜」は The vegetables（which are）sold at this store のように過去分詞 sold を使って後ろから名詞を修飾する。比較の対象「他の店の野菜」は繰り返しを避けて those（＝the vegetables）で表す。
-The vegetables sold at this store are fresher than those at other stores.
-
-日本語訳の確認：「この店で売られている野菜は、他の店の野菜より新鮮だ。」
-
-【文法ポイント】
-過去分詞の後置修飾：名詞＋過去分詞〜（sold at this store）で「〜される名詞」を表す。比較文で同じ名詞の繰り返しを避けるときは that（単数）／those（複数）を使う。
-
-【入試頻出】
-・The bread baked at this bakery is more popular than that at the supermarket.
-・The bags made by this company are cheaper than those made abroad.
-・The apples grown in this town are sweeter than those from other regions.`,
+    explanation:
+      '【何を聞かれているか】「この店で売られている野菜は、他の店の野菜より新鮮だ。」を英語に訳す。\n【なぜ過去分詞とthoseを使うのか】「この店で売られている野菜」は過去分詞soldを使って名詞を後ろから修飾し、「他の店の野菜」は同じ名詞the vegetablesの繰り返しを避けるためthose（複数名詞の代わり）を使う必要があるから。\n【ポイント1】過去分詞の後置修飾：名詞＋過去分詞〜（sold at this store）で「〜される名詞」を表す。The vegetables sold at this store。\n【ポイント2】比較の対象「他の店の野菜」は繰り返しを避けてthose（＝the vegetables）で表す。\n【ポイント3】The vegetables sold at this store are fresher than those at other stores.\n【答え】The vegetables sold at this store are fresher than those at other stores.\n【確かめ】thoseがthe vegetablesの代わりに使われており、名詞の繰り返しを避けていることを確認する。\n【よくあるまちがい】thoseのかわりにitやthatを使ってしまう。複数名詞の代わりにはthoseを使う。\n【ここが絶対】比較文で同じ名詞の繰り返しを避けるときは、単数名詞の代わりにthat、複数名詞の代わりにthoseを使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1417,22 +1104,8 @@ The vegetables sold at this store are fresher than those at other stores.
     question: '次の日本語を英語にしなさい。\n\n「もし十分なお金があれば、家族全員に新しい服を買ってあげるのに。」',
     answer: 'If I had enough money, I would buy new clothes for all my family members.',
     hint: '現在の事実に反する仮定は「if＋過去形、主語＋would＋動詞原形」（仮定法過去）を使う。',
-    explanation: `【出題意図】
-仮定法過去（if＋過去形、主語＋would＋動詞原形）を用いて、現実とは異なる仮定を表す英作文力を問う問題。中学英語の範囲内で扱われる基本的な仮定法過去。
-
-【解説】
-「もし〜ならば…なのに」という、現在の事実に反する仮定には仮定法過去を使う：if 節の中は過去形、主節は would（または could）＋動詞原形。実際には十分なお金がないという前提がある。
-If I had enough money, I would buy new clothes for all my family members.
-
-日本語訳の確認：「もし十分なお金があれば、家族全員に新しい服を買ってあげるのに。」
-
-【文法ポイント】
-仮定法過去：If＋主語＋過去形〜, 主語＋would/could＋動詞原形…。現在の事実とは異なる願望・仮定を表す（実際にはお金が十分ではない）。
-
-【入試頻出】
-・If I had more time, I would help my mother with the cooking.
-・If she were free tomorrow, she would go shopping with me.
-・If we had a bigger kitchen, we could cook together more easily.`,
+    explanation:
+      '【何を聞かれているか】「もし十分なお金があれば、家族全員に新しい服を買ってあげるのに。」を英語に訳す。\n【なぜhadとwouldを使うのか】「もし〜ならば…なのに」という現在の事実に反する仮定（実際には十分なお金がない）を表すには、仮定法過去（if節は過去形、主節はwould＋動詞原形）を使う必要があるから。\n【ポイント1】仮定法過去の形：If＋主語＋過去形〜, 主語＋would/could＋動詞原形…。\n【ポイント2】「持っている」の現在の文はhaveだが、仮定法過去ではhadにする。\n【ポイント3】If I had enough money, I would buy new clothes for all my family members.\n【答え】If I had enough money, I would buy new clothes for all my family members.\n【確かめ】if節の動詞がhad（過去形）になっているか、主節がwould＋動詞原形になっているかを確認する。\n【よくあるまちがい】If I have enough money, I will buy〜のように現在形のまま書いてしまう。\n【ここが絶対】現在の事実に反する仮定は仮定法過去（if節は過去形、主節はwould/could＋動詞原形）で表す。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',

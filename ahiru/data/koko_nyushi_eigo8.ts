@@ -11,26 +11,8 @@ export const kokoNyushiEigo8: Question[] = [
     choices: ['① works', '② has worked', '③ had been working', '④ will work'],
     answer: '③ had been working',
     hint: '工場が閉鎖した（過去の一時点）よりもさらに前から続いていた動作を表す時制を選ぶ。',
-    explanation: `【出題意図】
-過去完了進行形（had been + Ving）の用法を問う問題。過去のある時点までずっと継続していた動作を表す時制の識別が目標。
-
-【解説】
-「when the factory... closed down（工場が閉鎖したとき）」は過去の一時点。その時点よりもさらに前から「大工として働き続けていた」という継続動作を表すには過去完了進行形を使う。
-・① works → 現在形（文脈に合わない）
-・② has worked → 現在完了形（過去の基準点には使えない）
-・③ had been working → 過去完了進行形（✓）
-・④ will work → 未来形（文脈に合わない）
-
-日本語訳：「隣の工場が閉鎖したとき、彼は10年間大工として働き続けていた。」
-
-【文法ポイント】
-過去完了進行形 = had been + 動詞-ing
-→ 過去のある時点よりもさらに前から、その時点まで継続していた動作に使う。「for〜」「since〜」などの継続を示す語句とセットで出やすい。
-
-【入試頻出】
-・She had been studying abroad for two years when she got the job offer.
-・They had been working on the project since spring when it was cancelled.
-「when＋過去形」の主節に過去完了（進行）形を使うパターンを押さえよ。`,
+    explanation:
+      '【何を聞かれているか】「He ( ) as a carpenter for ten years when the factory next door closed down.」の空所に入る適切な時制を選ぶ。\n【なぜhad been workingになるのか】「工場が閉鎖した」という過去の時点よりさらに前から「大工として働き続けていた」という継続動作を表すには、過去完了進行形（had been＋動詞のing形）を使う必要があるから。\n【ポイント1】when the factory closed down（工場が閉鎖したとき）は過去の1つの時点。その時点よりも前から継続していた動作を表すには、さらに過去を示す時制が必要。\n【ポイント2】①works（現在形）、②has worked（現在完了、過去の基準点には使えない）、④will work（未来形）はどれも文脈に合わない。\n【ポイント3】③had been working（過去完了進行形）が正解。「工場が閉鎖したとき、彼は10年間大工として働き続けていた」という意味になる。\n【答え】③ had been working\n【確かめ】「for ten years」という継続の期間を表す語句と、過去完了進行形の組み合わせがセットになっていることを確認する。\n【よくあるまちがい】has worked（現在完了形）を選んでしまう。現在完了は現在を基準にするので、過去の基準点には使えない。\n【ここが絶対】過去のある時点よりもさらに前から、その時点まで継続していた動作には過去完了進行形を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -107,26 +89,8 @@ should：義務より軽い推奨
     choices: ['① dangerous', '② more dangerous', '③ the most dangerous', '④ most dangerous'],
     answer: '③ the most dangerous',
     hint: '「町で一番〜」は最上級。最上級の前には the が必要。',
-    explanation: `【出題意図】
-比較表現（原級・比較級・最上級）の使い分けと、最上級に定冠詞 the が必要なことを問う問題。
-
-【解説】
-「in our town（私たちの町で）」は範囲を示す表現で、その中で「一番」を表すには最上級が必要。
-・① dangerous → 原級（比較なし）
-・② more dangerous → 比較級（2つを比べる）
-・③ the most dangerous → 最上級（✓）
-・④ most dangerous → the が抜けている誤り
-
-日本語訳：「消防士であることは、私たちの町で一番危険な仕事だと誰もが言う。」
-
-【文法ポイント】
-比較級：形容詞 + -er または more + 形容詞
-最上級：the + 形容詞 + -est または the most + 形容詞。最上級には必ず the が必要！
-2音節以上の形容詞（dangerous, difficult など）は more / most 型。
-
-【入試頻出】
-・Nursing is one of the most demanding jobs.
-・This is the most important skill for a teacher.`,
+    explanation:
+      '【何を聞かれているか】「Being a firefighter is ( ) job in our town, everyone says.」の空所に入る適切な比較表現を選ぶ。\n【なぜthe most dangerousになるのか】「in our town（私たちの町で）」という範囲を示す表現があるため、その中での「一番」を表す最上級が必要で、dangerousは長い形容詞なのでthe mostを使うから。\n【ポイント1】in our townという範囲を示す表現は最上級のサイン。dangerousは2音節以上の語なのでmore/most型を使う。\n【ポイント2】①dangerous（原級）、②more dangerous（比較級）、④most dangerous（theが抜けている）はどれも誤り。\n【ポイント3】③the most dangerous（正しい最上級）が正解。最上級には必ずtheが必要。\n【答え】③ the most dangerous\n【確かめ】the most dangerousのtheが抜けていないかを確認する。\n【よくあるまちがい】④most dangerousのようにtheをつけ忘れてしまう。\n【ここが絶対】最上級には必ずtheをつける。2音節以上の形容詞（dangerous、difficultなど）はmore/most型を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -169,25 +133,8 @@ should：義務より軽い推奨
     choices: ['① play', '② to play', '③ playing', '④ played'],
     answer: '③ playing',
     hint: 'enjoy の後ろには動名詞（〜ing）が来る。',
-    explanation: `【出題意図】
-動名詞のみを目的語にとる動詞（enjoy）を正しく使えるかを問う問題。不定詞との区別が核心。
-
-【解説】
-enjoy は目的語に動名詞（〜ing）だけを取り、不定詞は取らない。
-・① play → 原形（不可）
-・② to play → 不定詞（enjoy の後ろには来ない）
-・③ playing → 動名詞（✓）enjoy + 動名詞
-・④ played → 過去形（目的語になれない）
-
-日本語訳：「彼は職業体験の間、保育園で子どもたちと遊ぶのを楽しんでいる。」
-
-【文法ポイント】
-動名詞のみを目的語にとる動詞（入試頻出）：enjoy、finish、stop、mind、give up、practice
-不定詞のみを目的語にとる動詞：want、hope、decide、wish
-
-【入試頻出】
-・She finished writing her report.
-・He practiced speaking English before the interview.`,
+    explanation:
+      '【何を聞かれているか】「He enjoys ( ) with children at the day-care center during his job experience.」の空所に入る適切な形を選ぶ。\n【なぜplayingになるのか】enjoyは動名詞（-ing）だけを目的語に取り、不定詞（to＋原形）は目的語に取らないという決まりがあるから。\n【ポイント1】①play（原形）、②to play（不定詞）はどちらもenjoyの後ろには使えない。\n【ポイント2】③playing（動名詞）が正解。enjoy＋動名詞の形。\n【ポイント3】④played（過去形）は目的語の位置には使えない。動名詞のみを目的語に取る動詞にはほかにfinish、stop、mind、practiceなどがある。\n【答え】③ playing\n【確かめ】enjoyのあとが動詞のing形になっているかを確認する。\n【よくあるまちがい】enjoyのあとにto playを続けてしまう。\n【ここが絶対】enjoyは動名詞のみを目的語に取る動詞として覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -200,24 +147,8 @@ enjoy は目的語に動名詞（〜ing）だけを取り、不定詞は取ら�
     choices: ['① will open', '② has opened', '③ will have opened', '④ opened'],
     answer: '③ will have opened',
     hint: '「30歳になるまでには」という未来の時点での完了・継続を表す時制を選ぶ。',
-    explanation: `【出題意図】
-未来完了形（will have + 過去分詞）の用法を問う問題。「未来のある時点での完了・継続」を表す時制の識別。
-
-【解説】
-「By the time she turns thirty（30歳になるまでには）」は未来の時点。その時点で「5年間自分のレストランを開いていることになる」という継続の完了を表すには未来完了形を使う。
-・① will open → 単純未来（継続の完了を表せない）
-・② has opened → 現在完了（未来の時点には使えない）
-・③ will have opened → 未来完了（✓）
-・④ opened → 過去形（文脈に合わない）
-
-日本語訳：「彼女が30歳になるまでには、自分のレストランを5年間経営していることになる。」
-
-【文法ポイント】
-未来完了形 = will have + 過去分詞。目印の語句：by the time〜 / by then / by next〜
-
-【入試頻出】
-・By next April, he will have worked here for ten years.
-・By the time you graduate, you will have decided your future job.`,
+    explanation:
+      '【何を聞かれているか】「By the time she turns thirty, she ( ) her own restaurant for five years.」の空所に入る適切な時制を選ぶ。\n【なぜwill have openedになるのか】「30歳になるまでには」という未来のある時点で「5年間自分のレストランを経営していることになる」という継続の完了を表すには、未来完了形（will have＋過去分詞）を使う必要があるから。\n【ポイント1】By the time she turns thirty（30歳になるまでには）は未来の時点を示す表現。\n【ポイント2】①will open（単純未来）、②has opened（現在完了、未来の時点には使えない）、④opened（過去形）はどれも文脈に合わない。\n【ポイント3】③will have opened（未来完了）が正解。目印はby the time〜、by then、by next〜。\n【答え】③ will have opened\n【確かめ】By the timeの節の動詞が現在形（turns）になっており、主節が未来完了（will have opened）になっているかを確認する。\n【よくあるまちがい】has opened（現在完了）を選んでしまう。現在完了は現在を基準にするので、未来の時点には使えない。\n【ここが絶対】未来のある時点での完了・継続にはwill have＋過去分詞（未来完了形）を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
