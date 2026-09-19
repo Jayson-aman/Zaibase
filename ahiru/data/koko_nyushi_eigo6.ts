@@ -10,24 +10,8 @@ export const kokoNyushiEigo6: Question[] = [
     question: `次の（　）内に最も適切な語句を選べ。\n\nWe ( ) basketball for about an hour when it began to rain heavily.\n① play  ② have played  ③ had been playing  ④ will have played`,
     answer: `③ had been playing`,
     hint: `「雨が降り始めた」という過去の時点よりも前から続いていた動作を表す時制を選ぶ。`,
-    explanation: `【出題意図】
-過去完了進行形（had been + Ving）の用法を問う問題。過去のある時点まで継続していた動作を表す時制の識別が目標。
-
-【解説】
-「when it began to rain（雨が降り始めたとき）」は過去の一時点。その時点よりさらに前から「バスケをし続けていた」という継続動作を表すには過去完了進行形を使う。
-・① play → 現在形（文脈に合わない）
-・② have played → 現在完了（過去の基準点には使えない）
-・③ had been playing → 過去完了進行形（✓）
-・④ will have played → 未来完了（過去の文脈に合わない）
-
-日本語訳：「雨が激しく降り始めたとき、私たちは1時間ほどバスケットボールをし続けていた。」
-
-【文法ポイント】
-過去完了進行形＝had been＋動詞-ing。過去のある時点よりさらに前から、その時点まで継続していた動作に使う。when＋過去形の主節とセットで出やすい。
-
-【入試頻出】
-・He had been running for thirty minutes when he twisted his ankle.
-・They had been practicing the song since noon when the teacher came in.`,
+    explanation:
+      '【何を聞かれているか】「We ( ) basketball for about an hour when it began to rain heavily.」の空所に入る適切な時制を選ぶ。\n【なぜhad been playingになるのか】「雨が降り始めた」という過去の時点よりさらに前から「バスケをし続けていた」という継続動作を表すには、過去のある時点までの継続を表す過去完了進行形（had been＋動詞のing形）を使う必要があるから。\n【ポイント1】when it began to rain（雨が降り始めたとき）は過去の1つの時点。その時点よりも前から継続していた動作を表すには、さらに過去を示す時制が必要。\n【ポイント2】①play（現在形）、②have played（現在完了、過去の基準点には使えない）、④will have played（未来完了、過去の文脈に合わない）はどれも文脈に合わない。\n【ポイント3】③had been playing（過去完了進行形）が正解。「雨が激しく降り始めたとき、私たちは1時間ほどバスケをし続けていた」という意味になる。\n【答え】③ had been playing\n【確かめ】「for about an hour」という継続の期間を表す語句と、過去完了進行形の組み合わせがセットになっていることを確認する。\n【よくあるまちがい】have played（現在完了形）を選んでしまう。現在完了は現在を基準にするので、過去の基準点には使えない。\n【ここが絶対】過去のある時点よりもさらに前から、その時点まで継続していた動作には過去完了進行形を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -39,24 +23,8 @@ export const kokoNyushiEigo6: Question[] = [
     question: `次の（　）内に最も適切な語を選べ。\n\nYou ( ) warm up before you start swimming, or you may hurt your muscles.\n① must  ② should  ③ can  ④ may`,
     answer: `② should`,
     hint: `「〜すべきだ」という強いアドバイス・忠告を表す助動詞を選ぶ。`,
-    explanation: `【出題意図】
-助動詞 should（忠告・アドバイス）と must（義務）、can／may（可能・許可）の意味の違いを問う問題。
-
-【解説】
-「さもないと筋肉を痛めるかもしれない」という警告が続くことから、規則ではなくアドバイスを表す should が最適。
-・① must → 規則的な強い義務
-・② should → 忠告・アドバイス（✓）
-・③ can → 能力・可能性
-・④ may → 許可・推量（文脈に合わない）
-
-日本語訳：「泳ぎ始める前に準備運動をすべきです、そうしないと筋肉を痛めるかもしれません。」
-
-【文法ポイント】
-should＝〜すべきだ（助言）。must／have to＝〜しなければならない（義務）。"or〜"の後には「そうしないと〜」という結果が続く。
-
-【入試頻出】
-・You should stretch before running.
-・You must wear a helmet when you ride a bike, or it is dangerous.`,
+    explanation:
+      '【何を聞かれているか】「You ( ) warm up before you start swimming, or you may hurt your muscles.」の空所に入る適切な助動詞を選ぶ。\n【なぜshouldになるのか】「さもないと筋肉を痛めるかもしれない」という警告が続くことから、規則ではなくアドバイス・忠告を表すshouldが最適だから。\n【ポイント1】①must（規則的な強い義務）、③can（能力・可能性）、④may（許可・推量）はどれもこの文脈に合わない。\n【ポイント2】②should（忠告・アドバイス）が正解。「泳ぎ始める前に準備運動をすべきだ」というアドバイスを表す。\n【ポイント3】"or〜"のあとには「そうしないと〜」という結果が続く。You should〜, or you may…の形はよく使われる。\n【答え】② should\n【確かめ】文全体が「アドバイス＋そうしないとどうなるか」という構造になっているかを確認する。\n【よくあるまちがい】mustを選んでしまい、規則的な義務とアドバイスを混同する。\n【ここが絶対】should＝〜すべきだ（助言）、must／have to＝〜しなければならない（義務）と使い分ける。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -155,24 +123,8 @@ Of all the events（すべての種目の中で）は範囲を示す表現で最
     question: `次の（　）内に最も適切な語を選べ。\n\nAfter she finished ( ) the piano, she went straight to bed.\n① practice  ② to practice  ③ practicing  ④ practiced`,
     answer: `③ practicing`,
     hint: `finish の後ろには動名詞のみが続くことを思い出す。`,
-    explanation: `【出題意図】
-動名詞のみを目的語にとる動詞 finish の用法を問う問題。
-
-【解説】
-finish は目的語に動名詞（〜ing）のみをとり、不定詞は取らない。
-・① practice → 原形（不可）
-・② to practice → 不定詞（不可）
-・③ practicing → 動名詞（✓）finish＋動名詞
-・④ practiced → 過去形（目的語になれない）
-
-日本語訳：「ピアノの練習を終えた後、彼女はすぐにベッドに入った。」
-
-【文法ポイント】
-動名詞のみを目的語にとる動詞：finish, enjoy, stop, mind, give up, practice など。不定詞のみをとる動詞：want, hope, decide, wish など。
-
-【入試頻出】
-・He finished cleaning his guitar.
-・She enjoys listening to jazz music.`,
+    explanation:
+      '【何を聞かれているか】「After she finished ( ) the piano, she went straight to bed.」の空所に入る適切な形を選ぶ。\n【なぜpracticingになるのか】finishは動名詞（-ing）だけを目的語に取り、不定詞（to＋原形）は目的語に取らないという決まりがあるから。\n【ポイント1】①practice（原形）、②to practice（不定詞）はどちらもfinishの後ろには使えない。\n【ポイント2】③practicing（動名詞）が正解。finish＋動名詞の形。\n【ポイント3】④practiced（過去形）は目的語の位置には使えない。動名詞のみを目的語に取る動詞にはほかにenjoy、stop、mind、give upなどがある。\n【答え】③ practicing\n【確かめ】finishのあとが動詞のing形になっているかを確認する。\n【よくあるまちがい】finishのあとにto practiceを続けてしまう。\n【ここが絶対】finishは動名詞のみを目的語に取る動詞として覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -184,24 +136,8 @@ finish は目的語に動名詞（〜ing）のみをとり、不定詞は取ら�
     question: `次の（　）内に最も適切な語句を選べ。\n\nBy the time the concert starts, we ( ) for over three hours.\n① rehearse  ② will rehearse  ③ have rehearsed  ④ will have rehearsed`,
     answer: `④ will have rehearsed`,
     hint: `「コンサートが始まるまでには」という未来のある時点での完了・継続を表す時制を選ぶ。`,
-    explanation: `【出題意図】
-未来完了形（will have＋過去分詞）を問う問題。未来の一時点までの継続・完了を表す。
-
-【解説】
-By the time the concert starts（コンサートが始まるまでには）は未来の時点。その時点までに「3時間以上リハーサルをしたことになる」という継続の完了を表すには未来完了形を使う。
-・① rehearse → 現在形
-・② will rehearse → 単純未来
-・③ have rehearsed → 現在完了（いずれも未来の基準点に合わない）
-・④ will have rehearsed → 未来完了（✓）
-
-日本語訳：「コンサートが始まるまでには、私たちは3時間以上リハーサルをしていることになる。」
-
-【文法ポイント】
-未来完了形＝will have＋過去分詞。by the time〜, by then, by next〜などの目印語句とセットで出やすい。
-
-【入試頻出】
-・By next year, she will have played the violin for ten years.
-・By the time you arrive, we will have finished the rehearsal.`,
+    explanation:
+      '【何を聞かれているか】「By the time the concert starts, we ( ) for over three hours.」の空所に入る適切な時制を選ぶ。\n【なぜwill have rehearsedになるのか】「コンサートが始まるまでには」という未来のある時点で「3時間以上リハーサルをしたことになる」という継続の完了を表すには、未来完了形（will have＋過去分詞）を使う必要があるから。\n【ポイント1】By the time the concert starts（コンサートが始まるまでには）は未来の時点を示す表現。\n【ポイント2】①rehearse（現在形）、②will rehearse（単純未来）、③have rehearsed（現在完了）はどれも未来の基準点に合わない。\n【ポイント3】④will have rehearsed（未来完了）が正解。by the time〜、by then、by next〜などの目印語句とセットで出やすい。\n【答え】④ will have rehearsed\n【確かめ】By the timeの節の動詞が現在形（starts）になっており、主節が未来完了（will have rehearsed）になっているかを確認する。\n【よくあるまちがい】have rehearsed（現在完了）を選んでしまう。現在完了は現在を基準にするので、未来の時点には使えない。\n【ここが絶対】未来のある時点での完了・継続にはwill have＋過去分詞（未来完了形）を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -449,24 +385,8 @@ look forward to〜ing：このtoは前置詞。似た形で be used to〜ing（�
     question: `次の（　）内に最も適切な前置詞を選べ。\n\nHe has been interested ( ) chess since he was a small child.\n① at  ② with  ③ in  ④ about`,
     answer: `③ in`,
     hint: `be interested in で「〜に興味がある」という意味。`,
-    explanation: `【出題意図】
-be interested in〜（〜に興味がある）の前置詞を問う問題。
-
-【解説】
-be interested in〜は「〜に興味がある」という重要イディオムで前置詞 in が固定される。
-・① at → be good atなどに使う
-・② with → be pleased withなどに使う
-・③ in → be interested in〜（✓）
-・④ about → be worried aboutなどに使う
-
-日本語訳：「彼は幼い子どもの頃からチェスに興味を持っている。」
-
-【文法ポイント】
-be interested in〜／be surprised at〜／be worried about〜／be proud of〜など、前置詞が固定される熟語をセットで覚える。
-
-【入試頻出】
-・She is interested in photography.
-・I am surprised at his fast progress in tennis.`,
+    explanation:
+      '【何を聞かれているか】「He has been interested ( ) chess since he was a small child.」の空所に入る適切な前置詞を選ぶ。\n【なぜinになるのか】「〜に興味がある」という意味は、be interested in〜という前置詞inが固定された決まったイディオムで表すから。\n【ポイント1】be interested in〜は「〜に興味がある」という重要イディオムで前置詞inが固定される。\n【ポイント2】①at（be good atなどに使う）、②with（be pleased withなどに使う）、④about（be worried aboutなどに使う）はどれも別のイディオムで使う前置詞。\n【ポイント3】be surprised at〜、be worried about〜、be proud of〜のように、前置詞が固定される熟語をセットで覚える。\n【答え】③ in\n【確かめ】be interested in chessで「チェスに興味がある」という意味になっているかを確認する。\n【よくあるまちがい】be interested atやbe interested withのように別の前置詞を使ってしまう。\n【ここが絶対】be interested in〜は前置詞inが固定された決まった形として覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -654,24 +574,8 @@ depend on〜＝rely on〜：〜次第である、〜に頼る。Whether〜節が
     question: `次の（　）内に最も適切な語を選べ。\n\nThis is the gym ( ) our basketball team practices every day.\n① which  ② who  ③ where  ④ when`,
     answer: `③ where`,
     hint: `先行詞は「場所」。関係副詞を使う。`,
-    explanation: `【出題意図】
-関係副詞 where（先行詞が場所）の用法を問う問題。
-
-【解説】
-先行詞 the gym（体育館）は場所。節内は our basketball team practices in the gym の構造で、前置詞 in を含む部分が関係副詞 where に置き換わっている。
-・① which → 使うなら前置詞が必要（the gym in which〜）
-・② who → 人に使う
-・③ where → 場所を先行詞にとる関係副詞（✓）
-・④ when → 時を表す先行詞に使う
-
-日本語訳：「ここは私たちのバスケットボール部が毎日練習する体育館です。」
-
-【文法ポイント】
-関係副詞 where＝前置詞＋which。先行詞が場所（gym, park, stadiumなど）のときに使う。
-
-【入試頻出】
-・This is the park where we play soccer on Sundays.
-・I remember the stadium where our team won the final.`,
+    explanation:
+      '【何を聞かれているか】「This is the gym ( ) our basketball team practices every day.」の空所に入る適切な語を選ぶ。\n【なぜwhereになるのか】先行詞the gym（体育館）は場所を表し、関係詞節の中に前置詞（in the gym）が隠れているため、「前置詞＋which」の働きをする関係副詞whereを使う必要があるから。\n【ポイント1】先行詞the gymは場所。節の元の形はour basketball team practices in the gymで、in the gymがwhereに置きかわっている。\n【ポイント2】①which（使うなら前置詞が必要、the gym in which〜）、②who（人に使う）、④when（時を表す先行詞に使う）はどれも文脈に合わない。\n【ポイント3】③where（場所を先行詞にとる関係副詞）が正解。\n【答え】③ where\n【確かめ】whereの節の中に前置詞が抜けている（in the gymのinが不要になっている）ことを確認する。\n【よくあるまちがい】This is the gym which our basketball team practices.のように、whichを前置詞なしで使ってしまう。\n【ここが絶対】関係副詞where＝前置詞＋which。先行詞が場所のときに使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -683,23 +587,8 @@ depend on〜＝rely on〜：〜次第である、〜に頼る。Whether〜節が
     question: `次の2文を1文に書き換えなさい。（関係代名詞を使って）\n\nI know a girl.\nHer voice is beautiful when she sings in the chorus.`,
     answer: `I know a girl whose voice is beautiful when she sings in the chorus.`,
     hint: `Her（彼女の）を所有格の関係代名詞 whose に変える。`,
-    explanation: `【出題意図】
-所有格の関係代名詞 whose を使って2文を1文に結合する問題。
-
-【解説】
-2文目の Her は a girl を指しており、この所有の関係を表すのが所有格の関係代名詞 whose。
-手順：①先行詞 a girl を特定 ②Her→whoseに置き換える ③whoseを先行詞の直後に置く
-→ I know a girl whose voice is beautiful when she sings in the chorus.
-
-日本語訳：「私は合唱で歌うと声が美しい女の子を知っている。」
-
-【文法ポイント】
-whose の使い方：先行詞（人・物）の所有格を表す
-先行詞＋whose＋名詞＋動詞〜
-
-【入試頻出】
-・He is a musician whose songs are popular around the world.
-・I have a friend whose father is a famous coach.`,
+    explanation:
+      '【何を聞かれているか】「I know a girl. Her voice is beautiful when she sings in the chorus.」を関係代名詞を使って1文にする。\n【なぜwhoseを使うのか】2つ目の文のHer（彼女の）がa girl（1つ目の文の名詞）の所有を表しているため、この所有の関係を表す所有格の関係代名詞whoseに置きかえる必要があるから。\n【ポイント1】先行詞を特定する：a girl（人）。\n【ポイント2】Her（所有格）をwhoseに置きかえ、先行詞a girlの直後に置く。\n【ポイント3】I know a girl whose voice is beautiful when she sings in the chorus.（私は合唱で歌うと声が美しい女の子を知っている）。\n【答え】I know a girl whose voice is beautiful when she sings in the chorus.\n【確かめ】whoseのあとにvoice（名詞）、is（動詞）と続いているかを確認する。\n【よくあるまちがい】whoseのかわりにwhoを使ってしまう。所有の関係にはwhoseを使う。\n【ここが絶対】whoseは先行詞の所有格を表す関係代名詞。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -711,26 +600,8 @@ whose の使い方：先行詞（人・物）の所有格を表す
     question: `次の文を間接疑問文に書き換えなさい。\n\n直接疑問文：What time does the badminton club start practice?\n「あなたはバドミントン部がいつ練習を始めるか知っていますか？」`,
     answer: `Do you know what time the badminton club starts practice?`,
     hint: `間接疑問文では疑問詞の後ろが「主語＋動詞」の語順に戻り、does/doは消える。`,
-    explanation: `【出題意図】
-間接疑問文（疑問詞＋主語＋動詞の語順）への書き換えを問う問題。
-
-【解説】
-直接疑問文 What time does the badminton club start practice? を間接疑問文にする手順：
-①疑問詞 What time はそのまま使う
-②後ろを主語＋動詞の平叙文語順に戻す
-③does は消えて動詞に3単現のsがつく
-④Do you know＋間接疑問の形にする
-×Do you know what time does the club start〜?（誤り）
-○Do you know what time the club starts〜?（正解）
-
-日本語訳：「あなたはバドミントン部がいつ練習を始めるか知っていますか？」
-
-【文法ポイント】
-間接疑問文の語順：疑問詞＋主語＋動詞（平叙文語順）。do/doesは消え、動詞に3単現のsなどが復活する。
-
-【入試頻出】
-・Do you know what time the concert ends?
-・Can you tell me what time the pool opens?`,
+    explanation:
+      '【何を聞かれているか】「What time does the badminton club start practice?」（あなたはバドミントン部がいつ練習を始めるか知っていますか？）を間接疑問文に書きかえる。\n【なぜdoesが消えるのか】疑問文が他の文（Do you know〜）の一部に組み込まれると、疑問文特有の助動詞doesを使わず、ふつうの文と同じ〈疑問詞＋主語＋動詞〉の語順に戻すというルールがあるから。\n【ポイント1】疑問詞What timeはそのまま使う。\n【ポイント2】疑問詞の後ろを「主語＋動詞」の平叙文語順に変える。doesは消えて、動詞に3単現のsがつく（starts）。\n【ポイント3】全体をDo you know＋間接疑問の形にする。Do you know what time the badminton club starts practice?\n【答え】Do you know what time the badminton club starts practice?\n【確かめ】doesが消えて、動詞がstartではなくstartsになっているかを確認する。\n【よくあるまちがい】Do you know what time does the club start〜?のように疑問文の語順のままにしてしまう。\n【ここが絶対】間接疑問文の語順は〈疑問詞＋主語＋動詞〉の平叙文語順にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -775,25 +646,8 @@ how many＋複数名詞（数）／how much＋不可算名詞（量・値段）�
     question: `次の語を並べ替えて正しい英文を作れ。\n（ tell / me / when / the / marathon / starts / can / you ）\n「マラソンがいつ始まるか教えてもらえますか？」`,
     answer: `Can you tell me when the marathon starts?`,
     hint: `間接疑問文：疑問詞（when）の後ろは主語＋動詞の語順。全体はCanで始まる疑問文。`,
-    explanation: `【出題意図】
-間接疑問文の語順整序問題。「疑問詞＋主語＋動詞」という間接疑問の語順と、全体が疑問文になる構造を同時に確認する。
-
-【解説】
-全体は Can you tell me〜? という疑問文。tell me の目的語（間接疑問）は when the marathon starts（平叙文語順）。
-×Can you tell me when does the marathon start?（誤り）
-○Can you tell me when the marathon starts?（正解）
-語の組み立て：Can you tell me／when／the marathon starts？
-
-日本語訳：「マラソンがいつ始まるか教えてもらえますか？」
-
-【文法ポイント】
-間接疑問の語順：疑問詞＋主語＋動詞
-全体が疑問文の場合：Can/Could＋主語＋動詞＋疑問詞＋主語＋動詞〜?
-
-【入試頻出】
-・Do you know when the shrine was built?
-・Can you tell me why the festival is so popular?
-・I wonder how long this tradition has continued.`,
+    explanation:
+      '【何を聞かれているか】tell / me / when / the / marathon / starts / can / you を並べ替えて「マラソンがいつ始まるか教えてもらえますか？」という英文を作る。\n【なぜthe marathon startsという語順になるのか】全体はCan you tell me〜?という疑問文だが、tell meの目的語になる部分（間接疑問）は疑問文の語順ではなく、〈疑問詞（when）＋主語＋動詞〉という平叙文の語順にする必要があるから。\n【ポイント1】全体の骨組みはCan you tell me〜?という疑問文。\n【ポイント2】tell meの目的語（間接疑問）はwhen the marathon starts（疑問文の語順ではなく平叙文語順）。\n【ポイント3】組み立てるとCan you tell me when the marathon starts?になる。\n【答え】Can you tell me when the marathon starts?\n【確かめ】whenのあとがdoes the marathon startではなくthe marathon starts（平叙文語順）になっているかを確認する。\n【よくあるまちがい】Can you tell me when does the marathon start?のように疑問文の語順のままにしてしまう。\n【ここが絶対】間接疑問文の中は、疑問詞のあとを〈主語＋動詞〉の平叙文語順にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -895,28 +749,8 @@ make＋人＋物＝人のために物を作る（第4文型）
     question: `次の語を並べ替えて正しい英文を作れ。\n（ after / taking / part / in / the festival / we / walked / to / the temple ）\n「祭りに参加した後、私たちは寺へ歩いて行った。」`,
     answer: `After taking part in the festival, we walked to the temple.`,
     hint: `前置詞 after の後ろには動名詞（〜ing）が来る。`,
-    explanation: `【出題意図】
-前置詞 after＋動名詞 の用法と、語順整序を問う問題。
-
-【解説】
-前置詞の後ろには名詞・動名詞が来る（不定詞は来ない）。
-「〜した後で」＝after＋動名詞（〜ing）
-ここでは take part in（参加する）が動名詞化して taking part in となる。
-
-正しい語順：After taking part in the festival, we walked to the temple.
-
-日本語訳：「祭りに参加した後、私たちは寺へ歩いて行った。」
-
-【文法ポイント】
-前置詞＋動名詞の頻出パターン：
-・before＋ing：〜する前に
-・after＋ing：〜した後で
-・without＋ing：〜せずに
-
-【入試頻出】
-・After watching the fireworks, we went home.
-・Before joining the ceremony, they washed their hands.
-・She left without saying goodbye to the priest.`,
+    explanation:
+      '【何を聞かれているか】after / taking / part / in / the festival / we / walked / to / the temple を並べ替えて「祭りに参加した後、私たちは寺へ歩いて行った。」という英文を作る。\n【なぜafterのあとが動名詞になるのか】前置詞のあとには名詞・動名詞が来るという決まりがあり、不定詞（to＋原形）は前置詞のあとには置けないため、「〜した後で」はafter＋動名詞（〜ing）の形にする必要があるから。\n【ポイント1】前置詞の後ろには名詞・動名詞が来る（不定詞は来ない）。「〜した後で」＝after＋動名詞（〜ing）。\n【ポイント2】take part in（参加する）が動名詞化してtaking part inになる。After taking part in the festival, we walked to the temple.\n【ポイント3】同じパターン：before＋ing（〜する前に）、without＋ing（〜せずに）。\n【答え】After taking part in the festival, we walked to the temple.\n【確かめ】afterのあとがtake（原形）やto take（不定詞）ではなくtaking（動名詞）になっているかを確認する。\n【よくあるまちがい】after to take part inのように、前置詞のあとに不定詞を置いてしまう。\n【ここが絶対】前置詞のあとに動詞を続けるときは必ず動名詞（-ing）にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -928,28 +762,8 @@ make＋人＋物＝人のために物を作る（第4文型）
     question: `次の語を並べ替えて正しい英文を作れ。\n（ the woman / who / taught / us / the traditional dance / turns / eighty / this year ）\n「伝統的な踊りを教えてくれた女性は今年80歳になる。」`,
     answer: `The woman who taught us the traditional dance turns eighty this year.`,
     hint: `関係代名詞 who を使って先行詞「the woman」を修飾する節を作る。`,
-    explanation: `【出題意図】
-関係代名詞who（主格）を使った語順整序問題。先行詞と関係代名詞節の位置関係が鍵。
-
-【解説】
-文の骨格：The woman turns eighty this year.（その女性は今年80歳になる）
-修飾部：who taught us the traditional dance（私たちに伝統的な踊りを教えてくれた）
-
-組み合わせ：
-The woman [who taught us the traditional dance] turns eighty this year.
-
-who はここでは主格（taught の主語）として使われている。
-
-日本語訳：「伝統的な踊りを教えてくれた女性は今年80歳になる。」
-
-【文法ポイント】
-関係代名詞節の位置：先行詞の直後に置く。
-主節の動詞（turns）は関係代名詞節の後に続く。
-
-【入試頻出】
-・The man who built this shrine lived over two hundred years ago.
-・The girl who won the dance contest is my neighbor.
-・The teacher who studies local history gave a lecture yesterday.`,
+    explanation:
+      '【何を聞かれているか】the woman / who / taught / us / the traditional dance / turns / eighty / this year を並べ替えて「伝統的な踊りを教えてくれた女性は今年80歳になる。」という英文を作る。\n【なぜwho taughtという語順になるのか】関係代名詞whoを使って、先行詞The womanのうしろにwho taught us the traditional dance（私たちに伝統的な踊りを教えてくれた）という節を置くことで、The womanを説明できるから。\n【ポイント1】文の骨格はThe woman turns eighty this year.（その女性は今年80歳になる）。\n【ポイント2】修飾部はwho taught us the traditional dance（私たちに伝統的な踊りを教えてくれた）。ここでのwhoはtaughtの主語（主格）にあたる。\n【ポイント3】組み合わせるとThe woman who taught us the traditional dance turns eighty this year.になる。主節の動詞（turns）は関係代名詞節のあとに続く。\n【答え】The woman who taught us the traditional dance turns eighty this year.\n【確かめ】関係代名詞節（who taught us the traditional dance）が先行詞The womanの直後に置かれ、そのあとに主節の動詞turnsが続いているかを確認する。\n【よくあるまちがい】関係代名詞節を先行詞から離れた位置に置いてしまう。\n【ここが絶対】関係代名詞節は必ず先行詞の直後に置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -961,26 +775,8 @@ who はここでは主格（taught の主語）として使われている。
     question: `次の語を並べ替えて正しい英文を作れ。\n（ simple / enough / this story / is / for / all children / to / understand ）\n「この物語はすべての子どもたちが理解できるほどわかりやすい。」`,
     answer: `This story is simple enough for all children to understand.`,
     hint: `「〜が…するのに十分〜だ」は 形容詞 + enough + for + 人 + to 動詞 の形。`,
-    explanation: `【出題意図】
-enough to構文に「for＋人」が加わった形の語順を問う問題。「〜が…するほど十分〜だ」という表現の完全形を問う。
-
-【解説】
-構文：主語＋be＋形容詞＋enough＋for＋人＋to＋動詞原形
-「for＋人」は不定詞の意味上の主語を示す。
-
-正しい語順：This story is simple enough for all children to understand.
-
-日本語訳：「この物語はすべての子どもたちが理解できるほどわかりやすい。」
-
-【文法ポイント】
-「形容詞＋enough＋for＋人＋to＋動詞」構文：
-例：The legend is interesting enough for young students to enjoy.
-「too＋形容詞＋for＋人＋to＋動詞」との対比：too difficult for them to understand（難しすぎて理解できない）
-
-【入試頻出】
-・This tradition is important enough for everyone to learn.
-・The map is clear enough for tourists to follow.
-・The song is simple enough for small children to sing.`,
+    explanation:
+      '【何を聞かれているか】simple / enough / this story / is / for / all children / to / understand を並べ替えて「この物語はすべての子どもたちが理解できるほどわかりやすい。」という英文を作る。\n【なぜfor＋人が入るのか】「〜が…するのに十分〜だ」と、動作をする人を明示するには、〈形容詞＋enough＋for＋人＋to＋動詞原形〉という構文を使い、for＋人が不定詞の意味上の主語を示すから。\n【ポイント1】構文は主語＋be＋形容詞＋enough＋for＋人＋to＋動詞原形。\n【ポイント2】This story is simple enough for all children to understand.（この物語はすべての子どもたちが理解できるほどわかりやすい）。\n【ポイント3】反対の意味を表す〈too＋形容詞＋for＋人＋to＋動詞〉（〜すぎて…できない）とセットで覚える。\n【答え】This story is simple enough for all children to understand.\n【確かめ】for all childrenがenoughとtoの間に正しく置かれているかを確認する。\n【よくあるまちがい】for all childrenを文の最後に置いてしまう。\n【ここが絶対】「形容詞＋enough＋for＋人＋to＋動詞」の語順を1つのまとまりとして覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1050,22 +846,8 @@ How long〜?（期間）→for＋期間／since＋起点で答える。How often
     question: `次の対話文の（　）に最も適切なものを選べ。\n\nA: Excuse me, could you tell me how to get to the stadium?\nB: Sure. ( ) You'll see it on your left.\n① Go straight and turn right at the second corner.  ② I have never been there.  ③ It was built last year.  ④ I'm watching the game now.`,
     answer: `① Go straight and turn right at the second corner.`,
     hint: `道案内の依頼への応答として、具体的な道順を示す文が続く。`,
-    explanation: `【出題意図】
-道を尋ねる表現（how to get to〜）への応答として道順の説明が続く文脈把握問題。
-
-【解説】
-Aはスタジアムへの行き方を尋ねている。Bは"Sure."と答えており、後ろに"You'll see it on your left.（左手に見えます）"と続くことから、間には具体的な道順の説明が入る。
-・① Go straight and turn right at the second corner. → 道順の説明として自然につながる（✓）
-・②「そこに行ったことがない」、③「去年建てられた」、④「今試合を見ている」は、いずれも道順の説明にならない
-
-日本語訳：A「すみません、スタジアムへの行き方を教えていただけますか？」B「もちろん。まっすぐ行って2つ目の角を右に曲がってください。左手に見えます。」
-
-【文法ポイント】
-道案内の表現：Go straight/Turn right(left) at〜/You'll see it on your right(left). how to get to〜＝〜への行き方。
-
-【入試頻出】
-・Could you tell me how to get to the library?
-・Go straight and it's on your right.`,
+    explanation:
+      '【何を聞かれているか】「Excuse me, could you tell me how to get to the stadium?」への返答（このあとYou\'ll see it on your left.と続く）に合う表現を選ぶ。\n【なぜ①が正解なのか】Sure.のあとに、Bが「左手に見えます」という結論を述べているため、その間には具体的な道順の説明が入るはずだから。\n【ポイント1】①Go straight and turn right at the second corner.は、道順の説明として自然に続く。\n【ポイント2】②「そこに行ったことがない」、③「去年建てられた」、④「今試合を見ている」はどれも道順の説明になっていない。\n【ポイント3】道案内の表現：Go straight／Turn right(left) at〜／You\'ll see it on your right(left)。\n【答え】① Go straight and turn right at the second corner.\n【確かめ】選んだ返答のあとにYou\'ll see it on your left.が自然に続くかを確認する。\n【よくあるまちがい】道順に関係のない返答を選んでしまう。\n【ここが絶対】道を尋ねる表現how to get to〜への返答には、具体的な道順の説明が続く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1104,24 +886,8 @@ take a picture of〜/take a photo of〜：〜の写真を撮る。趣味・活�
     question: `次の対話文の（　）に最も適切な語を選べ。\n\nA: Which do you like ( ), playing soccer or watching it on TV?\nB: I like playing it much better. Actually playing is more exciting for me.\n① good  ② better  ③ best  ④ well`,
     answer: `② better`,
     hint: `Which do you like better, A or B?で「AとBのどちらが好きか」という比較表現。`,
-    explanation: `【出題意図】
-Which do you like better, A or B?（AとBどちらが好きか）という比較表現を問う問題。
-
-【解説】
-2つのものを比べて「どちらが好きか」を尋ねるときは比較級betterを使う。goodやwellの比較級がbetter、最上級がbest。
-・① good → 原級
-・③ best → 最上級（3つ以上を比べるとき）
-・④ well → 原級
-・② better → 2者比較（✓）
-
-日本語訳：A「サッカーをするのとテレビで見るのとではどちらが好きですか？」B「する方がずっと好きです。実際にプレーする方が私にとってはわくわくします。」
-
-【文法ポイント】
-Which do you like better, A or B?（2者択一）/Which do you like best of the three?（3者以上）。good/wellの比較変化：good/well→better→best。
-
-【入試頻出】
-・Which season do you like better, summer or winter?
-・Which sport do you like best of all?`,
+    explanation:
+      '【何を聞かれているか】「Which do you like ( ), playing soccer or watching it on TV?」の空所に入る適切な語を選ぶ。\n【なぜbetterになるのか】2つのものを比べて「どちらが好きか」を尋ねるときは、good/wellの比較級betterを使うという決まりがあるから。\n【ポイント1】Which do you like better, A or B?は「AとBのどちらが好きか」という2者を比べる表現。\n【ポイント2】①good、④well（原級）、③best（最上級、3つ以上を比べるとき）はどれもこの2者比較には合わない。\n【ポイント3】②better（2者比較）が正解。good/wellの比較変化：good/well→better→best。\n【答え】② better\n【確かめ】playing soccerとwatching it on TVという2つのものを比べていることから、比較級betterが正しいことを確認する。\n【よくあるまちがい】3つ以上を比べるときに使うbestを、2者比較に使ってしまう。\n【ここが絶対】2者を比べるときはbetter、3つ以上を比べるときはbestを使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1162,24 +928,8 @@ Aの発言"I can't play the guitar very well yet."は否定文でcanを使って
     question: `次の英文の（　）に最も適切な語を選べ。\n\nMy grandfather taught me how to fish when I was young. ( ) then, fishing has been my favorite hobby.\n① Since  ② For  ③ During  ④ At`,
     answer: `① Since`,
     hint: `「それ以来ずっと」という現在完了の継続を示す起点を表す語を選ぶ。`,
-    explanation: `【出題意図】
-現在完了形と共に使うsince（〜以来）の用法を問う問題。for/during/atとの区別が目標。
-
-【解説】
-has been（現在完了）という継続を表す動詞とともに、「それ以来」という起点を示すにはsinceを使う。
-・① Since → since then＝それ以来（✓）
-・② For → 期間を表し、後ろに具体的な期間（for ten years等）が必要でthenとは組み合わせない
-・③ During → 特定の期間の「〜の間」を表し、後ろに期間の名詞が必要
-・④ At → 時点を表す前置詞でthenとは使うが「それ以来」の意味は出せない
-
-日本語訳：「祖父は私が幼い頃、釣りの仕方を教えてくれた。それ以来、釣りは私の一番好きな趣味だ。」
-
-【文法ポイント】
-since then＝それ以来。現在完了（継続）の文でsince＋起点を示す語句（since then, since 2010, since I was a child）とセットで使う。
-
-【入試頻出】
-・I started swimming five years ago. Since then, I have joined many contests.
-・She has loved music since she was a little girl.`,
+    explanation:
+      '【何を聞かれているか】「My grandfather taught me how to fish when I was young. ( ) then, fishing has been my favorite hobby.」の空所に入る適切な語を選ぶ。\n【なぜSinceになるのか】has been（現在完了）という継続を表す動詞とともに「それ以来」という起点を示すには、sinceを使う必要があるから。\n【ポイント1】since then＝それ以来。現在完了（継続）の文でsince＋起点を示す語句とセットで使う。\n【ポイント2】②For（期間を表し、後ろに具体的な期間が必要でthenとは組み合わせない）、③During（後ろに期間の名詞が必要）、④At（時点は表せるが「それ以来」の意味は出せない）はどれも文脈に合わない。\n【ポイント3】①Since（since thenの形）が正解。「それ以来、釣りは私の一番好きな趣味だ」という意味になる。\n【答え】① Since\n【確かめ】has beenという現在完了の継続用法と、since thenの組み合わせがセットになっていることを確認する。\n【よくあるまちがい】期間を表すForを、起点を表すべき場所に使ってしまう。\n【ここが絶対】現在完了（継続）の文で「それ以来」を表すときはsince thenを使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1272,19 +1022,8 @@ since then＝それ以来。現在完了（継続）の文でsince＋起点を�
     question: `次の日本語を英語にしなさい。\n\n「彼女が描いたその絵はとても美しく見えた。」`,
     answer: `The picture she painted looked very beautiful.`,
     hint: `関係代名詞を使って「彼女が描いた」で「その絵」を後ろから修飾する。lookの後には形容詞が続く。`,
-    explanation: `【出題意図】
-関係代名詞（目的格・省略可）を使った文構造と、look＋形容詞（〜に見える）の語法を問う英作文問題。
-
-【解説】
-「彼女が描いたその絵」は先行詞the pictureを関係代名詞節（that/which）she paintedで修飾する形にする。目的格の関係代名詞は省略可能。「〜に見えた」はlook＋形容詞（過去形looked）で表し、lookの後ろは形容詞であって副詞ではない点に注意。
-組み立てると：The picture (that) she painted looked very beautiful.
-
-【文法ポイント】
-look＋形容詞：〜に見える。目的格の関係代名詞は省略できる。
-
-【入試頻出】
-・The song he composed sounded very beautiful.
-・The story she wrote seemed interesting to everyone.`,
+    explanation:
+      '【何を聞かれているか】「彼女が描いたその絵はとても美しく見えた。」を英語に訳す。\n【なぜlook＋形容詞を使うのか】「〜に見える」という意味はlook＋形容詞で表し、副詞ではなく形容詞を続けるという決まりがあるから。「彼女が描いた」という説明は、the pictureのうしろに関係代名詞（目的格）でpainted節をつなげて表す。\n【ポイント1】「彼女が描いたその絵」＝the picture (that/which) she painted（関係代名詞・目的格、省略も可）。\n【ポイント2】「〜に見えた」＝look＋形容詞の過去形looked＋beautiful。lookのあとは形容詞であって副詞（beautifully）ではない。\n【ポイント3】組み合わせるとThe picture (that) she painted looked very beautiful.になる。\n【答え】The picture she painted looked very beautiful.\n【確かめ】lookedのあとにbeautiful（形容詞）が続いており、beautifully（副詞）になっていないかを確認する。\n【よくあるまちがい】look beautifullyのように、lookのあとに副詞を続けてしまう。\n【ここが絶対】look、sound、seemなどのあとには形容詞を続ける。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1296,19 +1035,8 @@ look＋形容詞：〜に見える。目的格の関係代名詞は省略でき�
     question: `次の日本語を英語にしなさい。\n\n「もし明日晴れたら、私たちは公園でバドミントンをするつもりです。」`,
     answer: `If it is sunny tomorrow, we will play badminton in the park.`,
     hint: `条件を表すif節の中は未来のことでも現在形を使う。`,
-    explanation: `【出題意図】
-条件節（if節）の時制ルール（未来の内容でも現在形）を用いた英作文問題。
-
-【解説】
-「もし〜なら」という条件を表すif節の中では、未来のことであっても現在形を使う（willは使わない）。主節では未来の予定・意志を表すwillを使ってよい。
-組み立てると：If it is sunny tomorrow, we will play badminton in the park.
-
-【文法ポイント】
-時・条件を表す副詞節（if, when, as soon asなど）の中では未来のことでも現在形を使う。主節はwillやbe going toで未来を表す。
-
-【入試頻出】
-・If it rains tomorrow, we will practice inside the gym.
-・If she has free time, she will go jogging in the park.`,
+    explanation:
+      '【何を聞かれているか】「もし明日晴れたら、私たちは公園でバドミントンをするつもりです。」を英語に訳す。\n【なぜif節が現在形になるのか】実現可能な未来の条件を表す条件文では、if節の中は未来のことでも現在形を使い、主節でwillを使って未来を表すという決まりがあるから。\n【ポイント1】条件文の形：If＋主語＋現在形〜, 主語＋will＋動詞原形〜。if節の中では未来のことでも現在形を使う。\n【ポイント2】「もし明日晴れたら」＝If it is sunny tomorrow（現在形is）。\n【ポイント3】If it is sunny tomorrow, we will play badminton in the park.\n【答え】If it is sunny tomorrow, we will play badminton in the park.\n【確かめ】if節の動詞がis（現在形）になっており、willがisではなくplayの前についていることを確認する。\n【よくあるまちがい】if節の中にwillを入れてIf it will be sunny tomorrowとしてしまう。\n【ここが絶対】実現可能な条件を表すif節の中では、未来のことでも現在形を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1349,19 +1077,8 @@ want to＋動詞原形：〜したい。主語が3人称単数のときは動詞
     question: `本文の内容と一致するものを選べ。\n① The brass band club had thirty members from the beginning.\n② Ms. Tanaka told the students never to make mistakes.\n③ The club performed at the school festival after months of practice.\n④ No one wanted to join the club after the performance.`,
     answer: `③ The club performed at the school festival after months of practice.`,
     hint: `6ヶ月間の練習の後に何をしたかという文に注目する。`,
-    explanation: `【出題意図】
-長文の内容一致問題。時系列（部の始まり→練習→発表→反響）を正確に追えているかを確認する。
-
-【解説】
-本文には「After six months of hard practice, we performed at the school festival.（6ヶ月の猛練習の後、学校祭で演奏した）」とあり、③と一致する。①は「最初から30人」が誤り（本文は最初8人）。②は「ミスをするな」が誤り（本文は"It's okay to make mistakes."と真逆）。④は「発表後誰も入部したがらなかった」が誤り（本文では来年入部希望者が30人以上いると書かれている）。
-
-日本語訳：「昨年の春、私たちの学校で新しく吹奏楽部が始まった。最初は8人しか入部せず、誰も上手に楽器を演奏できなかった。田中先生は放課後毎日私たちと練習してくれた。先生はいつも『失敗してもいい。とにかく続けることが大事』と言った。半年間の猛練習の後、学校祭で演奏をした。多くの生徒や保護者が聴きに来てくれて、大きな拍手をくれた。今では来年30人以上が入部を希望している。トランペットが難しかったときにあきらめなくて本当に良かった。」
-
-【文法ポイント】
-長文では時を表す語句（At first, After six months, Now）に注目して出来事の順序を整理する。
-
-【入試頻出】
-長文読解では「最初」と「その後」の変化を対比させる問題が頻出。`,
+    explanation:
+      '【何を聞かれているか】吹奏楽部についての長文を読んで、本文の内容と一致するものを選ぶ。\n【なぜ③が正解なのか】本文に"After six months of hard practice, we performed at the school festival."（6ヶ月の猛練習の後、学校祭で演奏した）とあり、これが③「クラブは数ヶ月の練習の後、学校祭で演奏した」と一致するから。\n【ポイント1】①「最初から30人」は誤り。本文では最初は8人しか入部しなかったと書かれている。\n【ポイント2】②「ミスをするな」は誤り。本文では田中先生が"It\'s okay to make mistakes."（ミスをしてもいい）と真逆のことを言っている。\n【ポイント3】④「発表後誰も入部したがらなかった」は誤り。本文では来年30人以上が入部を希望していると書かれている。\n【答え】③ The club performed at the school festival after months of practice.\n【確かめ】本文の該当箇所（After six months of hard practice, we performed〜）と選択肢③が一致していることを確認する。\n【よくあるまちがい】本文の一部分だけを見て、数値や内容が逆になっている選択肢を選んでしまう。\n【ここが絶対】内容一致問題では、時を表す語句（At first、After〜、Now）に注目して出来事の順序を正確に整理する。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1399,19 +1116,8 @@ want to＋動詞原形：〜したい。主語が3人称単数のときは動詞
     question: `この文章の主題として最も適切なものを選べ。\n① Expensive cameras always take the best pictures.\n② Mai won a photography contest by using a special camera.\n③ Paying close attention to the world is more important than equipment.\n④ Mai's club stopped taking pictures of small things.`,
     answer: `③ Paying close attention to the world is more important than equipment.`,
     hint: `舞の発言「良い写真はカメラではなく、周りの世界をよく見ることだ」に注目する。`,
-    explanation: `【出題意図】
-長文全体の主題（main idea）を把握する問題。具体例（スマホ、雨粒、自転車の影）から筆者が伝えたい一般的な主張を読み取る。
-
-【解説】
-本文は「高価なカメラがなくても、身の回りをよく観察することで良い写真が撮れる」という舞のエピソードを通して、機材よりも観察力が大切だと伝えている。③がこの主題と一致する。①は本文の主張（高価なカメラが必須ではない）と正反対。②は「特別なカメラを使って優勝した」が誤り（スマートフォンのみ使用）。④は本文と矛盾（部員は今もよく観察してから撮っている）。
-
-日本語訳：「多くの人は良い写真を撮るには高価なカメラが必要だと思っているが、舞はそう思わない。彼女は2年前に学校の写真部に入り、スマートフォンだけを使っている。毎週末、近所を歩き回り、葉の上の雨粒や自転車の影など、他の人が見逃しがちな小さなものの写真を撮る。昨年、彼女の写真の1枚が市のコンテストで一等賞を取った。舞は『良い写真はカメラの問題ではない。自分の周りの世界をよく見て、何か美しいものに気づくことが大切なのだ』と言う。部員たちは今、シャッターを押す前によく観察する時間を増やしている。」
-
-【文法ポイント】
-主題把握問題では、具体例に共通する一般的なメッセージ（筆者の言いたいこと）を探す。
-
-【入試頻出】
-長文の最後の発言や結論部分に主題がまとめられていることが多い。`,
+    explanation:
+      '【何を聞かれているか】写真部の舞についての長文を読んで、この文章の主題として最も適切なものを選ぶ。\n【なぜ③が正解なのか】本文は「高価なカメラがなくても、身の回りをよく観察することで良い写真が撮れる」という舞のエピソードを通して、機材よりも観察力が大切だと伝えており、これが③「世界をよく観察することは機材よりも重要だ」と一致するから。\n【ポイント1】①「高価なカメラが常に一番良い写真を撮る」は本文の主張（高価なカメラが必須ではない）と正反対。\n【ポイント2】②「特別なカメラを使って優勝した」は誤り。本文では舞はスマートフォンだけを使っていると書かれている。④「小さなものの写真をやめた」も本文と矛盾する（部員は今もよく観察してから撮っている）。\n【ポイント3】具体例（スマートフォン、雨粒、自転車の影）から共通する一般的なメッセージ（観察力の大切さ）を読み取る。\n【答え】③ Paying close attention to the world is more important than equipment.\n【確かめ】選んだ選択肢が、本文の具体例に共通する一般的なメッセージと一致しているかを確認する。\n【よくあるまちがい】本文の具体的なエピソード（優勝した、スマホを使った）だけを見て、主題を取り違えてしまう。\n【ここが絶対】主題把握問題では、具体例に共通する一般的なメッセージ（筆者の言いたいこと）を探す。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',

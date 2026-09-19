@@ -995,25 +995,8 @@ ask + 人 + to do = 「人に〜するよう頼む」という重要構文。
     choices: ['① this', '② that', '③ it', '④ what'],
     answer: '③ it',
     hint: '形式主語 it を使った「it is + 形容詞 + to 動詞」の構文。',
-    explanation: `【出題意図】
-形式主語 it（仮の主語）を使った構文を問う問題。I think (that) it is〜 の形が正解。
-
-【解説】
-この文は「I think [that] it is necessary to reduce plastic waste as soon as possible.」という構造。it は to reduce plastic waste（プラスチックごみを減らすこと）を指す形式主語（仮主語）。
-・① this → I think this necessary to〜 は文法的に成立しない
-・② that → I think that necessary to〜 も不自然
-・③ it → 形式主語の it（✓）
-・④ what → I think what necessary to〜 は成立しない
-
-日本語訳：「私はできるだけ早くプラスチックごみを減らすことが必要だと思う。」
-
-【文法ポイント】
-形式主語（仮主語）it の構文：It is + 形容詞 + to + 動詞〜 = 〜することは（形容詞）だ。I think it is〜 のような文の中でも使われる。
-
-【入試頻出】
-・It is important to reduce food waste.
-・I think it is difficult to change people's habits quickly.
-・She found it hard to give up plastic bags completely.`,
+    explanation:
+      '【何を聞かれているか】「I think ( ) necessary to reduce plastic waste as soon as possible.」の空所に入る適切な語を選ぶ。\n【なぜitになるのか】to reduce plastic waste（プラスチックごみを減らすこと）という長い内容を先に置くと文のバランスが悪くなるため、その内容を指す形式主語itを先に置いて、本当の中身をあとに回すという英語の決まりがあるから。\n【ポイント1】this、that、whatはこの位置に置いても文法的に成立しない。\n【ポイント2】③it（形式主語）が正解。itはto reduce plastic waste as soon as possibleを指す。\n【ポイント3】形式主語itの基本構文：It is＋形容詞＋to＋動詞〜＝「〜することは（形容詞）だ」（例：It is important to reduce food waste.）。\n【答え】③ it\n【確かめ】itがto reduce plastic waste as soon as possibleを指していることを確認する。\n【よくあるまちがい】thisやthatを使ってしまう。形式主語には必ずitを使う。\n【ここが絶対】「〜することは…だ」を表すときは、形式主語itを使い、本当の中身（to不定詞）は後ろに置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1059,25 +1042,8 @@ I have never taken part in a recycling activity.
     question: '次の日本文を英語に訳せ。\n「彼が集めたペットボトルを私に見せてもらえませんか？」',
     answer: 'Could you show me the plastic bottles that he collected? / Could you show me the plastic bottles he collected?',
     hint: '「見せてもらえませんか」は Could you show me〜?、「彼が集めた」は関係代名詞（that / which）で修飾。',
-    explanation: `【出題意図】
-依頼表現（Could you〜?）と関係代名詞（目的格）を組み合わせた英作文。
-
-【解説】
-2つのポイント：
-1. 丁寧な依頼：Could you show me〜? = 「〜を見せていただけますか？」show + 人 + 物（第4文型）
-2. 「彼が集めた（ペットボトル）」= the plastic bottles that/which he collected（関係代名詞・目的格）→省略可
-
-組み合わせ：Could you show me the plastic bottles (that) he collected?
-
-別解：Could you let me see the plastic bottles he collected?
-
-【文法ポイント】
-Could you〜? = Can you〜? の丁寧版。show + 人 + 物：人に物を見せる（第4文型 SVOO）。目的格の関係代名詞は省略可能。
-
-【入試頻出】
-・Could you show me the report you wrote about pollution?
-・Can you show me the box he used for recycling?
-・Could you let me see the plan you made for the clean-up day?`,
+    explanation:
+      '【何を聞かれているか】「彼が集めたペットボトルを私に見せてもらえませんか？」を英語に訳す。\n【なぜCould you〜?とthat/whichを組み合わせるのか】丁寧な依頼にはCould you〜?を使い、「彼が集めた」という説明を加えるには、the plastic bottlesのうしろに関係代名詞（目的格）でcollected節をつなげる必要があるから。\n【ポイント1】丁寧な依頼：Could you show me〜?＝「〜を見せていただけますか？」（show＋人＋物の第4文型）。\n【ポイント2】「彼が集めた（ペットボトル）」＝the plastic bottles that/which he collected（関係代名詞・目的格、省略も可）。\n【ポイント3】組み合わせるとCould you show me the plastic bottles (that) he collected?になる。\n【答え】Could you show me the plastic bottles that he collected? / Could you show me the plastic bottles he collected?\n【確かめ】the plastic bottlesのあとにhe collected（主語＋動詞）が続いており、collectの目的語がthe plastic bottlesであることを確認する。\n【よくあるまちがい】Could you〜?のかわりにCan you〜?を使ってしまい、ていねいさが弱くなる。\n【ここが絶対】Could you〜?はCan you〜?の丁寧版。目的格の関係代名詞は省略できる。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1144,23 +1110,8 @@ Could you〜? = Can you〜? の丁寧版。show + 人 + 物：人に物を見せ
     question: '次の日本文を英語に訳せ。\n「定期的な運動は体だけでなく心にも良い。」',
     answer: 'Regular exercise is good not only for the body but also for the mind.',
     hint: '「〜だけでなく…も」は not only A but also B の構文。',
-    explanation: `【出題意図】
-相関接続詞 not only A but also B（〜だけでなく…も）の構文を使った英作文問題。
-
-【解説】
-「〜だけでなく…も」= not only A but also B。この文では A = for the body、B = for the mind という前置詞句が並列されている。
-
-完成した文：Regular exercise is good not only for the body but also for the mind.
-
-注意：not only A but also B の A と B は文法的に同じ形（並列）にする必要がある。
-
-【文法ポイント】
-相関接続詞：not only A but also B（AだけでなくBも）、both A and B（AもBも）、either A or B（AかBのどちらか）。
-
-【入試頻出】
-・Walking every day is good not only for your health but also for your mood.
-・This program helps not only the environment but also local communities.
-・Eating vegetables is important not only for children but also for adults.`,
+    explanation:
+      '【何を聞かれているか】「定期的な運動は体だけでなく心にも良い。」を英語に訳す。\n【なぜnot only A but also Bを使うのか】「〜だけでなく…も」という意味は、相関接続詞not only A but also Bという決まった形で表し、AとBには文法的に同じ形（この文では前置詞句for the body／for the mind）を並べる必要があるから。\n【ポイント1】「〜だけでなく…も」＝not only A but also B。\n【ポイント2】AとBの部分には同じ形（前置詞句なら前置詞句どうし）を並べる。Regular exercise is good not only for the body but also for the mind.\n【ポイント3】相関接続詞の仲間：both A and B（AもBも）、either A or B（AかBのどちらか）。\n【答え】Regular exercise is good not only for the body but also for the mind.\n【確かめ】not onlyのあとと、but alsoのあとが同じ形（for the body／for the mind）になっているかを確認する。\n【よくあるまちがい】not onlyのあとと、but alsoのあとの形をそろえず、前置詞を混ぜてしまう。\n【ここが絶対】not only A but also BのAとBは文法的に同じ形にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1205,22 +1156,8 @@ Could you〜? = Can you〜? の丁寧版。show + 人 + 物：人に物を見せ
     question: '次の英文を読んで、問いに答えなさい。\n\n（本文は上の passage を参照）\n\n問：本文中の下線部 "this" が指す内容として最も適切なものを選べ。\n① レストランがプラスチックストローの提供をやめ、紙や金属のストローを使うようになったこと\n② 海の生き物が毎日大量に川や海で泳いでいること\n③ お客が最初から紙のストローを喜んで受け入れたこと\n④ プラスチックストローが1回使うごとに再利用されていること',
     answer: '① レストランがプラスチックストローの提供をやめ、紙や金属のストローを使うようになったこと',
     hint: '"this" は直前の文で述べられている内容を指す。直前の文が何を説明しているか確認する。',
-    explanation: `【出題意図】
-指示語（this）が何を指すかを本文から特定する指示語問題。入試長文読解の頻出問題形式。
-
-【解説】
-指示語の直前を確認する："Customers at first thought these changes were inconvenient, but many of them have gotten used to it over time."（客は最初これらの変化を不便だと思ったが、多くの人は次第に慣れた）の直前の文は "some restaurants have stopped giving out plastic straws, and paper or metal straws are now used instead."（一部のレストランがプラスチックストローの提供をやめ、代わりに紙や金属のストローを使うようになった）。
-→ "this" が指すのはこの「変化（changes）」＝①。
-
-② 海の生き物が泳ぐこと：本文の主旨と無関係（×）
-③ お客が最初から喜んで受け入れた：本文には「最初は不便だと思った」とあり真逆（×）
-④ ストローが再利用されている：本文にそのような記述はない（×）
-
-【文法ポイント】
-指示語問題のアプローチ：指示語（this / these / it / they）が出たら直前の文を確認し、指示語の数（単数・複数）と性質を確認する。
-
-【入試頻出】
-「this が指すものを選べ」問題では、直前の1〜2文をよく読み、選択肢を代入して意味が通るか確認することが正解への近道。`,
+    explanation:
+      '【何を聞かれているか】本文中の下線部"this"が指す内容として最も適切なものを選ぶ。\n【なぜ①が正解なのか】"this"を含む文の直前に"some restaurants have stopped giving out plastic straws, and paper or metal straws are now used instead."（一部のレストランがプラスチックストローの提供をやめ、代わりに紙や金属のストローを使うようになった）とあり、"this"はこの「変化」を指しているから。\n【ポイント1】指示語の直前を確認する："Customers at first thought these changes were inconvenient, but many of them have gotten used to it over time."という文の"it"（≒this）は、直前の文で説明された変化を指す。\n【ポイント2】②海の生き物が泳ぐことは本文の主旨と無関係。③「お客が最初から喜んで受け入れた」は本文の「最初は不便だと思った」と真逆。④ストローの再利用については本文に記述がない。\n【ポイント3】"this"が指すのは①「レストランがプラスチックストローの提供をやめ、紙や金属のストローを使うようになったこと」。\n【答え】① レストランがプラスチックストローの提供をやめ、紙や金属のストローを使うようになったこと\n【確かめ】"this"を①の内容に置きかえて文を読み直し、意味が通ることを確認する。\n【よくあるまちがい】指示語の直前ではなく、離れた場所の内容から答えを探してしまう。\n【ここが絶対】指示語問題では、指示語の直前の文を確認し、代入して意味が通るかを確かめる。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1268,23 +1205,8 @@ Could you〜? = Can you〜? の丁寧版。show + 人 + 物：人に物を見せ
     choices: ['① 再生可能エネルギーは化石燃料を燃やすよりも汚染が少ない。', '② 再生可能エネルギーは化石燃料と違い、なくなる心配がない。', '③ 太陽光パネルや風力タービンの建設には現在まったく費用がかからない。', '④ 多くの専門家は再生可能エネルギーが今後も増え続けると考えている。'],
     answer: '③ 太陽光パネルや風力タービンの建設には現在まったく費用がかからない。',
     hint: '本文では「太陽光パネルや風力タービンの建設にはまだ多くの費用がかかる」と述べている。',
-    explanation: `【出題意図】
-「本文と合っていないものを選ぶ」という誤文識別型の読解問題。細部の読み取りと選択肢の正確な解釈が必要。
-
-【解説】
-各選択肢を本文と照合する：
-① 「化石燃料を燃やすよりも汚染が少ない」→ 本文に "Renewable energy produces much less pollution than burning coal or oil" とある（✓ 本文と一致）
-② 「なくなる心配がない」→ 本文に "it also does not run out, unlike fossil fuels" とある（✓ 本文と一致）
-③ 「まったく費用がかからない」→ 本文には "building solar panels and wind turbines still costs a lot of money" とあり、多くの費用がかかると述べている（× 本文と不一致）
-④ 「今後も増え続けると考えている」→ 本文の最後に "many experts believe that renewable energy will continue to grow" とある（✓ 本文と一致）
-
-正解：③
-
-【文法ポイント】
-「合っていないものを選べ」問題のアプローチ：選択肢の語句を一つずつ本文と照合する。「まったく〜ない」「すべて」などの強調語は誤答パターンに多い。
-
-【入試頻出】
-本文の否定表現（still costs a lot of money）と選択肢の逆の内容（costs nothing）を見抜く力が問われる。`,
+    explanation:
+      '【何を聞かれているか】再生可能エネルギーについてのパッセージを読んで、内容と合っていない選択肢を1つ選ぶ。\n【なぜ③が不一致なのか】本文には"building solar panels and wind turbines still costs a lot of money"（太陽光パネルや風力タービンの建設にはまだ多くの費用がかかる）と書かれており、これは③「まったく費用がかからない」という断定と矛盾するから。\n【ポイント1】①「化石燃料より汚染が少ない」は本文の"Renewable energy produces much less pollution than burning coal or oil"と一致する。\n【ポイント2】②「なくなる心配がない」は本文の"it also does not run out, unlike fossil fuels"と一致する。④「今後も増え続ける」も本文最後の"many experts believe that renewable energy will continue to grow"と一致する。\n【ポイント3】③は本文の「まだ多くの費用がかかる」という記述と矛盾するため、不一致の選択肢。\n【答え】③ 太陽光パネルや風力タービンの建設には現在まったく費用がかからない。\n【確かめ】本文の該当箇所（still costs a lot of money）を読み直し、③の内容と矛盾していることを確認する。\n【よくあるまちがい】「まったく〜ない」のような強調語を含む選択肢を、本文をよく読まずに正しいと判断してしまう。\n【ここが絶対】「合っていないものを選べ」問題では、「まったく」「すべて」のような強調語を含む選択肢ほど本文と丁寧に照合する。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
