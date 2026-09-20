@@ -234,13 +234,13 @@ export const myojoEigo: Question[] = [
     examType: 'chugaku',
     difficulty: 'advanced',
     question:
-      '【大問2】整序英作文・空所補充\n\n問1: 次の語を並べ替えて、正しい英文を作りなさい。\n① my / to / station / walked / I / the\n② studying / she / has / since / been / morning\n\n問2: 次の日本語を英語にしなさい。\n①「あなたは今何をしていますか。」\n②「私はあなたのことがずっと心配でした。」',
+      '【大問2】整序英作文・空所補充\n\n問1: 次の語を並べ替えて、正しい英文を作りなさい。\n① my / to / station / walked / I / the （1語不要）\n② studying / she / has / since / been / morning\n\n問2: 次の日本語を英語にしなさい。\n①「あなたは今何をしていますか。」\n②「私はあなたのことがずっと心配でした。」',
     answer:
       '問1: ① I walked to the station. ② She has been studying since morning.\n問2: ① What are you doing now? ② I have been worried about you.',
     hint:
       '問1②の "has been studying" は「ずっと〜している（継続中）」という現在完了進行形です。"since morning" は「今朝からずっと」という意味です。問2②も現在完了（継続）を使います。',
     explanation:
-      '【解説】\n\n問1-①: I walked to the station.\n主語（I）＋動詞（walked）＋前置詞句（to the station）の語順。\n"walk to 〜" = 〜まで歩く\n\n問1-②: She has been studying since morning.\n現在完了進行形：has/have + been + 動詞-ing\n「今朝からずっと勉強している」という今もまだ続いている動作を表します。\n"since morning" = 今朝から（since + 起点の時）\n\n問2-①: What are you doing now?\n現在進行形の疑問文：What + be動詞 + 主語 + 動詞-ing ?\n"now" = 今（現在進行形とよく使われる副詞）\n\n問2-②: I have been worried about you.\n現在完了（継続）：have + 過去分詞\n"be worried about 〜" = 〜のことが心配である\n"have been worried" = ずっと心配していた（今も）\n\n【文法まとめ】\n・現在進行形 am/is/are + -ing：今〜している\n・現在完了形 have/has + 過去分詞：〜したことがある / ずっと〜している / 〜したところ\n・現在完了進行形 have/has been + -ing：ずっと〜し続けている（動作の継続）\n\n【ポイント】"since"（〜から）と "for"（〜の間）は現在完了でよく使われます。since + 時点、for + 期間と使い分けます。',
+      '【何を聞かれているか】\n語句の並べ替えと日本語の英作文を通して、現在完了形・現在完了進行形・現在進行形の使い方を問う総合問題。\n\n【なぜ現在完了進行形を使う場面があるのか】\n「ずっと〜し続けている」という、今も続いている動作を強調したいときは、現在完了進行形（have/has been＋動詞のing形）を使う。単なる状態の継続（現在完了）と、動作の継続（現在完了進行形）を区別する。\n\n【ポイント1】問1①：シンプルな過去の文を組み立てる\n"I walked to the station."＝「私は駅まで歩いた」。主語＋動詞＋前置詞句というシンプルな語順。語群には"my"という使わない語が1つ混じっている。\n\n【ポイント2】問1②：現在完了進行形の語順を確認する\n"She has been studying since morning."＝「彼女は今朝からずっと勉強している」。has been＋動詞のing形で、動作の継続を表す。\n\n【ポイント3】問2：現在進行形と現在完了の使い分けを確認する\n①「今何をしていますか」は現在進行形"What are you doing now?"。②「ずっと心配していた」は現在完了（継続）"I have been worried about you."。\n\n【答え】\n問1: ① I walked to the station. ② She has been studying since morning.\n問2: ① What are you doing now? ② I have been worried about you.\n\n【確かめ】\n問1①で"my"が使われずに余っていること、問1②で"has been studying"という現在完了進行形の語順になっていることを確認する。\n\n【よくあるまちがい】\n問1①で、語群にある単語をすべて使おうとして"my"を無理に入れてしまうミス。並べ替え問題では、使わない語が混ざっていることもある。\n\n【ここが絶対】\n現在進行形（am/is/are+-ing）＝今〜している、現在完了（have/has+過去分詞）＝〜したことがある/ずっと〜している、現在完了進行形（have/has been+-ing）＝ずっと〜し続けている、という3つの形を区別して覚える。',
   },
   {
     id: 'myojo_eigo_r03',

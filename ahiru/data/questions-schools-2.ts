@@ -1126,7 +1126,8 @@ export const kansaiHokuyoQuestions: Question[] = [
     question: '次の英文を日本語に訳しなさい。「Please don\'t run in the hallway.」',
     answer: '廊下では走らないでください。',
     hint: '「Please don\'t ＋動詞」は丁寧な禁止',
-    explanation: '「Please don\'t ＋動詞の原形」は丁寧な禁止の表現。「run」は「走る」、「in the hallway」は「廊下で」。学校でよく見られる掲示の表現。',
+    explanation:
+      '【何を聞かれているか】\n"Please don\'t run in the hallway."という英文を日本語に訳す問題。\n\n【なぜ「走らないでください」という丁寧な禁止になるのか】\n"Please don\'t＋動詞の原形"は、命令文の否定形にPleaseをつけた、丁寧な禁止を表す表現。強い命令ではなく、相手にお願いする形で「〜しないでください」と伝える。\n\n【ポイント1】"don\'t＋動詞の原形"の形を確認する\n禁止を表す命令文は"Don\'t＋動詞の原形"。runは動詞の原形（走る）。\n\n【ポイント2】Pleaseの役割を確認する\nPleaseをつけることで、命令口調をやわらげ、丁寧なお願いのニュアンスになる。\n\n【ポイント3】"in the hallway"の意味を確認する\n"in the hallway"＝「廊下で」。学校や施設の掲示でよく使われる表現。\n\n【答え】\n廊下では走らないでください。\n\n【確かめ】\n"Please don\'t run"を「走らないでください」、"in the hallway"を「廊下で」と訳し、全体が自然な日本語になっているか確認する。\n\n【よくあるまちがい】\n"don\'t"を無視して、ただの命令文（走ってください）のように訳してしまうミス。don\'tがあることで意味が正反対（禁止）になる。\n\n【ここが絶対】\n"Please don\'t＋動詞の原形"＝「〜しないでください」という丁寧な禁止の表現をセットで覚える。',
   },
   {
     id: 'kansai_hokuyo_eigo_06', subject: 'eigo', difficulty: 'advanced',
@@ -1134,6 +1135,7 @@ export const kansaiHokuyoQuestions: Question[] = [
     question: '次の会話の空欄を埋めなさい。\nA: \"How long does it take from here to the station?\"\nB: \"( ) about ten minutes ( ) bus.\"',
     answer: 'It takes / by',
     hint: '「時間がかかる」はIt takes〜。交通手段はby',
-    explanation: '所要時間の表現：「It takes ＋時間 ＋ by ＋交通手段」\n「It takes about ten minutes by bus.（バスで約10分かかります）」\n「How long does it take?（どのくらいかかりますか？）」は道案内の頻出表現。',
+    explanation:
+      '【何を聞かれているか】\n「駅までどのくらいかかりますか」という質問に対する応答の空欄を埋める問題。\n\n【なぜIt takesを使うのか】\n「（時間が）かかる」と所要時間を答えるときは、"It takes＋時間"という決まった表現を使う。交通手段を伝えるときはbyを使う。\n\n【ポイント1】所要時間を答える表現を確認する\n"It takes＋時間"＝「（時間が）かかる」。\n\n【ポイント2】交通手段を表す前置詞を確認する\n"by＋交通手段"＝「〜で（乗り物を使って）」。byの後の乗り物には冠詞をつけない（by bus）。\n\n【ポイント3】質問と応答の対応を確認する\n"How long does it take from here to the station?"（ここから駅までどのくらいかかりますか）に対して、"It takes about ten minutes by bus."（バスで約10分かかります）と答える。\n\n【答え】\nIt takes / by\n\n【確かめ】\n"It takes about ten minutes by bus."を訳し、質問"How long does it take...?"に自然に対応する答えになっているか確認する。\n\n【よくあるまちがい】\n"by"の後ろに"a bus"のように冠詞をつけてしまうミス。交通手段を表すby busには冠詞をつけない。\n\n【ここが絶対】\n"It takes＋時間＋by＋交通手段"＝「〜で（時間）かかる」という道案内の頻出表現をセットで覚える。',
   },
 ];

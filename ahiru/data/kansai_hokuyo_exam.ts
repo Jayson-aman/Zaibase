@@ -222,7 +222,7 @@ export const kansaiHokuyoEigo: Question[] = [
     hint:
       '問1は "visited" と "in Kyoto" に注目。問2は "connects" が「つなぐ」という意味です。問3は "decided to 〜" が「〜しようと決めた」という表現です。',
     explanation:
-      '【解説】\n\n問1: "Yuki visited her grandmother in Kyoto" → ゆきは京都にいる祖母を訪ねました。\n\n問2: "Food connects people." の訳\n・Food = 食べ物\n・connects = つなぐ（connect の三単現 s）\n・people = 人々\n→「食べ物は人々をつなぎます。」\n\n問3: "decided to learn more about Japanese cooking" → 日本料理についてもっと学ぼうと決めた\n・decided to 〜 = 〜しようと決心した\n・learn more about 〜 = 〜についてもっと学ぶ\n・Japanese cooking = 日本料理\n\n【語彙チェック】\n・visit = 訪問する\n・traditional = 伝統的な\n・dashi stock = だし（日本料理の基本の出汁）\n・agree = 同意する\n\n【ポイント】英文読解では「誰が（主語）、いつ、どこで、何をしたか」を整理しながら読むと理解しやすくなります。',
+      '【何を聞かれているか】\nゆきが祖母を訪ねた話の英文を読んで、3つの問いに日本語で答える読解問題。\n\n【なぜ「誰が・いつ・どこで・何をしたか」を整理するのか】\n短い物語文でも、登場人物の行動や気づきが順番に書かれているので、整理しながら読むと設問に対応する部分をすぐに見つけられる。\n\n【ポイント1】問1：行った場所を確認する\n"Yuki visited her grandmother in Kyoto last summer."（ゆきは昨年の夏、京都にいる祖母を訪ねた）から、行き先がわかる。\n\n【ポイント2】問2：セリフの意味を確認する\n"Food connects people."のconnectsは「つなぐ」という意味の動詞（三人称単数のs）。「食べ物は人々をつなぐ」という意味になる。\n\n【ポイント3】問3：決心した内容を確認する\n"decided to learn more about Japanese cooking"（日本料理についてもっと学ぼうと決めた）という表現から、ゆきの決心がわかる。\n\n【答え】\n問1: 京都（にいる祖母のもと）\n問2: 食べ物は人をつなぐ。（食べ物は人々をつなぎます。）\n問3: 日本料理についてもっと学ぼうと決心した。\n\n【確かめ】\nそれぞれの答えが、本文中の該当する英文（visited her grandmother in Kyoto、Food connects people、decided to learn more about Japanese cooking）と対応しているか確認する。\n\n【よくあるまちがい】\n問1で「祖母を訪ねた」ということだけを答え、場所（京都）を書き忘れてしまうミス。設問が「どこへ行きましたか」と場所を聞いているので、場所を明記する。\n\n【ここが絶対】\n物語文の読解は「誰が・いつ・どこで・何をしたか」を整理しながら読むと、設問に素早く対応できる。',
   },
   {
     id: 'kansai_hokuyo_eigo_r02',

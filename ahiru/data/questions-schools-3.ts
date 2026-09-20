@@ -242,7 +242,8 @@ export const myojoQuestions: Question[] = [
     question: '次の文を過去形に書き換えよ。"She goes to school by bus every day."',
     answer: 'She went to school by bus every day.',
     hint: 'go の過去形は went',
-    explanation: 'go → went（不規則変化）\n"every day"は過去の習慣を表す文でもそのまま使える。',
+    explanation:
+      '【何を聞かれているか】\n"She goes to school by bus every day."という文を過去形に書き換える問題。\n\n【なぜgoが不規則変化するのか】\ngoは規則動詞のように-edをつけるのではなく、wentという特別な形に変化する不規則動詞。\n\n【ポイント1】goの過去形を確認する\ngo（原形）→went（過去形）という不規則変化。\n\n【ポイント2】"every day"はそのまま使えることを確認する\n過去の習慣的な行動（「毎日〜していた」）を表すときも、"every day"はそのまま使うことができる。\n\n【ポイント3】他の部分は変える必要がないことを確認する\n"by bus"（バスで）はそのままで、動詞のgoesだけをwentに変える。\n\n【答え】\nShe went to school by bus every day.\n\n【確かめ】\n"goes"が"went"に正しく変わっていて、他の語句（by bus, every day）はそのままになっているか確認する。\n\n【よくあるまちがい】\n不規則動詞のgoを規則動詞のように"goed"としてしまうミス。goはgo→went→goneという特別な活用をする。\n\n【ここが絶対】\ngo→went→goneという不規則動詞の活用をセットで覚えておく。',
   },
   {
     id: 'myojo_eigo_02', subject: 'eigo', difficulty: 'advanced',
@@ -250,7 +251,8 @@ export const myojoQuestions: Question[] = [
     question: '下線部の誤りを正して文全体を書き直せ。"He don\'t like playing soccer in the rain."',
     answer: 'He doesn\'t like playing soccer in the rain.',
     hint: '三人称単数現在は does not（doesn\'t）',
-    explanation: 'He（三人称単数）の否定文は doesn\'t を使う。\ndon\'t → doesn\'t\n"playing"の前には動詞原形不要（like + ~ing）。',
+    explanation:
+      '【何を聞かれているか】\n"He don\'t like playing soccer in the rain."という文の下線部の誤りを正して、文全体を書き直す問題。\n\n【なぜdoesn\'tを使うのか】\n主語がHe（三人称単数）のとき、一般動詞の否定文にはdon\'tではなくdoesn\'tを使うという決まりがある。\n\n【ポイント1】三人称単数の否定文の形を確認する\n主語がHe/She/Itのとき、一般動詞の否定文は"doesn\'t＋動詞の原形"。\n\n【ポイント2】don\'tとdoesn\'tの使い分けを確認する\ndon\'tはI/you/we/theyなど、doesn\'tはhe/she/itなど三人称単数の主語に対応する。\n\n【ポイント3】"like playing"の形が正しいことを確認する\n"like＋動名詞（-ing）"は「〜するのが好き」という正しい形で、この部分は直す必要がない。\n\n【答え】\nHe doesn\'t like playing soccer in the rain.\n\n【確かめ】\n主語Heに対して"doesn\'t"が使われていること、"like playing"の部分はそのままになっていることを確認する。\n\n【よくあるまちがい】\ndon\'tをそのまま使ってしまい、主語との一致（三人称単数）を確認しないミス。主語がhe/she/itのときは必ずdoesn\'tを使う。\n\n【ここが絶対】\n一般動詞の否定文は、主語に合わせてdon\'t（I/you/we/they）とdoesn\'t（he/she/it）を使い分ける。',
   },
   {
     id: 'myojo_eigo_03', subject: 'eigo', difficulty: 'advanced',
@@ -259,7 +261,8 @@ export const myojoQuestions: Question[] = [
     choices: ['① for', '② since', '③ during', '④ while'],
     answer: '② since',
     hint: '特定の時点から現在まで継続 → since＋年・時点',
-    explanation: 'since＋時点（2015）：「2015年からずっと」\nfor＋期間（for 10 years）：「10年間」\nduring＋名詞期間：「〜の間中」\nwhile＋節：「〜している間」',
+    explanation:
+      '【何を聞かれているか】\n"I have lived in Osaka ( ) 2015."の空欄に入る、正しい前置詞を選ぶ文法問題。\n\n【なぜsinceを使うのか】\n"2015"という特定の時点（起点）を表す語の前には、「〜から」という意味を表すsinceを使うという決まりがある。\n\n【ポイント1】sinceとforの違いを確認する\nsince＋時点（2015、last year、Mondayなど）＝「〜から」、for＋期間（10 years、three daysなど）＝「〜の間」。\n\n【ポイント2】duringとwhileの意味を確認する\nduring＋名詞の期間（during the summer）＝「〜の間中」、while＋節（主語＋動詞）＝「〜している間」。\n\n【ポイント3】2015が時点であることを確認する\n"2015"は年（特定の時点）を表すので、sinceを使うのが正しい。\n\n【答え】\n② since\n\n【確かめ】\n"I have lived in Osaka since 2015."を訳し、「私は2015年からずっと大阪に住んでいる」という、起点からの継続を表す意味になっていることを確認する。\n\n【よくあるまちがい】\nsinceとforを混同し、時点（2015）の前にforを使ってしまうミス。forは期間（数字＋単位）の前に使う。\n\n【ここが絶対】\nsince＋時点、for＋期間、という使い分けをセットで覚える。',
   },
   {
     id: 'myojo_eigo_04', subject: 'eigo', difficulty: 'advanced',
@@ -267,7 +270,8 @@ export const myojoQuestions: Question[] = [
     question: '次の英文を日本語に訳せ。"If it rains tomorrow, we will cancel the outdoor event."',
     answer: 'もし明日雨が降れば、私たちは屋外イベントを中止します。',
     hint: 'if節は仮定の条件、will は未来の推量',
-    explanation: 'If it rains tomorrow（明日雨が降れば）→ 条件節\nwe will cancel（私たちは中止します）→ 帰結節\nthe outdoor event（屋外イベントを）',
+    explanation:
+      '【何を聞かれているか】\n"If it rains tomorrow, we will cancel the outdoor event."という文を日本語に訳す問題。\n\n【なぜIf節が「もし〜なら」という条件を表すのか】\n"If＋主語＋動詞"は「もし〜なら」という条件を表す節で、その条件が成り立ったときにどうなるかを、後ろの主節（we will cancel〜）で表す。\n\n【ポイント1】If節（条件節）の意味を確認する\n"If it rains tomorrow"＝「もし明日雨が降れば」。\n\n【ポイント2】主節（帰結節）の意味を確認する\n"we will cancel the outdoor event"＝「私たちは屋外イベントを中止します」。willは「〜するつもりだ」という未来の行動を表す。\n\n【ポイント3】文全体をつなげる\n「条件（もし〜なら）＋結果（…します）」の順で自然な日本語にする。\n\n【答え】\nもし明日雨が降れば、私たちは屋外イベントを中止します。\n\n【確かめ】\n「もし〜なら」という条件の部分と「…します」という結果の部分が、正しい順番で訳されているか確認する。\n\n【よくあるまちがい】\nwillを「〜だろう」という推量の意味だけで訳し、「（自分たちが）〜するつもりだ」という意志の意味を見落としてしまうミス。ここでのwillは主語の意志・予定を表す。\n\n【ここが絶対】\n"If＋現在形, 主語＋will＋動詞の原形"＝「もし〜なら…するだろう（するつもりだ）」という条件文の型をセットで覚える。',
   },
   {
     id: 'myojo_eigo_05', subject: 'eigo', difficulty: 'advanced',
@@ -275,7 +279,8 @@ export const myojoQuestions: Question[] = [
     question: '次の日本語を英語に訳せ。「あなたは今まで外国に行ったことがありますか。」',
     answer: 'Have you ever been to a foreign country?',
     hint: '経験を表す現在完了形 have + 過去分詞、ever は「今までに」',
-    explanation: 'Have you ever been to...? （〜に行ったことがありますか）\nbeen to = go の経験を表す現在完了形\na foreign country（外国）',
+    explanation:
+      '【何を聞かれているか】\n「あなたは今まで外国に行ったことがありますか。」という日本語を英語にする問題。\n\n【なぜHave you ever been to〜?を使うのか】\n「今まで〜したことがありますか」という経験をたずねる疑問文は、現在完了形の疑問文"Have you ever＋過去分詞〜?"で表す。\n\n【ポイント1】現在完了形（経験）の疑問文の公式を確認する\nHave/Has＋主語＋ever＋過去分詞〜?\n\n【ポイント2】"been to〜"の意味を確認する\n"been to〜"＝「〜に行ったことがある」。beenはgoの経験を表すときに使う、beの過去分詞。\n\n【ポイント3】"ever"の意味を確認する\n"ever"＝「今までに」。経験をたずねる疑問文でよく使われる。\n\n【答え】\nHave you ever been to a foreign country?\n\n【確かめ】\n"Have you ever been to〜?"という形になっていること、また"a foreign country"（外国）が正しく使われていることを確認する。\n\n【よくあるまちがい】\n"been to"の代わりに"gone to"を使ってしまうミス。経験（行ったことがある）を表すときはbeen toを使い、gone toは「行ってしまった（今そこにいる）」という別の意味になる。\n\n【ここが絶対】\n"Have you ever been to〜?"＝「今まで〜に行ったことがありますか」という経験をたずねる現在完了形の疑問文をセットで覚える。',
   },
   {
     id: 'myojo_eigo_06', subject: 'eigo', difficulty: 'advanced',
@@ -283,7 +288,8 @@ export const myojoQuestions: Question[] = [
     question: '次の長文を読んで質問に答えよ。\n"Mt. Fuji is the highest mountain in Japan. It is 3,776 meters high. Many people climb it every summer."\nQuestion: How high is Mt. Fuji?',
     answer: 'It is 3,776 meters high.',
     hint: '本文中から数字を含む文を探す',
-    explanation: '質問「富士山はどのくらいの高さですか」\n本文2文目「It is 3,776 meters high.」がそのまま答え。\n（富士山は3776メートルです）',
+    explanation:
+      '【何を聞かれているか】\n富士山についての短い英文を読んで、"How high is Mt. Fuji?"という質問に答える読解問題。\n\n【なぜ本文中の数字を含む文に注目するのか】\n"How high〜?"（どのくらいの高さか）という質問には、本文中の数字を含む文がそのまま答えになっていることが多い。\n\n【ポイント1】該当する文を確認する\n"It is 3,776 meters high."（それは3,776メートルの高さです）という文が、富士山の高さを直接述べている。\n\n【ポイント2】質問と本文の主語の対応を確認する\n質問のMt. Fujiと、本文の"It"（それ）は同じものを指している。\n\n【ポイント3】答え方を確認する\n質問がHow high（どのくらいの高さ）で聞いているので、"It is〜meters high."の形でそのまま答える。\n\n【答え】\nIt is 3,776 meters high.\n\n【確かめ】\n本文の"It is 3,776 meters high."がそのまま答えになっているか確認する。\n\n【よくあるまちがい】\n質問の主語Mt. Fujiと、本文のItが同じものを指していることに気づかず、答えを本文中から見つけられないミス。\n\n【ここが絶対】\n"How high is 〜?"には"It is 〜meters high."の形で、本文中の数字を含む文をそのまま使って答える。',
   },
 ];
 
@@ -523,7 +529,8 @@ export const tezukayamaQuestions: Question[] = [
     question: '次の英文の（　）に入る適切な語を答えよ。\n"She is ( ) than her sister."（彼女は姉より背が高い）',
     answer: 'taller',
     hint: '比較級：形容詞 + er（短い語）',
-    explanation: 'tall（背が高い）の比較級：taller\n比較級の作り方：短い形容詞+er\n「A is + 比較級 + than B」：AはBより〜だ',
+    explanation:
+      '【何を聞かれているか】\n"She is ( ) than her sister."の空欄に入る、正しい比較級を答える問題。\n\n【なぜtallerにするのか】\n2つのもの（彼女と姉）を比べて「〜より背が高い」と言うときは、形容詞tallを比較級（taller）にして、thanとセットで使う。\n\n【ポイント1】比較級の作り方を確認する\ntallのような短い形容詞は、語尾に-erをつけて比較級を作る（tall→taller）。\n\n【ポイント2】比較級の公式を確認する\n"A is＋比較級＋than B"＝「AはBより〜だ」。\n\n【ポイント3】文を組み立てる\n"She is taller than her sister."＝「彼女は姉より背が高い」。\n\n【答え】\ntaller\n\n【確かめ】\n"taller"の後ろに"than"が続いていて、日本語の「姉より背が高い」という意味と一致しているか確認する。\n\n【よくあるまちがい】\n比較級にせず、原級のtallをそのまま使ってしまうミス。thanが後ろにあるときは必ず比較級にする。\n\n【ここが絶対】\n短い形容詞の比較級は語尾に-erをつける。"A is＋比較級＋than B"の公式をセットで覚える。',
   },
   {
     id: 'tezukayama_eigo_02', subject: 'eigo', difficulty: 'advanced',
@@ -531,7 +538,8 @@ export const tezukayamaQuestions: Question[] = [
     question: '次の会話の空欄に入る適切な返答を答えよ。\nA: "Would you like some tea?"\nB: "（　　　）. I\'d love some."',
     answer: 'Yes, please.',
     hint: '飲み物を勧められたときの丁寧な承諾表現',
-    explanation: '"Would you like...?" は「〜はいかがですか？」という丁寧な提案。\n承諾："Yes, please."（はい、ぜひ）\n断る："No, thank you."（いいえ、結構です）',
+    explanation:
+      '【何を聞かれているか】\nお茶を勧められたときの会話の空欄に、適切な返答を答える問題。\n\n【なぜYes, please.を使うのか】\n"Would you like some tea?"（お茶はいかがですか）という丁寧な提案に対して、承諾するときは"Yes, please."（はい、ぜひ）という決まった返答を使う。\n\n【ポイント1】"Would you like〜?"の意味を確認する\n「〜はいかがですか」という、飲食物などを丁寧に勧める表現。\n\n【ポイント2】承諾と断りの返答を確認する\n承諾："Yes, please."（はい、ぜひ）、断り："No, thank you."（いいえ、結構です）。\n\n【ポイント3】後半の"I\'d love some."との整合性を確認する\n"I\'d love some."（ぜひいただきたいです）という前向きな発言が続くので、空欄には承諾の返答が入る。\n\n【答え】\nYes, please.\n\n【確かめ】\n"Yes, please. I\'d love some."という流れが、お茶を快く受け入れる自然な会話になっているか確認する。\n\n【よくあるまちがい】\n"Yes, please."の代わりに"Yes, I do."のような不自然な返答をしてしまうミス。提案・勧誘への返答は"Yes, please."/"No, thank you."という決まった形を使う。\n\n【ここが絶対】\n"Would you like〜?"には"Yes, please."（承諾）または"No, thank you."（断り）という決まった返答をセットで覚える。',
   },
   {
     id: 'tezukayama_eigo_03', subject: 'eigo', difficulty: 'advanced',
@@ -539,7 +547,8 @@ export const tezukayamaQuestions: Question[] = [
     question: '次の英文を読んで、質問に日本語で答えよ。\n"Yuki loves reading books. She reads at least two books a month. Her favorite genre is mystery."\nQuestion: What is Yuki\'s favorite type of book?',
     answer: 'ミステリー（推理小説）',
     hint: 'genre = ジャンル（種類）',
-    explanation: '"Her favorite genre is mystery."（彼女のお気に入りのジャンルはミステリーです）\nfavorite = お気に入りの\ngenre = ジャンル・種類\nmystery = ミステリー・推理小説',
+    explanation:
+      '【何を聞かれているか】\nゆきの読書についての英文を読んで、"What is Yuki\'s favorite type of book?"という質問に日本語で答える読解問題。\n\n【なぜ"favorite genre"に注目するのか】\n質問が「お気に入りの本の種類は何か」を聞いているので、本文中の"favorite genre"（お気に入りのジャンル）という表現がそのまま答えの手がかりになる。\n\n【ポイント1】該当する文を確認する\n"Her favorite genre is mystery."（彼女のお気に入りのジャンルはミステリーだ）という文に答えがある。\n\n【ポイント2】genreの意味を確認する\ngenre＝ジャンル・種類。本や映画などの「種類」を表す語。\n\n【ポイント3】質問の"type of book"とgenreが対応することを確認する\n質問の"type of book"（本の種類）は、本文の"genre"（ジャンル）と同じ内容を指している。\n\n【答え】\nミステリー（推理小説）\n\n【確かめ】\n"favorite genre is mystery"の内容が、書いた答え「ミステリー」ときちんと対応しているか確認する。\n\n【よくあるまちがい】\n"reading books"（読書が好き）という最初の文だけを見て、「読書」を答えにしてしまうミス。質問は「本の種類（ジャンル）」を聞いているので、genreの部分まで読む必要がある。\n\n【ここが絶対】\n質問のキーワード（type of book）と本文中の対応する語（genre）が同じ内容を指していることを見抜く。',
   },
   {
     id: 'tezukayama_eigo_04', subject: 'eigo', difficulty: 'advanced',
@@ -547,7 +556,8 @@ export const tezukayamaQuestions: Question[] = [
     question: '次の日本語を英語にせよ。「私の趣味は音楽を聴くことです。」',
     answer: 'My hobby is listening to music.',
     hint: '趣味=hobby、〜すること=動名詞（〜ing）',
-    explanation: 'My hobby is + ~ing（動名詞）\nlisten to music（音楽を聴く）→ listening to music\n「趣味」はhobbyまたはinterest',
+    explanation:
+      '【何を聞かれているか】\n「私の趣味は音楽を聴くことです。」という日本語を英語にする問題。\n\n【なぜ動名詞を使うのか】\n「〜すること」という動作を名詞のように扱いたいときは、動詞にingをつけた動名詞を使う。ここでは「音楽を聴くこと」を"listening to music"という動名詞句で表す。\n\n【ポイント1】"My hobby is〜"の形を確認する\n"My hobby is＋動名詞"＝「私の趣味は〜することです」。\n\n【ポイント2】"listen to music"を動名詞にする\n"listen to music"（音楽を聴く）にingをつけて"listening to music"にする。\n\n【ポイント3】文を組み立てる\n"My hobby is listening to music."＝「私の趣味は音楽を聴くことです」。\n\n【答え】\nMy hobby is listening to music.\n\n【確かめ】\n"is"の後ろが動名詞（listening）になっていること、"listen to〜"の"to"が抜けていないことを確認する。\n\n【よくあるまちがい】\n動名詞にせず、原形のまま"My hobby is listen to music."としてしまうミス。be動詞の後ろで「〜すること」を表すときは動名詞（-ing形）を使う。\n\n【ここが絶対】\n"My hobby is＋動名詞"＝「私の趣味は〜することです」という形をセットで覚える。',
   },
   {
     id: 'tezukayama_eigo_05', subject: 'eigo', difficulty: 'advanced',
@@ -555,7 +565,8 @@ export const tezukayamaQuestions: Question[] = [
     question: '次の英単語の意味を日本語で答えよ。①environment　②tradition　③volunteer',
     answer: '①環境　②伝統・慣習　③ボランティア・自発的に行動する人',
     hint: '①environ-（周囲）②古くから受け継がれるもの③自発的',
-    explanation: '①environment：環境（自然環境・周囲の状況）\n②tradition：伝統・慣習（世代を超えて受け継がれてきたもの）\n③volunteer：ボランティア（自発的・無償で活動する人・活動）',
+    explanation:
+      '【何を聞かれているか】\nenvironment・tradition・volunteerという3つの英単語の意味を答える語彙問題。\n\n【なぜこれらの単語が重要なのか】\nenvironment（環境）、tradition（伝統）、volunteer（ボランティア）は、社会や文化について書かれた英文でよく登場する重要単語。\n\n【ポイント1】environmentの意味を確認する\nenvironment＝環境。environ-（周囲）という語のもとの意味から、「周囲を取り巻くもの」というイメージで覚える。\n\n【ポイント2】traditionの意味を確認する\ntradition＝伝統・慣習。世代を超えて受け継がれてきたものを指す。\n\n【ポイント3】volunteerの意味を確認する\nvolunteer＝ボランティア（自発的・無償で活動する人・活動）。自ら進んで行動するというニュアンスがある。\n\n【答え】\n①環境　②伝統・慣習　③ボランティア・自発的に行動する人\n\n【確かめ】\nそれぞれの単語を、environmental problem（環境問題）、traditional culture（伝統文化）、volunteer work（ボランティア活動）のような例文に当てはめて確認する。\n\n【よくあるまちがい】\nvolunteerを「無理やりさせられる人」のような誤った意味で覚えてしまうミス。volunteerは「自発的に」行動するという点が重要。\n\n【ここが絶対】\nenvironment・tradition・volunteerは、社会・文化に関する英文の頻出語としてセットで覚えておく。',
   },
   {
     id: 'tezukayama_eigo_06', subject: 'eigo', difficulty: 'advanced',
@@ -806,7 +817,8 @@ export const kinrankaiQuestions: Question[] = [
     choices: ['① open', '② close', '③ take', '④ make'],
     answer: '② close',
     hint: '「出るときはドアを〜してください」',
-    explanation: '"close the door"（ドアを閉める）が文脈に合う。\n"open"は開ける、"take"は持っていく、"make"は作る。\nleave（立ち去る）ときはclose（閉める）。',
+    explanation:
+      '【何を聞かれているか】\n"Please ( ) the door when you leave."の空欄に入る、最も適切な動詞を選ぶ問題。\n\n【なぜcloseが正しいのか】\n"when you leave"（立ち去るとき）という文脈から、部屋を出るときにドアに対して行う自然な動作を考える必要がある。\n\n【ポイント1】選択肢の意味を確認する\n①open（開ける）、②close（閉める）、③take（持っていく）、④make（作る）。\n\n【ポイント2】文脈と一致する動詞を選ぶ\n「立ち去るとき」にドアに対してする自然な動作は「閉める」であり、closeが文脈に合う。\n\n【ポイント3】他の選択肢が不自然であることを確認する\nopenでは「立ち去るのに開ける」となり不自然。takeやmakeはドアに対して使う動詞として意味が通らない。\n\n【答え】\n② close\n\n【確かめ】\n"Please close the door when you leave."を訳し、「立ち去るときはドアを閉めてください」という自然な意味になっていることを確認する。\n\n【よくあるまちがい】\nleave（立ち去る）という単語だけを見て、関係のない動詞を選んでしまうミス。文全体の状況（部屋を出るときの行動）から判断する。\n\n【ここが絶対】\nopen（開ける）⇔close（閉める）という対になる動詞を、それぞれ使われる場面とセットで覚えておく。',
   },
   {
     id: 'kinrankai_eigo_02', subject: 'eigo', difficulty: 'advanced',
@@ -822,7 +834,8 @@ export const kinrankaiQuestions: Question[] = [
     question: '次の単語を使って英文を作れ。【want / I / a / cat / have / to】',
     answer: 'I want to have a cat.',
     hint: '「私は猫を飼いたい」という文を作る',
-    explanation: 'want to + 動詞原形：〜したい\nI want to have a cat.（私は猫を飼いたい）\nhave：持つ・飼う（ペットに対して使う）',
+    explanation:
+      '【何を聞かれているか】\n与えられた単語を使って、「私は猫を飼いたい」という意味の英文を作る問題。\n\n【なぜwant to haveを使うのか】\n「〜したい」という願望は"want to＋動詞の原形"で表し、「（ペットを）飼う」という意味にはhaveを使う。\n\n【ポイント1】"want to＋動詞の原形"の形を確認する\nwant to＋動詞の原形＝「〜したい」。\n\n【ポイント2】haveの意味を確認する\nhaveには「持つ」だけでなく、「（ペットを）飼う」という意味もある。\n\n【ポイント3】文を組み立てる\n"I want to have a cat."＝「私は猫を飼いたい」。\n\n【答え】\nI want to have a cat.\n\n【確かめ】\n"want to"の後ろにhave（動詞の原形）が続いていること、"a cat"が正しく使われていることを確認する。\n\n【よくあるまちがい】\nhaveを"has"や"having"のような別の形にしてしまうミス。"want to"の後ろは必ず動詞の原形にする。\n\n【ここが絶対】\n"want to＋動詞の原形"＝「〜したい」という不定詞の基本形をセットで覚える。haveは「持つ」だけでなく「飼う」という意味でも使われる。',
   },
   {
     id: 'kinrankai_eigo_04', subject: 'eigo', difficulty: 'advanced',
@@ -830,7 +843,8 @@ export const kinrankaiQuestions: Question[] = [
     question: '次の会話の（　）に入る語を答えよ。\nA: "What time is it now?"\nB: "It\'s ( ) past three."（3時15分）',
     answer: 'quarter',
     hint: 'quarter past = 〜時15分過ぎ',
-    explanation: '"quarter past three"：3時15分（quarter=1/4、時計の1/4=15分）\n"half past three"：3時30分\n"quarter to four"：3時45分（4時15分前）',
+    explanation:
+      '【何を聞かれているか】\n"It\'s ( ) past three."（3時15分）の空欄に入る、正しい語を答える時刻の表現問題。\n\n【なぜquarterを使うのか】\n「15分」は時計の文字盤の4分の1（quarter）に相当することから、英語では"quarter"という語を使って時刻の15分を表す。\n\n【ポイント1】quarterの意味を確認する\nquarter＝4分の1。時計の文字盤を4等分した1つ分が15分にあたる。\n\n【ポイント2】"quarter past〜"の形を確認する\n"quarter past three"＝「3時15分（3時を15分過ぎた）」。\n\n【ポイント3】他の時刻表現も確認する\n"half past three"＝「3時30分」、"quarter to four"＝「3時45分（4時の15分前）」。\n\n【答え】\nquarter\n\n【確かめ】\n"It\'s quarter past three."を訳し、「3時15分です」という意味になっていることを確認する。\n\n【よくあるまちがい】\nquarterを「15」という数字だけの意味だと勘違いしてしまうミス。quarterは「4分の1」という割合を表す語で、時計の文脈で15分を意味する。\n\n【ここが絶対】\nquarter past〜＝〜時15分、half past〜＝〜時30分、quarter to〜＝〜時15分前、という時刻表現をセットで覚える。',
   },
   {
     id: 'kinrankai_eigo_05', subject: 'eigo', difficulty: 'advanced',
@@ -838,7 +852,8 @@ export const kinrankaiQuestions: Question[] = [
     question: '次の英文の空欄に正しい冠詞（a / an / the）を入れよ。\n"I saw ( ) elephant at ( ) zoo yesterday. ( ) elephant was very big."',
     answer: 'an / the / The',
     hint: '初出=a/an、特定・再出=the、元音前=an',
-    explanation: '1回目（初出）：an elephant（eで始まるから an）\nthe zoo（特定の場所）\n2回目（再出・特定）：The elephant（すでに話に出た象）',
+    explanation:
+      '【何を聞かれているか】\n"I saw ( ) elephant at ( ) zoo yesterday. ( ) elephant was very big."の空欄に、正しい冠詞（a/an/the）を入れる問題。\n\n【なぜ1回目と2回目で冠詞が変わるのか】\n英語では、初めて登場するものにはa/anを使い、すでに話に出てきたもの（特定できるもの）にはtheを使うという決まりがある。\n\n【ポイント1】1つ目の空欄（初出のelephant）を確認する\n初めて出てくるelephantには不定冠詞をつける。elephantは母音（e）で始まるのでan。\n\n【ポイント2】2つ目の空欄（特定の場所）を確認する\n"the zoo"は、話し手と聞き手の間で共有されている特定の動物園を指すのでtheを使う。\n\n【ポイント3】3つ目の空欄（再出のelephant）を確認する\n2回目に出てくるelephantは、すでに話に出た特定の象を指すのでThe（文頭なので大文字）を使う。\n\n【答え】\nan / the / The\n\n【確かめ】\n1回目がan（初出・母音の前）、2回目・3回目がthe/The（特定・再出）になっているか確認する。\n\n【よくあるまちがい】\n2回目のelephantにもaやanを使ってしまうミス。すでに話に出たものにはtheを使うのがルール。\n\n【ここが絶対】\n初出はa/an、特定・再出はtheという冠詞の基本ルールをセットで覚える。母音で始まる語の前はanになることも忘れない。',
   },
   {
     id: 'kinrankai_eigo_06', subject: 'eigo', difficulty: 'advanced',
@@ -846,7 +861,8 @@ export const kinrankaiQuestions: Question[] = [
     question: '次の短文を読んで、質問に英語で答えよ。\n"Tom is 12 years old. His sister is 3 years older than him."\nQuestion: How old is Tom\'s sister?',
     answer: 'She is 15 years old.',
     hint: '12+3=15',
-    explanation: 'Tom is 12 years old.\nHis sister is 3 years older → 12+3=15\nShe is 15 years old.',
+    explanation:
+      '【何を聞かれているか】\nトムと姉の年齢についての短文を読んで、"How old is Tom\'s sister?"という質問に英語で答える問題。\n\n【なぜ12+3の計算が必要なのか】\n本文に「トムは12歳」「姉はトムより3歳年上」と書かれているので、姉の年齢を求めるには12に3を足す計算が必要になる。\n\n【ポイント1】トムの年齢を確認する\n"Tom is 12 years old."からトムは12歳とわかる。\n\n【ポイント2】姉との年齢差を確認する\n"His sister is 3 years older than him."から、姉はトムより3歳年上とわかる。\n\n【ポイント3】計算して答えを出す\n12＋3＝15。姉は15歳。\n\n【答え】\nShe is 15 years old.\n\n【確かめ】\n12（トムの年齢）＋3（年齢差）＝15という計算が正しいか、また"She is 15 years old."という英語の答え方になっているかを確認する。\n\n【よくあるまちがい】\n"older than"を見て、逆に12から3を引いてしまうミス。「〜より年上」なので、足し算をするのが正しい。\n\n【ここが絶対】\n"A is 〜 years older than B"＝「AはBより〜歳年上だ」という表現から、年齢差の計算方向（足すか引くか）を正確に判断する。',
   },
 ];
 
@@ -1087,7 +1103,8 @@ export const otaniQuestions: Question[] = [
     question: '次の日本語を英語にせよ。「これはあなたのペンですか。」',
     answer: 'Is this your pen?',
     hint: 'Is + 主語 + 〜? の語順',
-    explanation: 'Is this your pen?\nthis（これは）+ is → Is this（疑問文で倒置）\nyour pen（あなたのペン）',
+    explanation:
+      '【何を聞かれているか】\n「これはあなたのペンですか。」という日本語を英語にする問題。\n\n【なぜIs thisという語順になるのか】\nbe動詞（is）を使った疑問文は、主語（this）とbe動詞（is）の順番を入れ替える（倒置する）という決まりがある。\n\n【ポイント1】be動詞の疑問文の作り方を確認する\n"This is your pen."（これはあなたのペンです）のisとthisを入れ替えて、"Is this your pen?"にする。\n\n【ポイント2】"your pen"の意味を確認する\n"your pen"＝「あなたのペン」。yourは所有格（〜の）。\n\n【ポイント3】文末の記号を確認する\n疑問文なので、文末には？（クエスチョンマーク）をつける。\n\n【答え】\nIs this your pen?\n\n【確かめ】\n主語thisの前にbe動詞isが来ていること、文末に？がついていることを確認する。\n\n【よくあるまちがい】\n"This is your pen?"のように、語順を変えずに文末だけ？にしてしまうミス。be動詞の疑問文は、be動詞を主語の前に移動する必要がある。\n\n【ここが絶対】\nbe動詞の疑問文は「be動詞＋主語〜?」の語順にする。"This is〜"→"Is this〜?"という入れ替えの形をセットで覚える。',
   },
   {
     id: 'otani_eigo_02', subject: 'eigo', difficulty: 'advanced',
@@ -1095,7 +1112,8 @@ export const otaniQuestions: Question[] = [
     question: '次の英単語の反意語（反対の意味の語）を答えよ。①big　②happy　③open',
     answer: '①small（little）　②sad（unhappy）　③close（shut）',
     hint: '大きい↔小さい、嬉しい↔悲しい、開く↔閉める',
-    explanation: '①big（大きい）↔ small / little（小さい）\n②happy（幸せ・嬉しい）↔ sad / unhappy（悲しい）\n③open（開いている・開ける）↔ close / shut（閉じている・閉める）',
+    explanation:
+      '【何を聞かれているか】\nbig・happy・openという3つの英単語の反意語（反対の意味の語）を答える問題。\n\n【なぜ反意語をセットで覚えるのか】\n形容詞の反意語は、比較の文や説明文でよく問われる基本語彙。ペアで覚えておくと、語彙の幅が効率よく広がる。\n\n【ポイント1】bigの反意語を確認する\nbig（大きい）↔small/little（小さい）。\n\n【ポイント2】happyの反意語を確認する\nhappy（幸せ・嬉しい）↔sad/unhappy（悲しい）。\n\n【ポイント3】openの反意語を確認する\nopen（開いている・開ける）↔close/shut（閉じている・閉める）。openは形容詞にも動詞にもなることに注意。\n\n【答え】\n①small（little）　②sad（unhappy）　③close（shut）\n\n【確かめ】\nそれぞれの単語をbig/small、happy/sad、open/closeのペアで確認し、対応関係が正しいか見直す。\n\n【よくあるまちがい】\nhappyの反意語を「怒っている（angry）」のような別の感情語にしてしまうミス。happyの直接の反意語はsad（悲しい）。\n\n【ここが絶対】\n形容詞の反意語（big⇔small、happy⇔sad、open⇔close）は、日常会話でよく使う基本語彙としてペアで覚えておく。',
   },
   {
     id: 'otani_eigo_03', subject: 'eigo', difficulty: 'advanced',

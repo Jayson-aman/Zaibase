@@ -304,19 +304,7 @@ export const tezukayamaEigo: Question[] = [
     answer: '①how　②about　③fare　④welcome',
     hint: 'How can I get to ...?＝〜への行き方を教えてください。You\'re welcome.＝どういたしまして。',
     explanation:
-      '【解説】\n\n' +
-      '【■問1（空所①）】\n' +
-      '"How can I get to Namba?"＝「難波にはどうやって行けますか？」\n' +
-      '道案内を尋ねる定番表現。How + can I + get to + 場所？の形。\n\n' +
-      '【■問2（空所②）】\n' +
-      '"It\'s about three stops from here."＝「ここから約3駅です」\n' +
-      'aboutは「約・およそ」の意味で数の前に置く。\n\n' +
-      '【■問3（空所③）】\n' +
-      '"How much is the fare?"＝「運賃はいくらですか？」\n' +
-      'fare（フェア）＝交通機関の運賃・料金。\n\n' +
-      '【■問4（空所④）】\n' +
-      '"You\'re welcome."＝「どういたしまして」\n' +
-      '"Thank you."に対する定番の返答。',
+      '【何を聞かれているか】\n道案内の会話文の空欄に、最も適切な語を選択肢から選んで入れる問題。\n\n【なぜそれぞれの語が対応するのか】\n道案内の会話には決まった表現パターンがあり、"How can I get to〜?"（行き方をたずねる）、"about〜"（約〜）、"fare"（運賃）、"You\'re welcome."（どういたしまして）という語がそれぞれ決まった場面で使われる。\n\n【ポイント1】空所①：道をたずねる表現を確認する\n"How can I get to Namba?"＝「難波にはどうやって行けますか」。How＋can I＋get to＋場所？という道案内の定番表現。\n\n【ポイント2】空所②・③：数量と料金を表す語を確認する\n"about three stops"（約3駅）のaboutは「約・およそ」の意味。"the fare"（運賃）のfareは交通機関の料金を表す語。\n\n【ポイント3】空所④：お礼への返答を確認する\n"You\'re welcome."＝「どういたしまして」。"Thank you."に対する決まった返答。\n\n【答え】\n①how　②about　③fare　④welcome\n\n【確かめ】\nそれぞれの語を文に当てはめ、"How can I get to Namba?"、"about three stops"、"How much is the fare?"、"You\'re welcome."という自然な会話になっているか確認する。\n\n【よくあるまちがい】\nfareを「運賃」ではなく、似た響きの別の単語と混同してしまうミス。fareは交通機関の料金を表す重要単語として覚える。\n\n【ここが絶対】\n道案内の会話表現（How can I get to〜?／about＋数／the fare／You\'re welcome.）はセットで覚えておくと、道案内問題全般に対応できる。',
   },
   {
     id: 'tezukayama_eigo_r03',

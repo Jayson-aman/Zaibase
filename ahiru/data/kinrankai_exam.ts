@@ -277,19 +277,7 @@ export const kinrankaiEigo: Question[] = [
       '問3: 獣医になること。',
     hint: 'vet＝獣医。walk a dog＝犬を散歩させる。in the future＝将来。',
     explanation:
-      '【解説】\n\n' +
-      '【■問1】\n' +
-      '"Mika likes animals."（ミカは動物が好きです）\n' +
-      'like + 名詞で「〜が好き」。animalsは複数形（animal＝動物）。\n\n' +
-      '【■問2】\n' +
-      '"Every morning she walks her dog in the park."\n' +
-      '（毎朝、彼女は公園で犬を散歩させます）\n' +
-      'walk a dog＝犬を散歩させる。Every morningは「毎朝」という頻度を表す副詞句。\n\n' +
-      '【■問3】\n' +
-      '"She wants to become a vet in the future."\n' +
-      '（彼女は将来、獣医になりたいと思っています）\n' +
-      'want to become〜＝〜になりたい。vet（ベテリナリアン）＝veterinarian＝獣医の略。\n' +
-      'in the future＝将来（の）',
+      '【何を聞かれているか】\nミカという人物についての英文を読んで、3つの問いに日本語で答える読解問題。\n\n【なぜ各文がそれぞれの設問に対応するのか】\nこの英文は「好きなもの→毎朝の習慣→将来の夢」という順番で書かれており、設問もその順番に対応している。\n\n【ポイント1】問1：好きなものを確認する\n"Mika likes animals."（ミカは動物が好きだ）という最初の文から答えがわかる。\n\n【ポイント2】問2：毎朝の行動を確認する\n"Every morning she walks her dog in the park."（毎朝、彼女は公園で犬を散歩させる）という文から答えがわかる。\n\n【ポイント3】問3：将来の夢を確認する\n"She wants to become a vet in the future."（彼女は将来、獣医になりたいと思っている）という文から答えがわかる。\n\n【答え】\n問1: 動物が好き。\n問2: 公園で犬の散歩をする。\n問3: 獣医になること。\n\n【確かめ】\nそれぞれの答えが、本文中の該当する文（likes animals、walks her dog in the park、wants to become a vet）と対応しているか確認する。\n\n【よくあるまちがい】\n問2で「犬を飼っている」という別の文の内容と、「毎朝の行動」を混同してしまうミス。設問は「毎朝何をするか」を聞いているので、Every morningで始まる文に注目する。\n\n【ここが絶対】\n説明文の読解は、各文が書かれている順番と設問の順番が対応していることが多いので、本文を順番に追いながら答えを探す。',
   },
   {
     id: 'kinrankai_eigo_r02',
