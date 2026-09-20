@@ -1792,7 +1792,8 @@ Little did he realize how few people would read his book. が正解。
     difficulty: 'advanced',
     question: '次の英文を読んで、質問に答えなさい。\n\nIn recent decades, the rise of "fast fashion" has transformed the clothing industry. Garments are now produced at unprecedented speed and sold at very low prices, encouraging consumers to buy more and discard clothes sooner. While this model has made fashion accessible to a wider population, it comes at a significant environmental cost. The textile industry is responsible for approximately 10% of global carbon emissions and is the second-largest consumer of the world\'s water supply. Microplastic fibers shed during washing also enter waterways, accumulating in marine ecosystems.\n\n質問：ファストファッションが環境に与える問題点を本文から２点挙げ、日本語で説明しなさい。',
     answer: '①衣料品産業は世界の炭素排出量の約10%を占め、世界で2番目に水を消費する産業であること。②洗濯時に流出するマイクロプラスチック繊維が水路に入り、海洋生態系に蓄積すること。',
-    explanation: '第4・5文がそれぞれ環境問題の根拠。carbon emissions と microplastic fibers の２点を日本語にまとめる。',
+    explanation:
+      '【何を聞かれているか】\nファストファッションについての英文を読んで、環境への問題点を2点、日本語で説明する問題。\n\n【なぜ第4・5文に注目するのか】\n本文は「ファストファッションの普及→利点（服が身近になった）→しかし環境コストが大きい」という流れで進み、その直後の2つの文で具体的な環境問題（炭素排出・水資源、マイクロプラスチック）が説明されている。\n\n【ポイント1】1つ目の問題点を確認する\n"The textile industry is responsible for approximately 10% of global carbon emissions and is the second-largest consumer of the world\'s water supply."（繊維産業は世界の炭素排出量の約10%を占め、世界で2番目に水を消費する産業）。\n\n【ポイント2】2つ目の問題点を確認する\n"Microplastic fibers shed during washing also enter waterways, accumulating in marine ecosystems."（洗濯時に流出するマイクロプラスチック繊維が水路に入り、海洋生態系に蓄積する）。\n\n【ポイント3】howeverの前後の構造を確認する\n"it comes at a significant environmental cost"の直後に、具体的な2つの問題点が続く構成になっている。\n\n【答え】\n①衣料品産業は世界の炭素排出量の約10%を占め、世界で2番目に水を消費する産業であること。②洗濯時に流出するマイクロプラスチック繊維が水路に入り、海洋生態系に蓄積すること。\n\n【確かめ】\n答えが2点とも本文の具体的な数字・事実（10%、マイクロプラスチック）を含んでいるか確認する。\n\n【よくあるまちがい】\n「環境に悪い」というような曖昧な答えで終わらせてしまうミス。本文にある具体的な事実を2点明示する。\n\n【ここが絶対】\n「利点を認めつつ問題点を指摘する」構成の英文では、howeverやbutの直後に具体的な問題点が続くことが多い。',
   },
   {
     id: 'koko_eigo_ex01_122',
@@ -1802,7 +1803,8 @@ Little did he realize how few people would read his book. が正解。
     difficulty: 'advanced',
     question: '次の英文を読んで、質問に答えなさい。\n\nBilingualism — the ability to speak two languages fluently — was once believed to confuse children and slow their cognitive development. Modern research has largely overturned this view. Studies suggest that managing two language systems simultaneously exercises the brain\'s executive functions, potentially delaying the onset of dementia by several years. Bilingual individuals also tend to show greater cognitive flexibility, meaning they can switch between tasks more efficiently.\n\n質問：バイリンガリズムに関する研究が以前の見解をどのように覆したか、日本語で説明しなさい。',
     answer: '以前は子どもの認知発達を妨げると考えられていたが、現代の研究では２言語の管理が脳の実行機能を鍛え、認知症発症を数年遅らせる可能性があり、課題の切り替えも効率的に行えることが示されている。',
-    explanation: '"Modern research has largely overturned this view" 以降が新しい知見。executive functions・cognitive flexibility・dementia の概念を押さえる。',
+    explanation:
+      '【何を聞かれているか】\nバイリンガリズムについての英文を読んで、研究が以前の見解をどう覆したかを日本語で説明する問題。\n\n【なぜ"Modern research has largely overturned this view"に注目するのか】\nこの文が「以前の見解」と「新しい見解」の転換点を示しており、この文の前後を比較することで、何がどう変わったかを整理できる。\n\n【ポイント1】以前の見解を確認する\n"was once believed to confuse children and slow their cognitive development"（子どもを混乱させ、認知発達を遅らせると考えられていた）。\n\n【ポイント2】新しい見解を確認する\n"managing two language systems simultaneously exercises the brain\'s executive functions, potentially delaying the onset of dementia"（2言語の管理が脳の実行機能を鍛え、認知症の発症を遅らせる可能性がある）、"greater cognitive flexibility"（課題の切り替えがより効率的）。\n\n【ポイント3】以前と現在を対比してまとめる\n「妨げる」という以前の見解から、「鍛える・遅らせる・効率化する」という現在の見解への転換を説明する。\n\n【答え】\n以前は子どもの認知発達を妨げると考えられていたが、現代の研究では２言語の管理が脳の実行機能を鍛え、認知症発症を数年遅らせる可能性があり、課題の切り替えも効率的に行えることが示されている。\n\n【確かめ】\n答えが「以前の見解」と「新しい見解」の両方を対比する形で含まれているか確認する。\n\n【よくあるまちがい】\n新しい見解だけを答え、「以前はどう考えられていたか」を省いてしまうミス。設問は「見解がどう覆ったか」という変化を問うている。\n\n【ここが絶対】\n"was once believed〜"（以前は〜と考えられていた）と"research has overturned this view"（研究がこの見解を覆した）という対比表現を見つけたら、両方の内容を含めて答える。',
   },
   {
     id: 'koko_eigo_ex01_123',
@@ -1813,7 +1815,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の英文を読んで、質問に答えなさい。\n\nSpace exploration has produced many technologies that we now take for granted. Memory foam, originally developed to protect NASA pilots from crash impacts, is now widely used in mattresses and helmets. Water purification systems designed for long space missions have been adapted to provide clean water in disaster zones. Similarly, the miniaturization required for spacecraft electronics contributed to the development of smartphones. These "spinoff" technologies demonstrate that investment in space research yields benefits far beyond the cosmos.\n\n質問：本文の主旨を英語で１文にまとめなさい。',
     answer: 'Space exploration has led to the development of many useful technologies that benefit everyday life on Earth.',
     hint: '本文全体のテーマ（宇宙探査→地上技術への恩恵）を１文で表現しましょう。',
-    explanation: '最終文 "These \'spinoff\' technologies demonstrate that investment in space research yields benefits far beyond the cosmos." が主旨文。これを paraphrase して答える。',
+    explanation:
+      '【何を聞かれているか】\n宇宙探査から生まれた技術についての英文を読んで、本文の主旨を英語1文でまとめる問題。\n\n【なぜ最終文に注目するのか】\n説明文では、最後の文に筆者の結論（主旨）がまとめられていることが多く、この文をパラフレーズ（言い換え）することで主旨をコンパクトにまとめられる。\n\n【ポイント1】最終文を確認する\n"These \'spinoff\' technologies demonstrate that investment in space research yields benefits far beyond the cosmos."（これらの派生技術は、宇宙研究への投資が宇宙をはるかに超えた恩恵をもたらすことを示している）。\n\n【ポイント2】具体例との関係を確認する\n本文中の具体例（メモリーフォーム、浄水システム、スマートフォンの小型化技術）は、この主旨を裏付ける根拠として並んでいる。\n\n【ポイント3】パラフレーズの仕方を確認する\n"yields benefits far beyond the cosmos"を、"benefit everyday life on Earth"のようなより身近な表現に言い換える。\n\n【答え】\nSpace exploration has led to the development of many useful technologies that benefit everyday life on Earth.\n\n【確かめ】\n答えの1文が、具体例（メモリーフォームなど）ではなく、本文全体を貫くテーマ（宇宙探査が地上の生活に役立つ技術を生む）になっているか確認する。\n\n【よくあるまちがい】\n本文中の1つの具体例（メモリーフォームなど）だけを主旨として答えてしまうミス。主旨は具体例をすべて包括する一般的な内容にする。\n\n【ここが絶対】\n主旨をまとめる問題は、最終文（結論）を見つけ、それを自分の言葉でパラフレーズして1文にする。',
   },
   {
     id: 'koko_eigo_ex01_124',
@@ -1824,7 +1827,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の英文を読んで、空所（　）に入る最も適切な語句を答えなさい。\n\nOne of the greatest challenges facing modern education is preparing students for jobs that do not yet exist. Experts estimate that 65% of children entering primary school today will work in careers that are currently unknown. Rather than focusing solely on memorizing facts, educators increasingly argue that schools should prioritize teaching students (　) — the ability to think critically, solve novel problems, and adapt to rapidly changing environments.\n\n質問：空所（　）に入る最も適切な語句を英語で答えなさい。',
     answer: 'how to learn / transferable skills / critical thinking skills',
     hint: '後に続くダッシュ以降の説明（批判的思考・問題解決・適応力）を言い換える表現を考えましょう。',
-    explanation: 'ダッシュ以降 "the ability to think critically, solve novel problems, and adapt ..." が空所の内容を説明している。"how to learn" や "transferable skills" が典型的な正答。',
+    explanation:
+      '【何を聞かれているか】\n教育についての英文を読んで、空所に入る最も適切な語句を英語で答える問題。\n\n【なぜダッシュ以降の説明に注目するのか】\n空所の直後にダッシュ（—）で始まる説明"the ability to think critically, solve novel problems, and adapt to rapidly changing environments"が続いており、この部分が空所に入る語句の意味を具体的に説明している。\n\n【ポイント1】ダッシュ以降の内容を確認する\n「批判的に考え、新しい問題を解決し、急速に変化する環境に適応する能力」という説明。\n\n【ポイント2】この説明に合う語句を考える\n"how to learn"（学び方）、"transferable skills"（応用可能なスキル）、"critical thinking skills"（批判的思考力）などが、この説明に合う。\n\n【ポイント3】文脈全体を確認する\n「まだ存在しない仕事に備える教育」という文脈で、単なる暗記ではなく、応用力を教えるべきだという主張に合う語句を選ぶ。\n\n【答え】\nhow to learn / transferable skills / critical thinking skills\n\n【確かめ】\n選んだ語句が、ダッシュ以降の説明（批判的思考・問題解決・適応力）と矛盾なくつながっているか確認する。\n\n【よくあるまちがい】\n"how to memorize facts"のように、本文が否定している内容（暗記重視）を空所に入れてしまうミス。\n\n【ここが絶対】\n空所補充問題では、空所の直後にダッシュやコロンで説明が続くことがあり、その説明を手がかりに答えを考える。',
   },
   {
     id: 'koko_eigo_ex01_125',
@@ -1847,7 +1851,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の日本語を英語に直しなさい。\n\n「私は昨日、図書館で２時間勉強しました。」',
     answer: 'I studied at the library for two hours yesterday.',
     hint: '時間の長さは for ＋時間、場所は at ＋場所 で表します。',
-    explanation: '過去形 studied、場所 at the library、期間 for two hours、時 yesterday の語順に注意。',
+    explanation:
+      '【何を聞かれているか】\n「私は昨日、図書館で２時間勉強しました。」という日本語を英語にする問題。\n\n【なぜforとatを使い分けるのか】\n時間の長さを表すときはfor＋期間、場所を表すときはat＋場所という、それぞれ決まった前置詞を使う。\n\n【ポイント1】過去形を確認する\nstudyの過去形はstudied。\n\n【ポイント2】場所と期間を表す前置詞を確認する\n場所は"at the library"、期間は"for two hours"。\n\n【ポイント3】語順を確認する\n「動詞→場所→期間→時」の順に並べる：studied→at the library→for two hours→yesterday。\n\n【答え】\nI studied at the library for two hours yesterday.\n\n【確かめ】\n"at the library"（場所）と"for two hours"（期間）がそれぞれ正しい前置詞で表されているか確認する。\n\n【よくあるまちがい】\nforとatを逆にして使ってしまうミス。時間の長さにはfor、場所にはatを使う。\n\n【ここが絶対】\n場所はat/in、時間の長さはforという前置詞の使い分けをセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_127',
@@ -1858,7 +1863,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の日本語を英語に直しなさい。\n\n「彼女は私よりも英語を上手に話します。」',
     answer: 'She speaks English better than I do.',
     hint: 'better は well の比較級です。than の後ろの代名詞の格に注意しましょう。',
-    explanation: 'well → better。比較の基準は "than I (do)" または "than me"。',
+    explanation:
+      '【何を聞かれているか】\n「彼女は私よりも英語を上手に話します。」という日本語を英語にする問題。\n\n【なぜbetterを使うのか】\n「上手に」を表す副詞wellの比較級はbetterで、2人を比べて「〜より上手に」という内容を表すときに使う。\n\n【ポイント1】wellの比較級を確認する\nwell（上手に）→better（より上手に）という不規則変化。\n\n【ポイント2】比較の基準を確認する\n"than I (do)"または"than me"で「私より」という比較の基準を示す。\n\n【ポイント3】文を組み立てる\n"She speaks English better than I do."＝「彼女は私より上手に英語を話す」。\n\n【答え】\nShe speaks English better than I do.\n\n【確かめ】\n"better"がwellの正しい比較級になっていること、"than"の後ろに比較の基準（I do）が続いていることを確認する。\n\n【よくあるまちがい】\nwellの比較級を"more well"のように規則変化させてしまうミス。wellはgoodと同様、better→bestという不規則変化をする。\n\n【ここが絶対】\nwell（上手に）の比較級betterを、goodの比較級betterとあわせて覚える（両方ともbetter/bestになる）。',
   },
   {
     id: 'koko_eigo_ex01_128',
@@ -1869,7 +1875,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の日本語を英語に直しなさい。\n\n「もし明日晴れたら、私たちは海へ行くつもりです。」',
     answer: 'If it is sunny tomorrow, we are going to go to the sea.',
     hint: '条件節（if節）の中では未来のことでも現在形を使います。',
-    explanation: 'If節の中は現在形（is sunny）、主節は will / be going to のどちらも可。',
+    explanation:
+      '【何を聞かれているか】\n「もし明日晴れたら、私たちは海へ行くつもりです。」という日本語を英語にする問題。\n\n【なぜif節の中で現在形を使うのか】\n英語では、if（もし〜なら）で始まる条件節の中では、たとえ未来のことを表していても現在形を使うという決まりがある。\n\n【ポイント1】条件文の公式を確認する\nIf＋主語＋現在形〜, 主語＋will/be going to＋動詞の原形〜。\n\n【ポイント2】if節を組み立てる\n「もし明日晴れたら」は"If it is sunny tomorrow"。tomorrow（未来のこと）でも動詞は現在形isを使う。\n\n【ポイント3】主節を組み立てる\n「海へ行くつもりです」は"we are going to go to the sea"（またはwe will go）。\n\n【答え】\nIf it is sunny tomorrow, we are going to go to the sea.\n\n【確かめ】\nif節の動詞が現在形（is）になっていて、willやbe going toが使われていないことを確認する。\n\n【よくあるまちがい】\n"If it will be sunny tomorrow..."のように、if節の中でもwillを使ってしまうミス。未来のことでも、if節の中は現在形にするのがルール。\n\n【ここが絶対】\n条件を表すif節の中はwillを使わず現在形にする。「もし明日晴れたら→If it is sunny tomorrow」とセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_129',
@@ -1880,7 +1887,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の日本語を英語に直しなさい。\n\n「私はこの本が読み終えられないくらい難しいと気づきました。」',
     answer: 'I found this book too difficult to finish reading.',
     hint: '「～するには難しすぎる」は too ... to ~ の構文です。',
-    explanation: 'too + 形容詞 + to不定詞 で「〜するには…すぎる」。find + O + C（形容詞）の構文も確認しよう。',
+    explanation:
+      '【何を聞かれているか】\n「私はこの本が読み終えられないくらい難しいと気づきました。」という日本語を英語にする問題。\n\n【なぜtoo〜toとfind＋O＋Cを組み合わせるのか】\n「〜するには難しすぎる」はtoo＋形容詞＋to不定詞で表し、「（人が）〜だと気づく・感じる」はfind＋目的語＋補語という第5文型で表す。この2つを組み合わせて文を作る。\n\n【ポイント1】find＋O＋Cの形を確認する\nfind＋this book（O）＋too difficult to finish reading（C）＝「この本が〜だと気づいた」。\n\n【ポイント2】too〜to構文を確認する\ntoo difficult to finish reading＝「読み終えるには難しすぎる」。\n\n【ポイント3】文を組み立てる\n"I found this book too difficult to finish reading."＝「私はこの本が読み終えられないくらい難しいと気づいた」。\n\n【答え】\nI found this book too difficult to finish reading.\n\n【確かめ】\n"found this book too difficult to finish reading"が、find＋O＋Cの構造とtoo〜toの構造の両方を満たしているか確認する。\n\n【よくあるまちがい】\nfind＋O＋Cの構造を使わず、単に"This book was too difficult..."としてしまうミス。「気づいた」という意味を表すにはfindを使う必要がある。\n\n【ここが絶対】\n"too＋形容詞＋to do"（〜するには…すぎる）と"find＋O＋C"（Oが〜だと気づく）を組み合わせる構文をセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_130',
@@ -1891,7 +1899,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の日本語を英語に直しなさい。\n\n「彼は私に、その映画を見るべきだと言いました。」',
     answer: 'He told me that I should watch the movie.',
     hint: '間接話法では、時制の一致と人称の変化に注意しましょう。',
-    explanation: '間接話法：told me (that) + 節。should は過去形でそのまま使える。',
+    explanation:
+      '【何を聞かれているか】\n「彼は私に、その映画を見るべきだと言いました。」という日本語を英語にする問題。\n\n【なぜshouldがそのまま使えるのか】\n間接話法では伝達動詞（told）が過去形のとき、引用内容の時制も1段階過去にずらす（時制の一致）が、shouldはすでに過去形のような形をしているため、そのまま使うことができる。\n\n【ポイント1】間接話法の形を確認する\n"He told me (that)＋節"で「彼は私に〜と言った」という意味になる。\n\n【ポイント2】時制の一致を確認する\n伝達動詞toldが過去形なので、通常は現在形→過去形にずらすが、shouldはそのままの形で使える。\n\n【ポイント3】文を組み立てる\n"He told me that I should watch the movie."＝「彼は私に、その映画を見るべきだと言った」。\n\n【答え】\nHe told me that I should watch the movie.\n\n【確かめ】\n"told me that I should watch"が、間接話法の正しい形になっているか確認する。\n\n【よくあるまちがい】\ntell（言う）とsay（言う）を混同して"He said me that〜"としてしまうミス。sayは"say to 人 that〜"の形を使う。\n\n【ここが絶対】\n"tell＋人＋that＋節"＝「（人）に〜と言う」という間接話法の形をセットで覚える。shouldのような助動詞は時制の一致でも形が変わらないことも確認する。',
   },
   {
     id: 'koko_eigo_ex01_131',
@@ -1902,7 +1911,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の日本語を英語に直しなさい。\n\n「環境を守るために、私たちは使い捨てプラスチックの使用を減らすべきです。」',
     answer: 'To protect the environment, we should reduce our use of single-use plastics.',
     hint: '目的を表す不定詞を文頭に置く形も自然です。reduce「減らす」、single-use「使い捨ての」。',
-    explanation: '目的の to不定詞は文頭・文末どちらでも可。"in order to protect" も正解。',
+    explanation:
+      '【何を聞かれているか】\n「環境を守るために、私たちは使い捨てプラスチックの使用を減らすべきです。」という日本語を英語にする問題。\n\n【なぜto不定詞を文頭に置くのか】\n「〜するために」という目的を表す不定詞（副詞的用法）は、文頭に置いても文末に置いても使うことができる。\n\n【ポイント1】目的を表すto不定詞を確認する\n"To protect the environment"＝「環境を守るために」。\n\n【ポイント2】主節を組み立てる\n"we should reduce our use of single-use plastics"＝「使い捨てプラスチックの使用を減らすべきだ」。\n\n【ポイント3】言い換えを確認する\n"in order to protect"も同じ「〜するために」という意味で使える。\n\n【答え】\nTo protect the environment, we should reduce our use of single-use plastics.\n\n【確かめ】\n"To protect the environment"が文頭に置かれ、コンマの後ろに主節が続いていることを確認する。\n\n【よくあるまちがい】\n目的の不定詞を文中に不自然な位置に挟んでしまうミス。目的の不定詞は文頭または文末に置くのが自然。\n\n【ここが絶対】\n目的を表す不定詞（〜するために）は文頭・文末どちらにも置ける。in order to〜という、より明確に目的を示す表現もあわせて覚える。',
   },
   {
     id: 'koko_eigo_ex01_132',
@@ -1913,7 +1923,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の状況を読んで、英語で答えなさい。\n\nあなたは外国人の友人に、日本の学校生活の特徴を１文で紹介することになりました。「日本の生徒は毎日自分たちの教室を掃除します」という内容を英語で書きなさい。',
     answer: 'In Japan, students clean their own classrooms every day.',
     hint: '「自分たち自身の」は their own を使いましょう。',
-    explanation: 'clean「掃除する」、their own classrooms「自分たちの教室」、every day「毎日」の組み合わせ。',
+    explanation:
+      '【何を聞かれているか】\n「日本の生徒は毎日自分たちの教室を掃除します」という内容を、外国人の友人に紹介する英文にする問題。\n\n【なぜtheir ownを使うのか】\n「自分たち自身の」という所有の強調を表すときは、所有格（their）にownを加えて強調する。\n\n【ポイント1】"their own"の意味を確認する\ntheir own classrooms＝「彼ら自身の教室」。ownを加えることで所有を強調する。\n\n【ポイント2】主語と場所を確認する\n"In Japan"（日本では）で場所を示し、students（生徒たち）を主語にする。\n\n【ポイント3】文を組み立てる\n"In Japan, students clean their own classrooms every day."＝「日本では、生徒たちは毎日自分たちの教室を掃除する」。\n\n【答え】\nIn Japan, students clean their own classrooms every day.\n\n【確かめ】\n"their own classrooms"が「自分たち自身の教室」という強調された所有を表しているか確認する。\n\n【よくあるまちがい】\nownを忘れて"their classrooms"だけにしてしまうミス。「自分たち自身の」という強調にはownを加える。\n\n【ここが絶対】\n"所有格＋own＋名詞"＝「〜自身の…」という所有を強調する形をセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_133',
@@ -1924,7 +1935,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の日本語を英語に直しなさい。\n\n「仮にあなたが私の立場だったとしたら、どうしますか？」',
     answer: 'If you were in my position, what would you do?',
     hint: '現在の事実に反する仮定は仮定法過去（were / would）を使います。',
-    explanation: '仮定法過去：If S + were(動詞の過去形) ..., S + would + 動詞原形 ...。be動詞は主語を問わず were が原則（口語では was も可）。',
+    explanation:
+      '【何を聞かれているか】\n「仮にあなたが私の立場だったとしたら、どうしますか？」という日本語を英語にする問題。\n\n【なぜwereとwouldを使うのか】\n「実際にはそうではないが、もし〜だったら」という現実に反する仮定を表す仮定法過去では、if節にwere、主節にwouldを使う。\n\n【ポイント1】仮定法過去の公式を確認する\nIf＋主語＋were（動詞の過去形）〜, 主語＋would＋動詞の原形〜。\n\n【ポイント2】be動詞がwereになる理由を確認する\n仮定法過去では、be動詞は主語がyouであってもwereを使うのが原則。\n\n【ポイント3】疑問文の形を確認する\n主節が疑問文になるときは、would＋主語＋動詞の原形という語順にする（what would you do?）。\n\n【答え】\nIf you were in my position, what would you do?\n\n【確かめ】\nif節のbe動詞がwereになっていること、主節が"what would you do"という仮定法の疑問文の語順になっていることを確認する。\n\n【よくあるまちがい】\n"If you are in my position"のように、if節を現在形のままにしてしまうミス。現実に反する仮定には過去形を使う。\n\n【ここが絶対】\n仮定法過去の公式（If+were, would+原形）は、疑問文になっても同じ形を保つ。',
   },
   {
     id: 'koko_eigo_ex01_134',
@@ -1935,7 +1947,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の日本語を英語に直しなさい。\n\n「スマートフォンが発明されて以来、人々のコミュニケーションの仕方は大きく変わりました。」',
     answer: 'Since smartphones were invented, the way people communicate has changed greatly.',
     hint: 'Since は過去の起点を示し、主節は現在完了を使います。「発明された」は受動態で。',
-    explanation: 'since + 過去形 → 主節は現在完了形。"the way (that) people communicate" で「人々がコミュニケーションをとる方法」。',
+    explanation:
+      '【何を聞かれているか】\n「スマートフォンが発明されて以来、人々のコミュニケーションの仕方は大きく変わりました。」という日本語を英語にする問題。\n\n【なぜsinceと現在完了を組み合わせるのか】\n「〜して以来」という起点を表すsinceは、その後ろに過去の出来事を置き、主節では「その時から今まで続いている変化」を表す現在完了を使う。\n\n【ポイント1】since＋過去形の部分を組み立てる\n"Since smartphones were invented"＝「スマートフォンが発明されて以来」。inventは「発明する」という他動詞なので、受動態were invented（発明された）にする。\n\n【ポイント2】主節の現在完了を組み立てる\n"the way people communicate has changed greatly"＝「人々のコミュニケーションの仕方は大きく変わった」。\n\n【ポイント3】"the way (that) people communicate"の形を確認する\n「人々がコミュニケーションをとる方法」という名詞句で、thatは省略できる。\n\n【答え】\nSince smartphones were invented, the way people communicate has changed greatly.\n\n【確かめ】\nsinceの後ろが過去形（were invented）、主節が現在完了（has changed）になっているか確認する。\n\n【よくあるまちがい】\nsmartphonesを受動態にせず"Since smartphones invented"としてしまうミス。「発明された」という受け身の意味を表すには受動態を使う。\n\n【ここが絶対】\n"since＋過去の出来事, 主語＋have/has＋過去分詞"＝「〜して以来、ずっと…だ」という現在完了（継続）の形をセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_135',
@@ -1957,7 +1970,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の条件に従って英文を書きなさい。\n\n条件：「インターネットは私たちの生活を便利にした一方で、プライバシーの問題も生じさせた」という内容を、while を使って１文で書くこと。',
     answer: 'While the Internet has made our lives more convenient, it has also created privacy problems.',
     hint: 'while は「～する一方で」という対比の接続詞として使えます。make + O + 形容詞の構文も使いましょう。',
-    explanation: 'while「～する一方で」で対比を表す。make + O + 比較級形容詞（more convenient）、create problems「問題を生じさせる」。',
+    explanation:
+      '【何を聞かれているか】\n「インターネットは私たちの生活を便利にした一方で、プライバシーの問題も生じさせた」という内容を、whileを使った1文で書く問題。\n\n【なぜwhileを使うのか】\n「〜する一方で」という対比の内容を表すときは、逆接・対比の接続詞whileを使って2つの内容を1つの文につなげる。\n\n【ポイント1】whileの意味を確認する\nwhile＝「〜する一方で」という対比の接続詞。\n\n【ポイント2】"make+O+形容詞"の形を確認する\n"has made our lives more convenient"＝「私たちの生活をより便利にした」。make＋目的語＋補語（形容詞）の第5文型。\n\n【ポイント3】"create problems"の形を確認する\n"has also created privacy problems"＝「プライバシーの問題も生じさせた」。\n\n【答え】\nWhile the Internet has made our lives more convenient, it has also created privacy problems.\n\n【確かめ】\nwhileの前後で「便利にした（利点）」と「問題を生じさせた（欠点）」が対比されているか確認する。\n\n【よくあるまちがい】\nwhileを「〜している間」という時間の意味だと誤解してしまうミス。ここでのwhileは「〜する一方で」という対比の接続詞。\n\n【ここが絶対】\nwhileには「〜している間」（時間）と「〜する一方で」（対比）の2つの意味があり、文脈で判断する。',
   },
   {
     id: 'koko_eigo_ex01_137',
@@ -1979,7 +1993,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の条件に従って英文を書きなさい。\n\n条件：「高校生がアルバイトをすることの利点と欠点」について、２文以上の英語で書くこと。利点と欠点をそれぞれ１つ以上述べること。',
     answer: 'Working part-time gives high school students the chance to earn money and learn responsibility. However, it can also take time away from studying and lead to lower grades.',
     hint: 'give O the chance to ... / take time away from ... などの表現を活用しましょう。',
-    explanation: '利点：earn money, learn responsibility。欠点：less time for studying, lower grades。however で対比を示す構成が分かりやすい。',
+    explanation:
+      '【何を聞かれているか】\n「高校生がアルバイトをすることの利点と欠点」について、利点と欠点をそれぞれ1つ以上含めて2文以上の英語で書く問題。\n\n【なぜhoweverで対比するのか】\n利点と欠点という対立する内容を1つの文章の中で述べるときは、howeverのような逆接の語を使って、話の流れを利点から欠点へ自然に切り替える。\n\n【ポイント1】利点を組み立てる\n"gives high school students the chance to earn money and learn responsibility"（お金を稼ぐ機会や責任感を学ぶ機会を与える）。\n\n【ポイント2】欠点を組み立てる\n"it can also take time away from studying and lead to lower grades"（勉強の時間を奪い、成績の低下につながることがある）。\n\n【ポイント3】howeverで文章をつなげる\n1文目で利点、howeverで区切って2文目で欠点、という構成にすると分かりやすい。\n\n【答え】\nWorking part-time gives high school students the chance to earn money and learn responsibility. However, it can also take time away from studying and lead to lower grades.\n\n【確かめ】\n利点と欠点がそれぞれ1つ以上含まれているか、howeverで自然に話の流れが切り替わっているかを確認する。\n\n【よくあるまちがい】\n利点だけ、または欠点だけを述べて終わってしまうミス。設問は「利点と欠点をそれぞれ1つ以上」と指示している。\n\n【ここが絶対】\n利点と欠点の両方を書く条件英作文は、howeverのような逆接の語を使って2つの内容を対比する構成にすると書きやすい。',
   },
   {
     id: 'koko_eigo_ex01_139',
@@ -2014,7 +2029,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の会話の（　）に入る最も適切な英文を書きなさい。\n\nA: Excuse me, could you tell me the way to the nearest subway station?\nB: （　）\nA: Thank you so much!',
     answer: 'Sure! Go straight down this street and turn left at the traffic lights. You\'ll see it on your right.',
     hint: '道案内では go straight「まっすぐ行く」、turn left/right「左/右に曲がる」などの表現を使いましょう。',
-    explanation: '道案内の基本表現：Go straight / Turn left(right) / You\'ll see it on your left(right)。Sure! で快く応じるのが自然。',
+    explanation:
+      '【何を聞かれているか】\n地下鉄の駅までの道をたずねる会話の空欄に、最も適切な英文を書く問題。\n\n【なぜ道案内の定番表現を使うのか】\n道をたずねられたときの返答には、Go straight（まっすぐ行く）、Turn left/right（左右に曲がる）、You\'ll see it on your left/right（左手/右手に見える）という決まった表現のパターンがある。\n\n【ポイント1】快諾の表現を確認する\n"Sure!"で、道案内を快く引き受ける姿勢を示す。\n\n【ポイント2】道順の説明を確認する\n"Go straight down this street and turn left at the traffic lights."（この道をまっすぐ行き、信号で左に曲がる）。\n\n【ポイント3】目印を伝える表現を確認する\n"You\'ll see it on your right."（右手に見えます）で、目的地の位置を伝える。\n\n【答え】\nSure! Go straight down this street and turn left at the traffic lights. You\'ll see it on your right.\n\n【確かめ】\nAの"Thank you so much!"という返答につながる、具体的で自然な道案内になっているか確認する。\n\n【よくあるまちがい】\n道順を曖昧にしか説明せず、具体的な目印（信号、右手など）を含めないミス。\n\n【ここが絶対】\n道案内の定番表現（Go straight／Turn left/right／You\'ll see it on your left/right）をセットで覚えておく。',
   },
   {
     id: 'koko_eigo_ex01_142',
@@ -2025,7 +2041,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の会話の（　）に入る最も適切な英文を書きなさい。\n\nA: Happy birthday, Keiko! This is a present for you.\nB: （　）\nA: I hope you like it.',
     answer: 'Oh, thank you so much! I\'m really happy.',
     hint: 'プレゼントをもらったときは感謝と喜びを表す表現を使いましょう。',
-    explanation: 'Thank you (so much)! に加えて、How kind of you! / I love it! / What a nice surprise! なども自然な応答。',
+    explanation:
+      '【何を聞かれているか】\n誕生日プレゼントをもらったときの会話の空欄に、最も適切な英文を書く問題。\n\n【なぜ感謝と喜びの両方を伝えるのか】\nプレゼントをもらったときの自然な返答には、「ありがとう」という感謝と、「嬉しい」という気持ちの両方を伝えるのが自然な流れ。\n\n【ポイント1】感謝の表現を確認する\n"Oh, thank you so much!"（わあ、本当にありがとう）。\n\n【ポイント2】喜びの表現を確認する\n"I\'m really happy."（本当に嬉しいです）。\n\n【ポイント3】他の自然な表現も確認する\n"How kind of you!"（なんて優しいの）、"I love it!"（気に入りました）なども自然な返答になる。\n\n【答え】\nOh, thank you so much! I\'m really happy.\n\n【確かめ】\nAの"I hope you like it."（気に入ってもらえるといいな）という発言に自然につながる、前向きな返答になっているか確認する。\n\n【よくあるまちがい】\n感謝だけで終わらせ、喜びの気持ちを伝える一言を省いてしまうミス。\n\n【ここが絶対】\nプレゼントをもらったときの返答は、感謝（Thank you）と喜び（I\'m happy/I love it）をセットで伝えるのが自然。',
   },
   {
     id: 'koko_eigo_ex01_143',
@@ -2036,7 +2053,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の会話の（　）に入る最も適切な英文を書きなさい。\n\nA: I have a cold and I\'m not feeling well.\nB: （　）\nA: I\'ll try. Thank you.',
     answer: 'I\'m sorry to hear that. You should get some rest and drink plenty of water.',
     hint: '相手の体調不良には同情を示した後、アドバイスを伝えましょう。',
-    explanation: 'I\'m sorry to hear that. で同情→ You should ... でアドバイス。get some rest / drink plenty of water が定番表現。',
+    explanation:
+      '【何を聞かれているか】\n体調不良を伝える会話の空欄に、最も適切な英文を書く問題。\n\n【なぜ同情の後にアドバイスを続けるのか】\n相手が体調不良を訴えたときの自然な返答は、まず"I\'m sorry to hear that."（それはお気の毒に）と同情を示し、その後に具体的なアドバイスを続けるという流れになる。\n\n【ポイント1】同情の表現を確認する\n"I\'m sorry to hear that."（それを聞いて残念です）。\n\n【ポイント2】アドバイスの表現を確認する\n"You should get some rest and drink plenty of water."（休息を取って、水分をたくさん取るべきです）。\n\n【ポイント3】自然な会話の流れを確認する\nAの"I\'ll try. Thank you."（そうしてみます、ありがとう）という返答につながる内容になっている。\n\n【答え】\nI\'m sorry to hear that. You should get some rest and drink plenty of water.\n\n【確かめ】\n同情の表現とアドバイスの表現の両方が含まれているか確認する。\n\n【よくあるまちがい】\n同情を示さずにいきなりアドバイスだけを言ってしまうミス。まず相手の状況に共感してからアドバイスをするのが自然な流れ。\n\n【ここが絶対】\n体調不良への返答は「I\'m sorry to hear that.（同情）＋You should〜（アドバイス）」という構成をセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_144',
@@ -2047,7 +2065,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の会話の（　）に入る最も適切な英文を書きなさい。\n\nA: Would you like some more cake?\nB: （　）\nA: Are you sure? There\'s plenty left.',
     answer: 'No, thank you. I\'m full.',
     hint: '丁重に断るときは No, thank you. と理由を一言添えましょう。',
-    explanation: 'No, thank you. / No, thanks. I\'m full. が自然な断り方。I\'ve had enough. も使える。',
+    explanation:
+      '【何を聞かれているか】\nケーキをもう少しどうかと勧められたときの会話の空欄に、最も適切な英文を書く問題。\n\n【なぜNo, thank you.を使うのか】\n勧められたものを丁重に断るときは、"No, thank you."という決まった表現に、理由を一言添えるのが自然。\n\n【ポイント1】断りの表現を確認する\n"No, thank you."（いいえ、結構です）。\n\n【ポイント2】理由を添えることを確認する\n"I\'m full."（お腹がいっぱいです）という理由を一言添えることで、より自然な断り方になる。\n\n【ポイント3】自然な会話の流れを確認する\nAの"Are you sure? There\'s plenty left."（本当に？まだたくさんありますよ）という発言に、Bの断りが自然につながっている。\n\n【答え】\nNo, thank you. I\'m full.\n\n【確かめ】\n"No, thank you."という断りの表現に、"I\'m full."という理由が続いているか確認する。\n\n【よくあるまちがい】\nYes, please.のように、断るべき場面で受け入れの表現を使ってしまうミス。会話の流れ（Are you sure?という確認）から、断る返答が正しいと判断する。\n\n【ここが絶対】\n勧められたものを断るときは"No, thank you."に理由（I\'m full.など）を添えるのが自然な丁寧さ。',
   },
   {
     id: 'koko_eigo_ex01_145',
@@ -2058,7 +2077,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の会話の（　）に入る最も適切な英文を書きなさい。\n\nA: Can I borrow your dictionary for a moment?\nB: （　）\nA: Great, I\'ll give it back in a minute.',
     answer: 'Of course! Here you are.',
     hint: '快く許可するときは Of course! / Sure! などを使い、物を渡すときは Here you are. を添えましょう。',
-    explanation: 'Of course! / Sure! / No problem! で許可→ Here you are. で物を手渡す。Certainly! も丁寧な表現として可。',
+    explanation:
+      '【何を聞かれているか】\n辞書を借りたいという依頼への会話の空欄に、最も適切な英文を書く問題。\n\n【なぜOf course!とHere you are.を組み合わせるのか】\n依頼を快く許可するときは"Of course!"（もちろん）と答え、実際に物を手渡すときは"Here you are."（はいどうぞ）という表現をセットで使う。\n\n【ポイント1】許可の表現を確認する\n"Of course!"（もちろんです）。\n\n【ポイント2】物を手渡す表現を確認する\n"Here you are."（はい、どうぞ）。\n\n【ポイント3】自然な会話の流れを確認する\nAの"Great, I\'ll give it back in a minute."（よかった、すぐ返します）という返答につながる、快諾の内容になっている。\n\n【答え】\nOf course! Here you are.\n\n【確かめ】\n"Of course!"（許可）と"Here you are."（手渡し）の両方が含まれているか確認する。\n\n【よくあるまちがい】\n許可の表現だけで終わらせ、実際に物を渡す動作を表す"Here you are."を省いてしまうミス。\n\n【ここが絶対】\n依頼への快諾は「Of course!/Sure!（許可）＋Here you are.（手渡し）」という組み合わせをセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_146',
@@ -2069,7 +2089,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の会話の（　）に入る最も適切な英文を書きなさい。\n\nA: I\'m thinking of studying abroad next year, but I\'m a little nervous.\nB: （　）\nA: That\'s true. I\'ll try to stay positive.',
     answer: 'That\'s understandable, but studying abroad is a great chance to grow. I\'m sure you\'ll do well!',
     hint: '相手の気持ちを受け止めてから（That\'s understandable.）、前向きな励ましを加えましょう。',
-    explanation: 'That\'s understandable. で共感→ but でポジティブな視点を提示→ I\'m sure you\'ll ... で励ます構成が自然。',
+    explanation:
+      '【何を聞かれているか】\n留学への不安を打ち明ける会話の空欄に、最も適切な英文を書く問題。\n\n【なぜ共感の後に前向きな励ましを続けるのか】\n相手が不安な気持ちを打ち明けたときの自然な返答は、まず"That\'s understandable."（それは当然だよ）と気持ちを受け止め、その後に前向きな励ましを続けるという流れになる。\n\n【ポイント1】共感の表現を確認する\n"That\'s understandable"（それは無理もない・当然だ）。\n\n【ポイント2】前向きな視点を確認する\n"studying abroad is a great chance to grow"（留学は成長する絶好の機会だ）。\n\n【ポイント3】励ましの表現を確認する\n"I\'m sure you\'ll do well!"（きっとうまくいくよ）。\n\n【答え】\nThat\'s understandable, but studying abroad is a great chance to grow. I\'m sure you\'ll do well!\n\n【確かめ】\nAの"That\'s true. I\'ll try to stay positive."（その通りだね、前向きでいるようにするよ）という返答に自然につながる内容になっているか確認する。\n\n【よくあるまちがい】\n不安な気持ちを否定してしまうミス（「そんなの心配しすぎだよ」のような）。まず気持ちを受け止めてから励ますのが自然な流れ。\n\n【ここが絶対】\n不安を打ち明けられたときは「共感（That\'s understandable）＋前向きな視点＋励まし」という構成をセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_147',
@@ -2080,7 +2101,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の会話の（　）に入る最も適切な英文を書きなさい。\n\nA: I heard you won first prize in the speech contest. Congratulations!\nB: （　）\nA: You must have worked really hard.',
     answer: 'Thank you! I practiced every day for two months, so I\'m really glad it paid off.',
     hint: '感謝を述べた後、努力の過程や喜びを伝えると会話が自然に続きます。「報われる」は pay off。',
-    explanation: 'Thank you! に加え、具体的な努力（I practiced every day）と成果の喜び（glad it paid off）を述べると自然な会話になる。',
+    explanation:
+      '【何を聞かれているか】\nスピーチコンテストでの優勝を祝う会話の空欄に、最も適切な英文を書く問題。\n\n【なぜ感謝の後に努力の過程を伝えるのか】\n褒められたときの自然な返答は、まず感謝を述べ、その後に自分の努力の過程や喜びを伝えることで、会話が自然に続く。\n\n【ポイント1】感謝の表現を確認する\n"Thank you!"（ありがとう）。\n\n【ポイント2】努力の過程を確認する\n"I practiced every day for two months"（2か月間毎日練習した）。\n\n【ポイント3】"pay off"の意味を確認する\npay off＝「（努力が）報われる」。"I\'m really glad it paid off."＝「本当に報われて嬉しい」。\n\n【答え】\nThank you! I practiced every day for two months, so I\'m really glad it paid off.\n\n【確かめ】\nAの"You must have worked really hard."（本当に頑張ったんだね）という発言に自然につながる内容になっているか確認する。\n\n【よくあるまちがい】\n感謝だけで終わらせ、具体的な努力の内容を伝えないミス。\n\n【ここが絶対】\n褒められたときの返答は「感謝＋具体的な努力の過程＋成果の喜び」という構成をセットで覚える。pay off＝努力が報われる、という熟語も覚えておく。',
   },
   {
     id: 'koko_eigo_ex01_148',
@@ -2091,7 +2113,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の会話の（　）に入る最も適切な英文を書きなさい。\n\nA: Do you think it\'s better to live in the city or in the countryside?\nB: （　）\nA: I see your point. I prefer city life myself.',
     answer: 'I prefer the countryside because it\'s quieter and closer to nature. But I understand that cities offer more job opportunities.',
     hint: '自分の意見（I prefer ...）を述べた後、相手の立場も理解する（But I understand ...）と会話が深まります。',
-    explanation: 'I prefer ... because ... で意見表明→ But I understand ... で相手の視点を認める構成。偏差値60以上の入試では対話のバランスが評価される。',
+    explanation:
+      '【何を聞かれているか】\n都会と田舎のどちらが良いかについての会話の空欄に、最も適切な英文を書く問題。\n\n【なぜ自分の意見の後に相手の視点も認めるのか】\n意見を述べる会話では、自分の意見（I prefer〜because〜）を述べた後に、反対の立場の良さも認める（But I understand that〜）ことで、バランスの取れた説得力のある発言になる。\n\n【ポイント1】自分の意見を確認する\n"I prefer the countryside because it\'s quieter and closer to nature."（田舎の方が静かで自然に近いので好き）。\n\n【ポイント2】相手の視点を認める表現を確認する\n"But I understand that cities offer more job opportunities."（でも都会の方が仕事の機会が多いことは理解している）。\n\n【ポイント3】自然な会話の流れを確認する\nAの"I see your point. I prefer city life myself."（あなたの言うことは分かるよ、私自身は都会の生活が好きだけど）という返答に自然につながっている。\n\n【答え】\nI prefer the countryside because it\'s quieter and closer to nature. But I understand that cities offer more job opportunities.\n\n【確かめ】\n自分の意見（田舎を好む理由）と、相手の立場への理解（都会の利点）の両方が含まれているか確認する。\n\n【よくあるまちがい】\n自分の意見だけを一方的に述べ、反対の立場の良さにまったく触れないミス。\n\n【ここが絶対】\n意見を述べる会話は「I prefer〜because〜（自分の意見）＋But I understand that〜（相手の視点）」という構成にすると、バランスの取れた発言になる。',
   },
   {
     id: 'koko_eigo_ex01_149',
@@ -2102,7 +2125,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の会話の（　）に入る最も適切な英文を書きなさい。\n\nA: I\'ve been feeling really stressed lately because of exams.\nB: （　）\nA: You\'re right. Maybe I should take a short break.',
     answer: 'I know how you feel. It\'s important to study hard, but don\'t forget to take care of yourself, too.',
     hint: '「気持ちはわかる」= I know how you feel. / I understand. 共感→アドバイスの流れが自然です。',
-    explanation: 'I know how you feel. で共感→ It\'s important to ... but don\'t forget to ... で励ましとアドバイスを組み合わせる。',
+    explanation:
+      '【何を聞かれているか】\n試験のストレスを訴える会話の空欄に、最も適切な英文を書く問題。\n\n【なぜ共感の後にバランスの取れたアドバイスを続けるのか】\n相手がストレスを訴えたときの自然な返答は、まず"I know how you feel."（気持ちはわかるよ）と共感を示し、その後に「頑張ることも大切だが、自分を大事にすることも忘れないで」というバランスの取れたアドバイスを続ける。\n\n【ポイント1】共感の表現を確認する\n"I know how you feel."（あなたの気持ちがわかります）。\n\n【ポイント2】バランスの取れたアドバイスを確認する\n"It\'s important to study hard, but don\'t forget to take care of yourself, too."（一生懸命勉強することは大切だが、自分自身を大切にすることも忘れないで）。\n\n【ポイント3】自然な会話の流れを確認する\nAの"You\'re right. Maybe I should take a short break."（その通りだね、少し休憩を取ろうかな）という返答に自然につながっている。\n\n【答え】\nI know how you feel. It\'s important to study hard, but don\'t forget to take care of yourself, too.\n\n【確かめ】\n共感の表現とアドバイスの表現の両方が含まれているか確認する。\n\n【よくあるまちがい】\n「勉強を頑張って」とだけ言ってしまい、共感や自分自身を大切にすることへの言及を省いてしまうミス。\n\n【ここが絶対】\nストレスを訴える相手への返答は「I know how you feel.（共感）＋バランスの取れたアドバイス」という構成をセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_150',
