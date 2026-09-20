@@ -158,6 +158,7 @@ import { nagoyaTakiExam } from './nagoya_taki_exam';
 import { fukuokaKurumeExam } from './fukuoka_kurume_exam';
 import { fukuokaSeinanExam } from './fukuoka_seinan_exam';
 import { fukuokaOhoriExam } from './fukuoka_ohori_exam';
+import { kurumeSansu as fukuokaKokoKurumeSansu, kurumeRika as fukuokaKokoKurumeRika } from './fukuoka_koko_exam';
 
 // ── 中学受験 標準レベル追加分（6000問化） ──────────────────────────
 import { chugaku2026Sansu1 } from './chugaku2026_sansu_1';
@@ -222,6 +223,24 @@ import { schoolKokoKeioFill } from './school_koko_keio_fill';
 import { schoolKokoNadaFill } from './school_koko_nada_fill';
 import { schoolKokoNishiyamatoFill } from './school_koko_nishiyamato_fill';
 import { schoolKokoMeidaiFill } from './school_koko_meidai_fill';
+import {
+  nadaKokoSansu,
+  nadaKokoKokugo,
+  koyoKokoSansu,
+  koyoKokoKokugo,
+  koyoKokoEigo,
+  nadaKokoEigo,
+  nadaKokoRika,
+  nishiyamatoKokoSansu,
+  nishiyamatoKokoKokugo,
+  nishiyamatoKokoEigo,
+  todaijiKokoSansu,
+  todaijiKokoRika,
+  todaijiKokoEigo,
+} from './kansai_koko_exam';
+import { keioKokoSansu, azabuKokoSansu } from './keio_azabu_exam';
+import { tokaiKokoSansu as nagoyaTokaiKokoSansu } from './nagoya_koko_exam';
+import { kaseiKokoSansu } from './tokyo_shirtsu_exam';
 import { gradeE5SansuQuestions } from './grade_e5_sansu';
 import { gradeE4SansuQuestions } from './grade_e4_sansu';
 import { gradeJ1SansuQuestions } from './grade_j1_sansu';
@@ -3776,6 +3795,8 @@ export const questions: Question[] = [
   ...fukuokaKurumeExam,
   ...fukuokaSeinanExam,
   ...fukuokaOhoriExam,
+  ...fukuokaKokoKurumeSansu,
+  ...fukuokaKokoKurumeRika,
   ...chugaku2026Sansu1,
   ...chugaku2026Sansu2,
   ...chugaku2026Kokugo1,
@@ -3827,6 +3848,23 @@ export const questions: Question[] = [
   ...schoolKokoNadaFill,
   ...schoolKokoNishiyamatoFill,
   ...schoolKokoMeidaiFill,
+  ...nadaKokoSansu,
+  ...nadaKokoKokugo,
+  ...nadaKokoEigo,
+  ...nadaKokoRika,
+  ...koyoKokoSansu,
+  ...koyoKokoKokugo,
+  ...koyoKokoEigo,
+  ...nishiyamatoKokoSansu,
+  ...nishiyamatoKokoKokugo,
+  ...nishiyamatoKokoEigo,
+  ...todaijiKokoSansu,
+  ...todaijiKokoRika,
+  ...todaijiKokoEigo,
+  ...keioKokoSansu,
+  ...azabuKokoSansu,
+  ...nagoyaTokaiKokoSansu,
+  ...kaseiKokoSansu,
   ...gradeE5SansuQuestions,
   ...gradeE4SansuQuestions,
   ...gradeJ1SansuQuestions,

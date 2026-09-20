@@ -804,9 +804,16 @@ check('【問題集・単元】単位に組文字（㎠など）を使ってい�
 // コーパスの他の場所ですでに使っている書き方にそろえた。
 // マークダウンの ** で同じ失敗をしているので、これは3回目である。
 const LATEX = /[\^_]\{[^}]{1,14}\}|\\(?:frac|sqrt|times|div|cdot|left|right|begin|end|mathrm)\b|\$[^$\n]{1,40}\$/g;
+// ドルの金額範囲（"$400 to $1,000"のような英文の価格表現）は、$…$ の間にLaTeXの
+// 数式ではなく単なる数字・区切り語（to/-/–/—/and）しか無いので、除外する。
+// 除外しないと、英語の課題文にドル価格が出るたびに誤検出する（灘校eigo課題文で発生）。
+const CURRENCY_RANGE = /^\$[\d,]+(?:\.\d+)?\s*(?:to|-|–|—|and)\s*\$?[\d,]*(?:\.\d+)?$/;
 const latexBad: string[] = [];
 for (const [id, t] of jpItems)
-  for (const m of t.matchAll(LATEX)) latexBad.push(`${id}「${m[0]}」`);
+  for (const m of t.matchAll(LATEX)) {
+    if (CURRENCY_RANGE.test(m[0])) continue;
+    latexBad.push(`${id}「${m[0]}」`);
+  }
 check('【問題集】画面に出る文に数式の書き方（LaTeX）が残っている', latexBad);
 
 // 自社のサービス名や、よそのプロダクトの話が教材にまぎれていないか。
