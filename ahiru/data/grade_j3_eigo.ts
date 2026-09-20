@@ -53,7 +53,7 @@ export const gradeJ3EigoQuestions: Question[] = [
     answer: 'その窓は昨夜の強風によって割られた。',
     hint: 'be動詞の過去形＋過去分詞＋by〜で「〜によって…された」という意味になる。',
     explanation:
-      'was broken は「割られた」という受動態の過去形（be動詞の過去形＋過去分詞）。by the strong wind は「強風によって」という動作主を表す。last night（昨夜）が時を表す語。\n答え：その窓は昨夜の強風によって割られた。',
+      '【何を聞かれているか】\n"The window was broken by the strong wind last night."を日本語にする問題。\n\n【なぜwas brokenが「割られた」という意味になるのか】\n"was broken"は、be動詞の過去形とbreakの過去分詞brokenを組み合わせた受動態の過去形で、「割られた」という受け身の意味を表す。\n\n【ポイント1】受動態の構造を確認する\nwas broken＝be動詞の過去形was＋過去分詞broken。\n\n【ポイント2】by〜の意味を確認する\n"by the strong wind"は「強風によって」という動作主を表す。\n\n【ポイント3】時を表す語を確認する\n"last night"（昨夜）が出来事の起きた時を表す。\n\n【答え】\nその窓は昨夜の強風によって割られた。\n\n【確かめ】\n訳に「割られた」という受け身の意味と「強風によって」という動作主の両方が含まれているか確認する。\n\n【よくあるまちがい】\nwas brokenを能動態のように「壊した」と訳してしまうミス。\n\n【ここが絶対】\nbe動詞の過去形+過去分詞+by〜＝「〜によって…された」という受動態の型で覚える。',
   },
   {
     id: 'grade_j3_eigo_04',
@@ -79,7 +79,7 @@ export const gradeJ3EigoQuestions: Question[] = [
     answer: 'This dish was cooked by a famous chef.',
     hint: '能動態の目的語（this dish）を主語にし、動詞を「be動詞の過去形＋過去分詞」にする。動作主の前にはbyを置く。',
     explanation:
-      '能動態を受動態に書きかえるときは、①目的語（this dish）を主語にする、②動詞を「be動詞＋過去分詞」にする（cooked→was cooked）、③元の主語（a famous chef）の前にbyを置いて文末に移す、という手順で行う。\n答え：This dish was cooked by a famous chef.（この料理は有名なシェフによって作られた。）',
+      '【何を聞かれているか】\n"A famous chef cooked this dish."を受動態の文に書きかえる問題。\n\n【なぜ3つの手順で書きかえるのか】\n能動態を受動態に書きかえるときは、目的語を主語にする・動詞をbe動詞+過去分詞にする・元の主語をbyで文末に移す、という3つの手順を順番に行う必要がある。\n\n【ポイント1】目的語を主語にすることを確認する\n能動態の目的語this dishを、受動態の主語にする。\n\n【ポイント2】動詞の形を確認する\ncooked（過去形）→was cooked（be動詞の過去形＋過去分詞）。\n\n【ポイント3】動作主の示し方を確認する\n元の主語a famous chefは、文末に"by 〜"の形で示す。\n\n【答え】\nThis dish was cooked by a famous chef.（この料理は有名なシェフによって作られた。）\n\n【確かめ】\n主語がThis dishになっており、動詞がwas cooked（be動詞の過去形＋過去分詞）になっているか確認する。\n\n【よくあるまちがい】\n動詞をcookedのままにして、be動詞を加え忘れるミス。\n\n【ここが絶対】\n能動態→受動態の書きかえ手順：①目的語を主語に②動詞をbe＋過去分詞に③元の主語にbyをつけて文末へ、という3ステップで覚える。',
     memoryTip: '能動態→受動態の書きかえ手順：①目的語を主語に②動詞をbe＋過去分詞に③元の主語にbyをつけて文末へ。',
   },
 
@@ -120,7 +120,7 @@ export const gradeJ3EigoQuestions: Question[] = [
     answer: 'He has lived in this town since he was born.',
     hint: '「〜以来ずっと」はsinceを使う。sinceのあとには過去の一時点を表す文が続く。',
     explanation:
-      '「ずっと〜している」という継続は現在完了形（has lived）で表す。「〜してから」という起点を表すときはsinceを使い、sinceのあとには過去形の文（he was born）を続ける。forは期間の長さ、sinceは起点を表すという違いに注意。\n答え：He has lived in this town since he was born.',
+      '【何を聞かれているか】\n「彼は生まれたときからずっとこの町に住んでいます。」を英語にする問題。\n\n【なぜsinceの後に過去形の文を続けるのか】\n「〜以来ずっと」という起点を表すときはsinceを使い、sinceの後には過去の一時点を表す文（過去形）を続けるという決まりがある。\n\n【ポイント1】継続を表す現在完了の形を確認する\n「ずっと〜している」はhas lived（現在完了形）で表す。\n\n【ポイント2】sinceの後の形を確認する\nsinceの後には過去形の文（he was born）を続ける。\n\n【ポイント3】forとの違いを確認する\nforは期間の長さ、sinceは起点を表すという違いがある。\n\n【答え】\nHe has lived in this town since he was born.\n\n【確かめ】\nsinceの後がhe was born（過去形の文）になっているか確認する。\n\n【よくあるまちがい】\nforとsinceを混同し、forの後に過去の一時点（he was born）を続けてしまうミス。\n\n【ここが絶対】\nforは「〜の間」（期間）、sinceは「〜以来」（起点）と、意味の違いをはっきり区別する。',
     pitfall: 'forは「〜の間」（期間）、sinceは「〜以来」（起点）。混同しないこと。',
   },
 
@@ -162,7 +162,7 @@ export const gradeJ3EigoQuestions: Question[] = [
     answer: 'I have climbed Mt. Fuji three times.',
     hint: '「〜回」という回数はthree timesのように文末に置くことが多い。',
     explanation:
-      '「〜したことがある」という経験は現在完了形（have climbed）で表す。回数を表す語句（three times）は文の最後に置くのが自然な語順。climbの過去分詞はclimbedと規則変化。\n答え：I have climbed Mt. Fuji three times.',
+      '【何を聞かれているか】\n「私は今までに3回富士山に登ったことがあります。」を英語にする問題。\n\n【なぜ回数を文末に置くのか】\n「〜したことがある」という経験は現在完了形で表し、回数を表す語句（three times）は文の最後に置くのが自然な語順である。\n\n【ポイント1】経験を表す現在完了の形を確認する\n「〜したことがある」はhave climbed（現在完了形）で表す。\n\n【ポイント2】climbの過去分詞を確認する\nclimbは規則動詞で、過去分詞はclimbed。\n\n【ポイント3】回数の位置を確認する\n"three times"（3回）は文末に置く。\n\n【答え】\nI have climbed Mt. Fuji three times.\n\n【確かめ】\nthree timesが文末に置かれているか確認する。\n\n【よくあるまちがい】\nclimbedをclimbのまま使い、haveを付け忘れて現在完了の形を崩してしまうミス。\n\n【ここが絶対】\n経験を表す現在完了＝have/has+過去分詞、回数（〜times）は文末に置くと覚える。',
   },
 
   // ==================== 現在完了形（完了・結果） ====================
@@ -177,7 +177,7 @@ export const gradeJ3EigoQuestions: Question[] = [
     choices: ['has', 'have', 'had', 'was'],
     hint: '主語がSheのときの現在完了形の形を考える。',
     explanation:
-      '「ちょうど〜したところだ」という完了は現在完了形（have/has just＋過去分詞）で表す。主語がShe（3人称単数）のときはhasを使う。\n答え：has（彼女はちょうど宿題を終えたところです。）',
+      '【何を聞かれているか】\n"She (　) just finished her homework."の空欄に入る最も適切な語を選ぶ問題。\n\n【なぜhasを使うのか】\n「ちょうど〜したところだ」という完了は現在完了形（have/has just＋過去分詞）で表し、主語がShe（3人称単数）のときはhasを使うという決まりがある。\n\n【ポイント1】完了を表す現在完了の形を確認する\nhave/has just+過去分詞＝「ちょうど〜したところだ」。\n\n【ポイント2】主語との対応を確認する\n主語Sheは3人称単数なので、hasを使う。\n\n【ポイント3】他の選択肢を消去する\nhave（複数・I・you用）、had（過去完了用）、was（be動詞）はいずれも不適切。\n\n【答え】\nhas（彼女はちょうど宿題を終えたところです。）\n\n【確かめ】\n主語Sheに対応するhasが選ばれ、haveと混同していないか確認する。\n\n【よくあるまちがい】\n主語の人称・数を確認せずhaveを選んでしまうミス。\n\n【ここが絶対】\n現在完了はhave/has+過去分詞、主語が3人称単数のときはhasを使うと覚える。',
   },
   {
     id: 'grade_j3_eigo_13',
@@ -267,7 +267,7 @@ export const gradeJ3EigoQuestions: Question[] = [
     choices: ['broken', 'break', 'breaking', 'broke'],
     hint: '「割られた（＝割れている）窓」という受け身の意味を表す語を選ぶ。',
     explanation:
-      '「割られた窓」＝「割れている状態の窓」は、breakの過去分詞brokenを名詞windowの前に置いて表す。過去分詞は「〜された・〜されている」という受け身・完了の意味を名詞に加える。\n答え：broken（あの割れた窓を見て。）',
+      '【何を聞かれているか】\n"Look at the (　) window."の空欄に入る最も適切な語を選ぶ問題。\n\n【なぜ過去分詞brokenを使うのか】\n「割られた（＝割れている）窓」という受け身の意味は、breakの過去分詞brokenを名詞windowの前に置いて表すという決まりがある。\n\n【ポイント1】過去分詞の働きを確認する\n過去分詞は「〜された・〜されている」という受け身・完了の意味を名詞に加える。\n\n【ポイント2】brokenの位置を確認する\nbrokenをwindowの前に置く。\n\n【ポイント3】他の選択肢を消去する\nbreak（原形）、breaking（現在分詞、能動的な意味）、broke（過去形）はいずれも「割られた」という受け身の意味を名詞の前で表せない。\n\n【答え】\nbroken（あの割れた窓を見て。）\n\n【確かめ】\n選んだ答えが過去分詞broken（受け身の意味）であり、breaking（能動的な意味）と混同していないか確認する。\n\n【よくあるまちがい】\nbrokenの代わりにbreaking（現在分詞）を選んでしまうミス。\n\n【ここが絶対】\n過去分詞が名詞の前に置かれるときは「〜された・〜されている」という受け身の意味になると覚える。',
     memoryTip: '過去分詞が名詞の前に置かれるときは「〜された・〜されている」という受け身の意味になる。',
   },
   {
@@ -294,7 +294,7 @@ export const gradeJ3EigoQuestions: Question[] = [
     answer: 'The girl running in the park is my sister.',
     hint: '「走っている女の子」は現在分詞（running）を使って名詞を後ろから修飾する。',
     explanation:
-      '「〜している…」という能動・進行の意味は現在分詞（running）で表す。runningのあとにin the parkを続け、running in the parkのまとまりが後ろからThe girlを修飾する。分詞が単独の一語ではなく語句をともなうときは、名詞の後ろに置くのが基本。\n答え：The girl running in the park is my sister.',
+      '【何を聞かれているか】\n「公園で走っている女の子は私の妹です。」を英語にする問題。\n\n【なぜrunningが名詞の後ろに置かれるのか】\n「〜している…」という能動・進行の意味は現在分詞（running）で表すが、分詞が単独の一語ではなく語句（in the park）をともなうときは、名詞の後ろに置くのが基本の語順である。\n\n【ポイント1】現在分詞の意味を確認する\nrunning＝「走っている」という能動・進行の意味。\n\n【ポイント2】語句をともなう分詞の位置を確認する\nrunning in the park（公園で走っている）というかたまりが、後ろからThe girlを修飾する。\n\n【ポイント3】完成した文を確認する\n"The girl running in the park is my sister."という型になる。\n\n【答え】\nThe girl running in the park is my sister.\n\n【確かめ】\nrunning in the parkがThe girlの直後に置かれ、後ろから修飾する形になっているか確認する。\n\n【よくあるまちがい】\nrunningをThe girlの前に置いてしまうミス（語句をともなう分詞は名詞の後ろに置く）。\n\n【ここが絶対】\n分詞が単独の一語なら名詞の前、語句をともなうときは名詞の後ろに置くと覚える。',
   },
   {
     id: 'grade_j3_eigo_21',

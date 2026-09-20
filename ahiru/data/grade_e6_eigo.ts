@@ -399,7 +399,7 @@ export const gradeE6EigoQuestions: Question[] = [
     choices: ['bigger', 'biger', 'more big', 'biggest'],
     hint: 'big のように短い語は最後に er をつけて比較級にする。文字を重ねる語もある。',
     explanation:
-      '【解説】\n「〜より大きい」というときは big の比較級 bigger を使う。\nbig のように短母音＋子音字で終わる語は、子音字を重ねてから er をつける（big→bigger）。\n答え：bigger',
+      '【何を聞かれているか】\n"This box is (　) than that one."（この箱はあの箱より大きいです。）の空欄に入る正しい形を選ぶ問題。\n\n【なぜgを重ねるのか】\nbigのように短母音＋子音字で終わる語は、比較級にするとき子音字を重ねてからerをつけるという決まりがある。\n\n【ポイント1】bigの変化を確認する\nbig＝短母音i＋子音字g、で終わる語。\n\n【ポイント2】比較級の作り方を確認する\nbig→bigger（gを重ねてからerをつける）。\n\n【ポイント3】他の選択肢を消去する\nbiger（重ねていない）、more big（誤った比較級の作り方）、biggest（最上級）はいずれも不適切。\n\n【答え】\nbigger\n\n【確かめ】\ngが2つ重なった正しいつづり（bigger）になっているか確認する。\n\n【よくあるまちがい】\n子音字を重ねずにbigerとしてしまうミス。\n\n【ここが絶対】\nbig→bigger、hot→hotterのように、最後の文字を1つ重ねてからerをつける単語があると覚える。',
     memoryTip: 'big→bigger、hot→hotter のように、最後の文字を1つ重ねてから er をつける単語がある。',
   },
   {
@@ -432,7 +432,7 @@ export const gradeE6EigoQuestions: Question[] = [
     ],
     hint: '「〜より小さい」は small の比較級に than を続ける。',
     explanation:
-      '【解説】\n「〜より小さい」は small の比較級 smaller を使う。\n比較級のあとには than（〜より）を続ける。\n答え：This dog is smaller than that dog.',
+      '【何を聞かれているか】\n「この犬はあの犬より小さいです。」を英語にする問題。\n\n【なぜsmallerとthanをセットで使うのか】\n「〜より小さい」はsmallの比較級smallerを使い、比較の相手を示すためにその後にthan（〜より）を続けるという決まりがある。\n\n【ポイント1】smallの比較級を確認する\nsmall→smaller（erをつける）。\n\n【ポイント2】thanの働きを確認する\n比較級の後にthanを置き、比べる相手（that dog）を示す。\n\n【ポイント3】他の選択肢を消去する\nsmall（原級のまま）、more small（誤った比較級の作り方）、smallest（最上級）はいずれも不適切。\n\n【答え】\nThis dog is smaller than that dog.\n\n【確かめ】\nsmallerの後にthanが続いているか確認する。\n\n【よくあるまちがい】\nsmallをそのまま使い、比較級smallerに変えないミス。\n\n【ここが絶対】\n比較級+than＝「〜より…」という型でセットで覚える。',
   },
   {
     id: 'grade_e6_eigo_26',
@@ -444,7 +444,7 @@ export const gradeE6EigoQuestions: Question[] = [
     answer: 'Mt. Fuji is the highest mountain in Japan.',
     hint: '「いちばん高い」は high の最上級を使う。',
     explanation:
-      '【解説】\n「いちばん高い」は high の最上級 highest を使う。最上級の前には the をつける。\n「〜の中で」というときは in Japan（日本の中で）のように in を使う。\n答え：Mt. Fuji is the highest mountain in Japan.',
+      '【何を聞かれているか】\n「富士山は日本でいちばん高い山です。」を英語にする問題。\n\n【なぜthe highestとinを使うのか】\n「いちばん高い」という最上級はhighestで表し、その前にtheをつけ、「〜の中で」という範囲を示すときはinを使うという決まりがある。\n\n【ポイント1】highの最上級を確認する\nhigh→highest（estをつける）。\n\n【ポイント2】theの位置を確認する\n最上級の前には必ずtheをつける（the highest）。\n\n【ポイント3】inの使い方を確認する\n「日本の中で」という範囲はin Japanで表す。\n\n【答え】\nMt. Fuji is the highest mountain in Japan.\n\n【確かめ】\nhighestの前にtheがついており、Japanの前にinが使われているか確認する。\n\n【よくあるまちがい】\n最上級の前のtheを忘れてしまうミス。\n\n【ここが絶対】\nthe+最上級+in/of〜＝「〜の中で最も…」という型でセットで覚える。',
   },
   {
     id: 'grade_e6_eigo_27',
@@ -462,7 +462,7 @@ export const gradeE6EigoQuestions: Question[] = [
     ],
     hint: 'good の比較級は特別な形に変わる。',
     explanation:
-      '【解説】\ngood（よい）の比較級は gooder ではなく better という特別な形になる。\nI feel better than yesterday. で「私は昨日より気分がいいです」という文になる。\n答え：I feel better than yesterday.',
+      '【何を聞かれているか】\n「私は昨日より気分がいいです。」を英語にする問題。\n\n【なぜbetterという特別な形になるのか】\ngood（よい）の比較級は、規則的にerをつけたgooderではなく、betterという特別な形（不規則な変化）になるという決まりがある。\n\n【ポイント1】goodの変化を確認する\ngood-better-best（原級-比較級-最上級）という不規則な変化。\n\n【ポイント2】gooderが誤りであることを確認する\n規則動詞のようにerをつけたgooderという形は存在しない。\n\n【ポイント3】他の選択肢を消去する\nmore good（誤った比較級の作り方）、best（最上級）はいずれも不適切。\n\n【答え】\nI feel better than yesterday.\n\n【確かめ】\ngoodがbetter（不規則な比較級）になっているか確認する。\n\n【よくあるまちがい】\ngoodに規則的にerをつけてgooderとしてしまうミス。\n\n【ここが絶対】\ngood→better→bestは不規則な変化なので、erをつける形とまちがえないように覚える。',
     pitfall: 'good → better → best は不規則な変化なので、erをつける形とまちがえないように覚える。',
   },
   {
@@ -496,7 +496,7 @@ export const gradeE6EigoQuestions: Question[] = [
     ],
     hint: 'famous のように長い単語は before に more を置いて比較級にする。',
     explanation:
-      '【解説】\nfamous（有名な）のようにつづりが長い単語は、前に more を置いて比較級にする。\nfamouser という形は存在しない。\n答え：This singer is more famous than that singer.',
+      '【何を聞かれているか】\n「この歌手はあの歌手より有名です。」を英語にする問題。\n\n【なぜmoreを前に置くのか】\nfamous（有名な）のようにつづりが長い単語は、語尾にerをつけずに前にmoreを置いて比較級を作るという決まりがある。\n\n【ポイント1】famousの音節の長さを確認する\nfamousは長い（複数音節の）形容詞。\n\n【ポイント2】長い形容詞の比較級の作り方を確認する\n語尾にerをつけず、moreを前に置く（more famous）。\n\n【ポイント3】他の選択肢を消去する\nfamouser（誤った変化）、most famous（最上級）、famous more（語順の誤り）はいずれも不適切。\n\n【答え】\nThis singer is more famous than that singer.\n\n【確かめ】\nfamousの前にmoreが置かれており、語尾にerがついていないか確認する。\n\n【よくあるまちがい】\nfamouserのように語尾にerをつけてしまうミス。\n\n【ここが絶対】\n長い形容詞（複数音節）の比較級はmoreを前に置くと覚える。',
   },
   {
     id: 'grade_e6_eigo_30',
@@ -510,7 +510,7 @@ export const gradeE6EigoQuestions: Question[] = [
     choices: ['oldest', 'older', 'more old', 'old'],
     hint: 'old のように e で終わらない短い単語は est をつけて最上級にする。',
     explanation:
-      '【解説】\nold の最上級は old に est をつけて oldest。\n「いちばん年上」は the oldest で表す。\n答え：oldest',
+      '【何を聞かれているか】\n"My grandfather is the (　) person in my family."（祖父は私の家族の中でいちばん年上です。）の空欄に入る正しい形を選ぶ問題。\n\n【なぜoldestを使うのか】\noldのようにeで終わらない短い単語は、estをつけて最上級を作るという決まりがある。\n\n【ポイント1】oldの最上級を確認する\nold→oldest（estをつける）。\n\n【ポイント2】theとの組み合わせを確認する\n「いちばん年上」はthe oldestで表す。\n\n【ポイント3】他の選択肢を消去する\nolder（比較級）、more old（誤った最上級の作り方）、old（原級のまま）はいずれも不適切。\n\n【答え】\noldest\n\n【確かめ】\noldにestがついてoldestになっているか確認する。\n\n【よくあるまちがい】\n最上級をolderのように比較級と混同してしまうミス。\n\n【ここが絶対】\n短い形容詞（1音節）の最上級はestをつけ、theを前に置くと覚える。',
   },
 
   // ============================================================
@@ -527,7 +527,7 @@ export const gradeE6EigoQuestions: Question[] = [
     choices: ['library', 'hospital', 'station', 'park'],
     hint: '本を借りたり読んだりする場所。',
     explanation:
-      '【解説】\n「図書館」は英語で library（ライブラリー）。\n答え：library',
+      '【何を聞かれているか】\n「図書館」を英語で何と言うかを答える問題。\n\n【なぜlibraryを選ぶのか】\n「図書館」は英語でlibrary（ライブラリー）という単語で表すという決まりがある。\n\n【ポイント1】libraryの意味を確認する\nlibrary＝本を借りたり読んだりする場所。\n\n【ポイント2】他の選択肢を消去する\nhospital（病院）、station（駅）、park（公園）はいずれも別の建物・場所を表す。\n\n【ポイント3】建物の名前をセットで確認する\n建物・施設を表す英単語は、それぞれの用途と結びつけて覚える。\n\n【答え】\nlibrary\n\n【確かめ】\n選んだ答えが「図書館」を表すlibraryになっているか確認する。\n\n【よくあるまちがい】\nlibraryとhospitalなど、つづりが長い単語同士を混同してしまうミス。\n\n【ここが絶対】\nlibrary（図書館）、hospital（病院）、station（駅）、park（公園）とセットで覚える。',
   },
   {
     id: 'grade_e6_eigo_32',
@@ -540,7 +540,7 @@ export const gradeE6EigoQuestions: Question[] = [
     choices: ['station', 'park', 'library', 'museum'],
     hint: '電車に乗り降りする場所。',
     explanation:
-      '【解説】\n「駅」は英語で station（ステーション）。\n答え：station',
+      '【何を聞かれているか】\n「駅」を英語で何と言うかを答える問題。\n\n【なぜstationを選ぶのか】\n「駅」は英語でstation（ステーション）という単語で表すという決まりがある。\n\n【ポイント1】stationの意味を確認する\nstation＝電車に乗り降りする場所。\n\n【ポイント2】他の選択肢を消去する\npark（公園）、library（図書館）、museum（博物館）はいずれも別の建物・場所を表す。\n\n【ポイント3】建物の名前をセットで確認する\n建物・施設を表す英単語は、それぞれの用途と結びつけて覚える。\n\n【答え】\nstation\n\n【確かめ】\n選んだ答えが「駅」を表すstationになっているか確認する。\n\n【よくあるまちがい】\nstationとlibraryなど、別の施設名と混同してしまうミス。\n\n【ここが絶対】\nstation（駅）、park（公園）、library（図書館）、museum（博物館）とセットで覚える。',
   },
   {
     id: 'grade_e6_eigo_33',
@@ -553,7 +553,7 @@ export const gradeE6EigoQuestions: Question[] = [
     choices: ['Turn left.', 'Turn to left.', 'Turn on left.', 'Lefts turn.'],
     hint: '「曲がる」turn のあとに方向を表す言葉を続ける。',
     explanation:
-      '【解説】\n「〜に曲がってください」は Turn 〜. の形で表す。\n「左に」は left、「右に」は right。\nturn のあとに to や on はつけない。\n答え：Turn left.',
+      '【何を聞かれているか】\n「左に曲がってください。」を英語にする問題。\n\n【なぜturnの後にtoやonをつけないのか】\n「〜に曲がってください」はTurn 〜.の形で表し、方向を表す言葉（left, right）をturnの直後に直接続ける、toやonはつけないという決まりがある。\n\n【ポイント1】turnの後の形を確認する\nTurn+方向を表す語（left, right）。\n\n【ポイント2】leftの意味を確認する\n「左に」はleft、「右に」はright。\n\n【ポイント3】他の選択肢を消去する\n"Turn to left"（不要なtoが入っている）、"Turn on left"（不要なonが入っている）、"Lefts turn"（語順の誤り）はいずれも不適切。\n\n【答え】\nTurn left.\n\n【確かめ】\nTurnの直後にleftが続いており、toやonが入っていないか確認する。\n\n【よくあるまちがい】\nTurnの後にto leftのようにtoをつけてしまうミス。\n\n【ここが絶対】\n道案内のTurn left/rightは、turnの直後に方向を直接続けると覚える。',
   },
   {
     id: 'grade_e6_eigo_34',
@@ -611,7 +611,7 @@ export const gradeE6EigoQuestions: Question[] = [
     answer: '動物園（the zoo）',
     hint: 'Bさんの最初の発言に注目する。',
     explanation:
-      '【解説】\nBさんの発言 I went to the zoo with my family.（家族と動物園に行きました）から、週末に動物園へ行ったことがわかる。\n答え：動物園（the zoo）',
+      '【何を聞かれているか】\n対話文を読み、Bさんが週末どこに行ったかを答える問題。\n\n【なぜBさんの最初の発言に注目するのか】\n「どこに行ったか」という設問の答えは、Bさんが自分の週末について話している最初の発言に直接示されている。\n\n【ポイント1】該当の発言を確認する\nBさんの発言"I went to the zoo with my family."（家族と動物園に行きました）。\n\n【ポイント2】went toの意味を確認する\nwent（goの過去形）+to+場所、で「〜へ行った」を表す。\n\n【ポイント3】答えの形を確認する\n本文の内容をそのまま使って答える。\n\n【答え】\n動物園（the zoo）\n\n【確かめ】\n答えが、Bさんの発言中の場所（動物園）と一致しているか確認する。\n\n【よくあるまちがい】\n対話文の別の部分の内容と混同してしまうミス。\n\n【ここが絶対】\n「どこに行ったか」を問う設問は、went to〜という表現を含む発言に注目する。',
   },
   {
     id: 'grade_e6_eigo_38',
@@ -625,7 +625,7 @@ export const gradeE6EigoQuestions: Question[] = [
     answer: '先生（a teacher）',
     hint: 'Bさんの最初の発言に注目する。',
     explanation:
-      '【解説】\nBさんの発言 I want to be a teacher.（先生になりたいです）から、将来なりたいものが先生だとわかる。\n答え：先生（a teacher）',
+      '【何を聞かれているか】\n対話文を読み、Bさんが将来何になりたいと言っているかを答える問題。\n\n【なぜBさんの発言に注目するのか】\n「将来何になりたいか」という設問の答えは、Bさんが自分の将来の夢について話している発言に直接示されている。\n\n【ポイント1】該当の発言を確認する\nBさんの発言"I want to be a teacher."（先生になりたいです）。\n\n【ポイント2】want to beの意味を確認する\nwant to be+職業、で「〜になりたい」を表す。\n\n【ポイント3】答えの形を確認する\n本文の内容をそのまま使って答える。\n\n【答え】\n先生（a teacher）\n\n【確かめ】\n答えが、Bさんの発言中の職業（先生）と一致しているか確認する。\n\n【よくあるまちがい】\n対話文の別の部分の内容と混同してしまうミス。\n\n【ここが絶対】\n「将来何になりたいか」を問う設問は、want to be〜という表現を含む発言に注目する。',
   },
   {
     id: 'grade_e6_eigo_39',
@@ -653,7 +653,7 @@ export const gradeE6EigoQuestions: Question[] = [
     answer: '図書館のとなり（next to the library）',
     hint: 'Bさんの発言の最後の文に注目する。',
     explanation:
-      '【解説】\nBさんの発言の最後 It\'s next to the library.（それは図書館のとなりにあります）から、郵便局の場所がわかる。\n答え：図書館のとなり（next to the library）',
+      '【何を聞かれているか】\n対話文を読み、郵便局がどこにあるかを答える問題。\n\n【なぜBさんの発言の最後に注目するのか】\n「どこにあるか」という設問の答えは、Bさんが場所について説明している発言の最後の一文に直接示されている。\n\n【ポイント1】該当の発言を確認する\nBさんの発言の最後"It\'s next to the library."（それは図書館のとなりにあります）。\n\n【ポイント2】next toの意味を確認する\nnext to＝「〜のとなりに」という位置を表す表現。\n\n【ポイント3】答えの形を確認する\n本文の内容をそのまま使って答える。\n\n【答え】\n図書館のとなり（next to the library）\n\n【確かめ】\n答えが、Bさんの発言中の位置（図書館のとなり）と一致しているか確認する。\n\n【よくあるまちがい】\n対話文の別の部分（違う建物の説明）と混同してしまうミス。\n\n【ここが絶対】\n「どこにあるか」を問う設問は、next to〜のような位置を表す表現を含む発言に注目する。',
   },
   {
     id: 'grade_e6_eigo_41',
@@ -666,7 +666,7 @@ export const gradeE6EigoQuestions: Question[] = [
     answer: '夕食の前（before dinner）',
     hint: 'Bさんの2つ目の発言に注目する。',
     explanation:
-      '【解説】\nBさんの発言 I finished it before dinner.（夕食の前にそれを終えました）から、宿題を終えたのは夕食の前だとわかる。\n答え：夕食の前（before dinner）',
+      '【何を聞かれているか】\n対話文を読み、Bさんがいつ宿題を終えたかを答える問題。\n\n【なぜBさんの2つ目の発言に注目するのか】\n「いつ終えたか」という設問の答えは、Bさんが宿題について話している2つ目の発言に直接示されている。\n\n【ポイント1】該当の発言を確認する\nBさんの発言"I finished it before dinner."（夕食の前にそれを終えました）。\n\n【ポイント2】before dinnerの意味を確認する\nbefore dinner＝「夕食の前に」という時を表す表現。\n\n【ポイント3】答えの形を確認する\n本文の内容をそのまま使って答える。\n\n【答え】\n夕食の前（before dinner）\n\n【確かめ】\n答えが、Bさんの発言中の時（夕食の前）と一致しているか確認する。\n\n【よくあるまちがい】\n対話文の別の部分の内容と混同してしまうミス。\n\n【ここが絶対】\n「いつ〜したか」を問う設問は、時を表す表現（before〜, after〜等）を含む発言に注目する。',
   },
   {
     id: 'grade_e6_eigo_42',
@@ -697,7 +697,7 @@ export const gradeE6EigoQuestions: Question[] = [
     answer: 'I went to the park yesterday.',
     hint: '「主語＋動詞（過去形）＋to＋場所＋いつ」の順番になる。',
     explanation:
-      '【解説】\n「私は昨日、公園に行きました」という文を作る。\n主語 I のあとに過去形の動詞 went、そのあとに to the park（公園に）、最後に yesterday（昨日）を置く。\n答え：I went to the park yesterday.',
+      '【何を聞かれているか】\n語句（to / I / went / the park / yesterday）を並べかえて、「私は昨日、公園に行きました。」という英文を完成させる問題。\n\n【なぜ主語＋動詞＋to＋場所＋いつの順にするのか】\n過去の出来事を述べる文は、主語の後に過去形の動詞、その後に行き先（to+場所）、最後に時を表す語句（いつ）を置くという語順の決まりがある。\n\n【ポイント1】主語と動詞を確認する\n主語I＋過去形の動詞went。\n\n【ポイント2】to+場所の位置を確認する\nwentの後にto the park（公園に）を続ける。\n\n【ポイント3】時を表す語の位置を確認する\n文末にyesterday（昨日）を置く。\n\n【答え】\nI went to the park yesterday.\n\n【確かめ】\nI→went→to the park→yesterdayという正しい順番になっているか確認する。\n\n【よくあるまちがい】\nyesterdayを文の途中に置いてしまうミス。\n\n【ここが絶対】\n「主語+動詞(過去形)+to+場所+いつ」の型でセットで覚える。',
   },
   {
     id: 'grade_e6_eigo_44',
@@ -709,7 +709,7 @@ export const gradeE6EigoQuestions: Question[] = [
     answer: 'I want to be a doctor.',
     hint: '「主語＋want to be＋なりたいもの」の順番になる。',
     explanation:
-      '【解説】\n「私は医者になりたいです」という文を作る。\n主語 I のあとに want to be（〜になりたい）、最後に a doctor（医者）を置く。\n答え：I want to be a doctor.',
+      '【何を聞かれているか】\n語句（a doctor / I / to / want / be）を並べかえて、「私は医者になりたいです。」という英文を完成させる問題。\n\n【なぜwant to beをひとまとまりにするのか】\n「〜になりたい」という表現は、want to be（動詞want＋不定詞to be）というひとまとまりの型として文の骨組みになる。\n\n【ポイント1】主語とwant to beを確認する\n主語I＋want to be（〜になりたい）。\n\n【ポイント2】なりたいものの位置を確認する\nwant to beの後にa doctor（医者）を続ける。\n\n【ポイント3】完成した文を確認する\n"I want to be a doctor."という型になる。\n\n【答え】\nI want to be a doctor.\n\n【確かめ】\nI→want to be→a doctorという正しい順番になっているか確認する。\n\n【よくあるまちがい】\ntoの位置を誤り、"I want be to a doctor."のような語順にしてしまうミス。\n\n【ここが絶対】\nwant to be+なりたいもの＝「〜になりたい」という型でセットで覚える。',
   },
   {
     id: 'grade_e6_eigo_45',
@@ -721,7 +721,7 @@ export const gradeE6EigoQuestions: Question[] = [
     answer: 'This is bigger than that.',
     hint: '「主語＋is＋比較級＋than＋比べる相手」の順番になる。',
     explanation:
-      '【解説】\n「これはあれより大きいです」という文を作る。\n主語 This のあとに is、そのあとに比較級 bigger、最後に than that（あれより）を置く。\n答え：This is bigger than that.',
+      '【何を聞かれているか】\n語句（than / this / bigger / that / is）を並べかえて、「これはあれより大きいです。」という英文を完成させる問題。\n\n【なぜ比較級の後にthanを続けるのか】\n「〜より…だ」という比較の文は、主語＋be動詞＋比較級＋than＋比べる相手、という語順で組み立てるという決まりがある。\n\n【ポイント1】主語とbe動詞を確認する\n主語This＋be動詞is。\n\n【ポイント2】比較級とthanの位置を確認する\nisの後に比較級bigger、その後にthan that（あれより）を続ける。\n\n【ポイント3】完成した文を確認する\n"This is bigger than that."という型になる。\n\n【答え】\nThis is bigger than that.\n\n【確かめ】\nThis→is→bigger→than thatという正しい順番になっているか確認する。\n\n【よくあるまちがい】\nthanをbiggerの前に置いてしまうミス。\n\n【ここが絶対】\n「主語+is+比較級+than+比べる相手」の型でセットで覚える。',
   },
   {
     id: 'grade_e6_eigo_46',
@@ -733,7 +733,7 @@ export const gradeE6EigoQuestions: Question[] = [
     answer: 'What did you see yesterday?',
     hint: '「What＋did you＋動詞の元の形＋いつ？」の順番になる。',
     explanation:
-      '【解説】\n「あなたは昨日、何を見ましたか」という疑問文を作る。\nWhat のあとに did you、そのあとに動詞の元の形 see、最後に yesterday を置いてクエスチョンマークをつける。\n答え：What did you see yesterday?',
+      '【何を聞かれているか】\n語句（see / did / you / what / yesterday）を並べかえて、「あなたは昨日、何を見ましたか。」という疑問文を完成させる問題。\n\n【なぜdid youの後を原形にするのか】\n「何を〜しましたか」とたずねる疑問文は、What＋did you＋動詞の原形、という語順で組み立て、did youがあるので動詞は原形seeのまま使う。\n\n【ポイント1】疑問詞Whatの位置を確認する\nWhatを文頭に置く。\n\n【ポイント2】did youと動詞の形を確認する\nWhatの後にdid you、その後に動詞の原形seeを続ける。\n\n【ポイント3】時を表す語の位置を確認する\n文末にyesterdayを置き、文末に？をつける。\n\n【答え】\nWhat did you see yesterday?\n\n【確かめ】\nWhat→did you→see→yesterdayという正しい順番になっているか確認する。\n\n【よくあるまちがい】\ndid youの後の動詞をsaw（過去形）にしてしまうミス。\n\n【ここが絶対】\n「What+did+主語+動詞の原形+いつ?」の型でセットで覚える。',
   },
 
   // ============================================================
