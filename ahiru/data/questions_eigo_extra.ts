@@ -197,7 +197,7 @@ export const eigoExtra: Question[] = [
     answer: 'うさぎ',
     hint: '長い耳とふわふわの尻尾が特徴の動物です。',
     explanation:
-      '【答え】うさぎ\n\n【ほかの選択肢】\n・cat … ねこ\n・dog … いぬ\n・monkey … さる\n\n【つづりの注意】rabbit は b が2つある。短い母音の後で子音を重ねるという決まりがあり、英語には この形の語が多い。\n・rabbit、bottle、button、happy、summer、dinner、letter\n\n【rabbit と hare】英語では2種類に分ける。\n・rabbit … あなうさぎ。穴を掘って暮らす。ペットのうさぎ\n・hare … のうさぎ。地上で暮らし、足が速い\n日本語ではどちらも「うさぎ」だが、英語では別の動物として扱う。\n\n【うさぎを使った言い方】\n・The Tortoise and the Hare … 「うさぎとかめ」。イソップ物語\n・as quick as a rabbit … うさぎのようにすばやい\n\n【日本語のうさぎの数え方】うさぎは「1羽、2羽」と鳥と同じように数える。昔、四つ足の動物を食べてはいけない時期に、鳥だと言いなして食べたからという説がある。言葉には歴史が残っている。\n\n【例文】I have a white rabbit as a pet.',
+      '【何を聞かれているか】\n"rabbit"という英単語の日本語の意味を選ぶ問題。\n\n【なぜ「うさぎ」が正解なのか】\nrabbitは、長い耳とふわふわの尻尾を持つ動物「うさぎ」を表す英単語。\n\n【ポイント1】選択肢を区別する\ncat（ねこ）、dog（いぬ）、monkey（さる）と、rabbit（うさぎ）を混同しないようにする。\n\n【ポイント2】つづりの規則を確認する\nrabbitはbが2つ重なる。短い母音の後で子音を重ねるという決まりがあり、bottle・button・happy・summer・dinner・letterなど同じパターンの語が多い。\n\n【ポイント3】rabbitとhareの違いを確認する\n英語ではrabbit（あなうさぎ・穴を掘って暮らす）とhare（のうさぎ・地上で足が速い）を区別するが、日本語ではどちらも「うさぎ」と呼ぶ。\n\n【答え】\nうさぎ\n\n【確かめ】\n選択肢のcat（ねこ）、dog（いぬ）、monkey（さる）とrabbit（うさぎ）が、それぞれ違う動物を指していることを確認する。\n\n【よくあるまちがい】\nrabbitのつづりをbが1つだけだと思い込んでスペルミスをするミス。短い母音の後は子音を重ねるという規則を意識する。\n\n【ここが絶対】\nrabbit＝うさぎ。"The Tortoise and the Hare"（うさぎとかめ）のような表現とあわせて、hareとの違いも覚えておく。',
     examFrequency: 'medium',
   },
   {
@@ -239,7 +239,7 @@ export const eigoExtra: Question[] = [
     answer: 'はな',
     hint: '顔の真ん中にあり、においをかぐ器官です。',
     explanation:
-      '【答え】はな\n\n【ほかの選択肢】\n・mouth … くち\n・eye … め\n・ear … みみ\n\n【顔の部分の語】face（顔）・eye（目）・ear（耳）・nose（鼻）・mouth（口）・cheek（ほお）・chin（あご）・forehead（ひたい）・eyebrow（まゆ）・eyelash（まつげ）・tooth（歯）。\n・tooth の複数形は teeth（不規則）\n\n【nose を使った言い方】\n・runny nose … 鼻水が出ている\n・have a good nose for … 〜をかぎ分ける力がある\n・right under one\'s nose … すぐ目の前に。日本語の「灯台下暗し」に近い\n・turn up one\'s nose … 鼻であしらう\n日本語にも「鼻が高い」「鼻につく」があり、鼻を使った言い方は両方の言語にある。\n\n【つづりの注意】nose の e は読まないが、前の o を「オウ」と長く読ませるはたらきをする。\n・nose、note、home、rose、hope\n最後の e が、前の母音を長く読ませるという決まりがある。これを知っていると、初めて見る語も読める。\n\n【例文】An elephant has a long nose.',
+      '【何を聞かれているか】\n"nose"という英単語の日本語の意味を選ぶ問題。\n\n【なぜ「はな」が正解なのか】\nnoseは、顔の真ん中にあってにおいをかぐ器官「鼻」を表す英単語。\n\n【ポイント1】選択肢を区別する\nmouth（くち）、eye（め）、ear（みみ）と、nose（はな）を混同しないようにする。\n\n【ポイント2】つづりの規則を確認する\nnoseの最後のeは発音しないが、前のoを「オウ」と長く読ませる働きをする。note・home・rose・hopeも同じ規則。\n\n【ポイント3】noseを使った表現を確認する\n"right under one\'s nose"（すぐ目の前に、日本語の「灯台下暗し」に近い）、"have a good nose for〜"（〜をかぎ分ける力がある）など。\n\n【答え】\nはな\n\n【確かめ】\n選択肢のmouth（くち）、eye（め）、ear（みみ）とnose（はな）が、それぞれ顔の違う部分を指していることを確認する。\n\n【よくあるまちがい】\nnoseの最後のeを発音してしまうミス。最後のeは発音せず、前の母音を長く読ませるだけの働きをする。\n\n【ここが絶対】\nnose＝はな。最後のeが前の母音を長く読ませるという綴りの規則を、note・home・roseなどとあわせて覚えておく。',
     examFrequency: 'high',
   },
   {
@@ -281,7 +281,7 @@ export const eigoExtra: Question[] = [
     answer: 'ぎゅうにゅう',
     hint: '牛からとれる白い飲み物です。',
     explanation:
-      '【答え】ぎゅうにゅう\n\n【ほかの選択肢】\n・water … 水\n・juice … ジュース\n・tea … お茶\nどれも数えられない名詞である。液体は数えられない。\n\n【数え方】入れ物を使って数える。\n・a glass of milk（コップ1杯）\n・a cup of tea（カップ1杯）\n・a bottle of juice（びん1本）\n・a carton of milk（紙パック1本）\n「入れ物 of もの」の形は必ず覚える。日本語の「1杯」「1本」と同じ考え方である。\n\n【some と any】\n・some … ふつうの文。I want some milk.\n・any … 疑問文・否定文。Do you have any milk?\n・すすめるときの疑問文では some … Would you like some milk?\n\n【飲み物の語】water・milk・juice・tea・coffee・green tea（緑茶）・black tea（紅茶）・soda。\n・black tea が紅茶である。日本語と色の言い方がちがう\n\n【例文】I drink a glass of milk every morning.',
+      '【何を聞かれているか】\n"milk"という英単語の日本語の意味を選ぶ問題。\n\n【なぜ「ぎゅうにゅう」が正解なのか】\nmilkは、牛からとれる白い飲み物「牛乳」を表す英単語。\n\n【ポイント1】選択肢を区別する\nwater（水）、juice（ジュース）、tea（お茶）と、milk（牛乳）を混同しないようにする。\n\n【ポイント2】数えられない名詞であることを確認する\nmilkのような液体は数えられない名詞なので、"a glass of milk"（コップ1杯）のように、入れ物を使って数える。\n\n【ポイント3】someとanyの使い分けを確認する\nふつうの文にはsome（I want some milk.）、疑問文・否定文にはany（Do you have any milk?）、すすめるときの疑問文にはsome（Would you like some milk?）を使う。\n\n【答え】\nぎゅうにゅう\n\n【確かめ】\n選択肢のwater（水）、juice（ジュース）、tea（お茶）とmilk（牛乳）が、それぞれ違う飲み物を指していることを確認する。\n\n【よくあるまちがい】\nmilkを"a milk"のように数えられる名詞として使ってしまうミス。液体は数えられない名詞として扱い、「入れ物 of もの」の形で数える。\n\n【ここが絶対】\nmilk＝牛乳。数えられない名詞は"a glass of〜"のように入れ物を使って数えることをセットで覚える。',
     examFrequency: 'high',
   },
   // ============================================================
@@ -493,7 +493,8 @@ export const eigoExtra: Question[] = [
     choices: ['She is', 'She was', 'She has', 'She is または She has'],
     answer: 'She is または She has',
     hint: '\'s は is または has の短縮形になります。',
-    explanation: '\'s は is または has の短縮形です。文脈によってどちらかを判断します。She\'s a doctor. → is / She\'s finished. → has。',
+    explanation:
+      '【何を聞かれているか】\n"She\'s"が何の短縮形かを答える問題。\n\n【なぜisとhasの両方の可能性があるのか】\nアポストロフィ\'s は、be動詞のis（She is）と、現在完了のhas（She has）の両方を短縮できる形なので、文脈によってどちらを表しているか判断する必要がある。\n\n【ポイント1】\'s がisの短縮であるパターンを確認する\n"She\'s a doctor."（＝She is a doctor.）のように、後ろに名詞・形容詞が続くときはis。\n\n【ポイント2】\'s がhasの短縮であるパターンを確認する\n"She\'s finished."（＝She has finished.）のように、後ろに過去分詞が続くときはhas（現在完了）。\n\n【ポイント3】文脈で判断することを確認する\n\'s の後ろに続く語の形（名詞・形容詞か、過去分詞か）を見て、isかhasかを判断する。\n\n【答え】\nShe is または She has\n\n【確かめ】\n"She\'s a doctor."と"She\'s finished."という2つの例文で、\'s がそれぞれis／hasを表していることを確認する。\n\n【よくあるまちがい】\n\'s を常にis（またはhas）だけの短縮だと決めつけてしまうミス。後ろに続く語の形を見て判断する必要がある。\n\n【ここが絶対】\n\'s ＝is またはhasの短縮形。後ろに続く語（名詞・形容詞か過去分詞か）で判断する。',
     examFrequency: 'high',
   },
   {
@@ -521,7 +522,7 @@ export const eigoExtra: Question[] = [
     answer: 'is',
     hint: '主語が The cat（三人称単数）のとき be動詞は？',
     explanation:
-      '【答え】is\n\n【主語が名詞のとき】he や she だけでなく、1つのものを表す名詞も三人称単数である。\n・The cat is 〜（1ぴき）\n・The cats are 〜（2ひき以上）\n・My father is 〜／My parents are 〜\n主語が単数か複数かを見るのが手順である。\n\n【on the table】前置詞 on は「接している」ことを表す。上とはかぎらない。\n・on the table（テーブルの上に）\n・on the wall（壁に）\n・on the ceiling（天井に）\n上下ではなく、くっついているかどうかで決まる。\n\n【場所を表す前置詞】\n・on … 接している\n・in … 中に\n・under … 真下に\n・by／near … そばに\n・between … 2つの間に\n・in front of … 前に\n・behind … 後ろに\n絵にして覚えると確実である。\n\n【There is の文】この文は There is a cat on the table. とも言える。\n・The cat is 〜 … その猫がどこにいるかを言う\n・There is a cat 〜 … 猫がいることを新しく知らせる\nすでに話に出たものには The、初めてなら There is。\n\n【例文】The cat is on the table. It is sleeping.',
+      '【何を聞かれているか】\n"The cat (　) on the table."の空欄に入る、正しいbe動詞を選ぶ問題。\n\n【なぜisを使うのか】\n主語のThe catは1匹（三人称単数）を表すので、he/sheと同じようにbe動詞はisを使う。\n\n【ポイント1】名詞の単数・複数を確認する\nhe/sheだけでなく、1つのものを表す名詞（The cat）も三人称単数として扱う。The catsのように複数になればare。\n\n【ポイント2】前置詞onの意味を確認する\nonは「接している」ことを表す前置詞で、必ずしも「上」を意味するわけではない（on the wall＝壁に、on the ceiling＝天井に）。\n\n【ポイント3】There is の文との違いを確認する\n"The cat is 〜"はすでに話に出た猫がどこにいるかを言う文、"There is a cat 〜"は猫がいることを初めて知らせる文。\n\n【答え】\nis\n\n【確かめ】\n主語The catが単数であることを確認し、be動詞isが正しく選ばれているか確認する。\n\n【よくあるまちがい】\nonを「上に」という意味だけで覚えてしまうミス。onは「接している」ことを表すので、壁や天井にも使える。\n\n【ここが絶対】\n主語が単数の名詞（The catなど）のときはis、複数（The catsなど）のときはareを使う。',
     examFrequency: 'high',
   },
   {
@@ -535,7 +536,7 @@ export const eigoExtra: Question[] = [
     answer: 'あなたはどこの出身ですか？',
     hint: 'from は出身を表します。',
     explanation:
-      '【答え】あなたはどこの出身ですか\n\n【be from の意味】「〜の出身である」。決まった言い方として覚える。\n・I am from Japan.（日本の出身です）\n・Where are you from?（どちらのご出身ですか）\n\n【似た表現との使い分け】ここが最も問われる。\n・Where are you from? … 出身地をたずねる\n・Where are you? … 今どこにいるかをたずねる\n・Where do you live? … 今住んでいる場所をたずねる\n・Where are you going? … これからどこへ行くかをたずねる\n・Where did you come from? … どこから来たか（経路）をたずねる\nbe動詞か一般動詞か、そして時制で、意味がまったく変わる。\n\n【from の意味】「〜から」。出発点を表す。\n・from Japan（日本出身）\n・in Japan（日本にいる）\n・to Japan（日本へ）\nfrom は出発点、to は到着点、in は中にいる状態。\n\n【初対面の会話】\n・Nice to meet you.\n・Where are you from? — I am from Osaka.\n・What do you do?（お仕事は何ですか）\n\n【例文】Where are you from? — I\'m from Hokkaido.',
+      '【何を聞かれているか】\n"Where are you from?"の意味を選ぶ問題。\n\n【なぜ「出身」という意味になるのか】\n"be from〜"は「〜の出身である」という決まった意味を表す表現で、"Where are you from?"は出身地をたずねる決まり文句。\n\n【ポイント1】"be from〜"の意味を確認する\n"I am from Japan."＝「私は日本の出身です」。fromは出発点（〜から）を表す。\n\n【ポイント2】似た表現との違いを確認する\n"Where are you?"（今どこにいるか）、"Where do you live?"（今住んでいる場所）、"Where are you going?"（これからどこへ行くか）とは、それぞれ意味が異なる。\n\n【ポイント3】from・to・inの違いを確認する\nfrom＝出発点（〜から）、to＝到着点（〜へ）、in＝中にいる状態（〜に）。\n\n【答え】\nあなたはどこの出身ですか？\n\n【確かめ】\n"Where are you from?"が「今どこにいるか」ではなく「出身地」をたずねていることを、be動詞＋fromという形から確認する。\n\n【よくあるまちがい】\n"Where are you?"（今どこにいるか）と"Where are you from?"（出身地）を混同してしまうミス。fromがあるかないかで意味が変わる。\n\n【ここが絶対】\n"Where are you from?"＝出身地をたずねる決まり文句としてセットで覚える。初対面の会話の定番表現。',
     examFrequency: 'very-high',
   },
   {
@@ -870,7 +871,7 @@ export const eigoExtra: Question[] = [
     answer: '科学者',
     hint: 'science（科学）+ ist（人）で成り立っています。',
     explanation:
-      '【答え】科学者\n\n【語のつくり】science（科学）＋ ist（人）で「科学をする人」となる。語のつくりが分かると、知らない語も意味が推測できる。\n\n【ist がつく語】\n・artist（芸術家）・pianist（ピアニスト）・dentist（歯科医）・journalist（記者）・tourist（観光客）・novelist（小説家）・specialist（専門家）\n\n【「人」を表すほかの語尾】\n・er … teacher、singer、writer、driver、player、worker\n・or … actor、doctor、director、visitor\n・ian … musician、politician、librarian、magician\n動詞や名詞に語尾をつけて「人」を表すのが英語のつくり方である。\n\n【語のつくりを知る利点】初めて見る語でも、\n・science → scientist（科学者）\n・music → musician（音楽家）\n・politics → politician（政治家）\nのように、もとの語から意味が分かる。単語を1つずつ覚えるより、つくりを知るほうが効率がよい。\n\n【science に関わる語】science（科学）・scientific（科学的な）・experiment（実験）・research（研究）・discover（発見する）。\n\n【例文】She wants to be a scientist.',
+      '【何を聞かれているか】\n"scientist"という英単語の日本語の意味を選ぶ問題。\n\n【なぜ「科学者」が正解なのか】\nscientistは、science（科学）＋ist（〜する人）という語のつくりから、「科学をする人＝科学者」という意味になる。\n\n【ポイント1】語のつくりを確認する\nscience（科学）＋ist（人）＝scientist（科学者）。この語のつくりのパターンを知ると、初めて見る単語の意味も推測できる。\n\n【ポイント2】istがつく他の語を確認する\nartist（芸術家）、pianist（ピアニスト）、dentist（歯科医）、journalist（記者）、tourist（観光客）、novelist（小説家）、specialist（専門家）。\n\n【ポイント3】「人」を表す他の語尾も確認する\ner（teacher、singer、writer）、or（actor、doctor、director）、ian（musician、politician、librarian）。\n\n【答え】\n科学者\n\n【確かめ】\n選択肢の芸術家（artist）、医師（doctor）、教師（teacher）と科学者（scientist）が、それぞれ別の職業を表す語であることを確認する。\n\n【よくあるまちがい】\n語尾のistだけを見て、意味を考えずに別の職業だと思い込んでしまうミス。scienceという語根の意味（科学）を先に確認する。\n\n【ここが絶対】\n語尾ist・er・or・ianは「〜する人」を表す。もとになる語（science、artなど）の意味と組み合わせて覚えると、単語の意味を推測できる。',
     examFrequency: 'high',
   },
   {
@@ -912,7 +913,7 @@ export const eigoExtra: Question[] = [
     answer: '古代の',
     hint: 'ancient Rome（古代ローマ）のように使います。',
     explanation:
-      '【答え】古代の\n\n【ほかの選択肢】\n・modern … 現代の\n・future … 未来の\n・recent … 最近の\n\n【時を表す形容詞】まとめて覚える。\n・ancient（古代の）… ancient Rome、ancient Egypt\n・medieval（中世の）\n・modern（現代の、近代の）\n・contemporary（同時代の、現代の）\n・recent（最近の）\n・future（未来の）\n・past（過去の）・present（現在の）\n歴史の学習と合わせて覚えると、社会科の内容とつながる。\n\n【ancient の使い方】\n・ancient Rome（古代ローマ）\n・ancient Egypt（古代エジプト）\n・ancient civilization（古代文明）\n・an ancient temple（古い寺）\n文明や遺跡について語るときによく使う。\n\n【old との区別】\n・old … 古い。ものにも人にも使える\n・ancient … 大昔の。何千年も前のことに使う\n・an old house（古い家）／an ancient ruin（古代の遺跡）\n時間のへだたりがまったくちがう。\n\n【例文】We learned about ancient Egypt in social studies.',
+      '【何を聞かれているか】\n"ancient"という英単語の日本語の意味を選ぶ問題。\n\n【なぜ「古代の」が正解なのか】\nancientは、何千年も前の大昔（古代）を表す形容詞で、ancient Rome（古代ローマ）のように歴史的な文明について語るときに使う。\n\n【ポイント1】選択肢を区別する\nmodern（現代の）、future（未来の）、recent（最近の）と、ancient（古代の）を混同しないようにする。\n\n【ポイント2】時を表す形容詞をまとめて覚える\nancient（古代の）・medieval（中世の）・modern（現代の）・recent（最近の）・future（未来の）・past（過去の）・present（現在の）。\n\n【ポイント3】oldとの違いを確認する\noldは「古い」全般に使えるが、ancientは「大昔の」何千年も前のことに使う（an old house＝古い家、an ancient ruin＝古代の遺跡）。\n\n【答え】\n古代の\n\n【確かめ】\n"ancient Rome"（古代ローマ）、"ancient Egypt"（古代エジプト）のような使い方から、ancientが「大昔」を表す語であることを確認する。\n\n【よくあるまちがい】\nancientとoldを同じ意味だと思い込んでしまうミス。oldは古さ全般、ancientは何千年もの時間的へだたりを表す。\n\n【ここが絶対】\nancient＝古代の。modern（現代の）・recent（最近の）・future（未来の）と対にして、時を表す形容詞をまとめて覚える。',
     examFrequency: 'high',
   },
   {
@@ -966,7 +967,7 @@ export const eigoExtra: Question[] = [
     answer: '技術・テクノロジー',
     hint: 'スマートフォンやAIもこれの産物です。',
     explanation:
-      '【答え】技術・テクノロジー\n\n【ほかの選択肢】\n・biology … 生物学\n・psychology … 心理学\n・philosophy … 哲学\n\n【logy の意味】ギリシャ語で「学問」を表す。logy がついたら学問と覚えると、多くの語が分かる。\n・biology（生物学）… bio（生命）\n・geology（地質学）… geo（地球）\n・psychology（心理学）… psycho（心）\n・zoology（動物学）… zoo（動物）\n・ecology（生態学）… eco（環境）\n・technology（技術）… techno（技術）\n語のつくりを知ると、初めて見る語も意味が推測できる。\n\n【接頭語も覚える】\n・bio（生命）・geo（地球）・tele（遠い）・auto（自分で）・micro（小さい）・inter（間の）\n・telephone（遠くの音）・television（遠くを見る）・automobile（自分で動く）・microscope（小さいものを見る）・international（国と国の間の）\n分解すると意味が見えてくる。\n\n【technology に関わる語】computer・Internet・smartphone・artificial intelligence（人工知能）・robot・digital。\n\n【例文】Technology has changed our lives.',
+      '【何を聞かれているか】\n"technology"という英単語の日本語の意味を選ぶ問題。\n\n【なぜ「技術・テクノロジー」が正解なのか】\ntechnologyは、スマートフォンやAIなどを生み出す「技術」を表す英単語。\n\n【ポイント1】logyの意味を確認する\nlogyはギリシャ語で「学問」を表す語尾。biology（生物学）、geology（地質学）、psychology（心理学）のように、logyがつく語は学問や体系立てられた分野を表す。\n\n【ポイント2】選択肢を区別する\nbiology（生物学）、psychology（心理学）、philosophy（哲学）と、technology（技術）を混同しないようにする。\n\n【ポイント3】接頭語もあわせて確認する\nbio（生命）、geo（地球）、tele（遠い）、auto（自分で）、micro（小さい）のような接頭語を知ると、telephone（遠くの音）やautomobile（自分で動く）のような語も意味が推測できる。\n\n【答え】\n技術・テクノロジー\n\n【確かめ】\n選択肢の生物学（biology）、心理学（psychology）、哲学（philosophy）とtechnology（技術）が、それぞれ別の分野を表す語であることを確認する。\n\n【よくあるまちがい】\nlogyがつく語をすべて同じ意味だと思い込んでしまうミス。logyの前につく部分（bio・geo・psycho・technoなど）の意味を確認して区別する。\n\n【ここが絶対】\n語尾logyと接頭語（bio・geo・tele・autoなど）の組み合わせを知ると、初めて見る単語でも意味を推測できるようになる。',
     examFrequency: 'high',
   },
   {
@@ -980,7 +981,7 @@ export const eigoExtra: Question[] = [
     answer: '守る・保護する',
     hint: 'protection（保護）の動詞形です。',
     explanation:
-      '【答え】守る・保護する\n\n【ほかの選択肢】\n・attack … 攻撃する\n・destroy … 破壊する\n・ignore … 無視する\n\n【protect の使い方】\n・protect ＋ 目的語 … 守る\n・protect A from B … A を B から守る。protect children from danger\nfrom とセットで使う形を覚えておくと、長文で役に立つ。\n\n【名詞と形容詞】\n・protect（動詞）→ protection（名詞・保護）→ protective（形容詞・保護する）\n動詞・名詞・形容詞をまとめて覚えると、語彙が3倍に増える。\n・achieve → achievement\n・develop → development\n・decide → decision\n・explain → explanation\n\n【環境に関わる語】protect は環境の話題でよく出る。\n・protect the environment（環境を守る）\n・protect endangered species（絶滅のおそれのある生き物を守る）\n・protect nature、protect the forest\n\n【似た意味の語】\n・protect … 危険から守る\n・defend … 攻撃から防ぐ\n・save … 救う、とっておく\n・preserve … そのままの状態で保つ\n\n【例文】We must protect the environment for the future.',
+      '【何を聞かれているか】\n"protect"という英単語の日本語の意味を選ぶ問題。\n\n【なぜ「守る・保護する」が正解なのか】\nprotectは、危険や被害から何かを「守る・保護する」という意味を表す動詞。\n\n【ポイント1】選択肢を区別する\nattack（攻撃する）、destroy（破壊する）、ignore（無視する）と、protect（守る）を混同しないようにする。\n\n【ポイント2】"protect A from B"の形を確認する\n"protect children from danger"（子供を危険から守る）のように、fromとセットで使う形を覚えておく。\n\n【ポイント3】名詞・形容詞の形もあわせて確認する\nprotect（動詞）→protection（名詞・保護）→protective（形容詞・保護する）。achieve→achievement、develop→developmentのように、動詞・名詞・形容詞をセットで覚えると語彙が増える。\n\n【答え】\n守る・保護する\n\n【確かめ】\n選択肢の攻撃する（attack）、破壊する（destroy）、無視する（ignore）とprotect（守る）が、正反対に近い意味の語であることを確認する。\n\n【よくあるまちがい】\nprotectとattack（攻撃する）を意味が似ていると勘違いしてしまうミス。protectは「守る」という、危険から遠ざける意味。\n\n【ここが絶対】\nprotect A from B＝AをBから守る、という形をセットで覚える。環境問題の英文でよく使われる語。',
     examFrequency: 'high',
   },
   {
@@ -1078,7 +1079,7 @@ export const eigoExtra: Question[] = [
     answer: '自信のある',
     hint: 'confidence（自信）の形容詞形です。',
     explanation:
-      '【答え】自信のある\n\n【名詞形】confidence（自信・信頼）。\n・confident（形容詞）→ confidence（名詞）\n・ent が ence になる形は多い。different → difference、important → importance、silent → silence\n\n【confident の使い方】\n・be confident of 〜／be confident that 〜（〜を確信している）\n・I am confident that I can do it.\n\n【まぎらわしい語】\n・confident … 自信のある\n・confidential … 秘密の、内密の\n似たつづりで意味がまったくちがう。\n\n【ほかの選択肢】\n・shy … 内気な\n・anxious／nervous … 不安な・緊張した\n・embarrassed … はずかしい\n\n【気持ちを表す形容詞】\n・happy・sad・angry・excited・nervous・anxious・confident・proud・disappointed・surprised\n・ed で終わるものは人の気持ち、ing で終わるものは原因\n・I am excited.（わくわくしている）／The game is exciting.（わくわくさせる）\n\n【反対の意味】\n・confident ⇔ shy、nervous、unsure\n\n【例文】She is confident about her English.',
+      '【何を聞かれているか】\n"confident"という英単語の日本語の意味を選ぶ問題。\n\n【なぜ「自信のある」が正解なのか】\nconfidentは、名詞confidence（自信）の形容詞形で、「自信のある」状態を表す。\n\n【ポイント1】名詞形との対応を確認する\nconfident（形容詞）→confidence（名詞）。different→difference、important→importanceのように、entがenceに変わる語のパターンと同じ。\n\n【ポイント2】似たつづりの語と区別する\nconfident（自信のある）とconfidential（秘密の、内密の）は似たつづりだが意味がまったく異なる。\n\n【ポイント3】ed/ingの区別と関連づけて覚える\nhappy・sad・nervous・confidentなどの気持ちを表す形容詞は、excited（わくわくしている）／exciting（わくわくさせる）のようなed/ingの区別と一緒に整理して覚えるとよい。\n\n【答え】\n自信のある\n\n【確かめ】\n選択肢の内気な（shy）、不安な（anxious）、恥ずかしい（embarrassed）とconfident（自信のある）が、それぞれ違う気持ちを表す語であることを確認する。\n\n【よくあるまちがい】\nconfidentとconfidential（秘密の）を似たつづりから混同してしまうミス。意味がまったく異なるので注意する。\n\n【ここが絶対】\nconfident＝自信のある、confidence＝自信という名詞・形容詞のペアをセットで覚える。confidentialという似た語との違いにも注意する。',
     examFrequency: 'high',
   },
   {
@@ -1106,7 +1107,7 @@ export const eigoExtra: Question[] = [
     answer: 'がっかりさせる',
     hint: 'disappointed（がっかりした）の動詞形です。',
     explanation:
-      '【答え】がっかりさせる\n\n【動詞と形容詞】\n・disappoint（動詞）… がっかりさせる\n・disappointed（形容詞）… がっかりした（人の気持ち）\n・disappointing（形容詞）… がっかりさせるような（原因）\n・disappointment（名詞）… 失望\ned は人、ing は原因という決まりがここでも働いている。\n・I was disappointed.（私はがっかりした）\n・The result was disappointing.（結果はがっかりさせるものだった）\n\n【dis の意味】打ち消しや反対を表す接頭語である。\n・disappoint（appoint＝任命する、の反対から）\n・dislike（きらう）・disagree（反対する）・disappear（消える）・discover（発見する）\n・discover は「おおい（cover）を取る」で、打ち消しから「発見する」の意味になった\n\n【ほかの選択肢】\n・please … 喜ばせる\n・surprise … 驚かせる\n・anger … 怒らせる\nどれも「人の気持ちを〜させる」という動詞である。英語では、気持ちを表すのに「させる」形の動詞を使うことが多い。\n\n【例文】I was disappointed at the news.',
+      '【何を聞かれているか】\n"disappoint"という英単語の日本語の意味を選ぶ問題。\n\n【なぜ「がっかりさせる」が正解なのか】\ndisappointは、否定を表す接頭語disと、「任命する」という意味のappointが組み合わさってできた語で、「期待を裏切ってがっかりさせる」という意味になる。\n\n【ポイント1】動詞と形容詞の関係を確認する\ndisappoint（動詞・がっかりさせる）→disappointed（形容詞・人ががっかりした）→disappointing（形容詞・原因ががっかりさせるような）。\n\n【ポイント2】disの意味を確認する\ndisは打ち消しや反対を表す接頭語。dislike（きらう）、disagree（反対する）、disappear（消える）にも同じdisがついている。\n\n【ポイント3】似た意味の語と区別する\nplease（喜ばせる）、surprise（驚かせる）、anger（怒らせる）はいずれも「人の気持ちを〜させる」動詞だが、それぞれ表す感情が異なる。\n\n【答え】\nがっかりさせる\n\n【確かめ】\n選択肢の喜ばせる（please）、驚かせる（surprise）、怒らせる（anger）とdisappoint（がっかりさせる）が、それぞれ違う感情を表す語であることを確認する。\n\n【よくあるまちがい】\ndisappointed（人ががっかりした）とdisappointing（原因ががっかりさせるような）を混同してしまうミス。edは人の気持ち、ingはその原因を表す。\n\n【ここが絶対】\ndisappoint（がっかりさせる）→disappointed（がっかりした）→disappointing（がっかりさせるような）という語の変化をセットで覚える。',
     examFrequency: 'high',
   },
   {
@@ -1151,7 +1152,7 @@ export const eigoExtra: Question[] = [
     answer: '現在進行形',
     hint: 'now（今）と be動詞 + -ing の組み合わせです。',
     explanation:
-      '【答え】現在進行形\n\n【判断のしかた】\n①be動詞 ＋ ing 形 … is reading\n②now（今） … 今していることを表す語\n形と、時を表す語の両方で確かめる。\n\n【現在進行形の意味】「今まさに〜している」ことを表す。\n・She is reading a book now.（今読んでいる）\n・She reads a book every night.（毎晩読む習慣）\n現在形と意味がまったくちがう。\n\n【進行形にしない動詞】状態を表す動詞は進行形にしない。\n・know、like、love、want、need、have（持っている）、see、hear、belong\n・I am knowing（誤り）\nただし have が「食べる」の意味なら進行形にできる（I am having lunch.）。\n\n【時制の見分け方のまとめ】\n・現在形 … 動詞の原形または s。every day、always と使う\n・現在進行形 … be動詞 ＋ ing。now と使う\n・過去形 … ed または不規則な形。yesterday、last 〜 と使う\n・過去進行形 … was／were ＋ ing。then、at that time と使う\n・未来 … will または be going to。tomorrow、next 〜 と使う\n・現在完了 … have／has ＋ 過去分詞。for、since、just、already、yet、ever、never と使う\n一緒に使う語で時制が分かる。\n\n【例文】She is reading a book now.',
+      '【何を聞かれているか】\n"She is reading a book now."の文法的な時制を答える問題。\n\n【なぜ現在進行形なのか】\nbe動詞（is）＋動詞のing形（reading）という形と、"now"（今）という語の組み合わせから、「今まさに〜している」という現在進行形だと判断できる。\n\n【ポイント1】形で判断する\n"is reading"という「be動詞＋ing形」が現在進行形のサイン。\n\n【ポイント2】時を表す語で判断する\n"now"（今）は現在進行形とセットでよく使われる語。\n\n【ポイント3】現在形との意味の違いを確認する\n"She reads a book every night."（毎晩読む習慣）は現在形で、"She is reading a book now."（今読んでいる）とは意味が異なる。\n\n【答え】\n現在進行形\n\n【確かめ】\n"is"（be動詞）と"reading"（ing形）がセットで使われていること、"now"という語が現在進行形と一致していることを確認する。\n\n【よくあるまちがい】\n"reads"のような現在形と、"is reading"のような現在進行形を混同してしまうミス。現在形は習慣、現在進行形は今この瞬間の動作を表す。\n\n【ここが絶対】\n時制は、動詞の形（is+ing、ed、will、have+過去分詞など）と、一緒に使われる語（now、every day、yesterdayなど）の両方から判断する。',
     examFrequency: 'high',
   },
   {
@@ -1248,7 +1249,7 @@ export const eigoExtra: Question[] = [
     answer: '私は明日あなたに電話します。',
     hint: 'will + 動詞の原形 は未来を表します。',
     explanation:
-      '【答え】私は明日あなたに電話します\n\n【will の形】will ＋ 動詞の原形。主語が何であっても will の形は変わらない。\n・I will／He will／They will（wills とはならない）\n\n【will の2つの意味】\n・意志 … その場で決めた「〜するつもりだ」。I will call you.\n・予測 … 「〜だろう」。It will rain tomorrow.\n\n【be going to との使い分け】ここが最も問われる。\n・will … その場で決めた意志、または単なる予測\n・be going to … 前から決めていた予定・計画\n例）\n・The phone is ringing. — I will get it.（今決めた）\n・I am going to buy a new bike.（前から決めていた）\n\n【call の使い方】\n・call ＋ 人 … 電話する。call you（to はいらない）\n・call ＋ 人 ＋ 名前 … 〜と呼ぶ。We call him Ken.\n\n【未来を表す語】tomorrow、next week、next year、soon、someday。\n・tomorrow に前置詞はつけない\n\n【短縮形】I will → I\'ll。will not → won\'t。\n\n【例文】I will call you tomorrow. Don\'t worry.',
+      '【何を聞かれているか】\n"I will call you tomorrow."の意味を選ぶ問題。\n\n【なぜ「明日電話します」という意味になるのか】\n"will＋動詞の原形"は未来のことを表す形で、"tomorrow"（明日）という語と組み合わさって、これから起こる未来の行動を表している。\n\n【ポイント1】willの形を確認する\nwill＋動詞の原形。主語が何であってもwillの形は変わらない（willsとはならない）。\n\n【ポイント2】willの2つの意味を確認する\nその場で決めた意志（I will call you.）と、単なる予測（It will rain tomorrow.）の2つの意味がある。\n\n【ポイント3】be going toとの使い分けを確認する\nwillはその場で決めた意志・予測、be going toは前から決めていた予定・計画を表す。\n\n【答え】\n私は明日あなたに電話します。\n\n【確かめ】\n"will call"（未来の行動）と"tomorrow"（明日）が組み合わさって、未来の予定を表す文になっていることを確認する。\n\n【よくあるまちがい】\n"tomorrow"を見落として、現在や過去の文だと誤解してしまうミス。willと未来を表す語（tomorrowなど）をセットで確認する。\n\n【ここが絶対】\n"will＋動詞の原形"＝「〜するだろう・〜するつもりだ」という未来の表現。tomorrowのような未来を表す語とセットで使われることが多い。',
     examFrequency: 'high',
   },
   {
@@ -1261,7 +1262,8 @@ export const eigoExtra: Question[] = [
     choices: ['～より...だ', '～と同じくらい...だ', '～よりずっと...だ', '～の中で最も...だ'],
     answer: '～と同じくらい...だ',
     hint: '同等比較の構文です。',
-    explanation: 'as + 形容詞/副詞 + as ~ は「～と同じくらい…だ」という同等比較の表現です。例：I am as tall as you. = 私はあなたと同じくらい背が高い。',
+    explanation:
+      '【何を聞かれているか】\n"as ... as ~"という構文の意味を答える問題。\n\n【なぜ「〜と同じくらい…だ」という意味になるのか】\n"as＋形容詞/副詞＋as〜"は、2つのものを比べて「程度が同じである」ことを表す、同等比較という構文。\n\n【ポイント1】同等比較の公式を確認する\nas＋形容詞/副詞（原級）＋as＋比較する相手。\n\n【ポイント2】比較級・最上級との違いを確認する\n比較級（-er/more）は「〜より…だ」、最上級（-est/most）は「〜の中で最も…だ」という意味になり、as...asとは異なる。\n\n【ポイント3】例文で確認する\n"I am as tall as you."＝「私はあなたと同じくらい背が高い」。\n\n【答え】\n～と同じくらい...だ\n\n【確かめ】\n"as tall as you"のように、asとasの間に形容詞の原級（比較級や最上級ではない形）が入っていることを確認する。\n\n【よくあるまちがい】\n"as...as"を比較級（〜より）の意味だと勘違いしてしまうミス。as...asは「同じくらい」という同等比較を表す。\n\n【ここが絶対】\n"as＋形容詞/副詞＋as〜"＝「〜と同じくらい…だ」という同等比較の構文をセットで覚える。',
     examFrequency: 'very-high',
   },
   {
@@ -1287,7 +1289,8 @@ export const eigoExtra: Question[] = [
     choices: ['studyed', 'studied', 'studyied', 'study'],
     answer: 'studied',
     hint: '子音 + y で終わる動詞は y を i に変えて -ed をつけます。',
-    explanation: 'study の過去形は studied です（子音 + y → y を i に変えて -ed）。I studied English yesterday. のように使います。',
+    explanation:
+      '【何を聞かれているか】\n"study"の過去形を答える問題。\n\n【なぜstudiedになるのか】\nstudyは子音字（d）+yで終わる動詞なので、過去形を作るときはyをiに変えてedをつけるという規則がある。\n\n【ポイント1】子音字+yで終わる動詞のルールを確認する\n子音字+yで終わる動詞は、yをiに変えてedをつける（study→studied、try→tried）。\n\n【ポイント2】母音字+yで終わる動詞との違いを確認する\n母音字+yで終わる動詞は、そのままedをつける（play→played、stay→stayed）。yの前が子音か母音かで規則が変わる。\n\n【ポイント3】誤った形を確認する\n"studyed"や"studyied"はどちらも誤り。yをiに変えるルールを正しく適用する。\n\n【答え】\nstudied\n\n【確かめ】\n"study"のyがiに変わって"studi"となり、そこにedがついて"studied"になっているか確認する。\n\n【よくあるまちがい】\nyをそのまま残して"studyed"としてしまうミス。子音字+yで終わる動詞は、必ずyをiに変えてからedをつける。\n\n【ここが絶対】\n子音字+yで終わる動詞（study、tryなど）はyをiに変えてed、母音字+yで終わる動詞（play、stayなど）はそのままedをつける。',
     examFrequency: 'high',
   },
   {
@@ -1301,7 +1304,7 @@ export const eigoExtra: Question[] = [
     answer: 'more interesting',
     hint: '音節が多い（3音節以上の）形容詞は more + 形容詞で比較級を作ります。',
     explanation:
-      '【答え】more interesting\n\n【more を使う形容詞】音節の多い語（3音節以上、および一部の2音節語）は、er ではなく more をつける。\n・interesting → more interesting → the most interesting\n・beautiful、important、difficult、popular、expensive、careful、useful\n\n【二重につけない】\n・more interestinger（誤り）\n・most interestingest（誤り）\nmore と er、most と est を両方つけてはいけない。最も多いまちがいである。\n\n【見分け方のめやす】\n・1音節 … er、est\n・ly で終わる副詞 … more、most\n・ful、ous、ing、ed、ive、able で終わる語 … more、most\n・2音節で y で終わる語 … er、est（easy → easier）\n\n【interesting と interested】\n・interesting … ものが興味を起こさせる。This book is interesting.\n・interested … 人が興味をもっている。I am interested in this book.\nものは ing、人は ed。同じ形の語をまとめて覚える（exciting／excited、boring／bored、surprising／surprised）。\n\n【例文】This book is more interesting than that one.',
+      '【何を聞かれているか】\n"interesting"の比較級を答える問題。\n\n【なぜmore interestingになるのか】\ninterestingのように音節の多い（3音節以上の）形容詞は、-erをつけるのではなく、moreを前に置いて比較級を作るという決まりがある。\n\n【ポイント1】moreを使う形容詞のグループを確認する\n音節の多い語（interesting、beautiful、important、difficult、popular、expensive）はmore/mostを使う。\n\n【ポイント2】-er/-estを使う形容詞との違いを確認する\n1音節の短い形容詞（tall、bigなど）は-er/-estをつける。\n\n【ポイント3】二重につけないことを確認する\n"more interestinger"や"most interestingest"のように、moreと-er、mostと-estを両方つけるのは誤り。\n\n【答え】\nmore interesting\n\n【確かめ】\ninterestingの前にmoreが置かれていて、語尾に-erがついていないことを確認する。\n\n【よくあるまちがい】\n"interestinger"のように、音節の多い形容詞にも-erをつけてしまうミス。3音節以上の形容詞はmoreを使う。\n\n【ここが絶対】\n1音節の形容詞は-er/-est、音節の多い形容詞（ful/ous/ing/ed/ive/ableで終わる語など）はmore/mostを使う、という使い分けをセットで覚える。',
     examFrequency: 'high',
   },
   {
@@ -1329,7 +1332,7 @@ export const eigoExtra: Question[] = [
     answer: '（未来に）～するつもりだ・～する予定だ',
     hint: '意図や計画を持った未来の表現です。',
     explanation:
-      '【答え】（未来に）〜するつもりだ・〜する予定だ\n\n【形】be動詞 ＋ going to ＋ 動詞の原形。be動詞は主語に合わせる。\n・I am going to／He is going to／They are going to\n\n【will との使い分け】ここが最も問われる。\n・be going to … 前から決めていた予定・計画。すでに準備が進んでいる\n・will … その場で決めた意志、または単なる予測\n例）\n・I am going to visit Kyoto next month.（前から計画していた）\n・The phone is ringing. — I will get it.（今決めた）\n\n【目の前の様子から予測するとき】be going to を使う。\n・Look at those clouds. It is going to rain.（雲を見て判断している）\n・I think it will rain tomorrow.（根拠のない予測）\n目に見える根拠があるかどうかで使い分ける。\n\n【疑問文と否定文】be動詞の文と同じ作り方である。\n・Are you going to 〜? — Yes, I am.\n・I am not going to 〜\ndo は使わない。\n\n【going to go】I am going to go to Kyoto. のように続くこともある。不自然に感じるが正しい英語である。\n\n【例文】We are going to have a party next Saturday.',
+      '【何を聞かれているか】\n"be going to+動詞の原形"の意味を答える問題。\n\n【なぜ「〜するつもりだ・〜する予定だ」という意味になるのか】\n"be going to"は、前から決めていた予定や計画、または目の前の様子から予測できることを表す未来の表現。\n\n【ポイント1】be going toの形を確認する\nbe動詞（am/is/are）＋going to＋動詞の原形。be動詞は主語に合わせる。\n\n【ポイント2】willとの使い分けを確認する\nbe going toは前から決めていた予定・計画（I am going to visit Kyoto next month.）、willはその場で決めた意志（The phone is ringing. — I will get it.）。\n\n【ポイント3】目に見える根拠がある予測を確認する\n雲を見て「雨が降りそうだ」と判断するときは、"It is going to rain."のようにbe going toを使う。\n\n【答え】\n（未来に）～するつもりだ・～する予定だ\n\n【確かめ】\nbe動詞が主語に合っていること（I am going to／He is going to）、going toの後ろが動詞の原形になっていることを確認する。\n\n【よくあるまちがい】\nwillとbe going toを同じ意味だと考えてしまうミス。be going toは「前から決めていた予定」、willは「その場で決めた意志」というニュアンスの違いがある。\n\n【ここが絶対】\nbe going to＝前から決めていた予定・計画、または目に見える根拠のある予測、という意味をwillとの違いとセットで覚える。',
     examFrequency: 'very-high',
   },
   {
@@ -1396,7 +1399,8 @@ export const eigoExtra: Question[] = [
     choices: ['小学校', '中学校', '高校', '大学'],
     answer: '中学校',
     hint: 'junior（下位の・年少の）high school です。',
-    explanation: 'junior high school は「中学校」です。elementary school は小学校、high school は高校、university/college は大学。',
+    explanation:
+      '【何を聞かれているか】\n"junior high school"の日本語の意味を答える問題。\n\n【なぜ「中学校」という意味になるのか】\njuniorは「下位の・年少の」という意味を持ち、"junior high school"で、高校（high school）より年少者が通う学校＝中学校を表す。\n\n【ポイント1】学校の種類を表す語を確認する\nelementary school（小学校）、junior high school（中学校）、high school（高校）、university/college（大学）。\n\n【ポイント2】juniorの意味を確認する\njuniorには「年下の・下位の」という意味がある（反対はsenior＝年上の・上位の）。\n\n【ポイント3】日本の英語教育での扱いを確認する\n学校制度の呼び方は国によって多少異なるが、日本の英語教育ではjunior high school＝中学校として扱う。\n\n【答え】\n中学校\n\n【確かめ】\nelementary school（小学校）、high school（高校）、university（大学）と、junior high school（中学校）が、それぞれ違う学校段階を表す語であることを確認する。\n\n【よくあるまちがい】\njuniorという語だけを見て「小学校」だと勘違いしてしまうミス。小学校はelementary school、中学校はjunior high school。\n\n【ここが絶対】\nelementary school（小学校）→junior high school（中学校）→high school（高校）→university/college（大学）という学校段階の英語名をセットで覚える。',
     examFrequency: 'high',
   },
   // ============================================================
@@ -1426,7 +1430,8 @@ export const eigoExtra: Question[] = [
     choices: ['be動詞 + 動詞の原形', 'be動詞 + 動詞の -ing 形', 'be動詞 + 過去分詞', 'do/does/did + 動詞の原形'],
     answer: 'be動詞 + 過去分詞',
     hint: '「～される」「～された」と訳す形です。',
-    explanation: '受動態（受け身）は be動詞 + 過去分詞 で作ります。English is spoken in many countries. = 英語は多くの国で話されている。',
+    explanation:
+      '【何を聞かれているか】\n受動態の基本形として正しいものを選ぶ問題。\n\n【なぜbe動詞+過去分詞が受動態なのか】\n「〜される・〜された」という受け身の意味を表すには、be動詞の後ろに過去分詞を続けるという決まった形を使う。\n\n【ポイント1】受動態の公式を確認する\n主語＋be動詞＋過去分詞（＋by＋動作主）。\n\n【ポイント2】他の選択肢との違いを確認する\n"be動詞+動詞の原形"や"be動詞+ing形"は受動態ではなく、それぞれ別の意味を表す（進行形はbe動詞+ing形）。\n\n【ポイント3】例文で確認する\n"English is spoken in many countries."＝「英語は多くの国で話されている」。\n\n【答え】\nbe動詞 + 過去分詞\n\n【確かめ】\n"is spoken"のように、be動詞の後ろに過去分詞が続いていることを確認する。\n\n【よくあるまちがい】\n受動態と現在進行形（be動詞+ing形）を混同してしまうミス。受動態は必ず過去分詞を使う。\n\n【ここが絶対】\n受動態＝be動詞＋過去分詞、というシンプルな公式をセットで覚える。',
     examFrequency: 'very-high',
   },
   {
@@ -1480,7 +1485,8 @@ export const eigoExtra: Question[] = [
     choices: ['to + 動詞の原形（不定詞）', '動詞の -ing 形（動名詞）', '動詞の原形', 'that 節'],
     answer: '動詞の -ing 形（動名詞）',
     hint: 'enjoy, finish, stop などの動詞は動名詞を目的語にとります。',
-    explanation: 'enjoy は動名詞（-ing 形）を目的語にとります。I enjoy playing soccer. = 私はサッカーをすることを楽しむ。enjoy to play は誤りです。',
+    explanation:
+      '【何を聞かれているか】\n"enjoy"の後ろに続く、正しい動詞の形を答える問題。\n\n【なぜ動名詞（-ing形）を使うのか】\nenjoyは、後ろに動名詞（-ing形）だけを目的語に取るという決まりを持つ動詞のグループに属している。\n\n【ポイント1】enjoyの後ろの形を確認する\nenjoy＋動名詞（-ing形）。"enjoy to play"のように不定詞を続けるのは誤り。\n\n【ポイント2】同じグループの動詞を確認する\nfinish（終える）、stop（やめる）も、enjoyと同じように動名詞を目的語に取る。\n\n【ポイント3】例文で確認する\n"I enjoy playing soccer."＝「私はサッカーをすることを楽しむ」。\n\n【答え】\n動詞の -ing 形（動名詞）\n\n【確かめ】\n"enjoy"の後ろが"playing"のように-ing形になっていて、不定詞（to play）になっていないことを確認する。\n\n【よくあるまちがい】\n"enjoy to play"のように、不定詞を続けてしまうミス。enjoyは動名詞だけを目的語に取る動詞。\n\n【ここが絶対】\nenjoy・finish・stopなどの動詞は、後ろに動名詞（-ing形）だけを取るというグループとしてセットで覚える。',
     examFrequency: 'very-high',
   },
   {
@@ -1493,7 +1499,8 @@ export const eigoExtra: Question[] = [
     choices: ['The boy broke the window.', 'The boy was breaking the window.', 'The boy has broken the window.', 'The boy breaks the window.'],
     answer: 'The boy broke the window.',
     hint: '受動態を能動態に直すには by の後の語を主語にします。',
-    explanation: '受動態 was broken by the boy を能動態にすると、the boy が主語になり、broke（break の過去形）を使って The boy broke the window. となります。',
+    explanation:
+      '【何を聞かれているか】\n"The window was broken by the boy."という受動態の文を能動態に直す問題。\n\n【なぜthe boyが主語になるのか】\n受動態を能動態に直すときは、"by＋動作主"の部分（the boy）を新しい主語にするという決まった手順がある。\n\n【ポイント1】能動態への書き換え手順を確認する\n①by〜の部分（the boy）を主語にする→②受動態の過去分詞（broken）を対応する過去形（broke）に変える→③受動態の主語（the window）を目的語にする。\n\n【ポイント2】breakの活用を確認する\nbreak（原形）→broke（過去形）→broken（過去分詞）という不規則変化。能動態には過去形brokeを使う。\n\n【ポイント3】完成した文を確認する\n"The boy broke the window."＝「その少年は窓を割った」。\n\n【答え】\nThe boy broke the window.\n\n【確かめ】\n"broke"が過去形（brokenではない）になっていること、"the boy"が主語、"the window"が目的語になっていることを確認する。\n\n【よくあるまちがい】\n過去分詞brokenをそのまま能動態の動詞として使ってしまうミス（The boy broken the window.は誤り）。能動態には過去形brokeを使う。\n\n【ここが絶対】\n受動態→能動態の書き換えは、「by＋動作主」を主語にし、動詞を過去分詞から対応する過去形に変える、という手順をセットで覚える。',
     examFrequency: 'high',
   },
   {
@@ -1506,7 +1513,8 @@ export const eigoExtra: Question[] = [
     choices: ['不定詞の名詞的用法で主語の役割', '不定詞の形容詞的用法', '不定詞の副詞的用法（目的）', '動名詞'],
     answer: '不定詞の名詞的用法で主語の役割',
     hint: '「英語を学ぶこと」が主語になっています（it が形式主語）。',
-    explanation: 'It is important to learn English. の It は形式主語で、本当の主語は to learn English（英語を学ぶこと）です。不定詞の名詞的用法で主語の働きをしています。',
+    explanation:
+      '【何を聞かれているか】\n"It is important to learn English."の"to learn"がどのような用法かを答える問題。\n\n【なぜ「主語の役割」なのか】\nこの文の"It"は形式主語（仮の主語）で、本当の主語は"to learn English"（英語を学ぶこと）という不定詞の名詞的用法の部分である。\n\n【ポイント1】形式主語のitを確認する\n"It is＋形容詞＋to＋動詞の原形"の形では、Itは中身のない形式的な主語で、本当の主語はto以下の部分。\n\n【ポイント2】不定詞の名詞的用法を確認する\n"to learn English"は「英語を学ぶこと」という意味の名詞のかたまりで、文の主語の役割をしている。\n\n【ポイント3】他の不定詞の用法と区別する\n不定詞には、名詞的用法（〜すること）、形容詞的用法（〜するための）、副詞的用法（〜するために）の3つがあり、今回は主語になっているので名詞的用法。\n\n【答え】\n不定詞の名詞的用法で主語の役割\n\n【確かめ】\n"to learn English"を"It"の位置に戻して、"To learn English is important."という文が成り立つか確認する。\n\n【よくあるまちがい】\n"to learn"を副詞的用法（〜するために）だと勘違いしてしまうミス。ここでは文の主語になっているので名詞的用法。\n\n【ここが絶対】\n形式主語のIt is〜to…構文では、to以下が不定詞の名詞的用法で、文の本当の主語の役割をしている。',
     examFrequency: 'high',
   },
   {
@@ -1532,7 +1540,8 @@ export const eigoExtra: Question[] = [
     choices: ['動名詞（-ing 形）', '不定詞（to + 動詞原形）', '動詞の原形', 'どちらでも同じ'],
     answer: '不定詞（to + 動詞原形）',
     hint: 'want は不定詞のみを目的語にとります。',
-    explanation: 'want は不定詞（to + 動詞の原形）を目的語にとります。I want to eat pizza. = ピザを食べたい。want eating とは言いません。',
+    explanation:
+      '【何を聞かれているか】\n"want"の後ろに続く、正しい形を答える問題。\n\n【なぜ不定詞を使うのか】\nwantは、後ろに不定詞（to＋動詞の原形）だけを目的語に取るという決まりを持つ動詞のグループに属している。\n\n【ポイント1】wantの後ろの形を確認する\nwant＋不定詞（to＋動詞の原形）。"want eating"のように動名詞を続けるのは誤り。\n\n【ポイント2】同じグループの動詞を確認する\nhope（望む）、decide（決める）、plan（計画する）も、wantと同じように不定詞を目的語に取る。\n\n【ポイント3】例文で確認する\n"I want to eat pizza."＝「私はピザを食べたい」。\n\n【答え】\n不定詞（to + 動詞原形）\n\n【確かめ】\n"want"の後ろが"to eat"のように不定詞になっていて、動名詞（eating）になっていないことを確認する。\n\n【よくあるまちがい】\n"want eating"のように、動名詞を続けてしまうミス。wantは不定詞だけを目的語に取る動詞。\n\n【ここが絶対】\nwant・hope・decide・planなどの動詞は、後ろに不定詞（to+動詞の原形）だけを取るというグループとしてセットで覚える。',
     examFrequency: 'very-high',
   },
   {
