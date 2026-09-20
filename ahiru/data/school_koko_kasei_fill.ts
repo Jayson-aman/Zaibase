@@ -701,7 +701,7 @@ export const schoolKokoKaseiFill: Question[] = [
     answer: 'Failure in scientific experiments is not wasted effort because it helps narrow down future possibilities.',
     hint: 'Look at the last two sentences of the passage, which explain why some scientists value failure.',
     explanation:
-      '【解説】\n本文は、科学の実験における失敗が単なる時間の無駄ではなく、うまくいかない可能性を一つ減らし、次の実験の選択肢を絞り込む役に立つと述べている。最後の2文にこの主張が集約されており、これが本文の主旨(main idea)である。',
+      '【何を聞かれているか】\n科学の実験における失敗についての英文を読み、文章全体の主旨（main idea）を選ぶ問題。\n\n【なぜ最後の2文に注目するのか】\n文章の主旨は、具体的な説明の後にまとめとして述べられる最後の部分に凝縮されていることが多い。\n\n【ポイント1】本文の主張を確認する\n科学の実験における失敗は単なる時間の無駄ではなく、うまくいかない可能性を一つ減らし、次の実験の選択肢を絞り込む役に立つ。\n\n【ポイント2】最後の2文（まとめ）を確認する\nこの主張が最後の2文に集約されている。\n\n【ポイント3】他の選択肢を消去する\n「科学者は常に一度目で成功する」「失敗した実験は繰り返すべきでない」「運の良い科学者だけが重要な発見をする」はいずれも本文の主旨と反するか、極端な内容。\n\n【答え】\nFailure in scientific experiments is not wasted effort because it helps narrow down future possibilities.\n\n【確かめ】\n選んだ答えが、最後の2文の「失敗は次の可能性を絞り込む役に立つ」という主張と一致しているか確認する。\n\n【よくあるまちがい】\n本文中の具体例だけを主旨として選んでしまうミス。\n\n【ここが絶対】\n主旨を問う設問は、具体例よりも最後のまとめの文に注目する。',
     difficulty: 'advanced',
     course: 'koko-kasei',
     examType: 'koko',
@@ -752,7 +752,7 @@ export const schoolKokoKaseiFill: Question[] = [
       'The group of students who could not check their phones remembered more of the facts a week later than the group who could check their phones.',
     hint: 'The result of the study is stated in the last sentence of the passage.',
     explanation:
-      '【解説】\n最終文「Surprisingly, the group without phones remembered more of the facts a week later.」がそのまま研究結果である。スマートフォンを確認できなかったグループの方が、1週間後により多くの事実を覚えていたという内容を答える。',
+      '【何を聞かれているか】\nスマートフォンと記憶についての実験を読み、その研究結果が何だったかを英語で答える問題。\n\n【なぜ最終文に注目するのか】\n「研究が何を発見したか」という設問の答えは、実験結果をまとめている本文の最終文に直接示されている。\n\n【ポイント1】該当の一文を確認する\n"Surprisingly, the group without phones remembered more of the facts a week later."（驚くことに、スマートフォンを使えなかったグループの方が、1週間後により多くの事実を覚えていた）。\n\n【ポイント2】2つのグループを比較する\nスマートフォンを確認できたグループと、できなかったグループの記憶の差が結果である。\n\n【ポイント3】答えの形を確認する\n本文の内容をそのまま使い、「スマートフォンを確認できなかったグループの方が、できたグループより多くの事実を覚えていた」とまとめる。\n\n【答え】\nThe group of students who could not check their phones remembered more of the facts a week later than the group who could check their phones.\n\n【確かめ】\n答えに「スマートフォンを確認できなかった方が覚えていた」という比較の内容が含まれているか確認する。\n\n【よくあるまちがい】\n2つのグループを逆にして、スマートフォンを使えたグループの方が覚えていたと誤って答えてしまうミス。\n\n【ここが絶対】\n「研究が何を発見したか」を問う設問は、本文の実験結果をまとめた文（多くの場合最後）に注目する。',
     difficulty: 'advanced',
     course: 'koko-kasei',
     examType: 'koko',
@@ -766,7 +766,7 @@ export const schoolKokoKaseiFill: Question[] = [
     answer: 'They worry that always relying on a device to remember things may weaken students\' own memory skills.',
     hint: 'The second sentence of the passage directly states the educators\' worry.',
     explanation:
-      '【解説】\n本文第2文「some educators worry that always relying on a device to remember things may weaken students\' own memory skills」がそのまま答えとなる。',
+      '【何を聞かれているか】\n生徒がスマートフォンに頼ることについて、一部の教育者が抱く心配事を答える問題。\n\n【なぜ第2文に注目するのか】\n設問で問われている「教育者の心配」は、本文第2文で直接述べられている。\n\n【ポイント1】該当の一文を確認する\n"some educators worry that always relying on a device to remember things may weaken students\' own memory skills."（常に機器に頼って物事を覚えることが、生徒自身の記憶力を弱める可能性があると心配している）。\n\n【ポイント2】心配の内容を整理する\n「機器に頼りきりになること」→「自分自身の記憶力が弱まる可能性」という因果関係。\n\n【ポイント3】答えの形を確認する\n本文の表現をそのまま使って答える。\n\n【答え】\nThey worry that always relying on a device to remember things may weaken students\' own memory skills.\n\n【確かめ】\n答えに「機器に頼ること」と「記憶力が弱まる可能性」の両方が含まれているか確認する。\n\n【よくあるまちがい】\n心配事の内容ではなく、実験結果（記憶した事実の量）と混同して答えてしまうミス。\n\n【ここが絶対】\n設問で問われている具体的な内容（心配・結果など）に対応する一文を、本文から正確に探し出す。',
     difficulty: 'standard',
     course: 'koko-kasei',
     examType: 'koko',
@@ -780,7 +780,7 @@ export const schoolKokoKaseiFill: Question[] = [
     answer: 'without',
     hint: 'Think about which group of students (with or without phone access) remembered more facts.',
     explanation:
-      '【解説】\n本文の内容から、スマートフォンを確認できなかった("without phones")グループの方が、より多くの事実を覚えていたことが分かる。よって without が正しい。',
+      '【何を聞かれているか】\n"Surprisingly, the group (　) phones remembered more of the facts a week later."の空欄に入る正しい語を選ぶ問題。\n\n【なぜwithoutを使うのか】\n本文の内容から、スマートフォンを確認できなかったグループの方が、より多くの事実を覚えていたとわかるので、「〜なしで」という意味のwithoutが正しい。\n\n【ポイント1】2つのグループを確認する\nスマートフォンを確認できたグループと、できなかったグループが比較されている。\n\n【ポイント2】記憶した量が多かった方を確認する\nより多くの事実を覚えていたのは、スマートフォンを確認できなかった（without phones）グループ。\n\n【ポイント3】他の前置詞を消去する\nwith（〜を持って）、for（〜のために）、about（〜について）はいずれも文脈に合わない。\n\n【答え】\nwithout\n\n【確かめ】\n選んだ語が「〜なしで」という意味のwithoutになっているか確認する。\n\n【よくあるまちがい】\nwithとwithoutを逆にしてしまい、スマートフォンを使えたグループの方が覚えていたと誤解するミス。\n\n【ここが絶対】\n本文の実験結果（記憶した量の比較）を正確に読み取ってから、対応する前置詞を選ぶ。',
     difficulty: 'standard',
     course: 'koko-kasei',
     examType: 'koko',
@@ -795,7 +795,7 @@ export const schoolKokoKaseiFill: Question[] = [
     answer: 'She learns that confidence, more than having a perfect script, is what makes a speech memorable to the audience.',
     hint: 'The lesson Yuki learns is stated directly in the last sentence of the passage.',
     explanation:
-      '【解説】\n最終文「she realized that confidence, more than a perfect script, is what makes a speech memorable」がそのままユキが学んだ教訓である。完璧な原稿よりも自信の方がスピーチを印象的なものにする、という内容を英語でまとめる。',
+      '【何を聞かれているか】\nユキが本文の最後で学んだ教訓を英語で答える問題。\n\n【なぜ最終文に注目するのか】\n「学んだ教訓」という設問の答えは、本文の最後で直接述べられている。\n\n【ポイント1】該当の一文を確認する\n"she realized that confidence, more than a perfect script, is what makes a speech memorable"（完璧な原稿よりも自信の方が、スピーチを印象的なものにするとユキは気づいた）。\n\n【ポイント2】比較の内容を整理する\n「完璧な原稿」と「自信」を比較し、自信の方が重要だという結論。\n\n【ポイント3】答えの形を確認する\n本文の表現をそのまま使ってまとめる。\n\n【答え】\nShe learns that confidence, more than having a perfect script, is what makes a speech memorable to the audience.\n\n【確かめ】\n答えに「自信」と「完璧な原稿」の比較、そして自信の方が重要だという結論が含まれているか確認する。\n\n【よくあるまちがい】\n「完璧な原稿を作ることが大切」のように、本文と逆の内容を答えてしまうミス。\n\n【ここが絶対】\n「学んだ教訓」を問う設問は、本文の最後の気づき・結論の一文に注目する。',
     difficulty: 'advanced',
     course: 'koko-kasei',
     examType: 'koko',
@@ -810,7 +810,7 @@ export const schoolKokoKaseiFill: Question[] = [
     answer: 'She felt nervous.',
     hint: 'Think about what physical reaction usually happens to a person\'s hands when they are nervous.',
     explanation:
-      '【解説】\n手が震える("shaking")という描写は、緊張している人によく見られる身体的な反応である。声は落ち着いていた(voice remained steady)という描写との対比から、外見上は落ち着いて見えても内心は緊張していたことが読み取れる。',
+      '【何を聞かれているか】\n下線部"shaking"（震えている）がユキの手を表していることから、そのときの気持ちを選ぶ問題。\n\n【なぜ手の震えが緊張を表すのか】\n手が震えるという身体的な描写は、一般的に緊張している人によく見られる反応なので、この描写から気持ちを推測できる。\n\n【ポイント1】shakingの意味を確認する\n"shaking"＝震えている、という身体的な反応を表す語。\n\n【ポイント2】声との対比を確認する\n声は落ち着いていた(voice remained steady)という描写と対比されており、外見上は落ち着いて見えても内心は緊張していたことがわかる。\n\n【ポイント3】他の選択肢を消去する\n「退屈」「自信満々」「眠い」はいずれも手が震えるという描写とは結びつかない。\n\n【答え】\nShe felt nervous.\n\n【確かめ】\n選んだ答えが、手が震えるという身体的反応と一致する気持ち（緊張）になっているか確認する。\n\n【よくあるまちがい】\n声が落ち着いていたという描写だけを見て「自信満々だった」と誤って判断してしまうミス。\n\n【ここが絶対】\n身体的な描写（手の震え・声の調子など）から登場人物の心情を推測する練習をする。',
     difficulty: 'standard',
     course: 'koko-kasei',
     examType: 'koko',
@@ -836,7 +836,7 @@ export const schoolKokoKaseiFill: Question[] = [
     answer: 'He said (that) he had finished his homework.',
     hint: 'When the reporting verb is in the past tense, the present perfect in the original sentence usually shifts to the past perfect.',
     explanation:
-      '【解説】\n伝達動詞(said)が過去形のとき、直接話法の中の現在完了形(have finished)は、時制の一致により過去完了形(had finished)に変える。また、主語 "I" は伝える相手に合わせて "he" に変える。\nHe said (that) he had finished his homework.',
+      '【何を聞かれているか】\n"He said, "I have finished my homework.""を間接話法（伝達話法）に書き換える問題。\n\n【なぜ現在完了を過去完了に変えるのか】\n伝達動詞(said)が過去形のとき、直接話法の中の現在完了形(have finished)は、時制の一致の規則により過去完了形(had finished)に変えるという決まりがある。\n\n【ポイント1】時制の一致を確認する\nsaidが過去形なので、have finishedはhad finishedに変わる。\n\n【ポイント2】主語の変化を確認する\n発言者本人を指す"I"は、伝える相手に合わせて"he"に変える。\n\n【ポイント3】完成した文を確認する\n"He said (that) he had finished his homework."という型になる。\n\n【答え】\nHe said (that) he had finished his homework.\n\n【確かめ】\nhave finishedがhad finished（過去完了）になっており、主語がheに変わっているか確認する。\n\n【よくあるまちがい】\n時制の一致を忘れ、have finishedのままにしてしまうミス。\n\n【ここが絶対】\n伝達動詞が過去形のとき、直接話法の現在完了は過去完了に変わると覚える（時制の一致）。',
     difficulty: 'advanced',
     course: 'koko-kasei',
     examType: 'koko',
@@ -848,7 +848,7 @@ export const schoolKokoKaseiFill: Question[] = [
     answer: 'that',
     hint: 'After a superlative expression like "the hardest," the relative pronoun "that" is the standard choice.',
     explanation:
-      '【解説】\n最上級(the hardest)で修飾された名詞の後には、関係代名詞 that が好んで使われる(whichも文法的には可能だが、最上級表現の後では that がより一般的とされる)。よって that が正解。',
+      '【何を聞かれているか】\n"This is the hardest problem (　) I have ever solved."の空欄に入る正しい関係代名詞を選ぶ問題。\n\n【なぜthatを使うのか】\n最上級(the hardest)で修飾された名詞の後には、関係代名詞thatが好んで使われるという慣用的な決まりがある。\n\n【ポイント1】先行詞の形を確認する\nthe hardest problem＝最上級で修飾された名詞。\n\n【ポイント2】最上級の後の関係代名詞を確認する\n最上級表現の後ではwhichよりもthatがより一般的とされる。\n\n【ポイント3】他の選択肢を消去する\nwhat、who、whenはいずれもこの文の構造（先行詞problemを修飾する関係代名詞）には合わない。\n\n【答え】\nthat\n\n【確かめ】\n先行詞が最上級で修飾された名詞（the hardest problem）であり、thatが選ばれているか確認する。\n\n【よくあるまちがい】\n文法的には可能なwhichを選んでしまい、最上級表現特有の慣用（thatが好まれる）を見落とすミス。\n\n【ここが絶対】\n最上級・all・everyなどで修飾された先行詞の後には、関係代名詞thatが好まれると覚える。',
     difficulty: 'advanced',
     course: 'koko-kasei',
     examType: 'koko',
@@ -875,7 +875,7 @@ export const schoolKokoKaseiFill: Question[] = [
     answer: 'over',
     hint: '"over" is commonly used with a period of time to describe a change or trend that has continued through that period.',
     explanation:
-      '【解説】\n「この10年間で」というように、ある期間を通じた変化・傾向を表す場合、前置詞 over がよく使われる(over the past decade)。since は起点を、for は単なる期間の長さを表すのに使われることが多く、ここでは変化の推移を表す over が適切。',
+      '【何を聞かれているか】\n"The number of students interested in studying abroad has increased (　) the past decade."の空欄に入る正しい前置詞を選ぶ問題。\n\n【なぜoverを使うのか】\n「この10年間で」というように、ある期間を通じた変化・傾向を表す場合、前置詞overがよく使われる。\n\n【ポイント1】overの意味を確認する\nover the past decade＝「この10年間にわたって」という期間を通じた変化を表す。\n\n【ポイント2】sinceとの違いを確認する\nsinceは変化の起点を表すときに使う。\n\n【ポイント3】forとの違いを確認する\nforは単なる期間の長さを表すのに使われることが多く、変化・傾向のニュアンスは弱い。\n\n【答え】\nover\n\n【確かめ】\n選んだ前置詞が、期間を通じた変化・傾向を表すover（sinceやforではない）になっているか確認する。\n\n【よくあるまちがい】\n期間を表す語だからとsinceやforを選んでしまい、「変化・傾向」のニュアンスを見落とすミス。\n\n【ここが絶対】\nover+期間＝「〜の間にわたる変化・傾向」を表すと覚える。',
     difficulty: 'standard',
     course: 'koko-kasei',
     examType: 'koko',
@@ -888,7 +888,7 @@ export const schoolKokoKaseiFill: Question[] = [
     answer: 'had studied',
     hint: 'This is a third conditional sentence about the unreal past, so the if-clause uses the past perfect.',
     explanation:
-      '【解説】\n過去の事実に反する仮定を表す仮定法過去完了(第3条件文)では、if節に過去完了形(had+過去分詞)、主節に "would have+過去分詞" を使う。\nIf she had studied harder, she would have passed the exam.',
+      '【何を聞かれているか】\n"If she (study) harder, she would have passed the exam."の空欄に動詞studyを適切な形にして入れる問題。\n\n【なぜ過去完了形を使うのか】\n過去の事実に反する仮定を表す仮定法過去完了（第3条件文）では、if節に過去完了形(had+過去分詞)を使うという決まりがある。\n\n【ポイント1】文全体の時制を確認する\n主節が"would have passed"（過去の出来事に対する仮定の結果）になっている。\n\n【ポイント2】if節の形を確認する\nif節はhad+過去分詞（had studied）にする。\n\n【ポイント3】完成した文を確認する\n"If she had studied harder, she would have passed the exam."という型になる。\n\n【答え】\nhad studied\n\n【確かめ】\nif節がhad studied（過去完了）になっており、主節のwould have passedと時制が対応しているか確認する。\n\n【よくあるまちがい】\nif節を単純な過去形（studied）のままにしてしまい、仮定法過去（第2条件文）と混同するミス。\n\n【ここが絶対】\n仮定法過去完了＝If+主語+had+過去分詞, 主語+would have+過去分詞、と型で覚える。',
     difficulty: 'advanced',
     course: 'koko-kasei',
     examType: 'koko',

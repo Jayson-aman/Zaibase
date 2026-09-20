@@ -680,7 +680,7 @@ export const schoolKokoTodaijiFill: Question[] = [
     answer: 'A science club improved how much electricity their solar panel produced by changing its angle.',
     hint: 'Look at what the club actually did and discovered through their experiment.',
     explanation:
-      '【解説】\n本文は、科学部が太陽光パネルの実験を行い、パネルの角度を変えることでより多くの電力を得られることを発見した、という内容が中心。「雲の日は発電量が少なかった」「隣の小学校とデータを共有する予定」は補足的な情報であり、主題ではない。',
+      '【何を聞かれているか】\n科学部の太陽光パネルの実験についての英文を読み、文章全体の主旨（main idea）を選ぶ問題。\n\n【なぜ「実際に行ったこと」に注目するのか】\n主旨を問う設問では、部が実際に何をして何を発見したのかという、実験の中心的な内容に注目する必要がある。\n\n【ポイント1】本文の内容を確認する\n科学部は太陽光パネルの実験を行い、パネルの角度を変えることでより多くの電力を得られることを発見した。\n\n【ポイント2】補足的な情報を確認する\n「雲の日は発電量が少なかった」「隣の小学校とデータを共有する予定」は補足的な情報であり、主題ではない。\n\n【ポイント3】他の選択肢を消去する\n「パネルが動かなくなったので使うのをやめた」「曇りの日の方が常に発電量が多い」「隣の小学校がパネルを作った」はいずれも本文の内容と矛盾する。\n\n【答え】\nA science club improved how much electricity their solar panel produced by changing its angle.\n\n【確かめ】\n選んだ答えが、実験の中心的な内容（角度を変えて発電量を改善した）と一致しているか確認する。\n\n【よくあるまちがい】\n補足的な情報（曇りの日のデータ、他校との共有）を主旨だと誤解してしまうミス。\n\n【ここが絶対】\n主旨を問う設問は、実験・活動の中心的な内容（何をして何がわかったか）に注目する。',
     difficulty: 'standard',
     course: 'koko-todaiji',
     examType: 'koko',
@@ -700,7 +700,7 @@ export const schoolKokoTodaijiFill: Question[] = [
     answer: 'They found that facing the panel directly toward the sun in the afternoon produced the most power.',
     hint: 'This is stated directly in the third sentence of the passage.',
     explanation:
-      '【解説】\n本文第3文「After changing the angle of the panel several times, the club found that facing it directly toward the sun in the afternoon produced the most power.」がそのまま答えになる。',
+      '【何を聞かれているか】\n科学部がパネルの角度を何度か変えた後に発見したことを英語で答える問題。\n\n【なぜ第3文に注目するのか】\n「角度を変えた後に発見したこと」という設問の答えは、本文第3文に直接述べられている。\n\n【ポイント1】該当の一文を確認する\n"After changing the angle of the panel several times, the club found that facing it directly toward the sun in the afternoon produced the most power."（角度を何度か変えた後、午後に太陽の方に真っ直ぐ向けると最も多く発電することを発見した）。\n\n【ポイント2】発見の内容を整理する\n「午後に太陽の方向に向ける」という条件と、「最も発電量が多くなる」という結果。\n\n【ポイント3】答えの形を確認する\n本文の表現をそのまま使って答える。\n\n【答え】\nThey found that facing the panel directly toward the sun in the afternoon produced the most power.\n\n【確かめ】\n答えに「午後」「太陽の方に向ける」「最も発電量が多い」という3つの要素が含まれているか確認する。\n\n【よくあるまちがい】\n時間帯（午後）を書き忘れ、「太陽の方に向けると発電量が多い」とだけ答えてしまうミス。\n\n【ここが絶対】\n「何をした結果、何を発見したか」を問う設問は、条件と結果の両方を答えに含める。',
     difficulty: 'advanced',
     course: 'koko-todaiji',
     examType: 'koko',
@@ -730,7 +730,7 @@ export const schoolKokoTodaijiFill: Question[] = [
     answer: 'Mika became able to understand and join conversations in English through daily effort during her homestay.',
     hint: 'Compare how Mika felt at the beginning of her stay with how she felt by the end.',
     explanation:
-      '【解説】\n本文は、ホームステイ当初は英語が理解できず不安だったミカが、毎晩新しい単語をノートに書き留めるという日々の努力を通じて、最終的には翻訳せずに会話に参加できるようになった、という変化を描いている。',
+      '【何を聞かれているか】\nホームステイをしたミカについての英文を読み、文章全体の主旨（main idea）を選ぶ問題。\n\n【なぜ最初と最後の状態を比べるのか】\n主旨を問う設問では、登場人物の状態がどう変化したか（ホームステイの最初と最後の違い）を比較することで、伝えたい内容が見えてくる。\n\n【ポイント1】ホームステイ当初の状態を確認する\n当初は英語が理解できず不安だった。\n\n【ポイント2】日々の努力を確認する\n毎晩新しい単語をノートに書き留めるという努力を続けた。\n\n【ポイント3】最終的な変化を確認する\n最終的には翻訳せずに会話に参加できるようになった。\n\n【答え】\nMika became able to understand and join conversations in English through daily effort during her homestay.\n\n【確かめ】\n選んだ答えが、ミカの「不安だった状態」から「会話に参加できる状態」への変化と一致しているか確認する。\n\n【よくあるまちがい】\nホームステイの最初の状態（英語が理解できなかった）だけを主旨だと誤解してしまうミス。\n\n【ここが絶対】\n主旨を問う設問は、登場人物の最初の状態と最後の状態を比較して、その変化から読み取る。',
     difficulty: 'standard',
     course: 'koko-todaiji',
     examType: 'koko',

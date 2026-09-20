@@ -904,7 +904,7 @@ export const schoolKokoShitennoji: Question[] = [
     answer: 'I have lived in Osaka for three years.',
     hint: '現在完了（継続用法）。for+期間 を使う。',
     explanation:
-      '「ずっと〜している」という継続を表すときは現在完了形<have/has+過去分詞>を使う。「3年間」という期間を表すときはfor three yearsを使う（sinceは開始時点を表すときに使う）。live（住む）の過去分詞はlived。よって I have lived in Osaka for three years. となる。',
+      '【何を聞かれているか】\n「私は3年間ずっと大阪に住んでいます。」を英語にする問題。\n\n【なぜ現在完了とforを使うのか】\n「ずっと〜している」という継続を表すときは現在完了形（have/has＋過去分詞）を使い、「3年間」という期間の長さを表すときはforを使う。\n\n【ポイント1】現在完了の形を確認する\n"have lived"＝have＋過去分詞lived。\n\n【ポイント2】forとsinceの違いを確認する\n「3年間」という期間の長さにはforを使う（sinceは開始時点を表すときに使う）。\n\n【ポイント3】完成した文を確認する\n"I have lived in Osaka for three years."という型で組み立てる。\n\n【答え】\nI have lived in Osaka for three years.\n\n【確かめ】\nforの後に期間の長さ（three years）が来ており、開始時点（sinceの用法）と混同していないか確認する。\n\n【よくあるまちがい】\nforの代わりにsinceを使ってしまい、「3年前から」という開始時点の表現にしてしまうミス。\n\n【ここが絶対】\n継続を表す現在完了＝have/has+過去分詞、for+期間の長さ、since+開始時点、と使い分ける。',
   },
   {
     id: 'shitennoji_koko_eigo_02',
@@ -942,7 +942,7 @@ export const schoolKokoShitennoji: Question[] = [
     answer: 'If I were you, I would accept the offer.',
     hint: '仮定法過去。if節ではbe動詞はwereを使う（主語が何であっても）。',
     explanation:
-      '現在の事実に反する仮定（実際には「私はあなたではない」）を表すときは仮定法過去を使う。if節の中では、主語が単数（I）であってもbe動詞はwereを使うのが原則（仮定法特有のルール）。主節では<would+動詞の原形>を使う。よって「If I were you, I would accept the offer.」となる。',
+      '【何を聞かれているか】\n「もし私があなたなら、その申し出を受けるだろう。」を英語にする問題。\n\n【なぜwereを使うのか】\n「実際には私はあなたではない」という現在の事実に反する仮定を表す仮定法過去では、if節のbe動詞は主語が何であってもwereを使うのが原則。\n\n【ポイント1】if節の形を確認する\n"If I were you"＝主語がIであってもbe動詞はwereを使う。\n\n【ポイント2】主節の形を確認する\n主節は"would＋動詞の原形"（would accept）にする。\n\n【ポイント3】完成した文を確認する\n"If I were you, I would accept the offer."という型で組み立てる。\n\n【答え】\nIf I were you, I would accept the offer.\n\n【確かめ】\nif節がwereで始まり、主節がwould+原形（would accept）になっているか確認する。\n\n【よくあるまちがい】\n主語Iに合わせてwasを使ってしまうミス。仮定法過去のbe動詞は主語に関係なくwere。\n\n【ここが絶対】\nIf I were you〜は仮定法の決まり文句として、wereをセットで覚える。',
   },
   {
     id: 'shitennoji_koko_eigo_05',
@@ -955,7 +955,7 @@ export const schoolKokoShitennoji: Question[] = [
     answer: 'reading',
     hint: 'enjoy の後には動名詞（〜ing）が続く。',
     explanation:
-      'enjoyは目的語に動名詞（〜ing形）をとる動詞である（不定詞は続かない）。「I enjoy reading novels in my free time.」（私は暇なときに小説を読むのを楽しむ）となる。同様にfinish, avoid, stop なども動名詞を目的語にとる代表的な動詞である。',
+      '【何を聞かれているか】\n"I enjoy (read) novels in my free time."の( )内の動詞を適する形に直す問題。\n\n【なぜ動名詞にするのか】\nenjoyは目的語に動名詞（〜ing形）をとる動詞であり、不定詞（to＋動詞の原形）は続かないという決まりがある。\n\n【ポイント1】enjoyの後の形を確認する\nenjoy＋動詞のing形（動名詞）。\n\n【ポイント2】同じグループの動詞を確認する\nfinish, avoid, stopなども動名詞を目的語にとる代表的な動詞。\n\n【ポイント3】完成した文を確認する\n"I enjoy reading novels in my free time."（私は暇なときに小説を読むのを楽しむ）。\n\n【答え】\nreading\n\n【確かめ】\nreadがreading（動名詞）になっており、to readになっていないか確認する。\n\n【よくあるまちがい】\nenjoyの後に不定詞to readを使ってしまうミス。\n\n【ここが絶対】\nenjoy, finish, avoid, stopの後は動名詞（〜ing）、とセットで覚える。',
   },
   {
     id: 'shitennoji_koko_eigo_06',
@@ -993,7 +993,7 @@ export const schoolKokoShitennoji: Question[] = [
     answer: 'This book is not as interesting as that one.',
     hint: '「AはBほど〜ない」= A is not as 原級 as B',
     explanation:
-      '「AはBほど〜ではない」という比較は<A is not as 原級 as B>で表す（比較級ではなく原級を使う点に注意）。「面白い」はinterestingを使う。よって「This book is not as interesting as that one.」となる（that oneはthat book の言い換え）。',
+      '【何を聞かれているか】\n「この本はあの本ほど面白くない。」を英語にする問題。\n\n【なぜ原級を使うのか】\n「AはBほど〜ではない」という比較は"A is not as 原級 as B"の形で表し、比較級ではなく原級を使うという決まりがある。\n\n【ポイント1】基本の型を確認する\n"A is not as 原級 as B"。\n\n【ポイント2】語句を当てはめる\nThis book is not as interesting as that one.（thatoneはthat bookの言い換え）。\n\n【ポイント3】比較級との違いを確認する\n"not as more interesting as"のように比較級を使うのは誤り。\n\n【答え】\nThis book is not as interesting as that one.\n\n【確かめ】\ninterestingが原級のままで、比較級more interestingになっていないか確認する。\n\n【よくあるまちがい】\n"not as"の間の形容詞を比較級にしてしまうミス。\n\n【ここが絶対】\nnot as+原級+as＝「〜ほど…ない」という同等比較の否定形として型で覚える。',
   },
   {
     id: 'shitennoji_koko_eigo_09',
@@ -1038,7 +1038,7 @@ export const schoolKokoShitennoji: Question[] = [
     answer: 'Do you know what time the train leaves?',
     hint: '疑問文を文の中に組み込むときは、語順が<疑問詞+主語+動詞>になる（doは使わない）。',
     explanation:
-      '間接疑問文にするときは、もとの疑問文の語順<does+主語+動詞の原形>を<主語+動詞>の通常の語順に戻し、doesは消えて動詞を3人称単数現在形に戻す（leaves）。よって「Do you know what time the train leaves?」となる。疑問詞を含む文をより大きな文の中に組み込むときの語順変化に注意が必要。',
+      '【何を聞かれているか】\n"Do you know?"と"What time does the train leave?"の2文を、間接疑問文を使って1文にする問題。\n\n【なぜdoesを消して動詞を変化させるのか】\n間接疑問文にするときは、もとの疑問文の語順（does＋主語＋動詞の原形）を主語＋動詞の通常の語順に戻し、doesは消えて動詞を主語に合わせた形（3人称単数現在形leaves）に戻す。\n\n【ポイント1】もとの疑問文の語順を確認する\n"does the train leave"（疑問文の語順）。\n\n【ポイント2】間接疑問文の語順を確認する\n"what time the train leaves"＝疑問詞what time＋主語the train＋動詞leaves（3単現に戻す）。\n\n【ポイント3】完成した文を確認する\n"Do you know what time the train leaves?"という型になる。\n\n【答え】\nDo you know what time the train leaves?\n\n【確かめ】\ndoesが消え、動詞がleaves（3単現）になっているか確認する。\n\n【よくあるまちがい】\n"Do you know what time does the train leave?"のように、doesを残したまま組み込んでしまうミス。\n\n【ここが絶対】\n間接疑問文にするときはdo/doesを消し、動詞を主語に合わせた形に戻すと覚える。',
   },
   {
     id: 'shitennoji_koko_eigo_12',
@@ -1079,7 +1079,7 @@ export const schoolKokoShitennoji: Question[] = [
       '一人で勉強するよりも、他人に教える（「プロテジェ効果」と呼ばれる方法）ほうが、自分自身の理解を大きく深めることができるということ。',
     hint: '「However」の後に続く内容が、この段落の主張（main idea）になっていることが多い。',
     explanation:
-      'この段落は「多くの学生は一人で勉強することが最も効果的だと考えている」という一般的な考え（A）を提示した後、「However（しかし）」という逆接で、実際には他人に教えること（プロテジェ効果）のほうが理解を深めるという研究結果（B）を対置している。英語の論説文では、howeverやbutの後に続く内容に筆者の主張（main idea）が置かれることが多い。この段落のmain ideaは、「他人に教えることは、一人で勉強するよりも自分自身の理解を深める効果がある」という点である。',
+      '【何を聞かれているか】\n一人での勉強と他人に教えることの効果を比較した英文を読み、この段落の主題（main idea）を日本語で1文にまとめる問題。\n\n【なぜHoweverの後に注目するのか】\n英語の論説文では、howeverやbutの後に続く内容に筆者の主張（main idea）が置かれることが多いため、逆接の後の文を重点的に読む。\n\n【ポイント1】一般的な考え（前半）を確認する\n「多くの学生は一人で勉強することが最も効果的だと考えている」という一般的な考えがまず提示される。\n\n【ポイント2】Howeverの後の内容（主張）を確認する\n「実際には、他人に教えること（プロテジェ効果）のほうが理解を深める」という研究結果が対置される。\n\n【ポイント3】理由を確認する\n他人に教えると、知識を整理し、理解の抜けに気づき、簡単な言葉に置き換える必要があるため、学びが深まる。\n\n【答え】\n一人で勉強するよりも、他人に教える（「プロテジェ効果」と呼ばれる方法）ほうが、自分自身の理解を大きく深めることができるということ。\n\n【確かめ】\n答えに「一人での勉強」と「他人に教えること」の比較、そして後者の方が効果的だという結論が含まれているか確認する。\n\n【よくあるまちがい】\nHoweverの前の一般的な考え（一人で勉強するのが効果的）を主題だと誤解してしまうミス。\n\n【ここが絶対】\n論説文でHowever/butの後に続く内容が筆者の主張（main idea）であることが多いと覚える。',
   },
   {
     id: 'shitennoji_koko_eigo_15',

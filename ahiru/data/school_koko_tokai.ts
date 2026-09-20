@@ -974,7 +974,8 @@ export const schoolKokoTokai: Question[] = [
     question: `日本語の意味になるように、（　）内の語（句）を並べかえなさい。「彼が昨日買った本はとても面白い。」( bought / the book / he / yesterday ) is very interesting.`,
     answer: `The book he bought yesterday is very interesting.`,
     hint: `「彼が昨日買った本」は、関係代名詞（目的格）が省略された名詞句と考える。`,
-    explanation: `「彼が昨日買った本」は「the book (which/that) he bought yesterday」という、目的格の関係代名詞が省略された形の名詞句。省略できる目的格の関係代名詞を省いた語順が「The book he bought yesterday」となり、これが文全体の主語になる。`,
+    explanation:
+      '【何を聞かれているか】\n語句（bought / the book / he / yesterday）を並べかえて、「彼が昨日買った本はとても面白い。」という英文を完成させる問題。\n\n【なぜ関係代名詞を省略した形にするのか】\n「彼が昨日買った本」は"the book (which/that) he bought yesterday"という、目的格の関係代名詞which/thatが省略された名詞句として表せる。\n\n【ポイント1】省略された関係代名詞を確認する\n目的格の関係代名詞は省略できるので、the bookの直後に主語he・動詞boughtを続ける。\n\n【ポイント2】名詞句のまとまりを確認する\n"The book he bought yesterday"（彼が昨日買った本）が1つの主語のかたまりになる。\n\n【ポイント3】文全体の構造を確認する\n主語（The book he bought yesterday）＋is very interesting。\n\n【答え】\nThe book he bought yesterday is very interesting.\n\n【確かめ】\n主語のかたまりの中に、関係代名詞が入っていない（省略されている）ことを確認する。\n\n【よくあるまちがい】\n関係代名詞を省略した形に慣れておらず、名詞のすぐ後ろに主語＋動詞が続く語順を作れないミス。\n\n【ここが絶対】\n目的格の関係代名詞は省略でき、「名詞＋主語＋動詞」という形になることを覚えておく。',
     pitfall: `関係代名詞を省略した文では、名詞のすぐ後ろに主語＋動詞が続く形になることに慣れておかないと、語順を誤りやすい。`,
   },
   {
@@ -986,7 +987,8 @@ export const schoolKokoTokai: Question[] = [
     question: `日本語の意味になるように、（　）内の語（句）を並べかえなさい。「この問題は私が思っていたよりも難しかった。」( than / this problem / I / more difficult / thought / was ).`,
     answer: `This problem was more difficult than I thought.`,
     hint: `比較級 more difficult than を用いた文。thanの後ろには主語＋動詞が続く。`,
-    explanation: `比較級を用いた文。全体の語順は「主語(This problem)＋be動詞(was)＋比較級(more difficult)＋than＋主語動詞(I thought)」となる。`,
+    explanation:
+      '【何を聞かれているか】\n語句（than / this problem / I / more difficult / thought / was）を並べかえて、「この問題は私が思っていたよりも難しかった。」という英文を完成させる問題。\n\n【なぜthanの後に主語＋動詞を続けるのか】\n比較級more difficult thanを使った文で、比べる対象が「私が思っていたこと」という内容なので、thanの後には主語＋動詞（I thought）を続ける。\n\n【ポイント1】文全体の骨組みを確認する\n主語This problem＋be動詞was＋比較級more difficult。\n\n【ポイント2】thanの後の形を確認する\nthan＋I thought（主語＋動詞）という節が続く。\n\n【ポイント3】完成した文を確認する\n"This problem was more difficult than I thought."という型になる。\n\n【答え】\nThis problem was more difficult than I thought.\n\n【確かめ】\nthanの後がI thoughtという主語＋動詞の形になっているか確認する。\n\n【よくあるまちがい】\nthan以下を名詞句だけにしてしまい、主語・動詞を含む節にできないミス。\n\n【ここが絶対】\n比較級+than+主語+動詞という形で「〜が思っていたより」を表せると覚える。',
     pitfall: `比較級thanの後ろに動詞のない名詞句だけを置く文と、このように主語＋動詞（I thought）が続く文の違いを整理しておくこと。`,
   },
   {
@@ -1044,7 +1046,8 @@ export const schoolKokoTokai: Question[] = [
     question: `本文中の "For this reason" が指す内容を日本語で説明しなさい。`,
     answer: `睡眠時間が6時間より少ない生徒は、勉強時間が長くても試験の点数が悪くなる傾向があるという研究結果。`,
     hint: `"For this reason" の直前の1文の内容に注目する。`,
-    explanation: `直前の文 "Students who sleep less than six hours often perform worse on tests, even if they spent more hours studying." の内容を受けて、"For this reason"以降で教師の推奨事項が述べられている。`,
+    explanation:
+      '【何を聞かれているか】\n本文中の"For this reason"が指す内容を日本語で説明する問題。\n\n【なぜ直前の文に注目するのか】\n"For this reason"（この理由により）という表現は、直前で述べられた内容を理由として指し示す働きをするので、直前の一文を確認する必要がある。\n\n【ポイント1】直前の一文を確認する\n"Students who sleep less than six hours often perform worse on tests, even if they spent more hours studying."（6時間より少ない睡眠の生徒は、勉強時間が長くても試験の成績が悪くなりがちである）という研究結果。\n\n【ポイント2】文章全体の流れを確認する\n「研究結果（睡眠不足だと成績が悪化）→教師の推奨」という論理の流れの中で、"For this reason"は前者を受けている。\n\n【ポイント3】答えに研究結果の内容を含めることを確認する\n睡眠時間・勉強時間・試験の成績という3つの要素をすべて含めて説明する。\n\n【答え】\n睡眠時間が6時間より少ない生徒は、勉強時間が長くても試験の点数が悪くなる傾向があるという研究結果。\n\n【確かめ】\n答えに「睡眠時間」「勉強時間が長くても」「成績が悪くなる」という3つの要素が含まれているか確認する。\n\n【よくあるまちがい】\n直前の一文の内容を確認せず、文章全体を漠然とまとめてしまうミス。\n\n【ここが絶対】\n"For this reason"のような指示表現は、直前の文の内容を指すことが多いので、必ず直前の一文を確認する。',
     pitfall: `指示内容を答える際、直前の1文だけでなく、文章全体の論理の流れ（研究結果→教師の推奨）を踏まえて説明すること。`,
   },
   {
@@ -1057,7 +1060,8 @@ export const schoolKokoTokai: Question[] = [
     question: `本文の内容と一致するように、次の英文を完成させなさい。"Scientists say that properly treated wastewater can be (　) than water taken directly from rivers or lakes."`,
     answer: `just as clean, or even cleaner`,
     hint: `本文中に、専門家（scientists）の見解がそのまま書かれている箇所を探す。`,
-    explanation: `本文中の "scientists say that properly treated water can be just as clean, or even cleaner, than water taken directly from rivers or lakes" がそのまま該当箇所である。`,
+    explanation:
+      '【何を聞かれているか】\n本文の内容と一致するように、"properly treated wastewater can be (　) than water taken directly from rivers or lakes."の空欄を埋める問題。\n\n【なぜ本文の表現をそのまま使うのか】\n設問は本文中の専門家（scientists）の見解をそのまま完成させる形式なので、該当箇所を正確に本文から探して抜き出す必要がある。\n\n【ポイント1】該当箇所を確認する\n本文に"scientists say that properly treated water can be just as clean, or even cleaner, than water taken directly from rivers or lakes"とある。\n\n【ポイント2】抜き出す範囲を確認する\n"just as clean, or even cleaner"の部分全体を抜き出す必要がある。\n\n【ポイント3】一部だけ抜き出さないことを確認する\n"just as clean"だけでなく、"or even cleaner"まで含めて完全な形にする。\n\n【答え】\njust as clean, or even cleaner\n\n【確かめ】\n答えに"just as clean"と"or even cleaner"の両方が含まれているか確認する。\n\n【よくあるまちがい】\n"just as clean"だけを抜き出し、"or even cleaner"の部分を書き忘れてしまうミス。\n\n【ここが絶対】\n本文の該当箇所を抜き出す問題は、文の一部だけでなく該当する表現全体を正確に写す。',
     pitfall: `"just as clean" だけを抜き出し、"or even cleaner" の部分を書き忘れないよう、該当箇所全体を正確に抜き出すこと。`,
   },
   {
@@ -1089,7 +1093,8 @@ export const schoolKokoTokai: Question[] = [
     choices: [`develop`, `photograph`, `important`, `remember`],
     answer: `photograph`,
     hint: `develop, important, rememberは第2音節、photographは第1音節にアクセントがある。`,
-    explanation: `develop(de-VEL-op), important(im-POR-tant), remember(re-MEM-ber)はいずれも第2音節を強く読むのに対し、photograph(PHO-to-graph)は第1音節を強く読む。よってアクセントの位置が異なるのはphotograph。`,
+    explanation:
+      '【何を聞かれているか】\ndevelop, photograph, important, rememberの中から、最も強く読む位置（アクセント）が異なる単語を選ぶ問題。\n\n【なぜphotographだけ第1音節にアクセントがあるのか】\ndevelop・important・rememberはいずれも第2音節にアクセントがあるが、photographは第1音節にアクセントがあるという、この4語の中で唯一異なるパターンを持つ単語である。\n\n【ポイント1】develop・important・rememberのアクセントを確認する\nde-VEL-op、im-POR-tant、re-MEM-berと、いずれも第2音節を強く読む。\n\n【ポイント2】photographのアクセントを確認する\nPHO-to-graphと、第1音節を強く読む。\n\n【ポイント3】派生語との違いに注意することを確認する\nphotographの派生語photography（フォトグラフィー）はアクセントの位置が第2音節に変わるため、混同しない。\n\n【答え】\nphotograph\n\n【確かめ】\n選んだ答えが、他の3語（第2音節にアクセント）とは異なる第1音節にアクセントを持つ単語になっているか確認する。\n\n【よくあるまちがい】\nphotographもphotographyと同じアクセント位置だと思い込んでしまうミス。\n\n【ここが絶対】\ndevelop・important・rememberは第2音節、photographは第1音節にアクセントがあると個別に覚える。',
     pitfall: `photographの派生語photography（フォトグラフィー）はアクセント位置が変わる（第2音節）ため、混同しないよう注意する。`,
   },
   {
