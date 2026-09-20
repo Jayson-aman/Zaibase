@@ -952,7 +952,8 @@ export const fukuokaOhoriExam: Question[] = [
     ],
     answer: 'have',
     hint: '過去分詞"been"の前に置く助動詞で、現在完了形を作る単語を考えよう。',
-    explanation: 'この文は現在完了形〈have/has+過去分詞〉で「一度も〜したことがない」という経験を表す文です。主語が"I"のときは"have"を使い、"never"は「一度も〜ない」という否定の意味を加えます。主語が三人称単数のときは"has"を使います。',
+    explanation:
+      '【何を聞かれているか】\n"I ( ) never been to Fukuoka."の空欄に入る、正しい助動詞を選ぶ問題。\n\n【なぜhaveを使うのか】\n主語Iのとき、現在完了形（have/has＋過去分詞）にはhaveを使うという決まりがある。\n\n【ポイント1】現在完了（経験）の公式を確認する\nhave/has＋過去分詞。neverを入れると「一度も〜したことがない」という否定の経験を表す。\n\n【ポイント2】主語とhave/hasの対応を確認する\nI/you/we/theyにはhave、he/she/itにはhasを使う。\n\n【ポイント3】文全体の意味を確認する\n"I have never been to Fukuoka."＝「私は福岡に一度も行ったことがない」。\n\n【答え】\nhave\n\n【確かめ】\n主語Iに対応する形がhaveになっているか確認する。\n\n【よくあるまちがい】\n主語がIのときにhasを選んでしまうミス。hasはhe/she/itのような三人称単数のときに使う。\n\n【ここが絶対】\n「I/you/we/they→have、he/she/it→has」という主語との対応をセットで覚える。',
     pitfall: '主語が"I"のときに"has"を選んでしまうミスに注意。',
     memoryTip: '「I/you/we/they→have、he/she/it→has」とセットで覚える。',
   },
@@ -972,7 +973,8 @@ export const fukuokaOhoriExam: Question[] = [
     ],
     answer: 'How',
     hint: '答えの"By car."がどんな種類の情報(方法・手段)を示しているかに注目しよう。',
-    explanation: '応答が"By car."(車で)という「手段・方法」を答えていることから、質問は手段をたずねる"How"を使った疑問文だとわかります。"What"は「何」、"Where"は「どこ」、"Who"は「誰」をたずねる疑問詞です。',
+    explanation:
+      '【何を聞かれているか】\n"( ) does your father go to work every day?" — "By car."の空欄に入る、正しい疑問詞を選ぶ問題。\n\n【なぜHowを使うのか】\n応答"By car."（車で）が「手段・方法」を答えていることから、方法をたずねる疑問詞Howが正解だとわかる。\n\n【ポイント1】応答から疑問詞を判断する\n"By car."という交通手段の答えから、質問はHow（どうやって）だとわかる。\n\n【ポイント2】他の疑問詞の意味を確認する\nWhat（何）、Where（どこ）、Who（誰）は、いずれも交通手段を答える質問には対応しない。\n\n【ポイント3】交通手段の表現を確認する\n"How do you go to school?"（どうやって学校へ行きますか）のような表現で、交通手段をたずねるときはHowを使う。\n\n【答え】\nHow\n\n【確かめ】\n"How does your father go to work?"に対して"By car."という手段の答えが自然に対応しているか確認する。\n\n【よくあるまちがい】\n「どこへ行くか」を尋ねるWhereと混同してしまうミス。答えが場所ではなく手段になっている点に注意する。\n\n【ここが絶対】\n「交通手段を尋ねるときはHow」というルールを、By＋乗り物という答え方とセットで覚える。',
     pitfall: '「どこへ行くか」を尋ねる"Where"と混同しやすいが、答えが場所ではなく手段になっている点に注意。',
     memoryTip: '「交通手段を尋ねるときはHow」と覚えておく(例:How do you go to school?)。',
   },
