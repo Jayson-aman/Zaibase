@@ -32,7 +32,8 @@ export const kokoEigoEx01: Question[] = [
     question: '次の日本語を英語に訳しなさい。\n「彼らは今、公園でサッカーをしています。」',
     answer: 'They are playing soccer in the park now.',
     hint: '現在進行形：be動詞 + 動詞のing形。',
-    explanation: `「今〜しています」という現在進行中の動作は現在進行形で表す。主語 They に合わせて be動詞は are を使い、play に -ing をつけて playing にする。now（今）は現在進行形の典型的なヒント語。`,
+    explanation:
+      '【何を聞かれているか】\n「彼らは今、公園でサッカーをしています。」という日本語を英語にする問題。\n\n【なぜ現在進行形を使うのか】\n「今〜しています」という、今まさに進行中の動作を表すときは、現在進行形（be動詞＋動詞のing形）を使う。\n\n【ポイント1】現在進行形の公式を確認する\nbe動詞（am/is/are）＋動詞のing形。\n\n【ポイント2】主語とbe動詞の対応を確認する\n主語They（複数）に対応するbe動詞はare。\n\n【ポイント3】nowの役割を確認する\n"now"（今）は現在進行形とセットでよく使われる語で、この文が「今この瞬間」の動作を表していることを示す。\n\n【答え】\nThey are playing soccer in the park now.\n\n【確かめ】\n"are"と"playing"がセットで使われていること、"now"が現在進行形と一致していることを確認する。\n\n【よくあるまちがい】\nbe動詞を省略して"They playing soccer."としてしまうミス。現在進行形には必ずbe動詞が必要。\n\n【ここが絶対】\n現在進行形＝be動詞＋動詞のing形。"now"のような語があれば現在進行形のサインだと意識する。',
   },
   {
     id: 'koko_eigo_ex01_004',
@@ -43,7 +44,8 @@ export const kokoEigoEx01: Question[] = [
     question: '（　）内に適切な語を入れなさい。\nI ( ) visit my grandparents next Sunday.',
     answer: 'will',
     hint: '未来を表す助動詞。',
-    explanation: `「次の日曜日に〜する予定だ」という未来の出来事は will + 動詞の原形で表す。next Sunday（次の日曜日）は未来を示す表現。will の後ろの動詞は必ず原形（visit）のまま使う。`,
+    explanation:
+      '【何を聞かれているか】\n"I ( ) visit my grandparents next Sunday."の空欄に入る、正しい語を答える問題。\n\n【なぜwillを使うのか】\n「次の日曜日に〜する予定だ」という未来の出来事を表すときは、will＋動詞の原形を使う。\n\n【ポイント1】willの公式を確認する\nwill＋動詞の原形。\n\n【ポイント2】"next Sunday"が未来のサインであることを確認する\n"next Sunday"（次の日曜日）という未来を表す語句があることから、未来の文だとわかる。\n\n【ポイント3】willの後ろが原形であることを確認する\nwillの後ろのvisitは、主語に関係なく常に原形のまま使う。\n\n【答え】\nwill\n\n【確かめ】\n"I will visit my grandparents next Sunday."が、未来の予定を表す自然な文になっていることを確認する。\n\n【よくあるまちがい】\nwillの後ろの動詞に三人称単数のsをつけてしまうミス。willの後ろは主語に関係なく常に原形。\n\n【ここが絶対】\n"will＋動詞の原形"＝「〜するだろう・〜するつもりだ」という未来の表現。next Sundayのような未来を表す語とセットで使われることが多い。',
   },
   {
     id: 'koko_eigo_ex01_005',
@@ -54,7 +56,8 @@ export const kokoEigoEx01: Question[] = [
     question: '次の文を過去形に書き換えなさい。\nThey play tennis after school.',
     answer: 'They played tennis after school.',
     hint: 'play の過去形は？',
-    explanation: `規則動詞 play の過去形は -ed をつけて played になる。その他の語（they、tennis、after school）は変化しない。「放課後テニスをした」という過去の習慣的な動作を表す文になる。`,
+    explanation:
+      '【何を聞かれているか】\n"They play tennis after school."という文を過去形に書き換える問題。\n\n【なぜplayedという形になるのか】\nplayは規則動詞なので、過去形は語尾に-edをつけて作る。\n\n【ポイント1】規則動詞の過去形を確認する\nplay（原形）→played（過去形、-edをつける）。\n\n【ポイント2】他の部分は変えないことを確認する\n主語They、目的語tennis、"after school"はそのまま変えない。\n\n【ポイント3】文全体の意味を確認する\n"They played tennis after school."＝「彼らは放課後テニスをした」という過去の習慣的な動作。\n\n【答え】\nThey played tennis after school.\n\n【確かめ】\nplayにedがついてplayedになっていること、他の語句は変わっていないことを確認する。\n\n【よくあるまちがい】\nplayedの綴りを誤って"playd"のようにしてしまうミス。-edをつけるときは元の綴りをそのまま残す。\n\n【ここが絶対】\n規則動詞の過去形は、語尾に-edをつけて作る。play→playedはその代表例。',
   },
   {
     id: 'koko_eigo_ex01_006',
@@ -65,7 +68,8 @@ export const kokoEigoEx01: Question[] = [
     question: '（　）内に適切な語を入れなさい。\nHe ( ) eating lunch when I called him.',
     answer: 'was',
     hint: '過去進行形：was/were + ing形。',
-    explanation: `「私が電話したとき、彼は昼食を食べていた」という過去のある時点で進行中だった動作は過去進行形で表す。主語 He（三人称単数）に合わせて be動詞の過去形は was を使い、was eating とする。`,
+    explanation:
+      '【何を聞かれているか】\n"He ( ) eating lunch when I called him."の空欄に入る、正しい語を答える問題。\n\n【なぜ過去進行形を使うのか】\n「私が電話したとき、彼は昼食を食べていた」という、過去のある時点で進行中だった動作を表すときは、過去進行形（was/were＋動詞のing形）を使う。\n\n【ポイント1】過去進行形の公式を確認する\nwas/were＋動詞のing形。\n\n【ポイント2】主語とbe動詞の対応を確認する\n主語He（三人称単数）に対応するbe動詞の過去形はwas。\n\n【ポイント3】whenの前後の時制を確認する\n"when I called him"（過去形、途中で起きた出来事）と"was eating"（過去進行形、続いていた動作）が組み合わさっている。\n\n【答え】\nwas\n\n【確かめ】\n"was eating"がHeに対応する正しい過去進行形になっているか確認する。\n\n【よくあるまちがい】\n主語Heに対してwereを使ってしまうミス。三人称単数の主語にはwasを使う。\n\n【ここが絶対】\n過去進行形はwas/were＋動詞のing形。続いていた動作（was eating）と途中で起きた動作（called）を組み合わせる文の型を覚える。',
   },
   {
     id: 'koko_eigo_ex01_007',
@@ -76,7 +80,8 @@ export const kokoEigoEx01: Question[] = [
     question: '次の日本語を英語に訳しなさい。\n「私の兄は先月、東京に行きました。」',
     answer: 'My brother went to Tokyo last month.',
     hint: 'go の過去形は不規則変化。',
-    explanation: `go は不規則動詞で過去形は went。「先月」は last month で、これが過去形を使うヒントになる。「東京に行く」は go to Tokyo と表現する。主語は My brother（三人称単数）だが、過去形では三単現の -s は不要。`,
+    explanation:
+      '【何を聞かれているか】\n「私の兄は先月、東京に行きました。」という日本語を英語にする問題。\n\n【なぜwentという形になるのか】\ngoは、edをつけて過去形を作る規則動詞ではなく、wentという特別な形に変化する不規則動詞。\n\n【ポイント1】goの活用を確認する\ngo（原形）→went（過去形）→gone（過去分詞）という不規則変化。\n\n【ポイント2】"last month"の役割を確認する\n"last month"（先月）という過去を表す語句から、過去形を使う文だとわかる。\n\n【ポイント3】三単現のsが不要であることを確認する\n過去形の文では、主語が三人称単数（My brother）でも動詞にsをつけない。\n\n【答え】\nMy brother went to Tokyo last month.\n\n【確かめ】\n"went"がgoの過去形として正しく使われていて、"goed"のような誤った形になっていないか確認する。\n\n【よくあるまちがい】\ngoの過去形を規則動詞のように"goed"としてしまうミス。goはgo→went→goneという特別な活用をする。\n\n【ここが絶対】\ngo→went→goneという不規則動詞の活用をセットで覚える。過去形の文では三単現のsをつけないことも確認する。',
   },
   {
     id: 'koko_eigo_ex01_008',
@@ -109,7 +114,8 @@ export const kokoEigoEx01: Question[] = [
     question: '（　）内に適切な語を入れなさい。\nI ( ) in Osaka for ten years.',
     answer: 'have lived',
     hint: '現在完了形：have/has + 過去分詞。',
-    explanation: `「10年間大阪に住んでいる」という過去から現在まで続く状態は現在完了形（継続用法）で表す。主語 I には have を使い、live の過去分詞 lived を組み合わせて have lived とする。for ten years は期間を表す。`,
+    explanation:
+      '【何を聞かれているか】\n"I ( ) in Osaka for ten years."の空欄に入る、正しい語句を答える問題。\n\n【なぜ現在完了形を使うのか】\n「10年間大阪に住んでいる」という、過去から現在まで続く状態を表すときは、現在完了形（have/has＋過去分詞）の継続用法を使う。\n\n【ポイント1】現在完了（継続）の公式を確認する\n主語＋have/has＋過去分詞〜。\n\n【ポイント2】主語Iとhaveの対応を確認する\n主語Iに対応するのはhave（hasは三人称単数のとき）。\n\n【ポイント3】"for ten years"の役割を確認する\n"for ten years"（10年間）は期間を表す語句で、現在完了の継続用法とセットで使われる。\n\n【答え】\nhave lived\n\n【確かめ】\n"have lived"が「have＋過去分詞」の正しい形になっているか確認する。\n\n【よくあるまちがい】\n現在形liveや過去形livedだけを使ってしまうミス。「今も続いている」というニュアンスを表すには現在完了が必要。\n\n【ここが絶対】\n"have/has＋過去分詞＋for＋期間"＝「（今まで）ずっと〜している」という現在完了（継続）の形をセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_011',
@@ -120,7 +126,8 @@ export const kokoEigoEx01: Question[] = [
     question: '次の日本語を英語に訳しなさい。\n「私は医者になりたい。」',
     answer: 'I want to be a doctor.',
     hint: 'want to + 動詞の原形で「〜したい」。',
-    explanation: `「〜したい」は want to + 動詞の原形で表す。to の後ろは必ず動詞の原形。「医者になる」は become a doctor または be a doctor と表現できる。to be は「〜になること」という名詞的用法の不定詞。`,
+    explanation:
+      '【何を聞かれているか】\n「私は医者になりたい。」という日本語を英語にする問題。\n\n【なぜwant toを使うのか】\n「〜したい」という願望は、want to＋動詞の原形という決まった形で表す。\n\n【ポイント1】"want to＋動詞の原形"の形を確認する\nwant to＋動詞の原形＝「〜したい」。\n\n【ポイント2】"be a doctor"の意味を確認する\n"to be a doctor"＝「医者になること」。becomeを使ってto become a doctorとも言える。\n\n【ポイント3】文を組み立てる\n"I want to be a doctor."＝「私は医者になりたい」。\n\n【答え】\nI want to be a doctor.\n\n【確かめ】\n"want to"の後ろに動詞の原形（be）が続いていることを確認する。\n\n【よくあるまちがい】\n"want be a doctor"のように、toを忘れてしまうミス。wantの後ろは必ずto不定詞にする。\n\n【ここが絶対】\n"want to＋動詞の原形"＝「〜したい」という不定詞の基本形をセットで覚える。to be（〜になること）は名詞的用法の不定詞。',
   },
   {
     id: 'koko_eigo_ex01_012',
@@ -153,7 +160,8 @@ export const kokoEigoEx01: Question[] = [
     question: '（　）内に適切な語を入れなさい。\nMy dream is ( ) become a professional soccer player.',
     answer: 'to',
     hint: '名詞的用法の不定詞：〜することが〜だ。',
-    explanation: `「私の夢はプロサッカー選手になることだ」という文で、is の後ろの to become はいわゆる「名詞的用法の不定詞」で補語になっている。My dream = to become ... という構造。to の後ろは動詞の原形 become がくる。`,
+    explanation:
+      '【何を聞かれているか】\n"My dream is ( ) become a professional soccer player."の空欄に入る、正しい語を答える問題。\n\n【なぜtoが正解なのか】\n"My dream is〜"の後ろに「〜になること」という内容を続けたいとき、to不定詞（名詞的用法）を使ってbe動詞の補語にする。\n\n【ポイント1】名詞的用法の不定詞を確認する\n"to become a professional soccer player"（プロサッカー選手になること）が、is（be動詞）の後ろに置かれる補語になっている。\n\n【ポイント2】My dream＝to becomeの関係を確認する\n"My dream = to become a professional soccer player"というイコールの関係が成り立つ。\n\n【ポイント3】toの後ろの形を確認する\ntoの後ろは動詞の原形（become）を使う。\n\n【答え】\nto\n\n【確かめ】\n"is"の後ろに"to become"という不定詞が続いていて、My dreamとイコールの関係になっていることを確認する。\n\n【よくあるまちがい】\ntoを入れずに"is become"としてしまうミス。be動詞の後ろに動詞を続けるときは、to不定詞や動名詞にする必要がある。\n\n【ここが絶対】\n"主語 is to＋動詞の原形"＝「主語は〜することだ」という、名詞的用法の不定詞が補語になる形をセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_015',
@@ -175,7 +183,8 @@ export const kokoEigoEx01: Question[] = [
     question: '（　）内の語を適切な形に変えなさい。\nI enjoy ( listen ) to music before bed.',
     answer: 'listening',
     hint: 'enjoy の後ろは動名詞（ing形）。',
-    explanation: `enjoy は動名詞（動詞の -ing 形）を目的語にとる動詞。to不定詞は使えない。enjoy listening to music で「音楽を聴くことを楽しむ」。動名詞を目的語にとる動詞には enjoy, finish, stop, avoid, mind などがある。`,
+    explanation:
+      '【何を聞かれているか】\n"I enjoy ( listen ) to music before bed."の空欄に、listenを適切な形に変えて入れる問題。\n\n【なぜ動名詞（listening）にするのか】\nenjoyは、後ろに動名詞（-ing形）だけを目的語に取るという決まりを持つ動詞のグループに属している。\n\n【ポイント1】enjoyの後ろの形を確認する\nenjoy＋動名詞（-ing形）。"enjoy to listen"のように不定詞を続けるのは誤り。\n\n【ポイント2】同じグループの動詞を確認する\nfinish（終える）、stop（やめる）、avoid（避ける）、mind（気にする）も、enjoyと同じように動名詞を目的語に取る。\n\n【ポイント3】文を組み立てる\n"I enjoy listening to music before bed."＝「私は寝る前に音楽を聴くことを楽しむ」。\n\n【答え】\nlistening\n\n【確かめ】\n"enjoy"の後ろが"listening"のように-ing形になっていて、不定詞（to listen）になっていないことを確認する。\n\n【よくあるまちがい】\n"enjoy to listen"のように、不定詞を続けてしまうミス。enjoyは動名詞だけを目的語に取る動詞。\n\n【ここが絶対】\nenjoy・finish・stop・avoid・mindなどの動詞は、後ろに動名詞（-ing形）だけを取るというグループとしてセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_017',
@@ -274,7 +283,8 @@ export const kokoEigoEx01: Question[] = [
     question: '次の日本語を英語に訳しなさい。\n「彼女はもうその映画を見てしまいましたか。」',
     answer: 'Has she already seen the movie?',
     hint: '現在完了形（完了用法）の疑問文。already は疑問文でも使える。',
-    explanation: `現在完了形の完了用法「〜し終えた・〜してしまった」を疑問文にすると Has she + 過去分詞 〜? となる。already（もう・すでに）は肯定文や疑問文で使い、yet（まだ〜していない）は否定文や疑問文で使う。see の過去分詞は seen。`,
+    explanation:
+      '【何を聞かれているか】\n「彼女はもうその映画を見てしまいましたか。」という日本語を英語にする問題。\n\n【なぜHas she＋過去分詞の疑問文にするのか】\n「〜し終えた・〜してしまった」という現在完了の完了用法を疑問文にするときは、Has/Have＋主語＋過去分詞〜?という語順にする。\n\n【ポイント1】現在完了（完了）の疑問文の公式を確認する\nHas/Have＋主語＋過去分詞〜?\n\n【ポイント2】alreadyの位置を確認する\nalreadyは疑問文でも使うことができ、have/hasと過去分詞の間に置く。\n\n【ポイント3】seeの過去分詞を確認する\nseeの過去分詞はseen（see→saw→seenの不規則変化）。\n\n【答え】\nHas she already seen the movie?\n\n【確かめ】\n"Has"が文頭にあり、"already"がhas と seenの間に置かれていることを確認する。\n\n【よくあるまちがい】\nalreadyの代わりにyetを使うべき場面と混同してしまうミス。alreadyは肯定文・疑問文で「もう」、yetは否定文で「まだ」、疑問文で「もう」という意味で使う。\n\n【ここが絶対】\n現在完了（完了）の疑問文はHas/Have＋主語＋過去分詞。alreadyは肯定文・疑問文、yetは否定文・疑問文で使うことをセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_026',
@@ -285,7 +295,8 @@ export const kokoEigoEx01: Question[] = [
     question: '（　）内に適切な語を入れなさい。\nThe boy ( ) is playing in the garden is my brother.',
     answer: 'who',
     hint: '先行詞が人の場合の関係代名詞は who。',
-    explanation: `関係代名詞は先行詞が人の場合 who を、物・動物の場合 which を使う。The boy who is playing in the garden（庭で遊んでいる男の子）のように who が関係詞節の主語になる場合は主格の who を使う。that も使えるが who がより一般的。`,
+    explanation:
+      '【何を聞かれているか】\n"The boy ( ) is playing in the garden is my brother."の空欄に入る、正しい関係代名詞を答える問題。\n\n【なぜwhoを使うのか】\n先行詞The boy（人）を、後ろの"is playing in the garden"（庭で遊んでいる）という文で説明したいとき、主格の関係代名詞whoを使う。\n\n【ポイント1】先行詞が人であることを確認する\nThe boy（人）が先行詞なので、whoまたはthatを使う。\n\n【ポイント2】whoが主格であることを確認する\nwhoの後ろに動詞（is playing）が直接続いているので、whoは節の中で主語の役割をしている（主格）。\n\n【ポイント3】文全体の意味を確認する\n"The boy who is playing in the garden is my brother."＝「庭で遊んでいる男の子は私の弟だ」。\n\n【答え】\nwho\n\n【確かめ】\n"who"の後ろが"is playing in the garden"という、主語が欠けた文になっているか確認する。\n\n【よくあるまちがい】\n先行詞が人であることを確認せずに、物に使うwhichを選んでしまうミス。\n\n【ここが絶対】\n先行詞が人で主格のときはwhoを使う。「who＋動詞」の形で先行詞を後ろから修飾する。',
   },
   {
     id: 'koko_eigo_ex01_027',
@@ -307,7 +318,8 @@ export const kokoEigoEx01: Question[] = [
     question: '次の日本語を英語に訳しなさい。\n「これは私が昨日読んだ本です。」',
     answer: 'This is the book that I read yesterday.',
     hint: '目的格の関係代名詞 that（または which）。',
-    explanation: `「私が読んだ本」という場合、I read the book の the book が先行詞になる。目的格の関係代名詞（that/which）は省略することもできる。This is the book that I read yesterday. または This is the book I read yesterday. のどちらも正しい。`,
+    explanation:
+      '【何を聞かれているか】\n「これは私が昨日読んだ本です。」という日本語を英語にする問題。\n\n【なぜthat（またはwhich）を使うのか】\n先行詞the book（物）を、「私が昨日読んだ」という文で説明したいとき、目的格の関係代名詞that（またはwhich）を使って2つの内容を1つの文につなげる。\n\n【ポイント1】先行詞が物のときの関係代名詞を確認する\n先行詞the book（物）にはwhichまたはthatを使う。\n\n【ポイント2】目的格であることを確認する\n"I read (the book) yesterday"のように、the bookはreadの目的語の位置にあるので、目的格の関係代名詞を使う。\n\n【ポイント3】省略できることを確認する\n目的格の関係代名詞は省略でき、"This is the book I read yesterday."も正しい文になる。\n\n【答え】\nThis is the book that I read yesterday.\n\n【確かめ】\n"that"の後ろが"I read yesterday"という「主語＋動詞」の文になっているか確認する。\n\n【よくあるまちがい】\n先行詞が物なのに、人に使うwhoを選んでしまうミス。\n\n【ここが絶対】\n先行詞が物で目的格のときはthat（またはwhich）を使う。目的格の関係代名詞は省略することもできる。',
   },
   {
     id: 'koko_eigo_ex01_029',
@@ -351,7 +363,8 @@ export const kokoEigoEx01: Question[] = [
     question: '次の文を受動態に書き換えなさい。\nKen wrote this letter.',
     answer: 'This letter was written by Ken.',
     hint: '受動態（過去）：was/were + 過去分詞。能動態の目的語が主語になる。',
-    explanation: `能動態の目的語 this letter が受動態の主語になる。過去の受動態は was/were + 過去分詞。write の過去分詞は written（不規則変化）。能動態の主語 Ken は by Ken と前置詞 by の後ろに続ける。`,
+    explanation:
+      '【何を聞かれているか】\n"Ken wrote this letter."という文を受動態に書き換える問題。\n\n【なぜthis letterを主語にするのか】\n能動態の目的語（this letter）を主語にして、「この手紙はケンによって書かれた」という視点で文を作りたいときに、受動態（be動詞＋過去分詞）を使う。\n\n【ポイント1】受動態の公式を確認する\n主語＋be動詞（過去形）＋過去分詞＋by＋動作主。\n\n【ポイント2】主語を入れ替える\n能動態の目的語this letterが、受動態の主語になる。\n\n【ポイント3】writeの活用を確認する\nwrite（原形）→wrote（過去形）→written（過去分詞）という不規則変化。受動態には過去分詞writtenを使う。\n\n【答え】\nThis letter was written by Ken.\n\n【確かめ】\n"was written"という「be動詞（過去形）＋過去分詞」のセットになっていること、元の主語Kenが"by Ken"になっていることを確認する。\n\n【よくあるまちがい】\n過去分詞writtenの代わりに過去形wroteを使ってしまうミス。受動態には必ず過去分詞を使う。\n\n【ここが絶対】\n受動態の公式：主語＋be動詞＋過去分詞＋by＋動作主。write→wrote→writtenという不規則変化もあわせて覚える。',
   },
   {
     id: 'koko_eigo_ex01_033',
@@ -384,7 +397,8 @@ export const kokoEigoEx01: Question[] = [
     question: '次の文を比較級を使って書き換えなさい。\nTom is tall. Ken is not tall.',
     answer: 'Tom is taller than Ken.',
     hint: '比較級：形容詞 + er + than。',
-    explanation: `2つのものを比べるとき、形容詞・副詞に -er をつけた比較級を使い、than で比較の対象を示す。tall → taller。母音 + 子音で終わる短い形容詞は子音を重ねて -er をつける（big → bigger）。Tom is taller than Ken. は「トムはケンより背が高い」。`,
+    explanation:
+      '【何を聞かれているか】\n"Tom is tall. Ken is not tall."という2文を、比較級を使って1文にする問題。\n\n【なぜ比較級を使うのか】\n「トムはケンより背が高い」という、2人を比べる内容を表すときは、形容詞を比較級にしてthanとセットで使う。\n\n【ポイント1】比較級の作り方を確認する\ntallのような短い形容詞は、語尾に-erをつけて比較級を作る（tall→taller）。\n\n【ポイント2】比較級の公式を確認する\n"A is＋比較級＋than B"＝「AはBより〜だ」。\n\n【ポイント3】文を組み立てる\n"Tom is taller than Ken."＝「トムはケンより背が高い」。\n\n【答え】\nTom is taller than Ken.\n\n【確かめ】\n"taller"の後ろに"than"が続いていて、2文の内容（トムは背が高い、ケンは高くない）が正しく比較の形にまとまっているか確認する。\n\n【よくあるまちがい】\n比較級にせず、原級のtallをそのまま使ってしまうミス。thanが後ろにあるときは必ず比較級にする。\n\n【ここが絶対】\n短い形容詞の比較級は語尾に-erをつける。"A is＋比較級＋than B"の公式をセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_036',
@@ -395,7 +409,8 @@ export const kokoEigoEx01: Question[] = [
     question: '（　）内に適切な語を入れなさい。\nMt. Fuji is the ( ) mountain in Japan.',
     answer: 'highest',
     hint: '最上級：the + 形容詞/副詞 + est。',
-    explanation: `3つ以上のものを比べるとき、the + 形容詞/副詞 + -est の最上級を使う。high → highest（子音を重ねずに -est をつける）。in Japan は比較の範囲を示す表現。最上級の前には必ず the をつける。`,
+    explanation:
+      '【何を聞かれているか】\n"Mt. Fuji is the ( ) mountain in Japan."の空欄に入る、正しい最上級を答える問題。\n\n【なぜthe highestという最上級を使うのか】\n「〜の中で最も…だ」という、3つ以上のものの中で一番であることを表すときは、最上級（the＋形容詞-est）を使う。\n\n【ポイント1】最上級の公式を確認する\nthe＋形容詞の最上級＋in/of〜（〜の中で）。\n\n【ポイント2】highの最上級を確認する\nhighのような1音節の短い形容詞は、語尾に-estをつけて最上級を作る（high→highest）。子音を重ねる必要はない。\n\n【ポイント3】"in Japan"の使い方を確認する\n場所や範囲を表すときはinを使う。\n\n【答え】\nhighest\n\n【確かめ】\n"the highest"の前にtheがついていること、"in Japan"が範囲を表していることを確認する。\n\n【よくあるまちがい】\n最上級にtheをつけ忘れてしまうミス。最上級には基本的にtheをつける。\n\n【ここが絶対】\n最上級は「the＋形容詞-est＋in/of〜」という形をセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_037',
@@ -417,7 +432,8 @@ export const kokoEigoEx01: Question[] = [
     question: '（　）内に適切な語を入れなさい。\nThis problem is ( ) difficult than that one.',
     answer: 'more',
     hint: '3音節以上の形容詞の比較級は more + 形容詞。',
-    explanation: `difficult のように音節が多い形容詞（3音節以上）の比較級は -er をつけず、前に more をつけて表す。more difficult than ... で「〜よりも難しい」という比較を表す。同様に最上級は most difficult となる。`,
+    explanation:
+      '【何を聞かれているか】\n"This problem is ( ) difficult than that one."の空欄に入る、正しい語を答える問題。\n\n【なぜmoreを使うのか】\ndifficultのように音節の多い（3音節以上の）形容詞は、-erをつけるのではなく、moreを前に置いて比較級を作るという決まりがある。\n\n【ポイント1】moreを使う形容詞のグループを確認する\n音節の多い語（difficult、beautiful、importantなど）はmore/mostを使う。\n\n【ポイント2】-er/-estを使う形容詞との違いを確認する\n1音節の短い形容詞（tall、bigなど）は-er/-estをつける。\n\n【ポイント3】最上級との対応を確認する\n比較級more difficultに対応する最上級はmost difficult。\n\n【答え】\nmore\n\n【確かめ】\ndifficultの前にmoreが置かれていて、語尾に-erがついていないことを確認する。\n\n【よくあるまちがい】\n"difficulter"のように、音節の多い形容詞にも-erをつけてしまうミス。3音節以上の形容詞はmoreを使う。\n\n【ここが絶対】\n1音節の形容詞は-er/-est、音節の多い形容詞はmore/mostを使う、という使い分けをセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_039',
@@ -483,7 +499,8 @@ export const kokoEigoEx01: Question[] = [
     question: '（　）内に適切な語を入れなさい。\nJune is the ( ) month of the year.',
     answer: 'sixth',
     hint: '序数（順序を表す語）を使う。',
-    explanation: `「6月は1年の6番目の月です」という文で、序数（ordinal number）の sixth を使う。序数は比較とは異なるが、最上級と同様に the をつけて使う（the sixth, the third など）。month of the year は「1年の〜番目の月」という表現。`,
+    explanation:
+      '【何を聞かれているか】\n"June is the ( ) month of the year."の空欄に入る、正しい序数を答える問題。\n\n【なぜsixthという序数を使うのか】\n「6月は1年の6番目の月」という、順序を表す内容には、比較や最上級ではなく、序数（1番目、2番目…を表す語）を使う。\n\n【ポイント1】序数の意味を確認する\n序数（ordinal number）は「〜番目」という順序を表す。sixth＝6番目。\n\n【ポイント2】6月が6番目の月であることを確認する\n1年はJanuary（1月）から始まり、June（6月）はちょうど6番目の月にあたる。\n\n【ポイント3】序数にもtheをつけることを確認する\n最上級と同じように、序数（the sixth, the thirdなど）にもtheをつけて使う。\n\n【答え】\nsixth\n\n【確かめ】\nJanuaryから数えてJuneが6番目の月であることを確認し、sixthという序数が正しく使われているか確認する。\n\n【よくあるまちがい】\n序数と基数（six）を混同してしまうミス。「6番目」という順序を表すにはsixthという序数の形を使う。\n\n【ここが絶対】\n序数（first, second, third, sixth…）は「〜番目」という順序を表す語で、最上級と同じようにtheをつけて使う。',
   },
   {
     id: 'koko_eigo_ex01_045',

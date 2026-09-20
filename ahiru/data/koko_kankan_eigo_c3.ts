@@ -535,7 +535,8 @@ Many high schools in Japan have introduced tablet devices for every student. Sup
   ア. However　イ. Whatever　ウ. Whoever　エ. Wherever`,
     answer: '① ア(However)　② イ(Whatever)　③ ウ(Whoever)',
     hint: '①However+形容詞/副詞+S+V（どんなに〜でも）、②Whatever=何を〜しようとも、③Whoever=〜する人は誰でも。',
-    explanation: `【出題意図】複合関係詞（However/Whatever/Whoever等）の使い分けを問う。【解説】①「どんなに一生懸命努力しても」＝However+形容詞/副詞+S+V（=no matter how）。hardは副詞でtriedを修飾。②「あなたが何と言おうとも」＝Whatever+S+V（=no matter what）。③「マラソンを最初に終える人は誰でも」＝Whoever（=anyone who）が文の主語になる名詞節を作る。【注意点】Howeverは後ろに形容詞・副詞を伴う点がWhatever/Whoeverと構造上異なる。③のWhoeverは名詞節を作り文全体の主語になっている。【関連知識】Whichever（どちらを〜しても）、Wherever（どこで〜しても）も同グループの複合関係詞。`,
+    explanation:
+      '【何を聞かれているか】\nHowever・Whatever・Whoeverという複合関係詞の使い分けを問う問題。\n\n【なぜ形が異なるのか】\nHowever（どんなに〜でも）は後ろに形容詞・副詞を伴うのに対し、Whatever（何を〜しようとも）・Whoever（〜する人は誰でも）は後ろに直接「主語＋動詞」が続く、という構造上の違いがある。\n\n【ポイント1】①Howeverの形を確認する\n"However hard she tried"＝「どんなに一生懸命努力しても」。However＋副詞（hard）＋主語＋動詞（=no matter how hard）。\n\n【ポイント2】②Whateverの形を確認する\n"Whatever you may say"＝「あなたが何と言おうとも」。Whatever＋主語＋動詞（=no matter what）。\n\n【ポイント3】③Whoeverの形を確認する\n"Whoever finishes the marathon first"＝「マラソンを最初に終える人は誰でも」。Whoever（=anyone who）が名詞節を作り、文全体の主語になっている。\n\n【答え】\n① ア(However)　② イ(Whatever)　③ ウ(Whoever)\n\n【確かめ】\n①の後ろに形容詞・副詞（hard）が続いていること、③のWhoeverが文全体の主語の働きをしていることを確認する。\n\n【よくあるまちがい】\n①をWhateverにしてしまうミス。Howeverは後ろに形容詞・副詞（hard）を伴うが、Whateverは直接主語＋動詞が続くので、構造が合わなくなる。\n\n【ここが絶対】\nHowever＋形容詞/副詞＋S＋V、Whatever/Whoever/Wherever＋S＋Vという構造の違いをセットで覚える。',
     pitfall: '①をWhateverとすると後ろのhard（副詞）の説明が不自然になる。Howeverは形容詞・副詞を伴う。',
     memoryTip: 'However+形容詞/副詞、Whatever/Whoever/Wherever+主語+動詞、と構造の違いで覚える。',
   },
@@ -715,7 +716,8 @@ C: (　④　) I'll prepare the proposal for tomorrow.
   （何かを失って初めて、私たちはその本当の価値に気づく）`,
     answer: '① who (that)　② that',
     hint: 'It is/was+強調したい語句+who/that+残りの文、の強調構文。',
-    explanation: `【出題意図】強調構文（It is/was〜that/who…）の形を問う。【解説】①「It was Emi who won〜」＝Emiを強調する強調構文。人を強調する場合はwhoも使えるが、thatでも可。②「It is not until we lose something that we realize〜」＝「〜して初めて…」という頻出の強調構文パターン（not until〜が強調される）。【注意点】①のような人を強調する強調構文ではwho/thatどちらも使用可能。②は「It is not until A that B」の形をセットで覚える必要がある。【関連知識】強調構文は元の文（Emi won the speech contest.）からEmiを取り出し「It is/was Emi that/who+残りの文」の形にすると理解しやすい。`,
+    explanation:
+      '【何を聞かれているか】\n強調構文（It is/was〜that/who…）を使って、2つの文を完成させる問題。\n\n【なぜIt is/wasを使って強調するのか】\n"It is/was＋強調したい語句＋that/who＋残りの文"という形にすると、文中の特定の語句（人・もの・時など）を「〜こそが」と強調して伝えることができる。\n\n【ポイント1】①人を強調する強調構文を確認する\n"It was Emi who won the speech contest"＝「優勝したのはエミだった」。Emiという人を強調しているので、whoまたはthatが使える。\n\n【ポイント2】②"not until〜"を強調する構文を確認する\n"It is not until we lose something that we realize its true value."＝「何かを失って初めて、その本当の価値に気づく」。not until〜（〜して初めて）という部分を強調している。\n\n【ポイント3】強調構文の作り方を確認する\n元の文（Emi won the speech contest.）から強調したい語句（Emi）を取り出し、"It is/was＋Emi＋that/who＋残りの文"の形にする。\n\n【答え】\n① who (that)　② that\n\n【確かめ】\n①が人（Emi）を強調していて、whoまたはthatが使われていること、②が"It is not until A that B"（Aして初めてB）という決まった形になっていることを確認する。\n\n【よくあるまちがい】\n①をwhichにしてしまうミス。先行詞（強調されている語）が人（Emi）の場合はwho（またはthat）を使う。\n\n【ここが絶対】\n"It is not until A that B"＝「Aして初めてB」という決まり文句を丸ごと覚える。強調構文は元の文から強調したい語句を取り出して考えると理解しやすい。',
     pitfall: '①をwhichにするのは誤り。先行詞が人（Emi）の場合はwho（またはthat）を使う。',
     memoryTip: 'It is not until A that B=「Aして初めてB」という決まり文句として丸ごと覚える。',
   },
@@ -802,7 +804,8 @@ Japan's declining birthrate has led to a decrease in the number of children, and
     answer: `① The harder you study, the more interesting the subject becomes.
 ② What matters most is not how long you study but how you study.`,
     hint: '①the+比較級, the+比較級構文、②not A but B構文と名詞節What matters mostが主語。',
-    explanation: `【出題意図】「the+比較級, the+比較級」構文と、「not A but B」＋名詞節主語の複合的な語順整序を問う最高難度の問題。【解説】①「The harder you study, the more interesting the subject becomes.」＝「勉強すればするほど」the harder you study、「その科目はより面白くなる」the more interesting the subject becomes。②「What matters most is not how long you study but how you study.」＝「What matters most（最も重要なことは）」が主語の名詞節、be動詞の後に「not A but B」（AではなくB）の形でhow long you study（どれだけ長く）とhow you study（どのように）を対比させる。【注意点】①は「the+比較級」の部分を文頭に必ず2つ並べる語順。②はnot A but Bの語順を崩さない。【関連知識】What matters is〜（重要なのは〜だ）は評論文でよく使われる主語構文。`,
+    explanation:
+      '【何を聞かれているか】\n「the＋比較級, the＋比較級」構文と「not A but B」を含む文を、語句を並べ替えて完成させる問題。\n\n【なぜこの2つの構文が組み合わさるのか】\n①「勉強すればするほど面白くなる」という比例関係は「the＋比較級, the＋比較級」構文、②「重要なのはAではなくB」という対比は「not A but B」＋名詞節主語という、それぞれ異なる複合的な構文で表す。\n\n【ポイント1】①「the＋比較級, the＋比較級」を確認する\n"The harder you study, the more interesting the subject becomes."＝前半・後半ともthe＋比較級で始まる決まった語順。\n\n【ポイント2】②主語になる名詞節を確認する\n"What matters most"（最も重要なことは）が、文全体の主語になる名詞節。\n\n【ポイント3】②"not A but B"を確認する\nbe動詞の後に"not how long you study but how you study"（どれだけ長くではなく、どのように）という対比の形を続ける。\n\n【答え】\n① The harder you study, the more interesting the subject becomes.\n② What matters most is not how long you study but how you study.\n\n【確かめ】\n①が「the＋比較級」で始まる2つの部分から成っていること、②がnot A but Bの語順（AとBが逆になっていない）を確認する。\n\n【よくあるまちがい】\n②でnotとbutの位置を逆にしたり、how longとhowを入れ替えたりしてしまうミス。\n\n【ここが絶対】\n「the＋比較級, the＋比較級」は必ず対で使う。"not A but B"（AではなくB）は語順を固定して覚える。',
     pitfall: '②でnotとbutの位置を逆にしたり、howとhow longを入れ替えたりしないよう注意する。',
     memoryTip: '「the+比較級, the+比較級」は必ず対で使う。not A but B は「AではなくB」の順序を固定して覚える。',
   },
@@ -834,7 +837,8 @@ Finding the right balance between the benefits of club activities and the well-b
 ③ Several schools have started to set limits on practice hours.
 ④ 部活動の利点と、生徒・教師双方の心身の健康とのバランスをどう取るかが、日本の学校にとって今も続く課題である。（54字）`,
     hint: '①Supporters say bukatsu teaches〜、②critics argue that〜とteachers report〜、③本文最終文、④第3段落全体の要旨。',
-    explanation: `【出題意図】部活動（bukatsu）をテーマにした3段落構成の論説文読解。賛否両論と結論という論説の典型構造を理解し、情報を整理・要約する高難度の総合問題。【解説】①「bukatsu teaches teamwork, discipline, and perseverance」から2点（teamwork, discipline/perseverance）。②「the heavy time commitment...can interfere with students' academic studies and rest」と「teachers...report feeling overworked」の2点。③「several schools have started to set limits on practice hours」。④第3段落「Finding the right balance between the benefits of club activities and the well-being of both students and teachers remains an ongoing challenge」を60字以内で要約する。【注意点】④は「利点」と「生徒・教師の健康」のバランスというキーワードを必ず含める。【関連知識】perseverance（忍耐力）、unpaid coach（無給の顧問）、well-being（心身の健康）は社会的トピックの重要語彙。`,
+    explanation:
+      '【何を聞かれているか】\n日本の部活動（bukatsu）についての3段落構成の英文を読んで、利点・批判・対応策・結論を答える問題。\n\n【なぜ段落ごとの役割（利点→問題点→結論）を意識するのか】\nこの英文は「①部活動の利点→②時間的負担という批判→③バランスを取ることが課題という結論」という構成になっており、各段落がどの立場を述べているかを意識すると設問に対応しやすい。\n\n【ポイント1】①利点を確認する\n"bukatsu teaches teamwork, discipline, and perseverance"（チームワーク・規律・忍耐力を学べる）から2点。\n\n【ポイント2】②③批判と対応策を確認する\n批判は"heavy time commitment...can interfere with students\' academic studies and rest"（学業・休息への支障）と"teachers...report feeling overworked"（教師の働き過ぎ）の2点。対応策は"several schools have started to set limits on practice hours"（練習時間に制限を設け始めた）。\n\n【ポイント3】④結論を確認する\n第3段落は「部活動の利点」と「生徒・教師の心身の健康」のバランスを取ることが、日本の学校にとって今も続く課題だという結論。\n\n【答え】\n① Bukatsu teaches teamwork and discipline (and perseverance).\n② ・部活動にかかる時間の負担が大きく、生徒の学業や休息に支障をきたす可能性がある。・無給で顧問を務める教師の中に、働き過ぎだと感じている人がいる。\n③ Several schools have started to set limits on practice hours.\n④ 部活動の利点と、生徒・教師双方の心身の健康とのバランスをどう取るかが、日本の学校にとって今も続く課題である。（54字）\n\n【確かめ】\n②の答えが、生徒側の負担（学業・休息）と教師側の負担（働き過ぎ）の両方に触れているか確認する。\n\n【よくあるまちがい】\n②で生徒側の負担だけを答え、教師側の負担（無給の顧問）を見落としてしまうミス。\n\n【ここが絶対】\n3段落構成の論説文は「利点→問題点→バランス・結論」というパターンを押さえ、各段落の役割を整理してから答える。',
     pitfall: '②で第2段落の批判点を答える際、生徒側の負担と教師側の負担の両方に触れる必要がある。',
     memoryTip: '3段落構成：段落1=利点、段落2=問題点、段落3=バランス・結論、というパターンを押さえる。',
   },
@@ -922,7 +926,8 @@ Climate change is affecting school life in unexpected ways. Extremely hot summer
 ② As far as I know
 ③ There is no point of worrying`,
     hint: '①can\'t help+動名詞（〜せずにはいられない）、②as far as I know（私が知る限り）、③There is no point of/in+動名詞。',
-    explanation: `【出題意図】can't help+動名詞、as far as I know、There is no point in/of+動名詞という頻出定型表現の語順整序を問う。【解説】①「can't help+動名詞」＝「〜せずにはいられない」（can't help but+原形も同意で使われる）。②「as far as I know」＝「私が知る限りでは」という頻出の慣用表現。③「There is no point in/of+動名詞」＝「〜しても意味がない・仕方がない」。【注意点】①のcan't helpの後は必ず動名詞（feeling）が続く（can't help to feelは誤り）。②asとfarの語順を崩さない。③point in doingの方が一般的だが、point of doingも用いられる。【関連知識】can't help but+動詞原形（=can't help+動名詞）、it's no use+動名詞（〜しても無駄だ）も類似の重要表現。`,
+    explanation:
+      '【何を聞かれているか】\ncan\'t help＋動名詞、as far as I know、There is no point in/of＋動名詞という3つの頻出定型表現を、語句を並べ替えて完成させる問題。\n\n【なぜそれぞれの表現の後ろの形が決まっているのか】\ncan\'t help（〜せずにはいられない）、as far as I know（私が知る限り）、There is no point in/of〜ing（〜しても仕方がない）は、それぞれ後ろに続く形（動名詞や語順）が決まった、丸ごと覚えるべき慣用表現。\n\n【ポイント1】①"can\'t help＋動名詞"を確認する\n"I can\'t help feeling nervous"＝「緊張せずにはいられない」。can\'t helpの後ろは必ず動名詞（feeling）。\n\n【ポイント2】②"as far as I know"を確認する\n"As far as I know"＝「私が知る限りでは」という決まった語順の慣用表現。\n\n【ポイント3】③"There is no point of/in＋動名詞"を確認する\n"There is no point of worrying"＝「心配しても仕方がない」。\n\n【答え】\n① I can\'t help feeling nervous\n② As far as I know\n③ There is no point of worrying\n\n【確かめ】\n①のhelpの後ろがfeeling（動名詞）になっていて、to feelになっていないことを確認する。\n\n【よくあるまちがい】\n①を"I can\'t help to feel"としてしまうミス。can\'t helpの後ろは動名詞を使う。\n\n【ここが絶対】\ncan\'t help＋動名詞（〜せずにはいられない）、as far as I know（知る限り）、There is no point in/of＋動名詞（〜しても仕方がない）を、それぞれ定型表現として丸ごと覚える。',
     pitfall: '①をI can\'t help to feelとしないこと。can\'t helpの後は動名詞。',
     memoryTip: 'can\'t help+ing＝我慢できない、as far as I know＝知る限り、と定型表現ごと丸暗記する。',
   },
@@ -948,7 +953,8 @@ A: Exactly. Some teachers are worried about the extra workload, but the school b
 ② 教師が詳細なコメントを書くのに、より多くの時間がかかってしまうという懸念。
 ③ It will help students understand their progress better.`,
     hint: '①Aの3番目の発言、②Bの発言「it must take teachers a lot more time」、③Aの最後の発言後半。',
-    explanation: `【出題意図】学校の成績評価制度の変更をテーマにした会話文読解。制度内容・懸念・メリットの3点を整理する問題。【解説】①「teachers will also write detailed comments on each student's strengths and areas to improve」に加え「Instead of just letter grades」から、文字による評価に加えて詳細なコメントを書く制度だとわかる。②Bの「it must take teachers a lot more time to write」＝教師の負担増加への懸念。③「the school board says it will help students understand their progress better」＝生徒が自分の成長をよりよく理解できるようになる、というメリット。【注意点】①は「letter gradesに加えて」という点を明確に含める必要がある。【関連知識】grading system（成績評価制度）、workload（仕事量・負担）は教育制度に関する頻出語彙。`,
+    explanation:
+      '【何を聞かれているか】\n学校の新しい成績評価制度についての会話文を読んで、制度の内容・懸念・メリットを答える問題。\n\n【なぜ"Instead of just A, also B"に注目するのか】\n"Instead of just letter grades, teachers will also write detailed comments"という文は、「文字評価だけでなく、コメントも書く」という追加のニュアンスを表しており、文字評価が完全になくなるわけではないことを正確に読み取る必要がある。\n\n【ポイント1】①制度の内容を確認する\n"teachers will also write detailed comments on each student\'s strengths and areas to improve, in addition to letter grades"（文字評価に加えて詳細なコメントを書く）。\n\n【ポイント2】②懸念を確認する\nBの発言"it must take teachers a lot more time to write"から、教師の時間的負担の増加が懸念点。\n\n【ポイント3】③メリットを確認する\n"the school board says it will help students understand their progress better"（生徒が自分の成長をよりよく理解できる）。\n\n【答え】\n① Teachers will write detailed comments on each student\'s strengths and areas to improve, in addition to letter grades.\n② 教師が詳細なコメントを書くのに、より多くの時間がかかってしまうという懸念。\n③ It will help students understand their progress better.\n\n【確かめ】\n①の答えが「文字評価に加えて」コメントを書くという内容になっていて、文字評価がなくなるという誤った内容になっていないか確認する。\n\n【よくあるまちがい】\n①でletter gradesを完全になくす制度だと誤解してしまうミス。"Instead of just〜"は「〜だけでなく」という追加の意味を表す。\n\n【ここが絶対】\n"Instead of just A, also B"＝「Aだけでなく、Bも」という追加のニュアンスを正確に読み取る。',
     pitfall: '①でletter gradesを完全になくす制度だと誤解しないこと。「加えて」コメントを書く制度。',
     memoryTip: 'Instead of just A, also B＝「Aだけでなく、Bも」という追加のニュアンスを正しく読み取る。',
   },
@@ -993,7 +999,8 @@ Peer pressure among teenagers can influence decisions ranging from fashion choic
 ② 授業をサボったり、危険な行動に及んだりすること。
 ③ 生徒の自己肯定感（自信）と批判的思考力を育てることで、良い社会的影響は受け入れつつ、悪い同調圧力には抵抗できるようにすること。`,
     hint: '①While以下前半、②such as skipping class or engaging in risky behavior、③Experts suggest that以下。',
-    explanation: `【出題意図】ピア・プレッシャー（同調圧力）という思春期心理をテーマにした読解問題。対比構造と対策の把握を問う。【解説】①「some forms of peer pressure encourage positive behavior, such as studying harder because friends are doing so」＝友人が勉強しているから自分も頑張るというポジティブな影響。②「skipping class or engaging in risky behavior（授業をサボる、危険な行動をする）」がネガティブな例。③「building students' self-confidence and critical thinking skills can help them resist negative peer pressure while still benefiting from positive social influences」＝自己肯定感と批判的思考力を育てることで、良い影響は受けつつ悪い同調圧力に抵抗する力をつける、という対策。【注意点】Whileは「〜だが一方で」という対比の接続詞として機能している。【関連知識】peer pressure（同調圧力）、self-confidence（自己肯定感）、critical thinking（批判的思考）は心理・教育系読解の頻出語彙。`,
+    explanation:
+      '【何を聞かれているか】\nピア・プレッシャー（同調圧力）についての英文を読んで、ポジティブな影響・ネガティブな例・対策を答える問題。\n\n【なぜWhile A, Bの対比構造に注目するのか】\n本文の"While some forms of peer pressure encourage positive behavior..., other forms can lead to negative outcomes..."は、Whileを使ってポジティブな面とネガティブな面を対比しており、この構造を見抜くと設問の答えが整理しやすい。\n\n【ポイント1】①ポジティブな影響を確認する\n"encourage positive behavior, such as studying harder because friends are doing so"（友人が勉強しているから自分も頑張る）。\n\n【ポイント2】②ネガティブな例を確認する\n"skipping class or engaging in risky behavior"（授業をサボる、危険な行動をする）。\n\n【ポイント3】③専門家の対策を確認する\n"building students\' self-confidence and critical thinking skills can help them resist negative peer pressure while still benefiting from positive social influences"（自己肯定感と批判的思考力を育てることで、良い影響は受けつつ悪い同調圧力に抵抗する）。\n\n【答え】\n① It can encourage positive behavior, such as studying harder because friends are doing so.\n② 授業をサボったり、危険な行動に及んだりすること。\n③ 生徒の自己肯定感（自信）と批判的思考力を育てることで、良い社会的影響は受け入れつつ、悪い同調圧力には抵抗できるようにすること。\n\n【確かめ】\n②の答えがネガティブな例（授業をサボる、危険な行動）になっていて、①のポジティブな例と混同していないか確認する。\n\n【よくあるまちがい】\n②を「勉強を頑張る」というポジティブな例と混同してしまうミス。設問はネガティブな例を問うている。\n\n【ここが絶対】\n"While A, B"の構造では、Aが一部の良い面、Bが対比される内容（悪い面）と整理して読む。',
     pitfall: '②を「勉強を頑張る」というポジティブな例と混同しないこと。ネガティブな例を問われている。',
     memoryTip: 'While A, B の構造では、Aが譲歩（一部は良い面）、Bが対比される内容（悪い面）と整理する。',
   },
