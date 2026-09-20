@@ -467,7 +467,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '魚',
     hint: '水の中を泳ぐ動物だよ。',
     explanation:
-      '【答え】魚\n\n【fish の意味】fish は「魚」を表す英単語である。\n\n【複数形にとくべつな決まりがある】ここがこの単語のいちばん大事なところである。\n・fish は、1ぴきでも何びきでも同じ形を使う\n・one fish（1ぴき）／ three fish（3びき）\n・× three fishes\ns をつけない。\n\n【単数と複数が同じ形の単語】まとめて覚える。\n・fish（魚）・sheep（羊）・deer（しか）\n・Japanese（日本人）・Chinese（中国人）\n群れで数えるものや、国名から来た言葉に多い。\n\n【ふつうの複数形とくらべる】\n・ふつうは s をつける … dogs、cats、books\n・s・x・ch・sh で終わる語は es … buses、boxes、watches、dishes\n・形が変わるもの … man → men、woman → women、child → children、foot → feet、tooth → teeth、mouse → mice\n決まりどおりでないものを先に覚えるのが近道である。\n\n【魚に関わる単語】\n・swim … 泳ぐ\n・sea … 海\n・river … 川\n・fishing … つり\n・gill … えら\n\n【つづりと発音】f-i-s-h。\n・sh で「シュ」の1つの音になる。2文字で1つの音である\n・sh のなかま … fish、she、shop、ship、wash、dish\n\n【使い方の例】\n・I caught three fish.（魚を3びきつかまえました）\n・Fish live in water.（魚は水の中にすんでいます）',
+      '【何を聞かれているか】\n"fish"が表す動物を答える問題。\n\n【なぜ複数形が特別なのか】\nfishは、1ぴきでも何びきでも同じ形を使うという、複数形についての特別な決まりを持つ単語である。\n\n【ポイント1】fishの意味を確認する\nfish は「魚」を表す英単語である。\n\n【ポイント2】複数形の決まりを確認する\none fish（1ぴき）／ three fish（3びき）のように、sをつけない（× three fishes）。\n\n【ポイント3】単数と複数が同じ形の仲間を確認する\nfish（魚）・sheep（羊）・deer（しか）・Japanese（日本人）・Chinese（中国人）など、群れで数えるものや国名から来た言葉に多い。\n\n【答え】\n魚\n\n【確かめ】\n選んだ答えが、水の中を泳ぐ動物（魚）であり、鳥・うさぎ・ぞうと混同していないか確認する。\n\n【よくあるまちがい】\nfishの複数形にsをつけてfishesとしてしまうミス。\n\n【ここが絶対】\nfish・sheep・deerのように単数と複数が同じ形の単語は、ふつうの複数形（s, esをつける）とは別にまとめて覚える。\n\n【魚に関わる単語】swim（泳ぐ）、sea（海）、river（川）、fishing（つり）、gill（えら）。\n\n【つづりと発音】f-i-s-h。shで「シュ」の1つの音になる（she、shop、ship、wash、dishも同じ仲間）。\n\n【使い方の例】I caught three fish.（魚を3びきつかまえました）、Fish live in water.（魚は水の中にすんでいます）。',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -511,7 +511,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'お母さん',
     hint: '自分を産んで育ててくれる女の人だよ。',
     explanation:
-      '【答え】お母さん\n\n【mother の意味】mother は「お母さん・母」を表す英単語である。\n\n【つづりと発音】m-o-t-h-e-r。\n・th の音は、上下の歯の間に舌先を少し出して出す。日本語にない音である\n・th には2つの音がある\n　・にごる音 … mother、father、this、that、they\n　・にごらない音 … think、three、thank、bath\nmother の th はにごる音である。\n\n【呼びかけるとき】家族に話しかけるときは、短い言い方を使う。\n・Mom / Mommy（アメリカ）\n・Mum / Mummy（イギリス）\n・ふだんの会話では Mother より Mom のほうがふつうである\n\n【家族を表す単語】まとめて覚える。\n・mother（母）／ father（父）\n・sister（姉・妹）／ brother（兄・弟）\n・grandmother（祖母）／ grandfather（祖父）\n・aunt（おば）／ uncle（おじ）\n・cousin（いとこ）\n・parents（両親）／ son（息子）／ daughter（娘）\n\n【日本語とのちがい】ここがおもしろい点である。\n・日本語 … 姉と妹、兄と弟を区別する\n・英語 … どちらも sister、どちらも brother\n・区別したいときは、big sister / little sister、older brother / younger brother と言う\n言葉によって、何を区別するかがちがう。\n\n【grand のつくり方】\n・grand ＋ mother ＝ grandmother（祖母）\n・great ＋ grandmother ＝ great-grandmother（曾祖母）\n前に足していくだけで世代が上がる。\n\n【使い方の例】This is my mother.（こちらはわたしの母です）',
+      '【何を聞かれているか】\n"mother"の意味を答える問題。\n\n【なぜthの発音に注意が必要なのか】\nmotherのthは、日本語にはない、上下の歯の間に舌先を少し出して出す音であり、にごる音（this, that, they等と同じ）とにごらない音（think, three等）の2種類があるため区別が必要。\n\n【ポイント1】motherの意味を確認する\nmother は「お母さん・母」を表す英単語である。\n\n【ポイント2】呼びかけるときの言い方を確認する\n家族に話しかけるときは、Mom / Mommy（アメリカ）、Mum / Mummy（イギリス）のような短い言い方を使い、ふだんの会話ではMotherよりMomの方がふつう。\n\n【ポイント3】家族を表す単語との関係を確認する\nmother（母）／father（父）、sister（姉・妹）／brother（兄・弟）のように、まとめて覚える家族の単語がある。\n\n【答え】\nお母さん\n\n【確かめ】\n選んだ答えが「お母さん」であり、お父さん・お姉さん・お兄さんと混同していないか確認する。\n\n【よくあるまちがい】\nmotherのthの発音を、think等のにごらない音だと誤解してしまうミス。\n\n【ここが絶対】\n英語ではsister（姉・妹）、brother（兄・弟）のように年上・年下を区別しないことも合わせて覚える（区別したいときはbig sister / little sister等と言う）。\n\n【grand のつくり方】grand＋mother＝grandmother（祖母）、great＋grandmother＝great-grandmother（曾祖母）のように、前に足していくだけで世代が上がる。\n\n【使い方の例】This is my mother.（こちらはわたしの母です）。',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -568,7 +568,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '家族',
     hint: 'お父さん、お母さん、きょうだいなどをまとめて呼ぶことばだよ。',
     explanation:
-      '【答え】家族\n\n【family の意味】family は「家族」を表す英単語である。お父さん・お母さん・きょうだいなど、いっしょに暮らす人たちをまとめて指す。\n\n【つづりと発音】f-a-m-i-l-y の6文字。\n・「ファミリー」と3拍で読むが、英語ではファ・ミ・リィと最初を強く読む\n・最後の y は「イ」の音になる。単語の終わりの y は母音のはたらきをする\n・y で終わるなかま … family、happy、baby、city、study\n\n【複数形の作り方】子音 ＋ y で終わる語は、y を i に変えて es をつける。\n・family → families\n・city → cities、baby → babies、country → countries\n・ただし母音 ＋ yなら、そのまま s … boy → boys、day → days\ny の前が母音か子音かで決まる。\n\n【まとまりを表す言葉】family のように、たくさんの人やものをひとまとめにして表す言葉がある。\n・family（家族）・class（クラス）・team（チーム）・group（グループ）\n\n【家族に関わる単語】\n・parents … 両親（いつも複数形）\n・children … 子どもたち（child の複数形）\n・home … 家庭\n・house … 建物としての家\nhome と house のちがいは問われやすい。home は「帰る場所・家庭」、house は「建物」である。\n\n【家族をしょうかいする言い方】\n・How many people are there in your family?（何人家族ですか）\n・There are four people in my family.（4人家族です）\n・I have a sister.（姉が1人います）\n\n【使い方の例】I love my family.（家族が大好きです）',
+      '【何を聞かれているか】\n"family"の意味を答える問題。\n\n【なぜyをiに変えて複数形にするのか】\nfamilyのように子音＋yで終わる語は、複数形にするときyをiに変えてesをつけるという決まりがある（family→families）。\n\n【ポイント1】familyの意味を確認する\nfamily は「家族」を表す英単語である。お父さん・お母さん・きょうだいなど、いっしょに暮らす人たちをまとめて指す。\n\n【ポイント2】複数形の作り方を確認する\n子音＋yで終わる語は、yをiに変えてesをつける（family→families、city→cities、baby→babies）。ただし母音＋yならそのままs（boy→boys）。\n\n【ポイント3】homeとhouseの違いを確認する\nhomeは「帰る場所・家庭」、houseは「建物」という違いがある。\n\n【答え】\n家族\n\n【確かめ】\n選んだ答えが「家族」であり、友だち・先生・クラスと混同していないか確認する。\n\n【よくあるまちがい】\nfamilyの複数形をfamilysとしてしまうミス（正しくはfamilies）。\n\n【ここが絶対】\ny の前が母音か子音かで複数形の作り方が変わることを、family・city・boy・dayの例でセットで覚える。\n\n【家族に関わる単語】parents（両親、いつも複数形）、children（子どもたち、childの複数形）。\n\n【家族をしょうかいする言い方】How many people are there in your family?（何人家族ですか）、There are four people in my family.（4人家族です）。\n\n【使い方の例】I love my family.（家族が大好きです）。',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -682,7 +682,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: "I'm fine, thank you.",
     hint: '「調子はどう？」という質問に対する、体調・気分の答えを選ぼう。',
     explanation:
-      '"How are you?"は「元気ですか」「調子はどうですか」とたずねる表現。\nこれに対しては"I\'m fine, thank you."（元気です、ありがとう）のように、自分の調子を答えるのが自然。名前を答える"My name is Ken."や、色を答える"It is red."などはこの質問への答えとしては合わない。',
+      '【何を聞かれているか】\n"How are you?"（元気ですか）とたずねられたときの、最も自然な返答を選ぶ問題。\n\n【なぜ体調・気分で答えるのか】\n"How are you?"は「調子はどう？」と体調・気分をたずねる表現なので、それに対しては体調・気分を伝える返答をする。\n\n【ポイント1】"How are you?"の意味を確認する\n「元気ですか」「調子はどうですか」とたずねる表現。\n\n【ポイント2】自然な返答を確認する\n"I\'m fine, thank you."（元気です、ありがとう）が自然な返答。\n\n【ポイント3】他の選択肢を消去する\n「私の名前はケンです」（名前）、「それは赤いです」（色）、「おやすみなさい」（別れの挨拶）は、いずれもHow are you?の返答としてかみ合わない。\n\n【答え】\nI\'m fine, thank you.\n\n【確かめ】\n選んだ返答が、名前や色ではなく、体調・気分を答える内容になっているか確認する。\n\n【よくあるまちがい】\nHow are you?とWhat\'s your name?を混同してしまうミス。\n\n【ここが絶対】\nHow are you?＝調子を尋ねる、答えはI\'m fine/I\'m goodなど気分・体調の言葉で返すと覚える。',
     difficulty: 'advanced',
     examType: 'chugaku',
     grade: 'e4',

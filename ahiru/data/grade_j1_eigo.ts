@@ -40,7 +40,7 @@ export const gradeJ1EigoQuestions: Question[] = [
     ],
     hint: '主語がShe（彼女）のときのbe動詞。',
     explanation:
-      '【解説】\n主語がhe・she・it（3人称単数）のときのbe動詞はis。\nShe is a teacher. で「彼女は先生です」という文になる。\n答え：She is a teacher.',
+      '【何を聞かれているか】\n「彼女は先生です。」を英語にする問題。\n\n【なぜisを使うのか】\n主語がhe・she・it（3人称単数）のときのbe動詞はisになるという決まりがある。\n\n【ポイント1】主語の種類を確認する\n主語Sheは3人称単数。\n\n【ポイント2】be動詞の対応を確認する\n3人称単数にはis、複数やyouにはare、Iにはamを使う。\n\n【ポイント3】完成した文を確認する\n"She is a teacher."＝「彼女は先生です」。\n\n【答え】\nShe is a teacher.\n\n【確かめ】\n主語Sheに対応するisが選ばれ、am・areと混同していないか確認する。\n\n【よくあるまちがい】\n主語の人称を確認せずareやamを選んでしまうミス。\n\n【ここが絶対】\nI→am、He/She/It（三人称単数）→is、You/複数→areという対応で覚える。',
   },
   {
     id: 'grade_j1_eigo_03',
@@ -58,7 +58,7 @@ export const gradeJ1EigoQuestions: Question[] = [
     ],
     hint: 'be動詞の否定文は、be動詞のすぐあとにnotを置く。',
     explanation:
-      "【解説】\nbe動詞の否定文は、be動詞のすぐあとにnotを置く。\nareの否定はare not（短縮形aren't）。\nWe are not busy. で「私たちは忙しくありません」という文になる。\n答え：We are not busy.",
+      '【何を聞かれているか】\n「私たちは忙しくありません。」を英語にする問題。\n\n【なぜbe動詞の直後にnotを置くのか】\nbe動詞の否定文は、be動詞の位置を変えず、直後にnotを加えるだけで作れるという決まりがある。\n\n【ポイント1】主語の種類を確認する\n主語Weは複数。\n\n【ポイント2】be動詞と否定文の形を確認する\n複数の主語にはareを使い、areの否定はare not（短縮形aren\'t）。\n\n【ポイント3】完成した文を確認する\n"We are not busy."＝「私たちは忙しくありません」。\n\n【答え】\nWe are not busy.\n\n【確かめ】\nareの直後にnotが置かれているか確認する。\n\n【よくあるまちがい】\n"We isn\'t busy."のように、複数の主語にisn\'tを使ってしまうミス。\n\n【ここが絶対】\nbe動詞の否定はbe動詞のすぐ後ろにnotを置くだけ、と覚える。',
   },
   {
     id: 'grade_j1_eigo_04',
@@ -89,7 +89,7 @@ export const gradeJ1EigoQuestions: Question[] = [
     choices: ['are', 'is', 'am', 'be'],
     hint: '主語が複数のときのbe動詞。',
     explanation:
-      '【解説】\n主語が複数（they, we, youなど）のときのbe動詞はare。\nThey are my friends. で「彼らはわたしの友だちです」という文になる。\n答え：are',
+      '【何を聞かれているか】\n"They (　) my friends."（彼らはわたしの友だちです。）の空欄に入る語を選ぶ問題。\n\n【なぜareを使うのか】\n主語が複数（they, we, youなど）のときのbe動詞はareになるという決まりがある。\n\n【ポイント1】主語の種類を確認する\n主語Theyは複数。\n\n【ポイント2】be動詞の対応を確認する\n複数の主語にはareを使う。\n\n【ポイント3】他の選択肢を消去する\nis（三人称単数用）、am（I用）、be（原形）はいずれも複数の主語Theyには使わない。\n\n【答え】\nare\n\n【確かめ】\n主語Theyに対応するareが選ばれ、is・amと混同していないか確認する。\n\n【よくあるまちがい】\n主語の人称・数を確認せずisを選んでしまうミス。\n\n【ここが絶対】\nI→am、He/She/It（三人称単数）→is、You/複数→areという対応で覚える。',
   },
   {
     id: 'grade_j1_eigo_06',
@@ -102,7 +102,7 @@ export const gradeJ1EigoQuestions: Question[] = [
     choices: ["No, he isn't.", "No, he don't.", 'No, he not.', "No, he doesn't."],
     hint: 'be動詞の疑問文にはbe動詞を使って答える。',
     explanation:
-      "【解説】\nIs he 〜? とbe動詞でたずねられたら、Yes, he is. またはNo, he isn't. のようにbe動詞を使って答える。\n答え：No, he isn't.",
+      '【何を聞かれているか】\n"Is he a doctor?"に対して「いいえ、ちがいます」と答える正しい文を選ぶ問題。\n\n【なぜbe動詞を使って答えるのか】\nbe動詞の疑問文（Is he〜?）には、be動詞を使って答えるという決まりがある。\n\n【ポイント1】疑問文の形を確認する\n"Is he a doctor?"＝be動詞isを使った疑問文。\n\n【ポイント2】答え方の形を確認する\nYes, he is. またはNo, he isn\'t.のように、be動詞を使って答える。\n\n【ポイント3】他の選択肢を消去する\ndon\'t、doesn\'t（一般動詞用）を使った答えは、be動詞の疑問文には合わない。\n\n【答え】\nNo, he isn\'t.\n\n【確かめ】\n答えがbe動詞isn\'t（isn\'tはis notの短縮形）を使った形になっているか確認する。\n\n【よくあるまちがい】\nbe動詞の疑問文に、一般動詞の否定（don\'t, doesn\'t）で答えてしまうミス。\n\n【ここが絶対】\nbe動詞の疑問文にはbe動詞、一般動詞の疑問文にはdo/doesを使って答えると覚える。',
   },
 
   // ============================================================
@@ -363,7 +363,7 @@ export const gradeJ1EigoQuestions: Question[] = [
     choices: ['studies', 'studys', 'studyes', "study's"],
     hint: '子音字＋yで終わる動詞は、yをiに変えてesをつける。',
     explanation:
-      '【解説】\nstudy（勉強する）のように子音字＋yで終わる動詞は、3人称単数現在形にするときyをiに変えてesをつける。\nstudy→studies。\n答え：studies',
+      '【何を聞かれているか】\n"She (　) every day."（彼女は毎日勉強します。）の空欄に入る語を選ぶ問題。\n\n【なぜyをiに変えてesをつけるのか】\nstudyのように子音字＋yで終わる動詞は、3人称単数現在形にするときyをiに変えてesをつけるという決まりがある。\n\n【ポイント1】主語の種類を確認する\n主語Sheは3人称単数。\n\n【ポイント2】studyの変化を確認する\nstudy→studies（yをiに変えてesをつける）。\n\n【ポイント3】他の選択肢を消去する\nstudys（yをそのまま残す誤り）、studyes（間違った変化）、study\'s（アポストロフィを使う誤り）はいずれも不適切。\n\n【答え】\nstudies\n\n【確かめ】\nstudyがstudiesに正しく変化しているか（yがiに変わっているか）確認する。\n\n【よくあるまちがい】\nstudyにそのままsをつけてstudysとしてしまうミス。\n\n【ここが絶対】\n子音字+y→yをiに変えてes（study→studies, try→tries）。母音字+yのときはそのままs（play→plays）と覚える。',
     memoryTip:
       '子音字＋y→yをiに変えてes（study→studies, try→tries）。母音字＋yのときはそのままs（play→plays）。',
   },
@@ -383,7 +383,7 @@ export const gradeJ1EigoQuestions: Question[] = [
     ],
     hint: 'goのように-oで終わる動詞にはesをつける。alwaysの位置にも注意。',
     explanation:
-      '【解説】\ngo（行く）のようにo・s・x・ch・shで終わる動詞は、3人称単数現在形にするときesをつける。go→goes。\nalwaysのような頻度を表す語は、be動詞・助動詞のあとか一般動詞の前に置く。\n答え：He always goes to school by bus.',
+      '【何を聞かれているか】\n「彼はいつもバスで学校に行きます。」を英語にする問題。\n\n【なぜgoにesをつけるのか】\ngoのようにo・s・x・ch・shで終わる動詞は、3人称単数現在形にするときesをつけるという決まりがある。\n\n【ポイント1】goの変化を確認する\ngo→goes（3人称単数現在形）。\n\n【ポイント2】alwaysの位置を確認する\nalwaysのような頻度を表す語は、be動詞・助動詞のあとか一般動詞の前に置く。\n\n【ポイント3】完成した文を確認する\n"He always goes to school by bus."＝「彼はいつもバスで学校に行きます」。\n\n【答え】\nHe always goes to school by bus.\n\n【確かめ】\nalwaysがgoesの前に置かれており、動詞の後ろに置かれていないか確認する。\n\n【よくあるまちがい】\nalwaysを"He goes always..."のように動詞の後に置いてしまうミス。\n\n【ここが絶対】\n頻度を表す語（always等）は一般動詞の前に置く、goのようなo・s・x・ch・shで終わる動詞はesをつけると覚える。',
     pitfall: 'alwaysをHe goes always...のように動詞のあとに置かないこと。',
   },
 
@@ -406,7 +406,7 @@ export const gradeJ1EigoQuestions: Question[] = [
     ],
     hint: '現在進行形はbe動詞＋動詞のing形。',
     explanation:
-      '【解説】\n「今〜しています」という現在進行形は〈be動詞＋動詞のing形〉で表す。\n主語がIのときのbe動詞はam。watch→watching。\n答え：I am watching TV now.',
+      '【何を聞かれているか】\n「私は今、テレビを見ています。」を英語にする問題。\n\n【なぜbe動詞+ing形を使うのか】\n「今〜しています」という現在進行形は、be動詞＋動詞のing形という組み合わせで表すという決まりがある。\n\n【ポイント1】主語Iのbe動詞を確認する\n主語がIのときのbe動詞はam。\n\n【ポイント2】動詞のing形を確認する\nwatch→watching。\n\n【ポイント3】完成した文を確認する\n"I am watching TV now."＝「私は今、テレビを見ています」。\n\n【答え】\nI am watching TV now.\n\n【確かめ】\nbe動詞am（主語Iに対応）と、動詞のing形watchingの両方が使われているか確認する。\n\n【よくあるまちがい】\nbe動詞を抜かして"I watching TV now."としてしまうミス。\n\n【ここが絶対】\n現在進行形＝be動詞+動詞のing形、という型でセットで覚える。',
   },
   {
     id: 'grade_j1_eigo_25',

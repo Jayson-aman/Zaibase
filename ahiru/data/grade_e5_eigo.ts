@@ -35,7 +35,7 @@ export const gradeE5EigoQuestions: Question[] = [
     choices: ['Tuesday', 'Wednesday', 'Sunday', 'Saturday'],
     hint: '曜日の順番：Sunday → Monday → Tuesday → ...',
     explanation:
-      '【解説】\n曜日の順番は Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday。\nMonday（月曜日）の次は Tuesday（火曜日）。\n答え：Tuesday',
+      '【何を聞かれているか】\nMondayの次の曜日を答える問題。\n\n【なぜ曜日の順番を覚えるのか】\n英語の曜日には決まった順番があり、その順番を覚えていれば、ある曜日の次や前の曜日をすぐに答えられる。\n\n【ポイント1】曜日の順番を確認する\nSunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturdayの順。\n\n【ポイント2】Mondayの位置を確認する\nMondayは2番目。\n\n【ポイント3】次の曜日を確認する\nMondayの次はTuesday（火曜日）。\n\n【答え】\nTuesday\n\n【確かめ】\n選んだ答えが、Mondayの1つ後ろの曜日（Tuesday）になっているか確認する。\n\n【よくあるまちがい】\nSunday（日曜日）をMondayの前後で混同してしまうミス。\n\n【ここが絶対】\n曜日はSunday〜Saturdayの順番をひとつながりで暗唱できるようにしておく。',
   },
   {
     id: 'grade_e5_eigo_05',
@@ -62,7 +62,7 @@ export const gradeE5EigoQuestions: Question[] = [
     choices: ['Saturday', 'Sunday', 'Monday', 'Friday'],
     hint: '「土曜日」を表す英単語。',
     explanation:
-      '【解説】\n「土曜日」は Saturday。\nMy favorite day is Saturday. で「わたしのいちばん好きな曜日は土曜日です」という文になる。\n答え：Saturday',
+      '【何を聞かれているか】\n"My favorite day is (　)."（わたしのいちばん好きな曜日は土曜日です。）の空欄に入る単語を選ぶ問題。\n\n【なぜSaturdayを選ぶのか】\n日本語の「土曜日」に対応する英単語がSaturdayなので、日本語の意味と英単語を正しく結びつける必要がある。\n\n【ポイント1】「土曜日」に対応する英単語を確認する\n「土曜日」はSaturday。\n\n【ポイント2】文の意味を確認する\n"My favorite day is Saturday."＝「わたしのいちばん好きな曜日は土曜日です」。\n\n【ポイント3】他の選択肢を消去する\nSunday（日曜日）、Monday（月曜日）、Friday（金曜日）はいずれも「土曜日」ではない。\n\n【答え】\nSaturday\n\n【確かめ】\n選んだ答えが「土曜日」を表すSaturdayになっているか確認する。\n\n【よくあるまちがい】\nSaturdayとSundayのつづり（両方Sで始まる）を混同してしまうミス。\n\n【ここが絶対】\n曜日の英単語は、日本語の意味とセットで正確に覚える。',
   },
 
   // ============================================================
@@ -225,7 +225,7 @@ export const gradeE5EigoQuestions: Question[] = [
     choices: ['social studies', 'science', 'art', 'math'],
     hint: '2つの単語を組み合わせた言い方。',
     explanation:
-      '【解説】\n「社会（科）」は英語で social studies（ソーシャル・スタディーズ）。\nsocial（社会の）と studies（学習）を組み合わせた言葉。\n答え：social studies',
+      '【何を聞かれているか】\n「社会」を英語で何と言うかを答える問題。\n\n【なぜ2つの単語を組み合わせるのか】\n「社会（科）」は、social（社会の）とstudies（学習）という2つの単語を組み合わせたsocial studiesという言い方をする。\n\n【ポイント1】social studiesの成り立ちを確認する\nsocial（社会の）＋studies（学習）＝social studies（社会科）。\n\n【ポイント2】他の選択肢を消去する\nscience（理科）、art（図工・美術）、math（算数・数学）はいずれも別の教科を表す。\n\n【ポイント3】教科名をセットで確認する\n教科名の英単語は、それぞれの教科と正しく結びつけて覚える。\n\n【答え】\nsocial studies\n\n【確かめ】\n選んだ答えが「社会（科）」を表すsocial studiesになっているか確認する。\n\n【よくあるまちがい】\nscience（理科）とsocial studies（社会）を混同してしまうミス。\n\n【ここが絶対】\n教科名は、social studies（社会）・science（理科）・art（図工）・math（算数）とセットで覚える。',
   },
 
   // ============================================================
@@ -242,7 +242,7 @@ export const gradeE5EigoQuestions: Question[] = [
     choices: ['I like soccer.', 'I likes soccer.', 'I like a soccer.', 'I liking soccer.'],
     hint: '主語が I（わたし）のときの like の形は変わらない。',
     explanation:
-      '【解説】\n「〜が好きです」は I like 〜. で表す。\n主語が I のときは like のまま（s はつけない）。\nsoccer のようなスポーツ名には a をつけない。\n答え：I like soccer.',
+      '【何を聞かれているか】\n「私はサッカーが好きです。」を英語にする問題。\n\n【なぜIike にsをつけないのか】\n主語がI（わたし）のときは、動詞likeにsをつけず、そのままの形で使うという決まりがある。\n\n【ポイント1】基本の形を確認する\n「〜が好きです」はI like 〜.で表す。\n\n【ポイント2】主語Iとlikeの形を確認する\n主語がIのときはlikeのまま（sはつけない）。\n\n【ポイント3】スポーツ名の前のaを確認する\nsoccerのようなスポーツ名にはaをつけない。\n\n【答え】\nI like soccer.\n\n【確かめ】\nlikeにsがついていない（likesになっていない）か、soccerの前にaがついていないか確認する。\n\n【よくあるまちがい】\n主語がIなのにlikesとsをつけてしまうミス。\n\n【ここが絶対】\n主語がIのときの一般動詞は、そのままの形（原形）を使うと覚える。',
   },
   {
     id: 'grade_e5_eigo_20',
@@ -260,7 +260,7 @@ export const gradeE5EigoQuestions: Question[] = [
     ],
     hint: '「好きではない」は don\'t like で表す。',
     explanation:
-      '【解説】\n「〜が好きではない」は I don\'t like 〜. で表す。\ndon\'t のあとの動詞 like は元の形のまま使う。\n答え：I don\'t like carrots.',
+      '【何を聞かれているか】\n「私はにんじんが好きではありません。」を英語にする問題。\n\n【なぜdon\'t likeで表すのか】\n「〜が好きではない」という一般動詞の否定文は、主語がIのときdon\'t（do not）を使い、その後の動詞は原形のまま続けるという決まりがある。\n\n【ポイント1】基本の形を確認する\n「〜が好きではない」はI don\'t like 〜.で表す。\n\n【ポイント2】don\'tの後の動詞の形を確認する\ndon\'tのあとの動詞likeは元の形のまま使う（likesにしない）。\n\n【ポイント3】他の選択肢を消去する\n"I not like"（notの位置が誤り）、"isn\'t like"（be動詞を使うのは誤り）はいずれも不適切。\n\n【答え】\nI don\'t like carrots.\n\n【確かめ】\ndon\'tの後のlikeが原形のままになっているか確認する。\n\n【よくあるまちがい】\n"I don\'t likes carrots."のように、don\'tの後の動詞にsをつけてしまうミス。\n\n【ここが絶対】\n一般動詞の否定文＝主語+don\'t/doesn\'t+動詞の原形、という型でセットで覚える。',
   },
   {
     id: 'grade_e5_eigo_21',
@@ -297,7 +297,7 @@ export const gradeE5EigoQuestions: Question[] = [
     answer: 'Do you like fish?',
     hint: '「〜が好きですか」とたずねる文は Do you で始める。',
     explanation:
-      '【解説】\n「〜が好きですか」とたずねるときは、文の最初に Do you を置いて Do you like 〜? の形にする。\n最後にクエスチョンマーク（？）を忘れずにつける。\n答え：Do you like fish?',
+      '【何を聞かれているか】\n「あなたは魚が好きですか。」を英語にする問題。\n\n【なぜDo youで文を始めるのか】\n一般動詞を使った「〜が好きですか」とたずねる疑問文は、主語youの前にDoを置いて文を始めるという決まりがある。\n\n【ポイント1】疑問文の基本の形を確認する\nDo you like 〜?の形にする。\n\n【ポイント2】文末の記号を確認する\n最後にクエスチョンマーク（？）を忘れずにつける。\n\n【ポイント3】答え方を確認する\nDo you〜?への返答は、Yes, I do. / No, I don\'t.のように、doを使って答える。\n\n【答え】\nDo you like fish?\n\n【確かめ】\n文がDo youで始まり、文末に？がついているか確認する。\n\n【よくあるまちがい】\nDoを忘れて"You like fish?"のような文にしてしまうミス。\n\n【ここが絶対】\n一般動詞の疑問文＝Do/Does+主語+動詞の原形〜?、という型でセットで覚える。',
   },
   {
     id: 'grade_e5_eigo_24',
@@ -310,7 +310,7 @@ export const gradeE5EigoQuestions: Question[] = [
     choices: ["doesn't", "don't", "isn't", 'not'],
     hint: '主語が she（彼女）のときの「〜ではない」の言い方。',
     explanation:
-      '【解説】\n主語が he や she（3人称単数）のときの否定文は doesn\'t（does not）を使う。\nShe doesn\'t like spiders. で「彼女はクモが好きではありません」という文になる。\n答え：doesn\'t',
+      '【何を聞かれているか】\n"She (　) like spiders."（彼女はクモが好きではありません。）の空欄に入る単語を選ぶ問題。\n\n【なぜdoesn\'tを使うのか】\n主語がheやshe（3人称単数）のときの一般動詞の否定文は、doesn\'t（does not）を使うという決まりがある。\n\n【ポイント1】主語の種類を確認する\n主語Sheは3人称単数。\n\n【ポイント2】否定文の形を確認する\n"She doesn\'t like spiders."＝doesn\'t＋動詞の原形like。\n\n【ポイント3】他の選択肢を消去する\ndon\'t（Iやyou用）、isn\'t（be動詞用）、not（単独では使えない）はいずれも不適切。\n\n【答え】\ndoesn\'t\n\n【確かめ】\n主語Sheに対応するdoesn\'tが選ばれ、don\'tと混同していないか確認する。\n\n【よくあるまちがい】\n主語がIやyouのときのdon\'tを、he・sheのときにも使ってしまうミス。\n\n【ここが絶対】\n主語がIやyouのときはdon\'t、he・she・itのときはdoesn\'tを使うと覚える。',
     pitfall: '主語が I や you のときは don\'t、he・she・it のときは doesn\'t を使うのでまちがえないこと。',
   },
   {
@@ -372,7 +372,7 @@ export const gradeE5EigoQuestions: Question[] = [
     ],
     hint: '「〜できない」は can\'t のあとに動詞の元の形。',
     explanation:
-      '【解説】\n「〜することができない」は can\'t（cannot）のあとに動詞の元の形を続ける。\nHe can\'t ride a bike. で「彼は自転車に乗ることができません」という文になる。\n答え：He can\'t ride a bike.',
+      '【何を聞かれているか】\n「彼は自転車に乗ることができません。」を英語にする問題。\n\n【なぜcan\'tの後は動詞の原形なのか】\n「〜することができない」という否定文は、can\'t（cannot）の後に動詞の元の形（原形）を続けるという決まりがある。\n\n【ポイント1】can\'tの形を確認する\ncan\'t（cannot）＝canの否定形。\n\n【ポイント2】can\'tの後の動詞の形を確認する\ncan\'tの後はride（原形）のまま使う（ridesにしない）。\n\n【ポイント3】他の選択肢を消去する\n"He not can ride"（語順が誤り）、"can\'t rides"（原形になっていない）、"isn\'t can ride"（be動詞と助動詞canを混同）はいずれも不適切。\n\n【答え】\nHe can\'t ride a bike.\n\n【確かめ】\ncan\'tの後の動詞rideが原形のままになっているか確認する。\n\n【よくあるまちがい】\n主語がHe（3人称単数）だからと、can\'tの後の動詞にsをつけてしまうミス。\n\n【ここが絶対】\ncanやcan\'tの後の動詞は、主語が何であっても常に原形にすると覚える。',
   },
   {
     id: 'grade_e5_eigo_29',
@@ -385,7 +385,7 @@ export const gradeE5EigoQuestions: Question[] = [
     answer: 'Can',
     hint: '「〜できますか」とたずねる文の最初の単語。',
     explanation:
-      '【解説】\n「〜することができますか」とたずねるときは、文の最初に Can を置く。\nCan you play the piano? で「あなたはピアノをひくことができますか」という文になる。\n答え：Can',
+      '【何を聞かれているか】\n"(　) you play the piano?"（あなたはピアノをひくことができますか。）の空欄に入る単語を答える問題。\n\n【なぜCanを文頭に置くのか】\n「〜することができますか」とたずねる疑問文は、文の最初にCanを置いて主語youの前に出すという決まりがある。\n\n【ポイント1】疑問文の基本の形を確認する\nCan you play the piano?の形にする。\n\n【ポイント2】Canの位置を確認する\nCanは文の最初、主語youの前に置く。\n\n【ポイント3】答え方を確認する\nCan you〜?への返答は、Yes, I can. / No, I can\'t.のように、canを使って答える。\n\n【答え】\nCan\n\n【確かめ】\n文がCanで始まり、その後にyou play the pianoが続いているか確認する。\n\n【よくあるまちがい】\nCanを主語youの後に置いてしまうミス。\n\n【ここが絶対】\ncanの疑問文＝Can+主語+動詞の原形〜?、という型でセットで覚える。',
   },
   {
     id: 'grade_e5_eigo_30',
@@ -438,7 +438,7 @@ export const gradeE5EigoQuestions: Question[] = [
     choices: ['skate', 'skates', 'skating', 'skated'],
     hint: 'can のあとの動詞は元の形にする。',
     explanation:
-      '【解説】\ncan のあとの動詞はいつも元の形（s や ing、ed をつけない形）にする。\n主語が My brother（3人称単数）でも、can のあとの動詞に s はつけない。\n答え：skate',
+      '【何を聞かれているか】\n"My brother can (　) well."（わたしの兄はじょうずにスケートができます。）の空欄に入る単語を選ぶ問題。\n\n【なぜskateが原形のままなのか】\ncanの後の動詞はいつも元の形（原形）にするという決まりがあり、主語が3人称単数（My brother）であっても、canの後の動詞にsはつけない。\n\n【ポイント1】canの後の動詞の形を確認する\ncanの後は動詞の原形（s、ing、edをつけない形）にする。\n\n【ポイント2】主語との関係を確認する\n主語がMy brother（3人称単数）でも、canの後の動詞に3単現のsはつけない。\n\n【ポイント3】他の選択肢を消去する\nskates（3単現）、skating（ing形）、skated（過去形）はいずれもcanの後には使えない。\n\n【答え】\nskate\n\n【確かめ】\n選んだ答えがskate（原形）であり、skates・skating・skatedになっていないか確認する。\n\n【よくあるまちがい】\nbe動詞の文と混同し、canの後の動詞にも3単現のsをつけてしまうミス。\n\n【ここが絶対】\ncanの後の動詞は、主語が何であっても常に原形にすると覚える。',
     pitfall: 'be動詞の文とちがい、can のあとの動詞には3人称単数の s をつけないことに注意。',
   },
   {
@@ -599,7 +599,7 @@ export const gradeE5EigoQuestions: Question[] = [
     ],
     hint: '「誰の」をたずねる疑問詞のすぐあとに名詞を続ける。',
     explanation:
-      '【解説】\n「誰の〜ですか」とたずねるときは Whose のすぐあとに名詞（pen）を続けて、Whose pen is this? の形にする。\nWho（誰）と Whose（誰の）を混同しないように注意。\n答え：Whose pen is this?',
+      '【何を聞かれているか】\n「これは誰のペンですか。」を英語にする問題。\n\n【なぜWhoseのすぐ後に名詞を置くのか】\n「誰の〜ですか」とたずねるときは、疑問詞Whoseのすぐ後に名詞（pen）を続けるという決まりがある。\n\n【ポイント1】疑問文の基本の形を確認する\nWhose pen is this?の形にする。\n\n【ポイント2】WhoとWhoseの違いを確認する\nWho（誰が）とWhose（誰の）は意味が異なるので混同しない。\n\n【ポイント3】他の選択肢を消去する\n"Who pen is this?"（Whoseの代わりにWhoを使う誤り）、"Whose is this pen?"（語順が誤り）、"Who\'s this pen?"（Who\'sはWho isの短縮形で意味が異なる）はいずれも不適切。\n\n【答え】\nWhose pen is this?\n\n【確かめ】\nWhoseのすぐ後に名詞penが続いているか確認する。\n\n【よくあるまちがい】\nWhoとWhoseを混同してしまうミス。\n\n【ここが絶対】\nWho＝「誰が」、Whose＝「誰の」という意味の違いをしっかり区別する。',
     pitfall: 'Who は「誰が」、Whose は「誰の」という意味のちがいをしっかり区別する。',
   },
   {
@@ -665,7 +665,7 @@ export const gradeE5EigoQuestions: Question[] = [
     ],
     hint: '主語が she（3人称単数）のときは動詞に s をつける。',
     explanation:
-      '【解説】\n主語が he・she・it（3人称単数）のときは、現在形の動詞の最後に s をつける。\ndrink → drinks となる。\nShe drinks milk every morning. で「彼女は毎朝牛乳を飲みます」という文になる。\n答え：She drinks milk every morning.',
+      '【何を聞かれているか】\n「彼女は毎朝牛乳を飲みます。」を英語にする問題。\n\n【なぜdrinkにsをつけるのか】\n主語がhe・she・it（3人称単数）のときは、現在形の動詞の最後にsをつけるという決まりがある。\n\n【ポイント1】3単現のsの決まりを確認する\n主語がhe・she・it（3人称単数）のときは、動詞にsをつける。\n\n【ポイント2】drinkの変化を確認する\ndrink→drinksとなる。\n\n【ポイント3】完成した文を確認する\n"She drinks milk every morning."＝「彼女は毎朝牛乳を飲みます」。\n\n【答え】\nShe drinks milk every morning.\n\n【確かめ】\ndrinkにsがついてdrinksになっているか確認する。\n\n【よくあるまちがい】\n主語がsheなのにsをつけ忘れ、drinkのままにしてしまうミス。\n\n【ここが絶対】\n主語がIやyouのときはsをつけないが、he・she・itのときだけsをつけると覚える。',
     pitfall: '主語が I や you のときは s をつけないが、he・she・it のときだけ s をつけることに注意。',
   },
   {
@@ -679,7 +679,7 @@ export const gradeE5EigoQuestions: Question[] = [
     answer: '10歳（ten years old）',
     hint: 'I am 〜 years old. の部分に注目する。',
     explanation:
-      '【答え】10歳（ten years old）\n\n【どこから分かるか】本文の2つ目の文に書かれている。\n・I am ten years old.（わたしは10歳です）\n・ten ＝ 10、years old ＝ 歳\n\n【年れいの言い方】\n・I am ten years old.（10歳です）\n・短く I am ten. とも言える\n・たずねるときは How old are you?（何歳ですか）\n「歳」は years old で、be動詞を使う。\n\n【日本語とのちがい】ここが大事である。\n・日本語 … 「わたしは10歳です」\n・英語 … 「わたしは10歳である」→ be動詞を使う\n・× I have ten years old.（フランス語などでは「持つ」で言うが、英語はちがう）\n\n【この英文の読み取り方】3つの文に、それぞれ別の情報が入っている。\n・My name is Ken. … 名前\n・I am ten years old. … 年れい\n・I live in Tokyo. … 住んでいる所\n1文ずつ、何の情報かを確かめながら読むと、どこを見ればよいか分かる。\n\n【自己しょうかいの型】\n・My name is 〜.（名前）\n・I am 〜 years old.（年れい）\n・I live in 〜.（住んでいる所）\n・I like 〜.（好きなもの）\n・Nice to meet you.（はじめまして）\n\n【live in の in】住んでいる場所には in を使う。\n・I live in Tokyo.／I live in Japan.\n・せまい場所から広い場所への順に書く … I live in Tokyo, Japan.',
+      '【何を聞かれているか】\n"My name is Ken. I am ten years old. I live in Tokyo."という英文を読み、Kenの年齢を答える問題。\n\n【なぜbe動詞を使って年齢を表すのか】\n英語では年齢を表すとき、日本語の「10歳です」に対応する形として、be動詞（am/is/are）を使ってI am ten years old.のように表すという決まりがある。\n\n【ポイント1】該当の文を確認する\n本文の2つ目の文"I am ten years old."（わたしは10歳です）に年齢が書かれている。\n\n【ポイント2】years oldの意味を確認する\nten＝10、years old＝歳、という組み合わせで年齢を表す。\n\n【ポイント3】3つの文それぞれの情報を確認する\n"My name is Ken."（名前）、"I am ten years old."（年れい）、"I live in Tokyo."（住んでいる所）と、1文ずつ別の情報が書かれている。\n\n【答え】\n10歳（ten years old）\n\n【確かめ】\n答えが年齢を問う質問に対応する2つ目の文の内容になっているか確認する。\n\n【よくあるまちがい】\n1つ目の文（名前）や3つ目の文（住んでいる場所）の情報と混同してしまうミス。\n\n【ここが絶対】\n自己紹介の英文は、My name is〜（名前）・I am〜years old（年れい）・I live in〜（住んでいる所）と、1文ずつ何の情報かを確かめながら読む。',
   },
   {
     id: 'grade_e5_eigo_50',
