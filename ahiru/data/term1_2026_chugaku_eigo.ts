@@ -906,7 +906,8 @@ B: (　)
 ウ. My name is Yuki.`,
     answer: `ア(I'm fine, thank you. And you?)`,
     hint: `How are you?は「調子はどう？」という質問。答えは体調・気分を伝える文になる。`,
-    explanation: `【出題意図】あいさつの決まり文句How are you?とその応答を問う会話問題。【解説】How are you today?（今日の調子はどうですか）には、調子・気分を答えるア「I'm fine, thank you. And you?（元気です、ありがとう。あなたは？）」が正しい応答。イは年齢、ウは名前を答える文で、質問とかみ合わない。【注意点】How are you?とWhat's your name?、How old are you?を混同しないよう、それぞれの質問に対応する答えを整理する。【関連知識】And you?（あなたは？）を付け加えて相手にも同じ質問を返す言い方は会話でよく使われる。`,
+    explanation:
+      '【何を聞かれているか】\n"How are you today?"という挨拶への返答として、最も適切な文を選ぶ問題。\n\n【なぜ体調・気分を答えるのか】\nHow are you?は「調子はどう？」と体調・気分をたずねる質問なので、それに対しては体調・気分を伝える返答をする。\n\n【ポイント1】"How are you?"の意味を確認する\n相手の調子・気分をたずねる挨拶。\n\n【ポイント2】自然な返答を確認する\n"I\'m fine, thank you. And you?"（元気です、ありがとう。あなたは？）が自然な返答。\n\n【ポイント3】他の選択肢を消去する\n「10歳です」（年齢）、「名前はユキです」（名前）は、いずれもHow are you?の返答としてかみ合わない。\n\n【答え】\nア(I\'m fine, thank you. And you?)\n\n【確かめ】\n選んだ返答が、年齢や名前ではなく、体調・気分を答える内容になっているか確認する。\n\n【よくあるまちがい】\nHow are you?とWhat\'s your name?、How old are you?を混同してしまうミス。\n\n【ここが絶対】\nHow are you?＝調子を尋ねる、答えはI\'m fine/I\'m goodなど気分・体調の言葉で返すと覚える。',
     pitfall: `イやウを選ぶと、名前や年齢の質問への答えになってしまい、How are you?の応答としてかみ合わない。`,
     memoryTip: `How are you?＝調子を尋ねる、答えはI'm fine/I'm goodなど気分・体調の言葉で返すと覚える。`,
   },
@@ -926,7 +927,8 @@ B: (　)
 ウ. It is on the desk.`,
     answer: `イ(It is 500 yen.)`,
     hint: `How much〜?は値段をたずねる表現。答えは金額になる。`,
-    explanation: `【出題意図】値段をたずねる表現How much is 〜?とその応答を問う。【解説】How much is this pencil case?（この筆箱はいくらですか）には、金額を答えるイ「It is 500 yen.（500円です）」が正しい。アは色、ウは場所を答える文で、値段の質問と合わない。【注意点】How much〜?（いくら）、What color〜?（何色）、Where〜?（どこ）のように、それぞれの疑問詞に対応する答えの種類を区別する。【関連知識】買い物の場面では、How much is it?（それはいくらですか）もよく使われる表現。`,
+    explanation:
+      '【何を聞かれているか】\n"How much is this pencil case?"という質問への返答として、最も適切な文を選ぶ問題。\n\n【なぜ金額で答えるのか】\nHow much〜?は値段をたずねる表現なので、それに対しては金額を答える。\n\n【ポイント1】"How much〜?"の意味を確認する\n値段をたずねる表現。\n\n【ポイント2】自然な返答を確認する\n"It is 500 yen."（500円です）が金額を答える正しい返答。\n\n【ポイント3】他の選択肢を消去する\n「青いです」（色）、「机の上にあります」（場所）は、いずれも値段の質問とは合わない。\n\n【答え】\nイ(It is 500 yen.)\n\n【確かめ】\n選んだ返答が金額（500 yen）を答えているか確認する。\n\n【よくあるまちがい】\n色や場所を答える選択肢を選んでしまうミス。How much〜?には必ず金額で答える。\n\n【ここが絶対】\nHow much＝値段（お金）をたずねる表現、答えは必ず金額で返すと覚える。',
     pitfall: `アやウを選ぶと、色や場所の質問への答えになり、値段をたずねるHow much〜?の応答として不適切になる。`,
     memoryTip: `How much＝値段（お金）をたずねる表現、答えは必ず金額で返すと覚える。`,
   },
@@ -944,7 +946,8 @@ I have a dog. His name is Pochi. He is white and small. I walk him every morning
 ② What color is the dog?（英語で答えよ）`,
     answer: `① His name is Pochi.　② He is white.`,
     hint: `①本文2文目、②本文3文目に注目する。`,
-    explanation: `【出題意図】身近なペットについての短い英文を読み、必要な情報を正確に読み取る力を問う。【解説】①「His name is Pochi.」（本文2文目）から犬の名前がPochiだとわかる。②「He is white and small.」（本文3文目）から色はwhite（白）だとわかる。【注意点】本文中の代名詞He/His（この犬を指す）が何を指しているかを正しく把握することが読解のポイントである。【関連知識】walk（犬などを）散歩させる、という動詞の使い方もあわせて確認する。`,
+    explanation:
+      '【何を聞かれているか】\n飼い犬ポチについての英文を読んで、名前と色を英語で答える問題。\n\n【なぜHe/Hisが指すものを確認するのか】\n本文中の代名詞He/His（この犬を指す）が何を指しているかを正しく把握することが、設問に正確に答えるための読解のポイント。\n\n【ポイント1】①名前を確認する\n"His name is Pochi."から、犬の名前はPochi。\n\n【ポイント2】②色を確認する\n"He is white and small."から、色はwhite（白）。\n\n【ポイント3】質問の内容に絞って答えることを確認する\n②は色だけを聞かれているので、small（小さい）まで含めて答える必要はない。\n\n【答え】\n① His name is Pochi.　② He is white.\n\n【確かめ】\n②の答えが色（white）だけで、大きさ（small）まで含めていないか確認する。\n\n【よくあるまちがい】\n②で"white and small"の両方を書いてしまうミス。色だけを聞かれているのでwhiteのみ答えればよい。\n\n【ここが絶対】\n質問で聞かれていること（名前・色など）だけをピンポイントで本文から探す練習をする。',
     pitfall: `②でwhite and smallの両方を書く必要はなく、色を聞かれているのでwhiteのみ答えればよい。`,
     memoryTip: `質問で聞かれていること（名前・色など）だけをピンポイントで本文から探す練習をする。`,
   },
@@ -962,7 +965,8 @@ I get up at seven every morning. I go to school by bike. I have four classes in 
 ② How many classes does the child have in the morning?（英語で答えよ）`,
     answer: `① He (She) goes to school by bike.　② He (She) has four classes.`,
     hint: `①本文2文目、②本文3文目「four classes in the morning」に注目する。`,
-    explanation: `【出題意図】学校生活について書かれた短い英文を読み、必要な情報を読み取る力を問う。【解説】①「I go to school by bike.」（本文2文目）から自転車で通学していることがわかる。②「I have four classes in the morning」（本文3文目）から午前中の授業は4時間だとわかる。【注意点】「四時間」と「四時」を混同しないよう、four classes（4つの授業）とat four（4時に）の意味の違いを区別する。【関連知識】by bike（自転車で）、by busなどのby+乗り物の言い方は交通手段を表す頻出表現。`,
+    explanation:
+      '【何を聞かれているか】\n学校生活についての英文を読んで、通学手段と午前中の授業数を英語で答える問題。\n\n【なぜ「4時間」と「4時」を区別するのか】\n本文には"four classes"（4つの授業）と"at four"（4時に）という似た数字表現が両方登場するため、意味を正確に区別して読む必要がある。\n\n【ポイント1】①通学手段を確認する\n"I go to school by bike."から、自転車で通学しているとわかる。\n\n【ポイント2】②午前中の授業数を確認する\n"I have four classes in the morning"から、午前中の授業は4時間。\n\n【ポイント3】午後の授業数と区別することを確認する\n"two classes in the afternoon"（午後は2時間）と混同しない。\n\n【答え】\n① He (She) goes to school by bike.　② He (She) has four classes.\n\n【確かめ】\n②の答えがfour（午前）であり、two（午後）と混同していないか確認する。\n\n【よくあるまちがい】\n「四時間」と「四時」を混同してしまうミス。four classes（4つの授業）とat four（4時に）の意味の違いを区別する。\n\n【ここが絶対】\nby＋乗り物＝「〜で（交通手段）」という表現を覚えておくと読解がスムーズになる。',
     pitfall: `②で午後の授業（two classes）と混同しないこと。質問は午前中の授業数についてである。`,
     memoryTip: `by+乗り物＝「〜で（交通手段）」という表現を覚えておくと読解がスムーズになる。`,
   },
@@ -977,7 +981,8 @@ I get up at seven every morning. I go to school by bike. I have four classes in 
 [ is / my / this / book ].（これは私の本です）`,
     answer: `This is my book.`,
     hint: `「これは〜です」＝This is 〜.の語順。`,
-    explanation: `【出題意図】基本的な文型（This is+所有格+名詞）の語順を問う。【解説】「これは私の本です」は、主語This＋be動詞is＋所有格my＋名詞bookの順で、This is my book.となる。【注意点】This（これ）を主語として文の最初に置き、その後にbe動詞、そして「誰の・何の」を表す所有格+名詞を続ける。【関連知識】相手のものについてたずねるときはIs this your book?（これはあなたの本ですか）のように疑問文にする。`,
+    explanation:
+      '【何を聞かれているか】\n語句を並べ替えて、「これは私の本です」という英文を完成させる問題。\n\n【なぜThisを主語にするのか】\n「これは〜です」という内容は、This（これ）を主語として文の最初に置き、その後にbe動詞、所有格＋名詞を続けるという決まった形で表す。\n\n【ポイント1】基本の語順を確認する\n主語This＋be動詞is＋所有格my＋名詞book。\n\n【ポイント2】文を組み立てる\n"This is my book."＝「これは私の本です」。\n\n【ポイント3】疑問文への発展を確認する\n相手のものをたずねるときは"Is this your book?"（これはあなたの本ですか）とする。\n\n【答え】\nThis is my book.\n\n【確かめ】\nThis→is→my→bookという正しい順番になっているか確認する。\n\n【よくあるまちがい】\n"My this is book."のように語順を崩してしまうミス。\n\n【ここが絶対】\nThis is 〜.の型に、名詞の前に所有格（my, your等）を入れる練習をする。',
     pitfall: `My this is book.のように語順を崩さないこと。This is+所有格+名詞の順を守る。`,
     memoryTip: `This is 〜.の型に、名詞の前に所有格（my, your等）を入れる練習をする。`,
   },
@@ -992,7 +997,8 @@ I get up at seven every morning. I go to school by bike. I have four classes in 
 [ do / what / like / you / sports ]?（あなたはどんなスポーツが好きですか）`,
     answer: `What sports do you like?`,
     hint: `「どんなスポーツ」＝What sports、その後にdo you likeを続ける。`,
-    explanation: `【出題意図】疑問詞What+名詞を使った疑問文の語順を問う。【解説】「どんなスポーツが好きですか」は、疑問詞What＋名詞sports＋do you like?の順で、What sports do you like?となる。What sportsをひとまとまりの疑問詞句として文頭に置く。【注意点】Whatの後にすぐ動詞を続けず、名詞sportsを挟んでからdo you likeを続ける語順に注意する。【関連知識】What food do you like?（どんな食べ物が好きですか）、What subject do you like?（どんな教科が好きですか）も同じ形。`,
+    explanation:
+      '【何を聞かれているか】\n語句を並べ替えて、「あなたはどんなスポーツが好きですか」という英文を完成させる問題。\n\n【なぜWhat sportsをひとまとまりにするのか】\n「どんなスポーツ」という具体的な内容をたずねるときは、疑問詞What＋名詞sportsをひとまとまりの疑問詞句として文頭に置く。\n\n【ポイント1】"What＋名詞"の形を確認する\nWhat sports（どんなスポーツ）が1つのかたまりとして文頭に来る。\n\n【ポイント2】後ろの語順を確認する\nWhat sportsの後ろに、do you likeという疑問文の語順を続ける。\n\n【ポイント3】同じパターンの表現を確認する\nWhat food do you like?（どんな食べ物が好きですか）、What subject do you like?（どんな教科が好きですか）も同じ形。\n\n【答え】\nWhat sports do you like?\n\n【確かめ】\n"What sports"の後ろが"do you like"という語順になっているか確認する。\n\n【よくあるまちがい】\n"What do you like sports?"のように、名詞sportsを疑問詞の直後に置かずに語順を誤ってしまうミス。\n\n【ここが絶対】\n「What+名詞+do you+動詞の原形〜?」の型で、名詞を疑問詞のすぐ後ろに置くと覚える。',
     pitfall: `What do you like sports?のように名詞sportsを疑問詞の直後に置かないと語順を誤る。`,
     memoryTip: `「What+名詞+do you+動詞の原形〜?」の型で、名詞を疑問詞のすぐ後ろに置くと覚える。`,
   },

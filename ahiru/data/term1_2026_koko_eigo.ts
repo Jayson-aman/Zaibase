@@ -50,7 +50,8 @@ B: Yes, I (　).（はい、暇です）`,
     answer: `① He is not (isn't) a soccer fan.
 ② They are not (aren't) from Osaka.`,
     hint: 'be動詞の否定文はbe動詞の直後にnotを置く。',
-    explanation: `【出題意図】be動詞の否定文（be+not）の作り方を問う基本問題。【解説】①「彼はサッカーファンではない」→isの直後にnotを置きis not（短縮形isn't）。②「彼らは大阪出身ではない」→areの直後にnotを置きare not（短縮形aren't）。be動詞の否定文はbe動詞の位置を変えず、直後にnotを加えるだけでよい。【注意点】一般動詞の否定文（don't/doesn't+動詞原形）と混同しないこと。be動詞の文にdon'tは使わない。【関連知識】be動詞の否定の短縮形：isn't、aren't。am notには短縮形がなく、I'm notを使う。`,
+    explanation:
+      '【何を聞かれているか】\nbe動詞を使った2つの文を否定文にする問題。\n\n【なぜbe動詞の直後にnotを置くのか】\nbe動詞の否定文は、be動詞の位置を変えず、直後にnotを加えるだけで作れる。\n\n【ポイント1】①主語Heの否定文を確認する\n"He is not (isn\'t) a soccer fan."。\n\n【ポイント2】②主語Theyの否定文を確認する\n"They are not (aren\'t) from Osaka."。\n\n【ポイント3】一般動詞との違いを確認する\n一般動詞の否定文（don\'t/doesn\'t+動詞原形）とは異なり、be動詞の文にはdon\'tを使わない。\n\n【答え】\n① He is not (isn\'t) a soccer fan.\n② They are not (aren\'t) from Osaka.\n\n【確かめ】\nそれぞれのbe動詞の直後にnotが置かれているか確認する。\n\n【よくあるまちがい】\n①を"He don\'t is a soccer fan."のようにdon\'tを使ってしまうミス。be動詞の否定はbe+notのみ。\n\n【ここが絶対】\nbe動詞の否定はbe動詞のすぐ後ろにnotを置くだけ、と覚える。',
     pitfall: "①をHe don't is a soccer fan.のようにdon'tを使わないこと。be動詞の否定はbe+notのみ。",
     memoryTip: 'be動詞の否定はbe動詞のすぐ後ろにnotを置くだけ、と覚える。',
   },
@@ -104,7 +105,8 @@ B: Yes, I (　).（はい、暇です）`,
     answer: `① I don't like natto.
 ② He doesn't play the guitar every weekend.`,
     hint: '一般動詞の否定文はdo not/does notを動詞の前に置き、動詞は原形にする。',
-    explanation: `【出題意図】一般動詞の否定文（don't/doesn't+動詞原形）の作り方を問う。【解説】①主語Iはdon'tを使い、I don't like natto.。②主語He（3人称単数）はdoesn'tを使い、動詞playは原形のままplayにする（doesn't plays としない）。【注意点】doesn'tを使う否定文では、動詞の3単現のsを取って原形に戻すのを忘れないこと。【関連知識】be動詞の否定（is not/are not）と一般動詞の否定（don't/doesn't+原形）の違いをしっかり区別する。`,
+    explanation:
+      '【何を聞かれているか】\n一般動詞の文を、正しいdon\'t/doesn\'tを使って否定文にする問題。\n\n【なぜdoesn\'tの後ろで動詞を原形に戻すのか】\ndoesn\'tを使う否定文では、動詞の3単現のsを取って原形に戻すという決まりがある。\n\n【ポイント1】①主語Iを確認する\n"I don\'t like natto."。\n\n【ポイント2】②主語Heを確認する\n"He doesn\'t play the guitar every weekend."（playsではなく原形play）。\n\n【ポイント3】be動詞の否定との違いを確認する\nbe動詞の否定（is not/are not）と一般動詞の否定（don\'t/doesn\'t+原形）を区別する。\n\n【答え】\n① I don\'t like natto.\n② He doesn\'t play the guitar every weekend.\n\n【確かめ】\n②で"doesn\'t play"のように、動詞が原形になっているか確認する。\n\n【よくあるまちがい】\n②を"He doesn\'t plays the guitar."としてしまうミス。doesn\'tの後は動詞の原形。\n\n【ここが絶対】\ndoesn\'tを使ったら動詞のsを取る、don\'tを使ったら動詞はそのまま原形、と覚える。',
     pitfall: '②をHe doesn\'t plays the guitar.としないこと。doesn\'tの後は動詞の原形。',
     memoryTip: 'doesn\'tを使ったら動詞のsを取る、don\'tを使ったら動詞はそのまま原形、と覚える。',
   },
@@ -224,7 +226,8 @@ B: It's a pencil case.
 ③ It (　) sunny this morning.（今朝は晴れていた）`,
     answer: '① was　② were　③ was',
     hint: 'be動詞の過去形はwas（I/He/She/It等）とwere（You/We/They等）の2種類のみ。',
-    explanation: `【出題意図】be動詞の過去形（was/were）の使い分けを問う。【解説】①主語I（単数）はwas。②主語They（複数）はwere。③主語It（単数）はwas。be動詞の過去形は現在形（am/is/are）と違い、was（単数）とwere（複数）の2種類だけになる。【注意点】amとisの過去形はどちらもwasになる点に注意（areの過去形がwere）。【関連知識】be動詞過去の疑問文はWas/Wereを主語の前に、否定文はwas not（wasn't）/were not（weren't）にする。`,
+    explanation:
+      '【何を聞かれているか】\nbe動詞の過去形（was/were）を、主語に合わせて入れる問題。\n\n【なぜwasとwereだけになるのか】\nbe動詞の過去形は、現在形（am/is/are）の3種類と違い、was（単数）とwere（複数）の2種類だけになる。\n\n【ポイント1】①主語Iを確認する\n"I was busy yesterday."。\n\n【ポイント2】②主語Theyを確認する\n"They were at the park last Sunday."。\n\n【ポイント3】③主語Itを確認する\n"It was sunny this morning."。\n\n【答え】\n① was　② were　③ was\n\n【確かめ】\n②の主語Theyが複数であることを確認し、wereが正しく選ばれているか確認する。\n\n【よくあるまちがい】\n②をwasにしてしまうミス。Theyは複数なので過去形もwere。\n\n【ここが絶対】\nam/is→was、are→wereと、現在形からの対応で覚える。',
     pitfall: '②をwasにしないこと。Theyは複数なので過去形もwere。',
     memoryTip: 'am/is→was、are→were、と現在形からの対応で覚える。',
   },
@@ -276,7 +279,8 @@ B: It's a pencil case.
     answer: `① Did you visit Nara last summer?
 ② Did she cook dinner for her family?`,
     hint: '一般動詞の過去の疑問文は「Did+主語+動詞の原形〜?」の語順。',
-    explanation: `【出題意図】一般動詞過去形の疑問文（Did+主語+動詞原形）の作り方を問う。【解説】①visitedをDidと組み合わせるときは動詞を原形visitに戻し、Didを主語youの前に置く。②同様にcookedをcookに戻し、Didを主語sheの前に置く。【注意点】Didを使った疑問文では、主語が3人称単数（②のShe）であっても動詞は原形のままにする（cooksやcookedにしない）。【関連知識】答え方はYes, I did. / No, I didn't.のように、didを使って答える。`,
+    explanation:
+      '【何を聞かれているか】\n一般動詞の過去の文を、Did＋主語＋動詞の原形の疑問文に書き換える問題。\n\n【なぜDidの後ろで動詞を原形に戻すのか】\n過去の疑問文はDidが過去を表す働きを担うので、動詞は原形に戻す。\n\n【ポイント1】①visitedを確認する\n"Did you visit Nara last summer?"（visitedをvisitに戻す）。\n\n【ポイント2】②cookedを確認する\n"Did she cook dinner for her family?"（cookedをcookに戻す）。\n\n【ポイント3】三人称単数でも原形にすることを確認する\n主語が三人称単数（She）であっても、Didを使ったら動詞は原形のまま。\n\n【答え】\n① Did you visit Nara last summer?\n② Did she cook dinner for her family?\n\n【確かめ】\n②で"Did she cook"のように、動詞が原形になっているか確認する。\n\n【よくあるまちがい】\n②を"Did she cooked〜"としてしまうミス。Didを使ったら動詞は原形に戻す。\n\n【ここが絶対】\nDidを使ったら動詞は原形（過去形にもsも付けない）と覚える。',
     pitfall: '②をDid she cooked〜としないこと。Didを使ったら動詞は原形に戻す。',
     memoryTip: 'Didを使ったら動詞は原形（過去形にもsも付けない）と覚える。',
   },
@@ -293,7 +297,8 @@ B: It's a pencil case.
     answer: `① I didn't finish my homework before dinner.
 ② He didn't come to school by bus this morning.`,
     hint: `一般動詞過去の否定文は「主語+didn't+動詞の原形〜」の形。`,
-    explanation: `【出題意図】一般動詞過去形の否定文（didn't+動詞原形）の作り方を問う。【解説】①finishedをdidn'tと組み合わせるときは動詞を原形finishに戻す。②同様にcameを原形comeに戻す（不規則動詞でも原形に戻すルールは同じ）。【注意点】不規則動詞（came等）であっても、didn'tを使う否定文では必ず原形に戻す点に注意する。【関連知識】didn't＝did not。didn't+動詞原形は、主語が何であっても形が変わらない（3単現のsも付かない）。`,
+    explanation:
+      '【何を聞かれているか】\n一般動詞の過去の文を、didn\'t＋動詞の原形を使って否定文にする問題。\n\n【なぜ不規則動詞でも原形に戻すのか】\ndidn\'t（did not）は過去を表す働きを担うので、後ろの動詞は不規則動詞であっても必ず原形に戻すという決まりがある。\n\n【ポイント1】①finishedを確認する\n"I didn\'t finish my homework before dinner."（finishedをfinishに戻す）。\n\n【ポイント2】②cameを確認する\n"He didn\'t come to school by bus this morning."（不規則動詞cameをcomeに戻す）。\n\n【ポイント3】didn\'tの位置を確認する\ndidn\'t（did not）は動詞の前に置く。\n\n【答え】\n① I didn\'t finish my homework before dinner.\n② He didn\'t come to school by bus this morning.\n\n【確かめ】\n②で"didn\'t come"のように、cameが原形comeに戻っているか確認する。\n\n【よくあるまちがい】\n②を"didn\'t camed"のように過去形のまま使ってしまうミス。didn\'tの後は必ず原形。\n\n【ここが絶対】\ndidn\'t（did not）の後ろは動詞の原形、と徹底して覚える。',
     pitfall: '②をdidn\'t camedのように過去形のまま使わないこと。didn\'tの後は必ず原形。',
     memoryTip: 'didn\'t（did not）の後ろは動詞の原形、と徹底して覚える。',
   },
@@ -327,7 +332,8 @@ B: It's a pencil case.
   (　) you help me?`,
     answer: '① will be　② Will',
     hint: '「〜だろう」という単純な未来の予測・その場での判断はwillを使う。',
-    explanation: `【出題意図】未来を表すwillの基本用法（予測・その場での依頼や決定）を問う。【解説】①「将来〜になるだろう」という単純な未来の予測はwill+動詞原形（will be）で表す。②「手伝ってくれますか」というその場での依頼はWill you〜?を使う。【注意点】willは「あらかじめ決まっていない、その場で決める・予測する」未来に使うのが基本。【関連知識】Will you〜?は依頼（〜してくれますか）の意味でもよく使われ、Can you〜?よりもやや丁寧な響きを持つ。`,
+    explanation:
+      '【何を聞かれているか】\n未来を表すwillを使った、2つの日本語に合う文を完成させる問題。\n\n【なぜwillを使うのか】\n「〜だろう」という単純な未来の予測や、「その場での依頼」を表すときは、willを使う。\n\n【ポイント1】①予測のwillを確認する\n"I will be a doctor in the future."＝「将来医者になるだろう」。will＋動詞の原形。\n\n【ポイント2】②依頼のWillを確認する\n"Will you help me?"＝「手伝ってくれますか」というその場での依頼。\n\n【ポイント3】willの使われる場面を確認する\nwillは「あらかじめ決まっていない、その場で決める・予測する」未来に使う。\n\n【答え】\n① will be　② Will\n\n【確かめ】\n①でwillの後ろが原形（be）になっているか確認する。\n\n【よくあるまちがい】\n①を"I am doctor"のように未来を表さない形にしてしまうミス。in the future（将来）にはwillが必要。\n\n【ここが絶対】\nwill+動詞原形＝「（その場で決めた・予測する）〜だろう、〜するつもりだ」と覚える。',
     pitfall: '①をI am doctorのように未来を表さない形にしないこと。in the future（将来）にはwillが必要。',
     memoryTip: 'will+動詞原形＝「（その場で決めた・予測する）〜だろう、〜するつもりだ」と覚える。',
   },
@@ -345,7 +351,8 @@ B: It's a pencil case.
   Look at the sky. It (　) (　) (　) rain.`,
     answer: '① are going to　② is going to',
     hint: 'be going toは「前もって決まっている予定」や「目に見える根拠に基づく予測」を表す。',
-    explanation: `【出題意図】be going toの基本用法（既に決まっている予定・根拠のある予測）を問う。【解説】①「来月訪れる予定」という前もって決まっている計画にはbe going toを使う（主語Weに合わせてare going to）。②「空を見て（曇っているという根拠から）雨が降りそう」という、目の前の証拠に基づく予測にもbe going toを使う（主語Itに合わせてis going to）。【注意点】willは「その場での決定・単純な予測」、be going toは「あらかじめ決まっている予定・根拠のある予測」という使い分けが基本。【関連知識】be going toの疑問文はbe動詞を主語の前に出す（Are you going to〜?）。`,
+    explanation:
+      '【何を聞かれているか】\nbe going toを使った、2つの日本語に合う文を完成させる問題。\n\n【なぜbe going toを使うのか】\n「前もって決まっている予定」や「目に見える証拠に基づく予測」を表すときは、be going toを使う。\n\n【ポイント1】①前もって決まっている予定を確認する\n"We are going to visit Kyoto next month."＝あらかじめ決まっている計画。\n\n【ポイント2】②証拠に基づく予測を確認する\n"It is going to rain."＝空が曇っているという目の前の証拠に基づく予測。\n\n【ポイント3】willとの違いを確認する\nwillは「その場での決定・単純な予測」、be going toは「あらかじめ決まっている予定・根拠のある予測」。\n\n【答え】\n① are going to　② is going to\n\n【確かめ】\n①の主語We、②の主語Itに、それぞれ正しいbe動詞（are, is）が使われているか確認する。\n\n【よくあるまちがい】\n②を単なるwill rainにしてしまうこと自体は誤りではないが、Look at the skyという証拠がある文脈ではbe going toがより自然。\n\n【ここが絶対】\nbe going to＝「もう決まっている予定」「目に見える証拠からの予測」とセットでイメージする。',
     pitfall: '②をwill rainにしても文法的には誤りではないが、Look at the sky（目に見える根拠）がある文脈ではbe going toがより自然。',
     memoryTip: 'be going to＝「もう決まっている予定」「目に見える証拠からの予測」とセットでイメージする。',
   },
@@ -518,7 +525,8 @@ B: It's a pencil case.
   This bag is not (　) (　) (　) that one.`,
     answer: '① as tall as　② as expensive as',
     hint: '「AはBと同じくらい〜」＝as+形容詞の原級+as、「Aは~ほど…ない」＝not as+原級+as。',
-    explanation: `【出題意図】原級を使った比較表現（as〜as、not as〜as）を問う。【解説】①「AはBと同じくらい背が高い」＝A is as tall as B.の形。形容詞は比較級・最上級にせず原級（tall）のまま使う点がポイント。②「AはBほど〜ない」＝A is not as+原級+as B.で、expensiveも原級のまま使う。【注意点】as〜asの間に入れる形容詞は必ず原級（変化させない元の形）にする。比較級（taller等）を入れないこと。【関連知識】not as〜as＝not so〜asと言い換えることもできる（同じ意味）。`,
+    explanation:
+      '【何を聞かれているか】\n原級を使った比較表現（as〜as、not as〜as）を完成させる問題。\n\n【なぜ形容詞を原級のまま使うのか】\n「AはBと同じくらい〜」「AはBほど〜ない」という同等比較の表現では、形容詞を比較級・最上級にせず、原級（変化させない元の形）のままas〜asの間に入れるという決まりがある。\n\n【ポイント1】①同等比較を確認する\n"My brother is as tall as my father."＝「兄は父と同じくらい背が高い」。\n\n【ポイント2】②否定の同等比較を確認する\n"This bag is not as expensive as that one."＝「このかばんはあのかばんほど高くない」。\n\n【ポイント3】原級を使うことを確認する\ntall、expensiveはどちらも原級のまま使う。\n\n【答え】\n① as tall as　② as expensive as\n\n【確かめ】\ntallやexpensiveが比較級（taller, more expensive）になっていないか確認する。\n\n【よくあるまちがい】\n①を"as taller as"のように比較級にしてしまうミス。as〜asの間は原級。\n\n【ここが絶対】\nas〜as＝「イコール」のイメージ、間の形容詞は変化させず原級のまま使う。',
     pitfall: '①をas taller asのように比較級にしないこと。as〜asの間は原級。',
     memoryTip: 'as〜as＝「イコール」のイメージ、間の形容詞は変化させず原級のまま使う。',
   },
@@ -574,7 +582,8 @@ B: Yes, I am. I'm going to stay there for a week.
     answer: `① 長野の祖父母を訪ね、ハイキングをして新鮮な空気を楽しんだ。
 ② He (She) is going to stay at his (her) grandparents' house in Nagano for a week.`,
     hint: '①Bの1つ目の発言、②Bの最後の発言「I\'m going to stay there for a week.」に注目。',
-    explanation: `【出題意図】休暇中の出来事を話す会話文で、過去形（visited/went/enjoyed）とbe going to（未来の予定）を読み分ける問題。【解説】①Bの最初の発言「I visited my grandparents in Nagano. We went hiking and enjoyed the fresh air.」から、長野の祖父母を訪ね、ハイキングをして新鮮な空気を楽しんだとわかる。②Bの最後の発言「I'm going to stay there for a week.」から、今年の夏も1週間滞在する予定だとわかる。【注意点】過去の出来事（visited, went, enjoyed）と、これからの予定（am going to stay）を時制で正しく区別する。【関連知識】Sounds fun!は「楽しそうですね」という相づちの定型表現。`,
+    explanation:
+      '【何を聞かれているか】\n休暇についての会話文を読んで、Bが何をしたか、今夏の予定を答える問題。\n\n【なぜ過去形とbe going toを区別するのか】\n本文には過去の出来事（visited, went, enjoyed）と、これからの予定（am going to stay）の両方が含まれているため、時制で正しく区別して読む必要がある。\n\n【ポイント1】①過去の出来事を確認する\n"I visited my grandparents in Nagano. We went hiking and enjoyed the fresh air."（長野の祖父母を訪ね、ハイキングをして新鮮な空気を楽しんだ）。\n\n【ポイント2】②今夏の予定を確認する\n"I\'m going to stay there for a week."（1週間滞在する予定）。\n\n【ポイント3】Sounds fun!の意味を確認する\n「楽しそうですね」という相づちの定型表現。\n\n【答え】\n① 長野の祖父母を訪ね、ハイキングをして新鮮な空気を楽しんだ。\n② He (She) is going to stay at his (her) grandparents\' house in Nagano for a week.\n\n【確かめ】\n②の答えが過去形ではなく、未来を表す形（is going to）になっているか確認する。\n\n【よくあるまちがい】\n②を過去形で答えてしまうミス。設問は「この夏の予定」なので未来を表す形で答える。\n\n【ここが絶対】\n過去の話（〜した）と、これからの予定（〜するつもり）を動詞の形の違いで見分ける。',
     pitfall: '②を過去形で答えないこと。設問は「この夏の予定」なので未来を表す形で答える。',
     memoryTip: '過去の話（〜した）と、これからの予定（〜するつもり）を動詞の形の違いで見分ける。',
   },
@@ -613,7 +622,8 @@ Students at our school must wear their school uniform. They must not use their s
     answer: `① This bag is not as big as that one.
 ② This question is the most difficult of all.`,
     hint: '①not as+原級+as、②the most+形容詞+of all。',
-    explanation: `【出題意図】not as〜asの原級比較と、最上級+of allの語順整序を問う。【解説】①「This bag is not as big as that one.」＝not as+原級（big）+as+比較対象（that one）。②「This question is the most difficult of all.」＝the most+形容詞（difficult）+of all（すべての中で）。【注意点】①はbiggerのような比較級にせず、原級bigのままas〜asの間に入れる。②はdifficultの前にmostを置き、theを忘れない。【関連知識】of allは「すべての中で」という最上級の範囲を示す表現で、in+場所（in Japan等）と使い分ける。`,
+    explanation:
+      '【何を聞かれているか】\n語句を並べ替えて、not as〜asの原級比較と、最上級+of allの文を完成させる問題。\n\n【なぜ①は原級、②は最上級を使うのか】\n「〜ほど…ない」という2つを比べる文には原級比較（not as+原級+as）、「すべての中で最も〜」という1つが飛び抜けている文には最上級（the most+形容詞+of all）を使う。\n\n【ポイント1】①not as〜asの形を確認する\n"This bag is not as big as that one."＝bigは原級のまま。\n\n【ポイント2】②最上級+of allの形を確認する\n"This question is the most difficult of all."＝difficultの前にmostを置き、theを忘れない。\n\n【ポイント3】of allの意味を確認する\n"of all"＝「すべての中で」という最上級の範囲を示す表現。\n\n【答え】\n① This bag is not as big as that one.\n② This question is the most difficult of all.\n\n【確かめ】\n①のbigが比較級（bigger）になっていないこと、②にtheとmostの両方が使われていることを確認する。\n\n【よくあるまちがい】\n①を"not as bigger as"のように比較級にしてしまうミス。as〜asの間は原級。\n\n【ここが絶対】\nnot as+原級+as＝「〜ほど…ない」、the most+形容詞+of all＝「すべての中で最も〜」と型で覚える。',
     pitfall: '①をnot as bigger asのように比較級にしないこと。as〜asの間は原級。',
     memoryTip: 'not as+原級+as＝「〜ほど…ない」、the most+形容詞+of all＝「すべての中で最も〜」と型で覚える。',
   },
@@ -670,7 +680,8 @@ Students at our school must wear their school uniform. They must not use their s
 ② Have you (　) visited Okinawa? — Yes, once.（沖縄を訪れたことがありますか）`,
     answer: '① seen　② ever',
     hint: '「経験」を表す現在完了は have/has+過去分詞。回数（three times）、ever（今までに）とよく使われる。',
-    explanation: `【出題意図】現在完了の経験用法（have/has+過去分詞）と、回数・everを使った表現を問う。【解説】①「3回見たことがある」という経験はhave seen（seeの過去分詞seen）＋回数（three times）で表す。②「今までに訪れたことがありますか」という経験を尋ねる疑問文にはeverを使う（Have you ever+過去分詞〜?）。【注意点】経験用法では、~timesのような回数やever（今までに）、never（一度も〜ない）、before（以前に）などの副詞（句）がよく使われる。【関連知識】答え方の例：Yes, I have. / No, I never have. / Yes, once（一度あります）。`,
+    explanation:
+      '【何を聞かれているか】\n現在完了の経験用法（回数・ever）を使った文を完成させる問題。\n\n【なぜ過去分詞を使うのか】\n「〜したことがある」という経験は、現在完了（have/has＋過去分詞）で表す。\n\n【ポイント1】①回数を伴う経験を確認する\n"I have seen this movie three times."＝seeの過去分詞seenを使う。\n\n【ポイント2】②everを使った疑問文を確認する\n"Have you ever visited Okinawa?"＝「今までに訪れたことがありますか」。\n\n【ポイント3】経験用法のキーワードを確認する\never、never、before、~times（回数）などが経験用法でよく使われる。\n\n【答え】\n① seen　② ever\n\n【確かめ】\n①がsaw（過去形）ではなくseen（過去分詞）になっているか確認する。\n\n【よくあるまちがい】\n①をsawにしてしまうミス。現在完了の文なのでhaveの後は過去分詞seenを使う。\n\n【ここが絶対】\n経験用法のキーワード：ever、never、before、~times（回数）を目印にする。',
     pitfall: '①をsawとしないこと。現在完了の文なのでhaveの後は過去分詞seenを使う。',
     memoryTip: '経験用法のキーワード：ever、never、before、~times（回数）を目印にする。',
   },
@@ -687,7 +698,8 @@ Students at our school must wear their school uniform. They must not use their s
 ③ Have you cleaned your room (　)?（もう部屋を掃除しましたか）`,
     answer: '① just finished　② already　③ yet',
     hint: '「完了・結果」を表す現在完了はjust（ちょうど）、already（すでに）、yet（もう／まだ）とよく使われる。',
-    explanation: `【出題意図】現在完了の完了・結果用法（have/has+過去分詞）と、just/already/yetの使い分けを問う。【解説】①「ちょうど終えたところだ」＝have just finished（justは「ちょうど」の意味でhaveと過去分詞の間に置く）。②「すでに家を出た」＝has already left（alreadyもhaveと過去分詞の間に置くのが基本）。③「もう掃除しましたか」＝疑問文の文末にyetを置く（yetは疑問文で「もう」、否定文で「まだ」の意味）。【注意点】alreadyは肯定文、yetは主に疑問文・否定文で使われる（否定文では「まだ〜ない」）。【関連知識】現在完了の完了用法は「（過去の動作が完了して）今〜という結果になっている」ことを表す。`,
+    explanation:
+      '【何を聞かれているか】\n現在完了の完了・結果用法（just・already・yet）を使った文を完成させる問題。\n\n【なぜjust/already/yetの位置が異なるのか】\njust（ちょうど）とalready（すでに）はhave/hasと過去分詞の間に置くが、yet（もう・まだ）は主に疑問文・否定文の文末に置くという、それぞれ異なる位置のルールがある。\n\n【ポイント1】①justを確認する\n"I have just finished my homework."＝ちょうど終えたところ。\n\n【ポイント2】②alreadyを確認する\n"She has already left home."＝すでに家を出た。\n\n【ポイント3】③yetを確認する\n"Have you cleaned your room yet?"＝疑問文の文末にyetを置き「もう〜しましたか」。\n\n【答え】\n① just finished　② already　③ yet\n\n【確かめ】\n③のyetが文末に置かれていることを確認する。\n\n【よくあるまちがい】\n③をalreadyにしてしまうミス。疑問文で「もう〜しましたか」と尋ねる場合はyetを使う。\n\n【ここが絶対】\njust/already＝have/hasと過去分詞の間、yet＝疑問文・否定文の文末、と位置で覚える。',
     pitfall: '③をalreadyにしないこと。疑問文で「もう〜しましたか」と尋ねる場合はyetを使う。',
     memoryTip: 'just/already＝have/hasと過去分詞の間、yet＝疑問文・否定文の文末、と位置で覚える。',
   },
@@ -707,7 +719,8 @@ Students at our school must wear their school uniform. They must not use their s
     answer: `① Have you ever eaten natto?
 ② She has not finished her report yet.`,
     hint: `①現在完了の疑問文はHave/Has+主語+過去分詞〜?、②否定文はhas not（hasn't）+過去分詞、文末にyet。`,
-    explanation: `【出題意図】現在完了の疑問文（経験）と否定文（完了）の語順を問う整序問題。【解説】①「Have you ever eaten natto?」＝Have+主語you+ever+過去分詞eatenの語順。everは過去分詞の直前に置く。②「She has not finished her report yet.」＝has not（hasn't）+過去分詞finished、文末にyet（まだ）を置く。【注意点】現在完了の疑問文はHave/Hasを主語の前に出すだけで、一般動詞のようにDo/Didを使わない。【関連知識】現在完了の疑問文・否定文はいずれもhave/hasの位置と過去分詞の形がポイントになる。`,
+    explanation:
+      '【何を聞かれているか】\n語句を並べ替えて、現在完了の疑問文（経験）と否定文（完了）を完成させる問題。\n\n【なぜHave/Hasを主語の前に出すのか】\n現在完了の疑問文は、be動詞の疑問文と同じ感覚でHave/Hasを主語の前に出すだけで作れる。\n\n【ポイント1】①疑問文の語順を確認する\n"Have you ever eaten natto?"＝Have＋主語you＋ever＋過去分詞eatenの順。\n\n【ポイント2】②否定文の語順を確認する\n"She has not finished her report yet."＝has not（hasn\'t）＋過去分詞finished、文末にyet。\n\n【ポイント3】Do/Didを使わないことを確認する\n現在完了の疑問文はHave/Hasを主語の前に出すだけで、Do/Didは使わない。\n\n【答え】\n① Have you ever eaten natto?\n② She has not finished her report yet.\n\n【確かめ】\n②のyetが文末に置かれているか確認する。\n\n【よくあるまちがい】\n②のyetを文の途中に置いてしまうミス。否定文のyetは基本的に文末に置く。\n\n【ここが絶対】\n現在完了の疑問文・否定文は、be動詞と同じ感覚でhave/hasを動かすと覚える。',
     pitfall: '②のyetを文の途中に置かないこと。否定文のyetは基本的に文末に置く。',
     memoryTip: '現在完了の疑問文・否定文は、be動詞と同じ感覚でhave/hasを動かすと覚える。',
   },
@@ -792,7 +805,8 @@ Students at our school must wear their school uniform. They must not use their s
     answer: `① Was this car made in Japan?
 ② Were these pictures taken by a famous photographer?`,
     hint: '受動態の疑問文はbe動詞を主語の前に出す（be動詞+主語+過去分詞〜?）。',
-    explanation: `【出題意図】受動態の疑問文（be動詞+主語+過去分詞）の語順を問う。【解説】①This car was made in Japan.のwasを主語の前に出し、Was this car made in Japan?とする。②These pictures were takenのwereを主語の前に出し、Were these pictures taken by a famous photographer?とする。【注意点】受動態の疑問文はbe動詞の疑問文と同じ作り方（be動詞を前に出すだけ）で、Do/Didは使わない。【関連知識】答え方はYes, it was. / No, it wasn't.（①）のように、be動詞を使って答える。`,
+    explanation:
+      '【何を聞かれているか】\n受動態の文を疑問文に書き換える問題。\n\n【なぜbe動詞を主語の前に出すのか】\n受動態の疑問文は、be動詞の疑問文と同じ作り方（be動詞を前に出すだけ）で作れる。\n\n【ポイント1】①wasを確認する\n"Was this car made in Japan?"＝wasを主語の前に出す。\n\n【ポイント2】②wereを確認する\n"Were these pictures taken by a famous photographer?"＝wereを主語の前に出す。\n\n【ポイント3】Do/Didを使わないことを確認する\n受動態の疑問文にはDo/Didを使わない。\n\n【答え】\n① Was this car made in Japan?\n② Were these pictures taken by a famous photographer?\n\n【確かめ】\nそれぞれのbe動詞が文頭に来ていて、Do/Didが使われていないか確認する。\n\n【よくあるまちがい】\n②を"Did these pictures taken〜?"のようにDidを使ってしまうミス。受動態の疑問文はbe動詞を使う。\n\n【ここが絶対】\n受動態の疑問文はbe動詞の疑問文と同じ作り方（be動詞を主語の前に出すだけ）と覚える。',
     pitfall: '②をDid these pictures taken〜?のようにDidを使わないこと。受動態の疑問文はbe動詞を使う。',
     memoryTip: '受動態の疑問文はbe動詞の疑問文と同じ作り方（be動詞を主語の前に出すだけ）と覚える。',
   },
@@ -809,7 +823,8 @@ Students at our school must wear their school uniform. They must not use their s
     answer: `① English is not (isn't) spoken in this country.
 ② This bridge was not (wasn't) built 100 years ago.`,
     hint: '受動態の否定文はbe動詞の直後にnotを置く（be動詞+not+過去分詞）。',
-    explanation: `【出題意図】受動態の否定文（be動詞+not+過去分詞）の作り方を問う。【解説】①isの直後にnotを置きis not spoken（isn't spoken）とする。②wasの直後にnotを置きwas not built（wasn't built）とする。【注意点】受動態の否定文もbe動詞の否定文と同じ作り方で、be動詞の直後にnotを置くだけでよい。don'tやdidn'tを使って動詞を原形に戻す必要はない。【関連知識】受動態の否定文・疑問文はいずれも、be動詞の文法（be動詞の位置を変える・notを直後に置く）がそのまま当てはまる。`,
+    explanation:
+      '【何を聞かれているか】\n受動態の文を否定文に書き換える問題。\n\n【なぜbe動詞の直後にnotを置くのか】\n受動態の否定文は、be動詞の否定文と同じ作り方（be動詞の直後にnotを置くだけ）で作れる。\n\n【ポイント1】①isを確認する\n"English is not (isn\'t) spoken in this country."。\n\n【ポイント2】②wasを確認する\n"This bridge was not (wasn\'t) built 100 years ago."。\n\n【ポイント3】do/didを使わないことを確認する\n受動態の否定文にはdon\'tやdidn\'tは使わない。\n\n【答え】\n① English is not (isn\'t) spoken in this country.\n② This bridge was not (wasn\'t) built 100 years ago.\n\n【確かめ】\nそれぞれのbe動詞の直後にnotが置かれているか確認する。\n\n【よくあるまちがい】\n②を"didn\'t build"のように一般動詞の否定文の形にしてしまうミス。受動態はbe動詞の否定の形を使う。\n\n【ここが絶対】\n受動態の否定＝be動詞+not+過去分詞、能動態の否定（一般動詞）とは作り方が異なると意識する。',
     pitfall: '②をdidn\'t buildのように一般動詞の否定文の形にしないこと。受動態はbe動詞の否定の形を使う。',
     memoryTip: '受動態の否定＝be動詞+not+過去分詞、能動態の否定（一般動詞）とは作り方が異なると意識する。',
   },
@@ -826,7 +841,8 @@ Students at our school must wear their school uniform. They must not use their s
 ③ This table is made (　) wood.（このテーブルは木でできている）`,
     answer: '① in　② with　③ of',
     hint: '受動態にはbyだけでなく、慣用的にin/with/ofなどの前置詞を使うものがある。',
-    explanation: `【出題意図】受動態でbyを使わずin/with/ofなどの前置詞を使う慣用表現を問う。【解説】①be interested in〜＝「〜に興味がある」。②be covered with〜＝「〜で覆われている」。③be made of〜＝「（材料が見た目でわかる）〜でできている」。【注意点】これらは受動態の意味は持つが、動作主を表すbyではなく、慣用的に決まった前置詞を使う点に注意する。be made of（材料が目で見てわかるもの：木、紙等）とbe made from（材料が化学変化などで見た目が変わるもの：ワイン←ぶどう等）の違いも発展的に確認する。【関連知識】その他の例：be known for〜（〜で知られている）、be filled with〜（〜で満たされている）、be pleased with〜（〜に満足している）。`,
+    explanation:
+      '【何を聞かれているか】\n受動態でbyを使わず、慣用的に決まった前置詞（in/with/of）を使う表現の空欄を埋める問題。\n\n【なぜbyではなくin/with/ofを使うのか】\nbe interested in、be covered with、be made ofのような表現は、受動態の形をしているが、動作主を表すbyではなく、慣用的に決まった前置詞を使うという特別な性質がある。\n\n【ポイント1】①be interested inを確認する\n"I am interested in Japanese history."＝「〜に興味がある」。\n\n【ポイント2】②be covered withを確認する\n"The mountain is covered with snow."＝「〜で覆われている」。\n\n【ポイント3】③be made ofを確認する\n"This table is made of wood."＝「（見た目でわかる材料）でできている」。\n\n【答え】\n① in　② with　③ of\n\n【確かめ】\nそれぞれの慣用表現が正しい前置詞で使われているか確認する。\n\n【よくあるまちがい】\n③をmade fromにしてしまうミス。木の見た目がそのまま残るテーブルにはmade ofを使う。\n\n【ここが絶対】\nbe interested in、be covered with、be made ofは慣用表現としてセットで丸暗記する。',
     pitfall: '③をmade fromにしないこと。木の見た目がそのまま残るテーブルにはmade ofを使う。',
     memoryTip: 'be interested in、be covered with、be made ofは慣用表現としてセットで丸暗記する。',
   },
@@ -878,7 +894,8 @@ This castle (　) (　) 300 years ago, and it (　) still (　) by many tourists
   Please give me something (　) (　).`,
     answer: '① to do　② to drink',
     hint: '不定詞の形容詞的用法（〜するための、〜すべき）は直前の名詞を修飾する。',
-    explanation: `【出題意図】不定詞の形容詞的用法（名詞+to+動詞原形）を問う。【解説】①「やるべき宿題」＝homework to do（不定詞が直前の名詞homeworkを修飾）。②「飲むもの」＝something to drink（不定詞が直前の代名詞somethingを修飾）。【注意点】不定詞の形容詞的用法は必ず修飾する名詞・代名詞の直後に置く。前置詞が必要な動詞（sit onなど）の場合は、to sit on a chairのように前置詞を残す点にも注意（例：a chair to sit on）。【関連知識】something/anything/nothingなどの不定代名詞は、形容詞と不定詞の両方が付くとき「something+形容詞+to+動詞」の語順になる（例：something cold to drink＝何か冷たい飲み物）。`,
+    explanation:
+      '【何を聞かれているか】\n不定詞の形容詞的用法を使った、2つの日本語に合う文を完成させる問題。\n\n【なぜ不定詞が名詞を修飾するのか】\n「〜するための、〜すべき」という不定詞の形容詞的用法は、直前の名詞・代名詞を修飾する働きを持つ。\n\n【ポイント1】①homeworkを修飾する不定詞を確認する\n"homework to do"＝「やるべき宿題」。\n\n【ポイント2】②somethingを修飾する不定詞を確認する\n"something to drink"＝「飲むもの」。\n\n【ポイント3】不定詞の位置を確認する\n不定詞は必ず修飾する名詞・代名詞の直後に置く。\n\n【答え】\n① to do　② to drink\n\n【確かめ】\nそれぞれの不定詞が、直前の名詞（homework, something）を正しく修飾しているか確認する。\n\n【よくあるまちがい】\n①を"homework doing"のように動名詞にしてしまうミス。「〜すべき」という意味には不定詞を使う。\n\n【ここが絶対】\n不定詞の形容詞的用法＝直前の名詞を「〜するための、〜すべき」と説明すると覚える。',
     pitfall: '①をhomework doing のように動名詞にしないこと。「〜すべき」という意味には不定詞を使う。',
     memoryTip: '不定詞の形容詞的用法＝直前の名詞を「〜するための、〜すべき」と説明すると覚える。',
   },
@@ -985,7 +1002,8 @@ This pool is (　) (　) (　) children to swim in.`,
 ③ Do you know (　) (　) go for lunch?（昼食にどこへ行けばよいか知っていますか）`,
     answer: '① how to　② what to　③ where to',
     hint: '「疑問詞+to+動詞原形」で「〜すべきか」という意味の名詞句を作る。',
-    explanation: `【出題意図】「疑問詞+to不定詞」（how to / what to / where to）の基本形を問う。【解説】①「使い方がわからない」＝don't know how to use（どうやって使うべきかがわからない）。②「何を買えばよいか」＝what to buy。③「どこへ行けばよいか」＝where to go。いずれも「疑問詞+to+動詞原形」で名詞句を作り、know/tellの目的語になっている。【注意点】疑問詞+to doは「疑問詞+主語+should+動詞原形」とほぼ同じ意味を表す（例：how to use=how I should use）。【関連知識】when to do（いつ〜すべきか）、which to do（どちらを〜すべきか）も同じグループの重要表現。`,
+    explanation:
+      '【何を聞かれているか】\n「疑問詞+to不定詞」（how to／what to／where to）の基本形を完成させる問題。\n\n【なぜ「疑問詞+to不定詞」で名詞句を作るのか】\n「〜すべきか」という内容を、動詞（know/tell）の目的語になる名詞のかたまりとして表したいとき、「疑問詞＋to＋動詞の原形」という形を使う。\n\n【ポイント1】①how toを確認する\n"how to use"＝「どうやって使うべきか（使い方）」。\n\n【ポイント2】②what toを確認する\n"what to buy"＝「何を買うべきか」。\n\n【ポイント3】③where toを確認する\n"where to go"＝「どこへ行くべきか」。\n\n【答え】\n① how to　② what to　③ where to\n\n【確かめ】\nそれぞれの疑問詞が、意味に合った内容（使い方、何を買うか、どこへ行くか）をたずねているか確認する。\n\n【よくあるまちがい】\n①を"what to use"にしてしまうミス。「使い方」という意味にはhow to useを使う。\n\n【ここが絶対】\n「疑問詞+to do」＝「疑問詞+すべきか」と意味から逆算して当てはめる。',
     pitfall: '①をwhat to useにしないこと。「使い方」という意味にはhow to useを使う。',
     memoryTip: '疑問詞+to do＝「疑問詞+すべきか」と意味から逆算して当てはめる。',
   },
