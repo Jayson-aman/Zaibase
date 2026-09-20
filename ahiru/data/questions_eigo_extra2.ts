@@ -719,7 +719,8 @@ export const eigoExtra2: Question[] = [
     question: '「あなたは英語と数学どちらが好きですか？」を英語にしなさい。',
     answer: 'Which do you like better, English or math?',
     hint: '「どちら」は "Which" を使い、"A or B?" の形で選択肢を示します',
-    explanation: '【解説】\n"Which do you like better, A or B?" は「AとBどちらが好きですか？」という表現です。"better" は "well" の比較級です。',
+    explanation:
+      '【何を聞かれているか】\n「あなたは英語と数学どちらが好きですか？」という日本語を英語にする問題。\n\n【なぜWhichを使うのか】\n「AとBのどちらが〜か」と、限られた2つの中から選ばせるときは、範囲が決まっているものをたずねる疑問詞Whichを使う。\n\n【ポイント1】"Which do you like better, A or B?"の形を確認する\nWhich＋do you like better＋（コンマ）A or B？で、「AとBどちらが好きですか」という意味になる。\n\n【ポイント2】betterの意味を確認する\nbetterはwell（上手に）／good（良い）の比較級で、ここでは「より好き」という意味を表す。\n\n【ポイント3】whatとの違いを確認する\n選ぶ範囲が決まっていないときはwhat（What subject do you like?）、2つなど範囲が決まっているときはwhich。\n\n【答え】\nWhich do you like better, English or math?\n\n【確かめ】\n"Which do you like better"の後ろに、比べる2つの選択肢（English or math）がコンマで区切られて続いているか確認する。\n\n【よくあるまちがい】\n2つのものを比べているのにwhatを使ってしまうミス。選ぶ範囲がA or Bと決まっているときはwhichを使う。\n\n【ここが絶対】\n"Which do you like better, A or B?"＝「AとBどちらが好きですか」という2択をたずねる決まった表現をセットで覚える。',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -731,7 +732,8 @@ export const eigoExtra2: Question[] = [
     question: '「今日は月曜日です」を英語にしなさい。',
     answer: 'Today is Monday.',
     hint: '月曜日は "Monday" です',
-    explanation: '【解説】\n曜日：Monday（月）、Tuesday（火）、Wednesday（水）、Thursday（木）、Friday（金）、Saturday（土）、Sunday（日）。曜日は大文字で始めます。',
+    explanation:
+      '【何を聞かれているか】\n「今日は月曜日です」という日本語を英語にする問題。\n\n【なぜ曜日を大文字で始めるのか】\n英語では、曜日名は固有名詞と同じように扱われ、文の途中であっても必ず大文字で書き始めるという決まりがある。\n\n【ポイント1】曜日の英語を確認する\nMonday（月）・Tuesday（火）・Wednesday（水）・Thursday（木）・Friday（金）・Saturday（土）・Sunday（日）。\n\n【ポイント2】"Today is〜"の形を確認する\n"Today is＋曜日."で「今日は〜曜日です」という意味になる。\n\n【ポイント3】大文字のルールを確認する\n曜日・月の名前は、文の途中に来ても必ず頭文字を大文字にする。\n\n【答え】\nToday is Monday.\n\n【確かめ】\n"Monday"の頭文字が大文字になっているか確認する。\n\n【よくあるまちがい】\n曜日名を小文字で書いてしまうミス（today is monday）。曜日・月の名前は常に大文字で始める。\n\n【ここが絶対】\n曜日（Monday〜Sunday）は固有名詞と同じように必ず大文字で書き始める。',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -778,7 +780,8 @@ export const eigoExtra2: Question[] = [
     question: '「今は3時15分です」を英語にしなさい。',
     answer: 'It is three fifteen.',
     hint: '分は数字でそのまま読みます',
-    explanation: '【解説】\n時刻は「時 + 分」の順で読みます。"three fifteen" は3時15分です。"It\'s a quarter past three." という言い方もあります。',
+    explanation:
+      '【何を聞かれているか】\n「今は3時15分です」という日本語を英語にする問題。\n\n【なぜ「時・分」の順で読むのか】\n英語の時刻表現は、まず時（three）、続けて分（fifteen）を数字のまま読む、という「時→分」の順番が基本の言い方になっている。\n\n【ポイント1】"時＋分"の形を確認する\n"three fifteen"＝「3時15分」。時と分をそれぞれ数字として読む。\n\n【ポイント2】別の言い方も確認する\n"a quarter past three"（3時を15分過ぎた）のように、quarter（4分の1＝15分）を使った言い方もある。\n\n【ポイント3】"It is〜"の形を確認する\n時刻を言うときは、形式的な主語Itを使い、"It is three fifteen."とする。\n\n【答え】\nIt is three fifteen.\n\n【確かめ】\n"three"（時）の後に"fifteen"（分）が続いていることを確認する。\n\n【よくあるまちがい】\n分を「15」ではなく別の数字で読み間違えてしまうミス。時刻の英語は、時と分をそれぞれ正確な数字で読む。\n\n【ここが絶対】\n時刻は"It is＋時＋分."という形で、時と分をそのまま数字で読む。quarter past（15分過ぎ）のような言い方もあわせて覚える。',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -789,7 +792,8 @@ export const eigoExtra2: Question[] = [
     question: '「私の誕生日は4月5日です」を英語にしなさい。',
     answer: 'My birthday is April 5th.',
     hint: '月の名前は大文字で始めます',
-    explanation: '【解説】\n月：January（1月）、February（2月）、March（3月）、April（4月）... 月の名前は大文字で始め、日付には序数（1st, 2nd, 3rd, 4th...）を使います。',
+    explanation:
+      '【何を聞かれているか】\n「私の誕生日は4月5日です」という日本語を英語にする問題。\n\n【なぜ日付に序数を使うのか】\n英語の日付は、「何番目の日か」を表す序数（1st, 2nd, 3rd, 4th…）を使って表す、という決まりがある。\n\n【ポイント1】月の名前を確認する\nApril（4月）のように、月の名前は大文字で始める。\n\n【ポイント2】日付の表し方を確認する\n「5日」は序数の5th（fifth）を使って表す。\n\n【ポイント3】"My birthday is〜"の形を確認する\n"My birthday is＋月＋日."で「私の誕生日は〜です」という意味になる。\n\n【答え】\nMy birthday is April 5th.\n\n【確かめ】\n"April"が大文字で始まっていること、日付が序数（5th）で表されていることを確認する。\n\n【よくあるまちがい】\n日付を序数ではなく、5のような基数のまま書いてしまうミス。日付には必ず序数を使う。\n\n【ここが絶対】\n月の名前は大文字で始める、日付には序数（1st, 2nd, 3rd, 4th…）を使う、という英語の日付表現のルールをセットで覚える。',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -800,7 +804,8 @@ export const eigoExtra2: Question[] = [
     question: '次の数字を英語で書きなさい：15',
     answer: 'fifteen',
     hint: '10代の数字は "-teen" で終わります',
-    explanation: '【解説】\n11: eleven, 12: twelve, 13: thirteen, 14: fourteen, 15: fifteen, 16: sixteen, 17: seventeen, 18: eighteen, 19: nineteen',
+    explanation:
+      '【何を聞かれているか】\n「15」を英語で書く問題。\n\n【なぜfifteenという形になるのか】\n11から19までの数字は、「基本の数＋teen」という形で作られるという決まりがある（13以降は特にこの規則的な形が多い）。\n\n【ポイント1】11〜19の数字を確認する\neleven（11）・twelve（12）・thirteen（13）・fourteen（14）・fifteen（15）・sixteen（16）・seventeen（17）・eighteen（18）・nineteen（19）。\n\n【ポイント2】11・12が特別な形であることを確認する\nelevenとtwelveは、他の10代の数字のように-teenで終わらない特別な形。\n\n【ポイント3】fifteenの綴りを確認する\nfiveのvがfになり、fifteenという綴りになる（fifthと同じ変化）。\n\n【答え】\nfifteen\n\n【確かめ】\n15がfifteenという、-teenで終わる形になっているか確認する。\n\n【よくあるまちがい】\nfiveをそのまま使って"fiveteen"としてしまうミス。fiveのvがfに変わってfifteenになる。\n\n【ここが絶対】\n10代の数字（13〜19）は「基本の数＋teen」という形で作る。11・12は例外的な形（eleven, twelve）であることも覚えておく。',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -811,7 +816,8 @@ export const eigoExtra2: Question[] = [
     question: '次の数字を英語で書きなさい：100',
     answer: 'one hundred',
     hint: '100は "hundred" を使います',
-    explanation: '【解説】\n100: one hundred, 1000: one thousand, 10000: ten thousand。英語では "万" という単位はなく、"ten thousand" と言います。',
+    explanation:
+      '【何を聞かれているか】\n「100」を英語で書く問題。\n\n【なぜone hundredという形になるのか】\n100は英語でhundred（百）という単位を使って表し、その前に数（1つ分なのでone）をつけてone hundredとする。\n\n【ポイント1】大きな数の単位を確認する\nhundred（百）・thousand（千）・ten thousand（1万）。\n\n【ポイント2】「万」に対応する英語がないことを確認する\n英語には日本語の「万」にあたる単位がなく、10,000は"ten thousand"（1000の10倍）と表す。\n\n【ポイント3】単位の前の数を確認する\n100はone hundred、1000はone thousandのように、単位の前に数をつける。\n\n【答え】\none hundred\n\n【確かめ】\nhundredの前にoneがついていることを確認する。\n\n【よくあるまちがい】\n日本語の「万」の感覚で、10,000を"ten thousand"ではなく別の言い方にしてしまうミス。英語には「万」の単位がないため、thousandを使って表す。\n\n【ここが絶対】\nhundred（百）・thousand（千）・ten thousand（1万）という大きな数の単位と、「万」に対応する英語独自の単位がないことをセットで覚える。',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -896,7 +902,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼らは昨日学校にいました」を英語にしなさい。',
     answer: 'They were at school yesterday.',
     hint: '"are" の過去形は "were" です',
-    explanation: '【解説】\n"They are at school." の過去形は "They were at school." となります。"at school"（学校で）という表現を覚えましょう。',
+    explanation:
+      '【何を聞かれているか】\n「彼らは昨日学校にいました」という日本語を英語にする問題。\n\n【なぜwereを使うのか】\nareの過去形はwereで、主語がThey（複数）のときはwereを使うという決まりがある。\n\n【ポイント1】be動詞の過去形を確認する\nam/isの過去形はwas、areの過去形はwere。\n\n【ポイント2】主語Theyとwereの対応を確認する\nTheyは複数の主語なので、対応するbe動詞の過去形はwere。\n\n【ポイント3】"at school"の意味を確認する\n"at school"＝「学校で」。場所を表す表現としてセットで覚える。\n\n【答え】\nThey were at school yesterday.\n\n【確かめ】\nareの過去形がwereになっていて、主語Theyと対応しているか確認する。\n\n【よくあるまちがい】\nareの過去形をwasだと勘違いしてしまうミス。wasはam/isの過去形、wereはareの過去形。\n\n【ここが絶対】\nam/is→was、are→wereというbe動詞の過去形の対応をセットで覚える。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -908,7 +915,7 @@ export const eigoExtra2: Question[] = [
     answer: 'I saw a movie yesterday.',
     hint: '"see" の過去形は "saw" です（不規則変化）',
     explanation:
-      '【答え】I saw a movie yesterday.\n\n【不規則動詞】ed をつけずに形が変わる動詞を不規則動詞という。see の過去形は saw で、これは覚えるしかない。\n\n【変化の型で覚える】不規則動詞は、原形・過去形・過去分詞の3つを並べて覚える。型に分けると覚えやすい。\n・3つとも同じ … put - put - put、cut - cut - cut、read - read - read\n・2つが同じ … come - came - come、run - ran - run、buy - bought - bought\n・3つとも別 … see - saw - seen、go - went - gone、write - wrote - written、eat - ate - eaten\n中学で覚える不規則動詞はおよそ100語である。毎日少しずつ声に出すのが近道である。\n\n【映画の言い方】\n・see a movie … 映画館で見る\n・watch a movie … 家で見る\n・a movie（アメリカ英語）／a film（イギリス英語）\n映画館は a movie theater（アメリカ）、a cinema（イギリス）という。\n\n【see・look・watch】\n・see … 目に入る\n・look at … 目を向ける\n・watch … 動くものを見続ける\n\n【例文】I saw a good movie last weekend.',
+      '【何を聞かれているか】\n「私は昨日映画を見ました」という日本語を英語にする問題。\n\n【なぜsawという形になるのか】\nseeは、edをつけて過去形を作る規則動詞ではなく、sawという特別な形に変化する不規則動詞。\n\n【ポイント1】seeの活用を確認する\nsee（原形）→saw（過去形）→seen（過去分詞）という、3つとも異なる形に変化する不規則動詞。\n\n【ポイント2】映画の見方による語の違いを確認する\n"see a movie"（映画館で見る）、"watch a movie"（家で見る）のように、どこで見るかによって動詞を使い分けることがある。\n\n【ポイント3】文を組み立てる\n"I saw a movie yesterday."＝「私は昨日映画を見た」。\n\n【答え】\nI saw a movie yesterday.\n\n【確かめ】\nsawがseeの過去形として正しく使われているか、"movie"の前にaがついているかを確認する。\n\n【よくあるまちがい】\nseeの過去形を規則動詞のように"seed"としてしまうミス。seeはsee→saw→seenという不規則変化をする。\n\n【ここが絶対】\nsee→saw→seenという不規則動詞の活用をセットで覚える。不規則動詞は原形・過去形・過去分詞をまとめて覚えるのが効率的。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -919,7 +926,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼は昨日学校に来ませんでした」を英語にしなさい。',
     answer: 'He did not come to school yesterday.',
     hint: '過去形の否定文は "did not" を使います',
-    explanation: '【解説】\n過去形の否定文は "did not"（または "didn\'t"）+ 動詞の原形 を使います。"come"（来る）は不規則変化動詞ですが、否定文では原形を使います。',
+    explanation:
+      '【何を聞かれているか】\n「彼は昨日学校に来ませんでした」という日本語を英語にする問題。\n\n【なぜdid notの後ろで動詞を原形に戻すのか】\n過去の否定文はdid not（didn\'t）＋動詞の原形という形を取り、過去を表す働きはdidが担うので、動詞自体は原形に戻す。\n\n【ポイント1】過去の否定文の公式を確認する\n主語＋did not（didn\'t）＋動詞の原形〜。\n\n【ポイント2】comeの形を確認する\ncomeの過去形はcameだが、did notの後ろでは原形comeに戻す。\n\n【ポイント3】文を組み立てる\n"He did not come to school yesterday."＝「彼は昨日学校に来なかった」。\n\n【答え】\nHe did not come to school yesterday.\n\n【確かめ】\ndid notの後ろがcame（過去形）ではなく、come（原形）になっているか確認する。\n\n【よくあるまちがい】\n"He did not came to school."のように、did notと過去形cameを両方使ってしまうミス。過去を表す働きはdidが1つで担うので、動詞は原形にする。\n\n【ここが絶対】\n過去の否定文はdid not＋動詞の原形。didを使ったら動詞は必ず原形に戻す。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1038,7 +1046,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は昨日この問題の答えを知りませんでした」を英語にしなさい。',
     answer: 'I did not know the answer to this question yesterday.',
     hint: '"know" の過去形は "knew" ですが、否定文では原形を使います',
-    explanation: '【解説】\n過去形の否定文では "did not + 動詞の原形" を使います。"know" の過去形は "knew" ですが、"did not know" の形では原形の "know" を使います。',
+    explanation:
+      '【何を聞かれているか】\n「私は昨日この問題の答えを知りませんでした」という日本語を英語にする問題。\n\n【なぜdid notの後ろでknowを原形のまま使うのか】\n過去の否定文did not（didn\'t）の後ろには、動詞の原形を置くという決まりがあり、knowの過去形knewではなく原形knowを使う。\n\n【ポイント1】過去の否定文の公式を確認する\n主語＋did not（didn\'t）＋動詞の原形〜。\n\n【ポイント2】knowの形を確認する\nknowの過去形はknewだが、did notの後ろでは原形knowに戻す。\n\n【ポイント3】"the answer to〜"の形を確認する\n"the answer to this question"＝「この問題の答え」。answerの後ろにはtoを使う。\n\n【答え】\nI did not know the answer to this question yesterday.\n\n【確かめ】\ndid notの後ろがknew（過去形）ではなく、know（原形）になっているか確認する。\n\n【よくあるまちがい】\n"I did not knew〜"のように、did notと過去形knewを両方使ってしまうミス。didが過去を表す働きを担うので、動詞は原形にする。\n\n【ここが絶対】\n過去の否定文はdid not＋動詞の原形。knowのような不規則動詞でも、did notの後ろでは必ず原形に戻す。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -1049,7 +1058,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女はどこで英語を勉強しましたか？」を英語にしなさい。',
     answer: 'Where did she study English?',
     hint: '過去形の疑問文は "did" を使います',
-    explanation: '【解説】\n"Where did she study English?" は「彼女はどこで英語を勉強しましたか？」という疑問文です。疑問詞 + did + 主語 + 動詞の原形 の語順です。',
+    explanation:
+      '【何を聞かれているか】\n「彼女はどこで英語を勉強しましたか？」という日本語を英語にする問題。\n\n【なぜ疑問詞＋did＋主語＋動詞の原形の語順にするのか】\n過去のことをたずねる疑問文は、疑問詞の後ろにdid＋主語＋動詞の原形という形を続ける、という決まった語順を取る。\n\n【ポイント1】過去の疑問文の公式を確認する\n疑問詞＋did＋主語＋動詞の原形〜?\n\n【ポイント2】場所をたずねる疑問詞を確認する\n「どこで」をたずねるにはWhereを使う。\n\n【ポイント3】studyの形を確認する\nstudyの過去形はstudiedだが、didを使う疑問文では原形studyに戻す。\n\n【答え】\nWhere did she study English?\n\n【確かめ】\nWhereの後ろが"did she study"という、did＋主語＋動詞の原形の語順になっているか確認する。\n\n【よくあるまちがい】\n"Where did she studied English?"のように、didと過去形studiedを両方使ってしまうミス。didを使ったら動詞は原形に戻す。\n\n【ここが絶対】\n過去の疑問文は「疑問詞＋did＋主語＋動詞の原形」。didがあるときは動詞を必ず原形にする。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1072,7 +1082,8 @@ export const eigoExtra2: Question[] = [
     question: '「先週末はどうでしたか？」を英語にしなさい。',
     answer: 'How was your weekend?',
     hint: '「どうでしたか」は "How was ...?" を使います',
-    explanation: '【解説】\n"How was your weekend?" は「先週末はどうでしたか？」という表現です。答えは "It was great!"（素晴らしかったです）のように言います。',
+    explanation:
+      '【何を聞かれているか】\n「先週末はどうでしたか？」という日本語を英語にする問題。\n\n【なぜHow was〜?を使うのか】\n「〜はどうでしたか」と、過去の出来事や状態の様子をたずねるときは、How＋be動詞の過去形（was/were）を使う。\n\n【ポイント1】"How was〜?"の形を確認する\nHow was＋単数の主語〜?で「〜はどうでしたか」とたずねる。\n\n【ポイント2】主語weekendとwasの対応を確認する\nyour weekend（あなたの週末）は単数として扱うので、be動詞の過去形はwas。\n\n【ポイント3】答え方を確認する\n"It was great!"（素晴らしかったです）のように、Itとbe動詞の過去形で答える。\n\n【答え】\nHow was your weekend?\n\n【確かめ】\n"How was"の後ろに"your weekend"という単数の主語が続いているか確認する。\n\n【よくあるまちがい】\n"How were your weekend?"のように、単数の主語なのにwereを使ってしまうミス。weekendは1つの出来事として単数扱いなので、was。\n\n【ここが絶対】\n"How was/were〜?"＝「〜はどうでしたか」という、過去の様子をたずねる決まり文句として覚える。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1108,7 +1119,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女は今音楽を聴いていますか？」を英語にしなさい。',
     answer: 'Is she listening to music now?',
     hint: '現在進行形の疑問文は be動詞を先頭に置きます',
-    explanation: '【解説】\n現在進行形の疑問文は be動詞を主語の前に移動します。"She is listening to music." → "Is she listening to music?" となります。',
+    explanation:
+      '【何を聞かれているか】\n「彼女は今音楽を聴いていますか？」という日本語を英語にする問題。\n\n【なぜbe動詞を主語の前に移動するのか】\n現在進行形の疑問文は、be動詞を主語の前に移動するだけで作れるという決まりがある。\n\n【ポイント1】現在進行形の疑問文の作り方を確認する\n"She is listening to music."のisとsheを入れ替えて、"Is she listening to music?"にする。\n\n【ポイント2】"now"の位置を確認する\n"now"（今）は文末に置く。\n\n【ポイント3】do/doesを使わないことを確認する\nbe動詞を使った文の疑問文には、do/doesを使わない。\n\n【答え】\nIs she listening to music now?\n\n【確かめ】\nbe動詞isが文頭に来ていて、"listening"がing形のままになっていることを確認する。\n\n【よくあるまちがい】\n現在進行形の疑問文にDoesを使ってしまうミス（"Does she is listening?"のような誤り）。be動詞の疑問文はbe動詞自体を移動するだけでよい。\n\n【ここが絶対】\n現在進行形の疑問文は、be動詞を主語の前に移動するだけ。do/doesは使わない。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1131,7 +1143,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼らは今何をしていますか？」を英語にしなさい。',
     answer: 'What are they doing now?',
     hint: '進行形の疑問詞疑問文の語順に注意しましょう',
-    explanation: '【解説】\n"What are they doing now?" は「彼らは今何をしていますか？」という疑問文です。疑問詞 + be動詞 + 主語 + 動詞の -ing 形 の語順です。',
+    explanation:
+      '【何を聞かれているか】\n「彼らは今何をしていますか？」という日本語を英語にする問題。\n\n【なぜ疑問詞＋be動詞＋主語＋動詞のing形の語順にするのか】\n現在進行形の疑問詞疑問文は、疑問詞を先頭に置き、その後ろに現在進行形の疑問文の語順（be動詞＋主語＋動詞のing形）を続ける。\n\n【ポイント1】現在進行形の疑問詞疑問文の公式を確認する\n疑問詞＋be動詞＋主語＋動詞のing形〜?\n\n【ポイント2】「何を」をたずねる疑問詞を確認する\n「何を」はWhatを使う。\n\n【ポイント3】areとtheyの対応を確認する\nTheyは複数の主語なので、be動詞はare。\n\n【答え】\nWhat are they doing now?\n\n【確かめ】\nWhatの後ろが"are they doing"という、be動詞＋主語＋動詞のing形の語順になっているか確認する。\n\n【よくあるまちがい】\n"What they are doing?"のように、be動詞areと主語theyの語順を入れ替え忘れてしまうミス。疑問詞の後ろも疑問文の語順にする。\n\n【ここが絶対】\n現在進行形の疑問詞疑問文は「疑問詞＋be動詞＋主語＋動詞のing形」という語順をセットで覚える。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1178,7 +1191,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼は明日来ないでしょう」を英語にしなさい。',
     answer: 'He will not come tomorrow.',
     hint: '"will not"（= won\'t）で未来の否定を表します',
-    explanation: '【解説】\n"will not"（短縮形：won\'t）は未来の否定を表します。"He will not come tomorrow." または "He won\'t come tomorrow." が正解です。',
+    explanation:
+      '【何を聞かれているか】\n「彼は明日来ないでしょう」という日本語を英語にする問題。\n\n【なぜwill notを使うのか】\n未来の否定「〜しないだろう」は、will＋notという形で表すという決まりがある。\n\n【ポイント1】未来の否定文の公式を確認する\n主語＋will not（won\'t）＋動詞の原形〜。\n\n【ポイント2】willの後ろが原形であることを確認する\nwillの後ろには常に動詞の原形が来る（comesではなくcome）。\n\n【ポイント3】短縮形を確認する\nwill notはwon\'tと短縮できる。\n\n【答え】\nHe will not come tomorrow.\n\n【確かめ】\nwill notの後ろが動詞の原形comeになっているか確認する。\n\n【よくあるまちがい】\nwillの後ろの動詞に三人称単数のsをつけてしまうミス（comesとしてしまう）。willの後ろは主語に関係なく常に原形。\n\n【ここが絶対】\n未来の否定はwill not（won\'t）＋動詞の原形。willの後ろは常に動詞の原形にする。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1189,7 +1203,8 @@ export const eigoExtra2: Question[] = [
     question: '「あなたは明日学校に行きますか？」を英語にしなさい。（will を使う）',
     answer: 'Will you go to school tomorrow?',
     hint: '"Will + 主語 + 動詞の原形?" の形です',
-    explanation: '【解説】\n"will" を使った疑問文は "Will + 主語 + 動詞の原形?" の形です。"Will you go to school tomorrow?" が正解です。',
+    explanation:
+      '【何を聞かれているか】\n「あなたは明日学校に行きますか？」という日本語を、willを使って英語にする問題。\n\n【なぜWillを文頭に置くのか】\nwillを使った疑問文は、willを主語の前に移動するだけで作れるという決まりがある。\n\n【ポイント1】willの疑問文の公式を確認する\nWill＋主語＋動詞の原形〜?\n\n【ポイント2】doを使わないことを確認する\nwillのような助動詞がある文の疑問文には、do/doesを使わない。\n\n【ポイント3】文を組み立てる\n"Will you go to school tomorrow?"＝「あなたは明日学校に行きますか」。\n\n【答え】\nWill you go to school tomorrow?\n\n【確かめ】\nWillが文頭に来ていて、その後ろの動詞goが原形になっているか確認する。\n\n【よくあるまちがい】\nwillの疑問文にdoを重ねて使ってしまうミス（"Do you will go?"のような誤り）。助動詞のある文の疑問文は、助動詞を移動するだけでよい。\n\n【ここが絶対】\n"Will＋主語＋動詞の原形〜?"＝未来の予定・意志をたずねる疑問文の形をセットで覚える。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1225,7 +1240,8 @@ export const eigoExtra2: Question[] = [
     question: '「あなたは今何を書いていますか？」を英語にしなさい。',
     answer: 'What are you writing now?',
     hint: '現在進行形の疑問詞疑問文です',
-    explanation: '【解説】\n"What are you writing now?" は「今何を書いていますか？」という疑問文です。"write" → "writing"（e を取って -ing）。',
+    explanation:
+      '【何を聞かれているか】\n「あなたは今何を書いていますか？」という日本語を英語にする問題。\n\n【なぜ疑問詞＋be動詞＋主語＋動詞のing形の語順にするのか】\n現在進行形の疑問詞疑問文は、疑問詞を先頭に置き、その後ろに現在進行形の疑問文の語順（be動詞＋主語＋動詞のing形）を続ける。\n\n【ポイント1】現在進行形の疑問詞疑問文の公式を確認する\n疑問詞＋be動詞＋主語＋動詞のing形〜?\n\n【ポイント2】writeのing形を確認する\nwriteはeで終わる動詞なので、eを取ってingをつけ、writingになる。\n\n【ポイント3】areとyouの対応を確認する\n主語youに対応するbe動詞はare。\n\n【答え】\nWhat are you writing now?\n\n【確かめ】\n"writing"がwriteのeを取ってingをつけた正しい形になっているか確認する。\n\n【よくあるまちがい】\nwriteのing形を"writeing"のように、eを残したまま作ってしまうミス。eで終わる動詞は、eを取ってからingをつける。\n\n【ここが絶対】\neで終わる動詞（write、makeなど）のing形は、eを取ってからingをつける。現在進行形の疑問詞疑問文の語順もあわせて覚える。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1440,7 +1456,7 @@ export const eigoExtra2: Question[] = [
     answer: 'Can you speak English?',
     hint: '"Can + 主語 + 動詞の原形?" の形です',
     explanation:
-      '【答え】Can you speak English?\n\n【助動詞の疑問文】助動詞を主語の前に出すだけでよい。do や does は使わない。\n・You can speak English. → Can you speak English?\n・Can、Will、Must、Should、May すべて同じ作り方である\n\n【動詞は原形のまま】Can you speaks 〜? は誤りである。助動詞の後は必ず原形になる。\n\n【答え方】\n・Yes, I can. ／ No, I cannot.\n聞かれた助動詞で答える。Yes, I do. は誤りである。\n\n【Can you speak と Do you speak】ていねいさにちがいがある。\n・Can you speak English? … 能力をたずねる。場面によっては、できないことを前提にしているように響くことがある\n・Do you speak English? … より自然でていねいな聞き方\n実際の会話では Do you speak 〜? のほうがよく使われる。\n\n【Can you 〜? の2つの意味】\n・能力 … Can you swim?（泳げますか）\n・依頼 … Can you help me?（手伝ってくれますか）\n場面で判断する。\n\n【例文】\n・Can you play the guitar? — Yes, a little.\n・Can you open the door? — Sure.',
+      '【何を聞かれているか】\n「あなたは英語が話せますか？」という日本語を英語にする問題。\n\n【なぜCanを文頭に置くのか】\ncanのような助動詞がある文の疑問文は、canを主語の前に移動するだけで作れるという決まりがある。\n\n【ポイント1】助動詞の疑問文の作り方を確認する\n"You can speak English."のcanとyouを入れ替えて、"Can you speak English?"にする。can・will・must・should・mayなど、助動詞はすべて同じ作り方。\n\n【ポイント2】動詞が原形のままであることを確認する\n助動詞の後ろの動詞は必ず原形になる（speaksとしない）。\n\n【ポイント3】答え方を確認する\n"Yes, I can."／"No, I cannot."のように、聞かれた助動詞を使って答える。\n\n【答え】\nCan you speak English?\n\n【確かめ】\nCanが文頭に来ていて、動詞speakが原形のままになっているか確認する。\n\n【よくあるまちがい】\n助動詞の疑問文にdo/doesを重ねて使ってしまうミス（"Do you can speak?"のような誤り）。助動詞の疑問文は助動詞を移動するだけでよい。\n\n【ここが絶対】\n助動詞（can・will・must・should・may）の疑問文は、助動詞を主語の前に移動するだけ。do/doesは使わない。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -1452,7 +1468,7 @@ export const eigoExtra2: Question[] = [
     answer: 'Can you help me carry my luggage?',
     hint: '"Can you ...?" で依頼を表します',
     explanation:
-      '【答え】Can you help me carry my luggage?\n\n【help ＋ 人 ＋ 動詞の原形】help は、後ろに「人」と「動詞の原形」を続けられる、めずらしい形をとる。\n・help me carry（運ぶのを手伝う）\n・help me to carry も正しいが、to を省くほうがふつうである\n・help ＋ 人 ＋ with ＋ 名詞 の形もある … help me with my homework\n\n【原形が続く動詞】help のほかに、使役動詞と知覚動詞がある。\n・make ＋ 人 ＋ 原形（〜させる）\n・let ＋ 人 ＋ 原形（〜させてやる）\n・have ＋ 人 ＋ 原形（〜してもらう）\n・see／hear ＋ 人 ＋ 原形（〜するのを見る・聞く）\nto のつかない不定詞（原形不定詞）といい、中学の後半で学ぶ大事な形である。\n\n【luggage は数えられない】\n・luggage／baggage（荷物）… 数えられない名詞\n・a luggage とは言わない。数えるときは a piece of luggage、two pieces of luggage\n・bag、suitcase は数えられる\n\n【依頼の言い方】Can you 〜? はくだけた言い方。ていねいにするなら Could you 〜? を使う。\n\n【例文】Can you help me with my homework? — Sure.',
+      '【何を聞かれているか】\n「荷物を持つのを手伝ってもらえますか？」という日本語を英語にする問題。\n\n【なぜhelpの後ろに原形が続くのか】\nhelpは、後ろに「人＋動詞の原形」を続けられる特別な動詞で、"help me carry〜"で「私が〜を運ぶのを手伝う」という意味になる。\n\n【ポイント1】"Can you〜?"で依頼を表すことを確認する\n"Can you〜?"は「〜してもらえますか」という依頼を表す表現。\n\n【ポイント2】"help＋人＋動詞の原形"の形を確認する\nhelp me carry my luggage＝「私が荷物を運ぶのを手伝う」。toをつけたhelp me to carryも正しいが、toを省く方が一般的。\n\n【ポイント3】luggageが数えられない名詞であることを確認する\nluggage（荷物）は数えられない名詞なので、"a luggage"とは言わず、数えるときは"a piece of luggage"のように表す。\n\n【答え】\nCan you help me carry my luggage?\n\n【確かめ】\n"help me"の後ろに動詞の原形carryが続いていることを確認する。\n\n【よくあるまちがい】\n"help me to carrying"のように、動名詞を続けてしまうミス。helpの後ろは「人＋動詞の原形（toなしでもよい）」という形。\n\n【ここが絶対】\nhelp＋人＋動詞の原形＝「（人）が〜するのを手伝う」という形をセットで覚える。luggageは数えられない名詞であることも覚えておく。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -1524,7 +1540,8 @@ export const eigoExtra2: Question[] = [
     question: '「富士山は日本で一番高い山です」を英語にしなさい。',
     answer: 'Mt. Fuji is the highest mountain in Japan.',
     hint: '最上級は "the + 形容詞 -est" の形です',
-    explanation: '【解説】\n最上級は "the + 形容詞の最上級 + in/of ..."（～の中で一番）の形です。"high" → "highest"。"Mt. Fuji"（富士山）は略称です。',
+    explanation:
+      '【何を聞かれているか】\n「富士山は日本で一番高い山です」という日本語を英語にする問題。\n\n【なぜthe highestという最上級を使うのか】\n「〜の中で一番…だ」という、3つ以上のものの中で一番であることを表すときは、最上級（the＋形容詞-est）を使う。\n\n【ポイント1】最上級の公式を確認する\nthe＋形容詞の最上級＋in/of〜（〜の中で）。\n\n【ポイント2】highの最上級を確認する\nhighのような短い形容詞は、語尾に-estをつけて最上級を作る（high→highest）。\n\n【ポイント3】"in Japan"の使い方を確認する\n場所や範囲を表すときはinを使う（"in Japan"＝日本の中で）。\n\n【答え】\nMt. Fuji is the highest mountain in Japan.\n\n【確かめ】\n"the highest"の前にtheがついていること、"in Japan"が範囲を表していることを確認する。\n\n【よくあるまちがい】\n最上級にtheをつけ忘れてしまうミス。最上級には基本的にtheをつける。\n\n【ここが絶対】\n最上級は「the＋形容詞-est＋in/of〜」という形をセットで覚える。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -1583,7 +1600,8 @@ export const eigoExtra2: Question[] = [
     question: '"good" の比較級と最上級を答えなさい。',
     answer: 'better, best',
     hint: '"good" は不規則変化します',
-    explanation: '【解説】\n不規則変化する形容詞：good → better → best、bad → worse → worst、many/much → more → most、little → less → least。',
+    explanation:
+      '【何を聞かれているか】\n"good"の比較級と最上級を答える問題。\n\n【なぜbetter・bestという不規則な形になるのか】\ngoodは、-erや-estをつけるのではなく、まったく別の形（better・best）に変化する不規則変化の形容詞。\n\n【ポイント1】goodの活用を確認する\ngood（原級）→better（比較級）→best（最上級）。\n\n【ポイント2】他の不規則変化の形容詞を確認する\nbad→worse→worst、many/much→more→most、little→less→least。\n\n【ポイント3】規則変化との違いを確認する\ntall→taller→tallestのような規則変化とは違い、これらの語は形がまったく変わるので、そのまま暗記する必要がある。\n\n【答え】\nbetter, best\n\n【確かめ】\ngood→better→bestという変化が、-erや-estをつける規則変化ではないことを確認する。\n\n【よくあるまちがい】\ngoodの比較級を"gooder"、最上級を"goodest"のように規則変化させてしまうミス。goodは不規則変化の形容詞。\n\n【ここが絶対】\ngood→better→best、bad→worse→worstのような不規則変化の形容詞は、規則変化とは別にそのままセットで暗記する。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -1594,7 +1612,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼は私たちの中で一番上手にギターを弾きます」を英語にしなさい。',
     answer: 'He plays the guitar the best of all of us.',
     hint: '副詞の最上級でも "the" をつけることがあります',
-    explanation: '【解説】\n"play the guitar the best of all of us."（私たちの中で一番上手にギターを弾く）。副詞の最上級でも "the" をつけることがあります（特に最上級を強調するとき）。',
+    explanation:
+      '【何を聞かれているか】\n「彼は私たちの中で一番上手にギターを弾きます」という日本語を英語にする問題。\n\n【なぜ副詞の最上級にもtheをつけることがあるのか】\nwellの最上級bestのような副詞の最上級は、本来theをつけなくてもよいが、「一番」であることを強調したいときにtheをつけることがある。\n\n【ポイント1】"play the guitar well"の最上級を確認する\nwellの最上級はbest。"play the guitar the best"＝「一番上手にギターを弾く」。\n\n【ポイント2】"of all of us"の意味を確認する\n"of all of us"＝「私たちの中で」。比べる範囲を表す。\n\n【ポイント3】文を組み立てる\n"He plays the guitar the best of all of us."＝「彼は私たちの中で一番上手にギターを弾く」。\n\n【答え】\nHe plays the guitar the best of all of us.\n\n【確かめ】\n"the best"が「一番上手に」という意味で使われていて、"of all of us"が比べる範囲を示していることを確認する。\n\n【よくあるまちがい】\nwellの最上級bestを、goodの最上級と混同してしまうミス。goodは形容詞（名詞を修飾）、wellは副詞（動詞を修飾）で、どちらも最上級はbestになる。\n\n【ここが絶対】\nwell（上手に）の最上級はbest。副詞の最上級にもtheをつけることがあるという点をあわせて覚える。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -1605,7 +1624,8 @@ export const eigoExtra2: Question[] = [
     question: '「この映画はあの映画ほど面白くありません」を英語にしなさい。',
     answer: 'This movie is not as interesting as that one.',
     hint: '"not as ... as" で劣等比較を表します',
-    explanation: '【解説】\n"not as ... as"（～ほど…ではない）は劣等比較を表します。"This movie is not as interesting as that one." が正解です。',
+    explanation:
+      '【何を聞かれているか】\n「この映画はあの映画ほど面白くありません」という日本語を英語にする問題。\n\n【なぜnot as ... asを使うのか】\n「〜ほど…ではない」という、2つを比べて片方が劣っていることを表すときは、"not as＋形容詞/副詞＋as〜"という劣等比較の構文を使う。\n\n【ポイント1】劣等比較の公式を確認する\nnot as＋形容詞/副詞（原級）＋as＋比べる相手。\n\n【ポイント2】"as ... as"（同等比較）との違いを確認する\n"as interesting as"（〜と同じくらい面白い）にnotをつけると、「〜ほど面白くない」という劣った意味になる。\n\n【ポイント3】文を組み立てる\n"This movie is not as interesting as that one."＝「この映画はあの映画ほど面白くない」。\n\n【答え】\nThis movie is not as interesting as that one.\n\n【確かめ】\n"not as interesting as"という形になっていて、比較級（more interesting）を使っていないことを確認する。\n\n【よくあるまちがい】\n劣等比較を比較級で表そうとして"less interesting than"のような形にしてしまうミス（間違いではないが、この構文では"not as ... as"が求められている）。\n\n【ここが絶対】\n"not as＋形容詞/副詞＋as〜"＝「〜ほど…ではない」という劣等比較の構文をセットで覚える。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1617,7 +1637,7 @@ export const eigoExtra2: Question[] = [
     answer: 'Which is larger, A or B?',
     hint: '"Which is + 比較級, A or B?" の形です',
     explanation:
-      '【答え】Which is larger, A or B?\n\n【2つを比べてたずねる形】Which is ＋ 比較級, A or B? という形になる。\n・Which is larger, the sun or the earth?\n・Which do you like better, tea or coffee?\n\n【which と what】\n・which … 選ぶ範囲が決まっているとき。2つ、または限られた数から選ぶ\n・what … 範囲が決まっていないとき\n・Which sport do you like, soccer or baseball?（2つから）\n・What sport do you like?（どんなスポーツでも）\n\n【3つ以上なら最上級】\n・2つを比べる … Which is larger, A or B?\n・3つ以上から選ぶ … Which is the largest of the three?\n比べる数で比較級か最上級かが決まる。\n\n【like better と like the best】\n・Which do you like better, A or B?（2つ）\n・Which do you like the best of all?（3つ以上）\nlike の比較には better、best を使う。more、most ではない。\n\n【large と big】\n・large … 面積・量。ややかたい\n・big … 大きさ全般。くだけた言い方\n\n【例文】Which is bigger, Japan or Germany?',
+      '【何を聞かれているか】\n「AとBではどちらが大きいですか？」という日本語を英語にする問題。\n\n【なぜWhich is＋比較級の形を使うのか】\n2つのものを比べて「どちらが〜か」とたずねるときは、Which is＋比較級＋A or B?という決まった形を使う。\n\n【ポイント1】"Which is＋比較級, A or B?"の形を確認する\nWhich is larger, A or B?＝「AとBではどちらが大きいですか」。\n\n【ポイント2】whichとwhatの違いを確認する\n2つ、または限られた数から選ぶときはwhich、範囲が決まっていないときはwhat。\n\n【ポイント3】3つ以上との違いを確認する\n2つを比べるときは比較級（Which is larger, A or B?）、3つ以上から選ぶときは最上級（Which is the largest of the three?）を使う。\n\n【答え】\nWhich is larger, A or B?\n\n【確かめ】\n"Which is"の後ろに比較級largerが続き、その後ろにA or Bという2つの選択肢が示されているか確認する。\n\n【よくあるまちがい】\n2つを比べているのに最上級を使ってしまうミス。2つの比較には比較級、3つ以上の比較には最上級を使う。\n\n【ここが絶対】\n"Which is＋比較級, A or B?"＝2つを比べてどちらかをたずねる決まった形をセットで覚える。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
