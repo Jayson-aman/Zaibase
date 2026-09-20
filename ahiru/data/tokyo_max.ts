@@ -593,13 +593,15 @@ export const tokyoKokoMaxQuestions: Question[] = [
   },
   {
     id: 'koko_meidai_max_03',
+    pitfall:
+      'モル濃度（mol/L）を使った中和滴定の計算は高校化学の内容で、高校入試には出ない。中学では、過不足なく中和する体積の比を実験結果の表やグラフから読み取る。',
     subject: 'rika',
     difficulty: 'advanced',
     examType: 'koko',
     course: 'koko-meidai',
     maxOnly: true,
     question:
-      '【大問3】（化学・中和滴定の計算）\n\n0.1mol/Lの塩酸（HCl）50mLに、0.1mol/LのNaOH水溶液を加えていく中和滴定実験を行った。\n\n問1. 塩酸中のHClのモル数を求めよ。\n問2. 中和点に達するまでに必要なNaOH水溶液は何mLか。\n問3. NaOH水溶液を75mL加えたとき、溶液中に過剰に残っているイオンの種類とそのモル数を答えよ。また、このとき溶液は酸性・中性・塩基性のどれか。',
+      '【高校先取り】【大問3】（化学・中和滴定の計算）\n\n0.1mol/Lの塩酸（HCl）50mLに、0.1mol/LのNaOH水溶液を加えていく中和滴定実験を行った。\n\n問1. 塩酸中のHClのモル数を求めよ。\n問2. 中和点に達するまでに必要なNaOH水溶液は何mLか。\n問3. NaOH水溶液を75mL加えたとき、溶液中に過剰に残っているイオンの種類とそのモル数を答えよ。また、このとき溶液は酸性・中性・塩基性のどれか。',
     answer:
       '問1. 0.005mol（5×10⁻³mol）\n問2. 50mL\n問3. OH⁻イオンが0.0025mol過剰に残る。塩基性。',
     hint: 'HCl + NaOH → NaCl + H₂O（1:1で反応）。中和点でHとOHが等モル。75mL加えると過剰分が残る。',

@@ -214,12 +214,14 @@ export const kokoKankanRika20: Question[] = [
   },
   {
     id: 'koko_kankan_rika_17',
+    pitfall: '物質量（mol）やアボガドロ数・アボガドロの法則を使った計算は高校化学の内容で、高校入試には出ない。',
     subject: 'rika',
     examType: 'koko',
     course: 'koko-kankan',
     difficulty: 'advanced',
     maxOnly: true,
-    question: '水(H₂O)の分子量は18である。①0℃・1気圧で水18gは何molか。②水18gが完全に気化したとき、標準状態(0℃・1気圧)での体積は何Lか（アボガドロの法則を使うこと）。③水18gに含まれる水分子の数を、アボガドロ数6.0×10²³を用いて求めなさい。',
+    question:
+      '【高校先取り】水(H₂O)の分子量は18である。①0℃・1気圧で水18gは何molか。②水18gが完全に気化したとき、標準状態(0℃・1気圧)での体積は何Lか（アボガドロの法則を使うこと）。③水18gに含まれる水分子の数を、アボガドロ数6.0×10²³を用いて求めなさい。',
     answer: '①1mol　②22.4L　③6.0×10²³個',
     hint: '1molの質量=分子量(g)、1molの気体の体積(標準状態)=22.4L、1molの粒子数=アボガドロ数。',
     explanation:

@@ -1089,12 +1089,14 @@ export const todaijiKokoRika: Question[] = [
   },
   {
     id: 'todaiji_koko_rika_02',
+    pitfall: 'モル濃度（mol/L）を使った中和反応の量的計算は高校化学の内容で、高校入試には出ない。中学では、過不足なく中和する体積の比を使って計算する。',
     subject: 'rika',
     course: 'koko-todaiji',
     difficulty: 'advanced',
     maxOnly: true,
     examType: 'koko',
-    question: `【化学】0.5mol/L NaOH水溶液20mLと0.2mol/L HCl水溶液50mLを混合した。\n\n問1. どちらが過剰か確認し、反応後のイオン種と濃度を求めよ。\n問2. 完全中和後に生成するNaClの質量を求めよ。（NaClの式量=58.5）`,
+    question:
+      '【高校先取り】【化学】0.5mol/L NaOH水溶液20mLと0.2mol/L HCl水溶液50mLを混合した。\n\n問1. どちらが過剰か確認し、反応後のイオン種と濃度を求めよ。\n問2. 完全中和後に生成するNaClの質量を求めよ。（NaClの式量=58.5）',
     answer: `問1: NaOH 0.01mol、HCl 0.01mol → ちょうど中和。Na⁺: 0.01mol、Cl⁻: 0.01mol、H₂O: 0.01mol　問2: 0.585g`,
     hint: `中和の公式: 酸のmol数=塩基のmol数 で確認する。`,
     explanation: `【出題意図】\n中和反応の量的関係とイオン反応式の理解を問う問題。\n\n【解法】\nNaOH: 0.5×0.020=0.01mol\nHCl: 0.2×0.050=0.01mol\n→ ちょうど中和\n\nNaOH+HCl→NaCl+H₂O\n生成NaCl: 0.01mol → 0.01×58.5=0.585g\n\n【つまずきポイント】\n体積の単位をmL→Lに変換すること（20mL=0.020L）。\n\n【時間配分の目安】\n8分\n\n【類題へのアドバイス】\n過剰側が残るケースでは過剰量を総体積で割って濃度を求め、pH計算に使う。`,
