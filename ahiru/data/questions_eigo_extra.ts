@@ -1567,7 +1567,8 @@ export const eigoExtra: Question[] = [
     choices: ['She is swimming in the pool.', 'Swimming is good exercise.', 'The swimming pool is big.', 'A swimming fish is fast.'],
     answer: 'Swimming is good exercise.',
     hint: '動名詞は文の主語・目的語・補語として使われます。',
-    explanation: 'Swimming is good exercise. の swimming は文の主語（「水泳は良い運動だ」）として使われており、これが動名詞です。is swimming は進行形、swimming pool は形容詞的な使い方です。',
+    explanation:
+      '【何を聞かれているか】\n"swimming"が動名詞として使われている文を選ぶ問題。\n\n【なぜ動名詞と現在分詞を見分ける必要があるのか】\n"swimming"のような-ing形は、動名詞（名詞の働き）・現在進行形の一部・形容詞的な働きなど、複数の役割を持つことができるため、文の中でどの役割をしているかを見分ける必要がある。\n\n【ポイント1】動名詞の役割を確認する\n動名詞は文の主語・目的語・補語として使われる、名詞の働きをする-ing形。"Swimming is good exercise."では、Swimmingが文全体の主語になっている。\n\n【ポイント2】他の選択肢の-ing形の役割を確認する\n"She is swimming in the pool."のis swimmingは現在進行形の一部。"The swimming pool"のswimmingはpoolを説明する形容詞的な働き。"A swimming fish"のswimmingもfishを説明する現在分詞。\n\n【ポイント3】主語になっているかどうかで判断する\n"Swimming is good exercise."だけが、-ing形（Swimming）が単独で文の主語になっている。\n\n【答え】\nSwimming is good exercise.\n\n【確かめ】\n"Swimming"を"It"に置き換えても意味が通じる（"It is good exercise."）ことから、Swimmingが名詞と同じ働きをしていることを確認する。\n\n【よくあるまちがい】\n-ing形が使われている文をすべて動名詞だと思い込んでしまうミス。進行形（be動詞+ing）や形容詞的な用法との違いを、文の中での役割から見分ける。\n\n【ここが絶対】\n動名詞は「文の主語・目的語・補語になっている-ing形」。進行形や名詞を修飾する-ing形と区別する。',
     examFrequency: 'high',
   },
   {
@@ -1593,7 +1594,8 @@ export const eigoExtra: Question[] = [
     choices: ['to + 動詞の原形（不定詞）', '動詞の -ing 形（動名詞）', '動詞の原形', 'that 節'],
     answer: '動詞の -ing 形（動名詞）',
     hint: 'finish は動名詞を目的語にとります。',
-    explanation: 'finish は動名詞（-ing 形）を目的語にとります。I finished reading the book. = 私は本を読み終えた。finish to read は誤りです。',
+    explanation:
+      '【何を聞かれているか】\n"finish"の後ろに続く、正しい動詞の形を答える問題。\n\n【なぜ動名詞（-ing形）を使うのか】\nfinishは、後ろに動名詞（-ing形）だけを目的語に取るという決まりを持つ動詞のグループに属している。\n\n【ポイント1】finishの後ろの形を確認する\nfinish＋動名詞（-ing形）。"finish to read"のように不定詞を続けるのは誤り。\n\n【ポイント2】同じグループの動詞を確認する\nenjoy（楽しむ）、stop（やめる）も、finishと同じように動名詞を目的語に取る。\n\n【ポイント3】例文で確認する\n"I finished reading the book."＝「私は本を読み終えた」。\n\n【答え】\n動詞の -ing 形（動名詞）\n\n【確かめ】\n"finish"の後ろが"reading"のように-ing形になっていて、不定詞（to read）になっていないことを確認する。\n\n【よくあるまちがい】\n"finish to read"のように、不定詞を続けてしまうミス。finishは動名詞だけを目的語に取る動詞。\n\n【ここが絶対】\nfinish・enjoy・stopなどの動詞は、後ろに動名詞（-ing形）だけを取るというグループとしてセットで覚える。',
     examFrequency: 'high',
   },
   {
@@ -1673,7 +1675,8 @@ export const eigoExtra: Question[] = [
     choices: ['不定詞（to + 動詞原形）', '動名詞（-ing 形）', '動詞の原形', 'どちらでも同じ'],
     answer: '動名詞（-ing 形）',
     hint: 'practice は動名詞を目的語にとります。',
-    explanation: 'practice は動名詞（-ing 形）を目的語にとります。She practices playing the violin every day. = 彼女は毎日バイオリンを練習している。practice to play とは言いません。',
+    explanation:
+      '【何を聞かれているか】\n"practice"の後ろに続く、正しい動詞の形を答える問題。\n\n【なぜ動名詞（-ing形）を使うのか】\npracticeは、後ろに動名詞（-ing形）だけを目的語に取るという決まりを持つ動詞のグループに属している。\n\n【ポイント1】practiceの後ろの形を確認する\npractice＋動名詞（-ing形）。"practice to play"のように不定詞を続けるのは誤り。\n\n【ポイント2】同じグループの動詞を確認する\nenjoy（楽しむ）、finish（終える）も、practiceと同じように動名詞を目的語に取る。\n\n【ポイント3】例文で確認する\n"She practices playing the violin every day."＝「彼女は毎日バイオリンを練習している」。\n\n【答え】\n動名詞（-ing 形）\n\n【確かめ】\n"practice"の後ろが"playing"のように-ing形になっていて、不定詞（to play）になっていないことを確認する。\n\n【よくあるまちがい】\n"practice to play"のように、不定詞を続けてしまうミス。practiceは動名詞だけを目的語に取る動詞。\n\n【ここが絶対】\npractice・enjoy・finishなどの動詞は、後ろに動名詞（-ing形）だけを取るというグループとしてセットで覚える。',
     examFrequency: 'high',
   },
   // ============================================================
@@ -1689,7 +1692,8 @@ export const eigoExtra: Question[] = [
     choices: ['机の上にねこがいる。', '机の下にねこがいる。', '机のそばにねこがいる。', '机の中にねこがいる。'],
     answer: '机の下にねこがいる。',
     hint: 'under は「～の下」を意味します。',
-    explanation: 'There is a cat under the desk. = 机の下にねこがいる。under は「～の下に」です。on は上に、beside/near はそばに、in は中に。',
+    explanation:
+      '【何を聞かれているか】\n"There is a cat under the desk."の意味を選ぶ問題。\n\n【なぜ「机の下」という意味になるのか】\nunderは「〜の下に」という位置を表す前置詞なので、"under the desk"は「机の下に」という意味になる。\n\n【ポイント1】underの意味を確認する\nunder＝「〜の真下に」。\n\n【ポイント2】他の位置を表す前置詞と区別する\non＝上（接している）、beside/near＝そば、in＝中。\n\n【ポイント3】"There is 〜"の意味を確認する\n"There is a cat 〜"は「猫がいる」という、存在を表す構文。\n\n【答え】\n机の下にねこがいる。\n\n【確かめ】\nunderが「下」を表す前置詞であることを、on（上）、in（中）などの他の前置詞と比べて確認する。\n\n【よくあるまちがい】\nunderを「そば」や「中」のような別の位置だと勘違いしてしまうミス。位置を表す前置詞は、それぞれ表す位置関係が異なる。\n\n【ここが絶対】\non（接している）・in（中）・under（真下）・beside/near（そば）・between（2つの間）という位置を表す前置詞をセットで覚える。',
     examFrequency: 'high',
   },
   {
@@ -1729,7 +1733,8 @@ export const eigoExtra: Question[] = [
     choices: ['yesterday, last week, ago', 'for, since', 'already, yet, just', 'ever, never'],
     answer: 'for, since',
     hint: '「～の間」「～以来ずっと」という継続を表す語句です。',
-    explanation: '現在完了の継続用法では for（～の間）や since（～以来）をよく使います。for ten years（10年間）、since 2010（2010年から）など。',
+    explanation:
+      '【何を聞かれているか】\n現在完了形の「継続」用法でよく使われる語句を選ぶ問題。\n\n【なぜfor・sinceが継続用法のサインになるのか】\n「（過去のある時点から今まで）ずっと〜している」という継続を表す現在完了形は、期間や起点を示すfor・sinceという語とセットで使われることが多い。\n\n【ポイント1】forの使い方を確認する\nfor＋期間の長さ（for ten years＝10年間）。\n\n【ポイント2】sinceの使い方を確認する\nsince＋起点の時点（since 2010＝2010年から）。\n\n【ポイント3】他の選択肢との違いを確認する\nyesterday・last week・agoは過去形と使う語、already・yet・justは完了用法、ever・neverは経験用法で使う語句。\n\n【答え】\nfor, since\n\n【確かめ】\n"for＋期間"、"since＋時点"という2つの形をそれぞれ例文（for ten years、since 2010）で確認する。\n\n【よくあるまちがい】\nalreadyやjustのような完了用法の語句を、継続用法の語句だと混同してしまうミス。現在完了には継続・経験・完了という3つの用法があり、それぞれ使われる語句が異なる。\n\n【ここが絶対】\n現在完了の継続用法はfor（期間）・since（起点）とセットで使われる。用法ごとに使われる語句（already/yet/just＝完了、ever/never＝経験）を区別して覚える。',
     examFrequency: 'very-high',
   },
   {
@@ -1769,7 +1774,8 @@ export const eigoExtra: Question[] = [
     choices: ['私はすしをいつも食べる。', '私はすしを食べたことがない。', '私はすしをまだ食べていない。', '私はすしをもう食べた。'],
     answer: '私はすしを食べたことがない。',
     hint: 'never は「一度も～ない」という意味です。',
-    explanation: 'have never + 過去分詞 は「一度も～したことがない」という現在完了の否定の経験用法です。I have never eaten sushi. = 私はすしを食べたことがない。',
+    explanation:
+      '【何を聞かれているか】\n"I have never eaten sushi."の意味を選ぶ問題。\n\n【なぜ「食べたことがない」という意味になるのか】\n"have never＋過去分詞"は、現在完了の経験用法の否定形で、「一度も〜したことがない」という意味を表す。\n\n【ポイント1】現在完了（経験）の否定形の公式を確認する\nhave/has＋never＋過去分詞。\n\n【ポイント2】neverの意味を確認する\nnever＝「一度も〜ない」。否定の意味をneverが含んでいるので、notは別につけない。\n\n【ポイント3】他の選択肢との違いを確認する\n「いつも食べる」は現在形の習慣、「まだ食べていない」はyetを使った完了用法の否定、「もう食べた」はalreadyを使った完了用法の肯定で、それぞれ意味が異なる。\n\n【答え】\n私はすしを食べたことがない。\n\n【確かめ】\n"have never eaten"が「一度も食べたことがない」という経験の否定を表していることを、have neverの組み合わせから確認する。\n\n【よくあるまちがい】\nneverを「まだ」という意味の完了用法（yet）と混同してしまうミス。neverは経験用法で使う語で、「一度も〜ない」という意味。\n\n【ここが絶対】\n"have never＋過去分詞"＝「一度も〜したことがない」という現在完了（経験）の否定形をセットで覚える。',
     examFrequency: 'very-high',
   },
   {
@@ -1782,7 +1788,8 @@ export const eigoExtra: Question[] = [
     choices: ['Yes, there is.', 'Yes, it is.', 'Yes, there are.', 'Yes, here is.'],
     answer: 'Yes, there is.',
     hint: 'There is/are 構文の疑問文への答え方は？',
-    explanation: 'Is there ...? という疑問文には Yes, there is. または No, there isn\'t. と答えます。Are there ...? の場合は Yes, there are. と答えます。',
+    explanation:
+      '【何を聞かれているか】\n"Is there a hospital near here?"への正しい答え方を選ぶ問題。\n\n【なぜthereを使って答えるのか】\n"Is there〜?"という疑問文で使われているthereは、答えるときもそのまま使うという決まりがある（itやhereに変えない）。\n\n【ポイント1】"There is/are〜"の疑問文と答え方の対応を確認する\n"Is there〜?"には"Yes, there is."／"No, there isn\'t."、"Are there〜?"には"Yes, there are."／"No, there aren\'t."と答える。\n\n【ポイント2】主語の単数・複数を確認する\n"a hospital"は単数なので、is/thereのセットで答える。\n\n【ポイント3】誤った答え方を確認する\n"Yes, it is."や"Yes, here is."は、"There is〜?"の疑問文に対する答え方としては使わない。\n\n【答え】\nYes, there is.\n\n【確かめ】\n疑問文の"Is there〜?"のthereが、答えの"Yes, there is."にもそのまま使われているか確認する。\n\n【よくあるまちがい】\n"Is there〜?"に対して"Yes, it is."のようにitで答えてしまうミス。There is/areの疑問文には、thereを使って答える。\n\n【ここが絶対】\n"Is there〜?"には"Yes, there is."、"Are there〜?"には"Yes, there are."という決まった答え方をセットで覚える。',
     examFrequency: 'high',
   },
   {
@@ -1796,7 +1803,7 @@ export const eigoExtra: Question[] = [
     answer: 'ちょうど・たった今',
     hint: '完了用法の現在完了でよく使われます。',
     explanation:
-      '【答え】ちょうど・たった今\n\n【just の使い方】現在完了の完了用法で使い、have と過去分詞の間に置く。\n・She has just arrived.（たった今着いた）\n・I have just finished.\n\n【完了用法で使う3つの語】\n・just … ちょうど、たった今\n・already … もう、すでに（ふつうの文）\n・yet … まだ（否定文）、もう（疑問文）。文末に置く\njust と already は動詞の前、yet は文末という位置のちがいがある。\n\n【現在完了と過去形のちがい】\n・She has just arrived.（着いたところで、今ここにいる）\n・She arrived an hour ago.（1時間前に着いた。過去の事実）\n現在完了は今とつながっているのが特徴である。\n\n【just のほかの意味】\n・ちょうど … just now、just then\n・ただ〜だけ … I just want to help.\n・まさに … That is just what I wanted.\n文脈で意味が変わる。\n\n【just now の注意】「たった今」の意味では過去形と使うことが多い。\n・He arrived just now.（過去形）\n・He has just arrived.（現在完了）\nどちらも使えるが、形がちがう。\n\n【例文】She has just arrived at the station.',
+      '【何を聞かれているか】\n"She has just arrived."の"just"の意味を答える問題。\n\n【なぜ「ちょうど・たった今」という意味になるのか】\njustは現在完了の完了用法で使われる語で、「（つい）ちょうど今〜したところだ」という、動作が終わったばかりであることを表す。\n\n【ポイント1】justの位置を確認する\njustはhaveと過去分詞の間に置く（has just arrived）。\n\n【ポイント2】完了用法で使う他の語と区別する\nalready（もう・すでに、ふつうの文）、yet（まだ・もう、否定文・疑問文で文末に置く）とjustは、位置や使われる文の種類が異なる。\n\n【ポイント3】過去形との違いを確認する\n"She has just arrived."（今ここにいる）は現在とつながっているが、"She arrived an hour ago."（1時間前に着いた）は単なる過去の事実。\n\n【答え】\nちょうど・たった今\n\n【確かめ】\njustがhaveと過去分詞の間に置かれていること、「たった今〜したところ」という完了の意味になっていることを確認する。\n\n【よくあるまちがい】\njustを「まだ」（yet）や「もう」（already）と混同してしまうミス。just・already・yetはそれぞれ位置と使われる文の種類が異なる。\n\n【ここが絶対】\njust（ちょうど、have/hasの直後）・already（もう、ふつうの文）・yet（まだ・もう、否定文・疑問文の文末）という完了用法の3つの語を、位置とあわせて区別する。',
     examFrequency: 'very-high',
   },
   {
@@ -1810,7 +1817,7 @@ export const eigoExtra: Question[] = [
     answer: 'あなたはどれくらいの間英語を勉強し続けていますか？',
     hint: 'How long have you ...? は継続期間を尋ねます。',
     explanation:
-      '【答え】あなたはどれくらいの間、英語を勉強し続けていますか\n\n【How long ＋ 現在完了】期間の長さをたずねる。\n・How long have you studied English?\n・答え … For five years.／Since I was ten.\n\n【for と since】\n・for ＋ 期間の長さ … for five years、for a long time\n・since ＋ 始まった時点 … since 2020、since I was ten\n「どれだけの長さか」なら for、「いつから」なら since。\n\n【現在完了進行形との使い分け】\n・How long have you studied English?（継続）\n・How long have you been studying English?（現在完了進行形）\n動作を表す動詞では、進行形のほうが「今も続いている」感じが強い。study はどちらでも使える。\n\n【過去形との区別】\n・How long did you study English?（過去のある期間。今はもうしていない）\n・How long have you studied English?（今も続いている）\n現在完了は今とつながっている。\n\n【How の組み合わせ】How long（期間・長さ）・How often（頻度）・How many times（回数）・How far（距離）・How much（量・値段）。\n\n【例文】How long have you lived here? — For ten years.',
+      '【何を聞かれているか】\n"How long have you studied English?"の意味を答える問題。\n\n【なぜ「勉強し続けていますか」という意味になるのか】\n"How long have you＋過去分詞?"は、現在完了の継続用法の疑問文で、過去のある時点から今まで続いている期間の長さをたずねる表現。\n\n【ポイント1】"How long＋現在完了"の意味を確認する\n期間の長さをたずねる表現で、答えには"For five years."（forの後に期間）や"Since I was ten."（sinceの後に起点）を使う。\n\n【ポイント2】forとsinceの使い分けを確認する\nfor＋期間の長さ、since＋始まった時点。「どれだけの長さか」ならfor、「いつからか」ならsince。\n\n【ポイント3】過去形の疑問文との違いを確認する\n"How long did you study English?"（過去のある期間、今はしていない）と"How long have you studied English?"（今も続いている）は意味が異なる。\n\n【答え】\nあなたはどれくらいの間英語を勉強し続けていますか？\n\n【確かめ】\n"have studied"（現在完了）が、過去から現在までの継続を表していることを、didを使った過去形の疑問文と比べて確認する。\n\n【よくあるまちがい】\n"How long have you studied〜?"を、単に過去に何時間勉強したかをたずねる文だと誤解してしまうミス。現在完了は「今も続いている」ことを表す。\n\n【ここが絶対】\n"How long have you＋過去分詞?"＝「どのくらいの間〜し続けていますか」という継続をたずねる表現。答えにはfor（期間）またはsince（起点）を使う。',
     examFrequency: 'high',
   },
   {
@@ -1836,7 +1843,8 @@ export const eigoExtra: Question[] = [
     choices: ['あなたはどんな本を持っていますか？', 'あなたは何冊本を持っていますか？', 'あなたはどこで本を買いますか？', 'あなたはいつ本を読みますか？'],
     answer: 'あなたは何冊本を持っていますか？',
     hint: 'How many + 複数名詞 で数を尋ねます。',
-    explanation: 'How many books は「何冊の本」という数を尋ねる表現です。How many + 複数名詞 で数を尋ねます。How much は数えられないものに使います。',
+    explanation:
+      '【何を聞かれているか】\n"How many books do you have?"の意味を答える問題。\n\n【なぜ「何冊」という意味になるのか】\n"How many＋複数名詞"は、数えられるものの数をたずねる決まった表現。booksが複数形になっているので「何冊」という数を聞いている。\n\n【ポイント1】"How many＋複数名詞"の形を確認する\nHow many＋数えられる名詞の複数形、で「いくつの〜」という数をたずねる。\n\n【ポイント2】How muchとの違いを確認する\nHow manyは数えられる名詞（books、applesなど）、How muchは数えられない名詞（water、moneyなど）に使う。\n\n【ポイント3】答え方を確認する\n"How many books do you have?"には"I have five books."のように、具体的な数で答える。\n\n【答え】\nあなたは何冊本を持っていますか？\n\n【確かめ】\nbooksが複数形になっていることから、How manyが「数」をたずねていることを確認する。\n\n【よくあるまちがい】\nHow manyとHow muchを混同してしまうミス。数えられる名詞（複数形）にはHow many、数えられない名詞にはHow muchを使う。\n\n【ここが絶対】\nHow many＋複数名詞＝数をたずねる、How much＋数えられない名詞＝量や値段をたずねる、という使い分けをセットで覚える。',
     examFrequency: 'high',
   },
   {
@@ -1864,7 +1872,7 @@ export const eigoExtra: Question[] = [
     answer: 'このジャケットはいくらですか？',
     hint: 'How much は値段を尋ねるときに使います。',
     explanation:
-      '【答え】このジャケットはいくらですか\n\n【How much の2つの意味】\n・値段 … How much is this?（いくらですか）\n・量 … How much water do you need?（どのくらいの水）\n後ろに名詞があるかどうかで見分ける。\n\n【How many との使い分け】\n・How many ＋ 数えられる名詞の複数形 … How many books?\n・How much ＋ 数えられない名詞 … How much water?\n数えられるかどうかで決まる。\n\n【答え方】\n・It is 3,000 yen.\n・Three thousand yen.\n・yen は複数形にしない。three thousand yens は誤りである\n・dollar は複数形にする … three dollars\n\n【買い物で使う表現】\n・How much is it?（いくらですか）\n・It\'s too expensive.（高すぎます）\n・Can I try it on?（試着してもいいですか）\n・I\'ll take it.（これにします）\n・Do you take credit cards?\nまとめて覚えると、会話の問題に強くなる。\n\n【値段に関わる語】expensive（高い）・cheap（安い）・reasonable（手ごろな）・free（無料の）・sale（安売り）・discount（値引き）。\n\n【例文】How much is this jacket? — It\'s 5,000 yen.',
+      '【何を聞かれているか】\n"How much is this jacket?"の意味を答える問題。\n\n【なぜ「いくらですか」という意味になるのか】\n"How much is 〜?"は値段をたずねる決まった表現で、"How much"の後ろに名詞がないときは値段を聞いていると判断できる。\n\n【ポイント1】How muchの2つの意味を確認する\n値段（How much is this?）と量（How much water do you need?）の2つの意味があり、後ろに名詞があるかどうかで見分ける。\n\n【ポイント2】How manyとの使い分けを確認する\nHow many＋数えられる名詞の複数形、How much＋数えられない名詞。\n\n【ポイント3】答え方を確認する\n"It is 3,000 yen."のように答える。yenは複数形にしない（three thousand yensは誤り）が、dollarは複数形にする（three dollars）。\n\n【答え】\nこのジャケットはいくらですか？\n\n【確かめ】\n"How much is 〜?"の後ろに名詞（水や本など）が続いていないことから、値段をたずねる文だと確認する。\n\n【よくあるまちがい】\n"How much"を常に「量」の意味だと思い込んでしまうミス。後ろに名詞がなければ値段をたずねている。\n\n【ここが絶対】\n"How much is 〜?"＝「〜はいくらですか」という値段をたずねる決まり文句として覚える。yenは複数形にしないことにも注意。',
     examFrequency: 'high',
   },
   {
@@ -1903,7 +1911,8 @@ export const eigoExtra: Question[] = [
     choices: ['棚に何冊か本がある。', '棚には本が全くない。', '棚に本がいくつかある。', '棚に本は一冊もない（これと同じ）。'],
     answer: '棚には本が全くない。',
     hint: 'aren\'t any は「一つも～ない」という否定の表現です。',
-    explanation: 'There aren\'t any books on the shelf. = 棚には本が全くない（一冊もない）。aren\'t any = not any で「一つも～ない」を意味します。',
+    explanation:
+      '【何を聞かれているか】\n"There aren\'t any books on the shelf."の意味を答える問題。\n\n【なぜ「全くない」という意味になるのか】\n"aren\'t any"（＝not any）は、「一つも〜ない」という完全な否定を表す決まった形。\n\n【ポイント1】not anyの意味を確認する\nnot any＋名詞＝「一つも〜ない」。someの否定形として使われる。\n\n【ポイント2】anyの使われ方を確認する\nanyは疑問文・否定文で使われ、肯定文のsome（いくつかの）に対応する。\n\n【ポイント3】文全体の意味を確認する\n"There aren\'t any books on the shelf."＝「棚には本が1冊もない」。\n\n【答え】\n棚には本が全くない。\n\n【確かめ】\n"aren\'t any"が「いくつかある」ではなく「一つもない」という完全な否定を表していることを確認する。\n\n【よくあるまちがい】\n"aren\'t any"を「いくつかある」のような肯定に近い意味だと誤解してしまうミス。not anyは完全な否定を表す。\n\n【ここが絶対】\n"There aren\'t any＋名詞"＝「〜が一つもない」という完全な否定の表現としてセットで覚える。',
     examFrequency: 'high',
   },
   {
@@ -1916,7 +1925,8 @@ export const eigoExtra: Question[] = [
     choices: ['フランスに行ったことがある（経験）', 'フランスに今いる（状態）', 'フランスに行ってしまった（完了）', 'フランスにずっといる（継続）'],
     answer: 'フランスに行ったことがある（経験）',
     hint: 'have been to は「～に行ったことがある」という経験を表します。',
-    explanation: 'have been to + 場所 は「～に行ったことがある（経験）」を表します。twice は「2回」。I have been to France twice. = 私はフランスに2回行ったことがある。',
+    explanation:
+      '【何を聞かれているか】\n"I have been to France twice."の"have been to"の意味を答える問題。\n\n【なぜ「行ったことがある」という意味になるのか】\n"have been to＋場所"は、現在完了の経験用法の決まった表現で、「（過去に）行って、戻ってきた」という経験を表す。\n\n【ポイント1】"have been to〜"の意味を確認する\n"have been to France"＝「フランスに行ったことがある」。\n\n【ポイント2】"twice"の意味を確認する\ntwice＝「2回」。once（1回）、twice（2回）、three times（3回）と数える。\n\n【ポイント3】他の選択肢との違いを確認する\n「今いる（状態）」「行ってしまった（完了）」「ずっといる（継続）」はいずれも別の意味で、have been toは経験を表す。\n\n【答え】\nフランスに行ったことがある（経験）\n\n【確かめ】\n"have been to〜"が「行って戻ってきた経験」を表し、「今そこにいる」という意味ではないことを確認する。\n\n【よくあるまちがい】\n"have been to"を「今そこにいる」という状態の意味だと誤解してしまうミス。have been toは経験を表し、今はもうそこにいない（戻ってきている）。\n\n【ここが絶対】\n"have been to＋場所"＝〜に行ったことがある（経験）、という現在完了の決まった表現をセットで覚える。',
     examFrequency: 'very-high',
   },
   {
@@ -1961,7 +1971,8 @@ export const eigoExtra: Question[] = [
     choices: ['woman を修飾する主格の関係代名詞', 'woman を修飾する目的格の関係代名詞', '文全体を修飾する関係副詞', '先行詞が人でないので関係代名詞ではない'],
     answer: 'woman を修飾する主格の関係代名詞',
     hint: 'who の後に is standing という動詞が続いているので主格です。',
-    explanation: 'who は先行詞 woman（人）を受ける主格の関係代名詞です。who is standing by the door（ドアのそばに立っている）が woman を修飾しています。',
+    explanation:
+      '【何を聞かれているか】\n"The woman who is standing by the door is my teacher."の関係代名詞whoの役割を答える問題。\n\n【なぜ主格の関係代名詞なのか】\nwhoの後ろに"is standing"という動詞が直接続いている（主語が欠けている）ことから、whoがその節の中で主語の役割をしている、主格の関係代名詞だとわかる。\n\n【ポイント1】先行詞を確認する\n先行詞はThe woman（人）。\n\n【ポイント2】whoの後ろの形を確認する\nwhoの直後に動詞（is standing）が来ているので、whoが節の中の主語の代わりをしている（主格）。\n\n【ポイント3】"who is standing by the door"の働きを確認する\n「ドアのそばに立っている」という意味で、The womanを後ろから説明している。\n\n【答え】\nwoman を修飾する主格の関係代名詞\n\n【確かめ】\nwhoの後ろに主語が欠けた文（動詞から始まる文）が続いていることを確認する。\n\n【よくあるまちがい】\nwhoの後ろに動詞が来ているのに、目的格だと勘違いしてしまうミス。目的格の関係代名詞の後ろには「主語＋動詞」が続く。\n\n【ここが絶対】\n関係代名詞の後ろに動詞が直接続いていれば主格、「主語＋動詞」が続いていれば目的格、と見分ける。',
     examFrequency: 'very-high',
   },
   {
@@ -1987,7 +1998,8 @@ export const eigoExtra: Question[] = [
     choices: ['先行詞が人の場合のみ', '先行詞がものの場合のみ', '先行詞が人・ものどちらでも使える', '先行詞が動物の場合のみ'],
     answer: '先行詞が人・ものどちらでも使える',
     hint: 'that は who と which の両方の代わりに使えます。',
-    explanation: '関係代名詞 that は先行詞が人（who の代わり）でももの（which の代わり）でも使えます。ただし最上級の後や all, every, no などの後では that が好まれます。',
+    explanation:
+      '【何を聞かれているか】\n関係代名詞"that"がどのような場合に使えるかを答える問題。\n\n【なぜthatは人にも物にも使えるのか】\nthatは、主格のwhoと目的格のwhomの代わりにも、主格・目的格のwhichの代わりにも使える、便利な関係代名詞。\n\n【ポイント1】thatが使える先行詞を確認する\nthatは先行詞が人でも物・動物でも使える。\n\n【ポイント2】thatが特に好まれる場合を確認する\n先行詞に最上級・all・every・noなどがついているときは、whoやwhichよりもthatが好まれる。\n\n【ポイント3】他の選択肢を消去する\n「人の場合のみ」「物の場合のみ」「動物の場合のみ」は、いずれもthatの使える範囲を限定しすぎていて誤り。\n\n【答え】\n先行詞が人・ものどちらでも使える\n\n【確かめ】\n"a friend that I know"（人）と"a book that I bought"（物）のように、どちらの先行詞にもthatが使えることを確認する。\n\n【よくあるまちがい】\nthatを「物にしか使えない」と思い込んでしまうミス。thatは人にも物にも使える便利な関係代名詞。\n\n【ここが絶対】\n関係代名詞thatは先行詞を選ばず使える。最上級・all・every・noの後では特に好まれることも覚えておく。',
     examFrequency: 'very-high',
   },
   {
@@ -2014,7 +2026,8 @@ export const eigoExtra: Question[] = [
     choices: ['もし私があなただったら、もっと一生懸命勉強するのに。', 'もし私があなたなら、一生懸命勉強します。', '私はあなたのようにもっと一生懸命勉強した。', 'あなたは一生懸命勉強するべきだ。'],
     answer: 'もし私があなただったら、もっと一生懸命勉強するのに。',
     hint: 'If + 主語 + were, 主語 + would + 動詞原形 が仮定法過去の形です。',
-    explanation: '仮定法過去 If I were you, I would ... は「もし私があなただったら、～するのに」という現実とは異なる仮定を表します。would は意志・推量を表します。',
+    explanation:
+      '【何を聞かれているか】\n"If I were you, I would study harder."の意味を答える問題。\n\n【なぜ「〜するのに」という意味になるのか】\n仮定法過去（If＋主語＋were, 主語＋would＋動詞の原形）は、「実際にはそうではないが、もし〜だったら」という現実に反する仮定を表す。\n\n【ポイント1】仮定法過去の公式を確認する\nIf＋主語＋were（またはwere/動詞の過去形）〜, 主語＋would＋動詞の原形〜。\n\n【ポイント2】"If I were you"の意味を確認する\n「もし私があなただったら」＝実際には私はあなたではない、という現実と反対の仮定。\n\n【ポイント3】wouldの意味を確認する\nwouldはここでは「〜するのに」という、仮定に基づく結果を表す。\n\n【答え】\nもし私があなただったら、もっと一生懸命勉強するのに。\n\n【確かめ】\n"If I were you"が現実に反する仮定であること、"would study"がその仮定に基づく結果を表していることを確認する。\n\n【よくあるまちがい】\n"If I were you, I would study harder."を、単なる助言（あなたは勉強すべきだ）のように直訳してしまうミス。仮定法は「実際にはそうではない」という前提を含む表現。\n\n【ここが絶対】\n"If I were you, I would〜"＝「もし私があなたなら〜するのに」というアドバイスの定番表現として、仮定法過去の公式とセットで覚える。',
     examFrequency: 'very-high',
   },
   {
@@ -2079,7 +2092,8 @@ export const eigoExtra: Question[] = [
     choices: ['プラスチックのリサイクル方法について', '海の生き物の種類について', 'プラスチック汚染の問題と私たちがすべきことについて', '海の汚染を解決した成功例について'],
     answer: 'プラスチック汚染の問題と私たちがすべきことについて',
     hint: '本文全体のテーマを把握しましょう。',
-    explanation: '本文はプラスチック汚染が海の生き物に与える害（serious problem, harmed）と、日常でのプラスチック使用を減らすべきという提言（We should use less plastic）を主な内容としています。',
+    explanation:
+      '【何を聞かれているか】\nプラスチック汚染についての英文を読んで、本文全体の主な内容を選ぶ問題。\n\n【なぜ全体をカバーする選択肢を選ぶのか】\nテーマを問う問題では、本文の一部の情報だけでなく、全体を通して伝えたい内容を表す選択肢を選ぶ必要がある。\n\n【ポイント1】本文の構成を確認する\n「プラスチック汚染は深刻な問題である（problem）」→「魚や海の生き物が害を受けている（harmed）」→「日常でプラスチックを減らすべきだ（We should use less plastic）」という流れ。\n\n【ポイント2】選択肢を照合する\n「プラスチック汚染の問題」と「私たちがすべきこと」の両方を含む選択肢が、本文全体の内容と一致する。\n\n【ポイント3】他の選択肢を消去する\nリサイクル方法、海の生き物の種類、解決した成功例は、いずれも本文に書かれていない、または本文の一部にすぎない内容。\n\n【答え】\nプラスチック汚染の問題と私たちがすべきことについて\n\n【確かめ】\n選んだ選択肢が、本文の「問題（problem, harmed）」と「提言（We should〜）」の両方をカバーしているか確認する。\n\n【よくあるまちがい】\n本文中の一部の単語（fish、sea animalsなど）だけを見て、「海の生き物の種類について」のような一部分の内容を全体のテーマだと勘違いしてしまうミス。\n\n【ここが絶対】\nテーマ問題は、本文の「問題提起」と「主張・提言」の両方をカバーする選択肢を選ぶ。',
     examFrequency: 'high',
   },
   {
@@ -2105,7 +2119,8 @@ export const eigoExtra: Question[] = [
     choices: ['なぜなら', '～にもかかわらず・たとえ～でも', 'もし～ならば', 'その結果'],
     answer: '～にもかかわらず・たとえ～でも',
     hint: 'although は逆接の接続詞です。',
-    explanation: 'Although（= Though）は「～にもかかわらず、たとえ～でも」という逆接・譲歩の接続詞です。Although it was raining, we went for a walk. = 雨が降っていたにもかかわらず、私たちは散歩に行った。',
+    explanation:
+      '【何を聞かれているか】\n"Although it was raining, we went for a walk."の"Although"の意味を答える問題。\n\n【なぜ「〜にもかかわらず」という意味になるのか】\nalthoughは、前後の内容が食い違う（逆接）ことを示す接続詞で、「〜であるにもかかわらず」という意味を表す。\n\n【ポイント1】althoughの意味を確認する\nalthough＝「〜にもかかわらず、たとえ〜でも」。thoughとほぼ同じ意味。\n\n【ポイント2】文の内容を確認する\n「雨が降っていた」（マイナスの状況）にもかかわらず「散歩に行った」（それを覆す行動）という、逆接の関係になっている。\n\n【ポイント3】他の接続詞との違いを確認する\nbecauseは理由（なぜなら）、ifは条件（もし〜なら）、asa resultは結果（その結果）を表し、althoughとは意味が異なる。\n\n【答え】\n～にもかかわらず・たとえ～でも\n\n【確かめ】\n"Although it was raining"（雨にもかかわらず）と"we went for a walk"（散歩に行った）が、逆接の関係でつながっていることを確認する。\n\n【よくあるまちがい】\nalthoughを理由を表すbecauseと混同してしまうミス。althoughは前後の内容が食い違う逆接の接続詞。\n\n【ここが絶対】\nalthough（＝though）＝「〜にもかかわらず」という逆接・譲歩の接続詞としてセットで覚える。',
     examFrequency: 'high',
   },
   {
@@ -2118,7 +2133,8 @@ export const eigoExtra: Question[] = [
     choices: ['What time does the library close?', 'What time the library closes?', 'What time did the library close?', 'When does the library close?'],
     answer: 'What time does the library close?',
     hint: '間接疑問文では語順が「疑問詞 + 主語 + 動詞」になります。',
-    explanation: '間接疑問文 what time the library closed を直接疑問文に戻すと What time does the library close? となります（時制は戻し、疑問文の語順に）。',
+    explanation:
+      '【何を聞かれているか】\n"She asked me what time the library closed."という間接疑問文を、直接疑問文に戻す問題。\n\n【なぜdoesを使った疑問文に戻すのか】\n間接疑問文は、直接話法の疑問文が別の文の中に組み込まれるときに、時制が過去にずれ（時制の一致）、語順も疑問詞＋主語＋動詞に変わる。直接疑問文に戻すときは、この変化を逆にたどる。\n\n【ポイント1】語順を疑問文に戻す\n間接疑問文の"what time the library closed"（疑問詞＋主語＋動詞）を、疑問文の語順"What time does the library close?"（疑問詞＋do/does＋主語＋動詞の原形）に戻す。\n\n【ポイント2】時制を戻す\n過去形closedを、doesを使った現在形closeに戻す。\n\n【ポイント3】他の選択肢を消去する\n"What time the library closes?"は疑問文の語順になっていない。"What time did the library close?"は時制の戻し方が異なる。"When does the library close?"は疑問詞が違う。\n\n【答え】\nWhat time does the library close?\n\n【確かめ】\n"does the library close"という、doesを使った疑問文の語順になっているか確認する。\n\n【よくあるまちがい】\n間接疑問文の語順（what time the library closed）をそのまま疑問文だと思い込んでしまうミス。直接疑問文に戻すときは、疑問文特有の語順（疑問詞＋do/does＋主語＋動詞の原形）に変える。\n\n【ここが絶対】\n間接疑問文⇔直接疑問文の変換は、「語順（疑問詞＋S＋V ⇔ 疑問詞＋do/does＋S＋動詞の原形）」と「時制」の両方を確認する。',
     examFrequency: 'high',
   },
   {
@@ -2131,7 +2147,8 @@ export const eigoExtra: Question[] = [
     choices: ['主語が複数なら have、単数なら has', '主語が I/you/we/they なら have、he/she/it なら has', '主語が人なら have、物なら has', '過去の出来事なら have、最近なら has'],
     answer: '主語が I/you/we/they なら have、he/she/it なら has',
     hint: 'be動詞の変化（am/is/are）と同じルールです。',
-    explanation: '現在完了では主語が I/you/we/they のときは have、he/she/it（三人称単数）のときは has を使います。I have eaten. / She has eaten.',
+    explanation:
+      '【何を聞かれているか】\n現在完了で"have"と"has"を使い分けるルールを答える問題。\n\n【なぜ主語によってhave/hasが変わるのか】\n現在完了の"have/has＋過去分詞"のhave部分は、be動詞のam/is/areと同じように、主語の人称・数によって形が変わる。\n\n【ポイント1】haveを使う主語を確認する\n主語がI/you/we/theyのときはhave。\n\n【ポイント2】hasを使う主語を確認する\n主語がhe/she/it（三人称単数）のときはhas。\n\n【ポイント3】be動詞との対応を確認する\nI am／You are／He is という対応と同じように、I have／He has という対応がある。\n\n【答え】\n主語が I/you/we/they なら have、he/she/it なら has\n\n【確かめ】\n"I have eaten."と"She has eaten."を比べて、主語の人称・数によってhave/hasが使い分けられていることを確認する。\n\n【よくあるまちがい】\n主語が複数か単数かだけで判断してしまうミス。三人称単数（he/she/it）かどうかで判断する必要があり、主語がweやyou（複数）でもhaveを使う。\n\n【ここが絶対】\n現在完了のhave/hasは、be動詞のam/is/areと同じ感覚で、主語の人称・数（三人称単数かどうか）によって使い分ける。',
     examFrequency: 'very-high',
   },
   {
@@ -2174,7 +2191,8 @@ export const eigoExtra: Question[] = [
     choices: ['I play soccer every day.', 'I soccer play every day.', 'Every day I soccer play.', 'I play every soccer day.'],
     answer: 'I play soccer every day.',
     hint: '英語の基本語順：主語 + 動詞 + 目的語 + 時を表す語句。',
-    explanation: '英語の基本語順は「主語（I）+ 動詞（play）+ 目的語（soccer）+ 時・頻度（every day）」です。I play soccer every day. が正解。',
+    explanation:
+      '【何を聞かれているか】\nplay・I・soccer・every・dayという語句を並べ替えて、正しい英文を作る問題。\n\n【なぜ「主語＋動詞＋目的語＋時」の順になるのか】\n英語は語順で意味が決まる言語で、「誰が・何を・いつする」という情報を、主語→動詞→目的語→時・頻度、という決まった順番で並べる。\n\n【ポイント1】主語と動詞を確認する\n主語はI、動詞はplay。\n\n【ポイント2】目的語を確認する\n「サッカーを」にあたる目的語はsoccer。動詞playの直後に置く。\n\n【ポイント3】時・頻度を表す語句の位置を確認する\n"every day"（毎日）のような頻度を表す語句は、文の最後に置くのが基本。\n\n【答え】\nI play soccer every day.\n\n【確かめ】\n主語（I）→動詞（play）→目的語（soccer）→頻度（every day）という順番になっているか確認する。\n\n【よくあるまちがい】\n"I soccer play every day."のように、目的語を動詞の前に置いてしまうミス。英語では目的語は必ず動詞の後ろに置く。\n\n【ここが絶対】\n英語の基本語順「主語＋動詞＋目的語＋時・頻度を表す語句」をセットで覚える。',
     examFrequency: 'high',
   },
   {
@@ -2187,7 +2205,8 @@ export const eigoExtra: Question[] = [
     choices: ['Where did you go yesterday?', 'Where do you go yesterday?', 'Where you went yesterday?', 'Where did you went yesterday?'],
     answer: 'Where did you go yesterday?',
     hint: '過去の疑問文は Did + 主語 + 動詞の原形 です。',
-    explanation: '過去の疑問文は did + 主語 + 動詞の原形 です。go の過去形は went ですが、did を使う場合は原形 go に戻します。Where did you go yesterday? が正解。',
+    explanation:
+      '【何を聞かれているか】\n「あなたは昨日どこに行きましたか？」という日本語を英語にする問題。\n\n【なぜdidの後ろは動詞の原形にするのか】\n過去の疑問文はdid＋主語＋動詞の原形という形を取り、過去を表す働きはdidが担うので、動詞自体は原形（過去形にしない）にする。\n\n【ポイント1】過去の疑問文の公式を確認する\n疑問詞＋did＋主語＋動詞の原形〜?\n\n【ポイント2】goの形を確認する\ngoの過去形はwentだが、didを使う疑問文では原形goに戻す。\n\n【ポイント3】他の選択肢を消去する\n"Where do you go yesterday?"は時制が現在形で誤り。"Where you went yesterday?"はdidが抜けていて疑問文の語順になっていない。"Where did you went yesterday?"はdidとwent（過去形）を重ねて使ってしまっている誤り。\n\n【答え】\nWhere did you go yesterday?\n\n【確かめ】\ndidの後ろが原形のgoになっていて、wentのような過去形になっていないことを確認する。\n\n【よくあるまちがい】\n"Where did you went yesterday?"のように、didと過去形の動詞を両方使ってしまうミス。過去を表す働きはdidが1つで担うので、動詞は原形にする。\n\n【ここが絶対】\n過去の疑問文はdid＋主語＋動詞の原形。didを使ったら動詞は必ず原形に戻す。',
     examFrequency: 'very-high',
   },
   {
@@ -2227,7 +2246,8 @@ export const eigoExtra: Question[] = [
     choices: ['Have you ever visited Paris?', 'You have ever visited Paris?', 'Ever have you visited Paris?', 'Have you visited ever Paris?'],
     answer: 'Have you ever visited Paris?',
     hint: '現在完了の疑問文：Have + 主語 + ever + 過去分詞 + 目的語？',
-    explanation: '現在完了の疑問文（経験）は Have + 主語 + ever + 過去分詞 の語順です。Have you ever visited Paris? = あなたはパリに行ったことがありますか？',
+    explanation:
+      '【何を聞かれているか】\nhave・you・visited・ever・Parisという語句を並べ替えて、正しい英文を作る問題。\n\n【なぜHave you ever＋過去分詞の語順にするのか】\n「今までに〜したことがありますか」という経験をたずねる現在完了の疑問文は、Have（またはHas）＋主語＋ever＋過去分詞、という決まった語順を取る。\n\n【ポイント1】現在完了（経験）の疑問文の公式を確認する\nHave/Has＋主語＋ever＋過去分詞〜?\n\n【ポイント2】語を並べる手順を確認する\nHave（疑問文の先頭）→you（主語）→ever（今までに）→visited（過去分詞）→Paris（目的語）の順に並べる。\n\n【ポイント3】everの位置を確認する\neverはhave/hasと過去分詞の間に置く。\n\n【答え】\nHave you ever visited Paris?\n\n【確かめ】\nHaveが文頭にあり、その後にyou、ever、visitedの順に並んでいるか確認する。\n\n【よくあるまちがい】\n"Ever have you visited Paris?"のように、everを文頭に置いてしまうミス。everはHave/hasの直後、過去分詞の前に置く。\n\n【ここが絶対】\n"Have/Has＋主語＋ever＋過去分詞〜?"＝「今までに〜したことがありますか」という経験をたずねる疑問文の語順をセットで覚える。',
     examFrequency: 'high',
   },
   {
@@ -2240,7 +2260,8 @@ export const eigoExtra: Question[] = [
     choices: ['must', 'should', 'mustn\'t', 'don\'t have to'],
     answer: 'mustn\'t',
     hint: '禁止を表す助動詞の表現は？',
-    explanation: 'mustn\'t（must not）は「～してはいけない」という禁止を表します。don\'t have to は「～しなくてもよい」で禁止ではなく不必要を意味します。',
+    explanation:
+      '【何を聞かれているか】\n"You (　) eat in the library. It is not allowed."の空欄に入る、最も適切な語を選ぶ問題。\n\n【なぜmustn\'tが正解なのか】\n"It is not allowed."（許可されていない）という後続の文から、図書館で食べることが「禁止されている」という意味を表す必要があり、禁止を表すmustn\'t（must not）が適切。\n\n【ポイント1】mustn\'tの意味を確認する\nmustn\'t（must not）＝「〜してはいけない」という禁止を表す。\n\n【ポイント2】don\'t have toとの違いを確認する\n"don\'t have to"＝「〜しなくてもよい」という不必要を表し、禁止の意味ではない。mustn\'tとは意味が正反対に近い。\n\n【ポイント3】他の選択肢を消去する\nmust（〜しなければならない）、should（〜すべきだ）はいずれも禁止ではなく、義務・助言を表す語で、"is not allowed"（禁止）という文脈に合わない。\n\n【答え】\nmustn\'t\n\n【確かめ】\n"You mustn\'t eat in the library. It is not allowed."を訳し、「図書館で食べてはいけない。それは許可されていない」という、禁止の意味で一貫していることを確認する。\n\n【よくあるまちがい】\nmustn\'t（禁止）とdon\'t have to（不必要）を混同してしまうミス。mustn\'tは「してはいけない」、don\'t have toは「しなくてもよい（してもよい）」という正反対に近い意味。\n\n【ここが絶対】\nmustn\'t＝禁止（してはいけない）、don\'t have to＝不必要（しなくてもよい）、という意味の違いをセットで覚える。',
     examFrequency: 'very-high',
   },
   {
