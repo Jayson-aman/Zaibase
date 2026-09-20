@@ -20,7 +20,8 @@ export const kokoKankanEigo30: Question[] = [
 ア. in  イ. on  ウ. at`,
     answer: '① イ(on)　② ア(in)　③ ウ(at)',
     hint: '日付→on、都市・国→in、時刻→at。',
-    explanation: `【出題意図】時・場所を表す前置詞 on/in/at の使い分けを問う。【解説】on=特定の日付・曜日、in=月・年・場所（広め）、at=時刻・特定地点。① 日付にはon、② 都市にはin、③ 時刻にはat。【注意点】「in the morning」だがat noonやat nightなど慣用的な例外に注意。【関連知識】in 2025（年）、on Monday（曜日）、at noon（正午）など時間表現もセットで覚える。`,
+    explanation:
+      '【何を聞かれているか】\non・in・atという3つの前置詞を、日付・場所・時刻に合わせて使い分ける問題。\n\n【なぜ前置詞が使い分けられているのか】\n英語の前置詞on/in/atは、対象の範囲の広さによって使い分ける。日付・曜日（狭い1日）はon、月・年・広い場所はin、時刻・特定の地点（点）はatを使う。\n\n【ポイント1】日付を表すonを確認する\n"on April 5th"（4月5日に）。曜日・日付にはonを使う。\n\n【ポイント2】広い場所を表すinを確認する\n"in Osaka"（大阪に）。都市・国のような広い場所にはinを使う。\n\n【ポイント3】時刻を表すatを確認する\n"at 9 a.m."（午前9時に）。時刻のようなピンポイントの点にはatを使う。\n\n【答え】\n① イ(on)　② ア(in)　③ ウ(at)\n\n【確かめ】\n①がonで日付、②がinで場所、③がatで時刻になっているか確認する。\n\n【よくあるまちがい】\n"on April"のように、月（April）にonを使ってしまうミス。月にはinを使う（in April）。日付（April 5th）と月だけ（April）で前置詞が変わることに注意する。\n\n【ここが絶対】\n「A（at）は点、O（on）は面、I（in）は空間」というイメージで、at＝時刻・特定地点、on＝日付・曜日、in＝月・年・広い場所、という使い分けをセットで覚える。',
     pitfall: 'on April（月）は誤り。月にはinを使う（in April）。',
     memoryTip: '「A(at)=点、O(on)=面、I(in)=空間」とイメージすると覚えやすい。',
   },
@@ -39,7 +40,8 @@ export const kokoKankanEigo30: Question[] = [
 ② 疑問文：(　) she speak French?`,
     answer: '① cannot (can\'t)　② Can',
     hint: 'canの否定はcannot/can\'t。疑問文はcanを文頭に出す。',
-    explanation: `【出題意図】助動詞canの否定文・疑問文の作り方を問う。【解説】canの否定はcannot（短縮形can't）。疑問文はCanを主語の前に置く。doを使わない点が重要。【注意点】cannotは1語（can notは誤り）。疑問文の語尾は上昇調になる。【関連知識】他の助動詞（will/must/should）も同様に助動詞を文頭に出せばよい。`,
+    explanation:
+      '【何を聞かれているか】\n"She can speak French."という文を、否定文・疑問文に書き換える問題。\n\n【なぜdo/doesを使わないのか】\ncanのような助動詞がある文は、否定文・疑問文を作るときにdo/doesを使わず、助動詞自体にnotをつけたり、助動詞を文頭に移動したりするだけでよいという決まりがある。\n\n【ポイント1】否定文の作り方を確認する\ncanの否定はcannot（短縮形can\'t）。can notと2語に分けて書かないのが原則。\n\n【ポイント2】疑問文の作り方を確認する\ncanを主語の前に移動するだけで疑問文になる（Can she speak French?）。\n\n【ポイント3】一般動詞の文との違いを確認する\n"She does not can speak French."のようにdoを使うのは誤り。助動詞がすでにある文にはdo/doesを重ねない。\n\n【答え】\n① cannot (can\'t)　② Can\n\n【確かめ】\n①がcannot（1語）になっていること、②がCanを主語の前に移動した形になっていることを確認する。\n\n【よくあるまちがい】\ncanの否定文にdoesn\'tを使ってしまうミス（"She doesn\'t can speak."のような誤り）。助動詞のある文にはdo/doesを使わない。\n\n【ここが絶対】\n助動詞（can・will・mustなど）の否定文はnotを直後につけるだけ、疑問文は助動詞を文頭に移動するだけ。do/doesは使わない。',
     pitfall: 'She does not can speak Frenchとdoを使うのは誤り。',
     memoryTip: '助動詞は「not付けるだけ、頭に出すだけ」と唱える。',
   },
@@ -57,7 +59,8 @@ export const kokoKankanEigo30: Question[] = [
 ③ (　) no milk in the fridge.`,
     answer: '① There is　② There are　③ There is',
     hint: 'be動詞の形は直後の名詞（主語）の数で決まる。',
-    explanation: `【出題意図】there is/are構文における数の一致を問う。【解説】直後の名詞が単数→there is、複数→there are。③milkは不可算名詞（数えられない）→単数扱いでthere is。【注意点】There is/are の主語はbeの後ろの名詞。「no+名詞」でも同様のルールが適用される。【関連知識】過去形はthere was/were、未来はthere will be。`,
+    explanation:
+      '【何を聞かれているか】\nthere is / there areのどちらを使うかを、後ろに続く名詞に合わせて答える問題。\n\n【なぜ後ろの名詞で使い分けるのか】\n"There is/are〜"構文のbe動詞は、実は後ろにある名詞（実質的な主語）の数に合わせて選ぶという決まりがある。\n\n【ポイント1】単数のときを確認する\n"a cat"（1匹）は単数なのでthere is。\n\n【ポイント2】複数のときを確認する\n"many students"（複数）はthere are。\n\n【ポイント3】不可算名詞のときを確認する\n"milk"は数えられない名詞（不可算名詞）なので、単数として扱いthere isを使う。\n\n【答え】\n① There is　② There are　③ There is\n\n【確かめ】\n①catが単数、②studentsが複数、③milkが不可算名詞（単数扱い）であることをそれぞれ確認する。\n\n【よくあるまちがい】\n"There are milk"のように、不可算名詞にthere areを使ってしまうミス。不可算名詞は複数に見えても単数扱いになる。\n\n【ここが絶対】\n"There is/are〜"のbe動詞は、後ろに続く名詞の数（単数か複数か、不可算名詞かどうか）で決める。',
     pitfall: 'There are milk とするのは誤り。不可算名詞は単数扱い。',
     memoryTip: '「is=1つ、are=複数」。名詞を見てから選ぶ。',
   },
@@ -210,7 +213,8 @@ export const kokoKankanEigo30: Question[] = [
   → He ran (　) fast for anybody (　) catch him.`,
     answer: '① so, that　② too, to',
     hint: 'too〜to=「〜すぎて…できない」、so〜that=「とても〜なので…」は書き換え可能。',
-    explanation: `【出題意図】too〜to構文とso〜that構文の相互書き換えを問う。【解説】too〜to doとso〜that S can't doは同意。①too heavy for me to carry → so heavy that I cannot carry it。②so fast that nobody could catch → too fast for anybody to catch。【注意点】so〜thatのthat節の否定（cannot/couldn't）がtoo〜toに対応する。主語が変わる場合はfor+人を入れる。【関連知識】enough to〜（〜するのに十分〜だ）も頻出。He is old enough to drive.（車を運転するのに十分な年齢だ）`,
+    explanation:
+      '【何を聞かれているか】\ntoo〜to構文とso〜that構文を、互いに書き換える問題。\n\n【なぜtoo〜toとso〜thatが同じ意味になるのか】\n"too＋形容詞＋to do"（〜すぎて…できない）と"so＋形容詞＋that＋S＋cannot do"（とても〜なので…できない）は、どちらも「〜すぎてできない」という同じ結論を、異なる文の形で表しているため、書き換えが可能。\n\n【ポイント1】①too→soへの書き換えを確認する\n"too heavy for me to carry"→"so heavy that I cannot carry it"。too〜toのfor＋人は、so〜thatではSの位置に移る。\n\n【ポイント2】②so→tooへの書き換えを確認する\n"so fast that nobody could catch him"→"too fast for anybody to catch"。that節の否定的な意味（nobody）は、too〜toではanybodyに変わる。\n\n【ポイント3】対応関係を確認する\ntoo〜to doのdoの部分に対応する目的語（itやhim）は、so〜thatのthat節では代名詞としてそのまま残す。\n\n【答え】\n① so, that　② too, to\n\n【確かめ】\n①がso＋形容詞＋thatの形、②がtoo＋形容詞＋forの形になっているか確認する。\n\n【よくあるまちがい】\ntoo〜thatやso〜toのように、組み合わせを間違えてしまうミス。tooとto、soとthatは決まったペアで使う。\n\n【ここが絶対】\ntoo〜to（〜すぎて…できない）とso〜that〜cannot（とても〜なので…できない）は同じ意味を表す書き換えパターンとしてセットで覚える。',
     pitfall: 'too〜that とso〜to は誤った組み合わせ。tooとso、toとthatをセットにする。',
     memoryTip: 'too〜to=「2つのtoがある」、so〜that=「sとtで始まる」と形で覚える。',
   },
@@ -281,7 +285,8 @@ export const kokoKankanEigo30: Question[] = [
 語群：blown / wearing / written`,
     answer: '① wearing　② blown　③ written',
     hint: '能動的な意味→現在分詞(-ing)、受動的な意味→過去分詞(p.p.)。',
-    explanation: `【出題意図】現在分詞・過去分詞の形容詞的用法（名詞の修飾）を問う。【解説】①帽子を「かぶっている」（能動）→wearing（現在分詞）。②風に「揺れている」（受動：吹かれている）→blown（過去分詞、blowの過去分詞）。③「書かれた」（受動）→written（過去分詞）。【注意点】分詞1語のときは名詞の前、2語以上のときは名詞の後に置く（後置修飾）。【関連知識】関係代名詞節との書き換え：「the woman wearing」=「the woman who is wearing」。`,
+    explanation:
+      '【何を聞かれているか】\n現在分詞（-ing）と過去分詞（p.p.）を使って、名詞を修飾する分詞の形容詞的用法を完成させる問題。\n\n【なぜ能動的か受動的かで現在分詞・過去分詞を使い分けるのか】\n分詞が名詞を修飾するとき、その名詞が「自分から動作をする（能動）」なら現在分詞、「動作をされる（受動）」なら過去分詞を使うという決まりがある。\n\n【ポイント1】①能動の現在分詞を確認する\n「帽子をかぶっている」（能動的に身につけている）→wearing。\n\n【ポイント2】②③受動の過去分詞を確認する\n「風に揺れている（吹かれている）」→blown（受動）、「（フランスで）書かれた」→written（受動）。\n\n【ポイント3】分詞の位置を確認する\n分詞が1語だけなら名詞の前、2語以上のかたまりなら名詞の後ろに置く（後置修飾）。\n\n【答え】\n① wearing　② blown　③ written\n\n【確かめ】\n①が能動（自分でかぶっている）、②③が受動（風に吹かれる、フランスで書かれる）の意味になっているか確認する。\n\n【よくあるまちがい】\n②をblowing（吹いている）にしてしまうミス。葉っぱは自分で吹くのではなく風に吹かれる（受動）ので、過去分詞blownを使う。\n\n【ここが絶対】\n「〜している（自分が動く）」は現在分詞（-ing）、「〜された（他から動かされる）」は過去分詞（p.p.）という使い分けをセットで覚える。',
     pitfall: '②をblowingとすると「吹いている葉」となり意味が変わる。風に吹かれるのでblown。',
     memoryTip: '「〜している（自分が動く）」=ing、「〜された（他から動かされる）」=p.p.。',
   },
@@ -352,7 +357,8 @@ A: Thanks. I'll try that.
 ② Who is the woman that is standing by the door?
 ③ She has been a nurse for ten years.`,
     hint: '①「疑問詞+to不定詞」、②疑問詞+is+主語+関係代名詞節、③現在完了（継続）+for+期間。',
-    explanation: `【出題意図】語句整序問題。疑問詞+to不定詞・関係代名詞を含む疑問文・現在完了の継続用法の3つを問う。【解説】①「what to do」（何をすべきか）という疑問詞+不定詞の名詞句をI don't knowの目的語に置く。②「Who is the woman?」の疑問文＋「that is standing by the door」の関係代名詞節。③「has been a nurse」（現在完了）＋「for ten years」（期間）。【注意点】①は「I don't know what should I do」と疑問文の語順にしない。【関連知識】疑問詞+to do：where to go（どこへ行けばいいか）、how to cook（料理の仕方）など。`,
+    explanation:
+      '【何を聞かれているか】\n語句を並べ替えて、疑問詞＋to不定詞・関係代名詞・現在完了（継続）を使った3つの英文を完成させる問題。\n\n【なぜそれぞれ異なる文法の知識が必要なのか】\n①「何をすべきか」という名詞のかたまりを作る疑問詞＋to不定詞、②「立っている女性」を説明する関係代名詞、③「10年間ずっと」という継続を表す現在完了、というそれぞれ異なる文法パターンを正しく組み立てる必要がある。\n\n【ポイント1】①"what to do"の形を確認する\n"I don\'t know what to do next."＝「次に何をすべきかわからない」。what to doで「何をすべきか」という名詞のかたまりを作り、knowの目的語にする。\n\n【ポイント2】②疑問文＋関係代名詞節を確認する\n"Who is the woman that is standing by the door?"＝「Who is the woman?」という疑問文に、"that is standing by the door"（ドアのそばに立っている）という関係代名詞節がwomanを修飾する形でつながる。\n\n【ポイント3】③現在完了（継続）＋forを確認する\n"She has been a nurse for ten years."＝「彼女は10年間看護師をしている」。has been（現在完了）＋for ten years（期間）。\n\n【答え】\n① I don\'t know what to do next.\n② Who is the woman that is standing by the door?\n③ She has been a nurse for ten years.\n\n【確かめ】\n①のwhat to doが疑問文の語順（what should I do）になっていないこと、③のfor ten yearsが現在完了の文とセットで使われていることを確認する。\n\n【よくあるまちがい】\n①を"I don\'t know what should I do"のように疑問文の語順にしてしまうミス。knowの目的語になる疑問詞のかたまりは、疑問文の語順ではない。\n\n【ここが絶対】\n疑問詞＋to不定詞（what to do＝何をすべきか）、for/sinceが見えたら現在完了（継続）のサイン、という2つのポイントをセットで覚える。',
     pitfall: '③をshe is a nurse for ten yearsとするのは誤り。継続はhas/have beenを使う。',
     memoryTip: '期間（for〜/since〜）が見えたら現在完了の継続用法のサイン。',
   },
@@ -398,7 +404,8 @@ Volunteering is an activity where people work without receiving money. Many peop
    ア. look  イ. come  ウ. give`,
     answer: '① ア(get up)　② ア(took care)　③ イ(come up)',
     hint: 'get up=起きる、take care of=世話をする、come up with=思いつく。',
-    explanation: `【出題意図】頻出イディオム（句動詞・熟語）の意味を問う。【解説】①get up=起床する。②take care of〜=〜の世話をする（過去形took）。③come up with〜=〜を思いつく・考え出す。【注意点】②はtakeが核となる動詞。give up（あきらめる）、look up（調べる）と混同しない。③look up withやgive up withは誤り。【関連知識】重要句動詞：make up（化粧する・作り話をする）、keep up with（〜についていく）、run out of（〜がなくなる）。`,
+    explanation:
+      '【何を聞かれているか】\nget up・take care of・come up withという頻出イディオムの空欄を埋める問題。\n\n【なぜイディオムは1つのまとまりとして覚える必要があるのか】\nget up（起きる）、take care of（世話をする）、come up with（思いつく）は、それぞれの単語をばらばらに訳しても意味が通らない、決まった句動詞・熟語なので、まとまりごと覚える必要がある。\n\n【ポイント1】①get upを確認する\nget up＝起床する。「早く起きる必要がある」という文脈に合う。\n\n【ポイント2】②take care ofを確認する\ntake care of〜＝〜の世話をする。過去形はtook care of。\n\n【ポイント3】③come up withを確認する\ncome up with〜＝〜を思いつく・考え出す。「良い計画を思いつこう」という文脈に合う。\n\n【答え】\n① ア(get up)　② ア(took care)　③ イ(come up)\n\n【確かめ】\nそれぞれのイディオムを文全体に当てはめ、「早起きする」「弟の世話をした」「良い計画を思いつこう」という自然な意味になっているか確認する。\n\n【よくあるまちがい】\n②を"make care of"としてしまうミス。「世話をする」はtake care ofが正しい熟語で、makeは使わない。\n\n【ここが絶対】\nget up（起きる）、take care of（世話をする）、come up with（思いつく）というイディオムを、それぞれの意味とセットで暗記する。',
     pitfall: '②をmake care of とするのは誤り。take care of が正しい熟語。',
     memoryTip: 'take care=世話、come up with=思いつく、get up=起きる、とセットで暗記。',
   },
@@ -425,7 +432,8 @@ Social media has changed the way people communicate. Today, millions of people s
 ② 〜をもたらす・〜につながる
 ③ 両面的（中立）。「helps people stay connected」と肯定面を認めつつ「can lead to loneliness and anxiety」と否定面も述べている。`,
     hint: '①whileの前後が対比（肯定面と否定面）。②lead to=〜をもたらす。③whileの構造から筆者の立場を判断する。',
-    explanation: `【出題意図】SNSをテーマにした読解で、情報の対比・語句の意味・筆者の態度を問う。【解説】①「While〜（肯定）, it also has some negative effects.」の対比構造に着目。肯定=stay connected、否定=loneliness/anxiety。②lead to=「〜につながる・引き起こす」。③whileは「〜だが一方で」という逆接。筆者は一方的な立場でなく両面を提示している。【注意点】「筆者の立場」を問われたら必ず本文の語句を根拠として引用する。【関連知識】SNS関連語彙：social media、post（投稿する）、influencer、digital well-being。`,
+    explanation:
+      '【何を聞かれているか】\nSNS（ソーシャルメディア）についての英文を読んで、内容・語句の意味・筆者の立場について答える問題。\n\n【なぜwhileの前後を対比して読むのか】\n本文の"While social media helps people stay connected..., it also has some negative effects."という文は、whileを使って「良い面」と「悪い面」を対比しており、この構造を見抜くことが設問の答えにつながる。\n\n【ポイント1】①肯定面と否定面を確認する\nwhileの前（肯定）："helps people stay connected with friends and family"、whileの後ろ（否定）："can lead to feelings of loneliness and anxiety"。\n\n【ポイント2】②"lead to"の意味を確認する\nlead to〜＝「〜をもたらす・〜につながる」。\n\n【ポイント3】③筆者の立場を確認する\nwhileは「〜だが一方で」という逆接の意味で使われており、筆者は一方的な立場ではなく、SNSの良い面と悪い面の両方を提示している（両面的・中立）。\n\n【答え】\n① Positive: It helps people stay connected with friends and family. Negative: It can cause loneliness and anxiety.\n② 〜をもたらす・〜につながる\n③ 両面的（中立）。「helps people stay connected」と肯定面を認めつつ「can lead to loneliness and anxiety」と否定面も述べている。\n\n【確かめ】\n③の答えが、本文中の具体的な語句（helps people stay connectedとlead to loneliness and anxiety）を根拠として挙げているか確認する。\n\n【よくあるまちがい】\nwhileを「〜している間」という時間の意味だと誤解してしまうミス。ここでのwhileは「〜だが一方で」という逆接の接続詞として使われている。\n\n【ここが絶対】\n論説文でのwhileの逆接用法（〜だが一方で）に注目し、前後を対比しながら読む。筆者の立場を問われたら、必ず本文の語句を根拠として引用する。',
     pitfall: 'whileを「〜の間」という時間の意味と取り違えない。ここでは逆接の接続詞。',
     memoryTip: 'while=「〜だが一方で」の逆接用法は論説文で頻出。前後を必ず比較する。',
   },
@@ -508,7 +516,8 @@ The idea that "money cannot buy happiness" is often quoted, but researchers have
 
 （別解）If I had practiced English more, I would have been able to talk with my friends abroad more smoothly. I plan to make more effort from now on.（30語）`,
     hint: '「〜していたなら〜できたのに」→仮定法過去完了（If+had+p.p.〜, could have+p.p.）。「これからは〜しようと思う」→be going to / plan to。',
-    explanation: `【出題意図】仮定法過去完了を使った和文英訳。過去の後悔と未来への決意という2文構成の英作文。【解説】「もっと勉強していたなら」→If I had studied harder（仮定法過去完了のif節）。「うまくコミュニケーションが取れたのに」→could have communicated better（帰結節）。「これからは」→from now on。「もっと真剣に勉強しようと思う」→I am going to study more seriously / I plan to study harder。【注意点】仮定法過去完了の帰結節はwould/could/might + have + p.p.。「plan to〜」と「be going to〜」はどちらも可。【関連知識】後悔の表現：I should have studied harder.（もっと勉強すべきだった）も同様の文脈で使える。`,
+    explanation:
+      '【何を聞かれているか】\n「もし私がもっと英語を勉強していたなら、海外の友人ともっとうまくコミュニケーションが取れたのに。これからはもっと真剣に勉強しようと思う。」という2文構成の日本語を、25語以上の英語にする問題。\n\n【なぜ仮定法過去完了を使うのか】\n「実際には十分に勉強しなかったが、もし勉強していたら」という、過去の事実に反する後悔を表すときは、仮定法過去完了（If＋had＋過去分詞, could/would have＋過去分詞）を使う。\n\n【ポイント1】過去の後悔の部分を組み立てる\n"If I had studied English harder"（仮定法過去完了のif節）＋"I could have communicated with my foreign friends better"（帰結節）。\n\n【ポイント2】未来への決意の部分を組み立てる\n"From now on, I am going to study more seriously."（これからは〜しようと思う）。be going toやplan toを使う。\n\n【ポイント3】2文構成を確認する\n「過去の後悔（仮定法過去完了）」＋「未来への決意（be going to/plan to）」という2つの内容を、条件（25語以上）を満たしてつなげる。\n\n【答え】\n（解答例）If I had studied English harder, I could have communicated with my foreign friends better. From now on, I am going to study more seriously.（27語）\n\n【確かめ】\nif節が"had studied"（過去完了）、帰結節が"could have communicated"（could have+過去分詞）になっていること、語数が25語以上あることを確認する。\n\n【よくあるまちがい】\n"If I studied harder"のように仮定法過去（現在の仮定）にしてしまうミス。過去の後悔を表すには仮定法過去完了が必要。\n\n【ここが絶対】\n過去の後悔は仮定法過去完了（If+had+過去分詞, could/would have+過去分詞）で表す。"I should have studied harder."（もっと勉強すべきだった）も同じ文脈で使える表現として覚えておく。',
     pitfall: 'If I studied harderとすると現在の仮定（仮定法過去）になり、過去の後悔を表せない。',
     memoryTip: '過去の後悔→仮定法過去完了：If+had done〜, could/would have done。',
   },
@@ -582,7 +591,8 @@ B: (　④　) I'll make sure he gets the message.
 エ. Could I leave a message?`,
     answer: '① イ　② ア　③ エ　④ ウ',
     hint: '電話での会話の定型表現。①名前を聞く、②不在を伝える、③伝言を頼む、④番号を確認して終わる。',
-    explanation: `【出題意図】電話での会話（ビジネス英語）の定型表現と文脈の流れを問う。【解説】①名前を聞く場面→「May I ask who's calling?」（イ）。②担当者不在を伝える→「I'm afraid he's not available right now.」（ア）。③伝言を頼む→「Could I leave a message?」（エ）。④番号を聞いた後の確認→「Thank you. Got it.」（ウ）。【注意点】電話英語の定型表現は入試で頻出。「I'm afraid〜」は遠回しに悪い知らせを伝える丁寧な表現。【関連知識】電話定型表現：Speaking.（私です）、Hold on please.（少しお待ちください）、I'll put you through.（おつなぎします）。`,
+    explanation:
+      '【何を聞かれているか】\n電話での会話の空欄①〜④に、最も適切な文を選ぶ問題。\n\n【なぜ会話の流れを追う必要があるのか】\n電話の会話には「名前を聞く→不在を伝える→伝言を頼む→番号を確認して終わる」という決まった流れがあり、その流れに沿った定型表現を選ぶ必要がある。\n\n【ポイント1】①名前を聞く場面を確認する\nAが「Mr. Tanakaと話したい」と言った直後なので、"May I ask who\'s calling?"（どちら様でしょうか）が自然。\n\n【ポイント2】②不在を伝える場面を確認する\nその後にBが「彼は現在会議中です」と続けているので、"I\'m afraid he\'s not available right now."（あいにく今対応できません）が対応する。\n\n【ポイント3】③④伝言と確認の場面を確認する\nAが困った様子を見せた後は"Could I leave a message?"（伝言をお願いできますか）、電話番号を伝えた後は"Thank you. Got it."（ありがとうございます、承知しました）が自然な流れ。\n\n【答え】\n① イ　② ア　③ エ　④ ウ\n\n【確かめ】\n①〜④それぞれが、直前・直後の発言と自然につながっているか、電話の会話全体の流れ（名前確認→状況説明→伝言→終了）に沿っているか確認する。\n\n【よくあるまちがい】\n①でまだ名前を聞く前なのに、②の「不在を伝える」文を先に選んでしまうミス。会話の順番を必ず確認する。\n\n【ここが絶対】\n電話英語の定型表現（May I ask who\'s calling?／I\'m afraid he\'s not available／Could I leave a message?／Thank you. Got it.）を、会話の流れとセットで覚える。',
     pitfall: '①でアを選ぶと、まだ名前を聞く前に不在を告げることになり文脈が合わない。',
     memoryTip: '電話の流れ：①名前確認→②状況説明→③対応の提案→④確認・終了。',
   },
@@ -631,7 +641,8 @@ In many countries, the school year begins in September, but Japan starts it in A
 ③ 海外留学や秋始まりの国際プログラムへの参加が容易になり、日本の学生にとって有益だという意見。
 ④ 〜と一致する・〜に沿う`,
     hint: '①本文1文目、②「aligns with〜」の前後、③「some argue that〜」の内容、④align with=一致する。',
-    explanation: `【出題意図】日本の学年度開始月をテーマにした読解。情報抽出・内容把握・語句の意味を問う。【解説】①「Japan starts it in April」から答える。②April startの利点：cherry blossom season（桜の季節）、time of new beginnings（新たな始まりの時）、historical and cultural roots（歴史的・文化的背景）。③September startの主張：studying abroad（海外留学）、international programs（国際プログラム）、begin in the fall（秋開始）に合わせやすい。④align with〜=〜と一致する・〜に沿う（alignは「一列に並べる・一致させる」の動詞）。【注意点】②と③は対立する意見として本文に提示されていることを理解して整理する。【関連知識】学年度に関する語彙：school year、semester（学期）、fall semester（秋学期）、academic calendar（学事暦）。`,
+    explanation:
+      '【何を聞かれているか】\n日本の学年度が4月に始まる理由についての英文を読んで、4つの問いに答える問題。\n\n【なぜ利点と反対意見を分けて整理するのか】\n本文は「4月始まりの利点（歴史的・文化的背景）」と「9月始まりへの変更を支持する意見（国際化のメリット）」という、対立する2つの立場を紹介しているため、それぞれを混同せずに整理する必要がある。\n\n【ポイント1】①学年度の開始月を確認する\n"Japan starts it in April."から、日本は4月に学年度が始まるとわかる。\n\n【ポイント2】②4月始まりの利点を確認する\n"aligns with Japan\'s cherry blossom season"（桜の季節と一致する）、"a time of new beginnings"（新たな始まりの時）、"historical and cultural roots"（歴史的・文化的背景）。\n\n【ポイント3】③9月始まりを支持する意見を確認する\n"shifting to a September start would benefit... by making it easier to study abroad or join international programs"（海外留学や国際プログラムへの参加がしやすくなる）。\n\n【答え】\n① It begins in April.\n② 日本の桜の季節と一致し、新たな始まりの時期となる（文化的・歴史的背景がある）。\n③ 海外留学や秋始まりの国際プログラムへの参加が容易になり、日本の学生にとって有益だという意見。\n④ 〜と一致する・〜に沿う\n\n【確かめ】\n②が4月始まりの利点だけを、③が9月始まりの利点だけを答えていて、2つを混同していないか確認する。\n\n【よくあるまちがい】\n②と③の内容を取り違えてしまうミス。本文が対立する2つの立場を紹介しているので、どちらの段落の内容かを正確に区別する。\n\n【ここが絶対】\n対立する2つの意見を紹介する英文では、どの段落がどちらの立場を述べているかを整理してから答える。align with〜＝「〜と一致する」という語彙も覚えておく。',
     pitfall: '②でSeptember startの利点を混同しない。April startの利点のみを答える。',
     memoryTip: 'align with=「整列する」→「一致する」。政策・価値観が一致するときに使う動詞。',
   },
@@ -683,7 +694,8 @@ The most effective approach may be to use technology as a tool rather than a rep
 ③ 技術は従来の学習の「代わり」ではなく「道具」として使うべきだということ。
 ④ 筆者はデジタルとアナログのバランスを最善策として提案。技術は現代社会に必要なスキルを与える一方、読み書きを通じた深い思考力も必要だという立場。（71字）`,
     hint: '①Supporters argue that〜の内容を2点。②critics point out〜とresearch suggests〜を2点。③rather than=〜ではなく。④第3段落のbalancing以降が核心。',
-    explanation: `【出題意図】教育と技術をテーマにした3段落の論説文読解。賛成・批判・折衷案という論説の典型構造を理解し、各段落から情報を抽出・整理・論評する最高レベルの読解問題。【解説】①第1段落：「makes learning more engaging」と「prepares students for the digital future」の2点。②第2段落：スクリーンタイムと集中力・社会性、手書きvsタイピングの記憶力研究、批判的思考力の喪失懸念の3点から2点を選ぶ。③rather than=「〜ではなく」。技術を主役（replacement）ではなく補助的役割（tool）として位置づける。④第3段落：賛成・批判どちらにも偏らず、デジタル（現代スキル）とアナログ（深い思考・手書き）のバランスを最善策とする折衷案の立場。自分の言葉を加えるとより高い評価を得られる。【注意点】④では必ず「筆者の主張の要約」に加えて「自分の意見・感想」の要素を入れること。字数（80字以内）の管理も重要。【関連知識】教育テクノロジー語彙：EdTech、digital literacy、critical thinking、screen time、handwriting、tablet/laptop。論説文の構造：問題提起（賛成）→反論（批判）→結論（折衷）は最頻出パターン。`,
+    explanation:
+      '【何を聞かれているか】\n教育とテクノロジーについての3段落構成の英文を読んで、賛成意見・批判・折衷案を整理して答える、高いレベルの読解問題。\n\n【なぜ3段落の構成（賛成→批判→折衷案）を意識するのか】\nこの英文は「①テクノロジー支持派の主張→②批判派の懸念→③バランスを取るという結論」という、論説文の典型的な3段階構成になっており、各段落の役割を把握してから設問に答えると整理しやすい。\n\n【ポイント1】①第1段落の利点を確認する\n"makes learning more engaging"（学習をより魅力的にする）、"prepares students for the digital future"（デジタルな未来に備えさせる）の2点。\n\n【ポイント2】②第2段落の批判を確認する\n"too much screen time can harm... concentration and social skills"（集中力・社会性への悪影響）、"handwriting helps students remember information better than typing"（手書きの方が記憶に良い）。\n\n【ポイント3】③④第3段落の折衷案を確認する\n"a tool rather than a replacement"＝「代わりではなく道具として」。第3段落全体は、デジタルとアナログのバランスを取るという、賛成・批判どちらにも偏らない結論。\n\n【答え】\n① It makes learning more engaging. / It prepares students for the digital future.\n② ・スクリーンを見る時間が増えすぎると、集中力と社会性が損なわれる可能性がある。・手書きの方がタイピングより情報を記憶しやすいという研究がある。（技術への過度な依存で批判的思考力が失われる懸念も含む）\n③ 技術は従来の学習の「代わり」ではなく「道具」として使うべきだということ。\n④ 筆者はデジタルとアナログのバランスを最善策として提案。技術は現代社会に必要なスキルを与える一方、読み書きを通じた深い思考力も必要だという立場。（71字）\n\n【確かめ】\n①がSupporters（第1段落）の主張のみを答えていて、②のCriticsの内容と混同していないか確認する。④が字数制限（80字以内）に収まっているかも確認する。\n\n【よくあるまちがい】\n①でcriticsの主張を書いてしまうミス。設問がどの段落・どの立場について聞いているかを、必ず確認してから答える。\n\n【ここが絶対】\n賛成→批判→折衷案という3段落の論説文の型を覚え、各段落がどの立場を述べているかを整理してから設問に答える。',
     pitfall: '①でcriticsの主張を書かない。Supporters（第1段落）の主張のみを2点答える。',
     memoryTip: '3段落論説文：段落1=賛成、段落2=反対、段落3=結論（折衷・バランス）のパターンを覚える。',
   },

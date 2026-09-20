@@ -20,7 +20,8 @@ export const kokoKankanEigoC2: Question[] = [
 ④ Kenの母はMomoを好きではない。`,
     answer: `② Kenは学校に行く前にMomoに餌をあげる。`,
     hint: `本文2文目「Every morning, Ken gives Momo some food before he goes to school.」に注目する。`,
-    explanation: `【出題意図】短い日常英文を読み、細部の情報（時系列・動作の順序）を正確に読み取れるかを問う基礎的な内容一致問題。【解説】①本文には「white and very small」とあり黒くて大きいは誤り。②「gives Momo some food before he goes to school」と一致し正解。③「plays with Momo in the garden」と楽しんでいる様子が書かれており誤り。④「makes our family happier」とあり、母がMomoを好きではないというのは本文と矛盾する。【注意点】before（〜する前に）の位置を正確に読み取ることが重要。「学校に行く前に餌をあげる」であり「学校から帰ってから」ではない。【関連知識】welcome（出迎える）、take care of〜（〜の世話をする）は日常生活を描く英文で頻出の表現。`,
+    explanation:
+      '【何を聞かれているか】\n飼い犬モモについての英文を読んで、内容と合っている選択肢を選ぶ問題。\n\n【なぜbeforeの位置を正確に読み取る必要があるのか】\n本文の"Ken gives Momo some food before he goes to school."という文は、「学校に行く前に」餌をあげるという順序を表しており、before（〜する前に）の位置を取り違えると、逆の意味（学校から帰った後）だと誤解してしまう。\n\n【ポイント1】①を確認する\n本文には"white and very small"（白くて小さい）とあり、「黒くて大きい」という選択肢①は本文と矛盾する。\n\n【ポイント2】②を確認する\n"gives Momo some food before he goes to school"（学校に行く前に餌をあげる）が選択肢②とそのまま一致する。\n\n【ポイント3】③④を確認する\n③は"plays with Momo in the garden"（庭で楽しく遊ぶ）とあり「嫌い」という内容と矛盾。④は"makes our family happier"（家族をより幸せにする）とあり「好きではない」という内容と矛盾する。\n\n【答え】\n② Kenは学校に行く前にMomoに餌をあげる。\n\n【確かめ】\n選んだ選択肢が、本文の"before he goes to school"（学校に行く前に）という順序と正確に一致しているか確認する。\n\n【よくあるまちがい】\nbeforeの位置を読み違えて、「学校から帰ってから餌をあげる」のように逆の意味に誤解してしまうミス。\n\n【ここが絶対】\n内容一致問題は、本文中の同じ意味の表現（言い換え）を探すことが得点のカギ。before/afterのような順序を表す語は特に正確に読み取る。',
     pitfall: `④のように本文に直接書かれていない否定的な内容を安易に選ばない。本文にははっきり「makes our family happier」と書かれている。`,
     memoryTip: `内容一致問題は「本文中の同じ意味の表現」を探して、言い換え（paraphrase）に気づくことが得点のカギ。`,
   },
@@ -128,7 +129,8 @@ export const kokoKankanEigoC2: Question[] = [
 あなたは犬を飼っていますか。`,
     answer: `Do you have a dog?`,
     hint: `一般動詞haveの疑問文はDo you+動詞の原形〜?の形。`,
-    explanation: `【出題意図】一般動詞の疑問文（Do you〜?）の基本形を問う。【解説】「飼っている」はhaveを使う。一般動詞の疑問文は主語の前にDoを置き、動詞は原形のままにする（havesのようにしない）。文末には疑問符を付ける。【注意点】be動詞の疑問文（Are you〜?）と混同しない。一般動詞haveにはbe動詞を使わない。【関連知識】「犬を飼っている」はkeep a dogより一般的にはhave a dogが自然。Do you have any pets?（何かペットを飼っていますか）も類似表現。`,
+    explanation:
+      '【何を聞かれているか】\n「あなたは犬を飼っていますか。」という日本語を英語にする問題。\n\n【なぜDoを使うのか】\nhaveは一般動詞なので、疑問文にするときはbe動詞ではなくDoを主語の前に置き、動詞は原形のままにするという決まりがある。\n\n【ポイント1】一般動詞の疑問文の公式を確認する\nDo＋主語＋動詞の原形〜?\n\n【ポイント2】haveが原形のままであることを確認する\nDoがすでに疑問文の役割を担っているので、haveはhasのような形にせず原形のまま使う。\n\n【ポイント3】be動詞との違いを確認する\n"Are you have a dog?"のように、be動詞と一般動詞を混ぜて使うのは誤り。\n\n【答え】\nDo you have a dog?\n\n【確かめ】\nDoが文頭にあり、haveが原形のまま使われていることを確認する。\n\n【よくあるまちがい】\n"Are you have a dog?"のように、be動詞Areと一般動詞haveを混ぜて使ってしまうミス。一般動詞の疑問文にはDoを使う。\n\n【ここが絶対】\n一般動詞の疑問文は「Do/Does＋主語＋動詞の原形」。be動詞の疑問文（Are you〜?）とは作り方が違うことをセットで覚える。',
     pitfall: `Are you have a dog?のようにbe動詞と一般動詞を混ぜて使わない。`,
     memoryTip: `一般動詞の疑問文は「Do/Does＋主語＋動詞の原形」の順と唱えて覚える。`,
   },

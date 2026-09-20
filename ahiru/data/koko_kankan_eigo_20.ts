@@ -78,20 +78,8 @@ like / love / hate / prefer は不定詞・動名詞どちらもOK（意味は�
 ③ This is the book (　) changed my life.`,
     answer: '① who / that　② which / that　③ which / that',
     hint: '先行詞が「人」→ who または that。先行詞が「物・動物」→ which または that。',
-    explanation: `【出題意図】
-関係代名詞 who / which / that の使い分けを問う問題。先行詞（関係代名詞が修飾する名詞）が人か物かを見分ける力が試される。
-
-【解説】
-①先行詞は「the girl（人）」→ who または that が使える。who が文法上最も自然。
-②先行詞は「the bag（物）」→ which または that が使える。②は目的格の関係代名詞（省略も可能）。
-③先行詞は「the book（物）」→ which または that が使える。③も主格の関係代名詞。
-that はほぼ万能に使えるが、カンマ（非制限用法）の後ろには使えない（→ thatではなくwhich/who）。
-
-【注意点】
-who は人のみ。which は物・動物のみ。that は人にも物にも使えるが、制限用法（カンマなし）に限られる。目的格の関係代名詞（〜を/〜に）は省略できる：「the bag my mother gave me」でもOK。先行詞の直後に関係代名詞を置くルールも重要。
-
-【関連知識】
-関係代名詞の格：主格（〜が）→ who/which/that、目的格（〜を/〜に）→ whom/which/that（省略可）、所有格（〜の）→ whose。関大一高・立命館高では「非制限用法（, which）」も出題される。The book, which I bought yesterday, was interesting.（コンマの後はwhichのみ）`,
+    explanation:
+      '【何を聞かれているか】\nwho・which・thatという3つの関係代名詞のうち、それぞれの文に最も適切なものを選ぶ問題（複数正解の場合はすべて答える）。\n\n【なぜ先行詞の種類で使う関係代名詞が決まるのか】\n関係代名詞は、説明したい名詞（先行詞）が「人」か「物・動物」かによって、使える語（who/which）が決まっている。thatはどちらにも使える便利な語だが、コンマをつけた非制限用法では使えないという制限がある。\n\n【ポイント1】①先行詞が人のときを確認する\n"The girl（人）is singing..."→先行詞がgirl（人）なのでwhoまたはthatを使う。\n\n【ポイント2】②③先行詞が物のときを確認する\n"the bag"「the book」（物）→whichまたはthatを使う。②は目的格（省略可能）、③は主格。\n\n【ポイント3】thatの制限を確認する\nthatは人にも物にも使えるが、コンマをつけた非制限用法（The book, which I bought yesterday, ...）には使えず、whichやwhoを使う。\n\n【答え】\n① who / that　② which / that　③ which / that\n\n【確かめ】\n①はwhoの後ろに動詞（is singing）が続く主格、②はwhichの後ろに主語＋動詞（my mother gave me）が続く目的格、③はwhichの後ろに動詞（changed）が続く主格になっているか確認する。\n\n【よくあるまちがい】\n先行詞が物（bag、book）なのにwhoを選んでしまうミス。whoは人にしか使えない。\n\n【ここが絶対】\nwho（人）・which（物・動物）・that（人にも物にも使えるが非制限用法は不可）という3つの使い分けを、主格・目的格・所有格（whose）という格の区別とあわせてセットで覚える。',
   },
   {
     id: 'koko_kankan_eigo_04',
@@ -112,19 +100,8 @@ who は人のみ。which は物・動物のみ。that は人にも物にも使�
    （バスはタクシーより安い）`,
     answer: '① highest　② as, as　③ less, than',
     hint: '①最上級は the + 形容詞-est（または the most）。②同等比較は as〜as。③「より安い」はless + 形容詞 + than。',
-    explanation: `【出題意図】
-比較表現（同等比較 as〜as・比較級 more〜than / less〜than・最上級 the〜est / the most）の使い分けを問う問題。3つの比較形を一度に整理できる良問。
-
-【解説】
-①「最も高い」→最上級。high → higher → highest。最上級には必ず the をつける。in Japan（場所）または of all mountains（グループ）とセットで使う。
-②「同じくらい〜」→ as + 形容詞（原級）+ as の形。exciting はそのまま（変化しない）。
-③「タクシーより安い」→ expensive の反対を比較級で表す。more expensive の反対は less expensive + than。または cheap → cheaper than も可。
-
-【注意点】
-最上級の the を忘れるミスが多い。②の as〜as は最初の as を省略できない（× so exciting as）。③のless〜than（〜より少ない程度で）は日本語の「〜より安い」に対応するが、入試ではcheaper thanのシンプルな形の方が多い。
-
-【関連知識】
-比較級の不規則変化：good→better→best、bad→worse→worst、many/much→more→most、little→less→least。「3つ以上のものを比べるとき最上級、2つを比べるとき比較級」という原則も押さえておこう。関関同立附属高では最上級+in/of の使い分けも頻出。`,
+    explanation:
+      '【何を聞かれているか】\n最上級・同等比較・比較級という3種類の比較表現を、それぞれの文に合わせて完成させる問題。\n\n【なぜ3つの比較表現を使い分けるのか】\n「最も〜」（3つ以上の中で一番）、「〜と同じくらい」（2つが同程度）、「〜より…」（2つを比べて片方が上か下か）という、比べ方の違いによって使う形が決まっている。\n\n【ポイント1】①最上級を確認する\n「日本で最も高い」→3つ以上（日本中の山）の中で一番なので最上級。high→highest。最上級には必ずtheをつける。\n\n【ポイント2】②同等比較を確認する\n「東京と同じくらい」→2つを同程度として比べるのでas＋原級（exciting）＋as。\n\n【ポイント3】③比較級（劣等）を確認する\n「タクシーより安い」→expensiveの反対の意味を、lessを使った比較級less expensive thanで表す。\n\n【答え】\n① highest　② as, as　③ less, than\n\n【確かめ】\n①theがhighestの前についていること、②asが2つ使われていること、③lessとthanがセットで使われていることを確認する。\n\n【よくあるまちがい】\n最上級にtheをつけ忘れる、②のas〜asの最初のasを省略してしまう、というミスが多い。\n\n【ここが絶対】\n比べる対象が3つ以上なら最上級、2つが同程度ならas〜as、2つを比べて優劣をつけるなら比較級（more/less〜than）、という3つの使い分けをセットで覚える。goodの比較級betterのような不規則変化もあわせて確認する。',
   },
   {
     id: 'koko_kankan_eigo_05',
@@ -248,17 +225,8 @@ B：「今朝から（since this morning）ずっと〜し続けている（今�
    （流暢に英語が話せればいいのに）`,
     answer: '① were, would　② had, would　③ could',
     hint: '仮定法過去：If + 主語 + 動詞の過去形〜, 主語 + would/could/might + 動詞原形。be動詞は主語に関係なく were を使う。',
-    explanation: `【出題意図】
-仮定法過去（現実に反することを仮定する表現）の正しい形を問う問題。直説法（現実の話）と仮定法（仮想の話）の使い分けが理解できているか試される。
-
-【解説】
-仮定法過去の公式：If + S + 動詞の過去形〜, S + would/could/might + 動詞原形。①be動詞は主語に関係なく were（I were, he were, she were）。「If I were a bird」は仮定法の定番表現。②「have → had」（過去形）、帰結節は「would buy」。③I wish + 仮定法過去：現在の実現困難な望みを表す。「could speak」（speak の前に could が必要）。
-
-【注意点】
-現代英語では「If I was」も使われるが、入試では「If I were」が正解とされる。仮定法では時制を1つ過去にずらす（現在の仮定 → 過去形を使う）。帰結節のwould/could/mightは過去形だが意味は「現在の仮定」を表す。「I wish」の後ろも仮定法と同じ過去形にする。
-
-【関連知識】
-仮定法過去完了（過去の事実と反対のことを仮定）：If + S + had + p.p.〜, S + would have + p.p.。「If I had studied harder, I would have passed the exam.（もっと勉強していたら合格していたのに）」。関関同立附属高では仮定法過去がメイン出題、最難関では仮定法過去完了も出る。`,
+    explanation:
+      '【何を聞かれているか】\n仮定法過去とI wish構文を使った、3つの文を完成させる問題。\n\n【なぜ動詞を過去形にするのか】\n仮定法過去は「実際にはそうではないが、もし〜だったら」という現実に反する内容を表すため、あえて時制を1段階過去にずらして「現実味を薄める」という英語の仕組みを使う。\n\n【ポイント1】①②仮定法過去の公式を確認する\nIf＋主語＋動詞の過去形〜, 主語＋would/could＋動詞の原形〜。be動詞は主語に関係なくwereを使う。\n\n【ポイント2】I wishの形を確認する\n"I wish＋仮定法過去"は「（今）〜であればいいのに」という、現在の実現困難な望みを表す。\n\n【ポイント3】③couldの位置を確認する\n"I wish I could speak English fluently."のcouldは、canの過去形で、speakの前に置く。\n\n【答え】\n① were, would　② had, would　③ could\n\n【確かめ】\n①のbe動詞がwereになっていること、②のhaveが過去形hadになっていること、③のcouldがspeakの前にあることを確認する。\n\n【よくあるまちがい】\n①でIに合わせてwasを使ってしまうミス。仮定法過去のbe動詞は主語に関係なくwereを使うのが原則。\n\n【ここが絶対】\n仮定法過去の公式（If+過去形, would/could+原形）とI wish+仮定法過去（〜だったらいいのに）をセットで覚える。be動詞は必ずwereにする。',
   },
   {
     id: 'koko_kankan_eigo_09',

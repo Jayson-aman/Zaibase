@@ -18,7 +18,8 @@ export const kokoKankanEigoC1: Question[] = [
 ③ The girl (　) bag is red is my sister.`,
     answer: '① who　② which (that)　③ whose',
     hint: '人が先行詞→who、物が先行詞で目的格→which/that、所有格→whose。',
-    explanation: `【出題意図】関係代名詞who・which・whoseの基本的な使い分けを問う。【解説】①先行詞a friend（人）が主語の働きをする→who。②先行詞the book（物）でboughtの目的語→which（thatも可）。③先行詞the girlの後ろにbag（名詞）が続き「その子のかばん」という所有関係→whose。【注意点】whoseは「whose+名詞」の形で1つのまとまりとして働く点がwho/whichと異なる。【関連知識】目的格の関係代名詞（whom/which/that）は口語では省略されることが多い。`,
+    explanation:
+      '【何を聞かれているか】\nwho・which（that）・whoseという関係代名詞の基本的な使い分けを問う問題。\n\n【なぜwhoseだけ形が違うのか】\nwho・whichは先行詞そのものが主語や目的語の代わりをするが、whoseは「先行詞の（所有物）」という所有関係を表すため、「whose＋名詞」という形でひとまとまりに使うという違いがある。\n\n【ポイント1】①主格のwhoを確認する\n"a friend（人）"がspeaksの主語の代わりをしているので、主格の関係代名詞who。\n\n【ポイント2】②目的格のwhich(that)を確認する\n"the book（物）"がboughtの目的語の代わりをしているので、目的格の関係代名詞which（thatも可）。\n\n【ポイント3】③所有格のwhoseを確認する\n"the girl"の後ろに"bag"（名詞）が続き、「その子のかばん」という所有関係を表すので、whose。\n\n【答え】\n① who　② which (that)　③ whose\n\n【確かめ】\n③で"whose"の直後に名詞bagが来ていて、「the girl\'s bag」と同じ意味を表しているか確認する。\n\n【よくあるまちがい】\n③をwhoやwhichにしてしまうミス。直後に名詞（bag）が続く所有の構造は、whoseでしか表せない。\n\n【ここが絶対】\n人→who、物→which、所有関係（whose＋名詞）→whose、という3つの使い分けを、先行詞の種類で判断する。',
     pitfall: '③をwhoやwhichにすると、直後に名詞bagが続く構造を説明できない。所有格はwhose。',
     memoryTip: '人→who、物→which、所有→whose、と先行詞の種類で3択に絞る。',
   },
@@ -35,7 +36,8 @@ export const kokoKankanEigoC1: Question[] = [
 書き換え：He said (that) (　) (　) tired.`,
     answer: 'he was',
     hint: '直接話法→間接話法では、主語I→he、現在形am→過去形wasに変える（時制の一致）。',
-    explanation: `【出題意図】話法の転換（直接話法→間接話法）における人称代名詞と時制の一致を問う。【解説】伝達動詞said（過去形）に合わせて、引用符内の現在形amは過去形wasに変える（時制の一致）。また主語Iは話者から見た第三者heに変える。【注意点】時制の一致：said（過去）の後の従属節は原則1つ過去にずらす（am→was、will→would等）。ただし普遍の真理はそのまま現在形を保つ例外もある。【関連知識】伝達動詞がsays（現在形）のときは時制の一致は起こらない（He says he is tired.）。`,
+    explanation:
+      '【何を聞かれているか】\n"He said, "I am tired.""という直接話法の文を、間接話法（伝達文）に書き換える問題。\n\n【なぜ人称と時制の両方を変えるのか】\n直接話法から間接話法にするときは、①話している人の視点に合わせて人称代名詞を変え、②伝達動詞（said）の過去形に合わせて、引用内容の時制も1段階過去にずらす（時制の一致）という、2つの変化が同時に起こる。\n\n【ポイント1】人称の変化を確認する\n引用符の中の"I"（話し手自身）は、話者から見た第三者heに変わる。\n\n【ポイント2】時制の変化を確認する\n伝達動詞saidが過去形なので、時制の一致により現在形amは過去形wasに変わる。\n\n【ポイント3】例外を確認する\n普遍の真理を述べる文は時制の一致の例外として現在形のまま保つことがあるが、今回のような一時的な状態（疲れている）には適用されない。\n\n【答え】\nhe was\n\n【確かめ】\n"He said (that) he was tired."が、主語（he）と時制（was）の両方を正しく変換した文になっているか確認する。\n\n【よくあるまちがい】\n"He said that I am tired."のように、人称・時制を変えずにそのまま使ってしまうミス。\n\n【ここが絶対】\n話法の転換は「人称は話者目線に、時制は1つ過去へ」の2ステップで行う。伝達動詞が現在形（says）のときは時制の一致が起こらないことも覚えておく。',
     pitfall: 'He said that I am tiredのように人称・時制を変えないのは誤り。',
     memoryTip: '話法の転換は「人称は話者目線に、時制は1つ過去へ」の2ステップで覚える。',
   },
@@ -53,7 +55,8 @@ export const kokoKankanEigoC1: Question[] = [
 ③ The more you practice, the (　) you will get.（練習すればするほど上達する）`,
     answer: '① as difficult as　② the most　③ better',
     hint: '①原級比較as〜as、②the most+形容詞、③the 比較級, the 比較級の構文。',
-    explanation: `【出題意図】原級比較・最上級・「the+比較級, the+比較級」構文を問う。【解説】①同程度を表す原級比較→as difficult as。②「何よりも大切」→the most important（thing of allで「すべての中で」を強調）。③「〜すればするほど…」→The 比較級 S V, the 比較級 S V。goodの比較級betterを使いthe betterとする。【注意点】③の構文は前半・後半とも「the+比較級」で始まる語順が固定されている点に注意。【関連知識】The more, the better.（多ければ多いほど良い）は省略形として単独でも使われる。`,
+    explanation:
+      '【何を聞かれているか】\n原級比較（as〜as）・最上級（the most）・「the＋比較級, the＋比較級」構文という3つの比較表現を完成させる問題。\n\n【なぜ3つの異なる形が必要なのか】\n「同じくらい」（原級比較）、「何よりも」（最上級）、「〜すればするほど」（比例の比較級構文）は、それぞれ表したい意味が異なるため、対応する決まった形が別々に存在する。\n\n【ポイント1】①原級比較を確認する\n「同じくらい難しい」→as＋形容詞（difficult、原級）＋as。\n\n【ポイント2】②最上級を確認する\n「何よりも大切」→the most important（thing of allで「すべての中で」を強調）。\n\n【ポイント3】③「the＋比較級, the＋比較級」構文を確認する\n「練習すればするほど上達する」→The more you practice, the better you will get.前半・後半とも"the＋比較級"で始まる決まった語順。goodの比較級はbetter（不規則変化）。\n\n【答え】\n① as difficult as　② the most　③ better\n\n【確かめ】\n①のasが2回使われていること、③がgoodの不規則な比較級betterになっていることを確認する。\n\n【よくあるまちがい】\n③を"the more good"としてしまうミス。goodの比較級はgood→better→bestという不規則変化。\n\n【ここが絶対】\n「the＋比較級, the＋比較級」＝「〜すればするほど…」という構文を、goodの不規則変化（better）とあわせて丸暗記する。',
     pitfall: '③をthe more goodとするのは誤り。goodの比較級はbetterで不規則変化する。',
     memoryTip: '「the+比較級, the+比較級」は「〜すれば〜するほど」の定型パターンとして丸暗記する。',
   },
@@ -89,7 +92,8 @@ If I (　) a bird, I could fly to see you.
 （もし私が鳥だったら、あなたに会いに飛んでいけるのに）`,
     answer: 'were',
     hint: '仮定法過去のbe動詞はwereを使う（口語ではwasも許容されることがある）。',
-    explanation: `【出題意図】仮定法過去における be動詞の特別なルール（were）を問う。【解説】現在の事実に反する仮定を表す仮定法過去では、if節のbe動詞は主語の人称・数にかかわらずwereを用いるのが原則。【注意点】口語ではI was〜も使われるが、学校文法・入試ではwereが標準として求められることが多い。【関連知識】If I were you,〜（もし私があなたなら）は仮定法過去の最頻出表現の1つ。`,
+    explanation:
+      '【何を聞かれているか】\n"If I (　) a bird, I could fly to see you."の空欄に入る、仮定法過去のbe動詞を答える問題。\n\n【なぜwereを使うのか】\n仮定法過去は「実際にはそうではないが、もし〜だったら」という現実に反する仮定を表す表現で、if節のbe動詞は主語の人称・数にかかわらずwereを使うのが原則。\n\n【ポイント1】仮定法過去の公式を確認する\nIf＋主語＋動詞の過去形〜, 主語＋would/could/might＋動詞の原形〜。\n\n【ポイント2】be動詞がwereになる理由を確認する\n仮定法過去では、be動詞は主語がIやhe/sheであってもwereを使うという、この文法特有のルールがある。\n\n【ポイント3】口語との違いを確認する\n口語ではI wasも使われることがあるが、学校文法・入試ではwereが標準として求められる。\n\n【答え】\nwere\n\n【確かめ】\n"If I were a bird"が、現実には鳥ではないという事実に反する仮定を表していることを確認する。\n\n【よくあるまちがい】\n"If I was a bird"のように、主語Iに合わせてwasを使ってしまうミス。仮定法のif節では、主語が単数でもwereを使うのが原則。\n\n【ここが絶対】\n"If I were you"（もし私があなたなら）というフレーズごと暗記して、仮定法過去のbe動詞はwereだと定着させる。',
     pitfall: 'If I was a bird とするのは口語では許容されても、試験では減点対象になりうる。wereが正式。',
     memoryTip: '仮定法のbe動詞は「If I were you」のフレーズごと暗記してwereを定着させる。',
   },
@@ -139,7 +143,8 @@ She said to me, "Do you like tea?"
 → She asked me (　) (　) liked tea.`,
     answer: 'if (whether) I',
     hint: 'Yes/No疑問文の間接話法はif/whetherを使い、語順は平叙文の語順（主語+動詞）に戻す。',
-    explanation: `【出題意図】Yes/No疑問文の話法転換（if/whetherの導入と語順変化）を問う。【解説】伝達動詞をaskedに変え、疑問文の内容をif（またはwhether）+平叙文の語順で続ける。youは話者（私）から見てIに変わる。動詞likeは伝達動詞askedの過去形に合わせてlikedにする（時制の一致）。【注意点】疑問詞のない疑問文（Yes/Noで答えられる疑問文）はif/whetherを使う点が、疑問詞がある疑問文（What did you like?等）と異なる。語順もDo you like→if I likedと平叙文の語順に戻す。【関連知識】疑問詞がある間接疑問文は疑問詞をそのまま使う（She asked me what I liked.）。`,
+    explanation:
+      '【何を聞かれているか】\n"She said to me, "Do you like tea?""という直接話法のYes/No疑問文を、間接話法に書き換える問題。\n\n【なぜif/whetherを使うのか】\n「〜かどうか」という意味を持たないYes/No疑問文（疑問詞のない疑問文）を間接話法にするときは、if（またはwhether）を導入し、その後ろを普通の文の語順（主語＋動詞）に戻すという決まりがある。\n\n【ポイント1】if/whetherの導入を確認する\n"Do you like tea?"のようなYes/No疑問文は、間接話法ではif（whether）を使って"if I liked tea"のような形にする。\n\n【ポイント2】人称の変化を確認する\nyouは話者（私）から見てIに変わる。\n\n【ポイント3】時制の一致を確認する\n伝達動詞askedが過去形なので、動詞likeも過去形likedに変わる（時制の一致）。\n\n【答え】\nif (whether) I\n\n【確かめ】\n"She asked me if I liked tea."が、疑問文の語順（Do you like）ではなく、平叙文の語順（I liked）になっているか確認する。\n\n【よくあるまちがい】\n"She asked me did I like tea."のように、疑問文の語順のまま使ってしまうミス。間接話法では平叙文の語順に戻す。\n\n【ここが絶対】\nYes/No疑問文の間接話法はif/whether＋平叙文の語順、疑問詞のある疑問文は疑問詞＋平叙文の語順、という2つの型をセットで覚える。',
     pitfall: 'She asked me did I like tea と疑問文の語順のまま使うのは誤り。',
     memoryTip: 'Yes/No疑問文→if/whether+平叙文語順、疑問詞疑問文→疑問詞+平叙文語順、と型で覚える。',
   },
@@ -342,7 +347,8 @@ A: That's a great attitude to have.
 ④ It doesn't matter to me at all.`,
     answer: '① I couldn\'t have done it without my teacher\'s help.',
     hint: 'Aが「素晴らしい心構えだ」と褒めていることから、Bは謙虚で前向きな発言をしているはず。',
-    explanation: `【出題意図】自然な会話の流れと仮定法（couldn't have done）の理解を問う。【解説】Aの最後の発言「That's a great attitude to have.（それは素晴らしい心構えだ）」につながるには、Bが謙虚に感謝を示す発言をしている必要がある。①「先生の助けがなければやり遂げられなかった」→謙虚な姿勢を示し、Aの褒め言葉と自然につながる。②③④はいずれも文脈やAの返答と矛盾する。【注意点】couldn't have done it without〜は仮定法過去完了（Without〜, I couldn't have done it.の倒置的な言い方）。感謝や謙虚さを表す定番表現。【関連知識】I owe it all to〜（すべて〜のおかげだ）も同様の謙虚な感謝表現。`,
+    explanation:
+      '【何を聞かれているか】\n合格を祝う会話の空欄に、最も自然な返答を選ぶ問題。\n\n【なぜ謙虚な発言が正解になるのか】\nAの最後の発言"That\'s a great attitude to have."（それは素晴らしい心構えだ）につながるには、Bが謙虚に感謝を示す発言をしている必要があるため、その流れに合う選択肢を選ぶ。\n\n【ポイント1】文脈全体を確認する\nAが合格を祝い、Bがお礼を言った後の発言なので、謙虚で前向きな内容が自然。\n\n【ポイント2】選択肢①の意味と文法を確認する\n"I couldn\'t have done it without my teacher\'s help."（先生の助けがなければやり遂げられなかった）は、仮定法過去完了を使った謙虚な感謝の表現。\n\n【ポイント3】他の選択肢を消去する\n「勉強が嫌い」「試験を受けたことがない」「気にしていない」は、いずれも合格を喜ぶ文脈やAの褒め言葉と矛盾する。\n\n【答え】\n① I couldn\'t have done it without my teacher\'s help.\n\n【確かめ】\n選んだ発言が、Aの"That\'s a great attitude to have."（それは素晴らしい心構えだ）という褒め言葉に自然につながっているか確認する。\n\n【よくあるまちがい】\n文脈を確認せず、単語だけを見て無関係な選択肢を選んでしまうミス。会話問題は必ず前後のやり取り全体を確認する。\n\n【ここが絶対】\n"couldn\'t have done it without〜"＝「〜がなければやり遂げられなかった」という、感謝や謙虚さを表す仮定法過去完了の定番表現を覚えておく。',
     pitfall: '②「勉強が嫌い」を選ぶと、合格を喜ぶ文脈やAの褒め言葉と矛盾する。',
     memoryTip: 'Aの返答（That\'s a great attitude）から逆算し、謙虚・前向きな発言を選ぶ。',
   },
@@ -647,7 +653,8 @@ A growing number of schools are therefore adopting alternative assessment method
 ③ project-based evaluations and portfolios
 ④ 標準テストの利点（客観性・公平性）を提示した後、その限界（狭い評価範囲・不公平さ）を批判し、代替評価法の登場という展開を紹介する構成。（68字→要約する）標準テストの利点→批判→代替案の紹介という3段階の構成。`,
     hint: '①第1段落のSupporters argue that〜。②第2段落のCriticsの2つの主張。③第3段落のsuch as以降。④賛成→反対→代替案という論説文の典型構成。',
-    explanation: `【出題意図】標準テストをテーマにした3段落構成の論説文読解。賛成・反対・代替案という論説文の典型パターンの理解と情報抽出能力を問う。【解説】①第1段落のSupporters argueの内容：客観的で公平な比較方法を提供する、という1文。②第2段落の批判点：(a)記憶力など狭い範囲の能力しか測れず、創造性・批判的思考・協働性を無視している、(b)テストが苦手な生徒が他の能力を持っていても不当に評価される可能性がある、の2点。③第3段落の代替手段：project-based evaluations（プロジェクト型評価）とportfolios（ポートフォリオ）の2つ。④全体の論理構成：第1段落で利点を提示→第2段落で批判・限界を指摘→第3段落で代替案の登場と、その有効性については議論が続いていることを紹介する3段階構成。【注意点】④は単なる要約ではなく「論理構成（どのような順序で議論が展開されているか）」を説明することが求められている点に注意。【関連知識】教育評価に関する語彙：standardized test、objective、critical thinking、collaboration、portfolio、project-based evaluation。`,
+    explanation:
+      '【何を聞かれているか】\n標準テストについての3段落構成の英文を読んで、支持派の主張・批判点・代替手段・全体の論理構成を答える問題。\n\n【なぜ論理構成（段落の役割）を意識するのか】\nこの英文は「①標準テスト支持派の主張→②批判派の指摘→③代替評価法の紹介」という3段階の構成になっており、単なる要約ではなく、この議論の流れ自体を説明することが求められている。\n\n【ポイント1】①第1段落の主張を確認する\n"provide an objective, fair way to compare students from different schools and backgrounds"（客観的で公平な比較方法を提供する）。\n\n【ポイント2】②第2段落の批判を確認する\n「記憶力など狭い範囲の能力しか測れず、創造性・批判的思考・協働性を無視している」「テストが苦手な生徒が不当に評価される可能性がある」の2点。\n\n【ポイント3】③④第3段落の代替案と全体構成を確認する\n"project-based evaluations and portfolios"（プロジェクト型評価とポートフォリオ）が代替手段。全体は「利点提示→批判→代替案の紹介」という3段階の構成。\n\n【答え】\n① Standardized tests provide an objective, fair way to compare students from different schools and backgrounds.\n② ・標準テストは記憶力など狭い範囲の能力しか測れず、創造性や批判的思考、協働性を評価できない。・テストが苦手な生徒が、他の分野で優れた能力を持っていても不当に低く評価される可能性がある。\n③ project-based evaluations and portfolios\n④ 標準テストの利点→批判→代替案の紹介という3段階の構成。\n\n【確かめ】\n④の答えが、単なる内容の要約ではなく「どのような順序で議論が展開されているか」という構成の説明になっているか、また50字以内に収まっているか確認する。\n\n【よくあるまちがい】\n④で本文の内容をそのまま要約してしまうミス。設問は「論理構成」を聞いているので、賛成→反対→代替案という展開の流れを説明する必要がある。\n\n【ここが絶対】\n賛成→批判→代替案という3段落論説文の型を覚え、「内容の要約」と「論理構成の説明」を区別して答える。',
     pitfall: '④で本文の内容をそのまま要約するのではなく、賛成→反対→代替案という「構成の流れ」を説明する必要がある。',
     memoryTip: '3段落論説文の型：段落1=利点提示、段落2=批判、段落3=代替案・結論、というパターンを毎回確認する。',
   },
