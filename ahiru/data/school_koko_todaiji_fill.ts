@@ -780,7 +780,7 @@ export const schoolKokoTodaijiFill: Question[] = [
     answer: 'were',
     hint: 'This is a hypothetical (unreal) condition about the present, so the subjunctive form of "be" is used for all subjects.',
     explanation:
-      '【解説】\n現在の事実に反する仮定を表す仮定法過去では、be動詞は主語に関係なく were を使うのが文法的に正式なルール(口語ではwasも使われることがある)。',
+      '【何を聞かれているか】\n"If I (　) rich, I would travel around the world."の空欄に入る正しいbe動詞の形を選ぶ問題。\n\n【なぜwereを使うのか】\n「実際には裕福ではない」という現在の事実に反する仮定（仮定法過去）では、be動詞は主語に関係なくwereを使うのが文法的に正式なルールである。\n\n【ポイント1】仮定法過去の形を確認する\nIf+主語+were〜, 主語+would+動詞の原形〜。\n\n【ポイント2】主語Iでもwereになることを確認する\n仮定法過去のbe動詞は、主語が単数（I）であってもwereを使う。\n\n【ポイント3】口語との違いを確認する\n口語ではwasが使われることもあるが、文法的にはwereが正式な形。\n\n【答え】\nwere\n\n【確かめ】\n主語Iに対してwas（通常のbe動詞の過去形）ではなく、仮定法のwereが選ばれているか確認する。\n\n【よくあるまちがい】\n主語Iに合わせてwasを選んでしまうミス。仮定法過去のbe動詞は主語に関係なくwere。\n\n【ここが絶対】\nIf I were 〜は仮定法の決まり文句として、wereをセットで覚える。',
     difficulty: 'standard',
     course: 'koko-todaiji',
     examType: 'koko',
@@ -793,7 +793,7 @@ export const schoolKokoTodaijiFill: Question[] = [
     answer: 'English is spoken by millions of people around the world.',
     hint: 'Make the object of the original sentence the subject of the new sentence, and use "be + past participle."',
     explanation:
-      '【解説】\n能動態の目的語 "English" を主語にし、「be動詞+過去分詞」の形にする。動詞speakの過去分詞は spoken。動作主(millions of people)は文末に "by 〜" で示す。\nEnglish is spoken by millions of people around the world.',
+      '【何を聞かれているか】\n能動態の文"Millions of people speak English around the world."を受動態に書き換える問題。\n\n【なぜEnglishを主語にするのか】\n受動態は、能動態の目的語（動作を受けるもの）を主語にして「〜される」という形で表すので、元の文の目的語Englishを新しい主語にする。\n\n【ポイント1】主語の入れ替えを確認する\n能動態の目的語Englishを、受動態の主語にする。\n\n【ポイント2】動詞の形を確認する\n「be動詞＋過去分詞」の形にする。speakの過去分詞はspoken。\n\n【ポイント3】動作主の示し方を確認する\n元の主語millions of peopleは、文末に"by 〜"の形で示す。\n\n【答え】\nEnglish is spoken by millions of people around the world.\n\n【確かめ】\n主語がEnglishになっており、動詞がis spoken（be動詞＋過去分詞）になっているか確認する。\n\n【よくあるまちがい】\n動詞を過去分詞spokenにせず、speaksのままにしてしまうミス。\n\n【ここが絶対】\n受動態＝「元の目的語」+be動詞+過去分詞+「by+元の主語」という型で覚える。',
     difficulty: 'advanced',
     course: 'koko-todaiji',
     examType: 'koko',
@@ -832,7 +832,7 @@ export const schoolKokoTodaijiFill: Question[] = [
     answer: 'Tom said (that) he was tired then.',
     hint: 'In reported speech, the tense usually shifts back one step, and words like "now" often change to "then."',
     explanation:
-      '【解説】\n直接話法から間接話法に書き換えるときは、①伝達動詞に合わせて時制を1つ過去にずらす(am→was)、②人称代名詞を話し手に合わせて変える(I→he)、③"now"のような時を表す語を、間接話法にふさわしい語(then)に変える、という3つの変化が必要。\nTom said (that) he was tired then.',
+      '【何を聞かれているか】\n"Tom said, "I am tired now.""を間接話法に書き換える問題。\n\n【なぜ3つの変化が必要なのか】\n直接話法から間接話法に書き換えるときは、伝達動詞に合わせた時制のずらし・人称代名詞の変化・時を表す語の変化という3つの変化を同時に行う必要がある。\n\n【ポイント1】時制の変化を確認する\n伝達動詞saidが過去形なので、am→was（1つ過去にずらす）。\n\n【ポイント2】人称代名詞の変化を確認する\n発言者本人を指すIを、話し手に合わせてheに変える。\n\n【ポイント3】時を表す語の変化を確認する\n"now"（今）は、間接話法にふさわしい語"then"（そのとき）に変える。\n\n【答え】\nTom said (that) he was tired then.\n\n【確かめ】\nam→was、I→he、now→thenの3つの変化がすべて行われているか確認する。\n\n【よくあるまちがい】\n時制や人称代名詞だけを変えて、nowをthenに変え忘れるミス。\n\n【ここが絶対】\n間接話法＝時制のずらし＋人称代名詞の変化＋時を表す語の変化、の3点セットで覚える。',
     difficulty: 'advanced',
     course: 'koko-todaiji',
     examType: 'koko',
@@ -870,7 +870,7 @@ export const schoolKokoTodaijiFill: Question[] = [
     answer: 'what time it is',
     hint: 'In indirect questions, the word order changes back to subject + verb (not question order).',
     explanation:
-      '【解説】\n間接疑問文では「疑問詞+主語+動詞」の語順になる(疑問文のような主語・動詞の倒置は起こらない)。したがって what time it is が正しい。',
+      '【何を聞かれているか】\n"Could you tell me (　)?"に続く正しい間接疑問文を選ぶ問題。\n\n【なぜ主語＋動詞の語順に戻すのか】\n間接疑問文では、疑問文のような主語と動詞の倒置は起こらず、「疑問詞＋主語＋動詞」という通常の語順に戻るという決まりがある。\n\n【ポイント1】直接疑問文との違いを確認する\n直接疑問文は"What time is it?"のように主語と動詞（is it）が倒置されるが、間接疑問文ではこの倒置をしない。\n\n【ポイント2】間接疑問文の語順を確認する\n"what time it is"＝疑問詞what time＋主語it＋動詞is（通常の語順）。\n\n【ポイント3】他の選択肢を消去する\n"what time is it"は倒置のまま、"what is time it"・"time what it is"は語順が誤り。\n\n【答え】\nwhat time it is\n\n【確かめ】\n選んだ答えが、疑問詞の後ろで主語と動詞が倒置されていない通常の語順になっているか確認する。\n\n【よくあるまちがい】\n"what time is it"のように、直接疑問文の語順のまま間接疑問文に使ってしまうミス。\n\n【ここが絶対】\n間接疑問文＝「疑問詞+主語+動詞」の通常の語順、倒置しないと覚える。',
     difficulty: 'advanced',
     course: 'koko-todaiji',
     examType: 'koko',

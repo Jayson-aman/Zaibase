@@ -718,7 +718,7 @@ export const schoolKokoNadaFill: Question[] = [
     answer: 'It depends on where you live and what resources are available nearby.',
     hint: 'Look at the sentence describing what Aiko realized after interviewing the engineers.',
     explanation:
-      '【解説】\n第3文「she realized that choosing the right energy source depends heavily on where you live and what resources are available nearby」がそのまま答えとなる。',
+      '【何を聞かれているか】\nエネルギー源についての英文を読み、正しいエネルギー源を選ぶことが何によって決まるかを答える問題。\n\n【なぜ第3文に注目するのか】\n「何に依存しているか」という設問の答えは、アイコが技術者にインタビューした後に気づいた内容として本文第3文に述べられている。\n\n【ポイント1】該当の一文を確認する\n"she realized that choosing the right energy source depends heavily on where you live and what resources are available nearby"（正しいエネルギー源を選ぶことは、どこに住んでいるか、近くにどんな資源があるかに大きく依存すると気づいた）。\n\n【ポイント2】依存する要素を整理する\n「住んでいる場所」と「近くで利用できる資源」の2つの要素。\n\n【ポイント3】答えの形を確認する\n本文の表現をそのまま使って答える。\n\n【答え】\nIt depends on where you live and what resources are available nearby.\n\n【確かめ】\n答えに「住んでいる場所」と「近くの資源」の両方が含まれているか確認する。\n\n【よくあるまちがい】\n「住んでいる場所」だけを答え、「近くの資源」を書き忘れるミス。\n\n【ここが絶対】\n「何に依存しているか」を問う設問は、depends onの後に続く内容全体を正確に抜き出す。',
     difficulty: 'standard',
     course: 'koko-nada',
     examType: 'koko',
@@ -734,7 +734,7 @@ export const schoolKokoNadaFill: Question[] = [
       'They are noun clauses (indirect questions) that together function as the object of the preposition "on."',
     hint: 'The preposition "on" needs an object; think about what kind of clause can follow a preposition.',
     explanation:
-      '【解説】\n"where you live" と "what resources are available nearby" は、それぞれ疑問詞（where, what）に導かれた間接疑問文の形をとる名詞節である。前置詞「on」の目的語として機能しており、2つの名詞節が"and"で並列に結ばれて1つのまとまった目的語になっている。',
+      '【何を聞かれているか】\n"choosing the right energy source depends heavily on where you live and what resources are available nearby"の中で、whereとwhatで始まる2つの節の文法的な役割を答える問題。\n\n【なぜ名詞節と判断するのか】\n前置詞onの後には目的語（名詞のかたまり）が必要であり、"where you live"や"what resources are available nearby"は疑問詞で始まりながらも文全体の中で名詞の働きをしている。\n\n【ポイント1】前置詞onの目的語を確認する\nonの後には目的語となる名詞（句・節）が必要。\n\n【ポイント2】疑問詞節の形を確認する\n"where you live"（間接疑問文の形）、"what resources are available nearby"（間接疑問文の形）は、それぞれ名詞節として機能する。\n\n【ポイント3】2つの節の関係を確認する\n2つの名詞節はandで並列に結ばれ、1つのまとまった目的語になっている。\n\n【答え】\nThey are noun clauses (indirect questions) that together function as the object of the preposition "on."\n\n【確かめ】\n答えに「名詞節（間接疑問文）」と「前置詞onの目的語」という2つの要素が含まれているか確認する。\n\n【よくあるまちがい】\nwhereとwhatをそれぞれ独立した疑問文だと考えてしまい、名詞節としての役割を見落とすミス。\n\n【ここが絶対】\n疑問詞で始まる節でも、文の中で主語・目的語になっているときは名詞節（間接疑問文）として働く。',
     difficulty: 'advanced',
     course: 'koko-nada',
     examType: 'koko',
@@ -749,7 +749,7 @@ export const schoolKokoNadaFill: Question[] = [
       'The captain believed that failure is a valuable source of learning, not simply a waste of time.',
     hint: 'Look at what the captain said in contrast to the members who wanted to give up.',
     explanation:
-      '【解説】\nキャプテンは「every failed test taught us something new about the machine（失敗した試験のたびに、機械について新しいことを学んだ）」と述べ、あきらめかけたメンバーたちの「時間を無駄にした」という見方に反論している。ここから、キャプテンは失敗を単なる無駄ではなく、貴重な学びの機会と捉えていることが読み取れる。',
+      '【何を聞かれているか】\nキャプテンが失敗に対してどのような考え方を持っていたかを推測する問題。\n\n【なぜキャプテンの発言に注目するのか】\n「推測できること」を問う設問なので、キャプテンが実際に発言した内容と、あきらめかけたメンバーの見方との対比から、キャプテンの考え方を読み取る必要がある。\n\n【ポイント1】キャプテンの発言を確認する\n"every failed test taught us something new about the machine"（失敗した試験のたびに、機械について新しいことを学んだ）。\n\n【ポイント2】メンバーの見方との対比を確認する\nあきらめかけたメンバーは「時間を無駄にした」と考えていたが、キャプテンはそれに反論した。\n\n【ポイント3】キャプテンの考え方を整理する\n失敗を単なる時間の無駄ではなく、貴重な学びの機会と捉えている。\n\n【答え】\nThe captain believed that failure is a valuable source of learning, not simply a waste of time.\n\n【確かめ】\n答えに「失敗＝学びの機会」という肯定的な捉え方が含まれているか確認する。\n\n【よくあるまちがい】\nあきらめかけたメンバーの見方（時間の無駄）をキャプテンの考えだと誤解してしまうミス。\n\n【ここが絶対】\n推測問題では、対比されている2つの立場（メンバー vs キャプテン）を区別してから答えを導く。',
     difficulty: 'advanced',
     course: 'koko-nada',
     examType: 'koko',

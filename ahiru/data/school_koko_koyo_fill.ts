@@ -637,7 +637,8 @@ export const schoolKokoKoyoFill: Question[] = [
     question: 'According to the passage, what did many neighbors doubt at first? Answer in English.',
     answer: 'They doubted that the turbine would produce enough electricity to make any real difference.',
     hint: 'Look at the second sentence of the passage.',
-    explanation: '【解説】\n本文第2文「many neighbors doubted that the turbine would produce enough electricity to make any real difference」がそのまま答えとなる。',
+    explanation:
+      '【何を聞かれているか】\n学校の風力タービンについての英文を読み、近所の人々が最初何を疑っていたかを英語で答える問題。\n\n【なぜ第2文に注目するのか】\n「最初に何を疑っていたか」という設問の答えは、本文第2文に直接述べられている。\n\n【ポイント1】該当の一文を確認する\n"many neighbors doubted that the turbine would produce enough electricity to make any real difference"（多くの近所の人は、タービンが実際の違いを生むほどの電力を発電できるか疑っていた）。\n\n【ポイント2】疑いの内容を整理する\n「発電量が十分ではないのではないか」という懐疑的な見方。\n\n【ポイント3】答えの形を確認する\n本文の表現をそのまま使って答える。\n\n【答え】\nThey doubted that the turbine would produce enough electricity to make any real difference.\n\n【確かめ】\n答えが「発電量が十分か」という疑いの内容になっているか確認する。\n\n【よくあるまちがい】\n本文後半の成果（1年後の発電実績）と混同して答えてしまうミス。\n\n【ここが絶対】\n「最初はどう思われていたか」を問う設問は、本文の前半（導入部分）に注目する。',
     difficulty: 'advanced',
     course: 'koko-koyo',
     examType: 'koko',
@@ -649,7 +650,8 @@ export const schoolKokoKoyoFill: Question[] = [
     question: 'What had the turbine achieved after one year, according to the passage?',
     answer: "It had generated enough power to light the school's gymnasium for several hours each week.",
     hint: 'This is stated directly in the third sentence of the passage.',
-    explanation: '【解説】\n本文第3文がそのまま答えとなる。after節「after one year」の直後に述べられている内容を正確に抜き出す。',
+    explanation:
+      '【何を聞かれているか】\n風力タービンが1年後に何を達成したかを答える問題。\n\n【なぜ第3文に注目するのか】\n「after one year」という時間経過を表す語句の直後に、達成した内容が具体的に述べられている。\n\n【ポイント1】該当の一文を確認する\n本文第3文に、1年後の成果が述べられている。\n\n【ポイント2】達成内容を確認する\n体育館を毎週数時間照らせるだけの電力を発電できるようになった。\n\n【ポイント3】設問がafter one yearの内容を問うていることを確認する\n最初の疑い（koyo_eigo_01）とは異なり、実際の成果を答える。\n\n【答え】\nIt had generated enough power to light the school\'s gymnasium for several hours each week.\n\n【確かめ】\n答えが、1年後の具体的な成果（体育館を照らす電力）になっているか確認する。\n\n【よくあるまちがい】\n最初の懐疑的な見方（koyo_eigo_01の内容）を答えてしまうミス。\n\n【ここが絶対】\n「after+期間」の直後に述べられている内容を正確に抜き出す。',
     difficulty: 'standard',
     course: 'koko-koyo',
     examType: 'koko',
@@ -661,7 +663,8 @@ export const schoolKokoKoyoFill: Question[] = [
     question: 'What lesson did the students learn from this project? Answer in one English sentence.',
     answer: 'They learned that even a small step, if continued patiently, can create a meaningful change.',
     hint: 'The fourth sentence directly states the lesson the students learned.',
-    explanation: '【解説】\n本文第4文がそのまま答え。「たとえ小さな一歩でも、根気強く続ければ意味のある変化を生み出せる」という教訓を読み取る。',
+    explanation:
+      '【何を聞かれているか】\n風力タービンのプロジェクトから生徒が学んだ教訓を1つの英文で答える問題。\n\n【なぜ第4文に注目するのか】\n「学んだ教訓」という設問の答えは、本文第4文に直接述べられている。\n\n【ポイント1】該当の一文を確認する\n本文第4文に、生徒が学んだ教訓がまとめられている。\n\n【ポイント2】教訓の内容を整理する\n「たとえ小さな一歩でも、根気強く続ければ意味のある変化を生み出せる」という内容。\n\n【ポイント3】答えの形を確認する\n本文の表現をそのまま使って1文にまとめる。\n\n【答え】\nThey learned that even a small step, if continued patiently, can create a meaningful change.\n\n【確かめ】\n答えに「小さな一歩」「根気強く続ける」「意味のある変化」という3つの要素が含まれているか確認する。\n\n【よくあるまちがい】\n発電量など具体的な数値の話に注目してしまい、教訓（考え方）を答え損ねるミス。\n\n【ここが絶対】\n「学んだ教訓」を問う設問は、本文の最後のまとめの一文に注目する。',
     difficulty: 'advanced',
     course: 'koko-koyo',
     examType: 'koko',
@@ -673,7 +676,8 @@ export const schoolKokoKoyoFill: Question[] = [
     question: "Choose the meaning closest to the underlined word \"meaningful\" as used in the passage: \"a meaningful change.\"",
     answer: 'significant and worthwhile',
     hint: 'Think about what kind of change the students are proud of, based on the whole passage.',
-    explanation: '【解説】\n本文の文脈から、"a meaningful change"とは「意味のある、価値のある変化」を指す。選択肢の中では"significant and worthwhile"(重要で価値がある)が最も近い意味を持つ。',
+    explanation:
+      '【何を聞かれているか】\n下線部"meaningful"（"a meaningful change"の中で）の意味に最も近い選択肢を選ぶ問題。\n\n【なぜ文脈から意味を推測するのか】\n下線部の語の意味は、辞書的な意味だけでなく、文章全体の文脈（生徒たちが誇りに思っている変化）から判断する必要がある。\n\n【ポイント1】文脈を確認する\n生徒たちが小さな一歩から生み出した変化を誇りに思っている、という文脈。\n\n【ポイント2】meaningfulの意味を確認する\n「意味のある、価値のある」という意味。\n\n【ポイント3】他の選択肢を消去する\n「重要でない」「偶然起きた」「お金だけに関係する」はいずれも文脈に合わない。\n\n【答え】\nsignificant and worthwhile\n\n【確かめ】\n選んだ答えが、文脈上「価値のある、重要な」という肯定的な意味になっているか確認する。\n\n【よくあるまちがい】\nmeaningfulを「意味が通じる」という別の意味で捉えてしまうミス。\n\n【ここが絶対】\n下線部の語の意味は、文章全体の文脈（プラスの内容かマイナスの内容か）から判断する。',
     difficulty: 'advanced',
     course: 'koko-koyo',
     examType: 'koko',
@@ -686,7 +690,8 @@ export const schoolKokoKoyoFill: Question[] = [
     question: 'What causes the delay in communication between astronauts and mission control, according to the passage?',
     answer: 'The time it takes for radio signals to travel across space.',
     hint: 'Look at the second sentence of the passage.',
-    explanation: '【解説】\n本文第2文「This delay is caused by the time it takes for radio signals to travel across space.」がそのまま答えとなる。',
+    explanation:
+      '【何を聞かれているか】\n宇宙飛行士とミッションコントロールの通信の遅れの原因を答える問題。\n\n【なぜ第2文に注目するのか】\n「通信の遅れの原因」という設問の答えは、本文第2文に直接述べられている。\n\n【ポイント1】該当の一文を確認する\n"This delay is caused by the time it takes for radio signals to travel across space."（この遅れは、電波信号が宇宙空間を伝わるのにかかる時間によって生じる）。\n\n【ポイント2】原因を整理する\n「電波信号が宇宙を伝わる時間」が遅れの原因。\n\n【ポイント3】答えの形を確認する\n本文の表現をそのまま使って答える。\n\n【答え】\nThe time it takes for radio signals to travel across space.\n\n【確かめ】\n答えが「電波信号が伝わる時間」という具体的な原因になっているか確認する。\n\n【よくあるまちがい】\n遅れの結果（何分かかるか）と原因を混同してしまうミス。\n\n【ここが絶対】\n「原因」を問う設問は、causeやcaused byという語を含む一文を探す。',
     difficulty: 'standard',
     course: 'koko-koyo',
     examType: 'koko',
@@ -698,7 +703,8 @@ export const schoolKokoKoyoFill: Question[] = [
     question: 'How long can the communication delay be on a mission to Mars, according to the passage?',
     answer: 'It can be more than twenty minutes.',
     hint: 'This is stated directly in the third sentence, in contrast with the delay for a mission to the Moon.',
-    explanation: '【解説】\n本文第3文後半「but on a mission to Mars, it can be more than twenty minutes」に明記されている。',
+    explanation:
+      '【何を聞かれているか】\n火星への任務における通信の遅れがどのくらいの長さになるかを答える問題。\n\n【なぜ第3文の後半に注目するのか】\n月への任務との対比として、火星への任務の遅れの長さが第3文後半に明記されている。\n\n【ポイント1】該当の一文を確認する\n"but on a mission to Mars, it can be more than twenty minutes"（火星への任務では20分以上になることがある）。\n\n【ポイント2】月との対比を確認する\n月への任務の遅れ（数秒程度）と対比して、火星は20分以上と大幅に長い。\n\n【ポイント3】答えの形を確認する\n本文の表現をそのまま使って答える。\n\n【答え】\nIt can be more than twenty minutes.\n\n【確かめ】\n答えが「20分以上」という火星への任務についての数値になっているか確認する。\n\n【よくあるまちがい】\n月への任務の遅れの長さと混同してしまうミス。\n\n【ここが絶対】\n対比の文では、butの前後どちらの内容が問われているかを正確に区別する。',
     difficulty: 'standard',
     course: 'koko-koyo',
     examType: 'koko',
@@ -722,7 +728,8 @@ export const schoolKokoKoyoFill: Question[] = [
     question: 'According to the passage, what are engineers currently doing to help future Mars astronauts?',
     answer: 'They are designing computer systems that can help astronauts solve problems independently, rather than depending on constant communication with mission control.',
     hint: 'The final sentence of the passage describes what engineers are doing now.',
-    explanation: '【解説】\n本文最終文「Engineers are now designing computer systems that can help astronauts solve problems independently, rather than depending on constant communication with mission control.」がそのまま答えとなる。',
+    explanation:
+      '【何を聞かれているか】\n将来の火星探査に向けて技術者が現在何をしているかを答える問題。\n\n【なぜ最終文に注目するのか】\n「現在何をしているか」という設問の答えは、本文の最終文に直接述べられている。\n\n【ポイント1】該当の一文を確認する\n"Engineers are now designing computer systems that can help astronauts solve problems independently, rather than depending on constant communication with mission control."（技術者は、宇宙飛行士がミッションコントロールとの常時通信に頼らず自力で問題を解決できるコンピューターシステムを設計している）。\n\n【ポイント2】目的を整理する\n通信の遅れがあっても宇宙飛行士が自力で対応できるようにするため。\n\n【ポイント3】答えの形を確認する\n本文の表現をそのまま使って答える。\n\n【答え】\nThey are designing computer systems that can help astronauts solve problems independently, rather than depending on constant communication with mission control.\n\n【確かめ】\n答えに「自力で問題解決」「常時通信に頼らない」という2つの要素が含まれているか確認する。\n\n【よくあるまちがい】\n通信の遅れの原因（電波信号の伝わる時間）と、対策（コンピューターシステムの開発）を混同してしまうミス。\n\n【ここが絶対】\n「現在何をしているか」を問う設問は、本文の最後（最新の取り組み）に注目する。',
     difficulty: 'advanced',
     course: 'koko-koyo',
     examType: 'koko',
@@ -757,7 +764,8 @@ export const schoolKokoKoyoFill: Question[] = [
     question: 'Rewrite the following sentence using a participial construction (分詞構文): "Because she was tired, she went to bed early."',
     answer: 'Being tired, she went to bed early.',
     hint: 'Remove the conjunction and the subject of the subordinate clause, and change the verb to its -ing form.',
-    explanation: '【解説】\n分詞構文では、従属節の接続詞と主語(Because she)を省略し、動詞を現在分詞(ing形)にする。"Because she was tired"→"Being tired"となる。',
+    explanation:
+      '【何を聞かれているか】\n"Because she was tired, she went to bed early."を分詞構文を用いて書き換える問題。\n\n【なぜ接続詞と主語を省略するのか】\n分詞構文では、従属節の接続詞と、主節と同じ主語を省略し、動詞を現在分詞（ing形）にするという決まりがある。\n\n【ポイント1】接続詞・主語の省略を確認する\nBecauseと、主節と同じ主語sheを省略する。\n\n【ポイント2】動詞の変形を確認する\n"was"を現在分詞Beingに変える。\n\n【ポイント3】完成した文を確認する\n"Being tired, she went to bed early."という1文にまとめる。\n\n【答え】\nBeing tired, she went to bed early.\n\n【確かめ】\n文頭がBeing（現在分詞）で始まり、接続詞Becauseや主語sheが残っていないか確認する。\n\n【よくあるまちがい】\n分詞構文にするときに主語を残してしまったり、be動詞をingの形にし忘れたりするミス。\n\n【ここが絶対】\n分詞構文＝「接続詞+主語(主節と同じ)+be動詞」→「-ing」という変形パターンで型として覚える。',
     difficulty: 'advanced',
     course: 'koko-koyo',
     examType: 'koko',
@@ -780,7 +788,8 @@ export const schoolKokoKoyoFill: Question[] = [
     question: '次の日本語を英語に直しなさい。「彼女は忙しすぎて、私たちに会いに来ることができなかった。」',
     answer: 'She was too busy to come and see us.',
     hint: '"too ~ to …"(あまりに〜すぎて…できない)という構文を使う。',
-    explanation: '【解説】\n"too ~ to …"構文(あまりに〜すぎて…できない)を使って表す。「忙しすぎて来られなかった」→"too busy to come"となり、"She was too busy to come and see us."が正しい英訳になる。',
+    explanation:
+      '【何を聞かれているか】\n「彼女は忙しすぎて、私たちに会いに来ることができなかった。」を英語に直す問題。\n\n【なぜtoo〜to構文を使うのか】\n「あまりに〜すぎて…できない」という内容を表すときは、too〜to構文（too+形容詞+to+動詞の原形）を使う。\n\n【ポイント1】too〜to構文の形を確認する\ntoo+busy+to+come（忙しすぎて来ることができない）。\n\n【ポイント2】不定詞の後の動詞を確認する\n"come and see"＝来て会う、という2つの動作をandでつなげる。\n\n【ポイント3】完成した文を確認する\n"She was too busy to come and see us."という型になる。\n\n【答え】\nShe was too busy to come and see us.\n\n【確かめ】\ntoo busyの後にto come（不定詞）が続いているか確認する。\n\n【よくあるまちがい】\ntoo〜to構文ではなく、because節などの別の構文で表そうとして複雑にしてしまうミス。\n\n【ここが絶対】\ntoo+形容詞+to+動詞の原形＝「あまりに〜すぎて…できない」という型でセットで覚える。',
     difficulty: 'advanced',
     course: 'koko-koyo',
     examType: 'koko',
@@ -791,7 +800,8 @@ export const schoolKokoKoyoFill: Question[] = [
     question: "Choose the correct prepositions: \"The meeting will start ___ 9 o'clock ___ the morning.\"",
     answer: 'at / in',
     hint: 'Time on the clock uses one preposition, while a part of the day (morning, afternoon, evening) uses another.',
-    explanation: '【解説】\n時刻の前には at (at 9 o\'clock)を、「朝に」という一日の中の一部を表す場合は in (in the morning) を使う。この使い分けは英語の時間表現の基本ルールの一つである。',
+    explanation:
+      '【何を聞かれているか】\n"The meeting will start (　) 9 o\'clock (　) the morning."の空欄に入る正しい前置詞の組み合わせを選ぶ問題。\n\n【なぜatとinを使い分けるのか】\n時刻を表すときはatを、「朝に」のような一日の中の一部（morning, afternoon, evening）を表すときはinを使うという、英語の時間表現の基本ルールがある。\n\n【ポイント1】時刻の前置詞を確認する\n"at 9 o\'clock"＝時刻の直前にはatを使う。\n\n【ポイント2】一日の部分の前置詞を確認する\n"in the morning"＝朝・午後・夕方にはinを使う。\n\n【ポイント3】他の組み合わせを消去する\n"on"は日付・曜日に使う前置詞なので、時刻や一日の部分には使わない。\n\n【答え】\nat / in\n\n【確かめ】\n時刻の前にat、morningの前にinが使われているか確認する。\n\n【よくあるまちがい】\n"on 9 o\'clock"や"at the morning"のように、時刻・一日の部分に合わない前置詞を使ってしまうミス。\n\n【ここが絶対】\nat+時刻、in+朝/午後/夕方、on+日付/曜日、という前置詞の使い分けをセットで覚える。',
     difficulty: 'standard',
     course: 'koko-koyo',
     examType: 'koko',

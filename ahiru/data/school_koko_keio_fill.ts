@@ -694,7 +694,7 @@ export const schoolKokoKeioFill: Question[] = [
     answer: 'Watching the bees work together has changed the way they think about teamwork in their own jobs.',
     hint: 'The answer is stated directly in the last sentence of the passage.',
     explanation:
-      '【解説】\n最終文で述べられている内容がそのまま答え。ミツバチが協力して働く様子を見て、自分たちの仕事におけるチームワークについての考え方が変わったと述べられている。',
+      '【何を聞かれているか】\nミツバチの働き方についての英文を読み、一部の従業員のチームワークに対する考え方がどう変わったかを答える問題。\n\n【なぜ最後の文に注目するのか】\n「考え方がどう変わったか」という設問の答えは、本文の最後で直接述べられている。\n\n【ポイント1】該当の一文を確認する\n本文最終文に、ミツバチが協力して働く様子を見て考え方が変わったという内容が述べられている。\n\n【ポイント2】変化の内容を整理する\n「ミツバチの協力する様子を見た」→「自分たちの仕事のチームワークについての考え方が変わった」という因果関係。\n\n【ポイント3】答えの形を確認する\n本文の表現をそのまま使って答える。\n\n【答え】\nWatching the bees work together has changed the way they think about teamwork in their own jobs.\n\n【確かめ】\n答えに「ミツバチの協力する様子」と「チームワークについての考え方の変化」の両方が含まれているか確認する。\n\n【よくあるまちがい】\nミツバチの生態そのものの説明だけを答え、従業員の考え方の変化を答え損ねるミス。\n\n【ここが絶対】\n「考え方の変化」を問う設問は、本文の最後の一文（結論）に注目する。',
     difficulty: 'standard',
     course: 'koko-keio',
     examType: 'koko',
@@ -708,7 +708,7 @@ export const schoolKokoKeioFill: Question[] = [
     answer: 'essential',
     hint: 'Think about how important bees are described to be for pollination in the passage.',
     explanation:
-      '【解説】\n本文に "bees are essential for pollinating flowers and crops" とあり、essential(不可欠な)が適切。harmful(有害な)、optional(任意の)、rare(まれな)はいずれも文脈に合わない。',
+      '【何を聞かれているか】\n"Bees are (　) for pollinating flowers and crops."の空欄に入る最も適切な語を選ぶ問題。\n\n【なぜessentialを使うのか】\n本文に"bees are essential for pollinating flowers and crops"とあり、ミツバチが花や作物の受粉にとって「不可欠」であると述べられている。\n\n【ポイント1】本文の該当箇所を確認する\n"essential"（不可欠な）という語がそのまま使われている。\n\n【ポイント2】他の選択肢を消去する\nharmful（有害な）、optional（任意の）、rare（まれな）はいずれも文脈に合わない。\n\n【ポイント3】ミツバチの重要性を確認する\n受粉においてミツバチが果たす役割の大きさを表す語を選ぶ。\n\n【答え】\nessential\n\n【確かめ】\n選んだ語が「不可欠な」という肯定的で重要性を表す意味になっているか確認する。\n\n【よくあるまちがい】\nharmfulのように否定的な意味の語を選んでしまうミス。\n\n【ここが絶対】\n本文中に該当する語がそのまま使われていることが多いので、文脈から探して確認する。',
     difficulty: 'standard',
     course: 'koko-keio',
     examType: 'koko',
@@ -723,7 +723,7 @@ export const schoolKokoKeioFill: Question[] = [
     answer: 'Because he forgot his lines halfway through his speech and finished last.',
     hint: 'Look at the first sentence of the passage.',
     explanation:
-      '【解説】\n第1文「Riku practiced his speech every night for a month, but on the day of the contest, he forgot his lines halfway through and finished last.」から、スピーチの途中でせりふを忘れ最下位になったことが原因だとわかる。',
+      '【何を聞かれているか】\nリクがコンテストの後に恥ずかしいと感じた理由を答える問題。\n\n【なぜ第1文に注目するのか】\n「恥ずかしいと感じた理由」という設問の答えは、本文第1文に直接述べられている。\n\n【ポイント1】該当の一文を確認する\n"Riku practiced his speech every night for a month, but on the day of the contest, he forgot his lines halfway through and finished last."（1か月毎晩練習したが、コンテスト当日にせりふを途中で忘れ、最下位になった）。\n\n【ポイント2】原因を整理する\n「スピーチの途中でせりふを忘れたこと」と「最下位になったこと」の2つが原因。\n\n【ポイント3】答えの形を確認する\n本文の表現をそのまま使って答える。\n\n【答え】\nBecause he forgot his lines halfway through his speech and finished last.\n\n【確かめ】\n答えに「せりふを忘れた」と「最下位になった」の両方が含まれているか確認する。\n\n【よくあるまちがい】\n1か月間練習したという努力の部分だけを答え、恥ずかしいと感じた直接の原因を答え損ねるミス。\n\n【ここが絶対】\n「なぜ〜と感じたか」を問う設問は、butの後に続く具体的な出来事に注目する。',
     difficulty: 'standard',
     course: 'koko-keio',
     examType: 'koko',
@@ -752,7 +752,8 @@ export const schoolKokoKeioFill: Question[] = [
     question: 'What happened when Riku entered the contest again the following year?',
     answer: 'He spoke without a single mistake.',
     hint: 'This is stated in the last sentence of the passage.',
-    explanation: '【解説】\n最終文「when he entered the contest again and, this time, spoke without a single mistake」がそのまま答え。',
+    explanation:
+      '【何を聞かれているか】\nリクが翌年再びコンテストに出場したときに何が起こったかを答える問題。\n\n【なぜ最終文に注目するのか】\n「翌年何が起こったか」という設問の答えは、本文の最後で直接述べられている。\n\n【ポイント1】該当の一文を確認する\n"when he entered the contest again and, this time, spoke without a single mistake"（翌年再びコンテストに出場し、今回は一つも間違えずに話した）。\n\n【ポイント2】前年との対比を確認する\n前年はせりふを忘れて最下位だったが、翌年は一つも間違えなかったという成長が描かれている。\n\n【ポイント3】答えの形を確認する\n本文の表現をそのまま使って答える。\n\n【答え】\nHe spoke without a single mistake.\n\n【確かめ】\n答えが「一つも間違えなかった」という翌年の結果になっているか確認する。\n\n【よくあるまちがい】\n前年の失敗（せりふを忘れた）の内容と混同してしまうミス。\n\n【ここが絶対】\n「その後どうなったか」を問う設問は、本文の最後（結末）に注目する。',
     difficulty: 'standard',
     course: 'koko-keio',
     examType: 'koko',
@@ -766,7 +767,7 @@ export const schoolKokoKeioFill: Question[] = [
     answer: 'A furoshiki can be reused hundreds of times, while wrapping paper is usually thrown away after one use.',
     hint: 'Look at the last sentence, which compares furoshiki with wrapping paper.',
     explanation:
-      '【解説】\n最終文に "Unlike wrapping paper, which is usually thrown away after one use, a furoshiki can be reused hundreds of times" とあり、ここがそのまま答えになる。',
+      '【何を聞かれているか】\n風呂敷が包装紙と比べて優れている点を答える問題。\n\n【なぜ最終文に注目するのか】\n「風呂敷の利点」という設問の答えは、風呂敷と包装紙を比較している本文の最後の一文に直接述べられている。\n\n【ポイント1】該当の一文を確認する\n"Unlike wrapping paper, which is usually thrown away after one use, a furoshiki can be reused hundreds of times"（包装紙は通常1回使うと捨てられるが、風呂敷は何百回も再利用できる）。\n\n【ポイント2】比較の内容を整理する\n「包装紙＝1回使い捨て」対「風呂敷＝何百回も再利用可能」という対比。\n\n【ポイント3】答えの形を確認する\n本文の表現をそのまま使って答える。\n\n【答え】\nA furoshiki can be reused hundreds of times, while wrapping paper is usually thrown away after one use.\n\n【確かめ】\n答えに「風呂敷は何百回も再利用できる」ことと「包装紙は1回で捨てられる」ことの両方が含まれているか確認する。\n\n【よくあるまちがい】\n風呂敷の利点だけを答え、包装紙との対比を書き忘れるミス。\n\n【ここが絶対】\n比較を問う設問は、両方の対象について答えに含める（AはXだが、BはYという形）。',
     difficulty: 'standard',
     course: 'koko-keio',
     examType: 'koko',
@@ -805,7 +806,7 @@ export const schoolKokoKeioFill: Question[] = [
     answer: 'Ken said (that) he had finished his homework.',
     hint: 'In reported speech, tenses usually shift back by one step (tense shift / sequence of tenses).',
     explanation:
-      '【解説】\n直接話法を間接話法に書き換える際、時制を1つ前にずらす(時制の一致)。現在完了形 "have finished" は過去完了形 "had finished" になり、"I" は主語に合わせて "he" に変える。',
+      '【何を聞かれているか】\n"Ken said, "I have finished my homework.""を間接話法に書き換える問題。\n\n【なぜ現在完了を過去完了に変えるのか】\n直接話法を間接話法に書き換える際、伝達動詞saidが過去形なので、時制を1つ前にずらす（時制の一致）という決まりがある。\n\n【ポイント1】時制の一致を確認する\n現在完了形"have finished"は過去完了形"had finished"になる。\n\n【ポイント2】主語の変化を確認する\n"I"は主語に合わせて"he"に変える。\n\n【ポイント3】完成した文を確認する\n"Ken said (that) he had finished his homework."という型になる。\n\n【答え】\nKen said (that) he had finished his homework.\n\n【確かめ】\nhave finishedがhad finished（過去完了）になっており、主語がheに変わっているか確認する。\n\n【よくあるまちがい】\n時制の一致を忘れ、have finishedのままにしてしまうミス。\n\n【ここが絶対】\n伝達動詞が過去形のとき、直接話法の現在完了は過去完了に変わると覚える（時制の一致）。',
     difficulty: 'advanced',
     course: 'koko-keio',
     examType: 'koko',
@@ -843,7 +844,7 @@ export const schoolKokoKeioFill: Question[] = [
     answer: 'over',
     hint: 'Think about which preposition describes a change happening throughout an entire period of time.',
     explanation:
-      '【解説】\n"the last decade"(この10年間)のような期間全体にわたる変化・推移を表す場合は over を使う。"since" は起点、"for" は単なる期間の長さ、"until" は継続の終点を表す前置詞であり、ここでは文脈に合わない。',
+      '【何を聞かれているか】\n"The number of students who study abroad has been increasing (　) the last decade."の空欄に入る正しい前置詞を選ぶ問題。\n\n【なぜoverを使うのか】\n"the last decade"（この10年間）のような期間全体にわたる変化・推移を表す場合、前置詞overを使う。\n\n【ポイント1】overの意味を確認する\nover the last decade＝「この10年間にわたって」という期間を通じた変化を表す。\n\n【ポイント2】他の前置詞との違いを確認する\nsinceは起点、forは単なる期間の長さ、untilは継続の終点を表す前置詞で、いずれも文脈に合わない。\n\n【ポイント3】現在完了進行形との組み合わせを確認する\nhas been increasing（現在完了進行形）とoverの組み合わせで「ずっと増え続けている」という変化を表す。\n\n【答え】\nover\n\n【確かめ】\n選んだ前置詞が、期間を通じた変化・推移を表すover（since, for, untilではない）になっているか確認する。\n\n【よくあるまちがい】\n期間を表す語だからとforを選んでしまい、「変化・推移」のニュアンスを見落とすミス。\n\n【ここが絶対】\nover+期間＝「〜の間にわたる変化・推移」を表すと覚える。',
     difficulty: 'advanced',
     course: 'koko-keio',
     examType: 'koko',
