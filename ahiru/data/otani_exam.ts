@@ -334,23 +334,6 @@ export const otaniEigo: Question[] = [
       '問3: Yesterday, I read a book in the library.',
     hint: '年齢はI am + 数字 + years old。問3はreadの過去形もreadと書く（発音がリードではなくレッドになる）。',
     explanation:
-      '【解説】\n\n' +
-      '【■問1】\n' +
-      '"I am twelve years old."（私は12歳です）\n' +
-      '年齢の表し方：I am + 数字 + years old.\n' +
-      '短縮形："I\'m twelve years old."でもよい。\n' +
-      '数字の英語：twelve＝12（ten-two ではなくtwelveと書く）\n\n' +
-      '【■問2】\n' +
-      '"I like Osaka."（私は大阪が好きです）\n' +
-      'like + 名詞で「〜が好き」。\n' +
-      'Osaka（地名）の最初は大文字で書く。\n\n' +
-      '【■問3】\n' +
-      '"Yesterday, I read a book in the library."\n' +
-      '（昨日、私は図書館で本を読みました）\n' +
-      '注意：readは現在形も過去形も同じスペルread。\n' +
-      '　現在形：read（リード）→「読む」\n' +
-      '　過去形：read（レッド）→「読んだ」\n' +
-      'yesterday＝昨日（文頭または文末に置く）\n' +
-      'in the library＝図書館で（場所はinを使う）',
+      '【何を聞かれているか】\n「私は12歳です」「私は大阪が好きです」「昨日、私は図書館で本を読みました」という3つの日本語を英語にする問題。\n\n【なぜ問3のreadが特殊なのか】\nreadは原形・過去形・過去分詞がすべて同じ綴り"read"になる不規則動詞で、過去形は発音が変わる（[red]レッド）という特殊な性質がある。\n\n【ポイント1】問1：年齢の表し方を確認する\n"I am＋数字＋years old."＝「私は〜歳です」。数字はtwelve（12）と英語のつづりで書く。\n\n【ポイント2】問2：likeの使い方を確認する\n"like＋名詞"＝「〜が好き」。地名Osakaは最初を大文字にする。\n\n【ポイント3】問3：過去形readと場所・時の語順を確認する\n"read"は過去形も同じ綴り（発音は変わる）。"in the library"（図書館で）、"yesterday"（昨日）を正しい位置に置く。\n\n【答え】\n問1: I am twelve years old. （I\'m twelve years old.も可）\n問2: I like Osaka.\n問3: Yesterday, I read a book in the library.\n\n【確かめ】\n問3の"read"の綴りが過去形でも変わっていないこと、地名Osakaが大文字で始まっていることを確認する。\n\n【よくあるまちがい】\n問3でreadを"readed"のような誤った形にしてしまうミス。readは原形・過去形・過去分詞が同じ綴りの不規則動詞。\n\n【ここが絶対】\n年齢はI am＋数字＋years old、readの過去形は同じ綴りで発音だけ変わる（[red]レッド）ことをセットで覚える。',
   },
 ];

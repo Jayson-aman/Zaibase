@@ -284,17 +284,11 @@ Q2. Name TWO visible effects of climate change mentioned in the text.
 Q3. What does "carbon neutrality" mean? (Answer in Japanese, 30字以内)
 Q4. Find a word in the passage that means "the state of using natural resources in a way that does not harm the environment."
 Q5. Do you think individual actions can effectively address climate change? Write ONE sentence giving your opinion.`,
-    answer: 'Q1. The increase of greenhouse gases caused by human activities (burning fossil fuels and deforestation).　Q2. Rising sea levels / more frequent extreme weather events / melting Arctic ice (any two)　Q3. 排出する温室効果ガスの量と吸収量を等しくし、実質ゼロにすること（30字）　Q4. sustainable　Q5. (自由記述例) Yes, because small actions by many people can lead to big changes.',
+    answer:
+      'Q1. The increase of greenhouse gases caused by human activities (burning fossil fuels and deforestation).　Q2. Rising sea levels / more frequent extreme weather events / melting Arctic ice (any two)　Q3. 温室効果ガスの排出量と吸収量を等しくして実質ゼロにすること（29字）　Q4. sustainable　Q5. (自由記述例) Yes, because small actions by many people can lead to big changes.',
     hint: 'Q1は"primarily caused by"の直後を探す。Q4は"sustainable"が「持続可能な」の意。Q5は自分の意見を1文で簡潔に。',
-    explanation: `Q1: "primarily caused by the increase of greenhouse gases…largely due to human activities like burning fossil fuels and deforestation"
-
-Q2: ① Sea levels are rising. ② Extreme weather events are becoming more frequent and severe. ③ Arctic ice is melting. (いずれか2つ)
-
-Q3: カーボンニュートラルとは、CO₂などの排出量と吸収量を均衡させ、実質的な排出量をゼロにすること。
-
-Q4: "sustainable" ─ 持続可能な（環境を損なわない方法で資源を利用すること）
-
-Q5: 解答例：Yes, I believe individual actions matter because millions of small efforts combined can create significant change.`,
+    explanation:
+      '【何を聞かれているか】\n気候変動についての長文を読み、5つの問いに答える読解問題。\n\n【なぜ本文の構成（原因→影響→対策）を意識するのか】\nこの英文は「①原因（温室効果ガスの増加）→②影響（海面上昇・異常気象など）→③対策（再生可能エネルギー・国際協力）」という3段落構成になっており、設問もこの構成に沿って作られている。\n\n【ポイント1】Q1・Q2：原因と影響を確認する\nQ1は"primarily caused by the increase of greenhouse gases...due to human activities"（温室効果ガスの増加、人間活動が原因）。Q2は海面上昇・異常気象・北極の氷の融解のうち2つを挙げる。\n\n【ポイント2】Q3：字数制限内にまとめる\n"carbon neutrality"の意味を、温室効果ガスの排出量と吸収量を釣り合わせて実質ゼロにすることだと、30字以内で説明する。\n\n【ポイント3】Q4・Q5：語彙と自分の意見を確認する\nQ4は「持続可能な」という意味を持つ本文中の単語sustainableを探す。Q5は個人の行動が効果的かどうか、自分の意見を1文で書く。\n\n【答え】\nQ1. The increase of greenhouse gases caused by human activities (burning fossil fuels and deforestation).　Q2. Rising sea levels / more frequent extreme weather events / melting Arctic ice (any two)　Q3. 温室効果ガスの排出量と吸収量を等しくして実質ゼロにすること（29字）　Q4. sustainable　Q5. (自由記述例) Yes, because small actions by many people can lead to big changes.\n\n【確かめ】\nQ3の答えを実際に数え、30字以内におさまっているか確認する（この答えは29字）。\n\n【よくあるまちがい】\nQ3で、本文にない詳しい説明（「地球温暖化を防ぐために」など）まで加えてしまい、字数を超過するミス。字数制限があるときは、聞かれている内容（carbon neutralityの意味）だけに絞って書く。\n\n【ここが絶対】\n長文読解は段落ごとの役割（原因→影響→対策）を意識して該当箇所を探す。字数制限のある設問は、書いたあと必ず文字数を数え直す。',
   },
   {
     id: 'koko_hibiya_eigo_02',
@@ -319,16 +313,8 @@ Q5: 解答例：Yes, I believe individual actions matter because millions of sma
 10. ( Having finished / Finishing / Finish ) dinner, he went for a walk.`,
     answer: '1. has lived　2. were　3. which　4. before　5. was made　6. Both　7. where he lives　8. the better　9. the tallest　10. Having finished',
     hint: '2は仮定法過去（were）。7は間接疑問文は平叙文の語順。8は「the＋比較級…the＋比較級」。10は完了分詞構文。',
-    explanation: `1. for ten years → 現在完了 has lived。
-2. 仮定法過去（現実に反する仮定）→ were。
-3. 先行詞が物（book）→ which。
-4. 「寝る前に」→ before。
-5. 映画は「作られた」→ 受動態 was made。
-6. Tom と Jane の「両方とも」→ Both。
-7. 間接疑問文は〈疑問詞＋S＋V〉の語順 → where he lives。
-8. the＋比較級, the＋比較級 → the better。
-9. クラスで一番 → 最上級 the tallest。
-10. 主節より前の動作 → 完了分詞構文 Having finished。`,
+    explanation:
+      '【何を聞かれているか】\n現在完了・仮定法・関係代名詞・比較・間接疑問文・分詞構文など、高校入試レベルの文法知識を問う10問の選択問題。\n\n【なぜそれぞれの文法項目で決まった形があるのか】\n現在完了・仮定法・関係代名詞などは、それぞれ「継続の期間を表す語（for）」「現実に反する内容」「先行詞の種類」といった手がかりによって、使うべき形が一意に決まる。\n\n【ポイント1】時制・仮定法を確認する\n1は"for ten years"から現在完了（has lived）。2は現実に反する仮定なので仮定法過去（were）。\n\n【ポイント2】関係代名詞・語順を確認する\n3は先行詞が物（book）なのでwhich。7は間接疑問文なので疑問詞の後ろは平叙文の語順（where he lives）。\n\n【ポイント3】比較・分詞構文を確認する\n8は"the＋比較級, the＋比較級"の相関構文。9は最上級the tallest。10は主節より前に完了した動作を表す完了分詞構文Having finished。\n\n【答え】\n1. has lived　2. were　3. which　4. before　5. was made　6. Both　7. where he lives　8. the better　9. the tallest　10. Having finished\n\n【確かめ】\nそれぞれの選択が、周囲の語句（for ten years、if I〜、先行詞など）が示すヒントと一致しているか確認する。\n\n【よくあるまちがい】\n7で、間接疑問文の中を疑問文の語順（where does he live）のままにしてしまうミス。文の中に組み込まれた疑問詞節は、疑問詞＋主語＋動詞の順にする。\n\n【ここが絶対】\nそれぞれの文法項目（現在完了・仮定法・関係代名詞・比較・間接疑問文・分詞構文）の決まった形を、手がかりになる語（for、if、先行詞など）とセットで覚える。',
   },
   {
     id: 'koko_hibiya_eigo_03',
@@ -720,23 +706,8 @@ Q6: "exponential"（指数関数的・加速度的に増大する）`,
    ア. all　イ. every　ウ. each　エ. both`,
     answer: '1. ウ　2. ア　3. ウ　4. イ　5. ア',
     hint: '1は過去の事実に反する仮定＝仮定法過去完了（had＋過去分詞）。2は「まるで〜のように」＝as if。3は関係代名詞の非制限用法で主格→who。4は否定語句が文頭に出た場合の倒置（did＋S）。5は3人姉妹全員＝all of whom。',
-    explanation: `1. 仮定法過去完了：過去の事実に反する仮定。
-   "If ＋ S ＋ had p.p. …, S ＋ could/would have p.p."
-   → had studied が正解。
-
-2. "as if ＋ 仮定法"：「まるで〜であるかのように」。
-   She speaks French as if she were French herself.
-
-3. "The man who I thought was honest"：関係代名詞 who が主格。
-   ※ "I thought" は挿入節（thought の目的語ではなく話者の評価）。
-
-4. "Not until midnight did he realize…"：
-   否定の副詞句（Not until）が文頭に出ると、後ろは疑問文の語順（倒置）。
-   → did he realize。
-
-5. "all of whom are doctors"：
-   3人全員（三人とも）が医者 → all。
-   both は2人のとき使う語。`,
+    explanation:
+      '【何を聞かれているか】\n仮定法過去完了・as if・関係代名詞の省略しにくい形・倒置・数量詞など、より高度な文法知識を問う5問の空所補充問題。\n\n【なぜ倒置が起こるのか】\n"Not until〜"のような否定の意味を持つ語句が文頭に出ると、その後ろは疑問文と同じ語順（助動詞＋主語）に入れ替わるという、英語特有のルールがある。\n\n【ポイント1】1：仮定法過去完了を確認する\n「去年もっと勉強していたら（実際はしなかった）」という過去の事実に反する内容なので、had studiedを使う。\n\n【ポイント2】2・3：as ifと関係代名詞を確認する\n2は「まるで〜であるかのように」を表すas if。3は"I thought"という挿入節をはさんだ、主格の関係代名詞who。\n\n【ポイント3】4・5：倒置と数量詞を確認する\n4は"Not until midnight"という否定の副詞句が文頭に出たための倒置（did he）。5は3人姉妹全員を指すall（2人ならboth）。\n\n【答え】\n1. ウ　2. ア　3. ウ　4. イ　5. ア\n\n【確かめ】\n1は主節が"could have passed"（仮定法過去完了の帰結）になっていること、4は"Not until〜"の後ろが疑問文の語順になっていることを確認する。\n\n【よくあるまちがい】\n3で、"I thought"を関係代名詞の目的語だと勘違いし、目的格のwhomを選んでしまうミス。"I thought"は挿入された話者の評価であり、"who...was honest"のwhoは主格。\n\n【ここが絶対】\n否定の副詞句が文頭に出ると倒置が起こる、all（3つ以上）とboth（2つ）を使い分ける、という高度な文法ルールをそれぞれセットで覚える。',
   },
 ];
 
@@ -1025,17 +996,8 @@ Q4. What does "vague" mean? Choose the best answer.
    ア. specific　イ. unclear　ウ. difficult　エ. important`,
     answer: 'Q1. Fewer than 10%（10%未満）　Q2. Goals are too large or vague / motivation drops / people try to change too many things at once (いずれか1つ)　Q3. 小さく始め、具体的な目標を設定し、小さな成功を祝うこと（27字）　Q4. イ',
     hint: 'Q1は"fewer than 10%"を探す。Q3は最終段落にまとめられている。Q4 vague＝not specific（具体的でない・あいまいな）。',
-    explanation: `Q1: "fewer than 10% of people successfully keep their resolutions"
-
-Q2:
-①目標が大きすぎる・曖昧すぎる（too large or vague）
-②最初の興奮が冷めると意欲が下がる（motivation drops）
-③一度に多くのことを変えようとする（too many things at once）
-
-Q3: "start small, be specific, and celebrate small victories"
-→ 小さく始め、具体的に設定し、小さな達成を喜ぶこと。
-
-Q4: vague＝「不明確な・曖昧な」。反意語は specific（具体的な）。→ イ（unclear）が最も近い意味。`,
+    explanation:
+      '【何を聞かれているか】\n新年の抱負についての英文を読んで、4つの問いに答える読解問題。\n\n【なぜ本文の構成（結果→原因→解決策）を意識するのか】\nこの英文は「①抱負を達成できる人は少ないという結果→②その理由（原因）→③成功のカギ（解決策）」という構成になっており、設問もこの流れに沿って作られている。\n\n【ポイント1】Q1・Q2：結果と原因を確認する\nQ1は"fewer than 10%"（10%未満）。Q2は「目標が大きすぎる・曖昧すぎる」「意欲が下がる」「一度に多くを変えようとする」のいずれか1つ。\n\n【ポイント2】Q3：字数制限内にまとめる\n"start small, be specific, and celebrate small victories"（小さく始め、具体的にし、小さな成功を祝う）を40字以内でまとめる。\n\n【ポイント3】Q4：語彙の意味を確認する\n"vague"＝「曖昧な・不明確な」という意味で、選択肢の中では"unclear"が最も近い。\n\n【答え】\nQ1. Fewer than 10%（10%未満）　Q2. Goals are too large or vague / motivation drops / people try to change too many things at once (いずれか1つ)　Q3. 小さく始め、具体的な目標を設定し、小さな成功を祝うこと（27字）　Q4. イ\n\n【確かめ】\nQ3の答えを実際に数え、40字以内におさまっているか確認する（この答えは27字）。\n\n【よくあるまちがい】\nQ2で、本文に書かれている3つの理由をすべて書いてしまうミス。設問は「1つ」の理由を聞いているので、いずれか1つを選んで答える。\n\n【ここが絶対】\n説明文の読解は「結果→原因→解決策」という構成を意識し、設問がどの段落に対応しているかを見極める。',
   },
   {
     id: 'koko_meidai_eigo_02',
@@ -1061,17 +1023,8 @@ A: Good luck!
 4. ア. I'll try that tonight.　イ. I hate math.　ウ. I'll skip the test.　エ. Let's give up.`,
     answer: '1. イ　2. イ　3. エ　4. ア',
     hint: '会話の流れを追う。1：テスト前でtipsを求める→少し緊張している。2：前夜にノートを見直すと言った後→それが役立つ。3：2時間で十分という文脈→「それで十分」。4：アドバイスを受けた後→「今夜やってみる」。',
-    explanation: `1. B が「あまり準備できていない」と言い、アドバイスを求めている文脈。
-   「少し緊張している（I'm a bit nervous.）」が最も自然。→ イ
-
-2. A が「前夜にノートを見直す」と言った後の追加説明。
-   「本当に覚えやすくなる（It really helps me remember things.）」が適切。→ イ
-
-3. A が2時間勉強すると言い、「それ以上すると疲れる」と続けている文脈。
-   「それで十分だと思う（I think that's enough.）」が自然。→ エ
-
-4. A のアドバイスに感謝してお礼を言う直前の発言。
-   「今夜それをやってみる（I'll try that tonight.）」が最も適切。→ ア`,
+    explanation:
+      '【何を聞かれているか】\n数学のテストについての会話文の空欄に、最も適切な選択肢を選ぶ問題。\n\n【なぜ会話の流れから選択肢を絞るのか】\n会話文の空所補充は、その場面だけでなく、前後の発言との自然なつながりを考えて選ぶ必要がある。\n\n【ポイント1】空所1：Bの状況を確認する\n「あまり準備できていない」と言った直後なので、「少し緊張している」という発言が自然につながる。\n\n【ポイント2】空所2・3：Aの説明を確認する\nAが「前夜にノートを見直す」と言った後には、その効果を説明する発言が続く。「2時間で十分」と言った後には、それ以上勉強しなくていいという結論が続く。\n\n【ポイント3】空所4：会話の締めくくりを確認する\nアドバイスへのお礼（Thanks for the advice!）の直前なので、そのアドバイスを実行する意志を表す発言が自然。\n\n【答え】\n1. イ　2. イ　3. エ　4. ア\n\n【確かめ】\nそれぞれの空所の前後の発言と、選んだ選択肢がつながりのある自然な会話になっているか確認する。\n\n【よくあるまちがい】\n1つの空所だけを見て文脈を考えずに選んでしまうミス。会話文は必ず前後の発言とのつながりを確認して選ぶ。\n\n【ここが絶対】\n会話文の空所補充は、その場のやり取りだけでなく、会話全体の流れ（相談→アドバイス→感謝）を意識して選択肢を選ぶ。',
   },
   {
     id: 'koko_meidai_eigo_03',

@@ -29,7 +29,7 @@ export const eigoExtra: Question[] = [
     answer: 'red',
     hint: 'りんごや血の色です。',
     explanation:
-      '【答え】red\n\n【ほかの選択肢】\n・blue … 青\n・green … 緑\n・yellow … 黄色\n\n【色の語をまとめて覚える】\n・red（赤）・blue（青）・yellow（黄）・green（緑）・black（黒）・white（白）・brown（茶）・purple（紫）・pink（桃）・orange（だいだい）・gray（灰）\n・light blue（水色）・dark green（濃い緑）\nlight をつけると薄く、dark をつけると濃くなる。\n\n【色を使った言い方】\n・feel blue … 気分が沈む。英語では青が悲しみの色である\n・see red … かっとなる\n・in the red … 赤字である。赤字・黒字という言い方は英語から来ている\n・green with envy … うらやましがる\n色の表す気持ちは、言語によってちがう。日本語で「顔が青くなる」のは驚きや恐れだが、英語の blue は悲しみを表す。\n\n【つづりの注意】yellow は l が2つ。green は e が2つ。\n\n【例文】My favorite color is red. I have a red bike.',
+      '【何を聞かれているか】\n「赤」を表す英単語を選ぶ問題。\n\n【なぜredが正解なのか】\n「赤」はred。りんごや血の色を思い浮かべると覚えやすい、基本的な色の単語。\n\n【ポイント1】色の基本語をまとめて覚える\nred（赤）・blue（青）・yellow（黄）・green（緑）・black（黒）・white（白）・brown（茶）・purple（紫）・pink（桃）・orange（だいだい）・gray（灰）。\n\n【ポイント2】色の濃淡を表す言い方を確認する\nlightをつけると薄く（light blue＝水色）、darkをつけると濃くなる（dark green＝濃い緑）。\n\n【ポイント3】色を使った慣用表現を確認する\n"feel blue"（気分が沈む）、"see red"（かっとなる）、"in the red"（赤字である）、"green with envy"（うらやましがる）。色が表す気持ちは言語によって異なり、日本語の「顔が青くなる」は驚きや恐れだが、英語のblueは悲しみを表す。\n\n【答え】\nred\n\n【確かめ】\n選択肢のblue（青）、green（緑）、yellow（黄色）と混同していないか、redが「赤」の意味であることを確認する。\n\n【よくあるまちがい】\nyellowをlが1つだと思い込んでスペルミスをするミス（正しくはyellowでlが2つ）。greenも同様にeが2つあることに注意。\n\n【ここが絶対】\n色の単語は日常会話・慣用表現の両方でよく使われるので、基本の色名とセットで慣用表現（see red、in the redなど）も覚えておく。',
     examFrequency: 'high',
   },
   {
@@ -85,7 +85,7 @@ export const eigoExtra: Question[] = [
     answer: 'mother',
     hint: 'お母さんのことです。',
     explanation:
-      '【答え】mother\n\n【ほかの選択肢】\n・father … 父\n・brother … 兄・弟\n・sister … 姉・妹\n\n【日本語とちがうところ】英語では、兄と弟、姉と妹を区別しない。\n・brother … 兄でも弟でも brother\n・sister … 姉でも妹でも sister\n・区別したいときは older brother（兄）、younger sister（妹）のように言う\n日本語のほうが家族の呼び名が細かいのは、上下の関係を重んじる文化と関わっているとも言われる。\n\n【家族の語】\n・father（父）・mother（母）・parents（両親）・brother・sister\n・grandfather（祖父）・grandmother（祖母）・grandparents（祖父母）\n・uncle（おじ）・aunt（おば）・cousin（いとこ）・nephew（おい）・niece（めい）\n・uncle は父方でも母方でも uncle。日本語の「伯父・叔父」の区別もない\n\n【呼びかけの言い方】Mom、Mommy（アメリカ）／Mum（イギリス）。Dad、Daddy。\n\n【例文】My mother is a teacher. She has two brothers.',
+      '【何を聞かれているか】\n「母」を表す英単語を選ぶ問題。\n\n【なぜmotherが正解なのか】\n「母」はmother。fatherは父、brotherは兄・弟、sisterは姉・妹を表すので、これらと区別する必要がある。\n\n【ポイント1】家族の基本語を確認する\nfather（父）・mother（母）・parents（両親）・brother（兄・弟）・sister（姉・妹）。\n\n【ポイント2】日本語との違いを確認する\n英語ではbrother・sisterに「兄と弟」「姉と妹」の区別がなく、区別したいときはolder brother（兄）、younger sister（妹）のように言う。\n\n【ポイント3】親戚を表す語を確認する\ngrandfather（祖父）・grandmother（祖母）、uncle（おじ、父方でも母方でも同じ語）・aunt（おば）・cousin（いとこ）・nephew（おい）・niece（めい）。\n\n【答え】\nmother\n\n【確かめ】\nfather（父）・brother（兄・弟）・sister（姉・妹）とmother（母）を、それぞれの意味で正しく区別できているか確認する。\n\n【よくあるまちがい】\nbrotherを「弟」だけ、sisterを「妹」だけの意味だと思い込んでしまうミス。英語では上下の区別がなく、兄でも弟でもbrother、姉でも妹でもsister。\n\n【ここが絶対】\n家族の呼び名（father・mother・brother・sister）と、日本語との区別のしかたの違い（上下関係の有無）をセットで覚える。',
     examFrequency: 'high',
   },
   {
@@ -127,7 +127,7 @@ export const eigoExtra: Question[] = [
     answer: 'て',
     hint: '5本の指がついている体の部位です。',
     explanation:
-      '【答え】て\n\n【ほかの選択肢】\n・foot／leg … あし\n・eye … め\n・ear … みみ\n\n【foot と leg のちがい】日本語ではどちらも「あし」だが、英語では区別する。\n・foot … くるぶしから下。足首から先\n・leg … ももからくるぶしまで。脚全体\n日本語より細かく分ける例である。手も、hand（手首から先）と arm（腕）に分かれる。\n\n【複数形に注意】\n・foot → feet（不規則）\n・tooth → teeth\n・hand → hands（規則どおり）\n\n【体の部分の語】head（頭）・face（顔）・eye（目）・ear（耳）・nose（鼻）・mouth（口）・hair（髪）・neck（首）・shoulder（肩）・arm（腕）・hand（手）・finger（指）・leg（脚）・foot（足）・knee（ひざ）。\n\n【hand を使った言い方】\n・give someone a hand … 手を貸す、手伝う\n・on the other hand … 一方で\n・hands-on … 実際に手を使う\n日本語の「手を貸す」とまったく同じ言い方があるのはおもしろいところである。\n\n【例文】Please raise your hand.',
+      '【何を聞かれているか】\n"hand"という英単語の日本語の意味を選ぶ問題。\n\n【なぜ「て」が正解なのか】\nhandは体の部位の名前で、5本の指がついている手首から先の部分を指す。\n\n【ポイント1】handの意味を確認する\nhand＝手（手首から先）。腕全体を表すarmとは区別される。\n\n【ポイント2】footとlegの区別を確認する\n日本語ではどちらも「あし」だが、英語ではfoot（足首から下）とleg（もも〜足首の脚全体）を区別する。\n\n【ポイント3】handを使った慣用表現を確認する\n"give someone a hand"（手を貸す・手伝う）、"on the other hand"（一方で）、"hands-on"（実際に手を使う）。日本語の「手を貸す」と同じ言い方があるのが興味深い点。\n\n【答え】\nて\n\n【確かめ】\n選択肢のfoot/leg（あし）、eye（め）、ear（みみ）と混同せず、handが「て」の意味であることを確認する。\n\n【よくあるまちがい】\nhandとarmを同じ「手」の意味だと思い込んでしまうミス。handは手首から先、armは腕全体を指す。\n\n【ここが絶対】\n体の部位の単語（hand・arm・foot・leg）は、日本語より英語のほうが細かく分かれている部分があることを意識して覚える。',
     examFrequency: 'high',
   },
   {
@@ -183,7 +183,7 @@ export const eigoExtra: Question[] = [
     answer: 'ごはん',
     hint: '日本食の主食です。',
     explanation:
-      '【答え】ごはん\n\n【rice の使い方】rice は数えられない名詞である。\n・a rice、two rices とは言わない\n・数えるときは a bowl of rice（茶わん1杯）、a grain of rice（米1粒）\n\n【rice が表すもの】英語の rice は、稲・米・ご飯のすべてを指す。\n・日本語では、稲・米・ご飯・ライスと細かく分ける\n・日本人にとって身近なものほど、日本語の語が細かいという例である\n・逆に、英語では牛の呼び名が細かい（cow、bull、ox、calf、cattle、beef）\nその文化で大切なものほど、語が細かく分かれる。\n\n【ほかの選択肢】\n・bread … パン。数えられない\n・noodles … めん。ふつう複数形\n・soup … スープ。数えられない\n主食に関わる語は、数えられない名詞が多い。\n\n【食事の語】breakfast（朝食）・lunch（昼食）・dinner（夕食）・meal（食事）。\n・食事名には a も the もつけない。have breakfast\n\n【例文】I eat rice every day. Would you like some rice?',
+      '【何を聞かれているか】\n"rice"という英単語の日本語の意味を選ぶ問題。\n\n【なぜ「ごはん」が正解なのか】\nriceは、日本語でいう「稲」「米」「ご飯」のすべてを1つの単語で表す英単語。\n\n【ポイント1】riceが数えられない名詞であることを確認する\nriceは数えられない名詞なので、"a rice"や"two rices"とは言わない。数えるときは"a bowl of rice"（茶わん1杯）、"a grain of rice"（米1粒）のように表す。\n\n【ポイント2】riceが表す範囲を確認する\n英語のriceは稲・米・ご飯のすべてを指すが、日本語ではこれらを細かく区別する。身近なものほど言葉が細かく分かれるという例の一つ。\n\n【ポイント3】他の選択肢との違いを確認する\nbread（パン）、noodles（めん、ふつう複数形）、soup（スープ）はいずれも「ごはん」とは異なる食べ物。\n\n【答え】\nごはん\n\n【確かめ】\nriceが「パン」「めん」「スープ」ではなく、日本語の「ご飯」に当たる語であることを確認する。\n\n【よくあるまちがい】\nriceを"a rice"のように数えられる名詞として使ってしまうミス。riceは数えられない名詞なので、単位を表す語（a bowl of〜など）と一緒に使う。\n\n【ここが絶対】\nriceは数えられない名詞で、稲・米・ご飯のすべてを表す。身近で大切なものほど、その文化の言語では語が細かく分かれる（英語の牛の呼び名など）という視点も覚えておくとおもしろい。',
     examFrequency: 'high',
   },
   {

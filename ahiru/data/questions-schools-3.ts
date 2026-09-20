@@ -1121,7 +1121,8 @@ export const otaniQuestions: Question[] = [
     question: '（　）に入る適切な前置詞を答えよ。\n"The library is ( ) the school and the post office."',
     answer: 'between',
     hint: '2つのものの間に＝between',
-    explanation: '"between A and B"：AとBの間に\n図書館は学校と郵便局の間にある。\nbetween（2つの間）/ among（3つ以上の間）',
+    explanation:
+      '【何を聞かれているか】\n"The library is ( ) the school and the post office."の空欄に入る、正しい前置詞を答える問題。\n\n【なぜbetweenを使うのか】\n「AとBの間に」という、2つのものにはさまれた位置を表すときは、betweenを使うという決まりがある。\n\n【ポイント1】betweenの形を確認する\n"between A and B"＝「AとBの間に」。\n\n【ポイント2】betweenとamongの違いを確認する\nbetween＝2つのものの間、among＝3つ以上のものの間。今回はthe schoolとthe post officeの2つなのでbetween。\n\n【ポイント3】文全体を確認する\n"The library is between the school and the post office."＝「図書館は学校と郵便局の間にある」。\n\n【答え】\nbetween\n\n【確かめ】\n"between"の後ろに"the school and the post office"という2つの場所が並んでいることを確認する。\n\n【よくあるまちがい】\n2つのものの間なのにamongを使ってしまうミス。amongは3つ以上のものの中にあるときに使う。\n\n【ここが絶対】\nbetween（2つの間）とamong（3つ以上の間）の使い分けをセットで覚える。',
   },
   {
     id: 'otani_eigo_04', subject: 'eigo', difficulty: 'advanced',
@@ -1129,7 +1130,8 @@ export const otaniQuestions: Question[] = [
     question: '次の英文を否定文に書き換えよ。\n"They play basketball after school."',
     answer: 'They do not (don\'t) play basketball after school.',
     hint: '一般動詞の否定文：do not + 動詞原形',
-    explanation: '主語がThey（三人称複数）→ do not（don\'t）を使う\n語順：主語 + do not + 動詞原形 + ...\nThey don\'t play basketball after school.',
+    explanation:
+      '【何を聞かれているか】\n"They play basketball after school."という文を否定文に書き換える問題。\n\n【なぜdo notを使うのか】\n主語がThey（三人称複数）のとき、一般動詞の否定文は"do not（don\'t）＋動詞の原形"を使うという決まりがある。\n\n【ポイント1】否定文の公式を確認する\n主語＋do not（don\'t）＋動詞の原形〜。\n\n【ポイント2】主語と否定語の対応を確認する\nTheyのような三人称複数（またはI/you/we）の主語には、do notを使う（he/she/itにはdoes not）。\n\n【ポイント3】動詞を原形に戻すことを確認する\n"play"はすでに原形なので、doesn\'t/don\'tの後ろにそのまま置く。\n\n【答え】\nThey do not (don\'t) play basketball after school.\n\n【確かめ】\n"do not"（またはdon\'t）の後ろに、動詞の原形playが続いているか確認する。\n\n【よくあるまちがい】\n主語がTheyであることを確認せずに、doesn\'tを使ってしまうミス。doesn\'tはhe/she/itのような三人称単数のときに使う。\n\n【ここが絶対】\n一般動詞の否定文は、主語に合わせてdon\'t（I/you/we/they）とdoesn\'t（he/she/it）を使い分ける。',
   },
   {
     id: 'otani_eigo_05', subject: 'eigo', difficulty: 'advanced',
@@ -1137,7 +1139,8 @@ export const otaniQuestions: Question[] = [
     question: '次の英文を読んで、質問に日本語で答えよ。\n"Sato family has three members: father, mother, and Kenji. Kenji is 11 years old. His father is 35 years old."\nQ: What is the age difference between Kenji and his father?',
     answer: '24歳（35-11=24）',
     hint: 'age difference = 年の差',
-    explanation: 'Kenji: 11歳\nHis father: 35歳\n年の差（age difference）: 35-11=24歳',
+    explanation:
+      '【何を聞かれているか】\nSato家についての英文を読んで、"What is the age difference between Kenji and his father?"（ケンジと父の年齢差）に日本語で答える問題。\n\n【なぜ引き算が必要なのか】\n「年齢差（age difference）」を求めるには、2人の年齢のうち大きい方から小さい方を引く計算が必要になる。\n\n【ポイント1】2人の年齢を確認する\n"Kenji is 11 years old."（ケンジは11歳）、"His father is 35 years old."（父は35歳）。\n\n【ポイント2】年齢差を計算する\n35－11＝24。\n\n【ポイント3】"age difference"の意味を確認する\n"age difference"＝「年の差」。betweenの後ろに比べる2人を置く。\n\n【答え】\n24歳（35-11=24）\n\n【確かめ】\n35（父の年齢）から11（ケンジの年齢）を引くと24になることを確認する。\n\n【よくあるまちがい】\n2人の年齢を逆に読み間違え、11から35を引こうとしてしまうミス。本文を正確に読んで、どちらが何歳かを確認してから計算する。\n\n【ここが絶対】\n"age difference between A and B"＝AとBの年齢差、という表現を、実際の数字の引き算とセットで覚える。',
   },
   {
     id: 'otani_eigo_06', subject: 'eigo', difficulty: 'advanced',
@@ -1145,6 +1148,7 @@ export const otaniQuestions: Question[] = [
     question: '次の会話文を完成させよ。\nA: "What do you want to be in the future?"\nB: "（　　　　　　　　　）."（「私は医者になりたいです」）',
     answer: 'I want to be a doctor.',
     hint: 'want to be + 職業名',
-    explanation: '"I want to be a doctor."（私は医者になりたいです）\nwant to be + 職業：〜になりたい\nin the future（将来）への回答',
+    explanation:
+      '【何を聞かれているか】\n「将来何になりたいですか」という質問に対して、「私は医者になりたいです」という日本語を英語で答える問題。\n\n【なぜwant to beを使うのか】\n「〜になりたい」という将来の希望を表すときは、"want to be＋職業名"という決まった表現を使う。\n\n【ポイント1】"want to be＋職業"の形を確認する\nwant to be＋職業名＝「〜になりたい」。\n\n【ポイント2】"a doctor"の冠詞を確認する\n職業名の前には、通常"a/an"をつける。doctorは子音で始まるのでa。\n\n【ポイント3】質問と答えの対応を確認する\n"What do you want to be in the future?"（将来何になりたいですか）に対して、"I want to be〜"の形で答える。\n\n【答え】\nI want to be a doctor.\n\n【確かめ】\n"want to be"の後ろに"a doctor"という職業名が続いていることを確認する。\n\n【よくあるまちがい】\n冠詞のaを忘れて"I want to be doctor."としてしまうミス。単数の職業名の前には必ずa/anをつける。\n\n【ここが絶対】\n"want to be＋a/an＋職業名"＝「〜になりたい」という将来の希望を表す表現をセットで覚える。',
   },
 ];

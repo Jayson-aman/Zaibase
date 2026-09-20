@@ -325,31 +325,8 @@ Q3: What two characteristics is Tokyo known for, according to the passage? （�
 Q2: It circles (goes around) the central districts of Tokyo. / It is part of Tokyo's excellent public transportation system.
 Q3: 非常に安全であることと、清潔であること。`,
     hint: `Q1は "with over 13 million people" の部分。Q2は "which circles the central districts" という関係節に注目。Q3は "known for being ..." の直後を探す。`,
-    explanation: `Q1:
-  "with over 13 million people living in the city center alone"
-  → 東京の中心部だけで1300万人以上が居住している
-  答え：Over 13 million people.（1300万人以上）
-
-Q2:
-  "the famous Yamanote Line, which circles the central districts"
-  → 山手線は東京の中心地区を環状に走る（一周する）路線として有名
-  答え：It circles the central districts of Tokyo.
-  （東京の中心地区を一周／環状に走っている）
-
-  補足：Yamanote Line = 山手線
-  全長34.5km、29駅、東京の主要駅（東京・新宿・渋谷・池袋・上野等）を結ぶ環状路線
-
-Q3:
-  "Tokyo is known for being remarkably safe and clean."
-  → 東京は「非常に安全であること」と「清潔であること」で知られている
-  日本語：非常に安全であることと、清潔であること。
-
-  おまけ：本文ではさらに電車の時間の正確さ（punctuality）にも言及
-  "rarely more than a minute late" = ほとんど1分以上遅れない
-
-語彙メモ：
-  populated（人口が多い）、remarkably（著しく・非常に）、
-  marvel（驚く・感嘆する）、punctuality（時間の正確さ・定時性）`,
+    explanation:
+      '【何を聞かれているか】\n東京についての英文を読んで、3つの問いに答える読解問題。\n\n【なぜ数字や特定の語句に注目するのか】\n説明文の読解では、"with over 13 million people"のような数字や、"known for being〜"のような「何で知られているか」を示す表現に、設問の答えが集約されていることが多い。\n\n【ポイント1】Q1：人口の数字を確認する\n"with over 13 million people living in the city center alone"（中心部だけで1300万人以上）から答えがわかる。\n\n【ポイント2】Q2：山手線の説明を確認する\n"the famous Yamanote Line, which circles the central districts"（中心地区を一周する山手線）という関係代名詞節が、山手線が有名な理由を説明している。\n\n【ポイント3】Q3：2つの特徴を確認する\n"Tokyo is known for being remarkably safe and clean."（東京は非常に安全で清潔なことで知られている）から、2つの特徴（安全・清潔）がわかる。\n\n【答え】\nQ1: Over 13 million people.\nQ2: It circles (goes around) the central districts of Tokyo. / It is part of Tokyo\'s excellent public transportation system.\nQ3: 非常に安全であることと、清潔であること。\n\n【確かめ】\nそれぞれの答えが、本文中の該当する表現（over 13 million、which circles the central districts、known for being remarkably safe and clean）と対応しているか確認する。\n\n【よくあるまちがい】\nQ3で「安全」だけ、あるいは「清潔」だけの1つしか答えず、問題が"two characteristics"（2つの特徴）を求めていることを見落としてしまうミス。\n\n【ここが絶対】\n説明文の読解は、数字を含む表現と「何で知られているか」を示す表現（known for〜）に注目して、設問の答えを本文中から正確に見つける。',
     difficulty: 'advanced',
     course: 'tokyo-meidai',
     examType: 'chugaku',
@@ -632,30 +609,8 @@ export const aoyamaEigo: Question[] = [
 (2) Mt. Fuji is higher than any other mountain in Japan.
 (3) spoke → spoken`,
     hint: `(1)受動態：be動詞 + 過去分詞 + by …。(2)「他のどんな〜よりも〜だ」= 比較級 + than any other + 単数名詞。(3) is の後は過去分詞が必要。spoke は過去形。`,
-    explanation: `(1) 受動態の書き換え：
-  能動態：Many people love this singer.
-  　　　　（多くの人がこの歌手を愛している）
-  受動態の手順：
-  ① 目的語（this singer）を主語にする
-  ② 動詞を「be動詞 + 過去分詞」に変える：love → is loved
-  ③ 元の主語を「by + 〜」にする：by many people
-  ✓ "This singer is loved by many people."
-
-(2) 最上級→比較級への書き換え：
-  「日本でいちばん高い山 = 富士山」を比較級で表現する。
-  「〜は他のどんな…よりも〜だ」= 比較級 + than any other + 単数名詞
-  high の比較級 = higher
-  ✓ "Mt. Fuji is higher than any other mountain in Japan."
-  （富士山は日本の他のどんな山よりも高い）
-
-(3) 誤り訂正：
-  is（be動詞）の後には「過去分詞」が来る必要がある。
-  spoke = speak の過去形（動詞の活用形）→ 受動態には使えない ✗
-  spoken = speak の過去分詞 → 受動態に使える ○
-  ✓ "English is spoken in many countries."
-  （英語は多くの国で話されている）
-
-  speak の変化：speak – spoke – spoken（不規則変化）`,
+    explanation:
+      '【何を聞かれているか】\n受動態への書き換え、比較級を使った書き換え、誤り訂正という3種類の文法問題。\n\n【なぜ(3)でspokeではなくspokenを使うのか】\n受動態は"be動詞＋過去分詞"という形を取るため、is（be動詞）の後ろには過去形のspokeではなく、過去分詞のspokenを使う必要がある。\n\n【ポイント1】(1)受動態の書き換え手順を確認する\n①目的語（this singer）を主語にする→②動詞をbe動詞＋過去分詞にする（love→is loved）→③元の主語をby〜にする。\n\n【ポイント2】(2)最上級を比較級で言い換える公式を確認する\n「〜は他のどんな…よりも〜だ」＝比較級＋than any other＋単数名詞。"No other mountain is as high as Mt. Fuji"（富士山ほど高い山は他にない）と同じ意味。\n\n【ポイント3】(3)受動態に使う動詞の形を確認する\nspeak（原形）→spoke（過去形）→spoken（過去分詞）という不規則変化。受動態には過去分詞を使う。\n\n【答え】\n(1) This singer is loved by many people.\n(2) Mt. Fuji is higher than any other mountain in Japan.\n(3) spoke → spoken\n\n【確かめ】\n(1)は"is loved by"という受動態の形、(2)は"higher than any other"という比較級の形、(3)は"is spoken"という正しい受動態の形になっているか確認する。\n\n【よくあるまちがい】\n(3)でspoke（過去形）とspoken（過去分詞）を混同してしまうミス。受動態のbe動詞の後ろには必ず過去分詞を使う。\n\n【ここが絶対】\n受動態は「be動詞＋過去分詞」、最上級の比較級書き換えは「比較級＋than any other＋単数名詞」という公式をセットで覚える。',
     difficulty: 'advanced',
     course: 'tokyo-aoyama',
     examType: 'chugaku',
@@ -673,30 +628,8 @@ export const aoyamaEigo: Question[] = [
 (3) The main causes of deforestation mentioned are farming, logging, and mining.`,
     answer: `(1) T　(2) F　(3) T`,
     hint: `(1) "about 60%" と "more than half（50%超）"を比べる。(2) "20%" と "half（50%）"は違う。(3) 本文に列挙されている3つの原因を確認。`,
-    explanation: `(1) "covers about 60% of Brazil"
-  → アマゾンはブラジルの約60%を覆っている
-  "more than half" = 50%超
-  60% > 50% → True ✓
-
-(2) "produces 20% of the world's oxygen"
-  → 世界の酸素の20%を生産している
-  "half" = 50%
-  20% ≠ 50% → False ✗
-  よって (2) は F
-
-(3) "deforestation has destroyed ... due to farming, logging, and mining"
-  → 農業（farming）、伐採（logging）、採掘（mining）の3つが原因として明記されている
-  → True ✓
-
-語彙メモ：
-  rainforest（熱帯雨林）
-  species（種・生物の種類）
-  oxygen（酸素）
-  vital role（重要な役割）
-  regulate（調節する・規制する）
-  deforestation（森林破壊・森林伐採）
-  logging（伐採・木材採取）
-  mining（採掘・鉱業）`,
+    explanation:
+      '【何を聞かれているか】\nアマゾンの熱帯雨林についての英文を読んで、3つの文がTrue（正しい）かFalse（誤り）かを答える問題。\n\n【なぜ数字の比較が正誤の決め手になるのか】\nこの問題では、本文の具体的な数字（60%、20%）と、選択肢の表現（more than half＝50%超、half＝50%）を正確に比較することが正誤判定の鍵になる。\n\n【ポイント1】(1)を確認する\n"covers about 60% of Brazil"（ブラジルの約60%）は、"more than half"（50%超）に当てはまるのでTrue。\n\n【ポイント2】(2)を確認する\n"produces 20% of the world\'s oxygen"（世界の酸素の20%）は、"half"（50%）とは異なるのでFalse。\n\n【ポイント3】(3)を確認する\n"due to farming, logging, and mining"（農業・伐採・採掘が原因）と、選択肢の3つの原因がそのまま一致するのでTrue。\n\n【答え】\n(1) T　(2) F　(3) T\n\n【確かめ】\n60%と50%、20%と50%をそれぞれ数字で比較し、本文の内容と選択肢の表現が一致するかどうかを確認する。\n\n【よくあるまちがい】\n"20%"という数字を見て、大まかに「多い」と判断して安易にTrueにしてしまうミス。"half"（50%）という具体的な基準と正確に比較する必要がある。\n\n【ここが絶対】\nT/F問題では、本文の数字と選択肢の数字表現（more than half、halfなど）を正確に比較して判定する。',
     difficulty: 'advanced',
     course: 'tokyo-aoyama',
     examType: 'chugaku',
@@ -1012,18 +945,8 @@ export const tokyoChuoEigo: Question[] = [
   "She is the teacher." / "The teacher teaches us math."`,
     answer: `問1. who（またはthat）　問2. which（またはthat）　問3. She is the teacher who (that) teaches us math.`,
     hint: `人を修飾するときはwho/that、物を修飾するときはwhich/thatを使う。関係代名詞節は先行詞の直後に置く。`,
-    explanation: `問1. "The boy who won the race is my friend."
-  先行詞が人（boy）→ who または that を使う。
-  正解：who（またはthat）
-
-問2. "I have a cat which has white fur."
-  先行詞が物・動物（cat）→ which または that を使う。
-  正解：which（またはthat）
-
-問3. 2文を1文にする：
-  "She is the teacher." ＋ "The teacher teaches us math."
-  共通部分「the teacher」を関係代名詞に置き換え：
-  → "She is the teacher who(that) teaches us math."`,
+    explanation:
+      '【何を聞かれているか】\n関係代名詞（who/which/that）を使った3つの文法問題。\n\n【なぜ先行詞によって関係代名詞を使い分けるのか】\n関係代名詞は、説明したい名詞（先行詞）が人か物・動物かによって、使う語（who/which）が決まっている。\n\n【ポイント1】問1：先行詞が人のときを確認する\n"The boy who won the race"（レースに勝った少年）のように、先行詞boy（人）にはwho（またはthat）を使う。\n\n【ポイント2】問2：先行詞が動物のときを確認する\n"a cat which has white fur"（白い毛を持つ猫）のように、先行詞cat（動物）にはwhich（またはthat）を使う。\n\n【ポイント3】問3：2文を1つにまとめる手順を確認する\n共通する語"the teacher"を関係代名詞whoに置き換え、"She is the teacher who teaches us math."とつなげる。\n\n【答え】\n問1. who（またはthat）　問2. which（またはthat）　問3. She is the teacher who (that) teaches us math.\n\n【確かめ】\nそれぞれの関係代名詞の後ろが、主語が欠けた文（動詞から始まる文）になっているか確認する。\n\n【よくあるまちがい】\n先行詞が動物（cat）のときにwhoを使ってしまうミス。whoは人が先行詞のときだけ使う。\n\n【ここが絶対】\n先行詞が人ならwho（またはthat）、物・動物ならwhich（またはthat）という使い分けをセットで覚える。',
     difficulty: 'advanced',
     course: 'tokyo-chuo',
     examType: 'chugaku',
@@ -1045,17 +968,8 @@ export const tokyoChuoEigo: Question[] = [
 問3. 下線部「build robots that help people」を日本語に訳しなさい。`,
     answer: `問1. He loves science.　問2. ウ　問3. 人々を助けるロボットを作ること`,
     hint: `まず英文全体の内容を把握する。問2は各選択肢を本文と照らし合わせる。問3の「that」は関係代名詞。`,
-    explanation: `問1. 第1文 "Kenji is a twelve-year-old boy who loves science."
-  → He loves science.
-
-問2. 選択肢の検証：
-  ア. "every weekend"（週末）→ every day ではない。×
-  イ. "dream is to become an engineer"（技術者）→ doctor ではない。×
-  ウ. "Kenji won first prize in a science competition"→ 本文と一致。○
-
-問3. "build robots that help people"：
-  build（作る）+ robots（ロボット）+ that help people（人々を助ける）
-  → 「人々を助けるロボットを作ること」`,
+    explanation:
+      '【何を聞かれているか】\nケンジについての英文を読んで、3つの問いに答える読解問題。\n\n【なぜ本文の各文を設問に対応させるのか】\nこの英文は「性格・好きなこと→毎週の行動→将来の夢→先生の評価→最近の実績」という流れで書かれており、設問もこの流れに沿って作られている。\n\n【ポイント1】問1：好きなことを確認する\n"Kenji is a twelve-year-old boy who loves science."（ケンジは理科が好きな12歳の少年だ）から答えがわかる。\n\n【ポイント2】問2：選択肢を本文と照合する\nア「毎日」ではなく"every weekend"（毎週末）、イ「医者」ではなく"engineer"（技術者）、ウ「科学コンテストで優勝」は本文と一致する。\n\n【ポイント3】問3：関係代名詞thatを含む部分を訳す\n"build robots that help people"＝「人々を助けるロボットを作ること」。thatはrobotsを説明する関係代名詞。\n\n【答え】\n問1. He loves science.　問2. ウ　問3. 人々を助けるロボットを作ること\n\n【確かめ】\n問2の選択肢が、本文の"every weekend"（イ ではなく毎日ではない）、"engineer"（医者ではない）、"won first prize"（優勝した）と正確に対応しているか確認する。\n\n【よくあるまちがい】\n問2で、本文に出てくる単語（library、science）だけを見て、内容を確認せずに選んでしまうミス。"every day"と"every weekend"のような細かい違いに注意する。\n\n【ここが絶対】\n説明文の読解は、選択肢の細かい表現（頻度・職業名など）を本文と1つずつ正確に照合する。',
     difficulty: 'advanced',
     course: 'tokyo-chuo',
     examType: 'chugaku',
@@ -1072,16 +986,8 @@ export const tokyoChuoEigo: Question[] = [
 問3. 【have / I / never / sushi / eaten】→「私はすし（寿司）を一度も食べたことがない。」`,
     answer: `問1. She is very beautiful.　問2. What do you want to be?　問3. I have never eaten sushi.`,
     hint: `問1はS+V+C（第2文型）。問2はWh疑問文（What＋do+S+V+to不定詞）。問3は現在完了の否定文（have+never+過去分詞）。`,
-    explanation: `問1. 語順：S（She）+ V（is）+ C（very beautiful）
-  → "She is very beautiful."
-
-問2. What疑問文の語順：
-  What + do + you + want + to + be?
-  → "What do you want to be?"
-
-問3. 現在完了の否定文：
-  S（I）+ have + never + V過去分詞（eaten）+ O（sushi）
-  → "I have never eaten sushi."`,
+    explanation:
+      '【何を聞かれているか】\n与えられた語句を並べ替えて、3つの英文を完成させる問題。\n\n【なぜ文型によって語順が決まるのか】\n英語は語順が意味を決める言語なので、S（主語）+V（動詞）+C（補語）やWh疑問文、現在完了の否定文といった、それぞれの文型に決まった語順がある。\n\n【ポイント1】問1：SVCの語順を確認する\nS（She）+V（is）+C（very beautiful）という第2文型の語順。\n\n【ポイント2】問2：Wh疑問文の語順を確認する\nWhat+do+主語+動詞+to不定詞、という疑問文の語順。"What do you want to be?"。\n\n【ポイント3】問3：現在完了の否定文の語順を確認する\n主語+have+never+過去分詞+目的語。"I have never eaten sushi."。\n\n【答え】\n問1. She is very beautiful.　問2. What do you want to be?　問3. I have never eaten sushi.\n\n【確かめ】\n問2の文末に？がついていること、問3のneverがhaveの直後、過去分詞eatenの前に置かれていることを確認する。\n\n【よくあるまちがい】\n問2で、疑問詞Whatを文頭に置くのを忘れ、平叙文の語順のまま並べてしまうミス。疑問詞は必ず文頭に置く。\n\n【ここが絶対】\n文型ごとの決まった語順（SVC・Wh疑問文・現在完了の否定文）をそれぞれセットで覚え、並べ替え問題では文の骨格から先に決める。',
     difficulty: 'advanced',
     course: 'tokyo-chuo',
     examType: 'chugaku',
@@ -1392,20 +1298,8 @@ A: "（　問3　） And you too."
   ①run → （　）　②write → （　）　③swim → （　）`,
     answer: `問1. ①studies ②watches ③has　問2. ①went ②made ③played　問3. ①running ②writing ③swimming`,
     hint: `三単現：子音+y→ies、ch/sh→es。過去形：不規則動詞は暗記。ing形：子音+母音+子音で終わる語は最後の子音を重ねる。`,
-    explanation: `問1. 三単現のs：
-  ①study → studies（子音+yで終わる → yをiに変えてes）
-  ②watch → watches（ch/sh/x/oで終わる → es）
-  ③have → has（不規則変化）
-
-問2. 過去形：
-  ①go → went（不規則）
-  ②make → made（不規則）
-  ③play → played（規則変化：ed）
-
-問3. ing形：
-  ①run → running（短母音+子音で終わる → 子音を重ねてing）
-  ②write → writing（eで終わる → eを除いてing）
-  ③swim → swimming（短母音+m で終わる → mを重ねてing）`,
+    explanation:
+      '【何を聞かれているか】\nstudy・watch・haveなどの動詞を、三単現のs・過去形・ing形にそれぞれ変える語形変化の問題。\n\n【なぜ語尾によって変化のしかたが変わるのか】\n動詞の語尾（子音+y、ch/sh、短母音+子音など）によって、三単現のsやing形の作り方に決まったルールがあるため。\n\n【ポイント1】三単現のsのルールを確認する\n子音字+yで終わる動詞はyをiに変えてes（study→studies）、ch/sh/x/oで終わる動詞はes（watch→watches）、haveは不規則にhas。\n\n【ポイント2】過去形のルールを確認する\ngo→went、make→madeは不規則変化、play→playedのように多くの動詞はedをつける規則変化。\n\n【ポイント3】ing形のルールを確認する\n「短母音+子音」で終わる動詞は子音を重ねてing（run→running、swim→swimming）、eで終わる動詞はeを取ってing（write→writing）。\n\n【答え】\n問1. ①studies ②watches ③has　問2. ①went ②made ③played　問3. ①running ②writing ③swimming\n\n【確かめ】\nそれぞれの変化がルール通りになっているか（study→studiesのyがiに変わっている、run→runningのnが重なっているなど）を確認する。\n\n【よくあるまちがい】\nstudyをそのままstudysとしてしまうミス。子音字+yで終わる動詞は、yをiに変えてからesをつける。\n\n【ここが絶対】\n動詞の語尾のパターン（子音+y、ch/sh、短母音+子音、eで終わる語）ごとに、変化のルールをセットで覚える。',
     difficulty: 'advanced',
     course: 'tokyo-hosei',
     examType: 'chugaku',
@@ -1650,25 +1544,8 @@ export const tokyoGakushiinEigo: Question[] = [
   「彼らはその公園でサッカーをした。」（文型も示すこと）`,
     answer: `問1. ①SV（+M）②SVOO ③SVC　問2. is（SVC）　問3. They played soccer in the park.（SVO）`,
     hint: `SV：主語＋動詞のみ。SVC：主語＝補語の関係（be動詞・感覚動詞）。SVO：目的語を取る。SVOOは目的語2つ。`,
-    explanation: `問1. 文型の識別：
-  ① "She runs fast."
-  S（She）+ V（runs）+ 様態副詞（fast）→ SV（副詞は文型に含めない）
-
-  ② "He gave me a present."
-  S（He）+ V（gave）+ O₁（me）+ O₂（a present）→ SVOO
-
-  ③ "The soup smells delicious."
-  S（The soup）+ V（smells）+ C（delicious）
-  soup = delicious の関係（感覚動詞）→ SVC
-
-問2. "This book （is） very interesting."
-  This book = interesting（主語と補語が等しい）→ SVC
-  be動詞 is が正解。
-
-問3. 日本語→英語：
-  「彼ら」S=They、「した」V=played、「サッカーを」O=soccer
-  「その公園で」= in the park（場所の副詞句・文型に含めない）
-  → "They played soccer in the park."（SVO）`,
+    explanation:
+      '【何を聞かれているか】\nSV・SVO・SVC・SVOOという英語の基本文型を見分け、文を作る問題。\n\n【なぜ文型によって動詞の後ろの要素が変わるのか】\n動詞の種類によって、後ろに何も続かない（SV）、目的語が1つ（SVO）、補語が続く（SVC）、目的語が2つ（SVOO）というように、文の骨組みが決まっている。\n\n【ポイント1】問1①・②・③の文型を確認する\n①"She runs fast."はS+V（fastは修飾語で文型に含めない）。②"He gave me a present."はgiveが目的語を2つ取るSVOO。③"The soup smells delicious."はsoup＝deliciousの関係が成り立つSVC。\n\n【ポイント2】問2のSVCを確認する\n"This book is very interesting."は、This book＝interestingという関係が成り立つのでSVC。be動詞isを入れる。\n\n【ポイント3】問3のSVOを確認する\n「彼らはその公園でサッカーをした」は、They（S）+played（V）+soccer（O）という第3文型（SVO）。in the parkは場所を表す修飾語で文型には含めない。\n\n【答え】\n問1. ①SV（+M）②SVOO ③SVC　問2. is（SVC）　問3. They played soccer in the park.（SVO）\n\n【確かめ】\nそれぞれの文で、主語と補語（または目的語）がイコールの関係になっているか（SVCの場合）、目的語がいくつあるか（SVOかSVOOか）を確認する。\n\n【よくあるまちがい】\n"fast"や"in the park"のような修飾語（副詞・前置詞句）を、文型を決める要素として数えてしまうミス。文型は主語・動詞・目的語・補語だけで判断する。\n\n【ここが絶対】\nSVC（主語＝補語）、SVOO（目的語が2つ）、SVO（目的語が1つ）という基本文型の見分け方をセットで覚える。修飾語は文型の判断から除く。',
     difficulty: 'advanced',
     course: 'tokyo-gakushuin',
     examType: 'chugaku',
@@ -1728,19 +1605,8 @@ export const tokyoGakushiinEigo: Question[] = [
 問3. 下線部「so that she could travel」を日本語に直しなさい。`,
     answer: `問1. 読書（特に冒険物語）と英語映画を見ること　問2. イ　問3. 彼女が（将来）旅行できるように`,
     hint: `問1は本文中の「She likes...」と「practices...」を探す。問2は各選択肢を本文と照合する。問3の「so that S can/could」は「〜できるように」という目的を表す。`,
-    explanation: `問1. Yumiの趣味：
-  "She likes reading books, especially adventure stories."（読書・冒険物語）
-  "she practices it（English）every day by watching English movies."（英語映画を見る）
-  → 読書（冒険物語）と英語映画を見ること
-
-問2. 選択肢の検証：
-  ア. "a girl who traveled"（女の子）→ boy ではない。×
-  イ. "decided to study hard so that she could travel"→ 本文と一致。○
-  ウ. "Her favorite subject is English"→ math ではない。×
-
-問3. "so that she could travel to many countries in the future"
-  so that S could V：「S が V できるように」（目的を表す接続詞構文）
-  → 「彼女が将来多くの国に旅行できるように」`,
+    explanation:
+      '【何を聞かれているか】\nユミという生徒についての英文を読んで、3つの問いに答える読解問題。\n\n【なぜ本文の複数の文をまとめて答えるのか】\n問1のように「趣味は何か」を聞かれたとき、答えが1つの文だけでなく複数の文に分かれて書かれていることがあるので、本文全体から関連する情報を集めてまとめる必要がある。\n\n【ポイント1】問1：趣味に関する2つの情報を確認する\n"She likes reading books, especially adventure stories."（読書、特に冒険物語）と"she practices it every day by watching English movies."（英語映画を見て練習する）の両方が趣味に関連する。\n\n【ポイント2】問2：選択肢を本文と照合する\nア「男の子についての本」ではなく"a girl who traveled"（女の子）、イ「将来旅行できるよう勉強することを決めた」は本文と一致、ウ「好きな科目は数学」ではなく"English"（英語）。\n\n【ポイント3】問3："so that S could V"の意味を確認する\n"so that she could travel"＝「彼女が（将来）旅行できるように」という目的を表す表現。\n\n【答え】\n問1. 読書（特に冒険物語）と英語映画を見ること　問2. イ　問3. 彼女が（将来）旅行できるように\n\n【確かめ】\n問1の答えが、本文中の2つの関連する文（reading books, especially adventure stories／practices it every day by watching English movies）の両方をカバーしているか確認する。\n\n【よくあるまちがい】\n問1で「読書」だけを答え、「英語映画を見ること」を見落としてしまうミス。本文に趣味に関する情報が複数の文に分かれている場合は、すべて集めて答える。\n\n【ここが絶対】\n"so that S could/can V"＝「Sが〜できるように」という目的を表す構文をセットで覚える。設問の答えが1つの文に収まらないこともあるので、本文全体から関連情報を集める。',
     difficulty: 'advanced',
     course: 'tokyo-gakushuin',
     examType: 'chugaku',
