@@ -2274,7 +2274,8 @@ export const eigoExtra: Question[] = [
     choices: ['My father has worked at this company for thirty years.', 'My father worked at this company for thirty years.', 'My father is working at this company for thirty years.', 'My father works at this company for thirty years.'],
     answer: 'My father has worked at this company for thirty years.',
     hint: '「ずっと働いている」という継続を表す現在完了を使います。',
-    explanation: '「ずっと～している」という継続は現在完了形（have/has + 過去分詞）で表します。期間を表す for thirty years と共に使います。My father has worked ... for thirty years.（継続の現在完了）が正解。',
+    explanation:
+      '【何を聞かれているか】\n「私の父は30年間この会社で働いています。」という日本語を英語にする問題。\n\n【なぜ現在完了形を使うのか】\n「（過去から今まで）ずっと〜している」という継続を表すときは、現在完了形（have/has＋過去分詞）を使う。\n\n【ポイント1】現在完了（継続）の公式を確認する\n主語＋have/has＋過去分詞〜。父（He）は三人称単数なのでhasを使う。\n\n【ポイント2】"for thirty years"の意味を確認する\n"for＋期間"は「〜の間」という継続の期間を表し、現在完了とセットで使われる典型的な語句。\n\n【ポイント3】他の選択肢との違いを確認する\n過去形（worked）は「今はもう働いていない」印象を与え、現在進行形（is working）やただの現在形（works）は「30年間ずっと」という継続の意味を表せない。\n\n【答え】\nMy father has worked at this company for thirty years.\n\n【確かめ】\n"has worked"（現在完了）と"for thirty years"（期間）が組み合わさって、過去から現在まで続いている状態を表していることを確認する。\n\n【よくあるまちがい】\n"for thirty years"という期間を表す語句があるのに、単純な現在形（works）や過去形（worked）を選んでしまうミス。継続を表す現在完了とセットで使われる語句を覚えておく。\n\n【ここが絶対】\n"have/has＋過去分詞＋for＋期間"＝「（今まで）ずっと〜している」という現在完了（継続）の形をセットで覚える。',
     examFrequency: 'high',
   },
   {
@@ -2300,7 +2301,8 @@ export const eigoExtra: Question[] = [
     choices: ['what', 'that', 'if', 'whether'],
     answer: 'what',
     hint: '「次に何をすべきか」という疑問詞 + to不定詞の形です。',
-    explanation: '疑問詞 + to + 動詞原形（what to do = 何をすべきか）の形です。She told me what to do next. = 彼女は次に何をすべきか私に教えてくれた。',
+    explanation:
+      '【何を聞かれているか】\n"She told me (　) to do next."の空欄に入る、正しい疑問詞を選ぶ問題。\n\n【なぜwhatを使うのか】\n「次に何をすべきか」という意味を表すには、疑問詞whatとto不定詞を組み合わせた"what to do"（何をすべきか）という形を使う。\n\n【ポイント1】"疑問詞＋to不定詞"の形を確認する\nwhat to do（何をすべきか）、where to go（どこへ行くべきか）、how to make（どう作るべきか）のように、疑問詞の後ろにto不定詞を続けると「〜すべきか」という意味の名詞のかたまりになる。\n\n【ポイント2】文全体の意味を確認する\n"She told me what to do next."＝「彼女は次に何をすべきか私に教えてくれた」。\n\n【ポイント3】他の選択肢を消去する\nthat・if・whetherは、いずれも「何を」という意味を表す疑問詞ではなく、この文脈には合わない。\n\n【答え】\nwhat\n\n【確かめ】\n"what to do next"が「次に何をすべきか」という意味のかたまりになっているか確認する。\n\n【よくあるまちがい】\n「〜かどうか」という意味を持つifやwhetherと、「何を」という意味のwhatを混同してしまうミス。\n\n【ここが絶対】\n"疑問詞＋to不定詞"＝「〜すべきか」という表現をセットで覚える。what to do（何をすべきか）は特によく使われる形。',
     examFrequency: 'high',
   },
   {
@@ -2313,7 +2315,8 @@ export const eigoExtra: Question[] = [
     choices: ['チームワークを学べないこと', '練習が多すぎてストレスを感じる生徒がいること', '放課後の時間が増えること', '時間管理が難しくなること'],
     answer: '練習が多すぎてストレスを感じる生徒がいること',
     hint: 'However（しかしながら）の後に否定的な内容があります。',
-    explanation: 'However, some students feel stressed because of too much practice. （しかし、練習が多すぎてストレスを感じる生徒もいる）という記述が否定的な側面です。',
+    explanation:
+      '【何を聞かれているか】\n日本のクラブ活動についての英文を読んで、クラブ活動の否定的な側面を答える問題。\n\n【なぜHoweverの後ろに注目するのか】\nHoweverは「しかしながら」という逆接を表す語で、その直前がプラスの内容なら、直後にはマイナスの内容が続くという文章の構成のパターンがある。\n\n【ポイント1】文章の構成を確認する\n「クラブ活動はチームワークや時間管理を学べる（プラス）」→"However"（しかし）→「練習が多すぎてストレスを感じる生徒もいる（マイナス）」という流れ。\n\n【ポイント2】該当する文を確認する\n"However, some students feel stressed because of too much practice."（しかし、練習が多すぎてストレスを感じる生徒もいる）。\n\n【ポイント3】他の選択肢を消去する\n「チームワークを学べないこと」「時間管理が難しくなること」は本文と逆の内容で、「放課後の時間が増えること」は否定的な側面として述べられていない。\n\n【答え】\n練習が多すぎてストレスを感じる生徒がいること\n\n【確かめ】\n選んだ選択肢が"stressed because of too much practice"の内容と一致しているか確認する。\n\n【よくあるまちがい】\n本文の良い面（チームワーク、時間管理）を、そのまま否定的な側面だと勘違いしてしまうミス。Howeverの前後で内容が逆になることを意識する。\n\n【ここが絶対】\nHoweverの後ろには、それまでとは逆の内容（多くの場合、否定的な側面や問題点）が続くという文章構成のパターンを覚えておく。',
     examFrequency: 'high',
   },
   {
@@ -2326,7 +2329,8 @@ export const eigoExtra: Question[] = [
     choices: ['学校まで歩いて30分かかる。', '学校まで30分で歩ける。', '学校まで歩くと30分節約できる。', '30分後に学校まで歩いて行く。'],
     answer: '学校まで歩いて30分かかる。',
     hint: 'It takes + 時間 + to + 動詞原形 で「～するのに（時間が）かかる」という意味です。',
-    explanation: 'It takes + 時間 + to + 動詞原形 は「～するのに（時間が）かかる」という表現です。It takes 30 minutes to walk to school. = 学校まで歩いて30分かかる。',
+    explanation:
+      '【何を聞かれているか】\n"It takes 30 minutes to walk to school."の意味を答える問題。\n\n【なぜ「かかる」という意味になるのか】\n"It takes＋時間＋to＋動詞の原形"は、「〜するのに（時間が）かかる」という所要時間を表す決まった構文。\n\n【ポイント1】"It takes＋時間＋to不定詞"の形を確認する\nItは形式的な主語で、実際の内容は"to walk to school"（学校まで歩くこと）。\n\n【ポイント2】文全体の意味を確認する\n"It takes 30 minutes to walk to school."＝「学校まで歩くと30分かかる」。\n\n【ポイント3】他の選択肢との違いを確認する\n「30分で歩ける」「30分節約できる」「30分後に行く」はいずれも所要時間を表す"It takes〜"の意味とは異なる。\n\n【答え】\n学校まで歩いて30分かかる。\n\n【確かめ】\n"It takes 30 minutes"が「30分かかる」という所要時間を表し、"to walk to school"がその内容（学校まで歩くこと）を表していることを確認する。\n\n【よくあるまちがい】\n"It takes〜to…"を「〜すれば…できる」のような別の意味に訳してしまうミス。この構文は所要時間だけを表す。\n\n【ここが絶対】\n"It takes＋時間＋to＋動詞の原形"＝「〜するのに（時間が）かかる」という所要時間の決まった構文をセットで覚える。',
     examFrequency: 'high',
   },
   {
@@ -2381,7 +2385,8 @@ export const eigoExtra: Question[] = [
     choices: ['英語の母語話者の数が増加している', '英語を第二言語として話す人が母語話者より多くなっている', '英語は世界で最も難しい言語だ', '英語を学ぶ人が減っている'],
     answer: '英語を第二言語として話す人が母語話者より多くなっている',
     hint: 'there are more non-native speakers than native speakers という比較に注目。',
-    explanation: 'there are now more non-native speakers of English than native speakers（今や母語話者より非母語話者の方が多い）という記述から、英語を第二言語として話す人が母語話者を上回っていることがわかります。',
+    explanation:
+      '【何を聞かれているか】\n英語を話す人の数についての英文を読んで、この文章が示している内容を答える問題。\n\n【なぜ比較の表現に注目するのか】\n"there are more A than B"（AはBより多い）という比較の表現が、文章の伝えたい内容を直接示している。\n\n【ポイント1】該当する文を確認する\n"there are now more non-native speakers of English than native speakers in the world"（今や世界には母語話者より非母語話者の方が多い）。\n\n【ポイント2】non-native speakerとnative speakerの意味を確認する\nnon-native speaker＝母語としない話者（第二言語として話す人）、native speaker＝母語話者。\n\n【ポイント3】他の選択肢を消去する\n「母語話者が増加」「最も難しい言語」「学ぶ人が減っている」は、いずれも本文に書かれていない、または本文と逆の内容。\n\n【答え】\n英語を第二言語として話す人が母語話者より多くなっている\n\n【確かめ】\n選んだ選択肢が"more non-native speakers...than native speakers"という比較の内容と一致しているか確認する。\n\n【よくあるまちがい】\nnon-native speaker（第二言語として話す人）とnative speaker（母語話者）を取り違えてしまうミス。どちらが多いと書かれているかを正確に読み取る。\n\n【ここが絶対】\n"there are more A than B"（AはBより多い）という比較表現に注目し、AとBを取り違えずに読む。',
     examFrequency: 'high',
   },
   {
@@ -2407,7 +2412,8 @@ export const eigoExtra: Question[] = [
     choices: ['When I was a child, I used to play soccer every weekend.', 'When I was a child, I would play soccer every weekend.', 'When I was a child, I played soccer every weekend.', '上記のすべて正しい'],
     answer: '上記のすべて正しい',
     hint: '過去の習慣は used to、would、または単純過去形でも表せます。',
-    explanation: '過去の習慣は used to do（習慣・状態）、would do（習慣的動作）、または過去形でも表せます。この問題では3つとも正しい表現です。ただし used to は現在はしていないという含意があります。',
+    explanation:
+      '【何を聞かれているか】\n「私が子供のとき、毎週末サッカーをしたものです。」という日本語を英語にする問題（3つの選択肢すべてが正しいかを判断する）。\n\n【なぜ3つとも正しいのか】\n過去の習慣（「〜したものだ」）を表す方法は1つではなく、used to do・would do・単純な過去形の3通りがあり、いずれもこの文脈で使うことができる。\n\n【ポイント1】used to doの特徴を確認する\n"used to play"は、過去の習慣や状態を表し、「今はもうしていない」という含みを持つ。\n\n【ポイント2】would doの特徴を確認する\n"would play"は、過去の習慣的な動作を表す（状態には使わない）。\n\n【ポイント3】単純過去形の特徴を確認する\n"played"だけでも、"every weekend"（毎週末）という頻度を表す語句とあわせて過去の習慣を表せる。\n\n【答え】\n上記のすべて正しい\n\n【確かめ】\n"used to play"・"would play"・"played"の3つがそれぞれ、過去の習慣を表す文として成り立っていることを確認する。\n\n【よくあるまちがい】\nused toとwouldの違い（used toは状態にも使えるが、wouldは動作にしか使えない）を知らずに、どちらか一方だけが正解だと決めつけてしまうミス。\n\n【ここが絶対】\n過去の習慣は、used to do（習慣・状態、今はしていない含み）、would do（習慣的動作）、単純過去形の3通りで表せることをセットで覚える。',
     examFrequency: 'medium',
   },
   {
@@ -2420,7 +2426,8 @@ export const eigoExtra: Question[] = [
     choices: ['start', 'started', 'been started', 'been starting'],
     answer: 'started',
     hint: 'had + 過去分詞 が過去完了形です。',
-    explanation: 'By the time ... （...するまでに）という表現では、より前の出来事を過去完了形（had + 過去分詞）で表します。had already started = すでに始まっていた。',
+    explanation:
+      '【何を聞かれているか】\n"By the time she arrived, the meeting had already (　)."の空欄に入る、正しい動詞の形を選ぶ問題。\n\n【なぜ過去完了形を使うのか】\n"By the time〜"（〜するまでに）という表現では、2つの過去の出来事のうち、より先に起きた方を過去完了形（had＋過去分詞）で表すという決まりがある。\n\n【ポイント1】過去完了形の公式を確認する\nhad＋過去分詞。ここでは"had already started"（すでに始まっていた）。\n\n【ポイント2】2つの出来事の前後関係を確認する\n「彼女が到着した（過去形arrived）」より前に「会議が始まっていた（過去完了had started）」という、時間の前後関係を表している。\n\n【ポイント3】他の選択肢を消去する\n"start"（原形）はhadの後ろに続けられない。"been started"は受動態でmeetingを主語にした「始められた」という意味になり不自然。"been starting"は受動態の進行形で使わない形。\n\n【答え】\nstarted\n\n【確かめ】\n"had already started"が「（彼女が到着する前に）すでに始まっていた」という、過去のさらに前の出来事を表していることを確認する。\n\n【よくあるまちがい】\n"By the time〜"の文で、単純な過去形（started単独ではなくhad started全体を使わない）にしてしまうミス。2つの過去の出来事の前後関係を表すには過去完了形が必要。\n\n【ここが絶対】\n"By the time＋過去形〜, 主語＋had＋過去分詞…"＝「〜するまでに、すでに…していた」という過去完了形の使い方をセットで覚える。',
     examFrequency: 'high',
   },
   {
@@ -2433,7 +2440,8 @@ export const eigoExtra: Question[] = [
     choices: ['気候変動は科学者だけの問題だ', '台風や洪水は増えていない', '気候変動に対処するには国際協力が必要だ', '温度上昇は人間の力では止められない'],
     answer: '気候変動に対処するには国際協力が必要だ',
     hint: '最後の文（To solve this problem ...）に筆者の主張があります。',
-    explanation: '最後の文 countries around the world need to work together（世界中の国々が協力する必要がある）が筆者の主張（提言）です。',
+    explanation:
+      '【何を聞かれているか】\n気候変動についての英文を読んで、筆者の主張として最も適切なものを答える問題。\n\n【なぜ最後の文に注目するのか】\n説明文では、筆者の主張（結論）が最後の文にまとめられることが多い。\n\n【ポイント1】該当する文を確認する\n"countries around the world need to work together"（世界中の国々が協力する必要がある）が、最後の文に書かれている主張。\n\n【ポイント2】本文全体の流れを確認する\n「気候変動は深刻な課題である」→「異常気象が増えている」→「解決には国際協力が必要」という流れ。\n\n【ポイント3】他の選択肢を消去する\n「科学者だけの問題」「台風や洪水は増えていない」「人間の力では止められない」はいずれも本文の内容と矛盾する。\n\n【答え】\n気候変動に対処するには国際協力が必要だ\n\n【確かめ】\n選んだ選択肢が、最後の文"need to work together"（協力する必要がある）の内容と一致しているか確認する。\n\n【よくあるまちがい】\n本文の途中に書かれている事実（異常気象が増えている）を、そのまま筆者の主張だと思い込んでしまうミス。事実（根拠）と主張（結論）を区別する。\n\n【ここが絶対】\n説明文の主張問題は、最後の文（多くの場合"need to〜"やshouldを含む文）に注目する。',
     examFrequency: 'high',
   },
   {
@@ -2446,7 +2454,8 @@ export const eigoExtra: Question[] = [
     choices: ['動詞の原形（see）', '動詞の -ing 形（seeing）', '過去分詞（seen）', '現在分詞（seeing）または原形どちらでも可'],
     answer: '動詞の -ing 形（seeing）',
     hint: 'look forward to の to は前置詞です。',
-    explanation: 'look forward to の to は不定詞の to ではなく前置詞の to です。前置詞の後には動名詞（-ing 形）が来ます。I\'m looking forward to seeing you. = また会えるのを楽しみにしています。',
+    explanation:
+      '【何を聞かれているか】\n"I\'m looking forward to seeing you again."の"to"の後に来る形を答える問題。\n\n【なぜ動名詞（-ing形）が続くのか】\n"look forward to"のtoは、to不定詞のtoではなく前置詞のtoであるため、後ろには不定詞（動詞の原形）ではなく、前置詞の後に置ける動名詞（-ing形）が続く。\n\n【ポイント1】look forward toのtoが前置詞であることを確認する\nlook forward toは「〜を楽しみに待つ」という意味の熟語で、このtoは前置詞。\n\n【ポイント2】前置詞の後の形を確認する\n前置詞の後ろには名詞、または名詞の働きをする動名詞（-ing形）が続く。動詞の原形は続けられない。\n\n【ポイント3】文全体の意味を確認する\n"I\'m looking forward to seeing you."＝「また会えるのを楽しみにしています」。\n\n【答え】\n動詞の -ing 形（seeing）\n\n【確かめ】\n"look forward to"の後ろが"seeing"という-ing形になっていて、"see"（原形）になっていないことを確認する。\n\n【よくあるまちがい】\nlook forward toのtoを不定詞のtoだと勘違いして、動詞の原形（see）を続けてしまうミス。このtoは前置詞なので、後ろは動名詞にする。\n\n【ここが絶対】\nlook forward toのtoは前置詞。前置詞の後ろには動名詞（-ing形）が続くというルールとセットで覚える。',
     examFrequency: 'very-high',
     pitfall: 'look forward to の to を不定詞と混同して動詞の原形を置くのは誤り。',
   },
@@ -2456,11 +2465,13 @@ export const eigoExtra: Question[] = [
     examType: 'chugaku',
     course: 'general',
     difficulty: 'advanced',
-    question: '次の語を並べ替えて正しい英文を作りなさい。（was / the oldest / Japan / temple / built / in / this）',
+    question:
+      '次の語を並べ替えて正しい英文を作りなさい。（is / the oldest / Japan / temple / built / in / this）',
     choices: ['This is the oldest temple built in Japan.', 'This was the oldest built temple in Japan.', 'This is the temple oldest built in Japan.', 'This was built the oldest temple in Japan.'],
     answer: 'This is the oldest temple built in Japan.',
     hint: '過去分詞 built が temple を後置修飾しています。',
-    explanation: 'built in Japan（日本に建てられた）は過去分詞の形容詞的用法で temple を後ろから修飾しています。This is the oldest temple built in Japan. = これは日本に建てられた最も古い寺院です。',
+    explanation:
+      '【何を聞かれているか】\n語句を並べ替えて、過去分詞の形容詞的用法を使った正しい英文を作る問題。\n\n【なぜ過去分詞built in Japanがtempleを修飾するのか】\n「日本に建てられた」という受け身の意味を持つ内容が、名詞temple（寺）を説明したいとき、過去分詞built（建てられた）を使って名詞を後ろから修飾する。\n\n【ポイント1】過去分詞の形容詞的用法を確認する\n"built in Japan"（日本に建てられた）が、直前の名詞temple（寺）を後ろから説明している。\n\n【ポイント2】最上級の位置を確認する\n"the oldest"（最も古い）はtempleの前に置く形容詞（最上級）。\n\n【ポイント3】文を組み立てる\nThis（主語）＋is（動詞）＋the oldest temple（最上級＋名詞）＋built in Japan（過去分詞句による後置修飾）。\n\n【答え】\nThis is the oldest temple built in Japan.\n\n【確かめ】\n"built in Japan"がtempleを後ろから修飾する形になっていて、"the oldest"がtempleの前に置かれていることを確認する。\n\n【よくあるまちがい】\n"the oldest built temple"のように、過去分詞builtを名詞の前に置いてしまうミス。built in Japanは1つのかたまりとして、名詞の後ろに置く。\n\n【ここが絶対】\n過去分詞（1語、またはbuilt in Japanのような語句のかたまり）が名詞を修飾するときは、名詞の後ろに置く（形容詞的用法の後置修飾）。',
     examFrequency: 'high',
   },
   {
@@ -2499,7 +2510,8 @@ export const eigoExtra: Question[] = [
     choices: ['AIはすべての仕事を奪う', 'AIの発展を止めるべきだ', 'AIの時代に適応し新しいスキルを学び続けることが大切だ', 'AIは私たちの生活に何も影響を与えない'],
     answer: 'AIの時代に適応し新しいスキルを学び続けることが大切だ',
     hint: '最後の文（The key is ...）に筆者の最も重要なメッセージがあります。',
-    explanation: '最後の文 The key is to adapt and keep learning new skills.（重要なのは適応して新しいスキルを学び続けることだ）が筆者の最も伝えたいメッセージです。',
+    explanation:
+      '【何を聞かれているか】\nAI（人工知能）についての英文を読んで、この文章が強調していることを答える問題。\n\n【なぜ最後の文に注目するのか】\n説明文では、筆者が最も伝えたいメッセージが最後の文にまとめられることが多い。\n\n【ポイント1】該当する文を確認する\n"The key is to adapt and keep learning new skills."（重要なのは適応して新しいスキルを学び続けることだ）が最後の文。\n\n【ポイント2】本文全体の流れを確認する\n「AIが仕事を奪うと心配する人もいる」→「しかし専門家は新しい仕事が生まれると考えている」→「大切なのは適応し学び続けること」という流れ。\n\n【ポイント3】他の選択肢を消去する\n「AIはすべての仕事を奪う」「発展を止めるべきだ」「生活に影響を与えない」はいずれも本文の内容と矛盾する。\n\n【答え】\nAIの時代に適応し新しいスキルを学び続けることが大切だ\n\n【確かめ】\n選んだ選択肢が"The key is to adapt and keep learning new skills."の内容と一致しているか確認する。\n\n【よくあるまちがい】\n本文の途中にある「AIが仕事を奪うと心配する人もいる」という意見を、筆者自身の主張だと勘違いしてしまうミス。これは反対意見の紹介であり、筆者の結論は最後の文にある。\n\n【ここが絶対】\n説明文の主張問題は、途中の意見紹介と最後の結論を区別し、最後の文（The key is〜など）に注目する。',
     examFrequency: 'high',
   },
 ];

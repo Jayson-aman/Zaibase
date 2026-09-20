@@ -46,7 +46,7 @@ export const eigoExtra2: Question[] = [
     answer: 'fish',
     hint: '水の中に住む生き物です',
     explanation:
-      '【答え】fish\n\n【複数形に注意】ここが最も問われる。fish は単数も複数も同じ形である。\n・one fish（1ぴき）／ three fish（3びき）\n・fishes という形もあるが、これは魚の種類が複数あるときに使う特別な言い方である\n\n【単複同形の名詞】まとめて覚える。\n・fish（魚）・sheep（羊）・deer（しか）・Japanese（日本人）・Chinese（中国人）\n群れで数えるものや、国名から来た語に多い。\n\n【不規則な複数形】英語の複数形は s をつけるだけではない。\n・man → men、woman → women、child → children\n・foot → feet、tooth → teeth、mouse → mice\n・leaf → leaves、knife → knives（f・fe が ves に変わる）\n・city → cities（子音＋y は ies に変わる）\n・potato → potatoes、tomato → tomatoes（o で終わる語は es）\n規則どおりでないものを先に覚えるのが近道である。\n\n【食べ物としての fish】料理としての魚は数えられない名詞として扱われることがある。I ate fish for dinner.\n\n【例文】\n・I caught three fish. （魚を3びきつかまえた）\n・Fish live in water. （魚は水の中にすむ）',
+      '【何を聞かれているか】\n「魚」を表す英単語を答える問題。\n\n【なぜfishが正解なのか】\n「魚」はfish。単数も複数も同じ形になる、単複同形の名詞として知られている。\n\n【ポイント1】単複同形であることを確認する\nfishは単数も複数も同じ形（one fish、three fish）。fishesという形もあるが、これは魚の種類が複数あるときに使う特別な言い方。\n\n【ポイント2】同じグループの名詞を確認する\nsheep（羊）、deer（しか）、Japanese（日本人）、Chinese（中国人）なども、単数・複数が同じ形になる名詞。\n\n【ポイント3】不規則な複数形も確認する\nman→men、woman→women、child→children、foot→feet、leaf→leavesのように、sをつけない特別な複数形がある。\n\n【答え】\nfish\n\n【確かめ】\n"three fish"のように、複数でもsをつけずそのままの形で使われていることを確認する。\n\n【よくあるまちがい】\nfishの複数形を"fishs"のように、通常のsをつけた形にしてしまうミス。fishは単数・複数が同じ形。\n\n【ここが絶対】\nfish・sheep・deerのような単複同形の名詞と、man→men・child→childrenのような不規則な複数形を、それぞれグループとして覚える。',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -69,7 +69,8 @@ export const eigoExtra2: Question[] = [
     question: '「りんご」を英語で何と言いますか？',
     answer: 'apple',
     hint: '赤や緑の丸い果物です',
-    explanation: '【解説】\n「りんご」は英語で "apple" と言います。"an apple a day keeps the doctor away"（りんごを毎日食べると医者いらず）ということわざがあります。',
+    explanation:
+      '【何を聞かれているか】\n「りんご」を表す英単語を答える問題。\n\n【なぜappleが正解なのか】\n「りんご」はapple。赤や緑の丸い果物を表す基本的な英単語。\n\n【ポイント1】appleの意味を確認する\napple＝りんご。日常会話や果物に関する話題で頻出の語。\n\n【ポイント2】appleを使った表現を確認する\n"An apple a day keeps the doctor away."（りんごを毎日食べると医者いらず）ということわざがある。\n\n【ポイント3】数え方を確認する\nappleは数えられる名詞なので、an apple（1個）、two apples（2個）のように数える。\n\n【答え】\napple\n\n【確かめ】\nappleが果物の「りんご」を表す語であることを、ことわざや例文で確認する。\n\n【よくあるまちがい】\nappleの前にaをつけ忘れてしまうミス。appleは母音（a）で始まる語なので、単数のときはan appleとなる。\n\n【ここが絶対】\napple＝りんご。母音で始まる語の単数形にはanをつけることもあわせて覚える。',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -201,7 +202,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼は先生です」を英語にしなさい。',
     answer: 'He is a teacher.',
     hint: '主語が "He" のとき be動詞は "is" を使います',
-    explanation: '【解説】\n主語が "He"（彼）のとき、be動詞は "is" を使います。"He is a teacher." が正解です。短縮形は "He\'s a teacher." です。',
+    explanation:
+      '【何を聞かれているか】\n「彼は先生です」という日本語を英語にする問題。\n\n【なぜisを使うのか】\n主語がHe（彼、三人称単数）のとき、be動詞はisを使うという決まりがある。\n\n【ポイント1】主語とbe動詞の対応を確認する\nI am、You are、He/She/It is、という対応をセットで覚える。\n\n【ポイント2】職業名の冠詞を確認する\n"a teacher"のように、単数の職業名の前にはa/anをつける。\n\n【ポイント3】短縮形を確認する\n"He is"は"He\'s"と短縮できる。\n\n【答え】\nHe is a teacher.\n\n【確かめ】\n主語Heに対してisが使われていること、"a teacher"に冠詞aがついていることを確認する。\n\n【よくあるまちがい】\n"He is teacher."のように、冠詞aを忘れてしまうミス。単数の職業名には必ずa/anをつける。\n\n【ここが絶対】\n主語がHe/She/Itのときのbe動詞はis。職業名などの単数名詞の前にはa/anをつけることをセットで覚える。',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -284,7 +286,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼は野球選手ですか？」を英語にしなさい。',
     answer: 'Is he a baseball player?',
     hint: 'be動詞の疑問文は be動詞を主語の前に出します',
-    explanation: '【解説】\nbe動詞の疑問文は、be動詞を主語の前に移動させます。"He is a baseball player." → "Is he a baseball player?" となります。',
+    explanation:
+      '【何を聞かれているか】\n「彼は野球選手ですか？」という日本語を英語にする問題。\n\n【なぜbe動詞を主語の前に移動するのか】\nbe動詞を使った疑問文は、be動詞を主語の前に移動するだけで作れるという決まりがある。\n\n【ポイント1】be動詞の疑問文の作り方を確認する\n"He is a baseball player."（彼は野球選手です）のisとheを入れ替えて、"Is he a baseball player?"にする。\n\n【ポイント2】do/doesを使わないことを確認する\nbe動詞の疑問文にはdo/doesを使わない（一般動詞の疑問文とは異なる）。\n\n【ポイント3】答え方を確認する\n"Yes, he is."／"No, he isn\'t."のように、isを使って答える。\n\n【答え】\nIs he a baseball player?\n\n【確かめ】\nbe動詞isが文頭に来ていて、do/doesが使われていないことを確認する。\n\n【よくあるまちがい】\nbe動詞の疑問文にDoやDoesを使ってしまうミス（"Does he is a baseball player?"のような誤り）。be動詞の疑問文はbe動詞自体を移動するだけでよい。\n\n【ここが絶対】\nbe動詞の疑問文は、be動詞を主語の前に移動するだけ。do/doesは使わない。',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -296,7 +299,7 @@ export const eigoExtra2: Question[] = [
     answer: 'Are you Japanese?',
     hint: '"You" に対する疑問文では "Are" を先頭に置きます',
     explanation:
-      '【答え】Are you Japanese?\n\n【be動詞の疑問文の作り方】be動詞を主語の前に出すだけでよい。\n・You are Japanese.（ふつうの文）\n・Are you Japanese?（疑問文）\n語順を入れかえるだけで、do や does は使わない。ここが一般動詞の文とのいちばんのちがいである。\n\n【一般動詞との比較】\n・be動詞 … Are you a student?（be動詞を前へ）\n・一般動詞 … Do you play tennis?（do を前に置く）\n動詞が be動詞か一般動詞かで、疑問文の作り方がまったくちがう。まず、その文の動詞を確かめるのが手順である。\n\n【答え方】\n・Yes, I am. ／ No, I am not.\n質問が are you なら、答えは I am になる。you で聞かれたら I で答える、という対応に注意する。\n\n【Japanese の使い方】\n・形容詞として … I am Japanese.（日本人だ）\n・名詞として … a Japanese（日本人1人）、the Japanese（日本人全体）、Japanese（日本語）\n・複数形も Japanese（単複同形）。two Japanese\n\n【国と国民の言い方】\n・Japan と Japanese、China と Chinese、America と American、France と French、England と English\n\n【例文】Are you from Osaka? — Yes, I am.',
+      '【何を聞かれているか】\n「あなたは日本人ですか？」という日本語を英語にする問題。\n\n【なぜAreを先頭に置くのか】\nbe動詞を使った疑問文は、be動詞を主語の前に移動するだけで作れる。主語がyouのときのbe動詞はareなので、Areを文頭に置く。\n\n【ポイント1】be動詞の疑問文の作り方を確認する\n"You are Japanese."のareとyouを入れ替えて、"Are you Japanese?"にする。do/doesは使わない。\n\n【ポイント2】一般動詞の疑問文との違いを確認する\nbe動詞の疑問文はbe動詞を前に出すだけだが、一般動詞の疑問文は"Do you play tennis?"のようにdoを使う。動詞の種類を先に確認することが手順。\n\n【ポイント3】答え方とJapaneseの使い方を確認する\n質問がAre youなら、答えはYes, I am.（youで聞かれたらIで答える）。Japaneseは形容詞（日本人だ）としても名詞（日本人・日本語）としても使え、単数・複数が同じ形。\n\n【答え】\nAre you Japanese?\n\n【確かめ】\nbe動詞areが文頭に来ていて、do/doesが使われていないことを確認する。\n\n【よくあるまちがい】\n一般動詞の疑問文と同じようにDoを使ってしまうミス（"Do you Japanese?"のような誤り）。be動詞の文かどうかをまず確認する。\n\n【ここが絶対】\nbe動詞の疑問文はbe動詞を主語の前に移動するだけ。一般動詞の疑問文（Do/Does＋主語＋動詞の原形）とは作り方が異なることをセットで覚える。',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -307,7 +310,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は医者ではありません」を英語にしなさい。',
     answer: 'I am not a doctor.',
     hint: 'be動詞の否定文は be動詞の後ろに "not" を置きます',
-    explanation: '【解説】\nbe動詞の否定文は be動詞の後ろに "not" を置きます。"I am not a doctor." または "I\'m not a doctor." が正解です。',
+    explanation:
+      '【何を聞かれているか】\n「私は医者ではありません」という日本語を英語にする問題。\n\n【なぜbe動詞の後ろにnotを置くのか】\nbe動詞の否定文は、be動詞の後ろにnotを置くだけで作れるという決まりがある。\n\n【ポイント1】be動詞の否定文の作り方を確認する\n"I am a doctor."のamの後ろにnotを入れて、"I am not a doctor."にする。\n\n【ポイント2】do/doesを使わないことを確認する\nbe動詞の否定文にはdo/doesを使わない。\n\n【ポイント3】短縮形を確認する\n"I\'m not a doctor."のように短縮できる（"I am not"の短縮形は"I\'m not"）。\n\n【答え】\nI am not a doctor.\n\n【確かめ】\nbe動詞amの直後にnotが置かれていることを確認する。\n\n【よくあるまちがい】\nbe動詞の否定文にdo notを使ってしまうミス（"I do not am a doctor."のような誤り）。be動詞の否定文はbe動詞の後ろにnotを置くだけでよい。\n\n【ここが絶対】\nbe動詞の否定文は「be動詞＋not」。do/doesは使わないことをセットで覚える。',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -319,7 +323,7 @@ export const eigoExtra2: Question[] = [
     answer: 'She is not happy.',
     hint: '「幸せな」は "happy" です',
     explanation:
-      '【答え】She is not happy.\n\n【be動詞の否定文の作り方】be動詞の後ろに not を置くだけでよい。\n・She is happy.（ふつうの文）\n・She is not happy.（否定文）\n語順は変えず、not を入れるだけ。do や does は使わない。\n\n【短縮形】\n・is not は isn\'t\n・are not は aren\'t\n・am not には短縮形がない（I am not のまま、または I\'m not）\nam not だけ短縮形がないのは、試験で問われることがある。\n\n【一般動詞との比較】\n・be動詞 … She is not happy.（not を置くだけ）\n・一般動詞 … She does not play tennis.（do／does が必要）\nbe動詞の文には do を使わない。She does not be happy. は誤りである。\n\n【happy の反対】\n・happy（幸せな）の反対は sad（悲しい）、unhappy（不幸な）\n・un をつけて反対の意味にする語は多い。happy → unhappy、kind → unkind\n・ほかの打ち消し … impossible（不可能な）、incorrect（正しくない）、dislike（きらう）\n\n【例文】\n・She is not happy with the result.\n・I am not hungry now.',
+      '【何を聞かれているか】\n「彼女は幸せではありません」という日本語を英語にする問題。\n\n【なぜbe動詞の後ろにnotを置くのか】\nbe動詞の否定文は、語順を変えずにbe動詞の後ろにnotを入れるだけで作れる。\n\n【ポイント1】be動詞の否定文の作り方を確認する\n"She is happy."のisの後ろにnotを入れて、"She is not happy."にする。\n\n【ポイント2】短縮形を確認する\nis notはisn\'t、are notはaren\'tと短縮できるが、am notには短縮形がない（I am notまたはI\'mnotのまま）。\n\n【ポイント3】一般動詞の否定文との違いを確認する\nbe動詞の否定文はnotを入れるだけだが、一般動詞の否定文（She does not play tennis.）はdo/doesが必要。"She does not be happy."のようにbe動詞にdoesを使うのは誤り。\n\n【答え】\nShe is not happy.\n\n【確かめ】\nbe動詞isの直後にnotが置かれていて、語順自体は変わっていないことを確認する。\n\n【よくあるまちがい】\nbe動詞の文にdoesを使ってしまうミス（"She does not be happy."は誤り）。be動詞の否定文にはdo/doesを使わない。\n\n【ここが絶対】\nbe動詞の否定文は「be動詞＋not」。am notには短縮形がないことも覚えておく。',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -355,7 +359,7 @@ export const eigoExtra2: Question[] = [
     answer: 'Where are you from?',
     hint: '場所を聞くときは "Where" を使います',
     explanation:
-      '【答え】Where are you from?\n\n【文のしくみ】\n・もとの文 … You are from Japan.\n・be動詞を前に … Are you from Japan?\n・場所をたずねる where を先頭に … Where are you from?\n\n【from の意味】「〜から」。出身を表すときによく使う。\n・I am from Japan. … 日本の出身です\n・Where are you from? … どちらのご出身ですか\nbe from で「〜の出身である」という決まった言い方として覚える。\n\n【似た表現との使い分け】\n・Where are you from? … 出身地をたずねる\n・Where do you live? … 今住んでいる場所をたずねる\n・Where are you going? … 今どこへ行くところかをたずねる\nbe動詞か一般動詞かで、do がいるかどうかが変わる。\n\n【前置詞の使い分け】\n・from Japan（日本出身）\n・in Japan（日本に住んでいる）\n・to Japan（日本へ行く）\nfrom は出発点、to は到着点、in は中にいる状態。絵にすると覚えやすい。\n\n【初対面の会話】\n・Nice to meet you.（はじめまして）\n・Where are you from? — I am from Osaka.\n・What do you do?（お仕事は何ですか）',
+      '【何を聞かれているか】\n「あなたはどこ出身ですか？」という日本語を英語にする問題。\n\n【なぜWhereを使うのか】\n出身地という場所をたずねるときは、場所をたずねる疑問詞Whereを使う。\n\n【ポイント1】文を組み立てる手順を確認する\n①もとの文"You are from Japan."→②be動詞を前に出して疑問文に"Are you from Japan?"→③場所をたずねるwhereを先頭に置く"Where are you from?"。\n\n【ポイント2】"be from〜"の意味を確認する\n"be from〜"＝「〜の出身である」という決まった表現。fromは出発点（〜から）を表す。\n\n【ポイント3】似た表現との違いを確認する\n"Where do you live?"（今住んでいる場所）とは意味が異なる。be動詞か一般動詞かでdoが必要かどうかも変わる。\n\n【答え】\nWhere are you from?\n\n【確かめ】\nWhereの後ろがbe動詞の疑問文の語順（are you）になっていることを確認する。\n\n【よくあるまちがい】\n"Where you are from?"のように、be動詞areとyouの語順を入れ替え忘れてしまうミス。疑問詞を置いても、後ろは疑問文の語順にする。\n\n【ここが絶対】\n"Where are you from?"＝出身地をたずねる決まり文句としてセットで覚える。',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -439,7 +443,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は毎朝朝ごはんを食べます」を英語にしなさい。',
     answer: 'I eat breakfast every morning.',
     hint: '「朝ごはん」は "breakfast"、「毎朝」は "every morning" です',
-    explanation: '【解説】\n"breakfast"（朝食）、"every morning"（毎朝）を使います。"eat breakfast" の前には "a" や "the" をつけません。',
+    explanation:
+      '【何を聞かれているか】\n「私は毎朝朝ごはんを食べます」という日本語を英語にする問題。\n\n【なぜbreakfastに冠詞をつけないのか】\nbreakfast・lunch・dinnerのような食事名は、"have breakfast"や"eat breakfast"のように、通常a/anやtheをつけずに使うという決まりがある。\n\n【ポイント1】"eat breakfast"の形を確認する\n"eat breakfast"＝「朝ごはんを食べる」。breakfastの前に冠詞はつけない。\n\n【ポイント2】"every morning"の意味を確認する\n"every morning"＝「毎朝」。習慣を表す語句なので、現在形の文で使う。\n\n【ポイント3】主語と動詞の対応を確認する\n主語Iに対して、一般動詞は原形のeatをそのまま使う。\n\n【答え】\nI eat breakfast every morning.\n\n【確かめ】\n"breakfast"の前にa/theがついていないこと、"every morning"が文末に置かれていることを確認する。\n\n【よくあるまちがい】\n"eat a breakfast"のように、食事名に冠詞をつけてしまうミス。食事名は基本的に冠詞なしで使う。\n\n【ここが絶対】\n食事名（breakfast・lunch・dinner）は冠詞なしで使うという決まりをセットで覚える。',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -559,7 +564,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女は音楽を聞きますか？」を英語にしなさい。',
     answer: 'Does she listen to music?',
     hint: '三人称単数の疑問文は "Does" を使います',
-    explanation: '【解説】\n三人称単数（he/she/it）の一般動詞の疑問文は "Does" を使います。"Does she listen to music?" となり、動詞は原形に戻ります。',
+    explanation:
+      '【何を聞かれているか】\n「彼女は音楽を聞きますか？」という日本語を英語にする問題。\n\n【なぜDoesを使うのか】\n主語がshe（三人称単数）のとき、一般動詞の疑問文にはDoではなくDoesを使うという決まりがある。\n\n【ポイント1】三人称単数の疑問文の形を確認する\nDoes＋主語（he/she/it）＋動詞の原形〜?\n\n【ポイント2】動詞が原形に戻ることを確認する\nDoesがすでに三人称単数を表しているので、動詞listenは原形のまま使う（listensにしない）。\n\n【ポイント3】文を組み立てる\n"Does she listen to music?"＝「彼女は音楽を聞きますか」。\n\n【答え】\nDoes she listen to music?\n\n【確かめ】\nDoesの後ろの動詞が原形listenになっていて、listensのようにsがついていないことを確認する。\n\n【よくあるまちがい】\n"Does she listens to music?"のように、Doesと動詞の両方に三人称単数の印（s）をつけてしまうミス。Doesが三人称単数の役割を担うので、動詞は原形に戻す。\n\n【ここが絶対】\n三人称単数の疑問文はDoes＋主語＋動詞の原形。Doesがある文では動詞にsをつけないことをセットで覚える。',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -570,7 +576,8 @@ export const eigoExtra2: Question[] = [
     question: '「私はテニスをしません」を英語にしなさい。',
     answer: 'I do not play tennis.',
     hint: '一般動詞の否定文は "do not" を使います',
-    explanation: '【解説】\n一般動詞の否定文は "do not"（または "don\'t"）を動詞の前に置きます。"I do not play tennis." または "I don\'t play tennis." が正解です。',
+    explanation:
+      '【何を聞かれているか】\n「私はテニスをしません」という日本語を英語にする問題。\n\n【なぜdo notを使うのか】\n主語がI（一人称単数）のとき、一般動詞の否定文は"do not（don\'t）＋動詞の原形"を使うという決まりがある。\n\n【ポイント1】否定文の公式を確認する\n主語＋do not（don\'t）＋動詞の原形〜。\n\n【ポイント2】動詞が原形のままであることを確認する\n"play"はすでに原形なので、do notの後ろにそのまま置く。\n\n【ポイント3】短縮形を確認する\n"do not"は"don\'t"と短縮できる。\n\n【答え】\nI do not play tennis.\n\n【確かめ】\n"do not"（またはdon\'t）の後ろに動詞の原形playが続いていることを確認する。\n\n【よくあるまちがい】\n主語Iに対してdoesn\'tを使ってしまうミス。doesn\'tはhe/she/itのような三人称単数のときに使う。\n\n【ここが絶対】\n一般動詞の否定文は、主語に合わせてdon\'t（I/you/we/they）とdoesn\'t（he/she/it）を使い分ける。',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -594,7 +601,7 @@ export const eigoExtra2: Question[] = [
     answer: 'What subject do you like?',
     hint: '疑問詞 "What" を先頭に置いた疑問文です',
     explanation:
-      '【答え】What subject do you like?\n\n【語順のしくみ】疑問詞が名詞とセットになる形である。\n①ふつうの文 … You like English.\n②疑問文にする … Do you like English?\n③たずねたい部分を What subject にして先頭へ … What subject do you like?\n疑問詞（＋名詞）→ do／does → 主語 → 動詞、という順になる。\n\n【疑問詞と名詞が組む形】\n・What subject（何の科目）・What sport（何のスポーツ）・What color（何色）・What time（何時）\n・Which book（どちらの本）・Whose bag（だれのかばん）\nwhat は選ぶ範囲が決まっていないとき、which は選ぶ範囲が決まっているときに使う。\n・What sport do you like?（どんなスポーツでも）\n・Which do you like, tea or coffee?（2つの中から）\n\n【答え方】疑問詞のある疑問文には Yes / No で答えない。\n・What subject do you like? — I like science.\n\n【教科の語】math（数学）、science（理科）、social studies（社会）、Japanese（国語）、English（英語）、music（音楽）、P.E.（体育）、art（美術）。\n\n【例文】What subject do you like the best? — I like English the best.',
+      '【何を聞かれているか】\n「あなたは何の科目が好きですか？」という日本語を英語にする問題。\n\n【なぜWhat subjectを先頭に置くのか】\nたずねたい部分（何の科目）を疑問詞What＋名詞subjectの形にして、文の先頭に置くという決まりがある。\n\n【ポイント1】文を組み立てる手順を確認する\n①もとの文"You like English."→②疑問文にする"Do you like English?"→③たずねたい部分をWhat subjectにして先頭へ移動"What subject do you like?"。\n\n【ポイント2】疑問詞と名詞が組む形を確認する\nWhat subject（何の科目）、What sport（何のスポーツ）、What color（何色）のように、Whatは名詞とセットで具体的にたずねる範囲を示せる。\n\n【ポイント3】答え方を確認する\n疑問詞のある疑問文にはYes/Noで答えず、"I like science."のように具体的な内容で答える。\n\n【答え】\nWhat subject do you like?\n\n【確かめ】\n"What subject"の後ろが、"do you like"という疑問文の語順になっているか確認する。\n\n【よくあるまちがい】\n疑問詞Whatだけを使い、subjectを省略してしまうミス。「何の科目」とたずねるときは、Whatの後ろに具体的な名詞（subject）を続ける必要がある。\n\n【ここが絶対】\n"What＋名詞＋do you＋動詞の原形〜?"＝「何の（名詞）を〜しますか」という、疑問詞と名詞を組み合わせた疑問文の形をセットで覚える。',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -618,7 +625,7 @@ export const eigoExtra2: Question[] = [
     answer: 'When do you get up?',
     hint: '「いつ」は "When" を使います',
     explanation:
-      '【答え】When do you get up?\n\n【疑問詞 when】時をたずねる。\n・When do you get up?（いつ起きますか）\n・答え … I get up at six.\n\n【when と what time のちがい】\n・when … 時を広くたずねる。日・曜日・時期でも答えられる\n・what time … 時刻をピンポイントでたずねる\nWhen is your birthday? には May 5 と答える。What time do you get up? には at six と答える。\n\n【when のもう一つの使い方】when は「〜のとき」という接続詞にもなる。\n・When I was a child, I lived in Kyoto.（子どものころ、京都に住んでいた）\n・I was reading when he came.（彼が来たとき、私は読書していた）\n疑問詞の when は文の先頭、接続詞の when は文のどちらにも置ける。文の前半に置くときは、区切りにコンマを打つ。\n\n【時を表す疑問詞の仲間】\n・When（いつ）・What time（何時）・How long（どのくらいの間）・How often（どのくらいの頻度で）・Since when（いつから）\n\n【例文】\n・When do you study? — I study after dinner.\n・When is the school festival?',
+      '【何を聞かれているか】\n「あなたはいつ起きますか？」という日本語を英語にする問題。\n\n【なぜWhenを使うのか】\n「いつ」という時をたずねるときは、疑問詞Whenを使う。\n\n【ポイント1】Whenを使った疑問文の形を確認する\nWhen＋do/does＋主語＋動詞の原形〜?\n\n【ポイント2】whenとwhat timeの違いを確認する\nwhenは時を広くたずねる（日・曜日・時期でも答えられる）が、what timeは時刻をピンポイントでたずねる。\n\n【ポイント3】答え方を確認する\n"When do you get up?"には"I get up at six."のように、具体的な時間で答える。\n\n【答え】\nWhen do you get up?\n\n【確かめ】\nWhenの後ろが、"do you get up"という疑問文の語順になっているか確認する。\n\n【よくあるまちがい】\nwhenとwhat timeを同じ意味だと思い込んでしまうミス。whenは幅広く時をたずね、what timeは時刻をピンポイントでたずねる。\n\n【ここが絶対】\nWhen（いつ、広く時をたずねる）とWhat time（何時、時刻をピンポイントでたずねる）の使い分けをセットで覚える。',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
