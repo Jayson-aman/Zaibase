@@ -17,7 +17,8 @@ export const chugaku2026Eigo2: Question[] = [
 ③ (　) they live in Tokyo?`,
     answer: `① Do　② Does　③ Do`,
     hint: `主語が3人称単数(she/he/it)のときはdoes、それ以外はdoを使う。`,
-    explanation: `【出題意図】一般動詞の疑問文でdo/doesを使い分ける基本ルールを問う。【解説】疑問文は「Do/Does+主語+動詞の原形?」の形。主語が3人称単数(she/he/it)のときはDoes、I/you/we/theyのときはDoを使う。【注意点】Doesを使うとき、後ろの動詞は原形に戻す(plays→play)。【関連知識】否定文も同じルールでdon't/doesn'tを使い分ける。`,
+    explanation:
+      '【何を聞かれているか】\n一般動詞の疑問文に、正しいdo/doesを入れる問題。\n\n【なぜdoとdoesを使い分けるのか】\n主語が三人称単数（she/he/it）のときはDoes、それ以外（I/you/we/theyなど）のときはDoを使うという決まりがある。\n\n【ポイント1】①主語youを確認する\nDoを使う。"Do you like dogs?"。\n\n【ポイント2】②主語sheを確認する\n三人称単数なのでDoesを使う。"Does she play tennis?"。\n\n【ポイント3】③主語theyを確認する\nDoを使う。"Do they live in Tokyo?"。\n\n【答え】\n① Do　② Does　③ Do\n\n【確かめ】\n②で"Does she play"のように、動詞が原形（三単現のsが取れた形）になっているか確認する。\n\n【よくあるまちがい】\n"Does she plays tennis?"のように、Doesを使ったのに動詞にsを付けたままにしてしまうミス。\n\n【ここが絶対】\n「3人称・単数（1人）だけdoesを使う」と唱えて、do/doesの使い分けを覚える。',
     pitfall: `Does she plays tennis?のようにDoesを使ったのに動詞にsを付けたままにしない。`,
     memoryTip: `「3人称・単数(1人)だけdoesを使う」と唱えて覚える。`,
   },
@@ -51,7 +52,8 @@ export const chugaku2026Eigo2: Question[] = [
 ③ (　) is your dog?（あれはあなたの犬ですか：遠くにある単数）`,
     answer: `① This　② Those　③ That`,
     hint: `近い・単数→this、近い・複数→these、遠い・単数→that、遠い・複数→those。`,
-    explanation: `【出題意図】指示代名詞this/that/these/thoseの使い分けを問う。【解説】近くのものを指すときthis(単数)・these(複数)。遠くのものを指すときthat(単数)・those(複数)。①「これ」で単数→This。②「あれら」で複数→Those。③「あれ」で単数→That。【注意点】be動詞もthis/that(単数)はis、these/those(複数)はareになる。【関連知識】疑問文はIs this~?/Are these~?の形になる。`,
+    explanation:
+      '【何を聞かれているか】\nthis・that・these・thoseという指示代名詞を、距離と数に合わせて入れる問題。\n\n【なぜ4つの指示代名詞を使い分けるのか】\n指示代名詞は、「近いか遠いか」「単数か複数か」という2つの軸によって、this・that・these・thoseの4つに分かれる。\n\n【ポイント1】①近くの単数を確認する\n「これ」で単数→This。\n\n【ポイント2】②遠くの複数を確認する\n「あれら」で複数→Those。\n\n【ポイント3】③遠くの単数を確認する\n「あれ」で単数→That。\n\n【答え】\n① This　② Those　③ That\n\n【確かめ】\nそれぞれが「近い/遠い」と「単数/複数」の組み合わせに正しく対応しているか確認する。\n\n【よくあるまちがい】\n"These is her pens."のように、theseを使ったのにbe動詞をisにしてしまうミス。theseはareとセットで使う。\n\n【ここが絶対】\n「近い(this/these)・遠い(that/those)」「単数(this/that)・複数(these/those)」の2つの軸で指示代名詞を整理する。',
     pitfall: `These is her pens.のようにtheseを使ったのにisを使わない。theseはareとセットで使う。`,
     memoryTip: `「近い(this/these)・遠い(that/those)」「単数(this/that)・複数(these/those)」の2つの軸で整理する。`,
   },
@@ -71,7 +73,8 @@ export const chugaku2026Eigo2: Question[] = [
   (　) you play the piano?`,
     answer: `① can　② cannot (can't)　③ Can`,
     hint: `canの肯定文はcan+動詞の原形、否定はcannot、疑問文はCanを文の最初に置く。`,
-    explanation: `【出題意図】助動詞canの肯定文・否定文・疑問文の基本形を問う。【解説】①「〜できる」はcan+動詞の原形。②「〜できない」はcannot(短縮形can't)+動詞の原形。③疑問文はCanを主語の前に置く。【注意点】canの後の動詞は必ず原形(rides やswimsにしない)。【関連知識】canの過去形はcould(「〜できた」)。`,
+    explanation:
+      '【何を聞かれているか】\n助動詞canを使った、肯定文・否定文・疑問文を完成させる問題。\n\n【なぜcanの後ろは常に動詞の原形なのか】\ncanは助動詞なので、後ろには常に動詞の原形を置くという決まりがある。\n\n【ポイント1】①肯定文を確認する\n"I can ride a bike."＝「〜できる」はcan＋動詞の原形。\n\n【ポイント2】②否定文を確認する\n"He cannot (can\'t) swim."＝「〜できない」はcannot＋動詞の原形。\n\n【ポイント3】③疑問文を確認する\n"Can you play the piano?"＝疑問文はCanを主語の前に置く。\n\n【答え】\n① can　② cannot (can\'t)　③ Can\n\n【確かめ】\ncanの後ろの動詞（ride, swim, play）がすべて原形になっているか確認する。\n\n【よくあるまちがい】\n"He can not swims."のように、canの後ろの動詞にsをつけてしまうミス。canの後は必ず動詞の原形。\n\n【ここが絶対】\n「can＋動詞の原形」を1つのブロックとして覚える。canの過去形could（〜できた）もあわせて確認する。',
     pitfall: `He can not swims.のように動詞にsを付けない。canの後は必ず動詞の原形。`,
     memoryTip: `「can+動詞の原形」を1つのブロックとして覚える。`,
   },
@@ -88,7 +91,8 @@ export const chugaku2026Eigo2: Question[] = [
 ③ My birthday is (　) May.（私の誕生日は5月です）`,
     answer: `① day　② time　③ in`,
     hint: `曜日はWhat day、時刻はWhat time、月にはinを使う。`,
-    explanation: `【出題意図】曜日・時刻・月を尋ねる表現と前置詞の基本を問う。【解説】①「何曜日」はWhat day (is it today)?。②「何時」はWhat time (is it now)?。③月を表す前置詞はin(in May)。【注意点】日付にはon(on May 5th)、時刻にはat(at three)を使う点は本問と区別して覚える。【関連知識】曜日はMonday〜Sunday、月はJanuary〜Decemberの綴りも正確に覚える。`,
+    explanation:
+      '【何を聞かれているか】\n曜日・時刻・月をたずねる表現の空欄を埋める問題。\n\n【なぜdayとtimeを使い分けるのか】\n「何曜日」をたずねるときはWhat day、「何時」をたずねるときはWhat timeという、それぞれ異なる名詞を組み合わせた決まった表現を使う。\n\n【ポイント1】①曜日をたずねる表現を確認する\n"What day is it today?"＝「今日は何曜日ですか」。\n\n【ポイント2】②時刻をたずねる表現を確認する\n"What time is it now?"＝「今何時ですか」。\n\n【ポイント3】③月を表す前置詞を確認する\n月にはinを使う（in May）。\n\n【答え】\n① day　② time　③ in\n\n【確かめ】\n"What day"（曜日）と"What time"（時刻）を混同していないか確認する。\n\n【よくあるまちがい】\nWhat day is it now?とWhat time is it now?を混同してしまうミス。dayは曜日、timeは時刻を尋ねる語。\n\n【ここが絶対】\n「曜日=day、時刻=time、月=in」とセットで覚える。',
     pitfall: `What day is it now?とWhat time is it now?を混同しない。dayは曜日、timeは時刻を尋ねる語。`,
     memoryTip: `「曜日=day、時刻=time、月=in」とセットで覚える。`,
   },
@@ -122,7 +126,8 @@ export const chugaku2026Eigo2: Question[] = [
 ③ My sister (　) TV every evening.（watch）`,
     answer: `① goes　② speaks　③ watches`,
     hint: `主語が3人称単数のとき、動詞に-s/-esをつける。`,
-    explanation: `【出題意図】3人称単数現在形(3単現)の動詞の形を問う。【解説】①「行く」go→goes(oで終わる動詞はesをつける)。②「話す」speak→speaks(基本はsをつける)。③「見る」watch→watches(chで終わる動詞はesをつける)。【注意点】主語が3人称単数(he/she/it、または一人の人名)のとき、動詞にs/esをつける。【関連知識】studyのように子音字+yで終わる動詞はyをiに変えてes(studies)。`,
+    explanation:
+      '【何を聞かれているか】\ngo・speak・watchという3つの動詞を、正しい三人称単数現在形にする問題。\n\n【なぜ動詞の語尾によって変化が違うのか】\n動詞の語尾の形（oで終わる、chで終わるなど）によって、三単現のs/esのつけ方が決まっている。\n\n【ポイント1】①oで終わる動詞を確認する\ngo→goes（oで終わる動詞はesをつける）。\n\n【ポイント2】②通常の動詞を確認する\nspeak→speaks（基本はsをつける）。\n\n【ポイント3】③chで終わる動詞を確認する\nwatch→watches（ch/sh/s/x/oで終わる動詞はesをつける）。\n\n【答え】\n① goes　② speaks　③ watches\n\n【確かめ】\n③のwatchが"watchs"ではなく"watches"という正しい形になっているか確認する。\n\n【よくあるまちがい】\nwatchを"watchs"としてしまうミス。sh/ch/s/x/oで終わる動詞はesをつける。\n\n【ここが絶対】\n「3人称・単数・現在」の3条件がそろったときだけ動詞にs/esをつける。語尾のパターンごとに変化のルールを整理する。',
     pitfall: `watchをwatchsとしない。sh/ch/s/x/oで終わる動詞はesをつける。`,
     memoryTip: `「3人称・単数・現在」の3条件がそろったときだけ動詞にs/esをつけると覚える。`,
   },
@@ -194,7 +199,8 @@ export const chugaku2026Eigo2: Question[] = [
 ③ The bag is (　) the chair.（かばんはいすの下にある）`,
     answer: `① in　② on　③ under`,
     hint: `中→in、上（接触）→on、下→under。`,
-    explanation: `【出題意図】場所を表す基本の前置詞in/on/underの使い分けを問う。【解説】①「箱の中」→in the box。②「机の上」（接触している）→on the desk。③「いすの下」→under the chair。【注意点】onは「上」だけでなく面に接している状態を表す(壁にかかっている絵もon the wall)。【関連知識】場所の前置詞にはby(そばに)、near(近くに)、between(の間に)などもある。`,
+    explanation:
+      '【何を聞かれているか】\n絵の説明に合うように、in・on・underという場所を表す前置詞を入れる問題。\n\n【なぜin/on/underを使い分けるのか】\n場所を表す前置詞は、「中」「上（接触）」「下」という物の位置関係によって使い分ける。\n\n【ポイント1】①「中」を確認する\n"in the box"＝「箱の中」。\n\n【ポイント2】②「上（接触）」を確認する\n"on the desk"＝「机の上」。onは接している状態を表す。\n\n【ポイント3】③「下」を確認する\n"under the chair"＝「いすの下」。\n\n【答え】\n① in　② on　③ under\n\n【確かめ】\nそれぞれの前置詞が、絵の説明（中・上・下）と正しく対応しているか確認する。\n\n【よくあるまちがい】\n「上」だからすべてonだと思い込んでしまうミス。「下」を表すときはunderを使う。\n\n【ここが絶対】\n「中(in)・上(on)・下(under)」を絵をイメージしながら覚える。',
     pitfall: `「上」だから全てonとは限らない。「下」を表すときはunderを使う。`,
     memoryTip: `「中(in)・上(on)・下(under)」を絵をイメージしながら覚える。`,
   },
@@ -216,7 +222,8 @@ A: Here you are.
 ④ Nice to meet you.`,
     answer: `① Yes, please.`,
     hint: `「お茶はいかがですか」と聞かれたときの自然な返事を考える。`,
-    explanation: `【出題意図】飲み物を勧められたときの基本的な会話表現を問う。【解説】「Would you like some tea?」（お茶はいかがですか）に対する自然な返答は「Yes, please.」（はい、お願いします）。その後Aが「Here you are.」（どうぞ）と続くのも自然な流れ。②はDo you like tea?への返答としては自然だがWould you like~?への返答としては不自然。③はThank youへの返答。④は初対面のあいさつ。【注意点】Would you like~?はDo you like~?とは異なり「〜はいかがですか」という勧誘・提案の表現。【関連知識】断るときはNo, thank you.と言う。`,
+    explanation:
+      '【何を聞かれているか】\nお茶を勧められたときの会話の空欄に、最も適切な文を選ぶ問題。\n\n【なぜYes, please.を使うのか】\n"Would you like some tea?"（お茶はいかがですか）という勧誘・提案の表現に対しては、"Yes, please."（はい、お願いします）という決まった返答をする。\n\n【ポイント1】"Would you like〜?"の意味を確認する\n「〜はいかがですか」という、丁寧にものをすすめる表現。\n\n【ポイント2】自然な返答を確認する\n"Yes, please."の後にAが"Here you are."（どうぞ）と続く自然な流れになっている。\n\n【ポイント3】他の選択肢を消去する\n"No, I don\'t."はDo you like tea?への返答、"You\'re welcome."はThank youへの返答、"Nice to meet you."は初対面のあいさつで、いずれも合わない。\n\n【答え】\n① Yes, please.\n\n【確かめ】\n選んだ返答が、続くAの"Here you are."という発言に自然につながっているか確認する。\n\n【よくあるまちがい】\n"No, I don\'t."を選んでしまうミス。これはDo you like tea?への返答であり、Would you like〜?への返答としては不自然。\n\n【ここが絶対】\n「Would you like〜?」には「Yes, please.」か「No, thank you.」で答えると覚える。',
     pitfall: `②No, I don't.はDo you like tea?への返答であり、Would you like~?への返答としては不自然。`,
     memoryTip: `「Would you like~?」には「Yes, please.」か「No, thank you.」で答えると覚える。`,
   },
@@ -269,7 +276,8 @@ A: Here you are.
 ② I have a dog.
 ③ She likes music.`,
     hint: `主語+動詞+目的語(SVO)の基本の語順を確認する。`,
-    explanation: `【出題意図】英語の基本語順(主語+動詞+目的語)を問う整序問題。【解説】①「This is my book.」主語This、be動詞is、補語my book。②「I have a dog.」主語I、動詞have、目的語a dog。③「She likes music.」主語she、動詞likes(3単現のs)、目的語music。【注意点】③のように主語が3人称単数のときは動詞にsをつけ忘れない。【関連知識】英語は日本語と違い、必ず主語(誰が)を文の最初に置く。`,
+    explanation:
+      '【何を聞かれているか】\n語句を並べ替えて、3つの基本的な英文（SVOやSVC）を完成させる問題。\n\n【なぜ主語を必ず文の最初に置くのか】\n英語は日本語と違い、文の中で誰が・何がという主語を省略せず、必ず文の最初に置くという決まりがある。\n\n【ポイント1】①SVCの文を確認する\n"This is my book."＝主語This、be動詞is、補語my book。\n\n【ポイント2】②SVOの文を確認する\n"I have a dog."＝主語I、動詞have、目的語a dog。\n\n【ポイント3】③三単現のsに注意する\n"She likes music."＝主語she（三人称単数）なので、動詞にsをつけてlikes。\n\n【答え】\n① This is my book.\n② I have a dog.\n③ She likes music.\n\n【確かめ】\n③でlikesにsがついているか確認する。\n\n【よくあるまちがい】\n③を"She like music."としてしまうミス。三人称単数現在なのでlikesとsをつける。\n\n【ここが絶対】\n英語の語順は「誰が(主語)→する(動詞)→何を(目的語)」の順と覚える。',
     pitfall: `③をShe like music.としない。3人称単数現在なのでlikesとsをつける。`,
     memoryTip: `英語の語順は「誰が(主語)→する(動詞)→何を(目的語)」の順と覚える。`,
   },
@@ -288,7 +296,8 @@ A: Here you are.
 ② How old are you?
 ③ How many pens do you have?`,
     hint: `疑問詞+do/does+主語+動詞の原形の語順を確認する。How manyの後には複数名詞が続く。`,
-    explanation: `【出題意図】疑問詞を使った疑問文の語順を問う整序問題。【解説】①「What do you like?」疑問詞What+do+主語you+動詞like。②「How old are you?」年齢を尋ねる決まった表現。How old+be動詞+主語。③「How many pens do you have?」数を尋ねる表現。How many+複数名詞+do+主語+動詞。【注意点】How manyの直後は必ず複数形の名詞(pens)が来る。【関連知識】How much(量・値段を尋ねる、不可算名詞に使う)との違いに注意。`,
+    explanation:
+      '【何を聞かれているか】\n疑問詞を使った3つの疑問文を、語句を並べ替えて完成させる問題。\n\n【なぜHow manyの後ろに複数名詞が続くのか】\nHow many（いくつの）は数をたずねる表現で、数えられる名詞の複数形と組み合わせて使うという決まりがある。\n\n【ポイント1】①基本の疑問文を確認する\n"What do you like?"＝疑問詞What＋do＋主語you＋動詞like。\n\n【ポイント2】②年齢をたずねる表現を確認する\n"How old are you?"＝年齢を尋ねる決まった表現。\n\n【ポイント3】③数をたずねる表現を確認する\n"How many pens do you have?"＝How many＋複数名詞（pens）＋do＋主語＋動詞。\n\n【答え】\n① What do you like?\n② How old are you?\n③ How many pens do you have?\n\n【確かめ】\n③でHow manyの直後にpens（複数形）が来ているか確認する。\n\n【よくあるまちがい】\n"How many pen"のように単数形にしてしまうミス。How manyの後は必ず複数形。\n\n【ここが絶対】\n「How old(年齢)」「How many+複数名詞(数)」「How much+不可算名詞(量・値段)」をセットで覚える。',
     pitfall: `How many penのように単数形にしない。How manyの後は必ず複数形。`,
     memoryTip: `「How old(年齢)」「How many+複数名詞(数)」「How much+不可算名詞(量・値段)」をセットで覚える。`,
   },
@@ -307,7 +316,8 @@ A: Here you are.
 ア. teacher　イ. doctor　ウ. firefighter`,
     answer: `① イ(doctor)　② ア(teacher)　③ ウ(firefighter)`,
     hint: `それぞれの職業を表す基本単語を確認する。`,
-    explanation: `【出題意図】身近な職業を表す基本単語の意味を問う。【解説】①「医者」はdoctor。②「先生」はteacher。③「消防士」はfirefighter。いずれも小学校英語で学ぶ基本的な職業名。【注意点】職業を尋ねる表現「What do you want to be?」（将来何になりたいですか）とセットで覚えるとよい。【関連知識】他の職業:nurse(看護師)、police officer(警察官)、farmer(農家)、cook(料理人)。`,
+    explanation:
+      '【何を聞かれているか】\n医者・先生・消防士を表す英単語を選ぶ問題。\n\n【なぜこれらの単語が重要なのか】\n身近な職業を表す基本単語は、小学校英語で学ぶ基礎語彙で、将来の夢を語る英作文でもよく使われる。\n\n【ポイント1】doctorの意味を確認する\ndoctor＝医者。\n\n【ポイント2】teacherの意味を確認する\nteacher＝先生。\n\n【ポイント3】firefighterの意味を確認する\nfirefighter＝消防士。fire（火）＋fighter（戦う人）という組み合わせでできた単語。\n\n【答え】\n① イ(doctor)　② ア(teacher)　③ ウ(firefighter)\n\n【確かめ】\nそれぞれの単語が正しい職業を表しているか確認する。\n\n【よくあるまちがい】\nteacherとfirefighterのつづりを混同してしまうミス。\n\n【ここが絶対】\n"What do you want to be?"（将来何になりたいですか）という表現とセットで、職業の語彙を覚える。',
     pitfall: `teacherとfirefighterのつづりを混同しない。firefighterはfire(火)+fighter(戦う人)という組み合わせ。`,
     memoryTip: `fire+fighter=火と戦う人=消防士、とパーツで覚える。`,
   },
@@ -326,7 +336,8 @@ A: Here you are.
 ア. sunny　イ. science　ウ. social studies`,
     answer: `① イ(science)　② ウ(social studies)　③ ア(sunny)`,
     hint: `教科名と天気を表す形容詞を区別して覚える。`,
-    explanation: `【出題意図】教科名と天気の基本単語を問う。【解説】①「理科」はscience。②「社会」はsocial studies。③「晴れ」を表す形容詞はsunny(It's sunny today.)。【注意点】天気を尋ねるときはHow is the weather?またはWhat's the weather like?を使う。【関連知識】他の教科:math(算数)、Japanese(国語)、P.E.(体育)。他の天気:rainy(雨)、cloudy(くもり)、snowy(雪)。`,
+    explanation:
+      '【何を聞かれているか】\n理科・社会・晴れ（の天気）を表す英単語を選ぶ問題。\n\n【なぜ教科名と天気の単語を区別するのか】\nscience（理科）、social studies（社会）は教科を表す単語、sunny（晴れ）は天気を表す形容詞で、それぞれ異なるカテゴリーに属する。\n\n【ポイント1】scienceの意味を確認する\nscience＝理科。\n\n【ポイント2】social studiesの意味を確認する\nsocial studies＝社会。\n\n【ポイント3】sunnyの意味を確認する\nsunny＝晴れの（"It\'s sunny today."）。\n\n【答え】\n① イ(science)　② ウ(social studies)　③ ア(sunny)\n\n【確かめ】\nそれぞれの単語が、教科名か天気かという正しいカテゴリーに分類されているか確認する。\n\n【よくあるまちがい】\nscienceとsocial studiesの意味を逆にしてしまうミス。\n\n【ここが絶対】\n天気の単語はほとんど-yで終わる（sunny/rainy/cloudy/snowy）というパターンで覚える。',
     pitfall: `scienceとsocial studiesの意味を逆にしない。socialは「社会の」という意味を持つ。`,
     memoryTip: `天気の単語はほとんど-yで終わる(sunny/rainy/cloudy/snowy)とパターンで覚える。`,
   },
@@ -347,7 +358,8 @@ Hello. My name is Kenta. I am eleven years old. I live in Osaka. I like soccer a
 ② He likes soccer and math.
 ③ ユキ`,
     hint: `本文の該当箇所を探して答える。年齢はeleven、好きなものはlike以下、妹の名前は最後の文。`,
-    explanation: `【出題意図】自己紹介文の基本的な読解問題。年齢・好きなもの・固有名詞の把握を問う。【解説】①「I am eleven years old.」からHe is eleven years old.と答える。②「I like soccer and math.」からHe likes soccer and math.と答える。③「Her name is Yuki.」からユキ。【注意点】質問がHe/Sheで聞かれた場合、答えの主語もそれに合わせて代名詞を使うと自然。【関連知識】自己紹介の定型表現:My name is~. I am~years old. I live in~. I like~.`,
+    explanation:
+      '【何を聞かれているか】\nケンタの自己紹介文を読んで、年齢・好きなもの・妹の名前を答える問題。\n\n【なぜ答えの主語を代名詞に変えるのか】\n本文はケンタ本人の視点（I）で書かれているが、質問がHe/Sheでたずねている場合は、答えの主語もそれに合わせて代名詞を使うのが自然。\n\n【ポイント1】①年齢を確認する\n"I am eleven years old."から、"He is eleven years old."と答える。\n\n【ポイント2】②好きなものを確認する\n"I like soccer and math."から、"He likes soccer and math."と答える。\n\n【ポイント3】③妹の名前を確認する\n"Her name is Yuki."から、妹の名前はユキ。\n\n【答え】\n① He is eleven years old.\n② He likes soccer and math.\n③ ユキ\n\n【確かめ】\n①の答えがyears oldまで含めた完全な形になっているか確認する。\n\n【よくあるまちがい】\n①で"eleven years"とだけ答え、"old"を省略してしまうミス。\n\n【ここが絶対】\n自己紹介文は「名前→年齢→住んでいる場所→好きなもの→家族」の順で書かれることが多いという型を意識して読む。',
     pitfall: `①でeleven yearsとだけ答えず、years oldまで含めて答える。`,
     memoryTip: `自己紹介文は「名前→年齢→住んでいる場所→好きなもの→家族」の順で書かれることが多い。`,
   },
