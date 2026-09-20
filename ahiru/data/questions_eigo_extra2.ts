@@ -1649,7 +1649,7 @@ export const eigoExtra2: Question[] = [
     answer: 'She is two years older than my sister.',
     hint: '「～だけ...より」は "数字 + 比較級 + than" で表します',
     explanation:
-      '【答え】She is two years older than my sister.\n\n【差を表す言い方】比較級の前に、差の大きさを置く。\n・two years older（2歳年上）\n・three centimeters taller（3センチ高い）\n・five minutes earlier（5分早い）\n差の大きさ → 比較級 → than の順になる。older two years とは言わない。\n\n【差を表すほかの語】\n・much／far／a lot ＋ 比較級 … ずっと〜。much older（ずっと年上）\n・a little ＋ 比較級 … 少し〜。a little older\n・very は比較級につけられない。very older は誤りである\n比較級を強めるのは much、very ではない。ここは試験でねらわれる。\n\n【年齢の言い方】\n・She is fifteen years old.\n・She is fifteen.（years old を省ける）\n・How old are you?\n・two years older than 〜（〜より2歳年上）\n\n【older と elder】\n・older … 年上（ふつうこちらを使う）\n・elder … 兄弟姉妹の年長を表す。my elder brother。イギリス英語で使うことが多い\n\n【例文】My brother is three years younger than I am.',
+      '【何を聞かれているか】\n「彼女は私の妹より2歳年上です」という日本語を英語にする問題。\n\n【なぜ「数字＋比較級」の順にするのか】\n「〜だけ…より」という差の大きさを比較級に加えて表すときは、差の大きさ（two years）を比較級（older）の直前に置くという決まった語順がある。\n\n【ポイント1】差を表す語順を確認する\n差の大きさ→比較級→thanの順。"two years older"（2歳年上）。\n\n【ポイント2】比較級を強める語との違いを確認する\nmuch/far/a lot（ずっと）やa little（少し）は程度を表すが、具体的な差の数字（two years）はそのまま比較級の前に置く。veryは比較級には使えない。\n\n【ポイント3】文を組み立てる\n"She is two years older than my sister."＝「彼女は私の妹より2歳年上だ」。\n\n【答え】\nShe is two years older than my sister.\n\n【確かめ】\n"two years"が比較級olderの直前に置かれていて、"older two years"のような逆の語順になっていないことを確認する。\n\n【よくあるまちがい】\n差の数字を比較級の後ろに置いてしまうミス（"older than my sister two years"のような誤り）。差の大きさは必ず比較級の前に置く。\n\n【ここが絶対】\n「差の大きさ＋比較級＋than」という語順をセットで覚える。veryは比較級を強められないことも覚えておく。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -1660,7 +1660,8 @@ export const eigoExtra2: Question[] = [
     question: '「この店の中で一番安い商品はどれですか？」を英語にしなさい。',
     answer: 'Which is the cheapest item in this store?',
     hint: '最上級を使った疑問文です',
-    explanation: '【解説】\n"cheap"（安い）の最上級は "cheapest"。"the cheapest item in this store"（この店の中で一番安い商品）を使います。',
+    explanation:
+      '【何を聞かれているか】\n「この店の中で一番安い商品はどれですか？」という日本語を英語にする問題。\n\n【なぜthe cheapestという最上級を使うのか】\n「〜の中で一番安い」という、3つ以上の中から一番であることを表すときは、最上級（the＋形容詞-est）を使う。\n\n【ポイント1】cheapの最上級を確認する\ncheap（安い）→cheapest（最も安い）。短い形容詞なので-estをつける。\n\n【ポイント2】"Which is〜?"の形を確認する\n「どれですか」とたずねるときはWhich isを使う。\n\n【ポイント3】範囲を表す語句を確認する\n"in this store"（この店の中で）が、比べる範囲を示している。\n\n【答え】\nWhich is the cheapest item in this store?\n\n【確かめ】\n"the cheapest"の前にtheがついていて、"in this store"が比べる範囲を示していることを確認する。\n\n【よくあるまちがい】\n最上級にtheをつけ忘れてしまうミス。最上級には基本的にtheをつける。\n\n【ここが絶対】\n最上級は「the＋形容詞-est＋in/of〜」という形をセットで覚える。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -1671,7 +1672,8 @@ export const eigoExtra2: Question[] = [
     question: '「夏と冬ではどちらが好きですか？」を英語にしなさい。',
     answer: 'Which do you like better, summer or winter?',
     hint: '"Which do you like better, A or B?" の形を使います',
-    explanation: '【解説】\n"Which do you like better, A or B?" は「AとBではどちらが好きですか？」という表現です。"better" は "well" の比較級です。',
+    explanation:
+      '【何を聞かれているか】\n「夏と冬ではどちらが好きですか？」という日本語を英語にする問題。\n\n【なぜWhichを使うのか】\n「AとBのどちらが〜か」と、限られた2つの中から選ばせるときは、範囲が決まっているものをたずねる疑問詞Whichを使う。\n\n【ポイント1】"Which do you like better, A or B?"の形を確認する\nWhich do you like better＋（コンマ）A or B？で、「AとBどちらが好きですか」という意味になる。\n\n【ポイント2】betterの意味を確認する\nbetterはwellの比較級で、ここでは「より好き」という意味を表す。\n\n【ポイント3】文を組み立てる\n"Which do you like better, summer or winter?"＝「夏と冬ではどちらが好きですか」。\n\n【答え】\nWhich do you like better, summer or winter?\n\n【確かめ】\n"Which do you like better"の後ろに、比べる2つの選択肢（summer or winter）がコンマで区切られて続いているか確認する。\n\n【よくあるまちがい】\n2つのものを比べているのにwhatを使ってしまうミス。選ぶ範囲がA or Bと決まっているときはwhichを使う。\n\n【ここが絶対】\n"Which do you like better, A or B?"＝「AとBどちらが好きですか」という2択をたずねる決まった表現をセットで覚える。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1731,7 +1733,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は朝ごはんを食べてから学校に行きます」を英語にしなさい。',
     answer: 'I go to school after eating breakfast.',
     hint: '「～した後で」は "after" を使います',
-    explanation: '【解説】\n"after"（～の後で）、"before"（～の前に）は前置詞・接続詞として使えます。"after eating"（食べた後）のように動名詞を続けることもできます。',
+    explanation:
+      '【何を聞かれているか】\n「私は朝ごはんを食べてから学校に行きます」という日本語を英語にする問題。\n\n【なぜafterの後ろに動名詞が続くのか】\nafterは前置詞としても使え、前置詞の後ろには名詞または動名詞（-ing形）が続くという決まりがある。\n\n【ポイント1】afterの使い方を確認する\nafter（前置詞）＋動名詞（-ing形）で「〜した後で」という意味になる。\n\n【ポイント2】beforeとの対応を確認する\nbefore（〜の前に）も同じように前置詞・接続詞の両方で使える。\n\n【ポイント3】文を組み立てる\n"I go to school after eating breakfast."＝「朝ごはんを食べた後、学校に行く」。\n\n【答え】\nI go to school after eating breakfast.\n\n【確かめ】\nafterの後ろが"eating"という動名詞になっていることを確認する。\n\n【よくあるまちがい】\nafterの後ろに動詞の原形をそのまま続けてしまうミス。前置詞のafterの後ろには動名詞（-ing形）を使う。\n\n【ここが絶対】\n前置詞after/beforeの後ろには動名詞（-ing形）を使う、という形をセットで覚える。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1742,7 +1745,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は英語も数学も好きです」を英語にしなさい。',
     answer: 'I like both English and math.',
     hint: '"both A and B" で「AもBも」を表します',
-    explanation: '【解説】\n"both A and B"（AもBも両方）、"either A or B"（AかBのどちらか）、"neither A nor B"（AもBも～ない）を覚えましょう。',
+    explanation:
+      '【何を聞かれているか】\n「私は英語も数学も好きです」という日本語を英語にする問題。\n\n【なぜboth A and Bを使うのか】\n「AもBも両方」という意味を表すときは、both A and Bという決まった相関接続詞を使う。\n\n【ポイント1】both A and Bの意味を確認する\nboth A and B＝「AもBも両方」。\n\n【ポイント2】似た形の相関接続詞と区別する\neither A or B＝「AかBのどちらか」、neither A nor B＝「AもBも〜ない」。それぞれ意味が異なる。\n\n【ポイント3】文を組み立てる\n"I like both English and math."＝「私は英語も数学も好きだ」。\n\n【答え】\nI like both English and math.\n\n【確かめ】\n"both"の後ろに"English and math"という2つの要素がandでつながれているか確認する。\n\n【よくあるまちがい】\nboth A and Bを、either A or B（どちらか一方）のような意味だと勘違いしてしまうミス。bothは「両方とも」という意味。\n\n【ここが絶対】\nboth A and B（両方）、either A or B（どちらか）、neither A nor B（どちらも〜ない）という3つの相関接続詞をセットで区別する。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1765,7 +1769,8 @@ export const eigoExtra2: Question[] = [
     question: '「雨が降っていたけれど、私は公園に行きました」を英語にしなさい。',
     answer: 'Although it was raining, I went to the park.',
     hint: '「～だけれど」は "although" または "though" を使います',
-    explanation: '【解説】\n"although/though"（～にもかかわらず・～だけれど）は逆接の接続詞です。文頭に置く場合は "Although it was raining, ..."となります。',
+    explanation:
+      '【何を聞かれているか】\n「雨が降っていたけれど、私は公園に行きました」という日本語を英語にする問題。\n\n【なぜalthoughを使うのか】\n「〜だけれど」という、前後の内容が食い違う逆接の関係を表すときは、although（またはthough）という接続詞を使う。\n\n【ポイント1】althoughの意味を確認する\nalthough＝「〜にもかかわらず・〜だけれど」という逆接・譲歩の接続詞。\n\n【ポイント2】文頭に置くときの形を確認する\n"Although it was raining, ..."のように、although節を文頭に置くときは、その後にコンマを打つ。\n\n【ポイント3】文を組み立てる\n"Although it was raining, I went to the park."＝「雨が降っていたけれど、私は公園に行った」。\n\n【答え】\nAlthough it was raining, I went to the park.\n\n【確かめ】\n"Although it was raining"（雨にもかかわらず）と"I went to the park"（公園に行った）が、逆接の関係でつながっていることを確認する。\n\n【よくあるまちがい】\nalthoughを理由を表すbecauseと混同してしまうミス。althoughは前後の内容が食い違う逆接の接続詞。\n\n【ここが絶対】\nalthough（＝though）＝「〜にもかかわらず」という逆接・譲歩の接続詞としてセットで覚える。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1777,7 +1782,7 @@ export const eigoExtra2: Question[] = [
     answer: 'When he came, I was studying.',
     hint: '「～したとき」は "when" を使います',
     explanation:
-      '【答え】When he came, I was studying.\n\n【過去進行形】was／were ＋ ing 形で「（そのとき）〜していた」を表す。\n・I was studying.／They were studying.\n\n【2つの時制の組み合わせ】この文には2つの動作がある。\n・I was studying … ずっと続いていた動作（背景）\n・he came … その途中で起きた動作（できごと）\n続いていた動作は進行形、途中で起きた動作は過去形にする。これが時の表し方の基本の形である。\n\n【when の位置】\n・When he came, I was studying.（前に置くときはコンマ）\n・I was studying when he came.（後ろに置くときはコンマ不要）\nどちらでも意味は同じである。\n\n【while との使い分け】\n・when … 〜したとき（一時点）\n・while … 〜している間に（期間）\n・While I was studying, he came.\nwhile の後ろには進行形が来ることが多い。\n\n【接続詞の後は未来形にしない】時や条件を表す接続詞の後ろでは、未来のことでも現在形を使う。\n・When he comes, I will tell him.（will comes ではない）\nこれは中学英語の大事な決まりである。\n\n【例文】I was watching TV when the phone rang.',
+      '【何を聞かれているか】\n「彼が来たとき、私は勉強していました」という日本語を英語にする問題。\n\n【なぜ過去進行形と過去形を組み合わせるのか】\nこの文には「ずっと続いていた動作（勉強していた）」と「その途中で起きた動作（彼が来た）」という2つの出来事があり、続いていた方は過去進行形、途中で起きた方は過去形で表すという決まりがある。\n\n【ポイント1】過去進行形の形を確認する\nwas/were＋動詞のing形で「（そのとき）〜していた」という意味を表す。\n\n【ポイント2】whenの位置を確認する\nWhen he came, I was studying.（前に置くときはコンマ）、I was studying when he came.（後ろに置くときはコンマ不要）のどちらでも意味は同じ。\n\n【ポイント3】whileとの使い分けを確認する\nwhen＝〜したとき（一時点）、while＝〜している間に（期間）。\n\n【答え】\nWhen he came, I was studying.\n\n【確かめ】\n"came"（過去形、途中で起きた動作）と"was studying"（過去進行形、続いていた動作）が正しく組み合わされているか確認する。\n\n【よくあるまちがい】\n2つの動作をどちらも過去形にしてしまうミス。「続いていた背景の動作」は過去進行形にする必要がある。\n\n【ここが絶対】\n「続いていた動作＝過去進行形」「途中で起きた動作＝過去形」という組み合わせをセットで覚える。時や条件を表す接続詞（when、ifなど）の後ろでは、未来のことでも現在形を使うことも覚えておく。',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1826,7 +1831,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女は医者になることを夢見ています」を英語にしなさい。',
     answer: 'She dreams of becoming a doctor.',
     hint: '前置詞の後には動名詞（-ing 形）を使います',
-    explanation: '【解説】\n前置詞（of, for, at, in, about など）の後ろには動名詞（-ing 形）を使います。"dream of + -ing"（～を夢見る）が正解です。',
+    explanation:
+      '【何を聞かれているか】\n「彼女は医者になることを夢見ています」という日本語を英語にする問題。\n\n【なぜdream ofの後ろに動名詞を使うのか】\n前置詞（of, for, at, in, aboutなど）の後ろには、動詞の原形ではなく、名詞の働きをする動名詞（-ing形）を続けるという決まりがある。\n\n【ポイント1】"dream of〜ing"の形を確認する\ndream of＋動名詞＝「〜することを夢見る」。ofは前置詞なので後ろは動名詞。\n\n【ポイント2】becomeの動名詞形を確認する\nbecomeの動名詞形はbecoming。\n\n【ポイント3】文を組み立てる\n"She dreams of becoming a doctor."＝「彼女は医者になることを夢見ている」。\n\n【答え】\nShe dreams of becoming a doctor.\n\n【確かめ】\n"of"の後ろが"becoming"という動名詞になっていて、不定詞（to become）になっていないことを確認する。\n\n【よくあるまちがい】\n"dream of to become"のように、前置詞ofの後ろに不定詞を続けてしまうミス。前置詞の後ろは動名詞にする。\n\n【ここが絶対】\n前置詞（of, for, at, in, aboutなど）の後ろには動名詞（-ing形）を使うというルールをセットで覚える。',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1837,7 +1843,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は公園で走るのが好きです」を英語にしなさい。',
     answer: 'I like running in the park.',
     hint: '"like" の後には動名詞（-ing 形）も不定詞（to 不定詞）も使えます',
-    explanation: '【解説】\n"like"（好きだ）の後ろには動名詞（-ing）も不定詞（to）も使えます。"I like running in the park." または "I like to run in the park." どちらも正解です。',
+    explanation:
+      '【何を聞かれているか】\n「私は公園で走るのが好きです」という日本語を英語にする問題。\n\n【なぜ動名詞と不定詞のどちらも使えるのか】\nlikeは、動名詞（-ing形）と不定詞（to＋動詞の原形）のどちらを目的語に取ってもほぼ同じ意味になる、両方使える動詞のグループに属している。\n\n【ポイント1】likeの後ろの形を確認する\nlike＋動名詞、またはlike＋不定詞、どちらも「〜するのが好き」という意味になる。\n\n【ポイント2】同じグループの動詞を確認する\nlove、start、beginなども、動名詞・不定詞のどちらも取れる動詞。\n\n【ポイント3】文を組み立てる\n"I like running in the park."または"I like to run in the park."＝「私は公園で走るのが好きだ」。\n\n【答え】\nI like running in the park.\n\n【確かめ】\n"like"の後ろが"running"（動名詞）または"to run"（不定詞）のどちらかになっていることを確認する。\n\n【よくあるまちがい】\nlikeを、動名詞だけしか取れないenjoyや、不定詞だけしか取れないwantと同じグループだと誤解してしまうミス。likeは両方使える動詞。\n\n【ここが絶対】\nlike・love・start・beginなどの動詞は、動名詞・不定詞のどちらも目的語に取れるというグループとしてセットで覚える。',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -1885,7 +1892,7 @@ export const eigoExtra2: Question[] = [
     answer: 'I will go out to play after finishing my homework.',
     hint: '"after + -ing" で「～した後で」を表します',
     explanation:
-      '【答え】I will go out to play after finishing my homework.\n\n【after ＋ ing】after は前置詞としても接続詞としても使える。\n・前置詞として … after finishing my homework（後ろは ing）\n・接続詞として … after I finish my homework（後ろは主語と動詞）\nどちらでも同じ意味になる。前置詞なら ing、接続詞なら文が続く。\n\n【before も同じ】\n・before going to bed ＝ before I go to bed\n・Wash your hands before eating.\n\n【接続詞の後は未来形にしない】接続詞として使うときは、未来のことでも現在形にする。\n・after I finish my homework（will finish ではない）\nif、when、before、after、until などの後では、この決まりが働く。\n\n【go out の意味】\n・go out … 外出する、遊びに行く\n・go out to play … 遊びに出かける\n・come in ／ go in … 入る\n\n【finish の後は ing】finish は動名詞をとる動詞である。\n・finish doing my homework（正しい）\n・finish to do（誤り）\n・ing だけをとる動詞 … enjoy、finish、stop、practice、mind、give up\n\n【例文】I always brush my teeth after eating.',
+      '【何を聞かれているか】\n「私は宿題を終えてから遊びに行きます」という日本語を英語にする問題。\n\n【なぜafter＋ingの形にするのか】\nafterは前置詞としても接続詞としても使え、前置詞として使うときは後ろに動名詞（-ing形）、接続詞として使うときは後ろに「主語＋動詞」を続ける。\n\n【ポイント1】前置詞afterの形を確認する\nafter＋動名詞＝"after finishing my homework"（宿題を終えた後で）。\n\n【ポイント2】接続詞afterとの言い換えを確認する\n"after I finish my homework"（接続詞、後ろは主語＋動詞）と同じ意味。接続詞として使うときは、未来のことでも現在形（finish）を使う。\n\n【ポイント3】finishの後ろの形とgo outの意味を確認する\nfinishは動名詞だけを目的語に取る動詞。"go out to play"＝「遊びに出かける」。\n\n【答え】\nI will go out to play after finishing my homework.\n\n【確かめ】\n"after"の後ろが"finishing"という動名詞になっているか、または接続詞として使うなら"I finish"という現在形の文が続いているか確認する。\n\n【よくあるまちがい】\n接続詞のafterの後ろを未来形（will finish）にしてしまうミス。if・when・before・after・untilなどの後ろでは、未来のことでも現在形を使う。\n\n【ここが絶対】\nafter（前置詞なら+動名詞、接続詞なら+現在形の文）、finishは動名詞だけを目的語に取る動詞、という2つのルールをセットで覚える。',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1896,7 +1903,8 @@ export const eigoExtra2: Question[] = [
     question: '「私の趣味は絵を描くことです」を英語にしなさい。',
     answer: 'My hobby is drawing pictures.',
     hint: '主語の補語として動名詞（-ing 形）を使います',
-    explanation: '【解説】\n"be 動詞 + 動名詞"（私の趣味は～することです）の形で動名詞が補語になります。"draw pictures"（絵を描く）→ "drawing pictures"。',
+    explanation:
+      '【何を聞かれているか】\n「私の趣味は絵を描くことです」という日本語を英語にする問題。\n\n【なぜ動名詞を使うのか】\n「〜すること」という動作を名詞のように扱いたいときは、動詞にingをつけた動名詞を使う。ここでは「絵を描くこと」を"drawing pictures"という動名詞句で表す。\n\n【ポイント1】"My hobby is〜"の形を確認する\n"My hobby is＋動名詞"＝「私の趣味は〜することです」。動名詞が主語の補語になっている。\n\n【ポイント2】"draw pictures"を動名詞にする\n"draw pictures"（絵を描く）にingをつけて"drawing pictures"にする。\n\n【ポイント3】文を組み立てる\n"My hobby is drawing pictures."＝「私の趣味は絵を描くことです」。\n\n【答え】\nMy hobby is drawing pictures.\n\n【確かめ】\n"is"の後ろが動名詞（drawing）になっていることを確認する。\n\n【よくあるまちがい】\n動名詞にせず、原形のまま"My hobby is draw pictures."としてしまうミス。be動詞の後ろで「〜すること」を表すときは動名詞（-ing形）を使う。\n\n【ここが絶対】\n"My hobby is＋動名詞"＝「私の趣味は〜することです」という形をセットで覚える。',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1930,7 +1938,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は日本語を教えることを決めました」を英語にしなさい。',
     answer: 'I decided to teach Japanese.',
     hint: '"decide + to 不定詞" で「～することを決める」を表します',
-    explanation: '【解説】\n"decide"（決める）の後には不定詞（to + 動詞の原形）が来ます。動名詞は使えません。"I decided to teach Japanese." が正解です。',
+    explanation:
+      '【何を聞かれているか】\n「私は日本語を教えることを決めました」という日本語を英語にする問題。\n\n【なぜ不定詞を使うのか】\ndecideは、後ろに不定詞（to＋動詞の原形）だけを目的語に取るという決まりを持つ動詞のグループに属している。\n\n【ポイント1】decideの後ろの形を確認する\ndecide＋不定詞（to＋動詞の原形）。動名詞は使えない。\n\n【ポイント2】同じグループの動詞を確認する\nwant（〜したい）、hope（望む）、planも、decideと同じように不定詞を目的語に取る。\n\n【ポイント3】文を組み立てる\n"I decided to teach Japanese."＝「私は日本語を教えることを決めた」。\n\n【答え】\nI decided to teach Japanese.\n\n【確かめ】\n"decided"の後ろが"to teach"のように不定詞になっていて、動名詞（teaching）になっていないことを確認する。\n\n【よくあるまちがい】\n"decided teaching"のように、動名詞を続けてしまうミス。decideは不定詞だけを目的語に取る動詞。\n\n【ここが絶対】\ndecide・want・hope・planなどの動詞は、後ろに不定詞（to+動詞の原形）だけを取るというグループとしてセットで覚える。',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1942,7 +1951,7 @@ export const eigoExtra2: Question[] = [
     answer: 'She wanted to be a doctor.',
     hint: '"want" の過去形を使い、後ろには不定詞を続けます',
     explanation:
-      '【答え】She wanted to be a doctor.\n\n【want to の過去形】want を過去形 wanted にする。to の後ろは原形のままである。\n・She wanted to be a doctor.（正しい）\n・She wanted to was a doctor.（誤り）\nto の後はいつでも原形で、時制は前の動詞が受け持つ。\n\n【be動詞の原形は be】\n・am、is、are は be が変化した形\n・to be、will be、can be、must be … すべて be になる\n\n【want の使い方】\n・want ＋ 名詞 … I want a new bike.\n・want to ＋ 原形 … I want to go.\n・want ＋ 人 ＋ to ＋ 原形 … I want you to come.（あなたに来てほしい）\n3つ目の形は中学の後半で学ぶ大事な形である。だれにしてほしいのかをはさむ。\n\n【become と be】\n・want to be a doctor（医者になりたい）\n・want to become a doctor（同じ意味）\nどちらも使えるが、be のほうがよく使われる。\n\n【ていねいな言い方】would like to は want to のていねいな形である。\n\n【例文】\n・I wanted to go, but I was busy.\n・I want you to help me.',
+      '【何を聞かれているか】\n「彼女は医者になりたかったです」という日本語を英語にする問題。\n\n【なぜwantを過去形にし、toの後ろは原形のままにするのか】\n「〜したかった」という過去の願望は、want自体を過去形wantedにして表す。to不定詞の後ろは時制に関係なく常に動詞の原形を使う。\n\n【ポイント1】wantの過去形を確認する\nwant→wanted。「〜したい」という願望を過去のこととして表す。\n\n【ポイント2】to不定詞の後ろの形を確認する\n"to be"のように、toの後ろは常に動詞の原形。時制はwanted（前の動詞）が担う。\n\n【ポイント3】becomeとの言い換えを確認する\n"want to be a doctor"と"want to become a doctor"はほぼ同じ意味で使える。\n\n【答え】\nShe wanted to be a doctor.\n\n【確かめ】\n"wanted"（過去形）の後ろが"to be"（原形）になっていて、"to was"のような誤った形になっていないことを確認する。\n\n【よくあるまちがい】\n過去のことだからと、to不定詞の後ろまで過去形にしてしまうミス（"wanted to was"のような誤り）。to不定詞の後ろは常に原形。\n\n【ここが絶対】\n"want to＋動詞の原形"の時制はwant自体を変化させて表す（wanted to〜）。toの後ろは常に原形のままにする。',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1977,7 +1986,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は彼女に部屋を掃除させました」を英語にしなさい。',
     answer: 'I had her clean the room.',
     hint: '"have + 人 + 動詞の原形" で「人に～させる」を表します',
-    explanation: '【解説】\n"have + 人 + 動詞の原形"（人に～させる）は使役動詞の構文です。"make + 人 + 動詞の原形"（強制）と "have + 人 + 動詞の原形"（依頼）の違いに注意しましょう。',
+    explanation:
+      '【何を聞かれているか】\n「私は彼女に部屋を掃除させました」という日本語を英語にする問題。\n\n【なぜhave＋人＋動詞の原形を使うのか】\n「（人）に〜させる・してもらう」という使役の意味を表すとき、haveは後ろに「人＋動詞の原形」を続けるという決まった形を取る。\n\n【ポイント1】"have＋人＋動詞の原形"の形を確認する\nhave her clean the room＝「彼女に部屋を掃除させる（してもらう）」。\n\n【ポイント2】makeとhaveの違いを確認する\nmake＋人＋動詞の原形は「（強制的に）〜させる」、have＋人＋動詞の原形は「（依頼して）〜してもらう」というニュアンスの違いがある。\n\n【ポイント3】letとの違いも確認する\nlet＋人＋動詞の原形は「（許可して）〜させてあげる」という意味。\n\n【答え】\nI had her clean the room.\n\n【確かめ】\n"had"の後ろに"her"（人）、その後ろに"clean"（動詞の原形）が続いているか確認する。\n\n【よくあるまちがい】\n"had her to clean"のように、toをつけてしまうミス。使役動詞have/make/letの後ろは、toのつかない原形（原形不定詞）を使う。\n\n【ここが絶対】\n使役動詞make（強制）・have（依頼）・let（許可）＋人＋動詞の原形、というニュアンスの違いをセットで覚える。',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -2073,7 +2083,8 @@ export const eigoExtra2: Question[] = [
     question: '「その試合はテレビで放送されます」を英語にしなさい。',
     answer: 'The game will be broadcast on TV.',
     hint: '未来の受動態は "will be + 過去分詞" です',
-    explanation: '【解説】\n未来の受動態は "will be + 過去分詞" を使います。"broadcast"（放送する）は過去形・過去分詞も "broadcast" のまま（変化なし）です。',
+    explanation:
+      '【何を聞かれているか】\n「その試合はテレビで放送されます」という日本語を英語にする問題。\n\n【なぜwill be＋過去分詞を使うのか】\n未来のことについて「〜される」という受け身の意味を表すときは、未来を表すwillと受動態（be＋過去分詞）を組み合わせた"will be＋過去分詞"という形を使う。\n\n【ポイント1】未来の受動態の公式を確認する\n主語＋will be＋過去分詞（＋by＋動作主）。\n\n【ポイント2】broadcastの活用を確認する\nbroadcast（放送する）は、原形・過去形・過去分詞がすべて同じ形broadcastになる不規則動詞。\n\n【ポイント3】文を組み立てる\n"The game will be broadcast on TV."＝「その試合はテレビで放送される」。\n\n【答え】\nThe game will be broadcast on TV.\n\n【確かめ】\n"will be"の後ろに過去分詞broadcastが続いていることを確認する。\n\n【よくあるまちがい】\nbroadcastの過去分詞を"broadcasted"のように規則変化させてしまうミス。broadcastは原形・過去形・過去分詞が同じ形の不規則動詞。\n\n【ここが絶対】\n未来の受動態は"will be＋過去分詞"という形をセットで覚える。broadcastのような変化しない不規則動詞もあわせて覚える。',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -2096,7 +2107,8 @@ export const eigoExtra2: Question[] = [
     question: '「私は彼に英語を教えてもらいました」を英語にしなさい。',
     answer: 'I was taught English by him.',
     hint: '「教えてもらった」を受動態で表します',
-    explanation: '【解説】\n"He taught me English."（彼は私に英語を教えた）の受動態は "I was taught English by him."（私は彼に英語を教えてもらった）となります。',
+    explanation:
+      '【何を聞かれているか】\n「私は彼に英語を教えてもらいました」という日本語を英語にする問題。\n\n【なぜI was taught〜by himという受動態になるのか】\n"He taught me English."（彼は私に英語を教えた）という能動態の文の目的語me（私）を主語にして受動態にすると、「私は（彼によって）英語を教えられた（教えてもらった）」という文になる。\n\n【ポイント1】受動態の書き換え手順を確認する\n①目的語me（私）を主語Iにする→②動詞をbe動詞＋過去分詞にする（taught→was taught）→③残った目的語English（教科の内容）はそのまま残す→④元の主語heをby himにする。\n\n【ポイント2】teachの活用を確認する\nteach（原形）→taught（過去形）→taught（過去分詞）という不規則変化。\n\n【ポイント3】文全体の意味を確認する\n"I was taught English by him."＝「私は彼に英語を教えてもらった（教えられた）」。\n\n【答え】\nI was taught English by him.\n\n【確かめ】\n"was taught"の後ろに"English"（教えられた内容）が残り、文末に"by him"が置かれていることを確認する。\n\n【よくあるまちがい】\n2つの目的語を持つ文（教える相手・教える内容）の受動態で、どちらを主語にするかを間違えてしまうミス。今回は「教えてもらった人」であるmeを主語にする。\n\n【ここが絶対】\n"teach＋人＋もの"のような2つの目的語を持つ動詞は、「人」を主語にした受動態（人 was taught もの by〜）を作れることをセットで覚える。',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -2108,7 +2120,8 @@ export const eigoExtra2: Question[] = [
     question: '「私には医者である兄がいます」を英語にしなさい。（関係代名詞 who を使う）',
     answer: 'I have a brother who is a doctor.',
     hint: '人を修飾するときは "who" を使います',
-    explanation: '【解説】\n関係代名詞 "who" は人（先行詞）を修飾します。"I have a brother who is a doctor." で「医者である兄がいます」となります。',
+    explanation:
+      '【何を聞かれているか】\n「私には医者である兄がいます」という日本語を、関係代名詞whoを使って英語にする問題。\n\n【なぜwhoを使うのか】\n先行詞a brother（人）を、「医者である」という文で説明したいとき、主格の関係代名詞whoを使って2つの内容を1つの文につなげる。\n\n【ポイント1】whoの役割を確認する\n先行詞a brother（人）を受けて、後ろの"is a doctor"（医者である）という節をつなげる主格の関係代名詞。\n\n【ポイント2】文の組み立てを確認する\n"I have a brother."＋"He is a doctor."→"I have a brother who is a doctor."\n\n【ポイント3】whoの後ろの形を確認する\nwhoの後ろには、主語が欠けた文（動詞から始まる文、is a doctor）が続く。\n\n【答え】\nI have a brother who is a doctor.\n\n【確かめ】\n"who"の後ろが"is a doctor"という、主語が欠けた文になっているか確認する。\n\n【よくあるまちがい】\n先行詞が人であることを確認せずに、物に使うwhichを選んでしまうミス。\n\n【ここが絶対】\n先行詞が人で主格のときはwhoを使う。「who＋動詞」の形で先行詞を後ろから修飾する。',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -2131,7 +2144,8 @@ export const eigoExtra2: Question[] = [
     question: '「これは私が昨日買ったカバンです」を英語にしなさい。',
     answer: 'This is the bag that I bought yesterday.',
     hint: '物を修飾するときは "which" または "that" を使います',
-    explanation: '【解説】\n関係代名詞 "which" または "that" は物（先行詞）を修飾します。"the bag that I bought yesterday"（昨日買ったカバン）が正解です。',
+    explanation:
+      '【何を聞かれているか】\n「これは私が昨日買ったカバンです」という日本語を英語にする問題。\n\n【なぜthat（またはwhich）を使うのか】\n先行詞the bag（物）を、「私が昨日買った」という文で説明したいとき、目的格の関係代名詞that（またはwhich）を使って2つの内容を1つの文につなげる。\n\n【ポイント1】先行詞が物のときの関係代名詞を確認する\n先行詞the bag（物）にはwhichまたはthatを使う。\n\n【ポイント2】目的格であることを確認する\n"I bought (the bag) yesterday"のように、the bagはboughtの目的語の位置にあるので、目的格の関係代名詞を使う。\n\n【ポイント3】文を組み立てる\n"This is the bag that I bought yesterday."＝「これは私が昨日買ったカバンです」。\n\n【答え】\nThis is the bag that I bought yesterday.\n\n【確かめ】\n"that"の後ろが"I bought yesterday"という「主語＋動詞」の文になっているか確認する。\n\n【よくあるまちがい】\n先行詞が物なのに、人に使うwhoを選んでしまうミス。\n\n【ここが絶対】\n先行詞が物で目的格のときはthat（またはwhich）を使う。目的格の関係代名詞は省略することもできる。',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -2166,7 +2180,8 @@ export const eigoExtra2: Question[] = [
     question: '「私が昨日会った男の人はとても親切でした」を英語にしなさい。',
     answer: 'The man that I met yesterday was very kind.',
     hint: '「私が昨日会った男の人」を関係代名詞を使って表します',
-    explanation: '【解説】\n"The man that I met yesterday"（私が昨日会った男の人）が主語です。関係代名詞 "that" が "the man" を修飾しています。',
+    explanation:
+      '【何を聞かれているか】\n「私が昨日会った男の人はとても親切でした」という日本語を英語にする問題。\n\n【なぜthatを使うのか】\n先行詞The man（人）を、「私が昨日会った」という文で説明したいとき、目的格の関係代名詞thatを使って2つの内容を1つの文につなげる。\n\n【ポイント1】主語部分を確認する\n"The man that I met yesterday"（私が昨日会った男の人）が、文全体の主語になっている。\n\n【ポイント2】thatの役割を確認する\nthatはThe manを受ける目的格の関係代名詞で、"I met (the man) yesterday"のようにmetの目的語の位置にあった内容を表す。\n\n【ポイント3】文全体の構造を確認する\n主語（The man that I met yesterday）＋動詞（was）＋補語（very kind）という文型。\n\n【答え】\nThe man that I met yesterday was very kind.\n\n【確かめ】\n"that"の後ろが"I met yesterday"という「主語＋動詞」の文になっていて、文全体の動詞wasが、関係代名詞節の後ろに来ていることを確認する。\n\n【よくあるまちがい】\n関係代名詞節（that I met yesterday）を文全体の動詞と勘違いして、"The man was that I met yesterday very kind."のような誤った語順にしてしまうミス。\n\n【ここが絶対】\n主語が長い関係代名詞節で修飾されるとき、文全体の動詞（was）は関係代名詞節の後ろに置く、という文構造を意識する。',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -2226,7 +2241,8 @@ export const eigoExtra2: Question[] = [
     question: '「私はすでに宿題を終えました」を英語にしなさい。',
     answer: 'I have already finished my homework.',
     hint: '現在完了は "have/has + 過去分詞" の形で "already"（すでに）を使います',
-    explanation: '【解説】\n現在完了の完了用法は「すでに～した」を表します。"have + already + 過去分詞" または "have + 過去分詞 + already" の語順が一般的です。',
+    explanation:
+      '【何を聞かれているか】\n「私はすでに宿題を終えました」という日本語を英語にする問題。\n\n【なぜalreadyを使うのか】\n「すでに〜した」という完了を強調するときは、現在完了（have/has＋過去分詞）にalready（すでに）を加える。\n\n【ポイント1】現在完了（完了用法）の公式を確認する\nhave/has＋過去分詞。alreadyを加えて「すでに〜した」という意味を強める。\n\n【ポイント2】alreadyの位置を確認する\nalreadyはhave/hasと過去分詞の間、または文末に置くのが一般的。\n\n【ポイント3】文を組み立てる\n"I have already finished my homework."＝「私はすでに宿題を終えた」。\n\n【答え】\nI have already finished my homework.\n\n【確かめ】\n"have"と"finished"の間に"already"が置かれているか確認する。\n\n【よくあるまちがい】\nalreadyの位置を文頭など不自然な場所に置いてしまうミス。alreadyはhave/hasと過去分詞の間に置くのが基本。\n\n【ここが絶対】\n"have/has＋already＋過去分詞"＝「すでに〜した」という現在完了（完了用法）の形をセットで覚える。',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
@@ -2321,7 +2337,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女は子供のころから英語を学んでいます」を英語にしなさい。',
     answer: 'She has been learning English since she was a child.',
     hint: '"since + 節" で起点を表せます',
-    explanation: '【解説】\n"since + 節"（～して以来）のように "since" の後に節（主語 + 動詞）を続けることもできます。"since she was a child"（子供のころから）が正解です。',
+    explanation:
+      '【何を聞かれているか】\n「彼女は子供のころから英語を学んでいます」という日本語を英語にする問題。\n\n【なぜsince＋節の形を使うのか】\n「〜して以来」という起点を表すsinceは、"since 2010"のような時点だけでなく、"since she was a child"のように「主語＋動詞」の節を続けることもできる。\n\n【ポイント1】現在完了進行形の形を確認する\nhas been＋動詞のing形＝「ずっと〜し続けている」。\n\n【ポイント2】"since＋節"の形を確認する\nsinceの後ろに"she was a child"（彼女が子供だった）という文を続けて、起点を表す。\n\n【ポイント3】文を組み立てる\n"She has been learning English since she was a child."＝「彼女は子供のころからずっと英語を学んでいる」。\n\n【答え】\nShe has been learning English since she was a child.\n\n【確かめ】\n"since"の後ろに"she was a child"という「主語＋動詞」の文が続いていることを確認する。\n\n【よくあるまちがい】\nsinceの後ろには必ず単語（時点）しか続けられないと思い込んでしまうミス。sinceの後ろには「主語＋動詞」の節も続けられる。\n\n【ここが絶対】\n"since＋時点"だけでなく"since＋主語＋動詞"という節の形もあることをセットで覚える。',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -2345,7 +2362,8 @@ export const eigoExtra2: Question[] = [
     question: '「もし私が鳥だったら、空を飛べるのに」を英語にしなさい。',
     answer: 'If I were a bird, I could fly in the sky.',
     hint: '仮定法過去では動詞の過去形を使い、"I" に対しても "were" を使います',
-    explanation: '【解説】\n仮定法過去は現在の事実に反することを仮定します。"If + 主語 + 過去形, 主語 + would/could/might + 動詞の原形"。"I" でも "were" を使います（"was" も許容されます）。',
+    explanation:
+      '【何を聞かれているか】\n「もし私が鳥だったら、空を飛べるのに」という日本語を英語にする問題。\n\n【なぜbe動詞をwereにするのか】\n仮定法過去では、be動詞は主語が何であっても（Iやheでも）wereを使うという伝統的なルールがある（口語ではwasも使われる）。\n\n【ポイント1】仮定法過去の公式を確認する\nIf＋主語＋動詞の過去形〜, 主語＋would/could/might＋動詞の原形〜。\n\n【ポイント2】if節を組み立てる\n「もし私が鳥だったら」は"If I were a bird"。beの過去形はwereを使う。\n\n【ポイント3】主節を組み立てる\n「空を飛べるのに」は"I could fly in the sky"。可能性を表すcouldを使う。\n\n【答え】\nIf I were a bird, I could fly in the sky.\n\n【確かめ】\nif節のbe動詞がwasではなくwereになっていること、また「実際は鳥ではない」という現実と反対の内容になっていることを確認する。\n\n【よくあるまちがい】\n"If I was a bird"のように、主語Iに合わせてwasを使ってしまうミス。仮定法のif節では、主語が単数でもwereを使うのが原則。\n\n【ここが絶対】\n仮定法過去では、be動詞は主語に関係なくwereを使う。「もし〜だったら」という現実と反対の仮定を表す公式とセットで覚える。',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -2356,7 +2374,8 @@ export const eigoExtra2: Question[] = [
     question: '「もし100万円持っていたら、世界旅行するのに」を英語にしなさい。',
     answer: 'If I had one million yen, I would travel around the world.',
     hint: '仮定法過去の構文を使います',
-    explanation: '【解説】\n仮定法過去の基本構文："If + 主語 + 動詞の過去形, 主語 + would + 動詞の原形"。"travel around the world"（世界旅行する）は重要表現です。',
+    explanation:
+      '【何を聞かれているか】\n「もし100万円持っていたら、世界旅行するのに」という日本語を英語にする問題。\n\n【なぜ仮定法過去を使うのか】\n「実際は100万円を持っていないが、もし持っていたら」という、現在の事実に反する仮定を表すときは、仮定法過去（If＋過去形, would＋原形）を使う。\n\n【ポイント1】仮定法過去の公式を確認する\nIf＋主語＋動詞の過去形〜, 主語＋would＋動詞の原形〜。\n\n【ポイント2】if節を組み立てる\n「もし100万円持っていたら」は"If I had one million yen"。haveの過去形hadを使う。\n\n【ポイント3】主節を組み立てる\n「世界旅行するのに」は"I would travel around the world"。"travel around the world"は「世界旅行する」という重要表現。\n\n【答え】\nIf I had one million yen, I would travel around the world.\n\n【確かめ】\nif節の動詞が過去形（had）になっていて、主節がwould＋動詞の原形（would travel）になっていることを確認する。\n\n【よくあるまちがい】\n"If I have"のように、if節を現在形のままにしてしまうミス。仮定法過去では、現在の事実に反する内容でも動詞を過去形にする。\n\n【ここが絶対】\n仮定法過去の公式（If+過去形, would+原形）をセットで覚える。"travel around the world"（世界を旅する）という表現も覚えておく。',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -2367,7 +2386,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女が昨日来ていたら、パーティーはもっと楽しかったのに」を英語にしなさい。',
     answer: 'If she had come yesterday, the party would have been more fun.',
     hint: '仮定法過去完了は過去の事実に反することを仮定します',
-    explanation: '【解説】\n仮定法過去完了："If + 主語 + had + 過去分詞, 主語 + would have + 過去分詞"。過去の事実と反対の仮定を表します。',
+    explanation:
+      '【何を聞かれているか】\n「彼女が昨日来ていたら、パーティーはもっと楽しかったのに」という日本語を英語にする問題。\n\n【なぜ仮定法過去完了を使うのか】\n「実際には彼女は昨日来なかったが、もし来ていたら」という、過去の事実に反する仮定を表すときは、仮定法過去完了（If＋had＋過去分詞, would have＋過去分詞）を使う。\n\n【ポイント1】仮定法過去完了の公式を確認する\nIf＋主語＋had＋過去分詞〜, 主語＋would have＋過去分詞〜。\n\n【ポイント2】if節を組み立てる\n「彼女が昨日来ていたら」は"If she had come yesterday"。comeの過去分詞comeを使い、hadと組み合わせる。\n\n【ポイント3】主節を組み立てる\n「もっと楽しかったのに」は"the party would have been more fun"。beの過去分詞beenを使う。\n\n【答え】\nIf she had come yesterday, the party would have been more fun.\n\n【確かめ】\nif節が"had come"（過去完了）、主節が"would have been"（would have+過去分詞）になっていることを確認する。\n\n【よくあるまちがい】\n仮定法過去（If+過去形, would+原形）と仮定法過去完了（If+had+過去分詞, would have+過去分詞）を混同してしまうミス。過去の事実に反する内容には過去完了の形を使う。\n\n【ここが絶対】\n仮定法過去完了の公式（If+had+過去分詞, would have+過去分詞）を、過去の事実に反する仮定を表すときに使うこととセットで覚える。',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
