@@ -240,17 +240,7 @@ export const kindaiMaxQuestions: Question[] = [
       '問3: ソーラーパネルを使用して電力消費を抑えている\n' +
       '問4: （例）利点: Vending machines are very convenient because people can buy things anytime and anywhere. / 欠点: However, they use a lot of electricity, which is bad for the environment.',
     explanation:
-      '問1は "about one machine for every 23 people" をそのまま日本語に換える。\n' +
-      '「every 23 people＝23人ごとに1台」という表現パターンを覚えておく。\n' +
-      '問2は "critics argue they consume too much energy" の部分が根拠。\n' +
-      'consume＝消費する、energy＝エネルギー（ここでは電力）。批判の内容は「電力の消費過多」。\n' +
-      '問3は "Some newer models use solar panels to reduce electricity use" の箇所。\n' +
-      'solar panels＝太陽光パネル（ソーラーパネル）、reduce＝減らす、electricity＝電力。\n' +
-      '問4の英作文は自由記述だが、本文の内容を踏まえることが望ましい。\n' +
-      '利点は「いつでもどこでも購入できる便利さ（convenience）」、\n' +
-      '欠点は「エネルギー消費・環境問題（energy consumption / environmental impact）」が典型的な答え。\n' +
-      '構文として "... is convenient because ..." や "However, ... is a problem" などの逆接表現を使うと\n' +
-      '文章に流れができて採点者に好印象を与える。接続詞 "while" や "although" も活用できる。',
+      '【何を聞かれているか】\n日本の自動販売機についての英文を読んで、4つの問いに答える読解問題。\n\n【なぜ数字と具体的な表現に注目するのか】\n説明文の読解では、"about one machine for every 23 people"のような数字を含む表現や、"critics argue"のような「誰の意見か」を示す表現に、設問の答えが集約されていることが多い。\n\n【ポイント1】問1：密度を表す数字を確認する\n"about one machine for every 23 people"＝「23人ごとに1台」という表現から、「23人に1台」と答えられる。\n\n【ポイント2】問2・問3：批判と改善点を確認する\n"critics argue they consume too much energy"（批判者はエネルギーを消費しすぎると主張する）が批判の内容、"Some newer models use solar panels to reduce electricity use"（新しいモデルはソーラーパネルを使って電力消費を減らす）が改善点。\n\n【ポイント3】問4：利点と欠点を英語でまとめる\n本文の内容（便利さ・エネルギー消費）をふまえ、"is convenient because ..."（〜なので便利だ）や"However, ... is a problem"（しかし〜が問題だ）のような表現で、利点と欠点を対比して書く。\n\n【答え】\n問1: 23人に1台\n問2: エネルギー（電力）を消費しすぎるという批判\n問3: ソーラーパネルを使用して電力消費を抑えている\n問4: （例）利点: Vending machines are very convenient because people can buy things anytime and anywhere. / 欠点: However, they use a lot of electricity, which is bad for the environment.\n\n【確かめ】\n問1〜3の答えが、本文の該当する英文（"one machine for every 23 people"、"consume too much energy"、"use solar panels to reduce electricity use"）と対応しているか確認する。\n\n【よくあるまちがい】\n問4で、本文の内容とまったく関係のない自分の意見だけを書いてしまうミス。自由記述でも、本文で述べられている事実（便利さ・エネルギー消費）を土台にして書くと説得力が増す。\n\n【ここが絶対】\n説明文の読解は、数字を含む表現と「誰の意見か」を示す表現（critics argueなど）に注目して、設問の答えを本文中から正確に見つける。',
     difficulty: 'advanced',
     course: 'kindai',
     examType: 'chugaku',

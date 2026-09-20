@@ -1147,7 +1147,8 @@ export const takatsukiQuestions: Question[] = [
     question: '次の日本語を英語に直しなさい。\n「私が住んでいる町には古いお寺があります。」\n（関係代名詞またはin whichを使って）',
     answer: 'The town where I live has an old temple. または: The town in which I live has an old temple.',
     hint: '「私が住んでいる町」= the town where I live',
-    explanation: '【解説】\n関係副詞whereを使った表現：\n「私が住んでいる町」= the town where I live\n（= the town in which I live）\n\n完成文：\nThe town where I live has an old temple.\nまたは：The town in which I live has an old temple.\n\n別の言い方：There is an old temple in the town where I live.\n（関係副詞where＝in which = in the place）',
+    explanation:
+      '【何を聞かれているか】\n「私が住んでいる町には古いお寺があります。」という日本語を、関係代名詞またはin whichを使って英語にする問題。\n\n【なぜ関係副詞whereを使うのか】\n「町」という場所を表す名詞を、後ろから「私が住んでいる」という文で説明したいとき、場所を表す関係副詞whereを使うと、前置詞（in）を別に置かずに自然につなげられる。\n\n【ポイント1】関係副詞whereの形を確認する\n"the town where I live"＝「私が住んでいる町」。whereの後ろは「主語＋動詞」の完全な文が続く。\n\n【ポイント2】in whichとの書き換えを確認する\n"the town where I live" ＝ "the town in which I live"。whereはin which（＝in the place）と同じ働きをする。\n\n【ポイント3】文全体を組み立てる\n"The town where I live has an old temple."＝「私が住んでいる町には古いお寺がある」。\n\n【答え】\nThe town where I live has an old temple. （または The town in which I live has an old temple.）\n\n【確かめ】\nwhereの後ろが「I live」という完全な文（主語＋動詞のみで、前置詞や目的語が欠けていない文）になっているか確認する。\n\n【よくあるまちがい】\nwhereの後ろに前置詞inを重ねて"where I live in"としてしまうミス。whereはin whichの働きをすでに含んでいるので、inを重ねて使う必要はない。\n\n【ここが絶対】\n関係副詞where＝in which＝in the place、という対応をセットで覚え、「場所を表す名詞＋where＋完全な文」という形を使う。',
     difficulty: 'advanced',
     course: 'takatsuki',
     examType: 'chugaku',

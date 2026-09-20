@@ -239,7 +239,8 @@ export const kaimeiQuestions: Question[] = [
     question: '次の英文の（　）に適切な語を入れなさい。「She ( ) to school every day.」',
     answer: 'goes',
     hint: '主語がShe（三人称単数）・現在形',
-    explanation: '主語がShe（三人称単数）で現在形の文。「go」の三人称単数現在形は「goes」。every dayは習慣を表し現在形を使う。',
+    explanation:
+      '【何を聞かれているか】\n"She ( ) to school every day."という文の空欄に、正しい動詞の形を入れる問題。\n\n【なぜgoesにするのか】\n主語がShe（三人称単数）で、"every day"（毎日）という習慣を表す語があることから、現在形の文だとわかる。三人称単数の主語のとき、一般動詞の現在形にはsやesをつけるというルールがある。\n\n【ポイント1】三人称単数現在形のルールを確認する\n主語がHe/She/Itなど三人称単数のとき、一般動詞の現在形の語尾にs（またはes）をつける。\n\n【ポイント2】goの活用を確認する\ngoはoで終わる動詞なので、esをつけてgoesにする（doもdoes、watchもwatchesのように、s/x/ch/sh/oで終わる動詞はesをつける）。\n\n【ポイント3】every dayが現在形のサインになることを確認する\n"every day"（毎日）のような習慣を表す語句があるときは、現在形を使うのが基本。\n\n【答え】\ngoes\n\n【確かめ】\n"She goes to school every day."を訳し、「彼女は毎日学校に行く」という習慣を表す文になっているか確認する。\n\n【よくあるまちがい】\n主語がSheであることを見落とし、原形のgoをそのまま使ってしまうミス。三人称単数・現在形の文では動詞にs/esをつける。\n\n【ここが絶対】\n主語が三人称単数（He/She/It）で現在形のとき、一般動詞にはs/esをつける。goはgoesになることを覚えておく。',
   },
   {
     id: 'kaimei_eigo_02', subject: 'eigo', difficulty: 'advanced',
@@ -247,7 +248,8 @@ export const kaimeiQuestions: Question[] = [
     question: '次の日本語を英語に訳しなさい。「私は昨日図書館で本を読みました。」',
     answer: 'I read a book at the library yesterday.',
     hint: '「read」の過去形に注意。「図書館で」はat the library',
-    explanation: 'read（読む）の過去形はread（発音：レッド）とスペルが同じ。「図書館で」はat the library、「昨日」はyesterday（文末に置く）。',
+    explanation:
+      '【何を聞かれているか】\n「私は昨日図書館で本を読みました。」という日本語を英語にする問題。\n\n【なぜreadの過去形がreadになるのか】\nreadは原形・過去形・過去分詞がすべて同じ綴り"read"になる不規則動詞。ただし発音が変わり、過去形は[red]（レッド）と発音する。\n\n【ポイント1】動詞の形を確認する\n"read"（現在形、発音[riːd]リード）→"read"（過去形、発音[red]レッド）。綴りは同じでも発音が変わることに注意。\n\n【ポイント2】場所と時を表す語句を確認する\n場所は"at the library"、時は"yesterday"（文末に置くことが多い）。\n\n【ポイント3】語順を確認する\n「動詞＋目的語＋場所＋時」の順に並べる。"read a book at the library yesterday"。\n\n【答え】\nI read a book at the library yesterday.\n\n【確かめ】\n"read"の綴りが過去形でも変わっていないこと、また文全体の語順（動詞→目的語→場所→時）を確認する。\n\n【よくあるまちがい】\nreadの過去形を"readed"のように誤って活用させてしまうミス。readは原形・過去形・過去分詞が同じ綴りの不規則動詞。\n\n【ここが絶対】\nread（現在、発音[riːd]）→read（過去、発音[red]）という特殊な不規則動詞の活用をセットで覚えておく。',
   },
   {
     id: 'kaimei_eigo_03', subject: 'eigo', difficulty: 'advanced',
@@ -255,7 +257,8 @@ export const kaimeiQuestions: Question[] = [
     question: '次の英文を疑問文に変えなさい。「Tom can play the piano.」',
     answer: 'Can Tom play the piano?',
     hint: '助動詞canを文頭に移動する',
-    explanation: '助動詞（can、will、must等）がある文の疑問文は、助動詞を主語の前に移動するだけ。「Can Tom play the piano?」答えは「Yes, he can. / No, he can\'t.」',
+    explanation:
+      '【何を聞かれているか】\n"Tom can play the piano."という文を疑問文に変える問題。\n\n【なぜ助動詞を文頭に移動するのか】\ncanのような助動詞がある文を疑問文にするときは、doやdoesを使わず、助動詞そのものを主語の前に移動するだけでよいという英語のルールがある。\n\n【ポイント1】助動詞のある文の疑問文の作り方を確認する\n助動詞（can, will, mustなど）を主語の前に移動するだけで疑問文になる。\n\n【ポイント2】文を組み立てる\n"Tom can play the piano."→"Can Tom play the piano?"。canを文頭に移動し、文末に？をつける。\n\n【ポイント3】答え方を確認する\n"Yes, he can." / "No, he can\'t."のように、canを使って答える。\n\n【答え】\nCan Tom play the piano?\n\n【確かめ】\n助動詞canが文頭に来ていて、do/doesを使っていないことを確認する。\n\n【よくあるまちがい】\n一般動詞の疑問文と同じようにDoやDoesを使ってしまうミス（"Does Tom can play..."など）。助動詞がすでにある文には、do/doesを重ねて使わない。\n\n【ここが絶対】\n助動詞のある文の疑問文は、助動詞を主語の前に移動するだけ。do/doesを使わないことを覚えておく。',
   },
   {
     id: 'kaimei_eigo_04', subject: 'eigo', difficulty: 'advanced',
@@ -263,7 +266,8 @@ export const kaimeiQuestions: Question[] = [
     question: '次の単語の意味を答えなさい。①environment ②tradition ③population',
     answer: '①環境 ②伝統 ③人口',
     hint: '入試頻出の重要単語',
-    explanation: '①environment（環境）：environmental problem（環境問題）\n②tradition（伝統）：traditional（伝統的な）\n③population（人口）：The population of Japan（日本の人口）',
+    explanation:
+      '【何を聞かれているか】\nenvironment・tradition・populationという3つの英単語の意味を答える語彙問題。\n\n【なぜこれらの単語が重要なのか】\nenvironment（環境）、tradition（伝統）、population（人口）は、社会問題や文化について書かれた英文でよく登場する、入試頻出の重要単語。\n\n【ポイント1】environmentの意味と関連語を確認する\nenvironment＝環境。environmental problem＝環境問題、のように形容詞形environmentalとセットで覚える。\n\n【ポイント2】traditionの意味と関連語を確認する\ntradition＝伝統。traditional＝伝統的な、という形容詞形とセットで覚える。\n\n【ポイント3】populationの意味と使い方を確認する\npopulation＝人口。"The population of Japan"（日本の人口）のように、"the population of〜"の形でよく使われる。\n\n【答え】\n①環境 ②伝統 ③人口\n\n【確かめ】\nそれぞれの単語を実際の例文（environmental problem, traditional culture, population of Japanなど）に当てはめて、意味が通ることを確認する。\n\n【よくあるまちがい】\ntradition（名詞：伝統）とtraditional（形容詞：伝統的な）を混同してしまうミス。名詞と形容詞の形の違いに注意する。\n\n【ここが絶対】\nenvironment・tradition・populationは、それぞれ関連する形容詞形（environmental・traditional）とセットで覚えておくと、長文読解でも役立つ。',
   },
   {
     id: 'kaimei_eigo_05', subject: 'eigo', difficulty: 'advanced',
@@ -271,7 +275,8 @@ export const kaimeiQuestions: Question[] = [
     question: '次の英文の下線部の意味を答えなさい。「I have been to Kyoto twice.」',
     answer: '私は京都に2回行ったことがあります。',
     hint: '現在完了形（経験）の文',
-    explanation: '「have been to ～」は「～に行ったことがある」という経験を表す現在完了形。「twice」は「2回」。「I have been to ~」はI went to ~ and came back（行って帰ってきた）というニュアンス。',
+    explanation:
+      '【何を聞かれているか】\n"I have been to Kyoto twice."という文の下線部（現在完了形の部分）の意味を答える問題。\n\n【なぜhave been toが「行ったことがある」という意味になるのか】\n"have been to〜"は「〜に行ったことがある」という経験を表す現在完了形の決まった表現。「行って、そして戻ってきた」というニュアンスを含む。\n\n【ポイント1】"have been to〜"の意味を確認する\n"have been to Kyoto"＝「京都に行ったことがある」。\n\n【ポイント2】"twice"の意味を確認する\n"twice"＝「2回」。once（1回）、twice（2回）、three times（3回）と数える。\n\n【ポイント3】"have been to"と"have gone to"の違いを確認する\n"have been to〜"は行って戻ってきた経験、"have gone to〜"は「行ってしまって今そこにいる」という意味になる。\n\n【答え】\n私は京都に2回行ったことがあります。\n\n【確かめ】\n"have been to"を「行ったことがある」、"twice"を「2回」と訳して、文全体の意味が自然になっているか確認する。\n\n【よくあるまちがい】\n"have been to"を「〜にいたことがある」のような別の意味で捉えてしまうミス。「行って戻ってきた経験」というニュアンスを正確に理解する。\n\n【ここが絶対】\n"have been to〜"＝〜に行ったことがある、という現在完了形（経験）の決まった表現としてセットで覚える。',
   },
   {
     id: 'kaimei_eigo_06', subject: 'eigo', difficulty: 'advanced',
@@ -536,15 +541,18 @@ export const toinQuestions: Question[] = [
     question: '次の2文を関係代名詞を使って1文にしなさい。「I have a friend. She lives in Tokyo.」',
     answer: 'I have a friend who lives in Tokyo.',
     hint: '先行詞が人（a friend）なのでwhoを使う',
-    explanation: '関係代名詞whoは先行詞が「人」のとき使う。「a friend who lives in Tokyo」＝「東京に住んでいる友人」。関係代名詞節（who lives in Tokyo）が先行詞（a friend）を後ろから修飾する。',
+    explanation:
+      '【何を聞かれているか】\n2つの文を関係代名詞を使って1文にする問題。\n\n【なぜwhoを使うのか】\n先行詞a friend（人）を、後ろの文"She lives in Tokyo."で説明したいとき、Sheの代わりに主格の関係代名詞whoを使って2つの文をつなげる。\n\n【ポイント1】先行詞を確認する\n先行詞はa friend（人）。\n\n【ポイント2】文をつなげる手順を確認する\n"She lives in Tokyo."の"She"をwhoに変え、"a friend"の直後に続ける。\n\n【ポイント3】関係代名詞節の働きを確認する\n"who lives in Tokyo"（東京に住んでいる）が、a friendを後ろから修飾する形容詞のような働きをする。\n\n【答え】\nI have a friend who lives in Tokyo.\n\n【確かめ】\n"who"の後ろが"lives in Tokyo"という、主語が欠けた文になっているか確認する。\n\n【よくあるまちがい】\n先行詞が人であることを確認せずに、物に使うwhichを選んでしまうミス。\n\n【ここが絶対】\n先行詞が人で主格のときはwhoを使う。「who＋動詞」の形でa friendを後ろから修飾する。',
   },
   {
     id: 'toin_eigo_04', subject: 'eigo', difficulty: 'advanced',
     course: 'toin', examType: 'chugaku',
-    question: '次の英作文の誤りを2か所見つけて直しなさい。「She didn\'t went to school yesterday because she was sick.」',
+    question:
+      '次の英作文の誤りを1か所見つけて直しなさい。「She didn\'t went to school yesterday because she was sick.」',
     answer: 'She didn\'t go to school yesterday because she was sick.',
     hint: 'didn\'tの後の動詞の形に注目',
-    explanation: '助動詞did（過去形の否定）の後の動詞は原形にする。「didn\'t went」→「didn\'t go」が正しい。「was sick」は正しい。修正箇所：went → go',
+    explanation:
+      '【何を聞かれているか】\n"She didn\'t went to school yesterday because she was sick."という英文の誤りを1か所見つけて直す問題。\n\n【なぜdidn\'tの後ろは原形にするのか】\ndidn\'t（did notの短縮形）はすでに過去の否定を表しているので、その後ろの動詞はもう一度過去形にする必要がなく、原形を使うという決まりがある。\n\n【ポイント1】didn\'tの後ろの形を確認する\ndidn\'t（助動詞did+not）の後ろの動詞は原形にする。"didn\'t went"は"went"がすでに過去形になっているため誤り。\n\n【ポイント2】正しい形を確認する\n"didn\'t go"が正しい形。wentではなくgo（原形）を使う。\n\n【ポイント3】他の部分が正しいことを確認する\n"because she was sick"（病気だったので）の部分はすでに正しい形。\n\n【答え】\nShe didn\'t go to school yesterday because she was sick.\n\n【確かめ】\n"didn\'t"の後ろが原形の"go"になっているか確認する。\n\n【よくあるまちがい】\n過去のことだからと、didn\'tの後ろにも過去形（went）を重ねて使ってしまうミス。didn\'tがすでに過去を表しているので、後ろは原形にする。\n\n【ここが絶対】\ndidn\'t（did not）の後ろの動詞は必ず原形にする。過去の否定を二重に表さないことを覚えておく。',
   },
   {
     id: 'toin_eigo_05', subject: 'eigo', difficulty: 'advanced',
@@ -552,7 +560,8 @@ export const toinQuestions: Question[] = [
     question: '次の単語を使って意味の通る英文を作りなさい。（playing / is / in / the park / Ken）',
     answer: 'Ken is playing in the park.',
     hint: '現在進行形（is ＋ -ing）の文',
-    explanation: '現在進行形は「be動詞 ＋ 動詞ing」の形。主語Ken、動詞is playing（遊んでいる）、場所in the park（公園で）。「Ken is playing in the park.（ケンは公園で遊んでいます）」',
+    explanation:
+      '【何を聞かれているか】\n与えられた単語を使って、意味の通る英文を作る問題。\n\n【なぜ現在進行形にするのか】\n「今まさに公園で遊んでいる」という、今行われている最中の動作を表すには、現在進行形（be動詞＋動詞のing形）を使う。\n\n【ポイント1】現在進行形の公式を確認する\nbe動詞（am/is/are）＋動詞のing形。\n\n【ポイント2】主語とbe動詞を対応させる\n主語Ken（三人称単数）に対応するbe動詞はis。\n\n【ポイント3】語順を組み立てる\n主語（Ken）＋be動詞（is）＋動詞のing形（playing）＋場所（in the park）。\n\n【答え】\nKen is playing in the park.\n\n【確かめ】\n"is"と"playing"がセットで使われていること、また文全体が「ケンは公園で遊んでいる」という意味になっていることを確認する。\n\n【よくあるまちがい】\nbe動詞を省略して"Ken playing in the park."としてしまうミス。現在進行形には必ずbe動詞が必要。\n\n【ここが絶対】\n現在進行形＝be動詞＋動詞のing形。主語に合わせて正しいbe動詞（is/am/are）を選ぶ。',
   },
   {
     id: 'toin_eigo_06', subject: 'eigo', difficulty: 'advanced',
@@ -560,7 +569,8 @@ export const toinQuestions: Question[] = [
     question: '次の英文の意味を答え、使われている文法を説明しなさい。「This is the book that I bought last week.」',
     answer: '意味：これは私が先週買った本です。／文法：関係代名詞thatによる名詞修飾（先行詞：the book）',
     hint: '「that I bought last week」が前の名詞を修飾している',
-    explanation: '関係代名詞「that」は先行詞が物や人どちらでも使える。「the book that I bought last week」＝「私が先週買った本」。thatの後の節（I bought last week）が先行詞（the book）を説明している。',
+    explanation:
+      '【何を聞かれているか】\n"This is the book that I bought last week."という文の意味と、使われている文法を答える問題。\n\n【なぜthatが関係代名詞として使われているのか】\n"the book"（物）を、後ろの"I bought last week"（私が先週買った）という文で説明するために、関係代名詞thatが使われている。\n\n【ポイント1】関係代名詞thatの特徴を確認する\nthatは先行詞が人でも物でも使える便利な関係代名詞。\n\n【ポイント2】文の構造を確認する\n"the book"が先行詞で、"that I bought last week"が後ろからthe bookを説明する関係代名詞節。\n\n【ポイント3】節の中の役割を確認する\n"I bought (the book) last week"のように、the bookはboughtの目的語の位置にあるので、thatは目的格として使われている（省略も可能）。\n\n【答え】\n意味：これは私が先週買った本です。／文法：関係代名詞thatによる名詞修飾（先行詞：the book）\n\n【確かめ】\n"that I bought last week"が"the book"を正しく説明しているか、文全体の意味が「私が先週買った本」になっているか確認する。\n\n【よくあるまちがい】\nthatを接続詞の"that"（〜ということ）と混同してしまうミス。ここでのthatは名詞を修飾する関係代名詞として使われている。\n\n【ここが絶対】\n関係代名詞thatは先行詞が人でも物でも使える。「先行詞＋that＋説明する文」という形で名詞を後ろから修飾する。',
   },
 ];
 
@@ -806,7 +816,8 @@ export const kindaiQuestions: Question[] = [
     question: '次の日本語を英語に直しなさい。「彼女は英語だけでなく、フランス語も話します。」',
     answer: 'She speaks not only English but also French.',
     hint: '「～だけでなく…も」＝ not only ～ but also …',
-    explanation: '「not only A but also B」＝「AだけでなくBも」という相関接続詞。Aには英語（English）、Bにはフランス語（French）が入る。',
+    explanation:
+      '【何を聞かれているか】\n「彼女は英語だけでなく、フランス語も話します。」という日本語を英語にする問題。\n\n【なぜnot only A but also Bを使うのか】\n「AだけでなくBも」という日本語は、英語では"not only A but also B"という決まった相関接続詞（セットで使う接続詞）で表す。\n\n【ポイント1】"not only A but also B"の形を確認する\nnot only（Aだけでなく）＋A＋but also（Bも）＋B、という形で2つの要素をつなげる。\n\n【ポイント2】AとBに入る語を確認する\n「英語だけでなく」のA＝English、「フランス語も」のB＝French。\n\n【ポイント3】文を組み立てる\n"She speaks not only English but also French."＝「彼女は英語だけでなく、フランス語も話す」。\n\n【答え】\nShe speaks not only English but also French.\n\n【確かめ】\n"not only"の後にEnglish、"but also"の後にFrenchが来ていて、日本語の「〜だけでなく…も」の順番と一致しているか確認する。\n\n【よくあるまちがい】\nAとBの順番を逆にしてしまうミス。「英語だけでなく」がnot only、「フランス語も」がbut alsoに対応することを覚えておく。\n\n【ここが絶対】\n"not only A but also B"＝「AだけでなくBも」という相関接続詞をセットで覚える。',
   },
   {
     id: 'kindai_eigo_03', subject: 'eigo', difficulty: 'advanced',
@@ -814,7 +825,8 @@ export const kindaiQuestions: Question[] = [
     question: '次の英文の意味を答えなさい。「If it rains tomorrow, I will stay home.」',
     answer: 'もし明日雨が降ったら、私は家にいます。',
     hint: 'If節は仮定・条件を表す',
-    explanation: 'If節（条件節）：「If ＋ 現在形, 主節 ＋ will ＋ 動詞原形」。現在形で未来の条件を表す（If節の中ではwillを使わない）。「if it rains」＝「もし雨が降ったら」',
+    explanation:
+      '【何を聞かれているか】\n"If it rains tomorrow, I will stay home."という文の意味を答える問題。\n\n【なぜif節の中が現在形なのか】\n英語では、if（もし〜なら）で始まる条件節の中は、未来のことを表していても現在形を使うという決まりがある。\n\n【ポイント1】If節（条件節）の役割を確認する\n"If it rains tomorrow"＝「もし明日雨が降ったら」という、これから起こるかもしれない条件を表す。\n\n【ポイント2】主節の形を確認する\n主節では"I will stay home"のようにwillを使い、「〜するつもりだ」という未来の行動を表す。\n\n【ポイント3】If節では現在形を使うことを確認する\ntomorrow（明日）という未来のことでも、if節の中の動詞はrains（現在形）を使う。willはif節の中では使わない。\n\n【答え】\nもし明日雨が降ったら、私は家にいます。\n\n【確かめ】\n"If it rains"の部分が現在形になっていること、また主節の"I will stay home"が未来の行動を表していることを確認する。\n\n【よくあるまちがい】\nif節の中の"rains"を、未来のことだからと"will rain"に変えてしまうと考えるミス。if節の中では未来のことでも現在形を使う。\n\n【ここが絶対】\n"If＋現在形, 主語＋will＋動詞の原形"＝「もし〜なら…するだろう」という条件文の公式をセットで覚える。',
   },
   {
     id: 'kindai_eigo_04', subject: 'eigo', difficulty: 'advanced',
@@ -822,7 +834,8 @@ export const kindaiQuestions: Question[] = [
     question: '反意語（反対の意味の語）を答えなさい。①hot ②heavy ③early',
     answer: '①cold ②light ③late',
     hint: '基本的な形容詞の反対語',
-    explanation: '反意語：\n①hot（熱い）↔ cold（冷たい）\n②heavy（重い）↔ light（軽い）\n③early（早い）↔ late（遅い）\nthick↔thin（厚い↔薄い）、tall↔short（高い↔低い）も重要。',
+    explanation:
+      '【何を聞かれているか】\nhot・heavy・earlyという3つの形容詞の反意語（反対の意味の語）を答える問題。\n\n【なぜ反意語をセットで覚えるのか】\n形容詞の反意語は、比較の文や説明文でよく問われる基本語彙。ペアで覚えておくと、片方を見ればもう片方も思い出せる。\n\n【ポイント1】hotの反意語を確認する\nhot（熱い）↔cold（冷たい）。\n\n【ポイント2】heavyの反意語を確認する\nheavy（重い）↔light（軽い）。lightには「明るい」という別の意味もあることに注意。\n\n【ポイント3】earlyの反意語を確認する\nearly（早い）↔late（遅い）。\n\n【答え】\n①cold ②light ③late\n\n【確かめ】\nそれぞれの単語をhot/cold、heavy/light、early/lateのペアで確認し、対応関係が正しいか見直す。\n\n【よくあるまちがい】\nheavyの反意語を「明るい」という意味と混同してしまうミス。lightには「軽い」と「明るい」の2つの意味があるので、文脈で判断する。\n\n【ここが絶対】\n形容詞の反意語（hot⇔cold、heavy⇔light、early⇔late）は、thick⇔thin（厚い⇔薄い）、tall⇔short（高い⇔低い）などとあわせてペアで覚える。',
   },
   {
     id: 'kindai_eigo_05', subject: 'eigo', difficulty: 'advanced',
@@ -830,7 +843,8 @@ export const kindaiQuestions: Question[] = [
     question: '次の文を受動態（受け身）に書き換えなさい。「Many people use this room.」',
     answer: 'This room is used by many people.',
     hint: '受動態：be動詞 ＋ 過去分詞 ＋ by ～',
-    explanation: '受動態の形：「主語 ＋ be動詞 ＋ 過去分詞 ＋ by ＋ 動作主」\n能動態のO（this room）が受動態の主語になる。\nuse → used（過去分詞）\n「This room is used by many people.（この部屋は多くの人に使われています）」',
+    explanation:
+      '【何を聞かれているか】\n"Many people use this room."という能動態の文を受動態に書き換える問題。\n\n【なぜ受動態にするのか】\n能動態の目的語（this room）を主語にして、「この部屋は多くの人に使われている」という視点で文を作りたいときに、受動態（be動詞＋過去分詞）を使う。\n\n【ポイント1】受動態の公式を確認する\n主語＋be動詞＋過去分詞＋by＋動作主。\n\n【ポイント2】主語を入れ替える\n能動態の目的語this roomが、受動態の主語になる。\n\n【ポイント3】動詞を過去分詞にする\nuseの過去分詞はused。\n\n【答え】\nThis room is used by many people.\n\n【確かめ】\n"is used"という「be動詞＋過去分詞」のセットになっていること、また元の目的語this roomが主語になっていることを確認する。\n\n【よくあるまちがい】\n過去分詞usedをそのままの形（use）にしてしまうミス。受動態には必ず過去分詞を使う。\n\n【ここが絶対】\n受動態の公式：主語＋be動詞＋過去分詞＋by＋動作主。能動態の目的語が受動態の主語になる。',
   },
   {
     id: 'kindai_eigo_06', subject: 'eigo', difficulty: 'advanced',
@@ -1077,7 +1091,8 @@ export const kansaiHokuyoQuestions: Question[] = [
     choices: ['① No, I can\'t.', '② Sure, what can I do for you?', '③ I\'m fine, thank you.', '④ Yes, it is.'],
     answer: '② Sure, what can I do for you?',
     hint: '助けを求められたときの自然な返答',
-    explanation: '「Excuse me, can you help me?（すみません、助けていただけますか？）」への自然な返答は「Sure, what can I do for you?（もちろん、どんなご用件ですか？）」。「What can I do for you?」は「何かお手伝いできますか？」という丁寧な表現。',
+    explanation:
+      '【何を聞かれているか】\n「すみません、助けていただけますか？」という依頼に対する、自然な返答を選ぶ問題。\n\n【なぜSure, what can I do for you?が自然なのか】\n"Can you help me?"（助けてもらえますか）という依頼には、快く引き受ける返答が自然につながる。"Sure"（もちろん）で快諾し、"What can I do for you?"（どんなご用件ですか）で相手の要望を尋ねる、という会話の流れになる。\n\n【ポイント1】依頼への返答パターンを確認する\n依頼（Can you ～?）には、快諾（Sure/Of course）＋詳しく聞く表現（What can I do for you?）が自然な流れ。\n\n【ポイント2】他の選択肢を消去する\n①「No, I can\'t.」は依頼を断る返答で不自然。③「I\'m fine, thank you.」はHow are you?への返答で文脈に合わない。④「Yes, it is.」はbe動詞の疑問文への返答で、can you ～?という助動詞の疑問文には合わない。\n\n【ポイント3】"What can I do for you?"の意味を確認する\n「何かお手伝いできますか？」という、相手の用件を尋ねる丁寧な表現。\n\n【答え】\n② Sure, what can I do for you?\n\n【確かめ】\n選んだ返答が"Can you help me?"という依頼に対して、快く応じる自然な流れになっているか確認する。\n\n【よくあるまちがい】\n"Yes, it is."のように、疑問文の形（be動詞かcanか）を確認せずに答えてしまうミス。canを使った疑問文には、canを使った答え方（Yes, I can. / No, I can\'t.）か、快諾の表現で答える。\n\n【ここが絶対】\n依頼（Can you ～?）への自然な返答は、快諾の表現（Sure/Of course）とセットで覚えておく。',
   },
   {
     id: 'kansai_hokuyo_eigo_02', subject: 'eigo', difficulty: 'advanced',
@@ -1093,7 +1108,8 @@ export const kansaiHokuyoQuestions: Question[] = [
     question: '次の（　）に適切な前置詞を入れなさい。①I go to school ( ) foot. ②She was born ( ) April. ③He studies ( ) night.',
     answer: '①on ②in ③at',
     hint: '前置詞のルールを確認する',
-    explanation: '前置詞の使い方：\n①on foot：徒歩で（交通手段のonは乗り物以外→on foot, on bike）\n②in April：月には「in」を使う（in January, in summer等）\n③at night：夜に（時間帯には「at」→at noon, at night）',
+    explanation:
+      '【何を聞かれているか】\n"go to school","was born","studies"という3つの文の空欄に、正しい前置詞を入れる問題。\n\n【なぜ前置詞が使い分けられているのか】\n英語の前置詞は、交通手段・月・時間帯など、後ろに続く語の種類によって決まった使い方がある。\n\n【ポイント1】徒歩を表す前置詞を確認する\n"on foot"（徒歩で）。交通手段を表す前置詞はon（on foot, on a busなど、乗り物にはbyも使う）。\n\n【ポイント2】月を表す前置詞を確認する\n"in April"（4月に）。月・季節・年にはinを使う。\n\n【ポイント3】時間帯を表す前置詞を確認する\n"at night"（夜に）。時刻・時間帯にはatを使う（at noon, at nightなど）。\n\n【答え】\n①on ②in ③at\n\n【確かめ】\nそれぞれの前置詞を実際の文に当てはめ、"on foot"、"in April"、"at night"という決まった組み合わせになっているか確認する。\n\n【よくあるまちがい】\n"in foot"や"on April"のように、前置詞を交換して使ってしまうミス。前置詞は決まった組み合わせとしてセットで覚える。\n\n【ここが絶対】\n交通手段はon/by、月・季節・年はin、時刻・時間帯はatという前置詞の基本ルールをセットで覚える。',
   },
   {
     id: 'kansai_hokuyo_eigo_04', subject: 'eigo', difficulty: 'advanced',
@@ -1101,7 +1117,8 @@ export const kansaiHokuyoQuestions: Question[] = [
     question: '次の英文の（　）に入る語を答えなさい。「He is taller ( ) his brother.」',
     answer: 'than',
     hint: '比較級の後ろに来る接続詞',
-    explanation: '比較級（-er形）の後には「than（〜より）」を使う。「taller than〜」＝「〜より背が高い」。「He is taller than his brother.（彼は弟より背が高い）」',
+    explanation:
+      '【何を聞かれているか】\n"He is taller ( ) his brother."という文の空欄に入る、正しい語を答える問題。\n\n【なぜthanを使うのか】\n比較級（-er形の形容詞）を使って2つのものを比べるときは、「〜より」という意味を表すthanとセットで使うという決まりがある。\n\n【ポイント1】比較級の公式を確認する\n比較級（-er）＋than＋比較する相手。\n\n【ポイント2】文を組み立てる\n"He is taller than his brother."＝「彼は弟より背が高い」。\n\n【ポイント3】比較級を作る語尾のルールを確認する\ntallのような短い形容詞は、語尾に-erをつけて比較級を作る。\n\n【答え】\nthan\n\n【確かめ】\n"taller"（比較級）の後ろに"than"が続いていることを確認する。\n\n【よくあるまちがい】\nthanの代わりにto やasを使ってしまうミス。比較級の後には必ずthanを使う。\n\n【ここが絶対】\n比較級（-er形）＋than＝「〜より…だ」という組み合わせをセットで覚える。',
   },
   {
     id: 'kansai_hokuyo_eigo_05', subject: 'eigo', difficulty: 'advanced',

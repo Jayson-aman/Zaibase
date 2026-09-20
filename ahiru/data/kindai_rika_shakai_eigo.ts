@@ -267,19 +267,7 @@ export const kindaiEigo: Question[] = [
       '(3) "I\'ve never been to ～" = 〜に行ったことがない（現在完了・経験の否定）。\n' +
       '(4) "Take the express train from ～ and get off at ～" = ～から急行に乗り、～で降りる。',
     explanation:
-      '■問(1)\n' +
-      '"I went to the aquarium with my family on Saturday." より、\n' +
-      '土曜日に家族と水族館へ行きました。\n\n' +
-      '■問(2)\n' +
-      '"the best part" は「最高の部分・一番の見どころ」を意味します。\n' +
-      'イルカショーが（その日の）最高のハイライトでした。\n\n' +
-      '■問(3)\n' +
-      '"I\'ve never been to that aquarium." は現在完了形の経験の否定文。\n' +
-      '"have been to ～" = 〜に行ったことがある → "have never been to ～" = 〜に行ったことがない\n\n' +
-      '■問(4)\n' +
-      '"Take the express train from Namba Station" = 難波駅から急行電車に乗る\n' +
-      '"get off at Kaigan Station" = 海岸駅で降りる\n' +
-      '"It takes about thirty minutes by train" = 電車で約30分かかる',
+      '【何を聞かれているか】\nKenjiとEmmaの会話文を読んで、内容に関する4つの問いに日本語で答える読解問題。\n\n【なぜ会話の流れを追うのか】\n会話文では、話題（週末の出来事→水族館の場所→行き方）が順番に進んでいくので、設問もその順番に対応していることが多い。\n\n【ポイント1】問(1)：週末の出来事を確認する\n"I went to the aquarium with my family on Saturday."（土曜日に家族と水族館に行った）から答えがわかる。\n\n【ポイント2】問(2)・問(3)：感想と経験の表現を確認する\n"The dolphin show was the best part!"（イルカショーが一番よかった）は感想、"I\'ve never been to that aquarium."（その水族館に行ったことがない）は現在完了形の経験の否定。\n\n【ポイント3】問(4)：道順の表現を確認する\n"Take the express train from Namba Station and get off at Kaigan Station."（難波駅から急行に乗り、海岸駅で降りる）という道案内の表現から、行き方をまとめる。\n\n【答え】\n■問(1)　土曜日に家族と水族館に行った。\n■問(2)　イルカショーが一番よかった（最高の見どころだった）。\n■問(3)　I\'ve never been to that aquarium.\n■問(4)　難波駅から急行電車に乗り、海岸駅で降りる。（約30分かかる。）\n\n【確かめ】\nそれぞれの答えが、本文中の該当する発言（"I went to..."、"the best part"、"I\'ve never been to..."、"Take the express train..."）と対応しているか確認する。\n\n【よくあるまちがい】\n問(3)で「行ったことがない」という内容を自分の言葉で書いてしまうミス。本文中の英文をそのまま抜き出す設問なので、原文の表現を正確に写す必要がある。\n\n【ここが絶対】\n会話文の読解は、話題の流れ（週末の出来事→場所→行き方）に沿って、各設問に対応する発言を順番に探す。',
   },
 
   // ================================================================
@@ -388,28 +376,6 @@ export const kindaiEigo: Question[] = [
       '(4) ① "be interested in"（〜に興味がある）。② 三人称単数→doesn\'t。③ by bus（乗り物前に冠詞なし）。\n' +
       '(5) 最上級の書き換え：No other ～ as…as。It is ～ to V → V-ing is ～。',
     explanation:
-      '■問(1)\n' +
-      '① enjoyは動名詞（ing形）を目的語にとる：enjoy swimming ✓\n' +
-      '② wantは不定詞（to＋動詞）を目的語にとる：want to become ✓\n' +
-      '③ high（1音節）の比較級はhigher（-er形）：more highは誤り ✓\n\n' +
-      '■問(2)\n' +
-      '① 現在進行形：He is playing the guitar now.\n' +
-      '② 一般動詞過去の疑問文：Did they visit Kyoto last year?\n' +
-      '③ 現在完了・経験の肯定文：I have eaten sushi three times.\n' +
-      '　（"three times" = 3回。neverをthree timesに変え否定→肯定へ）\n\n' +
-      '■問(3)\n' +
-      '① 比較級：tall → taller than ～\n' +
-      '② 最上級：difficult（多音節）→ the most difficult（in＋場所）\n' +
-      '③ be good at ～ing：前置詞atの後は動名詞（playing）\n\n' +
-      '■問(4)\n' +
-      '① interesting（もの・ことが主語で「興味深い」）vs interested（人が主語で「興味を持っている」）\n' +
-      '　"I am interested in science."（私は理科に興味がある）が正しい。\n' +
-      '② he は三人称単数現在 → doesn\'t（doesnt\'t + 動詞の原形）\n' +
-      '③ 交通手段の前置詞byの後は無冠詞：by bus / by train / by car\n\n' +
-      '■問(5)\n' +
-      '① 最上級⇔原級の書き換え：\n' +
-      '　"Tom is the tallest" = "No other boy is as tall as Tom"\n' +
-      '② It is ～ to V ⇔ V-ing is ～（形式主語の書き換え）：\n' +
-      '　"It is important to learn" = "Learning English is important"',
+      '【何を聞かれているか】\n不定詞・動名詞・比較・時制・前置詞・関係代名詞など、中学英文法の総合的な知識を問う5つの大問。\n\n【なぜ動詞ごとに後ろの形が決まっているのか】\nenjoyやwantのような動詞は、それぞれ「後ろに動名詞を取る」「後ろに不定詞を取る」という決まりがあり、これは暗記するしかないルール。比較級・受動態・関係代名詞などの他の文法項目も、それぞれの公式に従って形を決める。\n\n【ポイント1】問(1)：動詞の後ろの形と比較級\nenjoyは動名詞（swimming）、wantは不定詞（to become）を取る。high（1音節の短い形容詞）の比較級は-erをつけてhigher（more highとはしない）。\n\n【ポイント2】問(2)：時制の書き換え\n現在進行形はbe動詞＋動詞ing（He is playing the guitar now.）、過去の疑問文はDid＋主語＋動詞の原形（Did they visit Kyoto last year?）、現在完了はneverをthree timesに変えて肯定文にする（I have eaten sushi three times.）。\n\n【ポイント3】問(3)〜問(5)：比較・熟語・書き換え\n比較級はtaller than、最上級はthe most difficult、be good at ～ing（〜が得意）という熟語、最上級⇔原級の書き換え（No other ～ as…as）、形式主語It is ～ to V ⇔ V-ing is ～、という定番の書き換えパターンを使う。\n\n【答え】\n■問(1)　① swimming　② to become　③ higher\n■問(2)　① He is playing the guitar now.　② Did they visit Kyoto last year?　③ I have eaten sushi three times.\n■問(3)　① taller / than　② most / difficult　③ at / playing\n■問(4)　① interesting → interested　② don\'t → doesn\'t　③ by a bus → by bus\n■問(5)　① as / tall / as　② Learning\n\n【確かめ】\n問(4)のように誤り探しの問題は、直しただけで終わらせず、なぜその形が正しいのか（interested＝人が興味を持つ、doesn\'t＝三人称単数、by bus＝交通手段は無冠詞）を必ず自分の言葉で説明できるか確認する。\n\n【よくあるまちがい】\ninteresting（もの・ことが主語で「興味深い」）とinterested（人が主語で「興味を持っている」）を混同してしまうミス。主語が人か物かで使い分ける。\n\n【ここが絶対】\n不定詞・動名詞は動詞ごとにセットで覚える、比較級・最上級は音節の長さで-er/-estかmore/mostかが決まる、交通手段のbyの後は無冠詞、という基本ルールを1つずつ確実にする。',
   },
 ];
