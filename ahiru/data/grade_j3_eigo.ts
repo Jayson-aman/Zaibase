@@ -362,7 +362,7 @@ export const gradeJ3EigoQuestions: Question[] = [
     choices: ['whose', 'which', 'who', 'that'],
     hint: '「その家の屋根」＝家とroof（屋根）の所有関係を表す関係代名詞を選ぶ。',
     explanation:
-      'the house（家）とroof（屋根）の間には「家の屋根」という所有の関係がある。このように先行詞と後ろの名詞の間に所有関係があるときは所有格の関係代名詞whoseを使う。whoseのあとには名詞（roof）がそのまま続く。\n答え：whose（これは屋根が青い家です。）',
+      '【何を聞かれているか】\n"This is the house (　) roof is blue."の空欄に入る最も適切な関係代名詞を選ぶ問題。\n\n【なぜwhoseを使うのか】\nthe house（家）とroof（屋根）の間には「家の屋根」という所有の関係があり、先行詞と後ろの名詞の間に所有関係があるときは所有格の関係代名詞whoseを使う。\n\n【ポイント1】所有の関係を確認する\n「家」と「（その家の）屋根」という所有関係。\n\n【ポイント2】whoseの後の形を確認する\nwhoseの後には名詞（roof）がそのまま続く（冠詞はつかない）。\n\n【ポイント3】他の選択肢を消去する\nwhich・who・thatはいずれも所有格ではなく、主格・目的格の関係代名詞なので、この文脈には合わない。\n\n【答え】\nwhose（これは屋根が青い家です。）\n\n【確かめ】\nwhoseの後にroof（名詞）が直接続いているか確認する。\n\n【よくあるまちがい】\n所有関係があるのにwhichを選んでしまうミス。\n\n【ここが絶対】\nwhoseは「〜の」という所有を表し、あとに冠詞なしで名詞が続くと覚える。',
     memoryTip: 'whoseは「〜の」という所有を表し、あとに冠詞なしで名詞が続く。',
   },
 
@@ -378,7 +378,7 @@ export const gradeJ3EigoQuestions: Question[] = [
     choices: ['what', 'which', 'whose', 'how'],
     hint: '「何時か」とたずねる疑問詞と、疑問文が文の中に組みこまれたときの語順に注意する。',
     explanation:
-      '「何時ですか」はふつうWhat time is it?だが、この文のように別の文の中に組みこまれる（間接疑問文になる）と、語順が〈疑問詞＋主語＋動詞〉（what time it is）に変わる。\n答え：what（あなたは今何時か知っていますか。）',
+      '【何を聞かれているか】\n"Do you know (　) time it is?"の空欄に入る最も適切な語を選ぶ問題。\n\n【なぜwhatを使うのか】\n「何時ですか」はふつうWhat time is it?だが、この文のように別の文の中に組みこまれる（間接疑問文になる）ときも、疑問詞にはwhatを使う。\n\n【ポイント1】もとの疑問文を確認する\n"What time is it?"（何時ですか）。\n\n【ポイント2】間接疑問文の語順を確認する\n別の文の中に組みこまれると、語順が〈疑問詞＋主語＋動詞〉（what time it is）に変わる。\n\n【ポイント3】他の選択肢を消去する\nwhich・whose・howはいずれも「何時か」をたずねる疑問詞として合わない。\n\n【答え】\nwhat（あなたは今何時か知っていますか。）\n\n【確かめ】\nwhatの後がtime it is（普通の文の語順）になっているか確認する。\n\n【よくあるまちがい】\nis itのような疑問文の語順のまま組みこんでしまうミス。\n\n【ここが絶対】\n間接疑問文では、is itのような疑問文の語順ではなく、it isのように普通の文の語順になると覚える。',
     pitfall: '間接疑問文では、is it のような疑問文の語順ではなく、it isのように普通の文の語順になる。',
   },
   {
@@ -392,7 +392,7 @@ export const gradeJ3EigoQuestions: Question[] = [
     answer: "I don't know where she lives.",
     hint: '間接疑問文にするとdoesが消え、動詞は主語にあわせた形（lives）にもどる。',
     explanation:
-      '疑問文を別の文に組みこんで間接疑問文にするときは、〈疑問詞＋主語＋動詞〉の語順にする。does を使う疑問文だったが、間接疑問文にするとdoesはなくなり、動詞は主語She（3人称単数）にあわせてlivesの形にもどす。\n答え：I don\'t know where she lives.',
+      '【何を聞かれているか】\n"Where does she live?"を、"I don\'t know"に続く間接疑問文に書きかえる問題。\n\n【なぜdoesが消えるのか】\n疑問文を別の文に組みこんで間接疑問文にするときは、〈疑問詞＋主語＋動詞〉の語順にするため、doesは消え、動詞は主語にあわせた形（3人称単数現在形）にもどる。\n\n【ポイント1】もとの疑問文の語順を確認する\n"does she live"（疑問文の語順）。\n\n【ポイント2】間接疑問文の語順を確認する\n"where she lives"＝疑問詞where＋主語she＋動詞lives（3単現に戻す）。\n\n【ポイント3】完成した文を確認する\n"I don\'t know where she lives."という型になる。\n\n【答え】\nI don\'t know where she lives.\n\n【確かめ】\ndoesが消え、動詞がlives（3単現）になっているか確認する。\n\n【よくあるまちがい】\n"I don\'t know where does she live?"のように、doesを残したまま組み込んでしまうミス。\n\n【ここが絶対】\n間接疑問文ではdo/does/didは消え、動詞がもとの時制・人称にあわせた形にもどると覚える。',
     pitfall: '間接疑問文では do/does/did は消え、動詞がもとの時制・人称にあわせた形にもどる。',
   },
   {
@@ -424,7 +424,7 @@ export const gradeJ3EigoQuestions: Question[] = [
     ],
     hint: '間接疑問文の語順は〈疑問詞＋主語＋動詞〉。ふつうの疑問文の語順（is she）にしないこと。',
     explanation:
-      '間接疑問文はknowなどの動詞の目的語として疑問詞節が入る形で、語順は〈疑問詞＋主語＋動詞〉になる。whyのあとはshe is angryという普通の文の語順にする。is sheのような疑問文の語順にしたり、doesを加えたりしないことに注意。\n答え：I don\'t know why she is angry.',
+      '【何を聞かれているか】\n「彼女がなぜ怒っているのか分かりません。」の英訳として最も適切なものを選ぶ問題。\n\n【なぜ間接疑問文の語順にするのか】\n間接疑問文はknowなどの動詞の目的語として疑問詞節が入る形で、語順は〈疑問詞＋主語＋動詞〉になり、ふつうの疑問文の語順（is she）にはしない。\n\n【ポイント1】間接疑問文の語順を確認する\n"why she is angry"＝疑問詞why＋主語she＋動詞is（普通の文の語順）。\n\n【ポイント2】doesを加えないことを確認する\nbe動詞を使った文にdoesを加えるのは誤り。\n\n【ポイント3】他の選択肢を消去する\n"why is she angry"（倒置している）、"why she angry is"（語順が崩れている）、"why does she angry"（be動詞の文にdoesを使う誤り）はいずれも不適切。\n\n【答え】\nI don\'t know why she is angry.\n\n【確かめ】\nwhyの後がshe is angry（倒置しない普通の語順）になっているか確認する。\n\n【よくあるまちがい】\nwhyの後を疑問文の語順（is she angry）のままにしてしまうミス。\n\n【ここが絶対】\n間接疑問文＝「疑問詞+主語+動詞」の通常の語順、倒置しないと覚える。',
   },
 
   // ==================== 仮定法の基礎 ====================
@@ -439,7 +439,7 @@ export const gradeJ3EigoQuestions: Question[] = [
     choices: ['were', 'was', 'am', 'be'],
     hint: '現実とは異なることを仮定するとき（仮定法過去）は、be動詞は主語に関係なくwereを使うことが多い。',
     explanation:
-      '「もし私が鳥だったら」というのは現実にはありえない仮定（仮定法過去）。仮定法過去では、be動詞は主語がIやhe/sheのように単数でもwereを使うのが基本。これは現在の事実に反することを表す独特の形。\n答え：were（もし私が鳥だったら、あなたのところへ飛んでいけるのに。）',
+      '【何を聞かれているか】\n"If I (　) a bird, I could fly to you."の空欄に入る最も適切な語を選ぶ問題。\n\n【なぜwereを使うのか】\n「もし私が鳥だったら」という現実にはありえない仮定（仮定法過去）では、be動詞は主語がIやhe/sheのように単数でもwereを使うのが基本というルールがある。\n\n【ポイント1】仮定法過去の形を確認する\nIf+主語+were〜, 主語+could+動詞の原形〜。\n\n【ポイント2】主語Iでもwereになることを確認する\n仮定法過去のbe動詞は、主語が単数（I）であってもwereを使う。\n\n【ポイント3】他の選択肢を消去する\nwas（通常の過去形）、am（現在形）、be（原形）はいずれも仮定法過去のif節には合わない。\n\n【答え】\nwere（もし私が鳥だったら、あなたのところへ飛んでいけるのに。）\n\n【確かめ】\nif節がwereで始まり、主節がcould+原形（could fly）になっているか確認する。\n\n【よくあるまちがい】\n主語Iに合わせてwasを選んでしまうミス。\n\n【ここが絶対】\n仮定法過去のbe動詞は主語に関わらずwereを使う（If I were〜／If he were〜）と覚える。',
     memoryTip: '仮定法過去のbe動詞は主語に関わらずwereを使う（If I were 〜 / If he were 〜）。',
   },
   {
@@ -467,7 +467,7 @@ export const gradeJ3EigoQuestions: Question[] = [
     answer: 'If he were not busy, he could come with us.',
     hint: '現実とは異なる仮定（仮定法過去）：if節はwere not、主節はcouldを使う。',
     explanation:
-      '「実際は忙しいが、もし忙しくなければ」という現実に反する仮定は仮定法過去で表す。if節ではbe動詞をwere notにし（主語がheでもwereを使う）、主節では助動詞の過去形could（〜できるのに）を使う。\n答え：If he were not busy, he could come with us.',
+      '【何を聞かれているか】\n「もし彼が忙しくなければ、私たちと一緒に来られるのに。」を英語にする問題。\n\n【なぜwere notとcouldを使うのか】\n「実際は忙しいが、もし忙しくなければ」という現実に反する仮定は仮定法過去で表し、if節ではbe動詞をwere notにし、主節では助動詞の過去形could（〜できるのに）を使うという決まりがある。\n\n【ポイント1】if節の形を確認する\nif節のbe動詞は、主語がheでもwere notにする。\n\n【ポイント2】主節の形を確認する\n主節は"could+動詞の原形"（could come）にする。\n\n【ポイント3】完成した文を確認する\n"If he were not busy, he could come with us."という型になる。\n\n【答え】\nIf he were not busy, he could come with us.\n\n【確かめ】\nif節がwere not（主語heでもwere）、主節がcould+原形（could come）になっているか確認する。\n\n【よくあるまちがい】\n主語heに合わせてwasn\'tを使ってしまうミス。\n\n【ここが絶対】\n仮定法過去＝If+主語+were(not), 主語+could/would+動詞の原形、と型で覚える。',
   },
 
   // ==================== 英作文の基礎（条件英作文） ====================
@@ -484,7 +484,7 @@ export const gradeJ3EigoQuestions: Question[] = [
       'I have never forgotten my trip to Okinawa. I went there with my family two summers ago, and I have wanted to go back ever since.',
     hint: '「〜したことがある（経験）」「〜して以来ずっと（継続）」のように現在完了形を使う場面を考える。',
     explanation:
-      '模範解答例：I have never forgotten my trip to Okinawa. I went there with my family two summers ago, and I have wanted to go back ever since.（私は沖縄旅行を決して忘れたことがありません。2年前の夏に家族と行き、それ以来ずっとまた行きたいと思っています。）\n最初の文でhave never forgotten（経験）、最後の文でhave wanted（継続）と現在完了形を使っている。自分の解答が①現在完了形を正しく使えているか、②具体的な出来事が書けているか、③英文が2つ以上あるかを確認しよう。',
+      '【何を聞かれているか】\n今までに経験した中で一番印象に残っている出来事について、現在完了形を1つ以上使って2文以上の英語で書く問題。\n\n【なぜ現在完了形を使う場面を考えるのか】\n「〜したことがある（経験）」「〜して以来ずっと（継続）」のように、過去の出来事が現在にもつながりを持つ内容を表すときに現在完了形を使う。\n\n【ポイント1】経験を表す現在完了を確認する\n"I have never forgotten my trip to Okinawa."（経験・現在までの状態）。\n\n【ポイント2】継続を表す現在完了を確認する\n"I have wanted to go back ever since."（それ以来ずっと〜し続けている）。\n\n【ポイント3】確認すべき3つの観点を確認する\n①現在完了形を正しく使えているか、②具体的な出来事が書けているか、③英文が2つ以上あるか。\n\n【答え】\nI have never forgotten my trip to Okinawa. I went there with my family two summers ago, and I have wanted to go back ever since.\n\n【確かめ】\n自分の解答が、現在完了形（have/has+過去分詞）を少なくとも1つ含んでいるか確認する。\n\n【よくあるまちがい】\n出来事をすべて単純過去形だけで書いてしまい、現在完了形を1つも使わないミス。\n\n【ここが絶対】\n現在完了形は「経験」「継続」「完了・結果」のいずれかの意味で使う、と用法を意識して書く。',
     rubricPoints: [
       '現在完了形（have/has＋過去分詞）を少なくとも1つ正しく使えている',
       '具体的な出来事の内容が書かれている',
@@ -525,7 +525,7 @@ export const gradeJ3EigoQuestions: Question[] = [
       'I want to talk about a teacher who has influenced me the most. Her name is Ms. Tanaka, and she teaches English. She is a teacher who always encourages her students to try new things. I have learned a lot from her class since I was a first-year student. I have never forgotten the advice she gave me before my first speech contest. Thanks to her, I have become more confident about speaking English.',
     hint: '「〜する先生（関係代名詞）」「これまで〜してきた（現在完了形）」という表現を組み合わせて構成を考える。',
     explanation:
-      '模範解答例：I want to talk about a teacher who has influenced me the most. Her name is Ms. Tanaka, and she teaches English. She is a teacher who always encourages her students to try new things. I have learned a lot from her class since I was a first-year student. I have never forgotten the advice she gave me before my first speech contest. Thanks to her, I have become more confident about speaking English.\n1文目と3文目でwhoを使った関係代名詞、複数の文でhave learned／have never forgotten／have becomeのような現在完了形を使っている。自分の解答が①関係代名詞、②現在完了形をそれぞれ正しく使えているか、③先生についての具体的な内容があるか、④5文以上になっているかを確認しよう。',
+      '【何を聞かれているか】\n中学校生活で一番心に残っている先生について、関係代名詞と現在完了形をそれぞれ1つ以上使って5文以上の英語でスピーチ原稿を書く問題。\n\n【なぜ関係代名詞と現在完了形を組み合わせるのか】\n「〜する先生（関係代名詞）」で先生を説明し、「これまで〜してきた（現在完了形）」でその先生から受けた影響の積み重ねを表すことで、条件をすべて満たしながら内容の濃いスピーチになる。\n\n【ポイント1】関係代名詞の使用箇所を確認する\n"a teacher who has influenced me the most"、"a teacher who always encourages her students"のようにwhoを使う。\n\n【ポイント2】現在完了形の使用箇所を確認する\n"I have learned a lot"、"I have never forgotten"、"I have become more confident"のように複数箇所で使う。\n\n【ポイント3】確認すべき4つの観点を確認する\n①関係代名詞、②現在完了形をそれぞれ正しく使えているか、③先生についての具体的な内容があるか、④5文以上になっているか。\n\n【答え】\nI want to talk about a teacher who has influenced me the most. Her name is Ms. Tanaka, and she teaches English. She is a teacher who always encourages her students to try new things. I have learned a lot from her class since I was a first-year student. I have never forgotten the advice she gave me before my first speech contest. Thanks to her, I have become more confident about speaking English.\n\n【確かめ】\n自分の解答に、関係代名詞（who/which/that）と現在完了形（have/has+過去分詞）の両方が含まれているか確認する。\n\n【よくあるまちがい】\n条件の1つ（関係代名詞または現在完了形）だけを満たし、もう1つを書き忘れるミス。\n\n【ここが絶対】\n複数の文法条件が課される英作文では、書く前にどの文でどの条件を満たすかを決めてから書き始める。',
     rubricPoints: [
       '関係代名詞（who/which/thatなど）を少なくとも1つ正しく使えている',
       '現在完了形を少なくとも1つ正しく使えている',
@@ -548,7 +548,7 @@ export const gradeJ3EigoQuestions: Question[] = [
     choices: ['For over a year.', 'For six months.', 'For two years.', 'For a week.'],
     hint: '"A researcher explained that the robot has been tested in nursing homes for..." の部分に注目する。',
     explanation:
-      '本文中に "the robot has been tested in nursing homes for over a year"（そのロボットは1年以上介護施設でテストされている）とある。現在完了形has been testedが、過去に始まり今も続いている状態（テストされ続けていること）を表している。\n答え：For over a year.',
+      '【何を聞かれているか】\n本文を読み、そのロボットがどのくらいの期間介護施設でテストされているかを答える問題。\n\n【なぜ現在完了形has been testedに注目するのか】\n現在完了形has been testedは、過去に始まり今も続いている状態（テストされ続けていること）を表しており、その継続期間が本文に明示されている。\n\n【ポイント1】該当の一文を確認する\n本文に"the robot has been tested in nursing homes for over a year"（そのロボットは1年以上介護施設でテストされている）とある。\n\n【ポイント2】for over a yearの意味を確認する\n"for over a year"＝「1年以上」という継続期間を表す。\n\n【ポイント3】他の選択肢を消去する\n6か月、2年、1週間はいずれも本文の記述と一致しない。\n\n【答え】\nFor over a year.\n\n【確かめ】\n答えが本文中の具体的な期間（over a year）と一致しているか確認する。\n\n【よくあるまちがい】\n本文中の別の数字と混同してしまうミス。\n\n【ここが絶対】\n「どのくらいの期間か」を問う設問は、本文中のfor+期間という表現をそのまま探す。',
   },
   {
     id: 'grade_j3_eigo_37',
@@ -563,7 +563,7 @@ export const gradeJ3EigoQuestions: Question[] = [
     answer: 'ロボット（the robot）',
     hint: 'カンマではさまれた関係代名詞節（非制限用法）は、直前の名詞について補足説明を加える。',
     explanation:
-      'whichはカンマではさまれた関係代名詞節（非制限用法）を作っており、直前の名詞The robot（ロボット）について「柔らかい白い素材で覆われている」という補足説明を加えている。この用法のwhichは文全体ではなく、直前の名詞（先行詞）を指す。\n答え：ロボット（the robot）',
+      '【何を聞かれているか】\n"The robot, which was covered in soft white material, could carry small objects..."の中で、whichが何を指しているかを答える問題。\n\n【なぜ非制限用法のwhichが直前の名詞を指すのか】\nwhichはカンマではさまれた関係代名詞節（非制限用法）を作っており、この用法のwhichは文全体ではなく、直前の名詞（先行詞）について補足説明を加える働きをする。\n\n【ポイント1】非制限用法の形を確認する\nカンマ＋which〜、という形で補足説明を加える。\n\n【ポイント2】whichが指すものを確認する\n直前の名詞The robot（ロボット）を指す。\n\n【ポイント3】補足説明の内容を確認する\n「柔らかい白い素材で覆われている」という、ロボットについての追加情報。\n\n【答え】\nロボット（the robot）\n\n【確かめ】\n答えが、whichの直前にある名詞（the robot）になっているか確認する。\n\n【よくあるまちがい】\nwhichが文全体や、離れた位置にある別の名詞を指していると誤解してしまうミス。\n\n【ここが絶対】\nカンマではさまれた関係代名詞節（非制限用法）は、直前の名詞について補足説明を加えると覚える。',
   },
   {
     id: 'grade_j3_eigo_38',
@@ -636,7 +636,7 @@ export const gradeJ3EigoQuestions: Question[] = [
     ],
     hint: '最後の文 "By planning meals carefully and buying only what we need..." に注目する。',
     explanation:
-      '本文最後の文に "By planning meals carefully and buying only what we need, we can all make a small but important difference."（食事を注意深く計画し、必要な分だけを買うことで、小さいが重要な違いを生み出せる）とある。この内容を最も正しく言いかえているのは1番目の選択肢。他の選択肢は本文で述べられていない内容や、本文の主張と異なる内容である。\n答え：Plan meals carefully and buy only what is needed.',
+      '【何を聞かれているか】\n本文の最後の段落で、専門家が挙げている「一般の人にもできること」として最も適切なものを選ぶ問題。\n\n【なぜ最後の文に注目するのか】\n「一般の人にもできること」という設問の答えは、本文の最後の一文に直接述べられている。\n\n【ポイント1】該当の一文を確認する\n"By planning meals carefully and buying only what we need, we can all make a small but important difference."（食事を注意深く計画し、必要な分だけを買うことで、小さいが重要な違いを生み出せる）。\n\n【ポイント2】内容を整理する\n「食事を計画的に考え、必要な分だけ買う」という具体的な行動。\n\n【ポイント3】他の選択肢を消去する\n「地元農家を支えるためにもっと買う」「少し傷んだ野菜だけを買う」「外食を減らす」はいずれも本文で述べられていない、または本文の主張と異なる内容。\n\n【答え】\nPlan meals carefully and buy only what is needed.\n\n【確かめ】\n選んだ答えが、本文最後の「計画的に考え、必要な分だけ買う」という内容と一致しているか確認する。\n\n【よくあるまちがい】\n本文に出てこない一般論（地元農家を支える等）を正解だと誤解してしまうミス。\n\n【ここが絶対】\n「一般の人にもできること」を問う設問は、本文の結論部分（多くは最後の段落）に注目する。',
   },
 
   // ==================== 長文読解③ おばあちゃんの指輪 ====================
@@ -710,7 +710,7 @@ export const gradeJ3EigoQuestions: Question[] = [
     ],
     hint: '"The app... shows users the nearest places where they can refill a reusable water bottle for free." の部分に注目する。',
     explanation:
-      '本文に "shows users the nearest places where they can refill a reusable water bottle for free"（利用者に、無料でマイボトルに水を補充できる最寄りの場所を示す）とある。関係副詞whereの節（where they can refill 〜）が、places（場所）について説明している。\n答え：The nearest places to refill a reusable water bottle for free.',
+      '【何を聞かれているか】\nアプリEcoDropが利用者に何を示すかを答える問題。\n\n【なぜ関係副詞whereの節に注目するのか】\n本文の該当箇所には関係副詞whereの節（where they can refill〜）があり、これがplaces（場所）について具体的に説明している。\n\n【ポイント1】該当の一文を確認する\n本文に"shows users the nearest places where they can refill a reusable water bottle for free"（利用者に、無料でマイボトルに水を補充できる最寄りの場所を示す）とある。\n\n【ポイント2】whereの節の働きを確認する\n"where they can refill a reusable water bottle for free"がplacesを修飾し、どんな場所かを説明している。\n\n【ポイント3】他の選択肢を消去する\n「ボトル入りの水を売るスーパー」「1日に捨てられるペットボトルの数」「学校の近くの安いカフェ」はいずれも本文の内容と異なる。\n\n【答え】\nThe nearest places to refill a reusable water bottle for free.\n\n【確かめ】\n答えが「無料でマイボトルに水を補充できる場所」という本文の内容と一致しているか確認する。\n\n【よくあるまちがい】\n本文に出てこない別の情報（ペットボトルの廃棄数等）を答えてしまうミス。\n\n【ここが絶対】\nアプリの機能を問う設問は、shows/tells usersなどの直後に続く具体的な内容に注目する。',
   },
   {
     id: 'grade_j3_eigo_46',
@@ -751,7 +751,7 @@ export const gradeJ3EigoQuestions: Question[] = [
     ],
     hint: '"It has already been downloaded more than ten thousand times since it was released last spring." の部分に注目する。',
     explanation:
-      '本文に "It has already been downloaded more than ten thousand times since it was released last spring."（去年の春にリリースされて以来、すでに1万回以上ダウンロードされている）とある。現在完了形の受動態has been downloadedが、過去のリリース時から現在までの結果を表している。\n答え：More than ten thousand times.',
+      '【何を聞かれているか】\n本文によると、そのアプリが何回ダウンロードされたかを答える問題。\n\n【なぜ現在完了形の受動態has been downloadedに注目するのか】\n現在完了形の受動態has been downloadedは、過去のリリース時から現在までの結果（ダウンロードされた回数の累計）を表しており、その具体的な回数が本文に明示されている。\n\n【ポイント1】該当の一文を確認する\n本文に"It has already been downloaded more than ten thousand times since it was released last spring."（去年の春にリリースされて以来、すでに1万回以上ダウンロードされている）とある。\n\n【ポイント2】more than ten thousand timesの意味を確認する\n「1万回以上」という累計のダウンロード回数を表す。\n\n【ポイント3】他の選択肢を消去する\n1千回以上、100万回以上、ちょうど1万回はいずれも本文の記述と一致しない。\n\n【答え】\nMore than ten thousand times.\n\n【確かめ】\n答えが本文中の具体的な回数（more than ten thousand times）と一致しているか確認する。\n\n【よくあるまちがい】\n「ちょうど1万回」のように、以上（more than）というニュアンスを見落としてしまうミス。\n\n【ここが絶対】\n「何回〜されたか」を問う設問は、現在完了形の受動態を含む一文に注目し、more thanなどの語も正確に読み取る。',
   },
 
   // ==================== 長文読解⑤ 宿題をめぐる意見文 ====================
@@ -804,6 +804,6 @@ export const gradeJ3EigoQuestions: Question[] = [
       '毎晩大量の宿題を出す代わりに、生徒の興味に関連した、より短く意味のある課題を出すという考え方。',
     hint: '"instead of giving a large amount of homework every night, teachers could assign shorter, more meaningful tasks that connect to students\' interests." の部分に注目する。',
     explanation:
-      '本文に "instead of giving a large amount of homework every night, teachers could assign shorter, more meaningful tasks that connect to students\' interests"（毎晩大量の宿題を出す代わりに、生徒の興味に関連した、より短く意味のある課題を出すことができる）とある。that connect to students\' interestsは関係代名詞thatの節で、tasksを後ろから修飾している。\n答え：毎晩大量の宿題を出す代わりに、生徒の興味に関連した、より短く意味のある課題を出すという考え方。',
+      '【何を聞かれているか】\n教育の専門家たちが提案している「中間の道（a middle ground）」がどのようなものかを日本語で説明する問題。\n\n【なぜ「代わりに」という表現に注目するのか】\n本文には"instead of〜（〜する代わりに）"という表現があり、これが「今までのやり方」と「新しい提案」を対比させる形で、中間の道の具体的な内容を示している。\n\n【ポイント1】該当の一文を確認する\n本文に"instead of giving a large amount of homework every night, teachers could assign shorter, more meaningful tasks that connect to students\' interests"（毎晩大量の宿題を出す代わりに、生徒の興味に関連した、より短く意味のある課題を出すことができる）とある。\n\n【ポイント2】対比の内容を整理する\n「毎晩大量の宿題」（今までのやり方）と「短く意味のある課題」（新しい提案）の対比。\n\n【ポイント3】that節の働きを確認する\n"that connect to students\' interests"は関係代名詞thatの節で、tasksを後ろから修飾している。\n\n【答え】\n毎晩大量の宿題を出す代わりに、生徒の興味に関連した、より短く意味のある課題を出すという考え方。\n\n【確かめ】\n答えに「大量の宿題をやめる」ことと「短く意味のある課題を出す」ことの両方が含まれているか確認する。\n\n【よくあるまちがい】\n「宿題をなくす」という極端な内容に誤解してしまうミス（宿題自体はなくならず、量と質が変わる）。\n\n【ここが絶対】\n「中間の道」を問う設問は、2つの極端な立場を対比させたinstead of〜のような表現に注目する。',
   },
 ];
