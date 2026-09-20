@@ -1036,7 +1036,8 @@ export const schoolKokoSeinan: Question[] = [
     question: '次の2文を、関係代名詞を用いて1文にしなさい。\nI have a friend. She lives in Fukuoka.',
     answer: 'I have a friend who lives in Fukuoka.',
     hint: '2文目の主語"She"が1文目の"a friend"を指していることに注目し、主格の関係代名詞でつなごう。',
-    explanation: '2文目の"She"は1文目の"a friend"（人）を指しており、2文目の主語の役割をしている。したがって主格の関係代名詞whoを使い、"a friend who lives in Fukuoka"（福岡に住んでいる友人）という形にまとめられる。先行詞が人の場合はwho（またはthat）、物の場合はwhich（またはthat）を使う。',
+    explanation:
+      '【何を聞かれているか】\n"I have a friend. She lives in Fukuoka."という2文を、関係代名詞を用いて1文にする問題。\n\n【なぜ主格の関係代名詞whoを使うのか】\n2文目の主語Sheは1文目のa friend（人）を指しており、2文目の中でも主語の役割をしているため、人を先行詞とする主格の関係代名詞whoを使う。\n\n【ポイント1】Sheが指すものを確認する\n2文目のSheは1文目のa friendを指している。\n\n【ポイント2】関係代名詞の種類を確認する\n先行詞が人の場合はwho（またはthat）、物の場合はwhich（またはthat）を使う。\n\n【ポイント3】1文にまとめることを確認する\n"a friend who lives in Fukuoka"（福岡に住んでいる友人）というかたまりを作る。\n\n【答え】\nI have a friend who lives in Fukuoka.\n\n【確かめ】\n先行詞a friend（人）に対して、whoが使われている（whichになっていない）か確認する。\n\n【よくあるまちがい】\n先行詞が人であるにもかかわらず、物に使うwhichを選んでしまうミス。\n\n【ここが絶対】\n先行詞が人→who、物→which、どちらにも使えるthat、とセットで覚える。',
     pitfall: '先行詞が人であるにもかかわらず、物に使うwhichを選んでしまうミスがある。',
     memoryTip: '「先行詞が人→who／先行詞が物→which」「thatはどちらにも使える」という関係代名詞の基本の使い分けを整理しておこう。',
   },
@@ -1050,7 +1051,8 @@ export const schoolKokoSeinan: Question[] = [
     choices: ['standing', 'stood'],
     answer: 'standing',
     hint: '「窓のそばに立っている男の子」という能動の意味を表す分詞はどちらか考えよう。',
-    explanation: '「窓のそばに立っている」という能動的（自分から立っている）な意味を表すには現在分詞standingを使う。過去分詞stoodは「立たされる」という受動的な意味になり、この文脈には合わない。現在分詞は「〜している」という能動・進行の意味を表し、名詞を後ろから修飾することができる。',
+    explanation:
+      '【何を聞かれているか】\n"The boy ( standing / stood ) by the window is my brother."の( )内から適切な語を選ぶ問題。\n\n【なぜ現在分詞standingを使うのか】\n「窓のそばに立っている」は、その男の子が自分から立っているという能動的な意味なので、能動・進行を表す現在分詞standingを使う。\n\n【ポイント1】現在分詞の意味を確認する\n現在分詞（〜ing）＝「〜している」という能動・進行の意味を表し、名詞を後ろから修飾できる。\n\n【ポイント2】過去分詞との違いを確認する\n過去分詞stoodは「立たされる」という受動的な意味になってしまい、この文脈には合わない。\n\n【ポイント3】文全体の意味を確認する\n"The boy standing by the window is my brother."＝「窓のそばに立っている男の子は私の兄です」。\n\n【答え】\nstanding\n\n【確かめ】\n選んだ語が能動の意味を表す現在分詞（standing）であり、受動の意味を持つ過去分詞（stood）になっていないか確認する。\n\n【よくあるまちがい】\n「窓のそばに立たれた男の子」のように受動の意味だと誤解し、過去分詞stoodを選んでしまうミス。\n\n【ここが絶対】\n「名詞+現在分詞」＝「〜している名詞」（能動）、「名詞+過去分詞」＝「〜される名詞」（受動）という対応で覚える。',
     pitfall: '「窓のそばに立たれた男の子」のように受動の意味だと誤解し、過去分詞stoodを選んでしまう。',
     memoryTip: '「名詞＋現在分詞」は「〜している名詞」（能動）、「名詞＋過去分詞」は「〜される名詞」（受動）という基本の対応を覚えておこう。',
   },

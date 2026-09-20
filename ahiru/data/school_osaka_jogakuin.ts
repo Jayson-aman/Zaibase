@@ -891,7 +891,8 @@ export const schoolOsakaJogakuin: Question[] = [
     choices: ['am', 'is', 'are', 'be'],
     answer: 'am',
     hint: '主語が"I"のときのbe動詞を考えましょう。',
-    explanation: '主語が"I"のとき、be動詞は"am"を使います。"He/She/It"には"is"、複数や"you"には"are"を使います。',
+    explanation:
+      '【何を聞かれているか】\n"I ( ) a student."の空欄に入る正しいbe動詞を選ぶ問題。\n\n【なぜIにはamを使うのか】\nbe動詞は主語によって使い分けが決まっており、主語Iのときは必ずamを使うという決まりがある。\n\n【ポイント1】主語Iの場合を確認する\nI＋am。\n\n【ポイント2】他の主語との対応を確認する\nHe/She/Itにはis、複数やyouにはareを使う。\n\n【ポイント3】beが原形であることを確認する\nbe自体はam/is/areの原形であり、そのままの形では文中で主語の直後には使わない。\n\n【答え】\nam\n\n【確かめ】\n選んだ答えが主語Iに対応するam（isやareではない）になっているか確認する。\n\n【よくあるまちがい】\n主語がIなのにis やareを選んでしまうミス。\n\n【ここが絶対】\nI→am、He/She/It→is、You/複数→areという対応をセットで覚える。',
   },
   {
     id: 'osakajo_eigo_02',
@@ -915,7 +916,8 @@ export const schoolOsakaJogakuin: Question[] = [
     choices: ['Monday', 'Wednesday', 'January', 'Friday'],
     answer: 'January',
     hint: '月の名前と曜日の名前を区別しましょう。',
-    explanation: '"January"は「1月」を意味する月の名前です。"Monday(月曜日)"、"Wednesday(水曜日)"、"Friday(金曜日)"はすべて曜日を表す単語です。',
+    explanation:
+      '【何を聞かれているか】\n選択肢の中から、曜日を表す単語ではないものを選ぶ問題。\n\n【なぜJanuaryだけ異なるのか】\nMonday、Wednesday、Fridayはすべて曜日を表す単語だが、Januaryは月（1月）を表す単語なので、種類が異なる。\n\n【ポイント1】曜日の単語を確認する\nMonday（月曜日）、Wednesday（水曜日）、Friday（金曜日）はすべて曜日。\n\n【ポイント2】Januaryの意味を確認する\nJanuary＝「1月」という月の名前。\n\n【ポイント3】曜日と月を区別することを確認する\n曜日（Monday〜Sunday）と月（January〜December）は別のグループの単語なので混同しない。\n\n【答え】\nJanuary\n\n【確かめ】\n選んだ答えが月を表す単語であり、他の3つが曜日を表す単語になっているか確認する。\n\n【よくあるまちがい】\n曜日と月の単語を混同し、別の単語を選んでしまうミス。\n\n【ここが絶対】\n曜日（Monday〜Sunday）と月（January〜December）はそれぞれ別のグループとして覚える。',
   },
   {
     id: 'osakajo_eigo_04',
@@ -975,7 +977,8 @@ export const schoolOsakaJogakuin: Question[] = [
     choices: ['in', 'on', 'at', 'to'],
     answer: 'in',
     hint: '「箱の中に」という位置関係を表す前置詞を考えましょう。',
-    explanation: '「箱の中に」という位置関係を表すには前置詞"in"を使います。"on"は「〜の上に」、"at"は「地点」を表す前置詞です。',
+    explanation:
+      '【何を聞かれているか】\n"The cat is ( ) the box."の空欄に入る正しい前置詞を選ぶ問題。\n\n【なぜinを使うのか】\n「箱の中に」という、何かの内部にある位置関係を表すときは、前置詞inを使うという決まりがある。\n\n【ポイント1】inの意味を確認する\nin＝「〜の中に」という内部の位置関係を表す。\n\n【ポイント2】他の前置詞との違いを確認する\non＝「〜の上に」（接触）、at＝「（地点）で」というように、それぞれ表す位置関係が異なる。\n\n【ポイント3】文全体の意味を確認する\n"The cat is in the box."＝「その猫は箱の中にいます」。\n\n【答え】\nin\n\n【確かめ】\n選んだ前置詞が「箱の中に」という意味に合っているか確認する。\n\n【よくあるまちがい】\nonやatを選んで「上に」「地点で」という異なる意味にしてしまうミス。\n\n【ここが絶対】\nin＝中、on＝上（接触）、at＝地点、と位置関係のイメージで前置詞を区別する。',
   },
   {
     id: 'osakajo_eigo_09',
@@ -986,7 +989,8 @@ export const schoolOsakaJogakuin: Question[] = [
     question: '【大阪女学院 英語⑨】日本文に合うように( )内の語を正しく並べかえなさい。「彼女は毎日、宿題をします。」( homework / does / she / her / every day ).',
     answer: 'She does her homework every day.',
     hint: '主語のあとに一般動詞の3人称単数形を続けましょう。',
-    explanation: '主語"She"のあとに一般動詞の3人称単数形"does"、目的語"her homework"、そして"every day"を続けます。正しい語順は"She does her homework every day."です。',
+    explanation:
+      '【何を聞かれているか】\n語句を並べかえて、「彼女は毎日、宿題をします。」という英文を完成させる問題。\n\n【なぜdoesを使うのか】\n主語Sheは三人称単数なので、一般動詞doは3単現の形doesに変化させて使う。\n\n【ポイント1】主語と動詞の形を確認する\n主語She＋動詞does（3単現）。\n\n【ポイント2】目的語を確認する\nher homework＝「彼女の宿題」を動詞の後に置く。\n\n【ポイント3】頻度を表す語句の位置を確認する\nevery day（毎日）は文末に置く。\n\n【答え】\nShe does her homework every day.\n\n【確かめ】\nShe→does→her homework→every dayという正しい順番になっているか確認する。\n\n【よくあるまちがい】\n"She do"のように、3単現のsを付け忘れた動詞を使ってしまうミス。\n\n【ここが絶対】\n主語が三人称単数のとき、一般動詞は3単現の形（does, plays等）に変えると覚える。',
   },
   {
     id: 'osakajo_eigo_10',
@@ -1025,7 +1029,8 @@ export const schoolOsakaJogakuin: Question[] = [
     choices: ['She helps new members of the club practice their English.', 'She no longer speaks English.', 'She moved to a different school.', 'She became an English teacher.'],
     answer: 'She helps new members of the club practice their English.',
     hint: '本文の最後の一文に注目しましょう。',
-    explanation: '本文最後の一文"Now she helps new members of the club practice their English."から、ハナは今、部の新しいメンバーの練習を手伝っていることがわかります。',
+    explanation:
+      '【何を聞かれているか】\nハナについての英文を読み、"What does Hana do now?"（ハナは今何をしているか）に答える問題。\n\n【なぜ本文の最後の一文に注目するのか】\n"now"（今）についての質問なので、時間の流れの中で最新の状況を述べている最後の部分に答えが含まれている。\n\n【ポイント1】該当の一文を確認する\n"Now she helps new members of the club practice their English."（今、彼女は部の新しいメンバーの英語の練習を手伝っている）。\n\n【ポイント2】質問がnowの内容を問うていることを確認する\n過去の出来事ではなく、現在の状況を答える。\n\n【ポイント3】他の選択肢を消去する\n「英語を話さなくなった」「転校した」「英語の先生になった」は本文の内容と合わない。\n\n【答え】\nShe helps new members of the club practice their English.\n\n【確かめ】\n選んだ答えが、本文の最後（現在の状況）の内容と一致しているか確認する。\n\n【よくあるまちがい】\n本文の過去の出来事の部分から答えを選んでしまうミス。nowという語に注目する。\n\n【ここが絶対】\n「今どうしているか」を問う設問は、本文の最後（最新の状況）に注目する。',
   },
   {
     id: 'osakajo_eigo_13',
@@ -1037,7 +1042,8 @@ export const schoolOsakaJogakuin: Question[] = [
     choices: ['have', 'has', 'had', 'having'],
     answer: 'have',
     hint: '"already"があるときは現在完了形を考えましょう。',
-    explanation: '主語が"I"で"already(すでに)"があることから現在完了形の文とわかります。現在完了は"have/has+過去分詞"の形で、主語が"I"のときは"have"を使います。',
+    explanation:
+      '【何を聞かれているか】\n"I ( ) already finished my homework."の空欄に入る正しい語を選ぶ問題。\n\n【なぜhaveを使うのか】\nalready（すでに）という語があることから現在完了の文だとわかり、主語Iに対応する現在完了の形はhave＋過去分詞になる。\n\n【ポイント1】alreadyから時制を確認する\nalready＝現在完了の完了用法でよく使われる語。\n\n【ポイント2】主語との対応を確認する\n主語Iには現在完了でhaveを使う（hasは三人称単数のときに使う）。\n\n【ポイント3】文の形を確認する\n"I have already finished my homework."＝「私はすでに宿題を終えました」。\n\n【答え】\nhave\n\n【確かめ】\n主語Iに対応する語（have）が選ばれ、has（三人称単数用）と混同していないか確認する。\n\n【よくあるまちがい】\n主語がIなのにhasを選んでしまうミス。\n\n【ここが絶対】\n現在完了はhave/has＋過去分詞、主語IにはhaveをセットでI have already〜と覚える。',
   },
   {
     id: 'osakajo_eigo_14',

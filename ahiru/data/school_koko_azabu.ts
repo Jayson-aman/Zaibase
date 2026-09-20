@@ -811,7 +811,8 @@ export const schoolKokoAzabu: Question[] = [
     question: 'What is the main idea of this passage?',
     answer: 'Robots can support human workers instead of only replacing them.',
     hint: 'Look at the last sentence of the passage, which summarizes the writer\'s point.',
-    explanation: '【解説】\nThe passage explains that robots in hospitals carry medicine and clean rooms, which gives nurses more time for patient care. The final sentence makes the main idea clear: technology does not always replace people, but can instead support them.',
+    explanation:
+      '【何を聞かれているか】\n病院のロボットについての英文を読み、文章全体の主旨（main idea）を選ぶ問題。\n\n【なぜ最後の文に注目するのか】\n文章の主旨は、具体的な事実を述べた後に筆者の考えをまとめる最後の文に表れることが多い。\n\n【ポイント1】本文の内容を確認する\n病院のロボットは薬を運んだり部屋を掃除したりし、看護師により多くの時間を与えている。\n\n【ポイント2】最後の文（まとめ）を確認する\ntechnology does not always replace people, but can instead support them（技術は必ずしも人にとって代わるわけではなく、支えることができる）という主旨。\n\n【ポイント3】他の選択肢を消去する\n「ロボットが仕事を全て奪う」「看護師は不要になる」「病院はロボットの使用をやめるべき」はいずれも本文の主旨と反する、または本文にない極端な内容。\n\n【答え】\nRobots can support human workers instead of only replacing them.\n\n【確かめ】\n選んだ答えが、最後の文が伝える「支える」という考えと一致しているか確認する。\n\n【よくあるまちがい】\n本文中の具体例（薬を運ぶ、掃除する）だけを主旨として選んでしまうミス。\n\n【ここが絶対】\n主旨を問う設問は、具体例よりも最後のまとめの文に注目する。',
     difficulty: 'advanced',
     course: 'koko-azabu',
     examType: 'koko',
@@ -829,7 +830,8 @@ export const schoolKokoAzabu: Question[] = [
     question: 'According to the passage, what do robots do in some hospitals, and what does this allow nurses to do? Answer in English.',
     answer: 'Robots carry medicine and clean rooms, which allows nurses to spend more time caring for patients.',
     hint: 'The second and third sentences of the passage describe the robots\' jobs and the result.',
-    explanation: '【解説】\n本文第2文・第3文より、ロボットは薬を運んだり部屋を掃除したりする仕事を担い、その結果、看護師はより多くの時間を患者のケアに使えるようになると述べられている。',
+    explanation:
+      '【何を聞かれているか】\n病院のロボットが何をし、それが看護師に何をもたらすかを英語で答える問題。\n\n【なぜ第2文・第3文に注目するのか】\n本文の第2文・第3文に、ロボットの仕事内容とその結果（看護師への影響）が具体的に述べられている。\n\n【ポイント1】ロボットの仕事を確認する\nロボットは薬を運んだり(carry medicine)、部屋を掃除したり(clean rooms)する。\n\n【ポイント2】その結果を確認する\nその結果、看護師はより多くの時間を患者のケアに使えるようになる(spend more time caring for patients)。\n\n【ポイント3】2つの内容をつなげて答えることを確認する\n「ロボットの仕事」と「その結果」の両方を答えに含める必要がある。\n\n【答え】\nRobots carry medicine and clean rooms, which allows nurses to spend more time caring for patients.\n\n【確かめ】\n答えに「ロボットの仕事」と「看護師への影響」の両方が含まれているか確認する。\n\n【よくあるまちがい】\nロボットの仕事内容だけを答えて、看護師への影響を書き忘れるミス。\n\n【ここが絶対】\n「何をするか」と「その結果どうなるか」の両方をセットで読み取り、答えに含める。',
     difficulty: 'advanced',
     course: 'koko-azabu',
     examType: 'koko',
@@ -891,7 +893,8 @@ export const schoolKokoAzabu: Question[] = [
     question: 'What does Ken feel when he looks at his postcards? Answer in English.',
     answer: 'He feels as if he had visited those places himself.',
     hint: 'The answer is stated directly in the last sentence of the passage.',
-    explanation: '【解説】\n最終文「Ken says looking at the pictures makes him feel as if he had visited those places himself.」がそのまま答えとなる。',
+    explanation:
+      '【何を聞かれているか】\nケンが絵はがきを見るときにどう感じるかを英語で答える問題。\n\n【なぜ最後の文に答えがあるのか】\n「ケンが何を感じるか」という設問の答えは、本文の最後で直接述べられている。\n\n【ポイント1】該当の文を確認する\n"Ken says looking at the pictures makes him feel as if he had visited those places himself."（写真を見ると、まるで自分でその場所を訪れたことがあるかのように感じる、とケンは言う）。\n\n【ポイント2】as if＋仮定法過去完了の意味を確認する\n"as if he had visited"＝「まるで訪れたことがあるかのように」という、実際には訪れていない事実に反する仮定を表す。\n\n【ポイント3】答えの形を確認する\n本文の表現をそのまま使い、He feels as if he had visited those places himself.とまとめる。\n\n【答え】\nHe feels as if he had visited those places himself.\n\n【確かめ】\n答えが本文の最終文の内容と一致しているか確認する。\n\n【よくあるまちがい】\nas ifの後ろを現在形にしてしまい、「実際に訪れたことがある」という誤った意味にしてしまうミス。\n\n【ここが絶対】\nas if＋主語＋had＋過去分詞＝「まるで〜したかのように」という事実に反する仮定を表す。',
     difficulty: 'standard',
     course: 'koko-azabu',
     examType: 'koko',
@@ -920,7 +923,8 @@ export const schoolKokoAzabu: Question[] = [
     question: 'Choose the correct word to complete the sentence: "If I ___ you, I would apologize first."',
     answer: 'were',
     hint: 'This is a hypothetical (unreal) condition about the present, so the subjunctive form of "be" is used for all subjects.',
-    explanation: '【解説】\n現在の事実に反する仮定を表す仮定法過去では、be動詞は主語に関係なく were を使うのが基本ルール(口語ではwasも使われることがあるが、文法的にはwereが正式)。',
+    explanation:
+      '【何を聞かれているか】\n"If I (　) you, I would apologize first."の空欄に入る正しいbe動詞の形を選ぶ問題。\n\n【なぜwereを使うのか】\n「もし私があなたなら」という現在の事実に反する仮定（仮定法過去）では、be動詞は主語に関係なくwereを使うという決まりがある。\n\n【ポイント1】仮定法過去の形を確認する\nIf+主語+were〜, 主語+would+動詞の原形〜。\n\n【ポイント2】主語Iでもwereになることを確認する\n仮定法過去のbe動詞は、主語が単数（I, He, She等）であってもwereを使うのが正式なルール。\n\n【ポイント3】口語との違いを確認する\n口語ではwasが使われることもあるが、文法的にはwereが正式な形。\n\n【答え】\nwere\n\n【確かめ】\n主語Iに対してwas（通常のbe動詞の過去形）ではなく、仮定法のwereが選ばれているか確認する。\n\n【よくあるまちがい】\n主語Iに合わせてwasを選んでしまうミス。仮定法過去のbe動詞は主語に関係なくwere。\n\n【ここが絶対】\nIf I were you〜は仮定法の決まり文句として、wereをセットで覚える。',
     difficulty: 'standard',
     course: 'koko-azabu',
     examType: 'koko',
@@ -932,7 +936,8 @@ export const schoolKokoAzabu: Question[] = [
     question: 'Rewrite the following sentence in the passive voice: "Many students use this dictionary."',
     answer: 'This dictionary is used by many students.',
     hint: 'Make the object of the original sentence the subject of the new sentence, and use "be + past participle."',
-    explanation: '【解説】\n能動態の目的語 "this dictionary" を主語にし、「be動詞+過去分詞」の形にする。動詞useの過去分詞は used。動作主(many students)は文末に "by 〜" で示す。\nThis dictionary is used by many students.',
+    explanation:
+      '【何を聞かれているか】\n能動態の文"Many students use this dictionary."を受動態に書き換える問題。\n\n【なぜthis dictionaryを主語にするのか】\n受動態は、能動態の目的語（動作を受けるもの）を主語にして「〜される」という形で表す文なので、元の文の目的語this dictionaryを新しい主語にする。\n\n【ポイント1】主語の入れ替えを確認する\n能動態の目的語this dictionaryを、受動態の主語にする。\n\n【ポイント2】動詞の形を確認する\n「be動詞＋過去分詞」の形にする。useの過去分詞はused。\n\n【ポイント3】動作主の示し方を確認する\n元の主語many studentsは、文末に"by 〜"の形で示す。\n\n【答え】\nThis dictionary is used by many students.\n\n【確かめ】\n主語がthis dictionaryになっており、動詞がis used（be動詞＋過去分詞）になっているか確認する。\n\n【よくあるまちがい】\n動詞を過去分詞usedにせず、useのままにしてしまうミス。\n\n【ここが絶対】\n受動態＝「元の目的語」+be動詞+過去分詞+「by+元の主語」という型で覚える。',
     difficulty: 'advanced',
     course: 'koko-azabu',
     examType: 'koko',
@@ -977,7 +982,8 @@ export const schoolKokoAzabu: Question[] = [
     question: 'Choose the correct indirect question: "I don\'t know ___."',
     answer: 'where he lives',
     hint: 'In indirect questions, the word order changes back to subject + verb (not question order).',
-    explanation: '【解説】\n間接疑問文では「疑問詞+主語+動詞」の語順になる(疑問文のような主語・動詞の倒置は起こらない)。したがって where he lives が正しい。',
+    explanation:
+      '【何を聞かれているか】\n"I don\'t know (　)."に続く正しい間接疑問文を選ぶ問題。\n\n【なぜ主語＋動詞の語順に戻すのか】\n間接疑問文（他の文の一部に組み込まれた疑問詞節）では、疑問文のような主語と動詞の倒置は起こらず、「疑問詞＋主語＋動詞」という通常の語順に戻る。\n\n【ポイント1】直接疑問文との違いを確認する\n直接疑問文は"Where does he live?"のようにdoesを使い主語heの前に出すが、間接疑問文ではこの倒置をしない。\n\n【ポイント2】間接疑問文の語順を確認する\n"where he lives"＝疑問詞where＋主語he＋動詞lives（三人称単数のsを付ける）という通常の語順。\n\n【ポイント3】動詞の形を確認する\n間接疑問文になってもdoes/doは使わないので、動詞は主語に合わせて自分でlivesと変化させる必要がある。\n\n【答え】\nwhere he lives\n\n【確かめ】\n選んだ答えが、疑問詞の後ろで主語と動詞が倒置されていない通常の語順になっているか確認する。\n\n【よくあるまちがい】\n"where does he live"のように、直接疑問文の語順のまま間接疑問文に使ってしまうミス。\n\n【ここが絶対】\n間接疑問文＝「疑問詞+主語+動詞」の通常の語順、doesやdoは使わないと覚える。',
     difficulty: 'advanced',
     course: 'koko-azabu',
     examType: 'koko',

@@ -1016,7 +1016,7 @@ export const schoolKokoNanzan: Question[] = [
     answer: 'reading',
     hint: '動詞enjoyの後ろには、動詞のing形（動名詞）を続けるのがルール。',
     explanation:
-      '【解説】enjoy, finish, stop, mind などの動詞は、目的語として不定詞(to＋動詞の原形)ではなく動名詞(動詞のing形)を取る。したがって"I enjoy reading books in my free time."（私は自由な時間に読書を楽しむ）が正しい形。\n【つまずきポイント】"enjoy to read"のように不定詞を使ってしまう誤りが多い。enjoyの後ろは動名詞、と結びつけて覚える。',
+      '【何を聞かれているか】\n"I enjoy ( read ) books in my free time."の( )内の動詞を適する形に直す問題。\n\n【なぜ動名詞にするのか】\nenjoyという動詞は、目的語として動名詞（動詞のing形）を取るという決まりがある動詞なので、readをreadingに変える。\n\n【ポイント1】enjoyの後の形を確認する\nenjoy＋動詞のing形（動名詞）。\n\n【ポイント2】同じグループの動詞を確認する\nenjoy, finish, stop, mindなども動名詞を目的語に取る動詞。\n\n【ポイント3】不定詞との違いを確認する\n"enjoy to read"のように不定詞を続けるのは誤りで、enjoyの後は必ず動名詞にする。\n\n【答え】\nreading\n\n【確かめ】\nreadがreading（動名詞）になっており、to readになっていないか確認する。\n\n【よくあるまちがい】\nenjoyの後に不定詞to readを使ってしまうミス。\n\n【ここが絶対】\nenjoy, finish, stop, mindの後は動名詞（〜ing）、とセットで覚える。',
   },
   {
     id: 'nanzan_eigo_07',
@@ -1101,7 +1101,7 @@ export const schoolKokoNanzan: Question[] = [
       '② The school tried to help students balance technology with study and rest by teaching them to use phones wisely, instead of simply banning them.',
     hint: '本文最後の2文（学校の対応と、教師たちが望んだこと）に注目してまとめる。',
     explanation:
-      '【出題意図】各文の細部の情報だけでなく、文章全体を通した筆者の伝えたい要点（要旨）をつかむ力を問う設問。\n【解説】本文は「生徒のスマートフォン利用の実態→教師の心配→生徒にとっての利点→学校が取った方針（禁止ではなく賢い使い方の教育）→教師の願い」という流れで構成されている。②はこの全体の流れと結論を正しくまとめており正解。①③④はいずれも本文の内容と矛盾するか、本文に書かれていない極端な内容である。',
+      '【何を聞かれているか】\nスマートフォンと学校の対応についての英文を読み、文章全体の要旨を選ぶ問題。\n\n【なぜ本文全体の流れを見るのか】\n要旨を問う設問は、本文の一部の情報だけでなく、話の展開全体（実態→心配→利点→学校の方針→教師の願い）から結論を読み取る必要がある。\n\n【ポイント1】本文の流れを確認する\n生徒のスマートフォン利用の実態→教師の心配→生徒にとっての利点→学校が取った方針（禁止ではなく賢い使い方の教育）→教師の願い、という構成。\n\n【ポイント2】学校の方針を確認する\n学校は単純に禁止するのではなく、生徒に賢い使い方を教えることでバランスを取ろうとした。\n\n【ポイント3】他の選択肢を消去する\n「①学習に全く影響しない」「③全教師が完全禁止に賛成」「④誰もSNSを使わない」はいずれも本文の内容と矛盾するか、極端すぎる内容。\n\n【答え】\n② The school tried to help students balance technology with study and rest by teaching them to use phones wisely, instead of simply banning them.\n\n【確かめ】\n選んだ答えが、本文全体の流れ（実態から学校の方針まで）と一致しているか確認する。\n\n【よくあるまちがい】\n本文の一部（生徒の利用実態や教師の心配）だけを見て、要旨と勘違いしてしまうミス。\n\n【ここが絶対】\n要旨は本文全体の流れ（問題提起→対応→結論）から読み取ると覚える。',
   },
   {
     id: 'nanzan_eigo_12',
@@ -1122,7 +1122,7 @@ export const schoolKokoNanzan: Question[] = [
     answer: '② At first, only ten students joined the beach cleanup project.',
     hint: '本文4文目 "At first, only ten students joined." に注目する。',
     explanation:
-      '【解説】①本文には以前より魚が減っているとあり、「以前より多く獲れている」は誤り。②本文4文目と一致し正解。③本文最後に、市長はこの活動を他の沿岸の町のモデルになったと評価しており、批判したという③は誤り。④本文には、今では高齢者を含む100人以上が毎月参加しているとあり、④は本文と矛盾する。',
+      '【何を聞かれているか】\n若葉町の海岸清掃活動についての英文を読み、内容と一致する文を選ぶ問題。\n\n【なぜ本文の具体的な数字・事実に注目するのか】\n内容一致問題では、本文中の具体的な事実（人数・意見など）と選択肢を1つずつ照らし合わせて正誤を判断する必要がある。\n\n【ポイント1】①を確認する\n本文には以前より魚が減っているとあり、「以前より多く獲れている」という①は本文と反対で誤り。\n\n【ポイント2】②を確認する\n本文4文目"At first, only ten students joined."と一致するので②が正解。\n\n【ポイント3】③④を確認する\n③市長は活動を他の町のモデルと評価しており「批判した」は誤り。④本文には今では高齢者を含む100人以上が参加しているとあり「参加しない」という④は矛盾。\n\n【答え】\n② At first, only ten students joined the beach cleanup project.\n\n【確かめ】\n選んだ選択肢が、本文の具体的な数字（ten students）と一致しているか確認する。\n\n【よくあるまちがい】\n本文の内容と反対の意味（魚が増えた、批判した等）を選んでしまうミス。\n\n【ここが絶対】\n内容一致問題は、選択肢の1つ1つを本文の具体的な事実と照らし合わせて消去法で選ぶ。',
   },
   {
     id: 'nanzan_eigo_13',
@@ -1172,7 +1172,7 @@ export const schoolKokoNanzan: Question[] = [
     answer: 'technology',
     hint: '"it has (not always) made it deeper" の1つ目のitは、直前の節の主語にあたる語を指している。',
     explanation:
-      '【解説】この文は "technology has made communication faster, [and] technology has not always made communication deeper" という2つの内容を、itを使って簡潔にまとめた文である。1つ目のit（"it has not always made"の主語）はtechnologyを指し、2つ目のit（"made it deeper"の目的語）はcommunicationを指している。設問で問われている1つ目のitはtechnologyが正解。',
+      '【何を聞かれているか】\n"Aya believes that although technology has made communication faster, it has not always made it deeper."の1つ目のitが指す語を答える問題。\n\n【なぜitが2つとも同じものを指すとは限らないのか】\nこの文には代名詞itが2回使われており、それぞれ別の語（technologyとcommunication）を指しているため、1つずつ何を指すかを文構造から確認する必要がある。\n\n【ポイント1】文の構造を確認する\nこの文は「technology has made communication faster」と「technology has not always made communication deeper」という2つの内容を、itを使って簡潔にまとめたもの。\n\n【ポイント2】1つ目のitを確認する\n"it has not always made"の主語にあたる1つ目のitは、直前の節の主語technologyを指す。\n\n【ポイント3】2つ目のitと区別する\n"made it deeper"の目的語にあたる2つ目のitはcommunicationを指し、1つ目のitとは異なる語を指す。\n\n【答え】\ntechnology\n\n【確かめ】\n答えたtechnologyが、"it has not always made"というitの位置（主語の役割）と対応しているか確認する。\n\n【よくあるまちがい】\n1つ目と2つ目のitを混同し、両方ともcommunicationやtechnologyと答えてしまうミス。\n\n【ここが絶対】\nitが複数回使われる文では、1つ1つのitがどの語の代わりか、前後の文構造から個別に確認する。',
   },
   {
     id: 'nanzan_eigo_16',
@@ -1191,7 +1191,7 @@ export const schoolKokoNanzan: Question[] = [
     answer: '① Yes, I would like some tea, please.',
     hint: '"Would you like 〜?"は「〜はいかがですか」と何かを勧める表現。飲み物を勧められている場面であることに注目する。',
     explanation:
-      '【解説】"Would you like something to drink?"（何か飲み物はいかがですか）という申し出に対する応答としては、具体的に飲みたいものを答える①が最も自然。②は年齢、③は天気についての返答であり、質問と噛み合わない。④は文法的には応答になりうるが、"like it"のitが何を指すか不明瞭で、この対話の流れには合わない。',
+      '【何を聞かれているか】\n"Would you like something to drink?"という申し出に対する、最も適切な応答を選ぶ問題。\n\n【なぜ具体的に飲みたいものを答えるのか】\n"Would you like 〜?"は「〜はいかがですか」と何かを勧める表現なので、それに対しては欲しいかどうか、欲しければ何が欲しいかを具体的に答えるのが自然。\n\n【ポイント1】"Would you like 〜?"の意味を確認する\n「〜はいかがですか」と勧める表現。\n\n【ポイント2】自然な応答を確認する\n"Yes, I would like some tea, please."（はい、お茶をお願いします）が飲み物を勧められたことに対する自然な答え。\n\n【ポイント3】他の選択肢を消去する\n「15歳です」（年齢）、「今日は雨です」（天気）はかみ合わない。「No, I don\'t like it.」はitが何を指すか不明瞭で、この対話の流れに合わない。\n\n【答え】\n① Yes, I would like some tea, please.\n\n【確かめ】\n選んだ応答が、飲み物を勧められたことに対する具体的な返事になっているか確認する。\n\n【よくあるまちがい】\n年齢や天気を答える選択肢を選んでしまうミス。Would you like〜?には欲しいもの・可否で答える。\n\n【ここが絶対】\nWould you like 〜?＝「〜はいかがですか」、答えはYes, I\'d like〜／No, thank youの形で返すと覚える。',
   },
 ];
 
