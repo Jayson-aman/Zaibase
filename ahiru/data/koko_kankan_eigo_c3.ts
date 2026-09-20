@@ -64,7 +64,8 @@ A: Me too. Let's ask the teacher for one more day.
     answer: `① What are you going to do this summer?
 ② I have not finished my homework yet.`,
     hint: '①be going to（〜するつもりだ）の疑問文、②現在完了の否定文＋yet。',
-    explanation: `【出題意図】未来表現（be going to）の疑問文と現在完了の否定文の語順を問う。【解説】①「What+be動詞+主語+going to+動詞原形」の語順。疑問詞Whatを文頭に置く。②現在完了の否定文はhave/has+not+過去分詞。「yet」は否定文の文末で「まだ」の意味。【注意点】①のare you going toの語順を崩さない。②not yetは「まだ〜ない」、already yetは肯定文で使う点との違いに注意。【関連知識】be going toは「すでに決まっている予定」、willは「その場での決定」に使い分ける。`,
+    explanation:
+      '【何を聞かれているか】\n語句を並べ替えて、be going toの疑問文と現在完了の否定文（＋yet）を完成させる問題。\n\n【なぜそれぞれ異なる語順が必要なのか】\n①未来の予定をたずねる疑問文（What＋be動詞＋主語＋going to＋動詞の原形）と、②現在完了の否定文（have/has＋not＋過去分詞）は、それぞれ決まった語順のパターンを持つ。\n\n【ポイント1】①be going toの疑問文を確認する\n"What are you going to do this summer?"＝疑問詞Whatを文頭に置き、be動詞areを主語youの前に置く。\n\n【ポイント2】②現在完了の否定文を確認する\n"I have not finished my homework yet."＝have＋not＋過去分詞（finished）の順。yetは否定文の文末で「まだ」の意味。\n\n【ポイント3】語順のポイントを確認する\n①はare you going toという語順を崩さない、②はnotをhaveの直後に置く。\n\n【答え】\n① What are you going to do this summer?\n② I have not finished my homework yet.\n\n【確かめ】\n①のare you going toの語順、②のnotがhaveの直後にあることを確認する。\n\n【よくあるまちがい】\n②を"I have finished my homework not yet."のように、notの位置を間違えてしまうミス。notは必ずhaveの直後に置く。\n\n【ここが絶対】\n現在完了の否定文は「have/has＋not＋過去分詞」、文末にyetを置いて「まだ〜ない」を表す。',
     pitfall: '②をI have finished my homework not yetとするのは語順の誤り。notはhaveの直後。',
     memoryTip: '現在完了の否定：have/has + not + 過去分詞、文末にyetを置く。',
   },
@@ -142,7 +143,8 @@ A: Me too. Let's ask the teacher for one more day.
 ③ Please tell me (　) time to leave home.（何時に家を出ればいいか教えてください）`,
     answer: '① how　② what　③ what',
     hint: '疑問詞+to不定詞の形。「行き方」→how to、「何を言うか」→what to、「何時に」→what time to。',
-    explanation: `【出題意図】「疑問詞+to不定詞」の基本形（how to / what to / what time to）を問う。【解説】①「どうやって〜するか」→how to get。②「何を言うか」→what to say。③「何時に〜するか」→what time to leave。すべて「疑問詞+to+動詞原形」で名詞句を作り、tell/knowの目的語になる。【注意点】疑問詞+to doは「疑問詞+主語+should+動詞原形」とほぼ同意（例：what to say=what I should say）。【関連知識】where to go（どこへ行くべきか）、which to choose（どちらを選ぶべきか）もセットで押さえる。`,
+    explanation:
+      '【何を聞かれているか】\n「疑問詞＋to不定詞」の基本形（how to／what to／what time to）を完成させる問題。\n\n【なぜ「疑問詞＋to不定詞」で名詞のかたまりを作るのか】\n「〜すべきか」という内容を、動詞（tell/know）の目的語になる1つの名詞のかたまりとして表したいとき、「疑問詞＋to＋動詞の原形」という形を使う。\n\n【ポイント1】①howを確認する\n「どうやって〜するか」→"how to get"（どうやって着くか＝行き方）。\n\n【ポイント2】②whatを確認する\n「何を言うか」→"what to say"。\n\n【ポイント3】③what timeを確認する\n「何時に〜するか」→"what time to leave"。\n\n【答え】\n① how　② what　③ what\n\n【確かめ】\nそれぞれの文が、「疑問詞＋to＋動詞の原形」という名詞のかたまりを作り、tell/knowの目的語になっているか確認する。\n\n【よくあるまちがい】\n①を"what to get"にしてしまうミス。「何を得るか」という意味になり、道案内の文脈に合わない。howを使うことで「どうやって（行き方）」という意味になる。\n\n【ここが絶対】\n「疑問詞＋to do」＝「疑問詞＋すべきか」（what to say＝what I should sayとほぼ同意）と覚えて、意味から逆算して疑問詞を選ぶ。',
     pitfall: '①をwhat to getとすると「何を得るか」になり、道案内の文脈に合わない。',
     memoryTip: '疑問詞+to do=「疑問詞+すべきか」と覚えて意味から逆算する。',
   },
@@ -163,7 +165,8 @@ A: Me too. Let's ask the teacher for one more day.
 語群：had / clean / helped / help`,
     answer: '① had, help　② had, clean',
     hint: '「have+人+動詞原形」＝人に〜してもらう／させる（使役動詞）。',
-    explanation: `【出題意図】使役動詞haveの用法（have+O+動詞原形）を問う。【解説】①「友達に手伝ってもらった」→had my friend help me（have+人+動詞原形＝〜してもらう）。②「母は私に部屋を掃除させた」→had me clean my room（have+人+動詞原形＝〜させる）。どちらもhaveの後は動詞原形（原形不定詞）を使う点が共通。【注意点】makeは「強制的に〜させる」、haveは「頼んで〜してもらう／当然のこととして〜させる」、letは「〜させてあげる（許可）」とニュアンスが異なる。【関連知識】get+人+to doも同様の意味を表すが、こちらはto不定詞を使う（get my friend to help me）。`,
+    explanation:
+      '【何を聞かれているか】\n使役動詞haveを使った、2つの日本語を英語にする問題。\n\n【なぜhaveの後ろに動詞の原形を使うのか】\n「（人）に〜してもらう／させる」という使役の意味を表すhaveは、後ろに「人＋動詞の原形」を続けるという、toをつけない特別な形を取る。\n\n【ポイント1】①「友達に手伝ってもらった」を組み立てる\n"had my friend help me"＝have＋人（my friend）＋動詞の原形（help）。\n\n【ポイント2】②「母は私に部屋を掃除させた」を組み立てる\n"had me clean my room"＝have＋人（me）＋動詞の原形（clean）。\n\n【ポイント3】makeとの違いを確認する\nmakeは「強制的に〜させる」、haveは「頼んで〜してもらう／当然のこととして〜させる」というニュアンスの違いがある。\n\n【答え】\n① had, help　② had, clean\n\n【確かめ】\n①②とも、hadの後ろの動詞（help、clean）がtoのつかない原形になっていることを確認する。\n\n【よくあるまちがい】\n②を"had me to clean"としてしまうミス。使役動詞haveの後ろはto不定詞ではなく動詞の原形（原形不定詞）を使う。\n\n【ここが絶対】\nhave/make/let＋人＋動詞の原形（toなし）という使役動詞の形をセットで覚える。get＋人＋to doは同じ意味だがto不定詞を使う点が異なることもあわせて確認する。',
     pitfall: '②をhad me to cleanとするのは誤り。使役のhaveの後はto不定詞ではなく動詞原形。',
     memoryTip: 'have/make/let+O+動詞原形（原形不定詞）とget+O+to doをセットで区別する。',
   },
@@ -262,7 +265,8 @@ B: That's a good idea. I'll ask them tomorrow.
   （これは私の父が卒業した学校だ）`,
     answer: '① which (that)　② who(m) (that) 省略可　③ which (that) 省略可',
     hint: '①主格（先行詞は物）、②目的格（先行詞は人）、③目的格（先行詞は物、前置詞fromが残る）。',
-    explanation: `【出題意図】関係代名詞の格（主格・目的格）と先行詞の種類（人・物）による使い分け、省略可否を問う。【解説】①先行詞the book（物）が主語の働き→主格which(that)。主格は省略不可。②先行詞the girl（人）が目的語の働き→目的格who(m)(that)。目的格は省略可能。③先行詞the school（物）で「graduated from the school」のfromが後ろに残った形→目的格which(that)。省略可能。【注意点】主格の関係代名詞は動詞の前に置かれ省略できない。目的格は動詞・前置詞の目的語になり省略できる。【関連知識】前置詞+関係代名詞（from which）にまとめる書き換えも重要（This is the school from which my father graduated.）。`,
+    explanation:
+      '【何を聞かれているか】\n関係代名詞の格（主格・目的格）を答え、省略できるかどうかも答える問題。\n\n【なぜ主格は省略できず目的格は省略できるのか】\n主格の関係代名詞は、その後ろの動詞の主語の役割を直接担っているため省略すると文が壊れるが、目的格の関係代名詞は、後ろに主語と動詞がすでにそろっているため、省略しても意味が通じる。\n\n【ポイント1】①主格を確認する\n"The book（物）is on the desk"のように、先行詞the bookが動詞isの主語の働きをしているので主格which(that)。省略不可。\n\n【ポイント2】②目的格を確認する\n先行詞the girl（人）が"I met"の目的語の働きをしているので目的格who(m)(that)。省略可能。\n\n【ポイント3】③前置詞が残る目的格を確認する\n"graduated from the school"のfromが後ろに残った形で、先行詞the school（物）は目的格which(that)。省略可能。\n\n【答え】\n① which (that)　② who(m) (that) 省略可　③ which (that) 省略可\n\n【確かめ】\n①が省略不可（主格）、②③が省略可（目的格）になっているか確認する。\n\n【よくあるまちがい】\n①を省略可としてしまうミス。主格の関係代名詞は、その後ろの動詞の主語を兼ねているため省略できない。\n\n【ここが絶対】\n主格＝省略不可、目的格＝省略可、という関係代名詞の格による省略のルールをセットで覚える。',
     pitfall: '①を省略可とするのは誤り。主格の関係代名詞は省略できない。',
     memoryTip: '主格＝省略不可、目的格＝省略可、と役割で判断する。',
   },
@@ -310,7 +314,8 @@ Many schools in Japan have started to allow students to use smartphones for lear
    ア. join  イ. leave  ウ. skip`,
     answer: '① イ(count on)　② ウ(correct)　③ ア(join)',
     hint: 'count on=頼りにする、correct=訂正する、join=参加する・入部する。',
-    explanation: `【出題意図】学校生活・部活動に関する頻出動詞・イディオムの意味を問う。【解説】①count on〜=「〜を頼りにする、当てにする」。rely on〜も同意表現。②correct=「（間違いを）訂正する」。fix a mistakeとも言い換え可能。③join=「（部活・クラブに）参加する、入る」。【注意点】take off（脱ぐ・離陸する）、give up（あきらめる）、put off（延期する）、work out（うまくいく・運動する）、leave（去る・辞める）、skip（欠席する・飛ばす）などの意味も混同しないよう区別する。【関連知識】部活動関連の頻出表現：join a club（入部する）、quit a club（退部する）、take part in〜（〜に参加する）。`,
+    explanation:
+      '【何を聞かれているか】\ncount on・correct・joinという、学校生活・部活動に関するイディオムの空欄を埋める問題。\n\n【なぜイディオムを1つずつ正確に区別する必要があるのか】\ncount on（頼りにする）、correct（訂正する）、join（参加する）は、似た場面で使われる他の熟語（take off、put off、leaveなど）と意味がまったく異なるため、混同しないよう正確に覚える必要がある。\n\n【ポイント1】①count onを確認する\ncount on〜＝「〜を頼りにする、当てにする」。rely on〜も同じ意味。\n\n【ポイント2】②correctを確認する\ncorrect＝「（間違いを）訂正する」。fix a mistakeとも言い換えられる。\n\n【ポイント3】③joinを確認する\njoin＝「（部活・クラブに）参加する、入る」。\n\n【答え】\n① イ(count on)　② ウ(correct)　③ ア(join)\n\n【確かめ】\nそれぞれの文脈（お互いを助け合う、間違いを直す、部活に入る）に、選んだ熟語の意味が合っているか確認する。\n\n【よくあるまちがい】\n①でtake off（脱ぐ・離陸する）を選んでしまうミス。count on（頼りにする）とはまったく異なる意味。\n\n【ここが絶対】\ncount on（頼りにする）、correct（訂正する）、join（参加する）を、take off、put off、leaveなどの似た場面で使われる別の熟語と区別してセットで覚える。',
     pitfall: '①をrely onと混同してtake offを選ばないこと。take offは全く異なる意味。',
     memoryTip: 'count on=カウント（数える）→「数に入れて頼る」とイメージすると覚えやすい。',
   },
@@ -371,7 +376,8 @@ B: That sounds great. Thanks for the offer.
     answer: `① 放課後に一緒に練習しようという提案。
 ② She (He) hasn't practiced her (his) speech script enough.`,
     hint: '①Why don\'t we〜?の内容、②Bの2番目の発言「I haven\'t practiced enough」に注目。',
-    explanation: `【出題意図】スピーチコンテストという学校行事を題材にした会話文の内容把握を問う。【解説】①「Why don't we practice together after school?」＝「放課後一緒に練習しない？」という提案。②Bは「I've written my script, but I haven't practiced enough.」と述べており、原稿は書いたが練習が足りていないことが悩みだとわかる。【注意点】Why don't we〜?は「〜しませんか」という一緒に行動する提案の定型表現（Why don't you〜?は相手への提案）。【関連知識】speech contest関連語彙：script（原稿）、practice（練習する）、offer（申し出）。`,
+    explanation:
+      '【何を聞かれているか】\nスピーチコンテストについての会話文を読んで、提案の内容とBの悩みを答える問題。\n\n【なぜWhy don\'t we〜?とWhy don\'t you〜?を区別するのか】\n"Why don\'t we〜?"は「（一緒に）〜しませんか」という提案、"Why don\'t you〜?"は「あなたが〜したら」という相手への提案で、主語の違いで意味が変わる。\n\n【ポイント1】①Aの提案を確認する\n"Why don\'t we practice together after school?"＝「放課後一緒に練習しない？」という提案。\n\n【ポイント2】②Bの悩みを確認する\n"I\'ve written my script, but I haven\'t practiced enough."から、原稿は書いたが練習不足であることがわかる。\n\n【ポイント3】weを使っていることを確認する\nAの提案はwe（私たちで一緒に）なので、一緒に行動する提案だとわかる。\n\n【答え】\n① 放課後に一緒に練習しようという提案。\n② She (He) hasn\'t practiced her (his) speech script enough.\n\n【確かめ】\n②の答えが「原稿を書いていない」ではなく「練習が足りていない」という内容になっているか確認する。\n\n【よくあるまちがい】\n②を「原稿を書いていない」と答えてしまうミス。原稿はすでに書き終えており、悩みは練習不足の方。\n\n【ここが絶対】\nWhy don\'t we〜?＝「一緒に〜しよう」、Why don\'t you〜?＝「あなたが〜したら」と主語で意味を区別する。',
     pitfall: '②を「原稿を書いていない」と答えるのは誤り。原稿は書き終えている（練習不足が問題）。',
     memoryTip: 'Why don\'t we〜?=「一緒に〜しよう」、Why don\'t you〜?=「あなたが〜したら」と主語で区別する。',
   },
@@ -389,7 +395,8 @@ B: That sounds great. Thanks for the offer.
 ③ Let's go to the library, (　) (　)?`,
     answer: '① aren\'t you　② does she　③ shall we',
     hint: '肯定文→否定の付加疑問、否定文→肯定の付加疑問、Let\'s〜→shall we?',
-    explanation: `【出題意図】付加疑問文の作り方（肯定⇄否定の反転、Let'sの特別ルール）を問う。【解説】①肯定文（You are〜）→否定の付加疑問（aren't you?）。②否定文（She doesn't like〜）→肯定の付加疑問（does she?）。③Let's〜（勧誘文）の付加疑問は特別にshall we?を使う。【注意点】付加疑問文は前の文が肯定なら否定形、否定なら肯定形を後ろに付ける。動詞の種類（be動詞・一般動詞・助動詞）に応じてdo/does/did/be動詞/助動詞を使い分ける。【関連知識】命令文の付加疑問はwill you?（例：Close the door, will you?）。`,
+    explanation:
+      '【何を聞かれているか】\n付加疑問文（〜ですよね、のように確認する表現）を完成させる問題。\n\n【なぜ肯定文と否定文で付加疑問の形が逆になるのか】\n付加疑問文は、前の文と反対の形（肯定文には否定形、否定文には肯定形）を後ろに付けて確認するという決まりがある。ただしLet\'s〜（勧誘文）は特別にshall we?を使う。\n\n【ポイント1】①肯定文の付加疑問を確認する\n"You are〜"（肯定）→"aren\'t you?"（否定形）。\n\n【ポイント2】②否定文の付加疑問を確認する\n"She doesn\'t like〜"（否定）→"does she?"（肯定形）。\n\n【ポイント3】③Let\'s〜の特別ルールを確認する\n"Let\'s〜"（勧誘文）の付加疑問はshall we?という決まった形を使う。\n\n【答え】\n① aren\'t you　② does she　③ shall we\n\n【確かめ】\n①が否定形、②が肯定形、③がshall weになっているか確認する。\n\n【よくあるまちがい】\n③を"do we"としてしまうミス。Let\'s〜の付加疑問は必ずshall weという特別な形。\n\n【ここが絶対】\n肯定文→否定形、否定文→肯定形という反転ルールと、Let\'s〜→shall we?という例外をセットで覚える。',
     pitfall: '③をdo weとするのは誤り。Let\'s〜の付加疑問は必ずshall we。',
     memoryTip: '肯定→否定、否定→肯定の反転ルールと、Let\'s→shall we?の例外を覚える。',
   },
@@ -455,7 +462,8 @@ Reducing plastic waste has become an important topic at schools. Some students h
     answer: `① Bringing their own water bottles instead of buying plastic ones, and bringing reusable bags for school events.
 ② 大きな違いを生む・大きな効果をもたらす`,
     hint: '①本文2文目・3文目、②make a differenceは「変化・効果を生む」という意味の熟語。',
-    explanation: `【出題意図】環境問題（プラスチックごみ削減）をテーマにした読解問題。情報抽出と熟語の意味把握を問う。【解説】①本文2文目「bringing their own water bottles instead of buying plastic ones」と3文目「bring reusable bags for school events」の2つの行動を答える。②make a difference=「違いを生む、効果をもたらす」。a bigが付くことで「大きな効果」を意味する。【注意点】①は「2つ」を明確に分けて答えることが求められている。【関連知識】環境語彙：reduce（減らす）、reusable（再利用可能な）、plastic waste（プラスチックごみ）、sustainability（持続可能性）。`,
+    explanation:
+      '【何を聞かれているか】\nプラスチックごみ削減についての英文を読んで、生徒の行動例と熟語の意味を答える問題。\n\n【なぜ「2つ」を明確に分けて答える必要があるのか】\n設問が"two examples"（2つの例）と明示しているので、本文中の2つの行動（マイボトル持参、マイバッグ持参）を、どちらも漏らさず答える必要がある。\n\n【ポイント1】①2つの行動を確認する\n"bringing their own water bottles instead of buying plastic ones"（マイボトルを持参する）と"bring reusable bags for school events"（学校行事にマイバッグを持参する）の2つ。\n\n【ポイント2】②make a differenceの意味を確認する\nmake a difference＝「違いを生む、効果をもたらす」。a bigがつくことで「大きな効果」を意味する。\n\n【ポイント3】文章全体の流れを確認する\n「小さな行動の例→that合計すると大きな効果になる」という結論の流れになっている。\n\n【答え】\n① Bringing their own water bottles instead of buying plastic ones, and bringing reusable bags for school events.\n② 大きな違いを生む・大きな効果をもたらす\n\n【確かめ】\n①の答えが2つの行動を両方含んでいるか確認する。\n\n【よくあるまちがい】\n①で1つだけ答えて終わらせてしまうミス。設問で「two examples」と明示されている場合は、必ず2つ答える。\n\n【ここが絶対】\nmake a difference＝「差を作る」→「効果・変化をもたらす」という直訳から意味を導く。設問の「いくつ答えるか」という指示を必ず確認する。',
     pitfall: '①で1つだけ答えて終わらないこと。設問で「two examples」と明示されている。',
     memoryTip: 'make a difference=「差を作る」→「効果・変化をもたらす」と直訳から意味を導く。',
   },
@@ -476,7 +484,8 @@ Reducing plastic waste has become an important topic at schools. Some students h
     answer: `① The student that spoke first was very nervous.
 ② Could you tell me where the gym is?`,
     hint: '①関係代名詞thatを使った文構造、②Could you tell me+間接疑問文（語順注意）。',
-    explanation: `【出題意図】関係代名詞thatの主格用法と、Could you tell me+間接疑問文の語順を問う。【解説】①「The student that spoke first」＝「最初に話した生徒」。thatは主格の関係代名詞で先行詞the studentを修飾。②「Could you tell me where the gym is?」＝丁寧な依頼表現+間接疑問文（where+主語+be動詞の語順）。【注意点】②をCould you tell me where is the gym?としないこと。間接疑問文は疑問文の倒置をしない。【関連知識】依頼の丁寧表現：Could you tell me〜? / Would you mind telling me〜?も類似表現として押さえる。`,
+    explanation:
+      '【何を聞かれているか】\n語句を並べ替えて、関係代名詞thatを使った文と、Could you tell me＋間接疑問文を完成させる問題。\n\n【なぜ間接疑問文で疑問文の語順にしないのか】\n"Could you tell me〜?"のように、疑問文が別の文の中に組み込まれる（間接疑問文になる）ときは、後ろの部分を疑問文の倒置ではなく、普通の文の語順（主語＋動詞）に戻すという決まりがある。\n\n【ポイント1】①関係代名詞thatの主格用法を確認する\n"The student that spoke first"＝「最初に話した生徒」。thatは主格の関係代名詞で先行詞the studentを修飾する。\n\n【ポイント2】②間接疑問文の語順を確認する\n"where the gym is"（体育館がどこにあるか）は、where＋主語（the gym）＋be動詞（is）という平叙文の語順。\n\n【ポイント3】丁寧な依頼表現を確認する\n"Could you tell me〜?"は丁寧に何かを尋ねるときの定番表現。\n\n【答え】\n① The student that spoke first was very nervous.\n② Could you tell me where the gym is?\n\n【確かめ】\n②が"where is the gym"という疑問文の語順ではなく、"where the gym is"という平叙文の語順になっているか確認する。\n\n【よくあるまちがい】\n②を"Could you tell me where is the gym?"のように、疑問文の語順のまま使ってしまうミス。間接疑問文は疑問文の倒置をしない。\n\n【ここが絶対】\n間接疑問文は「疑問詞＋主語＋動詞」という平叙文の語順にする。普通の疑問文の倒置をしないことを徹底する。',
     pitfall: '②をwhere is the gymの語順のままにすると間接疑問文の語順ミスになる。',
     memoryTip: '間接疑問文＝「疑問詞+主語+動詞」、普通の疑問文の倒置をしないと徹底する。',
   },
@@ -502,7 +511,8 @@ Many high schools in Japan have introduced tablet devices for every student. Sup
 ② ・画面を常に見続けることで視力に悪影響を及ぼす可能性がある。・一部の生徒が授業中に勉強ではなくゲームにタブレットを使ってしまう。
 ③ 常に画面を見続けること（継続的な画面への露出）`,
     hint: '①supporters say〜以下の3点から2点を選ぶ、②critics argue〜以下、③constant=絶え間ない、exposure=さらされること。',
-    explanation: `【出題意図】タブレット教育をテーマにした賛否両論の読解問題。情報抽出・語句の意味把握を問う。【解説】①supportersの主張：「make lessons more interactive」「allow students to access materials instantly」「reduce the amount of paper used」の中から2点を選んで答える。②criticsの懸念：「screen exposureが視力に悪影響」「一部の生徒が授業中にゲームに使う」の2点。③constant（絶え間ない）+screen exposure（画面にさらされること）＝「継続的に画面を見続けること」。【注意点】however（しかし）の前後で賛成・反対の立場が分かれる典型的な論説構造。【関連知識】eyesight（視力）、interactive（双方向の）は教育ICT関連の頻出語彙。`,
+    explanation:
+      '【何を聞かれているか】\nタブレット教育についての英文を読んで、支持者の利点と批判者の懸念、下線部の意味を答える問題。\n\n【なぜhoweverの前後で立場が分かれることを意識するのか】\n本文は"Supporters say〜however, Critics argue〜"という構造になっており、howeverの前が賛成派の主張、後ろが批判派の主張という典型的な論説構造になっている。\n\n【ポイント1】①利点を確認する\n"make lessons more interactive"（授業をより双方向的にする）、"allow students to access materials instantly"（教材にすぐアクセスできる）、"reduce the amount of paper used"（紙の使用量を減らす）の中から2点。\n\n【ポイント2】②懸念を確認する\n"constant screen exposure may harm students\' eyesight"（視力への悪影響）、"some students use tablets for games instead of studying"（授業中にゲームに使う生徒がいる）の2点。\n\n【ポイント3】③下線部の意味を確認する\n"constant screen exposure"＝constant（絶え間ない）＋screen exposure（画面にさらされること）＝「常に画面を見続けること」。\n\n【答え】\n① They make lessons more interactive, and they allow students to access materials instantly. (also reduce paper use)\n② ・画面を常に見続けることで視力に悪影響を及ぼす可能性がある。・一部の生徒が授業中に勉強ではなくゲームにタブレットを使ってしまう。\n③ 常に画面を見続けること（継続的な画面への露出）\n\n【確かめ】\n①の答えがsupporters（支持者）の主張だけで、②のcritics（批判者）の内容を混ぜていないか確認する。\n\n【よくあるまちがい】\n①でcriticsの内容（視力への悪影響など）を混ぜて答えてしまうミス。設問はsupportersの利点のみを問うている。\n\n【ここが絶対】\nhoweverの前後で「賛成派の主張」と「批判派の主張」が対比される論説構造を意識し、設問がどちらの立場を問うているかを確認してから答える。',
     pitfall: '①でcriticsの内容を混ぜて答えないこと。設問は「supporters」の利点のみを問うている。',
     memoryTip: 'however の前後で「賛成派の主張」と「批判派の主張」が対比される構造を意識する。',
   },
