@@ -890,7 +890,8 @@ export const schoolKokoTaki: Question[] = [
     choices: ['is', 'are', 'am', 'be'],
     answer: 'is',
     hint: 'The subject "She" is third person singular.',
-    explanation: 'The subject "She" is third person singular, so the correct form of the be-verb in the present tense is "is". "Are" is used with plural subjects or "you", "am" is used with "I", and "be" is the base form.',
+    explanation:
+      '【何を聞かれているか】\n"She ( ) a student."の空欄に入る正しいbe動詞を選ぶ問題。\n\n【なぜisを使うのか】\n主語Sheは三人称単数なので、それに対応する現在形のbe動詞はisになる。\n\n【ポイント1】主語の種類を確認する\nShe＝三人称単数。\n\n【ポイント2】be動詞の対応を確認する\n三人称単数にはis、複数やyouにはare、Iにはamを使う。\n\n【ポイント3】beとの違いを確認する\nbeはam/is/areの原形であり、主語の直後にそのままの形では使わない。\n\n【答え】\nis\n\n【確かめ】\n主語Sheに対応するisが選ばれ、are（複数用）やam（I用）と混同していないか確認する。\n\n【よくあるまちがい】\n主語の人称を確認せずareを選んでしまうミス。\n\n【ここが絶対】\nI→am、He/She/It（三人称単数）→is、You/複数→areという対応で覚える。',
   },
   {
     id: 'taki_eigo_02',
@@ -923,7 +924,8 @@ export const schoolKokoTaki: Question[] = [
     question: 'Rewrite the following sentence in the passive voice: "Many people speak English in this country."',
     answer: 'English is spoken by many people in this country.',
     hint: '受動態は「be動詞＋過去分詞」の形。もとの文の目的語（English）を主語にする。',
-    explanation: 'もとの能動態の文の目的語 "English" を主語にし、動詞を "is spoken" （be動詞＋過去分詞）の形にする。動作主（many people）は "by" を使って文末に置く。',
+    explanation:
+      '【何を聞かれているか】\n能動態の文"Many people speak English in this country."を受動態に書き換える問題。\n\n【なぜEnglishを主語にするのか】\n受動態は、能動態の目的語（動作を受けるもの）を主語にして「〜される」という形で表すので、元の文の目的語Englishを新しい主語にする。\n\n【ポイント1】主語の入れ替えを確認する\n能動態の目的語Englishを、受動態の主語にする。\n\n【ポイント2】動詞の形を確認する\n「be動詞＋過去分詞」の形にする。speakの過去分詞はspoken。\n\n【ポイント3】動作主の示し方を確認する\n元の主語many peopleは、文末に"by 〜"の形で示す。\n\n【答え】\nEnglish is spoken by many people in this country.\n\n【確かめ】\n主語がEnglishになっており、動詞がis spoken（be動詞＋過去分詞）になっているか確認する。\n\n【よくあるまちがい】\n動詞を過去分詞spokenにせず、speaksのままにしてしまうミス。\n\n【ここが絶対】\n受動態＝「元の目的語」+be動詞+過去分詞+「by+元の主語」という型で覚える。',
   },
   {
     id: 'taki_eigo_05',
@@ -935,7 +937,8 @@ export const schoolKokoTaki: Question[] = [
     choices: ['read', 'to read', 'reading'],
     answer: 'reading',
     hint: '動詞 "enjoy" は、目的語として動名詞（〜ing）をとる動詞である。',
-    explanation: '"enjoy" は目的語に動名詞（〜ing形）をとる動詞であり、不定詞（to＋動詞の原形）を目的語にとることはできない。したがって正しい形は "reading"。',
+    explanation:
+      '【何を聞かれているか】\n"I enjoy ( read / to read / reading ) books."の( )内から適切な形を選ぶ問題。\n\n【なぜ動名詞を使うのか】\nenjoyという動詞は、目的語として動名詞（動詞のing形）を取るという決まりがある動詞であり、不定詞（to＋動詞の原形）を目的語にとることはできない。\n\n【ポイント1】enjoyの後の形を確認する\nenjoy＋動詞のing形（動名詞）。\n\n【ポイント2】不定詞との違いを確認する\n"enjoy to read"のように不定詞を続けるのは誤り。\n\n【ポイント3】原形readとの違いを確認する\n動詞の原形readのままでは目的語として使えない。\n\n【答え】\nreading\n\n【確かめ】\nreadがreading（動名詞）になっており、to readやreadのままになっていないか確認する。\n\n【よくあるまちがい】\nenjoyの後に不定詞to readや原形readを使ってしまうミス。\n\n【ここが絶対】\nenjoy, finish, stop, mindの後は動名詞（〜ing）、とセットで覚える。',
   },
   {
     id: 'taki_eigo_06',
@@ -946,7 +949,8 @@ export const schoolKokoTaki: Question[] = [
     question: 'Combine the following two sentences into one, using a relative pronoun: "This is the book. I bought it yesterday."',
     answer: 'This is the book which(that) I bought yesterday.',
     hint: '2つ目の文の "it" が指しているのは "the book"。目的格の関係代名詞を使って1文にする。',
-    explanation: '2文目の "it" は "the book" を指しており、目的格の関係代名詞 "which"（または "that"）を使って1文に結びつける。関係代名詞節（I bought yesterday）は先行詞 "the book" の直後に置く。',
+    explanation:
+      '【何を聞かれているか】\n"This is the book. I bought it yesterday."という2文を、関係代名詞を用いて1文にする問題。\n\n【なぜ目的格の関係代名詞を使うのか】\n2文目のitは1文目のthe bookを指しており、2文目の中では動詞boughtの目的語の役割をしているため、目的格の関係代名詞which（またはthat）を使う。\n\n【ポイント1】itが指すものを確認する\n2文目のitは1文目のthe bookを指している。\n\n【ポイント2】目的格の関係代名詞を確認する\n先行詞が物で、関係代名詞節の中で目的語の役割をする場合はwhich（またはthat）を使う。\n\n【ポイント3】語順を確認する\n関係代名詞節"which I bought yesterday"は、先行詞the bookの直後に置く。\n\n【答え】\nThis is the book which(that) I bought yesterday.\n\n【確かめ】\n先行詞the book（物）に対して、whichまたはthatが使われているか確認する。\n\n【よくあるまちがい】\n先行詞が物であるにもかかわらず、人に使うwhoを選んでしまうミス。\n\n【ここが絶対】\n先行詞が人→who、物→which、どちらにも使えるthat、とセットで覚える。',
   },
   {
     id: 'taki_eigo_07',
@@ -957,7 +961,8 @@ export const schoolKokoTaki: Question[] = [
     question: '次の（　）に適切な形を入れなさい。「Mt. Fuji is the ( high ) mountain in Japan.」',
     answer: 'highest',
     hint: '"the" と "in Japan"（範囲を表す語句）があることから、最上級の文であるとわかる。',
-    explanation: '"the ... in Japan" という形は最上級の文でよく使われる。"high" の最上級は語尾に "est" を付けて "highest" にする。',
+    explanation:
+      '【何を聞かれているか】\n"Mt. Fuji is the ( high ) mountain in Japan."の( )内を適切な形に直す問題。\n\n【なぜ最上級highestにするのか】\n"the ... in Japan"という「the＋形容詞＋範囲を表す語句」の形は最上級の文でよく使われる型なので、highを最上級highestに変える。\n\n【ポイント1】theと範囲を表す語句を確認する\ntheと"in Japan"（日本の中で、という範囲）があることから最上級の文だとわかる。\n\n【ポイント2】highの最上級の作り方を確認する\n語尾に"est"を付けてhighestにする。\n\n【ポイント3】文全体の意味を確認する\n"Mt. Fuji is the highest mountain in Japan."＝「富士山は日本で最も高い山です」。\n\n【答え】\nhighest\n\n【確かめ】\nhighがhighest（最上級）になっており、比較級higherや原級highのままになっていないか確認する。\n\n【よくあるまちがい】\n"the"があるのに比較級higherのままにしてしまうミス。\n\n【ここが絶対】\nthe+最上級+in/of〜＝「〜の中で最も…」という型でセットで覚える。',
   },
   {
     id: 'taki_eigo_08',
@@ -968,7 +973,8 @@ export const schoolKokoTaki: Question[] = [
     question: 'Combine the following two sentences into one indirect question: "Do you know?" + "What is his name?"',
     answer: 'Do you know what his name is?',
     hint: '間接疑問文では、疑問詞の後は「主語＋動詞」の語順（平叙文の語順）になる。',
-    explanation: '間接疑問文にするときは、疑問詞（what）の後を疑問文の語順（is his name）ではなく、平叙文と同じ「主語＋動詞」の語順（his name is）に直す。',
+    explanation:
+      '【何を聞かれているか】\n"Do you know?"と"What is his name?"の2文を、間接疑問文として1文にする問題。\n\n【なぜ疑問詞の後を平叙文の語順にするのか】\n間接疑問文では、疑問詞の後は疑問文の語順（is his name）ではなく、平叙文と同じ「主語＋動詞」の語順（his name is）に直すという決まりがある。\n\n【ポイント1】疑問詞whatの後の語順を確認する\n"what his name is"＝疑問詞what＋主語his name＋動詞is。\n\n【ポイント2】直接疑問文との違いを確認する\n"What is his name?"のような直接疑問文の倒置（is his name）を、間接疑問文では使わない。\n\n【ポイント3】文全体をつなげることを確認する\n"Do you know"の後ろに、平叙文の語順にした間接疑問"what his name is"を続ける。\n\n【答え】\nDo you know what his name is?\n\n【確かめ】\n"what"の後ろが"his name is"という平叙文の語順になっているか確認する。\n\n【よくあるまちがい】\n"Do you know what is his name?"のように、疑問文の語順のまま組み込んでしまうミス。\n\n【ここが絶対】\n間接疑問文＝「疑問詞+主語+動詞」の通常の語順、倒置しないと覚える。',
   },
   {
     id: 'taki_eigo_09',
@@ -979,7 +985,8 @@ export const schoolKokoTaki: Question[] = [
     question: '次の日本語を英語にしなさい。「もし私がお金持ちだったら、世界中を旅行するだろう。」',
     answer: 'If I were rich, I would travel around the world.',
     hint: '現在の事実に反する仮定を表す仮定法過去では、be動詞は主語の人称にかかわらず "were" を使うことが多い。',
-    explanation: '現在の事実とは違うことを仮定する「仮定法過去」の文。if節の中では動詞を過去形にし、be動詞は主語が何であっても "were" を使うのが基本（ただし口語では was も使われる）。主節では "would＋動詞の原形" を使う。',
+    explanation:
+      '【何を聞かれているか】\n「もし私がお金持ちだったら、世界中を旅行するだろう。」を英語に直す問題。\n\n【なぜ仮定法過去を使うのか】\n「実際にはお金持ちではない」という現在の事実に反する仮定を表すときは、仮定法過去（if節は過去形、主節はwould＋動詞の原形）を使う。\n\n【ポイント1】if節の形を確認する\nif節の動詞は過去形にする。be動詞は主語の人称にかかわらずwereを使うのが基本（口語ではwasも使われる）。\n\n【ポイント2】主節の形を確認する\n主節は"would＋動詞の原形"にする。\n\n【ポイント3】文全体の形を確認する\n"If I were rich, I would travel around the world."という型で組み立てる。\n\n【答え】\nIf I were rich, I would travel around the world.\n\n【確かめ】\nif節がwereで始まり、主節がwould＋原形（would travel）になっているか確認する。\n\n【よくあるまちがい】\nif節を現在形（if I am rich）にしてしまい、単純な条件文と混同するミス。\n\n【ここが絶対】\n仮定法過去＝If+主語+過去形（be動詞はwere）, 主語+would+動詞の原形、と型で覚える。',
   },
   {
     id: 'taki_eigo_10',
@@ -990,7 +997,8 @@ export const schoolKokoTaki: Question[] = [
     question: '次の語を並べ替えて意味の通る英文にしなさい。（ been / has / for / raining / it / three days ）',
     answer: 'It has been raining for three days.',
     hint: '現在完了進行形「have/has been ＋ 動詞のing形」の形を作る。',
-    explanation: '3日間ずっと雨が降り続いていることを表すには、現在完了進行形 "have/has been ＋ 動詞のing形" を使う。主語は天候を表す "it"、"for three days" は継続期間を表す。',
+    explanation:
+      '【何を聞かれているか】\n語（been / has / for / raining / it / three days）を並べ替えて意味の通る英文にする問題。\n\n【なぜ現在完了進行形を使うのか】\n「3日間ずっと雨が降り続いている」という、過去から今まで続いている動作を表すには、現在完了進行形（have/has been＋動詞のing形）を使う。\n\n【ポイント1】主語を確認する\n天候を表す文なので主語はit。\n\n【ポイント2】動詞の形を確認する\n"has been raining"＝has been＋動詞のing形（raining）。\n\n【ポイント3】継続期間の位置を確認する\n"for three days"（3日間）は文末に置き、継続期間を表す。\n\n【答え】\nIt has been raining for three days.\n\n【確かめ】\nIt→has been→raining→for three daysという正しい順番になっているか確認する。\n\n【よくあるまちがい】\n"has raining"のようにbeenを抜かしてしまい、現在完了進行形の形が崩れるミス。\n\n【ここが絶対】\n現在完了進行形＝have/has+been+動詞のing形、「ずっと〜し続けている」を表すと覚える。',
   },
   {
     id: 'taki_eigo_11',
@@ -1009,7 +1017,8 @@ export const schoolKokoTaki: Question[] = [
     ],
     answer: 'He shared his tomatoes with his neighbors.',
     hint: '本文中の "he shared them with his neighbors" という一文に注目する。',
-    explanation: '本文には "Last summer, he grew so many tomatoes that he shared them with his neighbors." とあり、トマトを近所の人と分け合ったことがわかる。庭で育てているのは野菜であり花ではないこと、以前から野菜を育てていること（毎週末育てているという記述）、販売については本文に記述がないことから、他の選択肢は誤り。',
+    explanation:
+      '【何を聞かれているか】\nケンについての英文を読み、本文の内容と合うものを選ぶ問題。\n\n【なぜshared them with his neighborsの一文に注目するのか】\n設問はケンについての事実を問うており、本文中の具体的な出来事を述べた一文に答えが直接示されている。\n\n【ポイント1】該当の一文を確認する\n"Last summer, he grew so many tomatoes that he shared them with his neighbors."（去年の夏、トマトをたくさん育てて近所の人と分け合った）。\n\n【ポイント2】他の選択肢を消去する\n庭で育てているのは野菜であり花ではない、以前から野菜を育てている（毎週末育てているという記述がある）、販売については本文に記述がない。\n\n【ポイント3】質問がKenについての事実を問うていることを確認する\n"Which of the following is true about Ken"に対応する事実は「近所の人とトマトを分け合った」ことのみ。\n\n【答え】\nHe shared his tomatoes with his neighbors.\n\n【確かめ】\n選んだ答えが、本文中の具体的な出来事（トマトを分け合った）と一致しているか確認する。\n\n【よくあるまちがい】\n「花を育てている」「野菜を育てたことがない」「販売したい」のような、本文に根拠のない内容を選んでしまうミス。\n\n【ここが絶対】\n内容一致問題は、本文の具体的な出来事の一文と選択肢を1つずつ照らし合わせる。',
   },
   {
     id: 'taki_eigo_12',
@@ -1022,7 +1031,8 @@ export const schoolKokoTaki: Question[] = [
     question: 'According to the passage, what new vegetable does Ken want to grow this year? Answer in English.',
     answer: 'Pumpkins',
     hint: '本文の最後の一文に注目する。',
-    explanation: '本文の最後に "This year, he wants to try growing something new: pumpkins." とあり、今年新しく育てたいと思っている野菜はかぼちゃ（pumpkins）であるとわかる。',
+    explanation:
+      '【何を聞かれているか】\n本文を読み、ケンが今年新しく育てたいと思っている野菜を英語で答える問題。\n\n【なぜ本文の最後の一文に注目するのか】\n「今年新しく育てたい」という設問は、時間の流れの中で最新の計画について述べている最後の部分に答えがある。\n\n【ポイント1】該当の一文を確認する\n"This year, he wants to try growing something new: pumpkins."（今年、新しくかぼちゃを育ててみたいと思っている）。\n\n【ポイント2】newという語に注目する\n「新しく育てたい」野菜はpumpkins（かぼちゃ）であり、これまで育てていたトマトとは異なる。\n\n【ポイント3】答えの形を確認する\n本文の語をそのまま使い、Pumpkinsと答える。\n\n【答え】\nPumpkins\n\n【確かめ】\n答えが、これまで育てていたトマトではなく、新しく育てたい野菜（かぼちゃ）になっているか確認する。\n\n【よくあるまちがい】\n「新しく育てたい」野菜と、すでに育てている野菜（トマト）を混同してしまうミス。\n\n【ここが絶対】\n「これから何をしたいか」を問う設問は、本文の最後（最新の計画）に注目する。',
   },
   {
     id: 'taki_eigo_13',
@@ -1072,7 +1082,8 @@ export const schoolKokoTaki: Question[] = [
     ],
     answer: 'Thank you very much.',
     hint: '直後のBの返答 "You are welcome." は、お礼を言われたときの定番の応答表現である。',
-    explanation: '"You are welcome."（どういたしまして）は、相手にお礼を言われたときに返す表現である。したがって、Aの空欄には道案内をしてもらったことへのお礼「Thank you very much.」が入るのが最も自然。',
+    explanation:
+      '【何を聞かれているか】\n道案内の会話文の空欄に入る最も適切な表現を選ぶ問題。\n\n【なぜYou are welcome.から逆算するのか】\n直後のBの返答"You are welcome."（どういたしまして）は、相手にお礼を言われたときの定番の応答表現なので、その直前のAの発言はお礼の言葉だと推測できる。\n\n【ポイント1】You are welcome.の意味を確認する\n「どういたしまして」＝お礼への返答として使われる定型表現。\n\n【ポイント2】自然な発言を確認する\n道案内をしてもらった流れの中で、"Thank you very much."（どうもありがとうございます）が最も自然。\n\n【ポイント3】他の選択肢を消去する\n「いくらですか」「どちらのご出身ですか」「またね」は、いずれもYou are welcome.という返答にはつながらない。\n\n【答え】\nThank you very much.\n\n【確かめ】\n選んだ発言が、You are welcome.という返答に自然につながる内容（お礼）になっているか確認する。\n\n【よくあるまちがい】\n返答から逆算せず、会話の流れに合わない発言（値段や出身地）を選んでしまうミス。\n\n【ここが絶対】\n会話文の空欄問題は、前後の発言（特に直後の返答）から逆算して自然な流れを作る。',
   },
   {
     id: 'taki_eigo_16',

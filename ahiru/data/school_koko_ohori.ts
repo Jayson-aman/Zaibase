@@ -1022,7 +1022,8 @@ export const schoolKokoOhori: Question[] = [
     question: `次の英文を読んで、問いに答えなさい。\n(本文は上のpassageを参照)\n問:本文の内容と最も合っているものを選べ。\n① ミスノートをつけると成績はむしろ下がる\n② ミスノートは間違いのパターンに気づく助けになる\n③ 正しい答えだけを覚えることが最も効果的である\n④ ミスノートは理科系の学校に限定された取り組みである`,
     answer: `② ミスノートは間違いのパターンに気づく助けになる`,
     hint: `teachers say以降の一文に、ミスノートの効果についての説明がある。`,
-    explanation: `本文中に"reviewing these notebooks helps students notice patterns in their misunderstanding"とあり、ミスノートを見直すことで自分の誤解のパターンに気づけると述べられている。これは②の内容と一致する。①は本文の内容(成績が向上したという研究結果)と逆であり、③は本文が否定している内容("rather than simply memorizing correct answers")、④は"some schools"としか書かれておらず、理科系学校限定とは述べられていない。`,
+    explanation:
+      '【何を聞かれているか】\nミスノートについての英文を読み、本文の内容と最も合っているものを選ぶ問題。\n\n【なぜ「間違いのパターンに気づく」という表現に注目するのか】\n本文中に"reviewing these notebooks helps students notice patterns in their misunderstanding"という一文があり、ミスノートの具体的な効果がそのまま述べられている。\n\n【ポイント1】該当の一文を確認する\nミスノートを見直すことで、自分の誤解のパターンに気づけると述べられている。\n\n【ポイント2】①③④を消去する\n①は本文の内容（成績が向上したという研究結果）と逆。③は本文が否定している内容（"rather than simply memorizing correct answers"）。④は"some schools"としか書かれておらず、理科系学校限定とは述べられていない。\n\n【ポイント3】④の誤りの理由を確認する\n最後の一文にある"A study conducted at a science-focused high school"は、あくまで研究が行われた場所であり、取り組み自体が理科系学校限定という意味ではない。\n\n【答え】\n② ミスノートは間違いのパターンに気づく助けになる\n\n【確かめ】\n選んだ答えが、本文の"notice patterns in their misunderstanding"という表現と対応しているか確認する。\n\n【よくあるまちがい】\n「研究が行われた場所（理科系高校）」と「取り組みが行われる場所」を混同し、④を選んでしまうミス。\n\n【ここが絶対】\n内容一致問題では、本文中の言い換え表現（notice patterns ↔ 気づく助けになる）を見つけることが正解へのカギになる。',
     pitfall: `最後の一文(A study conducted at a science-focused high school...)から、④のように「理科系の学校限定の取り組み」と早合点してしまうミスに注意(あくまで研究が行われた場所であり、取り組み自体が理科系学校限定とは書かれていない)。`,
     memoryTip: `内容一致問題では、本文中の言い換え表現(notice patterns ↔ 気づく助けになる)を見つけることが正解へのカギになる。`,
   },
@@ -1075,7 +1076,8 @@ export const schoolKokoOhori: Question[] = [
     question: `次の文を分詞構文を用いて書き換えなさい。\nBecause she was tired, she went to bed early.`,
     answer: `Being tired, she went to bed early.`,
     hint: `接続詞(Because)と主語(she)を省略し、動詞を現在分詞の形にすることで分詞構文を作る。`,
-    explanation: `分詞構文は、接続詞と主語が主節の主語と同じ場合にそれらを省略し、動詞を-ing形にして作る。Because she was tiredのshe(主節の主語sheと同じ)を省略し、be動詞wasをBeingにすることで、Being tired, she went to bed early.という分詞構文になる。`,
+    explanation:
+      '【何を聞かれているか】\n"Because she was tired, she went to bed early."を分詞構文を用いて書き換える問題。\n\n【なぜ接続詞と主語を省略するのか】\n分詞構文は、接続詞と主語が主節の主語と同じ場合にそれらを省略し、動詞を-ing形にして作るという決まりがある。\n\n【ポイント1】主語が同じであることを確認する\nBecause she was tiredのshe（主節の主語sheと同じ）なので省略できる。\n\n【ポイント2】動詞の変形を確認する\nbe動詞wasをBeingにする。\n\n【ポイント3】完成した文を確認する\n"Being tired, she went to bed early."という分詞構文になる。\n\n【答え】\nBeing tired, she went to bed early.\n\n【確かめ】\n主節と従属節の主語が同じであることを確認したうえで、接続詞Becauseと主語sheの両方が省略されているか確認する。\n\n【よくあるまちがい】\n主語が異なる場合に誤って主語を省略してしまうミス。この文は主語が同じなので省略してよい。\n\n【ここが絶対】\n分詞構文は「接続詞+主語(主節と同じ)+be動詞」→「-ing」の変形パターンとして型で覚える。',
     pitfall: `主節と従属節の主語が異なる場合は分詞構文にする際に主語を残す必要があるが、この文は主語が同じなので省略できることを確認する。`,
     memoryTip: `分詞構文は「接続詞+主語(主節と同じ)+be動詞」→「-ing」の変形パターンとして型で覚える。`,
   },
@@ -1102,7 +1104,8 @@ export const schoolKokoOhori: Question[] = [
     question: `次の英文を読んで、問いに答えなさい。\n(本文は上のpassageを参照)\n問:本文の内容として最も適切なものを選べ。\n① 知能は生まれつき完全に決まっており、変化することはない\n② 教師が「賢い」とほめることは、生徒が難しい課題に挑戦する意欲を必ず高める\n③ 努力や方法をほめることは、生徒が困難な課題に挑戦し続ける意欲を育てる\n④ 成長マインドセットを持つ生徒は、常に固定マインドセットの生徒より学業成績が低い`,
     answer: `③ 努力や方法をほめることは、生徒が困難な課題に挑戦し続ける意欲を育てる`,
     hint: `最後の2文(Praising a student for being "smart"...とIn contrast, praising the effort or strategy...)の対比に注目しよう。`,
-    explanation: `本文最後から2文目で「賢い」とほめることは難しい課題への挑戦を妨げる可能性があると述べ、最後の文で対照的に"praising the effort or strategy behind a success encourages students to keep trying even when tasks become harder"と、努力や方法をほめることが挑戦し続ける意欲を育てると述べている。これは③と一致する。①は本文冒頭の「昔はそう考えられていた」という内容で、本文はneuroplasticityの研究によりこれを否定している。②は「賢い」とほめることがむしろ挑戦を妨げうると述べており正反対。④は成長マインドセットを持つ生徒の方が"tend to perform better"と述べられており正反対。`,
+    explanation:
+      '【何を聞かれているか】\n知能と成長マインドセットについての英文を読み、本文の内容として最も適切なものを選ぶ問題。\n\n【なぜ最後の2文の対比に注目するのか】\n本文最後から2文目と最後の文で、「賢い」とほめる場合と「努力・方法」をほめる場合の効果が対比して述べられている。\n\n【ポイント1】「賢い」とほめる場合を確認する\n「賢い」とほめることは難しい課題への挑戦を妨げる可能性があると述べられている。\n\n【ポイント2】努力・方法をほめる場合を確認する\n"praising the effort or strategy behind a success encourages students to keep trying even when tasks become harder"（努力や方法をほめることは、課題が難しくなっても挑戦し続ける意欲を育てる）。\n\n【ポイント3】①②④を消去する\n①は本文冒頭の「昔はそう考えられていた」という通説で、本文はneuroplasticityの研究によりこれを否定している。②は「賢い」とほめることが挑戦を妨げうるとする本文と正反対。④は成長マインドセットを持つ生徒の方が"tend to perform better"と述べられており正反対。\n\n【答え】\n③ 努力や方法をほめることは、生徒が困難な課題に挑戦し続ける意欲を育てる\n\n【確かめ】\n選んだ答えが、本文最後の「努力・方法をほめる」ことの効果と一致しているか確認する。\n\n【よくあるまちがい】\n冒頭の「かつての通説」と、本文が実際に主張している内容を取り違えて①を選んでしまうミス。\n\n【ここが絶対】\n長文で「昔はこう考えられていた」という通説の後にhoweverなどで否定される展開は頻出パターン。否定した後の内容が筆者の主張。',
     pitfall: `冒頭の「かつての通説(intelligence was something fixed at birth)」と、本文が実際に主張している内容(neuroplasticityにより変化する)を取り違えて①を選んでしまうミスに注意。`,
     memoryTip: `長文の冒頭で「昔はこう考えられていた」という通説が紹介された後、howeverなどで否定される展開は頻出パターン。however以降の内容が筆者の主張であることが多い。`,
   },

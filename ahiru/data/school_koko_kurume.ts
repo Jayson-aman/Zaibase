@@ -963,7 +963,7 @@ export const schoolKokoKurume: Question[] = [
     answer: 'Being tired, she went to bed early.',
     hint: '理由を表す接続詞（Because）を省略し、主語が同じ場合は動詞を現在分詞の形にする。',
     explanation:
-      '分詞構文では、従属節の接続詞（Because）と、主節と同じ主語（she）を省略し、動詞を現在分詞（Being）の形にする。"she was tired"の"was"は"Being"となり、"Being tired, she went to bed early."という1文にまとめられる。',
+      '【何を聞かれているか】\n"Because she was tired, she went to bed early."を分詞構文を用いて1文に書き換える問題。\n\n【なぜ接続詞と主語を省略するのか】\n分詞構文では、従属節の接続詞（Because）と、主節と同じ主語（she）を省略し、動詞を現在分詞の形にするという決まりがある。\n\n【ポイント1】接続詞・主語の省略を確認する\nBecauseと、主節と同じ主語sheを省略する。\n\n【ポイント2】動詞の変形を確認する\n"was"を現在分詞Beingに変える。\n\n【ポイント3】完成した文を確認する\n"Being tired, she went to bed early."という1文にまとめる。\n\n【答え】\nBeing tired, she went to bed early.\n\n【確かめ】\n文頭がBeing（現在分詞）で始まり、接続詞Becauseや主語sheが残っていないか確認する。\n\n【よくあるまちがい】\n分詞構文にするときに主語を残してしまったり、be動詞をingの形にし忘れたりするミス。\n\n【ここが絶対】\n分詞構文＝「接続詞+主語(主節と同じ)+be動詞」→「-ing」という変形パターンで型として覚える。',
     pitfall: '分詞構文にするときに主語を残してしまったり、be動詞をingの形にし忘れたりするミスに注意。',
   },
   {
@@ -977,7 +977,7 @@ export const schoolKokoKurume: Question[] = [
     answer: 'This problem is more difficult than any other problem in the test.（"problems"を単数形"problem"に直す）',
     hint: '"any other + 名詞" の形では、名詞は単数形になるという決まりがある。',
     explanation:
-      '「〜より難しい」という比較級を使って最上級に近い意味を表す "比較級 + than any other + 単数名詞" という構文では、"other"の後ろの名詞は必ず単数形になる。この文では"problems"と複数形になっているのが誤りで、正しくは"any other problem"とする必要がある。',
+      '【何を聞かれているか】\n"This problem is more difficult than any other problems in the test."という文の誤りを見つけて直す問題。\n\n【なぜany other の後は単数形にするのか】\n「比較級+than any other+単数名詞」は最上級と同じ意味を表す構文で、"other"の後ろの名詞は必ず単数形になるという決まりがある。\n\n【ポイント1】構文の意味を確認する\n"more difficult than any other problem"＝「他のどの問題よりも難しい」という、最上級に近い意味を表す。\n\n【ポイント2】誤りの箇所を確認する\n"problems"と複数形になっているのが誤り。\n\n【ポイント3】正しい形を確認する\n"any other problem"と単数形に直す。\n\n【答え】\nThis problem is more difficult than any other problem in the test.（"problems"を単数形"problem"に直す）\n\n【確かめ】\n"any other"の直後の名詞が単数形problemになっているか確認する。\n\n【よくあるまちがい】\n"other"の後ろにくる名詞を複数扱いだと思い込み、複数形のままにしてしまうミス。\n\n【ここが絶対】\n「比較級+than any other+単数名詞」は最上級と同じ意味を表す重要構文として型で覚える。',
     pitfall: '"other"の後ろにくる名詞が複数扱いだと思い込み、複数形のままにしてしまうミスが非常に多い。',
     memoryTip: '"比較級 + than any other + 単数名詞" は最上級と同じ意味を表す重要構文。"other"の後は必ず単数形。',
   },
@@ -1032,7 +1032,7 @@ export const schoolKokoKurume: Question[] = [
     answer: 'Nobody knows why she suddenly quit the company.',
     hint: '"why"以下は間接疑問文になり、語順は「疑問詞＋主語＋動詞」になる（疑問文の語順にはしない）。',
     explanation:
-      '間接疑問文では、疑問詞の後ろは「主語＋動詞」の平叙文の語順になる（"why did she quit"のような疑問文の語順にはしない）。全体は"Nobody knows why she suddenly quit the company."となる。',
+      '【何を聞かれているか】\n語（nobody / why / the / suddenly / quit / she / knows / company）を並べ替えて、「彼女がなぜ突然会社を辞めたのか誰も知らない。」という英文を完成させる問題。\n\n【なぜ間接疑問文の語順にするのか】\n"why"以下は"knows"の目的語になる間接疑問文なので、疑問詞の後ろは疑問文の語順ではなく「主語＋動詞」の平叙文の語順にする。\n\n【ポイント1】全体の主語・動詞を確認する\n"Nobody knows"（誰も知らない）が文全体の骨組み。\n\n【ポイント2】間接疑問文の語順を確認する\n"why she suddenly quit the company"＝疑問詞why＋主語she＋副詞suddenly＋動詞quit＋目的語the company。\n\n【ポイント3】疑問文の語順にしないことを確認する\n"why did she quit"のような疑問文の語順は使わない。\n\n【答え】\nNobody knows why she suddenly quit the company.\n\n【確かめ】\n"why"の後ろが"she suddenly quit"という平叙文の語順になっているか確認する。\n\n【よくあるまちがい】\n間接疑問文の中で"why did she quit"のように疑問文の語順のままにしてしまうミス。\n\n【ここが絶対】\n間接疑問文＝「疑問詞+主語+動詞」の通常の語順、doやdidを使わないと覚える。',
     pitfall: '間接疑問文の中で"why did she quit"のように疑問文の語順のままにしてしまう誤りが非常に多い。',
   },
   {
@@ -1061,7 +1061,7 @@ export const schoolKokoKurume: Question[] = [
     answer: 'will have already finished',
     hint: '「彼女が到着するまでに」という未来のある時点までに動作が完了していることを表す時制を考える。',
     explanation:
-      '"by the time 〜"（〜するまでには）という未来の一時点までに、ある動作が完了していることを表す場合は未来完了形"will have + 過去分詞"を使う。よって"will have already finished"が正解。',
+      '【何を聞かれているか】\n"By the time she arrives, we ( ) dinner."の空欄に入る正しい形を選ぶ問題。\n\n【なぜ未来完了形を使うのか】\n"by the time〜"（〜するまでには）という未来のある時点までに、ある動作が完了していることを表す場合は、未来完了形"will have+過去分詞"を使う。\n\n【ポイント1】by the timeの意味を確認する\n「彼女が到着するまでには」という未来の期限を表す。\n\n【ポイント2】未来完了形の形を確認する\n"will have already finished"＝will have＋already＋過去分詞finished。\n\n【ポイント3】他の選択肢を消去する\n現在完了（have already finished）やただの過去（already finished）では、未来の一時点までの完了を表せない。\n\n【答え】\nwill have already finished\n\n【確かめ】\n選んだ形がwill have+過去分詞（未来完了形）になっているか確認する。\n\n【よくあるまちがい】\n未来を表すwillを抜かして現在完了のままにしてしまうミス。\n\n【ここが絶対】\nby the time〜＝「〜するまでには」、未来のある時点までの完了はwill have+過去分詞で表すと覚える。',
   },
   {
     id: 'kurume_eigo_11',
@@ -1081,7 +1081,7 @@ export const schoolKokoKurume: Question[] = [
     answer: 'They had more time to sing and attract mates before their rivals.',
     hint: '本文後半の"these birds also sang for a longer time...before their rivals in darker areas even woke up"という部分に注目する。',
     explanation:
-      '本文では、明るい街灯の近くに住むスズメは早く目覚める一方、より長い時間さえずることで、暗い場所に住むライバルよりも先に相手を引き寄せられる可能性がある、という「予想外の利点」が示されている。したがって正解は②。①は「睡眠時間が長くなった」という本文と逆の内容であり、③④は本文に記述がない。',
+      '【何を聞かれているか】\n明るい街灯の近くに住む鳥についての英文を読み、その鳥が持つ「予想外の利点」が何かを答える問題。\n\n【なぜ「ライバルより先に」という部分に注目するのか】\n本文後半の"these birds also sang for a longer time...before their rivals in darker areas even woke up"という部分に、鳥にとっての具体的な利点が述べられている。\n\n【ポイント1】早く目覚めることを確認する\n明るい街灯の近くの鳥は早く目覚める。\n\n【ポイント2】長くさえずることを確認する\nより長い時間さえずることで、暗い場所に住むライバルが目覚める前に相手を引き寄せられる可能性がある。\n\n【ポイント3】他の選択肢を消去する\n「睡眠時間が長くなった」は本文と逆、「暗い公園に移動した」「さえずるのをやめた」は本文に記述がない。\n\n【答え】\nThey had more time to sing and attract mates before their rivals.\n\n【確かめ】\n選んだ答えが、本文の「ライバルより先に長くさえずる」という内容と一致しているか確認する。\n\n【よくあるまちがい】\n「睡眠時間が長くなった」のように、本文と逆の内容を選んでしまうミス。\n\n【ここが絶対】\n「予想外の利点」を問う設問は、本文で明示的に述べられている具体的な効果の一文に注目する。',
   },
   {
     id: 'kurume_eigo_12',
@@ -1121,7 +1121,7 @@ export const schoolKokoKurume: Question[] = [
     answer: 'A classmate who spoke both languages helped her communicate and understand.',
     hint: '本文中の"pairing her with a classmate who spoke both Portuguese and English"以降の内容に注目する。',
     explanation:
-      '本文では、先生がマリアをポルトガル語と英語の両方を話せるクラスメートと組ませたことで、マリアが少しずつ英語で答えられるようになり、最終的には助けなしで英語の発表ができるようになったという経緯が描かれている。マリア自身も「1人の人が根気強く説明してくれたことが、どんな教科書よりも大きな違いを生んだ」と述べており、②が最も適切な推測である。',
+      '【何を聞かれているか】\nマリアがどのように英語を上達させたかについて、本文から推測できる内容を選ぶ問題。\n\n【なぜクラスメートとの関わりに注目するのか】\n本文には"pairing her with a classmate who spoke both Portuguese and English"以降に、マリアの上達のきっかけとなった具体的な出来事が描かれている。\n\n【ポイント1】先生の対応を確認する\n先生がマリアをポルトガル語と英語の両方を話せるクラスメートと組ませた。\n\n【ポイント2】その結果を確認する\nマリアは少しずつ英語で答えられるようになり、最終的には助けなしで英語の発表ができるようになった。\n\n【ポイント3】マリア自身の言葉を確認する\nマリアは「1人の人が根気強く説明してくれたことが、どんな教科書よりも大きな違いを生んだ」と述べている。\n\n【答え】\nA classmate who spoke both languages helped her communicate and understand.\n\n【確かめ】\n選んだ答えが、本文中の「両言語を話せるクラスメートとの関わり」という具体的な出来事と一致しているか確認する。\n\n【よくあるまちがい】\n「文法の教科書で毎晩勉強した」のように、本文が否定している内容（教科書よりも人との関わりが重要だった）を選んでしまうミス。\n\n【ここが絶対】\n推測問題は、本文中の具体的な出来事と、登場人物自身の発言の両方から根拠を探す。',
   },
   {
     id: 'kurume_eigo_14',
@@ -1155,7 +1155,7 @@ export const schoolKokoKurume: Question[] = [
     answer: 'PHO-to-graph',
     hint: '"-graphy"や"-ology"で終わる語は、その直前の音節に強勢がくることが多い。名詞の"photograph"はこれとは異なるパターンになる。',
     explanation:
-      '"photography"、"geography"、"biology"はいずれも語尾から2番目の音節（-tog-, -og-, -ol-）に強勢がある。一方、"photograph"は最初の音節"PHO"に強勢があり、パターンが異なる。同じつづりの仲間の単語でも、名詞の形（-graph）と、それに接尾辞がついた形（-graphy）とでは強勢の位置が変わることに注意する必要がある。',
+      '【何を聞かれているか】\n主な強勢の位置が他の3つと異なる単語を選ぶ問題。\n\n【なぜ接尾辞によって強勢の位置が変わるのか】\n"-graphy"や"-ology"のように語尾に接尾辞が付くと、その直前の音節に強勢が移動するという英語の規則があり、同じつづりを含む単語でも形が変わると強勢の位置が異なる。\n\n【ポイント1】photography・geography・biologyの強勢を確認する\nいずれも語尾から2番目の音節（-tog-, -og-, -ol-）に強勢がある。\n\n【ポイント2】photographの強勢を確認する\n"photograph"は名詞の形（-graph）で、最初の音節"PHO"に強勢がある。\n\n【ポイント3】仲間の単語で形が変わることを確認する\nphotograph（写真）とphotography（写真術）は、つづりの一部が同じでも、接尾辞の有無で強勢の位置が変わる。\n\n【答え】\nPHO-to-graph\n\n【確かめ】\n選んだ答えが、他の3語（-graphy系・-ology系）とは異なる位置に強勢を持つ単語になっているか確認する。\n\n【よくあるまちがい】\nphotographもphotographyと同じ強勢位置だと思い込んでしまうミス。\n\n【ここが絶対】\n"-graphy"「-ology"の語は直前の音節に強勢、名詞の元の形（-graph等）とは強勢の位置が異なることに注意する。',
   },
   {
     id: 'kurume_eigo_16',
