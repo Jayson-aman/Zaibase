@@ -419,7 +419,7 @@ export const gradeJ1EigoQuestions: Question[] = [
     choices: ['is writing', 'writes', 'write', 'is write'],
     hint: '主語がSheのときの現在進行形の形。',
     explanation:
-      '【解説】\n主語がshe（3人称単数）のときのbe動詞はis。\n「書く」write→ing形はwriting（eをとってing）。\nis writingとなる。\n答え：is writing',
+      '【何を聞かれているか】\n"She (　) a letter now."（彼女は今、手紙を書いています。）の空欄に入る語句を選ぶ問題。\n\n【なぜis writingを使うのか】\n「今〜しています」という現在進行形は、主語Sheに対応するbe動詞isと、動詞のing形writingを組み合わせて表す。\n\n【ポイント1】主語Sheのbe動詞を確認する\n主語がshe（3人称単数）のときのbe動詞はis。\n\n【ポイント2】writeのing形を確認する\nwrite→writing（eをとってingをつける）。\n\n【ポイント3】他の選択肢を消去する\nwrites（現在形）、write（原形）、is write（動詞がing形になっていない）はいずれも不適切。\n\n【答え】\nis writing\n\n【確かめ】\nbe動詞isと、writeのing形writingの両方が正しく使われているか確認する。\n\n【よくあるまちがい】\nwriteのeを消さずにwriteingとしてしまうミス。\n\n【ここが絶対】\neで終わる動詞は、eをとってからingをつける（write→writing）と覚える。',
   },
   {
     id: 'grade_j1_eigo_26',
@@ -468,7 +468,7 @@ export const gradeJ1EigoQuestions: Question[] = [
     choices: ['running', 'runing', 'runeing', 'runnning'],
     hint: '短母音＋子音字で終わる動詞は、子音字を重ねてingをつける。',
     explanation:
-      '【解説】\nrun（走る）のように〈短い母音字＋子音字〉で終わる動詞は、ing形にするとき子音字を重ねてingをつける。\nrun→running（nを重ねる）。\n答え：running',
+      '【何を聞かれているか】\n"He is (　) now."（彼は今、走っています。）の空欄に入る語を選ぶ問題。\n\n【なぜnを重ねるのか】\nrun（走る）のように〈短い母音字＋子音字〉で終わる動詞は、ing形にするとき子音字を重ねてingをつけるという決まりがある。\n\n【ポイント1】runの形を確認する\nrun＝短い母音字u＋子音字n、で終わる動詞。\n\n【ポイント2】ing形の作り方を確認する\nrun→running（nを重ねてからingをつける）。\n\n【ポイント3】他の選択肢を消去する\nruning（重ねていない）、runeing（不要なeが入っている）、runnning（nを重ねすぎている）はいずれも誤り。\n\n【答え】\nrunning\n\n【確かめ】\nnが2つ重なった正しいつづり（running）になっているか確認する。\n\n【よくあるまちがい】\n子音字を重ねずにruningとしてしまうミス。\n\n【ここが絶対】\nrun→running、swim→swimming、sit→sittingのように、最後の文字を重ねてからingをつける動詞に注意する。',
     memoryTip:
       'run→running、swim→swimming、sit→sittingのように、最後の文字を重ねてからingをつける動詞に注意。',
   },
@@ -483,7 +483,7 @@ export const gradeJ1EigoQuestions: Question[] = [
     choices: ['Yes, he is.', 'Yes, he does.', 'Yes, he swims.', 'Yes, he do.'],
     hint: '現在進行形の疑問文にはbe動詞を使って答える。',
     explanation:
-      "【解説】\nIs he 〜ing? とたずねられたら、Yes, he is. またはNo, he isn't. のようにbe動詞を使って答える。\n答え：Yes, he is.",
+      '【何を聞かれているか】\n"Is he swimming now?"に対して「はい、泳いでいます」と答える正しい文を選ぶ問題。\n\n【なぜbe動詞を使って答えるのか】\n現在進行形の疑問文（Is he〜ing?）には、be動詞を使って答えるという決まりがある。\n\n【ポイント1】疑問文の形を確認する\n"Is he swimming now?"＝be動詞isを使った現在進行形の疑問文。\n\n【ポイント2】答え方の形を確認する\nYes, he is. またはNo, he isn\'t.のように、be動詞を使って答える。\n\n【ポイント3】他の選択肢を消去する\ndoes、swims、doを使った答えは、一般動詞の疑問文への答え方であり、be動詞の疑問文には合わない。\n\n【答え】\nYes, he is.\n\n【確かめ】\n答えがbe動詞is（doesやdoではない）を使った形になっているか確認する。\n\n【よくあるまちがい】\n現在進行形の疑問文に、一般動詞の答え方（Yes, he does.）を使ってしまうミス。\n\n【ここが絶対】\nbe動詞の疑問文（進行形を含む）にはbe動詞、一般動詞の疑問文にはdo/doesを使って答えると覚える。',
   },
 
   // ============================================================
@@ -536,7 +536,7 @@ export const gradeJ1EigoQuestions: Question[] = [
     ],
     hint: 'be動詞の命令文はbeを使う。',
     explanation:
-      '【解説】\nbe動詞を使った命令文は、amやisやareではなく原形のbeを使う。\nPlease be quiet. で「静かにしてください」というていねいな命令文になる。\n答え：Please be quiet.',
+      '【何を聞かれているか】\n「静かにしてください。」を英語にする問題。\n\n【なぜbeを使うのか】\nbe動詞を使った命令文は、amやisやareではなく、原形のbeを使うという決まりがある。\n\n【ポイント1】命令文の基本の形を確認する\n命令文は動詞の原形で文を始める。\n\n【ポイント2】be動詞の命令文を確認する\nbe動詞の命令文では、amやisやareではなく原形beを使う。\n\n【ポイント3】完成した文を確認する\n"Please be quiet."＝「静かにしてください」というていねいな命令文になる。\n\n【答え】\nPlease be quiet.\n\n【確かめ】\nareやisではなく、原形beが使われているか確認する。\n\n【よくあるまちがい】\n"Please are quiet."のように、be動詞をareやisのまま使ってしまうミス。\n\n【ここが絶対】\n命令文でbe動詞を使うときは必ずbeの形にする、と覚える。',
     pitfall: '命令文でbe動詞を使うときは必ずbeの形にする。areやisをそのまま使わないこと。',
   },
   {
@@ -658,7 +658,7 @@ export const gradeJ1EigoQuestions: Question[] = [
     ],
     hint: '「何の〜」はWhatのすぐあとに名詞を続ける。',
     explanation:
-      '【解説】\n「何の〜が好きですか」とたずねるときは、Whatのすぐあとに名詞（sport）を続け、そのあとにdo you like?を続ける。\n答え：What sport do you like?',
+      '【何を聞かれているか】\n「あなたは何のスポーツが好きですか。」を英語にする問題。\n\n【なぜWhatの後に名詞を続けるのか】\n「何の〜が好きですか」とたずねるときは、疑問詞Whatのすぐ後に名詞（sport）を続けて、1つのかたまりとして文頭に置くという決まりがある。\n\n【ポイント1】"What+名詞"の形を確認する\nWhat sport（何のスポーツ）が1つのかたまりとして文頭に来る。\n\n【ポイント2】後ろの語順を確認する\nWhat sportの後ろに、do you likeという疑問文の語順を続ける。\n\n【ポイント3】他の選択肢を消去する\n"What sport you like?"（doが抜けている）、"Do you like what sport?"（語順が誤り）、"What sport are you like?"（be動詞を誤って使っている）はいずれも不適切。\n\n【答え】\nWhat sport do you like?\n\n【確かめ】\n"What sport"の後ろが"do you like"という語順になっているか確認する。\n\n【よくあるまちがい】\nWhatとsportの間に他の語を入れてしまい、かたまりを崩してしまうミス。\n\n【ここが絶対】\n「What+名詞+do you+動詞の原形〜?」の型で、名詞を疑問詞のすぐ後ろに置くと覚える。',
   },
   {
     id: 'grade_j1_eigo_40',
@@ -707,7 +707,7 @@ export const gradeJ1EigoQuestions: Question[] = [
     ],
     hint: '「どこ」をたずねる疑問詞のあとにbe動詞の疑問文の形を続ける。',
     explanation:
-      '【解説】\n「どこに〜がありますか」とたずねるときはWhereのあとにbe動詞の疑問文の形（is the library）を続ける。\n答え：Where is the library?',
+      '【何を聞かれているか】\n「図書館はどこにありますか。」を英語にする問題。\n\n【なぜWhereの後にbe動詞の疑問文を続けるのか】\n「どこに〜がありますか」とたずねるときは、疑問詞Whereの後に、be動詞の疑問文の形（is the library）を続けるという決まりがある。\n\n【ポイント1】be動詞の疑問文の形を確認する\n"is the library"＝be動詞is＋主語the libraryという疑問文の語順。\n\n【ポイント2】Whereの位置を確認する\nWhereを文頭に置き、その後にis the libraryを続ける。\n\n【ポイント3】他の選択肢を消去する\n"Where the library is?"（倒置していない）、"The library is where?"（Whereが文末にある）、"Where does the library?"（一般動詞用のdoesを誤って使っている）はいずれも不適切。\n\n【答え】\nWhere is the library?\n\n【確かめ】\nWhereの後がis the library（倒置された疑問文の語順）になっているか確認する。\n\n【よくあるまちがい】\nWhereの後を倒置せず、"Where the library is?"のようにしてしまうミス。\n\n【ここが絶対】\n場所をたずねるWhereの疑問文は、Where+be動詞の疑問文、という型で覚える。',
   },
   {
     id: 'grade_j1_eigo_43',
@@ -761,7 +761,7 @@ export const gradeJ1EigoQuestions: Question[] = [
     choices: ['on', 'in', 'at', 'under'],
     hint: '「〜の上に」を表す前置詞。',
     explanation:
-      '【解説】\n「（表面に接して）〜の上に」という位置は前置詞onで表す。\nThe book is on the table. で「その本はテーブルの上にあります」という文になる。\n答え：on',
+      '【何を聞かれているか】\n"The book is (　) the table."（その本はテーブルの上にあります。）の空欄に入る語を選ぶ問題。\n\n【なぜonを使うのか】\n「（表面に接して）〜の上に」という位置関係は、前置詞onで表すという決まりがある。\n\n【ポイント1】onの意味を確認する\non＝「〜の上に（接触して）」という位置関係を表す。\n\n【ポイント2】他の前置詞との違いを確認する\nin＝「〜の中に」、at＝「（地点）で」というように、それぞれ表す位置関係が異なる。\n\n【ポイント3】文全体の意味を確認する\n"The book is on the table."＝「その本はテーブルの上にあります」。\n\n【答え】\non\n\n【確かめ】\n選んだ前置詞が「テーブルの上に接して」という意味に合っているか確認する。\n\n【よくあるまちがい】\ninやatを選んで「中に」「地点で」という異なる意味にしてしまうミス。\n\n【ここが絶対】\nin＝中、on＝上（接触）、at＝地点、under＝下、と位置関係のイメージで前置詞を区別する。',
     pitfall: 'inは「〜の中に」、onは「〜の上に（接触して）」、atは「〜の地点で」と使い分ける。',
   },
   {

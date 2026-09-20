@@ -36,7 +36,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     choices: ['cleaned', 'cleans', 'cleaning', 'clean'],
     hint: 'clean（そうじする）の過去形。',
     explanation:
-      '【解説】\ncleanのような規則動詞はedをつけて過去形にする。clean→cleaned。\nlast Sunday（この前の日曜日）から過去の文だとわかる。\n答え：cleaned',
+      '【何を聞かれているか】\n"She (　) her room last Sunday."（彼女はこの前の日曜日に部屋をそうじしました。）の空欄に入る正しい形を選ぶ問題。\n\n【なぜcleanedにするのか】\n"last Sunday"（この前の日曜日）という過去を表す語句があるので、動詞を過去形にする必要がある。\n\n【ポイント1】cleanの変化を確認する\ncleanのような規則動詞は、edをつけて過去形にする（clean→cleaned）。\n\n【ポイント2】過去を表す語句を確認する\n"last Sunday"から、過去の出来事について述べた文だとわかる。\n\n【ポイント3】他の選択肢を消去する\ncleans（現在形）、cleaning（ing形）、clean（原形）はいずれも過去の出来事を表せない。\n\n【答え】\ncleaned\n\n【確かめ】\ncleanにedがついてcleanedになっているか確認する。\n\n【よくあるまちがい】\n過去を表す語句があるのに、現在形cleansのままにしてしまうミス。\n\n【ここが絶対】\nlast〜、yesterday、〜ago等の語があれば過去形を使うと覚える。',
   },
   {
     id: 'grade_j2_eigo_03',
@@ -64,7 +64,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     choices: ['watch', 'watched', 'watches', 'watching'],
     hint: "didn'tのあとの動詞は原形にする。",
     explanation:
-      "【解説】\n過去の否定文は didn't（did not）のあとに動詞の原形を続ける。過去形にしない。\nwatch→そのままの形で使う。\n答え：watch",
+      '【何を聞かれているか】\n"I didn\'t (　) TV last night."（わたしは昨夜テレビを見ませんでした。）の空欄に入る正しい形を選ぶ問題。\n\n【なぜwatchを原形のまま使うのか】\n過去の否定文はdidn\'t（did not）の後に動詞の原形を続けるという決まりがあり、didn\'tの中にすでに過去の意味が含まれているので、動詞を過去形にする必要はない。\n\n【ポイント1】didn\'tの後の動詞の形を確認する\ndidn\'t（did not）の後は動詞の原形を続ける。\n\n【ポイント2】watchの形を確認する\nwatch→そのままの形（原形）で使う。\n\n【ポイント3】他の選択肢を消去する\nwatched（過去形）、watches（3単現）、watching（ing形）はいずれもdidn\'tの後には使えない。\n\n【答え】\nwatch\n\n【確かめ】\ndidn\'tの後がwatch（原形）になっており、watchedになっていないか確認する。\n\n【よくあるまちがい】\ndidn\'tの後にwatchedと過去形のままにしてしまうミス。\n\n【ここが絶対】\ndidn\'t（did not）の後ろは動詞の原形、と徹底して覚える。',
     pitfall:
       "didn'tのあとにwatchedと過去形のままにしてしまうミスに注意。didn'tの中にすでに過去の意味が入っている。",
   },
@@ -78,7 +78,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     answer: "He didn't clean his room.",
     hint: "一般動詞の過去の否定文は didn't + 動詞の原形。",
     explanation:
-      "【解説】\n過去の否定文は主語のあとに didn't を置き、動詞を原形にもどす。\ncleaned（過去形）→ clean（原形）にして didn't clean とする。\n答え：He didn't clean his room.",
+      '【何を聞かれているか】\n"He cleaned his room."を「〜しませんでした」という否定文に書きかえる問題。\n\n【なぜdidn\'tの後で動詞を原形に戻すのか】\n一般動詞の過去の否定文は、主語の後にdidn\'tを置き、動詞を原形に戻すという決まりがある。\n\n【ポイント1】didn\'tを置く位置を確認する\n主語Heの後にdidn\'tを置く。\n\n【ポイント2】動詞の形を確認する\ncleaned（過去形）→clean（原形）にして、didn\'t cleanとする。\n\n【ポイント3】完成した文を確認する\n"He didn\'t clean his room."という型になる。\n\n【答え】\nHe didn\'t clean his room.\n\n【確かめ】\ndidn\'tの後の動詞がclean（原形）になっており、cleanedのままになっていないか確認する。\n\n【よくあるまちがい】\ndidn\'tを置いても、動詞をcleanedのまま残してしまうミス。\n\n【ここが絶対】\n一般動詞の過去の否定文＝主語+didn\'t+動詞の原形、という型でセットで覚える。',
   },
 
   // ============================================================
@@ -111,7 +111,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     choices: ['had', 'haved', 'have', 'having'],
     hint: 'haveの過去形は不規則に変化する。',
     explanation:
-      '【解説】\nhave（〜を過ごす、持っている）の過去形は不規則動詞で had になる。\n答え：had',
+      '【何を聞かれているか】\n"We (　) a great time at the party."（わたしたちはパーティーで楽しい時間を過ごしました。）の空欄に入る正しい形を選ぶ問題。\n\n【なぜhadを使うのか】\nhave（〜を過ごす、持っている）の過去形は不規則に変化し、hadになるという決まりがある。\n\n【ポイント1】haveの過去形を確認する\nhave→had（不規則動詞）。\n\n【ポイント2】他の選択肢を消去する\nhaved（規則動詞のような誤った変化）、have（現在形）、having（ing形）はいずれも過去の文には使えない。\n\n【ポイント3】文全体の意味を確認する\n"We had a great time at the party."＝「わたしたちはパーティーで楽しい時間を過ごしました」。\n\n【答え】\nhad\n\n【確かめ】\nhaveがhad（不規則な過去形）になっているか確認する。\n\n【よくあるまちがい】\nhaveの過去形をhavedのように規則動詞と同じ変化にしてしまうミス。\n\n【ここが絶対】\nhaveの過去形はhad、という不規則変化として個別に覚える。',
   },
   {
     id: 'grade_j2_eigo_08',
@@ -125,7 +125,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     choices: ['bought', 'buyed', 'buys', 'buying'],
     hint: 'buyの過去形は不規則に変化する。',
     explanation:
-      '【解説】\nbuy（買う）の過去形は不規則動詞で bought になる。\n答え：bought',
+      '【何を聞かれているか】\n"My mother (　) a new bag last week."（母は先週、新しいかばんを買いました。）の空欄に入る正しい形を選ぶ問題。\n\n【なぜboughtを使うのか】\nbuy（買う）の過去形は不規則に変化し、boughtになるという決まりがある。\n\n【ポイント1】buyの過去形を確認する\nbuy→bought（不規則動詞）。\n\n【ポイント2】過去を表す語句を確認する\n"last week"から過去の文だとわかる。\n\n【ポイント3】他の選択肢を消去する\nbuyed（規則動詞のような誤った変化）、buys（現在形）、buying（ing形）はいずれも過去の文には使えない。\n\n【答え】\nbought\n\n【確かめ】\nbuyがbought（不規則な過去形）になっているか確認する。\n\n【よくあるまちがい】\nbuyの過去形をbuyedのように規則動詞と同じ変化にしてしまうミス。\n\n【ここが絶対】\nbuyの過去形はbought、という不規則変化として個別に覚える。',
   },
   {
     id: 'grade_j2_eigo_09',
@@ -139,7 +139,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     choices: ['saw', 'seed', 'seen', 'sawed'],
     hint: 'seeの過去形は不規則に変化する。',
     explanation:
-      '【解説】\nsee（見る）の過去形は不規則動詞で saw になる。seenは過去分詞形で、過去形としては使わない。\n答え：saw',
+      '【何を聞かれているか】\n"We (　) a beautiful sunset yesterday evening."（わたしたちは昨日の夕方、美しい夕日を見ました。）の空欄に入る正しい形を選ぶ問題。\n\n【なぜsawを使うのか】\nsee（見る）の過去形は不規則に変化し、sawになるという決まりがある。\n\n【ポイント1】seeの過去形を確認する\nsee→saw（不規則動詞）。\n\n【ポイント2】seenとの違いを確認する\nseenは過去分詞形であり、have/hasと組み合わせて使うもので、過去形としては使わない。\n\n【ポイント3】他の選択肢を消去する\nseed（誤った変化）、seen（過去分詞形）、sawed（誤った変化）はいずれも不適切。\n\n【答え】\nsaw\n\n【確かめ】\nseeがsaw（不規則な過去形）になっており、seenと混同していないか確認する。\n\n【よくあるまちがい】\nseenを過去形として使ってしまうミス。\n\n【ここが絶対】\nseeの変化はsee-saw-seen（原形-過去形-過去分詞形）とセットで覚える。',
     pitfall: 'seenを過去形として使ってしまうミスに注意。seenはhave/hasと組み合わせて使う過去分詞形。',
   },
   {
@@ -154,7 +154,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     answer: 'a T-shirt with a panda on it（パンダの絵が描かれたTシャツ）',
     hint: '「Mika bought」に続く部分に注目する。',
     explanation:
-      '【解説】\n本文中の Mika bought a T-shirt with a panda on it. の部分に注目する。boughtはbuy（買う）の過去形。\nこの文から、ミカが動物園の帰りに買ったのは「パンダの絵が描かれたTシャツ」だとわかる。\n答え：a T-shirt with a panda on it（パンダの絵が描かれたTシャツ）',
+      '【何を聞かれているか】\n本文を読み、ミカが動物園で何を買ったかを答える問題。\n\n【なぜboughtに注目するのか】\n「何を買ったか」という設問の答えは、buy（買う）の過去形boughtを含む一文に直接示されている。\n\n【ポイント1】該当の一文を確認する\n本文中の"Mika bought a T-shirt with a panda on it."に注目する。\n\n【ポイント2】boughtの意味を確認する\nboughtはbuy（買う）の過去形。\n\n【ポイント3】答えの内容を確認する\nミカが動物園の帰りに買ったのは「パンダの絵が描かれたTシャツ」。\n\n【答え】\na T-shirt with a panda on it（パンダの絵が描かれたTシャツ）\n\n【確かめ】\n答えが、boughtの直後に続く具体的な品物（Tシャツ）になっているか確認する。\n\n【よくあるまちがい】\n本文中の他の出来事（動物園で見た動物など）と混同してしまうミス。\n\n【ここが絶対】\n「何を買ったか」を問う設問は、buy/boughtの直後に続く目的語に注目する。',
   },
 
   // ============================================================
@@ -186,7 +186,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     choices: ['were playing', 'was playing', 'played', 'are playing'],
     hint: '主語がTheyのときのbe動詞の過去形はwere。',
     explanation:
-      '【解説】\n過去進行形は be動詞の過去形+動詞のing形で表す。主語がThey（3人称複数）のときのbe動詞の過去形はwere。\n答え：were playing',
+      '【何を聞かれているか】\n"They (　) soccer in the park at that time."（そのとき、彼らは公園でサッカーをしているところでした。）の空欄に入る正しい形を選ぶ問題。\n\n【なぜwere playingを使うのか】\n「〜しているところだった」という過去進行形は、be動詞の過去形＋動詞のing形で表し、主語They（3人称複数）に対応するbe動詞の過去形はwereになる。\n\n【ポイント1】過去進行形の形を確認する\nbe動詞の過去形+動詞のing形。\n\n【ポイント2】主語Theyのbe動詞を確認する\nTheyは複数なので、be動詞の過去形はwere。\n\n【ポイント3】他の選択肢を消去する\nwas playing（単数用）、played（単純過去）、are playing（現在進行形）はいずれも不適切。\n\n【答え】\nwere playing\n\n【確かめ】\n主語Theyに対応するwereが使われ、was playingと混同していないか確認する。\n\n【よくあるまちがい】\n主語がheやsheのときのwasを、theyやweのときにも使ってしまうミス。\n\n【ここが絶対】\n主語がheやsheのときはwas、theyやweのときはwereを使うと覚える。',
     pitfall: '主語がheやsheのときはwas、theyやweのときはwereを使う。混同しないこと。',
   },
   {
@@ -199,7 +199,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     answer: "They weren't studying then.",
     hint: '過去進行形の否定文はbe動詞のあとにnotを置く。',
     explanation:
-      "【解説】\n過去進行形の否定文は、be動詞（was/were）のあとに not を置いて表す。wereのあとにnotをつけて weren't（were not）とする。\n答え：They weren't studying then.",
+      '【何を聞かれているか】\n"They were studying then."を「〜していませんでした」という過去進行形の否定文に書きかえる問題。\n\n【なぜbe動詞の後にnotを置くのか】\n過去進行形の否定文は、be動詞（was/were）の後にnotを置いて表すという決まりがある。\n\n【ポイント1】be動詞の位置を確認する\n過去進行形の文のbe動詞はwere。\n\n【ポイント2】否定文の形を確認する\nwereの後にnotをつけてweren\'t（were not）とする。\n\n【ポイント3】完成した文を確認する\n"They weren\'t studying then."という型になる。\n\n【答え】\nThey weren\'t studying then.\n\n【確かめ】\nwereの直後にnot（weren\'t）が入っているか確認する。\n\n【よくあるまちがい】\nstudyingの前にnotを置くなど、位置を誤ってしまうミス。\n\n【ここが絶対】\n過去進行形の否定文＝be動詞の過去形+not+動詞のing形、という型でセットで覚える。',
   },
   {
     id: 'grade_j2_eigo_14',
@@ -232,7 +232,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     choices: ['will', 'am', 'do', 'was'],
     hint: '未来のことを表す助動詞。',
     explanation:
-      '【解説】\n「〜するつもりだ、〜するだろう」という未来のことは will のあとに動詞の原形を続けて表す。\n答え：will',
+      '【何を聞かれているか】\n"I (　) call you tomorrow."（わたしは明日あなたに電話します。）の空欄に入る単語を選ぶ問題。\n\n【なぜwillを使うのか】\n「〜するつもりだ、〜するだろう」という未来のことを表すときは、willの後に動詞の原形を続けるという決まりがある。\n\n【ポイント1】willの意味を確認する\nwill＝未来のことを表す助動詞。\n\n【ポイント2】willの後の動詞の形を確認する\nwillの後は動詞の原形call。\n\n【ポイント3】他の選択肢を消去する\nam、do、wasはいずれも未来を表す助動詞ではない。\n\n【答え】\nwill\n\n【確かめ】\nwillの後にcall（原形）が続いているか確認する。\n\n【よくあるまちがい】\n未来のことなのにamやwasのような現在形・過去形を使ってしまうミス。\n\n【ここが絶対】\nwill+動詞の原形＝「〜するだろう、〜するつもりだ」という未来を表す型で覚える。',
   },
   {
     id: 'grade_j2_eigo_16',
@@ -246,7 +246,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     choices: ['are', 'is', 'will', 'was'],
     hint: '主語がWeのときのbe動詞。',
     explanation:
-      '【解説】\n「〜する予定だ」というすでに決まっている予定は be going to で表す。主語がWeのときのbe動詞は are。\n答え：are',
+      '【何を聞かれているか】\n"We (　) going to visit Kyoto next week."（わたしたちは来週京都を訪れる予定です。）の空欄に入る単語を選ぶ問題。\n\n【なぜareを使うのか】\n「〜する予定だ」というすでに決まっている予定を表すbe going toの文で、主語We（複数）に対応するbe動詞はareになる。\n\n【ポイント1】be going toの形を確認する\nbe動詞+going to+動詞の原形。\n\n【ポイント2】主語Weのbe動詞を確認する\nWeは複数なので、be動詞はare。\n\n【ポイント3】他の選択肢を消去する\nis（三人称単数用）、will（別の未来表現）、was（過去形）はいずれも不適切。\n\n【答え】\nare\n\n【確かめ】\n主語Weに対応するareが選ばれ、isと混同していないか確認する。\n\n【よくあるまちがい】\nbe going toのbe動詞を、主語に合わせずisにしてしまうミス。\n\n【ここが絶対】\nbe going to＝「もう決まっている予定」を表し、be動詞は主語に合わせて変えると覚える。',
   },
   {
     id: 'grade_j2_eigo_17',
@@ -315,7 +315,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     ],
     hint: 'mustのあとの動詞は原形。toはつけない。',
     explanation:
-      '【解説】\n「〜しなければならない」は助動詞 must のあとに動詞の原形を続けて表す。mustのあとに to をつけないことに注意。\n答え：You must be quiet here.',
+      '【何を聞かれているか】\n「あなたはここで静かにしなければなりません。」を表す正しい英文を選ぶ問題。\n\n【なぜmustの後にtoをつけないのか】\n「〜しなければならない」を表す助動詞mustは、後ろに動詞の原形を直接続け、不定詞のようにtoをつけないという決まりがある。\n\n【ポイント1】mustの形を確認する\nmust+動詞の原形。\n\n【ポイント2】toをつけないことを確認する\n"must to be"のようにtoをつけるのは誤り。\n\n【ポイント3】他の選択肢を消去する\nmusts（助動詞にsをつける誤り）、must being（ing形にする誤り）はいずれも不適切。\n\n【答え】\nYou must be quiet here.\n\n【確かめ】\nmustの直後にbe（原形）が続いており、toが入っていないか確認する。\n\n【よくあるまちがい】\nmustをwant toのような不定詞構文と混同し、to をつけてしまうミス。\n\n【ここが絶対】\nmustの後の動詞は原形のみ、toはつけないと覚える。',
   },
   {
     id: 'grade_j2_eigo_21',
@@ -333,7 +333,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     ],
     hint: '主語が3人称単数（he）のときはhave toではなくhas toを使う。',
     explanation:
-      '【解説】\n「〜しなければならない」はhave toでも表せる。主語がhe・she・itなど3人称単数のときはhaveをhasに変えてhas toとする。has toのあとの動詞は原形。\n答え：He has to get up early every morning.',
+      '【何を聞かれているか】\n「彼は毎朝早く起きなければなりません。」を表す正しい英文を選ぶ問題。\n\n【なぜhas toを使うのか】\n「〜しなければならない」はhave toでも表せるが、主語がhe・she・itなど3人称単数のときは、haveをhasに変えてhas toとするという決まりがある。\n\n【ポイント1】主語の種類を確認する\n主語Heは3人称単数。\n\n【ポイント2】has toの形を確認する\nhave→has（3人称単数現在形）に変え、has toとする。\n\n【ポイント3】has toの後の動詞の形を確認する\nhas toの後の動詞は原形（get up）。\n\n【答え】\nHe has to get up early every morning.\n\n【確かめ】\nhaveがhasに変わっており、has toの後がget（原形）になっているか確認する。\n\n【よくあるまちがい】\n主語が3人称単数なのにhave toのままにしてしまうミス。\n\n【ここが絶対】\n主語が3人称単数でもmustはmustsのように変化しないが、have toはhas toに変化する点に注意する。',
     pitfall: '主語が3人称単数でもmustはmustsのように変化しないが、have toはhas toに変化する点に注意。',
   },
   {
@@ -352,7 +352,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     ],
     hint: '「〜すべきだ」というアドバイスを表す助動詞。',
     explanation:
-      '【解説】\n「〜すべきだ」というアドバイスは助動詞 should を使う。shouldのあとの動詞は原形で、toはつけない。\n答え：You should eat more vegetables.',
+      '【何を聞かれているか】\n「あなたはもっと野菜を食べるべきです。」を表す正しい英文を選ぶ問題。\n\n【なぜshouldの後にtoをつけないのか】\n「〜すべきだ」というアドバイスを表す助動詞shouldは、後ろに動詞の原形を直接続け、toをつけないという決まりがある。\n\n【ポイント1】shouldの意味を確認する\nshould＝「〜すべきだ」というアドバイスを表す助動詞。\n\n【ポイント2】shouldの後の動詞の形を確認する\nshould+動詞の原形（eat）、toはつけない。\n\n【ポイント3】他の選択肢を消去する\nshould eats（3単現のsをつける誤り）、should to eat（toをつける誤り）、are should eat（be動詞と助動詞を混同する誤り）はいずれも不適切。\n\n【答え】\nYou should eat more vegetables.\n\n【確かめ】\nshouldの直後にeat（原形）が続いており、toやsが入っていないか確認する。\n\n【よくあるまちがい】\nshouldの後の動詞にtoをつけてしまうミス。\n\n【ここが絶対】\nshouldの後の動詞は原形のみ、toはつけないと覚える（must, can, willと同じグループ）。',
   },
   {
     id: 'grade_j2_eigo_23',
@@ -400,7 +400,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     choices: ['to be', 'being', 'be', 'been'],
     hint: 'want のあとには〈to+動詞の原形〉が続く。',
     explanation:
-      '【解説】\nwant to 〜（〜したい）は不定詞の名詞的用法で、want のあとに〈to+動詞の原形〉を続ける。\n答え：to be',
+      '【何を聞かれているか】\n"I want (　) a doctor in the future."（わたしは将来、医者になりたいです。）の空欄に入る正しい形を選ぶ問題。\n\n【なぜto beを使うのか】\nwant to〜（〜したい）は不定詞の名詞的用法で、wantの後には〈to+動詞の原形〉を続けるという決まりがある。\n\n【ポイント1】want toの形を確認する\nwant+to+動詞の原形。\n\n【ポイント2】be動詞の原形を確認する\n「〜になる」という意味には、be動詞の原形beを使う。\n\n【ポイント3】他の選択肢を消去する\nbeing（ing形）、be（toが抜けている）、been（過去分詞形）はいずれも不適切。\n\n【答え】\nto be\n\n【確かめ】\nwantの後にto be（to+原形）が続いているか確認する。\n\n【よくあるまちがい】\ntoを抜かして"want be a doctor"としてしまうミス。\n\n【ここが絶対】\nwant to+動詞の原形＝「〜したい」という型でセットで覚える。',
   },
   {
     id: 'grade_j2_eigo_26',
@@ -469,7 +469,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     answer: 'It is difficult for me to read this book.',
     hint: '「〜することは…にとって〜だ」は It is 〜 for 人 to 〜. の形で表す。',
     explanation:
-      '【解説】\n「〜することは…にとって〜だ」というときは、〈It is+形容詞+for+人+to+動詞の原形〉の形を使う。Itはあとに続く to read this book（この本を読むこと）を指す形式上の主語。\n答え：It is difficult for me to read this book.',
+      '【何を聞かれているか】\n「この本を読むことは、わたしにとって難しいです。」を「It is ... for ... to ...」の形を使って英語にする問題。\n\n【なぜItが形式上の主語なのか】\n〈It is+形容詞+for+人+to+動詞の原形〉の構文では、Itはあとに続くto read this book（この本を読むこと）を指す形式上の主語として使われる。\n\n【ポイント1】構文の基本の形を確認する\nIt is+形容詞+for+人+to+動詞の原形。\n\n【ポイント2】語句を当てはめる\n形容詞difficult、人me、動詞the原形read this bookを当てはめる。\n\n【ポイント3】完成した文を確認する\n"It is difficult for me to read this book."という型になる。\n\n【答え】\nIt is difficult for me to read this book.\n\n【確かめ】\nItの後にis difficult、for me、to read this bookの順に正しく並んでいるか確認する。\n\n【よくあるまちがい】\nforとtoの位置を逆にしてしまうミス。\n\n【ここが絶対】\nIt is+形容詞+for+人+to+動詞の原形＝「〜することは…にとって〜だ」という型で覚える。',
   },
 
   // ============================================================
@@ -530,7 +530,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     choices: ['doing', 'to do', 'do', 'did'],
     hint: 'finishのあとには動名詞だけが続き、不定詞は続かない。',
     explanation:
-      '【解説】\nfinish（〜し終える）のあとには動名詞（〜ing）だけを続けることができ、不定詞（to+動詞の原形）は続けられない。\n答え：doing',
+      '【何を聞かれているか】\n"He finished (　) his homework before dinner."（彼は夕食前に宿題をやり終えました。）の空欄に入る正しい形を選ぶ問題。\n\n【なぜ動名詞を使うのか】\nfinish（〜し終える）の後には動名詞（〜ing）だけを続けることができ、不定詞（to＋動詞の原形）は続けられないという決まりがある。\n\n【ポイント1】finishの後の形を確認する\nfinish＋動詞のing形（動名詞）。\n\n【ポイント2】不定詞との違いを確認する\n"finish to do"のように不定詞を続けるのは誤り。\n\n【ポイント3】他の選択肢を消去する\nto do（不定詞）、do（原形）、did（過去形）はいずれもfinishの後には使えない。\n\n【答え】\ndoing\n\n【確かめ】\nfinishedの後がdoing（動名詞）になっているか確認する。\n\n【よくあるまちがい】\nfinishの後に不定詞to doを使ってしまうミス。\n\n【ここが絶対】\nfinishの後はing形のみ、finish to doとは言わないと覚える（enjoy, stop, mindと同じグループ）。',
     pitfall: 'finish to doとは言わない。finishのあとはing形のみ。',
   },
   {
