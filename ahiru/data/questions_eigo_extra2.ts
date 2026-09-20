@@ -2398,7 +2398,8 @@ export const eigoExtra2: Question[] = [
     question: '「彼女は彼が医者だと聞いて驚きました」を英語にしなさい。',
     answer: 'She was surprised to hear that he was a doctor.',
     hint: '"be surprised to + 動詞の原形" で「～して驚く」を表します',
-    explanation: '【解説】\n"be surprised to + 動詞の原形"（～して驚く）は感情を表す不定詞の副詞的用法です。"to hear that ..."（～と聞いて）という形を使います。',
+    explanation:
+      '【何を聞かれているか】\n「彼女は彼が医者だと聞いて驚きました」という日本語を英語にする問題。\n\n【なぜbe surprised to〜を使うのか】\n「〜して驚く」という、感情の原因を表すときは、be surprised＋to不定詞（感情の原因を表す副詞的用法）を使う。\n\n【ポイント1】"be surprised to〜"の形を確認する\nbe surprised＋to＋動詞の原形＝「〜して驚く」。\n\n【ポイント2】"hear that〜"の形を確認する\n"to hear that he was a doctor"＝「彼が医者だと聞いて」。thatの後ろに主語＋動詞の文が続く。\n\n【ポイント3】文を組み立てる\n"She was surprised to hear that he was a doctor."＝「彼女は彼が医者だと聞いて驚いた」。\n\n【答え】\nShe was surprised to hear that he was a doctor.\n\n【確かめ】\n"surprised"の後ろに"to hear"（不定詞）が続き、その後ろに"that he was a doctor"という内容が続いているか確認する。\n\n【よくあるまちがい】\n"surprised to hearing"のように、不定詞の代わりに動名詞を使ってしまうミス。感情の原因を表す不定詞の副詞的用法は、to＋動詞の原形を使う。\n\n【ここが絶対】\n"be surprised/happy/glad to＋動詞の原形"＝「〜して驚く/嬉しい」という、感情の原因を表す不定詞の副詞的用法をセットで覚える。',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -2409,7 +2410,8 @@ export const eigoExtra2: Question[] = [
     question: '「私はあなたにここに来てほしいです」を英語にしなさい。',
     answer: 'I want you to come here.',
     hint: '"want + 人 + to 不定詞" で「人に～してほしい」を表します',
-    explanation: '【解説】\n"want + 人 + to + 動詞の原形"（人に～してほしい）は重要構文です。"want you to come"（あなたに来てほしい）が正解です。他に "ask + 人 + to"（頼む）、"tell + 人 + to"（命じる）なども同じ構文です。',
+    explanation:
+      '【何を聞かれているか】\n「私はあなたにここに来てほしいです」という日本語を英語にする問題。\n\n【なぜwant＋人＋to不定詞の形を使うのか】\n「（人）に〜してほしい」という願望を表すときは、want＋人＋to不定詞という、目的語の後ろにさらにto不定詞を続ける形を使う。\n\n【ポイント1】"want＋人＋to不定詞"の形を確認する\nwant you to come＝「あなたに来てほしい」。\n\n【ポイント2】同じ形を取る他の動詞を確認する\nask＋人＋to〜（頼む）、tell＋人＋to〜（命じる）も、同じ「人＋to不定詞」の形を取る。\n\n【ポイント3】文を組み立てる\n"I want you to come here."＝「私はあなたにここに来てほしい」。\n\n【答え】\nI want you to come here.\n\n【確かめ】\n"want"の後ろに"you"（人）、その後ろに"to come"（to不定詞）が続いているか確認する。\n\n【よくあるまちがい】\n"want that you come"のように、that節を使ってしまうミス。wantは「人＋to不定詞」の形を使い、that節は使わない。\n\n【ここが絶対】\nwant/ask/tell＋人＋to不定詞＝「（人）に〜してほしい/頼む/命じる」という形をセットで覚える。',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'very-high',
