@@ -767,11 +767,8 @@ Choose the word closest in meaning to the underlined word.
    ア. expected　イ. unexpected　ウ. boring　エ. normal`,
     answer: '1. ウ　2. ア　3. イ',
     hint: '1 clear＝分かりやすい。2 generous＝気前がよい・寛大な。3 surprising＝驚くべき、予想外の。',
-    explanation: `1. "clear"（明快な・分かりやすい）に最も近いのは "easy to understand"（理解しやすい）。→ウ
-
-2. "generous"（気前がよい、寛大な）に最も近いのは "giving"（与えることを惜しまない）。→ア
-
-3. "surprising"（驚くべき）に最も近いのは "unexpected"（予期しない）。→イ`,
+    explanation:
+      '【何を聞かれているか】\n下線部の語に意味が最も近い語を選ぶ、類義語識別の問題。\n\n【なぜ文脈と単語の意味を両方確認するのか】\n類義語問題では、下線部の語の基本的な意味を正確に理解したうえで、選択肢の中から最も近い意味の語を選ぶ必要がある。\n\n【ポイント1】clearの意味を確認する\n"clear"（明快な・分かりやすい）に最も近いのは"easy to understand"（理解しやすい）。\n\n【ポイント2】generousの意味を確認する\n"generous"（気前がよい・寛大な）に最も近いのは"giving"（与えることを惜しまない）。\n\n【ポイント3】surprisingの意味を確認する\n"surprising"（驚くべき）に最も近いのは"unexpected"（予期しない）。\n\n【答え】\n1. ウ　2. ア　3. イ\n\n【確かめ】\nそれぞれの選んだ選択肢が、下線部の語と反対の意味（confusing, selfish, expected等）になっていないか確認する。\n\n【よくあるまちがい】\n"generous"を「厳しい」「静か」のような無関係な意味と混同してしまうミス。\n\n【ここが絶対】\n類義語問題は、下線部の語の意味を正確に思い出し、選択肢の意味と1つずつ照らし合わせる。',
   },
   {
     id: 'meidai_eigo_03',
@@ -866,14 +863,8 @@ Put the words in the correct order to make a natural English sentence. Each set 
 3. [ what / do / to / know / don't / I / say ].`,
     answer: '1. This question is more difficult than that. （hardは不要）　2. I have never seen such a beautiful view. （moreは不要）　3. I don\'t know what to say. （doは不要）',
     hint: '1「more difficult than 〜」の比較級構文で、形容詞difficultとhardの両方は使わない。2「such a + 形容詞 + 名詞」の構文。3「don\'t know + 疑問詞 + to不定詞」。',
-    explanation: `1. "more difficult than 〜" という比較級の構文を使う。同じ意味の形容詞 "hard" は不要。
-→ This question is more difficult than that question.
-
-2. "I have never seen such a beautiful view."（こんなに美しい景色を見たことがない）という現在完了の構文。比較級を作る "more" は不要。
-→ I have never seen such a beautiful view.
-
-3. "I don't know what to say."（何と言えばよいか分からない）という「疑問詞＋to不定詞」の構文。助動詞 "do" は不要（"don't" の中にすでに含まれている）。
-→ I don't know what to say.`,
+    explanation:
+      '【何を聞かれているか】\n不要な語が1語混じった語群を並べ替えて、自然な英文を完成させる問題。\n\n【なぜ同じ意味の語が2つ含まれているのか】\nそれぞれの問題には、意味が重複する語や、文法的に不要な語が1語混ざっており、それを見抜いて正しい文を組み立てる必要がある。\n\n【ポイント1】1問目を確認する\n"more difficult than 〜"という比較級の構文を使い、同じ意味の形容詞"hard"は不要。\n\n【ポイント2】2問目を確認する\n"I have never seen such a beautiful view."という現在完了の構文で、比較級を作る"more"は不要。\n\n【ポイント3】3問目を確認する\n"I don\'t know what to say."という「疑問詞＋to不定詞」の構文で、助動詞"do"は不要（"don\'t"に含まれているため）。\n\n【答え】\n1. This question is more difficult than that. （hardは不要）　2. I have never seen such a beautiful view. （moreは不要）　3. I don\'t know what to say. （doは不要）\n\n【確かめ】\nそれぞれの文で、不要とされた語（hard, more, do）が正しく除かれているか確認する。\n\n【よくあるまちがい】\n比較級構文でmore difficultとhardの両方を使ってしまい、意味が重複するミス。\n\n【ここが絶対】\n不要語問題は、まず文全体の構文（比較級・現在完了・疑問詞+to不定詞など）を決めてから、その構文に合わない語を見つける。',
   },
   {
     id: 'meidai_eigo_07',
@@ -895,11 +886,8 @@ Q2. What did Emily try for the first time in Japan?
 Q3. What does Emily suggest Kenji do next summer?`,
     answer: 'Q1. Canada（カナダ）　Q2. Okonomiyaki（お好み焼き）　Q3. Visit her and swim in the lake near her house（来夏、彼女の家を訪ねて、近くの湖で泳ぐこと）',
     hint: 'Q1は"here in Canada"の部分。Q2は"trying okonomiyaki for the first time"の部分。Q3は最後の2文に注目。',
-    explanation: `Q1: メール本文の "I've told all my friends here in Canada" より、Emilyはカナダに住んでいることが分かる。
-
-Q2: "trying okonomiyaki for the first time"（お好み焼きを初めて食べたこと）とある。
-
-Q3: "I hope you can visit me next summer. There's a lake near my house that would be perfect for swimming." より、来年の夏に自分（Emily）を訪ねて、家の近くの湖で泳ぐことを提案している。`,
+    explanation:
+      '【何を聞かれているか】\nエミリーからケンジへのEメールを読み、住んでいる場所・初めて食べたもの・来夏の提案を答える問題。\n\n【なぜ本文中の該当箇所を探すのか】\nそれぞれの設問に対応する具体的な情報が、メール本文の異なる箇所に述べられているため、質問ごとに該当箇所を正確に探す必要がある。\n\n【ポイント1】Q1（住んでいる場所）を確認する\n"I\'ve told all my friends here in Canada"（ここカナダの友達全員に話した）から、エミリーはカナダに住んでいるとわかる。\n\n【ポイント2】Q2（初めて食べたもの）を確認する\n"trying okonomiyaki for the first time"（お好み焼きを初めて食べた）とある。\n\n【ポイント3】Q3（来夏の提案）を確認する\n"I hope you can visit me next summer. There\'s a lake near my house that would be perfect for swimming."より、来年の夏に自分を訪ねて、家の近くの湖で泳ぐことを提案している。\n\n【答え】\nQ1. Canada（カナダ）　Q2. Okonomiyaki（お好み焼き）　Q3. Visit her and swim in the lake near her house（来夏、彼女の家を訪ねて、近くの湖で泳ぐこと）\n\n【確かめ】\nそれぞれの答えが、対応する設問の内容（場所・食べ物・提案）と一致しているか確認する。\n\n【よくあるまちがい】\nQ1で「日本」と答えてしまうミス。"here"はメールを書いている場所（カナダ）を指す。\n\n【ここが絶対】\nEメール読解では、設問ごとに対応する一文をメールの中から正確に探し出す。',
   },
   {
     id: 'meidai_eigo_08',
@@ -994,13 +982,8 @@ Q3. What happened three years later?
 Q4. What is the main theme of this passage? Answer in Japanese, within 30字.`,
     answer: 'Q1. Twelve (12 years old)　Q2. Translating menus, notices, and even simple conversations　Q3. She gave a speech entirely in Japanese at her school\'s graduation ceremony.　Q4. あきらめずに努力を続ければ、困難な言語も習得できるということ（30字）',
     hint: 'Q1は"at age twelve"を探す。Q2は第2文。Q3は最終文の"Three years later"以降。Q4は「最初はできなかったことが努力の末できるようになった」という物語全体の流れをまとめる。',
-    explanation: `Q1: "When Sara moved from London to Tokyo at age twelve" より、12歳のとき。
-
-Q2: "she relied entirely on her classmates to translate menus, notices, and even simple conversations"（メニューや掲示、簡単な会話まで訳してもらうのをクラスメートに頼っていた）。
-
-Q3: "Sara gave a speech entirely in Japanese at her school's graduation ceremony"（卒業式ですべて日本語のスピーチをした）。
-
-Q4: 最初はまったく読めなかった日本語が、日々の練習と数えきれない失敗を経て、3年後には卒業式でスピーチができるまでになったという成長の物語。あきらめずに努力を続ければ困難な言語も習得できる、という主題。`,
+    explanation:
+      '【何を聞かれているか】\nロンドンから東京に引っ越したサラについての英文を読み、年齢・頼っていたこと・3年後の出来事・文章全体の主題を答える問題。\n\n【なぜ物語全体の変化から主題を読み取るのか】\n主題は、サラの最初の状態（日本語が読めない）から最後の状態（日本語でスピーチができる）への変化全体から読み取る必要がある。\n\n【ポイント1】Q1（引っ越したときの年齢）を確認する\n"When Sara moved from London to Tokyo at age twelve"より、12歳のとき。\n\n【ポイント2】Q2（クラスメートに頼っていたこと）を確認する\n"she relied entirely on her classmates to translate menus, notices, and even simple conversations"（メニューや掲示、簡単な会話まで訳してもらうのを頼っていた）。\n\n【ポイント3】Q3・Q4を確認する\nQ3は"Sara gave a speech entirely in Japanese at her school\'s graduation ceremony"（卒業式ですべて日本語のスピーチをした）。Q4は、最初はまったく読めなかった日本語が、日々の練習と失敗を経て3年後にはスピーチができるまでになったという成長の物語から、「あきらめずに努力を続ければ、困難な言語も習得できる」という主題を読み取る。\n\n【答え】\nQ1. Twelve (12 years old)　Q2. Translating menus, notices, and even simple conversations　Q3. She gave a speech entirely in Japanese at her school\'s graduation ceremony.　Q4. あきらめずに努力を続ければ、困難な言語も習得できるということ（30字）\n\n【確かめ】\nQ4の答えが30字の制限内に収まっているか、また物語全体の変化（できなかった→できるようになった）を表しているか確認する。\n\n【よくあるまちがい】\nQ2で「日本語の勉強法」など本文にない内容を答えてしまうミス。\n\n【ここが絶対】\n主題を問う設問は、登場人物の最初の状態と最後の状態を比較して、その変化から読み取る。',
   },
   {
     id: 'meidai_eigo_12',

@@ -14,7 +14,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'A',
     hint: 'aとAは同じ文字の小文字・大文字の関係。',
     explanation:
-      '英語のアルファベットには「大文字（A, B, C…）」と「小文字（a, b, c…）」の2つの書き方がある。\n小文字の"a"に対応する大文字は"A"。形は違って見えるが、同じ文字を表している。',
+      '【何を聞かれているか】\n小文字の"a"に対応する大文字を選ぶ問題。\n\n【なぜ大文字と小文字の2つの書き方があるのか】\n英語のアルファベットには、文の最初や名前などに使う「大文字（A, B, C…）」と、それ以外で使う「小文字（a, b, c…）」の2つの書き方があるという決まりがある。\n\n【ポイント1】aとAの関係を確認する\n小文字の"a"に対応する大文字は"A"。\n\n【ポイント2】形の違いを確認する\n形は違って見えるが、同じ文字を表している。\n\n【ポイント3】他の選択肢を消去する\nB, C, Dはそれぞれ小文字のb, c, dに対応する別の文字。\n\n【答え】\nA\n\n【確かめ】\n選んだ答えが、aの大文字であるA（B, C, Dではない）になっているか確認する。\n\n【よくあるまちがい】\n形が似ている別の文字（bなど）を選んでしまうミス。\n\n【ここが絶対】\nアルファベットは大文字・小文字で形が違っても同じ文字を表す、とセットで覚える。',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -227,7 +227,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '7',
     hint: 'one, two, three, four, five, six, seven...と数えてみよう。',
     explanation:
-      '"seven"は数字の7を表す英単語。\n1から順に、one(1), two(2), three(3), four(4), five(5), six(6), seven(7)と続く。',
+      '【何を聞かれているか】\n"seven"が表す数字を答える問題。\n\n【なぜ1から順番に数えると分かりやすいのか】\n英語の数字は1から順番に対応関係が決まっているので、one, two, three...と順に数えていくと、"seven"が何番目の数かを確認できる。\n\n【ポイント1】1から6までを確認する\none(1), two(2), three(3), four(4), five(5), six(6)と続く。\n\n【ポイント2】sevenの位置を確認する\nsix(6)の次がseven(7)。\n\n【ポイント3】答えの形を確認する\n"seven"は数字の7を表す英単語。\n\n【答え】\n7\n\n【確かめ】\nsixの次がsevenであることを、1から順に数えて確かめる。\n\n【よくあるまちがい】\nsixとsevenの順番を取りちがえてしまうミス。\n\n【ここが絶対】\none〜tenの数字は、順番をセットで暗唱できるようにしておく。',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -241,7 +241,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '12',
     hint: 'ten(10), eleven(11), twelve(12)の順番だよ。',
     explanation:
-      '"twelve"は数字の12を表す英単語。\n10はten、11はeleven、12はtwelveという特別な形をしていて、13以降のような「-teen」がつく形とは違う。',
+      '【何を聞かれているか】\n"twelve"が表す数字を答える問題。\n\n【なぜten, eleven, twelveが特別な形なのか】\n10はten、11はeleven、12はtwelveという特別な形をしていて、13以降のような「-teen」がつく規則的な形とは異なる。\n\n【ポイント1】10から12までを確認する\nten(10), eleven(11), twelve(12)の順番。\n\n【ポイント2】特別な形であることを確認する\n11・12は13以降とは異なり、決まった特別な単語として覚える必要がある。\n\n【ポイント3】答えの形を確認する\n"twelve"は数字の12を表す英単語。\n\n【答え】\n12\n\n【確かめ】\nelevenの次がtwelveであることを、10から順に数えて確かめる。\n\n【よくあるまちがい】\ntwelveとthirteenの語形が似ているため、13と混同してしまうミス。\n\n【ここが絶対】\nten・eleven・twelveは特別な形の数詞として、順番とセットで覚える。',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -296,7 +296,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '30',
     hint: '"three"（3）と関係のある単語だよ。',
     explanation:
-      '"thirty"は数字の30を表す英単語。\n"three"（3）に近い形をしていて、10のまとまりの数（20, 30, 40...）には"-ty"がつくことが多い。',
+      '【何を聞かれているか】\n"thirty"が表す数字を答える問題。\n\n【なぜthreeと似た形なのか】\n"thirty"は"three"（3）に近い形をしていて、10のまとまりの数（20, 30, 40...）には"-ty"がつくことが多いという規則がある。\n\n【ポイント1】threeとの関係を確認する\n"thirty"は"three"（3）が元になっている。\n\n【ポイント2】-tyの意味を確認する\n"-ty"がつく単語は「10のまとまり」を表す（twenty=20, thirty=30, forty=40）。\n\n【ポイント3】他の選択肢を消去する\n3、13、300はいずれも"thirty"（30）とは異なる数。\n\n【答え】\n30\n\n【確かめ】\n選んだ答えが、threeの10倍（30）になっているか確認する。\n\n【よくあるまちがい】\n"thirty"を"thirteen"（13）と混同してしまうミス。\n\n【ここが絶対】\n「-ty」で終わる数詞は10のまとまり（20, 30, 40...）を表すと覚える。',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -323,7 +323,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'sixty',
     hint: '「16」と「60」も"-teen"と"-ty"のちがいで区別するよ。',
     explanation:
-      '60は英語で"sixty"という。\n"sixteen"は16を表す単語で、"sixty"（60）ととても紛らわしい。「15と50」のときと同じで、"-teen"は十のくらい、"-ty"は10のまとまりを表すと覚えておこう。',
+      '【何を聞かれているか】\n60を表す英語を選ぶ問題。\n\n【なぜsixteenとsixtyを混同しやすいのか】\n"sixteen"（16）と"sixty"（60）は、どちらもsixから始まるつづりで見た目が似ているため、語尾の違い（-teenと-ty）で区別する必要がある。\n\n【ポイント1】-teenの意味を確認する\n"-teen"がつく単語は十のくらいの数（13〜19）を表す。\n\n【ポイント2】-tyの意味を確認する\n"-ty"がつく単語は10のまとまりの数（20, 30…60…）を表す。\n\n【ポイント3】60に対応する語を確認する\n60は10のまとまりの数なので、"-ty"がついたsixtyになる。\n\n【答え】\nsixty\n\n【確かめ】\n選んだ答えが、語尾が"-ty"のsixty（sixteenではない）になっているか確認する。\n\n【よくあるまちがい】\nつづりが似ているsixteen（16）を選んでしまうミス。\n\n【ここが絶対】\n「16と60」「15と50」のように、-teenと-tyで区別する数のペアはセットで注意して覚える。',
     difficulty: 'advanced',
     examType: 'chugaku',
     grade: 'e4',
@@ -339,7 +339,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '赤',
     hint: '信号機の「止まれ」の色だよ。',
     explanation:
-      '【答え】赤\n\n【red の意味】red は「赤」を表す色の単語である。\n\n【つづりと発音】r-e-d の3文字。\n・r の音が日本語にはない。舌をどこにもつけずに、口の中で丸めて出す\n・l（エル）とのちがいに注意。l は舌先を上の歯ぐきにつける\n・red（赤）と led（導いた）は別の単語である\n\n【赤いもの】\n・りんご … an apple\n・いちご … a strawberry\n・トマト … a tomato\n・信号の「止まれ」… a red light\n\n【赤が表すもの】色にはそれぞれイメージがある。\n・危険・止まれ … 信号、消火器、非常ボタン\n・熱・情熱 … 気持ちが高ぶるようす\n・怒り … see red で「かっとなる」\n\n【色を使った言い方】\n・in the red … 赤字である（お金が足りない）\n・red-hot … 真っ赤に熱した、とても人気のある\n日本語の「赤字」と同じ言い方があるのがおもしろい。\n\n【色を表す言葉のならべ方】色の単語は、名詞の前に置く。\n・a red apple（赤いりんご）\n・The apple is red.（そのりんごは赤い）\n名詞の前に置くか、be動詞の後に置くかの2通りがある。日本語の「赤いりんご」「りんごは赤い」と同じである。\n\n【おもな色】red（赤）・blue（青）・yellow（黄）・green（緑）・white（白）・black（黒）・brown（茶）・pink（ピンク）・purple（むらさき）・orange（オレンジ）・gray（灰色）',
+      '【何を聞かれているか】\n"red"が表す色を答える問題。\n\n【なぜ信号機の色から考えるのか】\n"red"は信号機の「止まれ」の色として日常生活でもよく目にするので、身近な例から色のイメージを結びつけて覚えることができる。\n\n【ポイント1】redの意味を確認する\nred は「赤」を表す色の単語である。\n\n【ポイント2】つづりと発音を確認する\nr-e-dの3文字。rの音は日本語にはなく、舌をどこにもつけずに口の中で丸めて出す（lとの違いに注意。red（赤）とled（導いた）は別の単語）。\n\n【ポイント3】色の単語の並べ方を確認する\n色の単語は名詞の前に置く（a red apple）か、be動詞の後に置く（The apple is red.）の2通りがあり、日本語の「赤いりんご」「りんごは赤い」と同じ関係になっている。\n\n【答え】\n赤\n\n【確かめ】\nredが「赤」であり、青・黄色・緑などの別の色と混同していないか確認する。\n\n【よくあるまちがい】\nrとlの発音のちがいを意識せず、redとled（導いた）を混同してしまうミス。\n\n【ここが絶対】\n赤いもの（りんご・いちご・トマト・信号）を思い浮かべながらredのイメージを結びつけて覚える。\n\n【red が表すもの】危険・止まれ（信号、消火器、非常ボタン）、熱・情熱（気持ちが高ぶるようす）、怒り（see redで「かっとなる」）。\n\n【色を使った言い方】in the red＝「赤字である」、red-hot＝「真っ赤に熱した、とても人気のある」。日本語の「赤字」と同じ言い方があるのがおもしろい。\n\n【おもな色】red（赤）・blue（青）・yellow（黄）・green（緑）・white（白）・black（黒）・brown（茶）・pink（ピンク）・purple（むらさき）・orange（オレンジ）・gray（灰色）',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -409,7 +409,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '黒',
     hint: '夜の空の色だよ。"white"（白）と反対の色だね。',
     explanation:
-      '【答え】黒\n\n【black の意味】black は「黒」を表す色の単語である。\n\n【つづりと発音】b-l-a-c-k。\n・ck で「ク」の1つの音を表す。2文字で1つの音になる\n・ck のなかま … black、back、duck、clock、rock、pick\n短い母音のあとは ck、長い母音のあとは k（book、week）という決まりがある\n\n【黒いもの】\n・夜の空 … the night sky\n・からす … a crow\n・すみ … ink\n・こしょう … pepper\n\n【反対の色】\n・black（黒）⇔ white（白）\nこの2つはいつもセットで出題される。\n\n【白黒の言い方】日本語は「白黒」だが、英語は black and white と黒を先に言う。\n・a black and white photo（白黒写真）\n言葉の順番が日本語と逆になるものは、ほかにもある。\n・right and left（左右）… 日本語は「左右」、英語は「右左」\n・north and south（南北）… 日本語は「南北」、英語は「北南」\n英語は大きいほう・強いほうを先に言うことが多い。\n\n【黒が表すもの】\n・夜・暗さ\n・正式さ … 黒のスーツ\n・もうけ … in the black で「黒字」。反対は in the red（赤字）\n日本語の「黒字・赤字」と同じ言い方があるのがおもしろい。\n\n【使い方の例】\n・I have a black cat.（黒い猫を飼っています）\n・The night sky is black.（夜空は黒い）',
+      '【何を聞かれているか】\n"black"が表す色を答える問題。\n\n【なぜwhiteと対にして覚えるのか】\nblack（黒）はwhite（白）と反対の色として、いつもセットで出題されるので、対にして覚えると区別しやすい。\n\n【ポイント1】blackの意味を確認する\nblack は「黒」を表す色の単語である。\n\n【ポイント2】つづりと発音を確認する\nb-l-a-c-k。ckで「ク」の1つの音を表す（black, back, duck, clock, rock, pickも同じ仲間。短い母音のあとはck、長い母音のあとはk（book, week）という決まりがある）。\n\n【ポイント3】語順が日本語と逆になる例を確認する\n"black and white"（白黒）のように、英語は日本語の「白黒」とは逆に黒を先に言う。同様にright and left（右左、日本語は「左右」）、north and south（北南、日本語は「南北」）も語順が逆になる。\n\n【答え】\n黒\n\n【確かめ】\nblackが「黒」であり、白・灰色・茶色などの別の色と混同していないか確認する。\n\n【よくあるまちがい】\nwhite（白）とblack（黒）の意味を逆に覚えてしまうミス。\n\n【ここが絶対】\nblack（黒）とwhite（白）は反対の色としてセットで覚え、英語では黒を先に言う語順（black and white）にも注意する。\n\n【黒いもの】夜の空（the night sky）、からす（a crow）、すみ（ink）、こしょう（pepper）。\n\n【黒が表すもの】夜・暗さ、正式さ（黒のスーツ）、もうけ（in the blackで「黒字」、反対はin the redで「赤字」）。日本語の「黒字・赤字」と同じ言い方があるのがおもしろい。\n\n【使い方の例】I have a black cat.（黒い猫を飼っています）、The night sky is black.（夜空は黒い）。',
     difficulty: 'standard',
     examType: 'chugaku',
     grade: 'e4',

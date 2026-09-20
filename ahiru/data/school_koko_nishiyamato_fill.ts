@@ -624,7 +624,8 @@ export const schoolKokoNishiyamatoFill: Question[] = [
     question: 'What is the main idea of this passage?',
     answer: 'Making mistakes is a natural part of learning English, and the homestay program helps students become more confident.',
     hint: 'Look at the middle and final sentences about mistakes and confidence.',
-    explanation: '【解説】\nThe passage explains that students are nervous at first, but come to see mistakes as a natural part of language learning, and gain confidence by the end of the program. This is the main idea.',
+    explanation:
+      '【何を聞かれているか】\nホームステイプログラムについての英文を読み、文章全体の主旨（main idea）を選ぶ問題。\n\n【なぜ間違いと自信についての文に注目するのか】\n主旨は、生徒が最初緊張していた状態から、間違いを自然なものと捉え自信をつけていく過程全体から読み取る必要がある。\n\n【ポイント1】本文の流れを確認する\n生徒は最初緊張しているが、間違いを言語学習の自然な一部と捉えるようになり、プログラムの終わりには自信をつける。\n\n【ポイント2】主旨をまとめる\n「間違いは英語学習の自然な一部であり、ホームステイプログラムは生徒がより自信を持てるようにする」という内容。\n\n【ポイント3】他の選択肢を消去する\n「間違いを避けるべき」「ホームステイは難しすぎる」「2週間では何も学べない」はいずれも本文の内容と反する、または極端な内容。\n\n【答え】\nMaking mistakes is a natural part of learning English, and the homestay program helps students become more confident.\n\n【確かめ】\n選んだ答えが、本文全体の流れ（緊張→間違いを受け入れる→自信をつける）と一致しているか確認する。\n\n【よくあるまちがい】\n本文前半の「生徒が最初緊張している」という部分だけを主旨だと誤解してしまうミス。\n\n【ここが絶対】\n主旨は登場人物の状態の変化（最初と最後の違い）から読み取る。',
     difficulty: 'advanced',
     course: 'koko-nishiyamato',
     examType: 'koko',
@@ -642,7 +643,8 @@ export const schoolKokoNishiyamatoFill: Question[] = [
     question: 'According to the passage, how do most students feel by the end of the program?',
     answer: 'They feel much more confident than before.',
     hint: 'This is stated directly in the last sentence.',
-    explanation: '【解説】\n最終文「By the end of the program, many students feel much more confident than before.」がそのまま答えになる。',
+    explanation:
+      '【何を聞かれているか】\nプログラムの終わりまでに、ほとんどの生徒がどう感じるようになるかを答える問題。\n\n【なぜ最後の文に注目するのか】\n「プログラムの終わりにどう感じるか」という設問の答えは、本文の最後で直接述べられている。\n\n【ポイント1】該当の一文を確認する\n"By the end of the program, many students feel much more confident than before."（プログラムの終わりまでに、多くの生徒は以前よりずっと自信を持つようになる）。\n\n【ポイント2】変化を確認する\n「以前」と「プログラムの終わり」を比較して、自信が増したという変化。\n\n【ポイント3】答えの形を確認する\n本文の表現をそのまま使って答える。\n\n【答え】\nThey feel much more confident than before.\n\n【確かめ】\n答えが「以前より自信がついた」という変化を表す内容になっているか確認する。\n\n【よくあるまちがい】\nプログラムの最初の状態（緊張している）を答えてしまうミス。\n\n【ここが絶対】\n「終わりにどう感じるか」を問う設問は、本文の最後の一文（結論）に注目する。',
     difficulty: 'standard',
     course: 'koko-nishiyamato',
     examType: 'koko',
@@ -667,7 +669,8 @@ export const schoolKokoNishiyamatoFill: Question[] = [
     question: 'According to the passage, what is one advantage and one concern about using tablets for textbooks?',
     answer: 'One advantage is that digital textbooks are lighter and easy to update; one concern is that reading on screens for a long time may make it harder to focus compared to reading on paper.',
     hint: 'Look at the second and third sentences, which give the supporters’ and critics’ views.',
-    explanation: '【解説】\n第2文でタブレットの利点(軽くて情報更新が容易)、第3文で懸念点(画面での長時間の読書は集中しにくい可能性)が述べられている。',
+    explanation:
+      '【何を聞かれているか】\nタブレットを教科書として使うことの利点と懸念点をそれぞれ答える問題。\n\n【なぜ第2文・第3文に注目するのか】\n本文の第2文に支持者の見解（利点）、第3文に批判的な見解（懸念点）がそれぞれ述べられている。\n\n【ポイント1】利点を確認する\nデジタル教科書は軽くて情報の更新が容易である。\n\n【ポイント2】懸念点を確認する\n画面での長時間の読書は、紙で読むのに比べて集中しにくい可能性がある。\n\n【ポイント3】2つの立場を区別することを確認する\n支持者（利点）と批判者（懸念点）という異なる立場の意見を混同しない。\n\n【答え】\nOne advantage is that digital textbooks are lighter and easy to update; one concern is that reading on screens for a long time may make it harder to focus compared to reading on paper.\n\n【確かめ】\n答えに「利点」と「懸念点」の両方が、それぞれ正しい内容で含まれているか確認する。\n\n【よくあるまちがい】\n利点と懸念点を取り違えて答えてしまうミス。\n\n【ここが絶対】\n賛否両論を扱う文章では、支持者と批判者それぞれの意見を分けて整理して読む。',
     difficulty: 'advanced',
     course: 'koko-nishiyamato',
     examType: 'koko',
@@ -679,7 +682,8 @@ export const schoolKokoNishiyamatoFill: Question[] = [
     question: 'What point do both supporters and critics agree on, according to the passage?',
     answer: 'They agree that understanding the content matters more than the format (paper or digital) students use.',
     hint: 'This is stated in the last sentence, which begins with "Both sides agree...".',
-    explanation: '【解説】\n最終文「Both sides agree on one point: whichever tool students use, understanding the content matters more than the format.」がそのまま答えになる。',
+    explanation:
+      '【何を聞かれているか】\nタブレット教科書についての賛成派と反対派が共通して同意している点を答える問題。\n\n【なぜ最後の文に注目するのか】\n「両方が同意する点」という設問の答えは、"Both sides agree..."で始まる本文最後の一文に直接述べられている。\n\n【ポイント1】該当の一文を確認する\n"Both sides agree on one point: whichever tool students use, understanding the content matters more than the format."（生徒がどちらの道具を使っても、内容を理解することの方が形式より重要だという点で両者は一致している）。\n\n【ポイント2】共通点を整理する\n「形式（紙かデジタルか）よりも、内容の理解が重要」という点で意見が一致している。\n\n【ポイント3】答えの形を確認する\n本文の表現をそのまま使って答える。\n\n【答え】\nThey agree that understanding the content matters more than the format (paper or digital) students use.\n\n【確かめ】\n答えが「形式よりも内容の理解が重要」という共通の結論になっているか確認する。\n\n【よくあるまちがい】\n賛成派・反対派それぞれの個別の意見（利点・懸念点）を、共通点だと誤解してしまうミス。\n\n【ここが絶対】\n「両者が同意する点」を問う設問は、Both〜agreeのような表現を含む一文を探す。',
     difficulty: 'standard',
     course: 'koko-nishiyamato',
     examType: 'koko',
@@ -703,7 +707,8 @@ export const schoolKokoNishiyamatoFill: Question[] = [
     question: 'Choose the correct form: "She ___ English for three hours."',
     answer: 'has been studying',
     hint: '"for three hours" という期間を表す語句と、動作の継続を強調する形を考える。',
-    explanation: '【解説】\n"for three hours"という期間を表す語句があり、動作が現在まで継続していることを強調する場合、現在完了進行形(have/has been + 現在分詞)を使う。よって has been studying が正しい。',
+    explanation:
+      '【何を聞かれているか】\n"She (　) English for three hours."の空欄に入る正しい動詞の形を選ぶ問題。\n\n【なぜ現在完了進行形を使うのか】\n"for three hours"という期間を表す語句があり、動作が現在まで継続していることを強調する場合、現在完了進行形（have/has been＋現在分詞）を使う。\n\n【ポイント1】forの意味を確認する\n"for three hours"＝3時間という継続期間を表す。\n\n【ポイント2】現在完了進行形の形を確認する\n"has been studying"＝has been＋動詞のing形（studying）。\n\n【ポイント3】他の選択肢を消去する\n"is studying"（現在進行形）、"studies"（現在形）、"studied"（過去形）はいずれも「継続」の意味を十分に表せない。\n\n【答え】\nhas been studying\n\n【確かめ】\n選んだ答えがhas been+動詞のing形（現在完了進行形）になっているか確認する。\n\n【よくあるまちがい】\nforがあるからと現在完了（has studied）にしてしまい、進行のニュアンスを表すbeenを抜かすミス。\n\n【ここが絶対】\nfor+期間＋動作の継続を強調する場合は、現在完了進行形（have/has been+ing）を使うと覚える。',
     difficulty: 'standard',
     course: 'koko-nishiyamato',
     examType: 'koko',
@@ -726,7 +731,8 @@ export const schoolKokoNishiyamatoFill: Question[] = [
     question: 'Choose the correct form: "If I had studied harder, I ___ the exam."',
     answer: 'would have passed',
     hint: '過去の事実に反する仮定を表す仮定法過去完了では、if節はhad+過去分詞、主節はwould have+過去分詞を使う。',
-    explanation: '【解説】\n過去の事実と異なる仮定を表す仮定法過去完了は「If+主語+had+過去分詞, 主語+would have+過去分詞」の形。よって would have passed が正しい。',
+    explanation:
+      '【何を聞かれているか】\n"If I had studied harder, I (　) the exam."の空欄に入る正しい形を選ぶ問題。\n\n【なぜ仮定法過去完了を使うのか】\n「もっと熱心に勉強していたら」という過去の事実に反する仮定を表す仮定法過去完了では、if節はhad+過去分詞、主節はwould have+過去分詞を使うという決まりがある。\n\n【ポイント1】if節の形を確認する\n"If I had studied harder"＝if節はhad+過去分詞（had studied）。\n\n【ポイント2】主節の形を確認する\n主節はwould have+過去分詞（would have passed）にする。\n\n【ポイント3】他の選択肢を消去する\n"would pass"（仮定法過去）、"will pass"（単純未来）、"passed"（単純過去）はいずれもif節がhad+過去分詞であることと対応しない。\n\n【答え】\nwould have passed\n\n【確かめ】\nif節がhad studied（過去完了）、主節がwould have passed（would have+過去分詞）と正しく対応しているか確認する。\n\n【よくあるまちがい】\n主節をwould pass（仮定法過去）にしてしまい、if節の時制（過去完了）と食い違わせるミス。\n\n【ここが絶対】\n仮定法過去完了＝If+主語+had+過去分詞, 主語+would have+過去分詞、と型で覚える。',
     difficulty: 'advanced',
     course: 'koko-nishiyamato',
     examType: 'koko',
@@ -750,7 +756,8 @@ export const schoolKokoNishiyamatoFill: Question[] = [
     question: 'Rewrite the sentence to emphasize "the teacher" using an "It is ~ that" construction: "The teacher solved the problem."',
     answer: 'It was the teacher that (who) solved the problem.',
     hint: '強調したい語句を "It is/was ~ that" で挟み、残りの部分をそのまま続ける。',
-    explanation: '【解説】\n強調構文は「It is/was + 強調したい語句 + that ~」の形で作る。主語であるthe teacherを強調する場合、It was the teacher that solved the problem. となる(人を強調する場合はwhoも可)。',
+    explanation:
+      '【何を聞かれているか】\n"The teacher solved the problem."を、"It is 〜 that"構文を使って"the teacher"を強調する文に書き換える問題。\n\n【なぜIt is/was〜thatで挟むのか】\n強調構文は「It is/was+強調したい語句+that〜」の形で、伝えたい語句を挟み込むことで際立たせる働きを持つ。\n\n【ポイント1】強調構文の基本形を確認する\n"It is/was+強調したい語句+that+残りの部分"。\n\n【ポイント2】主語を強調することを確認する\n主語であるthe teacherを強調する場合、It was the teacherの後にthatを続け、残りの部分（solved the problem）をそのまま続ける。\n\n【ポイント3】whoも使えることを確認する\n強調する語句が人である場合、thatの代わりにwhoを使うこともできる。\n\n【答え】\nIt was the teacher that (who) solved the problem.\n\n【確かめ】\nIt wasとthat（またはwho）の間に、強調したい語句the teacherが正しく挟まれているか確認する。\n\n【よくあるまちがい】\n強調構文の骨組み（It is/was〜that）を作らず、単に語順を入れ替えただけの文にしてしまうミス。\n\n【ここが絶対】\n強調構文＝「It is/was+強調したい語句+that〜」という型で、伝えたい部分を挟み込むと覚える。',
     difficulty: 'advanced',
     course: 'koko-nishiyamato',
     examType: 'koko',
@@ -773,7 +780,8 @@ export const schoolKokoNishiyamatoFill: Question[] = [
     question: 'Combine the two sentences into one indirect question: "I want to know. What time does the train leave?"',
     answer: 'I want to know what time the train leaves.',
     hint: '間接疑問文にするときは、疑問詞の後を「主語+動詞」の語順に直し、doやdoesは消える。',
-    explanation: '【解説】\n間接疑問文では疑問文の語順(does the train leave)ではなく、平叙文と同じ「主語+動詞」の語順(the train leaves)に直す。3人称単数現在のsも動詞に戻す必要がある。よって I want to know what time the train leaves. となる。',
+    explanation:
+      '【何を聞かれているか】\n"I want to know."と"What time does the train leave?"の2文を、間接疑問文として1文にする問題。\n\n【なぜdoesを消して動詞を変化させるのか】\n間接疑問文では、もとの疑問文の語順（does＋主語＋動詞の原形）を使わず、平叙文と同じ「主語＋動詞」の語順に直し、doやdoesは消える。\n\n【ポイント1】もとの疑問文の語順を確認する\n"does the train leave"（疑問文の語順）。\n\n【ポイント2】間接疑問文の語順を確認する\n"what time the train leaves"＝疑問詞what time＋主語the train＋動詞leaves（3人称単数現在のsを戻す）。\n\n【ポイント3】完成した文を確認する\n"I want to know what time the train leaves."という型になる。\n\n【答え】\nI want to know what time the train leaves.\n\n【確かめ】\ndoesが消え、動詞がleaves（3単現）になっているか確認する。\n\n【よくあるまちがい】\n"I want to know what time does the train leave?"のように、doesを残したまま組み込んでしまうミス。\n\n【ここが絶対】\n間接疑問文にするときはdo/doesを消し、動詞を主語に合わせた形に戻すと覚える。',
     difficulty: 'advanced',
     course: 'koko-nishiyamato',
     examType: 'koko',

@@ -762,7 +762,8 @@ export const schoolKokoNadaFill: Question[] = [
     question: 'How long did it take the club to rebuild the robot?',
     answer: 'Two weeks.',
     hint: 'This is stated directly in the passage.',
-    explanation: '【解説】\n本文「We rebuilt the robot in two weeks」がそのまま答えとなる。',
+    explanation:
+      '【何を聞かれているか】\n部がロボットを再び作り上げるのにかかった期間を答える問題。\n\n【なぜ本文の具体的な期間の表現に注目するのか】\n「どのくらいかかったか」という設問の答えは、本文中の期間を表す語句にそのまま示されている。\n\n【ポイント1】該当の一文を確認する\n本文には"We rebuilt the robot in two weeks"（私たちは2週間でロボットを再建した）とある。\n\n【ポイント2】inの使い方を確認する\n"in two weeks"＝「2週間で」という所要期間を表す。\n\n【ポイント3】答えの形を確認する\n本文の表現に対応させ、Two weeks.と簡潔に答える。\n\n【答え】\nTwo weeks.\n\n【確かめ】\n答えが本文中の具体的な期間（two weeks）と一致しているか確認する。\n\n【よくあるまちがい】\n本文中の他の数字（部員の人数など）と混同してしまうミス。\n\n【ここが絶対】\n「どのくらいの期間か」を問う設問は、本文中のin+期間という表現をそのまま探す。',
     difficulty: 'standard',
     course: 'koko-nada',
     examType: 'koko',
@@ -778,7 +779,7 @@ export const schoolKokoNadaFill: Question[] = [
       'The past participle ("learned") follows "would have," forming "would have + past participle." This expresses an unreal (hypothetical) result in the past — imagining what they would have learned in a situation (an easy victory) that did not actually happen.',
     hint: 'Think about the third conditional structure: "would have + past participle" describes something that did not really happen.',
     explanation:
-      '【解説】\n"would have learned" は「would have＋過去分詞」という形で、実際には起こらなかった過去の出来事を仮定して、その結果を表す構文（仮定法過去完了に近い用法）である。ここでは「もし楽な勝利であったなら学べていただろう内容」という、実際には起こらなかった状況を想定して述べており、実際の失敗経験からの学びの大きさを強調している。',
+      '【何を聞かれているか】\n下線部"we learned more from that failure than we would have learned from an easy victory"の中で、"would have"の後にどんな動詞の形が続き、この構文が何を表すかを答える問題。\n\n【なぜ「would have+過去分詞」なのか】\n"would have+過去分詞"は、実際には起こらなかった過去の出来事を仮定して、その結果を表す構文（仮定法過去完了に近い用法）である。\n\n【ポイント1】would haveの後の形を確認する\n"would have learned"＝would have＋過去分詞learned。\n\n【ポイント2】表している状況を確認する\n「もし楽な勝利であったなら学べていただろう内容」という、実際には起こらなかった状況を想定している。\n\n【ポイント3】文全体の意味を確認する\n実際の失敗経験からの学びの大きさを、起こらなかった仮定（楽な勝利）と比較して強調している。\n\n【答え】\nThe past participle ("learned") follows "would have," forming "would have + past participle." This expresses an unreal (hypothetical) result in the past — imagining what they would have learned in a situation (an easy victory) that did not actually happen.\n\n【確かめ】\n答えに「過去分詞が続くこと」と「実際には起こらなかった過去の仮定」という2つの要素が含まれているか確認する。\n\n【よくあるまちがい】\n"would have"の後を現在形や過去形だと誤解してしまうミス。\n\n【ここが絶対】\nwould have+過去分詞＝「実際には起こらなかったことについての、過去の仮定の結果」を表す構文として覚える。',
     difficulty: 'advanced',
     course: 'koko-nada',
     examType: 'koko',
@@ -816,7 +817,7 @@ export const schoolKokoNadaFill: Question[] = [
     answer: 'She said (that) she would finish the report the next day.',
     hint: 'In reported speech, "will" changes to "would" and "tomorrow" changes to "the next day."',
     explanation:
-      '【解説】\n直接話法を間接話法に直すときは、時制を1つ過去にずらす（will→would）とともに、話す時点を基準にした時間表現も変える必要がある（tomorrow→the next day）。また、主語の「I」は話し手（She）に合わせて「she」に変える。\nShe said (that) she would finish the report the next day.',
+      '【何を聞かれているか】\n"She said, "I will finish the report tomorrow.""を間接話法に書き換える問題。\n\n【なぜwillとtomorrowの両方を変えるのか】\n直接話法を間接話法に直すときは、時制を1つ過去にずらす（will→would）とともに、話す時点を基準にした時間表現も変える（tomorrow→the next day）必要がある。\n\n【ポイント1】時制の変化を確認する\n伝達動詞saidが過去形なので、will→would（1つ過去にずらす）。\n\n【ポイント2】時を表す語の変化を確認する\n"tomorrow"（明日）は、間接話法にふさわしい語"the next day"（その翌日）に変える。\n\n【ポイント3】主語の変化を確認する\n発言者本人を指す"I"は、話し手Sheに合わせて"she"に変える。\n\n【答え】\nShe said (that) she would finish the report the next day.\n\n【確かめ】\nwill→would、tomorrow→the next day、I→sheの3つの変化がすべて行われているか確認する。\n\n【よくあるまちがい】\nwillをwouldに変えても、tomorrowをthe next dayに変え忘れるミス。\n\n【ここが絶対】\n間接話法＝時制のずらし＋人称代名詞の変化＋時を表す語の変化、の3点セットで覚える。',
     difficulty: 'standard',
     course: 'koko-nada',
     examType: 'koko',
@@ -841,7 +842,7 @@ export const schoolKokoNadaFill: Question[] = [
     answer: 'have I seen',
     hint: 'When a negative adverb like "rarely" begins a sentence, the subject and auxiliary verb are inverted.',
     explanation:
-      '【解説】\n"rarely"（めったに〜ない）のような否定的な意味を持つ副詞（句）が文頭に置かれると、主語と助動詞の倒置が起こる（have/hasなどの助動詞が主語の前に出る）。\n通常の語順「I have rarely seen such a beautiful sunset.」を、"Rarely"を文頭に出して倒置すると「Rarely have I seen such a beautiful sunset.」となる。',
+      '【何を聞かれているか】\n"Rarely (　) such a beautiful sunset."の空欄に入る正しい倒置の形を選ぶ問題。\n\n【なぜ主語と助動詞を倒置するのか】\n"rarely"（めったに〜ない）のような否定的な意味を持つ副詞が文頭に置かれると、主語と助動詞の倒置が起こるという英語の決まりがある。\n\n【ポイント1】通常の語順を確認する\n"I have rarely seen such a beautiful sunset."が通常の語順。\n\n【ポイント2】倒置の形を確認する\nRarelyを文頭に出すと、have（助動詞）とI（主語）の位置が入れ替わり、"Rarely have I seen"となる。\n\n【ポイント3】他の選択肢を消去する\n"I have seen"（倒置なし）、"I saw"・"did I saw"（時制や倒置の形が誤り）は不適切。\n\n【答え】\nhave I seen\n\n【確かめ】\nRarelyの直後がhave I seen（助動詞＋主語＋過去分詞）という倒置の語順になっているか確認する。\n\n【よくあるまちがい】\n否定的な副詞が文頭に来ても倒置せず、通常の語順のままにしてしまうミス。\n\n【ここが絶対】\nrarely, never, littleなどの否定的な副詞（句）が文頭に来ると、主語と助動詞が倒置すると覚える。',
     difficulty: 'advanced',
     course: 'koko-nada',
     examType: 'koko',
@@ -868,7 +869,7 @@ export const schoolKokoNadaFill: Question[] = [
     answer: 'The man standing by the door is my uncle.',
     hint: 'A relative clause with "be + present participle" can often be reduced to just the present participle.',
     explanation:
-      '【解説】\n関係代名詞節「who is standing by the door」のうち、「主格の関係代名詞＋be動詞」（who is）は省略でき、現在分詞（standing）だけを残して名詞を後ろから修飾する形（分詞の後置修飾）にできる。\n"The man who is standing by the door" → "The man standing by the door"',
+      '【何を聞かれているか】\n"The man who is standing by the door is my uncle."から、不要な語を省略して書き換える問題。\n\n【なぜwho isを省略できるのか】\n関係代名詞節「who is standing by the door」のうち、「主格の関係代名詞＋be動詞」（who is）は省略でき、現在分詞（standing）だけを残して名詞を後ろから修飾する形（分詞の後置修飾）にできる。\n\n【ポイント1】省略できる部分を確認する\n主格の関係代名詞whoと、be動詞isの組み合わせは省略できる。\n\n【ポイント2】残る形を確認する\nstandingという現在分詞だけが残り、the manを後ろから修飾する。\n\n【ポイント3】完成した文を確認する\n"The man standing by the door is my uncle."という型になる。\n\n【答え】\nThe man standing by the door is my uncle.\n\n【確かめ】\nwho isが省略され、standingが直接the manを修飾する形になっているか確認する。\n\n【よくあるまちがい】\nwho isを省略する際に、standingをstandに戻し忘れて分詞の形が崩れるミス。\n\n【ここが絶対】\n「主格の関係代名詞＋be動詞」は省略でき、残った現在分詞（または過去分詞）が名詞を後ろから修飾すると覚える。',
     difficulty: 'advanced',
     course: 'koko-nada',
     examType: 'koko',
