@@ -49,6 +49,7 @@ export const lessonsKoushikiC1Menseki: Lesson[] = [
       },
       {
         heading: '平行四辺形の面積',
+        mangaId: 'koushiki_c1menseki_heikou_manga',
         figureId: 'lf_koushiki_c1menseki_heikou',
         body: `■ 公式
 平行四辺形の面積 ＝ 底辺 × 高さ
@@ -118,6 +119,7 @@ export const lessonsKoushikiC1Menseki: Lesson[] = [
       },
       {
         heading: 'ひし形の面積',
+        mangaId: 'koushiki_c1menseki_hishi_manga',
         figureId: 'lf_koushiki_c1menseki_hishigata',
         body: `■ 公式
 ひし形の面積 ＝ 対角線 × 対角線 ÷ 2

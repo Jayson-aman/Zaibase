@@ -47,6 +47,7 @@ export const lessonsKoushikiC2En: Lesson[] = [
       },
       {
         heading: '円周の長さ',
+        mangaId: 'koushiki_c2en_enshu_manga',
         figureId: 'lf_koushiki_c2en_enshu',
         body: `円のまわりの長さ（円周）は「直径×円周率」で求められます。半径から求めるときは「半径×2×円周率」と書きかえます。円の面積の公式とセットでよく出題されるため、かける数の違いをはっきり区別できるようにしておきましょう。
 
@@ -76,6 +77,7 @@ export const lessonsKoushikiC2En: Lesson[] = [
       },
       {
         heading: 'おうぎ形の弧の長さ',
+        mangaId: 'koushiki_c2en_ougi_ko_manga',
         figureId: 'lf_koushiki_c2en_ougigata_ko',
         body: `おうぎ形は、円を中心角の分だけ切り取った形です。その曲線部分（弧）の長さは、円周に「中心角÷360°」をかけて求めます。おうぎ形は円の一部なので、円周の公式に「全体のうちどれだけの割合か」を掛け合わせるという考え方が、この単元全体を貫くポイントです。
 

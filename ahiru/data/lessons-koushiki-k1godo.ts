@@ -65,6 +65,7 @@ ASA（1辺とその両端の角）の場合：まず1つの辺の長さを直線
       },
       {
         heading: '直角三角形の合同条件',
+        mangaId: 'koushiki_k1godo_chokkaku_manga',
         figureId: 'lf_koushiki_k1godo_chokkaku',
         body: `■ 合同条件（2つ）
 ① 斜辺と1鋭角がそれぞれ等しい

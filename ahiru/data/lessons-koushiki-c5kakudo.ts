@@ -88,6 +88,7 @@ n角形の1つの頂点から、そこと隣り合わない頂点すべてに対
       },
       {
         heading: '平行線と角度（同位角・錯角）',
+        mangaId: 'koushiki_c5kakudo_heikousen_manga',
         figureId: 'lf_koushiki_c5kakudo_heikousen',
         body: `2本の平行な直線に、別の1本の直線（横切る線、transversal）が交わると、8つの角ができます。この8つの角の中には、大きさが等しい角のペアがいくつもあり、その代表的な関係が「同位角」と「錯角」です。
 

@@ -15,6 +15,7 @@ export const lessonsKoushikiK6Sanpei: Lesson[] = [
     sections: [
       {
         heading: '三平方の定理',
+        mangaId: 'koushiki_k6sanpei_teiri_manga',
         figureId: 'lf_koushiki_k6sanpei_sanpeihou',
         body: `■ 定理
 三平方の定理（ピタゴラスの定理）は、直角三角形の3辺の長さの関係を表す、中学数学でもっとも重要な定理の1つです。
@@ -55,6 +56,7 @@ a²+b²=c²という式は、丸暗記するものではなく、図形の面積
       },
       {
         heading: '三平方の定理の利用（特別な直角三角形・座標平面上の距離）',
+        mangaId: 'koushiki_k6sanpei_riyou_manga',
         figureId: 'lf_koushiki_k6sanpei_riyou',
         body: `■ 特別な直角三角形の辺の比
 三平方の定理を使うと、入試で繰り返し登場する「特別な形の直角三角形」の辺の比を、あらかじめ決まった数として覚えておくことができます。代表的なものが次の2つです。
@@ -99,6 +101,7 @@ a²+b²=c²という式は、丸暗記するものではなく、図形の面積
       },
       {
         heading: '三角形の重心',
+        mangaId: 'koushiki_k6sanpei_juushin_manga',
         figureId: 'lf_koushiki_k6sanpei_juushin',
         body: `■ 中線と重心
 三角形の1つの頂点と、その頂点の対辺（向かい合う辺）の中点を結んだ線分を「中線」といいます。三角形には頂点が3つあるので、中線も3本引くことができます。

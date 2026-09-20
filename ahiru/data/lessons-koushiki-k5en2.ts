@@ -20,6 +20,7 @@ export const lessonsKoushikiK5En2: Lesson[] = [
     sections: [
       {
         heading: '円に内接する四角形の性質',
+        mangaId: 'koushiki_k5en2_naisetsu_manga',
         figureId: 'lf_koushiki_k5en2_naisetsu',
         body: `■ 定理の内容
 四角形の4つの頂点がすべて1つの円周上にあるとき、その四角形を「円に内接する四角形」という。円に内接する四角形ABCD（この順に並ぶ）には、次の2つの性質が成り立つ。
@@ -50,6 +51,7 @@ export const lessonsKoushikiK5En2: Lesson[] = [
       },
       {
         heading: '接弦定理',
+        mangaId: 'koushiki_k5en2_sessen_manga',
         figureId: 'lf_koushiki_k5en2_sessen',
         body: `■ 定理の内容
 円の接線と、接点を通る弦がつくる角は、その角の中にある弧に対する円周角に等しい。円Oの周上の点Tで円に接する接線をℓとし、Tから弦TAを引く。ℓと弦TAがつくる角のうち、ある側の弧TAを内側にふくむ角を∠xとすると、その反対側の弧（∠xの内側にふくまれていない側の弧）の上にある点Bについて、∠x＝∠TBAが成り立つ。円周角は同じ弧に対してどこから見ても等しいので、Bをその弧上のどこにとっても∠x＝∠TBAは変わらない。
@@ -76,6 +78,7 @@ export const lessonsKoushikiK5En2: Lesson[] = [
       },
       {
         heading: '方べきの定理',
+        mangaId: 'koushiki_k5en2_houbeki_manga',
         figureId: 'lf_koushiki_k5en2_houbeki',
         body: `■ 定理の内容
 方べきの定理には、次の2つの場合がある。

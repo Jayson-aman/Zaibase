@@ -15,6 +15,7 @@ export const lessonsKoushikiC6Soji: Lesson[] = [
     sections: [
       {
         heading: '拡大図と縮図',
+        mangaId: 'koushiki_c6soji_kakudaizu_manga',
         figureId: 'lf_koushiki_c6soji_kakudaizu_shukuzu',
         body: `1つの図形を、形を変えずに大きくしたものを「拡大図」、小さくしたものを「縮図」といいます。拡大図・縮図のもとになる図形とできあがった図形は、たがいに「相似(そうじ)」であるといいます。
 

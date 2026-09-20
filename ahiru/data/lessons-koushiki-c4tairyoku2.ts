@@ -41,6 +41,7 @@ export const lessonsKoushikiC4Tairyoku2: Lesson[] = [
       },
       {
         heading: '円錐の体積',
+        mangaId: 'koushiki_c4tairyoku2_ensui_manga',
         figureId: 'lf_koushiki_c4tairyoku2_ensui_taiseki',
         body: `円錐（底面が円で、頂点が1つの立体）の体積も、角錐とまったく同じ形の公式で求めます。
 

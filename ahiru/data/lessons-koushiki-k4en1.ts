@@ -22,6 +22,7 @@ export const lessonsKoushikiK4En1: Lesson[] = [
       {
         heading: '円周角の定理',
         level: 'oyo',
+        mangaId: 'koushiki_k4en1_enshuukaku_manga',
         figureId: 'lf_koushiki_k4en1_enshuukaku_teiri',
         body: `円周角の定理は、高校受験の「円」の単元でもっとも出題頻度が高い定理であり、これを正確に使いこなせるかどうかで図形問題の得点が大きく変わる。
 
@@ -71,6 +72,7 @@ export const lessonsKoushikiK4En1: Lesson[] = [
       {
         heading: '円周角の定理の逆',
         level: 'nyushi',
+        mangaId: 'koushiki_k4en1_enshuukaku_gyaku_manga',
         figureId: 'lf_koushiki_k4en1_enshuukaku_gyaku',
         body: `円周角の定理の逆は、「4点が同一円周上にあるかどうか」を判定するための唯一の実用的な道具であり、証明問題で非常によく使われる。
 

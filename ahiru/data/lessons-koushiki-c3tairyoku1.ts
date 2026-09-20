@@ -120,6 +120,7 @@ export const lessonsKoushikiC3Tairyoku1: Lesson[] = [
       },
       {
         heading: '円柱の体積と表面積',
+        mangaId: 'koushiki_c3tairyoku1_enchu_manga',
         figureId: 'lf_koushiki_c3tairyoku1_enchuu',
         body: `円柱は、円を底面として真上にまっすぐ伸ばした立体で、「底面が丸い角柱」と考えることができます。角柱で学んだ「底面積×高さ」「底面積×2＋側面積」という骨組みが、円柱でもそのまま使えます。
 
