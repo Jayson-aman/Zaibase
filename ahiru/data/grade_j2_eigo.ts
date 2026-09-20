@@ -595,7 +595,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     choices: ['better', 'gooder', 'best', 'more good'],
     hint: 'goodの比較級は不規則に変化する。',
     explanation:
-      '【解説】\ngood（良い）の比較級は不規則に変化してbetterになる。gooderとは言わない。\ngood-better-bestの変化の形を覚えておく。\n答え：better',
+      '【何を聞かれているか】\n"This cake is (　) than that one."（このケーキはあのケーキより良いです。）の空欄に入る正しい形を選ぶ問題。\n\n【なぜbetterを使うのか】\ngood（良い）の比較級は規則的にerをつけるのではなく、不規則に変化してbetterになるという決まりがある。\n\n【ポイント1】goodの変化を確認する\ngood-better-best（原級-比較級-最上級）という不規則な変化。\n\n【ポイント2】gooderが誤りであることを確認する\n規則動詞のようにerをつけたgooderという形は存在しない。\n\n【ポイント3】他の選択肢を消去する\nbest（最上級）、more good（誤った比較級の作り方）はいずれも不適切。\n\n【答え】\nbetter\n\n【確かめ】\n選んだ答えがgoodの不規則な比較級better（gooderではない）になっているか確認する。\n\n【よくあるまちがい】\ngoodに規則的にerをつけてgooderとしてしまうミス。\n\n【ここが絶対】\ngood-better-best（良い・より良い・いちばん良い）はセットで覚える。',
     memoryTip: 'good-better-best（良い・より良い・いちばん良い）はセットで覚える。',
   },
   {
@@ -610,7 +610,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     choices: ['worse', 'more bad', 'worst', 'badder'],
     hint: 'badの比較級は不規則に変化する。',
     explanation:
-      '【解説】\nbad（悪い）の比較級は不規則に変化してworseになる。badder、more badとは言わない。\nbad-worse-worstの変化の形を覚えておく。\n答え：worse',
+      '【何を聞かれているか】\n"Today\'s weather is (　) than yesterday\'s."（今日の天気は昨日より悪いです。）の空欄に入る正しい形を選ぶ問題。\n\n【なぜworseを使うのか】\nbad（悪い）の比較級は規則的にerをつけるのではなく、不規則に変化してworseになるという決まりがある。\n\n【ポイント1】badの変化を確認する\nbad-worse-worst（原級-比較級-最上級）という不規則な変化。\n\n【ポイント2】badderが誤りであることを確認する\n規則動詞のようにerをつけたbadderという形は存在しない。\n\n【ポイント3】他の選択肢を消去する\nmore bad（誤った比較級の作り方）、worst（最上級）はいずれも不適切。\n\n【答え】\nworse\n\n【確かめ】\n選んだ答えがbadの不規則な比較級worse（badderではない）になっているか確認する。\n\n【よくあるまちがい】\nbadに規則的にerをつけてbadderとしてしまうミス。\n\n【ここが絶対】\nbad-worse-worst（悪い・より悪い・いちばん悪い）はセットで覚える。',
   },
   {
     id: 'grade_j2_eigo_40',
@@ -624,7 +624,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     choices: ['more difficult', 'difficulter', 'most difficult', 'difficult'],
     hint: 'difficultのようにつづりの長い形容詞の比較級はmoreを前に置く。',
     explanation:
-      '【解説】\ndifficult（難しい）のようにつづりが長い（2音節以上の）形容詞は、語尾にerをつけずに、前にmoreを置いて比較級を作る。\n答え：more difficult',
+      '【何を聞かれているか】\n"This question is (　) than that one."（この問題はあの問題より難しいです。）の空欄に入る正しい形を選ぶ問題。\n\n【なぜmoreを前に置くのか】\ndifficult（難しい）のようにつづりが長い（2音節以上の）形容詞は、語尾にerをつけずに、前にmoreを置いて比較級を作るという決まりがある。\n\n【ポイント1】difficultの音節の長さを確認する\ndifficultは2音節以上の長い形容詞。\n\n【ポイント2】長い形容詞の比較級の作り方を確認する\n語尾にerをつけず、moreを前に置く（more difficult）。\n\n【ポイント3】他の選択肢を消去する\ndifficulter（誤った変化）、most difficult（最上級）、difficult（原級のまま）はいずれも不適切。\n\n【答え】\nmore difficult\n\n【確かめ】\ndifficultの前にmoreが置かれており、語尾にerがついていないか確認する。\n\n【よくあるまちがい】\ndifficulterのように語尾にerをつけてしまうミス。\n\n【ここが絶対】\n長い形容詞（2音節以上）の比較級はmoreを前に置くと覚える。',
     pitfall: 'difficulterのように語尾にerをつけてしまうミスに注意。長い形容詞はmoreを使う。',
   },
   {
@@ -637,7 +637,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     answer: 'This book is as interesting as that one.',
     hint: '「〜と同じくらい…だ」は as+形容詞+as で表す。',
     explanation:
-      '【解説】\n「〜と同じくらい…だ」というときは〈as+形容詞（原級）+as〉の形を使う。形容詞は比較級や最上級の形にせず、もとの形（原級）のままにする。\n答え：This book is as interesting as that one.',
+      '【何を聞かれているか】\n「この本はあの本と同じくらいおもしろいです。」を「as ... as」を使って英語にする問題。\n\n【なぜ形容詞を原級のまま使うのか】\n「〜と同じくらい…だ」という同等比較の表現では、形容詞を比較級や最上級にせず、もとの形（原級）のままas〜asの間に入れるという決まりがある。\n\n【ポイント1】as〜asの基本の形を確認する\n主語+be動詞+as+形容詞（原級）+as+比較対象。\n\n【ポイント2】interestingの形を確認する\ninterestingは原級のまま使う（比較級more interestingにはしない）。\n\n【ポイント3】完成した文を確認する\n"This book is as interesting as that one."という型になる。\n\n【答え】\nThis book is as interesting as that one.\n\n【確かめ】\nasとasの間のinterestingが原級のままになっているか確認する。\n\n【よくあるまちがい】\nas more interesting asのように比較級にしてしまうミス。\n\n【ここが絶対】\nas+原級+as＝「〜と同じくらい…だ」、間の形容詞は原級のまま使うと覚える。',
     pitfall: 'as more interesting asのように比較級にしてしまわないこと。asとasの間の形容詞は原級のまま。',
   },
 
@@ -733,7 +733,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     ],
     hint: '「（人）に（もの）を〜する」はSVOOの形で、動詞のすぐあとに人、その次にものを置く。',
     explanation:
-      '【解説】\n「（人）に（ものを）〜する」という文は、〈主語+動詞+人+もの〉のSVOO（第4文型）の形で表せる。動詞sent（sendの過去形）のすぐあとに人（him）、その次にもの（a letter）を置く。\n答え：I sent him a letter.',
+      '【何を聞かれているか】\n「わたしは彼に手紙を送りました。」を表す正しい英文を選ぶ問題。\n\n【なぜ人を先に、ものを後に置くのか】\n「（人）に（ものを）〜する」という文は、〈主語+動詞+人+もの〉のSVOO（第4文型）の形で表すことができ、動詞のすぐ後に人、その次にものを置くという語順の決まりがある。\n\n【ポイント1】SVOOの語順を確認する\n主語I＋動詞sent＋人him＋ものa letter。\n\n【ポイント2】前置詞を使わないことを確認する\nこのSVOOの形では、人の前にtoなどの前置詞を置かない。\n\n【ポイント3】他の選択肢を消去する\n"I sent a letter him."（人とものの順番が逆）、"I sent to him a letter."（不要なtoが入っている）、"I sent him to a letter."（不要なtoが入っている）はいずれも不適切。\n\n【答え】\nI sent him a letter.\n\n【確かめ】\nsentの直後がhim（人）、その次にa letter（もの）が来ているか確認する。\n\n【よくあるまちがい】\n人とものの順番を逆にして"sent a letter him"としてしまうミス。\n\n【ここが絶対】\nSVOO（第4文型）＝主語+動詞+人+もの、という語順で人が先に来ると覚える。',
   },
   {
     id: 'grade_j2_eigo_48',
@@ -745,7 +745,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     answer: 'She showed the picture to me.',
     hint: '〈動詞+人+もの〉の文は〈動詞+もの+to+人〉に書きかえられる。',
     explanation:
-      '【解説】\nSVOO（〈動詞+人+もの〉）の文は、多くの場合〈動詞+もの+to+人〉の形に書きかえられる。showed me the picture → showed the picture to me。\n答え：She showed the picture to me.',
+      '【何を聞かれているか】\n"She showed me the picture."をtoを使って書きかえる問題。\n\n【なぜtoを使ってものを先に出すのか】\nSVOO（〈動詞+人+もの〉）の文は、多くの場合〈動詞+もの+to+人〉の形に書きかえられ、この形ではものを先に出し、人の前にtoを置くという決まりがある。\n\n【ポイント1】もとの文の構造を確認する\n"showed me the picture"＝動詞showed+人me+ものthe picture。\n\n【ポイント2】書きかえ後の構造を確認する\n"showed the picture to me"＝動詞showed+ものthe picture+to+人me。\n\n【ポイント3】完成した文を確認する\n"She showed the picture to me."という型になる。\n\n【答え】\nShe showed the picture to me.\n\n【確かめ】\nthe pictureがtoの前ではなく、動詞showedの直後に来ているか確認する。\n\n【よくあるまちがい】\ntoをmeの前ではなくthe pictureの前に置いてしまうミス。\n\n【ここが絶対】\n〈動詞+人+もの〉は〈動詞+もの+to+人〉に書きかえられる、という対応を型で覚える。',
   },
   {
     id: 'grade_j2_eigo_49',
