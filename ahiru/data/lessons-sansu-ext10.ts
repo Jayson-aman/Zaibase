@@ -28,6 +28,7 @@ export const sansuExt10Lessons: Lesson[] = [
     sections: [
       {
         heading: '平均・合計・個数の関係',
+        mangaId: 'sansu_s346_heikin_manga',
         figureId: 'lf_ext10_01',
         body: `平均算は「ならすといくつになるか」を考える問題です。まず絶対に覚える関係式が1つあります。
 
@@ -489,6 +490,7 @@ A 20 人の 75 点は「75 が 20 個」、B 30 人の 80 点は「80 が 30 個
     sections: [
       {
         heading: '牧場の草で考える',
+        mangaId: 'sansu_s351_newton_manga',
         figureId: 'lf_ext10_05',
         body: `ニュートン算は「もともとある量」に「一定の割合で増え続ける量」が加わりながら、それを一定の速さで消費していく問題です。有名な「牧場の草」の問題で考え方を身につけましょう。
 
@@ -1070,6 +1072,7 @@ A だけで 20 分なら 1 分に 1/20、B だけで 30 分なら 1 分に 1/30 
     sections: [
       {
         heading: '全体を1とおいて速さを足す',
+        mangaId: 'sansu_s357_shigoto_manga',
         figureId: 'lf_ext10_10',
         body: `仕事算は「全体の仕事量を1とおいて、1日（1時間）あたりにできる仕事量（＝速さ）」を考える問題です。日数ではなく「速さ」を足し算するのが鉄則です。
 
@@ -2104,6 +2107,7 @@ A 3×4 ＝ 12、B 2×16 ＝ 32、C 1×16 ＝ 16、合計 60 ✓。
     sections: [
       {
         heading: '両はしに植えるとき',
+        mangaId: 'sansu_s368_ueki_manga',
         figureId: 'lf_ext10_16',
         body: `植木算は「木と木の間の間隔（区間）の数」と「木の本数」の関係を考える問題です。まずは最も基本の「両端に木を植える」場合から始めましょう。
 
@@ -3129,6 +3133,7 @@ A 3×4 ＝ 12、B 2×16 ＝ 32、C 1×16 ＝ 16、合計 60 ✓。
     sections: [
       {
         heading: '2つの食塩水を混ぜる',
+        mangaId: 'sansu_s379_noudo_manga',
         figureId: 'lf_ext10_24',
         body: `2種類の食塩水を混ぜる問題は、濃度算の最も基本的な応用です。「食塩の量を先に計算する」という鉄則を必ず守りましょう。
 

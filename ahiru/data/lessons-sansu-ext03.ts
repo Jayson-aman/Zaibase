@@ -491,6 +491,7 @@ export const sansuExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: '出会い算の公式と単位そろえ',
+        mangaId: 'sansu_s091_deai_manga',
         figureId: 'lf_hayasa_091',
         body: `2人が同時に向かい合って進むとき、2人の間のきょりは「速さの和」の分だけ毎分縮まっていきます。
 
@@ -1605,6 +1606,7 @@ Q は P から 3,600m。追いついた 2,400m はその手前なので、「Q �
     sections: [
       {
         heading: '通過算の基本：移動距離に列車の長さを足す',
+        mangaId: 'sansu_s103_tsuuka_manga',
         figureId: 'lf_hayasa_103',
         body: `列車には「長さ」があるため、通過算では普通の速さの問題に「列車の長さ」を足す必要があります。
 
@@ -2070,6 +2072,7 @@ Q は P から 3,600m。追いついた 2,400m はその手前なので、「Q �
     sections: [
       {
         heading: '上り・下りの基本公式',
+        mangaId: 'sansu_s108_ryuusui_manga',
         figureId: 'lf_hayasa_108',
         body: `流水算は「川の流れが船の速さに影響する」問題です。上りと下りで公式が逆になる点が最大の注意点です。
 

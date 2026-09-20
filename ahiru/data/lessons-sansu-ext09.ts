@@ -90,6 +90,7 @@ export const sansuExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 長方形の面積で「仮定と差」を目で見る',
+        mangaId: 'sansu_s307_tsurukame_manga',
         figureId: 'lf_ext09_307',
         body: `つるかめ算の「全部○○と仮定する」計算は、長方形の面積を使うと一目で理解できます。これを面積図といいます。
 
@@ -1117,6 +1118,7 @@ export const sansuExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 余りと不足が混ざったときの過不足算',
+        mangaId: 'sansu_s318_kabusoku_manga',
         figureId: 'lf_ext09_318',
         body: `過不足算は「配り方を変えると、余ったり足りなくなったりする」という条件から、人数と全体の個数を求める問題です。全体の個数(お菓子の総数など)は、配り方を変えても絶対に変わらないことがポイントです。
 
@@ -2134,6 +2136,7 @@ export const sansuExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. りんごとみかんの値段を消去算で求める',
+        mangaId: 'sansu_s329_shoukyo_manga',
         figureId: 'lf_ext09_329',
         body: `消去算は、2つの式を比べて共通する品物を「消す」ことで、値段を求める特殊算です。
 
@@ -2719,6 +2722,7 @@ export const sansuExt09Lessons: Lesson[] = [
       },
       {
         heading: '2. 「○倍になるのは何年後か」―年齢差が一定であることを利用する',
+        mangaId: 'sansu_s335_nenrei_manga',
         body: `父42歳、子10歳のとき、父の年齢が子の年齢の3倍になるのは何年後でしょうか。
 
 ■ 「○年後」を①として式を立てる
