@@ -380,7 +380,8 @@ I go to school by bike every day. School starts at eight thirty. My favorite sub
 ② It starts at eight thirty.
 ③ 友達とテニスを練習する。`,
     hint: `by bikeは手段、eight thirtyは時刻、after schoolの後の文に注目する。`,
-    explanation: `【出題意図】学校生活を描いた短い英文の読解問題。手段・時刻・行動の把握を問う。【解説】①「I go to school by bike every day.」から「自転車で学校に行く」→goes to school by bike。②「School starts at eight thirty.」からIt starts at eight thirty.。③「After school, I practice tennis with my friends.」から「友達とテニスを練習する」。【注意点】by+乗り物(by bike/by bus/by train)は「〜で」という交通手段を表す。【関連知識】徒歩のときはon foot(by footとは言わない)という表現になる点に注意。`,
+    explanation:
+      '【何を聞かれているか】\n学校生活についての英文を読んで、通学手段・始業時刻・放課後の行動を答える問題。\n\n【なぜby bikeとon footを区別するのか】\n"by＋乗り物"（by bike, by bus, by train）は交通手段を表すが、徒歩だけは例外的に"on foot"という別の形を使う。\n\n【ポイント1】①通学手段を確認する\n"I go to school by bike every day."から、自転車で通学しているとわかる。\n\n【ポイント2】②始業時刻を確認する\n"School starts at eight thirty."から、8時30分に始まるとわかる。\n\n【ポイント3】③放課後の行動を確認する\n"After school, I practice tennis with my friends."から、友達とテニスを練習するとわかる。\n\n【答え】\n① He/She goes to school by bike.\n② It starts at eight thirty.\n③ 友達とテニスを練習する。\n\n【確かめ】\n①の答えが"by bike"という交通手段を正確に含んでいるか確認する。\n\n【よくあるまちがい】\n徒歩の場合に"by foot"としてしまうミス。徒歩だけは"on foot"という特別な表現を使う。\n\n【ここが絶対】\n「by+乗り物」だが「徒歩だけはon foot」という例外をセットで覚える。',
     pitfall: `交通手段を表すとき徒歩だけはby footではなくon footと言う。`,
     memoryTip: `「by+乗り物」だが「徒歩だけはon foot」と例外をセットで覚える。`,
   },
@@ -446,7 +447,8 @@ A: Thank you very much.
 ③ (　) you (　) come to the party?（あなたはパーティーに来ますか）`,
     answer: `① will help　② will rain　③ Will, come`,
     hint: `willの後は動詞の原形。疑問文はWillを主語の前に置く。`,
-    explanation: `【出題意図】未来を表すwillの肯定文・疑問文の基本形を問う。【解説】①「〜します」という意志未来はwill+動詞の原形→will help。②「〜だろう」という予測の未来もwill+動詞の原形→will rain。③疑問文はWillを文頭に置き、「Will+主語+動詞の原形?」の形→Will you come。【注意点】willの後の動詞は主語に関係なく常に原形になる。【関連知識】willの否定はwill not(短縮形won't)。`,
+    explanation:
+      '【何を聞かれているか】\nwillを使った未来の肯定文・疑問文を完成させる問題。\n\n【なぜwillの後ろが常に原形なのか】\nwillは助動詞なので、後ろには主語に関係なく常に動詞の原形を置くという決まりがある。\n\n【ポイント1】①意志未来を確認する\n"I will help you."＝「〜します」という、その場で決めた意志を表す。\n\n【ポイント2】②予測の未来を確認する\n"It will rain tomorrow."＝「〜だろう」という予測。\n\n【ポイント3】③疑問文の語順を確認する\nwillを文頭に置き、"Will you come to the party?"という形にする。\n\n【答え】\n① will help　② will rain　③ Will, come\n\n【確かめ】\nすべての文でwillの後ろの動詞が原形になっているか確認する。\n\n【よくあるまちがい】\nwillの後にhelpsやcomesのようにsをつけてしまうミス。willの後は必ず原形。\n\n【ここが絶対】\n「will＋動詞の原形」は主語が何であっても形が変わらないと覚える。willの否定はwill not（won\'t）。',
     pitfall: `willの後にhelpsやcomesのようにsをつけない。willの後は必ず原形。`,
     memoryTip: `「will+動詞の原形」は主語が何であっても形が変わらないと覚える。`,
   },
@@ -496,7 +498,8 @@ A: Thank you very much.
   He (　) (　) worry so much.`,
     answer: `① should　② should not (shouldn't)`,
     hint: `「〜すべきだ」はshould、「〜すべきではない」はshould not。`,
-    explanation: `【出題意図】助動詞shouldの肯定文・否定文の基本形を問う。【解説】①「〜すべきだ」という助言・提案はshould+動詞の原形→should study。②「〜すべきではない」はshould not(短縮形shouldn't)+動詞の原形→should not worry。【注意点】shouldはmustより弱い義務・アドバイスを表す。【関連知識】アドバイスを求めるときはWhat should I do?(私は何をすべきですか)という表現も頻出。`,
+    explanation:
+      '【何を聞かれているか】\n助動詞shouldを使った肯定文・否定文を完成させる問題。\n\n【なぜshouldを使うのか】\n「〜すべきだ」というアドバイス・提案を表すときは、助動詞shouldを使う。\n\n【ポイント1】①肯定文を確認する\n"You should study more."＝「もっと勉強すべきだ」。should＋動詞の原形。\n\n【ポイント2】②否定文を確認する\n"He should not (shouldn\'t) worry so much."＝「そんなに心配すべきではない」。\n\n【ポイント3】mustとの違いを確認する\nshouldはmustより弱い義務・アドバイスを表す。\n\n【答え】\n① should　② should not (shouldn\'t)\n\n【確かめ】\nshouldの後ろの動詞（study, worry）が原形になっているか確認する。\n\n【よくあるまちがい】\nshouldの後の動詞に原形以外（worriesなど）を使ってしまうミス。\n\n【ここが絶対】\n「should＝アドバイスの べきだ」「must＝強い義務の ねばならない」というニュアンスの違いを覚える。',
     pitfall: `shouldの後の動詞に原形以外(worries等)を使わない。`,
     memoryTip: `「should=アドバイスのべきだ」「must=強い義務のねばならない」とニュアンスの違いを覚える。`,
   },
@@ -549,7 +552,8 @@ A: Thank you very much.
 ③ We hope (　) you again.（私たちはまたあなたに会いたいと思っている）(see)`,
     answer: `① to be　② to read (readingも可)　③ to see`,
     hint: `want/hope+to不定詞。likeはto不定詞・動名詞どちらも使える。`,
-    explanation: `【出題意図】to不定詞(名詞的用法)の基本形を問う。【解説】①want+to不定詞で「〜したい」→want to be。②like+to不定詞(または動名詞)で「〜することが好き」→to read(またはreading)。③hope+to不定詞で「〜したいと望む」→hope to see。【注意点】wantとhopeはto不定詞のみをとり、動名詞は続けられない(want readingは誤り)。likeはどちらも使える点が異なる。【関連知識】to不定詞の後は必ず動詞の原形が来る。`,
+    explanation:
+      '【何を聞かれているか】\nwant・like・hopeという動詞の後ろに、正しい不定詞・動名詞の形を入れる問題。\n\n【なぜwant/hopeは不定詞のみで、likeは両方使えるのか】\nwantとhopeは、後ろに不定詞（to＋動詞の原形）だけを取る動詞のグループに属するが、likeは不定詞・動名詞のどちらも取れる動詞のグループに属している。\n\n【ポイント1】①want＋不定詞を確認する\n"want to be a doctor"＝「医者になりたい」。\n\n【ポイント2】②like＋不定詞/動名詞を確認する\n"like to read"または"like reading"＝「読むことが好き」、どちらも可能。\n\n【ポイント3】③hope＋不定詞を確認する\n"hope to see you again"＝「またあなたに会いたい」。\n\n【答え】\n① to be　② to read (readingも可)　③ to see\n\n【確かめ】\n①③がto不定詞になっていて、動名詞（being, seeing）になっていないことを確認する。\n\n【よくあるまちがい】\n"want reading"や"hope seeing"のように、want/hopeの後に動名詞を使ってしまうミス。\n\n【ここが絶対】\n「want/hope＋to不定詞のみ」「like＋to不定詞/動名詞どちらもOK」「enjoy/finish＋動名詞のみ」という3グループに分けて動詞を整理する。',
     pitfall: `want readingやhope seeingのように、want/hopeの後に動名詞を使わない。`,
     memoryTip: `「want/hope+to不定詞のみ」「like+to不定詞/動名詞どちらもOK」「enjoy/finish+動名詞のみ」と3グループに分けて覚える。`,
   },
@@ -582,7 +586,8 @@ A: Thank you very much.
 ③ (　) money do you have?（あなたはいくらお金を持っていますか）`,
     answer: `① How many　② How much　③ How much`,
     hint: `後ろの名詞が数えられる名詞(複数形)ならHow many、数えられない名詞ならHow much。`,
-    explanation: `【出題意図】How many(数)とHow much(量・値段)の使い分けを問う。【解説】①studentsは数えられる名詞の複数形→How many。②waterは数えられない名詞(液体)→How much。③moneyも数えられない名詞→How much。【注意点】How manyの後は必ず複数形の名詞、How muchの後は単数形(不可算名詞)が来る。【関連知識】How muchは値段を尋ねるときにも使う(How much is this?)。`,
+    explanation:
+      '【何を聞かれているか】\nHow manyとHow muchを、後ろに続く名詞の種類に合わせて使い分ける問題。\n\n【なぜHow manyとHow muchを使い分けるのか】\n数えられる名詞（複数形）にはHow many、数えられない名詞にはHow muchを使うという決まりがある。\n\n【ポイント1】①数えられる名詞を確認する\nstudentsは数えられる名詞の複数形なのでHow many。\n\n【ポイント2】②③数えられない名詞を確認する\nwater（液体）、money（お金）はいずれも数えられない名詞なのでHow much。\n\n【ポイント3】How muchの別の使い方を確認する\nHow muchは値段を尋ねるときにも使う（How much is this?）。\n\n【答え】\n① How many　② How much　③ How much\n\n【確かめ】\n①の後ろが複数形（students）、②③の後ろが単数形（water, money）になっているか確認する。\n\n【よくあるまちがい】\n"How many water"や"How many money"としてしまうミス。water/moneyは数えられない名詞なのでHow much。\n\n【ここが絶対】\n「数えられる→How many+複数名詞」「数えられない→How much+単数形」と対にして覚える。',
     pitfall: `How many waterやHow many moneyとしない。water/moneyは数えられない名詞なのでHow much。`,
     memoryTip: `「数えられる→How many+複数名詞」「数えられない→How much+単数名詞」と対にして覚える。`,
   },
@@ -599,7 +604,8 @@ A: Thank you very much.
 ③ She came in (　) place in the race.（彼女はレースで2位になった）(second)`,
     answer: `① first　② third　③ second`,
     hint: `序数は「〜番目」を表す。first(1番目)、second(2番目)、third(3番目)は特に不規則な形なので暗記する。`,
-    explanation: `【出題意図】序数(first/second/third)の形と使い方を問う。【解説】①「最初の」はfirst。②日付を表すときは序数を使う(May third=5月3日)。③順位を表すときも序数を使う(second place=2位)。【注意点】4番目以降はfourth、fifth…のように基数にthをつけるのが基本だが、first/second/thirdだけは特別な形になる。【関連知識】日付の書き方:May 3rd(数字+thの省略形)とも書く。`,
+    explanation:
+      '【何を聞かれているか】\nfirst・third・secondという序数を、それぞれの文脈に合わせて入れる問題。\n\n【なぜfirst/second/thirdが特別な形なのか】\n序数は基本的に基数にthをつけて作るが、1〜3番目だけは歴史的に不規則な形（first, second, third）が使われている。\n\n【ポイント1】①「最初の」を確認する\n"January is the first month of the year."＝「1月は1年の最初の月」。\n\n【ポイント2】②日付の序数を確認する\n"My birthday is May third."＝「私の誕生日は5月3日」。日付には序数を使う。\n\n【ポイント3】③順位の序数を確認する\n"She came in second place."＝「彼女は2位になった」。順位にも序数を使う。\n\n【答え】\n① first　② third　③ second\n\n【確かめ】\nそれぞれの序数が、日付・順位・順番の文脈に正しく対応しているか確認する。\n\n【よくあるまちがい】\n「1番目」を"oneth"、「2番目」を"twoth"のように規則通りに作ってしまうミス。first/second/thirdは特別な形。\n\n【ここが絶対】\n「1st=first、2nd=second、3rd=third」だけ特別、4th以降は基数+thと2段階で覚える。',
     pitfall: `「1番目」をoneth、「2番目」をtwoth、「3番目」をthreethとしない。first/second/thirdは特別な形。`,
     memoryTip: `「1st=first、2nd=second、3rd=third」だけ特別、4th以降は基数+thと2段階で覚える。`,
   },
@@ -620,7 +626,8 @@ I have a big family. I have two brothers and one sister. My father is a teacher,
 ② She is a nurse.
 ③ 海の近くの小さな家`,
     hint: `兄弟の数、母の職業、住んでいる場所をそれぞれ本文から探す。`,
-    explanation: `【出題意図】家族を紹介する英文の読解問題。数・職業・場所の把握を問う。【解説】①「I have two brothers and one sister.」からHe/She has two brothers.。②「my mother is a nurse」からShe is a nurse.。③「We all live together in a small house near the sea.」から「海の近くの小さな家」。【注意点】家族構成を尋ねる質問では、brothers/sistersの数を正確に読み取る。【関連知識】家族の呼び方:father(父)、mother(母)、brother(兄弟)、sister(姉妹)、grandfather(祖父)、grandmother(祖母)。`,
+    explanation:
+      '【何を聞かれているか】\n家族についての英文を読んで、兄弟の数・母親の職業・住んでいる場所を答える問題。\n\n【なぜ数字や職業名に印をつけながら読むのか】\n本文には複数の家族情報（兄弟の人数、両親の職業、住んでいる場所）が含まれているため、それぞれの質問に対応する具体的な情報を正確に読み取る必要がある。\n\n【ポイント1】①兄弟の数を確認する\n"I have two brothers and one sister."から、兄弟は2人。\n\n【ポイント2】②母親の職業を確認する\n"my mother is a nurse"から、母親は看護師。\n\n【ポイント3】③住んでいる場所を確認する\n"We all live together in a small house near the sea."から、海の近くの小さな家。\n\n【答え】\n① He/She has two brothers.\n② She is a nurse.\n③ 海の近くの小さな家\n\n【確かめ】\n①の答えが兄弟の数（two brothers）であり、姉妹の数（one sister）と混同していないか確認する。\n\n【よくあるまちがい】\n"two brothers and one sister"を読み間違えて、姉妹の数を兄弟の数と混同してしまうミス。\n\n【ここが絶対】\n数字と職業名など、質問で聞かれるキーワードに印をつけながら読む練習をする。',
     pitfall: `「two brothers and one sister」を読み間違えて、姉妹の数を兄弟の数と混同しない。`,
     memoryTip: `数字と職業名など、質問で聞かれるキーワードに印をつけながら読む練習をするとよい。`,
   },
@@ -681,7 +688,8 @@ Our school has a sports day in October. Students run races and play tug-of-war. 
 ④ Hi, Tom. Sounds good.`,
     answer: `② → ④ → ① → ③`,
     hint: `誘う→応じる→時間を尋ねる→時間を提案する、の順で会話が進む。`,
-    explanation: `【出題意図】自然な会話の流れを把握し文を並べ替える問題。【解説】②「Hi, Emma. Do you want to go to the park tomorrow?」で誘う→④「Hi, Tom. Sounds good.」で応じる→①「Sure. What time shall we meet?」で時間を尋ねる→③「How about 10 a.m.?」で時間を提案する、という自然な流れになる。【注意点】呼びかけ(Hi, Emma/Hi, Tom)が誰から誰への発言かを手がかりに順番を判断する。【関連知識】誘う表現:Do you want to〜?、Would you like to〜?、Shall we〜?`,
+    explanation:
+      '【何を聞かれているか】\n4つの会話文を、自然な会話になるように正しい順番に並べ替える問題。\n\n【なぜ「誘う→応じる→時間を尋ねる→提案する」の順にするのか】\n会話文の並べ替えでは、話の流れ（誘い→承諾→詳細の相談）を意識すると、自然な順番を判断できる。\n\n【ポイント1】誘いの発言を確認する\n"Hi, Emma. Do you want to go to the park tomorrow?"が最初の誘いの発言。\n\n【ポイント2】応答と時間の相談を確認する\n"Hi, Tom. Sounds good."（承諾）→"Sure. What time shall we meet?"（時間を尋ねる）と続く。\n\n【ポイント3】提案の発言を確認する\n"How about 10 a.m.?"（時間を提案する）が最後に来る。\n\n【答え】\n② → ④ → ① → ③\n\n【確かめ】\n呼びかけ（Hi, Emma/Hi, Tom）が誰から誰への発言かを手がかりに、順番が正しいか確認する。\n\n【よくあるまちがい】\n①のSureが③の後に来ると、誘いに応じる前に時間の話になってしまい不自然。\n\n【ここが絶対】\n会話文の並べ替えは「呼びかけ（挨拶）→誘い→応答→詳細の相談」の流れを意識する。',
     pitfall: `①のSureが③の後に来ると、誘いに応じる前に時間の話になってしまい不自然。誘い→承諾→時間の相談という順番を意識する。`,
     memoryTip: `会話文の並べ替えは「呼びかけ(挨拶)→誘い→応答→詳細の相談」の流れを意識する。`,
   },
@@ -753,7 +761,8 @@ Our school has a sports day in October. Students run races and play tug-of-war. 
 ア. begin　イ. large　ウ. glad`,
     answer: `① ウ(glad)　② ア(begin)　③ イ(large)`,
     hint: `happy=うれしい、start=始まる、big=大きい、それぞれの類義語を考える。`,
-    explanation: `【出題意図】基本単語の類義語(同意語)を問う。【解説】①happy(うれしい)とglad(うれしい)はほぼ同じ意味。②start(始まる)とbegin(始まる)はほぼ同じ意味。③big(大きい)とlarge(大きい)はほぼ同じ意味。【注意点】類義語でも使う場面に細かい違いがある場合があるが、中学受験レベルでは「ほぼ同じ意味」として覚えておけばよい。【関連知識】他の類義語ペア:small-little(小さい)、fast-quick(速い)、happy-glad(うれしい)。`,
+    explanation:
+      '【何を聞かれているか】\nhappy・start・bigという3つの単語と、ほぼ同じ意味を表す単語を選ぶ問題。\n\n【なぜ類義語をペアで覚えるのか】\n似た意味を持つ単語をペアで覚えておくと、読解問題で言い換え表現に気づきやすくなる。\n\n【ポイント1】happyの類義語を確認する\nhappy（うれしい）とglad（うれしい）はほぼ同じ意味。\n\n【ポイント2】startの類義語を確認する\nstart（始まる）とbegin（始まる）はほぼ同じ意味。\n\n【ポイント3】bigの類義語を確認する\nbig（大きい）とlarge（大きい）はほぼ同じ意味。\n\n【答え】\n① ウ(glad)　② ア(begin)　③ イ(large)\n\n【確かめ】\nそれぞれの類義語が、元の単語とほぼ同じ意味を表しているか確認する。\n\n【よくあるまちがい】\nbegin/startのどちらも「始める・始まる」の意味でほぼ同じように使えることを見落としてしまうミス。\n\n【ここが絶対】\nsmall-little（小さい）、fast-quick（速い）のような類義語のペアもあわせて覚えておく。',
     pitfall: `begin/startはどちらも「始める・始まる」の意味でほぼ同じように使えることを確認する。`,
     memoryTip: `似た意味の単語をペアで覚えておくと、読解問題で言い換え表現に気づきやすくなる。`,
   },
@@ -861,7 +870,8 @@ Closed: Saturday, Sunday, and holidays
     answer: `① Monday, Tuesday, Wednesday
 ② January, February, March`,
     hint: `曜日はMonday(月)から、月はJanuary(1月)から順に並べる。`,
-    explanation: `【出題意図】曜日・月の名前と正しい順番の理解を問う。【解説】①曜日の順番はMonday(月)→Tuesday(火)→Wednesday(水)。②月の順番はJanuary(1月)→February(2月)→March(3月)。【注意点】英語の曜日・月の名前はどちらも固有名詞として大文字で書き始める。【関連知識】カレンダーによってはSundayから週が始まる表記もあるが、学校の時間割等では通常Mondayから数えることが多い。`,
+    explanation:
+      '【何を聞かれているか】\nバラバラに示された曜日・月を、正しい順番に並べ替える問題。\n\n【なぜMonday、Januaryから順に並べるのか】\n問題文の指示に従い、①は月曜日から、②は1月から始まる順番で曜日・月を並べる。\n\n【ポイント1】①曜日の順番を確認する\nMonday（月）→Tuesday（火）→Wednesday（水）。\n\n【ポイント2】②月の順番を確認する\nJanuary（1月）→February（2月）→March（3月）。\n\n【ポイント3】大文字のルールを確認する\n曜日・月の名前はどちらも固有名詞として大文字で書き始める。\n\n【答え】\n① Monday, Tuesday, Wednesday\n② January, February, March\n\n【確かめ】\nそれぞれの単語の頭文字が大文字になっているか確認する。\n\n【よくあるまちがい】\nWednesdayとTuesdayのつづりを混同してしまうミス。Wednesdayは発音とつづりが異なりやすい単語。\n\n【ここが絶対】\n曜日・月の名前と正しい順番を、頭文字を大文字にすることとあわせて覚える。',
     pitfall: `WednesdayとTuesdayのつづりを混同しない(Wednesdayは発音とつづりが異なりやすい単語)。`,
     memoryTip: `曜日・月はいずれも頭文字を大文字にすることを忘れずに書く。`,
   },
@@ -880,7 +890,8 @@ Closed: Saturday, Sunday, and holidays
 ② 7時30分
 ③ 8時45分`,
     hint: `hundred=100、half past〜=〜時30分、a quarter to〜=〜時になる15分前(すなわち45分)。`,
-    explanation: `【出題意図】値段・時刻の英語表現を数字に直す問題。【解説】①three hundred yen=300円(hundred=100)。②half past seven=7時半(7時30分)。halfは「半分」で30分を表す。③a quarter to nine=9時の15分前=8時45分。quarterは「4分の1」で15分を表し、toは「〜前」を表す。【注意点】a quarter past〜は「〜時15分」、a quarter to〜は「〜時になる15分前」で意味が逆になる点に注意。【関連知識】o'clock(ちょうど〜時)、a.m.(午前)、p.m.(午後)も合わせて確認する。`,
+    explanation:
+      '【何を聞かれているか】\n値段・時刻を表す英語表現を、アラビア数字で書く問題。\n\n【なぜhalf pastとa quarter toの意味が異なるのか】\n"half past〜"（〜時を30分過ぎた）は"past"（過ぎ）を使い時間を足す考え方、"a quarter to〜"（〜時になる15分前）は"to"（前）を使い時間を引く考え方で、意味の方向が逆になる。\n\n【ポイント1】①金額を確認する\n"three hundred yen"＝300円（hundred＝100）。\n\n【ポイント2】②pastを使った時刻を確認する\n"half past seven"＝7時30分（halfは「半分」で30分を表す）。\n\n【ポイント3】③toを使った時刻を確認する\n"a quarter to nine"＝8時45分（quarterは「4分の1」で15分、toは「〜前」を表すので、9時の15分前）。\n\n【答え】\n① 300円\n② 7時30分\n③ 8時45分\n\n【確かめ】\n③が「9時15分」ではなく「8時45分」になっているか確認する。\n\n【よくあるまちがい】\n"a quarter to nine"を9時15分と間違えてしまうミス。toは「〜前」なので8時45分が正しい。\n\n【ここが絶対】\n「past=過ぎ（足す）」「to=前（引く）」のイメージで時刻の計算をする。',
     pitfall: `a quarter to nineを9時15分と間違えない。toは「〜前」なので8時45分が正しい。`,
     memoryTip: `「past=過ぎ(足す)」「to=前(引く)」のイメージで時刻の計算をする。`,
   },
