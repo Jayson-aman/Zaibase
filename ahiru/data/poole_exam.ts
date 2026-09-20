@@ -1736,7 +1736,8 @@ export const pooleExam: Question[] = [
     ],
     answer: 'Tuesday',
     hint: '曜日は Sunday→Monday→Tuesday…の順番で並んでいます。',
-    explanation: 'Monday(月曜日)の次の日は Tuesday(火曜日)です。曜日は Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday の順に並んでおり、tomorrow(明日)は today(今日)の次の日を表します。',
+    explanation:
+      '【何を聞かれているか】\n"Today is Monday. Tomorrow is (　)."の空欄に入る、正しい曜日を選ぶ問題。\n\n【なぜTuesdayが正解なのか】\n曜日はSunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturdayの順に並んでおり、tomorrow（明日）はtoday（今日）の次の日を表すので、Mondayの次はTuesdayになる。\n\n【ポイント1】曜日の順番を確認する\nSunday→Monday→Tuesday→Wednesday→Thursday→Friday→Saturday。\n\n【ポイント2】tomorrowの意味を確認する\ntomorrow＝「今日の次の日」。今日がMondayなら、明日はその次のTuesday。\n\n【ポイント3】他の選択肢を消去する\nSunday（今日の前日）、Wednesday（2日後）、Saturday（別の日）は、いずれも「明日」に当てはまらない。\n\n【答え】\nTuesday\n\n【確かめ】\nMondayからTuesdayへと、曜日の順番通りに1つ進んでいるか確認する。\n\n【よくあるまちがい】\n曜日の順番を逆に覚えてしまうミス。日本語の「日月火水木金土」の順番と対応させて覚える。\n\n【ここが絶対】\n曜日の順番（Sunday〜Saturday）を正しい順にセットで覚えておく。',
     pitfall: '曜日の順番を逆に覚えてしまうミスに注意しましょう。',
     memoryTip: '「日月火水木金土」の日本語の順番と英語の曜日を対応させて覚えると忘れにくいです。',
   },
@@ -1756,7 +1757,8 @@ export const pooleExam: Question[] = [
     ],
     answer: 'am',
     hint: '主語が I のときの be動詞は決まっています。',
-    explanation: '主語が I(私は)のとき、be動詞は am を使います。is は主語が he, she, it などの三人称単数のとき、are は主語が you や複数のときに使います。be は be動詞の原形で、文の中でそのままの形では使いません。',
+    explanation:
+      '【何を聞かれているか】\n"I (　) a student."の空欄に入る、正しいbe動詞を選ぶ問題。\n\n【なぜamを使うのか】\n主語がI（私は）のとき、be動詞はamを使うという決まりがある。\n\n【ポイント1】主語とbe動詞の対応を確認する\nI am、You are、He/She/It isという組み合わせが決まっている。\n\n【ポイント2】isとareが使えない理由を確認する\nisは三人称単数（he/she/it）、areはyouや複数の主語のときに使うので、主語Iには合わない。\n\n【ポイント3】beが原形であることを確認する\nbeはbe動詞の原形で、文の中でそのままの形では使わない。\n\n【答え】\nam\n\n【確かめ】\n主語Iに対して、amが正しく選ばれているか確認する。\n\n【よくあるまちがい】\n"I is a student."のように、isを使ってしまうミス。isは三人称単数の主語に使う。\n\n【ここが絶対】\nI am、You are、He/She/It isというbe動詞と主語の対応をセットで覚える。',
     pitfall: 'I is a student. のように is を使ってしまう間違いが多いので注意しましょう。',
     memoryTip: 'I am、You are、He/She/It is のセットで覚えましょう。',
   },
@@ -1796,7 +1798,8 @@ export const pooleExam: Question[] = [
     ],
     answer: 'This',
     hint: '自分の近くにあるものを指すときに使う単語を選びましょう。',
-    explanation: '自分の近くにある1つのものを指すときは This を使います。That は自分から離れた場所にある1つのものを指すときに使います。These は近くにある複数のもの、Those は離れた場所にある複数のものを指すときに使う単語です。',
+    explanation:
+      '【何を聞かれているか】\n話し手のすぐ近くにあるかばんを指して、"(　) is my bag."の空欄に入る、正しい語を選ぶ問題。\n\n【なぜThisを使うのか】\n自分の近くにある1つのものを指すときは、Thisを使うという決まりがある。\n\n【ポイント1】Thisの使い方を確認する\nThis＝近くにある1つのものを指す語。\n\n【ポイント2】Thatとの違いを確認する\nThat＝自分から離れた場所にある1つのものを指す語。\n\n【ポイント3】複数形との違いを確認する\nThese（近くの複数）、Those（離れた場所の複数）と、単数・複数、近い・遠いの組み合わせで4つの語を区別する。\n\n【答え】\nThis\n\n【確かめ】\nかばんが話し手のすぐ近くにあるという状況設定から、Thisが正しく選ばれているか確認する。\n\n【よくあるまちがい】\n近くのものなのにThatを使ってしまうミス。「ここ」に近いThis、「あそこ」に離れているThatと、場所のイメージで区別する。\n\n【ここが絶対】\nThis（近い・単数）、That（遠い・単数）、These（近い・複数）、Those（遠い・複数）という4つの語を、距離と数でセットで整理する。',
     pitfall: '近くのものなのに That を使ってしまうミスに注意しましょう。',
     memoryTip: '「ここ」に近い This、「あそこ」に離れている That、と場所のイメージで覚えましょう。',
   },
@@ -1896,7 +1899,8 @@ export const pooleExam: Question[] = [
     ],
     answer: 'children',
     hint: 'child は不規則に変化する名詞です。',
-    explanation: 'child(子ども)の複数形は、sを付ける通常のルールに従わず、children という不規則な形になります。同じように不規則に変化する名詞には man→men、woman→women、foot→feet などがあります。',
+    explanation:
+      '【何を聞かれているか】\n"child"の複数形として正しいものを選ぶ問題。\n\n【なぜchildrenという特別な形になるのか】\nchildの複数形は、通常のsをつけるルールに従わず、childrenという不規則な形に変化する。\n\n【ポイント1】childの複数形を確認する\nchild（単数）→children（複数）という不規則変化。\n\n【ポイント2】同じグループの不規則な複数形を確認する\nman→men、woman→women、foot→feetも同じように不規則に変化する。\n\n【ポイント3】誤った形を確認する\nchilds、childes、childrensはいずれも誤り。\n\n【答え】\nchildren\n\n【確かめ】\nchildの複数形がchildrenという特別な形になっていることを確認する。\n\n【よくあるまちがい】\n"childs"のように、通常のsをつけるルールをそのまま当てはめてしまうミス。\n\n【ここが絶対】\nchild→childrenという不規則な複数形を、man→men、woman→women、foot→feetとあわせてセットで丸ごと覚える。',
     pitfall: 'childs のようにsを付けてしまう間違いがとても多いので注意しましょう。',
     memoryTip: 'child→children は特別な形として、そのまま丸ごと覚えてしまいましょう。',
   },
@@ -1916,7 +1920,8 @@ export const pooleExam: Question[] = [
     ],
     answer: 'can',
     hint: '「~できる」という意味を表す助動詞の形を考えましょう。',
-    explanation: '「~できる」という能力を表すときは can を使います。can は助動詞で、主語が何であっても形は変わらず、いつも can のままです。cans のようにsを付けたり、is can のようにbe動詞と一緒に使ったりすることはありません。',
+    explanation:
+      '【何を聞かれているか】\n"She (　) swim very well."の空欄に入る、正しい語を選ぶ問題。\n\n【なぜcanという形のまま使うのか】\ncanは助動詞で、主語が何であっても形が変わらないという決まりがある。\n\n【ポイント1】canの意味を確認する\ncan＝「〜できる」という能力を表す助動詞。\n\n【ポイント2】canの形が変わらないことを確認する\n主語がShe（三人称単数）であっても、canにsをつけて"cans"にすることはない。\n\n【ポイント3】他の誤った形を確認する\n"is can"のようにbe動詞と一緒に使ったり、"to can"のようにtoをつけたりすることもない。\n\n【答え】\ncan\n\n【確かめ】\n主語Sheに対して、canがそのままの形で使われていることを確認する。\n\n【よくあるまちがい】\n主語が三人称単数だからといって、"cans"としてしまうミス。助動詞はいつでも同じ形。\n\n【ここが絶対】\n助動詞（can・will・mustなど）は主語に関係なく形が変わらないことをセットで覚える。',
     pitfall: '主語が She(三人称単数)だからといって cans としないよう注意しましょう。',
     memoryTip: '助動詞canはいつでも形が変わらない、と覚えておきましょう。',
   },
@@ -1956,7 +1961,8 @@ export const pooleExam: Question[] = [
     ],
     answer: 'It was a lot of fun.',
     hint: 'How was ~? は過去の感想をたずねる表現です。',
-    explanation: 'How was your summer vacation? は「夏休みはどうでしたか」と過去の出来事についての感想をたずねる質問です。それに対しては It was a lot of fun.(とても楽しかったです)のように was を使って過去の感想を答えます。他の選択肢は質問の内容と合いません。',
+    explanation:
+      '【何を聞かれているか】\n"How was your summer vacation?"という質問への返答として、最も適切な文を選ぶ問題。\n\n【なぜwasを使った返答をするのか】\n"How was〜?"は「〜はどうでしたか」と過去の出来事についての感想をたずねる表現なので、それに対してはwasを使った過去の感想で答える。\n\n【ポイント1】"How was〜?"の意味を確認する\n過去の出来事の様子・感想をたずねる表現。\n\n【ポイント2】自然な返答を確認する\n"It was a lot of fun."（とても楽しかったです）が、過去の感想を表す自然な返答。\n\n【ポイント3】他の選択肢を消去する\n「ペンを持っている」「また明日」「良い考えだ」は、いずれも夏休みの感想をたずねる質問には合わない。\n\n【答え】\nIt was a lot of fun.\n\n【確かめ】\n選んだ返答が、wasを使った過去の感想になっているか確認する。\n\n【よくあるまちがい】\n"How was〜?"に対して現在形の文で答えてしまうミス。過去の出来事にはwas/wereを使って答える。\n\n【ここが絶対】\n"How was〜?"には"It was〜"という、was/wereを使った過去の感想で答える、という型をセットで覚える。',
     pitfall: 'How was ~? に対して現在形の文で答えてしまわないよう注意しましょう。',
     memoryTip: 'How was ~? には was/were を使った過去の感想で答える、とセットで覚えましょう。',
   },
@@ -1996,7 +2002,8 @@ export const pooleExam: Question[] = [
     ],
     answer: 'the highest',
     hint: '「日本で一番」という意味を表す最上級の形を考えましょう。',
-    explanation: '「日本で一番高い山」のように、3つ以上の中で一番であることを表すときは最上級を使います。high のような短い形容詞は語尾にestを付けてhighestとし、その前にtheを付けます。higher は比較級、more high という形は誤りです。',
+    explanation:
+      '【何を聞かれているか】\n"Mt. Fuji is (　) mountain in Japan."の空欄に入る、正しい最上級を選ぶ問題。\n\n【なぜthe highestという最上級を使うのか】\n「日本で一番高い山」のように、3つ以上のものの中で一番であることを表すときは、最上級（the＋形容詞-est）を使う。\n\n【ポイント1】highの活用を確認する\nhigh（原級）→higher（比較級）→highest（最上級）。\n\n【ポイント2】最上級にtheをつけることを確認する\n"the highest mountain in Japan"＝「日本で一番高い山」。\n\n【ポイント3】"more high"が誤りであることを確認する\nhighのような短い形容詞は-er/-estで変化させ、moreをつけることはない。\n\n【答え】\nthe highest\n\n【確かめ】\n"the highest"の前にtheがついていて、"more high"のような誤った形になっていないことを確認する。\n\n【よくあるまちがい】\n最上級の前にtheをつけ忘れてしまうミス。最上級には必ずtheをつける。\n\n【ここが絶対】\n「一番」という意味の最上級は、必ずthe＋est（またはthe most）の形とセットで覚える。',
     pitfall: '最上級の前にtheを付け忘れるミスが多いので注意しましょう。',
     memoryTip: '「一番」という意味の最上級には、必ずthe+est(またはthe most)の形とセットで覚えましょう。',
   },

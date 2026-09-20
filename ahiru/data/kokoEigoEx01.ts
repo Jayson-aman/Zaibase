@@ -2137,7 +2137,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の会話の（　）に入る最も適切な英文を書きなさい。\n\nA: What do you think we should do to help protect the environment in our daily lives?\nB: （　）\nA: Those are good ideas. I\'ll try to do the same.',
     answer: 'I think we should start with small steps, like reducing plastic waste, saving electricity, and using public transportation instead of cars.',
     hint: 'like「例えば」を使って具体例を列挙すると説得力のある返答になります。start with small steps「小さな一歩から始める」は使いやすい表現です。',
-    explanation: 'I think we should ... で意見→ like ... で具体例列挙（reducing plastic waste / saving electricity / using public transportation）。入試の英作文・会話問題で頻出の環境テーマ。',
+    explanation:
+      '【何を聞かれているか】\n環境保護のために日常生活でできることについての会話の空欄に、最も適切な英文を書く問題。\n\n【なぜ具体例を列挙するのか】\n「何をすべきか」という意見を求められたときは、like（例えば）を使って具体的な行動を複数挙げることで、説得力のある返答になる。\n\n【ポイント1】意見の切り出し方を確認する\n"I think we should start with small steps"（小さな一歩から始めるべきだと思う）という意見の述べ方。\n\n【ポイント2】具体例の列挙を確認する\n"like reducing plastic waste, saving electricity, and using public transportation instead of cars"（プラスチックごみを減らす、節電する、車の代わりに公共交通機関を使うなど）。\n\n【ポイント3】自然な会話の流れを確認する\nAの"Those are good ideas."（それは良い考えですね）という反応につながる、具体的で前向きな内容になっている。\n\n【答え】\nI think we should start with small steps, like reducing plastic waste, saving electricity, and using public transportation instead of cars.\n\n【確かめ】\n"like"の後ろに、具体的な行動が2つ以上並んでいるか確認する。\n\n【よくあるまちがい】\n「環境を守るべきだ」のような抽象的な意見だけで終わらせてしまうミス。具体的な行動を挙げることで説得力のある返答になる。\n\n【ここが絶対】\n意見を述べる会話では、"I think we should〜, like〜"（〜すべきだと思う、例えば〜）という形で具体例を添えると自然で説得力のある返答になる。',
   },
 
 ];

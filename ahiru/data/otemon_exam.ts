@@ -2042,7 +2042,8 @@ export const otemonExam: Question[] = [
     ],
     answer: 'is going to',
     hint: '「今すでに見える証拠（雲）」から予測する表現を考えよう。',
-    explanation: 'be going toは、今すでに見えている状況や証拠（この文では「あの雲」）をもとに「これから〜しそうだ」と予測するときに使います。willは、その場で決めた予測や意志を表すことが多く、今見えている証拠から判断する場合はbe going toの方が自然です。日本語では同じ「〜だろう」でも、英語では使い分けがあります。',
+    explanation:
+      '【何を聞かれているか】\n"Look at those clouds! It (　) rain soon."の空欄に入る、正しい未来表現を選ぶ問題。\n\n【なぜbe going toを使うのか】\n「あの雲」という、今すでに見えている証拠をもとに「これから〜しそうだ」と予測するときは、be going toを使うという決まりがある。\n\n【ポイント1】be going toの使い方を確認する\n目の前に見える証拠（雲）に基づいて予測するときは、be going toを使う。\n\n【ポイント2】willとの違いを確認する\nwillは、その場で決めた予測や意志を表すことが多く、証拠に基づく予測にはあまり使わない。\n\n【ポイント3】文全体の意味を確認する\n"It is going to rain soon."＝「すぐに雨が降りそうだ」。\n\n【答え】\nis going to\n\n【確かめ】\n"those clouds"（あの雲）という、目に見える証拠に基づく予測になっているか確認する。\n\n【よくあるまちがい】\nwillとbe going toを同じ意味だと考えてしまうミス。証拠に基づく予測にはbe going toが適している。\n\n【ここが絶対】\n目の前に見える証拠から予測するときはbe going toを使う、という使い分けをwillとセットで覚える。',
     pitfall: 'willとbe going toはどちらも未来を表しますが、証拠に基づく予測にはbe going toが適しています。',
     memoryTip: '目の前の証拠から予測するときは be going to と覚えよう。',
   },

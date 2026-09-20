@@ -215,14 +215,7 @@ export const kindaiExamV2: Question[] = [
     answer: 'for',
     hint: '「期間」を表すには for、「起点（〜から）」を表すには since を使う。',
     explanation:
-      '【解法】\n' +
-      '"ten years"（10年間）は期間を表す表現。\n\n' +
-      '期間を表すには "for" を使う。\n' +
-      '　例：for ten years（10年間）\n\n' +
-      '"since" は起点（特定の時点）を表す。\n' +
-      '　例：since 2014（2014年から）\n\n' +
-      '正解："I have lived in Osaka for ten years."\n\n' +
-      '答え：for',
+      '【何を聞かれているか】\n"I have lived in Osaka (　) ten years."の空欄に入る、正しい前置詞を選ぶ問題。\n\n【なぜforを使うのか】\n"ten years"（10年間）は期間を表す表現なので、期間の前にはforを使うという決まりがある。\n\n【ポイント1】forの使い方を確認する\nfor＋期間（for ten years＝10年間）。\n\n【ポイント2】sinceとの違いを確認する\nsinceは起点（特定の時点）を表す（since 2014＝2014年から）。\n\n【ポイント3】文全体の意味を確認する\n"I have lived in Osaka for ten years."＝「私は10年間大阪に住んでいる」という、現在完了の継続用法。\n\n【答え】\nfor\n\n【確かめ】\n"ten years"が期間（〜間）を表していて、forと組み合わさっているか確認する。\n\n【よくあるまちがい】\nforとsinceを混同してしまうミス。for＋期間、since＋時点（年・曜日・出来事）という違いを覚える。\n\n【ここが絶対】\nfor＋期間、since＋起点という前置詞の使い分けを、現在完了（継続）の文とセットで覚える。',
     pitfall: 'for + 期間、since + 時点（年・曜日・出来事）。混同しやすいので注意。',
   },
   {
@@ -242,15 +235,7 @@ export const kindaiExamV2: Question[] = [
     answer: 'tallest',
     hint: '「〜の中で一番」は最上級 + the。tallの最上級は？',
     explanation:
-      '【解法】\n' +
-      '「クラスで一番〜」= the + 最上級\n\n' +
-      'tall（背が高い）の変化：\n' +
-      '原級：tall\n' +
-      '比較級：taller\n' +
-      '最上級：tallest\n\n' +
-      '"the tallest girl in her class" が正しい形。\n\n' +
-      '※ most tall とは言わない（1音節の形容詞は -er/-est）。\n\n' +
-      '答え：tallest',
+      '【何を聞かれているか】\n"She is the (　) girl in her class."の空欄に入る、正しい最上級を選ぶ問題。\n\n【なぜtallestという最上級を使うのか】\n「クラスで一番〜」という、3つ以上の中で一番であることを表すときは、最上級（the＋形容詞-est）を使う。\n\n【ポイント1】tallの活用を確認する\n原級tall→比較級taller→最上級tallest。\n\n【ポイント2】最上級にtheをつけることを確認する\n"the tallest girl in her class"＝「クラスで一番背の高い女の子」。\n\n【ポイント3】"most tall"が誤りであることを確認する\n1音節の短い形容詞（tall）は-er/-estをつけて変化させ、moreやmostはつけない。\n\n【答え】\ntallest\n\n【確かめ】\n"the tallest"がtallの正しい最上級になっていて、"most tall"のような誤った形になっていないことを確認する。\n\n【よくあるまちがい】\n1音節の形容詞にmostをつけてしまうミス。tall・old・bigのような短い形容詞は-er/-estで変化させる。\n\n【ここが絶対】\n1音節の形容詞は-er/-est、2音節以上の長い形容詞はmore/mostを使う、という使い分けをセットで覚える。',
     pitfall: '1音節の形容詞（tall, old, big など）は -er, -est。2音節以上は more, most を使う。',
   },
   {
@@ -269,13 +254,7 @@ export const kindaiExamV2: Question[] = [
     answer: 'didn\'t',
     hint: '一般動詞の過去形の否定文は did not（didn\'t）+ 動詞の原形。',
     explanation:
-      '【解法】\n' +
-      '「来なかった」→ 過去の否定\n\n' +
-      '一般動詞の否定文（過去）：did not（didn\'t）+ 動詞の原形\n\n' +
-      '"He didn\'t come to school yesterday."\n\n' +
-      '・doesn\'t → 現在形の否定（He doesn\'t come〜）\n' +
-      '・wasn\'t / isn\'t → be動詞の否定（来ていなかったは wasn\'t だが、come を使う場合は didn\'t）\n\n' +
-      '答え：didn\'t',
+      '【何を聞かれているか】\n「彼は昨日学校に来ませんでした。」という日本語に合うように、"He (　) come to school yesterday."の空欄を埋める問題。\n\n【なぜdidn\'tを使うのか】\n「来なかった」という過去の否定は、一般動詞の過去の否定文の形（did not＋動詞の原形）で表す。\n\n【ポイント1】過去の否定文の公式を確認する\n主語＋did not（didn\'t）＋動詞の原形〜。\n\n【ポイント2】他の選択肢を消去する\ndoesn\'tは現在形の否定、wasn\'t/isn\'tはbe動詞の否定で、一般動詞comeにはdidn\'tを使う。\n\n【ポイント3】didn\'tの後ろが原形であることを確認する\ndidn\'tの後ろは、過去形cameではなく原形comeを使う。\n\n【答え】\ndidn\'t\n\n【確かめ】\n"didn\'t"の後ろが原形comeになっていて、過去形cameになっていないことを確認する。\n\n【よくあるまちがい】\n"He didn\'t came to school."のように、didn\'tと過去形の両方を使ってしまうミス。didn\'tを使ったら動詞は必ず原形に戻す。\n\n【ここが絶対】\n一般動詞の過去の否定文はdid not（didn\'t）＋動詞の原形。be動詞の否定（wasn\'t）と混同しない。',
     pitfall: 'didn\'t の後は必ず動詞の原形（came ではなく come）。',
   },
   {
@@ -296,11 +275,7 @@ export const kindaiExamV2: Question[] = [
     answer: '7:40',
     hint: '学校は8:00開始、歩いて20分かかる。逆算して出発時刻を求める。',
     explanation:
-      '【解法】\n' +
-      '・学校開始：8:00\n' +
-      '・歩く時間：20分\n\n' +
-      '出発時刻 = 8:00 - 20分 = 7:40\n\n' +
-      '答え：7:40',
+      '【何を聞かれているか】\nトムの朝の行動についての英文を読んで、"What time does Tom leave home?"（トムは何時に家を出るか）に答える、逆算が必要な推論問題。\n\n【なぜ逆算が必要なのか】\n本文には家を出る時刻が直接書かれていないため、「学校が始まる時刻」と「歩くのにかかる時間」という2つの情報から、逆算して出発時刻を求める必要がある。\n\n【ポイント1】学校の開始時刻を確認する\n"School starts at 8:00."（学校は8時に始まる）。\n\n【ポイント2】歩く時間を確認する\n"It takes about 20 minutes to walk to school."（学校まで歩いて約20分かかる）。\n\n【ポイント3】逆算する\n8:00から20分前を計算すると、8:00－20分＝7:40。\n\n【答え】\n7:40\n\n【確かめ】\n7:40に家を出て20分歩くと8:00に学校に着く、という計算が正しいか確認する。\n\n【よくあるまちがい】\n本文に直接書かれている時刻（6:30の起床時刻など）をそのまま答えてしまうミス。この問題は本文の情報から計算して答えを導く必要がある。\n\n【ここが絶対】\n本文に直接書かれていない情報を、他の情報（開始時刻・所要時間）から逆算して求める「推論型」の読解問題があることを覚えておく。',
     pitfall: '問題文に直接書かれていない情報を計算で導く「推論型」問題。逆算が鍵。',
   },
   {
@@ -319,14 +294,7 @@ export const kindaiExamV2: Question[] = [
     answer: 'show',
     hint: '「〜に…を見せる・教える」という意味の動詞。show + 人 + how to〜 の形を確認。',
     explanation:
-      '【解法】\n' +
-      '"show + 人 + how to〜" = 「〜のやり方を（人に）見せる・教える」\n\n' +
-      '・show：（見せる・やり方を示す）\n' +
-      '・look：自動詞（〜を見る）\n' +
-      '・watch：動いているものをじっと見る\n' +
-      '・see：自然に目に入ってくる\n\n' +
-      '"Can you show me how to use this computer?" が正しい。\n\n' +
-      '答え：show',
+      '【何を聞かれているか】\n"Can you (　) me how to use this computer?"の空欄に入る、正しい動詞を選ぶ問題。\n\n【なぜshowを使うのか】\n「（人に）〜のやり方を見せる・教える」という意味を表すときは、"show＋人＋how to〜"という決まった形を使う。\n\n【ポイント1】showの使い方を確認する\nshow＋人＋how to〜＝「（人に）〜のやり方を見せて教える」。\n\n【ポイント2】他の選択肢との違いを確認する\nlook（自動詞、〜を見る）、watch（動いているものをじっと見る）、see（自然に目に入る）は、いずれも「教える」という意味では使えない。\n\n【ポイント3】文全体の意味を確認する\n"Can you show me how to use this computer?"＝「このコンピュータの使い方を教えてもらえますか」。\n\n【答え】\nshow\n\n【確かめ】\n"show"の後ろに"me"（人）、その後ろに"how to use"が続いていることを確認する。\n\n【よくあるまちがい】\nlookやseeを「見せる・教える」という意味で使えると勘違いしてしまうミス。show（見せて教える）とtell（言葉で教える）が、この意味を表す代表的な動詞。\n\n【ここが絶対】\n"show/tell＋人＋how to〜"＝「（人に）〜のやり方を教える」という形をセットで覚える。',
     pitfall: 'show は「人に何かを見せて教える」という意味で使う。tell との使い分けも要注意（tell + 人 + how to〜 でも可）。',
   },
 ];

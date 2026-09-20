@@ -1825,7 +1825,8 @@ export const naniwaExam: Question[] = [
     ],
     answer: 'I\'m fine, thank you.',
     hint: 'How are you?は相手の調子や気分をたずねるあいさつの表現です。',
-    explanation: 'How are you?は「元気ですか」と相手の様子をたずねるあいさつです。それに対する答えとして最も自然なのは、I\'m fine, thank you.(元気です、ありがとう)のように自分の調子を伝える表現です。年齢を答えるHow old are you?や、名前を答えるWhat\'s your name?への返事と混同しないように、質問の意味をしっかり区別しましょう。',
+    explanation:
+      '【何を聞かれているか】\n"How are you?"という挨拶への返答として、最も適切な文を選ぶ問題。\n\n【なぜ体調・様子を答えるのか】\n"How are you?"は「元気ですか」と相手の様子をたずねる挨拶なので、それに対しては自分の様子を伝える返答が自然。\n\n【ポイント1】"How are you?"の意味を確認する\n「調子はどうですか」と相手の様子・気分をたずねる挨拶。\n\n【ポイント2】自然な返答を確認する\n"I\'m fine, thank you."（元気です、ありがとう）が、様子をたずねる質問への自然な返答。\n\n【ポイント3】似た疑問文と区別する\n"How old are you?"（年齢）、"What\'s your name?"（名前）への返答と混同しないよう、質問の意味を区別する。\n\n【答え】\nI\'m fine, thank you.\n\n【確かめ】\n選んだ返答が、年齢や名前ではなく、自分の「調子・様子」を答える内容になっているか確認する。\n\n【よくあるまちがい】\n"How are you?"と"How old are you?"を混同して、年齢を答えてしまうミス。\n\n【ここが絶対】\n"How are you?"には様子・調子を答える（I\'m fine, thank you.）という決まった返答パターンをセットで覚える。',
     pitfall: 'How are you?とHow old are you?を混同して、年齢を答えてしまわないように気をつけましょう。',
     memoryTip: 'How are you?は毎朝のあいさつなので、家であいさつする場面を思い浮かべると答えを選びやすくなります。',
   },
@@ -1925,7 +1926,8 @@ export const naniwaExam: Question[] = [
     ],
     answer: 'Yes, I\'m looking for a T-shirt.',
     hint: 'お店の人が客に声をかけるときの決まり文句です。',
-    explanation: 'Can I help you?は、お店などで店員さんが客に「いらっしゃいませ、何かお探しですか」と声をかけるときの表現です。それに対して自然な返事は、探しているものを伝えるYes, I\'m looking for a T-shirt.(はい、Tシャツを探しています)です。このように、場面(お店)を想像しながら会話の流れに合う返事を選ぶことが対話文問題のコツです。',
+    explanation:
+      '【何を聞かれているか】\n"Can I help you?"という声かけへの返答として、最も適切な文を選ぶ問題。\n\n【なぜ探しているものを伝えるのか】\n"Can I help you?"は、お店の店員が客に「何かお探しですか」と声をかけるときの決まり文句なので、それに対しては探しているものを伝える返答が自然。\n\n【ポイント1】"Can I help you?"の場面を確認する\nお店などで、店員が客に声をかける場面で使われる表現。\n\n【ポイント2】自然な返答を確認する\n"Yes, I\'m looking for a T-shirt."（はい、Tシャツを探しています）が、店員の声かけに対する自然な返答。\n\n【ポイント3】"Can you help me?"との違いを確認する\n"Can I help you?"（お手伝いしましょうか）と"Can you help me?"（手伝ってもらえますか）は主語が逆で、意味も逆になる。\n\n【答え】\nYes, I\'m looking for a T-shirt.\n\n【確かめ】\n選んだ返答が、お店の場面にふさわしい「探しているものを伝える」内容になっているか確認する。\n\n【よくあるまちがい】\n"Can I help you?"を"Can you help me?"と混同して、逆の意味で読んでしまうミス。\n\n【ここが絶対】\n"Can I help you?"は店員が客にかける決まり文句。場面（お店）を想像しながら自然な返答を選ぶ。',
     pitfall: 'Can I help you?をCan you help me?と混同して、逆の意味で読んでしまわないように気をつけましょう。',
     memoryTip: 'お店に入ったときに店員さんから声をかけられる場面を思い出すと、正しい返事を選びやすくなります。',
   },

@@ -1745,7 +1745,8 @@ export const kenmeiExam: Question[] = [
     ],
     answer: 'mother',
     hint: '家族を表す単語です。女性の親を指します。',
-    explanation: '「お母さん」は英語で mother です。father は「お父さん」、brother は「兄・弟」、sister は「姉・妹」を表します。家族の呼び方はセットで覚えると効率的です。',
+    explanation:
+      '【何を聞かれているか】\n「お母さん」に合う英単語を選ぶ問題。\n\n【なぜmotherが正解なのか】\n「お母さん」は英語でmotherと言い、女性の親を指す。\n\n【ポイント1】家族を表す単語を確認する\nmother（お母さん）、father（お父さん）、brother（兄・弟）、sister（姉・妹）。\n\n【ポイント2】他の選択肢を区別する\nfatherは男性の親、brotherは男のきょうだい、sisterは女のきょうだいを表す。\n\n【ポイント3】つづりを確認する\nmotherの中に「other（他の）」が入っていると考えると、つづりを覚えやすい。\n\n【答え】\nmother\n\n【確かめ】\nmotherが「お母さん」という意味で、father（お父さん）などと区別されているか確認する。\n\n【よくあるまちがい】\nbrotherとmotherの語尾が似ているため、スペルを混同してしまうミス。\n\n【ここが絶対】\n家族を表す単語（mother・father・brother・sister）はセットで覚えると効率的。',
     pitfall: 'brother と mother は語尾が似ているのでスペルミスに注意しましょう。',
     memoryTip: 'mother の中に「other（他の）」が入っていると考えると、つづりを覚えやすいです。',
   },
@@ -1785,7 +1786,8 @@ export const kenmeiExam: Question[] = [
     ],
     answer: 'on',
     hint: '曜日の前に置く前置詞は何か考えましょう。',
-    explanation: '曜日の前には on を使います。in は月や年、季節の前、at は時刻の前で使う前置詞です。「月曜日に」は on Monday と表すと覚えておきましょう。',
+    explanation:
+      '【何を聞かれているか】\n"We have a piano lesson (　) Monday."の空欄に入る、正しい前置詞を選ぶ問題。\n\n【なぜonを使うのか】\n曜日の前には、前置詞onを使うという決まりがある。\n\n【ポイント1】onの使い方を確認する\non＋曜日（on Monday＝月曜日に）。\n\n【ポイント2】inとatとの違いを確認する\ninは月・年・季節の前、atは時刻の前で使う前置詞。\n\n【ポイント3】3つの前置詞をセットで確認する\n曜日はon、時刻はat、月・年はinという使い分け。\n\n【答え】\non\n\n【確かめ】\n"on Monday"が「月曜日に」という意味の正しい前置詞の組み合わせになっているか確認する。\n\n【よくあるまちがい】\n時刻に使うatと曜日に使うonを混同してしまうミス。\n\n【ここが絶対】\n曜日はon、時刻はat、月・年はinという3つの前置詞の使い分けをセットで覚える。',
     pitfall: '時刻には at、曜日には on と、前置詞を混同しないようにしましょう。',
     memoryTip: '曜日は on、時刻は at、月・年は in と、頭文字と一緒に3つセットで覚えると便利です。',
   },
@@ -1965,7 +1967,8 @@ export const kenmeiExam: Question[] = [
     ],
     answer: 'It\'s ten o\'clock.',
     hint: 'What time（何時）と聞かれているので、時刻を答える文を選びましょう。',
-    explanation: 'What time is it now? は「今何時ですか」と時刻を尋ねる表現です。それに対する答えは It\'s ten o\'clock.（10時です）のように時刻で答えます。天気や体調、Yes/Noの答えは時刻の質問にはふさわしくありません。',
+    explanation:
+      '【何を聞かれているか】\n"What time is it now?"という質問への返答として、最も適切な文を選ぶ問題。\n\n【なぜ時刻で答えるのか】\n"What time is it now?"は「今何時ですか」と時刻をたずねる表現なので、それに対しては時刻で答える。\n\n【ポイント1】"What time is it?"の意味を確認する\n時刻をたずねる決まった疑問文。\n\n【ポイント2】自然な返答を確認する\n"It\'s ten o\'clock."（10時です）が、時刻をたずねる質問への自然な返答。\n\n【ポイント3】他の選択肢を消去する\n天気（It\'s rainy today.）、体調（I\'m fine, thank you.）、Yes/No（Yes, it is.）は、いずれも時刻をたずねる質問には合わない。\n\n【答え】\nIt\'s ten o\'clock.\n\n【確かめ】\n選んだ返答が、"It\'s＋時刻"という形で時刻を答えているか確認する。\n\n【よくあるまちがい】\n天気の返答（It\'s rainy today.）と混同してしまうミス。Itが主語の文でも、聞かれている内容（時刻か天気か）を正確に区別する。\n\n【ここが絶対】\n"What time is it?"には"It\'s＋時刻"で答える、という型をセットで覚える。',
     pitfall: 'It\'s rainy today. のような天気の答えと混同しないようにしましょう。',
     memoryTip: 'What time で聞かれたら「It\'s +時刻」で答える、と型で覚えておきましょう。',
   },
@@ -2025,7 +2028,8 @@ export const kenmeiExam: Question[] = [
     ],
     answer: 'For five years.',
     hint: '文章の最後の文に注目しましょう。has practiced という現在完了形の文です。',
-    explanation: '文章の最後に She has practiced it for five years.（彼女は5年間それ（バイオリン）を練習してきています）とあります。has practiced は現在完了形で「ずっと〜し続けている」という継続の意味を表し、for five years がその期間を示しています。よって答えは For five years. です。',
+    explanation:
+      '【何を聞かれているか】\nエミについての英文を読んで、"How long has Emi practiced the violin?"（エミはどのくらいの間バイオリンを練習しているか）に答える問題。\n\n【なぜ最後の文に注目するのか】\n本文の最後の文"She has practiced it for five years."に、現在完了形（has practiced）と期間を表す語句（for five years）がセットで使われており、これが設問の答えに直結する。\n\n【ポイント1】現在完了（継続）の意味を確認する\nhas practiced＝「ずっと練習し続けている」という継続を表す現在完了形。\n\n【ポイント2】期間を表す語句を確認する\n"for five years"（5年間）がその継続の期間を示している。\n\n【ポイント3】他の選択肢と区別する\n"For one hour."は毎日の練習時間であり、「続けている期間」とは異なる情報。\n\n【答え】\nFor five years.\n\n【確かめ】\n"How long"（どのくらいの間）という質問に対して、期間を表す"For five years."が正しく対応しているか確認する。\n\n【よくあるまちがい】\n"For one hour."（毎日の練習時間）を、継続している期間だと勘違いしてしまうミス。\n\n【ここが絶対】\n"How long has〜practiced?"（どのくらいの間〜し続けているか）には、for/sinceを使った「期間」で答える。',
     pitfall: 'for one hour は「毎日の練習時間」であり、「続けている期間」ではないので混同しないようにしましょう。',
     memoryTip: 'How long ~? には「期間（for ~ / since ~）」で答える、と覚えておきましょう。',
   },
@@ -2105,7 +2109,8 @@ export const kenmeiExam: Question[] = [
     ],
     answer: 'is',
     hint: 'if（もし〜なら）を使って未来のことを表す文でも、if の中では現在形を使うという決まりを思い出しましょう。',
-    explanation: '「もし明日晴れたら」のように、未来のことを条件として述べる if の文では、if の中の動詞は未来形（will be）ではなく現在形を使うという英語のルールがあります。これを「時・条件を表す副詞節では未来のことも現在形で表す」といいます。よって is が正解で、will go のように、結果を表す主節の方に未来形を使います。',
+    explanation:
+      '【何を聞かれているか】\n"If it (　) sunny tomorrow, we will go on a picnic."の空欄に入る、正しい語を選ぶ問題。\n\n【なぜif節の中で現在形を使うのか】\n英語では、if（もし〜なら）で始まる条件節の中では、たとえ未来のことを表していても現在形を使うという決まりがある。\n\n【ポイント1】条件文の公式を確認する\nIf＋主語＋現在形〜, 主語＋will＋動詞の原形〜。\n\n【ポイント2】tomorrowに惑わされないことを確認する\n"tomorrow"（明日）という未来を表す語があっても、if節の中の動詞は現在形（is）を使う。\n\n【ポイント3】主節の形を確認する\n主節では未来を表すwillを使う（we will go）。\n\n【答え】\nis\n\n【確かめ】\nif節の動詞が現在形（is）になっていて、will beのような未来形になっていないことを確認する。\n\n【よくあるまちがい】\ntomorrowという未来の語につられて、if節の中もwill beにしてしまうミス。未来のことでも、if節の中は現在形にするのがルール。\n\n【ここが絶対】\n「時・条件を表す副詞節（if/when節など）の中は、未来のことも現在形で表す」という英語のルールをセットで覚える。',
     pitfall: 'tomorrow（明日）という未来の語につられて if の中を will be としないように注意しましょう。',
     memoryTip: 'if・when の中は未来のことでも現在形、と呪文のように覚えておきましょう。',
   },

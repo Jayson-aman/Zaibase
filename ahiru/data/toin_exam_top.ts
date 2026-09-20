@@ -690,7 +690,8 @@ export const toinExamTop: Question[] = [
     ],
     answer: 'He kept practicing patiently and improved his ability little by little.',
     hint: '本文全体の流れ(最初は2km→雨の日も練習→半年後には10km)から、健太の性格や行動をとらえましょう。',
-    explanation: '本文には、健太が最初は2kmしか走れなかったこと、雨の日も休まず練習を続けたこと、そして半年後には10km走れるようになったことが書かれています。これらの内容から、健太は根気強く練習を続け、少しずつ能力を伸ばしていったことが読み取れます。したがって、正解はHe kept practicing patiently and improved his ability little by little.です。他の選択肢は本文の内容と矛盾します。',
+    explanation:
+      '【何を聞かれているか】\n毎朝走る練習を続けたケンタについての英文を読んで、この物語から学べることを選ぶ問題。\n\n【なぜ最初から最後までの変化を追うのか】\n物語文の教訓を問う問題では、登場人物の最初の状態と最後の状態の変化（2kmしか走れなかった→10km走れるようになった）を追うことで、その人物がどんな性格・行動を持っているかが読み取れる。\n\n【ポイント1】最初の状態を確認する\n"At first, he could run only two kilometers without stopping."（最初は2kmしか走れなかった）。\n\n【ポイント2】努力の過程を確認する\n"He practiced almost every day, even on rainy days"（雨の日もほぼ毎日練習した）。\n\n【ポイント3】結果を確認する\n"Six months later, he was able to run ten kilometers."（半年後には10km走れるようになった）。\n\n【答え】\nHe kept practicing patiently and improved his ability little by little.\n\n【確かめ】\n選んだ選択肢が、「最初は少ししかできなかったが、根気強く練習して少しずつ上達した」という本文全体の流れと一致しているか確認する。\n\n【よくあるまちがい】\n"rainy days"という単語だけを見て、「雨のせいで練習をやめた」と誤読してしまうミス。実際は雨の日も練習を続けたと書かれている。\n\n【ここが絶対】\n物語の教訓を問う問題は、登場人物の「最初の状態→努力の過程→最後の状態」の変化全体を追って判断する。',
     pitfall: '「rainy days」という単語だけを見て、雨のせいで練習をやめたと誤読しないように注意しましょう。実際は雨の日も練習を続けたと書かれています。',
     memoryTip: '長文問題では、否定語(even, but, never など)がある文ほど重要な情報を含むことが多いので注意深く読みましょう。',
   },
@@ -730,7 +731,8 @@ export const toinExamTop: Question[] = [
     ],
     answer: 'who',
     hint: '「クラスで一番速く走ることができる少女」は「the girl who can run fastest」という関係代名詞の文で表せます。まず正しい語順を組み立ててみましょう。',
-    explanation: '日本語の意味「一番速く走ることができる少女」を英語にすると、the girl who can run fastestという語順になります。全体をつなげるとShe is the girl who can run fastest in her class.となり、正しい語順は「the(1番目)→girl(2番目)→who(3番目)→can(4番目)→run(5番目)→fastest(6番目)」です。したがって3番目にくる語はwhoです。',
+    explanation:
+      '【何を聞かれているか】\n「彼女はクラスで一番速く走ることができる少女です。」という日本語に合うように、語句を並べ替えて3番目にくる語を答える問題。\n\n【なぜ「先行詞＋who＋動詞」の順にするのか】\n「クラスで一番速く走ることができる少女」を表すには、先行詞the girl（少女）を、関係代名詞whoを使った節"who can run fastest"で後ろから修飾する。\n\n【ポイント1】先行詞を確認する\nthe girl（少女）が先行詞。\n\n【ポイント2】関係代名詞節の語順を確認する\n先行詞の直後にwho（主格の関係代名詞）を置き、その後ろにcan run fastest（動詞句）を続ける。\n\n【ポイント3】全体の語順を確認する\nthe(1)→girl(2)→who(3)→can(4)→run(5)→fastest(6)という順番になる。\n\n【答え】\nwho\n\n【確かめ】\n"the girl who can run fastest"が「一番速く走ることができる少女」という意味になっているか、3番目がwhoであることを確認する。\n\n【よくあるまちがい】\n関係代名詞whoの位置を先行詞（the girl）から離してしまうミス。whoは必ず先行詞の直後に置く。\n\n【ここが絶対】\n「先行詞（人）＋who＋動詞」という語順をワンセットで覚え、並べ替え問題ではまず先行詞と関係代名詞の位置を決める。',
     pitfall: '関係代名詞whoの位置を先行詞(the girl)の直後に置くことを忘れないようにしましょう。',
     memoryTip: '「先行詞(人)+who+動詞」の語順をワンセットで覚えておきましょう。',
   },
