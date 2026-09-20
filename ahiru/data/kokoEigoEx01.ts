@@ -533,7 +533,8 @@ export const kokoEigoEx01: Question[] = [
     question: '次の文を日本語に訳しなさい。\nThe man who called you yesterday is my uncle.',
     answer: 'あなたに昨日電話した男性は私のおじです。',
     hint: '主格の関係代名詞 who が先行詞 The man を修飾。',
-    explanation: `The man who called you yesterday が主語部分で、who called you yesterday が関係詞節として The man を修飾している。関係代名詞 who は先行詞が人の場合に使い、ここでは関係詞節の主語（主格）として機能している。`,
+    explanation:
+      '【何を聞かれているか】\n"The man who called you yesterday is my uncle."という英文を日本語に訳す問題。\n\n【なぜwhoがThe manを修飾するのか】\n先行詞The man（人）を、「昨日あなたに電話した」という内容で説明したいとき、主格の関係代名詞whoを使ってThe manを後ろから修飾する。\n\n【ポイント1】文の主語部分を確認する\n"The man who called you yesterday"（あなたに昨日電話した男性）が、文全体の主語になっている。\n\n【ポイント2】whoが主格であることを確認する\nwhoの後ろに動詞（called）が直接続いているので、whoは関係詞節の中で主語の役割をしている（主格）。\n\n【ポイント3】文全体の構造を確認する\n主語（The man who called you yesterday）＋動詞（is）＋補語（my uncle）。\n\n【答え】\nあなたに昨日電話した男性は私のおじです。\n\n【確かめ】\n"who called you yesterday"がThe manを正しく説明していて、文全体の動詞isが関係詞節の後ろに来ていることを確認する。\n\n【よくあるまちがい】\n関係詞節（who called you yesterday）を文全体の動詞と勘違いして、訳の順番を間違えてしまうミス。\n\n【ここが絶対】\n主語が関係代名詞節で修飾されているときは、「（修飾された長い主語）は〜だ」という形で訳す。まず関係詞節のまとまりを見つけることが大切。',
   },
   {
     id: 'koko_eigo_ex01_048',
@@ -639,11 +640,8 @@ live は状態動詞なので、この場合現在完了進行形（have been li
 If I ( ) you, I ( ) accept the offer.`,
     answer: 'were, would',
     hint: '仮定法過去。現在の事実に反する仮定。be動詞は were を使う。',
-    explanation: `現在の事実に反する仮定を表すには仮定法過去を使う。
-条件節（If節）では動詞を過去形にし、be動詞は主語に関わらず were を使う（口語では was も可）。
-主節では would / could / might + 動詞の原形 を使う。
-If I were you, I would accept the offer. が正解。
-仮定法では時制が一つずれる（現在の仮定→過去形）ことが重要。`,
+    explanation:
+      '【何を聞かれているか】\n「もし私があなたなら、その申し出を受け入れるのに。」という日本語に合うように、仮定法過去の文を完成させる問題。\n\n【なぜbe動詞をwereにするのか】\n仮定法過去では、be動詞は主語が何であっても（Iやhe/sheでも）wereを使うという伝統的なルールがある（口語ではwasも使われる）。\n\n【ポイント1】仮定法過去の公式を確認する\nIf＋主語＋動詞の過去形〜, 主語＋would/could/might＋動詞の原形〜。\n\n【ポイント2】if節を組み立てる\n「もし私があなたなら」は"If I were you"。beの過去形はwereを使う。\n\n【ポイント3】主節を組み立てる\n「受け入れるのに」は"I would accept the offer"。\n\n【答え】\nwere, would\n\n【確かめ】\nif節のbe動詞がwasではなくwereになっていること、主節がwould＋動詞の原形（would accept）になっていることを確認する。\n\n【よくあるまちがい】\n"If I was you"のように、主語Iに合わせてwasを使ってしまうミス。仮定法のif節では、主語が単数でもwereを使うのが原則。\n\n【ここが絶対】\n仮定法過去の公式（If+過去形, would+原形）をセットで覚える。時制は「現在の仮定→過去形」に1つずれることを意識する。',
   },
   {
     id: 'koko_eigo_ex01_055',
@@ -774,11 +772,8 @@ has gone to では「（今）行ってしまった」という意味になる�
 If it ( ) ( ) yesterday, we could have gone on a picnic.`,
     answer: `hadn't rained`,
     hint: '仮定法過去完了。過去の事実に反する仮定には had + 過去分詞 を使う。',
-    explanation: `過去の事実に反する仮定を表すには仮定法過去完了を使う。
-条件節（If節）では had + 過去分詞 を使い、否定は had not（hadn't）+ 過去分詞 となる。
-主節では would / could / might + have + 過去分詞 を使う。
-If it hadn't rained yesterday, we could have gone on a picnic. が正解。
-仮定法過去（現在の仮定）と仮定法過去完了（過去の仮定）の違いに注意しよう。`,
+    explanation:
+      '【何を聞かれているか】\n「もし昨日雨が降っていなければ、私たちはピクニックに行けたのに。」という日本語に合うように、仮定法過去完了の文を完成させる問題。\n\n【なぜhad＋過去分詞を使うのか】\n「実際には昨日雨が降ったが、もし降っていなかったら」という、過去の事実に反する仮定を表すときは、仮定法過去完了（If＋had＋過去分詞, could have＋過去分詞）を使う。\n\n【ポイント1】仮定法過去完了の公式を確認する\nIf＋主語＋had＋過去分詞〜, 主語＋would/could/might have＋過去分詞〜。\n\n【ポイント2】否定形を確認する\nif節の否定はhad not（hadn\'t）＋過去分詞。"hadn\'t rained"＝「雨が降っていなかったら」。\n\n【ポイント3】主節を確認する\n"we could have gone on a picnic"＝「ピクニックに行けたのに」。\n\n【答え】\nhadn\'t rained\n\n【確かめ】\nif節が"had not（hadn\'t）＋過去分詞"になっていて、過去の事実に反する内容（実際には雨が降った）を表していることを確認する。\n\n【よくあるまちがい】\n仮定法過去（If+過去形）と仮定法過去完了（If+had+過去分詞）を混同してしまうミス。過去の事実に反する内容には過去完了の形を使う。\n\n【ここが絶対】\n仮定法過去完了は「過去の事実に反すること」を表す。If節はhad＋過去分詞、主節はwould/could have＋過去分詞という公式をセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_062',
@@ -812,11 +807,8 @@ She had a surprised look on her face when she heard the news. が正解。`,
 If only I ( ) enough money, I would buy a ticket for the concert.`,
     answer: 'had',
     hint: 'If only は「〜でさえあれば」という強い願望を表す仮定法。',
-    explanation: `If only は「〜さえあれば（いいのに）」という強い願望・後悔を表す表現で、仮定法と一緒に使う。
-現在の事実に反する場合は If only + 主語 + 過去形 を使う。
-If only I had enough money は「お金さえあれば」という現在の仮定を表す。
-主節は would / could + 動詞の原形 になる。
-I wish + 主語 + 過去形 も同様の意味を表す重要表現。`,
+    explanation:
+      '【何を聞かれているか】\n「お金さえあれば、そのコンサートのチケットを買えるのに。」という日本語に合うように、If onlyを使った文を完成させる問題。\n\n【なぜIf onlyを使うのか】\nIf onlyは「〜さえあれば（いいのに）」という、通常のifよりも強い願望・後悔を表す表現で、仮定法とセットで使う。\n\n【ポイント1】If onlyの意味を確認する\nIf only＝「〜さえあれば」という強い願望・後悔。\n\n【ポイント2】現在の仮定の形を確認する\n現在の事実に反する内容には、If only＋主語＋過去形を使う。"If only I had enough money"＝「お金さえあれば」。\n\n【ポイント3】主節を確認する\n"I would buy a ticket for the concert"＝「チケットを買うのに」。\n\n【答え】\nhad\n\n【確かめ】\n"If only I had enough money"が、現実には十分なお金がないという事実に反する願望を表していることを確認する。\n\n【よくあるまちがい】\nIf onlyの後ろを現在形（have）のままにしてしまうミス。仮定法のIf onlyでは動詞を過去形にする。\n\n【ここが絶対】\nIf only＋主語＋過去形＝「〜さえあれば」という強い願望を表す表現。I wish＋主語＋過去形も同様の意味を表す重要表現としてあわせて覚える。',
   },
   {
     id: 'koko_eigo_ex01_064',
@@ -843,18 +835,12 @@ all over the world（世界中で）は頻出表現なので覚えておこう�
     examType: 'koko',
     course: 'koko-general',
     difficulty: 'advanced',
-    question: `次の日本語に合うように、空所に適切な語を入れなさい。
-
-天気がよければ、私たちは明日海に行くつもりだ。
-
-( ) the weather fine, we will go to the sea tomorrow.`,
+    question:
+      '次の日本語に合うように、空所に適切な語を入れなさい。\n\n天気がよければ、私たちは明日海に行くつもりだ。\n\n( ) the weather fine, we would go to the sea tomorrow.',
     answer: 'Were',
     hint: '倒置による仮定法。If を省略すると were が文頭に来る。',
-    explanation: `仮定法の条件節では、If を省略して were / had / should を文頭に出す倒置形が使われることがある（特に書き言葉で）。
-If the weather were fine → Were the weather fine という倒置が起きる。
-Were the weather fine, we will go to the sea tomorrow. が正解。
-この構文は高校入試・大学入試でも出題される重要表現。
-Had it not been for 〜（〜がなければ）、Should you need 〜（万が一必要なら）も同様の倒置表現。`,
+    explanation:
+      '【何を聞かれているか】\n「天気がよければ、私たちは明日海に行くつもりだ。」という日本語に合うように、仮定法の条件節にIfを使わない倒置形を完成させる問題。\n\n【なぜWereを文頭に置くのか】\n仮定法の条件節では、Ifを省略してwere/had/shouldを文頭に出す倒置形が使われることがある（特に書き言葉で）。"If the weather were fine"を倒置すると"Were the weather fine"になる。\n\n【ポイント1】通常の仮定法過去の形を確認する\n"If the weather were fine, we would go to the sea tomorrow."が、倒置前の元の形。\n\n【ポイント2】倒置の作り方を確認する\nIfを省略し、be動詞のwereを主語（the weather）の前に移動して文頭に置く。\n\n【ポイント3】主節の形を確認する\n条件節が仮定法（were）なので、主節もそれに合わせてwould＋動詞の原形（would go）にする。\n\n【答え】\nWere\n\n【確かめ】\n"Were the weather fine, we would go to the sea tomorrow."が、"If the weather were fine, we would go to the sea tomorrow."と同じ意味になっていることを確認する。\n\n【よくあるまちがい】\n条件節はWereという仮定法の形にしているのに、主節をwillのままにしてしまうミス。条件節が仮定法なら、主節もwouldに合わせる必要がある。\n\n【ここが絶対】\n仮定法の倒置（Were〜、Had〜、Should〜）は、条件節と主節の両方を仮定法の形（were/had+would/could）でそろえる。Had it not been for〜（〜がなければ）、Should you need〜（万が一必要なら）も同様の倒置表現。',
   },
   {
     id: 'koko_eigo_ex01_066',
@@ -869,11 +855,8 @@ Had it not been for 〜（〜がなければ）、Should you need 〜（万が�
 She was cooking, ( ) a song.`,
     answer: 'singing',
     hint: '付帯状況を表す分詞構文。「〜しながら」という同時進行を表す。',
-    explanation: `分詞構文は接続詞と主語を省略した形で、さまざまな意味を表す。
-「〜しながら」という同時進行（付帯状況）を表す場合は現在分詞（-ing 形）を使う。
-While she was singing a song → singing a song という分詞構文になる。
-She was cooking, singing a song. が正解。
-コンマの後ろに分詞構文を置くことで、付帯状況（同時に行われていること）を示す。`,
+    explanation:
+      '【何を聞かれているか】\n「彼女は歌を歌いながら料理をしていた。」という日本語に合うように、分詞構文を使った文を完成させる問題。\n\n【なぜ現在分詞（-ing）を使うのか】\n「〜しながら」という、2つの動作が同時に行われていること（付帯状況）を表す分詞構文は、現在分詞（-ing形）を使って作る。\n\n【ポイント1】分詞構文の作り方を確認する\n"While she was singing a song"（接続詞＋主語＋動詞）から、接続詞と主語を省略して"singing a song"という分詞構文にする。\n\n【ポイント2】コンマの位置を確認する\nコンマの後ろに分詞構文を置くことで、「〜しながら」という付帯状況を表す。\n\n【ポイント3】文全体の意味を確認する\n"She was cooking, singing a song."＝「彼女は歌を歌いながら料理をしていた」。\n\n【答え】\nsinging\n\n【確かめ】\nコンマの後ろの語が"singing"という現在分詞になっていることを確認する。\n\n【よくあるまちがい】\n過去分詞（sung）を使ってしまうミス。同時進行の動作（自分で歌う）を表すには、能動的な現在分詞を使う。\n\n【ここが絶対】\n「〜しながら」という付帯状況を表す分詞構文は、現在分詞（-ing形）を使って作る。',
   },
   {
     id: 'koko_eigo_ex01_067',
@@ -888,11 +871,8 @@ She was cooking, singing a song. が正解。
 We ( ) ( ) friends for more than ten years.`,
     answer: 'have been',
     hint: '現在完了（継続）。状態の継続には have been を使う。',
-    explanation: `「〜の状態が続いている」という状態の継続を表すには have been + 形容詞 / 名詞 を使う。
-We have been friends for more than ten years. が正解。
-for more than ten years（10年以上の間）は継続の期間を表す。
-この文では friends が名詞として「友人同士」の状態を表している。
-現在完了の継続用法は for（期間）・since（起点）とともによく使われる。`,
+    explanation:
+      '【何を聞かれているか】\n「私たちは10年以上友人同士だ。」という日本語に合うように、現在完了の文を完成させる問題。\n\n【なぜhave beenを使うのか】\n「（状態が）ずっと続いている」という状態の継続を表すときは、現在完了（have/has been＋形容詞/名詞）を使う。\n\n【ポイント1】現在完了（継続）の公式を確認する\n主語＋have/has been＋形容詞/名詞〜。\n\n【ポイント2】主語Weとhaveの対応を確認する\n主語We（複数）に対応するのはhave。\n\n【ポイント3】"for more than ten years"の役割を確認する\n継続の期間を表す語句で、現在完了とセットで使われる。\n\n【答え】\nhave been\n\n【確かめ】\n"have been friends"が「友人同士である状態がずっと続いている」という意味を表していることを確認する。\n\n【よくあるまちがい】\nhave beenを忘れて"We friends for ten years."のようにbe動詞を抜かしてしまうミス。状態の継続にはhave been＋名詞/形容詞が必要。\n\n【ここが絶対】\n"have/has been＋形容詞/名詞＋for＋期間"＝「（状態が）ずっと〜だ」という現在完了（継続）の形をセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_068',
@@ -926,11 +906,8 @@ Being tired, he fell asleep on the train. が正解。
 By the time he arrived, she ( ) ( ) ( ) for three hours.`,
     answer: 'had been waiting',
     hint: '過去完了進行形。過去のある時点まで継続していた動作を表す。',
-    explanation: `過去完了進行形（had been + -ing）は、過去のある時点まで継続していた動作を強調する表現。
-By the time he arrived（彼が到着するまでに）という過去の基準点より前から待っていた継続を表す。
-had been waiting for three hours は「3時間ずっと待っていた」という継続を過去の視点から見た表現。
-現在完了進行形（have been -ing）と比べると、基準点が現在か過去かの違いがある。
-She had been waiting for three hours. が正解。`,
+    explanation:
+      '【何を聞かれているか】\n「彼が到着するまでに、彼女はすでに3時間待っていた。」という日本語に合うように、過去完了進行形の文を完成させる問題。\n\n【なぜ過去完了進行形を使うのか】\n「過去のある時点（彼が到着した時）までずっと続いていた動作」を強調するときは、過去完了進行形（had been＋動詞のing形）を使う。\n\n【ポイント1】過去完了進行形の公式を確認する\n主語＋had been＋動詞のing形〜。\n\n【ポイント2】基準点を確認する\n"By the time he arrived"（彼が到着するまでに）という過去の基準点より前から、待つという動作が続いていた。\n\n【ポイント3】現在完了進行形との違いを確認する\n現在完了進行形（have been -ing）の基準点が「現在」なのに対し、過去完了進行形の基準点は「過去のある時点」。\n\n【答え】\nhad been waiting\n\n【確かめ】\n"had been waiting"が「had been＋動詞のing形」という正しい形になっていることを確認する。\n\n【よくあるまちがい】\n現在完了進行形（has been waiting）を使ってしまうミス。基準点が過去（he arrived）なので、過去完了進行形を使う必要がある。\n\n【ここが絶対】\n過去完了進行形（had been＋-ing）＝「過去のある時点までずっと〜し続けていた」という形をセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_070',
@@ -945,11 +922,8 @@ She had been waiting for three hours. が正解。`,
 ( ) frankly, the movie was not very interesting.`,
     answer: 'Speaking',
     hint: '慣用的分詞構文（独立分詞構文）。Speaking frankly = Frankly speaking。',
-    explanation: `分詞構文の中には、主節の主語と意味上の主語が一致しない慣用表現がある（独立分詞構文・懸垂分詞）。
-Speaking frankly（率直に言えば）はその代表例で、Frankly speaking とも言う。
-他にも Strictly speaking（厳密に言えば）、Generally speaking（一般的に言えば）、Judging from（〜から判断すると）などが重要。
-これらは慣用表現として固定化されており、主語の一致を問わない。
-Speaking frankly, the movie was not very interesting. が正解。`,
+    explanation:
+      '【何を聞かれているか】\n「率直に言えば、その映画はあまり面白くなかった。」という日本語に合うように、慣用的な分詞構文を完成させる問題。\n\n【なぜSpeakingという分詞構文を使うのか】\n"Speaking frankly"（率直に言えば）は、主節の主語と分詞の意味上の主語が一致しない、独立分詞構文（慣用表現）の代表例で、"Frankly speaking"とも言う。\n\n【ポイント1】慣用的な分詞構文を確認する\nSpeaking frankly（率直に言えば）、Strictly speaking（厳密に言えば）、Generally speaking（一般的に言えば）などは、決まり文句として覚える。\n\n【ポイント2】主語の一致を気にしない理由を確認する\nこれらの表現は慣用表現として固定化されているため、主節の主語と分詞の意味上の主語が一致しなくても使うことができる。\n\n【ポイント3】文全体の意味を確認する\n"Speaking frankly, the movie was not very interesting."＝「率直に言えば、その映画はあまり面白くなかった」。\n\n【答え】\nSpeaking\n\n【確かめ】\n"Speaking frankly"が文頭に置かれ、コンマの後ろに主節が続いていることを確認する。\n\n【よくあるまちがい】\n分詞構文の主語が主節の主語と一致しないことを気にして、別の表現に変えてしまうミス。慣用的な分詞構文は主語の一致を問わない例外。\n\n【ここが絶対】\nSpeaking frankly（＝Frankly speaking）、Strictly speaking、Generally speakingなどの慣用的な分詞構文を、決まり文句としてセットで覚える。',
   },
 
   // ─── 071–077: 語彙・熟語 basic ─────────────────────────────────────────────
@@ -1042,11 +1016,8 @@ be late for 〜（〜に遅刻する）との違いも確認しておこう。`,
 I like ( ) ( ) music.`,
     answer: 'listening to',
     hint: 'listen to 〜 で「〜を聴く」。like の後ろは動名詞（-ing）。',
-    explanation: `listen to 〜 は「〜を聴く」という熟語で、to を忘れないように注意。
-hear（聞こえる）は自然に耳に入ってくる場合、listen to（聴く）は意識的に聴く場合に使う。
-like の後ろには動名詞（-ing）または不定詞（to 不定詞）が来る。
-I like listening to music. が正解。
-watch（テレビを見る）、look at（〜を見る）なども前置詞とセットで覚えよう。`,
+    explanation:
+      '【何を聞かれているか】\n「私は音楽を聴くのが好きだ。」という日本語に合うように、動名詞を使った文を完成させる問題。\n\n【なぜlisten toと動名詞を組み合わせるのか】\n「音楽を聴く」はlisten to musicという熟語で表し、likeの後ろで「〜すること」という動作を表したいときは、動名詞（-ing形）にして続ける。\n\n【ポイント1】listen toの意味を確認する\nlisten to〜＝「〜を聴く」という熟語。toを忘れないことが重要。\n\n【ポイント2】likeの後ろの形を確認する\nlikeの後ろには動名詞（-ing）または不定詞（to不定詞）が来る。\n\n【ポイント3】文を組み立てる\n"I like listening to music."＝「私は音楽を聴くのが好きだ」。\n\n【答え】\nlistening to\n\n【確かめ】\n"listening"の後ろに"to"が続いていて、"listen to music"という熟語が正しく動名詞化されているか確認する。\n\n【よくあるまちがい】\ntoを忘れて"listening music"としてしまうミス。listen toは1つのまとまりの熟語なので、動名詞にしてもtoは残す。\n\n【ここが絶対】\nlisten to〜（〜を聴く）という熟語を、likeの後ろで動名詞listening toの形にしてセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_076',
@@ -1120,11 +1091,8 @@ advantage（利点）の反意語は disadvantage（欠点）。`,
 ( ) ( ) the bad weather, they continued the game.`,
     answer: 'In spite of',
     hint: 'in spite of 〜 で「〜にもかかわらず」。despite と同義。',
-    explanation: `in spite of 〜 は「〜にもかかわらず」という逆接の意味を表す前置詞句。
-despite 〜 も全く同じ意味で使える（despite the bad weather）。
-後ろに節（主語＋動詞）が来る場合は although / though / even though を使う。
-in spite of / despite の後ろには名詞・名詞句・動名詞が来ることに注意。
-In spite of the bad weather, they continued the game. が正解。`,
+    explanation:
+      '【何を聞かれているか】\n「悪天候にもかかわらず、彼らは試合を続けた。」という日本語に合うように、逆接を表す前置詞句を完成させる問題。\n\n【なぜin spite ofを使うのか】\n「〜にもかかわらず」という逆接の意味を、名詞（the bad weather）の前に置いて表すときは、in spite of（またはdespite）という前置詞句を使う。\n\n【ポイント1】in spite ofの意味を確認する\nin spite of〜＝「〜にもかかわらず」。despiteも同じ意味で使える。\n\n【ポイント2】後ろに続く形を確認する\nin spite of／despiteの後ろには名詞・名詞句・動名詞が続く（節は続けない）。\n\n【ポイント3】節を続けたい場合の語を確認する\n「主語＋動詞」の節を続けたいときは、although／though／even thoughを使う。\n\n【答え】\nIn spite of\n\n【確かめ】\n"In spite of"の後ろに"the bad weather"という名詞句が続いていることを確認する。\n\n【よくあるまちがい】\nin spite ofの後ろに「主語＋動詞」の節を続けてしまうミス。節を続けたいときはalthough等を使う。\n\n【ここが絶対】\nin spite of／despite（＋名詞）＝although／though（＋節）という、同じ意味を表す表現の使い分けをセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_080',
@@ -1368,11 +1336,8 @@ say は say to + 人 の形を使う（She said to me that...）との違いを�
 日本語訳：あなたはどのくらいの頻度でジムに行きますか？`,
     answer: 'How often do you go to the gym?',
     hint: '頻度を尋ねる疑問文。How often + do 疑問文の語順。',
-    explanation: `頻度を尋ねる疑問詞は How often（どのくらいの頻度で）を使う。
-疑問詞が文頭に来て、その後は Do疑問文の語順（do / does + 主語 + 動詞の原形）になる。
-How often do you go to the gym? が正解。
-答え方：Every day. / Twice a week. / Once a month. など。
-How long（どのくらいの時間）、How far（どのくらいの距離）との使い分けも重要。`,
+    explanation:
+      '【何を聞かれているか】\n語句を並べ替えて、「あなたはどのくらいの頻度でジムに行きますか？」という英文を完成させる問題。\n\n【なぜHow oftenを使うのか】\n「どのくらいの頻度で」という頻度をたずねるときは、疑問詞How oftenを使う。\n\n【ポイント1】頻度をたずねる疑問詞を確認する\nHow often＝「どのくらいの頻度で」。\n\n【ポイント2】疑問文の語順を確認する\nHow oftenの後ろは、Do疑問文の語順（do/does＋主語＋動詞の原形）が続く。\n\n【ポイント3】答え方を確認する\n"Every day."（毎日）、"Twice a week."（週に2回）のように頻度で答える。\n\n【答え】\nHow often do you go to the gym?\n\n【確かめ】\n"How often"の後ろが"do you go"という疑問文の語順になっているか確認する。\n\n【よくあるまちがい】\nHow oftenとHow long（どのくらいの時間）、How far（どのくらいの距離）を混同してしまうミス。それぞれたずねる内容が異なる。\n\n【ここが絶対】\nHow often（頻度）、How long（時間・長さ）、How far（距離）という疑問詞の使い分けをセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_093',
@@ -1387,11 +1352,8 @@ How long（どのくらいの時間）、How far（どのくらいの距離）�
 日本語訳：生徒たちにとって毎日英語を勉強することは大切だ。`,
     answer: 'It is important for students to study English every day.',
     hint: 'It is ... for 人 to do の構文（形式主語）。',
-    explanation: `It is + 形容詞 + for 人 + to do 〜 は「人が〜することは（形容詞）だ」という形式主語構文。
-It は形式主語で、真の主語は to study English every day という不定詞句。
-for students は不定詞の意味上の主語を示す。
-It is important for students to study English every day. が正解。
-It is easy for me to speak Japanese.（私が日本語を話すことは簡単だ）などの文も同じ構造。`,
+    explanation:
+      '【何を聞かれているか】\n語句を並べ替えて、「生徒たちにとって毎日英語を勉強することは大切だ。」という英文を完成させる問題。\n\n【なぜIt is〜for〜to…の形を使うのか】\n「（人）が〜することは…だ」という内容を表すときは、形式主語のItを使い、"It is＋形容詞＋for＋人＋to＋動詞の原形"という構文を使う。\n\n【ポイント1】形式主語構文の形を確認する\nIt is＋形容詞（important）＋for＋人（students）＋to不定詞（to study English every day）。\n\n【ポイント2】本当の主語を確認する\n"to study English every day"（毎日英語を勉強すること）が、この文の本当の主語。\n\n【ポイント3】forの役割を確認する\n"for students"は、不定詞（to study）の意味上の主語（誰が勉強するのか）を示す。\n\n【答え】\nIt is important for students to study English every day.\n\n【確かめ】\n"for students"の後ろに"to study"が続いていて、「生徒が勉強すること」という意味になっているか確認する。\n\n【よくあるまちがい】\nforを忘れて"It is important students to study"としてしまうミス。不定詞の意味上の主語を示すforが必要。\n\n【ここが絶対】\n"It is＋形容詞＋for＋人＋to＋動詞の原形"＝「（人）が〜することは…だ」という形式主語構文をセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_094',
@@ -1501,11 +1463,8 @@ made は不要（noise は make ではなく be動詞と組み合わせる）。
 日本語訳：もっと時間があればいいのに。`,
     answer: 'I wish I had more time.',
     hint: 'I wish + 仮定法過去。現在の事実に反する願望を表す。',
-    explanation: `I wish + 主語 + 過去形 は「〜ならいいのに」という現在の事実に反する願望を表す表現。
-had は have の過去形で、仮定法過去として使われる。
-I wish I had more time. が正解。
-If only I had more time. と同じ意味を表す。
-過去に対する後悔なら I wish I had + 過去分詞（I wish I had studied harder.= もっと勉強しておけばよかった）。`,
+    explanation:
+      '【何を聞かれているか】\n語句を並べ替えて、「もっと時間があればいいのに。」という英文を完成させる問題。\n\n【なぜI wish＋仮定法過去を使うのか】\n「（今）〜ならいいのに」という、現在の事実に反する願望を表すときは、"I wish＋主語＋過去形"という仮定法過去の形を使う。\n\n【ポイント1】I wishの公式を確認する\nI wish＋主語＋動詞の過去形〜＝「〜ならいいのに」。\n\n【ポイント2】hadの役割を確認する\nhaveの過去形hadを使って、現在の事実に反する願望（実際は時間が十分にない）を表す。\n\n【ポイント3】If onlyとの言い換えを確認する\n"I wish I had more time."は"If only I had more time."と同じ意味を表す。\n\n【答え】\nI wish I had more time.\n\n【確かめ】\n"I wish"の後ろに、動詞の過去形（had）を使った文が続いていることを確認する。\n\n【よくあるまちがい】\nI wishの後ろを現在形（have）のままにしてしまうミス。現在の事実に反する願望には過去形を使う。\n\n【ここが絶対】\n"I wish＋主語＋過去形"＝「〜ならいいのに」という現在の願望を表す仮定法過去の形をセットで覚える。過去の後悔には"I wish＋主語＋had＋過去分詞"を使うこともあわせて覚える。',
   },
   {
     id: 'koko_eigo_ex01_100',
@@ -1541,11 +1500,8 @@ cherry blossoms は「桜の花」という意味で、日本を表す重要語�
 日本語訳：新しい言語を習得するには、私たちが思っていたよりも時間がかかる。`,
     answer: 'It takes longer than we expected to learn a new language.',
     hint: 'It takes 時間 to do 構文。longer than we expected で比較表現。',
-    explanation: `It takes + 時間 / 形容詞 + to do 〜 は「〜するのに（時間・形容詞）かかる」という構文。
-比較表現 longer than we expected（私たちが予想したよりも長く）を伴う。
-It takes longer than we expected to learn a new language. が正解。
-than 以下は節（we expected）で、expected の後ろに it would take が省略されている。
-to learn a new language が真の主語で It が形式主語の役割を担っている。`,
+    explanation:
+      '【何を聞かれているか】\n語句を並べ替えて、「新しい言語を習得するには、私たちが思っていたよりも時間がかかる。」という英文を完成させる問題。\n\n【なぜIt takes〜to…の構文を使うのか】\n「〜するのに（時間が）かかる」という所要時間を表すときは、形式主語Itを使った"It takes＋時間＋to＋動詞の原形"という構文を使う。\n\n【ポイント1】"It takes〜to do"の公式を確認する\nIt（形式主語）＋takes＋時間（またはその比較表現）＋to＋動詞の原形（真の主語）。\n\n【ポイント2】比較表現を確認する\n"longer than we expected"（私たちが予想したよりも長く）が、時間の部分を比較級で表している。\n\n【ポイント3】文を組み立てる\n"It takes longer than we expected to learn a new language."＝「新しい言語を習得するには、予想より長くかかる」。\n\n【答え】\nIt takes longer than we expected to learn a new language.\n\n【確かめ】\n"It takes longer than we expected"の後ろに、"to learn a new language"という本当の主語（不定詞句）が続いているか確認する。\n\n【よくあるまちがい】\n"to learn a new language"の位置を文の前半に置いてしまうミス。形式主語Itを使う構文では、真の主語（to不定詞）は文の後ろに置く。\n\n【ここが絶対】\n"It takes＋時間＋to do"＝「〜するのに（時間が）かかる」という構文に、比較表現（longer than〜）を組み合わせる形をセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_102',
@@ -1674,11 +1630,8 @@ deny 〜ing（〜を否定する）、avoid 〜ing（〜を避ける）なども
 日本語訳：仕事を早く終わらせれば終わらせるほど良い。`,
     answer: 'The sooner you finish the work, the better.',
     hint: 'the + 比較級 〜, the + 比較級 ... で「〜すればするほど…だ」。',
-    explanation: `the + 比較級 + 主語 + 動詞, the + 比較級 + 主語 + 動詞 は「〜すればするほど…だ」という比例表現。
-The sooner you finish the work, the better. が正解。
-後半の the better は the better it will be（状況がよりよくなる）の省略形。
-The more you study, the smarter you become.（勉強すればするほど賢くなる）などの例も参照。
-the + 比較級 の後は「主語 + 動詞」の語順になることに注意。`,
+    explanation:
+      '【何を聞かれているか】\n語句を並べ替えて、「仕事を早く終わらせれば終わらせるほど良い。」という英文を完成させる問題。\n\n【なぜ「the＋比較級, the＋比較級」を使うのか】\n「〜すればするほど…だ」という比例関係を表すときは、前半・後半とも"the＋比較級"で始まる決まった構文を使う。\n\n【ポイント1】「the＋比較級, the＋比較級」の公式を確認する\nthe＋比較級＋主語＋動詞, the＋比較級（＋主語＋動詞）。\n\n【ポイント2】soonの比較級を確認する\nsoon（早く）の比較級はsooner。\n\n【ポイント3】省略された部分を確認する\n"the better"は"the better it will be"（状況がより良くなる）の省略形。\n\n【答え】\nThe sooner you finish the work, the better.\n\n【確かめ】\n前半・後半ともに"the＋比較級"で始まっていることを確認する。\n\n【よくあるまちがい】\ntheを忘れて"Sooner you finish the work, better."としてしまうミス。「the+比較級, the+比較級」の構文では、両方にtheが必要。\n\n【ここが絶対】\n「the＋比較級, the＋比較級」＝「〜すればするほど…だ」という比例表現をセットで覚える。',
   },
   {
     id: 'koko_eigo_ex01_109',
@@ -1728,7 +1681,8 @@ Little did he realize how few people would read his book. が正解。
     difficulty: 'standard',
     question: '次の英文を読んで、質問に答えなさい。\n\nMany young people today spend a lot of time on social media. They share photos, videos, and opinions with their friends online. While social media can help people stay connected, it can also cause problems. Some people feel anxious when they compare their lives to others\' perfect-looking posts. Experts suggest taking regular breaks from social media to protect your mental health.\n\n質問：この英文の主題として最も適切なものを日本語で答えなさい。',
     answer: 'ソーシャルメディアの利点と問題点、そして精神的健康への影響。',
-    explanation: '英文全体はソーシャルメディアの便利さと、比較による不安・精神的健康への悪影響という二面を論じており、最後に専門家の提言で締めくくられている。',
+    explanation:
+      '【何を聞かれているか】\nソーシャルメディアについての英文を読んで、主題として最も適切なものを日本語で答える問題。\n\n【なぜ「利点」と「問題点」の両方を含める必要があるのか】\n本文は「ソーシャルメディアがつながりを保つのに役立つ（利点）」と「他人の完璧に見える投稿と比較して不安になる（問題点）」という2つの側面を紹介し、最後に専門家の提言で締めくくられているため、主題にはこの両面を含める必要がある。\n\n【ポイント1】前半の利点を確認する\n"social media can help people stay connected"（人々がつながりを保つのに役立つ）。\n\n【ポイント2】後半の問題点を確認する\n"Some people feel anxious when they compare their lives to others\' perfect-looking posts."（他人の完璧に見える投稿と比較して不安を感じる）。\n\n【ポイント3】最後の提言を確認する\n"Experts suggest taking regular breaks from social media to protect your mental health."（専門家は定期的に休むことを提案）。\n\n【答え】\nソーシャルメディアの利点と問題点、そして精神的健康への影響。\n\n【確かめ】\n答えが本文の「利点」と「問題点」の両方をカバーしているか確認する。\n\n【よくあるまちがい】\n利点か問題点のどちらか一方だけを主題として答えてしまうミス。本文は両面を論じている。\n\n【ここが絶対】\nテーマ問題は、本文が扱っている複数の側面（利点・問題点など）をすべてカバーする形で答える。',
   },
   {
     id: 'koko_eigo_ex01_112',
@@ -1738,7 +1692,8 @@ Little did he realize how few people would read his book. が正解。
     difficulty: 'standard',
     question: '次の英文を読んで、質問に答えなさい。\n\nThe Amazon rainforest is often called the "lungs of the Earth." It produces about 20% of the world\'s oxygen and is home to millions of plant and animal species. However, large areas of the forest are being cut down every year for farming and logging. Scientists warn that if deforestation continues at this rate, the rainforest could disappear within a century.\n\n質問：アマゾンの熱帯雨林が「地球の肺」と呼ばれる理由を日本語で説明しなさい。',
     answer: '世界の酸素の約20%を生産しているから。',
-    explanation: '"It produces about 20% of the world\'s oxygen" という一文が「肺」の比喩の根拠である。',
+    explanation:
+      '【何を聞かれているか】\nアマゾンの熱帯雨林についての英文を読んで、「地球の肺」と呼ばれる理由を日本語で説明する問題。\n\n【なぜ酸素生産の割合に注目するのか】\n「地球の肺」という比喩は、人間の肺が呼吸によって酸素を取り込む役割と同じように、アマゾンが地球規模で酸素を生み出す役割を果たしていることに基づいている。\n\n【ポイント1】該当する文を確認する\n"It produces about 20% of the world\'s oxygen"（世界の酸素の約20%を生産している）。\n\n【ポイント2】比喩の意味を確認する\n肺が呼吸によって酸素を取り込むように、アマゾンは光合成によって大量の酸素を生み出しているため、「地球の肺」と呼ばれる。\n\n【ポイント3】他の情報と区別する\n"home to millions of plant and animal species"（多くの動植物の生息地）は別の特徴であり、「肺」という比喩の直接の理由ではない。\n\n【答え】\n世界の酸素の約20%を生産しているから。\n\n【確かめ】\n答えが「20%の酸素生産」という具体的な数字を含んでいるか確認する。\n\n【よくあるまちがい】\n「多くの動植物が生息しているから」のように、別の特徴を理由として答えてしまうミス。「肺」の比喩は酸素生産に基づいている。\n\n【ここが絶対】\n比喩表現の理由を問われたら、その比喩と直接対応する具体的な事実（ここでは酸素生産量）を本文から探す。',
   },
   {
     id: 'koko_eigo_ex01_113',
@@ -1759,7 +1714,8 @@ Little did he realize how few people would read his book. が正解。
     difficulty: 'standard',
     question: '次の英文を読んで、質問に答えなさい。\n\nJapan is famous for its four distinct seasons. Spring brings beautiful cherry blossoms, while summer is hot and humid with many festivals. Autumn is known for colorful leaves, and winter brings snow to many parts of the country. Many tourists visit Japan specifically to experience these seasonal changes.\n\n質問：本文の内容と一致するものを選び、記号で答えなさい。\nア．日本には季節が２つしかない。\nイ．多くの観光客が日本の季節の変化を楽しみに訪れる。\nウ．夏は涼しくて乾燥している。',
     answer: 'イ',
-    explanation: '"Many tourists visit Japan specifically to experience these seasonal changes." がイの根拠。アは「four distinct seasons」、ウは「hot and humid」と矛盾する。',
+    explanation:
+      '【何を聞かれているか】\n日本の四季についての英文を読んで、内容と一致する選択肢を選ぶ問題。\n\n【なぜ選択肢を1つずつ本文と照合するのか】\n内容一致問題では、選択肢の中に本文の一部だけを取り出したものや、本文と正反対の内容が混じっていることが多いため、それぞれの選択肢を本文と正確に照合する必要がある。\n\n【ポイント1】アを確認する\n本文には"four distinct seasons"（4つのはっきりした季節）とあり、「季節が2つしかない」というアは矛盾する。\n\n【ポイント2】イを確認する\n"Many tourists visit Japan specifically to experience these seasonal changes."（多くの観光客が季節の変化を体験するために訪れる）とあり、イと一致する。\n\n【ポイント3】ウを確認する\n本文には"summer is hot and humid"（夏は暑くて湿度が高い）とあり、「夏は涼しくて乾燥している」というウは矛盾する。\n\n【答え】\nイ\n\n【確かめ】\n選んだ選択肢イが、本文の"Many tourists visit Japan specifically to experience these seasonal changes."と一致しているか確認する。\n\n【よくあるまちがい】\n本文の一部の単語（seasonsなど）だけを見て、内容を確認せずに選んでしまうミス。\n\n【ここが絶対】\n内容一致問題は、選択肢を1つずつ本文と照合し、矛盾がないかを確認してから答える。',
   },
   {
     id: 'koko_eigo_ex01_115',
@@ -1769,7 +1725,8 @@ Little did he realize how few people would read his book. が正解。
     difficulty: 'standard',
     question: '次の英文を読んで、質問に答えなさい。\n\nPlastic pollution is a serious global problem. Every year, millions of tons of plastic waste enter the ocean, harming sea animals and polluting the water. Sea turtles often mistake plastic bags for jellyfish and eat them, which can be fatal. To reduce plastic pollution, many countries have introduced bans on single-use plastics such as straws and shopping bags.\n\n質問：ウミガメが危険にさらされる原因を日本語で説明しなさい。',
     answer: 'プラスチック袋をクラゲと間違えて食べてしまうから。',
-    explanation: '"Sea turtles often mistake plastic bags for jellyfish and eat them, which can be fatal." が根拠。mistake A for B「AをBと間違える」に注意。',
+    explanation:
+      '【何を聞かれているか】\nプラスチック汚染についての英文を読んで、ウミガメが危険にさらされる原因を日本語で説明する問題。\n\n【なぜmistake A for Bという表現に注目するのか】\n"Sea turtles often mistake plastic bags for jellyfish and eat them"という文の"mistake A for B"（AをBと間違える）という熟語が、ウミガメが危険にさらされる直接の原因を説明している。\n\n【ポイント1】該当する文を確認する\n"Sea turtles often mistake plastic bags for jellyfish and eat them, which can be fatal."（ウミガメはプラスチック袋をクラゲと間違えて食べてしまい、それが命取りになることがある）。\n\n【ポイント2】mistake A for Bの意味を確認する\nmistake A for B＝「AをBと間違える」。ここではA＝plastic bags、B＝jellyfish。\n\n【ポイント3】fatalの意味を確認する\nfatal＝「致命的な」。誤って食べることが命に関わるとわかる。\n\n【答え】\nプラスチック袋をクラゲと間違えて食べてしまうから。\n\n【確かめ】\n答えが「プラスチック袋」と「クラゲ」の両方を含み、「間違えて食べる」という内容になっているか確認する。\n\n【よくあるまちがい】\nmistake A for Bの語順を取り違え、「クラゲをプラスチック袋と間違える」のように逆にしてしまうミス。\n\n【ここが絶対】\n"mistake A for B"＝「AをBと間違える」という熟語の語順（A→間違えられる対象、B→間違われる相手）を正確に覚える。',
   },
   {
     id: 'koko_eigo_ex01_116',
@@ -1790,7 +1747,8 @@ Little did he realize how few people would read his book. が正解。
     difficulty: 'standard',
     question: '次の英文を読んで、質問に答えなさい。\n\nVolunteer work can be a deeply rewarding experience. When you help others without expecting anything in return, you often feel a strong sense of purpose and satisfaction. Many students who volunteer regularly report that it helps them develop empathy and communication skills. These qualities are valuable not only in personal life but also in future careers.\n\n質問：本文によると、ボランティア活動が学生にもたらす効果を２つ、日本語で書きなさい。',
     answer: '共感力（empathy）とコミュニケーション能力の向上。',
-    explanation: '"it helps them develop empathy and communication skills" から２つの効果を抽出する。',
+    explanation:
+      '【何を聞かれているか】\nボランティア活動についての英文を読んで、学生にもたらす効果を2つ、日本語で答える問題。\n\n【なぜ2つの効果をセットで抽出するのか】\n本文の"it helps them develop empathy and communication skills"という文には、andで2つの効果（共感力とコミュニケーション能力）が並んでおり、設問の「2つ」という指示に対応してこの2点を答える必要がある。\n\n【ポイント1】該当する文を確認する\n"Many students who volunteer regularly report that it helps them develop empathy and communication skills."（定期的にボランティアをする学生の多くが、共感力とコミュニケーション能力を育てるのに役立つと報告している）。\n\n【ポイント2】2つの効果を確認する\nempathy（共感力）とcommunication skills（コミュニケーション能力）の2点。\n\n【ポイント3】これらの資質の意義を確認する\n"valuable not only in personal life but also in future careers"（私生活だけでなく将来のキャリアにも役立つ）。\n\n【答え】\n共感力（empathy）とコミュニケーション能力の向上。\n\n【確かめ】\n答えが2つの効果（共感力とコミュニケーション能力）の両方を含んでいるか確認する。\n\n【よくあるまちがい】\n1つの効果だけを答えて終わらせてしまうミス。設問で「2つ」と指示されている場合は、両方を明示する。\n\n【ここが絶対】\nandで2つの内容が並んでいる文は、設問で「2つ答えよ」と言われたときのヒントになりやすい。両方を漏らさず答える。',
   },
   {
     id: 'koko_eigo_ex01_118',
@@ -1800,7 +1758,8 @@ Little did he realize how few people would read his book. が正解。
     difficulty: 'standard',
     question: '次の英文を読んで、質問に答えなさい。\n\nArtificial intelligence, or AI, is changing the way we live and work. AI systems can now write essays, create artwork, and even diagnose diseases. While these abilities offer great convenience, they also raise concerns. Some people worry that AI will take over many jobs currently done by humans, leading to unemployment. Others believe that AI will create new kinds of jobs we cannot yet imagine.\n\n質問：AIに対して人々が抱く懸念を日本語で答えなさい。',
     answer: 'AIが現在人間が行っている多くの仕事を奪い、失業につながるという懸念。',
-    explanation: '"Some people worry that AI will take over many jobs currently done by humans, leading to unemployment." が根拠。',
+    explanation:
+      '【何を聞かれているか】\nAI（人工知能）についての英文を読んで、人々が抱く懸念を日本語で答える問題。\n\n【なぜ"worry that〜"の内容に注目するのか】\n"Some people worry that〜"という表現の直後には、人々が心配している具体的な内容が続くため、この部分を正確に抜き出すことが設問の答えになる。\n\n【ポイント1】該当する文を確認する\n"Some people worry that AI will take over many jobs currently done by humans, leading to unemployment."（AIが現在人間が行っている多くの仕事を奪い、失業につながると心配する人もいる）。\n\n【ポイント2】懸念の内容を確認する\nAIが人間の仕事を奪うこと、それが失業につながること、の2点がセットで述べられている。\n\n【ポイント3】反対意見と区別する\n"Others believe that AI will create new kinds of jobs"（新しい種類の仕事を生み出すと考える人もいる）は反対の意見であり、懸念の内容ではない。\n\n【答え】\nAIが現在人間が行っている多くの仕事を奪い、失業につながるという懸念。\n\n【確かめ】\n答えが「仕事を奪う」ことと「失業につながる」ことの両方を含んでいるか確認する。\n\n【よくあるまちがい】\n反対意見（新しい仕事を生み出す）を懸念の内容と混同してしまうミス。\n\n【ここが絶対】\n"worry that〜"の直後の内容が、心配・懸念の具体的な内容を表す。反対の意見（Others believe〜）と区別して読む。',
   },
   {
     id: 'koko_eigo_ex01_119',
@@ -1810,7 +1769,8 @@ Little did he realize how few people would read his book. が正解。
     difficulty: 'advanced',
     question: '次の英文を読んで、質問に答えなさい。\n\nThe concept of "sustainable development" means meeting the needs of the present without compromising the ability of future generations to meet their own needs. This idea, introduced in a landmark 1987 UN report, has become central to global policy discussions. It recognizes that economic growth, social equity, and environmental protection must be pursued simultaneously — not as competing priorities, but as interdependent goals. Critics argue, however, that infinite growth on a finite planet is a contradiction that sustainability frameworks have yet to resolve.\n\n質問：「持続可能な発展」の定義を、本文の内容に基づいて日本語で説明しなさい。',
     answer: '現在の世代のニーズを満たしながら、将来の世代が自分たちのニーズを満たす能力を損なわない発展のこと。',
-    explanation: 'Opening sentence が定義。compromise「～を損なう」、generation「世代」がキーワード。',
+    explanation:
+      '【何を聞かれているか】\n「持続可能な発展」についての英文を読んで、その定義を本文の内容に基づいて日本語で説明する問題。\n\n【なぜ最初の文が定義になるのか】\n専門用語を説明する英文では、最初の文にその用語の定義がそのまま書かれていることが多く、"The concept of〜means…"という表現がその合図になっている。\n\n【ポイント1】該当する文を確認する\n"The concept of \'sustainable development\' means meeting the needs of the present without compromising the ability of future generations to meet their own needs."（現在の世代のニーズを満たしながら、将来の世代が自分たちのニーズを満たす能力を損なわない発展）。\n\n【ポイント2】キーワードを確認する\ncompromise（〜を損なう）、generation（世代）が定義の核となる語。\n\n【ポイント3】この定義が実在の文書に基づくことを確認する\n本文にあるように、1987年の国連報告書で示された定義であり、経済成長・社会的公平・環境保護を同時に追求すべきという考え方につながっている。\n\n【答え】\n現在の世代のニーズを満たしながら、将来の世代が自分たちのニーズを満たす能力を損なわない発展のこと。\n\n【確かめ】\n答えが「現在の世代」と「将来の世代」の両方の視点を含んでいるか確認する。\n\n【よくあるまちがい】\n定義の一部（現在のニーズを満たすことだけ）しか答えず、「将来の世代を損なわない」という重要な条件を落としてしまうミス。\n\n【ここが絶対】\n専門用語の定義を問う問題は、"means"や"is defined as"のような語の直後の文をそのまま抜き出して答える。',
   },
   {
     id: 'koko_eigo_ex01_120',
@@ -1821,7 +1781,8 @@ Little did he realize how few people would read his book. が正解。
     question: '次の英文を読んで、空所（　）に入る最も適切な語句を答えなさい。\n\nScientists have long debated whether language shapes thought or thought shapes language. The Sapir-Whorf hypothesis suggests that the language you speak influences how you perceive the world. For example, languages that have many words for snow — such as certain Indigenous Arctic languages — may allow their speakers to (　) subtle differences in snow conditions that speakers of other languages might overlook.\n\n質問：空所（　）に入る最も適切な語句を英語で答えなさい。',
     answer: 'perceive / notice / distinguish / recognize',
     hint: '「微妙な違いを〈知覚・識別〉する」という意味の動詞を考えましょう。',
-    explanation: '文脈は「他言語話者が見落とすかもしれない微妙な違いを知覚できる」こと。perceive / notice / distinguish / recognize のいずれも正解として認められる。',
+    explanation:
+      '【何を聞かれているか】\n言語と思考の関係についての英文を読んで、空所に入る最も適切な語句を英語で答える問題。\n\n【なぜperceive/notice/distinguish/recognizeが正解になるのか】\n文脈は「他の言語の話者が見落とすかもしれない、雪の状態の微妙な違いを（　）できる」という内容なので、「気づく・識別する」という意味を持つ動詞が入る。\n\n【ポイント1】文脈を確認する\n「雪を表す語をたくさん持つ言語の話者は、他の言語話者が見落とすかもしれない、雪の状態の微妙な違いを（　）できるかもしれない」という内容。\n\n【ポイント2】候補となる動詞を確認する\nperceive（知覚する）、notice（気づく）、distinguish（識別する）、recognize（認識する）はいずれも「微妙な違いに気づく」という意味を表せる。\n\n【ポイント3】overlookとの対比を確認する\n文末の"overlook"（見落とす）と対照的な意味を持つ動詞が空所に入ると考えると、選びやすい。\n\n【答え】\nperceive / notice / distinguish / recognize\n\n【確かめ】\n選んだ動詞が「微妙な違いに気づく・識別する」という意味で、文脈に合っているか確認する。\n\n【よくあるまちがい】\noverlook（見落とす）と似た意味の動詞を選んでしまうミス。空所にはoverlookと対照的な「気づく」系の動詞が入る。\n\n【ここが絶対】\n空所補充問題は、対比されている語（ここではoverlook）に注目し、それと反対の意味を持つ語を候補として考える。',
   },
   {
     id: 'koko_eigo_ex01_121',
