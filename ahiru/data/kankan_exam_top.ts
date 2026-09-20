@@ -7627,7 +7627,8 @@ export const kankanExamTop: Question[] = [
     ],
     answer: 'She has a small red bag.',
     hint: '英語では形容詞の並べる順番にルールがあります。',
-    explanation: '英語で複数の形容詞を並べるときには、一般的に「大きさ→色」のような順番のルールがあります。smallは大きさを表す形容詞、redは色を表す形容詞で、大きさを表す形容詞は色を表す形容詞よりも先に置かれます。またa（冠詞）は必ず形容詞よりも前に置きます。したがって正しい語順は「a small red bag」となり、正解はShe has a small red bag.です。形容詞が2つ以上並ぶときの順番は難しく感じますが、代表的な組み合わせを例文ごと覚えておくとよいでしょう。',
+    explanation:
+      '【何を聞かれているか】\n複数の形容詞を含む文の中で、正しい語順のものを選ぶ問題。\n\n【なぜ「大きさ→色」の順になるのか】\n英語では複数の形容詞を並べるとき、意味の種類ごとに決まった順番があり、大きさを表す形容詞（small）は色を表す形容詞（red）よりも先に置くという決まりがある。\n\n【ポイント1】冠詞の位置を確認する\na（冠詞）は必ず形容詞よりも前に置く。\n\n【ポイント2】形容詞の順番を確認する\n大きさ（small）→色（red）の順に並べる。\n\n【ポイント3】正しい語順を確認する\n"a small red bag"＝「冠詞→大きさ→色→名詞」の順。\n\n【答え】\nShe has a small red bag.\n\n【確かめ】\n"small"（大きさ）が"red"（色）より先に置かれているか確認する。\n\n【よくあるまちがい】\n日本語の語順につられて"red small bag"のように順番を逆にしてしまうミス。\n\n【ここが絶対】\n形容詞が2つ以上並ぶときの順番（冠詞→大きさ→色→名詞）を、代表的な例文ごと覚えておく。',
     pitfall: '日本語の語順につられてred small bagのように順番を逆にしてしまう間違いに注意しましょう。',
     memoryTip: '冠詞→大きさ→色→名詞（a small red bag）の順番を例文ごと覚えましょう。',
   },
@@ -7887,7 +7888,8 @@ export const kankanExamTop: Question[] = [
     ],
     answer: 'where',
     hint: 'Bが場所を答えていることに注目しよう。',
-    explanation: 'Bは「すぐそこの角にある」と場所を答えています。場所をたずねる疑問詞はwhereです。道をたずねる場面での定番表現として、Excuse me, where is ~?(すみません、~はどこですか)はそのまま覚えておくと便利です。',
+    explanation:
+      '【何を聞かれているか】\n道をたずねる会話の空欄に入る、正しい疑問詞を選ぶ問題。\n\n【なぜwhereを使うのか】\nBが"It\'s just around the corner."（すぐそこの角にあります）と場所を答えていることから、場所をたずねる疑問詞whereが入るとわかる。\n\n【ポイント1】Bの返答を確認する\n場所を答える返答（just around the corner）から、Aは場所をたずねたと判断できる。\n\n【ポイント2】whereの意味を確認する\nwhere＝「どこ」という場所をたずねる疑問詞。\n\n【ポイント3】道案内の定番表現を確認する\n"Excuse me, where is〜?"（すみません、〜はどこですか）は道をたずねる場面の定番表現。\n\n【答え】\nwhere\n\n【確かめ】\n"where is the nearest station?"が「最寄りの駅はどこですか」という自然な質問になっているか確認する。\n\n【よくあるまちがい】\nwhatを選んで「何が最寄りの駅ですか」という不自然な意味にしてしまうミス。\n\n【ここが絶対】\n道案内の会話では"Excuse me, where is〜?"という決まった表現をセットで覚えておく。',
     pitfall: 'whatを選んで「何が最寄りの駅ですか」という不自然な意味にしてしまうミスに注意。',
     memoryTip: '道案内の会話では最初にExcuse me, where is ~?が来ると覚えておこう。',
   },
@@ -8107,7 +8109,8 @@ export const kankanExamTop: Question[] = [
     ],
     answer: 'where',
     hint: '先行詞the restaurantは「場所」を表しているね。後ろの文we ate dinnerが完全な文であることにも注目。',
-    explanation: 'The restaurant(そのレストラン)という場所を説明し、後ろにwe ate dinner(私たちは夕食を食べた)という主語・動詞・目的語がそろった完全な文が続いています。このように場所を表す先行詞のあとに完全な文が続くときは、関係副詞whereを使います。whichを使う場合はin whichのように前置詞が必要になります。',
+    explanation:
+      '【何を聞かれているか】\n"The restaurant (　) we ate dinner last night was very good."の空欄に入る、正しい関係詞を選ぶ問題。\n\n【なぜ関係副詞whereを使うのか】\n先行詞The restaurant（場所）の後ろに、"we ate dinner"（主語・動詞・目的語がそろった完全な文）が続いているため、前置詞を含んだ働きをする関係副詞whereを使う。\n\n【ポイント1】先行詞の種類を確認する\nThe restaurant（レストラン）は場所を表す先行詞。\n\n【ポイント2】後ろの文が完全かどうかを確認する\n"we ate dinner"は主語・動詞・目的語がそろった完全な文で、名詞が欠けていない。\n\n【ポイント3】whichとの違いを確認する\nwhichを使う場合は"in which we ate dinner"のように前置詞が必要になる。\n\n【答え】\nwhere\n\n【確かめ】\n"where"の後ろの文（we ate dinner）に、主語・動詞・目的語がすべてそろっているか確認する。\n\n【よくあるまちがい】\n先行詞the restaurantを見てwhichを選んでしまうミス。後ろの文が完全な文の場合は関係副詞whereを使う。\n\n【ここが絶対】\n後ろの文が「主語＋動詞＋目的語」で完全ならwhere（関係副詞）、何かが欠けていればwhich/that（関係代名詞）と見分ける。',
     pitfall: '先行詞the restaurantを見てwhichを選んでしまう間違いが多いが、後ろが完全な文の場合はwhereが適切。',
     memoryTip: '後ろの文が「主語+動詞+目的語」で完全ならwhere、何かが欠けていればwhich(that)と覚えよう。',
   },
@@ -8207,7 +8210,8 @@ export const kankanExamTop: Question[] = [
     ],
     answer: 'has already',
     hint: '現在完了形の文の中で、alreadyはhaveとp.p.の間のどこに置かれるかな?',
-    explanation: 'already(すでに、もう)は現在完了形の肯定文では、have/hasと過去分詞の間に置くのが基本の語順です。したがって、it has already arrivedとなり、has alreadyが正解です。already hasのように助動詞の前にalreadyを置くのは基本的な語順ではありません。ちなみに疑問文や否定文ではyetを使うことが多いのに対し、alreadyは主に肯定文で使われます。',
+    explanation:
+      '【何を聞かれているか】\n"Has the train arrived yet?"に対する応答"Yes, it (　) arrived."の空欄に入る、正しい語句を選ぶ問題。\n\n【なぜalreadyをhasの後ろに置くのか】\nalready（すでに・もう）は、現在完了形の肯定文では、have/hasと過去分詞の間に置くのが基本の語順というルールがある。\n\n【ポイント1】alreadyの位置を確認する\nhave/has＋already＋過去分詞という語順。"has already arrived"＝「すでに到着した」。\n\n【ポイント2】alreadyとyetの使い分けを確認する\nalreadyは主に肯定文、yetは疑問文・否定文で使うことが多い（yetは文末に置く）。\n\n【ポイント3】他の選択肢を消去する\n"already has"（語順が逆）、"is already"（be動詞は不適切）、"was already"（過去形は文脈に合わない）はいずれも誤り。\n\n【答え】\nhas already\n\n【確かめ】\n"it has already arrived"がhave/hasとp.p.の間にalreadyを挟む正しい語順になっているか確認する。\n\n【よくあるまちがい】\nalreadyの位置をhasの前に置いてしまうミス。alreadyは必ずhave/hasの後ろに置く。\n\n【ここが絶対】\nalready（もう）はhaveとp.p.の間、yet（まだ）は文末、という位置の違いをセットで覚える。',
     pitfall: 'alreadyの位置をhasの前に置いてしまう語順の間違いが多い。',
     memoryTip: 'already(もう)はhaveとp.p.の間、yet(まだ)は文末、と位置をセットで覚えよう。',
   },
@@ -8387,7 +8391,8 @@ export const kankanExamTop: Question[] = [
     ],
     answer: 'Three books about animals',
     hint: 'yesterday（昨日）という言葉のあとに書かれている内容に注目しましょう。',
-    explanation: '本文の最後の文に「Yesterday, she borrowed three books about animals（昨日、動物についての本を3冊借りた）」とはっきり書かれています。数字（three）とテーマ（animals）の両方が正しい選択肢を選ぶことが大切です。',
+    explanation:
+      '【何を聞かれているか】\nユミについての英文を読んで、"What did Yumi borrow yesterday?"（ユミは昨日何を借りたか）に答える問題。\n\n【なぜ数字とテーマの両方を確認するのか】\n本文の"Yesterday, she borrowed three books about animals."という文には、数字（three）とテーマ（animals）の両方が含まれており、選択肢もこの両方が一致するものを選ぶ必要がある。\n\n【ポイント1】該当する文を確認する\n"Yesterday, she borrowed three books about animals."（昨日、動物についての本を3冊借りた）。\n\n【ポイント2】数字を確認する\nthree（3冊）という数字が正確に一致しているか確認する。\n\n【ポイント3】テーマを確認する\nabout animals（動物について）というテーマが正確に一致しているか確認する。\n\n【答え】\nThree books about animals\n\n【確かめ】\n選んだ選択肢が、数字（three）とテーマ（animals）の両方で本文と一致しているか確認する。\n\n【よくあるまちがい】\n数字だけ、またはテーマだけを見て、両方が合っているか確認せずに選んでしまうミス。\n\n【ここが絶対】\n本文中の数字と名詞（何を・いくつ）は必ずセットでチェックする習慣をつける。',
     pitfall: '数字だけ、またはテーマだけを見て、両方が合っているか確認せずに選んでしまう。',
     memoryTip: '本文中の数字と名詞（何を・いくつ）は必ずセットでチェックする習慣をつけよう。',
   },
@@ -9007,7 +9012,8 @@ export const kankanExamTop: Question[] = [
     ],
     answer: '2週間',
     hint: 'for two weeksという表現を本文から探しましょう。',
-    explanation: '本文にStudents who join this program will stay with an Australian family for two weeks in August.とあります。for two weeksは「2週間の間」という期間を表す表現です。数字が出てくる問題では、その数字が「何の期間・回数・値段」を表しているのかを、直前直後の単語まで正確に読み取ることが得点のポイントになります。',
+    explanation:
+      '【何を聞かれているか】\nオーストラリアのホームステイプログラムについてのEメールを読んで、滞在期間を答える問題。\n\n【なぜfor two weeksに注目するのか】\n"for＋期間"は「〜の間」という継続の期間を表す表現で、本文中の"for two weeks"がそのまま滞在期間を表している。\n\n【ポイント1】該当する文を確認する\n"Students who join this program will stay with an Australian family for two weeks in August."（オーストラリアの家族のもとに8月に2週間滞在する）。\n\n【ポイント2】for two weeksの意味を確認する\nfor two weeks＝「2週間の間」という期間を表す。\n\n【ポイント3】in Augustと区別する\n"in August"（8月に）は時期を表す語句であり、期間の長さを表すものではない。\n\n【答え】\n2週間\n\n【確かめ】\n"for two weeks"が「2週間」という期間を表していて、"in August"（時期）と混同していないか確認する。\n\n【よくあるまちがい】\nin Augustの「8月」という月を、期間の長さと勘違いしてしまうミス。\n\n【ここが絶対】\nfor＋期間＝「〜の間」という意味を表す。数字が出てくる問題では、その数字が何を表しているのかを直前・直後の単語まで正確に読み取る。',
     pitfall: 'in Augustの「8月」という月を、期間の長さと勘違いしないように注意しましょう。',
     memoryTip: 'for+期間=「〜の間」という意味を表すと覚えておきましょう。',
   },

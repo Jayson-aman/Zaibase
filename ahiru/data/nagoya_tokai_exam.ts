@@ -883,7 +883,8 @@ export const nagoyaTokaiExam: Question[] = [
     ],
     answer: 'easier',
     hint: '文の中にthanがあるときは比較級の形を使う。',
-    explanation: '文の後半に than があることから、2つのものを比べる比較級の文だとわかります。easyのように語尾がyで終わる形容詞は、yをiに変えてerをつけてeasierという比較級を作ります。most easyやmore easyのような形は誤りで、easyのような短い形容詞では規則通りにerをつける形が正しい比較級です。',
+    explanation:
+      '【何を聞かれているか】\n"This question is ( ) than that one."の空欄に入る、正しい比較級を選ぶ問題。\n\n【なぜeasierという形になるのか】\n文中にthanがあることから比較級の文だとわかり、easyのように語尾がyで終わる形容詞は、yをiに変えてerをつけて比較級を作る。\n\n【ポイント1】thanから比較級だと判断する\n文にthanがあるので、比較級の形が必要。\n\n【ポイント2】yで終わる形容詞の変化を確認する\neasy→easier（yをiに変えてer）。\n\n【ポイント3】他の選択肢を消去する\n"most easy"や"more easy"のような形は誤りで、easyのような短い形容詞は規則通りにerをつける形が正しい。\n\n【答え】\neasier\n\n【確かめ】\neasyのyがiに変わって"easi"となり、そこにerがついてeasierになっているか確認する。\n\n【よくあるまちがい】\n"more easy"のように、moreを付けてしまうミス。easyは短い形容詞なのでerをつける形を使う。\n\n【ここが絶対】\n「thanがあれば比較級」「yで終わる短い形容詞はyをiにしてer」という2つのルールをセットで覚える。',
     pitfall: 'more easyのようにmoreを付けてしまう誤りが多いが、easyは短い形容詞なのでerをつける形を使う。',
     memoryTip: '「thanがあれば比較級」「yで終わる短い形容詞はyをiにしてer」とセットで覚える。',
   },
@@ -903,7 +904,8 @@ export const nagoyaTokaiExam: Question[] = [
     ],
     answer: 'How',
     hint: '答えの文が交通手段(by bus)を表していることに注目する。',
-    explanation: '応答の文が By bus.(バスで)という交通手段を答えていることから、方法・手段をたずねる疑問詞 How が正解だとわかります。Whatは「何」、Whereは「どこ」、Whenは「いつ」をたずねる疑問詞であり、いずれも交通手段を答える質問には対応しません。疑問詞の意味と、それに対応する応答のパターンをセットで覚えておくことが重要です。',
+    explanation:
+      '【何を聞かれているか】\n"( ) do you go to the library? — By bus."の空欄に入る、正しい疑問詞を選ぶ問題。\n\n【なぜHowを使うのか】\n応答の文"By bus."（バスで）が交通手段を答えていることから、方法・手段をたずねる疑問詞Howが正解だとわかる。\n\n【ポイント1】応答から疑問詞を判断する\n"By bus."という交通手段の答えから、質問はHow（どうやって）だとわかる。\n\n【ポイント2】他の疑問詞の意味を確認する\nWhat（何）、Where（どこ）、When（いつ）は、いずれも交通手段を答える質問には対応しない。\n\n【ポイント3】道案内・交通手段の会話パターンを確認する\n"How do you go to〜?"→"By＋乗り物."という決まった質問と応答のパターン。\n\n【答え】\nHow\n\n【確かめ】\n"How do you go to the library?"に対して"By bus."という手段の答えが自然に対応しているか確認する。\n\n【よくあるまちがい】\nWhereを選んでしまうミス。Whereは場所をたずねる疑問詞であり、by busのような手段の答えとは対応しない。\n\n【ここが絶対】\n"How=手段・方法・様子をたずねる"、"By+乗り物で答える質問にはHow"というセットで覚える。',
     pitfall: 'Whereを選んでしまう誤りが多いが、Whereは場所をたずねる疑問詞であり、by busのような手段の答えとは対応しない。',
     memoryTip: '「How=手段・方法・様子をたずねる」「By+乗り物で答える質問にはHow」と覚える。',
   },
@@ -943,7 +945,8 @@ export const nagoyaTokaiExam: Question[] = [
     ],
     answer: 'was painted',
     hint: '「この絵は画家によって描かれた」という受け身の過去の文になる。',
-    explanation: 'about 100 years ago(約100年前に)という過去を表す語句があることと、主語のThis picture(この絵)が「描く」動作を受ける側であることから、過去の受け身の形 was painted が正解です。受け身の文は「be動詞+過去分詞」の形で作られ、主語が動作をする側ではなく、動作を受ける側であるときに使われます。',
+    explanation:
+      '【何を聞かれているか】\n"This picture ( ) by a famous painter about 100 years ago."の空欄に入る、正しい動詞の形を選ぶ問題。\n\n【なぜwas paintedという受動態を使うのか】\n主語This picture（この絵）は「描く」という動作を受ける側であり、"about 100 years ago"（約100年前に）という過去を表す語句もあることから、過去の受け身の形was paintedを使う。\n\n【ポイント1】受動態の公式を確認する\n主語＋be動詞（過去形）＋過去分詞＋by＋動作主。\n\n【ポイント2】主語の役割を確認する\nThis picture（絵）は自分から描く（能動）のではなく、画家に描かれる（受動）側。\n\n【ポイント3】過去を表す語句を確認する\n"about 100 years ago"から、過去の受動態was paintedを使うと判断できる。\n\n【答え】\nwas painted\n\n【確かめ】\n"was painted"が「be動詞（過去形）＋過去分詞」の正しい受動態の形になっているか確認する。\n\n【よくあるまちがい】\npaintedだけを選んでしまうミス。受動態にするにはbe動詞（was/were）を必ず伴う必要がある。\n\n【ここが絶対】\n「〜される」という意味の文は「be動詞＋過去分詞」の受動態の形をセットで覚える。',
     pitfall: 'paintedだけを選んでしまう誤りが多いが、受け身の文にするにはbe動詞(was/were)を必ず伴う必要がある。',
     memoryTip: '「~される」という意味の文は「be動詞+過去分詞」とセットで覚える。',
   },
@@ -983,7 +986,8 @@ export const nagoyaTokaiExam: Question[] = [
     ],
     answer: 'went',
     hint: 'last summer(この前の夏)という過去を表す語句に注目する。',
-    explanation: 'last summer(この前の夏)という過去を表す語句があることから、動詞は過去形にする必要があります。goの過去形は不規則変化でgoesやgoedにはならず、wentという特別な形になります。不規則動詞の過去形は一つひとつ暗記する必要があり、goは入試でも頻出の重要単語です。',
+    explanation:
+      '【何を聞かれているか】\n"She ( ) to Kyoto with her family last summer."の空欄に入る、正しい動詞の形を選ぶ問題。\n\n【なぜwentという形になるのか】\n"last summer"（この前の夏）という過去を表す語句があることから、動詞を過去形にする必要があり、goの過去形は不規則変化でwentという特別な形になる。\n\n【ポイント1】過去を表す語句を確認する\n"last summer"から、過去形の文だとわかる。\n\n【ポイント2】goの活用を確認する\ngo（原形）→went（過去形）→gone（過去分詞）という不規則変化。\n\n【ポイント3】他の選択肢を消去する\ngo（原形）、goes（三単現）、going（進行形）は、いずれも過去形の文には合わない。\n\n【答え】\nwent\n\n【確かめ】\n"went"がgoの過去形として正しく使われていて、"goed"のような誤った形になっていないか確認する。\n\n【よくあるまちがい】\ngoedのように規則変化させてしまうミス。goは不規則動詞であり過去形はwent。\n\n【ここが絶対】\n「go-went-gone」と3つの形をセットで音読して覚える。',
     pitfall: 'goedのように規則変化させてしまう誤りがあるが、goは不規則動詞であり過去形はwentになる。',
     memoryTip: '「go-went-gone」と3つの形をセットで音読して覚える。',
   },
@@ -1043,7 +1047,8 @@ export const nagoyaTokaiExam: Question[] = [
     ],
     answer: 'At seven fifteen',
     hint: '文中でleft home(家を出た)という動作に対応する時刻を本文から探す。',
-    explanation: '本文には「He...left home at seven fifteen」とあり、Tomが家を出た時刻がat seven fifteen(7時15分)であるとはっきり書かれています。six thirty(6時30分)は起きた時刻、eight(8時)は授業が始まる時刻であり、質問されている「家を出た時刻」とは異なります。英文読解では、質問のキーワード(leave home)と同じ表現を本文中から正確に探し出すことが大切です。',
+    explanation:
+      '【何を聞かれているか】\nトムの朝の行動についての英文を読んで、"What time did Tom leave home?"（トムは何時に家を出たか）に答える問題。\n\n【なぜ質問のキーワード（leave home）に注目するのか】\n本文中に複数の時刻（起きた時刻、家を出た時刻、授業開始の時刻）が出てくるため、質問のキーワードと同じ表現（left home）を本文から正確に探し出す必要がある。\n\n【ポイント1】該当する文を確認する\n"He...left home at seven fifteen"（7時15分に家を出た）。\n\n【ポイント2】他の時刻と区別する\nsix thirty（6時30分）は起きた時刻、eight（8時）は授業が始まる時刻であり、「家を出た時刻」とは異なる。\n\n【ポイント3】キーワードの一致を確認する\n質問の"leave home"と本文の"left home"が同じ内容を指していることを確認する。\n\n【答え】\nAt seven fifteen\n\n【確かめ】\n選んだ答えが、本文の"left home at seven fifteen"という表現と正確に一致しているか確認する。\n\n【よくあるまちがい】\n授業開始時刻のeightや起床時刻のsix thirtyと、家を出た時刻を混同してしまうミス。\n\n【ここが絶対】\n質問のキーワードと同じ単語を本文中で探すという読解の基本手順を徹底する。',
     pitfall: '授業開始時刻のeightや起床時刻のsix thirtyと、家を出た時刻を混同しないよう、本文の該当箇所を正確に照合する。',
     memoryTip: '「質問のキーワードと同じ単語を本文中で探す」という読解の基本手順を徹底する。',
   },

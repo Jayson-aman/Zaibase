@@ -989,7 +989,8 @@ export const tokyoAoyamaExam: Question[] = [
     ],
     answer: 'By bike',
     hint: '本文中の goes to school の後ろに続く語句に、通学手段を表す情報があることに注目しよう。',
-    explanation: '本文には「He eats breakfast and goes to school by bike.(朝食を食べて、自転車で学校へ行きます)」とあります。by bike は「自転車で」という交通手段を表す表現です。質問 How does Ken go to school?(健はどうやって学校へ行きますか)に対しては、本文中の by bike の部分がそのまま答えになります。短い読解問題では、質問の疑問詞(How=手段・方法)に注目し、本文中の対応する情報を正確に探し出すことがポイントです。',
+    explanation:
+      '【何を聞かれているか】\nケンについての英文を読んで、"How does Ken go to school?"（ケンはどうやって学校へ行くか）に答える問題。\n\n【なぜHowという疑問詞に注目するのか】\nHowは「手段・方法」をたずねる疑問詞なので、本文中の交通手段を表す表現（by bike）が、この質問の答えに対応する。\n\n【ポイント1】該当する文を確認する\n"He eats breakfast and goes to school by bike."（朝食を食べて、自転車で学校へ行く）。\n\n【ポイント2】"by bike"の意味を確認する\n"by＋乗り物"＝「〜で（乗り物を使って）」という交通手段を表す。\n\n【ポイント3】疑問詞Howの意味を確認する\nHow＝「どうやって・どのように」という手段・方法をたずねる疑問詞。\n\n【答え】\nBy bike\n\n【確かめ】\n"How does Ken go to school?"という質問に、"by bike"という交通手段が正しく対応しているか確認する。\n\n【よくあるまちがい】\n本文をよく読まずに、日本の一般的な通学手段を推測で選んでしまうミス。\n\n【ここが絶対】\nby＋乗り物（by bike, by bus, by train）は手段を表す決まった言い方としてまとめて覚える。',
     pitfall: '本文をよく読まずに、選択肢の中から日本の一般的な通学手段を推測で選んでしまう間違いに注意する。',
     memoryTip: 'by+乗り物(by bike, by bus, by train)は手段を表す決まった言い方としてまとめて覚えよう。',
   },
@@ -1049,7 +1050,8 @@ export const tokyoAoyamaExam: Question[] = [
     ],
     answer: 'Yes, please.',
     hint: 'Would you like ~? は「~はいかがですか」と相手にすすめる表現であることに注目しよう。',
-    explanation: 'Would you like some more cake?は「もう少しケーキはいかがですか」と相手にものをすすめる表現です。すすめられたものを受け入れるときの自然な返事は Yes, please.(はい、お願いします)です。断るときは No, thank you. と答えます。You\'re welcome.(どういたしまして)はお礼を言われたときの返事、Nice to meet you.(はじめまして)は初対面のあいさつ、I\'m sorry.(すみません)は謝罪の表現であり、いずれもこの対話の流れには合いません。会話表現は場面ごとに正しい受け答えをセットで覚えておくことが重要です。',
+    explanation:
+      '【何を聞かれているか】\n"Would you like some more cake?"という会話への応答として、最も適切な文を選ぶ問題。\n\n【なぜYes, please.を使うのか】\n"Would you like〜?"は「〜はいかがですか」と相手にものをすすめる表現なので、それを受け入れるときは"Yes, please."（はい、お願いします）と答える。\n\n【ポイント1】"Would you like〜?"の意味を確認する\n「〜はいかがですか」という、丁寧にものをすすめる表現。\n\n【ポイント2】受け入れと断りの返答を確認する\n受け入れる場合はYes, please.、断る場合はNo, thank you.と答える。\n\n【ポイント3】他の選択肢との違いを確認する\n"You\'re welcome."（どういたしまして）はお礼への返事、"Nice to meet you."（はじめまして）は初対面のあいさつ、"I\'m sorry."（すみません）は謝罪の表現で、いずれもこの場面には合わない。\n\n【答え】\nYes, please.\n\n【確かめ】\n選んだ返答が、ものをすすめられたときの快諾の表現になっているか確認する。\n\n【よくあるまちがい】\n"Would you like〜?"への返事を、お礼への返事（You\'re welcome.）と混同してしまうミス。\n\n【ここが絶対】\n"Would you like〜?"には"Yes, please."（受け入れ）または"No, thank you."（断り）というセットの返答を覚えておく。',
     pitfall: 'Would you like ~?に対する自然な返事を、お礼への返事(You\'re welcome)と混同しないよう注意する。',
     memoryTip: 'Would you like ~?→Yes, please./No, thank you.という決まった受け答えをセットで覚えよう。',
   },

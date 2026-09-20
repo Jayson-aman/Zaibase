@@ -880,7 +880,8 @@ export const tokyoMeidaiExam: Question[] = [
     ],
     answer: 'Wednesday',
     hint: '7つある曜日の名前のうち、真ん中に位置する曜日を表す単語である。',
-    explanation: 'Wednesdayは「水曜日」を意味する曜日の単語である。Januaryは「1月」で月の名前、Springは「春」で季節の名前、Appleは「りんご」で果物の名前であり、いずれも曜日ではない。曜日・月・季節はそれぞれ異なるカテゴリーの単語としてまとめて覚える必要がある。',
+    explanation:
+      '【何を聞かれているか】\n曜日を表す英単語を選ぶ問題。\n\n【なぜWednesdayが正解なのか】\nWednesdayは「水曜日」を意味する曜日の単語で、January（1月・月）、Spring（春・季節）、Apple（りんご・果物）とは異なるカテゴリーの単語。\n\n【ポイント1】選択肢のカテゴリーを確認する\nWednesday（曜日）、January（月）、Spring（季節）、Apple（果物）はそれぞれ違うカテゴリーに属する。\n\n【ポイント2】曜日の並びを確認する\nSunday、Monday、Tuesday、Wednesday、Thursday、Friday、Saturdayの7つのうち、Wednesdayは真ん中（4番目）に位置する。\n\n【ポイント3】カテゴリーごとに覚えることを確認する\n曜日・月・季節はそれぞれ異なるカテゴリーの単語としてまとめて覚える必要がある。\n\n【答え】\nWednesday\n\n【確かめ】\nWednesdayが曜日のカテゴリーに属していて、January（月）やSpring（季節）と混同していないことを確認する。\n\n【よくあるまちがい】\n月の名前（January等）と曜日の名前を混同してしまうミス。\n\n【ここが絶対】\n曜日（Sunday〜Saturday）・月（January〜December）・季節（Spring, Summer, Autumn, Winter）を、それぞれ別のグループとして整理して覚える。',
     pitfall: '月の名前(January等)と曜日の名前を混同してしまうことがある。',
     memoryTip: 'Sunday, Monday, Tuesday, Wednesday...と曜日を歌やリズムで順番に覚える。',
   },
@@ -900,7 +901,8 @@ export const tokyoMeidaiExam: Question[] = [
     ],
     answer: 'plays',
     hint: '主語がShe(三人称単数)のとき、現在形の一般動詞には s がつく。',
-    explanation: '主語がSheのように三人称単数(I・youを除く1人・1つ)で、現在の習慣的な動作を表す文では、一般動詞の語尾にsやesをつける。この文ではplayにsをつけたplaysが正しい形となる。三人称単数現在形のルールは英文法の基本として重要である。',
+    explanation:
+      '【何を聞かれているか】\n"She ( ) tennis every Sunday."の空欄に入る、正しい動詞の形を選ぶ問題。\n\n【なぜplaysという形になるのか】\n主語Sheのように三人称単数で、現在の習慣的な動作を表す文では、一般動詞の語尾にsやesをつけるという決まりがある。\n\n【ポイント1】三人称単数現在形のルールを確認する\n主語が三人称単数（I・you以外の1人・1つ）で現在形の文のとき、動詞にsやesをつける。\n\n【ポイント2】"every Sunday"の役割を確認する\n"every Sunday"（毎週日曜日）という習慣を表す語句があることから、現在形の文だとわかる。\n\n【ポイント3】他の選択肢を消去する\nplay（原形）、playing（進行形）、is play（誤った形）は、この文には合わない。\n\n【答え】\nplays\n\n【確かめ】\n主語Sheが三人称単数であることを確認し、動詞playにsがついているか確認する。\n\n【よくあるまちがい】\n主語がSheであることに気づかず、原形のplayをそのまま使ってしまうミス。\n\n【ここが絶対】\n「三人称単数・現在の文には動詞にsをつける」という「三単現のs」のルールをセットで覚える。',
     pitfall: '主語がSheであることに気づかず、原形のplayをそのまま使ってしまう間違いが多い。',
     memoryTip: '「三人称単数・現在の文には動詞にsをつける」を「三単現のs」として覚える。',
   },
@@ -940,7 +942,8 @@ export const tokyoMeidaiExam: Question[] = [
     ],
     answer: 'at',
     hint: '時刻を表すときに使う前置詞を選ぶ。',
-    explanation: '時刻を表すときには前置詞atを使う。例えばat seven o\'clock(7時に)のように用いる。一方、月や年にはin(in July, in 2026)、日付や曜日にはon(on Monday)を使うというように、前置詞は時間の単位によって使い分けるルールがある。',
+    explanation:
+      '【何を聞かれているか】\n"I usually get up ( ) seven o\'clock."の空欄に入る、正しい前置詞を選ぶ問題。\n\n【なぜatを使うのか】\n時刻を表すときには、前置詞atを使うという決まりがある。\n\n【ポイント1】atの使い方を確認する\nat＋時刻（at seven o\'clock＝7時に）。\n\n【ポイント2】inとonとの違いを確認する\ninは月や年（in July, in 2026）、onは日付や曜日（on Monday）に使う。\n\n【ポイント3】3つの前置詞をセットで確認する\n時刻はat、曜日と日付はon、月・年・季節はinという使い分け。\n\n【答え】\nat\n\n【確かめ】\n"at seven o\'clock"が「7時に」という意味の正しい前置詞の組み合わせになっているか確認する。\n\n【よくあるまちがい】\n時刻・曜日・月で使う前置詞（at, on, in）を混同してしまうミス。\n\n【ここが絶対】\n「時刻はat、曜日と日付はon、月・年・季節はin」という3つの前置詞の使い分けをセットで覚える。',
     pitfall: '時刻・曜日・月で使う前置詞(at, on, in)を混同してしまうことが非常に多い。',
     memoryTip: '「時刻はat、曜日と日付はon、月・年・季節はin」と3つをセットで覚える。',
   },
@@ -960,7 +963,8 @@ export const tokyoMeidaiExam: Question[] = [
     ],
     answer: 'brother',
     hint: '男のきょうだいを表す単語である。',
-    explanation: 'brotherは「兄・弟」を意味する男のきょうだいを表す単語である。sisterは「姉・妹」、motherは「母」、fatherは「父」を意味する。英語では日本語のように「兄」と「弟」を区別せず、年齢の上下を示したいときはolder brother(兄)やyounger brother(弟)のように表現する。',
+    explanation:
+      '【何を聞かれているか】\n「兄・弟」を意味する英単語を選ぶ問題。\n\n【なぜbrotherが正解なのか】\nbrotherは「兄・弟」を意味する男のきょうだいを表す単語で、sister（姉・妹）、mother（母）、father（父）とは区別される。\n\n【ポイント1】brotherの意味を確認する\nbrother＝男のきょうだい（兄・弟の両方を含む）。\n\n【ポイント2】日本語との違いを確認する\n英語では「兄」と「弟」を別の単語で区別せず、区別したいときはolder brother（兄）、younger brother（弟）のように言う。\n\n【ポイント3】他の選択肢を確認する\nsister（姉・妹）、mother（母）、father（父）はいずれも別の家族関係を表す。\n\n【答え】\nbrother\n\n【確かめ】\nbrotherが「兄・弟」という男のきょうだい全般を表す単語であることを確認する。\n\n【よくあるまちがい】\n日本語のように「兄」「弟」を別の単語で表すと思い込んでしまうミス。英語では基本的に区別しない。\n\n【ここが絶対】\n"brother＝男きょうだい、sister＝女きょうだい"とペアで覚え、年上・年下はolder/youngerで区別する。',
     pitfall: '日本語のように「兄」「弟」を別の単語で表すと思い込んでしまうことがあるが、英語では基本的に区別しない。',
     memoryTip: '「brother=男きょうだい、sister=女きょうだい」とペアで覚え、年上年下はolder/youngerで区別する。',
   },
@@ -980,7 +984,8 @@ export const tokyoMeidaiExam: Question[] = [
     ],
     answer: 'more interesting',
     hint: 'つづりの長い形容詞を比較級にするときは、語尾を変化させずに前に語を置く。',
-    explanation: '形容詞を比較級にするときは、つづりの短い語には-erをつけるが、interestingのようにつづりが長い(音節が多い)形容詞の場合は、語の前にmoreを置いて比較級を作る。したがって正しい形はmore interestingとなる。interestingerのように直接-erをつけることはできない。',
+    explanation:
+      '【何を聞かれているか】\n"This book is ( ) than that one."の空欄に入る、正しい比較級を選ぶ問題。\n\n【なぜmore interestingという形になるのか】\ninterestingのようにつづりが長い（音節が多い）形容詞は、-erをつけるのではなく、語の前にmoreを置いて比較級を作るという決まりがある。\n\n【ポイント1】moreを使う形容詞を確認する\ninterestingのような長い形容詞は、-erをつけずmoreを前に置く。\n\n【ポイント2】-erを使う形容詞との違いを確認する\nつづりの短い形容詞（tall、bigなど）には-erをつける。\n\n【ポイント3】誤った形を確認する\n"interestinger"のように直接-erをつけることはできない。\n\n【答え】\nmore interesting\n\n【確かめ】\ninterestingの前にmoreが置かれていて、語尾に-erがついていないことを確認する。\n\n【よくあるまちがい】\nすべての形容詞に-erをつけて比較級を作れると思い込み、"interestinger"のような誤った形を作ってしまうミス。\n\n【ここが絶対】\n「短い単語は-er、長い単語はmoreを前に置く」という比較級のルールをセットで覚える。',
     pitfall: 'すべての形容詞に-erをつけて比較級を作れると思い込み、interestingerのような誤った形を作ってしまう。',
     memoryTip: '「短い単語は-er、長い単語はmoreを前に置く」というルールをセットで覚える。',
   },

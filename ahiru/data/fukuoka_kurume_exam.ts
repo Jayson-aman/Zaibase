@@ -905,7 +905,8 @@ export const fukuokaKurumeExam: Question[] = [
     ],
     answer: 'Yes, please.',
     hint: '"Would you like ~?"は相手に何かをすすめるときの表現である。',
-    explanation: '"Would you like some more coffee?"は「コーヒーのおかわりはいかがですか」と相手にすすめる表現である。これに対しては"Yes, please."(はい、お願いします)や"No, thank you."(いいえ、結構です)のように答えるのが自然である。"Yes, I do."は一般動詞の疑問文への応答、"You\'re welcome."は"Thank you."への返答であり、どちらもこの場面には合わない。',
+    explanation:
+      '【何を聞かれているか】\n"Would you like some more coffee?"という会話への応答として、最も適切な文を選ぶ問題。\n\n【なぜYes, please.を使うのか】\n"Would you like〜?"は相手に何かをすすめるときの表現なので、それを受け入れるときは"Yes, please."と答える。\n\n【ポイント1】"Would you like〜?"の意味を確認する\n「〜はいかがですか」とものをすすめる表現。\n\n【ポイント2】受け入れの返答を確認する\n"Yes, please."（はい、お願いします）または"No, thank you."（いいえ、結構です）と答える。\n\n【ポイント3】他の選択肢との違いを確認する\n"Yes, I do."は一般動詞の疑問文への応答、"You\'re welcome."は"Thank you."への返答であり、どちらもこの場面には合わない。\n\n【答え】\nYes, please.\n\n【確かめ】\n選んだ返答が、ものをすすめられたときの快諾の表現になっているか確認する。\n\n【よくあるまちがい】\n"Would you like〜?"を一般動詞の疑問文と同じように考え、"Yes, I do."と答えてしまうミス。\n\n【ここが絶対】\n「Would you like〜? にはYes, please./No, thank you.で答える」と決まり文句として覚える。',
     pitfall: '"Would you like ~?"を一般動詞の疑問文と同じように考え、"Yes, I do."と答えてしまう間違いが多い。',
     memoryTip: '「Would you like ~? には Yes, please. / No, thank you. で答える」と決まり文句として覚える。',
   },

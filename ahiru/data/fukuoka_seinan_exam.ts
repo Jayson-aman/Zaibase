@@ -1053,7 +1053,8 @@ export const fukuokaSeinanExam: Question[] = [
     ],
     answer: 'Kenは毎日放課後に図書館で英語の本を読む',
     hint: '本文の"Every day after school, he reads English books at the library."の部分に注目する。',
-    explanation: '本文には"Every day after school, he reads English books at the library."（毎日放課後、彼は図書館で英語の本を読む）とはっきり書かれており、これが正解の根拠になります。「英語が好きではない」は"likes English very much"（英語がとても好き）と矛盾し、「1時間読んだ」は本文の"for two hours"（2時間）と食い違います。「図書館に行ったことがない」も本文の内容と反対です。細かい数字や語句まで正確に読み取ることが求められる問題です。',
+    explanation:
+      '【何を聞かれているか】\nケンについての英文を読んで、内容と合っている選択肢を選ぶ問題。\n\n【なぜ数字と頻度の語句に注目するのか】\n本文には"Every day after school"（毎日放課後）や"for two hours"（2時間）のような頻度・数字の情報が含まれており、選択肢の細部（何時間読んだか、頻度など）と正確に照合する必要がある。\n\n【ポイント1】正解の選択肢を確認する\n"Every day after school, he reads English books at the library."（毎日放課後、図書館で英語の本を読む）がそのまま選択肢と一致する。\n\n【ポイント2】誤った選択肢を確認する\n「英語が好きではない」は"likes English very much"と矛盾、「1時間読んだ」は本文の"for two hours"（2時間）と食い違う。\n\n【ポイント3】「図書館に行ったことがない」を確認する\n本文はむしろ毎日図書館に行っていることを述べており、この選択肢は正反対の内容。\n\n【答え】\nKenは毎日放課後に図書館で英語の本を読む\n\n【確かめ】\n選んだ選択肢が"Every day after school...at the library"の内容と正確に一致しているか確認する。\n\n【よくあるまちがい】\n"two hours"（2時間）を"one hour"（1時間）と読み違えるなど、数字の読み取りミス。\n\n【ここが絶対】\n内容一致問題では、本文中の数字・頻度（every day, yesterdayなど）の語句に線を引きながら読む習慣をつける。',
     pitfall: '"two hours"（2時間）を"one hour"（1時間）と読み違えるなど、数字の読み取りミスをしやすい。',
     memoryTip: '内容一致問題では、本文中の数字・頻度（every day, yesterdayなど）の語句に必ず線を引きながら読む習慣をつける。',
   },

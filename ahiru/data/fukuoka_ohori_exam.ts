@@ -890,7 +890,8 @@ export const fukuokaOhoriExam: Question[] = [
     ],
     answer: 'is',
     hint: '主語が三人称単数(he, she, itなど)のときのbe動詞の形を思い出そう。',
-    explanation: '主語が"She"(三人称単数)のとき、be動詞は"is"を使います。"am"は主語が"I"のとき、"are"は主語が"you"や複数のときに使う形です。',
+    explanation:
+      '【何を聞かれているか】\n"She ( ) a doctor."の空欄に入る、正しいbe動詞を選ぶ問題。\n\n【なぜisを使うのか】\n主語She（三人称単数）のとき、be動詞はisを使うという決まりがある。\n\n【ポイント1】主語とbe動詞の対応を確認する\nI am、You are、He/She/It isという組み合わせが決まっている。\n\n【ポイント2】他の選択肢を消去する\namは主語がIのとき、areは主語がyouや複数のときに使うので、主語Sheには合わない。\n\n【ポイント3】文全体の意味を確認する\n"She is a doctor."＝「彼女は医者です」。\n\n【答え】\nis\n\n【確かめ】\n主語Sheに対して、isが正しく選ばれているか確認する。\n\n【よくあるまちがい】\n"are"を使ってしまうミス。areは主語が複数やyouのときに使う。\n\n【ここが絶対】\n"I am / You are / He, She, It is"というbe動詞と主語の対応をセットで覚える。',
     pitfall: '"are"を使ってしまうミスが多いが、"are"は主語が複数やyouのときに使う。',
     memoryTip: '"I am / You are / He, She, It is"の対応をセットで覚える。',
   },
@@ -910,7 +911,8 @@ export const fukuokaOhoriExam: Question[] = [
     ],
     answer: 'Sunday',
     hint: 'それぞれの単語が「月」「曜日」「季節」のどれを表しているか整理してみよう。',
-    explanation: '"Sunday"は「日曜日」を意味する曜日の名前です。"January"は「1月」で月を表す単語、"Spring"は「春」、"Autumn"は「秋」でどちらも季節を表す単語です。',
+    explanation:
+      '【何を聞かれているか】\n曜日を表す英単語を選ぶ問題。\n\n【なぜSundayが正解なのか】\nSundayは「日曜日」を意味する曜日の名前で、January（1月・月）、Spring（春・季節）、Autumn（秋・季節）とは異なるカテゴリーの単語。\n\n【ポイント1】選択肢のカテゴリーを確認する\nSunday（曜日）、January（月）、Spring・Autumn（季節）はそれぞれ違うカテゴリーに属する。\n\n【ポイント2】曜日の特徴を確認する\nSunday、Monday、Tuesdayのように、曜日の多くは語尾に"day"がつく。\n\n【ポイント3】月・季節と区別する\nJanuaryは月、Spring・Autumnは季節を表す単語で、曜日ではない。\n\n【答え】\nSunday\n\n【確かめ】\nSundayが曜日のカテゴリーに属していて、January（月）やSpring/Autumn（季節）と混同していないことを確認する。\n\n【よくあるまちがい】\nJanuaryを曜日と勘違いしてしまうミス。月の名前と曜日の名前を区別する。\n\n【ここが絶対】\n曜日は語尾に"day"がつくものが多いという特徴を手がかりに、月・季節の単語と区別する。',
     pitfall: '"January"を曜日と勘違いしないように、月の名前と曜日の名前を区別する。',
     memoryTip: '曜日は"Sunday, Monday, Tuesday..."と語尾に"day"がつくものが多いことに注目する。',
   },
