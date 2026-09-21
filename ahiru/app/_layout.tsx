@@ -125,6 +125,10 @@ export default function RootLayout() {
           name="tokusho"
           options={{ headerShown: false, presentation: 'modal' }}
         />
+        <Stack.Screen
+          name="feedback"
+          options={{ headerShown: false, presentation: 'modal' }}
+        />
       </Stack>
       {consentChecked && showConsent && !isLegalRoute && (
         <ConsentModal onAgree={handleConsent} />

@@ -211,6 +211,10 @@ export default function LessonDetailScreen() {
               formulaUnlockProductReady={formulaUnlockProductReady}
               purchasingFigureId={purchasingFigureId}
               onUnlockFormula={handleUnlockFormula}
+              lessonId={lesson.id}
+              lessonTitle={lesson.title}
+              subject={lesson.subject}
+              examType={lesson.examType}
             />
             {lesson.keyPoints != null && lesson.keyPoints.length > 0 && (
               <View style={styles.keyPointsBox}>

@@ -415,6 +415,18 @@ export default function ProgressScreen() {
           );
         })}
 
+        {/* Feedback entry point */}
+        <TouchableOpacity
+          style={styles.feedbackCard}
+          onPress={() => router.push('/feedback')}
+          activeOpacity={0.85}
+        >
+          <Text style={styles.feedbackCardTitle}>📮 ご意見・ご要望</Text>
+          <Text style={styles.feedbackCardSub}>
+            わからないこと・こうしてほしいことを教えてください
+          </Text>
+        </TouchableOpacity>
+
         {/* Reset button */}
         <TouchableOpacity
           style={styles.resetButton}
@@ -805,9 +817,30 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     minWidth: 4,
   },
-  resetButton: {
+  feedbackCard: {
     marginHorizontal: 20,
     marginTop: 24,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 14,
+    paddingVertical: 16,
+    paddingHorizontal: 18,
+    borderWidth: 1,
+    borderColor: '#E8DCC8',
+  },
+  feedbackCardTitle: {
+    fontSize: 15,
+    fontWeight: '800',
+    color: '#221C18',
+    marginBottom: 4,
+  },
+  feedbackCardSub: {
+    fontSize: 12,
+    color: '#888',
+    fontWeight: '500',
+  },
+  resetButton: {
+    marginHorizontal: 20,
+    marginTop: 12,
     backgroundColor: '#FFF0F0',
     borderRadius: 14,
     paddingVertical: 16,

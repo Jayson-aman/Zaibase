@@ -76,6 +76,18 @@ service cloud.firestore {
       allow write: if false;
     }
 
+    // ── 保護者向けフィードバック（感想・要望）の送信回数カウンタ（Cloud Functions専用） ──
+    match /feedbackUsage/{uid} {
+      allow read, write: if false;
+    }
+
+    // ── 保護者向けフィードバック（感想・要望）の本体 ──
+    // 書き込みはCloud Function（sendFeedback）専用。Slack通知が主な届け先で
+    // アプリ内で一覧表示する機能は無いため、クライアントからの読み取りも許可しない。
+    match /feedbackSubmissions/{docId} {
+      allow read, write: if false;
+    }
+
     // 上記以外は全て拒否（明示）
     match /{document=**} {
       allow read, write: if false;

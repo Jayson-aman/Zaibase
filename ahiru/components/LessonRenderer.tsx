@@ -2,6 +2,7 @@ import React from 'react';
 import { rich } from './RichText';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, ActivityIndicator, Platform } from 'react-native';
 import type { LessonSection } from '../data/lesson-types';
+import type { SubjectKey } from '../data/questions-meta';
 import { getLessonFigure } from '../data/lesson-figures';
 import { getKoushikiFormulaInfo } from '../data/koushiki-access';
 import { getMangaScript } from '../data/manga-scripts';
@@ -20,6 +21,11 @@ type Props = {
   formulaUnlockProductReady?: boolean;
   purchasingFigureId?: string | null;
   onUnlockFormula?: (figureId: string, heading: string) => void;
+  /** マンガの感想フォームに単元の文脈を渡すための情報（無くても動作する） */
+  lessonId?: string;
+  lessonTitle?: string;
+  subject?: SubjectKey;
+  examType?: 'chugaku' | 'koko';
 };
 
 // 本文に直接書かれた罫線の図（┌─┐│└┘ を使った枠や樹形図）は、
@@ -141,6 +147,10 @@ export default function LessonRenderer({
   formulaUnlockProductReady = false,
   purchasingFigureId = null,
   onUnlockFormula,
+  lessonId,
+  lessonTitle,
+  subject,
+  examType,
 }: Props) {
   const visibleSections = isMax ? sections : sections.filter((s) => !s.maxOnly);
 
@@ -203,7 +213,12 @@ export default function LessonRenderer({
             })()}
             {section.mangaId != null && (() => {
               const script = getMangaScript(section.mangaId);
-              return script != null ? <MangaDialogue script={script} /> : null;
+              return script != null ? (
+                <MangaDialogue
+                  script={script}
+                  context={{ lessonId, lessonTitle, subject, examType }}
+                />
+              ) : null;
             })()}
             {/* 「何の問題を解いているか分からない」を防ぐため、公式集は
                 その公式の例題・応用問題をこの場に出す。ロック中のセクションは

@@ -33,3 +33,7 @@ exports.getMyRanking = ranking.getMyRanking;
 // ── 公式集(¥50)・新規追加単元(¥100)の買い切り解放（RevenueCatの購入実績をサーバー側で検証） ──
 const contentUnlock = require("./contentUnlock");
 exports.unlockContent = contentUnlock.unlockContent;
+
+// ── 保護者向けフィードバック（感想・要望をSlackへ通知） ──────────────────
+const feedback = require("./feedback");
+exports.sendFeedback = feedback.sendFeedback;
