@@ -492,6 +492,7 @@ import { figuresKoushikiOyoK2Heikou } from './figures-koushiki-oyo-k2heikou';
 import { figuresKoushikiOyoK1Godo } from './figures-koushiki-oyo-k1godo';
 import { figuresKoushikiOyoC5Kakudo } from './figures-koushiki-oyo-c5kakudo';
 import { figuresQuizAdd01 } from './figures-quiz-add01';
+import { figuresSansuGap7 } from './figures-sansu-gap-7';
 
 export const figures: Record<string, Figure> = {
   ...figuresKoushikiOyoC3Tairyoku1,
@@ -592,6 +593,7 @@ export const figures: Record<string, Figure> = {
   ...figuresGradeJ2Rika,
   ...figuresGradeJ3Rika,
   ...figuresQuizAdd01,
+  ...figuresSansuGap7,
 };
 
 export function getFigure(questionId: string): Figure | null {
