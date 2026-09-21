@@ -31,6 +31,7 @@ export const kokoMathExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: '等式の性質と移項のしくみ',
+        mangaId: 'koko_math_s081_ikkoushiki_manga',
         body: `方程式とは、まだわからない数 x をふくむ等式のことである。その等式を成り立たせる x の値を「解」といい、解を求めることを「方程式を解く」という。
 
 ■ 等式の性質（すべての式変形の根拠）
@@ -1043,6 +1044,7 @@ x が15より小さい（人数が少ない）とき、5x+12 のほうが 6x−3
     sections: [
       {
         heading: '比例式の性質',
+        mangaId: 'koko_math_s091_hireishiki_manga',
         body: `2つの比が等しいことを表した式を比例式という。a:b=c:d の形で書き、次の性質が成り立つ。
 
 ■ 外項の積＝内項の積

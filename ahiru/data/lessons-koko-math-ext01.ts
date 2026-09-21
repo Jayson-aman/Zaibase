@@ -29,6 +29,7 @@ export const kokoMathExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '正の数・負の数と数直線',
+        mangaId: 'koko_math_s001_suuchokusen_manga',
         body: `小学校では0と、0より大きい数だけを扱ってきた。中学ではこれに「0より小さい数」が加わる。
 
 ■ 符号のついた数
@@ -117,6 +118,7 @@ export const kokoMathExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '同符号どうし・異符号どうし',
+        mangaId: 'koko_math_s002_kahou_manga',
         body: `正負の数の加法は、次の2つの場合に分けて考えれば必ず答えが出る。
 
 ■ 同符号どうしの和（＋と＋、−と−）
@@ -299,6 +301,7 @@ export const kokoMathExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '積と商の符号',
+        mangaId: 'koko_math_s004_jouhou_manga',
         body: `乗法と除法の符号の決まりは、まったく同じである。
 
 ■ 2つの数の場合
@@ -1058,6 +1061,7 @@ x²×x³ は「足して x⁵」、(x²)³ は「かけて x⁶」。
     sections: [
       {
         heading: '素因数分解で求める',
+        mangaId: 'koko_math_s012_gcdlcm_manga',
         body: `■ 求め方
 2つの数を素因数分解し、素因数ごとに指数を比べる。
 　72＝2³×3²

@@ -30,6 +30,7 @@ export const kokoMathExt04Lessons: Lesson[] = [
     sections: [
       {
         heading: '比例とは何か',
+        mangaId: 'koko_math_s121_hirei_manga',
         body: `2つの量 x、y があって、x の値が決まると y の値がただ1つ決まるとき、y は x の関数であるという。そのうち、y＝ax（a は0でない定数）と書けるものを「y は x に比例する」といい、a を比例定数とよぶ。
 
 ■ 比例を見分ける3つの言い方
@@ -202,6 +203,7 @@ a は「x が1増えたときの y の増え方」を表している。y＝2x �
     sections: [
       {
         heading: '反比例の式と判定',
+        mangaId: 'koko_math_s123_hanpirei_manga',
         body: `y が x の関数で、y＝a/x（a は0でない定数）と表せるとき、「y は x に反比例する」といい、a を比例定数という。
 
 ■ 3つの言いかえ
