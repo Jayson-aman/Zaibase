@@ -1208,6 +1208,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '同じ川がつくる、まったくちがう2つの地形',
+        mangaId: 'shakai_s019_senjouchi_manga',
         body: `1本の川は、場所によって性格の異なる地形をつくる。上流と下流の対比で覚えるのがこつである。
 
 ■ 扇状地（せんじょうち）

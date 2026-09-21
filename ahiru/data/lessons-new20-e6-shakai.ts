@@ -657,6 +657,7 @@ export const lessonsNew20E6Shakai: Lesson[] = [
     sections: [
       {
         heading: '1. 200海里体制と遠洋漁業の衰退',
+        mangaId: 'new20_e6_shakai_14_eez_manga',
         body: `■ 排他的経済水域（EEZ）とは
 海岸線（沿岸）から200海里（約370km）以内の海域では、沿岸国が水産資源や海底の鉱物資源を優先的に利用できる権利を持つ。これを排他的経済水域（EEZ）と呼び、1970年代以降、世界の多くの国が200海里体制を主張するようになった。
 
