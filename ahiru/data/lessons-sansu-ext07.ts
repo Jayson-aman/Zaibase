@@ -121,6 +121,7 @@ export const sansuExt07Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 樹形図で全部の場合を書き出す',
+        mangaId: 'sansu_s242_jukeizu_manga',
         body: `樹形図（じゅけいず）は、1回目の結果から枝分かれさせて2回目、3回目…と書き足していく図です。数が少ない問題では、樹形図を描けば「もれ・重なり」を防いで確実に数えられます。
 
 ■ 例題：コインを3回投げる

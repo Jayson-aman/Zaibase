@@ -1064,6 +1064,7 @@ export const sansuExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '素因数分解の手順',
+        mangaId: 'sansu_s012_soinsuu_manga',
         body: `整数を、これ以上分けられない素数だけのかけ算の形に表すことを「素因数分解」といいます。
 
 ■ 手順（小さい素数から順に割っていく）
@@ -1160,6 +1161,7 @@ export const sansuExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '約数の個数を求める公式',
+        mangaId: 'sansu_s013_yakusuu_manga',
         figureId: 'sext01_s013',
         body: `素因数分解さえできれば、すべての約数を書き出さなくても個数を計算で求められます。
 
@@ -2658,6 +2660,7 @@ N進法では、0からN−1までのN種類の数字だけを使い、同じ位
     sections: [
       {
         heading: '周期算の基本の考え方',
+        mangaId: 'sansu_s029_shuukisan_manga',
         figureId: 'sext01_s029',
         body: `同じパターンが一定の個数ごとにくり返される問題を「周期算」といいます。「何番目が何か」を求めるには、周期の個数でわり算してあまりを見ます。
 
@@ -2751,6 +2754,7 @@ N進法では、0からN−1までのN種類の数字だけを使い、同じ位
     sections: [
       {
         heading: '曜日の計算（7日周期）',
+        mangaId: 'sansu_s030_youbi_manga',
         figureId: 'sext01_s030',
         body: `曜日は「日・月・火・水・木・金・土」の7日で1周する周期です。何日後の曜日は、日数を7で割ったあまりを使って求めます。
 

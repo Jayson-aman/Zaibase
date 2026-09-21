@@ -21,6 +21,7 @@ export const sansuExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '等差数列の基本',
+        mangaId: 'sansu_s276_touasuuretsu_manga',
         figureId: 'lf_ext08_01',
         body: `等差数列（とうさすうれつ）とは、となり合う項どうしの差（公差）がつねに一定になっている数列のことです。
 
