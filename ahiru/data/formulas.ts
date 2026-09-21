@@ -4,6 +4,7 @@
 // 各教科のデータは data/formulas-*.ts に分割。ここで一つにまとめる。
 import type { FormulaSection } from './formulas-types';
 import { sansuFormulas } from './formulas-sansu';
+import { sansuTsuikaFormulas } from './formulas-sansu-tsuika';
 import { kokoSugakuFormulas } from './formulas-koko-sugaku';
 import { rikaFormulas } from './formulas-rika';
 import { rikaButsuriKagakuFormulas } from './formulas-rika-butsuri-kagaku';
@@ -30,7 +31,7 @@ export const SUBJECTS: { key: Subject; emoji: string; color: string }[] = [
 // 買い切り（locked: true）の別ファイルにして後ろに連結する。既存ファイルを
 // 編集しないので、無料だった項目が誤って有料になることがない。
 export const FORMULAS: Record<Subject, FormulaSection[]> = {
-  算数: [...sansuFormulas, ...kokoSugakuFormulas],
+  算数: [...sansuFormulas, ...sansuTsuikaFormulas, ...kokoSugakuFormulas],
   国語: [...kokugoFormulas, ...kokoKokugoFormulas],
   理科: [...rikaFormulas, ...rikaButsuriKagakuFormulas, ...kokoRikaFormulas],
   社会: [...shakaiFormulas, ...shakaiTsuikaFormulas, ...kokoShakaiFormulas],
