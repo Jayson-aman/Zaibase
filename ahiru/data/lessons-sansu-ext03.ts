@@ -24,6 +24,7 @@ export const sansuExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: '速さの三角形と3つの公式',
+        mangaId: 'sansu_s086_hayasa_manga',
         body: `速さ・きょり・時間はいつも次の三角形の関係で結びついています。
 
 　　　　きょり
@@ -2539,6 +2540,7 @@ A から B までのきょりは、下っても上っても同じです。下り
     sections: [
       {
         heading: '長針・短針の動く速さ',
+        mangaId: 'sansu_s113_tokei_manga',
         figureId: 'lf_hayasa_113',
         body: `時計算は「長針と短針の動く速さの違い」を利用した速さの応用問題です。
 

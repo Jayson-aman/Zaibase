@@ -578,6 +578,7 @@ AP を延長して m と交わらせると、できる三角形の外角とし�
     sections: [
       {
         heading: '(n－2)×180°の公式',
+        mangaId: 'sansu_s132_naikaku_manga',
         figureId: 'lf_sansu_ext04_132',
         body: `四角形は対角線1本で三角形2つに分かれ、内角の和は180×2＝360°でした。この考え方を辺の数が多い多角形に広げると、便利な公式ができます。
 
@@ -674,6 +675,7 @@ n 角形の 1 つの頂点 A から対角線を引くとき、A 自身と、A �
     sections: [
       {
         heading: '外角の和はいつも360°',
+        mangaId: 'sansu_s133_gaikaku_manga',
         figureId: 'lf_sansu_ext04_133',
         body: `内角の和は辺の数が増えるとどんどん大きくなりましたが、外角の和は違います。凸多角形（へこみのない多角形）なら、辺の数に関係なくいつも360°になります。
 
@@ -764,6 +766,7 @@ n 角形の 1 つの頂点 A から対角線を引くとき、A 自身と、A �
     sections: [
       {
         heading: '正多角形の1つの内角・外角の求め方',
+        mangaId: 'sansu_s134_seitakaku_manga',
         figureId: 'lf_sansu_ext04_134',
         body: `正多角形（すべての辺・角が等しい多角形）では、内角の和・外角の和をそれぞれの角の数nで割ると、1つあたりの角度が求められます。
 

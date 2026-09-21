@@ -2216,6 +2216,7 @@ DC（3）＞ BD（2）なので ADC ＞ ABD。24 ＞ 16 ✓。
     sections: [
       {
         heading: '高さの比＝面積比（底辺が共通なとき）',
+        mangaId: 'sansu_s185_takasa_hi_manga',
         figureId: 'lf_ext05_185',
         body: `三角形ABDの底辺の比と同じように、底辺が共通な2つの三角形では、高さの比がそのまま面積比になります。ただし、この関係が使えるのは「底辺が共通」なときだけです。
 
