@@ -939,6 +939,7 @@ S波が到着してから始まる大きなゆれ。記録紙では急に振幅�
     sections: [
       {
         heading: '比例することを式で導く',
+        mangaId: 'koko_rika_s392_pswave_manga',
         body: `震源距離を d（km）、P波の速さを vP、S波の速さを vS とする。波が届くまでの時間は「距離÷速さ」なので、
 
 　P波の到達時間 ＝ d ÷ vP

@@ -1445,6 +1445,7 @@ k＝2.5と分かれば、
     sections: [
       {
         heading: '平行四辺形の法則',
+        mangaId: 'koko_rika_s052_gouseihou_manga',
         body: `2力が角度をなしている場合、合力は次の手順で作図する。
 
 ■ 作図の手順

@@ -2642,6 +2642,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '明るさで場合分けする',
+        mangaId: 'koko_rika_s334_koukyuu_manga',
         body: `気体の出入りは、光合成量と呼吸量の大小で決まる。3つの場合に整理できる。
 
 ■ ① 明るいとき（光合成量＞呼吸量）
@@ -2960,6 +2961,7 @@ BTB溶液に息を吹きこんで緑色にし、オオカナダモを入れた�
       },
       {
         heading: '水を捨てることの三つの意味',
+        mangaId: 'koko_rika_s337_jousann_manga',
         body: `せっかく吸い上げた水を空へ捨てるのは、一見むだである。しかし植物にとって次の3つの利点がある。
 
 ■ ① 水と無機養分を引き上げる（もっとも重要）
