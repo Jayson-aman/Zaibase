@@ -1471,6 +1471,7 @@ nation→national→nationally→nationality のように、一つの語幹か�
       {
         heading: '3. 間接疑問文（疑問詞の後は肯定文の語順）',
         level: 'oyo',
+        mangaId: 'koko_eigo_07_subjunctive_kansetsu_manga',
         body: `■ 間接疑問文とは
 疑問文が文の一部（目的語など）に組み込まれた形。
   例）Where does he live?（彼はどこに住んでいますか）＝独立した疑問文

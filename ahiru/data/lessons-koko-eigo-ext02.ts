@@ -1573,6 +1573,7 @@ call him・marry her・enter the room で前置詞が要らないのは、これ
       },
       {
         heading: '動詞によって決まる ing と to の使い分け',
+        mangaId: 'koko_eigo_s053_doumeishi_manga',
         body: `動名詞と不定詞のどちらをとるかは、動詞ごとに決まっている。丸暗記が必要な部分なので、グループで覚える。
 
 ■ 動名詞だけをとる動詞

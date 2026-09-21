@@ -810,6 +810,7 @@ must は現在にしか使えないので、過去・未来・他の助動詞と
       },
       {
         heading: 'must と have to の意味のちがい',
+        mangaId: 'koko_eigo_s155_musthaveto_manga',
         body: `二つとも「〜しなければならない」と訳せるが、どこから来た義務なのかが違う。
 
 ■ must＝話し手の中から出てくる義務

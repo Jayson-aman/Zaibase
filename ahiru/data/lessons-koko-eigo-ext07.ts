@@ -451,6 +451,7 @@ good/well → better → best、bad/ill → worse → worst、many/much → more
       },
       {
         heading: 'なぜ音節数と語尾で -er 型か more 型かが決まるのか',
+        mangaId: 'koko_eigo_s221_hikaku_manga',
         body: `-er／-est を付けると語が長くなるので、英語はもともと短い語（一音節）には -er を付け、長い語（三音節以上）には前に more／most を置いて発音しやすくしてきました。二音節の語はその境目にあり、**語尾が軽い音**（-y・-er・-le・-ow）なら -er を付けても言いやすいので -er 型、-ful・-ous・-ing・-ed・-ive のように**それ自体が重い接尾語**なら more 型になります。だから famous は二音節でも more famous、pretty は二音節でも prettier です。
 
 文字数と音節数がちがうことに注意します。great は5文字でも一音節、busy は4文字でも二音節です。quiet・polite・common のように両方の形が使える語もあり、整序英作文では語群に more があるかで判断します。

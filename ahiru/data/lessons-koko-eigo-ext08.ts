@@ -52,6 +52,7 @@ not を to の前に置く。
       {
         heading: '三つの用法の見取り図',
         figureId: 'lf_kokoeigoext08_256',
+        mangaId: 'koko_eigo_s256_futeishi_manga',
         body: `同じ to＋原形でも、文の中でどの品詞のはたらきをしているかで三つに分かれる。訳し方が違うのではなく、はたらきが違うから訳が変わる、という順序で理解する。
 
 ■ 名詞的用法（〜すること）
@@ -3182,6 +3183,7 @@ enjoy のうしろは -ing、という知識がそのまま語順の決め手に
     sections: [
       {
         heading: 'する側か、される側か',
+        mangaId: 'koko_eigo_s292_bunshi_manga',
         body: `分詞とは、動詞に -ing や -ed を付けて形容詞のように使う形をいう。どちらを使うかは、修飾される名詞との関係で決まる。
 
 ■ 現在分詞（-ing）＝「〜している」

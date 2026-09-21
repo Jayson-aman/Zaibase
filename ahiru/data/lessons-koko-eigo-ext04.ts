@@ -405,6 +405,7 @@ live は状態に近いが動作としても扱えるため、I have lived here 
       {
         heading: '4通りの言いかえを1本の数直線で見る',
         figureId: 'lf_kokoeigoext04_115',
+        mangaId: 'koko_eigo_s115_genzaikanryo_manga',
         body: `次の4文はすべて同じ状況を表している。試験ではこの間の書きかえが問われる。
 
 ① He died five years ago.（彼は5年前に亡くなった）
@@ -2062,6 +2063,7 @@ lose（なくす）→ not have（持っていない）
     sections: [
       {
         heading: '受動態の形と意味',
+        mangaId: 'koko_eigo_s132_judotai_manga',
         body: `英語の文は、動作を「する側」を主語にするか「される側」を主語にするかで2通りに書ける。
 
 ■ 能動態（する側が主語）

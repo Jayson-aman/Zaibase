@@ -591,6 +591,7 @@ whose のあとに a／the を付けないのは、whose が his と同じ所有
       {
         heading: '判定は「直後を見る」だけ',
         figureId: 'lf_kokoeigoext09_302',
+        mangaId: 'koko_eigo_s302_kankei_manga',
         body: `関係代名詞の格は、次の一点だけで決まる。
 
 ■ 直後が動詞（助動詞を含む）→ 主格
