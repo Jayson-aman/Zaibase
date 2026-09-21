@@ -385,6 +385,7 @@ A→mAは1000倍（小数点を右に3けた）、mA→Aは1000分の1（小数�
     sections: [
       {
         heading: '直列回路の電流の規則',
+        mangaId: 'koko_rika_s075_chokuretsu_manga',
         body: `直列回路では、電流の大きさが回路のどの場所でも等しい。式で書くと
 
 　I ＝ I₁ ＝ I₂ ＝ …
@@ -845,6 +846,7 @@ A→mAは1000倍（小数点を右に3けた）、mA→Aは1000分の1（小数�
     sections: [
       {
         heading: '並列回路の電圧の規則',
+        mangaId: 'koko_rika_s080_heiretsu_manga',
         body: `並列回路では、どの枝にかかる電圧も電源の電圧に等しい。
 
 　V ＝ V₁ ＝ V₂ ＝ …
@@ -1292,6 +1294,7 @@ A→mAは1000倍（小数点を右に3けた）、mA→Aは1000分の1（小数�
     sections: [
       {
         heading: '実験のしかたと測定データ',
+        mangaId: 'koko_rika_s085_ohm_manga',
         body: `電熱線に加える電圧を少しずつ大きくしながら、流れる電流を測る実験を行う。
 
 ■ 装置のつなぎ方
