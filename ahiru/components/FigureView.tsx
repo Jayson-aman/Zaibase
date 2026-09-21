@@ -335,6 +335,9 @@ function PolygonFig({ fig }: { fig: PolyFigure }) {
       />,
     );
     if (sg.label) els.push(<SvgText key={`xsl${k}`} x={(a.x + b.x) / 2 + 6} y={(a.y + b.y) / 2 - 4} fontSize={11} fill={INK}>{sg.label}</SvgText>);
+    // 補助線の端点そのものにラベルを付ける（交点など、多角形の頂点ではない点に名前を振りたいとき用）
+    if (sg.from.label) els.push(<SvgText key={`xsfl${k}`} x={a.x + 6} y={a.y - 6} fontSize={12} fill={INK} fontWeight="bold">{sg.from.label}</SvgText>);
+    if (sg.to.label) els.push(<SvgText key={`xstl${k}`} x={b.x + 6} y={b.y - 6} fontSize={12} fill={INK} fontWeight="bold">{sg.to.label}</SvgText>);
   });
 
   // 対角線
