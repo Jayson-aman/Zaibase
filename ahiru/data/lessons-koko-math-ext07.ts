@@ -348,6 +348,7 @@ export const kokoMathExt07Lessons: Lesson[] = [
     sections: [
       {
         heading: '相似の証明の型',
+        mangaId: 'koko_math_s235_soujimeisho_manga',
         body: `相似の証明は、書く順番が決まっている。型どおりに書けば、思いつきがなくても点になる。
 
 （証明）

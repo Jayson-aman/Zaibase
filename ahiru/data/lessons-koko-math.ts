@@ -199,6 +199,7 @@ y = 2x − 1 … ①
         heading: '5. 二次方程式（因数分解・解の公式）',
         level: 'oyo',
         figureId: 'lf_kmath_02',
+        mangaId: 'koko_math_01_equation_kaisho_manga',
         body: `二次方程式 ax² + bx + c = 0 の解き方は 3 種類ある。
 
 ■ 方法①：因数分解
@@ -248,6 +249,7 @@ ax² + bx + c = 0 のとき
         heading: '6. 二次方程式の応用・文章題',
         level: 'moshi',
         figureId: 'lf_kmath_90',
+        mangaId: 'koko_math_01_equation_ouyou_manga',
         body: `二次方程式の文章題は「変数設定 → 式を立てる → 解く → 不適な解を除く」の 4 ステップ。
 
 ■ 連続する整数の問題
@@ -281,12 +283,11 @@ ax² + bx + c = 0 のとき
 ⚠ 注意：「正の整数」「0 以上」などの条件を見落とすと減点。問題文の制約を下線で目立たせる習慣を。
 
 📝 入試問題例（大阪府公立入試型）
-道路の幅が 3m の十字型の道路を除いた花壇の面積が 91m²。正方形の公園の一辺の長さを求めよ（一辺 x m の正方形から十字道路部分を引く）。
-　花壇面積 = x² − 3x − 3x + 9 = x² − 6x + 9 = (x − 3)²…ではなく
-　実際は：x² − (3x + 3x − 9) = x² − 6x + 9 = 91
-　x² − 6x − 82 = 0
-　x = (6 ± √(36 + 328))/2 = (6 ± √364)/2 ≒ (6 ± 19.1)/2
-　→ x ≒ 12.5m（概算）`,
+道路の幅が 3m の十字型の道路を除いた花壇の面積が 100m²。正方形の公園の一辺の長さを求めよ（十字の道路を端に寄せると、残った花壇はちょうど一辺 (x−3) m の正方形になる）。
+　一辺 x m の正方形から、幅 3m の道路2本（十字型）を除く。道路を端に寄せて考えれば、残りは一辺 (x − 3) m の正方形になる。
+　(x − 3)² = 100
+　x − 3 = 10（x > 3 より正の値を選ぶ）
+　x = 13m`,
       },
       {
         heading: '7. まとめ・解法選択チャート',
@@ -442,6 +443,7 @@ ax² + bx + c = 0 のとき
         heading: '4. 二次関数 y = ax²',
         level: 'oyo',
         figureId: 'lf_kmath_05',
+        mangaId: 'koko_math_02_function_niji_manga',
         body: `二次関数は「放物線」を描く。頂点・軸・広がり方を理解することがカギ。
 
 ■ 基本形：y = ax²（頂点が原点の放物線）
@@ -471,6 +473,7 @@ ax² + bx + c = 0 のとき
         heading: '5. 二次関数と直線の交点・面積',
         level: 'moshi',
         figureId: 'lf_kmath_06',
+        mangaId: 'koko_math_02_function_kouten_manga',
         body: `放物線と直線・放物線と放物線の交点を求め、面積を計算する問題は入試最頻出。
 
 ■ 放物線と直線の交点
@@ -642,6 +645,7 @@ y = ax² において、x が m から n に変化するときの変化の割合
         heading: '3. 相似比・面積比・体積比',
         level: 'oyo',
         figureId: 'lf_kmath_08',
+        mangaId: 'koko_math_03_figure_plane_soujihi_manga',
         body: `相似な図形の辺・面積・体積の比は「相似比の累乗」で求められる。
 
 ■ 相似比・面積比・体積比の関係
@@ -674,6 +678,7 @@ y = ax² において、x が m から n に変化するときの変化の割合
         heading: '4. 円の性質（円周角・接線・弦）',
         level: 'oyo',
         figureId: 'lf_kmath_09',
+        mangaId: 'koko_math_03_figure_plane_enshuukaku_manga',
         body: `円の定理は入試で最頻出のひとつ。定理と逆の定理を両方使いこなす。
 
 ■ 円周角の定理

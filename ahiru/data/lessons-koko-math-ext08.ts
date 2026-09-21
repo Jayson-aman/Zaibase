@@ -375,6 +375,7 @@ S＝πr²×ℓ/(2πr)＝ℓr/2。
       },
       {
         heading: '円周角になれるのは円周上の点だけ',
+        mangaId: 'koko_math_s280_enshuukaku_ten_manga',
         body: `円周角の定理が使えるのは、角の頂点が円周上にある場合に限られる。
 
 ■ 内部の点・外部の点
@@ -897,6 +898,7 @@ MA＝MBだから△MABは二等辺三角形、MA＝MCだから△MACも二等辺
     sections: [
       {
         heading: '弧が等しい ⇔ 円周角が等しい',
+        mangaId: 'koko_math_s287_kotoshii_enshuukaku_manga',
         body: `1つの円（または半径の等しい円）では、次の3つはすべて同じことを言っている。
 
 　　弧が等しい ⇔ 中心角が等しい ⇔ その弧に対する円周角が等しい
