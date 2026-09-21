@@ -222,6 +222,7 @@ export const sansuExt02Lessons: Lesson[] = [
     sections: [
       {
         heading: '「の」と「より」で基準量を見抜く',
+        mangaId: 'sansu_s043_motoni_manga',
         body: `基準量（もとにする量）の見極めは割合の全単元で最も重要な技術です。パターン別に確認しましょう。
 
 ■ パターン①：「〇〇の」
@@ -504,6 +505,7 @@ export const sansuExt02Lessons: Lesson[] = [
     sections: [
       {
         heading: '分数・小数・百分率の変換',
+        mangaId: 'sansu_s046_hyakubunritsu_manga',
         figureId: 'lf_ext02_004',
         body: `同じ割合を3通りの方法で表せます。相互の変換をスムーズにできるようにしましょう。
 
@@ -595,6 +597,7 @@ A 候補 540 票、B 候補 660 票、合計 1,200 票。
     sections: [
       {
         heading: '割・分・厘と打率の例',
+        mangaId: 'sansu_s047_buai_manga',
         figureId: 'lf_ext02_005',
         body: `野球の打率など、日本では「割・分・厘」という独自の歩合表記がよく使われます。
 
@@ -1322,6 +1325,7 @@ B池を 10 に分けると A池は 14。A池 2,800L が 14 なら 1 は 200L、B
     sections: [
       {
         heading: '比の意味と最も簡単な整数比',
+        mangaId: 'sansu_s055_hi_manga',
         figureId: 'lf_ext02_010',
         body: `比は「2つ以上の量の大きさを比べる」ときに使います。割合が「1つの量の相対的な大きさ」を表すのに対し、比は「複数の量どうしの関係」をそのまま表現します。
 
@@ -1576,6 +1580,7 @@ B池を 10 に分けると A池は 14。A池 2,800L が 14 なら 1 は 200L、B
     sections: [
       {
         heading: '比を保つ操作、保たない操作',
+        mangaId: 'sansu_s058_hi_seishitsu_manga',
         body: `比の性質を正しく使えるようになりましょう。「掛ける・割る」はOKですが「足す・引く」はNGです。
 
 ■ 比を保つ操作（OK）
@@ -1664,6 +1669,7 @@ a:b＝c:d なら、c:d は a:b の両方を同じ数 k 倍したもの（c＝a×
     sections: [
       {
         heading: '逆比が使われる代表的な場面',
+        mangaId: 'sansu_s059_gyakuhi_manga',
         figureId: 'lf_ext02_012',
         body: `「同じ量」に対して2つの数量が反対の動きをするとき、それらの比は逆比になります。
 
@@ -2120,6 +2126,7 @@ a:b＝c:d が成り立つとき、c:d は a:b の両方を同じ数（k とす�
     sections: [
       {
         heading: '連比の基本と配分の手順',
+        mangaId: 'sansu_s064_renhi_manga',
         figureId: 'lf_ext02_014',
         body: `A:B:Cのように3つの量を1つの比で表したものを連比といいます。手順は2つの量の比のときと同じです。
 
