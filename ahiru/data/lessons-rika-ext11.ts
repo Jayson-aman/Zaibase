@@ -1120,6 +1120,7 @@ export const rikaExt11Lessons: Lesson[] = [
       {
         heading: '星の日周運動のしくみと速さ',
         figureId: 'rf11_s383',
+        mangaId: 'rika_s383_nichishuunuundou_manga',
         body: `星座を形づくる星は、太陽と同じように地球の自転によって、東からのぼり西へ沈むように見える。これを星の日周運動という。
 
 ■ 動く速さ：地球は24時間で360°自転するので、星は1時間に360÷24＝15°動いて見える。

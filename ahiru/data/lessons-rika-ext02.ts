@@ -21,6 +21,7 @@ export const rikaExt02Lessons: Lesson[] = [
       {
         heading: '1. こん虫のからだの3つの部分',
         figureId: 'rext02_036',
+        mangaId: 'rika_s036_konchu_manga',
         body: `こん虫のからだは、頭部・胸部・腹部という3つの部分に分かれている。この3分割こそが「こん虫のなかま」であることを見分ける最も基本の条件である。
 
 ■ 3つの部分とその役割

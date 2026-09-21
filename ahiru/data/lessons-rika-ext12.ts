@@ -463,6 +463,7 @@ export const rikaExt12Lessons: Lesson[] = [
       {
         heading: '1. 離れた地点の柱状図を比べる（対比）',
         figureId: 'lf_rika_ext12_418',
+        mangaId: 'rika_s418_taihi_manga',
         body: `離れた場所にある2つの柱状図を比べて、「同じ時期にできた地層」がどれとどれかを見きわめることを、地層の対比（たいひ）という。対比は、地下の地層のつながりを知るうえでとても重要である。
 
 ■ 岩石の種類だけで対比してはいけない

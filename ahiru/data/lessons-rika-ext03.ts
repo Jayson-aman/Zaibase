@@ -226,6 +226,7 @@ export const rikaExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: '食物連鎖が絡み合う「食物網」',
+        mangaId: 'rika_s079_shokumotsumou_manga',
         body: `実際の生態系では、1種類の生物が1種類の生物だけを食べたり、1種類の生物だけに食べられたりすることはほとんどない。多くの食物連鎖が網の目のように絡み合ったつながりを「食物網（しょくもつもう）」という。
 
 ■ 食物網の具体例

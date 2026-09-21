@@ -27,6 +27,7 @@ import { mangaScriptsEigoChugaku1 } from './manga-scripts-eigo-chugaku1';
 import { mangaScriptsKokoRikaButsuriSeibutsu1 } from './manga-scripts-koko-rika-butsuri-seibutsu1';
 import { mangaScriptsKokoShakaiChirishi1 } from './manga-scripts-koko-shakai-chirishi1';
 import { mangaScriptsSansuChugaku2 } from './manga-scripts-sansu-chugaku2';
+import { mangaScriptsRikaChugaku2 } from './manga-scripts-rika-chugaku2';
 
 const ALL_MANGA_SCRIPTS: Record<string, MangaScript> = {
   ...mangaScriptsKoushikiK3Souji,
@@ -56,6 +57,7 @@ const ALL_MANGA_SCRIPTS: Record<string, MangaScript> = {
   ...mangaScriptsKokoRikaButsuriSeibutsu1,
   ...mangaScriptsKokoShakaiChirishi1,
   ...mangaScriptsSansuChugaku2,
+  ...mangaScriptsRikaChugaku2,
 };
 
 export function getMangaScript(id: string): MangaScript | undefined {

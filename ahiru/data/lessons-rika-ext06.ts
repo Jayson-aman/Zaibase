@@ -1905,6 +1905,7 @@ export const rikaExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '音の反射（やまびこ）の基本',
+        mangaId: 'rika_s203_onhansha_manga',
         body: `音も光と同じように、壁や山などの障害物に当たると反射する。山に向かって大声を出すと、少し遅れて自分の声が聞こえてくることがある。これがやまびこ（反響・エコー）である。
 
 ■ やまびこが起こるしくみ
