@@ -2513,6 +2513,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
     sections: [
       {
         heading: '摂関政治のしくみ',
+        mangaId: 'koko_shakai_s183_sekkan_manga',
         body: `10世紀から11世紀にかけて、藤原氏が摂政・関白として政治を動かした体制を摂関政治という。
 
 ■ 権力の作り方

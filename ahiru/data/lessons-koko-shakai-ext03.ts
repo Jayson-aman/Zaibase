@@ -1354,6 +1354,7 @@ export const kokoShakaiExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: 'なぜ海ぞいに並んだのか',
+        mangaId: 'koko_shakai_s092_taiheiyoubelt_manga',
         body: `日本の工業は、関東南部から東海・近畿・瀬戸内をへて九州北部にいたる帯状の地域に集中している。これを太平洋ベルトという。
 
 ■ 集中した理由

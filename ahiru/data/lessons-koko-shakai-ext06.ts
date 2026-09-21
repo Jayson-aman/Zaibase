@@ -425,6 +425,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '御恩と奉公の向きを固定する',
+        mangaId: 'koko_shakai_s196_gonhoukou_manga',
         body: `鎌倉幕府の支配は、将軍と御家人が結ぶ一対一の約束の積み重ねでできている。この約束の中身が御恩と奉公である。
 
 ■ 御恩（将軍 → 御家人）

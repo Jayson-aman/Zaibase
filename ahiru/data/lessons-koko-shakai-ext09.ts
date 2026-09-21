@@ -1501,6 +1501,7 @@ export const kokoShakaiExt09Lessons: Lesson[] = [
       },
       {
         heading: 'なぜ成長できたのか',
+        mangaId: 'koko_shakai_s326_koudoseichou_manga',
         body: `高度経済成長は、いくつもの条件が重なって実現した。
 
 ■ 内側の条件

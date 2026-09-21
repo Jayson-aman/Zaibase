@@ -679,6 +679,7 @@ export const kokoShakaiExt07Lessons: Lesson[] = [
       },
       {
         heading: '兵農分離とその後',
+        mangaId: 'koko_shakai_s234_heinoubunri_manga',
         body: `太閤検地（1582年〜）と刀狩（1588年）は、セットで一つの効果を生んだ。
 
 ■ 兵農分離
@@ -1315,6 +1316,7 @@ export const kokoShakaiExt07Lessons: Lesson[] = [
     sections: [
       {
         heading: '禁教の理由と段階',
+        mangaId: 'koko_shakai_s242_kinkyousakoku_manga',
         body: `家康ははじめ貿易の利益を重んじてキリスト教を黙認していたが、しだいに危険視するようになった。
 
 ■ なぜ禁じたのか

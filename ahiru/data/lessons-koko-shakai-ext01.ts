@@ -387,6 +387,7 @@ export const kokoShakaiExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '時差が生まれるしくみと計算手順',
+        mangaId: 'koko_shakai_s005_jisa_manga',
         body: `地球は西から東へ自転しているため、東にある地点ほど早く朝を迎える。この差を国ごとに整理したのが標準時である。
 
 ■ なぜ15度で1時間なのか
@@ -611,6 +612,7 @@ export const kokoShakaiExt01Lessons: Lesson[] = [
       },
       {
         heading: '緯度だけでは決まらない——三つの修正要素',
+        mangaId: 'koko_shakai_s007_kikoutai_manga',
         body: `気候帯は緯度でおおまかに決まるが、実際の分布は次の三つでずれる。
 
 ■ ①海流と風
