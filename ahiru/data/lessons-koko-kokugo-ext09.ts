@@ -118,6 +118,7 @@ export const kokoKokugoExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '語順のちがいが返り点を生んだ',
+        mangaId: 'koko_kokugo_s307_kanbun_manga',
         body: `漢文の基本の並びは、主語→述語→目的語である。
 
 例）我讀書　→　我 書を読む

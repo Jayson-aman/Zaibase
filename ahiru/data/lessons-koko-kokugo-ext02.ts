@@ -561,6 +561,7 @@ export const kokoKokugoExt02Lessons: Lesson[] = [
       },
       {
         heading: '第二のものさし――活用するかしないか',
+        mangaId: 'koko_kokugo_s041_katsuyou_manga',
         body: `活用とは、あとに続く語によって単語の形（語尾）が規則的に変わることをいう。
 
 ■ 確かめ方
@@ -1089,6 +1090,7 @@ Q7 前後をつなぐか
     sections: [
       {
         heading: '六つの活用形と下に続く語',
+        mangaId: 'koko_kokugo_s053_katsuyoukei_manga',
         body: `活用形は必ず次の順に並べて覚える。順番ごと暗記していないと、活用表のどの欄を答えればよいのか分からなくなる。
 
 ①未然形……あとに「ナイ・ヌ・ウ・ヨウ・レル・セル」が続く。まだ起きていない意味。
@@ -2912,6 +2914,7 @@ Q7 前後をつなぐか
     sections: [
       {
         heading: '四用法と判定の順序',
+        mangaId: 'koko_kokugo_s072_no_shikibetsu_manga',
         body: `■ ①主語を作る「の」
 連体修飾部の中で主語を作る。「が」に置きかえられるのが決め手。
 例）私の　書いた　手紙　＝私が書いた手紙
@@ -3316,6 +3319,7 @@ Q7 前後をつなぐか
     sections: [
       {
         heading: '三つの敬語と選び方',
+        mangaId: 'koko_kokugo_s076_keigo_manga',
         body: `■ 尊敬語――相手の動作を高める
 主語が目上の人・お客様・先生などのとき。
 例）先生が　いらっしゃる。／校長先生が　おっしゃる。／お客様が　召し上がる。

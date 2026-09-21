@@ -320,6 +320,7 @@ const kokoKokugoOverviewLessons: Lesson[] = [
       },
       {
         heading: '3. 助動詞の意味識別',
+        mangaId: 'koko_kokugo_02_grammar_jodoshi_manga',
         level: 'oyo',
         body: `助動詞は同じ形でも複数の意味を持つ場合があります。文脈による識別が入試で頻出です。
 

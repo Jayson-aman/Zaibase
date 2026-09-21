@@ -527,6 +527,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '「をかし」＝明るく知的な感動',
+        mangaId: 'koko_kokugo_s272_wokashi_manga',
         body: `「をかし」は現代仮名遣いでは「おかし」と読むが、意味は現代語の「おかしい」とは大きくちがう。
 
 ■ 意味
@@ -1293,6 +1294,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '何が省かれるのか',
+        mangaId: 'koko_kokugo_s280_shouryaku_manga',
         body: `古文で省かれるのは、主に次の三つである。
 
 ■ ①主語
@@ -1843,6 +1845,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '係り結びのしくみ',
+        mangaId: 'koko_kokugo_s286_kakarimusubi_manga',
         body: `ふつう、古文の文は終止形で終わる。ところが文中に特定の助詞（係助詞）があると、文末は終止形ではない形になる。この対応を係り結びという。
 
 ■ 四つの係助詞と結び
