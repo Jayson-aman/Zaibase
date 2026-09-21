@@ -381,6 +381,7 @@ export const kokugoExt10Lessons: Lesson[] = [
       },
       {
         heading: '2. 主語と述語のねじれ',
+        mangaId: 'kokugo_s355_nejire_manga',
         body: `文が長くなると、書き始めた主語を忘れて、対応しない述語で終わってしまいます。これを「ねじれ」といいます。
 
 ■ ねじれの例と直し方
@@ -1669,6 +1670,7 @@ Bで「他人の頭で考える練習だということ。」と書いても、�
     sections: [
       {
         heading: '1. 比喩を開く三段階',
+        mangaId: 'kokugo_s370_hiyu_manga',
         body: `比喩の言いかえは、次の三段階で進めます。
 
 ①何をたとえているのか（対象）を決める
@@ -2561,6 +2563,7 @@ AとBは並列（両方起きる）であり、Aが原因でBが起きるとも�
     sections: [
       {
         heading: '1. 行動を心情語に翻訳する',
+        mangaId: 'kokugo_s380_shinjougo_manga',
         body: `物語文では、心情がそのまま書かれていないことがよくあります。
 
 ■ 翻訳の例

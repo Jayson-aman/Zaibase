@@ -3154,6 +3154,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '二重敬語とは何か',
+        mangaId: 'kokugo_s223_nijuukeigo_manga',
         body: `二重敬語とは、1つの動作について同じ種類の敬語を2つ以上重ねてしまう誤りである。
 
 ■ 尊敬語の二重敬語

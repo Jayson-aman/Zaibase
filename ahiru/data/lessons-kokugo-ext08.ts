@@ -488,6 +488,7 @@ export const kokugoExt08Lessons: Lesson[] = [
       },
       {
         heading: '2. 接続語に印をつけながら読む',
+        mangaId: 'kokugo_s277_setsuzokugo_manga',
         body: `説明文を読むときは、接続語に記号をつけながら進むと、構造が目に見えるようになります。
 
 【おすすめの記号】

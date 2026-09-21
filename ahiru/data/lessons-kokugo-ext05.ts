@@ -3316,6 +3316,7 @@ export const kokugoExt05Lessons: Lesson[] = [
       {
         heading: '1. 係り受けを図にして解く',
         figureId: 'lf_kk05_187',
+        mangaId: 'kokugo_s187_kakariuke_manga',
         body: `【問題】「妹が大きな声で笑う。」について、文の成分と係り受けを答えなさい。
 
 ■ 手順
