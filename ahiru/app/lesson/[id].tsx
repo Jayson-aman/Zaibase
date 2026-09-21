@@ -115,22 +115,24 @@ export default function LessonDetailScreen() {
     <SafeAreaView style={styles.container}>
       {/* Header */}
       <View style={[styles.header, { backgroundColor: info.color }]}>
-        <View style={styles.headerTopRow}>
-          <TouchableOpacity onPress={() => router.back()} style={styles.backRow}>
-            <Text style={styles.backArrow}>← </Text>
-            <Text style={styles.backLabel}>{info.name}</Text>
-          </TouchableOpacity>
-          <HomeButton variant="light" />
-        </View>
-        <Text style={styles.lessonTitle}>{lesson.title}</Text>
-        <Text style={styles.lessonDesc}>{lesson.description}</Text>
-        {hasMaxContent && (
-          <View style={[styles.tier, isMax ? styles.tierMax : styles.tierPro]}>
-            <Text style={styles.tierText}>
-              {isMax ? '⭐ MAX — 深堀り解説含む' : '📘 PRO — 標準解説'}
-            </Text>
+        <View style={styles.headerInner}>
+          <View style={styles.headerTopRow}>
+            <TouchableOpacity onPress={() => router.back()} style={styles.backRow}>
+              <Text style={styles.backArrow}>← </Text>
+              <Text style={styles.backLabel}>{info.name}</Text>
+            </TouchableOpacity>
+            <HomeButton variant="light" />
           </View>
-        )}
+          <Text style={styles.lessonTitle}>{lesson.title}</Text>
+          <Text style={styles.lessonDesc}>{lesson.description}</Text>
+          {hasMaxContent && (
+            <View style={[styles.tier, isMax ? styles.tierMax : styles.tierPro]}>
+              <Text style={styles.tierText}>
+                {isMax ? '⭐ MAX — 深堀り解説含む' : '📘 PRO — 標準解説'}
+              </Text>
+            </View>
+          )}
+        </View>
       </View>
 
       <ScrollView style={styles.scroll} contentContainerStyle={styles.content}>
@@ -318,7 +320,8 @@ const styles = StyleSheet.create({
   tierMax: { backgroundColor: 'rgba(251,191,36,0.3)' },
   tierText: { fontSize: 11, color: '#FFFFFF', fontWeight: '800', letterSpacing: 0.2 },
   scroll: { flex: 1 },
-  content: { padding: 16, paddingBottom: 56 },
+  content: { padding: 16, paddingBottom: 56, width: '100%', maxWidth: 720, alignSelf: 'center' },
+  headerInner: { width: '100%', maxWidth: 720, alignSelf: 'center' },
   lockedBanner: {
     backgroundColor: '#FAF6EF',
     borderRadius: 12,
