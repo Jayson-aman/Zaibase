@@ -357,6 +357,7 @@ export const kokoRikaExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: 'イオンの定義と二つの種類',
+        mangaId: 'koko_rika_s270_ion_manga',
         body: `原子や原子の集団が電子を失ったり受け取ったりして、電気を帯びた粒子になったものをイオンという。
 
 ■ 陽イオン（＋のイオン）
@@ -1964,6 +1965,7 @@ Zn ＋ Cu²⁺ → Zn²⁺ ＋ Cu
     sections: [
       {
         heading: '電池が成り立つ条件',
+        mangaId: 'koko_rika_s288_denchi_manga',
         body: `うすい塩酸に、亜鉛板と銅板を入れて導線でつなぐと、電流が流れて豆電球がつく。これがもっとも簡単な化学電池である。
 
 ■ 必要な三つの条件
@@ -2897,6 +2899,7 @@ H⁺ の数が多いほど反応が速いためである。
     sections: [
       {
         heading: '中和で何が起きているか',
+        mangaId: 'koko_rika_s298_chuwa_manga',
         body: `酸の水溶液とアルカリの水溶液を混ぜると、たがいの性質を打ち消し合う。これを中和という。
 
 ■ 中和の本体

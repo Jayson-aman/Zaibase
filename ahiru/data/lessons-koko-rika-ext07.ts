@@ -29,6 +29,7 @@ export const kokoRikaExt07Lessons: Lesson[] = [
     sections: [
       {
         heading: '原子とは何か',
+        mangaId: 'koko_rika_s226_genshi_manga',
         body: `物質を細かく切っていくと、やがて「これ以上切ったらその物質ではなくなる」限界の粒にたどりつく。この粒を原子という。
 
 ■ 原子の三つの性質（入試で必ず問われる）
@@ -101,6 +102,7 @@ export const kokoRikaExt07Lessons: Lesson[] = [
     sections: [
       {
         heading: '分子という単位',
+        mangaId: 'koko_rika_s227_bunshi_manga',
         figureId: 'lf_kokorikaext07_227',
         body: `原子はふつう、単独でばらばらに存在するのではなく、いくつか結びついて集団をつくっている。この集団のうち、その物質の性質を示す最小のまとまりを分子という。
 
@@ -1815,6 +1817,7 @@ Fe:S＝7:4、Cu:O＝4:1、Mg:O＝3:2 のように、質量比は物質の組み�
     sections: [
       {
         heading: '酸化のいろいろ',
+        mangaId: 'koko_rika_s247_sanka_manga',
         body: `■ 激しい酸化（燃焼）
 ・マグネシウム：2Mg ＋ O₂ → 2MgO（白い強い光）
 ・水素：2H₂ ＋ O₂ → 2H₂O（ポンと音を立てる）
@@ -1984,6 +1987,7 @@ Fe:S＝7:4、Cu:O＝4:1、Mg:O＝3:2 のように、質量比は物質の組み�
     sections: [
       {
         heading: '酸化銅と炭素の反応',
+        mangaId: 'koko_rika_s249_kangen_manga',
         figureId: 'lf_kokorikaext07_249',
         body: `■ 手順
 ①黒色の酸化銅の粉末と、炭素（活性炭・木炭）の粉末をよく混ぜる。

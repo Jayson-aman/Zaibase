@@ -821,6 +821,7 @@ export const kokoRikaExt13Lessons: Lesson[] = [
       },
       {
         heading: '未反応が残る場合と、質量保存',
+        mangaId: 'koko_rika_s459_shitsuryouhozon_manga',
         body: `■ 途中までしか反応しなかった場合
 加熱が足りないと、銅の一部が未反応のまま残る。
 
