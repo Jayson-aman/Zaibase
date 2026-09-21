@@ -1445,6 +1445,7 @@ n は最小のものだけでなく「2番目に小さい n」も問われる。
     sections: [
       {
         heading: '単項式と多項式',
+        mangaId: 'koko_math_s016_tankou_manga',
         body: `■ 単項式
 数や文字をかけ合わせただけの式を単項式という。
 　3x　−5a²b　　7　　x
@@ -1634,6 +1635,7 @@ n は最小のものだけでなく「2番目に小さい n」も問われる。
     sections: [
       {
         heading: '同類項とは',
+        mangaId: 'koko_math_s018_doururuikou_manga',
         body: `■ 定義
 文字の部分がまったく同じである項どうしを同類項という。
 　3x と −5x → 同類項
@@ -3273,6 +3275,7 @@ n＝0, 1, 2, … だけでなく、n＝−1, −2, … も入れてよいので�
     sections: [
       {
         heading: '連続する整数のおき方',
+        mangaId: 'koko_math_s034_renzoku_manga',
         body: `■ 真ん中を n とおく
 連続する3つの整数を n、n+1、n+2 とおいても解けるが、真ん中を n として
 　n−1、n、n+1
@@ -3658,6 +3661,7 @@ n と n+1 は連続する2つの整数なので、どちらか一方は必ず偶
     sections: [
       {
         heading: '平方根とは',
+        mangaId: 'koko_math_s038_heihoukon_manga',
         body: `■ 定義
 2乗すると a になる数を、a の平方根という。
 　3²＝9、(−3)²＝9 なので、9 の平方根は +3 と −3 の2つ。

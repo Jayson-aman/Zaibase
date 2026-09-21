@@ -1368,6 +1368,7 @@ x=0 なら定数項だけを見ればよいので、最も速い検算になる�
     sections: [
       {
         heading: '和と積のしくみ',
+        mangaId: 'koko_math_s056_tenkai2_manga',
         body: `(x+a)(x+b) を分配法則で展開すると
 x²+bx+ax+ab=x²+(a+b)x+ab
 となる。つまり中央のxの係数は a と b の和、定数項は積である。
@@ -1459,6 +1460,7 @@ x=1 を代入すると (x+a)(x+b)=(1+a)(1+b)、展開結果は 1+(a+b)+ab。両�
     sections: [
       {
         heading: '2乗の展開と面積図',
+        mangaId: 'koko_math_s057_tenkai3_manga',
         body: `(a+b)² は (a+b)(a+b) のことであり、分配法則で展開すると
 a²+ab+ba+b²=a²+2ab+b²
 となる。同じ ab が2つ出るので、中央の項は2abである。
@@ -2232,6 +2234,7 @@ x=√2+1、y=√2−1 のとき (x+y)²−(x−y)²
     sections: [
       {
         heading: '因数分解と共通因数',
+        mangaId: 'koko_math_s065_kyoutuuinsu_manga',
         body: `多項式をいくつかの式の積の形に表すことを因数分解という。展開とはちょうど逆向きの操作である。
 　　展開：3x(2x+3)=6x²+9x
 　　因数分解：6x²+9x=3x(2x+3)
@@ -2528,6 +2531,7 @@ x²+4 はこれ以上分解できない（2乗の和は因数分解できない�
     sections: [
       {
         heading: '2数の探し方',
+        mangaId: 'koko_math_s068_wasekiiten_manga',
         body: `(x+a)(x+b)=x²+(a+b)x+ab の逆をたどるのが、この形の因数分解である。「かけて定数項、たして1次の係数」になる2数を探す。
 
 ■ 探す順序

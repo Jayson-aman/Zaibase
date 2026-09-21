@@ -2559,6 +2559,7 @@ AB＝AC の二等辺三角形ABCで、頂点Aから底辺BCに垂線ADを引く�
     sections: [
       {
         heading: '定義と性質を分けて覚える',
+        mangaId: 'koko_math_s220_heikoushihenkei_manga',
         body: `■ 定義
 平行四辺形とは、2組の対辺がそれぞれ平行な四角形である。これは約束（定義）なので証明の必要はなく、証明の出発点として使う。
 
