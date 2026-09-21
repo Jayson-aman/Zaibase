@@ -1844,6 +1844,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: 'なぜ大仏をつくったのか',
+        mangaId: 'shakai_s206_daibutsu_manga',
         body: `聖武天皇が位についていた8世紀前半、日本はたび重なる災いに見まわれていた。
 ・干ばつやききんによる飢え
 ・天然痘の大流行（政権の中心にいた藤原四兄弟が相次いで亡くなった）
