@@ -381,6 +381,7 @@ I wish ＋ 仮定法過去完了：「〜だったらよかったのになぁ」
       },
       {
         heading: '3. 人称代名詞と格変化',
+        mangaId: 'eigo_02_daimeishi_manga',
         body: `人称代名詞は文の中での役割（格）によって形が変わる。入試では空欄補充で格を選ぶ問題が頻出。
 
 ■ 格変化一覧表
@@ -417,6 +418,7 @@ myself / yourself / himself / herself / itself / ourselves / yourselves / themse
       },
       {
         heading: '4. 指示代名詞・不定代名詞',
+        mangaId: 'eigo_02_shiji_daimeishi_manga',
         body: `■ 指示代名詞
 ・this（これ）/ that（あれ）→ 単数
 ・these（これら）/ those（あれら）→ 複数
@@ -1890,6 +1892,7 @@ She is → She's ／ It is → It's ／ We are → We're ／ They are → They'r
       },
       {
         heading: '2. 一般動詞の使い方と三人称単数のs',
+        mangaId: 'eigo_08_sanninshou_manga',
         body: `一般動詞は「動作や状態」を表す動詞。be動詞（am/is/are）以外の動詞はすべて一般動詞だ。
 
 ■ 一般動詞の例
@@ -1929,6 +1932,7 @@ study（勉強する）／ run（走る）／ eat（食べる）／ read（読�
       },
       {
         heading: '3. 否定文の作り方（〜でない・〜しない）',
+        mangaId: 'eigo_08_hitei_manga',
         body: `「〜ではない」「〜しない」という否定文の作り方は、be動詞と一般動詞でまったく違う。ここを区別するのが最重要。
 
 ■ be動詞の否定文：be動詞のあとに not を置く
@@ -2317,6 +2321,7 @@ why のくだけた言い方。ただし語順がふつうの文（主語＋動�
     sections: [
       {
         heading: '1. can の使い方（能力・可能）',
+        mangaId: 'eigo_10_can_manga',
         body: `can は「〜できる」という意味を表す言葉。動詞を助ける働きをするので「助動詞（じょどうし）」と呼ばれる。
 
 ■ can の基本の形
@@ -2832,6 +2837,7 @@ on a bus / on a train / on a plane（広く移動できる乗り物：乗って�
       },
       {
         heading: '2. 時を表す前置詞（at / on / in / for / during）',
+        mangaId: 'eigo_12_zenchishi_manga',
         body: `時を表す前置詞は「範囲の広さ」で使い分けるとわかりやすい。狭い範囲から広い範囲の順に整理しよう。
 
 ■ at・on・in の使い分け（時刻・曜日・月）
@@ -3039,6 +3045,7 @@ The cat is popular (   ) students in our school. (between / among)
     sections: [
       {
         heading: '1. 比較級・最上級の作り方',
+        mangaId: 'eigo_13_hikaku_manga',
         body: `「AはBより〜だ」「Aがいちばん〜だ」という比較の表現は、形容詞・副詞の形を変えて作る。まずは基本の作り方のルールを整理しよう。
 
 ■ 語尾に-er / -estをつけるパターン（原則：1音節の短い語）
@@ -3511,6 +3518,7 @@ There is/are と似た形でHere is/areがある。「ここに〜がある」�
       },
       {
         heading: '2. 進行形にしない動詞（状態動詞）',
+        mangaId: 'eigo_15_joutaidoushi_manga',
         body: `一般動詞には「動作」を表すものと「状態・気持ち」を表すものがあり、後者（状態動詞）は原則として進行形にしない。入試で頻出のひっかけポイント。
 
 ■ 状態動詞の代表例（進行形にしない）
@@ -4567,6 +4575,7 @@ Emma: You can text him. He always checks his phone.
     sections: [
       {
         heading: '1. 複数形の作り方（つづりの変化ルール）',
+        mangaId: 'eigo_20_fukusuu_manga',
         body: `名詞を複数形にするときのつづりの変化には、いくつかのパターンがある。ルールを整理して確実に書けるようにしよう。
 
 ■ 基本パターン：そのまま-sをつける
