@@ -422,6 +422,7 @@ H₂Oの2は「右下（添字）」で、直前の原子が2個という意味�
     sections: [
       {
         heading: '添字と係数の意味',
+        mangaId: 'koko_rika_s231_kagakushiki_manga',
         body: `化学式に出てくる数字は、書かれる位置によってまったく意味がちがう。
 
 ■ 添字（右下の小さい数字）
@@ -688,6 +689,7 @@ Ag₂O → Ag ＋ (1/2)O₂ のように分数が出たら、式全体を2倍し
     sections: [
       {
         heading: '手順を使って作る',
+        mangaId: 'koko_rika_s234_hannoushiki_manga',
         figureId: 'lf_kokorikaext07_234',
         body: `■ 例題1：水の電気分解
 ①化学式を書く　H₂O → H₂ ＋ O₂
@@ -2342,6 +2344,7 @@ Fe₂O₃ ＋ 3CO → 2Fe ＋ 3CO₂
     sections: [
       {
         heading: '沈殿ができる反応で確かめる',
+        mangaId: 'koko_rika_s253_shitsuryouhozon_manga',
         body: `■ 実験
 ①炭酸ナトリウム水溶液と塩化カルシウム水溶液を、それぞれ別のビーカーに用意する。
 ②両方をのせたまま、全体の質量をはかる（反応前）。

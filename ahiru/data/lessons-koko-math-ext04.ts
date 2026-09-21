@@ -459,6 +459,7 @@ kg と g、分と時間、cm と m が混ざっている問題が多い。式を
     sections: [
       {
         heading: '一次関数の定義',
+        mangaId: 'koko_math_s126_ichijikansuu_manga',
         body: `y が x の関数で、y＝ax+b（a、b は定数、a≠0）と表せるとき、y は x の一次関数であるという。右辺が「x の一次式」になっているのがポイントである。
 
 ■ 一次関数であるもの
@@ -546,6 +547,7 @@ kg と g、分と時間、cm と m が混ざっている問題が多い。式を
     sections: [
       {
         heading: '傾きとは何か',
+        mangaId: 'koko_math_s127_katamuki_manga',
         body: `一次関数 y＝ax+b の a を傾きという。傾きは「x が1増えたときに y がどれだけ増えるか」を表す。
 
 ■ 整数の傾き
@@ -890,6 +892,7 @@ b<0 … y軸の原点より下で交わる
     sections: [
       {
         heading: '変化の割合の定義',
+        mangaId: 'koko_math_s131_henkanowariai_manga',
         body: `x の値が変化したとき、それに対して y の値がどれくらいの割合で変化するかを表す量を「変化の割合」という。
 
 　変化の割合 ＝ (y の増加量) ÷ (x の増加量)

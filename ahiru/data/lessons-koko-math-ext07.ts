@@ -2265,6 +2265,7 @@ BD＝BC×AB/(AB＋AC)、DC＝BC×AC/(AB＋AC)
     sections: [
       {
         heading: '三平方の定理とは',
+        mangaId: 'koko_math_s257_sanpeihou_manga',
         figureId: 'lf_kokomathext07_257',
         body: `直角三角形において、直角をはさむ2辺の長さを a、b、斜辺の長さを c とすると
 　a² ＋ b² ＝ c²
@@ -2449,6 +2450,7 @@ b²＝c²−a²＝(c＋a)(c−a) と因数分解すると、大きな数の2乗�
     sections: [
       {
         heading: '逆の使い方と手順',
+        mangaId: 'koko_math_s259_gyaku_manga',
         body: `三平方の定理は「直角三角形ならば a²＋b²＝c²」。その逆は「a²＋b²＝c² ならば直角三角形」であり、これも正しい。
 
 ■ 判定の手順
@@ -3269,11 +3271,12 @@ AH＝DIより 25−x²＝74−(7−x)² → 25−x²＝74−49＋14x−x² → 2
     sections: [
       {
         heading: '距離の公式と使い方',
+        mangaId: 'koko_math_s268_kyoridistance_manga',
         figureId: 'lf_kokomathext07_268',
         body: `座標平面上の2点A(x₁, y₁)、B(x₂, y₂)について、Aを通りx軸に平行な直線と、Bを通りy軸に平行な直線の交点をCとすると、△ABCは∠C＝90°の直角三角形になる。
 
-　AC＝／x₂−x₁／（横の長さ）
-　BC＝ … x₂−x₁はy₂−y₁／（横の長さ）は（縦の長さ）
+　AC＝|x₂−x₁|（横の長さ）
+　BC＝|y₂−y₁|（縦の長さ）
 　AB＝√((x₂−x₁)²＋(y₂−y₁)²)
 
 例）A(1, 2)、B(4, 6)
