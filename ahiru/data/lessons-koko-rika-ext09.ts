@@ -141,6 +141,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
       },
       {
         heading: '受粉と受精はちがう／果実に見えて果実でないもの',
+        mangaId: 'koko_rika_s307_juseijuka_manga',
         body: `■ 受粉と受精を区別する
 ・受粉 … 花粉が柱頭につく。外側で起こる物理的なできごと。
 ・受精 … 精細胞の核と卵細胞の核が合体する。子房の中の胚珠で起こる。

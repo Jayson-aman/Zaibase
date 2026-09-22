@@ -2358,6 +2358,7 @@ U字形磁石を上下逆にする、あるいは磁石そのものを裏返し�
     sections: [
       {
         heading: '直流と交流のちがい',
+        mangaId: 'koko_rika_s139_chokuryuukouryuu_manga',
         body: `■ 直流（DC）
 電流の向きが一定で変わらない電流。大きさも通常は一定である。オシロスコープで見ると、横軸に平行な直線になる。
 

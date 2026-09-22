@@ -2674,6 +2674,7 @@ V＝IR を代入すると
       },
       {
         heading: '電力と電力量のちがいを区別する',
+        mangaId: 'koko_rika_s099_denryokuryou_manga',
         body: `■ 電力（W）＝勢い、電力量（J・Wh）＝総量
 　・電力：1秒あたりに使うエネルギー。器具の性能を表す。
 　・電力量：実際に使った合計。時間が長いほど大きくなる。
@@ -3441,6 +3442,7 @@ V＝IR を代入すると
     sections: [
       {
         heading: 'なぜ並列につなぐのか',
+        mangaId: 'koko_rika_s107_denatsukei_manga',
         body: `電圧計は、回路のある部分の両端にかかる電圧を測る器具である。
 
 ■ 並列につなぐ理由
