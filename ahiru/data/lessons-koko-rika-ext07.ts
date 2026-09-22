@@ -1478,6 +1478,7 @@ B：一様な黒色。もとの色は残っていない。
     sections: [
       {
         heading: '結果の表から判断する',
+        mangaId: 'koko_rika_s243_manga',
         body: `■ 典型的な出題形式
 試験管A・Bに同じ混合物を入れ、Bだけを加熱した。冷えたあとの結果は次のとおりだった。
 　　　　　　　｜A　　　　　　　｜B
@@ -1652,6 +1653,7 @@ Fe:S＝7:4、Cu:O＝4:1、Mg:O＝3:2 のように、質量比は物質の組み�
     sections: [
       {
         heading: 'マグネシウムの燃焼',
+        mangaId: 'koko_rika_s245_manga',
         figureId: 'lf_kokorikaext07_245',
         body: `■ 実験
 マグネシウムリボンをピンセットではさみ、ガスバーナーの炎に近づけると、まぶしい白色の光を出して燃える。燃えたあとには白い粉末（酸化マグネシウム）が残る。
@@ -3074,6 +3076,7 @@ NaHCO₃ ＋ HCl → NaCl ＋ H₂O ＋ CO₂
     sections: [
       {
         heading: '解き方の型',
+        mangaId: 'koko_rika_s261_manga',
         body: `■ 例題1
 銅1.6gを加熱したところ、1.9gになった。反応した銅と未反応の銅はそれぞれ何gか。
 

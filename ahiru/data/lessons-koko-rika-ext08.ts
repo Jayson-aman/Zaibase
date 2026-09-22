@@ -551,6 +551,7 @@ export const kokoRikaExt08Lessons: Lesson[] = [
       },
       {
         heading: '水酸化物イオンをまちがえない',
+        mangaId: 'koko_rika_s272_manga',
         body: `陰イオンの中でもっとも書き誤りが多いのが水酸化物イオンである。
 
 ■ 正しい書き方は OH⁻
@@ -1063,6 +1064,7 @@ CuSO₄ → Cu²⁺ ＋ SO₄²⁻
     sections: [
       {
         heading: '極の名前と電子の流れ',
+        mangaId: 'koko_rika_s278_manga',
         body: `電気分解の問題でつまずく原因のほとんどは、極の名前と向きの混乱である。ここを一度で整理する。
 
 ■ 極の名前の決め方
@@ -1705,6 +1707,7 @@ Mg ＋ 2HCl → MgCl₂ ＋ H₂
     sections: [
       {
         heading: '表から順位を決める手順',
+        mangaId: 'koko_rika_s285_manga',
         body: `金属A・B・Cと、それぞれの硫酸塩水溶液を組み合わせた実験を考える。○は反応あり、×は反応なしとする。
 
 ■ 実験結果の例
@@ -3045,6 +3048,7 @@ HCl ＋ NaOH → NaCl ＋ H₂O
       },
       {
         heading: '沈殿ができる中和',
+        mangaId: 'koko_rika_s299_manga',
         body: `塩には、水によくとけるものと、ほとんどとけないものがある。とけない塩ができると、その場で白いにごり（沈殿）が現れる。
 
 ■ 沈殿になる代表例
@@ -3607,6 +3611,7 @@ V字型のグラフになる。
     sections: [
       {
         heading: 'グラフの形を一覧で整理する',
+        mangaId: 'koko_rika_s305_manga',
         body: `うすい酸に、うすいアルカリを少しずつ加えていく実験のグラフを整理する。横軸はすべて「加えたアルカリの体積」である。
 
 ■ 塩酸＋水酸化ナトリウム水溶液（塩が水にとける）
