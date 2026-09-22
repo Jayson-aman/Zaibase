@@ -2327,6 +2327,7 @@ How far is it from here to the station?（ここから駅までどれくらい�
       },
       {
         heading: 'なぜ by bus には冠詞が付かず、なぜ「歩いて」は on foot なのか',
+        mangaId: 'eigo_s364_bybus_manga',
         body: `by bus の bus は、**特定のバス（あのバス）ではなく「バスという手段」**を表しています。手段として言うときは、どのバスかは問題にしないので、a も the も付けません。特定の乗り物の中にいることを言うときは、in a car・on the train のように in／on と冠詞を使います。「歩いて」が on foot なのは、walk が動詞であって乗り物の名前ではないからです。by のあとに置けるのは乗り物の名前だけで、足（foot）を使う手段は on foot という決まった形になります。
 
 get on と get in を分けるのは、乗り物の**大きさと形**によります。バス・電車のように中で立てる乗り物、自転車のようにまたがる乗り物には on、車・タクシーのように屋根のある小さな乗り物には in。降りるときも get off／get out of と対になります。

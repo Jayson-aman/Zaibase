@@ -1284,6 +1284,7 @@ B: They are books.（本だよ）
       },
       {
         heading: 'なぜ this と that、these と those を分けるのか',
+        mangaId: 'new20_e4_eigo_16_manga',
         body: `英語では、ものを指すときに**話し手からの距離**と**数**の二つを言葉で区別します。近くにあれば this、離れていれば that。日本語の「これ・あれ」と同じ区別です。さらに、指すものが二つ以上なら these・those と形が変わり、答えの It's 〜. も They are 〜. に変わります。日本語では「これ」と「これら」をあまり使い分けませんが、英語では単数と複数で文の形が全部変わるので、対応表で整理しておきます。
 
 What's が What is の短縮形なのは、会話では短く言うほうが自然だからです。答えの a と an は、次の語が母音（a・i・u・e・o の音）で始まるかどうかで決まります（an apple・an orange）。
@@ -1575,6 +1576,7 @@ Find a friend who can whistle.（口笛をふける友達を見つけよう）�
       },
       {
         heading: 'なぜ can のあとは原形で、なぜ Can you? に can で答えるのか',
+        mangaId: 'new20_e4_eigo_20_manga',
         body: `can は「〜できる」という意味を動詞に**足す**語（助動詞）です。主語に合わせて形を変える役目は can が引き受けるので、あとの動詞はそのままの形（原形）でよく、He can swim. のように三人称でも s を付けません。s や ing を付けるのは、can が「動詞のかわりに形を担当している」ことを忘れているからです。
 
 たずねる文が Can you swim? と can を主語の前に出す形なのは、be動詞の疑問文（Are you 〜?）と同じ作り方です。答えは、質問に使った can をくり返して Yes, I can. / No, I can't. と言います。can't は cannot の短縮形で、それ自体に打ち消しが入っています。
