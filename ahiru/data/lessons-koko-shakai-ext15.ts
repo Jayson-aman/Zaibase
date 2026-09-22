@@ -2364,6 +2364,7 @@ export const kokoShakaiExt15Lessons: Lesson[] = [
     sections: [
       {
         heading: '対にして確かめる',
+        mangaId: 'koko_shakai_s521_manga',
         body: `■ 人権
 ・自由権（国に邪魔されない）⇔ 社会権（国に保障してもらう）
 ・平等権（差別されない）⇔ 参政権（政治に参加する）⇔ 請求権（不当な扱いを正す）
