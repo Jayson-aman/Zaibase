@@ -52,6 +52,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
       },
       {
         heading: 'めしべとおしべの細かい名称',
+        mangaId: 'koko_rika_s306_manga',
         body: `入試で問われるのは、大きな4部分よりも、めしべ・おしべの内部の名称である。
 
 ■ めしべの三つの部分
@@ -302,6 +303,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: 'マツの雄花と雌花',
+        mangaId: 'koko_rika_s309_manga',
         body: `マツの花には、がく・花弁がなく、おしべ・めしべという形もとらない。かわりに、うろこのような「りんぺん」が軸のまわりに集まった形をしている。
 
 ■ つく位置
@@ -2299,6 +2301,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
       },
       {
         heading: '結果の解釈と、書き方の注意',
+        mangaId: 'koko_rika_s330_manga',
         body: `■ Aが青くなった理由
 光が当たっているので、オオカナダモは光合成と呼吸の両方を行っている。しかし光合成でとりこむ二酸化炭素のほうが、呼吸で出す二酸化炭素より多いので、差し引きで溶液中の二酸化炭素が減り、青色になる。
 
@@ -3046,6 +3049,7 @@ BTB溶液に息を吹きこんで緑色にし、オオカナダモを入れた�
     sections: [
       {
         heading: '4つの装置がそれぞれ何を測っているか',
+        mangaId: 'koko_rika_s338_manga',
         body: `■ 装置のつくり方
 同じ植物から、葉の枚数・大きさがそろった枝を4本切り取る。それぞれをワセリンの塗り方を変えて、同量の水を入れたメスシリンダーにさす。水面には油を薄く広げる。
 

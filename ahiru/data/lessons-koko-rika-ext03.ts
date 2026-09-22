@@ -138,6 +138,7 @@ export const kokoRikaExt03Lessons: Lesson[] = [
       },
       {
         heading: 'まぎらわしい図の読み方',
+        mangaId: 'koko_rika_s072_manga',
         body: `入試で差がつくのは、直列か並列かが一目でわからない図である。次の三つのパターンを押さえておく。
 
 ■ 部品が上下に並んで描かれている
