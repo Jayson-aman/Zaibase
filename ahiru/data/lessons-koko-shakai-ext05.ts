@@ -1969,6 +1969,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
       },
       {
         heading: '荘園の誕生と公地公民の終わり',
+        mangaId: 'koko_shakai_s176_manga',
         body: `墾田永年私財法は、田を増やして税収を確保するための現実的な政策であった。しかし結果は朝廷の思惑を超えて進む。
 
 ■ 誰が開墾できたのか

@@ -1013,6 +1013,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '御家人はなぜ困窮したのか',
+        mangaId: 'koko_shakai_s203_manga',
         body: `元寇後の御家人の没落は、三つの原因が重なって起きた。
 
 ■ ①恩賞が出せない

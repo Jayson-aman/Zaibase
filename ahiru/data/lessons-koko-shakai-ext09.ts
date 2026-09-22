@@ -1210,6 +1210,7 @@ export const kokoShakaiExt09Lessons: Lesson[] = [
       },
       {
         heading: '冷戦の構造',
+        mangaId: 'koko_shakai_s322_manga',
         body: `大戦中は協力していたアメリカとソ連だったが、戦後は体制のちがいから対立を深めた。直接戦火を交えないまま続いた厳しい対立を、冷たい戦争（冷戦）という。
 
 ■ 対立の始まり

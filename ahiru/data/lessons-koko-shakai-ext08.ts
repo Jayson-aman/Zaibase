@@ -235,6 +235,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: 'なぜイギリスから始まったのか',
+        mangaId: 'koko_shakai_s269_manga',
         body: `18世紀後半、イギリスで機械による大量生産が始まった。これを産業革命という。始まりの分野は綿工業である。
 
 ■ イギリスに条件がそろっていた
@@ -312,6 +313,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: 'アヘン戦争と南京条約',
+        mangaId: 'koko_shakai_s270_manga',
         body: `イギリスは清から茶・絹・陶磁器を大量に買っていたが、売る品が少なく銀が清へ流出していた。そこでイギリスは、植民地のインドで作らせた麻薬のアヘンを清に売り、その代金で茶を買うという三角貿易を始めた。
 
 清ではアヘン中毒が広がり銀が流出したため、政府は取りしまりを強化してアヘンを没収・処分した。これを口実にイギリスが軍艦を送り、1840年にアヘン戦争が起きた。近代兵器をもつイギリスに清は敗れる。
@@ -1833,6 +1835,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '対立の背景',
+        mangaId: 'koko_shakai_s290_manga',
         body: `朝鮮は長く清に朝貢する関係にあった。日本は1876年の日朝修好条規で朝鮮を開国させて以来、経済的・政治的な進出を強め、清と衝突するようになる。
 
 ■ 朝鮮国内の対立
