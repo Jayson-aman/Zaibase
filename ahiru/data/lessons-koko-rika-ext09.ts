@@ -932,6 +932,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: 'からだのつくりと仮根',
+        mangaId: 'koko_rika_s316_manga',
         body: `コケ植物は、陸上の植物の中でもっとも単純なつくりをしている。
 
 ■ ないもの
