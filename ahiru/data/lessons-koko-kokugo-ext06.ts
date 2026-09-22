@@ -2278,6 +2278,7 @@ export const kokoKokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '情景は心情の言いかえ',
+        mangaId: 'koko_kokugo_s218_joukeishinjou_manga',
         body: `文学的文章では、人物の気持ちが「悲しかった」「うれしかった」と書かれることは意外に少ない。かわりに置かれるのが情景描写である。
 
 ■ なぜ情景で書くのか

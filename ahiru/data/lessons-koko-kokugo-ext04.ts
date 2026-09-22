@@ -29,6 +29,7 @@ export const kokoKokugoExt04Lessons: Lesson[] = [
     sections: [
       {
         heading: '対比を示す五つの目印',
+        mangaId: 'koko_kokugo_s121_taihi_medium_manga',
         body: `説明的文章は、筆者の主張を読者に納得させるために書かれている。「Aである」とだけ言われても読者はぴんとこないが、「Bではなく、Aである」と言われると輪郭がはっきりする。この「Bではなく」の部分が対比である。
 
 ■ 目印①　対比の接続語
@@ -2764,6 +2765,7 @@ Aの後にBが起きたことを、Aが原因だと決めつける。
     sections: [
       {
         heading: '要約・要旨・大意の区別',
+        mangaId: 'koko_kokugo_s151_youyaku_manga',
         body: `似た言葉が並ぶので、まず整理しておく。設問がどれを求めているかで書き方が変わる。
 
 ■ 要約

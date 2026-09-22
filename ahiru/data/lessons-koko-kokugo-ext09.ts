@@ -33,6 +33,7 @@ export const kokoKokugoExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '漢文とは「中国語を日本語で読む技術」',
+        mangaId: 'koko_kokugo_s306_kanbun4dankai_manga',
         body: `漢文は中国の古典に書かれた文章、つまり古い中国語である。しかし高校入試で問われるのは中国語の力ではなく、それを日本語として読みくだす「訓読」の作法である。
 
 ■ 四つの形を行き来する
@@ -505,6 +506,7 @@ export const kokoKokugoExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '漢詩の形式',
+        mangaId: 'koko_kokugo_s311_kanshi_manga',
         body: `漢詩は字数と句数で名前が決まる。ここを問う設問は毎年どこかの高校で出る。
 
 ■ 四つの型
