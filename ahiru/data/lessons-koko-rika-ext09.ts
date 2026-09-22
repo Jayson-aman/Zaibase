@@ -2460,6 +2460,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '限定要因という考え方',
+        mangaId: 'koko_rika_s332_manga',
         body: `■ もっとも不足しているものが決める
 光合成には、光・二酸化炭素・水・適温がすべて必要である。このうち、もっとも不足している条件が全体の速さを決める。これを限定要因という。
 

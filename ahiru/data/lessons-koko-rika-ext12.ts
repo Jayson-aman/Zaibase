@@ -903,6 +903,7 @@ export const kokoRikaExt12Lessons: Lesson[] = [
       },
       {
         heading: '風下で乾燥する理由と実際の例',
+        mangaId: 'koko_rika_s426_manga',
         body: `■ なぜ風下は乾くのか
 上昇中に雲ができ、雨や雪となって水蒸気の一部が山の風上側に落ちる。山頂を越える空気は、風上にいたときより水蒸気が減っている。さらに下降して気温が上がるので、飽和水蒸気量（分母）は大きくなる。分子が減り分母が増えるので、湿度は大きく下がる。
 
@@ -2280,6 +2281,7 @@ export const kokoRikaExt12Lessons: Lesson[] = [
       },
       {
         heading: 'なぜ気温が変わるのか',
+        mangaId: 'koko_rika_s442_manga',
         body: `季節によって気温が変わる理由は二つある。どちらも地軸の傾きから生じる。
 
 ■ ①南中高度が変わる
