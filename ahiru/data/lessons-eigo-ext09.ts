@@ -698,6 +698,7 @@ time to go（行く時間）／something to say（言うべきこと）／a plac
     sections: [
       {
         heading: '「なぜ？」に答える不定詞',
+        mangaId: 'eigo_s304_manga',
         body: `副詞的用法の不定詞は、動詞に説明を付け加える。いちばん多いのが目的を表す使い方である。
 
 例）I went to the library to borrow some books.（本を借りるために図書館へ行った）
