@@ -1349,6 +1349,7 @@ hundred（100）／thousand（1,000）／million（1,000,000）
       },
       {
         heading: 'なぜ forty に u がなく、hundred に -s が付かないのか',
+        mangaId: 'eigo_s354_manga',
         body: `13〜19 の -teen は「10 と〜」、20〜90 の -ty は「〜十」という意味の語尾で、もとの数の語にくっついています。くっつくときに音が変わった語は、つづりも変わりました。four は fourteen では u が残りますが、forty では発音が変わって u が消えました。five は fifteen・fifty で ve が f に、three は thirteen・thirty で形が大きく変わります。eight＋teen は t が重なるので一つにします。**ただし nine は nineteen・ninety のどちらも e が残ります**（e が消えるのは ninth）。変わる語だけを名指しで覚えます。
 
 three hundred に -s が付かないのは、数の語（three）が前にあるとき、hundred・thousand・million が**「百」という単位の名前**としてはたらくからです。単位は数えません（三百＝三つの百、と言わない）。「何百もの」と漠然と言うときだけ hundreds of people と -s と of が付きます。数のあとの名詞（students）は複数形です。

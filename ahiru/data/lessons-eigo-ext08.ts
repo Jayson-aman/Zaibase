@@ -1914,6 +1914,7 @@ be made into ＋ 製品（〜に作りかえられる）：Milk is made into che
       },
       {
         heading: 'なぜ of は語順が逆になり、なぜ of と from を使い分けるのか',
+        mangaId: 'eigo_s283_manga',
         body: `英語は「中心になる語を先に言い、説明をあとに足す」ことばです。「その部屋のドア」なら、中心は「ドア」なので the door を先に言い、どの部屋のドアかを of the room であとから足します。だから「A の B」は B of A の順になり、日本語の順のまま the room of the door と書くと、中心が「部屋」になって意味が逆転します。長い日本語ほど、うしろから訳すと英語の順になります。
 
 be made of と be made from の区別は、**材料の形が残っているか**で決まります。木の机は見れば木だと分かるので of、チーズは見ても牛乳だと分からないので from。of は「そのものの一部・材料そのまま」、from は「出発点から変化した」という前置詞の意味のちがいがそのまま表れています。about が「約」を表すときは、about ten minutes のように数のすぐ前に置くので、for about ten minutes の順になります。
