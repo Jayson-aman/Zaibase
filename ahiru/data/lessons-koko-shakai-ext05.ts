@@ -1472,6 +1472,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
     sections: [
       {
         heading: '律と令 — 二つの法のちがい',
+        mangaId: 'koko_shakai_s170_manga',
         body: `701年、文武天皇のもとで大宝律令が完成した。編さんの中心は刑部親王（おさかべしんのう）と藤原不比等（ふひと）である。不比等は中臣鎌足の子で、この後の藤原氏繁栄の基礎を築いた人物でもある。
 
 ■ 律と令

@@ -1707,6 +1707,7 @@ export const kokoShakaiExt04Lessons: Lesson[] = [
       },
       {
         heading: '一極集中の理由と問題',
+        mangaId: 'koko_shakai_s132_manga',
         body: `■ なぜ東京に集まるのか
 ①政治の中心…国会議事堂、内閣、中央省庁、最高裁判所が集まる首都である。
 ②経済の中心…大企業の本社が集中し、金融・保険の中心でもある。省庁や取引先が近いことが本社を置く利点になる。

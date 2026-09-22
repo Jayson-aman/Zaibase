@@ -980,6 +980,7 @@ export const kokoShakaiExt09Lessons: Lesson[] = [
       },
       {
         heading: '公布と施行のちがい',
+        mangaId: 'koko_shakai_s319_manga',
         body: `法令が世の中で効力を持つまでには、二つの段階がある。
 
 ■ 公布

@@ -596,6 +596,7 @@ export const kokoShakaiExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: '畜産が南九州と北海道に集まる理由',
+        mangaId: 'koko_shakai_s083_manga',
         body: `畜産は「広い土地」と「飼料を運びこみやすいこと」の二つで場所が決まる。日本では南九州（鹿児島・宮崎）と北海道が二大産地である。
 
 ■ 南九州の条件
@@ -755,6 +756,7 @@ export const kokoShakaiExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: '日本近海が好漁場である理由',
+        mangaId: 'koko_shakai_s085_manga',
         body: `日本の周りの海には、魚が集まる条件が二つそろっている。
 
 ■ ①潮目（潮境）
@@ -1783,6 +1785,7 @@ export const kokoShakaiExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: '内陸に工業地域ができた理由',
+        mangaId: 'koko_shakai_s097_manga',
         body: `かつて日本の工業は臨海部が中心だった。それが変わったのは、輸送手段と工業の中身が変わったからである。
 
 ■ 内陸立地が可能になった条件

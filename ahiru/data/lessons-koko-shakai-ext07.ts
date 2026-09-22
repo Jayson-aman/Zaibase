@@ -2913,6 +2913,7 @@ export const kokoShakaiExt07Lessons: Lesson[] = [
     sections: [
       {
         heading: '改革の背景',
+        mangaId: 'koko_shakai_s261_manga',
         body: `19世紀に入ると、幕府の支配は内外から揺さぶられた。
 
 ■ 天保のききん（1833〜1839年）
