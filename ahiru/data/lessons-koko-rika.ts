@@ -1354,6 +1354,7 @@ AaBb * AaBb の子の表現型比率：
     sections: [
       {
         heading: `1. 物質の三態と状態変化`,
+        mangaId: 'koko_rika_08_states_solution_manga',
         figureId: 'lf_krika_21',
         level: 'kiso',
         body: `■ 物質の三態

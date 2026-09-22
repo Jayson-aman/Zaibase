@@ -153,6 +153,7 @@ import { mangaScriptsEigoChugaku13 } from './manga-scripts-eigo-chugaku13';
 import { mangaScriptsKokoMath13 } from './manga-scripts-koko-math13';
 import { mangaScriptsKokoRikaButsuriSeibutsu13 } from './manga-scripts-koko-rika-butsuri-seibutsu13';
 import { mangaScriptsKokoEigo13 } from './manga-scripts-koko-eigo13';
+import { mangaScriptsKokoRikaKagaku13 } from './manga-scripts-koko-rika-kagaku13';
 import { mangaScriptsKokugoChugaku4 } from './manga-scripts-kokugo-chugaku4';
 import { mangaScriptsKokugoChugaku5 } from './manga-scripts-kokugo-chugaku5';
 import { mangaScriptsKokugoChugaku6 } from './manga-scripts-kokugo-chugaku6';
@@ -320,6 +321,7 @@ const ALL_MANGA_SCRIPTS: Record<string, MangaScript> = {
   ...mangaScriptsKokoMath13,
   ...mangaScriptsKokoRikaButsuriSeibutsu13,
   ...mangaScriptsKokoEigo13,
+  ...mangaScriptsKokoRikaKagaku13,
   ...mangaScriptsKokugoChugaku4,
   ...mangaScriptsKokugoChugaku5,
   ...mangaScriptsKokugoChugaku6,
