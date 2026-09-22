@@ -562,6 +562,7 @@ He is a good pianist.（形容詞：じょうずなピアニスト）
       },
       {
         heading: 'なぜ fast は形容詞でも副詞でも同じで、なぜ slowly は more なのか',
+        mangaId: 'koko_eigo_s226_manga',
         body: `fast・hard・early・late・high・near は、もともと**形容詞と副詞が同じ形**の語で、-ly を付けずに副詞になります。だから比較の形も同じ（faster・harder・earlier）です。いっぽう slowly・carefully は「形容詞＋-ly」で作った副詞で、-ly が付いた時点で語が長くなっているので、more／most 型になります。early は例外で、もともと一語なので earlier です。
 
 hard に -ly を付けた hardly は「ほとんど〜ない」という**別の語**で、hard（熱心に）の副詞形ではありません。late／lately（最近）、near／nearly（ほとんど）も同じで、-ly が付くと意味が変わる語は長文でも失点のもとです。副詞の最上級で the を省けるのは、the が本来「名詞を限定する」語で、副詞は名詞を修飾しないからです。形容詞の最上級（the fastest runner）は名詞を修飾するので the が要ります。
@@ -1342,6 +1343,7 @@ Yuka has twice as many books as Ken. で、ユカが10冊なら、ケンは 10 �
       },
       {
         heading: 'なぜ倍数は as 〜 as の前に置き、なぜ基準は as のあとなのか',
+        mangaId: 'koko_eigo_s234_manga',
         body: `twice as large as that one は「あれと同じ大きさ（as large as that one）」というかたまりの前に「その2倍（twice）」を貼りつけた形です。as 〜 as のかたまりが「同じくらい」という単位を作り、倍数はその単位を何倍にするかを表すので、かたまりの**前**に置きます。かたまりの中に twice を差しこむ（× as twice many）と、単位そのものがこわれます。
 
 基準が as のあとなのは、as 〜 as の二つ目の as が「〜と比べて」という比べる相手を示すからです。Yuka has twice as many books as Ken. なら基準はケンで、ユカはケンの2倍。数値を求めるときは、基準を丸で囲んでから、かけるのか割るのかを決めます（ケン6冊なら6×3＝18）。2倍が twice なのは、once・twice が1回・2回専用の古い語だからです。
@@ -1931,6 +1933,7 @@ in Japan（日本で）／in the world（世界で）／in my class（私のク�
       },
       {
         heading: 'なぜ最上級には範囲が要り、なぜ形容詞の最上級の the は落とせないのか',
+        mangaId: 'koko_eigo_s240_manga',
         body: `「いちばん高い」は、**どの範囲の中で**いちばんかが決まってはじめて意味を持ちます。日本でいちばんか、世界でいちばんかで答えが変わるからです。だから最上級の文には in Japan・in my class・of the three のような範囲の語句が付き、落とすと何と比べているかが伝わらず減点されることがあります。in のあとには場所や集団を表す単数の語が来ます。
 
 形容詞の最上級に the が要るのは、the tallest student のように**名詞を「一つに決める」役目**を the が果たすからです。副詞の最上級（runs (the) fastest）は名詞を修飾しないので the を省いてもよく、この区別を混ぜて × Ken is tallest student としてはいけません。
@@ -3218,6 +3221,7 @@ no がつくと気持ち（多い・少ないと感じている）が入り、no
       },
       {
         heading: 'なぜ more than 30 は30を含まず、なぜ no less than は「〜も」なのか',
+        mangaId: 'koko_eigo_s253_manga',
         body: `more than 30 は「30より多い」で、**30そのものは含みません**。日本語の「30以上」は30を含むので、範囲がずれます。資料読み取り問題では、この一語の差で選択肢の正誤が決まるので、「より多い（含まない）」「少なくとも（含む）」を日本語でも区別します。at least（少なくとも）・at most（多くても）は含みます。
 
 no less than が「〜も（多い）」になるのは、no が「少なくない」と**書き手の気持ち**（多いと感じている）を打ち消しで強めるからです。no more than は「多くない＝たった〜しか」。not が付く not more than／not less than は気持ちの入らない単なる範囲（at most／at least）です。as many as 50 も、数字が続けば「50人も」という多さの強調です。

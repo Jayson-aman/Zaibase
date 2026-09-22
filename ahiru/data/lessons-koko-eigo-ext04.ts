@@ -1226,6 +1226,7 @@ When 〜? → 過去の一点 → 過去形で答える（現在完了とは使�
       },
       {
         heading: 'なぜ1回・2回だけ once・twice なのか、なぜ How many times と How long を分けるのか',
+        mangaId: 'koko_eigo_s123_manga',
         body: `once と twice は、古い英語から残った**1回・2回専用の語**です。two times でも通じますが、英語では twice が自然で、入試の答えも twice です。3回以上は「数＋times」で規則的に作ります。回数は文末に置き、いつのことかは問わないので、経験用法（過去に打たれた点の数）と相性が合います。
 
 How many times（何回）と How long（どのくらいの期間）を分けるのは、たずねているものが**回数**（経験用法）か**期間**（継続用法）かで、答え方も Three times.／For three years. と変わるからです。When は過去の一点をたずねるので、過去形とだけ組み、現在完了とは組めません。疑問詞のあとは疑問文の語順（have／has＋主語＋過去分詞）です。
@@ -2955,6 +2956,7 @@ The music could be heard from far away.
       },
       {
         heading: 'なぜ助動詞のあとは be で、なぜ「見える」が受動態になるのか',
+        mangaId: 'koko_eigo_s140_manga',
         body: `助動詞のあとは必ず動詞の原形が来ます。受動態の be動詞も動詞なので、助動詞のあとでは**原形 be** になります。だから can be seen・must be finished・should be sent と、助動詞＋be＋過去分詞の3語で1セットです。be を落とした × can seen は、助動詞のあとに過去分詞が直接来ていて文になりません。進行形の受動態（is being built）や完了形の受動態（has been built）でも、核の「be＋過去分詞」は変わらず、be の形（be・being・been・is・was）だけが変わります。
 
 「ここから富士山が見える」が Mt. Fuji can be seen from here. と受動態になるのは、英語では「富士山が（人に）見られうる」と、**見られる側（富士山）を主語にして状況を説明する**言い方が自然だからです。I can see Mt. Fuji. も誤りではありませんが、看板や案内のように「だれが」を言わない状況説明では受動態が使われます。

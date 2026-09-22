@@ -1447,6 +1447,7 @@ It は訳さず、to〜 以下を「〜することは」と主語のように�
       },
       {
         heading: 'なぜ It を先に置くのか、なぜ動名詞は続けられないのか',
+        mangaId: 'koko_eigo_s272_manga',
         body: `英語は「主語→動詞」の骨組みを早く示したいことばです。To read English books every day is important. では、動詞 is にたどりつくまでが長く、読み手は主語がどこまでか分からないまま待たされます。そこで意味を持たない It を主語の席に置いて骨組み（It is important）を先に見せ、中身（to read 〜）をあとから言い直します。だからこの It は「それは」と訳さず、to 〜以下を「〜することは」と主語のように訳します。
 
 形式主語の It が受けるのが to 不定詞だけなのは、It is 〜 to … が**ひとまとまりの型**として固まっているからです。動名詞を主語にしたいなら Swimming in this river is easy. とそのまま主語の席に置きます。it の識別は、前の文に指す名詞があるか（→代名詞）、うしろに to 〜があるか（→形式主語）、どちらもなければ天候・時刻の it、の順で機械的に行います。
@@ -2075,6 +2076,7 @@ kind / nice を使った文は「親切にも〜してくれた」と訳すと�
       },
       {
         heading: 'なぜ enough to は so 〜 that can になり、なぜ it を補ったり補わなかったりするのか',
+        mangaId: 'koko_eigo_s279_manga',
         body: `rich enough to buy that car は「あの車を買えるほど金持ちだ」で、「とても金持ちなので買える」と言いかえられます。そこで enough を消して形容詞の前に so を置き、to〜 を that＋主語＋can＋原形にします。too 〜 to … が so 〜 that … can't になるのと同じ手順で、否定が肯定に変わるだけです。不定詞には時制がないので、主節が過去なら that 節は could にそろえます。
 
 it を補うのは that 節のときだけです。The book is easy enough for children to read. の不定詞 to read は、主語の the book をそのまま目的語として受けているので it は不要です。that 節に直すと read は独立した文の動詞になり、目的語がないと文が成り立たないので it（＝the book）を補います。「不定詞では不要、that 節では必要」と対で覚えます。
@@ -2785,6 +2787,7 @@ look forward to のように、to で終わる熟語では to が前置詞なの
       },
       {
         heading: 'なぜ go 〜ing で、なぜ be used to と used to は別物なのか',
+        mangaId: 'koko_eigo_s287_manga',
         body: `go fishing・go shopping の -ing は「釣り・買い物」という**活動そのもの**を表す動名詞です。「〜しに行く」を目的の不定詞（go to fish）で作ると、英語では「魚になるために行く」のように聞こえて不自然です。活動へ出かけるときは go＋活動（-ing）という決まった形を使い、場所は go shopping at the store と at／in で続けます（to は使わない）。go studying と言わないのは、study が「活動として出かける」種類の動作ではないからです。
 
 be used to 〜ing（慣れている）と used to＋原形（以前は〜した）が別物なのは、前者の to が**前置詞**で、後者の used to が**助動詞のように働くひとかたまり**だからです。前置詞のあとには名詞（動名詞）が来て、助動詞のあとには原形が来ます。見分けは be動詞の有無で行います。
