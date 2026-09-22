@@ -1813,6 +1813,7 @@ BD＝BC×AB/(AB＋AC)、DC＝BC×AC/(AB＋AC)
     sections: [
       {
         heading: 'なぜ2乗になるのか',
+        mangaId: 'koko_math_s252_manga',
         figureId: 'lf_kokomathext07_252',
         body: `相似比が 1:2 の三角形を考える。すべての長さが2倍になるので、底辺も2倍、高さも2倍になる。面積は「底辺×高さ÷2」だから
 

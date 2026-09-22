@@ -108,6 +108,7 @@ export const kokoMathExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: 'なぜ垂線の足が中点になるのか',
+        mangaId: 'koko_math_s277_manga',
         body: `円Oの弦をABとし、中心Oから弦ABに垂線OMをひく。このとき点Mは必ず弦ABの中点になる。理由は簡単で、OAもOBも半径だからである。
 
 ■ 証明の筋道
