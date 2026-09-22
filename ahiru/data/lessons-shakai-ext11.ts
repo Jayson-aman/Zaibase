@@ -1183,6 +1183,7 @@ export const shakaiExt11Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 二院制のしくみ',
+        mangaId: 'shakai_s388_manga',
         figureId: 'sf11_s388a',
         body: `日本の国会は衆議院と参議院からなる二院制（両院制）である。
 
@@ -2268,6 +2269,7 @@ export const shakaiExt11Lessons: Lesson[] = [
       },
       {
         heading: '2. 冤罪を防ぐしくみ',
+        mangaId: 'shakai_s402_manga',
         body: `冤罪とは、罪を犯していない人が有罪とされてしまうことである。
 
 ■ 冤罪を防ぐしくみ

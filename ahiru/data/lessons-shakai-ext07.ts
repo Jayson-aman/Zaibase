@@ -1975,6 +1975,7 @@ export const shakaiExt07Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. なぜ応仁の乱が起きたのか',
+        mangaId: 'shakai_s250_manga',
         figureId: 's7f_s250',
         body: `8代将軍足利義政のころ、幕府の力は弱まり、有力守護大名の争いが表面化していた。
 

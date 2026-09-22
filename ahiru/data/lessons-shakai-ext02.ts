@@ -1993,6 +1993,7 @@ export const shakaiExt02Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. なぜ遠洋漁業は減ったのか',
+        mangaId: 'shakai_s063_manga',
         figureId: 'sext02_063',
         body: `かつて日本の漁業の主役だった遠洋漁業は、1970年代を境に急激に減った。
 

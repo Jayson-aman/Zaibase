@@ -485,6 +485,7 @@ export const shakaiExt03Lessons: Lesson[] = [
       },
       {
         heading: '2. なぜここに集中したのか',
+        mangaId: 'shakai_s082_manga',
         body: `太平洋ベルトに工業が集中した理由は、大きく3つある。
 
 ■ 理由①：原料の輸入と製品の輸出に便利（臨海立地）

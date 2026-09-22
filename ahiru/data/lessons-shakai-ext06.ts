@@ -2054,6 +2054,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: 'なぜ都を移したのか',
+        mangaId: 'shakai_s209_manga',
         body: `奈良時代の後半、政治は大きく乱れた。とくに僧・道鏡が孝謙（称徳）天皇の信任を得て権力をにぎり、天皇の位をねらったとされる事件（宇佐八幡宮神託事件）が起こるなど、仏教勢力の政治への介入が問題となっていた。
 
 そこで桓武天皇は、
