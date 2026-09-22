@@ -715,6 +715,7 @@ little には「小さい」という別の意味もある。〈a little＋数�
     sections: [
       {
         heading: '基本の使い分け',
+        mangaId: 'eigo_s233_manga',
         body: `some と any はどちらも「いくらかの」を表すが、使う文の種類で使い分けるのが原則である。
 
 ■ 肯定文 → some
@@ -1525,6 +1526,7 @@ every day（毎日）／every week（毎週）／every month（毎月）／every
     sections: [
       {
         heading: '三つの形と基本の文',
+        mangaId: 'eigo_s241_manga',
         body: `英語で二つ以上のものを比べるときは、形容詞・副詞の形を変える。形は三つある。
 
 原級（もとの形）：tall（背が高い）
@@ -1631,6 +1633,7 @@ than のあとが比べる相手である。
     sections: [
       {
         heading: '語の長さで決まる',
+        mangaId: 'eigo_s242_manga',
         body: `比較級・最上級の作り方は、その語の長さ（音節の数）で決まる。音節とは、母音を中心とした音のまとまりのことである。
 
 ■ 短い語 → -er / -est

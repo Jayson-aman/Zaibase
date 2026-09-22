@@ -1005,6 +1005,7 @@ it → it　　we → us　　they → them
     sections: [
       {
         heading: '「三人称単数現在」とは',
+        mangaId: 'eigo_s052_manga',
         body: `英語では、現在のことを言う文で主語が「三人称の単数」のとき、動詞の終わりに -s を付ける。これを三人称単数現在（三単現）の -s という。
 
 ■ 人称の分け方

@@ -705,6 +705,7 @@ You were tired. → Were you tired?
     sections: [
       {
         heading: '数は少ないが、出会う回数は多い',
+        mangaId: 'eigo_s124_manga',
         body: `英語の動詞の大部分は -ed を付けるだけで過去形になる「規則動詞」である。しかし一部の動詞は、まったくちがう形に変わる。これを「不規則動詞」という。
 
 例）go → went（行った）　　see → saw（見た）　　buy → bought（買った）
@@ -2533,6 +2534,7 @@ I have been waiting for you for an hour.（1時間ずっとあなたを待って
     sections: [
       {
         heading: 'for は長さ、since は起点',
+        mangaId: 'eigo_s144_manga',
         body: `継続用法でいちばん問われるのが for と since の使い分けである。指しているものがまったくちがう。
 
 ■ for ＋「どれくらいの長さか」
@@ -3273,6 +3275,7 @@ ago が現在完了と使えないのは、ago が「今から3日さかのぼ�
     sections: [
       {
         heading: '三つの形を並べて区別する',
+        mangaId: 'eigo_s152_manga',
         body: `be動詞の過去分詞 been を使った形は、前置詞と組み合わせで意味が変わる。三つを並べて覚える。
 
 ■ have been to 〜（経験：〜へ行ったことがある）
