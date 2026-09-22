@@ -468,6 +468,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
       },
       {
         heading: '2つの不平等点を正確に区別する',
+        mangaId: 'koko_shakai_s272_manga',
         body: `この条約が不平等とされる点は、大きく次の2つである。ここは入試で最も混同されるところなので、意味・不利益・解決の担当者まで分けて覚える。
 
 ■ ①領事裁判権（治外法権）を認めた
@@ -2476,6 +2477,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '軽工業の発展 ── 生糸と綿糸',
+        mangaId: 'koko_shakai_s298_manga',
         body: `日本の産業革命は、1880年代後半に軽工業（繊維工業）から始まった。
 
 ■ 製糸業（生糸）

@@ -924,6 +924,7 @@ export const kokoShakaiExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: '「育てる漁業」の二つの型',
+        mangaId: 'koko_shakai_s087_manga',
         body: `とる量に限りがあると分かってから、日本の水産業は「育てる漁業」を重視するようになった。ただし育て方には二つの型がある。
 
 ■ 養殖業（養殖漁業）
@@ -2051,6 +2052,7 @@ IC・半導体、コンピュータ、産業用ロボット、医薬品・バイ
     sections: [
       {
         heading: '円高と貿易摩擦が押し出した',
+        mangaId: 'koko_shakai_s100_manga',
         body: `日本の企業が海外に工場を建てるようになった背景には、二つの大きな出来事がある。
 
 ■ 貿易摩擦

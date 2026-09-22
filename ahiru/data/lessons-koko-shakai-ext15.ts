@@ -2135,6 +2135,7 @@ export const kokoShakaiExt15Lessons: Lesson[] = [
     sections: [
       {
         heading: '対にして確かめる',
+        mangaId: 'koko_shakai_s519_manga',
         body: `■ 農業
 ・促成栽培（早める／高知・宮崎／冬に出荷）⇔ 抑制栽培（遅らせる／長野・群馬／夏に出荷）
 ・近郊農業（大消費地の近く／輸送費が安い）⇔ 遠郊農業（遠くから、保存や輸送の工夫が必要）
@@ -2252,6 +2253,7 @@ export const kokoShakaiExt15Lessons: Lesson[] = [
     sections: [
       {
         heading: '対にして確かめる',
+        mangaId: 'koko_shakai_s520_manga',
         body: `■ 人物
 ・北条泰時（御成敗式目・13世紀前半）⇔ 北条時宗（元寇・13世紀後半）
 ・足利尊氏（幕府を開く）⇔ 足利義満（金閣・勘合貿易）⇔ 足利義政（銀閣・応仁の乱）

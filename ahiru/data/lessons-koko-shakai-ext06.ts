@@ -361,6 +361,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
       },
       {
         heading: '守護・地頭と幕府の成立年',
+        mangaId: 'koko_shakai_s195_manga',
         body: `1185年、頼朝は義経をとらえるという名目で、国ごとに守護を、荘園と公領ごとに地頭を置くことを朝廷に認めさせた。これによって幕府の支配は全国に及ぶことになる。
 
 ■ 守護（国ごとに一人）
@@ -1787,6 +1788,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '守護の権限はどう広がったか',
+        mangaId: 'koko_shakai_s212_manga',
         body: `鎌倉時代の守護は、国ごとに置かれた軍事・警察の役職にすぎなかった。職務は大犯三カ条に限られ、国司の権限や荘園の内部には手を出せない建前だった。
 
 ■ 南北朝期に加わった権限
