@@ -3441,6 +3441,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
       },
       {
         heading: '2. 違憲審査権のしくみ',
+        mangaId: 'kshakai_16_constitution_precedents_manga',
         level: 'oyo',
         body: `■ 違憲審査権（違憲立法審査権）とは
 

@@ -53,6 +53,7 @@ export const kokoShakaiExt12Lessons: Lesson[] = [
       },
       {
         heading: '消費支出・非消費支出・貯蓄',
+        mangaId: 'koko_shakai_s406_manga',
         body: `家計の支出は、大きく三つに分かれる。入試では分類そのものが問われるので、区別を正確に覚える。
 
 ■ 消費支出
@@ -570,6 +571,7 @@ PL法は、企業に過失があったかどうかを問わない。消費者は
       },
       {
         heading: '流通の変化が生んだ課題',
+        mangaId: 'koko_shakai_s412_manga',
         body: `買う場所の変化は、便利さと同時にいくつもの課題を生んだ。
 
 ■ 中心市街地の空洞化
@@ -3523,6 +3525,7 @@ AI・ロボット・自動運転・セルフレジなどにより、少ない人
     sections: [
       {
         heading: '四つの柱の内容',
+        mangaId: 'koko_shakai_s444_manga',
         body: `日本の社会保障制度は、日本国憲法第25条の生存権を具体化するもので、次の四つの柱からなる。
 
 ■ ①社会保険
