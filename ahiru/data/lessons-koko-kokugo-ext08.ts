@@ -112,6 +112,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: 'ワ行の仮名 ゐ・ゑ・を',
+        mangaId: 'koko_kokugo_s267_manga',
         body: `五十音表のワ行は、もともと「わ・ゐ・う・ゑ・を」の五つだった。「ゐ」はウィ、「ゑ」はウェ、「を」はウォに近い音だったと考えられている。それが平安時代以降に「い・え・お」と同じ音になり、字だけが残った。
 
 ■ きまり
@@ -279,6 +280,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '「む」はンと読む',
+        mangaId: 'koko_kokugo_s269_manga',
         body: `古文には「む」が非常に多く出てくる。これはほとんどが「ン」と発音される。
 
 ■ どんな「む」がンになるか
@@ -2644,6 +2646,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '打消の「ず」',
+        mangaId: 'koko_kokugo_s294_manga',
         body: `■ 活用（未然形に接続）
 （ず・ざら）・（ず・ざり）・ず・（ぬ・ざる）・（ね・ざれ）・（ざれ）
 終止形ず／連体形ぬ／已然形ね

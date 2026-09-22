@@ -2355,6 +2355,7 @@ export const kokoKokugoExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '「使AB」の型',
+        mangaId: 'koko_kokugo_s329_manga',
         body: `使役は「AにBさせる」という意味を表す。漢文では使・令・教・遣の四字が代表的で、いずれも「しム」と読む。
 
 ■ 基本の型
