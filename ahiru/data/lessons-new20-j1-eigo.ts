@@ -934,6 +934,7 @@ There is / are の文では、文末に場所を表す前置詞句を置くの�
       },
       {
         heading: 'なぜ between は2つで among は3つ以上なのか、なぜ There is の文は前置詞句が文末なのか',
+        mangaId: 'new20_j1_eigo_11_zenchishi_manga',
         body: `between は「二つのものに**はさまれて**」という語で、tw（two と同じ「二」）が語の中に入っています。だから between A and B と二つを名指しします。among は「多くのものの**中に混じって**」という語なので、三つ以上の集団に使います。国と国、チームとチームのように「二つのグループ」なら数が多くても between です。under（真下・覆われた位置）と over、in front of と behind、near（近い）と by（すぐそば）のように、位置の語は対で覚えると意味の幅が分かります。
 
 There is／are の文で前置詞句が文末に来るのは、この文が「（どこそこに）〜がある」と**存在を告げてから場所を足す**形だからです。There is a cat under the table. と、まず a cat の存在、次に位置。日本語の語順（テーブルの下にねこがいる）のまま前置詞句を前に出さないのが基本です。
@@ -1303,6 +1304,7 @@ A: Really? This is my sister. She's ten years old.
       },
       {
         heading: 'なぜ紹介は This is で、なぜ「兄弟がいる」は have なのか',
+        mangaId: 'new20_j1_eigo_15_kazoku_manga',
         body: `写真や目の前の人を指して紹介するときは、「これ（この人）は」と指し示す This is を使います。紹介したあとは同じ人を he／she で受け、my father を何度もくり返しません。複数なら These are。英語の brother・sister には兄弟・姉妹の上下の区別がなく、上下を言いたいときだけ older／younger を付けます。
 
 「妹が一人います」を I am a sister. と言えないのは、be動詞が「私＝妹」というイコールを作ってしまうからです。家族の存在は「持っている」の have で表し、I have a sister. とします。日本語の「います」に引きずられて be動詞を使わない、と型で覚えます。two のあとの名詞は必ず複数形（two brothers）です。
