@@ -112,6 +112,7 @@ export const kokoShakaiExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '契約とは何か',
+        mangaId: 'koko_shakai_s407_keiyaku_manga',
         body: `契約とは、法的な拘束力をもつ約束のことである。日常の買い物も立派な契約であり、売買契約という。
 
 ■ 契約が成立する瞬間
@@ -783,6 +784,7 @@ PL法は、企業に過失があったかどうかを問わない。消費者は
     sections: [
       {
         heading: '公共料金とは何か',
+        mangaId: 'koko_shakai_s415_koukyouryoukin_manga',
         body: `私たちが払う代金の多くは市場で決まるが、一部の価格は国や地方公共団体が決めたり、認可したりしている。これを公共料金という。
 
 ■ 決め方による分類
@@ -3708,6 +3710,7 @@ AI・ロボット・自動運転・セルフレジなどにより、少ない人
     sections: [
       {
         heading: '国民皆保険のしくみ',
+        mangaId: 'koko_shakai_s446_kaihoken_manga',
         body: `日本では1961年に国民皆保険・国民皆年金が実現し、すべての国民が公的な医療保険と年金制度に加入することになった。世界的に見ても、これほど広く医療をカバーする制度は多くない。
 
 ■ 加入する医療保険
