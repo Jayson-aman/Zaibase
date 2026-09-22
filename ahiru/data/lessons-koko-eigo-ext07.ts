@@ -2954,6 +2954,7 @@ Baseball is one of the most popular sports in my class.（人気のあるスポ�
     sections: [
       {
         heading: '形と語順の作り方',
+        mangaId: 'koko_eigo_s251_manga',
         body: `二つのことが連動して変化するとき、〈The ＋ 比較級 ＋ 主語 ＋ 動詞 ~, the ＋ 比較級 ＋ 主語 ＋ 動詞 ...〉の形で表す。
 
 例）The more you practice, the better you become.

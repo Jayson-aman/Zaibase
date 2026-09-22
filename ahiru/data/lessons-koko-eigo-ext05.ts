@@ -608,6 +608,7 @@ might を「〜だったかもしれない」と訳すのは誤りで、過去�
     sections: [
       {
         heading: '確信の強さで並べる',
+        mangaId: 'koko_eigo_s153_manga',
         figureId: 'lf_kokoeigoext05_153',
         body: `同じ場面を、助動詞だけ変えて言ってみる。
 
@@ -2981,6 +2982,7 @@ How のうしろに来るのは形容詞か副詞だけである。名詞があ�
       },
       {
         heading: 'What ⇄ How の書きかえ',
+        mangaId: 'koko_eigo_s178_manga',
         body: `同じ内容を、What の文でも How の文でも言える場合がある。入試ではこの書きかえが頻出する。
 
 ■ 型①：be動詞の文

@@ -1089,6 +1089,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
       },
       {
         heading: '同格の that との区別',
+        mangaId: 'koko_eigo_s307_manga',
         body: `名詞の直後に that が来て、しかも後ろが完全な文になっている場合がある。これを同格の that という。
 
 例）The news that she had passed the exam surprised us.
@@ -1160,6 +1161,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: '目的格は落としてよい',
+        mangaId: 'koko_eigo_s308_manga',
         figureId: 'lf_kokoeigoext09_308',
         body: `目的格の関係代名詞は、あってもなくても意味が決まるので省略できる。
 
@@ -1940,6 +1942,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: '「そうすれば」の and',
+        mangaId: 'koko_eigo_s316_manga',
         body: `命令文のあとに and を置くと、「そうすれば」という意味になる。
 
 例）Turn left, and you will see the post office.
@@ -2151,6 +2154,7 @@ if に書きかえるとき don't が要るのは、or が表しているのが�
     sections: [
       {
         heading: '語順で決まる so と because',
+        mangaId: 'koko_eigo_s318_manga',
         body: `so と because は、どちらも原因と結果を結ぶが、置く位置が正反対である。
 
 ■ so（だから）… 理由 → so → 結果
