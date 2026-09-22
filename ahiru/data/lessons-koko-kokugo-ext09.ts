@@ -2062,6 +2062,7 @@ export const kokoKokugoExt09Lessons: Lesson[] = [
       },
       {
         heading: '部分否定と全部否定',
+        mangaId: 'koko_kokugo_s326_manga',
         body: `否定語と副詞の位置関係で、意味が大きく変わる。ここは入試の頻出ポイントである。
 
 ■ 部分否定＝否定語が副詞の「上」
@@ -2242,6 +2243,7 @@ export const kokoKokugoExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '反語の形と、疑問との見分け',
+        mangaId: 'koko_kokugo_s328_manga',
         body: `反語は、答えのわかりきったことをあえて問いの形で言い、内容を強調する表現である。
 
 ■ 代表的な形

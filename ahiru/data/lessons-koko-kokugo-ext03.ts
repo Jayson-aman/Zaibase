@@ -2672,6 +2672,7 @@ export const kokoKokugoExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: '向きを決める合図語',
+        mangaId: 'koko_kokugo_s110_manga',
         body: `因果関係を表す言い方には、原因が前に来る形と後に来る形がある。
 
 ■ 前が原因の形

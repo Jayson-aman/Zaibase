@@ -191,6 +191,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '四つの母音連続',
+        mangaId: 'koko_kokugo_s268_manga',
         body: `歴史的仮名遣いを直すときは、二段階で考える。①まず語中・語尾のハ行をワ行に直す。②その結果、母音が二つ並んだら長音（のばす音）に変える。
 
 ■ 四つのパターン（ローマ字で考えるとわかりやすい）
@@ -2330,6 +2331,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '人称で意味が決まる',
+        mangaId: 'koko_kokugo_s291_manga',
         body: `助動詞「む」は未然形に接続し、次の意味を持つ。
 
 ■ 意味と人称の対応
@@ -2430,6 +2432,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '六つの意味と絞りこみ方',
+        mangaId: 'koko_kokugo_s292_manga',
         body: `助動詞「べし」は終止形（ラ変型の語には連体形）に接続し、形容詞と同じように活用する（べく・べかり／べし／べき・べかる／べけれ）。
 
 ■ 六つの意味
