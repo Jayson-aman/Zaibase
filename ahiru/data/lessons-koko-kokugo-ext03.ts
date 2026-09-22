@@ -1002,6 +1002,7 @@ export const kokoKokugoExt03Lessons: Lesson[] = [
       },
       {
         heading: '「なぜこの例を挙げたのか」に答える',
+        mangaId: 'koko_kokugo_s092_manga',
         body: `具体例に傍線が引かれた場合、問われるのはほぼ次の二つである。
 
 ■ 型①「なぜこの例を挙げているのか」
