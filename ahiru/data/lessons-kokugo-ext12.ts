@@ -1762,6 +1762,7 @@ export const kokugoExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 「なぜ今なのか」を考える',
+        mangaId: 'kokugo_s440_manga',
         body: `物語文の理由説明では、「なぜその行動をしたのか」だけでなく「なぜそのときにしたのか」を考えると、答えが決まります。
 
 ■ 例題
