@@ -47,6 +47,7 @@ export const eigoExt12Lessons: Lesson[] = [
       },
       {
         heading: '動詞は一つの文に一つ',
+        mangaId: 'eigo_s426_manga',
         body: `日本語の「〜です」は、英語では be動詞になる場合と、ならない場合がある。ここを取りちがえると、一つの文に動詞が二つ入ってしまう。
 
 ■ be動詞になる「です」
@@ -126,6 +127,7 @@ export const eigoExt12Lessons: Lesson[] = [
       },
       {
         heading: '「〜から」「〜でした」の落とし穴',
+        mangaId: 'eigo_s427_manga',
         body: `日本語の助詞を直訳すると誤りになる代表例が二つある。
 
 ■ 「〜から…しています」
@@ -286,6 +288,7 @@ for のあとには長さ（three years, ten minutes）、since のあとには�
       },
       {
         heading: '主語がない文・it を立てる文',
+        mangaId: 'eigo_s429_manga',
         body: `主語をどうしても言えない、あるいは言う必要がない場合の型を覚えておく。
 
 ■ 命令文（主語を書かない）
@@ -371,6 +374,7 @@ There are not any chairs in this room.（There are no chairs in this room. も�
       },
       {
         heading: 'the がつくものは There を使わない',
+        mangaId: 'eigo_s430_manga',
         body: `There is のうしろに、the / my / your / this / that のついた名詞や、人名を置くことはできない。これらは「相手がもう知っているもの」を指すからである。
 
 ■ すでに知っているものの居場所を言うとき
@@ -605,6 +609,7 @@ give（あげる）、show（見せる・教える）、tell（伝える）、te
     sections: [
       {
         heading: '間接疑問：語順が肯定文に戻る',
+        mangaId: 'eigo_s433_manga',
         body: `疑問詞で始まる文が、別の文の中に入りこむと、語順が肯定文と同じに戻る。これを間接疑問という。並べかえの頻出項目である。
 
 ■ もとの疑問文
@@ -1238,6 +1243,7 @@ study English / like math / in summer
       },
       {
         heading: '進行形にしない動詞',
+        mangaId: 'eigo_s440_manga',
         body: `動作ではなく「状態」を表す動詞は、進行形にしない。絵の描写でよくまちがえるので注意する。
 
 ■ 進行形にしない代表的な動詞
@@ -1302,6 +1308,7 @@ wear は「身につけている」という状態、put on は「身につけ�
     sections: [
       {
         heading: '位置の前置詞',
+        mangaId: 'eigo_s441_manga',
         body: `位置を表す前置詞は、日本語の「上・下・中」と一対一で対応しない。ふれているかどうか、囲まれているかどうかで選ぶ。
 
 ■ 基本の使い分け
@@ -1513,6 +1520,7 @@ A boy wearing glasses is reading a book.（めがねをかけた男の子が本�
       },
       {
         heading: 'does を使ったら動詞は原形',
+        mangaId: 'eigo_s443_manga',
         body: `疑問文や否定文で does を使うと、s の働きは does が引き受ける。だから動詞は原形に戻さなければならない。
 
 ■ 正しい形
@@ -1579,6 +1587,7 @@ There are many book in the library.（誤）→ There are many books in the libr
     sections: [
       {
         heading: 'a と an は音で決める',
+        mangaId: 'eigo_s444_manga',
         body: `a と an の使い分けは「次の語が母音字（a, i, u, e, o）で始まるかどうか」ではなく、「母音の音で始まるかどうか」で決まる。
 
 ■ an を使う例
