@@ -112,6 +112,7 @@ export const kokoRikaExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '原子番号は陽子の数で決まる',
+        mangaId: 'koko_rika_s267_genshibango_manga',
         body: `原子の種類（元素）を決めているのは、陽子の数ただ一つである。陽子が1個なら水素、6個なら炭素、8個なら酸素、11個ならナトリウム。この陽子の数をその原子の原子番号という。
 
 ■ 三つの数の関係
@@ -1333,6 +1334,7 @@ HCl → H⁺ ＋ Cl⁻
     sections: [
       {
         heading: '装置と薬品の意味',
+        mangaId: 'koko_rika_s281_manga',
         body: `H字型の電気分解装置（ホフマン型）またはうすい水酸化ナトリウム水溶液を入れた試験管を使い、電流を流す。
 
 ■ なぜ水酸化ナトリウムを加えるのか
@@ -2169,6 +2171,7 @@ Zn ＋ Cu²⁺ → Zn²⁺ ＋ Cu
     sections: [
       {
         heading: '極を判定する三つの方法',
+        mangaId: 'koko_rika_s290_kyokuhantei_manga',
         body: `実験の記述から電池の極を判定する問題は、次の三つの手がかりのどれかで解ける。
 
 ■ 方法1：金属の種類から判定する

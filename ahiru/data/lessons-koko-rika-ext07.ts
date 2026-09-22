@@ -964,6 +964,7 @@ C ＋ O₂ → CO₂
     sections: [
       {
         heading: '実験の手順と反応式',
+        mangaId: 'koko_rika_s237_jikken_manga',
         figureId: 'lf_kokorikaext07_237',
         body: `■ 装置と手順
 ①乾いた試験管に炭酸水素ナトリウムを入れ、口を少し下げてスタンドに固定する。
@@ -1222,6 +1223,7 @@ CaCO₃ → CaO ＋ CO₂
     sections: [
       {
         heading: '実験の結果と反応式',
+        mangaId: 'koko_rika_s240_kekka_manga',
         body: `■ 手順と結果
 ①青色の塩化銅水溶液に炭素棒の電極を入れ、直流電源につなぐ。
 ②陰極（マイナス側）の表面に赤茶色の物質が付着する。取り出してこすると金属光沢が出る → 銅。
