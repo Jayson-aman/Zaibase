@@ -34,6 +34,7 @@ export const lessonsNew20E4Shakai: Lesson[] = [
       },
       {
         heading: '2. ダムのやくわり',
+        mangaId: 'new20_e4_shakai_01_manga',
         body: `水源林からわき出た水は川に集まり、多くの場合ダムでいったんせき止められる。
 
 ■ ダムの3つの主な役割
@@ -360,6 +361,7 @@ export const lessonsNew20E4Shakai: Lesson[] = [
     sections: [
       {
         heading: '1. 3Rとは何か',
+        mangaId: 'new20_e4_shakai_06_manga',
         figureId: 'lf_new20e4_06',
         body: `3Rとは、ごみを減らすための3つの行動の頭文字をとったよびかたである。
 
@@ -1064,6 +1066,7 @@ export const lessonsNew20E4Shakai: Lesson[] = [
       },
       {
         heading: '2. 避難の流れと自助・共助・公助',
+        mangaId: 'new20_e4_shakai_15_manga',
         figureId: 'lf_new20e4_15',
         body: `災害から身を守るための行動は、「自助・共助・公助」という3つの考え方で整理できる。
 
@@ -1330,6 +1333,7 @@ export const lessonsNew20E4Shakai: Lesson[] = [
       },
       {
         heading: '2. 地図記号の基本と新しい記号',
+        mangaId: 'new20_e4_shakai_19_manga',
         figureId: 'lf_new20e4_19',
         body: `まち探検で見つけたものを地図にまとめるとき、地図記号を使うと、だれが見てもわかる地図になる。
 

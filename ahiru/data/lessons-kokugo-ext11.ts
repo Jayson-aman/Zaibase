@@ -320,6 +320,7 @@ export const kokugoExt11Lessons: Lesson[] = [
       },
       {
         heading: '2. 直さないもの・まとめ表',
+        mangaId: 'kokugo_s394_manga',
         body: `ここまでのルールを整理します。歴史的仮名遣いの問題は、この表がすべてです。
 
 ■ 直すもの
@@ -1726,6 +1727,7 @@ export const kokugoExt11Lessons: Lesson[] = [
     sections: [
       {
         heading: '漢文を読むための三つの段階',
+        mangaId: 'kokugo_s411_manga',
         figureId: 'kf11_s411',
         body: `漢文はもともと中国語の文章で、漢字だけが並んでいます。それを日本語の語順・言い方で読む方法が「訓読」です。
 

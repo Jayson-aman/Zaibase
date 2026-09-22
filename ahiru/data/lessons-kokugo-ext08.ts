@@ -28,6 +28,7 @@ export const kokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 指示語は「前」を指す',
+        mangaId: 'kokugo_s271_manga',
         body: `指示語（こそあど言葉）は、前に出てきた言葉や内容を、くり返さずに指ししめすための言葉です。
 
 【こそあどの表】

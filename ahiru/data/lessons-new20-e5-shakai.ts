@@ -91,6 +91,7 @@ export const lessonsNew20E5Shakai: Lesson[] = [
     sections: [
       {
         heading: '1. 天然林と人工林の違い',
+        mangaId: 'new20_e5_shakai_02_manga',
         body: `日本の森林は、大きく「天然林」と「人工林」の2種類に分けられる。この区別は森林を理解するうえでの基本であり、入試でも定義を問う問題が出やすい。
 
 ■ 天然林とは
@@ -472,6 +473,7 @@ export const lessonsNew20E5Shakai: Lesson[] = [
       },
       {
         heading: '2. 震度とマグニチュードのちがい',
+        mangaId: 'new20_e5_shakai_07_manga',
         body: `地震の大きさを表す言葉として「震度」と「マグニチュード」の2つがあるが、意味するものはまったく異なる。この違いは入試で非常によく問われるポイントである。
 
 ■ 震度とは
@@ -515,6 +517,7 @@ export const lessonsNew20E5Shakai: Lesson[] = [
     sections: [
       {
         heading: '1. 津波が発生するしくみ',
+        mangaId: 'new20_e5_shakai_08_manga',
         body: `津波は、ふつうの風によって起こる波とはまったく異なるしくみで発生する自然現象である。
 
 ■ 津波と通常の波の違い

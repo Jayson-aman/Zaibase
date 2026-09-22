@@ -2826,6 +2826,7 @@ export const kokugoExt02Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 特に誤用が多い三つ',
+        mangaId: 'kokugo_s073_manga',
         body: `世の中で誤った意味で使われることが多く、そのため入試でくり返し出題される語がある。正しい意味を正確に覚える。
 
 ■ 気が置けない

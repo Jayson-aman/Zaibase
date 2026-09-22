@@ -2840,6 +2840,7 @@ export const kokugoExt05Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 呼応の組み合わせ一覧',
+        mangaId: 'kokugo_s182_manga',
         body: `呼応（陳述）の副詞は、下にくる述語の言い方を決めてしまう副詞です。組み合わせで暗記します。
 
 ■ 打消（〜ない・〜ません）

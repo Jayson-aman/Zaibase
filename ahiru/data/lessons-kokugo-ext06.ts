@@ -895,6 +895,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '「に」の識別手順',
+        mangaId: 'kokugo_s200_manga',
         body: `「に」は品詞のちがいまで問われるので、格助詞かどうかを最初に確かめる。
 
 【手順1】直前が体言（名詞）か
@@ -2268,6 +2269,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '「ぬ」置きかえテスト',
+        mangaId: 'kokugo_s214_manga',
         body: `「ない」の識別は、中学入試の文法問題で最も出題される。判定方法は1つだけ覚えればよい。
 
 【テスト】「ない」を「ぬ」に置きかえて意味が通るか
@@ -3255,6 +3257,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '最頻出の誤りパターン',
+        mangaId: 'kokugo_s224_manga',
         body: `中学入試の敬語問題で最も出題されるのが「相手の動作に謙譲語を使ってしまう」誤りである。判定は「だれの動作か」を確かめるだけでよい。
 
 ■ パターン1：申す／おっしゃる
