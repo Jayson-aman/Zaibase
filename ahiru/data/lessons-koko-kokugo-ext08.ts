@@ -1606,6 +1606,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
       },
       {
         heading: '格助詞の省略と指示語',
+        mangaId: 'koko_kokugo_s283_manga',
         body: `■ 格助詞が抜ける
 古文では「が」「を」「に」が書かれないことが多い。
 例）竹取物語「竹取の翁といふものありけり」…「翁（が）ありけり」
@@ -2737,6 +2738,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '三種類の敬語はだれを高めるか',
+        mangaId: 'koko_kokugo_s295_manga',
         body: `敬語には三種類あり、それぞれ高める相手がちがう。
 
 ■ ①尊敬語 — 動作をする人（動作主）を高める

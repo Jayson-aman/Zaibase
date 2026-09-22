@@ -3163,6 +3163,7 @@ export const kokoKokugoExt12Lessons: Lesson[] = [
       },
       {
         heading: '「に」と「で」の識別、活用の確認',
+        mangaId: 'koko_kokugo_s440_manga',
         body: `「に」と「で」は種類が多いが、判定の順序を決めれば処理できる。
 
 ■ 「に」の識別（順に試す）

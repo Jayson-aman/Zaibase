@@ -3272,6 +3272,7 @@ const kokoKokugoOverviewLessons: Lesson[] = [
       },
       {
         heading: '6. 要約問題と抜き出し問題の違い',
+        mangaId: 'koko_kokugo_17_youyaku_manga',
         level: 'nyushi',
         body: `「要約しなさい」という問題と、「本文中から抜き出しなさい」という問題は、似ているようで求められる作業がまったく異なります。混同すると大きく減点されるため、最後に整理しておきます。
 
@@ -3321,6 +3322,7 @@ const kokoKokugoOverviewLessons: Lesson[] = [
     sections: [
       {
         heading: '1. 助詞の4分類と働き',
+        mangaId: 'koko_kokugo_18_bunpou_ouyou_manga',
         level: 'kiso',
         body: `助詞は、文中の語句どうしの関係を示したり、話し手の気持ちを添えたりする付属語です。働きによって4種類に分類され、入試ではこの分類と識別が問われます。
 
