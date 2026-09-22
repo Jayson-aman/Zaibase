@@ -2212,6 +2212,7 @@ AB＝AC＝13cm、BC＝10cm の二等辺三角形で、頂点Aから底辺BCに�
     sections: [
       {
         heading: '底角の定理の逆',
+        mangaId: 'koko_math_s216_manga',
         body: `■ 定理
 △ABCで ∠B＝∠C ならば AB＝AC である。
 

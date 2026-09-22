@@ -1966,6 +1966,7 @@ ax+by＝c の形では、y について解いてから傾きを比べるのが�
     sections: [
       {
         heading: '垂直の条件',
+        mangaId: 'koko_math_s143_manga',
         body: `2直線 y＝ax+b と y＝a′x+b′ が垂直に交わるとき、
 　a×a′＝−1
 が成り立つ。逆に、傾きの積が −1 なら2直線は垂直である。

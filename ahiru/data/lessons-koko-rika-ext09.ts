@@ -1981,6 +1981,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '4つの要素をそろえる',
+        mangaId: 'koko_rika_s327_manga',
         body: `光合成の問題は、次の4つを正確に答えられるかで決まる。
 
 ■ ① 材料（何から）

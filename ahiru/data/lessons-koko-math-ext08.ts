@@ -587,6 +587,7 @@ S＝πr²×ℓ/(2πr)＝ℓr/2。
     sections: [
       {
         heading: '内部・外部では角の大きさが変わる',
+        mangaId: 'koko_math_s283_manga',
         body: `弦ABを、いろいろな位置の点から見込む角を比べてみる。
 
 ■ 円周上の点Q：∠AQB は円周角。中心角の半分で一定。
