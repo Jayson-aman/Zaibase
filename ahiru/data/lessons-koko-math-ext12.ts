@@ -121,6 +121,7 @@ export const kokoMathExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '式の計算と方程式を混同しない',
+        mangaId: 'koko_math_s412_manga',
         body: `分数がからむ計算で最も多い失点は、「式の計算」なのに分母を払ってしまう誤りである。等号があるかどうかで扱いが正反対になる。
 
 ■ 式の計算（等号なし）＝通分するだけ

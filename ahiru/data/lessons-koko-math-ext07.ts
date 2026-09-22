@@ -608,6 +608,7 @@ ADは短い方の辺で、その相手はACである。AEはACより長いので
     sections: [
       {
         heading: '3つの相似が現れる仕組み',
+        mangaId: 'koko_math_s238_manga',
         figureId: 'lf_kokomathext07_238',
         body: `∠A＝90°の直角三角形ABCで、頂点Aから斜辺BCに垂線AHを下ろす。すると、もとの三角形が2つの小さな直角三角形に分かれ、その3つがすべて相似になる。
 

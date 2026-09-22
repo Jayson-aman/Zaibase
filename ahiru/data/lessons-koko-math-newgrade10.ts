@@ -326,6 +326,7 @@ AB∥CDである台形ABCDで、∠A（∠DAB）とAD側でとなり合う∠D�
     sections: [
       {
         heading: '3つの合同条件と「見分け方」',
+        mangaId: 'koko_sansu_newgrade10_04_manga',
         body: `三角形の合同条件は次の3つである。
 
 ①3組の辺がそれぞれ等しい（SSS）
