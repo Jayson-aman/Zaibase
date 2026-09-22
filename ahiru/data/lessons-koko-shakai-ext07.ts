@@ -3303,6 +3303,7 @@ export const kokoShakaiExt07Lessons: Lesson[] = [
       },
       {
         heading: '外国船の接近と幕府の対応',
+        mangaId: 'koko_shakai_s265_shinsuikyoyorei_manga',
         body: `18世紀末から、日本の周辺に外国船が現れるようになる。
 
 ■ ロシアの接近

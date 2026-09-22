@@ -291,6 +291,7 @@ export const kokoShakaiExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '製造物責任法（PL法）',
+        mangaId: 'koko_shakai_s409_plhou_manga',
         body: `製品の欠陥によって消費者が生命・身体・財産に損害を受けたとき、その製造業者などに損害賠償を求められることを定めた法律で、1994年制定、1995年施行である。PLはProduct Liability（製造物責任）の略。
 
 ■ 従来の制度の問題点

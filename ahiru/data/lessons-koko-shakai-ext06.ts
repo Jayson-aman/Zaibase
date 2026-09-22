@@ -528,6 +528,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
       },
       {
         heading: '執権政治のしくみ',
+        mangaId: 'koko_shakai_s197_shikkenseiji_manga',
         body: `執権はもともと政所の別当（長官）の地位だが、北条氏はそこに侍所別当を兼ねることで幕府の軍事と行政を一手ににぎった。
 
 ■ 幕府の階層
@@ -2850,6 +2851,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
       },
       {
         heading: '乱の影響と下剋上',
+        mangaId: 'koko_shakai_s224_gekokujou_manga',
         body: `■ ①幕府の権威の失墜
 将軍は京都周辺しか支配できなくなった。命令に従う大名はほとんどいなくなり、幕府は名前だけの存在に近づいた。以後も幕府は続くが、実質は細川氏など有力者に担がれる存在となる。
 

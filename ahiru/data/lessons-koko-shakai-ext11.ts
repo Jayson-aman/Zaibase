@@ -2380,6 +2380,7 @@ C党　 480　　240　　160
     sections: [
       {
         heading: '違憲審査権のしくみ',
+        mangaId: 'koko_shakai_s399_ikenshinsaken_manga',
         body: `■ 条文
 憲法第81条は「最高裁判所は、一切の法律、命令、規則又は処分が憲法に適合するかしないかを決定する権限を有する終審裁判所である」と定める。
 
@@ -2832,6 +2833,7 @@ C党　 480　　240　　160
     sections: [
       {
         heading: '地方財政の収入の内訳',
+        mangaId: 'koko_shakai_s404_chihouzaisei_manga',
         body: `地方公共団体の収入（歳入）は、自分で集めるものと外から受け取るものに分けられる。
 
 ■ 自主財源
