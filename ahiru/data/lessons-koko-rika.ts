@@ -1740,6 +1740,7 @@ AaBb * AaBb の子の表現型比率：
       },
       {
         heading: `2. 食物連鎖と物質の循環`,
+        mangaId: 'koko_rika_10_ecosystem_manga',
         figureId: 'lf_krika_26',
         level: 'oyo',
         body: `■ 食物連鎖と食物網
@@ -2894,6 +2895,7 @@ U字形磁石のN極とS極の間に導線を置き電流を流すと、導線�
       },
       {
         heading: `5. 入試レベル②：ヒトの生殖と発生`,
+        mangaId: 'koko_rika_16_reproduction_manga',
         level: 'nyushi',
         body: `■ ヒトの生殖細胞の形成
 
@@ -3706,6 +3708,7 @@ O型の子（ii）が生まれるには、両親とも少なくとも1つのi（
       },
       {
         heading: `4. エネルギー変換効率と省エネルギー`,
+        mangaId: 'koko_rika_21_energy_resources_manga',
         figureId: 'lf_krika_80',
         level: 'oyo',
         body: `■ エネルギー変換効率
@@ -3876,6 +3879,7 @@ O型の子（ii）が生まれるには、両親とも少なくとも1つのi（
       },
       {
         heading: `4. 浮き沈みの判定`,
+        mangaId: 'koko_rika_22_pressure_buoyancy_manga',
         figureId: 'lf_krika_62',
         level: 'oyo',
         body: `■ 浮き沈みを決める条件

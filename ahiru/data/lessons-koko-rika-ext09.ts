@@ -1331,6 +1331,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '運ぶもの・向き・位置',
+        mangaId: 'koko_rika_s320_manga',
         body: `道管と師管は、次の三点で完全に区別できる。
 
 ■ ① 何を運ぶか
