@@ -156,6 +156,7 @@ export const lessonsNew20E6Kokugo: Lesson[] = [
       },
       {
         heading: '2. 「なぜその判断をしたのか」を説明する',
+        mangaId: 'new20_e6_kokugo_02_hanketsu_riyuu_manga',
         body: `伝記文の記述問題で最も多いのが、「なぜ〜という行動をとったのか、説明しなさい」という理由説明問題です。逆境の場面での判断理由は、次の三つの要素を組み合わせて考えると整理しやすくなります。
 
 ■ 理由づけの三パターン
