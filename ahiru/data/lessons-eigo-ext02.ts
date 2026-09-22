@@ -2263,6 +2263,7 @@ C が出てくる文型（SVC・SVOC）では、必ずイコールの関係が�
       },
       {
         heading: 'なぜ修飾語を消してから文型を決めるのか、なぜ「イコール」で見分けるのか',
+        mangaId: 'eigo_s065_manga',
         body: `文型は、文の**骨組み**（S・V・O・C）の組み合わせです。in the park や every morning のような修飾語は、取りのぞいても文が成り立つ飾りなので、骨組みには入りません。修飾語を残したまま数えると、I play tennis in the park. を「tennis と in the park で目的語が二つ」と見て SVOO と答えてしまいます。だから先に前置詞から始まるかたまりと時を表す語句を（　）でくくって消し、残った骨組みで決めます。
 
 C（補語）を「イコール」で見分けるのは、補語が**主語や目的語がどんなものかを説明する語**だからです。He is a doctor. は He＝a doctor、We call him Ken. は him＝Ken。いっぽう O（目的語）は動作の相手なので、I like dogs. の I≠dogs、He gave me a book. の me≠a book です。イコールが成り立つかどうかで、SVC・SVOC と SVO・SVOO を分けられます。

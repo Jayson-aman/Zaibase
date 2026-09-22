@@ -2857,6 +2857,7 @@ never（一度も〜ない）
       },
       {
         heading: 'なぜ表に整理しながら読み、なぜ never には don\'t を重ねないのか',
+        mangaId: 'eigo_s474_manga',
         body: `一日の生活の文には時こくが次々に出てくるので、読みながら「何時に何をするか」を表にすると、あとで What time does he get up? と聞かれたときに表を見るだけで答えられます。時こく・曜日・ひんどの語（always・usually・sometimes）に印をつけるのは、設問がそこを聞くからです。
 
 never が「一度も〜ない」で don't を重ねないのは、never が**それ自体に打ち消しの意味を持つ語**だからです。I never don't eat 〜 と書くと打ち消しが二重になります。ひんどの語が一般動詞の前に置かれるのは、動詞の「どれくらいの頻度で」を説明する語だからで、be動詞のときはそのうしろ（I am always busy.）に置きます。always→usually→often→sometimes→never の順に少なくなります。

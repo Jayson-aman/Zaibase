@@ -404,6 +404,7 @@ It's delicious.（とてもおいしい。）
       },
       {
         heading: 'なぜパンや水は数えられず、なぜ単位で数えるのか',
+        mangaId: 'eigo_s344_manga',
         body: `英語で「数えられる」のは、**形が決まっていて、一つ二つと区切れるもの**です。りんごや卵は一つの形があるので an apple・two eggs。水・牛乳・パン・ごはん・肉は、量はあっても決まった形がなく、どこで一つと区切るかが決まりません。だから a も -s も付けません。数えたいときは、コップ・カップ・切れ・ボウルという**容器や単位で区切って**、a glass of water・two pieces of cake と言います。数が増えたら単位のほう（glasses・pieces）に -s を付けます。
 
 two cakes と言うと「ホールケーキ2台」の意味になるのは、cake を形のある一つのものとして数えたことになるからです。切り分けた一部は piece で数えます。「多い」を表す語も、数えられる名詞には many、数えられない名詞には much、どちらにも a lot of と分かれます。
@@ -784,6 +785,7 @@ go → went（行った）／have → had（〜があった・食べた）／see
       },
       {
         heading: 'なぜ行事は二語で表し、なぜ enjoy のあとは -ing なのか',
+        mangaId: 'eigo_s348_manga',
         body: `運動会・修学旅行のような日本の学校行事には、そのまま当てはまる英語の一語がありません。英語では「スポーツの日」「学校の旅行」のように**説明する二語**（sports day・school trip）で表します。行事が「ある」と言うとき have を使うのは、行事を「持っている・経験する」ものとしてとらえるからで、We have a sports day in October. と言います。月には in（幅のある期間）、日付には on（一日）を使います。
 
 enjoy のあとの動詞を -ing にするのは、enjoy が「（今している・したこと）を楽しむ」という動詞で、**すでに起きている動作**を目的語にとるからです。-ing は「している最中の動作」を名詞にした形なので、enjoy と相性が合います。反対に want・hope・decide は「これからすること」を目的語にとるので、未来へ向かう to＋原形と組みます。enjoy -ing はセットで覚えます。
@@ -1736,6 +1738,7 @@ minute（分）／hour（時間）／second（秒）／noon（正午）／midnig
       },
       {
         heading: 'なぜ時刻の主語が It で、なぜ to のあとは次の時刻なのか',
+        mangaId: 'eigo_s358_manga',
         body: `英語の文には必ず主語が要ります。「七時です」には「何が」にあたる語がないので、天気や曜日と同じく、**訳さない It を主語に置いて形を整えます**。I am seven. と言うと「私は7歳です」になってしまうので、時刻は It is seven. です。o'clock は「〜時ちょうど」を表す語なので、分が付くとき（nine thirty）には付けません。
 
 past と to の言い方は、**時計の針の動き**をそのまま言葉にしたものです。30分までは「〇時を過ぎて〇分」なので ten past seven、30分を過ぎたら「次の〇時まであと〇分」と数えるので ten to eight。7:50 を ten to seven と言うと 6:50 の意味になります。to のあとには必ず次の時刻が来る、と覚えます。
@@ -2216,6 +2219,7 @@ Are there any restaurants around here?（この辺りにレストランはあり
       },
       {
         heading: 'なぜ go to school は the が付かず、なぜ before は場所に使えないのか',
+        mangaId: 'eigo_s363_manga',
         body: `go to the station は「駅という建物へ行く」ですが、go to school は「勉強しに行く（通学する）」という**目的**を表します。school・church・bed・hospital のような語は、建物ではなく本来の目的（勉強・礼拝・睡眠・治療）で使うときに冠詞を付けません。建物として指すとき（弟に会いに学校の建物へ行く）は go to the school と the を付けます。冠詞の有無で、建物か目的かが分かれます。
 
 before が場所に使えないのは、before が**時間の「前」**（before dinner）を表す語だからです。場所の「前」は in front of、後ろは behind。日本語ではどちらも「前」なので区別できませんが、英語では時間（before／after）と場所（in front of／behind）で語が分かれています。
@@ -2610,6 +2614,7 @@ take part in（〜に参加する）／take out（取り出す・持ち帰る）
       },
       {
         heading: 'なぜ take が「する」を表し、なぜ時間の主語が It なのか',
+        mangaId: 'eigo_s367_manga',
         body: `take の中心の意味は「手に取る」です。そこから「（機会や行動を）取る」に広がり、take a bath（入浴という行動を取る）、take a walk（散歩を取る）、take a picture（写真を取る）のように、**名詞で表した行動を「取る＝する」**と言えるようになりました。take a bus は「バスという手段を取る」、take care of は「世話という役目を引き受ける」です。だから日本語の「する」から do を選ばず、take ＋ 名詞のかたまりで覚えます。
 
 「時間がかかる」の主語が It なのは、時刻や天気と同じで**「何が」にあたる語がない**からです。「私は20分かかる」と日本語で言えても、英語では時間を取るのは「私」ではなく状況なので、It takes twenty minutes. とし、人を入れるなら It takes me twenty minutes to 〜 の形にします。お金がかかるときは take ではなく cost を使います。
@@ -3918,6 +3923,7 @@ block（区画）／corner（角）／traffic light, signal（信号）／crossi
       },
       {
         heading: 'なぜ答える側が難しく、なぜ序数を使うのか',
+        mangaId: 'eigo_s380_manga',
         body: `たずねる側は Excuse me. How can I get to 〜? と決まり文句一つで足りますが、答える側は**相手の位置から見た向き**で道順を組み立てなければなりません。Turn right の right は、説明する自分ではなく、歩く相手から見た右です。だから地図問題では、出発点と向いている方向を確認し、曲がるたびに指でたどります。頭の中だけで回すと、下を向いているときの right が地図上の左になることを忘れて、右と左が入れかわります。
 
 「2つ目の角」を the second corner と序数で言うのは、角を**数えるのではなく順番で指している**からです。two corners は「角が二つ」という数であって、どの角かを指せません。first・second・third を正確に読み取ることが、目的地を決める鍵です。序数の前には the を付けます。
