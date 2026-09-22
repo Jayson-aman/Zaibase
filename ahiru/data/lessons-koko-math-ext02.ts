@@ -51,6 +51,7 @@ export const kokoMathExt02Lessons: Lesson[] = [
       },
       {
         heading: '(√a)² と √(a²) のちがい',
+        mangaId: 'koko_math_s041_manga',
         body: `根号と2乗が組み合わさった形は、入試でも取りちがえが多いところである。次の2つをはっきり区別する。
 
 ■ (√a)²＝a（先に根号、あとで2乗）

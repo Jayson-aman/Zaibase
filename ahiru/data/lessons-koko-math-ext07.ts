@@ -1205,6 +1205,7 @@ a＝bのとき（平行四辺形）はEF＝2a²/2a＝a、MN＝(a＋a)/2＝aで�
     sections: [
       {
         heading: '中点四角形が平行四辺形になる理由',
+        mangaId: 'koko_math_s245_manga',
         body: `四角形ABCDの辺AB、BC、CD、DAの中点をそれぞれP、Q、R、Sとする。このとき四角形PQRSは必ず平行四辺形になる。
 
 ■ 証明
@@ -1996,6 +1997,7 @@ BD＝BC×AB/(AB＋AC)、DC＝BC×AC/(AB＋AC)
     sections: [
       {
         heading: '体積が3乗になる理由',
+        mangaId: 'koko_math_s254_manga',
         figureId: 'lf_kokomathext07_254',
         body: `相似比が 1:2 の直方体を考える。縦・横・高さがすべて2倍になるので
 

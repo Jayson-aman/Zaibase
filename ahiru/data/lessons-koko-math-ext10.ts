@@ -230,6 +230,7 @@ export const kokoMathExt10Lessons: Lesson[] = [
       },
       {
         heading: '重なりに注意する（たしすぎ・かけすぎ）',
+        mangaId: 'koko_math_s343_manga',
         body: `和の法則も積の法則も、「重なり」を見落とすと必ずまちがう。
 
 ■ たしすぎ（重なりを引く）
@@ -555,6 +556,7 @@ n個すべてを並べる方法は n!＝n×(n−1)×…×2×1 と書き、階乗
     sections: [
       {
         heading: '割る理由をきちんと理解する',
+        mangaId: 'koko_math_s347_manga',
         body: `5人（A・B・C・D・E）から3人の代表を選ぶ。役職はなく、選ばれるだけとする。
 
 ■ まず並べてみる
