@@ -966,6 +966,7 @@ export const kokoShakaiExt04Lessons: Lesson[] = [
       },
       {
         heading: 'なぜ地位が下がり、どう立て直すか',
+        mangaId: 'koko_shakai_s123_manga',
         body: `戦前、阪神工業地帯の製造品出荷額は日本一だった。しかし現在は中京工業地帯が全国第1位で、阪神はそれに次ぐ位置にある。
 
 ■ 地位が下がった理由
@@ -2122,6 +2123,7 @@ export const kokoShakaiExt04Lessons: Lesson[] = [
     sections: [
       {
         heading: 'なぜ東北で米が多くとれるのか',
+        mangaId: 'koko_shakai_s137_manga',
         body: `東北地方は「日本の穀倉地帯」と呼ばれ、全国の米の産出額のおよそ4分の1を生み出している。
 
 ■ 稲作を支える条件
