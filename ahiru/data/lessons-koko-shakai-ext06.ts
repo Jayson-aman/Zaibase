@@ -591,6 +591,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: 'なぜ上皇は兵をあげたのか',
+        mangaId: 'koko_shakai_s198_manga',
         body: `後鳥羽上皇は和歌・蹴鞠・刀剣づくりにも通じた多才な人物で、『新古今和歌集』の編さんを命じたことでも知られる。同時に、朝廷の権威を回復しようという強い意志を持っていた。
 
 ■ 挙兵の背景

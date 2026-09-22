@@ -105,6 +105,7 @@ export const kokoShakaiExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: '米どころはなぜ東北・北陸に集まるのか',
+        mangaId: 'koko_shakai_s077_manga',
         body: `2023年産の水稲収穫量を見ると、1位が新潟（約59万t）、2位が北海道（約54万t）、3位が秋田（約46万t）、続いて山形・宮城と、東北と北陸が上位を占める。米の産地が北に寄っているのは、次の三つの条件がそろっているからである。
 
 ■ ①夏の高温と長い日照
