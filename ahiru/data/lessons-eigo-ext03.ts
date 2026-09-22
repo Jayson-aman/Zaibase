@@ -1112,6 +1112,7 @@ She bought a loaf of bread at the bakery.（彼女はパン屋でパンを1斤�
     sections: [
       {
         heading: 'いつも複数形で使う語',
+        mangaId: 'eigo_s093_manga',
         body: `英語では、左右または二つの部分がそろって初めて役に立つ物を、いつも複数形で表す。
 
 ■ 代表的な語
