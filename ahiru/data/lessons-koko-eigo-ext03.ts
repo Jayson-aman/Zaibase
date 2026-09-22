@@ -1215,6 +1215,7 @@ tell－told－told（伝える）／sell－sold－sold（売る）／say－said�
       },
       {
         heading: 'なぜ音のグループで覚えると速く、なぜ say は人を直接とれないのか',
+        mangaId: 'koko_eigo_s084_manga',
         body: `A-B-B 型の不規則動詞は数が多いので、意味で覚えると一つずつ孤立します。しかし buy－bought、teach－taught、think－thought は**音の終わり方が同じ**なので、一つ思い出せば同じ音の仲間が芋づる式に出てきます。思い出すときの手がかりが「意味」と「音」の二本になるので、忘れにくくなります。つづりが ought と aught に分かれても発音は同じで、teach と catch だけが aught です。
 
 say と tell のちがいは、動詞が**何に重点を置くか**にあります。say は「言った内容」に重点があり、うしろに言葉や that 節が来て、人を続けるには to が要ります。tell は「伝える相手」に重点があり、〈tell＋人＋内容〉の語順をとります。だから「私に本当のことを言った」は He told me the truth. で、He said me 〜 は誤りです。speak は一方的に話す・言語を話す、talk は話し合う、と重点がちがいます。

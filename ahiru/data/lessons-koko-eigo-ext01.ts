@@ -2536,6 +2536,7 @@ free（ひまな）⇔ busy ／ free（無料の）⇔ expensive
       },
       {
         heading: 'なぜ反意語は「意味ごと」に持ち、なぜ「高い」が expensive になるのか',
+        mangaId: 'koko_eigo_s028_manga',
         body: `light には「軽い」と「明るい」という**別々の意味**があり、それぞれに反対語（heavy・dark）があります。日本語では別の語なので一対一で覚えたくなりますが、英語の一語が複数の意味を持つとき、反意語はその意味ごとに決まります。hard（難しい⇔easy／かたい⇔soft）、right（正しい⇔wrong／右⇔left）、free（ひまな⇔busy／無料の⇔expensive）も同じです。
 
 「この本は高い」を high と言えないのは、high が**高さ**（背・位置）を表す語で、物の値段の高さは expensive という別の語が受け持つからです。値段そのものを主語にすれば The price is high. と言えます。日本語の「高い」が英語では expensive（物が主語）と high（値段が主語）に分かれます。cheap に「安っぽい」の響きがあるのは、値段の安さから質の低さを連想させるからで、手ごろだと言いたいときは inexpensive・reasonable を使います。

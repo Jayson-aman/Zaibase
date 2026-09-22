@@ -286,6 +286,7 @@ s, z, sh, ch, x など「シュ・ズ」系の音で終わる語のあと。音�
     sections: [
       {
         heading: 'なぜ am play のような誤りが起きるのか',
+        mangaId: 'koko_eigo_s039_manga',
         body: `日本語は「私はテニスをします」「私は忙しいです」のように、どちらも「〜ます・です」で終わる。この語尾の感覚を英語に持ちこむと、be動詞を「です」の訳として付け足してしまう。
 
 ■ よくある誤りと直し方
@@ -1494,6 +1495,7 @@ go, come, run, walk, swim, live, work, stay, sit, stand, sleep, happen, rise, fa
       },
       {
         heading: 'なぜ S ≠ O で見分け、なぜ「〜に」でも前置詞が要らないのか',
+        mangaId: 'koko_eigo_s052_manga',
         body: `第2文型（He is a teacher.）も第3文型（He knows a teacher.）も、動詞のあとに名詞が一つ来る形は同じです。ちがいは、その名詞が**主語とイコールか**（C）、**動作の相手か**（O）です。He＝a teacher なら第2文型、He≠a teacher なら第3文型。イコールで結べるかどうかが、形では見えない区別をつける唯一の手がかりです。
 
 call him・marry her・enter the room で前置詞が要らないのは、これらが**目的語を直接とる動詞（他動詞）**だからです。日本語では「彼に電話する」「彼女と結婚する」「部屋に入る」と助詞が「を」ではありませんが、英語の他動詞かどうかは日本語の助詞と無関係に、動詞ごとに決まっています。語順が S→V→O に固定されているのは、英語には助詞がなく、**位置だけで「だれが・何を」を示す**からです。Ken likes Yumi. と Yumi likes Ken. は語順で意味が変わります。

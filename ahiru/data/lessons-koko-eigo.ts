@@ -213,6 +213,7 @@ She looks pale. She (　　) sick last night.
       },
       {
         heading: 'なぜ時制の形がこう決まっているのか・確かめのしかた',
+        mangaId: 'koko_eigo_01_tense_manga',
         body: `■ なぜ時・条件の副詞節では未来でも現在形なのか
 If it rains tomorrow, I will stay home. の if 節は、「雨が降る」という**条件をただ置いているだけ**で、予測しているのは主節（I will stay home）です。予測や意志を表す will は文に一度あれば足り、条件の側にまで付けると意味が重なります。だから when・if・after・before・until が導く節では現在形にします。
 
@@ -1348,6 +1349,7 @@ I am looking forward to (　　) you again.
       },
       {
         heading: 'なぜ前置詞はイメージで覚え、なぜ look forward to のあとは -ing なのか',
+        mangaId: 'koko_eigo_06_vocab_manga',
         body: `■ なぜ「イメージ」なのか
 in・on・at は、場所でも時でも同じ**核のイメージ**を持っています。in は「囲まれた中に」（in the room／in July／in trouble）、on は「面に接して」（on the table／on Monday）、at は「一点で」（at the station／at noon）。核を知っていれば、初めて見る熟語（in English＝英語という枠の中で、on my birthday＝その日に接して）も意味の見当がつきます。一つずつ暗記すると数百の熟語になりますが、核は十個ほどしかありません。by（そばに→手段・期限）と until（〜までずっと）のちがいも、by が「期限の点」、until が「続く線」というイメージで分けられます。
 
