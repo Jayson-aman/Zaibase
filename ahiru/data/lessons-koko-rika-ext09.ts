@@ -1161,6 +1161,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
       },
       {
         heading: '根毛はなぜ細くて多いのか',
+        mangaId: 'koko_rika_s318_manga',
         body: `根の先端近くには、白い綿毛のような細かい毛が無数に生えている。これを根毛という。
 
 ■ 根毛の正体

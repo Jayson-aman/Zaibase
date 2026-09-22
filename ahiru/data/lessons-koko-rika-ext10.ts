@@ -227,6 +227,7 @@ export const kokoRikaExt10Lessons: Lesson[] = [
       },
       {
         heading: 'うむ数のちがいの理由',
+        mangaId: 'koko_rika_s343_manga',
         body: `動物がうむ卵や子の数は、種類によって極端に異なる。
 
 例）マンボウ：数千万〜3億個／マイワシ：数万個／カエル：数千個／ウミガメ：100個程度／ハト：2個／ヒト：ふつう1人

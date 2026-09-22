@@ -268,6 +268,7 @@ export const kokoRikaExt04Lessons: Lesson[] = [
     sections: [
       {
         heading: 'なぜ北極付近がS極になるのか',
+        mangaId: 'koko_rika_s114_manga',
         body: `方位磁針のN極が北を指す、という事実から出発する。
 
 ■ 論理の道すじ
