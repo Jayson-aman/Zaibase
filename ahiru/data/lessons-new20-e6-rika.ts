@@ -175,6 +175,7 @@ export const lessonsNew20E6Rika: Lesson[] = [
       },
       {
         heading: '2. なぜ「損なてこ」の並びなのか',
+        mangaId: 'new20_e6_rika_03_manga',
         body: `力の面で損をするのに、なぜ人間の体はこの並びを選んでいるのだろうか。その理由は「速さ」と「動く範囲(可動域)」にある。
 
 ■ 力点が支点に近いてこの特徴

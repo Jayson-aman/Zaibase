@@ -114,6 +114,7 @@ export const lessonsNew20E5Rika: Lesson[] = [
       },
       {
         heading: '3. よくある誤解とひっかけ問題',
+        mangaId: 'new20_e5_rika_02_manga',
         body: `ふりこの性質について、入試でよく出されるひっかけパターンを確認しておこう。
 
 【ひっかけ①】「おもりを重くすると速く振れて周期が短くなる」という誤答

@@ -577,6 +577,7 @@ export const lessonsNew20E4Rika: Lesson[] = [
       },
       {
         heading: '2. 金属のふたが開けやすくなる理由',
+        mangaId: 'new20_e4_rika_09_manga',
         body: `ガラスのびんに金属のふたがはまっていて、かたくて開けにくいとき、ふたの部分をお湯であたためると開けやすくなることがある。
 
 ■ 開けやすくなる理由
