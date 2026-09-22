@@ -2233,6 +2233,7 @@ AB をはさんで O と反対側にも、同じ距離の平行線が引ける�
     sections: [
       {
         heading: '中線が面積を2等分する',
+        mangaId: 'koko_math_s181_chuusen_manga',
         body: `三角形 ABC で、頂点 A から対辺 BC の中点 M へ引いた線分を中線という。中線は三角形の面積を2等分する。
 
 ■ なぜ2等分になるか

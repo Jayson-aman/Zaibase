@@ -210,6 +210,7 @@ export const kokoMathExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '減法は加法に直す',
+        mangaId: 'koko_math_s003_genpou_manga',
         body: `正負の数のひき算は、そのままでは考えにくい。そこで必ず加法に直す。
 
 ■ 減法のきまり
@@ -975,6 +976,7 @@ x²×x³ は「足して x⁵」、(x²)³ は「かけて x⁶」。
     sections: [
       {
         heading: '約数の個数の求め方',
+        mangaId: 'koko_math_s011_yakusuu_manga',
         body: `■ 公式
 自然数 N を素因数分解して N＝pᵃ×qᵇ×rᶜ と表せるとき、
 　約数の個数＝(a+1)(b+1)(c+1)

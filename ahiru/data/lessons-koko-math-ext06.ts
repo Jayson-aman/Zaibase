@@ -2683,6 +2683,7 @@ AD∥BC より、∠Aと∠Bは同側内角なので
       },
       {
         heading: '対角線がそれぞれの中点で交わることの証明',
+        mangaId: 'koko_math_s221_taikakusen_manga',
         body: `■ 証明
 平行四辺形ABCDの対角線AC、BDの交点をOとする。
 　△ABOと△CDOにおいて
@@ -3476,6 +3477,7 @@ AD∥BC のとき、△ABC と △DBC の面積は等しい。
     sections: [
       {
         heading: '四角形を等積な三角形に変える',
+        mangaId: 'koko_math_s230_toseki_henkei_manga',
         body: `■ 手順
 四角形ABCDと面積の等しい三角形を作る。
 ①対角線ACを引く。
