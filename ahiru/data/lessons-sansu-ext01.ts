@@ -2037,6 +2037,7 @@ export const sansuExt01Lessons: Lesson[] = [
       },
       {
         heading: 'なぜ割り切れる分数と、割り切れない分数があるのか',
+        mangaId: 'sansu_s022_manga',
         figureId: 'sext01_s022_naze',
         body: `■ わり算が終わるのは「あまりが0になったとき」
 1 ÷ 8 を筆算すると、あまりは 2 → 4 → 0 と変わり、**あまりが 0 になった時点で終わり**ます。だから 0.125 ときれいに止まります。

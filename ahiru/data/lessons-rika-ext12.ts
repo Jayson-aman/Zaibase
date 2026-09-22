@@ -146,6 +146,7 @@ export const rikaExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 海進と海退 — 粒の大きさの変化が示す環境変化',
+        mangaId: 'rika_s413_manga',
         figureId: 'lf_rika_ext12_413',
         body: `ある1つの地点で、上下方向（時代の流れ）に粒の大きさがどう変化しているかを見ると、その場所の水深（海の深さ）がどう変わってきたかがわかる。これは中学受験理科でも最重要級の考え方である。
 
