@@ -58,6 +58,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
       },
       {
         heading: '2. ねじれの位置を見抜くコツと、平面の常識が通じない例',
+        mangaId: 'koko_math_s306_manga',
         body: `ねじれの位置の辺は「基準の辺と、頂点を1つも共有しない辺のうち、平行でないもの」と言い換えられる。この言い換えを使うと、頂点の記号を見るだけで機械的に候補が絞れる。
 
 例）辺ABを基準にするとき、記号にAもBも含まない辺だけを書き出す。直方体ABCD−EFGHなら、CD、CG、DH、EF、FG、GH、EH の7本。この7本のうち、ABと平行なDC、EF、HGの3本を除いた CG、DH、FG、EH の4本がねじれの位置である。
