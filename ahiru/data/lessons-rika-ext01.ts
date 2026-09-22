@@ -1870,6 +1870,7 @@ export const rikaExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '発芽の3条件を実験で確かめる',
+        mangaId: 'rika_s028_manga',
         body: `種子が発芽するためには、次の3つの条件がすべてそろう必要がある。
 
 ■ 水：種子が水を吸うことで、かたかった種子がやわらかくふくらみ、たくわえていた養分を分解して使うはたらきが始まる。

@@ -147,6 +147,7 @@ export const rikaExt11Lessons: Lesson[] = [
     sections: [
       {
         heading: '地軸の傾きと季節ごとの南中高度',
+        mangaId: 'rika_s368_manga',
         figureId: 'rf11_s368',
         body: `地球は地軸(自転の軸)を公転面に対して約23.4°傾けたまま、太陽のまわりを公転している。この傾きのために、季節によって太陽の南中高度が変化する。
 

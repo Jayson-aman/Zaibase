@@ -239,6 +239,7 @@ export const rikaExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '全身鏡の最小サイズ問題',
+        mangaId: 'rika_s179_manga',
         body: `身長より小さい鏡でも、位置を工夫すれば全身を映すことができる。この単元でよく出る定番問題を確認する。
 
 ■ 結論
@@ -1293,6 +1294,7 @@ export const rikaExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '「距離＝速さ×時間」で音源までの距離を求める',
+        mangaId: 'rika_s194_manga',
         body: `空気中を伝わる音の速さは、特に指定がなければ秒速約340mとして計算するのが中学受験理科の標準的な扱いである（気温によって多少変化するが、この単元では秒速340mを基準にする）。
 
 ■ 光と音の速さの違い

@@ -183,6 +183,7 @@ export const rikaExt10Lessons: Lesson[] = [
     sections: [
       {
         heading: 'ろ過で分けられるもの・分けられないもの',
+        mangaId: 'rika_s338_manga',
         figureId: 'lf_rext10_338',
         body: `ろ過は、目に見えないほど小さいろ紙の穴を利用して、液体ととけていない固体（粒）を分ける操作です。
 

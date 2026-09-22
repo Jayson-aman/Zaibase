@@ -373,6 +373,7 @@ export const lessonsNew20E5Rika: Lesson[] = [
       },
       {
         heading: '2. おす・めすの見分け方—背びれ・しりびれに注目',
+        mangaId: 'new20_e5_rika_07_manga',
         body: `おすとめすを見分けるポイントは、背びれとしりびれの形にある。
 
 【おす・めすの見分け方】

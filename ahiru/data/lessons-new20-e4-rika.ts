@@ -274,6 +274,7 @@ export const lessonsNew20E4Rika: Lesson[] = [
       },
       {
         heading: '2. ショート回路（短絡）の危険性',
+        mangaId: 'new20_e4_rika_04_manga',
         body: `豆電球やモーターなどを通さずに、かん電池の＋極と－極をどう線だけで直接つないでしまう危険な状態を「ショート回路（短絡）」という。
 
 ■ なぜ危険なのか
@@ -329,6 +330,7 @@ export const lessonsNew20E4Rika: Lesson[] = [
     sections: [
       {
         heading: '1. 閉じ込めた空気をおすとどうなるか',
+        mangaId: 'new20_e4_rika_05_manga',
         body: `注射器（ちゅうしゃ器）のようなつつの中に空気を閉じ込め、ピストンをおしこむ実験で、空気の性質を確かめることができる。
 
 ■ 実験の手順

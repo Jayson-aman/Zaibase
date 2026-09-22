@@ -3021,6 +3021,7 @@ export const sansuExt09Lessons: Lesson[] = [
       },
       {
         heading: 'なぜ「5 倍」から子の年齢が決まり、差を「いくつ分」と見ると速いのか',
+        mangaId: 'sansu_s338_manga',
         figureId: 'sext09_s338_naze',
         body: `■ 「今 5 倍」は年齢を教えてくれる
 父 40 歳が子の 5 倍なら、子 ＝ 40÷5 ＝ 8 歳。倍率と片方の年齢が分かれば、もう片方が決まります。差は 40 − 8 ＝ **32 歳**で、これは何年たっても同じ。
