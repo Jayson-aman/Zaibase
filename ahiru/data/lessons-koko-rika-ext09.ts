@@ -685,6 +685,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
       },
       {
         heading: '形成層があるから太くなれる',
+        mangaId: 'koko_rika_s313_manga',
         body: `■ 形成層とは
 道管と師管の間にある、細胞分裂がさかんな薄い層。ここで細胞がふえ、内側に新しい道管、外側に新しい師管をつくり足していく。その結果、茎が年々太くなる。
 
