@@ -1132,6 +1132,7 @@ export const kokoRikaExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '温暖前線の断面',
+        mangaId: 'koko_rika_s429_ondanzensen_manga',
         body: `温暖前線では、軽くあたたかい暖気が、寒気の上をなめらかにはい上がりながら進む。
 
 ■ 前線面の形
@@ -2520,6 +2521,7 @@ export const kokoRikaExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '三つの公式とその意味',
+        mangaId: 'koko_rika_s445_nanchuukoudo_manga',
         body: `南中高度は、地平線から南中した太陽までの角度である。
 
 ■ 春分・秋分

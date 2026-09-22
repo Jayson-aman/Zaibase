@@ -537,6 +537,7 @@ export const kokoRikaExt10Lessons: Lesson[] = [
     sections: [
       {
         heading: '四つの代表的な消化酵素',
+        mangaId: 'koko_rika_s347_shoukakouso_manga',
         body: `消化酵素は、決まった相手（栄養素）にしかはたらかない。かぎとかぎ穴の関係にたとえられる。
 
 ■ アミラーゼ
@@ -981,6 +982,7 @@ Aだけを行って「デンプンが消えた」としても、それがだ液�
     sections: [
       {
         heading: '肺胞と気体の交換',
+        mangaId: 'koko_rika_s352_haihou_manga',
         body: `■ 空気の通り道
 鼻や口から入った空気は、気管を通り、左右に分かれた気管支を進み、さらに細かく枝分かれして、その先端にある肺胞という小さな袋に達する。
 
@@ -2047,6 +2049,7 @@ Aだけを行って「デンプンが消えた」としても、それがだ液�
     sections: [
       {
         heading: '二つの経路を並べて比べる',
+        mangaId: 'koko_rika_s364_hansha_manga',
         body: `刺激に対する体の反応には、大きく二種類ある。
 
 ■ 意識して起こす反応
