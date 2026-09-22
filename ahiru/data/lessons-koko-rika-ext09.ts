@@ -1791,6 +1791,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '数のデータを読む',
+        mangaId: 'koko_rika_s325_manga',
         body: `気孔の数は、葉の1mm²あたりの個数で比べる。代表的なデータ（概数）を見てみる。
 
 ■ ツバキ（ふつうの陸上植物・葉が水平につく）
@@ -2070,6 +2071,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '対照実験とは何か',
+        mangaId: 'koko_rika_s328_manga',
         body: `■ 定義
 調べたい条件だけを変え、それ以外の条件をすべて同じにして結果を比べる実験を、対照実験という。変えないほうを対照（コントロール）という。
 
