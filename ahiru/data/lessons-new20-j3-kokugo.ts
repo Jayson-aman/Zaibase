@@ -226,6 +226,7 @@ export const lessonsNew20J3Kokugo: Lesson[] = [
       {
         heading: '3. 設問処理——心情変化の記述問題',
         level: 'nyushi',
+        mangaId: 'new20_j3_kokugo_04_ami_mao_manga',
         body: `設問を解いてみましょう。
 
 【問題】傍線部「亜美は返信の文字を打ちはじめた」とあるが、このときの亜美はどのような心情か。六十字以内で説明しなさい。
@@ -271,6 +272,7 @@ export const lessonsNew20J3Kokugo: Lesson[] = [
       {
         heading: '2. 情景描写と表現技法の効果を確認する',
         level: 'oyo',
+        mangaId: 'new20_j3_kokugo_05_tokei_shouchou_manga',
         body: `続きを読んでみましょう。
 
 「時計を掛け直したあと、母は窓を大きく開けた。曇っていた空から、うっすらと光が差し込み、台所の埃までもが白く輝いて見えた。『お母さん、退院してきたら、この台所でいっしょにお茶を飲もうね』母はひとり言のようにつぶやいた。その声は、いつもよりずっと柔らかかった。」
@@ -340,6 +342,7 @@ export const lessonsNew20J3Kokugo: Lesson[] = [
       {
         heading: '3. 設問処理——視点と伏線を踏まえた記述問題',
         level: 'nyushi',
+        mangaId: 'new20_j3_kokugo_06_fukusen_shiten_manga',
         body: `設問を解いてみましょう。
 
 【問題】傍線部「悠人は進路希望調査の用紙に、迷いなく『体育教員』と書き込んだ」とあるが、悠人がこのように決断できたのはなぜか。本文全体を踏まえて六十字以内で説明しなさい。
@@ -462,6 +465,7 @@ export const lessonsNew20J3Kokugo: Lesson[] = [
       {
         heading: '3. 二つのジャンルを見比べる——根拠の探し方の違いを整理する',
         level: 'nyushi',
+        mangaId: 'new20_j3_kokugo_08_riyuu_kijutsu_manga',
         body: `二つの理由記述を見比べると、根拠の探し方には次のような違いがあることが分かります。
 
 【論説文】
@@ -1008,6 +1012,7 @@ export const lessonsNew20J3Kokugo: Lesson[] = [
       {
         heading: '3. 設問処理——良秀の言動の理由と主題を読み取る',
         level: 'nyushi',
+        mangaId: 'new20_j3_kokugo_16_yoshihide_manga',
         body: `本文の続きには、良秀がなぜ笑っていたのかを説明する場面があります。
 
 【本文】「『何条物のつくべきぞ。年ごろ不動尊の火焔を悪しく書きけるなり。今見れば、かうこそ燃えけれと心得つるなり。これこそ料なれ。』とてなむ、後には笑ひける。」
