@@ -3305,6 +3305,7 @@ late：限定＝故〜（the late Mr. Smith）／叙述＝遅れて（He was lat
     sections: [
       {
         heading: '形容詞を並べる順序',
+        mangaId: 'koko_eigo_s213_manga',
         figureId: 'lf_kokoeigoext06_213',
         body: `■ 基本の並び
 限定語 → 数量 → 評価 → 大きさ → 新旧 → 形 → 色 → 出身 → 材料 → 名詞

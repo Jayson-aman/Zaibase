@@ -2181,6 +2181,7 @@ How about だけが ing になる。about が前置詞だからである。
     sections: [
       {
         heading: '丁寧さの階段',
+        mangaId: 'koko_eigo_s170_manga',
         figureId: 'lf_kokoeigoext05_170',
         body: `相手に行動を頼む形を、気軽なものから順に並べる。
 

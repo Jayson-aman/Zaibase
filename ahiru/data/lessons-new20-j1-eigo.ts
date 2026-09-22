@@ -1497,6 +1497,7 @@ How many times a week do you have practice?（週に何回練習があります�
       },
       {
         heading: 'なぜ授業は have で言い、なぜ at のあとは -ing なのか',
+        mangaId: 'new20_j1_eigo_17_manga',
         body: `「月曜日に数学がある」は、時間割という**自分の持ち物として授業を持っている**という発想で I have math on Monday. と言います。日本語の「ある」につられて There is を使うより、have の型で覚えるほうが会話でそのまま使えます。「何時間目」は period（時間割の1コマ）を序数と組み合わせて in the first period です。
 
 be good at のあとが -ing になるのは、at が**前置詞**で、前置詞のあとには名詞（動名詞）しか置けないからです。教科名（math）はそのまま名詞なので I'm good at math.、動作なら I'm good at singing.。「〜部に入っている」が I'm in the 〜 club. なのは、部を「グループという場所」ととらえて in で「その中にいる」と言うからで、in を落とすと「私は美術部です」という別の文になります。

@@ -3765,6 +3765,7 @@ that 節の中が平叙文の語順なのは、that 節が「たずねる」文�
     sections: [
       {
         heading: '順序が入れかわる書きかえ',
+        mangaId: 'koko_eigo_s334_manga',
         body: `not only A but also B（A だけでなく B も）を as well as で書きかえると、A と B の順序が入れかわる。
 
 例）She can speak not only English but also Chinese.

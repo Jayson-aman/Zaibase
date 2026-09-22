@@ -1886,6 +1886,7 @@ lose（なくす）→ not have（持っていない）
       },
       {
         heading: '否定を使う書きかえ',
+        mangaId: 'koko_eigo_s130_manga',
         body: `「最後に〜したのは…前」という文は、否定の現在完了に書きかえる。
 
 ■ 型

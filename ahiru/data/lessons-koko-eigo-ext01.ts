@@ -865,6 +865,7 @@ knife → knives、leaf → leaves のように f が v になる語は、当然
     sections: [
       {
         heading: '三分類と判断の手順',
+        mangaId: 'koko_eigo_s011_manga',
         body: `規則動詞の過去形・過去分詞に付ける -ed も、-s と同じように直前の音で三通りに分かれる。ただし判断の順序を決めておくと迷わない。
 
 ■ 手順1：直前の音が [t] か [d] か
@@ -1402,6 +1403,7 @@ lie → lying ／ die → dying ／ tie → tying
     sections: [
       {
         heading: '四つの型で整理する',
+        mangaId: 'koko_eigo_s017_manga',
         body: `動詞の変化は「原形・過去形・過去分詞」の三つで一組になっている。この三つの関係で分類すると、不規則動詞は次の四型になる。
 
 ■ A－A－A 型（三つとも同じ）
