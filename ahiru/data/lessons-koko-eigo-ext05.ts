@@ -2298,6 +2298,7 @@ How about だけが ing になる。about が前置詞だからである。
       },
       {
         heading: 'Would you mind 〜? の答えが逆になる理由',
+        mangaId: 'koko_eigo_s171_manga',
         body: `■ mind の意味
 mind は「いやだと思う・気にする」という意味の動詞である。うしろには動名詞（〜ing）が来る。
 例）Would you mind opening the window?

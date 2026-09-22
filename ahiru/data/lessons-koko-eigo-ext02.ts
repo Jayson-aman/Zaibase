@@ -1761,6 +1761,7 @@ call him・marry her・enter the room で前置詞が要らないのは、これ
       },
       {
         heading: '同じ動詞が両方の文型を作る',
+        mangaId: 'koko_eigo_s055_manga',
         body: `1つの動詞が、うしろに置く語によって SVC にも SVO にもなる。よく出るものを整理しておく。
 
 ■ get
@@ -2945,6 +2946,7 @@ There is a cat under the table. を「そこにネコがいます」と訳して
     sections: [
       {
         heading: '特定のものは主語にできない',
+        mangaId: 'koko_eigo_s068_manga',
         body: `There is / are は、相手がまだ知らないものを話題に出すときの言い方である。そのため、すでに特定されているものには使えない。
 
 ■ 使えないもの（特定のもの）

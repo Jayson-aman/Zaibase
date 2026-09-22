@@ -886,6 +886,7 @@ go / come のあとに目的を付け足す形は会話でも頻出である。
     sections: [
       {
         heading: '気持ちを先に、理由をあとに',
+        mangaId: 'koko_eigo_s266_manga',
         figureId: 'lf_kokoeigoext08_266',
         body: `英語は「どう感じたか」を先に述べ、「なぜそう感じたか」をあとから to＋原形で足す。日本語と順序が逆になる。
 

@@ -2096,6 +2096,7 @@ be動詞は主語と時制に合わせる。
       },
       {
         heading: '受動態を使う理由',
+        mangaId: 'koko_eigo_s132b_manga',
         body: `なぜわざわざ「される側」を主語にするのか。理由がわかると、長文で受動態が出てきたときの読み方も変わる。
 
 ■ 理由①：動作主がわからない・言う必要がない
@@ -2498,6 +2499,7 @@ They speak English in Australia. → English is spoken in Australia.
     sections: [
       {
         heading: '受動態にできない動詞',
+        mangaId: 'koko_eigo_s136_manga',
         body: `受動態が作れるのは「目的語をとる他動詞」だけである。目的語がなければ、主語に持ってくるものがない。
 
 ■ 自動詞（目的語をとらない）

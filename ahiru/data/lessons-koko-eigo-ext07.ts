@@ -2274,6 +2274,7 @@ This is the most interesting book that I have ever read.
     sections: [
       {
         heading: '形と、複数形になる理由',
+        mangaId: 'koko_eigo_s244_manga',
         body: `「最も〜なもののうちの一つ」は〈one of the ＋ 最上級 ＋ 複数名詞〉で表す。
 
 例）K2 is one of the highest mountains in the world.
@@ -3018,6 +3019,7 @@ The more I read this book, the more interesting it becomes.
       },
       {
         heading: 'なぜ比較級なのに the が付き、なぜ名詞ごと前に出すのか',
+        mangaId: 'koko_eigo_s251b_manga',
         body: `The more you practice, the better you become. は、もともと You practice more.／You become better. という二つの文の比較級を**文の先頭に出して並べ、二つの変化が連動している**ことを示す形です。このときの the は冠詞ではなく「その分だけ」という意味の古い語で、「練習が多くなればその分だけうまくなる」を表します。だから比較級に the を付けないという原則の、数少ない例外になります。
 
 名詞ごと前に出す（The more books you read）のは、比較級 more が books を修飾していて、**more books でひとかたまり**だからです。more だけを前に出して books を残すと、かたまりがこわれます。前半が条件を表すので、未来のことでも現在形（The sooner you leave, the earlier you will arrive.）にするのは、if・when の節と同じ規則です。
