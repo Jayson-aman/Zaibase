@@ -533,6 +533,7 @@ export const kokoRikaExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '乾湿計のしくみ',
+        mangaId: 'koko_rika_s422_manga',
         body: `乾湿計は同じ温度計を2本並べたもので、片方（湿球）の球部だけを湿ったガーゼで包み、ガーゼのはしを水につるしてある。
 
 ■ なぜ湿球は低くなるのか
@@ -1572,6 +1573,7 @@ export const kokoRikaExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '梅雨のしくみ',
+        mangaId: 'koko_rika_s434_manga',
         body: `■ 梅雨前線ができるまで
 5月ごろになるとシベリア気団は衰え、かわりに北のオホーツク海気団と南の小笠原気団が日本付近でぶつかるようになる。どちらもしめった気団で、勢力がほぼつり合うため前線は動かない。これが停滞前線＝梅雨前線である。前線は日本列島にそって東西に長くのびる。
 
@@ -2347,6 +2349,7 @@ export const kokoRikaExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '昼の長さの変化',
+        mangaId: 'koko_rika_s443_manga',
         body: `地軸が傾いているため、太陽が地平線の上に出ている時間が季節によって変わる。
 
 ■ 北緯35°付近（東京・大阪あたり）の目安

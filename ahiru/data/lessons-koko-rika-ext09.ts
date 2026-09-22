@@ -866,6 +866,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
       },
       {
         heading: '胞子から新しい個体ができるまで',
+        mangaId: 'koko_rika_s315_manga',
         body: `胞子は種子とはまったく別のものである。ここを混同すると記述で失点する。
 
 ■ 胞子と種子のちがい
@@ -1887,6 +1888,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '葉序：重ならないように並べる',
+        mangaId: 'koko_rika_s326_manga',
         body: `■ 葉のつき方の型
 ・互生 … 節ごとに1枚ずつ、向きを変えてつく（アサガオ・サクラ・ヒマワリ）
 ・対生 … 節ごとに2枚が向かい合ってつく（アジサイ・ホウセンカ・シソ）
