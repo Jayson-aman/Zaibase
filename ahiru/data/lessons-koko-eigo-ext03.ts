@@ -2018,6 +2018,7 @@ ing 形が見えたら be動詞の文だと判断する。
     sections: [
       {
         heading: '点と帯を見分ける',
+        mangaId: 'koko_eigo_s093_manga',
         figureId: 'lf_kokoeigoext03_093',
         body: `二つの出来事が同じ場面に出てくるとき、まず「一瞬で終わる出来事（点）」と「しばらく続いていた動作（帯）」に分ける。
 

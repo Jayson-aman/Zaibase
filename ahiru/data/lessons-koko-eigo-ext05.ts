@@ -969,6 +969,7 @@ must には過去形がないため、「〜してはいけなかった」をそ
     sections: [
       {
         heading: 'not がどこを打ち消しているか',
+        mangaId: 'koko_eigo_s157_manga',
         figureId: 'lf_kokoeigoext05_157',
         body: `二つの文を並べて、意味の差を確かめる。
 
@@ -1828,6 +1829,7 @@ live / be / have / like / know などの状態を表す語には used to しか�
       },
       {
         heading: 'be used to 〜ing との区別',
+        mangaId: 'koko_eigo_s166_manga',
         body: `形が似ていてまぎらわしい三つを並べる。
 
 ■ ①used to＋動詞の原形（以前は〜していた）

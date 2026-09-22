@@ -1497,6 +1497,7 @@ than（…よりも）と then（そのとき・それから）は別の語で�
     sections: [
       {
         heading: 'much / far で比較級を強める',
+        mangaId: 'koko_eigo_s236_manga',
         body: `比較級を「ずっと」「はるかに」と強めるときは much、far、a lot を比較級の前に置く。
 
 例）City C is much larger than City A.（C市はA市よりずっと大きい）

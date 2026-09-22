@@ -1301,6 +1301,7 @@ whetherは "or not" を直後や文末に付けて使われることもある。
       },
       {
         heading: 'なぜ Yes／No 疑問文は if／whether でつなぎ、なぜ語順が平叙文に戻るのか',
+        mangaId: 'new20_j3_eigo_17_manga',
         body: `疑問詞のある疑問文は、疑問詞（what・where）をそのまま使って間接話法にできますが、Yes／No 疑問文には「たずねている」ことを示す語がありません。そこで「〜かどうか」を表す **if／whether** を借りてつなぎます。伝達動詞は「たずねた」の ask です。
 
 if／whether のあとが平叙文の語順に戻るのは、間接疑問文と同じで、**文の一部（名詞のかたまり）になった時点でもう疑問文ではない**からです。疑問文の語順（do you know）は文全体が質問のときの形なので、He asked me did I like it. とはならず、He asked me if I liked it. と主語＋動詞に戻し、do／does／did は消えます。代名詞・時制・時の語は平叙文の話法転換と同じ規則で変えます。

@@ -2666,6 +2666,7 @@ some of / any of の後ろの名詞に合わせる。
     sections: [
       {
         heading: '「別のもの」の one と「そのもの」の it',
+        mangaId: 'koko_eigo_s207_manga',
         figureId: 'lf_kokoeigoext06_207',
         body: `■ one＝同じ種類の別のもの
 例）I lost my umbrella, so I have to buy one.（傘をなくしたので1本買わなければならない）※ one ＝ an umbrella（別の傘）

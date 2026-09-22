@@ -3015,6 +3015,7 @@ want / tell / ask は「人＋to」をとるが、hope / say / think はとら�
     sections: [
       {
         heading: 'stop の二つの形',
+        mangaId: 'koko_eigo_s290_manga',
         body: `stop は動名詞だけを目的語にとる動詞である。したがって stop のうしろの to不定詞は目的語ではなく、「〜するために」を表す副詞的用法になる。この違いが意味を大きく変える。
 
 ■ stop ~ing（〜するのをやめる）

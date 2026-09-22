@@ -782,6 +782,7 @@ B: Yes, I have. I have been there twice.
     sections: [
       {
         heading: 'been と gone のちがいは「今どこにいるか」',
+        mangaId: 'koko_eigo_s119_manga',
         figureId: 'lf_kokoeigoext04_119',
         body: `be動詞の過去分詞 been と、go の過去分詞 gone は、どちらも「行く」に関係するが意味が正反対になる。
 
