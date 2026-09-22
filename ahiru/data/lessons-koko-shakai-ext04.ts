@@ -104,6 +104,7 @@ export const kokoShakaiExt04Lessons: Lesson[] = [
     sections: [
       {
         heading: '日本有数の畜産地帯',
+        mangaId: 'koko_shakai_s112_manga',
         body: `鹿児島県と宮崎県は、日本を代表する畜産県である。豚の飼育頭数は鹿児島県が全国第1位、宮崎県が第2位、ブロイラー（肉用若鶏）は宮崎県と鹿児島県が全国の上位を占め、肉用牛も北海道とならんで鹿児島県・宮崎県が上位に入る。
 
 ■ なぜ畜産が発達したのか
@@ -1536,6 +1537,7 @@ export const kokoShakaiExt04Lessons: Lesson[] = [
       },
       {
         heading: '雪が育てた地場産業',
+        mangaId: 'koko_shakai_s130_manga',
         body: `地場産業とは、その地域の原料・技術・労働力をいかして古くから続いてきた、地域に根ざした産業のことである。北陸は地場産業の宝庫である。
 
 ■ なぜ北陸に多いのか

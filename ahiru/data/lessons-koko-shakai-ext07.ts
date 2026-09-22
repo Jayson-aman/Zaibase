@@ -909,6 +909,7 @@ export const kokoShakaiExt07Lessons: Lesson[] = [
     sections: [
       {
         heading: '幕藩体制とは',
+        mangaId: 'koko_shakai_s237_manga',
         body: `江戸幕府の支配のしくみを幕藩体制という。
 
 ■ 二段構えの支配

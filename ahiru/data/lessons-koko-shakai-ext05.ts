@@ -1317,6 +1317,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
     sections: [
       {
         heading: '乙巳の変（645年） — 蘇我氏を倒す',
+        mangaId: 'koko_shakai_s168_manga',
         body: `聖徳太子の死（622年）後、蘇我氏の力はさらに強まった。蘇我蝦夷・入鹿の父子は、天皇をしのぐほどの権勢をふるい、643年には聖徳太子の子の山背大兄王（やましろのおおえのおう）一族を滅ぼした。
 
 ■ クーデター
@@ -2040,6 +2041,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
     sections: [
       {
         heading: '災いの時代と鎮護国家',
+        mangaId: 'koko_shakai_s177_manga',
         body: `聖武天皇が位についた8世紀前半、日本は次のような困難に見舞われた。
 
 ・疫病の流行 … 天然痘が大流行し、737年には政権の中心にいた藤原不比等の子である四兄弟（武智麻呂・房前・宇合・麻呂）が相次いで病死した。都の人口の相当数が失われたとされる。
@@ -2839,6 +2841,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
     sections: [
       {
         heading: '末法の世と浄土への願い',
+        mangaId: 'koko_shakai_s187_manga',
         body: `平安時代の中ごろから、浄土信仰（浄土教）が貴族の間に急速に広まった。これは阿弥陀如来にすがり、念仏を唱えることで、死後に苦しみのない極楽浄土へ生まれ変わる（往生）ことを願う信仰である。
 
 ■ なぜ広まったのか

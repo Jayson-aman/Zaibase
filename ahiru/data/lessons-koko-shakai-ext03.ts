@@ -431,6 +431,7 @@ export const kokoShakaiExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: '促成栽培のしくみ',
+        mangaId: 'koko_shakai_s081_manga',
         body: `促成栽培とは、ビニールハウスや温室を使って生育を早め、ふつうの旬より早い時期に出荷する栽培方法である。「促成」の字の通り、成長を促す（早める）ことをいう。
 
 ■ なぜ暖かい地域で行うのか
