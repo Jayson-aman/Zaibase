@@ -811,6 +811,7 @@ export const shakaiExt03Lessons: Lesson[] = [
       },
       {
         heading: '2. なぜ内陸に工業が発達したのか',
+        mangaId: 'shakai_s086_manga',
         body: `関東内陸工業地域が発達した理由は5つある。すべて記述問題の材料になる。
 
 ■ ①高速道路の整備
