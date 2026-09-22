@@ -976,6 +976,7 @@ CuSO₄ → Cu²⁺ ＋ SO₄²⁻
     sections: [
       {
         heading: '無色透明な水溶液を判別する手順',
+        mangaId: 'koko_rika_s277_manga',
         body: `無色の水溶液を見分ける問題では、検査の順番が答案の質を決める。効率のよい順は「多くを二分できる検査」からである。
 
 ■ 手順1：電流を流す
@@ -1524,6 +1525,7 @@ HCl → H⁺ ＋ Cl⁻
     sections: [
       {
         heading: '初見の水溶液を判断する手順',
+        mangaId: 'koko_rika_s283_manga',
         body: `どんな水溶液が出ても、次の三段階で考える。
 
 ■ 手順
@@ -1898,6 +1900,7 @@ Zn ＋ Cu²⁺ → Zn²⁺ ＋ Cu
     sections: [
       {
         heading: 'さびとその防ぎ方',
+        mangaId: 'koko_rika_s287_manga',
         body: `金属がイオンになりやすいということは、まわりの酸素や水と反応しやすいということでもある。
 
 ■ さびやすさの順

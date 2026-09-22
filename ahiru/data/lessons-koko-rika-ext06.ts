@@ -32,6 +32,7 @@ export const kokoRikaExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '有機物と無機物の分け方',
+        mangaId: 'koko_rika_s186_manga',
         body: `物質は数えきれないほどあるが、まず「炭素をふくむかどうか」で二つに分けると整理しやすい。
 
 ■ 有機物
@@ -1938,6 +1939,7 @@ PVC：燃えにくく、火を近づけても離すと消えやすい。刺激�
     sections: [
       {
         heading: '溶解度の定義',
+        mangaId: 'koko_rika_s207_manga',
         body: `■ 定義
 溶解度とは、ある温度で水 100 g に溶かすことのできる溶質の最大の質量を、g の数値で表したものである。
 
