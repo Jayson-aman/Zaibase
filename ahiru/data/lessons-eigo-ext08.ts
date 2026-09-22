@@ -1969,6 +1969,7 @@ be made of と be made from の区別は、**材料の形が残っているか**
     sections: [
       {
         heading: 'like と as のちがい',
+        mangaId: 'eigo_s284_manga',
         body: `どちらも「〜のように」と訳せるが、実際にそうなのかどうかで意味が大きく変わる。
 
 ■ like ＝ 〜のように（似ているだけ）

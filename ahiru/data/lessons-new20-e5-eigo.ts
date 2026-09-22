@@ -575,6 +575,7 @@ Dear のあとには必ずコンマ（,）を付けます。ピリオドでは�
       },
       {
         heading: '-ed形と-ing形のちがい：interested と interesting',
+        mangaId: 'new20_e5_eigo_09_manga',
         body: `感情を表す語の中には、interested／interesting のように -ed で終わる形と -ing で終わる形の両方がある一群があります。この2つは似ているようで、使う相手がまったく違います。
 
 ■ -ed形＝「（人が）〜と感じる」

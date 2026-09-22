@@ -1285,6 +1285,7 @@ in the park や with two dogs は主語の説明にすぎない。前置詞の�
       },
       {
         heading: '進行形にしてはいけない「〜ています」',
+        mangaId: 'eigo_s130_manga',
         body: `日本語で「〜ています」となっていても、英語では進行形にできない場合がある。とくに次の三つに注意する。
 
 ■ ① 職業や役割を述べるとき
@@ -1798,6 +1799,7 @@ I am thinking about my future.（将来について考えているところだ�
     sections: [
       {
         heading: 'have の二つの顔',
+        mangaId: 'eigo_s136_manga',
         body: `have は英語で最もよく使う動詞の一つで、意味によって進行形にできるかどうかが変わる。
 
 ■ 状態の have（進行形にしない）

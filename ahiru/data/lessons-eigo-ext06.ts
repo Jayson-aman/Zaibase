@@ -1027,6 +1027,7 @@ Where are you from?（どこの出身ですか）← be from
       },
       {
         heading: 'who と whom',
+        mangaId: 'eigo_s202_manga',
         body: `英語には「だれが」を表す who と、「だれを・だれに」を表す whom という二つの形がある。日本語の「が」と「を」の区別に近い。
 
 ■ whom の使いどころ
@@ -2714,6 +2715,7 @@ Do you know where he lives? — Yes, I do. He lives near the station.
       },
       {
         heading: 'Do you think 〜? だけは例外',
+        mangaId: 'eigo_s220_manga',
         body: `Do you know 〜? は Yes / No で答えられるが、Do you think 〜?（〜だと思いますか）は「あなたの考え」をたずねるので Yes / No では答えられない。そのため、疑問詞が文の先頭に出るという特別な形になる。
 
 ■ know の場合（疑問詞は中に残る）

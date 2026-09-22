@@ -843,6 +843,7 @@ There is a sheep.（1ぴき）／There are five sheep.（5ひき）
     sections: [
       {
         heading: '三つの読み方と、その決まり方',
+        mangaId: 'eigo_s090_manga',
         body: `複数形は書くときは -s / -es だが、読むときは三通りある。どれになるかは、-s の直前の音で自動的に決まる。
 
 ■ ①[s] と読む（「ス」）
@@ -1385,6 +1386,7 @@ My uncle is a vet. He takes care of dogs and cats.（おじは獣医だ。犬や
     sections: [
       {
         heading: '原則は音で決まる',
+        mangaId: 'eigo_s096_manga',
         body: `a と an のどちらを使うかは、次に来る語の最初の「音」で決まる。母音の音で始まるなら an、そうでないなら a である。
 
 ■ an を使う（母音の音で始まる語）
