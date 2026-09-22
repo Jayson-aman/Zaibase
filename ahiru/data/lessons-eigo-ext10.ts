@@ -2268,6 +2268,7 @@ before が場所に使えないのは、before が**時間の「前」**（befor
     sections: [
       {
         heading: '乗り物の語と交通手段の表し方',
+        mangaId: 'eigo_s364_manga',
         body: `通学や旅行の話題では、乗り物の語と by の使い方が問われる。
 
 ■ 乗り物

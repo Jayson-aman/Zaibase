@@ -2907,6 +2907,7 @@ than と that を書きまちがえる誤りも多いので注意する。
     sections: [
       {
         heading: '「ずっと〜だ」の表し方',
+        mangaId: 'eigo_s254_manga',
         body: `比較級に「ずっと・はるかに」という強めの意味を足したいときは、比較級の前に much・far・a lot を置く。
 
 例）He is much taller than me.（彼は私よりずっと背が高い）

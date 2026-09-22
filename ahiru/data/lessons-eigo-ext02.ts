@@ -29,6 +29,7 @@ export const eigoExt02Lessons: Lesson[] = [
     sections: [
       {
         heading: 'be動詞は「＝」の記号',
+        mangaId: 'eigo_s041_manga',
         body: `英語の文は〈だれが〉〈どうする／どんなだ〉の順にならぶ。このうち「どんなだ」を表すときに使うのが be動詞である。be動詞には am・is・are の三つの形がある。
 
 ■ 基本の形

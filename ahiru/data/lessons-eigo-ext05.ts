@@ -2192,6 +2192,7 @@ I'd like to, but 〜（行きたいのですが〜）は、断り方としてと
     sections: [
       {
         heading: '命令文の作り方',
+        mangaId: 'eigo_s181_manga',
         body: `相手に「〜しなさい」「〜してください」と言う文を命令文という。作り方はとても簡単で、ふつうの文から主語 You を取り、動詞を原形にするだけである。
 
 ■ 一般動詞の文から
@@ -2943,6 +2944,7 @@ There is a park near here, isn't there?
     sections: [
       {
         heading: '答え方は「事実」で決める',
+        mangaId: 'eigo_s189_manga',
         body: `付加疑問への答え方は、付いている疑問の形ではなく、実際にどうなのかという事実で決まる。
 
 ■ 原則

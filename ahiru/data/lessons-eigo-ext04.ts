@@ -1173,6 +1173,7 @@ spend：（お金を）使う／（時間を）過ごす　I spent two hours on 
     sections: [
       {
         heading: '現在進行形が指す時間',
+        mangaId: 'eigo_s129_manga',
         body: `現在進行形は「今まさにしている最中だ」ということを表す。少し前に始まり、今も続いていて、もうすぐ終わる、という短い時間の幅を指している。
 
 例）I am reading a book now.（私は今、本を読んでいるところです）
@@ -2893,6 +2894,7 @@ Have you already finished your homework?（もう終わったの？）… 「そ
     sections: [
       {
         heading: '否定文の yet と疑問文の yet',
+        mangaId: 'eigo_s148_manga',
         body: `yet は文末に置く語で、否定文と疑問文で意味が変わる。
 
 ■ 否定文の yet ＝「まだ〜していない」

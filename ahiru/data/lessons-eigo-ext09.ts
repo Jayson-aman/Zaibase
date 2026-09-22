@@ -3831,6 +3831,7 @@ put－put－put（置く）／cut－cut－cut（切る）／read－read－read�
       },
       {
         heading: '助動詞のある受動態と未来の受動態',
+        mangaId: 'eigo_s339_manga',
         body: `助動詞といっしょに使うときは、「助動詞＋be＋過去分詞」の形になる。助動詞のあとは必ず原形なので、be動詞は be の形になる。
 
 例）This song will be sung at the concert.（この歌はコンサートで歌われるだろう）
