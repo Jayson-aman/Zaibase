@@ -196,6 +196,7 @@ export const kokoRikaExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '安定な電子の数を目指す',
+        mangaId: 'koko_rika_s268_antei_manga',
         body: `原子の中の電子は、原子核のまわりにやみくもに散らばっているのではなく、いくつかの層に分かれて並んでいる。そして層がちょうど満たされた並び方になったときに、原子はきわめて安定になる。
 
 ■ もともと安定な原子
@@ -1155,6 +1156,7 @@ Ag⁺ ＋ e⁻ → Ag　　　（銀イオンが銀になる）
     sections: [
       {
         heading: '両極で何が起こるか',
+        mangaId: 'koko_rika_s279_manga',
         body: `塩化銅水溶液（青色）に炭素棒の電極を入れ、電流を流す。
 
 ■ 水溶液の中のイオン
@@ -1241,6 +1243,7 @@ Cl⁻ も陽極で塩素になって出ていくので、こちらも減る。�
     sections: [
       {
         heading: '両極で気体が出る電気分解',
+        mangaId: 'koko_rika_s280_ryoukyoku_manga',
         body: `うすい塩酸に炭素棒の電極を入れて電流を流すと、両方の電極から泡が出る。
 
 ■ 水溶液の中のイオン
@@ -2079,6 +2082,7 @@ Zn ＋ Cu²⁺ → Zn²⁺ ＋ Cu
     sections: [
       {
         heading: 'ダニエル電池の構造と反応',
+        mangaId: 'koko_rika_s289_kouzou_manga',
         body: `ダニエル電池は、二つの水溶液を分けたところに特徴がある。
 
 ■ 構造
@@ -2824,6 +2828,7 @@ pHは「H⁺ がどれだけ多いか」を表しているので、同じ酸で�
     sections: [
       {
         heading: '強弱は電離のしやすさで決まる',
+        mangaId: 'koko_rika_s297_kyoujaku_manga',
         body: `同じ量だけ水にとかしても、酸によって示す酸性の強さがちがう。その原因は電離のしやすさである。
 
 ■ 強い酸
@@ -3028,6 +3033,7 @@ HCl ＋ NaOH → NaCl ＋ H₂O
     sections: [
       {
         heading: '塩の組み立て方',
+        mangaId: 'koko_rika_s299_kumitate_manga',
         body: `塩は、酸の陰イオンとアルカリの陽イオンを組み合わせてつくる。ここでも「＋と−をつり合わせる」という考え方だけで書ける。
 
 ■ 手順
