@@ -158,6 +158,7 @@ export const kokugoExt09Lessons: Lesson[] = [
       },
       {
         heading: '2. なぜ入試は「感想」の側を問うのか',
+        mangaId: 'kokugo_s317_manga',
         body: `入試で問われるのは、ほとんどが感想・考えの側です。理由は単純で、事実は「書いてある通り」なので読解力を測れないからです。
 
 ■ 設問と答えの対応
