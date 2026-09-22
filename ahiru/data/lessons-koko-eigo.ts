@@ -380,6 +380,7 @@ what は先行詞を含む関係代名詞で「〜こと・〜もの」の意味
       {
         heading: '4. 関係副詞と非制限用法',
         level: 'nyushi',
+        mangaId: 'koko_eigo_02_kankeifukushi_manga',
         body: `■ 関係副詞の種類と使い方
 関係副詞は「先行詞＋前置詞＋which」を1語で表す。
 
@@ -1387,6 +1388,7 @@ nation→national→nationally→nationality のように、一つの語幹か�
       {
         heading: '1. 仮定法過去（現在の事実に反する仮定）',
         level: 'oyo',
+        mangaId: 'koko_eigo_07_katei_manga',
         body: `■ 仮定法とは
 「もし〜だったら…なのに」と、現実と反対のことや実現しそうにないことを表す言い方。
 学習指導要領の改訂で仮定法が中学範囲に入り、高校入試（特に難関校）で頻出になった。
@@ -1518,6 +1520,7 @@ nation→national→nationally→nationality のように、一つの語幹か�
       {
         heading: '4. 話法の転換と入試問題例',
         level: 'nyushi',
+        mangaId: 'koko_eigo_07_wahou_manga',
         body: `■ 直接話法と間接話法
   直接話法：発言をそのまま "…" で引用する。
     He said, "I am tired."
@@ -2097,6 +2100,7 @@ who / what / which が主語のときは〈疑問詞＋動詞〉で、do/does/di
       {
         heading: '3. 付加疑問文・否定疑問文・選択疑問文',
         level: 'oyo',
+        mangaId: 'koko_eigo_10_fukagimon_manga',
         body: `■ 付加疑問文（〜だよね？）
 文末につけて「確認・同意」を求める。「肯定文→否定の付加」「否定文→肯定の付加」。
   You are a student, aren't you?（あなたは学生ですよね）
@@ -2595,6 +2599,7 @@ By the time we arrived, the concert (　　) already (　　).
       {
         heading: '1. 分詞構文の復習と基本の作り方',
         level: 'kiso',
+        mangaId: 'koko_eigo_13_bunshikoubun_manga',
         body: `■ 分詞構文とは（復習）
 副詞節（接続詞＋主語＋動詞）を分詞（-ing/過去分詞）で書き換えた簡潔な表現。
 書き言葉・入試の並べ替え問題で頻出。

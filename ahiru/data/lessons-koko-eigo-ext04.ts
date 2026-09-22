@@ -1570,6 +1570,7 @@ know／live（ただし live は例外的に可）／be／have（持っている
     sections: [
       {
         heading: '二つの形の役割分担',
+        mangaId: 'koko_eigo_s127_genzaikanryoshinkoukei_manga',
         body: `現在完了と現在完了進行形は、どちらも過去から今までをつなぐが、注目点がちがう。
 
 ■ 現在完了進行形：まだ終わっていない、続いている最中

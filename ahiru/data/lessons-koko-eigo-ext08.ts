@@ -1869,6 +1869,7 @@ for〜 を置かなければ、「一般にだれにとっても」あるいは�
       },
       {
         heading: 'so 〜 that … can\'t への書きかえ',
+        mangaId: 'koko_eigo_s277_sothat_manga',
         body: `too 〜 to … は、so 〜 that … can't を使った文にほぼ同じ意味で書きかえられる。
 
 ■ 手順
