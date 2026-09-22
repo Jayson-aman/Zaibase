@@ -212,6 +212,7 @@ export const kokoKokugoExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '解答用紙の構造を先に見る',
+        mangaId: 'koko_kokugo_s413_manga',
         body: `試験開始の合図の直後、多くの受験生は大問1の漢字に飛びつく。だが最初の30秒を解答用紙の観察に使うほうが、結果として得点は上がる。
 
 ■ 観察すべき四点
@@ -1548,6 +1549,7 @@ export const kokoKokugoExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '一語ずつ対応を求める',
+        mangaId: 'koko_kokugo_s426_manga',
         body: `「本文にない情報」型の誤答を消すには、選択肢を語のレベルまで分解する。
 
 ■ 手順
@@ -2096,6 +2098,7 @@ export const kokoKokugoExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '足されやすい五つの情報',
+        mangaId: 'koko_kokugo_s431_manga',
         body: `本文にない情報型で足される内容は、ほぼ次の五つである。
 
 ■ ①原因・理由

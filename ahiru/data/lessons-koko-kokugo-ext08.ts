@@ -2147,6 +2147,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '結びの省略',
+        mangaId: 'koko_kokugo_s289_manga',
         body: `係助詞があるのに、結びの語が見あたらないことがある。これは結びが省略されているためで、決まった型がある。
 
 ■ 代表的な型

@@ -327,6 +327,7 @@ export const kokoKokugoExt11Lessons: Lesson[] = [
       },
       {
         heading: '平均の落とし穴',
+        mangaId: 'koko_kokugo_s379_manga',
         body: `四校の一人あたり冊数を単純に平均すると、
 　（十二・四＋九・八＋十五・二＋七・六）÷四＝四十五÷四＝十一・二五冊
 となる。ところがこの四校全体で見た一人あたりの冊数は、

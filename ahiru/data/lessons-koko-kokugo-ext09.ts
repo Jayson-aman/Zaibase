@@ -143,6 +143,7 @@ export const kokoKokugoExt09Lessons: Lesson[] = [
       },
       {
         heading: '実例で読む順を追う：不入虎穴、不得虎子',
+        mangaId: 'koko_kokugo_s307_koketsu_koji_manga',
         body: `後漢書に見える有名な句「不入虎穴、不得虎子」（虎穴に入らずんば、虎子を得ず）で、読む順を確かめる。
 
 ■ 白文
