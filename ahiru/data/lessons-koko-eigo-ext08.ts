@@ -2387,6 +2387,7 @@ said to me の me が伝えられた相手なので、tell / ask のうしろに
     sections: [
       {
         heading: 'make / let / help の使い分け',
+        mangaId: 'koko_eigo_s283_manga',
         body: `使役動詞と呼ばれるグループで、いずれも「人に何かをさせる」を表すが、強さが違う。うしろは to のない原形になる。
 
 ■ make ＋人＋原形（強制）

@@ -124,6 +124,7 @@ export const kokoEigoExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '関係詞節の範囲を線で囲う',
+        mangaId: 'koko_eigo_s297_manga',
         figureId: 'lf_kokoeigoext09_297',
         body: `関係代名詞が出てきたら、まず「どこまでが説明か」を決める。
 
@@ -684,6 +685,7 @@ whose のあとに a／the を付けないのは、whose が his と同じ所有
     sections: [
       {
         heading: '前置詞は消えない',
+        mangaId: 'koko_eigo_s303_manga',
         body: `関係代名詞を作るときに落としやすいのが、もとの文にあった前置詞である。
 
 例）This is the house.（これがその家です）
@@ -991,6 +993,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
       },
       {
         heading: 'コンマの有無で意味が変わる',
+        mangaId: 'koko_eigo_s306_manga',
         body: `コンマの有無は見落としやすいが、意味を大きく変える。
 
 ■ 限定用法（コンマなし）
@@ -1556,6 +1559,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: 'who is をまとめて消す',
+        mangaId: 'koko_eigo_s312_manga',
         figureId: 'lf_kokoeigoext09_312',
         body: `主格の関係代名詞のあとが be動詞＋現在分詞になっているとき、〈関係代名詞＋be動詞〉をまとめて省ける。
 
@@ -1756,6 +1760,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: '目的格は分詞に直せない',
+        mangaId: 'koko_eigo_s314_manga',
         body: `分詞の後置修飾は「その名詞が動作をする（現在分詞）」「その名詞が動作をされる（過去分詞）」の二つだけを表せる。だから節の中に別の主語がある目的格は表現できない。
 
 例）The boy who I met at the station was Ken's brother.
@@ -3064,6 +3069,7 @@ that 節の中が平叙文の語順なのは、that 節が「たずねる」文�
     sections: [
       {
         heading: '疑問文が文の中に入ると語順が戻る',
+        mangaId: 'koko_eigo_s327_manga',
         figureId: 'lf_kokoeigoext09_327',
         body: `疑問文をそのまま別の文の中に入れることはできない。語順を平叙文（ふつうの文）に戻す必要がある。
 
@@ -3367,6 +3373,7 @@ that 節の中が平叙文の語順なのは、that 節が「たずねる」文�
     sections: [
       {
         heading: '疑問詞が主語の疑問文',
+        mangaId: 'koko_eigo_s330_manga',
         figureId: 'lf_kokoeigoext09_330',
         body: `疑問詞そのものが主語になっている疑問文は、はじめから〈主語＋動詞〉の語順である。
 
