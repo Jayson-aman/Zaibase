@@ -31,6 +31,7 @@ export const kokoShakaiExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '流れをつかむ',
+        mangaId: 'koko_shakai_s475_kome_manga',
         body: `■ 旧石器時代
 打製石器を使い、大型動物を追って移動しながら暮らした。土器はまだない。岩宿遺跡（群馬県）の発見で、日本にも旧石器時代があったことが確かめられた。
 
@@ -597,6 +598,7 @@ export const kokoShakaiExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '流れをつかむ',
+        mangaId: 'koko_shakai_s481_bushi_manga',
         body: `■ 遣唐使の停止（894年）
 菅原道真が「唐が衰えており、航海の危険も大きい」と意見し、停止された。これにより大陸の文化をそのまま取り入れる流れが弱まり、日本の風土や感覚に合った文化が育っていった。
 
@@ -1284,6 +1286,7 @@ export const kokoShakaiExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '流れをつかむ',
+        mangaId: 'koko_shakai_s488_souikki_manga',
         body: `■ 農業の発達
 ・二毛作：同じ田で米を作ったあと、冬に麦を作る。近畿で広まり、各地へ。
 ・牛馬を使った耕作、水車による水の引き入れ
