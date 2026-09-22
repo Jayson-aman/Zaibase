@@ -624,6 +624,7 @@ export const shakaiExt05Lessons: Lesson[] = [
       },
       {
         heading: '2. なぜロンドンは高緯度なのに温暖なのか／地中海式農業',
+        mangaId: 'shakai_s158_manga',
         body: `■ ロンドンの位置と気温
 ロンドンは北緯約51度。これは樺太（サハリン）の南部とほぼ同じ緯度です。ところがロンドンの1月の平均気温は約5℃で、氷点下になることはめったにありません。同じ緯度の大陸東岸（シベリア東部やカナダ）が−20℃前後になるのとは大ちがいです。
 
@@ -1888,6 +1889,7 @@ export const shakaiExt05Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. なぜ15度で1時間なのか',
+        mangaId: 'shakai_s173_manga',
         figureId: 'lf_sh05_173',
         body: `地球は1日（24時間）かけて1回転（360度）します。ということは、
 
