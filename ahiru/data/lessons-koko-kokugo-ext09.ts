@@ -925,6 +925,7 @@ export const kokoKokugoExt09Lessons: Lesson[] = [
       },
       {
         heading: '一レ点が要るかどうかの見分け方',
+        mangaId: 'koko_kokugo_s315_manga',
         body: `■ 判断の手順
 ①書き下し文を作る（またはあたえられた書き下し文を見る）。
 ②原文の各字に読む順の番号を書きこむ。

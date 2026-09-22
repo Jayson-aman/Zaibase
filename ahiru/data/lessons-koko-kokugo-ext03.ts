@@ -1076,6 +1076,7 @@ export const kokoKokugoExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: '中心文の見分け方',
+        mangaId: 'koko_kokugo_s093_manga',
         body: `段落は「一つの要点＋それを支える文」でできている。要点を述べた文を中心文、支える文を支持文という。
 
 ■ 中心文の特徴

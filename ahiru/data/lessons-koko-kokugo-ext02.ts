@@ -136,6 +136,7 @@ export const kokoKokugoExt02Lessons: Lesson[] = [
       },
       {
         heading: '主語の省略と主述のねじれ',
+        mangaId: 'koko_kokugo_s042_manga',
         body: `日本語は主語をひんぱんに省略する。とくに「私」「僕」は、書かなくても分かるので落とされる。
 
 例）（私は）明日、図書館へ行きます。

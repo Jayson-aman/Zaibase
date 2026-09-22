@@ -1806,6 +1806,7 @@ export const kokoKokugoExt07Lessons: Lesson[] = [
       },
       {
         heading: '序詞と、枕詞との区別',
+        mangaId: 'koko_kokugo_s250_manga',
         body: `序詞（じょことば）とは、ある語句を導くために作者がその歌のために作る導入部分である。
 
 ■ 序詞の例

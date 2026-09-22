@@ -2075,6 +2075,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
       },
       {
         heading: '見分けの手順',
+        mangaId: 'koko_kokugo_s288_manga',
         body: `疑問か反語かは、次の順に確かめる。
 
 ■ ①「やは」「かは」ならほぼ反語

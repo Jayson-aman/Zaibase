@@ -2802,6 +2802,7 @@ const kokoKokugoOverviewLessons: Lesson[] = [
       },
       {
         heading: '2. 二重敬語と誤用の見分け方',
+        mangaId: 'koko_kokugo_15_keigo_jissen_manga',
         level: 'oyo',
         body: `敬語の誤用の中でも特に入試で問われやすいのが「二重敬語」です。正しい敬語と混同しやすい表現を整理して見分け方を身につけます。
 
