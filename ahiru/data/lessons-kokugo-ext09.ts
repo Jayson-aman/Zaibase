@@ -1314,6 +1314,7 @@ export const kokugoExt09Lessons: Lesson[] = [
       },
       {
         heading: '2. 倒置法と体言止めの区別',
+        mangaId: 'kokugo_s329_touchi_taigendome_manga',
         body: `倒置法と体言止めの混同は、入試で最も多い誤りの一つです。二つは判定の基準がまったく違います。
 
 ■ 体言止め
@@ -2610,6 +2611,7 @@ export const kokugoExt09Lessons: Lesson[] = [
       {
         heading: '1. 三大切れ字の使われ方',
         figureId: 'kk9_342',
+        mangaId: 'kokugo_s342_kireji_manga',
         body: `切れ字（きれじ）は、句の意味をそこで切り、強い感動を示すための言葉です。十七音しかない俳句で、作者が「ここが山だ」と示す印だと考えてください。
 
 ■ 「や」… 句の途中で切る

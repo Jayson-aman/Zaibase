@@ -112,6 +112,7 @@ export const kokugoExt07Lessons: Lesson[] = [
       {
         heading: '1. 場面が変わる三つの合図',
         figureId: 'k7f_s227',
+        mangaId: 'kokugo_s227_bamentenkan_manga',
         body: `入試の物語文は2000字前後と長い。まるごと読むと頭に残らないので、いくつかの「場面」に区切りながら読む。場面が変わる合図は次の三つ。
 
 ■ 合図①　時が動く … 「次の日」「三十分後」「夏休みが終わるころ」
@@ -200,6 +201,7 @@ export const kokugoExt07Lessons: Lesson[] = [
       },
       {
         heading: '2. 「ただの背景」と「心を映す情景」の見分け方',
+        mangaId: 'kokugo_s228_joukeibyousha_manga',
         body: `すべての風景描写が心情を表しているわけではない。見分ける目印は、その描写が「人物の気持ちが動いた直後」または「これから動く直前」に置かれているかどうかである。
 
 【比べてみる】

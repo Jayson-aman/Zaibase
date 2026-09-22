@@ -2071,6 +2071,7 @@ export const kokugoExt12Lessons: Lesson[] = [
       },
       {
         heading: '2. 主張のさがし方',
+        mangaId: 'kokugo_s443_shuchou_manga',
         body: `筆者の主張がどこに書かれているかには、目印があります。
 
 ■ 主張が来る場所
@@ -2325,6 +2326,7 @@ export const kokugoExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 対比の表を作る',
+        mangaId: 'kokugo_s446_taihi_manga',
         body: `説明文には、二つのものを比べる形の文章がよくあります。読みながら余白に表を作ると、設問がほとんど解けてしまいます。
 
 ■ 例題

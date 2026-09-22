@@ -1535,6 +1535,7 @@ export const kokugoExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '三つの品詞',
+        mangaId: 'kokugo_s487_hinshi_manga',
         body: `■ ①名詞
 ものやことがらの名前を表すことば。「が」「は」をつけて主語になれる。
 ・ふつうの名詞：花・犬・本・学校・空気・親切
