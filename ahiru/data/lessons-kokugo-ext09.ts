@@ -2543,6 +2543,7 @@ export const kokugoExt09Lessons: Lesson[] = [
       },
       {
         heading: '2. なぜまちがえるのか — 原因別の対策',
+        mangaId: 'kokugo_s341_manga',
         body: `季語の誤答には、はっきりした原因があります。原因ごとに対策を立てましょう。
 
 ■ 原因① 今のこよみで考えてしまう

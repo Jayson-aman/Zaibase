@@ -3354,6 +3354,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '「いただく」と「くださる」の使い分け',
+        mangaId: 'kokugo_s225_manga',
         body: `この2語の使い分けは、敬語の中でもとくに出題されやすい。決め手は「主語がだれか」である。
 
 【いただく】「もらう」の謙譲語。もらうのは自分。

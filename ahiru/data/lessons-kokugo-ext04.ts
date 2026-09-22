@@ -1231,6 +1231,7 @@ export const kokugoExt04Lessons: Lesson[] = [
       },
       {
         heading: '2. 多義語と同音異義語のちがい',
+        mangaId: 'kokugo_s128_manga',
         body: `よく混同されるのが、多義語と同音異義語です。
 
 【多義語】 もともと一つの語。意味が広がって複数になった。

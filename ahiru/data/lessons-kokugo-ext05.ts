@@ -844,6 +844,7 @@ export const kokugoExt05Lessons: Lesson[] = [
       },
       {
         heading: '2. 接続詞（品詞）と接続語（成分）のちがい',
+        mangaId: 'kokugo_s160_manga',
         body: `似た名前ですが、指しているものがちがいます。
 
 ■ 接続詞 … 品詞の名前

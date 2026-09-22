@@ -2796,6 +2796,7 @@ export const kokugoExt07Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 擬音語と擬態語のちがい',
+        mangaId: 'kokugo_s260_manga',
         body: `■ 擬音語 … 実際の音をまねた言葉（ざあざあ・がたん・こつこつ）
 ■ 擬態語 … 音のしないようすを表す言葉（ぼんやり・そっと・じっと・きらきら）
 
