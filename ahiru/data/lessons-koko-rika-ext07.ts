@@ -1391,6 +1391,7 @@ CuCl₂ → Cu ＋ Cl₂
     sections: [
       {
         heading: '実験の手順と反応',
+        mangaId: 'koko_rika_s242_manga',
         figureId: 'lf_kokorikaext07_242',
         body: `■ 手順
 ①鉄粉7gと硫黄の粉4gをよく混ぜ、2本の試験管に分ける。
@@ -1736,6 +1737,7 @@ Fe:S＝7:4、Cu:O＝4:1、Mg:O＝3:2 のように、質量比は物質の組み�
     sections: [
       {
         heading: '実験と結果',
+        mangaId: 'koko_rika_s246_manga',
         body: `■ 手順
 ①スチールウールの質量をはかる。
 ②ピンセットで持ち、ガスバーナーで加熱する。火花を散らしながら赤くなって燃える。
@@ -3253,6 +3255,7 @@ NaHCO₃ ＋ HCl → NaCl ＋ H₂O ＋ CO₂
     sections: [
       {
         heading: '身のまわりの発熱反応',
+        mangaId: 'koko_rika_s263_manga',
         body: `■ 燃焼
 ・メタンの燃焼　CH₄ ＋ 2O₂ → CO₂ ＋ 2H₂O
 ・炭素の燃焼　C ＋ O₂ → CO₂
@@ -3350,6 +3353,7 @@ Fe ＋ S → FeS
     sections: [
       {
         heading: '吸熱反応の実験',
+        mangaId: 'koko_rika_s264_manga',
         figureId: 'lf_kokorikaext07_264',
         body: `■ 実験1：塩化アンモニウムと水酸化バリウム
 ①ビーカーに塩化アンモニウムと水酸化バリウムの粉末を入れ、ガラス棒でよく混ぜる。
