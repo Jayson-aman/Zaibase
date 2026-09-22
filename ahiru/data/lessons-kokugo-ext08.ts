@@ -614,6 +614,7 @@ export const kokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 「一般論 → しかし → 主張」の型',
+        mangaId: 'kokugo_s279_manga',
         body: `説明文・論説文で最も出会う型がこれです。
 
 ■ 例文
@@ -3388,6 +3389,7 @@ B「望遠鏡は、目の働きを遠くまでのばしたものだ。」
       },
       {
         heading: '2. 筆者が否定している因果',
+        mangaId: 'kokugo_s314_manga',
         body: `説明文では、よくある思いこみの因果を、筆者が打ち消すことがあります。
 
 ■ 例文

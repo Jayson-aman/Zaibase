@@ -1155,6 +1155,7 @@ export const shakaiExt13Lessons: Lesson[] = [
       },
       {
         heading: '2. 市長・市議会と、住民の願いのとどけ方',
+        mangaId: 'shakai_e4_ext_17_manga',
         body: `■ 市長と市議会
 　市長 … 市の仕事を実際に進める責任者です。住民の選挙で選ばれ、任期は4年です。
 　市議会 … 住民の選挙で選ばれた市議会議員が集まり、話し合って決める場です。任期は4年です。
@@ -1205,6 +1206,7 @@ export const shakaiExt13Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 税金はどう集められ、何に使われるか',
+        mangaId: 'shakai_e4_ext_18_manga',
         body: `■ いろいろな税金
 　消費税 … 買い物をするたびに、代金にふくめて納めます。
 　所得税 … 働いて得たお金にかかります。
@@ -1439,6 +1441,7 @@ export const shakaiExt13Lessons: Lesson[] = [
       },
       {
         heading: '2. 人口が減る地域（過疎）と、その対策',
+        mangaId: 'shakai_e4_ext_21_manga',
         body: `人口が減りすぎて、それまでのくらしを続けるのがむずかしくなった状態を過疎（かそ）といいます。山間部や離島に多く見られます。
 
 ■ 過疎が起こる理由

@@ -1989,6 +1989,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '2つのテストで判定する',
+        mangaId: 'kokugo_s211_manga',
         body: `受け身と可能は形が同じなので、次の2つのテストを順に行う。
 
 【テスト1】「〜ことができる」に言いかえられるか
@@ -2897,6 +2898,7 @@ export const kokugoExt06Lessons: Lesson[] = [
       },
       {
         heading: '謙譲語でよくある誤り',
+        mangaId: 'kokugo_s220_manga',
         body: `■ 相手の動作に謙譲語を使う（最頻出の誤り）
 　×「お客様が　そう　申されました。」
 　→ 「申す」は「言う」の謙譲語で、自分側の動作にしか使えない。

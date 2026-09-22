@@ -1005,6 +1005,7 @@ export const kokugoExt05Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 二つの質問で分類する',
+        mangaId: 'kokugo_s162_manga',
         figureId: 'lf_kk05_162',
         body: `品詞分類表は暗記するものではなく、二つの質問で自動的にたどり着ける地図です。
 
@@ -2482,6 +2483,7 @@ export const kokugoExt05Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 四つの「ない」',
+        mangaId: 'kokugo_s178_manga',
         figureId: 'lf_kk05_178',
         body: `「ない」は入試で最もよく問われる識別問題です。次の四つを区別します。
 
@@ -3414,6 +3416,7 @@ export const kokugoExt05Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 「で」の四つの識別',
+        mangaId: 'kokugo_s188_manga',
         body: `【問題】次の各文の「で」の品詞を答えなさい。
 （ア）公園で遊ぶ。　（イ）この町は静かで住みやすい。　（ウ）兄は病気で休んだ。　（エ）本を読んで寝る。
 

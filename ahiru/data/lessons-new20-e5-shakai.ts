@@ -247,6 +247,7 @@ export const lessonsNew20E5Shakai: Lesson[] = [
       },
       {
         heading: '2. 木材自給率の推移と外材が増えた理由',
+        mangaId: 'new20_e5_shakai_04_manga',
         body: `木材自給率のグラフを見ると、日本の林業が置かれてきた厳しい状況がよく分かる。数値の変化とその背景をセットで理解しよう。
 
 ■ 木材自給率の推移
@@ -722,6 +723,7 @@ export const lessonsNew20E5Shakai: Lesson[] = [
     sections: [
       {
         heading: '1. がけくずれ・土石流・地すべりのちがい',
+        mangaId: 'new20_e5_shakai_11_manga',
         body: `土砂災害と一口に言っても、発生のしくみ・速さ・規模はそれぞれ大きく異なる。3つの種類を正確に区別できるようにしよう。
 
 ■ がけくずれ
@@ -1374,6 +1376,7 @@ export const lessonsNew20E5Shakai: Lesson[] = [
     sections: [
       {
         heading: '1. 世界の飢餓と食料不足の実態',
+        mangaId: 'new20_e5_shakai_20_manga',
         body: `豊かな食生活を送る日本の裏側で、世界には深刻な食料不足に苦しむ地域が数多く存在する。
 
 ■ 世界の栄養不足人口

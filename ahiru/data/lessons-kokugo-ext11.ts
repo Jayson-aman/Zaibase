@@ -1559,6 +1559,7 @@ export const kokugoExt11Lessons: Lesson[] = [
     sections: [
       {
         heading: '敬語は主語をあてる最強のヒント',
+        mangaId: 'kokugo_s409_manga',
         body: `古文の敬語は、だれの動作かを示す道しるべです。中学入試では細かい活用まで問われませんが、次の三種類を見分けられると読解力が一段上がります。
 
 ■ ①尊敬語 … 動作をする人を高める
@@ -2153,6 +2154,7 @@ export const kokugoExt11Lessons: Lesson[] = [
       },
       {
         heading: '2. 再読文字',
+        mangaId: 'kokugo_s416_manga',
         body: `■ 再読文字とは
 一つの字を二度読む特別な字です。一度目は返り点を無視して副詞のように読み、二度目は返り点にしたがって助動詞のように読みます。
 
