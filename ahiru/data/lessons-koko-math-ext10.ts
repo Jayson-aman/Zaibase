@@ -52,6 +52,7 @@ export const kokoMathExt10Lessons: Lesson[] = [
       },
       {
         heading: '同じに見えるものも区別する',
+        mangaId: 'koko_math_s341_kubetsu_manga',
         body: `場合の数・確率でもっとも多い誤りが「区別しなければならないものを、まとめて数えてしまう」ことである。
 
 ■ 硬貨は必ず区別する

@@ -1606,6 +1606,7 @@ ax² + bx + c を (px + q)(rx + s) と分解するとき
       {
         heading: '5. 置き換えを使った展開・因数分解',
         level: 'moshi',
+        mangaId: 'koko_math_07_okikae_manga',
         body: `かたまりを 1 つの文字に「置き換える」と、複雑な式が公式で処理できる。
 
 ■ 置き換えの基本
@@ -1979,6 +1980,7 @@ x + y = 5、xy = 3 のとき、x² + y² と (x − y)² の値を求めよ。
         heading: '2. 投影図・見取図・展開図',
         level: 'oyo',
         figureId: 'lf_kmath_23',
+        mangaId: 'koko_math_09_touei_manga',
         body: `立体を平面で表す 3 つの方法を読み書きできるようにする。
 
 ■ 3 つの表し方
@@ -2232,6 +2234,7 @@ x + y = 5、xy = 3 のとき、x² + y² と (x − y)² の値を求めよ。
         heading: '2. 不等式の性質（向きの変化）',
         level: 'kiso',
         figureId: 'lf_kmath_27',
+        mangaId: 'koko_math_10_inequality_manga',
         body: `不等式を解くための最重要ルール。「負の数を掛ける・割る」と不等号の向きが逆になる。
 
 ■ 不等式の 3 つの性質
@@ -3252,6 +3255,7 @@ Cを通りADに平行な直線を引き、BAの延長との交点をEとする�
         heading: '4. 接弦定理と方べきの定理③（接線）',
         level: 'oyo',
         figureId: 'lf_kmath_43',
+        mangaId: 'koko_math_14_sekugen_manga',
         body: `円の外部の点から接線を1本、割線を1本引く場合の特別な形と、接線と弦の作る角の定理。
 
 ■ 方べきの定理③（接線と割線）
@@ -3518,6 +3522,7 @@ S(t) = −t² + 6t = −(t−3)² + 9
         heading: '6. 動点と関数の融合（放物線上の動点）',
         level: 'moshi',
         figureId: 'lf_kmath_79',
+        mangaId: 'koko_math_15_dotenhoubutsusen_manga',
         body: `動点が座標平面上・放物線上を動く場合は、これまでの「関数」の知識と動点の考え方を組み合わせる。
 
 ■ 放物線上を動く点
@@ -4184,6 +4189,7 @@ n人を円形（回転して同じものは同じとみなす）に並べる場�
         heading: '5. 標本調査と母集団の推定',
         level: 'moshi',
         figureId: 'lf_kmath_54',
+        mangaId: 'koko_math_18_hyouhon_manga',
         body: `全部を調べる（全数調査）のが難しいとき、一部を調べて全体を推定する標本調査を学ぶ。
 
 ■ 全数調査と標本調査
@@ -4860,6 +4866,7 @@ DE∥BCのとき、△ADE∽△ABCを証明する。
       {
         heading: '5. 背理法による証明',
         level: 'moshi',
+        mangaId: 'koko_math_21_hairihou_manga',
         body: `直接証明するのが難しい命題は、「結論を否定して矛盾を導く」背理法が有効な場合がある。
 
 ■ 背理法の考え方
