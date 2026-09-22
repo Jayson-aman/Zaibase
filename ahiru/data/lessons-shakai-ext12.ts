@@ -2285,6 +2285,7 @@ PL法で過失の証明をいらなくしたのも同じ理由です。ふつう
       },
       {
         heading: 'なぜ略称で覚え、なぜWHOとWTOを取りちがえるのか',
+        mangaId: 'shakai_s443_manga',
         body: `専門機関は分野ごとに世界中で活動していて、名前が長いので略称で呼ばれます。略称は英語の頭文字なので、**頭文字が何の英単語か**を知れば中身が思い出せます。UNは国際連合（United Nations）、Eは教育（Education）、Sは科学（Science）、Cは文化（Culture）、HはHealth（健康）、TはTrade（貿易）、Fは食料（Food）、Aは農業（Agriculture）。丸暗記より、頭文字→英単語→分野とたどるほうが確実です。
 
 WHOとWTOを取りちがえるのは、1文字しかちがわず、どちらも「世界○○機関」だからです。HはHealth、TはTradeと、まん中の1文字の意味で区別します。ユネスコとユニセフも音が似ていますが、UNESCOのEは教育、UNICEFのCはChildren（子ども）です。
