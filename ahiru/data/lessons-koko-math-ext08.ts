@@ -1142,6 +1142,7 @@ MA＝MBだから△MABは二等辺三角形、MA＝MCだから△MACも二等辺
     sections: [
       {
         heading: '逆の主張と、その根拠',
+        mangaId: 'koko_math_s290_enshuukaku_gyaku_manga',
         body: `円周角の定理「同じ弧に対する円周角は等しい」の逆が成り立つ。
 
 　　2点C・Dが直線ABについて同じ側にあり、∠ACB＝∠ADBならば、4点A・B・C・Dは1つの円周上にある。

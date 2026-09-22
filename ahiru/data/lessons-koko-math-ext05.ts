@@ -984,6 +984,7 @@ y=x² 上の2点 A(1, 1)、B(3, 9) を結ぶ直線の傾きは
     sections: [
       {
         heading: '公式の導き方',
+        mangaId: 'koko_math_s167_henkanowariai_manga',
         body: `y=ax² で x が p から q まで増加するとする（p≠q）。変化の割合を文字で計算してみる。
 
 　（y の増加量）＝aq²−ap²＝a(q²−p²)＝a(q+p)(q−p)

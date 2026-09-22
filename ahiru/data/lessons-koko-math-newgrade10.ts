@@ -418,6 +418,7 @@ AB∥CDである台形ABCDで、∠A（∠DAB）とAD側でとなり合う∠D�
     sections: [
       {
         heading: '平方根のおよその値を見積もる',
+        mangaId: 'koko_sansu_newgrade10_05_kinjichi_manga',
         body: `平方根の近似値は、2乗して近い整数を探すことで見積もることができる。
 
 ■ 整数ではさむ
@@ -544,6 +545,7 @@ b²－4acの値を計算し、その値が平方数（1, 4, 9, 16, 25, …）に
       },
       {
         heading: '解の公式に切りかえるべき場合と、計算の工夫',
+        mangaId: 'koko_sansu_newgrade10_06_nijihouteishiki_manga',
         body: `因数の組がすぐに見つからない、または判別式が平方数にならない場合は、迷わず解の公式に切りかえる。
 
 ■ 解の公式
@@ -699,6 +701,7 @@ a＝－1/2＜0なので、xが大きくなるほどyは小さく（より負に�
     sections: [
       {
         heading: '相似の基本と面積比・体積比',
+        mangaId: 'koko_sansu_newgrade10_08_soujimenseki_manga',
         body: `形が同じで大きさが違う図形を相似な図形という。対応する辺の比（相似比）はすべて等しく、対応する角はそれぞれ等しい。
 
 ■ 三角形の相似条件
@@ -889,6 +892,7 @@ t＝3のとき、P(3, 3)。0＜t＜6の範囲におさまっているので条�
     sections: [
       {
         heading: '直方体の対角線と正四角錐の高さ',
+        mangaId: 'koko_sansu_newgrade10_10_sanheihou_manga',
         body: `空間図形の問題は、いきなり3次元のまま考えるのではなく、必要な平面を1枚切り出して2次元の直角三角形に落としこむのが基本方針である。
 
 ■ 直方体の対角線
