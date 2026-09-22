@@ -627,6 +627,7 @@ export const kokoKokugoExt05Lessons: Lesson[] = [
       },
       {
         heading: '山場を見つける練習',
+        mangaId: 'koko_kokugo_s163_manga',
         body: `次の文章の四つの部分を分けてみよう。
 
 　弟の哲が野球をやめたいと言い出したのは、六月の終わりだった。母は「自分で決めなさい」と言い、父は何も言わなかった。兄の僕は、正直どうでもよかった。自分の受験のほうが大事だった。

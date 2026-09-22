@@ -31,6 +31,7 @@ export const kokoKokugoExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: 'こそあど言葉の全体像',
+        mangaId: 'koko_kokugo_s081_manga',
         body: `指示語とは、すでに出てきた言葉のくり返しをさけるために使う語である。「こ・そ・あ・ど」で始まるので「こそあど言葉」ともいう。
 
 ■ 四系列と品詞のちがい
@@ -628,6 +629,7 @@ export const kokoKokugoExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: '逆接は主張の矢印',
+        mangaId: 'koko_kokugo_s088_manga',
         body: `説明的文章の筆者は、いきなり自分の考えを述べるより、まず読者が思っていそうなことを書いてから、それをひっくり返す形をとることが多い。
 
 ■ 基本の型
@@ -803,6 +805,7 @@ export const kokoKokugoExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: '三拍子の型を覚える',
+        mangaId: 'koko_kokugo_s090_manga',
         body: `説明的文章でくり返し現れる型がある。
 
 【第一拍】譲歩……反対意見・一般論を一度認める

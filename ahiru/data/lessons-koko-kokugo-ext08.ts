@@ -30,6 +30,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: 'ハ行がワ行に変わったわけ',
+        mangaId: 'koko_kokugo_s266_hagyou_tenko_manga',
         body: `古文を読むと「あはれなり」「いふ」「かは」のように、今の書き方と少しずれた表記が出てくる。この書き方を歴史的仮名遣いという。読み方さえ現代語に置きかえられれば、意味の見当はぐっとつきやすくなる。
 
 ■ きまり
