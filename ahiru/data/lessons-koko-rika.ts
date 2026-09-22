@@ -1605,6 +1605,7 @@ AaBb * AaBb の子の表現型比率：
       },
       {
         heading: `3. 花のつくりと植物の分類`,
+        mangaId: 'koko_rika_09_plants_manga',
         figureId: 'lf_krika_73',
         level: 'oyo',
         body: `■ 花のつくり（外側から中心へ）
@@ -2337,6 +2338,7 @@ U字形磁石のN極とS極の間に導線を置き電流を流すと、導線�
       },
       {
         heading: `4. モーターの仕組み`,
+        mangaId: 'koko_rika_13_magnetism_manga',
         figureId: 'lf_krika_35',
         level: 'oyo',
         body: `■ モーター（直流モーター）の基本構造

@@ -926,6 +926,7 @@ export const kokoRikaExt04Lessons: Lesson[] = [
     sections: [
       {
         heading: '極を判定する確実な手順',
+        mangaId: 'koko_rika_s122_manga',
         body: `図のコイルを見て極を答える問題は、次の手順で処理する。
 
 ■ 手順①：電池の＋極から出発して、電流の道すじを指でなぞる

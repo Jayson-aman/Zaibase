@@ -756,6 +756,7 @@ k＝2.5と分かれば、
     sections: [
       {
         heading: '全長・自然長・伸びの関係',
+        mangaId: 'koko_rika_s044_manga',
         body: `ばねの長さについて、三つの言葉を必ず区別する。
 
 　全長 ＝ 自然長 ＋ 伸び

@@ -2140,6 +2140,7 @@ a＝12、b＝60 の行でも
     sections: [
       {
         heading: '真空鈴の実験',
+        mangaId: 'koko_rika_s023_manga',
         body: `音を伝えるものが必要かどうかを確かめる、最も有名な実験である。
 
 ■ 装置と手順
