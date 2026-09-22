@@ -212,6 +212,7 @@ p＝0 は P が原点 O と一致してしまうので、「原点と異なる�
     sections: [
       {
         heading: '(1) 等積変形とは何か',
+        mangaId: 'koko_math_s378_manga',
         figureId: 'lf_kokomathext11_378',
         body: `三角形 PAB において、AB を底辺とみると面積は
 　△PAB ＝ (1/2)×AB×（P から直線 AB までの距離）
@@ -1758,6 +1759,7 @@ a＝3√2 なので a²＝18。
     sections: [
       {
         heading: '(1) 辺の比を掛け合わせる公式',
+        mangaId: 'koko_math_s394_manga',
         body: `【問題】三角錐 O-ABC の体積は 54cm³ である。辺 OA 上に OP : PA＝1 : 2 となる点 P、辺 OB 上に OQ : QB＝1 : 1 となる点 Q、辺 OC 上に OR : RC＝2 : 1 となる点 R をとる。三角錐 O-PQR の体積を求めよ。
 
 ■ 比を整理する

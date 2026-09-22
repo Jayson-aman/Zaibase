@@ -385,6 +385,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
       },
       {
         heading: '2. 正多面体5種類とオイラーの多面体定理',
+        mangaId: 'koko_math_s310_manga',
         body: `すべての面が合同な正多角形で、どの頂点にも同じ数の面が集まる凸多面体を正多面体という。正多面体はたった5種類しかない。
 
 ■ 5種類の一覧（面の形／面・頂点・辺）
@@ -1532,6 +1533,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 中心角の公式を自分で導く',
+        mangaId: 'koko_math_s323_manga',
         figureId: 'lf_kokomathext09_323',
         body: `円すいの側面を切り開くと、半径が母線 l のおうぎ形になる。このおうぎ形の弧は、もとの立体では底面の円の縁にぴったり巻きついていたので、
 
