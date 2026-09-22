@@ -2258,6 +2258,7 @@ const kokoKokugoOverviewLessons: Lesson[] = [
       },
       {
         heading: '3. 譲歩構文と逆接の見抜き方',
+        mangaId: 'koko_kokugo_12_ronri_tenkai_manga',
         level: 'oyo',
         body: `評論文では、あえて反対意見を先に認めてから自分の主張を強める「譲歩構文」がよく使われます。この構造を見抜くと、筆者の本当の主張を素早く特定できます。
 

@@ -1290,6 +1290,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
       },
       {
         heading: '国境と近隣諸国との関係',
+        mangaId: 'koko_shakai_s283_manga',
         body: `■ 清との関係
 1871年、日清修好条規を結んだ。たがいに領事裁判権を認め合うなど、内容は対等である。日本が結んだ初期の条約のなかでは例外的といえる。
 

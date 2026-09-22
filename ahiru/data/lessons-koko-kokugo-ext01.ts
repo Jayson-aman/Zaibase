@@ -1185,6 +1185,7 @@ export const kokoKokugoExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '真ん中で割って関係を見る',
+        mangaId: 'koko_kokugo_s013_manga',
         body: `四字熟語を見たら、まず真ん中で割る。二つの二字熟語の関係で意味がつかめる。
 
 ■ 関係①：似た意味の二字を重ねる

@@ -319,6 +319,7 @@ export const kokoShakaiExt01Lessons: Lesson[] = [
       },
       {
         heading: '最短経路（大圏航路）の読み取り',
+        mangaId: 'koko_shakai_s004_manga',
         body: `入試でいちばん差がつくのは「2地点の最短経路はどれか」という問題である。
 
 ■ 最短経路とは

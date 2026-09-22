@@ -1013,6 +1013,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
       },
       {
         heading: '蘇我氏の勝利と推古天皇の即位',
+        mangaId: 'koko_shakai_s164_manga',
         body: `対立は武力衝突に発展した。
 
 ■ 587年 — 物部氏の滅亡

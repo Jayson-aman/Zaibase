@@ -2266,6 +2266,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
       },
       {
         heading: '「けり」の詠嘆を見抜く',
+        mangaId: 'koko_kokugo_s290_manga',
         body: `「けり」にはもう一つ、詠嘆（〜だなあ・〜たのだなあ）という重要な意味がある。
 
 ■ 詠嘆になりやすい場所
@@ -3150,6 +3151,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
       },
       {
         heading: '序詞 — その歌だけの長い前置き',
+        mangaId: 'koko_kokugo_s299_manga',
         body: `序詞は、ある語を導き出すために作者が工夫して置いた、二句以上（七音以上）の長い前置きである。枕詞と役割は似ているが、決まり文句ではなく、その歌のためだけに作られる。だから現代語訳では訳す。
 
 ■ 代表例
@@ -3224,6 +3226,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '代表的な掛詞を読む',
+        mangaId: 'koko_kokugo_s300_manga',
         body: `掛詞は、同じ音の語に二つの意味を重ねる技法である。ふつう、一方は目に見える景色、もう一方は作者の心情を表す。
 
 ■ 例①（古今和歌集・小野小町、百人一首）
@@ -3730,6 +3733,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
       },
       {
         heading: '古典文学史の総整理',
+        mangaId: 'koko_kokugo_s305_manga',
         body: `これまで扱った作品を時代順に並べる。
 
 ■ 奈良時代

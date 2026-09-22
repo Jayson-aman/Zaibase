@@ -867,6 +867,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
       },
       {
         heading: 'フビライと日本への圧力',
+        mangaId: 'koko_shakai_s201_manga',
         body: `5代皇帝となったフビライ・ハンは、遊牧国家から中国風の王朝への転換を進めた。
 
 ■ 元の成立
@@ -1872,6 +1873,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '中央のしくみ',
+        mangaId: 'koko_shakai_s213_manga',
         body: `室町幕府の組織は鎌倉幕府をもとにしているが、補佐役の名前と、担当する一族が変わっている点が最大の相違である。
 
 ■ 管領
