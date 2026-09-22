@@ -178,6 +178,7 @@ export const kokoShakaiExt04Lessons: Lesson[] = [
     sections: [
       {
         heading: '八幡製鉄所と北九州工業地帯の盛衰',
+        mangaId: 'koko_shakai_s113_manga',
         body: `1901年、現在の北九州市に官営の八幡製鉄所が操業を開始した。ここが選ばれた理由は次の三つである。
 ①近くに筑豊炭田があり、製鉄に必要な石炭（コークス）を手に入れやすかった。
 ②鉄鉱石を輸入する中国に近く、船で運びこみやすかった。

@@ -533,6 +533,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
     sections: [
       {
         heading: '文字のない日本を中国の記録から知る',
+        mangaId: 'koko_shakai_s158_manga',
         body: `弥生時代の日本にはまだ文字がなかったため、当時の政治の様子は日本側の記録では確かめられない。しかし中国では早くから歴史書が編さんされており、そこに「倭」＝日本の記述が残っている。
 
 ■ 『漢書』地理志（紀元前1世紀ごろの様子）

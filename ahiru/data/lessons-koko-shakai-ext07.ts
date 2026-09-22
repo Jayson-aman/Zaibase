@@ -2424,6 +2424,7 @@ export const kokoShakaiExt07Lessons: Lesson[] = [
       },
       {
         heading: '浮世絵の誕生',
+        mangaId: 'koko_shakai_s255_manga',
         body: `■ 菱川師宣（〜1694）
 安房（千葉県）の生まれ。町人の風俗を題材にした絵を描き、浮世絵の祖とされる。
 ・『見返り美人図』……振り返る女性の姿を描いた肉筆画（版画ではなく直接描いた絵）。教科書に必ず載る一枚である。

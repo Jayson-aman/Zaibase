@@ -512,6 +512,7 @@ export const kokoShakaiExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: '高冷地でつくり、夏に出す',
+        mangaId: 'koko_shakai_s082_kourei_manga',
         body: `抑制栽培は、生育を遅らせてふつうの旬より遅い時期に出荷する栽培方法である。促成栽培が「早出し」なら、抑制栽培は「遅出し」にあたる。
 
 ■ なぜ高原なのか
