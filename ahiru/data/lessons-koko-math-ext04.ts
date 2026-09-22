@@ -486,6 +486,7 @@ kg と g、分と時間、cm と m が混ざっている問題が多い。式を
       },
       {
         heading: 'グラフは平行移動した直線',
+        mangaId: 'koko_math_s126_heikoiten_manga',
         body: `y＝ax+b のグラフは直線になる。しかも、比例 y＝ax のグラフを y軸方向に b だけ平行移動したものである。
 
 ■ なぜ平行移動になるのか

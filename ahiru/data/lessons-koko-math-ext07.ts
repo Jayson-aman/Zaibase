@@ -525,6 +525,7 @@ AD∥BCの台形ABCDで、対角線AC、BDの交点をPとする。△PAD∽△P
     sections: [
       {
         heading: '共通角＋2辺の比の型',
+        mangaId: 'koko_math_s237_manga',
         body: `角の情報が共通角の1つしかないときは、辺の比を2組そろえて相似条件②を使う。
 
 例）△ABCで、辺AB上に点D、辺AC上に点Eをとる。AB＝9cm、AC＝6cm、AD＝4cm、AE＝6cm のとき、△ADE∽△ACB を証明する。
@@ -860,6 +861,7 @@ AD＝4、DB＝6、AE＝x、EC＝y、DE＝5 のとき
     sections: [
       {
         heading: '平行になるための条件',
+        mangaId: 'koko_math_s241_manga',
         body: `前のセッションでは「平行だから比が等しい」を学んだ。今度はその逆、「比が等しいから平行」である。
 
 ■ 逆の主張
@@ -947,6 +949,7 @@ AD:AB＝AE:AC で、∠Aが共通だから、2組の辺の比とその間の角�
     sections: [
       {
         heading: '平行線に切り取られる線分の比',
+        mangaId: 'koko_math_s242_manga',
         figureId: 'lf_kokomathext07_242',
         body: `平行な3直線 l、m、n が、2本の直線と交わっているとする。直線1との交点を上からA、B、C、直線2との交点を上からD、E、Fとすると
 
@@ -1906,6 +1909,7 @@ BD＝BC×AB/(AB＋AC)、DC＝BC×AC/(AB＋AC)
     sections: [
       {
         heading: '共通な角をもつ三角形の面積比',
+        mangaId: 'koko_math_s253_manga',
         body: `相似でなくても面積比が求められる場合がある。もっともよく使うのは「共通な角をもつ三角形」の場合である。
 
 ■ 公式

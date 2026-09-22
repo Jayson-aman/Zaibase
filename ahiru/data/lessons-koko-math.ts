@@ -1770,6 +1770,7 @@ x + y = 5、xy = 3 のとき、x² + y² と (x − y)² の値を求めよ。
       {
         heading: '3. 分母の有理化',
         level: 'oyo',
+        mangaId: 'koko_math_08_square_root_manga',
         body: `分母に根号があるとき、分母から根号をなくすことを「有理化」という。
 
 ■ なぜ有理化するか
