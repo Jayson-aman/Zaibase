@@ -3990,6 +3990,7 @@ export const kokoKokugoExt12Lessons: Lesson[] = [
       },
       {
         heading: 'なぜ最初の判断が強いのか',
+        mangaId: 'koko_kokugo_s447_manga',
         body: `最初に選んだ答えを、根拠なく変えるべきでない理由には根拠がある。
 
 ■ 理由1：情報が最も新しい状態で判断している

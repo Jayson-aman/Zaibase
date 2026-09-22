@@ -687,6 +687,7 @@ export const kokoKokugoExt11Lessons: Lesson[] = [
       },
       {
         heading: '「〜のおかげだ」と書かない',
+        mangaId: 'koko_kokugo_s383_manga',
         body: `【資料3】食べ残しの理由（単一回答・％）
 　量が多い 三十四／苦手な食べ物がある 二十九／食べる時間が足りない 二十一／体調が悪かった 九／その他 七（合計百％）
 
@@ -863,6 +864,7 @@ export const kokoKokugoExt11Lessons: Lesson[] = [
       },
       {
         heading: '関係があることと、原因であること',
+        mangaId: 'koko_kokugo_s385_manga',
         body: `読書量が多い生徒ほどスマホ時間が短い。この資料から言えるのは、その二つに「関係が見られる」ということだけである。
 
 ■ 三つの可能性
@@ -1308,6 +1310,7 @@ export const kokoKokugoExt11Lessons: Lesson[] = [
     sections: [
       {
         heading: '共通点から作る合意',
+        mangaId: 'koko_kokugo_s390_manga',
         body: `【場面】文化祭の出し物について、四十人の学級で意見を聞いた。
 　A案（劇）十四人／B案（模擬店）十一人／C案（展示）七人／決めかねている 八人（合計四十人）
 
@@ -2682,6 +2685,7 @@ Aさん「せっかくなので遠くの水族館に行きたいです。バス�
     sections: [
       {
         heading: '二つを書き分ける',
+        mangaId: 'koko_kokugo_s404_manga',
         body: `主張「私は、話し合いでは必ず一度は発言すべきだと考える。」
 
 ■ 根拠（理由・考え）
@@ -2781,6 +2785,7 @@ Aさん「せっかくなので遠くの水族館に行きたいです。バス�
     sections: [
       {
         heading: '飛躍を見つける三つの問い',
+        mangaId: 'koko_kokugo_s405_manga',
         body: `主張と根拠を書いたら、次の三つを自分に問う。
 
 ■ 問い①　「だから」でつながるか
