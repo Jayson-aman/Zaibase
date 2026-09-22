@@ -205,6 +205,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '虫媒花と風媒花の見分け方',
+        mangaId: 'koko_rika_s308_manga',
         body: `花粉は自分では動けないので、必ず何かに運んでもらう。運び屋が何かによって、花のつくりは合理的に変わる。
 
 ■ 虫媒花（虫が運ぶ）
@@ -1255,6 +1256,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
       },
       {
         heading: '水が高いところまで上がるしくみ',
+        mangaId: 'koko_rika_s319_manga',
         body: `30mの木のてっぺんまで水が届くのはなぜか。中学では次の三つの働きで説明する。
 
 ■ ① 蒸散による引き上げ（最大の原動力）
@@ -2555,6 +2557,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '呼吸のしくみ',
+        mangaId: 'koko_rika_s333_manga',
         body: `■ 呼吸とは
 細胞が、養分（有機物）を酸素を使って分解し、生きるためのエネルギーをとり出すはたらきである。そのとき、二酸化炭素と水ができる。
 
