@@ -681,6 +681,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: 'なぜ武家の法が必要だったのか',
+        mangaId: 'koko_shakai_s199_manga',
         body: `承久の乱の後、幕府は西国にも多くの地頭を置いた。すると地頭と荘園領主、あるいは御家人どうしの争いが急増する。訴訟は幕府に持ちこまれるが、判断の基準がなかった。
 
 ■ 律令では裁けない
@@ -1350,6 +1351,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: 'なぜ新しい仏教が生まれたのか',
+        mangaId: 'koko_shakai_s207_manga',
         body: `平安末から鎌倉初期にかけて、日本は大きな不安のなかにあった。
 
 ■ 時代の不安
@@ -1717,6 +1719,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
       },
       {
         heading: 'なぜ60年も続いたのか',
+        mangaId: 'koko_shakai_s211_manga',
         body: `南朝は軍事的には圧倒的に不利だった。それでも動乱が長引いたのには理由がある。
 
 ■ ①観応の擾乱（1350〜52年）

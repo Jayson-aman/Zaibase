@@ -382,6 +382,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: 'なぜアメリカが来たのか',
+        mangaId: 'koko_shakai_s271_manga',
         body: `1853年、アメリカのペリーが軍艦4隻を率いて浦賀（神奈川県）に来航した。蒸気船を含む黒く塗られた軍艦は「黒船」と呼ばれ、人々を驚かせた。ペリーは大統領の国書を渡し、開国を求めて翌年の再来を告げて去った。
 
 ■ アメリカ側の事情
@@ -752,6 +753,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: 'なぜ二段階だったのか',
+        mangaId: 'koko_shakai_s276_manga',
         body: `戊辰戦争に勝っても、新政府が直接支配していたのは旧幕府領などにすぎず、全国には大名が治める藩がそのまま残っていた。藩ごとに軍隊があり、年貢のしくみもばらばらでは、統一した政策も安定した税収も望めない。
 
 ■ 版籍奉還（1869年）
@@ -917,6 +919,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
       },
       {
         heading: 'なぜ就学率はすぐに上がらなかったのか',
+        mangaId: 'koko_shakai_s278_manga',
         body: `学制が出された当初、実際に小学校へ通った子どもの割合（就学率）は3割ほどにとどまり、女子はさらに低かった。原因は次のとおりである。
 
 ■ 費用の負担
@@ -1122,6 +1125,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: 'なぜ政府が工場を作ったのか',
+        mangaId: 'koko_shakai_s281_manga',
         body: `不平等条約を改正して欧米と対等になるには、産業を発展させて国力をつけなければならない。しかし当時の日本の民間には、大工場を建てる資金も、機械を動かす技術者もいなかった。そこで政府自身が工場を建て、外国人技術者を招いて技術を移し、民間が学ぶ手本とする方針をとった。これが殖産興業である。
 
 ■ 富岡製糸場（1872年・群馬県）
@@ -2315,6 +2319,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: 'なぜすぐには改正できなかったのか',
+        mangaId: 'koko_shakai_s296_manga',
         body: `1858年の日米修好通商条約とそれに続く各国との条約で、日本は領事裁判権を認め、関税自主権をもたないという不利な立場に置かれた。政府はこの改正を最重要の外交課題としたが、実現までに半世紀以上を要した。
 
 ■ 岩倉使節団（1871〜73年）の失敗
