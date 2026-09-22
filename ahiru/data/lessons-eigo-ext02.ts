@@ -1803,6 +1803,7 @@ Who plays the piano? － My sister does.（姉です）
     sections: [
       {
         heading: 'なぜ動詞を二つ書いてしまうのか',
+        mangaId: 'eigo_s061_manga',
         body: `英語を書くときにもっとも多い誤りが、be動詞と一般動詞を並べてしまうことである。
 
 ✗ I am like dogs.
@@ -2050,6 +2051,7 @@ Does she play the piano? － Yes, she does. / No, she doesn\'t.
       },
       {
         heading: 'なぜ Do は動詞の数に数えないのか、なぜ答えの語をそろえるのか',
+        mangaId: 'eigo_s063_manga',
         body: `be動詞の疑問文は、be動詞を主語の前に出すだけで作れます（Are you 〜?）。一般動詞は前に出せないので、否定文と同じように **Do / Does という合図の語**を借りて先頭に置きます。Do は「これから疑問文です」という合図であって動作の意味は持たないので、動詞の数には数えません。だから正しい疑問文は「合図の語＋動詞一つ」か「be動詞＋主語」のどちらかで、Do you are 〜? や Are you have 〜? は動詞が二つ並んでいて×です。
 
 答えの語をそろえるのは、答えが**問いの動詞をくり返す**形だからです。Are you hungry? には Yes, I am（hungry）。Do you like music? には Yes, I do（like music）。問いが Do なら do、Are なら am で受けないと、何をくり返しているのか分からなくなります。

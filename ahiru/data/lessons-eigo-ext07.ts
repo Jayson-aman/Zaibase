@@ -472,6 +472,7 @@ much は否定文・疑問文でよく使われるが、ふつうの肯定文で
       },
       {
         heading: 'なぜ homework は数えられず、なぜ肯定文で much を避けるのか',
+        mangaId: 'eigo_s230_manga',
         body: `英語で「数えられる」とは、**形がはっきりしていて一つ二つと区切れる**ことです。water や bread は区切りがなく、homework・information・news・advice は目に見えない「まとまり」なので、英語では数えません。日本語では「宿題が三つ」と数えるので、そのまま many homeworks と書いてしまいますが、英語の感覚では区切れないものです。数えたいときは a glass of water・two pieces of homework のように**容器や単位で区切ります**。
 
 many と much を使い分けるのは、many が「数」、much が「量」を表す語だからです。much が肯定文でかたく響くのは、英語の習慣として much は否定文・疑問文（I don't have much time. ／ How much 〜?）で使われることが多く、肯定文では a lot of が自然だからです。many は肯定文でもふつうに使えます。
@@ -2216,6 +2217,7 @@ little には「小さい」という意味もあり、その場合は smaller�
       },
       {
         heading: 'なぜ many も much も more になり、なぜ little は less なのか',
+        mangaId: 'eigo_s247_manga',
         body: `many（数が多い）と much（量が多い）は、肯定の原級では数と量で語を分けますが、**比較すると「もっと多い」という一つの意味**にまとまるので、比較級・最上級は more・most の一つの形になります。more books（数）も more water（量）も同じ more です。逆に「少ない」は、比較しても数（fewer books）と量（less water）を分けたままなので、few→fewer→fewest、little→less→least と別々に変化します。
 
 more に二つの働き（many/much の比較級と、長い形容詞の比較級を作る語）があるので、**more のあとに名詞が来るか、形容詞が来るか**で読み分けます。more books は「本の数が多い」、more beautiful は「美しさの程度が上」です。数量の little の比較級を規則どおり littler としないのは、less という別の語が決まっているからです。
