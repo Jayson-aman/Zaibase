@@ -314,6 +314,7 @@ look のあとに at が付くと「〜を見る」という動作の意味に�
     sections: [
       {
         heading: 'exciting と excited のちがい',
+        mangaId: 'eigo_s229_manga',
         body: `動詞から作られた -ing・-ed の形は、そのまま形容詞として使うことができる。二つの形の意味のちがいをはっきりさせておく。
 
 ■ -ing の形容詞＝「（人を）〜させるような」

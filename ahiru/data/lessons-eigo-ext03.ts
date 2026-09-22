@@ -2856,6 +2856,7 @@ Is this yours?（これはあなたのものですか）→ Yes, it is.
     sections: [
       {
         heading: 'it と one のちがい',
+        mangaId: 'eigo_s111_manga',
         body: `どちらも前に出た名詞のくり返しをさけるための語だが、さす中身がちがう。
 
 ■ it＝まったく同じ物

@@ -2830,6 +2830,7 @@ Have ＋ 主語 ＋ 過去分詞 ＋ yet ?　… 「もう〜しましたか」
       },
       {
         heading: 'just と just now のちがい',
+        mangaId: 'eigo_s147_manga',
         body: `just と just now は形が似ているが、いっしょに使う時制がちがう。
 
 ■ just ＋ 現在完了

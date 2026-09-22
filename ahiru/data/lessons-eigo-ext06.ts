@@ -122,6 +122,7 @@ No, I'm not. は言えるが、Yes, I'm. とは言えない。文の最後に来
     sections: [
       {
         heading: 'Do と Does の使い分け',
+        mangaId: 'eigo_s192_manga',
         body: `一般動詞の文には、be動詞のように前に出せる語がない。そこで Do / Does という助っ人（助動詞）を文の先頭に置いて疑問文を作る。
 
 ■ 手順

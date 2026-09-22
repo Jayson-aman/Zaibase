@@ -2972,6 +2972,7 @@ Listen to me.（○）
     sections: [
       {
         heading: 'come と go の方向のちがい',
+        mangaId: 'eigo_s371_manga',
         body: `come と go は「来る」「行く」と覚えるだけでは足りない。基準になる人がどこにいるかで決まる。
 
 ■ go ＝ 話し手のいる場所から遠ざかる

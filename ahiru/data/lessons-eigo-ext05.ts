@@ -215,6 +215,7 @@ be able to は「be動詞＋able to＋動詞の原形」で、be動詞の部分�
       },
       {
         heading: 'could と was able to の使い分け',
+        mangaId: 'eigo_s158_manga',
         body: `どちらも「〜できた」と訳せるが、英検三級や上位校の入試では区別が問われることがある。
 
 ■ could ＝ もともとその力があった（能力・状態）

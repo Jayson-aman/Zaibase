@@ -1716,6 +1716,7 @@ during ＋ 名詞 ／ while ＋ 文
       },
       {
         heading: 'while と when のちがい',
+        mangaId: 'eigo_s281_manga',
         body: `while も when も「〜のとき」と訳せるが、時間のはばがちがう。
 
 ■ while ＝ 〜している間（続いている時間）

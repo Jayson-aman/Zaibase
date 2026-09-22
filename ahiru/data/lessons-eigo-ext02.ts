@@ -317,6 +317,7 @@ are not → aren\'t
       },
       {
         heading: 'まちがえやすい三つの点',
+        mangaId: 'eigo_s044_manga',
         body: `■ ① am not に短縮形はない
 be動詞の中で am だけは not と結びついた短縮形を持たない。
 

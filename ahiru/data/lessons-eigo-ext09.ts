@@ -2634,6 +2634,7 @@ The boy running in the park → 公園で走っている少年
       },
       {
         heading: '過去形と過去分詞を混同しない',
+        mangaId: 'eigo_s326_manga',
         body: `過去分詞は過去形とは別物である。形が同じ動詞が多いので、位置で判断する。
 
 例）I read the book written by him.（彼によって書かれた本を読んだ）
