@@ -625,6 +625,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
       },
       {
         heading: '所在地論争と卑弥呼の死後',
+        mangaId: 'koko_shakai_s159_manga',
         body: `『魏志倭人伝』には、帯方郡（朝鮮半島にあった魏の出先の役所）から邪馬台国までの道のりが方角と距離で記されている。ところが、その記述をそのままたどると日本列島をはるかに越えて海の上に出てしまう。そのため、どこかに誤りがあると考えられ、二つの有力な説が生まれた。
 
 ■ 九州説
@@ -2954,6 +2955,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
       },
       {
         heading: '承平・天慶の乱（939〜941年）',
+        mangaId: 'koko_shakai_s188_manga',
         body: `10世紀半ば、東西でほぼ同時に大きな反乱が起きた。
 
 ■ 平将門の乱（関東）

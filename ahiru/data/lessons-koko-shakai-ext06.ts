@@ -1642,6 +1642,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
       },
       {
         heading: '武士の不満と新政の崩壊',
+        mangaId: 'koko_shakai_s210_manga',
         body: `■ 二条河原落書（1334年）
 京都の二条河原に立てられたとされる落書は、新政を風刺した88句からなる。
 「このごろ都にはやるもの、夜討・強盗・にせ綸旨、召人・早馬・虚騒動……」

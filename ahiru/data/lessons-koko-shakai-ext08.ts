@@ -2974,6 +2974,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
       },
       {
         heading: '治安維持法（1925年）とその後',
+        mangaId: 'koko_shakai_s304_manga',
         body: `普通選挙法と同じ1925年、治安維持法が制定された。
 
 ■ 内容と背景
