@@ -932,6 +932,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '文永の役（1274年）',
+        mangaId: 'koko_shakai_s202_manga',
         body: `フビライの服属要求を幕府が拒み続けたため、ついに元は軍を送った。
 
 ■ 経過

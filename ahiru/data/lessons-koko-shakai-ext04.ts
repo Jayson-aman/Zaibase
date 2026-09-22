@@ -2566,6 +2566,7 @@ export const kokoShakaiExt04Lessons: Lesson[] = [
     sections: [
       {
         heading: '北洋漁業の衰退',
+        mangaId: 'koko_shakai_s142_manga',
         body: `北海道は日本一の漁業地域で、漁獲量は全国の2割前後を占める。しかしその中身は、この50年で大きく変わった。
 
 ■ かつての北洋漁業

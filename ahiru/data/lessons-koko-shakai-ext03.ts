@@ -1018,6 +1018,7 @@ export const kokoShakaiExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: '二つのものさし',
+        mangaId: 'koko_shakai_s088_manga',
         body: `食料自給率とは、国内で消費される食料のうち国内生産でまかなえている割合をいう。ただし「どうやって数えるか」で答えが変わる。
 
 ■ カロリーベース総合食料自給率

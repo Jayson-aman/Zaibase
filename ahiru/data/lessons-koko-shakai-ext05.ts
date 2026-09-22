@@ -472,6 +472,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
       },
       {
         heading: '争いの始まりと「くに」の誕生',
+        mangaId: 'koko_shakai_s157_manga',
         body: `米づくりは社会を大きく変えた。
 
 ■ 貧富と身分の差
@@ -1395,6 +1396,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
     sections: [
       {
         heading: '白村江の戦い（663年）と防衛体制',
+        mangaId: 'koko_shakai_s169_manga',
         body: `唐は強大化し、新羅と手を結んで朝鮮半島の統一をめざした。660年、唐・新羅の連合軍は日本と友好関係にあった百済を滅ぼす。百済の遺臣は日本に救援を求め、日本は大軍を朝鮮半島に送った。
 
 ■ 663年 白村江の戦い
