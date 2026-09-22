@@ -738,6 +738,7 @@ I don't have as much money as she does.（量 → much）
       },
       {
         heading: 'little / less / least と few / fewer',
+        mangaId: 'koko_eigo_s228_manga',
         body: `「少ない」を表す語も不規則に変化する。
 
 little（量が少ない）－ less － least

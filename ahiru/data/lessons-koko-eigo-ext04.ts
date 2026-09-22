@@ -3145,6 +3145,7 @@ be satisfied with（〜に満足する）
       },
       {
         heading: '感情を表す受動態',
+        mangaId: 'koko_eigo_s142_manga',
         body: `英語では「驚く」「喜ぶ」「興奮する」などの感情を、受動態で表すことが多い。日本語では能動的に訳す。
 
 ■ be surprised at 〜（〜に驚く）

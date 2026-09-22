@@ -561,6 +561,7 @@ to不定詞には「名詞的用法」「形容詞的用法」「副詞的用法
       },
       {
         heading: '3. 現在分詞・過去分詞の形容詞的用法',
+        mangaId: 'koko_eigo_03_infinitive_manga',
         level: 'oyo',
         body: `■ 分詞の形容詞的用法
 分詞（現在分詞 -ing / 過去分詞 -ed）が名詞を修飾する。
@@ -1695,6 +1696,7 @@ If I had left home earlier, I (　　) the train.
       },
       {
         heading: '3. that 節・so〜that・such〜that',
+        mangaId: 'koko_eigo_08_conjunction_manga',
         level: 'oyo',
         body: `■ 名詞節を導く that（〜ということ）
 that 節は「〜ということ」という意味のカタマリ（名詞節）を作り、
@@ -1936,6 +1938,7 @@ We stayed home because it was very cold.
       },
       {
         heading: '4. 形式主語 it・there 構文と入試問題例',
+        mangaId: 'koko_eigo_09_noun_article_manga',
         level: 'nyushi',
         body: `■ 形式主語の it（本当の主語を後ろに置く）
 to不定詞や that 節が主語だと頭が重いので、it を仮に置いて後ろに回す。
@@ -2471,6 +2474,7 @@ B: It's cloudy and cold.
       },
       {
         heading: '3. 時制の一致のルールと例外',
+        mangaId: 'koko_eigo_12_perfect_advanced_manga',
         level: 'oyo',
         body: `■ 時制の一致とは
 主節（伝える側）の動詞が過去形のとき、従属節（伝えられる内容）の動詞も
@@ -2812,6 +2816,7 @@ Having not eaten breakfast, I felt very hungry.
     sections: [
       {
         heading: '1. think型動詞と間接疑問文の語順（最重要パターン）',
+        mangaId: 'koko_eigo_14_indirect_question_advanced_manga',
         level: 'oyo',
         body: `■ 疑問詞が think/believe/guess/suppose の目的語になるとき
 通常の間接疑問文は〈疑問詞＋主語＋動詞〉の語順だが、
@@ -3957,6 +3962,7 @@ not all / not always / not every などは「全てではない」という意�
       },
       {
         heading: '3. 「〜させる」「〜してもらう」の訳し分け',
+        mangaId: 'koko_eigo_20_translation_patterns_manga',
         level: 'oyo',
         body: `■ 使役動詞の使い分け（make/have/let/get）
 日本語の「〜させる」は文脈によって英語では異なる動詞を使う。
@@ -4076,6 +4082,7 @@ have/get ＋ 目的語 ＋ 過去分詞の形で表す。
     sections: [
       {
         heading: '1. 群動詞（フレーズ動詞）の受動態',
+        mangaId: 'koko_eigo_21_passive_advanced_manga',
         level: 'oyo',
         body: `■ 群動詞の受動態とは
 「動詞＋前置詞／動詞＋副詞＋前置詞」のようなまとまり（群動詞）は、
