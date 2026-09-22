@@ -1575,6 +1575,7 @@ A: Yes, please.（はい、お願いします）
     sections: [
       {
         heading: 'Shall I 〜? の形と場面',
+        mangaId: 'eigo_s174_shall_manga',
         body: `Shall I 〜? は「（私が）〜しましょうか」と、自分から手助けを申し出る言い方である。困っている人を見かけたときの決まり文句として、会話問題で頻出する。
 
 例）Shall I open the window?（窓を開けましょうか）

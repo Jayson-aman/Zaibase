@@ -1384,6 +1384,7 @@ It is important to read many books when you are young.
     sections: [
       {
         heading: 'for 人 の位置と意味',
+        mangaId: 'eigo_s312_forhito_manga',
         body: `不定詞の動作をするのがだれかを示したいときは、to の前に「for ＋ 人」を置く。
 
 例）It is easy for me to swim.（わたしにとって泳ぐことは簡単だ）

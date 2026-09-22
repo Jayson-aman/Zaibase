@@ -37,6 +37,7 @@ const eigoOverviewLessons: Lesson[] = [
     sections: [
       {
         heading: '1. 5文型の理解',
+        mangaId: 'eigo_01_bunkeigo_manga',
         body: `英語の文はすべて「5つの文型」に分類できる。これを理解すると、どんな長い文でも構造が見えてくる。
 
 ■ 第1文型 SV（主語＋動詞）
@@ -1197,6 +1198,7 @@ I think that smartphones are useful for children. First, they can learn many thi
       },
       {
         heading: '4. 接続詞と副詞節',
+        mangaId: 'eigo_05_setsuzokushi_manga',
         body: `接続詞は「文と文をつなぐ言葉」。副詞節を作る接続詞は意味と時制のルールが入試で問われる。
 
 ■ 時を表す接続詞
@@ -2192,6 +2194,7 @@ be動詞を使った特別な形。「（場所に）〜がある／いる」を
       },
       {
         heading: '4. why・which・whose と答え方',
+        mangaId: 'eigo_09_whywhichwhose_manga',
         body: `残りの疑問詞 why（なぜ）・which（どちら）・whose（だれの）を覚えれば、疑問詞はすべてそろう。
 
 ■ why（なぜ）と答え方
@@ -2268,6 +2271,7 @@ This is Tom's bag.（下線部：Tom's）
       },
       {
         heading: '★ MAXレベル：間接疑問文・付加疑問・疑問詞＋to',
+        mangaId: 'eigo_09_fukagimonbun_manga',
         body: `■ 間接疑問文（疑問文が文の中に入る形）
 疑問文が別の文の一部になると、語順が「疑問詞 ＋ 主語 ＋ 動詞」（ふつうの文の語順）に変わる。do/does/did は使わない。
 ・直接疑問：Where does she live?
@@ -2424,6 +2428,7 @@ Let's（Let us の短縮）＋ 動詞の原形 で「（いっしょに）〜し
       },
       {
         heading: '4. その他の助動詞（will / must / should / may）',
+        mangaId: 'eigo_10_willmust_manga',
         body: `can 以外にも、動詞に意味を加える助動詞がある。どれも「助動詞 ＋ 動詞の原形」の形は共通。
 
 ■ will（〜するつもりだ・〜だろう）：未来を表す
@@ -2803,6 +2808,7 @@ spring（春）, summer（夏）, fall / autumn（秋）, winter（冬）
     sections: [
       {
         heading: '1. 場所を表す前置詞（in / on / at / under / near など）',
+        mangaId: 'eigo_12_bashozenchishi_manga',
         body: `前置詞は名詞の前に置いて「場所・時・関係」を表す小さな単語だが、入試では空所補充・並び替え・英作文のあらゆる場面で問われる最重要分野の一つ。
 
 ■ in・on・at の基本イメージ
@@ -3269,6 +3275,7 @@ This is one of the (biggest / bigger) cities (of / in) Japan.
     sections: [
       {
         heading: '1. There is/are の基本の形',
+        mangaId: 'eigo_14_thereisare_manga',
         body: `「〜がある」「〜がいる」と、あるものの存在を伝えるときに使う特別な構文がThere is/are構文。日本語につられて主語をまちがえやすいので、形をしっかり覚えよう。
 
 ■ There is/are の基本形
