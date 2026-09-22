@@ -274,6 +274,7 @@ export const kokugoExt10Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 「以内」と「程度」のちがい',
+        mangaId: 'kokugo_s354_manga',
         body: `字数の指示は、次の三種類を区別します。
 
 ・「五十字以内」……五十字までなら何字でもよいが、五十一字は不可。目標は四十字以上。

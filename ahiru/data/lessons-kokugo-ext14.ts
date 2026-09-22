@@ -2586,6 +2586,7 @@ export const kokugoExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '見分け方',
+        mangaId: 'kokugo_s490_manga',
         body: `■ 事実とは
 だれが確かめても同じ答えになること。
 ・富士山の高さは3776メートルである。

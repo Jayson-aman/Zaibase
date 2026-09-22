@@ -955,6 +955,7 @@ export const kokugoExt04Lessons: Lesson[] = [
       },
       {
         heading: '2. 目的と手段 — 取りちがえやすいペア',
+        mangaId: 'kokugo_s125_manga',
         body: `対義語のペアの中でも、「目的」と「手段」は意味を取りちがえやすく、記述問題でよく問われます。
 
 【目的】 最後にたどりつきたい所。何のためにするのか。

@@ -1063,6 +1063,7 @@ export const kokugoExt13Lessons: Lesson[] = [
       },
       {
         heading: '2. 見分け方と、まちがえやすい言葉',
+        mangaId: 'kokugo_e4_ext_12_manga',
         body: `和語か漢語かは、見た目ではなく読み方で決まります。
 
 ■ 見分けの手順

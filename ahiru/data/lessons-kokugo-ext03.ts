@@ -1378,6 +1378,7 @@ export const kokugoExt03Lessons: Lesson[] = [
       },
       {
         heading: '2. まちがえやすい「似ているが別のことわざ」',
+        mangaId: 'kokugo_s097_manga',
         body: `このグループとよく混ざるのが、次のことわざです。意味の中身がちがうので、はっきり分けて覚えます。
 
 ■ 泣きっ面に蜂（なきっつらにはち）＝不運の重なり
