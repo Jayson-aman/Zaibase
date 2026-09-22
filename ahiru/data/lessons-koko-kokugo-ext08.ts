@@ -1322,6 +1322,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
       },
       {
         heading: '補うための三つの手がかり',
+        mangaId: 'koko_kokugo_s280_tegakari_manga',
         body: `主語を補うときは、次の順序で考える。
 
 ■ 手がかり① 接続助詞
@@ -1977,6 +1978,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
       },
       {
         heading: '「こそ〜已然形、」で文が続くとき',
+        mangaId: 'koko_kokugo_s287_izenkei_manga',
         body: `「こそ」の結びが已然形で終わったあと、そこで文が終わらずに読点で続くことがある。この場合、意味は逆接（〜けれども）になる。
 
 ■ 形
@@ -2932,6 +2934,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '謙譲語が指し示すのは「受け手」',
+        mangaId: 'koko_kokugo_s297_manga',
         body: `謙譲語は、動作を受ける人を高める敬語である。したがって、謙譲語を見つけたら「この動作はだれに向かっているのか」を考える。
 
 ■ 代表的な謙譲語

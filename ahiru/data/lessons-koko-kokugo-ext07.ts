@@ -109,6 +109,7 @@ export const kokoKokugoExt07Lessons: Lesson[] = [
     sections: [
       {
         heading: '文末で見分ける',
+        mangaId: 'koko_kokugo_s232_manga',
         body: `事実と意見を分ける最も確実な手がかりは文末表現である。
 
 ■ 事実を表す文末

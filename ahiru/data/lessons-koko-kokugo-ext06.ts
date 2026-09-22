@@ -1336,6 +1336,7 @@ export const kokoKokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '事実と解釈を切り分ける',
+        mangaId: 'koko_kokugo_s209_manga',
         body: `一人称や限定視点の文章では、語り手のフィルターを通した情報しか読者に届かない。そこで必要になるのが、事実と解釈を切り分ける読み方である。
 
 ■ 切り分けの基準
@@ -3050,6 +3051,7 @@ export const kokoKokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '三つの回収の型',
+        mangaId: 'koko_kokugo_s225_manga',
         body: `伏線がどう効くかには型がある。型を見分けると、答案に何を書けばよいかが決まる。
 
 ■ 型①：謎が解ける型
