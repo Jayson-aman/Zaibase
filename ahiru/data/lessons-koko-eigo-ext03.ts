@@ -1575,6 +1575,7 @@ i が二つ続く diing のような形を避けるための変化である。
       },
       {
         heading: '-ed のつづりとの比較',
+        mangaId: 'koko_eigo_s088_manga',
         body: `-ed と -ing は似た規則を持つが、y の扱いだけが決定的に違う。ここを混ぜないことが重要である。
 
 ■ 比較表
@@ -3300,6 +3301,7 @@ Would you like to 〜?（〜しませんか）は誘う表現になる。
       },
       {
         heading: '書くときの注意点',
+        mangaId: 'koko_eigo_s106_manga',
         body: `■ 三単現の -s を忘れない
 副詞節の中は現在形なので、主語が三人称単数なら -s が必要になる。
 例）When he comes home, I will tell him.（× When he come home）

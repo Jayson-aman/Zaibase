@@ -1641,6 +1641,7 @@ call him・marry her・enter the room で前置詞が要らないのは、これ
     sections: [
       {
         heading: '前置詞を入れてはいけない動詞',
+        mangaId: 'koko_eigo_s054_manga',
         body: `日本語では「〜について」「〜と」「〜に」と助詞が付くのに、英語では前置詞を入れない動詞がある。入試の定番なので確実に覚える。
 
 ■ 代表的な他動詞
@@ -1921,6 +1922,7 @@ look のうしろに名詞をそのまま置くことはできない。
     sections: [
       {
         heading: 'to をとるグループ',
+        mangaId: 'koko_eigo_s057_manga',
         body: `第4文型の文は、目的語の順序を入れかえて前置詞を補うことで、第3文型に書きかえられる。give の仲間では前置詞に to を使う。
 
 ■ 書きかえの手順

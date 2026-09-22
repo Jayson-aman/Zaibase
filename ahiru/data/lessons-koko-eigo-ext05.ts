@@ -385,6 +385,7 @@ Could you 〜? / Could I 〜? / could be 〜 の三つの形を見たら、ほ�
       },
       {
         heading: '例外：見えた・聞こえた・わかった は could',
+        mangaId: 'koko_eigo_s150_manga',
         body: `一回きりの出来事でも、次のグループの動詞は could を使うのが自然である。
 
 ■ 知覚・心理を表す動詞
@@ -879,6 +880,7 @@ must は現在にしか使えないので、過去・未来・他の助動詞と
     sections: [
       {
         heading: 'must not の形と強さ',
+        mangaId: 'koko_eigo_s156_manga',
         body: `must not は「〜してはいけない」という禁止を表す。学校の規則、公共の場の掲示、親から子への注意など、守らせたい場面で使う。
 
 ■ 形
@@ -3182,6 +3184,7 @@ be動詞・助動詞・do の否定の短縮形を文頭に置く。
       {
         heading: '答え方——内容で決める',
         figureId: 'lf_kokoeigoext05_180',
+        mangaId: 'koko_eigo_s180_manga',
         body: `英語の Yes / No は、質問の形とは無関係に、答えの中身で決まる。
 
 ■ 原則

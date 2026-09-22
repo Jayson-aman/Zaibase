@@ -3280,6 +3280,7 @@ no less than が「〜も（多い）」になるのは、no が「少なくな�
     sections: [
       {
         heading: 'the + 比較級 + of the two',
+        mangaId: 'koko_eigo_s254_manga',
         body: `比較級に the が付くのは、〈the ＋ 比較級, the ＋ 比較級〉の形と、この of the two の形だけである。
 
 ■ 形

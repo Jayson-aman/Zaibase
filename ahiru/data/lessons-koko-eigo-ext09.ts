@@ -2772,6 +2772,7 @@ that 節の中が平叙文の語順なのは、that 節が「たずねる」文�
       {
         heading: '主節が過去なら節の中も過去',
         figureId: 'lf_kokoeigoext09_324',
+        mangaId: 'koko_eigo_s324_manga',
         body: `主節の動詞を過去形にすると、that 節の中の動詞も過去形に変える。これを時制の一致という。
 
 例）He says that he is busy.（彼は忙しいと言っている）
