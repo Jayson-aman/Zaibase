@@ -1272,6 +1272,7 @@ the sun／the moon／the earth／the sky／the sea／the world／the universe／
       },
       {
         heading: 'なぜ最上級や序数に the が付き、なぜ the young は複数なのか',
+        mangaId: 'koko_eigo_s193_manga',
         body: `the は「相手にどれのことか分かる」ことを示す語です。世界に一つしかないもの（the sun）、いちばん〜なもの（the highest）、〇番目のもの（the first）、方角（the north）は、言った瞬間に**どれか一つに決まる**ので、文脈を考えなくても the が付きます。楽器の the piano や年代の the 1990s も、英語の習慣で決まった形です。決まりとして覚えれば、冠詞問題で悩む時間が減ります。
 
 the＋形容詞が「〜な人々」で複数扱いになるのは、the young が「若い人たち全体」というまとまりを指すからです。形は単数に見えても意味は複数なので、The young are 〜 です。一人なら a young person。体の部位に the を使う（caught me by the arm）のは、動作の対象が人（me）で、部位はどこに触れたかを示すだけだからで、所有格は使いません。

@@ -485,6 +485,7 @@ time / way / chance / plan / promise など、内容を必要とする名詞に�
       },
       {
         heading: 'なぜ -thing だけ形容詞が後ろに回り、なぜ否定語は一つなのか',
+        mangaId: 'koko_eigo_s261_manga',
         body: `something・anything・nothing は、「some＋thing」のように**すでに語の中に修飾語（some）を持った代名詞**なので、その前に別の形容詞を置けません。だから形容詞は後ろに回って something cold となり、さらに不定詞はそのあとに来て something cold to drink の順に固定されます。日本語の「冷たい何か」の順や、cold water の順に引きずられると × cold something になります。
 
 否定語が一文に一つなのは、英語では not と nothing を重ねると**打ち消しが二重になって意味が反転する**からです。「何もすることがない」は I don't have anything to do. か I have nothing to do. のどちらかで、× I don't have nothing to do. とはしません。疑問文・否定文で anything を使い、相手に Yes を期待してすすめるときだけ疑問文でも something（Would you like something to drink?）を使います。

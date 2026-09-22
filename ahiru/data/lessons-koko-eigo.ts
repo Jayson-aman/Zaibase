@@ -429,6 +429,7 @@ She gave me a present, which I liked very much.
       },
       {
         heading: 'なぜ最上級を比較級で言いかえられ、なぜ that しか使えない先行詞があるのか',
+        mangaId: 'koko_eigo_02_comparison_manga',
         body: `■ 比較の3つの形は「何と比べるか」のちがい
 原級（as 〜 as）は同じ程度、比較級（-er than）は二つの差、最上級（the -est）は三つ以上の中で一番。「富士山が日本で一番高い」は、「日本の他のどの山も富士山ほど高くない（No other mountain is as high as）」「富士山は他のどの山よりも高い（higher than any other mountain）」と、比べ方を変えれば同じ内容を言えます。any other・no other のあとが**単数名詞**なのは、「他の一つ一つの山」と比べているからです。not as 〜 as が「〜ほど…でない」で as のあとが上になるのも、同じ程度に達していないという意味からです。
 

@@ -83,6 +83,7 @@ run — ran — run　　　　become — became — become
       },
       {
         heading: 'なぜ現在完了という形があり、なぜ has のあとに s を付けないのか',
+        mangaId: 'koko_eigo_s111_manga',
         body: `「大阪に住んで10年です」は、10年前に始まって**今も続いている**ことです。過去形（lived）は今と切れた過去の事実、現在形（lives）は今だけの事実で、どちらも「過去から今までの幅」を表せません。過去と今をつなぐためだけに用意された形が現在完了（have／has＋過去分詞）で、数直線の矢印の右端が必ず「今」に届いています。右端が今に届かない話（He lived in Osaka for ten years.＝今は住んでいない）には使えません。
 
 has は「三単現の s」が付いた形ではなく、**have の3人称単数形**です。主語に合わせて形を変える役目は has が引き受けているので、そのあとの過去分詞は lived のままで、× has lives とはなりません。現在完了で誤りが出るのは、たいてい過去分詞の欄に過去形を書いてしまうとき（× have saw→have seen）です。
@@ -2349,6 +2350,7 @@ We were invited to the party.
       },
       {
         heading: 'なぜ受動態の失敗は文法ではなく過去分詞で起きるのか',
+        mangaId: 'koko_eigo_s134_manga',
         body: `受動態の手順（目的語を主語に→be動詞→過去分詞→by）は数行で覚えられます。しかし過去分詞が出てこなければ、手順を知っていても文が書けません。不規則動詞は数が多いですが、変化のしかたは A-A-A（put・cut・read）、A-B-B（make－made－made）、A-B-C（write－wrote－written）、A-B-A（come－came－come）の**4つの型**しかありません。型でまとめると、一つの動詞から同じ型の仲間が引き出せ、負担が一気に減ります。
 
 受動態で使うのは3番目の欄だけです。A-B-C 型で過去形（broke）を入れてしまうのは、2番目で止まって3番目まで確認していないからです。-en で終わる過去分詞（written・spoken・broken・eaten・taken・given）は受動態で頻出なので、原形と過去分詞を対にして声に出します。

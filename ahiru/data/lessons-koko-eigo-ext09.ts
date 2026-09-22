@@ -352,6 +352,7 @@ who lives in Canada がひとかたまりで a friend を説明している。�
       },
       {
         heading: 'なぜ「直後を見る」だけで who・whose・whom が決まるのか',
+        mangaId: 'koko_eigo_s299_manga',
         body: `関係代名詞は、もとの文の名詞（he・his・him）の代わりです。主格 who は he の代わりなので直後に動詞が続き、所有格 whose は his の代わりなので直後に名詞が続き、目的格 whom は him の代わりなので直後に主語＋動詞が続いて動詞の目的語が欠けます。つまり**格は「もとの文でどのはたらきをしていたか」**で決まり、それがそのまま直後の形に表れます。だから「先行詞が人だから who」ではなく「直後が名詞だから whose」と判断します。
 
 whose のあとに a／the を付けないのは、whose が his と同じ所有格で、所有格と冠詞は重ねられないからです。前置詞の直後に置けるのが whom と which だけなのは、that と who が前置詞のあとに立てない語だからで、ふつうの言い方では前置詞を文末に残します（the friend I went with）。
@@ -2098,6 +2099,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
       },
       {
         heading: 'なぜ命令文のあとの or が「そうしないと」になり、なぜ if では don\'t が要るのか',
+        mangaId: 'koko_eigo_s317_manga',
         body: `or はもともと「または」です。命令文のあとに置くと、「急ぎなさい、**または**（急がなければ）バスに乗り遅れる」と、命令に従わなかった場合の結果を示すことになり、「そうしないと」の意味になります。and なら「急ぎなさい、**そうすれば**間に合う」と、従った場合の結果です。だから後半が望ましくない結果（miss・be late・fail・catch a cold）なら or、望ましい結果なら and と、後半の内容で決まります。
 
 if に書きかえるとき don't が要るのは、or が表しているのが「命令に**従わない**場合」だからです。Hurry up, or 〜＝If you don't hurry up, 〜。don't を落とすと「急げば乗り遅れる」と正反対になります。unless は「〜しない限り」でそれ自体に否定を含むので、Unless you hurry up と don't を入れません（二重否定になる）。
