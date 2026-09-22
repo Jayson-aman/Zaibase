@@ -51,6 +51,7 @@ export const kokoRikaExt08Lessons: Lesson[] = [
       },
       {
         heading: '質量はどこにあるのか',
+        mangaId: 'koko_rika_s266_shitsuryou_manga',
         body: `三つの粒子の質量はまったく同じではない。陽子と中性子はほぼ同じ重さだが、電子はけたちがいに軽い。
 
 ■ 質量のおおよその比
@@ -639,6 +640,7 @@ Ca(OH)₂ で OH のまわりにかっこがついているのは、「OH とい
       },
       {
         heading: '多原子イオンは分かれない',
+        mangaId: 'koko_rika_s273_tagenshiion_manga',
         body: `多原子イオンは、いくつかの原子が強く結びついた集団である。水にとけても、電気分解でも、中和でも、この集団はふつう分かれない。
 
 ■ 電離のようすで確かめる
@@ -2260,6 +2262,7 @@ Zn ＋ Cu²⁺ → Zn²⁺ ＋ Cu
     sections: [
       {
         heading: '一次電池と二次電池のちがい',
+        mangaId: 'koko_rika_s291_juuden_manga',
         body: `電池は、充電できるかどうかで二つに分けられる。
 
 ■ 一次電池（使い切り）
@@ -3111,6 +3114,7 @@ NaCl（塩化ナトリウム）、Na₂SO₄（硫酸ナトリウム）、NaNO�
     sections: [
       {
         heading: '中和と熱',
+        mangaId: 'koko_rika_s300_chuwanetsu_manga',
         body: `中和は必ず熱を出す反応である。この性質は実験でも問題でもよく問われる。
 
 ■ 温度変化のようす
@@ -3327,6 +3331,7 @@ NaCl（塩化ナトリウム）、Na₂SO₄（硫酸ナトリウム）、NaNO�
       },
       {
         heading: '蒸発させたときに残る固体',
+        mangaId: 'koko_rika_s302_jouhatsu_manga',
         body: `中和させた水溶液から水を蒸発させると何が残るか。ここは差がつく問題である。
 
 ■ 三つの場合（塩酸＋水酸化ナトリウム水溶液）

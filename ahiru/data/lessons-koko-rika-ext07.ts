@@ -124,6 +124,7 @@ export const kokoRikaExt07Lessons: Lesson[] = [
       },
       {
         heading: '分子をつくらない物質もある',
+        mangaId: 'koko_rika_s227_hibunshi_manga',
         body: `すべての物質が分子でできているわけではない。ここを混同すると化学式でつまずく。
 
 ■ 分子をつくる物質
@@ -2447,6 +2448,7 @@ Na₂CO₃ ＋ CaCl₂ → CaCO₃ ＋ 2NaCl
     sections: [
       {
         heading: '密閉と開放で比べる実験',
+        mangaId: 'koko_rika_s254_mippei_manga',
         figureId: 'lf_kokorikaext07_254',
         body: `■ 実験
 ①密閉できるプラスチック容器に、うすい塩酸を入れた小さな容器と、炭酸水素ナトリウムを入れる。
@@ -3381,6 +3383,7 @@ Fe ＋ S → FeS
       },
       {
         heading: 'エネルギーの出入りで考える',
+        mangaId: 'koko_rika_s264_energy_manga',
         body: `■ 化学エネルギー
 物質はそれぞれ固有のエネルギー（化学エネルギー）をもっている。
 ・反応後の物質のエネルギーが小さい → 余った分が熱として出る（発熱反応）
