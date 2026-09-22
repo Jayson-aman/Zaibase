@@ -769,6 +769,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
       },
       {
         heading: '廃藩置県で何が変わったか',
+        mangaId: 'koko_shakai_s276_haihanchiken_manga',
         body: `■ 政治の面
 全国の土地と人民を政府が直接支配することになり、中央から派遣された官僚が地方を治める中央集権国家が成立した。地方の役人は選挙で選ばれるのではなく政府が任命したので、この段階では住民の意思が地方政治に反映されるしくみはない。
 

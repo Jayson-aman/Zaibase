@@ -124,6 +124,7 @@ export const kokoShakaiExt03Lessons: Lesson[] = [
       },
       {
         heading: '北海道が米どころになった理由と銘柄米',
+        mangaId: 'koko_shakai_s077_hokkaido_manga',
         body: `北海道はもともと稲作に向かない土地だった。冬は厳しく、夏も冷涼で、泥炭地（腐らずに積もった植物からなる湿った土地）が広がっていたからである。それでも今では収穫量全国2位（2023年産）を占める。
 
 ■ 三つの工夫
@@ -529,6 +530,7 @@ export const kokoShakaiExt03Lessons: Lesson[] = [
       },
       {
         heading: '促成栽培と抑制栽培を並べて確認する',
+        mangaId: 'koko_shakai_s082_manga',
         body: `入試でもっとも取りちがえが多いのがこの二つである。表の形で覚え直す。
 
 ■ 促成栽培

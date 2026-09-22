@@ -1058,6 +1058,7 @@ export const kokoShakaiExt09Lessons: Lesson[] = [
       },
       {
         heading: '大日本帝国憲法との比較',
+        mangaId: 'koko_shakai_s320_manga',
         body: `1889年2月11日に発布され翌1890年に施行された大日本帝国憲法と比べると、変化がはっきりわかる。
 
 ■ 対比表

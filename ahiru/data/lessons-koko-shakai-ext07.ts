@@ -597,6 +597,7 @@ export const kokoShakaiExt07Lessons: Lesson[] = [
       },
       {
         heading: '検地が変えたもの',
+        mangaId: 'koko_shakai_s233_manga',
         body: `太閤検地の意義は、単なる土地調査にとどまらない。
 
 ■ 荘園制の終わり

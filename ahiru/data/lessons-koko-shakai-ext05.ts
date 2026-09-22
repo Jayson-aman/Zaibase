@@ -1574,6 +1574,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
       },
       {
         heading: '制度の行きづまり',
+        mangaId: 'koko_shakai_s171_manga',
         body: `よくできた制度に見えるが、班田収授は8世紀のうちに立ちゆかなくなる。
 
 ■ ①人口の増加
