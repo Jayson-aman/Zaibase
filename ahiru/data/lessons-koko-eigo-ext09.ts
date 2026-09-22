@@ -1262,6 +1262,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: 'なぜ主格は省略できないのか',
+        mangaId: 'koko_eigo_s309_manga',
         figureId: 'lf_kokoeigoext09_309',
         body: `主格の関係代名詞を省略すると、文の形が壊れる。
 
@@ -2713,6 +2714,7 @@ if に書きかえるとき don't が要るのは、or が表しているのが�
       },
       {
         heading: 'なぜ that は文をまるごと名詞にでき、なぜ中は平叙文の語順なのか',
+        mangaId: 'koko_eigo_s323_manga',
         body: `接続詞の that は、He is right. という一つの文の前について、その文全体を「彼が正しい**ということ**」という名詞のかたまりに変えます。だから think・know・say の目的語になれ、be sure that・be glad that のように形容詞のあとにも続きます。この that の後ろが**完全な文**（主語も目的語も欠けていない）なのは、もとが独立した文だからで、関係代名詞の that（後ろに欠けがある）との決定的なちがいです。
 
 that 節の中が平叙文の語順なのは、that 節が「たずねる」文ではなく「〜ということ」という**内容を述べる**かたまりだからです。全体を疑問文にするときは主節だけを Do you think 〜? とし、that 節の中はそのままです。疑問詞が付くときは What do you think he will say? と疑問詞を文頭に出し、that は使いません。
@@ -3925,6 +3927,7 @@ that 節の中が平叙文の語順なのは、that 節が「たずねる」文�
       },
       {
         heading: 'なぜ「直前と直後」だけで that と who の働きが分かるのか',
+        mangaId: 'koko_eigo_s335_manga',
         body: `that も who も、働きがちがえば**つながっている相手がちがいます**。関係代名詞は名詞（先行詞）につくので直前に名詞があり、接続詞・疑問詞は動詞や形容詞のあとに来るので直前に名詞がありません。さらに関係代名詞は名詞の代わりをするので直後の文に欠けがあり、接続詞のあとは完全な文、疑問詞のあとは疑問詞＋主語＋動詞の間接疑問です。だから直前（名詞があるか）と直後（欠けがあるか）の二か所を見れば、すべて判別できます。
 
 Do you know the boy who broke the window? と Do you know who broke the window? の意味がちがうのは、前者の who が the boy を説明する関係代名詞で know の目的語が the boy 全体、後者の who が疑問詞で who broke the window というかたまり全体が know の目的語だからです。先行詞になれるのは名詞だけなので、動詞や前置詞のあとの who は疑問詞です。
