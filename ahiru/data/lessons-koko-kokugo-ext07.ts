@@ -1606,6 +1606,7 @@ export const kokoKokugoExt07Lessons: Lesson[] = [
       },
       {
         heading: '効果の説明と、数えるときの落とし穴',
+        mangaId: 'koko_kokugo_s248_onsuu_manga',
         body: `■ 効果を答える型
 〔第何句が〕〔何音で定型より多い（少ない）〕＋〔その句の内容〕＋〔生まれる効果〕
 例）「初句が六音の字余りとなっており、『その子二十』という若さへの感嘆が定型に収まりきらず、あふれるような勢いを生んでいる。」

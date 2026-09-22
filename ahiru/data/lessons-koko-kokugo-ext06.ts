@@ -1168,6 +1168,7 @@ export const kokoKokugoExt06Lessons: Lesson[] = [
       },
       {
         heading: '主体を取りちがえないための技術',
+        mangaId: 'koko_kokugo_s207_shutai_manga',
         body: `文学的文章で最も痛い失点は、心情の主体を取りちがえることである。誰の気持ちかを誤ると、その設問は全滅する。
 
 ■ 主語が省かれる日本語の落とし穴

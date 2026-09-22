@@ -395,6 +395,7 @@ export const kokoKokugoExt02Lessons: Lesson[] = [
       },
       {
         heading: '並立の関係と補助の関係の見分け方',
+        mangaId: 'koko_kokugo_s045_heiritsu_hojo_manga',
         body: `文節どうしの関係には、①主語・述語の関係、②修飾・被修飾の関係、③接続の関係、④独立の関係、⑤並立の関係、⑥補助の関係の六つがある。入試でよく問われるのは⑤と⑥である。
 
 ■ 並立の関係
@@ -2736,6 +2737,7 @@ Q7 前後をつなぐか
       },
       {
         heading: '同じ形で種類が変わる助詞',
+        mangaId: 'koko_kokugo_s070_onaji_katachi_manga',
         body: `同じ字なのに、文中の位置によって種類が変わる助詞がある。入試の識別問題はほぼここから出る。
 
 ■ 「が」

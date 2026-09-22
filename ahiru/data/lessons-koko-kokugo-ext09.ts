@@ -634,6 +634,7 @@ export const kokoKokugoExt09Lessons: Lesson[] = [
       },
       {
         heading: 'レ点の落とし穴',
+        mangaId: 'koko_kokugo_s312_reten_manga',
         body: `■ ①付ける位置を逆にしてしまう
 レ点は「返る先」に付ける。下の字に付けるのではない。
 例）「書を読む」を訓読文にすると讀レ書。書レ讀ではない。

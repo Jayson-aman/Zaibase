@@ -2571,6 +2571,7 @@ export const kokoKokugoExt01Lessons: Lesson[] = [
       },
       {
         heading: '意味の取りちがえと、似た形の混同',
+        mangaId: 'koko_kokugo_s025_torichigae_manga',
         body: `誤用のもう一つの原因は、似た形の語との混同である。
 
 ■ 似た形で意味が違う語

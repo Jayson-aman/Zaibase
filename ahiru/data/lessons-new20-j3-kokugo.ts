@@ -729,6 +729,7 @@ export const lessonsNew20J3Kokugo: Lesson[] = [
       {
         heading: '2. 身内敬語の誤りを見抜く——会社・家族の場面で確認する',
         level: 'oyo',
+        mangaId: 'new20_j3_kokugo_12_miuchikeigo_manga',
         body: `次に、身内敬語の誤りについて確認しましょう。
 
 「取引先の方から会社に電話がかかってきたとき、新人社員が『申し訳ございません、田中部長はただいま外出されています』と答えた。これは実は誤った敬語の使い方である。」
