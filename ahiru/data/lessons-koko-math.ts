@@ -990,6 +990,7 @@ d = √(9 + 16 + 25) = √50 = 5√2
     sections: [
       {
         heading: '1. 場合の数（樹形図・積の法則・和の法則）',
+        mangaId: 'koko_math_05_probability_manga',
         level: 'kiso',
         body: `場合の数は「もれなく・重複なく」数えることが原則。
 
@@ -2586,6 +2587,7 @@ x + y = 5、xy = 3 のとき、x² + y² と (x − y)² の値を求めよ。
       },
       {
         heading: '4. 円とおうぎ形の複合図形・面積',
+        mangaId: 'koko_math_11_plane_measure_manga',
         level: 'oyo',
         figureId: 'lf_kmath_33',
         body: `複雑な図形の面積は「足す・引く・移動する」の 3 つの発想で攻略する。
@@ -2848,6 +2850,7 @@ x + y = 5、xy = 3 のとき、x² + y² と (x − y)² の値を求めよ。
       },
       {
         heading: '6. 動点と面積の変化（tの式で表す）',
+        mangaId: 'koko_math_12_quad_figure_manga',
         level: 'moshi',
         figureId: 'lf_kmath_37',
         body: `点が動く融合問題では、動く点の座標を時間 t（またはパラメータ）で表し、面積を t の式にする。
@@ -3106,6 +3109,7 @@ Cを通りADに平行な直線を引き、BAの延長との交点をEとする�
       },
       {
         heading: '6. 相似と三平方の定理の複合問題',
+        mangaId: 'koko_math_13_similar_coord_manga',
         level: 'nyushi',
         figureId: 'lf_kmath_77',
         body: `相似と三平方の定理を組み合わせる問題は難関校の頻出テーマ。手順を体系化する。
@@ -4382,6 +4386,7 @@ n人を円形（回転して同じものは同じとみなす）に並べる場�
       },
       {
         heading: '4. 仕事算と比例反比例',
+        mangaId: 'koko_math_19_proportion_application_manga',
         level: 'oyo',
         body: `仕事算は「全体の仕事量を1」とおき、1人・1日あたりの仕事量を比例反比例の考え方で処理する。
 
@@ -4540,6 +4545,7 @@ n人を円形（回転して同じものは同じとみなす）に並べる場�
       },
       {
         heading: '2. 2人の位置グラフ（出会う・追いつく）',
+        mangaId: 'koko_math_20_graph_reading_manga',
         level: 'oyo',
         figureId: 'lf_kmath_59',
         body: `2人（2つの物体）の動きを1つのグラフに重ねると、出会う・追いつく状況が視覚的にわかる。
@@ -5087,6 +5093,7 @@ DE∥BCのとき、△ADE∽△ABCを証明する。
       },
       {
         heading: '5. 方程式・不等式×文章題の総合融合',
+        mangaId: 'koko_math_22_nyushi_fusion_manga',
         level: 'moshi',
         body: `複数の条件が絡み合う文章題では、連立方程式・不等式を柔軟に組み合わせて解く。
 
