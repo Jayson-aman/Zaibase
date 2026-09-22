@@ -116,6 +116,7 @@ export const kokoShakaiExt10Lessons: Lesson[] = [
     sections: [
       {
         heading: 'グラフから高齢化の速さを読む',
+        mangaId: 'koko_shakai_s337_graph_manga',
         body: `高齢化率の推移をグラフにすると、1970年代以降に急な上り坂になっていることがわかる。
 
 ■ おおよその数値
@@ -615,6 +616,7 @@ SNSでの誹謗中傷は名誉毀損にあたることがあり、拡散した�
     sections: [
       {
         heading: '人の支配と法の支配',
+        mangaId: 'koko_shakai_s343_hounoshihai_manga',
         body: `政治のあり方は、大きく二つに分けて考えられる。
 
 ■ 人の支配
