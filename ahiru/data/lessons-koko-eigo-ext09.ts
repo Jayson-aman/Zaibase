@@ -2557,6 +2557,7 @@ if に書きかえるとき don't が要るのは、or が表しているのが�
     sections: [
       {
         heading: 'though・although と but の使い分け',
+        mangaId: 'koko_eigo_s322_manga',
         body: `逆接には二つの型がある。
 
 ■ 従属接続詞 though / although

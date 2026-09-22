@@ -533,6 +533,7 @@ if onlyはI wishよりも感情の強い「〜さえすればなあ」という�
       },
       {
         heading: 'なぜ過去の後悔は had＋過去分詞で、なぜ would have は使わないのか',
+        mangaId: 'new20_j3_eigo_07_manga',
         body: `I wish＋過去形は「今」の現実に反する願望でした。「あの時」の現実に反する後悔を言うには、そこからさらに**もう一段階過去にずらす**必要があり、過去形の一つ前の形が had＋過去分詞（過去完了）です。I wish I had studied harder. は「あの時勉強しなかった」という過去の事実に反しています。had＋過去分詞を見たら、過去への後悔だと即座に判断します。
 
 I wish のあとに would have を使わないのは、would have＋過去分詞が**仮定法過去完了の「主節」**（If I had studied, I would have passed.）の形だからです。I wish のあとに来るのは、if 節にあたる「事実に反する内容」なので、if 節の形（had＋過去分詞）を使います。if only は I wish より感情の強い言い方で、同じ規則です。
@@ -617,6 +618,7 @@ I wish のあとに would have を使わないのは、would have＋過去分詞
       },
       {
         heading: 'なぜ as if のあとは仮定法で、なぜ過去形と had＋過去分詞を分けるのか',
+        mangaId: 'new20_j3_eigo_08_manga',
         body: `as if（as though）は「まるで〜であるかのように」で、**実際にはそうではない**様子を比べる言い方です。現実に反する内容なので、if 節や I wish と同じく時制を一つ過去にずらします。主節と**同じ時点**の様子なら過去形（He talks as if he knew everything.）、主節より**前の時点**の出来事なら had＋過去分詞（She looked as if she had seen a ghost.）。ずらす段数が「同時か、それより前か」を表します。
 
 look・sound・feel・talk・act のような「様子・印象」の動詞のあとによく使われるのは、見た目と現実のずれを言う表現だからです。話し手が「実際にそうかもしれない」と思っているときは現在形を使うこともありますが、入試では仮定法の形が問われます。

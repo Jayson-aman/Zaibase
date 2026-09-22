@@ -1763,6 +1763,7 @@ Playing the piano is not easy. のように動名詞が主語のときも、It �
     sections: [
       {
         heading: 'too と very の違い',
+        mangaId: 'koko_eigo_s276_manga',
         figureId: 'lf_kokoeigoext08_276',
         body: `very は単に程度が大きいことを表すが、too は「必要な程度・許される程度を越えている」という否定的な評価を含む。
 

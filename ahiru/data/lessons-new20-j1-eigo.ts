@@ -652,6 +652,7 @@ It doesn't matter which.（どちらでもかまいません）
       },
       {
         heading: 'whose と who\'s の区別',
+        mangaId: 'new20_j1_eigo_08_manga',
         body: `whose と who's（who is または who has の短縮形）はまったく同じ発音（フーズ）をするが、意味も文法上の働きもまったく別の語である。書くときに混同すると誤りになる。
 
 ■ whose：疑問詞「だれの」。あとに名詞（または省略）が続く

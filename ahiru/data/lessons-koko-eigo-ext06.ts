@@ -3093,6 +3093,7 @@ no / none ＝ 全体否定「一人も〜ない」
     sections: [
       {
         heading: 'both・either・neither の使い分け',
+        mangaId: 'koko_eigo_s211_manga',
         body: `■ both（二つとも）
 複数扱い。both + 複数名詞、both of + 限定語 + 複数名詞。
 例）Both books are interesting.（両方の本ともおもしろい）

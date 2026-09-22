@@ -3497,6 +3497,7 @@ know / tell / ask / wonder / find out / remember / be sure / be afraid
       },
       {
         heading: 'until と by の使い分け',
+        mangaId: 'koko_eigo_s108_manga',
         body: `日本語ではどちらも「〜まで」と訳せるが、英語では意味がはっきり違う。
 
 ■ until（till）＝「〜までずっと」

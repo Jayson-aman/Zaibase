@@ -3361,6 +3361,7 @@ B: (　　)
     sections: [
       {
         heading: '1. used to / be used to の使い分け（最頻出の混同ポイント）',
+        mangaId: 'koko_eigo_17_eiken_expressions_manga',
         level: 'kiso',
         body: `■ used to ＋ 動詞の原形（以前は〜だった・〜したものだ）
 過去の習慣・状態で「今はもう違う」ことを表す。
@@ -4265,6 +4266,7 @@ This letter (　　) be sent to him by tomorrow.
     sections: [
       {
         heading: '1. 紛らわしい自動詞・他動詞',
+        mangaId: 'koko_eigo_22_verb_patterns_manga',
         level: 'oyo',
         body: `■ rise（自動詞）と raise（他動詞）
   rise（自動詞：上がる、上昇する）：目的語をとらない
