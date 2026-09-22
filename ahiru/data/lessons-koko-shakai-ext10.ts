@@ -137,6 +137,7 @@ export const kokoShakaiExt10Lessons: Lesson[] = [
       },
       {
         heading: '社会保障を支える人が減る',
+        mangaId: 'koko_shakai_s337_manga',
         body: `高齢化と少子化が同時に進むことを少子高齢化という。この二つが重なると、社会保障の財政に大きな影響が出る。
 
 ■ 支える人数のたとえ
@@ -1261,6 +1262,7 @@ SNSでの誹謗中傷は名誉毀損にあたることがあり、拡散した�
       },
       {
         heading: '平和主義が定められた背景',
+        mangaId: 'koko_shakai_s350_manga',
         body: `なぜ憲法にこれほど強い言葉が置かれたのかを、歴史とあわせて理解しておく。
 
 ■ 戦争の惨禍
@@ -2199,6 +2201,7 @@ SNSでの誹謗中傷は名誉毀損にあたることがあり、拡散した�
     sections: [
       {
         heading: '権利としての教育',
+        mangaId: 'koko_shakai_s361_manga',
         body: `教育を受ける権利は、社会権の一つである。
 
 ■ 第26条
@@ -2645,6 +2648,7 @@ SNSでの誹謗中傷は名誉毀損にあたることがあり、拡散した�
     sections: [
       {
         heading: '知る権利とは',
+        mangaId: 'koko_shakai_s366_manga',
         body: `知る権利とは、国や地方公共団体がもっている情報の公開を求める権利をいう。
 
 ■ 根拠
