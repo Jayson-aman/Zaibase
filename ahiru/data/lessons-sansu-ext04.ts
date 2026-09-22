@@ -3024,6 +3024,7 @@ OA（△OAB の辺）＞ OC（△OCD の辺）。5:2 で OA が長い ✓。2:5 
     sections: [
       {
         heading: '砂時計型相似の条件（AB//CDが必須）',
+        mangaId: 'sansu_s158_manga',
         figureId: 'lf_sansu_ext04_158',
         body: `2本の線分が交わってできる「砂時計型」の相似は、ピラミッド型と並んで入試でよく使われる形です。ただし、相似になるためには必ず条件があります。
 
