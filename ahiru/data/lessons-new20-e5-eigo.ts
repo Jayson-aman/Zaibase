@@ -1029,6 +1029,7 @@ tooやalsoが出てきたときは、直前に述べられた人物と同じ動�
       },
       {
         heading: 'なぜ人数・順位・割合の三つの言い方を分けて覚えるのか',
+        mangaId: 'new20_e5_eigo_16_manga',
         body: `アンケートの結果は、**人数**（Ten students like math the best.）、**順位**（Soccer is the most popular.／The second most popular is science.）、**割合**（Half of the students 〜／Most students 〜／A few students 〜）の三つの言い方で発表されます。設問もこの三つの角度（一番多い項目・一番少ない項目・2位の項目・全体の何割か）から作られるので、三つの言い方を分けて覚えておくと、どの表現がどの設問に対応するかがすぐ分かります。
 
 the most popular と the second most popular を取りちがえやすいのは、どちらも most を含むからです。second が付けば「2番目」です。グラフや表とセットで出るときは、文の数字（人数）と項目（教科名）を一つずつ対応させながら読みます。

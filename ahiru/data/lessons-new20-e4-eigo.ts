@@ -234,6 +234,7 @@ B: I like pink the best.（一番ピンクが好きです）
       },
       {
         heading: 'なぜ色は名詞の前に置き、a は色の前に置くのか',
+        mangaId: 'new20_e4_eigo_03_manga',
         body: `英語では、名詞を説明する語（形容詞）は**名詞の前**に置きます。「赤いりんご」は a red apple で、日本語の「赤い→りんご」と同じ順です。ただし a（一つの）は「どのりんごか」を決める語なので、説明の語よりさらに前の**列の先頭**に置きます。red a apple のように a を途中に入れると、a が何を指すのか分からなくなります。
 
 色をたずねる文が What color is it? と What color で始まるのは、「何色か」という知りたいことを先頭に置く英語のきまりだからです。答えは It's red. のように、聞かれた中身（色）を答えます。orange が色にも果物にも使われるのは、果物のオレンジの色をそのまま色の名前にしたからで、文脈で意味が決まります。
@@ -325,6 +326,7 @@ The moon looks like a circle.（月は丸に見える）
       },
       {
         heading: 'なぜ square と rectangle を分け、なぜ circle と round を分けるのか',
+        mangaId: 'new20_e4_eigo_04_manga',
         body: `日本語では「四角」でまとめてしまう形も、英語では**辺の長さが全部同じ**なら square（正方形）、**たてとよこがちがう**なら rectangle（長方形）と、別の語で呼びます。算数で正方形と長方形を分けるのと同じ考え方です。triangle の tri は「3」（tricycle＝三輪車の tri）で「3つの角」、rectangle の rect は「まっすぐ」で「角がまっすぐな四角形」と、語のつくりから覚えると忘れにくくなります。
 
 circle と round を分けるのは、**品詞がちがう**からです。circle は「円そのもの」を指す名詞（Draw a circle.）、round は「丸い」という様子を表す形容詞（The plate is round.）。日本語ではどちらも「丸」で済みますが、英語では「円を描く」と「丸い」を別の語で言います。
@@ -642,6 +644,7 @@ This is my dog. His name is Pochi.（これは私の犬です。名前はポチ�
       },
       {
         heading: 'なぜ This is my 〜. で紹介でき、なぜ his と her を分けるのか',
+        mangaId: 'new20_e4_eigo_08_manga',
         body: `This は「近くにあるもの・今見せているもの」を指す語です。写真や絵を指さしながら This is my father. と言えば、「今指しているこの人が私の父です」と自然に伝わります。家族以外にも This is my dog.／This is my friend Ken. と使えるので、使い道の広い形です。
 
 his（彼の）と her（彼女の）を分けるのは、英語では**その人が男性か女性か**で「〜の」の形が変わるからです。日本語の「名前は」には性別の区別がありませんが、英語では His name is Ken.／Her name is Yuki. と必ず選びます。家族の人数を There are four people in my family. と言うのは、family が「まとまり」であって人数ではなく、人数を言うなら people を数えるからです。
@@ -805,6 +808,7 @@ I like weekends.（週末が好きです）
       },
       {
         heading: 'なぜ曜日は大文字で、なぜ on を使うのか',
+        mangaId: 'new20_e4_eigo_10_manga',
         body: `英語の曜日は、Sunday（太陽の日）・Monday（月の日）のように**神や天体の名前から作られた固有名詞**です。固有名詞は文のとちゅうでも大文字で始めるきまりなので、I like monday. は誤りで I like Monday. と書きます。Wednesday のつづりに読まない d が残っているのも、昔の名前（ウォーデンの日）の形がそのまま残っているからで、Wed-nes-day と三つに分けて覚えます。
 
 曜日に on を使うのは、曜日が「一日」という**面**だからです。時こく（点）は at、月（幅）は in で、曜日と日付は on と整理します。「毎週日曜日に」を on Sundays と複数形にするのは、日曜日が何度もくり返されるからです。
@@ -900,6 +904,7 @@ winter（冬）：December, January, February
       },
       {
         heading: 'なぜ月には in を使い、なぜ日付は序数で読むのか',
+        mangaId: 'new20_e4_eigo_11_manga',
         body: `月は約30日という**幅のある期間**なので、「その中に」という in を使います（in April）。曜日や日付は一日という面なので on、時こくは点なので at。この三つは「幅→面→点」で整理します。月の名前も曜日と同じく固有名詞なので、文のとちゅうでも大文字で始めます。February の r が発音で抜けやすいのは、つづりが昔の形のまま残っているからで、Febr- と r があることを覚えておきます。
 
 日付を序数（5th＝fifth）で読むのは、日付が「その月の**5番目の日**」という順番を表すからです。April 5 と書いても、読むときは April fifth と順番で読みます。英語の季節の区切りが日本と少しちがう（春＝3・4・5月）のは、英語圏の一般的な区切り方で、そのまま覚えます。
@@ -1126,6 +1131,7 @@ Nice to meet you.（はじめまして）は自己紹介の最後にそえる決
       },
       {
         heading: 'なぜ二つの言い方があり、なぜ from と live in を分けるのか',
+        mangaId: 'new20_e4_eigo_14_manga',
         body: `I'm 〜. は「私は〜です」と自分をそのまま言う形、My name is 〜. は「私の名前は〜です」と名前を主語にした形です。どちらも自己紹介で使えますが、My name is 〜. のほうがややていねいで、初めて会う人向きです。二つを混ぜて My name is I'm Yuki. とすると、主語が二つになって文がこわれます。どちらか一つの形にそろえます。
 
 I'm from 〜（出身）と I live in 〜（住んでいる所）を分けるのは、**生まれ育った場所と今住んでいる場所がちがう**ことがあるからです。from は「〜から来た」という出発点、live in は「〜の中に住んでいる」という今の場所。Where are you from? には I'm from Kyoto.、Do you live in Kyoto now? には Yes, I do. と、聞かれた形で答えます。
