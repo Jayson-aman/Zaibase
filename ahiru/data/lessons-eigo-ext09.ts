@@ -612,6 +612,7 @@ time to go（行く時間）／something to say（言うべきこと）／a plac
     sections: [
       {
         heading: 'なぜ最後に前置詞が残るのか',
+        mangaId: 'eigo_s303_manga',
         body: `「いっしょに遊ぶ友だち」を英語にするとき、a friend to play では足りない。play with a friend（友だちといっしょに遊ぶ）というもとの言い方に with が必要だからである。
 
 例）I want a friend to play with.（いっしょに遊ぶ友だちがほしい）
@@ -2694,6 +2695,7 @@ used は過去形とも過去分詞とも同じ形だが、あとに was／is �
     sections: [
       {
         heading: 'する側か、される側か',
+        mangaId: 'eigo_s327_manga',
         body: `現在分詞と過去分詞のどちらを使うかは、説明される名詞と動作の関係で決まる。
 
 ■ 名詞が動作をする側 → 現在分詞

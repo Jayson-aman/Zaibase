@@ -2294,6 +2294,7 @@ If it rains tomorrow, I will stay home.
       },
       {
         heading: 'なぜ if・when のあとは will を使わないのか、なぜ進行形が予定を表すのか',
+        mangaId: 'eigo_s141_manga',
         body: `If it rains tomorrow, I will stay home. で if のあとに will を使わないのは、if のまとまりが「雨が降る」という**条件をただ置いているだけ**で、未来を予測しているわけではないからです。予測や意志を表す will は文の中心（I will stay home）に一度あれば足り、条件の側にまで付けると意味が重なります。when・before・after・until・as soon as も同じで、時や条件のまとまりの中では現在形にします。理屈は複雑なので、「if・when のあとは will を使わない」と一言で覚えて、必ず出るひっかけとして対処します。
 
 現在進行形が予定を表せるのは、約束や予約がすんで**すでに動き出している**予定だからです。I'm meeting Ken at three tomorrow. は、今もその約束が進行中というとらえ方です。時刻表や行事のように個人では動かせない予定は現在形（The train leaves at 6:30.）で、動かせない順に 現在形→進行形→be going to→will と並びます。

@@ -900,6 +900,7 @@ I didn't have to work last Sunday.（先週の日曜は働かなくてよかっ�
       },
       {
         heading: 'なぜ must と have to は否定になると意味が正反対になるのか',
+        mangaId: 'eigo_s166_manga',
         body: `肯定文の must と have to はどちらも「しなければならない」ですが、**not が打ち消す相手がちがいます**。must not の not は、うしろの動作（go・eat）を打ち消して「行くな・食べるな」という禁止になります。don't have to の not は、have to（しなければならないという義務）を打ち消して「その義務はない」＝「しなくてよい」になります。同じ「〜ない」で終わる日本語に見えても、英語では打ち消す相手がちがうので、意味が正反対になります。
 
 Must I go? の No が No, you don't have to. になるのも同じ理由です。「行かなければなりませんか」に「いいえ」と答えるのは「その義務はない」という意味なので、義務を打ち消す don't have to を使います。No, you mustn't. は「行ってはいけない」という別の答えになります。

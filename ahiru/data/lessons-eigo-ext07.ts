@@ -2101,6 +2101,7 @@ better・the best は目的語のあとに置く。
       },
       {
         heading: 'なぜ good の比較級は gooder ではないのか',
+        mangaId: 'eigo_s246_manga',
         body: `good・bad・well のように、**もっともよく使う語ほど不規則な形**をしています。よく使う語は昔の形がそのまま残りやすく、規則で作った gooder・badder に置きかわらなかったからです。better・best はもともと別の語で、good の比較級・最上級として使われるようになりました。だから音ごと覚えるしかなく、more good・more better のように more を付けると、比較級を二重にしたことになって誤りです。
 
 形容詞の good と副詞の well が同じ better・best になるので、文の中でどちらの意味かは**何を修飾しているか**で決めます。This book is better（本がよい→形容詞）、He swims better（泳ぎ方が上手→副詞）。like A better than B は「B より A が好き」で、better は目的語（A）のあとに置きます。
@@ -2533,6 +2534,7 @@ Ken is not as tall as Tom.（トムのほうが上）
       },
       {
         heading: 'なぜ not as 〜 as は「as のあとが上」で、なぜ書きかえで主語が入れかわるのか',
+        mangaId: 'eigo_s250_manga',
         body: `as tall as は「ケンと同じ高さに達している」という意味です。それに not を付けると「**その高さに達していない**」＝「ケンほど高くない」になります。「同じくらい高くない（二人とも低い）」ではなく、「ケンの高さにおよばない」なので、as のあとの人（ケン）のほうが上です。not as 〜 as を見たら「as のあとが上」と反射的に判断します。
 
 比較級に書きかえるとき主語が入れかわるのは、比較級の文（B is taller than A.）が**上のほうを主語にして言う形**だからです。not as 〜 as では下のほう（Tom）が主語、上のほう（Ken）が as のあと。同じ関係を比較級で言うと、上の Ken を主語にして Ken is taller than Tom. になります。主語をそのままにして Tom is taller than Ken. とすると、上下が逆転して意味が反対になります。

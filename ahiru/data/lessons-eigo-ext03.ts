@@ -3098,6 +3098,7 @@ family（1家族） → two families（2家族）
       },
       {
         heading: 'なぜ family は単数で、people は複数なのか',
+        mangaId: 'eigo_s113_manga',
         body: `family・team・class は、何人かの人を**ひとまとまりとして見た名前**です。まとまりが一つなら単数なので My family is large. と is を使い、まとまりが二つ以上（ten families）ならふつうに複数形にします。「私の家族は5人です」を My family is five. と言えないのは、family は「まとまり」であって「人数」ではないからで、人数を言うなら There are five people in my family. と人（people）を数えます。
 
 people は形に -s がありませんが、**person の複数にあたる語**で、それ自体が「人々」という複数の意味を持っています。だから動詞は are / were で、-s を付けると「諸民族」という別の語になります。police も「警察官たち」を表す語で複数あつかいです。警察官一人は a police officer と言います。形に -s があるかどうかではなく、その語が何を表しているかで単複が決まります。
