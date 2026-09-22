@@ -872,6 +872,7 @@ C ＋ O₂ → CO₂
     sections: [
       {
         heading: '検算の実演',
+        mangaId: 'koko_rika_s236_manga',
         figureId: 'lf_kokorikaext07_236',
         body: `■ 例1：2Ag₂O → 4Ag ＋ O₂
 　元素｜左辺｜右辺
@@ -2629,6 +2630,7 @@ NaHCO₃ ＋ HCl → NaCl ＋ H₂O ＋ CO₂
     sections: [
       {
         heading: '基本の計算',
+        mangaId: 'koko_rika_s256_manga',
         body: `■ 例題1
 容器（50.0g）に石灰石2.0gとうすい塩酸20.0gを入れ、ふたをして反応させた。反応が終わってからふたを開け、しばらくして質量をはかると71.6gだった。発生した二酸化炭素は何gか。
 
@@ -2720,6 +2722,7 @@ NaHCO₃ ＋ HCl → NaCl ＋ H₂O ＋ CO₂
     sections: [
       {
         heading: '実験データを読む',
+        mangaId: 'koko_rika_s257_manga',
         figureId: 'lf_kokorikaext07_257',
         body: `■ 実験結果
 銅の粉末の質量を変えて、質量が変化しなくなるまで加熱した。
@@ -2811,6 +2814,7 @@ NaHCO₃ ＋ HCl → NaCl ＋ H₂O ＋ CO₂
     sections: [
       {
         heading: '実験データと比',
+        mangaId: 'koko_rika_s258_manga',
         figureId: 'lf_kokorikaext07_258',
         body: `■ 実験結果
 マグネシウムの粉末の質量を変えて、質量が変化しなくなるまで加熱した。
