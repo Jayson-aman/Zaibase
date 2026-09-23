@@ -1337,6 +1337,7 @@ how to do のうしろには目的語 it が必要である。do の目的語が
       },
       {
         heading: '間接疑問文の語順に注意',
+        mangaId: 'koko_eigo_s271_manga',
         body: `書きかえで最も多い誤りが、疑問文の語順のまま書いてしまうことである。
 
 ■ 正しい語順
@@ -2242,6 +2243,7 @@ say はこの形をとらない。
       },
       {
         heading: '否定の形と、その他の動詞',
+        mangaId: 'koko_eigo_s281_manga',
         body: `■ not は to の前
 例）The teacher told us not to run in the hallway.（先生は廊下を走らないように言った）
 例）My mother told me not to eat too much.（母は食べすぎないように言った）
@@ -2934,6 +2936,7 @@ like／love／begin／start／continue
     sections: [
       {
         heading: '七つの動詞と例文',
+        mangaId: 'koko_eigo_s289_manga',
         body: `不定詞だけを目的語にとる動詞は、いずれも「これから実現すること」を続けている。
 
 ■ want to 〜（〜したい）

@@ -620,6 +620,7 @@ hard に -ly を付けた hardly は「ほとんど〜ない」という**別の
     sections: [
       {
         heading: 'good / well の変化と使い分け',
+        mangaId: 'koko_eigo_s227_manga',
         body: `good と well はもとの形が違うのに、比較級・最上級はどちらも better － best になる。
 
 good（形容詞）：よい、じょうずな
@@ -2467,6 +2468,7 @@ half of ~：Half of the students were absent.
     sections: [
       {
         heading: '訳し方と使いどころ',
+        mangaId: 'koko_eigo_s246_manga',
         body: `one of the ＋ 最上級 ＋ 複数名詞 は、直訳すると「最も〜な…のうちの一つ」だが、日本語としてはやや硬い。文脈に応じて次のように訳し分けるとよい。
 
 例）Kyoto is one of the most popular cities in Japan.

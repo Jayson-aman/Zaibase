@@ -1069,6 +1069,7 @@ I have cleaned this room three times.（経験）→ この部屋を3回そう�
       {
         heading: 'never と ever の位置と意味',
         figureId: 'lf_kokoeigoext04_122',
+        mangaId: 'koko_eigo_s122_manga',
         body: `経験用法の否定と疑問は、never と ever が担当する。
 
 ■ never（一度も〜ない）
@@ -2409,6 +2410,7 @@ We were invited to the party.
     sections: [
       {
         heading: 'by を書く場合・書かない場合',
+        mangaId: 'koko_eigo_s135_manga',
         body: `受動態の by 〜 は「だれによって」を示すが、いつも必要なわけではない。
 
 ■ by を書く場合

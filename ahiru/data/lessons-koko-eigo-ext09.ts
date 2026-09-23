@@ -32,6 +32,7 @@ export const kokoEigoExt09Lessons: Lesson[] = [
       {
         heading: '2文を1文にする三つの手順',
         figureId: 'lf_kokoeigoext09_296',
+        mangaId: 'koko_eigo_s296_manga',
         body: `関係代名詞は、同じものを指す語を共有している2つの文を、1つの文にまとめるための語である。
 
 例）I know the girl.（私はその女の子を知っている）

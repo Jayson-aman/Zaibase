@@ -1066,6 +1066,7 @@ need not のうしろは原形（needn't worry）、don't need to のうしろ�
       {
         heading: '義務の must と推量の must',
         figureId: 'lf_kokoeigoext05_158',
+        mangaId: 'koko_eigo_s158_manga',
         body: `must の二つの意味を、同じ主語で並べてみる。
 
 　You must go home now.　もう家に帰らなければならない。（義務）
