@@ -197,6 +197,7 @@ export const kokoEigoExt02Lessons: Lesson[] = [
     sections: [
       {
         heading: 'つづりの4つの規則',
+        mangaId: 'koko_eigo_s038_manga',
         body: `三人称単数現在の -s は、ただ s を足すだけではない場合がある。次の4つに分けて覚える。
 
 ■ ①そのまま -s を付ける（大多数）
@@ -3045,6 +3046,7 @@ There is a cat under the table. を「そこにネコがいます」と訳して
     sections: [
       {
         heading: '意味の近いペアで比べる',
+        mangaId: 'koko_eigo_s069_manga',
         body: `入試で問われるのは、意味が似ているのに扱いが違う動詞の組み合わせである。ペアで整理して覚える。
 
 ■ 聞く

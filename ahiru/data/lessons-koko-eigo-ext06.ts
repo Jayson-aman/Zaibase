@@ -928,6 +928,7 @@ How many の後ろは必ず可算名詞の複数形になる。× How many book
     sections: [
       {
         heading: '判断するのは「つづり」ではなく「音」',
+        mangaId: 'koko_eigo_s190_manga',
         figureId: 'lf_kokoeigoext06_190',
         body: `不定冠詞 a / an は、可算名詞の単数形の前に置いて「不特定の1つ」を表す。どちらを使うかは、直後に来る語の最初の「音」で決まる。
 
@@ -2775,6 +2776,7 @@ that / those：比較の文で名詞のくり返しを避ける
     sections: [
       {
         heading: '残りがあるか、これで最後か',
+        mangaId: 'koko_eigo_s208_manga',
         body: `■ another（もう一つ・別の一つ）
 an + other が語源で、「不特定のもう一つ」を表す。残りがまだたくさんある場面で使う。
 例）This cake is delicious. Can I have another?（このケーキおいしい。もう一つもらえる？）

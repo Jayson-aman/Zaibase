@@ -809,6 +809,7 @@ at most（多くても）：There were at most ten people.（多くても10人�
     sections: [
       {
         heading: 'far と late の二通りの変化',
+        mangaId: 'koko_eigo_s229_manga',
         body: `■ far（遠い・遠くに）
 距離：far － farther － farthest
 程度：far － further － furthest（「さらなる」「それ以上の」）
@@ -2773,6 +2774,7 @@ The Shinano River is longer than any other river in Japan.
     sections: [
       {
         heading: 'Nothing / Nobody を主語にする形',
+        mangaId: 'koko_eigo_s249_manga',
         body: `「〜ほど…なものはない」は、否定の代名詞 nothing（物）や nobody / no one（人）を主語にして表す。
 
 ■ 物が対象

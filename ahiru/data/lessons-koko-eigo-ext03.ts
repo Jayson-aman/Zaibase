@@ -634,6 +634,7 @@ show → showed　snow → snowed　fix → fixed
     sections: [
       {
         heading: '三つの発音の決まり方',
+        mangaId: 'koko_eigo_s078_manga',
         body: `-ed の発音は、直前の音が何かだけで機械的に決まる。
 
 ■ ①[t] と読む：直前が無声音のとき
@@ -2493,6 +2494,7 @@ be動詞も進行形にすると「ふだんはそうでないが、今だけそ
     sections: [
       {
         heading: '着る・住む・結婚する',
+        mangaId: 'koko_eigo_s098_manga',
         body: `■ wear と put on
 ・wear：身につけている状態
 例）She wears glasses.（彼女は眼鏡をかけている＝ふだんから）

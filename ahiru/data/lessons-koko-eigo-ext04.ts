@@ -875,6 +875,7 @@ I have lost my key.（なくして、今も手元にない）
     sections: [
       {
         heading: '結果用法でよく使う動詞',
+        mangaId: 'koko_eigo_s120_manga',
         figureId: 'lf_kokoeigoext04_120',
         body: `結果用法は「過去に起きた出来事の結果が、今も残っている」ことを表す。次の動詞がよく使われる。
 
