@@ -221,6 +221,7 @@ much（たくさんの）／a lot of・lots of（たくさんの）／some（い
     sections: [
       {
         heading: 'まちがえやすい不可算名詞リスト',
+        mangaId: 'eigo_s083_manga',
         body: `日本語では「宿題が3つ」「情報を2つ」と平気で数えるのに、英語では数えられない語がある。理屈で考えるより、次のリストを丸暗記してしまうのが早い。
 
 ■ 必ず覚える11語
@@ -750,6 +751,7 @@ roof → roofs（屋根）／chief → chiefs（長）／safe → safes（金庫
     sections: [
       {
         heading: '不規則に変わる語',
+        mangaId: 'eigo_s089_manga',
         body: `-s も -es も付けず、語の形そのものが変わる名詞がある。数は十数語しかないので、まとめて丸暗記する。
 
 ■ 母音が変わる型
@@ -1481,6 +1483,7 @@ an hour（1時間）／an eight-year-old boy（8歳の少年）／an A（Aとい
     sections: [
       {
         heading: '所有格・指示語とは重ねられない',
+        mangaId: 'eigo_s097_manga',
         body: `名詞の前に置ける「限定することば」は、原則として一つだけである。a / an と my / this などは、同じ位置を取り合うため並べられない。
 
 ■ 並べられない組み合わせ
@@ -1794,6 +1797,7 @@ the station（駅）／the post office（郵便局）／the hospital（病院）
       },
       {
         heading: '楽器・序数・最上級',
+        mangaId: 'eigo_s100_manga',
         body: `決まって the が付く言い方を三つ覚える。ここは入試で直接問われやすい。
 
 ■ ①楽器を演奏する

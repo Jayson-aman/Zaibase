@@ -1610,6 +1610,7 @@ How long have you lived here?（どのくらいここに住んでいますか。
     sections: [
       {
         heading: '線の until、点の by',
+        mangaId: 'eigo_s280_manga',
         body: `どちらも日本語では「〜まで」だが、until は終わりまで続く線、by は締め切りの点である。
 
 ■ until（till）＝ 〜までずっと

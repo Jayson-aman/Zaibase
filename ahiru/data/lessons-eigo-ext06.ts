@@ -3184,6 +3184,7 @@ never（0％）＜ hardly / seldom（ほとんど・めったに）＜ sometimes
     sections: [
       {
         heading: '部分否定（一部だけを否定する）',
+        mangaId: 'eigo_s225_manga',
         body: `all（すべて）・every（どの〜も）・always（いつも）・both（両方）のように「全部」を表す語が not といっしょに使われると、「全部が〜というわけではない」という一部だけの否定になる。これを部分否定という。
 
 ■ 代表的な形

@@ -2683,6 +2683,7 @@ S＋V＋O（S≠O）
     sections: [
       {
         heading: '形が変わる場所',
+        mangaId: 'eigo_s070_manga',
         body: `代名詞は、文の中でどの位置に置かれるかによって形が変わる。
 
 ■ 主格（主語になる形）

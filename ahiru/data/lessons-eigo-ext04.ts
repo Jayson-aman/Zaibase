@@ -3461,6 +3461,7 @@ I have been busy since last week.（先週からずっといそがしい）… �
     sections: [
       {
         heading: 'いっしょに使えない語',
+        mangaId: 'eigo_s154_manga',
         body: `現在完了は「過去から今まで」を一本の線でとらえる形である。だから、線の途中の一点だけを指す語とは矛盾してしまい、いっしょに使えない。
 
 ■ 使えない語
