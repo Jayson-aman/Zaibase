@@ -1535,6 +1535,7 @@ export const kokugoExt03Lessons: Lesson[] = [
       },
       {
         heading: '2. 例文で使い分けを確かめる',
+        mangaId: 'kokugo_s099_manga',
         body: `実際の文で、どのことわざが合うかを確かめましょう。
 
 ■ 「祖父が大切にしていた高価な茶わんを、弟は花びんがわりに使っている。猫に小判だ。」
@@ -1766,6 +1767,7 @@ export const kokugoExt03Lessons: Lesson[] = [
       },
       {
         heading: '2. 場面で使い分ける',
+        mangaId: 'kokugo_s102_manga',
         body: `例文でちがいを確かめましょう。
 
 ■ 「二兎を追う者は一兎をも得ず」を使う場面
@@ -2001,6 +2003,7 @@ export const kokugoExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 由来の物語——売れなくなった矛と盾',
+        mangaId: 'kokugo_s105_manga',
         body: `故事成語とは、中国の古い書物に書かれた出来事（故事）から生まれた言葉のことです。由来の物語を知ると、意味が忘れられなくなります。
 
 ■ 物語（『韓非子』より）

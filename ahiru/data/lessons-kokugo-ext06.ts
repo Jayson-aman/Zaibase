@@ -346,6 +346,7 @@ export const kokugoExt06Lessons: Lesson[] = [
       },
       {
         heading: '接続助詞と接続詞のちがい',
+        mangaId: 'kokugo_s194_manga',
         body: `名前が似ているため混同しやすいが、まったく別の品詞である。
 
 ■ 接続詞（自立語）
@@ -1222,6 +1223,7 @@ export const kokugoExt06Lessons: Lesson[] = [
       },
       {
         heading: '「接続」で助動詞を見分ける',
+        mangaId: 'kokugo_s203_manga',
         body: `助動詞を識別するとき、最も確実な手がかりが「接続」＝直前の語がどの活用形になっているか、である。
 
 【未然形に付く】れる・られる／せる・させる／ない・ぬ／う・よう

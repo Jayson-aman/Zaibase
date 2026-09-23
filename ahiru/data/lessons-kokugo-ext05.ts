@@ -1124,6 +1124,7 @@ export const kokugoExt05Lessons: Lesson[] = [
       },
       {
         heading: '2. 用言と体言のちがい',
+        mangaId: 'kokugo_s163_manga',
         body: `用言と体言（名詞）は、文の中でのふるまいがまったくちがいます。
 
 ■ 体言（名詞）
@@ -1396,6 +1397,7 @@ export const kokugoExt05Lessons: Lesson[] = [
       },
       {
         heading: '2. 同じ形の助詞を見分ける',
+        mangaId: 'kokugo_s166_manga',
         body: `助詞は同じ文字で種類がちがうものが多く、そこが問われます。
 
 ■ 「が」
