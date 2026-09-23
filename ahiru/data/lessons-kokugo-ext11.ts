@@ -384,6 +384,7 @@ export const kokugoExt11Lessons: Lesson[] = [
     sections: [
       {
         heading: '実際の入試と同じ形で解く',
+        mangaId: 'kokugo_s395_manga',
         body: `入試では、有名な作品の一節に線が引かれ、「現代仮名遣いに直しなさい」と問われます。ここまでのルールを使って解いてみましょう。
 
 ■ 練習1　枕草子（清少納言）

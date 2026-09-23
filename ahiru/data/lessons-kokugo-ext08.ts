@@ -179,6 +179,7 @@ export const kokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 「こうした」は例をまとめて受ける',
+        mangaId: 'kokugo_s273_manga',
         body: `いくつかの具体例が並んだあとに「こうした」「このような」が出てきたら、それは【並んだ例をまとめて】指しています。
 
 ■ 例文
@@ -831,6 +832,7 @@ export const kokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 二つを並べる接続語',
+        mangaId: 'kokugo_s282_manga',
         body: `説明文では、あるものの特ちょうを示すために、別のものと並べて比べることがよくあります。
 
 ■ 例文

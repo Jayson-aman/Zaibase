@@ -1793,6 +1793,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '5つの意味を言いかえで整理する',
+        mangaId: 'kokugo_s209_manga',
         body: `推量に関係する助動詞は意味が近いので、言いかえの言葉でセットにして覚える。
 
 【様態（そうだ）】外から見た様子から判断する。
@@ -1892,6 +1893,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '接続と活用',
+        mangaId: 'kokugo_s210_manga',
         body: `「れる・られる」は1語で4つの意味をもつ、入試最頻出の助動詞である。
 
 ■ どちらを使うか（接続）
@@ -2673,6 +2675,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '3つの敬語のはたらき',
+        mangaId: 'kokugo_s218_manga',
         body: `敬語は「だれを高めるか」によって3つに分かれる。判定の中心はいつも「その動作をするのはだれか」である。
 
 【尊敬語】相手（話題になっている目上の人）の動作・状態・持ち物を高める。

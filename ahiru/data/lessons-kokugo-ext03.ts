@@ -2767,6 +2767,7 @@ export const kokugoExt03Lessons: Lesson[] = [
       },
       {
         heading: '2. 誤用の多い語と、総まとめ',
+        mangaId: 'kokugo_s115_manga',
         body: `意味を取りちがえて広まっている語は、入試でねらわれます。
 
 ■ 破天荒（はてんこう）——出典『北夢瑣言』
