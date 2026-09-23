@@ -420,6 +420,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
       },
       {
         heading: '裸子植物は数が少ない、という武器',
+        mangaId: 'koko_rika_s310_manga',
         body: `分類問題を解くうえで強力なのが、「裸子植物は種数が極端に少ない」という事実である。
 
 ■ 種数のちがい（概数）
@@ -2202,6 +2203,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
       },
       {
         heading: '4か所の結果と、そこから言えること',
+        mangaId: 'koko_rika_s329_manga',
         body: `■ 結果
 　①光あり・緑の部分 … 青紫色になる（デンプンあり）
 　②光あり・白い部分 … 変化しない（デンプンなし）

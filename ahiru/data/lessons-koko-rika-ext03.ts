@@ -55,6 +55,7 @@ export const kokoRikaExt03Lessons: Lesson[] = [
       },
       {
         heading: '回路図を描くときの三つのルール',
+        mangaId: 'koko_rika_s071_manga',
         body: `実物の配線（実体配線図）を回路図に描き直す問題は、公立入試でも私立入試でも定番である。次の三つを守れば必ず正しく描ける。
 
 ①長方形の枠を先に描く
