@@ -137,6 +137,7 @@ has は「三単現の s」が付いた形ではなく、**have の3人称単数
     sections: [
       {
         heading: 'for と since は指しているものがちがう',
+        mangaId: 'koko_eigo_s112_manga',
         figureId: 'lf_kokoeigoext04_112',
         body: `for も since も継続用法とセットで使うが、指しているものが根本的にちがう。
 
@@ -1698,6 +1699,7 @@ It started to rain three hours ago. It is still raining now.
       },
       {
         heading: '判定の手順',
+        mangaId: 'koko_eigo_s128_manga',
         body: `試験で迷ったときに使える判定手順をまとめる。
 
 ■ 手順①：文中に時を表す語句があるか探す
@@ -2198,6 +2200,7 @@ I → me／we → us／he → him／she → her／they → them／you → you／
       },
       {
         heading: '受動態にするときの注意点',
+        mangaId: 'koko_eigo_s133_manga',
         body: `機械的に書きかえられない場合がある。次の点に注意する。
 
 ■ 目的語が2つある文（SVOO）

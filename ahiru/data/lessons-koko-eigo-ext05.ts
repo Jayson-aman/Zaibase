@@ -302,6 +302,7 @@ will not be able to の語順で、not は will のうしろに入る。
       },
       {
         heading: '②控えめ・丁寧を表す could',
+        mangaId: 'koko_eigo_s149_manga',
         body: `過去形をわざと使うと、「今ここ」から一歩引いた言い方になる。英語ではこれを丁寧さとして利用する。
 
 ■ Could you 〜?（〜してくださいませんか）

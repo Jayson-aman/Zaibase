@@ -3133,6 +3133,7 @@ try to do は「うまくいかなかった」という含みを持つことが�
       },
       {
         heading: '入試での出題形式',
+        mangaId: 'koko_eigo_s291_manga',
         body: `■ ①適語選択・語形変化
 例）I'm interested in （learn） about history. → learning（前置詞 in のうしろ）
 例）He decided （go） abroad. → to go（decide は不定詞）

@@ -1464,6 +1464,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: '飾りを外して骨格を見る',
+        mangaId: 'koko_eigo_s311_manga',
         body: `長い文を読む手順を固定しておくと、時間内に処理できるようになる。
 
 例）The letters that my grandfather wrote to my grandmother during the war are kept in this box.
@@ -2367,6 +2368,7 @@ if に書きかえるとき don't が要るのは、or が表しているのが�
     sections: [
       {
         heading: '条件の if の作り方',
+        mangaId: 'koko_eigo_s320_manga',
         body: `if は「もし〜なら」と条件を表す。時を表す接続詞と同じく、副詞節の中では未来のことでも現在形を使う。
 
 　○ If it rains tomorrow, we will stay home.
@@ -3176,6 +3178,7 @@ that 節の中が平叙文の語順なのは、that 節が「たずねる」文�
     sections: [
       {
         heading: '消した分を動詞に返す',
+        mangaId: 'koko_eigo_s328_manga',
         figureId: 'lf_kokoeigoext09_328',
         body: `疑問文の do / does / did は、間接疑問にすると消える。ただし、それらが表していた情報は動詞に戻さなければならない。
 

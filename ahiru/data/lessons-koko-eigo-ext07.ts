@@ -903,6 +903,7 @@ old － older / elder － oldest / eldest（古い・年上の）
     sections: [
       {
         heading: 'as ~ as の基本形',
+        mangaId: 'koko_eigo_s230_manga',
         body: `二つのものが同じ程度であることを表すときは、形容詞・副詞を as と as ではさむ。
 
 ■ 形容詞をはさむ
