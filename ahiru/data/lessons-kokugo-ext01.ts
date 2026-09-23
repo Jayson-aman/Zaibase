@@ -130,6 +130,7 @@ export const kokugoExt01Lessons: Lesson[] = [
       },
       {
         heading: '判定の手順とまぎらわしい例',
+        mangaId: 'kokugo_s002_manga',
         body: `熟語の読み方を問われたら、次の順で考える。
 
 ①上の字だけを取り出し、その読みが音か訓かを決める

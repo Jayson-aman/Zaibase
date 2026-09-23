@@ -51,6 +51,7 @@ export const kokugoExt03Lessons: Lesson[] = [
       },
       {
         heading: '2. 似ているようで役わりがちがう言葉',
+        mangaId: 'kokugo_s081_manga',
         body: `同じ「努力」の話でも、力を入れているところが少しずつちがいます。場面に合う一つを選べるようにしておきましょう。
 
 ■ 始めるときにかける言葉 → 「千里の道も一歩から」

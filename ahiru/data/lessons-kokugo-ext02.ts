@@ -1422,6 +1422,7 @@ export const kokugoExt02Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 「一○一○」の型',
+        mangaId: 'kokugo_s057_manga',
         body: `数字を含む四字熟語は入試の定番である。特に「一」で始まる語は数が多いので、型ごとに整理して覚える。
 
 ■ 「一○一○」型（一字目と三字目が「一」）
@@ -1938,6 +1939,7 @@ export const kokugoExt02Lessons: Lesson[] = [
       },
       {
         heading: '2. 「顔」を使った慣用句',
+        mangaId: 'kokugo_s063_manga',
         body: `■ 顔の慣用句
 　顔が広い … 知り合いが多く、いろいろな人とつきあいがある。
 　　例）父は顔が広く、町のことなら何でも知っている。

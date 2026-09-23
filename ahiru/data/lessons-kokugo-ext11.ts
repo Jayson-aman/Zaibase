@@ -37,6 +37,7 @@ export const kokugoExt11Lessons: Lesson[] = [
       {
         heading: '2. 語の中・語の終わりのハ行はワ行に直す',
         figureId: 'kf11_s391',
+        mangaId: 'kokugo_s391_manga',
         body: `いちばん出題される、そしていちばんまちがえやすいルールです。
 
 ■ ルール
@@ -975,6 +976,7 @@ export const kokugoExt11Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 作品のプロフィール',
+        mangaId: 'kokugo_s402_manga',
         body: `■ 基本データ
 ・成立　平安時代中期（一〇〇〇年前後）
 ・作者　清少納言（せいしょうなごん）

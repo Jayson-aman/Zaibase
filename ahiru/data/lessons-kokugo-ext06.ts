@@ -502,6 +502,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '主な終助詞と表す気持ち',
+        mangaId: 'kokugo_s196_manga',
         body: `終助詞は文の終わりに付いて、話し手（書き手）の気持ちや態度を表す。
 
 【疑問・問いかけ】
@@ -2803,6 +2804,7 @@ export const kokugoExt06Lessons: Lesson[] = [
       },
       {
         heading: '尊敬語を使うときの注意',
+        mangaId: 'kokugo_s219_manga',
         body: `■ 主語は必ず相手
 尊敬語は相手の動作を高めるためのものなので、自分の動作には絶対に使えない。
 　×「わたしが　おっしゃいます。」

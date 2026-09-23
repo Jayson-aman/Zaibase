@@ -107,6 +107,7 @@ export const kokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 指す範囲は三段階で確かめる',
+        mangaId: 'kokugo_s272_manga',
         body: `指示語が指すのは、いつも「直前の名詞ひとつ」だとはかぎりません。
 
 【範囲の三段階】
