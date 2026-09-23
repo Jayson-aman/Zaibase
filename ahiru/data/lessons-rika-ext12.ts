@@ -19,6 +19,7 @@ export const rikaExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 粒の大きさと沈む速さ — 分級作用',
+        mangaId: 'rika_s411_manga',
         figureId: 'lf_rika_ext12_411',
         body: `「地層」は、流水によって運ばれた土砂（れき・砂・泥）が、海底や湖底などに積み重なってできる。土砂が積もることを堆積という。
 

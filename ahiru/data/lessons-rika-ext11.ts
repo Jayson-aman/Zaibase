@@ -2270,6 +2270,7 @@ export const rikaExt11Lessons: Lesson[] = [
     sections: [
       {
         heading: '温暖前線の構造と天気',
+        mangaId: 'rika_s401_manga',
         figureId: 'rf11_s401',
         body: `温暖前線は、暖気が寒気の上をゆるやかにはい上がりながら進んでいくときにできる前線である。
 

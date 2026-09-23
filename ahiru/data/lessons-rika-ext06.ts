@@ -1771,6 +1771,7 @@ export const rikaExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '弦の条件と振動数の関係',
+        mangaId: 'rika_s201_manga',
         body: `弦の振動数（音の高さ）は、弦の長さ・太さ・張りの強さによって変わる。
 
 ■ 音を高くする条件
