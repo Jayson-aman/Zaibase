@@ -556,6 +556,7 @@ export const kokugoExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 5ステップの型',
+        mangaId: 'kokugo_s427_manga',
         figureId: 'lf_kokugo_ext12_427',
         body: `どんな設問でも、次の5ステップで解けます。この型を体にしみこませておけば、本番であせっていても手が動きます。
 
@@ -650,6 +651,7 @@ export const kokugoExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 問いの型と文末の対応表',
+        mangaId: 'kokugo_s428_manga',
         body: `設問の問い方によって、答案の終わり方（文末）が決まります。ここがずれると、内容が合っていても点が引かれます。
 
 ■ 対応表
@@ -831,6 +833,7 @@ export const kokugoExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 言い過ぎの目印になる言葉',
+        mangaId: 'kokugo_s430_manga',
         body: `選択肢の中に、例外を許さない強い言葉が入っていたら、まず本文と照合します。本文はふつう、そこまで強く言い切っていません。
 
 ■ 言い過ぎの目印
@@ -925,6 +928,7 @@ export const kokugoExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 「常識では正しい」にだまされない',
+        mangaId: 'kokugo_s431_manga',
         body: `国語の選択肢問題で最もこわいのは、「たしかにそうだよね」と思える内容が、本文には一言も書かれていない場合です。読み手の常識に合っているので、つい選んでしまいます。
 
 ■ 例
@@ -1114,6 +1118,7 @@ export const kokugoExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 「違う部分」だけを比べる',
+        mangaId: 'kokugo_s433_manga',
         body: `二つに絞れたのに決められない、というときは、二つの選択肢の共通部分を読んでいるから迷うのです。共通部分は判断材料になりません。違う部分だけを取り出しましょう。
 
 ■ 手順
@@ -1207,6 +1212,7 @@ export const kokugoExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 字数はヒントとして使う',
+        mangaId: 'kokugo_s434_manga',
         figureId: 'lf_kokugo_ext12_434',
         body: `抜き出し問題では、字数条件を「守らなければならない面倒なきまり」ではなく「答えを見つけるための手がかり」として使います。
 

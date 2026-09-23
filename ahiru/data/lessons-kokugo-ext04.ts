@@ -430,6 +430,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 同じ事実でも語で評価が変わる',
+        mangaId: 'kokugo_s120_manga',
         body: `次の二つの文は、起きた事実は同じですが、書き手の見方がまるで違います。
 
 　A「彼は何人もの仲間を集めて活動を始めた。」
@@ -1395,6 +1396,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 「かける」「たつ」の整理',
+        mangaId: 'kokugo_s130_manga',
         body: `■ かける
 【掛ける】 いちばん広い。ぶら下げる、上からのせる、ある動作を及ぼす。
 　例）かべに絵を掛ける。ふとんを掛ける。電話を掛ける。時間を掛ける。迷惑を掛ける。めがねを掛ける。
@@ -1783,6 +1785,7 @@ export const kokugoExt04Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 主観と客観の区別',
+        mangaId: 'kokugo_s134_manga',
         body: `【主観】 自分だけの感じ方・考え方。その人の内側からの見方。
 　例）「この絵は美しい。」「そのやり方は間違っている気がする。」
 【客観】 だれが見てもそうだと言える立場。自分の好みを外して見ること。
