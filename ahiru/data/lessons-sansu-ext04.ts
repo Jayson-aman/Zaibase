@@ -2773,6 +2773,7 @@ DE:BC＝AD:AB＝AE:AC　←この3つの比はすべて同じ値になる
       },
       {
         heading: 'なぜ相似比は「AD:AB」で、「AD:DB」ではないのか',
+        mangaId: 'sansu_s155_manga',
         figureId: 'sext04_s155_naze',
         body: `■ 相似な 2 つの三角形は △ADE と △ABC
 DE が BC に平行なとき、同位角で 角 ADE ＝ 角 ABC、角 AED ＝ 角 ACB、角 A は共通。2 組の角が等しいので △ADE ∽ △ABC。相似比は**対応する辺の比**なので、小さい三角形の辺 AD と、それに対応する大きい三角形の辺 AB の比 AD:AB です。DB は△ABC の辺の一部であって、どちらの三角形の「1 辺」でもないので、AD:DB は相似比になりません。
@@ -2968,6 +2969,7 @@ DE:BC ＝ AD:AB ＝ AE:AC。どれか 1 つが分かれば残りも同じ比。�
       },
       {
         heading: 'なぜ台形の対角線の交点で「上底:下底」の比が現れるのか',
+        mangaId: 'sansu_s157_manga',
         figureId: 'sext04_s157_naze',
         body: `■ 向かい合う 2 つの三角形は錯角で相似
 台形 ABCD（AB ∥ DC）の対角線 AC・BD の交点を O とします。AB と DC が平行なので、対角線 AC を横断線と見ると 角 OAB ＝ 角 OCD（錯角）、対角線 BD を横断線と見ると 角 OBA ＝ 角 ODC（錯角）。2 組の角が等しいので **△OAB ∽ △OCD**。O をはさんで向かい合う 2 つの三角形が、砂時計のように相似になっています。
