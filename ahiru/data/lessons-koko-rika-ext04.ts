@@ -128,6 +128,7 @@ export const kokoRikaExt04Lessons: Lesson[] = [
       },
       {
         heading: '磁力線の四つの約束',
+        mangaId: 'koko_rika_s112_manga',
         body: `磁界のようすを線でかき表したものを磁力線という。かき方には次の約束がある。
 
 ■ ①向きはN極から出てS極へ
@@ -1769,6 +1770,7 @@ U字形磁石を上下逆にする、あるいは磁石そのものを裏返し�
     sections: [
       {
         heading: '実験と観察される事実',
+        mangaId: 'koko_rika_s132_manga',
         body: `■ 装置
 コイルの両端に検流計（微小な電流を測る計器）をつなぐ。電源はつながない。
 
