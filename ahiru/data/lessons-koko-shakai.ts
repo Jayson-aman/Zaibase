@@ -2182,6 +2182,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
       {
         heading: '1. 消費生活と契約',
         level: 'kiso',
+        mangaId: 'koko_shakai_10_consumer_labor_manga1',
         body: `■ 私たちは消費者
 
   消費者：商品（財）やサービスを買って使う人。家計を営む主体
@@ -2219,6 +2220,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
       {
         heading: '2. 消費者の権利と流通の仕組み',
         level: 'oyo',
+        mangaId: 'koko_shakai_10_consumer_labor_manga2',
         body: `■ 消費者主権と消費者の権利
 
   消費者主権：何をどれだけ生産するかは、最終的に消費者の選択が決めるという考え
@@ -2261,6 +2263,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
       {
         heading: '3. 労働者の権利と働き方',
         level: 'oyo',
+        mangaId: 'koko_shakai_10_consumer_labor_manga3',
         body: `■ 働くことの意味
 
   収入を得る手段であると同時に、社会に参加し自己を実現する場でもある
@@ -2302,6 +2305,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
       {
         heading: '4. 企業と経済のはたらき・入試問題例',
         level: 'nyushi',
+        mangaId: 'koko_shakai_10_consumer_labor_manga4',
         body: `■ 企業の種類と役割
 
   私企業：利潤（もうけ）を目的とする（株式会社など）

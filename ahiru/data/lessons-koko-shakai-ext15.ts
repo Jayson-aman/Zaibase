@@ -884,6 +884,7 @@ export const kokoShakaiExt15Lessons: Lesson[] = [
     sections: [
       {
         heading: 'グラフごとの読み方',
+        mangaId: 'koko_shakai_s507_manga',
         body: `■ 需要曲線と供給曲線
 ・需要曲線（買いたい量）：価格が高いほど買いたい量は減るので右下がり
 ・供給曲線（売りたい量）：価格が高いほど売りたい量は増えるので右上がり
@@ -1089,6 +1090,7 @@ export const kokoShakaiExt15Lessons: Lesson[] = [
     sections: [
       {
         heading: '図ごとに矢印を言えるようにする',
+        mangaId: 'koko_shakai_s509_manga',
         body: `■ 三権分立の図
 国会（立法）・内閣（行政）・裁判所（司法）が三角形に並び、たがいに矢印が出ている。
 
