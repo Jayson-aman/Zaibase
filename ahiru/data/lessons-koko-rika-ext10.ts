@@ -144,6 +144,7 @@ export const kokoRikaExt10Lessons: Lesson[] = [
       },
       {
         heading: '変温動物と恒温動物',
+        mangaId: 'koko_rika_s342_manga',
         body: `体温をまわりの温度に関係なく一定に保てるかどうかで、動物は二つに分かれる。
 
 ■ 変温動物（魚類・両生類・ハチュウ類）
@@ -2184,6 +2185,7 @@ Aだけを行って「デンプンが消えた」としても、それがだ液�
       },
       {
         heading: '骨格と筋肉のはたらき',
+        mangaId: 'koko_rika_s365_manga',
         body: `命令を受けて実際に体を動かすのは筋肉である。
 
 ■ 骨格のはたらき

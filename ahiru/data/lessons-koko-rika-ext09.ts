@@ -577,6 +577,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '子葉の数で決まる三点セット',
+        mangaId: 'koko_rika_s312_manga',
         body: `被子植物は、子葉の数によって双子葉類と単子葉類に分けられる。そして子葉の数が決まると、葉脈と根のつくりも自動的に決まる。この連動が最大のポイントである。
 
 ■ 双子葉類
@@ -1517,6 +1518,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '葉脈は茎の維管束の続き',
+        mangaId: 'koko_rika_s322_manga',
         body: `葉に見えるすじ（葉脈）は、飾りでも補強材だけでもなく、茎の維管束がそのまま葉の中に入り込んだものである。
 
 ■ つながり方

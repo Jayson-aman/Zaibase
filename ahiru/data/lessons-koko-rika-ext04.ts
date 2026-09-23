@@ -49,6 +49,7 @@ export const kokoRikaExt04Lessons: Lesson[] = [
       },
       {
         heading: '磁石につく物質と磁化',
+        mangaId: 'koko_rika_s111_manga',
         body: `「金属ならすべて磁石につく」というのは誤りである。磁石に強く引きつけられるのは鉄・ニッケル・コバルトとその合金にほぼ限られる。
 
 ■ つくもの／つかないもの
