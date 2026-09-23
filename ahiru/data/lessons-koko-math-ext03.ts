@@ -3497,6 +3497,7 @@ x²の係数が1でないので、解は ±3 ではない。両辺を4でわっ�
       },
       {
         heading: '平方の公式と重解',
+        mangaId: 'koko_math_s113_manga',
         body: `■ 平方の公式
 　x² + 2ax + a² = (x + a)²
 　x² − 2ax + a² = (x − a)²

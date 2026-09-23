@@ -267,6 +267,7 @@ export const kokoMathExt07Lessons: Lesson[] = [
     sections: [
       {
         heading: '長さを求める4ステップ',
+        mangaId: 'koko_math_s234_manga',
         figureId: 'lf_kokomathext07_234',
         body: `相似を使って長さを求める問題は、手順を固定すれば必ず解ける。
 
@@ -3016,6 +3017,7 @@ AH＝h とおけば BC＝BH＋CH＝h＋√3h＝(1＋√3)h。この「垂線を�
     sections: [
       {
         heading: '長方形・正方形・ひし形',
+        mangaId: 'koko_math_s265_manga',
         body: `■ 長方形の対角線
 縦 a、横 b の長方形の対角線 d は、直角三角形の斜辺なので
 　d＝√(a²＋b²)

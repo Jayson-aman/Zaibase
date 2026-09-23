@@ -1125,6 +1125,7 @@ b + (a−d) + c + d + (b−c) + a
     sections: [
       {
         heading: '1. 2人じゃんけんの全パターンと確率',
+        mangaId: 'new20_j2_sansu_17_manga',
         level: 'kiso',
         figureId: 'lf_new20j2_17',
         body: `AさんとBさんの2人がじゃんけんを1回するとき、起こりうるすべての場合を樹形図で数え、あいこ・Aの勝ち・Bの勝ちの確率をそれぞれ求める。
@@ -1260,6 +1261,7 @@ b + (a−d) + c + d + (b−c) + a
     sections: [
       {
         heading: '1. 四分位範囲(IQR)の意味と外れ値の判定基準',
+        mangaId: 'new20_j2_sansu_19_manga',
         level: 'kiso',
         figureId: 'lf_new20j2_19',
         body: `箱ひげ図では、データを小さい順に並べたときの「第1四分位数(Q1)」「中央値」「第3四分位数(Q3)」を使って、データの散らばりを箱の形で表す。この箱の幅にあたる値を「四分位範囲(IQR)」という。
