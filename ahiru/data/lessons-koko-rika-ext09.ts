@@ -1618,6 +1618,7 @@ export const kokoRikaExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '上から順に見た層構造',
+        mangaId: 'koko_rika_s323_manga',
         body: `葉を横に切って顕微鏡で見ると、はっきりした層構造になっている。
 
 ■ ① 表皮（表側）
