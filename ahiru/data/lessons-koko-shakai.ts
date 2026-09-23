@@ -1057,6 +1057,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
       {
         heading: '1. 日本国憲法の三大原則',
         level: 'kiso',
+        mangaId: 'koko_shakai_05_civics_politics_manga1',
         body: `日本国憲法は1946年11月3日に公布、1947年5月3日に施行された。
 
 ■ 三大原則
@@ -1099,6 +1100,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
       {
         heading: '2. 三権分立（国会・内閣・裁判所）',
         level: 'kiso',
+        mangaId: 'koko_shakai_05_civics_politics_manga2',
         body: `三権分立とは、国家権力を「立法・行政・司法」の3つに分け、互いに抑制・均衡させる仕組み。
 モンテスキュー「法の精神」で理論化された原理。
 
@@ -1149,6 +1151,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
       {
         heading: '3. 基本的人権の分類',
         level: 'oyo',
+        mangaId: 'koko_shakai_05_civics_politics_manga3',
         body: `■ 基本的人権の体系
 
 日本国憲法が保障する基本的人権は「侵すことのできない永久の権利」（第11条）。
@@ -1211,6 +1214,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
       {
         heading: '4. 選挙制度・地方自治と入試問題例',
         level: 'nyushi',
+        mangaId: 'koko_shakai_05_civics_politics_manga4',
         body: `■ 選挙の4原則
 
   1. 普通選挙：財産・性別・身分に関係なく選挙権が与えられる
@@ -1301,6 +1305,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
       {
         heading: '1. 家計・企業・政府と市場経済',
         level: 'kiso',
+        mangaId: 'koko_shakai_06_civics_economy_manga1',
         body: `■ 経済の三主体
 
 【家計】
@@ -1354,6 +1359,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
       {
         heading: '2. 財政と金融',
         level: 'oyo',
+        mangaId: 'koko_shakai_06_civics_economy_manga2',
         body: `■ 財政（国の収入と支出）
 
 【歳入（国の収入）】
@@ -1405,6 +1411,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
       {
         heading: '3. 為替・貿易と経済連携',
         level: 'oyo',
+        mangaId: 'koko_shakai_06_civics_economy_manga3',
         body: `■ 為替レート（円相場）の仕組み
 
   為替レート：異なる通貨の交換比率
@@ -1459,6 +1466,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
       {
         heading: '4. 国際社会・SDGsと入試問題例',
         level: 'nyushi',
+        mangaId: 'koko_shakai_06_civics_economy_manga4',
         body: `■ 国際連合（United Nations・UN）
 
   設立：1945年。本部：ニューヨーク。加盟国：193か国（2024年時点）
@@ -2063,6 +2071,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
       {
         heading: '3. 社会集団と「きまり」の考え方',
         level: 'oyo',
+        mangaId: 'koko_shakai_09_modern_society_manga1',
         body: `■ 人間は社会的存在
 
   人は家族・学校・地域・国家などさまざまな「社会集団」に属して生きている
