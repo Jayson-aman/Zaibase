@@ -1364,6 +1364,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: '合図を見つけて節を切り出す',
+        mangaId: 'koko_eigo_s310_manga',
         figureId: 'lf_kokoeigoext09_310',
         body: `省略された関係代名詞を見つける手順は次のとおりである。
 

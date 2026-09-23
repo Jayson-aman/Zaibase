@@ -2391,6 +2391,7 @@ see（見える）／hear（聞こえる）／smell（においがする）／ta
     sections: [
       {
         heading: '二つの顔を持つ動詞',
+        mangaId: 'koko_eigo_s097_manga',
         body: `同じ動詞でも、状態を表すか動作を表すかで進行形にできるかどうかが変わる。
 
 ■ have
@@ -3369,6 +3370,7 @@ when や if が示す時点は、主節の will によってすでに「未来�
     sections: [
       {
         heading: '副詞節と名詞節の見分け方',
+        mangaId: 'koko_eigo_s107_manga',
         body: `同じ when / if でも、文の中でのはたらきが二種類ある。
 
 ■ 副詞節（〜するとき／もし〜なら）

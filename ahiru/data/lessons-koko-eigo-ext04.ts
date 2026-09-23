@@ -1762,6 +1762,7 @@ It started to rain three hours ago. It is still raining now.
     sections: [
       {
         heading: '使える語句・使えない語句',
+        mangaId: 'koko_eigo_s129_manga',
         figureId: 'lf_kokoeigoext04_129',
         body: `現在完了は右端が必ず「今」に届く表現である。だから「今から切れた一点」を指す語とは同居できない。
 
@@ -3323,6 +3324,7 @@ up of → 構成要素
     sections: [
       {
         heading: '2通りの受動態の作り方',
+        mangaId: 'koko_eigo_s144_manga',
         body: `目的語を2つとる動詞（SVOO）の文は、受動態が2通り作れる。
 
 ■ もとの文

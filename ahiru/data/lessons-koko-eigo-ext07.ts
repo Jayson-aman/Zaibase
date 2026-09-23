@@ -2566,6 +2566,7 @@ one of the ~est を「いちばん〜だ」と読んでしまうと、内容一�
     sections: [
       {
         heading: 'than any other の形と意味',
+        mangaId: 'koko_eigo_s247_manga',
         body: `最上級の内容は、比較級を使って言いかえることができる。その代表が〈比較級 ＋ than any other ＋ 単数名詞〉である。
 
 例）Tokyo is the largest city in Japan.（東京は日本でいちばん大きい都市だ）

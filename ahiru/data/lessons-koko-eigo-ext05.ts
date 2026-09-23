@@ -1370,6 +1370,7 @@ Had I better 〜? という形もあるが、実際にはあまり使わない�
       },
       {
         heading: '強さと、使う相手',
+        mangaId: 'koko_eigo_s161_manga',
         body: `■ 「そうしないと困る」という含み
 had better は、そうしなかった場合に良くない結果が起こることをほのめかす言い方である。
 例）You'd better see a doctor.（医者に行ったほうがいい。行かないと悪化するよ）
@@ -3063,6 +3064,7 @@ good（形容詞）→ well（副詞）と形が変わることに注意する�
     sections: [
       {
         heading: '作り方の三手順',
+        mangaId: 'koko_eigo_s179_manga',
         figureId: 'lf_kokoeigoext05_179',
         body: `付加疑問文は「〜ですね・〜でしょう」と相手に確認する言い方である。作り方は次の三手順で決まる。
 
