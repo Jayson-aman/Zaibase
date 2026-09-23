@@ -2910,6 +2910,7 @@ NaHCO₃ ＋ HCl → NaCl ＋ H₂O ＋ CO₂
     sections: [
       {
         heading: '二本の直線を読む',
+        mangaId: 'koko_rika_s259_manga',
         figureId: 'lf_kokorikaext07_259',
         body: `■ グラフの設定
 横軸：金属の質量(g)　縦軸：結びついた酸素の質量(g)
@@ -3181,6 +3182,7 @@ NaHCO₃ ＋ HCl → NaCl ＋ H₂O ＋ CO₂
     sections: [
       {
         heading: '混合物の典型問題',
+        mangaId: 'koko_rika_s262_manga',
         body: `■ 例題
 銅とマグネシウムの混合粉末2.0gを完全に酸化させたところ、3.0gになった。もとの混合粉末にふくまれていた銅は何gか。
 
