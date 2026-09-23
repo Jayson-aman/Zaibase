@@ -1177,6 +1177,7 @@ o で終わる動詞は数が少なく、中学受験で出るのは go と do �
     sections: [
       {
         heading: 'y の直前を見る',
+        mangaId: 'eigo_s054_manga',
         body: `y で終わる動詞は、y の直前の文字が母音か子音かで変化のしかたが分かれる。
 
 ■ 子音＋y → y を i にかえて -es

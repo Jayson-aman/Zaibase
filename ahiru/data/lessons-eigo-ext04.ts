@@ -463,6 +463,7 @@ stop→stopped　plan→planned　drop→dropped　shop→shopped
       },
       {
         heading: '子音字を重ねる型を広げすぎない',
+        mangaId: 'eigo_s121_manga',
         body: `五つ目の「子音字を重ねる」型は便利だが、当てはめすぎる誤りが非常に多い。重ねるのは次の条件をすべて満たすときだけである。
 
 ■ 重ねる条件

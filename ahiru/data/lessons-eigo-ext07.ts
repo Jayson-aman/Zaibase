@@ -952,6 +952,7 @@ of を使わないときは the などは不要である。
       },
       {
         heading: 'good と well、fast と fastly',
+        mangaId: 'eigo_s235_manga',
         body: `■ good は形容詞、well は副詞
 「よい・上手な」は good、「よく・上手に」は well である。日本語では区別があいまいなので誤りやすい。
 
@@ -1153,6 +1154,7 @@ always・usually などの頻度の副詞は位置の規則がちがう。これ
       },
       {
         heading: '様態・場所・時の順番',
+        mangaId: 'eigo_s237_manga',
         body: `副詞（副詞句）を二つ以上ならべるときは、〈様態（どのように）→場所（どこで）→時（いつ）〉の順にする。
 
 例）I played tennis hard in the park yesterday.
