@@ -74,6 +74,7 @@ export const lessonsNew20E5Sansu: Lesson[] = [
       },
       {
         heading: '3. 三角形の合同条件② 2辺夾角相等(SAS)・1辺両端角相等(ASA)',
+        mangaId: 'new20_e5_sansu_01_manga',
         figureId: 'n20e5_01b',
         body: `SSS以外にも、もっと少ない情報から合同を示せる条件が2つあります。
 
@@ -350,6 +351,7 @@ AC=BC=13cmの二等辺三角形ABCで、頂点Cから底辺ABに垂線CDを下�
       },
       {
         heading: '2. 2つの帯グラフ（2年分）を比べて変化を読み取る',
+        mangaId: 'new20_e5_sansu_04_manga',
         figureId: 'n20e5_04b',
         body: `帯グラフや円グラフを2つ並べて、割合の変化を読み取らせる問題は入試の定番です。ここには大きな落とし穴があります。
 

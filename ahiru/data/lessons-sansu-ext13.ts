@@ -632,6 +632,7 @@ export const sansuExt13Lessons: Lesson[] = [
     sections: [
       {
         heading: 'かき方と使う場面',
+        mangaId: 'sansu_s456_manga',
         body: `■ 面積図を使う場面
 たて×横＝合計 になっている問題。
 ・1個の値段 × 個数 ＝ 代金
@@ -746,6 +747,7 @@ export const sansuExt13Lessons: Lesson[] = [
     sections: [
       {
         heading: 'かき方と使う場面',
+        mangaId: 'sansu_s457_manga',
         body: `■ てんびん図の考え方
 横に一本の棒をかき、左右の端に混ぜる前の濃度（または平均）を書く。混ぜたあとの濃度を支点として、棒の上に印をつける。
 ・おもりの重さ＝食塩水の重さ（または人数、個数）
@@ -1736,6 +1738,7 @@ A：B の比の値は A÷B。
     sections: [
       {
         heading: '型と手順',
+        mangaId: 'sansu_s465_manga',
         body: `■ 円
 ・面積＝半径×半径×3.14
 ・円周＝直径×3.14＝半径×2×3.14
@@ -1974,6 +1977,7 @@ A：B の比の値は A÷B。
     sections: [
       {
         heading: '切断と展開のきまり',
+        mangaId: 'sansu_s467_manga',
         body: `■ 切り口のかき方（2つの決まり）
 ①同じ面の上にある2点は、直線で結ぶ
 ②向かい合う面（平行な面）にできる切り口の線は、たがいに平行になる
@@ -2204,6 +2208,7 @@ A：B の比の値は A÷B。
     sections: [
       {
         heading: '三つの型',
+        mangaId: 'sansu_s469_manga',
         body: `■ ①等差数列（一定ずつ増える）
 3、7、11、15、19、…
 ・公差は4
