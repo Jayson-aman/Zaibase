@@ -217,6 +217,7 @@ export const kokoKokugoExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '三つの訓点の役割',
+        mangaId: 'koko_kokugo_s308_manga',
         body: `白文はそのままでは読めない。そこで三種類の記号を書きこむ。この三つをまとめて訓点という。
 
 ■ ①返り点（漢字の左下に付ける）
@@ -308,6 +309,7 @@ export const kokoKokugoExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '読まないが、消えてはいない',
+        mangaId: 'koko_kokugo_s309_manga',
         body: `漢文には、書かれているのに訓読では読まない字がある。これを置き字という。書き下し文にも書かない。ただし意味が消えるわけではなく、送りがなや助詞に姿を変えて残っている。
 
 ■ 而（じ）……接続の置き字
@@ -1707,6 +1709,7 @@ export const kokoKokugoExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '未（いまダ〜ず）',
+        mangaId: 'koko_kokugo_s323_manga',
         body: `「未」は「まだ〜していない」という意味で、副詞「未だ」と打消の助動詞「ず」の二役をこなす。
 
 ■ 論語・公冶長

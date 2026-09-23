@@ -1652,6 +1652,7 @@ export const kokoKokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '直喩と隠喩の見分けと働き',
+        mangaId: 'koko_kokugo_s212_manga',
         body: `比喩は、あるものを別のものにたとえて表す技法である。国語の設問では、種類を答えるより「どういうことか」を説明させる形が多い。まず種類の区別から確認する。
 
 ■ 直喩（明喩）
@@ -1871,6 +1872,7 @@ export const kokoKokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '倒置法 — 後ろに置かれた語が強くなる',
+        mangaId: 'koko_kokugo_s214_manga',
         body: `日本語は述語が最後に来るのがふつうである。この順序をわざと崩すのが倒置法である。
 
 ■ ふつうの語順と倒置

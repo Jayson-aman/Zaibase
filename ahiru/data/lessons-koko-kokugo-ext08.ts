@@ -1401,6 +1401,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '主語が続く「て・つつ」',
+        mangaId: 'koko_kokugo_s281_manga',
         body: `接続助詞は、前の部分と後ろの部分をつなぐはたらきをする。そのうち、主語が変わらない側のグループから確認する。
 
 ■ 主語が変わらないグループ
