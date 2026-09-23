@@ -1297,6 +1297,7 @@ PQ＝(1/2)AC、QR＝(1/2)BD で AC＝BD なら PQ＝QR。となり合う辺が�
     sections: [
       {
         heading: '台形の中点連結定理',
+        mangaId: 'koko_math_s246_manga',
         figureId: 'lf_kokomathext07_246',
         body: `AD∥BC の台形ABCDで、辺ABの中点をM、辺DCの中点をNとする。このとき
 　MN∥AD∥BC　かつ　MN＝(AD＋BC)÷2

@@ -2152,6 +2152,7 @@ AB＝AC の△ABCでは
       },
       {
         heading: '計算と証明での使い方',
+        mangaId: 'koko_math_s215_manga',
         body: `■ 長さを求める
 AB＝AC＝13cm、BC＝10cm の二等辺三角形で、頂点Aから底辺BCに垂線AHを下ろす。
 　BH＝CH＝10÷2＝5cm

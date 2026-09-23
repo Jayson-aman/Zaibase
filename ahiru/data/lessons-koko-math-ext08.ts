@@ -1825,6 +1825,7 @@ PA＝PBだから△PABは二等辺三角形。頂角が∠APBなので、底角�
     sections: [
       {
         heading: '接点のまわりで180°をつくる',
+        mangaId: 'koko_math_s298_manga',
         body: `円に内接する△ABTがあり、点Tにおける接線をXYとする（Xは弦TAの側、Yは弦TBの側）。このとき点Tのまわりには3つの角が並ぶ。
 
 　　∠ATX ＋ ∠ATB ＋ ∠BTY ＝ 180°　（XYは一直線だから）

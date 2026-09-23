@@ -2894,6 +2894,7 @@ BD、DE、EB はいずれも立方体の面の対角線なので、長さは √
     sections: [
       {
         heading: '1. 3つの量の関係',
+        mangaId: 'koko_math_s338_manga',
         figureId: 'lf_kokomathext09_338',
         body: `円すいを、頂点と底面の中心を通る平面で切ると、二等辺三角形の断面が現れる。その半分をとると、直角をはさむ2辺が r と h、斜辺が l の直角三角形になる。
 
