@@ -471,6 +471,7 @@ Yes の答えでは短縮できない。Yes, it is.（× Yes, it's.）／Yes, I 
     sections: [
       {
         heading: '疑問詞つき疑問文の作り方',
+        mangaId: 'eigo_s196_manga',
         body: `「これは何ですか」「あなたは何がほしいですか」のように、Yes / No では答えられない内容をたずねるときは疑問詞を使う。作り方は二段階で覚えるとかんたんである。
 
 ■ 二段階の手順
@@ -3016,6 +3017,7 @@ You must go. → You must not go.（mustn't）
       },
       {
         heading: '短縮形と、まちがえやすい形',
+        mangaId: 'eigo_s223_manga',
         body: `■ 短縮形の一覧
 is not → isn't　　are not → aren't　　was not → wasn't　　were not → weren't
 do not → don't　　does not → doesn't　　did not → didn't

@@ -29,6 +29,7 @@ export const eigoExt05Lessons: Lesson[] = [
     sections: [
       {
         heading: '助動詞に共通する三つの決まり',
+        mangaId: 'eigo_s156_manga',
         body: `英語の動詞は、そのままでは「する・した」という事実しか伝えられない。そこに「できる」「〜しなければならない」「〜かもしれない」といった話し手の気持ちを付け加えるのが助動詞である。can・may・must・will・should などがその仲間で、いつも動詞の前に置く。
 
 助動詞にはどれにも共通する三つの決まりがある。この三つを最初に丸ごと覚えてしまえば、can でも must でも will でも同じように文が作れる。

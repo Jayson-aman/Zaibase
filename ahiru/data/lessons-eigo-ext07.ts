@@ -1979,6 +1979,7 @@ be動詞と一般動詞を混ぜて Ken is run faster ... としないように�
       },
       {
         heading: '比較する相手をそろえる',
+        mangaId: 'eigo_s245_manga',
         body: `比較の文では、比べる二つが同じ種類のものでなければならない。
 
 ■ 名詞の繰り返しは one / ones

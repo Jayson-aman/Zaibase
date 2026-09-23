@@ -48,6 +48,7 @@ always（いつも）・usually（たいてい）・often（よく）・sometime
       },
       {
         heading: '主語によって動詞の形が変わる',
+        mangaId: 'eigo_s116_manga',
         body: `現在形でいちばん失点しやすいのが、主語が三人称単数のときに動詞へ -s を付け忘れることである。
 
 ■ 三人称単数とは

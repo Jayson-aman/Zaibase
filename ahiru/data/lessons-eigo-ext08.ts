@@ -355,6 +355,7 @@ every Saturday は on Saturdays（毎週土曜日に）と同じ意味を表す�
     sections: [
       {
         heading: '三つの前置詞の元のイメージ',
+        mangaId: 'eigo_s265_manga',
         body: `場所を表す at・on・in も、時の前置詞と同じように「どういう見方をしているか」で決まる。日本語の「〜に」「〜で」だけを手がかりにすると必ず迷うので、イメージごと覚えてしまう。
 
 ■ at ＝ 点
