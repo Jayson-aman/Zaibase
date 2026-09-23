@@ -549,6 +549,7 @@ u … cup, bus, run, sun, cut
     sections: [
       {
         heading: 'a と e を区別する',
+        mangaId: 'eigo_s007_manga',
         body: `英語には、母音字を1字入れかえるだけで別の語になるペアがたくさんある。これをミニマルペアという。書き取り問題では、このペアのどちらを書くかで得点が決まる。
 
 ■ a と e のペア
@@ -1592,6 +1593,7 @@ text → texts（-ksts の4子音）
     sections: [
       {
         heading: 'sh と ch の音',
+        mangaId: 'eigo_s019_manga',
         body: `2つの文字が組んで1つの音を表すつづりを二重子音字（digraph）という。sh・ch・th・ph・wh・ck・ng がその代表で、どれも「2文字で1音」である。文字の数と音の数がずれるので、書き取りのときに意識が必要になる。
 
 ■ sh（シュ）
@@ -1763,6 +1765,7 @@ finger（指）, England, hungry, angry は、ng のあとに g の音がもう1
     sections: [
       {
         heading: 'th の出し方',
+        mangaId: 'eigo_s021_manga',
         body: `th は日本語にまったくない音である。だからこそ、意識して練習しなければ一生出せるようにならない。
 
 ■ 口の形
@@ -1937,6 +1940,7 @@ quarter は「4分の1」「15分」の意味で、時刻の言い方に出る�
     sections: [
       {
         heading: '読まないのに書く文字',
+        mangaId: 'eigo_s023_manga',
         body: `英語には、書くけれども読まない文字がたくさんある。これをサイレントレター（黙字）という。書き取り問題では、この読まない文字を落とすまちがいが最も多い。
 
 ■ 語頭の kn（k を読まない）
@@ -2296,6 +2300,7 @@ make → making　write → writing　use → used／using　live → lived／li
     sections: [
       {
         heading: '音節とは何か',
+        mangaId: 'eigo_s027_manga',
         body: `音節（シラブル）とは、母音の音を中心にした音のかたまりのことである。英語のリズムは、この音節を単位にして作られている。
 
 ■ 数え方
@@ -2382,6 +2387,7 @@ com・mu・ni・ca・tion（伝達・5音節）
     sections: [
       {
         heading: 'アクセントのきまり',
+        mangaId: 'eigo_s028_manga',
         body: `英語の語には、強く長くはっきり読む音節が必ず1つある。これをアクセント（強勢）という。日本語のアクセントが音の高さで決まるのに対し、英語のアクセントは強さ・長さ・はっきりさで決まる。
 
 ■ 2音節の語

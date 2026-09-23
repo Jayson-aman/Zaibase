@@ -4175,6 +4175,7 @@ Last Saturday, I went to the park with my family. We had a picnic there. My moth
       },
       {
         heading: '2. 複数のイラストを時系列でつなげる書き方',
+        mangaId: 'eigo_18_e_nikki_sakubun_manga',
         body: `入試の英作文では、3〜4コマのイラストが並んでいて、それぞれの場面を順番に説明させる形式がよく出題される。時間の順序を示す語（linking words）を使いこなすことがカギ。
 
 ■ 時間の順序を示す語（重要・丸暗記）
@@ -4793,6 +4794,7 @@ manyのあとに a/an＋単数名詞を続け、動詞も単数にするとい�
     sections: [
       {
         heading: '1. 等位接続詞 and / but / or / so の基本',
+        mangaId: 'eigo_21_setsuzokushi_manga',
         body: `接続詞には大きく「等位接続詞」と「従属接続詞」の2種類がある。ここでは文法的に対等な語句・文をつなぐ「等位接続詞」を整理する。
 
 ■ and（そして・〜と）：追加・並列
@@ -5019,6 +5021,7 @@ think/say/know などのあとのthat（〜ということ）は、口語では�
     sections: [
       {
         heading: '1. 感嘆文（What と How）の作り方',
+        mangaId: 'eigo_22_kantanbun_manga',
         body: `「なんて〜なんだろう！」と驚き・感動を強く表す文を感嘆文という。WhatまたはHowを使って作るが、それぞれ文の形が異なるので正確に区別しよう。
 
 ■ What を使う感嘆文（名詞を強調）
