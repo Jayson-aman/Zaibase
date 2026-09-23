@@ -1442,6 +1442,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 3分の1の意味と使い方',
+        mangaId: 'koko_math_s322_manga',
         figureId: 'lf_kokomathext09_322',
         body: `底面が同じで高さも同じ「柱」と「すい」を用意して、すいに入れた水を柱に移すと、ちょうど3杯で柱がいっぱいになる。これがすい体の体積が3分の1である理由である（厳密な証明は高校で扱う）。
 

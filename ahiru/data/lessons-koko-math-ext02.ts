@@ -1655,6 +1655,7 @@ a²−ab+ba−b²=a²−b²
     sections: [
       {
         heading: '公式の選び方',
+        mangaId: 'koko_math_s059_manga',
         body: `展開の公式は4つある。式を見た瞬間にどれを使うか決められるようにする。
 
 ■ 4つの公式

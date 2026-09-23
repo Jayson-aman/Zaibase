@@ -782,6 +782,7 @@ ADは短い方の辺で、その相手はACである。AEはACより長いので
     sections: [
       {
         heading: '2種類の比を区別する',
+        mangaId: 'koko_math_s240_manga',
         figureId: 'lf_kokomathext07_240',
         body: `△ABCの辺AB上に点D、辺AC上に点Eがあり、DE∥BC であるとする。このとき次の2つの関係が成り立つ。
 

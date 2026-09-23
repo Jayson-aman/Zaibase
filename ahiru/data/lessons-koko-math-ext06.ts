@@ -49,6 +49,7 @@ export const kokoMathExt06Lessons: Lesson[] = [
       },
       {
         heading: '対頂角ととなり合う角',
+        mangaId: 'koko_math_s191_manga',
         body: `2直線が1点で交わると、角が4つできる。向かい合った位置にある2角を対頂角という。
 
 ■ 対頂角は等しい

@@ -208,6 +208,7 @@ export const kokoMathExt08Lessons: Lesson[] = [
       },
       {
         heading: '弧の長さと「周の長さ」を区別する',
+        mangaId: 'koko_math_s278_manga',
         body: `おうぎ形の問題で最も多い失点が、弧の長さと周の長さの取りちがえである。
 
 ■ おうぎ形の周の長さ
