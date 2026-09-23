@@ -427,6 +427,7 @@ export const shakaiExt11Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 法の下の平等',
+        mangaId: 'shakai_s377_manga',
         figureId: 'sf11_s377',
         body: `第14条は「すべて国民は、法の下に平等であつて、人種、信条、性別、社会的身分又は門地により、政治的、経済的又は社会的関係において、差別されない」と定めている。
 

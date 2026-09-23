@@ -161,6 +161,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: 'せまい国土と、広い海',
+        mangaId: 'shakai_s003_manga',
         body: `日本の国土面積は約38万km²（37万7千km²あまり）で、世界では60位くらい。ドイツやベトナムと同じくらいの広さである。
 
 ■ 領海と排他的経済水域（EEZ）
@@ -699,6 +700,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '北海道と東北・北陸の平野',
+        mangaId: 'shakai_s011_manga',
         body: `東日本の平野は、稲作・畑作のどちらがさかんかで性格が分かれる。「平野名－川の名前－代表的な農業」の3点セットで覚える。
 
 ■ 石狩平野（北海道／石狩川）

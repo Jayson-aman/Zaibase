@@ -925,6 +925,7 @@ export const shakaiExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 武家諸法度の制定と改定',
+        mangaId: 'shakai_s269_manga',
         body: `幕府は大名の力をおさえるため、守るべききまりを定めました。これが武家諸法度です。
 
 ■ 1615年 武家諸法度（元和令）
