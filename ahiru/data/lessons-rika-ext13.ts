@@ -30,6 +30,7 @@ export const rikaExt13Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 棒の重さは真ん中にかかると考える',
+        mangaId: 'rika_e6_ext_01_manga',
         body: `太さがどこも同じ棒（一様な棒）では、棒の重さは棒の真ん中にまとめてかかっていると考えます。この点を重心といいます。
 
 例）長さ60cm、重さ120gの一様な棒があります。左はしAを支点として、右はしBをばねばかりで上向きに支えました。ばねばかりは何gを示しますか。
@@ -110,6 +111,7 @@ export const rikaExt13Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 動滑車はひもの本数を数える',
+        mangaId: 'rika_e6_ext_02_manga',
         body: `おもりをぶら下げている動滑車を、下から上に横切る線を引いて、その線が切るひもの本数を数えます。その本数が、力が何分の1になるかを表します。
 
 例）重さ400gのおもりを、重さ40gの動滑車1個でつるし、ひもの一方を天井に固定して、もう一方を上に引き上げます。引く力は何gですか。
@@ -203,6 +205,7 @@ export const rikaExt13Lessons: Lesson[] = [
       },
       {
         heading: '2. 並列つなぎは伸びが等しくなる',
+        mangaId: 'rika_e6_ext_03_manga',
         body: `同じばねA（10gで2cm伸びる）を2本、横に並べて1つのおもりを支えます。
 
 例1）30gのおもりを2本のAで支えました。伸びは何cmですか。
@@ -258,6 +261,7 @@ export const rikaExt13Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 浮いている物体の沈む深さ',
+        mangaId: 'rika_e6_ext_04_manga',
         body: `例）1辺が10cmの立方体の木があり、重さは600gです。これを水にうかべると、何cm沈みますか。
 
 【STEP1】つり合いの式を書きます
@@ -322,6 +326,7 @@ export const rikaExt13Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 実験の表から規則を読む',
+        mangaId: 'rika_e6_ext_05_manga',
         body: `ふりこの長さを変えて、1往復の時間をはかった結果です。
 
 　長さ 25cm … 1往復 1.0秒
@@ -410,6 +415,7 @@ export const rikaExt13Lessons: Lesson[] = [
       },
       {
         heading: '2. 混ぜる計算',
+        mangaId: 'rika_e6_ext_06_manga',
         body: `例）10％の食塩水200gと、5％の食塩水300gを混ぜました。濃度は何％ですか。
 
 【STEP1】それぞれにとけている食塩を出します
@@ -465,6 +471,7 @@ export const rikaExt13Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. ちょうど中和する比をつくる',
+        mangaId: 'rika_e6_ext_07_manga',
         body: `ある塩酸Aと、ある水酸化ナトリウム水溶液Bがあります。A20cm3とB25cm3がちょうど中和し、蒸発させると食塩が2.4g残りました。またB25cm3だけを蒸発させると、水酸化ナトリウムが2.0g残ります。
 
 例1）A30cm3をちょうど中和するには、Bが何cm3必要ですか。
@@ -615,6 +622,7 @@ export const rikaExt13Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 基準をつくって比べる',
+        mangaId: 'rika_e6_ext_09_manga',
         body: `かん電池1個・豆電球1個の回路を、電流1の基準とします。明るさの順は電流の順で決まります（「何倍明るいか」と聞かれたら電流×電流）。
 
 　豆電球2個を直列 … 電流は2分の1。豆電球はどちらも同じ明るさで、基準より暗い（明るさは 1/2×1/2＝4分の1）。
@@ -755,6 +763,7 @@ export const rikaExt13Lessons: Lesson[] = [
       },
       {
         heading: '2. 凸レンズの作図と像の大きさ',
+        mangaId: 'rika_e6_ext_11_manga',
         body: `凸レンズを通る光は、次の3本のうち2本を引けば像が決まります。
 
 　光軸に平行に進む光 … レンズを通ったあと、反対側の焦点を通ります。
