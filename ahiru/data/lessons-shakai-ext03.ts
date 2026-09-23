@@ -113,6 +113,7 @@ export const shakaiExt03Lessons: Lesson[] = [
       },
       {
         heading: '2. なぜ愛知に自動車が集まったのか',
+        mangaId: 'shakai_s077_manga',
         body: `中京工業地帯に自動車工業が集中した理由は複数ある。
 
 ■ 理由①：もとは繊維の町だった
@@ -187,6 +188,7 @@ export const shakaiExt03Lessons: Lesson[] = [
       },
       {
         heading: '2. なぜ日本一の座を明けわたしたのか',
+        mangaId: 'shakai_s078_manga',
         body: `1960年代まで、京浜工業地帯は出荷額日本一だった。それが現在は3番手に下がっている。理由は主に3つある。
 
 ■ 理由①：地価が高すぎる
