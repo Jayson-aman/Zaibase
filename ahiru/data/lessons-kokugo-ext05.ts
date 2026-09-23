@@ -2219,6 +2219,7 @@ export const kokugoExt05Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 形容詞の活用表',
+        mangaId: 'kokugo_s175_manga',
         figureId: 'lf_kk05_175',
         body: `形容詞は、ものの性質や状態、気持ちを表す用言です。言い切りは必ず「い」で終わります。
 

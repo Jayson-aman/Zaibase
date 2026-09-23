@@ -1048,6 +1048,7 @@ export const kokugoExt12Lessons: Lesson[] = [
       },
       {
         heading: '2. 順番のすりかえに注意する',
+        mangaId: 'kokugo_s432_manga',
         body: `出来事の順番を入れかえた選択肢も、入試ではよく出ます。内容の言葉はすべて本文にあるので、照合しただけでは見つかりません。
 
 ■ 例

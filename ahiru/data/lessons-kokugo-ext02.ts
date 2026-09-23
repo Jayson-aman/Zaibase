@@ -3362,6 +3362,7 @@ export const kokugoExt02Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 慣用句・ことわざ・故事成語の区別',
+        mangaId: 'kokugo_s079_manga',
         body: `似た分野の言葉だが、性質がちがう。区別を問う問題も出る。
 
 ■ 三つの区別

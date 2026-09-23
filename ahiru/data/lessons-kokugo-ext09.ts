@@ -2351,6 +2351,7 @@ export const kokugoExt09Lessons: Lesson[] = [
       },
       {
         heading: '2. 川柳とのちがい',
+        mangaId: 'kokugo_s339_manga',
         body: `俳句と同じ十七音の詩に「川柳（せんりゅう）」があります。形が同じなので混同しやすく、入試でも区別が問われます。
 
 ■ 比べる表
