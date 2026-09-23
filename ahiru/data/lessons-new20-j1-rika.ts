@@ -979,6 +979,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
     sections: [
       {
         heading: '1. 溶解度と飽和水溶液のふりかえり',
+        mangaId: 'new20_j1_rika_13_manga1',
         level: 'kiso',
         body: `■ 溶解度とは
 
@@ -997,6 +998,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '2. 硝酸カリウムと塩化ナトリウムの曲線を比べる',
+        mangaId: 'new20_j1_rika_13_manga2',
         level: 'oyo',
         figureId: 'lf_new20j1rika_13',
         body: `■ 2つの物質の溶解度(水100gあたり)
@@ -1020,6 +1022,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '3. 入試レベル：2つの物質が混じった水溶液の計算',
+        mangaId: 'new20_j1_rika_13_manga3',
         level: 'nyushi',
         body: `📝入試問題例
 【問】60℃の水100gに、硝酸カリウム90gと塩化ナトリウム20gの両方を同時に溶かした。この水溶液をゆっくり20℃まで冷やしていく。ただし、2つの物質はたがいの溶解度に影響しないものとする。
@@ -1138,6 +1141,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
     sections: [
       {
         heading: '1. 集め方を決める2つの手がかり',
+        mangaId: 'new20_j1_rika_15_manga1',
         level: 'kiso',
         body: `■ 3つの集め方の復習
 
@@ -1156,6 +1160,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '2. 気体ごとの溶けやすさを比べる',
+        mangaId: 'new20_j1_rika_15_manga2',
         level: 'oyo',
         figureId: 'lf_new20j1rika_15',
         body: `■ 溶けやすさのちがい
@@ -1180,6 +1185,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '3. 入試レベル：未知の気体の集め方を判断する',
+        mangaId: 'new20_j1_rika_15_manga3',
         level: 'nyushi',
         body: `📝入試問題例
 【問】ある気体Xの性質を調べたところ、水に非常によくとけ、同じ体積の空気と比べて質量が大きい(空気より重い)ことが分かった。

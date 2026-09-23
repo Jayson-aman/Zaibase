@@ -417,6 +417,7 @@ R1=6Ohm と R2=3Ohm を並列接続、電源電圧 V=12V のとき
     sections: [
       {
         heading: `1. 元素記号と化学反応式`,
+        mangaId: 'koko_rika_03_chemistry_manga',
         figureId: 'lf_krika_06',
         level: 'kiso',
         body: `■ 入試頻出！元素記号20選

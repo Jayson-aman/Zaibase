@@ -101,6 +101,7 @@ export const lessonsNew20J2Rika: Lesson[] = [
     sections: [
       {
         heading: '実験の設計：何をそろえ、何を変えるか',
+        mangaId: 'new20_j2_rika_02_manga',
         level: 'kiso',
         figureId: 'lf_new20j2rika_02',
         body: `■ 実験の目的
@@ -258,6 +259,7 @@ F（油をぬる）：ほとんどさびない → 油の膜が水・酸素を�
     sections: [
       {
         heading: '実験のしくみ：反応を速める物質',
+        mangaId: 'new20_j2_rika_04_manga',
         level: 'kiso',
         figureId: 'lf_new20j2rika_04',
         body: `■ 過酸化水素水の分解
