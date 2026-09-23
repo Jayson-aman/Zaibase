@@ -3251,6 +3251,7 @@ export const kokoKokugoExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '敬語の三分類と誤用',
+        mangaId: 'koko_kokugo_s441_manga',
         body: `敬語の設問は、①三分類のどれか、②正しい敬語に直す、の二種類が出る。
 
 ■ 尊敬語（相手の動作を高める）

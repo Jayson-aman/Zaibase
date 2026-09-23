@@ -864,8 +864,8 @@ const kokoKokugoOverviewLessons: Lesson[] = [
 【ルール②】「au」の音 →「おう（ou）」に読む
 おはす（au→ou）→ おうす　　言ふ（いふ）→ いう　　心は（こころは）→ そのまま
 
-【ルール③】「iu・iu」の音 →「yu（ゆ）」に読む
-ありがたう → ありがとう　　ありがたし → ありがたし（変換なし）
+【ルール③】「iu」の音 →「yu（ゆ）」に読む
+きうり（胡瓜）→ きゅうり　　うつくしう → うつくしゅう
 
 【ルール④】語頭以外の「は行」→「わ行」に読む
 思ひ（おもひ）→ おもい　　言ひて（いひて）→ いいて　　ふたたびは → ふたたびわ
@@ -903,6 +903,7 @@ const kokoKokugoOverviewLessons: Lesson[] = [
       },
       {
         heading: '2. 古語の頻出単語50',
+        mangaId: 'koko_kokugo_05_kobun_manga',
         level: 'oyo',
         body: `古文読解の基礎は単語力です。現代語と意味が大きく違う古語を中心に覚えます。
 
@@ -1367,6 +1368,7 @@ const kokoKokugoOverviewLessons: Lesson[] = [
       },
       {
         heading: '2. 動物・自然を使った慣用句',
+        mangaId: 'koko_kokugo_07_kanyoku_manga',
         level: 'oyo',
         body: `慣用句には動物や自然の様子にたとえたものが数多くあります。イメージと結びつけて覚えましょう。
 
@@ -2141,6 +2143,7 @@ const kokoKokugoOverviewLessons: Lesson[] = [
       },
       {
         heading: '4. 敬語・言葉づかいと表現の使い分け',
+        mangaId: 'koko_kokugo_11_hanashiai_manga',
         level: 'nyushi',
         body: `話す・書く場面では、相手や目的に応じて言葉づかいを使い分ける力が求められます。日常でも役立ち、入試でも問われる実践的な内容です。
 
@@ -2598,6 +2601,7 @@ const kokoKokugoOverviewLessons: Lesson[] = [
     sections: [
       {
         heading: '1. 再読文字の基本',
+        mangaId: 'koko_kokugo_14_kanbun_hatten_manga',
         level: 'kiso',
         body: `再読文字は、漢文特有の読み方で、1つの漢字を「返り点で下から返って読んだ後、もう一度上から読む」という2回読みをする文字です。入試漢文の発展的な句法として頻出します。
 

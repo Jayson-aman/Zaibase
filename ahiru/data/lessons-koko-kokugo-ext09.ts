@@ -999,6 +999,7 @@ export const kokoKokugoExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '返り点の階層をまとめる',
+        mangaId: 'koko_kokugo_s316_manga',
         body: `返り点は五段階の階層になっている。内側から順に次のとおり。
 
 ①レ点……一字だけ返る。
