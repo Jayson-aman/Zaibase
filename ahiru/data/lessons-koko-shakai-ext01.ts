@@ -51,6 +51,7 @@ export const kokoShakaiExt01Lessons: Lesson[] = [
       },
       {
         heading: '三大洋と、まちがえやすい名前',
+        mangaId: 'koko_shakai_s001_manga',
         body: `海は大きく三つに分けられ、これを三大洋という。
 
 ■ 三大洋（面積の大きい順）
@@ -1184,6 +1185,7 @@ export const kokoShakaiExt01Lessons: Lesson[] = [
       },
       {
         heading: 'イスラム教のきまりと暮らし',
+        mangaId: 'koko_shakai_s013_manga',
         body: `入試で最も出題されるのがイスラム教の生活規定である。理由まで書けるようにしておく。
 
 ■ 六信五行のうち、生活に現れる五行
@@ -1533,6 +1535,7 @@ export const kokoShakaiExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '自然の東西・南北差と農業',
+        mangaId: 'koko_shakai_s017_manga',
         body: `中国は面積約960万km²と日本の約25倍あり、地域による自然の差が非常に大きい。
 
 ■ 西高東低の地形

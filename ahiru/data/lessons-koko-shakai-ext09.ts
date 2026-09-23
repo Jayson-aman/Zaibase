@@ -2070,6 +2070,7 @@ export const kokoShakaiExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '数値で見る人口の変化',
+        mangaId: 'koko_shakai_s333_manga',
         body: `日本の人口構成は、この70年ほどで大きく変わった。
 
 ■ 高齢化率（総人口に占める65歳以上の割合）

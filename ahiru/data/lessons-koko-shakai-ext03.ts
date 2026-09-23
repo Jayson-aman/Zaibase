@@ -1973,6 +1973,7 @@ export const kokoShakaiExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: '重厚長大から軽薄短小へ',
+        mangaId: 'koko_shakai_s099_manga',
         body: `1973年の石油危機を境に、日本の工業の重心は大きく移った。
 
 ■ 重厚長大の産業
