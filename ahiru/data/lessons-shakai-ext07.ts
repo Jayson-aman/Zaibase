@@ -616,6 +616,7 @@ export const shakaiExt07Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 御成敗式目の制定',
+        mangaId: 'shakai_s230_manga',
         figureId: 's7f_s230',
         body: `1232年、3代執権・北条泰時は御成敗式目（貞永式目）51か条を定めた。承久の乱のあと土地をめぐる争いが急に増え、公平に裁くための基準が必要になったからである。
 

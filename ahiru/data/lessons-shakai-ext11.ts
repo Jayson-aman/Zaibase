@@ -290,6 +290,7 @@ export const shakaiExt11Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. きまりの上下関係',
+        mangaId: 'shakai_s375_manga',
         figureId: 'sf11_s375',
         body: `国のきまりには上下関係があり、上位のきまりに反する下位のきまりは効力をもたない。
 
@@ -1711,6 +1712,7 @@ export const shakaiExt11Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 議院内閣制とは',
+        mangaId: 'shakai_s395_manga',
         body: `議院内閣制とは、内閣が国会（とくに衆議院）の信任にもとづいて成立し、国会に対して連帯して責任を負うしくみである。
 
 ■ 議院内閣制のあらわれ方

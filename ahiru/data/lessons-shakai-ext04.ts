@@ -2300,6 +2300,7 @@ export const shakaiExt04Lessons: Lesson[] = [
       },
       {
         heading: '2. 西日本の9組',
+        mangaId: 'shakai_s142_manga',
         body: `■ 西日本（9組）
 ・石川県 → 金沢市
 ・愛知県 → 名古屋市

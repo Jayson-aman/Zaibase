@@ -1714,6 +1714,7 @@ export const shakaiExt02Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 食料自給率の移り変わり',
+        mangaId: 'shakai_s059_manga',
         figureId: 'sext02_059',
         body: `国内で食べられる食料のうち、どれだけを国内の生産でまかなえているかを示す割合を食料自給率という。
 

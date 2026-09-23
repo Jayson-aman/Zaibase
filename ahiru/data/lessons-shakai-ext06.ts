@@ -1290,6 +1290,7 @@ export const shakaiExt06Lessons: Lesson[] = [
       },
       {
         heading: '十七条の憲法（604年）',
+        mangaId: 'shakai_s198_manga',
         body: `翌604年、聖徳太子は十七条の憲法を定めた。これは役人（豪族）が守るべき心がまえを17か条にまとめたものである。
 
 ■ よく問われる条文

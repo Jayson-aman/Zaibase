@@ -259,6 +259,7 @@ export const shakaiExt13Lessons: Lesson[] = [
       },
       {
         heading: '2. 斜面の急・ゆるやかと、谷・尾根',
+        mangaId: 'shakai_e4_ext_04_manga',
         body: `■ 線の間隔と斜面のかたむき
 　等高線の間隔がせまい … 短いきょりで高さが大きく変わるので、急な斜面です。
 　等高線の間隔が広い … 高さがなかなか変わらないので、ゆるやかな斜面です。
