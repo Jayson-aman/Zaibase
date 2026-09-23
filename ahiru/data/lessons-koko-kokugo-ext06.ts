@@ -1441,6 +1441,7 @@ export const kokoKokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '推量表現の種類と強さ',
+        mangaId: 'koko_kokugo_s210_manga',
         body: `地の文の文末に注目すると、語り手がどこまで知っているかが分かる。推量表現は、語り手の視界の境界線を示す標識である。
 
 ■ 推量表現の強さの順（弱い → 強い）
@@ -2006,6 +2007,7 @@ export const kokoKokugoExt06Lessons: Lesson[] = [
       },
       {
         heading: '対句法 — 形をそろえて差を見せる',
+        mangaId: 'koko_kokugo_s215_manga',
         body: `構造の似た二つの句を並べるのが対句法である。漢文や和歌でよく学ぶが、現代文でも印象的な場面で使われる。
 
 ■ 対句の形

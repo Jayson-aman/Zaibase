@@ -315,6 +315,7 @@ export const kokoKokugoExt02Lessons: Lesson[] = [
       },
       {
         heading: '独立語――五つの型',
+        mangaId: 'koko_kokugo_s044_manga',
         body: `独立語は、他の文節と主語・述語・修飾などの関係を結ばず、単独で文の中に置かれる文節である。次の五つに分類される。
 
 ①感動　例）ああ、美しい景色だ。／おや、だれか来たようだ。
@@ -628,6 +629,7 @@ export const kokoKokugoExt02Lessons: Lesson[] = [
     sections: [
       {
         heading: '分類フローを暗記する',
+        mangaId: 'koko_kokugo_s048_manga',
         body: `品詞は次の順で質問していけば必ず決まる。
 
 Q1 それだけで文節を作れるか
@@ -3684,6 +3686,7 @@ Q7 前後をつなぐか
       },
       {
         heading: '敬語の五分類',
+        mangaId: 'koko_kokugo_s079_manga',
         body: `2007年に文化審議会が示した「敬語の指針」では、従来の三分類をより細かくした五分類が使われている。高校入試でも、注記つきで問われることがある。
 
 ■ ①尊敬語

@@ -1006,6 +1006,7 @@ export const kokoKokugoExt07Lessons: Lesson[] = [
     sections: [
       {
         heading: '倒置法と体言止め',
+        mangaId: 'koko_kokugo_s242_manga',
         body: `語順や文末をふつうと変えることで、詩は感情の動きを形にする。
 
 ■ 倒置法

@@ -247,6 +247,7 @@ export const kokoKokugoExt10Lessons: Lesson[] = [
       },
       {
         heading: '同じ傍線部でも、タイプが変われば答案が変わる',
+        mangaId: 'koko_kokugo_s338_manga',
         body: `【本文（要約）】
 　試合の最後、彼はベンチに戻る前に一度だけ空を見上げた。三年間、この一瞬のために練習してきたのだと思うと、悔しさよりも先に、やりきったという感覚が体の底から上がってきた。
 

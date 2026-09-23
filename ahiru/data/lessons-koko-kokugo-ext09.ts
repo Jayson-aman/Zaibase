@@ -1421,6 +1421,7 @@ export const kokoKokugoExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '書かない字と、二度書く字',
+        mangaId: 'koko_kokugo_s320_manga',
         body: `■ 消える字＝置き字
 書かれているのに読まず、書き下し文にも書かない。
 例）溫故而知新　→　故きを温めて新しきを知る（「而」が消える）
