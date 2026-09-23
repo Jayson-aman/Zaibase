@@ -1489,6 +1489,7 @@ export const kokoShakaiExt07Lessons: Lesson[] = [
     sections: [
       {
         heading: '四つの窓口',
+        mangaId: 'koko_shakai_s244_manga',
         body: `鎖国とはいっても、日本が完全に閉じていたわけではない。次の四つの窓口が開いていた。
 
 ■ ①長崎（幕府直轄）

@@ -1919,6 +1919,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '下関条約（1895年）の内容',
+        mangaId: 'koko_shakai_s291_manga',
         body: `1895年4月、山口県の下関で講和会議が開かれ、下関条約が結ばれた。日本側の代表は内閣総理大臣伊藤博文と外務大臣陸奥宗光、清側の代表は李鴻章である。
 
 ■ おもな内容

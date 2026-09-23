@@ -963,6 +963,7 @@ export const kokoShakaiExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '冷帯と寒帯の見分け方',
+        mangaId: 'koko_shakai_s011_manga',
         body: `冷帯と寒帯を分ける数値は「最暖月10℃」である。これは森林が育つかどうかの境目でもある。
 
 ■ 冷帯（亜寒帯）

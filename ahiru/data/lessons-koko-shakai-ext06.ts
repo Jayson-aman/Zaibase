@@ -184,6 +184,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '平氏政権のかたち',
+        mangaId: 'koko_shakai_s193_manga',
         body: `平治の乱に勝った清盛は、急速に位を上げていく。1167年、ついに太政大臣に就任した。太政大臣は律令の官職の最高位で、それまで摂関家など上級貴族しか就けなかった地位である。武士がそこに座ったこと自体が事件だった。
 
 ■ 権力の固め方は藤原氏と同じ
@@ -2579,6 +2580,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '金閣と五山',
+        mangaId: 'koko_shakai_s221_manga',
         body: `■ 北山文化とは
 3代将軍足利義満の時代の文化を、義満の北山山荘にちなんで北山文化という。特色は「融合」である。
 ・公家文化 … 伝統的な和歌・有職故実。
