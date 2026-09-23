@@ -3066,6 +3066,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
       },
       {
         heading: '3. 過疎・過密問題と限界集落',
+        mangaId: 'kshakai_14_local_creation_manga',
         level: 'oyo',
         body: `■ 過疎化の進行
 
