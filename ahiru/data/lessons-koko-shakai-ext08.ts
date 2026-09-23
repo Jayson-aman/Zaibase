@@ -1201,6 +1201,7 @@ export const kokoShakaiExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '暮らしと暦の変化',
+        mangaId: 'koko_shakai_s282_manga',
         body: `明治初期、欧米の文化や生活様式が急速に取り入れられた風潮を文明開化という。
 
 ■ 見た目の変化

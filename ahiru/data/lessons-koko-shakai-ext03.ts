@@ -208,6 +208,7 @@ export const kokoShakaiExt03Lessons: Lesson[] = [
       },
       {
         heading: '生産調整（減反政策）と制度の変化',
+        mangaId: 'koko_shakai_s078_manga',
         body: `■ 減反政策の始まり
 1970年ごろから、国は米の作付面積を減らす生産調整に乗り出した。これを一般に減反政策という。田に稲を植えない、あるいは他の作物に切りかえる（転作）ことに補助金を出し、生産量を需要に合わせようとした。
 
@@ -1469,6 +1470,7 @@ export const kokoShakaiExt03Lessons: Lesson[] = [
       },
       {
         heading: '自動車工業のしくみ',
+        mangaId: 'koko_shakai_s093_manga',
         body: `自動車工業が地域経済に与える影響が大きいのは、すそ野が広いからである。
 
 ■ 組み立て工場と関連工場

@@ -184,6 +184,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
       },
       {
         heading: 'エジプト文明 — 太陽暦とピラミッド',
+        mangaId: 'koko_shakai_s153_manga',
         body: `ほぼ同じ紀元前3000年ごろ、アフリカ北東部のナイル川流域に生まれた文明である。ギリシャの歴史家ヘロドトスは「エジプトはナイルのたまもの」と記した。
 
 ■ ナイル川の増水と太陽暦
@@ -2313,6 +2314,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
       },
       {
         heading: '坂上田村麻呂と征夷大将軍',
+        mangaId: 'koko_shakai_s180_manga',
         body: `苦戦を重ねた朝廷は、797年、坂上田村麻呂（さかのうえのたむらまろ）を征夷大将軍に任命した。
 
 ■ 征夷大将軍とは
