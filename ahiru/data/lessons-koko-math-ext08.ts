@@ -528,6 +528,7 @@ S＝πr²×ℓ/(2πr)＝ℓr/2。
       },
       {
         heading: '反対側にあるときは「和が180°」',
+        mangaId: 'koko_math_s282_manga',
         body: `弦ABの一方の側に点P、反対側に点Qがあるとき、∠APBと∠AQBは等しくならない。
 
 ■ なぜか

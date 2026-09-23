@@ -2037,6 +2037,7 @@ PB＝PC を示したいなら、PBを辺にもつ三角形とPCを辺にもつ�
     sections: [
       {
         heading: '底角が等しいことの証明',
+        mangaId: 'koko_math_s214_manga',
         body: `■ 用語
 AB＝AC の△ABCでは
 ・頂角：等しい2辺AB、ACにはさまれた角 ∠A
@@ -3119,6 +3120,7 @@ Oを通る直線と辺AB、DCの交点をP、Qとすると、上の証明から 
     sections: [
       {
         heading: '典型問題1：中点を使う',
+        mangaId: 'koko_math_s226_manga',
         body: `■ 問題
 平行四辺形ABCDの対角線の交点をOとする。対角線AC上に AE＝CF となる点E、Fをとるとき、四角形EBFDは平行四辺形であることを証明せよ。
 
