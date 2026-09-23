@@ -2144,6 +2144,7 @@ export const kokoKokugoExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '疑問詞と文末の助字',
+        mangaId: 'koko_kokugo_s327_manga',
         body: `■ 文末の助字
 乎・哉・耶・邪・与　→　「〜か」「〜や」
 これらが文末にあれば疑問（または反語）を疑う。
@@ -2463,6 +2464,7 @@ Aは動作をする人、Bはその動作。訓読文ではAに「ヲシテ」�
     sections: [
       {
         heading: '受身の三つの型',
+        mangaId: 'koko_kokugo_s330_manga',
         body: `■ 型①　見・被＋動詞
 「見」「被」を動詞の上に置くと受身になる。読みは「る・らる」。
 

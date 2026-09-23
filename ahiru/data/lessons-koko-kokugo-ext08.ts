@@ -1097,6 +1097,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '打消とセットになる副詞',
+        mangaId: 'koko_kokugo_s278_manga',
         body: `文の途中にある副詞が、文末の形を決める。この対応を呼応（照応）という。
 
 ■ え〜ず ＝〜できない
