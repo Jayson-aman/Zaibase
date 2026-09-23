@@ -871,6 +871,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: 'that が好まれる先行詞のリスト',
+        mangaId: 'koko_eigo_s305_manga',
         body: `次のような語が先行詞に付いているとき、関係代名詞は that を使うのがふつうである。
 
 ■ ①最上級
@@ -2464,6 +2465,7 @@ if に書きかえるとき don't が要るのは、or が表しているのが�
     sections: [
       {
         heading: 'because と because of',
+        mangaId: 'koko_eigo_s321_manga',
         body: `because は接続詞、because of は前置詞のはたらきをする。後ろに来る形がちがう。
 
 ■ because ＋〈主語＋動詞〉
@@ -2974,6 +2976,7 @@ that 節の中が平叙文の語順なのは、that 節が「たずねる」文�
     sections: [
       {
         heading: '否定は前の動詞に付ける',
+        mangaId: 'koko_eigo_s326_manga',
         body: `日本語では「彼は来ないと思う」と、否定を後ろの内容に付ける。英語ではふつう前の動詞に付ける。
 
 　○ I don't think he will come.（彼は来ないと思います）
@@ -3679,6 +3682,7 @@ that 節の中が平叙文の語順なのは、that 節が「たずねる」文�
     sections: [
       {
         heading: '動詞は「近いほう」に合わせる',
+        mangaId: 'koko_eigo_s333_manga',
         figureId: 'lf_kokoeigoext09_333',
         body: `either A or B と neither A nor B が主語になるとき、動詞は B（動詞に近いほう）に合わせる。
 

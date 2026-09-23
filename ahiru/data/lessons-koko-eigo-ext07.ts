@@ -1721,6 +1721,7 @@ mine（私のもの）、yours（あなたのもの）、his、hers、ours、the
       },
       {
         heading: 'that of / those of の使い方',
+        mangaId: 'koko_eigo_s238_manga',
         body: `〈the ＋ 名詞 ＋ of ～〉というかたまりをくり返すときは、名詞の部分を that（単数）／those（複数）に置きかえる。
 
 例）The population of Tokyo is larger than that of Osaka.
@@ -1994,6 +1995,7 @@ in Japan（日本で）／in the world（世界で）／in my class（私のク�
     sections: [
       {
         heading: 'of を使う場合と in を使う場合',
+        mangaId: 'koko_eigo_s241_manga',
         body: `最上級の「〜の中で」には of と in の二つがあり、あとに来る語で使い分ける。
 
 ■ of ＋ 複数を表す語
@@ -2090,6 +2092,7 @@ of は students（複数）に、in は class（場所・集団）に対応し�
     sections: [
       {
         heading: '所有格がつくときと、副詞のとき',
+        mangaId: 'koko_eigo_s242_manga',
         body: `■ ①所有格がつくと the は消える
 my、your、his、her、our、their、Ken's などの所有格と the は同時に使えない。
 例）He is my best friend.（彼は私のいちばんの友達だ）× my the best friend
@@ -2374,6 +2377,7 @@ K2 は二番目に高い山なので、the second highest mountain とも one of
     sections: [
       {
         heading: '主語の中心を見つける',
+        mangaId: 'koko_eigo_s245_manga',
         body: `One of the students is from Canada. のような文で、動詞を単数にするか複数にするかは、主語の「中心となる語」で決まる。
 
 ■ 主語の中心は one
