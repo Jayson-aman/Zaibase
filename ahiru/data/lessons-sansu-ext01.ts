@@ -1580,6 +1580,7 @@ export const sansuExt01Lessons: Lesson[] = [
       },
       {
         heading: 'なぜ「同じ数で割っても大きさが変わらない」のか',
+        mangaId: 'sansu_s017_manga',
         figureId: 'sext01_s017_naze',
         body: `■ 分数は「切り分け方」と「取った数」の組
 24/36 は「1 を36等分して、24個取った」という意味です。
