@@ -704,6 +704,7 @@ export const kokoKokugoExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '一二点のはたらき',
+        mangaId: 'koko_kokugo_s313_manga',
         body: `一二点は、返る距離が二字以上あるときに使う。番号の順に読めばよい。
 
 例）論語・学而篇「有朋自遠方來」

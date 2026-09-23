@@ -1833,6 +1833,7 @@ export const kokoKokugoExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '一字だけ書きまちがえやすい語',
+        mangaId: 'koko_kokugo_s019_manga',
         body: `同じ音の別字にすりかわるのが、四字熟語の失点の最大の原因である。正しい字と、なぜその字なのかをセットで押さえる。
 
 ■ 絶体絶命（× 絶対絶命）
@@ -2455,6 +2456,7 @@ export const kokoKokugoExt01Lessons: Lesson[] = [
       },
       {
         heading: 'テーマ別に整理する',
+        mangaId: 'koko_kokugo_s024_manga',
         body: `入試では、意味の似たことわざを選ばせる問題が多い。テーマごとにまとめておく。
 
 ■ 努力・忍耐
@@ -3083,6 +3085,7 @@ export const kokoKokugoExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '四つの打消と、その守備範囲',
+        mangaId: 'koko_kokugo_s030_manga',
         body: `打消の接頭語には得意分野がある。
 
 ■ 不…性質・状態の否定（最も広い）

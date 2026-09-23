@@ -172,6 +172,7 @@ export const lessonsNew20J1Kokugo: Lesson[] = [
       {
         heading: '2. 母音が連続するときの「のばす音」への変化',
         level: 'oyo',
+        mangaId: 'new20_j1_kokugo_03_manga',
         body: `歴史的仮名遣いの中でも、特に間違えやすいのが「母音が連続するときにのばす音（長音）に変わる」というルールです。少し複雑に感じますが、パターンは3つだけなので、順番に確認しましょう。
 
 ■ 3つの変化パターン
