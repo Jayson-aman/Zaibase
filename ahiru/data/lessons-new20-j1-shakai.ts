@@ -252,6 +252,7 @@ export const lessonsNew20J1Shakai: Lesson[] = [
       {
         heading: '人口密度が低い地域とその条件',
         level: 'oyo',
+        mangaId: 'new20_j1_shakai_05_manga',
         body: `逆に人口密度が低い地域には、共通して「農業や日常の生活に適さない厳しい自然環境」がある。
 
 ■ 寒すぎる地域

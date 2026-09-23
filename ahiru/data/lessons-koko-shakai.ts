@@ -43,6 +43,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
       {
         heading: '1. 日本の地形（山地・平野・河川・海岸）',
         level: 'kiso',
+        mangaId: 'koko_shakai_01_japan_geo_manga',
         body: `■ 主要山地・山脈
 日本の国土の約4分の3は山地・丘陵地。主な山脈と山地を押さえよう。
 
@@ -3633,6 +3634,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
       {
         heading: '1. 熱帯の農業',
         level: 'kiso',
+        mangaId: 'kshakai_17_climate_agriculture_manga',
         body: `■ 熱帯気候の特徴（復習）
 
   年間を通じて高温（最寒月平均気温18度以上）で、多くの地域で降水量も多い
@@ -4239,6 +4241,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
       {
         heading: '1. 世界人口の増加と人口爆発',
         level: 'kiso',
+        mangaId: 'kshakai_20_population_urbanization_manga',
         body: `■ 世界人口の推移
 
   20世紀初頭には約16億人だった世界人口は、2020年代には80億人を突破
@@ -4509,6 +4512,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
       {
         heading: '3. 田沼意次の政治と寛政の改革',
         level: 'oyo',
+        mangaId: 'kshakai_21_edo_reforms_advanced_manga',
         body: `■ 田沼意次の政治（1772〜1786年）
 
   老中・田沼意次が主導。三大改革とは対照的に、商業を積極的に活用した政治

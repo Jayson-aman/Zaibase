@@ -401,6 +401,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
       },
       {
         heading: '貝塚・土偶・三内丸山遺跡が語ること',
+        mangaId: 'koko_shakai_s156_manga',
         body: `文字のない時代なので、当時のくらしは遺跡や遺物から推測する。
 
 ■ 貝塚

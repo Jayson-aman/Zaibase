@@ -1125,6 +1125,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
       },
       {
         heading: '1333年、幕府の滅亡',
+        mangaId: 'koko_shakai_s204_manga',
         body: `後醍醐天皇の再挙兵に対し、幕府は有力御家人の足利高氏（尊氏）を大将として京都へ派遣した。
 
 ■ 足利尊氏の寝返り

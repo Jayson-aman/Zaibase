@@ -1909,6 +1909,7 @@ export const kokoShakaiExt03Lessons: Lesson[] = [
       },
       {
         heading: 'エネルギー革命と石油危機',
+        mangaId: 'koko_shakai_s098_manga',
         body: `工業の中身を変えたもう一つの力が、エネルギー源の変化である。
 
 ■ エネルギー革命
