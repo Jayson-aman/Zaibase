@@ -955,6 +955,7 @@ export const kokoKokugoExt13Lessons: Lesson[] = [
     sections: [
       {
         heading: '四つの成り立ち',
+        mangaId: 'koko_kokugo_s460_manga',
         body: `■ 象形文字
 物の形をそのままかたどってできた漢字。最も古い作り方。
 ・山（山の形）・川（流れる水）・日（太陽）・月（三日月）
@@ -1058,6 +1059,7 @@ export const kokoKokugoExt13Lessons: Lesson[] = [
     sections: [
       {
         heading: '三つの決まり',
+        mangaId: 'koko_kokugo_s461_manga',
         body: `■ 部首の位置
 ・へん（左）：にんべん（休）、さんずい（海）、きへん（村）、てへん（持）、ごんべん（語）、いとへん（絵）
 ・つくり（右）：おおざと（都）、りっとう（利）、ちから（動）
@@ -1164,6 +1166,7 @@ export const kokoKokugoExt13Lessons: Lesson[] = [
     sections: [
       {
         heading: '覚え方と代表例',
+        mangaId: 'koko_kokugo_s462_manga',
         body: `■ 対義語（二字熟語）
 説明文でよく出るもの
 ・具体 ⇔ 抽象
@@ -1284,6 +1287,7 @@ export const kokoKokugoExt13Lessons: Lesson[] = [
     sections: [
       {
         heading: '書き分けの基準',
+        mangaId: 'koko_kokugo_s463_manga',
         body: `■ 同音異義語（音読みが同じ）
 ・対象（相手・ねらい）／対照（比べる）／対称（つりあう形）
 ・保証（請け合う）／保障（守る）／補償（埋め合わせる）
@@ -1386,6 +1390,7 @@ export const kokoKokugoExt13Lessons: Lesson[] = [
     sections: [
       {
         heading: '体の部分でまとめる',
+        mangaId: 'koko_kokugo_s464_manga',
         body: `■ 頭・顔
 ・頭が下がる：感心する、尊敬する
 ・頭を冷やす：興奮をしずめる
@@ -1506,6 +1511,7 @@ export const kokoKokugoExt13Lessons: Lesson[] = [
     sections: [
       {
         heading: '意味と由来',
+        mangaId: 'koko_kokugo_s465_manga',
         body: `■ ことわざ（教訓）
 ・石の上にも三年：がまん強く続ければ、いつか成果が出る
 ・急がば回れ：急ぐときほど、安全な道を選んだほうが早い
@@ -1609,6 +1615,7 @@ export const kokoKokugoExt13Lessons: Lesson[] = [
     sections: [
       {
         heading: '意味と、まちがえやすい字',
+        mangaId: 'koko_kokugo_s466_manga',
         body: `■ 書きまちがえやすいもの（最重要）
 ・絶体絶命：追いつめられて、どうにもならない状態。※「絶対」ではない
 ・五里霧中：どうしてよいか分からないこと。※「夢中」ではない
@@ -1721,6 +1728,7 @@ export const kokoKokugoExt13Lessons: Lesson[] = [
     sections: [
       {
         heading: '三つの種類',
+        mangaId: 'koko_kokugo_s467_manga',
         body: `■ 尊敬語（相手を高める）
 相手や話題になっている人の動作・持ち物・状態を高く言う。
 作り方
@@ -1830,6 +1838,7 @@ export const kokoKokugoExt13Lessons: Lesson[] = [
     sections: [
       {
         heading: 'まちがえやすい四つ',
+        mangaId: 'koko_kokugo_s468_manga',
         body: `■ ①二重敬語
 同じ種類の敬語を重ねてしまうこと。
 誤：おっしゃられる（おっしゃる＋れる）→ 正：おっしゃる
