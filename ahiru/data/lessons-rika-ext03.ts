@@ -32,6 +32,7 @@ export const rikaExt03Lessons: Lesson[] = [
       },
       {
         heading: '2. 具体例で役割を確認する',
+        mangaId: 'rika_s076_manga',
         figureId: 'rext03_s076b',
         body: `身近な生物を例に、3つの役割を整理してみよう。
 
