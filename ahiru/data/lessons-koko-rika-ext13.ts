@@ -30,6 +30,7 @@ export const kokoRikaExt13Lessons: Lesson[] = [
     sections: [
       {
         heading: '式の形と、3つの問われ方',
+        mangaId: 'koko_rika_s451_manga',
         body: `密度は「1cm³あたり何gか」を表す量である。
 
 ■ 公式
