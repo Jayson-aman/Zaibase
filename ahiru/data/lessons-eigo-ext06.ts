@@ -2405,6 +2405,7 @@ Which trains stop at this station?（trains は複数なので stop）
     sections: [
       {
         heading: 'What が主語になる文',
+        mangaId: 'eigo_s217_manga',
         body: `What も主語になれる。そのときは Who と同じく do / does / did を使わず、語順も変わらない。
 
 ■ What happened?（何が起きたのですか）

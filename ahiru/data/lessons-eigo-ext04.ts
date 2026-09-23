@@ -1714,6 +1714,7 @@ When I opened the door, the cat ran out.
     sections: [
       {
         heading: '状態動詞とは',
+        mangaId: 'eigo_s135_manga',
         body: `動詞には「動作」を表すものと「状態」を表すものがある。状態を表す動詞は進行形にしない。
 
 ■ 状態動詞の代表
@@ -2154,6 +2155,7 @@ go が二回続くので変に見えるが、これは正しい文である。�
     sections: [
       {
         heading: '「いつ決めたか」で選ぶ',
+        mangaId: 'eigo_s140_manga',
         body: `will と be going to は、どちらも未来のことを表す。ちがいは「決めた時点がどこにあるか」である。
 
 ■ その場で決めた → will
@@ -3364,6 +3366,7 @@ It has been three years since he left Japan.（彼が日本を発ってから3�
     sections: [
       {
         heading: '二つの形が指す範囲のちがい',
+        mangaId: 'eigo_s153_manga',
         body: `過去形と現在完了は、どちらも「過去に起きたこと」を語る。ちがいは、その出来事を今と結びつけるかどうかである。
 
 ■ 過去形：点で終わる

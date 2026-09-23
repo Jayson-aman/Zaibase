@@ -2373,6 +2373,7 @@ worse に -er を付けた worser も存在しない形である。
     sections: [
       {
         heading: 'as ~ as の基本',
+        mangaId: 'eigo_s249_manga',
         body: `二つのものが同じ程度であることを表すときは、形容詞・副詞を二つの as ではさむ。
 
 ■ 基本の形

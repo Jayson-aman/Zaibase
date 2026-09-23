@@ -2975,6 +2975,7 @@ are が二回出てくるが、一つ目は関係詞の中の動詞（先行詞 
     sections: [
       {
         heading: '主格と目的格の見分け方',
+        mangaId: 'eigo_s330_manga',
         body: `関係代名詞のあとに何が続くかで、主格か目的格かが決まる。
 
 ■ 主格：関係詞のあとが動詞
@@ -3626,6 +3627,7 @@ why は先行詞 the reason とともに使い、how は先行詞なしで「〜
     sections: [
       {
         heading: '語順が入れかわるしくみ',
+        mangaId: 'eigo_s337_manga',
         body: `受動態は「〜される」という言い方で、be動詞＋過去分詞で作る。
 
 例）Tom broke the window.（トムが窓をこわした）… 能動態

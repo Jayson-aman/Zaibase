@@ -3090,6 +3090,7 @@ say は SVOO を作れない。
     sections: [
       {
         heading: '二つの言い方',
+        mangaId: 'eigo_s074_manga',
         body: `第4文型の文は、前置詞を使って言いかえることができる。give の仲間は to を使う。
 
 ■ 書きかえの形
