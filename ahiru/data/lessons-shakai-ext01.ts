@@ -361,6 +361,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '日本の屋根＝3つのアルプス',
+        mangaId: 'shakai_s006_manga',
         body: `中部地方の内陸には、3,000m級の高い山が連なる3つの山脈がある。まとめて「日本アルプス」「日本の屋根」と呼ばれる。明治時代にイギリス人のウォルター・ウェストンがヨーロッパのアルプスになぞらえて世界に紹介したことから、この名がついた。
 
 ■ 飛騨山脈（ひださんみゃく）＝北アルプス
@@ -875,6 +876,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '水が得にくい土地の使い方',
+        mangaId: 'shakai_s014_manga',
         body: `台地はまわりより一段高い平らな土地で、川の水面より高いため水を引きにくい。この「水が得にくい」という条件が、その土地の農業を決めてきた。
 
 ■ シラス台地（鹿児島県・宮崎県南部）
@@ -1008,6 +1010,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '流域面積とは何か',
+        mangaId: 'shakai_s016_manga',
         body: `流域面積とは、その川に降った雨が集まってくる範囲全体の広さのことである。長さが短くても、支流をたくさん集めて広い範囲の水を運ぶ川は、流域面積が大きくなる。
 
 ■ 流域面積ランキング
@@ -1276,6 +1279,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: 'のこぎりの歯のような海岸',
+        mangaId: 'shakai_s020_manga',
         body: `リアス海岸は、山地がしずむ（または海面が上がる）ことで、もともと谷だったところに海水が入りこんでできた海岸である。地図で見ると、のこぎりの歯のように陸と海が細かく入り組んでいる。「リアス」はスペイン語で入り江を意味する「リア（ria）」に由来する。
 
 ■ 代表的なリアス海岸
@@ -1335,6 +1339,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '砂が積もってできる地形',
+        mangaId: 'shakai_s021_manga',
         body: `リアス海岸が「土地がしずんでできる」地形なのに対し、砂浜海岸のなかまは「砂が積もってできる」地形である。形のちがいで名前が変わるので、図と対応させて覚える。
 
 ■ 砂浜海岸
@@ -1514,6 +1519,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '季節風が日本の気候をつくる',
+        mangaId: 'shakai_s024_manga',
         body: `日本の気候を決めているのは、季節によって向きが変わる風＝季節風（モンスーン）である。
 
 ■ 冬（北西の季節風）

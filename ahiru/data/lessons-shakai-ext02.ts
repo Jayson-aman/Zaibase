@@ -523,6 +523,7 @@ export const shakaiExt02Lessons: Lesson[] = [
       {
         heading: '1. 促成栽培のしくみ',
         figureId: 'sext02_043',
+        mangaId: 'shakai_s043_manga',
         body: `冬でも暖かい気候とビニールハウスを利用して、野菜をふつうより早い時期に育てて出荷する方法を促成栽培という。高知県と宮崎県が代表的な産地である。
 
 ■ ピーマンの生産量（およその年間生産量）
@@ -2373,6 +2374,7 @@ export const shakaiExt02Lessons: Lesson[] = [
       {
         heading: '1. 養殖業と栽培漁業のちがい',
         figureId: 'sext02_068',
+        mangaId: 'shakai_s068_manga',
         body: `「育てる漁業」には養殖業と栽培漁業の2つがあり、入試ではこの区別が最もよく問われる。
 
 ■ 2つのちがい

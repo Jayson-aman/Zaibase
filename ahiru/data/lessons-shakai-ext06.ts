@@ -2347,6 +2347,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '外戚とは何か',
+        mangaId: 'shakai_s213_manga',
         body: `藤原氏が長く権力をにぎることができた理由は、たったひとつのしくみに集約される。それが「外戚」である。
 
 外戚とは、天皇から見た母方の親戚のことをいう。藤原氏は次のような方法で権力を築いた。
