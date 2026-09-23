@@ -149,6 +149,7 @@ export const kokugoExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '音符で読む',
+        mangaId: 'kokugo_s477_manga',
         body: `■ 音符とは
 形声文字のうち、音を表している部分のこと。
 ・晴＝日（意味）＋青（音・セイ）
@@ -270,6 +271,7 @@ export const kokugoExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '五つの大きさ',
+        mangaId: 'kokugo_s478_manga',
         body: `■ 大きい順にならべる
 文章 ＞ 段落 ＞ 文 ＞ 文節 ＞ 単語
 
@@ -388,6 +390,7 @@ export const kokugoExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '四つの関係',
+        mangaId: 'kokugo_s479_manga',
         body: `■ ①主語・述語の関係
 「だれが・何が」と「どうする・どんなだ・何だ」の組み合わせ。
 ・犬が　走る。
@@ -512,6 +515,7 @@ export const kokugoExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '五つの成分',
+        mangaId: 'kokugo_s483_manga',
         body: `■ 文の成分は五つ
 ①主語：だれが・何が
 ②述語：どうする・どんなだ・何だ
@@ -652,6 +656,7 @@ export const kokugoExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: 'おもな助詞',
+        mangaId: 'kokugo_s484_manga',
         body: `■ 関係を示すもの
 ・が：主語を示す
 　犬が　走る。
@@ -791,6 +796,7 @@ export const kokugoExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '三つの変わり方',
+        mangaId: 'kokugo_s485_manga',
         body: `■ 複合語とは
 二つ以上のことばが合わさって、一つの語になったもの。
 ・山＋道 → やまみち
@@ -1304,6 +1310,7 @@ export const kokugoExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '三つの決まり',
+        mangaId: 'kokugo_s481_manga',
         body: `■ ①「は・へ・を」
 ことばとことばをつなぐはたらき（助詞）のときは、この形で書く。
 ・わたしは学校へ行く。→ 「は」「へ」
@@ -1420,6 +1427,7 @@ export const kokugoExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: 'なかまで覚える',
+        mangaId: 'kokugo_s482_manga',
         body: `■ 形で決まるもの
 ・本（ほん）：細長いもの
 　えんぴつ、木、川、道、電話、ビン、バナナ、かさ
@@ -1675,6 +1683,7 @@ export const kokugoExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '二つの語り方',
+        mangaId: 'kokugo_s488_manga',
         body: `■ ①「ぼく・わたし」が語る
 登場人物の一人が、自分の見たことを語る書き方。
 例）ぼくは教室のドアを開けた。みんながこちらを見た。心臓が音を立てていた。
