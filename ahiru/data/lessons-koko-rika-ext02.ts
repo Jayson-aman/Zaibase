@@ -29,6 +29,7 @@ export const kokoRikaExt02Lessons: Lesson[] = [
     sections: [
       {
         heading: '力の三つのはたらき',
+        mangaId: 'koko_rika_s036_manga',
         body: `理科でいう「力」は、日常語の「がんばる力」とはまったく別のものである。物体に対して次の三つのどれかを引き起こすはたらきを、まとめて力と呼ぶ。
 
 ■ ① 物体の形を変える
@@ -111,6 +112,7 @@ export const kokoRikaExt02Lessons: Lesson[] = [
     sections: [
       {
         heading: '質量と重さは別のもの',
+        mangaId: 'koko_rika_s037_manga',
         body: `日常語では「重さ」と「質量」を区別しないが、理科では意味も単位もはっきり違う。
 
 ■ 質量

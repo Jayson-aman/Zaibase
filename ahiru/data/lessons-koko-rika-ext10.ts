@@ -30,6 +30,7 @@ export const kokoRikaExt10Lessons: Lesson[] = [
     sections: [
       {
         heading: '分類の第一歩は背骨の有無',
+        mangaId: 'koko_rika_s341_manga',
         body: `動物を分類するとき、まず見るのは背骨があるかどうかである。
 
 ■ セキツイ動物（背骨がある動物）

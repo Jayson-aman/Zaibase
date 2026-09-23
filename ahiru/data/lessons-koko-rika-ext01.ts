@@ -30,6 +30,7 @@ export const kokoRikaExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '光の直進と「物が見える」ということ',
+        mangaId: 'koko_rika_s001_manga',
         body: `理科で光を扱うとき、いちばん最初に確認しておくべきことがある。それは「光はまっすぐ進む」という当たり前に見える事実と、「物が見えるとはどういうことか」という二つである。
 
 ■ 光の直進
@@ -114,6 +115,7 @@ export const kokoRikaExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '法線を引くことから始める',
+        mangaId: 'koko_rika_s002_manga',
         body: `反射の問題でまちがえる人の大半は、角の測り方を取りちがえている。まず用語を正確に押さえよう。
 
 ■ 三つの用語
@@ -373,6 +375,7 @@ P′の位置には実際には光は届いていない。光は鏡の表面で�
     sections: [
       {
         heading: '正反射と乱反射',
+        mangaId: 'koko_rika_s005_manga',
         body: `反射の法則（入射角＝反射角）はどんな面でも成り立つ。それなのに鏡と紙で見え方がまるでちがうのはなぜか。
 
 ■ 正反射
@@ -652,6 +655,7 @@ A→M→B の道のりは、A′→B の直線の長さと等しい。二点を�
     sections: [
       {
         heading: '2回の屈折で向きが戻る理由',
+        mangaId: 'koko_rika_s008_manga',
         body: `厚さが一様なガラス板（平行に向かい合った2面をもつ板）に、光を斜めから当ててみる。
 
 ■ 1回目：空気 → ガラス
@@ -2050,6 +2054,7 @@ a＝12、b＝60 の行でも
     sections: [
       {
         heading: '音源は振動している',
+        mangaId: 'koko_rika_s022_manga',
         body: `音が出ているとき、必ずその物体は細かくふるえている。これを確かめる実験がいくつもある。
 
 ■ 実験①：おんさと水
