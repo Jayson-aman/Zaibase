@@ -277,6 +277,7 @@ export const kokoMathExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '折れ点を通る平行線を引く',
+        mangaId: 'koko_math_s194_manga',
         body: `ℓ∥m の2直線の間に点Pがあり、ℓ上の点Aとm上の点Bを結ぶ折れ線A—P—Bが引かれている。∠APB を、∠PAℓ（上の角）と ∠PBm（下の角）から求めたい。このままでは同位角も錯角も見えないが、点Pを通り ℓ に平行な直線nを引くと一気に見えるようになる。
 
 nを引くと、∠APB が n によって2つに分けられる。
@@ -381,6 +382,7 @@ PQ∥m より錯角は等しいから ∠QPB＝48°。
       },
       {
         heading: '星形五角形の先端の和は180°',
+        mangaId: 'koko_math_s195_manga',
         body: `星形（五芒星）の5つの先端の角の和は、いつでも180°になる。星の形がゆがんでいても変わらない。
 
 ■ 証明の考え方

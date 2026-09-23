@@ -743,6 +743,7 @@ S＝πr²×ℓ/(2πr)＝ℓr/2。
     sections: [
       {
         heading: '直径を見込む角はつねに直角',
+        mangaId: 'koko_math_s285_manga',
         body: `円周角の定理のもっとも有名な特別な場合が、これである。
 
 　　線分ABが円Oの直径のとき、円周上のどの点Cについても∠ACB＝90°
@@ -1557,6 +1558,7 @@ CF⊥ABより∠BFC＝90°。
     sections: [
       {
         heading: '2本の接線の長さは等しい',
+        mangaId: 'koko_math_s295_manga',
         body: `円Oの外部の点Pから、円に2本の接線を引き、接点をA・Bとする。このとき
 
 　　PA ＝ PB
