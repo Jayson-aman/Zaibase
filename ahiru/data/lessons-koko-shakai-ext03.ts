@@ -1102,6 +1102,7 @@ export const kokoShakaiExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: '品目ごとの高低を整理する',
+        mangaId: 'koko_shakai_s089_manga',
         body: `食料自給率は品目によって大きく異なる。2022年度の重量ベースの数字でおおよその順に並べると次のようになる。
 
 ■ 高い（8割以上）
@@ -1638,6 +1639,7 @@ export const kokoShakaiExt03Lessons: Lesson[] = [
       },
       {
         heading: '中小工場が支えるものづくり',
+        mangaId: 'koko_shakai_s095_manga',
         body: `阪神工業地帯のもうひとつの特徴は、働く人が少ない中小工場の割合が高いことである。
 
 ■ 中小企業とは

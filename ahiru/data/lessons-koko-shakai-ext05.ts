@@ -253,6 +253,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
       },
       {
         heading: '中国文明 — 甲骨文字から秦・漢へ',
+        mangaId: 'koko_shakai_s154_manga',
         body: `中国では黄河の中流域に早くから農耕文明が発達し、紀元前1600年ごろ殷（いん）という国がおこった。
 
 ■ 殷と甲骨文字

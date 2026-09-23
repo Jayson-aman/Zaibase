@@ -195,6 +195,7 @@ export const kokoShakaiExt02Lessons: Lesson[] = [
     sections: [
       {
         heading: '三つの領域と、その外側',
+        mangaId: 'koko_shakai_s043_manga',
         body: `国の主権がおよぶ範囲を領域といい、領土・領海・領空の三つからなる。
 
 ■ 領土
@@ -608,6 +609,7 @@ EEZは領海ではないので、他国の船の航行、航空機の飛行、�
     sections: [
       {
         heading: '面積と人口の上位・下位',
+        mangaId: 'koko_shakai_s048_manga',
         body: `■ 面積（概数）
 1位 北海道 約83,400km²
 2位 岩手県 約15,300km²

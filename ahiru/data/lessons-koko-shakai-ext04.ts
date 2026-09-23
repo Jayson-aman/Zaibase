@@ -2039,6 +2039,7 @@ export const kokoShakaiExt04Lessons: Lesson[] = [
     sections: [
       {
         heading: 'やませと冷害',
+        mangaId: 'koko_shakai_s136_manga',
         body: `東北地方の中央には奥羽山脈が南北に走り、地方を太平洋側と日本海側に分けている。この山脈が気候の境になっている。
 
 ■ やませとは

@@ -1465,6 +1465,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
       },
       {
         heading: '禅宗の二つの流れ',
+        mangaId: 'koko_shakai_s208_manga',
         body: `禅宗は坐禅によって自ら悟りを開こうとする教えで、宋から伝えられた。念仏系が阿弥陀仏の力にすがる他力であるのに対し、禅宗は自力である。
 
 ■ 臨済宗 — 栄西（1141〜1215）

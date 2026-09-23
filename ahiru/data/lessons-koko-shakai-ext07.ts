@@ -1078,6 +1078,7 @@ export const kokoShakaiExt07Lessons: Lesson[] = [
     sections: [
       {
         heading: '制度の内容と目的',
+        mangaId: 'koko_shakai_s239_manga',
         body: `参勤交代は1635年の武家諸法度（寛永令）で制度化された。
 
 ■ 内容
