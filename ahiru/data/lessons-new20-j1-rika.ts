@@ -750,6 +750,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '2. 実験：金色の石は本物の金か',
+        mangaId: 'new20_j1_rika_10_manga',
         level: 'oyo',
         figureId: 'lf_new20j1rika_10',
         body: `■ 純金と黄鉄鉱
@@ -813,6 +814,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
     sections: [
       {
         heading: '1. 沸点は「決まった温度」ではない',
+        mangaId: 'new20_j1_rika_11_manga',
         level: 'kiso',
         body: `■ 沸とうとは
 
@@ -928,6 +930,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '3. クロマトグラフィー：動きやすさのちがいを利用する',
+        mangaId: 'new20_j1_rika_12_manga',
         level: 'nyushi',
         figureId: 'lf_new20j1rika_12',
         body: `■ ペーパークロマトグラフィー
@@ -1077,6 +1080,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '2. ガス警報器と消火器への応用',
+        mangaId: 'new20_j1_rika_14_manga',
         level: 'oyo',
         figureId: 'lf_new20j1rika_14',
         body: `■ ガス警報器の取り付け位置
