@@ -2977,6 +2977,7 @@ tomorrow / next week / this weekend / soon / in a few days
     sections: [
       {
         heading: '決定の時点で分ける',
+        mangaId: 'koko_eigo_s103_manga',
         figureId: 'lf_kokoeigoext03_103',
         body: `will と be going to は、実行するのがどちらも未来である点は同じである。違うのは「いつ決めたか」だけである。
 

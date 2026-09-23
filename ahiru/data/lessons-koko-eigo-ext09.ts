@@ -780,6 +780,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: 'that は who・which の両方の代わりになる',
+        mangaId: 'koko_eigo_s304_manga',
         body: `that は、先行詞の種類を問わずに使える関係代名詞である。
 
 ■ 人が先行詞（who の代わり）

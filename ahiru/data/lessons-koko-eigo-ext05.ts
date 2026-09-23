@@ -187,6 +187,7 @@ Can you 〜?（〜してくれますか＝依頼）／Can I 〜?（〜しても�
     sections: [
       {
         heading: 'can が使えない場所を be able to が埋める',
+        mangaId: 'koko_eigo_s148_manga',
         figureId: 'lf_kokoeigoext05_148',
         body: `can は便利だが、たった二つの形（can・could）しか持たない。未来を表す will や、完了形の have、不定詞の to といっしょに使いたいとき、can では対応できない。英語には「助動詞を二つ並べてはいけない」という決まりがあるからである。
 

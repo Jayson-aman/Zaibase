@@ -3016,6 +3016,7 @@ The music could be heard from far away.
     sections: [
       {
         heading: '3つの前置詞を意味で分ける',
+        mangaId: 'koko_eigo_s141_manga',
         body: `known は「知られている」だが、後ろの前置詞によって何を言っているかが変わる。
 
 ■ be known to 〜（〜に知られている）
@@ -3218,6 +3219,7 @@ be tired from 〜＝「〜で疲れる」　I am tired from working all day.
     sections: [
       {
         heading: 'of と from の使い分け',
+        mangaId: 'koko_eigo_s143_manga',
         body: `made の後ろの前置詞は、材料が元の姿をとどめているかどうかで決まる。
 
 ■ be made of 〜（材料が見てわかる）

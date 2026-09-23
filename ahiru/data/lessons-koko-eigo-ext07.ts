@@ -1598,6 +1598,7 @@ very、so、really などを使う。
     sections: [
       {
         heading: '差の語句の置き場所',
+        mangaId: 'koko_eigo_s237_manga',
         body: `どれだけ違うかを表す語句は、比較級の直前に置く。
 
 例）Ken is two years older than Tom.（ケンはトムより2歳年上だ）
@@ -2666,6 +2667,7 @@ The Shinano River is longer than any other river in Japan.
     sections: [
       {
         heading: 'No other を主語にする形',
+        mangaId: 'koko_eigo_s248_manga',
         body: `否定語 no を主語に置いて「〜より…なものはない」と表すと、結果として「Aがいちばん…だ」という意味になる。
 
 ■ 二通りの形

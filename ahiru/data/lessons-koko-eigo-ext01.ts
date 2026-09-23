@@ -2917,6 +2917,7 @@ big は口語的で幅広く使える。large は数量・面積に使う（a la
     sections: [
       {
         heading: 'say／tell／speak／talk',
+        mangaId: 'koko_eigo_s032_manga',
         body: `どれも「言う・話す」と訳せるが、後ろに続く形がそれぞれ決まっている。形で選ぶ。
 
 ■ say（内容を言う）
