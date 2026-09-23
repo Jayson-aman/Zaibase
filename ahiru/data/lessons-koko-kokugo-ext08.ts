@@ -384,6 +384,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
       },
       {
         heading: '複合語の切れ目に気をつける',
+        mangaId: 'koko_kokugo_s270_manga',
         body: `二つの語がくっついてできた語では、後ろの語の最初の音は「語頭」としてあつかわれ、ハ行転呼が起きなかったものがある。
 
 ■ 例
@@ -629,6 +630,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: 'かわいい系：うつくし・らうたし',
+        mangaId: 'koko_kokugo_s273_manga',
         body: `■ うつくし
 意味＝かわいらしい・いとしい。小さいもの、幼いものに対するいつくしみの気持ちを表す。現代語の「美しい（美的にすぐれている）」の意味になるのは中世以降で、中学入試・高校入試で扱う文章ではまず「かわいらしい」と訳す。
 例）竹取物語「三寸ばかりなる人、いとうつくしうてゐたり」
@@ -798,6 +800,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '同じ音に二つの意味',
+        mangaId: 'koko_kokugo_s275_manga',
         body: `■ あやし
 ①不思議だ・変だ（怪し）
 　例）竹取物語「あやしがりて、寄りて見るに、筒の中光りたり。」
@@ -888,6 +891,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '場面ごと覚える六語',
+        mangaId: 'koko_kokugo_s276_manga',
         body: `■ おどろく
 ①目を覚ます　②はっと気づく　③びっくりする
 例）宇治拾遺物語「もの申しさぶらはむ。おどろかせたまへ。」
@@ -3331,6 +3335,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '縁語と折句 — 伊勢物語の名場面',
+        mangaId: 'koko_kokugo_s301_manga',
         body: `■ 縁語
 一つの語と関係の深い語を、歌の中にいくつも配置する技法。表面の意味とは別に、語どうしの連想のつながりを楽しませる。
 

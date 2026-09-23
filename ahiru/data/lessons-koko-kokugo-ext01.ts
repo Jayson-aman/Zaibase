@@ -396,6 +396,7 @@ export const kokoKokugoExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '「おさめる」を四つに分ける',
+        mangaId: 'koko_kokugo_s005_manga',
         body: `「おさめる」はもともと「あるべき所にきちんと置く」という広い意味の和語である。何をどこに置くかによって、あてる漢字が変わる。
 
 ■ 収める…手に入れる。中にきちんと入れる。
@@ -797,6 +798,7 @@ export const kokoKokugoExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '五つの型と判定のことば',
+        mangaId: 'koko_kokugo_s009_manga',
         body: `二字熟語の構成は、次の五つに分けるのが標準である。判定するときは、決まった言い方にあてはめてみる。
 
 ■ 型①：似た意味の字を重ねる（同義・類義）
@@ -1013,6 +1015,7 @@ export const kokoKokugoExt01Lessons: Lesson[] = [
       },
       {
         heading: '接尾語型と畳語',
+        mangaId: 'koko_kokugo_s011_manga',
         body: `下に付いて語の性質・状態を示す字を接尾語という。
 
 ■ 「〜的」…〜のような、〜に関する

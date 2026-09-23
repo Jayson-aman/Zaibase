@@ -1760,6 +1760,7 @@ export const kokoKokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '擬人法の見つけ方と二つの効果',
+        mangaId: 'koko_kokugo_s213_manga',
         body: `擬人法は詩でよく学ぶが、小説の地の文にも数多く使われている。むしろ小説では、心情を直接書かないための道具として使われる。
 
 ■ 見つけ方
