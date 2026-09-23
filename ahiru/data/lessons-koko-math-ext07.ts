@@ -31,6 +31,7 @@ export const kokoMathExt07Lessons: Lesson[] = [
     sections: [
       {
         heading: '相似の意味と記号∽',
+        mangaId: 'koko_math_s231_manga',
         figureId: 'lf_kokomathext07_231',
         body: `二つの図形の一方を、形を変えずに一定の割合で拡大または縮小すると他方にぴったり重ね合わせられるとき、この二つの図形は相似であるという。記号 ∽ を使って「△ABC∽△DEF」と書く。
 

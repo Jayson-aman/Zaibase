@@ -1618,6 +1618,7 @@ a<0 なので x＝−2 のとき y は最大 b、x＝4 のとき y は最小 −
     sections: [
       {
         heading: '連立方程式＝2直線の交点',
+        mangaId: 'koko_math_s139_manga',
         body: `連立方程式
 　2x−y＝4 … ①
 　x+y＝5 … ②
