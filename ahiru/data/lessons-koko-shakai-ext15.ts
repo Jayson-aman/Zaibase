@@ -175,6 +175,7 @@ export const kokoShakaiExt15Lessons: Lesson[] = [
       },
       {
         heading: '練習の手順',
+        mangaId: 'koko_shakai_s500_manga',
         body: `■ 例題1
 「なぜ国会は二院制をとっているのか。」
 → 「審議を慎重に行い、一つの議院の行きすぎをおさえて、国民のさまざまな意見を反映させるため。」
@@ -1738,6 +1739,7 @@ export const kokoShakaiExt15Lessons: Lesson[] = [
       },
       {
         heading: '最後に確かめること',
+        mangaId: 'koko_shakai_s515_manga',
         body: `■ 確認リスト
 □ 三大原則を順に言える
 □ 自由権の3分類を言える
@@ -1850,6 +1852,7 @@ export const kokoShakaiExt15Lessons: Lesson[] = [
       },
       {
         heading: '最後に確かめること',
+        mangaId: 'koko_shakai_s516_manga',
         body: `■ 確認リスト
 □ 参議院に解散はない
 □ 予算を先に審議するのは衆議院
@@ -1961,6 +1964,7 @@ export const kokoShakaiExt15Lessons: Lesson[] = [
       },
       {
         heading: '最後に確かめること',
+        mangaId: 'koko_shakai_s517_manga',
         body: `■ 確認リスト
 □ 均衡価格は2本の曲線の交点
 □ 日本銀行の3つの役割を言える
@@ -2065,6 +2069,7 @@ export const kokoShakaiExt15Lessons: Lesson[] = [
       },
       {
         heading: '最後に確かめること',
+        mangaId: 'koko_shakai_s518_manga',
         body: `■ 確認リスト
 □ 常任理事国5か国を言える
 □ 拒否権は常任理事国だけがもつ
