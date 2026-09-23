@@ -4078,6 +4078,7 @@ Would you like to come to my party?（パーティーに来ませんか。）
     sections: [
       {
         heading: '三つの「見る」のちがい',
+        mangaId: 'eigo_s382_manga',
         body: `英語では「見る」を表す動詞が三つあり、意識の強さと対象の動きで使い分ける。
 
 ■ see ＝ 目に入る・見える
@@ -4173,6 +4174,7 @@ see → saw ／ look → looked ／ watch → watched
     sections: [
       {
         heading: 'hear と listen to',
+        mangaId: 'eigo_s383_manga',
         body: `「聞く」も、意識するかどうかで動詞が変わる。see と look at の関係とまったく同じである。
 
 ■ hear ＝ 自然に耳に入る
@@ -4270,6 +4272,7 @@ hear → heard（つづりに注意。heared とはしない）／listen → lis
     sections: [
       {
         heading: '四つの動詞の語順',
+        mangaId: 'eigo_s384_manga',
         body: `「話す・言う」を表す動詞は、後ろに何を置くかが動詞ごとに決まっている。語順で覚えるのがいちばん確実である。
 
 ■ speak ＋ 言語 ／ speak to ＋ 人
@@ -4372,6 +4375,7 @@ talk about（〜について話す）／talk with（〜と話す）／talk on th
     sections: [
       {
         heading: 'borrow と lend',
+        mangaId: 'eigo_s385_manga',
         body: `貸し借りの動詞は、ものが動く向きで決まる。
 
 ■ borrow ＝ 借りる（相手から自分へ）

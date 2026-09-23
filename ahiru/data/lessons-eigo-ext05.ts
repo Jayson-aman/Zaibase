@@ -2754,6 +2754,7 @@ How many books he has!（彼はなんてたくさんの本を持っているの�
     sections: [
       {
         heading: '名詞があるかどうかで決める',
+        mangaId: 'eigo_s187_manga',
         body: `感嘆文で What と How のどちらを使うかは、文の中に名詞があるかどうかで決まる。手順にしてしまえば迷わない。
 
 ■ 手順① 「なんて〜」の部分に名詞があるか

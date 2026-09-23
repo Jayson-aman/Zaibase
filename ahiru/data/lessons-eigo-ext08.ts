@@ -432,6 +432,7 @@ every Saturday は on Saturdays（毎週土曜日に）と同じ意味を表す�
     sections: [
       {
         heading: 'せまい場所は at、広い場所は in',
+        mangaId: 'eigo_s266_manga',
         body: `at と in の境目は「その場所を一点と見るか、広がりのある空間と見るか」で決まる。とくに「〜に着く」を表す動詞と一緒に問われることが多い。
 
 ■ 到着を表す言い方

@@ -2277,6 +2277,7 @@ more に二つの働き（many/much の比較級と、長い形容詞の比較�
     sections: [
       {
         heading: 'far の変化',
+        mangaId: 'eigo_s248_manga',
         body: `far（遠い・遠くに）は二通りの変化を持つ。
 
 ■ 距離を表すとき：far → farther → farthest
@@ -3246,6 +3247,7 @@ Which is the longest of the three pencils?（3つ → 最上級）
     sections: [
       {
         heading: 'in と of の見分け方',
+        mangaId: 'eigo_s257_manga',
         body: `最上級の文では「どの範囲でいちばんか」を in か of で示す。この使い分けが入試の定番である。
 
 ■ in＋場所・集団（ひとまとまりの範囲）

@@ -548,6 +548,7 @@ played（プレイド）・opened（オープンド）・listened（リスンド
       },
       {
         heading: 'つづりでまちがえやすい語',
+        mangaId: 'eigo_s122_manga',
         body: `発音とあわせて、つづりの例外も確認しておく。
 
 ■ e で終わる語に -ed を付けるとき
