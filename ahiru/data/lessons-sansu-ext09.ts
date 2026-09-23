@@ -471,6 +471,7 @@ export const sansuExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 正解・不正解の得点つるかめ算',
+        mangaId: 'sansu_s311_manga',
         body: `得点が「増える」だけでなく「減る」場合も、つるかめ算の考え方で解けます。ポイントは「1問変わるごとの点数の動き方」です。
 
 ■ 例題：10問のクイズ。正解は1問3点、不正解は1問につき1点減点。全問答えて合計得点は22点
@@ -3100,6 +3101,7 @@ export const sansuExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 3人兄弟の年齢を順番に求める',
+        mangaId: 'sansu_s339_manga',
         figureId: 'lf_ext09_339',
         body: `3人以上の年齢算では、1人を基準にして、他の人を順番に式で表していきます。
 
