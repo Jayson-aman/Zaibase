@@ -354,6 +354,7 @@ export const shakaiExt11Lessons: Lesson[] = [
     sections: [
       {
         heading: '三つの義務と、権利でもあるもの',
+        mangaId: 'shakai_s376_manga',
         figureId: 'sf11_s376',
         body: `日本国憲法が国民に定めている義務は3つだけである。
 

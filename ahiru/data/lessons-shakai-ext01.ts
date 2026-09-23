@@ -642,6 +642,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '平野は「積もってできた土地」',
+        mangaId: 'shakai_s010_manga',
         body: `日本の平野の多くは、川が上流からけずり取った土砂を下流に積もらせてできた「沖積平野（ちゅうせきへいや）」である。
 
 ■ 沖積平野 … 川の水がはこんできた砂や泥が積もってできた、低く平らな土地。地下水が浅く、水が得やすいので水田になりやすい。ただし低いので洪水にあいやすい。
@@ -818,6 +819,7 @@ export const shakaiExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: 'まわりを山に囲まれた平地',
+        mangaId: 'shakai_s013_manga',
         body: `盆地は、まわりを山に囲まれた平地である。海から遠く風が通りにくいため、次のような気候になる。
 
 ・夏 … 熱がこもって非常に暑い（甲府市は40℃をこえたことがある）。

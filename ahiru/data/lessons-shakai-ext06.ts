@@ -26,6 +26,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '打製石器の時代（旧石器時代）',
+        mangaId: 'shakai_s181_manga',
         body: `日本列島に人が住みはじめたのは、今から約3万8千年前ごろと考えられている。この時代を「旧石器時代」といい、人々は石を打ち欠いてするどい刃をつくった「打製石器」を使っていた。
 
 ■ くらしのすがた
@@ -752,6 +753,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '女王・卑弥呼と邪馬台国',
+        mangaId: 'shakai_s191_manga',
         body: `3世紀ごろ、中国の歴史書『魏志』倭人伝（『三国志』魏書東夷伝倭人条）に、邪馬台国という国と、その女王・卑弥呼のことが記されている。
 
 ■ 卑弥呼はどんな人物か
@@ -1345,6 +1347,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '対等をめざした外交',
+        mangaId: 'shakai_s199_manga',
         body: `589年、中国では隋が南北朝を統一し、強大な帝国となった。聖徳太子は、この隋から進んだ政治制度や文化を学ぶため、使者（遣隋使）を送った。
 
 ■ 607年の遣隋使
@@ -1550,6 +1553,7 @@ export const shakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '白村江の戦い（663年）と国防',
+        mangaId: 'shakai_s202_manga',
         body: `7世紀の朝鮮半島では、高句麗・百済・新羅の三国が争っていた。唐と結んだ新羅が百済をほろぼすと、日本は古くから交流のあった百済を復興させるため大軍を送った。
 
 663年、朝鮮半島南西部の白村江で、日本・百済の軍は唐・新羅の連合軍と戦って大敗した。
