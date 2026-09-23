@@ -37,6 +37,7 @@ export const shakaiExt11Lessons: Lesson[] = [
       },
       {
         heading: '2. どこが変わったのか',
+        mangaId: 'shakai_s371_manga',
         body: `二つの憲法のちがいは、次の3点をおさえると整理できる。
 
 ■ 主権者：天皇 → 国民
@@ -512,6 +513,7 @@ export const shakaiExt11Lessons: Lesson[] = [
       },
       {
         heading: '2. まぎらわしい区別',
+        mangaId: 'shakai_s378_manga',
         body: `入試では「この権利はどの自由か」を分類させる問題が出る。
 
 ・「好きな宗教を信じる」→ 精神の自由（信教の自由）
@@ -1283,6 +1285,7 @@ export const shakaiExt11Lessons: Lesson[] = [
       },
       {
         heading: '2. なぜ衆議院が優先されるのか',
+        mangaId: 'shakai_s389_manga',
         body: `衆議院は任期が4年と短く、解散もあるため、参議院よりも選挙の機会が多い。そのぶん、そのときどきの国民の意思をより新しく反映していると考えられている。これが衆議院の優越が認められる理由である。
 
 ■ 両院協議会
@@ -2123,6 +2126,7 @@ export const shakaiExt11Lessons: Lesson[] = [
       },
       {
         heading: '2. 刑事裁判',
+        mangaId: 'shakai_s400_manga',
         body: `罪を犯したとうたがわれる人について、有罪か無罪か、有罪ならどのような刑罰かを決める裁判である。
 
 ■ 登場人物
