@@ -2563,6 +2563,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
     sections: [
       {
         heading: '1. 産業の3分類とペティ＝クラークの法則',
+        mangaId: 'kshakai_12_industry_structure_manga',
         level: 'kiso',
         body: `■ 産業の3分類
 
@@ -3269,6 +3270,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
       },
       {
         heading: '3. 世界の貧困問題',
+        mangaId: 'kshakai_15_human_rights_poverty_manga',
         level: 'oyo',
         body: `■ 絶対的貧困と相対的貧困
 
@@ -4013,6 +4015,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
     sections: [
       {
         heading: '1. GDP（国内総生産）とは何か',
+        mangaId: 'kshakai_19_economy_advanced_manga',
         level: 'kiso',
         body: `■ GDPの定義
 
