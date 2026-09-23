@@ -895,6 +895,7 @@ export const kokugoExt11Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 作品のプロフィールと冒頭',
+        mangaId: 'kokugo_s401_manga',
         body: `■ 基本データ
 ・成立　平安時代前期（九世紀末〜十世紀初め）
 ・作者　未詳（わかっていない）

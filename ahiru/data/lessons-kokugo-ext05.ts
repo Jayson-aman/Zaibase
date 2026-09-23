@@ -2015,6 +2015,7 @@ export const kokugoExt05Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 三段階の判定手順',
+        mangaId: 'kokugo_s173_manga',
         figureId: 'lf_kk05_173',
         body: `動詞の活用の種類は五つ（五段・上一段・下一段・カ変・サ変）。次の手順で必ず決まります。
 
@@ -2396,6 +2397,7 @@ export const kokugoExt05Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 言い切りにもどして最後の音を見る',
+        mangaId: 'kokugo_s177_manga',
         figureId: 'lf_kk05_177',
         body: `形容詞と形容動詞は、どちらも性質・状態を表し、はたらきもよく似ています。区別する方法はただ一つ、言い切りの形にもどすことです。
 

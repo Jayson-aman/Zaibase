@@ -696,6 +696,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '「の」の識別手順',
+        mangaId: 'kokugo_s198_manga',
         body: `「の」は入試で最もよく出る識別問題である。次の順に置きかえて判定する。
 
 【手順1】「が」に置きかえられるか
@@ -990,6 +991,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '「で」の4分類',
+        mangaId: 'kokugo_s201_manga',
         body: `「で」は4つに分かれる。順に確かめていく。
 
 【1】格助詞
@@ -1086,6 +1088,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '「から」の2つの顔',
+        mangaId: 'kokugo_s202_manga',
         body: `「から」は格助詞と接続助詞の2つしかない。直前の語だけで決まる。
 
 【格助詞の「から」】直前が体言
@@ -2366,6 +2369,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '4種類の「ない」',
+        mangaId: 'kokugo_s215_manga',
         body: `「ない」は次の4つに分かれる。
 
 【1】打消の助動詞
@@ -2461,6 +2465,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '接続で決まる2つの意味',
+        mangaId: 'kokugo_s216_manga',
         body: `「そうだ」は接続を見るだけで意味が決まる、たいへん判定しやすい助動詞である。
 
 【様態】そういう様子だ、そうなりそうだ
@@ -2561,6 +2566,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '「ようだ」の3つの意味',
+        mangaId: 'kokugo_s217_manga',
         body: `「ようだ」は3つの意味をもつ。補える言葉で判定する。
 
 【比況（たとえ）】「まるで」を補える。
