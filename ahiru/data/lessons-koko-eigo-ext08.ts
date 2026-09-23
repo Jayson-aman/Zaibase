@@ -2589,6 +2589,7 @@ make を受け身にすると、消えていた to が現れる。
       },
       {
         heading: 'mind の答え方と、両方とれる動詞',
+        mangaId: 'koko_eigo_s285_manga',
         body: `■ Would you mind ~ing? への答え方
 mind は「〜をいやだと思う」という意味なので、承諾するときは否定で答える。
 例）Would you mind opening the window?（窓を開けていただけませんか）

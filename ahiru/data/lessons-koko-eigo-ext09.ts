@@ -434,6 +434,7 @@ whose のあとに a／the を付けないのは、whose が his と同じ所有
       },
       {
         heading: '先行詞が「される側」のときは受動態',
+        mangaId: 'koko_eigo_s300_manga',
         body: `関係詞節の中の動詞を能動にするか受動にするかは、先行詞がその動作を「する側」か「される側」かで決まる。
 
 例）Kyoto is a city which is visited by many people every year.

@@ -1189,6 +1189,7 @@ must ⇄ have to の書きかえが成り立つのは、義務の意味のとき
       },
       {
         heading: 'didn\'t have to の意味を取りちがえない',
+        mangaId: 'koko_eigo_s159_manga',
         body: `■ didn't have to＝「する必要がなかった」
 例）I didn't have to pay for the ticket. My friend bought it for me.
 　（チケット代を払う必要がなかった。友達が買ってくれたから）
@@ -1556,6 +1557,7 @@ had better は上から言う響きがあるので、目上の人や初対面の
       },
       {
         heading: '時・条件の副詞節では現在形',
+        mangaId: 'koko_eigo_s163_manga',
         body: `未来のことを言う文でも、when や if で始まる部分の中では will を使わない。これは英語の大きな決まりの一つである。
 
 例）I will call you when I arrive at the station.

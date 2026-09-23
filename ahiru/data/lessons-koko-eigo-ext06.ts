@@ -1020,6 +1020,7 @@ a UFO（ユー＝子音）／a USB cable（ユー＝子音）／a UN officer
     sections: [
       {
         heading: 'the が付く三つの場面',
+        mangaId: 'koko_eigo_s191_manga',
         body: `定冠詞 the は「相手にも特定できる」ことを示す語である。付ける・付けないは、次の三場面で判断する。
 
 ■ 場面①：二度目に指すとき

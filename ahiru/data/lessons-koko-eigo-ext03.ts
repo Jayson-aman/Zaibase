@@ -479,6 +479,7 @@ yesterday（昨日）／last night, last week, last year（昨夜・先週・昨
       },
       {
         heading: '過去形と現在完了の線引き',
+        mangaId: 'koko_eigo_s076_manga',
         body: `高校入試では、過去形と現在完了のどちらを選ぶかが選択問題で頻繁に問われる。判断のかぎは「時を示す語句が、今とつながっているか」である。
 
 ■ 過去形しか使えない語句

@@ -315,6 +315,7 @@ For about two months.
     sections: [
       {
         heading: '状態動詞と動作動詞',
+        mangaId: 'koko_eigo_s114_manga',
         body: `英語の動詞は、大きく「動作動詞」と「状態動詞」に分けられる。この区別が進行形を使えるかどうかを決める。
 
 ■ 動作動詞（動きがあり、始まりと終わりがある）
@@ -2740,6 +2741,7 @@ have か has かは主語で決まる。been と過去分詞の部分は変わ�
       },
       {
         heading: '過去形の受動態・過去完了との区別',
+        mangaId: 'koko_eigo_s138_manga',
         body: `似た形が並ぶので、それぞれの意味を区別しておく。
 
 ■ 3つの形を並べる

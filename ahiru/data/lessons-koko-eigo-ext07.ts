@@ -1433,6 +1433,7 @@ He is older than I am.（同じ意味。書き言葉ではこちら）
       },
       {
         heading: '比較級の文でまちがえやすい点',
+        mangaId: 'koko_eigo_s235_manga',
         body: `■ the をつけない
 × Ken is the taller than Tom. → ○ Ken is taller than Tom.
 比較級に the がつくのは、the 比較級 of the two（2つのうちのほう）と the 比較級, the 比較級（〜すればするほど）の二つの決まった形だけである。
