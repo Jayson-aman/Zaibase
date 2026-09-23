@@ -2539,6 +2539,7 @@ U字形磁石のN極とS極の間に導線を置き電流を流すと、導線�
       },
       {
         heading: `5. 入試レベル②：金属樹の実験と身のまわりの電池`,
+        mangaId: 'koko_rika_14_redox_battery_manga',
         figureId: 'lf_krika_67',
         level: 'nyushi',
         body: `■ 金属樹の実験

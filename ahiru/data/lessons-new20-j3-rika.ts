@@ -1407,6 +1407,7 @@ F1（RrYy）の自家受精によるF2の表現型比は、丸・黄:丸・緑:�
     sections: [
       {
         heading: '1. 一次電池と二次電池のちがい',
+        mangaId: 'new20_j3_rika_18_manga',
         level: 'oyo',
         figureId: 'lf_n20j3rika_18',
         body: `■ 一次電池と二次電池

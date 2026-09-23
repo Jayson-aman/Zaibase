@@ -630,6 +630,7 @@ export const kokoRikaExt15Lessons: Lesson[] = [
     sections: [
       {
         heading: '要点の総ざらい',
+        mangaId: 'koko_rika_s505_manga',
         body: `■ 有機物と無機物
 ・有機物：炭素をふくむ物質。燃やすと二酸化炭素（石灰水が白くにごる）と水（塩化コバルト紙が青から赤に変わる）ができる。砂糖・デンプン・エタノール・プラスチック・木。
 ・無機物：それ以外。食塩・金属・水・ガラス。
@@ -730,6 +731,7 @@ export const kokoRikaExt15Lessons: Lesson[] = [
     sections: [
       {
         heading: '要点の総ざらい',
+        mangaId: 'koko_rika_s506_manga',
         body: `■ 集め方の決め方（この順で聞く）
 ①水にとけにくいか → はい：水上置換法
 ②とけやすい → 空気より重いか
@@ -829,6 +831,7 @@ export const kokoRikaExt15Lessons: Lesson[] = [
     sections: [
       {
         heading: '要点の総ざらい',
+        mangaId: 'koko_rika_s507_manga',
         body: `■ 用語
 ・溶質：とけているもの（食塩、砂糖）
 ・溶媒：とかしているもの（水）
@@ -940,6 +943,7 @@ export const kokoRikaExt15Lessons: Lesson[] = [
     sections: [
       {
         heading: '要点の総ざらい',
+        mangaId: 'koko_rika_s508_manga1',
         body: `■ 分解の3つの実験
 ①炭酸水素ナトリウムの熱分解
 2NaHCO₃ → Na₂CO₃ + H₂O + CO₂
@@ -977,6 +981,7 @@ export const kokoRikaExt15Lessons: Lesson[] = [
       },
       {
         heading: '入試ではこう問われる',
+        mangaId: 'koko_rika_s508_manga2',
         body: `■ よく出る問い1：試験管の口を下げる理由
 「発生した水が加熱部分に流れこみ、試験管が割れるのを防ぐため」。水ができる反応だから、という点まで書けると確実。
 
@@ -1043,6 +1048,7 @@ export const kokoRikaExt15Lessons: Lesson[] = [
     sections: [
       {
         heading: '要点の総ざらい',
+        mangaId: 'koko_rika_s509_manga',
         body: `■ 鉄と硫黄の化合
 Fe + S → FeS
 加熱を始めると、反応で出た熱で反応が次々と進むので、途中で加熱をやめてよい。
@@ -1142,6 +1148,7 @@ Fe + S → FeS
     sections: [
       {
         heading: '要点の総ざらい',
+        mangaId: 'koko_rika_s510_manga',
         body: `■ 質量保存の法則
 化学変化の前後で、物質全体の質量は変わらない。
 理由は、化学変化で組み合わせが変わるだけで、原子の種類と数は変わらないためである。記述ではこの理由まで書く。
