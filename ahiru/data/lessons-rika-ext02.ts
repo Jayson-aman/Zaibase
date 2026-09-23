@@ -429,6 +429,7 @@ export const rikaExt02Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 不完全変態とは',
+        mangaId: 'rika_s042_manga',
         body: `こん虫の育ち方のもう1つのタイプが「不完全変態」で、さなぎの時期を経ずに成虫になる育ち方である。
 
 ■ 不完全変態の順序
@@ -2342,6 +2343,7 @@ export const rikaExt02Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 耳の各部分のはたらき',
+        mangaId: 'rika_s069_manga',
         figureId: 'rext02_069',
         body: `耳は音の振動を受け取って脳に伝える感覚器官であると同時に、体の傾きや回転を感じ取る平衡感覚の器官でもある。
 

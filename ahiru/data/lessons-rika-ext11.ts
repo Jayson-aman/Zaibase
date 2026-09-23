@@ -1952,6 +1952,7 @@ export const rikaExt11Lessons: Lesson[] = [
     sections: [
       {
         heading: '露点を表から求める',
+        mangaId: 'rika_s396_manga',
         figureId: 'rf11_s396',
         body: `空気を冷やしていくと、ある温度で飽和水蒸気量が実際の水蒸気量と等しくなり、それ以上冷やすと水蒸気が凝結し始める。この温度を露点(ろてん)という。
 

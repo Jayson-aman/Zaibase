@@ -393,6 +393,7 @@ export const rikaExt12Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 柱状図の深さの計算',
+        mangaId: 'rika_s417_manga',
         figureId: 'lf_rika_ext12_417',
         body: `柱状図（ちゅうじょうず）は、ボーリング調査などで得られた1地点の地下のようすを、地表から下に向かって層の種類と厚さの順に表した図である。
 

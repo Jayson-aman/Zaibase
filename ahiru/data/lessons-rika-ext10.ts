@@ -338,6 +338,7 @@ export const rikaExt10Lessons: Lesson[] = [
     sections: [
       {
         heading: '濃度の公式と基本例題',
+        mangaId: 'rika_s340_manga',
         figureId: 'lf_rext10_340',
         body: `水溶液のこさを表す「質量パーセント濃度」は、入試で最も出題される計算の基本です。まず用語を確認します。
 
