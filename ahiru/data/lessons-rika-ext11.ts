@@ -1189,6 +1189,7 @@ export const rikaExt11Lessons: Lesson[] = [
     sections: [
       {
         heading: '方角ごとの星の見え方のちがい',
+        mangaId: 'rika_s384_manga',
         figureId: 'rf11_s384',
         body: `星は空のどこでも地球の自転によって動いているが、観測する方角によって、動く向きの見え方が異なる。
 

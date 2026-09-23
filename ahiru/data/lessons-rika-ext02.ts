@@ -1841,6 +1841,7 @@ export const rikaExt02Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 心臓の4つの部屋と弁',
+        mangaId: 'rika_s062_manga',
         figureId: 'rext02_062',
         body: `心臓は血液を全身に送り出すポンプのはたらきをする器官で、4つの部屋からなる。
 

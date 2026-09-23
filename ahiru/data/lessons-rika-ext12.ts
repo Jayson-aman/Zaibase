@@ -1540,6 +1540,7 @@ P波よりも速さが遅く、あとから観測地点に届く波。届くと�
     sections: [
       {
         heading: '1. 初期微動継続時間とは',
+        mangaId: 'rika_s434_manga',
         figureId: 'lf_rika_ext12_434',
         body: `P波が到達してから、S波が到達するまでの時間を初期微動継続時間という。
 

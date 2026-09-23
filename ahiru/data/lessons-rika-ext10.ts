@@ -1069,6 +1069,7 @@ export const rikaExt10Lessons: Lesson[] = [
     sections: [
       {
         heading: '食塩のグラフはほぼ水平',
+        mangaId: 'rika_s350_manga',
         figureId: 'lf_rext10_350',
         body: `硝酸カリウムやミョウバンとは対照的に、食塩は温度が変わっても溶解度がほとんど変化しません。溶解度曲線を描くと、ほぼ水平な直線になります。
 

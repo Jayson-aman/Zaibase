@@ -93,6 +93,7 @@ export const rikaExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '光の反射の法則',
+        mangaId: 'rika_s177_manga',
         body: `光が鏡などの面に当たって跳ね返ることを反射という。反射には次の決まった法則がある。
 
 ■ 用語の確認
