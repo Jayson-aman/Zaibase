@@ -112,6 +112,7 @@ export const kokoMathExt07Lessons: Lesson[] = [
     sections: [
       {
         heading: '対応の順序が命',
+        mangaId: 'koko_math_s232_manga',
         body: `相似を式で書くときは、頂点を対応する順に並べる。これは約束ではなく、そのあとの計算をまちがえないための道具である。
 
 ■ △ABC∽△DEF が意味すること
