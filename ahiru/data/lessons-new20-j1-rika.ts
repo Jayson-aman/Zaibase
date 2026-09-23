@@ -20,6 +20,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
     sections: [
       {
         heading: '1. 反射の法則の復習と潜望鏡のしくみ',
+        mangaId: 'new20_j1_rika_01_manga',
         level: 'kiso',
         figureId: 'lf_new20j1rika_01',
         body: `■ 反射の法則のふりかえり
@@ -284,6 +285,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '2. 吸音材が音を吸収するしくみ',
+        mangaId: 'new20_j1_rika_04_manga',
         level: 'oyo',
         figureId: 'lf_new20j1rika_04',
         body: `■ 穴の多い素材が音を吸収する理由
@@ -442,6 +444,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '2. ゴムひもで同じ実験をすると',
+        mangaId: 'new20_j1_rika_06_manga',
         level: 'oyo',
         figureId: 'lf_new20j1rika_06',
         body: `■ 実験結果
@@ -518,6 +521,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '2. 実験結果とその意味',
+        mangaId: 'new20_j1_rika_07_manga',
         level: 'oyo',
         figureId: 'lf_new20j1rika_07',
         body: `■ 結果
@@ -597,6 +601,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '2. hPa(ヘクトパスカル)と天気予報',
+        mangaId: 'new20_j1_rika_08_manga',
         level: 'oyo',
         figureId: 'lf_new20j1rika_08',
         body: `■ Paだけでは数字が大きくなりすぎる
@@ -671,6 +676,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '2. 水圧の差から浮力を導く',
+        mangaId: 'new20_j1_rika_09_manga',
         level: 'oyo',
         figureId: 'lf_new20j1rika_09',
         body: `■ 物体の上面と下面にはたらく水圧を比べる
@@ -1267,6 +1273,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '3. 倍率と視野の関係：入試レベルの計算',
+        mangaId: 'new20_j1_rika_16_manga',
         level: 'nyushi',
         body: `■ 倍率を上げると視野はどうなるか
 
@@ -1330,6 +1337,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '2. 1枚の葉の中で同時に起こっていること',
+        mangaId: 'new20_j1_rika_17_manga',
         level: 'oyo',
         figureId: 'lf_new20j1rika_17',
         body: `■ 昼間の葉
@@ -1501,6 +1509,7 @@ E:ゼニゴケ(維管束がなく、種子をつくらない)
       },
       {
         heading: '2. 動物の分類の検索表',
+        mangaId: 'new20_j1_rika_19_manga',
         level: 'oyo',
         figureId: 'lf_new20j1rika_19',
         body: `■ 検索表の流れ
