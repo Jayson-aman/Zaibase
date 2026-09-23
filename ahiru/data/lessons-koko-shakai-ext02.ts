@@ -110,6 +110,7 @@ export const kokoShakaiExt02Lessons: Lesson[] = [
     sections: [
       {
         heading: '時差の計算手順',
+        mangaId: 'koko_shakai_s042_manga',
         body: `■ 基本の関係
 地球は1日（24時間）で360度自転する。したがって360÷24＝15で、経度15度ごとに1時間の時差が生じる。
 
@@ -1326,6 +1327,7 @@ EEZは領海ではないので、他国の船の航行、航空機の飛行、�
     sections: [
       {
         heading: '季節風が生まれるしくみ',
+        mangaId: 'koko_shakai_s056_manga',
         body: `■ 陸と海のあたたまり方のちがい
 陸（岩石・土）は温まりやすく冷めやすい。海（水）は温まりにくく冷めにくい。この性質の差が、季節風のすべての出発点である。
 

@@ -1190,6 +1190,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '建築と彫刻',
+        mangaId: 'koko_shakai_s205_manga',
         body: `鎌倉時代の文化は、京都の公家文化を土台にしながら、そこへ武士と民衆の感覚、そして宋から伝わった新しい様式が加わって生まれた。特徴を一言でいえば「素朴・力強い・写実的」である。
 
 ■ 東大寺の再建

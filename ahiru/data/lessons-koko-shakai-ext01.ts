@@ -207,6 +207,7 @@ export const kokoShakaiExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '緯度と経度の決め方',
+        mangaId: 'koko_shakai_s003_manga',
         body: `地球上の位置は、二つの角度の組み合わせで表す。
 
 ■ 緯度（南北の位置）
@@ -864,6 +865,7 @@ export const kokoShakaiExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: '三つの温帯を降水パターンで見分ける',
+        mangaId: 'koko_shakai_s010_manga',
         body: `温帯の三区分は、気温よりも「降水量が多い季節」で決まる。
 
 ■ 温暖湿潤気候（Cfa）

@@ -828,6 +828,7 @@ export const kokoShakaiExt07Lessons: Lesson[] = [
     sections: [
       {
         heading: '関ヶ原から幕府の成立へ',
+        mangaId: 'koko_shakai_s236_manga',
         body: `1598年に豊臣秀吉が病死すると、幼い豊臣秀頼を支えるはずの家臣団が二つに割れた。実力で政治を進めようとする徳川家康と、それに反発する石田三成らである。
 
 ■ 1600年 関ヶ原の戦い
@@ -2665,6 +2666,7 @@ export const kokoShakaiExt07Lessons: Lesson[] = [
     sections: [
       {
         heading: '財政再建の政策',
+        mangaId: 'koko_shakai_s258_manga',
         body: `1716年、7代将軍家継が幼くして亡くなり、御三家の紀伊藩主だった徳川吉宗が8代将軍となった。当時の幕府は財政難で、旗本・御家人への俸禄の支払いにも困る状態だった。
 
 ■ 上げ米の制（1722年）

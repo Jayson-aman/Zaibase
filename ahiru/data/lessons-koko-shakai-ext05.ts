@@ -1077,6 +1077,7 @@ export const kokoShakaiExt05Lessons: Lesson[] = [
     sections: [
       {
         heading: '冠位十二階（603年） — 家がらから能力へ',
+        mangaId: 'koko_shakai_s165_manga',
         body: `593年、推古天皇のもとで厩戸皇子（聖徳太子）が摂政となった。摂政とは、天皇が幼い場合や女性である場合に、天皇に代わって政治を行う役職である。
 
 ■ それまでの問題
