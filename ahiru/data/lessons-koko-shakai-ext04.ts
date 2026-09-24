@@ -49,6 +49,7 @@ export const kokoShakaiExt04Lessons: Lesson[] = [
       },
       {
         heading: 'シラス台地と火山のめぐみ',
+        mangaId: 'koko_shakai_s111_manga',
         body: `鹿児島県から宮崎県南部にかけて広がる白っぽい台地をシラス台地という。シラスは大昔の巨大噴火による火砕流がつもってできたもので、非常に軽くて水を通しやすい。
 
 ■ シラス台地の性質と農業
@@ -415,6 +416,7 @@ export const kokoShakaiExt04Lessons: Lesson[] = [
     sections: [
       {
         heading: '二つの山地が気候を分ける',
+        mangaId: 'koko_shakai_s116_manga',
         body: `中国・四国地方の真ん中には、なだらかな中国山地とけわしい四国山地が東西に走っている。この二つの山地が、地域を三つに分けている。
 
 ■ 山陰（中国山地の北側・日本海側）
@@ -659,6 +661,7 @@ export const kokoShakaiExt04Lessons: Lesson[] = [
       },
       {
         heading: 'よい効果と、思わぬ効果',
+        mangaId: 'koko_shakai_s119_manga',
         body: `■ よい効果
 ①時間の短縮…フェリー待ちがなくなり、四国から本州の大都市へ日帰りできるようになった。
 ②生鮮品の輸送…高知の野菜や愛媛のみかんを、鮮度を保ったままトラックで京阪神・関東へ運べる。
@@ -886,6 +889,7 @@ export const kokoShakaiExt04Lessons: Lesson[] = [
       },
       {
         heading: '景観条例・町家・観光公害',
+        mangaId: 'koko_shakai_s122_manga',
         body: `■ 京都市の景観条例
 京都市は2007年に景観政策を大きく強化し、次のような規制を設けた。
 ①建物の高さ制限…市街地の多くで31m以下、山ろく部ではさらに低く制限。

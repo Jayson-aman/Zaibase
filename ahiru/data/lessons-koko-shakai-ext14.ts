@@ -347,6 +347,7 @@ export const kokoShakaiExt14Lessons: Lesson[] = [
       },
       {
         heading: '入試ではこう問われる',
+        mangaId: 'koko_shakai_s478_manga',
         body: `■ よく出る問い1：公地公民とは何か
 「豪族が支配していた土地と人民を、国（天皇）のものとすること」。誰から誰へ移すのかを書く。
 
@@ -900,6 +901,7 @@ export const kokoShakaiExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '流れをつかむ',
+        mangaId: 'koko_shakai_s484_manga',
         body: `■ 幕府のしくみ
 将軍を頂点とし、御家人がこれに従う。
 中央
@@ -1091,6 +1093,7 @@ export const kokoShakaiExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '流れをつかむ',
+        mangaId: 'koko_shakai_s486_manga',
         body: `■ 元の成立
 チンギス・ハンが築いたモンゴル帝国は、ユーラシアの広い範囲を支配した。その孫のフビライ・ハンは都を大都（今の北京）に移し、国号を元とした。高麗を従えたあと、日本にも服属を求める使者を送った。
 
@@ -1667,6 +1670,7 @@ export const kokoShakaiExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '流れをつかむ',
+        mangaId: 'koko_shakai_s492_manga',
         body: `■ 全国統一まで
 ・1582年 本能寺の変のあと、明智光秀を討つ
 ・1583年 大阪城を築く
@@ -1863,6 +1867,7 @@ export const kokoShakaiExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '流れをつかむ',
+        mangaId: 'koko_shakai_s494_manga',
         body: `■ はじめは貿易を進めた
 家康は貿易の利益を重んじ、大名や商人に朱印状を与えて東南アジアとの貿易を認めた（朱印船貿易）。東南アジア各地に日本町ができた。
 
