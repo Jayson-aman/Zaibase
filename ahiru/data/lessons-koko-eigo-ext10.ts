@@ -398,6 +398,7 @@ The next week, six students brought different answers. Some of them were wrong, 
       },
       {
         heading: '主語と動詞の見つけ方',
+        mangaId: 'koko_eigo_s340_manga',
         body: `■ 主語（S）の見つけ方
 文の先頭から見て、前置詞の付いていない最初の名詞（または代名詞）が主語である。
 例）Mr. Green teaches science 〜 → S＝Mr. Green、V＝teaches
@@ -801,6 +802,7 @@ be 動詞の部分が変化するだけで、構造は同じである。
       },
       {
         heading: '形式主語 it と、it takes 〜',
+        mangaId: 'koko_eigo_s344_manga',
         body: `■ It is 〜 for 人 to do
 It is not easy for the students who come by bus.
 この it は「それ」ではなく、後ろの内容を先に示すための形式主語である。本来はここに to 以下が入るが、この文では前後の文脈から「バス通学すること」が省略されている。完全な形なら It is not easy for the students to come by bus. となる。
@@ -875,6 +877,7 @@ Small changes can save an animal. We do not always have to build something new. 
       },
       {
         heading: '3つの手順で指示内容を決める',
+        mangaId: 'koko_eigo_s345_manga',
         body: `■ 手順①：数を合わせる
 it → 単数の名詞　they / them → 複数の名詞
 a turtle eats it by mistake の it は単数なので、候補は a plastic bag か a jellyfish。
@@ -971,6 +974,7 @@ Our teacher said that this experience taught us something important. When we can
       },
       {
         heading: '内容を指す this / that の見つけ方',
+        mangaId: 'koko_eigo_s346_manga',
         body: `■ 名詞を探しても見つからないとき
 This was a simple idea, but it worked.
 this にあたる名詞は直前にない。指しているのは「2週間、残した食べ物の重さを記録し、その数字を教室の壁に貼り出したこと」という前段落の内容全体である。「これは単純な考えだったが、うまくいった」となる。
@@ -1068,6 +1072,7 @@ We are going to do the same survey again next year with the new first-year stude
       },
       {
         heading: 'one / another / the other の使い分け',
+        mangaId: 'koko_eigo_s347_manga',
         body: `■ one＝不特定の一つ
 One student said, "I see many cats 〜"（ある生徒が言った）
 だれか特定できない一人を指す。it に置きかえられない。
@@ -1263,6 +1268,7 @@ This does not mean that tablets are bad. A tablet can hold a thousand books, and
       },
       {
         heading: '逆接の語の後ろに主張がある',
+        mangaId: 'koko_eigo_s349_manga',
         body: `■ 第1段落の構造
 Many people say that 〜（多くの人は〜と言う）＝一般論
 However, some studies show a difference.（しかし、いくつかの研究は違いを示している）＝筆者の立場
@@ -1453,6 +1459,7 @@ The lesson is clear. When a living thing disappears, there is usually more than 
       },
       {
         heading: '原因と結果の向きをそろえる',
+        mangaId: 'koko_eigo_s351_manga',
         body: `■ 矢印で整理する
 Because rivers were covered with concrete, the snails lost their homes.
 　川がコンクリートで覆われた（原因）→ カワニナが住みかを失った（結果）
@@ -1653,6 +1660,7 @@ Some schools in Japan have begun to change. One school in Chiba stopped morning 
       },
       {
         heading: '対比を表に整理する',
+        mangaId: 'koko_eigo_s353_manga',
         body: `■ 日本とフィンランドの対比
 　　　　　　　日本　　　　　　　　　　フィンランド
 睡眠時間　　　7.0時間　　　　　　　　8.4時間
@@ -1844,6 +1852,7 @@ Big inventions are not born finished. They grow through many failures, and the p
       },
       {
         heading: '結論が後ろにある型を見抜く',
+        mangaId: 'koko_eigo_s355_manga',
         body: `■ 各段落の性格
 第1段落：1958年・43歳・3時間・2日 → 事実の羅列（年号と数値）
 第2段落：周囲の反対と、それでも続けたこと → 出来事
