@@ -282,6 +282,7 @@ export const lessonsNew20E6Rika: Lesson[] = [
       },
       {
         heading: '2. 燃焼と呼吸のちがい―速さとエネルギーの取り出し方',
+        mangaId: 'new20_e6_rika_05_manga',
         body: `反応の型は同じでも、燃焼と呼吸には決定的なちがいがある。それは「反応の速さ」と「エネルギーの取り出し方」である。
 
 ■ 燃焼:一気に・激しく
@@ -593,6 +594,7 @@ export const lessonsNew20E6Rika: Lesson[] = [
       },
       {
         heading: '2. 「冷やす」と「熱する」はなぜ意味がちがうのか',
+        mangaId: 'new20_e6_rika_11_manga',
         body: `0℃と100℃の実験結果は似ているが、酵素の状態には決定的なちがいがある。
 
 ■ 低温での「休止」
@@ -645,6 +647,7 @@ export const lessonsNew20E6Rika: Lesson[] = [
       },
       {
         heading: '2. だ液・胃液・すい液、3つのはたらく環境を整理する',
+        mangaId: 'new20_e6_rika_12_manga',
         body: `消化酵素とそのはたらく環境を、消化管の入口から順にまとめて整理しておこう。
 
 ■ だ液(口の中)
@@ -861,6 +864,7 @@ export const lessonsNew20E6Rika: Lesson[] = [
       },
       {
         heading: '2. 変成岩の見分け方と入試での問われ方',
+        mangaId: 'new20_e6_rika_16_manga',
         body: `変成岩は、堆積岩や火成岩と見分けるための手がかりを持っている。
 
 ■ 変成岩の特ちょう
@@ -901,6 +905,7 @@ export const lessonsNew20E6Rika: Lesson[] = [
     sections: [
       {
         heading: '1. なぜ月に近い側と遠い側の両方で満潮になるのか',
+        mangaId: 'new20_e6_rika_17_manga',
         body: `潮の満ち引きは、月(および太陽)の引力によって、地球をおおう海水が引き寄せられることで起こる現象である。
 
 ■ 月に近い側が満潮になる理由
@@ -971,6 +976,7 @@ export const lessonsNew20E6Rika: Lesson[] = [
       },
       {
         heading: '2. スーパームーンのしくみと注意点',
+        mangaId: 'new20_e6_rika_18_manga',
         body: `月までの距離が変化することは、私たちが夜空に見る月の「見かけの大きさ」にも影響する。
 
 ■ スーパームーンとは

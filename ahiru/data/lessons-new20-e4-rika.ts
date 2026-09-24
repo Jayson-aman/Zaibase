@@ -181,6 +181,7 @@ export const lessonsNew20E4Rika: Lesson[] = [
     sections: [
       {
         heading: '1. かん電池の直列つなぎ：明るくなるが早く減る',
+        mangaId: 'new20_e4_rika_03_manga',
         body: `かん電池を2個以上、＋極と－極を交互になるようにつなぐ方法を「かん電池の直列つなぎ」という。
 
 ■ 直列つなぎで明るくなる理由
