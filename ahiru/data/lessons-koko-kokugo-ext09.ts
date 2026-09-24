@@ -1850,6 +1850,7 @@ export const kokoKokugoExt09Lessons: Lesson[] = [
       },
       {
         heading: '宜（よろシク〜ベシ）',
+        mangaId: 'koko_kokugo_s324_manga',
         body: `■ 宜（よろシク〜ベシ）＝適当・助言
 「〜するのがよい」「〜するのが適切だ」という、おだやかな勧め。
 

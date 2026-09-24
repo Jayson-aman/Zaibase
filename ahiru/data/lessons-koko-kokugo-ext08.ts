@@ -1203,6 +1203,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '所在なさ・物足りなさ',
+        mangaId: 'koko_kokugo_s279_manga',
         body: `■ つれづれなり
 意味＝することがなく手持ちぶさただ・退屈だ・しんみりと物思いにふける。
 例）徒然草・序段「つれづれなるままに、日暮らし、硯にむかひて」
@@ -3539,6 +3540,7 @@ export const kokoKokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '三大随筆の整理',
+        mangaId: 'koko_kokugo_s303_manga',
         body: `■ 枕草子
 ・作者…清少納言（中宮定子に仕えた女房）
 ・成立…平安時代中期（一〇〇一年ごろ）

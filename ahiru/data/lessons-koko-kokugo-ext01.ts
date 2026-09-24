@@ -634,6 +634,7 @@ export const kokoKokugoExt01Lessons: Lesson[] = [
       },
       {
         heading: '熟字訓と、まちがえやすい読み',
+        mangaId: 'koko_kokugo_s007_manga',
         body: `四種類の型から外れるのが熟字訓である。
 
 ■ 熟字訓とは
@@ -1119,6 +1120,7 @@ export const kokoKokugoExt01Lessons: Lesson[] = [
       },
       {
         heading: '意味を知らないと切れない三字熟語',
+        mangaId: 'koko_kokugo_s012_manga',
         body: `三字で一語として成り立っていて、機械的には分けられない語がある。入試ではこれが意味の問題として出る。
 
 ■ 三字で一語のもの
@@ -1413,6 +1415,7 @@ export const kokoKokugoExt01Lessons: Lesson[] = [
       },
       {
         heading: '書きまちがえやすい数字入り四字熟語',
+        mangaId: 'koko_kokugo_s015_manga',
         body: `数字入りの語は、音が似た別の字を書いてしまう事故が多い。
 
 ■ 五里霧中（× 五里夢中）
@@ -4020,6 +4023,7 @@ export const kokoKokugoExt01Lessons: Lesson[] = [
       },
       {
         heading: '骨組みになる語を意味から押さえる',
+        mangaId: 'koko_kokugo_s038_manga',
         body: `評論に頻出する語を、意味とともに確認する。
 
 ■ 見方・考え方に関する語

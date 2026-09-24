@@ -1484,6 +1484,7 @@ export const kokoKokugoExt07Lessons: Lesson[] = [
     sections: [
       {
         heading: '三十一音の構成',
+        mangaId: 'koko_kokugo_s247_manga',
         body: `短歌は五・七・五・七・七の五句、合計三十一音でできている。
 
 ■ 各句の呼び名
