@@ -34,6 +34,13 @@ exports.getMyRanking = ranking.getMyRanking;
 const contentUnlock = require("./contentUnlock");
 exports.unlockContent = contentUnlock.unlockContent;
 
+// ── Web版：公式集・新規追加単元の買い切りをStripeへ直接決済（RevenueCat Web Billingが
+//    消費型に未対応のため。iOS/Androidは引き続き上のunlockContent＝RevenueCat経由） ──
+const stripeUnlock = require("./stripeUnlock");
+exports.createAhiruUnlockCheckout = stripeUnlock.createAhiruUnlockCheckout;
+exports.confirmAhiruUnlockCheckout = stripeUnlock.confirmAhiruUnlockCheckout;
+exports.ahiruUnlockWebhook = stripeUnlock.ahiruUnlockWebhook;
+
 // ── 保護者向けフィードバック（感想・要望をSlackへ通知） ──────────────────
 const feedback = require("./feedback");
 exports.sendFeedback = feedback.sendFeedback;

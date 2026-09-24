@@ -1,8 +1,16 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { fetchUnitUnlockProduct, purchaseProduct } from '../services/subscription';
+import {
+  fetchUnitUnlockProduct,
+  purchaseProduct,
+  startStripeUnlockCheckout,
+  confirmPendingStripeUnlockOnce,
+} from '../services/subscription';
 import { getUnlockedUnitIds, markUnitUnlocked } from '../services/unitUnlockStore';
 import { UNIT_UNLOCK_PRICE_LABEL } from '../constants/pricing';
+
+const isWebPlatform = Platform.OS === 'web';
 
 // 決済（消耗型・課金確定）は成功したが、サーバー側の確認（unlockContent）が
 // まだ済んでいないlessonIdを端末に記録しておく。これが無いと、確認が失敗した
@@ -63,9 +71,19 @@ export function useUnitUnlocks(): UnitUnlocksState {
       .finally(() => {
         if (mounted.current) setLoading(false);
       });
-    fetchUnitUnlockProduct().then((p) => {
-      if (mounted.current) setProduct(p);
-    });
+    if (isWebPlatform) {
+      // Web版はStripe直接決済を使うため、RevenueCatの商品取得（常にnull）はしない。
+      // Stripe Checkoutから戻ってきた直後なら、ここで解放を確定させる。
+      confirmPendingStripeUnlockOnce().then((result) => {
+        if (mounted.current && result?.type === 'unit') {
+          setUnlockedIds((prev) => new Set(prev).add(result.itemId));
+        }
+      });
+    } else {
+      fetchUnitUnlockProduct().then((p) => {
+        if (mounted.current) setProduct(p);
+      });
+    }
     return () => {
       mounted.current = false;
     };
@@ -73,6 +91,22 @@ export function useUnitUnlocks(): UnitUnlocksState {
 
   const unlockUnit = useCallback(
     async (lessonId: string): Promise<UnitUnlockPurchaseResult> => {
+      if (isWebPlatform) {
+        setPurchasingLessonId(lessonId);
+        try {
+          const { alreadyUnlocked } = await startStripeUnlockCheckout('unit', lessonId);
+          if (alreadyUnlocked && mounted.current) {
+            setUnlockedIds((prev) => new Set(prev).add(lessonId));
+          }
+          // alreadyUnlockedでなければここでブラウザがStripe Checkoutへ遷移する。
+          if (mounted.current) setPurchasingLessonId(null);
+          return { ok: true };
+        } catch (e) {
+          if (mounted.current) setPurchasingLessonId(null);
+          const message = e instanceof Error ? e.message : '購入処理に失敗しました';
+          return { ok: false, message };
+        }
+      }
       if (product == null) {
         return { ok: false, message: 'この機能は準備中です。しばらくしてからもう一度お試しください。' };
       }
@@ -125,7 +159,7 @@ export function useUnitUnlocks(): UnitUnlocksState {
   return {
     unlockedIds,
     loading,
-    productReady: product != null,
+    productReady: isWebPlatform || product != null,
     priceLabel: storePriceString ?? UNIT_UNLOCK_PRICE_LABEL,
     unlockUnit,
     purchasingLessonId,

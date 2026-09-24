@@ -1,4 +1,5 @@
 import { Platform } from 'react-native';
+import { callFirebaseFunction } from './firebaseClient';
 
 export type SubscriptionTier = 'free' | 'pro' | 'max';
 
@@ -335,6 +336,83 @@ export async function fetchUnitUnlockProduct(): Promise<unknown> {
   } catch {
     return null;
   }
+}
+
+// ───────────────────────────────────────────────────────────────
+// Web版：公式集・単元の買い切りをStripeへ直接決済する
+// ───────────────────────────────────────────────────────────────
+// RevenueCatのWeb Billingは消費型（買い切り）商品に対応していないため、
+// Web版だけはRevenueCatを介さず、functions/stripeUnlock.js が発行する
+// Stripe Checkoutへブラウザごとリダイレクトする。iOS/Androidは引き続き
+// purchaseProduct（RevenueCat）を使う。
+export type StripeUnlockType = 'formula' | 'unit';
+
+interface StripeUnlockCheckoutResult {
+  ok: true;
+  url?: string;
+  sessionId?: string;
+  alreadyUnlocked?: boolean;
+}
+
+interface StripeUnlockConfirmResult {
+  ok: true;
+  type: StripeUnlockType;
+  itemId: string;
+}
+
+/**
+ * Checkoutページを作成し、そのままブラウザを遷移させる。
+ * 既に解放済みの場合はページ遷移せず {alreadyUnlocked: true} を返す。
+ */
+export async function startStripeUnlockCheckout(
+  type: StripeUnlockType,
+  itemId: string
+): Promise<{ alreadyUnlocked: boolean }> {
+  const returnUrl =
+    typeof window !== 'undefined' ? window.location.href.split('?')[0] : undefined;
+  const result = await callFirebaseFunction<
+    { type: StripeUnlockType; itemId: string; returnUrl?: string },
+    StripeUnlockCheckoutResult
+  >('createAhiruUnlockCheckout', { type, itemId, returnUrl });
+
+  if (result.alreadyUnlocked) return { alreadyUnlocked: true };
+  if (!result.url) throw new Error('決済ページの作成に失敗しました');
+  window.location.href = result.url;
+  return { alreadyUnlocked: false };
+}
+
+let pendingStripeUnlockConfirm: Promise<StripeUnlockConfirmResult | null> | null = null;
+
+/**
+ * Stripe Checkoutからの戻りURL（?unlock_success=1&session_id=...）を一度だけ
+ * 読み取り、その場でURLから消してから解放を確定させる。formula/unit両方の
+ * フックが同時にマウントされても、実際にサーバーへ問い合わせるのは1回だけになる。
+ */
+export function confirmPendingStripeUnlockOnce(): Promise<StripeUnlockConfirmResult | null> {
+  if (!isWeb || typeof window === 'undefined') return Promise.resolve(null);
+  if (pendingStripeUnlockConfirm) return pendingStripeUnlockConfirm;
+
+  const params = new URLSearchParams(window.location.search);
+  const success = params.get('unlock_success');
+  const sessionId = params.get('session_id');
+  if (success !== '1' || !sessionId) {
+    pendingStripeUnlockConfirm = Promise.resolve(null);
+    return pendingStripeUnlockConfirm;
+  }
+
+  // 読んだらすぐURLから消す。リロードや複数フックの二重マウントで
+  // 同じsession_idをもう一度確認しにいくのを防ぐ。
+  params.delete('unlock_success');
+  params.delete('session_id');
+  const query = params.toString();
+  const newUrl = window.location.pathname + (query ? `?${query}` : '') + window.location.hash;
+  window.history.replaceState(null, '', newUrl);
+
+  pendingStripeUnlockConfirm = callFirebaseFunction<
+    { sessionId: string },
+    StripeUnlockConfirmResult
+  >('confirmAhiruUnlockCheckout', { sessionId }).catch(() => null);
+  return pendingStripeUnlockConfirm;
 }
 
 export async function purchaseProduct(product: unknown): Promise<unknown> {

@@ -1,8 +1,16 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { fetchFormulaUnlockProduct, purchaseProduct } from '../services/subscription';
+import {
+  fetchFormulaUnlockProduct,
+  purchaseProduct,
+  startStripeUnlockCheckout,
+  confirmPendingStripeUnlockOnce,
+} from '../services/subscription';
 import { getUnlockedFormulaIds, markFormulaUnlocked } from '../services/formulaUnlockStore';
 import { FORMULA_UNLOCK_PRICE_LABEL } from '../constants/pricing';
+
+const isWebPlatform = Platform.OS === 'web';
 
 // 決済（消耗型・課金確定）は成功したが、サーバー側の確認（unlockContent）が
 // まだ済んでいないfigureIdを端末に記録しておく。これが無いと、確認が失敗した
@@ -66,9 +74,19 @@ export function useFormulaUnlocks(): FormulaUnlocksState {
       .finally(() => {
         if (mounted.current) setLoading(false);
       });
-    fetchFormulaUnlockProduct().then((p) => {
-      if (mounted.current) setProduct(p);
-    });
+    if (isWebPlatform) {
+      // Web版はStripe直接決済を使うため、RevenueCatの商品取得（常にnull）はしない。
+      // Stripe Checkoutから戻ってきた直後なら、ここで解放を確定させる。
+      confirmPendingStripeUnlockOnce().then((result) => {
+        if (mounted.current && result?.type === 'formula') {
+          setUnlockedIds((prev) => new Set(prev).add(result.itemId));
+        }
+      });
+    } else {
+      fetchFormulaUnlockProduct().then((p) => {
+        if (mounted.current) setProduct(p);
+      });
+    }
     return () => {
       mounted.current = false;
     };
@@ -76,6 +94,22 @@ export function useFormulaUnlocks(): FormulaUnlocksState {
 
   const unlockFormula = useCallback(
     async (figureId: string): Promise<UnlockPurchaseResult> => {
+      if (isWebPlatform) {
+        setPurchasingFigureId(figureId);
+        try {
+          const { alreadyUnlocked } = await startStripeUnlockCheckout('formula', figureId);
+          if (alreadyUnlocked && mounted.current) {
+            setUnlockedIds((prev) => new Set(prev).add(figureId));
+          }
+          // alreadyUnlockedでなければここでブラウザがStripe Checkoutへ遷移する。
+          if (mounted.current) setPurchasingFigureId(null);
+          return { ok: true };
+        } catch (e) {
+          if (mounted.current) setPurchasingFigureId(null);
+          const message = e instanceof Error ? e.message : '購入処理に失敗しました';
+          return { ok: false, message };
+        }
+      }
       if (product == null) {
         return { ok: false, message: 'この機能は準備中です。しばらくしてからもう一度お試しください。' };
       }
@@ -128,7 +162,7 @@ export function useFormulaUnlocks(): FormulaUnlocksState {
   return {
     unlockedIds,
     loading,
-    productReady: product != null,
+    productReady: isWebPlatform || product != null,
     priceLabel: storePriceString ?? FORMULA_UNLOCK_PRICE_LABEL,
     unlockFormula,
     purchasingFigureId,
