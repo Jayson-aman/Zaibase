@@ -2620,6 +2620,7 @@ One of my friends lives in Tokyo.（主語の核は One＝単数→ lives。frie
       },
       {
         heading: '助動詞・受動態・完了・準動詞',
+        mangaId: 'koko_eigo_s441_manga',
         body: `残りの3つの点検項目を確認する。
 
 ■ 点検②：助動詞の後ろは原形

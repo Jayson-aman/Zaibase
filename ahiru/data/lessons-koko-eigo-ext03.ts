@@ -916,6 +916,7 @@ go－went－gone／see－saw－seen／write－wrote－written／take－took－ta
       },
       {
         heading: '過去形と過去分詞を取りちがえない',
+        mangaId: 'koko_eigo_s081_manga',
         body: `入試で最も多い誤りは、過去形を書くべきところに過去分詞を書いてしまう（またはその逆）という取りちがえである。
 
 ■ 見分けの原則
@@ -3602,6 +3603,7 @@ if 〜 not を unless に変えるときは、not を消して肯定の形にす
       },
       {
         heading: '命令文＋and / or と、そのほかの条件表現',
+        mangaId: 'koko_eigo_s109_manga',
         body: `■ 〈命令文, and 〜〉＝そうすれば
 例）Hurry up, and you will catch the train.（急ぎなさい、そうすれば電車に間に合います）
 　＝ If you hurry up, you will catch the train.

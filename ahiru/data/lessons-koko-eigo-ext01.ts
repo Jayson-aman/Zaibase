@@ -1817,6 +1817,7 @@ show － showed － shown（見せる。過去形は規則変化）
       },
       {
         heading: '最重要の四語と、have been／have gone',
+        mangaId: 'koko_eigo_s021_manga',
         body: `使用頻度がとくに高く、まちがえると文全体が壊れる四語を確実にする。
 
 ■ 四語の変化
@@ -3025,6 +3026,7 @@ lend 人 物／lend 物 to 人
     sections: [
       {
         heading: '数えられる名詞と数えられない名詞',
+        mangaId: 'koko_eigo_s033_manga',
         body: `数量を表す語は、後ろの名詞が数えられるかどうかで変わる。まずこの区別を確認する。
 
 ■ many／much

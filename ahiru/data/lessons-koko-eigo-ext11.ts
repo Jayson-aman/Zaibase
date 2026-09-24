@@ -341,6 +341,7 @@ I'm sorry, I'm a stranger here.（この辺は不案内です）
       },
       {
         heading: '位置を表す前置詞をまちがえない',
+        mangaId: 'koko_eigo_s379_manga',
         body: `道案内の設問は「地図上のどこか」を選ばせる形が多い。位置を表す語を正確に区別できるかどうかで差がつく。
 
 ■ よく出る位置表現
@@ -2084,6 +2085,7 @@ I don't think so.（そうは思いません）／I'm afraid not.（残念なが
       },
       {
         heading: '否定疑問文と条件・譲歩',
+        mangaId: 'koko_eigo_s396_manga',
         body: `否定がからむ表現には、日本語と答え方が逆になるものがある。
 
 ■ 否定疑問文への答え
@@ -2819,6 +2821,7 @@ Whose bag is this?
       },
       {
         heading: '間接疑問と付加疑問',
+        mangaId: 'koko_eigo_s403_manga',
         body: `文の中に組みこまれた疑問文（間接疑問）は、語順がふつうの文に戻る。ここが並べかえの最頻出ポイントである。
 
 ■ 間接疑問の作り方
@@ -3034,6 +3037,7 @@ the letter which was written by Ken ＝ the letter written by Ken
       },
       {
         heading: '比較・受け身の型',
+        mangaId: 'koko_eigo_s405_manga',
         body: `比較と受け身は、型そのものが答えになる。丸ごと覚えて当てはめる。
 
 ■ 比較の型
