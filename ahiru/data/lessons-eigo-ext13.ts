@@ -62,6 +62,7 @@ black（黒い）／duck（あひる）／clock（時計）／rock（岩）／ba
       },
       {
         heading: '練習と気をつけること',
+        mangaId: 'eigo_s451_manga',
         body: `■ 読む練習
 次の語を、二文字のかたまりに気をつけて読む。
 shop／chair／think／phone／white／clock
@@ -379,6 +380,7 @@ It's October 10th.（10月10日です）
       },
       {
         heading: '練習と気をつけること',
+        mangaId: 'eigo_s454_manga',
         body: `■ 言ってみる
 ・自分のたん生日を英語で言う
 　My birthday is April 3rd.
@@ -1370,6 +1372,7 @@ by のほうが近く、near は少しはなれていてもよい。
       },
       {
         heading: '練習と気をつけること',
+        mangaId: 'eigo_s462_manga',
         body: `■ 言ってみる
 ・つくえの上に本があります。→ There is a book on the desk.
 ・かばんの中にペンがあります。→ There is a pen in my bag.

@@ -699,6 +699,7 @@ over は「おおいかぶさる」感じなので、橋のように上に広が
       },
       {
         heading: 'over と under の数の意味・on との区別',
+        mangaId: 'eigo_s269_manga',
         body: `over と under には位置以外の意味もあり、そちらも入試でよく問われる。
 
 ■ 数の「〜を越えて／〜未満」
@@ -759,6 +760,7 @@ on は接している、over は接していない。
     sections: [
       {
         heading: 'between と among の使い分け',
+        mangaId: 'eigo_s270_manga',
         body: `「〜の間に」を表す前置詞は二つあり、いくつのものにはさまれているかで使い分ける。
 
 ■ between ＝ 二つの間
@@ -1267,6 +1269,7 @@ on と in で分けたのと同じ理由で、乗り物の大きさによって�
     sections: [
       {
         heading: '四つの進み方を絵で区別する',
+        mangaId: 'eigo_s276_manga',
         body: `移動を表す前置詞は、進む道すじの形で決まる。日本語ではどれも「〜を」と言ってしまうので、絵で覚えるのがいちばん確実である。
 
 ■ through ＝ 中を通り抜ける

@@ -20,6 +20,7 @@ export const lessonsNew20E6Eigo: Lesson[] = [
     sections: [
       {
         heading: '1. 過去のことを語る文の型',
+        mangaId: 'new20_e6_eigo_01_manga',
         body: `英語で「〜した」と過去のことを言うときは、動詞を過去形に変えるだけでよい。日本語の「食べる→食べた」のように主語によって形が変わることは一切ない。
 
 ■ 基本の形
@@ -282,6 +283,7 @@ Last summer, I went to my grandmother's house in Nagano with my family. First, w
       },
       {
         heading: '2. will と be going to を会話の中で使い分ける',
+        mangaId: 'new20_e6_eigo_04_manga',
         body: `文法では「will＝その場の意志、be going to＝前からの予定」と習うが、実際の会話ではこの違いがそのまま表れる。
 
 ■ その場で決める・提案に答える → will
@@ -452,6 +454,7 @@ Good morning. Here is today's weather. It will be cloudy in the morning, but it 
       },
       {
         heading: '2. 理由を添えて、説得力のある答えにする',
+        mangaId: 'new20_e6_eigo_06_manga',
         body: `「I want to be a doctor.」だけで終わらせず、because を使って理由を1文加えると、聞き手に自分の考えが伝わる答えになる。
 
 ■ 理由を加える型
