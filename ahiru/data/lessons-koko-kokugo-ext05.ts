@@ -189,6 +189,7 @@ export const kokoKokugoExt05Lessons: Lesson[] = [
     sections: [
       {
         heading: '場所が持たされる意味',
+        mangaId: 'koko_kokugo_s158_manga',
         body: `物語の場所は、地図上の位置ではなく、人物にとっての意味で選ばれている。次の三つの軸で読むと、その意味がつかめる。
 
 ■ ①人目があるか、ないか
@@ -285,6 +286,7 @@ export const kokoKokugoExt05Lessons: Lesson[] = [
       },
       {
         heading: '関係を読み取る手がかり',
+        mangaId: 'koko_kokugo_s159_manga',
         body: `人物どうしの関係は、はっきり説明されないことが多い。次の手がかりから推測する。
 
 ■ ①呼び方
@@ -375,6 +377,7 @@ export const kokoKokugoExt05Lessons: Lesson[] = [
       },
       {
         heading: '実際に区切ってみる',
+        mangaId: 'koko_kokugo_s160_manga',
         body: `次の文章を場面ごとに区切ってみよう。
 
 　部室の鍵は、いつも一年の陽向が開ける。その日も陽向がいちばんに来て、窓を開け、モップをかけた。二年の先輩たちが来たのは、それから二十分後だった。「あ、もうやってくれてるじゃん、ありがと」。先輩の一人がそう言って、荷物を置いた。陽向は「はい」とだけ答えた。
@@ -719,6 +722,7 @@ export const kokoKokugoExt05Lessons: Lesson[] = [
       },
       {
         heading: '原因は二重になっている',
+        mangaId: 'koko_kokugo_s164_manga',
         body: `心情の理由を問う設問で点を落とす人の多くは、原因を一つしか書かない。物語の原因は、たいてい二重になっている。
 
 ■ 表面の原因と、奥の事情
@@ -810,6 +814,7 @@ export const kokoKokugoExt05Lessons: Lesson[] = [
       },
       {
         heading: '語り手が現在から振り返る印',
+        mangaId: 'koko_kokugo_s165_manga',
         body: `語りの順序がずれていることを示す、決まった言い方がある。
 
 ■ ①あとから知ったことを示す
@@ -1223,6 +1228,7 @@ export const kokoKokugoExt05Lessons: Lesson[] = [
       },
       {
         heading: '本文で確かめる',
+        mangaId: 'koko_kokugo_s169_manga',
         body: `次の文章を読み、心情を書き分けてみよう。
 
 　最後の大会が終わった。三年間、佳奈はずっと補欠だった。最後の試合も、ベンチで声を出しつづけただけだった。
@@ -1620,6 +1626,7 @@ B……仲間に認められたうれしさ、報われた思い
       },
       {
         heading: '手順どおりに読む',
+        mangaId: 'koko_kokugo_s173_manga',
         body: `次の文章の傍線部（行動描写）を、手順で読んでみる。
 
 　夕食のあいだ、母は二度、時計を見た。父の帰りが遅い。
@@ -1711,6 +1718,7 @@ B……仲間に認められたうれしさ、報われた思い
       },
       {
         heading: '笑いと無表情を読み分ける',
+        mangaId: 'koko_kokugo_s174_manga',
         body: `笑顔がすべて喜びを表すわけではない。書かれ方で読み分ける。
 
 ■ 笑いの種類
@@ -2008,6 +2016,7 @@ B……仲間に認められたうれしさ、報われた思い
       },
       {
         heading: '練習：書かれていない心情を言葉にする',
+        mangaId: 'koko_kokugo_s177_manga',
         body: `次の文章を読み、傍線部の心情を推測してみよう。
 
 　美術部の展示は、廊下のいちばん奥にあった。人はほとんど来ない。日菜は自分の絵の前に立ち、しばらく直したい部分を見ていた。空の色が思ったとおりに出ていない。
