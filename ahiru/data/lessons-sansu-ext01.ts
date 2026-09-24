@@ -1943,6 +1943,7 @@ export const sansuExt01Lessons: Lesson[] = [
       },
       {
         heading: 'なぜ「けた数が多い小数」が大きいとは限らないのか',
+        mangaId: 'sansu_s021_manga',
         figureId: 'sext01_s021_naze',
         body: `■ 小数点の右は「細かくなる」だけ
 整数では、けたが増えると数は大きくなります（10 → 100 → 1000）。小数点の右では逆で、**けたが増えるほど1つの位の大きさは小さく**なります。
