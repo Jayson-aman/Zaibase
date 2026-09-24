@@ -492,6 +492,7 @@ no（一つもない・少しもない）…名詞の前に置くだけで否定
     sections: [
       {
         heading: '複数形の作り方の原則',
+        mangaId: 'eigo_s086_manga',
         body: `数えられる名詞が2つ以上あるときは、名詞の形を変える。これを複数形という。日本語には「本」と「本たち」の区別がないので、書き忘れがいちばん多い項目である。
 
 ■ 原則：語尾に -s を付ける
@@ -1293,6 +1294,7 @@ I bought a loaf of bread, two bottles of milk, and three pairs of socks.
     sections: [
       {
         heading: 'a / an の意味と使い方',
+        mangaId: 'eigo_s095_manga',
         body: `a / an を冠詞という。日本語にはない品詞なので、意味を正しくつかんでおく必要がある。
 
 ■ 意味①「一つの」
@@ -2261,6 +2263,7 @@ She likes soccer. → She and her sister like soccer.`,
     sections: [
       {
         heading: '位置で形が変わる',
+        mangaId: 'eigo_s105_manga',
         body: `英語は語順で役割が決まる言語である。同じ「彼」でも、文のどこに置くかで形が変わる。
 
 ■ 主格と目的格の対応

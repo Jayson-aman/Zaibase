@@ -29,6 +29,7 @@ export const eigoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: 'be動詞の文を疑問文にする手順',
+        mangaId: 'eigo_s191_manga',
         body: `英語の疑問文は「日本語のように文の終わりに『か』を付ける」のではなく、語の順番を入れかえて作る。be動詞の文はいちばんかんたんで、be動詞を主語の前に持ち上げるだけでよい。
 
 ■ 手順は二つだけ

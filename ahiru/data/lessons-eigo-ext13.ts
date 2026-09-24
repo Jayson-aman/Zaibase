@@ -842,6 +842,7 @@ am・is・are（be動詞）は「〜です・〜がいる」を表す語で、pl
     sections: [
       {
         heading: '形の変え方',
+        mangaId: 'eigo_s458_manga',
         body: `■ s をつける主語
 he（かれ）／she（かのじょ）／it（それ）
 そして、1人・1つを表す名前やもの。
@@ -953,6 +954,7 @@ carry → carries／enjoy → enjoys／wash → washes／do → does
     sections: [
       {
         heading: '文のつくり方',
+        mangaId: 'eigo_s459_manga',
         body: `■ 置く場所
 動詞の前に置く。
 ・I don't play soccer.（わたしはサッカーをしません）
