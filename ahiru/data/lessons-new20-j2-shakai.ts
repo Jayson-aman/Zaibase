@@ -43,6 +43,7 @@ export const lessonsNew20J2Shakai: Lesson[] = [
       },
       {
         heading: '仮説を立てる：予想と根拠をセットにする',
+        mangaId: 'new20_j2_shakai_01_manga',
         level: 'oyo',
         body: `テーマが決まったら、次に「仮説」を立てる。仮説とは、まだ実際に調べていない段階での予想のことである。
 
@@ -285,6 +286,7 @@ GIS（Geographic Information System）とは、位置に関する情報（地図
     sections: [
       {
         heading: '日本の世界自然遺産5件',
+        mangaId: 'new20_j2_shakai_05_manga',
         level: 'oyo',
         body: `世界遺産には「自然遺産」と「文化遺産」の区分があり、日本の自然遺産は次の5件である（登録年順）。
 
@@ -530,6 +532,7 @@ GIS（Geographic Information System）とは、位置に関する情報（地図
     sections: [
       {
         heading: '農業技術の進歩',
+        mangaId: 'new20_j2_shakai_09_manga',
         level: 'oyo',
         body: `鎌倉時代は武士の政治のイメージが強いが、農業や商業の面でも大きな変化が始まった時代である。
 
@@ -585,6 +588,7 @@ GIS（Geographic Information System）とは、位置に関する情報（地図
     sections: [
       {
         heading: '執権政治から得宗専制へ',
+        mangaId: 'new20_j2_shakai_10_manga',
         level: 'nyushi',
         body: `■ 執権政治のおさらい
 北条氏は将軍を補佐する執権という役職につき、承久の乱（1221年）で後鳥羽上皇の軍を破ったことで、幕府における発言力を大きく強めた。乱後には京都に六波羅探題を置いて朝廷を監視し、西国にも御家人を配置して支配を広げた。御成敗式目（1232年、北条泰時）の制定も、幕府と朝廷両方に通用する武家独自の法として、北条氏の権威を高める役割を果たした。
@@ -736,6 +740,7 @@ GIS（Geographic Information System）とは、位置に関する情報（地図
     sections: [
       {
         heading: '長崎貿易の実態',
+        mangaId: 'new20_j2_shakai_13_manga',
         level: 'oyo',
         body: `■ 「鎖国」でも続いた貿易
 江戸幕府は禁教・貿易統制を進め、いわゆる「鎖国」体制を築いたが、これは対外関係を完全に断ち切ったという意味ではない。長崎の出島（人工島）ではオランダとの貿易が、長崎の唐人屋敷では中国（清）との貿易が、幕府の統制のもとで続けられた。
@@ -806,6 +811,7 @@ GIS（Geographic Information System）とは、位置に関する情報（地図
       },
       {
         heading: 'モリソン号事件と蛮社の獄、そして政策転換',
+        mangaId: 'new20_j2_shakai_14_manga',
         level: 'nyushi',
         body: `■ モリソン号事件（1837年）
 アメリカの商船モリソン号が、日本人漂流民を送り届け、あわせて通商を求めて浦賀（相模国）に接近したが、異国船打払令にもとづいて砲撃され、やむなく退去した。人道的な目的（漂流民の送還）を持つ船まで無条件に撃退したことは、後に大きな批判を招くことになる。
@@ -951,6 +957,7 @@ GIS（Geographic Information System）とは、位置に関する情報（地図
     sections: [
       {
         heading: '腑分けとの出会いから『解体新書』の刊行へ',
+        mangaId: 'new20_j2_shakai_17_manga',
         level: 'oyo',
         body: `■ 蘭学とは
 鎖国下でも唯一西洋との貿易窓口だったオランダを通じて、オランダ語の書物からヨーロッパの学問・技術を学ぶことを蘭学という。医学・天文学・地理学など、実用性の高い分野を中心に発達した。
@@ -1018,6 +1025,7 @@ GIS（Geographic Information System）とは、位置に関する情報（地図
       },
       {
         heading: '全国測量の完成とその意義',
+        mangaId: 'new20_j2_shakai_18_manga',
         level: 'oyo',
         body: `■ 17年間の測量の旅
 1800年の蝦夷地測量を皮切りに、忠敬は東日本、そして西日本へと測量範囲を広げていった。九州や離島を含む全国の海岸線を測るまでの17年間で、歩いた距離は約4000万歩（地球一周分に近いともいわれる）にのぼるとされる。高齢での過酷な測量の旅は、忠敬自身の健康を大きくすり減らすものでもあった。
@@ -1071,6 +1079,7 @@ GIS（Geographic Information System）とは、位置に関する情報（地図
       },
       {
         heading: '大塩平八郎の乱とその衝撃',
+        mangaId: 'new20_j2_shakai_19_manga',
         level: 'oyo',
         body: `■ 大塩平八郎という人物
 大塩平八郎は、大阪町奉行所の与力（役人）を務めた人物で、儒学の一派である陽明学（知識だけでなく実践を重んじる学問）を学んでいた。役人を辞めたのちは私塾を開き、門人の教育にあたっていた。
