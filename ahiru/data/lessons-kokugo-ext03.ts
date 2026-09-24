@@ -1676,6 +1676,7 @@ export const kokugoExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 反対の教えを組にして覚える',
+        mangaId: 'kokugo_s101_manga',
         body: `ことわざには、まったく反対の教えを説くものがあります。どちらが正しいというより、場面によって使い分けるものだと考えましょう。
 
 ■ 組その一

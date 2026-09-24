@@ -596,6 +596,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '助詞の種類を決める4ステップ',
+        mangaId: 'kokugo_s197_manga',
         body: `助詞の識別問題は、次の手順で機械的に処理できる。
 
 【ステップ1】文（または会話）の終わりにあるか
@@ -2091,6 +2092,7 @@ export const kokugoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '尊敬かどうかの3つの手がかり',
+        mangaId: 'kokugo_s212_manga',
         body: `尊敬の「れる・られる」は、話題になっている相手（目上の人）の動作を高める。動作をするのは、その高められる人本人である。
 
 【手がかり1】主語がだれか

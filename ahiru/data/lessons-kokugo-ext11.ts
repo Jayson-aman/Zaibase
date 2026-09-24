@@ -457,6 +457,7 @@ export const kokugoExt11Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. あはれなり — しみじみと心を動かされる',
+        mangaId: 'kokugo_s396_manga',
         body: `古文には、字面は今と同じなのに意味がちがう言葉（古今異義語）がたくさんあります。そのうち最重要の二語が「あはれ」と「をかし」です。
 
 ■ あはれなり の意味

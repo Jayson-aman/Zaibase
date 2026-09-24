@@ -247,6 +247,7 @@ export const kokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 候補を出して消していく',
+        mangaId: 'kokugo_s274_manga',
         body: `指示語問題は「一発で当てる」のではなく、「候補を並べて消す」と考えると安定します。
 
 ■ 例文
@@ -545,6 +546,7 @@ export const kokugoExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 順接は原因から結果へ',
+        mangaId: 'kokugo_s278_manga',
         body: `順接の接続語は、前の内容が原因・理由となって、後ろの結果が生まれることを示します。
 
 ■ 例文

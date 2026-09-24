@@ -1739,6 +1739,7 @@ export const kokugoExt02Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 対義（反対の意味）の組',
+        mangaId: 'kokugo_s061_manga',
         figureId: 'kext02_061',
         body: `四字熟語は一つずつ覚えるより、意味の関係で組にして覚えるほうが定着する。まず反対の意味になる組を確認する。
 

@@ -2578,6 +2578,7 @@ export const kokugoExt05Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 語幹につく「そうだ」と「らしい」',
+        mangaId: 'kokugo_s179_manga',
         body: `形容詞・形容動詞には、語幹だけを使う言い方があります。ここが入試のねらい目です。
 
 ■ 語幹＋そうだ（様態）

@@ -1232,6 +1232,7 @@ export const kokugoExt01Lessons: Lesson[] = [
     sections: [
       {
         heading: 'イガイとイシ',
+        mangaId: 'kokugo_s014_manga',
         body: `■ 以外（以＝〜から。基準の外側）
 　あるものをのぞいた残り。前に必ず「〜以外」と名詞がつく。
 　例）彼以外に知っている人はいない／英語以外の教科　※「思ったより多い」は「予想外」と書き、「予想以外」とは書かない
