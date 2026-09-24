@@ -136,6 +136,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
       },
       {
         heading: '2. 直線と平面の垂直―「2直線に垂直」が条件',
+        mangaId: 'koko_math_s307_manga',
         body: `直線ℓが平面Pと垂直であるとは、ℓがPと交わり、その交点を通るP上のすべての直線とℓが垂直になることをいう。しかし「すべての直線」を確かめるのは不可能なので、実際には次の判定条件を使う。
 
 ■ 垂直の判定条件
@@ -477,6 +478,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
       },
       {
         heading: '2. 投影図から立体を特定する手順',
+        mangaId: 'koko_math_s311_manga',
         body: `投影図を見て立体を答える問題では、次の順に読むと迷わない。
 
 ■ 手順1　平面図（下の図）で底面の形をつかむ
@@ -631,6 +633,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 向かい合う面を機械的に決める',
+        mangaId: 'koko_math_s313_manga',
         figureId: 'lf_kokomathext09_313',
         body: `立方体の展開図の問題は、ほとんどが「向かい合う面はどれか」に帰着する。感覚で組み立てず、次の2つのルールで機械的に処理する。
 
@@ -899,6 +902,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 円柱の展開図―よこは直径ではなく円周',
+        mangaId: 'koko_math_s316_manga',
         body: `円柱を切り開くと、長方形1枚（側面）と円2枚（上下の底面）になる。
 
 ■ 側面の長方形
@@ -1289,6 +1293,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
       },
       {
         heading: '2. 直径・半径の取り違えを防ぐ',
+        mangaId: 'koko_math_s320_manga',
         body: `円柱の問題で最も多いミスは、直径を半径として使ってしまうことである。体積では r が2乗されるので、直径をそのまま入れると答えは4倍になる。
 
 ■ 直径が与えられた例
@@ -1375,6 +1380,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
       },
       {
         heading: '2. おもりを沈める・容器を傾ける',
+        mangaId: 'koko_math_s321_manga',
         body: `■ おもりを完全に沈めたとき
 水中に完全に沈めた物は、その体積の分だけ水を押しのける。押しのけられた水は上に行くしかないので、水面は次の分だけ上がる。
 　上がる高さ ＝（沈めた物の体積）÷（容器の底面積）
@@ -2084,6 +2090,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 円すい：球：円柱＝1:2:3',
+        mangaId: 'koko_math_s329_manga',
         body: `底面の半径が r、高さが 2r（＝球の直径）でそろえた3つの立体を比べる。
 
 ■ 円すい（底面の半径 r、高さ 2r）
@@ -2448,6 +2455,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 切り口をかく3つの原則',
+        mangaId: 'koko_math_s333_manga',
         figureId: 'lf_kokomathext09_333',
         body: `「3点A、P、Qを通る平面で切る」と言われたら、その平面はただ1つに決まっている（一直線上にない3点で平面が1つに決まる）。だから切り口も1つの形に定まる。あとは次の3原則にしたがって、面ごとに線を引いていけばよい。
 
@@ -2709,6 +2717,7 @@ BD、DE、EB はいずれも立方体の面の対角線なので、長さは √
     sections: [
       {
         heading: '1. 三平方の定理を2回使う',
+        mangaId: 'koko_math_s336_manga',
         figureId: 'lf_kokomathext09_336',
         body: `たて a、よこ b、高さ c の直方体で、向かい合う2つの頂点を結ぶ線分（立体の対角線）の長さを求める。
 
