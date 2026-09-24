@@ -444,6 +444,7 @@ export const kokoMathExt07Lessons: Lesson[] = [
     sections: [
       {
         heading: 'ピラミッド型と砂時計型',
+        mangaId: 'koko_math_s236_manga',
         body: `平行線が関わる相似には、はっきりした2つの型がある。
 
 ■ ピラミッド型（共通角＋同位角）
@@ -3472,6 +3473,7 @@ y軸に平行な辺がある場合も同様で、高さはx座標の差になる
     sections: [
       {
         heading: '折り返しの基本と方程式の立て方',
+        mangaId: 'koko_math_s270_manga',
         body: `紙を折り返すと、折られた部分ともとの部分は合同である。したがって
 　対応する辺の長さは等しい
 　対応する角の大きさは等しい
