@@ -30,6 +30,7 @@ export const kokoRikaExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '式と、単位の直し方',
+        mangaId: 'koko_rika_s475_manga',
         body: `圧力は「1 m²あたり何Nでおしているか」を表す量である。
 
 ■ 公式
@@ -153,6 +154,7 @@ export const kokoRikaExt14Lessons: Lesson[] = [
       },
       {
         heading: '浮き沈みの判断と、水圧との関係',
+        mangaId: 'koko_rika_s476_manga',
         body: `■ 浮くか沈むか
 物体にはたらく重力と浮力を比べる。
 ・重力＞浮力 → 沈む
@@ -319,6 +321,7 @@ export const kokoRikaExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '比例の式と、長さと伸びの区別',
+        mangaId: 'koko_rika_s478_manga',
         body: `■ フックの法則
 ばねの伸びは、加えた力の大きさに比例する。式にすると
 伸び（cm）＝比例定数×力（N）
@@ -414,6 +417,7 @@ export const kokoRikaExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '距離の計算：3つのパターン',
+        mangaId: 'koko_rika_s479_manga',
         body: `音の計算は、速さの公式そのままである。
 
 ■ 公式
@@ -546,6 +550,7 @@ export const kokoRikaExt14Lessons: Lesson[] = [
       },
       {
         heading: '倍率の計算と、レンズを半分かくす問題',
+        mangaId: 'koko_rika_s480_manga',
         body: `■ 倍率
 倍率＝像の大きさ÷物体の大きさ
 これは距離の比とも等しい。
@@ -620,6 +625,7 @@ export const kokoRikaExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '仕事の求め方と、動滑車・定滑車',
+        mangaId: 'koko_rika_s481_manga',
         body: `■ 仕事の公式
 仕事（J）＝力（N）×距離（m）
 単位はジュール（J）。距離はcmではなくmに直す。
@@ -1045,6 +1051,7 @@ A＝表＋裏＋茎＝2.0＋7.0＋0.5＝9.5 cm³ となり、測定値と一致�
       },
       {
         heading: '条件の意味と、蒸散のはたらき',
+        mangaId: 'koko_rika_s485_manga',
         body: `■ 水面に油を浮かべる理由
 油でふたをしないと、試験管の水面から直接蒸発してしまい、減った量が蒸散だけによるものでなくなる。記述では「水面からの蒸発を防ぐため」と書く。
 
@@ -1608,6 +1615,7 @@ A＝表＋裏＋茎＝2.0＋7.0＋0.5＝9.5 cm³ となり、測定値と一致�
     sections: [
       {
         heading: '作図の手順を固定する',
+        mangaId: 'koko_rika_s491_manga',
         body: `■ 手順
 ①光が当たる点（入射点）を決める
 ②その点で境界面に垂直な直線（法線）を、点線で引く
@@ -1730,6 +1738,7 @@ A＝表＋裏＋茎＝2.0＋7.0＋0.5＝9.5 cm³ となり、測定値と一致�
       },
       {
         heading: '全身を映すのに必要な鏡の長さ',
+        mangaId: 'koko_rika_s492_manga',
         body: `■ 結論
 身長の半分の長さの鏡があれば、全身が映る。鏡からどれだけ離れても、必要な長さは変わらない。
 
