@@ -52,6 +52,7 @@ export const lessonsNew20E5Kokugo: Lesson[] = [
       },
       {
         heading: '3. 入試での問われ方と、信頼できない語り手',
+        mangaId: 'new20_e5_kokugo_01_manga',
         level: 'nyushi',
         body: `視点に関する設問は、選択肢問題の正誤判定に直結する重要な観点です。
 
@@ -334,6 +335,7 @@ export const lessonsNew20E5Kokugo: Lesson[] = [
       },
       {
         heading: '3. 設問の解き方',
+        mangaId: 'new20_e5_kokugo_05_manga',
         body: `友人関係のすれ違いを扱った物語文では、「なぜ二人は仲直りできたのか」という理由記述問題がよく出題されます。
 
 ■ 記述の型
@@ -459,6 +461,7 @@ export const lessonsNew20E5Kokugo: Lesson[] = [
       },
       {
         heading: '2. 譲歩部分と主張部分を見分ける',
+        mangaId: 'new20_e5_kokugo_07_manga',
         body: `譲歩構文を読むときの一番大切なポイントは、「たしかに」で始まる部分は筆者の本当の意見ではない、ということです。
 
 ■ 見分け方

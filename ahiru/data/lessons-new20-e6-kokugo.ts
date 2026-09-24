@@ -266,6 +266,7 @@ export const lessonsNew20E6Kokugo: Lesson[] = [
       },
       {
         heading: '3. 筆者の評価と本人の考えを混同しない',
+        mangaId: 'new20_e6_kokugo_03_manga',
         body: `伝記文特有の落とし穴として最も多いのが、「筆者（書き手）の評価・感想」と「登場人物本人の考え」を混同してしまうミスです。
 
 ■ 二つの「声」が混ざっている
@@ -598,6 +599,7 @@ export const lessonsNew20E6Kokugo: Lesson[] = [
       },
       {
         heading: '3. 入れかえのひっかけに注意する',
+        mangaId: 'new20_e6_kokugo_07_manga',
         body: `対立する二つの立場が出てくる選択肢問題では、「立場Aの根拠を、立場Bの根拠として書く」という入れかえのひっかけが非常によく出題されます。
 
 ■ ひっかけの具体例
@@ -1492,6 +1494,7 @@ export const lessonsNew20E6Kokugo: Lesson[] = [
     sections: [
       {
         heading: '1. 「心配」に関わる、正反対の意味を持つペア',
+        mangaId: 'new20_e6_kokugo_18_manga',
         body: `故事成語には、同じ「心配・懸念」というテーマを扱いながら、正反対の意味を持つ表現があります。混同しないよう、由来まで含めて整理しましょう。
 
 ■ 「杞憂」：不要な心配

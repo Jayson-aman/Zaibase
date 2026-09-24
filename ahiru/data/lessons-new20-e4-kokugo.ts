@@ -99,6 +99,7 @@ export const lessonsNew20E4Kokugo: Lesson[] = [
       },
       {
         heading: '2. 気持ちを答えるときの注意点',
+        mangaId: 'new20_e4_kokugo_02_manga',
         body: `気持ちを読み取れても、答え方をまちがえると点数になりません。ここでは記述・選択肢それぞれの注意点を確認します。
 
 ■ 「理由もふくめて」答える
@@ -468,6 +469,7 @@ export const lessonsNew20E4Kokugo: Lesson[] = [
       },
       {
         heading: '2. 主語がかくれている文・まぎらわしい文',
+        mangaId: 'new20_e4_kokugo_08_manga',
         body: `主語と述語の関係には、いくつか注意しなければならないパターンがあります。ここを知っておくと、まぎらわしい問題でも正確に答えられます。
 
 ■ 主語が省略されている文
@@ -798,6 +800,7 @@ export const lessonsNew20E4Kokugo: Lesson[] = [
       },
       {
         heading: '2. まちがえやすい使い方と、入試での問われ方',
+        mangaId: 'new20_e4_kokugo_13_manga',
         body: `尊敬語・けんじょう語には、小学生がとてもまちがえやすいパターンがあります。ここでしっかり確認しておきましょう。
 
 ■ よくあるまちがい①：自分の動作に尊敬語を使ってしまう
