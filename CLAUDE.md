@@ -148,6 +148,7 @@ Zaibase/
 ## 絶対に混ぜない
 
 - **kensetsu（建設）** と **horitsu（法律相談）** は別プロダクト・別Firebase
+- **kensetsu（建設）と ahiru（中学受験・高校受験）も別プロダクト・別事業として明確に分ける**（2026/9/25、ユーザーより「建設の中に中学高校受験を紛れ込ませたのが間違い。建設は建設、受験は受験として分けたい」と強く指示）。決済・Stripeアカウントも建設用（Zaibase Group）とahiru用を完全に分離すること。詳細は下記Stripeの節を参照
 - 法律関連コンテンツ → kensetsu に入れる（法律相談SPAではない）
 - 決済・Auth・Firestore は各プロジェクト独立
 - horitsu の `applyGroupDiscount`（建設プロプラン会員→法律相談¥1,000引き、`horitsu/functions/subscription.js`）は、弁護士法72条（周旋・紹介規制）の確認が取れるまで管理者承認（`groupDiscountGranted`）しない
@@ -277,10 +278,19 @@ Muted:    #64748B
 
 ## Stripe
 
+### Zaibase Group（kensetsu建設・horitsu法律相談用）
 - アカウント名：Zaibase Group（MIYABI WOR / acct_1TEhbMJtbSkZ2zlG）
 - 建設プラン：starter ¥1,980 / pro ¥5,480 / team ¥14,800（月額）
 - 法律相談：standard ¥2,980 / pro ¥7,800（月額）
 - Zaibase建設プロプラン会員割引：法律相談が¥1,000引き
+- ⚠️ このアカウントはWix.comと連携しており紛らわしいため、ahiru（受験）の決済には絶対に使わないこと
+
+### ahiru（中学受験・高校受験）専用（2026/9/25新規作成）
+- アカウント：acct_1UJQzIBiyS3mhFgQ（中学受験・高校受験…、テストモードで作成開始）
+- 上記Zaibase Groupアカウントとは完全に別。建設・法律相談の売上とは混在させない
+- ウェブサイトURL登録：`https://exam.zaibase.group`
+- 用途：①公式集(¥50)・単元(¥100)買い切りのCheckout（`ahiru/functions/stripeUnlock.js`、Secrets: `AHIRU_STRIPE_SECRET_KEY`/`AHIRU_STRIPE_WEBHOOK_SECRET`）②RevenueCat Web BillingのStripe接続先（Pro¥1,980/月・Max¥2,890/月）
+- 本番稼働前に必ずテストモードから本番モードへ切り替え、Secretsも本番用（`sk_live_...`）に差し替えること
 
 ## 現在の開発ブランチ
 
