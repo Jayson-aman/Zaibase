@@ -42,10 +42,14 @@ const db = getFirestore();
 const STRIPE_KEY = defineSecret("AHIRU_STRIPE_SECRET_KEY");
 const STRIPE_WH = defineSecret("AHIRU_STRIPE_WEBHOOK_SECRET");
 
-const TYPE_CONFIG = {
+// Object.create(null) で prototype を持たない素の辞書にする。
+// 素のオブジェクトリテラルだと TYPE_CONFIG["__proto__"] が Object.prototype
+// を返してしまい（truthy）、外部から渡される type の検証（下の !config）を
+// すり抜けてしまう。
+const TYPE_CONFIG = Object.assign(Object.create(null), {
   formula: { collection: "formulaUnlocks", amount: 50, label: "公式集" },
   unit: { collection: "unitUnlocks", amount: 100, label: "単元" },
-};
+});
 
 async function getAlreadyUnlocked(config, uid) {
   const snap = await db.collection(config.collection).doc(uid).get();

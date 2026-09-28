@@ -368,8 +368,25 @@ export async function startStripeUnlockCheckout(
   type: StripeUnlockType,
   itemId: string
 ): Promise<{ alreadyUnlocked: boolean }> {
+  // Web版の買い切りはFirebase UIDに紐づけて解放する。匿名のまま購入させると、
+  // あとでブラウザのデータが消える・別ブラウザで開く・本当のアカウントで
+  // ログインし直す等で匿名UIDを失った瞬間、支払い済みの解放を二度と
+  // 見られなくなる（Paywallの月額課金と同じ理由でログイン必須にする）。
+  const { getFirebaseAuth } = await import('./firebaseClient');
+  const auth = await getFirebaseAuth();
+  if (!auth.currentUser || auth.currentUser.isAnonymous) {
+    throw new Error('ご購入にはログインが必要です。ログインしてからもう一度お試しください。');
+  }
+
+  // クエリ文字列とハッシュの両方を必ず落とす。href.split('?')[0] だと、
+  // ハッシュだけがあってクエリが無いURL（例: ".../lesson/abc#section2"）で
+  // ハッシュが残ってしまい、サーバー側でその後ろに ?unlock_success=1 を
+  // 付け足すと「クエリがハッシュの後ろに来る」壊れたURLになる。その場合
+  // location.search で拾えず、Checkout成功後の即時解放確認が効かなくなる。
   const returnUrl =
-    typeof window !== 'undefined' ? window.location.href.split('?')[0] : undefined;
+    typeof window !== 'undefined'
+      ? `${window.location.origin}${window.location.pathname}`
+      : undefined;
   const result = await callFirebaseFunction<
     { type: StripeUnlockType; itemId: string; returnUrl?: string },
     StripeUnlockCheckoutResult

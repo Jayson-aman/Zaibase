@@ -1,16 +1,23 @@
+import { Platform } from 'react-native';
+
 // ───────────────────────────────────────────────────────────────
 // ahiru サブスク価格の唯一の定義（Single Source of Truth）
 // ───────────────────────────────────────────────────────────────
-// 全プラットフォーム（iOS App Store / Google Play / Web=Stripe）で
-// 「同一の金額」に統一する。実際に表示される金額は各ストアが返す
-// priceString だが、それらのストア登録額も必ずこの表と一致させること。
+// iOS App Store / Google Play / Web=Stripe で「同一の金額」に統一する
+// ……のが原則だが、2026/9/25にユーザーの指示でPro・MaxのみWeb版を
+// 値上げすることにした（下のWEB_PRICES参照）。それ以外（英単語Pro・
+// 公式集・単元買い切り）は引き続き全プラットフォーム同額。
+// 実際に表示される金額は各ストアが返す priceString だが、それらの
+// ストア登録額も必ずこの表と一致させること。
 // ストア設定の手順・対応表は docs/pricing.md を参照。
 //
 // ストアの priceString がまだ取得できない場合（未設定・読込前など）は、
 // 下の *_LABEL をフォールバック表示として使う。表示のブレを防ぐため、
 // アプリ内の価格表示は必ずこの定数を参照する（各所に直書きしない）。
 
-/** 税込の月額・年額（円） */
+const isWeb = Platform.OS === 'web';
+
+/** 税込の月額・年額（円）。iOS App Store・Google Play・（Pro/Max以外は）Webで共通 */
 export const PRICES = {
   // Pro：受験5科目（聞き流し・全13,000問・くわしい解説・教科書）。
   proMonthly: 1980,
@@ -28,13 +35,22 @@ export const PRICES = {
   unitUnlock: 100,
 } as const;
 
+// Web版のみのPro・Max価格（2026/9/25、ユーザー指示による値上げ）。
+// RevenueCat Web BillingのPackage（pro_monthly/max_monthly）の価格も
+// 必ずこの金額に設定すること（ここを変えるだけではストア側の実際の
+// 課金額は変わらない。ここはあくまで表示用フォールバックの単一情報源）。
+export const WEB_PRICES = {
+  proMonthly: 2980,
+  maxMonthly: 3980,
+} as const;
+
 /** 3桁区切りの円表記（Hermes でも安全なように手動フォーマット） */
 export function formatYen(n: number): string {
   return '¥' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
-export const PRO_PRICE_LABEL = `${formatYen(PRICES.proMonthly)}/月`;
-export const MAX_PRICE_LABEL = `${formatYen(PRICES.maxMonthly)}/月`;
+export const PRO_PRICE_LABEL = `${formatYen(isWeb ? WEB_PRICES.proMonthly : PRICES.proMonthly)}/月`;
+export const MAX_PRICE_LABEL = `${formatYen(isWeb ? WEB_PRICES.maxMonthly : PRICES.maxMonthly)}/月`;
 export const VOCAB_MONTHLY_LABEL = `${formatYen(PRICES.vocabMonthly)}/月`;
 export const VOCAB_YEARLY_LABEL = `${formatYen(PRICES.vocabYearly)}/年`;
 /** 買い切り（1回のみ）なので期間表記を付けない */
