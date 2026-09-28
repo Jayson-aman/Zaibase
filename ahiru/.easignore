@@ -1,0 +1,6 @@
+# EASビルドのアーカイブから除外する（ビルドに不要で、アップロード容量だけ増える）
+# distは npm run audit のWebバンドル検査（expo export）のたびに作り直される一時成果物
+dist/
+web-build/
+.expo/
+screenshots/
