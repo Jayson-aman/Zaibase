@@ -261,6 +261,7 @@ import { mangaScriptsKokoRikaKagaku22 } from './manga-scripts-koko-rika-kagaku22
 import { mangaScriptsKokoEigo22 } from './manga-scripts-koko-eigo22';
 import { mangaScriptsKokoShakaiChirishi22 } from './manga-scripts-koko-shakai-chirishi22';
 import { mangaScriptsKokoKokugo22 } from './manga-scripts-koko-kokugo22';
+import { mangaScriptsKokoShakaiKomin22 } from './manga-scripts-koko-shakai-komin22';
 import { mangaScriptsSansuChugaku23 } from './manga-scripts-sansu-chugaku23';
 import { mangaScriptsRikaChugaku23 } from './manga-scripts-rika-chugaku23';
 import { mangaScriptsShakaiChugaku23 } from './manga-scripts-shakai-chugaku23';
@@ -556,6 +557,7 @@ const ALL_MANGA_SCRIPTS: Record<string, MangaScript> = {
   ...mangaScriptsKokoEigo22,
   ...mangaScriptsKokoShakaiChirishi22,
   ...mangaScriptsKokoKokugo22,
+  ...mangaScriptsKokoShakaiKomin22,
   ...mangaScriptsSansuChugaku23,
   ...mangaScriptsRikaChugaku23,
   ...mangaScriptsShakaiChugaku23,
