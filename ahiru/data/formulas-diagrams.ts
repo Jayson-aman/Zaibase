@@ -21,6 +21,8 @@ import { DIAGRAMS_KOKO_RIKA_B } from './formulas-diagrams-koko-rika-b';
 import { DIAGRAMS_EIGO_A } from './formulas-diagrams-eigo-a';
 import { DIAGRAMS_KOKUGO_A } from './formulas-diagrams-kokugo-a';
 import { DIAGRAMS_EIGO_KOKO_A } from './formulas-diagrams-eigo-koko-a';
+import { DIAGRAMS_EIGO_B } from './formulas-diagrams-eigo-b';
+import { DIAGRAMS_KOKO_KOKUGO_B } from './formulas-diagrams-koko-kokugo-b';
 import { DIAGRAMS_SHAKAI_6 } from './formulas-diagrams-shakai-6';
 
 export const FORMULA_DIAGRAMS: Record<string, DiagramFigure> = {
@@ -44,5 +46,7 @@ export const FORMULA_DIAGRAMS: Record<string, DiagramFigure> = {
   ...DIAGRAMS_EIGO_A,
   ...DIAGRAMS_KOKUGO_A,
   ...DIAGRAMS_EIGO_KOKO_A,
+  ...DIAGRAMS_EIGO_B,
+  ...DIAGRAMS_KOKO_KOKUGO_B,
   ...DIAGRAMS_SHAKAI_6,
 };
