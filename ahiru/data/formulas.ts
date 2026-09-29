@@ -32,9 +32,13 @@ import { shakaiTsuika7Formulas } from './formulas-shakai-tsuika7';
 import { shakaiTsuika8Formulas } from './formulas-shakai-tsuika8';
 import { kokoShakaiFormulas } from './formulas-koko-shakai';
 import { kokugoFormulas } from './formulas-kokugo';
+import { kokugoTsuikaFormulas } from './formulas-kokugo-tsuika';
 import { kokoKokugoFormulas } from './formulas-koko-kokugo';
+import { kokoKokugoTsuikaFormulas } from './formulas-koko-kokugo-tsuika';
 import { eigoFormulas } from './formulas-eigo';
+import { eigoTsuikaFormulas } from './formulas-eigo-tsuika';
 import { eigoKokoFormulas } from './formulas-eigo-koko';
+import { eigoKokoTsuikaFormulas } from './formulas-eigo-koko-tsuika';
 
 export type Subject = '算数' | '国語' | '理科' | '社会' | '英語';
 
@@ -54,10 +58,10 @@ export const SUBJECTS: { key: Subject; emoji: string; color: string }[] = [
 // あいだは、非購読者には「準備中です」ボタンが出るだけで購入できない。
 const FORMULAS_RAW: Record<Subject, FormulaSection[]> = {
   算数: [...sansuFormulas, ...sansuTsuikaFormulas, ...sansuTsuika2Formulas, ...sansuTsuika3Formulas, ...sansuTsuika4Formulas, ...sansuTsuika5Formulas, ...sansuTsuika6Formulas, ...kokoSugakuFormulas],
-  国語: [...kokugoFormulas, ...kokoKokugoFormulas],
+  国語: [...kokugoFormulas, ...kokugoTsuikaFormulas, ...kokoKokugoFormulas, ...kokoKokugoTsuikaFormulas],
   理科: [...rikaFormulas, ...rikaButsuriKagakuFormulas, ...rikaTsuika2Formulas, ...rikaTsuika3Formulas, ...rikaTsuika4Formulas, ...rikaTsuika5Formulas, ...rikaTsuika6Formulas, ...rikaTsuika7Formulas, ...kokoRikaFormulas],
   社会: [...shakaiFormulas, ...shakaiTsuikaFormulas, ...shakaiTsuika2Formulas, ...shakaiTsuika3Formulas, ...shakaiTsuika4Formulas, ...shakaiTsuika5Formulas, ...shakaiTsuika6Formulas, ...shakaiTsuika7Formulas, ...shakaiTsuika8Formulas, ...kokoShakaiFormulas],
-  英語: [...eigoFormulas, ...eigoKokoFormulas],
+  英語: [...eigoFormulas, ...eigoTsuikaFormulas, ...eigoKokoFormulas, ...eigoKokoTsuikaFormulas],
 };
 
 // 動く図解スライドを、label が一致する項目に取りつける（項目に figure が無いときだけ）。
