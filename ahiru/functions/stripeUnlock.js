@@ -1,5 +1,5 @@
 /**
- * ahiru Web版：公式集(¥100)・公式集まとめ買い(¥980)・新規追加単元(¥100)買い切りのStripe直接決済
+ * ahiru Web版：公式集(¥200)・公式集まとめ買い(¥2,980)・新規追加単元(¥100)買い切りのStripe直接決済
  *
  * なぜ必要か:
  *   RevenueCatのWeb Billingはサブスク用のオファリングPackageしか扱えず、
@@ -47,8 +47,8 @@ const STRIPE_WH = defineSecret("AHIRU_STRIPE_WEBHOOK_SECRET");
 // を返してしまい（truthy）、外部から渡される type の検証（下の !config）を
 // すり抜けてしまう。
 const TYPE_CONFIG = Object.assign(Object.create(null), {
-  formula: { collection: "formulaUnlocks", amount: 100, label: "公式集" },
-  bundle: { collection: "formulaUnlocks", amount: 980, label: "公式集まとめ買い" },
+  formula: { collection: "formulaUnlocks", amount: 200, label: "公式集" },
+  bundle: { collection: "formulaUnlocks", amount: 2980, label: "公式集まとめ買い" },
   unit: { collection: "unitUnlocks", amount: 100, label: "単元" },
 });
 

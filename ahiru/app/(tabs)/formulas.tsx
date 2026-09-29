@@ -14,7 +14,7 @@ import {
   useWindowDimensions,
 } from 'react-native';
 import { useRouter } from 'expo-router';
-import { FORMULAS, SUBJECTS, formulaBundleId, countLockedFormulas, type Subject, type FormulaItem } from '../../data/formulas';
+import { FORMULAS, SUBJECTS, formulaBundleId, countLockedFormulas, lockedFormulaLabels, type Subject, type FormulaItem } from '../../data/formulas';
 import { STUDY_PERIOD_ORDER, type StudyPeriod } from '../../data/formulas-types';
 import { useExamType, examTypeLabel, type ExamType } from '../../store/examType';
 import SubjectIcon, { type IconSubject } from '../../components/SubjectIcon';
@@ -22,6 +22,7 @@ import FigureView from '../../components/FigureView';
 import InlineQuiz from '../../components/InlineQuiz';
 import { formulaImages } from '../../data/formulaImages';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
+import { PRICES, formatYen, FORMULA_BUNDLE_ITEM_CAP } from '../../constants/pricing';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 
@@ -57,6 +58,10 @@ const FormulaRow = React.memo(function FormulaRow({
   bundlePriceLabel,
   bundlePurchasing,
   onUnlockBundle,
+  boughtCount,
+  bundleItemCap,
+  fullPriceLabel,
+  bundleOffPercent,
 }: {
   item: FormulaItem;
   accent: string;
@@ -73,6 +78,10 @@ const FormulaRow = React.memo(function FormulaRow({
   bundlePriceLabel: string;
   bundlePurchasing: boolean;
   onUnlockBundle: (bundleId: string) => void;
+  boughtCount: number;
+  bundleItemCap: number;
+  fullPriceLabel: string;
+  bundleOffPercent: number;
 }) {
   if (item.locked && !bypassLock && !isUnlocked) {
     return (
@@ -86,37 +95,70 @@ const FormulaRow = React.memo(function FormulaRow({
         <View style={styles.lockCard}>
           <Text style={styles.lockIcon}>🔒</Text>
           <Text style={styles.lockText}>
-            くわしい説明・図解・例題・一問一答は買い切りで解放できます（{priceLabel}・1回のみ）
+            くわしい説明・動く図解・例題・一問一答がついています
           </Text>
-          <TouchableOpacity
-            style={[styles.unlockBtn, { backgroundColor: accent }, (!productReady || purchasing) && styles.unlockBtnDisabled]}
-            activeOpacity={0.85}
-            disabled={!productReady || purchasing}
-            onPress={() => onUnlock(item.label)}
-          >
-            {purchasing ? (
-              <ActivityIndicator color="#FFFFFF" />
-            ) : (
-              <Text style={styles.unlockBtnText}>
-                {productReady ? `${priceLabel}で解放する` : '準備中です'}
-              </Text>
-            )}
-          </TouchableOpacity>
-          <View style={styles.bundleBox}>
+
+          {/* 何が読めるか（買う前に中身のイメージをつかめるように） */}
+          <View style={styles.teaserBox}>
+            <Text style={styles.teaserTitle}>📖 解放すると読めること</Text>
+            <Text style={styles.teaserLine}>
+              {[
+                item.figure?.steps?.length ? `動く図解 ${item.figure.steps.length}枚` : null,
+                item.quiz?.length ? `一問一答 ${item.quiz.length}問` : null,
+                item.checkpoints?.length ? `テストで狙われる点 ${item.checkpoints.length}つ` : null,
+              ]
+                .filter(Boolean)
+                .join(' ／ ') || 'くわしい説明・例題'}
+            </Text>
+            {item.quiz?.[0]?.q ? (
+              <Text style={styles.teaserQuiz}>{`たとえばこんな問題が解けるようになります：\n「${item.quiz[0].q}」`}</Text>
+            ) : null}
+          </View>
+
+          {/* おすすめ：この教科ぜんぶ */}
+          <View style={[styles.bundleCard, { borderColor: accent }]}>
+            <View style={[styles.bundleBadge, { backgroundColor: accent }]}>
+              <Text style={styles.bundleBadgeText}>おすすめ・上限つき</Text>
+            </View>
+            <Text style={styles.bundleHeadline}>{`この教科の${bundleCount}項目、ぜんぶ ${bundlePriceLabel}`}</Text>
             <Text style={styles.bundleText}>
-              {`この教科の公式集（ロック中の${bundleCount}項目）をまとめて解放できます（${bundlePriceLabel}・1回のみ）`}
+              {`1つずつ買うと ${fullPriceLabel}。まとめてなら約${bundleOffPercent}％オフで、この先ふえる項目も追加料金なしです。`}
             </Text>
             <TouchableOpacity
-              style={[styles.bundleBtn, { borderColor: accent }, (!bundleReady || bundlePurchasing) && styles.unlockBtnDisabled]}
+              style={[styles.unlockBtn, { backgroundColor: accent }, (!bundleReady || bundlePurchasing) && styles.unlockBtnDisabled]}
               activeOpacity={0.85}
               disabled={!bundleReady || bundlePurchasing}
               onPress={() => onUnlockBundle(bundleId)}
             >
               {bundlePurchasing ? (
+                <ActivityIndicator color="#FFFFFF" />
+              ) : (
+                <Text style={styles.unlockBtnText}>
+                  {bundleReady ? `ぜんぶ ${bundlePriceLabel} で解放する` : 'まとめ買いは準備中です'}
+                </Text>
+              )}
+            </TouchableOpacity>
+          </View>
+
+          {/* 1項目ずつ買う場合。買った数が上限に届いたら、のこりは自動で全部ひらく */}
+          <View style={styles.singleBox}>
+            <Text style={styles.singleProgressText}>
+              {`この教科で ${boughtCount}/${bundleItemCap}項目 買いました。${bundleItemCap - boughtCount}項目ぶん買えば、のこりは全部無料になります`}
+            </Text>
+            <View style={styles.progressTrack}>
+              <View style={[styles.progressFill, { backgroundColor: accent, width: `${Math.min(100, Math.round((boughtCount / bundleItemCap) * 100))}%` }]} />
+            </View>
+            <TouchableOpacity
+              style={[styles.bundleBtn, { borderColor: accent }, (!productReady || purchasing) && styles.unlockBtnDisabled]}
+              activeOpacity={0.85}
+              disabled={!productReady || purchasing}
+              onPress={() => onUnlock(item.label)}
+            >
+              {purchasing ? (
                 <ActivityIndicator color={accent} />
               ) : (
                 <Text style={[styles.bundleBtnText, { color: accent }]}>
-                  {bundleReady ? `まとめて ${bundlePriceLabel} で解放` : 'まとめ買いは準備中です'}
+                  {productReady ? `この1項目だけ ${priceLabel} で解放` : '準備中です'}
                 </Text>
               )}
             </TouchableOpacity>
@@ -292,6 +334,12 @@ export default function FormulasScreen() {
 
   const bundleId = formulaBundleId(examType, subject);
   const bundleCount = React.useMemo(() => countLockedFormulas(examType, subject), [examType, subject]);
+  const groupLabels = React.useMemo(() => lockedFormulaLabels(examType, subject), [examType, subject]);
+  // この教科で、1項目ずつ買った数。上限（FORMULA_BUNDLE_ITEM_CAP）に届けば、のこりは全部ひらく。
+  const boughtCount = React.useMemo(() => groupLabels.filter((l) => unlockedIds.has(l)).length, [groupLabels, unlockedIds]);
+  const groupUnlocked = unlockedIds.has(bundleId) || boughtCount >= FORMULA_BUNDLE_ITEM_CAP;
+  const fullPriceLabel = formatYen(bundleCount * PRICES.formulaUnlock);
+  const bundleOffPercent = Math.max(0, Math.round((1 - PRICES.formulaBundle / Math.max(1, bundleCount * PRICES.formulaUnlock)) * 100));
 
   const handleUnlock = React.useCallback(async (label: string) => {
     const result = await unlockFormula(label);
@@ -299,8 +347,12 @@ export default function FormulasScreen() {
       Alert.alert('購入できませんでした', result.message);
       return;
     }
-    Alert.alert('解放しました', `「${label}」はこれ以降ずっと無料で見られます。`);
-  }, [unlockFormula]);
+    if (boughtCount + 1 >= FORMULA_BUNDLE_ITEM_CAP && boughtCount < FORMULA_BUNDLE_ITEM_CAP) {
+      Alert.alert('ぜんぶそろいました', 'この教科の公式集は、のこりも全部ずっと無料で見られます。');
+      return;
+    }
+    Alert.alert('解放しました', `「${label}」はこれ以降ずっと無料で見られます。あと${FORMULA_BUNDLE_ITEM_CAP - boughtCount - 1}項目で、この教科は全部そろいます。`);
+  }, [unlockFormula, boughtCount]);
 
   const handleUnlockBundle = React.useCallback(async (id: string) => {
     const result = await unlockFormula(id, 'bundle');
@@ -400,7 +452,7 @@ export default function FormulasScreen() {
           item={row.item}
           accent={subjectInfo.color}
           bypassLock={bypassLock}
-          isUnlocked={unlockedIds.has(row.item.label) || unlockedIds.has(bundleId)}
+          isUnlocked={unlockedIds.has(row.item.label) || groupUnlocked}
           priceLabel={priceLabel}
           productReady={productReady}
           purchasing={purchasingFigureId === row.item.label}
@@ -412,6 +464,10 @@ export default function FormulasScreen() {
           bundlePriceLabel={bundlePriceLabel}
           bundlePurchasing={purchasingFigureId === bundleId}
           onUnlockBundle={handleUnlockBundle}
+          boughtCount={boughtCount}
+          bundleItemCap={FORMULA_BUNDLE_ITEM_CAP}
+          fullPriceLabel={fullPriceLabel}
+          bundleOffPercent={bundleOffPercent}
         />
       ),
     [
@@ -429,6 +485,10 @@ export default function FormulasScreen() {
       bundleReady,
       bundlePriceLabel,
       handleUnlockBundle,
+      groupUnlocked,
+      boughtCount,
+      fullPriceLabel,
+      bundleOffPercent,
     ],
   );
 
@@ -700,6 +760,48 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   unlockBtnDisabled: { opacity: 0.55 },
+  teaserBox: {
+    alignSelf: 'stretch',
+    backgroundColor: '#FFFFFF',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#EBE4D8',
+    padding: 12,
+    marginBottom: 14,
+  },
+  teaserTitle: { fontSize: 12.5, fontWeight: '800', color: '#8B5A38', marginBottom: 4 },
+  teaserLine: { fontSize: 13.5, fontWeight: '700', color: '#2B2420', lineHeight: 20 },
+  teaserQuiz: { fontSize: 12.5, color: '#6E645C', marginTop: 6, lineHeight: 19 },
+  bundleCard: {
+    alignSelf: 'stretch',
+    alignItems: 'center',
+    borderWidth: 2,
+    borderRadius: 12,
+    padding: 14,
+    paddingTop: 20,
+    backgroundColor: '#FFFDF8',
+    marginBottom: 14,
+  },
+  bundleBadge: {
+    position: 'absolute',
+    top: -11,
+    paddingHorizontal: 12,
+    paddingVertical: 3,
+    borderRadius: 10,
+  },
+  bundleBadgeText: { color: '#FFFFFF', fontSize: 11.5, fontWeight: '800' },
+  bundleHeadline: { fontSize: 16, fontWeight: '800', color: '#2B2420', textAlign: 'center', marginBottom: 4 },
+  singleBox: { alignSelf: 'stretch', alignItems: 'center' },
+  singleProgressText: { fontSize: 12, color: '#6E645C', textAlign: 'center', lineHeight: 18, marginBottom: 6 },
+  progressTrack: {
+    alignSelf: 'stretch',
+    height: 6,
+    borderRadius: 3,
+    backgroundColor: '#E8DCC8',
+    marginBottom: 10,
+    overflow: 'hidden',
+  },
+  progressFill: { height: 6, borderRadius: 3 },
   bundleBox: {
     marginTop: 14,
     paddingTop: 12,

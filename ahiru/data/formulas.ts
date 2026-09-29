@@ -81,6 +81,16 @@ export function formulaBundleId(examType: 'chugaku' | 'koko', subject: Subject):
   return `bundle:${examType}:${subject}`;
 }
 
+/** その受験種別×教科で、ロックされている項目のlabel一覧。 */
+export function lockedFormulaLabels(examType: 'chugaku' | 'koko', subject: Subject): string[] {
+  const out: string[] = [];
+  for (const sec of FORMULAS[subject]) {
+    if (sec.examType != null && sec.examType !== examType) continue;
+    for (const it of sec.items) if (it.locked) out.push(it.label);
+  }
+  return out;
+}
+
 /** その受験種別×教科で、ロックされている項目の数（まとめ買いで読めるようになる数）。 */
 export function countLockedFormulas(examType: 'chugaku' | 'koko', subject: Subject): number {
   let n = 0;

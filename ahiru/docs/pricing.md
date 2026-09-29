@@ -15,7 +15,7 @@
 
 - 無料プラン：¥0（ずっと無料）。
 - 価格・Product IDは `constants/pricing.ts` と `services/subscription.ts` が唯一の情報源。本ドキュメントは必ずコードと同期させること（過去に本ドキュメントの記載が古いまま放置され、実際のコード・ストア設定と食い違っていたことがある）。
-- 公式集は2026/9/29に **¥50→¥100（1項目）** に値上げし、**まとめ買い ¥980（受験種別×教科・ロック中の項目を全部解放）** を追加した。単元(¥100)の買い切りは変更なし。3プラットフォーム完全同額。
+- 公式集は2026/9/29に **¥50→¥200（1項目）** に値上げし、**まとめ買い ¥2,980（受験種別×教科・ロック中の項目を全部解放）** を追加した。1項目ずつ買っても、その教科で15項目（＝まとめ買いの金額に届く数）を買えば、のこりは自動で全部解放される（上限つき）。単元(¥100)の買い切りは変更なし。3プラットフォーム完全同額。
 
 ## 商品ID（3プラットフォームで対応させる）
 
@@ -25,8 +25,8 @@
 | MAX 月額 | `com.zaibase.exam.maxmonthly` | `max_monthly` |
 | 英単語 月額 | `com.zaibase.exam.vocabmonthly` | `vocab_monthly` |
 | 英単語 年額 | `com.zaibase.exam.vocabyearly` | `vocab_yearly` |
-| 公式集 1項目（消費型・¥100） | `com.zaibase.exam.formulaunlock` | （Webは Stripe 直接決済） |
-| 公式集 まとめ買い（消費型・¥980） | `com.zaibase.exam.formulabundle` | （Webは Stripe 直接決済） |
+| 公式集 1項目（消費型・¥200） | `com.zaibase.exam.formulaunlock` | （Webは Stripe 直接決済） |
+| 公式集 まとめ買い（消費型・¥2,980） | `com.zaibase.exam.formulabundle` | （Webは Stripe 直接決済） |
 | 単元 1件（消費型・¥100） | `com.zaibase.exam.unitunlock` | （Webは Stripe 直接決済） |
 
 （定義元：`services/subscription.ts`。**ドットなし**の形式。Apple側のID再利用制限により、旧ドット付きID `com.zaibase.exam.pro.monthly` 等から変更された経緯があるため、新規に商品を作成する際は必ずこの表のドットなしIDを使うこと）
@@ -66,8 +66,8 @@ Package IDはiOS/Android/Webで**同じ文字列**（`pro_monthly`/`max_monthly`
 
 ## 公式集の買い切り（2026/9/29）
 
-- **1項目 ¥100**：`com.zaibase.exam.formulaunlock`（消費型）。購入するたびに1項目が解放される。
-- **まとめ買い ¥980**：`com.zaibase.exam.formulabundle`（消費型・**新規登録が必要**）。受験種別×教科（例：中学受験の算数）のロック中の項目を全部解放する。解放記録は `formulaUnlocks/{uid}.unlocked` に `bundle:chugaku:算数` の形で入る。
+- **1項目 ¥200**：`com.zaibase.exam.formulaunlock`（消費型）。購入するたびに1項目が解放される。
+- **まとめ買い ¥2,980**：`com.zaibase.exam.formulabundle`（消費型・**新規登録が必要**）。受験種別×教科（例：中学受験の算数）のロック中の項目を全部解放する。**上限の考え方**：1項目ずつ買った数が `FORMULA_BUNDLE_ITEM_CAP`（＝2980÷200の切り上げ＝15項目）に届くと、その教科ののこりは自動で全部ひらく（`constants/pricing.ts`・`app/(tabs)/formulas.tsx`）。解放記録は `formulaUnlocks/{uid}.unlocked` に `bundle:chugaku:算数` の形で入る。
 - サーバーは商品ごとに別勘定で購入回数を照合する（`functions/contentUnlock.js`）。Web（Stripe）で買った分は `stripeUnlocked` に別記録し、ネイティブの購入回数と混ざらない。
 - 金額を変えるときは `constants/pricing.ts` と `functions/stripeUnlock.js` の金額（Cloud Functions側は複製）と、各ストアの登録額を、すべて同じにする。
-- 既存のストア商品 `formulaunlock` は、ストア側の価格を ¥50 → ¥100 に変更する（新しい商品IDは不要）。
+- 既存のストア商品 `formulaunlock` は、ストア側の価格を ¥50 → ¥200 に変更する（新しい商品IDは不要）。
