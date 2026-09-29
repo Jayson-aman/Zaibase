@@ -32,7 +32,7 @@
  *   firebase functions:secrets:set AHIRU_STRIPE_WEBHOOK_SECRET
  *   Stripeダッシュボード → Webhook → エンドポイント:
  *     https://asia-northeast1-<ahiruのFirebaseプロジェクトID>.cloudfunctions.net/ahiruUnlockWebhook
- *     イベント: checkout.session.completed
+ *     イベント: checkout.session.completed / charge.refunded / charge.dispute.created
  */
 const { onCall, onRequest, HttpsError } = require("firebase-functions/v2/https");
 const { getFirestore, FieldValue } = require("firebase-admin/firestore");
@@ -56,11 +56,65 @@ async function getAlreadyUnlocked(config, uid) {
   return /** @type {string[]} */ (snap.data()?.unlocked ?? []);
 }
 
+// テストキー（sk_test_）のままデプロイされていると、テストカード4242でも
+// payment_status が paid になり、誰でも無料で解放できてしまう。本番では
+// livemode のセッションだけを受け付ける。テスト中だけ、Functionsの環境変数
+// AHIRU_ALLOW_STRIPE_TEST=1 を設定して許可する。
+function assertLiveSession(session) {
+  if (session.livemode === true) return;
+  if (process.env.AHIRU_ALLOW_STRIPE_TEST === "1") return;
+  throw new HttpsError("failed-precondition", "テスト決済は受け付けていません");
+}
+
+// stripeUnlocked：Stripe（Web）で買った分。RevenueCat経由（ネイティブ）の購入回数と
+// 突き合わせるとき、こちらを数えから除くために別に持つ（contentUnlock.js）。
 async function unlockIfNeeded(config, uid, itemId) {
   await db.collection(config.collection).doc(uid).set(
-    { uid, unlocked: FieldValue.arrayUnion(itemId), updatedAt: FieldValue.serverTimestamp() },
+    {
+      uid,
+      unlocked: FieldValue.arrayUnion(itemId),
+      stripeUnlocked: FieldValue.arrayUnion(itemId),
+      updatedAt: FieldValue.serverTimestamp(),
+    },
     { merge: true }
   );
+}
+
+// 返金・チャージバックされたら解放を取り消す。
+async function revokeIfRefunded(stripe, charge) {
+  const pi = charge.payment_intent;
+  if (!pi) return;
+  const sessions = await stripe.checkout.sessions.list({ payment_intent: pi, limit: 1 });
+  const obj = sessions.data[0];
+  if (!obj) return;
+  const uid = obj.metadata?.firebase_uid;
+  const config = TYPE_CONFIG[obj.metadata?.type];
+  const itemId = obj.metadata?.item_id;
+  if (!uid || !config || !itemId) return;
+  await db.collection(config.collection).doc(uid).set(
+    {
+      unlocked: FieldValue.arrayRemove(itemId),
+      stripeUnlocked: FieldValue.arrayRemove(itemId),
+      updatedAt: FieldValue.serverTimestamp(),
+    },
+    { merge: true }
+  );
+}
+
+// returnUrl は自サイトのURLだけ許可する（クライアントが外部URLを渡せてしまうため）。
+function safeBaseUrl(returnUrl) {
+  const fallback = "https://exam.zaibase.group/";
+  if (typeof returnUrl !== "string") return fallback;
+  try {
+    const u = new URL(returnUrl);
+    const allowed = ["https://exam.zaibase.group", "https://exam-zaibase-group.vercel.app"];
+    if (!allowed.includes(u.origin) && !(process.env.AHIRU_ALLOW_STRIPE_TEST === "1" && u.hostname === "localhost")) {
+      return fallback;
+    }
+    return `${u.origin}${u.pathname}`;
+  } catch {
+    return fallback;
+  }
 }
 
 function appendQuery(url, query) {
@@ -86,7 +140,7 @@ exports.createAhiruUnlockCheckout = onCall(
     }
 
     const stripe = require("stripe")(STRIPE_KEY.value());
-    const base = returnUrl || "https://exam.zaibase.group/";
+    const base = safeBaseUrl(returnUrl);
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
@@ -132,6 +186,7 @@ exports.confirmAhiruUnlockCheckout = onCall(
     const stripe = require("stripe")(STRIPE_KEY.value());
     const session = await stripe.checkout.sessions.retrieve(sessionId);
 
+    assertLiveSession(session);
     if (session.metadata?.firebase_uid !== uid) {
       throw new HttpsError("permission-denied", "このセッションにアクセスできません");
     }
@@ -173,7 +228,7 @@ exports.ahiruUnlockWebhook = onRequest(
     try {
       if (event.type === "checkout.session.completed") {
         const obj = event.data.object;
-        if (obj.mode === "payment" && obj.payment_status === "paid") {
+        if (obj.mode === "payment" && obj.payment_status === "paid" && (obj.livemode === true || process.env.AHIRU_ALLOW_STRIPE_TEST === "1")) {
           const uid = obj.metadata?.firebase_uid;
           const type = obj.metadata?.type;
           const itemId = obj.metadata?.item_id;
@@ -182,6 +237,9 @@ exports.ahiruUnlockWebhook = onRequest(
             await unlockIfNeeded(config, uid, itemId);
           }
         }
+      } else if (event.type === "charge.refunded" || event.type === "charge.dispute.created") {
+        const charge = event.type === "charge.refunded" ? event.data.object : { payment_intent: event.data.object.payment_intent };
+        await revokeIfRefunded(stripe, charge);
       }
     } catch (err) {
       console.error("ahiruUnlockWebhook handling error:", err);

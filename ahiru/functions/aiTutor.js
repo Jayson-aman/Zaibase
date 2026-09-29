@@ -132,10 +132,7 @@ exports.askTutor = onCall(
     // 課金判定は RevenueCat を正とする。users/{uid}.tier は書き込み処理が無く
     // 常に free になってしまうため、単独では課金者を判定できない。
     const userRef = db.collection("users").doc(uid);
-    const userSnap = await userRef.get();
-    const userData = userSnap.exists ? userSnap.data() : {};
     const isMax = (await hasMaxAccess(uid)) === true;
-    const trialAiUsed = userData?.trialAiUsed ?? false;
 
     // 無料体験は「1セッション」であって「1メッセージ」ではない。
     // 継続中の会話（isNewSession=false）まで弾くと、体験が1往復で切れて
@@ -151,14 +148,19 @@ exports.askTutor = onCall(
           "AI個別指導の無料体験（1回）は、ログインすると使えます。マイページからログインしてください。"
         );
       }
-      if (trialAiUsed) {
-        throw new HttpsError(
-          "permission-denied",
-          "AI個別指導の無料体験（1回）は使い切りました。Maxプランにアップグレードすると月18回使えるよ！"
-        );
-      }
-      // 初回のみ許可 → 体験済みマークを付ける
-      await userRef.set({ trialAiUsed: true, updatedAt: FieldValue.serverTimestamp() }, { merge: true });
+      // 体験の「未使用を確認 → 使用済みにする」を1つのトランザクションで行う。
+      // 分けると、同じuidで別sessionIdの新規セッションを並列に送ったとき、
+      // 全部が「未使用」を見て通り、Opusの無料体験が何セッションも使えてしまう。
+      await db.runTransaction(async (tx) => {
+        const cur = await tx.get(userRef);
+        if (cur.exists && cur.data()?.trialAiUsed) {
+          throw new HttpsError(
+            "permission-denied",
+            "AI個別指導の無料体験（1回）は使い切りました。Maxプランにアップグレードすると月18回使えるよ！"
+          );
+        }
+        tx.set(userRef, { trialAiUsed: true, updatedAt: FieldValue.serverTimestamp() }, { merge: true });
+      });
     }
 
     const turnCount = await getOrCreateSession(uid, sessionId, isNewSession);

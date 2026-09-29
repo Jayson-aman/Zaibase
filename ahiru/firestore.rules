@@ -54,8 +54,11 @@ service cloud.firestore {
       allow read, update, delete: if false;
       allow create: if request.auth != null
         && request.resource.data.uid == request.auth.uid
+        && request.resource.data.keys().hasOnly(['uid', 'event', 'mode', 'subject', 'examType', 'tier', 'blocked', 'createdAt'])
         && request.resource.data.event is string
+        && request.resource.data.event.size() < 64
         && request.resource.data.mode is string
+        && request.resource.data.mode.size() < 64
         && request.resource.data.tier in ['free', 'pro', 'max'];
     }
 

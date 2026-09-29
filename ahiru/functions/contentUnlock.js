@@ -49,6 +49,9 @@ exports.unlockContent = onCall(
     const docRef = db.collection(config.collection).doc(uid);
     const snap = await docRef.get();
     const alreadyUnlocked = /** @type {string[]} */ (snap.data()?.unlocked ?? []);
+    // Web（Stripe）で解放した分は、RevenueCatの購入回数とは別勘定なので数えから外す。
+    const nativeUnlockedCount = (ids, stripeIds) => ids.filter((x) => !stripeIds.includes(x)).length;
+    const stripeIds0 = /** @type {string[]} */ (snap.data()?.stripeUnlocked ?? []);
 
     // すでに解放済みなら購入確認なしでそのまま成功を返す（二重課金防止・冪等性）
     if (alreadyUnlocked.includes(itemId)) {
@@ -59,7 +62,7 @@ exports.unlockContent = onCall(
     let purchaseCount = null;
     for (let attempt = 0; attempt < 4; attempt++) {
       purchaseCount = await fetchNonSubscriptionPurchaseCount(uid, config.productId);
-      if (purchaseCount !== null && purchaseCount > alreadyUnlocked.length) break;
+      if (purchaseCount !== null && purchaseCount > nativeUnlockedCount(alreadyUnlocked, stripeIds0)) break;
       if (attempt < 3) await sleep(1500);
     }
 
@@ -73,8 +76,9 @@ exports.unlockContent = onCall(
     await db.runTransaction(async (tx) => {
       const cur = await tx.get(docRef);
       const unlocked = /** @type {string[]} */ (cur.data()?.unlocked ?? []);
+      const stripeIds = /** @type {string[]} */ (cur.data()?.stripeUnlocked ?? []);
       if (unlocked.includes(itemId)) return;
-      if (purchaseCount <= unlocked.length) {
+      if (purchaseCount <= nativeUnlockedCount(unlocked, stripeIds)) {
         throw new HttpsError(
           "failed-precondition",
           "購入が確認できませんでした。決済が完了してから少し時間をおいてもう一度お試しください。"
