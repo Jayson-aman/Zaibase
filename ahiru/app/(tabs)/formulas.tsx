@@ -113,7 +113,7 @@ const FormulaRow = React.memo(function FormulaRow({
         {item.figure && (
           <View style={styles.figureBox}>
             <Text style={styles.figureLabel}>図解</Text>
-            <FigureView figure={item.figure} />
+            <FigureView figure={item.figure} animated={item.figure.kind === 'diagram'} manual />
           </View>
         )}
 

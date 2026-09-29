@@ -394,7 +394,31 @@ export type StratumFigure = {
   buildSteps?: number;
 };
 
+// 図解スライド（言葉・箱・矢印・図形を自由に組み合わせた解説用の図）。
+// 座標は 320×240 の内部座標。parts を上から順に描き、stepParts で
+// 「スライド i までに何個の部品を見せるか」（累計）を指定する。
+export type DiagramElement =
+  | { t: 'box'; x: number; y: number; w: number; h: number; text?: string; color?: string; fill?: string; size?: number }
+  | { t: 'label'; x: number; y: number; text: string; size?: number; color?: string; anchor?: 'start' | 'middle' | 'end'; bold?: boolean }
+  | { t: 'arrow'; x1: number; y1: number; x2: number; y2: number; color?: string; dashed?: boolean }
+  | { t: 'line'; x1: number; y1: number; x2: number; y2: number; color?: string; dashed?: boolean; width?: number }
+  | { t: 'circle'; cx: number; cy: number; r: number; color?: string; fill?: string; text?: string; size?: number }
+  | { t: 'poly'; pts: [number, number][]; color?: string; fill?: string }
+  | { t: 'sector'; cx: number; cy: number; r: number; from: number; to: number; color?: string; fill?: string };
+
+export type DiagramFigure = {
+  kind: 'diagram';
+  parts: DiagramElement[];
+  /** スライドごとの「ここまで見せる部品の数」（累計）。steps と同じ長さ */
+  stepParts: number[];
+  caption?: string;
+  /** スライドの説明文（1枚ぶんずつ）。7枚以上を目安に、内容に必要なだけ */
+  steps?: string[];
+  buildSteps?: number;
+};
+
 export type Figure =
+  | DiagramFigure
   | CoordFigure
   | PolyFigure
   | CircleFigure

@@ -3,6 +3,7 @@
 // ───────────────────────────────────────────────────────────────
 // 各教科のデータは data/formulas-*.ts に分割。ここで一つにまとめる。
 import type { FormulaSection } from './formulas-types';
+import { FORMULA_DIAGRAMS } from './formulas-diagrams';
 import { sansuFormulas } from './formulas-sansu';
 import { sansuTsuikaFormulas } from './formulas-sansu-tsuika';
 import { sansuTsuika2Formulas } from './formulas-sansu-tsuika2';
@@ -51,12 +52,28 @@ export const SUBJECTS: { key: Subject; emoji: string; color: string }[] = [
 // Pro/Max購読者はロックに関係なく全項目を読める（formulas.tsx の bypassLock）。
 // ⚠️ iOS/Androidの¥50商品（com.zaibase.exam.formulaunlock）がストアに未登録の
 // あいだは、非購読者には「準備中です」ボタンが出るだけで購入できない。
-export const FORMULAS: Record<Subject, FormulaSection[]> = {
+const FORMULAS_RAW: Record<Subject, FormulaSection[]> = {
   算数: [...sansuFormulas, ...sansuTsuikaFormulas, ...sansuTsuika2Formulas, ...sansuTsuika3Formulas, ...sansuTsuika4Formulas, ...sansuTsuika5Formulas, ...sansuTsuika6Formulas, ...kokoSugakuFormulas],
   国語: [...kokugoFormulas, ...kokoKokugoFormulas],
   理科: [...rikaFormulas, ...rikaButsuriKagakuFormulas, ...rikaTsuika2Formulas, ...rikaTsuika3Formulas, ...rikaTsuika4Formulas, ...rikaTsuika5Formulas, ...rikaTsuika6Formulas, ...rikaTsuika7Formulas, ...kokoRikaFormulas],
   社会: [...shakaiFormulas, ...shakaiTsuikaFormulas, ...shakaiTsuika2Formulas, ...shakaiTsuika3Formulas, ...shakaiTsuika4Formulas, ...shakaiTsuika5Formulas, ...shakaiTsuika6Formulas, ...shakaiTsuika7Formulas, ...shakaiTsuika8Formulas, ...kokoShakaiFormulas],
   英語: [...eigoFormulas, ...eigoKokoFormulas],
+};
+
+// 動く図解スライドを、label が一致する項目に取りつける（項目に figure が無いときだけ）。
+function withDiagrams(sections: FormulaSection[]): FormulaSection[] {
+  return sections.map((sec) => ({
+    ...sec,
+    items: sec.items.map((it) => (it.figure || !FORMULA_DIAGRAMS[it.label] ? it : { ...it, figure: FORMULA_DIAGRAMS[it.label] })),
+  }));
+}
+
+export const FORMULAS: Record<Subject, FormulaSection[]> = {
+  算数: withDiagrams(FORMULAS_RAW.算数),
+  国語: withDiagrams(FORMULAS_RAW.国語),
+  理科: withDiagrams(FORMULAS_RAW.理科),
+  社会: withDiagrams(FORMULAS_RAW.社会),
+  英語: withDiagrams(FORMULAS_RAW.英語),
 };
 
 export type { FormulaSection, FormulaItem, FormulaExample, FormulaQuizItem } from './formulas-types';

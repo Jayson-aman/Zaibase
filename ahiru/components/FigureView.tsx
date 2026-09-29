@@ -32,6 +32,8 @@ import type {
   StratumFigure,
   JapanMapFigure,
   BioDiagramFigure,
+  DiagramFigure,
+  DiagramElement,
   Pt,
 } from '../data/figures';
 import { prefectureShapes, JP_MAP_VIEWBOX } from '../data/japanPrefectures';
@@ -1313,6 +1315,110 @@ function BioDiagramFig({ fig }: { fig: BioDiagramFigure }): React.ReactNode[] {
   }
 }
 
+
+// ---------- 図解スライド（言葉・箱・矢印の自由な図） ----------
+
+const DIAG_INK = '#2B2420';
+
+function sectorPath(cx: number, cy: number, r: number, from: number, to: number): string {
+  const rad = (d: number) => (d * Math.PI) / 180;
+  const x1 = cx + r * Math.cos(rad(from));
+  const y1 = cy - r * Math.sin(rad(from));
+  const x2 = cx + r * Math.cos(rad(to));
+  const y2 = cy - r * Math.sin(rad(to));
+  const large = Math.abs(to - from) > 180 ? 1 : 0;
+  return `M${cx},${cy} L${x1},${y1} A${r},${r} 0 ${large} 0 ${x2},${y2} Z`;
+}
+
+/** 全角1字＝1、半角＝0.55 として、いちばん長い行の幅（fontSize 1 あたり）を返す */
+function textUnits(line: string): number {
+  let u = 0;
+  for (const ch of line) u += ch.charCodeAt(0) < 256 ? 0.55 : 1;
+  return u;
+}
+
+/**
+ * 複数行（\n 区切り）の文字を、箱の幅に収まる大きさで中央に描く。
+ * はみ出すときは文字を小さくする（下限8）。
+ */
+function DiagText({ text, cx, cy, maxW, size, color, bold, anchor }: {
+  text: string; cx: number; cy: number; maxW: number; size: number; color: string; bold?: boolean;
+  anchor?: 'start' | 'middle' | 'end';
+}) {
+  const lines = text.split('\n');
+  const widest = Math.max(...lines.map(textUnits), 1);
+  const fs = Math.max(8, Math.min(size, maxW / widest));
+  const lh = fs * 1.25;
+  const y0 = cy - ((lines.length - 1) * lh) / 2 + fs * 0.36;
+  return (
+    <>
+      {lines.map((ln, li) => (
+        <SvgText key={li} x={cx} y={y0 + li * lh} fontSize={fs} fill={color} textAnchor={anchor ?? 'middle'} fontWeight={bold ? 'bold' : 'normal'}>
+          {ln}
+        </SvgText>
+      ))}
+    </>
+  );
+}
+
+function diagramPart(el: DiagramElement, i: number): React.ReactNode {
+  const k = `d${i}`;
+  switch (el.t) {
+    case 'box': {
+      return (
+        <G key={k}>
+          <Rect x={el.x} y={el.y} width={el.w} height={el.h} rx={6} fill={el.fill ?? '#FFF8EC'} stroke={el.color ?? ACCENT} strokeWidth={1.6} />
+          {el.text != null && (
+            <DiagText text={el.text} cx={el.x + el.w / 2} cy={el.y + el.h / 2} maxW={el.w - 8} size={el.size ?? 12} color={DIAG_INK} bold />
+          )}
+        </G>
+      );
+    }
+    case 'label':
+      return (
+        <G key={k}>
+          <DiagText text={el.text} cx={el.x} cy={el.y} maxW={VBW - 8} size={el.size ?? 12} color={el.color ?? DIAG_INK} bold={el.bold} anchor={el.anchor} />
+        </G>
+      );
+    case 'line':
+      return <Line key={k} x1={el.x1} y1={el.y1} x2={el.x2} y2={el.y2} stroke={el.color ?? AXIS} strokeWidth={el.width ?? 1.6} strokeDasharray={el.dashed ? '4 3' : undefined} />;
+    case 'arrow': {
+      const dx = el.x2 - el.x1;
+      const dy = el.y2 - el.y1;
+      const len = Math.max(1, Math.hypot(dx, dy));
+      const ux = dx / len, uy = dy / len;
+      const hx = el.x2 - ux * 8, hy = el.y2 - uy * 8;
+      const c = el.color ?? ACCENT;
+      return (
+        <G key={k}>
+          <Line x1={el.x1} y1={el.y1} x2={el.x2} y2={el.y2} stroke={c} strokeWidth={1.8} strokeDasharray={el.dashed ? '4 3' : undefined} />
+          <SvgPolygon points={`${el.x2},${el.y2} ${hx - uy * 4.5},${hy + ux * 4.5} ${hx + uy * 4.5},${hy - ux * 4.5}`} fill={c} stroke={c} strokeWidth={1} />
+        </G>
+      );
+    }
+    case 'circle': {
+      return (
+        <G key={k}>
+          <SvgCircle cx={el.cx} cy={el.cy} r={el.r} fill={el.fill ?? '#FFF8EC'} stroke={el.color ?? ACCENT} strokeWidth={1.6} />
+          {el.text != null && (
+            <DiagText text={el.text} cx={el.cx} cy={el.cy} maxW={el.r * 1.7} size={el.size ?? 12} color={DIAG_INK} bold />
+          )}
+        </G>
+      );
+    }
+    case 'poly':
+      return <SvgPolygon key={k} points={el.pts.map((p) => `${p[0]},${p[1]}`).join(' ')} fill={el.fill ?? 'rgba(14,165,233,0.14)'} stroke={el.color ?? ACCENT} strokeWidth={1.6} />;
+    case 'sector':
+      return <Path key={k} d={sectorPath(el.cx, el.cy, el.r, el.from, el.to)} fill={el.fill ?? 'rgba(181,98,46,0.25)'} stroke={el.color ?? ACCENT} strokeWidth={1.6} />;
+    default:
+      return null;
+  }
+}
+
+function DiagramFig({ fig }: { fig: DiagramFigure }) {
+  return fig.parts.map((el, i) => diagramPart(el, i));
+}
+
 // ---------- 公開コンポーネント ----------
 
 function buildParts(figure: Figure, uid: string): React.ReactNode[] {
@@ -1332,6 +1438,7 @@ function buildParts(figure: Figure, uid: string): React.ReactNode[] {
     case 'stratum': return StratumFig({ fig: figure });
     case 'japanMap': return JapanMapFig({ fig: figure });
     case 'bioDiagram': return BioDiagramFig({ fig: figure });
+    case 'diagram': return DiagramFig({ fig: figure });
     default: return [];
   }
 }
@@ -1377,11 +1484,18 @@ export default function FigureView({
   figure: rawFigure,
   animated = false,
   question,
+  manual = false,
 }: {
   figure: Figure;
   animated?: boolean;
   /** 図に添える問題。あると「何を聞かれているか」「答え」まで説明に入る */
   question?: FigureQuestion;
+  /**
+   * true のとき、自動では進めず、最初の1枚を出した状態で待つ（「つぎへ」で進む）。
+   * 公式集のようにWebで大量の図が同時に並ぶ画面で、全部のアニメーションが
+   * 一斉に走ってカクつくのを防ぐ。
+   */
+  manual?: boolean;
 }) {
   const [boxWidth, setBoxWidth] = useState<number | null>(null);
 
@@ -1408,7 +1522,8 @@ export default function FigureView({
   const [progress, setProgress] = useState(animated ? 0 : 1);
   const [stepReached, setStepReached] = useState(animated ? 0 : totalSteps);
   const [slide, setSlide] = useState(0);
-  const [autoPlay, setAutoPlay] = useState(true);
+  const [autoPlay, setAutoPlay] = useState(!manual);
+  const introDone = useRef(false);
   const rafRef = useRef<number | null>(null);
   const stepTimersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
   const autoTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -1435,7 +1550,13 @@ export default function FigureView({
     1,
     Math.min(totalSteps, (figure as { buildSteps?: number }).buildSteps ?? Math.max(1, totalSteps - 1)),
   );
-  const targetProgress = slideMode ? Math.min(1, (slide + 1) / buildSlides) : 1;
+  // 図解スライド（diagram）は、スライドごとに見せる部品の数が決まっている。
+  const stepPartsArr = figure.kind === 'diagram' ? (figure as DiagramFigure).stepParts : undefined;
+  const targetProgress = slideMode
+    ? stepPartsArr && stepPartsArr.length > 0
+      ? Math.min(1, (stepPartsArr[Math.min(slide, stepPartsArr.length - 1)] ?? parts.length) / Math.max(parts.length, 1))
+      : Math.min(1, (slide + 1) / buildSlides)
+    : 1;
 
   // スライドが変わるたびに、図の描画量を今の値から目標値までなめらかに動かす。
   // かかる時間は「そのスライドで増える部品の数」に比例させる。
@@ -1443,6 +1564,14 @@ export default function FigureView({
   // まとめてパッと出たようにしか見えなかった。
   useEffect(() => {
     if (!slideMode) return;
+    // manual のとき、最初の1枚はアニメーションなしでそのまま出す
+    if (manual && !introDone.current) {
+      introDone.current = true;
+      progressRef.current = targetProgress;
+      setProgress(targetProgress);
+      return;
+    }
+    introDone.current = true;
     let startTs: number | null = null;
     const from = progressRef.current;
     const added = Math.max(0, targetProgress - from) * Math.max(parts.length, 1);
@@ -1459,7 +1588,7 @@ export default function FigureView({
     return () => {
       if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
     };
-  }, [slideMode, targetProgress, parts.length]);
+  }, [slideMode, targetProgress, parts.length, manual]);
 
   // 自動再生。最後のスライドまで来たら止まる。手で送ったら自動送りはやめる。
   useEffect(() => {
