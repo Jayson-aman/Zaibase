@@ -12,6 +12,7 @@ import { sansuTsuika4Formulas } from './formulas-sansu-tsuika4';
 import { sansuTsuika5Formulas } from './formulas-sansu-tsuika5';
 import { sansuTsuika6Formulas } from './formulas-sansu-tsuika6';
 import { kokoSugakuFormulas } from './formulas-koko-sugaku';
+import { kokoSugakuTsuikaFormulas } from './formulas-koko-sugaku-tsuika';
 import { rikaFormulas } from './formulas-rika';
 import { rikaButsuriKagakuFormulas } from './formulas-rika-butsuri-kagaku';
 import { rikaTsuika2Formulas } from './formulas-rika-tsuika2';
@@ -21,6 +22,7 @@ import { rikaTsuika5Formulas } from './formulas-rika-tsuika5';
 import { rikaTsuika6Formulas } from './formulas-rika-tsuika6';
 import { rikaTsuika7Formulas } from './formulas-rika-tsuika7';
 import { kokoRikaFormulas } from './formulas-koko-rika';
+import { kokoRikaTsuikaFormulas } from './formulas-koko-rika-tsuika';
 import { shakaiFormulas } from './formulas-shakai';
 import { shakaiTsuikaFormulas } from './formulas-shakai-tsuika';
 import { shakaiTsuika2Formulas } from './formulas-shakai-tsuika2';
@@ -31,6 +33,7 @@ import { shakaiTsuika6Formulas } from './formulas-shakai-tsuika6';
 import { shakaiTsuika7Formulas } from './formulas-shakai-tsuika7';
 import { shakaiTsuika8Formulas } from './formulas-shakai-tsuika8';
 import { kokoShakaiFormulas } from './formulas-koko-shakai';
+import { kokoShakaiTsuikaFormulas } from './formulas-koko-shakai-tsuika';
 import { kokugoFormulas } from './formulas-kokugo';
 import { kokugoTsuikaFormulas } from './formulas-kokugo-tsuika';
 import { kokoKokugoFormulas } from './formulas-koko-kokugo';
@@ -57,10 +60,10 @@ export const SUBJECTS: { key: Subject; emoji: string; color: string }[] = [
 // ⚠️ iOS/Androidの¥50商品（com.zaibase.exam.formulaunlock）がストアに未登録の
 // あいだは、非購読者には「準備中です」ボタンが出るだけで購入できない。
 const FORMULAS_RAW: Record<Subject, FormulaSection[]> = {
-  算数: [...sansuFormulas, ...sansuTsuikaFormulas, ...sansuTsuika2Formulas, ...sansuTsuika3Formulas, ...sansuTsuika4Formulas, ...sansuTsuika5Formulas, ...sansuTsuika6Formulas, ...kokoSugakuFormulas],
+  算数: [...sansuFormulas, ...sansuTsuikaFormulas, ...sansuTsuika2Formulas, ...sansuTsuika3Formulas, ...sansuTsuika4Formulas, ...sansuTsuika5Formulas, ...sansuTsuika6Formulas, ...kokoSugakuFormulas, ...kokoSugakuTsuikaFormulas],
   国語: [...kokugoFormulas, ...kokugoTsuikaFormulas, ...kokoKokugoFormulas, ...kokoKokugoTsuikaFormulas],
-  理科: [...rikaFormulas, ...rikaButsuriKagakuFormulas, ...rikaTsuika2Formulas, ...rikaTsuika3Formulas, ...rikaTsuika4Formulas, ...rikaTsuika5Formulas, ...rikaTsuika6Formulas, ...rikaTsuika7Formulas, ...kokoRikaFormulas],
-  社会: [...shakaiFormulas, ...shakaiTsuikaFormulas, ...shakaiTsuika2Formulas, ...shakaiTsuika3Formulas, ...shakaiTsuika4Formulas, ...shakaiTsuika5Formulas, ...shakaiTsuika6Formulas, ...shakaiTsuika7Formulas, ...shakaiTsuika8Formulas, ...kokoShakaiFormulas],
+  理科: [...rikaFormulas, ...rikaButsuriKagakuFormulas, ...rikaTsuika2Formulas, ...rikaTsuika3Formulas, ...rikaTsuika4Formulas, ...rikaTsuika5Formulas, ...rikaTsuika6Formulas, ...rikaTsuika7Formulas, ...kokoRikaFormulas, ...kokoRikaTsuikaFormulas],
+  社会: [...shakaiFormulas, ...shakaiTsuikaFormulas, ...shakaiTsuika2Formulas, ...shakaiTsuika3Formulas, ...shakaiTsuika4Formulas, ...shakaiTsuika5Formulas, ...shakaiTsuika6Formulas, ...shakaiTsuika7Formulas, ...shakaiTsuika8Formulas, ...kokoShakaiFormulas, ...kokoShakaiTsuikaFormulas],
   英語: [...eigoFormulas, ...eigoTsuikaFormulas, ...eigoKokoFormulas, ...eigoKokoTsuikaFormulas],
 };
 
