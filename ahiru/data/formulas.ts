@@ -14,6 +14,9 @@ import { kokoSugakuFormulas } from './formulas-koko-sugaku';
 import { rikaFormulas } from './formulas-rika';
 import { rikaButsuriKagakuFormulas } from './formulas-rika-butsuri-kagaku';
 import { rikaTsuika2Formulas } from './formulas-rika-tsuika2';
+import { rikaTsuika3Formulas } from './formulas-rika-tsuika3';
+import { rikaTsuika4Formulas } from './formulas-rika-tsuika4';
+import { rikaTsuika5Formulas } from './formulas-rika-tsuika5';
 import { kokoRikaFormulas } from './formulas-koko-rika';
 import { shakaiFormulas } from './formulas-shakai';
 import { shakaiTsuikaFormulas } from './formulas-shakai-tsuika';
@@ -42,7 +45,7 @@ export const SUBJECTS: { key: Subject; emoji: string; color: string }[] = [
 export const FORMULAS: Record<Subject, FormulaSection[]> = {
   算数: [...sansuFormulas, ...sansuTsuikaFormulas, ...sansuTsuika2Formulas, ...sansuTsuika3Formulas, ...sansuTsuika4Formulas, ...sansuTsuika5Formulas, ...sansuTsuika6Formulas, ...kokoSugakuFormulas],
   国語: [...kokugoFormulas, ...kokoKokugoFormulas],
-  理科: [...rikaFormulas, ...rikaButsuriKagakuFormulas, ...rikaTsuika2Formulas, ...kokoRikaFormulas],
+  理科: [...rikaFormulas, ...rikaButsuriKagakuFormulas, ...rikaTsuika2Formulas, ...rikaTsuika3Formulas, ...rikaTsuika4Formulas, ...rikaTsuika5Formulas, ...kokoRikaFormulas],
   社会: [...shakaiFormulas, ...shakaiTsuikaFormulas, ...kokoShakaiFormulas],
   英語: [...eigoFormulas, ...eigoKokoFormulas],
 };
