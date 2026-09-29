@@ -1,5 +1,5 @@
 /**
- * ahiru Web版：公式集(¥50)・新規追加単元(¥100)買い切りのStripe直接決済
+ * ahiru Web版：公式集(¥100)・公式集まとめ買い(¥980)・新規追加単元(¥100)買い切りのStripe直接決済
  *
  * なぜ必要か:
  *   RevenueCatのWeb Billingはサブスク用のオファリングPackageしか扱えず、
@@ -47,7 +47,8 @@ const STRIPE_WH = defineSecret("AHIRU_STRIPE_WEBHOOK_SECRET");
 // を返してしまい（truthy）、外部から渡される type の検証（下の !config）を
 // すり抜けてしまう。
 const TYPE_CONFIG = Object.assign(Object.create(null), {
-  formula: { collection: "formulaUnlocks", amount: 50, label: "公式集" },
+  formula: { collection: "formulaUnlocks", amount: 100, label: "公式集" },
+  bundle: { collection: "formulaUnlocks", amount: 980, label: "公式集まとめ買い" },
   unit: { collection: "unitUnlocks", amount: 100, label: "単元" },
 });
 
@@ -132,6 +133,11 @@ exports.createAhiruUnlockCheckout = onCall(
     const config = TYPE_CONFIG[type];
     if (!config || typeof itemId !== "string" || itemId.length === 0) {
       throw new HttpsError("invalid-argument", "type/itemIdが不正です");
+    }
+    // まとめ買いのIDは決まった形だけ。公式1項目のIDに bundle: を名乗らせない。
+    const bundleIdOk = /^bundle:(chugaku|koko):(算数|国語|理科|社会|英語)$/.test(itemId);
+    if (type === "bundle" ? !bundleIdOk : itemId.startsWith("bundle:")) {
+      throw new HttpsError("invalid-argument", "itemIdが不正です");
     }
 
     const alreadyUnlocked = await getAlreadyUnlocked(config, uid);

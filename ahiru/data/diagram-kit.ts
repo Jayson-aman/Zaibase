@@ -91,3 +91,13 @@ export function dots(n: number, x0: number, y0: number, opts?: { r?: number; gap
   }
   return out;
 }
+
+/** 前のスライドの下の帯を、白い箱でおおいかくして、書きかえる（同じ位置に文字を重ねると読めなくなるため）。 */
+export const cover = (x: number, y: number, w: number, h: number): DiagramElement =>
+  bx(x, y, w, h, undefined, '#FFFFFF', '#FFFFFF');
+
+/** 下の帯（y から下）を白でぬりつぶして、新しい部品に置きかえる。 */
+export const band = (y: number, ...els: DiagramElement[]): DiagramElement[] => [cover(0, y, 320, 240 - y), ...els];
+
+/** 画面全体をぬりつぶして、まっさらな図に切りかえる。 */
+export const fresh = (...els: DiagramElement[]): DiagramElement[] => [cover(0, 0, 320, 240), ...els];

@@ -24,10 +24,16 @@ const db = getFirestore();
 
 const PRODUCT_ID_FORMULA_UNLOCK = "com.zaibase.exam.formulaunlock";
 const PRODUCT_ID_UNIT_UNLOCK = "com.zaibase.exam.unitunlock";
+const PRODUCT_ID_FORMULA_BUNDLE = "com.zaibase.exam.formulabundle";
+
+// まとめ買い（受験種別×教科）のID。formulaUnlocks の unlocked に、公式のlabelと並べて入れる。
+const BUNDLE_ID_RE = /^bundle:(chugaku|koko):(算数|国語|理科|社会|英語)$/;
+const isBundleId = (id) => typeof id === "string" && id.startsWith("bundle:");
 
 const TYPE_CONFIG = {
-  formula: { collection: "formulaUnlocks", productId: PRODUCT_ID_FORMULA_UNLOCK },
-  unit: { collection: "unitUnlocks", productId: PRODUCT_ID_UNIT_UNLOCK },
+  formula: { collection: "formulaUnlocks", productId: PRODUCT_ID_FORMULA_UNLOCK, bundle: false },
+  bundle: { collection: "formulaUnlocks", productId: PRODUCT_ID_FORMULA_BUNDLE, bundle: true },
+  unit: { collection: "unitUnlocks", productId: PRODUCT_ID_UNIT_UNLOCK, bundle: false },
 };
 
 function sleep(ms) {
@@ -45,12 +51,17 @@ exports.unlockContent = onCall(
     if (!config || typeof itemId !== "string" || itemId.length === 0) {
       throw new HttpsError("invalid-argument", "type/itemIdが不正です");
     }
+    if (type === "bundle" ? !BUNDLE_ID_RE.test(itemId) : type === "formula" && isBundleId(itemId)) {
+      throw new HttpsError("invalid-argument", "itemIdが不正です");
+    }
 
     const docRef = db.collection(config.collection).doc(uid);
     const snap = await docRef.get();
     const alreadyUnlocked = /** @type {string[]} */ (snap.data()?.unlocked ?? []);
     // Web（Stripe）で解放した分は、RevenueCatの購入回数とは別勘定なので数えから外す。
-    const nativeUnlockedCount = (ids, stripeIds) => ids.filter((x) => !stripeIds.includes(x)).length;
+    // 商品ごと（1項目／まとめ買い）に別勘定で数える。
+    const nativeUnlockedCount = (ids, stripeIds) =>
+      ids.filter((x) => !stripeIds.includes(x) && isBundleId(x) === config.bundle).length;
     const stripeIds0 = /** @type {string[]} */ (snap.data()?.stripeUnlocked ?? []);
 
     // すでに解放済みなら購入確認なしでそのまま成功を返す（二重課金防止・冪等性）

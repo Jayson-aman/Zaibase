@@ -26,10 +26,10 @@ export async function getUnlockedFormulaIds(): Promise<Set<string>> {
  * 書き込むのではなく、Cloud Function（unlockContent）にRevenueCatの購入実績との
  * 突き合わせを行わせてから解放してもらう。購入が確認できない場合は例外を投げる。
  */
-export async function markFormulaUnlocked(figureId: string): Promise<void> {
+export async function markFormulaUnlocked(figureId: string, kind: 'formula' | 'bundle' = 'formula'): Promise<void> {
   if (!isFirebaseConfigured()) return;
-  await callFirebaseFunction<{ type: 'formula'; itemId: string }, { ok: true }>('unlockContent', {
-    type: 'formula',
+  await callFirebaseFunction<{ type: 'formula' | 'bundle'; itemId: string }, { ok: true }>('unlockContent', {
+    type: kind,
     itemId: figureId,
   });
 }

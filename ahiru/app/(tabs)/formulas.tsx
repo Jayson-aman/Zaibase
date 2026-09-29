@@ -14,7 +14,7 @@ import {
   useWindowDimensions,
 } from 'react-native';
 import { useRouter } from 'expo-router';
-import { FORMULAS, SUBJECTS, type Subject, type FormulaItem } from '../../data/formulas';
+import { FORMULAS, SUBJECTS, formulaBundleId, countLockedFormulas, type Subject, type FormulaItem } from '../../data/formulas';
 import { STUDY_PERIOD_ORDER, type StudyPeriod } from '../../data/formulas-types';
 import { useExamType, examTypeLabel, type ExamType } from '../../store/examType';
 import SubjectIcon, { type IconSubject } from '../../components/SubjectIcon';
@@ -51,6 +51,12 @@ const FormulaRow = React.memo(function FormulaRow({
   purchasing,
   onUnlock,
   imageSize,
+  bundleId,
+  bundleCount,
+  bundleReady,
+  bundlePriceLabel,
+  bundlePurchasing,
+  onUnlockBundle,
 }: {
   item: FormulaItem;
   accent: string;
@@ -61,6 +67,12 @@ const FormulaRow = React.memo(function FormulaRow({
   purchasing: boolean;
   onUnlock: (label: string) => void;
   imageSize: number;
+  bundleId: string;
+  bundleCount: number;
+  bundleReady: boolean;
+  bundlePriceLabel: string;
+  bundlePurchasing: boolean;
+  onUnlockBundle: (bundleId: string) => void;
 }) {
   if (item.locked && !bypassLock && !isUnlocked) {
     return (
@@ -90,6 +102,25 @@ const FormulaRow = React.memo(function FormulaRow({
               </Text>
             )}
           </TouchableOpacity>
+          <View style={styles.bundleBox}>
+            <Text style={styles.bundleText}>
+              {`この教科の公式集（ロック中の${bundleCount}項目）をまとめて解放できます（${bundlePriceLabel}・1回のみ）`}
+            </Text>
+            <TouchableOpacity
+              style={[styles.bundleBtn, { borderColor: accent }, (!bundleReady || bundlePurchasing) && styles.unlockBtnDisabled]}
+              activeOpacity={0.85}
+              disabled={!bundleReady || bundlePurchasing}
+              onPress={() => onUnlockBundle(bundleId)}
+            >
+              {bundlePurchasing ? (
+                <ActivityIndicator color={accent} />
+              ) : (
+                <Text style={[styles.bundleBtnText, { color: accent }]}>
+                  {bundleReady ? `まとめて ${bundlePriceLabel} で解放` : 'まとめ買いは準備中です'}
+                </Text>
+              )}
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     );
@@ -255,7 +286,12 @@ export default function FormulasScreen() {
     priceLabel,
     purchasingFigureId,
     unlockFormula,
+    bundleReady,
+    bundlePriceLabel,
   } = useFormulaUnlocks();
+
+  const bundleId = formulaBundleId(examType, subject);
+  const bundleCount = React.useMemo(() => countLockedFormulas(examType, subject), [examType, subject]);
 
   const handleUnlock = React.useCallback(async (label: string) => {
     const result = await unlockFormula(label);
@@ -264,6 +300,15 @@ export default function FormulasScreen() {
       return;
     }
     Alert.alert('解放しました', `「${label}」はこれ以降ずっと無料で見られます。`);
+  }, [unlockFormula]);
+
+  const handleUnlockBundle = React.useCallback(async (id: string) => {
+    const result = await unlockFormula(id, 'bundle');
+    if (!result.ok) {
+      Alert.alert('購入できませんでした', result.message);
+      return;
+    }
+    Alert.alert('解放しました', 'この教科の公式集は、これ以降ずっと無料で見られます。');
   }, [unlockFormula]);
 
   // セクション見出しと項目を1本のリストにならし、FlatListで仮想化できるようにする
@@ -355,12 +400,18 @@ export default function FormulasScreen() {
           item={row.item}
           accent={subjectInfo.color}
           bypassLock={bypassLock}
-          isUnlocked={unlockedIds.has(row.item.label)}
+          isUnlocked={unlockedIds.has(row.item.label) || unlockedIds.has(bundleId)}
           priceLabel={priceLabel}
           productReady={productReady}
           purchasing={purchasingFigureId === row.item.label}
           onUnlock={handleUnlock}
           imageSize={imageSize}
+          bundleId={bundleId}
+          bundleCount={bundleCount}
+          bundleReady={bundleReady}
+          bundlePriceLabel={bundlePriceLabel}
+          bundlePurchasing={purchasingFigureId === bundleId}
+          onUnlockBundle={handleUnlockBundle}
         />
       ),
     [
@@ -373,6 +424,11 @@ export default function FormulasScreen() {
       purchasingFigureId,
       handleUnlock,
       imageSize,
+      bundleId,
+      bundleCount,
+      bundleReady,
+      bundlePriceLabel,
+      handleUnlockBundle,
     ],
   );
 
@@ -643,7 +699,26 @@ const styles = StyleSheet.create({
     minWidth: 160,
     alignItems: 'center',
   },
-  unlockBtnDisabled: { backgroundColor: '#C7B9A6' },
+  unlockBtnDisabled: { opacity: 0.55 },
+  bundleBox: {
+    marginTop: 14,
+    paddingTop: 12,
+    borderTopWidth: 1,
+    borderTopColor: '#E8DCC8',
+    alignItems: 'center',
+    alignSelf: 'stretch',
+  },
+  bundleText: { fontSize: 12.5, color: '#6E645C', textAlign: 'center', marginBottom: 8, lineHeight: 19 },
+  bundleBtn: {
+    borderWidth: 2,
+    borderRadius: 8,
+    paddingVertical: 9,
+    paddingHorizontal: 18,
+    minWidth: 160,
+    alignItems: 'center',
+    backgroundColor: '#FFFFFF',
+  },
+  bundleBtnText: { fontSize: 14, fontWeight: '800' },
   unlockBtnText: { color: '#FFFFFF', fontSize: 14.5, fontWeight: '800' },
   formulaBox: {
     backgroundColor: '#FAF6EF',

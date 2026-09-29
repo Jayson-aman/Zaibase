@@ -76,4 +76,19 @@ export const FORMULAS: Record<Subject, FormulaSection[]> = {
   英語: withDiagrams(FORMULAS_RAW.英語),
 };
 
+/** まとめ買いのID（受験種別×教科）。formulaUnlocks の unlocked に、公式のlabelと並べて入る。 */
+export function formulaBundleId(examType: 'chugaku' | 'koko', subject: Subject): string {
+  return `bundle:${examType}:${subject}`;
+}
+
+/** その受験種別×教科で、ロックされている項目の数（まとめ買いで読めるようになる数）。 */
+export function countLockedFormulas(examType: 'chugaku' | 'koko', subject: Subject): number {
+  let n = 0;
+  for (const sec of FORMULAS[subject]) {
+    if (sec.examType != null && sec.examType !== examType) continue;
+    for (const it of sec.items) if (it.locked) n++;
+  }
+  return n;
+}
+
 export type { FormulaSection, FormulaItem, FormulaExample, FormulaQuizItem } from './formulas-types';

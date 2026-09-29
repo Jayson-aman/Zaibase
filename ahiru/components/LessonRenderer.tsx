@@ -1,3 +1,4 @@
+import { FORMULA_UNLOCK_PRICE_LABEL } from '../constants/pricing';
 import React from 'react';
 import { rich } from './RichText';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, ActivityIndicator, Platform } from 'react-native';
@@ -173,7 +174,7 @@ export default function LessonRenderer({
               <View style={styles.lockCard}>
                 <Text style={styles.lockIcon}>🔒</Text>
                 <Text style={styles.lockText}>
-                  この公式は買い切りで解放できます（{formulaUnlockPriceLabel ?? '¥50'}・1回のみ）
+                  この公式は買い切りで解放できます（{formulaUnlockPriceLabel ?? FORMULA_UNLOCK_PRICE_LABEL}・1回のみ）
                 </Text>
                 <TouchableOpacity
                   style={[styles.unlockBtn, (!formulaUnlockProductReady || isPurchasing) && styles.unlockBtnDisabled]}
@@ -185,7 +186,7 @@ export default function LessonRenderer({
                     <ActivityIndicator color="#FFFFFF" />
                   ) : (
                     <Text style={styles.unlockBtnText}>
-                      {formulaUnlockProductReady ? `${formulaUnlockPriceLabel ?? '¥50'}で解放する` : '準備中です'}
+                      {formulaUnlockProductReady ? `${formulaUnlockPriceLabel ?? FORMULA_UNLOCK_PRICE_LABEL}で解放する` : '準備中です'}
                     </Text>
                   )}
                 </TouchableOpacity>

@@ -213,6 +213,9 @@ export const PRODUCT_ID_VOCAB_YEARLY = 'com.zaibase.exam.vocabyearly';
 // いずれにも「このID・消費型・¥50」で新規登録するまでは fetchFormulaUnlockProduct が
 // 空を返し続け、購入ボタンは「準備中」表示のままになる。
 export const PRODUCT_ID_FORMULA_UNLOCK = 'com.zaibase.exam.formulaunlock';
+// ⚠️ 公式集のまとめ買い（受験種別×教科）。消費型・¥980。App Store Connect / Google Play Console /
+// RevenueCat に、このIDで新規登録するまでは、まとめ買いのボタンは「準備中」表示のままになる。
+export const PRODUCT_ID_FORMULA_BUNDLE = 'com.zaibase.exam.formulabundle';
 // ⚠️ 学年×科目ごとに追加した新規単元（無料5個超）を1個¥100で買い切り解放する消費型商品。
 // 上記と同様、App Store Connect / Google Play Console / RevenueCat にこのIDで
 // 新規登録するまでは購入ボタンが「準備中」表示のままになる。
@@ -327,6 +330,17 @@ export async function fetchFormulaUnlockProduct(): Promise<unknown> {
   }
 }
 
+export async function fetchFormulaBundleProduct(): Promise<unknown> {
+  if (!isRevenueCatConfigured() || isWeb) return null;
+  try {
+    const Purchases = (await import('react-native-purchases')).default;
+    const products = await Purchases.getProducts([PRODUCT_ID_FORMULA_BUNDLE]);
+    return products[0] ?? null;
+  } catch {
+    return null;
+  }
+}
+
 export async function fetchUnitUnlockProduct(): Promise<unknown> {
   if (!isRevenueCatConfigured() || isWeb) return null;
   try {
@@ -345,7 +359,7 @@ export async function fetchUnitUnlockProduct(): Promise<unknown> {
 // Web版だけはRevenueCatを介さず、functions/stripeUnlock.js が発行する
 // Stripe Checkoutへブラウザごとリダイレクトする。iOS/Androidは引き続き
 // purchaseProduct（RevenueCat）を使う。
-export type StripeUnlockType = 'formula' | 'unit';
+export type StripeUnlockType = 'formula' | 'unit' | 'bundle';
 
 interface StripeUnlockCheckoutResult {
   ok: true;

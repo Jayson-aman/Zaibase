@@ -3,12 +3,13 @@ import { Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
   fetchFormulaUnlockProduct,
+  fetchFormulaBundleProduct,
   purchaseProduct,
   startStripeUnlockCheckout,
   confirmPendingStripeUnlockOnce,
 } from '../services/subscription';
 import { getUnlockedFormulaIds, markFormulaUnlocked } from '../services/formulaUnlockStore';
-import { FORMULA_UNLOCK_PRICE_LABEL } from '../constants/pricing';
+import { FORMULA_UNLOCK_PRICE_LABEL, FORMULA_BUNDLE_PRICE_LABEL } from '../constants/pricing';
 
 const isWebPlatform = Platform.OS === 'web';
 
@@ -53,8 +54,14 @@ export interface FormulaUnlocksState {
   productReady: boolean;
   /** 商品の価格表示（ストア未設定時はフォールバック文言） */
   priceLabel: string;
-  /** 指定した公式を購入して解放する。成功したらunlockedIdsにも反映する。 */
-  unlockFormula: (figureId: string) => Promise<UnlockPurchaseResult>;
+  /** まとめ買いの商品が購入可能な状態か */
+  bundleReady: boolean;
+  bundlePriceLabel: string;
+  /**
+   * 指定した公式（kind='formula'）、またはまとめ買い（kind='bundle'、idは bundle:受験種別:教科）を
+   * 購入して解放する。成功したらunlockedIdsにも反映する。
+   */
+  unlockFormula: (figureId: string, kind?: 'formula' | 'bundle') => Promise<UnlockPurchaseResult>;
   purchasingFigureId: string | null;
 }
 
@@ -62,6 +69,7 @@ export function useFormulaUnlocks(): FormulaUnlocksState {
   const [unlockedIds, setUnlockedIds] = useState<Set<string>>(new Set());
   const [loading, setLoading] = useState(true);
   const [product, setProduct] = useState<unknown>(null);
+  const [bundleProduct, setBundleProduct] = useState<unknown>(null);
   const [purchasingFigureId, setPurchasingFigureId] = useState<string | null>(null);
   const mounted = useRef(true);
 
@@ -78,13 +86,16 @@ export function useFormulaUnlocks(): FormulaUnlocksState {
       // Web版はStripe直接決済を使うため、RevenueCatの商品取得（常にnull）はしない。
       // Stripe Checkoutから戻ってきた直後なら、ここで解放を確定させる。
       confirmPendingStripeUnlockOnce().then((result) => {
-        if (mounted.current && result?.type === 'formula') {
+        if (mounted.current && (result?.type === 'formula' || result?.type === 'bundle')) {
           setUnlockedIds((prev) => new Set(prev).add(result.itemId));
         }
       });
     } else {
       fetchFormulaUnlockProduct().then((p) => {
         if (mounted.current) setProduct(p);
+      });
+      fetchFormulaBundleProduct().then((p) => {
+        if (mounted.current) setBundleProduct(p);
       });
     }
     return () => {
@@ -93,11 +104,12 @@ export function useFormulaUnlocks(): FormulaUnlocksState {
   }, []);
 
   const unlockFormula = useCallback(
-    async (figureId: string): Promise<UnlockPurchaseResult> => {
+    async (figureId: string, kind: 'formula' | 'bundle' = 'formula'): Promise<UnlockPurchaseResult> => {
+      const target = kind === 'bundle' ? bundleProduct : product;
       if (isWebPlatform) {
         setPurchasingFigureId(figureId);
         try {
-          const { alreadyUnlocked } = await startStripeUnlockCheckout('formula', figureId);
+          const { alreadyUnlocked } = await startStripeUnlockCheckout(kind, figureId);
           if (alreadyUnlocked && mounted.current) {
             setUnlockedIds((prev) => new Set(prev).add(figureId));
           }
@@ -110,7 +122,7 @@ export function useFormulaUnlocks(): FormulaUnlocksState {
           return { ok: false, message };
         }
       }
-      if (product == null) {
+      if (target == null) {
         return { ok: false, message: 'この機能は準備中です。しばらくしてからもう一度お試しください。' };
       }
       setPurchasingFigureId(figureId);
@@ -119,7 +131,7 @@ export function useFormulaUnlocks(): FormulaUnlocksState {
       const alreadyPurchasedPending = await isPurchasePending(figureId);
       if (!alreadyPurchasedPending) {
         try {
-          await purchaseProduct(product);
+          await purchaseProduct(target);
           await markPurchasePending(figureId);
         } catch (e) {
           if (mounted.current) setPurchasingFigureId(null);
@@ -132,7 +144,7 @@ export function useFormulaUnlocks(): FormulaUnlocksState {
       // （RevenueCatへの反映待ち・一時的な通信断）だけをリトライする。
       for (let attempt = 0; attempt < 3; attempt++) {
         try {
-          await markFormulaUnlocked(figureId);
+          await markFormulaUnlocked(figureId, kind);
           await clearPurchasePending(figureId);
           if (mounted.current) {
             setUnlockedIds((prev) => new Set(prev).add(figureId));
@@ -154,16 +166,19 @@ export function useFormulaUnlocks(): FormulaUnlocksState {
       if (mounted.current) setPurchasingFigureId(null);
       return { ok: false, message: '購入の確認に失敗しました' };
     },
-    [product]
+    [product, bundleProduct]
   );
 
   const storePriceString = (product as { priceString?: string } | null)?.priceString;
+  const bundlePriceString = (bundleProduct as { priceString?: string } | null)?.priceString;
 
   return {
     unlockedIds,
     loading,
     productReady: isWebPlatform || product != null,
     priceLabel: storePriceString ?? FORMULA_UNLOCK_PRICE_LABEL,
+    bundleReady: isWebPlatform || bundleProduct != null,
+    bundlePriceLabel: bundlePriceString ?? FORMULA_BUNDLE_PRICE_LABEL,
     unlockFormula,
     purchasingFigureId,
   };

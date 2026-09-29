@@ -28,8 +28,11 @@ export const PRICES = {
   // 英単語Pro：英単語4,800+・熟語4,000+・英会話・英検5,160問・ネイティブ発音・AI英会話。
   vocabMonthly: 1680,
   vocabYearly: 13800,
-  // 公式集：学年ごとに無料5個を超えた分を1個ずつ買い切りで解放する消費型課金。
-  formulaUnlock: 50,
+  // 公式集：先頭3項目を超えた分を1個ずつ買い切りで解放する消費型課金（2026/9/29に¥50→¥100）。
+  formulaUnlock: 100,
+  // 公式集のまとめ買い：受験種別×教科（例：中学受験の算数）の公式集を、ロックぶん全部解放する。
+  // 1項目ずつ買うと（¥100×約100項目）高くなるので、割安に設定している。
+  formulaBundle: 980,
   // 新規追加した学年×科目ごとの単元（20個/学年科目）：無料5個を超えた分を
   // 1個ずつ買い切りで解放する消費型課金。
   unitUnlock: 100,
@@ -55,4 +58,5 @@ export const VOCAB_MONTHLY_LABEL = `${formatYen(PRICES.vocabMonthly)}/月`;
 export const VOCAB_YEARLY_LABEL = `${formatYen(PRICES.vocabYearly)}/年`;
 /** 買い切り（1回のみ）なので期間表記を付けない */
 export const FORMULA_UNLOCK_PRICE_LABEL = formatYen(PRICES.formulaUnlock);
+export const FORMULA_BUNDLE_PRICE_LABEL = formatYen(PRICES.formulaBundle);
 export const UNIT_UNLOCK_PRICE_LABEL = formatYen(PRICES.unitUnlock);
