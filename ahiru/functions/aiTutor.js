@@ -142,6 +142,15 @@ exports.askTutor = onCall(
     // 会話の途中で遮断されてしまうため、判定は新規セッション時のみ行う。
     // 継続には既存のセッション文書が必要で、その作成はここを通るので抜け道にはならない。
     if (!isMax && isNewSession) {
+      // 無料体験は実アカウント（匿名でない）にだけ出す。匿名UIDはブラウザの
+      // データ削除や再インストールで作り直せるため、Opusを使う無料体験が
+      // 何度でもリセットできていた（1回あたりのAPIコストが最も高い経路）。
+      if (req.auth?.token?.firebase?.sign_in_provider === "anonymous") {
+        throw new HttpsError(
+          "permission-denied",
+          "AI個別指導の無料体験（1回）は、ログインすると使えます。マイページからログインしてください。"
+        );
+      }
       if (trialAiUsed) {
         throw new HttpsError(
           "permission-denied",

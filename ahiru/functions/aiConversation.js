@@ -110,6 +110,15 @@ exports.chatEnglishConversation = onCall(
     // 英語系コンテンツは英単語Pro（vocab）または全部入りMaxで開放。
     // entitlement を集合で見るので、受験Proと英単語Proの両方を買っている人も正しく通る。
     const paid = (await hasVocabAccess(uid)) === true;
+    // 無料枠は実アカウント（匿名でない）にだけ出す。匿名UIDは、Web版で
+    // ブラウザのデータを消すだけ（App Check未実装のネイティブでも再インストール）で
+    // いくらでも作り直せるため、1日3回の無料枠が事実上無制限になっていた。
+    if (!paid && req.auth?.token?.firebase?.sign_in_provider === "anonymous") {
+      throw new HttpsError(
+        "permission-denied",
+        "AI英会話の無料枠（1日3回）は、ログインすると使えます。マイページからログインしてください。"
+      );
+    }
     const dailyLimit = paid ? PAID_DAILY_LIMIT : FREE_DAILY_LIMIT;
 
     await checkAndIncrementUsage(uid, dailyLimit);
