@@ -2,7 +2,9 @@
 // 項目本体のファイルを書きかえずに図解だけ足せる。label は買い切りの識別キーと同じ。
 import type { DiagramFigure } from './figures';
 import { DIAGRAMS_SANSU_4 } from './formulas-diagrams-sansu-4';
+import { DIAGRAMS_SHAKAI_6 } from './formulas-diagrams-shakai-6';
 
 export const FORMULA_DIAGRAMS: Record<string, DiagramFigure> = {
   ...DIAGRAMS_SANSU_4,
+  ...DIAGRAMS_SHAKAI_6,
 };
