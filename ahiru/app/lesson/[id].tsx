@@ -96,10 +96,10 @@ export default function LessonDetailScreen() {
   const info = subjectInfo[lesson.subject];
   const hasMaxContent = lesson.sections.some((s) => s.maxOnly);
   const lessonVideo = getLessonVideo(lesson.id);
-  // 各科目・各受験種別の最初の5単元は、Pro未加入でも無料で閲覧できる
+  // 各科目・各受験種別の最初の15単元は、Pro未加入でも無料で閲覧できる
   const freeLesson = isLessonFree(lesson);
   // 学年×科目で追加した新規単元（new20_で始まるid）は、上記のPro一括ロードとは別枠で、
-  // 学年×科目クラスターごとに最初の5単元は無料、それ以降は¥100買い切りで解放する。
+  // 学年×科目クラスターごとに最初の15単元は無料、それ以降は¥100買い切りで解放する。
   const isNew20 = isNew20Unit(lesson.id);
   const new20Free = isNew20 && isNew20UnitFree(lesson.id);
   const new20Unlocked = isNew20 && unlockedUnitIds.has(lesson.id);
@@ -139,6 +139,34 @@ export default function LessonDetailScreen() {
         {(subLoading || (isNew20 && unitUnlocksLoading)) && (
           <View style={styles.center}>
             <ActivityIndicator color={info.color} />
+          </View>
+        )}
+        {!subLoading && !(isNew20 && unitUnlocksLoading) && !contentUnlocked && lesson.sections.length > 0 && (
+          // 続きが読みたくなるところまで見せてから案内を出す（最初の節はためし読み）。
+          <View>
+            {lesson.intro != null && lesson.intro !== '' && (
+              <View style={styles.introBox}>
+                <Text style={styles.introLabel}>🌱 まずはここから</Text>
+                <Text style={styles.introText}>{lesson.intro}</Text>
+              </View>
+            )}
+            <LessonRenderer
+              sections={lesson.sections.slice(0, 1)}
+              isMax={false}
+              bypassFormulaLock={false}
+              unlockedFormulaIds={unlockedFormulaIds}
+              formulaUnlockPriceLabel={formulaUnlockPriceLabel}
+              formulaUnlockProductReady={formulaUnlockProductReady}
+              purchasingFigureId={purchasingFigureId}
+              onUnlockFormula={handleUnlockFormula}
+              lessonId={lesson.id}
+              lessonTitle={lesson.title}
+              subject={lesson.subject}
+              examType={lesson.examType}
+            />
+            <View style={styles.freeTeaser}>
+              <Text style={styles.freeTeaserText}>👀 ここまでがためし読みです。この先に「なぜそうなるか」「確かめ方」「ひっかけ」が続きます</Text>
+            </View>
           </View>
         )}
         {!subLoading && !(isNew20 && unitUnlocksLoading) && !contentUnlocked && isNew20 && (

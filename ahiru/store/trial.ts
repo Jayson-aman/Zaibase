@@ -1,7 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const TRIAL_QUESTIONS_KEY = 'trial_questions_answered';
-export const TRIAL_QUESTION_LIMIT = 30;
+export const TRIAL_QUESTION_LIMIT = 60;
 
 export async function getTrialQuestionsAnswered(): Promise<number> {
   try {

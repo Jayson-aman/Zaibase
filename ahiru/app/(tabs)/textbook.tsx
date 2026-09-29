@@ -27,7 +27,7 @@ function isKoushikiLesson(lessonId: string): boolean {
 }
 
 // 一覧画面での🔒表示・タップブロック判定。new20は学年×科目クラスターごとの
-// 先頭5単元だけ無料（購入済みなら常に解放）、koushikiは常に開放、それ以外は
+// 先頭15単元だけ無料（購入済みなら常に解放）、koushikiは常に開放、それ以外は
 // 科目内で最初のFREE_LESSON_LIMIT件だけ無料という、旧来のidx基準の判定を使う。
 function isLockedForBrowse(
   lesson: Lesson,

@@ -61,11 +61,25 @@ const FORMULAS_RAW: Record<Subject, FormulaSection[]> = {
 };
 
 // 動く図解スライドを、label が一致する項目に取りつける（項目に figure が無いときだけ）。
+// あわせて「受験種別×教科ごとに先頭 FREE_FORMULAS_PER_CELL 項目は無料」を適用する。
+// 2026/9/29 3→8。3項目だけでは「公式集がどういうものか」を判断できず、
+// 「少ない」と受け取られたため。残りは¥200／まとめ買い¥2,980。
+export const FREE_FORMULAS_PER_CELL = 8;
 function withDiagrams(sections: FormulaSection[]): FormulaSection[] {
-  return sections.map((sec) => ({
-    ...sec,
-    items: sec.items.map((it) => (it.figure || !FORMULA_DIAGRAMS[it.label] ? it : { ...it, figure: FORMULA_DIAGRAMS[it.label] })),
-  }));
+  const seen: Record<string, number> = {};
+  return sections.map((sec) => {
+    const key = sec.examType ?? 'both';
+    return {
+      ...sec,
+      items: sec.items.map((it) => {
+        const idx = seen[key] ?? 0;
+        seen[key] = idx + 1;
+        const free = idx < FREE_FORMULAS_PER_CELL;
+        const fig = it.figure || !FORMULA_DIAGRAMS[it.label] ? it.figure : FORMULA_DIAGRAMS[it.label];
+        return { ...it, ...(free && it.locked ? { locked: false } : {}), ...(fig ? { figure: fig } : {}) };
+      }),
+    };
+  });
 }
 
 export const FORMULAS: Record<Subject, FormulaSection[]> = {

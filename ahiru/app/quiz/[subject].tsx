@@ -24,7 +24,7 @@ import { getQuickTrick } from '../../data/quick-tricks';
 // 「レベル別ドリル」「入試対策」は問題プールから毎回ランダムに出題するため、
 // 個別の問題にmaxOnlyを付けて絞れない。代わりに1回のセッションで
 // 最初のN問だけを無料にする（セッションをまたいだ累計ではない）。
-const SESSION_FREE_LIMIT = 5;
+const SESSION_FREE_LIMIT = 15;
 const SESSION_LIMITED_MODES: TestModeKey[] = ['level', 'nyushi'];
 
 // 予備の解説（data/explanations_*.ts）は2026/9/15に配線を外した。
