@@ -157,6 +157,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '台形の面積',
+        locked: true,
         formula: '面積 = (上底 + 下底) × 高さ ÷ 2',
         explanation: '上の辺（上底）と下の辺（下底）の長さをたして、高さをかけて半分にします。台形を2つ組み合わせると平行四辺形になるので÷2がつくと覚えると忘れません。',
         figure: {
@@ -204,6 +205,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: 'ひし形の面積',
+        locked: true,
         formula: '面積 = 対角線 × 対角線 ÷ 2',
         explanation: 'ひし形は2本の対角線が直角に交わります。その2本の長さをかけて半分にすると面積になります。たこ形（凧形）も同じ公式が使えます。',
         figure: {
@@ -251,6 +253,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '円の面積と円周',
+        locked: true,
         formula: '面積 = 半径 × 半径 × 3.14 ／ 円周 = 直径 × 3.14',
         explanation: '円周率は約3.14。円のまわりの長さ（円周）は直径×3.14、円の広さ（面積）は半径×半径×3.14です。半径は直径の半分なので、直径しかわからないときは÷2して半径にします。',
         figure: {
@@ -298,6 +301,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '直方体・立方体の体積',
+        locked: true,
         formula: '直方体 = たて × よこ × 高さ ／ 立方体 = 1辺 × 1辺 × 1辺',
         explanation: '体積は「かさ」。1cmの立方体が何個つまるかを表します。だからたて・よこ・高さの3つをかけます。立方体は3辺が同じなので1辺を3回かけます。単位は cm³（立方センチメートル）です。',
         figure: {
@@ -345,6 +349,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '角柱・円柱の体積',
+        locked: true,
         formula: '体積 = 底面積 × 高さ',
         explanation: 'まっすぐな柱（角柱・円柱）は、底の面（底面）を高さの分だけ積み上げた形です。だから底面積に高さをかければ体積になります。円柱なら底面積は「半径×半径×3.14」です。',
         figure: {
@@ -399,6 +404,7 @@ export const sansuFormulas: FormulaSection[] = [
     items: [
       {
         label: '速さ・道のり・時間の関係',
+        locked: true,
         formula: '道のり = 速さ × 時間 ／ 速さ = 道のり ÷ 時間 ／ 時間 = 道のり ÷ 速さ',
         explanation: '「みはじ（道のり・速さ・時間）」の3つは、1つの公式から自由に変形できます。求めたいものを□にして、残り2つでかけ算・わり算を組み立てましょう。単位（km・時間、m・分など）をそろえるのが大事です。',
         figure: {
@@ -453,6 +459,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '旅人算（出会い）',
+        locked: true,
         formula: '出会うまでの時間 = 2人の間の道のり ÷ (速さの和)',
         explanation: '向かい合って進むと、2人は1分ごとに「速さの和」の分だけ近づきます。だから最初の間の道のりを速さの和でわると、出会うまでの時間が出ます。',
         figure: {
@@ -507,6 +514,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '旅人算（追いかけ）',
+        locked: true,
         formula: '追いつくまでの時間 = 2人の間の道のり ÷ (速さの差)',
         explanation: '同じ向きに進んで追いかけるときは、1分ごとに「速さの差」だけ近づきます。だから間の道のりを速さの差でわれば、追いつく時間が出ます。速い人が後ろから追いかける形です。',
         figure: {
@@ -559,6 +567,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '流水算',
+        locked: true,
         formula: '下りの速さ = 静水時 + 流れ ／ 上りの速さ = 静水時 − 流れ',
         explanation: '川を下るときは流れに押されて速くなり、上るときは流れに逆らって遅くなります。静水時の速さ（水が止まっているときの船の速さ）に流れをたす・ひくで求めます。「静水時＝(下り＋上り)÷2」「流れ＝(下り−上り)÷2」もよく使います。',
         figure: {
@@ -613,6 +622,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '通過算（鉄橋・トンネル）',
+        locked: true,
         formula: '進む道のり = 鉄橋の長さ + 電車の長さ',
         explanation: '電車が鉄橋を渡りきるには、先頭が入ってから最後尾が出るまで進みます。その道のりは「鉄橋の長さ＋電車の長さ」です。電車自身の長さを足すのを忘れやすい要注意ポイントです。',
         figure: {
@@ -665,6 +675,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '通過算（すれちがい・追いこし）',
+        locked: true,
         formula: 'すれちがい = (長さの和) ÷ 速さの和 ／ 追いこし = (長さの和) ÷ 速さの差',
         explanation: '2本の電車が関わるときも、進む道のりは2つの電車の長さの和です。向かい合ってすれちがうなら速さの和、同じ向きで追いこすなら速さの差でわります。',
         figure: {
@@ -718,6 +729,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '時計算',
+        locked: true,
         formula: '長針は1分に6°、短針は1分に0.5°進む（差は毎分5.5°）',
         explanation: '長針は1時間（60分）で360°回るので1分あたり6°。短針は12時間で360°なので1分あたり0.5°。2つの針の間の角度は、1分ごとに5.5°ずつ変化します。これを使って「何分後にぴったり重なる・直角になる」を追いかけます。',
         figure: {
@@ -776,6 +788,7 @@ export const sansuFormulas: FormulaSection[] = [
     items: [
       {
         label: '割合の基本三公式',
+        locked: true,
         formula: '割合 = くらべる量 ÷ もとにする量 ／ くらべる量 = もとにする量 × 割合',
         explanation: '「もとにする量」を1（＝全体）と見たとき、くらべる量がどれくらいかを表すのが割合です。「〜の」の前がもとにする量になることが多いです。求めたいものを□にして式を組み立てます。',
         steps: [
@@ -811,6 +824,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '百分率（％）と歩合の変換',
+        locked: true,
         formula: '割合 0.01 = 1% = 1分 ／ 割合 0.1 = 10% = 1割',
         explanation: '割合を100倍すると百分率（％）になります。歩合では0.1が1割、0.01が1分、0.001が1厘です。小数・％・歩合を自由に行き来できるようにしておくと文章題が速くなります。',
         steps: [
@@ -846,6 +860,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '比の性質',
+        locked: true,
         formula: 'a : b の両方に同じ数をかけても割っても比は変わらない',
         explanation: '比は「何倍の関係か」を表すので、両方を同じ数でかけたり割ったりしても関係は変わりません。これを使って、できるだけ小さい整数の比（最簡比）に直します。',
         steps: [
@@ -881,6 +896,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '比例配分',
+        locked: true,
         formula: '各分 = 全体 × (自分の比 ÷ 比の合計)',
         explanation: 'あるものを比に分けるときは、まず比を全部たして「合計」を出します。全体をその合計で分けた1つ分が「比の1」の大きさで、それに各自の比をかければ配分できます。',
         steps: [
@@ -916,6 +932,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '相当算',
+        locked: true,
         formula: 'もとにする量 = くらべる量 ÷ その割合',
         explanation: '「全体の◯分の◯が△」のように、部分と割合から全体（もとにする量）を逆算するのが相当算です。線分図をかいて、どの部分がどの割合にあたるかを見ぬくのがコツです。',
         steps: [
@@ -951,6 +968,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '食塩水の濃度',
+        locked: true,
         formula: '濃度(%) = 食塩の重さ ÷ 食塩水の重さ × 100',
         explanation: '食塩水の重さは「食塩＋水」の合計です。濃度は、食塩水全体のうち食塩が何％かを表します。食塩の重さ＝食塩水×濃度、という逆算もよく使います。てんびん図（面積図）を使うと混ぜる問題が速くなります。',
         steps: [
@@ -986,6 +1004,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '売買損益',
+        locked: true,
         formula: '定価 = 原価 × (1 + 利益率) ／ 売価 = 定価 × (1 − 割引率)',
         explanation: '仕入れ値（原価）に見込みの利益を足したのが定価、そこから割引したのが実際の売価です。「原価の2割増で定価」「定価の1割引で売る」などを、1をもとにした割合で計算します。利益＝売価−原価です。',
         steps: [
@@ -1030,6 +1049,7 @@ export const sansuFormulas: FormulaSection[] = [
     items: [
       {
         label: '等差数列の○番目',
+        locked: true,
         formula: '○番目 = 最初の数 + 公差 × (○ − 1)',
         explanation: '同じ数（公差）ずつ増える数列が等差数列です。1番目から○番目までは「○−1回」だけ増えるので、最初の数に公差×(○−1)をたします。(○−1)にするのが最大のポイントです。',
         steps: [
@@ -1065,6 +1085,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '等差数列の和',
+        locked: true,
         formula: '和 = (最初 + 最後) × 個数 ÷ 2',
         explanation: '最初と最後をたした数は、両はしから内側へペアを作るとどれも同じになります。そのペアの数は「個数÷2」個あるので、(最初＋最後)×個数÷2で合計が出ます。台形の面積と同じ形の公式です。',
         steps: [
@@ -1100,6 +1121,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '個数の求め方',
+        locked: true,
         formula: '個数 = (最後 − 最初) ÷ 公差 + 1',
         explanation: 'いくつ数がならんでいるか（個数）は、増えた合計を公差でわった回数に、最初の1個を足します。「＋1」を忘れると1個少なくなる、植木算と同じ考え方です。',
         steps: [
@@ -1134,6 +1156,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '三角数（1からの和）',
+        locked: true,
         formula: 'n番目の三角数 = n × (n + 1) ÷ 2',
         explanation: '1, 3, 6, 10…のように、1個ずつ増える●を三角形にならべた個数が三角数です。1からnまでの和と同じで、n×(n+1)÷2で求められます。図形の点の数の問題でよく出ます。',
         steps: [
@@ -1169,6 +1192,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '周期算（あまりで見ぬく）',
+        locked: true,
         formula: '○番目 = ○ ÷ 周期 の「あまり」で決まる',
         explanation: '「赤青黄赤青黄…」のようにくり返す並びは、周期（くり返しの長さ）でわったあまりで何色かがわかります。あまりが0のときは周期のいちばん最後になることに注意します。',
         steps: [
@@ -1202,6 +1226,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: 'フィボナッチ型（前2つの和）',
+        locked: true,
         formula: '次の数 = 前の数 + そのまた前の数',
         explanation: '1, 1, 2, 3, 5, 8…のように、直前の2つの数をたして次を作る並びです。階段を1段か2段ずつ上る上り方の数など、場合の数の問題でも登場します。',
         steps: [
@@ -1243,6 +1268,7 @@ export const sansuFormulas: FormulaSection[] = [
     items: [
       {
         label: '積の法則',
+        locked: true,
         formula: '総数 = (Aの選び方) × (Bの選び方) × …',
         explanation: '「上着3種類×ズボン2種類」のように、続けて選ぶときはそれぞれの選び方をかけ算します。1つ目を決めるごとに2つ目の全パターンがあるからです。',
         steps: [
@@ -1276,6 +1302,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '和の法則',
+        locked: true,
         formula: '総数 = (Aの場合) + (Bの場合)（同時に起こらないとき）',
         explanation: '「電車で行くか、バスで行くか」のように、どちらか一方しか起こらない選び方はたし算で数えます。かけ算（積）とたし算（和）の使い分けが場合の数の第一歩です。',
         steps: [
@@ -1309,6 +1336,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '順列（ならべ方）',
+        locked: true,
         formula: 'n個から選んでならべる = n × (n−1) × (n−2) × …',
         explanation: '順番が関係する「ならべ方」は、1番目はn通り、2番目は残りのn−1通り…と、1ずつ減らしてかけていきます。選ぶ個数の分だけかけ算します。',
         steps: [
@@ -1342,6 +1370,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '組み合わせ（選び方）',
+        locked: true,
         formula: '選び方 = (ならべ方) ÷ (選んだ個数のならべかえ方)',
         explanation: '順番が関係ない「選び方」は、順列で数えたあとに、同じメンバーの並びかえ分だけダブって数えているので割ります。3個選ぶなら3×2×1＝6でわります。',
         steps: [
@@ -1376,6 +1405,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '樹形図で数え上げ',
+        locked: true,
         formula: '枝分かれを全部かき出して数える',
         explanation: '公式が使いにくい問題は、樹形図（枝分かれの図）ですべてかき出すのが確実です。順序よく「小さい順」などルールを決めてかくと、もれ・ダブりを防げます。',
         steps: [
@@ -1409,6 +1439,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '道順の数え方',
+        locked: true,
         formula: '各交差点に、左と下の数をたした数を書き込む',
         explanation: '最短で行く道順は、交差点ごとに「その点に来る道の数」を書き込みます。左からと下からしか来られないので、その2つをたした数がその点までの道順です。ゴールの数が答えです。',
         steps: [
@@ -1452,6 +1483,7 @@ export const sansuFormulas: FormulaSection[] = [
     items: [
       {
         label: 'つるかめ算',
+        locked: true,
         formula: '一方の数 = (全部が多い方だった合計 − 実際の合計) ÷ (1個あたりの差)',
         explanation: 'つるとかめの合計頭数と足の数から、それぞれの数を求めます。「全部かめ（足4本）だったら」と仮定して、実際との足の差を1匹あたりの差でわると、つるの数が出ます。面積図でも解けます。',
         steps: [
@@ -1487,6 +1519,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '和差算',
+        locked: true,
         formula: '大きい方 = (和 + 差) ÷ 2 ／ 小さい方 = (和 − 差) ÷ 2',
         explanation: '2つの数の合計（和）とちがい（差）がわかっているとき、和に差をたして半分にすると大きい方が、和から差をひいて半分にすると小さい方が出ます。線分図をかくとよくわかります。',
         steps: [
@@ -1522,6 +1555,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '過不足算',
+        locked: true,
         formula: '人数 = (あまり + 不足) ÷ (1人あたりの差)',
         explanation: '「1人◯個ずつ配ると△あまり、□個ずつだと余分に足りない」というとき、あまりと不足の合計を1人あたりの配る差でわると人数が出ます。あまり同士・不足同士のときは引き算になります。',
         steps: [
@@ -1556,6 +1590,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '年齢算',
+        locked: true,
         formula: '年齢の差は何年たっても変わらない',
         explanation: '2人の年齢の差はずっと一定です。今の差を手がかりに、「何年後に親が子の◯倍になるか」を求めます。◯倍になるとき、差は「倍の差（◯−1）」にあたる、と考えると解けます。',
         steps: [
@@ -1588,6 +1623,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '植木算',
+        locked: true,
         formula: '両はしに木あり: 本数 = 間の数 + 1 ／ 両はしなし: 本数 = 間の数 − 1',
         explanation: 'まっすぐな道に木を植えるとき、木の数と「間の数」は1ちがいます。両はしにも植えるなら間の数＋1本、両はしに植えないなら間の数−1本、円（輪）なら間の数＝本数です。',
         steps: [
@@ -1621,6 +1657,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '消去算',
+        locked: true,
         formula: '2つの式をそろえて、片方を消して求める',
         explanation: '「りんご2個とみかん3個で◯円」のように2種類の値段を求めるとき、片方の個数をそろえて式を引き算し、一方を消します。連立方程式の考え方を、線分図や表で行います。',
         steps: [
@@ -1661,6 +1698,7 @@ export const sansuFormulas: FormulaSection[] = [
     items: [
       {
         label: '仕事算（全体を1とする）',
+        locked: true,
         formula: '1日の仕事量 = 1 ÷ かかる日数 ／ 日数 = 1 ÷ (1日の仕事量の和)',
         explanation: '仕事全体を1とおくと、「5日で終わる人」は1日に1/5だけ働きます。何人かで一緒にやるときは、1日分の仕事量をたして、全体1をそれで割ればかかる日数が出ます。',
         steps: [
@@ -1695,6 +1733,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '仕事算（最小公倍数を使う）',
+        locked: true,
         formula: '全体 = 各人の日数の最小公倍数とおく',
         explanation: '分数がいやなときは、全体をそれぞれの日数の最小公倍数（例: 6と4なら12）とおきます。すると1日の仕事量が整数になり、計算がとても楽になります。',
         steps: [
@@ -1730,6 +1769,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: 'のべ算（延べ人数）',
+        locked: true,
         formula: '全体の仕事 = 人数 × 日数（のべ人数）',
         explanation: '「3人で4日かかる仕事＝のべ12人分」のように、人数×日数で仕事の総量を表します。この総量を使って「人数を変えると何日か」などを求めます。',
         steps: [
@@ -1763,6 +1803,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: 'ニュートン算',
+        locked: true,
         formula: '減る速さ = 処理する速さ − 増える速さ ／ 時間 = 最初の量 ÷ 減る速さ',
         explanation: '行列や水そうのように、減らしながらも一定の割合で増えていく問題です。まず1分あたりに増える量を求め、処理する速さから引いた「実際に減る速さ」で最初の量を割ります。',
         steps: [
@@ -1798,6 +1839,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '水そう算',
+        locked: true,
         formula: '水面の上がる速さ = 入る水の量 ÷ 底面積',
         explanation: '水そうに水を入れると、水面は毎分「入る量÷底面積」ずつ上がります。とちゅうで仕切りや石があると底面積が変わり、上がる速さも変わります。グラフの折れ目に注目します。',
         steps: [
@@ -1843,6 +1885,7 @@ export const sansuFormulas: FormulaSection[] = [
     items: [
       {
         label: '三角形の内角の和',
+        locked: true,
         formula: '3つの内角の和 = 180°',
         explanation: 'どんな三角形でも、3つの角をたすと必ず180°です。2つの角がわかれば、残り1つは180°から引けば求まります。二等辺三角形なら等しい角があることも利用します。',
         figure: {
@@ -1888,6 +1931,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '二等辺三角形・正三角形の角',
+        locked: true,
         formula: '底角 ＝ (180° − 頂角) ÷ 2 ／ 頂角 ＝ 180° − 底角 × 2 ／ 正三角形は3つとも60°',
         explanation:
           '二等辺三角形は2つの辺の長さが等しい三角形で、そのとき底辺の両はしにある2つの角（底角）も必ず等しくなります。角を求める手順は2つだけです。まず180°から頂角を引いて「底角2つぶんの合計」を出し、つぎにそれを2で割って1つぶんにします。引いた140°をそのまま答えにしてしまうまちがいが非常に多いので、2つぶんなのか1つぶんなのかを毎回たしかめてください。',
@@ -1954,6 +1998,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '三角形の外角',
+        locked: true,
         formula: '外角 = 隣り合わない2つの内角の和',
         explanation: '三角形の1つの辺をのばしてできる外の角（外角）は、そのとなりにない内側2つの角をたした大きさに等しくなります。180°を使わずに一発で求められる便利な性質です。',
         steps: [
@@ -1989,6 +2034,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '多角形の内角の和',
+        locked: true,
         formula: 'n角形の内角の和 = 180° × (n − 2)',
         explanation: 'n角形は、1つの頂点から対角線を引くと(n−2)個の三角形に分けられます。三角形1つが180°なので、全部で180×(n−2)になります。五角形なら540°、六角形なら720°です。',
         figure: {
@@ -2041,6 +2087,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '多角形の外角の和',
+        locked: true,
         formula: '外角の和 = 360°（何角形でも）',
         explanation: '多角形の外角を全部たすと、角形の種類に関係なくいつも360°になります。正n角形なら1つの外角は360÷nで求まり、そこから内角も出せてとても便利です。',
         steps: [
@@ -2076,6 +2123,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '平行線の錯角・同位角',
+        locked: true,
         formula: '平行線では 同位角 = 等しい ／ 錯角 = 等しい',
         explanation: '2本の平行線に1本の直線が交わるとき、同じ位置にある同位角どうし、Z字の位置にある錯角どうしは等しくなります。折れ線の角度を求める問題で、平行な補助線を引く決め手になります。',
         steps: [
@@ -2111,6 +2159,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '正多角形の1つの内角',
+        locked: true,
         formula: '1つの内角 = 180° × (n − 2) ÷ n',
         explanation: '正多角形はすべての角が等しいので、内角の和をnで割れば1つ分が出ます。または「180−外角」でも求められます。正三角形60°、正方形90°、正六角形120°は覚えておくと速いです。',
         figure: {
@@ -2175,6 +2224,7 @@ export const sansuFormulas: FormulaSection[] = [
     items: [
       {
         label: '体積と容積のちがい',
+        locked: true,
         formula: '体積＝外側から測った大きさ ／ 容積＝内側に入る量（厚みのぶんだけ体積より小さい）',
         explanation:
           'どちらも「かさ」を表しますが、測る場所がちがいます。体積は物そのものの大きさなので、外側から測ります。容積は入れ物の中に入る量なので、内側から測ります。だから箱に厚みがあると、容積は体積より小さくなります。厚みが書かれていたら、内側の長さは「外側の長さ − 厚み×2」になる点に注意します（左右・上下の両方でけずられるため）。',
@@ -2213,6 +2263,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '相似な図形の辺の比',
+        locked: true,
         formula: '対応する辺の比はすべて等しい',
         explanation: '形が同じ（相似）な2つの図形では、対応する辺の長さの比がどこも同じになります。この比を相似比といいます。1組わかれば、他の辺も比を使って求められます。合同との関係もここで整理しておきます。形も大きさも同じなのが合同、形は同じで大きさだけがちがうのが相似です。だから合同は相似比が 1:1 の特別な場合にあたり、合同ならば必ず相似ですが、相似だからといって合同とはかぎりません。',
         steps: [
@@ -2248,6 +2299,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '相似な図形の面積比',
+        locked: true,
         formula: '面積比 = (相似比) × (相似比)',
         explanation: '相似比が1:2なら、面積比は1×1 : 2×2＝1:4になります。長さが2倍になると、たてもよこも2倍なので広さは4倍。面積比は相似比の2乗（2回かけ）で考えます。',
         steps: [
@@ -2280,6 +2332,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '相似な立体の体積比',
+        locked: true,
         formula: '体積比 = (相似比) × (相似比) × (相似比)',
         explanation: '相似な立体（同じ形の大小）では、体積比は相似比の3乗になります。相似比1:2なら体積比は1:8。たて・よこ・高さの3方向が2倍になるからです。',
         steps: [
@@ -2313,6 +2366,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '高さが同じ三角形の面積比',
+        locked: true,
         formula: '高さが等しければ、面積比 = 底辺の比',
         explanation: '高さが同じ三角形どうしなら、面積は底辺の長さに比例します。だから底辺の比がそのまま面積比になります。1本の直線上に底辺がならぶ図でよく使います。',
         figure: {
@@ -2363,6 +2417,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '相似の利用（影・砂時計型）',
+        locked: true,
         formula: '平行線があると、砂時計型・ピラミッド型の相似ができる',
         explanation: '三角形の中に底辺と平行な線を引くと、上に小さな相似三角形（ピラミッド型）ができます。2本の直線が交わってできる砂時計型（ちょうちょ型）も相似です。相似を見つけて辺の比で解きます。',
         figure: {
@@ -2422,6 +2477,7 @@ export const sansuFormulas: FormulaSection[] = [
     items: [
       {
         label: '約数と倍数',
+        locked: true,
         formula: 'A ÷ B が割り切れる → Bは Aの約数、Aは Bの倍数',
         explanation: '12を割り切れる数（1,2,3,4,6,12）が12の約数、12を何倍かした数（12,24,36…）が12の倍数です。約数はペアで見つけると数え落としが減ります（12なら1と12、2と6、3と4）。',
         steps: [
@@ -2457,6 +2513,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '素数と素因数分解',
+        locked: true,
         formula: '素数 = 1とその数自身しか約数がない数（2,3,5,7,11…）',
         explanation: '2, 3, 5, 7のように、1と自分でしか割れない数が素数です。1は素数ではありません。どんな整数も素数のかけ算に分解でき（素因数分解）、約数や公約数を調べる土台になります。',
         steps: [
@@ -2491,6 +2548,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '最大公約数',
+        locked: true,
         formula: '共通の約数のうち最大のもの（すだれ算で求める）',
         explanation: '2つ以上の数を同時に割れる数のうち、いちばん大きいものが最大公約数です。「あまりが出ないように◯人で分ける最大人数」などで使います。すだれ算（連除法）で共通に割った数をかけて求めます。',
         steps: [
@@ -2524,6 +2582,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '最小公倍数',
+        locked: true,
         formula: '共通の倍数のうち最小のもの（すだれ算の外側をかける）',
         explanation: '2つ以上の数に共通する倍数のうち、いちばん小さいものが最小公倍数です。「◯分ごとと△分ごとが同時に来るのは何分後」などで使います。すだれ算では、左に割った数と下に残った数を全部かけます。',
         steps: [
@@ -2558,6 +2617,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '分数の通分・約分',
+        locked: true,
         formula: '通分は分母を最小公倍数にそろえる ／ 約分は分母分子を最大公約数で割る',
         explanation: '分母がちがう分数をたし引きするには、分母を同じ（通分）にします。分母の最小公倍数にそろえるのがコツです。答えは分母分子を最大公約数で割って、これ以上割れない形（既約分数）にします。',
         steps: [
@@ -2593,6 +2653,7 @@ export const sansuFormulas: FormulaSection[] = [
       },
       {
         label: '倍数の見分け方',
+        locked: true,
         formula: '3の倍数=各位の和が3の倍数 ／ 4の倍数=下2桁が4の倍数',
         explanation: '大きな数でも、割らずに倍数かどうかを見分けられます。3の倍数は各位の数字をたして3で割れるか、9の倍数は各位の和が9の倍数か、で判定します。4の倍数は下2桁、8の倍数は下3桁を見ます。',
         steps: [

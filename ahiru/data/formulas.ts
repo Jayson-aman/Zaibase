@@ -27,9 +27,12 @@ export const SUBJECTS: { key: Subject; emoji: string; color: string }[] = [
   { key: '英語', emoji: '🔤', color: '#9B59B6' },
 ];
 
-// 既存の無料項目（rikaFormulas・shakaiFormulas）はそのまま。あとから足した分は
-// 買い切り（locked: true）の別ファイルにして後ろに連結する。既存ファイルを
-// 編集しないので、無料だった項目が誤って有料になることがない。
+// 2026/9/29 方針変更：全教科・両受験種別とも「ファイル先頭の3項目だけ無料、
+// 残りは¥50買い切り（locked: true）」に統一した。それまでは算数・理科・社会の
+// 元からある項目（95・62・86件）が無料のままだった。
+// Pro/Max購読者はロックに関係なく全項目を読める（formulas.tsx の bypassLock）。
+// ⚠️ iOS/Androidの¥50商品（com.zaibase.exam.formulaunlock）がストアに未登録の
+// あいだは、非購読者には「準備中です」ボタンが出るだけで購入できない。
 export const FORMULAS: Record<Subject, FormulaSection[]> = {
   算数: [...sansuFormulas, ...sansuTsuikaFormulas, ...kokoSugakuFormulas],
   国語: [...kokugoFormulas, ...kokoKokugoFormulas],

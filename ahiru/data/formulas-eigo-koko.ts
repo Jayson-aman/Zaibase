@@ -37,7 +37,6 @@ export const eigoKokoFormulas: FormulaSection[] = [
     items: [
       {
         label: "5つの文型と動詞の後ろの形",
-        locked: true,
         formula:
           "SV ／ SVC（S＝C）／ SVO ／ SVOO（人＋物）／ SVOC（O＝C）",
         explanation:
@@ -81,7 +80,6 @@ export const eigoKokoFormulas: FormulaSection[] = [
       },
       {
         label: "There構文と存在を表す言い方",
-        locked: true,
         formula:
           "There is ＋ 単数 ／ There are ＋ 複数 ／ the や所有格がつく名詞には使わない",
         explanation:
@@ -124,7 +122,6 @@ export const eigoKokoFormulas: FormulaSection[] = [
       },
       {
         label: "名詞の数と冠詞の使い分け",
-        locked: true,
         formula:
           "数えられる名詞は a/an か複数形 ／ 数えられない名詞は a をつけず複数形にもしない",
         explanation:

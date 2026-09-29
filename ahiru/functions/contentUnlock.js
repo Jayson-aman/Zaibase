@@ -66,17 +66,26 @@ exports.unlockContent = onCall(
     if (purchaseCount === null) {
       throw new HttpsError("unavailable", "購入状況の確認に失敗しました。しばらくしてからもう一度お試しください。");
     }
-    if (purchaseCount <= alreadyUnlocked.length) {
-      throw new HttpsError(
-        "failed-precondition",
-        "購入が確認できませんでした。決済が完了してから少し時間をおいてもう一度お試しください。"
-      );
-    }
 
-    await docRef.set(
-      { uid, unlocked: FieldValue.arrayUnion(itemId), updatedAt: FieldValue.serverTimestamp() },
-      { merge: true }
-    );
+    // 「購入回数 > 解放済み件数」の判定と書き込みは必ず1つのトランザクションで行う。
+    // 分けると、1回だけ購入した人が別々のitemIdで同時に2リクエスト送ったとき、
+    // 両方が「解放済み0件 < 購入1回」を見て通り、¥50で2件解放できてしまう。
+    await db.runTransaction(async (tx) => {
+      const cur = await tx.get(docRef);
+      const unlocked = /** @type {string[]} */ (cur.data()?.unlocked ?? []);
+      if (unlocked.includes(itemId)) return;
+      if (purchaseCount <= unlocked.length) {
+        throw new HttpsError(
+          "failed-precondition",
+          "購入が確認できませんでした。決済が完了してから少し時間をおいてもう一度お試しください。"
+        );
+      }
+      tx.set(
+        docRef,
+        { uid, unlocked: FieldValue.arrayUnion(itemId), updatedAt: FieldValue.serverTimestamp() },
+        { merge: true }
+      );
+    });
     return { ok: true };
   }
 );

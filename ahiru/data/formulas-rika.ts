@@ -127,6 +127,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '動滑車',
+        locked: true,
         formula: '引く力 ＝ おもりの重さ ÷ 2（滑車の重さは加える）／ 引く距離 ＝ 持ち上げる距離 × 2',
         explanation:
           '物といっしょに動く滑車が動滑車。2本のひもでおもりを支えるので、力は半分ですむ。ただしその分ひもを引く距離は2倍になり、仕事の量（力×距離）は変わらない。',
@@ -164,6 +165,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '輪軸（りんじく）',
+        locked: true,
         formula: '大きい輪の力 × 大きい輪の半径 ＝ 小さい輪の力 × 小さい輪の半径',
         explanation:
           '半径のちがう2つの輪をくっつけて同じ軸で回すのが輪軸。てこと同じで「力×半径」がつり合う。大きい輪を引けば小さい力で重い物を動かせる。ハンドルやドアノブと同じしくみ。',
@@ -202,6 +204,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: 'ばねののび（フックの法則）',
+        locked: true,
         formula: 'ばねののび ＝ おもりの重さ × （1gあたりののび）／ のびは重さに比例',
         explanation:
           'ばねは、つるすおもりの重さに比例してのびる。10gで2cmのびるばねなら、20gでは4cm、30gでは6cmのびる。表を見て「1gで何cmのびるか」を求めると計算しやすい。',
@@ -268,6 +271,7 @@ export const rikaFormulas: FormulaSection[] = [
     items: [
       {
         label: '直列つなぎの電流',
+        locked: true,
         formula: '電流はどこでも同じ大きさ／豆電球を増やすと暗くなる',
         explanation:
           '直列は電池や豆電球を1本道でつなぐこと。電流の通り道は1つなので、どこを測っても電流は同じ。豆電球を増やすと電流が流れにくくなり、全部が暗くなる。',
@@ -312,6 +316,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '並列つなぎの電流',
+        locked: true,
         formula: '枝分かれした電流を合計するともとにもどる／豆電球は明るいまま',
         explanation:
           '並列は電流の通り道が枝分かれするつなぎ方。それぞれの豆電球に電池がそのままかかるので、豆電球を増やしても1個ずつは明るいまま。ただし電池の減りは早くなる。',
@@ -357,6 +362,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '電池の直列つなぎ',
+        locked: true,
         formula: '電池を直列に増やすと、流れる電流が大きくなる（豆電球は明るくなる）',
         explanation:
           '電池を直列でつなぐと、電気を押し出す力（電圧）が足し算になる。だから豆電球は明るくなるが、電池は速く減る。',
@@ -403,6 +409,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: 'オームの法則（中学）',
+        locked: true,
         formula: '電圧（V）＝ 電流（A）× 抵抗（オーム）',
         explanation:
           '電流の流れにくさを抵抗という。電圧が大きいほど電流はたくさん流れ、抵抗が大きいほど電流は流れにくくなる。V＝I×Rの三つのうち二つがわかれば残りが求まる。',
@@ -454,6 +461,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '電磁石の強さ',
+        locked: true,
         formula: '① コイルの巻き数を増やす ② 電流を大きくする ③ 鉄しんを入れる → 強くなる',
         explanation:
           'コイルに電流を流すと磁石になる（電磁石）。巻き数を多くしたり電流を大きくしたりすると磁力が強くなる。中に鉄のしんを入れるとさらに強くなる。電流を切ると磁力が消えるのが永久磁石とのちがい。',
@@ -489,6 +497,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '電流の向きとN極（右手・方位磁針）',
+        locked: true,
         formula: '電流の向きを逆にすると、電磁石のN極・S極が入れかわる',
         explanation:
           'コイルに流す電流の向きで、電磁石のどちら側がN極になるかが決まる。電池の向きを逆にすると磁石の極も逆になり、方位磁針の振れる向きも反対になる。',
@@ -530,6 +539,7 @@ export const rikaFormulas: FormulaSection[] = [
     items: [
       {
         label: '光の反射の法則',
+        locked: true,
         formula: '入射角 ＝ 反射角（鏡に垂直な線から測る）',
         explanation:
           '鏡に当たった光は、入るときの角度と同じ角度ではね返る。角度は鏡の面からではなく、鏡に垂直な線（法線）から測るのがルール。',
@@ -578,6 +588,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '光の屈折',
+        locked: true,
         formula: '空気→水・ガラスに入るとき、光は境目で折れ曲がる',
         explanation:
           '光は種類のちがうものに斜めに入ると、境目で進む向きが変わる。これが屈折。水の中のストローが折れて見えたり、水底が浅く見えたりするのはこのため。',
@@ -627,6 +638,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '凸レンズと焦点',
+        locked: true,
         formula: '平行な光は反対側の1点（焦点）に集まる／焦点距離を覚える',
         explanation:
           '凸レンズ（真ん中がふくらんだレンズ）は、光を1点に集める。軸に平行に入った光が集まる点を焦点という。虫めがねで日光を集めて紙をこがせるのはこのため。',
@@ -662,6 +674,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '凸レンズの像（実像）',
+        locked: true,
         formula: '物が焦点より外側 → 上下左右が逆さの実像がスクリーンにうつる',
         explanation:
           '物を焦点より遠くに置くと、レンズの反対側に上下逆さの像（実像）ができ、スクリーンにうつせる。物が焦点距離の2倍のところにあると、同じ大きさの実像になる。',
@@ -701,6 +714,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '音の速さ',
+        locked: true,
         formula: '空気中の音の速さ ＝ 約 340 m/秒／ きょり ＝ 速さ × 時間',
         explanation:
           '音は空気を伝わって進み、1秒間に約340m進む。光はほぼ一瞬で届くので、雷が光ってから音が聞こえるまでの時間で、雷までのきょりがわかる。',
@@ -733,6 +747,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '音の高さ・大きさ',
+        locked: true,
         formula: '振動が速い（振動数が多い）ほど高い音／振れはばが大きいほど大きい音',
         explanation:
           '物が細かくふるえる（振動数が多い）ほど音は高くなる。弦を短く・細く・強く張るほど高い音が出る。振れはば（振幅）が大きいほど大きい音になる。',
@@ -774,6 +789,7 @@ export const rikaFormulas: FormulaSection[] = [
     items: [
       {
         label: '密度',
+        locked: true,
         formula: '密度（g/cm3）＝ 重さ（g）÷ 体積（cm3）',
         explanation:
           '同じ体積でどれくらい重いかを表すのが密度。水の密度は1g/cm3。水より密度が大きい物は水にしずみ、小さい物はうく。',
@@ -807,6 +823,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '浮力（アルキメデスの原理）',
+        locked: true,
         formula: '浮力（g）＝ 物がおしのけた水の重さ ＝ 水中に入った体積（cm3）× 1',
         explanation:
           '水の中の物には、上向きに押し上げる力（浮力）がはたらく。その大きさは、物が押しのけた水の重さと同じ。だから水にたくさんしずんでいる部分が大きいほど浮力も大きい。',
@@ -844,6 +861,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '水にうく物の浮力',
+        locked: true,
         formula: 'ういて止まっている物：浮力 ＝ 物の重さ',
         explanation:
           '水にういて止まっている物は、重さと浮力がつり合っている。だから浮力は物の重さと同じ。水面から上に出ている部分と下にしずんでいる部分の割合は密度で決まる。',
@@ -875,6 +893,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '圧力',
+        locked: true,
         formula: '圧力 ＝ 力の大きさ ÷ 力がかかる面積',
         explanation:
           '同じ力でも、せまい面積に集まると強く効く。これが圧力。とがった画びょうがよく刺さるのは、力が小さな面積に集中して圧力が大きくなるから。',
@@ -910,6 +929,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '振り子の周期',
+        locked: true,
         formula: '1往復する時間は「ひもの長さ」だけで決まる（おもりの重さ・振れはばは関係ない）',
         explanation:
           '振り子が1往復する時間（周期）は、ひもが長いほど長くなる。おもりを重くしても、振れはばを大きくしても、1往復の時間は変わらないのがポイント（等時性）。',
@@ -960,6 +980,7 @@ export const rikaFormulas: FormulaSection[] = [
     items: [
       {
         label: '水溶液のとける量と重さ',
+        locked: true,
         formula: '水溶液の重さ ＝ とかした物の重さ ＋ 水の重さ',
         explanation:
           '物が水にとけて見えなくなっても、重さは消えない。だから水溶液全体の重さは、とかした物と水を足したもの。とけた物は水全体に均一に広がり、時間がたっても下にたまらない。',
@@ -990,6 +1011,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '濃度（質量パーセント濃度）',
+        locked: true,
         formula: '濃度（％）＝ とけている物の重さ ÷ 水溶液全体の重さ × 100',
         explanation:
           '水溶液の濃さは、全体の重さのうち何％がとけた物かで表す。分母は「水」ではなく「水溶液全体（水＋とけた物）」であることに注意。',
@@ -1028,6 +1050,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '溶解度',
+        locked: true,
         formula: '水100gにとける限界の量。ふつう温度が高いほど大きくなる（固体の場合）',
         explanation:
           '決まった温度で水100gにとける物の最大量が溶解度。ミョウバンや硝酸カリウムは温度が上がるとよくとけるが、食塩は温度を上げてもあまり変わらない。⚠️溶解度と濃度は基準がちがいます。溶解度は「水100gにとける最大の量」で分母が水、濃度は「水溶液全体に対する食塩の割合」で分母が水＋食塩です。溶解度35.8gをそのまま35.8%としてしまうのが典型的なまちがいで、正しくは 35.8 ÷ 135.8 ≒ 26%になります。',
@@ -1077,6 +1100,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '飽和水溶液',
+        locked: true,
         formula: 'これ以上とけない状態。冷やすととけきれない分がつぶ（結晶）になって出る',
         explanation:
           '限界までとかした水溶液が飽和水溶液。温度を下げると溶解度が小さくなるので、とけきれなくなった分が固体（結晶）として出てくる。これを利用してきれいな結晶を取り出すのが再結晶。',
@@ -1110,6 +1134,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: 'ろ過のしかた',
+        locked: true,
         formula: 'ろ紙でとけ残り（固体）と液を分ける／ガラス棒を伝わらせて静かに注ぐ',
         explanation:
           'ろ過は、水にとけていないつぶをこし取る操作。液はろ紙を通りぬけ、つぶだけが上に残る。とけている物はろ紙を通りぬけるので、ろ過では取り出せない。',
@@ -1156,6 +1181,7 @@ export const rikaFormulas: FormulaSection[] = [
     items: [
       {
         label: '酸素の性質と集め方',
+        locked: true,
         formula: '発生：二酸化マンガン＋オキシドール／性質：ものを燃やす（助燃性）',
         explanation:
           '酸素は色もにおいもない気体で、ものが燃えるのを助ける。火のついた線香を近づけるとほのおを上げて激しく燃える。水にとけにくいので水上置換で集める。',
@@ -1186,6 +1212,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '二酸化炭素の性質と集め方',
+        locked: true,
         formula: '発生：石灰石＋うすい塩酸／性質：石灰水を白くにごらせる',
         explanation:
           '二酸化炭素は石灰水を白くにごらせるのが最大の特徴。空気より重く、水に少しとけて酸性（炭酸水）になる。下方置換または水上置換で集める。',
@@ -1219,6 +1246,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '水素の性質',
+        locked: true,
         formula: '発生：鉄・亜鉛＋うすい塩酸／性質：一番軽い気体・燃えると水ができる',
         explanation:
           '水素はすべての気体の中で最も軽い。火を近づけるとポンと音を立てて燃え、あとに水ができる。水にとけにくいので水上置換で集める。',
@@ -1248,6 +1276,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: 'アンモニアの性質と集め方',
+        locked: true,
         formula: '性質：鼻をつくにおい・水にとても溶けやすい・空気より軽い→上方置換',
         explanation:
           'アンモニアは刺激臭のある気体で、水にとてもよくとける。水にとけるとアルカリ性を示す。空気より軽く水にとけやすいので、上方置換法で集める。',
@@ -1277,6 +1306,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: 'ものが燃える3条件',
+        locked: true,
         formula: '① 燃える物 ② 酸素 ③ 発火点以上の温度 → 1つでも欠けると火が消える',
         explanation:
           'ものが燃え続けるには、燃える物・酸素・高い温度の3つがそろう必要がある。火を消すには、このどれか1つをなくせばよい（水をかける＝温度を下げる、ふたをする＝酸素を断つ）。',
@@ -1311,6 +1341,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '酸性・中性・アルカリ性（リトマス紙）',
+        locked: true,
         formula: '酸性：青→赤／アルカリ性：赤→青／中性：どちらも変化なし',
         explanation:
           '水溶液は酸性・中性・アルカリ性に分けられ、リトマス紙で見分けられる。BTB液なら酸性で黄色、中性で緑、アルカリ性で青になる。',
@@ -1345,6 +1376,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '中和',
+        locked: true,
         formula: '酸性 ＋ アルカリ性 → たがいの性質を打ち消し合う（水と塩ができる）',
         explanation:
           '酸とアルカリを混ぜると、たがいの性質を打ち消し合う。これが中和。塩酸と水酸化ナトリウム水溶液がちょうど中和すると中性になり、水を蒸発させると食塩（塩）が出てくる。',
@@ -1390,6 +1422,7 @@ export const rikaFormulas: FormulaSection[] = [
     items: [
       {
         label: '太陽の1日の動き（日周運動）',
+        locked: true,
         formula: '東からのぼり、南の空を通り、西にしずむ（1時間に約15度動く）',
         explanation:
           '地球が西から東へ自転しているため、太陽は東からのぼって南を通り西にしずむように見える。1日（24時間）で360度動くので、1時間あたり約15度動く。',
@@ -1428,6 +1461,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '南中高度と季節',
+        locked: true,
         formula: '夏は高く、冬は低い／春分・秋分の南中高度 ＝ 90度 － その土地の緯度',
         explanation:
           '太陽が真南に来たときの高さを南中高度という。地軸がかたむいているため、夏は高く昼が長く、冬は低く昼が短くなる。これが季節の変化の原因。',
@@ -1467,6 +1501,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '月の満ち欠け',
+        locked: true,
         formula: '新月→三日月→上弦→満月→下弦→新月（約29.5日で一周）',
         explanation:
           '月は太陽の光を反射して光る。月・地球・太陽の位置関係が変わることで、光って見える形が変わる。太陽と同じ方向にあると新月、反対にあると満月になる。',
@@ -1501,6 +1536,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '星の1日の動き',
+        locked: true,
         formula: '北の空：北極星を中心に反時計回り／1時間で約15度回る',
         explanation:
           '地球の自転で、星も1日に1回転して見える。北の空の星は北極星を中心に反時計回りに回る。北極星は地軸のほぼ延長線上にあるので、ほとんど動かず北の目印になる。',
@@ -1539,6 +1575,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '星の1年の動き（年周運動）',
+        locked: true,
         formula: '同じ時刻に見える星は、1か月に約30度西へずれる',
         explanation:
           '地球が太陽のまわりを1年かけて公転しているため、同じ時刻に見える星の位置は少しずつ西へずれる。1年（12か月）で360度ずれるので、1か月あたり約30度ずれる。季節ごとに見える星座が変わる理由。',
@@ -1583,6 +1620,7 @@ export const rikaFormulas: FormulaSection[] = [
     items: [
       {
         label: '湿度',
+        locked: true,
         formula: '湿度（％）＝ 空気1m3中の水蒸気量 ÷ その温度の飽和水蒸気量 × 100',
         explanation:
           '空気がどれくらい湿っているかを表すのが湿度。気温が高いほど、空気は多くの水蒸気をふくめる（飽和水蒸気量が大きい）。同じ水蒸気量でも、気温が下がると湿度は高くなる。',
@@ -1616,6 +1654,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '露点（ろてん）',
+        locked: true,
         formula: '空気が冷えて水蒸気が水てきになり始める温度',
         explanation:
           '空気を冷やしていくと、あるところで水蒸気がこれ以上ふくみきれなくなり、水てきになり始める。この温度が露点。露点になると湿度は100％で、コップに水てきがつくのはこのため。',
@@ -1649,6 +1688,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '雲・雨のでき方',
+        locked: true,
         formula: '空気が上昇→ぼうちょうして冷える→露点以下で水てき（雲）→大きくなって雨',
         explanation:
           '地面が温まると空気が上昇する。上空は気圧が低いので空気はふくらんで温度が下がり、露点以下になると水蒸気が水てきや氷のつぶになって雲ができる。つぶが大きくなると雨や雪として落ちてくる。',
@@ -1683,6 +1723,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '寒冷前線',
+        locked: true,
         formula: '冷たい空気が暖かい空気を押し上げる／短時間の強い雨・通過後に気温が下がる',
         explanation:
           '冷たい空気が暖かい空気の下にもぐりこんで急に押し上げるのが寒冷前線。積乱雲ができ、せまい範囲で短時間に強い雨が降る。通過すると気温が下がり、風向が変わる。',
@@ -1715,6 +1756,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '温暖前線',
+        locked: true,
         formula: '暖かい空気が冷たい空気の上にはい上がる／広い範囲で長い弱い雨・通過後は暖かい',
         explanation:
           '暖かい空気が冷たい空気の上にゆるやかにはい上がるのが温暖前線。乱層雲などが広がり、広い範囲で長時間おだやかな雨が降る。通過すると気温が上がる。',
@@ -1747,6 +1789,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '日本の四季と気団',
+        locked: true,
         formula: '夏：小笠原気団（暑く湿る）／冬：シベリア気団（冷たく乾く）／梅雨・秋雨：前線が停滞',
         explanation:
           '日本の天気は、季節ごとに勢力を強める気団で決まる。冬はシベリア気団が発達して北西の季節風がふき、日本海側で雪。夏は小笠原気団におおわれてむし暑くなる。',
@@ -1787,6 +1830,7 @@ export const rikaFormulas: FormulaSection[] = [
     items: [
       {
         label: '光合成',
+        locked: true,
         formula: '水 ＋ 二酸化炭素 ＋（光エネルギー）→ でんぷん ＋ 酸素',
         explanation:
           '植物は葉緑体で、日光のエネルギーを使い、水と二酸化炭素からでんぷん（養分）を作る。このとき酸素を出す。日光が当たっている昼だけ行われるのが特徴。',
@@ -1825,6 +1869,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '呼吸（植物）',
+        locked: true,
         formula: '酸素 ＋ 養分 → 二酸化炭素 ＋ 水 ＋（エネルギー）／ 昼も夜も一日中',
         explanation:
           '植物も動物と同じように呼吸をして、酸素をとり入れ二酸化炭素を出す。呼吸は昼も夜も一日中行う。昼は光合成の方がさかんなので、見かけ上は二酸化炭素をとりこんでいるように見える。',
@@ -1859,6 +1904,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '蒸散',
+        locked: true,
         formula: '葉の気こう（あな）から水が水蒸気になって出ていくこと',
         explanation:
           '根から吸い上げた水は、葉の裏に多い気こうというあなから水蒸気となって出ていく。これが蒸散。蒸散が起こることで、根からの水の吸い上げがさかんになる。晴れて気温が高い日ほど多い。なお蒸散と呼吸は別のはたらきです。蒸散は気孔から水（水蒸気）を出すことで、体温の調節と、根からの水の吸い上げを助けるのが役目。呼吸は酸素を取り入れて二酸化炭素を出す気体のやりとりで、昼も夜もずっと行っています。どちらも気孔で起きますが、出ていくものがちがいます。',
@@ -1897,6 +1943,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '種子の発芽の条件',
+        locked: true,
         formula: '① 水 ② 空気（酸素）③ 適当な温度 → 3つそろって発芽（光・肥料は不要）',
         explanation:
           '種子が芽を出す（発芽）には、水・空気・適当な温度の3つが必要。光や肥料は発芽そのものには必要ない。1つずつ条件を変えて確かめる対照実験でよく出る。',
@@ -1930,6 +1977,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '花のつくり',
+        locked: true,
         formula: '外側から：がく → 花びら → おしべ → めしべ（中心）',
         explanation:
           '花は外側から、がく・花びら・おしべ・めしべの順にならぶ。おしべの先の花粉がめしべの先（柱頭）につくと受粉。受粉するとめしべのもとの子房が実になり、中の胚珠が種子になる。',
@@ -1965,6 +2013,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '双子葉類と単子葉類',
+        locked: true,
         formula: '双子葉類：子葉2枚・網目状の葉脈・主根と側根／単子葉類：子葉1枚・平行な葉脈・ひげ根',
         explanation:
           '発芽のときの子葉が2枚か1枚かで、植物は双子葉類と単子葉類に分けられる。葉脈や根のようすもセットで変わる。アサガオ・ヒマワリは双子葉類、イネ・トウモロコシは単子葉類。',
@@ -2012,6 +2061,7 @@ export const rikaFormulas: FormulaSection[] = [
     items: [
       {
         label: '消化管の順路',
+        locked: true,
         formula: '口 → 食道 → 胃 → 小腸 → 大腸 → こう門（一本の管）',
         explanation:
           '食べ物は口から入り、食道・胃・小腸・大腸を通ってこう門まで進む。この一本の長い管が消化管。とちゅうで消化液のはたらきで細かく分解され、小腸で栄養が吸収される。',
@@ -2045,6 +2095,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '消化酵素（消化液）',
+        locked: true,
         formula: 'だ液（アミラーゼ）：でんぷん／胃液（ペプシン）：タンパク質／すい液：三大栄養素すべて',
         explanation:
           '消化液には、栄養素を分解する消化酵素が入っている。だ液はでんぷんを麦芽糖に、胃液はタンパク質を分解する。酵素は体温くらい（約40℃）で最もよくはたらく。',
@@ -2078,6 +2129,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '小腸のつくり（柔毛）',
+        locked: true,
         formula: '内側にたくさんのひだと柔毛（じゅうもう）→ 表面積を大きくして吸収しやすく',
         explanation:
           '小腸の内側にはたくさんのひだと、その表面に無数の柔毛がある。これによって表面積がとても大きくなり、栄養を効率よく吸収できる。ブドウ糖とアミノ酸は毛細血管へ、脂肪はリンパ管へ入る。',
@@ -2113,6 +2165,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '血液の循環',
+        locked: true,
         formula: '肺循環：心臓→肺→心臓／体循環：心臓→全身→心臓',
         explanation:
           '血液は心臓のポンプで体をめぐる。心臓から肺へ行き酸素を受け取って戻るのが肺循環、心臓から全身へ酸素を届けて戻るのが体循環。心臓は4つの部屋（2心房2心室）でできている。',
@@ -2148,6 +2201,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '動脈血と静脈血',
+        locked: true,
         formula: '動脈血：酸素が多い（あざやかな赤）／静脈血：二酸化炭素が多い（暗い赤）',
         explanation:
           '酸素をたくさんふくむ血液が動脈血、二酸化炭素を多くふくむのが静脈血。名前が「動脈・静脈」という血管の名前とはずれる場所（肺の血管）があるので注意。',
@@ -2176,6 +2230,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: '肺のつくりと呼吸',
+        locked: true,
         formula: '気管→気管支→肺ほう／肺ほうで酸素をとり込み二酸化炭素を出す',
         explanation:
           '吸った空気は気管から気管支を通り、先端の小さなふくろ（肺ほう）に届く。肺ほうのまわりの毛細血管で、酸素をとり入れ二酸化炭素をわたす。肺ほうがたくさんあることで表面積が大きくなり、効率よくガス交換できる。',
@@ -2210,6 +2265,7 @@ export const rikaFormulas: FormulaSection[] = [
       },
       {
         label: 'セキツイ動物の分類',
+        locked: true,
         formula: '魚類・両生類・は虫類・鳥類・ほ乳類の5グループ（背骨がある）',
         explanation:
           '背骨のある動物（セキツイ動物）は5つに分けられる。呼吸のしかた（えら／肺）、体温（変温／恒温）、子の生まれ方（卵生／胎生）などで見分ける。ほ乳類だけが子を産み(胎生)、乳で育てる。',

@@ -74,16 +74,19 @@ export default function TabLayout() {
 }
 
 const styles = StyleSheet.create({
+  // 6タブ並ぶので、10pxだと「コーチ」が「校地」に見えるほど読めなかった。
+  // 12px・太字にし、その分タブの高さも足す。
   tabBar: {
     backgroundColor: '#FFFFFF',
     borderTopWidth: 1.5,
     borderTopColor: '#DCD3C5',
-    height: 60,
-    paddingBottom: 6,
-    paddingTop: 4,
+    height: 68,
+    paddingBottom: 8,
+    paddingTop: 6,
   },
   tabLabel: {
-    fontSize: 10,
-    fontWeight: '600',
+    fontSize: 12,
+    fontWeight: '700',
+    marginTop: 2,
   },
 });

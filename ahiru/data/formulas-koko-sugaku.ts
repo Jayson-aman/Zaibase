@@ -30,7 +30,6 @@ export const kokoSugakuFormulas: FormulaSection[] = [
     items: [
       {
         label: '正負の数の加減（符号の決め方）',
-        locked: true,
         formula: '同符号どうしの和 → 絶対値をたして共通の符号 ／ 異符号どうしの和 → 絶対値の大きいほうから小さいほうを引いて、大きいほうの符号',
         explanation:
           'たし算は「同じ向きなら足し合わせる、逆向きなら打ち消し合う」と考えます。引き算は「引く数の符号を変えてたし算に直す」だけです。a − b ＝ a ＋ (−b) と書きかえてしまえば、あとはすべてたし算の規則で処理できます。',
@@ -69,7 +68,6 @@ export const kokoSugakuFormulas: FormulaSection[] = [
       },
       {
         label: '四則の混じった計算の順序',
-        locked: true,
         formula: 'かっこの中 → 累乗 → 乗除 → 加減 の順',
         explanation:
           '順番をまちがえると、どれだけていねいに計算しても答えは合いません。とくに累乗は乗除より先です。分数の混じった式では、まず通分せずに「割り算を逆数のかけ算に直す」ところから始めると、途中でつまずきにくくなります。',
@@ -110,7 +108,6 @@ export const kokoSugakuFormulas: FormulaSection[] = [
       },
       {
         label: '文字式の表し方の約束',
-        locked: true,
         formula: '×は省く ／ 数は文字の前 ／ 同じ文字の積は累乗 ／ わり算は分数の形',
         explanation:
           '文字式には書き方の決まりがあり、答えが合っていても書き方が違うと減点されることがあります。a × 3 は 3a、x ÷ 5 は x/5、a × a は a² と書きます。1 は省いて a、−1 は −a です。',
