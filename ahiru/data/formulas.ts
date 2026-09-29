@@ -6,6 +6,7 @@ import type { FormulaSection } from './formulas-types';
 import { sansuFormulas } from './formulas-sansu';
 import { sansuTsuikaFormulas } from './formulas-sansu-tsuika';
 import { sansuTsuika2Formulas } from './formulas-sansu-tsuika2';
+import { sansuTsuika3Formulas } from './formulas-sansu-tsuika3';
 import { kokoSugakuFormulas } from './formulas-koko-sugaku';
 import { rikaFormulas } from './formulas-rika';
 import { rikaButsuriKagakuFormulas } from './formulas-rika-butsuri-kagaku';
@@ -35,7 +36,7 @@ export const SUBJECTS: { key: Subject; emoji: string; color: string }[] = [
 // ⚠️ iOS/Androidの¥50商品（com.zaibase.exam.formulaunlock）がストアに未登録の
 // あいだは、非購読者には「準備中です」ボタンが出るだけで購入できない。
 export const FORMULAS: Record<Subject, FormulaSection[]> = {
-  算数: [...sansuFormulas, ...sansuTsuikaFormulas, ...sansuTsuika2Formulas, ...kokoSugakuFormulas],
+  算数: [...sansuFormulas, ...sansuTsuikaFormulas, ...sansuTsuika2Formulas, ...sansuTsuika3Formulas, ...kokoSugakuFormulas],
   国語: [...kokugoFormulas, ...kokoKokugoFormulas],
   理科: [...rikaFormulas, ...rikaButsuriKagakuFormulas, ...kokoRikaFormulas],
   社会: [...shakaiFormulas, ...shakaiTsuikaFormulas, ...kokoShakaiFormulas],
