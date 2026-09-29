@@ -49,6 +49,7 @@ export const kokoRikaExt07Lessons: Lesson[] = [
       },
       {
         heading: '原子説が説明できること・できないこと',
+        mangaId: 'koko_rika_s226_genshisetsu_manga',
         body: `イギリスのドルトンは、物質が原子という粒からできていると考えると、当時知られていた化学の法則がうまく説明できることを示した。
 
 ■ 原子で説明できること
@@ -263,6 +264,7 @@ H₂Oの2は「右下（添字）」で、直前の原子が2個という意味�
     sections: [
       {
         heading: '分類の基準は「元素の種類の数」',
+        mangaId: 'koko_rika_s229_tantai_manga',
         figureId: 'lf_kokorikaext07_229',
         body: `純粋な物質（純物質）は、単体と化合物のどちらかに必ず分類できる。
 
@@ -611,6 +613,7 @@ Ba(OH)₂：Ba1個、O2個、H2個
     sections: [
       {
         heading: '化学反応式の三つのルール',
+        mangaId: 'koko_rika_s233_hanno_manga',
         figureId: 'lf_kokorikaext07_233',
         body: `化学反応式は、次の三つを同時に満たしていなければならない。
 
@@ -788,6 +791,7 @@ Ag₂O → Ag ＋ (1/2)O₂ のように分数が出たら、式全体を2倍し
     sections: [
       {
         heading: '燃焼の反応式のつくり方',
+        mangaId: 'koko_rika_s235_nensho_manga',
         figureId: 'lf_kokorikaext07_235',
         body: `有機物が完全に燃えると、ふくまれる炭素はすべて二酸化炭素に、水素はすべて水になる。
 
@@ -1057,6 +1061,7 @@ C ＋ O₂ → CO₂
     sections: [
       {
         heading: '実験と結果の読み取り',
+        mangaId: 'koko_rika_s238_denkaibunkai_manga',
         figureId: 'lf_kokorikaext07_238',
         body: `■ 装置
 H字型の電気分解装置（またはホフマン型）に、少量の水酸化ナトリウムをとかした水を満たし、直流電源につなぐ。
@@ -1160,6 +1165,7 @@ H字型の電気分解装置（またはホフマン型）に、少量の水酸�
       },
       {
         heading: '三つの熱分解の比較',
+        mangaId: 'koko_rika_s239_necchubunkai_manga',
         body: `中学で扱う熱分解を並べて比べると、共通点と違いがはっきりする。
 
 ■ 炭酸水素ナトリウム
@@ -1513,6 +1519,7 @@ B：硫化鉄＋うすい塩酸 → 硫化水素（腐卵臭、有毒）
       },
       {
         heading: '対照実験と質量比',
+        mangaId: 'koko_rika_s243_taisho_manga',
         body: `■ 対照実験の考え方
 Aを加熱せずに残しておくのは、Bの変化が「加熱によるものだ」と言い切るためである。もしAがなければ、Bの黒さがもともとの色だった可能性を否定できない。条件を一つだけ変えて比べる実験を対照実験という。
 
@@ -1688,6 +1695,7 @@ Fe:S＝7:4、Cu:O＝4:1、Mg:O＝3:2 のように、質量比は物質の組み�
       },
       {
         heading: 'いろいろな物質の燃焼',
+        mangaId: 'koko_rika_s245_shoka_manga',
         body: `■ 金属の燃焼
 マグネシウム：白い光、白色の酸化マグネシウムMgO
 銅：光は出さず、表面から黒くなる（おだやかな酸化）CuO
@@ -1778,6 +1786,7 @@ Fe:S＝7:4、Cu:O＝4:1、Mg:O＝3:2 のように、質量比は物質の組み�
       },
       {
         heading: '密閉容器で確かめる',
+        mangaId: 'koko_rika_s246_mippei_manga',
         body: `■ 密閉して燃やすとどうなるか
 スチールウールを密閉した容器（ふたのできる丸底フラスコなど）に入れ、外から加熱して燃やす。
 ・燃焼後のスチールウール自身の質量は増えている。
@@ -1924,6 +1933,7 @@ Fe:S＝7:4、Cu:O＝4:1、Mg:O＝3:2 のように、質量比は物質の組み�
     sections: [
       {
         heading: '銅の酸化の実験',
+        mangaId: 'koko_rika_s248_dosanka_manga',
         figureId: 'lf_kokorikaext07_248',
         body: `■ 手順
 ①銅の粉末をステンレス皿にうすく広げ、質量をはかる。
@@ -2102,6 +2112,7 @@ Fe:S＝7:4、Cu:O＝4:1、Mg:O＝3:2 のように、質量比は物質の組み�
     sections: [
       {
         heading: '水素による還元の実験',
+        mangaId: 'koko_rika_s250_suisokangen_manga',
         figureId: 'lf_kokorikaext07_250',
         body: `■ 手順
 ①ガラス管を通した試験管に酸化銅を入れ、水素を送りこむ。
@@ -3001,6 +3012,7 @@ NaHCO₃ ＋ HCl → NaCl ＋ H₂O ＋ CO₂
     sections: [
       {
         heading: '加熱回数と質量のグラフ',
+        mangaId: 'koko_rika_s260_graph_manga',
         figureId: 'lf_kokorikaext07_260',
         body: `■ 実験
 銅の粉末0.80gをステンレス皿にとり、加熱してはかき混ぜ、冷やして質量をはかる操作をくり返した。

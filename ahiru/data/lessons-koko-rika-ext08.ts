@@ -278,6 +278,7 @@ export const kokoRikaExt08Lessons: Lesson[] = [
     sections: [
       {
         heading: '数で比べる原子とイオン',
+        mangaId: 'koko_rika_s269_ion_kazu_manga',
         body: `原子とイオンのちがいは、粒子の数を表に書き出すといちばんはっきりする。
 
 ■ ナトリウム
@@ -389,6 +390,7 @@ export const kokoRikaExt08Lessons: Lesson[] = [
       },
       {
         heading: 'イオンどうしにはたらく力と結びつき',
+        mangaId: 'koko_rika_s270_ion_ketsugo_manga',
         body: `イオンは電気を帯びているので、たがいに力をおよぼし合う。
 
 ■ 力の向き
@@ -617,6 +619,7 @@ Ca(OH)₂ で OH のまわりにかっこがついているのは、「OH とい
     sections: [
       {
         heading: '電気のつり合いで化学式を組み立てる',
+        mangaId: 'koko_rika_s273_kagakushiki_manga',
         body: `イオンでできた物質の化学式は、覚えるものではなく組み立てるものである。手順は三つしかない。
 
 ■ 手順
@@ -804,6 +807,7 @@ CuSO₄ → Cu²⁺ ＋ SO₄²⁻
     sections: [
       {
         heading: '電解質と非電解質の仕分け',
+        mangaId: 'koko_rika_s275_denkaishitsu_manga',
         body: `水にとかしたとき、その水溶液に電流が流れる物質を電解質、流れない物質を非電解質という。ちがいを生むのは「電離するかどうか」の一点だけである。
 
 ■ 電解質（電離する）
@@ -915,6 +919,7 @@ CuSO₄ → Cu²⁺ ＋ SO₄²⁻
       },
       {
         heading: '電流の大きさは何で決まるか',
+        mangaId: 'koko_rika_s276_denryu_manga',
         body: `同じ装置でも、水溶液を変えると電流計の値は大きく変わる。
 
 ■ 電流が大きくなる条件
@@ -1616,6 +1621,7 @@ HCl → H⁺ ＋ Cl⁻
     sections: [
       {
         heading: '席を交代する反応',
+        mangaId: 'koko_rika_s284_seki_manga',
         body: `硫酸銅水溶液（青色）に亜鉛板を入れると、次の変化が観察される。
 
 ■ 観察されること
@@ -1806,6 +1812,7 @@ C ＞ A ＞ B
     sections: [
       {
         heading: '銀樹と銅樹',
+        mangaId: 'koko_rika_s286_kinzokuju_manga',
         body: `イオンになりやすい金属を、なりにくい金属のイオンの水溶液に入れると、なりにくいほうの金属が固体として現れる。細く枝分かれした形になることが多く、これを金属樹という。
 
 ■ 銀樹（硝酸銀水溶液＋銅線）
@@ -2021,6 +2028,7 @@ Zn ＋ Cu²⁺ → Zn²⁺ ＋ Cu
       },
       {
         heading: 'エネルギーの変換として見る',
+        mangaId: 'koko_rika_s288_denchi_energy_manga',
         body: `電池を「電気をためておく箱」と考えていると、この単元の記述問題が書けない。電池は変換装置である。
 
 ■ 電池の中で起きていること
@@ -2457,6 +2465,7 @@ Zn ＋ Cu²⁺ → Zn²⁺ ＋ Cu
     sections: [
       {
         heading: '三つの性質と見分け方',
+        mangaId: 'koko_rika_s293_shijiyaku_manga',
         body: `水溶液は、酸性・中性・アルカリ性の三つに分けられる。
 
 ■ 酸性の水溶液の性質
@@ -2557,6 +2566,7 @@ Mg ＋ 2HCl → MgCl₂ ＋ H₂
     sections: [
       {
         heading: '酸の定義と共通の性質',
+        mangaId: 'koko_rika_s294_san_manga',
         body: `酸とは、水にとけて水素イオン H⁺ を生じる物質のことである。
 
 ■ 代表的な酸の電離
@@ -2677,6 +2687,7 @@ Na⁺、K⁺、Ca²⁺、Ba²⁺ は、アルカリ性という性質に直接�
       },
       {
         heading: '実験と安全上の注意',
+        mangaId: 'koko_rika_s295_alkali_jikken_manga',
         body: `アルカリの正体を確かめる実験は、酸のときと対になっている。
 
 ■ 実験
