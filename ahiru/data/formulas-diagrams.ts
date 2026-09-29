@@ -14,6 +14,7 @@ import { DIAGRAMS_KOKO_SHAKAI_C } from './formulas-diagrams-koko-shakai-c';
 import { DIAGRAMS_KOKO_SUGAKU_A } from './formulas-diagrams-koko-sugaku-a';
 import { DIAGRAMS_KOKO_SHAKAI_B } from './formulas-diagrams-koko-shakai-b';
 import { DIAGRAMS_KOKO_RIKA_C } from './formulas-diagrams-koko-rika-c';
+import { DIAGRAMS_KOKO_RIKA_A } from './formulas-diagrams-koko-rika-a';
 import { DIAGRAMS_SHAKAI_6 } from './formulas-diagrams-shakai-6';
 
 export const FORMULA_DIAGRAMS: Record<string, DiagramFigure> = {
@@ -30,5 +31,6 @@ export const FORMULA_DIAGRAMS: Record<string, DiagramFigure> = {
   ...DIAGRAMS_KOKO_SUGAKU_A,
   ...DIAGRAMS_KOKO_SHAKAI_B,
   ...DIAGRAMS_KOKO_RIKA_C,
+  ...DIAGRAMS_KOKO_RIKA_A,
   ...DIAGRAMS_SHAKAI_6,
 };
