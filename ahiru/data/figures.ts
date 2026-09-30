@@ -517,6 +517,7 @@ import { figuresKoushikiOyoK1Godo } from './figures-koushiki-oyo-k1godo';
 import { figuresKoushikiOyoC5Kakudo } from './figures-koushiki-oyo-c5kakudo';
 import { figuresQuizAdd01 } from './figures-quiz-add01';
 import { figuresSchoolChugaku02 } from './figures-school-chugaku-02';
+import { figuresSchoolKoko02 } from './figures-school-koko-02';
 import { figuresSchoolKoko04 } from './figures-school-koko-04';
 import { figuresSchoolKoko07 } from './figures-school-koko-07';
 import { figuresSchoolKoko03 } from './figures-school-koko-03';
@@ -633,6 +634,7 @@ export const figures: Record<string, Figure> = {
   ...figuresGradeJ3Rika,
   ...figuresQuizAdd01,
   ...figuresSchoolChugaku02,
+  ...figuresSchoolKoko02,
   ...figuresSchoolKoko04,
   ...figuresSchoolKoko07,
   ...figuresSchoolKoko03,
