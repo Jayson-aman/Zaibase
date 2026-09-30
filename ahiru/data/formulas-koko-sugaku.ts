@@ -2182,7 +2182,7 @@ export const kokoSugakuFormulas: FormulaSection[] = [
       {
         label: '平行線と線分の比',
         locked: true,
-        formula: 'DE // BC のとき AD : DB ＝ AE : EC ＝ DE : BC のうち、AD : AB ＝ AE : AC ＝ DE : BC',
+        formula: 'DE // BC のとき AD : AB ＝ AE : AC ＝ DE : BC ／ AD : DB ＝ AE : EC（DE : BC と等しいのは AD : AB のほう）',
         explanation:
           '比を書くときに、どこからどこまでを取るかを取りちがえるのが典型的なミスです。DE : BC に対応するのは AD : AB（頂点から測る）であって AD : DB ではありません。図に印をつけて、対応を確かめてから式を立てます。',
         steps: [
@@ -3468,7 +3468,7 @@ export const kokoSugakuFormulas: FormulaSection[] = [
           {
             q: '0, 1, 2 のカードで3けたの整数は何個できますか。',
             a: '4個',
-            explanation: '全部で3! ＝ 6通りですが、百の位が0の2通りは3けたにならないので除いて4個です。',
+            explanation: '全部で3×2×1＝6通りですが、百の位が0の2通りは3けたにならないので除いて4個です。',
           },
           {
             q: '数字のカードで偶数を作るとき、どの位から決めますか。',
@@ -3650,7 +3650,7 @@ export const kokoSugakuFormulas: FormulaSection[] = [
           {
             q: '池の魚の数を推定するとき、どんな方法を使いますか。',
             a: '一部に印をつけて放し、再度つかまえて印つきの割合から推定する',
-            explanation: '標識再捕法といいます。標本の割合が全体の割合に等しいと考える標本調査の応用です。',
+            explanation: '印をつけて放し、もう一度つかまえたときの印つきの割合を見て、全体の数を推定する方法です。標本の割合が全体の割合に等しいと考える標本調査の応用なので、この方法が使えます。',
           },
         ],
         checkpoints: [
