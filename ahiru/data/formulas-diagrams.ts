@@ -56,6 +56,11 @@ import { DIAGRAMS_OLD_EIGOC } from './formulas-diagrams-old-eigoc';
 import { DIAGRAMS_OLD_KOKUGOB } from './formulas-diagrams-old-kokugob';
 import { DIAGRAMS_OLD_SANSUB } from './formulas-diagrams-old-sansub';
 import { DIAGRAMS_OLD_SANSUF } from './formulas-diagrams-old-sansuf';
+import { DIAGRAMS_OLD_SANSUE } from './formulas-diagrams-old-sansue';
+import { DIAGRAMS_OLD_KOKUGOA } from './formulas-diagrams-old-kokugoa';
+import { DIAGRAMS_OLD_SANSUA } from './formulas-diagrams-old-sansua';
+import { DIAGRAMS_OLD_SANSUC } from './formulas-diagrams-old-sansuc';
+import { DIAGRAMS_OLD_SANSUD } from './formulas-diagrams-old-sansud';
 import { DIAGRAMS_SHAKAI_6 } from './formulas-diagrams-shakai-6';
 
 export const FORMULA_DIAGRAMS: Record<string, DiagramFigure> = {
@@ -114,5 +119,10 @@ export const FORMULA_DIAGRAMS: Record<string, DiagramFigure> = {
   ...DIAGRAMS_OLD_KOKUGOB,
   ...DIAGRAMS_OLD_SANSUB,
   ...DIAGRAMS_OLD_SANSUF,
+  ...DIAGRAMS_OLD_SANSUE,
+  ...DIAGRAMS_OLD_KOKUGOA,
+  ...DIAGRAMS_OLD_SANSUA,
+  ...DIAGRAMS_OLD_SANSUC,
+  ...DIAGRAMS_OLD_SANSUD,
   ...DIAGRAMS_SHAKAI_6,
 };
