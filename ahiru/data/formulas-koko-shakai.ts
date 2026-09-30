@@ -456,7 +456,7 @@ export const kokoShakaiFormulas: FormulaSection[] = [
       {
         label: '中世の産業と民衆の成長',
         locked: true,
-        formula: '二毛作・定期市・座・惣（village の自治組織ではなく村の寄合）',
+        formula: '二毛作・定期市・座・惣（村人が寄合を開いて運営する自治組織）',
         explanation:
           '鎌倉から室町にかけて農業技術が進み、同じ田で米と麦をつくる二毛作が広がりました。商業では定期市が開かれ、同業者の組合である座が特権を得ました。村では惣という自治組織ができ、農民が団結して土一揆を起こすようになります。',
         steps: [
