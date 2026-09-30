@@ -217,14 +217,14 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                   style={styles.cardHeader}
                 >
                   <View>
-                    <Text style={styles.cardName}>PRO</Text>
-                    <Text style={styles.cardTagline}>基本機能フルセット</Text>
+                    <Text style={styles.cardName} maxFontSizeMultiplier={1.2}>PRO</Text>
+                    <Text style={styles.cardTagline} maxFontSizeMultiplier={1.2}>基本機能フルセット</Text>
                   </View>
                   <View style={styles.priceCol}>
                     {proIntro && !showYearly && (
                       <Text style={styles.introPrice}>まず{proIntro}で7日間</Text>
                     )}
-                    <Text style={styles.cardPrice}>{proPrice}</Text>
+                    <Text style={styles.cardPrice} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.6} maxFontSizeMultiplier={1.2}>{proPrice}</Text>
                     {showYearly && <Text style={styles.yearlyNote}>{proYearlyNote}</Text>}
                   </View>
                 </LinearGradient>
@@ -267,14 +267,14 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                   style={styles.cardHeader}
                 >
                   <View>
-                    <Text style={styles.cardName}>MAX</Text>
-                    <Text style={styles.cardTagline}>プロ全機能＋AIコーチ</Text>
+                    <Text style={styles.cardName} maxFontSizeMultiplier={1.2}>MAX</Text>
+                    <Text style={styles.cardTagline} maxFontSizeMultiplier={1.2}>プロ全機能＋AIコーチ</Text>
                   </View>
                   <View style={styles.priceCol}>
                     {maxIntro && !showYearly && (
                       <Text style={styles.introPrice}>まず{maxIntro}で7日間</Text>
                     )}
-                    <Text style={styles.cardPrice}>{maxPrice}</Text>
+                    <Text style={styles.cardPrice} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.6} maxFontSizeMultiplier={1.2}>{maxPrice}</Text>
                     {showYearly && <Text style={styles.yearlyNote}>{maxYearlyNote}</Text>}
                   </View>
                 </LinearGradient>
@@ -453,7 +453,7 @@ const styles = StyleSheet.create({
   cardName: { fontSize: 28, fontWeight: '900', color: '#fff' },
   cardTagline: { fontSize: 16, color: 'rgba(255,255,255,0.8)', fontWeight: '600', marginTop: 2 },
   cardPrice: { fontSize: 24, fontWeight: '800', color: '#fff' },
-  priceCol: { alignItems: 'flex-end' },
+  priceCol: { alignItems: 'flex-end', flexShrink: 1, marginLeft: 8, maxWidth: '55%' },
   introPrice: { fontSize: 12, fontWeight: '700', color: '#fff', marginBottom: 2 },
   cardBody: { padding: 20, gap: 10 },
   featureRow: { flexDirection: 'row', alignItems: 'flex-start', gap: 10 },

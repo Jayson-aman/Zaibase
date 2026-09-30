@@ -71,6 +71,18 @@ export default function LessonDetailScreen() {
   }
 
   async function handleUnlockUnit(lessonId: string, title: string) {
+    const ok = await new Promise<boolean>((resolve) => {
+      Alert.alert(
+        '購入の確認',
+        `「${title}」を ${unitUnlockPriceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
+        [
+          { text: 'やめる', style: 'cancel', onPress: () => resolve(false) },
+          { text: '購入へ進む', onPress: () => resolve(true) },
+        ],
+        { cancelable: true, onDismiss: () => resolve(false) },
+      );
+    });
+    if (!ok) return;
     const result = await unlockUnit(lessonId);
     if (!result.ok) {
       Alert.alert('購入できませんでした', result.message);
@@ -171,7 +183,7 @@ export default function LessonDetailScreen() {
         )}
         {!subLoading && !(isNew20 && unitUnlocksLoading) && !contentUnlocked && isNew20 && (
           <View style={styles.lockedBanner}>
-            <Text style={styles.lockedText}>
+            <Text style={styles.lockedText} maxFontSizeMultiplier={1.25}>
               🔒 この単元は買い切りで解放できます（{unitUnlockPriceLabel}・1回のみ）
             </Text>
             <TouchableOpacity
@@ -186,7 +198,7 @@ export default function LessonDetailScreen() {
               {purchasingLessonId === lesson.id ? (
                 <ActivityIndicator color="#FFFFFF" />
               ) : (
-                <Text style={styles.unlockUnitBtnText}>
+                <Text style={styles.unlockUnitBtnText} maxFontSizeMultiplier={1.25}>
                   {unitUnlockProductReady ? `${unitUnlockPriceLabel}で解放する` : '準備中です'}
                 </Text>
               )}

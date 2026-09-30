@@ -57,6 +57,10 @@ export interface FormulaUnlocksState {
   /** まとめ買いの商品が購入可能な状態か */
   bundleReady: boolean;
   bundlePriceLabel: string;
+  /** ストアが返した数値の価格と通貨（割引率の計算用。Webやストア未取得ならnull） */
+  itemPriceValue: number | null;
+  bundlePriceValue: number | null;
+  currencyCode: string | null;
   /**
    * 指定した公式（kind='formula'）、またはまとめ買い（kind='bundle'、idは bundle:受験種別:教科）を
    * 購入して解放する。成功したらunlockedIdsにも反映する。
@@ -171,6 +175,14 @@ export function useFormulaUnlocks(): FormulaUnlocksState {
 
   const storePriceString = (product as { priceString?: string } | null)?.priceString;
   const bundlePriceString = (bundleProduct as { priceString?: string } | null)?.priceString;
+  const numeric = (p: unknown) => {
+    const v = (p as { price?: number } | null)?.price;
+    return typeof v === 'number' && v > 0 ? v : null;
+  };
+  const itemCur = (product as { currencyCode?: string } | null)?.currencyCode ?? null;
+  const bundleCur = (bundleProduct as { currencyCode?: string } | null)?.currencyCode ?? null;
+  // 単品とまとめ買いで通貨がちがう（ありえないが）ときは、割引の計算をしない
+  const sameCurrency = itemCur != null && itemCur === bundleCur;
 
   return {
     unlockedIds,
@@ -179,6 +191,9 @@ export function useFormulaUnlocks(): FormulaUnlocksState {
     priceLabel: storePriceString ?? FORMULA_UNLOCK_PRICE_LABEL,
     bundleReady: isWebPlatform || bundleProduct != null,
     bundlePriceLabel: bundlePriceString ?? FORMULA_BUNDLE_PRICE_LABEL,
+    itemPriceValue: sameCurrency ? numeric(product) : null,
+    bundlePriceValue: sameCurrency ? numeric(bundleProduct) : null,
+    currencyCode: sameCurrency ? itemCur : null,
     unlockFormula,
     purchasingFigureId,
   };

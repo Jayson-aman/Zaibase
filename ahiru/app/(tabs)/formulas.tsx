@@ -28,6 +28,25 @@ import { useBetaAccess } from '../../hooks/useBetaAccess';
 
 // 公式タブの教科名（算数/理科/社会）→ アイコンキー
 // 毎回作り直すとリスト全体の再描画のきっかけになるので、定数にしておく
+/** 通貨つきの金額表示（例：US$23.00 / ¥23,200）。Intlが使えない環境では通貨コードを前置する */
+function formatMoney(value: number, currency: string): string {
+  try {
+    return new Intl.NumberFormat('ja-JP', { style: 'currency', currency }).format(value);
+  } catch {
+    return `${currency} ${value.toFixed(2)}`;
+  }
+}
+
+/** 購入前の確認（うっかりタップで課金画面が出ないように、説明つきで一度確かめる） */
+function confirmPurchase(title: string, message: string): Promise<boolean> {
+  return new Promise((resolve) => {
+    Alert.alert(title, message, [
+      { text: 'やめる', style: 'cancel', onPress: () => resolve(false) },
+      { text: '購入へ進む', onPress: () => resolve(true) },
+    ], { cancelable: true, onDismiss: () => resolve(false) });
+  });
+}
+
 const LIST_FOOTER = <View style={{ height: 120 }} />;
 
 const SUBJ_ICON: Record<Subject, IconSubject> = {
@@ -120,9 +139,11 @@ const FormulaRow = React.memo(function FormulaRow({
             <View style={[styles.bundleBadge, { backgroundColor: accent }]}>
               <Text style={styles.bundleBadgeText}>おすすめ・上限つき</Text>
             </View>
-            <Text style={styles.bundleHeadline}>{`この教科の${bundleCount}項目、ぜんぶ ${bundlePriceLabel}`}</Text>
-            <Text style={styles.bundleText}>
-              {`1つずつ買うと ${fullPriceLabel}。まとめてなら約${bundleOffPercent}％オフで、この先ふえる項目も追加料金なしです。`}
+            <Text style={styles.bundleHeadline} maxFontSizeMultiplier={1.25}>{`この教科の${bundleCount}項目、ぜんぶ ${bundlePriceLabel}`}</Text>
+            <Text style={styles.bundleText} maxFontSizeMultiplier={1.25}>
+              {bundleOffPercent >= 5
+                ? `1つずつ買うと ${fullPriceLabel}。まとめてなら約${bundleOffPercent}％オフで、この先ふえる項目も追加料金なしです。`
+                : 'まとめて買うほうがおトクです。この先ふえる項目も追加料金なしです。'}
             </Text>
             <TouchableOpacity
               style={[styles.unlockBtn, { backgroundColor: accent }, (!bundleReady || bundlePurchasing) && styles.unlockBtnDisabled]}
@@ -133,7 +154,7 @@ const FormulaRow = React.memo(function FormulaRow({
               {bundlePurchasing ? (
                 <ActivityIndicator color="#FFFFFF" />
               ) : (
-                <Text style={styles.unlockBtnText}>
+                <Text style={styles.unlockBtnText} maxFontSizeMultiplier={1.25}>
                   {bundleReady ? `ぜんぶ ${bundlePriceLabel} で解放する` : 'まとめ買いは準備中です'}
                 </Text>
               )}
@@ -330,6 +351,9 @@ export default function FormulasScreen() {
     unlockFormula,
     bundleReady,
     bundlePriceLabel,
+    itemPriceValue,
+    bundlePriceValue,
+    currencyCode,
   } = useFormulaUnlocks();
 
   const bundleId = formulaBundleId(examType, subject);
@@ -338,10 +362,21 @@ export default function FormulasScreen() {
   // この教科で、1項目ずつ買った数。上限（FORMULA_BUNDLE_ITEM_CAP）に届けば、のこりは全部ひらく。
   const boughtCount = React.useMemo(() => groupLabels.filter((l) => unlockedIds.has(l)).length, [groupLabels, unlockedIds]);
   const groupUnlocked = unlockedIds.has(bundleId) || boughtCount >= FORMULA_BUNDLE_ITEM_CAP;
-  const fullPriceLabel = formatYen(bundleCount * PRICES.formulaUnlock);
-  const bundleOffPercent = Math.max(0, Math.round((1 - PRICES.formulaBundle / Math.max(1, bundleCount * PRICES.formulaUnlock)) * 100));
+  // 「1つずつ買うと」の金額と割引率は、ストアが実際に返した価格（表示中の通貨）で計算する。
+  // 円の定数を、ドルなどで表示されるボタンの横に出すと食いちがって見えて誤解を招くため。
+  // ストアの価格が取れないとき（Web版のStripe決済など）は、円の定数で計算する（Webは円のみ）。
+  const useStorePrice = itemPriceValue != null && bundlePriceValue != null && currencyCode != null;
+  const fullValue = useStorePrice ? itemPriceValue! * bundleCount : PRICES.formulaUnlock * bundleCount;
+  const bundleValue = useStorePrice ? bundlePriceValue! : PRICES.formulaBundle;
+  const fullPriceLabel = useStorePrice ? formatMoney(fullValue, currencyCode!) : formatYen(fullValue);
+  const bundleOffPercent = Math.max(0, Math.round((1 - bundleValue / Math.max(0.01, fullValue)) * 100));
 
   const handleUnlock = React.useCallback(async (label: string) => {
+    const ok = await confirmPurchase(
+      '購入の確認',
+      `「${label}」を ${priceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
+    );
+    if (!ok) return;
     const result = await unlockFormula(label);
     if (!result.ok) {
       Alert.alert('購入できませんでした', result.message);
@@ -352,16 +387,21 @@ export default function FormulasScreen() {
       return;
     }
     Alert.alert('解放しました', `「${label}」はこれ以降ずっと無料で見られます。あと${FORMULA_BUNDLE_ITEM_CAP - boughtCount - 1}項目で、この教科は全部そろいます。`);
-  }, [unlockFormula, boughtCount]);
+  }, [unlockFormula, boughtCount, priceLabel]);
 
   const handleUnlockBundle = React.useCallback(async (id: string) => {
+    const ok = await confirmPurchase(
+      '購入の確認',
+      `この教科のロック中の公式${bundleCount}項目を、ぜんぶ ${bundlePriceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
+    );
+    if (!ok) return;
     const result = await unlockFormula(id, 'bundle');
     if (!result.ok) {
       Alert.alert('購入できませんでした', result.message);
       return;
     }
     Alert.alert('解放しました', 'この教科の公式集は、これ以降ずっと無料で見られます。');
-  }, [unlockFormula]);
+  }, [unlockFormula, bundleCount, bundlePriceLabel]);
 
   // セクション見出しと項目を1本のリストにならし、FlatListで仮想化できるようにする
   type Row =
