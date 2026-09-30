@@ -623,7 +623,7 @@ export const tokyoGakushuinExam: Question[] = [
     examType: 'chugaku',
     difficulty: 'advanced',
     examFrequency: 'medium',
-    question: '【学習院 理科⑤】ある日の夜、東の空に半月（右側が光っている上弦の月に近い形）が見えました。この月が真南の空にくるのはおよそ何時ごろですか。',
+    question: '【学習院 理科⑤】ある日、右側が光っている半月（上弦の月に近い形）が見えました。この月が真南の空にくるのはおよそ何時ごろですか。',
     choices: [
       '正午ごろ',
       '夕方6時ごろ',
