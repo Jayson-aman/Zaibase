@@ -20,6 +20,7 @@ import { seikoQuestions, seifuNankaiQuestions, takatsukiQuestions } from './ques
 import { kaimeiQuestions, toinQuestions, kindaiQuestions, kansaiHokuyoQuestions } from './questions-schools-2';
 import { toinExamQuestions, kindaiExamQuestions, kaimeiExamQuestions, kansaiHokuyoExamQuestions, myojoExamQuestions, tezukayamaExamQuestions, kinrankaiExamQuestions, otaniExamQuestions, kankanExamQuestions, kankanMaxQuestions, tokyoMeidaiExamQuestions, tokyoAoyamaExamQuestions, tokyoChuoExamQuestions, tokyoHoseiExamQuestions, tokyoGakushiinExamQuestions, tokyoHibiyaExamQuestions, tokyoWasedaExamQuestions, tokyoMeidaiKokoExamQuestions, tokyoChugakuMaxQuestions, tokyoKokoMaxQuestions } from './questions-exam';
 import { freeTeaserQuestions } from './questions-free-teaser';
+import { EXPLANATION_OVERRIDES } from './explanation-overrides';
 // 記述式・複数小問の応用問題（暗記形式の一問一答とは別枠）
 import { writtenChugakuRikeiQuestions } from './questions-written-chugaku-rikei';
 import { writtenKokoQuestions } from './questions-written-koko';
@@ -296,7 +297,7 @@ import { gradeKoushikiOyoK2HeikouQuestions } from './grade_koushiki_oyo_k2heikou
 import { gradeKoushikiOyoK1GodoQuestions } from './grade_koushiki_oyo_k1godo';
 import { gradeKoushikiOyoC5KakudoQuestions } from './grade_koushiki_oyo_c5kakudo';
 
-export const questions: Question[] = [
+const baseQuestions: Question[] = [
   ...gradeKoushikiOyoC3Tairyoku1Questions,
   ...gradeKoushikiOyoC4Tairyoku2Questions,
   ...gradeKoushikiOyoC6SojiQuestions,
@@ -3896,6 +3897,13 @@ export const questions: Question[] = [
   ...gradeE6EigoQuestions,
   ...gradeJ3EigoQuestions,
 ];
+
+// 解説の差しかえ表（データ本体のファイルを書きかえずに、解説だけを新しいものに置きかえる）。
+// 英語の入試傾向問題を「何を聞かれているか→なぜ→ポイント→答え→確かめ→まちがい」の型にそろえたもの。
+export const questions: Question[] = baseQuestions.map((q) => {
+  const e = EXPLANATION_OVERRIDES[q.id];
+  return e ? { ...q, explanation: e } : q;
+});
 
 export const questionsBySubject: Record<SubjectKey, Question[]> = {
   sansu: questions.filter((q) => q.subject === 'sansu'),
