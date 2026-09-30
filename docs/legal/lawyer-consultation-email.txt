@@ -24,7 +24,7 @@ Zaibase Group 代表の南條 雅哉と申します。
 サービス名：Zaibase建設
 URL　　　：https://zaisai-share.web.app/app
 運営者　　：南條 雅哉 / Zaibase Group
-住　所　　：〒543-0071 大阪府大阪市天王寺区筆ヶ崎町6-12-1701
+住　所　　：〒543-0027 大阪府大阪市天王寺区筆ヶ崎町6-12-1701
 連絡先　　：info@zaibase.group
 
 【サービス内容】
@@ -162,7 +162,7 @@ Stripeへの説明資料の作成という観点でも、
 
 南條 雅哉
 Zaibase Group
-〒543-0071 大阪府大阪市天王寺区筆ヶ崎町6-12-1701
+〒543-0027 大阪府大阪市天王寺区筆ヶ崎町6-12-1701
 E-mail：info@zaibase.group
 アプリ：https://zaisai-share.web.app/app
 
