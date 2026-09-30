@@ -61,6 +61,7 @@ import { DIAGRAMS_OLD_KOKUGOA } from './formulas-diagrams-old-kokugoa';
 import { DIAGRAMS_OLD_SANSUA } from './formulas-diagrams-old-sansua';
 import { DIAGRAMS_OLD_SANSUC } from './formulas-diagrams-old-sansuc';
 import { DIAGRAMS_OLD_SANSUD } from './formulas-diagrams-old-sansud';
+import { DIAGRAMS_OLD_SHAKAII } from './formulas-diagrams-old-shakaii';
 import { DIAGRAMS_SHAKAI_6 } from './formulas-diagrams-shakai-6';
 
 export const FORMULA_DIAGRAMS: Record<string, DiagramFigure> = {
@@ -124,5 +125,6 @@ export const FORMULA_DIAGRAMS: Record<string, DiagramFigure> = {
   ...DIAGRAMS_OLD_SANSUA,
   ...DIAGRAMS_OLD_SANSUC,
   ...DIAGRAMS_OLD_SANSUD,
+  ...DIAGRAMS_OLD_SHAKAII,
   ...DIAGRAMS_SHAKAI_6,
 };
