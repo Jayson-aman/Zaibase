@@ -267,7 +267,7 @@ const boring: DiagramFigure = show([
     add: fresh(ln(30, 40, 290, 40, C.gray, true), lb(30, 30, '地表 100m', 10, C.gray, 'start'), ln(60, 70, 260, 96, C.red, false, 3), ci(60, 70, 6, 'A', C.blue, FILL.blue, 8), ci(260, 96, 6, 'B', C.main, FILL.warm, 8), lb(60, 88, '90m', 11, C.blue), lb(260, 114, '80m', 11, C.main), lb(30, 130, '西', 12, C.gray, 'start'), lb(290, 130, '東', 12, C.gray, 'end'), ...say('東へ進むと10m低い → 東へ下がる', C.red, FILL.red)),
   },
   {
-    note: '❓では南北はどうでしょう。AとCは、かぎ層の標高がどちらも90mで同じです。同じ標高の2地点を結ぶ線が、傾きに垂直な方向（走向）で、ここでは南北の線です。',
+    note: '❓では南北はどうでしょう。AとCは、かぎ層の標高がどちらも90mで同じです。同じ標高の2地点を結ぶ線が、傾きと垂直な向きで、ここでは南北の線です。',
     add: fresh(ci(110, 100, 14, 'A', C.blue, FILL.blue, 13), ci(110, 34, 14, 'C', C.green, FILL.green, 13), ln(110, 20, 110, 130, C.purple, true, 2), lb(126, 68, 'ともに90m\n→ 同じ高さの線', 11, C.purple, 'start', true), ...say('高さが同じ2点を結ぶ線 ＝ 傾きに垂直（走向）', C.purple, FILL.purple, 12)),
   },
   {

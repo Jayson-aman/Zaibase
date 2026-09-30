@@ -352,7 +352,7 @@ export const eigoKokoTsuikaFormulas: FormulaSection[] = [
         steps: [
           "another ＝ an ＋ other。不特定の「もう1つ別の」",
           "2つのうち1つ → one、残りの1つ → the other",
-          "3つ以上のうち1つ → one、残りの1つ → another",
+          "3つ以上のうち1つ → one、別の1つ → another、最後の1つ → the other",
           "残り全部（数が決まっている）→ the others",
           "残りが決まっていない「ほかの人・物」→ others",
           "other は名詞の前につく（other students）",
@@ -372,10 +372,10 @@ export const eigoKokoTsuikaFormulas: FormulaSection[] = [
             q: "There are three apples. One is red, and ( ) are green. の空所は。",
             a: "the others",
             explanation:
-              "3つのうち1つをのぞいた残りは、2つとも green で数が決まっている。残り全部を表すので、複数の the others を使う。were ではなく are なので複数扱いだと分かる。",
+              "3つのうち1つをのぞいた残りは、2つとも green で数が決まっている。残り全部を表すので、複数の the others を使う。are は複数の主語に使う形で、the other なら is になるはずなので、複数の the others だと分かる。",
           },
           {
-            q: "Some students like music, and ( ) like sports. の空所は。",
+            q: "「音楽が好きな生徒もいれば、スポーツが好きな生徒もいる」。Some students like music, and ( ) like sports. の空所は。",
             a: "others",
             explanation:
               "「音楽が好きな生徒もいれば、スポーツが好きな生徒もいる」という文で、残りの生徒全員とは限らないので others を使う。some 〜, others 〜 は残りが決まっていない言い方だから、the はつけない。",
@@ -930,7 +930,7 @@ export const eigoKokoTsuikaFormulas: FormulaSection[] = [
               "経験を表す「行ったことがある」は、have been to 〜 で表す。have gone to は「行ってしまって今いない」という意味になるため、経験には使えない。",
           },
           {
-            q: "「彼は私に部屋をそうじするように言った」を英語にしなさい。",
+            q: "「彼は私に、私の部屋をそうじするように言った」を英語にしなさい。",
             a: "He told me to clean my room.",
             explanation:
               "「人に〜するように言う」は tell ＋ 人 ＋ to ＋ 原形で表す。said を使うと形が合わなくなるため、tell の形を使う。過去の文なので tell は told になる。",
@@ -1042,15 +1042,15 @@ export const eigoKokoTsuikaFormulas: FormulaSection[] = [
       {
         label: "つづりをまちがえやすい語と変化のきまり",
         locked: true,
-        formula: "子音字＋y は i に変えて es ／ 短母音＋子音は子音を重ねる",
+        formula: "子音字＋y は i に変えて es ／ 短母音＋子音は（強く読む最後の音節なら）子音を重ねる",
         explanation:
           "語の形が変わるときのきまりを知っておくと、つづりをまちがえにくくなります。study が studies になるのは、y を i に変えて es をつけるきまりがあるからです。ing や ed がつくときは、最後の子音を重ねる場合があります。",
         steps: [
           "子音字＋y → y を i に変えて es・ed（study → studies・studied）",
           "母音字＋y はそのまま s（boy → boys）",
-          "短母音＋1子音の語は子音を重ねる（stop → stopping）",
+          "1音節の語や最後を強く読む語は、短母音＋1子音の子音を重ねる（stop → stopping、begin → beginning。open → opening は重ねない）",
           "e で終わる語は e を取って ing（make → making）",
-          "f・fe で終わる語は ves（leaf → leaves、knife → knives）",
+          "leaf → leaves、knife → knives のように ves になる語がある（roof → roofs、safe → safes は s だけ）。よく出る語は形ごと覚える",
           "まちがえやすい語：friend、beautiful、different、Wednesday、February",
         ],
         example: {

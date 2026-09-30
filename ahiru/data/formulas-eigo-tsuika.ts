@@ -17,14 +17,14 @@ export const eigoTsuikaFormulas: FormulaSection[] = [
       {
         label: '名詞の複数形のつくり方',
         locked: true,
-        formula: 'ふつうは s ／ s・x・ch・sh で終わる → es ／ 子音字＋y → y を ies ／ f・fe → ves',
+        formula: 'ふつうは s ／ s・x・ch・sh で終わる → es ／ 子音字＋y → y を ies ／ f・fe → ves（例外あり）',
         explanation: '2つ以上のものを言うときは名詞のおわりを変えます。bus に s だけつけると「バスス」と発音しにくいので、es をつけて言いやすくしています。city のように子音字＋y のときは、y を i に変えて es をつけます。ただし boy のように母音字＋y のときは、そのまま s だけです。',
         steps: [
           'ふつうの名詞 → そのまま s（book → books）',
           'おわりが s・x・ch・sh → es（bus → buses、box → boxes、watch → watches、dish → dishes）',
           'おわりが 子音字＋y → y をとって ies（city → cities、baby → babies）',
           'おわりが 母音字＋y → そのまま s（boy → boys、day → days）',
-          'おわりが f・fe → f・fe を ves に（knife → knives、leaf → leaves）',
+          'おわりが f・fe → f・fe を ves に（knife → knives、leaf → leaves）。ただし roof → roofs、safe → safes は s だけ',
           '形が変わる名詞は覚える（man → men、woman → women、child → children、foot → feet、tooth → teeth）。sheep・fish は同じ形',
         ],
         example: {
@@ -67,8 +67,8 @@ export const eigoTsuikaFormulas: FormulaSection[] = [
           'どちらか迷ったら a lot of を使えば数にも量にも使える',
         ],
         example: {
-          q: 'かっこに入る語を答えなさい。(1) I do not have ( ) money. (2) I have ( ) friends in Osaka.',
-          a: '(1) much（money は数えられない）(2) many または a lot of（friends は数えられる複数形）。この形なら many',
+          q: 'かっこに入る語を答えなさい。(1) How ( ) water do you drink every day? (2) How ( ) friends do you have?',
+          a: '(1) much（water は数えられない）(2) many（friends は数えられる複数形）',
         },
         quiz: [
           {
@@ -584,13 +584,13 @@ export const eigoTsuikaFormulas: FormulaSection[] = [
         label: 'from・to・for・by・with の使い分け',
         locked: true,
         formula: 'from（出発点）・to（到着点）・for（〜のために・〜行き）・by（手段・そば）・with（いっしょに・道具）',
-        explanation: '前置詞は「日本語にすると同じでも、英語では使い分ける」ものが多いです。「〜で」は、手段や乗り物なら by、道具なら with を使います。乗り物の by はあとに a や the をつけませんが、道具の with には a や the をつけます。',
+        explanation: '前置詞は「日本語にすると同じでも、英語では使い分ける」ものが多いです。「〜で」は、手段や乗り物なら by、道具なら with を使います。乗り物の by はあとに a や the をつけません（by bus）。道具の with は、名詞に合わせて a や the をつけたり、つけなかったりします（with a pen、with chopsticks）。',
         steps: [
           '始まり → from、終わり・行き先 → to（from Tokyo to Osaka）',
           '「〜のために」「〜あてに」「〜行きの」→ for（a present for you、the train for Kyoto）',
           '乗り物・手段 → by ＋ 無冠詞（by bus、by train、by e-mail）。歩いて行くは on foot',
           '道具・いっしょに → with（write with a pen、eat with chopsticks、with my friends）',
-          '「誰かのそばに」も by（sit by the window）',
+          '「〜のそばに」も by（sit by the window）',
         ],
         example: {
           q: 'かっこに入る語を答えなさい。(1) I go to school ( ) bus. (2) I eat ( ) chopsticks.',
@@ -658,7 +658,7 @@ export const eigoTsuikaFormulas: FormulaSection[] = [
           {
             q: 'always・sometimes・never を、頻度の高い順に並べなさい。',
             a: 'always, sometimes, never',
-            explanation: 'always は100%、sometimes は半分くらい、never は0%です。だから、この順に頻度が低くなります。',
+            explanation: 'always は100%、sometimes は ときどき（半分より少ない）、never は0%です。だから、この順に頻度が低くなります。',
           },
         ],
         checkpoints: [
@@ -670,7 +670,7 @@ export const eigoTsuikaFormulas: FormulaSection[] = [
       {
         label: '-ing のつけ方（つづりの規則）',
         locked: true,
-        formula: 'ふつう → ing ／ e で終わる → e をとって ing ／ 短母音＋子音1つ → 子音を重ねて ing ／ ie → ying',
+        formula: 'ふつう → ing ／ e で終わる → e をとって ing ／ 短母音＋子音1つ（1音節の語か、最後を強く読む語）→ 子音を重ねて ing ／ ie → ying',
         explanation: '進行形や動名詞で使う ing は、動詞によってつづりが変わります。e で終わる動詞は、e を残すと「e」と「i」が続いて読みにくいので e をとります。run のように「短く読む母音＋子音字1つ」で終わる動詞は、子音字を重ねて短い母音を守ります。',
         steps: [
           'ふつうの動詞はそのまま ing（play → playing、eat → eating）',
@@ -709,14 +709,14 @@ export const eigoTsuikaFormulas: FormulaSection[] = [
       {
         label: '過去形・過去分詞の ed のつけ方',
         locked: true,
-        formula: 'ふつう → ed ／ e で終わる → d ／ 子音字＋y → ied ／ 短母音＋子音1つ → 子音を重ねて ed',
+        formula: 'ふつう → ed ／ e で終わる → d ／ 子音字＋y → ied ／ 短母音＋子音1つ（1音節の語か、最後を強く読む語）→ 子音を重ねて ed',
         explanation: '規則動詞は、過去形と過去分詞が同じ形で ed をつけて作ります。つけ方は ing のときとよく似ています。ただし e で終わる語は、すでに e があるので d だけをつけます。子音字＋y の語は、y を i に変えて ed をつけます。',
         steps: [
           'ふつうの動詞 → ed（walk → walked、play → played）',
           'おわりが e → d だけ（like → liked、use → used）',
           'おわりが 子音字＋y → y を i にして ed（study → studied、try → tried）',
           'おわりが 母音字＋y → そのまま ed（play → played、enjoy → enjoyed）',
-          '短母音＋子音字1つ → 子音を重ねて ed（stop → stopped、plan → planned）',
+          '短母音＋子音字1つ → 子音を重ねて ed（stop → stopped、plan → planned。visit → visited のように最後を強く読まない語は重ねない）',
           '規則動詞は過去形＝過去分詞。不規則動詞は別に覚える',
         ],
         example: {
@@ -1029,7 +1029,7 @@ export const eigoTsuikaFormulas: FormulaSection[] = [
             explanation: 'まえの文が肯定なので、付加部分は否定です。一般動詞で主語が she なので、does を使って doesn\'t she になります。',
           },
           {
-            q: 'かっこに入る語を答えなさい。Let us go to the park, ( ) ( )?（Let us は Let\'s と同じ）',
+            q: 'かっこに入る語を答えなさい。Let\'s go to the park, ( ) ( )?',
             a: 'shall we',
             explanation: 'Let\'s 〜 のあとの付加疑問は shall we? と決まっています。「〜しましょうか」と誘いをたしかめる形だからです。',
           },
