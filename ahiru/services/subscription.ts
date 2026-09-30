@@ -16,6 +16,9 @@ const RC_KEY_WEB = process.env.EXPO_PUBLIC_RC_API_KEY_WEB ?? '';
 // RevenueCatダッシュボードのWeb Billingオファリングで、これらのIDのパッケージを作成する
 const WEB_PACKAGE_ID_PRO = 'pro_monthly';
 const WEB_PACKAGE_ID_MAX = 'max_monthly';
+// 年額（Web版のみ。RevenueCatのWeb Billingでこのidのパッケージを作ると、Paywallに月額/年額の切り替えが出る）
+const WEB_PACKAGE_ID_PRO_YEARLY = 'pro_yearly';
+const WEB_PACKAGE_ID_MAX_YEARLY = 'max_yearly';
 const WEB_PACKAGE_ID_VOCAB_MONTHLY = 'vocab_monthly';
 const WEB_PACKAGE_ID_VOCAB_YEARLY = 'vocab_yearly';
 
@@ -263,30 +266,42 @@ async function fetchWebOfferingPackages(): Promise<WebPackageLike[]> {
   return (current?.availablePackages as WebPackageLike[] | undefined) ?? [];
 }
 
-export async function fetchProMaxProducts(): Promise<{ pro: unknown; max: unknown }> {
-  if (!isRevenueCatConfigured()) return { pro: null, max: null };
+export async function fetchProMaxProducts(): Promise<{
+  pro: unknown;
+  max: unknown;
+  proYearly: unknown;
+  maxYearly: unknown;
+}> {
+  const none = { pro: null, max: null, proYearly: null, maxYearly: null };
+  if (!isRevenueCatConfigured()) return none;
   if (isWeb) {
     try {
       const packages = await fetchWebOfferingPackages();
-      const pro = packages.find((p) => p.identifier === WEB_PACKAGE_ID_PRO);
-      const max = packages.find((p) => p.identifier === WEB_PACKAGE_ID_MAX);
+      const find = (id: string) => {
+        const pkg = packages.find((p) => p.identifier === id);
+        return pkg ? wrapWebPackage(pkg) : null;
+      };
       return {
-        pro: pro ? wrapWebPackage(pro) : null,
-        max: max ? wrapWebPackage(max) : null,
+        pro: find(WEB_PACKAGE_ID_PRO),
+        max: find(WEB_PACKAGE_ID_MAX),
+        proYearly: find(WEB_PACKAGE_ID_PRO_YEARLY),
+        maxYearly: find(WEB_PACKAGE_ID_MAX_YEARLY),
       };
     } catch {
-      return { pro: null, max: null };
+      return none;
     }
   }
+  // iOS / Android に年額はない（既存の月額購読者に影響しないため）
   try {
     const Purchases = (await import('react-native-purchases')).default;
     const products = await Purchases.getProducts([PRODUCT_ID_PRO, PRODUCT_ID_MAX]);
     return {
+      ...none,
       pro: products.find((p) => p.identifier === PRODUCT_ID_PRO) ?? null,
       max: products.find((p) => p.identifier === PRODUCT_ID_MAX) ?? null,
     };
   } catch {
-    return { pro: null, max: null };
+    return none;
   }
 }
 

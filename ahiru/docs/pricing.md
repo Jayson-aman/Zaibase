@@ -75,3 +75,18 @@ Package IDはiOS/Android/Webで**同じ文字列**（`pro_monthly`/`max_monthly`
 - サーバーは商品ごとに別勘定で購入回数を照合する（`functions/contentUnlock.js`）。Web（Stripe）で買った分は `stripeUnlocked` に別記録し、ネイティブの購入回数と混ざらない。
 - 金額を変えるときは `constants/pricing.ts` と `functions/stripeUnlock.js` の金額（Cloud Functions側は複製）と、各ストアの登録額を、すべて同じにする。
 - 既存のストア商品 `formulaunlock` は、ストア側の価格を ¥50 → ¥200 に変更する（新しい商品IDは不要）。
+
+
+## Web版の利益試算（2026/9/30）
+
+前提：税込価格から消費税10%・Stripe手数料3.6%・RevenueCat手数料1%・AI原価（MAXは月¥54の最悪値）を引く。所得税・広告費・サーバー代は含まない。
+
+| プラン | 税込 | 手元に残る額 | 月あたり |
+|---|---|---|---|
+| PRO 月額 | ¥2,980 | ¥2,572 | ¥2,572 |
+| MAX 月額 | ¥3,980 | ¥3,381 | ¥3,381 |
+| PRO 年額 | ¥19,800 | ¥17,089 | ¥1,424 |
+| MAX 年額 | ¥28,900 | ¥24,295 | ¥2,025 |
+
+年額の割引率は、月額×12に対して PRO 約45%・MAX 約39%（月額の6.6か月分・7.3か月分）。Paywallは `yearlyDiscountPercent()` で計算して表示する。
+年額プランはWeb版のみ。RevenueCat Web Billingに `pro_yearly` / `max_yearly` のPackageを作ると、Paywallに月額/年額の切り替えが出る（未作成のあいだは従来どおり月額のみ）。

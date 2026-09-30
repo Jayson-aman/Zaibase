@@ -45,7 +45,8 @@ export const PRICES = {
 export const WEB_PRICES = {
   proMonthly: 2980,
   maxMonthly: 3980,
-  // 年額（2026/9/30決定。月額の約10か月分。Web版のみ。iOS/Androidは既存購読者への影響を避けるため追加しない）
+  // 年額（2026/9/30決定。Web版のみ。iOS/Androidは既存購読者への影響を避けるため追加しない）。
+  // 月額×12に対する割引率は yearlyDiscountPercent() で計算して表示する（数字を直書きしない）。
   proYearly: 19800,
   maxYearly: 28900,
 } as const;
@@ -54,6 +55,17 @@ export const WEB_PRICES = {
 export function formatYen(n: number): string {
   return '¥' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
+
+/** 年額の月あたり換算（円）と、月額×12に対する割引率（％）。Paywallの表示用 */
+export function yearlyPerMonth(yearly: number): number {
+  return Math.round(yearly / 12);
+}
+export function yearlyDiscountPercent(monthly: number, yearly: number): number {
+  return Math.round((1 - yearly / (monthly * 12)) * 100);
+}
+
+export const PRO_YEARLY_PRICE_LABEL = `${formatYen(WEB_PRICES.proYearly)}/年`;
+export const MAX_YEARLY_PRICE_LABEL = `${formatYen(WEB_PRICES.maxYearly)}/年`;
 
 export const PRO_PRICE_LABEL = `${formatYen(isWeb ? WEB_PRICES.proMonthly : PRICES.proMonthly)}/月`;
 export const MAX_PRICE_LABEL = `${formatYen(isWeb ? WEB_PRICES.maxMonthly : PRICES.maxMonthly)}/月`;

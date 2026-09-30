@@ -12,7 +12,16 @@ import {
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
-import { PRO_PRICE_LABEL, MAX_PRICE_LABEL } from '../constants/pricing';
+import {
+  PRO_PRICE_LABEL,
+  MAX_PRICE_LABEL,
+  PRO_YEARLY_PRICE_LABEL,
+  MAX_YEARLY_PRICE_LABEL,
+  WEB_PRICES,
+  formatYen,
+  yearlyPerMonth,
+  yearlyDiscountPercent,
+} from '../constants/pricing';
 import {
   fetchProMaxProducts,
   purchaseProduct,
@@ -32,6 +41,10 @@ interface Props {
 export default function Paywall({ visible, onClose, onPurchased }: Props) {
   const [proProd, setProProd] = useState<unknown>(null);
   const [maxProd, setMaxProd] = useState<unknown>(null);
+  const [proYearlyProd, setProYearlyProd] = useState<unknown>(null);
+  const [maxYearlyProd, setMaxYearlyProd] = useState<unknown>(null);
+  // Web版のみ。年額のパッケージがRevenueCatに作られているときだけ切り替えが出る
+  const [yearly, setYearly] = useState(false);
   const [loadingOff, setLoadingOff] = useState(true);
   const [purchasing, setPurchasing] = useState(false);
   const { isLoggedIn } = useAuthUser();
@@ -46,9 +59,11 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
     if (!visible) return;
     setLoadingOff(true);
     fetchProMaxProducts()
-      .then(({ pro, max }) => {
+      .then(({ pro, max, proYearly, maxYearly }) => {
         setProProd(pro);
         setMaxProd(max);
+        setProYearlyProd(proYearly);
+        setMaxYearlyProd(maxYearly);
       })
       .catch(() => {})
       .finally(() => setLoadingOff(false));
@@ -116,8 +131,22 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
   // Appleのガイドライン3.1.2で課金期間の明示が必須なため、必ず「/月」を付ける。
   const withPeriod = (priceString: string | undefined, fallback: string) =>
     priceString ? `${priceString}/月` : fallback;
-  const proPrice = withPeriod((proProd as any)?.priceString, PRO_PRICE_LABEL);
-  const maxPrice = withPeriod((maxProd as any)?.priceString, MAX_PRICE_LABEL);
+  const hasYearly = isWeb && !!proYearlyProd && !!maxYearlyProd;
+  const showYearly = hasYearly && yearly;
+  const withYear = (priceString: string | undefined, fallback: string) =>
+    priceString ? `${priceString}/年` : fallback;
+  const proPrice = showYearly
+    ? withYear((proYearlyProd as any)?.priceString, PRO_YEARLY_PRICE_LABEL)
+    : withPeriod((proProd as any)?.priceString, PRO_PRICE_LABEL);
+  const maxPrice = showYearly
+    ? withYear((maxYearlyProd as any)?.priceString, MAX_YEARLY_PRICE_LABEL)
+    : withPeriod((maxProd as any)?.priceString, MAX_PRICE_LABEL);
+  // 年額の補足（月あたりの換算と、月額12か月分に対する割引率）
+  const proYearlyNote = `月あたり約${formatYen(yearlyPerMonth(WEB_PRICES.proYearly))}（月額より${yearlyDiscountPercent(WEB_PRICES.proMonthly, WEB_PRICES.proYearly)}%おトク）`;
+  const maxYearlyNote = `月あたり約${formatYen(yearlyPerMonth(WEB_PRICES.maxYearly))}（月額より${yearlyDiscountPercent(WEB_PRICES.maxMonthly, WEB_PRICES.maxYearly)}%おトク）`;
+  // 購入するプロダクト（年額表示のときは年額）
+  const proBuy = showYearly ? proYearlyProd : proProd;
+  const maxBuy = showYearly ? maxYearlyProd : maxProd;
   // 導入オファー（¥500・7日間のPay Up Front等）がApp Store Connect側で設定されて
   // いれば、RevenueCatが product.introPrice として返す。ここで「まず¥500で7日間」
   // のように明示しないと、Appleガイドライン3.1.2（トライアル・オファー条件の明示）に
@@ -158,6 +187,25 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
             </TouchableOpacity>
           )}
 
+          {!loadingOff && hasYearly && (
+            <View style={styles.periodToggle}>
+              <TouchableOpacity
+                style={[styles.periodBtn, !yearly && styles.periodBtnOn]}
+                onPress={() => setYearly(false)}
+                activeOpacity={0.85}
+              >
+                <Text style={[styles.periodBtnText, !yearly && styles.periodBtnTextOn]}>月額</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[styles.periodBtn, yearly && styles.periodBtnOn]}
+                onPress={() => setYearly(true)}
+                activeOpacity={0.85}
+              >
+                <Text style={[styles.periodBtnText, yearly && styles.periodBtnTextOn]}>年額（おトク）</Text>
+              </TouchableOpacity>
+            </View>
+          )}
+
           {loadingOff ? (
             <ActivityIndicator color="#fff" size="large" style={styles.spinner} />
           ) : (
@@ -173,10 +221,11 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                     <Text style={styles.cardTagline}>基本機能フルセット</Text>
                   </View>
                   <View style={styles.priceCol}>
-                    {proIntro && (
+                    {proIntro && !showYearly && (
                       <Text style={styles.introPrice}>まず{proIntro}で7日間</Text>
                     )}
                     <Text style={styles.cardPrice}>{proPrice}</Text>
+                    {showYearly && <Text style={styles.yearlyNote}>{proYearlyNote}</Text>}
                   </View>
                 </LinearGradient>
                 <View style={styles.cardBody}>
@@ -190,18 +239,18 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                     style={[
                       styles.buyBtn,
                       { backgroundColor: '#9B59B6' },
-                      (!proProd || purchasing) && styles.buyBtnDisabled,
+                      (!proBuy || purchasing) && styles.buyBtnDisabled,
                     ]}
-                    onPress={proProd ? () => handlePurchase(proProd) : undefined}
-                    disabled={!proProd || purchasing}
+                    onPress={proBuy ? () => handlePurchase(proBuy) : undefined}
+                    disabled={!proBuy || purchasing}
                     activeOpacity={0.8}
                   >
                     {purchasing ? (
                       <ActivityIndicator color="#fff" />
                     ) : (
                       <Text style={styles.buyBtnText}>
-                        {proProd
-                          ? proIntro
+                        {proBuy
+                          ? proIntro && !showYearly
                             ? `${proIntro}で7日間お試し`
                             : 'PRO プランを始める'
                           : '準備中'}
@@ -222,10 +271,11 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                     <Text style={styles.cardTagline}>プロ全機能＋AIコーチ</Text>
                   </View>
                   <View style={styles.priceCol}>
-                    {maxIntro && (
+                    {maxIntro && !showYearly && (
                       <Text style={styles.introPrice}>まず{maxIntro}で7日間</Text>
                     )}
                     <Text style={styles.cardPrice}>{maxPrice}</Text>
+                    {showYearly && <Text style={styles.yearlyNote}>{maxYearlyNote}</Text>}
                   </View>
                 </LinearGradient>
                 <View style={styles.cardBody}>
@@ -259,18 +309,18 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                     style={[
                       styles.buyBtn,
                       { backgroundColor: '#E74C3C' },
-                      (!maxProd || purchasing) && styles.buyBtnDisabled,
+                      (!maxBuy || purchasing) && styles.buyBtnDisabled,
                     ]}
-                    onPress={maxProd ? () => handlePurchase(maxProd) : undefined}
-                    disabled={!maxProd || purchasing}
+                    onPress={maxBuy ? () => handlePurchase(maxBuy) : undefined}
+                    disabled={!maxBuy || purchasing}
                     activeOpacity={0.8}
                   >
                     {purchasing ? (
                       <ActivityIndicator color="#fff" />
                     ) : (
                       <Text style={styles.buyBtnText}>
-                        {maxProd
-                          ? maxIntro
+                        {maxBuy
+                          ? maxIntro && !showYearly
                             ? `${maxIntro}で7日間お試し`
                             : 'MAX プランを始める'
                           : '準備中'}
@@ -301,7 +351,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
 
           <Text style={styles.terms}>
             {Platform.OS === 'web'
-              ? 'サブスクリプションは期間終了の24時間前までに解約しない限り自動更新されます。お支払いはクレジットカード（Stripe経由）です。解約は購入完了メール内の「サブスクリプション管理」リンクからいつでも可能です。'
+              ? 'サブスクリプションは期間終了の24時間前までに解約しない限り、月額は毎月・年額は毎年自動更新されます。お支払いはクレジットカード（Stripe経由）です。解約は購入完了メール内の「サブスクリプション管理」リンクからいつでも可能です。'
               : 'サブスクリプションは期間終了の24時間前までに解約しない限り自動更新されます。解約はApp Store / Google Playの設定からいつでも可能です。お支払いは購入確定時にストアアカウントへ請求されます。'}
           </Text>
 
@@ -331,6 +381,19 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
 }
 
 const styles = StyleSheet.create({
+  periodToggle: {
+    flexDirection: 'row',
+    alignSelf: 'center',
+    backgroundColor: '#EFE6D6',
+    borderRadius: 999,
+    padding: 4,
+    marginBottom: 14,
+  },
+  periodBtn: { paddingVertical: 8, paddingHorizontal: 20, borderRadius: 999 },
+  periodBtnOn: { backgroundColor: '#FFFFFF' },
+  periodBtnText: { fontSize: 14, fontWeight: '700', color: '#8B6B4A' },
+  periodBtnTextOn: { color: '#3B2A1A' },
+  yearlyNote: { color: '#FFFFFF', fontSize: 11, marginTop: 2, textAlign: 'right' },
   container: { flex: 1 },
   closeBtn: {
     position: 'absolute',
