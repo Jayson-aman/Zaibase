@@ -517,6 +517,11 @@ import { figuresKoushikiOyoK1Godo } from './figures-koushiki-oyo-k1godo';
 import { figuresKoushikiOyoC5Kakudo } from './figures-koushiki-oyo-c5kakudo';
 import { figuresQuizAdd01 } from './figures-quiz-add01';
 import { figuresSchoolChugaku02 } from './figures-school-chugaku-02';
+import { figuresSchoolChugaku09 } from './figures-school-chugaku-09';
+import { figuresSchoolChugaku07 } from './figures-school-chugaku-07';
+import { figuresSchoolChugaku06 } from './figures-school-chugaku-06';
+import { figuresSchoolChugaku05 } from './figures-school-chugaku-05';
+import { figuresSchoolChugaku00 } from './figures-school-chugaku-00';
 import { figuresSchoolChugaku11 } from './figures-school-chugaku-11';
 import { figuresSchoolChugaku10 } from './figures-school-chugaku-10';
 import { figuresSchoolChugaku08 } from './figures-school-chugaku-08';
@@ -622,6 +627,11 @@ export const figures: Record<string, Figure> = {
   ...figuresGradeJ3Rika,
   ...figuresQuizAdd01,
   ...figuresSchoolChugaku02,
+  ...figuresSchoolChugaku09,
+  ...figuresSchoolChugaku07,
+  ...figuresSchoolChugaku06,
+  ...figuresSchoolChugaku05,
+  ...figuresSchoolChugaku00,
   ...figuresSchoolChugaku11,
   ...figuresSchoolChugaku10,
   ...figuresSchoolChugaku08,
