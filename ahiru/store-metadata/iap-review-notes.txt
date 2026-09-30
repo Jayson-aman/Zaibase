@@ -1,0 +1,49 @@
+【App Store Connect：アプリ内課金の審査メモ（英語・貼り付け用）】
+※各商品の「審査に関する情報」→「審査メモ」に貼ってください。スクリーンショットは、実機（iPhone）でロック画面を撮ったものを付けます（末尾の撮影手順を参照）。
+
+==================================================
+1) 公式集解放  com.zaibase.exam.formulaunlock  （消耗型・¥200）
+==================================================
+This is a consumable in-app purchase that unlocks ONE locked "formula card" (公式集 / Koushiki) in our exam-prep app. It is not a subscription and does not renew.
+
+Context: in the "Formula Collection" tab, each subject and exam type shows its first 8 formula cards for free. Additional cards are locked and can be unlocked one at a time for ¥200 with this consumable. Each purchase unlocks one card permanently. Once a user has bought enough single cards in one subject (15 purchases), the remaining locked cards in that subject are unlocked automatically, so the total cost per subject is capped.
+
+How to find it in the app:
+Home -> choose an exam type (中学受験 or 高校受験) -> 公式 (Formula) tab in the bottom bar -> pick a subject (e.g. 算数) -> scroll past the first 8 free cards -> tap any card with a lock icon -> tap the purchase button ("¥200で解放する").
+
+If sign-in is requested, please use the demo account provided in App Review Information. The attached screenshot shows the locked card with the ¥200 unlock button.
+
+==================================================
+2) 公式集 まとめ買い  com.zaibase.exam.formulabundle  （消耗型・¥2,980・新規登録）
+==================================================
+This is a consumable in-app purchase that unlocks ALL currently locked formula cards for one subject within one exam type (for example, all locked cards of 中学受験 / 算数) in a single purchase. It is not a subscription and does not renew.
+
+It is offered as a discounted alternative to buying cards one by one at ¥200 each. Each purchase applies to the subject and exam type the user is viewing when they tap the button.
+
+How to find it in the app:
+Home -> choose an exam type -> 公式 (Formula) tab -> pick a subject -> tap any locked card -> tap the bundle purchase button ("まとめて解放する ¥2,980").
+
+If sign-in is requested, please use the demo account provided in App Review Information. The attached screenshot shows the bundle purchase button.
+
+==================================================
+3) 単元解放  com.zaibase.exam.unitunlock  （消耗型・¥150）
+==================================================
+This is a consumable in-app purchase that unlocks ONE locked textbook lesson (単元) in our exam-prep app. It is not a subscription and does not renew.
+
+Context: in the textbook section, the first 15 lessons of each subject and exam type are free. Additional lessons are locked (the top of each locked lesson can still be previewed) and can be unlocked one at a time for ¥150 with this consumable. Each purchase unlocks one lesson permanently.
+
+How to find it in the app:
+Home -> choose an exam type -> 教科書 (Textbook) -> choose a subject (e.g. 算数) -> scroll down the lesson list past the first 15 lessons -> open any locked lesson -> tap "¥150で解放する".
+
+If sign-in is requested, please use the demo account provided in App Review Information. The attached screenshot shows the locked lesson with the ¥150 unlock button.
+
+==================================================
+【スクリーンショットの撮り方（実機・iPhone 16e）】
+==================================================
+・審査用スクリーンショットは、実際のiPhoneの画面で撮ってください（Web版の画面は購入ボタンが「準備中」になるため使えません）。
+・撮るのは、購入ボタンと価格が見えている画面です。
+  1) 公式集解放：公式タブでロック中のカードを開き、「¥200で解放する」が見える画面
+  2) まとめ買い：同じ画面の、まとめ買いボタン（¥2,980）が見える画面
+  3) 単元解放：ロック中の単元を開き、「¥150で解放する」が見える画面
+・ストア側の価格が反映されると、ボタンの価格がそのまま出ます（反映前は古い価格や「準備中」が出るので、撮る前に確認します）。
+・サイズの目安：iPhone 16e の画面をそのまま撮れば足ります。
