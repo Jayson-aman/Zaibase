@@ -67,6 +67,7 @@ import { DIAGRAMS_OLD_SHAKAIB } from './formulas-diagrams-old-shakaib';
 import { DIAGRAMS_OLD_SHAKAIC } from './formulas-diagrams-old-shakaic';
 import { DIAGRAMS_OLD_RIKAA } from './formulas-diagrams-old-rikaa';
 import { DIAGRAMS_OLD_SHAKAID } from './formulas-diagrams-old-shakaid';
+import { DIAGRAMS_OLD_SHAKAIF } from './formulas-diagrams-old-shakaif';
 import { DIAGRAMS_SHAKAI_6 } from './formulas-diagrams-shakai-6';
 
 export const FORMULA_DIAGRAMS: Record<string, DiagramFigure> = {
@@ -136,5 +137,6 @@ export const FORMULA_DIAGRAMS: Record<string, DiagramFigure> = {
   ...DIAGRAMS_OLD_SHAKAIC,
   ...DIAGRAMS_OLD_RIKAA,
   ...DIAGRAMS_OLD_SHAKAID,
+  ...DIAGRAMS_OLD_SHAKAIF,
   ...DIAGRAMS_SHAKAI_6,
 };
