@@ -107,7 +107,7 @@ export const DIAGRAMS_EIGO_B: Record<string, DiagramFigure> = {
     },
     {
       note: '❓by と with はどう見分ける？→「乗り物・連絡の手段」なら by、「手に持って使う道具」なら with です。❓なぜ分ける？→日本語はどちらも「〜で」ですが、英語は「手段」と「道具」を別の考えとして扱うからです。',
-      add: [...fresh(B(20, 20, 130, 30, 'by（手段）', 'p', 14), B(170, 20, 130, 30, 'with（道具）', 'y', 14), lb(85, 72, 'bus / train / e-mail', 12, C.purple, 'middle'), lb(235, 72, 'pen / chopsticks', 12, C.main, 'middle'), lb(85, 100, '冠詞なし', 12, C.purple, 'middle', true), lb(235, 100, 'a・the がつく', 12, C.main, 'middle', true)), ...cap('乗り物は by、道具は with', C.main, FILL.yellow)],
+      add: [...fresh(B(20, 20, 130, 30, 'by（手段）', 'p', 14), B(170, 20, 130, 30, 'with（道具）', 'y', 14), lb(85, 72, 'bus / train / e-mail', 12, C.purple, 'middle'), lb(235, 72, 'pen / chopsticks', 12, C.main, 'middle'), lb(85, 100, '冠詞なし', 12, C.purple, 'middle', true), lb(235, 100, 'a などがつく（数えられる道具なら）', 12, C.main, 'middle', true)), ...cap('乗り物は by、道具は with', C.main, FILL.yellow)],
     },
     {
       note: 'by には「そばに」の意味もあります。sit by the window は「まどのそばにすわる」です。❓at や in とのちがいは？→by は「すぐ近く」を表す語です。sit by the window を、まるごと1つの言い方として覚えましょう。',
@@ -194,7 +194,7 @@ export const DIAGRAMS_EIGO_B: Record<string, DiagramFigure> = {
       add: [...fresh(B(20, 46, 76, 40, 'die', 'p', 16), ar(98, 66, 124, 66, C.main), B(126, 46, 84, 40, 'dieing', 'n', 14), lb(168, 36, 'i が2つ', 11, C.red, 'middle', true), ar(212, 66, 232, 66, C.red), B(234, 46, 76, 40, 'dying', 'p', 14), lb(160, 108, 'ie → y にして ing（lie → lying）', 12, C.purple, 'middle', true)), ...cap('ie → y ＋ ing', C.purple, FILL.purple)],
     },
     {
-      note: '例外です。see → seeing、be → being。❓なぜ e をとらないの？→see は e が2つ続いている語で、1つとってしまうと seing となり、see の読み方がこわれるからです。ee で終わる語は e を残します。',
+      note: '例外です。see → seeing、be → being。❓なぜ e をとらないの？→see は e が2つ続いている語で、1つとってしまうと seing となり、see の読み方がこわれるからです。ee で終わる語は e を残します。be も e を残します（e を取ると b＋ing になってしまう）。',
       add: [...fresh(B(20, 40, 80, 36, 'see', 'y', 15), ar(102, 58, 128, 58, C.main), B(130, 40, 100, 36, 'seeing', 'y', 15), lb(270, 58, '○', 20, C.green, 'middle', true), B(20, 96, 80, 36, 'be', 'y', 15), ar(102, 114, 128, 114, C.main), B(130, 96, 100, 36, 'being', 'y', 15), lb(270, 114, '○', 20, C.green, 'middle', true)), ...cap('see・be は e を残す', C.main, FILL.yellow)],
     },
     {
@@ -266,7 +266,7 @@ export const DIAGRAMS_EIGO_B: Record<string, DiagramFigure> = {
       add: [...fresh(...row([['buy', 'y', 70], ['bought', 'r', 70], ['bought', 'r', 70]], 14, 28, 13), ...row([['think', 'y', 70], ['thought', 'r', 70], ['thought', 'r', 70]], 48, 28, 13), ...row([['make', 'y', 70], ['made', 'r', 70], ['made', 'r', 70]], 82, 28, 13), ...row([['have', 'y', 70], ['had', 'r', 70], ['had', 'r', 70]], 116, 28, 13)), ...cap('ABB ＝ あとの2つが同じ', C.main, FILL.yellow)],
     },
     {
-      note: 'ABC型です。go - went - gone、see - saw - seen、eat - ate - eaten、write - wrote - written。❓なぜ大変？→3つとも形がちがうので、1つずつ覚えるしかないからです。ただ、この型は数が多くないので、ふだんの練習で慣れましょう。',
+      note: 'ABC型です。go - went - gone、see - saw - seen、eat - ate - eaten、write - wrote - written。❓なぜ大変？→3つとも形がちがうので、1つずつ覚えるしかないからです。ただ、数は多いので、よく使う動詞から1つずつ声に出して慣れましょう。',
       add: [...fresh(...row([['go', 'b', 70], ['went', 'g', 70], ['gone', 'r', 70]], 14, 28, 13), ...row([['see', 'b', 70], ['saw', 'g', 70], ['seen', 'r', 70]], 48, 28, 13), ...row([['eat', 'b', 70], ['ate', 'g', 70], ['eaten', 'r', 70]], 82, 28, 13), ...row([['write', 'b', 70], ['wrote', 'g', 70], ['written', 'r', 70]], 116, 28, 13)), ...cap('ABC ＝ 3つとも別の形', C.red, FILL.red)],
     },
     {

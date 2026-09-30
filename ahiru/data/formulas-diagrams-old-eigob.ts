@@ -81,7 +81,7 @@ const asas: DiagramFigure = show([
   s('❓er / est をつけない語もあるの？→あります。good は better → best と、形そのものが変わります。なぜかというと、よく使う語ほど昔の形が残りやすいからです。これは不規則変化で、そのまま覚えます。',
     [...row(20, 'good', 'better', 'purple'), b(180, 58, 124, 26, 'best', 'purple', 13), a(242, 48, 242, 58, 'purple'), t(160, 118, 'good（よい）→ better → best', 'ink', 12), t(160, 138, 'つけ足しではなく、形が変わる', 'gray', 11)],
     bt('good → better → the best', undefined, 'purple')),
-  s('❓well は？→well（じょうずに・元気で）も good と同じく better → best です。意味は近く、good が形容詞（名詞を説明）、well が副詞（動作を説明）という使い分けだけがちがいます。',
+  s('❓well は？→well（じょうずに）も good と同じく better → best です。意味は近く、good が形容詞（名詞を説明）、well が副詞（動作を説明）という使い分けだけがちがいます。',
     [b(16, 20, 130, 30, 'good（形容詞）', 'purple', 12), b(174, 20, 130, 30, 'well（副詞）', 'purple', 12), a(80, 52, 130, 82, 'purple'), a(240, 52, 190, 82, 'purple'), b(80, 84, 160, 34, 'better → best', 'green', 14)],
     bt('good / well → better → the best', undefined, 'purple')),
   s('❓bad は？→bad（悪い）は worse → the worst と変わります。「悪い」の反対がgood（better）、悪いほうへ進むのが worse と考えると覚えやすくなります。',

@@ -979,9 +979,9 @@ const saibanin: DiagramFigure = show([
     ),
   },
   {
-    note: '❓なぜ第一審だけなの？→ 証拠を直接見て、事実を確かめるのがこの段階だからです。第二審・第三審では、法律の解釈が中心になります。',
+    note: '❓なぜ第一審だけなの？→ 証拠を直接見て、事実を確かめるのがこの段階だからです。第二審は第一審の判決の見直し、第三審は法律の解釈が中心になります。',
     add: fresh(
-      bx(10, 20, 96, 44, '第一審\n事実を確かめる', C.green, FILL.green, 10), bx(112, 20, 96, 44, '第二審\n法律の解釈中心', C.gray, FILL.gray, 10), bx(214, 20, 96, 44, '第三審\n法律の解釈中心', C.gray, FILL.gray, 10),
+      bx(10, 20, 96, 44, '第一審\n事実を確かめる', C.green, FILL.green, 10), bx(112, 20, 96, 44, '第二審\n判決の見直し', C.gray, FILL.gray, 10), bx(214, 20, 96, 44, '第三審\n法律の解釈中心', C.gray, FILL.gray, 10),
       lb(58, 82, '裁判員あり', 12, C.green, 'middle', true), lb(160, 82, 'なし', 12, C.red, 'middle', true), lb(262, 82, 'なし', 12, C.red, 'middle', true),
       ...cap('証拠を直接見る第一審だけ', C.green, FILL.green),
     ),

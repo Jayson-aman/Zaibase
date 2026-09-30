@@ -27,7 +27,7 @@ const kenchou: DiagramFigure = show([
   },
   {
     note: '❓兵庫県の県庁が神戸にあるのはなぜ？→兵庫という地名は昔の港のまわりの名前ですが、明治時代に外国の船に開いた港（開港）として発展したのが神戸だったので、県庁は神戸に置かれました。今は兵庫の地名も神戸市の一部です。',
-    add: [...fresh(bx(20, 18, 130, 50, '兵庫\n昔の港の地名', C.blue, FILL.blue, 13), bx(170, 18, 130, 50, '神戸\n開港して発展', C.main, FILL.warm, 13), ar(150, 43, 170, 43, C.gray)), ...band(86, lb(160, 112, '県名は昔の地名、県庁は栄えた港町', 12, C.gray, 'middle', true), lb(160, 138, '近畿で大阪・京都と名前がちがうのは兵庫だけ', 12, C.gray))],
+    add: [...fresh(bx(20, 18, 130, 50, '兵庫\n昔の港の地名', C.blue, FILL.blue, 13), bx(170, 18, 130, 50, '神戸\n開港して発展', C.main, FILL.warm, 13), ar(150, 43, 170, 43, C.gray)), ...band(86, lb(160, 112, '県名は昔の地名、県庁は栄えた港町', 12, C.gray, 'middle', true), lb(160, 138, '近畿で県名と市名がちがうのは、兵庫・三重・滋賀の3県', 12, C.gray))],
   },
   {
     note: '❓津市と大津市は、どちらも「津」の字が入っていて紛（まぎ）らわしいのはなぜ？→津は「港」という意味の字で、水べの町によくつけられたからです。三重県が津市、滋賀県が大津市です。',
@@ -78,8 +78,8 @@ const hatsuden: DiagramFigure = show([
     add: [...fresh(bx(6, 20, 74, 44, 'ウランの\n核分裂', C.purple, FILL.purple, 11), ar(80, 42, 98, 42, C.gray), bx(98, 20, 62, 44, '熱で\n蒸気に', C.main, FILL.warm, 11), ar(160, 42, 178, 42, C.gray), bx(178, 20, 72, 44, 'タービン\nが回る', C.blue, FILL.blue, 11), ar(250, 42, 262, 42, C.gray), bx(262, 20, 52, 44, '電気', C.green, FILL.green, 12)), ...band(86, lb(160, 112, '課題① 事故のときの危険', 13, C.purple, 'middle', true), lb(160, 138, '課題② 使い終わった燃料の処理', 13, C.purple, 'middle', true))],
   },
   {
-    note: '太陽光・風力・地熱などは、使ってもなくならず、くり返し使えるので再生可能エネルギーといいます。二酸化炭素を出しません。❓では、なぜ主役になれないの？→天気や風の強さで発電量が変わり、費用も高いからです。',
-    add: [...fresh(ci(50, 42, 20, '太陽', C.red, FILL.yellow, 11), lb(50, 78, '太陽光', 11, C.gray, 'middle', true), bx(110, 28, 34, 24, '風', C.blue, FILL.blue, 12), lb(127, 78, '風力', 11, C.gray, 'middle', true), bx(180, 28, 34, 24, '熱', C.red, FILL.red, 12), lb(197, 78, '地熱', 11, C.gray, 'middle', true), bx(244, 28, 60, 24, '生ごみなど', C.green, FILL.green, 9), lb(274, 78, 'バイオマス', 11, C.gray, 'middle', true)), ...band(96, lb(160, 122, 'くり返し使える・二酸化炭素を出さない', 12, C.green, 'middle', true), lb(160, 148, '天気に左右される・費用が高い', 12, C.red, 'middle', true), lb(160, 174, 'だから割合を増やす取り組みが進む', 11, C.gray))],
+    note: '太陽光・風力・地熱などは、使ってもなくならず、くり返し使えるので再生可能エネルギーといいます。発電するときに二酸化炭素をほとんど出しません。❓では、なぜ主役になれないの？→天気や風の強さで発電量が変わり、費用も高いからです。',
+    add: [...fresh(ci(50, 42, 20, '太陽', C.red, FILL.yellow, 11), lb(50, 78, '太陽光', 11, C.gray, 'middle', true), bx(110, 28, 34, 24, '風', C.blue, FILL.blue, 12), lb(127, 78, '風力', 11, C.gray, 'middle', true), bx(180, 28, 34, 24, '熱', C.red, FILL.red, 12), lb(197, 78, '地熱', 11, C.gray, 'middle', true), bx(244, 28, 60, 24, '生ごみなど', C.green, FILL.green, 9), lb(274, 78, 'バイオマス', 11, C.gray, 'middle', true)), ...band(96, lb(160, 122, 'くり返し使える・二酸化炭素が少ない', 12, C.green, 'middle', true), lb(160, 148, '天気に左右される・費用が高い', 12, C.red, 'middle', true), lb(160, 174, 'だから割合を増やす取り組みが進む', 11, C.gray))],
   },
   {
     note: '4つの方法をくらべます。燃料が必要なのは火力とウランを使う原子力です。❓それぞれの良い点と課題は？→表でたしかめましょう。',
@@ -231,7 +231,7 @@ const sengo: DiagramFigure = show([
   },
   {
     note: '年表とまとめです。1945年：選挙法の改正、1946年：憲法公布、1947年：憲法施行。改革の目的は、どれも「少数が力を持つ仕組み」をなくすことです。農地改革は農村を、財閥解体は経済を、選挙法の改正は政治を民主化しました。',
-    add: [...fresh(ln(20, 50, 300, 50, C.gray, false, 2), ci(60, 50, 5, undefined, C.green, FILL.green), ci(160, 50, 5, undefined, C.blue, FILL.blue), ci(260, 50, 5, undefined, C.red, FILL.red), lb(60, 32, '1945', 12, C.green, 'middle', true), lb(160, 32, '1946', 12, C.blue, 'middle', true), lb(260, 32, '1947', 12, C.red, 'middle', true), lb(60, 70, '選挙法改正', 10, C.gray, 'middle'), lb(160, 70, '憲法公布', 10, C.gray, 'middle'), lb(260, 70, '憲法施行', 10, C.gray, 'middle')), ...band(96, bx(6, 108, 96, 34, '農地改革\n農村', C.green, FILL.green, 11), bx(112, 108, 96, 34, '財閥解体\n経済', C.blue, FILL.blue, 11), bx(218, 108, 96, 34, '選挙法改正\n政治', C.red, FILL.red, 11), lb(160, 166, 'どれも「少数が力をもつ仕組み」をなくす', 12, C.gray, 'middle', true))],
+    add: [...fresh(ln(20, 50, 300, 50, C.gray, false, 2), ci(60, 50, 5, undefined, C.green, FILL.green), ci(160, 50, 5, undefined, C.blue, FILL.blue), ci(260, 50, 5, undefined, C.red, FILL.red), lb(60, 32, '1945', 12, C.green, 'middle', true), lb(160, 32, '1946', 12, C.blue, 'middle', true), lb(260, 32, '1947', 12, C.red, 'middle', true), lb(60, 70, '民主化（選挙権の拡大など）', 10, C.gray, 'middle'), lb(160, 70, '憲法公布', 10, C.gray, 'middle'), lb(260, 70, '憲法施行', 10, C.gray, 'middle')), ...band(96, bx(6, 108, 96, 34, '農地改革\n農村', C.green, FILL.green, 11), bx(112, 108, 96, 34, '財閥解体\n経済', C.blue, FILL.blue, 11), bx(218, 108, 96, 34, '選挙法改正\n政治', C.red, FILL.red, 11), lb(160, 166, 'どれも「少数が力をもつ仕組み」をなくす', 12, C.gray, 'middle', true))],
   },
 ]);
 

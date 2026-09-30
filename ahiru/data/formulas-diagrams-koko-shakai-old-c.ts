@@ -332,7 +332,7 @@ const kokuren: DiagramFigure = show([
     add: [...fresh(bx(20, 30, 130, 50, '利点\n大国をつなぎとめる', C.green, FILL.green, 12), bx(170, 30, 130, 50, '限界\n1国の反対で止まる', C.red, FILL.red, 12)), ...cap('拒否権は利点でもあり限界でもある', C.main, FILL.warm)],
   },
   {
-    note: '❓専門機関とは？→分野ごとに世界の課題に取り組む機関です。UNESCOは教育・科学・文化、WHOは保健、UNICEFは子どもを担当します。',
+    note: '❓専門機関とは？→分野ごとに世界の課題に取り組む機関です。UNESCOは教育・科学・文化、WHOは保健を担当します。UNICEFは子どもを助ける国連の基金です。',
     add: [...fresh(...fl(['UNESCO\n教育・文化', 'WHO\n保健', 'UNICEF\n子ども'], 30, { h: 60, size: 12, color: C.purple, fill: FILL.purple }), lb(160, 110, '名前が似ているUNICEFと混同しない', 11, C.ink, 'middle', true)), ...cap('UNESCO＝文化、WHO＝保健、UNICEF＝子ども', C.purple, FILL.purple, 12)],
   },
   {
@@ -344,7 +344,7 @@ const kokuren: DiagramFigure = show([
     add: [...fresh(bx(20, 24, 130, 34, 'EU\nヨーロッパ', C.blue, FILL.blue, 12), bx(170, 24, 130, 34, 'ASEAN\n東南アジア', C.green, FILL.green, 12), bx(20, 70, 130, 34, 'USMCA\n北アメリカ', C.red, FILL.red, 12), bx(170, 70, 130, 34, 'APEC\nアジア太平洋', C.purple, FILL.purple, 12)), ...cap('地域統合で経済の結びつきを強める', C.main, FILL.warm)],
   },
   {
-    note: 'まとめ。常任理事国は米・英・仏・露・中の5か国で拒否権を持つ。専門機関はUNESCO・WHO・UNICEF。東南アジアの組織はASEAN。国連は世界の平和を守る組織です。',
+    note: 'まとめ。常任理事国は米・英・仏・露・中の5か国で拒否権を持つ。専門機関の例はUNESCO・WHO。UNICEFは国連の基金。東南アジアの組織はASEAN。国連は世界の平和を守る組織です。',
     add: [...fresh(...fl(['常任理事国\n5か国', '拒否権', '決議できない'], 30, { h: 60, size: 12, color: C.green, fill: FILL.green })), ...cap('安保理で1国でも反対 → 決議できない', C.green, FILL.green)],
   },
 ]);
@@ -404,7 +404,7 @@ const hatsuden: DiagramFigure = show([
     add: [bx(10, 30, 92, 50, '水力\n水の落ちる力', C.blue, FILL.blue, 11), bx(114, 30, 92, 50, '火力\n燃料の蒸気', C.red, FILL.red, 11), bx(218, 30, 92, 50, '原子力\n核分裂の蒸気', C.purple, FILL.purple, 11), ...cap('発電の主な種類', C.main, FILL.warm)],
   },
   {
-    note: '日本の発電は時代とともに変わりました。1960年代まで水力、次に火力、1970年代から原子力が増え、2011年以降は火力への依存が高まります。❓なぜ変わったのか、順に見ます。',
+    note: '日本の発電は時代とともに変わりました。1950年代まで水力、次に火力、1970年代から原子力が増え、2011年以降は火力への依存が高まります。❓なぜ変わったのか、順に見ます。',
     add: [...fresh(...fl(['1960年代\nまで', '高度経済\n成長期', '1970年代', '2011年\n以降'], 20, { h: 40, size: 10, color: C.main, fill: FILL.warm, gap: 12, pad: 6 }), ...fl(['水力中心', '火力へ', '原子力増', '火力高い'], 80, { h: 34, size: 11, color: C.blue, fill: FILL.blue, gap: 12, pad: 6 })), ...cap('水力 → 火力 → 原子力 → 火力', C.main, FILL.warm)],
   },
   {

@@ -415,7 +415,7 @@ const tokeiKen: DiagramFigure = show([
     add: [...fresh(...JP(), ci(250, 32, 6, undefined, C.red, FILL.red), lb(250, 60, '漁獲量・生乳 1位', 10, C.red, 'middle', true)), ...cap('北海道：漁獲量・生乳の生産量', C.red, FILL.red)],
   },
   {
-    note: '畜産は鹿児島・宮崎（南九州）、野菜は茨城・千葉（東京の近く）が上位です。❓なぜ茨城・千葉？→東京という大消費地が近いので、新鮮なまま早く送れるからです。',
+    note: '畜産は鹿児島・宮崎（南九州）、野菜は茨城・千葉など、東京に近い県が上位に入ります。❓なぜ茨城・千葉？→東京という大消費地が近いので、新鮮なまま早く送れるからです。',
     add: [...fresh(...JP(), ci(90, 124, 5, undefined, C.green, FILL.green), ci(96, 132, 5, undefined, C.green, FILL.green), lb(120, 132, '畜産\n鹿児島・宮崎', 10, C.green, 'start', true), ci(186, 92, 5, undefined, C.blue, FILL.blue), lb(196, 108, '野菜\n茨城・千葉', 10, C.blue, 'start', true)), ...cap('畜産：南九州　野菜：東京の近く', C.green, FILL.green)],
   },
   {

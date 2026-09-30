@@ -331,15 +331,15 @@ const jisei: DiagramFigure = show([
   S('can は could に、may は might に変わります。He said that he could swim.（泳げると言った）。❓なぜ過去の形にするのでしょう。will と同じで、「言ったとき」から見た能力や可能性だからです。',
     ...chips(24, [K('can'), R('→ could')], { h: 34 }), ...chips(70, [K('may'), R('→ might')], { h: 34 }), lb(160, 126, 'He said that he could swim.', 13, C.ink, 'middle', true), cap('助動詞も過去形にそろえる', C.blue, FILL.blue)),
   S('確認です。I knew that he ( ) my brother. (is / was) の空所は was です。knew が過去形なので、that 節の is を was に変えます。',
-    ...chips(28, [B('I knew that he', 3), R('was', 1), G('my brother.', 2)], { h: 40, size: 13 }), lb(160, 94, 'knew（過去）→ was', 13, C.red, 'middle', true), cap('主節が過去 → that 節も過去系', C.red, FILL.red)),
+    ...chips(28, [B('I knew that he', 3), R('was', 1), G('my brother.', 2)], { h: 40, size: 13 }), lb(160, 94, 'knew（過去）→ was', 13, C.red, 'middle', true), cap('主節が過去 → that 節も過去形', C.red, FILL.red)),
   S('主節が現在形のときは、that 節は変えません。I think that he is kind. ❓なぜ変えないのでしょう。今考えていることなので、そのときの基準が今のままだからです。基準がずれないので、形をそろえる必要がありません。',
     ...chips(28, [B('I think that he', 2), R('is', 1), G('kind.')], { h: 40, size: 13 }), lb(160, 94, '今の話 → そのまま', 13, C.green, 'middle', true), cap('主節が現在 → 変えない', C.green, FILL.green)),
   S('例外です。Our teacher said that the earth ( ) around the sun. の空所は goes（現在形）のままです。主節の said が過去でも、変えません。❓なぜでしょう。地球が太陽のまわりを回ることは、昔も今もこれからも変わらない事実だからです。過去のことだけに限られないので、現在形で表します。',
     ln(30, 44, 290, 44, C.gray, false, 2), bar(30, 290, 44, C.green), lb(160, 28, '昔も今もこれからも', 12, C.green, 'middle', true), bx(14, 66, 292, 30, 'Our teacher said that the earth ( ) around the sun.', C.blue, FILL.blue, 12), ar(160, 98, 160, 114, C.red), bx(110, 118, 100, 32, 'goes', C.red, FILL.red, 14), cap('変わらない事実は現在形のまま', C.green, FILL.green)),
-  S('見分け方の順序です。①主節の動詞が過去か ②変わらない事実か ③過去なら that 節も過去系、事実なら現在形のまま、と考えます。',
-    ...[['①主節が過去か？ → No なら変えない', C.blue, FILL.blue], ['②変わらない事実か？ → Yes なら現在形', C.green, FILL.green], ['③ほかは that 節も過去系にする', C.red, FILL.red]].map((a, i) => bx(20, 14 + i * 50, 280, 40, a[0], a[1], a[2], 12)), cap('will → would ／ can → could ／ is → was', C.red, FILL.red, 12, 172)),
-  S('まとめです。主節が過去 → that 節も過去系（is → was、will → would、can → could）。変わらない事実は現在形のまま。主節が現在のときは変えません。',
-    ...[['主節が過去 → that 節も過去系', C.red, FILL.red], ['will → would ／ can → could', C.red, FILL.red], ['変わらない事実 → 現在形のまま', C.green, FILL.green], ['主節が現在 → 変えない', C.blue, FILL.blue]].map((a, i) => bx(30, 12 + i * 52, 260, 40, a[0], a[1], a[2], 13))),
+  S('見分け方の順序です。①主節の動詞が過去か ②変わらない事実か ③過去なら that 節も過去形、事実なら現在形のまま、と考えます。',
+    ...[['①主節が過去か？ → No なら変えない', C.blue, FILL.blue], ['②変わらない事実か？ → Yes なら現在形', C.green, FILL.green], ['③ほかは that 節も過去形にする', C.red, FILL.red]].map((a, i) => bx(20, 14 + i * 50, 280, 40, a[0], a[1], a[2], 12)), cap('will → would ／ can → could ／ is → was', C.red, FILL.red, 12, 172)),
+  S('まとめです。主節が過去 → that 節も過去形（is → was、will → would、can → could）。変わらない事実は現在形のまま。主節が現在のときは変えません。',
+    ...[['主節が過去 → that 節も過去形', C.red, FILL.red], ['will → would ／ can → could', C.red, FILL.red], ['変わらない事実 → 現在形のまま', C.green, FILL.green], ['主節が現在 → 変えない', C.blue, FILL.blue]].map((a, i) => bx(30, 12 + i * 52, 260, 40, a[0], a[1], a[2], 13))),
 ]);
 
 export const DIAGRAMS_EIGO_KOKO_A: Record<string, DiagramFigure> = {

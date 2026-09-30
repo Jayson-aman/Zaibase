@@ -88,7 +88,7 @@ const fukusu: DiagramFigure = show([
   sl(
     '❓逆に、形が変わらない名詞は？→sheep（ひつじ）と fish（さかな）は、1ひきでも2ひきでも同じ形です。',
     [...row(34, 'a sheep', 'two sheep', 'purple'), ...row(78, 'a fish', 'three fish', 'purple'), t(160, 128, 's をつけない', 'purple', 13, 'middle', true)],
-    bt('sheep・fish は同じ形', 'sheeps・fishes とは書かない', 'purple'),
+    bt('sheep・fish は同じ形', 'ふつうは sheeps・fishes とは書かない', 'purple'),
   ),
   sl(
     '❓発音は？→複数形の s は、3つの音に読み分けます。books は「ス」、dogs は「ズ」、buses は「イズ」。まず、おわりの文字を見て形を決めます。',
@@ -271,7 +271,7 @@ const possess: DiagramFigure = show([
     bt("単数 → 's", "my sister's bike", 'blue'),
   ),
   sl(
-    "❓持ち主が2人以上で、もう s がついているときは？→students に 's をつけると students's になり、s が3つ続いて言いにくくなります。そこで、' だけをつけます。the students' room。",
+    "❓持ち主が2人以上で、もう s がついているときは？→students に 's をつけると students's になり、s が2つ続いて言いにくくなります。そこで、' だけをつけます。the students' room。",
     [b(20, 24, 110, 36, 'the students', 'blue', 13), t(160, 44, "＋ '", 'red', 18, 'middle', true), b(190, 24, 110, 36, 'room', 'green', 14), t(160, 92, "students's ×", 'red', 13, 'middle', true), t(160, 114, "students' ○", 'green', 14, 'middle', true)],
     bt("s で終わる複数 → ' だけ", "the students' classroom", 'green'),
   ),

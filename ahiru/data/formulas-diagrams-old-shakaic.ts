@@ -392,7 +392,7 @@ const daimyo: DiagramFigure = show([
 const mibun: DiagramFigure = show([
   {
     note: '江戸時代は、身分がはっきり分かれていました。❓どんな身分があった？→武士・百姓（ひゃくしょう）・町人などです。人口の割合を、円グラフで見てみましょう。',
-    add: [sc(100, 74, 62, 0, 300, C.green, FILL.green), sc(100, 74, 62, 300, 330, C.purple, FILL.purple), sc(100, 74, 62, 330, 350, C.red, FILL.red), sc(100, 74, 62, 350, 360, C.gray, FILL.gray), lb(60, 66, '百姓', 14, C.green, 'middle', true), lb(210, 28, '百姓：ほとんど', 12, C.green, 'start', true), lb(210, 62, '町人：ごく一部', 12, C.purple, 'start'), lb(210, 96, '武士：ごく一部', 12, C.red, 'start'), ...cap('人口の大半（たいはん）は百姓', C.green, FILL.green)],
+    add: [sc(100, 74, 62, 0, 306, C.green, FILL.green), sc(100, 74, 62, 306, 324, C.purple, FILL.purple), sc(100, 74, 62, 324, 350, C.red, FILL.red), sc(100, 74, 62, 350, 360, C.gray, FILL.gray), lb(60, 66, '百姓', 14, C.green, 'middle', true), lb(210, 28, '百姓：ほとんど', 12, C.green, 'start', true), lb(210, 62, '町人：ごく一部', 12, C.purple, 'start'), lb(210, 96, '武士：ごく一部', 12, C.red, 'start'), ...cap('人口の大半（たいはん）は百姓', C.green, FILL.green)],
   },
   {
     note: '❓では、だれが世の中を治めた？→武士が支配する立場でした。人口は少ないのに、政治と軍事をにぎっていたのは武士です。',
@@ -443,8 +443,8 @@ const sakoku: DiagramFigure = show([
     add: [...fresh(bx(20, 30, 120, 40, '大名が自由に貿易', C.gray, FILL.gray, 12), ar(144, 50, 176, 50, C.red, true), bx(180, 30, 120, 40, '力をつける', C.red, FILL.red, 13), bx(20, 90, 120, 40, '幕府が貿易を\n独占する', C.blue, FILL.blue, 12), ar(144, 110, 176, 110, C.green), bx(180, 90, 120, 40, '利益を幕府が\n手に入れる', C.green, FILL.green, 12)), ...cap('理由②：貿易の利益を独占（どくせん）', C.blue, FILL.blue)],
   },
   {
-    note: '❓では、完全に閉じたの？→いいえ。長崎の出島（でじま）でオランダと中国、対馬（つしま）で朝鮮、薩摩（さつま）で琉球（りゅうきゅう）、松前（まつまえ）でアイヌと、4つの窓口が開いていました。',
-    add: [...fresh(bx(230, 14, 80, 30, '松前\nアイヌ', C.green, FILL.green, 10), bx(10, 40, 80, 30, '対馬\n朝鮮', C.green, FILL.green, 10), bx(10, 84, 100, 34, '長崎（出島）\nオランダ・中国', C.red, FILL.red, 10), bx(150, 100, 90, 30, '薩摩\n琉球', C.green, FILL.green, 10), pg([[140, 30], [200, 20], [230, 70], [180, 100], [120, 90]], C.gray, FILL.gray), lb(170, 62, '日本', 12, C.gray, 'middle', true)), ...cap('鎖国中も、4つの窓口があった', C.main, FILL.warm)],
+    note: '❓では、完全に閉じたの？→いいえ。長崎でオランダ（出島〈でじま〉）と中国（唐人屋敷〈とうじんやしき〉）、対馬（つしま）で朝鮮、薩摩（さつま）で琉球（りゅうきゅう）、松前（まつまえ）でアイヌと、4つの窓口が開いていました。',
+    add: [...fresh(bx(230, 14, 80, 30, '松前\nアイヌ', C.green, FILL.green, 10), bx(10, 40, 80, 30, '対馬\n朝鮮', C.green, FILL.green, 10), bx(10, 84, 100, 34, '長崎\nオランダ（出島）・中国', C.red, FILL.red, 10), bx(150, 100, 90, 30, '薩摩\n琉球', C.green, FILL.green, 10), pg([[140, 30], [200, 20], [230, 70], [180, 100], [120, 90]], C.gray, FILL.gray), lb(170, 62, '日本', 12, C.gray, 'middle', true)), ...cap('鎖国中も、4つの窓口があった', C.main, FILL.warm)],
   },
   {
     note: '❓なぜ、オランダには貿易を許した？→オランダはキリスト教を広めることをせず、貿易だけが目的だったからです。ヨーロッパのなかで、貿易を許されたのはオランダだけです。',
@@ -459,7 +459,7 @@ const sakoku: DiagramFigure = show([
     add: [...fresh(bx(20, 30, 130, 40, '良い点\n平和・国内の文化', C.green, FILL.green, 11), bx(170, 30, 130, 40, '悪い点\n世界に後れる', C.red, FILL.red, 11), ar(85, 74, 85, 100, C.main), ar(235, 74, 235, 100, C.main)), ...cap('よい面もあれば、後れる面もあった', C.main, FILL.warm)],
   },
   {
-    note: 'まとめです。理由は「キリスト教の禁止」と「貿易の独占」→島原・天草一揆で固まる→4つの窓口だけ→出島でオランダと中国。',
+    note: 'まとめです。理由は「キリスト教の禁止」と「貿易の独占」→島原・天草一揆で固まる→4つの窓口だけ→長崎でオランダと中国。',
     add: [...fresh(...flowBoxes(['キリスト教\n禁止', '貿易\n独占', '一揆で\n固まる', '4つの\n窓口'], 40)), ...cap('鎖国＝管理された外国とのつき合い', C.main, FILL.warm)],
   },
 ]);
