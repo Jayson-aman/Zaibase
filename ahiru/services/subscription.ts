@@ -216,7 +216,7 @@ export const PRODUCT_ID_FORMULA_UNLOCK = 'com.zaibase.exam.formulaunlock';
 // ⚠️ 公式集のまとめ買い（受験種別×教科）。消費型・¥980。App Store Connect / Google Play Console /
 // RevenueCat に、このIDで新規登録するまでは、まとめ買いのボタンは「準備中」表示のままになる。
 export const PRODUCT_ID_FORMULA_BUNDLE = 'com.zaibase.exam.formulabundle';
-// ⚠️ 学年×科目ごとに追加した新規単元（無料5個超）を1個¥100で買い切り解放する消費型商品。
+// ⚠️ 学年×科目ごとに追加した新規単元（無料5個超）を1個¥150で買い切り解放する消費型商品。
 // 上記と同様、App Store Connect / Google Play Console / RevenueCat にこのIDで
 // 新規登録するまでは購入ボタンが「準備中」表示のままになる。
 export const PRODUCT_ID_UNIT_UNLOCK = 'com.zaibase.exam.unitunlock';

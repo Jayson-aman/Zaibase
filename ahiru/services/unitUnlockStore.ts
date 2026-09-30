@@ -3,7 +3,7 @@ import { getAuthUid, getFirestoreDb, isFirebaseConfigured, callFirebaseFunction 
 const COLLECTION = 'unitUnlocks';
 
 /**
- * ログイン中ユーザーが単発課金（¥100買い切り）で解放済みの単元（Lesson.id）一覧を取得する。
+ * ログイン中ユーザーが単発課金（¥150買い切り）で解放済みの単元（Lesson.id）一覧を取得する。
  * Firestore未設定・未ログイン・オフライン時は空集合を返す（内容は既定でロック扱いになる）。
  */
 export async function getUnlockedUnitIds(): Promise<Set<string>> {

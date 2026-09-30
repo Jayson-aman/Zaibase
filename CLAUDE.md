@@ -300,7 +300,7 @@ Muted:    #64748B
 - アカウント：acct_1UJQzIBiyS3mhFgQ（中学受験・高校受験…、テストモードで作成開始）
 - 上記Zaibase Groupアカウントとは完全に別。建設・法律相談の売上とは混在させない
 - ウェブサイトURL登録：`https://exam.zaibase.group`
-- 用途：①公式集(¥200)・公式集まとめ買い(¥2,980)・単元(¥100)買い切りのCheckout（`ahiru/functions/stripeUnlock.js`、Secrets: `AHIRU_STRIPE_SECRET_KEY`/`AHIRU_STRIPE_WEBHOOK_SECRET`）②RevenueCat Web BillingのStripe接続先（Pro¥2,980/月・Max¥3,980/月。iOS/AndroidはPro¥1,980・Max¥2,890のまま据え置き、Web版のみ2026/9/28に値上げ。詳細は`ahiru/docs/pricing.md`）
+- 用途：①公式集(¥200)・公式集まとめ買い(¥2,980)・単元(¥150)買い切りのCheckout（`ahiru/functions/stripeUnlock.js`、Secrets: `AHIRU_STRIPE_SECRET_KEY`/`AHIRU_STRIPE_WEBHOOK_SECRET`）②RevenueCat Web BillingのStripe接続先（Pro¥2,980/月・Max¥3,980/月。iOS/AndroidはPro¥1,980・Max¥2,890のまま据え置き、Web版のみ2026/9/28に値上げ。詳細は`ahiru/docs/pricing.md`）
 - 本番稼働前に必ずテストモードから本番モードへ切り替え、Secretsも本番用（`sk_live_...`）に差し替えること
 
 ## 現在の開発ブランチ

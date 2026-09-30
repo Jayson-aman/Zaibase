@@ -30,7 +30,7 @@ exports.chatEnglishConversation = aiConversation.chatEnglishConversation;
 const ranking = require("./ranking");
 exports.getMyRanking = ranking.getMyRanking;
 
-// ── 公式集(¥50)・新規追加単元(¥100)の買い切り解放（RevenueCatの購入実績をサーバー側で検証） ──
+// ── 公式集・新規追加単元の買い切り解放（RevenueCatの購入実績をサーバー側で検証） ──
 const contentUnlock = require("./contentUnlock");
 exports.unlockContent = contentUnlock.unlockContent;
 

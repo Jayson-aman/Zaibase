@@ -48,7 +48,7 @@ export interface UnitUnlocksState {
   /** 買い切り解放済みのLesson.id一覧（Firestoreから読み込み中はloadingがtrue） */
   unlockedIds: Set<string>;
   loading: boolean;
-  /** ¥100の商品が実際に購入可能な状態か（App Store Connect/Play Console未登録の間はfalse） */
+  /** ¥150の商品が実際に購入可能な状態か（App Store Connect/Play Console未登録の間はfalse） */
   productReady: boolean;
   priceLabel: string;
   unlockUnit: (lessonId: string) => Promise<UnitUnlockPurchaseResult>;

@@ -35,7 +35,7 @@ export const PRICES = {
   formulaBundle: 2980,
   // 新規追加した学年×科目ごとの単元（20個/学年科目）：無料5個を超えた分を
   // 1個ずつ買い切りで解放する消費型課金。
-  unitUnlock: 100,
+  unitUnlock: 150,
 } as const;
 
 // Web版のみのPro・Max価格（2026/9/25、ユーザー指示による値上げ）。
