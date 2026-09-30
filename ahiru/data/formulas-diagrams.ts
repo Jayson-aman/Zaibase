@@ -73,6 +73,12 @@ import { DIAGRAMS_OLD_RIKAD } from './formulas-diagrams-old-rikad';
 import { DIAGRAMS_OLD_RIKAE } from './formulas-diagrams-old-rikae';
 import { DIAGRAMS_OLD_RIKAC } from './formulas-diagrams-old-rikac';
 import { DIAGRAMS_OLD_SHAKAIA } from './formulas-diagrams-old-shakaia';
+import { DIAGRAMS_OLD_RIKAG } from './formulas-diagrams-old-rikag';
+import { DIAGRAMS_OLD_SHAKAIE } from './formulas-diagrams-old-shakaie';
+import { DIAGRAMS_OLD_RIKAB } from './formulas-diagrams-old-rikab';
+import { DIAGRAMS_OLD_RIKAF } from './formulas-diagrams-old-rikaf';
+import { DIAGRAMS_OLD_RIKAH } from './formulas-diagrams-old-rikah';
+import { DIAGRAMS_OLD_SHAKAIG } from './formulas-diagrams-old-shakaig';
 import { DIAGRAMS_SHAKAI_6 } from './formulas-diagrams-shakai-6';
 
 export const FORMULA_DIAGRAMS: Record<string, DiagramFigure> = {
@@ -148,5 +154,11 @@ export const FORMULA_DIAGRAMS: Record<string, DiagramFigure> = {
   ...DIAGRAMS_OLD_RIKAE,
   ...DIAGRAMS_OLD_RIKAC,
   ...DIAGRAMS_OLD_SHAKAIA,
+  ...DIAGRAMS_OLD_RIKAG,
+  ...DIAGRAMS_OLD_SHAKAIE,
+  ...DIAGRAMS_OLD_RIKAB,
+  ...DIAGRAMS_OLD_RIKAF,
+  ...DIAGRAMS_OLD_RIKAH,
+  ...DIAGRAMS_OLD_SHAKAIG,
   ...DIAGRAMS_SHAKAI_6,
 };
