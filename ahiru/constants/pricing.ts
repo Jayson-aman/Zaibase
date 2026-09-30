@@ -45,6 +45,9 @@ export const PRICES = {
 export const WEB_PRICES = {
   proMonthly: 2980,
   maxMonthly: 3980,
+  // 年額（2026/9/30決定。月額の約10か月分。Web版のみ。iOS/Androidは既存購読者への影響を避けるため追加しない）
+  proYearly: 19800,
+  maxYearly: 28900,
 } as const;
 
 /** 3桁区切りの円表記（Hermes でも安全なように手動フォーマット） */

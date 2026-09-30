@@ -11,6 +11,8 @@
 |---|---|---|---|
 | PRO | **¥1,980/月** | **¥2,980/月** | `pro` |
 | MAX | **¥2,890/月** | **¥3,980/月** | `max` |
+| PRO 年額（Webのみ・2026/9/30追加） | — | **¥19,800/年** | `pro` |
+| MAX 年額（Webのみ・2026/9/30追加） | — | **¥28,900/年** | `max` |
 | 英単語Pro（vocab） | **¥1,680/月・¥13,800/年** | **¥1,680/月・¥13,800/年**（同額） | `vocab` |
 
 - 無料プラン：¥0（ずっと無料）。
@@ -23,6 +25,8 @@
 |---|---|---|
 | PRO 月額 | `com.zaibase.exam.promonthly` | `pro_monthly` |
 | MAX 月額 | `com.zaibase.exam.maxmonthly` | `max_monthly` |
+| PRO 年額（Webのみ） | （なし） | `pro_yearly`（RevenueCat Web Billingで新規作成） |
+| MAX 年額（Webのみ） | （なし） | `max_yearly`（同上） |
 | 英単語 月額 | `com.zaibase.exam.vocabmonthly` | `vocab_monthly` |
 | 英単語 年額 | `com.zaibase.exam.vocabyearly` | `vocab_yearly` |
 | 公式集 1項目（消費型・¥200） | `com.zaibase.exam.formulaunlock` | （Webは Stripe 直接決済） |
