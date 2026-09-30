@@ -39,6 +39,8 @@ import { DIAGRAMS_KOKO_SUGAKU_OLD_D } from './formulas-diagrams-koko-sugaku-old-
 import { DIAGRAMS_KOKO_SHAKAI_OLD_F } from './formulas-diagrams-koko-shakai-old-f';
 import { DIAGRAMS_KOKO_SHAKAI_OLD_E } from './formulas-diagrams-koko-shakai-old-e';
 import { DIAGRAMS_KOKO_SHAKAI_OLD_B } from './formulas-diagrams-koko-shakai-old-b';
+import { DIAGRAMS_KOKO_SHAKAI_OLD_C } from './formulas-diagrams-koko-shakai-old-c';
+import { DIAGRAMS_KOKO_SHAKAI_OLD_D } from './formulas-diagrams-koko-shakai-old-d';
 import { DIAGRAMS_SHAKAI_6 } from './formulas-diagrams-shakai-6';
 
 export const FORMULA_DIAGRAMS: Record<string, DiagramFigure> = {
@@ -80,5 +82,7 @@ export const FORMULA_DIAGRAMS: Record<string, DiagramFigure> = {
   ...DIAGRAMS_KOKO_SHAKAI_OLD_F,
   ...DIAGRAMS_KOKO_SHAKAI_OLD_E,
   ...DIAGRAMS_KOKO_SHAKAI_OLD_B,
+  ...DIAGRAMS_KOKO_SHAKAI_OLD_C,
+  ...DIAGRAMS_KOKO_SHAKAI_OLD_D,
   ...DIAGRAMS_SHAKAI_6,
 };
