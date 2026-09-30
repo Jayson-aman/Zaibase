@@ -322,7 +322,7 @@ A: Thanks. I'll try that.
     maxOnly: false,
     question: `次の（　）に適切な語を入れ、比較を使った重要表現を完成させなさい。
 
-① This bag is three times (　) (　) that one.
+① This bag is three times (　) (　) (　) that one.
   （このバッグはあのバッグの3倍の大きさだ）
 
 ② The population of Tokyo is larger (　) that of Osaka.

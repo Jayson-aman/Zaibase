@@ -851,15 +851,15 @@ Finding the right balance between the benefits of club activities and the well-b
     maxOnly: true,
     question: `次の（　）に適切な語を入れなさい。（仮定法を使うこと）
 
-① If it (　) not for your advice, I would have given up studying English.
-  （あなたの助言がなかったら、私は英語の勉強をあきらめていただろう）
+① If it (　) not for your advice, I would give up studying English.
+  （あなたの助言がなければ、私は英語の勉強をあきらめてしまうだろう）
 
 ② (　) I in your position, I would ask the teacher for help immediately.
   （もし私があなたの立場だったら、すぐに先生に助けを求めるだろう）
 
 ③ I acted (　) if nothing had happened, though I was very nervous.
   （とても緊張していたが、私は何事もなかったかのように振る舞った）`,
-    answer: '① were (had been)　② Were　③ as',
+    answer: '① were　② Were　③ as',
     hint: '①If it were not for〜／had it not been for〜、②Ifの省略による倒置、③as if+仮定法過去完了。',
     explanation: `【出題意図】仮定法の発展表現（If it were not for、Ifの省略による倒置、as if構文）を問う。【解説】①「If it were not for your advice」は現在の仮定だが、文全体は「would have given up」と過去の仮定法過去完了の帰結節になっているため、「If it had not been for」がより厳密だが、①では空欄1つのためwereまたはhad beenのいずれかを入れる形（過去の話なのでhad beenがより正確、werebでも許容）。②Ifを省略した倒置形：Were I in your position（=If I were in your position）。③「〜であったかのように」＝as if+仮定法。ここでは「何事もなかったかのように」という過去の事実に反する内容なのでas if+過去完了（had happened）が使われている。【注意点】①はIf it were not for〜（現在）とIf it had not been for〜（過去）の区別が入試での頻出ポイント。ここでは文脈が過去（studying Englishをあきらめていただろう、という過去の話）なのでhad not been forがより正確だが、had beenも許容。②Were+S+〜は倒置によるifの省略形。【関連知識】as if/as though+仮定法過去（現在の事実に反する）、as if+仮定法過去完了（過去の事実に反する）の使い分けも重要。`,
     pitfall: '②をIf I were の語順のままにしないこと。設問はIfを省略した倒置形を要求している。',

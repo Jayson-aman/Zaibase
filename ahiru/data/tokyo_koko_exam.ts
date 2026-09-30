@@ -1034,7 +1034,7 @@ A: Good luck!
 問1〜3：与えられた語句を並び替えて正しい英文を作れ（不要な語が1語ある）。
 
 問1. [ is / this / one / the / most / of / books / interesting / very ] I have ever read.
-問2. She [ knew / what / to / not / do / did / didn't ] in that situation.
+問2. She [ know / what / to / do / knew / didn't ] in that situation.
 問3. [ have / I / three / for / been / years / studying / since / English ].
 
 問4. 次の日本語を30語程度の英語で表現せよ。

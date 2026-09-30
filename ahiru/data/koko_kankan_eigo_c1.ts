@@ -710,12 +710,12 @@ A growing number of schools are therefore adopting alternative assessment method
     course: 'koko-kankan',
     difficulty: 'advanced',
     maxOnly: true,
-    question: `次の語句を並べ替えて、意味の通る英文を作りなさい。（それぞれ1語不足しているので補うこと）
+    question: `次の語句を並べ替えて、意味の通る英文を作りなさい。（それぞれ不要な語が1語ある）
 
-① [ known / had / true / the / , / never / I / it / spoken ].
+① [ known / had / true / was / it / , / I / I / would / never / have / spoken / knew ].
   （それが本当だと知っていたら、私はそんなことは決して言わなかっただろう）
 
-② [ the news / all / surprised / , / most / what / was ] her sudden resignation.
+② [ what / surprised / all / of / us / most / was / the news / of / that ] her sudden resignation.
   （最も皆を驚かせたのは、彼女の突然の辞任だった）`,
     answer: `① Had I known it was true, I would never have spoken.
 ② What surprised all of us most was the news of her sudden resignation.`,
