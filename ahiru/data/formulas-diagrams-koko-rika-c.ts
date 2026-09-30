@@ -40,7 +40,7 @@ const setsu: DiagramFigure = show([
     add: fresh(bx(30, 40, 70, 50, '小さい殻', C.gray, FILL.gray, 12), ar(104, 65, 136, 65, C.blue), lb(120, 54, '脱皮', 12, C.blue, 'middle', true), bx(140, 30, 90, 70, '大きい殻', C.main, FILL.warm, 13), ...say('脱皮をくり返して大きくなる（節足動物）', C.main, FILL.warm)),
   },
   {
-    note: '節足動物は、さらに3つのなかまに分かれます。昆虫類、甲殻類（エビ・カニ・ダンゴムシ）、クモ類です。❓どこで見分けるのでしょう。あしの数と体の部分の数が目印です。',
+    note: '節足動物は、おもに3つのなかまに分かれます。昆虫類、甲殻類（エビ・カニ・ダンゴムシ）、クモ類です（ほかにムカデなどの仲間もいます）。❓どこで見分けるのでしょう。あしの数と体の部分の数が目印です。',
     add: fresh(bx(90, 8, 140, 28, '節足動物', C.main, FILL.warm, 14), ar(130, 37, 60, 66, C.gray), ar(160, 37, 160, 66, C.gray), ar(190, 37, 260, 66, C.gray), bx(10, 68, 100, 34, '昆虫類', C.main, FILL.warm, 13), bx(110, 68, 100, 34, '甲殻類', C.blue, FILL.blue, 13), bx(210, 68, 100, 34, 'クモ類', C.purple, FILL.purple, 13), lb(60, 118, 'バッタ\nチョウ', 10, C.gray, 'middle'), lb(160, 118, 'エビ・カニ\nダンゴムシ', 10, C.gray, 'middle'), lb(260, 118, 'クモ\nダニ', 10, C.gray, 'middle'), ...say('見分ける目印は、あしの数と体の部分の数', C.ink, FILL.yellow)),
   },
   {
@@ -165,7 +165,7 @@ const cells: DiagramFigure = show([
     add: fresh(...stg(0, '分裂前'), ci(32, 60, 8, undefined, C.red, FILL.red), ...stg(1, '染色体\nが現れる'), ...[0, 1, 2, 3].map((i) => ln(84 + i * 6, 52 + (i % 2) * 8, 88 + i * 6, 70 - (i % 2) * 4, C.red, false, 3)), ...stg(2, '中央に\nならぶ'), ...[0, 1, 2, 3].map((i) => ln(140, 44 + i * 7, 152, 44 + i * 7, C.red, false, 3)), ...stg(3, '両極へ'), ...[0, 1, 2].flatMap((i) => [ln(206 + i * 6, 40, 206 + i * 6, 48, C.red, false, 3), ln(206 + i * 6, 72, 206 + i * 6, 80, C.red, false, 3)]), ...stg(4, '2つの\n細胞'), ci(288, 48, 12, undefined, C.red, FILL.red), ci(288, 72, 12, undefined, C.red, FILL.red), ...say('①現れる → ②中央 → ③両極 → ④2つに', C.ink, FILL.yellow)),
   },
   {
-    note: '❓分裂の前後で、染色体の数はどうなるのでしょう。分裂の前に染色体がコピーされて2倍になり、それが2つの細胞に半分ずつ分かれるので、できた細胞の数はもとと同じです。',
+    note: '❓分裂の前後で、染色体の数はどうなるのでしょう。分裂の前に染色体がコピーされて2倍になり、それが2つの細胞に半分ずつ分かれるので、できた細胞1つあたりの染色体の数は、もとの細胞と同じです。',
     add: fresh(bx(10, 30, 76, 44, '染色体\n4本', C.main, FILL.warm, 13), ar(88, 52, 112, 52, C.gray), lb(101, 88, 'コピー', 11, C.blue, 'middle', true), bx(114, 30, 76, 44, '8本', C.blue, FILL.blue, 14), ar(192, 52, 216, 52, C.gray), lb(204, 88, '半分ずつ', 11, C.green, 'middle', true), bx(218, 14, 90, 30, '細胞A　4本', C.green, FILL.green, 11), bx(218, 60, 90, 30, '細胞B　4本', C.green, FILL.green, 11), ...say('4本 → 8本 → 4本と4本', C.green, FILL.green)),
   },
   {

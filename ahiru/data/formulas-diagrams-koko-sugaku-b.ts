@@ -189,7 +189,7 @@ const itchoku: DiagramFigure = show([
   },
   {
     note: '❓ 一直線とは、どういうこと？ どこを選んでも、同じ角度で同じように進んでいるということです。ちがう2点を選んでも、「右へ1で、上へいくつ」が同じ、つまり傾きが同じです。',
-    add: fresh(...gbBase(), gB.dot(1, 2, C.blue), gB.dot(3, 6, C.blue), gB.seg(0.5, 0, 4.2, 7.4, C.gray, false, 1.5), ...band(150, box(160, '一直線 ＝ 傾きがどこでも同じ', C.red, FILL.red, 14, 32), lb(160, 214, '傾き ＝ 右へ 1 のとき 上へいくつ', 12, C.gray))),
+    add: fresh(...gbBase(), gB.dot(1, 2, C.blue), gB.dot(3, 6, C.blue), gB.seg(0.5, 1, 4.2, 8.4, C.gray, false, 1.5), ...band(150, box(160, '一直線 ＝ 傾きがどこでも同じ', C.red, FILL.red, 14, 32), lb(160, 214, '傾き ＝ 右へ 1 のとき 上へいくつ', 12, C.gray))),
   },
   {
     note: 'A と B から傾きを出します。A から B へは、右へ 2（1→3）、上へ 4（2→6）。傾き＝(y の増加量)÷(x の増加量)＝4÷2＝2。「右へ1で上へ2」です。',
@@ -205,7 +205,7 @@ const itchoku: DiagramFigure = show([
   },
   {
     note: 'C は (5, 10) と決まりました。3点 A、B、C が同じ直線上に並ぶ様子を描きます。',
-    add: fresh(...gbBase(), gB.dot(1, 2, C.blue), gB.dot(3, 6, C.blue), gB.dot(5, 10, C.red), gB.seg(0.5, 0, 5.3, 10.6, C.blue, false, 2), gB.tx(0.5, 3, 'A', C.blue, 12), gB.tx(2.5, 7, 'B', C.blue, 12), gB.tx(4.3, 10, 'C', C.red, 12), ...band(150, box(172, 'C(5, 10)、a ＝ 10', C.green, FILL.green, 16, 34))),
+    add: fresh(...gbBase(), gB.dot(1, 2, C.blue), gB.dot(3, 6, C.blue), gB.dot(5, 10, C.red), gB.seg(0.5, 1, 5.3, 10.6, C.blue, false, 2), gB.tx(0.5, 3, 'A', C.blue, 12), gB.tx(2.5, 7, 'B', C.blue, 12), gB.tx(4.3, 10, 'C', C.red, 12), ...band(150, box(172, 'C(5, 10)、a ＝ 10', C.green, FILL.green, 16, 34))),
   },
   {
     note: '❓ 本当に一直線？ 確かめます。B から C は、右へ 2（3→5）、上へ 4（6→10）。傾き 4÷2＝2 で、AB の傾き 2 と一致。だから3点は一直線です。',
@@ -511,7 +511,7 @@ const orekakudo: DiagramFigure = show([
   },
   {
     note: '❓ 平行線のほかの角の関係は？ 同側内角は、2つの角を足すと 180° になります。横切る直線の同じ側の内側の2角は、錯角と「一直線（180°）」を組み合わせると出るからです。',
-    add: fresh(ln(20, 40, 300, 40, C.gray, false, 2), ln(20, 110, 300, 110, C.gray, false, 2), ln(120, 10, 200, 140, C.blue, false, 2.5), sc(160, 40, 22, 245, 340, C.green, 'rgba(22,163,74,0.30)'), sc(160, 110, 22, 60, 180, C.purple, 'rgba(147,51,234,0.30)'), ...band(146, box(160, '同側内角の和 ＝ 180°', C.blue, FILL.blue, 15, 30), lb(160, 208, '平行なら、内側の同じ側の2角を足すと 180°', 12, C.gray))),
+    add: fresh(ln(20, 40, 300, 40, C.gray, false, 2), ln(20, 110, 300, 110, C.gray, false, 2), ln(120, 10, 200, 140, C.blue, false, 2.5), sc(138.5, 40, 22, 245, 340, C.green, 'rgba(22,163,74,0.30)'), sc(181.5, 110, 22, 60, 180, C.purple, 'rgba(147,51,234,0.30)'), ...band(146, box(160, '同側内角の和 ＝ 180°', C.blue, FILL.blue, 15, 30), lb(160, 208, '平行なら、内側の同じ側の2角を足すと 180°', 12, C.gray))),
   },
   {
     note: '折れ線が2回、3回と折れているときは？ 折れる点ごとに、平行線に平行な補助線を引きます。1回ごとに「錯角」で角を移し、最後に足し合わせます。',

@@ -299,7 +299,7 @@ const denryuu: DiagramFigure = show([
   },
   {
     note: '❓方位磁針（ほういじしん）は、どうふれる？→方位磁針のN極は、電磁石のS極に引かれ、電磁石のN極とはしりぞけ合います（ちがう極は引き合い、同じ極はしりぞけ合う）。だから、極が入れかわると針も反対を向きます。',
-    add: E(...fresh(), bx(120, 30, 80, 24, '電磁石', C.gray, FILL.gray, 12), lb(90, 44, 'N', 14, C.red, 'middle', true), lb(230, 44, 'S', 14, C.blue, 'middle', true), ci(160, 100, 22, undefined, C.gray, FILL.warm), ln(160, 100, 140, 100, C.red, false, 4), ln(160, 100, 180, 100, C.blue, false, 4), lb(160, 132, '方位磁針', 10, C.gray, 'middle'), ...band(150, lb(160, 172, '極が入れかわる　→　針も反対を向く', 12, C.ink, 'middle', true))),
+    add: E(...fresh(), bx(120, 30, 80, 24, '電磁石', C.gray, FILL.gray, 12), lb(90, 44, 'N', 14, C.red, 'middle', true), lb(230, 44, 'S', 14, C.blue, 'middle', true), ci(160, 100, 22, undefined, C.gray, FILL.warm), ln(160, 100, 180, 100, C.red, false, 4), ln(160, 100, 140, 100, C.blue, false, 4), lb(160, 132, '方位磁針', 10, C.gray, 'middle'), ...band(150, lb(160, 172, '極が入れかわる　→　針も反対を向く', 12, C.ink, 'middle', true))),
   },
   {
     note: '❓電池を逆にすると、強さも変わる？→変わりません。流れる電流の大きさは同じだからです。強さを決めるのは「巻き数・電流の大きさ・鉄しん」で、向きは、N極とS極が入れかわるだけです。',
