@@ -23,6 +23,7 @@ import { explanationText, hintText } from '../utils/explanation';
 import { getQuickTrick } from '../data/quick-tricks';
 import { getSubjectThemeLabel, getSubjectIllustration } from '../data/subjectImages';
 import { getFigure } from '../data/figures';
+import { ALL_COURSES } from '../data/courses';
 import FigureView from './FigureView';
 import { getQuestionVideo } from '../data/videos';
 import VideoPlayer from './VideoPlayer';
@@ -101,6 +102,14 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
 
   const choiceLabels = ['A', 'B', 'C', 'D'];
 
+  // 学校別の問題には「学校名・難しさ」を出す（実際の過去問ではなく、その学校の出題傾向をもとにした問題であることが分かるように）
+  const schoolInfo =
+    question.course && question.course !== 'general' && question.course !== 'koko-general'
+      ? ALL_COURSES.find((c) => c.key === question.course)
+      : undefined;
+  const levelLabel =
+    question.difficulty === 'advanced' ? '難関' : question.difficulty === 'standard' ? '標準' : '基礎';
+
   // 長い問題文・解答ほど小さくして、折り返しで読みにくくならないようにする
   const qFit = fitText(question.question, 21, 17);
   const aFit = fitText(question.answer, 25, 17, 70);
@@ -117,6 +126,13 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
           <SubjectIcon subject={question.subject} size={16} color="#FFFFFF" strokeWidth={2.2} />
           <Text style={styles.subjectChipText}>{info.name}</Text>
         </View>
+        {schoolInfo != null && (
+          <View style={styles.historyChip}>
+            <Text style={styles.historyChipText}>
+              🏫 {schoolInfo.name}型・{levelLabel}
+            </Text>
+          </View>
+        )}
         {historyLabel != null && (
           <View style={styles.historyChip}>
             <Text style={styles.historyChipText}>

@@ -152,9 +152,9 @@ const STAGES: Stage[] = [
   },
   {
     key: 'kakomon',
-    label: '過去入試問題',
+    label: '入試傾向問題',
     emoji: '🏆',
-    desc: '実際の入試問題・学校別傾向を完全対策',
+    desc: '学校別の出題傾向をもとにした入試レベルの問題',
     color: D.gold,
     tier: 'max',
     difficultyLabel: '入試',
@@ -237,10 +237,10 @@ export default function SchoolCurriculumScreen() {
     });
   }, [questions, course]);
 
-  const pageTitle = `${meta.name}の過去問対策｜Zaibase受験`;
+  const pageTitle = `${meta.name}の入試対策｜Zaibase受験`;
   const pageDescription =
     courseInfo?.description ??
-    `${meta.name}（偏差値${meta.hensachi}）の入試問題・過去問を科目別に演習できます。中学受験対策アプリ「Zaibase受験」。`;
+    `${meta.name}（偏差値${meta.hensachi}）の出題傾向をもとにした入試レベルの問題を科目別に演習できます。中学受験対策アプリ「Zaibase受験」。`;
 
   return (
     <SafeAreaView style={styles.safe}>
@@ -269,7 +269,7 @@ export default function SchoolCurriculumScreen() {
       <View style={styles.pathBanner}>
         <Text style={styles.pathLabel}>📈 学習ロードマップ</Text>
         <View style={styles.pathFlow}>
-          {['テキスト', '基礎', '応用', '模試', '過去問'].map((step, i, arr) => (
+          {['テキスト', '基礎', '応用', '模試', '入試傾向'].map((step, i, arr) => (
             <React.Fragment key={step}>
               <Text style={styles.pathStep}>{step}</Text>
               {i < arr.length - 1 && <Text style={styles.pathArrow}>→</Text>}
@@ -396,7 +396,7 @@ export default function SchoolCurriculumScreen() {
         {/* Info note */}
         <View style={styles.infoNote}>
           <Text style={styles.infoNoteText}>
-            💡 テキスト→基礎→応用→模試→過去問の順に進むと効果的です
+            💡 テキスト→基礎→応用→模試→入試傾向の順に進むと効果的です
           </Text>
         </View>
       </ScrollView>

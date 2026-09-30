@@ -154,6 +154,8 @@ export default function QuizScreen() {
   const isKakomon = mode === 'kakomon';
   // MAX限定コンテンツを未加入でも試せる問題数
   const PREVIEW_COUNT = 3;
+  // 学校別の入試傾向問題は、どんな問題か分かるよう5問を無料にする（毎回同じ代表問題）
+  const KAKOMON_PREVIEW_COUNT = 5;
   // テスト対策モード（学期末・学力調査・レベル別・入試）。
   // 種類ごとに難易度の配分と、記述式・複数小問（活用型）の比率を変える。
   const testModeKey: TestModeKey | null =
@@ -236,7 +238,9 @@ export default function QuizScreen() {
       const set = schoolQ.length > 0
         ? shuffle(schoolQ)
         : shuffle(filterQuestions(all, examType, course, 'advanced', true));
-      return isMax ? set : set.slice(0, PREVIEW_COUNT);
+      if (isMax) return set;
+      // 未加入の無料枠は、開くたびに変わらないよう id 順の先頭5問に固定する
+      return [...set].sort((a, b) => a.id.localeCompare(b.id)).slice(0, KAKOMON_PREVIEW_COUNT);
     }
     const filtered = filterQuestions(all, examType, course, difficultyFilter, isPro || isMax, gradeFilter);
     return shuffle(filtered);
@@ -694,9 +698,9 @@ export default function QuizScreen() {
 
             {isPreview && (
               <View style={styles.previewCard}>
-                <Text style={styles.previewTitle}>ここまでがお試しの{PREVIEW_COUNT}問です</Text>
+                <Text style={styles.previewTitle}>ここまでがお試しの{isKakomon ? KAKOMON_PREVIEW_COUNT : PREVIEW_COUNT}問です</Text>
                 <Text style={styles.previewText}>
-                  {isKakomon ? '過去入試問題' : '模擬試験'}の続きはMAXプランで解けます。
+                  {isKakomon ? '入試傾向問題' : '模擬試験'}の続きはMAXプランで解けます。
                 </Text>
                 <TouchableOpacity
                   style={styles.previewBtn}
@@ -760,7 +764,7 @@ export default function QuizScreen() {
       {isPreview && (
         <View style={styles.previewBanner}>
           <Text style={styles.previewBannerText}>
-            お試し{PREVIEW_COUNT}問（{isKakomon ? '過去入試問題' : '模擬試験'}の続きはMAXプラン）
+            お試し{isKakomon ? KAKOMON_PREVIEW_COUNT : PREVIEW_COUNT}問（{isKakomon ? '入試傾向問題' : '模擬試験'}の続きはMAXプラン）
           </Text>
         </View>
       )}
