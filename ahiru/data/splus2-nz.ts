@@ -3,7 +3,7 @@ import type { Question } from './questions';
 // 学校別問題の追加分・第2回（nz）。南山中学校女子部の出題傾向に合わせて新しく作った入試傾向問題。
 export const SPLUS2_NZ: Question[] = [
   {
-    "id": "nagoya-nanzan_plus2_sansu_01",
+    "id": "nagoya_nanzan_plus2_sansu_01",
     "subject": "sansu",
     "course": "nagoya-nanzan",
     "examType": "chugaku",
@@ -23,7 +23,7 @@ export const SPLUS2_NZ: Question[] = [
     "memoryTip": "仕事算は「全体＝最小公倍数」と決めて、1人が1日にする量を整数にします。"
   },
   {
-    "id": "nagoya-nanzan_plus2_sansu_02",
+    "id": "nagoya_nanzan_plus2_sansu_02",
     "subject": "sansu",
     "course": "nagoya-nanzan",
     "examType": "chugaku",
@@ -43,7 +43,7 @@ export const SPLUS2_NZ: Question[] = [
     "memoryTip": "長針は1分に6度、短針は1分に0.5度。まず12の位置から数えた角度を2本とも出します。"
   },
   {
-    "id": "nagoya-nanzan_plus2_sansu_03",
+    "id": "nagoya_nanzan_plus2_sansu_03",
     "subject": "sansu",
     "course": "nagoya-nanzan",
     "examType": "chugaku",
@@ -63,7 +63,7 @@ export const SPLUS2_NZ: Question[] = [
     "memoryTip": "通過算は「進む道のり＝橋（トンネル）の長さ＋電車の長さ」。電柱なら電車の長さだけ。"
   },
   {
-    "id": "nagoya-nanzan_plus2_sansu_04",
+    "id": "nagoya_nanzan_plus2_sansu_04",
     "subject": "sansu",
     "course": "nagoya-nanzan",
     "examType": "chugaku",
@@ -83,7 +83,7 @@ export const SPLUS2_NZ: Question[] = [
     "memoryTip": "かど8個、へり12本×(1辺の個数−2)、面6面×(1辺の個数−2)の2乗、内側は(1辺の個数−2)の3乗。"
   },
   {
-    "id": "nagoya-nanzan_plus2_kokugo_01",
+    "id": "nagoya_nanzan_plus2_kokugo_01",
     "subject": "kokugo",
     "course": "nagoya-nanzan",
     "examType": "chugaku",
@@ -103,7 +103,7 @@ export const SPLUS2_NZ: Question[] = [
     "memoryTip": "熟語の型は「反対」「似た意味」「修飾」「目的（〜を・〜に）」「打ち消し」の5つ。1字ずつ訓読みして確かめます。"
   },
   {
-    "id": "nagoya-nanzan_plus2_kokugo_02",
+    "id": "nagoya_nanzan_plus2_kokugo_02",
     "subject": "kokugo",
     "course": "nagoya-nanzan",
     "examType": "chugaku",
@@ -123,7 +123,7 @@ export const SPLUS2_NZ: Question[] = [
     "memoryTip": "呼応の例：たとえ〜ても／決して〜ない／まるで〜ようだ／もし〜ならば。"
   },
   {
-    "id": "nagoya-nanzan_plus2_kokugo_03",
+    "id": "nagoya_nanzan_plus2_kokugo_03",
     "subject": "kokugo",
     "course": "nagoya-nanzan",
     "examType": "chugaku",
@@ -143,7 +143,7 @@ export const SPLUS2_NZ: Question[] = [
     "memoryTip": "理由を問う問題は、「さらに」「また」などの言葉で話題が切りかわる所に注目します。"
   },
   {
-    "id": "nagoya-nanzan_plus2_kokugo_04",
+    "id": "nagoya_nanzan_plus2_kokugo_04",
     "subject": "kokugo",
     "course": "nagoya-nanzan",
     "examType": "chugaku",
@@ -164,7 +164,7 @@ export const SPLUS2_NZ: Question[] = [
     ]
   },
   {
-    "id": "nagoya-nanzan_plus2_rika_01",
+    "id": "nagoya_nanzan_plus2_rika_01",
     "subject": "rika",
     "course": "nagoya-nanzan",
     "examType": "chugaku",
@@ -184,7 +184,7 @@ export const SPLUS2_NZ: Question[] = [
     "memoryTip": "こん虫は「3つ・6本・胸」。クモは「2つ・8本」。"
   },
   {
-    "id": "nagoya-nanzan_plus2_rika_02",
+    "id": "nagoya_nanzan_plus2_rika_02",
     "subject": "rika",
     "course": "nagoya-nanzan",
     "examType": "chugaku",
@@ -204,7 +204,7 @@ export const SPLUS2_NZ: Question[] = [
     "memoryTip": "夏至は北寄り、冬至は南寄り、春分・秋分は真東と真西。"
   },
   {
-    "id": "nagoya-nanzan_plus2_rika_03",
+    "id": "nagoya_nanzan_plus2_rika_03",
     "subject": "rika",
     "course": "nagoya-nanzan",
     "examType": "chugaku",
@@ -224,7 +224,7 @@ export const SPLUS2_NZ: Question[] = [
     "memoryTip": "ばねの問題は「もとの長さ」と「1gあたりののび」の2つを先に出します。"
   },
   {
-    "id": "nagoya-nanzan_plus2_rika_04",
+    "id": "nagoya_nanzan_plus2_rika_04",
     "subject": "rika",
     "course": "nagoya-nanzan",
     "examType": "chugaku",
@@ -244,7 +244,7 @@ export const SPLUS2_NZ: Question[] = [
     "memoryTip": "とけている間は0℃、ふっとうしている間は100℃で温度が止まる。"
   },
   {
-    "id": "nagoya-nanzan_plus2_shakai_01",
+    "id": "nagoya_nanzan_plus2_shakai_01",
     "subject": "shakai",
     "course": "nagoya-nanzan",
     "examType": "chugaku",
@@ -264,7 +264,7 @@ export const SPLUS2_NZ: Question[] = [
     "memoryTip": "扇状地は「水はけがよい→果樹園」、三角州は「水が豊富→水田」。"
   },
   {
-    "id": "nagoya-nanzan_plus2_shakai_02",
+    "id": "nagoya_nanzan_plus2_shakai_02",
     "subject": "shakai",
     "course": "nagoya-nanzan",
     "examType": "chugaku",
@@ -284,7 +284,7 @@ export const SPLUS2_NZ: Question[] = [
     "memoryTip": "摂関政治（藤原氏）→院政（上皇）→武家政治（武士）の順。"
   },
   {
-    "id": "nagoya-nanzan_plus2_shakai_03",
+    "id": "nagoya_nanzan_plus2_shakai_03",
     "subject": "shakai",
     "course": "nagoya-nanzan",
     "examType": "chugaku",
@@ -304,7 +304,7 @@ export const SPLUS2_NZ: Question[] = [
     "memoryTip": "第一審→第二審が控訴、第二審→第三審が上告。数字の順に「こう→じょう」。"
   },
   {
-    "id": "nagoya-nanzan_plus2_shakai_04",
+    "id": "nagoya_nanzan_plus2_shakai_04",
     "subject": "shakai",
     "course": "nagoya-nanzan",
     "examType": "chugaku",
@@ -324,7 +324,7 @@ export const SPLUS2_NZ: Question[] = [
     "memoryTip": "排他的経済水域は海岸線から200海里。島が1つ消えるだけで、国の広さが大きく変わる。"
   },
   {
-    "id": "nagoya-nanzan_plus2_eigo_01",
+    "id": "nagoya_nanzan_plus2_eigo_01",
     "subject": "eigo",
     "course": "nagoya-nanzan",
     "examType": "chugaku",
@@ -344,7 +344,7 @@ export const SPLUS2_NZ: Question[] = [
     "memoryTip": "主語がI・youでなく1人・1つなら、動詞に「s」（go→goes、study→studiesなど）。"
   },
   {
-    "id": "nagoya-nanzan_plus2_eigo_02",
+    "id": "nagoya_nanzan_plus2_eigo_02",
     "subject": "eigo",
     "course": "nagoya-nanzan",
     "examType": "chugaku",
@@ -364,7 +364,7 @@ export const SPLUS2_NZ: Question[] = [
     "memoryTip": "最上級は「the＋〜est」または「the most＋長い語」。範囲は「in／of」で表す。"
   },
   {
-    "id": "nagoya-nanzan_plus2_eigo_03",
+    "id": "nagoya_nanzan_plus2_eigo_03",
     "subject": "eigo",
     "course": "nagoya-nanzan",
     "examType": "chugaku",
@@ -384,7 +384,7 @@ export const SPLUS2_NZ: Question[] = [
     "memoryTip": "道案内の表現：Go straight（まっすぐ）／Turn right・left（右・左に曲がる）／next to（〜のとなり）。"
   },
   {
-    "id": "nagoya-nanzan_plus2_eigo_04",
+    "id": "nagoya_nanzan_plus2_eigo_04",
     "subject": "eigo",
     "course": "nagoya-nanzan",
     "examType": "chugaku",
