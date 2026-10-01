@@ -1,5 +1,6 @@
 // 公式集の討論・探求型マンガのレジストリ。LessonSection.mangaId → MangaScript を解決する。
 import type { MangaScript } from './manga-types';
+import { EXTRA_MANGA_SCRIPTS } from './manga-extra';
 import { mangaScriptsKoushikiK3Souji } from './manga-scripts-koushiki-k3souji';
 import { mangaScriptsKoushikiK4En1 } from './manga-scripts-koushiki-k4en1';
 import { mangaScriptsKoushikiK5En2 } from './manga-scripts-koushiki-k5en2';
@@ -596,6 +597,7 @@ const ALL_MANGA_SCRIPTS: Record<string, MangaScript> = {
   ...mangaScriptsEigoChugaku7,
   ...mangaScriptsEigoChugaku8,
   ...mangaScriptsEigoChugaku9,
+  ...EXTRA_MANGA_SCRIPTS,
 };
 
 export function getMangaScript(id: string): MangaScript | undefined {

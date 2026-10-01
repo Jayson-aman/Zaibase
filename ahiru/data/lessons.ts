@@ -12,11 +12,12 @@ import { kokoEigoLessons } from './lessons-koko-eigo';
 import { kokoShakaiLessons } from './lessons-koko-shakai';
 
 import { EXTRA_SECTION_FIGURES } from './lesson-extra-figures';
+import { EXTRA_MANGA_SECTIONS } from './manga-extra';
 import { EXTRA_SECTIONS } from './lesson-extra-sections';
 
 export type { Lesson };
 
-const baseLessons: Lesson[] = [
+export const baseLessons: Lesson[] = [
   ...sansuLessons,
   ...kokugoLessons,
   ...rikaLessons,
@@ -36,9 +37,12 @@ export const allLessons: Lesson[] = baseLessons.map((l) => {
   let changed = false;
   const sections = l.sections.map((sec, i) => {
     const fid = EXTRA_SECTION_FIGURES[`${l.id}#${i}`];
-    if (!fid || sec.figureId) return sec;
+    const mid = EXTRA_MANGA_SECTIONS[`${l.id}#${i}`];
+    const needFig = fid != null && !sec.figureId;
+    const needManga = mid != null && !sec.mangaId;
+    if (!needFig && !needManga) return sec;
     changed = true;
-    return { ...sec, figureId: fid };
+    return { ...sec, ...(needFig ? { figureId: fid } : {}), ...(needManga ? { mangaId: mid } : {}) };
   });
   // 前提になる計算の出し方（data/lesson-extra-sections.ts）を、節0の直後に差しこむ。
   const extra = EXTRA_SECTIONS[l.id];
