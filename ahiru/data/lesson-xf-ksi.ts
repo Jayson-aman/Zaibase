@@ -744,7 +744,7 @@ export const XF_KSI_FIGURES: Record<string, DiagramFigure> = {
 
 export const XF_KSI_SECTIONS: Record<string, string> = {
   'koko_sansu_newgrade10_01#0': 'xf_koko_sansu_newgrade10_01',
-  'koko_sansu_newgrade10_02#3': 'xf_koko_sansu_newgrade10_02',
+  'koko_sansu_newgrade10_02#1': 'xf_koko_sansu_newgrade10_02',
   'koko_sansu_newgrade10_03#1': 'xf_koko_sansu_newgrade10_03',
   'koko_sansu_newgrade10_04#0': 'xf_koko_sansu_newgrade10_04',
   'koko_sansu_newgrade10_05#0': 'xf_koko_sansu_newgrade10_05',

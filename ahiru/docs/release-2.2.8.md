@@ -1,0 +1,38 @@
+# ahiru 2.2.8 リリース手順（2.2.7 の審査が終わってから）
+
+**2.2.7 が審査中のあいだは、ビルドの提出も Functions の再デプロイもしない。**
+
+## 0. 前提
+- App Store Connect の導入オファー（Pro・Max の月額に「前払い・1週間・¥500」、全地域）を設定済みか確認する。
+- `app.json` の version は 2.2.8 に上げ済み。ビルド番号は EAS の remote 採番（`appVersionSource: remote`）。
+
+## 1. ビルド（必ず絶対パスで）
+```
+cd ~/zaibase-repo/ahiru
+git pull origin claude/water-soil-pollution-compliance-bekue1
+grep bundleIdentifier app.json        # com.zaibase.exam であること
+npm install
+eas build --platform ios --profile production
+```
+開始直後の表示で `Bundle Identifier: com.zaibase.exam` / `Project: @masaya.nanjo/entrance-exam` を確認する。
+reanimated 4.5.3 / worklets 0.11.1 は固定のまま（レンジ指定に戻さない）。
+
+## 2. TestFlight で実機確認（iPhone）
+1. ペイウォールの文言が「16,000問」「50校（各校100問以上）」になっている。導入オファー設定済みなら「まず¥500で7日間」が出る。
+2. 分数が縦（分子・横棒・分母）で、高さが合っている（translateY の実機確認が未了）。
+3. 問題を解いて答え合わせ → 解説が7〜8枚のスライド。「つぎへ／もどる」が動く。不正解でも同じ解説が2回出ない。
+4. 解説の最後の「つまずいたら、おさらい」が開く。
+5. 学校別タブ → 学校をタップ → 「▶ ○○の○○の問題を解く」から問題に進める。
+6. ロック中の単元（高校受験・中学受験とも）を開く → 導入＋最初の節、図解の最初の2枚、3枚目は鍵ボタン。
+7. 無料の単元で、動く図解が最後まで進む。
+8. 買い切り（公式集¥200・単元¥150）：購入前にログイン案内が出る。まとめ買いは審査通過後に購入できる。
+
+## 3. 提出
+- 「このバージョンで何が新しくなったか」は `store-metadata/ja/release_notes.txt`。
+- 紹介文は `store-metadata/ja/description.txt`（16,000問・各校100問以上は 2.2.8 から有効）。
+- 紹介画像（案）は `store-metadata/screenshots-new/`。実機のスクリーンショットに差しかえるのがおすすめ。
+- 審査用メモ・デモアカウントは 2.2.7 のものを引き継ぐ（情報はチャットやリポジトリに書かない）。
+
+## 4. 審査が通ったあと
+- Functions の再デプロイ：`cd ~/zaibase-repo/ahiru && firebase deploy --only functions`（`stripeUnlock.js`・`contentUnlock.js`・`feedback.js`（LINE）が変わっている）。`firebase deploy --only firestore:rules` も。
+- LINE 通知の Secret：`LINE_CHANNEL_ACCESS_TOKEN`・`LINE_NOTIFY_TO`（未設定でも動作は壊れない）。
