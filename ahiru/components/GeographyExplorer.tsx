@@ -16,6 +16,7 @@ import Animated, {
   withSpring,
 } from 'react-native-reanimated';
 import Svg, { Path as SvgPath, G as SvgG } from 'react-native-svg';
+import RegionMap from './RegionMap';
 import {
   geographyRegions,
   industrialZoneSummary,
@@ -402,6 +403,18 @@ function RegionDetail({
         </TouchableOpacity>
       </View>
 
+      {(layer === 'terrain' || layer === 'mountains') && (
+        <>
+          <Text style={styles.zoomMapTitle}>🔍 {regionKey}の拡大地図（県庁所在地・山・川・平野・海流）</Text>
+          <RegionMap
+            regionId={region.id}
+            regionKey={regionKey}
+            width={Math.min(Math.round(Dimensions.get('window').width) - 32, 560)}
+            focus={layer === 'mountains' ? 'terrain' : 'all'}
+          />
+        </>
+      )}
+
       {layer === 'terrain' && (
         <>
           <DetailSection title="🏔 地形" items={[region.terrain]} />
@@ -538,6 +551,7 @@ function DetailSection({ title, items }: { title: string; items: string[] }) {
 }
 
 const styles = StyleSheet.create({
+  zoomMapTitle: { fontSize: 14, fontWeight: '800', color: '#334155', marginTop: 4 },
   root: { marginBottom: 20 },
   headerRow: {
     flexDirection: 'row',
