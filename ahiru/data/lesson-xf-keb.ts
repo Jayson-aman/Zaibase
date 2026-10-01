@@ -572,6 +572,115 @@ F['xf_koko_eigo_s040'] = show([
     '主語が何でも、過去形は同じ形', MAIN),
 ], '一般動詞の過去形');
 SEC['koko_eigo_s040#1'] = 'xf_koko_eigo_s040';
+// ── be動詞の疑問文と答え方（Yes / No） ──
+F['xf_koko_eigo_s042'] = show([
+  S('❓ Is Tom your brother? に Yes, Tom is. と答えてよいでしょうか。日本語では名前をくり返しても自然ですが、英語では代名詞（だいめいし）に置きかえるのが約束です。正しくは Yes, he is.',
+    [...why('Yes, Tom is. は、なぜ不自然？'), bx(14, 46, 292, 30, 'Is Tom your brother?', C.gray, FILL.gray, 14), ...sl(['Yes,', 'Tom', 'is.'], 92, { h: 32, size: 14, cols: [GRAY, RED, GRAY] }), lb(160, 138, '×　名前をくり返さない', 13, C.red, 'middle', true), ...sl(['Yes,', '!he', 'is.'], 154, { h: 32, size: 14 })],
+    '答えの主語は、代名詞に置きかえる', RED),
+  S('置きかえの対応を覚えましょう。Tom・your father → he、Mary → she、this／that → it、these／those・your parents → they。指すものによって代名詞が決まります。',
+    [...why('どの語を、どの代名詞にする？'), ...tbl(['聞かれた主語', '答えの主語'], [['Tom / your father', 'he'], ['Mary', 'she'], ['this / that', 'it'], ['these / those / your parents', 'they']], { y0: 56, rh: 26, gap: 6, cols: [BLUE, GREEN], size: 12 })],
+    '主語の置きかえ', GREEN),
+  S('❓ this や that で聞かれたら？ Is that your bike? → Yes, it is. です。Yes, that is. とは答えません。these や those なら they を使います。Are these your books? → Yes, they are.',
+    [...why('this / that で聞かれたら、どう答える？'), bx(10, 46, 300, 26, 'Is that your bike?', C.gray, FILL.gray, 13), ...sl(['Yes,', '!it', 'is.'], 80, { h: 30, size: 13 }), bx(10, 128, 300, 26, 'Are these your books?', C.gray, FILL.gray, 13), ...sl(['Yes,', '!they', 'are.'], 160, { h: 30, size: 13 })],
+    'this / that → it　these / those → they', BLUE),
+  S('you で聞かれたら、自分のことなので I で答えます。Are you a student? → Yes, I am.　you が複数人（Are you and Ken ...?）なら we で答えます。Yes, we are.',
+    [...why('you で聞かれたら？'), ...tbl(['聞かれ方', '答え方'], [['Are you a student?', 'Yes, I am.'], ['Are you and Ken in the club?', 'Yes, we are.']], { y0: 56, rh: 40, gap: 12, cols: [BLUE, GREEN], size: 11 })],
+    'you → I か we', GREEN),
+  S('❓ Yes の答えは、なぜ短縮しないの？ 文の最後に来る語は強く発音されるので、短縮した形では言えないからです。○ Yes, I am.　× Yes, I\'m.　○ Yes, he is.　× Yes, he\'s.',
+    [...why('Yes, I\'m. は、なぜ使えない？'), ...tbl(['Yes の答え', ''], [['Yes, I am.　○', 'Yes, I\'m.　×'], ['Yes, he is.　○', 'Yes, he\'s.　×']], { y0: 56, rh: 40, gap: 12, cols: [GREEN, RED], size: 12 })],
+    'Yes では短縮しない', RED),
+  S('No の答えでは、短縮形を使ってかまいません。No, I\'m not.　No, he isn\'t.　No, they aren\'t. ただし Yes の答えでは短縮しないので、対にして覚えます。',
+    [...why('No のときは、短縮してもいい？'), ...tbl(['', ''], [['No, I\'m not.', 'No, I am not.'], ['No, he isn\'t.', 'No, he is not.'], ['No, they aren\'t.', 'No, they are not.']], { y0: 52, rh: 30, gap: 8, cols: [GREEN, GREEN], size: 12 })],
+    'No は短縮形が使える', GREEN),
+  S('疑問文そのものは、be動詞を主語の前に出して作ります。You are a soccer fan. → Are you a soccer fan?　疑問文を作るときは、be動詞を出したあとに元の位置にも残さないよう注意します（× Are you are ...?）。',
+    [...why('疑問文は、どう作る？'), ...sl(['You', 'are', 'a soccer fan.'], 52, { h: 32, size: 13 }), ar(160, 88, 160, 104, C.main), ...sl(['!Are', 'you', 'a soccer fan?'], 108, { h: 32, size: 13, cols: [GREEN] }), lb(160, 166, '移動であって複製ではない', 12, C.red, 'middle', true)],
+    'be動詞を前に出す', MAIN),
+  S('まとめです。答えるときは ① 主語を代名詞に ② Yes では短縮しない ③ No では短縮してよい ④ you には I か we。Is Tom your brother? → Yes, he is.',
+    [...row(['主語を\n代名詞に', 'Yes は\n短縮しない', 'No は\n短縮OK'], 40, MAIN, 12, 64), lb(160, 130, 'Is Tom your brother?', 13, C.ink, 'middle'), lb(160, 154, 'Yes, he is.　No, he isn\'t.', 14, C.green, 'middle', true)],
+    '代名詞で受けて、be動詞をそろえる', MAIN),
+], 'be動詞の疑問文の答え方');
+SEC['koko_eigo_s042#1'] = 'xf_koko_eigo_s042';
+
+// ── 一般動詞の疑問文 ──
+F['xf_koko_eigo_s044'] = show([
+  S('Are you play tennis? と書いてしまう人は少なくありません。❓なぜ誤りなの？ 一般動詞（play）の文には前に出せる be動詞がなく、be動詞と動詞が並ぶ形になるからです。',
+    [...why('Are you play tennis? は、なぜ誤り？'), ...sl(['!Are', 'you', '!play', 'tennis?'], 54, { h: 36, size: 14, cols: [RED, BLUE, RED, GREEN] }), lb(160, 108, 'be動詞と一般動詞が並んでいる　×', 13, C.red, 'middle', true)],
+    '一般動詞の文に be動詞は出ない', RED),
+  S('❓では、どうすればいいの？ まず「この文の述語は be動詞か、一般動詞か」を確かめます。be動詞なら前に出す。一般動詞なら、助動詞の do を借りて文頭に置きます。',
+    [...why('疑問文を作る入り口は？'), bx(86, 46, 148, 30, '述語は何？', C.purple, FILL.purple, 14), ar(130, 78, 82, 96, C.main), ar(190, 78, 238, 96, C.main), bx(10, 98, 144, 44, 'be動詞\n→ 前に出す', C.blue, FILL.blue, 13), bx(166, 98, 144, 44, '一般動詞\n→ do を借りる', C.green, FILL.green, 13)],
+    '二択：be動詞を出す／do を借りる', PURPLE),
+  S('do は主語と時によって3つに使い分けます。Do ＋ I／you／we／they／複数（現在）、Does ＋ he／she／it／人名／単数（現在）、Did ＋ すべての主語（過去）。',
+    [...why('Do / Does / Did は、どう選ぶ？'), ...tbl(['使う語', '主語・時'], [['Do（現在）', 'I・you・we・they・複数'], ['Does（現在）', 'he・she・it・人名・単数'], ['Did（過去）', 'すべての主語']], { y0: 56, rh: 34, gap: 10, cols: [GREEN, BLUE], size: 12 })],
+    '現在は Do か Does、過去は Did', BLUE),
+  S('実際に作ってみましょう。You play tennis. → Do you play tennis?　He plays tennis. → Does he play tennis?　She went to Kyoto. → Did she go to Kyoto?',
+    [...why('それぞれ、どう変わる？'), ...tbl(['ふつうの文', '疑問文'], [['You play tennis.', '!Do you play tennis?'], ['He plays tennis.', '!Does he play tennis?'], ['She went to Kyoto.', '!Did she go to Kyoto?']], { y0: 56, rh: 34, gap: 10, cols: [BLUE, GREEN], size: 11 })],
+    'do を文頭に、動詞は原形', GREEN),
+  S('❓ Does he plays soccer? は、なぜ誤り？ Does の中に三人称単数の s がすでに含まれているので、動詞に s を付けると二重になるからです。動詞は原形の play にします。',
+    [...why('Does のうしろの動詞は、なぜ原形？'), ...sl(['Does', 'he', '!plays', 'soccer?'], 54, { h: 36, size: 14, cols: [BLUE, BLUE, RED, GREEN] }), lb(160, 108, '三単現の s が二重になる　×', 13, C.red, 'middle', true), ...sl(['Does', 'he', '!play', 'soccer?'], 128, { h: 36, size: 14 })],
+    'Does → 動詞は原形', RED),
+  S('Did も同じです。Did に過去の意味がすでに含まれているので、動詞は原形にします。× Did you went there? → ○ Did you go there? 否定文とまったく同じ考え方です。',
+    [...why('Did のうしろの動詞は？'), ...sl(['Did', 'you', '!went', 'there?'], 54, { h: 36, size: 14, cols: [BLUE, BLUE, RED, GREEN] }), lb(160, 108, '過去の印が二重になる　×', 13, C.red, 'middle', true), ...sl(['Did', 'you', '!go', 'there?'], 128, { h: 36, size: 14 })],
+    'Did → 動詞は原形', RED),
+  S('まとめです。一般動詞の疑問文は「Do／Does／Did ＋ 主語 ＋ 動詞の原形 〜?」。be動詞と混ぜない（× Are you play ...?）。Do you play tennis?',
+    [...row(['Do/Does/Did', '主語', '動詞の原形'], 40, MAIN, 12, 54), lb(160, 118, 'Do you play tennis?', 15, C.green, 'middle', true), lb(160, 142, 'Are you play tennis?　×', 13, C.red, 'middle', true)],
+    'do を借り、動詞は原形', MAIN),
+], '一般動詞の疑問文');
+SEC['koko_eigo_s044#0'] = 'xf_koko_eigo_s044';
+
+// ── 主語をたずねる疑問文 ──
+F['xf_koko_eigo_s046'] = show([
+  S('これまでの疑問文は、たずねたい部分が目的語や場所だったので、語順の入れかえが必要でした。You saw Ken. → Who did you see?（あなたはだれを見ましたか）うしろの did you see が疑問文の語順です。',
+    [...why('「だれを」をたずねるときは？'), ...sl(['You', 'saw', 'Ken.'], 52, { h: 32, size: 13 }), ar(160, 88, 160, 104, C.main), ...sl(['Who', 'did', 'you', 'see?'], 108, { h: 32, size: 13, cols: [PURPLE, GREEN, BLUE, MAIN] })],
+    '目的語をたずねる → 語順を入れかえる', BLUE),
+  S('今回は主語をたずねます。Ken broke the window. → Who broke the window?（だれが窓を割りましたか）主語の Ken の位置に who を置くだけです。',
+    [...why('「だれが」をたずねるときは？'), ...sl(['Ken', 'broke', 'the window.'], 52, { h: 32, size: 13 }), ar(160, 88, 160, 104, C.main), ...sl(['!Who', 'broke', 'the window?'], 108, { h: 32, size: 13, cols: [PURPLE] })],
+    '主語の位置に who を置く', PURPLE),
+  S('❓なぜ did が要らないの？ who が主語の位置にあるので、語順を入れかえる必要がないからです。たずねたい部分が主語そのものなら、ふつうの文と同じ順序のままです。',
+    [...why('なぜ did を使わないの？'), ...sl(['Who', 'broke', 'the window?'], 54, { h: 36, size: 13, cols: [PURPLE, GREEN, MAIN] }), lb(160, 108, '主語 ＋ 動詞 ＋ 〜 のまま', 13, C.green, 'middle', true), lb(160, 134, 'Who did break the window?　×', 13, C.red, 'middle', true)],
+    '主語をたずねる → do / does / did は使わない', GREEN),
+  S('例を見ましょう。Who wants some tea?（お茶がほしい人はいますか）、Who lives in that house?（だれがあの家に住んでいますか）、What happened yesterday?（昨日何が起きましたか）。',
+    [...why('ほかにどんな文がある？'), ...tbl(['', ''], [['Who wants some tea?', '!主語 ＝ who'], ['Who lives in that house?', '!主語 ＝ who'], ['What happened yesterday?', '!主語 ＝ what']], { y0: 52, rh: 32, gap: 10, cols: [BLUE, GREEN], size: 11 })],
+    '疑問文なのに do / does / did が出てこない', BLUE),
+  S('❓現在の文では、動詞はどうなるの？ who や what は「だれか1人・何か1つ」として扱うので、動詞に -s が付きます。Who plays the piano in your family?（× Who play）',
+    [...why('who が主語のとき、動詞の形は？'), ...sl(['Who', '!plays', 'the piano?'], 54, { h: 36, size: 14, cols: [PURPLE, GREEN, MAIN] }), lb(160, 108, 'who は三人称単数あつかい → -s', 13, C.green, 'middle', true), lb(160, 134, 'Who play the piano?　×', 13, C.red, 'middle', true)],
+    'who ＋ 動詞の -s', GREEN),
+  S('過去の文は、ふつうの過去形です。Who broke the window?　Who came to the party?　Who ate my cake?',
+    [...why('過去の文では？'), ...tbl(['', ''], [['Who broke the window?', '→ broke'], ['Who came to the party?', '→ came'], ['Who ate my cake?', '→ ate']], { y0: 52, rh: 32, gap: 10, cols: [PURPLE, GREEN], size: 12 })],
+    '過去 ＝ ふつうの過去形', GREEN),
+  S('答え方です。「主語 ＋ do／does／did」で短く答えられます。Who plays the piano? — My sister does.　Who broke the window? — Ken did.　ただし be動詞で聞かれたら be動詞で受けます。Who is absent today? — Tom is.',
+    [...why('答えるときは、どう言う？'), ...tbl(['聞かれ方', '答え方'], [['Who plays the piano?', 'My sister does.'], ['Who broke the window?', 'Ken did.'], ['Who is absent today?', 'Tom is.']], { y0: 56, rh: 34, gap: 10, cols: [BLUE, GREEN], size: 11 })],
+    '聞かれた動詞の種類に合わせて受ける', MAIN),
+  S('まとめです。主語をたずねるときは「疑問詞 ＋ 動詞 〜?」。do／does／did は使いません。現在なら動詞に -s。× My mother is. ではなく ○ My mother does. と答えます。',
+    [...row(['Who / What', '＋ 動詞', '＋ 〜?'], 40, MAIN, 13, 50), lb(160, 114, 'Who wrote this book?　○', 14, C.green, 'middle', true), lb(160, 138, 'Who did write this book?　×', 14, C.red, 'middle', true)],
+    '語順は変えない', MAIN),
+], '主語をたずねる疑問文');
+SEC['koko_eigo_s046#0'] = 'xf_koko_eigo_s046';
+
+// ── 第2文型 SVC②：become / look / feel など ──
+F['xf_koko_eigo_s050'] = show([
+  S('「彼は疲れているように見える」は He looks tired. です。❓ look は「見る」ではないの？ ここでは「S ＝ C」の関係を作る動詞で、be動詞と同じはたらきをします。You look tired. は you ＝ tired（疲れた）という関係です。',
+    [...why('look は、なぜ「見る」ではないの？'), ...sl(['You', 'look', 'tired.'], 54, { h: 36, size: 14, cols: [BLUE, GREEN, MAIN] }), ar(60, 96, 60, 108, C.blue), lb(160, 118, 'you ＝ tired', 15, C.green, 'middle', true), lb(160, 144, 'be動詞（You are tired.）と同じはたらき', 12, C.ink, 'middle')],
+    'look ＝ S と C をイコールで結ぶ', GREEN),
+  S('S ＝ C を作る動詞は be動詞だけではありません。まず「変化」を表すものです。become（なる）、get（なる）、turn（変わる）、grow（なる）。He became a doctor.／It got dark.／The leaves turned red.',
+    [...why('「〜になる」を表す動詞は？'), ...tbl(['動詞', '例'], [['become', 'She became famous.'], ['get', 'It got dark.'], ['turn', 'The leaves turned red.'], ['grow', 'He grew tall.']], { y0: 56, rh: 26, gap: 6, cols: [BLUE, GREEN], size: 11 })],
+    '変化 ＝ 〜になる', BLUE),
+  S('「状態が続く」を表す動詞もあります。keep（〜のままでいる）、stay、remain。Please keep quiet.　The store stays open until nine.',
+    [...why('「〜のままである」を表す動詞は？'), ...tbl(['動詞', '例'], [['keep', 'Please keep quiet.'], ['stay', 'The store stays open.'], ['remain', 'It remained unsolved.']], { y0: 56, rh: 32, gap: 10, cols: [BLUE, GREEN], size: 11 })],
+    '継続 ＝ 〜のままである', BLUE),
+  S('「感覚」を表す動詞です。look（見える）、sound（聞こえる）、feel（感じる）、taste（味がする）、smell（においがする）。This soup tastes good.（このスープはおいしい味がする）',
+    [...why('「〜に見える・聞こえる」を表す動詞は？'), ...tbl(['動詞', '例'], [['look', 'You look tired.'], ['sound', 'That sounds interesting.'], ['feel', 'I feel sick.'], ['taste', 'This soup tastes good.'], ['smell', 'These flowers smell sweet.']], { y0: 56, rh: 22, gap: 4, cols: [BLUE, GREEN], size: 11 })],
+    '感覚 ＝ 〜に見える・聞こえる', BLUE),
+  S('❓うしろには、何を置くの？ これらの動詞のうしろに来るのは形容詞（けいようし）です。「うれしそうに見える」と訳すからといって、副詞（happily）は置きません。You look happy.',
+    [...why('You look happily. は、なぜ誤り？'), ...sl(['You', 'look', '!happily', 'today.'], 54, { h: 36, size: 14, cols: [BLUE, GREEN, RED, MAIN] }), lb(160, 108, 'happily は「動作の様子」を表す副詞', 12, C.red, 'middle', true), ...sl(['You', 'look', '!happy', 'today.'], 128, { h: 36, size: 14 })],
+    'うしろは形容詞（happy）', RED),
+  S('イコールで確かめましょう。You look happy. なら you ＝ happy、This soup tastes good. なら this soup ＝ good です。S ＝ C が成り立てば、うしろは形容詞（または名詞）です。',
+    [...why('見分けるには？'), ...tbl(['文', 'イコールの関係'], [['You look happy.', 'you ＝ happy'], ['This soup tastes good.', 'this soup ＝ good'], ['He became a doctor.', 'he ＝ a doctor']], { y0: 56, rh: 34, gap: 10, cols: [BLUE, GREEN], size: 12 })],
+    'S ＝ C を確かめる', MAIN),
+  S('まとめです。become・get・look・feel・sound・taste・smell・keep・stay などは be動詞の代わりをする動詞。うしろには形容詞を置きます。become のうしろには名詞も置けます（become a doctor）。',
+    [...row(['変化\nbecome get', '継続\nkeep stay', '感覚\nlook feel'], 40, MAIN, 12, 64), lb(160, 130, 'S ＝ C ：うしろは形容詞', 14, C.green, 'middle', true)],
+    'be動詞の代わりをする動詞', MAIN),
+], 'be動詞の代わりをする動詞');
+SEC['koko_eigo_s050#0'] = 'xf_koko_eigo_s050';
 
 export const XF_KEB_FIGURES: Record<string, DiagramFigure> = F;
 export const XF_KEB_SECTIONS: Record<string, string> = SEC;

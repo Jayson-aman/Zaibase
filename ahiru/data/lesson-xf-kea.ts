@@ -401,7 +401,7 @@ const e02: DiagramFigure = show([
   },
   {
     note: '❓not as ～ as は、どう言いかえられるのでしょう。→ 「同じ程度に達していない」という意味です。Ken is not as tall as Mike. は、マイクのほうが高いので、Mike is taller than Ken. と言いかえられます。as のあとに来るのが「上の人」です。',
-    add: fresh(head('not as ～ as ＝ 達していない'), ...bar(80, 60, 'Ken', C.blue, FILL.blue), ...bar(200, 82, 'Mike', C.red, FILL.red), ln(110, 62, 240, 62, C.gray, true), lb(160, 52, '同じ高さに届かない', 10, C.gray, 'middle'), bx(10, 134, 300, 0, undefined, '#FFFFFF', '#FFFFFF'), ...cap('Mike is taller than Ken.', C.red)),
+    add: fresh(head('not as ～ as ＝ 達していない'), ...bar(80, 60, 'Ken', C.blue, FILL.blue), ...bar(200, 82, 'Mike', C.red, FILL.red), ln(110, 62, 240, 62, C.gray, true), lb(160, 52, '届かない', 10, C.gray, 'middle'), ...cap('Mike is taller than Ken.', C.red)),
   },
   {
     note: '次は関係代名詞です。❓なぜ who・whom・whose のように形が分かれるのでしょう。→ 関係代名詞は、もとの文で主語・目的語・所有をしていた名詞の「代わり」だからです。もとの文での働きによって、形が決まります。',
@@ -425,7 +425,7 @@ const e02: DiagramFigure = show([
   },
   {
     note: '関係詞を選ぶ手順です。①先行詞の種類（人か物か、最上級か）を見る。②あとの文が完全か不完全かを見る。完全な文なら関係副詞（where・when・why・how）、不完全なら関係代名詞。the way how は誤りです。',
-    add: fresh(...flow(['先行詞は\n何か', 'あとの文は\n完全？不完全？', '完全→関係副詞\n不完全→関係代名詞'], 26, { h: 66, size: 10, color: C.blue, fill: FILL.blue }).flat(), lb(160, 118, '最上級・序数・all などの先行詞なら that', 11, C.ink, 'middle', true), ...cap('先行詞→あとの文の順に見る', C.blue)),
+    add: fresh(...flow(['先行詞は\n何か', 'あとの文は\n完全？不完全？', '完全→副詞\n不完全→代名詞'], 26, { h: 66, size: 10, color: C.blue, fill: FILL.blue }).flat(), lb(160, 118, '最上級・序数・all などの先行詞なら that', 11, C.ink, 'middle', true), ...cap('先行詞→あとの文の順に見る', C.blue)),
   },
   {
     note: 'まとめです。比較は何と比べるかで三つの形に分かれ、最上級は「他のどの一つも及ばない」と言いかえられる。関係代名詞は、もとの文での名詞の働きで格が決まる。強く限定された先行詞は that、補足（コンマ）は which・who。',
@@ -449,10 +449,10 @@ const r2 = chips(['Being', 'tired,', 'I', 'went to bed early.'], 92, C.green, FI
 const e03: DiagramFigure = show([
   {
     note: '分詞構文（ぶんしこうぶん）は、「Because I was tired」のような副詞節（接続詞を含む節）を、分詞を使って短くした表現です。主に書き言葉で使います。',
-    add: [head('接続詞のある節を、短くする'), ...r1.els, lb(160, 80, '長い文を すっきり短くする', 12, C.ink, 'middle', true), ...cap('Because I was tired, …')],
+    add: [head('接続詞のある節を、短くする'), ...r1.els, ...cap('長い文を、すっきり短くする')],
   },
   {
-    note: 'ステップ①：接続詞を省略します。Because を消します。これだけでは、だれが tired なのか、どんな理由なのかが分かるか、次に考えます。',
+    note: 'ステップ①：接続詞を省略します。Because を消します。理由を表す接続詞がなくなっても、文の意味から「疲れていたので」と読み取れます。',
     add: [strike(r1, 0, 30), ...band(150, lb(160, 190, '① 接続詞 Because を消す', 12, C.red, 'middle', true))],
   },
   {
@@ -489,6 +489,97 @@ const e03: DiagramFigure = show([
   },
 ], '分詞構文の作り方');
 
+// ───────── koko_eigo_04_reading スキミングとスキャニング ─────────
+const para = (x: number, y: number, w: number, hi = true): E[] => [0, 1, 2, 3, 4].map((i) => bx(x, y + i * 12, i === 4 ? w * 0.6 : w, 7, undefined, hi && (i === 0 || i === 4) ? C.red : C.gray, hi && (i === 0 || i === 4) ? FILL.red : FILL.gray));
+const e04: DiagramFigure = show([
+  {
+    note: '長文は、いきなり頭から読み始めません。①スキミングで全体の「地図」をつくる。②設問を先に見る。③スキャニングで答えの根拠を探す。この順番で読むと、時間内に正確に答えられます。',
+    add: [head('長文を読む順番'), ...flow(['① スキミング\n全体をつかむ', '② 設問を\n先読み', '③ スキャニング\n根拠を探す'], 28, { h: 62, size: 11, color: C.blue, fill: FILL.blue }).flat(), ...cap('どれか一つではなく、組み合わせる')],
+  },
+  {
+    note: 'スキミングは、文章全体をすばやく読んで「テーマと流れ」をつかむ技術です。タイトル・小見出し、各段落の第1文、各段落の最終文を読みます。',
+    add: fresh(head('スキミング：段落の最初と最後を読む'), ...para(12, 30, 90), ...para(116, 30, 90), ...para(220, 30, 90), lb(57, 98, '段落 1', 10, C.gray, 'middle'), lb(161, 98, '段落 2', 10, C.gray, 'middle'), lb(265, 98, '段落 3', 10, C.gray, 'middle'), lb(160, 122, '赤い所（第1文・最終文）を読む', 12, C.red, 'middle', true), ...cap('題名・小見出し → 各段落の最初と最後', C.red)),
+  },
+  {
+    note: '❓なぜ段落の最初と最後を読むのでしょう。→ 要点が詰まっているからです。最初の文は話題（トピックセンテンス）、最後の文はまとめや話の転換になることが多く、真ん中の文は根拠・例・説明であることが多いからです。',
+    add: fresh(head('段落の中身'), bx(20, 26, 280, 24, '最初の文 ＝ 話題（何の話か）', C.red, FILL.red, 12), bx(20, 56, 280, 24, '真ん中 ＝ 根拠・例・説明', C.gray, FILL.gray, 12), bx(20, 86, 280, 24, '最後の文 ＝ まとめ・転換', C.red, FILL.red, 12), ...cap('要点は最初と最後に集まる', C.red)),
+  },
+  {
+    note: 'スキャニングは、必要な情報（数字・固有名詞・年代）をすばやく探し出す技術です。「いつ・どこで・だれが・どのくらい」を聞かれたときに使います。大文字で始まる語や数字は目立つので見つけやすいです。',
+    add: fresh(head('スキャニング：キーワードだけを探す'), bx(20, 26, 280, 26, 'Why did Tom leave the room?', C.blue, FILL.blue, 12), lb(160, 66, '↓ Tom と left だけを探す', 11, C.blue, 'middle', true), bx(20, 78, 280, 8, undefined, C.gray, FILL.gray), bx(20, 92, 280, 20, 'Tom left the room because …', C.red, FILL.red, 11), bx(20, 118, 200, 8, undefined, C.gray, FILL.gray), ...cap('そこだけを重点的に読む', C.red)),
+  },
+  {
+    note: '❓なぜ設問を先に読むのでしょう。→ 何が問われているかが分かってから読むと、答えの根拠になる場所を重点的に読めるからです。Why did Tom leave the room? と分かっていれば、Tom left the room because … の部分が目に飛びこんできます。',
+    add: fresh(head('設問が先 → 読む場所が絞れる'), bx(15, 28, 130, 36, '設問を知らずに読む', C.gray, FILL.gray, 11), bx(175, 28, 130, 36, '設問を知って読む', C.green, FILL.green, 11), ...para(30, 78, 100, false), ...para(190, 78, 100, true), lb(80, 142, '全部を同じ力で読む', 10, C.gray, 'middle'), lb(240, 142, '根拠の所を重点的に', 10, C.green, 'middle', true), ...band(150, lb(160, 190, '時間を大きく節約できる', 12, C.green, 'middle', true))),
+  },
+  {
+    note: '❓設問の選択肢も全部読んでおくべきでしょうか。→ 読みすぎは時間の無駄になることがあります。設問のキーワードだけを抜き出し、「何が問われているか」だけをつかんでおけば十分です。',
+    add: fresh(head('先に読むのは「キーワード」だけ'), bx(20, 26, 280, 26, 'Why did Tom leave the room?', C.blue, FILL.blue, 12), ar(160, 54, 160, 74, C.main), bx(60, 78, 200, 28, 'Tom ／ leave ／ Why（理由）', C.green, FILL.green, 12), lb(160, 126, '選択肢は、本文を読んでから確かめる', 11, C.gray, 'middle'), ...cap('キーワードを 2 つ 3 つ覚える', C.green)),
+  },
+  {
+    note: '手順のまとめです。まずスキミングで全体をつかむ。次に設問を確認してキーワードを決める。最後にスキャニングで根拠の箇所を探し、そこを精読します。どれか一つだけではなく、組み合わせて使います。',
+    add: fresh(...flow(['スキミング', '設問の\nキーワード', 'スキャニング', '根拠を\n精読'], 26, { h: 66, size: 11, color: C.blue, fill: FILL.blue, gap: 12 }).flat(), lb(160, 120, '全体 → 設問 → 根拠', 12, C.ink, 'middle', true), ...cap('地図を持ってから探しに行く', C.blue)),
+  },
+  {
+    note: 'まとめです。スキミングは段落の最初と最後で全体をつかむ。スキャニングはキーワードで根拠を探す。設問を先に読むと、読む場所が絞れる。組み合わせて使うことが大切です。',
+    add: fresh(bx(15, 14, 290, 30, 'スキミング ＝ 最初と最後で全体をつかむ', C.red, FILL.red, 12), bx(15, 52, 290, 30, 'スキャニング ＝ キーワードで根拠を探す', C.blue, FILL.blue, 12), bx(15, 90, 290, 30, '設問を先に読むと、読む場所が絞れる', C.green, FILL.green, 12), ...cap('組み合わせて使う', C.green)),
+  },
+], 'スキミングとスキャニング');
+
+// ───────── koko_eigo_05_writing 5文型 ─────────
+const ROLE: Record<string, [string, string]> = { S: [C.blue, FILL.blue], V: [C.red, FILL.red], O: [C.green, FILL.green], C: [C.purple, FILL.purple], M: [C.gray, FILL.gray] };
+/** 文の部品を、役割（S・V・O・C）ごとに色分けして並べる。役割の文字は箱の下に出す。 */
+const sent = (parts: [string, string][], y: number, x0 = 10, size = 12): E[] => {
+  const ws = parts.map(([t]) => Math.max(34, t.length * 6.6 + 16));
+  let x = x0;
+  const out: E[] = [];
+  parts.forEach(([t, k], i) => {
+    const [c, f] = ROLE[k];
+    out.push(bx(x, y, ws[i], 28, t, c, f, size));
+    if (k !== 'M') out.push(lb(x + ws[i] / 2, y + 40, k, 12, c, 'middle', true));
+    x += ws[i] + 6;
+  });
+  return out;
+};
+const e05: DiagramFigure = show([
+  {
+    note: '英語のすべての文は、五つの型（文型）のどれかに当てはまります。S は主語、V は動詞、O は目的語、C は補語です。この五つが英作文の土台になります。',
+    add: [head('5 つの文型'), bx(10, 24, 300, 20, 'SV　　　Birds fly.', C.blue, FILL.blue, 11), bx(10, 48, 300, 20, 'SVC　　He is kind.', C.purple, FILL.purple, 11), bx(10, 72, 300, 20, 'SVO　　I like music.', C.green, FILL.green, 11), bx(10, 96, 300, 20, 'SVOO　He gave me a book.', C.red, FILL.red, 11), bx(10, 120, 300, 20, 'SVOC　They call him Ken.', C.main, FILL.warm, 11), ...cap('すべてこの 5 つのどれか', C.ink, 12)],
+  },
+  {
+    note: 'いちばん短いのが SV です。Birds fly.（鳥は飛ぶ）。主語と動詞だけで文が完成します。',
+    add: fresh(head('SV：主語 ＋ 動詞'), ...sent([['Birds', 'S'], ['fly.', 'V']], 40, 90, 14), ...cap('これだけで一つの文')),
+  },
+  {
+    note: '❓SVC の C（補語）は、何を表すのでしょう。→ 主語の性質や状態です。He is kind. では He ＝ kind の関係。S ＝ C が成り立つのが SVC の目印です。She became a teacher. も、She ＝ a teacher です。',
+    add: fresh(head('SVC：S ＝ C'), ...sent([['He', 'S'], ['is', 'V'], ['kind.', 'C']], 34, 70, 14), lb(160, 104, 'He ＝ kind（同じ人の状態）', 12, C.purple, 'middle', true), ...cap('S ＝ C なら SVC', C.purple)),
+  },
+  {
+    note: 'SVO は「〜を」にあたる目的語（O）を取ります。I like music.（私は音楽が好き）。SVOO は目的語を二つ取り、「人に物を渡す」形です。He gave me a book.（彼は私に本をくれた）。',
+    add: fresh(head('SVO と SVOO'), ...sent([['I', 'S'], ['like', 'V'], ['music.', 'O']], 24, 70, 13), ...sent([['He', 'S'], ['gave', 'V'], ['me', 'O'], ['a book.', 'O']], 88, 40, 13), lb(160, 144, '人に　物を', 11, C.gray, 'middle'), ...cap('SVOO ＝ 〜に …を', C.green)),
+  },
+  {
+    note: '❓SVOC の C は？ → 目的語の状態や名前です。They call him Ken. では him ＝ Ken が成り立ちます。SVC は S ＝ C、SVOC は O ＝ C が目印です。',
+    add: fresh(head('SVOC：O ＝ C'), ...sent([['They', 'S'], ['call', 'V'], ['him', 'O'], ['Ken.', 'C']], 34, 50, 14), lb(160, 104, 'him ＝ Ken（O ＝ C）', 12, C.purple, 'middle', true), ...cap('O ＝ C なら SVOC', C.purple)),
+  },
+  {
+    note: '次は日本語を英語にする練習です。❓なぜ語順を入れかえるのでしょう。→ 日本語は動詞が最後ですが、英語は動詞が主語のすぐ後ろに来るからです。「私は毎日図書館で本を読む」は、I read books in the library every day. の順になります。',
+    add: fresh(head('動詞は主語のすぐ後ろ'), lb(10, 30, '日本語', 11, C.gray, 'start', true), ...rowb(['私は', '毎日', '図書館で', '本を', '読む'], 36, 24, C.gray, FILL.gray, 10, 10, 310, 4), lb(10, 82, '英語', 11, C.red, 'start', true), ...rowb(['I', 'read', 'books', 'in the library', 'every day'], 88, 24, C.red, FILL.red, 9, 10, 310, 4), ar(260, 62, 100, 86, C.main, true), ...cap('読む（V）を主語の後ろへ', C.red)),
+  },
+  {
+    note: '❓日本語で主語が省かれているときは? → 英語では必ず主語を補います。「今日は雨が降っています」は、天気を表す It を主語にして It is raining today. と書きます。',
+    add: fresh(head('主語を補う'), bx(15, 28, 290, 30, '今日は雨が降っています。（主語がない）', C.gray, FILL.gray, 12), ar(160, 60, 160, 78, C.main), ...sent([['It', 'S'], ['is raining', 'V'], ['today.', 'M']], 86, 40, 13), ...cap('天気は It が主語', C.blue)),
+  },
+  {
+    note: 'よく使う基本の構文があります。There is／are 〜（〜がある）、It takes 〜 to …（…するのに〜かかる）、It is … to 〜（〜することは…だ）、I want you to 〜（あなたに〜してほしい）。どれも英作文でそのまま使える型です。',
+    add: fresh(head('英作文で使える型'), bx(10, 22, 300, 26, 'There is a cat on the roof.', C.blue, FILL.blue, 11), bx(10, 52, 300, 26, 'It takes 30 minutes to walk to school.', C.green, FILL.green, 11), bx(10, 82, 300, 26, 'It is important to study every day.', C.red, FILL.red, 11), bx(10, 112, 300, 26, 'I want you to come with me.', C.purple, FILL.purple, 11), ...cap('型ごと覚えて使う')),
+  },
+  {
+    note: 'まとめです。英語の文は五つの型のどれか。SVC は S＝C、SVOC は O＝C。日本語を英語にするときは、①主語を補う ②時制を決める ③動詞を主語のすぐ後ろに置く、の順に考えます。',
+    add: fresh(bx(15, 14, 290, 30, '5 文型：SV・SVC・SVO・SVOO・SVOC', C.blue, FILL.blue, 12), bx(15, 52, 290, 30, 'SVC は S ＝ C、SVOC は O ＝ C', C.purple, FILL.purple, 12), bx(15, 90, 290, 30, '主語を補う → 時制 → 動詞は主語の後ろ', C.green, FILL.green, 12), ...cap('型に当てはめて書く', C.green)),
+  },
+], '英語の基本文型（5文型）');
+
 export const XF_KEA_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_eigo_s001': s001,
   'xf_koko_eigo_s003': s003,
@@ -501,6 +592,8 @@ export const XF_KEA_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_eigo_01_tense': e01,
   'xf_koko_eigo_02_comparison': e02,
   'xf_koko_eigo_03_infinitive': e03,
+  'xf_koko_eigo_04_reading': e04,
+  'xf_koko_eigo_05_writing': e05,
 };
 
 export const XF_KEA_SECTIONS: Record<string, string> = {
@@ -515,4 +608,6 @@ export const XF_KEA_SECTIONS: Record<string, string> = {
   'koko_eigo_01_tense#4': 'xf_koko_eigo_01_tense',
   'koko_eigo_02_comparison#4': 'xf_koko_eigo_02_comparison',
   'koko_eigo_03_infinitive#3': 'xf_koko_eigo_03_infinitive',
+  'koko_eigo_04_reading#0': 'xf_koko_eigo_04_reading',
+  'koko_eigo_05_writing#0': 'xf_koko_eigo_05_writing',
 };

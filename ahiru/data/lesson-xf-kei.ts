@@ -407,6 +407,126 @@ const f_s418 = show([
     '練習で3回、本番と同じ順番で通す', YELLOW),
 ], '英作文を先に書き、解答欄のずれを防ぐ手順を持つ');
 
+// ── 公立入試の全体像⑤：目標点別の戦い方 ──
+const SEGN = ['リスニング', '語形変化', '会話文', '長文', '英作文'];
+const SEGC: Col[] = [BLUE, GREEN, MAIN, PURPLE, RED];
+// 積み上げの横棒。pts は5つの得点、y は棒の上端、label は左上の見出し
+const stackBar = (pts: number[], y: number, label: string, names: boolean): DiagramElement[] => {
+  const k = 2.9;
+  let x = 15;
+  const out: DiagramElement[] = [lb(15, y - 6, label, 11, C.ink, 'start', true)];
+  pts.forEach((p, i) => {
+    out.push(bx(x, y, p * k, 26, names ? `${SEGN[i]}\n${p}` : String(p), SEGC[i][0], SEGC[i][1], names ? 9 : 11));
+    x += p * k;
+  });
+  return out;
+};
+const T100 = [24, 16, 20, 28, 12];
+const T60 = [16, 14, 12, 12, 6];
+const T80 = [20, 16, 16, 20, 8];
+const T95 = [23, 16, 19, 25, 12];
+// SEC koko_eigo_s420 0
+const f_s420 = show([
+  S('100点満点の内訳です。リスニング24、語形変化16、会話文20、長文28、英作文12。合計は24＋16＋20＋28＋12＝100点です。同じ入試でも、目標点によってやるべきことは正反対になります。',
+    [...stackBar(T100, 30, '満点：100点', true)],
+    '満点の内訳：24＋16＋20＋28＋12＝100', BLUE),
+  S('目標60点の設計です。16＋14＋12＋12＋6＝60。長文は28点のうち12点だけ取ればよい設計です。満点の棒とくらべると、長文と会話文の取りこぼしを大きく見こんでいます。',
+    [...stackBar(T100, 24, '満点：100点', false), ...stackBar(T60, 70, '目標60点：16＋14＋12＋12＋6', false)],
+    '目標60点：長文は12点だけ取る', BLUE),
+  S('目標80点の設計です。20＋16＋16＋20＋8＝80。語形変化は満点が前提で、長文は記述にも取りかかって部分点をねらいます。英作文は型どおりに4文書いて8点です。',
+    [...stackBar(T100, 14, '満点：100点', false), ...stackBar(T60, 54, '目標60点', false), ...stackBar(T80, 94, '目標80点：20＋16＋16＋20＋8', false)],
+    '目標80点：語形変化は満点、記述は部分点', GREEN),
+  S('目標95点の設計です。23＋16＋19＋25＋12＝95。ここまで来ると、差がつくのは日本語記述の書き方と、英作文の文法的な正確さだけです。',
+    [...stackBar(T80, 8, '目標80点', false), ...stackBar(T95, 48, '目標95点：23＋16＋19＋25＋12', false), lb(160, 104, '差がつく：長文の記述・英作文の正確さ', 12, C.red, 'middle', true), lb(160, 126, '三単現の s や冠詞を1つ落とすと 1〜2点引かれる', 11, C.gray, 'middle', true)],
+    '目標95点：見直しの精度が最後の勝負', RED),
+  S('なぜ目標60点の人は、長文の日本語記述を最初から捨てるの？→ 長文28点のうち12点だけ取ればよいので、内容一致と語句選択だけを拾えば足ります。捨てると長文の時間が13分から8分に減り、その5分を語形変化と英作文の確実化に回せます。',
+    qa('60点の人は記述を捨てるの？', '長文は28点中12点でよい。\n内容一致と語句選択だけ拾う。\n長文が13分→8分、浮いた5分を\n語形変化と英作文の確実化に回す。', BLUE, 12),
+    '60点：浮いた5分を、確実な得点に回す', BLUE),
+  S('捨てるとは「見ない」ことではありません。一定時間で解けなければ即座に離れる、と決めておくことです。捨て候補は、長文の「40字以内で日本語で説明」型（4点・3分以上）、会話文の並べかえ型（3点）、リスニング最後の「英語で答える」型（3点）です。',
+    [bx(12, 8, 296, 38, '長文：40字以内の日本語で説明（4点・3分以上）', C.red, FILL.red, 12), bx(12, 52, 296, 38, '会話文：文を並べかえて対話を完成（3点）', C.red, FILL.red, 12), bx(12, 96, 296, 38, 'リスニング：最後の「英語で答える」（3点）', C.red, FILL.red, 12)],
+    '捨て候補は、時間のわりに点が小さい設問', RED),
+  S('英作文は捨ててはいけません。白紙なら0点ですが、「I think 〜. I have two reasons. First, 〜. Second, 〜.」の型どおりに4文書けば6〜8点入ります。捨てる対象は「時間をかけても入る点が小さい設問」で、苦手な大問まるごとではありません。',
+    [bx(14, 16, 130, 50, '英作文を捨てる\n0点', C.red, FILL.red, 14), bx(176, 16, 130, 50, '型どおり4文\n6〜8点', C.green, FILL.green, 14), lb(160, 98, 'I think ~.  I have two reasons.', 12, C.ink, 'middle', true), lb(160, 118, 'First, ~.  Second, ~.', 12, C.ink, 'middle', true)],
+    '英作文は、時間あたりの回収が最も大きい', GREEN),
+  S('まとめ。大問ごとの目標を自分で決め、過去問を解くたびにその数字と比べます。「70点だった」ではなく「長文が目標より6点低い」と言えるようにします。捨てる判断は、過去問を3年分解いて実力が見えてから、12月以降に固めます。',
+    chain(['目標点 → 大問ごとの数字を決める', '過去問のたびに、目標との差を見る', '捨てる判断は、12月以降に固める'], [BLUE, GREEN, YELLOW], 14, 34, 14, 13),
+    '「何点」ではなく「どこが何点低い」と言う', YELLOW),
+], '目標点によって、捨てる問題と取り切る問題は変わる');
+
+// ── 難関私立の傾向②：長文の語数・テーマ・設問形式 ──
+const insertText = (hi: number): DiagramElement[] => {
+  const ss = ['Some schools started a new program last year.', 'Students grew vegetables in the schoolyard.', 'They also cooked lunch with them.', 'Many parents said that the program changed their children.'];
+  const mk = ['ア', 'イ', 'ウ', 'エ'];
+  const out: DiagramElement[] = [];
+  ss.forEach((t, i) => {
+    out.push(bx(34, 4 + i * 36, 276, 26, t, C.blue, FILL.blue, 11));
+    out.push(ci(16, 4 + i * 36 + 31, 7, mk[i], hi === i ? C.red : C.gray, hi === i ? FILL.red : '#FFFFFF', 9));
+  });
+  return out;
+};
+// SEC koko_eigo_s422 0
+const f_s422 = show([
+  S('脱文挿入は「次の英文が入る最も適切な場所を［ア］〜［エ］から選びなさい」という形式です。例題の本文は4つの文で、各文のあとに［ア］〜［エ］があります。入れる文は At first, the teachers were not sure about it. です。',
+    [...insertText(-1)],
+    '挿入文：At first, the teachers were not sure about it.', BLUE),
+  S('本文を全部読み直さなくても、3つの手がかりで決まります。①指示語 ②接続語 ③冠詞です。',
+    [...chain(['① 指示語（this／it／such）', '② 接続語（However／For example／As a result）', '③ 冠詞（the がつく名詞は既出）'], [BLUE, GREEN, PURPLE], 8, 30, 14, 12), ...[]],
+    '3つの手がかり：指示語・接続語・冠詞', BLUE),
+  S('手がかり①：挿入文の it は、すぐ前に出てきたものを指します。it が何を指すかは、a new program です。つまり a new program が出た直後でなければなりません。なぜなら、指示語の指す内容が前になければ意味が通じないからです。',
+    [...insertText(0), ar(160, 100, 160, 100, C.red)],
+    'it ＝ a new program → 出た直後', BLUE),
+  S('手がかり②：At first は「始めたころは」という時間の起点を示します。最後の［エ］に置くと、プログラムが成果を出したあとに「最初は自信がなかった」と戻ることになり、時系列が逆転します。',
+    [bx(14, 10, 292, 30, 'At first ＝ 始めたころは（時の起点）', C.green, FILL.green, 13), ar(160, 42, 160, 56, C.main), ...cols(['始めた', '最初は不安', '野菜を育てた', '親の感想'], 60, 40, [GRAY, RED, BLUE, BLUE], 11, 10, 6), lb(160, 118, '時間の順に並べる → 起点のそば', 12, C.gray, 'middle', true)],
+    'At first は、出来事のはじめに置く', GREEN),
+  S('なぜ答えは［ア］なの？→ it が a new program を指すので、program が出た直後であること。At first が始めたころを示すので、プログラムを始めた直後であること。2つの手がかりが同じ場所を指します。',
+    qa('なぜ［ア］が正解？', 'it ＝ a new program → program の直後\nAt first ＝ 始めたころ → 開始直後\n2つの手がかりが、同じ［ア］を指す。', GREEN, 13),
+    '答え：［ア］', GREEN),
+  S('接続語の見分け方です。However は前と逆の内容が来る場所。For example は直前が一般論で直後が具体例になる場所。As a result は直前が原因で直後が結果になる場所です。',
+    tbl(8, 10, [96, 204], 30, [['接続語', '入る場所'], ['However', '前と逆の内容が来ている場所'], ['For example', '直前が一般論、直後が具体例の場所'], ['As a result', '直前が原因、直後が結果の場所']], BLUE, 11),
+    '接続語は、前後の関係を指定する', BLUE),
+  S('4つの候補すべてに入れて読み比べる時間はありません。指示語と接続語で候補を2つに絞り、そこだけ読み比べます。',
+    [...cols(['ア', 'イ', 'ウ', 'エ'], 20, 40, [GREEN, GRAY, GRAY, GRAY], 16, 30, 12), ar(160, 66, 160, 84, C.main), bx(60, 88, 200, 34, '2つに絞って読み比べる', C.green, FILL.green, 13)],
+    '全部読み比べない。2つに絞る', GREEN),
+  S('長文のテーマは、実はかなり限られています。環境、食品ロス、AIと仕事、多様性、ボランティア、言語と文化、睡眠と健康の7分野です。背景を知っていれば、数字の読み違いが減り、段落の展開も予測できます。',
+    [head('頻出7分野', 12), ...chips(['環境', '食品ロス', 'AIと仕事', '多様性', 'ボランティア', '言語と文化', '睡眠と健康'], 26, { size: 12, h: 26 }), lb(160, 110, '日本語で読んでおくだけで、速度が上がる', 12, C.ink, 'middle', true)],
+    '背景知識で、読む速度が上がる', PURPLE),
+  S('まとめ。内容一致は必ず本文の記述だけで判断します。知識は速度を上げるためのもので、答えを決めるためのものではありません。また、本文の語をそのまま含む選択肢ほど誤答のことが多く、正解は言いかえられていることが多いです。',
+    chain(['脱文挿入：指示語・接続語・冠詞で2つに絞る', 'テーマの知識は、速く読むために使う', '本文の語そのままの選択肢は、まず疑う'], [BLUE, PURPLE, RED], 14, 34, 14, 12),
+    '答えは本文の記述だけで決める', YELLOW),
+], '脱文挿入は、指示語・接続語・冠詞の手がかりで場所を絞る');
+
+// ── 難関私立の傾向④：整序英作文と和文英訳 ──
+// SEC koko_eigo_s424 0
+const f_s424 = show([
+  S('並べかえ問題は、単語カードをあれこれ動かして探すと1問に3分かかります。決まった手順で解きます。例題は「彼女は私に、その本をどこで買えばよいか教えてくれた。」で、語群は (me / where / she / buy / told / to) the book. です。',
+    [bx(14, 8, 292, 30, '彼女は私に、その本をどこで買えばよいか教えてくれた。', C.blue, FILL.blue, 11), ...chips(['me', 'where', 'she', 'buy', 'told', 'to'], 54, { size: 14, h: 30 }), lb(160, 112, '+  the book.', 13, C.ink, 'middle', true)],
+    '動かす前に、手順を決める', BLUE),
+  S('Step1：日本語で主語と述語を確認します。主語は「彼女は」、述語は「教えてくれた」です。ここを決めてから、カードに手をのばします。',
+    [bx(14, 20, 130, 40, '主語\n彼女は', C.blue, FILL.blue, 14), bx(176, 20, 130, 40, '述語\n教えてくれた', C.red, FILL.red, 14), lb(160, 90, 'まず日本語で骨組みを決める', 13, C.ink, 'middle', true)],
+    'Step1：主語と述語を日本語で決める', BLUE),
+  S('Step2：述語にあたる動詞を語群から探します。「教えた」は told です。語群の中で動詞になれるのは told と buy ですが、文全体の述語は told です。',
+    [...chips(['me', 'where', 'she', 'buy', ['told', RED], 'to'], 28, { size: 14, h: 30 }), bx(80, 90, 160, 34, '述語は told', C.red, FILL.red, 14)],
+    'Step2：述語の動詞を決める（told）', RED),
+  S('Step3：その動詞が取る型を決めます。なぜ told の次が me なの？→ tell は「人に〜を教える」という意味で、tell ＋ 人 ＋ もの の形（SVOO）をとるからです。だから She told me のあとに「何を」が続きます。',
+    qa('なぜ told の次が me なの？', 'tell ＝ 人に〜を教える\n形は tell ＋ 人 ＋ もの（SVOO）\n→ She told me ＋（何を）', GREEN, 13),
+    'Step3：動詞の取る型を決める', GREEN),
+  S('Step4：残りを組み立てます。残りは where / buy / to です。「どこで買えばよいか」は〈疑問詞 ＋ to ＋ 動詞の原形〉で、where to buy になります。',
+    [...chips([['where', PURPLE], ['to', PURPLE], ['buy', PURPLE]], 20, { size: 15, h: 32 }), ar(160, 58, 160, 74, C.main), bx(60, 78, 200, 34, '疑問詞 ＋ to ＋ 動詞の原形', C.purple, FILL.purple, 13)],
+    'Step4：where to buy で一つのかたまり', PURPLE),
+  S('完成です。She told me where to buy the book. 骨組み（She told me）に、かたまり（where to buy）と目的語の続き（the book）を組み立てました。',
+    [...chips([['She', BLUE], ['told', RED], ['me', BLUE], ['where to buy', PURPLE], ['the book', MAIN]], 40, { size: 13, h: 30 }), lb(160, 110, 'She told me where to buy the book.', 14, C.ink, 'middle', true)],
+    '完成：She told me where to buy the book.', GREEN),
+  S('不要語が1語入る形式です。「この写真を見ると、私は子どものころを思い出します。」語群は (me / this picture / of / reminds / my childhood / remembers)。日本語の主語は「私は」なので remembers を使いたくなりますが、これが不要語です。',
+    [bx(10, 8, 300, 28, 'この写真を見ると、私は子どものころを思い出します。', C.blue, FILL.blue, 11), ...chips(['me', 'this picture', ['of', RED], ['reminds', GREEN], 'my childhood', ['remembers', GRAY]], 46, { size: 12, h: 26 }), lb(160, 118, '1語不要 → remembers', 13, C.red, 'middle', true)],
+    '日本語につられて選びたくなる語が不要語', RED),
+  S('なぜ reminds なの？→ remind A of B は「AにBを思い出させる」で、思い出させるきっかけ（この写真）が主語になるからです。remember は自分が思い出すという意味で、of を取りません。語群の of が remind の合図です。',
+    qa('なぜ reminds で of なの？', 'remind A of B ＝ AにBを思い出させる\n主語は「きっかけ」（this picture）\nof があるのが remind の合図。', GREEN, 13),
+    'This picture reminds me of my childhood.', GREEN),
+  S('まとめ。語群に前置詞（of／to／with／for）があったら、それと組み合わさる動詞や熟語がないかをまず疑います。前置詞は組み合わせの合図です。手順は、主語と述語 → 動詞 → 型 → 組み立て、の順です。',
+    chain(['① 日本語で主語と述語', '② 述語の動詞を決める', '③ 動詞の型を決める', '④ 残りを組み立てる'], [BLUE, RED, GREEN, PURPLE], 6, 24, 9, 12),
+    '前置詞は、組み合わせの合図', YELLOW),
+], '整序英作文は、動詞から決めて骨組みを作る');
+
 export const XF_KEI_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_eigo_s399': f_s399,
   'xf_koko_eigo_s401': f_s401,
@@ -419,6 +539,9 @@ export const XF_KEI_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_eigo_s413': f_s413,
   'xf_koko_eigo_s414': f_s414,
   'xf_koko_eigo_s418': f_s418,
+  'xf_koko_eigo_s420': f_s420,
+  'xf_koko_eigo_s422': f_s422,
+  'xf_koko_eigo_s424': f_s424,
 };
 
 export const XF_KEI_SECTIONS: Record<string, string> = {
@@ -433,4 +556,7 @@ export const XF_KEI_SECTIONS: Record<string, string> = {
   'koko_eigo_s413#0': 'xf_koko_eigo_s413',
   'koko_eigo_s414#0': 'xf_koko_eigo_s414',
   'koko_eigo_s418#0': 'xf_koko_eigo_s418',
+  'koko_eigo_s420#0': 'xf_koko_eigo_s420',
+  'koko_eigo_s422#0': 'xf_koko_eigo_s422',
+  'koko_eigo_s424#0': 'xf_koko_eigo_s424',
 };
