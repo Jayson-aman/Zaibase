@@ -777,7 +777,7 @@ const BAR = (x: number, v: number, name: string, c: string, fl: string) => [bx(x
 const s485: DiagramFigure = show([
   sl('葉の数と大きさをそろえた枝を4本、同じ量の水を入れた試験管にさします。ワセリンを塗る場所を変えて、減った水の量を比べます。❓どの面から水が出ていくかを調べる実験です。',
     '4本の試験管（水面には油）', C.main,
-    ...TUBE(8, 'A', C.green, '○', '○'), ...TUBE(86, 'B', C.green, '塗る', '○'), ...TUBE(164, 'C', C.green, '○', '塗る'), ...TUBE(242, 'D', C.green, '塗る', '塗る')),
+    ...TUBE(8, 'A', C.green, '', ''), ...TUBE(86, 'B', C.green, '塗る', ''), ...TUBE(164, 'C', C.green, '', '塗る'), ...TUBE(242, 'D', C.green, '塗る', '塗る')),
   sl('❓ワセリンは何のために塗るのでしょう。→ 気孔をふさぐためです。塗った面からは蒸散（水が水蒸気になって出ていくこと）ができません。だから、塗っていない面と茎の合計が、その試験管の蒸散量になります。',
     '塗った面は 蒸散しない', C.red,
     bx(10, 14, 300, 26, 'A：表 ＋ 裏 ＋ 茎', C.green, FILL.green, 12), bx(10, 44, 300, 26, 'B：裏 ＋ 茎（表は塗った）', C.blue, FILL.blue, 12), bx(10, 74, 300, 26, 'C：表 ＋ 茎（裏は塗った）', C.purple, FILL.purple, 12), bx(10, 104, 300, 26, 'D：茎だけ（表も裏も塗った）', C.gray, FILL.gray, 12)),
@@ -871,7 +871,7 @@ const s487: DiagramFigure = show([
 const s488: DiagramFigure = show([
   sl('硫酸銅水溶液に亜鉛板を入れると、板に赤い銅がついて、亜鉛はやせていきます。水溶液の青色もうすくなります。❓これは何を表しているのでしょう。',
     '亜鉛板 + 硫酸銅水溶液', C.main,
-    bx(40, 60, 240, 70, '硫酸銅水溶液（青）', C.blue, FILL.blue, 12), bx(130, 24, 40, 90, '亜鉛\n板', C.gray, FILL.gray, 12), lb(230, 40, '赤い銅が付着', 12, C.red, 'middle', true), lb(80, 40, '青色がうすくなる', 12, C.blue, 'middle', true)),
+    bx(40, 60, 240, 70, '', C.blue, FILL.blue), bx(130, 24, 40, 90, '亜鉛\n板', C.gray, FILL.gray, 12), lb(160, 124, '硫酸銅水溶液（青）', 11, C.blue, 'middle', true), lb(230, 40, '赤い銅が付着', 12, C.red, 'middle', true), lb(80, 40, '青色がうすくなる', 12, C.blue, 'middle', true)),
   sl('❓何が起きているのでしょう。→ 亜鉛が電子を放して亜鉛イオンになって溶け、水溶液中の銅イオンがその電子を受け取って銅になります。亜鉛は電子を2個放し、銅イオンは電子を2個受け取ります。',
     '亜鉛が電子を渡し、銅イオンが受け取る', C.purple,
     bx(14, 30, 110, 50, '亜鉛\n電子を放す', C.gray, FILL.gray, 12), ar(130, 55, 188, 55, C.purple), lb(160, 42, '電子 2個', 11, C.purple, 'middle', true), bx(194, 30, 112, 50, '銅イオン\n電子を受ける', C.red, FILL.red, 12), lb(69, 100, '溶けて 質量が減る', 11, C.gray, 'middle', true), lb(250, 100, '銅になって付着', 11, C.red, 'middle', true)),
@@ -880,7 +880,7 @@ const s488: DiagramFigure = show([
     bx(30, 30, 100, 50, '亜鉛', C.gray, FILL.gray, 16), lb(160, 55, '＞', 26, C.green, 'middle', true), bx(190, 30, 100, 50, '銅', C.red, FILL.red, 16), lb(160, 106, 'イオンになりやすい', 13, C.green, 'middle', true)),
   sl('逆に、硫酸亜鉛水溶液に銅板を入れると、変化はありません。❓変化なしは、何を教えてくれるのでしょう。→ 銅が亜鉛よりなりやすければ、銅が溶けて亜鉛が付くはずです。起きなかったので、銅のほうがなりにくいとわかります。',
     '「変化なし」も大事な結果', C.blue,
-    bx(40, 60, 240, 70, '硫酸亜鉛水溶液', C.blue, FILL.blue, 12), bx(130, 24, 40, 90, '銅\n板', C.red, FILL.red, 12), lb(230, 40, '変化なし', 14, C.blue, 'middle', true), lb(80, 40, '銅はなりにくい', 12, C.red, 'middle', true)),
+    bx(40, 60, 240, 70, '', C.blue, FILL.blue), bx(130, 24, 40, 90, '銅\n板', C.red, FILL.red, 12), lb(160, 124, '硫酸亜鉛水溶液', 11, C.blue, 'middle', true), lb(230, 40, '変化なし', 14, C.blue, 'middle', true), lb(80, 40, '銅はなりにくい', 12, C.red, 'middle', true)),
   sl('硫酸亜鉛水溶液にマグネシウム片を入れると、マグネシウムが溶けて亜鉛が付着します。❓順位は？→ マグネシウムは亜鉛よりイオンになりやすいとわかります。',
     'マグネシウム ＞ 亜鉛', C.green,
     bx(30, 30, 100, 50, 'マグネシウム', C.green, FILL.green, 12), lb(160, 55, '＞', 26, C.green, 'middle', true), bx(190, 30, 100, 50, '亜鉛', C.gray, FILL.gray, 16), lb(160, 106, 'マグネシウムが溶け、亜鉛が付着', 12, C.green, 'middle', true)),
@@ -892,7 +892,7 @@ const s488: DiagramFigure = show([
     bx(30, 34, 100, 56, '亜鉛\n−極 溶ける', C.gray, FILL.gray, 12), ar(134, 60, 186, 60, C.red), lb(160, 48, '電子', 11, C.red, 'middle', true), bx(190, 34, 100, 56, '銅\n＋極', C.red, FILL.red, 13)),
   sl('ダニエル電池は、亜鉛板を硫酸亜鉛水溶液に、銅板を硫酸銅水溶液に入れ、セロハンで仕切ります。❓セロハンの役割は？→ 水溶液がすぐ混ざるのを防ぎながら、イオンを通して電気のかたよりを打ち消します。',
     'ダニエル電池', C.purple,
-    bx(14, 50, 138, 70, '硫酸亜鉛水溶液', C.blue, FILL.blue, 11), bx(168, 50, 138, 70, '硫酸銅水溶液', C.blue, FILL.blue, 11), ln(160, 40, 160, 126, C.main, true, 3), lb(160, 138, 'セロハン', 11, C.main, 'middle', true), bx(60, 24, 30, 80, '亜鉛', C.gray, FILL.gray, 11), bx(232, 24, 30, 80, '銅', C.red, FILL.red, 11)),
+    bx(14, 50, 138, 76, '', C.blue, FILL.blue), bx(168, 50, 138, 76, '', C.blue, FILL.blue), ln(160, 40, 160, 126, C.main, true, 3), lb(160, 138, 'セロハン', 11, C.main, 'middle', true), bx(68, 24, 30, 80, '亜鉛', C.gray, FILL.gray, 11), bx(222, 24, 30, 80, '銅', C.red, FILL.red, 11), lb(83, 116, '硫酸亜鉛水溶液', 10, C.blue, 'middle', true), lb(237, 116, '硫酸銅水溶液', 10, C.blue, 'middle', true)),
   sl('まとめです。金属板を水溶液に入れる実験で順位を決め、その順位で電池の−極を決めます。溶けていくのは−極、付着するのは＋極です。',
     '順位 → 電池の極', C.green,
     bx(15, 14, 290, 30, '① 溶けて相手が付着 → なりやすい', C.green, FILL.green, 12), bx(15, 52, 290, 30, '② マグネシウム ＞ 亜鉛 ＞ 銅', C.main, FILL.warm, 12), bx(15, 90, 290, 30, '③ なりやすい金属が −極で溶ける', C.red, FILL.red, 12)),
@@ -931,6 +931,142 @@ const s489: DiagramFigure = show([
     bx(15, 14, 290, 30, '① 速さ(cm/s) ＝ テープの長さ(cm) × 10', C.blue, FILL.blue, 12), bx(15, 52, 290, 30, '② 一定の割合で増える ＝ 力が続く', C.red, FILL.red, 12), bx(15, 90, 290, 30, '③ 水平面は 力なし → 速さ一定', C.green, FILL.green, 12)),
 ], '斜面を下る台車の運動');
 
+// ───────── koko_rika_s490 気体の発生量と過不足 ─────────
+// 横軸 石灰石 0〜2.5g → 50〜290（96px/g）、縦軸 二酸化炭素 0〜0.7g → 135〜15（約171px/g）
+const GX = (g: number) => 50 + g * 96;
+const GY = (c: number) => 135 - c * 171;
+const GAS = [...AX(50, 135, 300, 10, '石灰石(g)', 'CO₂(g)'), lb(GX(1.5), 146, '1.5', 10, C.gray, 'middle'), lb(42, GY(0.66), '0.66', 10, C.gray, 'end')];
+const s490: DiagramFigure = show([
+  sl('うすい塩酸40 cm³に、石灰石を0.5 gずつ加えていき、発生した二酸化炭素の質量をはかります。結果は 0.5 g→0.22 g、1.0 g→0.44 g、1.5 g→0.66 g、2.0 g→0.66 g、2.5 g→0.66 g。❓このグラフはどんな形になるでしょう。',
+    '塩酸40 cm³に石灰石を加える', C.main,
+    bx(10, 26, 90, 50, 'うすい塩酸\n40 cm³', C.blue, FILL.blue, 12), lb(116, 51, '＋', 20, C.ink, 'middle', true), bx(130, 26, 90, 50, '石灰石を\n0.5 gずつ', C.gray, FILL.gray, 12), ar(224, 51, 250, 51, C.green), bx(254, 26, 60, 50, 'CO₂を\nはかる', C.green, FILL.green, 11)),
+  sl('点を打つと、1.5 gまでは右上がりの直線、それ以降は水平になります。❓なぜ折れ曲がるのでしょう。',
+    '1.5 gで 折れ曲がる', C.blue,
+    ...GAS, ln(GX(0), GY(0), GX(1.5), GY(0.66), C.green, false, 3), ln(GX(1.5), GY(0.66), GX(2.5), GY(0.66), C.green, false, 3), ci(GX(0.5), GY(0.22), 3, undefined, C.red, C.red), ci(GX(1), GY(0.44), 3, undefined, C.red, C.red), ci(GX(1.5), GY(0.66), 4, undefined, C.red, C.red), ci(GX(2), GY(0.66), 3, undefined, C.red, C.red), ci(GX(2.5), GY(0.66), 3, undefined, C.red, C.red)),
+  sl('❓1.5 gまでが比例しているのは、なぜでしょう。→ 加えた石灰石が、すべて反応しているからです。塩酸はまだ余っているので、石灰石を増やした分だけ気体が増えます（0.5 gあたり0.22 g）。',
+    '前半：石灰石が足りない（塩酸が余る）', C.blue,
+    ...GAS, ln(GX(0), GY(0), GX(1.5), GY(0.66), C.green, false, 3), lb(110, 80, '石灰石が全部反応\n塩酸は余っている', 11, C.blue, 'start', true)),
+  sl('❓1.5 gをこえると増えないのは、なぜでしょう。→ 塩酸40 cm³が使い切られたからです。それ以上石灰石を加えても、反応する相手がいないので、気体は増えません。',
+    '後半：塩酸が足りない（石灰石が余る）', C.red,
+    ...GAS, ln(GX(0), GY(0), GX(1.5), GY(0.66), C.green, false, 3), ln(GX(1.5), GY(0.66), GX(2.5), GY(0.66), C.red, false, 3), lb(270, 50, '塩酸が使い切られ\n石灰石が余る', 11, C.red, 'end', true)),
+  sl('だから、折れ曲がる点が「過不足なく反応した量」を表します。塩酸40 cm³とちょうど反応する石灰石は1.5 g、そのとき発生する二酸化炭素は0.66 gです。',
+    '折れ曲がる点 = ちょうど反応', C.green,
+    ...GAS, ln(GX(0), GY(0), GX(1.5), GY(0.66), C.green, false, 3), ln(GX(1.5), GY(0.66), GX(2.5), GY(0.66), C.green, false, 3), ci(GX(1.5), GY(0.66), 5, undefined, C.red, C.red), ln(GX(1.5), GY(0.66), GX(1.5), 135, C.gray, true), ln(50, GY(0.66), GX(1.5), GY(0.66), C.gray, true), lb(210, 70, '石灰石 1.5 g\nCO₂ 0.66 g', 12, C.red, 'start', true)),
+  sl('❓「十分な量の塩酸」と書かれていたら？→ 石灰石は全部反応するので、比例計算です。石灰石1.0 gから0.44 gなので、1.2 gなら 0.44×1.2＝0.528 g。量が決まっているときは、折れ曲がりを確かめます。',
+    '「十分な量」→ 比例計算', C.purple,
+    ...flow(['1.0 g → 0.44 g', '× 1.2', '1.2 g → 0.528 g'], 30, { h: 50, size: 12, color: C.purple, fill: FILL.purple }).flat(), lb(160, 104, '塩酸が十分 → 石灰石は全部反応', 12, C.purple, 'middle', true)),
+  sl('❓塩酸を60 cm³に増やしたら？→ 反応できる石灰石も同じ割合で増えます。60÷40＝1.5倍なので、1.5×1.5＝2.25 g。発生する二酸化炭素も 0.66×1.5＝0.99 g。折れ曲がる点が右上へずれ、傾きは変わりません。',
+    '塩酸1.5倍 → 折れ曲がる点も1.5倍', C.blue,
+    ...flow(['塩酸 40→60\n1.5倍', '石灰石\n2.25 g', 'CO₂\n0.99 g'], 24, { h: 62, size: 12, color: C.blue, fill: FILL.blue }).flat(), lb(160, 112, '濃度を2倍にしても 同じく2倍', 12, C.gray, 'middle', true)),
+  sl('ふたをしないで反応させると、全体の質量が減ります。❓減った0.44 gは何でしょう。→ 空気中へ出ていった二酸化炭素の質量です。法則の例外ではなく、密閉すれば質量は変わりません。',
+    '減った質量 ＝ 出ていった気体', C.red,
+    bx(10, 24, 140, 56, '反応前\n全体の質量', C.gray, FILL.gray, 13), ar(154, 52, 174, 52, C.red), bx(178, 24, 130, 56, '反応後\n0.44 g 減る', C.red, FILL.red, 13), lb(160, 104, '減った分 ＝ CO₂の質量', 13, C.red, 'middle', true)),
+  sl('まとめです。折れ曲がる点が過不足なく反応する量。前は石灰石が不足、後は塩酸が不足（石灰石が余る）。量を変えたら折れ曲がる点も同じ割合で動きます。',
+    '折れ曲がる点 = 過不足なし', C.green,
+    bx(15, 14, 290, 30, '① 折れ曲がる点が ちょうど反応する量', C.green, FILL.green, 12), bx(15, 52, 290, 30, '② 後半に残るのは 石灰石のほう', C.red, FILL.red, 12), bx(15, 90, 290, 30, '③ 塩酸が1.5倍 → 折れ曲がる点も1.5倍', C.blue, FILL.blue, 12)),
+], '気体の発生量と過不足');
+
+// ───────── koko_rika_s491 光の反射と屈折 ─────────
+// 境界面 y=75、法線 x=160。角は法線から測る。
+const SURF = [bx(10, 75, 300, 62, '', C.blue, FILL.blue), ln(160, 12, 160, 135, C.gray, true, 2), lb(172, 14, '法線', 11, C.gray, 'start', true), lb(30, 88, '水', 12, C.blue, 'start', true), lb(30, 64, '空気', 12, C.gray, 'start', true)];
+const pt = (side: number, deg: number, len: number, down: boolean): [number, number] => [160 + side * len * Math.sin((deg * Math.PI) / 180), 75 + (down ? 1 : -1) * len * Math.cos((deg * Math.PI) / 180)];
+const rayTo = (p: [number, number], arrowEnd: boolean, color: string): DiagramElement => (arrowEnd ? ar(160, 75, p[0], p[1], color) : ar(p[0], p[1], 160, 75, color));
+const s491: DiagramFigure = show([
+  sl('光の作図は、手順を固定すれば毎回同じやり方で答えが出ます。①光が当たる点を決める、②その点で境界面に垂直な線（法線）を点線で引く、③入射角をはかる、④反射か屈折かで角をとる、⑤矢印をつける。',
+    '作図の手順は5つ', C.main,
+    ...flow(['① 入射点', '② 法線を\n点線で', '③ 入射角を\nはかる', '④⑤ 角をとり\n矢印'], 30, { h: 64, size: 11, color: C.main, fill: FILL.warm, gap: 12 }).flat()),
+  sl('❓なぜ、法線を先に引くのでしょう。→ 入射角・反射角・屈折角は、境界面ではなく法線との間の角だからです。境界面との角を使うと、90度から引いた余角になって、全部まちがえます。',
+    '角は法線から測る', C.red,
+    ...SURF, rayTo(pt(-1, 60, 70, false), false, C.red), sc(160, 75, 40, 90, 150, C.red, FILL.red), lb(133, 38, '入射角 60度', 11, C.red, 'end', true), lb(250, 104, '水面との角は\n30度', 11, C.gray, 'middle', true)),
+  sl('反射：法線をはさんで対称に、入射角と同じ角で反射します（入射角＝反射角）。',
+    '入射角 ＝ 反射角', C.blue,
+    ...SURF, rayTo(pt(-1, 45, 70, false), false, C.blue), rayTo(pt(1, 45, 70, false), true, C.blue), lb(110, 30, '入射角', 11, C.blue, 'end', true), lb(215, 30, '反射角', 11, C.blue, 'start', true)),
+  sl('空気から水へ進むとき、❓光はどちらに曲がるでしょう。→ 法線に近づく向きに曲がります。屈折角が入射角より小さくなり、たとえば入射角60度なら屈折角は40度くらいです。',
+    '空気 → 水：屈折角 < 入射角', C.green,
+    ...SURF, rayTo(pt(-1, 60, 70, false), false, C.blue), rayTo(pt(1, 40, 70, true), true, C.green), lb(110, 28, '入射角 60度', 11, C.blue, 'end', true), lb(212, 124, '屈折角 40度', 11, C.green, 'start', true)),
+  sl('❓なぜ法線に近づくのでしょう。→ 水やガラスの中では光が遅くなるからです。遅いほうへ入るときは、法線に近づく向きに曲がります。',
+    '遅い方へ入る → 法線に近づく', C.purple,
+    bx(15, 24, 140, 56, '空気中\n光は速い', C.gray, FILL.gray, 13), ar(160, 52, 186, 52, C.purple), bx(190, 24, 120, 56, '水・ガラス\n光は遅い', C.blue, FILL.blue, 12), lb(160, 104, '遅くなる → 法線に近づく', 13, C.purple, 'middle', true)),
+  sl('水から空気へ進むときは、光が速くなるので、法線から遠ざかる向きに曲がります。屈折角が入射角より大きくなり、入射角30度なら屈折角は45度くらいです。',
+    '水 → 空気：屈折角 > 入射角', C.green,
+    ...SURF, rayTo(pt(-1, 30, 70, true), false, C.blue), rayTo(pt(1, 45, 70, false), true, C.green), lb(110, 124, '入射角 30度', 11, C.blue, 'end', true), lb(215, 30, '屈折角 45度', 11, C.green, 'start', true)),
+  sl('❓垂直に入れたときは？→ 入射角が0度なので屈折せず、そのまま直進します。作図で曲げてしまわないように注意します。',
+    '入射角0度 → 直進', C.gray,
+    ...SURF, ar(160, 14, 160, 130, C.blue), lb(190, 100, '曲げない', 13, C.blue, 'start', true)),
+  sl('水から空気へ出るとき、入射角を大きくしていくと、やがて屈折角が90度に達します。❓それ以上大きくすると？→ 光は空気へ出られず、すべて境界面で反射します。これが全反射です。',
+    '全反射：水 → 空気だけ', C.red,
+    ...SURF, rayTo(pt(-1, 55, 70, true), false, C.blue), rayTo(pt(1, 55, 70, true), true, C.red), lb(110, 124, '入射角が大きい', 11, C.blue, 'end', true), lb(215, 124, 'すべて反射', 11, C.red, 'start', true)),
+  sl('まとめです。法線を引き、法線との角で考える。空気→水は法線に近づき、水→空気は遠ざかる。全反射は水やガラスから空気へ出るときだけで、空気から入るときは起こりません。',
+    '法線 → 近づく／遠ざかる → 全反射', C.green,
+    bx(15, 14, 290, 30, '① 角は法線から測る（入射角＝反射角）', C.blue, FILL.blue, 12), bx(15, 52, 290, 30, '② 空気→水：近づく　水→空気：遠ざかる', C.green, FILL.green, 12), bx(15, 90, 290, 30, '③ 全反射は 水・ガラス→空気 のときだけ', C.red, FILL.red, 12)),
+], '光の反射と屈折：法線から');
+
+// ───────── koko_rika_s492 鏡にうつる像 ─────────
+// 身長160cm=120px（0.75px/cm）。人は x=70、足元 y=135。鏡は x=200。
+const hy = (cm: number) => 135 - cm * 0.75;
+const PERSON = [ln(70, hy(0), 70, hy(160), C.ink, false, 4), ci(70, hy(150), 3, undefined, C.red, C.red), lb(56, hy(150), '目', 10, C.red, 'end', true)];
+const s492: DiagramFigure = show([
+  sl('鏡にうつった自分は、鏡の奥にいるように見えます。❓この像はどこにできるのでしょう。→ 鏡の面をはさんで、物体と対称な位置です。鏡までの距離と、鏡から像までの距離は等しくなります。',
+    '像は鏡をはさんで対称', C.main,
+    ln(160, 14, 160, 126, C.ink, false, 5), ci(60, 70, 14, '本物', C.blue, FILL.blue, 10), ci(260, 70, 14, '像', C.gray, FILL.gray, 11), ar(76, 70, 150, 70, C.gray, true), lb(110, 60, '同じ距離', 11, C.gray, 'middle', true), lb(210, 60, '同じ距離', 11, C.gray, 'middle', true)),
+  sl('❓鏡から2 m離れて立つと、像までの距離は何mでしょう。→ 像は鏡の奥2 mにできるので、自分から見て 2＋2＝4 m 先です。鏡までの距離と混ぜないようにします。',
+    '像までは 4 m', C.blue,
+    ln(150, 14, 150, 126, C.ink, false, 5), ci(30, 70, 12, '自分', C.blue, FILL.blue, 9), ci(270, 70, 12, '像', C.gray, FILL.gray, 11), lb(90, 90, '2 m', 12, C.blue, 'middle', true), lb(210, 90, '2 m', 12, C.gray, 'middle', true), ar(44, 108, 256, 108, C.red), lb(150, 124, '4 m', 14, C.red, 'middle', true)),
+  sl('次に、全身を映すのに必要な鏡の長さです。結論は、身長の半分。❓どうしてでしょう。まず足先の光から考えます。',
+    '必要な長さは 身長の半分', C.main,
+    ...PERSON, ln(200, hy(0), 200, hy(160), C.gray, true), lb(200, hy(160) - 8, '鏡', 11, C.gray, 'middle', true)),
+  sl('足先から出た光は、鏡で反射して目に届きます。入射角＝反射角なので、反射する点は目と足先のちょうど中間の高さ、75 cmです。',
+    '下端：目と足先の中間（75 cm）', C.blue,
+    ...PERSON, ln(200, hy(0), 200, hy(160), C.gray, true), ar(70, hy(0), 200, hy(75), C.blue), ar(200, hy(75), 76, hy(150) + 1, C.blue), lb(236, hy(75), '75 cm', 12, C.blue, 'start', true)),
+  sl('頭のてっぺんから出た光は、目と頭頂のちょうど中間の高さ、(150＋160)÷2＝155 cmで反射します。',
+    '上端：目と頭頂の中間（155 cm）', C.purple,
+    ...PERSON, ln(200, hy(0), 200, hy(160), C.gray, true), ar(70, hy(160), 200, hy(155), C.purple), ar(200, hy(155), 76, hy(150) - 1, C.purple), lb(236, hy(155), '155 cm', 12, C.purple, 'start', true)),
+  sl('必要な鏡は、この2点の間だけです。長さは 155−75＝80 cm で、身長160 cmのちょうど半分になります。',
+    '155 − 75 ＝ 80 cm ＝ 身長の半分', C.green,
+    ...PERSON, ln(200, hy(0), 200, hy(160), C.gray, true), ln(200, hy(75), 200, hy(155), C.green, false, 6), lb(236, hy(115), '80 cm', 14, C.green, 'start', true)),
+  sl('❓鏡から離れると、必要な長さは短くなるでしょうか。→ なりません。離れると像も同じだけ遠ざかり、光の角度の関係は変わらないからです。身長170 cmなら、3 m離れても85 cmです。',
+    '距離が変わっても 長さは同じ', C.red,
+    bx(15, 24, 140, 56, '1 m 離れる\n85 cm', C.blue, FILL.blue, 14), bx(165, 24, 140, 56, '3 m 離れる\n85 cm', C.blue, FILL.blue, 14), lb(160, 106, '身長170 cm の人の場合', 12, C.gray, 'middle', true)),
+  sl('❓鏡にうつった像は、本物の光が集まってできたものでしょうか。→ いいえ。そこから実際に光が出ているわけではない虚像で、スクリーンを置いても映りません。鏡では左右が入れかわって見えます。',
+    '像は虚像（左右が入れかわる）', C.purple,
+    bx(15, 24, 140, 56, '虚像\nスクリーンに映らない', C.purple, FILL.purple, 12), bx(165, 24, 140, 56, '左右が入れかわる\n上下はそのまま', C.gray, FILL.gray, 12)),
+  sl('まとめです。像は鏡をはさんで対称にとる。像までの距離は鏡までの2倍。全身を映す鏡は身長の半分で、距離によらない。作図は「像を先にとる」から始めます。',
+    '像を先に、鏡の長さは身長の半分', C.green,
+    bx(15, 14, 290, 30, '① 像は鏡をはさんで対称（虚像）', C.purple, FILL.purple, 12), bx(15, 52, 290, 30, '② 像までの距離は 鏡までの2倍', C.blue, FILL.blue, 12), bx(15, 90, 290, 30, '③ 全身の鏡は身長の半分（距離によらない）', C.green, FILL.green, 11)),
+], '鏡の像と鏡の長さ');
+
+// ───────── koko_rika_s493 力の矢印 ─────────
+const BOOK = [ln(40, 110, 280, 110, C.ink, false, 4), lb(290, 120, '机', 11, C.gray, 'end', true), bx(110, 62, 100, 48, '本', C.gray, FILL.warm, 14)];
+const s493: DiagramFigure = show([
+  sl('力の矢印は、3つの要素をそろえてかきます。作用点（始点）、向き、大きさ（矢印の長さ）。大きさは「1 Nを1目盛り」のように決めて、比例させます。',
+    '作用点・向き・大きさ', C.main,
+    ...flow(['作用点\n矢印の始点', '向き\n矢印の向き', '大きさ\n矢印の長さ'], 30, { h: 62, size: 13, color: C.main, fill: FILL.warm }).flat()),
+  sl('❓重力の作用点はどこでしょう。→ 物体の中心（重心）です。向きは真下（鉛直下向き）。机の上の本なら、本の中心から下向きに矢印を引きます。',
+    '重力：中心から真下', C.red,
+    ...BOOK, ci(160, 86, 3, undefined, C.red, C.red), ar(160, 86, 160, 130, C.red), lb(172, 126, '重力', 12, C.red, 'start', true)),
+  sl('❓机が本をおし返す力（垂直抗力）は？→ 作用点は、本が机にふれている面。向きは面に垂直に上向きで、本をおし返します。',
+    '垂直抗力：接する面から上向き', C.blue,
+    ...BOOK, ci(160, 86, 3, undefined, C.red, C.red), ar(160, 86, 160, 130, C.red), ci(160, 110, 3, undefined, C.blue, C.blue), ar(190, 110, 190, 66, C.blue), lb(200, 80, '垂直抗力', 12, C.blue, 'start', true), lb(172, 126, '重力', 12, C.red, 'start', true)),
+  sl('❓この2力はつり合っているのでしょうか。→ はい。①大きさが等しい、②向きが反対、③一直線上にある、④同じ1つの物体（本）にはたらいている。この4つがそろうとつり合います。',
+    'つり合いの4条件', C.green,
+    bx(10, 14, 148, 30, '① 大きさが等しい', C.green, FILL.green, 12), bx(162, 14, 148, 30, '② 向きが反対', C.green, FILL.green, 12), bx(10, 52, 148, 30, '③ 一直線上にある', C.green, FILL.green, 12), bx(162, 52, 148, 30, '④ 同じ物体にはたらく', C.red, FILL.red, 12), lb(160, 108, '④が抜けやすい', 13, C.red, 'middle', true)),
+  sl('例：天井から糸でつるされて静止しているおもり。❓おもりにはたらく力は何でしょう。→ 重力（下向き）と、糸が引く力（上向き）の2つです。「おもりが糸を引く力」は、糸にはたらく力なので入りません。',
+    '注目する物体を1つ決める', C.purple,
+    ln(100, 8, 220, 8, C.ink, false, 3), ln(160, 8, 160, 52, C.gray, false, 2), bx(130, 52, 60, 40, 'おもり', C.gray, FILL.warm, 12), ar(160, 52, 160, 22, C.blue), ar(160, 72, 160, 124, C.red), lb(172, 30, '糸が引く力', 11, C.blue, 'start', true), lb(172, 112, '重力', 11, C.red, 'start', true), lb(246, 66, '2つだけ', 13, C.purple, 'middle', true)),
+  sl('摩擦力の作用点は、ふれ合っている面です。向きは、物体が動こうとする向きと逆。例：静止した物体を、2人が同じ向きに20 Nずつ押しています。❓摩擦力は？→ 合力が 20＋20＝40 N なので、つり合う摩擦力も逆向きに40 Nです。',
+    '同じ向きの力は まとめて合力に', C.red,
+    bx(120, 60, 80, 44, '物体', C.gray, FILL.warm, 13), ar(40, 82, 116, 82, C.blue), lb(70, 72, '20 N', 11, C.blue, 'middle', true), ar(40, 94, 116, 94, C.blue), lb(70, 108, '20 N', 11, C.blue, 'middle', true), ar(200, 100, 280, 100, C.red), lb(255, 118, '摩擦力 40 N', 11, C.red, 'middle', true)),
+  sl('水中の物体には、重力（下向き）のほかに、上向きの浮力がはたらきます。糸でつるしていれば、上向きの張力も加わります。静止していれば、上向きの力の合計と下向きの重力がつり合っています。',
+    '水中：重力 ＝ 浮力 + 張力', C.blue,
+    bx(40, 40, 240, 90, '', C.blue, FILL.blue), bx(130, 66, 60, 40, '物体', C.gray, FILL.warm, 12), ar(145, 66, 145, 18, C.blue), lb(98, 26, '張力', 11, C.blue, 'end', true), ar(175, 66, 175, 34, C.green), lb(182, 30, '浮力', 11, C.green, 'start', true), ar(160, 86, 160, 126, C.red), lb(172, 122, '重力', 11, C.red, 'start', true)),
+  sl('❓つり合いと作用・反作用は、どう見分けるのでしょう。→ 2力がはたらいている物体を確かめます。同じ1つの物体ならつり合い。別々の物体にはたらいているなら作用・反作用です。',
+    '同じ物体 = つり合い、別々 = 作用反作用', C.purple,
+    bx(10, 20, 148, 70, '本にはたらく\n重力 と 垂直抗力\n→ つり合い', C.green, FILL.green, 11), bx(162, 20, 148, 70, '本が机をおす力 と\n机が本をおし返す力\n→ 作用・反作用', C.purple, FILL.purple, 11), lb(160, 112, 'どの物体にはたらくか？', 13, C.gray, 'middle', true)),
+  sl('まとめです。まず注目する物体を1つ決め、その物体にはたらく力だけをかく。重力は中心から真下、ほかの力は接する面から。矢印の長さは力の大きさに比例させます。',
+    '注目する物体 → 力を全部かく', C.green,
+    bx(15, 14, 290, 30, '① 注目する物体を1つ決める', C.main, FILL.warm, 12), bx(15, 52, 290, 30, '② 重力は中心から真下、他は接する面から', C.red, FILL.red, 11), bx(15, 90, 290, 30, '③ つり合う力は 同じ長さの矢印にする', C.green, FILL.green, 12)),
+], '力の矢印：作用点と物体');
+
 export const XF_KRI_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_rika_s464': s464,
   'xf_koko_rika_s465': s465,
@@ -958,6 +1094,10 @@ export const XF_KRI_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_rika_s487': s487,
   'xf_koko_rika_s488': s488,
   'xf_koko_rika_s489': s489,
+  'xf_koko_rika_s490': s490,
+  'xf_koko_rika_s491': s491,
+  'xf_koko_rika_s492': s492,
+  'xf_koko_rika_s493': s493,
 };
 
 export const XF_KRI_SECTIONS: Record<string, string> = {
@@ -987,4 +1127,8 @@ export const XF_KRI_SECTIONS: Record<string, string> = {
   'koko_rika_s487#0': 'xf_koko_rika_s487',
   'koko_rika_s488#0': 'xf_koko_rika_s488',
   'koko_rika_s489#0': 'xf_koko_rika_s489',
+  'koko_rika_s490#0': 'xf_koko_rika_s490',
+  'koko_rika_s491#0': 'xf_koko_rika_s491',
+  'koko_rika_s492#1': 'xf_koko_rika_s492',
+  'koko_rika_s493#0': 'xf_koko_rika_s493',
 };
