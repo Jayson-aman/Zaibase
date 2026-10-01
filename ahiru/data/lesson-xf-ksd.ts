@@ -1,0 +1,278 @@
+// 高校受験 数学（関数・図形・証明）30 単元の「動く図解スライド」。
+// 「❓なぜ？→答え」の連鎖で7枚以上。上に図、下の帯にそのスライドのひとこと。
+import type { DiagramElement, DiagramFigure } from './figures';
+import { C, FILL, bx, lb, ar, ln, ci, pg, sc, show, fresh, band } from './diagram-kit';
+
+type Pt = [number, number];
+type Mp = (x: number, y: number) => Pt;
+const mp = (ox: number, oy: number, sx: number, sy: number): Mp => (x, y) => [ox + x * sx, oy - y * sy];
+
+/** 座標軸。tx・ty は目もりの数字を出す位置。 */
+const axes = (m: Mp, xa: number, xb: number, ya: number, yb: number, tx: number[] = [], ty: number[] = []): DiagramElement[] => {
+  const [x0, y0] = m(xa, 0);
+  const [x1] = m(xb, 0);
+  const [, y1] = m(0, ya);
+  const [, y2] = m(0, yb);
+  const [ox, oy] = m(0, 0);
+  const out: DiagramElement[] = [
+    ln(x0, oy, x1, oy, C.gray, false, 1.2),
+    ln(ox, y1, ox, y2, C.gray, false, 1.2),
+    lb(x1 + 2, oy + 4, 'x', 10, C.gray, 'start'),
+    lb(ox + 6, y2 + 2, 'y', 10, C.gray, 'start'),
+    lb(ox - 5, oy + 10, 'O', 9, C.gray, 'end'),
+  ];
+  void y0;
+  for (const t of tx) {
+    const [px] = m(t, 0);
+    out.push(lb(px, oy + 10, String(t), 9, C.gray, 'middle'));
+  }
+  for (const t of ty) {
+    const [, py] = m(0, t);
+    out.push(lb(ox - 4, py + 3, String(t), 9, C.gray, 'end'));
+  }
+  return out;
+};
+
+/** 関数 f のグラフを短い線分でつないでかく。 */
+const curve = (m: Mp, f: (x: number) => number, a: number, b: number, color: string = C.blue, ymax = 1e9, ymin = -1e9, n = 36): DiagramElement[] => {
+  const out: DiagramElement[] = [];
+  for (let i = 0; i < n; i++) {
+    const xa = a + ((b - a) * i) / n;
+    const xb = a + ((b - a) * (i + 1)) / n;
+    const ya = f(xa);
+    const yb = f(xb);
+    if (ya > ymax || yb > ymax || ya < ymin || yb < ymin) continue;
+    const [p, q] = m(xa, ya);
+    const [r, s] = m(xb, yb);
+    out.push(ln(p, q, r, s, color, false, 2));
+  }
+  return out;
+};
+
+const dot = (m: Mp, x: number, y: number, color: string, text?: string, dx = 7, dy = -7): DiagramElement[] => {
+  const [px, py] = m(x, y);
+  const out: DiagramElement[] = [ci(px, py, 3.5, undefined, color, color)];
+  if (text) out.push(lb(px + dx, py + dy, text, 10, color, dx < 0 ? 'end' : 'start', true));
+  return out;
+};
+const sg = (m: Mp, x1: number, y1: number, x2: number, y2: number, color: string = C.ink, dashed = false, w = 1.6): DiagramElement => {
+  const [a, b] = m(x1, y1);
+  const [c, d] = m(x2, y2);
+  return ln(a, b, c, d, color, dashed, w);
+};
+const lab = (m: Mp, x: number, y: number, text: string, color: string = C.ink, size = 10, anchor: 'start' | 'middle' | 'end' = 'middle'): DiagramElement => {
+  const [a, b] = m(x, y);
+  return lb(a, b, text, size, color, anchor, true);
+};
+const poly = (m: Mp, pts: [number, number][], color: string, fill: string): DiagramElement => pg(pts.map(([x, y]) => m(x, y)), color, fill);
+
+// 下の帯（y=150 から）
+const cap = (t: string, color: string = C.ink, size = 12) => band(150, lb(160, 192, t, size, color, 'middle', true));
+const cap2 = (t1: string, t2: string, color: string, fill: string, size = 13) =>
+  band(150, lb(160, 164, t1, 11, C.gray, 'middle'), bx(16, 175, 288, 52, t2, color, fill, size));
+
+/** まっさらな図＋下の帯 */
+const F = (note: string, els: DiagramElement[], c: DiagramElement[]) => ({ note, add: [...fresh(...els), ...c] });
+/** 前の図に描き足す＋下の帯の書きかえ */
+const A = (note: string, els: DiagramElement[], c: DiagramElement[]) => ({ note, add: [...els, ...c] });
+
+/** まとめ用：3つの箱 */
+const sum3 = (a: string, b: string, c3: string, bottom: string, color: string = C.green): DiagramElement[] => [
+  bx(14, 12, 292, 38, a, C.blue, FILL.blue, 12),
+  bx(14, 56, 292, 38, b, C.main, FILL.warm, 12),
+  bx(14, 100, 292, 38, c3, C.red, FILL.red, 12),
+  ...cap(bottom, color),
+];
+
+// ───────── s164 変域④：yの変域からaを求める ─────────
+const g164 = mp(125, 128, 27, 5.6);
+const b164 = (): DiagramElement[] => axes(g164, -3.3, 4.4, -1, 20, [-2, 3], [8, 18]);
+const s164: DiagramFigure = show([
+  F('問題です。y＝ax² で、x が −2 から 3 まで動くとき、y の変域（へんいき）は 0≦y≦18 です。a の値を求めます。',
+    [...b164(), ...curve(g164, (x) => 2 * x * x, -2.6, 3.1, C.gray, 20), sg(g164, -2, 0, 3, 0, C.blue, false, 4)],
+    cap2('xの範囲は −2 から 3、yの範囲は 0 から 18', 'a はいくつ？', C.main, FILL.warm)),
+  A('❓なぜ、y の下の端は 0 なのでしょう。→ x の範囲 −2〜3 は x＝0 をふくむので、頂点（0, 0）を通るからです。y＝ax²（a>0）は頂点でいちばん低くなります。',
+    [...dot(g164, 0, 0, C.red, '頂点 (0, 0)', 8, -8)], cap('x＝0 を通る → いちばん低いのは 0', C.red)),
+  A('❓では、上の端の 18 は、x のどちらの端で決まるのでしょう。→ 原点から遠いほうです。原点からの距離は、−2 が 2、3 が 3 なので、遠いのは x＝3 です。',
+    [ar(g164(0, 0)[0], 138, g164(-2, 0)[0], 138, C.green), lab(g164, -1, -1.6, '2', C.green, 11), ar(g164(0, 0)[0], 146, g164(3, 0)[0], 146, C.red), lab(g164, 1.5, -2.9, '3', C.red, 11)],
+    cap('原点から遠いのは x＝3', C.red)),
+  A('❓なぜ、遠いほうの端で最大になるのでしょう。→ 放物線は原点から離れるほど急に高くなるからです。a＝2 のとき、x＝−2 では y＝8、x＝3 では y＝18 です。',
+    [...dot(g164, -2, 8, C.green, '(−2, 8)', -8, -4), ...dot(g164, 3, 18, C.red, '(3, 18)', -8, -4)], cap('遠い x＝3 のほうが高い', C.green)),
+  F('x＝3 のとき y＝18 なので、y＝ax² に代入します。18＝a×3²＝9a より、a＝2 です。',
+    [...b164(), ...curve(g164, (x) => 2 * x * x, -2.6, 3.1, C.blue, 20), ...dot(g164, 3, 18, C.red, '(3, 18)', -8, -4), ...dot(g164, 0, 0, C.red)],
+    cap2('x＝3、y＝18 を代入する', '18＝a×9　より　a＝2', C.green, FILL.green)),
+  F('❓もし x＝−2 のほうを使って 18＝a×4 とすると、a＝4.5 です。このとき x＝3 では y＝4.5×9＝40.5 になり、18 を大きくこえてしまいます。だからこの使い方はまちがいです。',
+    [...b164(), ...curve(g164, (x) => 4.5 * x * x, -2.2, 2.2, C.red, 20), lb(250, 40, 'a＝4.5 だと\nx＝3 で 40.5', 11, C.red, 'middle', true), ar(236, 60, 214, 50, C.red)],
+    cap('18 をこえるのでまちがい', C.red)),
+  F('検算します。y＝2x² に x＝−2 を入れると y＝8 で、0≦8≦18 の範囲に収まっています。もう一方の端でも変域からはみ出さないので、a＝2 は正しいです。',
+    [...b164(), ...curve(g164, (x) => 2 * x * x, -2.6, 3.1, C.blue, 20), ...dot(g164, -2, 8, C.green, '8', -8, -2), ...dot(g164, 3, 18, C.green, '18', -8, -4), ...dot(g164, 0, 0, C.green)],
+    cap2('使わなかった端で検算', 'x＝−2 → y＝2×4＝8　（0≦8≦18 ✓）', C.green, FILL.green)),
+  (() => {
+    const g = mp(150, 24, 28, 5.6);
+    return F('下に開く場合も同じです。−3≦x≦1 で −18≦y≦0 なら、上の端が 0 なので a<0。原点から遠い x＝−3 で最小の −18 になるので、−18＝a×9 より a＝−2。検算：x＝1 では y＝−2 で、−18 と 0 の間に収まります。',
+      [...axes(g, -3.5, 2.2, -20, 2, [-3, 1], [-18]), ...curve(g, (x) => -2 * x * x, -3.1, 1.3, C.blue), ...dot(g, -3, -18, C.red, '(−3, −18)', 8, -2), ...dot(g, 1, -2, C.green, '(1, −2)', 6, 10), ...dot(g, 0, 0, C.red)],
+      cap2('a<0 のとき：−18＝a×(−3)²', 'a＝−2　（x＝1 で −2 ✓）', C.green, FILL.green));
+  })(),
+  F('まとめです。y の変域の端に 0 があれば頂点を通る。0 でない端は、原点から遠い端の x を代入して a を出す。最後に、使わなかった端で検算します。',
+    sum3('① y の端に 0 → x の範囲は 0 を通る', '② 0 でない端は、原点から遠い x を代入', '③ 使わなかった端で必ず検算', 'a＝2（x＝3 で 18）'),
+    []),
+], '変域から a を決める');
+
+// ───────── s165 変域⑤：一次関数との比較・融合 ─────────
+const g165 = mp(150, 128, 36, 8.6);
+const b165 = (): DiagramElement[] => axes(g165, -2, 3.2, -1, 14.5, [-1, 2], [4, 12]);
+const s165: DiagramFigure = show([
+  F('問題です。y＝ax²（a>0）と y＝4x＋4 について、x の変域がどちらも −1≦x≦2 のとき、y の変域が同じになります。a を求めます。',
+    [...b165(), ...curve(g165, (x) => 4 * x + 4, -1.2, 2.2, C.main), sg(g165, -1, 0, 2, 0, C.blue, false, 4)],
+    cap2('一次関数 y＝4x＋4 と y＝ax²', '2つの y の変域が一致する a は？', C.main, FILL.warm, 12)),
+  A('❓一次関数の変域は、なぜ両端を代入するだけで求まるのでしょう。→ 直線は折り返さず、増え続けるか減り続けるかのどちらかだからです。x＝−1 で y＝0、x＝2 で y＝12 です。',
+    [...dot(g165, -1, 0, C.red, '(−1, 0)', 8, -6), ...dot(g165, 2, 12, C.red, '(2, 12)', -8, -4)], cap('両端を入れる：−1 → 0、2 → 12', C.red)),
+  A('傾き 4 は正なので、x が大きいほど y も大きくなります。よって一次関数の変域は 0≦y≦12 です。',
+    [sg(g165, -1.6, 12, 2.4, 12, C.red, true, 1.2), lab(g165, -1.55, 12.9, '12', C.red, 10, 'start')], cap2('一次関数の y の変域', '0≦y≦12', C.red, FILL.red)),
+  (() => {
+    const X = (x: number) => 160 + 50 * x;
+    return F('❓二次関数の変域はどう考えるのでしょう。→ x の範囲 −1〜2 は 0 をふくむので、a>0 なら最小は頂点の 0。最大は原点から遠い x＝2 のときで、a×2²＝4a です。',
+      [ln(X(-1.6), 50, X(2.6), 50, C.gray), ...[-1, 0, 2].flatMap((x) => [ci(X(x), 50, 4, undefined, C.blue, C.blue), lb(X(x), 38, String(x), 11, C.ink, 'middle', true)]),
+        ar(X(0), 78, X(-1), 78, C.green), lb(X(-0.5), 92, '距離 1', 10, C.green, 'middle', true),
+        ar(X(0), 108, X(2), 108, C.red), lb(X(1), 122, '距離 2（遠い）', 10, C.red, 'middle', true)],
+      cap2('0 を通るので最小は 0、遠い x＝2 で最大', '0≦y≦4a', C.main, FILL.warm));
+  })(),
+  F('❓2つの変域が一致するには？ → 下の端どうしは 0 と 0 で一致しています。上の端どうしを等しくおくと、4a＝12 より a＝3 です。',
+    [...b165(), ...curve(g165, (x) => 4 * x + 4, -1, 2, C.main), ...curve(g165, (x) => 3 * x * x, -1.2, 2.1, C.blue, 13.5), sg(g165, -1.6, 12, 2.4, 12, C.gray, true, 1.2), ...dot(g165, 2, 12, C.red)],
+    cap2('上の端どうし 4a＝12', 'a＝3', C.green, FILL.green)),
+  A('検算します。y＝3x² で x＝−1 なら y＝3、x＝0 なら y＝0、x＝2 なら y＝12。変域は 0≦y≦12 で、一次関数の変域と一致しました。',
+    [...dot(g165, -1, 3, C.green, '3', -7, -2), ...dot(g165, 0, 0, C.green)], cap('二次：0≦y≦12　一次：0≦y≦12', C.green)),
+  F('❓もし一次関数の変域が −1≦y≦7 のように負の数をふくんでいたら？ → y＝ax²（a>0）は負の値をとらないので、どんな a でも一致しません。下の端が 0 かどうかが、一致できる条件になります。',
+    [bx(20, 18, 130, 40, '一次関数\n−1≦y≦7', C.main, FILL.warm, 12), bx(170, 18, 130, 40, 'y＝ax²（a>0）\n0 以上だけ', C.blue, FILL.blue, 12), lb(160, 44, '≠', 20, C.red, 'middle', true), lb(160, 92, '負の値をふくむなら一致しない', 12, C.red, 'middle', true)],
+    cap('下の端が 0 かどうかを先に見る', C.red)),
+  F('ちがいも確認します。x の範囲が −2≦x≦1 のとき、y＝x² は x＝−2 で 4、x＝0 で 0、x＝1 で 1 なので 0≦y≦4。y＝x は両端そのままで −2≦y≦1。同じ x の範囲でも、y の変域はまったくちがいます。',
+    [bx(14, 14, 140, 46, 'y＝x²\n0≦y≦4', C.blue, FILL.blue, 13), bx(166, 14, 140, 46, 'y＝x\n−2≦y≦1', C.main, FILL.warm, 13), lb(160, 86, '（どちらも −2≦x≦1）', 11, C.gray), lb(160, 112, '二次は途中で折り返す。一次は折り返さない', 11, C.ink, 'middle', true)],
+    cap('別々に求めてから比べる', C.main)),
+  F('まとめです。①一次関数は両端を代入、②二次関数は 0 をふくむか確認して最大は遠い端、③下の端どうし・上の端どうしを等しくおく。',
+    sum3('① 一次関数：両端を代入（m<0 なら大小が入れかわる）', '② 二次関数：0 をふくむか見て、遠い端が最大', '③ 下の端どうし・上の端どうしを等しくおく', 'a＝3（0≦y≦12）'), []),
+], '一次と二次の変域を比べる');
+
+// ───────── s167 変化の割合②：a(p+q) ─────────
+const g167 = mp(36, 138, 40, 1.7);
+const b167 = (): DiagramElement[] => axes(g167, -0.3, 6.6, -2, 79, [2, 5], [12, 75]);
+const c167 = (): DiagramElement[] => curve(g167, (x) => 3 * x * x, 0, 5.1, C.blue);
+const s167: DiagramFigure = show([
+  F('問題です。y＝3x² で、x が 2 から 5 まで増えるときの変化の割合を求めます。毎回 y の値を出して計算するのは大変なので、近道の式を自分で作ってみます。',
+    [...b167(), ...c167(), ...dot(g167, 2, 12, C.red, '(2, 12)', 8, 4), ...dot(g167, 5, 75, C.red, '(5, 75)', -8, -4)], cap2('y＝3x²　x：2 → 5', '変化の割合は？', C.main, FILL.warm)),
+  A('❓変化の割合とは何でしょう。→ （y の増加量）÷（x の増加量）で、2点を結ぶ直線の傾きです。x は 5−2＝3、y は 75−12＝63 増えるので、63÷3＝21 です。',
+    [sg(g167, 2, 12, 5, 12, C.green), sg(g167, 5, 12, 5, 75, C.green), lab(g167, 3.5, 6, 'x：3', C.green, 10), lab(g167, 5.5, 44, 'y：63', C.green, 10, 'start'), sg(g167, 2, 12, 5, 75, C.red, false, 2)],
+    cap('傾き＝63÷3＝21', C.red)),
+  F('これを文字で考えます。x が p から q まで増えるとき、y＝ax² の増加量は aq²−ap²、x の増加量は q−p です。変化の割合は (aq²−ap²)÷(q−p) になります。',
+    [bx(20, 14, 280, 34, '変化の割合 ＝ y の増加量 ÷ x の増加量', C.main, FILL.warm, 12), bx(20, 62, 280, 40, '（aq²−ap²）÷（q−p）', C.blue, FILL.blue, 15), lb(160, 122, 'ここから形を整えていく', 11, C.gray)],
+    cap('この式を簡単にしたい', C.main)),
+  F('❓なぜ、aq²−ap² を分けられるのでしょう。→ 因数分解の公式 q²−p²＝(q+p)(q−p) が使えるからです。a でくくると、aq²−ap²＝a(q²−p²)＝a(q+p)(q−p) になります。',
+    [bx(20, 14, 280, 34, 'aq²−ap² ＝ a（q²−p²）', C.blue, FILL.blue, 14), ar(160, 50, 160, 66, C.main), bx(20, 68, 280, 40, '＝ a（q＋p）（q−p）', C.green, FILL.green, 15), lb(160, 128, 'q²−p²＝(q＋p)(q−p) の公式', 11, C.gray)],
+    cap('上の式が積の形になった', C.green)),
+  F('❓では、分母の q−p はどうなるでしょう。→ 上にも同じ (q−p) があるので、約分（やくぶん）で消えます。残るのは a(q+p)、つまり a(p+q) です。',
+    [bx(20, 14, 280, 44, 'a（q＋p）（q−p）\n÷（q−p）', C.blue, FILL.blue, 14), ar(160, 60, 160, 76, C.main), bx(60, 78, 200, 40, '＝ a（p＋q）', C.red, FILL.red, 18), lb(160, 134, '消えたのは「差」、残ったのは「和」', 11, C.red, 'middle', true)],
+    cap('変化の割合 ＝ a（p＋q）', C.red)),
+  F('もとの問題で試します。a＝3、p＝2、q＝5 なので、3×(2＋5)＝21。さきほど定義で出した 63÷3＝21 と一致しました。',
+    [bx(14, 14, 138, 50, '公式で\n3×(2＋5)＝21', C.red, FILL.red, 13), bx(168, 14, 138, 50, '定義で\n(75−12)÷3＝21', C.blue, FILL.blue, 13), lb(160, 92, '✓ 一致', 22, C.green, 'middle', true), lb(160, 124, 'p と q の順番は入れかえても和は同じ', 11, C.gray)],
+    cap('公式でも定義でも 21', C.green)),
+  F('❓よくあるまちがいは 3×(5−2)＝9 のように差を使うことです。なぜまちがいなのでしょう。→ 導き方で、差 q−p は約分で消えていたからです。使うのは和です。',
+    [bx(20, 14, 130, 44, '3×(5−2)＝9', C.red, FILL.red, 14), lb(160, 40, '✗', 20, C.red, 'middle', true), bx(170, 14, 130, 44, '3×(2＋5)＝21', C.green, FILL.green, 14), lb(235, 74, '✓', 20, C.green, 'middle', true), lb(160, 110, '差は約分で消えた。和が残る。', 12, C.ink, 'middle', true)],
+    cap('「エー・ピー・プラス・キュー」', C.red)),
+  (() => {
+    const g = mp(160, 40, 26, 6.5);
+    return F('負の数をふくむ区間でも同じです。y＝(1/2)x² で x が −4 から 2 まで増えるとき、(1/2)×(−4＋2)＝−1。検算：y は 8 から 2 へ変わるので (2−8)÷(2−(−4))＝−6÷6＝−1。右下がりなので負になります。',
+      [...axes(g, -5, 3, -1, 8.5, [-4, 2], [2, 8]), ...curve(g, (x) => 0.5 * x * x, -4.1, 2.4), ...dot(g, -4, 8, C.red, '(−4, 8)', 8, -2), ...dot(g, 2, 2, C.red, '(2, 2)', 6, -6), sg(g, -4, 8, 2, 2, C.red, false, 2)],
+      cap2('(1/2)×(−4＋2)', '＝−1（検算 −6÷6＝−1 ✓）', C.green, FILL.green));
+  })(),
+  F('逆に使う例です。y＝ax² で x が −1 から 4 のとき変化の割合が 6。a(−1＋4)＝3a＝6 より a＝2。検算：y は 2 から 32 になるので (32−2)÷5＝6。また y＝x² で x が 1 から p、変化の割合が 5 なら 1×(1＋p)＝5 より p＝4（検算 (16−1)÷3＝5）。',
+    [bx(14, 14, 292, 50, 'a(−1＋4)＝6　→　3a＝6　→　a＝2\n検算　(32−2)÷5＝6 ✓', C.blue, FILL.blue, 13), bx(14, 76, 292, 50, '1×(1＋p)＝5　→　p＝4\n検算　(16−1)÷3＝5 ✓', C.main, FILL.warm, 13)],
+    cap('割合の値から a や p も出せる', C.green)),
+  F('まとめです。y＝ax² で x が p から q のとき、変化の割合は a(p＋q)。導き方は「因数分解して q−p を約分」。使うのは和で、差ではありません。',
+    sum3('① 変化の割合＝y の増加量÷x の増加量', '② q²−p²＝(q＋p)(q−p) で約分する', '③ 残るのは a(p＋q)　和であって差ではない', '公式は y＝ax² 専用', C.red), []),
+], '変化の割合 a(p＋q) の導き方');
+
+// ───────── s168 変化の割合③：一次関数との比較 ─────────
+const g168a = mp(40, 120, 18, 5);
+const g168b = mp(210, 120, 18, 5);
+const s168: DiagramFigure = show([
+  F('問題です。変化の割合は、一次関数でも二次関数でも同じ定義（y の増加量÷x の増加量）です。でも、区間を変えたとき、答えは変わるでしょうか。y＝3x＋2 と y＝x² で調べます。',
+    [...axes(g168a, -0.6, 4.2, -1, 18), ...curve(g168a, (x) => 3 * x + 2, 0, 4.3, C.main), lb(80, 22, 'y＝3x＋2', 11, C.main, 'middle', true),
+      ...axes(g168b, -0.6, 4.2, -1, 18), ...curve(g168b, (x) => x * x, 0, 4.2, C.blue, 18), lb(250, 22, 'y＝x²', 11, C.blue, 'middle', true)],
+    cap('直線と曲線で、傾きはどうちがう？', C.main)),
+  F('一次関数 y＝3x＋2 で調べます。x が 1→5 のとき (17−5)÷4＝3、0→2 のとき (8−2)÷2＝3、−4→−1 のとき (−1−(−10))÷3＝3。どの区間でも 3 です。',
+    [bx(14, 10, 292, 34, '1 → 5 ： (17−5)÷4 ＝ 3', C.main, FILL.warm, 13), bx(14, 52, 292, 34, '0 → 2 ： (8−2)÷2 ＝ 3', C.main, FILL.warm, 13), bx(14, 94, 292, 34, '−4 → −1 ： (−1−(−10))÷3 ＝ 3', C.main, FILL.warm, 13)],
+    cap('どの区間も 3　→　一定', C.main)),
+  F('❓なぜ一次関数は一定なのでしょう。→ x が 1 増えるたびに、y がいつも 3 ずつ増えるからです。階段の段差がどこも同じなので、グラフは直線になります。',
+    [...axes(g168a, -0.6, 4.2, -1, 18), ...[0, 1, 2, 3].flatMap((i) => [sg(g168a, i, 3 * i + 2, i + 1, 3 * i + 2, C.green, false, 2), sg(g168a, i + 1, 3 * i + 2, i + 1, 3 * i + 5, C.red, false, 2), lab(g168a, i + 1.35, 3 * i + 3.5, '+3', C.red, 10, 'start')]),
+      lb(250, 70, 'x が 1 増えると\nいつも y は 3 増える', 11, C.ink, 'middle', true)],
+    cap('段差はどこも 3', C.green)),
+  F('二次関数 y＝x² で調べます。0→2 のとき (4−0)÷2＝2、2→4 のとき (16−4)÷2＝6、−2→0 のとき (0−4)÷2＝−2、−1→1 のとき (1−1)÷2＝0。区間によって値が変わります。',
+    [bx(14, 10, 292, 30, '0 → 2 ： (4−0)÷2 ＝ 2', C.blue, FILL.blue, 13), bx(14, 46, 292, 30, '2 → 4 ： (16−4)÷2 ＝ 6', C.blue, FILL.blue, 13), bx(14, 82, 292, 30, '−2 → 0 ： (0−4)÷2 ＝ −2', C.blue, FILL.blue, 13), bx(14, 118, 292, 28, '−1 → 1 ： (1−1)÷2 ＝ 0', C.blue, FILL.blue, 13)],
+    cap('区間によって 2、6、−2、0', C.blue)),
+  (() => {
+    const g = mp(160, 130, 28, 7);
+    return F('❓なぜ二次関数は変わるのでしょう。→ 曲線は場所によって傾きがちがうからです。0→2 を結ぶ線は緩やか（2）、2→4 を結ぶ線は急（6）です。',
+      [...axes(g, -4.2, 4.5, -1, 17, [-2, 2, 4], [4, 16]), ...curve(g, (x) => x * x, -4.1, 4.1, C.gray, 17), sg(g, 0, 0, 2, 4, C.green, false, 2.4), sg(g, 2, 4, 4, 16, C.red, false, 2.4), lab(g, 0.4, 3.6, '2', C.green, 12), lab(g, 3.4, 8, '6', C.red, 12)],
+      cap('右へ行くほど急になる', C.red));
+  })(),
+  (() => {
+    const g = mp(160, 130, 28, 7);
+    return F('❓では、−1→1 でなぜ 0 になるのでしょう。→ 左半分で下がった分と、右半分で上がった分が、ちょうど打ち消し合うからです。両端の y がどちらも 1 で等しくなります。公式でも 1×(−1＋1)＝0 です。',
+      [...axes(g, -4.2, 4.5, -1, 17, [-1, 1], [1]), ...curve(g, (x) => x * x, -4.1, 4.1, C.gray, 17), sg(g, -1, 1, 1, 1, C.green, false, 2.6), ...dot(g, -1, 1, C.green), ...dot(g, 1, 1, C.green), lab(g, 0, 2.6, '傾き 0', C.green, 11)],
+      cap('p＋q＝0 のとき 変化の割合は 0', C.green));
+  })(),
+  F('❓一次関数にも公式 a(p＋q) を使ってよいでしょうか。→ だめです。3×(1＋5)＝18 としてしまうと、本当の値 3 と食いちがいます。a(p＋q) は y＝ax² だけの公式です。',
+    [bx(14, 14, 140, 52, 'y＝3x＋2 に\n3×(1＋5)＝18', C.red, FILL.red, 13), lb(84, 86, '✗', 20, C.red, 'middle', true), bx(166, 14, 140, 52, '本当は\n(17−5)÷4＝3', C.green, FILL.green, 13), lb(236, 86, '✓', 20, C.green, 'middle', true)],
+    cap('公式は y＝ax² 専用', C.red)),
+  F('平均の速さとして出ます。y＝3x²（x 秒間に y m 進む）で 2 秒後から 5 秒後まで。3×(2＋5)＝21 m/秒。検算：5 秒で 75 m、2 秒で 12 m なので 3 秒間に 63 m 進み、63÷3＝21。75÷5＝15 は 0 秒からの平均なので、ちがいます。',
+    [bx(14, 14, 292, 38, '2秒後 → 5秒後：3×(2＋5)＝21 m/秒', C.blue, FILL.blue, 13), bx(14, 60, 292, 38, '検算：(75−12)÷3＝63÷3＝21 ✓', C.green, FILL.green, 13), bx(14, 106, 292, 34, '75÷5＝15 は 0秒からの平均 ✗', C.red, FILL.red, 12)],
+    cap('始点をたしかめる', C.red)),
+  F('まとめです。まず関数の種類を見ます。一次関数なら傾きそのまま。二次関数なら a(p＋q)。この2択を最初に決めます。',
+    sum3('① 一次関数：どの区間でも傾きと同じで一定', '② 二次関数：区間で変わる　a(p＋q)', '③ p＋q＝0 の区間は 0（左右で打ち消し合う）', 'まず種類を見分ける', C.blue), []),
+], '一次と二次の変化の割合');
+
+// ───────── s169 変化の割合④：区間や平均の速さを求める ─────────
+const g169 = mp(36, 132, 34, 7.2);
+const s169: DiagramFigure = show([
+  F('問題です。y＝x² で、x が 1 から p まで増えるとき、変化の割合が 5 でした。p を求めます。変化の割合から、区間の終わりを逆算する問題です。',
+    [...axes(g169, -0.3, 8, -1, 17, [1], [1]), ...curve(g169, (x) => x * x, 0, 4.1, C.blue, 17), ...dot(g169, 1, 1, C.red, '(1, 1)', 6, 10)],
+    cap2('x：1 → p　変化の割合 5', 'p はいくつ？', C.main, FILL.warm)),
+  F('❓どんな式を立てればよいでしょう。→ y＝x² の a は 1 なので、公式 a(p＋q) に当てはめて 1×(1＋p)＝5。変化の割合 5 は、x の値ではなく傾きです。',
+    [bx(20, 14, 280, 36, 'a(p＋q) ＝ 変化の割合', C.gray, FILL.gray, 13), ar(160, 52, 160, 68, C.main), bx(20, 70, 280, 40, '1×(1＋p) ＝ 5', C.blue, FILL.blue, 17), lb(160, 128, 'a＝1、はじめの x＝1', 11, C.gray)],
+    cap('まず式を書く', C.blue)),
+  A('1＋p＝5 より p＝4。検算：x＝1 のとき y＝1、x＝4 のとき y＝16。(16−1)÷(4−1)＝15÷3＝5 で合っています。',
+    [...fresh(), ...axes(g169, -0.3, 8, -1, 17, [1, 4], [1, 16]), ...curve(g169, (x) => x * x, 0, 4.1, C.blue, 17), ...dot(g169, 1, 1, C.red), ...dot(g169, 4, 16, C.red, '(4, 16)', 6, 4), sg(g169, 1, 1, 4, 16, C.red, false, 2)],
+    cap2('1＋p＝5　→　p＝4', '検算 (16−1)÷3＝5 ✓', C.green, FILL.green)),
+  F('❓「変化の割合が 5 だから p＝5」としてはいけないのはなぜでしょう。→ p＝5 だと (25−1)÷4＝6 になり、5 になりません。5 は傾きの値で、x の値ではないからです。',
+    [bx(20, 14, 130, 50, 'p＝5 とすると\n(25−1)÷4＝6', C.red, FILL.red, 13), lb(85, 84, '✗ 5 にならない', 12, C.red, 'middle', true), bx(170, 14, 130, 50, 'p＝4 とすると\n(16−1)÷3＝5', C.green, FILL.green, 13), lb(235, 84, '✓', 20, C.green, 'middle', true)],
+    cap('式を立ててから解く', C.red)),
+  F('文字の位置を変えても同じです。y＝(1/2)x² で x が −2 から q まで、変化の割合が 1。(1/2)×(−2＋q)＝1 より −2＋q＝2、q＝4。検算：y は 2 から 8 になるので (8−2)÷(4−(−2))＝6÷6＝1 です。',
+    [bx(14, 14, 292, 36, '(1/2)×(−2＋q)＝1', C.blue, FILL.blue, 15), bx(14, 58, 292, 36, '−2＋q＝2　→　q＝4', C.main, FILL.warm, 15), bx(14, 102, 292, 36, '検算 (8−2)÷6＝1 ✓', C.green, FILL.green, 14)],
+    cap('どの文字でも同じ手順', C.green)),
+  F('❓変化の割合が 0 になる区間は、どんな区間でしょう。y＝2x² で 2(p＋q)＝0 とすると q＝−p。原点について左右対称な区間です。両端の y の値が等しいので、増加量が 0 になります。',
+    [bx(20, 14, 280, 36, '2(p＋q)＝0　→　q＝−p', C.red, FILL.red, 15), lb(160, 76, '例：x が −3 から 3 まで', 12, C.ink, 'middle', true), lb(160, 98, 'y は 18 から 18 で、増加量は 0', 12, C.ink, 'middle', true)],
+    cap('原点について対称な区間', C.red)),
+  F('平均の速さの問題です。球が転がり、x 秒間に進む距離 y m が y＝3x² です。①2 秒後から 5 秒後の平均の速さは 3×(2＋5)＝21 m/秒。②48 m 進むのは 3x²＝48 より x²＝16、x>0 なので 4 秒後。③0 秒後から 4 秒後は 3×(0＋4)＝12 m/秒。',
+    [bx(14, 12, 292, 36, '① 2秒後〜5秒後：3×(2＋5)＝21 m/秒', C.blue, FILL.blue, 13), bx(14, 54, 292, 36, '② 48 m：3x²＝48 → x²＝16 → x＝4（秒）', C.main, FILL.warm, 12), bx(14, 96, 292, 36, '③ 0秒後〜4秒後：3×(0＋4)＝12 m/秒', C.green, FILL.green, 13)],
+    cap('① より ③ が小さい（後ろほど速い）', C.green)),
+  F('❓②の答え 4 秒後と 48 m から、48÷4＝12 を①の答えにしてよいでしょうか。→ よくありません。48÷4 は 0 秒からの平均で、問われているのは 2 秒後からの平均だからです。また x²＝16 の解 ±4 のうち、時間は負にならないので 4 だけを答えます。',
+    [bx(14, 14, 140, 54, '48÷4＝12\n0秒からの平均', C.red, FILL.red, 13), lb(84, 88, '✗ 区間がちがう', 11, C.red, 'middle', true), bx(166, 14, 140, 54, '2秒〜5秒\n21 m/秒', C.green, FILL.green, 13), lb(236, 88, '✓', 20, C.green, 'middle', true)],
+    cap('始点と終点を毎回たしかめる', C.red)),
+  F('まとめです。変化の割合の問題は、①公式 a(p＋q)＝（与えられた値）の式を書く、②区間の始点と終点を確認する、③答えを検算し、単位や符号を吟味する。',
+    sum3('① a(p＋q)＝値 の式を最初に書く', '② 始点と終点（どこからどこまで）を確認', '③ 検算と、単位・負の解の吟味', '一次方程式にすれば解ける', C.green), []),
+], '変化の割合を逆算する');
+
+export const XF_KSD_FIGURES: Record<string, DiagramFigure> = {
+  'xf_koko_math_s164': s164,
+  'xf_koko_math_s165': s165,
+  'xf_koko_math_s167': s167,
+  'xf_koko_math_s168': s168,
+  'xf_koko_math_s169': s169,
+};
+
+export const XF_KSD_SECTIONS: Record<string, string> = {
+  'koko_math_s164#0': 'xf_koko_math_s164',
+  'koko_math_s165#1': 'xf_koko_math_s165',
+  'koko_math_s167#0': 'xf_koko_math_s167',
+  'koko_math_s168#0': 'xf_koko_math_s168',
+  'koko_math_s169#0': 'xf_koko_math_s169',
+};
