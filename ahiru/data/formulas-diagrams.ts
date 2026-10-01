@@ -82,6 +82,7 @@ import { DIAGRAMS_OLD_SHAKAIG } from './formulas-diagrams-old-shakaig';
 import { DIAGRAMS_SHAKAI_6 } from './formulas-diagrams-shakai-6';
 import { DIAGRAMS_KOKO_SUGAKU_X } from './formulas-diagrams-koko-sugaku-x';
 import { DIAGRAMS_CHU_SHAKAI_Y } from './formulas-diagrams-chu-shakai-y';
+import { DIAGRAMS_CHU_SHAKAI_X } from './formulas-diagrams-chu-shakai-x';
 
 export const FORMULA_DIAGRAMS: Record<string, DiagramFigure> = {
   ...DIAGRAMS_SANSU_4,
@@ -164,5 +165,6 @@ export const FORMULA_DIAGRAMS: Record<string, DiagramFigure> = {
   ...DIAGRAMS_OLD_SHAKAIG,
   ...DIAGRAMS_SHAKAI_6,
   ...DIAGRAMS_CHU_SHAKAI_Y,
+  ...DIAGRAMS_CHU_SHAKAI_X,
   ...DIAGRAMS_KOKO_SUGAKU_X,
 };
