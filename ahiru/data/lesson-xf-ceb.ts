@@ -240,7 +240,7 @@ const s024: DiagramFigure = show([
     [...tiles('laugh', 160, 22, { mark: { 3: RD, 4: RD } }), lb(160, 66, 'gh ＝ f の音', 12, C.red, 'middle', true), bx(30, 82, 260, 30, 'laugh  enough  cough  tough', C.red, FILL.red, 14)],
     cap('gh は f の音になる語もある', C.red)),
   F('though と through は、つづりが似ているのに読み方がまったくちがいます。though は「ゾウ」、through は「スルー」。入試で問われやすい組です。',
-    [head('似ているが別の語'), ...tiles('though', 80, 34, { w: 20, mark: rng(0, 1, RD) }), ...tiles('through', 240, 34, { w: 18, mark: rng(0, 1, RD) }), bx(30, 80, 100, 28, '「ゾウ」', C.blue, FILL.blue, 13), bx(190, 80, 100, 28, '「スルー」', C.blue, FILL.blue, 13)],
+    [head('似ているが別の語'), ...tiles('though', 80, 34, { w: 20, mark: rng(2, 5, RD) }), ...tiles('through', 240, 34, { w: 18, mark: rng(3, 6, RD) }), bx(30, 80, 100, 28, '「ゾウ」', C.blue, FILL.blue, 13), bx(190, 80, 100, 28, '「スルー」', C.blue, FILL.blue, 13)],
     cap('つづりで区別する', C.red)),
   F('❓gh のほかにも、読まない文字はあるでしょうか。→ あります。walk・talk・half・calm の l、should・would・could の l は読みません。',
     [...tiles('walk', 60, 22, { w: 20, mark: { 2: RD } }), ...tiles('half', 160, 22, { w: 20, mark: { 2: RD } }), ...tiles('calm', 260, 22, { w: 20, mark: { 2: RD } }),

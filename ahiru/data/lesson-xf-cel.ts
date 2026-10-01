@@ -30,7 +30,7 @@ const u11: DiagramFigure = show([
   },
   {
     note: '❓持ち物や服装（ふくそう）は、どう伝えるのでしょう。→ bring は「持ってくる」、wear は「身につける」です。You don\'t have to bring anything. は「何も持ってこなくていい」という意味で、have to の前に don\'t が付くと「〜しなくていい」になります。',
-    add: fresh(bx(8, 10, 190, 30, 'Please bring a gift.', C.blue, FILL.blue, 11), lb(204, 25, 'プレゼントを持ってきて', 11, C.ink, 'start', true), bx(8, 52, 190, 30, "You don't have to bring anything.", C.green, FILL.green, 10), lb(204, 67, '何も持ってこなくていい', 11, C.ink, 'start', true), bx(8, 94, 190, 30, 'Wear something blue.', C.purple, FILL.purple, 11), lb(204, 109, '青いものを身につけて', 11, C.ink, 'start', true), ...cap('bring ＝ 持ってくる　wear ＝ 身につける', C.main, 11)),
+    add: fresh(bx(8, 10, 174, 30, 'Please bring a gift.', C.blue, FILL.blue, 11), lb(190, 25, 'プレゼントを持ってきて', 11, C.ink, 'start', true), bx(8, 52, 174, 30, "You don't have to bring anything.", C.green, FILL.green, 10), lb(190, 67, '何も持ってこなくていい', 11, C.ink, 'start', true), bx(8, 94, 174, 30, 'Wear something blue.', C.purple, FILL.purple, 11), lb(190, 109, '青いものを身につけて', 11, C.ink, 'start', true), ...cap('bring ＝ 持ってくる　wear ＝ 身につける', C.main, 11)),
   },
   {
     note: '❓問題を解くときは、どんな順で読めばよいでしょう。→ ①だれがだれを招待しているか、②何のイベントか、③いつ・どこでか、④準備は何か（返事の期限・持ち物・服装）の4つをメモしながら読みます。選択肢で「4:00 p.m.から始まる」のように時刻が書きかえてあることがあるので、メモと見くらべれば気づけます。',
