@@ -8,8 +8,8 @@ export default function TabLayout() {
       screenOptions={{
         headerShown: false,
         tabBarStyle: styles.tabBar,
-        tabBarActiveTintColor: '#8B5A38',
-        tabBarInactiveTintColor: '#9C9186',
+        tabBarActiveTintColor: '#5A2E0F',
+        tabBarInactiveTintColor: '#5F564D',
         tabBarLabelStyle: styles.tabLabel,
       }}
     >
@@ -17,14 +17,14 @@ export default function TabLayout() {
         name="schools"
         options={{
           title: '学校別',
-          tabBarIcon: ({ color }) => <TabBarIcon name="schools" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="schools" color={color} size={28} />,
         }}
       />
       <Tabs.Screen
         name="index"
         options={{
-          title: 'クイズ',
-          tabBarIcon: ({ color }) => <TabBarIcon name="quiz" color={color} />,
+          title: 'ホーム',
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} size={28} />,
         }}
       />
       {/* 教科書はホームの一番上から開く。下のタブからは外してある
@@ -39,28 +39,28 @@ export default function TabLayout() {
         name="geography"
         options={{
           title: '地図',
-          tabBarIcon: ({ color }) => <TabBarIcon name="geography" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="geography" color={color} size={28} />,
         }}
       />
       <Tabs.Screen
         name="timeline"
         options={{
           title: '年表',
-          tabBarIcon: ({ color }) => <TabBarIcon name="timeline" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="timeline" color={color} size={28} />,
         }}
       />
       <Tabs.Screen
         name="formulas"
         options={{
           title: '公式',
-          tabBarIcon: ({ color }) => <TabBarIcon name="formulas" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="formulas" color={color} size={28} />,
         }}
       />
       <Tabs.Screen
         name="coach"
         options={{
           title: 'コーチ',
-          tabBarIcon: ({ color }) => <TabBarIcon name="coach" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="coach" color={color} size={28} />,
         }}
       />
       <Tabs.Screen
@@ -80,13 +80,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     borderTopWidth: 1.5,
     borderTopColor: '#DCD3C5',
-    height: 68,
-    paddingBottom: 8,
-    paddingTop: 6,
+    height: 78,
+    paddingBottom: 10,
+    paddingTop: 8,
   },
   tabLabel: {
-    fontSize: 12,
-    fontWeight: '700',
-    marginTop: 2,
+    fontSize: 13,
+    fontWeight: '800',
+    marginTop: 3,
   },
 });
