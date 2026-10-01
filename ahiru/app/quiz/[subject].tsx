@@ -18,9 +18,7 @@ import { getTestMode, buildTestSet, type TestModeKey, type LevelKey } from '../.
 import { GRADE_ORDER, type GradeKey } from '../../data/grades';
 import { getKoushikiFormulaIdForQuestion, isKoushikiFormulaFree } from '../../data/koushiki-access';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
-import { explanationText, hintText } from '../../utils/explanation';
-import ExplanationSlides from '../../components/ExplanationSlides';
-import { getQuickTrick } from '../../data/quick-tricks';
+import { explanationText } from '../../utils/explanation';
 
 // 「レベル別ドリル」「入試対策」は問題プールから毎回ランダムに出題するため、
 // 個別の問題にmaxOnlyを付けて絞れない。代わりに1回のセッションで
@@ -845,19 +843,10 @@ export default function QuizScreen() {
               </View>
             )}
 
-            {(currentQuestion.hint || currentQuestion.explanation) && (
+            {(currentQuestion.memoryTip || currentQuestion.pitfall) && (
               <View style={styles.wrongExplanationCard}>
-                <Text style={styles.wrongExplanationTitle}>📖 くわしい解説</Text>
-                <ExplanationSlides key={currentQuestion.id} q={currentQuestion} />
-                {hintText(currentQuestion) !== '' && (
-                  <Text style={styles.wrongExplanationText}>💡 {rich(hintText(currentQuestion))}</Text>
-                )}
-                {getQuickTrick(currentQuestion.id) != null && (
-                  <View style={styles.tipRow}>
-                    <Text style={styles.trickLabel}>⚡ はやく解くコツ</Text>
-                    <Text style={styles.tipText}>{getQuickTrick(currentQuestion.id)}</Text>
-                  </View>
-                )}
+                {/* くわしい解説（スライド）・ヒント・はやく解くコツは、すぐ上の答えのカードに出ているので、ここでは繰り返さない */}
+                <Text style={styles.wrongExplanationTitle}>🧠 まちがいを減らすヒント</Text>
                 {(isPro || isMax) && currentQuestion.memoryTip && (
                   <View style={styles.tipRow}>
                     <Text style={styles.tipLabel}>💡 覚え方</Text>
