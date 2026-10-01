@@ -621,7 +621,7 @@ const f_koko_math_s237: DiagramFigure = (() => {
       },
       {
         note: '❓この相似から、積の形の等式も出せるのでしょうか。→ 出せます。AD：AC＝AE：AB に、外項の積＝内項の積を使うと AD×AB＝AC×AE。数値で確かめると 5×8＝40、10×4＝40 で成り立っています。',
-        add: fresh(bx(20, 14, 280, 30, 'AD：AC ＝ AE：AB', C.blue, FILL.blue, 14), ar(160, 46, 160, 62, C.main), bx(20, 64, 280, 30, 'AD × AB ＝ AC × AE', C.green, FILL.green, 14), bx(20, 104, 280, 34, '5 × 8 ＝ 40　10 × 4 ＝ 40　(OK)', C.main, FILL.warm, 14), ...cap('比例式 ⇄ 積の形（内項の積＝外項の積）', C.ink)),
+        add: fresh(bx(20, 14, 280, 30, 'AD：AC ＝ AE：AB', C.blue, FILL.blue, 14), ar(160, 46, 160, 62, C.main), bx(20, 64, 280, 30, 'AD × AB ＝ AC × AE', C.green, FILL.green, 14), bx(20, 104, 280, 34, '5 × 8 ＝ 40　10 × 4 ＝ 40　（成り立つ）', C.main, FILL.warm, 14), ...cap('比例式 ⇄ 積の形（内項の積＝外項の積）', C.ink)),
       },
       {
         note: 'まとめです。角が共通角だけのときは、辺の比を2組そろえます。比は長い辺どうし・短い辺どうしで作ると「たすきがけ」になります。結論が積の形の式なら、比例式に直してから相似を探します。',
@@ -963,7 +963,7 @@ const f_koko_math_s251: DiagramFigure = (() => {
   const A: Pt = [60, 100], B: Pt = [260, 100], Cc: Pt = [160, 16];
   const M = mid(Cc, A), N = mid(Cc, B);
   const D = at(Cc, A, 2 / 3), E = at(Cc, B, 2 / 3);
-  const pond: El[] = [ci(160, 100, 32, '池', C.blue, FILL.blue, 13)];
+  const pond: El[] = [ci(160, 100, 32, undefined, C.blue, FILL.blue), lb(160, 118, '池', 13, C.ink, 'middle', true)];
   const ab: El[] = [dot(A), dot(B), ...names({ A, B }, { A: [-10, 4], B: [10, 4] })];
   return show(
     [
@@ -1296,7 +1296,7 @@ const f_koko_math_s263: DiagramFigure = (() => {
       },
       {
         note: '❓どうやって直角を作るのでしょう。→ 頂点Aから底辺BCに垂線AHを引きます。二等辺三角形では、この垂線が頂角を二等分し、底辺も二等分します。だから ∠BAH＝∠CAH＝120°÷2＝60° です。',
-        add: [bx(100, 88, 120, 22, undefined, '#FFFFFF', '#FFFFFF'), seg(A, H, C.blue, true, 2), ...rt(H, A, Cc, 8), dot(H), nm('H', H, 0, 12), ...arc(A, B, H, 24, C.green), ...arc(A, H, Cc, 24, C.green), ...cap('垂線 AH で 直角を作る（∠BAH＝∠CAH＝60°）', C.blue, 11)],
+        add: fresh(...fig(), tag('6', B, A, -10), tag('6', A, Cc, -10), seg(A, H, C.blue, true, 2), ...rt(H, A, Cc, 8), dot(H), nm('H', H, 0, 12), ...arc(A, B, H, 24, C.green), ...arc(A, H, Cc, 24, C.green), ...cap('垂線 AH で 直角を作る（∠BAH＝∠CAH＝60°）', C.blue, 11)),
       },
       {
         note: '❓△ABHはどんな三角形でしょう。→ 角は 90°、60°、そして残りは 180°−90°−60°＝30°。30°・60°・90° の直角三角形です。辺の比は、30°の向かい側：60°の向かい側：斜辺＝1：√3：2 です。',
@@ -1438,7 +1438,7 @@ const f_koko_math_s270: DiagramFigure = (() => {
       },
       {
         note: '❓わからない長さは、どうおけばよいでしょう。→ 求めたい BE を x とおきます。BC＝8なので EC＝8−x。AE＝EC なので AE も 8−x です。',
-        add: [lb(76, 140, 'x', 13, C.red, 'middle', true), lb(150, 140, '8 − x', 13, C.blue, 'middle', true), ...cap2('BE ＝ x とおく', 'EC ＝ 8 − x', C.main, FILL.warm)],
+        add: [bx(130, 133, 24, 16, undefined, '#FFFFFF', '#FFFFFF'), lb(76, 140, 'x', 13, C.red, 'middle', true), lb(150, 140, '8 − x', 13, C.blue, 'middle', true), ...cap2('BE ＝ x とおく', 'EC ＝ 8 − x', C.main, FILL.warm)],
       },
       {
         note: '❓xを含む式をどうやって作るのでしょう。→ △ABEは、Bが直角の直角三角形です。AB＝6、BE＝x、斜辺AE。三平方の定理で AE²＝AB²＋BE²＝6²＋x²＝36＋x²。',
