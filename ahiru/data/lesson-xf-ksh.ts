@@ -1,7 +1,7 @@
 // 高校受験 数学（教科書単元 30 件）の「動く図解スライド」。
 // 「なぜ？」の連鎖で、7枚以上。上に図、下の帯にそのスライドのひとこと。
 import type { DiagramElement, DiagramFigure } from './figures';
-import { C, FILL, bx, lb, ar, ln, ci, pg, show, fresh, flow, stack } from './diagram-kit';
+import { C, FILL, bx, lb, ar, ln, ci, pg, sc, show, fresh, flow, stack } from './diagram-kit';
 
 type Col = [string, string];
 const BLUE: Col = [C.blue, FILL.blue];
