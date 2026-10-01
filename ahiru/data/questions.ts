@@ -1,4 +1,5 @@
 import type { CourseKey, ExamType } from './courses';
+import { schoolPlusQuestions } from './school-plus';
 import { kankanQuestions, shitennojiQuestions, kokoGeneralQuestions } from './questions-courses';
 import { kokoKankanQuestions, kokoTopQuestions } from './questions-koko';
 import { kokoMaxSansu } from './koko_max_sansu';
@@ -3678,6 +3679,7 @@ const baseQuestions: Question[] = [
   ...kinrankaiExamQuestions,
   ...otaniQuestions,
   ...otaniExamQuestions,
+  ...schoolPlusQuestions,
   // ── 東京 中学受験 ──
   ...tokyoMeidaiExamQuestions,
   ...tokyoAoyamaExamQuestions,
