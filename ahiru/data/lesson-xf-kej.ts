@@ -1030,6 +1030,134 @@ const e206: DiagramFigure = show([
   },
 ], '並べかえ：SVOO');
 
+// ───────── new20_j2_eigo_07 並べかえ⑦：SVOC ─────────
+const e207: DiagramFigure = show([
+  {
+    note: 'SVOO と SVOC は、どちらも動詞のあとに語が2つ並ぶので、見た目が似ています。I gave him a book. と We call him Ken. 並べかえの前に、この2つをどう見分けるかを確かめます。',
+    add: [bx(10, 16, 300, 34, 'I gave him a book.（SVOO）', C.blue, FILL.blue, 13), bx(10, 62, 300, 34, 'We call him Ken.（SVOC）', C.red, FILL.red, 13), lb(160, 120, '動詞のあとに 2つの語が並ぶ', 12, C.ink, 'middle', true), ...cap('形は似ている')],
+  },
+  {
+    note: '❓どう見分けるのでしょう。→ 2つの語の間に「＝（イコール）」を入れて、意味が通るかを確かめます。him ＝ Ken は成り立つので SVOC。him ＝ a book は成り立たない（人と本は別物）ので SVOO です。',
+    add: fresh(bx(10, 14, 300, 34, 'him ＝ Ken　○ 成り立つ → SVOC', C.green, FILL.green, 13), bx(10, 58, 300, 34, 'him ＝ a book　× 別物 → SVOO', C.red, FILL.red, 13), lb(160, 116, '間に「＝」を入れて 意味が通るか', 12, C.ink, 'middle', true), ...cap('O＝C ならSVOC', C.green)),
+  },
+  {
+    note: 'SVOC の骨組みは〈主語 ＋ 動詞 ＋ O ＋ C〉で、C は O の名前や状態を説明します。We call him Ken.（彼をケンと呼ぶ）は him ＝ Ken、This news made her happy.（この知らせは彼女を幸せにした）は her ＝ happy です。',
+    add: fresh(bx(5, 14, 55, 32, 'We', C.gray, FILL.gray, 12), bx(65, 14, 60, 32, 'call', C.red, FILL.red, 12), bx(130, 14, 60, 32, 'him', C.blue, FILL.blue, 12), bx(195, 14, 60, 32, 'Ken.', C.green, FILL.green, 12), lb(160, 64, 'O ＝ C', 14, C.ink, 'middle', true), bx(5, 86, 90, 32, 'This news', C.gray, FILL.gray, 11), bx(100, 86, 60, 32, 'made', C.red, FILL.red, 11), bx(165, 86, 60, 32, 'her', C.blue, FILL.blue, 12), bx(230, 86, 80, 32, 'happy.', C.green, FILL.green, 12), ...cap('動詞 → O → C')),
+  },
+  {
+    note: '例題です。（ him / Ken / call / we ）は、We call him Ken. です。語順は「O（呼ばれる人）→ C（呼び名）」。逆にして We call Ken him. とすると、Ken ＝ him ではなく不自然な文になります。',
+    add: fresh(bx(15, 20, 290, 34, '○ We call him Ken.', C.green, FILL.green, 14), bx(15, 66, 290, 34, '× We call Ken him.', C.red, FILL.red, 14), lb(160, 122, '呼ばれる人（O）→ 呼び名（C）', 12, C.ink, 'middle', true), ...cap('動詞 → O → C の順')),
+  },
+  {
+    note: 'make、keep、find、leave は、O のあとに形容詞を置きます。make は「〜を…にする」This song makes me happy.、keep は「〜を…に保つ」Please keep the room clean.、find は「〜が…だとわかる」I found the book interesting.、leave は「〜を…のままにしておく」Don\'t leave the door open.',
+    add: fresh(bx(5, 8, 310, 28, 'This song makes me happy.', C.blue, FILL.blue, 12), bx(5, 40, 310, 28, 'Please keep the room clean.', C.blue, FILL.blue, 12), bx(5, 72, 310, 28, 'I found the book interesting.', C.blue, FILL.blue, 12), bx(5, 104, 310, 28, "Don't leave the door open.", C.blue, FILL.blue, 12), ...cap('make／keep／find／leave ＋ O ＋ 形容詞')),
+  },
+  {
+    note: '❓C の位置に、副詞は置けないのでしょうか。→ 置けません。C は O の状態を説明する語だからです。「部屋がきれいな状態」を表すのは形容詞 clean。副詞 cleanly は「きれいに掃除する」という動作のしかたを表す語で、O の状態は説明できません。',
+    add: fresh(bx(10, 14, 145, 34, 'clean（形容詞）', C.green, FILL.green, 12), bx(165, 14, 145, 34, 'cleanly（副詞）', C.red, FILL.red, 12), lb(82, 64, '部屋の「状態」', 11, C.green, 'middle', true), lb(238, 64, '動作の「しかた」', 11, C.red, 'middle', true), bx(10, 84, 145, 32, '○ Keep the room clean.', C.green, FILL.green, 10), bx(165, 84, 145, 32, '× Keep the room cleanly.', C.red, FILL.red, 10), ...cap('C は 名詞か形容詞')),
+  },
+  {
+    note: '例題です。（ the / room / keep / clean ）は、Keep the room clean.（部屋をきれいに保ちなさい）。動詞 keep を先頭に、O の the room、C の clean の順に並べます。me ＝ sad が成り立つなら made me sad、のように O ＝ C を確かめるのも忘れずに。',
+    add: fresh(bx(5, 20, 70, 34, 'Keep', C.red, FILL.red, 13), bx(80, 20, 120, 34, 'the room', C.blue, FILL.blue, 13), bx(205, 20, 100, 34, 'clean.', C.green, FILL.green, 13), lb(160, 80, '動詞 → O → C', 13, C.ink, 'middle', true), lb(160, 104, 'the room ＝ clean が成り立つ', 12, C.gray), ...cap('Keep the room clean.')),
+  },
+  {
+    note: '物や事が主語の文も、同じ型です。This movie made me happy.（この映画は私を幸せにした）。me ＝ happy が成り立つので SVOC です。主語が人でなくても、動詞 → O → C の順は変わりません。',
+    add: fresh(bx(5, 20, 90, 34, 'This movie', C.gray, FILL.gray, 11), bx(100, 20, 60, 34, 'made', C.red, FILL.red, 12), bx(165, 20, 50, 34, 'me', C.blue, FILL.blue, 13), bx(220, 20, 90, 34, 'happy.', C.green, FILL.green, 13), lb(190, 76, 'me ＝ happy', 13, C.ink, 'middle', true), ...cap('物・事が主語でも 同じ型')),
+  },
+  {
+    note: 'まとめです。SVOO か SVOC かは、2つの語が「＝」で結べるかで決まります。語順は動詞 → O → C。C の位置には名詞か形容詞を置き、副詞は置きません。',
+    add: sum3('O＝C が成り立つ → SVOC', '語順は 動詞 → O → C', 'C は名詞か形容詞（副詞は置かない）', 'SVOC を見分けて並べられる'),
+  },
+], '並べかえ：SVOC');
+
+// ───────── new20_j2_eigo_08 並べかえ⑧：There is / are ─────────
+const e208: DiagramFigure = show([
+  {
+    note: '「〜がある」を表す There is／are の文です。There is a cat on the sofa.（ソファの上に猫が1匹いる）、There are three books on the desk.（机の上に本が3冊ある）。骨組みは〈There ＋ be動詞 ＋ 主語 ＋ 場所〉です。',
+    add: [bx(5, 16, 60, 32, 'There', C.gray, FILL.gray, 12), bx(70, 16, 40, 32, 'is', C.red, FILL.red, 12), bx(115, 16, 70, 32, 'a cat', C.blue, FILL.blue, 12), bx(190, 16, 125, 32, 'on the sofa.', C.green, FILL.green, 11), bx(5, 66, 60, 32, 'There', C.gray, FILL.gray, 12), bx(70, 66, 40, 32, 'are', C.red, FILL.red, 12), bx(115, 66, 100, 32, 'three books', C.blue, FILL.blue, 11), bx(220, 66, 95, 32, 'on the desk.', C.green, FILL.green, 11), ...cap('There ＋ be ＋ 主語 ＋ 場所')],
+  },
+  {
+    note: '❓There は「そこに」という意味なのでしょうか。→ いいえ。There は意味を持たない形式的な語で、文の本当の主語は、be動詞のあとに来る名詞（a cat や three books）です。',
+    add: fresh(bx(10, 30, 70, 38, 'There', C.gray, FILL.gray, 14), bx(90, 30, 40, 38, 'is', C.red, FILL.red, 14), bx(140, 30, 90, 38, 'a cat', C.blue, FILL.blue, 14), lb(45, 90, '形だけの語', 11, C.gray, 'middle', true), lb(185, 90, '本当の主語', 12, C.blue, 'middle', true), ...cap('主語は be動詞のあとの名詞', C.blue)),
+  },
+  {
+    note: '❓すると、be動詞は何に合わせるのでしょう。→ 文頭の There ではなく、あとに続く名詞の数です。a cat は単数なので is、three books は複数なので are。感覚で選ばず、先に名詞の数を確かめます。',
+    add: fresh(bx(10, 14, 145, 34, 'a cat（単数）', C.blue, FILL.blue, 13), ar(160, 31, 176, 31, C.main), bx(180, 14, 130, 34, 'There is', C.red, FILL.red, 13), bx(10, 62, 145, 34, 'three books（複数）', C.blue, FILL.blue, 11), ar(160, 79, 176, 79, C.main), bx(180, 62, 130, 34, 'There are', C.red, FILL.red, 13), lb(160, 118, '名詞の数で is／are を決める', 12, C.ink, 'middle', true), ...cap('There ではなく あとの名詞を見る')),
+  },
+  {
+    note: '並べかえの手順です。①選択肢の名詞が単数か複数かを確かめる。②その数に合わせて is か are を選ぶ。③〈There ＋ be動詞 ＋ 名詞 ＋ 場所〉の順に並べる。例題（ are / there / the / in / apples / box ）は、apples が複数なので are。There are apples in the box.',
+    add: fresh(bx(5, 14, 60, 32, 'There', C.gray, FILL.gray, 12), bx(70, 14, 50, 32, 'are', C.red, FILL.red, 12), bx(125, 14, 70, 32, 'apples', C.blue, FILL.blue, 12), bx(200, 14, 115, 32, 'in the box.', C.green, FILL.green, 12), lb(160, 70, '① 数を確認 → ② is／are → ③ 並べる', 12, C.ink, 'middle', true), lb(160, 96, 'apples は複数 → are', 12, C.red, 'middle', true), ...cap('There are apples in the box.')),
+  },
+  {
+    note: '否定文は、be動詞のあとに not を置きます。There isn\'t any milk in the fridge.（冷蔵庫に牛乳が全くない）、There aren\'t any students in the room. 〈There ＋ be動詞 ＋ not ＋ 主語 ＋ 場所〉の順です。',
+    add: fresh(bx(10, 20, 300, 34, "There isn't any milk in the fridge.", C.blue, FILL.blue, 12), bx(10, 66, 300, 34, "There aren't any students in the room.", C.blue, FILL.blue, 11), lb(160, 122, 'be動詞のあとに not', 12, C.ink, 'middle', true), ...cap('There ＋ be ＋ not ＋ 主語 ＋ 場所')),
+  },
+  {
+    note: '❓疑問文はどうするのでしょう。→ be動詞を There の前に出します。Is there a bank near here?（この近くに銀行はありますか）。答えでも there をそのまま使い、Yes, there is. ／ No, there isn\'t. です。it や they には言いかえません。',
+    add: fresh(bx(5, 14, 50, 32, 'Is', C.red, FILL.red, 13), bx(60, 14, 60, 32, 'there', C.gray, FILL.gray, 12), bx(125, 14, 60, 32, 'a bank', C.blue, FILL.blue, 12), bx(190, 14, 125, 32, 'near here?', C.green, FILL.green, 12), bx(15, 62, 290, 32, "Yes, there is. ／ No, there isn't.", C.green, FILL.green, 12), lb(160, 114, '答えにも there を使う', 12, C.ink, 'middle', true), ...cap('be動詞 ＋ there ＋ 主語 ＋ 場所?')),
+  },
+  {
+    note: '例題です。（ there / a / near / is / station / here ）? は、疑問文なので be動詞の is を文頭に出して、Is there a station near here?（この近くに駅はありますか）となります。',
+    add: fresh(bx(5, 20, 40, 34, 'Is', C.red, FILL.red, 13), bx(50, 20, 60, 34, 'there', C.gray, FILL.gray, 12), bx(115, 20, 70, 34, 'a station', C.blue, FILL.blue, 11), bx(190, 20, 120, 34, 'near here?', C.green, FILL.green, 12), lb(160, 80, 'is を 先頭に', 13, C.red, 'middle', true), ...cap('Is there a station near here?')),
+  },
+  {
+    note: '❓the や my が付く名詞にも使えるのでしょうか。→ 使えません。すでに特定されている物や人には There is／are を使わず、その物自身を主語にします。× There is the cat on the sofa. ではなく、○ The cat is on the sofa. です。',
+    add: fresh(bx(15, 14, 290, 34, '× There is the cat on the sofa.', C.red, FILL.red, 12), bx(15, 58, 290, 34, '○ The cat is on the sofa.', C.green, FILL.green, 13), lb(160, 116, 'the・my・this が付く名詞は 特定されたもの', 11, C.ink, 'middle', true), ...cap('特定のものは 使わない', C.red)),
+  },
+  {
+    note: '過去のことを言うときは、There was ／ There were になります。There was a cat on the sofa. There were three books on the desk. be動詞は、あとの名詞の数に合わせるのは同じです。',
+    add: fresh(bx(15, 20, 290, 34, 'There was a cat on the sofa.', C.blue, FILL.blue, 13), bx(15, 66, 290, 34, 'There were three books on the desk.', C.blue, FILL.blue, 12), lb(160, 122, '単数 was ／ 複数 were', 12, C.ink, 'middle', true), ...cap('過去は was／were')),
+  },
+  {
+    note: 'まとめです。〈There ＋ be動詞 ＋ 主語 ＋ 場所〉で、be動詞はあとの名詞の数で決めます。否定は be動詞のあとに not、疑問は be動詞を前に出します。特定のものには使えません。',
+    add: sum3('There ＋ be ＋ 名詞 ＋ 場所（be は名詞の数）', '否定：be ＋ not ／ 疑問：Is／Are there 〜?', 'the・my が付く名詞には使わない', 'There is／are が組み立てられる'),
+  },
+], '並べかえ：There is／are');
+
+// ───────── new20_j2_eigo_09 並べかえ⑨：受動態 ─────────
+const e209: DiagramFigure = show([
+  {
+    note: '受動態は「〜される」の文です。能動態と受動態は対応しています。A famous artist painted this picture.（有名な画家がこの絵を描いた）→ This picture was painted by a famous artist.（この絵は有名な画家によって描かれた）。',
+    add: [bx(5, 14, 110, 32, 'A famous artist', C.blue, FILL.blue, 11), bx(120, 14, 70, 32, 'painted', C.red, FILL.red, 12), bx(195, 14, 115, 32, 'this picture.', C.green, FILL.green, 12), lb(160, 66, '能動態（S ＋ V ＋ O）', 11, C.gray, 'middle', true), bx(5, 86, 110, 32, 'This picture', C.green, FILL.green, 12), bx(120, 86, 100, 32, 'was painted', C.red, FILL.red, 11), bx(225, 86, 90, 32, 'by an artist.', C.blue, FILL.blue, 10), ...cap('能動態の O が 受動態の主語')],
+  },
+  {
+    note: '❓何がどう入れかわるのでしょう。→ 能動態の目的語（this picture）が受動態の主語になり、能動態の主語（a famous artist）は by のあとに回ります。動詞は〈be動詞 ＋ 過去分詞〉に変わります。並べかえでは、まず「何が主語になっているか」を確かめます。',
+    add: fresh(bx(10, 14, 90, 32, '主語 S', C.blue, FILL.blue, 12), bx(110, 14, 90, 32, '動詞 V', C.red, FILL.red, 12), bx(210, 14, 100, 32, '目的語 O', C.green, FILL.green, 12), ar(260, 52, 60, 80, C.green), ar(60, 52, 250, 100, C.blue), bx(10, 90, 100, 32, 'O が主語に', C.green, FILL.green, 10), bx(210, 106, 100, 30, 'S は by のあと', C.blue, FILL.blue, 10), ...cap('O ⇒ 主語、S ⇒ by のあと')),
+  },
+  {
+    note: '受動態の骨組みは〈主語 ＋ be動詞 ＋ 過去分詞〉です。❓be動詞はどう選ぶのでしょう。→ 主語の人称・数と、文の時制（現在か過去か）の両方を見ます。This letter is written in English.（現在・単数 → is）、These letters were written in English.（過去・複数 → were）。',
+    add: fresh(bx(10, 14, 300, 32, 'This letter  is  written  in English.', C.blue, FILL.blue, 12), lb(160, 62, '現在・単数 → is', 12, C.blue, 'middle', true), bx(10, 78, 300, 32, 'These letters  were  written  in English.', C.red, FILL.red, 11), lb(160, 126, '過去・複数 → were', 12, C.red, 'middle', true), ...cap('主語の数 と 時制 で be動詞を選ぶ')),
+  },
+  {
+    note: '例題です。（ was / this / by / built / house / him ）は、This house was built by him.（この家は彼によって建てられた）。by のあとには動作をした人が来ます。主語の house と by のあとの him を逆にしないようにします。',
+    add: fresh(bx(5, 20, 80, 32, 'This house', C.green, FILL.green, 11), bx(90, 20, 50, 32, 'was', C.red, FILL.red, 12), bx(145, 20, 60, 32, 'built', C.red, FILL.red, 12), bx(210, 20, 40, 32, 'by', C.main, FILL.warm, 12), bx(255, 20, 60, 32, 'him.', C.blue, FILL.blue, 12), lb(160, 76, 'by のあと ＝ 動作をした人', 12, C.ink, 'middle', true), bx(40, 96, 240, 30, '× Him was built by this house.', C.red, FILL.red, 11), ...cap('主語（物）… by ＋ 動作をした人')),
+  },
+  {
+    note: '否定文は、be動詞のあとに not を置きます。This song is not sung in Japan.（この歌は日本では歌われていない）。〈主語 ＋ be動詞 ＋ not ＋ 過去分詞〉の順で、not は過去分詞の前、be動詞の直後です。',
+    add: fresh(bx(5, 20, 80, 34, 'This song', C.green, FILL.green, 12), bx(90, 20, 40, 34, 'is', C.red, FILL.red, 13), bx(135, 20, 50, 34, 'not', C.main, FILL.warm, 13), bx(190, 20, 50, 34, 'sung', C.red, FILL.red, 13), bx(245, 20, 70, 34, 'in Japan.', C.gray, FILL.gray, 10), lb(160, 78, 'be動詞の直後に not', 13, C.ink, 'middle', true), bx(40, 98, 240, 30, '× is sung not', C.red, FILL.red, 12), ...cap('not は be動詞の直後')),
+  },
+  {
+    note: '疑問文は、be動詞を文頭に出します。Is this room cleaned every day?（この部屋は毎日掃除されますか）。答えは Yes, it is. ／ No, it isn\'t. です。〈be動詞 ＋ 主語 ＋ 過去分詞〉の順になります。',
+    add: fresh(bx(5, 20, 40, 34, 'Is', C.red, FILL.red, 13), bx(50, 20, 90, 34, 'this room', C.green, FILL.green, 12), bx(145, 20, 80, 34, 'cleaned', C.red, FILL.red, 12), bx(230, 20, 85, 34, 'every day?', C.gray, FILL.gray, 11), bx(15, 74, 290, 32, "Yes, it is. ／ No, it isn't.", C.green, FILL.green, 13), ...cap('be動詞 ＋ 主語 ＋ 過去分詞?')),
+  },
+  {
+    note: '例題です。（ isn\'t / cleaned / room / this ）every day. は、This room isn\'t cleaned every day.（この部屋は毎日は掃除されない）。isn\'t は is not の短縮形なので、be動詞の位置にそのまま置きます。',
+    add: fresh(bx(5, 20, 100, 34, 'This room', C.green, FILL.green, 13), bx(110, 20, 70, 34, "isn't", C.red, FILL.red, 13), bx(185, 20, 80, 34, 'cleaned', C.red, FILL.red, 13), lb(160, 80, '主語 ＋ isn\'t ＋ 過去分詞', 13, C.ink, 'middle', true), lb(160, 104, '… every day.', 12, C.gray), ...cap("This room isn't cleaned every day.")),
+  },
+  {
+    note: '❓by 〜 は、いつも必要なのでしょうか。→ だれが行ったかがわからない、または重要でないときは省きます。English is spoken in many countries.（英語は多くの国で話されている）。選択肢に by や動作主の語がなければ、過去分詞で文を終える形が正解です。',
+    add: fresh(bx(10, 20, 300, 34, 'English is spoken in many countries.', C.blue, FILL.blue, 12), lb(160, 76, '話す人を特定する必要がない → by なし', 12, C.ink, 'middle', true), lb(160, 102, '選択肢に by も 動作主もない', 11, C.gray), ...cap('by ～ は 省ける', C.blue)),
+  },
+  {
+    note: '過去分詞にも注意します。規則動詞は -ed を付けますが、不規則動詞は1語ずつ形を覚えます。built（建てる）、written（書く）、sung（歌う）、spoken（話す）など。be動詞と過去分詞は、ペアで動かします。',
+    add: fresh(bx(10, 14, 145, 30, 'paint → painted', C.blue, FILL.blue, 12), bx(165, 14, 145, 30, 'clean → cleaned', C.blue, FILL.blue, 12), bx(10, 52, 145, 30, 'build → built', C.red, FILL.red, 12), bx(165, 52, 145, 30, 'write → written', C.red, FILL.red, 12), bx(10, 90, 145, 30, 'sing → sung', C.red, FILL.red, 12), bx(165, 90, 145, 30, 'speak → spoken', C.red, FILL.red, 12), ...cap('規則は -ed、不規則は1語ずつ', C.ink)),
+  },
+  {
+    note: 'まとめです。受動態は〈主語 ＋ be動詞 ＋ 過去分詞〉で、能動態の目的語が主語になり、行為者は by のあとに回ります。be動詞は主語の数と時制で選び、否定は be動詞のあとに not、疑問は be動詞を文頭に出します。',
+    add: sum3('主語 ＋ be動詞 ＋ 過去分詞（by ～）', 'be動詞：主語の数 と 時制で決める', '否定：be ＋ not ／ 疑問：be を文頭に', '受動態が組み立てられる'),
+  },
+], '並べかえ：受動態');
+
 export const XF_KEJ_FIGURES: Record<string, DiagramFigure> = {
   'xf_new20_j1_eigo_03': e03,
   'xf_new20_j1_eigo_04': e04,
@@ -1055,6 +1183,9 @@ export const XF_KEJ_FIGURES: Record<string, DiagramFigure> = {
   'xf_new20_j2_eigo_04': e204,
   'xf_new20_j2_eigo_05': e205,
   'xf_new20_j2_eigo_06': e206,
+  'xf_new20_j2_eigo_07': e207,
+  'xf_new20_j2_eigo_08': e208,
+  'xf_new20_j2_eigo_09': e209,
 };
 
 export const XF_KEJ_SECTIONS: Record<string, string> = {
@@ -1082,4 +1213,7 @@ export const XF_KEJ_SECTIONS: Record<string, string> = {
   'new20_j2_eigo_04#0': 'xf_new20_j2_eigo_04',
   'new20_j2_eigo_05#0': 'xf_new20_j2_eigo_05',
   'new20_j2_eigo_06#0': 'xf_new20_j2_eigo_06',
+  'new20_j2_eigo_07#0': 'xf_new20_j2_eigo_07',
+  'new20_j2_eigo_08#0': 'xf_new20_j2_eigo_08',
+  'new20_j2_eigo_09#0': 'xf_new20_j2_eigo_09',
 };

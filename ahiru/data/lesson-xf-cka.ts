@@ -1,7 +1,7 @@
 // 中学受験 国語（小学生向け）の単元に、動く図解スライドを1つずつ。
 // 「なぜ？」の連鎖で7枚以上。上に図、下の帯（band）にそのスライドのひとこと。
 import type { DiagramFigure } from './figures';
-import { C, FILL, bx, lb, ar, ln, ci, sc, pg, flow, stack, show, band, fresh } from './diagram-kit';
+import { C, FILL, bx, lb, ar, ln, ci, sc, pg, cover, flow, stack, show, band, fresh } from './diagram-kit';
 
 const cap = (t: string, color: string = C.ink, size = 12) => band(150, lb(160, 192, t, size, color, 'middle', true));
 const cap2 = (t1: string, t2: string, color: string = C.ink) => band(150, lb(160, 172, t1, 11, C.gray, 'middle'), bx(20, 184, 280, 40, t2, color, FILL.warm, 12));
@@ -573,7 +573,7 @@ const idiomRows = (part: string, rows: string[][], c: string, f: string, y0 = 10
 const k15: DiagramFigure = show([
   {
     note: '慣用句（かんようく）は、体の部位ごとに分けて覚えると、関連づけて思い出せます。この単元では、目・耳・口・手・腹と肝（きも）と胸・足に分けて整理します。',
-    add: [...['目', '耳', '口', '手', '腹肝胸', '足'].map((t, i) => ci(46 + (i % 3) * 114, 40 + Math.floor(i / 3) * 52, 22, t, C.main, FILL.warm, t.length > 1 ? 10 : 16)), lb(160, 128, '体の部分で 6 グループ', 12, C.gray, 'middle', true), ...cap('部位別に整理して覚える')],
+    add: [...['目', '耳', '口', '手', '腹ほか', '足'].map((t, i) => ci(46 + (i % 3) * 114, 40 + Math.floor(i / 3) * 52, 22, t, C.main, FILL.warm, t.length > 1 ? 11 : 16)), lb(160, 128, '体の部分で 6 グループ', 12, C.gray, 'middle', true), ...cap('部位別に整理して覚える')],
   },
   {
     note: '「目」の慣用句です。目が高い（よいものを見分ける力がある）、目に余る（ひどすぎて黙って見ていられない）、目からうろこが落ちる（急に物事がよくわかる）、目を光らせる（きびしく見張る）。',
@@ -763,6 +763,133 @@ const k19: DiagramFigure = show([
   },
 ], '連の構成');
 
+// ───────── kokugo_20_ronri_tenkai 文章構成・論理展開パターンの識別（構成を図式化して整理する） ─────────
+const k20: DiagramFigure = show([
+  {
+    note: '長い文章の構成（こうせい）を、頭の中だけで整理しようとするとこんがらがります。矢印（やじるし）やブロック図で目に見える形にすると、論理の流れが一目でわかります。この単元では、文章の型ごとの図のかき方を学びます。',
+    add: [bx(10, 20, 80, 40, '対比型', C.blue, FILL.blue, 13), bx(120, 20, 80, 40, '問題解決型', C.green, FILL.green, 12), bx(230, 20, 80, 40, '主張・根拠型', C.red, FILL.red, 11), lb(160, 96, '型ごとに図のかたちが決まる', 12, C.gray, 'middle', true), ...cap('図にすると流れが見える')],
+  },
+  {
+    note: '対比型の図です。AとBを左右に並べ、矢印で「筆者の結論」へのばします。「効率重視」と「ゆとり重視」を対比して、筆者がゆとりを支持しているなら、Bから結論へ太い矢印を引きます。',
+    add: fresh(bx(10, 14, 110, 44, 'A\n効率重視', C.blue, FILL.blue, 12), lb(160, 36, '⇔', 20, C.ink, 'middle', true), bx(200, 14, 110, 44, 'B\nゆとり重視', C.green, FILL.green, 12), ar(255, 62, 255, 90, C.green), bx(160, 92, 150, 34, '筆者は B を支持', C.red, FILL.red, 12), ...cap('対比型：A ⇔ B → 結論', C.blue)),
+  },
+  {
+    note: '❓なぜ左右に並べるのでしょう。→ 二つの物事の「対立」が、目で見てすぐわかるからです。どちらを筆者が支持しているかも、矢印の向きで確かめられます。',
+    add: fresh(bx(10, 20, 100, 40, 'A', C.blue, FILL.blue, 15), bx(210, 20, 100, 40, 'B', C.green, FILL.green, 15), lb(160, 40, '対立', 14, C.red, 'middle', true), ar(112, 40, 150, 40, C.red), ar(208, 40, 170, 40, C.red), lb(160, 90, '目で見て すぐわかる', 13, C.ink, 'middle', true), lb(160, 114, '矢印の向き ＝ 筆者の支持', 12, C.blue, 'middle', true), ...cap('対立が 目に見える', C.red)),
+  },
+  {
+    note: '問題解決型の図です。「問題提起」から「原因①」「原因②」へ分かれ、「解決策」にまとまります。原因が複数あるときも、矢印でつなぐと見落としません。',
+    add: fresh(bx(110, 8, 100, 28, '問題提起', C.red, FILL.red, 12), ar(130, 38, 80, 60, C.main), ar(190, 38, 240, 60, C.main), bx(20, 62, 120, 28, '原因①', C.blue, FILL.blue, 12), bx(180, 62, 120, 28, '原因②', C.blue, FILL.blue, 12), ar(80, 92, 130, 112, C.main), ar(240, 92, 190, 112, C.main), bx(110, 112, 100, 28, '解決策', C.green, FILL.green, 12), ...cap('問題解決型：枝分かれして まとまる', C.green)),
+  },
+  {
+    note: '主張・根拠型の図です。「主張」を真ん中に置いて、まわりに「根拠①」「根拠②」「具体例」を矢印でならべます。主張という幹（みき）と、根拠という枝の関係がわかります。',
+    add: fresh(ci(160, 66, 30, '主張', C.red, FILL.red, 14), bx(10, 14, 90, 28, '根拠①', C.blue, FILL.blue, 12), bx(220, 14, 90, 28, '根拠②', C.blue, FILL.blue, 12), bx(110, 112, 100, 28, '具体例', C.purple, FILL.purple, 12), ar(100, 34, 134, 52, C.main), ar(220, 34, 186, 52, C.main), ar(160, 112, 160, 98, C.main), ...cap('主張・根拠型：主張が中心の放射状', C.red)),
+  },
+  {
+    note: '練習です。本文が「問題提起→原因分析→解決策の提示」と読めたら、余白（よはく）にこう書きます。「問題提起（食品ロス増加）→原因（大量生産・大量消費）→解決策（意識改革）」。短い矢印のメモで十分です。',
+    add: fresh(...flow(['問題提起\n食品ロス増加', '原因\n大量生産\n大量消費', '解決策\n意識改革'], 14, { h: 70, size: 11, color: C.green, fill: FILL.green }).flat(), lb(160, 110, 'これだけで 構成がつかめる', 13, C.ink, 'middle', true), ...cap('余白に矢印のメモ', C.green)),
+  },
+  {
+    note: '❓図にすると、どんなよいことがあるのでしょう。→ ①長い文章でも一枚におさまり、全体像を見失わない、②「筆者の論理展開を説明しなさい」という記述で、図をそのまま文章にできる、③「本文の構成として正しいもの」を選ぶ手がかりになる、の3つです。',
+    add: fresh(bx(10, 10, 300, 32, '① 全体像を 見失わない', C.blue, FILL.blue, 12), bx(10, 48, 300, 32, '② 図をそのまま文章にできる', C.green, FILL.green, 12), bx(10, 86, 300, 32, '③ 構成の選択肢を 判断しやすい', C.purple, FILL.purple, 12), ...cap('図にする 3 つのよさ')),
+  },
+  {
+    note: '❓きれいな図を描く時間はありませんが、どうしますか。→ 簡単な矢印と記号（→、⇔、①②③）だけで十分です。大切なのは「図にして考える」ことそのものです。また、図は読みながら直します。型の予想がくずれたら、図も直しましょう。',
+    add: fresh(bx(10, 14, 300, 40, '→　⇔　①②③ だけで十分', C.main, FILL.warm, 15), ar(160, 58, 160, 78, C.green), bx(40, 80, 240, 32, '読みながら 図を直していく', C.green, FILL.green, 13), lb(160, 130, '予想がくずれたら 柔軟に修正', 11, C.gray, 'middle'), ...cap('図は 読みながら更新', C.main)),
+  },
+  {
+    note: 'まとめです。対比型は「A⇔B→結論」、問題解決型は「問題提起→原因→解決策」、主張・根拠型は「主張を中心に根拠を放射状」。簡単な矢印で図にして、読みながら直します。',
+    add: fresh(bx(10, 10, 300, 30, '対比型：A ⇔ B → 結論', C.blue, FILL.blue, 12), bx(10, 46, 300, 30, '問題解決型：問題提起 → 原因 → 解決策', C.green, FILL.green, 12), bx(10, 82, 300, 30, '主張・根拠型：主張を中心に 根拠', C.red, FILL.red, 12), ...cap('型を決めて 図にする', C.main)),
+  },
+], '構成を図にする');
+
+// ───────── kokugo_21_gensou_gijutsu 記述問題で減点されない書き方（「指定語句を使って」記述） ─────────
+const k21: DiagramFigure = show([
+  {
+    note: '「次の語句をすべて使って書きなさい」という記述は、条件の見落としが最も起こりやすい形式です。ルールを正しく知りましょう。①指定された語句はすべて入れる、②順番は自由、③活用形（かつようけい）は文に合わせて変えてよい、④指示があれば下線を引く。',
+    add: [bx(10, 10, 300, 26, '① 指定語句を すべて入れる', C.red, FILL.red, 12), bx(10, 42, 300, 26, '② 使う順番は 自由', C.blue, FILL.blue, 12), bx(10, 74, 300, 26, '③ 活用形は 文に合わせて変えてよい', C.blue, FILL.blue, 12), bx(10, 106, 300, 26, '④ 指示があれば 下線を引く', C.blue, FILL.blue, 12), ...cap('指定語句の 4 ルール')],
+  },
+  {
+    note: '❓どのルールがいちばん大切でしょう。→ ①です。1つでも抜けると大きく減点されます。内容がよくても、この条件ちがいだけで点が大きく下がります。',
+    add: fresh(bx(10, 14, 140, 40, '語句 3 つ\nのうち 2 つ使用', C.red, FILL.red, 12), bx(170, 14, 140, 40, '語句 3 つ\nすべて使用', C.green, FILL.green, 12), lb(80, 76, '× 大きく減点', 13, C.red, 'middle', true), lb(240, 76, '○ 条件クリア', 13, C.green, 'middle', true), lb(160, 112, '内容が良くても 抜けたらだめ', 12, C.ink, 'middle', true), ...cap('1 つでも抜けると大きく減点', C.red)),
+  },
+  {
+    note: '手順①です。指定語句を、まず紙に書き出します。例の設問は「次の語句をすべて使って、40字以上50字以内で説明しなさい。（語句：努力／結果／自信）」。書き終えたあとに「全部使ったか」を確かめやすくなります。',
+    add: fresh(bx(10, 10, 300, 36, '40字以上50字以内で説明しなさい。', C.blue, FILL.blue, 12), bx(10, 62, 90, 36, '努力', C.main, FILL.warm, 15), bx(115, 62, 90, 36, '結果', C.main, FILL.warm, 15), bx(220, 62, 90, 36, '自信', C.main, FILL.warm, 15), lb(160, 118, '先に書き出しておく', 12, C.ink, 'middle', true), ...cap('手順① 語句を書き出す')),
+  },
+  {
+    note: '❓次に何を考えるのでしょう。→ 語句どうしの関係です。多くの場合、「原因→経過→結果」のように時間や論理の順に並べると、自然な文になります。「努力」が原因、「結果」が経過、「自信」が最後の成果です。',
+    add: fresh(bx(8, 20, 90, 40, '努力\n（原因）', C.blue, FILL.blue, 13), ar(100, 40, 114, 40, C.main), bx(116, 20, 90, 40, '結果\n（経過）', C.green, FILL.green, 13), ar(208, 40, 222, 40, C.main), bx(224, 20, 88, 40, '自信\n（成果）', C.red, FILL.red, 13), lb(160, 92, '関係を軸に 文の骨組みを作る', 13, C.ink, 'middle', true), ...cap('手順② 語句の関係を考える', C.blue)),
+  },
+  {
+    note: '手順③です。骨組みに言葉をそえて文にします。「毎日の努力を積み重ねた結果、大会で見事に優勝することができ、大きな自信につながった。」（42字）。努力・結果・自信の3語がすべて入り、40字以上50字以内です。',
+    add: fresh(bx(8, 10, 304, 64, '毎日の努力を積み重ねた結果、\n大会で見事に優勝することができ、\n大きな自信につながった。', C.green, FILL.green, 12), ...[['努力', 20], ['結果', 125], ['自信', 230]].map(([t, x]) => bx(x as number, 90, 70, 28, t as string, C.main, FILL.warm, 13)), lb(160, 136, '42字：40字以上50字以内', 11, C.green, 'middle', true), ...cap('手順③ 骨組みに肉付けする', C.green)),
+  },
+  {
+    note: '❓書き終わったら何をするのでしょう。→ 語句を1つずつ指でおさえて、「全部使ったか」を必ず確かめます。さらに、字数も数えます。この確認を忘れると、条件ちがいで大きく減点されます。',
+    add: fresh(...[['努力', '✓'], ['結果', '✓'], ['自信', '✓']].flatMap((r, i) => [bx(20, 12 + i * 34, 100, 28, r[0], C.main, FILL.warm, 14), bx(130, 12 + i * 34, 40, 28, r[1], C.green, FILL.green, 16)]), bx(190, 12, 120, 62, '字数も\n数える', C.blue, FILL.blue, 13), bx(190, 82, 120, 30, '40〜50字', C.blue, FILL.blue, 12), ...cap('書き終えたら かならず確認', C.green)),
+  },
+  {
+    note: 'よくある失点は3つです。①語句を1つ使い忘れる（いちばん多い）、②語句の意味をかえてしまう（「結果」を「原因」の意味で使うなど）、③語句を無理に詰めこんで不自然な文になる。',
+    add: fresh(bx(10, 10, 300, 30, '① 1 つ使い忘れる（最多）', C.red, FILL.red, 12), bx(10, 46, 300, 30, '② 語句の意味を変えて使う', C.red, FILL.red, 12), bx(10, 82, 300, 30, '③ 無理に詰めこんで不自然', C.red, FILL.red, 12), ...cap('この 3 つに注意', C.red)),
+  },
+  {
+    note: 'まとめです。指定語句の記述は、①語句を書き出す、②関係（原因→経過→結果など）を考える、③骨組みに沿って文にする、④全部使ったか・字数が合うか確かめる、の順で進めます。',
+    add: fresh(...flow(['① 書き出す', '② 関係を\n考える', '③ 文にする', '④ 確かめる'], 22, { h: 60, size: 11, gap: 10, color: C.blue, fill: FILL.blue }).flat(), lb(160, 110, '1 つも抜かさない', 13, C.red, 'middle', true), ...cap('語句はすべて使う', C.red)),
+  },
+], '指定語句の記述');
+
+// ───────── kokugo_22_shinjo_henka 心情変化を正確に読み取る技術（複数回の変化と心情曲線） ─────────
+const jcX = [50, 110, 170, 230, 290];
+const jcY = [104, 44, 106, 36, 58];
+const jcName = ['試合前', '開始直後', '失点した後', '声援を受けて', '試合終了後'];
+const jcFeel = ['緊張・不安', '集中・興奮', '焦り・落胆', '奮起・決意', '達成感と悔しさ'];
+const jcAxis = () => [lb(18, 20, '山', 11, C.green, 'middle', true), lb(18, 120, '谷', 11, C.red, 'middle', true), ln(30, 72, 304, 72, C.gray, true, 1), ln(30, 14, 30, 128, C.gray)];
+const jcPoint = (i: number) => [
+  ...(i > 0 ? [ln(jcX[i - 1], jcY[i - 1], jcX[i], jcY[i], C.main, false, 2.4)] : []),
+  ci(jcX[i], jcY[i], 6, undefined, i % 2 === 0 && i !== 4 ? C.red : C.green, i % 2 === 0 && i !== 4 ? FILL.red : FILL.green),
+  lb(jcX[i], 138, '①②③④⑤'[i] + jcName[i], 9, C.gray, 'middle'),
+  lb(jcX[i], jcY[i] + (jcY[i] > 72 ? 18 : -14), jcFeel[i], 10, C.ink, 'middle', true),
+];
+const k22: DiagramFigure = show([
+  {
+    note: '長い物語文では、心情（しんじょう）の変化が一度ではなく、何度も続くことがあります。その流れを「心情曲線（しんじょうきょくせん）」というグラフでイメージすると、全体を見失いません。プラスの気持ちの高まりを「山」、マイナスの気持ちの高まりを「谷」として、場面の順にならべます。',
+    add: [...jcAxis(), lb(160, 56, '場面の順に 山と谷を ならべる', 13, C.ink, 'middle', true), lb(160, 92, '心情曲線', 14, C.main, 'middle', true), ...cap('心の動きをグラフにする')],
+  },
+  {
+    note: '場面①、試合前。心情は「緊張・不安」。マイナスの気持ちなので谷です。',
+    add: fresh(...jcAxis(), ...jcPoint(0), ...cap('①は 谷（緊張・不安）', C.red)),
+  },
+  {
+    note: '場面②、試合開始直後。心情は「集中・興奮」。プラスの気持ちが高まったので山です。',
+    add: [cover(0, 0, 320, 150), ...jcAxis(), ...jcPoint(0), ...jcPoint(1), ...cap('②は 山（集中・興奮）', C.green)],
+  },
+  {
+    note: '場面③、失点した直後。心情は「焦り・落胆」。ふたたび谷に下がります。',
+    add: [cover(0, 0, 320, 150), ...jcAxis(), ...jcPoint(0), ...jcPoint(1), ...jcPoint(2), ...cap('③は 谷（焦り・落胆）', C.red)],
+  },
+  {
+    note: '場面④、仲間の声援（せいえん）を受けて。心情は「奮起（ふんき）・決意」。大きな山に上がります。',
+    add: [cover(0, 0, 320, 150), ...jcAxis(), ...jcPoint(0), ...jcPoint(1), ...jcPoint(2), ...jcPoint(3), ...cap('④は 山（奮起・決意）', C.green)],
+  },
+  {
+    note: '場面⑤、試合終了後。心情は「達成感と悔しさが入りまじる」複雑な山です。ここが最終的な到達点です。',
+    add: [cover(0, 0, 320, 150), ...jcAxis(), ...jcPoint(0), ...jcPoint(1), ...jcPoint(2), ...jcPoint(3), ...jcPoint(4), ci(290, 58, 11, undefined, C.red, 'rgba(0,0,0,0)'), ...cap('⑤が 最終的な到達点', C.red)],
+  },
+  {
+    note: '❓途中の浮き沈みと最後の気持ち、どちらがより大切でしょう。→ 最後にたどりついた心情です。物語全体のテーマにいちばん直結するので、記述問題や要旨の問題でも中心に問われます。',
+    add: fresh(bx(10, 16, 140, 44, '途中の浮き沈み\n（谷→山→谷）', C.gray, FILL.gray, 12), bx(170, 16, 140, 44, '最終的な心情\n（到達点）', C.red, FILL.red, 12), lb(80, 82, '気を取られすぎない', 11, C.gray, 'middle'), lb(240, 82, 'テーマに直結', 12, C.red, 'middle', true), lb(240, 104, 'ここが問われる中心', 11, C.red, 'middle'), ...cap('最後にたどりついた心情を押さえる', C.red)),
+  },
+  {
+    note: '❓記述では、浮き沈みをぜんぶ書くのでしょうか。→ 細かく書く必要はありません。「最初はA、途中でBという浮き沈みを経て、最終的にはCという心情に至った」という大きな流れを示します。',
+    add: fresh(bx(10, 14, 300, 28, '最初は A（不安）', C.blue, FILL.blue, 12), bx(10, 48, 300, 28, '途中で B（落胆→奮起の浮き沈み）', C.gray, FILL.gray, 12), bx(10, 82, 300, 28, '最終的に C（達成感）に至った', C.red, FILL.red, 12), ar(160, 44, 160, 48, C.main), ...cap('大きな流れで書く', C.main)),
+  },
+  {
+    note: 'まとめです。心情曲線は、場面ごとの気持ちを山と谷で並べたグラフ。途中の一場面だけで「これが変化だ」と決めつけず、最初から最後まで通して、最終的な到達点をつかみます。',
+    add: fresh(bx(10, 10, 300, 30, '場面ごとに 山と谷で並べる', C.blue, FILL.blue, 12), bx(10, 46, 300, 30, '一場面で決めつけない', C.gray, FILL.gray, 12), bx(10, 82, 300, 30, '最終的な到達点 ＝ テーマに直結', C.red, FILL.red, 12), ...cap('通して読んで 到達点を見る', C.main)),
+  },
+], '心情曲線');
+
 export const XF_CKA_FIGURES: Record<string, DiagramFigure> = {
   xf_kokugo_01_yomitoki: k01,
   xf_kokugo_02_monogatari: k02,
@@ -783,6 +910,9 @@ export const XF_CKA_FIGURES: Record<string, DiagramFigure> = {
   xf_kokugo_17_jitsuyobun: k17,
   xf_kokugo_18_fukusu_shiryo: k18,
   xf_kokugo_19_shi_shurui: k19,
+  xf_kokugo_20_ronri_tenkai: k20,
+  xf_kokugo_21_gensou_gijutsu: k21,
+  xf_kokugo_22_shinjo_henka: k22,
 };
 export const XF_CKA_SECTIONS: Record<string, string> = {
   'kokugo_01_yomitoki#1': 'xf_kokugo_01_yomitoki',
@@ -804,4 +934,7 @@ export const XF_CKA_SECTIONS: Record<string, string> = {
   'kokugo_17_jitsuyobun#2': 'xf_kokugo_17_jitsuyobun',
   'kokugo_18_fukusu_shiryo#1': 'xf_kokugo_18_fukusu_shiryo',
   'kokugo_19_shi_shurui#2': 'xf_kokugo_19_shi_shurui',
+  'kokugo_20_ronri_tenkai#2': 'xf_kokugo_20_ronri_tenkai',
+  'kokugo_21_gensou_gijutsu#1': 'xf_kokugo_21_gensou_gijutsu',
+  'kokugo_22_shinjo_henka#2': 'xf_kokugo_22_shinjo_henka',
 };
