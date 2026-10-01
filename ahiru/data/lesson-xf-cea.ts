@@ -1797,16 +1797,15 @@ const s004: DiagramFigure = show([
     note: '③a と o。a は右側にたての棒がつきます。丸だけで棒を書かないと o になります。cat が cot に見える例があります。❓なぜ棒が大切なのでしょう。→ その棒だけが a と o の区別だからです。',
     add: fresh(
       big(70, 48, 'a', C.red, 40), lb(70, 84, '右に棒がある', 11, C.red, 'middle', true), big(160, 48, 'o', C.blue, 40), lb(160, 84, '丸だけ', 11, C.blue, 'middle', true),
-      ...sent([['cat', 'r'], ['cot', 'b']], 100, 28, 14, 200, 300), ar(196, 114, 218, 114, C.main),
-      lb(110, 116, '棒をわすれると', 12, C.red, 'middle', true),
+      ...sent([['cat', 'r'], ['→', 'm'], ['cot', 'b']], 98, 28, 14, 90, 230, 10), lb(160, 144, '棒を書かないと cat が cot に見える', 12, C.red, 'middle', true),
       ...cap('a の棒は わすれずに', C.red),
     ),
   },
   {
     note: '④q と g。q は下の棒をまっすぐ下ろし、g は下を左に曲げます。⑤r と v。r は右上に短くはらうだけ。大きくはらうと v に見えます。どちらも「書き終わりの形」が決め手です。',
     add: fresh(
-      big(50, 46, 'q', C.red), lb(50, 82, 'まっすぐ下ろす', 10, C.red, 'middle', true), big(120, 46, 'g', C.blue), lb(120, 82, '左に曲げる', 10, C.blue, 'middle', true),
-      big(200, 46, 'r', C.red), lb(200, 82, '短くはらう', 10, C.red, 'middle', true), big(270, 46, 'v', C.blue), lb(270, 82, '大きくはらうと…', 10, C.blue, 'middle', true),
+      big(40, 46, 'q', C.red), lb(40, 82, 'まっすぐ\n下ろす', 10, C.red, 'middle', true), big(110, 46, 'g', C.blue), lb(110, 82, '左に\n曲げる', 10, C.blue, 'middle', true),
+      big(200, 46, 'r', C.red), lb(200, 82, '右上に\n短くはらう', 10, C.red, 'middle', true), big(280, 46, 'v', C.blue), lb(280, 82, '大きく\nはらうと v', 10, C.blue, 'middle', true),
       lb(160, 124, '書き終わりの形が決め手', 13, C.ink, 'middle', true),
       ...cap('q と g、r と v', C.main),
     ),
@@ -1814,7 +1813,9 @@ const s004: DiagramFigure = show([
   {
     note: '⑥大文字の I と小文字の l と数字の 1。大文字の I は上下に短い横棒をつけます。これを忘れて縦棒1本だけで書くと、小文字の l と区別がつきません。',
     add: fresh(
-      big(70, 48, 'I', C.red, 40), lb(70, 84, '上下に横棒', 11, C.red, 'middle', true), big(160, 48, 'l', C.blue, 40), lb(160, 84, '縦棒1本', 11, C.blue, 'middle', true), big(250, 48, '1', C.green, 40), lb(250, 84, '数字の1', 11, C.green, 'middle', true),
+      ln(70, 22, 70, 62, C.red, false, 4), ln(60, 22, 80, 22, C.red, false, 4), ln(60, 62, 80, 62, C.red, false, 4), lb(70, 84, '大文字 I\n上下に横棒', 11, C.red, 'middle', true),
+      ln(160, 22, 160, 62, C.blue, false, 4), lb(160, 84, '小文字 l\n縦棒1本', 11, C.blue, 'middle', true),
+      big(250, 46, '1', C.green, 40), lb(250, 84, '数字の 1', 11, C.green, 'middle', true),
       lb(160, 124, '大文字 I は横棒をつけて区別する', 12, C.ink, 'middle', true),
       ...cap('I と l と 1', C.red),
     ),
@@ -1846,8 +1847,8 @@ const s007: DiagramFigure = show([
     note: '英語には、母音字（ぼいんじ）を1字入れかえるだけで別の語になるペアがたくさんあります。これをミニマルペアといいます。たとえば bad（悪い）と bed（ベッド）。書き取り問題では、どちらを書くかで得点が決まります。',
     add: [
       ...sent([['bad', 'r', '悪い'], ['bed', 'b', 'ベッド']], 30, 44, 24, 30, 290, 30),
-      ar(150, 52, 172, 52, C.main), lb(160, 36, 'a → e', 11, C.main, 'middle', true),
-      lb(160, 126, '1字ちがうだけで、意味が変わる', 13, C.ink, 'middle', true),
+      ar(150, 52, 172, 52, C.main),
+      lb(160, 100, 'a → e の1字ちがい', 12, C.main, 'middle', true), lb(160, 126, '1字ちがうだけで、意味が変わる', 13, C.ink, 'middle', true),
       ...cap('ミニマルペア ＝ 1字だけちがう語'),
     ],
   },
@@ -1880,9 +1881,9 @@ const s007: DiagramFigure = show([
   {
     note: 'man と men は特に大切です。単数と複数のちがいが、この1字だけで表されるからです。man（男性1人）→ men（男性たち）。同じように woman（女性1人）→ women（女性たち）もありますが、women は「ウィミン」と読むので、つづりの o と音がずれます。ここは丸暗記します。',
     add: fresh(
-      ...sent([['man', 'b', '1人'], ['→', 'm'], ['men', 'r', '複数']], 14, 32, 18, 20, 300),
-      ...sent([['woman', 'b', '1人'], ['→', 'm'], ['women', 'r', '複数']], 84, 32, 18, 20, 300),
-      lb(160, 144, 'women は「ウィミン」と読む', 12, C.red, 'middle', true),
+      ...sent([['man', 'b', '1人'], ['→', 'm'], ['men', 'r', '複数']], 8, 30, 18, 20, 300),
+      ...sent([['woman', 'b', '1人'], ['→', 'm'], ['women', 'r', '複数']], 66, 30, 18, 20, 300),
+      lb(160, 126, 'women は「ウィミン」と読む', 12, C.red, 'middle', true),
       ...cap('1字で単数と複数が変わる', C.red),
     ),
   },
@@ -1890,7 +1891,7 @@ const s007: DiagramFigure = show([
     note: '❓ペアは、どう覚えればよいのでしょう。→ 必ず2語セットで、意味・つづり・例文の3点をノートにまとめます。片方だけ覚えると、テストでもう片方と必ず混同するからです。',
     add: fresh(
       ...grid([['', 'つづり', '意味', '例文'], ['1', 'pan', 'フライパン', 'a pan'], ['2', 'pen', 'ペン', 'a pen']], 10, 14, [28, 70, 90, 100], 26, ['y', 'r', 'g', 'b'], 12),
-      lb(160, 100, '2語セットで 3点を書く', 13, C.ink, 'middle', true),
+      lb(160, 124, '2語セットで 3点を書く', 13, C.ink, 'middle', true),
       ...cap('片方だけ覚えると、必ず混同する', C.red),
     ),
   },
@@ -2083,6 +2084,14 @@ const s013: DiagramFigure = show([
     ),
   },
   {
+    note: '❓同じ音なのに、つづりが2通りあるのはなぜ困るのでしょう。→ どちらを書くか迷うからです。そこで、とちゅうと終わりの書き分けを表にまとめます。「エイ」はとちゅう ai、終わり ay。「オウ」はとちゅう oa、終わり ow。「イー」はとちゅう ea か ee、終わりは ee か y です。',
+    add: fresh(
+      ...grid([['音', '語のとちゅう', '語の終わり'], ['エイ', 'ai（rain）', 'ay（day）'], ['オウ', 'oa（boat）', 'ow（snow）'], ['イー', 'ea・ee（eat・see）', 'ee・y（three・happy）']], 10, 10, [60, 120, 114], 28, ['y', 'b', 'g'], 12),
+      lb(160, 138, '音を決めてから、位置でつづりを選ぶ', 12, C.ink, 'middle', true),
+      ...cap('とちゅう ＝ ai・oa・ea、終わり ＝ ay・ow・y', C.main),
+    ),
+  },
+  {
     note: 'ie は「イー」と「アイ」があります：field, piece（イー）／pie, tie, lie（アイ・語の終わり）。ui・ue は「ウー・ユー」：fruit, juice／blue, true, Tuesday。❓なぜ ie は2通りなのでしょう。→ 語のとちゅうでは「イー」、語の終わりでは「アイ」と、位置で分かれるからです。',
     add: fresh(
       bx(10, 10, 148, 44, 'ie（とちゅう）＝ イー\nfield  piece', C.blue, FILL.blue, 12), bx(162, 10, 148, 44, 'ie（終わり）＝ アイ\npie  tie  lie', C.red, FILL.red, 12),
@@ -2124,9 +2133,9 @@ const s015: DiagramFigure = show([
   {
     note: '❓音のちがいはどこにあるのでしょう。→ 口の力のちがいです。長い「ウー」は口を強くすぼめてのばし、短い「ウ」は口の力を抜いて短く出します。日本語の「ウ」は、短い「ウ」に近い音です。',
     add: fresh(
-      bx(30, 30, 40, 30, '', C.blue, FILL.blue), lb(50, 78, '強くすぼめて\nのばす', 11, C.blue, 'middle', true), lb(50, 104, '長い「ウー」', 12, C.blue, 'middle', true),
-      bx(228, 22, 62, 46, '', C.red, FILL.red), lb(259, 78, '力を抜いて\n短く', 11, C.red, 'middle', true), lb(259, 104, '短い「ウ」', 12, C.red, 'middle', true),
-      lb(160, 46, '⇔', 20, C.main, 'middle', true),
+      bx(20, 14, 270, 26, 'ウーーー（のばす）', C.blue, FILL.blue, 14), lb(155, 56, '長い「ウー」：口を強くすぼめて のばす', 12, C.blue, 'middle', true),
+      bx(20, 82, 60, 26, 'ウ', C.red, FILL.red, 14), lb(185, 94, '短い「ウ」：口の力を抜いて 短く', 12, C.red, 'middle', true),
+      lb(160, 132, '日本語の「ウ」は 短い「ウ」に近い', 12, C.ink, 'middle', true),
       ...cap('口の力で音を分ける', C.main),
     ),
   },
@@ -2178,7 +2187,7 @@ const s015: DiagramFigure = show([
     add: fresh(
       bx(15, 8, 290, 22, '-ook ＝ 短い「ウ」', C.red, FILL.red, 12),
       bx(15, 34, 290, 22, '-oon・-ool・-oom ＝ 長い「ウー」', C.blue, FILL.blue, 12),
-      bx(15, 60, 290, 22, '-ood ＝ good・stood・wood は短い、food・mood は長い', C.purple, FILL.purple, 10),
+      bx(15, 60, 290, 22, '-ood ＝ 短い（good）と長い（food）がまざる', C.purple, FILL.purple, 12),
       bx(15, 86, 290, 22, '長い＝口をすぼめる、短い＝力を抜く', C.green, FILL.green, 12),
       bx(15, 112, 290, 22, 'foot・feet・food は別の語', C.main, FILL.warm, 12),
       ...cap('終わり方と口の力で読み分ける', C.main),

@@ -1027,7 +1027,7 @@ const u37: DiagramFigure = show([
   },
   {
     note: '❓聞こえ方が変わるなら、つづりも変わるのでしょうか。→ いいえ。リンキングは「発音（音）」の変化であって、つづりは変わりません。an apple は「アナプル」と聞こえても、書くときは an apple のままです。リスニングとつづりを混同しないようにしましょう。',
-    add: fresh(bx(10, 12, 140, 34, '聞こえ方\nアナプル', C.red, FILL.red, 13), bx(170, 12, 140, 34, '書き方\nan apple', C.blue, FILL.blue, 13), lb(160, 66, '音は変わっても、つづりは変わらない', 12, C.ink, 'middle', true), bx(60, 86, 200, 32, '✕  anapple と書かない', C.red, FILL.red, 12), ...cap('音の変化 ≠ つづりの変化', C.red)),
+    add: fresh(bx(10, 8, 140, 44, '聞こえ方\nアナプル', C.red, FILL.red, 13), bx(170, 8, 140, 44, '書き方\nan apple', C.blue, FILL.blue, 13), lb(160, 68, '音は変わっても、つづりは変わらない', 12, C.ink, 'middle', true), bx(60, 86, 200, 32, '✕  anapple と書かない', C.red, FILL.red, 12), ...cap('音の変化 ≠ つづりの変化', C.red)),
   },
   {
     note: '同じ（似た）子音が続くときは、音が1つにまとまります。good day は「グッデイ」、big game は「ビゲーム」のように聞こえます。前の語の最後の子音がほとんど発音されず、次の語の最初の子音と重なります。',
@@ -1042,8 +1042,12 @@ const u37: DiagramFigure = show([
     add: fresh(bx(6, 8, 308, 26, 'Did you see it?　ディジュ・シー・イット', C.blue, FILL.blue, 12), bx(6, 40, 308, 26, 'What do you want?　ワッダユー・ウォント', C.green, FILL.green, 12), bx(6, 72, 308, 26, 'Nice to meet you.　ナイス・トゥ・ミーチュー', C.purple, FILL.purple, 12), lb(160, 118, '音のかたまりとして 耳と口で覚える', 12, C.ink, 'middle', true), ...cap('声に出して練習', C.main)),
   },
   {
-    note: 'よくある崩れた形もあります。want to → ワナ、going to → ゴナ、got to → ガラ（ガッタ）。I\'m going to study. は「アイム・ゴナ・スタディ」。リスニングでは、①先に設問と選択肢の単語を確かめ、②頻出パターンが聞こえたら次の内容に集中し、③1語ずつではなく「かたまり」で意味をつかみます。',
-    add: fresh(bx(6, 6, 98, 26, 'want to', C.blue, FILL.blue, 12), lb(155, 19, '→ ワナ', 12, C.red, 'middle', true), bx(111, 6, 98, 26, 'going to', C.blue, FILL.blue, 12), lb(260, 19, '→ ゴナ', 12, C.red, 'middle', true), bx(6, 40, 98, 26, 'got to', C.blue, FILL.blue, 12), lb(155, 53, '→ ガラ', 12, C.red, 'middle', true), bx(6, 78, 308, 20, '① 先に設問と選択肢を確かめる', C.green, FILL.green, 11), bx(6, 102, 308, 20, '② 頻出パターンを合図に集中', C.green, FILL.green, 11), bx(6, 126, 308, 20, '③ かたまりで意味をつかむ', C.green, FILL.green, 11), ...band(150, lb(160, 192, 'リスニングのコツ', 12, C.main, 'middle', true))),
+    note: 'よくある崩れた形もあります。want to →「ワナ」、going to →「ゴナ」、got to →「ガラ（ガッタ）」。I\'m going to study. は「アイム・ゴナ・スタディ」のように聞こえます。これらは特によく使われるので、「くずれた形」のまま覚えてしまうと聞き取りやすくなります。',
+    add: fresh(bx(6, 8, 130, 28, 'want to', C.blue, FILL.blue, 14), ar(138, 22, 166, 22, C.main), bx(170, 8, 144, 28, 'ワナ', C.red, FILL.red, 14), bx(6, 44, 130, 28, 'going to', C.blue, FILL.blue, 14), ar(138, 58, 166, 58, C.main), bx(170, 44, 144, 28, 'ゴナ', C.red, FILL.red, 14), bx(6, 80, 130, 28, 'got to', C.blue, FILL.blue, 14), ar(138, 94, 166, 94, C.main), bx(170, 80, 144, 28, 'ガラ（ガッタ）', C.red, FILL.red, 12), lb(160, 128, "I'm going to study.　アイム・ゴナ・スタディ", 12, C.ink, 'middle', true), ...band(150, lb(160, 192, 'よく使う形は そのまま覚える', 12, C.main, 'middle', true))),
+  },
+  {
+    note: 'リスニングのコツは3つです。①放送の前に、設問と選択肢の単語を確かめておく。②Did you ~? や want to のような頻出パターンが聞こえたら、それを合図に次の内容へ集中する。③1語ずつを完ぺきに聞き取ろうとせず、「かたまり」で意味をつかむ。',
+    add: fresh(bx(6, 8, 308, 32, '① 放送の前に 設問と選択肢を確かめる', C.green, FILL.green, 12), bx(6, 48, 308, 32, '② 頻出パターンを合図に 集中する', C.green, FILL.green, 12), bx(6, 88, 308, 32, '③ かたまりで 意味をつかむ', C.green, FILL.green, 12), ...cap('リスニングのコツ', C.main)),
   },
 ], '音のつながり：リンキング');
 
