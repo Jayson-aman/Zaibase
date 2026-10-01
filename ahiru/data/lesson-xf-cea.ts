@@ -688,7 +688,7 @@ const u09: DiagramFigure = show([
     note: 'まず how 単独です。方法は How do you go to school?（どうやって学校へ行きますか）— By bus.。状態は How are you?（元気ですか）— I’m fine, thank you.。様子は How is the weather?（天気はどうですか）— It’s sunny.。',
     add: fresh(
       ...[['How do you go to school?', 'By bus.', '方法'], ['How are you?', "I'm fine, thank you.", '状態'], ['How is the weather?', "It's sunny.", '様子']].flatMap(([q, a, t], i) => [
-        tag(8, 12 + i * 42, 44, t, 'm', 11), bx(56, 8 + i * 42, 140, 28, q, C.blue, FILL.blue, 11), ar(198, 22 + i * 42, 214, 22 + i * 42, C.main), bx(216, 8 + i * 42, 96, 28, a, C.green, FILL.green, 10),
+        tag(4, 12 + i * 42, 40, t, 'm', 11), bx(48, 8 + i * 42, 142, 28, q, C.blue, FILL.blue, 10), ar(192, 22 + i * 42, 204, 22 + i * 42, C.main), bx(206, 8 + i * 42, 110, 28, a, C.green, FILL.green, 10),
       ]),
       ...cap('how 単独は「どうやって・どんな具合」', C.blue),
     ),
@@ -706,7 +706,7 @@ const u09: DiagramFigure = show([
     note: '❓では how much はいつ使うのでしょう。→ 数えられないもの（水・お金など）の量をたずねるときと、値段をたずねるときです。How much water do you need?（水はどれくらい必要ですか）。How much is this bag?（このかばんはいくらですか）— It’s 2,000 yen.。数えられるなら many、数えられないなら much です。',
     add: fresh(
       bx(10, 10, 148, 50, 'How many ＋ 複数形\n数えられる（本・人）', C.blue, FILL.blue, 11), bx(162, 10, 148, 50, 'How much ＋ 名詞\n数えられない（水・お金）', C.red, FILL.red, 11),
-      ...sent([['How much', 'r'], ['is this bag?', 'y']], 76, 28, 13, 10, 200), ar(204, 90, 220, 90, C.main), bx(222, 76, 88, 28, "It's 2,000 yen.", C.green, FILL.green, 10),
+      ...sent([['How much', 'r'], ['is this bag?', 'y']], 76, 28, 12, 6, 186), ar(190, 90, 200, 90, C.main), bx(202, 76, 112, 28, "It's 2,000 yen.", C.green, FILL.green, 12),
       lb(160, 128, '値段もたずねられる', 12, C.red, 'middle', true),
       ...cap('数えられる → many、数えられない → much', C.red),
     ),
@@ -840,10 +840,10 @@ const u11: DiagramFigure = show([
   {
     note: '1〜12は一つずつ覚えます。13〜19は -teen がつきます：thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen。❓ふつうの形と何がちがうのでしょう。→ thirteen・fifteen・eighteen は three・five・eight と少しつづりが変わる特別な形なので、気をつけます。',
     add: fresh(
-      ...rowb(['thirteen', 'fourteen', 'fifteen', 'sixteen'], 12, 28, 'b', 11, 8, 312, 4),
-      ...rowb(['seventeen', 'eighteen', 'nineteen'], 46, 28, 'b', 11, 8, 312, 4),
-      lb(160, 92, 'つづりが変わる特別な形', 12, C.red, 'middle', true),
-      ...rowb(['thirteen（three でない）', 'fifteen（five でない）', 'eighteen（eight でない）'], 106, 28, 'r', 9, 8, 312, 4),
+      ...rowb(['thirteen', 'fourteen', 'fifteen', 'sixteen'], 8, 26, 'b', 11, 8, 312, 4),
+      ...rowb(['seventeen', 'eighteen', 'nineteen'], 38, 26, 'b', 11, 8, 312, 4),
+      lb(160, 82, 'つづりが変わる特別な形', 12, C.red, 'middle', true),
+      ...rowb(['thirteen\n× threeteen', 'fifteen\n× fiveteen', 'eighteen\n× eightteen'], 96, 40, 'r', 11, 8, 312, 4),
       ...cap('13〜19は -teen、3つは特別', C.red),
     ),
   },
@@ -952,7 +952,7 @@ const u12: DiagramFigure = show([
     note: '期間（きかん）を表す for と during です。for のうしろには「10年」「2時間」のような数字をふくむ長さが来ます。I have lived here for ten years.（10年間ここに住んでいる）。during のうしろには「夏休み」「映画」のような特定の期間を表す名詞が来ます。',
     add: fresh(
       bx(10, 10, 148, 40, 'for ＋ 数字の長さ\nfor ten years', C.blue, FILL.blue, 12), bx(162, 10, 148, 40, 'during ＋ 名詞\nduring the summer vacation', C.green, FILL.green, 10),
-      ...sent([['We waited', 'y'], ['for two hours.', 'b']], 70, 28, 12, 8, 156), ...sent([['She fell asleep', 'y'], ['during the movie.', 'g']], 70, 28, 11, 162, 314),
+      bx(10, 70, 148, 40, 'We waited\nfor two hours.', C.blue, FILL.blue, 12), bx(162, 70, 148, 40, 'She fell asleep\nduring the movie.', C.green, FILL.green, 12),
       ...cap('数 → for、名詞 → during', C.main),
     ),
   },
@@ -1027,9 +1027,9 @@ const u13: DiagramFigure = show([
   {
     note: '❓big は、なぜ biger ではなく bigger なのでしょう。→ 「短い母音＋子音字」で終わる語は、最後の子音字を重ねます。子音字を重ねないと、前の i が「アイ」と読まれてしまうので、短い音のまま保つために g を重ねるのです。big → bigger → biggest、hot → hotter → hottest。',
     add: fresh(
-      ...sent([['big', 'y'], ['→', 'm'], ['bigger', 'r'], ['→', 'm'], ['biggest', 'r']], 14, 30, 13, 10, 310),
-      bx(30, 62, 120, 24, '× biger（i が「アイ」になる）', C.red, FILL.red, 9), bx(170, 62, 120, 24, '○ bigger（i は短いまま）', C.green, FILL.green, 10),
-      ...sent([['hot', 'y'], ['→', 'm'], ['hotter', 'r'], ['→', 'm'], ['hottest', 'r']], 106, 30, 13, 10, 310),
+      ...sent([['big', 'y'], ['→', 'm'], ['bigger', 'r'], ['→', 'm'], ['biggest', 'r']], 8, 30, 13, 10, 310),
+      bx(14, 46, 144, 40, '× biger\ni が「アイ」になる', C.red, FILL.red, 11), bx(162, 46, 144, 40, '○ bigger\ni は短いまま', C.green, FILL.green, 11),
+      ...sent([['hot', 'y'], ['→', 'm'], ['hotter', 'r'], ['→', 'm'], ['hottest', 'r']], 100, 30, 13, 10, 310),
       ...cap('短い母音 ＋ 子音 → 子音を重ねる', C.red),
     ),
   },
@@ -1147,6 +1147,623 @@ const u14: DiagramFigure = show([
   },
 ], 'There is / are：あとの名詞に合わせる');
 
+// ───────── eigo_15_shinkoukei 現在進行形 ─────────
+const arrowRow = (a: string, b: string, y: number, ka: Kd = 'y', kb: Kd = 'r', size = 13, x0 = 10, w1 = 120, x2 = 170, w2 = 140): E[] => [
+  bx(x0, y, w1, 28, a, K[ka][0], K[ka][1], size), ar(x0 + w1 + 2, y + 14, x2 - 2, y + 14, C.main), bx(x2, y, w2, 28, b, K[kb][0], K[kb][1], size),
+];
+const u15: DiagramFigure = show([
+  {
+    note: '現在進行形（げんざいしんこうけい）は、「今まさに〜しているところだ」と、進んでいる最中の動作を表す形です。形は「am / is / are ＋ 動詞の -ing 形」。I am studying English now.（私は今、英語を勉強しているところだ）。',
+    add: [
+      ...sent([['I', 'b'], ['am', 'r'], ['studying', 'g'], ['English now.', 'y']], 20, 32, 14, 8, 312),
+      ...rowb(['am', 'is', 'are'], 84, 26, 'r', 13, 40, 280, 10),
+      lb(160, 132, '＋ 動詞の -ing 形', 13, C.green, 'middle', true),
+      ...cap('am / is / are ＋ -ing ＝ 今している最中'),
+    ],
+  },
+  {
+    note: '❓なぜ be動詞（ビーどうし）と -ing の組み合わせなのでしょう。→ be動詞は「今そうである」ことを表し、-ing は「している最中」を表すので、合わせて「今、している最中だ」という意味になるからです。She is cooking dinner.（彼女は夕食を作っているところだ）。',
+    add: fresh(
+      bx(20, 16, 130, 40, 'is\n今そうである', C.red, FILL.red, 12), lb(160, 36, '＋', 18), bx(170, 16, 130, 40, 'cooking\nしている最中', C.green, FILL.green, 12),
+      ar(160, 64, 160, 80, C.main),
+      ...sent([['She', 'b'], ['is cooking', 'r'], ['dinner.', 'y']], 84, 32, 14, 20, 300),
+      ...cap('今 ＋ している最中 ＝ 現在進行形', C.main),
+    ),
+  },
+  {
+    note: '❓ふつうの現在形（げんざいけい）と何がちがうのでしょう。→ 現在形はいつもすること（習慣（しゅうかん））、現在進行形は今ちょうどしていることです。I play tennis every Sunday.（毎週日曜にテニスをする）と I am playing tennis now.（今テニスをしている）。every Sunday や usually は現在形、now や right now は現在進行形の目印です。',
+    add: fresh(
+      bx(10, 10, 148, 56, '現在形：いつもする\nI play tennis\nevery Sunday.', C.blue, FILL.blue, 11), bx(162, 10, 148, 56, '進行形：今している\nI am playing tennis\nnow.', C.red, FILL.red, 11),
+      ...rowb(['every day', 'usually'], 78, 24, 'b', 12, 14, 156, 6), ...rowb(['now', 'right now'], 78, 24, 'r', 12, 164, 306, 6),
+      lb(160, 126, '時の言葉が目印になる', 13, C.ink, 'middle', true),
+      ...cap('習慣は現在形、今は進行形', C.main),
+    ),
+  },
+  {
+    note: '-ing のつけ方は4つあります。①ふつうはそのまま：play → playing、study → studying、read → reading。②e で終わる語は e をとります：make → making、write → writing、come → coming。❓なぜ e をとるのでしょう。→ -ing は i から始まるので、e をとってつなぐのです。',
+    add: fresh(
+      bx(10, 8, 300, 20, '① そのまま -ing', C.blue, FILL.blue, 12),
+      ...sent([['play → playing', 'y'], ['study → studying', 'y'], ['read → reading', 'y']], 32, 26, 11),
+      bx(10, 70, 300, 20, '② e をとって -ing', C.red, FILL.red, 12),
+      ...sent([['make → making', 'r'], ['write → writing', 'r'], ['come → coming', 'r']], 94, 26, 11),
+      ...cap('e で終わる語は e をとる', C.red),
+    ),
+  },
+  {
+    note: '③「短い母音＋子音字」で終わる語は、子音字を重ねます：run → running、swim → swimming、sit → sitting、stop → stopping。❓なぜ重ねるのでしょう。→ 重ねないと runing となって、u が「ユー」と長く読まれてしまうからです。子音字を重ねて短い母音を守ります。',
+    add: fresh(
+      ...sent([['run → running', 'r'], ['swim → swimming', 'r']], 14, 28, 12, 10, 310),
+      ...sent([['sit → sitting', 'r'], ['stop → stopping', 'r']], 50, 28, 12, 10, 310),
+      bx(14, 96, 144, 36, '× runing\nu が長く読まれる', C.red, FILL.red, 11), bx(162, 96, 144, 36, '○ running\nu は短いまま', C.green, FILL.green, 11),
+      ...cap('短い母音 ＋ 子音 → 子音を重ねる', C.red),
+    ),
+  },
+  {
+    note: '④ ie で終わる語は、ie を y に変えて -ing をつけます：die → dying、lie → lying、tie → tying。❓なぜ変えるのでしょう。→ die ＋ ing のままだと dieing と i と e と i が並びすぎて読みにくいので、ie を y にして形を整えます。',
+    add: fresh(
+      ...[['die', 'dying'], ['lie', 'lying'], ['tie', 'tying']].flatMap(([a, b], i) => [
+        bx(40, 14 + i * 38, 90, 28, a, C.gray, FILL.gray, 15), ar(132, 28 + i * 38, 170, 28 + i * 38, C.main), bx(172, 14 + i * 38, 100, 28, b, C.red, FILL.red, 15),
+      ]),
+      lb(160, 130, 'ie を y に変えて -ing', 13, C.red, 'middle', true),
+      ...cap('ie → y ＋ ing', C.red),
+    ),
+  },
+  {
+    note: '疑問文（ぎもんぶん）は be動詞を前に出します。Is she watching TV?（彼女はテレビを見ているところですか）— Yes, she is. / No, she isn’t.。否定文（ひていぶん）は be動詞のうしろに not。I am not sleeping.（私は寝ていない）、They are not studying now.（彼らは今勉強していない）。',
+    add: fresh(
+      ...sent([['Is', 'r'], ['she', 'b'], ['watching TV?', 'g']], 12, 30, 14, 10, 310),
+      bx(30, 56, 120, 26, 'Yes, she is.', C.green, FILL.green, 13), bx(170, 56, 120, 26, "No, she isn't.", C.red, FILL.red, 13),
+      ...sent([['I', 'b'], ['am not', 'r'], ['sleeping.', 'g']], 98, 30, 14, 10, 310),
+      ...cap('疑問は be を前へ、否定は be のあとに not', C.main),
+    ),
+  },
+  {
+    note: 'まとめです。現在進行形は am / is / are ＋ -ing で「今している最中」。習慣は現在形。-ing は、そのまま・e をとる・子音を重ねる・ie を y に、の4つ。つづりは語の終わりの形を見て決めます。',
+    add: fresh(
+      bx(15, 10, 290, 24, 'am / is / are ＋ -ing ＝ 今している最中', C.blue, FILL.blue, 12),
+      bx(15, 38, 290, 24, 'そのまま／e をとる（make → making）', C.green, FILL.green, 12),
+      bx(15, 66, 290, 24, '子音を重ねる（run → running）', C.red, FILL.red, 12),
+      bx(15, 94, 290, 24, 'ie → y（die → dying）', C.purple, FILL.purple, 12),
+      ...cap('語の終わりを見て、-ing の形を決める', C.main),
+    ),
+  },
+], '現在進行形：be動詞 ＋ -ing の作り方');
+
+// ───────── eigo_16_eiken_hyogen 英検5級表現 ─────────
+const u16: DiagramFigure = show([
+  {
+    note: '英検5級は英語の入り口で、日常生活の基本の表現が中心です。中学受験の英語入試でも、このレベルの表現は前提（ぜんてい）の知識として問われます。「聞かれたことに素直に答える」練習が大切です。話題は自己紹介・学校・買い物・天気などです。',
+    add: [
+      bx(10, 10, 148, 50, '自己紹介', C.blue, FILL.blue, 14), bx(162, 10, 148, 50, '学校生活', C.green, FILL.green, 14),
+      bx(10, 68, 148, 50, '買い物', C.red, FILL.red, 14), bx(162, 68, 148, 50, '天気・季節', C.purple, FILL.purple, 14),
+      ...cap('定番の質問と答えをセットで覚える'),
+    ],
+  },
+  {
+    note: '自己紹介（じこしょうかい）の質問と答えです。What’s your name? — My name is 〜.（お名前は？）。How old are you? — I’m 〜 years old.（何歳？）。Where are you from? — I’m from 〜.（出身は？）。What time is it? — It’s 〜 o’clock.（何時？）。',
+    add: fresh(
+      ...[['What\'s your name?', 'My name is ～.'], ['How old are you?', "I'm ～ years old."], ['Where are you from?', "I'm from ～."], ['What time is it?', "It's ～ o'clock."]].flatMap(([q, a], i) => [
+        bx(8, 8 + i * 34, 148, 26, q, C.blue, FILL.blue, 12), ar(158, 21 + i * 34, 170, 21 + i * 34, C.main), bx(172, 8 + i * 34, 140, 26, a, C.green, FILL.green, 12),
+      ]),
+      ...cap('質問ごとに、答えの形が決まっている', C.blue),
+    ),
+  },
+  {
+    note: '❓なぜ質問と答えをセットで覚えるのでしょう。→ 質問のはじめの言葉（What・How old・Where）で、答えの形が決まるからです。What’s your name? には My name is、How old には I’m 〜 years old、Where には I’m from で答えます。',
+    add: fresh(
+      ...[['What\'s your name?', 'My name is', 'b'], ['How old ～?', "I'm ～ years old", 'r'], ['Where ～ from?', "I'm from", 'g']].flatMap(([q, a, k], i) => [
+        bx(10, 14 + i * 40, 128, 30, q, K[k as Kd][0], K[k as Kd][1], 12), ar(140, 29 + i * 40, 170, 29 + i * 40, C.main), bx(172, 14 + i * 40, 138, 30, a, K[k as Kd][0], K[k as Kd][1], 12),
+      ]),
+      lb(160, 138, 'はじめの言葉が答えの形を決める', 12, C.ink, 'middle', true),
+      ...cap('Yes / No でなく、中身で答える', C.main),
+    ),
+  },
+  {
+    note: '学校生活の表現です。What subject do you like? — I like 〜.（何の教科が好き？）。I have four classes today.（今日は4時間授業がある）。It’s time for lunch.（お昼の時間です）。subject は「教科」、class は「授業」の意味です。',
+    add: fresh(
+      bx(8, 8, 150, 28, 'What subject do you like?', C.blue, FILL.blue, 11), ar(160, 22, 170, 22, C.main), bx(172, 8, 140, 28, 'I like ～.', C.green, FILL.green, 13),
+      bx(8, 48, 304, 28, 'I have four classes today.', C.green, FILL.green, 13),
+      bx(8, 88, 304, 28, "It's time for lunch.", C.green, FILL.green, 13),
+      ...cap('subject ＝ 教科、class ＝ 授業', C.green),
+    ),
+  },
+  {
+    note: '買い物の表現です。How much is this? — It’s 〜 yen.（これはいくら？）。I’ll take this one.（これをください）。Can I try this on?（試着してもいいですか）。この順に使うことが多く、値段をたずねてから、買う意思を伝えます。',
+    add: fresh(
+      ...flow(['How much\nis this?', "It's ～ yen.", "I'll take\nthis one."], 14, { h: 52, size: 11, color: C.red, fill: FILL.red, gap: 16 }).flat(),
+      ar(160, 70, 160, 88, C.main),
+      bx(40, 90, 240, 32, 'Can I try this on?（試着してもいいですか）', C.blue, FILL.blue, 12),
+      ...cap('たずねる → 答える → 決める', C.red),
+    ),
+  },
+  {
+    note: '時間割（じかんわり）の表現です。What do you have on Mondays?（月曜日は何がありますか）のように、「on ＋ 曜日」で何があるかをたずねます。答えの例は We have P.E. on Tuesdays.（火曜日には体育がある）。P.E. は Physical Education（体育）の略です。',
+    add: fresh(
+      bx(10, 12, 300, 28, 'What do you have on Mondays?', C.blue, FILL.blue, 13),
+      bx(10, 52, 300, 28, 'We have P.E. on Tuesdays.', C.green, FILL.green, 13),
+      bx(60, 94, 200, 30, 'P.E. ＝ Physical Education', C.purple, FILL.purple, 12), lb(160, 138, '体育の略。教科にも略称がある', 11, C.purple, 'middle', true),
+      ...cap('on ＋ 曜日 で「その曜日に」', C.main),
+    ),
+  },
+  {
+    note: '天気と季節の会話です。How’s the weather today? — It’s sunny (rainy / cloudy / snowy).（今日の天気は？）。What season do you like? — I like spring because I can see cherry blossoms.（どの季節が好き？—桜が見られるから春が好き）。❓because は何を表すのでしょう。→ 理由です。',
+    add: fresh(
+      bx(8, 8, 150, 28, "How's the weather today?", C.blue, FILL.blue, 11), ar(160, 22, 170, 22, C.main), bx(172, 8, 140, 28, "It's sunny.", C.green, FILL.green, 13),
+      ...rowb(['sunny', 'rainy', 'cloudy', 'snowy'], 44, 22, 'm', 11, 10, 310, 6),
+      ...sent([['I like spring', 'b'], ['because', 'r', '理由'], ['I can see cherry blossoms.', 'g']], 82, 32, 11, 6, 314),
+      ...cap('because ＋ 理由', C.red),
+    ),
+  },
+  {
+    note: 'まとめです。自己紹介・学校・買い物・時間割・天気の定番の質問と答えを、声に出してセットで覚える。質問のはじめの言葉で答えの形が決まる。答えるときは「聞かれたこと」にまっすぐ答えます。',
+    add: fresh(
+      bx(15, 10, 290, 24, '自己紹介：name・old・from・time', C.blue, FILL.blue, 12),
+      bx(15, 38, 290, 24, '学校：subject・classes・lunch', C.green, FILL.green, 12),
+      bx(15, 66, 290, 24, '買い物：How much / take / try on', C.red, FILL.red, 12),
+      bx(15, 94, 290, 24, '天気・季節：sunny / because', C.purple, FILL.purple, 12),
+      ...cap('質問と答えを声に出してセットで', C.main),
+    ),
+  },
+], '英検5級の表現：質問と答えのセット');
+
+// ───────── eigo_17_gojun_ouyou 強調構文 ─────────
+const u17: DiagramFigure = show([
+  {
+    note: '強調構文（きょうちょうこうぶん）は、文の中の言葉を強く伝えたいときに使う形です。形は It is（was）＋ 強調したい語句 ＋ that ＋ 残りの部分。まず、もとの文を3つの部分に分けて見ましょう。Tom broke the window yesterday.（トムが昨日窓を割った）。',
+    add: [
+      ...sent([['Tom', 'b', '①だれが'], ['broke the window', 'y'], ['yesterday.', 'g', '③いつ']], 20, 32, 13, 6, 314),
+      lb(160, 82, '②何を：the window', 12, C.purple, 'middle', true),
+      lb(160, 124, '3つのどれでも強調できる', 13, C.ink, 'middle', true),
+      ...cap('強調したい部分を選ぶ'),
+    ],
+  },
+  {
+    note: '①「Tom」を強調します。It was の次に Tom を置き、that のあとに残りを続けます。It was Tom that broke the window yesterday.（窓を割ったのはトムだった）。Tom が元の位置から消えて、文の前に出ています。',
+    add: fresh(
+      ...sent([['It was', 'y'], ['Tom', 'b'], ['that', 'm'], ['broke the window yesterday.', 'y']], 20, 32, 12, 6, 314),
+      lb(160, 74, 'Tom を強調', 13, C.blue, 'middle', true),
+      lb(160, 108, '窓を割ったのはトムだった', 13, C.ink, 'middle', true),
+      ...cap('It was ＋ 強調 ＋ that ＋ 残り', C.blue),
+    ),
+  },
+  {
+    note: '②「the window」を強調します。It was the window that Tom broke yesterday.（トムが昨日割ったのは窓だった）。強調したい語句が、It was と that のあいだに入ります。',
+    add: fresh(
+      ...sent([['It was', 'y'], ['the window', 'p'], ['that', 'm'], ['Tom broke yesterday.', 'y']], 20, 32, 12, 6, 314),
+      lb(160, 74, 'the window を強調', 13, C.purple, 'middle', true),
+      lb(160, 108, 'トムが昨日割ったのは窓だった', 13, C.ink, 'middle', true),
+      ...cap('強調する語句を It was と that のあいだへ', C.purple),
+    ),
+  },
+  {
+    note: '③「yesterday」を強調します。It was yesterday that Tom broke the window.（トムが窓を割ったのは昨日だった）。時や場所を表す言葉も強調できます。',
+    add: fresh(
+      ...sent([['It was', 'y'], ['yesterday', 'g'], ['that', 'm'], ['Tom broke the window.', 'y']], 20, 32, 12, 6, 314),
+      lb(160, 74, 'yesterday を強調', 13, C.green, 'middle', true),
+      lb(160, 108, 'トムが窓を割ったのは昨日だった', 13, C.ink, 'middle', true),
+      ...cap('時・場所も強調できる', C.green),
+    ),
+  },
+  {
+    note: '❓なぜ It is ではなく It was なのでしょう。→ もとの文が過去（broke）だからです。強調構文でも時制は元の文に合わせます。現在の文なら It is、過去の文なら It was です。',
+    add: fresh(
+      bx(10, 16, 140, 30, 'Tom broke ～.（過去）', C.blue, FILL.blue, 12), ar(80, 48, 80, 66, C.main), bx(30, 68, 100, 28, 'It was ～ that', C.red, FILL.red, 13),
+      bx(170, 16, 140, 30, 'Tom breaks ～.（現在）', C.green, FILL.green, 11), ar(240, 48, 240, 66, C.main), bx(190, 68, 100, 28, 'It is ～ that', C.green, FILL.green, 13),
+      lb(160, 124, '時制は元の文に合わせる', 13, C.ink, 'middle', true),
+      ...cap('過去なら was、現在なら is', C.red),
+    ),
+  },
+  {
+    note: '人を強調するときは、that のかわりに who も使えます。It was Ken who（that）called me last night.（昨夜私に電話したのはケンだった）。who のほうがはっきり「人」だと分かります。',
+    add: fresh(
+      ...sent([['It was', 'y'], ['Ken', 'b'], ['who', 'r'], ['called me last night.', 'y']], 20, 32, 12, 6, 314),
+      lb(160, 74, '人 → that のかわりに who も使える', 12, C.red, 'middle', true),
+      lb(160, 108, '電話したのはケンだった', 13, C.ink, 'middle', true),
+      ...cap('人なら who もOK', C.red),
+    ),
+  },
+  {
+    note: '❓強調構文の It と、It is important to study. のような形式主語（けいしきしゅご）の It はどう見分けるのでしょう。→ 「It is 〜 that」の「〜」の部分を消しても、のこりが意味の通る完全な文になれば強調構文です。It was Tom that broke the window. は Tom broke the window. になります。',
+    add: fresh(
+      bx(10, 10, 300, 28, 'It was Tom that broke the window.', C.blue, FILL.blue, 13), ar(160, 40, 160, 54, C.main),
+      bx(30, 56, 260, 26, 'Tom broke the window.（完全な文）', C.green, FILL.green, 12), lb(160, 96, '○ 強調構文', 13, C.green, 'middle', true),
+      bx(10, 106, 300, 26, 'It is important to study English.', C.red, FILL.red, 12), lb(160, 144, '× 消すと文がこわれる → 形式主語', 11, C.red, 'middle', true),
+      ...cap('〜を消して、完全な文なら強調構文', C.blue),
+    ),
+  },
+  {
+    note: 'まとめです。It is（was）＋ 強調したい語句 ＋ that ＋ 残り、が強調構文の形。時制は元の文に合わせ、人なら who も使える。動詞そのものは強調構文では強調できず、かわりに do / does / did を使います（I did finish my homework.）。',
+    add: fresh(
+      bx(15, 10, 290, 26, 'It is（was）＋ 強調語句 ＋ that ＋ 残り', C.blue, FILL.blue, 12),
+      bx(15, 40, 290, 26, '時制は元の文に合わせる／人なら who', C.green, FILL.green, 12),
+      bx(15, 70, 290, 26, '動詞の強調は do / does / did', C.red, FILL.red, 12),
+      lb(160, 118, 'I did finish my homework.', 13, C.red, 'middle', true),
+      ...cap('強調したい語句を It is と that ではさむ', C.main),
+    ),
+  },
+], '強調構文：It is ～ that ... の作り方');
+
+// ───────── eigo_18_e_nikki_sakubun 時系列の絵日記 ─────────
+const panel = (x: number, n: string, t: string, k: Kd, y = 12, h = 70) => [bx(x, y, 70, h, `${n}\n${t}`, K[k][0], K[k][1], 11)];
+const u18: DiagramFigure = show([
+  {
+    note: '入試の英作文では、3〜4コマの絵を順番に説明させる問題がよく出ます。大切なのは、出来事を時間の順番にならべることです。ここでは「朝おきる→朝食→学校へ→友達と勉強」の4コマを使って考えます。',
+    add: [
+      ...panel(8, '①', '朝起きる', 'b'), ...panel(86, '②', '朝食を食べる', 'g'), ...panel(164, '③', '学校へ行く', 'r'), ...panel(242, '④', '友達と勉強', 'p'),
+      ar(80, 47, 86, 47, C.main), ar(158, 47, 164, 47, C.main), ar(236, 47, 242, 47, C.main),
+      lb(160, 112, '4コマの絵を、順番に英語で説明する', 12, C.ink, 'middle', true),
+      ...cap('時間の順にならべる'),
+    ],
+  },
+  {
+    note: '❓どうすれば順番が伝わるのでしょう。→ 時間の順序（じゅんじょ）を示す言葉を使います。First（まず）、Then（それから）、After that（その後）、Finally（最後に）。この4つをこの順に使うと、絵を見なくても順番が分かる文章になります。',
+    add: fresh(
+      ...[['First,', 'まず', 'b'], ['Then,', 'それから', 'g'], ['After that,', 'その後', 'r'], ['Finally,', '最後に', 'p']].flatMap(([a, b, k], i) => [
+        bx(30, 8 + i * 34, 120, 26, a, K[k as Kd][0], K[k as Kd][1], 14), lb(200, 21 + i * 34, b, 13, K[k as Kd][0], 'middle', true),
+      ]),
+      ...[0, 1, 2].map((i) => ar(90, 35 + i * 34, 90, 41 + i * 34, C.main)),
+      ...cap('順序の言葉が道しるべ', C.main),
+    ),
+  },
+  {
+    note: '1コマ目は、First, I woke up at seven.（まず、私は7時に起きた）。❓なぜ過去形（かこけい）の woke なのでしょう。→ 絵日記は、もう終わったことを書くので過去形にするからです。wake の過去形は woke です。',
+    add: fresh(
+      ...panel(8, '①', '朝起きる', 'b'),
+      bx(88, 16, 224, 60, 'First, I woke up\nat seven.', C.blue, FILL.blue, 15),
+      ...sent([['wake', 'y'], ['→', 'm'], ['woke', 'r']], 96, 28, 14, 80, 240),
+      ...cap('終わったことは過去形で書く', C.blue),
+    ),
+  },
+  {
+    note: '2コマ目は Then, I had breakfast with my family.（それから、家族と朝食を食べた）。3コマ目は After that, I went to school by bike.（その後、自転車で学校へ行った）。have の過去形は had、go の過去形は went です。',
+    add: fresh(
+      ...panel(8, '②', '朝食', 'g', 8, 56), bx(88, 18, 224, 36, 'Then, I had breakfast\nwith my family.', C.green, FILL.green, 12),
+      ...panel(8, '③', '学校へ', 'r', 76, 56), bx(88, 86, 224, 36, 'After that, I went to school\nby bike.', C.red, FILL.red, 12),
+      lb(160, 140, 'have → had　　go → went', 12, C.ink, 'middle', true),
+      ...cap('had・went は過去形', C.main),
+    ),
+  },
+  {
+    note: '4コマ目は Finally, I studied math with my friends.（最後に、友達と数学を勉強した）。study の過去形は studied（y を i に変えて ed）です。4つの文をつなげると、1日の流れがひと目で分かる文章になります。',
+    add: fresh(
+      bx(10, 8, 300, 22, 'First, I woke up at seven.', C.blue, FILL.blue, 12),
+      bx(10, 34, 300, 22, 'Then, I had breakfast with my family.', C.green, FILL.green, 11),
+      bx(10, 60, 300, 22, 'After that, I went to school by bike.', C.red, FILL.red, 11),
+      bx(10, 86, 300, 22, 'Finally, I studied math with my friends.', C.purple, FILL.purple, 11),
+      lb(160, 128, 'study → studied', 12, C.purple, 'middle', true),
+      ...cap('4コマ ＝ 4つの文', C.purple),
+    ),
+  },
+  {
+    note: '場面に登場人物が何人かいて、それぞれ別の動作をしているときは、主語ごとに文を分けます。男の子はサッカー、女の子は読書なら、One boy is playing soccer. A girl is reading a book near him. となります。今まさにしている動作を描くときは現在進行形を使います。',
+    add: fresh(
+      bx(10, 10, 140, 40, '男の子\nサッカー', C.blue, FILL.blue, 12), bx(170, 10, 140, 40, '女の子\n本を読む', C.red, FILL.red, 12),
+      bx(8, 66, 148, 40, 'One boy is playing soccer.', C.blue, FILL.blue, 11), bx(164, 66, 148, 40, 'A girl is reading a book near him.', C.red, FILL.red, 10),
+      lb(160, 128, '主語ごとに文を分ける', 12, C.ink, 'middle', true),
+      ...cap('人が違えば、文も別', C.main),
+    ),
+  },
+  {
+    note: '吹き出し（ふきだし）のせりふは、2通りに書けます。He said, “I’m hungry.”（彼は「お腹がすいた」と言った）。または He said that he was hungry.。❓なぜ am が was に変わるのでしょう。→ said と過去の話になったので、あとの動詞も過去にそろえる（時制の一致（いっち））からです。',
+    add: fresh(
+      bx(10, 12, 300, 30, 'He said, "I\'m hungry."', C.blue, FILL.blue, 14), ar(160, 44, 160, 62, C.main),
+      ...sent([['He said that', 'y'], ['he was', 'r'], ['hungry.', 'g']], 64, 30, 14, 10, 310),
+      lb(160, 118, 'am → was（said と時をそろえる）', 12, C.red, 'middle', true),
+      ...cap('ひとりごとは時制の一致に注意', C.red),
+    ),
+  },
+  {
+    note: 'まとめです。複数コマの絵は、First・Then・After that・Finally の順序の言葉でつなぐ。出来事は過去形で書く。登場人物が違えば主語ごとに文を分ける。せりふは直接引用か、時制をそろえて書きます。',
+    add: fresh(
+      bx(15, 10, 290, 24, 'First → Then → After that → Finally', C.blue, FILL.blue, 12),
+      bx(15, 38, 290, 24, '出来事は過去形（woke・had・went）', C.green, FILL.green, 12),
+      bx(15, 66, 290, 24, '人が違えば主語ごとに文を分ける', C.red, FILL.red, 12),
+      bx(15, 94, 290, 24, 'せりふ：He said, "…" ／ said that …', C.purple, FILL.purple, 12),
+      ...cap('順番・時制・主語を整えて書く', C.main),
+    ),
+  },
+], '絵日記：順序の言葉で出来事をつなぐ');
+
+// ───────── eigo_19_kaiwabun_dokkai 電話の会話文 ─────────
+const u19: DiagramFigure = show([
+  {
+    note: '電話の会話には、決まった流れと決まり文句があります。知っていると、場面がすぐにイメージできます。流れは、①電話を受ける、②取り次ぎをたのむ、③本人が出る、④不在を伝える、⑤伝言、⑥かけ直し、の6つです。',
+    add: [
+      ...stack(['① 受ける　Hello, this is ～ speaking.', '② たのむ　May I speak to ～?', '③ 本人　Speaking.'], 8, 150, 8, { h: 28, gap: 8, size: 9, color: C.blue, fill: FILL.blue }).flat(),
+      ...stack(['④ 不在　I\'m sorry, he is out now.', '⑤ 伝言　Can I take a message?', '⑥ かけ直し　call me back'], 162, 150, 8, { h: 28, gap: 8, size: 9, color: C.red, fill: FILL.red }).flat(),
+      ...cap('電話の6つの流れ'),
+    ],
+  },
+  {
+    note: 'はじめの2つです。電話を受けた人は Hello, this is 〜 speaking.（もしもし、〜です）と名のります。かけた人は May I speak to Mr. Green, please?（グリーン先生をお願いできますか）と取り次ぎをたのみます。本人が出たら Speaking.（私です）と答えます。',
+    add: fresh(
+      bx(10, 10, 220, 30, 'May I speak to Mr. Green, please?', C.blue, FILL.blue, 12), lb(14, 6, 'かける人', 9, C.blue, 'start', true),
+      bx(90, 50, 220, 30, 'Hello, this is ～ speaking.', C.green, FILL.green, 12), lb(94, 46, '受ける人', 9, C.green, 'start', true),
+      bx(90, 90, 120, 30, 'Speaking.', C.red, FILL.red, 14), lb(94, 86, '本人が出る', 9, C.red, 'start', true),
+      ...cap('取り次ぎ → 本人は Speaking.', C.main),
+    ),
+  },
+  {
+    note: '❓本人がいないときは、どう伝えるのでしょう。→ I’m sorry, he is out now.（すみません、今外出しています）と不在（ふざい）を伝え、Can I take a message?（伝言を承りましょうか）とたずねます。かける側は Could you ask him to call me back?（折り返し電話するよう伝えていただけますか）と頼みます。',
+    add: fresh(
+      bx(10, 10, 300, 28, "I'm sorry, he is out now.（不在）", C.red, FILL.red, 12),
+      bx(10, 46, 300, 28, 'Can I take a message?（伝言を承りましょうか）', C.green, FILL.green, 11),
+      bx(10, 82, 300, 28, 'Could you ask him to call me back?', C.blue, FILL.blue, 12),
+      lb(160, 128, '折り返し電話するように伝えてほしい', 11, C.blue, 'middle', true),
+      ...cap('不在 → 伝言 → かけ直し', C.red),
+    ),
+  },
+  {
+    note: '会話文を読んでみましょう。Tom: Hello, this is Tom. May I speak to Emma? / Mother: I’m sorry, Tom. She’s not home now. She’s at the library. / Tom: I see. Could you tell her to call me when she gets home? / Mother: Sure, I will.',
+    add: fresh(
+      bx(10, 6, 220, 26, 'Tom: Hello, this is Tom. May I speak to Emma?', C.blue, FILL.blue, 9),
+      bx(90, 36, 222, 26, "Mother: I'm sorry, Tom. She's not home now.\nShe's at the library.", C.green, FILL.green, 8),
+      bx(10, 66, 220, 26, 'Tom: I see. Could you tell her to call me when she gets home?', C.blue, FILL.blue, 8),
+      bx(90, 96, 222, 26, 'Mother: Sure, I will.', C.green, FILL.green, 11),
+      ...cap('トムが エマ に電話した場面'),
+    ),
+  },
+  {
+    note: '❓Why isn’t Emma at home?（なぜエマは家にいないのですか）の答えはどこにあるでしょう。→ 母親の言葉の中です。She’s at the library.（図書館にいます）。不在の理由は、必ず本文の中にはっきり書かれています。会話の流れの中で自然に答えが出てきます。',
+    add: fresh(
+      bx(90, 10, 222, 38, "Mother: I'm sorry, Tom. She's not home now.\nShe's at the library.", C.green, FILL.green, 9),
+      ar(250, 76, 250, 52, C.red), bx(110, 78, 200, 30, 'She is at the library.', C.red, FILL.red, 13),
+      lb(160, 128, '理由は本文にそのまま書いてある', 12, C.ink, 'middle', true),
+      ...cap('答えは本文の中から探す', C.red),
+    ),
+  },
+  {
+    note: '電話の会話では、よく出る設問がいくつかあります。待ち合わせの時間・場所（What time will they meet? / Where will they meet?）、伝言の内容（What does Tom want Emma to do?）、電話の目的（Why did Tom call Emma?）です。',
+    add: fresh(
+      ...[['時間・場所', 'What time / Where will they meet?', 'b'], ['伝言の内容', 'What does Tom want Emma to do?', 'g'], ['電話の目的', 'Why did Tom call Emma?', 'r']].flatMap(([a, b, k], i) => [
+        tag(8, 16 + i * 40, 76, a, k as Kd, 11), bx(88, 12 + i * 40, 224, 28, b, K[k as Kd][0], K[k as Kd][1], 10),
+      ]),
+      ...cap('設問のパターンを知っておく', C.main),
+    ),
+  },
+  {
+    note: '❓どう読めば答えやすいでしょうか。→ 読みながら「相手が今どこにいるか」「何を頼まれたか」にマークをつけます。電話の会話では、この2つの情報が設問の中心になることが多いからです。この文では、Emma はどこにいる？→ the library、頼まれたことは→ call Tom back です。',
+    add: fresh(
+      bx(10, 12, 148, 40, '相手は今どこ？\n→ the library', C.blue, FILL.blue, 12), bx(162, 12, 148, 40, '何を頼まれた？\n→ call Tom back', C.red, FILL.red, 12),
+      lb(160, 76, '2つにマークをつけて読む', 13, C.ink, 'middle', true),
+      ...cap('居場所と頼まれたこと', C.main),
+    ),
+  },
+  {
+    note: 'まとめです。電話の会話は決まった流れで進む。決まり文句を覚えておく。不在の理由は本文に必ず書いてある。居場所と頼まれたことにマークをつけて読むと、設問に答えやすくなります。',
+    add: fresh(
+      bx(15, 10, 290, 24, '流れ：受ける → 取り次ぎ → 不在 → 伝言', C.blue, FILL.blue, 12),
+      bx(15, 38, 290, 24, '決まり文句：Speaking. / call me back', C.green, FILL.green, 12),
+      bx(15, 66, 290, 24, '理由は本文にそのまま書いてある', C.red, FILL.red, 12),
+      bx(15, 94, 290, 24, '居場所・頼まれたことにマーク', C.purple, FILL.purple, 12),
+      ...cap('流れを知れば、場面が見える', C.main),
+    ),
+  },
+], '電話の会話文：流れと決まり文句');
+
+// ───────── eigo_20_tansuu_fukusuu 複数形の作り方 ─────────
+const u20: DiagramFigure = show([
+  {
+    note: '名詞（めいし）を複数形（ふくすうけい）にするときの、つづりの変え方は5つあります。そのまま s、es をつける、y を i に変えて es、f を v に変えて es、そして形が変わる不規則なもの。語の終わりを見て、どれに当てはまるか決めます。',
+    add: [
+      ...[['そのまま s', 'book → books', 'b'], ['s・x・ch・sh・o → es', 'box → boxes', 'g'], ['子音＋y → ies', 'city → cities', 'r'], ['f・fe → ves', 'leaf → leaves', 'p']].flatMap(([a, b, k], i) => [
+        bx(10, 10 + i * 33, 150, 26, a, K[k as Kd][0], K[k as Kd][1], 12), bx(168, 10 + i * 33, 142, 26, b, K[k as Kd][0], K[k as Kd][1], 12),
+      ]),
+      ...cap('語の終わりを見て作り方を決める'),
+    ],
+  },
+  {
+    note: 'いちばん基本は、そのまま s をつける形です。book → books、pen → pens、dog → dogs、apple → apples。ほとんどの名詞はこれで作れます。',
+    add: fresh(
+      ...rowb(['book → books', 'pen → pens'], 20, 36, 'b', 14, 10, 310, 8),
+      ...rowb(['dog → dogs', 'apple → apples'], 70, 36, 'b', 14, 10, 310, 8),
+      lb(160, 128, 'ふつうは s だけ', 13, C.ink, 'middle', true),
+      ...cap('基本は そのまま s', C.blue),
+    ),
+  },
+  {
+    note: '❓s・x・ch・sh・o で終わる語は、なぜ es なのでしょう。→ s だけを足すと発音しにくいからです。es をつけると「イズ」と読めて、はっきり複数だと分かります。bus → buses、box → boxes、watch → watches、dish → dishes、tomato → tomatoes。',
+    add: fresh(
+      ...rowb(['bus → buses', 'box → boxes'], 10, 28, 'g', 12, 10, 310, 8),
+      ...rowb(['watch → watches', 'dish → dishes'], 44, 28, 'g', 12, 10, 310, 8),
+      bx(60, 80, 200, 26, 'tomato → tomatoes', C.green, FILL.green, 13),
+      lb(160, 126, '× ピアノ類は例外：pianos・photos・radios', 11, C.red, 'middle', true),
+      ...cap('言いにくい語尾には es を足す', C.green),
+    ),
+  },
+  {
+    note: '❓「子音（しいん）＋y」はどうなるでしょう。→ y を i に変えて es をつけます。city → cities、story → stories、baby → babies、country → countries。ただし「母音（ぼいん）＋y」はそのまま s：boy → boys、day → days、toy → toys。y の前が母音かどうかで決まります。',
+    add: fresh(
+      ...rowb(['city → cities', 'baby → babies'], 10, 28, 'r', 12, 10, 310, 8),
+      lb(160, 52, 'y の前が子音 → y を i に変えて es', 12, C.red, 'middle', true),
+      ...rowb(['boy → boys', 'day → days'], 72, 28, 'b', 12, 10, 310, 8),
+      lb(160, 114, 'y の前が母音 → そのまま s', 12, C.blue, 'middle', true),
+      ...cap('y の前の文字を見る', C.red),
+    ),
+  },
+  {
+    note: 'f や fe で終わる語は、f を v に変えて es をつけます。leaf → leaves、knife → knives、life → lives、wife → wives、shelf → shelves。ただし例外もあり、roof → roofs、belief → beliefs はそのまま s です。',
+    add: fresh(
+      ...rowb(['leaf → leaves', 'knife → knives', 'life → lives'], 10, 30, 'p', 11, 8, 312, 6),
+      ...rowb(['wife → wives', 'shelf → shelves'], 48, 30, 'p', 11, 8, 312, 6),
+      lb(160, 100, '例外：そのまま s', 12, C.red, 'middle', true),
+      ...rowb(['roof → roofs', 'belief → beliefs'], 112, 26, 'r', 12, 40, 280, 8),
+      ...cap('f・fe → ves、例外は暗記', C.purple),
+    ),
+  },
+  {
+    note: '❓s のつづりは同じなのに、読み方はなぜ変わるのでしょう。→ 直前の音で決まるからです。p・t・k・f のような息だけの音のあとは「ス」（cats・books）、声のある音や母音のあとは「ズ」（dogs・pens）、s・x・ch・sh・z のあとは「イズ」（buses・watches）です。',
+    add: fresh(
+      bx(8, 10, 98, 64, 'ス [s]\ncats\nbooks', C.blue, FILL.blue, 12), bx(111, 10, 98, 64, 'ズ [z]\ndogs\npens', C.green, FILL.green, 12), bx(214, 10, 98, 64, 'イズ [iz]\nbuses\nwatches', C.red, FILL.red, 12),
+      lb(57, 88, '息だけの音のあと', 10, C.blue, 'middle', true), lb(160, 88, '声のある音・母音のあと', 10, C.green, 'middle', true), lb(263, 88, 's・x・ch・sh のあと', 10, C.red, 'middle', true),
+      ...cap('直前の音で s の読み方が決まる', C.main),
+    ),
+  },
+  {
+    note: 'まとめです。語の終わりを見て、①ふつうは s、②s・x・ch・sh・o は es、③子音＋y は ies、④f・fe は ves、と作り方を選びます。s の読み方は、直前の音で「ス・ズ・イズ」と変わります。',
+    add: fresh(
+      bx(15, 8, 290, 22, 'ふつう：s（books）', C.blue, FILL.blue, 12),
+      bx(15, 34, 290, 22, 's・x・ch・sh・o：es（boxes）', C.green, FILL.green, 12),
+      bx(15, 60, 290, 22, '子音＋y：ies（cities）', C.red, FILL.red, 12),
+      bx(15, 86, 290, 22, 'f・fe：ves（leaves）', C.purple, FILL.purple, 12),
+      bx(15, 112, 290, 22, '読み方：ス・ズ・イズ', C.main, FILL.warm, 12),
+      ...cap('終わり方を見て選ぶ', C.main),
+    ),
+  },
+], '複数形：語の終わりで作り方が決まる');
+
+// ───────── eigo_21_setsuzokushi 相関接続詞 ─────────
+const u21: DiagramFigure = show([
+  {
+    note: '相関接続詞（そうかんせつぞくし）は、2つの語句をペアで使う接続詞（せつぞくし）です。意味と動詞のそろえ方が、それぞれちがいます。both A and B、either A or B、neither A nor B、not only A but also B の4つを順に見ます。',
+    add: [
+      ...[['both A and B', 'AとBの両方'], ['either A or B', 'AかBのどちらか'], ['neither A nor B', 'AもBも〜ない'], ['not only A but also B', 'AだけでなくBも']].flatMap(([a, b], i) => [
+        bx(10, 10 + i * 33, 160, 26, a, C.blue, FILL.blue, 12), bx(176, 10 + i * 33, 134, 26, b, C.green, FILL.green, 12),
+      ]),
+      ...cap('ペアで使う接続詞'),
+    ],
+  },
+  {
+    note: 'both A and B は「AとBの両方」。Both Tom and Ken are good at math.（トムもケンも数学が得意だ）。❓なぜ are なのでしょう。→ トムとケンの2人を合わせるので、動詞はいつも複数あつかいだからです。',
+    add: fresh(
+      ...sent([['Both', 'r'], ['Tom', 'b'], ['and', 'r'], ['Ken', 'b'], ['are', 'g'], ['good at math.', 'y']], 16, 32, 12, 4, 316),
+      bx(70, 70, 70, 30, 'Tom', C.blue, FILL.blue, 13), lb(160, 86, '＋', 16), bx(180, 70, 70, 30, 'Ken', C.blue, FILL.blue, 13),
+      lb(160, 120, '2人 → 複数 → are', 13, C.green, 'middle', true),
+      ...cap('both A and B ＝ いつも複数あつかい', C.green),
+    ),
+  },
+  {
+    note: 'either A or B は「AかBのどちらか」。Either you or I am wrong.（あなたか私のどちらかが間違っている）。❓動詞はなぜ am なのでしょう。→ 動詞は、近いほうのB（I）に合わせるからです。これを近接一致（きんせついっち）といいます。',
+    add: fresh(
+      ...sent([['Either', 'r'], ['you', 'b'], ['or', 'r'], ['I', 'g'], ['am', 'g'], ['wrong.', 'y']], 16, 32, 13, 6, 314),
+      bx(110, 78, 100, 28, 'B に合わせる', C.red, FILL.red, 12), ar(185, 76, 185, 56, C.red),
+      lb(160, 124, 'I に合わせて am', 13, C.red, 'middle', true),
+      ...cap('either A or B ＝ B に動詞を合わせる', C.red),
+    ),
+  },
+  {
+    note: 'neither A nor B は「AもBも〜ない」。Neither Tom nor Ken likes vegetables.（トムもケンも野菜が好きではない）。動詞はB（Ken）に合わせるので likes。❓なぜ doesn’t をつけないのでしょう。→ neither がすでに否定の意味を持つので、さらに否定すると二重否定になるからです。',
+    add: fresh(
+      ...sent([['Neither', 'r'], ['Tom', 'b'], ['nor', 'r'], ['Ken', 'g'], ['likes', 'g'], ['vegetables.', 'y']], 14, 32, 12, 4, 316),
+      bx(14, 66, 144, 44, '○ likes\nneither で否定済み', C.green, FILL.green, 12), bx(162, 66, 144, 44, '× doesn\'t like\n二重否定になる', C.red, FILL.red, 12),
+      ...cap('neither のあとは、動詞を否定しない', C.red),
+    ),
+  },
+  {
+    note: 'not only A but also B は「AだけでなくBも」。Not only Tom but also his sisters are coming.（トムだけでなく彼の姉妹たちも来る）。B（his sisters）を特に強調します。動詞はBに合わせて、複数の are です。',
+    add: fresh(
+      ...sent([['Not only', 'r'], ['Tom', 'b'], ['but also', 'r'], ['his sisters', 'g'], ['are', 'g'], ['coming.', 'y']], 16, 32, 12, 4, 316),
+      lb(160, 74, 'いちばん言いたいのは B', 13, C.green, 'middle', true),
+      bx(90, 90, 140, 28, 'B に合わせて are', C.red, FILL.red, 13),
+      ...cap('not only A but also B ＝ B を強調', C.green),
+    ),
+  },
+  {
+    note: '❓B as well as A は、動詞を何に合わせるのでしょう。→ 先に書いてある B に合わせます。His sisters as well as Tom are coming. は、His sisters が主語の中心なので are です。not only A but also B と同じ意味ですが、語の順がちがいます。',
+    add: fresh(
+      ...sent([['His sisters', 'g'], ['as well as', 'r'], ['Tom', 'b'], ['are', 'g'], ['coming.', 'y']], 16, 32, 12, 6, 314),
+      lb(160, 74, '先に書いてある B に合わせる', 13, C.red, 'middle', true),
+      bx(40, 92, 240, 30, '＝ Not only Tom but also his sisters …', C.main, FILL.yellow, 11),
+      ...cap('B as well as A ＝ 先頭の B に合わせる', C.red),
+    ),
+  },
+  {
+    note: 'まとめです。both A and B は常に複数、either A or B と neither A nor B と not only A but also B は動詞をBに合わせる。neither は動詞を否定しない。B as well as A は先頭のBに合わせます。',
+    add: fresh(
+      ...grid([['形', '意味', '動詞'], ['both A and B', '両方', '複数'], ['either A or B', 'どちらか', 'B に合わせる'], ['neither A nor B', 'どちらも〜ない', 'B に合わせる'], ['not only A but also B', 'AだけでなくBも', 'B に合わせる']], 8, 6, [124, 94, 88], 24, ['b', 'g', 'r'], 10),
+      ...cap('動詞の合わせ方がちがう', C.main),
+    ),
+  },
+], '相関接続詞：動詞をそろえる相手');
+
+// ───────── eigo_22_kantanbun 付加疑問文 ─────────
+const u22: DiagramFigure = show([
+  {
+    note: '付加疑問文（ふかぎもんぶん）は、文の最後に短い疑問をつけて、「〜だよね？」と相手に確認する表現です。会話でよく使われ、リスニングや会話文の問題にも出ます。You are a student, aren’t you?（あなたは生徒ですよね？）。',
+    add: [
+      ...sent([['You are a student,', 'b'], ["aren't you?", 'r']], 24, 34, 14, 10, 310),
+      lb(160, 82, '文の最後に、短い疑問をつける', 13, C.ink, 'middle', true),
+      lb(160, 106, '「〜ですよね？」と確認する', 13, C.red, 'middle', true),
+      ...cap('文末に短い疑問をつけて確認'),
+    ],
+  },
+  {
+    note: '❓どう作るのでしょう。→ 前の文が肯定（こうてい）文なら、つける疑問は否定形。前の文が否定文なら、つける疑問は肯定形にします。You are a student, aren’t you? は肯定→否定。She isn’t busy, is she? は否定→肯定です。',
+    add: fresh(
+      bx(10, 12, 140, 36, '肯定文\nYou are a student,', C.blue, FILL.blue, 11), ar(152, 30, 168, 30, C.main), bx(170, 12, 140, 36, "否定形\naren't you?", C.red, FILL.red, 12),
+      bx(10, 66, 140, 36, '否定文\nShe isn\'t busy,', C.red, FILL.red, 11), ar(152, 84, 168, 84, C.main), bx(170, 66, 140, 36, '肯定形\nis she?', C.blue, FILL.blue, 12),
+      lb(160, 126, '反対の形で たずね返す', 13, C.ink, 'middle', true),
+      ...cap('肯定 → 否定、否定 → 肯定', C.main),
+    ),
+  },
+  {
+    note: '❓なぜ反対の形にするのでしょう。→ 「そうですよね？」と確認するために、反対側から軽くたずね返す形になっているからです。be動詞の例：You are a student, aren’t you? / She isn’t busy, is she? / It was cold yesterday, wasn’t it?',
+    add: fresh(
+      ...[['You are a student,', "aren't you?"], ['She isn\'t busy,', 'is she?'], ['It was cold yesterday,', "wasn't it?"]].flatMap(([a, b], i) => [
+        bx(8, 12 + i * 40, 190, 28, a, C.blue, FILL.blue, 12), bx(204, 12 + i * 40, 108, 28, b, C.red, FILL.red, 12),
+      ]),
+      ...cap('be動詞は be動詞で たずね返す', C.main),
+    ),
+  },
+  {
+    note: '一般動詞（いっぱんどうし）の文では、do / does / did を使います。He plays soccer, doesn’t he?（彼はサッカーをしますよね？）。They don’t like natto, do they?（彼らは納豆が好きではないですよね？）。You went to the party, didn’t you?（パーティーに行きましたよね？）。❓なぜ do 系なのでしょう。→ 前の文の動詞の形と時に合わせるからです。',
+    add: fresh(
+      ...[['He plays soccer,', "doesn't he?"], ["They don't like natto,", 'do they?'], ['You went to the party,', "didn't you?"]].flatMap(([a, b], i) => [
+        bx(8, 12 + i * 40, 190, 28, a, C.blue, FILL.blue, 11), bx(204, 12 + i * 40, 108, 28, b, C.red, FILL.red, 12),
+      ]),
+      ...cap('plays → does、went → did', C.main),
+    ),
+  },
+  {
+    note: '助動詞（じょどうし）の文では、その助動詞をくり返します。She can swim, can’t she?（彼女は泳げますよね？）、You will come, won’t you?（来ますよね？）、We should hurry, shouldn’t we?（急いだほうがいいですよね？）。won’t は will not を短くした形です。',
+    add: fresh(
+      ...[['She can swim,', "can't she?"], ['You will come,', "won't you?"], ['We should hurry,', "shouldn't we?"]].flatMap(([a, b], i) => [
+        bx(8, 12 + i * 40, 190, 28, a, C.blue, FILL.blue, 12), bx(204, 12 + i * 40, 108, 28, b, C.red, FILL.red, 12),
+      ]),
+      ...cap('助動詞はそのままくり返す', C.main),
+    ),
+  },
+  {
+    note: '❓主語は、疑問の部分でどうなるでしょう。→ 必ず代名詞（だいめいし）になります。the boy は he に、my mother は she に、these books は they に変わります。The boy is tall, isn’t he?（その男の子は背が高いですよね？）。',
+    add: fresh(
+      ...[['the boy', 'he'], ['my mother', 'she'], ['these books', 'they']].flatMap(([a, b], i) => [
+        bx(30, 12 + i * 32, 110, 24, a, C.blue, FILL.blue, 13), ar(142, 24 + i * 32, 170, 24 + i * 32, C.main), bx(172, 12 + i * 32, 70, 24, b, C.red, FILL.red, 13),
+      ]),
+      ...sent([['The boy is tall,', 'b'], ["isn't he?", 'r']], 112, 28, 13, 20, 300),
+      ...cap('主語は代名詞にする', C.red),
+    ),
+  },
+  {
+    note: '形が変わる特別な付加疑問もあります。I am 〜 は aren’t I?（I’m right, aren’t I?）。Let’s 〜 は shall we?（Let’s go, shall we?）。命令文は will you?（Open the door, will you?）。am not の短い形を aren’t とするのは決まりです。',
+    add: fresh(
+      ...[["I'm right,", "aren't I?", 'I am ～'], ["Let's go,", 'shall we?', "Let's ～"], ['Open the door,', 'will you?', '命令文']].flatMap(([a, b, c], i) => [
+        tag(6, 16 + i * 40, 62, c, 'm', 10), bx(72, 12 + i * 40, 130, 28, a, C.blue, FILL.blue, 12), bx(208, 12 + i * 40, 104, 28, b, C.red, FILL.red, 12),
+      ]),
+      ...cap('特別な形は丸ごと覚える', C.red),
+    ),
+  },
+  {
+    note: '❓付加疑問に答えるときは、どうするのでしょう。→ 事実に合わせて答えます。You don’t like coffee, do you? — No, I don’t.（好きではない）。好きなら Yes, I do.（いいえ、好きです）。日本語の「はい・いいえ」につられず、好きなら Yes、きらいなら No と判断します。',
+    add: fresh(
+      bx(10, 10, 300, 28, "You don't like coffee, do you?", C.blue, FILL.blue, 13),
+      bx(14, 56, 144, 40, '好きではない\nNo, I don\'t.', C.red, FILL.red, 12), bx(162, 56, 144, 40, '好き\nYes, I do.', C.green, FILL.green, 12),
+      lb(160, 118, '日本語の「はい・いいえ」ではなく、事実で決める', 11, C.ink, 'middle', true),
+      ...cap('好き → Yes、きらい → No', C.main),
+    ),
+  },
+  {
+    note: 'まとめです。肯定文には否定の疑問、否定文には肯定の疑問をつける。動詞は前の文に合わせ（be動詞・do系・助動詞）、主語は代名詞。I am は aren’t I?、Let’s は shall we?、命令文は will you? になる。答えは事実に合わせます。',
+    add: fresh(
+      bx(15, 8, 290, 22, '肯定 → 否定　否定 → 肯定', C.blue, FILL.blue, 12),
+      bx(15, 34, 290, 22, '動詞は前の文に合わせる／主語は代名詞', C.green, FILL.green, 12),
+      bx(15, 60, 290, 22, "I am → aren't I?　Let's → shall we?", C.red, FILL.red, 12),
+      bx(15, 86, 290, 22, '命令文 → will you?', C.purple, FILL.purple, 12),
+      bx(15, 112, 290, 22, '答えは事実で Yes / No', C.main, FILL.warm, 12),
+      ...cap('反対の形でたずね返す', C.main),
+    ),
+  },
+], '付加疑問文：反対の形でたずね返す');
+
 export const XF_CEA_FIGURES: Record<string, DiagramFigure> = {
   'xf_eigo_01_bunpo_kihon': u01,
   'xf_eigo_02_meishi_daimeishi': u02,
@@ -1162,6 +1779,14 @@ export const XF_CEA_FIGURES: Record<string, DiagramFigure> = {
   'xf_eigo_12_zenchishi': u12,
   'xf_eigo_13_hikaku': u13,
   'xf_eigo_14_there_is_are': u14,
+  'xf_eigo_15_shinkoukei': u15,
+  'xf_eigo_16_eiken_hyogen': u16,
+  'xf_eigo_17_gojun_ouyou': u17,
+  'xf_eigo_18_e_nikki_sakubun': u18,
+  'xf_eigo_19_kaiwabun_dokkai': u19,
+  'xf_eigo_20_tansuu_fukusuu': u20,
+  'xf_eigo_21_setsuzokushi': u21,
+  'xf_eigo_22_kantanbun': u22,
 };
 export const XF_CEA_SECTIONS: Record<string, string> = {
   'eigo_01_bunpo_kihon#0': 'xf_eigo_01_bunpo_kihon',
@@ -1178,4 +1803,12 @@ export const XF_CEA_SECTIONS: Record<string, string> = {
   'eigo_12_zenchishi#1': 'xf_eigo_12_zenchishi',
   'eigo_13_hikaku#0': 'xf_eigo_13_hikaku',
   'eigo_14_there_is_are#0': 'xf_eigo_14_there_is_are',
+  'eigo_15_shinkoukei#0': 'xf_eigo_15_shinkoukei',
+  'eigo_16_eiken_hyogen#0': 'xf_eigo_16_eiken_hyogen',
+  'eigo_17_gojun_ouyou#0': 'xf_eigo_17_gojun_ouyou',
+  'eigo_18_e_nikki_sakubun#1': 'xf_eigo_18_e_nikki_sakubun',
+  'eigo_19_kaiwabun_dokkai#1': 'xf_eigo_19_kaiwabun_dokkai',
+  'eigo_20_tansuu_fukusuu#0': 'xf_eigo_20_tansuu_fukusuu',
+  'eigo_21_setsuzokushi#1': 'xf_eigo_21_setsuzokushi',
+  'eigo_22_kantanbun#2': 'xf_eigo_22_kantanbun',
 };

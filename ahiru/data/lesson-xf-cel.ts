@@ -541,8 +541,12 @@ const u24: DiagramFigure = show([
     add: fresh(bx(6, 14, 70, 32, 'Are', C.green, FILL.green, 14), bx(82, 14, 70, 32, 'you', C.gray, FILL.gray, 14), bx(158, 14, 100, 32, 'free?', C.gray, FILL.gray, 14), lb(41, 62, 'be動詞', 11, C.green, 'middle', true), bx(30, 88, 260, 32, '✕  Do you free?', C.red, FILL.red, 14), lb(160, 138, 'be動詞の疑問文に Do は使わない', 12, C.red, 'middle', true), ...band(150, lb(160, 192, 'Are you free? が正しい', 12, C.green, 'middle', true))),
   },
   {
-    note: '❓will と be going to は、会話でどう使い分けるのでしょう。→ その場で決めたことは will、前から決まっていた予定は be going to です。「新しいパン屋に行こう」と誘われて、その場で「うん、一緒に行くよ」と決めるなら I will go with you!。「土曜日は？」と聞かれて、前からピアノがあるなら I\'m going to have a piano lesson. です。',
-    add: fresh(bx(6, 8, 148, 28, 'will', C.blue, FILL.blue, 14), lb(80, 50, 'その場で決める', 12, C.blue, 'middle', true), bx(6, 62, 148, 56, "A: Let's go to the new bakery.\nB: OK, I will go with you!", C.blue, FILL.blue, 9), bx(166, 8, 148, 28, 'be going to', C.red, FILL.red, 14), lb(240, 50, '前から決まっている', 12, C.red, 'middle', true), bx(166, 62, 148, 56, "A: Are you free Saturday?\nB: Sorry, I'm going to have a piano lesson.", C.red, FILL.red, 9), ...cap('決めた時が その場か、前か', C.main)),
+    note: '❓will と be going to は、会話でどう使い分けるのでしょう。→ その場で決めたことは will です。「新しいパン屋に行こう」と誘われて、その場で「うん、一緒に行くよ」と決めるなら I will go with you! と言います。',
+    add: fresh(bx(100, 6, 120, 28, 'will', C.blue, FILL.blue, 15), lb(160, 48, 'その場で決める', 13, C.blue, 'middle', true), bx(6, 62, 308, 28, "A: Let's go to the new bakery this weekend.", C.gray, FILL.gray, 11), bx(6, 98, 308, 28, 'B: OK, I will go with you!', C.blue, FILL.blue, 13), lb(160, 140, 'うん、一緒に行くよ！（その場で決めた）', 11, C.blue, 'middle', true), ...band(150, lb(160, 192, 'その場で決めたら will', 12, C.blue, 'middle', true))),
+  },
+  {
+    note: '前から決まっていた予定は be going to です。「土曜日は空いている？」と聞かれて、前からピアノのレッスンがあるなら I\'m going to have a piano lesson. と答えます。誘われる前から決まっていた、というところがポイントです。',
+    add: fresh(bx(100, 6, 120, 28, 'be going to', C.red, FILL.red, 14), lb(160, 48, '前から決まっている', 13, C.red, 'middle', true), bx(6, 62, 308, 28, 'A: Are you free this Saturday?', C.gray, FILL.gray, 12), bx(6, 98, 308, 28, "B: Sorry, I'm going to have a piano lesson.", C.red, FILL.red, 11), lb(160, 140, 'ごめん、ピアノのレッスンがあるんだ', 11, C.red, 'middle', true), ...band(150, lb(160, 192, '前から決まっていたら be going to', 12, C.red, 'middle', true))),
   },
   {
     note: 'be going to には、もう1つ使い方があります。目の前の根拠（こんきょ）から予測するときです。Look at the sky. It\'s going to rain soon.（空を見て。もうすぐ雨が降りそうだ）。空のようすという根拠があるので、be going to を使います。',
@@ -598,7 +602,7 @@ const u25: DiagramFigure = show([
   },
   {
     note: 'モデル文を読み取ります。「午前中は曇りですが、午後は晴れるでしょう。最高気温は20度です。念のため傘をお忘れなく」。午前は曇り、午後は晴れ（clear up は天気が回復する）、最高気温は20度、持ち物は傘（念のため）。この4つの情報が読み取れます。',
-    add: fresh(bx(6, 10, 148, 40, 'morning\ncloudy　曇り', C.gray, FILL.gray, 12), ar(156, 30, 164, 30, C.main), bx(166, 10, 148, 40, 'afternoon\nclear up　晴れ', C.main, FILL.yellow, 12), bx(6, 62, 148, 28, 'high ＝ 20 degrees', C.red, FILL.red, 11), bx(166, 62, 148, 28, "don't forget your umbrella", C.blue, FILL.blue, 9), lb(160, 112, '午前：曇り　午後：晴れ　最高20度　傘は念のため', 11, C.ink, 'middle', true), ...cap('4つの情報を 読み取る', C.main)),
+    add: fresh(bx(6, 10, 148, 40, 'morning\ncloudy　曇り', C.gray, FILL.gray, 12), ar(156, 30, 164, 30, C.main), bx(166, 10, 148, 40, 'afternoon\nclear up　晴れ', C.main, FILL.yellow, 12), bx(6, 62, 148, 28, 'high ＝ 20 degrees', C.red, FILL.red, 11), bx(166, 62, 148, 28, 'umbrella　傘', C.blue, FILL.blue, 11), lb(160, 112, '午前：曇り　午後：晴れ　最高20度　傘は念のため', 11, C.ink, 'middle', true), ...cap('4つの情報を 読み取る', C.main)),
   },
   {
     note: 'まとめです。お知らせ文は、①What・When・Where・Who・持ち物の5つを拾う、②公式な予定は will と be held、③変更・中止・持ち物・注意のことばを見のがさない、④天気予報は天気・気温・持ち物の4つを読み取る。全部を訳そうとせず、聞かれているキーワードを先に探しましょう。',
@@ -618,7 +622,7 @@ const u26: DiagramFigure = show([
   },
   {
     note: 'よく使う職業名です。doctor（医者）、nurse（看護師）、teacher（先生）、vet（獣医〈じゅうい〉）、scientist（科学者）、pilot（パイロット）、astronaut（宇宙飛行士）、soccer player（サッカー選手）、cook（コック）、pastry chef（パティシエ）、firefighter（消防士）、police officer（警察官）。',
-    add: fresh(bx(6, 4, 98, 24, 'doctor　医者', C.blue, FILL.blue, 10), bx(111, 4, 98, 24, 'nurse　看護師', C.blue, FILL.blue, 10), bx(216, 4, 98, 24, 'teacher　先生', C.blue, FILL.blue, 10), bx(6, 32, 98, 24, 'vet　獣医', C.blue, FILL.blue, 10), bx(111, 32, 98, 24, 'scientist　科学者', C.blue, FILL.blue, 9), bx(216, 32, 98, 24, 'pilot　パイロット', C.blue, FILL.blue, 9), bx(6, 60, 98, 24, 'astronaut', C.blue, FILL.blue, 10), bx(111, 60, 98, 24, 'soccer player', C.blue, FILL.blue, 10), bx(216, 60, 98, 24, 'cook　コック', C.blue, FILL.blue, 10), bx(6, 88, 98, 24, 'pastry chef', C.blue, FILL.blue, 10), bx(111, 88, 98, 24, 'firefighter', C.blue, FILL.blue, 10), bx(216, 88, 98, 24, 'police officer', C.blue, FILL.blue, 10), lb(160, 128, '職業名の前には a か an', 12, C.ink, 'middle', true), ...cap('よく使う職業名', C.main)),
+    add: fresh(bx(6, 4, 98, 24, 'doctor　医者', C.blue, FILL.blue, 10), bx(111, 4, 98, 24, 'nurse　看護師', C.blue, FILL.blue, 10), bx(216, 4, 98, 24, 'teacher　先生', C.blue, FILL.blue, 10), bx(6, 32, 98, 24, 'vet　獣医', C.blue, FILL.blue, 10), bx(111, 32, 98, 24, 'scientist', C.blue, FILL.blue, 10), bx(216, 32, 98, 24, 'pilot', C.blue, FILL.blue, 10), bx(6, 60, 98, 24, 'astronaut', C.blue, FILL.blue, 10), bx(111, 60, 98, 24, 'soccer player', C.blue, FILL.blue, 10), bx(216, 60, 98, 24, 'cook　コック', C.blue, FILL.blue, 10), bx(6, 88, 98, 24, 'pastry chef', C.blue, FILL.blue, 10), bx(111, 88, 98, 24, 'firefighter', C.blue, FILL.blue, 10), bx(216, 88, 98, 24, 'police officer', C.blue, FILL.blue, 10), lb(160, 128, '職業名の前には a か an', 12, C.ink, 'middle', true), ...cap('よく使う職業名', C.main)),
   },
   {
     note: '❓なぜ理由を加えるのでしょう。→ 職業名だけでは考えが伝わらず、because（〜だから）で理由をつけると説得力が出るからです。I want to be a vet because I love animals.（動物が大好きだから獣医になりたい）。',
@@ -642,6 +646,74 @@ const u26: DiagramFigure = show([
   },
 ], '将来の夢を答える型');
 
+// ───────── new20_e6_eigo_07 将来の夢②：夢について理由をそえてスピーチする ─────────
+const u27: DiagramFigure = show([
+  {
+    note: '1分ほどのスピーチの型です。①夢の発表、②理由（きっかけ）、③今している努力・準備、④将来したいこと、⑤締めの一言（決意）。夢と理由だけでなく、今の行動と決意を加えると深みが出ます。',
+    add: [bx(6, 4, 308, 24, '① 夢の発表', C.blue, FILL.blue, 12), bx(6, 32, 308, 24, '② 理由・きっかけ', C.red, FILL.red, 12), bx(6, 60, 308, 24, '③ 今している努力・準備', C.green, FILL.green, 12), bx(6, 88, 308, 24, '④ 将来したいこと', C.purple, FILL.purple, 12), bx(6, 116, 308, 24, '⑤ 締めの一言（決意）', C.main, FILL.warm, 12), ...cap('スピーチの5つの部分')],
+  },
+  {
+    note: '❓理由は、どう語るとよいのでしょう。→ いつ、何がきっかけでその夢を持ったかを語ります。When I was seven years old, I visited a hospital with my grandmother.（7歳のとき、祖母と病院に行った）。The doctors were very kind, and I decided to be a doctor too.（医師たちがとても優しくて、私も医者になろうと決めた）。',
+    add: fresh(...flow(['age 7\n7歳のとき', 'visited a\nhospital', 'kind\ndoctors', 'decided to\nbe a doctor'], 14, { h: 66, size: 10, color: C.red, fill: FILL.red, gap: 8, pad: 6 }).flat(), lb(160, 104, 'When I was seven years old, ...', 11, C.red, 'middle', true), lb(160, 124, '祖母と病院に行き、優しい医師を見て、夢を決めた', 10, C.ink, 'middle', true), ...band(150, lb(160, 192, 'きっかけを語る', 12, C.red, 'middle', true))),
+  },
+  {
+    note: '❓なぜ「かっこいいから」だけではだめなのでしょう。→ 抽象的な理由より、「いつ・何がきっかけで」という具体的なエピソードのほうが、聞き手の心に残るからです。',
+    add: fresh(bx(10, 14, 140, 60, '✕\nかっこいいから', C.red, FILL.red, 13), bx(170, 14, 140, 60, '○\n7歳のとき病院で\n優しい医師に会った', C.green, FILL.green, 11), lb(160, 104, '具体的なエピソードを語る', 13, C.ink, 'middle', true), ...cap('きっかけを具体的に', C.green)),
+  },
+  {
+    note: '今していることを伝えます。習慣は現在形で、I study English every day.（毎日英語を勉強している）。続けていることは現在進行形で、I am practicing the piano for my dream of becoming a musician.（音楽家になる夢のためにピアノを練習している）。',
+    add: fresh(bx(6, 8, 308, 30, 'I study English every day.', C.blue, FILL.blue, 13), lb(160, 52, '習慣 → 現在形', 12, C.blue, 'middle', true), bx(6, 68, 308, 40, 'I am practicing the piano for my dream\nof becoming a musician.', C.green, FILL.green, 11), lb(160, 122, '続けていること → 現在進行形（be＋ing）', 11, C.green, 'middle', true), ...cap('今の努力を伝える', C.main)),
+  },
+  {
+    note: '将来のことは I hope to ~.（〜したいと願っている）でも言えます。want to より少しやわらかい願いです。I hope to work at a zoo someday.（いつか動物園で働きたいと願っている）。',
+    add: fresh(bx(6, 12, 148, 32, 'I want to ~.', C.blue, FILL.blue, 13), bx(166, 12, 148, 32, 'I hope to ~.', C.green, FILL.green, 13), lb(80, 58, 'ふつうの願い', 12, C.blue, 'middle', true), lb(240, 58, 'ややわらかい願い', 12, C.green, 'middle', true), bx(6, 80, 308, 30, 'I hope to work at a zoo someday.', C.green, FILL.green, 12), lb(160, 126, 'いつか動物園で働きたいと願っている', 11, C.green, 'middle', true), ...band(150, lb(160, 192, '将来の願いの言い方', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '「〜する人になりたい」は I want to be someone who ~. です。I want to be someone who can help people in need.（困っている人を助けられる人になりたい）。who が主語のはたらきをするので、動詞は who のすぐ後ろに続きます。who の後ろに動詞を置くことを忘れないようにしましょう。',
+    add: fresh(bx(6, 14, 120, 32, 'I want to be\nsomeone', C.blue, FILL.blue, 11), bx(132, 14, 50, 32, 'who', C.red, FILL.red, 14), bx(188, 14, 126, 32, 'can help people\nin need.', C.green, FILL.green, 10), lb(157, 64, 'who が主語のはたらき → 動詞がすぐ続く', 11, C.red, 'middle', true), lb(160, 92, '困っている人を助けられる人になりたい', 12, C.ink, 'middle', true), ...cap('someone who ＋ 動詞', C.red)),
+  },
+  {
+    note: '締めの一言には決意を入れます。I will do my best.（全力を尽くします）、I will never give up on my dream.（夢を決してあきらめません）、I believe I can make it.（きっとできると信じています）。今の努力と決意をセットで語ると、本気度が伝わります。',
+    add: fresh(bx(6, 10, 308, 30, 'I will do my best.', C.blue, FILL.blue, 13), lb(160, 54, '全力を尽くします', 11, C.blue, 'middle', true), bx(6, 62, 308, 30, 'I will never give up on my dream.', C.green, FILL.green, 12), lb(160, 106, '夢を決してあきらめません', 11, C.green, 'middle', true), bx(6, 114, 308, 28, 'I believe I can make it.', C.purple, FILL.purple, 12), ...band(150, lb(160, 192, '決意の一言で 結ぶ', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '完成モデルの流れです。My dream is to be a vet.（夢）→ 8歳のとき、犬が病気になり優しい獣医さんが助けてくれた（きっかけ）→ Now, I study science hard and read books about animals every week.（今）→ I hope to work at an animal hospital.（将来）→ I will never give up on my dream. Thank you for listening.（決意とお礼）。',
+    add: fresh(...flow(['dream\nvet', 'age 8\ndog sick', 'kind vet\nhelped'], 8, { h: 50, size: 10, color: C.red, fill: FILL.red, gap: 14, pad: 8 }).flat(), ...flow(['now: study\nscience', 'future:\nanimal hospital', 'never give up\nthank you'], 78, { h: 50, size: 10, color: C.green, fill: FILL.green, gap: 14, pad: 8 }).flat(), ...cap('夢 → きっかけ → 今 → 将来 → 決意', C.main)),
+  },
+], '夢のスピーチ：きっかけと努力と決意');
+
+// ───────── new20_e6_eigo_08 趣味を語る ─────────
+const u28: DiagramFigure = show([
+  {
+    note: '趣味を語る表現は4つあり、あとに ing の形（動名詞〈どうめいし〉＝「〜すること」）が続きます。I like playing ~.（〜するのが好き）、I enjoy reading ~.（〜を楽しんでいる）、I am interested in cooking.（料理に興味がある）、I am good at drawing.（絵を描くのが得意）。',
+    add: [bx(6, 6, 190, 28, 'I like playing video games.', C.blue, FILL.blue, 11), lb(204, 20, '〜するのが好き', 11, C.ink, 'start', true), bx(6, 40, 190, 28, 'I enjoy reading manga.', C.green, FILL.green, 11), lb(204, 54, '〜を楽しんでいる', 11, C.ink, 'start', true), bx(6, 74, 190, 28, 'I am interested in cooking.', C.purple, FILL.purple, 11), lb(204, 88, '〜に興味がある', 11, C.ink, 'start', true), bx(6, 108, 190, 28, 'I am good at drawing.', C.red, FILL.red, 11), lb(204, 122, '〜が得意', 11, C.ink, 'start', true), ...cap('趣味を伝える4つの形')],
+  },
+  {
+    note: '❓like と enjoy は、あとに続く形がどうちがうのでしょう。→ like は ing の形も to＋動詞も使えます（I like playing. / I like to play.）。enjoy は ing の形だけで、to＋動詞は使えません。I enjoy reading manga. が正しく、I enjoy to read. はまちがいです。',
+    add: fresh(bx(6, 8, 148, 28, 'like', C.blue, FILL.blue, 14), bx(166, 8, 148, 28, 'enjoy', C.green, FILL.green, 14), bx(6, 44, 148, 28, 'I like playing.', C.blue, FILL.blue, 11), bx(6, 78, 148, 28, 'I like to play.', C.blue, FILL.blue, 11), lb(80, 122, 'どちらも ○', 12, C.blue, 'middle', true), bx(166, 44, 148, 28, 'I enjoy reading.', C.green, FILL.green, 11), bx(166, 78, 148, 28, '✕  I enjoy to read.', C.red, FILL.red, 11), lb(240, 122, 'ing の形だけ', 12, C.green, 'middle', true), ...cap('enjoy は ing だけ', C.green)),
+  },
+  {
+    note: '❓なぜ interested in や good at のあとは ing なのでしょう。→ in と at は前置詞（ぜんちし）で、前置詞のあとに動詞を置くときは、必ず ing の形（「〜すること」という名詞のはたらき）にするきまりだからです。good at draw や interested in cook はまちがいです。',
+    add: fresh(bx(6, 12, 90, 30, 'interested', C.gray, FILL.gray, 12), bx(100, 12, 46, 30, 'in', C.red, FILL.red, 14), bx(150, 12, 100, 30, 'cooking', C.green, FILL.green, 13), bx(6, 56, 90, 30, 'good', C.gray, FILL.gray, 12), bx(100, 56, 46, 30, 'at', C.red, FILL.red, 14), bx(150, 56, 100, 30, 'drawing', C.green, FILL.green, 13), lb(280, 28, '前置詞', 11, C.red, 'middle', true), lb(160, 108, '前置詞のあとの動詞は ing', 13, C.ink, 'middle', true), lb(160, 130, '✕  good at draw', 12, C.red, 'middle', true), ...band(150, lb(160, 192, '前置詞 ＋ ing の形', 12, C.red, 'middle', true))),
+  },
+  {
+    note: 'どのくらいの頻度（ひんど）かを足すと具体的になります。always（いつも）、usually（たいてい）、often（よく）、sometimes（ときどき）。回数なら once a week（週に1回）、twice a week（週に2回）です。I play basketball twice a week.（週に2回バスケットボールをする）。',
+    add: fresh(...flow(['always\nいつも', 'usually\nたいてい', 'often\nよく', 'sometimes\nときどき'], 8, { h: 50, size: 10, color: C.blue, fill: FILL.blue, gap: 8, pad: 6 }).flat(), bx(6, 72, 148, 28, 'once a week　週に1回', C.green, FILL.green, 10), bx(166, 72, 148, 28, 'twice a week　週に2回', C.green, FILL.green, 10), lb(160, 122, 'I play basketball twice a week.', 12, C.ink, 'middle', true), ...cap('どのくらい するか', C.main)),
+  },
+  {
+    note: '期間（きかん）も足せます。I have played the piano for six years.（6年間ピアノを弾いている）は、今まで続いていることを表します。I started playing soccer when I was five.（5歳のときサッカーを始めた）は、始めた時を表します。',
+    add: fresh(bx(6, 10, 308, 30, 'I have played the piano for six years.', C.blue, FILL.blue, 12), lb(160, 54, '6年間ピアノを弾いている（今も続く）', 11, C.blue, 'middle', true), bx(6, 70, 308, 30, 'I started playing soccer when I was five.', C.green, FILL.green, 11), lb(160, 114, '5歳のときサッカーを始めた', 11, C.green, 'middle', true), ...band(150, lb(160, 192, '続けた期間と、始めた時', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '始めたきっかけも足せます。My father taught me how to ~.（父が〜のやり方を教えてくれた）、I started playing tennis because my sister plays it too.（姉もテニスをするので、テニスを始めた）。頻度・期間・きっかけのうち1〜2個を足すだけで、印象に残る自己紹介になります。',
+    add: fresh(bx(6, 10, 308, 30, 'My father taught me how to ~.', C.purple, FILL.purple, 12), lb(160, 54, '父が〜のやり方を教えてくれた', 11, C.purple, 'middle', true), bx(6, 68, 308, 40, 'I started playing tennis because\nmy sister plays it too.', C.purple, FILL.purple, 11), lb(160, 122, '姉もするので、テニスを始めた', 11, C.purple, 'middle', true), ...band(150, lb(160, 192, 'きっかけを足す', 12, C.purple, 'middle', true))),
+  },
+  {
+    note: '完成した自己紹介です。①趣味：My hobby is playing soccer. ②きっかけ：I started playing soccer when I was six years old. ③頻度：I practice with my team twice a week. ④得意：I enjoy playing with my friends, and I am good at passing the ball. ⑤将来：I want to be a good soccer player like him someday.',
+    add: fresh(bx(6, 4, 308, 24, '① My hobby is playing soccer.', C.blue, FILL.blue, 10), bx(6, 32, 308, 24, '② I started playing soccer when I was six years old.', C.green, FILL.green, 10), bx(6, 60, 308, 24, '③ I practice with my team twice a week.', C.purple, FILL.purple, 10), bx(6, 88, 308, 24, '④ I enjoy playing ... I am good at passing the ball.', C.red, FILL.red, 10), bx(6, 116, 308, 24, '⑤ I want to be a good soccer player someday.', C.main, FILL.warm, 10), ...cap('趣味 → きっかけ → 頻度 → 得意 → 将来', C.main)),
+  },
+], '趣味の自己紹介：ing の形と3つの足し方');
+
 export const XF_CEL_FIGURES: Record<string, DiagramFigure> = {
   'xf_new20_e5_eigo_11': u11,
   'xf_new20_e5_eigo_12': u12,
@@ -659,6 +731,8 @@ export const XF_CEL_FIGURES: Record<string, DiagramFigure> = {
   'xf_new20_e6_eigo_04': u24,
   'xf_new20_e6_eigo_05': u25,
   'xf_new20_e6_eigo_06': u26,
+  'xf_new20_e6_eigo_07': u27,
+  'xf_new20_e6_eigo_08': u28,
 };
 
 export const XF_CEL_SECTIONS: Record<string, string> = {
@@ -678,4 +752,6 @@ export const XF_CEL_SECTIONS: Record<string, string> = {
   'new20_e6_eigo_04#0': 'xf_new20_e6_eigo_04',
   'new20_e6_eigo_05#0': 'xf_new20_e6_eigo_05',
   'new20_e6_eigo_06#0': 'xf_new20_e6_eigo_06',
+  'new20_e6_eigo_07#0': 'xf_new20_e6_eigo_07',
+  'new20_e6_eigo_08#0': 'xf_new20_e6_eigo_08',
 };

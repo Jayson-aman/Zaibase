@@ -99,7 +99,7 @@ FIGS['xf_eigo_s287'] = show([
   F('もう一つ、選択疑問文（せんたくぎもんぶん）を見ます。「夏と冬のどちらが好き？」は and ではなく or を使います。Which do you like better, summer or winter? and だと「両方」になってしまうからです。',
     '選ぶときは or', [...ex(28, 'Which do you like better, summer or winter?', 'どちらが好きですか', 'g', { size: 11 }), bx(40, 96, 90, 30, '夏 summer', C.green, FILL.green, 12), lb(160, 111, 'or', 14, C.green, 'middle', true), bx(190, 96, 90, 30, '冬 winter', C.green, FILL.green, 12)], 'どちらか選ぶなら or', C.green),
   F('❓どう答えればよいでしょうか。→ Yes や No では答えられません。どちらかを選んで答えます。I like summer better. 選択肢（せんたくし）の中から一つ、と考えれば自然です。',
-    '答え方', [...ex(28, 'Which do you like better, summer or winter?', '', 'g', { size: 11 }), lb(160, 76, '× Yes, I do.', 14, C.red, 'middle', true), ...row(96, [['I like summer better.', 'g']], { h: 28 }), gl(160, 140, 'どちらかを選んで答える')], 'Yes / No ではなく、一つ選ぶ', C.green),
+    '答え方', [...row(28, [['Which do you like better, summer or winter?', 'g']], { h: 26, size: 11 }), lb(160, 76, '× Yes, I do.', 14, C.red, 'middle', true), ...row(96, [['I like summer better.', 'g']], { h: 28 }), gl(160, 140, 'どちらかを選んで答える')], 'Yes / No ではなく、一つ選ぶ', C.green),
   F('最後に not A but B。He is not a teacher but a doctor. は「先生ではなく医者」。言いたいのは but のあと、つまり B です。まとめ：A and B は複数、自分は最後、選ぶなら or です。',
     'not A but B ／ まとめ', [...ex(28, 'He is not a teacher but a doctor.', '先生ではなく医者', 'b', { size: 11 }), bx(40, 88, 100, 28, 'not 先生 ×', C.red, FILL.red, 12), bx(180, 88, 100, 28, 'but 医者 ○', C.green, FILL.green, 12), gl(160, 134, 'but のあとが本当に言いたいこと')], 'A and B は複数／自分は最後／選ぶなら or', C.main),
 ], 'and の主語は複数、自分は最後');
@@ -141,7 +141,7 @@ FIGS['xf_eigo_s290'] = show([
   F('because と so も同じです。Because it rained, so ... は誤り。❓なぜでしょう。→ because も so も、文と文をつなぐ橋だからです。どちらか一方だけにします。',
     'because と so も同じ', [...row(30, [['Because it rained, so we stayed home.', 'r']], { h: 28, size: 11 }), lb(160, 72, '×', 14, C.red, 'middle', true), ...row(88, [['Because it rained, we stayed home.', 'g']], { h: 26, size: 11 }), ...row(120, [['It rained, so we stayed home.', 'g']], { h: 26, size: 11 })], 'because と so も一つだけ', C.green),
   F('❓名詞がくるときは？→ in spite of を使います。In spite of the rain, we went out.（雨にもかかわらず出かけた）。though のあとは「主語＋動詞」、in spite of のあとは名詞、と形で選びます。',
-    'though と in spite of', [bx(10, 30, 140, 40, 'Though it rained,\n（文）', C.blue, FILL.blue, 12), bx(170, 30, 140, 40, 'In spite of the rain,\n（名詞）', C.purple, FILL.purple, 12), gl(160, 94, '後ろの形で選ぶ'), ...ex(112, 'In spite of the rain, we went out.', '', 'p', { size: 11 })], 'though ＋ 文 ／ in spite of ＋ 名詞', C.purple),
+    'though と in spite of', [bx(10, 30, 140, 40, 'Though it rained,\n（文）', C.blue, FILL.blue, 12), bx(170, 30, 140, 40, 'In spite of the rain,\n（名詞）', C.purple, FILL.purple, 12), gl(160, 94, '後ろの形で選ぶ'), ...row(112, [['In spite of the rain, we went out.', 'p']], { h: 26, size: 11 })], 'though ＋ 文 ／ in spite of ＋ 名詞', C.purple),
   F('まとめです。Though he was tired, he kept working. は、He was tired, but he kept working. に書きかえられます。though か but、because か so。つなぎの語は文に一つだけ。',
     'まとめ', [...row(28, [['Though he was tired, he kept working.', 'b']], { h: 28, size: 11 }), lb(160, 72, '＝', 16, C.ink, 'middle', true), ...row(88, [['He was tired, but he kept working.', 'b']], { h: 28, size: 11 }), gl(160, 134, '「疲れていたけれども、働き続けた」')], 'つなぎの語は一つだけ', C.main),
 ], 'though と接続詞を重ねない');
@@ -160,8 +160,8 @@ FIGS['xf_eigo_s291'] = show([
     '日本語と英語のちがい', [bx(14, 34, 138, 56, '日本語\n「忙しいと言った」\n後ろはそのまま', C.gray, FILL.gray, 12), bx(168, 34, 138, 56, '英語\nsaid ... was\n後ろも過去にそろえる', C.green, FILL.green, 12), gl(160, 120, '日本語の感覚のまま書くと、まちがえる')], '英語だけの決まり', C.green),
   F('ただし、変わらない事実は現在形のままです。He said that the earth goes around the sun.（地球は太陽のまわりを回る）。❓なぜでしょう。→ 今もずっと本当のことだからです。',
     '変えない場合', [...ex(30, 'He said that the earth goes around the sun.', '地球は太陽のまわりを回る', 'b', { size: 11 }), ci(100, 112, 16, '太陽', C.main, FILL.yellow, 9), ci(210, 112, 14, '地球', C.blue, FILL.blue, 9), gl(160, 140, 'いつでも本当 → 現在形のまま')], '変わらない事実は現在形', C.blue),
-  F('見直しのコツです。said や thought が見えたら、that の中の動詞を必ず見直します。said なのに that の中が is のままになる誤りが、とても多いからです。',
-    '見直しの習慣', [...row(30, [['He said that he is busy.', 'r']], { h: 28 }), lb(160, 74, '× said なのに is のまま', 12, C.red, 'middle', true), ...row(92, [['He said that he was busy.', 'g']], { h: 28 }), lb(160, 136, '○ was に直す', 12, C.green, 'middle', true)], 'said を見たら、that の中を見直す', C.red),
+  F('確かめるコツです。said や thought が見えたら、that の中の動詞を必ず確かめます。said なのに that の中が is のままになる誤りが、とても多いからです。',
+    '確かめる習慣', [...row(30, [['He said that he is busy.', 'r']], { h: 28 }), lb(160, 74, '× said なのに is のまま', 12, C.red, 'middle', true), ...row(92, [['He said that he was busy.', 'g']], { h: 28 }), lb(160, 136, '○ was に直す', 12, C.green, 'middle', true)], 'said を見たら、that の中を確かめる', C.red),
   F('まとめです。①that は「〜ということ」をまとめる語。②主役の動詞が過去なら、that の中も過去。③変わらない事実だけは現在形のまま。',
     'まとめ', [bx(14, 24, 292, 28, '① that ＝ 〜ということ', C.blue, FILL.blue, 12), bx(14, 60, 292, 28, '② said のあとは過去にそろえる', C.green, FILL.green, 12), bx(14, 96, 292, 28, '③ 変わらない事実は現在形', C.purple, FILL.purple, 12)], '時制の一致', C.main),
 ], '時制の一致');
@@ -299,7 +299,7 @@ FIGS['xf_eigo_s303'] = show([
   F('組み立てます。「a friend」が前に出て、「play with」が後ろに残ります。a friend ← to play with。with は消えずに、文末に取り残されるのです。',
     '前に出して、前置詞が残る', [bx(10, 34, 86, 30, 'a friend', C.blue, FILL.blue, 13), bx(110, 34, 50, 30, 'to', C.gray, FILL.gray, 13), bx(172, 34, 60, 30, 'play', C.green, FILL.green, 13), bx(244, 34, 60, 30, 'with', C.red, FILL.red, 13), ar(54, 68, 244, 68, C.blue, true), gl(160, 94, 'もとは「play with a friend」の a friend が前へ'), gl(160, 120, 'with だけが後ろに残る')], '名詞だけ前へ、前置詞は残る', C.main),
   F('ほかの例です。a house to live in（住む家）← live in a house。a pen to write with（書くためのペン）← write with a pen。a chair to sit on（すわるいす）← sit on a chair。',
-    'ほかの例', [...row(22, [['a house to live in', 'g']], { h: 24 }), gl(160, 54, '← live in a house'), ...row(64, [['a pen to write with', 'g']], { h: 24 }), gl(160, 96, '← write with a pen'), ...row(106, [['a chair to sit on', 'g']], { h: 24 }), gl(160, 138, '← sit on a chair')], '前置詞を落とさない', C.green),
+    'ほかの例', [...row(26, [['a house to live in', 'g']], { h: 22 }), gl(160, 58, '← live in a house'), ...row(68, [['a pen to write with', 'g']], { h: 22 }), gl(160, 100, '← write with a pen'), ...row(110, [['a chair to sit on', 'g']], { h: 22 }), gl(160, 142, '← sit on a chair')], '前置詞を落とさない', C.green),
   F('前置詞がいらないときもあります。some books to read は、read some books（本を読む）で前置詞がいりません。a lot of work to do も、do a lot of work です。❓見分け方は？→ もとの文に前置詞があるかどうかです。',
     '前置詞がいらない場合', [...row(30, [['some books to read', 'b']], { h: 26 }), gl(160, 68, '← read some books（前置詞なし）'), ...row(88, [['a lot of work to do', 'b']], { h: 26 }), gl(160, 126, '← do a lot of work（前置詞なし）')], '読む・する・食べるは前置詞なし', C.blue),
   F('write に with と on の二つがあります。something to write with は「書く道具」（ペン）。something to write on は「書く面」（紙・ノート）。道具には with、面には on を使います。',
@@ -339,7 +339,7 @@ FIGS['xf_eigo_s306'] = show([
   F('目的の不定詞とくらべます。He studied hard to be a doctor.（医者になるために一生けんめい勉強した）。勉強は、医者になる目的でするものです。だから「〜するために」と訳せます。',
     '目的の不定詞とくらべる', [...row(26, [['He studied hard to be a doctor.', 'b']], { h: 26, size: 11 }), gl(160, 64, '勉強する → 医者になる（目的）'), ...row(84, [['He grew up to be a doctor.', 'g']], { h: 26 }), gl(160, 122, '成長した → 医者になった（結果）')], '「〜するために」で通じれば目的', C.main),
   F('覚える決まった言い方です。grow up to be 〜（成長して〜になる）、live to be 〜（〜歳まで生きる）、only to 〜（〜しただけだった）、never to 〜（二度と〜しなかった）。',
-    '決まった言い方', [...row(18, [['grow up to be 〜', 'g']], { h: 22 }), gl(160, 50, '成長して〜になる'), ...row(62, [['live to be 〜', 'g']], { h: 22 }), gl(160, 94, '〜歳まで生きる'), ...row(106, [['only to 〜 ／ never to 〜', 'g']], { h: 22 }), gl(160, 138, '〜しただけ／二度と〜しなかった')], '丸ごと覚える', C.green),
+    '決まった言い方', [...row(26, [['grow up to be 〜', 'g']], { h: 22 }), gl(160, 57, '成長して〜になる'), ...row(66, [['live to be 〜', 'g']], { h: 22 }), gl(160, 97, '〜歳まで生きる'), ...row(106, [['only to 〜 ／ never to 〜', 'g']], { h: 22 }), gl(160, 137, '〜しただけ／二度と〜しなかった')], '丸ごと覚える', C.green),
   F('live to be ninety の例です。My grandfather lived to be ninety.（祖父は九十歳まで生きた）。長く生きて、その結果九十歳になった。生きるのは九十歳になるためではありません。',
     'live to be ～', [...ex(26, 'My grandfather lived to be ninety.', '祖父は九十歳まで生きた', 'g'), ln(30, 106, 290, 106, C.gray, false, 2), ci(40, 106, 5, undefined, C.gray, FILL.gray), lb(40, 124, '生まれた', 10, C.gray, 'middle'), ci(280, 106, 5, undefined, C.green, FILL.green), lb(280, 124, '90歳', 10, C.green, 'middle'), ar(48, 96, 270, 96, C.green)], '生きた結果 90歳になった', C.green),
   F('only to の例です。She went to the station only to find the train had left.（駅へ行ったが、電車はもう出たあとだった）。行った、しかし結局（けっきょく）がっかりする結果になった、という意味です。',
@@ -427,7 +427,7 @@ FIGS['xf_eigo_s315'] = show([
   F('チェック②：目的語の it を補います。This tea is too hot to drink. ＝ This tea is so hot that I can\'t drink it. to drink には目的語がいりませんが、that の文では drink it と書かなければなりません。',
     '目的語の it を補う', [...row(26, [['This tea is too hot to drink.', 'b']], { h: 26 }), lb(160, 66, '＝', 16, C.ink, 'middle', true), ...row(80, [["This tea is so hot that I can't drink it.", 'b']], { h: 26, size: 10.5 }), gl(160, 122, 'drink のあとの it を書き忘れない', C.red)], 'drink のあとに it', C.blue),
   F('チェック③：for 人 は主語になります。The book is too difficult for me to read. ＝ The book is so difficult that I can\'t read it. for me が I になります。まとめ：時制・it・for 人 の三つを必ず確かめます。',
-    'for 人 ＋ to ～ の書きかえ', [...row(14, [['The book is too difficult\nfor me to read.', 'g']], { h: 38 }), lb(160, 64, '＝', 16, C.ink, 'middle', true), ...row(74, [["The book is so difficult\nthat I can't read it.", 'g']], { h: 38 }), bx(30, 120, 80, 24, '時制', C.red, FILL.red, 12), bx(120, 120, 80, 24, 'it', C.red, FILL.red, 12), bx(210, 120, 80, 24, 'for 人', C.red, FILL.red, 12)], '時制・it・for 人 を確かめる', C.red),
+    'for 人 ＋ to ～ の書きかえ', [...row(26, [['The book is too difficult\nfor me to read.', 'g']], { h: 36 }), lb(160, 72, '＝', 16, C.ink, 'middle', true), ...row(82, [["The book is so difficult\nthat I can't read it.", 'g']], { h: 36 }), bx(30, 124, 80, 22, '時制', C.red, FILL.red, 12), bx(120, 124, 80, 22, 'it', C.red, FILL.red, 12), bx(210, 124, 80, 22, 'for 人', C.red, FILL.red, 12)], '時制・it・for 人 を確かめる', C.red),
 ], '不定詞の書きかえパターン');
 
 // ───────── eigo_s317 主語・補語になる動名詞 ─────────
@@ -507,7 +507,7 @@ FIGS['xf_eigo_s321'] = show([
   F('Would you mind ～ing? を見ます。「窓を開けていただけませんか」というていねいな依頼（いらい）です。mind は「いやだと思う」の意味なので、直訳は「窓を開けることをいやだと思いますか」です。',
     'Would you mind ～ing?', [...ex(26, 'Would you mind opening the window?', '窓を開けていただけませんか', 'p', { size: 11 }), bx(30, 90, 260, 36, '直訳：窓を開けることを いやだと思いますか？', C.purple, FILL.purple, 11)], 'mind ＝ いやだと思う', C.purple),
   F('❓答え方はどうするのでしょう。→ 引き受けるなら No, not at all.（いいえ、まったくかまいません）。「いやだと思いますか」に「いいえ」と答えるからです。断るなら I\'m sorry, but ... と理由を言います。まとめ：mind も ing 専用です。',
-    'Would you mind ～? の答え', [...row(26, [['Would you mind opening the window?', 'p']], { h: 26, size: 10.5 }), ...row(66, [['No, not at all.', 'g']], { h: 26 }), gl(160, 104, 'いいえ（いやではない）＝ いいですよ'), ...row(116, [["I'm sorry, but I have a cold.", 'r']], { h: 24, size: 10.5 }), gl(160, 148 - 2, '')], 'No ＝ いいですよ', C.green),
+    'Would you mind ～? の答え', [...row(26, [['Would you mind opening the window?', 'p']], { h: 26, size: 10.5 }), ...row(66, [['No, not at all.', 'g']], { h: 26 }), gl(160, 104, 'いいえ（いやではない）＝ いいですよ'), ...row(116, [["I'm sorry, but I have a cold.", 'r']], { h: 24, size: 10.5 })], 'No ＝ いいですよ', C.green),
 ], '動名詞だけをとる動詞');
 
 // ───────── eigo_s322 不定詞だけをとる動詞 ─────────
@@ -539,7 +539,7 @@ FIGS['xf_eigo_s325'] = show([
   F('例です。The boy running in the park is my brother.（公園で走っている少年はわたしの弟だ）。日本語にするときは、後ろから前へ「訳し上げ」ます。「少年 ← 公園で走っている」を逆にして読みます。',
     '訳し上げる', [...row(26, [['The boy', 'b'], ['running in the park', 'g'], ['is my brother.', 'n']], { h: 28, size: 11 }), gl(160, 78, '先に「公園で走っている」と言い、そのあと「少年」'), gl(160, 102, '後ろの説明を、前の名詞にかぶせる'), gl(160, 126, '＝ 公園で走っている少年は わたしの弟だ')], '後ろから前へ訳し上げる', C.green),
   F('ほかの例です。Do you know the girl playing the piano?（ピアノをひいている女の子を知っていますか）。The man standing by the door is our teacher.（ドアのそばに立っている男の人は先生だ）。',
-    'ほかの例', [...row(18, [['the girl playing the piano', 'g']], { h: 22 }), gl(160, 50, 'ピアノをひいている女の子'), ...row(62, [['the man standing by the door', 'g']], { h: 22 }), gl(160, 94, 'ドアのそばに立っている男の人'), ...row(106, [['the cat sleeping on the sofa', 'g']], { h: 22 }), gl(160, 138, 'ソファの上で眠っているねこ')], '名詞 ＋ ～ing ＋ 語句', C.green),
+    'ほかの例', [...row(26, [['the girl playing the piano', 'g']], { h: 22 }), gl(160, 58, 'ピアノをひいている女の子'), ...row(68, [['the man standing by the door', 'g']], { h: 22 }), gl(160, 100, 'ドアのそばに立っている男の人'), ...row(110, [['the cat sleeping on the sofa', 'g']], { h: 22 }), gl(160, 142, 'ソファの上で眠っているねこ')], '名詞 ＋ ～ing ＋ 語句', C.green),
   F('主語が長いと、動詞が遠くなります。The students studying in the library are my classmates. 主語は studying in the library までのかたまり全体で、動詞は are です。',
     '文の動詞を見つける', [...row(24, [['The students studying in the library', 'b'], ['are', 'g']], { h: 28, size: 11 }), ln(14, 62, 252, 62, C.blue, false, 3), gl(133, 80, '主語（全体）'), gl(160, 112, '動詞は are（studying ではない）')], 'まず文の動詞をさがす', C.blue),
   F('❓なぜ studying は文の動詞ではないのでしょう。→ be動詞（is・are）がないからです。名詞の直後の ～ing に be動詞が付いていないときは、それは動詞ではなく、名詞の説明のかたまりです。',
@@ -623,11 +623,11 @@ FIGS['xf_eigo_s332'] = show([
   F('everything・something・anything のあとも that です。Tell me everything that you know.（あなたが知っていることをすべて教えて）。まとめると、that が好まれるのは、最上級・序数・only・all・every・everything と、人＋ものの場合です。',
     'everything のあとも that', [...ex(26, 'Tell me everything that you know.', 'あなたが知っていることをすべて教えて', 'p', { size: 11 }), ...row(92, [['everything', 'p'], ['something', 'p'], ['anything', 'p']], { h: 26, size: 11 }), gl(160, 134, 'のあとは that')], '-thing のあとは that', C.purple),
   F('次は、いろいろな that の区別です。that には三つあります。①指示語（あれ・あの）：That is my house. ②接続詞（〜ということ）：I think that he is right. ③関係代名詞：This is the book that I bought yesterday.',
-    '三つの that', [...row(24, [['① That is my house.', 'n']], { h: 24, size: 11 }), gl(160, 56, 'あれ・あの（指示語）'), ...row(68, [['② I think that he is right.', 'b']], { h: 24, size: 11 }), gl(160, 100, '〜ということ（接続詞）'), ...row(112, [['③ the book that I bought', 'g']], { h: 24, size: 11 }), gl(160, 144, '前の名詞を説明（関係代名詞）')], 'that は三種類', C.main),
+    '三つの that', [...row(26, [['① That is my house.', 'n']], { h: 22, size: 11 }), gl(160, 57, 'あれ・あの（指示語）'), ...row(66, [['② I think that he is right.', 'b']], { h: 22, size: 11 }), gl(160, 97, '〜ということ（接続詞）'), ...row(106, [['③ the book that I bought', 'g']], { h: 22, size: 11 }), gl(160, 137, '前の名詞を説明（関係代名詞）')], 'that は三種類', C.main),
   F('❓どう見分けるのでしょう。→ that のあとの文を見ます。主語も目的語もそろった完全な文なら接続詞。主語か目的語が欠けた不完全な文なら関係代名詞。I know a boy that is kind. は、that のあとに主語がありません。',
     'あとの文が完全か不完全か', [...row(26, [['I know that he is kind.', 'b']], { h: 26 }), gl(160, 64, '主語 he も あり → 完全 → 接続詞'), ...row(84, [['I know a boy that is kind.', 'g']], { h: 26 }), gl(160, 122, '主語がない → 不完全 → 関係代名詞')], '完全な文なら接続詞', C.main),
   F('省略についてです。接続詞の that は省略できます（I think he is right.）。目的格の関係代名詞も省略できます。でも、主格の関係代名詞の that は省略できません。まとめ：最上級や only は that、あとの文で that の種類を見分ける。',
-    '省略できるもの', [...row(20, [['I think (that) he is right.', 'b']], { h: 22 }), gl(160, 52, '接続詞 → 省略できる'), ...row(62, [['the book (that) I bought', 'g']], { h: 22 }), gl(160, 94, '目的格 → 省略できる'), ...row(104, [['a boy that is kind', 'r']], { h: 22 }), gl(160, 136, '主格 → 省略できない')], '省略できるのは接続詞と目的格', C.main),
+    '省略できるもの', [...row(26, [['I think (that) he is right.', 'b']], { h: 22 }), gl(160, 57, '接続詞 → 省略できる'), ...row(66, [['the book (that) I bought', 'g']], { h: 22 }), gl(160, 97, '目的格 → 省略できる'), ...row(106, [['a boy that is kind', 'r']], { h: 22 }), gl(160, 137, '主格 → 省略できない')], '省略できるのは接続詞と目的格', C.main),
 ], 'that を使う場合・使えない場合');
 
 // ───────── eigo_s334 長文で見ぬく ─────────

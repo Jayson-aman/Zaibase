@@ -1,7 +1,7 @@
 // 中学受験 英語（小4〜小5）の単元に、動く図解スライドを足す。
 // 「❓なぜ？→答え」の連鎖で7枚以上。英文・英単語は図に入れてよい（英語の単元のため）。
 import type { DiagramElement, DiagramFigure } from './figures';
-import { show, bx, lb, ar, ln, ci, pg, fresh, band, C, FILL } from './diagram-kit';
+import { show, bx, lb, ar, ln, ci, pg, fresh, band, flow, C, FILL } from './diagram-kit';
 
 type O = { w?: number; gap?: number; x0?: number; h?: number; color?: string; fill?: string; size?: number };
 /** 横一列の箱（矢印なし）。 */
@@ -774,6 +774,373 @@ const u20: DiagramFigure = show([
     add: fresh(B(10, 14, 300, '① I can ＋ 動詞の原形', C.blue, FILL.blue, 30), B(10, 52, 300, `② できないときは can't`, C.red, FILL.red, 30), B(10, 90, 300, '③ Can you 〜? — Yes, I can.', C.green, FILL.green, 30), B(10, 128, 300, '④ s も ing もつけない', C.purple, FILL.purple, 30), K('できること')),
   },
 ], 'できることを伝える');
+
+// ───────── 体調を伝える表現：I have a headache. ─────────
+const v01: DiagramFigure = show([
+  {
+    note: `❓「頭が痛い」を英語（えいご）にするとき、日本語（にほんご）と何（なに）がちがうの？→ 日本語は「頭」が主語（しゅご）ですが、英語は I（私）が主語で、have（持（も）っている）を使って症状（しょうじょう）を「持っている」と言います。I have a headache. です。`,
+    add: fresh(T('発想のちがい'), B(10, 34, 140, '日本語', C.gray, FILL.gray, 26, 13), B(170, 34, 140, '英語', C.gray, FILL.gray, 26, 13), B(10, 72, 140, '頭が 痛い', C.red, FILL.red, 40, 15), B(170, 72, 140, 'I have a headache.', C.green, FILL.green, 40, 12), lb(80, 130, '主語は「頭」', 12, C.red, 'middle', true), lb(240, 130, '主語は I、症状を持つ', 12, C.green, 'middle', true), K('症状は have で「持つ」')),
+  },
+  {
+    note: `❓headache はどんな語（ご）？→ head（頭）＋ ache（エイク：痛（いた）み）がくっついて1語になっています。つづりを覚えるときは head ＋ ache と分けて考えると混同（こんどう）しません。`,
+    add: fresh(T('体の部分 ＋ ache'), B(10, 36, 90, 'head', C.blue, FILL.blue), lb(110, 49, '＋', 16, C.ink, 'middle', true), B(120, 36, 70, 'ache', C.red, FILL.red), lb(200, 49, '＝', 16, C.ink, 'middle', true), B(212, 36, 98, 'headache', C.green, FILL.green), B(10, 84, 90, 'stomach', C.blue, FILL.blue), lb(110, 97, '＋', 16, C.ink, 'middle', true), B(120, 84, 70, 'ache', C.red, FILL.red), lb(200, 97, '＝', 16, C.ink, 'middle', true), B(212, 84, 98, 'stomachache', C.green, FILL.green, 26, 11), K('ache ＝ ジーンとする痛み')),
+  },
+  {
+    note: `痛（いた）みの言い方（いいかた）です。headache（頭痛（ずつう））・stomachache（おなかが痛い）・toothache（歯が痛い）・backache（背中やこしが痛い）。どれも I have a 〜. の形で使います。`,
+    add: fresh(T('痛みの語'), ...tab([['I have a headache.', '頭が痛い'], ['I have a stomachache.', 'おなかが痛い'], ['I have a toothache.', '歯が痛い'], ['I have a backache.', '背中・こしが痛い']], 34, [170, 130], { h: 32, head: false, color: C.red, fill: FILL.red, size: 11 }), K('どれも -ache')),
+  },
+  {
+    note: `痛（いた）み以外（いがい）の症状（しょうじょう）です。I have a fever.（熱があります）、I have a cold.（かぜをひいています）、I have a cough.（せきが出ます）、I have a runny nose.（鼻水が出ます）。cough は gh を f の音（おと）で読（よ）みます。`,
+    add: fresh(T('痛み以外の症状'), ...tab([['I have a fever.', '熱があります'], ['I have a cold.', 'かぜをひいています'], ['I have a cough.', 'せきが出ます（gh は f の音）'], ['I have a runny nose.', '鼻水が出ます']], 34, [150, 150], { h: 32, head: false, color: C.blue, fill: FILL.blue, size: 11 }), K('症状の名前を have で持つ')),
+  },
+  {
+    note: `❓a は付（つ）けなくていいの？→ 付けます。have a fever も have a cold も a が必要です。「かぜ」を a なしで have cold とは言いません。`,
+    add: fresh(T('a を忘れない'), B(20, 40, 280, 'I have cold.', C.red, FILL.red, 36, 16), lb(160, 96, '×  a がない', 14, C.red, 'middle', true), B(20, 116, 280, 'I have a cold.', C.green, FILL.green, 36, 16), lb(160, 172, '○', 16, C.green, 'middle', true), K('have a ＋ 症状')),
+  },
+  {
+    note: `❓headache を header と書（か）いてもいい？→ いけません。-er を付けるのではなく、-ache（痛み）が正しい形です。head と ache を分けて考えれば、まちがえません。`,
+    add: fresh(T('-ache であって -er ではない'), B(20, 40, 130, 'header', C.red, FILL.red, 40, 18), lb(85, 96, '×', 18, C.red, 'middle', true), B(170, 40, 130, 'headache', C.green, FILL.green, 40, 18), lb(235, 96, '○', 18, C.green, 'middle', true), lb(160, 140, 'head ＋ ache', 14, C.ink, 'middle', true), K('つづりは head ＋ ache')),
+  },
+  {
+    note: `❓日本語（にほんご）につられて My head is hurt. と言ってはだめ？→ だめです。「頭が痛い」を head を主語にして is hurt とすると、「頭がけがをさせられた」という不自然（ふしぜん）な文になります。まずは I have a headache. の型で言います。`,
+    add: fresh(T('まず この型で'), B(10, 38, 300, 'My head is hurt.', C.red, FILL.red, 36, 16), lb(160, 94, '×  不自然な文', 14, C.red, 'middle', true), B(10, 114, 300, 'I have a headache.', C.green, FILL.green, 36, 16), lb(160, 170, '○', 16, C.green, 'middle', true), K('I を主語にして have')),
+  },
+  {
+    note: `症状（しょうじょう）の名前がはっきりしないときは feel（感（かん）じる）を使います。feel のあとに形容詞（けいようし）をそのまま置（お）きます。I feel sick.（気分が悪い）、I don't feel well.（体調がよくない）、I feel tired.（疲（つか）れた）、I feel dizzy.（めまいがする）。`,
+    add: fresh(T('feel ＋ 形容詞'), ...tab([['I feel sick.', '気分が悪い'], [`I don't feel well.`, '体調がよくない'], ['I feel tired.', '疲れた'], ['I feel dizzy.', 'めまいがする']], 34, [150, 150], { h: 32, head: false, color: C.purple, fill: FILL.purple, size: 11 }), K('sickly は別の意味（病弱）')),
+  },
+  {
+    note: `会話（かいわ）の流（なが）れです。What's wrong?（どうしたの？）→ I have a stomachache. → That's too bad. You should go home and rest.（それは大変。帰って休んだほうがいいよ）→ Take care.（お大事に）。症状を聞く→答える→助言する、の順です。`,
+    add: fresh(T('会話の流れ'), B(10, 32, 190, `What's wrong?`, C.blue, FILL.blue, 26, 13), B(110, 62, 200, 'I have a stomachache.', C.red, FILL.red, 26, 12), B(10, 92, 300, `That's too bad. You should go home and rest.`, C.green, FILL.green, 26, 9), B(110, 124, 200, 'Take care.', C.purple, FILL.purple, 26, 13), K('聞く → 答える → 助言する')),
+  },
+], '体調を伝える');
+
+// ───────── 誕生日と年齢をたずねる・答える表現（日付の読み方） ─────────
+const v02: DiagramFigure = show([
+  {
+    note: `❓誕生日（たんじょうび）をたずねるには？→ When is your birthday?（誕生日はいつですか）。where（どこ）とまちがえないように。答えは My birthday is May 5th.（5月5日です）のように、月→日の順で言（い）います。`,
+    add: fresh(T('誕生日をたずねる'), B(10, 34, 250, 'When is your birthday?', C.blue, FILL.blue, 32, 14), B(60, 82, 250, 'My birthday is May 5th.', C.green, FILL.green, 32, 14), lb(160, 144, 'when ＝ いつ　　where ＝ どこ', 13, C.ink, 'middle', true), K('月 → 日の順')),
+  },
+  {
+    note: `❓日付（ひづけ）はなぜ 5th のような形（かたち）なの？→「5日」ではなく「5番目（ばんめ）の日」と順番（じゅんばん）で読（よ）むからです。この形を序数（じょすう）といいます。`,
+    add: fresh(T('日付は 順番で読む'), ...[1, 2, 3, 4, 5].map((i) => ci(60 + (i - 1) * 50, 70, 15, String(i), i === 5 ? C.red : C.gray, i === 5 ? FILL.red : FILL.gray, 12)), lb(298, 70, '…', 18, C.gray, 'middle', true), lb(210, 112, '5番目の日 ＝ fifth', 14, C.red, 'middle', true), lb(160, 150, 'May 5th ＝ May fifth', 15, C.green, 'middle', true), K('日付 ＝ 何番目の日')),
+  },
+  {
+    note: `序数（じょすう）の形（かたち）、まず1・2・3は特別（とくべつ）です。1st＝first（ファースト）、2nd＝second（セカンド）、3rd＝third（サード）。`,
+    add: fresh(T('1・2・3 は特別'), ...tab([['1st', 'first'], ['2nd', 'second'], ['3rd', 'third']], 40, [120, 150], { h: 36, head: false, color: C.red, fill: FILL.red, size: 15 }), K('この3つは丸ごと覚える')),
+  },
+  {
+    note: `❓4日からは？→ ふつう th を付けます。4th＝fourth、5th＝fifth、6th＝sixth のように、数の言葉に th が付く形です。`,
+    add: fresh(T('4日〜 は th'), ...tab([['4th', 'fourth'], ['5th', 'fifth'], ['6th', 'sixth']], 40, [120, 150], { h: 36, head: false, color: C.blue, fill: FILL.blue, size: 15 }), K('数 ＋ th')),
+  },
+  {
+    note: `❓でも、つづりが変（か）わる語はないの？→ あります。5th は fifth（ve ではなく f になる）、9th は ninth（e を一つ落（お）とす）、12th は twelfth（ve が f になる）。そのまま th を付けない語に注意（ちゅうい）します。`,
+    add: fresh(T('つづりが変わる序数', C.red), B(10, 36, 70, 'five', C.blue, FILL.blue), ar(84, 49, 110, 49, C.red), B(114, 36, 90, 'fifth', C.green, FILL.green), lb(214, 49, '5th', 14, C.red, 'start', true), B(10, 80, 70, 'nine', C.blue, FILL.blue), ar(84, 93, 110, 93, C.red), B(114, 80, 90, 'ninth', C.green, FILL.green), lb(214, 93, '9th（e を落とす）', 11, C.red, 'start', true), B(10, 124, 70, 'twelve', C.blue, FILL.blue), ar(84, 137, 110, 137, C.red), B(114, 124, 90, 'twelfth', C.green, FILL.green), lb(214, 137, '12th', 14, C.red, 'start', true), K('five・nine・twelve は変わる')),
+  },
+  {
+    note: `❓21日以降（いこう）は？→ 一の位（くらい）が1・2・3のときは、また first・second・third の形にもどります。21st＝twenty-first、22nd＝twenty-second、23rd＝twenty-third。`,
+    add: fresh(T('一の位が 1・2・3'), ...tab([['21st', 'twenty-first'], ['22nd', 'twenty-second'], ['23rd', 'twenty-third']], 40, [100, 190], { h: 36, head: false, color: C.purple, fill: FILL.purple, size: 14 }), K('first・second・third にもどる')),
+  },
+  {
+    note: `月と日の順番（じゅんばん）は「月→日」です。日本語の「5月5日」と同（おな）じ感覚（かんかく）で、May 5th。特定（とくてい）の日なので、My birthday is on May 5th. と on を付けることもできます。`,
+    add: fresh(T('月 → 日'), B(20, 40, 110, 'May', C.blue, FILL.blue, 40, 18), B(140, 40, 90, '5th', C.red, FILL.red, 40, 18), lb(264, 60, '月 → 日', 13, C.ink, 'middle', true), B(10, 104, 300, 'My birthday is on May 5th.', C.green, FILL.green, 32, 14), K('特定の日には on')),
+  },
+  {
+    note: `まとめです。①誕生日は When is your birthday?。②日付は「何番目の日」なので序数。③1st〜3rd は first・second・third、4th からは th。④fifth・ninth・twelfth はつづりが変わる。`,
+    add: fresh(B(10, 14, 300, '① When is your birthday?', C.blue, FILL.blue, 30), B(10, 52, 300, '② 日付は序数（何番目の日）', C.green, FILL.green, 30), B(10, 90, 300, '③ first・second・third、4th から th', C.red, FILL.red, 30), B(10, 128, 300, '④ fifth・ninth・twelfth に注意', C.purple, FILL.purple, 30), K('日付の読み方')),
+  },
+], '日付の読み方');
+
+// ───────── 得意・不得意を伝える：good at / poor at ─────────
+const v03: DiagramFigure = show([
+  {
+    note: `得意（とくい）なことは be good at 〜 で言（い）います。at は「〜の点（てん）において」という意味（いみ）の前置詞（ぜんちし）で、good at は「〜の点で上手（じょうず）だ」というイメージです。I'm good at math.（算数が得意です）。`,
+    add: fresh(T('be good at ＋ 名詞'), B(10, 38, 60, `I'm`, C.gray, FILL.gray, 34, 15), B(76, 38, 110, 'good at', C.red, FILL.red, 34, 15), B(192, 38, 118, 'math.', C.blue, FILL.blue, 34, 15), B(10, 90, 300, 'She is good at soccer.', C.blue, FILL.blue, 30, 14), B(10, 128, 300, 'He is good at English.', C.blue, FILL.blue, 30, 14), K('教科・スポーツはそのまま')),
+  },
+  {
+    note: `❓「泳ぐのが得意」のように動作（どうさ）を言うときは？→ at は前置詞（ぜんちし）なので、あとに動詞（どうし）が来るときは ing 形（動名詞（どうめいし））にします。I'm good at swimming.`,
+    add: fresh(T('at のあとの動詞は ing'), B(10, 36, 140, 'swim', C.blue, FILL.blue, 36, 16), ar(155, 54, 180, 54, C.red), B(184, 36, 126, 'swimming', C.green, FILL.green, 36, 15), B(10, 92, 300, `I'm good at swimming.`, C.green, FILL.green, 34, 15), K('前置詞のあとの動詞は ing')),
+  },
+  {
+    note: `❓ing の付け方は？→ そのまま付けるのが基本ですが、swim は m を重（かさ）ねて swimming、dance は e をとって dancing です。cook は cooking。`,
+    add: fresh(T('ing の付け方'), ...tab([['もとの形', 'ing 形'], ['cook', 'cooking'], ['swim', 'swimming（m を重ねる）'], ['dance', 'dancing（e をとる）']], 34, [110, 190], { h: 32, color: C.green, fill: FILL.green, size: 12 }), K('少し形が変わる語もある')),
+  },
+  {
+    note: `❓I'm good at swim. とはなぜ言えないの？→ 前置詞（ぜんちし）のあとの動詞（どうし）は ing 形にするきまりだからです。to swim（to＋原形）の感覚（かんかく）とまぜてしまいやすいので、be good at のときは to ではなく ing、と覚（おぼ）えます。`,
+    add: fresh(T('原形のままは ×'), B(20, 38, 280, `He is good at draw.`, C.red, FILL.red, 36, 16), lb(160, 94, '×', 18, C.red, 'middle', true), B(20, 114, 280, 'He is good at drawing.', C.green, FILL.green, 36, 16), lb(160, 170, '○', 18, C.green, 'middle', true), K('good at ＋ ing')),
+  },
+  {
+    note: `苦手（にがて）なことの言い方です。be poor at 〜、be bad at 〜、I'm not good at 〜.。poor at は少（すこ）しやわらかく、bad at ははっきり「下手」という印象（いんしょう）です。not good at は遠回（とおまわ）しでやわらかい言い方です。`,
+    add: fresh(T('苦手の言い方'), ...tab([[`I'm poor at swimming.`, 'ややソフト'], [`I'm not good at math.`, 'とてもやわらかい'], [`I'm bad at drawing.`, 'はっきり下手']], 40, [190, 110], { h: 34, head: false, color: C.red, fill: FILL.red, size: 11 }), K('強さがちがう')),
+  },
+  {
+    note: `もう一つの言い方（いいかた）。「上手な〜する人」で表（あらわ）す形です。She is a good cook.（料理が上手）、He is a good singer.（歌が上手）、They are good dancers.（ダンスが上手）。cook・singer・dancer のような「〜する人」の語を a good のあとに置（お）きます。`,
+    add: fresh(T('a good ＋ 〜する人'), B(10, 34, 300, 'She is a good cook.', C.green, FILL.green, 30, 14), B(10, 72, 300, 'He is a good singer.', C.green, FILL.green, 30, 14), B(10, 110, 300, 'They are good dancers.', C.green, FILL.green, 30, 14), K('好きな人を表す名詞を使う')),
+  },
+  {
+    note: `くらべるときは better at（〜のほうが得意）を使います。I'm better at math than science.（理科より算数のほうが得意です）。一番（いちばん）得意なら best。Who is the best at running in your class?`,
+    add: fresh(T('くらべる'), B(10, 34, 300, `I'm better at math than science.`, C.blue, FILL.blue, 32, 13), lb(160, 90, 'good → better → best', 14, C.red, 'middle', true), B(10, 112, 300, 'Who is the best at running?', C.purple, FILL.purple, 32, 13), K('better は くらべるとき')),
+  },
+  {
+    note: `まとめです。①be good at のあとは名詞か ing 形。②苦手は poor at / bad at / not good at。③上手な人は a good 〜er。④くらべるときは better at。`,
+    add: fresh(B(10, 14, 300, '① good at ＋ 名詞 / ing 形', C.blue, FILL.blue, 30), B(10, 52, 300, '② poor at / bad at / not good at', C.red, FILL.red, 30), B(10, 90, 300, '③ a good singer・a good cook', C.green, FILL.green, 30), B(10, 128, 300, '④ better at 〜 than …', C.purple, FILL.purple, 30), K('得意・不得意')),
+  },
+], '得意と不得意');
+
+// ───────── 好きな理由を答える：becauseとbecause of ─────────
+const v04: DiagramFigure = show([
+  {
+    note: `❓because と because of は、どうちがうの？→ どちらも「〜のせいで・〜という理由で」の意味（いみ）ですが、あとに続（つづ）く形（かたち）がちがいます。because のあとは文、because of のあとは名詞（めいし）です。`,
+    add: fresh(T('because と because of'), B(10, 38, 140, 'because', C.blue, FILL.blue, 36, 16), lb(80, 94, 'あとに「文」', 13, C.blue, 'middle', true), B(170, 38, 140, 'because of', C.red, FILL.red, 36, 16), lb(240, 94, 'あとに「名詞」', 13, C.red, 'middle', true), K('of があるかないか')),
+  },
+  {
+    note: `because のあとは〈主語（しゅご）＋動詞（どうし）〉の文です。I stayed home because it rained.（雨が降（ふ）ったので家にいました）。it が主語、rained が動詞です。`,
+    add: fresh(T('because ＋ 文'), B(10, 36, 120, 'I stayed home', C.gray, FILL.gray, 34, 12), B(136, 36, 80, 'because', C.blue, FILL.blue, 34, 13), B(222, 36, 88, 'it rained.', C.green, FILL.green, 34, 13), lb(266, 84, '主語＋動詞', 12, C.green, 'middle', true), K('文が続く')),
+  },
+  {
+    note: `because of のあとは名詞（めいし）だけです。I stayed home because of the rain.（雨のせいで家にいました）。the rain は名詞のまとまりで、主語と動詞はありません。`,
+    add: fresh(T('because of ＋ 名詞'), B(10, 36, 120, 'I stayed home', C.gray, FILL.gray, 34, 12), B(136, 36, 80, 'because of', C.red, FILL.red, 34, 12), B(222, 36, 88, 'the rain.', C.green, FILL.green, 34, 13), lb(266, 84, '名詞だけ', 12, C.green, 'middle', true), K('名詞が続く')),
+  },
+  {
+    note: `❓次の文のどこがまちがい？→ We couldn't play soccer because the rain. because のあとに名詞（the rain）だけを置（お）いています。because のあとは文が必要（ひつよう）です。`,
+    add: fresh(T('まちがい直し'), B(10, 34, 300, `We couldn't play soccer because the rain.`, C.red, FILL.red, 36, 11), lb(160, 90, '×  because のあとが名詞だけ', 13, C.red, 'middle', true), K('because には文、of には名詞')),
+  },
+  {
+    note: `❓どう直（なお）す？→ 2通（とお）りあります。名詞を使いたいなら because of the rain。because を使いたいなら because it rained（主語＋動詞）。`,
+    add: fresh(T('2通りの直し方'), B(10, 34, 300, `We couldn't play soccer because of the rain.`, C.green, FILL.green, 34, 11), B(10, 80, 300, `We couldn't play soccer because it rained.`, C.green, FILL.green, 34, 11), lb(160, 136, '名詞なら of を付ける ／ 文なら because だけ', 12, C.ink, 'middle', true), K('どちらも正しい')),
+  },
+  {
+    note: `会話（かいわ）では、理由（りゆう）だけを答えることもできます。Why do you like summer?（なぜ夏が好き？）— Because I can swim in the sea.（海で泳げるから）。1つの文にするときは I like 〜 because …. です。`,
+    add: fresh(T('Why? → Because 〜.'), B(10, 34, 250, 'Why do you like summer?', C.blue, FILL.blue, 30, 13), B(60, 78, 250, 'Because I can swim in the sea.', C.green, FILL.green, 30, 12), B(10, 124, 300, 'I like summer because I can swim in the sea.', C.purple, FILL.purple, 30, 10), K('because の前にコンマは付けない')),
+  },
+  {
+    note: `理由（りゆう）がいくつもあるときは、順番（じゅんばん）を示（しめ）す言葉（ことば）を使います。First, 〜.（第一に）Second, 〜.（第二に）Also, 〜.（また）。文章が整理（せいり）されて読みやすくなります。`,
+    add: fresh(T('理由を並べる'), B(10, 34, 300, 'First, I like soccer because it is exciting.', C.blue, FILL.blue, 28, 11), B(10, 70, 300, 'Second, I can play it with my friends.', C.blue, FILL.blue, 28, 11), B(10, 106, 300, 'Also, it is good exercise.', C.blue, FILL.blue, 28, 11), K('First → Second → Also')),
+  },
+  {
+    note: `まとめです。①because のあとは〈主語＋動詞〉の文。②because of のあとは名詞だけ。③理由を並べるときは First / Second / Also。`,
+    add: fresh(B(10, 20, 300, '① because ＋ 文（主語＋動詞）', C.blue, FILL.blue, 36), B(10, 68, 300, '② because of ＋ 名詞', C.red, FILL.red, 36), B(10, 116, 300, '③ First / Second / Also', C.green, FILL.green, 36), K('理由の言い方')),
+  },
+], '理由の言い方');
+
+// ───────── 一日の日課を語る ─────────
+const v05: DiagramFigure = show([
+  {
+    note: `昼から夕方（ゆうがた）までの日課（にっか）です。go to school（学校へ行く）→ have lunch（昼食を食べる）→ come home（家に帰る）→ do my homework（宿題をする）。`,
+    add: fresh(T('昼〜夕方'), ...flow(['go to\nschool', 'have\nlunch'], 36, { h: 50, size: 11 }).flat(), ...flow(['come\nhome', 'do my\nhomework'], 110, { h: 50, size: 11 }).flat(), K('動作のかたまりを覚える')),
+  },
+  {
+    note: `❓go home と come home はどうちがう？→ ほぼ同じですが、come home は「（話し手のいる）家に帰ってくる」という視点（してん）です。`,
+    add: fresh(T('come home と go home'), B(10, 38, 140, 'go home', C.blue, FILL.blue, 36, 16), lb(80, 92, '帰る', 13, C.blue, 'middle', true), B(170, 38, 140, 'come home', C.green, FILL.green, 36, 15), lb(240, 92, '（家に）帰ってくる', 12, C.green, 'middle', true), K('ほぼ同じ意味')),
+  },
+  {
+    note: `夜の日課（にっか）です。have dinner（夕食を食べる）→ take a bath（お風呂（ふろ）に入る）→ go to bed（寝（ね）る）。take a shower はシャワーを浴（あ）びること。`,
+    add: fresh(T('夜'), ...flow(['have\ndinner', 'take a\nbath', 'go to\nbed'], 50, { h: 56, size: 11, color: C.purple, fill: FILL.purple }).flat(), K('夕食 → 入浴 → 寝る')),
+  },
+  {
+    note: `❓一日の流（なが）れをつなげて言うには？→ 順番（じゅんばん）を示（しめ）す言葉（ことば）を使います。First（まず）→ Then（それから）→ After that（そのあと）→ Finally（最後に）。`,
+    add: fresh(T('順番を示す言葉'), B(10, 32, 300, 'First, I get up at seven.', C.blue, FILL.blue, 28, 12), B(10, 66, 300, 'Then, I wash my face and have breakfast.', C.blue, FILL.blue, 28, 11), B(10, 100, 300, 'After that, I go to school.', C.blue, FILL.blue, 28, 12), B(10, 134, 300, 'Finally, I go to bed at nine.', C.blue, FILL.blue, 28, 12), K('First → Then → After that → Finally')),
+  },
+  {
+    note: `❓「毎晩9時に寝ます」は I sleep at nine でいい？→ 日課（にっか）の「寝（ね）る」は、寝床（ねどこ）に入る動作（どうさ）の go to bed を使います。sleep は「眠（ねむ）っている」状態（じょうたい）です。`,
+    add: fresh(T('寝る の言い方'), B(10, 38, 300, 'I sleep at nine every night.', C.red, FILL.red, 34, 13), lb(160, 94, '△  眠っている状態になってしまう', 12, C.red, 'middle', true), B(10, 114, 300, 'I go to bed at nine every night.', C.green, FILL.green, 34, 13), lb(160, 170, '○  日課の動作', 13, C.green, 'middle', true), K('動作は go to bed')),
+  },
+  {
+    note: `❓では sleep はいつ使う？→ 眠（ねむ）っている状態や時間の長さを言うときです。I sleep for eight hours.（8時間眠ります）。I go to bed at nine, but I can't sleep soon.（9時に寝床に入るが、すぐには眠れない）のように、2つを区別（くべつ）する文もあります。`,
+    add: fresh(T('動作 と 状態'), B(10, 36, 140, 'go to bed', C.green, FILL.green, 36, 15), lb(80, 90, '寝床に入る（動作）', 12, C.green, 'middle', true), B(170, 36, 140, 'sleep', C.blue, FILL.blue, 36, 15), lb(240, 90, '眠っている（状態）', 12, C.blue, 'middle', true), B(10, 120, 300, 'I sleep for eight hours.', C.purple, FILL.purple, 30, 13), K('go to bed ⇔ sleep')),
+  },
+  {
+    note: `まとめです。①昼〜夜の動作のかたまりを覚える。②順番は First / Then / After that / Finally。③「寝る」は go to bed、sleep は眠っている状態。`,
+    add: fresh(B(10, 20, 300, '① go to school → … → go to bed', C.blue, FILL.blue, 36, 12), B(10, 68, 300, '② First → Then → After that → Finally', C.green, FILL.green, 36, 12), B(10, 116, 300, '③ 寝る ＝ go to bed、sleep ＝ 眠る', C.red, FILL.red, 36, 12), K('日課の言い方')),
+  },
+], '日課の言い方');
+
+// ───────── 週末・休日の過ごし方を伝える表現 ─────────
+const freq: [string, number, string][] = [['always', 100, 'いつも'], ['usually', 80, 'たいてい'], ['often', 60, 'よく'], ['sometimes', 40, 'ときどき'], ['rarely', 10, 'めったに〜ない'], ['never', 0, '決して〜ない']];
+const freqBars = (k: number): DiagramElement[] => freq.slice(0, k).flatMap(([w, p, jp], i) => [
+  bx(8, 34 + i * 26, 78, 22, w, C.blue, FILL.blue, 12),
+  ...(p > 0 ? [bx(92, 34 + i * 26, Math.max(p * 1.3, 8), 22, '', C.green, FILL.green)] : []),
+  lb(p > 0 ? 92 + Math.max(p * 1.3, 8) + 6 : 98, 45 + i * 26, `${p}%  ${jp}`, 11, C.ink, 'start', true),
+]);
+const v06: DiagramFigure = show([
+  {
+    note: `❓週末（しゅうまつ）にすることを、くわしく伝（つた）えるには？→ どれくらいの頻度（ひんど）かを表（あらわ）す語（ご）を使います。多（おお）い順（じゅん）に always（いつも）、usually（たいてい）、often（よく）、sometimes（ときどき）、rarely（めったに〜ない）、never（決して〜ない）。`,
+    add: fresh(T('どれくらいの頻度？'), ...freqBars(1), K('always ＝ いつも（100%）')),
+  },
+  {
+    note: `usually（たいてい）は 80% くらいです。I usually play soccer with my friends.（たいてい友達とサッカーをします）。`,
+    add: fresh(T('どれくらいの頻度？'), ...freqBars(2), K('usually ＝ たいてい（80%）')),
+  },
+  {
+    note: `often（よく）は 60%、sometimes（ときどき）は 40% くらいです。数（かず）が小さくなるほど、その行動をする回数が少なくなります。`,
+    add: fresh(T('どれくらいの頻度？'), ...freqBars(4), K('often 60%、sometimes 40%')),
+  },
+  {
+    note: `rarely / seldom（めったに〜ない）は 10% くらい、never（決して〜ない）は 0% です。左から右へ、全部（ぜんぶ）を比べると、頻度の順番がはっきり分（わ）かります。`,
+    add: fresh(T('どれくらいの頻度？'), ...freqBars(6), K('多い → 少ない の順に覚える')),
+  },
+  {
+    note: `❓この語（ご）は文のどこに置（お）くの？→ 一般動詞（いっぱんどうし）の前、be動詞（どうし）のあとです。I usually play video games on Saturdays.（play の前）。I'm always busy on Sundays.（am のあと）。`,
+    add: fresh(T('置く場所'), B(10, 34, 60, 'I', C.gray, FILL.gray, 30, 14), B(76, 34, 90, 'usually', C.red, FILL.red, 30, 13), B(172, 34, 138, 'play games.', C.blue, FILL.blue, 30, 12), lb(160, 82, '一般動詞の前', 12, C.red, 'middle', true), B(10, 108, 60, `I'm`, C.gray, FILL.gray, 30, 14), B(76, 108, 90, 'always', C.red, FILL.red, 30, 13), B(172, 108, 138, 'busy.', C.blue, FILL.blue, 30, 12), lb(160, 156, 'be動詞のあと', 12, C.red, 'middle', true), K('動詞の前 / be動詞のあと')),
+  },
+  {
+    note: `週末（しゅうまつ）の過ごし方は What do you do on weekends? とたずねます。習慣（しゅうかん）をたずねる一般動詞（いっぱんどうし）の疑問文（ぎもんぶん）で、「週末に」は on weekends。曜日と同（おな）じように on を使います。`,
+    add: fresh(T('週末の過ごし方'), B(10, 34, 300, 'What do you do on weekends?', C.blue, FILL.blue, 32, 14), B(10, 82, 300, 'I often go shopping with my family.', C.green, FILL.green, 32, 12), lb(160, 138, 'in weekends / at weekends とは言わない', 12, C.red, 'middle', true), K('on weekends')),
+  },
+  {
+    note: `❓終わった週末をたずねるには？→ 過去形（かこけい）で How was your weekend? と聞（き）きます。It was great. I went to the beach with my family.（最高でした。家族と海に行きました）。It was so-so.（まあまあでした）。`,
+    add: fresh(T('終わった週末'), B(10, 34, 250, 'How was your weekend?', C.blue, FILL.blue, 30, 13), B(60, 76, 250, 'It was great.', C.green, FILL.green, 28, 13), B(10, 112, 300, 'I went to the beach with my family.', C.green, FILL.green, 28, 11), B(60, 148, 250, 'It was so-so.', C.purple, FILL.purple, 28, 13), K('過去形で聞く')),
+  },
+  {
+    note: `❓読解（どっかい）では、何（なに）に気（き）をつける？→「ふだんの週末（現在形（げんざいけい））」と「先週末（過去形）」が切（き）りかわることがあります。習慣の話か、過去の1回だけの話か、動詞（どうし）の形で見分けます。`,
+    add: fresh(T('習慣 か 過去 か'), B(10, 38, 140, 'play / go（現在形）', C.blue, FILL.blue, 40, 12), lb(80, 96, 'ふだんの習慣', 13, C.blue, 'middle', true), B(170, 38, 140, 'played / went（過去形）', C.red, FILL.red, 40, 11), lb(240, 96, '過去の1回', 13, C.red, 'middle', true), K('動詞の形で見分ける')),
+  },
+], '頻度を表す語');
+
+// ───────── 天気予報を読み取る英文読解 ─────────
+const v07: DiagramFigure = show([
+  {
+    note: `❓天気予報（てんきよほう）の英文では、なぜ will を使（つか）うの？→ 予報は「これから先どうなるか」の予測（よそく）だからです。未来（みらい）のことには will（〜だろう）を使います。It will be sunny tomorrow.（明日は晴れるでしょう）。`,
+    add: fresh(T('予報は 未来 → will'), B(10, 36, 140, 'now', C.gray, FILL.gray, 26), B(170, 36, 140, 'tomorrow', C.gray, FILL.gray, 26), B(10, 72, 140, 'It is sunny.', C.blue, FILL.blue, 34, 14), B(170, 72, 140, 'It will be sunny.', C.green, FILL.green, 34, 12), lb(160, 130, 'will ＋ be ＋ 天気', 14, C.green, 'middle', true), K('これから先は will')),
+  },
+  {
+    note: `動詞（どうし）を使う形もあります。It will rain this afternoon.（今日の午後は雨が降（ふ）るでしょう）。be を使うか動詞を使うかで形が少しちがうだけで、will は同（おな）じです。`,
+    add: fresh(T('will のあと'), B(10, 38, 300, 'It will be rainy this afternoon.', C.green, FILL.green, 32, 13), B(10, 86, 300, 'It will rain this afternoon.', C.green, FILL.green, 32, 13), K('どちらも「雨でしょう」')),
+  },
+  {
+    note: `否定（ひてい）とたずね方です。It won't be cold tomorrow.（明日は寒くならないでしょう）。won't は will not の短縮形（たんしゅくけい）。Will it be sunny this weekend? — Yes, it will. / No, it won't.`,
+    add: fresh(T('否定とたずね方'), B(10, 34, 300, `It won't be cold tomorrow.`, C.red, FILL.red, 30, 13), lb(160, 82, `won't ＝ will not`, 13, C.red, 'middle', true), B(10, 100, 300, 'Will it be sunny this weekend?', C.blue, FILL.blue, 30, 13), B(10, 142, 140, 'Yes, it will.', C.green, FILL.green, 28, 13), B(170, 142, 140, `No, it won't.`, C.red, FILL.red, 28, 13), K('will を前に出してたずねる')),
+  },
+  {
+    note: `天気予報のあとには、助言（じょげん）が続（つづ）きます。You should bring an umbrella.（傘（かさ）を持って行ったほうがいい）、Don't forget your umbrella.（傘を忘れないでね）、You'd better wear a warm coat.（あたたかいコートを着たほうがいい）。`,
+    add: fresh(T('助言'), B(10, 34, 300, 'You should bring an umbrella.', C.blue, FILL.blue, 30, 13), B(10, 74, 300, `Don't forget your umbrella.`, C.blue, FILL.blue, 30, 13), B(10, 114, 300, `You'd better wear a warm coat.`, C.blue, FILL.blue, 30, 13), K('should / had better')),
+  },
+  {
+    note: `❓天気によって行動が変（か）わる文は？→ if（もし〜なら）を使います。If it rains tomorrow, we will stay home.（もし明日雨が降ったら、家にいます）。If it is sunny, we will go on a picnic.（晴れたらピクニックに行きます）。`,
+    add: fresh(T('if ＝ もし〜なら'), B(10, 34, 140, 'If it rains', C.red, FILL.red, 34, 14), lb(160, 51, ',', 16), B(170, 34, 140, 'we will stay home.', C.green, FILL.green, 34, 12), lb(80, 90, '条件', 12, C.red, 'middle', true), lb(240, 90, '結果', 12, C.green, 'middle', true), B(10, 112, 300, 'If it is sunny, we will go on a picnic.', C.blue, FILL.blue, 30, 11), K('もし〜なら、…する')),
+  },
+  {
+    note: `❓if のあとの動詞（どうし）は、未来（みらい）のことでも will を使う？→ 使いません。if のあとの文は、未来のことでも現在形（げんざいけい）で書きます。if it rains が正しく、if it will rain は×です。中学受験でよくねらわれます。`,
+    add: fresh(T('if のあとは 現在形'), B(10, 38, 300, 'If it will rain tomorrow, …', C.red, FILL.red, 36, 14), lb(160, 94, '×', 18, C.red, 'middle', true), B(10, 114, 300, 'If it rains tomorrow, …', C.green, FILL.green, 36, 14), lb(160, 170, '○', 18, C.green, 'middle', true), K('if のあとは will を使わない')),
+  },
+  {
+    note: `❓読解（どっかい）問題（もんだい）のコツは？→ ①天気の種類、②気温、③そのあとの人物の行動、の3つを順番（じゅんばん）に結（むす）びつけて読み取（と）ります。気温は It will be 25 degrees.（25度でしょう）のように degrees（度）で表します。`,
+    add: fresh(T('3つを結びつける'), ...flow(['① 天気', '② 気温', '③ 行動'], 44, { h: 46, size: 13 }).flat(), B(10, 112, 300, 'It will be 25 degrees.', C.purple, FILL.purple, 30, 13), K('天気 → 気温 → 行動')),
+  },
+  {
+    note: `まとめです。①予報は未来なので will。②助言は should / had better。③if のあとは未来のことでも現在形。④天気・気温・行動を結びつけて読む。`,
+    add: fresh(B(10, 14, 300, '① 予報は will', C.blue, FILL.blue, 30), B(10, 52, 300, '② should / had better で助言', C.green, FILL.green, 30), B(10, 90, 300, '③ if のあとは現在形', C.red, FILL.red, 30), B(10, 128, 300, '④ 天気 → 気温 → 行動', C.purple, FILL.purple, 30), K('天気予報の読み方')),
+  },
+], '天気予報の読み方');
+
+// ───────── 手紙・メールの書き出しと結びの言い方 ─────────
+const paper = (): DiagramElement[] => [bx(30, 14, 260, 180, undefined, C.gray, '#FFFFFF')];
+const v08: DiagramFigure = show([
+  {
+    note: `英語（えいご）の手紙（てがみ）には決（き）まった型（かた）があります。まず書き出し（あいさつ）。Dear ＋ 相手の名前（なまえ）, で始（はじ）めます。Dear Emily,（エミリーへ）、Dear Grandma,（おばあちゃんへ）。Dear は「親愛なる」ですが、あいさつとして機械的（きかいてき）に使います。`,
+    add: fresh(...paper(), lb(46, 34, 'Dear Emily,', 14, C.blue, 'start', true), K('書き出しは Dear 〜,')),
+  },
+  {
+    note: `❓Dear のあとの記号（きごう）は？→ コンマ（,）です。ピリオド（.）ではありません。Dear Emily, のようにコンマを付（つ）けて次の行（ぎょう）から本文（ほんぶん）を書きます。`,
+    add: [...paper(), lb(46, 34, 'Dear Emily,', 14, C.blue, 'start', true), lb(131, 52, '↑ コンマ（,）', 11, C.red, 'middle', true), ...cap('Dear の後ろは コンマ（ピリオドではない）', C.red)],
+  },
+  {
+    note: `本文（ほんぶん）の最初（さいしょ）には決まった言い回しがよく使われます。Thank you for your letter.（お手紙をありがとう）、How are you?（お元気ですか）、I hope you are doing well.（元気にしていることを願（ねが）っています）。`,
+    add: [...paper(), lb(46, 34, 'Dear Emily,', 14, C.blue, 'start', true), lb(46, 66, 'Thank you for your letter.', 12, C.green, 'start', true), lb(46, 86, 'How are you?', 12, C.green, 'start', true), ...cap('本文の最初の決まり文句', C.green)],
+  },
+  {
+    note: `用件（ようけん）を切（き）り出す言い方もあります。I'm writing to tell you about my school trip.（学校の旅行についてお伝えするために書いています）。「あいさつ → 用件 → むすび」が手紙の流れです。`,
+    add: [...paper(), lb(46, 34, 'Dear Emily,', 14, C.blue, 'start', true), lb(46, 66, 'Thank you for your letter.', 12, C.green, 'start', true), lb(46, 86, 'How are you?', 12, C.green, 'start', true), lb(46, 112, `I'm writing to tell you`, 12, C.purple, 'start', true), lb(46, 130, 'about my school trip.', 12, C.purple, 'start', true), ...cap('あいさつ → 用件 → むすび', C.purple)],
+  },
+  {
+    note: `❓最後はどう終（お）わるの？→ 結（むす）びの言葉（ことば）（クロージング）を書き、コンマを付け、次の行に自分の名前を書きます。Your friend, と書いて、次の行に Kenta。`,
+    add: [...paper(), lb(46, 34, 'Dear Emily,', 14, C.blue, 'start', true), lb(46, 66, 'Thank you for your letter.', 12, C.green, 'start', true), lb(46, 86, 'How are you?', 12, C.green, 'start', true), lb(46, 112, `I'm writing to tell you`, 12, C.purple, 'start', true), lb(46, 130, 'about my school trip.', 12, C.purple, 'start', true), lb(180, 160, 'Your friend,', 13, C.red, 'start', true), lb(180, 180, 'Kenta', 13, C.red, 'start', true), ...cap('むすび, ＋ 次の行に名前', C.red)],
+  },
+  {
+    note: `結びの言葉（ことば）のいろいろです。Your friend,（あなたの友達より）はカジュアル、Best wishes,（幸運を祈（いの）って）・Best regards,（よろしくお願いします）は少していねい、See you soon,（また近いうちに）、Love,（愛をこめて）は家族や親しい人へ。`,
+    add: fresh(T('結びの言葉'), ...tab([['Your friend,', '友達へ（カジュアル）'], ['Best wishes,', '少していねい'], ['See you soon,', 'また近いうちに'], ['Love,', '家族・親しい人へ']], 34, [130, 170], { h: 32, head: false, color: C.red, fill: FILL.red, size: 12 }), K('あとにコンマ ＋ 名前')),
+  },
+  {
+    note: `❓メールは手紙とどうちがう？→ 流（なが）れは同（おな）じですが、書き出しがもっとくだけます。Hi Emily,（やあ、エミリー）、Hello everyone,（みなさん、こんにちは）。Dear より気軽（きがる）です。`,
+    add: fresh(T('メールの書き出し'), B(10, 34, 140, 'Dear Emily,', C.blue, FILL.blue, 34, 14), lb(80, 84, '手紙', 13, C.blue, 'middle', true), B(170, 34, 140, 'Hi Emily,', C.green, FILL.green, 34, 14), lb(240, 84, 'メール（気軽）', 13, C.green, 'middle', true), B(10, 112, 300, 'Hello everyone,', C.purple, FILL.purple, 30, 14), K('あいさつと結びの型は同じ')),
+  },
+  {
+    note: `❓読解問題（どっかいもんだい）では最初に何を見る？→ ①だれからだれへか（Dear のあとと、結びのあとの名前）、②いつ書かれたか、③用件は何か、の3点です。「だれが書いたか」は結びの名前で確（たし）かめます。`,
+    add: fresh(T('最初に見る3つ'), B(10, 34, 300, '① だれから だれへ（Dear 〜 と 結びの名前）', C.blue, FILL.blue, 32, 11), B(10, 76, 300, '② いつ書かれたか', C.green, FILL.green, 32, 13), B(10, 118, 300, '③ 用件は何か', C.red, FILL.red, 32, 13), K('結びの名前も必ず見る')),
+  },
+], '手紙の書き方');
+
+// ───────── 感情を表す形容詞 ─────────
+const v09: DiagramFigure = show([
+  {
+    note: `❓interested と interesting は、形（かたち）がにているけれど意味（いみ）は同（おな）じ？→ ちがいます。-ed 形と -ing 形は使（つか）う相手（あいて）が正反対（せいはんたい）です。まず -ed 形から。`,
+    add: fresh(T('似た形 2つ'), B(10, 38, 140, 'interested', C.blue, FILL.blue, 40, 16), B(170, 38, 140, 'interesting', C.red, FILL.red, 40, 16), lb(80, 100, '-ed 形', 14, C.blue, 'middle', true), lb(240, 100, '-ing 形', 14, C.red, 'middle', true), K('使う相手がちがう')),
+  },
+  {
+    note: `-ed 形は「（人が）〜と感じる」です。主語（しゅご）は人や動物（どうぶつ）。I'm interested in soccer.（私はサッカーに興味（きょうみ）がある）、I was bored during the class.（授業のあいだ退屈（たいくつ）していた）。`,
+    add: fresh(T('-ed ＝ 人が感じる'), ci(60, 70, 22, '人', C.blue, FILL.blue, 14), ar(86, 70, 130, 70, C.blue), lb(190, 70, '感じる', 14, C.blue, 'middle', true), B(10, 112, 300, `I'm interested in soccer.`, C.blue, FILL.blue, 30, 13), B(10, 150, 300, 'I was bored during the class.', C.blue, FILL.blue, 30, 12), K('主語は 人')),
+  },
+  {
+    note: `-ing 形は「（ものごとが）〜という感情（かんじょう）を人に起こさせる」です。主語は物（もの）・こと。Soccer is interesting.（サッカーはおもしろい）、The class was boring.（その授業は退屈だった）。`,
+    add: fresh(T('-ing ＝ ものが起こさせる'), ci(60, 70, 22, '物', C.red, FILL.red, 14), ar(86, 70, 130, 70, C.red), lb(190, 70, '感じさせる', 14, C.red, 'middle', true), B(10, 112, 300, 'Soccer is interesting.', C.red, FILL.red, 30, 13), B(10, 150, 300, 'The class was boring.', C.red, FILL.red, 30, 13), K('主語は 物・こと')),
+  },
+  {
+    note: `❓どう見分ける？→ 主語を見ます。主語が人なら -ed 形、主語が物・こと（映画（えいが）・授業・試合）なら -ing 形です。迷（まよ）ったら主語に印（しるし）をつけます。`,
+    add: fresh(T('主語で見分ける'), B(10, 36, 140, '主語が 人', C.blue, FILL.blue, 36, 15), B(170, 36, 140, '主語が 物・こと', C.red, FILL.red, 36, 15), ar(80, 76, 80, 100, C.blue), ar(240, 76, 240, 100, C.red), B(10, 104, 140, '-ed 形', C.blue, FILL.blue, 36, 16), B(170, 104, 140, '-ing 形', C.red, FILL.red, 36, 16), K('主語を見る')),
+  },
+  {
+    note: `ペアの語です。excited / exciting、bored / boring、surprised / surprising、tired / tiring、interested / interesting。左が人の気持ち、右がものごとの性質です。`,
+    add: fresh(T('ペアで覚える'), ...tab([['人（-ed）', '物・こと（-ing）'], ['excited', 'exciting'], ['bored', 'boring'], ['surprised', 'surprising'], ['tired', 'tiring']], 34, [130, 150], { h: 28, color: C.green, fill: FILL.green }), K('2つで1セット')),
+  },
+  {
+    note: `❓I'm boring. と言うとどうなる？→「私は人を退屈（たいくつ）させる人間だ」という意味になり、失礼（しつれい）な文になります。「退屈している」は I'm bored. が正解です。`,
+    add: fresh(T('boring と bored'), B(10, 38, 300, `I'm boring.`, C.red, FILL.red, 36, 16), lb(160, 94, '×  私は つまらない人間', 13, C.red, 'middle', true), B(10, 114, 300, `I'm bored.`, C.green, FILL.green, 36, 16), lb(160, 170, '○  私は 退屈している', 13, C.green, 'middle', true), K('主語は I（人）→ bored')),
+  },
+  {
+    note: `❓「私はその話に興味（きょうみ）があります」は？→ I'm interested in the story. です。I'm interesting in the story. は×。逆に、その話が主語なら The story is interesting.（その話はおもしろい）と -ing 形です。`,
+    add: fresh(T('興味がある'), B(10, 34, 300, `I'm interesting in the story.`, C.red, FILL.red, 32, 13), lb(160, 82, '×', 16, C.red, 'middle', true), B(10, 98, 300, `I'm interested in the story.`, C.green, FILL.green, 32, 13), B(10, 138, 300, 'The story is interesting.', C.green, FILL.green, 32, 13), K('人 → interested、話 → interesting')),
+  },
+  {
+    note: `まとめです。①-ed 形は人の気持ち。②-ing 形は物・こと。③迷ったら主語が人か物かを見る。④I'm bored. と I'm boring. は正反対。`,
+    add: fresh(B(10, 14, 300, '① -ed 形 ＝ 人が感じる', C.blue, FILL.blue, 30), B(10, 52, 300, '② -ing 形 ＝ 物・ことの性質', C.red, FILL.red, 30), B(10, 90, 300, '③ 主語を見て選ぶ', C.green, FILL.green, 30), B(10, 128, 300, `④ I'm bored. ≠ I'm boring.`, C.purple, FILL.purple, 30), K('感情の -ed と -ing')),
+  },
+], '-ed と -ing');
+
+// ───────── さそいを受ける・断る表現 ─────────
+const v10: DiagramFigure = show([
+  {
+    note: `❓さそいを断（ことわ）るとき、いきなり No. だけではだめ？→ そっけない印象（いんしょう）を与（あた）えてしまいます。英語（えいご）では「残念な気持ちを伝える → 断る → 理由を言う」の順番が自然（しぜん）でていねいです。`,
+    add: fresh(T('断るときの順番'), ...flow(['① 気持ち', '② 断る', '③ 理由'], 44, { h: 46, size: 13 }).flat(), B(10, 110, 300, 'No.', C.red, FILL.red, 30, 16), lb(160, 160, '← これだけだとそっけない', 13, C.red, 'middle', true), K('気持ち → 断る → 理由')),
+  },
+  {
+    note: `断る言い方（いいかた）です。Sorry, I can't.（ごめんなさい、できません）。I'd love to, but I can't.（ぜひそうしたいのですが、できません）。I'd love to は、さそいを受けたい気持ちを表（あらわ）す前置きです。`,
+    add: fresh(T('断る言い方'), B(10, 34, 300, `Sorry, I can't.`, C.red, FILL.red, 32, 15), B(10, 80, 300, `I'd love to, but I can't.`, C.red, FILL.red, 32, 15), B(10, 126, 300, `I'm sorry, but I have other plans.`, C.red, FILL.red, 32, 12), K('まず気持ちを伝える')),
+  },
+  {
+    note: `理由（りゆう）の言い方です。I have to study for a test.（テストのために勉強しなければなりません）、I'm busy today.（今日は忙（いそが）しいです）、I already have plans.（すでに予定があります）。have to は「〜しなければならない」です。`,
+    add: fresh(T('理由をそえる'), B(10, 34, 300, 'I have to study for a test.', C.blue, FILL.blue, 30, 13), B(10, 72, 300, `I'm busy today.`, C.blue, FILL.blue, 30, 13), B(10, 110, 300, 'I already have plans.', C.blue, FILL.blue, 30, 13), K('理由で ていねいに')),
+  },
+  {
+    note: `❓今回は断るけれど、また誘（さそ）ってほしいときは？→ Maybe next time.（また今度にしましょう）を付けます。今回は断るが、今後は受けたい、という気持ちが伝わります。`,
+    add: fresh(T('また今度'), B(10, 38, 300, `I'd love to, but I can't.`, C.red, FILL.red, 30, 13), B(10, 82, 300, 'Maybe next time.', C.green, FILL.green, 34, 15), lb(160, 138, '今後は受けたい気持ち', 13, C.green, 'middle', true), K('Maybe next time.')),
+  },
+  {
+    note: `会話（かいわ）の例（れい）です。A: Let's play basketball after school.（放課後バスケをしましょう）B: I'd love to, but I can't. I have to help my mom today.（ぜひしたいけど、今日は母を手伝わないといけなくて）A: OK, maybe next time.（わかった、また今度ね）。`,
+    add: fresh(T('会話'), B(10, 32, 300, `Let's play basketball after school.`, C.blue, FILL.blue, 26, 12), B(10, 64, 300, `I'd love to, but I can't.`, C.red, FILL.red, 26, 13), B(10, 96, 300, 'I have to help my mom today.', C.red, FILL.red, 26, 12), B(10, 128, 300, 'OK, maybe next time.', C.green, FILL.green, 26, 13), K('さそい → 断る → 理由 → 返事')),
+  },
+  {
+    note: `さそいを受けるときの返事（へんじ）です。Yes, let's.（はい、そうしましょう）は Let's 〜. の文に使う決まった受け方。ほかに Sure. / OK. / Sounds good.（いいですね）、I'd love to!（ぜひ！）。`,
+    add: fresh(T('受けるとき'), B(10, 34, 300, `Yes, let's.`, C.green, FILL.green, 30, 14), B(10, 72, 300, 'Sure.   OK.   Sounds good.', C.green, FILL.green, 30, 14), B(10, 110, 300, `I'd love to!`, C.green, FILL.green, 30, 14), K('Let\'s ～. には Yes, let\'s.')),
+  },
+  {
+    note: `さそいの文のいろいろです。Let's play soccer.（サッカーをしましょう）、Why don't we go to the park?（公園に行きませんか）、Shall we go shopping?（買い物に行きましょうか）、Would you like to join us?（私たちに加わりませんか）は丁寧（ていねい）です。`,
+    add: fresh(T('さそいの文'), B(10, 32, 300, `Let's play soccer.`, C.blue, FILL.blue, 28, 13), B(10, 66, 300, `Why don't we go to the park?`, C.blue, FILL.blue, 28, 13), B(10, 100, 300, 'Shall we go shopping?', C.blue, FILL.blue, 28, 13), B(10, 134, 300, 'Would you like to join us?   （ていねい）', C.purple, FILL.purple, 28, 12), K('さそいの形')),
+  },
+  {
+    note: `まとめです。①断るときは気持ち → 断る → 理由。②Maybe next time. で今後の気持ちを伝える。③受けるときは Yes, let's. / Sure. / I'd love to!。`,
+    add: fresh(B(10, 20, 300, '① 気持ち → 断る → 理由', C.red, FILL.red, 36), B(10, 68, 300, '② Maybe next time.', C.green, FILL.green, 36), B(10, 116, 300, `③ Yes, let's. / Sure. / I'd love to!`, C.blue, FILL.blue, 36), K('さそいの返事')),
+  },
+], 'さそいの返事');
 export const XF_CEK_FIGURES: Record<string, DiagramFigure> = {
   'xf_new20_e4_eigo_01': u01,
   'xf_new20_e4_eigo_02': u02,
@@ -795,4 +1162,47 @@ export const XF_CEK_FIGURES: Record<string, DiagramFigure> = {
   'xf_new20_e4_eigo_18': u18,
   'xf_new20_e4_eigo_19': u19,
   'xf_new20_e4_eigo_20': u20,
+  'xf_new20_e5_eigo_01': v01,
+  'xf_new20_e5_eigo_02': v02,
+  'xf_new20_e5_eigo_03': v03,
+  'xf_new20_e5_eigo_04': v04,
+  'xf_new20_e5_eigo_05': v05,
+  'xf_new20_e5_eigo_06': v06,
+  'xf_new20_e5_eigo_07': v07,
+  'xf_new20_e5_eigo_08': v08,
+  'xf_new20_e5_eigo_09': v09,
+  'xf_new20_e5_eigo_10': v10,
+};
+
+export const XF_CEK_SECTIONS: Record<string, string> = {
+  'new20_e4_eigo_01#1': 'xf_new20_e4_eigo_01',
+  'new20_e4_eigo_02#1': 'xf_new20_e4_eigo_02',
+  'new20_e4_eigo_03#3': 'xf_new20_e4_eigo_03',
+  'new20_e4_eigo_04#3': 'xf_new20_e4_eigo_04',
+  'new20_e4_eigo_05#1': 'xf_new20_e4_eigo_05',
+  'new20_e4_eigo_06#1': 'xf_new20_e4_eigo_06',
+  'new20_e4_eigo_07#1': 'xf_new20_e4_eigo_07',
+  'new20_e4_eigo_08#3': 'xf_new20_e4_eigo_08',
+  'new20_e4_eigo_09#1': 'xf_new20_e4_eigo_09',
+  'new20_e4_eigo_10#3': 'xf_new20_e4_eigo_10',
+  'new20_e4_eigo_11#3': 'xf_new20_e4_eigo_11',
+  'new20_e4_eigo_12#1': 'xf_new20_e4_eigo_12',
+  'new20_e4_eigo_13#0': 'xf_new20_e4_eigo_13',
+  'new20_e4_eigo_14#3': 'xf_new20_e4_eigo_14',
+  'new20_e4_eigo_15#1': 'xf_new20_e4_eigo_15',
+  'new20_e4_eigo_16#3': 'xf_new20_e4_eigo_16',
+  'new20_e4_eigo_17#0': 'xf_new20_e4_eigo_17',
+  'new20_e4_eigo_18#1': 'xf_new20_e4_eigo_18',
+  'new20_e4_eigo_19#1': 'xf_new20_e4_eigo_19',
+  'new20_e4_eigo_20#3': 'xf_new20_e4_eigo_20',
+  'new20_e5_eigo_01#0': 'xf_new20_e5_eigo_01',
+  'new20_e5_eigo_02#1': 'xf_new20_e5_eigo_02',
+  'new20_e5_eigo_03#0': 'xf_new20_e5_eigo_03',
+  'new20_e5_eigo_04#1': 'xf_new20_e5_eigo_04',
+  'new20_e5_eigo_05#1': 'xf_new20_e5_eigo_05',
+  'new20_e5_eigo_06#1': 'xf_new20_e5_eigo_06',
+  'new20_e5_eigo_07#1': 'xf_new20_e5_eigo_07',
+  'new20_e5_eigo_08#0': 'xf_new20_e5_eigo_08',
+  'new20_e5_eigo_09#1': 'xf_new20_e5_eigo_09',
+  'new20_e5_eigo_10#1': 'xf_new20_e5_eigo_10',
 };

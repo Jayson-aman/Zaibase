@@ -1,7 +1,7 @@
 // 中学受験 英語（教科書単元 30 件）の「動く図解スライド」。
 // 「なぜ？」の連鎖で7枚以上。単元の節（section）ごとに 1 枚の図解をひもづける。
 import type { DiagramElement, DiagramFigure } from './figures';
-import { C, FILL, bx, lb, ar, ln, ci, show, fresh } from './diagram-kit';
+import { C, FILL, bx, lb, ar, ln, ci, pg, show, fresh } from './diagram-kit';
 
 type Col = [string, string];
 const BLUE: Col = [C.blue, FILL.blue];
@@ -770,6 +770,180 @@ reg('eigo_s210', 0, show([
     [w(14, 10, 290, 28, 'How ＝ どのようにして（手段・方法）', BLUE, 13), w(14, 42, 290, 28, 'by ＋ 乗り物（a / the は付けない）', GREEN, 13), w(14, 74, 290, 28, '歩いて ＝ on foot / walk', MAIN, 13), w(14, 106, 290, 28, 'How do you say / spell 〜?', RED, 13)],
     '手段は by ＋ 乗り物', YELLOW),
 ], 'How ＝ 手段・方法をたずねる'));
+
+// ── how⑤：How old / How tall / How high / How heavy（節0: How old と How tall / How high） ──
+reg('eigo_s214', 0, show([
+  S('How old are you? は「何才ですか」ですが、直訳すれば「どれくらい古いですか」です。How のあとに形容詞（けいようし）を置くと、そのものさしではかった量をたずねる形になります。',
+    [w(10, 12, 300, 30, 'How old are you?', MAIN, 15), ar(160, 44, 160, 58, C.main), w(10, 60, 300, 30, 'I\'m twelve years old.', GREEN, 15), t(160, 112, 'How ＋ 形容詞 ＝ どのくらい〜か', 13, C.ink, true), t(160, 136, 'old（古い・年）／tall／high／heavy', 12, C.gray)],
+    'How ＋ 形容詞 ＝ どのくらい〜', BLUE),
+  S('なぜ How old は人にもものにも使えるの？ → old が「年を経ている度合い」を表す語だからです。人なら年齢、建物や木なら古さをたずねる意味になります。How old is this temple? — It\'s about 400 years old.（建ってから約400年）。',
+    [bx(12, 6, 296, 30, 'なぜ？ How old はものにも使える？', PURPLE[0], PURPLE[1], 12), w(10, 46, 140, 56, '人に使うと\n年齢（何才）', BLUE, 13), w(170, 46, 140, 56, 'ものに使うと\n古さ（建ってから）', GREEN, 13), t(160, 124, 'How old is this temple?', 13, C.ink, true), t(160, 146, '— It\'s about 400 years old.', 13, C.green, true)],
+    'old は「年を経た度合い」', GREEN),
+  S('年齢の答え方です。twelve years old（12才）、one year old（1才・単数形）。years old を省いて I\'m twelve. と言うこともできます。How old is your brother? — He is fifteen. のように答えます。',
+    [w(10, 14, 300, 30, 'I\'m twelve years old.', BLUE, 14), w(10, 52, 300, 30, 'I\'m one year old.　（単数形）', BLUE, 14), w(10, 90, 300, 30, 'I\'m twelve.　（years old を省く）', GREEN, 14), t(160, 144, '1才だけ year（単数）', 12, C.red, true)],
+    '年齢は 〜 years old', BLUE),
+  S('How tall は人・木・建物のように、細長く立っているものの背の高さをたずねます。How tall are you? — I\'m 150 centimeters tall.、How tall is that tree? — It\'s about ten meters tall.。',
+    [w(30, 50, 26, 90, '', BLUE), t(43, 40, '人', 11, C.blue, true), t(43, 156, '150 cm', 11, C.blue), w(110, 20, 30, 120, '', GREEN), t(125, 12, '木', 11, C.green, true), t(125, 156, '10 m', 11, C.green), t(235, 60, 'How tall\nis that tree?', 13, C.ink, true), t(235, 104, 'It\'s about\nten meters tall.', 12, C.green, true)],
+    'How tall ＝ 人・木・建物の背の高さ', GREEN),
+  S('How high は山や、地面から離れたものの高さをたずねます。How high is Mt. Fuji? — It\'s 3,776 meters high.。How high can you jump?（どのくらい高く跳べますか）のようにも使います。',
+    [pg([[40, 140], [120, 30], [200, 140]], C.blue, FILL.blue), ln(120, 30, 120, 140, C.red, true), ar(230, 140, 230, 34, C.red), t(260, 90, '3,776 m', 12, C.red, true), t(120, 156, 'Mt. Fuji', 12, C.ink, true)],
+    'How high ＝ 山・地面からの高さ', BLUE),
+  S('なぜ富士山には tall ではなく high なの？ → tall は細長く立っているもの、high は地面（海面）からの高さを言うからです。山は「立っている」というより地面から盛り上がっているので high を使います。「山は tall と言わない」と覚えます。',
+    [bx(12, 6, 296, 30, 'なぜ？ 山は tall ではなく high？', PURPLE[0], PURPLE[1], 12), w(10, 46, 140, 56, 'tall\n人・木・建物\n（細長く立つもの）', GREEN, 12), w(170, 46, 140, 56, 'high\n山・跳ぶ高さ\n（地面からの高さ）', BLUE, 12), t(160, 126, '× How tall is Mt. Fuji?', 13, C.red, true), t(160, 148, '○ How high is Mt. Fuji?', 13, C.green, true)],
+    '山は high、人・木は tall', RED),
+  S('答えの形は「数 ＋ 単位 ＋ 形容詞」です。It\'s 3,776 meters high.。最後に形容詞をそえるところまで書けるようにします。',
+    [...chips([['It\'s', GRAY], ['3,776', RED], ['meters', BLUE], ['high.', GREEN]], 28, 34, 15), t(160, 80, '　　数　　　単位　　形容詞', 11, C.gray), ...chips([['I\'m', GRAY], ['150', RED], ['centimeters', BLUE], ['tall.', GREEN]], 100, 34, 14), t(160, 150, '数 ＋ 単位 ＋ 形容詞 の順', 12, C.ink, true)],
+    '答えは 数 ＋ 単位 ＋ 形容詞', YELLOW),
+  S('単位の書き方です。数が2以上なら単位は複数形（three kilograms / ten meters）です。ただし年齢は 〜 years old で、1才だけ one year old。How many years old are you? とは言わず、How old are you? の一つの形です。',
+    [...table(['数', '単位の形'], [['1', 'one year old'], ['2以上', 'twelve years old'], ['2以上', 'ten meters / three kilograms']], 20, 8, [70, 210], 24, 13), t(160, 128, '× How many years old are you?', 13, C.red, true), t(160, 150, '○ How old are you?', 13, C.green, true)],
+    '数が2以上なら単位は複数形', RED),
+  S('まとめです。How ＋ 形容詞で「どのくらい〜か」。How old は年齢・古さ、How tall は人・木・建物の背の高さ、How high は山など地面からの高さ。答えは「数 ＋ 単位 ＋ 形容詞」です。',
+    [w(14, 10, 290, 28, 'How old ＝ 年齢・古さ', BLUE, 13), w(14, 42, 290, 28, 'How tall ＝ 人・木・建物', GREEN, 13), w(14, 74, 290, 28, 'How high ＝ 山・地面からの高さ', RED, 13), w(14, 106, 290, 28, '答え：数 ＋ 単位 ＋ 形容詞', MAIN, 13)],
+    '形容詞でたずねる中身が決まる', YELLOW),
+], 'How old / How tall / How high'));
+
+// ── 疑問詞が主語②：What が主語（節0: What が主語になる文） ──
+reg('eigo_s217', 0, show([
+  S('「何があったの？」は What happened? の二語で言えます。What did happen? としなくてよいのです。What が主語のときは、do / does / did を使わず、語順も変わりません。',
+    [w(10, 14, 300, 30, 'Something happened.', GRAY, 14), t(160, 56, '↓ something（何か）をたずねる', 12, C.main, true), w(10, 70, 300, 30, 'What happened?', GREEN, 15), t(160, 124, '何が起きたの？', 13, C.ink, true), w(40, 138, 240, 24, '× What did happen?', RED, 12)],
+    'What が主語 → did を使わない', GREEN),
+  S('なぜ did を入れなくてよいの？ → 疑問文を作るときに do / does / did が必要なのは、主語が文の中ほどにあるときだけだからです。What が主語になると、文のはじめにすでに主語があるので、語順を入れかえる必要がありません。',
+    qa('did がいらないのは？', 'What が「主語」\n　→ 文のはじめに主語がある\n　→ 語順を入れかえない\n　→ do / does / did は いらない', GREEN, 13),
+    '主語がはじめにあるから did は不要', GREEN),
+  S('比べてみましょう。Something happened. の something を What にした What happened? は主語をたずねます。You did something. の something を What にした What did you do? は目的語をたずねるので did が要ります。',
+    [w(8, 10, 304, 28, 'Something happened.', GRAY, 12), ar(160, 40, 160, 52, C.main), w(8, 54, 304, 28, 'What happened?　（did なし）', GREEN, 13), w(8, 96, 304, 28, 'You did something.', GRAY, 12), ar(160, 126, 160, 138, C.main), w(8, 140, 304, 26, 'What did you do?　（did あり）', BLUE, 13)],
+    '主語をたずねる → did なし', BLUE),
+  S('What is 〜? も主語の形です。What is in this box? — There is a cake in it.、What is on the desk? — There are some books.。be動詞のあとに、場所を表す言葉が続きます。',
+    [w(10, 12, 300, 30, 'What is in this box?', BLUE, 14), ar(160, 44, 160, 56, C.main), w(10, 58, 300, 30, 'There is a cake in it.', GREEN, 14), w(10, 98, 300, 30, 'What is on the desk?', BLUE, 14), ar(160, 130, 160, 142, C.main), w(10, 144, 300, 24, 'There are some books.', GREEN, 13)],
+    'What is ＋ 場所の言葉', BLUE),
+  S('What makes you so happy? は、直訳すると「何があなたをそんなにうれしくさせるのですか」です。意味は「どうしてそんなにうれしいのですか」に近く、Why are you so happy? と言いかえられます。',
+    [w(10, 14, 300, 30, 'What makes you so happy?', MAIN, 14), t(160, 62, '直訳：何があなたを うれしくさせる？', 12, C.gray), t(160, 82, '↓', 14, C.main, true), w(10, 96, 300, 30, 'Why are you so happy?', GREEN, 14), t(160, 146, '意味：どうして そんなにうれしいの？', 12, C.ink, true)],
+    'What makes 〜? ＝ なぜ〜なの？', MAIN),
+  S('なぜ What makes 〜? が「なぜ」の意味になるの？ → 「何があなたをそうさせたのか」とたずねることは、原因をたずねているのと同じだからです。What made you cry?（どうして泣いたのですか）も同じ形で、過去なら made です。',
+    [bx(12, 6, 296, 30, 'なぜ？ What makes 〜? が「なぜ」？', PURPLE[0], PURPLE[1], 12), w(10, 46, 300, 32, '何があなたを そうさせた？', GRAY, 13), t(160, 92, '＝ 原因をたずねる', 13, C.main, true), w(10, 108, 300, 32, 'What made you cry?　どうして泣いたの？', GREEN, 12), t(160, 154, '過去のことは made', 11, C.gray)],
+    '「何があなたを〜させた」＝ 原因をたずねる', GREEN),
+  S('なぜ What did you happen? は成り立たないの？ → happen（起こる）は「〜を起こす」という使い方ができない動詞で、主語には出来事が来るからです。You happened. とは言えないので、What did you happen? もありません。',
+    [bx(12, 6, 296, 30, 'なぜ？ What did you happen? はだめ？', PURPLE[0], PURPLE[1], 12), w(20, 46, 280, 32, '× What did you happen?', RED, 14), t(160, 92, 'happen の主語は「出来事」', 12, C.red, true), w(20, 108, 280, 32, '○ What happened to you?', GREEN, 14), t(160, 154, '（どうしたのですか）', 12, C.gray)],
+    'happen の主語は出来事', RED),
+  S('まとめです。What が主語になるときは、do / does / did を使わず、語順も変わりません。What happened?、What is in the box?、What makes you 〜?。主語がはじめにあるから、そのまま動詞が続きます。',
+    [w(14, 12, 290, 32, 'What happened?（did なし）', GREEN, 14), w(14, 52, 290, 32, 'What is in this box?（be動詞）', BLUE, 14), w(14, 92, 290, 32, 'What makes you 〜? ＝ なぜ〜？', MAIN, 14)],
+    'What が主語 → 語順は変わらない', YELLOW),
+], 'What が主語になる文'));
+
+// ── 疑問詞が主語③：主語か目的語か（節1: 主語か目的語かの見分け方） ──
+reg('eigo_s218', 1, show([
+  S('同じ Who で始まる文でも、主語をたずねているか目的語をたずねているかで、意味も形もまったくちがいます。Who likes Ken?（だれがケンを好きですか）と Who does Ken like?（ケンはだれが好きですか）です。',
+    [w(10, 14, 300, 32, 'Who likes Ken?', BLUE, 15), t(160, 62, 'だれが ケンを 好き？', 13, C.gray), w(10, 82, 300, 32, 'Who does Ken like?', GREEN, 15), t(160, 130, 'ケンは だれを 好き？', 13, C.gray), t(160, 152, '同じ Who でも形と意味がちがう', 12, C.red, true)],
+    '主語をたずねるか、目的語をたずねるか', MAIN),
+  S('なぜ形がちがうの？ → 主語をたずねるときは、Who が主語になるので、そのまま動詞が続きます。目的語をたずねるときは、主語は Ken のまま残るので、does を使って疑問文の形にします。',
+    qa('形がちがうのは？', 'Who が主語\n　→ Who ＋ 動詞（does なし）\n\nWho が目的語\n　→ Who ＋ does ＋ 主語 ＋ 動詞', MAIN, 13),
+    '主語が Who か、別にあるか', MAIN),
+  S('① Who likes Ken? は、好きな気持ちを持つ人をたずねる文で、主語をたずねています。does は要らず、動詞に s がつきます。答えは Mary does.（メアリーです）。',
+    [...chips([['Who', BLUE], ['likes', RED], ['Ken?', GRAY]], 14, 32, 15), t(160, 60, '↑ 動詞に s　does はなし', 12, C.red, true), t(160, 90, '好きな人 ＝ 主語をたずねる', 13, C.blue, true), ar(160, 104, 160, 118, C.main), w(60, 120, 200, 32, 'Mary does.', GREEN, 15)],
+    '主語をたずねる → 答えは Mary does.', BLUE),
+  S('② Who does Ken like? は、好かれる相手をたずねる文で、目的語をたずねています。does が要り、動詞は原形（like）です。答えは He likes Mary.（彼はメアリーが好きです）。',
+    [...chips([['Who', GREEN], ['does', RED], ['Ken', GRAY], ['like?', RED]], 14, 32, 15), t(160, 60, '↑ does が要る　動詞は原形', 12, C.red, true), t(160, 90, '好かれる人 ＝ 目的語をたずねる', 13, C.green, true), ar(160, 104, 160, 118, C.main), w(40, 120, 240, 32, 'He likes Mary.', GREEN, 15)],
+    '目的語をたずねる → 答えは He likes Mary.', GREEN),
+  S('見分け方の手順です。疑問詞のすぐあとを見ます。動詞（broke, likes, happened）なら疑問詞が主語。do / does / did / be動詞 / 助動詞なら、疑問詞は目的語などで、主語はそのうしろにあります。',
+    [w(14, 12, 290, 32, '疑問詞のすぐあとを見る', BLUE, 14), ar(160, 46, 100, 62, C.blue), ar(160, 46, 220, 62, C.green), w(14, 64, 140, 54, '動詞\nlikes / broke\n→ 疑問詞が主語', BLUE, 12), w(170, 64, 140, 54, 'does / did / is\n→ 主語は\nうしろにある', GREEN, 12)],
+    '疑問詞のすぐあとが動詞なら、主語', YELLOW),
+  S('例で確かめます。Who saw you?（だれがあなたを見た？）は Who が主語。Who did you see?（あなたはだれを見た？）は you が主語です。見る側と見られる側が入れかわります。',
+    [w(10, 12, 300, 30, 'Who saw you?', BLUE, 15), t(160, 58, 'だれが あなたを 見た？', 12, C.gray), t(160, 78, '見た人 ＝ だれか', 12, C.blue, true), w(10, 96, 300, 30, 'Who did you see?', GREEN, 15), t(160, 142, 'あなたは だれを 見た？', 12, C.gray), t(160, 160, '見た人 ＝ あなた', 12, C.green, true)],
+    '主語か目的語かで、見る側が入れかわる', GREEN),
+  S('なぜ平叙文（へいじょうぶん）から作るとまちがえないの？ → たずねたい部分を Who に置きかえるだけだからです。Ken likes Mary. の Ken を Who にすると Who likes Mary?、Mary を Who にすると Who does Ken like? になります。',
+    [bx(12, 6, 296, 30, 'なぜ？ 平叙文から作るとまちがえない？', PURPLE[0], PURPLE[1], 12), w(60, 44, 200, 28, 'Ken likes Mary.', GRAY, 14), ar(100, 74, 70, 94, C.blue), ar(220, 74, 250, 94, C.green), w(8, 96, 150, 30, 'Ken → Who\nWho likes Mary?', BLUE, 11), w(162, 96, 150, 30, 'Mary → Who\nWho does Ken like?', GREEN, 11), t(160, 146, 'たずねたい部分を Who に置きかえる', 12, C.ink, true)],
+    '平叙文を作ってから Who に置きかえる', BLUE),
+  S('練習です。「だれがあなたを手伝ってくれたのですか」は、手伝った人をたずねるので Who helped you? です。Who did you help? は「あなたはだれを手伝いましたか」で、助けた側と助けられた側が入れかわります。',
+    [w(10, 12, 300, 30, '○ Who helped you?', GREEN, 15), t(160, 58, 'だれがあなたを手伝った？', 12, C.gray), w(10, 78, 300, 30, '× Who did you help?', RED, 15), t(160, 124, 'あなたはだれを手伝った？（逆）', 12, C.red, true)],
+    '「〜が」と「〜を」を書き分ける', RED),
+  S('まとめです。疑問詞のすぐあとが動詞なら主語をたずねる文（does なし）、does / did / be動詞なら目的語をたずねる文。日本語の「だれが」と「だれを」は、必ず書き分けて確かめます。',
+    [w(14, 14, 290, 34, '動詞が続く ＝ 主語をたずねる', BLUE, 14), w(14, 56, 290, 34, 'does / did が続く ＝ 目的語をたずねる', GREEN, 13), w(14, 98, 290, 34, '「〜が」と「〜を」を取りちがえない', RED, 13)],
+    '疑問詞のすぐあとを見る', YELLOW),
+], '疑問詞が主語か、目的語か'));
+
+// ── 間接疑問②：Do you know 〜?（節1: Do you think 〜? だけは例外） ──
+reg('eigo_s220', 1, show([
+  S('Do you know what this is?（これが何か知っていますか）— Yes, I do. It\'s a camera. 知っているかどうかを聞かれているので、Yes / No で答えられます。疑問詞（what）は文の中に残ります。',
+    [w(10, 12, 300, 30, 'Do you know what this is?', BLUE, 14), ar(160, 44, 160, 58, C.main), w(30, 60, 260, 32, 'Yes, I do. It\'s a camera.', GREEN, 14), t(160, 112, 'know → Yes / No で答えられる', 13, C.ink, true), t(160, 136, 'what は 文の中に残る', 12, C.gray)],
+    'know の文は Yes / No で答える', BLUE),
+  S('ところが Do you think 〜?（〜だと思いますか）は、あなたの考えをたずねる文です。What do you think this is? — I think it\'s a camera. のように、疑問詞が文の先頭に出ます。',
+    [w(10, 12, 300, 30, 'What do you think this is?', MAIN, 14), ar(160, 44, 160, 58, C.main), w(30, 60, 260, 32, 'I think it\'s a camera.', GREEN, 14), t(160, 112, 'think → 疑問詞が先頭に出る', 13, C.red, true), t(160, 136, 'Yes / No では答えない', 12, C.gray)],
+    'think の文は 疑問詞が先頭', RED),
+  S('なぜ think のときは疑問詞が先頭に出るの？ → 聞きたいのは「Yes か No か」ではなく、「あなたが何だと思うか」という中身だからです。中身をたずねる語（What）を、はじめに出して目立たせます。',
+    [bx(12, 6, 296, 30, 'なぜ？ think のときは先頭に出る？', PURPLE[0], PURPLE[1], 12), w(10, 46, 140, 58, 'know\n知っているか？\n→ Yes / No', BLUE, 12), w(170, 46, 140, 58, 'think\n何だと思うか？\n→ 中身を答える', RED, 12), t(160, 128, '中身をたずねるなら 疑問詞を先頭に', 12, C.ink, true)],
+    '聞きたいのが中身なら、疑問詞が先頭', RED),
+  S('× Do you think what this is? とは言いません。Do you know what this is? の形を覚えているので、know を think に置きかえただけで作ってしまう失敗が多いです。think の文では疑問詞を前に出します。',
+    [w(20, 14, 280, 32, '× Do you think what this is?', RED, 14), t(160, 62, 'know の形のまま think にしてしまった', 12, C.red, true), ar(160, 74, 160, 90, C.main), w(20, 92, 280, 32, '○ What do you think this is?', GREEN, 14), t(160, 146, '疑問詞を前に出す', 12, C.green, true)],
+    'think に置きかえるだけではだめ', RED),
+  S('think と同じ仲間の動詞もあります。think / believe / say / guess / suppose など「〜と思う・言う」を表す動詞では、疑問詞が先頭に出ます。Who do you think will win the game?（だれが勝つと思いますか）。',
+    [w(10, 10, 300, 40, 'think / believe / say / guess / suppose', MAIN, 13), ar(160, 52, 160, 66, C.main), w(10, 68, 300, 30, 'Who do you think will win the game?', GREEN, 12), w(10, 106, 300, 30, 'Where do you think he went?', GREEN, 13), t(160, 152, '答えはいつも I think 〜.', 12, C.ink, true)],
+    '「思う・言う」の動詞は 疑問詞が先頭', MAIN),
+  S('疑問詞が先頭に出ても、そのうしろは平叙文の語順のままです。○ Where do you think he went?（he went の順）、× Where do you think did he go?。think の文でも、中の did は残しません。',
+    [...chips([['Where', BLUE], ['do you think', GRAY], ['he', GREEN], ['went?', GREEN]], 22, 32, 13), t(160, 66, '主語 → 動詞', 12, C.green, true), w(20, 90, 280, 32, '× Where do you think did he go?', RED, 12), t(160, 144, 'did は残さない（went に返す）', 12, C.ink, true)],
+    'うしろは「主語 ＋ 動詞」の順', GREEN),
+  S('対で覚えましょう。know なら疑問詞は中に残り、Yes / No で答えます。think なら疑問詞は先頭に出て、I think 〜. で答えます。上位校の入試で差がつく項目です。',
+    [...table(['', 'know', 'think'], [['疑問詞', '文の中に残る', '先頭に出る'], ['答え', 'Yes / No', 'I think 〜.']], 14, 14, [70, 110, 110], 28, 12), t(160, 126, 'Do you know what this is?', 12, C.blue, true), t(160, 148, 'What do you think this is?', 12, C.red, true)],
+    'know なら中に、think なら先頭に', YELLOW),
+  S('まとめです。Do you know 〜? は疑問詞が中に残り、Yes / No で答えます。Do you think 〜? は疑問詞が先頭に出て、I think 〜. で答えます。どちらもうしろは「主語＋動詞」の順です。',
+    [w(14, 12, 290, 32, 'know ＝ 疑問詞は中。Yes / No', BLUE, 13), w(14, 52, 290, 32, 'think ＝ 疑問詞は先頭。I think 〜.', RED, 13), w(14, 92, 290, 32, 'どちらも「主語 ＋ 動詞」の順', GREEN, 13)],
+    '知っているか、思うか、で形が変わる', YELLOW),
+], 'Do you know 〜? と Do you think 〜?'));
+
+// ── 間接疑問③：if / whether（節1: 条件の if との区別） ──
+reg('eigo_s221', 1, show([
+  S('if には二つの意味があります。I don\'t know if he will come.（彼が来るかどうかわからない）の if は「〜かどうか」。If he comes, I will be happy.（もし彼が来たら、私はうれしい）の if は「もし〜なら」です。',
+    [w(10, 14, 300, 30, 'I don\'t know if he will come.', BLUE, 13), t(160, 58, 'if ＝ 〜かどうか', 13, C.blue, true), w(10, 82, 300, 30, 'If he comes, I will be happy.', GREEN, 13), t(160, 126, 'If ＝ もし〜なら', 13, C.green, true), t(160, 148, '同じ if で意味が二つ', 12, C.red, true)],
+    '二つの if を見分ける', MAIN),
+  S('なぜ区別が大事なの？ → 意味がまったくちがううえに、if のあとの時制のルールもちがうからです。取りちがえると、文の意味も動詞の形もまちがえます。',
+    qa('区別が大事なのは？', '① 意味がちがう\n　〜かどうか ／ もし〜なら\n\n② if のあとの時制のルールがちがう\n　will が使える ／ 使えない', MAIN, 13),
+    '意味と時制の両方がちがう', MAIN),
+  S('一つ目は「〜かどうか」（間接疑問）です。know / be sure / wonder / ask のうしろにあります。I don\'t know if he will come. では、if 以下が「知らない」ことの中身になっています。',
+    [...chips([['I don\'t know', GRAY], ['if he will come.', BLUE]], 16, 34, 14), t(160, 66, '↑ 知らないことの中身', 12, C.blue, true), w(30, 90, 260, 30, 'know / be sure / wonder / ask のうしろ', BLUE, 12), t(160, 146, '「彼が来るかどうか」', 13, C.ink, true)],
+    '〜かどうか ＝ know などのうしろ', BLUE),
+  S('二つ目は「もし〜なら」（条件）です。If he comes, I will be happy. のように、if 以下が条件を表し、主となる文が別にあります。If it rains tomorrow, I will stay home.（もし明日雨なら、家にいます）。',
+    [...chips([['If he comes,', GREEN], ['I will be happy.', GRAY]], 16, 34, 14), t(160, 66, '条件　　　　　　　　結果', 12, C.green, true), w(30, 90, 260, 30, '条件 ＋ 主となる文', GREEN, 13), t(160, 146, '「もし彼が来たら」', 13, C.ink, true)],
+    'もし〜なら ＝ 条件 ＋ 主となる文', GREEN),
+  S('いちばん確実な見分け方は whether に置きかえることです。「〜かどうか」の if は whether に置きかえられますが、「もし〜なら」の if は置きかえられません。',
+    [w(8, 12, 304, 28, 'I don\'t know if/whether he will come.', BLUE, 12), t(160, 52, '○ whether に置きかえられる', 12, C.green, true), w(8, 78, 304, 28, 'If/Whether he comes, I will be happy.', RED, 12), t(160, 118, '× 意味が通らない（条件の if）', 12, C.red, true)],
+    'whether に置きかえられるか、で確かめる', YELLOW),
+  S('なぜ If it rains tomorrow と、未来なのに現在形（rains）を使うの？ → 条件を表す if の中では、未来のことでも現在形で言う決まりがあるからです。will を使うのは、主となる文のほうです。',
+    [bx(12, 6, 296, 30, 'なぜ？ 未来なのに現在形？', PURPLE[0], PURPLE[1], 12), w(10, 46, 300, 30, '× If it will rain tomorrow, ...', RED, 13), w(10, 86, 300, 30, '○ If it rains tomorrow, I will stay home.', GREEN, 12), t(160, 138, 'if の中は現在形　主となる文は will', 12, C.ink, true)],
+    '条件の if の中は、未来でも現在形', RED),
+  S('一方、「〜かどうか」の if の中では、will をそのまま使います。I don\'t know if it will rain tomorrow.（明日雨が降るかどうかわかりません）。同じ if でも中の時制がちがうので、意味を先に決めます。',
+    [w(10, 14, 300, 30, 'I don\'t know if it will rain tomorrow.', BLUE, 12), t(160, 60, '〜かどうか → will を使ってよい', 13, C.green, true), w(10, 86, 300, 30, 'If it rains tomorrow, I will stay home.', GREEN, 12), t(160, 132, 'もし〜なら → 中は現在形', 13, C.red, true)],
+    '同じ if でも、時制のルールがちがう', GREEN),
+  S('まとめです。「〜かどうか」の if（know のうしろ・whether に置きかえられる・will を使える）と、「もし〜なら」の if（条件・置きかえ不可・中は現在形）。意味を先に決めてから時制を見ます。',
+    [...table(['', '〜かどうか', 'もし〜なら'], [['whether', 'おきかえOK', 'おきかえ不可'], ['中の時制', 'will を使える', '現在形']], 14, 14, [70, 110, 110], 30, 12), t(160, 134, '意味 → 時制 の順に考える', 13, C.red, true)],
+    '意味を先に決めてから、時制を見る', YELLOW),
+], '二つの if：〜かどうか と もし〜なら'));
+
+// ── 間接疑問④：時制のそろえ方（節0: 時制をそろえる） ──
+reg('eigo_s222', 0, show([
+  S('I know where he lives. を過去にすると、I knew where he lived. になります。knew に合わせて、うしろの lives も lived に変わります。これを時制（じせい）の一致といいます。',
+    [w(10, 14, 300, 30, 'I know where he lives.', BLUE, 14), ar(160, 46, 160, 60, C.main), w(10, 62, 300, 30, 'I knew where he lived.', GREEN, 14), t(160, 116, 'know → knew　lives → lived', 13, C.red, true), t(160, 140, '両方とも過去にそろえる', 12, C.ink)],
+    '主となる文が過去なら、中も過去', GREEN),
+  S('なぜうしろの lives まで lived にするの？ → 英語は、文全体で時をそろえる言語だからです。日本語は「住んでいると知っていた」と後半をそのままにできますが、英語では過去の文の中に現在の動詞を残さないのが原則です。',
+    qa('中の動詞も過去にするのは？', '英語は 文全体で時をそろえる\n\n日本語：「住んでいると知っていた」\n　（後半はそのままOK）\n英語：knew … lived（そろえる）', BLUE, 13),
+    '日本語とちがい、英語は時をそろえる', BLUE),
+  S('そろえ方は、一段階うしろへずらすだけです。is / are → was / were、live / lives → lived、can → could、will → would、may → might。',
+    [...table(['もとの形', '過去にそろえる'], [['is / are', 'was / were'], ['live / lives', 'lived'], ['can', 'could'], ['will', 'would'], ['may', 'might']], 40, 4, [110, 120], 22, 13), t(160, 152, '一段階うしろへずらす', 12, C.green, true)],
+    '一段階うしろへずらす', GREEN),
+  S('例 ①。I don\'t know what he wants.（彼が何をほしがっているか知らない）を過去にすると、I didn\'t know what he wanted. です。didn\'t know に合わせて wants → wanted になります。',
+    [w(10, 12, 300, 30, 'I don\'t know what he wants.', BLUE, 13), ar(160, 44, 160, 58, C.main), w(10, 60, 300, 30, 'I didn\'t know what he wanted.', GREEN, 13), t(160, 112, 'wants → wanted', 13, C.red, true), t(160, 136, '× I didn\'t know what he wants.', 12, C.red)],
+    '過去の文の中は、過去形', GREEN),
+  S('例 ②。She asks me if I can swim. は過去にすると She asked me if I could swim. です。can が could に変わります。I think he will come. も I thought he would come. で、will が would になります。',
+    [w(8, 10, 304, 28, 'She asks me if I can swim.', BLUE, 13), ar(160, 40, 160, 50, C.main), w(8, 52, 304, 28, 'She asked me if I could swim.', GREEN, 13), w(8, 92, 304, 28, 'I think he will come.', BLUE, 13), ar(160, 122, 160, 132, C.main), w(8, 134, 304, 28, 'I thought he would come.', GREEN, 13)],
+    'can → could　will → would', GREEN),
+  S('例外もあります。いつでも変わらない事実は、過去の文の中でも変えません。The teacher said that the earth goes around the sun.（地球は太陽のまわりを回ると先生は言った）。中学受験では、まず原則をしっかり身につけます。',
+    [w(10, 14, 300, 44, 'The teacher said that\nthe earth goes around the sun.', MAIN, 13), t(160, 78, '↑ goes のまま（今も変わらない事実）', 12, C.red, true), t(160, 108, 'まず原則：過去なら中も過去', 13, C.green, true),],
+    'いつでも本当のことは、変えなくてよい', YELLOW),
+  S('なぜ日本語につられるとまちがえるの？ → 日本語では「彼がほしがっている」と現在のように言えるので、英語でも wants のままにしてしまいやすいからです。主となる文が過去かどうかを先に確かめます。',
+    [bx(12, 6, 296, 30, 'なぜ？ 日本語につられてまちがえる？', PURPLE[0], PURPLE[1], 12), w(10, 46, 300, 30, '「彼が何をほしがっているか知らなかった」', GRAY, 12), w(10, 86, 300, 30, '× I didn\'t know what he wants.', RED, 13), w(10, 120, 300, 30, '○ I didn\'t know what he wanted.', GREEN, 13)],
+    '主となる文が過去か、先に確かめる', RED),
+  S('まとめです。主となる文が過去なら、中に入った文の動詞も過去にそろえます。is → was、live → lived、can → could、will → would。語順は「疑問詞（if / whether）＋主語＋動詞」のままです。',
+    [w(14, 12, 290, 32, '主となる文が過去 → 中も過去', GREEN, 14), w(14, 52, 290, 32, 'is → was　can → could　will → would', BLUE, 12), w(14, 92, 290, 32, '語順は「主語 ＋ 動詞」のまま', MAIN, 13)],
+    '時制の一致：一段階うしろへ', YELLOW),
+], '間接疑問の時制のそろえ方'));
 
 export const XF_CEE_FIGURES: Record<string, DiagramFigure> = F;
 export const XF_CEE_SECTIONS: Record<string, string> = SEC;

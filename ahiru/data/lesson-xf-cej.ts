@@ -27,7 +27,7 @@ const S = (note: string, top: DiagramElement[], capText: string, c: Col = BLUE, 
 // 「なぜ？」の問い → 答え
 const Q = (note: string, q: string, a: string, capText: string, c: Col = GREEN, aSize = 13) =>
   S(note, [
-    bx(10, 8, 300, 34, 'なぜ？ ' + q, PURPLE[0], PURPLE[1], 12),
+    bx(10, 8, 300, 34, 'なぜ？ ' + q.replace(/^なぜ/, ''), PURPLE[0], PURPLE[1], 12),
     ar(160, 44, 160, 56, PURPLE[0]),
     bx(10, 58, 300, 100, a, c[0], c[1], aSize),
   ], capText, c);
@@ -132,7 +132,7 @@ const cw = (ws: string[], c: Col): [string, Col][] => ws.map((w) => [w, c] as [s
 
 // 上に「なぜ？」の問い、下は自由な絵
 const Qt = (note: string, q: string, bottom: DiagramElement[], capText: string, c: Col = GREEN) =>
-  S(note, [bx(10, 8, 300, 34, 'なぜ？ ' + q, PURPLE[0], PURPLE[1], 12), ar(160, 44, 160, 52, PURPLE[0]), ...bottom], capText, c);
+  S(note, [bx(10, 8, 300, 34, 'なぜ？ ' + q.replace(/^なぜ/, ''), PURPLE[0], PURPLE[1], 12), ar(160, 44, 160, 52, PURPLE[0]), ...bottom], capText, c);
 
 
 // ── 絵の描写③：数量と様子をつけ加える ──
@@ -628,14 +628,14 @@ const f_459 = show([
       ...wd(cw(['He', 'isn\'t', 'play', 'soccer.'], RED), 98, { size: 12 }), lb(160, 138, '× 「です」の否定と「します」の否定を混ぜた', 12, C.red, 'middle', true)],
     '「です」の否定と「します」の否定', BLUE),
   S('have の文では、has にはしません。She doesn\'t have a dog.（かのじょは犬を飼っていません）。doesn\'t のうしろは、いつももとの形の have です。',
-    [...wd([['She', GREEN], ['doesn\'t', RED], ['have', MAIN], ['a dog.', MAIN]], 24, { size: 13 }), lb(160, 76, '○', 20, C.green, 'middle', true), ...wd(cw(['She', 'doesn\'t', 'has', 'a dog.'], RED), 98, { size: 13 }), lb(160, 150, '', 10)],
+    [...wd([['She', GREEN], ['doesn\'t', RED], ['have', MAIN], ['a dog.', MAIN]], 24, { size: 13 }), lb(160, 76, '○', 20, C.green, 'middle', true), ...wd(cw(['She', 'doesn\'t', 'has', 'a dog.'], RED), 98, { size: 13 })],
     'doesn\'t have（has にしない）', GREEN),
   S('答え方にも使います。Do you like dogs? には No, I don\'t.、Does he play tennis? には No, he doesn\'t. と答えます。たずねる文と同じ語を使います。',
     [bx(10, 12, 300, 28, 'Do you like dogs?', C.purple, FILL.purple, 13), ar(160, 42, 160, 54, C.purple), bx(10, 56, 300, 28, 'No, I don\'t.', C.green, FILL.green, 13),
       bx(10, 98, 300, 28, 'Does he play tennis?', C.purple, FILL.purple, 13), ar(160, 128, 160, 138, C.purple), bx(10, 140, 300, 24, 'No, he doesn\'t.', C.green, FILL.green, 12)],
     'セットで覚える', GREEN),
   S('まとめです。①動詞の前に don\'t か doesn\'t。②I・you・we・they は don\'t、he・she・it は doesn\'t。③doesn\'t のうしろは、s なしのもとの形。④一般動詞の文に isn\'t は使わない。',
-    L([['① 動詞の前に don\'t / doesn\'t', BLUE], ['② I you we they → don\'t　he she it → doesn\'t', GREEN], ['③ doesn\'t のうしろは もとの形', RED], ['④ isn\'t は 一般動詞に使わない', PURPLE]], 8, 30, 6, 12),
+    L([['① 動詞の前に don\'t / doesn\'t', BLUE], ['② 主語が1人・1つ → doesn\'t、それ以外 → don\'t', GREEN], ['③ doesn\'t のうしろは もとの形', RED], ['④ isn\'t は 一般動詞に使わない', PURPLE]], 8, 30, 6, 12),
     'I\'m not と I don\'t はちがう', GREEN),
 ], '「〜しません」の文');
 
@@ -656,7 +656,7 @@ const f_460 = show([
   Q('では、Does のうしろの動詞に、なぜ s をつけないのでしょう。s の役目を Does が引き受けているからです。Does he likes dogs? は、s が二重になっているのでまちがいです。',
     'Does のあとは s なし？', 'Does he like dogs?\ns の役目は Does が引き受ける\n→ 動詞は もとの形 like\n× Does he likes dogs?', 'Does を書いたら 動詞はもとの形', GREEN, 14),
   S('答え方です。Do で聞かれたら do、Does で聞かれたら does で答えます。Do you like dogs? には Yes, I do. か No, I don\'t.。Does he like dogs? には Yes, he does. か No, he doesn\'t. です。',
-    tab([['たずねる文', 'Yes', 'No'], ['Do you like dogs?', 'Yes, I do.', 'No, I don\'t.'], ['Do they play baseball?', 'Yes, they do.', 'No, they don\'t.'], ['Does he like dogs?', 'Yes, he does.', 'No, he doesn\'t.']], 12, [130, 85, 85], 32, 11),
+    tab([['たずねる文', 'Yes', 'No'], ['Do you like dogs?', 'Yes, I do.', 'No, I don\'t.'], ['Do they like dogs?', 'Yes, they do.', 'No, they don\'t.'], ['Does he like dogs?', 'Yes, he does.', 'No, he doesn\'t.']], 12, [112, 94, 94], 32, 11),
     'Do → do　Does → does', BLUE),
   Qt('なぜ答えでも、質問と同じ語を使うのでしょう。答えは、質問の動詞をくり返しているからです。Yes, I do. の do は「Yes, I like dogs.」の like dogs の代わりです。Are you ～? なら am、Do ～? なら do です。',
     '答えの語をそろえるの？',
@@ -695,12 +695,306 @@ const f_461 = show([
     [...wd([['Let\'s', BLUE], ['play', GREEN], ['soccer.', MAIN]], 58, { size: 14 }), lb(160, 98, 'Let\'s ＝ Let us', 13, C.ink, 'middle', true), ...wd(cw(['Let\'s', 'to', 'play'], RED), 116, { total: 130, size: 12 }), ...wd(cw(['Let\'s', 'playing'], RED), 116, { x0: 180, total: 130, size: 12 }), lb(160, 154, '× to や -ing は つけない', 12, C.red, 'middle', true)],
     'Let\'s ＋ もとの形'),
   S('さそわれたときの答え方です。Yes, let\'s.（そうしよう）、Sounds good.（いいね）、Sorry, I can\'t.（ごめん、できない）。教室では Raise your hand.（手をあげて）、Repeat after me.（あとについて言って）なども使います。',
-    [bx(10, 10, 300, 28, 'Let\'s play soccer.', C.purple, FILL.purple, 14), ...L([['Yes, let\'s.　（そうしよう）', GREEN], ['Sounds good.　（いいね）', GREEN], ['Sorry, I can\'t.　（ごめん、できない）', RED]], 46, 26, 6, 12), lb(160, 140, 'Raise your hand.　Repeat after me.', 12, C.ink, 'middle')],
+    [bx(10, 10, 300, 28, 'Let\'s play soccer.', C.purple, FILL.purple, 14), ...L([['Yes, let\'s.　（そうしよう）', GREEN], ['Sounds good.　（いいね）', GREEN], ['Sorry, I can\'t.　（ごめん、できない）', RED]], 44, 24, 5, 12), lb(160, 150, 'Raise your hand.　Repeat after me.', 12, C.ink, 'middle')],
     'さそわれたら 返事をする', GREEN),
   S('まとめです。①命令する文は主語なしで、動詞のもとの形から始める。②Don\'t ＋ もとの形。③be動詞は Be。④Let\'s のあとも もとの形。',
     L([['① 動詞のもとの形から始める（You は書かない）', BLUE], ['② Don\'t ＋ もとの形', RED], ['③ be動詞は Be（Be quiet.）', GREEN], ['④ Let\'s ＋ もとの形', PURPLE]], 8, 30, 6, 12),
     '動詞から始まったら 命令する文', GREEN),
 ], '命令する文・さそう文');
+
+// ── 場所を表す語：in・on・under・by・near ──
+const f_462 = show([
+  S('場所を表す語を、絵で覚えます。The cat is in the box.（はこの中）、The book is on the desk.（つくえの上）、The ball is under the chair.（いすの下）。まず in・on・under の3つです。',
+    [bx(14, 40, 80, 50, '', C.main, FILL.warm), ci(54, 66, 11, 'cat', C.red, FILL.red, 9), lb(54, 108, 'in the box', 12, C.ink, 'middle', true),
+      ln(118, 80, 204, 80, C.main, false, 3), ci(160, 66, 11, 'book', C.blue, FILL.blue, 8), lb(161, 108, 'on the desk', 12, C.ink, 'middle', true),
+      ln(226, 56, 306, 56, C.main, false, 3), ln(232, 56, 232, 92, C.main, false, 2), ln(300, 56, 300, 92, C.main, false, 2), ci(266, 80, 11, 'ball', C.green, FILL.green, 8), lb(266, 108, 'under the chair', 11, C.ink, 'middle', true)],
+    'in ＝ 中　on ＝ 上　under ＝ 下', MAIN),
+  S('in は「〜の中に」です。in the box・in the bag・in the room・in Japan。The cat is in the box.（ねこははこの中にいます）。',
+    [bx(30, 20, 120, 80, '', C.main, FILL.warm), ci(90, 66, 14, 'cat', C.red, FILL.red, 10), ...wordBoxes(['in the box', 'in the bag', 'in the room', 'in Japan'], 176, 14, 134, BLUE, 24, 12), lb(90, 118, 'The cat is in the box.', 12, C.ink, 'middle', true)],
+    'in ＝ 〜の中に', BLUE),
+  Qt('かべや天じょうは、なぜ in ではなく on なのでしょう。on は「面にくっついている」ときに使うからです。かべのポスターも、天じょうの電気も、くっついているので on です。',
+    'かべや天じょうも on？',
+    [ln(40, 58, 40, 146, C.main, false, 3), bx(40, 80, 30, 36, '', C.blue, FILL.blue), lb(84, 98, 'on the wall', 12, C.ink, 'start', true), ln(150, 60, 306, 60, C.main, false, 3), ci(228, 74, 11, 'light', C.red, FILL.red, 8), lb(228, 104, 'on the ceiling', 12, C.ink, 'middle', true),
+      ln(140, 146, 306, 146, C.main, false, 3), ci(160, 133, 10, 'book', C.green, FILL.green, 8), lb(240, 130, 'on the desk', 12, C.ink, 'middle', true)],
+    'くっついている面 → on'),
+  S('under は「〜の下に」です。The ball is under the chair.（ボールはいすの下にあります）、under the tree（木の下に）。',
+    [ln(30, 40, 120, 40, C.main, false, 3), ln(36, 40, 36, 90, C.main, false, 2), ln(114, 40, 114, 90, C.main, false, 2), ci(75, 78, 11, 'ball', C.green, FILL.green, 8),
+      ci(236, 40, 26, 'tree', C.green, FILL.green, 10), ln(236, 66, 236, 100, C.main, false, 4), ci(210, 90, 9, 'cat', C.red, FILL.red, 8), ...wordBoxes(['under the chair', 'under the tree'], 20, 108, 120, GREEN, 22, 12).slice(0, 1), bx(186, 108, 120, 22, 'under the tree', C.green, FILL.green, 12)],
+    'under ＝ 〜の下に', GREEN),
+  S('by と near は「〜のそばに」です。by the window（まどのそばに）のほうが近く、near the station（駅の近くに）は少しはなれていてもよい言い方です。',
+    [bx(20, 30, 50, 60, 'window', C.blue, FILL.blue, 9), ci(94, 70, 11, 'me', C.red, FILL.red, 9), lb(70, 118, 'by the window\n（すぐそば）', 11, C.ink, 'middle', true),
+      bx(190, 30, 50, 60, 'station', C.blue, FILL.blue, 9), ci(290, 70, 11, 'me', C.red, FILL.red, 9), ln(246, 70, 276, 70, C.gray, true), lb(250, 118, 'near the station\n（少しはなれて）', 11, C.ink, 'middle', true)],
+    'by ＝ すぐそば　near ＝ 近く', MAIN),
+  S('そのほかの語です。in front of（〜の前に）、behind（〜のうしろに）、between（〜の間に）、next to（〜のとなりに）、over（〜の上のほうに）。',
+    L([['in front of the school　（学校の前に）', BLUE], ['behind the door　（ドアのうしろに）', BLUE], ['between the chair and the desk　（間に）', GREEN], ['next to the post office　（となりに）', GREEN], ['over the table　（はなれた上のほうに）', PURPLE]], 8, 24, 5, 12),
+    '位置を表す語は 場所の絵で覚える', MAIN),
+  Q('「つくえの上」を in the desk と書くと、どうなるのでしょう。in は「中」なので、in the desk は「つくえの引き出しの中」になります。表面にのっているなら on the desk です。',
+    'in the desk ではだめ？', 'in the desk ＝ つくえの 引き出しの中\non the desk ＝ つくえの 上（表面）\n→ のっているなら on', '表面にのっているなら on', RED, 14),
+  S('in と on は、時にも使います。on Monday（月曜日に）、on May 5th（5月5日に）、in May（5月に）、in summer（夏に）、in 2026（2026年に）。バスに乗って行くときは by bus です。',
+    [bx(10, 12, 146, 26, 'on：曜日・日付', C.blue, FILL.blue, 13), ...wordBoxes(['on Monday', 'on May 5th'], 10, 42, 142, BLUE, 24, 12), bx(164, 12, 146, 26, 'in：月・季節・年', C.green, FILL.green, 13), ...wordBoxes(['in May', 'in summer', 'in 2026'], 168, 42, 142, GREEN, 22, 12),
+      bx(40, 124, 240, 28, 'by bus（乗り物の手段は by）', C.main, FILL.warm, 13)],
+    '場所のことばは 時にも使う', BLUE),
+  S('まとめです。in は中、on はくっついた面、under は下です。by はすぐそば、near は近く。かべは on、つくえの上も on です。',
+    L([['in ＝ 中　　on ＝ くっついた面　　under ＝ 下', BLUE], ['by ＝ すぐそば　　near ＝ 近く', GREEN], ['かべ・天じょう・つくえの上 ＝ on', PURPLE]], 14, 34, 10, 12),
+    'まずは in・on・under を確実に', GREEN),
+], '場所を表す語');
+
+// ── 時を表す語：at・on・in ──
+const f_463 = show([
+  S('「〜に」を表す at・on・in は、時の長さで使い分けます。時こくは at、日（曜日・日付）は on、月・季節・年は in です。せまい順に at → on → in と覚えます。',
+    [bx(10, 8, 300, 156, '', C.green, FILL.green), lb(24, 24, 'in　月・季節・年', 13, C.green, 'start', true), bx(40, 38, 240, 110, '', C.blue, FILL.blue), lb(54, 54, 'on　日（曜日・日付）', 13, C.blue, 'start', true), bx(80, 70, 160, 62, 'at\n時こく', C.red, FILL.red, 16)],
+    'at ＜ on ＜ in（せまい順）', MAIN),
+  Q('では、なぜ「せまい順に at・on・in」なのでしょう。at・on・in は、場所を表す意味がそのまま時にも使われているからです。at は一点、on は面、in は中。時こくは「点」、日は「面」、月や季節は「中に入っている広がり」にあたります。',
+    'なぜ at・on・in の順？', '場所：at 一点 → on 面 → in 中\n時　：時こく（点）→ 日（面）→ 月・年（中）\n→ 点 → 面 → 中 の順\n→ せまい順に at・on・in', '点 → 面 → 中', GREEN, 13),
+  S('場所の例です。at the station（駅で。一点）、on the desk（つくえの上に。面）、in the room（部屋の中に。空間）。時の使い分けも、これと同じ考え方です。',
+    [bx(10, 14, 94, 56, 'at the station\n（一点）', C.red, FILL.red, 11), bx(113, 14, 94, 56, 'on the desk\n（面）', C.blue, FILL.blue, 11), bx(216, 14, 94, 56, 'in the room\n（中）', C.green, FILL.green, 11),
+      lb(160, 100, '時でも 同じ順', 14, C.ink, 'middle', true), ...cells(['at seven', 'on Monday', 'in May'], 116, MAIN, 12, 28, 6)],
+    '場所も時も「点 → 面 → 中」', BLUE),
+  S('時の例です。at seven（7時に）・at eight thirty・at noon、on Monday・on May 5th・on my birthday、in May・in summer・in 2026・in the morning です。',
+    [bx(10, 8, 94, 24, 'at', C.red, FILL.red, 14), ...wordBoxes(['at seven', 'at eight thirty', 'at noon'], 10, 36, 94, RED, 24, 11), bx(113, 8, 94, 24, 'on', C.blue, FILL.blue, 14), ...wordBoxes(['on Monday', 'on May 5th', 'on my birthday'], 113, 36, 94, BLUE, 24, 11),
+      bx(216, 8, 94, 24, 'in', C.green, FILL.green, 14), ...wordBoxes(['in May', 'in summer', 'in 2026'], 216, 36, 94, GREEN, 24, 11)],
+    'at ＝ 時こく　on ＝ 日　in ＝ 月から上', MAIN),
+  S('決まった言い方もあります。in the morning（午前中に）、in the afternoon（午後に）、in the evening（夕方に）ですが、夜だけは at night です。曜日がつくと on になり、on Monday morning（月曜日の朝に）と言います。',
+    [...wordBoxes(['in the morning', 'in the afternoon', 'in the evening'], 10, 12, 140, GREEN, 26, 12), bx(164, 12, 146, 26, 'at night（夜だけ at）', C.red, FILL.red, 12), bx(164, 44, 146, 26, 'on Monday morning', C.blue, FILL.blue, 12), lb(160, 130, '日が決まると on が勝つ', 13, C.ink, 'middle', true)],
+    '夜だけ at　日が決まると on', RED),
+  Qt('every day に、なぜ at・on・in をつけないのでしょう。every day・today・tomorrow・yesterday・this morning・next week は、それ自体で「いつ」を表すことばだからです。in every day は誤りです。',
+    'every day に前置詞は？',
+    [...cells(['every day', 'today', 'tomorrow'], 56, MAIN, 12, 28, 6), ...cells(['yesterday', 'this morning', 'next week'], 90, MAIN, 11, 28, 6), bx(40, 126, 240, 28, '× in every day　○ every day', C.red, FILL.red, 13)],
+    'それ自体で「いつ」→ 前置詞なし'),
+  S('練習です。I go to bed （ ） nine. → at。We have a party （ ） Sunday. → on。It snows （ ） winter. → in。School starts （ ） April. → in。I eat lunch （ ） twelve. → at。',
+    tab([['文', '答え'], ['I go to bed ( ) nine.', 'at'], ['We have a party ( ) Sunday.', 'on'], ['It snows ( ) winter.', 'in'], ['School starts ( ) April.', 'in'], ['I eat lunch ( ) twelve.', 'at']], 8, [220, 80], 26, 12),
+    '時こくか、日か、月かを 先に決める', GREEN),
+  S('まとめです。①時こくは at。②曜日・日付は on。③月・季節・年は in。④夜は at night、朝・午後は in the ～。⑤every day には何もつけない。',
+    L([['① at ＝ 時こく　② on ＝ 曜日・日付', BLUE], ['③ in ＝ 月・季節・年', GREEN], ['④ at night　in the morning', PURPLE], ['⑤ every day には 何もつけない', RED]], 8, 30, 6, 13),
+    '点 → 面 → 中 ＝ at → on → in', GREEN),
+], 'at・on・in（時）');
+
+// ── たずねる言葉：what・where・when・who・how ──
+const f_464 = show([
+  S('たずねる言葉は5つです。what（何）、where（どこ）、when（いつ）、who（だれ）、how（どのように）。この5つで、知りたいことのほとんどをたずねられます。',
+    [...cells(['what\n何', 'where\nどこ', 'when\nいつ'], 14, MAIN, 14, 50, 8), ...cells(['who\nだれ', 'how\nどのように'], 76, RED, 14, 50, 8, 60, 200), lb(160, 144, '知りたいことを 先頭に置く', 13, C.red, 'middle', true)],
+    '5つのたずねる言葉', MAIN),
+  Q('なぜ、たずねる言葉は文の先頭に来るのでしょう。what・where などは「知りたいことそのもの」だからです。いちばん知りたいことを先に言い、そのあとにふつうのたずねる文（do you like など）を続けます。',
+    'たずねる言葉は先頭？', '知りたいこと ＝ 先頭に置く\nたずねる言葉 ＋ ふつうのたずねる文\nWhat ＋ do you like?\nWhere ＋ does he live?', 'Does のあとは もとの形', GREEN, 14),
+  S('what・where・when の例です。What is this? — It\'s a pen.、Where do you live? — I live in Tokyo.、When is your birthday? — It\'s May 5th. 答えはたずねられた中身を言います。',
+    [bx(10, 8, 148, 26, 'What is this?', C.purple, FILL.purple, 12), bx(164, 8, 146, 26, 'It\'s a pen.', C.green, FILL.green, 12), bx(10, 44, 148, 26, 'Where do you live?', C.purple, FILL.purple, 12), bx(164, 44, 146, 26, 'I live in Tokyo.', C.green, FILL.green, 12), bx(10, 80, 148, 26, 'When is your birthday?', C.purple, FILL.purple, 11), bx(164, 80, 146, 26, 'It\'s May 5th.', C.green, FILL.green, 12)],
+    '何・どこ・いつ', BLUE),
+  S('who と how の例です。Who is that boy? — He is my brother.、How are you? — I\'m fine, thank you.、How do you go to school? — By bus.',
+    [bx(10, 8, 148, 26, 'Who is that boy?', C.purple, FILL.purple, 12), bx(164, 8, 146, 26, 'He is my brother.', C.green, FILL.green, 12), bx(10, 44, 148, 26, 'How are you?', C.purple, FILL.purple, 12), bx(164, 44, 146, 26, 'I\'m fine, thank you.', C.green, FILL.green, 11), bx(10, 80, 148, 26, 'How do you go to school?', C.purple, FILL.purple, 10), bx(164, 80, 146, 26, 'By bus.', C.green, FILL.green, 12)],
+    'だれ・どのように', BLUE),
+  Q('なぜ、Where do you live? に Yes, I do. と答えてはいけないのでしょう。この質問は「はい・いいえ」ではなく、中身（どこか）を聞いているからです。Yes / No で答えるのは Do や Are で始まる質問だけです。',
+    'Yes / No で答えないの？', 'Where do you live?\n× Yes, I do.（どこかが伝わらない）\n○ I live in Osaka.\nYes / No で答えるのは Do・Are で始まる質問', '中身を聞かれたら 中身を答える', RED, 13),
+  S('how は、ことばを足して内容をくわしくします。How old（何才）、How many（いくつ。数えられるもの）、How much（いくら）、How long（どれくらい長い）、How tall（どれくらい高い）です。How many のあとは複数形にします。',
+    tab([['How ～', '意味'], ['How old', '何才'], ['How many books', 'いくつ（複数形）'], ['How much', 'いくら（お金・量）'], ['How long', 'どれくらい長い'], ['How tall', 'どれくらい高い']], 8, [140, 160], 26, 12),
+    'how ＋ ことば で くわしく', BLUE),
+  Qt('職業（しょくぎょう）をたずねるとき、なぜ Who ではなく What を使うのでしょう。What は「何（をする人）か」を聞くことば、Who は「どの人か」を聞くことばだからです。',
+    '職業は What？',
+    [bx(10, 56, 300, 28, 'What is your father? — He is a doctor.', C.green, FILL.green, 12), lb(160, 98, '→ お父さんの仕事は何？', 12, C.green, 'middle', true), bx(10, 112, 300, 28, 'Who is your father? — That man.', C.blue, FILL.blue, 12), lb(160, 152, '→ どの人がお父さん？', 12, C.blue, 'middle', true)],
+    '仕事 → What　どの人 → Who'),
+  S('答えから質問を作る練習です。I go to school by bike. の質問は How do you go to school?。My birthday is in August. の質問は When is your birthday? です。答えの中身から、たずねる言葉を選びます。',
+    [bx(10, 12, 300, 26, 'I go to school by bike.', C.green, FILL.green, 13), ar(160, 40, 160, 52, C.main), bx(10, 54, 300, 26, 'How do you go to school?', C.purple, FILL.purple, 13),
+      bx(10, 92, 300, 26, 'My birthday is in August.', C.green, FILL.green, 13), ar(160, 120, 160, 132, C.main), bx(10, 134, 300, 26, 'When is your birthday?', C.purple, FILL.purple, 13)],
+    '答えの中身 → たずねる言葉', GREEN),
+  S('まとめです。①知りたいことを先頭に。②うしろはふつうのたずねる文。③中身を答える（Yes / No ではない）。④How many のあとは複数形。⑤職業は What。',
+    L([['① 知りたいこと → 先頭（what・where・when・who・how）', BLUE], ['② うしろは ふつうのたずねる文', GREEN], ['③ 中身を答える（Yes / No ×）', RED], ['④ How many ＋ 複数形　職業は What', PURPLE]], 8, 30, 6, 11),
+    '5つの言葉で たいていの質問ができる', GREEN),
+], 'たずねる言葉');
+
+// ── 語彙①：まちの中の建物と場所 ──
+const f_465 = show([
+  S('まちの建物と場所を、英語で覚えます。school・library・park・station・post office・bank・hospital・zoo など。場所の名前と「そこで何をするか」を対にして覚えると、会話でも使えます。',
+    [...cells(['school', 'library', 'park'], 12, GREEN, 13, 40, 8), ...cells(['station', 'post office', 'bank'], 60, BLUE, 12, 40, 8), ...cells(['hospital', 'zoo', 'bakery'], 108, MAIN, 13, 40, 8)],
+    'まちの建物と場所', MAIN),
+  S('学校・勉強に関係する場所と、買い物の場所です。school（学校）・classroom（教室）・library（図書館）・gym（体育館）・playground（運動場）、supermarket（スーパー）・bookstore（書店）・bakery（パン屋）・department store（デパート）。',
+    [bx(10, 8, 146, 24, '学校・勉強', C.green, FILL.green, 13), ...wordBoxes(['school', 'classroom', 'library', 'gym', 'playground'], 10, 36, 142, GREEN, 20, 11, 3), bx(164, 8, 146, 24, '買い物', C.blue, FILL.blue, 13), ...wordBoxes(['supermarket', 'bookstore', 'bakery', 'department store', 'flower shop'], 168, 36, 142, BLUE, 20, 11, 3)],
+    '学校の場所 と 買い物の場所', GREEN),
+  S('公共の場所と、楽しむ場所です。station（駅）・post office（郵便局）・bank（銀行）・hospital（病院）・police station（けいさつ署）・city hall（市役所）、park（公園）・zoo（動物園）・aquarium（水族館）・museum（博物館）・restaurant・movie theater（映画館）。',
+    [bx(10, 8, 146, 24, '公共の場所', C.red, FILL.red, 13), ...wordBoxes(['station', 'post office', 'bank', 'hospital', 'city hall'], 10, 36, 142, RED, 20, 11, 3), bx(164, 8, 146, 24, '楽しむ場所', C.purple, FILL.purple, 13), ...wordBoxes(['park', 'zoo', 'aquarium', 'museum', 'movie theater'], 168, 36, 142, PURPLE, 20, 11, 3)],
+    '公共の場所 と 楽しむ場所', RED),
+  S('「そこで何をするか」と対にして覚えます。I study at school.、I read books in the library.、I buy food at the supermarket.、I see animals at the zoo.、I take a train at the station.',
+    L([['school ─ I study at school.', GREEN], ['library ─ I read books in the library.', GREEN], ['supermarket ─ I buy food at the supermarket.', BLUE], ['zoo ─ I see animals at the zoo.', PURPLE], ['station ─ I take a train at the station.', RED]], 8, 24, 5, 11),
+    '場所 ＋ そこでする動作', MAIN),
+  Q('go to school には the がなく、go to the park には the があります。なぜでしょう。学校のように「そこで活動する場所」は、建物ではなく活動を表すので、the をつけないことが多いからです。公園は建物・場所そのものなので the をつけます。',
+    'school には the がない？', 'go to school ＝ 勉強しに行く（活動）\ngo to the park ＝ 公園という場所へ\n→ 活動する場所は the なしが多い\n※ go home は to なし', 'go to school / go to the park', BLUE, 13),
+  Qt('go home に、なぜ to をつけないのでしょう。home は「家へ」の意味をすでにもっているからです。go there（そこへ行く）、come here（ここへ来る）も同じで、to をつけません。',
+    'go home に to は？',
+    [...wd([['I', GREEN], ['go', RED], ['home.', MAIN]], 56, { size: 14, total: 160, x0: 10 }), lb(250, 70, '○', 20, C.green, 'middle', true), ...wd(cw(['I', 'go', 'to home.'], RED), 100, { size: 14, total: 160, x0: 10 }), lb(250, 114, '×', 20, C.red, 'middle', true), lb(160, 150, 'go there　come here も to なし', 12, C.ink, 'middle', true)],
+    'home・there・here には to なし'),
+  S('2語で書く建物名があります。post office・police station・fire station・convenience store・department store・movie theater・city hall。間を1語分あけて書きます。',
+    [...wordBoxes(['post office', 'police station', 'fire station', 'city hall'], 10, 12, 142, MAIN, 28, 12, 6), ...wordBoxes(['convenience store', 'department store', 'movie theater'], 168, 12, 142, MAIN, 28, 12, 6), lb(160, 154, 'postoffice と つなげて書かない', 12, C.red, 'middle', true)],
+    '2語の建物は 間をあける', MAIN),
+  S('まとめです。①場所の名前と「そこですること」を対にして覚える。②go to school / go to the park、③go home には to なし。④2語の建物名は間をあける。',
+    L([['① 場所 ＋ そこでする動作', BLUE], ['② go to ＋ 場所（school は the なし）', GREEN], ['③ go home（to なし）', PURPLE], ['④ post office など 2語は間をあける', RED]], 8, 30, 6, 13),
+    '場所の名前は 動作とセット', GREEN),
+], 'まちの建物と場所');
+
+// ── 語彙②：スポーツと楽器 ──
+const f_466 = show([
+  S('play のあとに the がつくのは、楽器です。play the piano のように、楽器には the をつけます。スポーツには the をつけず、play soccer と言います。',
+    [bx(10, 12, 146, 30, 'スポーツ：the なし', C.red, FILL.red, 13), ...wordBoxes(['play soccer', 'play baseball', 'play tennis'], 10, 48, 142, RED, 26, 13, 6), bx(164, 12, 146, 30, '楽器：the あり', C.green, FILL.green, 13), ...wordBoxes(['play the piano', 'play the guitar', 'play the violin'], 168, 48, 142, GREEN, 26, 12, 6)],
+    'スポーツは the なし、楽器は the あり', MAIN),
+  S('play を使うスポーツです。soccer・baseball・tennis・basketball・volleyball・badminton・table tennis。どれも the はつけません。',
+    [...wordBoxes(['play soccer', 'play baseball', 'play tennis', 'play basketball'], 10, 12, 142, RED, 26, 13, 6), ...wordBoxes(['play volleyball', 'play badminton', 'play table tennis'], 168, 12, 142, RED, 26, 12, 6)],
+    'play ＋ スポーツ名（the なし）', RED),
+  S('play を使う楽器です。the piano・the guitar・the violin・the recorder・the drums・the flute。楽器には the をつけます。',
+    [...wordBoxes(['play the piano', 'play the guitar', 'play the violin'], 10, 12, 142, GREEN, 26, 13, 6), ...wordBoxes(['play the recorder', 'play the drums', 'play the flute'], 168, 12, 142, GREEN, 26, 12, 6)],
+    'play the ＋ 楽器名', GREEN),
+  Q('では、なぜ楽器には the がつき、スポーツにはつかないのでしょう。楽器は「ピアノという種類の楽器そのもの」を指して「その楽器をひく」と言う習慣があるからです。スポーツは「サッカーという活動をする」ので、活動の名前に冠詞（かんし）はつけません。理屈より、長い習慣で決まった形なので、一点で覚えます。',
+    'なぜ the の有無がちがう？', '楽器 ＝ その楽器そのものを指す → the\nスポーツ ＝ 活動の名前 → the なし\n長い習慣で決まった形\n→ 「楽器は the あり」と覚える', '一点だけ覚える', BLUE, 13),
+  S('swim・run・ski・skate には play を使いません。I swim in summer.、I run every morning. のように、動作そのものが動詞だからです。日本の武道（柔道・空手）は do を使います。do judo、do karate。',
+    [bx(10, 12, 146, 26, 'play をつけない', C.red, FILL.red, 13), ...wordBoxes(['I swim in summer.', 'I run every morning.', 'I ski.'], 10, 42, 142, RED, 26, 11, 6), bx(164, 12, 146, 26, 'do を使う', C.green, FILL.green, 13), ...wordBoxes(['do judo', 'do karate', 'do kendo'], 168, 42, 142, GREEN, 26, 13, 6), lb(160, 140, '× play swimming', 13, C.red, 'middle', true)],
+    '動作そのものが動詞なら play は不要', RED),
+  S('「好き」「得意」の言い方です。I like soccer.、I like playing the piano.、I am good at tennis.、I can play the piano. たずねるときは Do you play any sports? や What sport do you like? です。',
+    [...L([['I like soccer.　（好き）', MAIN], ['I am good at tennis.　（得意）', MAIN], ['I can play the piano.　（ひける）', MAIN]], 10, 26, 6, 12), bx(10, 108, 300, 24, 'Do you play any sports? — Yes, I play soccer.', C.purple, FILL.purple, 11), bx(10, 136, 300, 24, 'What sport do you like? — I like basketball.', C.purple, FILL.purple, 11)],
+    '好き・得意・できる', BLUE),
+  S('「見る」「選手」の言い方です。play soccer（する）、watch soccer（見る）、a soccer game（試合）、a soccer player（選手）。決まった言い方として、watch TV は the なし、listen to the radio は the ありです。',
+    L([['play soccer　（サッカーをする）', GREEN], ['watch soccer　（サッカーを見る）', BLUE], ['a soccer game　a soccer player', MAIN], ['watch TV（the なし）　listen to the radio（the あり）', PURPLE]], 8, 28, 6, 12),
+    '決まった言い方は 形ごと覚える', MAIN),
+  S('まとめです。①楽器は play the ○○、スポーツは play ○○。②swim・run には play を使わない。③武道は do。④watch TV と listen to the radio は決まった言い方。',
+    L([['① 楽器 play the ○○　スポーツ play ○○', BLUE], ['② swim・run・ski に play は×', RED], ['③ 武道は do（do judo）', GREEN], ['④ watch TV / listen to the radio', PURPLE]], 8, 30, 6, 12),
+    '楽器は the あり、スポーツは the なし', GREEN),
+], 'スポーツと楽器');
+
+// ── 語彙③：季節と行事 ──
+const f_467 = show([
+  S('英語の一年は、4つの季節に分かれます。spring（春）は March・April・May、summer（夏）は June・July・August、fall（秋）は September・October・November、winter（冬）は December・January・February です。',
+    [bx(10, 8, 146, 62, 'spring（春）\nMarch April May', C.green, FILL.green, 12), bx(164, 8, 146, 62, 'summer（夏）\nJune July August', C.red, FILL.red, 12), bx(10, 78, 146, 62, 'fall（秋）\nSeptember October\nNovember', C.main, FILL.yellow, 12), bx(164, 78, 146, 62, 'winter（冬）\nDecember January\nFebruary', C.blue, FILL.blue, 12)],
+    '4つの季節と、月の名前', MAIN),
+  Q('季節の名前は小文字で、月の名前は大文字で書き始めます。なぜちがうのでしょう。月や曜日、行事の決まった名前（Christmas）は、一つ一つが決まった名前だからです。季節は、ふつうの名詞と同じ扱いなので小文字です。',
+    '季節は小文字なの？', '小文字：spring・summer・fall・winter\n大文字：July・Sunday・Christmas\n（名前として決まっているもの）\n→ 書くときに気をつける', 'in summer と in July', GREEN, 14),
+  S('天気を表す語です。sunny（晴れ）・cloudy（くもり）・rainy（雨）・snowy（雪）・windy（風が強い）、hot（暑い）・cold（寒い）・warm（あたたかい）・cool（すずしい）。',
+    [...cells(['sunny', 'cloudy', 'rainy', 'snowy', 'windy'], 12, BLUE, 12, 34, 4), ...cells(['hot', 'cold', 'warm', 'cool'], 56, RED, 13, 34, 6), lb(160, 110, 'How\'s the weather? — It\'s sunny.', 14, C.ink, 'middle', true), lb(160, 136, '（天気はどうですか — 晴れです）', 12, C.ink, 'middle')],
+    '天気の語', BLUE),
+  Q('天気を言うとき、なぜ必ず It\'s で始めるのでしょう。英語の文には必ず主語が必要だからです。天気や時こくを言うときの it は「それ」ではなく、形をそろえるための決まった言い方です。Sunny. だけにしてはいけません。',
+    'It\'s sunny. の It は？', '英語の文には 主語がいる\n天気の it ＝ 決まった言い方\nIt\'s sunny.　It\'s hot in summer.\n× Sunny.（主語がない）', '天気は It\'s で始める', GREEN, 14),
+  S('季節と行事を結びつけます。In spring, we have the entrance ceremony.（春は入学式）、In summer, we have the summer festival.（夏は夏祭り）、In fall, we have sports day.（秋は運動会）、In winter, we have Christmas.（冬はクリスマス）。',
+    L([['In spring, we have the entrance ceremony.', GREEN], ['In summer, we have the summer festival.', RED], ['In fall, we have sports day.', MAIN], ['In winter, we have Christmas.', BLUE]], 10, 28, 8, 11),
+    'In ＋ 季節, we have ＋ 行事.', MAIN),
+  S('行事の名前です。New Year\'s Day（元日）・Children\'s Day（こどもの日）・the Star Festival（七夕）・Halloween・Christmas・New Year\'s Eve（大みそか）。決まった名前の行事は、大文字で書き始めます。',
+    [...wordBoxes(['New Year\'s Day', 'Children\'s Day', 'the Star Festival'], 10, 12, 142, PURPLE, 28, 12, 8), ...wordBoxes(['Halloween', 'Christmas', 'New Year\'s Eve'], 168, 12, 142, PURPLE, 28, 12, 8), lb(160, 140, 'sports day は小文字、Christmas は大文字', 12, C.ink, 'middle', true)],
+    '決まった名前の行事 → 大文字', PURPLE),
+  S('理由は because のあとに続けます。I like summer because I can swim.（泳げるので夏が好きです）。作文では My favorite season is ～. / I like ～ because ～. / In ～, I ～. の3つを組み合わせます。',
+    [...wd([['I like summer', BLUE], ['because', RED], ['I can swim.', GREEN]], 12, { size: 12 }), lb(160, 56, 'because ＋ 理由', 13, C.red, 'middle', true), ...L([['My favorite season is ～.', MAIN], ['I like ～ because ～.', MAIN], ['In ～, I ～.', MAIN]], 78, 26, 6, 12)],
+    '3つの形で 短い作文ができる', GREEN),
+  S('まとめです。①季節は小文字、月と行事の決まった名前は大文字。②天気は It\'s で始める。③fall と autumn はどちらでもよい。④because のあとに理由。',
+    L([['① 季節 summer（小文字）　月 July（大文字）', BLUE], ['② 天気は It\'s sunny.（主語を落とさない）', GREEN], ['③ fall ＝ autumn', PURPLE], ['④ because ＋ 理由', RED]], 8, 30, 6, 12),
+    '大文字・小文字に気をつけて書く', GREEN),
+], '季節と行事');
+
+// ── 語彙④：気持ちを表す語 ──
+const face = (cx: number, cy: number, r: number, kind: 'happy' | 'sad' | 'angry' | 'sleepy', c: Col): DiagramElement[] => {
+  const out: DiagramElement[] = [ci(cx, cy, r, undefined, c[0], c[1])];
+  const e = r * 0.35;
+  if (kind === 'sleepy') {
+    out.push(ln(cx - e - 4, cy - 4, cx - e + 4, cy - 4, C.ink, false, 2), ln(cx + e - 4, cy - 4, cx + e + 4, cy - 4, C.ink, false, 2));
+    out.push(ci(cx, cy + r * 0.4, 3, undefined, C.ink, C.ink));
+    out.push(lb(cx + r * 0.9, cy - r * 0.8, 'z', 10, C.gray, 'middle', true));
+    return out;
+  }
+  out.push(ci(cx - e, cy - 4, 2, undefined, C.ink, C.ink), ci(cx + e, cy - 4, 2, undefined, C.ink, C.ink));
+  if (kind === 'happy') {
+    out.push(ln(cx - e, cy + 6, cx - e / 2, cy + 12, C.ink, false, 2), ln(cx - e / 2, cy + 12, cx + e / 2, cy + 12, C.ink, false, 2), ln(cx + e / 2, cy + 12, cx + e, cy + 6, C.ink, false, 2));
+  } else if (kind === 'sad') {
+    out.push(ln(cx - e, cy + 12, cx - e / 2, cy + 6, C.ink, false, 2), ln(cx - e / 2, cy + 6, cx + e / 2, cy + 6, C.ink, false, 2), ln(cx + e / 2, cy + 6, cx + e, cy + 12, C.ink, false, 2));
+  } else {
+    out.push(ln(cx - e - 5, cy - 12, cx - e + 4, cy - 8, C.ink, false, 2), ln(cx + e + 5, cy - 12, cx + e - 4, cy - 8, C.ink, false, 2), ln(cx - e, cy + 9, cx + e, cy + 9, C.ink, false, 2));
+  }
+  return out;
+};
+
+const f_468 = show([
+  S('気持ちを表す英語を、顔といっしょに覚えます。happy（うれしい）、sad（悲しい）、angry（おこっている）、sleepy（ねむい）。文の形は I am ＋ 気持ちの語 です。',
+    [...face(52, 56, 30, 'happy', C.green).map((e) => e), ...face(122, 56, 30, 'sad', C.blue), ...face(192, 56, 30, 'angry', C.red), ...face(262, 56, 30, 'sleepy', C.purple),
+      lb(52, 106, 'happy', 13, C.ink, 'middle', true), lb(122, 106, 'sad', 13, C.ink, 'middle', true), lb(192, 106, 'angry', 13, C.ink, 'middle', true), lb(262, 106, 'sleepy', 13, C.ink, 'middle', true), lb(160, 138, 'I am happy.　I am sad.', 13, C.ink, 'middle', true)],
+    'I am ＋ 気持ちの語', MAIN),
+  S('気持ちを表す語は、3つに分けて覚えます。基本の気持ち、体の感じ、気持ちの動きです。',
+    [bx(10, 8, 300, 22, '基本：happy sad angry fine good bad', C.green, FILL.green, 12), bx(10, 36, 300, 22, '体の感じ：tired sleepy hungry thirsty sick hot cold', C.blue, FILL.blue, 11),
+      bx(10, 64, 300, 22, '気持ちの動き：excited surprised nervous scared bored glad', C.purple, FILL.purple, 10), lb(160, 110, 'tired つかれた　hungry おなかがすいた', 12, C.ink, 'middle'), lb(160, 130, 'excited わくわく　nervous きんちょう', 12, C.ink, 'middle')],
+    '3つのグループ', BLUE),
+  Qt('気持ちの語は、なぜ be動詞とセットなのでしょう。happy や hungry は「〜です」という状態を表す語で、「です」にあたる be動詞が必要だからです。I happy. のように be動詞を落としてはいけません。',
+    'be動詞を落とさないの？',
+    [...wd([['I', GREEN], ['am', RED], ['happy.', MAIN]], 58, { total: 150, size: 14 }), lb(85, 100, '○', 18, C.green, 'middle', true), ...wd(cw(['I', 'happy.'], RED), 58, { x0: 180, total: 120, size: 14 }), lb(240, 100, '×', 18, C.red, 'middle', true),
+      ...wd([['She', GREEN], ['is', RED], ['tired.', MAIN]], 118, { total: 150, size: 13 }), ...wd([['They', GREEN], ['are', RED], ['excited.', MAIN]], 118, { x0: 180, total: 130, size: 12 })],
+    '気持ちの語は be動詞とセット'),
+  S('一般動詞とならべてはいけません。I am play happy. のような文にはなりません。気持ちの語は一般動詞ではなく、「〜です」を表す形容詞（けいようし）の仲間だからです。',
+    [...wd(cw(['I', 'am', 'play', 'happy.'], RED), 20, { size: 13 }), lb(160, 64, '× 動詞が2つ', 14, C.red, 'middle', true), ...wd([['I', GREEN], ['am', RED], ['happy.', MAIN]], 92, { total: 220, x0: 50, size: 14 }), lb(160, 136, '気持ち ＝ 「です」の仲間', 13, C.ink, 'middle', true)],
+    '気持ちの語 ＋ 一般動詞 は ×', RED),
+  S('程度（ていど）をつけ足せます。very（とても）、so（とても）、a little（少し）。I am very happy.、I am so happy.、I am a little tired.。',
+    L([['I am very happy.　（とても）', MAIN], ['I am so happy.　（とても）', MAIN], ['I am a little tired.　（少し）', MAIN]], 14, 30, 10, 14),
+    'very・so ＝ とても　a little ＝ 少し', BLUE),
+  S('hungry と angry は、一文字ちがうだけでよく似ています。hungry（ハングリー）はおなかがすいた、angry（アングリー）はおこっている。意味を取りちがえないよう注意します。',
+    [bx(20, 20, 130, 54, 'hungry\nおなかがすいた', C.blue, FILL.blue, 14), bx(170, 20, 130, 54, 'angry\nおこっている', C.red, FILL.red, 14), lb(160, 100, 'つづりが似ている！', 13, C.red, 'middle', true), lb(160, 126, '「のどがかわいた」は I\'m thirsty.', 12, C.ink, 'middle')],
+    'hungry と angry を見まちがえない', RED),
+  S('理由とたずね方です。I am happy because it\'s my birthday.（たん生日なのでうれしい）。How are you? — I\'m fine, thank you. / What\'s wrong? — I\'m sick.（どうしたの）。',
+    [bx(10, 8, 300, 26, 'I am happy because it\'s my birthday.', C.green, FILL.green, 12), bx(10, 40, 300, 26, 'I am tired because I played soccer.', C.green, FILL.green, 12), bx(10, 76, 146, 26, 'How are you?', C.purple, FILL.purple, 12), bx(164, 76, 146, 26, 'I\'m fine, thank you.', C.green, FILL.green, 11), bx(10, 108, 146, 26, 'What\'s wrong?', C.purple, FILL.purple, 12), bx(164, 108, 146, 26, 'I\'m sick.', C.green, FILL.green, 12)],
+    'because ＋ 理由', GREEN),
+  S('まとめです。①I am ＋ 気持ちの語。②be動詞を落とさない。③very・so・a little。④hungry と angry に注意。⑤because で理由。',
+    L([['① I am ＋ 気持ちの語', BLUE], ['② be動詞を落とさない（I happy ×）', RED], ['③ very・so・a little', GREEN], ['④ hungry と angry に注意　because ＋ 理由', PURPLE]], 8, 30, 6, 12),
+    '気持ちは be動詞とセット', GREEN),
+], '気持ちを表す語');
+
+// ── 会話①：買い物 ──
+const f_469 = show([
+  S('買い物の会話は、5つの場面でできています。店に入る → ほしいものを言う → 値段をたずねる → 買うと決める → お金をわたす、の順です。',
+    [...row(['①店に入る', '②ほしい\nものを言う', '③値段を\nたずねる'], 14, BLUE, 11, 48, 14), ...row(['④買うと\n決める', '⑤お金を\nわたす'], 76, GREEN, 11, 48, 14).slice(0, 4), lb(160, 144, 'How much is it? が中心', 13, C.red, 'middle', true)],
+    '買い物の会話の流れ', MAIN),
+  S('店員さんが May I help you?（いらっしゃいませ）と言います。ほしいなら Yes, please. I want a T-shirt.、見ているだけなら No, thank you. I\'m just looking. と答えます。',
+    [bx(10, 8, 300, 28, '店員：May I help you?', C.purple, FILL.purple, 13), ar(160, 38, 160, 48, C.purple), bx(10, 50, 300, 28, 'お客：Yes, please. I want a T-shirt.', C.green, FILL.green, 12), bx(10, 86, 300, 28, 'または　No, thank you. I\'m just looking.', C.blue, FILL.blue, 12), lb(160, 138, 'just looking ＝ 見ているだけ', 12, C.ink, 'middle')],
+    '店に入ったとき', BLUE),
+  S('ほしいものを言います。I want a cap, please.（ぼうしがほしいです）。I\'d like a hamburger, please. は I want よりていねいな言い方です。ていねいさの順は、I want a cap. → I want a cap, please. → I\'d like a cap, please. です。',
+    [bx(30, 12, 260, 28, 'I want a cap.', C.main, FILL.warm, 13), ar(160, 42, 160, 52, C.main), bx(30, 54, 260, 28, 'I want a cap, please.', C.blue, FILL.blue, 13), ar(160, 84, 160, 94, C.main), bx(30, 96, 260, 28, 'I\'d like a cap, please.', C.green, FILL.green, 13), lb(160, 144, '下へ行くほど ていねい', 12, C.red, 'middle', true)],
+    '下にいくほど ていねい', GREEN),
+  S('値段は How much is it? （いくらですか）とたずね、It\'s 500 yen. と答えます。ものが2つ以上なら How much are they? — They are 1,000 yen. です。yen は複数でも s をつけません。',
+    [bx(10, 8, 300, 26, 'お客：How much is it?', C.purple, FILL.purple, 13), bx(10, 38, 300, 26, '店員：It\'s 500 yen.', C.green, FILL.green, 13), bx(10, 76, 300, 26, 'How much are they?', C.purple, FILL.purple, 13), bx(10, 106, 300, 26, 'They are 1,000 yen.', C.green, FILL.green, 13), lb(160, 150, '1つなら is、2つ以上なら are　yen に s なし', 11, C.red, 'middle', true)],
+    'How much is / are ～?', BLUE),
+  S('買うと決めたら I\'ll take it.（それをください）。お金をわたすときは Here you are.（はいどうぞ）、店員さんは Here\'s your change.（おつりです）と言います。最後にお礼を言います。',
+    [bx(10, 8, 300, 26, 'I\'ll take it.　I\'ll take two.', C.green, FILL.green, 13), bx(10, 40, 300, 26, 'お客：Here you are.', C.blue, FILL.blue, 13), bx(10, 72, 300, 26, '店員：Thank you. Here\'s your change.', C.purple, FILL.purple, 12), bx(10, 104, 300, 26, 'お客：Thank you.　店員：You\'re welcome.', C.main, FILL.warm, 12)],
+    '買う → わたす → おつり → お礼', GREEN),
+  Q('「ください」を Give me ～. と言うのは、なぜよくないのでしょう。Give me ～. は「わたしに〜をよこしなさい」という命令する言い方だからです。店では please をつけるか、I\'d like ～ を使います。',
+    'Give me ～. はだめ？', 'Give me ～. ＝ 命令する言い方\n→ 店では ていねいでない\n○ I want ～, please.\n○ I\'d like ～, please.', '店では please か I\'d like', RED, 14),
+  S('ファストフード店の会話です。What would you like?（何になさいますか）— I\'d like a hamburger and a small drink, please. — For here or to go?（店内ですか、お持ち帰りですか）— For here, please.',
+    [bx(10, 8, 300, 26, '店員：What would you like?', C.purple, FILL.purple, 12), bx(10, 38, 300, 26, 'お客：I\'d like a hamburger and a small drink, please.', C.green, FILL.green, 10), bx(10, 68, 300, 26, '店員：For here or to go?', C.purple, FILL.purple, 12), bx(10, 98, 300, 26, 'お客：For here, please.', C.green, FILL.green, 12), lb(160, 144, 'for here ＝ 店内　to go ＝ お持ち帰り', 12, C.ink, 'middle')],
+    '注文のやりとり', MAIN),
+  S('まとめです。①ほしいものは I want ～, please. か I\'d like ～, please.。②値段は How much is it? — It\'s ～ yen.。③Give me ～. は使わない。④yen に s はつけない。',
+    L([['① I want ～, please.　I\'d like ～, please.', BLUE], ['② How much is it? — It\'s ～ yen.', GREEN], ['③ Give me ～. は使わない', RED], ['④ yen に s なし　1つ is・2つ以上 are', PURPLE]], 8, 30, 6, 12),
+    'How much is it? の一往復が中心', GREEN),
+], '買い物の会話');
+
+// ── 会話②：道をたずねる・教える ──
+const roadMap = (): DiagramElement[] => [
+  bx(10, 70, 300, 24, '', C.gray, FILL.gray), bx(146, 8, 28, 150, '', C.gray, FILL.gray),
+  bx(30, 36, 80, 28, 'hospital', C.red, FILL.red, 11), bx(190, 36, 80, 28, 'bank', C.blue, FILL.blue, 11), bx(190, 102, 80, 28, 'park', C.green, FILL.green, 11),
+  ci(160, 148, 7, 'S', C.main, FILL.yellow, 9), lb(160, 128, 'start', 9, C.gray, 'middle'),
+];
+const f_470 = show([
+  S('道をたずねる会話です。Excuse me. Where is the hospital?（すみません、病院はどこですか）。地図の S から病院まで、どう説明するか見てみましょう。',
+    [...roadMap(), lb(80, 112, 'Excuse me.', 12, C.purple, 'middle', true), lb(80, 128, 'Where is the hospital?', 11, C.purple, 'middle', true)],
+    'まず Excuse me. でたずねる', MAIN),
+  S('1つ目の動きは「まっすぐ進む」です。Go straight for two blocks.（2ブロックまっすぐ行ってください）。',
+    [...roadMap(), ar(160, 140, 160, 92, C.red), lb(228, 82, 'Go straight.', 12, C.red, 'middle', true)],
+    'Go straight.（まっすぐ）', RED),
+  S('2つ目の動きは「曲がる」です。Turn left at the corner.（角を左に曲がってください）。目印を at ～ でつけると、どこで曲がるかが伝わります。',
+    [...roadMap(), ar(160, 140, 160, 84, C.red), ar(160, 82, 100, 82, C.blue), lb(110, 108, 'Turn left\nat the corner.', 11, C.blue, 'middle', true)],
+    'Turn left at the corner.', BLUE),
+  S('3つ目の動きは「着く」です。It\'s on your right.（右側に見えます）。左に曲がって進むと、病院は進行方向の右側になります。It\'s next to the bank. のように、目印のとなりと言う言い方もあります。',
+    [...roadMap(), ar(160, 140, 160, 84, C.red), ar(160, 82, 100, 82, C.blue), bx(30, 36, 80, 28, 'hospital', C.green, FILL.green, 11), lb(70, 24, 'It\'s on your right.', 11, C.green, 'middle', true)],
+    'It\'s on your right.（着く）', GREEN),
+  Q('道案内は、なぜ3つの言い方でできるのでしょう。どんなに複雑な道でも、「まっすぐ進む・曲がる・着く」の3つの動きの組み合わせだからです。Go straight、Turn right（left）、It\'s on your right。目印は at ～ で足します。',
+    '3つで道案内できる？', '進む → Go straight.\n曲がる → Turn right / left at ～.\n着く → It\'s on your right.\n複雑な道も この組み合わせ', '進む・曲がる・着く', GREEN, 14),
+  Qt('Turn right に、なぜ to をつけないのでしょう。right は「右に」という向きを表すことば（副詞）で、それだけで turn を説明できるからです。「歩いて」が on foot なのも、by のあとには乗り物の名前しか置けないからです。',
+    'Turn right に to は？',
+    [...wd([['Turn', RED], ['right', GREEN], ['at the corner.', MAIN]], 58, { size: 13 }), lb(160, 100, '○', 18, C.green, 'middle', true), ...wd(cw(['Turn', 'to', 'right'], RED), 116, { total: 160, size: 13 }), lb(250, 130, '×', 18, C.red, 'middle', true), lb(160, 154, 'by bus（the なし）　on foot（歩いて）', 12, C.ink, 'middle', true)],
+    'Turn right（to なし）'),
+  S('位置を表すことばです。next to ～（～のとなり）、in front of ～（～の前）、behind ～（～のうしろ）、between A and B（AとBの間）、across from ～（～の向かい）。',
+    L([['It\'s next to the bank.　（銀行のとなり）', BLUE], ['It\'s in front of the park.　（公園の前）', BLUE], ['It\'s behind the school.　（学校のうしろ）', GREEN], ['It\'s between A and B.　（AとBの間）', GREEN], ['It\'s across from the station.　（駅の向かい）', PURPLE]], 8, 24, 5, 11),
+    '目印と位置のことば', MAIN),
+  S('分からないときや聞き返すときの言い方です。I\'m sorry. I don\'t know.（ごめんなさい、わかりません）、I\'m not from here.（この辺の者ではありません）、Pardon?（もう一度お願いします）、Could you say that again?（もう一度言っていただけますか）。',
+    L([['I\'m sorry. I don\'t know.', MAIN], ['I\'m not from here.　（この辺の者ではない）', MAIN], ['Pardon?　（もう一度）', BLUE], ['Could you say that again?', BLUE]], 10, 28, 8, 12),
+    '分からないときは そう言ってよい', BLUE),
+  S('まとめです。①Excuse me. でたずねる。②進む（Go straight）・曲がる（Turn right / left）・着く（It\'s on your right）。③Turn に to はつけない。④by bus（the なし）、歩いては on foot。',
+    L([['① Excuse me. Where is ～?', PURPLE], ['② Go straight → Turn left → It\'s on your right.', GREEN], ['③ Turn right（to なし）', BLUE], ['④ by bus　on foot', RED]], 8, 30, 6, 12),
+    '3つの動きで道案内', GREEN),
+], '道をたずねる・教える');
 
 export const XF_CEJ_FIGURES: Record<string, DiagramFigure> = {
   'xf_eigo_s442': f_442,
@@ -720,6 +1014,15 @@ export const XF_CEJ_FIGURES: Record<string, DiagramFigure> = {
   'xf_eigo_s459': f_459,
   'xf_eigo_s460': f_460,
   'xf_eigo_s461': f_461,
+  'xf_eigo_s462': f_462,
+  'xf_eigo_s463': f_463,
+  'xf_eigo_s464': f_464,
+  'xf_eigo_s465': f_465,
+  'xf_eigo_s466': f_466,
+  'xf_eigo_s467': f_467,
+  'xf_eigo_s468': f_468,
+  'xf_eigo_s469': f_469,
+  'xf_eigo_s470': f_470,
 };
 
 export const XF_CEJ_SECTIONS: Record<string, string> = {
@@ -740,4 +1043,13 @@ export const XF_CEJ_SECTIONS: Record<string, string> = {
   'eigo_s459#0': 'xf_eigo_s459',
   'eigo_s460#2': 'xf_eigo_s460',
   'eigo_s461#2': 'xf_eigo_s461',
+  'eigo_s462#0': 'xf_eigo_s462',
+  'eigo_s463#2': 'xf_eigo_s463',
+  'eigo_s464#2': 'xf_eigo_s464',
+  'eigo_s465#0': 'xf_eigo_s465',
+  'eigo_s466#2': 'xf_eigo_s466',
+  'eigo_s467#0': 'xf_eigo_s467',
+  'eigo_s468#0': 'xf_eigo_s468',
+  'eigo_s469#0': 'xf_eigo_s469',
+  'eigo_s470#2': 'xf_eigo_s470',
 };

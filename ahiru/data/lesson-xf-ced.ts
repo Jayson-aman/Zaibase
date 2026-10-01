@@ -1001,7 +1001,7 @@ const eigo_s160 = S([
   },
   {
     note: '❓Can I 〜? とどうちがうのでしょう。→ may は相手にへりくだって許しを求める言葉なので、Can I 〜? よりていねいです。友達には Can I、店員さんや先生には May I、さらにていねいなら Could I と、場面で選びます。',
-    add: fresh(...row([['Can I 〜?', C.blue, FILL.blue], ['May I 〜?', C.green, FILL.green], ['Could I 〜?', C.purple, FILL.purple]], 20, { h: 34, size: 13, gap: 14 }), ar(60, 66, 250, 66, C.gray), lb(160, 54, 'ていねいさ', 11, C.gray), lb(60, 90, '友達に', 11, C.blue), lb(160, 90, '店員・先生に', 11, C.green), lb(262, 90, 'さらに', 11, C.purple), ...cap('相手と場面で選ぶ')),
+    add: fresh(...row([['Can I 〜?', C.blue, FILL.blue], ['May I 〜?', C.green, FILL.green], ['Could I 〜?', C.purple, FILL.purple]], 20, { h: 34, size: 13, gap: 14 }), ar(60, 72, 250, 72, C.gray), lb(160, 62, 'ていねいさ →', 11, C.gray), lb(60, 96, '友達に', 11, C.blue), lb(160, 96, '店員・先生に', 11, C.green), lb(262, 96, 'さらに', 11, C.purple), ...cap('相手と場面で選ぶ')),
   },
   {
     note: '答え方です。承諾は Sure. / Of course. / Certainly. / Yes, please do. 断りは I\'m sorry, but you can\'t. / I\'m afraid not. No, you may not. は「だめです」と強くはねつけるひびきになるので、ふつうは I\'m sorry をつけてやわらげます。',
@@ -1025,7 +1025,7 @@ const eigo_s160 = S([
   },
   {
     note: 'まとめです。May I 〜? は「〜してもよろしいですか」。may のうしろは動詞の原形で、to はつけません。答えは Sure. / Of course. / I\'m sorry, but 〜。May you 〜? とは言いません。May I help you? は店員の決まり文句です。',
-    add: fresh(wide(10, 'May I ＋ 原形 〜?（to は つけない）', C.blue, FILL.blue, 12, 28), wide(44, '答え：Sure. / I\'m sorry, but 〜.', C.green, FILL.green, 12, 28), wide(78, 'May you 〜? は ない　　May I help you? ＝ 店員の決まり文句', C.red, FILL.red, 9, 28), ...cap('主語は I のとき', C.main)),
+    add: fresh(wide(10, 'May I ＋ 原形 〜?（to は つけない）', C.blue, FILL.blue, 12, 28), wide(44, '答え：Sure. / I\'m sorry, but 〜.', C.green, FILL.green, 12, 28), bx(10, 76, 300, 40, 'May you 〜? という言い方は ない\nMay I help you? ＝ 店員の決まり文句', C.red, FILL.red, 11), ...cap('主語は I のとき', C.main)),
   },
 ], '許可の may');
 
@@ -1061,7 +1061,7 @@ const eigo_s162 = S([
   },
   {
     note: 'ていねいさの階段（かいだん）も確かめます。Can I 〜?（友達に）、May I 〜?（目上の人に）、Could I 〜?（さらにていねい）。会話では、A: May I sit here? B: Sure. Go ahead.（どうぞ）のように答えます。',
-    add: fresh(bx(10, 10, 300, 28, 'A: May I sit here?', C.gray, FILL.gray, 12), ar(160, 40, 160, 54, C.blue), bx(10, 56, 145, 30, 'B: Sure. Go ahead.', C.green, FILL.green, 12), bx(165, 56, 145, 30, "B: I'm sorry, but my friend is coming.", C.red, FILL.red, 8), ...cap('許可の答え方')),
+    add: fresh(bx(10, 10, 300, 28, 'A: May I sit here?', C.gray, FILL.gray, 12), ar(160, 40, 160, 54, C.blue), bx(10, 56, 145, 44, 'B: Sure. Go ahead.', C.green, FILL.green, 12), bx(165, 56, 145, 44, "B: I'm sorry, but\nmy friend is coming.", C.red, FILL.red, 10), ...cap('許可の答え方')),
   },
   {
     note: 'まとめです。May I 〜? と You may 〜. は許可。He / She / It may 〜. と内容がマイナスなら推量。might はほぼ推量専用。許可は can、推量は maybe で言いかえられます。',
@@ -1089,7 +1089,7 @@ const eigo_s163 = S([
   },
   {
     note: '疑問文は Must ＋ 主語 ＋ 原形 〜? で、do は使いません。Must I go now?（もう行かなければなりませんか）答えは Yes, you must. / No, you don\'t have to.（いいえ、その必要はありません）。❓No, you mustn\'t. と答えてもいい？ → だめです。「行ってはいけない」という別の意味になってしまいます。',
-    add: fresh(wide(10, 'Must I go now?', C.blue, FILL.blue, 13, 26), bx(10, 48, 145, 30, 'Yes, you must.', C.green, FILL.green, 12), bx(165, 48, 145, 30, "No, you don't have to.", C.red, FILL.red, 10), wide(94, "No, you mustn't. ＝ 行ってはいけない（別の意味）", C.gray, FILL.gray, 10, 26), ng(290, 118), ...cap('No の答えは don\'t have to')),
+    add: fresh(wide(10, 'Must I go now?', C.blue, FILL.blue, 13, 26), bx(10, 48, 145, 30, 'Yes, you must.', C.green, FILL.green, 12), bx(165, 48, 145, 30, "No, you don't have to.", C.red, FILL.red, 10), wide(94, "No, you mustn't. ＝ 行ってはいけない（別の意味）", C.gray, FILL.gray, 10, 26), ng(160, 134), ...cap('No の答えは don\'t have to')),
   },
   {
     note: '❓must には弱点があります。それは過去形と未来形がないことです。過去の「〜しなければならなかった」は had to を使います。I had to walk home yesterday.（昨日は歩いて帰らなければならなかった）。I must walk home yesterday. とは書けません。',
@@ -1221,7 +1221,7 @@ const eigo_s170 = S([
   },
   {
     note: 'まとめです。You should 〜. / Why don\'t you 〜? / How about 〜ing? はすすめる言い方。Why don\'t we 〜? / Shall we 〜? / Let\'s 〜. は誘う言い方。返事は That\'s a good idea. / Sounds good. / Sorry, I can\'t.',
-    add: fresh(wide(10, "すすめる：should / Why don't you 〜? / How about 〜ing?", C.green, FILL.green, 10, 28), wide(44, "誘う：Why don't we 〜? / Shall we 〜? / Let's 〜.", C.purple, FILL.purple, 10, 28), wide(78, "返事：That's a good idea. / Sorry, I can't.", C.blue, FILL.blue, 10, 28), ...cap('決まり文句を丸ごと覚える', C.main)),
+    add: fresh(bx(10, 6, 300, 38, "すすめる\nshould / Why don't you 〜? / How about 〜ing?", C.green, FILL.green, 11), bx(10, 50, 300, 38, "誘う\nWhy don't we 〜? / Shall we 〜? / Let's 〜.", C.purple, FILL.purple, 11), bx(10, 94, 300, 38, "返事\nThat's a good idea. / Sorry, I can't.", C.blue, FILL.blue, 11), ...cap('決まり文句を丸ごと覚える', C.main)),
   },
 ], '助言・提案の言い方');
 
@@ -1249,7 +1249,7 @@ const eigo_s171 = S([
   },
   {
     note: '❓未来を表す言い方はほかにありますか。→ be going to があります。前から決めていた予定に使います。I am going to visit my grandmother next Sunday.（次の日曜に祖母を訪ねる予定です）。be動詞は主語に合わせて am / is / are と変わります。',
-    add: fresh(wide(10, 'I am going to visit my grandmother next Sunday.', C.green, FILL.green, 10, 28), lb(160, 52, '前から決めていた予定', 12, C.green, 'middle', true), wide(70, 'She is going to buy a new bag.', C.green, FILL.green, 12, 26), lb(160, 114, 'うしろは動詞の原形（× buys）', 11, C.red, 'middle'), ...cap('be going to ＝ 前から決めた予定')),
+    add: fresh(bx(10, 6, 300, 40, 'I am going to visit my grandmother\nnext Sunday.', C.green, FILL.green, 12), lb(160, 60, '前から決めていた予定', 12, C.green, 'middle', true), wide(70, 'She is going to buy a new bag.', C.green, FILL.green, 12, 26), lb(160, 114, 'うしろは動詞の原形（× buys）', 11, C.red, 'middle'), ...cap('be going to ＝ 前から決めた予定')),
   },
   {
     note: '❓will との使い分けは？ → will は「その場で決めた意志」や「ただの予想」に使います。A: The phone is ringing. B: I\'ll get it.（ぼくが出るよ）は今その場で決めたことです。I think it will rain tomorrow.（明日は雨だと思う）は予想です。',

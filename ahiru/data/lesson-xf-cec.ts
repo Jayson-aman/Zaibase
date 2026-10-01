@@ -1023,6 +1023,202 @@ const s107: DiagramFigure = show([
   },
 ], '所有代名詞：「〜のもの」');
 
+// ───────── eigo_s109 再帰代名詞 ─────────
+const s109: DiagramFigure = show([
+  {
+    note: '問題です。「自分で作った」を I made it by me. と言えるでしょうか。正しくは by myself です。me と myself はどこがちがうのでしょう。',
+    add: [...row([['I made it', 'n'], ['by me', 'r']], 30, { size: 14, h: 36, x0: 20, x1: 300, gap: 20 }), jp('自分で（ひとりで）作った', 84, 12, C.ink), ...cap('me では だめなのかな？', C.red)],
+  },
+  {
+    note: '❓なぜ me ではなく myself なのでしょう。→ 主語と同じ人をもう一度さすときは、目的格ではなく再帰代名詞（さいきだいめいし）を使うからです。He looked at him. は「別の彼」を見たことになり、He looked at himself. は「自分自身」を見たことになります。',
+    add: fresh(...row([['He', 'b'], ['looked at', 'm'], ['him', 'r']], 14, { size: 13, h: 30 }), at(160, 56, '→ 別の人（彼とはちがう男）を見た', 11, C.red, true), ...row([['He', 'b'], ['looked at', 'm'], ['himself', 'g']], 78, { size: 13, h: 30 }), at(160, 120, '→ 鏡にうつった自分自身を見た', 11, C.green, true), ...cap('主語と同じ人 → ○○self', C.green)),
+  },
+  {
+    note: '一覧です。I→myself、you→yourself（1人）／yourselves（2人以上）、he→himself、she→herself、it→itself、we→ourselves、they→themselves。単数は -self、複数は -selves になります。',
+    add: fresh(...grid([['人称', '単数', '複数'], ['私', 'myself', 'ourselves'], ['あなた', 'yourself', 'yourselves'], ['彼', 'himself', 'themselves'], ['彼女', 'herself', 'themselves'], ['それ', 'itself', 'themselves']], 8, 4, [80, 110, 110], 23, { size: 12, head: 'b', body: 'n', firstCol: 'm' }), ...cap('単数 -self ／ 複数 -selves', C.blue)),
+  },
+  {
+    note: '❓複数形は、なぜ -selves なのでしょう。→ self の複数形が selves だからです。leaf→leaves と同じ変化（f を v に変えて -es）ですね。ourselves・yourselves・themselves と書きます。',
+    add: fresh(...row([['self', 'b'], ['→', 'n'], ['selves', 'g']], 20, { size: 16, h: 36, x0: 40, x1: 280 }), ...row([['leaf', 'b'], ['→', 'n'], ['leaves', 'g']], 74, { size: 14, h: 32, x0: 60, x1: 260 }), at(160, 126, '同じ変化（f を v に）', 12, C.main, true), ...cap('self の 複数形が selves', C.main)),
+  },
+  {
+    note: '❓作り方の規則は？ → 一人称・二人称は所有格に付けます（my+self、your+self、our+selves）。三人称は目的格に付けます（him+self、them+selves、her+self）。だから hisself や theirselves は誤りで、himself・themselves が正しいのです。',
+    add: fresh(...row([['my ＋ self', 'b'], ['your ＋ self', 'b'], ['our ＋ selves', 'b']], 14, { size: 12, h: 30, x0: 6, x1: 314, gap: 8 }), at(160, 58, '1・2人称は 所有格に', 11, C.blue, true), ...row([['him ＋ self', 'g'], ['them ＋ selves', 'g']], 76, { size: 12, h: 30, x0: 20, x1: 300, gap: 12 }), at(160, 120, '3人称は 目的格に', 11, C.green, true), ngb(100, 128, 120, '✗ hisself / theirselves', 10), ...cap('3人称だけ 目的格から作る', C.green)),
+  },
+  {
+    note: '使い方は二つあります。①動詞のうしろで、主語と同じ人をさす（She hurt herself.＝彼女はけがをした）。②意味を強める（I made this cake myself.＝このケーキは私が自分で作った）。強めに使うときは、取りのぞいても文が成り立ちます。',
+    add: fresh(...row([['She', 'b'], ['hurt', 'm'], ['herself.', 'g']], 20, { size: 14, h: 32 }), at(160, 66, '主語と同じ人（自分を）', 11, C.green, true), ...row([['I made this cake', 'b'], ['myself.', 'p']], 92, { size: 13, h: 32 }), at(160, 138, '強める（取っても 文は 成り立つ）', 11, C.purple, true), ...cap('「自分を」と「自分で」', C.main)),
+  },
+  {
+    note: '覚えたい熟語です。by oneself（一人で）：He went there by himself.／ for oneself（自分で）：Think for yourself.／ enjoy oneself（楽しく過ごす）：We enjoyed ourselves at the party.／ help oneself to（自由に取って食べる）／ say to oneself（心の中で思う）／ take care of oneself（体に気をつける）。',
+    add: fresh(...grid([['熟語', '意味'], ['by oneself', '一人で'], ['for oneself', '自分で'], ['enjoy oneself', '楽しく過ごす'], ['help oneself to', '自由に取って食べる'], ['take care of oneself', '体に気をつける']], 8, 4, [150, 150], 23, { size: 12, head: 'p', body: 'n', firstCol: 'm' }), ...cap('oneself は 主語に合わせて かえる', C.purple)),
+  },
+  {
+    note: 'まとめです。熟語では oneself の部分を、主語に合わせて変えます。主語が he なら himself、we なら ourselves。例：Help yourself to the cookies.／ We enjoyed ourselves.／ He went there by himself.',
+    add: fresh(...row([['He … by', 'b'], ['himself', 'g']], 20, { size: 14, h: 32, x0: 30, x1: 290 }), ...row([['We enjoyed', 'b'], ['ourselves', 'g']], 62, { size: 14, h: 32, x0: 30, x1: 290 }), ...row([['Help', 'b'], ['yourself', 'g'], ['to the cookies.', 'n']], 104, { size: 13, h: 32, x0: 10, x1: 310 }), ...cap('主語に 合わせて oneself を かえる', C.green)),
+  },
+], '再帰代名詞：主語と同じ人をさす');
+
+// ───────── eigo_s113 集合名詞 ─────────
+const s113: DiagramFigure = show([
+  {
+    note: '問題です。「私の家族は5人です」を My family is five. と言っても通じません。family や people は、日本語の感覚とずれる語です。',
+    add: [...row([['My family', 'b'], ['is', 'm'], ['five.', 'r']], 40, { size: 16, h: 36 }), ...cap('通じない 英語…どうして？', C.red)],
+  },
+  {
+    note: '❓なぜ My family is five. は変なのでしょう。→ family は「人数」ではなく、人々を一つにまとめた「まとまりの名前」だからです。まとまりが一つなので単数で、five（5つ）では数えられません。人数は people を数えて言います。',
+    add: fresh(...[0, 1, 2, 3, 4].map((i) => ci(80 + i * 40, 48, 12, '人', C.blue, FILL.blue, 10)), brkb(64, 256, 78, 'family ＝ ひとまとまりの名前', C.main), at(160, 120, 'family は「人数」ではない', 12, C.red, true), ...cap('まとまりを 表す名詞', C.main)),
+  },
+  {
+    note: 'family・team・class・group・club は、一つのまとまりとして単数あつかいです。My family is large.、Our team is very strong.、Our class has thirty students. is・has・was を使います。',
+    add: fresh(...row([['My family', 'b'], ['is', 'g'], ['large.', 'n']], 14, { size: 13, h: 30 }), ...row([['Our team', 'b'], ['is', 'g'], ['very strong.', 'n']], 58, { size: 13, h: 30 }), ...row([['Our class', 'b'], ['has', 'g'], ['thirty students.', 'n']], 102, { size: 13, h: 30 }), ...cap('まとまり1つ → is・has', C.green)),
+  },
+  {
+    note: '❓まとまりが二つ以上のときは？ → ふつうに複数形にします。There are ten families in this building.（この建物には10世帯が住んでいる）。Two teams played in the final.（決勝には2チームが出た）。',
+    add: fresh(...row([['one family', 'b'], ['ten families', 'g']], 20, { size: 14, h: 34, x0: 20, x1: 300, gap: 20 }), en('There are ten families in this building.', 94, 11), en('Two teams played in the final.', 114, 12), ...cap('二つ以上 → families・teams', C.blue)),
+  },
+  {
+    note: '❓「私の家族は5人です」は、どう言えばよいのでしょう。→ 人（people）を数えます。There are five people in my family. / I have a family of five. / My family has five members. 入試の英作文では、There are 〜 in my family. の形を覚えておくと安全です。',
+    add: fresh(...[['There are five people in my family.', 'g'], ['I have a family of five.', 'g'], ['My family has five members.', 'g']].map(([t, k], i) => bx(16, 14 + i * 40, 288, 32, t, K[k as KK][0], K[k as KK][1], 12)), ...cap('人を数える言い方で 言う', C.green)),
+  },
+  {
+    note: 'people は形が単数に見えても、いつも複数あつかいです。Many people were at the station.（駅にはたくさんの人がいた）。There are twenty people in this room. × There is many people. × many peoples は誤りです。',
+    add: fresh(...row([['Many people', 'b'], ['were', 'g'], ['at the station.', 'n']], 20, { size: 12, h: 32 }), at(160, 68, 'people は 複数あつかい（were・are）', 11, C.green, true), ngb(50, 90, 220, '✗ There is many people.', 12), ngb(50, 122, 220, '✗ many peoples', 12), ...cap('people ＝ 複数', C.green)),
+  },
+  {
+    note: '❓なぜ people には -s が付かないのでしょう。→ people は person（1人）の複数にあたる語で、それ自体が「人々」という複数の意味を持っているからです。peoples と -s を付けると「諸民族」という別の意味になります（the peoples of Asia）。',
+    add: fresh(...row([['person', 'b'], ['→', 'n'], ['people', 'g']], 16, { size: 16, h: 36 }), at(160, 66, '1人 → 2人以上', 11, C.gray), ...row([['two people', 'g'], ['peoples（諸民族）', 'p']], 92, { size: 12, h: 32, x0: 8, x1: 312, gap: 14 }), ...cap('person の複数 ＝ people', C.main)),
+  },
+  {
+    note: 'police も複数あつかいです。The police are looking for the man.（警察はその男をさがしている）、Call the police! 警察官1人は a police officer で、× a police は誤りです。数え方：police officer（1人）→ three police officers（3人）。',
+    add: fresh(...row([['The police', 'b'], ['are', 'g'], ['coming.', 'n']], 16, { size: 14, h: 32 }), ...row([['a police officer', 'g'], ['three police officers', 'g']], 62, { size: 12, h: 32, x0: 8, x1: 312, gap: 12 }), ngb(110, 108, 100, '✗ a police', 12), ...cap('police ＝ 複数あつかい', C.green)),
+  },
+  {
+    note: 'まとめです。形の -s ではなく、その語が何を表すかで単複が決まります。family など＝まとまり一つなら単数。people・police＝-s がなくても複数。人数は people を数えて言います。',
+    add: fresh(...row([['family\nteam・class', 'b'], ['people\npolice', 'g']], 20, { size: 14, h: 56, x0: 20, x1: 300, gap: 24 }), at(80, 90, '単数（is・has）', 12, C.blue, true), at(240, 90, '複数（are）', 12, C.green, true), ...cap('語が何を表すかで きまる', C.main)),
+  },
+], '集合名詞：family は単数、people は複数');
+
+// ───────── eigo_s114 固有名詞の書き方 ─────────
+const s114: DiagramFigure = show([
+  {
+    note: '問題です。月曜日を monday、英語を english と書いてよいでしょうか。日本人にとても多い誤りです。',
+    add: [...row([['monday', 'r'], ['english', 'r']], 30, { size: 17, h: 40, x0: 40, x1: 280, gap: 24 }), ...cap('頭の文字は 大文字？ 小文字？', C.red)],
+  },
+  {
+    note: '❓どんなものを大文字で書くのでしょう。→ 世界に一つしかない名前（固有名詞（こゆうめいし））です。人名、地名、国名、言語名、曜日、月、祝日などは、文の途中にあっても大文字で書き始めます。I（私は）もいつも大文字です。',
+    add: fresh(...grid([['種類', '例'], ['人名', 'Ken, Ms. Tanaka'], ['地名・国名', 'Japan, Osaka, London'], ['言語名', 'English, Japanese'], ['曜日・月', 'Monday, April'], ['祝日・行事', 'Christmas']], 8, 4, [100, 200], 23, { size: 12, head: 'g', body: 'n', firstCol: 'm' }), ...cap('世界に一つの名前 → 大文字', C.green)),
+  },
+  {
+    note: '小文字のままのものもあります。季節（spring・summer・fall・winter）、教科の多く（math・science・music・history）、方角（east・west・north・south）、動物や物の名前（dog・apple・desk）。',
+    add: fresh(...grid([['種類', '例（小文字）'], ['季節', 'spring, summer, winter'], ['教科', 'math, science, music'], ['方角', 'east, west, north'], ['ふつうの名詞', 'dog, apple, desk']], 8, 8, [100, 200], 28, { size: 12, head: 'b', body: 'n', firstCol: 'm' }), ...cap('同じ種類が たくさん あるものは 小文字', C.blue)),
+  },
+  {
+    note: '❓English はなぜ大文字で、math は小文字なのでしょう。→ English・Japanese は「言語の名前」で、世界に一つの名前だからです。math は教科の名前で、ふつうの名詞なので小文字です。I study English on Monday. では、English と Monday が大文字です。',
+    add: fresh(...row([['I study', 'n'], ['English', 'g'], ['on', 'n'], ['Monday.', 'g']], 20, { size: 14, h: 32 }), at(160, 64, '言語名・曜日 → 大文字', 12, C.green, true), ...row([['We study', 'n'], ['math', 'b'], ['in spring.', 'b']], 90, { size: 14, h: 32 }), at(160, 134, '教科名・季節 → 小文字', 12, C.blue, true), ...cap('言語名は 大文字、教科・季節は 小文字', C.main)),
+  },
+  {
+    note: '固有名詞には、原則として a も the も付けません。I live in Japan.（× the Japan）、This is Ken.、We climbed Mt. Fuji. 世界に一つしかないので、すでに「どれか」決まっているからです。',
+    add: fresh(...row([['I live in', 'n'], ['Japan.', 'g']], 20, { size: 14, h: 32 }), ...row([['We climbed', 'n'], ['Mt. Fuji.', 'g']], 62, { size: 14, h: 32 }), ngb(70, 108, 180, '✗ the Japan / a Tokyo', 12), ...cap('固有名詞に a・the は つけない', C.green)),
+  },
+  {
+    note: '言語名にも the は付けません。I speak English.（私は英語を話す）、She can speak Japanese well. × the English。ただし「英語の先生」は an English teacher のように、後ろに名詞が来れば冠詞が必要になります。',
+    add: fresh(...row([['I speak', 'n'], ['English.', 'g']], 20, { size: 14, h: 32 }), ngb(70, 62, 180, '✗ I speak the English.', 12), ...row([['an English teacher', 'b']], 100, { size: 14, h: 32, x0: 30, x1: 290 }), at(160, 144, 'うしろに名詞があれば 冠詞が いる', 11, C.blue, true), ...cap('言語名だけなら the なし', C.green)),
+  },
+  {
+    note: '敬称・略号も大文字で、ピリオドを打ちます。Mr. Smith（スミスさん）、Ms. Tanaka、Dr. Brown（ブラウン先生）、Mt. Fuji、Lake Biwa、St. Mary。Mr. のうしろは名字です。Mr. Bob のように下の名前だけを置くことはしません。',
+    add: fresh(...grid([['略号', '意味'], ['Mr. Smith', '男性（名字）'], ['Ms. Tanaka', '女性（名字）'], ['Dr. Brown', '医師・博士'], ['Mt. Fuji', '富士山']], 8, 8, [110, 190], 28, { size: 12, head: 'b', body: 'n', firstCol: 'm' }), ...cap('敬称 ＋ 名字（ピリオドを 打つ）', C.blue)),
+  },
+  {
+    note: '家族を表す語は、名前のかわりに呼びかけで使うときだけ大文字です。Thank you, Mom.（ありがとう、お母さん）。ふつうの名詞のときは小文字：My mother is a nurse. まとめ：世界に一つの名前は大文字、a・the は付けない。',
+    add: fresh(...row([['Thank you, Mom.', 'g']], 20, { size: 14, h: 32, x0: 30, x1: 290 }), at(160, 66, '呼びかけ → 大文字', 11, C.green, true), ...row([['My mother is a nurse.', 'b']], 88, { size: 14, h: 32, x0: 30, x1: 290 }), at(160, 134, 'ふつうの名詞 → 小文字', 11, C.blue, true), ...cap('名前がわりなら 大文字', C.main)),
+  },
+], '固有名詞：大文字で書き、冠詞を付けない');
+
+// ───────── eigo_s115 名詞・冠詞・代名詞の総合演習 ─────────
+const s115: DiagramFigure = show([
+  {
+    note: '問題です。I have many homeworks. のどこが誤りか、すぐ指摘できるでしょうか。名詞・冠詞・代名詞のミスは、文全体が読めていても最後の1文字で失点します。見直しの順番を決めましょう。',
+    add: [...row([['I have', 'n'], ['many homeworks.', 'r']], 40, { size: 15, h: 36 }), ...cap('どこが まちがい？', C.red)],
+  },
+  {
+    note: '見直しは四つの手順です。①名詞は数えられるか、②単数か複数か、③冠詞は正しいか、④代名詞の形は位置に合っているか。この順番に点検します。',
+    add: fresh(...steps([['① 名詞は 数えられる？', 'b'], ['② 単数？ 複数？', 'g'], ['③ 冠詞は 正しい？', 'm'], ['④ 代名詞の形は 位置に合う？', 'p']], { y0: 6, h: 28, gap: 12, size: 12 }), ...cap('この順で 点検する', C.green)),
+  },
+  {
+    note: '❓なぜ名詞から決めるのでしょう。→ 名詞が決まらないと、冠詞も代名詞も決まらないからです。①homework・information・advice・furniture・money・water・bread は不可算なので、a も -s も many も付けられません。many homeworks → a lot of homework。',
+    add: fresh(...row([['many homeworks', 'r']], 14, { size: 13, h: 30, x0: 10, x1: 150 }), ar(154, 29, 168, 29, C.gray), ...row([['a lot of homework', 'g']], 14, { size: 13, h: 30, x0: 172, x1: 310 }), ...row([['two advices', 'r']], 62, { size: 13, h: 30, x0: 10, x1: 150 }), ar(154, 77, 168, 77, C.gray), ...row([['two pieces of advice', 'g']], 62, { size: 12, h: 30, x0: 172, x1: 310 }), ...cap('① 不可算に a・-s・many は なし', C.blue)),
+  },
+  {
+    note: '②数字・many・some・these のうしろは複数形、one・each・every のうしろは単数。× three book → three books。× many student likes → many students like（主語が複数なら動詞の -s も消える）。',
+    add: fresh(...row([['three book', 'r']], 14, { size: 13, h: 30, x0: 10, x1: 150 }), ar(154, 29, 168, 29, C.gray), ...row([['three books', 'g']], 14, { size: 13, h: 30, x0: 172, x1: 310 }), ...row([['many student likes', 'r']], 62, { size: 12, h: 30, x0: 10, x1: 150 }), ar(154, 77, 168, 77, C.gray), ...row([['many students like', 'g']], 62, { size: 12, h: 30, x0: 172, x1: 310 }), ...cap('② 合図があれば 名詞も 動詞も 複数', C.green)),
+  },
+  {
+    note: '③冠詞：数えられる単数を裸で置いていないか（× I have bag）、不可算や複数に a を付けていないか（× a water・× a books）、所有格や this と重ねていないか（× a my book）、世界に一つのもの・楽器・最上級に the があるか（the sun／play the piano／the tallest）。',
+    add: fresh(...grid([['点検', 'まちがい → 正しい'], ['裸の単数', 'I have bag. → a bag'], ['不可算に a', 'a water → water'], ['重ねる', 'a my book → my book'], ['the が要る', 'play piano → the piano']], 8, 8, [70, 230], 28, { size: 11, head: 'm', body: 'n', firstCol: 'm' }), ...cap('③ 冠詞は 付ける所・外す所', C.main)),
+  },
+  {
+    note: '④代名詞は位置で決めます。主語なら主格（I・he・she・they）、名詞の前なら所有格（my・his・her・their）、動詞か前置詞のうしろなら目的格（me・him・her・them）、単独で「〜のもの」なら所有代名詞（mine・his・hers・theirs）。',
+    add: fresh(...row([['主語', 'b'], ['名詞の前', 'm'], ['うしろ', 'g'], ['〜のもの', 'p']], 14, { size: 12, h: 28, x0: 6, x1: 314, gap: 8 }), ...row([['I\nhe', 'b'], ['my\nhis', 'm'], ['me\nhim', 'g'], ['mine\nhers', 'p']], 50, { size: 12, h: 44, x0: 6, x1: 314, gap: 8 }), ...cap('位置で 代名詞の 形が きまる', C.main)),
+  },
+  {
+    note: '誤りを一か所直す練習です。①I have a lot of homeworks today.→ homework。②There is many people in the park.→ There are。③My mother bought two breads.→ two loaves of bread。④She plays a piano very well.→ the piano。⑤This is a my friend.→ a friend of mine。',
+    add: fresh(...[['homeworks', 'homework'], ['There is many people', 'There are many people'], ['two breads', 'two loaves of bread'], ['a piano', 'the piano'], ['a my friend', 'a friend of mine']].flatMap(([a, b], i) => [ngb(8, 6 + i * 28, 138, a, 11), ar(150, 19 + i * 28, 164, 19 + i * 28, C.gray), okb(168, 6 + i * 28, 144, b, 11)]), ...cap('一か所ずつ 直してみよう', C.red)),
+  },
+  {
+    note: '続きです。⑥I know he very well.→ him。⑦That bike is her.→ hers。⑧I go to the bed at ten.→ go to bed。⑨The sun rises in east.→ in the east。⑩He went there by hisself.→ by himself。',
+    add: fresh(...[['know he', 'know him'], ['is her', 'is hers'], ['to the bed', 'to bed'], ['in east', 'in the east'], ['hisself', 'himself']].flatMap(([a, b], i) => [ngb(8, 6 + i * 28, 138, a, 12), ar(150, 19 + i * 28, 164, 19 + i * 28, C.gray), okb(168, 6 + i * 28, 144, b, 12)]), ...cap('位置・決まった言い方を 点検', C.red)),
+  },
+  {
+    note: '最後に、英作文でも確かめます。「毎朝、水をコップ1ぱい飲みます」→ I drink a glass of water every morning. 「先週、新しいくつを1足買いました」→ I bought a pair of new shoes last week. 「彼は週に2回ギターをひきます」→ He plays the guitar twice a week.',
+    add: fresh(...[['I drink a glass of water every morning.', 'g'], ['I bought a pair of new shoes last week.', 'g'], ['He plays the guitar twice a week.', 'g']].map(([t, k], i) => bx(8, 12 + i * 42, 304, 32, t, K[k as KK][0], K[k as KK][1], 11)), ...cap('単位 ・ the ・ 複数形を 使いこなす', C.green)),
+  },
+  {
+    note: 'まとめです。不可算（homework・information・advice・furniture・money・water・bread・news）、単位（a glass of・a cup of・a piece of・a sheet of・a slice of・a pair of）、不規則複数（man→men・child→children・foot→feet・tooth→teeth・mouse→mice・sheep→sheep）を口に出して言えるようにします。',
+    add: fresh(...row([['不可算', 'b'], ['単位', 'm'], ['不規則\n複数', 'g']], 20, { size: 14, h: 44, x0: 20, x1: 300, gap: 16 }), en('man–men　child–children　foot–feet', 92, 11), en('tooth–teeth　mouse–mice　sheep–sheep', 112, 11), ...cap('口に出して 言えるように する', C.main)),
+  },
+], '名詞・冠詞・代名詞：答案の見直し四手順');
+
+// ───────── eigo_s117 現在形② 三人称単数現在の -s ─────────
+const s117: DiagramFigure = show([
+  {
+    note: '問題です。study は studies になるのに、play は plays です。同じ y で終わるのに、変わり方がちがいます。しかも -s が付くのは、条件がそろったときだけです。',
+    add: [...row([['study', 'b'], ['→', 'n'], ['studies', 'g']], 22, { size: 15, h: 34, x0: 40, x1: 280 }), ...row([['play', 'b'], ['→', 'n'], ['plays', 'g']], 72, { size: 15, h: 34, x0: 40, x1: 280 }), ...cap('同じ y なのに ちがう', C.red)],
+  },
+  {
+    note: '❓-s はいつ付くのでしょう。→ 「三人称・単数・現在」の三つがそろったときだけです。主語が he・she・it（三人称）で、一人・一つ（単数）で、今のこと（現在）のとき、一般動詞に -s（-es）が付きます。一つでも欠ければ付きません。',
+    add: fresh(...row([['三人称\nhe・she・it', 'b'], ['単数\n1人・1つ', 'g'], ['現在\nいまの こと', 'p']], 14, { size: 11, h: 50, x0: 8, x1: 312, gap: 10 }), at(160, 84, '＋', 14, C.gray, true), bx(70, 96, 180, 34, '動詞に -s（-es）', C.main, FILL.warm, 14), ...cap('三つ そろったときだけ -s', C.main)),
+  },
+  {
+    note: '作り方は四つのパターンです。①そのまま -s：play→plays、like→likes、run→runs、read→reads。②s・x・ch・sh・o で終わる語は -es：pass→passes、mix→mixes、teach→teaches、watch→watches、wash→washes、go→goes、do→does。',
+    add: fresh(...grid([['型', '例'], ['① そのまま -s', 'play→plays　like→likes'], ['② -es', 'pass→passes　go→goes'], ['③ y→ies', 'study→studies'], ['④ 母音+y → -s', 'play→plays']], 8, 8, [100, 200], 28, { size: 12, head: 'b', body: 'n', firstCol: 'm' }), ...cap('4つの パターン', C.blue)),
+  },
+  {
+    note: '❓②でなぜ e をはさむのでしょう。→ pass に s だけを付けると音がつながって言いにくいので、間に e を入れて「イズ」と読めるようにするからです。複数形の -es と同じ理由です。teach→teaches、watch→watches、wash→washes。',
+    add: fresh(...row([['pass', 'b'], ['＋ s', 'r']], 14, { size: 15, h: 34, x0: 40, x1: 280 }), at(160, 60, '言いにくい', 11, C.red, true), ...row([['pass', 'b'], ['＋ es', 'g']], 82, { size: 15, h: 34, x0: 40, x1: 280 }), at(160, 128, '「イズ」と 読める', 11, C.green, true), ...cap('音を つなぐ e', C.green)),
+  },
+  {
+    note: '③と④の見分けは「y の一つ前の文字」だけです。study の t は子音字なので y を i に変えて studies。play の a は母音字なので、そのまま plays。carry→carries、fly→flies、cry→cries、try→tries。enjoy→enjoys、stay→stays、buy→buys。',
+    add: fresh(...row([['study', 'r', 't は子音字'], ['play', 'g', 'a は母音字']], 14, { size: 17, h: 38, x0: 40, x1: 280, gap: 30 }), ar(95, 66, 95, 90, C.gray), ar(225, 66, 225, 90, C.gray), ...row([['studies', 'r'], ['plays', 'g']], 94, { size: 17, h: 38, x0: 40, x1: 280, gap: 30 }), ...cap('y の一つ前を 見る', C.main)),
+  },
+  {
+    note: 'have だけは特別な形 has になります。haves とはなりません。また be動詞は am／is／are と、はじめから形が決まっています。',
+    add: fresh(...row([['have', 'b'], ['→', 'n'], ['has', 'g']], 24, { size: 17, h: 40, x0: 40, x1: 280 }), ngb(100, 82, 120, '✗ haves', 14), at(160, 128, 'be動詞は am・is・are（-s ではない）', 11, C.gray), ...cap('have → has（とくべつ）', C.main)),
+  },
+  {
+    note: '❓主語の数はどう見あやまりやすいのでしょう。→ 「〜と〜」は二人なので複数です。Ken and Yumi go to the same school.（-s なし）。My brother and I like baseball. 日本語では最後が「私」なので I にあわせて動詞を選びがちですが、主語全体は二人です。',
+    add: fresh(...row([['Ken and Yumi', 'b'], ['go', 'g'], ['to the same school.', 'n']], 16, { size: 12, h: 30 }), at(160, 58, '二人 → 複数 → -s なし', 11, C.green, true), ...row([['My brother and I', 'b'], ['like', 'g'], ['baseball.', 'n']], 82, { size: 12, h: 30 }), at(160, 124, '主語全体で 数える', 11, C.green, true), ...cap('「〜と〜」→ 複数', C.green)),
+  },
+  {
+    note: '主語のうしろに前置詞のかたまりが付いていても、主語は前の名詞です。The boy with two dogs runs in the park.（主語は The boy＝一人なので runs）。The books on the desk are mine.（主語は The books）。with two dogs や on the desk は説明にすぎません。',
+    add: fresh(...row([['The boy', 'b'], ['with two dogs', 'n'], ['runs', 'g']], 20, { size: 13, h: 32 }), at(160, 68, '主語は The boy（一人）→ runs', 11, C.green, true), ...row([['The books', 'b'], ['on the desk', 'n'], ['are', 'g']], 92, { size: 13, h: 32 }), at(160, 138, '主語は The books（複数）→ are', 11, C.green, true), ...cap('前置詞のかたまりは 主語では ない', C.main)),
+  },
+  {
+    note: '「みんな」「だれも」を表す語は単数あつかいです。Everyone knows his name.、Every student has a computer.（every＋単数名詞）。まとめ：-s は「三人称・単数・現在」、s・x・ch・sh・o は -es、子音字＋y は ies、母音字＋y は -s、have は has。迷ったら主語を he・she・it・they に置きかえます。',
+    add: fresh(...row([['Everyone', 'b'], ['knows', 'g']], 16, { size: 14, h: 32, x0: 20, x1: 300 }), ...row([['Every student', 'b'], ['has', 'g']], 60, { size: 14, h: 32, x0: 20, x1: 300 }), at(160, 112, 'every ＋ 単数 → 単数あつかい', 11, C.green, true), ...cap('迷ったら he・she・it・they に置きかえ', C.main)),
+  },
+], '三人称単数現在の -s：条件と つづり');
+
 export const XF_CEC_FIGURES: Record<string, DiagramFigure> = {
   'xf_eigo_s068': s068,
   'xf_eigo_s070': s070,
@@ -1049,6 +1245,11 @@ export const XF_CEC_FIGURES: Record<string, DiagramFigure> = {
   'xf_eigo_s104': s104,
   'xf_eigo_s106': s106,
   'xf_eigo_s107': s107,
+  'xf_eigo_s109': s109,
+  'xf_eigo_s113': s113,
+  'xf_eigo_s114': s114,
+  'xf_eigo_s115': s115,
+  'xf_eigo_s117': s117,
 };
 
 export const XF_CEC_SECTIONS: Record<string, string> = {
@@ -1077,4 +1278,9 @@ export const XF_CEC_SECTIONS: Record<string, string> = {
   'eigo_s104#0': 'xf_eigo_s104',
   'eigo_s106#0': 'xf_eigo_s106',
   'eigo_s107#0': 'xf_eigo_s107',
+  'eigo_s109#0': 'xf_eigo_s109',
+  'eigo_s113#0': 'xf_eigo_s113',
+  'eigo_s114#0': 'xf_eigo_s114',
+  'eigo_s115#0': 'xf_eigo_s115',
+  'eigo_s117#0': 'xf_eigo_s117',
 };
