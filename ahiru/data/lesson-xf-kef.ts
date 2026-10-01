@@ -703,7 +703,7 @@ const s273 = show([
     [Q('for I ではないの？'), OK('for me / him / her / us / them', 52, 13), NG('for I / he / she / we / they', 86, 13), lab('前置詞のうしろ → 目的格', 134, C.main)],
     'for のうしろは 目的格', R),
   S('for ＋ 人 は、to 以下の動作を実際にする人を表します。It is easy for me to swim. 泳ぐのは me です。この関係を意味上の主語といいます。',
-    [H('意味上の主語', M, 6, 26), ...seq([['It is easy', GR], ['for me', R], ['to swim.', B]], 44, 34, 14), ar(120, 82, 120, 100, C.red), ar(220, 82, 120, 100, C.blue), bx(70, 102, 180, 30, '泳ぐのは me', G[0], G[1], 14)],
+    [H('意味上の主語', M, 6, 26), ...seq([['It is easy', GR], ['for me', R], ['to swim.', B]], 44, 34, 14), dn(160, 80, 96, C.red), bx(70, 98, 180, 30, '泳ぐのは me', G[0], G[1], 14)],
     'for 人 ＝ to 以下の動作をする人', G),
   S('位置は動かせません。○ It is hard for children to read this book. × It is hard to read this book for children. 文末に置くと意味があいまいになり、入試では誤りとされます。',
     [Q('for 人 は文末ではだめ？'), OK('It is hard for children to read this book.', 52, 11), NG('It is hard to read this book for children.', 86, 11), lab('形容詞と to の間に入れる', 134, C.main)],

@@ -865,7 +865,7 @@ const e13: DiagramFigure = show([
   },
   {
     note: '次は with＋名詞＋分詞（付帯状況）です。「〜を…した状態で」「〜が…しながら」の意味。He was standing with his arms crossed.（腕を組んだ状態で立っていた）。独立分詞構文に近い、大切な構文です。',
-    add: fresh(head('with ＋ 名詞 ＋ 分詞'), ...rowb(['He was standing', 'with', 'his arms', 'crossed.'], 30, 34, C.blue, FILL.blue, 11, 10, 310, 6), lb(160, 86, '〜を…した状態で', 12, C.ink, 'middle', true), lb(160, 110, '腕を組んだ状態で立っていた', 12, C.blue, 'middle', true), ...cap('付帯状況（ふたいじょうきょう）')),
+    add: fresh(head('with ＋ 名詞 ＋ 分詞'), ...chips(['He was standing', 'with', 'his arms', 'crossed.'], 30, C.blue, FILL.blue, 10, 11, 34).els, lb(160, 86, '〜を…した状態で', 12, C.ink, 'middle', true), lb(160, 110, '腕を組んだ状態で立っていた', 12, C.blue, 'middle', true), ...cap('付帯状況（ふたいじょうきょう）')),
   },
   {
     note: '❓分詞は -ing か過去分詞か、どう決めるのでしょう。→ 名詞と分詞の間に、「主語と動詞」の関係があるかを見ます。名詞が「〜される」側なら過去分詞、「〜する」側なら現在分詞です。',
@@ -895,7 +895,7 @@ const e14: DiagramFigure = show([
   },
   {
     note: '❓think 型では、なぜ疑問詞が文の最初に出るのでしょう。→ 「あなたは知っていますか」には Yes か No で答えられますが、「あなたは〜と思いますか」は Yes／No では答えにくく、聞きたい中心は where の内容だからです。聞きたい疑問詞を、文の頭に出して強調します。',
-    add: fresh(head('聞きたいことを、文の頭へ'), bx(10, 26, 145, 46, 'Do you know…?\nYes, I do. ○', C.blue, FILL.blue, 11), bx(165, 26, 145, 46, 'Do you think…?\nYes／No では\n答えにくい', C.red, FILL.red, 10), lb(160, 100, '聞きたい中心は where の内容', 12, C.ink, 'middle', true), lb(160, 122, '→ where を文の頭に出す', 12, C.green, 'middle', true), ...cap('think 型は疑問詞が文頭', C.green)),
+    add: fresh(head('聞きたいことを、文の頭へ'), bx(10, 26, 145, 46, 'Do you know…?\nYes, I do. ○', C.blue, FILL.blue, 11), bx(165, 22, 145, 56, 'Do you think…?\nYes／No では\n答えにくい', C.red, FILL.red, 11), lb(160, 100, '聞きたい中心は where の内容', 12, C.ink, 'middle', true), lb(160, 122, '→ where を文の頭に出す', 12, C.green, 'middle', true), ...cap('think 型は疑問詞が文頭', C.green)),
   },
   {
     note: '組み立ての手順です。もとの文 Do you think where he lives? の where を、文の最初に出します。すると Where do you think he lives? になります。do you think のあとは〈主語＋動詞〉の肯定文の語順です。',
@@ -951,6 +951,135 @@ const e15: DiagramFigure = show([
   },
 ], '自由英作文の採点基準');
 
+// ───────── koko_eigo_16_functional_scenes 道案内 ─────────
+const mapBase: E[] = [
+  bx(0, 78, 320, 22, undefined, '#D6D3CD', '#EEECE7'),
+  bx(160, 26, 22, 122, undefined, '#D6D3CD', '#EEECE7'),
+  bx(128, 2, 84, 22, 'station', C.main, FILL.warm, 11),
+  bx(20, 36, 88, 38, 'bank', C.gray, FILL.gray, 12),
+  bx(20, 106, 88, 38, 'library', C.gray, FILL.gray, 12),
+  bx(190, 36, 40, 38, 'flower\nshop', C.gray, FILL.gray, 9),
+  bx(234, 36, 40, 38, 'museum', C.gray, FILL.gray, 9),
+  bx(278, 36, 36, 38, 'bakery', C.gray, FILL.gray, 9),
+  bx(190, 106, 124, 38, 'post office', C.gray, FILL.gray, 12),
+  ci(22, 89, 8, 'You', C.blue, FILL.blue, 7),
+];
+const e16: DiagramFigure = show([
+  {
+    note: '道を尋ねるときの表現です。Excuse me. How can I get to the station?（すみません、駅へはどう行けばいいですか）。Could you tell me the way to the museum? とも言えます。',
+    add: [head('道を尋ねる'), bx(10, 26, 300, 30, 'Excuse me. How can I get to the station?', C.blue, FILL.blue, 12), bx(10, 64, 300, 30, 'Could you tell me the way to the museum?', C.blue, FILL.blue, 12), bx(10, 102, 300, 30, 'Is there a post office near here?', C.blue, FILL.blue, 12), ...cap('まず Excuse me. で声をかける')],
+  },
+  {
+    note: 'この地図で道案内を聞きましょう。あなた（You）は左はしにいて、駅（station）を探しています。道は、横にのびる大通りと、駅へ向かう縦の道があります。',
+    add: fresh(...mapBase, ...cap('地図を見ながら聞く', C.ink)),
+  },
+  {
+    note: 'まず、Go straight along this street.（この道をまっすぐ行ってください）。矢印のように、大通りを進みます。Go straight for two blocks. なら、2区画分です。',
+    add: [ar(32, 89, 156, 89, C.blue), ...band(150, lb(160, 190, 'Go straight along this street.', 12, C.blue, 'middle', true))],
+  },
+  {
+    note: '次に、Turn left at the corner.（角を左に曲がってください）。進む向きから見て左に曲がると、駅へ向かう縦の道に入ります。動作の指示は、動詞 turn を使います。',
+    add: [ar(171, 89, 171, 30, C.red), ...band(150, lb(160, 190, 'Turn left at the corner.', 12, C.red, 'middle', true))],
+  },
+  {
+    note: '❓場所はどう説明するのでしょう。→ It\'s on your left.（あなたの左手にあります）。進む向きから見て左側の位置を言います。この地図では、歩いている間、bank は左手（上側）にあります。',
+    add: fresh(...mapBase, ar(32, 89, 156, 89, C.blue), ln(60, 76, 60, 76, C.red), bx(20, 36, 88, 38, 'bank', C.red, FILL.red, 12), ...band(150, lb(160, 175, 'The bank is on your left.', 12, C.red, 'middle', true), lb(160, 205, '進む向きから見た左側', 11, C.gray, 'middle'))),
+  },
+  {
+    note: '位置を表す言葉は、ほかにもあります。It\'s next to the bank.（銀行の隣）、It\'s across from the library.（図書館の向かい）。bank の向かい側（道をはさんだ反対側）に library があります。',
+    add: fresh(...mapBase, bx(20, 36, 88, 38, 'bank', C.green, FILL.green, 12), bx(20, 106, 88, 38, 'library', C.red, FILL.red, 12), ar(64, 78, 64, 104, C.red, true), ...band(150, lb(160, 175, 'The library is across from the bank.', 12, C.red, 'middle', true), lb(160, 205, 'across from ＝ 道をはさんで向かい', 11, C.gray, 'middle'))),
+  },
+  {
+    note: 'It\'s between the flower shop and the bakery.（花屋とパン屋の間にあります）。museum は、二つの店にはさまれています。It\'s around the corner.（角を曲がったところにあります）という言い方もよく使います。',
+    add: fresh(...mapBase, bx(190, 36, 40, 38, 'flower\nshop', C.green, FILL.green, 9), bx(278, 36, 36, 38, 'bakery', C.green, FILL.green, 9), bx(234, 36, 40, 38, 'museum', C.red, FILL.red, 9), ...band(150, lb(160, 175, 'The museum is between the flower shop', 11, C.red, 'middle', true), lb(160, 200, 'and the bakery.', 11, C.red, 'middle', true))),
+  },
+  {
+    note: '❓turn left と on your left は、どうちがうのでしょう。→ turn left は「左に曲がる」という動作、on your left は「左手にある」という位置です。混同しないようにしましょう。You can\'t miss it.（すぐに分かりますよ）は、目印になるから見逃さない、という意味です。',
+    add: fresh(head('動作 と 位置'), bx(10, 28, 145, 50, 'Turn left.\n左に曲がる', C.red, FILL.red, 12), bx(165, 28, 145, 50, 'on your left\n左手にある', C.blue, FILL.blue, 12), lb(82, 96, '動作（動詞）', 11, C.red, 'middle', true), lb(237, 96, '位置（場所）', 11, C.blue, 'middle', true), lb(160, 124, 'You can\'t miss it. ＝ すぐ分かるよ', 11, C.gray, 'middle'), ...cap('動作と位置を分けて聞く')),
+  },
+  {
+    note: 'まとめです。道案内の会話は、地図を見て答える形式が多いです。放送を聞きながら、地図に矢印や印をつけると正解しやすくなります。動作（Go straight・Turn left）と位置（on your left・next to・across from・between）を分けて聞きましょう。',
+    add: fresh(bx(15, 14, 290, 30, '動作：Go straight ／ Turn left ／ Cross', C.red, FILL.red, 12), bx(15, 52, 290, 30, '位置：on your left ／ next to ／ across from', C.blue, FILL.blue, 11), bx(15, 90, 290, 30, '聞きながら地図に矢印をかく', C.green, FILL.green, 12), ...cap('動作と位置を分けて聞く', C.green)),
+  },
+], '道案内の表現');
+
+// ───────── koko_eigo_17_eiken_expressions used to ─────────
+const e17: DiagramFigure = show([
+  {
+    note: 'used to の形は三つあり、形が似ているので、入試でよく混同を狙われます。①used to＋原形、②be used to＋-ing／名詞、③get used to＋-ing／名詞。意味はまったくちがいます。',
+    add: [head('似ているけれど、意味はちがう'), bx(10, 26, 300, 28, '① used to ＋ 原形', C.blue, FILL.blue, 12), bx(10, 60, 300, 28, '② be used to ＋ -ing／名詞', C.green, FILL.green, 12), bx(10, 94, 300, 28, '③ get used to ＋ -ing／名詞', C.red, FILL.red, 12), ...cap('to のあとが、見分けの決め手')],
+  },
+  {
+    note: '①used to＋原形は、「以前は〜だった」「〜したものだ」と、過去の習慣や状態を表します。今はもう、ちがいます。I used to play soccer every day. は、以前は毎日サッカーをしていたが、今はしていない、という意味です。',
+    add: fresh(head('① used to ＋ 原形：以前は〜だった'), ln(20, 70, 300, 70, C.gray), ar(290, 70, 306, 70, C.gray), ln(30, 70, 150, 70, C.blue, false, 6), lb(90, 52, '以前は毎日サッカー', 11, C.blue, 'middle', true), ci(240, 70, 6, undefined, C.red, FILL.red), lb(240, 52, '今は…', 11, C.red, 'middle', true), lb(240, 90, 'していない', 11, C.red, 'middle'), bx(40, 108, 240, 28, 'I used to play soccer every day.', C.blue, FILL.blue, 12), ...cap('今は違う、という対比がある', C.blue)),
+  },
+  {
+    note: '❓would でも過去の習慣を表せるのに、なぜ used to を使うのでしょう。→ would は動作の繰り返しにしか使えず、状態には使えないからです。I would visit my grandmother every summer.（動作）は OK。I used to be a shy boy.（状態）は used to を使います。',
+    add: fresh(head('would は動作だけ、used to は状態もOK'), bx(10, 28, 300, 28, '○ I would visit my grandmother every summer.', C.green, FILL.green, 10), bx(10, 62, 300, 28, '× I would be a shy boy.（状態）', C.red, FILL.red, 11), bx(10, 96, 300, 28, '○ I used to be a shy boy.', C.green, FILL.green, 12), ...cap('状態には used to', C.green)),
+  },
+  {
+    note: '②be used to＋-ing／名詞は、「〜に慣れている」という今の状態です。He is used to living in Japan.（彼は日本に住むことに慣れている）。この used は「慣れている」という意味の形容詞で、あとには -ing か名詞が来ます。',
+    add: fresh(head('② be used to ＋ -ing：慣れている'), ...rowb(['He', 'is used to', 'living in Japan.'], 30, 34, C.green, FILL.green, 12, 10, 310, 6), lb(160, 86, '今、慣れている（状態）', 12, C.green, 'middle', true), lb(160, 110, 'to のあとは -ing か名詞（原形ではない）', 11, C.ink, 'middle'), ...cap('慣れている ＝ be used to', C.green)),
+  },
+  {
+    note: '③get used to＋-ing／名詞は、「〜に慣れる」という変化です。I will get used to this new school soon.（すぐにこの新しい学校に慣れるだろう）。慣れていない状態から、慣れている状態へ変わる動きを表します。',
+    add: fresh(head('③ get used to ＋ 名詞：慣れる'), bx(15, 28, 120, 36, 'まだ慣れていない', C.gray, FILL.gray, 11), ar(138, 46, 182, 46, C.red), lb(160, 36, 'get', 12, C.red, 'middle', true), bx(185, 28, 120, 36, '慣れている\n(be used to)', C.green, FILL.green, 10), lb(160, 92, 'I will get used to this new school soon.', 11, C.ink, 'middle', true), ...cap('慣れる ＝ get used to', C.red)),
+  },
+  {
+    note: '❓見分けるには、どうすればよいでしょう。→ to のあとを見ます。原形が来たら①used to（以前は〜だった）。-ing か名詞が来たら、be／get used to（慣れている／慣れる）です。be か get かは、状態か変化かで決まります。',
+    add: fresh(...flow(['to の\nあとは?', '原形', 'used to\n以前は〜'], 22, { h: 50, size: 11, color: C.blue, fill: FILL.blue }).flat(), ...flow(['to の\nあとは?', '-ing／名詞', 'be／get\nused to'], 86, { h: 50, size: 11, color: C.green, fill: FILL.green }).flat(), ...cap('to の後ろを必ず確かめる')),
+  },
+  {
+    note: '三つを並べてまとめます。He used to live in Osaka.（以前は大阪に住んでいた）、He is used to living in Osaka.（大阪に住むことに慣れている）、He got used to living in Osaka.（大阪に住むことに慣れた）。動詞の形がちがうだけで、意味が大きく変わります。',
+    add: fresh(head('三つを比べる'), bx(10, 26, 300, 28, 'He used to live in Osaka.　以前は住んでいた', C.blue, FILL.blue, 10), bx(10, 60, 300, 28, 'He is used to living in Osaka.　慣れている', C.green, FILL.green, 10), bx(10, 94, 300, 28, 'He got used to living in Osaka.　慣れた', C.red, FILL.red, 10), ...cap('live ／ living で見分ける')),
+  },
+  {
+    note: 'まとめです。used to＋原形は「以前は〜だった」。be used to＋-ing／名詞は「慣れている」。get used to＋-ing／名詞は「慣れる」。to のあとが原形か、-ing・名詞かを、必ず確かめましょう。',
+    add: fresh(bx(15, 14, 290, 30, 'used to ＋ 原形 ＝ 以前は〜だった', C.blue, FILL.blue, 12), bx(15, 52, 290, 30, 'be used to ＋ -ing ＝ 慣れている', C.green, FILL.green, 12), bx(15, 90, 290, 30, 'get used to ＋ -ing ＝ 慣れる', C.red, FILL.red, 12), ...cap('to のあとを確かめる', C.green)),
+  },
+], 'used to ・ be used to ・ get used to');
+
+// ───────── koko_eigo_18_question_types 内容一致のひっかけ ─────────
+const pairRow = (y: number, left: string, right: string, lc = C.blue, rc = C.red): E[] => [bx(10, y, 142, 34, left, lc, FILL.blue, 10), lb(160, y + 17, '→', 14, C.main, 'middle', true), bx(168, y, 142, 34, right, rc, FILL.red, 10)];
+const e18: DiagramFigure = show([
+  {
+    note: '内容一致問題の選択肢は、本文と一見似ているのに、微妙にちがうものが並びます。代表的な「ひっかけ」の型を知っておくと、選ぶ速さと正しさが上がります。',
+    add: [head('内容一致のひっかけ 5 型'), ...rowb(['① 数値', '② 因果'], 26, 26, C.red, FILL.red, 12, 10, 310, 6), ...rowb(['③ 一部だけ', '④ 言い過ぎ', '⑤ 書いてない'], 58, 26, C.red, FILL.red, 11, 10, 310, 6), ...cap('本文と照らして見破る')],
+  },
+  {
+    note: '①数値のすり替え。本文が「about 30% of students」なのに、選択肢が「40% of students」になっている型です。数字や割合は、本文と一字ずつ照らし合わせましょう。',
+    add: fresh(head('① 数値のすり替え'), ...pairRow(28, '本文\nabout 30% of students', '選択肢\n40% of students'), lb(160, 90, '数字が本文とちがう → ×', 12, C.red, 'middle', true), ...cap('数字は本文で確かめる', C.red)),
+  },
+  {
+    note: '②因果関係の逆転。本文が「A because of B」（Bが原因、Aが結果）なのに、選択肢が「B because of A」と、原因と結果を入れかえている型です。どちらが原因かを確かめます。',
+    add: fresh(head('② 因果関係の逆転'), ...pairRow(28, '本文\nA because of B', '選択肢\nB because of A'), ...[ar(40, 74, 100, 74, C.blue), lb(70, 90, '原因 ← B', 10, C.blue, 'middle')], lb(160, 118, '原因と結果が逆 → ×', 12, C.red, 'middle', true), ...cap('何が原因かを確かめる', C.red)),
+  },
+  {
+    note: '③部分的真実と、④言い過ぎ。本文の一部分だけを取り出して、全体としては誤りにした選択肢が③。本文の「some students think」を「all students think」と断定しすぎたのが④です。',
+    add: fresh(head('③ 一部だけ正しい ／ ④ 言い過ぎ'), ...pairRow(26, '本文\nsome students think', '選択肢\nall students think'), bx(10, 76, 300, 34, '本文の一部だけを取り出して、全体を言いきる → ×', C.red, FILL.red, 11), ...cap('範囲がずれていないか見る', C.red)),
+  },
+  {
+    note: '⑤Not mentioned（本文に書かれていない）。もっともらしく作られていても、本文に書いていない情報は不正解です。「本文のどこにも根拠がない」ときは、そこで×にします。',
+    add: fresh(head('⑤ 本文に書かれていない'), bx(15, 28, 290, 34, '選択肢：もっともらしい内容', C.gray, FILL.gray, 12), ar(160, 64, 160, 84, C.main), bx(15, 88, 290, 34, '本文のどこにも根拠がない → ×', C.red, FILL.red, 12), ...cap('根拠が本文にあるか', C.red)),
+  },
+  {
+    note: '❓どんな語に気をつけるとよいでしょうか。→ all・always・never・only・every のような「極端な語」を含む選択肢です。本文の実際のニュアンスとずれていることが多いので、特に念入りに照合します。',
+    add: fresh(head('極端な語に注意', C.red), ...rowb(['all', 'always', 'never', 'only', 'every'], 28, 34, C.red, FILL.red, 12, 10, 310, 5), lb(160, 86, 'この語があったら、本文と念入りに照合', 12, C.ink, 'middle', true), lb(160, 110, 'some → all、often → always はずれやすい', 11, C.gray, 'middle'), ...cap('言い過ぎのサイン', C.red)),
+  },
+  {
+    note: '❓選択肢の語が本文と同じなら、正解でしょうか。→ いいえ。選択肢は本文の言葉をそのまま使わず、同じ意味の別の言葉で書かれることが多いです。surprised at が unexpected に、many people が a lot of people に変わる例を見ましょう。',
+    add: fresh(head('言いかえ（パラフレーズ）を見抜く'), bx(10, 26, 300, 30, '本文　Many people were surprised at the result.', C.blue, FILL.blue, 10), ar(160, 58, 160, 74, C.main), bx(10, 78, 300, 30, '選択肢　The result was unexpected for a lot of people.', C.green, FILL.green, 10), lb(160, 128, 'surprised at ＝ unexpected、many ＝ a lot of', 11, C.ink, 'middle', true), ...cap('語ではなく「意味」が一致しているか', C.green)),
+  },
+  {
+    note: '消去法で選びます。①本文に明確に反する選択肢を消す。②本文に書かれていない選択肢を消す。③一部だけ正しい・言い過ぎの選択肢を消す。④最後に残ったものを本文と照合して確定する。明らかにおかしいものから素早く消していくのがコツです。',
+    add: fresh(bx(10, 22, 300, 24, '① 本文に反するものを消す', C.blue, FILL.blue, 11), bx(10, 50, 300, 24, '② 本文に書かれていないものを消す', C.blue, FILL.blue, 11), bx(10, 78, 300, 24, '③ 一部だけ・言い過ぎを消す', C.blue, FILL.blue, 11), bx(10, 106, 300, 24, '④ 残った 1 つを本文と照合する', C.green, FILL.green, 11), ...cap('引き算で選ぶ', C.blue)),
+  },
+  {
+    note: 'まとめです。ひっかけは、数値・因果・一部だけ・言い過ぎ・書いていない、の五型。all などの極端な語に注意。言いかえは、語ではなく意味で判断する。消去法で、明らかにおかしいものから消していく。',
+    add: fresh(bx(15, 14, 290, 30, '5 型：数値・因果・一部・言い過ぎ・なし', C.red, FILL.red, 12), bx(15, 52, 290, 30, '言いかえは「意味」で判断する', C.blue, FILL.blue, 12), bx(15, 90, 290, 30, '明らかにおかしい選択肢から消す', C.green, FILL.green, 12), ...cap('本文と照らして選ぶ', C.green)),
+  },
+], '内容一致問題のひっかけ');
+
 export const XF_KEA_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_eigo_s001': s001,
   'xf_koko_eigo_s003': s003,
@@ -975,6 +1104,9 @@ export const XF_KEA_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_eigo_13_participial_advanced': e13,
   'xf_koko_eigo_14_indirect_question_advanced': e14,
   'xf_koko_eigo_15_free_writing': e15,
+  'xf_koko_eigo_16_functional_scenes': e16,
+  'xf_koko_eigo_17_eiken_expressions': e17,
+  'xf_koko_eigo_18_question_types': e18,
 };
 
 export const XF_KEA_SECTIONS: Record<string, string> = {
@@ -1001,4 +1133,7 @@ export const XF_KEA_SECTIONS: Record<string, string> = {
   'koko_eigo_13_participial_advanced#2': 'xf_koko_eigo_13_participial_advanced',
   'koko_eigo_14_indirect_question_advanced#0': 'xf_koko_eigo_14_indirect_question_advanced',
   'koko_eigo_15_free_writing#0': 'xf_koko_eigo_15_free_writing',
+  'koko_eigo_16_functional_scenes#0': 'xf_koko_eigo_16_functional_scenes',
+  'koko_eigo_17_eiken_expressions#0': 'xf_koko_eigo_17_eiken_expressions',
+  'koko_eigo_18_question_types#0': 'xf_koko_eigo_18_question_types',
 };
