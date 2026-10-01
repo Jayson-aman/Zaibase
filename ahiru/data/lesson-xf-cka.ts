@@ -849,7 +849,7 @@ const jcPoint = (i: number) => [
   ...(i > 0 ? [ln(jcX[i - 1], jcY[i - 1], jcX[i], jcY[i], C.main, false, 2.4)] : []),
   ci(jcX[i], jcY[i], 6, undefined, i % 2 === 0 && i !== 4 ? C.red : C.green, i % 2 === 0 && i !== 4 ? FILL.red : FILL.green),
   lb(jcX[i], 138, '①②③④⑤'[i] + jcName[i], 9, C.gray, 'middle'),
-  lb(i === 4 ? 314 : jcX[i], jcY[i] + (jcY[i] > 72 ? 18 : -14), jcFeel[i], 10, C.ink, i === 4 ? 'end' : 'middle', true),
+  lb(i === 4 ? 314 : jcX[i], jcY[i] + (jcY[i] > 72 || i === 4 ? 18 : -14), jcFeel[i], 10, C.ink, i === 4 ? 'end' : 'middle', true),
 ];
 const k22: DiagramFigure = show([
   {
