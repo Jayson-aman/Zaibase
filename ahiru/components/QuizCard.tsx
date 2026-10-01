@@ -794,6 +794,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     color: '#78350F',
     lineHeight: 24,
+    marginTop: 12,
   },
   trickBox: {
     marginTop: 10,
