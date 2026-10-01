@@ -34,8 +34,38 @@ import { SPLUS_NG } from './splus-ng';
 import { SPLUS_FK } from './splus-fk';
 import { SPLUS_FS } from './splus-fs';
 import { SPLUS_FO } from './splus-fo';
+import { SPLUS2_SK_SN } from './splus2-sk-sn';
+import { SPLUS2_SF } from './splus2-sf';
+import { SPLUS2_TK4 } from './splus2-tk4';
+import { SPLUS2_NZ } from './splus2-nz';
+import { SPLUS2_NT } from './splus2-nt';
+import { SPLUS2_NG } from './splus2-ng';
+import { SPLUS2_FK } from './splus2-fk';
+import { SPLUS2_FS } from './splus2-fs';
+import { SPLUS2_FO } from './splus2-fo';
+import { SPLUS2_KS } from './splus2-ks';
+import { SPLUS2_KAZ } from './splus2-kaz';
+import { SPLUS2_KTA } from './splus2-kta';
+import { SPLUS2_KNA } from './splus2-kna';
+import { SPLUS2_KSE } from './splus2-kse';
+import { SPLUS2_KOH } from './splus2-koh';
 
 export const schoolPlusQuestions: Question[] = [
+  ...SPLUS2_SK_SN,
+  ...SPLUS2_SF,
+  ...SPLUS2_TK4,
+  ...SPLUS2_NZ,
+  ...SPLUS2_NT,
+  ...SPLUS2_NG,
+  ...SPLUS2_FK,
+  ...SPLUS2_FS,
+  ...SPLUS2_FO,
+  ...SPLUS2_KS,
+  ...SPLUS2_KAZ,
+  ...SPLUS2_KTA,
+  ...SPLUS2_KNA,
+  ...SPLUS2_KSE,
+  ...SPLUS2_KOH,
   ...SPLUS_SJ_A,
   ...SPLUS_SJ_B,
   ...SPLUS_ND_A,
