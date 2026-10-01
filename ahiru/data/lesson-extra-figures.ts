@@ -27,6 +27,9 @@ import { XF_HG_FIGURES, XF_HG_SECTIONS } from './lesson-xf-hg';
 import { XF_HH_FIGURES, XF_HH_SECTIONS } from './lesson-xf-hh';
 import { XF_HI_FIGURES, XF_HI_SECTIONS } from './lesson-xf-hi';
 import { XF_HJ_FIGURES, XF_HJ_SECTIONS } from './lesson-xf-hj';
+import { XF_KSB_FIGURES, XF_KSB_SECTIONS } from './lesson-xf-ksb';
+import { XF_KSI_FIGURES, XF_KSI_SECTIONS } from './lesson-xf-ksi';
+import { XF_KRD_FIGURES, XF_KRD_SECTIONS } from './lesson-xf-krd';
 
 export const EXTRA_LESSON_FIGURES: Record<string, Figure> = {
   ...XF_SA_FIGURES,
@@ -51,6 +54,9 @@ export const EXTRA_LESSON_FIGURES: Record<string, Figure> = {
   ...XF_HH_FIGURES,
   ...XF_HI_FIGURES,
   ...XF_HJ_FIGURES,
+  ...XF_KSB_FIGURES,
+  ...XF_KSI_FIGURES,
+  ...XF_KRD_FIGURES,
 };
 
 export const EXTRA_SECTION_FIGURES: Record<string, string> = {
@@ -76,4 +82,7 @@ export const EXTRA_SECTION_FIGURES: Record<string, string> = {
   ...XF_HH_SECTIONS,
   ...XF_HI_SECTIONS,
   ...XF_HJ_SECTIONS,
+  ...XF_KSB_SECTIONS,
+  ...XF_KSI_SECTIONS,
+  ...XF_KRD_SECTIONS,
 };

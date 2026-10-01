@@ -878,7 +878,7 @@ const s377: DiagramFigure = show([
 ], '面積を2等分する直線');
 
 // ───────── koko_math_s379 軸に平行な線分で面積比 ─────────
-const m379 = mkMap(130, 130, 30, 20);
+const m379 = mkMap(118, 130, 30, 20);
 const base379 = () => [...cAxes(m379, -3.2, 3.4, -1, 6), ...cParab(m379, 1, -2.3, 2.3, 5.5), ...cPt(m379, -2, 4, 'A(-2,4)', C.red, -6, -2), ...cPt(m379, 1, 1, 'B(1,1)', C.red, 6, 8), cLine(m379, -2, 4, 1, 1, C.blue), ...cPt(m379, 0, 2, 'C', C.main, 6, -4)];
 const s379: DiagramFigure = show([
   {
@@ -958,7 +958,7 @@ const s380: DiagramFigure = show([
 ], '線分の比と面積の比');
 
 // ───────── koko_math_s384 台形の周を動く点 ─────────
-const trap = () => [pg([[30, 20], [130, 20], [190, 100], [30, 100]], C.blue, FILL.blue), lb(22, 20, 'A', 12, C.ink, 'end', true), lb(136, 16, 'D', 12, C.ink, 'start', true), lb(196, 106, 'C', 12, C.ink, 'start', true), lb(22, 106, 'B', 12, C.ink, 'end', true), lb(80, 14, '5cm', 11, C.gray, 'middle'), lb(14, 62, '4cm', 11, C.gray, 'end'), lb(110, 116, '8cm', 11, C.gray, 'middle')];
+const trap = () => [pg([[30, 20], [130, 20], [190, 100], [30, 100]], C.blue, FILL.blue), lb(22, 20, 'A', 12, C.ink, 'end', true), lb(136, 16, 'D', 12, C.ink, 'start', true), lb(196, 106, 'C', 12, C.ink, 'start', true), lb(22, 106, 'B', 12, C.ink, 'end', true), lb(80, 14, '5cm', 11, C.gray, 'middle'), lb(38, 62, '4cm', 11, C.gray, 'start'), lb(110, 116, '8cm', 11, C.gray, 'middle')];
 const s384: DiagramFigure = show([
   {
     note: '問題です。台形ABCDは、AD∥BC、AD＝5cm、BC＝8cm、AB＝4cm、∠A＝∠B＝90°です。点PはAを出発し、A→D→C→Bの順に毎秒1cmで動きます。t秒後の△ABPの面積をy cm²として、yをtの式で表します。',
@@ -1002,6 +1002,269 @@ const s384: DiagramFigure = show([
   },
 ], '台形の周を動く点と面積');
 
+// ───────── koko_math_s387 円の中で交わる2弦と相似 ─────────
+const cc = { A: [103.7, 16.1], B: [38, 77.6], C: [66.1, 26.1], D: [59.4, 124.8], P: [64.3, 53] } as const;
+const circ387 = () => [ci(100, 78, 62, undefined, C.blue, 'rgba(224,242,254,0.5)'), ln(cc.A[0], cc.A[1], cc.B[0], cc.B[1], C.ink, false, 2), ln(cc.C[0], cc.C[1], cc.D[0], cc.D[1], C.ink, false, 2),
+  lb(cc.A[0] + 6, cc.A[1] - 3, 'A', 12, C.ink, 'start', true), lb(cc.B[0] - 6, cc.B[1] + 6, 'B', 12, C.ink, 'end', true), lb(cc.C[0] - 5, cc.C[1] - 6, 'C', 12, C.ink, 'end', true), lb(cc.D[0] - 4, cc.D[1] + 10, 'D', 12, C.ink, 'end', true),
+  ci(cc.P[0], cc.P[1], 3, undefined, C.red, C.red), lb(cc.P[0] + 7, cc.P[1] + 10, 'P', 12, C.red, 'start', true)];
+const s387: DiagramFigure = show([
+  {
+    note: '問題です。円Oの2つの弦ABとCDが、円の内部の点Pで交わっています。PA＝6cm、PB＝4cm、PC＝3cmのとき、PDの長さを求めます。',
+    add: [...circ387(), ...side(['PA＝6', C.ink, 40], ['PB＝4', C.ink, 62], ['PC＝3', C.ink, 84], ['PD＝？', C.red, 116]), ...cap('PD の長さは？')],
+  },
+  {
+    note: '❓どうやって長さを求めるのでしょう。→ 相似な三角形を見つけます。△PACと△PDBに注目します。2つの三角形が相似なら、対応する辺の比が等しくなります。',
+    add: [pg([[cc.P[0], cc.P[1]], [cc.A[0], cc.A[1]], [cc.C[0], cc.C[1]]], C.green, 'rgba(22,163,74,0.25)'), pg([[cc.P[0], cc.P[1]], [cc.D[0], cc.D[1]], [cc.B[0], cc.B[1]]], C.red, 'rgba(225,29,72,0.2)'), ...side(['△PAC', C.green, 50], ['△PDB', C.red, 76], ['相似を', C.ink, 108], ['示したい', C.ink, 130]), ...cap('△PAC と △PDB に注目', C.main)],
+  },
+  {
+    note: '1組目の角です。∠APCと∠DPBは、2本の直線が交わってできる対頂角（たいちょうかく）なので等しくなります。',
+    add: [...side(['① ∠APC', C.main, 44], ['＝ ∠DPB', C.main, 66], ['（対頂角）', C.main, 96]), ...cap('①対頂角は等しい', C.main)],
+  },
+  {
+    note: '2組目の角です。∠PACは∠BACのことで、弧BCに対する円周角です。∠PDBは∠CDBのことで、これも弧BCに対する円周角です。同じ弧に対する円周角は等しいので、∠PAC＝∠PDBです。',
+    add: [ln(cc.A[0], cc.A[1], cc.C[0], cc.C[1], C.green, false, 3), ln(cc.D[0], cc.D[1], cc.B[0], cc.B[1], C.red, false, 3), ...side(['② ∠PAC', C.main, 44], ['＝ ∠PDB', C.main, 66], ['弧BCに対する', C.ink, 96], ['円周角', C.ink, 116]), ...cap('②同じ弧に対する円周角', C.main)],
+  },
+  {
+    note: '2組の角がそれぞれ等しいので、△PAC∽△PDBです(相似)。証明の答案では、「対頂角は等しい」「弧BCに対する円周角は等しい」と根拠を書くことが大切です。',
+    add: fresh(bx(15, 14, 290, 34, '①対頂角は等しい  ∠APC＝∠DPB', C.main, FILL.warm, 12), bx(15, 56, 290, 34, '②弧BCに対する円周角  ∠PAC＝∠PDB', C.main, FILL.warm, 12), bx(15, 98, 290, 34, '2組の角が等しい → △PAC∽△PDB', C.green, FILL.green, 13), ...cap('根拠を書いて 結論', C.green)),
+  },
+  {
+    note: '相似な三角形では、対応する辺の比が等しくなります。対応はPA↔PD、PC↔PB。だからPA：PD＝PC：PBです。内項の積と外項の積が等しいので、PA×PB＝PC×PDになります。',
+    add: fresh(bx(15, 14, 290, 34, 'PA : PD ＝ PC : PB', C.blue, FILL.blue, 15), lb(160, 66, '内項の積 ＝ 外項の積', 12, C.ink, 'middle', true), bx(15, 82, 290, 38, 'PA × PB ＝ PC × PD', C.main, FILL.warm, 16), ...cap('円の内部の2弦の関係', C.main)),
+  },
+  {
+    note: '数値を入れます。6×4＝3×PD、24＝3×PD、PD＝8cm。検算すると、弦CDは3＋8＝11cm、弦ABは6＋4＝10cm。PDは確かに8cmです。',
+    add: fresh(...circ387(), ...side(['6×4＝3×PD', C.ink, 40], ['24＝3×PD', C.ink, 64], ['PD＝8cm', C.red, 96], ['CD＝11cm', C.ink, 124]), ...cap('答え：PD ＝ 8 cm', C.red)),
+  },
+  {
+    note: '❓PA×ABのように、弦の全長を掛けてよいでしょうか。→ いけません。掛け合わせるのは、Pから見た2方向の長さです。PAとPB、PCとPD。図にPを中心とした4本の矢印をかいて、どれとどれを掛けるのかを目で確かめましょう。',
+    add: fresh(...circ387(), ar(cc.P[0], cc.P[1], cc.A[0], cc.A[1], C.green), ar(cc.P[0], cc.P[1], cc.B[0], cc.B[1], C.green), ar(cc.P[0], cc.P[1], cc.C[0], cc.C[1], C.red), ar(cc.P[0], cc.P[1], cc.D[0], cc.D[1], C.red), ...side(['Pから出る', C.ink, 44], ['4本の矢印', C.ink, 66], ['PA×PB', C.green, 100], ['PC×PD', C.red, 122]), ...cap('P から見た長さを掛ける', C.main)),
+  },
+  {
+    note: 'まとめです。円の内部で2つの弦が交わるとき、PA×PB＝PC×PD。理由は△PAC∽△PDBで、根拠は対頂角と円周角です。答案では根拠を必ず書きましょう。',
+    add: fresh(bx(15, 14, 290, 34, 'PA × PB ＝ PC × PD', C.main, FILL.warm, 15), bx(15, 56, 290, 34, '理由：△PAC∽△PDB', C.blue, FILL.blue, 13), bx(15, 98, 290, 34, '根拠：対頂角・同じ弧の円周角', C.green, FILL.green, 13), ...cap('6×4 ＝ 3×8', C.main)),
+  },
+], '円の中で交わる2弦と相似');
+
+// ───────── koko_math_s389 内接円の半径 ─────────
+const tri389 = () => [pg([[50, 125], [50, 41], [162, 125]], C.ink, '#FFFFFF'), ci(78, 97, 28, undefined, C.blue, FILL.blue), ci(78, 97, 2.5, undefined, C.blue, C.blue), lb(44, 124, 'A', 12, C.ink, 'end', true), lb(44, 40, 'B', 12, C.ink, 'end', true), lb(168, 130, 'C', 12, C.ink, 'start', true), lb(78, 94, 'I', 11, C.blue, 'middle', true), lb(42, 84, '6', 11, C.gray, 'end'), lb(106, 140, '8', 11, C.gray, 'middle'), lb(116, 78, '10', 11, C.gray, 'start')];
+const s389: DiagramFigure = show([
+  {
+    note: '問題です。3辺が6cm、8cm、10cmの直角三角形ABC(直角はA)があります。この三角形の内接円(ないせつえん)の半径rを求めます。内接円とは、3つの辺すべてに接している円のことです。',
+    add: [...tri389(), ...side(['AB＝6', C.ink, 40], ['AC＝8', C.ink, 62], ['BC＝10', C.ink, 84], ['内接円の', C.blue, 116], ['半径 r は？', C.blue, 138]), ...cap('内接円の半径 r を求めたい')],
+  },
+  {
+    note: '❓内接円の中心Iから3つの辺までの距離は、どうなっているでしょう。→ どれも半径rです。円は3辺に接しているので、中心から各辺におろした垂線の長さがすべてrになります。',
+    add: [ln(78, 97, 78, 125, C.red, false, 2), ln(78, 97, 50, 97, C.red, false, 2), ln(78, 97, 99, 82, C.red, false, 2), ...side(['Iから3辺へ', C.red, 50], ['の距離は', C.red, 72], ['すべて r', C.red, 100]), ...cap('半径 r は 辺までの距離', C.red)],
+  },
+  {
+    note: '❓どうすればrが出るでしょう。→ 中心Iと3つの頂点を結ぶと、△ABCが3つの三角形(△IAB、△IBC、△ICA)に分かれます。底辺はそれぞれ6、10、8cm、高さはどれもrです。',
+    add: [ln(78, 97, 50, 41, C.green, false, 2), ln(78, 97, 162, 125, C.green, false, 2), ln(78, 97, 50, 125, C.green, false, 2), ...side(['△IAB 底辺6', C.green, 40], ['△IBC 底辺10', C.green, 62], ['△ICA 底辺8', C.green, 84], ['高さはどれも r', C.red, 118]), ...cap('3つの三角形に分ける', C.green)],
+  },
+  {
+    note: '3つの三角形の面積を足します。(1/2)×6×r＋(1/2)×8×r＋(1/2)×10×r＝(1/2)×r×(6＋8＋10)＝12rです。これが△ABC全体の面積になります。',
+    add: fresh(bx(15, 14, 290, 30, '(1/2)×6×r ＋ (1/2)×8×r ＋ (1/2)×10×r', C.green, FILL.green, 12), bx(15, 52, 290, 30, '＝ (1/2) × r × (6＋8＋10)', C.green, FILL.green, 13), bx(15, 90, 290, 30, '＝ 12r', C.red, FILL.red, 15), ...cap('△ABC ＝ 12r（その1）', C.green)),
+  },
+  {
+    note: '❓△ABCの面積は、別の方法で出せるでしょうか。→ 直角三角形なので、直角をはさむ2辺を使って(1/2)×6×8＝24です。同じ三角形の面積を2通りに表したことになります。',
+    add: fresh(...tri389(), ...side(['直角の2辺で', C.blue, 44], ['(1/2)×6×8', C.blue, 70], ['＝24', C.blue, 96]), ...cap('△ABC ＝ 24（その2）', C.blue)),
+  },
+  {
+    note: '2通りの面積を等しいとおきます。12r＝24、r＝2。内接円の半径は2cmです。一般に、面積をS、周の長さの半分をsとすると、S＝rs という式になります。ここではs＝(6＋8＋10)÷2＝12で、24＝12rです。',
+    add: fresh(bx(30, 14, 260, 34, '12r ＝ 24', C.main, FILL.warm, 16), bx(30, 56, 260, 34, 'r ＝ 2 cm', C.green, FILL.green, 16), lb(160, 114, 'S ＝ r × s　（s は周の長さの半分）', 12, C.ink, 'middle', true), ...cap('答え：r ＝ 2 cm', C.green)),
+  },
+  {
+    note: '❓答えは正しいでしょうか。接線の長さで検算します。直角の頂点Aからの接線の長さは、Aにできる正方形の1辺で、r＝2。BからはAB−2＝6−2＝4。CからはAC−2＝8−2＝6。斜辺BC＝4＋6＝10で、問題の10cmと一致します。',
+    add: fresh(...tri389(), ...side(['A から 2', C.green, 40], ['B から 6−2＝4', C.blue, 66], ['C から 8−2＝6', C.red, 92], ['4＋6＝10 ✓', C.main, 126]), ...cap('接線の長さで検算', C.green)),
+  },
+  {
+    note: '直角三角形では、もっと簡単な公式もあります。直角をはさむ2辺をa、b、斜辺をcとすると、r＝(a＋b−c)÷2です。(6＋8−10)÷2＝2。同じ答えになります。',
+    add: fresh(bx(15, 20, 290, 40, 'r ＝ (a ＋ b − c) ÷ 2', C.main, FILL.warm, 15), bx(15, 74, 290, 40, '(6 ＋ 8 − 10) ÷ 2 ＝ 2', C.green, FILL.green, 15), ...cap('直角三角形専用の公式', C.main)),
+  },
+  {
+    note: 'まとめです。内接円の半径は「面積を2通りに表す」ことで求めます。S＝rsのsは、周の長さではなく周の長さの半分です。また、直角三角形の外接円の半径は斜辺の半分(ここでは5cm)で、内接円とは別のものです。',
+    add: fresh(bx(15, 14, 290, 34, '面積を 2通りに表す（12r ＝ 24）', C.blue, FILL.blue, 13), bx(15, 56, 290, 34, 's は 周の長さの半分（12）', C.red, FILL.red, 13), bx(15, 98, 290, 34, '外接円の半径は斜辺の半分（5cm）', C.gray, FILL.gray, 12), ...cap('内接円と外接円を区別', C.main)),
+  },
+], '内接円の半径');
+
+// ───────── koko_math_s394 辺の比を掛け合わせて体積比 ─────────
+const T = { O: [150, 18], A: [55, 112], B: [262, 112], C: [175, 140], P: [118.3, 49.3], Q: [206, 65], R: [166.7, 98] } as const;
+const tet = () => [ln(T.O[0], T.O[1], T.A[0], T.A[1], C.ink, false, 2), ln(T.O[0], T.O[1], T.B[0], T.B[1], C.ink, false, 2), ln(T.O[0], T.O[1], T.C[0], T.C[1], C.ink, false, 2), ln(T.A[0], T.A[1], T.B[0], T.B[1], C.ink, true, 1.6), ln(T.A[0], T.A[1], T.C[0], T.C[1], C.ink, false, 2), ln(T.B[0], T.B[1], T.C[0], T.C[1], C.ink, false, 2),
+  lb(T.O[0] + 8, T.O[1] + 2, 'O', 12, C.ink, 'start', true), lb(T.A[0] - 6, T.A[1] + 4, 'A', 12, C.ink, 'end', true), lb(T.B[0] + 6, T.B[1] + 4, 'B', 12, C.ink, 'start', true), lb(T.C[0] + 8, T.C[1] + 2, 'C', 12, C.ink, 'start', true)];
+const tetPQR = () => [pg([[T.P[0], T.P[1]], [T.Q[0], T.Q[1]], [T.R[0], T.R[1]]], C.red, 'rgba(225,29,72,0.2)'), ln(T.O[0], T.O[1], T.P[0], T.P[1], C.red, false, 3), ln(T.O[0], T.O[1], T.Q[0], T.Q[1], C.red, false, 3), ln(T.O[0], T.O[1], T.R[0], T.R[1], C.red, false, 3),
+  ci(T.P[0], T.P[1], 3, undefined, C.red, C.red), ci(T.Q[0], T.Q[1], 3, undefined, C.red, C.red), ci(T.R[0], T.R[1], 3, undefined, C.red, C.red),
+  lb(T.P[0] - 6, T.P[1], 'P', 12, C.red, 'end', true), lb(T.Q[0] + 6, T.Q[1] - 2, 'Q', 12, C.red, 'start', true), lb(T.R[0] - 6, T.R[1] + 2, 'R', 12, C.red, 'end', true)];
+const s394: DiagramFigure = show([
+  {
+    note: '問題です。三角錐(さんかくすい)O-ABCの体積は54cm³です。辺OA上にOP：PA＝1：2となる点P、辺OB上にOQ：QB＝1：1となる点Q、辺OC上にOR：RC＝2：1となる点Rをとります。三角錐O-PQRの体積を求めます。',
+    add: [...tet(), ...tetPQR(), ...cap('O-ABC の体積は 54 cm³')],
+  },
+  {
+    note: '❓まず比を整理します。OP：PA＝1：2は、OPと「残りのPA」の比です。OA全体との比にすると、OP：OA＝1：(1＋2)＝1：3、つまりOP/OA＝1/3です。ここを1：2のまま使う誤りがとても多いです。',
+    add: fresh(bx(15, 14, 290, 30, 'OP : PA ＝ 1 : 2　（残りとの比）', C.gray, FILL.gray, 12), ar(160, 48, 160, 66, C.red), bx(15, 70, 290, 30, 'OP : OA ＝ 1 : 3　→　OP/OA ＝ 1/3', C.red, FILL.red, 13), lb(160, 122, '全体 ＝ 1 ＋ 2 ＝ 3', 12, C.ink, 'middle', true), ...cap('全体との比に直す', C.red)),
+  },
+  {
+    note: '他の2つも同じです。OQ：QB＝1：1なので、OQ：OB＝1：2、OQ/OB＝1/2。OR：RC＝2：1なので、OR：OC＝2：3、OR/OC＝2/3です。',
+    add: fresh(bx(15, 14, 290, 30, 'OP/OA ＝ 1/3', C.red, FILL.red, 14), bx(15, 52, 290, 30, 'OQ/OB ＝ 1/(1+1) ＝ 1/2', C.red, FILL.red, 14), bx(15, 90, 290, 30, 'OR/OC ＝ 2/(2+1) ＝ 2/3', C.red, FILL.red, 14), ...cap('3つの比はすべて O からの比', C.red)),
+  },
+  {
+    note: '体積比は、この3つの比の積です。(1/3)×(1/2)×(2/3)＝2/18＝1/9。三角錐O-PQRの体積は、O-ABCの1/9になります。',
+    add: fresh(bx(15, 20, 290, 40, '(1/3) × (1/2) × (2/3)', C.main, FILL.warm, 15), bx(15, 74, 290, 40, '＝ 2/18 ＝ 1/9', C.green, FILL.green, 16), ...cap('体積比 ＝ 3つの比の積', C.main)),
+  },
+  {
+    note: '❓なぜ3つの比をかけるのでしょう。→ 底面△OQRと△OBCは、∠Oが共通で2辺の比がOQ/OB、OR/OCなので、面積比は(OQ/OB)×(OR/OC)。さらに高さの比がOP/OAなので、体積比は3つの積になります。面積は2つの積、体積は3つの積です。',
+    add: fresh(...tet(), ...tetPQR(), lb(6, 22, '面積比 ＝', 11, C.blue, 'start', true), lb(6, 38, 'OQ/OB × OR/OC', 10, C.blue, 'start', true), lb(6, 60, '高さの比 ＝', 11, C.green, 'start', true), lb(6, 76, 'OP/OA', 11, C.green, 'start', true), ...cap('面積は2つの積、体積は3つの積', C.main)),
+  },
+  {
+    note: 'もとの体積54cm³に体積比1/9をかけて、54×(1/9)＝6cm³。三角錐O-PQRの体積は6cm³です。残りの立体の体積は54−6＝48cm³になります。',
+    add: fresh(bx(15, 20, 290, 40, '54 × (1/9) ＝ 6 cm³', C.red, FILL.red, 15), bx(15, 74, 290, 40, '残りの立体 54 − 6 ＝ 48 cm³', C.blue, FILL.blue, 14), ...cap('答え：6 cm³', C.red)),
+  },
+  {
+    note: '❓3つの比を足してはいけないのでしょうか。→ いけません。(1/3)＋(1/2)＋(2/3)＝3/2となり1を超えます。切り取った立体が、もとの立体より大きくなってしまい、矛盾します。答えが1を超えたら必ずまちがい、とチェックできます。',
+    add: fresh(bx(15, 20, 290, 40, '1/3 ＋ 1/2 ＋ 2/3 ＝ 3/2', C.red, FILL.red, 15), lb(160, 86, '1 を超える → 切り取った方が大きい？', 13, C.red, 'middle', true), lb(160, 112, '矛盾するのでまちがい', 13, C.ink, 'middle', true), ...cap('体積比は 1 以下', C.red)),
+  },
+  {
+    note: 'まとめです。3辺の比を、O(共通の頂点)から測った全体との比に直して、3つかけます。3辺すべてを中点にとれば(1/2)³＝1/8です。比は全体との比に直すこと、足さずにかけること、この2点に注意しましょう。',
+    add: fresh(bx(15, 14, 290, 34, '比は 全体との比に直す（1:2 → 1/3）', C.red, FILL.red, 12), bx(15, 56, 290, 34, '足さずに かける', C.blue, FILL.blue, 13), bx(15, 98, 290, 34, '全部が中点なら (1/2)³ ＝ 1/8', C.green, FILL.green, 13), ...cap('体積比 ＝ 3つの積', C.main)),
+  },
+], '三角錐の体積比');
+
+// ───────── koko_math_s397 等差数列の第n項 ─────────
+const seq = (vals: (number | string)[], y: number, color: string, fill: string, w = 46, gap = 12, x0 = 12) =>
+  vals.map((v, i) => bx(x0 + i * (w + gap), y, w, 32, String(v), color, fill, 13));
+const diffs = (n: number, y: number, label: string, color: string = C.red, w = 46, gap = 12, x0 = 12) =>
+  Array.from({ length: n }, (_, i) => lb(x0 + (i + 1) * (w + gap) - gap / 2, y, label.replace('#', String(i + 1)), 11, color, 'middle', true));
+const s397: DiagramFigure = show([
+  {
+    note: '問題です。次のように数が並んでいます。3、7、11、15、19、…。この並びの規則を見つけて、第n項(n番目の数)を式で表します。',
+    add: [...seq([3, 7, 11, 15, 19], 40, C.blue, FILL.blue), lb(160, 20, '3、7、11、15、19、…', 13, C.ink, 'middle', true), ...cap('n番目の数を式にしたい')],
+  },
+  {
+    note: '❓規則を見つけるには、何を調べればよいでしょう。→ となり合う数の差です。7−3＝4、11−7＝4、15−11＝4、19−15＝4。差がいつも4で一定です。',
+    add: [...diffs(4, 94, '+4', C.red), ...[0, 1, 2, 3].map((i) => ar(12 + (i + 1) * 58 - 16, 82, 12 + (i + 1) * 58 - 2 + 6, 82, C.red)), ...cap('となり合う数の差を調べる', C.red)],
+  },
+  {
+    note: '差が一定の数の並びを等差数列(とうさすうれつ)といい、その差4を公差(こうさ)といいます。公差が一定なので、第n項は「初めの数に、4をいくつか足したもの」で表せます。',
+    add: [...band(135, bx(20, 150, 130, 34, '差が一定\n＝ 等差数列', C.blue, FILL.blue, 12), bx(170, 150, 130, 34, '差の 4 を\n公差という', C.red, FILL.red, 12), lb(160, 214, '初めの数に 4 を足していく', 12, C.ink, 'middle', true))],
+  },
+  {
+    note: '❓第n項はどう書けるでしょう。第1項は3、第2項は3＋4、第3項は3＋4×2、第4項は3＋4×3。4をかける数は、項の番号より1小さくなっています。だから第n項は3＋4×(n−1)です。',
+    add: fresh(...seq([3, '3+4', '3+4×2', '3+4×3'], 30, C.blue, FILL.blue, 62, 12, 10), ...['第1項', '第2項', '第3項', '第4項'].map((t, i) => lb(10 + i * 74 + 31, 80, t, 11, C.gray, 'middle')), bx(30, 100, 260, 34, '第n項 ＝ 3 ＋ 4×(n−1)', C.main, FILL.warm, 15), ...cap('4を足す回数は n−1 回', C.main)),
+  },
+  {
+    note: '❓なぜn回ではなくn−1回なのでしょう。→ 4を足すのは、項と項の「間」だからです。第5項までの間は4か所しかありません。項がn個なら、間はn−1個です。',
+    add: fresh(...seq([3, 7, 11, 15, 19], 40, C.blue, FILL.blue), ...[0, 1, 2, 3].map((i) => lb(12 + (i + 1) * 58 - 6, 90, '間', 11, C.red, 'middle', true)), lb(160, 20, '項は5個 → 間は4か所', 13, C.red, 'middle', true), ...cap('間の数は、項の数より1少ない', C.red)),
+  },
+  {
+    note: '式を整理します。3＋4×(n−1)＝3＋4n−4＝4n−1。第n項は4n−1です。',
+    add: fresh(bx(20, 24, 280, 34, '3 ＋ 4×(n−1)', C.gray, FILL.gray, 15), ar(160, 62, 160, 84, C.main), bx(20, 88, 280, 34, '＝ 3 ＋ 4n − 4 ＝ 4n − 1', C.green, FILL.green, 15), ...cap('第n項 ＝ 4n − 1', C.green)),
+  },
+  {
+    note: '❓式は正しいでしょうか。かならず検算します。n＝1:4×1−1＝3、n＝2:4×2−1＝7、n＝3:4×3−1＝11。3つとも合いました。別の見方として、4nの値4、8、12、16ともとの並び3、7、11、15を比べると、いつも1小さい、と気づいても4n−1が出ます。',
+    add: fresh(...seq([4, 8, 12, 16], 24, C.gray, FILL.gray, 62, 12, 10), ...seq([3, 7, 11, 15], 70, C.blue, FILL.blue, 62, 12, 10), lb(160, 16, '4n', 11, C.gray, 'middle', true), lb(160, 64, 'もとの並び', 11, C.blue, 'middle', true), ...[0, 1, 2, 3].map((i) => lb(10 + i * 74 + 31, 118, '1小さい', 11, C.red, 'middle', true)), ...cap('n＝1,2,3で検算 → 合う', C.green)),
+  },
+  {
+    note: '❓99は第何項でしょう。4n−1＝99から4n＝100、n＝25。自然数なので第25項です。❓では100は？4n−1＝100から4n＝101、n＝101/4。自然数でないので、100はこの並びには現れません。',
+    add: fresh(bx(15, 14, 290, 34, '4n − 1 ＝ 99 → n ＝ 25（自然数）', C.green, FILL.green, 13), bx(15, 58, 290, 34, '4n − 1 ＝ 100 → n ＝ 101/4', C.red, FILL.red, 13), lb(160, 114, '自然数でない → 100 は現れない', 13, C.red, 'middle', true), ...cap('n は自然数になるか確かめる', C.main)),
+  },
+  {
+    note: 'まとめです。等差数列は、差を調べて公差を見つけ、第n項は「初めの数＋公差×(n−1)」で表します。公差がnの係数になります。検算は必ずやりましょう。',
+    add: fresh(bx(15, 14, 290, 34, '①差を調べる（公差）', C.blue, FILL.blue, 13), bx(15, 56, 290, 34, '②初めの数 ＋ 公差×(n−1)', C.main, FILL.warm, 13), bx(15, 98, 290, 34, '③n＝1,2,3で検算', C.green, FILL.green, 13), ...cap('3、7、11… → 4n − 1', C.main)),
+  },
+], '等差数列の第n項');
+
+// ───────── koko_math_s398 階差 ─────────
+const s398: DiagramFigure = show([
+  {
+    note: '問題です。次のように数が並んでいます。1、2、4、7、11、16、…。この並びの第n項を式で表します。',
+    add: [...seq([1, 2, 4, 7, 11, 16], 40, C.blue, FILL.blue, 40, 10, 12), lb(160, 20, '1、2、4、7、11、16、…', 13, C.ink, 'middle', true), ...cap('第n項を式にしたい')],
+  },
+  {
+    note: '❓まず何を調べるでしょう。→ となり合う数の差です。2−1＝1、4−2＝2、7−4＝3、11−7＝4、16−11＝5。差は1、2、3、4、5と、一定ではありません。だから等差数列ではありません。',
+    add: [...diffs(5, 94, '+#', C.red, 40, 10, 12), ...cap('差は一定ではない', C.red)],
+  },
+  {
+    note: '❓あきらめるしかないでしょうか。→ いいえ。「差の並び」を見ます。差は1、2、3、4、5と1ずつ増えているので、差の並びが等差数列になっています。この差のことを階差(かいさ)といいます。',
+    add: fresh(...seq([1, 2, 4, 7, 11, 16], 24, C.blue, FILL.blue, 40, 10, 12), ...seq([1, 2, 3, 4, 5], 82, C.red, FILL.red, 40, 10, 37), lb(160, 16, 'もとの並び', 11, C.blue, 'middle', true), lb(160, 74, '差の並び（階差）', 11, C.red, 'middle', true), lb(160, 132, '差が 1 ずつ増える', 12, C.red, 'middle', true), ...cap('差の並びが 等差数列', C.red)),
+  },
+  {
+    note: '❓第n項はどう作るのでしょう。→ 初めの数1に、差を順に足していきます。第5項は1＋(1＋2＋3＋4)＝11。第n項は、初めの数に1番目から(n−1)番目までの差を全部足したものです。',
+    add: fresh(...seq([1, 2, 4, 7, 11], 30, C.blue, FILL.blue, 50, 12, 10), bx(20, 84, 280, 34, '第5項 ＝ 1 ＋ (1＋2＋3＋4) ＝ 11', C.main, FILL.warm, 14), ...cap('初めの数に 差を足していく', C.main)),
+  },
+  {
+    note: '❓足す差の個数は、n個でしょうか。→ n−1個です。差は項と項の「間」にあるので、項がn個なら差はn−1個。第5項なら差は4個(1、2、3、4)です。n個にすると答えが1つ分ずれます。',
+    add: fresh(...seq([1, 2, 4, 7, 11], 40, C.blue, FILL.blue, 50, 12, 10), ...[0, 1, 2, 3].map((i) => lb(10 + (i + 1) * 62 - 6, 90, '差', 12, C.red, 'middle', true)), lb(160, 20, '項5個 → 差4個', 13, C.red, 'middle', true), ...cap('差の個数は n−1', C.red)),
+  },
+  {
+    note: '1から(n−1)までの和は、(n−1)×n÷2＝n(n−1)/2です。だから第n項＝1＋n(n−1)/2になります。',
+    add: fresh(bx(20, 20, 280, 34, '第n項 ＝ 1 ＋ (1＋2＋…＋(n−1))', C.gray, FILL.gray, 13), ar(160, 58, 160, 78, C.main), bx(20, 82, 280, 34, '＝ 1 ＋ n(n−1)/2', C.green, FILL.green, 16), ...cap('1から(n−1)までの和 ＝ n(n−1)/2', C.green)),
+  },
+  {
+    note: '❓式は正しいでしょうか。検算します。n＝1で1、n＝2で1＋2×1/2＝2、n＝3で1＋3×2/2＝4、n＝4で1＋4×3/2＝7、n＝5で1＋5×4/2＝11。すべて合いました。',
+    add: fresh(...[[1, 1], [2, 2], [3, 4], [4, 7], [5, 11]].map(([n, v], i) => bx(10 + i * 62, 30, 56, 56, `n＝${n}\n${v}`, C.green, FILL.green, 13)), lb(160, 112, '1＋n(n−1)/2 ですべて一致', 13, C.green, 'middle', true), ...cap('5つとも並びと合う ✓', C.green)),
+  },
+  {
+    note: 'この式で遠くの項も出せます。第10項は1＋10×9/2＝1＋45＝46。第20項は1＋20×19/2＝1＋190＝191です。',
+    add: fresh(bx(15, 24, 290, 40, '第10項 ＝ 1 ＋ 10×9/2 ＝ 46', C.blue, FILL.blue, 14), bx(15, 78, 290, 40, '第20項 ＝ 1 ＋ 20×19/2 ＝ 191', C.blue, FILL.blue, 14), ...cap('数えなくても出せる', C.main)),
+  },
+  {
+    note: 'まとめです。差が一定でないときは、あわてず差の並びを書き出します。差の並びが等差なら、第n項はnの二次式になります。足す差はn−1個、検算も忘れずに。',
+    add: fresh(bx(15, 14, 290, 34, '①差を書き出す', C.blue, FILL.blue, 13), bx(15, 56, 290, 34, '②差の並びが等差なら 1＋n(n−1)/2 型', C.main, FILL.warm, 12), bx(15, 98, 290, 34, '③差は n−1 個。n＝1〜5で検算', C.green, FILL.green, 13), ...cap('1、2、4、7、11… → 1＋n(n−1)/2', C.main, 11)),
+  },
+], '階差から第n項を求める');
+
+// ───────── koko_math_s399 マッチ棒の並び ─────────
+const sticks = (n: number, newFrom: number, y = 40, w = 36, x0 = 16) => {
+  const out = [];
+  for (let k = 0; k <= n; k++) {
+    const isNew = k >= newFrom;
+    out.push(ln(x0 + k * w, y, x0 + k * w, y + w, isNew ? C.red : C.ink, false, 3));
+  }
+  for (let k = 0; k < n; k++) {
+    const isNew = k + 1 >= newFrom;
+    out.push(ln(x0 + k * w, y, x0 + (k + 1) * w, y, isNew ? C.red : C.ink, false, 3), ln(x0 + k * w, y + w, x0 + (k + 1) * w, y + w, isNew ? C.red : C.ink, false, 3));
+  }
+  return out;
+};
+const s399: DiagramFigure = show([
+  {
+    note: '問題です。マッチ棒で1辺が1本の正方形を、横一列につなげて作っていきます。正方形をn個作るのに必要なマッチ棒の本数を、nの式で表します。',
+    add: [...sticks(1, 0), lb(220, 58, '正方形 n個で', 12, C.ink, 'middle', true), lb(220, 80, '何本？', 14, C.main, 'middle', true), ...cap('マッチ棒の本数を式にしたい')],
+  },
+  {
+    note: '実際に数えてみます。正方形が1個なら4本、2個なら7本、3個なら10本、4個なら13本です。本数は4、7、10、13と、3本ずつ増えています。',
+    add: fresh(...sticks(4, 0, 30, 28, 14), ...[1, 2, 3, 4].map((k) => bx(14 + (k - 1) * 70, 96, 62, 28, `${k}個 ${3 * k + 1}本`, C.blue, FILL.blue, 11)), ...cap('4本、7本、10本、13本', C.blue)),
+  },
+  {
+    note: '❓なぜ3本ずつ増えるのでしょう。→ 新しい正方形は、左の縦の棒を前の正方形と共有できるからです。右に足すのは、縦の棒1本と、上下の横の棒2本の、合わせて3本だけです。',
+    add: fresh(...sticks(1, 5, 30, 40, 40), ...[0].map(() => ln(80, 30, 80, 70, C.ink, false, 3)), ln(80, 30, 140, 30, C.red, false, 3), ln(80, 70, 140, 70, C.red, false, 3), ln(140, 30, 140, 70, C.red, false, 3), lb(210, 40, '赤い 3本を足す', 13, C.red, 'start', true), lb(210, 64, '左の縦棒は', 12, C.ink, 'start', true), lb(210, 84, 'となりと共有', 12, C.ink, 'start', true), ...cap('増える分は 3本', C.red)),
+  },
+  {
+    note: '❓式はどうなるでしょう。差が3なので、3nの形になるはずです。3nの値3、6、9、12ともとの本数4、7、10、13を比べると、いつも1大きいので、本数は3n＋1です。',
+    add: fresh(...seq([3, 6, 9, 12], 24, C.gray, FILL.gray, 62, 12, 10), ...seq([4, 7, 10, 13], 76, C.blue, FILL.blue, 62, 12, 10), lb(160, 16, '3n', 11, C.gray, 'middle', true), lb(160, 68, 'もとの本数', 11, C.blue, 'middle', true), ...[0, 1, 2, 3].map((i) => lb(10 + i * 74 + 31, 124, '1大きい', 11, C.red, 'middle', true)), ...cap('本数 ＝ 3n ＋ 1', C.main)),
+  },
+  {
+    note: '別の考え方もあります。いちばん左の縦棒1本と、そのあとの各正方形につき3本、と考えると、1＋3nと直接書けます。同じ式です。',
+    add: fresh(...sticks(3, 0, 30, 36, 20).map((e) => e), ln(20, 30, 20, 66, C.red, false, 4), lb(250, 50, '左はしの1本 ＋', 11, C.red, 'middle', true), lb(250, 72, '3本 × n個', 11, C.blue, 'middle', true), bx(40, 100, 240, 32, '1 ＋ 3n ＝ 3n ＋ 1', C.green, FILL.green, 15), ...cap('2つの数え方は同じ式', C.green)),
+  },
+  {
+    note: '❓式は正しいでしょうか。検算します。n＝1で3＋1＝4、n＝2で6＋1＝7、n＝3で9＋1＝10。実際に数えた本数と合いました。正方形10個なら3×10＋1＝31本です。',
+    add: fresh(...[[1, 4], [2, 7], [3, 10], [10, 31]].map(([n, v], i) => bx(10 + i * 76, 30, 68, 56, `n＝${n}\n${v}本`, C.green, FILL.green, 13)), lb(160, 112, '3n＋1 で n＝1,2,3 は数えた本数と一致', 12, C.green, 'middle', true), ...cap('10個なら 31本', C.main)),
+  },
+  {
+    note: '❓マッチ棒が100本あると、正方形はいくつまで作れるでしょう。3n＋1≦100から3n≦99、n≦33。33個です。3×33＋1＝100で、ちょうど使い切ります。割り算100÷3＝33あまり1だけで答えると、あまりの扱いをまちがえることがあるので、不等式で確かめましょう。',
+    add: fresh(bx(15, 14, 290, 30, '3n ＋ 1 ≦ 100', C.blue, FILL.blue, 14), bx(15, 52, 290, 30, '3n ≦ 99　→　n ≦ 33', C.blue, FILL.blue, 14), bx(15, 90, 290, 30, '3×33 ＋ 1 ＝ 100 ✓ ちょうど', C.green, FILL.green, 13), ...cap('答え：33個', C.green)),
+  },
+  {
+    note: '正三角形を、上下を交互にして横につなげると、1個で3本、2個で5本、3個で7本。差は2なので2nの形で、2nと比べて1大きいから、本数は2n＋1です。形が変わっても、考え方は同じです。',
+    add: fresh(...seq([2, 4, 6], 24, C.gray, FILL.gray, 62, 12, 10), ...seq([3, 5, 7], 76, C.blue, FILL.blue, 62, 12, 10), lb(160, 16, '2n', 11, C.gray, 'middle', true), lb(160, 68, '正三角形の本数', 11, C.blue, 'middle', true), ...[0, 1, 2].map((i) => lb(10 + i * 74 + 31, 124, '1大きい', 11, C.red, 'middle', true)), ...cap('正三角形なら 2n ＋ 1', C.main)),
+  },
+  {
+    note: 'まとめです。「1個目は特別、2個目からは一定の本数ずつ増える」という構造を見抜きます。増える分(公差)がnの係数になり、1個目との差が足す数になります。最後に式を検算しましょう。',
+    add: fresh(bx(15, 14, 290, 34, '増える分だけを数える（公差）', C.red, FILL.red, 13), bx(15, 56, 290, 34, '公差×n と比べて 調整の数を足す', C.blue, FILL.blue, 13), bx(15, 98, 290, 34, '最後に n＝1,2,3 で検算', C.green, FILL.green, 13), ...cap('正方形の列は 3n ＋ 1', C.main)),
+  },
+], 'マッチ棒の並びと式');
+
 
 export const XF_KSG_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_math_s337': s337,
@@ -1028,6 +1291,12 @@ export const XF_KSG_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_math_s379': s379,
   'xf_koko_math_s380': s380,
   'xf_koko_math_s384': s384,
+  'xf_koko_math_s387': s387,
+  'xf_koko_math_s389': s389,
+  'xf_koko_math_s394': s394,
+  'xf_koko_math_s397': s397,
+  'xf_koko_math_s398': s398,
+  'xf_koko_math_s399': s399,
 };
 
 export const XF_KSG_SECTIONS: Record<string, string> = {
@@ -1055,4 +1324,10 @@ export const XF_KSG_SECTIONS: Record<string, string> = {
   'koko_math_s379#1': 'xf_koko_math_s379',
   'koko_math_s380#1': 'xf_koko_math_s380',
   'koko_math_s384#1': 'xf_koko_math_s384',
+  'koko_math_s387#0': 'xf_koko_math_s387',
+  'koko_math_s389#1': 'xf_koko_math_s389',
+  'koko_math_s394#0': 'xf_koko_math_s394',
+  'koko_math_s397#0': 'xf_koko_math_s397',
+  'koko_math_s398#0': 'xf_koko_math_s398',
+  'koko_math_s399#0': 'xf_koko_math_s399',
 };

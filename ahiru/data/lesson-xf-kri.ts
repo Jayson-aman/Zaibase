@@ -1,7 +1,7 @@
 // 高校受験 理科（中3秋〜直前）の単元に、動く図解スライドを1つずつ足す（kri 担当分）。
 // 「なぜ？」の連鎖で、7枚以上。上半分に図、下の帯（band）にそのスライドのひとこと。
 import type { DiagramFigure } from './figures';
-import { show, bx, lb, ar, ln, ci, pg, flow, band, fresh, C, FILL } from './diagram-kit';
+import { show, bx, lb, ar, ln, ci, pg, sc, flow, band, fresh, C, FILL } from './diagram-kit';
 import type { DiagramElement } from './figures';
 import type { Slide } from './diagram-kit';
 
@@ -753,7 +753,7 @@ const s484: DiagramFigure = show([
     lb(58, 132, '50 m', 12, C.blue, 'middle', true), lb(158, 132, '50 m', 12, C.blue, 'middle', true), lb(258, 144, '45 m', 12, C.red, 'middle', true)),
   sl('❓結論は？→ A と B は同じ 50 m なので、この2地点の間は傾いていません。C だけが 45 m と低いので、地層は C の方向へ下がっています。方位で答えるときは、地図で A・B・C の位置関係を確かめます。',
     'C の方向へ 傾いている', C.green,
-    ...COL(30, 100, 'A', 120, C.ink), ...COL(130, 110, 'B', 120, C.ink), ...COL(230, 80, 'C', 130, C.ink), ln(30, 120, 190, 120, C.blue, true), ln(190, 120, 286, 130, C.red, false, 3), lb(238, 150, '', 8)),
+    ...COL(30, 100, 'A', 120, C.ink), ...COL(130, 110, 'B', 120, C.ink), ...COL(230, 80, 'C', 130, C.ink), ln(30, 120, 190, 120, C.blue, true), ln(190, 120, 286, 130, C.red, false, 3)),
   sl('❓火山灰の層が目印（鍵層）に使われるのは、なぜでしょう。→ 火山灰は、噴火のときに広い範囲に短い期間で降り積もるので、はなれた地点でも同じ時期にできた層だと判断できるからです。',
     '火山灰 → 同じ時期の目印', C.main,
     ...flow(['噴火で\n火山灰が降る', '広い範囲に\n短期間で積もる', 'はなれた地点で\n同じ時期の層'], 28, { h: 62, size: 11, color: C.main, fill: FILL.warm }).flat()),
@@ -762,7 +762,7 @@ const s484: DiagramFigure = show([
     bx(15, 24, 140, 56, 'X：80−30\n＝50 m', C.blue, FILL.blue, 14), bx(165, 24, 140, 56, 'Y：65−20\n＝45 m', C.red, FILL.red, 14), lb(160, 104, 'Y のほうが 5 m 低い → Y の方向へ', 12, C.purple, 'middle', true)),
   sl('層の重なりからは、昔の海の深さがわかります。❓下から れき → 砂 → 泥 と細かくなるのは、どういうことでしょう。→ 粒が大きいものほど河口に近いところに積もるので、海岸から遠ざかる、つまり海が深くなっていったと読めます。',
     '粒が細かくなる = 深くなる', C.blue,
-    bx(60, 14, 200, 30, '泥（細かい）', C.gray, FILL.gray, 13), bx(60, 48, 200, 30, '砂', C.yellow, FILL.yellow, 13), bx(60, 82, 200, 30, 'れき（粗い）', C.main, FILL.warm, 13), ar(24, 100, 24, 24, C.blue), lb(24, 118, '時間', 11, C.blue, 'middle', true)),
+    bx(60, 14, 200, 30, '泥（細かい）', C.gray, FILL.gray, 13), bx(60, 48, 200, 30, '砂', '#CA8A04', FILL.yellow, 13), bx(60, 82, 200, 30, 'れき（粗い）', C.main, FILL.warm, 13), ar(24, 100, 24, 24, C.blue), lb(24, 118, '時間', 11, C.blue, 'middle', true)),
   sl('化石で時代も確かめます。サンヨウチュウは古生代、アンモナイトは中生代。❓下にアンモナイト、上にサンヨウチュウの化石が見つかったら？→ ふつうは古いものが下ですが、ここは逆なので、地層が逆転したと考えられます。',
     '化石の時代と上下が逆 → 逆転', C.red,
     bx(60, 14, 200, 44, '上：サンヨウチュウ（古生代）', C.red, FILL.red, 12), bx(60, 66, 200, 44, '下：アンモナイト（中生代）', C.blue, FILL.blue, 12), lb(160, 128, 'ふつうは 古いものが下', 12, C.gray, 'middle', true)),

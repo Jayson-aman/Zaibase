@@ -1,7 +1,7 @@
 // 高校受験 数学（中2〜中3）30 単元の「動く図解スライド」（図のなかった単元に 1 つずつ）。
 // 「なぜ？」の連鎖で、7枚以上。上に図、下の帯（band）にそのスライドのひとこと。
 import type { DiagramElement, DiagramFigure } from './figures';
-import { C, FILL, bx, lb, ar, ln, ci, pg, sc, show, band, fresh } from './diagram-kit';
+import { C, FILL, bx, lb, ar, ln, ci, pg, sc, show, band, fresh, flow, stack } from './diagram-kit';
 
 type Pt = [number, number];
 type El = DiagramElement;
@@ -613,7 +613,7 @@ const f_koko_math_s237: DiagramFigure = (() => {
       },
       {
         note: '❓なぜ、たすきがけになるのでしょう。→ △ADEでは、AD（5）のほうが長い辺で AE（4）が短い辺。△ACBでは、AC（10）が長い辺で AB（8）が短い辺です。長い辺どうし、短い辺どうしが対応するので、ADの相手はACで、AEの相手はABになります。',
-        add: fresh(lb(80, 14, '△ADE', 12, C.blue, 'middle', true), lb(240, 14, '△ACB', 12, C.green, 'middle', true), lb(14, 42, 'AD', 11, C.ink, 'start', true), ...bar(40, 30, [['5', 50, C.blue]], 22), lb(14, 74, 'AE', 11, C.ink, 'start', true), ...bar(40, 62, [['4', 40, C.blue]], 22), lb(174, 42, 'AC', 11, C.ink, 'start', true), ...bar(200, 30, [['10', 100, C.green]], 22), lb(174, 74, 'AB', 11, C.ink, 'start', true), ...bar(200, 62, [['8', 80, C.green]], 22), ar(98, 41, 196, 41, C.main), ar(98, 73, 196, 73, C.main), lb(160, 112, '長い辺は長い辺と、短い辺は短い辺と対応', 11, C.ink, 'middle', true), ...cap('AD↔AC、AE↔AB（どちらも 1：2）', C.main)),
+        add: fresh(lb(80, 14, '△ADE', 12, C.blue, 'middle', true), lb(240, 14, '△ACB', 12, C.green, 'middle', true), lb(14, 42, 'AD', 11, C.ink, 'start', true), ...bar(40, 30, [['5', 50, C.blue]], 22), lb(14, 74, 'AE', 11, C.ink, 'start', true), ...bar(40, 62, [['4', 40, C.blue]], 22), lb(174, 42, 'AC', 11, C.ink, 'start', true), ...bar(200, 30, [['10', 100, C.green]], 22), lb(174, 74, 'AB', 11, C.ink, 'start', true), ...bar(200, 62, [['8', 80, C.green]], 22), ar(98, 41, 168, 41, C.main), ar(98, 73, 168, 73, C.main), lb(160, 112, '長い辺は長い辺と、短い辺は短い辺と対応', 11, C.ink, 'middle', true), ...cap('AD↔AC、AE↔AB（どちらも 1：2）', C.main)),
       },
       {
         note: '❓これで相似と言えるのでしょうか。→ 言えます。2組の辺の比（1：2と1：2）が等しく、その間の角 ∠A も共通で等しい。「2組の辺の比とその間の角がそれぞれ等しい」ので △ADE∽△ACB です。D↔C、E↔B なので、△ACB と書きます。',
@@ -754,7 +754,7 @@ const f_koko_math_s243: DiagramFigure = (() => {
       },
       {
         note: '❓4つの三角形の面積はどうなるでしょう。まず △PAD と △PAB。→ 頂点Aが共通で、底辺DPとPBが同じ直線BD上にあるので高さが共通です。高さが同じ三角形の面積比は底辺の比に等しく、△PAD：△PAB＝DP：PB＝3：5 です。',
-        add: fresh(...trap(), hi([pp, a, d], C.blue, 0.3), hi([pp, a, b], C.red, 0.25), seg(a, [a[0] + 20, 125], C.gray, true), ...cap2('高さ共通 → 面積比 ＝ 底辺の比', '△PAD：△PAB ＝ DP：PB ＝ 3：5', C.main, FILL.warm, 12)),
+        add: fresh(...trap(), hi([pp, a, d], C.blue, 0.3), hi([pp, a, b], C.red, 0.25), ...cap2('高さ共通 → 面積比 ＝ 底辺の比', '△PAD：△PAB ＝ DP：PB ＝ 3：5', C.main, FILL.warm, 12)),
       },
       {
         note: '❓4つ全部の比は？ → 同じ考え方で △PAD：△PAB：△PCD：△PCB＝36：60：60：100（a²：ab：ab：b²）。台形の面積が64cm²なら、合計256を64に合わせて÷4して、9、15、15、25cm² です。',
@@ -822,6 +822,233 @@ const f_koko_math_s245: DiagramFigure = (() => {
   );
 })();
 
+// ───────── s248 角の二等分線の応用：面積比 ─────────
+const f_koko_math_s248: DiagramFigure = (() => {
+  const A: Pt = [194, 37], B: Pt = [40, 130], Cc: Pt = [270, 130];
+  const D = at(B, Cc, 0.6);
+  const H: Pt = [194, 130];
+  const base: El[] = [shape([A, B, Cc], C.ink, 'rgba(0,0,0,0)'), seg(A, D, C.red, false, 2), dot(D), ...names({ A, B, C: Cc, D }, { A: [0, -9], B: [-9, 10], C: [9, 10], D: [-4, 12] })];
+  return show(
+    [
+      {
+        note: '問題です。△ABCで、∠Aの二等分線と辺BCの交点をDとします。AB＝6cm、AC＝4cm、△ABCの面積は20cm²。△ABDの面積を求めます。「二等分線だから半分の10cm²」ではありません。なぜでしょう。',
+        add: [...base, ...arc(A, B, D, 20, C.red), ...arc(A, D, Cc, 20, C.red), tag('6', B, A, -12), tag('4', A, Cc, -12), ...cap('AB＝6　AC＝4　△ABC＝20cm²　△ABD は？', C.ink, 11)],
+      },
+      {
+        note: '❓まず、BDとDCの比はどうなるでしょう。→ 角の二等分線は、辺BCをAB：ACの比に分けます。BD：DC＝AB：AC＝6：4＝3：2。二等分されるのは角で、辺BCは半分ずつではありません。',
+        add: fresh(lb(160, 14, '辺BC を BD：DC に分ける', 12, C.ink, 'middle', true), ...bar(40, 26, [['BD 3', 138, C.blue], ['DC 2', 92, C.green]], 28, 13), lb(160, 80, 'BD：DC ＝ AB：AC ＝ 6：4 ＝ 3：2', 12, C.main, 'middle', true), lb(160, 104, '（角の二等分線の性質）', 11, C.gray, 'middle'), ...cap('辺BCは 3：2 に分かれる（半分ではない）', C.main)),
+      },
+      {
+        note: '❓△ABD と △ADC を比べるには、何を見ればよいでしょう。→ どちらも頂点Aから辺BCにおろした高さ AH が共通です。底辺BD、DCはどちらも辺BC上にあります。',
+        add: fresh(...base, hi([A, B, D], C.blue, 0.25), hi([A, D, Cc], C.green, 0.25), seg(A, H, C.gray, true, 1.6), ...rt(H, A, Cc, 7, C.gray), nm('H', H, 0, 12), ...cap('高さ AH が共通', C.gray)),
+      },
+      {
+        note: '❓高さが共通だと、面積の比はどうなるでしょう。→ 面積＝底辺×高さ÷2 で、高さが同じなら、面積の比は底辺の比と同じです。△ABD：△ADC＝BD：DC＝3：2。',
+        add: [...cap2('高さが共通 → 面積比 ＝ 底辺の比', '△ABD：△ADC ＝ BD：DC ＝ 3：2', C.main, FILL.warm)],
+      },
+      {
+        note: '❓では、面積はいくつになるでしょう。→ 全体の20cm²を3：2に分けます。△ABD＝20×3/5＝12cm²、△ADC＝20×2/5＝8cm²。たし算すると12＋8＝20で、もとの面積にもどります。10cm²ずつの半分ではありません。',
+        add: fresh(...base, hi([A, B, D], C.blue, 0.25), hi([A, D, Cc], C.green, 0.25), lb(120, 105, '12cm²', 13, C.blue, 'middle', true), lb(212, 112, '8cm²', 13, C.green, 'middle', true), ...cap2('20×3/5 ＝ 12　20×2/5 ＝ 8', '検算：12 ＋ 8 ＝ 20', C.green, FILL.green)),
+      },
+      {
+        note: '❓面積比をつないでいく問題では、どう考えるのでしょう。たとえば AB＝6、AC＝3 で BD：DC＝2：1、さらに AD上に AE：ED＝3：1 となる点Eをとって △ABE を求めるとき。→ 全体を1として順に比をかけます。△ABD＝1×2/3、△ABE＝△ABD×3/4＝1/2。',
+        add: fresh(lb(160, 12, '△ABC を 1 として、順にかける', 12, C.ink, 'middle', true), lb(24, 40, '△ABC', 11, C.ink, 'start', true), ...bar(70, 28, [['1', 240, C.main]], 24), lb(24, 76, '△ABD', 11, C.ink, 'start', true), ...bar(70, 64, [['2/3（BD：DC＝2：1）', 160, C.blue]], 24), lb(24, 112, '△ABE', 11, C.ink, 'start', true), ...bar(70, 100, [['×3/4 ＝ 1/2', 120, C.green]], 24), ...cap('2/3 × 3/4 ＝ 1/2（半分）', C.green)),
+      },
+      {
+        note: '❓「面積比は辺の比の2乗」とは、どうちがうのでしょう。→ 2乗するのは、相似な図形どうしのときだけです。△ABDと△ADCは相似ではなく、高さが共通なだけ。この場合は、2乗せずに底辺の比のままです。',
+        add: fresh(bx(10, 10, 300, 56, '高さが共通な三角形\n面積比 ＝ 底辺の比（例：3：2 → 3：2）', C.blue, FILL.blue, 13), bx(10, 76, 300, 56, '相似な図形どうし\n面積比 ＝ 相似比の2乗（例：3：2 → 9：4）', C.red, FILL.red, 13), ...cap('どちらの場合かを 先に見分ける', C.ink)),
+      },
+      {
+        note: 'まとめです。角の二等分線ADがあると、①BD：DC＝AB：AC ②高さが共通なので面積比も同じ比 ③全体に比をかけて面積を出す。最後に、分けた面積をたして全体になるか確かめます。',
+        add: fresh(...rows(['BD：DC ＝ AB：AC（角の二等分線）', '高さ共通 → △ABD：△ADC ＝ BD：DC', '全体 × 比 で面積を出す（20×3/5＝12）', '分けた面積の和が全体になるか検算'], { size: 12 }), ...cap('二等分されるのは角。面積ではない', C.red)),
+      },
+    ],
+    '角の二等分線と面積比',
+  );
+})();
+
+// ───────── s249 相似の利用①：縮図と縮尺 ─────────
+const f_koko_math_s249: DiagramFigure = (() => {
+  return show(
+    [
+      {
+        note: '地図の縮尺 1/25000 は、実際の長さを25000分の1に縮めたという意味です。たとえば地図の上で4cmの道のりは、実際にはどれだけでしょう。図上の長さに25000をかけます。',
+        add: [bx(14, 24, 80, 34, '地図 4cm', C.blue, FILL.blue, 13), ar(96, 41, 136, 41, C.main), lb(116, 30, '×25000', 11, C.main, 'middle', true), bx(138, 24, 170, 34, '実際 100000cm', C.green, FILL.green, 13), ...cap('図上の長さ × 縮尺の分母 ＝ 実際の長さ', C.ink, 11)],
+      },
+      {
+        note: '❓100000cmはどれくらいの長さでしょう。→ 1m＝100cm、1km＝1000m＝100000cm なので、100000cm＝1000m＝1km です。計算はcmのまま進めて、最後に問われた単位に直すと安全です。',
+        add: fresh(bx(10, 14, 90, 36, '100000 cm', C.blue, FILL.blue, 13), ar(102, 32, 130, 32, C.main), lb(116, 22, '÷100', 10, C.main, 'middle', true), bx(132, 14, 80, 36, '1000 m', C.green, FILL.green, 13), ar(214, 32, 240, 32, C.main), lb(227, 22, '÷1000', 10, C.main, 'middle', true), bx(242, 14, 66, 36, '1 km', C.purple, FILL.purple, 13), bx(40, 74, 240, 40, '1km ＝ 1000m ＝ 100000cm', C.main, FILL.warm, 14), ...cap('cmで計算 → 最後にm・kmへ直す', C.main)),
+      },
+      {
+        note: '❓逆に、実際の距離から地図上の長さを出すには？ 実際の3kmを、1/50000の地図で表します。3km＝300000cm。これを50000でわって 300000÷50000＝6cm です。かけるのか、わるのかは、「地図は小さくなる」と考えて決めます。',
+        add: fresh(bx(14, 24, 120, 34, '実際 3km＝300000cm', C.green, FILL.green, 11), ar(136, 41, 170, 41, C.main), lb(153, 30, '÷50000', 10, C.main, 'middle', true), bx(172, 24, 136, 34, '地図 6cm', C.blue, FILL.blue, 13), ...cap('地図は小さくなる → 縮尺の分母でわる', C.main)),
+      },
+      {
+        note: '❓縮尺の分母が大きいと、どうなるでしょう。→ 同じ4cmでも、1/25000なら1km、1/50000なら2kmを表します。分母が大きい地図ほど広い範囲がのりますが、そのぶん細かさは落ちます。',
+        add: fresh(lb(160, 14, '同じ図上の長さ 4cm でも…', 12, C.ink, 'middle', true), ...bar(30, 28, [['1/25000 → 1 km', 100, C.blue]], 26, 12), ...bar(30, 66, [['1/50000 → 2 km', 200, C.green]], 26, 12), lb(160, 118, '分母が大きい → 広い範囲 / 細かさは落ちる', 11, C.gray, 'middle', true), ...cap('4×25000＝1km　4×50000＝2km', C.main)),
+      },
+      {
+        note: '❓面積はなぜ「2乗」なのでしょう。→ 面積は縦×横だからです。縦も横も25000倍になるので、面積は 25000×25000 倍。やさしい例で、縦も横も2倍にすると、面積は2×2＝4倍になります。',
+        add: fresh(bx(30, 30, 24, 24, '1', C.blue, FILL.blue, 12), ar(60, 42, 90, 42, C.main), lb(75, 32, '×2', 11, C.main, 'middle', true), ...[0, 1, 2, 3].map((i) => bx(100 + (i % 2) * 24, 18 + Math.floor(i / 2) * 24, 24, 24, String(1), C.green, FILL.green, 12)), lb(220, 30, '縦も横も 2倍', 11, C.ink, 'start', true), lb(220, 52, '面積は 2×2 ＝ 4倍', 12, C.red, 'start', true), lb(160, 100, '25000倍なら 面積は 25000×25000＝625000000倍', 11, C.main, 'middle', true), ...cap('長さは 1乗、面積は 2乗', C.red)),
+      },
+      {
+        note: '❓では、地図上で8cm²の土地は、実際には何km²でしょう。→ 8×625000000＝5000000000cm²。1m²＝10000cm² なので 500000m²。1km²＝1000000m² なので 0.5km² です。8×25000＝200000cm と考えて 2km² にしてはいけません。',
+        add: fresh(...stack(['8cm² × 625000000 ＝ 5000000000cm²', '÷10000 → 500000 m²', '÷1000000 → 0.5 km²'], 20, 280, 14, { h: 30, gap: 12, size: 12, color: C.green, fill: FILL.green }).flat(), ...cap('縮尺の2乗をかけ、単位をていねいに直す', C.green)),
+      },
+      {
+        note: '❓縮図を使って、測れない高さを求めることもできます。木から20m離れた地点で、木の先を見上げた角が30°、目の高さが1.5m。縮尺1/500の縮図をかくと、20m＝2000cm→図上4cm。30°の直角三角形の高さを測ると約2.3cm。2.3×500＝1150cm＝11.5m、目の高さをたして約13.0mです。',
+        add: fresh(shape([[40, 118], [160, 118], [160, 49]], C.blue, FILL.blue), ...rt([160, 118], [40, 118], [160, 49], 9), ...arc([40, 118], [160, 118], [160, 49], 24, C.red), lb(74, 112, '30°', 10, C.red, 'middle', true), lb(100, 132, '図上 4cm（実際は20m）', 11, C.ink, 'middle', true), lb(176, 84, '約2.3cm', 11, C.ink, 'start', true), lb(220, 40, '2.3×500＝1150cm', 11, C.main, 'start', true), lb(220, 58, '＝ 11.5m', 11, C.main, 'start', true), lb(220, 76, '＋目の高さ1.5m', 11, C.red, 'start', true), lb(220, 94, '＝ 約13.0m', 12, C.green, 'start', true), ...cap('角度は縮図でも同じ。目の高さを足す', C.ink)),
+      },
+      {
+        note: 'まとめです。長さは縮尺の分母をかけて戻す、面積は縮尺の2乗をかけて戻す。計算はcmでして、最後に単位を直す。縮図で測った値は誤差があるので、答えには「約」をつけます。',
+        add: fresh(...rows(['実際の長さ ＝ 図上の長さ × 縮尺の分母', '実際の面積 ＝ 図上の面積 × （縮尺の分母）²', '1km ＝ 1000m ＝ 100000cm　1km² ＝ 1000000m²', '縮図で測った答えは「約」をつける'], { size: 12 }), ...cap('単位を最後にそろえる', C.red)),
+      },
+    ],
+    '縮尺の意味と長さの計算',
+  );
+})();
+
+// ───────── s250 相似の利用②：影の長さから高さを求める ─────────
+const f_koko_math_s250: DiagramFigure = (() => {
+  const G = 125;
+  const stick: El[] = [seg([20, G], [20, 107], C.blue, false, 3), seg([20, G], [44, G], C.gray, false, 3)];
+  const tree: El[] = [seg([100, G], [100, 17], C.green, false, 4), seg([100, G], [244, G], C.gray, false, 3)];
+  const ground: El[] = [seg([0, G], [320, G], C.ink, false, 1.2)];
+  const rays: El[] = [ar(10, 10, 58, 46, C.main, true), ar(10, 56, 58, 92, C.main, true), seg([20, 107], [44, G], C.main, true, 1.4), seg([100, 17], [244, G], C.main, true, 1.4)];
+  // 鏡
+  const eye: Pt = [20, 106], M: Pt = [44, G], top: Pt = [164, 29];
+  // 街灯
+  const lamp: Pt = [30, 45];
+  return show(
+    [
+      {
+        note: '問題です。高さ1.5mの棒を立てると影が2mになりました。同じ時刻に、木の影は12mでした。木の高さを求めます。登らなくても、影の長さだけで高さがわかります。',
+        add: [...ground, ...stick, ...tree, ...rays, lb(150, 14, '太陽の光は平行', 11, C.main, 'start', true), lb(32, 98, '1.5m', 10, C.blue, 'start', true), lb(32, 142, '影 2m', 10, C.gray, 'middle', true), lb(110, 70, '木 h', 11, C.green, 'start', true), lb(172, 142, '影 12m', 10, C.gray, 'middle', true), ...cap('木の高さ h は？', C.red)],
+      },
+      {
+        note: '❓なぜ、棒と木の三角形が相似になるのでしょう。→ どちらも地面に垂直で、角が90°。さらに、同じ時刻の太陽の光は平行なので、光と地面がつくる角も同じです。2組の角が等しいから相似です。',
+        add: [...rt([20, G], [44, G], [20, 107], 6), ...rt([100, G], [244, G], [100, 17], 8), ...arc([44, G], [20, G], [20, 107], 12, C.red), ...arc([244, G], [100, G], [100, 17], 22, C.red), ...cap('90°と、光が地面となす角が等しい', C.red)],
+      },
+      {
+        note: '❓相似だと、何が一定になるのでしょう。→ 対応する辺の比です。（物体の高さ）：（影の長さ）は、棒でも木でも同じ比になります。棒は 1.5：2、木は h：12 です。',
+        add: fresh(...stick, ...tree, ...ground, ...rays, ...cap2('高さ：影 は どの物体でも同じ', '棒　1.5：2　＝　木　h：12', C.main, FILL.warm)),
+      },
+      {
+        note: '❓比を解きましょう。→ h：12＝1.5：2。外項の積＝内項の積で 2×h＝12×1.5＝18。h＝9。木の高さは9mです。',
+        add: [lb(110, 70, '木 9m', 11, C.green, 'start', true), ...cap2('h：12 ＝ 1.5：2', '2h ＝ 18　h ＝ 9 m', C.green, FILL.green)],
+      },
+      {
+        note: '❓答えが正しいか、確かめるには？ → 棒は高さが影の 1.5÷2＝0.75倍。木も影12mの0.75倍のはずで、12×0.75＝9m と一致します。高さが影より長くなる答え（たとえば16m）は、比を逆にしたまちがいです。',
+        add: fresh(lb(160, 14, '棒：高さは影の 0.75倍（1.5÷2）', 12, C.blue, 'middle', true), lb(160, 36, '木：影12m × 0.75 ＝ 9m', 12, C.green, 'middle', true), ...bar(40, 54, [['影 12m', 200, C.gray]], 26, 12), ...bar(40, 90, [['高さ 9m', 150, C.green]], 26, 12), ...cap('高さは影より短い（比を逆にしていない）', C.green)),
+      },
+      {
+        note: '鏡を使う方法もあります。地面に鏡を置き、木の先が映る位置に立ちます。反射では入射角と反射角が等しいので、目・鏡・木のあいだに相似な直角三角形ができます。目の高さ1.6m、鏡まで2m、鏡から木まで10m なら、1.6：2＝h：10 で h＝8m です。',
+        add: fresh(...ground, seg([20, G], [20, 106], C.blue, false, 3), seg([164, G], [164, 29], C.green, false, 4), seg([38, G], [50, G], C.purple, false, 4), seg(eye, M, C.main, false, 1.8), seg(M, top, C.main, false, 1.8), ...arc(M, [20, G], eye, 14, C.red), ...arc(M, [164, G], top, 14, C.red), lb(8, 118, '1.6m', 10, C.blue, 'start', true), lb(32, 142, '2m', 10, C.ink, 'middle', true), lb(104, 142, '10m', 10, C.ink, 'middle', true), lb(176, 80, 'h', 12, C.green, 'start', true), ...cap2('1.6：2 ＝ h：10', '2h ＝ 16　h ＝ 8 m', C.green, FILL.green)),
+      },
+      {
+        note: '❓街灯の光でも、同じ式で解けるのでしょうか。→ 解けません。街灯は点の光源で、光は広がります。平行ではないので、別の相似を使います。高さ4mの街灯から6mはなれた身長1.6mの人の影xは、街灯を頂点とする三角形の相似から 1.6：4＝x：(6＋x)、これを解くと x＝4m です。',
+        add: fresh(...ground, seg(lamp, [30, G], C.ink, false, 3), ci(lamp[0], lamp[1], 6, undefined, C.main, FILL.yellow), seg([150, G], [150, 93], C.blue, false, 3), seg([150, G], [230, G], C.gray, false, 4), seg(lamp, [230, G], C.main, true, 1.5), lb(40, 85, '4m', 11, C.ink, 'start', true), lb(158, 108, '1.6m', 10, C.blue, 'start', true), lb(90, 142, '6m', 10, C.ink, 'middle', true), lb(190, 142, 'x', 11, C.gray, 'middle', true), ...cap2('1.6：4 ＝ x：(6＋x)', '1.6(6＋x)＝4x　x ＝ 4 m', C.main, FILL.warm)),
+      },
+      {
+        note: 'まとめです。太陽（同じ時刻）なら光は平行なので、高さ：影＝一定。街灯・電球は点の光源なので、光源を頂点とする相似を使います。比は「高さ：影」の順にそろえ、答えが影より長くなっていないか確かめます。',
+        add: fresh(...rows(['太陽・同じ時刻 → 光は平行 → 高さ：影 ＝ 一定', '高さ：影 の順にそろえて比を立てる', '街灯・電球 → 光が広がる → 光源を頂点とする相似', '時刻がちがう影や、斜面の影は混ぜない'], { size: 12 }), ...cap('どの光か、問題文で必ず確かめる', C.red)),
+      },
+    ],
+    '影がつくる相似な三角形',
+  );
+})();
+
+// ───────── s251 相似の利用③：測量 ─────────
+const f_koko_math_s251: DiagramFigure = (() => {
+  const A: Pt = [60, 112], B: Pt = [260, 112], Cc: Pt = [160, 22];
+  const M = mid(Cc, A), N = mid(Cc, B);
+  const D = at(Cc, A, 2 / 3), E = at(Cc, B, 2 / 3);
+  const pond: El[] = [ci(160, 112, 40, '池', C.blue, FILL.blue, 13)];
+  const ab: El[] = [dot(A), dot(B), ...names({ A, B }, { A: [-10, 4], B: [10, 4] })];
+  return show(
+    [
+      {
+        note: '池をはさんだ2地点A、Bの距離を知りたい。でも、間に池があって、メジャーを直接当てられません。測れる長さだけを使って、測れない長さを出す方法を考えます。',
+        add: [...pond, seg(A, B, C.red, true, 1.8), ...ab, lb(160, 72, '?', 14, C.red, 'middle', true), ...cap('池をはさんだ A、B の距離は？', C.red)],
+      },
+      {
+        note: '❓どこから手をつけるのでしょう。→ 陸の上に、A、Bの両方が見える点Cをとります。CAとCBは陸地を通るので、メジャーで測れます。これで△ABCができました。',
+        add: [seg(Cc, A, C.ink, false, 1.8), seg(Cc, B, C.ink, false, 1.8), dot(Cc), nm('C', Cc, 0, -9)],
+      },
+      {
+        note: '❓次に何をするのでしょう。→ CAの中点M、CBの中点Nをとります。メジャーで半分の長さを測って印をつけるだけなので、陸の上でできます。',
+        add: [dot(M, C.red), dot(N, C.red), ...names({ M, N }, { M: [-10, 0], N: [10, 0] }, C.red), ...tick(Cc, M, 1, C.blue), ...tick(M, A, 1, C.blue), ...tick(Cc, N, 2, C.blue), ...tick(N, B, 2, C.blue), ...cap('M、N は CA、CB の中点', C.blue)],
+      },
+      {
+        note: '❓MNは測れるでしょうか。→ 測れます。MとNは池の上ではなく陸の上にあるので、直接メジャーを当てられます。たとえばMN＝18mと測れたとします。',
+        add: [seg(M, N, C.red, false, 2.4), lb(160, 54, 'MN ＝ 18m', 12, C.red, 'middle', true), ...cap('MN は陸の上 → メジャーで測れる', C.red)],
+      },
+      {
+        note: '❓MNとABの関係は？ → △CABで、M、Nは2辺の中点です。中点連結定理より MN∥AB、MN＝AB÷2。ABの長さの半分がMNです。',
+        add: [...par(M, N, 1), ...par(A, B, 1), ...cap2('中点連結定理', 'MN ∥ AB　MN ＝ AB/2', C.main, FILL.warm)],
+      },
+      {
+        note: '❓だから、ABは？ → AB＝MN×2＝18×2＝36m です。半分になるのは、中点どうしを結んだ短いMNのほうです。「18÷2＝9m」としてはいけません。',
+        add: [lb(160, 134, 'AB ＝ 36m', 13, C.green, 'middle', true), ...cap2('AB ＝ MN × 2', '18 × 2 ＝ 36 m', C.green, FILL.green)],
+      },
+      {
+        note: '別の方法です。平行線と線分の比を使います。CA上に点D、CB上に点Eを DE∥AB となるようにとり、CD、CA、DEを測ります。CD＝10m、DA＝5m（CA＝15m）、DE＝12m のとき、CD：CA＝DE：AB なので AB＝12×15/10＝18m です。',
+        add: fresh(...pond, seg(Cc, A, C.ink, false, 1.8), seg(Cc, B, C.ink, false, 1.8), seg(A, B, C.red, true, 1.8), seg(D, E, C.blue, false, 2.2), dot(D), dot(E), dot(Cc), dot(A), dot(B), ...names({ A, B, C: Cc, D, E }, { A: [-10, 4], B: [10, 4], C: [0, -9], D: [-10, 0], E: [10, 0] }), ...par(D, E, 1), ...par(A, B, 1), ...cap2('CD：CA ＝ DE：AB（10：15 ＝ 12：AB）', 'AB ＝ 12×15/10 ＝ 18 m', C.blue, FILL.blue, 12)),
+      },
+      {
+        note: 'まとめです。どの方法も「測れる長さだけで、測れない長さを出す」ことが目的です。①中点連結定理 ②平行線と線分の比 ③縮図（角度を測って縮尺で戻す）。現地で測る前に、何を測るかを先に決めます。縮図の答えは「約」をつけて書きます。',
+        add: fresh(...rows(['① 中点をとって MN を測る → AB ＝ 2×MN', '② DE∥AB となる点をとる → AB ＝ DE×CA/CD', '③ 縮図をかく → 縮尺で実際の長さに戻す（約○m）', '何を測るかを先に決めてから現地へ'], { size: 12 }), ...cap('測れる長さ → 比 → 測れない長さ', C.main)),
+      },
+    ],
+    '中点連結定理を使う測量',
+  );
+})();
+
+// ───────── s253 面積比の応用：相似でない三角形の面積比 ─────────
+const f_koko_math_s253: DiagramFigure = (() => {
+  const A: Pt = [80, 14], B: Pt = [30, 130], Cc: Pt = [290, 130];
+  const D = at(A, B, 2 / 3);
+  const E = at(A, Cc, 3 / 4);
+  const base: El[] = [shape([A, B, Cc], C.ink, 'rgba(0,0,0,0)'), seg(D, E, C.blue, false, 2), dot(D), dot(E), ...names({ A, B, C: Cc, D, E }, { A: [0, -2], B: [-9, 10], C: [9, 10], D: [-10, 0], E: [11, 0] })];
+  return show(
+    [
+      {
+        note: '問題です。△ABCの辺AB上に点D、辺AC上に点Eがあり、AD：AB＝2：3、AE：AC＝3：4 です。△ADEの面積は△ABCの何倍でしょう。',
+        add: [...base, ...cap2('AD：AB ＝ 2：3　AE：AC ＝ 3：4', '△ADE は △ABC の何倍？', C.red, FILL.red)],
+      },
+      {
+        note: '❓「2：3だから面積比は4：9」としてよいでしょうか。→ いけません。2乗が使えるのは相似なときだけです。DE∥BCなら AD：AB＝AE：AC のはずですが、2：3と3：4は等しくないので、DEはBCと平行でなく、相似ではありません。',
+        add: [seg(D, [D[0] + 240, D[1]], C.gray, true, 1.4), lb(250, D[1] - 8, 'BCと平行ではない', 10, C.red, 'middle', true), ...cap('2：3 ≠ 3：4 → 相似ではない（2乗は使えない）', C.red, 11)],
+      },
+      {
+        note: '❓では、どうやって比べるのでしょう。→ 補助線 DC を引いて、途中の三角形 △ADC を経由します。まず △ADE と △ADC。頂点Dが共通で、底辺AE、ACが同じ直線AC上にあるので、高さが共通です。',
+        add: [seg(D, Cc, C.purple, true, 1.8), hi([A, D, E], C.blue, 0.3), hi([D, E, Cc], C.green, 0.15), ...cap2('高さ共通（頂点D）', '△ADE：△ADC ＝ AE：AC ＝ 3：4', C.blue, FILL.blue)],
+      },
+      {
+        note: '❓次に △ADC と △ABC は？ → 頂点Cが共通で、底辺AD、ABが同じ直線AB上にあり、高さが共通です。△ADC：△ABC＝AD：AB＝2：3 です。',
+        add: fresh(...base, seg(D, Cc, C.purple, true, 1.8), hi([A, D, Cc], C.green, 0.3), ...cap2('高さ共通（頂点C）', '△ADC：△ABC ＝ AD：AB ＝ 2：3', C.green, FILL.green)),
+      },
+      {
+        note: '❓2つの比をつなぐと？ → △ADE は △ADC の 3/4、△ADC は △ABC の 2/3。だから △ADE は △ABC の (3/4)×(2/3)＝1/2 倍です。式にすると (AE/AC)×(AD/AB) で、「はさむ2辺の比の積」になっています。',
+        add: fresh(lb(160, 12, '△ABC を 1 とする', 12, C.ink, 'middle', true), ...bar(40, 24, [['△ABC ＝ 1', 240, C.gray]], 24), ...bar(40, 58, [['△ADC ＝ 2/3', 160, C.green]], 24), ...bar(40, 92, [['△ADE ＝ 2/3×3/4＝1/2', 120, C.blue]], 24), ...cap('△ADE：△ABC ＝ (AD×AE)：(AB×AC)', C.main)),
+      },
+      {
+        note: '❓数値で確かめましょう。△ABC＝48cm²なら、△ADE＝48×1/2＝24cm²。公式の「辺の積の比」でも (2×3)：(3×4)＝6：12＝1：2 で同じです。',
+        add: fresh(...base, hi([A, D, E], C.blue, 0.35), lb(100, 80, '24cm²', 13, C.blue, 'middle', true), lb(190, 118, '△ABC ＝ 48cm²', 12, C.ink, 'middle', true), ...cap2('(2×3)：(3×4) ＝ 6：12 ＝ 1：2', '48 × 1/2 ＝ 24 cm²', C.green, FILL.green)),
+      },
+      {
+        note: '❓DE∥BC のときはどうなるのでしょう。→ このときは AD：AB＝AE：AC なので、積の公式は (AD/AB)² になり、相似比の2乗と同じ答えになります。つまり相似比の2乗は、この公式の特別な場合です。',
+        add: fresh(bx(10, 14, 300, 50, 'DE∥BC のとき　AD：AB ＝ AE：AC\n(AD/AB)×(AE/AC) ＝ (AD/AB)²', C.blue, FILL.blue, 13), bx(10, 76, 300, 50, '相似比の2乗と同じ答えになる', C.green, FILL.green, 14), ...cap('2乗は「積の公式」の特別な場合', C.ink)),
+      },
+      {
+        note: 'まとめです。相似でない三角形の面積比は、高さ共通なら底辺の比、共通角をはさむなら2辺の比の積、どちらでもなければ全体を1として比をつなぐか等積変形。相似なときだけ2乗です。',
+        add: fresh(...rows(['高さが共通 → 底辺の比', '共通角をもつ → (AD×AE)：(AB×AC)', '相似な三角形 → 相似比の2乗', 'どれも使えない → 全体を1として比をつなぐ'], { size: 12 }), ...cap('2乗するのは 相似のときだけ', C.red)),
+      },
+    ],
+    '共通な角をもつ三角形の面積比',
+  );
+})();
+
 export const XF_KSE_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_math_s222': f_koko_math_s222,
   'xf_koko_math_s223': f_koko_math_s223,
@@ -838,6 +1065,11 @@ export const XF_KSE_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_math_s241': f_koko_math_s241,
   'xf_koko_math_s243': f_koko_math_s243,
   'xf_koko_math_s245': f_koko_math_s245,
+  'xf_koko_math_s248': f_koko_math_s248,
+  'xf_koko_math_s249': f_koko_math_s249,
+  'xf_koko_math_s250': f_koko_math_s250,
+  'xf_koko_math_s251': f_koko_math_s251,
+  'xf_koko_math_s253': f_koko_math_s253,
 };
 
 export const XF_KSE_SECTIONS: Record<string, string> = {
@@ -856,4 +1088,9 @@ export const XF_KSE_SECTIONS: Record<string, string> = {
   'koko_math_s241#0': 'xf_koko_math_s241',
   'koko_math_s243#0': 'xf_koko_math_s243',
   'koko_math_s245#0': 'xf_koko_math_s245',
+  'koko_math_s248#0': 'xf_koko_math_s248',
+  'koko_math_s249#0': 'xf_koko_math_s249',
+  'koko_math_s250#0': 'xf_koko_math_s250',
+  'koko_math_s251#0': 'xf_koko_math_s251',
+  'koko_math_s253#0': 'xf_koko_math_s253',
 };
