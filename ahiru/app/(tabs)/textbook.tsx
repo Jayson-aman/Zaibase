@@ -158,6 +158,12 @@ export default function TextbookScreen() {
   const handleLessonPress = useCallback(
     (lesson: Lesson, idx: number) => {
       if (isLockedForBrowse(lesson, idx, isPro, unlockedUnitIds)) {
+        // 買い切り（¥150）で開ける単元は、単元ページ（ためし読み＋「解放する」ボタン）へ進める。
+        // ここでPRO/MAXのペイウォールだけを出すと、買い切りのボタンにたどり着けない。
+        if (isNew20Unit(lesson.id)) {
+          router.push(`/lesson/${lesson.id}` as any);
+          return;
+        }
         setPaywallVisible(true);
         return;
       }
