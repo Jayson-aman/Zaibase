@@ -171,7 +171,10 @@ import { lessonFigsNew20J3Kokugo } from './lesson-figs-new20-j3-kokugo';
 import { lessonFigsNew20J2Rika } from './lesson-figs-new20-j2-rika';
 import { lessonFigsNew20J3Rika } from './lesson-figs-new20-j3-rika';
 
+import { EXTRA_LESSON_FIGURES } from './lesson-extra-figures';
+
 export const lessonFigures: Record<string, Figure> = {
+  ...EXTRA_LESSON_FIGURES,
   ...lessonFigsKoushikiC1Menseki,
   ...lessonFigsKoushikiC2En,
   ...lessonFigsKoushikiC3Tairyoku1,

@@ -11,9 +11,11 @@ import { kokoKokugoLessons } from './lessons-koko-kokugo';
 import { kokoEigoLessons } from './lessons-koko-eigo';
 import { kokoShakaiLessons } from './lessons-koko-shakai';
 
+import { EXTRA_SECTION_FIGURES } from './lesson-extra-figures';
+
 export type { Lesson };
 
-export const allLessons: Lesson[] = [
+const baseLessons: Lesson[] = [
   ...sansuLessons,
   ...kokugoLessons,
   ...rikaLessons,
@@ -26,6 +28,19 @@ export const allLessons: Lesson[] = [
   ...kokoEigoLessons,
   ...kokoShakaiLessons,
 ];
+
+// あとから足した動く図解（data/lesson-extra-figures.ts）を、図解のない節に取りつける。
+// 元から figureId がある節は変えない。
+export const allLessons: Lesson[] = baseLessons.map((l) => {
+  let changed = false;
+  const sections = l.sections.map((sec, i) => {
+    const fid = EXTRA_SECTION_FIGURES[`${l.id}#${i}`];
+    if (!fid || sec.figureId) return sec;
+    changed = true;
+    return { ...sec, figureId: fid };
+  });
+  return changed ? { ...l, sections } : l;
+});
 
 export function getLessonsBySubject(subject: string): Lesson[] {
   return allLessons.filter((l) => l.subject === subject).sort((a, b) => a.order - b.order);
