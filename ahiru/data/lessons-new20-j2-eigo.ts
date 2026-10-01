@@ -59,9 +59,8 @@ export const lessonsNew20J2Eigo: Lesson[] = [
 ② 過去進行形になる動詞（背景・継続していた動作）と、過去形になる動詞（一瞬の出来事）を見分ける。
 ③ 主節・従属節の順番は、日本語の語順どおりでよい場合が多いが、while節が文頭に来るときはコンマを忘れない。
 
-例題）（ was / when / it / raining / started ）I left home.
-→ It was raining when I started I left home.（誤り例：語順を崩している）
-正しくは：It was raining when I left home.
+例題）（ was / when / it / raining ）I left home.
+→ It was raining when I left home.
 ★ポイント：when節の中の主語・動詞（I left home）は過去形のままにし、主節（It was raining）だけを過去進行形にする。`,
       },
       {
@@ -380,7 +379,7 @@ May で始まる疑問文は「May I 〜?」の形が非常に多い。選択肢
 　We went shopping yesterday.（買い物に行った）
 　goのあとに動名詞を直接続ける決まった言い方。go to shopping としないこと。
 
-例題）（ looking / to / forward / seeing / am ) you soon.
+例題）（ I / am / looking / forward / to / seeing ）you soon.
 → I am looking forward to seeing you soon.
 ★ポイント：toのあとにseeを原形のまま置くミスが多い。toが前置詞の働きをしているときは必ずseeingにする。`,
       },
