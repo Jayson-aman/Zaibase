@@ -1485,9 +1485,15 @@ export default function FigureView({
   animated = false,
   question,
   manual = false,
+  previewSlides,
 }: {
   figure: Figure;
   animated?: boolean;
+  /**
+   * 買う前の人に見せる枚数。指定すると、その枚数目で止まり、続きは「購入で見られる」表示になる。
+   * ロック中の単元の「ためし表示」で使う。省略すると全部見られる。
+   */
+  previewSlides?: number;
   /** 図に添える問題。あると「何を聞かれているか」「答え」まで説明に入る */
   question?: FigureQuestion;
   /**
@@ -1523,6 +1529,12 @@ export default function FigureView({
   const [stepReached, setStepReached] = useState(animated ? 0 : totalSteps);
   const [slide, setSlide] = useState(0);
   const [autoPlay, setAutoPlay] = useState(!manual);
+  // ためし表示のとき、ここより先のスライドには進めない
+  const lastSlide = Math.max(
+    0,
+    (previewSlides != null ? Math.min(totalSteps, Math.max(1, previewSlides)) : totalSteps) - 1,
+  );
+  const isPreviewLimited = previewSlides != null && lastSlide < totalSteps - 1;
   const introDone = useRef(false);
   const rafRef = useRef<number | null>(null);
   const stepTimersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
@@ -1592,16 +1604,16 @@ export default function FigureView({
 
   // 自動再生。最後のスライドまで来たら止まる。手で送ったら自動送りはやめる。
   useEffect(() => {
-    if (!slideMode || !autoPlay || slide >= totalSteps - 1) return;
-    autoTimerRef.current = setTimeout(() => setSlide((s) => Math.min(totalSteps - 1, s + 1)), SLIDE_DUR);
+    if (!slideMode || !autoPlay || slide >= lastSlide) return;
+    autoTimerRef.current = setTimeout(() => setSlide((s) => Math.min(lastSlide, s + 1)), SLIDE_DUR);
     return () => {
       if (autoTimerRef.current != null) clearTimeout(autoTimerRef.current);
     };
-  }, [slideMode, autoPlay, slide, totalSteps]);
+  }, [slideMode, autoPlay, slide, lastSlide]);
 
   function goToSlide(next: number) {
     setAutoPlay(false);
-    setSlide(Math.max(0, Math.min(totalSteps - 1, next)));
+    setSlide(Math.max(0, Math.min(lastSlide, next)));
   }
 
   function replay() {
@@ -1727,13 +1739,18 @@ export default function FigureView({
             {(figure.steps ?? []).map((_, i) => (
               <View
                 key={i}
-                style={[styles.slideDot, i === slide && styles.slideDotActive, i < slide && styles.slideDotDone]}
+                style={[
+                  styles.slideDot,
+                  i === slide && styles.slideDotActive,
+                  i < slide && styles.slideDotDone,
+                  i > lastSlide && styles.slideDotLocked,
+                ]}
               />
             ))}
           </View>
           <View style={styles.slideHeaderRow}>
             <Text style={styles.slideCounter}>{slide + 1} / {totalSteps}</Text>
-            {autoPlay && slide < totalSteps - 1 && <Text style={styles.slideAuto}>自動で進みます</Text>}
+            {autoPlay && slide < lastSlide && <Text style={styles.slideAuto}>自動で進みます</Text>}
           </View>
           <Text style={styles.slideText}>{(figure.steps ?? [])[slide]}</Text>
           <View style={styles.slideNav}>
@@ -1745,10 +1762,14 @@ export default function FigureView({
             >
               <Text style={[styles.slideBtnText, styles.slideBtnBackText]}>◀ もどる</Text>
             </TouchableOpacity>
-            {slide < totalSteps - 1 ? (
+            {slide < lastSlide ? (
               <TouchableOpacity style={styles.slideBtn} onPress={() => goToSlide(slide + 1)} activeOpacity={0.8}>
                 <Text style={styles.slideBtnText}>つぎへ ▶</Text>
               </TouchableOpacity>
+            ) : isPreviewLimited ? (
+              <View style={[styles.slideBtn, styles.slideBtnLocked]}>
+                <Text style={styles.slideBtnText}>🔒 続きは購入すると見られます</Text>
+              </View>
             ) : (
               <TouchableOpacity style={styles.slideBtn} onPress={replay} activeOpacity={0.8}>
                 <Text style={styles.slideBtnText}>🔁 最初から</Text>
@@ -1841,6 +1862,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   slideBtnBack: { backgroundColor: '#EFE7D8' },
+  slideBtnLocked: { backgroundColor: '#94A3B8' },
+  slideDotLocked: { opacity: 0.35 },
   slideBtnDisabled: { opacity: 0.4 },
   slideBtnText: { color: '#FFFFFF', fontWeight: '800', fontSize: 13.5 },
   slideBtnBackText: { color: '#8B5A38' },

@@ -14,6 +14,8 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import { getLessonById, isLessonFree } from '../../data/lessons';
 import { isNew20Unit, isNew20UnitFree } from '../../data/new20-access';
 import LessonRenderer from '../../components/LessonRenderer';
+import FigureView from '../../components/FigureView';
+import { getLessonFigure } from '../../data/lesson-figures';
 import InlineQuiz, { questionsToQuizItems } from '../../components/InlineQuiz';
 import { getRelatedQuestions } from '../../data/lesson-questions';
 import { useSubjectQuestions } from '../../hooks/useSubjectQuestions';
@@ -27,6 +29,9 @@ import { confirmDialog, noticeDialog, ensureLoggedInForPurchase } from '../../ut
 import { useAuthUser } from '../../hooks/useAuthUser';
 import { useUnitUnlocks } from '../../hooks/useUnitUnlocks';
 import { subjectInfo } from '../../data/questions-meta';
+
+/** 購入前の人に見せる、動く図解の枚数（最初の「❓なぜ？」と、その答えまで） */
+const TRIAL_FIGURE_SLIDES = 2;
 
 export default function LessonDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -125,6 +130,17 @@ export default function LessonDetailScreen() {
   const isKoushiki = lesson.id.startsWith('koushiki_');
   const contentUnlocked =
     isPro || (isNew20 ? new20Free || new20Unlocked : isKoushiki ? true : freeLesson);
+  // ロック中の単元のためし読み：最初の節に図解が無いときは、あとの節の最初の図解を
+  // 「最初の数枚だけ」見せる（動く図解の出来を、買う前に確かめられるようにする）。
+  const trialFigure = (() => {
+    if (lesson.sections.length === 0 || lesson.sections[0].figureId != null) return null;
+    for (const sec of lesson.sections) {
+      if (sec.figureId == null || sec.maxOnly) continue;
+      const fig = getLessonFigure(sec.figureId);
+      if (fig != null && (fig.steps?.length ?? 0) > 1) return fig;
+    }
+    return null;
+  })();
 
   return (
     <SafeAreaView style={styles.container}>
@@ -178,7 +194,14 @@ export default function LessonDetailScreen() {
               lessonTitle={lesson.title}
               subject={lesson.subject}
               examType={lesson.examType}
+              figurePreviewSlides={TRIAL_FIGURE_SLIDES}
             />
+            {trialFigure != null && (
+              <View style={styles.trialFigureBox}>
+                <Text style={styles.trialFigureLabel}>🎬 動く図解（ためし表示：最初の{TRIAL_FIGURE_SLIDES}枚）</Text>
+                <FigureView figure={trialFigure} animated manual previewSlides={TRIAL_FIGURE_SLIDES} />
+              </View>
+            )}
             <View style={styles.freeTeaser}>
               <Text style={styles.freeTeaserText}>👀 ここまでがためし読みです。この先に「なぜそうなるか」「確かめ方」「ひっかけ」が続きます</Text>
             </View>
@@ -316,6 +339,8 @@ export default function LessonDetailScreen() {
 }
 
 const styles = StyleSheet.create({
+  trialFigureBox: { marginTop: 12, marginBottom: 4 },
+  trialFigureLabel: { fontSize: 13, fontWeight: '800', color: '#7C3AED', marginBottom: 6 },
   container: { flex: 1, backgroundColor: '#FAF7F2' },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 24 },
   notFound: { fontSize: 18, color: '#6E645C', marginBottom: 16 },

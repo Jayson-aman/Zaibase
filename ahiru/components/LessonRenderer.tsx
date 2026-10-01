@@ -27,6 +27,8 @@ type Props = {
   lessonTitle?: string;
   subject?: SubjectKey;
   examType?: 'chugaku' | 'koko';
+  /** 指定すると、本文中の動く図解をこの枚数までしか見せない（購入前のためし読み用） */
+  figurePreviewSlides?: number;
 };
 
 // 本文に直接書かれた罫線の図（┌─┐│└┘ を使った枠や樹形図）は、
@@ -152,6 +154,7 @@ export default function LessonRenderer({
   lessonTitle,
   subject,
   examType,
+  figurePreviewSlides,
 }: Props) {
   const visibleSections = isMax ? sections : sections.filter((s) => !s.maxOnly);
 
@@ -210,7 +213,7 @@ export default function LessonRenderer({
             {renderBody(section.body)}
             {section.figureId != null && (() => {
               const fig = getLessonFigure(section.figureId);
-              return fig != null ? <FigureView figure={fig} animated /> : null;
+              return fig != null ? <FigureView figure={fig} animated previewSlides={figurePreviewSlides} /> : null;
             })()}
             {section.mangaId != null && (() => {
               const script = getMangaScript(section.mangaId);
