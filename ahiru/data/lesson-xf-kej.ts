@@ -1,7 +1,7 @@
 // 高校受験 英語（中1・中2）の単元に1つずつ足す動く図解スライド。
 // 「❓なぜ？→答え」の連鎖で、7枚以上。上に図、下の帯（band）にそのスライドのひとこと。
 import type { DiagramFigure } from './figures';
-import { C, FILL, bx, lb, ar, ln, ci, pg, show, flow, band, fresh, cover } from './diagram-kit';
+import { C, FILL, bx, lb, ar, ln, ci, pg, show, flow, stack, band, fresh, cover } from './diagram-kit';
 
 const cap = (t: string, color: string = C.ink, size = 12) => band(150, lb(160, 190, t, size, color, 'middle', true));
 const capx = (t1: string, t2: string, color: string, fill: string) =>
@@ -462,7 +462,7 @@ const e13: DiagramFigure = show([
   },
   {
     note: '道や川を横切るときは across（〜を横切って）です。They swam across the river.（彼らは川を泳いで渡った）。道を渡るなら cross the street という言い方もあります。',
-    add: fresh(bx(10, 40, 300, 50, undefined, C.blue, FILL.blue), lb(160, 65, 'river', 12, C.blue, 'middle'), ar(160, 130, 160, 10, C.green), lb(230, 118, 'across', 13, C.green, 'middle', true), ...cap('across ＝ 横切って', C.green)),
+    add: fresh(bx(10, 40, 300, 50, undefined, C.blue, FILL.blue), lb(70, 65, 'river', 12, C.blue, 'middle'), ar(160, 130, 160, 10, C.green), lb(230, 118, 'across', 13, C.green, 'middle', true), ...cap('across ＝ 横切って', C.green)),
   },
   {
     note: '❓乗り物に乗る・降りるは、どう言うのでしょう。→ 小さな乗り物の車やタクシーは get in（乗る）／get out of（降りる）。大きな乗り物のバスや電車は get on／get off です。Get in the car. Get out of the car. Get on the bus. Get off the train at the next stop.',
@@ -478,6 +478,438 @@ const e13: DiagramFigure = show([
   },
 ], '方向を表す前置詞');
 
+// ───────── new20_j1_eigo_14 自己紹介の基本表現 ─────────
+const e14: DiagramFigure = show([
+  {
+    note: '自己紹介は、英語を「本当に使う」いちばん早い場面です。名前を言う → あいさつ → 出身 → 好きなもの → 別れのあいさつ、という流れで話します。この流れの1つずつを、なぜそう言うのか確かめながら見ていきます。',
+    add: [...flow(['名前', 'あいさつ', '出身', '好きな\nもの', '別れ'], 40, { h: 56, size: 10, gap: 10, pad: 6 }).flat(), ...cap('名前 → あいさつ → 出身 → 好きなもの → 別れ', C.ink, 11)],
+  },
+  {
+    note: '名前の名乗り方は2通りです。I\'m Ken.（私はケンです）と、My name is Ken Tanaka.（私の名前は田中ケンです）。どちらも同じ意味ですが、My name is 〜 のほうがやや改まった場面、たとえばスピーチの最初でよく使われます。',
+    add: fresh(bx(15, 14, 290, 36, "I'm Ken.", C.blue, FILL.blue, 14), bx(15, 62, 290, 36, 'My name is Ken Tanaka.', C.main, FILL.warm, 14), lb(160, 118, 'どちらも同じ意味（My name is はやや改まる）', 11, C.gray, 'middle'), ...cap('名乗る型は2つ')),
+  },
+  {
+    note: '❓Nice to meet you. は、いつ使うのでしょう。→ 初めて会った人にだけ使います。2回目以降に会うときは Nice to see you again.（また会えてうれしい）と言います。',
+    add: fresh(bx(15, 14, 290, 34, '1回目：Nice to meet you.（はじめまして）', C.green, FILL.green, 12), bx(15, 58, 290, 34, '2回目以降：Nice to see you again.', C.blue, FILL.blue, 12), lb(160, 114, '初対面のあいさつは 1回目だけ', 12, C.ink, 'middle', true), ...cap('はじめまして ＝ 初めてだけ', C.green)),
+  },
+  {
+    note: '❓返すときは、そのまま Nice to meet you. でよいのでしょうか。→ too を付けて Nice to meet you, too.（こちらこそ、はじめまして）と返します。too は「〜も」の意味で、「私も同じ気持ちです」と伝えます。too がないと、同じあいさつを2回言っただけのようで不自然です。',
+    add: fresh(bx(15, 14, 290, 34, "A: Nice to meet you.", C.blue, FILL.blue, 13), ar(160, 52, 160, 66, C.main), bx(15, 70, 290, 34, "B: Nice to meet you, too.", C.green, FILL.green, 13), lb(160, 126, 'too ＝「私も」', 12, C.red, 'middle', true), ...cap('too を付けて返す', C.red)),
+  },
+  {
+    note: '相手の名前は What\'s your name?（お名前は何ですか）とたずねます。会話の流れはこうです。A: Hi! I\'m Ken. What\'s your name? B: Hi, Ken. I\'m Emi. Nice to meet you. A: Nice to meet you, too.',
+    add: fresh(bx(10, 10, 300, 30, "A: Hi! I'm Ken. What's your name?", C.blue, FILL.blue, 11), bx(10, 46, 300, 30, "B: Hi, Ken. I'm Emi. Nice to meet you.", C.green, FILL.green, 11), bx(10, 82, 300, 30, 'A: Nice to meet you, too.', C.blue, FILL.blue, 12), ...cap('名乗る → たずねる → あいさつ')),
+  },
+  {
+    note: '名前のあとは出身を言います。I\'m from Japan.（私は日本出身です）、I\'m from Osaka.（私は大阪出身です）。「〜出身」は be動詞と from で表します。くわしくは出身地の単元で学びます。',
+    add: fresh(bx(15, 20, 290, 36, "I'm from Japan.", C.blue, FILL.blue, 14), bx(15, 66, 290, 36, "I'm from Osaka.", C.blue, FILL.blue, 14), lb(160, 122, 'be動詞（I\'m）＋ from ＋ 場所', 12, C.ink, 'middle', true), ...cap('出身 ＝ I\'m from 〜.')),
+  },
+  {
+    note: '❓好きなものや持っているものは、どの動詞で言うのでしょう。→ 一般動詞です。「〜が好き」は I like 〜.、「〜を持っている」は I have 〜.。I\'m a student at Midori Junior High School. のような be動詞の文と組み合わせて、何文か続けるのが自己紹介の型です。',
+    add: fresh(bx(10, 12, 145, 30, "I'm a student.", C.main, FILL.warm, 12), bx(165, 12, 145, 30, "I'm from Osaka.", C.main, FILL.warm, 12), bx(10, 52, 145, 30, 'I like soccer.', C.blue, FILL.blue, 12), bx(165, 52, 145, 30, 'I have one brother.', C.blue, FILL.blue, 11), lb(82, 100, 'be動詞の文', 11, C.main, 'middle', true), lb(238, 100, '一般動詞の文', 11, C.blue, 'middle', true), ...cap('be動詞と一般動詞を組み合わせる')),
+  },
+  {
+    note: '最後は別れのあいさつです。See you.（またね）、See you later.（また後で）、Goodbye.／Bye.（さようなら）、Take care.（気をつけて）。',
+    add: fresh(bx(10, 14, 145, 30, 'See you.（またね）', C.green, FILL.green, 12), bx(165, 14, 145, 30, 'See you later.（また後で）', C.green, FILL.green, 11), bx(10, 54, 145, 30, 'Goodbye.／Bye.', C.green, FILL.green, 12), bx(165, 54, 145, 30, 'Take care.（気をつけて）', C.green, FILL.green, 11), ...cap('別れのあいさつ')),
+  },
+  {
+    note: '❓My name is Ken. のあとに、もう一度 I\'m Ken. と言ってもよいでしょうか。→ 必要ありません。同じ情報を2つの言い方で二重に言うと不自然です。名乗る文は、どちらか一方を選びます。',
+    add: fresh(bx(15, 14, 290, 34, '× My name is Ken. I\'m Ken.', C.red, FILL.red, 13), bx(15, 58, 290, 34, "○ My name is Ken.", C.green, FILL.green, 13), lb(160, 116, '名前は 1回だけ', 12, C.ink, 'middle', true), ...cap('どちらか一方を選ぶ', C.red)),
+  },
+  {
+    note: 'ミニスピーチです。Hello, everyone. I\'m Ken. I\'m from Osaka. I like soccer and music. I have one brother. Nice to meet you all! 名前、出身、好きなもの、家族、あいさつの順に並んでいます。',
+    add: fresh(bx(15, 6, 290, 22, "Hello, everyone. I'm Ken.", C.blue, FILL.blue, 11), bx(15, 32, 290, 22, "I'm from Osaka.", C.blue, FILL.blue, 11), bx(15, 58, 290, 22, 'I like soccer and music.', C.blue, FILL.blue, 11), bx(15, 84, 290, 22, 'I have one brother.', C.blue, FILL.blue, 11), bx(15, 110, 290, 22, 'Nice to meet you all!', C.green, FILL.green, 11), ...cap('流れに沿って 文をつなぐ')),
+  },
+  {
+    note: 'まとめです。名乗りは I\'m 〜. か My name is 〜.（どちらか一方）。はじめましては Nice to meet you. に too を付けて返します。出身・好きなもの・持ち物を続け、最後に別れのあいさつを添えます。',
+    add: sum3("名乗る：I'm 〜.／My name is 〜.（片方だけ）", 'Nice to meet you. → ...too.', '出身・like・have → 別れのあいさつ', '自己紹介の型がそろった'),
+  },
+], '自己紹介の基本表現');
+
+// ───────── new20_j1_eigo_15 家族を紹介する表現 ─────────
+const e15: DiagramFigure = show([
+  {
+    note: '家族の写真を見せながら「これは私の父です」と紹介する場面です。This is my father.（こちらは私の父です）。まず、この型の根っこから確かめます。',
+    add: [bx(100, 14, 120, 66, undefined, C.gray, FILL.gray), lb(160, 26, 'photo', 10, C.gray), ci(140, 56, 12, undefined, C.main, FILL.warm), ci(180, 56, 12, undefined, C.main, FILL.warm), bx(15, 92, 290, 34, 'This is my father.', C.blue, FILL.blue, 14), ...cap('写真の中の人を 指して紹介')],
+  },
+  {
+    note: '❓なぜ This is を使うのでしょう。→ 目の前や写真の中の人を「この人は」と指し示すからです。複数の人を紹介するときは These are my grandparents.（こちらは私の祖父母です）のように These are を使います。',
+    add: fresh(bx(15, 14, 290, 34, 'This is my father.（1人）', C.blue, FILL.blue, 13), bx(15, 58, 290, 34, 'These are my grandparents.（複数）', C.main, FILL.warm, 12), lb(160, 114, 'This is ／ These are ＝ 指し示す', 12, C.ink, 'middle', true), ...cap('1人は This is、複数は These are')),
+  },
+  {
+    note: '❓紹介したあとは、どう説明を続けるのでしょう。→ he や she に切りかえます。This is my mother. She is a teacher.（こちらは私の母です。彼女は教師です）。my mother を何度もくり返すと不自然になるからです。',
+    add: fresh(bx(15, 14, 290, 34, 'This is my mother.', C.blue, FILL.blue, 13), ar(160, 52, 160, 66, C.main), bx(15, 70, 290, 34, 'She is a teacher.', C.green, FILL.green, 13), lb(160, 126, 'my mother → she に切りかえ', 12, C.red, 'middle', true), ...cap('2文目からは he／she', C.red)),
+  },
+  {
+    note: '❓兄と弟、姉と妹は、どう区別するのでしょう。→ 英語の brother と sister には、年上・年下の区別がありません。上下を言いたいときだけ older（年上の）、younger（年下の）を付けます。I have an older brother and a younger sister.（兄と妹がいます）。',
+    add: fresh(bx(110, 10, 100, 30, 'older brother', C.blue, FILL.blue, 11), ar(160, 44, 160, 56, C.gray), bx(135, 58, 50, 26, 'I', C.main, FILL.warm, 13), ar(160, 88, 160, 100, C.gray), bx(110, 102, 100, 30, 'younger sister', C.green, FILL.green, 11), lb(250, 24, '兄', 14, C.blue, 'middle', true), lb(250, 116, '妹', 14, C.green, 'middle', true), ...cap('上下は older／younger を付ける')),
+  },
+  {
+    note: '家族の語です。father（父）、mother（母）、parents（両親）、brother（兄・弟）、sister（姉・妹）、grandfather（祖父）、grandmother（祖母）、grandparents（祖父母）。parents や grandparents は、2人まとめて言う語です。',
+    add: fresh(bx(8, 12, 98, 28, 'father', C.blue, FILL.blue, 11), bx(111, 12, 98, 28, 'mother', C.blue, FILL.blue, 11), bx(214, 12, 98, 28, 'parents（両親）', C.blue, FILL.blue, 10), bx(8, 48, 98, 28, 'brother', C.main, FILL.warm, 11), bx(111, 48, 98, 28, 'sister', C.main, FILL.warm, 11), bx(214, 48, 98, 28, 'grandparents', C.green, FILL.green, 10), bx(8, 84, 98, 28, 'grandfather', C.green, FILL.green, 11), bx(111, 84, 98, 28, 'grandmother', C.green, FILL.green, 11), ...cap('家族を表す基本の語')),
+  },
+  {
+    note: '❓兄弟姉妹の人数は、なぜ be動詞ではなく have で言うのでしょう。→ I am a sister. では、be動詞が「私＝妹」というイコールを作ってしまうからです。「家族がいる」は「家族を持っている」と考え、I have a sister. と言います。日本語の「います」につられないようにします。',
+    add: fresh(bx(15, 14, 290, 34, '× I am a sister.（私＝妹 になる）', C.red, FILL.red, 12), bx(15, 58, 290, 34, '○ I have a sister.（妹を持っている）', C.green, FILL.green, 12), lb(160, 116, 'be動詞はイコール、have は「持っている」', 11, C.ink, 'middle', true), ...cap('家族の存在は have で言う', C.green)),
+  },
+  {
+    note: '❓人数が2人以上のとき、名詞はどうなるでしょう。→ 複数形にします。two のあとの名詞は必ず複数形です。I have one brother.（兄弟が1人）、I have two sisters.（姉妹が2人）。I have two brother. は誤りです。',
+    add: fresh(bx(15, 14, 290, 30, 'I have one brother.', C.blue, FILL.blue, 13), bx(15, 52, 290, 30, 'I have two sisters.', C.blue, FILL.blue, 13), bx(15, 90, 290, 30, '× I have two brother.', C.red, FILL.red, 13), ...cap('two のあとは複数形', C.red)),
+  },
+  {
+    note: '一人っ子の言い方は2つあります。I don\'t have any brothers or sisters.（兄弟姉妹がいません）と、I\'m an only child.（私は一人っ子です）。たずねるときは Do you have any brothers or sisters? です。any は疑問文や否定文で使う「いくらかの」という意味の語です。',
+    add: fresh(bx(15, 10, 290, 30, 'Do you have any brothers or sisters?', C.blue, FILL.blue, 12), bx(15, 48, 290, 28, 'Yes, I have one brother.', C.green, FILL.green, 12), bx(15, 84, 290, 28, "No, I don't. I'm an only child.", C.main, FILL.warm, 12), ...cap('たずね方と 答え方')),
+  },
+  {
+    note: 'まとめです。目の前の人の紹介は This is my 〜.（複数は These are）で、そのあとは he／she で続けます。家族の存在は have で言い、人数が2人以上なら名詞は複数形にします。上下は older／younger を付けます。',
+    add: sum3('This is my 〜.／These are my 〜. → he／she', 'I have ＋数＋ brother(s)／sister(s).', 'two のあとは複数形／older・younger', '家族の紹介ができる'),
+  },
+], '家族を紹介する');
+
+// ───────── new20_j1_eigo_16 出身地・国籍をたずねる表現 ─────────
+const e16: DiagramFigure = show([
+  {
+    note: '国際交流会でいちばん先に聞かれるのが「どこの出身ですか」です。Where are you from? とたずね、I\'m from Japan. のように答えます。型を、根っこから確かめます。',
+    add: [bx(15, 20, 290, 36, 'Where are you from?', C.blue, FILL.blue, 14), ar(160, 60, 160, 78, C.main), bx(15, 82, 290, 36, "I'm from Japan.", C.green, FILL.green, 14), ...cap('出身 ＝ Where are you from?')],
+  },
+  {
+    note: '❓答えで from を忘れて I\'m Japan. と言うと、どうなるでしょう。→ be動詞はイコールなので、「私＝日本（という国）」になってしまいます。「〜出身」は from が必要です。',
+    add: fresh(bx(15, 14, 290, 34, "× I'm Japan.（私＝日本？）", C.red, FILL.red, 13), bx(15, 58, 290, 34, "○ I'm from Japan.", C.green, FILL.green, 13), lb(160, 116, 'be動詞だけだと イコール', 12, C.ink, 'middle', true), ...cap('「出身」には from が必要', C.red)),
+  },
+  {
+    note: '出身は come を使っても言えます。Where do you come from?（どこの出身ですか）— I come from Canada.（カナダ出身です）。come は一般動詞なので、I\'m come from 〜. のように be動詞と一般動詞を両方使ってはいけません。会話では be動詞のほうがよく使われます。',
+    add: fresh(bx(15, 14, 290, 30, 'Where do you come from?', C.blue, FILL.blue, 12), bx(15, 50, 290, 30, 'I come from Canada.', C.green, FILL.green, 13), bx(15, 88, 290, 30, "× I'm come from Canada.", C.red, FILL.red, 13), ...cap('be動詞か come、どちらか1つ', C.red)),
+  },
+  {
+    note: '❓都市と国を一緒に言うときの順番は、どうなるでしょう。→ 狭い場所の都市を先に、広い場所の国をあとに言います。I\'m from Kyoto, Japan.（私は日本の京都出身です）。',
+    add: fresh(bx(10, 40, 130, 44, 'Kyoto（都市）', C.blue, FILL.blue, 13), lb(160, 62, ',', 20), bx(180, 40, 130, 44, 'Japan（国）', C.green, FILL.green, 13), lb(75, 104, '先（せまい）', 11, C.blue, 'middle', true), lb(245, 104, 'あと（ひろい）', 11, C.green, 'middle', true), ...cap("I'm from Kyoto, Japan.")),
+  },
+  {
+    note: '❓国について話すときの3つの形は、どうちがうのでしょう。→ 国名は場所そのもの（Japan）、国籍の形容詞は「〜人の」（Japanese）、「〜語」を表す語です。たとえば America・American、China・Chinese のように、国名と国籍はつづりがちがいます。',
+    add: fresh(lb(60, 12, '国名', 11, C.blue, 'middle', true), lb(160, 12, '国籍（〜人の）', 11, C.red, 'middle', true), lb(260, 12, '〜語', 11, C.green, 'middle', true), bx(10, 24, 100, 26, 'Japan', C.blue, FILL.blue, 12), bx(115, 24, 90, 26, 'Japanese', C.red, FILL.red, 12), bx(210, 24, 100, 26, 'Japanese', C.green, FILL.green, 12), bx(10, 58, 100, 26, 'America', C.blue, FILL.blue, 12), bx(115, 58, 90, 26, 'American', C.red, FILL.red, 12), bx(10, 92, 100, 26, 'China', C.blue, FILL.blue, 12), bx(115, 92, 90, 26, 'Chinese', C.red, FILL.red, 12), bx(210, 92, 100, 26, 'Chinese', C.green, FILL.green, 12), ...cap('国名と国籍は つづりがちがう')),
+  },
+  {
+    note: '❓どこでどちらを使うのでしょう。→ from のあとは国名です（I\'m from Japan.）。be動詞のあとで「〜人だ」と言うときは国籍の形容詞です（I\'m Japanese. She is American.）。I\'m from Japanese. や I\'m Japan. は誤りです。',
+    add: fresh(bx(10, 12, 300, 28, "○ I'm from Japan.（from のあとは国名）", C.green, FILL.green, 11), bx(10, 46, 300, 28, "○ I'm Japanese.（人 → 形容詞）", C.green, FILL.green, 11), bx(10, 80, 145, 28, "× I'm Japan.", C.red, FILL.red, 12), bx(165, 80, 145, 28, "× I'm from Japanese.", C.red, FILL.red, 11), ...cap('from のあと 国名、be動詞のあと 形容詞', C.ink, 11)),
+  },
+  {
+    note: '「〜語」も多くは国籍の形容詞と同じ形です。I study Japanese and English.（日本語と英語を勉強する）、Do you speak Chinese?（中国語を話しますか）。He is a Chinese student.（彼は中国人の生徒です）のように、名詞の前にも置けます。',
+    add: fresh(bx(15, 14, 290, 30, 'Do you speak Chinese?（中国語）', C.green, FILL.green, 12), bx(15, 52, 290, 30, 'He is a Chinese student.（中国人の）', C.red, FILL.red, 12), lb(160, 108, '同じ形で、使い方がちがう', 12, C.ink, 'middle', true), ...cap('形容詞と「〜語」は同じ形')),
+  },
+  {
+    note: '❓国名や言語名は、文の途中でも大文字なのはなぜでしょう。→ 曜日や月と同じく固有名詞だからです。× i am japanese. ではなく ○ I am Japanese. と書きます。',
+    add: fresh(bx(15, 14, 290, 34, '× i am japanese.', C.red, FILL.red, 14), bx(15, 58, 290, 34, '○ I am Japanese.', C.green, FILL.green, 14), lb(160, 116, '国名・国籍・言語は 大文字で始める', 12, C.ink, 'middle', true), ...cap('固有名詞は 大文字', C.green)),
+  },
+  {
+    note: '会話の例です。A: Where are you from? B: I\'m from Sydney, Australia. How about you? A: I\'m from Osaka, Japan. 国籍は What\'s your nationality? でもたずねられます。',
+    add: fresh(bx(10, 12, 300, 28, 'A: Where are you from?', C.blue, FILL.blue, 12), bx(10, 46, 300, 28, "B: I'm from Sydney, Australia. How about you?", C.green, FILL.green, 10), bx(10, 80, 300, 28, "A: I'm from Osaka, Japan.", C.blue, FILL.blue, 12), ...cap('How about you? でたずね返す')),
+  },
+  {
+    note: 'まとめです。出身は Where are you from? ― I\'m from 〜.（from が必須）。from のあとは国名、be動詞のあとは国籍の形容詞。国名・国籍・言語は、いつも大文字で書き始めます。',
+    add: sum3("出身：I'm from 〜.（from を忘れない）", 'from のあと 国名、be動詞のあと 国籍', '国名・国籍・言語は大文字で始める', '出身を答えられる'),
+  },
+], '出身地・国籍');
+
+// ───────── new20_j1_eigo_17 学校生活の語彙と文 ─────────
+const e17: DiagramFigure = show([
+  {
+    note: '学校生活は、いちばん身近な話題です。まず教科名です。math（数学）、English（英語）、Japanese（国語）、science（理科）、social studies（社会）、music（音楽）、art（美術）、P.E.（体育）。English と Japanese は大文字で書き始めます。',
+    add: [bx(10, 12, 145, 28, 'math（数学）', C.blue, FILL.blue, 12), bx(165, 12, 145, 28, 'English（英語）', C.blue, FILL.blue, 12), bx(10, 46, 145, 28, 'Japanese（国語）', C.blue, FILL.blue, 12), bx(165, 46, 145, 28, 'science（理科）', C.main, FILL.warm, 12), bx(10, 80, 145, 28, 'social studies（社会）', C.main, FILL.warm, 11), bx(165, 80, 145, 28, 'music（音楽）', C.main, FILL.warm, 12), bx(10, 114, 145, 28, 'art（美術）', C.green, FILL.green, 12), bx(165, 114, 145, 28, 'P.E.（体育）', C.green, FILL.green, 12), ...cap('English・Japanese は大文字')],
+  },
+  {
+    note: '好きな教科は What subject do you like?（好きな教科は何ですか）とたずね、I like math the best.（数学がいちばん好きです）と答えます。What\'s your favorite subject?（お気に入りの教科は？）― My favorite subject is science. という言い方もあります。',
+    add: fresh(bx(10, 10, 300, 28, 'What subject do you like?', C.blue, FILL.blue, 12), bx(10, 42, 300, 28, 'I like math the best.', C.green, FILL.green, 12), bx(10, 78, 300, 28, "What's your favorite subject?", C.blue, FILL.blue, 12), bx(10, 110, 300, 28, 'My favorite subject is science.', C.green, FILL.green, 12), ...cap('どちらの聞き方も同じ意味')),
+  },
+  {
+    note: '得意と苦手です。be good at 〜 は「〜が得意だ」、be poor at 〜 や not good at 〜 は「〜が苦手だ」。I\'m good at math.（数学が得意です）、I\'m not good at English.（英語が苦手です）。',
+    add: fresh(bx(15, 14, 290, 34, "I'm good at math.（得意）", C.green, FILL.green, 13), bx(15, 58, 290, 34, "I'm not good at English.（苦手）", C.red, FILL.red, 13), lb(160, 116, 'be poor at 〜 も「苦手」', 12, C.gray, 'middle'), ...cap('good at ＝ 得意、not good at ＝ 苦手')),
+  },
+  {
+    note: '❓at のあとに、動作は置けるのでしょうか。→ at は前置詞で、前置詞のあとには名詞（のなかま）しか置けません。そこで動作は -ing 形（動名詞）にして I\'m good at singing.（私は歌うのが得意です）と言います。at sing は誤りです。',
+    add: fresh(bx(15, 14, 290, 34, "○ I'm good at math.（名詞）", C.green, FILL.green, 13), bx(15, 58, 290, 34, "○ I'm good at singing.（-ing）", C.green, FILL.green, 13), bx(15, 102, 290, 34, "× I'm good at sing.", C.red, FILL.red, 13), ...cap('前置詞 at のあとは名詞か -ing', C.red)),
+  },
+  {
+    note: '❓「月曜日に数学がある」は、なぜ have で言うのでしょう。→ 時間割という自分の持ち物として、授業を持っていると考えるからです。I have math on Monday.（月曜日に数学がある）。曜日の前には on。We have five classes today.（今日は授業が5時間ある）。',
+    add: fresh(bx(15, 14, 290, 34, 'I have math on Monday.', C.blue, FILL.blue, 14), lb(160, 70, '時間割 ＝ 自分が「持っている」', 12, C.ink, 'middle', true), bx(15, 84, 290, 34, 'We have five classes today.', C.blue, FILL.blue, 13), ...cap('授業は have で言う')),
+  },
+  {
+    note: '「何時間目」は period を序数と組み合わせます。We have P.E. in the third period.（3時間目に体育がある）、Math is in the first period.（数学は1時間目だ）。period は時間割上の1コマです。',
+    add: fresh(bx(10, 14, 70, 40, '1st\nperiod', C.gray, FILL.gray, 10), bx(88, 14, 70, 40, '2nd\nperiod', C.gray, FILL.gray, 10), bx(166, 14, 70, 40, '3rd\nperiod', C.red, FILL.red, 10), bx(244, 14, 66, 40, '4th\nperiod', C.gray, FILL.gray, 10), lb(160, 80, 'We have P.E. in the third period.', 12, C.red, 'middle', true), lb(160, 104, 'Math is in the first period.', 12, C.ink, 'middle', true), ...cap('period ＝ 時間割の1コマ')),
+  },
+  {
+    note: '部活動は I\'m in the tennis club.（テニス部に入っています）と言い、I belong to the 〜 club. はややかたい言い方です。主な部は、baseball・soccer・basketball・tennis・brass band・art・drama の club です。',
+    add: fresh(bx(15, 14, 290, 34, "I'm in the tennis club.", C.green, FILL.green, 13), bx(15, 58, 290, 34, 'I belong to the tennis club.（かたい）', C.main, FILL.warm, 12), lb(160, 114, 'soccer／brass band／drama … club', 11, C.gray), ...cap('部活 ＝ in the 〜 club')),
+  },
+  {
+    note: '❓なぜ in を落としてはいけないのでしょう。→ 部を「グループという場所」ととらえ、その中にいる、と in で言うからです。in を落とした I am the tennis club. は「私はテニス部そのものだ」というイコールの文になってしまいます。',
+    add: fresh(bx(15, 14, 290, 34, "× I am the tennis club.（私＝部？）", C.red, FILL.red, 12), bx(15, 58, 290, 34, "○ I'm in the tennis club.", C.green, FILL.green, 13), lb(160, 116, 'グループの「中にいる」→ in', 12, C.ink, 'middle', true), ...cap('in を入れて「中にいる」', C.green)),
+  },
+  {
+    note: '部活のたずね方は What club are you in?（何部に入っていますか）と、How many times a week do you have practice?（週に何回練習がありますか）です。',
+    add: fresh(bx(15, 14, 290, 34, 'What club are you in?', C.blue, FILL.blue, 13), bx(15, 58, 290, 34, 'How many times a week do you have practice?', C.blue, FILL.blue, 10), bx(15, 102, 290, 30, "I'm in the soccer club.", C.green, FILL.green, 12), ...cap('部活の質問')),
+  },
+  {
+    note: 'まとめです。授業は持ち物として have、at のあとは名詞か -ing、部活は in the 〜 club。教科名の English・Japanese は大文字で始めます。',
+    add: sum3('授業は have（曜日は on、時間は in the 〜 period）', 'be good at ＋ 名詞か -ing', '部活：I\'m in the 〜 club.', '学校の話ができる'),
+  },
+], '学校生活の英語');
+
+// ───────── new20_j1_eigo_18 一日の生活を説明する表現 ─────────
+const e18: DiagramFigure = show([
+  {
+    note: '「毎日何時に起きるの？」一日の生活を英語で話すには、現在形・時刻・時の前置詞を1つの文章にまとめます。朝から夜までの流れを、時刻つきで並べます。',
+    add: [bx(8, 14, 98, 36, 'get up\n6:30', C.blue, FILL.blue, 11), bx(111, 14, 98, 36, 'breakfast\n7:00', C.blue, FILL.blue, 11), bx(214, 14, 98, 36, 'leave home\n8:00', C.blue, FILL.blue, 11), bx(8, 62, 98, 36, 'club\n〜 5:00', C.main, FILL.warm, 11), bx(111, 62, 98, 36, 'homework\n7:00-8:00', C.main, FILL.warm, 10), bx(214, 62, 98, 36, 'go to bed\n10:30', C.main, FILL.warm, 11), ...cap('朝 → 昼 → 夜の順に並べる')],
+  },
+  {
+    note: '❓なぜ現在形で言うのでしょう。→ 毎日くり返す習慣だからです。習慣は今の事実なので現在形を使い、主語が I のときはそのままの形、he や she のときは三人称単数の -s を付けます。I get up. ／ He goes to bed.',
+    add: fresh(bx(15, 14, 290, 34, 'I get up at six.', C.blue, FILL.blue, 14), bx(15, 58, 290, 34, 'He goes to bed at ten.', C.main, FILL.warm, 14), lb(160, 112, '主語が he／she なら -s（go → goes）', 12, C.ink, 'middle', true), ...cap('習慣 ＝ 現在形')),
+  },
+  {
+    note: '時刻は、動詞のあとに at ＋ 時刻で言います。I get up at six thirty.（6時30分に起きる）、We have dinner at seven.（7時に夕食を食べる）。時計の針が指す1点なので at を使います。',
+    add: fresh(...clock(70, 74, 52, 6, 30), bx(140, 30, 170, 36, 'I get up at six thirty.', C.blue, FILL.blue, 11), bx(140, 80, 170, 36, 'at ＋ 時刻', C.red, FILL.red, 13), ...cap('動詞のあとに at ＋ 時刻', C.blue)),
+  },
+  {
+    note: '❓場所と時刻の両方があるときは、どちらを先に言うのでしょう。→ 場所を先に、時をあとに置きます。動詞 ＋ 場所 ＋ 時の順です。I go to school at eight. が正しく、I go at eight to school. は誤りです。',
+    add: fresh(bx(5, 20, 70, 36, 'I go', C.gray, FILL.gray, 13), bx(80, 20, 120, 36, 'to school', C.green, FILL.green, 13), bx(205, 20, 110, 36, 'at eight.', C.red, FILL.red, 13), lb(140, 74, '① 場所', 12, C.green, 'middle', true), lb(260, 74, '② 時', 12, C.red, 'middle', true), bx(15, 92, 290, 34, '× I go at eight to school.', C.red, FILL.red, 12), ...cap('動詞 ＋ 場所 ＋ 時', C.ink)),
+  },
+  {
+    note: '❓どのくらいの習慣かは、どう表すのでしょう。→ 頻度の副詞を動詞の前に置きます。always（いつも）、usually（たいてい）、often（よく）、sometimes（ときどき）。I usually get up at six.（私はたいてい6時に起きる）。',
+    add: fresh(lb(160, 12, '多い → 少ない', 11, C.gray, 'middle', true), bx(10, 24, 72, 28, 'always', C.red, FILL.red, 11), bx(88, 24, 72, 28, 'usually', C.main, FILL.warm, 11), bx(166, 24, 72, 28, 'often', C.blue, FILL.blue, 11), bx(244, 24, 70, 28, 'sometimes', C.green, FILL.green, 10), bx(15, 76, 290, 34, 'I usually get up at six.', C.blue, FILL.blue, 13), lb(160, 126, '動詞の前に置く', 12, C.ink, 'middle', true), ...cap('頻度の副詞は 動詞の前')),
+  },
+  {
+    note: '「〜時から〜時まで」は from ＋ 時刻 ＋ to ＋ 時刻です。I study from seven to eight every night.（毎晩7時から8時まで勉強する）、School is from eight thirty to three thirty.（学校は8時30分から3時30分まで）。',
+    add: fresh(ln(30, 56, 290, 56, C.gray, false, 2), ci(60, 56, 5, undefined, C.blue, FILL.blue), ci(260, 56, 5, undefined, C.red, FILL.red), lb(60, 40, 'from seven', 11, C.blue, 'middle', true), lb(260, 40, 'to eight', 11, C.red, 'middle', true), ln(60, 56, 260, 56, C.main, false, 4), lb(160, 96, 'I study from seven to eight.', 12, C.ink, 'middle', true), lb(160, 120, 'School is from eight thirty to three thirty.', 10, C.gray), ...cap('from A to B ＝ AからBまで')),
+  },
+  {
+    note: '一日の流れは、and（そして）、then（それから）、after that（そのあとで）でつなぎます。I get up at six, and then I wash my face. After that, I have breakfast at seven.',
+    add: fresh(bx(10, 14, 300, 34, 'I get up at six,', C.blue, FILL.blue, 13), lb(160, 62, 'and then', 13, C.red, 'middle', true), bx(10, 76, 300, 34, 'I wash my face.', C.blue, FILL.blue, 13), lb(160, 122, 'After that, I have breakfast at seven.', 11, C.ink, 'middle', true), ...cap('and then ／ after that')),
+  },
+  {
+    note: '❓途中で過去形が混ざってもよいでしょうか。→ よくありません。習慣を説明している間は、ずっと現在形で統一します。I usually get up at six. のあとで I went to school. と言うと、習慣の話がとぎれてしまいます。',
+    add: fresh(bx(15, 14, 290, 34, 'I get up at six. I have breakfast at seven.', C.green, FILL.green, 11), bx(15, 58, 290, 34, 'I get up at six. I had breakfast … ×', C.red, FILL.red, 11), lb(160, 114, '習慣の説明は ずっと現在形', 12, C.ink, 'middle', true), ...cap('現在形で統一する', C.red)),
+  },
+  {
+    note: 'まとめです。一日の行動は現在形で、時刻は at。場所のあとに時を置きます。頻度の副詞は動詞の前。「〜から〜まで」は from … to …。and then、after that でつなぎます。',
+    add: sum3('現在形（he／she は -s）／ 時刻は at', '動詞 ＋ 場所 ＋ 時 ／ usually は動詞の前', 'from … to … ／ and then・after that', '日課を説明できる'),
+  },
+], '一日の生活を説明する');
+
+// ───────── new20_j1_eigo_19 季節と学校行事の語彙 ─────────
+const e19: DiagramFigure = show([
+  {
+    note: '運動会、文化祭、修学旅行。日本の学校行事を英語で説明するには、季節の名前と行事名が必要です。まず四季です。spring（春）、summer（夏）、fall（秋）、winter（冬）。',
+    add: [bx(15, 14, 140, 44, 'spring（春）', C.green, FILL.green, 13), bx(165, 14, 140, 44, 'summer（夏）', C.red, FILL.red, 13), bx(15, 68, 140, 44, 'fall（秋）', C.main, FILL.warm, 13), bx(165, 68, 140, 44, 'winter（冬）', C.blue, FILL.blue, 13), lb(160, 128, '秋だけ もう1つの言い方がある', 11, C.gray), ...cap('四季の名前')],
+  },
+  {
+    note: '❓秋に fall と autumn の2つがあるのは、なぜでしょう。→ 同じ意味で、fall は主にアメリカ英語、autumn は主にイギリス英語だからです。教科書では両方が紹介されます。どちらを使ってもかまいません。',
+    add: fresh(bx(10, 24, 140, 44, 'fall', C.main, FILL.warm, 16), bx(170, 24, 140, 44, 'autumn', C.main, FILL.warm, 16), lb(80, 88, '主にアメリカ英語', 11, C.ink, 'middle', true), lb(240, 88, '主にイギリス英語', 11, C.ink, 'middle', true), lb(160, 118, '意味は同じ（秋）', 12, C.red, 'middle', true), ...cap('どちらも「秋」')),
+  },
+  {
+    note: '❓「春に」は、どの前置詞を使うのでしょう。→ in です。季節は幅のある期間なので、時の前置詞で学んだ in をそのまま使います。Cherry blossoms bloom in spring.（桜は春に咲く）、We have a lot of rain in June.（6月には雨がたくさん降る）。',
+    add: fresh(bx(15, 14, 290, 34, 'Cherry blossoms bloom in spring.', C.green, FILL.green, 12), bx(15, 58, 290, 34, 'We have a lot of rain in June.', C.blue, FILL.blue, 12), lb(160, 114, '幅のある期間 → in', 12, C.ink, 'middle', true), ...cap('季節・月 ＝ in', C.blue)),
+  },
+  {
+    note: '好きな季節は What season do you like the best?（いちばん好きな季節は何ですか）とたずねます。答えは I like fall the best because the weather is nice.（天気がいいので秋がいちばん好きです）。because（〜なので）で理由を添えられます。',
+    add: fresh(bx(10, 14, 300, 34, 'What season do you like the best?', C.blue, FILL.blue, 12), ar(160, 52, 160, 66, C.main), bx(10, 70, 300, 34, 'I like fall the best', C.green, FILL.green, 13), bx(10, 108, 300, 30, 'because the weather is nice.', C.red, FILL.red, 12), ...cap('because ＋ 理由')),
+  },
+  {
+    note: '季節の話題に使う語です。cherry blossoms（桜）、rainy season（梅雨）、fireworks（花火）、leaves change color（紅葉する）、snow（雪）。これらを使うと、日本らしい季節を英語で説明できます。',
+    add: fresh(bx(10, 14, 145, 30, 'cherry blossoms（桜）', C.green, FILL.green, 11), bx(165, 14, 145, 30, 'rainy season（梅雨）', C.blue, FILL.blue, 11), bx(10, 52, 145, 30, 'fireworks（花火）', C.red, FILL.red, 12), bx(165, 52, 145, 30, 'leaves change color', C.main, FILL.warm, 11), bx(10, 90, 300, 30, 'snow（雪）', C.blue, FILL.blue, 12), ...cap('季節の話題に使う語')),
+  },
+  {
+    note: '学校行事の語です。sports day（運動会）、school trip（修学旅行）、school festival（文化祭）、chorus contest（合唱コンクール）、entrance ceremony（入学式）、graduation ceremony（卒業式）、summer vacation（夏休み）、winter vacation（冬休み）。',
+    add: fresh(bx(5, 8, 150, 28, 'sports day（運動会）', C.main, FILL.warm, 10), bx(165, 8, 150, 28, 'school trip（修学旅行）', C.main, FILL.warm, 10), bx(5, 42, 150, 28, 'school festival（文化祭）', C.main, FILL.warm, 10), bx(165, 42, 150, 28, 'chorus contest（合唱）', C.main, FILL.warm, 10), bx(5, 76, 150, 28, 'entrance ceremony', C.blue, FILL.blue, 10), bx(165, 76, 150, 28, 'graduation ceremony', C.blue, FILL.blue, 10), bx(5, 110, 150, 28, 'summer vacation', C.green, FILL.green, 10), bx(165, 110, 150, 28, 'winter vacation', C.green, FILL.green, 10), ...cap('主な学校行事')),
+  },
+  {
+    note: '❓「10月に運動会がある」は、どう言うのでしょう。→ We have sports day in October. です。月は幅のある期間なので in。行事を主語にして、Our school festival is in September.（文化祭は9月にある）と be動詞で言うこともできます。',
+    add: fresh(bx(10, 14, 300, 34, 'We have sports day in October.', C.blue, FILL.blue, 13), bx(10, 58, 300, 34, 'Our school festival is in September.', C.blue, FILL.blue, 12), lb(160, 114, '月は in（We have 〜 ／ 〜 is の2通り）', 11, C.ink, 'middle', true), ...cap('行事 ＋ in ＋ 月')),
+  },
+  {
+    note: '行事の感想も言えます。I\'m looking forward to the school trip.（修学旅行を楽しみにしている）、Sports day was a lot of fun.（運動会はとても楽しかった）。',
+    add: fresh(bx(10, 20, 300, 36, "I'm looking forward to the school trip.", C.green, FILL.green, 11), bx(10, 68, 300, 36, 'Sports day was a lot of fun.', C.green, FILL.green, 12), ...cap('行事の感想')),
+  },
+  {
+    note: '❓be looking forward to のあとに動詞を続けるときは、どうするのでしょう。→ -ing 形にします。この to は前置詞で、前置詞のあとには名詞か -ing 形しか置けないからです。I\'m looking forward to going. が正しく、to go は誤りです。',
+    add: fresh(bx(15, 14, 290, 34, "○ looking forward to going", C.green, FILL.green, 13), bx(15, 58, 290, 34, '× looking forward to go', C.red, FILL.red, 13), lb(160, 114, 'この to は前置詞 → あとは名詞か -ing', 11, C.ink, 'middle', true), ...cap('前置詞のあとは -ing', C.red)),
+  },
+  {
+    note: 'まとめです。四季は spring・summer・fall（autumn）・winter で、季節と月には in。行事は We have 〜 in 月. で言います。looking forward to のあとは名詞か -ing です。',
+    add: sum3('spring・summer・fall／autumn・winter（季節は in）', 'We have sports day in October.', 'looking forward to ＋ 名詞か -ing', '季節と行事を話せる'),
+  },
+], '季節と学校行事');
+
+// ───────── new20_j1_eigo_20 前置詞の総合演習 ─────────
+const e20: DiagramFigure = show([
+  {
+    note: '場所の in・on・at と、時の in・on・at は、同じ物差しでつながっています。「範囲の広さ」です。広い枠は in、面は on、1つの点は at。場所と時を1つの表にまとめます。',
+    add: [lb(90, 12, '場所', 12, C.ink, 'middle', true), lb(250, 12, '時', 12, C.ink, 'middle', true), bx(8, 24, 50, 30, 'in', C.blue, FILL.blue, 13), bx(64, 24, 120, 30, 'in Osaka', C.blue, FILL.blue, 11), bx(190, 24, 122, 30, 'in April', C.blue, FILL.blue, 11), bx(8, 62, 50, 30, 'on', C.main, FILL.warm, 13), bx(64, 62, 120, 30, 'on the desk', C.main, FILL.warm, 11), bx(190, 62, 122, 30, 'on Monday', C.main, FILL.warm, 11), bx(8, 100, 50, 30, 'at', C.red, FILL.red, 13), bx(64, 100, 120, 30, 'at the station', C.red, FILL.red, 11), bx(190, 100, 122, 30, 'at seven', C.red, FILL.red, 11), ...cap('空間・面・点 ＝ 場所も時も同じ')],
+  },
+  {
+    note: '❓in は、場所でも時でも同じ考え方なのでしょうか。→ はい。場所の in Japan、in the box も、時の in 2026、in April、in summer も、「広がりのある枠の中」というイメージで共通しています。',
+    add: fresh(bx(10, 10, 300, 140, undefined, C.gray, FILL.gray), bx(30, 30, 120, 90, undefined, C.blue, FILL.blue), lb(90, 74, '場所\nin the box', 11, C.blue, 'middle', true), bx(170, 30, 120, 90, undefined, C.blue, FILL.blue), lb(230, 74, '時\nin April', 11, C.blue, 'middle', true), ...cap('どちらも「枠の中」', C.blue)),
+  },
+  {
+    note: '❓on は、時でも「面」なのでしょうか。→ カレンダーの1日を「日付という面」ととらえると、場所の on the desk と同じ発想でつながります。on the wall（壁の面）と on May 5th（5月5日という1マス）です。',
+    add: fresh(ln(20, 80, 120, 80, C.gray, false, 3), bx(50, 56, 40, 24, 'book', C.main, FILL.warm, 10), lb(70, 100, 'on the desk', 11, C.ink, 'middle', true), bx(180, 36, 40, 28, 'Mon', C.gray, FILL.gray, 10), bx(224, 36, 40, 28, 'Tue', C.gray, FILL.gray, 10), bx(180, 68, 40, 28, '5', C.main, FILL.warm, 12), lb(222, 112, 'on May 5th（1マス）', 11, C.ink, 'middle', true), ...cap('面 ＝ 机の上／カレンダーの1マス', C.main)),
+  },
+  {
+    note: '❓at は、時でも「点」なのでしょうか。→ はい。場所の at the station は地図の上の1点、時の at seven は時計の針が指す1点です。どちらも、これ以上分けられないピンポイントです。',
+    add: fresh(ln(20, 60, 140, 60, C.gray, false, 2), ci(80, 60, 6, undefined, C.red, FILL.red), lb(80, 38, 'at the station', 11, C.red, 'middle', true), ...clock(240, 60, 36, 7, 0), lb(240, 112, 'at seven', 11, C.red, 'middle', true), ...cap('点 ＝ 地図の1点／時計の1点', C.red)),
+  },
+  {
+    note: '❓同じ「角」でも、at と on で意味が変わるのは、なぜでしょう。→ at the corner は1つの地点として「角のところで」。on the corner は建物が角に接して建つ位置です。Turn left at the corner.（角を左に曲がって）、There is a bookstore on the corner.（角に本屋がある）。',
+    add: fresh(ln(20, 80, 300, 80, C.gray, false, 3), ln(160, 20, 160, 140, C.gray, false, 3), ci(160, 80, 6, undefined, C.red, FILL.red), lb(100, 56, 'at the corner', 11, C.red, 'middle', true), bx(168, 88, 60, 30, 'bookstore', C.main, FILL.warm, 10), lb(200, 134, 'on the corner', 11, C.main, 'middle', true), ...cap('地点 ＝ at、接して建つ ＝ on')),
+  },
+  {
+    note: '❓in bed と on the bed は、どうちがうのでしょう。→ in bed は、ベッドで寝ているという状態（就寝中）を表す決まった言い方です。on the bed は、物がベッドの上に置かれている状態です。My brother is still in bed. ／ There is a cat on the bed.',
+    add: fresh(bx(15, 14, 290, 34, 'My brother is still in bed.（寝ている）', C.blue, FILL.blue, 11), bx(15, 58, 290, 34, 'There is a cat on the bed.（上にいる）', C.main, FILL.warm, 11), lb(160, 114, '状態の決まり文句 ／ 物の位置', 12, C.ink, 'middle', true), ...cap('in bed ＝ 寝ている状態')),
+  },
+  {
+    note: '❓in time と on time は、どうちがうのでしょう。→ in time は「何かに間に合って」、on time は「時間どおりに」です。We got to the station in time for the train.（電車に間に合うように着いた）、The train arrived on time.（電車は時間どおりに着いた）。',
+    add: fresh(bx(15, 14, 290, 34, 'in time ＝ 間に合って', C.blue, FILL.blue, 13), lb(160, 56, 'We got to the station in time for the train.', 10, C.gray), bx(15, 74, 290, 34, 'on time ＝ 時間どおりに', C.green, FILL.green, 13), lb(160, 116, 'The train arrived on time.', 11, C.gray), ...cap('セットで例文ごと覚える')),
+  },
+  {
+    note: '前置詞を付けない場合のおさらいです。this、next、last、every が時の語の前に付くときは、in・on・at を付けません。this morning、next Sunday、last year、every day。',
+    add: fresh(bx(10, 14, 145, 30, 'this morning', C.green, FILL.green, 12), bx(165, 14, 145, 30, 'next Sunday', C.green, FILL.green, 12), bx(10, 54, 145, 30, 'last year', C.green, FILL.green, 12), bx(165, 54, 145, 30, 'every day', C.green, FILL.green, 12), lb(160, 108, 'この4つの前には in／on／at なし', 12, C.red, 'middle', true), ...cap('this・next・last・every', C.red)),
+  },
+  {
+    note: '問題を解くときは、3つを順に確かめます。①場所か時か。②広い範囲か、特定の1日か、1点か。③this・next・last・every が付いていないか。これでほとんど迷いません。',
+    add: fresh(...stack(['① 場所か 時か', '② 範囲 ＝ 広い／1日／1点', '③ this・next・last・every は？'], 30, 260, 12, { h: 30, gap: 14, color: C.blue, fill: FILL.blue, size: 12 }).flat(), ...cap('3つを順に確かめる')),
+  },
+  {
+    note: 'まとめです。in・on・at は、場所も時も「空間（広い枠）・面（1日）・点（1点）」の物差しで選びます。at the corner と on the corner、in bed と on the bed、in time と on time は、意味ごと覚えます。',
+    add: sum3('in＝枠 ／ on＝面・1日 ／ at＝1点', 'at/on the corner、in bed/on the bed', 'in time/on time ／ this・next・last・every なし', '前置詞の総まとめ'),
+  },
+], '前置詞の総合まとめ');
+
+// ───────── new20_j2_eigo_01 並べかえ①：過去進行形 ─────────
+const e201: DiagramFigure = show([
+  {
+    note: '並べかえ問題です。（ I / was / studying / English ）at nine last night. 語がバラバラに出されます。いきなり動かさず、手順を決めて組み立てます。過去進行形の文は「まず be動詞を探す」のが出発点です。',
+    add: [bx(10, 16, 60, 34, 'English', C.gray, FILL.gray, 11), bx(80, 16, 70, 34, 'studying', C.gray, FILL.gray, 11), bx(160, 16, 40, 34, 'I', C.gray, FILL.gray, 12), bx(210, 16, 50, 34, 'was', C.gray, FILL.gray, 12), lb(160, 76, '＋ at nine last night.', 12, C.ink, 'middle', true), lb(160, 104, '昨夜9時に英語を勉強していた', 11, C.gray), ...cap('バラバラの語を 文にする')],
+  },
+  {
+    note: '❓なぜ、be動詞を最初に探すのでしょう。→ 過去進行形は〈主語 ＋ was／were ＋ 動詞の ing 形〉という骨組みで、be動詞がないと文として成り立たないからです。ing 形だけを見つけたら、「be動詞とセットか」を必ず確かめます。',
+    add: fresh(bx(5, 20, 80, 38, '主語', C.blue, FILL.blue, 13), bx(92, 20, 90, 38, 'was／were', C.red, FILL.red, 12), bx(190, 20, 90, 38, '-ing 形', C.green, FILL.green, 13), lb(45, 78, 'I', 12, C.blue, 'middle', true), lb(137, 78, 'was', 12, C.red, 'middle', true), lb(235, 78, 'studying', 12, C.green, 'middle', true), ...cap('骨組み ＝ 主語 ＋ be動詞 ＋ -ing', C.red)),
+  },
+  {
+    note: 'ステップ①は、主語を決めて文頭に置くことです。I、you、he、she、it、we、they、固有名詞の中から、日本語訳に合うものを選びます。この問題では「昨夜、私が」なので I です。',
+    add: fresh(bx(10, 20, 40, 34, 'I', C.blue, FILL.blue, 14), bx(60, 20, 70, 34, '？', C.gray, FILL.gray, 14), bx(140, 20, 90, 34, '？', C.gray, FILL.gray, 14), lb(160, 84, '① 主語を文頭に', 14, C.blue, 'middle', true), ...cap('まず主語 I を置く', C.blue)),
+  },
+  {
+    note: 'ステップ②は、主語に合う be動詞を選ぶことです。I は was、he・she・it や単数の名詞は was、you・we・they や複数の名詞は were。❓なぜ they は were なのでしょう。→ 複数の主語には複数用の were を使うからです。',
+    add: fresh(bx(10, 14, 145, 34, 'I', C.blue, FILL.blue, 13), bx(165, 14, 145, 34, 'was', C.blue, FILL.blue, 13), bx(10, 54, 145, 34, 'he／she／it・単数名詞', C.blue, FILL.blue, 10), bx(165, 54, 145, 34, 'was', C.blue, FILL.blue, 13), bx(10, 94, 145, 34, 'you／we／they・複数', C.red, FILL.red, 11), bx(165, 94, 145, 34, 'were', C.red, FILL.red, 13), ...cap('主語に合わない方は 使わない')),
+  },
+  {
+    note: 'ステップ③は、動詞を ing 形にして be動詞の直後に置くことです。They were playing soccer in the park then.（そのとき、彼らは公園でサッカーをしていた）。were と playing の順番を逆にするミスが多いので、be動詞は必ず ing 形の直前、と確かめます。',
+    add: fresh(bx(5, 16, 60, 32, 'They', C.blue, FILL.blue, 12), bx(70, 16, 60, 32, 'were', C.red, FILL.red, 12), bx(135, 16, 90, 32, 'playing', C.green, FILL.green, 12), bx(230, 16, 85, 32, 'soccer …', C.gray, FILL.gray, 11), lb(100, 66, 'be動詞 → ing の順', 12, C.red, 'middle', true), bx(40, 86, 240, 30, '× They playing were …', C.red, FILL.red, 12), ...cap('be動詞は ing 形の直前')),
+  },
+  {
+    note: '❓when を使う文では、どちらが過去進行形でしょうか。→ I was watching TV when my mother came home. 長く続いていた「背景」の動作が過去進行形、そこに割りこんだ一瞬の出来事が過去形です。テレビを見ていた間に、母が帰ってきたのです。',
+    add: fresh(bx(20, 34, 220, 24, 'was watching TV（続いている）', C.blue, FILL.blue, 11), ln(200, 20, 200, 80, C.red, false, 3), lb(200, 94, 'my mother came home（一瞬）', 11, C.red, 'middle', true), lb(160, 122, '長い動作 ＝ 過去進行形、割りこみ ＝ 過去形', 11, C.ink, 'middle', true), ...cap('背景は -ing、割りこみは過去形')),
+  },
+  {
+    note: 'while の文も同じです。While I was cooking dinner, the phone rang.（夕食を作っている間に、電話が鳴った）。while は「〜している間」なので、あとの節は必ず過去進行形です。while の節が文頭に来るときは、コンマを忘れずに付けます。',
+    add: fresh(bx(5, 20, 190, 34, 'While I was cooking dinner,', C.blue, FILL.blue, 11), bx(200, 20, 115, 34, 'the phone rang.', C.red, FILL.red, 11), lb(100, 74, 'while のあと ＝ 過去進行形', 11, C.blue, 'middle', true), lb(257, 74, '過去形', 11, C.red, 'middle', true), lb(160, 108, '文頭の while 節のあとに「,」', 12, C.ink, 'middle', true), ...cap('while ＋ 過去進行形, 過去形')),
+  },
+  {
+    note: '❓when のあとの節も過去進行形にしてよいでしょうか。→ いいえ。I was watching TV when my mother was coming home. は誤りです。割りこんだ一瞬の動作は過去形の came にします。例題の正しい文は It was raining when I left home. です。',
+    add: fresh(bx(10, 14, 300, 30, '× … when my mother was coming home.', C.red, FILL.red, 11), bx(10, 52, 300, 30, '○ … when my mother came home.', C.green, FILL.green, 12), bx(10, 90, 300, 30, 'It was raining when I left home.', C.blue, FILL.blue, 12), ...cap('when の中は 過去形', C.red)),
+  },
+  {
+    note: 'よくあるミスをまとめて確認します。①be動詞を忘れる（× I studying）。②was と were を主語に合わせない（× They was playing）。③when の中まで過去進行形にする。仕上げに、この3つを必ず見直します。',
+    add: fresh(bx(10, 12, 300, 30, '① × I studying English.　→ I was studying', C.red, FILL.red, 10), bx(10, 48, 300, 30, '② × They was playing.　→ They were playing', C.red, FILL.red, 10), bx(10, 84, 300, 30, '③ × when … was coming　→ came', C.red, FILL.red, 11), ...cap('仕上げの3つのチェック', C.red)),
+  },
+  {
+    note: 'まとめです。主語を決める → 合う was／were を選ぶ → ing 形を直後に置く、の3ステップ。when や while の文は、続いていた動作が過去進行形、割りこんだ出来事が過去形です。',
+    add: sum3('① 主語 → ② was／were → ③ -ing 形', 'be動詞は ing 形の直前', '続く動作 -ing ／ 割りこみ 過去形', '過去進行形が組み立てられる'),
+  },
+], '並べかえ：過去進行形');
+
+// ───────── new20_j2_eigo_02 並べかえ②：未来表現 ─────────
+const e202: DiagramFigure = show([
+  {
+    note: '未来を表す言い方は、will と be going to の2種類です。並べかえでは、まず「どちらの形か」を選択肢から見抜きます。それぞれの骨組みを根っこから確かめます。',
+    add: [bx(15, 20, 290, 38, 'will ：主語 ＋ will ＋ 動詞の原形', C.blue, FILL.blue, 12), bx(15, 68, 290, 38, 'be going to ：主語 ＋ be動詞 ＋ going to ＋ 原形', C.green, FILL.green, 11), ...cap('未来の言い方は2つ')],
+  },
+  {
+    note: '❓will のあとは、なぜ必ず原形なのでしょう。→ will は助動詞で、助動詞のあとには動詞の原形を置くきまりだからです。I will help you.（手伝います）。helps や helping は使いません。',
+    add: fresh(bx(10, 20, 60, 36, 'I', C.blue, FILL.blue, 13), bx(75, 20, 70, 36, 'will', C.red, FILL.red, 13), bx(150, 20, 70, 36, 'help', C.green, FILL.green, 13), bx(225, 20, 85, 36, 'you.', C.gray, FILL.gray, 13), lb(185, 76, '原形', 12, C.green, 'middle', true), bx(40, 96, 240, 30, '× I will helps ／ × I will helping', C.red, FILL.red, 11), ...cap('will のあとは 原形', C.red)),
+  },
+  {
+    note: 'will の否定文は will not で、短くすると won\'t です。She will not come tomorrow. 疑問文は Will を文頭に出します。Will you help me? 答えにも will を使い、Yes, I will. ／ No, I won\'t. です。do や does は使いません。',
+    add: fresh(bx(10, 12, 300, 30, 'She will not come tomorrow.（won\'t）', C.blue, FILL.blue, 11), bx(10, 48, 300, 30, 'Will you help me?', C.blue, FILL.blue, 13), bx(10, 84, 300, 30, "Yes, I will. ／ No, I won't.", C.green, FILL.green, 12), ...cap('疑問文は Will を文頭に')),
+  },
+  {
+    note: '例題です。（ will / it / tomorrow / rain ）? 疑問文なので Will を文頭に出すだけで、あとの語順は肯定文と同じ〈主語 ＋ 動詞の原形〉です。Will it rain tomorrow?（明日は雨が降るでしょうか）。',
+    add: fresh(bx(5, 20, 60, 34, 'Will', C.red, FILL.red, 13), bx(70, 20, 50, 34, 'it', C.blue, FILL.blue, 13), bx(125, 20, 60, 34, 'rain', C.green, FILL.green, 13), bx(190, 20, 100, 34, 'tomorrow?', C.gray, FILL.gray, 12), lb(160, 80, 'Will → 主語 → 原形', 13, C.ink, 'middle', true), ...cap('Will it rain tomorrow?')),
+  },
+  {
+    note: 'be going to の文は、主語によって be動詞が変わります。I は am、he・she・it は is、you・we・they は are。We are going to visit Kyoto next month.（来月、京都を訪れる予定です）。主語が he や she のときに is にするのを忘れないようにします。',
+    add: fresh(bx(10, 14, 145, 32, 'I → am', C.blue, FILL.blue, 13), bx(165, 14, 145, 32, 'he／she／it → is', C.blue, FILL.blue, 12), bx(10, 54, 300, 32, 'you／we／they → are', C.blue, FILL.blue, 13), lb(160, 108, 'We are going to visit Kyoto next month.', 11, C.ink, 'middle', true), ...cap('be動詞は 主語で決まる')),
+  },
+  {
+    note: '❓going と to は、なぜ先にくっつけるのでしょう。→ going to は2語で1つの助動詞のようにはたらくかたまりだからです。（ is / going / she / to / buy ）a new bike. なら、まず going to をくっつけ、She is going to buy a new bike. と組み立てます。',
+    add: fresh(bx(5, 14, 60, 32, 'She', C.blue, FILL.blue, 12), bx(70, 14, 50, 32, 'is', C.red, FILL.red, 12), bx(125, 14, 100, 32, 'going to', C.green, FILL.green, 12), bx(230, 14, 85, 32, 'buy', C.main, FILL.warm, 12), lb(175, 64, '2語で1かたまり', 11, C.green, 'middle', true), lb(160, 92, '… a new bike.', 12, C.ink, 'middle'), ...cap('going to は離さない', C.green)),
+  },
+  {
+    note: 'be going to の否定文は、be動詞のあとに not を置きます。He is not going to join the club. 疑問文は be動詞を文頭に出します。Are you going to study abroad? 答えは Yes, I am. ／ No, I\'m not. です。be動詞を忘れて Going to you … とするのは誤りです。',
+    add: fresh(bx(10, 12, 300, 30, 'He is not going to join the club.', C.blue, FILL.blue, 12), bx(10, 48, 300, 30, 'Are you going to study abroad?', C.blue, FILL.blue, 12), bx(10, 84, 300, 30, "Yes, I am. ／ No, I'm not.", C.green, FILL.green, 12), ...cap('疑問文は be動詞を文頭に')),
+  },
+  {
+    note: '❓どんなときに will、どんなときに be going to を使うのでしょう。→ その場で決めた意志や単純な予測は will。電話が鳴って「私が出るよ」は I will answer it. 前もって決めていた予定や、目に見える根拠のある予測は be going to。雲を見て「雨が降りそう」は It is going to rain soon. です。',
+    add: fresh(bx(10, 12, 145, 40, 'その場で決めた\nI will answer it.', C.blue, FILL.blue, 10), bx(165, 12, 145, 40, '前もっての予定・根拠\nI am going to visit Kyoto.', C.green, FILL.green, 9), lb(82, 70, 'will', 14, C.blue, 'middle', true), lb(238, 70, 'be going to', 14, C.green, 'middle', true), lb(160, 104, 'Look at those clouds! It is going to rain soon.', 10, C.ink, 'middle'), ...cap('その場 ＝ will、根拠 ＝ be going to', C.ink, 11)),
+  },
+  {
+    note: '並べかえでの見分け方です。選択肢に going と to の両方があれば be going to の文、なければ will の文です。まずこの1点を確かめてから、残りの語を組み立てると最短です。',
+    add: fresh(bx(15, 14, 290, 34, 'going と to がある → be going to', C.green, FILL.green, 13), bx(15, 58, 290, 34, 'ない → will の文', C.blue, FILL.blue, 13), lb(160, 114, '最初に この1点を確かめる', 12, C.ink, 'middle', true), ...cap('見分けてから 組み立てる')),
+  },
+  {
+    note: 'まとめです。will の文は〈主語 ＋ will ＋ 原形〉、疑問文は Will を文頭に。be going to は〈主語 ＋ be動詞 ＋ going to ＋ 原形〉で、疑問文は be動詞を文頭に出します。going to は離しません。',
+    add: sum3('will ＋ 原形／疑問 Will を文頭／否定 won\'t', 'be going to：am・is・are ＋ going to ＋ 原形', 'going と to は 1かたまり', '未来の並べかえができる'),
+  },
+], '並べかえ：未来表現');
+
+// ───────── new20_j2_eigo_03 並べかえ③：助動詞 ─────────
+const e203: DiagramFigure = show([
+  {
+    note: 'must、have to、should、may。4つとも、あとに動詞の原形を置く点は同じです。でも否定文の作り方や意味が違うので、並べかえでは違いを先につかんでおきます。',
+    add: [bx(15, 14, 290, 34, '主語 ＋ 助動詞 ＋ 動詞の原形', C.blue, FILL.blue, 14), bx(10, 62, 70, 34, 'must', C.red, FILL.red, 12), bx(88, 62, 70, 34, 'have to', C.main, FILL.warm, 11), bx(166, 62, 70, 34, 'should', C.green, FILL.green, 12), bx(244, 62, 66, 34, 'may', C.purple, FILL.purple, 12), ...cap('4つとも あとは原形')],
+  },
+  {
+    note: '❓must not と don\'t have to は、同じ意味でしょうか。→ まったく逆です。must not は「〜してはいけない」という禁止。don\'t have to は「〜する必要がない」という不必要です。You must not open the door.（開けてはいけない）、You don\'t have to hurry.（急がなくてよい）。',
+    add: fresh(bx(10, 20, 145, 44, 'must not\n禁止', C.red, FILL.red, 12), bx(165, 20, 145, 44, "don't have to\n不必要", C.blue, FILL.blue, 12), lb(82, 84, 'してはいけない', 11, C.red, 'middle', true), lb(238, 84, 'しなくてよい', 11, C.blue, 'middle', true), lb(160, 114, '日本語訳を見て 先に選ぶ', 12, C.ink, 'middle', true), ...cap('意味が正反対', C.red)),
+  },
+  {
+    note: '❓否定文の作り方が、なぜちがうのでしょう。→ must は助動詞のなかまなので、そのあとに not を付けます。have to は一般動詞のなかまなので、do／does を使って don\'t／doesn\'t have to とします。疑問文も同じで、Do you have to leave now? です。',
+    add: fresh(bx(10, 14, 145, 34, 'must：助動詞のなかま', C.red, FILL.red, 11), bx(165, 14, 145, 34, 'have to：一般動詞のなかま', C.blue, FILL.blue, 10), bx(10, 56, 145, 34, 'must not ＋ 原形', C.red, FILL.red, 12), bx(165, 56, 145, 34, "don't have to ＋ 原形", C.blue, FILL.blue, 11), bx(10, 98, 300, 34, 'Do you have to leave now?', C.blue, FILL.blue, 12), ...cap('have to は do／does を使う')),
+  },
+  {
+    note: '❓have to は、いつ has to になるのでしょう。→ 主語が3人称単数の he・she・it のときだけです。She has to get up early.（彼女は早く起きなければならない）。否定は She doesn\'t have to …、疑問は Does she have to …? です。',
+    add: fresh(bx(15, 14, 290, 34, 'I／you／we／they → have to', C.blue, FILL.blue, 12), bx(15, 58, 290, 34, 'he／she／it → has to', C.red, FILL.red, 12), lb(160, 112, 'She has to get up early.', 12, C.ink, 'middle', true), ...cap('主語が3人称単数のとき has to', C.red)),
+  },
+  {
+    note: '例題です。（ have / you / to / don\'t / go ）to school today. 日本語は「今日は学校に行く必要がない」なので、不必要の don\'t have to を選びます。You don\'t have to go to school today.',
+    add: fresh(bx(5, 14, 60, 32, 'You', C.blue, FILL.blue, 12), bx(70, 14, 70, 32, "don't", C.red, FILL.red, 12), bx(145, 14, 60, 32, 'have', C.red, FILL.red, 12), bx(210, 14, 40, 32, 'to', C.red, FILL.red, 12), bx(255, 14, 55, 32, 'go', C.green, FILL.green, 12), lb(160, 66, '主語 ＋ don\'t have to ＋ 原形', 12, C.ink, 'middle', true), lb(160, 90, '… to school today.', 12, C.gray), ...cap('「必要がない」→ don\'t have to')),
+  },
+  {
+    note: 'should は「〜したほうがよい」という助言です。You should see a doctor.（医者に診てもらったほうがよい）。否定は should not（shouldn\'t）で、You shouldn\'t eat too much.。疑問文は Should I call him now? のように Should を文頭に出します。',
+    add: fresh(bx(10, 12, 300, 30, 'You should see a doctor.（助言）', C.green, FILL.green, 12), bx(10, 48, 300, 30, "You shouldn't eat too much.", C.green, FILL.green, 12), bx(10, 84, 300, 30, 'Should I call him now?', C.green, FILL.green, 12), ...cap('助言の should')),
+  },
+  {
+    note: 'may は許可と推量の2つに使います。May I use your pen?（使ってもいいですか）は丁寧に許可を求める言い方で、答えは Yes, you may. ／ No, you may not. です。It may rain this afternoon. は「雨が降るかもしれない」という推量です。',
+    add: fresh(bx(10, 12, 300, 30, 'May I use your pen?（許可を求める）', C.purple, FILL.purple, 12), bx(10, 48, 300, 30, 'Yes, you may. ／ No, you may not.', C.purple, FILL.purple, 12), bx(10, 84, 300, 30, 'It may rain this afternoon.（推量）', C.blue, FILL.blue, 12), ...cap('may ＝ 許可・推量')),
+  },
+  {
+    note: '❓May で始まる疑問文は、どう組み立てるのでしょう。→ 「May I 〜?」の形がとても多いので、May と I がそろっていたら先に文頭へ置きます。（ I / may / open / the window ）? は May I open the window?（窓を開けてもいいですか）です。',
+    add: fresh(bx(5, 20, 60, 34, 'May', C.purple, FILL.purple, 13), bx(70, 20, 40, 34, 'I', C.blue, FILL.blue, 13), bx(115, 20, 70, 34, 'open', C.green, FILL.green, 13), bx(190, 20, 120, 34, 'the window?', C.gray, FILL.gray, 12), lb(160, 80, 'May ＋ I ＋ 原形 …?', 13, C.ink, 'middle', true), ...cap('May と I を先に文頭へ', C.purple)),
+  },
+  {
+    note: 'まとめです。must・should・may は〈助動詞 ＋ 原形〉。have to は一般動詞のなかまで do／does を使い、3人称単数は has to。must not は禁止、don\'t have to は不必要で、意味が正反対です。',
+    add: sum3('must／should／may ＋ 原形', 'have to は do／does ・ he／she は has to', 'must not ＝ 禁止 ／ don\'t have to ＝ 不必要', '助動詞の並べかえができる'),
+  },
+], '並べかえ：助動詞');
+
 export const XF_KEJ_FIGURES: Record<string, DiagramFigure> = {
   'xf_new20_j1_eigo_03': e03,
   'xf_new20_j1_eigo_04': e04,
@@ -490,6 +922,16 @@ export const XF_KEJ_FIGURES: Record<string, DiagramFigure> = {
   'xf_new20_j1_eigo_11': e11,
   'xf_new20_j1_eigo_12': e12,
   'xf_new20_j1_eigo_13': e13,
+  'xf_new20_j1_eigo_14': e14,
+  'xf_new20_j1_eigo_15': e15,
+  'xf_new20_j1_eigo_16': e16,
+  'xf_new20_j1_eigo_17': e17,
+  'xf_new20_j1_eigo_18': e18,
+  'xf_new20_j1_eigo_19': e19,
+  'xf_new20_j1_eigo_20': e20,
+  'xf_new20_j2_eigo_01': e201,
+  'xf_new20_j2_eigo_02': e202,
+  'xf_new20_j2_eigo_03': e203,
 };
 
 export const XF_KEJ_SECTIONS: Record<string, string> = {
@@ -504,4 +946,14 @@ export const XF_KEJ_SECTIONS: Record<string, string> = {
   'new20_j1_eigo_11#0': 'xf_new20_j1_eigo_11',
   'new20_j1_eigo_12#0': 'xf_new20_j1_eigo_12',
   'new20_j1_eigo_13#0': 'xf_new20_j1_eigo_13',
+  'new20_j1_eigo_14#0': 'xf_new20_j1_eigo_14',
+  'new20_j1_eigo_15#0': 'xf_new20_j1_eigo_15',
+  'new20_j1_eigo_16#0': 'xf_new20_j1_eigo_16',
+  'new20_j1_eigo_17#0': 'xf_new20_j1_eigo_17',
+  'new20_j1_eigo_18#0': 'xf_new20_j1_eigo_18',
+  'new20_j1_eigo_19#0': 'xf_new20_j1_eigo_19',
+  'new20_j1_eigo_20#0': 'xf_new20_j1_eigo_20',
+  'new20_j2_eigo_01#0': 'xf_new20_j2_eigo_01',
+  'new20_j2_eigo_02#0': 'xf_new20_j2_eigo_02',
+  'new20_j2_eigo_03#0': 'xf_new20_j2_eigo_03',
 };

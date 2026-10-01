@@ -361,7 +361,7 @@ would/couldよりも確信度が低く、「そうなる可能性もある」と
 
 ■ 紛らわしいパターン②：過去の習慣を表す if
 「もし〜だったら、いつも…した」という過去の習慣を表す文は、if節・主節ともにふつうの過去形を使うが、これは仮定法ではない。
-　If I had free time, I always read books.（過去のことを言う場合は文脈で判断）
+　If it rained, we always stayed home.（雨が降ると、いつも家にいた）
 　このような文は仮定法の「would」を使わないため、通常の過去形の条件文として区別する。
 
 ■ 識別のための質問リスト
@@ -1046,7 +1046,7 @@ Withoutの反対で、何かが「ある」という条件を仮定するとき�
 ■ my → his / her、me → him / her
 所有格・目的格も同じように、発言者の性別に合わせて変化する。
 　He said, "This is my bag." → He said that that was his bag.
-　She said, "Please help me." → She said (that) I should help her.（依頼の場合はaskで書きかえるのが一般的だが、代名詞の考え方は同じ）
+　She said, "Please help me." → She asked me to help her.（依頼のときは say ではなく ask を使い、〈ask＋人＋to＋動詞の原形〉で書きかえる。I → her のように人の言い方も変わる）
 
 ■ 主語がIで、伝える人自身の発言の場合
 自分自身の発言を間接話法にするときは、Iはそのままのこともある。
