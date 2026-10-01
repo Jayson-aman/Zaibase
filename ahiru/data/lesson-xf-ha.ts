@@ -83,3 +83,4 @@ const kikou = show([
      bx(10, 80, 140, 54, '瀬戸内\n山地が風をさえぎる\n→ 少雨', C.main, FILL.warm, 11), bx(170, 80, 140, 54, '南西諸島・北海道\n亜熱帯／梅雨なし', C.purple, FILL.purple, 11)],
     '気候 ＝ 季節風 × 海 × 山', MAIN),
 ], '日本の気候は季節風と山で決まる');
+export const _T = { kikou }; // TEMP
