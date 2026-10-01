@@ -3263,9 +3263,9 @@ We should think about the environment. We can start by using our own bags.
 「あなたの好きな季節とその理由を、because を使って20語以上で書きなさい」
 　条件①好きな季節を書く　条件②理由を書く　条件③because を使う　条件④20語以上
 
-【模範解答（21語）】
+【模範解答（20語）】
 I like winter the best. I like it because I can go skiing with my family every winter in Nagano.
-語数の内訳：第1文 I / like / winter / the / best ＝5語。第2文 I / like / it / because / I / can / go / skiing / with / my / family / every / winter / in / Nagano ＝16語。合計21語。
+語数の内訳：第1文 I / like / winter / the / best ＝5語。第2文 I / like / it / because / I / can / go / skiing / with / my / family / every / winter / in / Nagano ＝15語。合計20語。
 文法の確認：go skiing（スキーに行く）は go ＋ 〜ing の形。because のあとは主語＋動詞（I can go）がそろっている。
 
 ■ 条件のチェックリストを作る
@@ -3304,7 +3304,7 @@ I like winter the best. I like it because I can go skiing with my family every w
         trapExplanation:
           'because を使ったことで満足してしまい、because から始まる文を独立させている。また語数が9語しかなく、条件を満たしていない。',
         correctAnswer:
-          'I like winter the best. I like it because I can go skiing with my family every winter in Nagano.（21語）',
+          'I like winter the best. I like it because I can go skiing with my family every winter in Nagano.（20語）',
         correctExplanation:
           'because は接続詞なので、原則として二つの文をつなぐ形で使う。Because I can go skiing. だけでは主節がなく、文として不完全である。また語数条件も満たさない。条件は「指定語句」と「語数」の両方を同時に満たす必要があるので、書いたあとに条件を一つずつ確認する。',
       },
@@ -3981,7 +3981,7 @@ Last year, I 〜.／When I was ten, I 〜.（私が10歳のとき）
 I have 〜.（経験を表す現在完了）
 
 ■ 足す前と足したあと
-足す前：I like winter the best. I can enjoy skiing.（10語）
+足す前：I like winter the best. I can enjoy skiing.（9語）
 足したあと：I like winter the best. In winter, I can enjoy skiing with my family. Last year, we went to Nagano and had a great time.（25語）
 語数が2.5倍になり、内容も具体的になった。
 
@@ -3989,7 +3989,7 @@ I have 〜.（経験を表す現在完了）
 I like winter the best. In winter, I can enjoy skiing with my family. Last year, we went to Nagano and had a great time.
 
 【語数の内訳】
-第1文 5語／第2文 10語／第3文 10語　合計25語
+第1文 5語／第2文 9語／第3文 11語　合計25語
 
 【文法の検算】
 ・I like winter the best.：最上級で「いちばん好き」を表す言い方。○
