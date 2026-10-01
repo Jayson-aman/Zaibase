@@ -1,7 +1,7 @@
 // 中学受験 英語の単元に、動く図解スライドを1つずつ（TAG=cea）。
 // 「なぜ？」の連鎖で7枚以上。上半分に図、下の帯（band）にそのスライドのひとこと。
 import type { DiagramFigure, DiagramElement } from './figures';
-import { C, FILL, bx, lb, ar, ln, ci, show, flow, stack, band, fresh, cover } from './diagram-kit';
+import { C, FILL, bx, lb, ar, ln, ci, show, flow, stack, band, fresh } from './diagram-kit';
 
 type E = DiagramElement;
 const cap = (t: string, color: string = C.ink, size = 12) => band(150, lb(160, 190, t, size, color, 'middle', true));
