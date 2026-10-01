@@ -1043,7 +1043,7 @@ const s109: DiagramFigure = show([
   },
   {
     note: '❓作り方の規則は？ → 一人称・二人称は所有格に付けます（my+self、your+self、our+selves）。三人称は目的格に付けます（him+self、them+selves、her+self）。だから hisself や theirselves は誤りで、himself・themselves が正しいのです。',
-    add: fresh(...row([['my ＋ self', 'b'], ['your ＋ self', 'b'], ['our ＋ selves', 'b']], 14, { size: 12, h: 30, x0: 6, x1: 314, gap: 8 }), at(160, 58, '1・2人称は 所有格に', 11, C.blue, true), ...row([['him ＋ self', 'g'], ['them ＋ selves', 'g']], 76, { size: 12, h: 30, x0: 20, x1: 300, gap: 12 }), at(160, 120, '3人称は 目的格に', 11, C.green, true), ngb(100, 128, 120, '✗ hisself / theirselves', 10), ...cap('3人称だけ 目的格から作る', C.green)),
+    add: fresh(...row([['my ＋ self', 'b'], ['your ＋ self', 'b'], ['our ＋ selves', 'b']], 8, { size: 12, h: 28, x0: 6, x1: 314, gap: 8 }), at(160, 48, '1・2人称は 所有格に', 11, C.blue, true), ...row([['him ＋ self', 'g'], ['them ＋ selves', 'g']], 62, { size: 12, h: 28, x0: 20, x1: 300, gap: 12 }), at(160, 102, '3人称は 目的格に', 11, C.green, true), ngb(80, 112, 160, '✗ hisself / theirselves', 11), ...cap('3人称だけ 目的格から作る', C.green)),
   },
   {
     note: '使い方は二つあります。①動詞のうしろで、主語と同じ人をさす（She hurt herself.＝彼女はけがをした）。②意味を強める（I made this cake myself.＝このケーキは私が自分で作った）。強めに使うときは、取りのぞいても文が成り立ちます。',
@@ -1143,7 +1143,7 @@ const s115: DiagramFigure = show([
   },
   {
     note: '見直しは四つの手順です。①名詞は数えられるか、②単数か複数か、③冠詞は正しいか、④代名詞の形は位置に合っているか。この順番に点検します。',
-    add: fresh(...steps([['① 名詞は 数えられる？', 'b'], ['② 単数？ 複数？', 'g'], ['③ 冠詞は 正しい？', 'm'], ['④ 代名詞の形は 位置に合う？', 'p']], { y0: 6, h: 28, gap: 12, size: 12 }), ...cap('この順で 点検する', C.green)),
+    add: fresh(...steps([['① 名詞は 数えられる？', 'b'], ['② 単数？ 複数？', 'g'], ['③ 冠詞は 正しい？', 'm'], ['④ 代名詞の形は 位置に合う？', 'p']], { y0: 6, h: 26, gap: 10, size: 12 }), ...cap('この順で 点検する', C.green)),
   },
   {
     note: '❓なぜ名詞から決めるのでしょう。→ 名詞が決まらないと、冠詞も代名詞も決まらないからです。①homework・information・advice・furniture・money・water・bread は不可算なので、a も -s も many も付けられません。many homeworks → a lot of homework。',
@@ -1199,7 +1199,7 @@ const s117: DiagramFigure = show([
   },
   {
     note: '③と④の見分けは「y の一つ前の文字」だけです。study の t は子音字なので y を i に変えて studies。play の a は母音字なので、そのまま plays。carry→carries、fly→flies、cry→cries、try→tries。enjoy→enjoys、stay→stays、buy→buys。',
-    add: fresh(...row([['study', 'r', 't は子音字'], ['play', 'g', 'a は母音字']], 14, { size: 17, h: 38, x0: 40, x1: 280, gap: 30 }), ar(95, 66, 95, 90, C.gray), ar(225, 66, 225, 90, C.gray), ...row([['studies', 'r'], ['plays', 'g']], 94, { size: 17, h: 38, x0: 40, x1: 280, gap: 30 }), ...cap('y の一つ前を 見る', C.main)),
+    add: fresh(...row([['study', 'r', 't は子音字'], ['play', 'g', 'a は母音字']], 14, { size: 17, h: 38, x0: 40, x1: 280, gap: 30 }), ar(95, 72, 95, 90, C.gray), ar(225, 72, 225, 90, C.gray), ...row([['studies', 'r'], ['plays', 'g']], 94, { size: 17, h: 38, x0: 40, x1: 280, gap: 30 }), ...cap('y の一つ前を 見る', C.main)),
   },
   {
     note: 'have だけは特別な形 has になります。haves とはなりません。また be動詞は am／is／are と、はじめから形が決まっています。',
@@ -1255,7 +1255,7 @@ export const XF_CEC_FIGURES: Record<string, DiagramFigure> = {
 export const XF_CEC_SECTIONS: Record<string, string> = {
   'eigo_s068#0': 'xf_eigo_s068',
   'eigo_s070#0': 'xf_eigo_s070',
-  'eigo_s071#0': 'xf_eigo_s071',
+  'eigo_s071#2': 'xf_eigo_s071',
   'eigo_s072#0': 'xf_eigo_s072',
   'eigo_s076#0': 'xf_eigo_s076',
   'eigo_s078#0': 'xf_eigo_s078',
@@ -1276,10 +1276,10 @@ export const XF_CEC_SECTIONS: Record<string, string> = {
   'eigo_s101#0': 'xf_eigo_s101',
   'eigo_s102#0': 'xf_eigo_s102',
   'eigo_s104#0': 'xf_eigo_s104',
-  'eigo_s106#0': 'xf_eigo_s106',
+  'eigo_s106#2': 'xf_eigo_s106',
   'eigo_s107#0': 'xf_eigo_s107',
   'eigo_s109#0': 'xf_eigo_s109',
-  'eigo_s113#0': 'xf_eigo_s113',
+  'eigo_s113#2': 'xf_eigo_s113',
   'eigo_s114#0': 'xf_eigo_s114',
   'eigo_s115#0': 'xf_eigo_s115',
   'eigo_s117#0': 'xf_eigo_s117',
