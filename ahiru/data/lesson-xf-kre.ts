@@ -618,8 +618,8 @@ const f_s283 = show([
 ], 'いろいろな水溶液の電気分解');
 
 // ── 金属のイオンへのなりやすさ②：実験から順位を決める ──
-// SEC koko_rika_s285 0
 const T285 = [['', 'Aの液', 'Bの液', 'Cの液'], ['金属A', '×', '○', '×'], ['金属B', '×', '×', '×'], ['金属C', '○', '○', '×']];
+// SEC koko_rika_s285 0
 const f_s285 = show([
   S('金属A・B・Cと、それぞれのイオンの水溶液を組み合わせた実験です。○は反応あり、×は反応なし。9通りの○×から、イオンへのなりやすさの順位を決めます。',
     tbl(10, 8, [74, 72, 72, 72], 30, T285, BLUE, 12),
@@ -932,6 +932,7 @@ export const XF_KRE_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_rika_s275': f_s275,
   'xf_koko_rika_s277': f_s277,
   'xf_koko_rika_s283': f_s283,
+  'xf_koko_rika_s285': f_s285,
   'xf_koko_rika_s286': f_s286,
   'xf_koko_rika_s287': f_s287,
   'xf_koko_rika_s290': f_s290,
@@ -964,6 +965,7 @@ export const XF_KRE_SECTIONS: Record<string, string> = {
   'koko_rika_s275#0': 'xf_koko_rika_s275',
   'koko_rika_s277#0': 'xf_koko_rika_s277',
   'koko_rika_s283#0': 'xf_koko_rika_s283',
+  'koko_rika_s285#0': 'xf_koko_rika_s285',
   'koko_rika_s286#0': 'xf_koko_rika_s286',
   'koko_rika_s287#0': 'xf_koko_rika_s287',
   'koko_rika_s290#0': 'xf_koko_rika_s290',

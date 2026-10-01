@@ -763,7 +763,7 @@ const pondFish = (marked: number[], n: number, cx: number, cy: number, r: number
 const s373: DiagramFigure = show([
   {
     note: '問題です。ある池の魚の数を調べます。池の魚をすべて数えるのは無理なので、標本調査を使います。魚を100匹つかまえて印をつけ、池にもどします。数日後、80匹をつかまえたところ、印のついた魚が5匹いました。池の魚はおよそ何匹でしょう。',
-    add: [ci(90, 76, 66, undefined, C.blue, FILL.blue), ...pondFish([0, 3, 7, 11, 17, 24, 29], 30, 90, 76, 66), lb(90, 12, '池（N匹）', 12, C.blue, 'middle', true), ...side(['①100匹に印', C.red, 50], ['②80匹とる', C.ink, 80], ['③印は5匹', C.red, 110]), ...cap('池の魚はおよそ何匹？')],
+    add: [ci(90, 84, 58, undefined, C.blue, FILL.blue), ...pondFish([0, 3, 7, 11, 17, 24, 29], 30, 90, 84, 58), lb(90, 14, '池（N匹）', 12, C.blue, 'middle', true), ...side(['①100匹に印', C.red, 50], ['②80匹とる', C.ink, 80], ['③印は5匹', C.red, 110]), ...cap('池の魚はおよそ何匹？')],
   },
   {
     note: '❓どう考えればよいでしょう。→ 標本調査の基本は、「標本での割合＝母集団での割合」とみなすことです。つかまえた80匹の中の印の割合は、池全体の印の割合に近いはずだと考えます。',
@@ -771,11 +771,11 @@ const s373: DiagramFigure = show([
   },
   {
     note: 'まず標本の割合です。つかまえた80匹のうち、印のついた魚が5匹。印の割合は5/80です。',
-    add: fresh(ci(90, 76, 56, undefined, C.green, FILL.green), ...pondFish([3, 17, 33, 52, 70], 80, 90, 76, 56).slice(0, 80), lb(90, 12, 'つかまえた80匹', 12, C.green, 'middle', true), ...side(['印の割合', C.red, 60], ['5/80', C.red, 86]), ...cap('標本：5 ÷ 80', C.green)),
+    add: fresh(ci(90, 84, 56, undefined, C.green, FILL.green), ...pondFish([3, 17, 33, 52, 70], 80, 90, 84, 56), lb(90, 14, 'つかまえた80匹', 12, C.green, 'middle', true), ...side(['印の割合', C.red, 60], ['5/80', C.red, 86]), ...cap('標本：5 ÷ 80', C.green)),
   },
   {
     note: '次に池全体の印の割合です。池にはN匹いて、その中の印のついた魚は、最初につけた100匹です。だから池全体の印の割合は100/Nです。',
-    add: fresh(ci(90, 76, 66, undefined, C.blue, FILL.blue), ...pondFish([0, 3, 7, 11, 17, 24, 29], 30, 90, 76, 66), lb(90, 12, '池全体 N匹', 12, C.blue, 'middle', true), ...side(['印は100匹', C.red, 60], ['割合は', C.ink, 86], ['100/N', C.red, 110]), ...cap('母集団：100 ÷ N', C.blue)),
+    add: fresh(ci(90, 84, 58, undefined, C.blue, FILL.blue), ...pondFish([0, 3, 7, 11, 17, 24, 29], 30, 90, 84, 58), lb(90, 14, '池全体 N匹', 12, C.blue, 'middle', true), ...side(['印は100匹', C.red, 60], ['割合は', C.ink, 86], ['100/N', C.red, 110]), ...cap('母集団：100 ÷ N', C.blue)),
   },
   {
     note: '2つの割合が等しいとみなして、式を立てます。100/N＝5/80。たがいちがいにかけて5N＝100×80＝8000、N＝1600。池の魚はおよそ1600匹です。',
@@ -797,9 +797,9 @@ const s373: DiagramFigure = show([
 
 // ───────── koko_math_s375 割合と実数を区別する ─────────
 const bar = (x: number, h: number, color: string, fill: string, name: string, val: string) => [
-  bx(x, 120 - h, 34, h, undefined, color, fill), lb(x + 17, 120 - h - 8, val, 10, color, 'middle', true), lb(x + 17, 133, name, 10, C.ink, 'middle'),
+  bx(x, 114 - h, 34, h, undefined, color, fill), lb(x + 17, 114 - h - 8, val, 10, color, 'middle', true), lb(x + 17, 126, name, 10, C.ink, 'middle'),
 ];
-const bars4 = () => [...bar(28, 100, C.blue, FILL.blue, 'A昨年', '1000'), ...bar(72, 80, C.blue, FILL.blue, 'A今年', '800'), ...bar(176, 20, C.green, FILL.green, 'B昨年', '200'), ...bar(220, 19, C.green, FILL.green, 'B今年', '190'), ln(14, 120, 306, 120, C.gray)];
+const bars4 = () => [...bar(28, 80, C.blue, FILL.blue, 'A昨年', '1000'), ...bar(72, 64, C.blue, FILL.blue, 'A今年', '800'), ...bar(176, 16, C.green, FILL.green, 'B昨年', '200'), ...bar(220, 15, C.green, FILL.green, 'B今年', '190'), ln(14, 114, 306, 114, C.gray)];
 const s375: DiagramFigure = show([
   {
     note: '問題です。交通事故の件数が、A市で昨年1000件から今年800件に、B市で昨年200件から今年190件に変わりました。この資料から、いろいろなことが読み取れます。',
@@ -857,11 +857,11 @@ const s377: DiagramFigure = show([
   },
   {
     note: '❓本当に面積が半分でしょうか。検算します。△OAMは、OC＝4(Cは直線ABとy軸の交点(0,4))を底辺とみて、高さは「Mのx座標−Aのx座標」＝1−(−2)＝3。面積は(1/2)×4×3＝6。12の半分になっています。',
-    add: [...cPt(m377, 0, 4, 'C(0,4)', C.main, 6, -4), pg([[m377.X(0), m377.Y(0)], [m377.X(-2), m377.Y(2)], [m377.X(1), m377.Y(5)]], C.green, 'rgba(22,163,74,0.2)'), ...side(['△OAM', C.green, 40], ['(1/2)×4×3', C.ink, 70], ['＝6 ✓', C.green, 96], ['12の半分', C.green, 122]), ...cap('検算：6 ＝ 12 ÷ 2', C.green)],
+    add: [...cPt(m377, 0, 4, 'C(0,4)', C.main, -6, -2), pg([[m377.X(0), m377.Y(0)], [m377.X(-2), m377.Y(2)], [m377.X(1), m377.Y(5)]], C.green, 'rgba(22,163,74,0.2)'), ...side(['△OAM', C.green, 40], ['(1/2)×4×3', C.ink, 70], ['＝6 ✓', C.green, 96], ['12の半分', C.green, 122]), ...cap('検算：6 ＝ 12 ÷ 2', C.green)],
   },
   {
     note: '❓Mを、放物線上でx座標が1の点(1,1/2)としてよいでしょうか。→ いけません。中点は線分AB上の点で、両はしの座標の平均で求めます。放物線上の点は、ABの中点ではありません。',
-    add: fresh(...base377(), ...cPt(m377, 1, 0.5, '(1,1/2)', C.red, 6, 6), ...cPt(m377, 1, 5, 'M', C.green, 6, -2), ...side(['放物線上の点は', C.red, 40], ['中点ではない', C.red, 62], ['中点は AB 上', C.green, 96]), ...cap('中点は線分の上、座標の平均', C.red)),
+    add: fresh(...base377(), ...cPt(m377, 1, 0.5, '(1,1/2)', C.red, 6, 14), ...cPt(m377, 1, 5, 'M', C.green, 6, -2), ...side(['放物線上の点は', C.red, 40], ['中点ではない', C.red, 62], ['中点は AB 上', C.green, 96]), ...cap('中点は線分の上、座標の平均', C.red)),
   },
   {
     note: '次に、y軸上の点P(0,p)で△PAB＝△OABとなる点を求めます。線分PCを底辺と見ます(C(0,4))。高さはAとBのx座標の差で6。面積は(1/2)×|p−4|×6＝3|p−4|です。',
@@ -869,7 +869,7 @@ const s377: DiagramFigure = show([
   },
   {
     note: '面積が12になるので、3|p−4|＝12、|p−4|＝4。よってp＝8またはp＝0です。p＝0は原点Oそのものなので、「原点と異なる点」ならP(0,8)になります。OとPは、直線ABをはさんで反対側にあります。',
-    add: fresh(...base377(), ...cPt(m377, 0, 8, 'P(0,8)', C.red, 8, 0), cLine(m377, 0, 8, -2, 2, C.red, true, 1.6), cLine(m377, 0, 8, 4, 8, C.red, true, 1.6), ...side(['|p−4|＝4', C.ink, 40], ['p＝8 か p＝0', C.ink, 62], ['0 は O と同じ', C.gray, 96], ['答え P(0,8)', C.red, 122]), ...cap('P(0,8)：OとAB反対側', C.red)),
+    add: fresh(...base377(), ...cPt(m377, 0, 8, 'P(0,8)', C.red, -6, 0), cLine(m377, 0, 8, -2, 2, C.red, true, 1.6), cLine(m377, 0, 8, 4, 8, C.red, true, 1.6), ...side(['|p−4|＝4', C.ink, 40], ['p＝8 か p＝0', C.ink, 62], ['0 は O と同じ', C.gray, 96], ['答え P(0,8)', C.red, 122]), ...cap('P(0,8)：OとAB反対側', C.red)),
   },
   {
     note: 'まとめです。面積の2等分は「中線」、頂点と向かいあう辺の中点を通る直線。中点は座標の平均。同じ面積になる点は、底辺を決めて高さをそろえて探します。',
