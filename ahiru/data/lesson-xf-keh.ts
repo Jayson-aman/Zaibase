@@ -584,7 +584,7 @@ XF['xf_koko_eigo_s365'] = show([
     [hd('them ＝ ウニ'), bx(8, 30, 304, 32, 'With no otters to eat them, ...', C.gray, FILL.gray, 13), lb(160, 80, 'them ＝ sea urchins', 14, C.red, 'middle', true), bx(8, 98, 304, 44, '「なぜウニが増えた？」の答えは直前の段\n→ ウニを食べるラッコが殺されたから', C.green, FILL.green, 12)],
     '「なぜ」と聞かれたら、連鎖の一つ前', RED),
   FS('最終段落です。One animal can hold a whole system together. 一つの動物が生態系全体を支えうる。アーチの頂点の石（要石）が他の石を支えているのにたとえ、そのような動物を keystone species と呼びます。after ～ は時間の「あと」ではなく「～にちなんで」。',
-    [hd('keystone species ＝ 要石'), bx(40, 120, 40, 22, '', C.gray, FILL.gray), bx(40, 96, 40, 22, '', C.gray, FILL.gray), bx(56, 74, 40, 22, '', C.gray, FILL.gray), bx(90, 56, 40, 22, '', C.gray, FILL.gray), bx(240, 120, 40, 22, '', C.gray, FILL.gray), bx(240, 96, 40, 22, '', C.gray, FILL.gray), bx(224, 74, 40, 22, '', C.gray, FILL.gray), bx(190, 56, 40, 22, '', C.gray, FILL.gray), bx(130, 44, 60, 28, '要石', C.red, FILL.red, 13), lb(160, 100, 'アーチ', 12, C.gray), lb(160, 154, '要石を一つ抜くと、全体がくずれる', 12, C.red, 'middle', true)],
+    [hd('keystone species ＝ 要石'), bx(40, 120, 40, 22, '', C.gray, FILL.gray), bx(40, 96, 40, 22, '', C.gray, FILL.gray), bx(56, 74, 40, 22, '', C.gray, FILL.gray), bx(90, 56, 40, 22, '', C.gray, FILL.gray), bx(240, 120, 40, 22, '', C.gray, FILL.gray), bx(240, 96, 40, 22, '', C.gray, FILL.gray), bx(224, 74, 40, 22, '', C.gray, FILL.gray), bx(190, 56, 40, 22, '', C.gray, FILL.gray), bx(130, 44, 60, 28, '要石', C.red, FILL.red, 13), lb(160, 100, 'アーチ', 12, C.gray), lb(160, 126, '要石を抜くと、全体がくずれる', 12, C.red, 'middle', true)],
     '一つの動物が、生態系全体を支える', MAIN),
 ], '原因と結果の連鎖を矢印でつなぐ');
 
@@ -675,7 +675,7 @@ XF['xf_koko_eigo_s378'] = show([
 // ── s383 会話文⑧：長い会話文の総合演習 ──
 XF['xf_koko_eigo_s383'] = show([
   FS('長い会話文でも、設問は三つの型しかありません。内容一致、空所補充、下線部の説明。型ごとに答えのある場所が決まっているので、全文を読み直す必要はありません。',
-    [hd('設問の三つの型'), ...grid([['① 内容一致 ── 選択肢を本文と一つずつ照合', BLUE], ['② 空所補充 ── 空所の直後が一番の手がかり', GREEN], ['③ 下線部 ── 指示語は直前の文の中を探す', RED]], 30, 34, 12, 1), lb(160, 150, '型を決めて、探す場所を決める', 13, C.ink, 'middle', true)],
+    [hd('設問の三つの型'), ...grid([['① 内容一致 ── 選択肢を本文と一つずつ照合', BLUE], ['② 空所補充 ── 空所の直後が一番の手がかり', GREEN], ['③ 下線部 ── 指示語は直前の文の中を探す', RED]], 30, 34, 12, 1)],
     '設問の型で、探す場所が決まる', BLUE),
   FS('まず設問を先に読みます。人名・数字・場所のキーワードに印を付けてから本文に入ると、そのキーワードが出た行で自然に手が止まります。',
     qa('設問を先に読むのはなぜ？', '探すものが決まっていれば、\nキーワード（人名・数字・場所）が\n出た行で自然に手が止まる。\n全文を同じ重さで読まなくてすむ。', BLUE, 13),
@@ -743,13 +743,13 @@ XF['xf_koko_eigo_s386'] = show([
     [hd('we と you'), bx(8, 30, 148, 56, "Why don't we go?\n＝ いっしょに行こう\n（誘い）", C.green, FILL.green, 12), bx(164, 30, 148, 56, "Why don't you go?\n＝ 君が行ったら？\n（提案）", C.blue, FILL.blue, 12), lb(160, 108, '主語一語で意味が変わる', 13, C.red, 'middle', true), lb(160, 128, "Shall I help you?（手伝いましょうか）は申し出", 11, C.gray)],
     'we ＝ いっしょに ／ you ＝ 相手に提案', MAIN),
   FS('誘いへの返事は三つに分かれます。承諾は Sure. / Sounds good. / That\'s a good idea. / I\'d love to. / Yes, let\'s.。保留は Well, let me check my schedule. / It depends on the weather.。断りは I\'m sorry, but I can\'t. ＋理由、または I\'d like to, but ～ です。',
-    [hd('誘いへの返事'), ...grid([['承諾 ： Sure. / Sounds good. / I\'d love to. / Yes, let\'s.', GREEN], ['保留 ： Well, let me check my schedule.', GRAY], ['断り ： I\'d like to, but ～ （＋ 理由）', RED]], 30, 34, 12, 1)],
+    [hd('誘いへの返事'), ...grid([['承諾 ： Sure. / Sounds good. / I\'d love to.', GREEN], ['保留 ： Well, let me check my schedule.', GRAY], ['断り ： I\'d like to, but ～ （＋ 理由）', RED]], 30, 34, 12, 1)],
     '承諾・保留・断り', GREEN),
   FS('では、なぜ断るときは「わび＋理由」なのでしょうか。理由がないと会話が続かないからです。入試では理由を添えた選択肢が正解になりやすいです。断られたあとはたいてい代案が出ます。',
     qa('断りに理由を添えるのはなぜ？', '理由がないと、会話が続かないから。\n断ると、相手は代案を出してくる。\n（I\'d like to, but I have club activities.）\n入試では理由つきが正解になりやすい。', RED, 12),
     '断り ＝ わび ＋ 理由', PURPLE),
   FS('会話の流れの例です。A: How about going to the movies on Saturday? B: I\'d like to, but I have club activities on Saturday. A: Then how about Sunday? B: Sunday is fine. 「結局いつになったか」は、最後に Yes と言われた案（日曜）です。',
-    [hd('代案が出る流れ'), bx(8, 24, 304, 30, 'A: How about going to the movies\non Saturday?', C.blue, FILL.blue, 11), bx(8, 58, 304, 30, "B: I'd like to, but I have club\nactivities on Saturday.", C.red, FILL.red, 11), bx(8, 92, 304, 24, 'A: Then how about Sunday?', C.blue, FILL.blue, 11), bx(8, 120, 304, 24, 'B: Sunday is fine.', C.green, FILL.green, 11), lb(160, 154, '決まったのは日曜日', 12, C.green, 'middle', true)],
+    [hd('代案が出る流れ'), bx(8, 30, 304, 30, 'A: How about going to the movies\non Saturday?', C.blue, FILL.blue, 11), bx(8, 64, 304, 30, "B: I'd like to, but I have club\nactivities on Saturday.", C.red, FILL.red, 11), bx(8, 98, 304, 24, 'A: Then how about Sunday?', C.blue, FILL.blue, 11), bx(8, 126, 304, 24, 'B: Sunday is fine.', C.green, FILL.green, 11)],
     '最後に Yes と言われた案が、答え', GREEN),
   FS('まとめです。①誘いは五つの形（原形か -ing）②we か you かで誘いか提案か ③断りは理由つき ④会話の最後の承諾の行を探す。Sounds good. の主語は省略された It で、sound のあとは形容詞を直接置きます（It sounds like good. は誤り）。',
     [hd('まとめ'), ...grid([['五つの形\n原形 / -ing', BLUE], ['we と you で\n意味が変わる', GREEN], ['断りは\nわび＋理由', RED], ['最後の承諾の\n行が答え', MAIN]], 28, 50, 12)],
@@ -759,10 +759,10 @@ XF['xf_koko_eigo_s386'] = show([
 // ── s387 定型表現④：聞き返し・確認・あいづち ──
 XF['xf_koko_eigo_s387'] = show([
   FS('相手の言葉が聞き取れなかったとき、What? だけだと乱暴に聞こえます。Pardon? / I beg your pardon? / Excuse me?（語尾を上げる）／Could you say that again, please? / Could you speak more slowly, please? が決まり文句です。',
-    [hd('聞き取れなかったとき'), ...grid([['Pardon?', GREEN], ['Excuse me?（語尾を上げる）', GREEN], ['Could you say that again?', GREEN], ['Could you speak more slowly?', GREEN]], 28, 30, 11), bx(60, 128, 200, 24, '✕ What? だけ ── 乱暴に聞こえる', C.red, FILL.red, 12)],
+    [hd('聞き取れなかったとき'), ...grid([['Pardon?', GREEN], ['Excuse me?（語尾を上げる）', GREEN], ['Could you say that again?', GREEN], ['Could you speak more slowly?', GREEN]], 34, 30, 11), bx(60, 128, 200, 24, '✕ What? だけ ── 乱暴に聞こえる', C.red, FILL.red, 12)],
     '決まり文句をそのまま覚える', GREEN),
   FS('意味がわからないときと、確認するとき。What do you mean?（どういう意味ですか）／How do you say 「もったいない」 in English?／You mean the blue one?（青い方ということですか）／Let me make sure. You said the meeting starts at ten, right?',
-    [hd('意味をたずねる・確認する'), ...grid([['What do you mean?', BLUE], ['What does that word mean?', BLUE], ['You mean the blue one?', GREEN], ['Let me make sure.', GREEN]], 28, 32, 11), lb(160, 134, '確認の行に数字や名前が再登場する', 12, C.red, 'middle', true)],
+    [hd('意味をたずねる・確認する'), ...grid([['What do you mean?', BLUE], ['What does that word mean?', BLUE], ['You mean the blue one?', GREEN], ['Let me make sure.', GREEN]], 34, 32, 11), lb(160, 134, '確認の行に数字や名前が再登場する', 12, C.red, 'middle', true)],
     '確認の行は、答えが集まる場所', BLUE),
   FS('では、なぜ聞き返しの行に線を引くのでしょうか。聞き返しが入ると、その直前の内容がもう一度言い直されるからです。聞き取れなかった側の助けであると同時に、解答者にとっては答えを二度確認できる場所です。',
     qa('聞き返しの行に線を引くのは？', '聞き返しの後には、直前の内容が\nもう一度言い直される。\n数字や名前が二度出るので、\n答えを確認できる場所になる。', BLUE, 13),
@@ -914,7 +914,7 @@ XF['xf_koko_eigo_s396'] = show([
     qa('Yes / No が日本語と逆になるのは？', '英語は答えの内容が肯定なら Yes、\n否定なら No。質問の形は関係しない。\n日本語は「質問に同意するか」で\n「はい・いいえ」を言うので、ずれる。', MAIN, 12),
     'Yes / No のあとの動詞まで聞く', PURPLE),
   FS('条件と譲歩は、結論をひっくり返す語です。If it rains tomorrow, we will not go.／Unless it rains, we will go.（雨でないかぎり行く。unless ＝ if ～ not）／Although it was raining, we went out.／Even if it rains, we will go.。聞こえたら主節まで必ず聞きます。',
-    [hd('条件と譲歩'), bx(8, 26, 304, 30, 'If it rains tomorrow, we will not go.\n（雨なら行かない）', C.red, FILL.red, 11), bx(8, 60, 304, 30, 'Unless it rains, we will go.\n（雨でないなら行く）', C.green, FILL.green, 11), bx(8, 94, 304, 30, 'Although it was raining, we went out.\n（雨だったけれど出かけた）', C.blue, FILL.blue, 11), bx(8, 128, 304, 30, 'Even if it rains, we will go.\n（たとえ雨でも行く）', C.blue, FILL.blue, 11)],
+    [hd('条件と譲歩'), bx(8, 26, 304, 30, 'If it rains tomorrow, we will not go.\n（雨なら行かない）', C.red, FILL.red, 11), bx(8, 58, 304, 30, 'Unless it rains, we will go.\n（雨でないなら行く）', C.green, FILL.green, 11), bx(8, 90, 304, 30, 'Although it was raining, we went out.\n（雨だったけれど出かけた）', C.blue, FILL.blue, 11), bx(8, 122, 304, 30, 'Even if it rains, we will go.\n（たとえ雨でも行く）', C.blue, FILL.blue, 11)],
     'if / unless / although の後ろに結論が来る', RED),
   FS('not A but B と not only A but also B は意味がまったく違います。I want not tea but coffee.（紅茶ではなくコーヒー）は A を否定して B を選ぶ。She can speak not only English but also French.（英語だけでなくフランス語も）は A も B も両方です。',
     [hd('not A but B / not only A but also B'), bx(8, 28, 148, 56, 'not tea but coffee\n紅茶ではなく\nコーヒー', C.red, FILL.red, 11), bx(164, 28, 148, 56, 'not only English\nbut also French\n英語もフランス語も', C.green, FILL.green, 11), lb(82, 100, 'A を否定して B', 12, C.red), lb(238, 100, 'A も B も両方', 12, C.green), lb(160, 126, 'まったく意味がちがう', 13, C.ink, 'middle', true)],
