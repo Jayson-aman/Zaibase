@@ -1709,7 +1709,7 @@ Yes／No で答えないのは、これらの質問が「はい・いいえ」�
       'supermarket（スーパー）、bookstore（書店）、restaurant（レストラン）。',
       'zoo（動物園）、aquarium（水族館）、stadium（競技場）。',
       '「〜へ行く」は go to ~。「〜で」は at ~。',
-      'go to bed、go home には to や at をつけない使い方がある。',
+      'go to bed（寝る）には to がつく。go home（家に帰る）は、home が「家へ」の意味を含むので to をつけない。',
     ],
     sections: [
       {

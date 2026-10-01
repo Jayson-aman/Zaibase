@@ -698,7 +698,7 @@ Yuki has a small brown rabbit. She got it two years ago. Its name is Coco. Coco 
           'この文章の中心はウサギの Coco なので、it といえばウサギだろうと決めつけてしまう。また前の文で it がウサギを指していたことも、思いこみを強める。',
         correctAnswer: 'the cage（ケージ・かご）',
         correctExplanation:
-          '入れかえて確かめる。「Coco becomes dirty in a week（コロは1週間でよごれる）」よりも「the cage becomes dirty in a week（ケージは1週間でよごれる）」のほうが、そうじをする理由として自然である。代名詞は直前の名詞を指すのが原則で、この文でも直前の名詞は the cage である。必ず入れかえて意味を確かめること。',
+          '入れかえて確かめる。「Coco becomes dirty in a week（ココは1週間でよごれる）」よりも「the cage becomes dirty in a week（ケージは1週間でよごれる）」のほうが、そうじをする理由として自然である。代名詞は直前の名詞を指すのが原則で、この文でも直前の名詞は the cage である。必ず入れかえて意味を確かめること。',
       },
       {
         question: '上の英文の they never forget to give her fresh water. の they と her はそれぞれ何を指すか。',
