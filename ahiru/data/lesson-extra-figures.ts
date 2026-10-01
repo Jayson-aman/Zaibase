@@ -87,6 +87,25 @@ import { XF_CKC_FIGURES, XF_CKC_SECTIONS } from './lesson-xf-ckc';
 import { XF_CKD_FIGURES, XF_CKD_SECTIONS } from './lesson-xf-ckd';
 import { XF_CKE_FIGURES, XF_CKE_SECTIONS } from './lesson-xf-cke';
 import { XF_CKF_FIGURES, XF_CKF_SECTIONS } from './lesson-xf-ckf';
+import { XF_CKG_FIGURES, XF_CKG_SECTIONS } from './lesson-xf-ckg';
+import { XF_CKH_FIGURES, XF_CKH_SECTIONS } from './lesson-xf-ckh';
+import { XF_CKI_FIGURES, XF_CKI_SECTIONS } from './lesson-xf-cki';
+import { XF_CKJ_FIGURES, XF_CKJ_SECTIONS } from './lesson-xf-ckj';
+import { XF_CKK_FIGURES, XF_CKK_SECTIONS } from './lesson-xf-ckk';
+import { XF_CKL_FIGURES, XF_CKL_SECTIONS } from './lesson-xf-ckl';
+import { XF_CKM_FIGURES, XF_CKM_SECTIONS } from './lesson-xf-ckm';
+import { XF_CEA_FIGURES, XF_CEA_SECTIONS } from './lesson-xf-cea';
+import { XF_CEB_FIGURES, XF_CEB_SECTIONS } from './lesson-xf-ceb';
+import { XF_CEC_FIGURES, XF_CEC_SECTIONS } from './lesson-xf-cec';
+import { XF_CED_FIGURES, XF_CED_SECTIONS } from './lesson-xf-ced';
+import { XF_CEE_FIGURES, XF_CEE_SECTIONS } from './lesson-xf-cee';
+import { XF_CEF_FIGURES, XF_CEF_SECTIONS } from './lesson-xf-cef';
+import { XF_CEG_FIGURES, XF_CEG_SECTIONS } from './lesson-xf-ceg';
+import { XF_CEH_FIGURES, XF_CEH_SECTIONS } from './lesson-xf-ceh';
+import { XF_CEI_FIGURES, XF_CEI_SECTIONS } from './lesson-xf-cei';
+import { XF_CEJ_FIGURES, XF_CEJ_SECTIONS } from './lesson-xf-cej';
+import { XF_CEK_FIGURES, XF_CEK_SECTIONS } from './lesson-xf-cek';
+import { XF_CEL_FIGURES, XF_CEL_SECTIONS } from './lesson-xf-cel';
 
 export const EXTRA_LESSON_FIGURES: Record<string, Figure> = {
   ...XF_SA_FIGURES,
@@ -171,6 +190,25 @@ export const EXTRA_LESSON_FIGURES: Record<string, Figure> = {
   ...XF_CKD_FIGURES,
   ...XF_CKE_FIGURES,
   ...XF_CKF_FIGURES,
+  ...XF_CKG_FIGURES,
+  ...XF_CKH_FIGURES,
+  ...XF_CKI_FIGURES,
+  ...XF_CKJ_FIGURES,
+  ...XF_CKK_FIGURES,
+  ...XF_CKL_FIGURES,
+  ...XF_CKM_FIGURES,
+  ...XF_CEA_FIGURES,
+  ...XF_CEB_FIGURES,
+  ...XF_CEC_FIGURES,
+  ...XF_CED_FIGURES,
+  ...XF_CEE_FIGURES,
+  ...XF_CEF_FIGURES,
+  ...XF_CEG_FIGURES,
+  ...XF_CEH_FIGURES,
+  ...XF_CEI_FIGURES,
+  ...XF_CEJ_FIGURES,
+  ...XF_CEK_FIGURES,
+  ...XF_CEL_FIGURES,
 };
 
 export const EXTRA_SECTION_FIGURES: Record<string, string> = {
@@ -256,4 +294,23 @@ export const EXTRA_SECTION_FIGURES: Record<string, string> = {
   ...XF_CKD_SECTIONS,
   ...XF_CKE_SECTIONS,
   ...XF_CKF_SECTIONS,
+  ...XF_CKG_SECTIONS,
+  ...XF_CKH_SECTIONS,
+  ...XF_CKI_SECTIONS,
+  ...XF_CKJ_SECTIONS,
+  ...XF_CKK_SECTIONS,
+  ...XF_CKL_SECTIONS,
+  ...XF_CKM_SECTIONS,
+  ...XF_CEA_SECTIONS,
+  ...XF_CEB_SECTIONS,
+  ...XF_CEC_SECTIONS,
+  ...XF_CED_SECTIONS,
+  ...XF_CEE_SECTIONS,
+  ...XF_CEF_SECTIONS,
+  ...XF_CEG_SECTIONS,
+  ...XF_CEH_SECTIONS,
+  ...XF_CEI_SECTIONS,
+  ...XF_CEJ_SECTIONS,
+  ...XF_CEK_SECTIONS,
+  ...XF_CEL_SECTIONS,
 };
