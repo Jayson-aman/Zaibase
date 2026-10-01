@@ -110,8 +110,8 @@ const s465: DiagramFigure = show([
   sl('❓硫酸に水酸化バリウム水溶液を加えるときは、電流はどうなるでしょう。→ 硫酸バリウムは水に溶けない白い沈殿になり、イオンが液から取り除かれます。中和点で電流がほぼ0になり、こえるとまた流れます。塩酸と水酸化ナトリウムでは、塩がイオンのままなので0になりません。',
     '沈殿ができると 電流が0に近づく', C.purple,
     ...AX(50, 136, 300, 10, '加えた量', '電流'), ln(170, 136, 170, 14, C.gray, true), lb(170, 146, '中和点', 10, C.gray, 'middle'),
-    ln(50, 40, 170, 130, C.purple, false, 3), ln(170, 130, 290, 40, C.purple, false, 3), lb(80, 26, '紫：硫酸＋水酸化バリウム', 10, C.purple, 'start', true),
-    ln(50, 80, 170, 88, C.green, true, 2), ln(170, 88, 290, 40, C.green, true, 2), lb(300, 26, '緑(破線)：塩酸＋NaOH', 10, C.green, 'end', true)),
+    ln(50, 40, 170, 130, C.purple, false, 3), ln(170, 130, 290, 40, C.purple, false, 3), lb(84, 22, '紫：硫酸＋水酸化バリウム', 10, C.purple, 'start', true),
+    ln(50, 80, 170, 88, C.green, true, 2), ln(170, 88, 290, 40, C.green, true, 2), lb(84, 34, '緑(破線)：塩酸＋NaOH', 10, C.green, 'start', true)),
   sl('まとめです。H⁺は減って0、Cl⁻は一定、Na⁺は増え続ける、OH⁻は中和点から増える。「一定はCl⁻、増え続けるのはNa⁺」を手がかりにすると、グラフの選択問題で迷いません。',
     'H⁺減・Cl⁻一定・Na⁺増・OH⁻後から増', C.green,
     bx(15, 12, 290, 26, 'H⁺ … 減って 中和点で0', C.red, FILL.red, 12), bx(15, 44, 290, 26, 'Cl⁻ … 一定', C.green, FILL.green, 12),
@@ -159,7 +159,7 @@ const SP = [...AX(50, 135, 300, 10, '力(N)', '長さ(cm)'), lb(146, 146, '2.0',
 const s467: DiagramFigure = show([
   sl('理科のグラフは、原点を通る直線がよく出ます。❓値を読み取るには、どんな順で考えればよいでしょう。',
     '読み取りの手順は4つ', C.main,
-    ...flow(['① 軸と単位\nを確認', '② 原点を\n通るか', '③ 読みやすい\n1点を選ぶ', '④ 比例の式\nで計算'], 30, { h: 70, size: 11, color: C.blue, fill: FILL.blue, gap: 14 }).flat()),
+    ...flow(['① 軸と単位\nを確認', '② 原点を\n通るか', '③ 1点を\n選ぶ', '④ 比例の式\nで計算'], 30, { h: 70, size: 11, color: C.blue, fill: FILL.blue, gap: 14 }).flat()),
   sl('❓原点を通ると、なぜ比例といえるのでしょう。→ 電圧が0Vのとき電流も0Aになる直線だからです。0から出発してまっすぐなら、電圧を2倍にすれば電流も2倍になります。',
     '原点を通る直線 = 比例', C.blue,
     ...VI, ln(50, 135, 290, 15, C.blue, false, 3), ci(50, 135, 4, undefined, C.red, C.red), lb(64, 124, '0Vなら0A', 11, C.red, 'start', true)),
@@ -169,7 +169,7 @@ const s467: DiagramFigure = show([
   sl('❓6.0Vのときの電流は？→ 比例なので、3.0Vの2倍の電圧は電流も2倍。6.0÷20＝0.30A。逆に0.25Aを流したい電圧は 20×0.25＝5.0Vです。',
     '6.0V → 0.30A、0.25A → 5.0V', C.blue,
     ...VI, ln(50, 135, 290, 15, C.blue, false, 3), ln(170, 135, 170, 75, C.red, true), ln(50, 75, 170, 75, C.red, true), ci(170, 75, 5, undefined, C.red, C.red),
-    ln(290, 135, 290, 15, C.green, true), ln(50, 15, 290, 15, C.green, true), ci(290, 15, 5, undefined, C.green, C.green), lb(180, 38, '2倍', 12, C.green, 'middle', true), lb(290, 28, '6.0V', 10, C.green, 'end', true)),
+    ln(290, 135, 290, 15, C.green, true), ln(50, 15, 290, 15, C.green, true), ci(290, 15, 5, undefined, C.green, C.green), lb(180, 38, '2倍', 12, C.green, 'middle', true), lb(280, 30, '6.0V', 10, C.green, 'end', true)),
   sl('❓2本の直線があるとき、傾きが急なほうは抵抗が大きいのでしょうか。→ 逆です。横軸が電圧、縦軸が電流のとき、急なほうは同じ電圧で多くの電流が流れるので、抵抗は小さい。軸の確認が先です。',
     '傾きが急 → 抵抗は小さい', C.red,
     ...VI, ln(50, 135, 280, 30, C.red, false, 3), ln(50, 135, 290, 100, C.blue, false, 3), lb(250, 24, 'A（急）', 11, C.red, 'end', true), lb(290, 92, 'B', 12, C.blue, 'end', true), lb(60, 38, '同じ電圧なら Aのほうが 電流が多い', 10, C.gray, 'start')),
@@ -406,7 +406,7 @@ const s474: DiagramFigure = show([
   sl('マグマが冷えて固まった岩石を火成岩（かせいがん）といいます。❓冷える場所のちがいで、何が変わるのでしょう。地表近くで急に冷えたものが火山岩、地下深くでゆっくり冷えたものが深成岩です。',
     '冷え方で 2種類に分かれる', C.main,
     ...GROUND, ci(90, 66, 12, undefined, C.red, FILL.red), lb(90, 30, '地表近く：急に冷える', 11, C.red, 'middle', true), lb(90, 88, '火山岩', 13, C.red, 'middle', true),
-    ci(230, 108, 20, undefined, C.red, FILL.red), lb(230, 72, '地下深く：ゆっくり', 11, C.blue, 'middle', true), lb(230, 140, '深成岩', 13, C.blue, 'middle', true)),
+    ci(230, 102, 18, undefined, C.red, FILL.red), lb(230, 72, '地下深く：ゆっくり', 11, C.blue, 'middle', true), lb(230, 130, '深成岩', 13, C.blue, 'middle', true)),
   sl('❓急に冷えると、どんな組織になるのでしょう。→ 結晶が育つ時間がないので、細かい粒やガラス質の石基（いしき）の中に、大きな結晶の斑晶（はんしょう）が散らばる斑状組織（はんじょうそしき）になります。',
     '急に冷える → 斑状組織', C.red,
     bx(40, 14, 240, 108, '', C.red, FILL.red), ...grains(52, 26, 216, 92, 12), ci(110, 60, 16, undefined, C.ink, FILL.yellow), ci(190, 90, 18, undefined, C.ink, FILL.yellow), ci(230, 48, 13, undefined, C.ink, FILL.yellow),
@@ -945,7 +945,7 @@ const s490: DiagramFigure = show([
     ...GAS, ln(GX(0), GY(0), GX(1.5), GY(0.66), C.green, false, 3), ln(GX(1.5), GY(0.66), GX(2.5), GY(0.66), C.green, false, 3), ci(GX(0.5), GY(0.22), 3, undefined, C.red, C.red), ci(GX(1), GY(0.44), 3, undefined, C.red, C.red), ci(GX(1.5), GY(0.66), 4, undefined, C.red, C.red), ci(GX(2), GY(0.66), 3, undefined, C.red, C.red), ci(GX(2.5), GY(0.66), 3, undefined, C.red, C.red)),
   sl('❓1.5 gまでが比例しているのは、なぜでしょう。→ 加えた石灰石が、すべて反応しているからです。塩酸はまだ余っているので、石灰石を増やした分だけ気体が増えます（0.5 gあたり0.22 g）。',
     '前半：石灰石が足りない（塩酸が余る）', C.blue,
-    ...GAS, ln(GX(0), GY(0), GX(1.5), GY(0.66), C.green, false, 3), lb(110, 80, '石灰石が全部反応\n塩酸は余っている', 11, C.blue, 'start', true)),
+    ...GAS, ln(GX(0), GY(0), GX(1.5), GY(0.66), C.green, false, 3), lb(190, 100, '石灰石が全部反応\n塩酸は余っている', 11, C.blue, 'start', true)),
   sl('❓1.5 gをこえると増えないのは、なぜでしょう。→ 塩酸40 cm³が使い切られたからです。それ以上石灰石を加えても、反応する相手がいないので、気体は増えません。',
     '後半：塩酸が足りない（石灰石が余る）', C.red,
     ...GAS, ln(GX(0), GY(0), GX(1.5), GY(0.66), C.green, false, 3), ln(GX(1.5), GY(0.66), GX(2.5), GY(0.66), C.red, false, 3), lb(270, 50, '塩酸が使い切られ\n石灰石が余る', 11, C.red, 'end', true)),
@@ -954,7 +954,7 @@ const s490: DiagramFigure = show([
     ...GAS, ln(GX(0), GY(0), GX(1.5), GY(0.66), C.green, false, 3), ln(GX(1.5), GY(0.66), GX(2.5), GY(0.66), C.green, false, 3), ci(GX(1.5), GY(0.66), 5, undefined, C.red, C.red), ln(GX(1.5), GY(0.66), GX(1.5), 135, C.gray, true), ln(50, GY(0.66), GX(1.5), GY(0.66), C.gray, true), lb(210, 70, '石灰石 1.5 g\nCO₂ 0.66 g', 12, C.red, 'start', true)),
   sl('❓「十分な量の塩酸」と書かれていたら？→ 石灰石は全部反応するので、比例計算です。石灰石1.0 gから0.44 gなので、1.2 gなら 0.44×1.2＝0.528 g。量が決まっているときは、折れ曲がりを確かめます。',
     '「十分な量」→ 比例計算', C.purple,
-    ...flow(['1.0 g → 0.44 g', '× 1.2', '1.2 g → 0.528 g'], 30, { h: 50, size: 12, color: C.purple, fill: FILL.purple }).flat(), lb(160, 104, '塩酸が十分 → 石灰石は全部反応', 12, C.purple, 'middle', true)),
+    ...flow(['1.0 g\n→0.44 g', '× 1.2', '1.2 g\n→0.528 g'], 30, { h: 50, size: 12, color: C.purple, fill: FILL.purple }).flat(), lb(160, 104, '塩酸が十分 → 石灰石は全部反応', 12, C.purple, 'middle', true)),
   sl('❓塩酸を60 cm³に増やしたら？→ 反応できる石灰石も同じ割合で増えます。60÷40＝1.5倍なので、1.5×1.5＝2.25 g。発生する二酸化炭素も 0.66×1.5＝0.99 g。折れ曲がる点が右上へずれ、傾きは変わりません。',
     '塩酸1.5倍 → 折れ曲がる点も1.5倍', C.blue,
     ...flow(['塩酸 40→60\n1.5倍', '石灰石\n2.25 g', 'CO₂\n0.99 g'], 24, { h: 62, size: 12, color: C.blue, fill: FILL.blue }).flat(), lb(160, 112, '濃度を2倍にしても 同じく2倍', 12, C.gray, 'middle', true)),
@@ -974,7 +974,7 @@ const rayTo = (p: [number, number], arrowEnd: boolean, color: string): DiagramEl
 const s491: DiagramFigure = show([
   sl('光の作図は、手順を固定すれば毎回同じやり方で答えが出ます。①光が当たる点を決める、②その点で境界面に垂直な線（法線）を点線で引く、③入射角をはかる、④反射か屈折かで角をとる、⑤矢印をつける。',
     '作図の手順は5つ', C.main,
-    ...flow(['① 入射点', '② 法線を\n点線で', '③ 入射角を\nはかる', '④⑤ 角をとり\n矢印'], 30, { h: 64, size: 11, color: C.main, fill: FILL.warm, gap: 12 }).flat()),
+    ...flow(['① 入射点を\n決める', '② 法線を\n点線で', '③ 入射角を\nはかる', '④⑤ 角をとる\n矢印をつける'], 30, { h: 64, size: 11, color: C.main, fill: FILL.warm, gap: 12 }).flat()),
   sl('❓なぜ、法線を先に引くのでしょう。→ 入射角・反射角・屈折角は、境界面ではなく法線との間の角だからです。境界面との角を使うと、90度から引いた余角になって、全部まちがえます。',
     '角は法線から測る', C.red,
     ...SURF, rayTo(pt(-1, 60, 70, false), false, C.red), sc(160, 75, 40, 90, 150, C.red, FILL.red), lb(133, 38, '入射角 60度', 11, C.red, 'end', true), lb(250, 104, '水面との角は\n30度', 11, C.gray, 'middle', true)),
@@ -1011,7 +1011,7 @@ const s492: DiagramFigure = show([
     ln(160, 14, 160, 126, C.ink, false, 5), ci(60, 70, 14, '本物', C.blue, FILL.blue, 10), ci(260, 70, 14, '像', C.gray, FILL.gray, 11), ar(76, 70, 150, 70, C.gray, true), lb(110, 60, '同じ距離', 11, C.gray, 'middle', true), lb(210, 60, '同じ距離', 11, C.gray, 'middle', true)),
   sl('❓鏡から2 m離れて立つと、像までの距離は何mでしょう。→ 像は鏡の奥2 mにできるので、自分から見て 2＋2＝4 m 先です。鏡までの距離と混ぜないようにします。',
     '像までは 4 m', C.blue,
-    ln(150, 14, 150, 126, C.ink, false, 5), ci(30, 70, 12, '自分', C.blue, FILL.blue, 9), ci(270, 70, 12, '像', C.gray, FILL.gray, 11), lb(90, 90, '2 m', 12, C.blue, 'middle', true), lb(210, 90, '2 m', 12, C.gray, 'middle', true), ar(44, 108, 256, 108, C.red), lb(150, 124, '4 m', 14, C.red, 'middle', true)),
+    ln(150, 14, 150, 94, C.ink, false, 5), ci(30, 70, 12, '自分', C.blue, FILL.blue, 9), ci(270, 70, 12, '像', C.gray, FILL.gray, 11), lb(90, 90, '2 m', 12, C.blue, 'middle', true), lb(210, 90, '2 m', 12, C.gray, 'middle', true), ar(44, 108, 256, 108, C.red), lb(150, 124, '4 m', 14, C.red, 'middle', true)),
   sl('次に、全身を映すのに必要な鏡の長さです。結論は、身長の半分。❓どうしてでしょう。まず足先の光から考えます。',
     '必要な長さは 身長の半分', C.main,
     ...PERSON, ln(200, hy(0), 200, hy(160), C.gray, true), lb(200, hy(160) - 8, '鏡', 11, C.gray, 'middle', true)),
@@ -1036,7 +1036,7 @@ const s492: DiagramFigure = show([
 ], '鏡の像と鏡の長さ');
 
 // ───────── koko_rika_s493 力の矢印 ─────────
-const BOOK = [ln(40, 110, 280, 110, C.ink, false, 4), lb(290, 120, '机', 11, C.gray, 'end', true), bx(110, 62, 100, 48, '本', C.gray, FILL.warm, 14)];
+const BOOK = [ln(40, 110, 280, 110, C.ink, false, 4), lb(290, 120, '机', 11, C.gray, 'end', true), bx(110, 62, 100, 48, '', C.gray, FILL.warm), lb(126, 76, '本', 14, C.ink, 'middle', true)];
 const s493: DiagramFigure = show([
   sl('力の矢印は、3つの要素をそろえてかきます。作用点（始点）、向き、大きさ（矢印の長さ）。大きさは「1 Nを1目盛り」のように決めて、比例させます。',
     '作用点・向き・大きさ', C.main,
