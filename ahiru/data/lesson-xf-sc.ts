@@ -19,15 +19,15 @@ const TRI_FILLS = [FILL.blue, FILL.green, FILL.yellow, FILL.red, FILL.purple, FI
 // ───────────────────────── 入試当日の進め方 ─────────────────────────
 const BAR_Y = 40;
 const timeBar = {
-  keisan: [bx(20, BAR_Y, 28, 36, '5分', C.blue, FILL.blue, 10), lb(34, 88, '計算', 10, C.blue)],
-  shoumon: [bx(48, BAR_Y, 67.2, 36, '12分', C.green, FILL.green, 12), lb(81, 88, '小問集合', 10, C.green)],
+  keisan: [bx(20, BAR_Y, 28, 36, '5分', C.blue, FILL.blue, 10), lb(34, 90, '計算', 11, C.blue)],
+  shoumon: [bx(48, BAR_Y, 67.2, 36, '12分', C.green, FILL.green, 12), lb(81, 90, '小問集合', 11, C.green)],
   daimon: [
     bx(115.2, BAR_Y, 50.4, 36, '9分', C.purple, FILL.purple, 12),
     bx(165.6, BAR_Y, 50.4, 36, '9分', C.purple, FILL.purple, 12),
     bx(216, BAR_Y, 50.4, 36, '9分', C.purple, FILL.purple, 12),
-    lb(190, 88, '大問が3つ', 10, C.purple),
+    lb(190, 90, '大問が3つ', 11, C.purple),
   ],
-  minaoshi: [bx(266.4, BAR_Y, 33.6, 36, '6分', C.red, FILL.red, 10), lb(283, 88, '見直し', 10, C.red)],
+  minaoshi: [bx(266.4, BAR_Y, 33.6, 36, '6分', C.red, FILL.red, 10), lb(283, 90, '見直し', 11, C.red)],
 };
 const ansRow = (y: number, texts: string[], colors: string[]) =>
   texts.map((t, i) => bx(30 + i * 90, y, 80, 38, t, colors[i], colors[i] === C.red ? FILL.red : FILL.warm, 12));
@@ -215,9 +215,9 @@ const n10_02: DiagramFigure = show(
     {
       note: '❓単位は、なぜ1つずつ直すのでしょう。→ 1m＝100cm、1km＝1000mと、直す大きさがちがうからです。まとめて直そうとすると、100倍や1000倍のまちがいが出ます。75000cm÷100＝750m、750m÷1000＝0.75km。答えは0.75kmです。',
       add: fresh(
-        bx(8, 30, 84, 44, '75000cm', C.blue, FILL.blue, 13), ar(96, 52, 118, 52, C.gray), lb(107, 40, '÷100', 10, C.gray),
-        bx(122, 30, 84, 44, '750m', C.green, FILL.green, 14), ar(210, 52, 228, 52, C.gray), lb(219, 40, '÷1000', 10, C.gray),
-        bx(232, 30, 80, 44, '0.75km', C.red, FILL.red, 14),
+        bx(6, 30, 80, 44, '75000cm', C.blue, FILL.blue, 13), ar(90, 52, 126, 52, C.gray), lb(108, 40, '÷100', 10, C.gray),
+        bx(130, 30, 70, 44, '750m', C.green, FILL.green, 14), ar(204, 52, 240, 52, C.gray), lb(222, 40, '÷1000', 10, C.gray),
+        bx(244, 30, 70, 44, '0.75km', C.red, FILL.red, 14),
         ...cap('cm → m → km と、1つずつ直す'),
       ),
     },
@@ -243,12 +243,12 @@ const n10_02: DiagramFigure = show(
 );
 
 // ───────────────────────── 割合の3公式とくもわ図 ─────────────────────────
-const seg = (i: number, y: number, fill: string, color: string, text?: string) => bx(20 + i * 28, y, 28, 36, text, color, fill, 9);
+const seg = (i: number, y: number, fill: string, color: string, text?: string) => bx(20 + i * 28, y, 28, 36, text, color, fill, 10);
 const n10_03: DiagramFigure = show(
   [
     {
       note: '割合（わりあい）とは、「もとにする量を1としたとき、くらべる量はいくつにあたるか」を表す数です。40人のクラスを1とみます。ここでは、クラスの全員を10こに区切った長い帯で表しました。',
-      add: [lb(160, 22, '40人のクラス ＝ 1', 13, C.ink, 'middle', true), ...Array.from({ length: 10 }, (_, i) => seg(i, 40, FILL.warm, C.main)), lb(160, 96, 'もとにする量', 11, C.gray), ...cap('もとにする量を「1」とみる')],
+      add: [lb(160, 22, '40人のクラス ＝ 1', 13, C.ink, 'middle', true), ...Array.from({ length: 10 }, (_, i) => seg(i, 40, FILL.warm, C.main)), ...cap('もとにする量を「1」とみる')],
     },
     {
       note: '❓では、割合0.4とは、どれくらいの大きさでしょう。→ 帯は10こに分かれていて、1こは4人です。0.4は10このうちの4こぶん。4人×4＝16人です。女子の16人は、クラス全体の0.4にあたります。',

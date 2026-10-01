@@ -15,7 +15,7 @@ const s459: DiagramFigure = show([
   },
   {
     note: '❓まず、何を1と見ればよいでしょう。→ 「原価の2割」の「の」の前にある原価です。原価800円を1と見ると、2割の利益は0.2にあたり、800×0.2＝160円です。',
-    add: fresh(lb(160, 18, '「原価の2割」→「の」の前の原価が1', 12, C.ink, 'middle', true), bx(20, 40, 200, 34, '原価 800円（＝1）', C.blue, FILL.blue, 12), bx(220, 40, 40, 34, '160円', C.green, FILL.green, 10), lb(240, 90, '0.2', 11, C.green, 'middle', true), ...cap('800×0.2＝160円', C.green)),
+    add: fresh(lb(160, 18, '「原価の2割」→「の」の前の原価が1', 12, C.ink, 'middle', true), bx(20, 40, 200, 34, '原価 800円（＝1）', C.blue, FILL.blue, 12), bx(220, 40, 40, 34, '160円', C.green, FILL.green, 10), lb(240, 90, '↑ 0.2', 11, C.green, 'middle', true), ...cap('800×0.2＝160円', C.green)),
   },
   {
     note: '❓では、定価はいくらでしょう。→ 原価の1に、利益の0.2を足した1.2倍です。800×1.2＝960円。1に0.2を足して1.2にする、というところがポイントです。',
@@ -23,7 +23,7 @@ const s459: DiagramFigure = show([
   },
   {
     note: '❓次の「定価の1割引き」では、何を1と見るのでしょう。→ また「の」の前を見ます。「定価の」なので、1と見るのは定価です。さっきの原価ではありません。定価960円の1割は960×0.1＝96円です。',
-    add: fresh(lb(160, 18, '「定価の1割引き」→ 今度は定価が1', 12, C.ink, 'middle', true), bx(20, 40, 240, 34, '定価 960円（＝1）', C.main, FILL.warm, 12), bx(236, 80, 24, 26, '', C.red, FILL.red), lb(160, 126, '1割（0.1）にあたる 96円 を引く', 11, C.red, 'middle', true), ...cap('960×0.1＝96円', C.red)),
+    add: fresh(lb(160, 18, '「定価の1割引き」→ 今度は定価が1', 12, C.ink, 'middle', true), bx(20, 40, 240, 34, '定価 960円（＝1）', C.main, FILL.warm, 12), bx(236, 80, 24, 26, '0.1', C.red, FILL.red, 9), lb(160, 126, '1割（0.1）にあたる 96円 を引く', 11, C.red, 'middle', true), ...cap('960×0.1＝96円', C.red)),
   },
   {
     note: '売り値は、定価の1から0.1を引いた0.9倍です。960×0.9＝864円。1割引きは「0.9倍にする」ことと同じです。',
@@ -101,7 +101,7 @@ const s463: DiagramFigure = show([
   },
   {
     note: '❓この6個の三角形は、どんな形でしょう。→ 中心から頂点までの線はすべて同じ長さ（円の半径のようなもの）なので、二等辺三角形（にとうへんさんかくけい）です。6個とも同じ形で、ぴったり重なります。',
-    add: [pg([[OX, OY], HV[0], HV[1]], C.blue, 'rgba(2,132,199,0.25)'), lb(OX + 38, OY + 18, '同じ長さ', 9, C.blue), ...cap('同じ長さが2本 → 二等辺三角形', C.blue)],
+    add: [pg([[OX, OY], HV[0], HV[1]], C.blue, 'rgba(2,132,199,0.25)'), ...cap('同じ長さが2本 → 二等辺三角形', C.blue)],
   },
   {
     note: '❓中心のまわりの角は何度でしょう。→ 中心のまわりは1周で360度。それを6個で等しく分けるので、360÷6＝60度です。',
@@ -113,7 +113,7 @@ const s463: DiagramFigure = show([
   },
   {
     note: '❓では、正六角形の1つの角は何度でしょう。→ 六角形の頂点のところには、正三角形の角が2つ集まっています。60＋60＝120度です。',
-    add: [pg([[OX, OY], HV[5], HV[0]], C.green, 'rgba(22,163,74,0.25)'), lb(205, 60, '60', 9, C.green, 'middle', true), lb(205, 98, '60', 9, C.green, 'middle', true), lb(244, 80, '120度', 11, C.green, 'middle', true), ...cap('60度＋60度＝120度', C.green)],
+    add: [pg([[OX, OY], HV[5], HV[0]], C.green, 'rgba(22,163,74,0.25)'), lb(205, 60, '60', 9, C.green, 'middle', true), lb(244, 80, '120度', 11, C.green, 'middle', true), ...cap('60度＋60度＝120度', C.green)],
   },
   {
     note: '❓答えは正しいでしょうか。確かめます。六角形の角の和は180×（6−2）＝720度。1つぶんは720÷6＝120度で、同じ答えになりました。',
@@ -135,7 +135,7 @@ const s464: DiagramFigure = show([
   },
   {
     note: '❓二つの三角形に、同じものはあるでしょうか。→ あります。どちらも頂点Aを使っているので、Aから辺BCまでの高さ（垂直な長さ）が同じです。',
-    add: [ln(190, 28, 190, 120, C.red, true, 2), lb(224, 76, '高さは共通', 11, C.red, 'middle', true), ...cap('高さが同じ三角形', C.red)],
+    add: [ln(190, 28, 190, 120, C.red, true, 2), lb(196, 102, '高さは共通', 10, C.red, 'start', true), ...cap('高さが同じ三角形', C.red)],
   },
   {
     note: '❓では、面積は何で決まるのでしょう。→ 三角形の面積は底辺（ていへん）×高さ÷2です。高さが同じなら、ちがうのは底辺だけ。だから面積の比は、底辺の比と同じになります。',
@@ -186,7 +186,7 @@ const s465: DiagramFigure = show([
   },
   {
     note: '❓まわりの長さは、弧の長さだけでしょうか。→ ちがいます。おうぎ形は、曲がった弧と、まっすぐな半径2本で囲まれています。半径6cmの線が2本あるので、そこも足します。',
-    add: [ln(CX, CY, pt(0)[0], pt(0)[1], C.red, false, 3), ln(CX, CY, pt(60)[0], pt(60)[1], C.red, false, 3), lb(190, CY + 12, '6cm', 10, C.red, 'middle', true), lb(CX + 4, 40, '6cm', 10, C.red, 'start', true), ...cap('まわり＝弧＋半径2本', C.red)],
+    add: [ln(CX, CY, pt(0)[0], pt(0)[1], C.red, false, 3), ln(CX, CY, pt(60)[0], pt(60)[1], C.red, false, 3), lb(190, CY + 12, '6cm', 10, C.red, 'middle', true), lb(CX + 12, 46, '6cm', 10, C.red, 'end', true), ...cap('まわり＝弧＋半径2本', C.red)],
   },
   {
     note: 'まわりの長さは、弧6.28cmに半径2本分の6×2＝12cmを足して、6.28＋12＝18.28cmです。弧の6.28cmだけを答えるのは、よくあるまちがいです。',
@@ -206,7 +206,7 @@ const s465: DiagramFigure = show([
 const pyr = () => [
   pg([[80, 118], [200, 118], [240, 98], [120, 98]], C.gray, FILL.gray),
   ln(160, 24, 80, 118, C.main), ln(160, 24, 200, 118, C.main), ln(160, 24, 240, 98, C.main), ln(160, 24, 120, 98, C.main, true),
-  ln(160, 24, 160, 108, C.red, true, 2), lb(176, 66, '高さ9cm', 10, C.red, 'start', true), lb(140, 134, '底面 1辺6cm', 10, C.ink, 'middle', true),
+  ln(160, 24, 160, 108, C.red, true, 2), bx(164, 54, 46, 16, '高さ9cm', C.red, '#FFFFFF', 9), lb(140, 134, '底面 1辺6cm', 10, C.ink, 'middle', true),
 ];
 const s466: DiagramFigure = show([
   {
@@ -219,7 +219,7 @@ const s466: DiagramFigure = show([
   },
   {
     note: '❓すいは、柱の何分のいくつなのでしょう。立方体で調べます。立方体の中心から6つの面に向かって線を引くと、立方体は、同じ形の四角すい6個にぴったり分かれます。',
-    add: fresh(bx(30, 14, 110, 110, undefined, C.main, FILL.warm), ln(30, 14, 140, 124, C.blue), ln(140, 14, 30, 124, C.blue), lb(85, 69, '中心', 10, C.red, 'middle', true), lb(228, 34, '真上から見ると', 11, C.ink, 'middle', true), lb(228, 54, '横の4つのすい', 11, C.blue, 'middle', true), lb(228, 80, 'このほかに', 11, C.ink, 'middle', true), lb(228, 100, '上と下に1つずつ', 11, C.blue, 'middle', true), ...cap('6つのすいに 分かれる', C.blue)),
+    add: fresh(bx(30, 14, 110, 110, undefined, C.main, FILL.warm), ln(30, 14, 140, 124, C.blue), ln(140, 14, 30, 124, C.blue), bx(66, 60, 38, 18, '中心', C.red, '#FFFFFF', 10), lb(228, 34, '真上から見ると', 11, C.ink, 'middle', true), lb(228, 54, '横の4つのすい', 11, C.blue, 'middle', true), lb(228, 80, 'このほかに', 11, C.ink, 'middle', true), lb(228, 100, '上と下に1つずつ', 11, C.blue, 'middle', true), ...cap('6つのすいに 分かれる', C.blue)),
   },
   {
     note: '❓1つのすいの体積は何でしょう。1辺6cmの立方体の体積は6×6×6＝216cm³です。それを6つに分けるので、1つは216÷6＝36cm³。このすいの高さは、立方体の半分の3cmです。',
@@ -227,7 +227,7 @@ const s466: DiagramFigure = show([
   },
   {
     note: '❓同じ底面で、高さが立方体と同じ6cmのすいは何cm³でしょう。底面が同じで高さが2倍なら、体積も2倍です。36×2＝72cm³。これは、立方体216cm³の3分の1にあたります。',
-    add: fresh(bx(20, 20, 130, 50, '柱（立方体）\n216cm³', C.blue, FILL.blue, 13), lb(160, 45, '÷3', 14, C.red, 'middle', true), ar(152, 45, 172, 45, C.red), bx(176, 20, 128, 50, 'すい\n72cm³', C.green, FILL.green, 13), lb(160, 100, '216÷72＝3　すいが ちょうど3つぶん', 11, C.ink, 'middle', true), ...cap('すいの体積は 柱の3分の1', C.green)),
+    add: fresh(bx(20, 20, 130, 50, '柱（立方体）\n216cm³', C.blue, FILL.blue, 13), lb(160, 30, '÷3', 14, C.red, 'middle', true), ar(152, 45, 172, 45, C.red), bx(176, 20, 128, 50, 'すい\n72cm³', C.green, FILL.green, 13), lb(160, 100, '216÷72＝3　すいが ちょうど3つぶん', 11, C.ink, 'middle', true), ...cap('すいの体積は 柱の3分の1', C.green)),
   },
   {
     note: '❓ではこの問題の答えは何でしょう。同じ底面と高さの柱が324cm³だったので、その3分の1です。324÷3＝108cm³。式にまとめると、底面積×高さ÷3です。',
@@ -235,7 +235,7 @@ const s466: DiagramFigure = show([
   },
   {
     note: '❓円すいで、使う高さはどれでしょう。半径5cm、高さ12cm、母線（ぼせん）13cmの円すいです。体積に使うのは、底面に垂直な高さ12cmです。ななめの母線13cmは使いません。',
-    add: fresh(pg([[160, 18], [90, 112], [230, 112]], C.main, FILL.warm), ln(160, 18, 160, 112, C.red, true, 2), lb(172, 70, '高さ12', 11, C.red, 'start', true), lb(218, 56, '母線13', 11, C.gray, 'start', true), lb(160, 128, '半径5', 10, C.ink, 'middle'), ...cap('体積は 5×5×3.14×12÷3＝314cm³', C.red, 12)),
+    add: fresh(pg([[160, 18], [90, 112], [230, 112]], C.main, FILL.warm), ln(160, 18, 160, 112, C.red, true, 2), bx(164, 56, 46, 16, '高さ12', C.red, '#FFFFFF', 9), lb(218, 56, '母線13', 11, C.gray, 'start', true), lb(160, 128, '半径5', 10, C.ink, 'middle'), ...cap('体積は 5×5×3.14×12÷3＝314cm³', C.red, 12)),
   },
   {
     note: 'まとめです。柱は底面積×高さ。すいは、その3分の1（÷3）。すいは同じ底面・高さの柱に、ちょうど3つ分入るからです。高さは、底面に垂直な長さを使います。',
@@ -262,7 +262,7 @@ const s467: DiagramFigure = show([
   },
   {
     note: '❓筒の中で、向かい合うのはどの面でしょう。筒を上から見ると、四つの面がぐるっと並びます。アの向かい側はウ、イの向かい側はエです。間に1枚はさんだ面が向かい合います。',
-    add: fresh(bx(120, 28, 80, 76, undefined, C.main, FILL.warm), lb(160, 20, 'ア', 12, C.ink, 'middle', true), lb(216, 66, 'イ', 12, C.ink, 'middle', true), lb(160, 118, 'ウ', 12, C.ink, 'middle', true), lb(104, 66, 'エ', 12, C.ink, 'middle', true), ln(160, 32, 160, 100, C.red, true, 2), ln(124, 66, 196, 66, C.green, true, 2), lb(160, 66, '上から見た筒', 9, C.gray), ...cap('アとウ、イとエ が向かい合う', C.red)),
+    add: fresh(bx(120, 28, 80, 76, undefined, C.main, FILL.warm), lb(160, 20, 'ア', 12, C.ink, 'middle', true), lb(216, 66, 'イ', 12, C.ink, 'middle', true), lb(160, 118, 'ウ', 12, C.ink, 'middle', true), lb(104, 66, 'エ', 12, C.ink, 'middle', true), ln(160, 32, 160, 100, C.red, true, 2), ln(124, 66, 196, 66, C.green, true, 2), ...cap('アとウ、イとエ が向かい合う', C.red)),
   },
   {
     note: '❓上と下の、オとカは、どうなるでしょう。→ イの上と下についているので、筒の上のふたと下のふたになります。ふたと底は、向かい合います。',
@@ -294,7 +294,7 @@ const rectPts = () => [
   lb(8, 104, 'A', 10, C.ink, 'middle', true), lb(8, 24, 'B', 10, C.ink, 'middle', true), lb(133, 24, 'C', 10, C.ink, 'middle', true), lb(133, 104, 'D', 10, C.ink, 'middle', true),
   lb(70, 60, '三角形APD', 9, C.gray),
 ];
-const axes = () => [ln(180, 125, 180, 28, C.gray), ln(180, 125, 312, 125, C.gray), lb(178, 20, '面積', 9, C.gray, 'end'), lb(300, 138, '時間（秒）', 9, C.gray, 'end'), lb(172, GY(30) + 3, '30', 9, C.gray, 'end'), lb(180, 135, '0', 9, C.gray)];
+const axes = () => [ln(180, 125, 180, 28, C.gray), ln(180, 125, 312, 125, C.gray), lb(178, 20, '面積', 9, C.gray, 'end'), lb(312, 145, '時間（秒）', 9, C.gray, 'end'), lb(172, GY(30) + 3, '30', 9, C.gray, 'end'), lb(180, 134, '0', 9, C.gray)];
 const s468: DiagramFigure = show([
   {
     note: '問題です。長方形ABCDの辺の上を、点Pが秒速2cmでA→B→C→Dと進みます。AB＝6cm、BC＝10cmです。三角形APDの面積（めんせき）の変わり方をグラフに表します。',
@@ -314,7 +314,7 @@ const s468: DiagramFigure = show([
   },
   {
     note: '❓グラフはなぜ、3秒と8秒のところで折れているのでしょう。→ 点Pが、ちょうど頂点（Bと、C）を通ったときだからです。頂点を通ると、面積の増え方（高さの変わり方）が変わります。',
-    add: [ci(GX(3), GY(30), 4, undefined, C.red, '#FFFFFF'), ci(GX(8), GY(30), 4, undefined, C.red, '#FFFFFF'), lb(GX(3), 144, '3', 10, C.red, 'middle', true), lb(GX(8), 144, '8', 10, C.red, 'middle', true), ...cap('折れ目＝点が頂点に着いたとき', C.red)],
+    add: [ci(GX(3), GY(30), 4, undefined, C.red, '#FFFFFF'), ci(GX(8), GY(30), 4, undefined, C.red, '#FFFFFF'), lb(GX(3), 134, '3', 10, C.red, 'middle', true), lb(GX(8), 134, '8', 10, C.red, 'middle', true), ...cap('折れ目＝点が頂点に着いたとき', C.red)],
   },
   {
     note: '❓逆に、グラフだけから辺の長さが分かるでしょうか。→ 分かります。AB＝2×3＝6cm。BCは、8−3＝5秒かかったので2×5＝10cm。長さは、速さ×時間で求めます。',
@@ -350,19 +350,19 @@ const circRow = () => {
 const s469: DiagramFigure = show([
   {
     note: '問題です。マッチ棒で、正方形を横につなげて作っていきます。1個目は4本です。10個目では、マッチ棒は何本になるでしょう。',
-    add: [...matchSq(0), lb(MX0 + MS / 2, 90, '1個目：4本', 10, C.ink, 'middle', true), ...cap('10個目は 何本？')],
+    add: [...matchSq(0), lb(MX0 + MS / 2, 90, '1個目\n4本', 10, C.ink, 'middle', true), ...cap('10個目は 何本？')],
   },
   {
     note: '❓2個目を作るには、何本足すでしょう。→ 左の辺は、1個目の右の辺と共有できます。だから足すのは、上・下・右の3本だけです。4＋3＝7本になります。',
-    add: [...matchSq(1), lb(MX0 + 1.5 * MS + 20, 90, '2個目：7本', 10, C.ink, 'middle', true), ...cap('となりと辺を共有 → 3本足す', C.blue)],
+    add: [...matchSq(1), lb(MX0 + 1.5 * MS, 90, '2個目\n7本', 10, C.ink, 'middle', true), ...cap('となりと辺を共有 → 3本足す', C.blue)],
   },
   {
     note: '3個目も同じです。上・下・右の3本を足すので、7＋3＝10本です。',
-    add: [...matchSq(2), lb(MX0 + 2.5 * MS + 30, 110, '3個目：10本', 10, C.ink, 'middle', true), ...cap('7＋3＝10本', C.blue)],
+    add: [...matchSq(2), lb(MX0 + 2.5 * MS, 90, '3個目\n10本', 10, C.ink, 'middle', true), ...cap('7＋3＝10本', C.blue)],
   },
   {
     note: '4個目は10＋3＝13本です。4、7、10、13と、1個ふえるたびに、いつも3本ずつふえています。このように一定の数ずつふえる並びを、等差数列（とうさすうれつ）といいます。',
-    add: [...matchSq(3), lb(MX0 + 3.5 * MS + 40, 130, '4個目：13本', 10, C.ink, 'middle', true), ...cap('4、7、10、13、… いつも＋3', C.blue)],
+    add: [...matchSq(3), lb(MX0 + 3.5 * MS, 90, '4個目\n13本', 10, C.ink, 'middle', true), ...cap('4、7、10、13、… いつも＋3', C.blue)],
   },
   {
     note: '❓10個目まで、3本ずつ何回ふやすのでしょう。→ 1個目はすでに4本あって、そこから10個目まで進むには、ふやす回数は10−1＝9回です。10回ではありません。',
@@ -410,7 +410,7 @@ const s470: DiagramFigure = show([
     add: fresh(...['あいう', 'あいえ', 'あいお', 'あうえ', 'あうお', 'あえお', 'いうえ', 'いうお', 'いえお', 'うえお'].map((t, i) => bx(8 + 62 * (i % 5), 20 + 40 * Math.floor(i / 5), 56, 30, t, C.green, FILL.green, 13)), lb(160, 112, '順に書き出すと 10個', 12, C.ink, 'middle', true), ...cap('書き出しと 計算が一致 ✓', C.green)),
   },
   {
-    note: '❓もし、委員長・副委員長・書記のように、役目がちがったらどうでしょう。→ その場合は順番が意味をもつので、「あい う」と「い あ う」はちがう決め方です。60通りのままが答えになります。',
+    note: '❓もし、委員長・副委員長・書記のように、役目がちがったらどうでしょう。→ その場合は順番が意味をもつので、「あ・い・う」と「い・あ・う」はちがう決め方です。60通りのままが答えになります。',
     add: fresh(bx(15, 20, 290, 40, '委員長・副委員長・書記 → 5×4×3＝60通り', C.red, FILL.red, 12), bx(15, 74, 290, 40, '代表を3人選ぶだけ → 60÷6＝10通り', C.green, FILL.green, 12), ...cap('順番が関係あるか、まず確かめる', C.ink)),
   },
   {
