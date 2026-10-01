@@ -3,7 +3,7 @@
 // 「なぜ？」の連鎖で、7枚以上。上に図、下の帯（y=160〜）にそのスライドのひとこと。
 // キーは 'xf_<単元id>'、結び先は '<単元id>#<節の番号>'。
 import type { DiagramElement, DiagramFigure } from './figures';
-import { C, FILL, bx, lb, ar, ln, ci, pg, show, fresh, stack } from './diagram-kit';
+import { C, FILL, bx, lb, ar, ln, ci, show, fresh } from './diagram-kit';
 
 type Col = [string, string];
 const BLUE: Col = [C.blue, FILL.blue];

@@ -181,7 +181,7 @@ const s008: DiagramFigure = show([
   },
   {
     note: '-eer は engineer（技師）、volunteer（ボランティア）、career（経歴）。volunteer は VOL- ではなく、第3音節の TEER が強く読まれます。',
-    add: fresh(head('-eer：語尾が強い'), lb(10, 34, 'engineer', 11, C.ink, 'start', true), ...syl(['en', 'gi', 'NEER'], 2, 40, 10, 230, 30), lb(10, 82, 'volunteer', 11, C.ink, 'start', true), ...syl(['vol', 'un', 'TEER'], 2, 88, 10, 230, 30), lb(10, 130, 'career も 語尾の -eer が強い', 11, C.gray, 'start'), ...cap('volunteer は VOL ではない', C.red)),
+    add: fresh(head('-eer：語尾が強い'), lb(10, 34, 'engineer', 11, C.ink, 'start', true), ...syl(['en', 'gi', 'NEER'], 2, 40, 10, 230, 30), lb(10, 82, 'volunteer', 11, C.ink, 'start', true), ...syl(['vol', 'un', 'TEER'], 2, 88, 10, 230, 30), lb(10, 142, 'career も 語尾の -eer が強い', 11, C.gray, 'start'), ...cap('volunteer は VOL ではない', C.red)),
   },
   {
     note: '-ese は国名から作る語です。China の CHI が、Chinese では NESE に移ります。Japan は ja-PAN の第2音節でしたが、Japanese は第3音節に動きます。',
@@ -197,7 +197,7 @@ const s008: DiagramFigure = show([
   },
   {
     note: '-self も語尾が強い型です。myself は my-SELF、ourselves は our-SELVES。balloon（bal-LOON）や bamboo（bam-BOO）も同じ型です。',
-    add: fresh(head('-self と -oo・-oon'), lb(10, 30, 'myself', 11, C.ink, 'start', true), ...syl(['my', 'SELF'], 1, 36, 10, 170, 28), lb(10, 76, 'ourselves', 11, C.ink, 'start', true), ...syl(['our', 'SELVES'], 1, 82, 10, 190, 28), lb(10, 122, 'bamboo は bam-BOO', 11, C.ink, 'start'), ...cap('強く読むのは -self のほう', C.red)),
+    add: fresh(head('-self と -oo・-oon'), lb(10, 30, 'myself', 11, C.ink, 'start', true), ...syl(['my', 'SELF'], 1, 36, 10, 170, 28), lb(10, 76, 'ourselves', 11, C.ink, 'start', true), ...syl(['our', 'SELVES'], 1, 82, 10, 190, 28), lb(10, 142, 'bamboo は bam-BOO', 11, C.ink, 'start'), ...cap('強く読むのは -self のほう', C.red)),
   },
   {
     note: 'まとめです。語尾を強く読む型は -ee・-eer・-ese・-oo・-oon・-self。付くと、強い場所が後ろへ動く。例外は coffee と committee。-ing や -ed などは、強い場所を動かさない。',
@@ -461,7 +461,7 @@ const e03: DiagramFigure = show([
   },
   {
     note: 'ステップ③：動詞を -ing 形にします。was は be 動詞なので Being になります。Being tired, I went to bed early. 「疲れていたので、早く寝た」の意味です。',
-    add: [cover(0, 46, 320, 104), ...r2.els, ar(r1.xs[2] + 14, 58, r2.xs[0] + 22, 90, C.green), lb(250, 78, 'was → Being', 11, C.green, 'middle', true), ...band(150, lb(160, 190, '③ 動詞を -ing 形にする', 12, C.green, 'middle', true))],
+    add: [cover(0, 57, 320, 93), ...r2.els, ar(r1.xs[2] + 14, 58, r2.xs[0] + 22, 90, C.green), lb(250, 78, 'was → Being', 11, C.green, 'middle', true), ...band(150, lb(160, 190, '③ 動詞を -ing 形にする', 12, C.green, 'middle', true))],
   },
   {
     note: '❓Being は必ず必要でしょうか。→ いいえ。Being は省略できます。すると Tired, I went to bed early. になります。Being は「～であること」という意味が薄い語なので、省いても意味は変わりません。',
