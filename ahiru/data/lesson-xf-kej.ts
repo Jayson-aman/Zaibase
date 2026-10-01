@@ -806,7 +806,7 @@ const e201: DiagramFigure = show([
   },
   {
     note: '❓when を使う文では、どちらが過去進行形でしょうか。→ I was watching TV when my mother came home. 長く続いていた「背景」の動作が過去進行形、そこに割りこんだ一瞬の出来事が過去形です。テレビを見ていた間に、母が帰ってきたのです。',
-    add: fresh(bx(20, 34, 220, 24, 'was watching TV（続いている）', C.blue, FILL.blue, 11), ln(200, 20, 200, 80, C.red, false, 3), lb(200, 94, 'my mother came home（一瞬）', 11, C.red, 'middle', true), lb(160, 122, '長い動作 ＝ 過去進行形、割りこみ ＝ 過去形', 11, C.ink, 'middle', true), ...cap('背景は -ing、割りこみは過去形')),
+    add: fresh(bx(20, 34, 270, 24, 'was watching TV', C.blue, FILL.blue, 11), ln(230, 20, 230, 80, C.red, false, 3), lb(200, 94, 'my mother came home（一瞬）', 11, C.red, 'middle', true), lb(160, 122, '長い動作 ＝ 過去進行形、割りこみ ＝ 過去形', 11, C.ink, 'middle', true), ...cap('背景は -ing、割りこみは過去形')),
   },
   {
     note: 'while の文も同じです。While I was cooking dinner, the phone rang.（夕食を作っている間に、電話が鳴った）。while は「〜している間」なので、あとの節は必ず過去進行形です。while の節が文頭に来るときは、コンマを忘れずに付けます。',
@@ -849,7 +849,7 @@ const e202: DiagramFigure = show([
     add: fresh(bx(10, 14, 145, 32, 'I → am', C.blue, FILL.blue, 13), bx(165, 14, 145, 32, 'he／she／it → is', C.blue, FILL.blue, 12), bx(10, 54, 300, 32, 'you／we／they → are', C.blue, FILL.blue, 13), lb(160, 108, 'We are going to visit Kyoto next month.', 11, C.ink, 'middle', true), ...cap('be動詞は 主語で決まる')),
   },
   {
-    note: '❓going と to は、なぜ先にくっつけるのでしょう。→ going to は2語で1つの助動詞のようにはたらくかたまりだからです。（ is / going / she / to / buy ）a new bike. なら、まず going to をくっつけ、She is going to buy a new bike. と組み立てます。',
+    note: '❓going と to は、なぜ先にくっつけるのでしょう。→ going to は1つのかたまりとして扱う語句だからです。（ is / going / she / to / buy ）a new bike. なら、まず going to をくっつけ、She is going to buy a new bike. と組み立てます。',
     add: fresh(bx(5, 14, 60, 32, 'She', C.blue, FILL.blue, 12), bx(70, 14, 50, 32, 'is', C.red, FILL.red, 12), bx(125, 14, 100, 32, 'going to', C.green, FILL.green, 12), bx(230, 14, 85, 32, 'buy', C.main, FILL.warm, 12), lb(175, 64, '2語で1かたまり', 11, C.green, 'middle', true), lb(160, 92, '… a new bike.', 12, C.ink, 'middle'), ...cap('going to は離さない', C.green)),
   },
   {
@@ -882,7 +882,7 @@ const e203: DiagramFigure = show([
   },
   {
     note: '❓否定文の作り方が、なぜちがうのでしょう。→ must は助動詞のなかまなので、そのあとに not を付けます。have to は一般動詞のなかまなので、do／does を使って don\'t／doesn\'t have to とします。疑問文も同じで、Do you have to leave now? です。',
-    add: fresh(bx(10, 14, 145, 34, 'must：助動詞のなかま', C.red, FILL.red, 11), bx(165, 14, 145, 34, 'have to：一般動詞のなかま', C.blue, FILL.blue, 10), bx(10, 56, 145, 34, 'must not ＋ 原形', C.red, FILL.red, 12), bx(165, 56, 145, 34, "don't have to ＋ 原形", C.blue, FILL.blue, 11), bx(10, 98, 300, 34, 'Do you have to leave now?', C.blue, FILL.blue, 12), ...cap('have to は do／does を使う')),
+    add: fresh(bx(10, 14, 145, 34, 'must：助動詞', C.red, FILL.red, 11), bx(165, 14, 145, 34, 'have to：一般動詞', C.blue, FILL.blue, 10), bx(10, 56, 145, 34, 'must not ＋ 原形', C.red, FILL.red, 12), bx(165, 56, 145, 34, "don't have to ＋ 原形", C.blue, FILL.blue, 11), bx(10, 98, 300, 34, 'Do you have to leave now?', C.blue, FILL.blue, 12), ...cap('have to は do／does を使う')),
   },
   {
     note: '❓have to は、いつ has to になるのでしょう。→ 主語が3人称単数の he・she・it のときだけです。She has to get up early.（彼女は早く起きなければならない）。否定は She doesn\'t have to …、疑問は Does she have to …? です。',
@@ -910,6 +910,126 @@ const e203: DiagramFigure = show([
   },
 ], '並べかえ：助動詞');
 
+// ───────── new20_j2_eigo_04 並べかえ④：不定詞 ─────────
+const e204: DiagramFigure = show([
+  {
+    note: '不定詞の意味は知っていても、並べかえになると to をどこに置くか迷います。出発点は1つ、to ＋ 動詞の原形は「バラバラにせず1つのかたまり」として動かすことです。',
+    add: [bx(10, 20, 80, 34, 'My dream is', C.gray, FILL.gray, 11), bx(96, 20, 120, 34, 'to become', C.green, FILL.green, 13), bx(222, 20, 88, 34, 'a teacher.', C.gray, FILL.gray, 11), lb(156, 74, '↑ to ＋ 原形 は 1かたまり', 12, C.green, 'middle', true), ...cap('to と原形は 離さない')],
+  },
+  {
+    note: '❓名詞的用法は、文のどこに置くのでしょう。→ 「〜すること」という名詞の働きなので、主語・目的語・補語の位置です。My dream is to become a teacher.（夢は先生になること＝補語）、I want to visit Okinawa.（沖縄を訪れたい＝目的語）。動詞を見つけて、そのあとに to ＋ 原形を続けます。',
+    add: fresh(bx(10, 14, 300, 34, 'My dream is  [to become a teacher]  補語', C.blue, FILL.blue, 11), bx(10, 58, 300, 34, 'I want  [to visit Okinawa]  目的語', C.blue, FILL.blue, 11), lb(160, 112, '動詞のあとに to ＋ 原形をセットで', 12, C.ink, 'middle', true), ...cap('名詞的用法 ＝ 「〜すること」')),
+  },
+  {
+    note: '❓形容詞的用法は、どこに置くのでしょう。→ 修飾する名詞のすぐ後ろです。I have a lot of homework to do.（やるべき宿題がたくさんある）。homework を説明するので、homework の直後に to do を置きます。名詞の前には置きません。',
+    add: fresh(bx(5, 20, 70, 34, 'I have', C.gray, FILL.gray, 12), bx(80, 20, 130, 34, 'a lot of homework', C.blue, FILL.blue, 11), bx(215, 20, 95, 34, 'to do.', C.green, FILL.green, 13), ar(262, 60, 160, 60, C.green), lb(160, 82, '名詞を後ろから説明', 12, C.green, 'middle', true), bx(30, 100, 260, 30, '× to do a lot of homework', C.red, FILL.red, 11), ...cap('名詞の直後に to ＋ 原形', C.green)),
+  },
+  {
+    note: '❓something のときは、形容詞はどこに置くのでしょう。→ something のすぐ後ろです。something cold to drink（何か冷たい飲み物）の順で、形容詞が先、to 不定詞があとです。something などは名詞を後ろから説明するので、形容詞も後ろに回ります。',
+    add: fresh(bx(5, 20, 100, 36, 'something', C.main, FILL.warm, 13), bx(110, 20, 70, 36, 'cold', C.red, FILL.red, 13), bx(185, 20, 125, 36, 'to drink', C.green, FILL.green, 13), lb(145, 78, '形容詞が先', 12, C.red, 'middle', true), lb(247, 78, 'to 不定詞があと', 12, C.green, 'middle', true), bx(40, 98, 240, 30, '× something to drink cold', C.red, FILL.red, 11), ...cap('something ＋ 形容詞 ＋ to ＋ 原形')),
+  },
+  {
+    note: '副詞的用法の目的「〜するために」は、文の骨組みを先に作ります。I went to the library to study math.（数学を勉強するために図書館へ行った）。まず I went to the library を完成させ、そのあとに to study math を続けます。',
+    add: fresh(bx(5, 20, 190, 34, 'I went to the library', C.blue, FILL.blue, 12), bx(200, 20, 110, 34, 'to study math.', C.green, FILL.green, 11), lb(100, 74, '① 骨組みを先に', 12, C.blue, 'middle', true), lb(255, 74, '② あとに続ける', 12, C.green, 'middle', true), lb(160, 112, '「〜するために」', 12, C.ink, 'middle', true), ...cap('目的 ＝ 文の後ろ')),
+  },
+  {
+    note: '副詞的用法には「感情の原因」もあります。I was glad to see you.（あなたに会えてうれしかった）。glad、happy、sad などの感情を表す形容詞の直後に、to ＋ 原形を続けます。「会えて」と、うれしい理由を説明しています。',
+    add: fresh(bx(5, 20, 50, 34, 'I', C.gray, FILL.gray, 13), bx(60, 20, 60, 34, 'was', C.gray, FILL.gray, 13), bx(125, 20, 70, 34, 'glad', C.red, FILL.red, 13), bx(200, 20, 110, 34, 'to see you.', C.green, FILL.green, 12), lb(160, 80, '感情の形容詞の直後に to ＋ 原形', 12, C.ink, 'middle', true), lb(160, 104, 'glad／happy／sad', 11, C.gray), ...cap('感情の原因 ＝ 〜して')),
+  },
+  {
+    note: '❓how to や what to は、なぜ1つのかたまりで動かすのでしょう。→ how to 〜（〜の仕方）、what to 〜（何を〜すべきか）、where to 〜（どこで〜すべきか）で、疑問詞 ＋ to不定詞全体が1つの名詞のはたらきをするからです。例題（ me / how / tell / to / get ）to the station. は tell me how to get to the station.',
+    add: fresh(bx(5, 16, 60, 32, 'tell', C.blue, FILL.blue, 12), bx(70, 16, 50, 32, 'me', C.blue, FILL.blue, 12), bx(125, 16, 120, 32, 'how to get', C.green, FILL.green, 13), bx(250, 16, 65, 32, 'to the …', C.gray, FILL.gray, 10), lb(185, 66, '疑問詞 ＋ to ＋ 原形 ＝ 1かたまり', 12, C.green, 'middle', true), lb(160, 96, 'tell me ＋ how to get …', 12, C.ink, 'middle', true), ...cap('how と to は 離さない', C.green)),
+  },
+  {
+    note: 'よくあるミスをまとめます。①how と to を離してしまう。②something cold to drink の cold と to drink の順を逆にする。③形容詞的用法の to 不定詞を、名詞の前に置いてしまう。並べかえたあと、この3つを見直します。',
+    add: fresh(bx(10, 12, 300, 30, '① × how … to を離す　→ how to get', C.red, FILL.red, 11), bx(10, 48, 300, 30, '② × something to drink cold', C.red, FILL.red, 11), bx(10, 84, 300, 30, '③ × to do a lot of homework', C.red, FILL.red, 11), ...cap('仕上げのチェック', C.red)),
+  },
+  {
+    note: 'まとめです。to ＋ 原形は1かたまり。名詞的用法は主語・目的語・補語の位置、形容詞的用法は名詞の直後、something ＋ 形容詞 ＋ to 不定詞の順、副詞的用法は骨組みのあとに続けます。how to などは離しません。',
+    add: sum3('to ＋ 原形は 1かたまり', '形容詞的：名詞の直後 ／ something ＋ 形容詞 ＋ to', '副詞的：文の後ろ ／ how to は離さない', '不定詞の並べかえができる'),
+  },
+], '並べかえ：不定詞');
+
+// ───────── new20_j2_eigo_05 並べかえ⑤：動名詞 ─────────
+const e205: DiagramFigure = show([
+  {
+    note: '動名詞は、動詞の ing 形で「〜すること」という名詞の働きをします。不定詞と形が似ているので、並べかえでは「どちらの形か」で迷います。動名詞だけが使える場面を整理します。',
+    add: [bx(15, 20, 130, 38, 'read', C.gray, FILL.gray, 14), ar(150, 39, 170, 39, C.main), bx(175, 20, 130, 38, 'reading', C.green, FILL.green, 14), lb(160, 84, '「読むこと」', 13, C.ink, 'middle', true), ...cap('動詞の ing 形 ＝ 〜すること')],
+  },
+  {
+    note: '❓動名詞だけを目的語にとる動詞があります。enjoy、finish、stop、mind、avoid、give up、practice、consider、suggest、keep。He finished cleaning his room.（部屋の掃除を終えた）。動詞の直後に動名詞、そのあとに目的語を置きます。',
+    add: fresh(bx(5, 8, 150, 26, 'enjoy ／ finish ／ stop', C.blue, FILL.blue, 11), bx(165, 8, 150, 26, 'mind ／ avoid ／ give up', C.blue, FILL.blue, 11), bx(5, 40, 150, 26, 'practice ／ consider', C.blue, FILL.blue, 11), bx(165, 40, 150, 26, 'suggest ／ keep', C.blue, FILL.blue, 11), bx(5, 78, 70, 32, 'He', C.gray, FILL.gray, 12), bx(80, 78, 80, 32, 'finished', C.red, FILL.red, 12), bx(165, 78, 90, 32, 'cleaning', C.green, FILL.green, 12), bx(260, 78, 55, 32, 'his …', C.gray, FILL.gray, 11), ...cap('動詞 → 動名詞 → 目的語')),
+  },
+  {
+    note: '❓動名詞が主語のとき、be動詞は is でしょうか are でしょうか。→ is です。動名詞のかたまりは「〜すること」という1つのことがらなので、単数あつかいです。Swimming is my favorite sport.（水泳は私の好きなスポーツだ）。',
+    add: fresh(bx(5, 20, 120, 34, 'Swimming', C.green, FILL.green, 13), bx(130, 20, 50, 34, 'is', C.red, FILL.red, 13), bx(185, 20, 130, 34, 'my favorite sport.', C.gray, FILL.gray, 11), lb(160, 76, '動名詞 ＝ 1つのことがら ＝ 単数', 12, C.ink, 'middle', true), bx(40, 98, 240, 30, '× Swimming are my favorite sport.', C.red, FILL.red, 11), ...cap('動名詞が主語 → is', C.red)),
+  },
+  {
+    note: '❓前置詞のあとに動詞を続けるときは、どうするのでしょう。→ 必ず動名詞にします。前置詞のあとには名詞の働きをするものしか置けないからです。to 不定詞は使えません。She is interested in learning Chinese.（中国語を学ぶことに興味がある）、I\'m good at playing the piano.',
+    add: fresh(bx(5, 14, 80, 34, 'interested in', C.red, FILL.red, 10), bx(90, 14, 100, 34, 'learning', C.green, FILL.green, 13), bx(5, 58, 80, 34, 'good at', C.red, FILL.red, 11), bx(90, 58, 100, 34, 'playing', C.green, FILL.green, 13), bx(200, 14, 115, 34, '× to learn', C.red, FILL.red, 12), lb(160, 114, '前置詞 ＋ 動名詞（to 不定詞は不可）', 12, C.ink, 'middle', true), ...cap('前置詞のあとは -ing', C.red)),
+  },
+  {
+    note: '❓look forward to のあとは、なぜ -ing なのでしょう。→ この to は不定詞の to ではなく前置詞だからです。前置詞のあとなので動名詞になります。例題（ looking / to / forward / seeing / am ）you soon. は、I am looking forward to seeing you soon. です。',
+    add: fresh(bx(5, 16, 40, 32, 'I', C.blue, FILL.blue, 12), bx(50, 16, 40, 32, 'am', C.blue, FILL.blue, 12), bx(95, 16, 80, 32, 'looking', C.gray, FILL.gray, 11), bx(180, 16, 70, 32, 'forward', C.gray, FILL.gray, 11), bx(255, 16, 60, 32, 'to', C.red, FILL.red, 12), bx(100, 64, 100, 32, 'seeing', C.green, FILL.green, 13), lb(285, 66, '← 前置詞', 11, C.red, 'middle', true), lb(160, 114, 'to の直後は -ing 形', 12, C.ink, 'middle', true), ...cap('looking forward to ＋ -ing')),
+  },
+  {
+    note: 'go ~ing は決まった言い方です。We went shopping yesterday.（昨日、買い物に行った）。go のあとに動名詞を直接続けます。go to shopping とはしません。',
+    add: fresh(bx(15, 14, 290, 34, 'We went shopping yesterday.', C.green, FILL.green, 13), bx(15, 58, 290, 34, '× We went to shopping yesterday.', C.red, FILL.red, 12), lb(160, 114, 'go ＋ -ing（to は入らない）', 12, C.ink, 'middle', true), ...cap('go ～ing は決まった形')),
+  },
+  {
+    note: '❓動名詞と現在分詞（進行形の ing）は、形が同じです。どう見分けるのでしょう。→ 文の中の働きです。Reading books is fun. の Reading は「読むこと」で主語になる名詞。I am reading a book. の reading は be動詞とセットの進行形です。',
+    add: fresh(bx(10, 14, 300, 34, 'Reading books is fun.（名詞 ＝ 動名詞）', C.green, FILL.green, 12), bx(10, 58, 300, 34, 'I am reading a book.（進行形）', C.blue, FILL.blue, 12), lb(160, 114, '形は同じ、働きで見分ける', 12, C.ink, 'middle', true), ...cap('働きで見分ける')),
+  },
+  {
+    note: 'よくあるミスです。①to のあとに see を原形のまま置く（× looking forward to see）。②動名詞が主語のとき be動詞を are にする。③前置詞のあとに to 不定詞を置く。見直すときに、前置詞か、主語か、を確かめます。',
+    add: fresh(bx(10, 12, 300, 30, '① × looking forward to see → seeing', C.red, FILL.red, 11), bx(10, 48, 300, 30, '② × Swimming are → Swimming is', C.red, FILL.red, 11), bx(10, 84, 300, 30, '③ × good at to play → playing', C.red, FILL.red, 11), ...cap('仕上げのチェック', C.red)),
+  },
+  {
+    note: 'まとめです。動名詞は「〜すること」。enjoy・finish など動名詞だけをとる動詞があり、前置詞のあとも動名詞です。主語のときは単数あつかいで is。look forward to の to は前置詞です。',
+    add: sum3('動名詞 ＝ 〜すること（主語なら is）', 'enjoy・finish… ／ 前置詞のあとは -ing', 'looking forward to ＋ -ing ／ go ～ing', '動名詞の並べかえができる'),
+  },
+], '並べかえ：動名詞');
+
+// ───────── new20_j2_eigo_06 並べかえ⑥：SVOO ─────────
+const e206: DiagramFigure = show([
+  {
+    note: '「父は私に腕時計をくれた」のような文を、英語では〈主語 ＋ 動詞 ＋ 人 ＋ 物〉の順に並べます。My father gave me a watch. 受け取る人が先、わたす物があとです。この形をSVOOといいます。',
+    add: [bx(5, 20, 70, 34, 'My father', C.gray, FILL.gray, 11), bx(80, 20, 60, 34, 'gave', C.red, FILL.red, 12), bx(145, 20, 50, 34, 'me', C.blue, FILL.blue, 13), bx(200, 20, 110, 34, 'a watch.', C.green, FILL.green, 12), lb(110, 74, '動詞', 11, C.red, 'middle', true), lb(170, 74, '人', 12, C.blue, 'middle', true), lb(255, 74, '物', 12, C.green, 'middle', true), ...cap('動詞 → 人 → 物')],
+  },
+  {
+    note: '❓なぜ、人が先で物があとなのでしょう。→ give・teach・show・tell は「相手に向かって何かをわたす」動作だからです。受け取る相手（人）を先に言い、わたす中身（物）をあとに言う、と型で覚えます。',
+    add: fresh(bx(10, 40, 80, 40, '父', C.gray, FILL.gray, 14), ar(94, 60, 150, 60, C.main), bx(154, 40, 60, 40, '私', C.blue, FILL.blue, 14), bx(222, 40, 88, 40, '腕時計', C.green, FILL.green, 13), lb(120, 28, 'わたす', 11, C.main, 'middle', true), lb(184, 100, '先に（相手）', 11, C.blue, 'middle', true), lb(266, 100, 'あとに（中身）', 11, C.green, 'middle', true), ...cap('受け取る人 → わたす物')),
+  },
+  {
+    note: '並べかえの手順は3つです。①動詞を見つける。②その直後に人を置く。③最後に物を置く。例題（ me / a / bought / bag / mother / my ）は、My mother bought me a bag.（母は私にかばんを買ってくれた）になります。',
+    add: fresh(bx(5, 14, 80, 32, 'My mother', C.gray, FILL.gray, 11), bx(90, 14, 70, 32, 'bought', C.red, FILL.red, 12), bx(165, 14, 40, 32, 'me', C.blue, FILL.blue, 12), bx(210, 14, 100, 32, 'a bag.', C.green, FILL.green, 12), lb(160, 70, '① 動詞　② 人　③ 物', 13, C.ink, 'middle', true), lb(160, 96, '機械的に守れば 日本語に引きずられない', 11, C.gray), ...cap('動詞 → 人 → 物 の順')),
+  },
+  {
+    note: 'SVOOをとる代表的な動詞です。give（あげる）、show（見せる）、teach（教える）、tell（話す）、send（送る）、buy（買う）、make（作る）。She teaches us English.（彼女は私たちに英語を教える）。',
+    add: fresh(bx(10, 14, 145, 28, 'give ／ show ／ teach', C.blue, FILL.blue, 12), bx(165, 14, 145, 28, 'tell ／ send', C.blue, FILL.blue, 12), bx(10, 50, 145, 28, 'buy ／ make', C.main, FILL.warm, 12), lb(160, 100, 'She teaches us English.', 13, C.ink, 'middle', true), lb(160, 122, '人（us）→ 物（English）', 11, C.gray), ...cap('SVOOをとる動詞')),
+  },
+  {
+    note: '❓物が it や them のときは、どうなるでしょう。→ SVOO のままにせず、SVO ＋ to／for の形にします。Give me it. は不自然で、Give it to me. が自然です。英語は新しい情報や重い情報を文の後ろに置く習慣があり、軽い代名詞 it を最後に置くと不自然に響くからです。',
+    add: fresh(bx(15, 14, 290, 34, '△ Give me it.（不自然）', C.red, FILL.red, 13), bx(15, 58, 290, 34, '○ Give it to me.', C.green, FILL.green, 13), lb(160, 114, '軽い語（it）は 最後に置かない', 12, C.ink, 'middle', true), ...cap('物が代名詞 → SVO ＋ to', C.green)),
+  },
+  {
+    note: '並べかえの合図です。語群に it や them と to（または for）が両方あれば、Give it to me. の形が正解の可能性が高いです。例題（ it / to / give / me ）は Give it to me. です。it を見たら「to／for を使う形かも」と考えます。',
+    add: fresh(bx(5, 20, 80, 34, 'Give', C.red, FILL.red, 13), bx(90, 20, 50, 34, 'it', C.green, FILL.green, 13), bx(145, 20, 50, 34, 'to', C.main, FILL.warm, 13), bx(200, 20, 60, 34, 'me.', C.blue, FILL.blue, 13), lb(160, 80, '語群に it と to がそろっている', 12, C.ink, 'middle', true), ...cap('it ＋ to が合図', C.green)),
+  },
+  {
+    note: '❓to と for は、どう使い分けるのでしょう。→ 動詞によって決まっています。give・tell・show・send・teach は to、buy・make・cook は for です。ask だけは of を使う特別な動詞です。',
+    add: fresh(bx(10, 14, 300, 30, 'to：give／tell／show／send／teach', C.blue, FILL.blue, 11), bx(10, 50, 300, 30, 'for：buy／make／cook', C.main, FILL.warm, 12), bx(10, 86, 300, 30, 'of：ask（特別）', C.purple, FILL.purple, 12), ...cap('動詞で to／for が決まる')),
+  },
+  {
+    note: '疑問文や否定文でも、「人 ＋ 物」の順は崩れません。Did you send her the letter?（彼女にその手紙を送りましたか）、He didn\'t tell me the truth.（彼は私に真実を話さなかった）。Did や didn\'t を足すだけで、あとはそのままです。',
+    add: fresh(bx(5, 16, 60, 32, 'Did you', C.gray, FILL.gray, 11), bx(70, 16, 60, 32, 'send', C.red, FILL.red, 12), bx(135, 16, 50, 32, 'her', C.blue, FILL.blue, 12), bx(190, 16, 125, 32, 'the letter?', C.green, FILL.green, 12), bx(5, 62, 100, 32, "He didn't tell", C.gray, FILL.gray, 11), bx(110, 62, 50, 32, 'me', C.blue, FILL.blue, 12), bx(165, 62, 120, 32, 'the truth.', C.green, FILL.green, 12), ...cap('疑問・否定でも 人 → 物')),
+  },
+  {
+    note: 'まとめです。SVOO は〈動詞 ＋ 人 ＋ 物〉で、疑問文・否定文でも崩れません。物が it・them のときは SVO ＋ to／for（語群に to・for があるのが合図）。to は give など、for は buy など、ask は of です。',
+    add: sum3('動詞 ＋ 人 ＋ 物（疑問・否定でも同じ）', '物が it／them → Give it to me.', 'to：give 系 ／ for：buy 系 ／ of：ask', 'SVOO が組み立てられる'),
+  },
+], '並べかえ：SVOO');
+
 export const XF_KEJ_FIGURES: Record<string, DiagramFigure> = {
   'xf_new20_j1_eigo_03': e03,
   'xf_new20_j1_eigo_04': e04,
@@ -932,6 +1052,9 @@ export const XF_KEJ_FIGURES: Record<string, DiagramFigure> = {
   'xf_new20_j2_eigo_01': e201,
   'xf_new20_j2_eigo_02': e202,
   'xf_new20_j2_eigo_03': e203,
+  'xf_new20_j2_eigo_04': e204,
+  'xf_new20_j2_eigo_05': e205,
+  'xf_new20_j2_eigo_06': e206,
 };
 
 export const XF_KEJ_SECTIONS: Record<string, string> = {
@@ -956,4 +1079,7 @@ export const XF_KEJ_SECTIONS: Record<string, string> = {
   'new20_j2_eigo_01#0': 'xf_new20_j2_eigo_01',
   'new20_j2_eigo_02#0': 'xf_new20_j2_eigo_02',
   'new20_j2_eigo_03#0': 'xf_new20_j2_eigo_03',
+  'new20_j2_eigo_04#0': 'xf_new20_j2_eigo_04',
+  'new20_j2_eigo_05#0': 'xf_new20_j2_eigo_05',
+  'new20_j2_eigo_06#0': 'xf_new20_j2_eigo_06',
 };
