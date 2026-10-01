@@ -775,7 +775,7 @@ const k20: DiagramFigure = show([
   },
   {
     note: '❓なぜ左右に並べるのでしょう。→ 二つの物事の「対立」が、目で見てすぐわかるからです。どちらを筆者が支持しているかも、矢印の向きで確かめられます。',
-    add: fresh(bx(10, 20, 100, 40, 'A', C.blue, FILL.blue, 15), bx(210, 20, 100, 40, 'B', C.green, FILL.green, 15), lb(160, 40, '対立', 14, C.red, 'middle', true), ar(112, 40, 150, 40, C.red), ar(208, 40, 170, 40, C.red), lb(160, 90, '目で見て すぐわかる', 13, C.ink, 'middle', true), lb(160, 114, '矢印の向き ＝ 筆者の支持', 12, C.blue, 'middle', true), ...cap('対立が 目に見える', C.red)),
+    add: fresh(bx(10, 20, 100, 40, 'A', C.blue, FILL.blue, 15), bx(210, 20, 100, 40, 'B', C.green, FILL.green, 15), lb(160, 26, '対立', 13, C.red, 'middle', true), ar(112, 44, 150, 44, C.red), ar(208, 44, 170, 44, C.red), lb(160, 90, '目で見て すぐわかる', 13, C.ink, 'middle', true), lb(160, 114, '矢印の向き ＝ 筆者の支持', 12, C.blue, 'middle', true), ...cap('対立が 目に見える', C.red)),
   },
   {
     note: '問題解決型の図です。「問題提起」から「原因①」「原因②」へ分かれ、「解決策」にまとまります。原因が複数あるときも、矢印でつなぐと見落としません。',
@@ -842,14 +842,14 @@ const k21: DiagramFigure = show([
 // ───────── kokugo_22_shinjo_henka 心情変化を正確に読み取る技術（複数回の変化と心情曲線） ─────────
 const jcX = [50, 110, 170, 230, 290];
 const jcY = [104, 44, 106, 36, 58];
-const jcName = ['試合前', '開始直後', '失点した後', '声援を受けて', '試合終了後'];
-const jcFeel = ['緊張・不安', '集中・興奮', '焦り・落胆', '奮起・決意', '達成感と悔しさ'];
+const jcName = ['試合前', '開始直後', '失点後', '声援', '終了後'];
+const jcFeel = ['緊張・不安', '集中・興奮', '焦り・落胆', '奮起・決意', '達成感・悔しさ'];
 const jcAxis = () => [lb(18, 20, '山', 11, C.green, 'middle', true), lb(18, 120, '谷', 11, C.red, 'middle', true), ln(30, 72, 304, 72, C.gray, true, 1), ln(30, 14, 30, 128, C.gray)];
 const jcPoint = (i: number) => [
   ...(i > 0 ? [ln(jcX[i - 1], jcY[i - 1], jcX[i], jcY[i], C.main, false, 2.4)] : []),
   ci(jcX[i], jcY[i], 6, undefined, i % 2 === 0 && i !== 4 ? C.red : C.green, i % 2 === 0 && i !== 4 ? FILL.red : FILL.green),
   lb(jcX[i], 138, '①②③④⑤'[i] + jcName[i], 9, C.gray, 'middle'),
-  lb(jcX[i], jcY[i] + (jcY[i] > 72 ? 18 : -14), jcFeel[i], 10, C.ink, 'middle', true),
+  lb(i === 4 ? 314 : jcX[i], jcY[i] + (jcY[i] > 72 ? 18 : -14), jcFeel[i], 10, C.ink, i === 4 ? 'end' : 'middle', true),
 ];
 const k22: DiagramFigure = show([
   {
@@ -882,13 +882,99 @@ const k22: DiagramFigure = show([
   },
   {
     note: '❓記述では、浮き沈みをぜんぶ書くのでしょうか。→ 細かく書く必要はありません。「最初はA、途中でBという浮き沈みを経て、最終的にはCという心情に至った」という大きな流れを示します。',
-    add: fresh(bx(10, 14, 300, 28, '最初は A（不安）', C.blue, FILL.blue, 12), bx(10, 48, 300, 28, '途中で B（落胆→奮起の浮き沈み）', C.gray, FILL.gray, 12), bx(10, 82, 300, 28, '最終的に C（達成感）に至った', C.red, FILL.red, 12), ar(160, 44, 160, 48, C.main), ...cap('大きな流れで書く', C.main)),
+    add: fresh(bx(10, 14, 300, 28, '最初は A（不安）', C.blue, FILL.blue, 12), bx(10, 48, 300, 28, '途中で B（落胆→奮起の浮き沈み）', C.gray, FILL.gray, 12), bx(10, 82, 300, 28, '最終的に C（達成感）に至った', C.red, FILL.red, 12), ...cap('大きな流れで書く', C.main)),
   },
   {
     note: 'まとめです。心情曲線は、場面ごとの気持ちを山と谷で並べたグラフ。途中の一場面だけで「これが変化だ」と決めつけず、最初から最後まで通して、最終的な到達点をつかみます。',
     add: fresh(bx(10, 10, 300, 30, '場面ごとに 山と谷で並べる', C.blue, FILL.blue, 12), bx(10, 46, 300, 30, '一場面で決めつけない', C.gray, FILL.gray, 12), bx(10, 82, 300, 30, '最終的な到達点 ＝ テーマに直結', C.red, FILL.red, 12), ...cap('通して読んで 到達点を見る', C.main)),
   },
 ], '心情曲線');
+
+// ───────── kokugo_s001 音読みと訓読み①：二つの読み方のちがい ─────────
+const onKun = (rows: string[][], y0: number, step = 32) => rows.flatMap((r, i) => [
+  bx(8, y0 + i * step, 44, 26, r[0], C.gray, FILL.gray, 15), bx(58, y0 + i * step, 78, 26, r[1], C.blue, FILL.blue, 13), bx(142, y0 + i * step, 78, 26, r[2], C.main, FILL.warm, 13),
+]);
+const ks001: DiagramFigure = show([
+  {
+    note: '漢字は中国から日本に伝わった文字です。だから一つの漢字に二つの読み方があります。中国での発音をもとにした「音読み（おんよみ）」と、その漢字の意味にあたる日本語をあてた「訓読み（くんよみ）」です。',
+    add: [bx(10, 24, 140, 60, '音読み\n中国の発音がもと', C.blue, FILL.blue, 13), bx(170, 24, 140, 60, '訓読み\n日本語をあてた', C.main, FILL.warm, 13), lb(160, 112, '辞書では 音＝カタカナ／訓＝ひらがな', 11, C.gray, 'middle', true), ...cap('漢字の 2 つの読み方')],
+  },
+  {
+    note: '例です。山は、音読みがサン、訓読みがやま。川は、セン、かわ。花は、カ、はな。馬は、バ、うま。読は、ドク、よ（む）です。音はカタカナ、訓はひらがなで書きます。',
+    add: fresh(bx(8, 8, 44, 22, '', C.gray, FILL.gray), bx(58, 8, 78, 22, '音読み', C.blue, FILL.blue, 12), bx(142, 8, 78, 22, '訓読み', C.main, FILL.warm, 12), ...onKun([['山', 'サン', 'やま'], ['川', 'セン', 'かわ'], ['花', 'カ', 'はな'], ['馬', 'バ', 'うま']], 36, 28), ...cap('音＝カタカナ／訓＝ひらがな')),
+  },
+  {
+    note: '❓音読みと訓読みは、どうやって見分けるのでしょう。→ 目安が三つあります。目安①は、聞いただけで意味がわかるかどうか。「やま」「かわ」は聞いただけでわかるので訓読み。「サン」「セン」だけでは何のことかわからないので音読みです。',
+    add: fresh(bx(10, 14, 140, 36, '「やま」「かわ」', C.main, FILL.warm, 13), ar(80, 52, 80, 68, C.main), bx(10, 70, 140, 30, '意味がわかる → 訓', C.main, FILL.warm, 12), bx(170, 14, 140, 36, '「サン」「セン」', C.blue, FILL.blue, 13), ar(240, 52, 240, 68, C.blue), bx(170, 70, 140, 30, '意味がわからない → 音', C.blue, FILL.blue, 11), ...cap('目安① 聞いて意味がわかるか', C.red)),
+  },
+  {
+    note: '目安②は、送りがながつくかどうかです。「動く」「美しい」「食べる」のように、送りがながつく読みは、ほぼ訓読みです。',
+    add: fresh(...['動く', '美しい', '食べる'].map((t, i) => bx(10 + i * 102, 20, 92, 40, t, C.main, FILL.warm, 16)), lb(160, 86, '送りがなが つく', 14, C.ink, 'middle', true), ar(160, 96, 160, 114, C.main), bx(80, 116, 160, 26, 'ほぼ 訓読み', C.main, FILL.warm, 13), ...cap('目安② 送りがながつくか', C.main)),
+  },
+  {
+    note: '目安③は、音の形です。「ン・ク・キ・ツ・チ」で終わる読み（サン・ドク・エキ・ハツ）や、キャ・シュ・チョウのような小さい「ゃゅょ」をふくむ読みは、音読みであることが多いです。',
+    add: fresh(...['サン', 'ドク', 'エキ', 'ハツ'].map((t, i) => bx(8 + i * 78, 14, 70, 32, t, C.blue, FILL.blue, 14)), lb(160, 62, 'ン・ク・キ・ツ・チ で終わる', 12, C.blue, 'middle', true), ...['キャク', 'シュ', 'チョウ'].map((t, i) => bx(10 + i * 104, 82, 94, 32, t, C.blue, FILL.blue, 14)), lb(160, 130, '小さい「ゃゅょ」をふくむ', 12, C.blue, 'middle', true), ...cap('目安③ 音の形 → 音読みが多い', C.blue)),
+  },
+  {
+    note: '❓三つの目安でいつも決まるのでしょうか。→ ①がいちばん確実ですが、例外があります。絵（エ）・肉（ニク）・茶（チャ）・駅（エキ）は、意味がわかっても音読みしかない漢字です。日常語になっているので、訓読みと思いこみがちです。',
+    add: fresh(...[['絵', 'エ'], ['肉', 'ニク'], ['茶', 'チャ'], ['駅', 'エキ']].flatMap((r, i) => [bx(8 + i * 78, 14, 70, 44, r[0] + '\n' + r[1], C.blue, FILL.blue, 15)]), lb(160, 80, '意味がわかる のに 音読みだけ', 13, C.red, 'middle', true), lb(160, 104, '「絵をかく」「肉を焼く」は日常語', 11, C.gray, 'middle'), ...cap('例外① 音読みしかない漢字', C.red)),
+  },
+  {
+    note: '反対に、訓読みしかない漢字もあります。日本で作られた漢字を国字（こくじ）といい、中国にない字なので、中国の発音がありません。畑（はた・はたけ）、峠（とうげ）、込（こ－む）、辻（つじ）が例です。',
+    add: fresh(...[['畑', 'はた・はたけ'], ['峠', 'とうげ'], ['込', 'こむ'], ['辻', 'つじ']].map((r, i) => bx(8 + i * 78, 14, 70, 56, r[0] + '\n' + r[1], C.main, FILL.warm, i === 0 ? 11 : 13)), lb(160, 92, '日本で作られた漢字 ＝ 国字', 13, C.main, 'middle', true), lb(160, 116, '中国の発音がない → 訓読みだけ', 12, C.ink, 'middle'), ...cap('例外② 訓読みしかない漢字', C.main)),
+  },
+  {
+    note: 'まとめです。音読みはカタカナ（中国の発音がもと）、訓読みはひらがな（日本語をあてた）。目安は、①聞いて意味がわかるか、②送りがながつくか、③音の形。例外は、絵・肉・茶・駅（音だけ）と、畑・峠・込・辻（訓だけ）です。',
+    add: fresh(bx(10, 8, 300, 26, '① 聞いて意味がわかる → 訓', C.main, FILL.warm, 12), bx(10, 38, 300, 26, '② 送りがながつく → 訓', C.main, FILL.warm, 12), bx(10, 68, 300, 26, '③ ン・ク・キ・ツ・チ／ゃゅょ → 音', C.blue, FILL.blue, 12), bx(10, 98, 300, 26, '例外：絵肉茶駅＝音のみ／畑峠込辻＝訓のみ', C.red, FILL.red, 11), ...cap('目安 3 つと 例外を覚える', C.main)),
+  },
+], '音読みと訓読みの見分け方');
+
+// ───────── kokugo_s002 音読みと訓読み②：熟語の四つの読み方（判定の手順） ─────────
+const jukuRow = (word: string, up: string, upT: string, down: string, downT: string, kind: string, y: number, c: string, f: string) => [
+  bx(8, y, 56, 30, word, C.gray, FILL.gray, 14),
+  bx(70, y, 74, 30, up + '＝' + upT, upT === '音' ? C.blue : C.main, upT === '音' ? FILL.blue : FILL.warm, 11),
+  lb(152, y + 15, '＋', 13, C.ink, 'middle', true),
+  bx(160, y, 74, 30, down + '＝' + downT, downT === '音' ? C.blue : C.main, downT === '音' ? FILL.blue : FILL.warm, 11),
+  bx(240, y, 72, 30, kind, c, f, 11),
+];
+const ks002: DiagramFigure = show([
+  {
+    note: '二字熟語（にじじゅくご）は、上の字と下の字を音で読むか訓で読むかで、4通りに分かれます。音＋音（学校・読書）、訓＋訓（山道・花見）、音＋訓＝重箱読み（じゅうばこよみ）、訓＋音＝湯桶読み（ゆとうよみ）です。',
+    add: [bx(8, 14, 148, 50, '音＋音\n学校・読書', C.blue, FILL.blue, 12), bx(164, 14, 148, 50, '訓＋訓\n山道・花見', C.main, FILL.warm, 12), bx(8, 74, 148, 50, '音＋訓＝重箱読み\n台所・本屋', C.purple, FILL.purple, 11), bx(164, 74, 148, 50, '訓＋音＝湯桶読み\n手本・場所', C.green, FILL.green, 11), ...cap('熟語の読みは 4 通り')],
+  },
+  {
+    note: '❓重箱読みと湯桶読みは、どちらがどちらか忘れそうです。→ 名前そのものが見本です。「重箱」は「ジュウ（音）＋ばこ（訓）」なので音＋訓。「湯桶」は「ゆ（訓）＋トウ（音）」なので訓＋音。片方だけ覚えれば、もう片方はその逆です。',
+    add: fresh(bx(10, 14, 300, 28, '名前が そのまま見本', C.red, FILL.red, 13), bx(10, 52, 140, 44, '重箱\nジュウ＋ばこ', C.purple, FILL.purple, 12), bx(170, 52, 140, 44, '湯桶\nゆ＋トウ', C.green, FILL.green, 12), lb(80, 112, '音 ＋ 訓', 14, C.purple, 'middle', true), lb(240, 112, '訓 ＋ 音', 14, C.green, 'middle', true), ...cap('どちらかを覚えれば逆が決まる')),
+  },
+  {
+    note: '熟語の読みを問われたときの手順です。①上の字だけ取り出して、音か訓かを決める。②下の字だけ取り出して、同じように決める。③二つを組み合わせて名前をつける。',
+    add: fresh(...flow(['① 上の字\n音か訓か', '② 下の字\n音か訓か', '③ 組み合わせ\n名前をつける'], 22, { h: 62, size: 11, color: C.blue, fill: FILL.blue }).flat(), lb(160, 110, '上と下を 別々に判定する', 13, C.ink, 'middle', true), ...cap('判定の 3 ステップ')),
+  },
+  {
+    note: '例①「毎朝（マイあさ）」。上の「毎」は「マイ」で、それだけでは意味がわからないので音読み。下の「朝」は「あさ」で、それだけで意味がわかるので訓読み。音＋訓なので重箱読みです。',
+    add: fresh(...jukuRow('毎朝', '毎', '音', '朝', '訓', '重箱読み', 20, C.purple, FILL.purple), lb(160, 72, '毎＝マイ　意味がわからない → 音', 11, C.blue, 'middle'), lb(160, 92, '朝＝あさ　意味がわかる → 訓', 11, C.main, 'middle'), lb(160, 118, '音＋訓 ＝ 重箱読み', 14, C.purple, 'middle', true), ...cap('例① 毎朝', C.purple)),
+  },
+  {
+    note: '例②「身分（みブン）」。上の「身」は「み」で訓読み、下の「分」は「ブン」で音読み。訓＋音なので湯桶読みです。重箱読みと思いこまないように、手順どおりに上と下を別々に判定します。',
+    add: fresh(...jukuRow('身分', '身', '訓', '分', '音', '湯桶読み', 20, C.green, FILL.green), lb(160, 72, '身＝み　意味がわかる → 訓', 11, C.main, 'middle'), lb(160, 92, '分＝ブン　意味がわからない → 音', 11, C.blue, 'middle'), lb(160, 118, '訓＋音 ＝ 湯桶読み', 14, C.green, 'middle', true), ...cap('例② 身分', C.green)),
+  },
+  {
+    note: '❓同じ字でも、いつも同じ読み方になるのでしょうか。→ ちがいます。「朝食（チョウショク）」は音＋音ですが、「毎朝（マイあさ）」は重箱読みです。熟語ごとに、一つずつ判定します。',
+    add: fresh(bx(10, 14, 140, 34, '朝食', C.blue, FILL.blue, 15), bx(170, 14, 140, 34, '毎朝', C.purple, FILL.purple, 15), lb(80, 66, 'チョウ＋ショク', 12, C.blue, 'middle', true), lb(240, 66, 'マイ＋あさ', 12, C.purple, 'middle', true), lb(80, 88, '音＋音', 13, C.blue, 'middle', true), lb(240, 88, '音＋訓（重箱）', 12, C.purple, 'middle', true), lb(160, 126, '同じ「朝」でも 読みがちがう', 12, C.ink, 'middle', true), ...cap('熟語ごとに 判定する', C.red)),
+  },
+  {
+    note: 'まぎらわしい例です。団子（ダンご）は重箱読み、新顔（しんがお）は重箱読み。金物（かなもの）は訓＋訓。合図（あいズ）は湯桶読みで、合計（ゴウケイ）は音＋音です。',
+    add: fresh(...[['団子', 'ダン＋ご', '重箱読み'], ['新顔', 'しん＋がお', '重箱読み'], ['金物', 'かな＋もの', '訓＋訓'], ['合図', 'あい＋ズ', '湯桶読み'], ['合計', 'ゴウ＋ケイ', '音＋音']].flatMap((r, i) => [bx(8, 8 + i * 27, 56, 22, r[0], C.gray, FILL.gray, 12), bx(70, 8 + i * 27, 110, 22, r[1], C.main, FILL.warm, 11), bx(186, 8 + i * 27, 126, 22, r[2], C.purple, FILL.purple, 11)]), ...cap('ひとつずつ 上下を分けて確認')),
+  },
+  {
+    note: '❓どの熟語にも、この四分類が使えるのでしょうか。→ 使えないものがあります。熟字訓（じゅくじくん）の「今日・大人・七夕」などは、一字ずつに読みを分けられないので、この四つには入れず、別あつかいにします。',
+    add: fresh(...['今日', '大人', '七夕'].map((t, i) => bx(10 + i * 102, 18, 92, 40, t, C.red, FILL.red, 17)), lb(160, 84, '一字ずつに読みを分けられない', 13, C.red, 'middle', true), lb(160, 108, '→ 四分類に入れない（熟字訓）', 13, C.ink, 'middle', true), ...cap('例外：熟字訓は別あつかい', C.red)),
+  },
+  {
+    note: 'まとめです。熟語の読みは、音音・訓訓・重箱読み（音訓）・湯桶読み（訓音）の4通り。上と下を別々に音か訓か判定し、名前はジュウ＋ばこ（重箱）、ゆ＋トウ（湯桶）で思い出します。',
+    add: fresh(bx(10, 8, 300, 26, '音音／訓訓／重箱（音訓）／湯桶（訓音）', C.blue, FILL.blue, 12), bx(10, 38, 300, 26, '上と下を別々に判定', C.main, FILL.warm, 12), bx(10, 68, 300, 26, '重箱＝ジュウ＋ばこ　湯桶＝ゆ＋トウ', C.purple, FILL.purple, 12), bx(10, 98, 300, 26, '熟字訓（今日・大人）は別', C.red, FILL.red, 12), ...cap('名前が見本になっている', C.main)),
+  },
+], '熟語の四つの読み方');
 
 export const XF_CKA_FIGURES: Record<string, DiagramFigure> = {
   xf_kokugo_01_yomitoki: k01,
@@ -913,6 +999,8 @@ export const XF_CKA_FIGURES: Record<string, DiagramFigure> = {
   xf_kokugo_20_ronri_tenkai: k20,
   xf_kokugo_21_gensou_gijutsu: k21,
   xf_kokugo_22_shinjo_henka: k22,
+  xf_kokugo_s001: ks001,
+  xf_kokugo_s002: ks002,
 };
 export const XF_CKA_SECTIONS: Record<string, string> = {
   'kokugo_01_yomitoki#1': 'xf_kokugo_01_yomitoki',
@@ -937,4 +1025,6 @@ export const XF_CKA_SECTIONS: Record<string, string> = {
   'kokugo_20_ronri_tenkai#2': 'xf_kokugo_20_ronri_tenkai',
   'kokugo_21_gensou_gijutsu#1': 'xf_kokugo_21_gensou_gijutsu',
   'kokugo_22_shinjo_henka#2': 'xf_kokugo_22_shinjo_henka',
+  'kokugo_s001#0': 'xf_kokugo_s001',
+  'kokugo_s002#1': 'xf_kokugo_s002',
 };
