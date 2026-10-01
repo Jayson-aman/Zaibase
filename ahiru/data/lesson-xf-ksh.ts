@@ -490,7 +490,7 @@ const s418 = show([
     [pg(reg(12, 160, 78, 64), C.blue, 'rgba(2,132,199,0.12)'), lb(160, 70, '外角 ＝ 360÷12', 13, C.blue, 'middle', true), lb(160, 92, '＝ 30°', 15, C.red, 'middle', true)],
     '1つの外角 ＝ 360 ÷ 12 ＝ 30°', BLUE),
   S('❓なぜ内角は 180°−外角 なのでしょう。→ 1つの頂点で、内角と外角は一直線をつくる角の組なので、合わせて180°になるからです。内角は 180−30＝150° です。',
-    [ln(40, 100, 280, 100, C.ink, false, 2), ln(160, 100, 220, 40, C.blue, false, 2), lb(110, 82, '内角 ＝ ？', 13, C.blue, 'middle', true), lb(230, 80, '外角 30°', 13, C.red, 'middle', true), lb(160, 126, '内角 ＋ 外角 ＝ 180°  → 150°', 14, C.main, 'middle', true)],
+    [ln(40, 100, 280, 100, C.ink, false, 2), ln(160, 100, 220, 65, C.blue, false, 2), lb(110, 82, '内角 ＝ ？', 13, C.blue, 'middle', true), lb(230, 80, '外角 30°', 13, C.red, 'middle', true), lb(160, 126, '内角 ＋ 外角 ＝ 180°  → 150°', 14, C.main, 'middle', true)],
     '一直線 ＝ 180°', BLUE),
   S('別の方法で検算します。十二角形の内角の和は 180×(12−2)＝1800°。12個の角が等しいので 1800÷12＝150°。外角から出した値と一致しました。',
     [B(14, 14, 292, 38, '内角の和 ＝ 180 × (12−2) ＝ 1800°', MAIN, 14), B(14, 62, 292, 38, '1つの内角 ＝ 1800 ÷ 12 ＝ 150°', MAIN, 14), lb(160, 128, '外角から 150° ✓ 一致', 15, C.green, 'middle', true)],
@@ -828,7 +828,7 @@ const gp = (x: number, y: number): [number, number] => [GOX + x * GSX, GOY - y *
 const g2 = (opt: { pts?: boolean; chord?: boolean }): DiagramElement[] => [
   ...axes(GOX, GOY, 20, 300, 8, GOY + 4), ...para(2, 0, 3.1, GOX, GOY, GSX, GSY),
   ...(opt.chord ? [ln(...gp(1, 2), ...gp(3, 18), C.red, false, 2.4)] : []),
-  ...(opt.pts ? [ci(...gp(1, 2), 5, undefined, C.red, FILL.red), ci(...gp(3, 18), 5, undefined, C.red, FILL.red), lb(gp(1, 2)[0] + 6, gp(1, 2)[1] - 10, '(1、2)', 11, C.red, 'start', true), lb(gp(3, 18)[0] + 8, gp(3, 18)[1] + 4, '(3、18)', 11, C.red, 'start', true)] : []),
+  ...(opt.pts ? [ci(...gp(1, 2), 5, undefined, C.red, FILL.red), ci(...gp(3, 18), 5, undefined, C.red, FILL.red), lb(gp(1, 2)[0] - 6, gp(1, 2)[1] - 10, '(1、2)', 11, C.red, 'end', true), lb(gp(3, 18)[0] + 8, gp(3, 18)[1] + 4, '(3、18)', 11, C.red, 'start', true)] : []),
   lb(GOX + 86, 30, 'y＝2x²', 12, C.blue, 'start', true),
 ];
 const HOX = 50, HOY = 140, HSX = 54, HSY = 12;
@@ -836,7 +836,7 @@ const hp = (x: number, y: number): [number, number] => [HOX + x * HSX, HOY - y *
 const h2 = (pts: boolean): DiagramElement[] => [
   ...axes(HOX, HOY, 20, 300, 8, HOY + 4), ...para(1, 0, 3.2, HOX, HOY, HSX, HSY), ln(...hp(0.75, 0), ...hp(3.3, 10.2), C.green, false, 2),
   lb(hp(3.3, 10.2)[0] + 4, hp(3.3, 10.2)[1] + 6, 'y＝4x−3', 12, C.green, 'start', true), lb(hp(2.3, 5.3)[0] - 56, hp(2.3, 5.3)[1], 'y＝x²', 12, C.blue, 'end', true),
-  ...(pts ? [ci(...hp(1, 1), 5, undefined, C.red, FILL.red), ci(...hp(3, 9), 5, undefined, C.red, FILL.red), lb(hp(1, 1)[0] + 6, hp(1, 1)[1] - 12, '(1、1)', 11, C.red, 'start', true), lb(hp(3, 9)[0] - 8, hp(3, 9)[1] - 4, '(3、9)', 11, C.red, 'end', true)] : []),
+  ...(pts ? [ci(...hp(1, 1), 5, undefined, C.red, FILL.red), ci(...hp(3, 9), 5, undefined, C.red, FILL.red), lb(hp(1, 1)[0] - 6, hp(1, 1)[1] - 10, '(1、1)', 11, C.red, 'end', true), lb(hp(3, 9)[0] - 8, hp(3, 9)[1] - 4, '(3、9)', 11, C.red, 'end', true)] : []),
 ];
 const s444 = show([
   S('変化の割合は、一次関数と二次関数でまったく性質が違います。一次関数 y＝ax＋b はどこを取っても a（傾き）で一定。二次関数 y＝ax² は区間によって変わります。',
