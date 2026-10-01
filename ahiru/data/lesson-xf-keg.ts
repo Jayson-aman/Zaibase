@@ -19,21 +19,27 @@ const units = (s: string) => Math.max(...s.split('\n').map((l) => [...l].reduce(
 const tw = (s: string, z: number) => units(s) * z + 14;
 
 /** 一行に並べる箱。幅は文字数から決め、はみ出すときは文字を小さくする。 */
+let lastEnd = 300;
 const row = (y: number, items: [string, K?][], size = 12, h = 26, gap = 5): DiagramElement[] => {
   const total = (z: number) => items.reduce((a, [t]) => a + tw(t, z), 0) + gap * (items.length - 1);
   let z = size;
-  while (total(z) > 312 && z > 9) z -= 0.5;
+  while (total(z) > 276 && z > 9) z -= 0.5;
   let x = (320 - total(z)) / 2;
-  return items.map(([t, k]) => {
+  const out = items.map(([t, k]) => {
     const w = tw(t, z);
     const [c, f] = KC[k ?? 'm'];
     const e = bx(x, y, w, h, t, c, f, z);
     x += w + gap;
     return e;
   });
+  lastEnd = x - gap;
+  return out;
 };
 /** 箱（色キーつき） */
-const nb = (x: number, y: number, w: number, h: number, t: string, k: K = 'm', size = 12) => bx(x, y, w, h, t, KC[k][0], KC[k][1], size);
+const nb = (x: number, y: number, w: number, h: number, t: string, k: K = 'm', size = 12) => {
+  lastEnd = x + w;
+  return bx(x, y, w, h, t, KC[k][0], KC[k][1], size);
+};
 /** 上のタイトル */
 const tt = (t: string, k: K = 'm', y = 14) => lb(160, y, t, 12, TXT[k], 'middle', true);
 /** 下のひとこと */
@@ -41,8 +47,10 @@ const cp = (t: string, k: K = 'm', y = 205, size = 13) => lb(160, y, t, size, TX
 /** 小さな説明文 */
 const sm = (x: number, y: number, t: string, k: K = 'n', size = 11, anchor: 'start' | 'middle' | 'end' = 'middle') => lb(x, y, t, size, TXT[k], anchor, false);
 /** ○と× */
-const ok = (x: number, y: number) => lb(x, y, '○', 20, C.green, 'middle', true);
-const ng = (x: number, y: number) => lb(x, y, '×', 20, C.red, 'middle', true);
+const mx = () => Math.min(lastEnd + 13, 309);
+const ok = (_x: number, y: number) => lb(mx(), y, '○', 20, C.green, 'middle', true);
+const ng = (_x: number, y: number) => lb(mx(), y, '×', 20, C.red, 'middle', true);
+const ngx = (x: number, y: number) => lb(x, y, '×', 20, C.red, 'middle', true);
 
 type Sl = { note: string; add?: DiagramElement[] };
 /** まっさらな画面に描く */
@@ -387,7 +395,7 @@ reg('koko_eigo_s298', 0, [
     tt('動詞は「芯」に合わせる'),
     ...row(40, [['The students', 'b'], ['who came from', 'p'], ['Australia', 'r']], 12, 30),
     ar(60, 74, 60, 94, C.blue), lb(60, 106, '芯（複数）', 12, C.blue, 'middle', true),
-    sm(262, 90, '節の中の名詞', 'r', 11), ng(262, 118),
+    sm(262, 90, '節の中の名詞', 'r', 11), ngx(262, 118),
     ...row(142, [['The students', 'b'], ['are', 'g'], ['staying at my house.', 'n']], 12, 30),
     cp('are（× is）', 'g', 198, 14)),
   S('芯が of 句にはさまれる場合もあります。The color of the flowers which grew here is beautiful. では、which の直前の the flowers は of 句の中なので芯ではありません。主語の芯は The color（単数）で、動詞は is です。',

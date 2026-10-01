@@ -214,7 +214,7 @@ const e08: DiagramFigure = show([
   },
   {
     note: '❓なぜ文の構造を調べるのでしょう。→ 長い文でも、従属節をかっこでくくれば、残った部分が主節になり、文の骨格（だれがどうした）が見えてくるからです。長文読解の正確さが上がります。',
-    add: fresh(head('かっこでくくって骨格を出す'), bx(10, 28, 300, 32, '[When I was walking in the park,] I saw a dog [which was very big.]', C.gray, FILL.gray, 9), ar(160, 62, 160, 84, C.main), bx(70, 88, 180, 30, 'I saw a dog', C.red, FILL.red, 14), ...cap('骨格 ＝ 私は犬を見た', C.red)),
+    add: fresh(head('かっこでくくって骨格を出す'), bx(10, 24, 300, 40, '[When I was walking in the park,]\nI saw a dog [which was very big.]', C.gray, FILL.gray, 11), ar(160, 62, 160, 84, C.main), bx(70, 88, 180, 30, 'I saw a dog', C.red, FILL.red, 14), ...cap('骨格 ＝ 私は犬を見た', C.red)),
   },
   {
     note: '例を分けて見ましょう。When I was walking in the park（公園を歩いていたとき）は「いつ」を補足する従属節。I saw a dog が主節で、文の骨格。which was very big（とても大きい）は「どんな犬か」を補足する従属節です。',
@@ -222,7 +222,7 @@ const e08: DiagramFigure = show([
   },
   {
     note: '構造分析の手順です。①接続詞・関係詞（that・when・because・who・which）に印をつける。②その節がどこで終わるかを見極める。③従属節を［　］でくくり、主節の S と V を決める。④主節の意味を先に、従属節で補足する。',
-    add: fresh(...flow(['① 接続詞に\n印をつける', '② 節の\n終わりを探す', '③ [ ]でくくる\nS・V を決める', '④ 主節→従属節\nの順に読む'], 26, { h: 70, size: 10, color: C.blue, fill: FILL.blue, gap: 12 }).flat(), ...cap('主節の S・V を確定する', C.blue)),
+    add: fresh(bx(10, 22, 300, 24, '① 接続詞・関係詞に印をつける', C.blue, FILL.blue, 11), bx(10, 50, 300, 24, '② その節の終わりを探す', C.blue, FILL.blue, 11), bx(10, 78, 300, 24, '③ [ ]でくくり、主節の S・V を決める', C.blue, FILL.blue, 11), bx(10, 106, 300, 24, '④ 主節を先に、従属節で補足する', C.blue, FILL.blue, 11), ...cap('主節の S・V を確定する', C.blue)),
   },
   {
     note: '❓接続詞と前置詞は、なぜまちがえやすいのでしょう。→ 意味がほとんど同じ組があるからです。because と because of、though と in spite of、while と during。見分けは、うしろに何が来るかです。',
@@ -234,13 +234,159 @@ const e08: DiagramFigure = show([
   },
   {
     note: '入試の書きかえで確かめましょう。We stayed home because it was very cold. を because of で書きかえると、うしろを名詞にします。→ We stayed home because of the very cold weather.',
-    add: fresh(head('because → because of'), bx(10, 28, 300, 30, 'We stayed home [because it was very cold].', C.blue, FILL.blue, 10), ar(160, 60, 160, 78, C.main), bx(10, 82, 300, 30, 'We stayed home [because of the very cold weather].', C.green, FILL.green, 9), lb(160, 128, 'S＋V（it was very cold）→ 名詞（the very cold weather）', 10, C.gray, 'middle'), ...cap('うしろを名詞に直す', C.green)),
+    add: fresh(head('because → because of'), bx(10, 24, 300, 30, 'We stayed home\n[because it was very cold].', C.blue, FILL.blue, 11), ar(160, 60, 160, 78, C.main), bx(10, 82, 300, 34, 'We stayed home\n[because of the very cold weather].', C.green, FILL.green, 11), lb(160, 128, 'S＋V（it was very cold）→ 名詞（the very cold weather）', 10, C.gray, 'middle'), ...cap('うしろを名詞に直す', C.green)),
   },
   {
     note: 'まとめです。文は単文・重文・複文に分けられる。従属節を［　］でくくると主節の骨格が見える。接続詞のうしろは主語＋動詞、前置詞のうしろは名詞。',
     add: fresh(bx(15, 14, 290, 30, '単文・重文・複文を見分ける', C.blue, FILL.blue, 12), bx(15, 52, 290, 30, '[従属節] をくくって主節を見つける', C.red, FILL.red, 12), bx(15, 90, 290, 30, '接続詞 ＋ S・V ／ 前置詞 ＋ 名詞', C.green, FILL.green, 12), ...cap('骨格から読む', C.green)),
   },
 ], '文の構造と、接続詞・前置詞');
+
+// ───────── koko_eigo_09_noun_article 可算名詞・不可算名詞 ─────────
+const e09: DiagramFigure = show([
+  {
+    note: '名詞には、数えられる名詞（可算名詞）と、数えられない名詞（不可算名詞）があります。book は1冊、2冊と数えられますが、water は水というひとかたまりで、1つ、2つと区切れません。',
+    add: [head('名詞は 2 種類'), bx(10, 26, 145, 28, '可算名詞（かさんめいし）', C.blue, FILL.blue, 11), bx(165, 26, 145, 28, '不可算名詞', C.red, FILL.red, 11), ...[0, 1, 2].map((i) => bx(30 + i * 36, 66, 28, 36, 'book', C.blue, FILL.blue, 8)), bx(180, 66, 110, 36, 'water', C.red, FILL.red, 12), lb(82, 122, '1冊、2冊と数える', 11, C.blue, 'middle'), lb(235, 122, 'ひとかたまり', 11, C.red, 'middle'), ...cap('数えられるか、数えられないか')],
+  },
+  {
+    note: '数えられる名詞は a や複数形が付きます。a book、two books。数えられない名詞は、a も付かず複数形にもなりません。動詞は単数扱いで is を使います。',
+    add: fresh(head('a と複数形が付くか'), bx(10, 26, 300, 30, '○ a book　　○ two books', C.blue, FILL.blue, 13), bx(10, 64, 300, 30, '× an information　× two advices', C.red, FILL.red, 13), lb(160, 116, '× many homeworks', 12, C.red, 'middle', true), ...cap('不可算名詞は a も複数形も付けない', C.red)),
+  },
+  {
+    note: '❓どんな名詞が数えられないのでしょう。→ 液体・物質（water・milk・paper・money）、抽象的なもの（information・advice・homework・music・news）、集合（furniture・baggage）です。形がなく区切れないものが中心です。',
+    add: fresh(head('主な不可算名詞'), bx(10, 26, 300, 26, '液体・物質　water ／ milk ／ paper ／ money', C.blue, FILL.blue, 11), bx(10, 58, 300, 26, '抽象　information ／ advice ／ homework', C.green, FILL.green, 11), bx(10, 90, 300, 26, '集合　furniture ／ baggage ／ news', C.purple, FILL.purple, 11), ...cap('入試で狙われる語', C.ink)),
+  },
+  {
+    note: '❓では、不可算名詞を数えたいときはどうするのでしょう。→ 「単位」を使います。a glass of water（コップ1杯の水）、a piece of paper（1枚の紙）、a slice of bread（1切れのパン）。複数のときは、単位の語を複数形にします。two glasses of milk。',
+    add: fresh(head('単位で数える'), bx(10, 26, 145, 28, 'a glass of water', C.blue, FILL.blue, 11), bx(165, 26, 145, 28, 'a piece of paper', C.green, FILL.green, 11), bx(10, 62, 145, 28, 'a slice of bread', C.red, FILL.red, 11), bx(165, 62, 145, 28, 'two glasses of milk', C.purple, FILL.purple, 10), lb(160, 112, '複数にするのは glass（単位）。milk は変えない', 11, C.ink, 'middle', true), ...cap('単位語を複数形にする', C.purple)),
+  },
+  {
+    note: '❓「たくさん」「少し」は、可算と不可算でどう変わるのでしょう。→ 数えられる名詞には many と a few、数えられない名詞には much と a little を使います。many books、much water、a few friends、a little time です。',
+    add: fresh(head('数える名詞 と 数えない名詞'), lb(80, 28, '可算（数える）', 11, C.blue, 'middle', true), lb(240, 28, '不可算', 11, C.red, 'middle', true), bx(10, 36, 140, 26, 'many books', C.blue, FILL.blue, 12), bx(170, 36, 140, 26, 'much water', C.red, FILL.red, 12), bx(10, 70, 140, 26, 'a few friends', C.blue, FILL.blue, 12), bx(170, 70, 140, 26, 'a little time', C.red, FILL.red, 12), lb(160, 118, 'much は疑問文・否定文でよく使う', 11, C.gray, 'middle'), ...cap('名詞に合わせて選ぶ')),
+  },
+  {
+    note: '❓a few と few は、どうちがうのでしょう。→ a が付くと「少しはある」（肯定的）、付かないと「ほとんどない」（否定的）です。I have a few friends. は友達が数人いる、I have few friends. は友達がほとんどいません。little も同じです。',
+    add: fresh(head('a が付くか付かないか'), bx(10, 26, 145, 34, 'a few ／ a little\n少しはある', C.green, FILL.green, 11), bx(165, 26, 145, 34, 'few ／ little\nほとんどない', C.red, FILL.red, 11), bx(10, 76, 145, 30, 'I have a few friends.', C.green, FILL.green, 10), bx(165, 76, 145, 30, 'I have few friends.', C.red, FILL.red, 10), lb(82, 124, '友達が数人いる', 11, C.green, 'middle', true), lb(237, 124, '友達がほとんどいない', 11, C.red, 'middle', true), ...cap('a の有無で意味が逆になる', C.ink)),
+  },
+  {
+    note: '❓どちらにも使える言い方はないのでしょうか。→ あります。a lot of（lots of）は、数えられる名詞にも数えられない名詞にも使えます。肯定文の「たくさん」は、a lot of にすれば迷いません。a lot of books、a lot of homework。',
+    add: fresh(head('a lot of は万能'), bx(40, 28, 110, 30, 'a lot of books', C.blue, FILL.blue, 12), bx(170, 28, 110, 30, 'a lot of homework', C.red, FILL.red, 11), lb(95, 76, '可算', 11, C.blue, 'middle'), lb(225, 76, '不可算', 11, C.red, 'middle'), lb(160, 108, '肯定文の「たくさん」は a lot of', 12, C.ink, 'middle', true), ...cap('迷ったら a lot of', C.green)),
+  },
+  {
+    note: 'まとめです。名詞はまず、数えられるかどうかを見る。数えられない名詞には a も複数形も付けない。数えたいときは a piece of のような単位を使う。many と much、a few と a little は名詞に合わせて選び、a の有無で意味が逆になる。',
+    add: fresh(bx(15, 12, 290, 28, '数えられるか？ → a・複数形が付くか決まる', C.blue, FILL.blue, 11), bx(15, 46, 290, 28, '不可算は a piece of などの単位で数える', C.red, FILL.red, 11), bx(15, 80, 290, 28, 'many／a few ＝ 可算、much／a little ＝ 不可算', C.green, FILL.green, 10), bx(15, 114, 290, 28, 'a few は肯定、few は否定', C.purple, FILL.purple, 12), ...cap('まず「数えられるか」', C.green)),
+  },
+], '可算名詞と不可算名詞');
+
+// ───────── koko_eigo_10_sentence_types 付加疑問文・否定疑問文 ─────────
+const e10: DiagramFigure = show([
+  {
+    note: '付加疑問文（ふかぎもんぶん）は、文の終わりに短い疑問をつけて「〜ですよね？」と確認や同意を求める文です。肯定文には否定の付加、否定文には肯定の付加をつけます。',
+    add: [head('付加疑問文：逆の形をつける'), bx(10, 28, 300, 30, '肯定文 ＋ 否定の付加　You are a student, aren\'t you?', C.blue, FILL.blue, 10), bx(10, 66, 300, 30, '否定文 ＋ 肯定の付加　He can\'t swim, can he?', C.red, FILL.red, 10), ...cap('「〜ですよね？」と確かめる')],
+  },
+  {
+    note: '作り方は 3 ステップです。①もとの文の（助）動詞を使う（be動詞は be動詞、一般動詞は do／does／did、助動詞はその助動詞）。②肯定と否定を逆にする。③主語を代名詞にする（Tom→he、the books→they）。',
+    add: fresh(head('作り方の 3 ステップ'), bx(10, 26, 300, 28, '① もとの動詞に合わせる（be／do／助動詞）', C.blue, FILL.blue, 11), bx(10, 60, 300, 28, '② 肯定 ⇔ 否定 を逆にする', C.red, FILL.red, 11), bx(10, 94, 300, 28, '③ 主語を代名詞にする（Tom → he）', C.green, FILL.green, 11), ...cap('この順に作る')),
+  },
+  {
+    note: '例で確かめましょう。Tom went home, ＿＿＿? ①一般動詞の過去（went）なので did を使う。②もとの文は肯定だから否定にして didn\'t。③Tom は he にする。答えは Tom went home, didn\'t he?',
+    add: fresh(head('Tom went home, ＿＿?'), bx(10, 26, 300, 24, 'Tom went home,', C.gray, FILL.gray, 12), lb(160, 66, '① went → did　② 否定にして didn\'t　③ Tom → he', 11, C.ink, 'middle', true), ar(160, 78, 160, 94, C.main), bx(10, 98, 300, 28, 'Tom went home, didn\'t he?', C.green, FILL.green, 13), ...cap('didn\'t he?', C.green)),
+  },
+  {
+    note: '特別な形もあります。命令文のあとは will you?（〜してくれる？）、Let\'s のあとは shall we?（〜しましょうよ）。Open the window, will you? Let\'s go, shall we?',
+    add: fresh(head('特別な付加疑問'), bx(10, 28, 300, 30, 'Open the window, will you?', C.blue, FILL.blue, 12), bx(10, 66, 300, 30, 'Let\'s go, shall we?', C.green, FILL.green, 12), lb(160, 116, '命令文 → will you?　Let\'s → shall we?', 11, C.ink, 'middle', true), ...cap('この 2 つは暗記')),
+  },
+  {
+    note: '次は否定疑問文です。Don\'t you like it?（それが好きじゃないの？）、Aren\'t you tired?（疲れていないの？）のように、否定の短縮形で始めて、驚きや確認の気持ちを表します。',
+    add: fresh(head('否定疑問文：否定の形で始める'), bx(10, 28, 300, 30, 'Don\'t you like coffee?', C.blue, FILL.blue, 13), bx(10, 66, 300, 30, 'Aren\'t you tired?', C.blue, FILL.blue, 13), lb(160, 116, '驚き・確認のニュアンス', 11, C.gray, 'middle'), ...cap('Don\'t／Aren\'t で始める')),
+  },
+  {
+    note: '❓Yes と No は、どう答えるのでしょう。→ 日本語と逆になるので要注意です。英語は、質問の形に関係なく、答えの中身が肯定なら Yes、否定なら No。コーヒーが好きなら Yes, I do.（日本語では「いいえ、好きです」）。好きでないなら No, I don\'t.',
+    add: fresh(head('Don\'t you like coffee?'), bx(10, 28, 145, 46, '好きな人\nYes, I do.', C.green, FILL.green, 12), bx(165, 28, 145, 46, '好きでない人\nNo, I don\'t.', C.red, FILL.red, 12), lb(82, 94, '日本語では「いいえ、好きです」', 10, C.gray, 'middle'), lb(237, 94, '日本語では「はい、好きではない」', 10, C.gray, 'middle'), lb(160, 122, '中身が肯定 → Yes、否定 → No', 12, C.ink, 'middle', true), ...cap('質問の形は関係ない', C.red)),
+  },
+  {
+    note: '選択疑問文は、or で選択肢を示す疑問文です。Yes／No では答えず、選んだものを答えます。Which do you like, tea or coffee? ― I like tea. 文末は下げ調子で読みます。',
+    add: fresh(head('選択疑問文：Yes／No では答えない'), bx(10, 28, 300, 30, 'Which do you like, tea or coffee?', C.blue, FILL.blue, 12), ar(160, 60, 160, 78, C.main), bx(10, 82, 300, 30, '― I like tea.', C.green, FILL.green, 13), ...cap('選んだものを答える', C.green)),
+  },
+  {
+    note: 'まとめです。付加疑問文は、逆の形を、もとの動詞に合わせてつける。命令文は will you、Let\'s は shall we。否定疑問文への答えは、中身が肯定なら Yes、否定なら No。選択疑問文は Yes／No で答えない。',
+    add: fresh(bx(15, 12, 290, 28, '付加疑問：逆の形・同じ動詞・代名詞', C.blue, FILL.blue, 12), bx(15, 46, 290, 28, '命令文 → will you? ／ Let\'s → shall we?', C.green, FILL.green, 11), bx(15, 80, 290, 28, '否定疑問：中身が肯定 → Yes、否定 → No', C.red, FILL.red, 11), bx(15, 114, 290, 28, '選択疑問：Yes／No で答えない', C.purple, FILL.purple, 12), ...cap('答えの中身で Yes か No', C.green)),
+  },
+], '付加疑問文・否定疑問文・選択疑問文');
+
+// ───────── koko_eigo_11_pronunciation 音の変化 ─────────
+const e11: DiagramFigure = show([
+  {
+    note: '❓単語は知っているのに、なぜ文になると聞き取れないのでしょう。→ 文の中では、音がつながったり、消えたり、変わったりするからです。この「音の変化」を知ることが、聞き取りの第一歩です。',
+    add: [head('音は文の中で変わる'), ...rowb(['つながる\n連結', '消える\n脱落', '変わる\n同化', '弱くなる\n弱形'], 30, 56, C.blue, FILL.blue, 11, 10, 310, 6), ...cap('4 つの変化を知る')],
+  },
+  {
+    note: '連結（れんけつ）は、前の語の終わりの子音と、次の語の頭の母音がつながる変化です。an apple は「アン アップル」ではなく「ア・ナップル」。Stand up. は「スタン・ダップ」と聞こえます。',
+    add: fresh(head('連結：子音 ＋ 母音がつながる'), bx(30, 28, 50, 28, 'an', C.blue, FILL.blue, 13), bx(90, 28, 80, 28, 'apple', C.blue, FILL.blue, 13), ar(130, 58, 130, 76, C.main), bx(90, 80, 140, 28, 'ア・ナップル', C.red, FILL.red, 13), lb(160, 128, 'Stand up. → スタン・ダップ', 12, C.ink, 'middle', true), ...cap('n が次の語につく', C.red)),
+  },
+  {
+    note: '脱落（だつらく）は、音が消えたり弱まったりする変化です。語尾の t・d・p・k などは、次が子音だと聞こえにくくなります。good boy は「グッ（ド）ボーイ」、next time は「ネクス（ト）タイム」。Tell him. の h も落ちて「テリム」に聞こえます。',
+    add: fresh(head('脱落：音が消える'), bx(10, 28, 145, 30, 'good boy', C.blue, FILL.blue, 13), bx(165, 28, 145, 30, 'next time', C.blue, FILL.blue, 13), lb(82, 76, 'グッ（ド）ボーイ', 12, C.red, 'middle', true), lb(237, 76, 'ネクス（ト）タイム', 12, C.red, 'middle', true), lb(160, 110, 'Tell him. → テリム（h が落ちる）', 12, C.ink, 'middle', true), ...cap('語尾の破裂音は聞こえにくい', C.red)),
+  },
+  {
+    note: '同化（どうか）は、隣り合う音が影響し合って、別の音になる変化です。Did you は「ディジュー」、Would you は「ウジュー」、meet you は「ミーチュー」。d や t のあとに you が来ると、「ジュ」「チュ」の音になります。',
+    add: fresh(head('同化：隣の音と混ざる'), bx(10, 28, 145, 28, 'Did you ～?', C.blue, FILL.blue, 12), bx(165, 28, 145, 28, 'meet you', C.blue, FILL.blue, 12), lb(82, 74, 'ディジュー', 13, C.red, 'middle', true), lb(237, 74, 'ミーチュー', 13, C.red, 'middle', true), lb(160, 112, 'd＋y → ジュ　　t＋y → チュ', 12, C.ink, 'middle', true), ...cap('Would you → ウジュー', C.red)),
+  },
+  {
+    note: '弱形（じゃっけい）は、機能語（前置詞・冠詞・助動詞）が弱く速く読まれる変化です。can・at・for・to・and・of・a・the などです。a cup of tea は、of が「ア」に弱まって「ア カッパ ティー」に聞こえます。',
+    add: fresh(head('弱形：機能語は弱く読む'), ...rowb(['a', 'cup', 'of', 'tea'], 28, 34, C.gray, FILL.gray, 14, 20, 300, 10), lb(60, 78, '弱', 11, C.gray, 'middle'), lb(135, 78, '強', 11, C.red, 'middle', true), lb(215, 78, '弱', 11, C.gray, 'middle'), lb(275, 78, '強', 11, C.red, 'middle', true), lb(160, 110, 'of は「ア」のように弱まる', 12, C.ink, 'middle', true), ...cap('ア カッパ ティー', C.red)),
+  },
+  {
+    note: '❓弱い語も、ぜんぶ聞き取らないといけないのでしょうか。→ いいえ。強く読まれる内容語（名詞・動詞・形容詞）に集中すれば、文の意味がつかめます。弱い機能語まで聞き取ろうとしなくて大丈夫です。',
+    add: fresh(head('内容語に集中'), bx(15, 28, 135, 36, '内容語\n名詞・動詞・形容詞', C.red, FILL.red, 11), bx(170, 28, 135, 36, '機能語\n前置詞・冠詞・助動詞', C.gray, FILL.gray, 11), lb(82, 84, '強く、はっきり', 12, C.red, 'middle', true), lb(237, 84, '弱く、速く', 12, C.gray, 'middle'), lb(160, 114, '意味は内容語で決まる', 12, C.ink, 'middle', true), ...cap('聞き取りは内容語から', C.red)),
+  },
+  {
+    note: '数字の聞き分けも大切です。thirteen（13）と thirty（30）。-teen は後ろの teen を強く、はっきり「ティーン」と読み、-ty は前を強く読んで語尾は弱くなります。fifteen と fifty、nineteen と ninety も同じです。',
+    add: fresh(head('-teen と -ty'), lb(10, 36, 'thirteen 13', 12, C.ink, 'start', true), ...syl(['thir', 'TEEN'], 1, 40, 10, 170, 28), lb(10, 90, 'thirty 30', 12, C.ink, 'start', true), ...syl(['THIR', 'ty'], 0, 94, 10, 170, 28), lb(190, 66, '← 後ろが強い', 11, C.red, 'start', true), lb(190, 124, '← 前が強い', 11, C.red, 'start', true), ...cap('強い所と、語尾の音で聞き分ける', C.red)),
+  },
+  {
+    note: 'まとめです。リスニングでは、連結・脱落・同化・弱形の四つの変化が起こる。内容語を中心に聞く。-teen は後ろが強く、-ty は前が強い。毎日少しずつ英語の音に触れて、耳を慣らすことが最大の対策です。',
+    add: fresh(bx(15, 12, 290, 28, '連結：an apple → ア・ナップル', C.blue, FILL.blue, 11), bx(15, 46, 290, 28, '脱落・同化・弱形：消える・変わる・弱くなる', C.green, FILL.green, 11), bx(15, 80, 290, 28, '内容語（名詞・動詞・形容詞）を中心に聞く', C.red, FILL.red, 11), bx(15, 114, 290, 28, '-teen は後ろ、-ty は前が強い', C.purple, FILL.purple, 11), ...cap('毎日少しずつ英語の音に触れる', C.green)),
+  },
+], '音の変化とリスニング');
+
+// ───────── koko_eigo_12_perfect_advanced 過去完了（大過去） ─────────
+const tl = (y: number): E[] => [ln(14, y, 296, y, C.gray), ar(286, y, 306, y, C.gray)];
+const pt = (x: number, y: number, top: string, bottom: string, color: string, fill: string): E[] => [ci(x, y, 6, undefined, color, fill), lb(x, y - 14, top, 11, color, 'middle', true), lb(x, y + 20, bottom, 10, C.ink, 'middle')];
+const e12: DiagramFigure = show([
+  {
+    note: '過去完了形（had＋過去分詞）は、「過去のある時点より、さらに前に起きたこと」を表します。これを大過去（だいかこ）といいます。基準になる過去の時点が一つあって、それより前の出来事に使います。',
+    add: [head('過去完了 ＝ さらに前のこと'), ...tl(72), ...pt(70, 72, '電車が出発', 'had left', C.blue, FILL.blue), ...pt(170, 72, '私が到着', 'arrived', C.red, FILL.red), ...pt(262, 72, '今', '', C.gray, FILL.gray), ...cap('When I arrived, the train had already left.', C.ink, 10)],
+  },
+  {
+    note: '電車の例です。When I arrived at the station, the train had already left.（私が駅に着いたとき、電車はすでに出発していた）。基準点は「私が着いた」こと。それより前の「電車が出た」ことを、had left と過去完了で表します。',
+    add: fresh(head('基準点と、それより前'), ...tl(70), ...pt(80, 70, '出発', 'had left（先）', C.blue, FILL.blue), ln(86, 70, 164, 70, C.blue, false, 5), ...pt(170, 70, '到着', 'arrived（基準）', C.red, FILL.red), bx(10, 106, 300, 28, 'the train had already left', C.blue, FILL.blue, 12), ...cap('基準点より前 → had ＋ 過去分詞', C.blue)),
+  },
+  {
+    note: '❓なぜ、現在完了ではなく過去完了なのでしょう。→ 基準点がちがうからです。現在完了の基準点は「今」で、「今までに」を表します。過去完了の基準点は「過去のある時点」で、「その時までに」を表します。',
+    add: fresh(head('基準点のちがい'), lb(10, 30, '現在完了', 11, C.blue, 'start', true), ...tl(48), ci(262, 48, 6, undefined, C.blue, FILL.blue), lb(262, 66, '今（基準）', 10, C.blue, 'middle', true), lb(10, 96, '過去完了', 11, C.red, 'start', true), ...tl(114), ci(170, 114, 6, undefined, C.red, FILL.red), lb(170, 132, '過去のある時点（基準）', 10, C.red, 'middle', true), ...cap('今までに／その時までに')),
+  },
+  {
+    note: '過去完了にも三つの用法があります。完了・結果（The train had already left.）、経験（I had never seen snow before I visited Hokkaido.）、継続（She had lived in Osaka for ten years before she moved to Tokyo.）。現在完了と同じ枠組みです。',
+    add: fresh(head('3 つの用法'), bx(10, 26, 300, 28, '完了：The train had already left.', C.blue, FILL.blue, 11), bx(10, 60, 300, 28, '経験：I had never seen snow before …', C.green, FILL.green, 11), bx(10, 94, 300, 28, '継続：She had lived in Osaka for ten years …', C.red, FILL.red, 10), ...cap('現在完了と同じ 3 つ')),
+  },
+  {
+    note: '基準点を示す言葉と、過去完了は相性がよいです。before（〜する前に）、after（〜した後に）、by the time（〜するまでには）、when（〜したとき）。By the time he came, we had eaten all the cake.',
+    add: fresh(head('基準点を示す言葉'), ...rowb(['before', 'after', 'by the time', 'when'], 28, 30, C.blue, FILL.blue, 11), lb(160, 86, 'By the time he came, we had eaten all the cake.', 11, C.ink, 'middle', true), lb(160, 110, '（彼が来るまでには、ケーキを全部食べていた）', 10, C.gray, 'middle'), ...cap('時の基準点を探す')),
+  },
+  {
+    note: '❓二つの過去の出来事が出てきたら、どちらを過去完了にするのでしょう。→ 時間的に先に起きたほうを過去完了、後に起きたほうを過去形にします。I lost the ticket that I had bought yesterday. 買った（先）が had bought、なくした（後）が lost です。',
+    add: fresh(head('先に起きたほうが過去完了'), ...tl(66), ...pt(90, 66, '買った', 'had bought', C.blue, FILL.blue), ...pt(200, 66, 'なくした', 'lost', C.red, FILL.red), bx(10, 108, 300, 28, 'I lost the ticket that I had bought.', C.ink, FILL.warm, 11), ...cap('先 ＝ 過去完了、後 ＝ 過去形')),
+  },
+  {
+    note: '❓いつも過去完了にするのでしょうか。→ いいえ。前後関係がなく、動作がほぼ同時に続くときは、どちらも過去形で構いません。I opened the door and turned on the light. 無理に過去完了にしないことが大切です。',
+    add: fresh(head('同時の連続動作は過去形でよい'), bx(10, 28, 300, 30, 'I opened the door and turned on the light.', C.green, FILL.green, 11), lb(160, 82, '前後の関係をはっきり言う必要がない', 12, C.ink, 'middle', true), lb(160, 108, '→ どちらも過去形', 12, C.green, 'middle', true), ...cap('無理に過去完了にしない', C.green)),
+  },
+  {
+    note: 'まとめです。過去完了は、過去のある時点より前に起きたこと。現在完了は「今」、過去完了は「過去のある時点」が基準点。二つの過去の出来事は、先が過去完了、後が過去形。同時の動作は、どちらも過去形でよい。',
+    add: fresh(bx(15, 12, 290, 28, '過去完了 ＝ had ＋ 過去分詞（さらに前）', C.blue, FILL.blue, 12), bx(15, 46, 290, 28, '現在完了の基準は「今」、過去完了は「過去の時点」', C.green, FILL.green, 10), bx(15, 80, 290, 28, '先に起きたほうが過去完了', C.red, FILL.red, 12), bx(15, 114, 290, 28, '同時の動作は、どちらも過去形', C.purple, FILL.purple, 12), ...cap('時間の順番を見る', C.green)),
+  },
+], '過去完了形（大過去）の考え方');
 
 // ───────── koko_eigo_s012 発音問題の解き方 ─────────
 const s012: DiagramFigure = show([
@@ -621,7 +767,7 @@ const e05: DiagramFigure = show([
 const e06: DiagramFigure = show([
   {
     note: '❓前置詞は、なぜ一つずつ暗記せずに「イメージ」で覚えるのでしょう。→ in・on・at は、場所でも時でも同じ核のイメージを持っているからです。at は「一点」、on は「面に接している」、in は「囲まれた中」です。',
-    add: [head('前置詞の核のイメージ'), ci(55, 56, 5, undefined, C.red, FILL.red), lb(55, 90, 'at ＝ 一点', 12, C.red, 'middle', true), ln(125, 70, 195, 70, C.gray, false, 3), ci(160, 60, 10, undefined, C.blue, FILL.blue), lb(160, 90, 'on ＝ 面に接する', 12, C.blue, 'middle', true), bx(225, 36, 70, 44, undefined, C.green, FILL.green), ci(260, 58, 6, undefined, C.green, '#FFFFFF'), lb(260, 90, 'in ＝ 囲まれた中', 12, C.green, 'middle', true), ...cap('場所にも時にも使える核', C.ink)],
+    add: [head('前置詞の核のイメージ'), ci(55, 56, 5, undefined, C.red, FILL.red), lb(55, 90, 'at ＝ 一点', 11, C.red, 'middle', true), ln(125, 70, 195, 70, C.gray, false, 3), ci(160, 60, 10, undefined, C.blue, FILL.blue), lb(160, 90, 'on ＝ 面に接する', 11, C.blue, 'middle', true), bx(225, 36, 70, 44, undefined, C.green, FILL.green), ci(260, 58, 6, undefined, C.green, '#FFFFFF'), lb(266, 90, 'in ＝ 囲まれた中', 11, C.green, 'middle', true), ...cap('場所にも時にも使える核', C.ink)],
   },
   {
     note: 'at は「一点」です。at the station（駅に）、at noon（正午に）、at 3 o\'clock（3時に）。場所でも時刻でも、ぴたりと一点を指します。',
@@ -714,6 +860,10 @@ export const XF_KEA_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_eigo_06_vocab': e06,
   'xf_koko_eigo_07_subjunctive': e07,
   'xf_koko_eigo_08_conjunction': e08,
+  'xf_koko_eigo_09_noun_article': e09,
+  'xf_koko_eigo_10_sentence_types': e10,
+  'xf_koko_eigo_11_pronunciation': e11,
+  'xf_koko_eigo_12_perfect_advanced': e12,
 };
 
 export const XF_KEA_SECTIONS: Record<string, string> = {
@@ -733,4 +883,8 @@ export const XF_KEA_SECTIONS: Record<string, string> = {
   'koko_eigo_06_vocab#4': 'xf_koko_eigo_06_vocab',
   'koko_eigo_07_subjunctive#0': 'xf_koko_eigo_07_subjunctive',
   'koko_eigo_08_conjunction#3': 'xf_koko_eigo_08_conjunction',
+  'koko_eigo_09_noun_article#0': 'xf_koko_eigo_09_noun_article',
+  'koko_eigo_10_sentence_types#2': 'xf_koko_eigo_10_sentence_types',
+  'koko_eigo_11_pronunciation#2': 'xf_koko_eigo_11_pronunciation',
+  'koko_eigo_12_perfect_advanced#0': 'xf_koko_eigo_12_perfect_advanced',
 };

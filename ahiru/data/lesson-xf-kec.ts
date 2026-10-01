@@ -409,7 +409,7 @@ add('koko_eigo_s101', 0, show([
   { note: '疑問文は、Will を文のはじめに出します。Will you be at home tomorrow? Will the game start at two? do / does / did は使いません。× Do you will go? ○ Will you go?',
     add: S(H('疑問文：Will ＋ 主語 ＋ 原形'), row(['Will', 'you', 'be', 'at home?'], 8, 38, 72, 34, ['r', 'w', 'g', 'w'], 11, 6), B(20, 96, 280, 30, '× Do you will go?', 'r', 13), B(20, 134, 280, 30, '○ Will you go?', 'g', 13), F('do / does / did は使わない')) },
   { note: '❓なぜ do を使わないのでしょう。→ will は can や must と同じ助動詞で、自分自身を前に出して疑問文を作れるからです。do の助けは不要で、will と do が同時に並ぶことはありません。',
-    add: S(H('❓will は助動詞'), B(10, 36, 300, 28, 'will・can・must・may', 'm', 13), T(160, 80, '助動詞は自分で前に出る', 12, C.main, true), ar(160, 90, 160, 108, C.main), row(['Will you …?', 'Can you …?', 'Must you …?'], 8, 112, 98, 30, 'b', 11, 4), T(160, 166, 'だから Do は入らない', 12, C.red, true), F('助動詞を前に出すだけ')) },
+    add: S(H('❓will は助動詞'), B(10, 36, 300, 28, 'will・can・must・may', 'm', 13), T(160, 80, '助動詞は自分で前に出る', 12, C.main, true), ar(160, 90, 160, 108, C.main), row(['Will you …?', 'Can you …?', 'May I …?'], 8, 112, 98, 30, 'b', 11, 4), T(160, 166, 'だから Do は入らない', 12, C.red, true), F('助動詞を前に出すだけ')) },
   { note: '答え方は、質問に使った語を返す鏡のような形です。Are you 〜? には Yes, I am.、Do you 〜? には Yes, I do.、Will you 〜? には Yes, I will. と対応させます。Will it rain? には Yes, it will. です。',
     add: S(H('答えは質問を映す鏡'), tbl([['質問', '答え'], ['Are you 〜?', 'Yes, I am.'], ['Do you 〜?', 'Yes, I do.'], ['Will you 〜?', 'Yes, I will.'], ['Will it 〜?', 'Yes, it will.']], 20, 34, [140, 140], 32, 13), F('Yes, it does. はまちがい')) },
   { note: '疑問詞のある疑問文は、〈疑問詞＋will＋主語＋原形〉です。When will you come back? What will you do this weekend? ただし Who will help us? は who が主語なので、語順を変えません。',
@@ -433,9 +433,187 @@ add('koko_eigo_s105', 0, show([
   { note: '勧誘は Shall we 〜?（いっしょに〜しませんか）です。Shall we go to the museum this Sunday? 答え方は Yes, let\'s.（そうしましょう）または No, let\'s not.（やめておきましょう）。',
     add: S(H('勧誘：Shall we 〜?'), B(10, 34, 300, 30, 'Shall we go to the museum?', 'm', 13), B(20, 82, 130, 32, 'Yes, let\'s.', 'g', 13), B(170, 82, 130, 32, 'No, let\'s not.', 'w', 13), T(160, 136, '（そうしましょう）　（やめておきましょう）', 11, C.gray, true), F('私たちが〜しませんか')) },
   { note: '❓Shall I 〜? に Yes, you shall. と答えないのはなぜでしょう。→ これは決まった応答の型ではないからです。Shall I 〜? には Yes, please. / No, thank you. と答えます。質問の種類ごとに答えが決まっているので、セットで覚えます。',
-    add: S(H('❓答え方は型で決まっている'), tbl([['質問', '答え'], ['Shall I 〜?', 'Yes, please. / No, thank you.'], ['Shall we 〜?', 'Yes, let\'s. / No, let\'s not.'], ['Will you 〜?', 'Sure. / All right.'], ['Would you like 〜?', 'Yes, please. / No, thank you.']], 4, 32, [100, 204], 36, 11), B(40, 182, 240, 24, '× Yes, you shall.', 'r', 12), F('質問と答えをセットで')) },
+    add: S(H('❓答え方は型で決まっている'), tbl([['質問', '答え'], ['Shall I 〜?', 'Yes, please. / No, thank you.'], ['Shall we 〜?', 'Yes, let\'s. / No, let\'s not.'], ['Will you 〜?', 'Sure. / All right.'], ['Would you like 〜?', 'Yes, please. / No, thank you.']], 4, 32, [100, 204], 30, 11), B(40, 190, 240, 26, '× Yes, you shall.', 'r', 12), F('質問と答えをセットで')) },
   { note: 'すすめる表現もあります。Would you like some tea?（お茶はいかがですか）。Would you like to come with us?（いっしょに来ませんか）には Yes, I would love to.（ぜひ）。How about going to the movies? は ing 形、Why don\'t we go to the movies? は原形が続きます。',
     add: S(H('すすめる・誘う表現'), B(10, 34, 300, 28, 'Would you like some tea?', 'b', 13), B(10, 66, 300, 28, 'Would you like to come with us?', 'b', 12), B(10, 106, 300, 28, 'How about going to the movies?（ing形）', 'g', 10), B(10, 138, 300, 28, 'Why don\'t we go to the movies?（原形）', 'm', 10), F('How about のあとは ing')) },
   { note: 'まとめです。Will you 〜? は依頼、Shall I 〜? は申し出、Shall we 〜? は勧誘、Would you like 〜? はすすめる表現。答え方もセットで覚えます。未来の予定をたずねる Will you be at home tomorrow? には Yes, I will. と答えます。',
-    add: S(H('まとめ'), tbl([['表現', '意味', '答え'], ['Will you', '依頼', 'Sure.'], ['Shall I', '申し出', 'Yes, please.'], ['Shall we', '勧誘', 'Yes, let\'s.'], ['Would you like', 'すすめ', 'Yes, please.']], 8, 32, [100, 80, 116], 32, 12), B(30, 196, 260, 24, '予定をたずねる Will you 〜? は Yes, I will.', 'w', 10), F('だれが動くかを見る')) },
+    add: S(H('まとめ'), tbl([['表現', '意味', '答え'], ['Will you', '依頼', 'Sure.'], ['Shall I', '申し出', 'Yes, please.'], ['Shall we', '勧誘', 'Yes, let\'s.'], ['Would you like', 'すすめ', 'Yes, please.']], 8, 32, [100, 80, 116], 30, 12), B(30, 190, 260, 26, '予定をたずねる Will you 〜? は Yes, I will.', 'w', 10), F('だれが動くかを見る')) },
 ], 'Will you / Shall I / Shall we'));
+
+// ───────── s107 名詞節の when / if ─────────
+add('koko_eigo_s107', 0, show([
+  { note: '❓I don\'t know when he will come. この文では when 節に will が入っています。前の課で「when 節に will は使わない」と習ったのに、なぜでしょう。実は同じ when でも、文の中でのはたらきが二種類あるからです。',
+    add: S(H('❓同じ when なのに will があるの？'), B(10, 36, 300, 30, 'I will tell him when he comes.', 'g', 13), T(160, 78, 'will がない（現在形）', 12, C.green, true), B(10, 98, 300, 30, 'I don\'t know when he will come.', 'b', 13), T(160, 140, 'will がある', 12, C.blue, true), F('when のはたらきが二種類ある')) },
+  { note: '副詞節は、なくても文が成立する飾りの部分です。I will tell him when he comes. は、when he comes を取り去っても I will tell him. で成り立ちます。副詞節なので、中は現在形にします。',
+    add: S(H('副詞節：取り去っても文が成り立つ'), row(['I will tell him', 'when he comes.'], 10, 36, 142, 34, ['g', 'w'], 12, 6), ar(228, 74, 228, 96, C.red), B(10, 100, 142, 34, 'I will tell him.', 'g', 13), T(231, 120, '× 取り去る', 12, C.red, true), T(160, 160, '文が成立する → 副詞節 → 中は現在形', 12, C.green, true), F('「〜するとき」と訳せる')) },
+  { note: '名詞節は、動詞の目的語になっていて、取り去ると文が成り立たない部分です。I don\'t know when he will come. は、when he will come を取ると I don\'t know. になり、何を知らないのかが消えます。know の目的語なので名詞節で、未来は will で表します。',
+    add: S(H('名詞節：取り去ると成り立たない'), row(['I don\'t know', 'when he will come.'], 10, 36, 142, 34, ['b', 'w'], 11, 6), ar(228, 74, 228, 96, C.red), B(10, 100, 142, 34, 'I don\'t know.', 'r', 13), T(231, 120, '× 取り去る', 12, C.red, true), T(160, 160, '何を知らない？ → 目的語 → 名詞節 → will', 12, C.blue, true), F('「いつ〜か」と訳せる')) },
+  { note: '❓どうやって見分けるのでしょう。手順は2つです。①その節を丸ごとかっこでくくって取り去る。②残った部分だけで意味が完結するか。完結すれば副詞節で現在形、完結しない（目的語が足りない）なら名詞節で will を使います。',
+    add: S(H('❓判定手順'), B(60, 32, 200, 30, '節を取り去ってみる', 'm', 13), ar(130, 64, 70, 88, C.green), ar(190, 64, 250, 88, C.blue), B(10, 92, 140, 40, '文が完結する', 'g', 12), B(170, 92, 140, 40, '完結しない', 'b', 12), ar(80, 134, 80, 148, C.green), ar(240, 134, 240, 148, C.blue), B(10, 150, 140, 36, '副詞節→現在形', 'g', 12), B(170, 150, 140, 36, '名詞節→will', 'b', 12), F('目的語が足りなければ名詞節')) },
+  { note: '訳し方でも見分けられます。「〜するとき」「もし〜なら」と訳せれば副詞節、「いつ〜か」「〜かどうか」と訳せれば名詞節です。名詞節をとりやすい動詞は、know・tell・ask・wonder・find out・remember・be sure などです。',
+    add: S(H('訳し方で見分ける'), tbl([['', '副詞節', '名詞節'], ['when', '〜するとき', 'いつ〜か'], ['if', 'もし〜なら', '〜かどうか'], ['中の形', '現在形', 'will']], 8, 34, [70, 114, 112], 34, 12, 'm', 'w'), B(10, 176, 300, 26, 'know / tell / ask / wonder の目的語 → 名詞節', 'b', 11), F('動詞の目的語になっていれば名詞節')) },
+  { note: '同じ形で意味が変わる例です。Please let me know when he comes back.（彼が帰ってきたら知らせてください＝副詞節）と、Please let me know when he will come back.（彼がいつ帰ってくるか知らせてください＝名詞節）。will があるかないかで、頼んでいる内容がまったく違います。',
+    add: S(H('will の有無で意味が変わる'), B(10, 34, 300, 30, 'Let me know when he comes back.', 'g', 12), T(160, 76, '帰ってきたら知らせて（副詞節）', 12, C.green, true), B(10, 98, 300, 30, 'Let me know when he will come back.', 'b', 11), T(160, 140, 'いつ帰るか教えて（名詞節）', 12, C.blue, true), F('内容がまったく違う')) },
+  { note: 'if も同じです。I will go out if it is fine tomorrow.（明日晴れたら出かけます＝副詞節）。I don\'t know if it will be fine tomorrow.（明日晴れるかどうかわかりません＝名詞節）。さらに名詞節の中は、疑問文の語順にしません。Do you know when he will come? が正しく、× when will he come は誤りです。',
+    add: S(H('if も同じ ／ 名詞節の語順'), B(10, 32, 300, 26, 'I will go out if it is fine.（副詞節）', 'g', 11), B(10, 62, 300, 26, 'I don\'t know if it will be fine.（名詞節）', 'b', 11), B(10, 104, 300, 26, '× Do you know when will he come?', 'r', 11), B(10, 134, 300, 26, '○ Do you know when he will come?', 'g', 11), T(160, 180, '名詞節の中は 疑問詞＋主語＋動詞', 12, C.ink, true), F('疑問詞のうしろは平叙文の語順')) },
+  { note: 'まとめです。節を取り去って文が成り立つなら副詞節（現在形）、成り立たないなら名詞節（will）。「〜するとき・もし〜なら」は副詞節、「いつ〜か・〜かどうか」は名詞節。名詞節の中は〈疑問詞＋主語＋動詞〉の語順です。',
+    add: S(H('まとめ'), B(10, 34, 300, 30, '取り去って成り立つ → 副詞節 → 現在形', 'g', 12), B(10, 68, 300, 30, '取り去って成り立たない → 名詞節 → will', 'b', 12), B(10, 102, 300, 30, '「〜するとき」→副詞節 ／「いつ〜か」→名詞節', 'm', 10), B(10, 136, 300, 30, '名詞節は 疑問詞 ＋ 主語 ＋ 動詞', 'p', 12), F('必ず「取り去ってみる」')) },
+], '副詞節と名詞節の when / if'));
+
+// ───────── s109 unless ─────────
+add('koko_eigo_s109', 0, show([
+  { note: '❓unless の節の中を否定形にすると、どうなるでしょう。→ 否定が二重になって、意味がひっくり返ってしまいます。unless はそれ自体に否定を含む語だ、という一点を押さえましょう。',
+    add: S(H('❓unless のなかを否定にすると？'), B(10, 36, 300, 30, 'Unless it rains tomorrow, …', 'g', 13), B(10, 76, 300, 30, 'Unless it doesn\'t rain tomorrow, …', 'r', 12), T(160, 126, '「雨が降らなければ、でない場合」…', 12, C.red, true), F('否定が二重になって意味が通らない')) },
+  { note: 'unless は「もし〜しなければ」という意味で、if 〜 not とほぼ同じ内容を表します。Unless it rains tomorrow, we will play soccer. ＝ If it does not rain tomorrow, we will play soccer.（明日雨が降らなければサッカーをします）',
+    add: S(H('unless ＝ if 〜 not'), B(10, 34, 300, 30, 'Unless it rains tomorrow,', 'g', 13), T(160, 76, '＝', 18, C.main, true), B(10, 86, 300, 30, 'If it does not rain tomorrow,', 'b', 12), T(160, 134, '…we will play soccer.', 12, C.ink, true), F('「もし〜しなければ」')) },
+  { note: '❓なぜ unless の節の中を否定にしてはいけないのでしょう。→ unless の中にすでに「〜しなければ」という否定が入っているからです。さらに not を重ねると二重否定になります。never や no を重ねてはいけないのと同じ考え方です。',
+    add: S(H('❓なぜ重ねてはいけない？'), B(20, 36, 120, 34, 'unless', 'm', 15), T(150, 54, '＝', 16), B(170, 36, 130, 34, 'if ＋ not', 'r', 15), T(160, 92, '否定はすでに入っている', 12, C.red, true), B(20, 112, 280, 34, 'unless ＋ not ＝ 否定が二重', 'r', 13), F('unless に not は足さない')) },
+  { note: '条件を表す副詞節なので、unless の節の中は、未来のことでも現在形です。× Unless he will come, we will start without him. ○ Unless he comes, we will start without him.（彼が来なければ、待たずに始めます）',
+    add: S(H('節の中は現在形'), B(10, 34, 300, 30, '× Unless he will come, …', 'r', 13), B(10, 72, 300, 30, '○ Unless he comes, …', 'g', 13), T(160, 124, 'we will start without him.', 13, C.ink, true), T(160, 148, 'if と同じく、条件の節は現在形', 12, C.green, true), F('未来のことでも will を使わない')) },
+  { note: '書きかえ練習です。If you are not busy, please help me. ＝ Unless you are busy, please help me.　You will fail if you do not study hard. ＝ You will fail unless you study hard.　if 〜 not を unless に変えるときは、not を消して肯定の形にします。',
+    add: S(H('書きかえ：not を消す'), B(10, 34, 300, 28, 'You will fail if you do not study hard.', 'b', 11), ar(160, 64, 160, 82, C.red), B(10, 86, 300, 28, 'You will fail unless you study hard.', 'g', 11), T(160, 134, 'do not を消して、肯定の形に', 12, C.red, true), F('「〜しない限り」と訳すと感覚がつかめる')) },
+  { note: '次に、命令文＋and / or です。〈命令文, and 〜〉は「そうすれば」、〈命令文, or 〜〉は「そうしないと」です。Hurry up, and you will catch the train. Hurry up, or you will miss the train. よい結果が続くなら and、悪い結果が続くなら or です。',
+    add: S(H('命令文 ＋ and / or'), B(10, 34, 300, 28, 'Hurry up, and you will catch the train.', 'g', 11), T(160, 74, 'そうすれば（よい結果）', 12, C.green, true), B(10, 92, 300, 28, 'Hurry up, or you will miss the train.', 'r', 11), T(160, 132, 'そうしないと（悪い結果）', 12, C.red, true), B(10, 150, 300, 28, '＝ Unless you hurry up, you will miss …', 'w', 11), F('and と or を取りちがえると意味が正反対')) },
+  { note: 'そのほかの条件表現です。in case（〜の場合に備えて）、once（いったん〜すれば）、as long as（〜する限りは）。Take an umbrella in case it rains. のように、in case の節の中も現在形です（× in case it will rain）。',
+    add: S(H('そのほかの条件表現'), tbl([['表現', '意味', '例'], ['in case', '〜の場合に備えて', 'Take an umbrella\nin case it rains.'], ['once', 'いったん〜すれば', 'Once you learn it,\nyou never forget.'], ['as long as', '〜する限りは', 'as long as you\nkeep quiet']], 4, 32, [70, 100, 134], 42, 10), F('in case の中も現在形')) },
+  { note: 'まとめです。①unless ＝ if 〜 not で、中は肯定の形。②中は現在形。③〈命令文, and〉はそうすれば、〈命令文, or〉はそうしないと。④書きかえは、if 節が否定になっているかを最後に確認します。',
+    add: S(H('まとめ'), B(10, 34, 300, 30, '① unless ＝ if 〜 not（中は肯定）', 'm', 13), B(10, 68, 300, 30, '② 中は現在形（will を使わない）', 'b', 13), B(10, 102, 300, 30, '③ 命令文, and ＝ そうすれば', 'g', 13), B(10, 136, 300, 30, '③ 命令文, or ＝ そうしないと', 'r', 13), F('否定の位置を最後に確認')) },
+], 'unless と条件を表す形'));
+
+// ───────── s113 現在完了 継続：否定・疑問と How long ─────────
+add('koko_eigo_s113', 0, show([
+  { note: '❓現在完了の否定文を作るとき、don\'t を出してしまう人がとても多いのです。なぜ誤りなのでしょう。→ 現在完了には have / has という助動詞がすでにいるので、do の出番はないからです。',
+    add: S(H('❓なぜ don\'t は×？'), B(10, 36, 300, 30, '× I don\'t have seen him.', 'r', 13), T(160, 80, 'have はすでに助動詞として働いている', 12, C.red, true), B(10, 100, 300, 30, '○ I have not seen him.', 'g', 13), T(160, 144, 'do は不要', 13, C.green, true), F('have / has が助動詞')) },
+  { note: '否定文は、have / has のうしろに not を置きます。I have not seen him for a week. / She has not been well since last month. 短縮形は haven\'t / hasn\'t です。',
+    add: S(H('否定文：have / has ＋ not ＋ 過去分詞'), row(['I', 'have not', 'seen', 'him'], 8, 38, 72, 34, ['w', 'r', 'g', 'w'], 11, 6), row(['She', 'has not', 'been', 'well'], 8, 84, 72, 34, ['w', 'r', 'g', 'w'], 11, 6), T(160, 142, 'have not ＝ haven\'t　has not ＝ hasn\'t', 12, C.main, true), F('not は have / has のうしろ')) },
+  { note: '疑問文は、Have / Has を主語の前に出します。Have you lived here for a long time? / Has he been busy since Monday? 答え方は Yes, I have. / No, I haven\'t. です。',
+    add: S(H('疑問文：Have / Has ＋ 主語 ＋ 過去分詞'), B(10, 34, 300, 26, 'You have lived here for a long time.', 'w', 11), ar(160, 60, 160, 76, C.red), row(['Have', 'you', 'lived', 'here?'], 8, 80, 72, 32, ['r', 'w', 'g', 'w'], 11, 6), B(20, 128, 130, 30, 'Yes, I have.', 'b', 13), B(170, 128, 130, 30, 'No, I haven\'t.', 'b', 13), F('have / has を前へ')) },
+  { note: '❓なぜ do を使わないのでしょう。→ have / has は can や will と同じように、助動詞として働いているからです。助動詞は自分自身を前に出せば疑問文、うしろに not で否定文になります。× Yes, I do. / × Yes, I did. と答えるのも誤りです。',
+    add: S(H('❓can・will と同じ扱い'), tbl([['助動詞', '否定', '疑問'], ['can', 'can not', 'Can you …?'], ['will', 'will not', 'Will you …?'], ['have / has', 'have not', 'Have you …?']], 8, 34, [90, 100, 106], 34, 12), B(40, 180, 240, 26, '× Yes, I do.  × Yes, I did.', 'r', 12), F('疑問文で使った語をそのまま返す')) },
+  { note: '継続用法でよく問われるのが、期間をたずねる How long です。語順は How long ＋ have / has ＋ 主語 ＋ 過去分詞。How long have you known Ken? How long has she been in Japan? How long のうしろも疑問文の語順です。× How long you have known Ken?',
+    add: S(H('How long でたずねる'), row(['How long', 'have', 'you', 'known Ken?'], 6, 38, 74, 34, ['p', 'r', 'w', 'g'], 10, 4), B(10, 92, 300, 28, 'How long has she been in Japan?', 'b', 12), B(10, 130, 300, 28, '× How long you have known Ken?', 'r', 12), F('How long のうしろは疑問文の語順')) },
+  { note: '答え方は For 〜（期間）か Since 〜（起点）です。For five years.（5年間です）。Since 2021.（2021年からです）。文で答えるなら I have known him for five years. のように現在完了で返します。',
+    add: S(H('答え方：For と Since'), B(10, 34, 300, 28, 'How long have you known Ken?', 'b', 13), B(20, 76, 130, 40, 'For five years.\n（期間）', 'g', 12), B(170, 76, 130, 40, 'Since 2021.\n（起点）', 'g', 12), B(10, 134, 300, 28, 'I have known him for five years.', 'w', 12), F('文で答えるなら現在完了で')) },
+  { note: '❓When は、なぜ現在完了と使えないのでしょう。→ When は「今と切れた過去の1点」をたずねる語で、「過去から今までの幅」を表す現在完了とは合わないからです。When did you come to Japan? と過去形でたずね、I came here in 2021. と過去形で答えます。',
+    add: S(H('❓When は現在完了と使えない'), B(10, 34, 145, 26, 'How long → 幅', 'g', 12), B(165, 34, 145, 26, 'When → 過去の1点', 'r', 12), B(10, 66, 145, 40, 'How long have you\nknown Ken?', 'g', 10), B(165, 66, 145, 40, 'When did you\ncome to Japan?', 'r', 10), B(10, 120, 300, 28, '× When have you come to Japan?', 'r', 11), F('When は過去形でたずねる')) },
+  { note: 'まとめです。①否定は have / has の直後に not。②疑問は have / has を前に出す。③答えも have / has でそろえる。④期間は How long で、For か Since で答える。⑤When は過去形。',
+    add: S(H('まとめ'), B(10, 32, 300, 28, '① have / has ＋ not ＋ 過去分詞', 'm', 13), B(10, 64, 300, 28, '② Have / Has ＋ 主語 ＋ 過去分詞', 'b', 13), B(10, 96, 300, 28, '③ Yes, I have. / No, I haven\'t.', 'g', 13), B(10, 128, 300, 28, '④ How long 〜? → For / Since', 'p', 13), B(10, 160, 300, 28, '⑤ When は過去形でたずねる', 'r', 13), F('do / did は持ちこまない')) },
+], '現在完了の否定・疑問と How long'));
+
+// ───────── s114 状態動詞と進行形にしないルール ─────────
+add('koko_eigo_s114', 0, show([
+  { note: '❓「ずっと待っている」は have been waiting、「ずっと知っている」は have known です。同じ「ずっと」なのに、なぜ片方だけ -ing が付くのでしょう。分かれ目は、動詞が「動作」を表すか「状態」を表すかです。',
+    add: S(H('❓なぜ片方だけ -ing？'), B(10, 36, 300, 32, 'have been waiting（ずっと待っている）', 'g', 12), B(10, 76, 300, 32, 'have known（ずっと知っている）', 'b', 12), B(30, 128, 260, 36, '動作動詞か、状態動詞か', 'm', 14), F('動詞の種類が分かれ目')) },
+  { note: '動作動詞は動きがあり、始まりと終わりがあります。run・study・play・wait・read・write・rain・work・talk。進行形にできます（I am studying now.）。状態動詞は動きがなく、状態が続いているだけです。know・live・be・have・want・like・love・believe・belong・need・understand。原則として進行形にしません。',
+    add: S(H('動作動詞と状態動詞'), B(10, 34, 145, 26, '動作動詞', 'g', 13), B(165, 34, 145, 26, '状態動詞', 'b', 13), B(10, 64, 145, 74, 'run　study　play\nwait　read　write\nwork　talk', 'g', 11), B(165, 64, 145, 74, 'know　live　be\nhave　want　like\nbelieve　belong', 'b', 11), B(10, 148, 145, 28, '進行形にできる', 'g', 12), B(165, 148, 145, 28, '進行形にしない', 'r', 12), F('動きがあるかどうか')) },
+  { note: '状態動詞を進行形にした文は誤りです。× I am knowing him. ○ I know him. × I am wanting a new bike. ○ I want a new bike. 状態動詞は、現在形のままで使います。',
+    add: S(H('状態動詞は進行形にしない'), B(10, 34, 300, 28, '× I am knowing him.', 'r', 13), B(10, 66, 300, 28, '○ I know him.', 'g', 13), B(10, 108, 300, 28, '× I am wanting a new bike.', 'r', 13), B(10, 140, 300, 28, '○ I want a new bike.', 'g', 13), F('現在形のままで使う')) },
+  { note: '❓では、なぜ have known だけで「ずっと知っている」になるのでしょう。→ 状態動詞は、もともと続いている意味を持っているからです。-ing を付けなくても、現在完了だけで継続を表せます。I have known him since 2019. / We have been friends for ten years.',
+    add: S(H('❓状態動詞は、もともと続いている'), B(20, 36, 280, 30, 'know ＝ 知っている状態が続く', 'b', 13), ar(160, 68, 160, 86, C.blue), B(20, 90, 280, 30, 'have known ＝ ずっと知っている', 'g', 13), T(160, 142, '-ing を足さなくても継続の意味', 12, C.blue, true), B(20, 156, 280, 26, 'She has had that watch for five years.', 'w', 10), F('have の過去分詞は had')) },
+  { note: '同じ単語でも、意味によって状態になったり動作になったりします。have は「持っている」なら状態、「食べる・過ごす」なら動作。see は「見える」なら状態、watch・look at は「見る」で動作。think は「〜だと思う」なら状態、think about は「考えている」で動作です。',
+    add: S(H('意味によって変わる動詞'), tbl([['動詞', '状態（進行形×）', '動作（進行形○）'], ['have', '持っている', '食べる・過ごす'], ['see / watch', 'see：見える', 'watch：見る'], ['think', '〜と思う', 'think about：考える']], 4, 34, [76, 114, 114], 38, 11), F('意味ごとに決まる')) },
+  { note: 'be動詞の継続です。be の過去分詞は been なので、been を使うと「ずっと〜の状態だ」を表せます。I have been busy since Monday.（月曜からずっと忙しい）。He has been in the hospital for two weeks. have / has を落とした × I been busy. は誤りです。',
+    add: S(H('be の継続：been'), tbl([['原形', '過去形', '過去分詞'], ['be', 'was / were', 'been']], 20, 34, [90, 100, 90], 30, 12, 'm', 'w'), B(10, 106, 300, 28, 'I have been busy since Monday.', 'g', 12), B(10, 140, 300, 28, '× I been busy.（have を落とさない）', 'r', 12), F('been の前に have / has')) },
+  { note: 'live は例外的な動詞です。状態に近いのに動作としても扱えるので、I have lived here for ten years. と I have been living here for ten years. のどちらも正しく、意味の差はほとんどありません。',
+    add: S(H('live は例外'), B(10, 36, 300, 32, 'I have lived here for ten years.', 'b', 13), T(160, 86, '＝', 18, C.main, true), B(10, 98, 300, 32, 'I have been living here for ten years.', 'b', 12), T(160, 148, 'どちらも正しい（意味はほぼ同じ）', 12, C.blue, true), F('状態にも動作にも近い動詞')) },
+  { note: 'まとめです。①状態動詞は進行形にしない。②状態動詞の継続は、現在完了だけで表せる。③have・see・think は意味しだいで動作になる。④be の継続は have been。この原則があれば、次の課の現在完了進行形との使い分けで迷いません。',
+    add: S(H('まとめ'), B(10, 32, 300, 28, '① 状態動詞は進行形にしない', 'b', 13), B(10, 64, 300, 28, '② 継続は have ＋ 過去分詞だけで表せる', 'g', 12), B(10, 96, 300, 28, '③ have・see・think は意味しだい', 'm', 13), B(10, 128, 300, 28, '④ be の継続は have been', 'p', 13), B(10, 160, 300, 28, '※ live は両方OK', 'w', 13), F('進行形にできない動詞は完了形だけで継続')) },
+], '状態動詞と「進行形にしない」ルール'));
+
+// ───────── s118 完了の否定・疑問と Not yet ─────────
+add('koko_eigo_s118', 0, show([
+  { note: '❓Have you 〜 yet? とたずねられたとき、どう返事をするのでしょう。Yes, I have. のほかに、Not yet. という便利な返事があります。形を作れるだけでなく、返事まで使えるようにしておきましょう。',
+    add: S(H('❓「もう〜した？」への返事'), B(10, 36, 300, 30, 'Have you finished your report yet?', 'b', 12), B(20, 80, 130, 30, 'Yes, I have.', 'g', 13), B(170, 80, 130, 30, 'Not yet.', 'm', 13), T(160, 132, '「まだです」を2語で', 13, C.main, true), F('Not yet. は会話文で最頻出')) },
+  { note: '否定文は〈have / has ＋ not ＋ 過去分詞 ＋ yet〉です。I have not done my homework yet.（まだ宿題をしていない）。The bus has not come yet. They haven\'t decided yet. 継続のときと同じく、have / has を動かすだけで、ちがうのは yet が付くことです。',
+    add: S(H('否定文：not ＋ yet'), row(['I', 'have not', 'done', 'my homework', 'yet'], 4, 38, 60, 34, ['w', 'r', 'g', 'w', 'm'], 9, 4), B(10, 92, 300, 28, 'The bus has not come yet.', 'w', 12), B(10, 126, 300, 28, 'They haven\'t decided yet.', 'w', 12), F('yet は文の終わりに置く')) },
+  { note: '疑問文は〈Have / Has ＋ 主語 ＋ 過去分詞 ＋ yet?〉です。Have you finished your report yet? / Has he called you yet? / Have they left yet? 「もう〜しましたか」という意味になります。',
+    add: S(H('疑問文：Have / Has ＋ 主語 ＋ 過去分詞 ＋ yet?'), row(['Have', 'you', 'finished', 'yet?'], 8, 38, 72, 34, ['r', 'w', 'g', 'm'], 11, 6), B(10, 92, 300, 28, 'Has he called you yet?', 'w', 12), B(10, 126, 300, 28, 'Have they left yet?', 'w', 12), F('「もう〜しましたか」')) },
+  { note: '答え方の型です。Yes, I have.（はい、終わりました）。No, I haven\'t.（いいえ、まだです）。Not yet.（まだです）。Not yet. は I have not finished it yet. を省略した形です。× Yes, I did. / × No, I don\'t. は誤りで、先頭の have / has をそのまま返します。',
+    add: S(H('答え方の型'), tbl([['返事', '意味'], ['Yes, I have.', 'はい、終わりました'], ['No, I haven\'t.', 'いいえ、まだです'], ['Not yet.', 'まだです'], ['× Yes, I did.', '誤り（have を返す）']], 20, 34, [140, 140], 32, 12), F('Not yet. ＝ I have not 〜 yet. の省略')) },
+  { note: '❓「もう終わった？」に「うん、2時間前に」と答えるとき、なぜ後半は過去形になるのでしょう。→ 現在完了は「いつ」をはっきり言わない形だからです。ago や時刻を足したくなったら、過去形に切りかえます。Yes, he has. He came home an hour ago.',
+    add: S(H('❓なぜ後半は過去形？'), B(10, 34, 300, 28, 'Has your brother come home yet?', 'b', 12), B(20, 70, 130, 28, 'Yes, he has.', 'g', 13), T(235, 84, '← 現在完了', 12, C.green, true), B(10, 112, 300, 28, 'He came home an hour ago.', 'm', 13), T(160, 156, '時をくわしく言う → 過去形', 12, C.main, true), F('現在完了は「いつ」を言わない')) },
+  { note: '典型的な会話パターンです。A: Have you finished your homework yet? B: No, not yet. I have a lot of things to do. A: You should hurry. 「たずねる文＝現在完了」「時をくわしく言う文＝過去形」という役割分担で会話が進むことが多いです。',
+    add: S(H('会話文のパターン'), B(10, 34, 300, 28, 'A: Have you finished your homework yet?', 'b', 11), B(10, 66, 300, 28, 'B: No, not yet. I have a lot of things to do.', 'm', 10), B(10, 98, 300, 28, 'A: You should hurry.', 'b', 12), T(160, 148, 'たずねる文＝現在完了', 12, C.blue, true), T(160, 168, '時をくわしく言う文＝過去形', 12, C.main, true), F('役割分担で会話が進む')) },
+  { note: 'まとめです。①否定は have / has not＋過去分詞＋yet。②疑問は Have / Has＋主語＋過去分詞＋yet?。③答えは Yes, I have. / No, I haven\'t. / Not yet.。④「いつ」をくわしく言うときは過去形に切りかえます。',
+    add: S(H('まとめ'), B(10, 34, 300, 30, '① have not ＋ 過去分詞 ＋ yet', 'm', 13), B(10, 68, 300, 30, '② Have you 〜 yet?', 'b', 13), B(10, 102, 300, 30, '③ Yes, I have. / Not yet.', 'g', 13), B(10, 136, 300, 30, '④ いつ（ago）を言うなら過去形', 'r', 13), F('空所補充では Not yet. と haven\'t を確認')) },
+], '完了の否定・疑問と Not yet.'));
+
+// ───────── s124 経験の会話 ─────────
+add('koko_eigo_s124', 0, show([
+  { note: '❓外国から来た人と話すとき、いちばんよく使う質問のひとつが「日本食を食べたことある？」です。入試の会話文でも Have you ever 〜? は繰り返し登場します。質問だけでなく、そのあとの受け答えまでセットで覚えましょう。',
+    add: S(H('❓経験をたずねる定番'), B(10, 36, 300, 32, 'Have you ever eaten natto?', 'b', 14), ar(160, 70, 160, 90, C.blue), B(20, 94, 130, 32, 'Yes, I have.', 'g', 13), B(170, 94, 130, 32, 'No, I have not.', 'w', 13), F('質問のあとの受け答えまでセット')) },
+  { note: 'たずね方の例です。Have you ever been to Kyoto? / Have you ever eaten natto? / Have you ever seen a shooting star? / Have you ever tried Japanese calligraphy? どれも〈Have you ever ＋ 過去分詞 〜?〉の形です。',
+    add: S(H('たずね方：Have you ever ＋ 過去分詞'), B(10, 34, 300, 26, 'Have you ever been to Kyoto?', 'b', 12), B(10, 64, 300, 26, 'Have you ever eaten natto?', 'b', 12), B(10, 94, 300, 26, 'Have you ever seen a shooting star?', 'b', 12), B(10, 124, 300, 26, 'Have you ever tried Japanese calligraphy?', 'b', 11), F('ever は「今までに」')) },
+  { note: 'Yes の答えは、Yes, I have. I have been there twice. / Yes, once. / くわしく言うときは過去形で Yes, I have. I went there last summer. です。No の答えは、No, I have not. / No, I have never been there. / No, never. / No, this is my first time. などがあります。',
+    add: S(H('答え方いろいろ'), B(10, 34, 145, 24, 'Yes の答え', 'g', 12), B(165, 34, 145, 24, 'No の答え', 'w', 12), B(10, 62, 145, 84, 'Yes, I have.\nYes, once.\nI have been there\ntwice.', 'g', 11), B(165, 62, 145, 84, 'No, I have not.\nNo, never.\nNo, this is my\nfirst time.', 'w', 11), F('回数や感想を続けてもよい')) },
+  { note: '❓Yes のあと、くわしく言うときはなぜ過去形になるのでしょう。→ 現在完了は「経験があるかどうか」をたずねる形で、いつどうだったかを言うときは「過去の1点」の話になるからです。Yes, I have. I went there last summer.',
+    add: S(H('❓なぜ過去形に切りかわる？'), B(10, 34, 300, 28, 'Have you ever been to Kyoto?', 'b', 12), T(160, 76, '経験の有無 → 現在完了', 12, C.blue, true), B(10, 92, 300, 28, 'I went there last summer.', 'm', 12), T(160, 134, '過去の1点 → 過去形', 12, C.main, true), F('経験をたずねる → くわしく語る')) },
+  { note: '続けてたずねる表現です。How was it?（どうでしたか）/ How did you like it?（気に入りましたか）/ When did you go there?（いつ行ったのですか）/ Who did you go with? 「いつ」をたずねる When 〜 は過去形でたずねます。',
+    add: S(H('続けてたずねる'), tbl([['表現', '意味'], ['How was it?', 'どうでしたか'], ['How did you like it?', '気に入りましたか'], ['When did you go there?', 'いつ行きましたか'], ['Who did you go with?', 'だれと行きましたか']], 8, 34, [150, 146], 32, 12), F('When は過去形でたずねる')) },
+  { note: '会話例です。A: How many times have you visited Nara? B: Only once. I saw the big Buddha there. A: When did you go? B: Three years ago. When did you go? と聞かれたら、答えは必ず過去形です。現在完了では答えません。',
+    add: S(H('やりとりの例'), B(10, 34, 300, 28, 'A: How many times have you visited Nara?', 'b', 10), B(10, 66, 300, 28, 'B: Only once. I saw the big Buddha there.', 'm', 10), B(10, 98, 300, 28, 'A: When did you go?', 'b', 12), B(10, 130, 300, 28, 'B: Three years ago.', 'm', 12), F('When did you go? には過去形で答える')) },
+  { note: '入試の設問になりやすい場所です。ever・yet・never などの副詞の空所、Not yet. / No, never. などの応答の空所、過去形と現在完了の選択、そして内容一致です。会話文は、型を暗記していればそのまま得点になる領域です。',
+    add: S(H('設問になりやすい場所'), B(10, 34, 300, 28, '① ever・yet・never の空所', 'b', 13), B(10, 66, 300, 28, '② Not yet. / No, never. の空所', 'g', 13), B(10, 98, 300, 28, '③ 過去形か現在完了かの選択', 'm', 13), B(10, 130, 300, 28, '④ 内容一致（何回？ 今どうしている？）', 'p', 11), F('型を暗記すれば得点になる')) },
+  { note: 'まとめです。Have you ever 〜? / Not yet. / No, never. / How was it? の4つは声に出して覚えてしまいます。経験は現在完了でたずね、くわしい事情は過去形で語る、という切りかえに気づければ、動詞の形を選ぶ問題を落としません。',
+    add: S(H('まとめ'), B(10, 34, 300, 30, 'Have you ever ＋ 過去分詞 〜?', 'b', 13), B(10, 68, 300, 30, 'No, never. / No, I have not.', 'w', 13), B(10, 102, 300, 30, 'How was it?', 'g', 14), B(10, 136, 300, 30, '経験＝現在完了 → くわしく＝過去形', 'm', 12), F('4つの型は声に出して覚える')) },
+], '経験の会話：たずね方と答え方'));
+
+// ───────── s125 最上級・first time を使った書きかえ ─────────
+add('koko_eigo_s125', 0, show([
+  { note: '❓「こんなに大きな犬を見たのは初めてだ」。この一文は英語では3通りに書け、入試ではその書きかえがそのまま出題されます。日本語では別々に見える3つの文が、実は同じ場面を指していることに気づくと、書きかえが楽になります。',
+    add: S(H('❓同じ場面を3通りで'), B(10, 36, 300, 30, '① 最上級', 'b', 13), B(10, 72, 300, 30, '② never ＋ such a', 'g', 13), B(10, 108, 300, 30, '③ the first time', 'm', 13), T(160, 156, 'こんなに大きな犬は初めて！', 14, C.red, true), F('3つとも同じ意味')) },
+  { note: '①は最上級です。This is the biggest dog that I have ever seen.（これは私が今までに見た中でいちばん大きな犬だ）。形は〈This is the ＋ 最上級 ＋ 名詞 ＋ (that) ＋ 主語 ＋ have / has ever ＋ 過去分詞〉。that は省略できます。',
+    add: S(H('① 最上級を使う'), row(['This is', 'the biggest', 'dog', '(that) I have ever seen.'], 4, 38, 74, 38, ['w', 'b', 'w', 'g'], 9, 4), B(10, 96, 300, 28, 'He is the kindest person I have ever met.', 'b', 10), F('ever は have と過去分詞の間')) },
+  { note: '②は never ＋ such a です。I have never seen such a big dog.（私はこんなに大きな犬を見たことがない）。形は〈主語 ＋ have / has never ＋ 過去分詞 ＋ such a(n) ＋ 形容詞 ＋ 名詞〉。such a のあとは形容詞＋名詞の順で、× such big a dog は誤りです。',
+    add: S(H('② never ＋ such a'), row(['I', 'have never', 'seen', 'such a', 'big dog.'], 4, 38, 60, 38, ['w', 'g', 'w', 'p', 'b'], 9, 4), B(10, 96, 300, 28, '× such big a dog', 'r', 13), B(10, 130, 300, 28, '○ such an interesting book（母音の前は an）', 'g', 10), F('such a ＋ 形容詞 ＋ 名詞')) },
+  { note: '③は the first time です。This is the first time I have ever seen such a big dog.（こんなに大きな犬を見るのは初めてだ）。形は〈This is the first time ＋ 主語 ＋ have / has ＋ 過去分詞〉。the second time なら「2回目だ」になります。',
+    add: S(H('③ the first time'), row(['This is', 'the first time', 'I have', 'seen …'], 4, 38, 74, 38, ['w', 'm', 'g', 'w'], 10, 4), B(10, 96, 300, 28, 'This is the first time I have visited this town.', 'm', 9), B(10, 130, 300, 28, 'the second time なら「2回目」', 'w', 11), F('これが初めてだ')) },
+  { note: '❓なぜ3つとも同じ意味になるのでしょう。→ どれも「今までに経験した中で、これが最大（初めて）」を言っているからです。現在完了の経験用法の部分（have ever 過去分詞／have never 過去分詞）は共通なので、そこを軸に前後を入れかえるだけです。',
+    add: S(H('❓なぜ同じ意味？'), B(10, 34, 300, 30, '共通：経験用法 have (ever/never) ＋ 過去分詞', 'm', 10), B(10, 76, 94, 50, '最上級\nthe biggest', 'b', 11), B(113, 76, 94, 50, 'never\nsuch a', 'g', 11), B(216, 76, 94, 50, 'the first\ntime', 'p', 11), T(160, 148, 'キーワードで引き出す', 13, C.main, true), F('①最上級 ②never＋such a ③first time')) },
+  { note: '同じ内容は比較級でも表せます。I have never seen a bigger dog than this one.（これより大きな犬を見たことがない）＝ This is the biggest dog I have ever seen. 難関私立ではこちらも出ます。There is no better way than this. も同じ型です。',
+    add: S(H('比較級でも言える'), B(10, 34, 300, 28, 'I have never seen a bigger dog than this one.', 'b', 10), T(160, 76, '＝', 16, C.main, true), B(10, 88, 300, 28, 'This is the biggest dog I have ever seen.', 'b', 10), tbl([['最上級', '比較級'], ['the biggest', 'bigger than'], ['the best', 'better than']], 40, 130, [120, 120], 24, 11), F('不規則：good-better-best')) },
+  { note: '注意点です。the first time のあとの動詞は現在完了にします。× This is the first time I visited this town.（口語では見られるが入試では×）。○ This is the first time I have visited this town. また、such an interesting のように、a / an はうしろの語の音で決まります。',
+    add: S(H('注意すべき形'), B(10, 34, 300, 28, '× This is the first time I visited …', 'r', 11), B(10, 66, 300, 28, '○ This is the first time I have visited …', 'g', 11), B(10, 108, 300, 28, 'such an interesting book（an）', 'b', 12), T(160, 160, 'a / an は次の語の音で決まる', 12, C.blue, true), F('first time のうしろは現在完了')) },
+  { note: 'まとめです。This is the 最上級 ＋ 名詞 ＋ I have ever 過去分詞.　＝　I have never 過去分詞 ＋ such a 形容詞 ＋ 名詞.　＝　This is the first time I have 過去分詞.　3つの型は、現在完了の経験用法が軸です。',
+    add: S(H('まとめ'), B(10, 34, 300, 36, '① This is the biggest dog I have ever seen.', 'b', 11), B(10, 76, 300, 36, '② I have never seen such a big dog.', 'g', 11), B(10, 118, 300, 36, '③ This is the first time I have seen …', 'm', 11), F('現在完了の経験用法が軸')) },
+], '経験の書きかえ：最上級・first time'));
+
+// ───────── s127 現在完了進行形との使い分け ─────────
+add('koko_eigo_s127', 0, show([
+  { note: '❓「3時間本を読んでいます」と「本を3冊読み終えました」。どちらも過去から今までの話ですが、何がちがうのでしょう。→ 前者は途中経過、後者は成果の報告です。英語もこの二つを形で区別しています。',
+    add: S(H('❓途中経過と成果'), B(10, 36, 145, 44, '3時間\n読んでいる', 'b', 13), B(165, 36, 145, 44, '3冊\n読み終えた', 'g', 13), ar(82, 84, 82, 104, C.blue), ar(238, 84, 238, 104, C.green), B(10, 108, 145, 34, '途中経過', 'b', 13), B(165, 108, 145, 34, '成果', 'g', 13), F('終わっているかどうか')) },
+  { note: '現在完了進行形は、まだ終わっていない、続いている最中を表します。I have been reading this book for two hours.（2時間読んでいる、まだ読み終えていない）。It has been snowing since last night.（今も降っている）。He has been waiting for an hour.（今も待っている）。',
+    add: S(H('現在完了進行形：続いている最中'), B(10, 34, 300, 28, 'I have been reading this book for two hours.', 'b', 10), B(10, 66, 300, 28, 'It has been snowing since last night.', 'b', 11), B(10, 98, 300, 28, 'He has been waiting for an hour.', 'b', 12), T(160, 148, '今もまだ続いている', 13, C.blue, true), F('have been ＋ ing')) },
+  { note: '現在完了は、終わったこと、または状態の継続を表します。I have read this book twice.（2回読み終えた＝経験）。I have just read this book.（読み終えたところ＝完了）。I have known him for ten years.（状態の継続）。',
+    add: S(H('現在完了：終わった・状態の継続'), B(10, 34, 300, 28, 'I have read this book twice.（経験）', 'g', 11), B(10, 66, 300, 28, 'I have just read this book.（完了）', 'g', 11), B(10, 98, 300, 28, 'I have known him for ten years.（状態の継続）', 'g', 10), T(160, 148, '終わった、または状態', 13, C.green, true), F('have ＋ 過去分詞')) },
+  { note: '対比で確かめましょう。I have been writing a letter.（手紙を書いている最中、まだ書き終えていない）と、I have written a letter.（手紙を書き終えた）。I have been painting the wall.（塗っている最中）と、I have painted the wall.（塗り終えた）。',
+    add: S(H('対比：最中 か 終わったか'), B(10, 34, 145, 26, '進行形（最中）', 'b', 12), B(165, 34, 145, 26, '完了形（終わった）', 'g', 12), B(10, 66, 145, 40, 'I have been\nwriting a letter.', 'b', 11), B(165, 66, 145, 40, 'I have written\na letter.', 'g', 11), B(10, 116, 145, 40, 'I have been\npainting the wall.', 'b', 11), B(165, 116, 145, 40, 'I have painted\nthe wall.', 'g', 11), F('書き終えたかどうか')) },
+  { note: '❓「どれだけできたか」という量は、なぜ現在完了なのでしょう。→ 量は「終わった分」の報告だからです。I have read fifty pages so far.（今までに50ページ読んだ）は自然ですが、I have been reading fifty pages. は不自然です。',
+    add: S(H('❓量を言うなら現在完了'), B(10, 36, 300, 30, '○ I have read fifty pages so far.', 'g', 13), T(160, 80, '終わった分の報告', 12, C.green, true), B(10, 100, 300, 30, '△ I have been reading fifty pages.', 'r', 12), T(160, 144, '最中なのに量の結果を言うのは不自然', 11, C.red, true), F('結果の量 → 完了形')) },
+  { note: 'How long の疑問文です。How long have you been waiting?（どのくらい待っているのですか）－ For twenty minutes. 動作動詞の場合は現在完了進行形で答えるのが自然です。状態動詞なら How long have you known him? のようにふつうの現在完了です。',
+    add: S(H('How long の疑問文'), B(10, 34, 300, 28, 'How long have you been waiting?', 'b', 12), B(80, 66, 160, 28, 'For twenty minutes.', 'g', 12), B(10, 108, 300, 28, 'How long have you known him?', 'w', 12), T(160, 152, '動作動詞 → 進行形 ／ 状態動詞 → ふつうの完了', 11, C.main, true), F('動詞の種類で形が変わる')) },
+  { note: '書きかえです。It started to rain three hours ago. It is still raining now. ＝ It has been raining for three hours. 「〜し始めた」＋「今も続いている」→ 現在完了進行形、という手順で2文を1文にまとめます。',
+    add: S(H('書きかえ：2文を1文に'), B(10, 34, 300, 28, 'It started to rain three hours ago.', 'w', 11), B(10, 66, 300, 28, 'It is still raining now.', 'w', 12), ar(160, 96, 160, 114, C.red), B(10, 118, 300, 28, 'It has been raining for three hours.', 'b', 11), T(160, 164, '始まった ＋ 今も続く → 完了進行形', 12, C.blue, true), F('手順で作る')) },
+  { note: 'まとめです。途中経過を言うなら現在完了進行形、成果を言うなら現在完了。判定に迷ったら「今この瞬間もやっているか」を自分に問います。やっているなら進行形、終わっているなら完了形です。live・work・study・wait は両方使えることもあります。',
+    add: S(H('まとめ'), B(10, 34, 300, 36, '途中経過・今も続く\n→ have been ＋ ing', 'b', 12), B(10, 76, 300, 36, '成果・終わった・量\n→ have ＋ 過去分詞', 'g', 12), B(10, 118, 300, 30, '迷ったら「今もやっているか」', 'm', 13), F('live・work・study は両方OKのことも')) },
+], '現在完了進行形との使い分け'));
+
+// ───────── s132 受動態 ─────────
+add('koko_eigo_s132', 0, show([
+  { note: '❓「この学校は1950年に建てられました」。日本語のこの言い方は、だれが建てたかを言っていませんね。英語にも同じように「される側」を主語にする言い方があり、それが受動態です。',
+    add: S(H('❓だれが建てたか、言っていない'), B(10, 38, 300, 34, 'この学校は1950年に建てられました。', 'm', 13), ar(160, 74, 160, 94, C.main), B(40, 98, 240, 34, '「される側」が主語', 'b', 14), F('それが受動態')) },
+  { note: '文は、動作を「する側」を主語にするか、「される側」を主語にするかで2通りに書けます。能動態：Tom broke the window.（トムが窓をこわした）。受動態：The window was broken by Tom.（窓はトムによってこわされた）。能動態の目的語が、受動態の主語になります。',
+    add: S(H('能動態と受動態'), row(['Tom', 'broke', 'the window.'], 10, 36, 94, 32, ['b', 'w', 'g'], 12, 4), T(160, 84, 'する側が主語（能動態）', 12, C.blue, true), ar(160, 94, 160, 110, C.red), row(['The window', 'was broken', 'by Tom.'], 10, 114, 94, 32, ['g', 'r', 'b'], 11, 4), T(160, 162, 'される側が主語（受動態）', 12, C.green, true), F('目的語が主語になる')) },
+  { note: '形は〈be動詞 ＋ 過去分詞（＋ by ＋ 動作主）〉です。English is spoken in many countries.（英語は多くの国で話されている）。This room is cleaned every day. These pictures were taken by my father. be動詞は主語と時制に合わせます。',
+    add: S(H('形：be動詞 ＋ 過去分詞'), row(['English', 'is', 'spoken', 'in many countries.'], 4, 38, 74, 38, ['g', 'r', 'p', 'w'], 10, 4), T(160, 100, 'be動詞（時制）＋ 過去分詞（意味）', 12, C.main, true), B(10, 120, 300, 28, 'This room is cleaned every day.', 'w', 12), B(10, 152, 300, 28, 'These pictures were taken by my father.', 'w', 11), F('by 〜 は動作主を示すとき')) },
+  { note: 'be動詞の選び方です。現在は、I → am、he・she・it・単数名詞 → is、you・we・they・複数名詞 → are。過去なら I・he・she・it・単数名詞 → was、you・we・they・複数名詞 → were です。',
+    add: S(H('be動詞の選び方'), tbl([['主語', '現在', '過去'], ['I', 'am', 'was'], ['he / she / it・単数', 'is', 'was'], ['you / we / they・複数', 'are', 'were']], 8, 34, [150, 70, 76], 34, 12), B(10, 176, 300, 26, 'The song was sung by many people.', 'w', 11), F('主語と時制に合わせる')) },
+  { note: '❓なぜ be動詞を落としてはいけないのでしょう。→ 受動態は「be動詞＋過去分詞」の2語で1つの動詞だからです。時制を決めるのは be動詞、意味を決めるのは過去分詞と、役割を分けて覚えます。× English spoken in many countries. は誤りです。',
+    add: S(H('❓なぜ be動詞が必要？'), B(10, 34, 300, 28, '× English spoken in many countries.', 'r', 11), B(10, 66, 300, 28, '○ English is spoken in many countries.', 'g', 11), B(20, 108, 130, 40, 'be動詞\n＝ 時制を決める', 'r', 11), B(170, 108, 130, 40, '過去分詞\n＝ 意味を決める', 'p', 11), F('2語で1つの動詞')) },
+  { note: '❓では、なぜわざわざ「される側」を主語にするのでしょう。理由①動作主がわからない・言う必要がない（My bike was stolen.）、②動作主が「みんな・人々」で言うまでもない（English is spoken in Australia.）、③される側が話題の中心（This temple was built about 1300 years ago.）、④説明を客観的に書きたい（Rice is grown in this area.）です。',
+    add: S(H('❓なぜ受動態を使う？'), tbl([['理由', '例'], ['① 動作主が不明', 'My bike was stolen.'], ['② 言うまでもない', 'English is spoken\nin Australia.'], ['③ される側が話題', 'This temple was built\nabout 1300 years ago.'], ['④ 客観的に書く', 'Rice is grown here.']], 4, 32, [110, 194], 34, 10), F('動作主を言わないための道具')) },
+  { note: 'だから by 〜 が省略される文のほうが、むしろ多いのです。by がないからといって受動態でないとは限りません。日本語では「〜される」だけでなく「〜してある」「〜だ」と訳したほうが自然なことも多いです。This book is written in easy English.（この本はやさしい英語で書かれている）。The store is closed today.（その店は今日閉まっている）。',
+    add: S(H('by 〜 は省略されることが多い'), B(10, 34, 300, 28, 'This book is written in easy English.', 'b', 11), T(160, 74, 'by 〜 なし → 「書かれている」', 12, C.blue, true), B(10, 92, 300, 28, 'The store is closed today.', 'b', 12), T(160, 132, '「閉まっている」と訳すと自然', 12, C.blue, true), F('by がなくても受動態')) },
+  { note: 'まとめです。①受動態は〈be動詞 ＋ 過去分詞〉で「〜される」。②be動詞は主語の人称・数と時制に合わせる。③過去分詞は形が変わらない。④動作主を示すときは by 〜。⑤能動態の目的語が受動態の主語になります。',
+    add: S(H('まとめ'), B(10, 32, 300, 28, '① be動詞 ＋ 過去分詞 ＝ 「〜される」', 'm', 12), B(10, 64, 300, 28, '② be動詞は主語と時制に合わせる', 'r', 12), B(10, 96, 300, 28, '③ 過去分詞は形が変わらない', 'p', 13), B(10, 128, 300, 28, '④ 動作主は by 〜（省略も多い）', 'b', 12), B(10, 160, 300, 28, '⑤ 能動態の目的語 ＝ 受動態の主語', 'g', 12), F('される側を主語にする')) },
+], '受動態：be動詞 ＋ 過去分詞'));

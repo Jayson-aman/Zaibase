@@ -67,6 +67,13 @@ const grid = (rows: string[][], y0: number, widths: number[], rh: number, hdr: C
 const row = (labels: string[], y: number, c: Col = MAIN, size = 12, h = 44): DiagramElement[] =>
   flow(labels, y, { h, color: c[0], fill: c[1], size, gap: 14 }).flat();
 
+// 横に並べた箱（矢印なし）
+const cells = (labels: string[], y: number, c: Col = MAIN, size = 12, h = 44, gap = 8): DiagramElement[] => {
+  const n = labels.length;
+  const w = (304 - gap * (n - 1)) / n;
+  return labels.map((t, i) => bx(8 + i * (w + gap), y, w, h, t, c[0], c[1], size));
+};
+
 // 全体の大きな箱（中に文を入れる）
 const big = (t: string, y: number, h: number, c: Col = BLUE, size = 13): DiagramElement =>
   bx(12, y, 296, h, t, c[0], c[1], size);
@@ -213,7 +220,7 @@ const u139 = show([
     [lb(160, 14, '疑問詞が主語のとき', 13, C.green, 'middle', true), ...sent([['What language', GREEN], ['is spoken', BLUE], ['in Brazil?', GRAY]], 34, 12, 34), ...sent([['Who', GREEN], ['was invited', BLUE], ['to the party?', GRAY]], 84, 12, 34), lb(160, 138, '疑問詞が主語 → 語順は入れかえない', 12, C.red, 'middle')],
     '疑問詞が主語なら、そのまま続ける', GREEN),
   S('まとめです。受動態の否定文は be＋not＋過去分詞、疑問文は be を主語の前に出す形。do・does・did は使いません。疑問詞は前に出し、主語をたずねるときは語順を変えません。',
-    [...row(['否定文\nbe not 〜', '疑問文\nBe 主語 〜?', '疑問詞\n前に出す'], 14, MAIN, 12, 56), lb(160, 98, 'be動詞の時制と数は、いつも主語に合わせる', 12, C.ink, 'middle'), lb(160, 120, 'These cars → are　／　This car → is', 12, C.red, 'middle', true)],
+    [...cells(['否定文\nbe not 〜', '疑問文\nBe 主語 〜?', '疑問詞\n前に出す'], 14, MAIN, 12, 56), lb(160, 98, 'be動詞の時制と数は、いつも主語に合わせる', 12, C.ink, 'middle'), lb(160, 120, 'These cars → are　／　This car → is', 12, C.red, 'middle', true)],
     'be動詞を動かすだけ', MAIN),
 ], '受動態の否定文・疑問文');
 
@@ -542,7 +549,7 @@ const u151 = show([
     qa('May you 〜? で頼めないの？', 'May I 〜? ＝ 自分が動く許可\n相手に頼む（依頼）は\nWill / Would / Could you 〜?\n× May you 〜?', PURPLE, 12),
     '依頼は May you ではなく Could you', PURPLE),
   S('まとめです。may の許可は、May I 〜?（許可を求める）、You may 〜.（許可を与える）、may not（禁止）の3つ。店員と客・先生と生徒などの場面と、立場に合わせて選びます。',
-    [...row(['May I 〜?\n許可を求める', 'You may 〜.\n許可を与える', 'may not\n禁止'], 14, MAIN, 11, 54), lb(160, 96, 'Sure. / Go ahead. で答える', 12, C.ink, 'middle'), lb(160, 118, 'Yes, please. は Shall I 〜? への答え', 12, C.red, 'middle', true)],
+    [...cells(['May I 〜?\n許可を求める', 'You may 〜.\n許可を与える', 'may not\n禁止'], 14, MAIN, 11, 54), lb(160, 96, 'Sure. / Go ahead. で答える', 12, C.ink, 'middle'), lb(160, 118, 'Yes, please. は Shall I 〜? への答え', 12, C.red, 'middle', true)],
     '許可の may の三つの形', MAIN),
 ], 'May I 〜? と許可の may');
 
@@ -573,7 +580,7 @@ const u152 = show([
     [...sent([['He', BLUE], ['may have', RED], ['missed', GREEN], ['the train.', GRAY]], 22, 13, 34), lb(160, 76, '電車に乗り遅れたのかもしれない', 12, C.ink, 'middle'), ...sent([['She', BLUE], ['might have been', RED], ['sick', GREEN], ['yesterday.', GRAY]], 96, 12, 34), lb(160, 150, '昨日は具合が悪かったのかもしれない', 11, C.gray, 'middle')],
     '過去の推量 ＝ may / might have ＋ 過去分詞', MAIN),
   S('まとめです。推量の may は「かもしれない」、might はもっと控えめ。否定は「〜でないかもしれない」。長文では、本文が may のとき「〜である」と言い切った選択肢は不正解になることが多いので、断定していない点を読み落とさないことが大切です。',
-    [...row(['may\n五分五分', 'might\nもっと控えめ', 'may not\n〜でないかも'], 14, MAIN, 12, 52), lb(160, 98, '本文が may → 「必ず〜」の選択肢は言いすぎ', 12, C.red, 'middle', true), lb(160, 122, '過去は may / might have ＋ 過去分詞', 12, C.ink, 'middle')],
+    [...cells(['may\n五分五分', 'might\nもっと控えめ', 'may not\n〜でないかも'], 14, MAIN, 12, 52), lb(160, 98, '本文が may → 「必ず〜」の選択肢は言いすぎ', 12, C.red, 'middle', true), lb(160, 122, '過去は may / might have ＋ 過去分詞', 12, C.ink, 'middle')],
     '断定していないことを読み落とさない', MAIN),
 ], 'may と might の推量');
 
@@ -583,7 +590,7 @@ const u154 = show([
     [...sent([['I', BLUE], ['must', RED], ['finish', GREEN], ['this report today.', GRAY]], 26, 13, 38), lb(160, 88, '今日この報告書を仕上げなければならない', 12, C.ink, 'middle'), lb(160, 116, 'You must be quiet in the library.', 12, C.gray, 'middle'), lb(160, 136, 'We must help each other.', 12, C.gray, 'middle')],
     '主語 ＋ must ＋ 動詞の原形', MAIN),
   S('形の決まりは三つです。①to を入れない（× You must to go）、②三人称単数でも s をつけない（× He musts study）、③過去形・未来形を持たない。過去は had to、未来は will have to で表します。',
-    [...grid([['決まり', '誤り → 正しい'], ['① to を入れない', '× must to go → ○ must go'], ['② s をつけない', '× He musts → ○ He must'], ['③ 過去・未来は別の形', 'had to ／ will have to']], 12, [110, 190], 30, MAIN, BLUE, 12)],
+    [...grid([['決まり', '誤り → 正しい'], ['① to を入れない', '× must to go → ○ must go'], ['② s をつけない', '× He musts → ○ He must'], ['③ 過去・未来', 'had to ／ will have to']], 12, [120, 180], 30, MAIN, BLUE, 12)],
     'must の形の三つの決まり', BLUE),
   S('なぜ must は「話し手の気持ち」と言われるのでしょう。must は、話し手が心の中で「これはやらないといけない」と判断していることを表すからです。だから自分に言い聞かせる文や、強くすすめる文でよく使われます。',
     qa('must は話し手の気持ち？', 'I must call her tonight.\n＝ 今夜彼女に電話しなくちゃ（自分の判断）\nYou must see this movie.\n＝ 絶対に見るべきだ（熱意）', GREEN, 12),
@@ -598,10 +605,10 @@ const u154 = show([
     [big('A: Must I finish this today?', 10, 28, BLUE, 13), ...grid([['答え', '意味'], ['Yes, you must.', 'しなければならない'], ['No, you don\'t have to.', 'しなくてよい'], ['No, you mustn\'t.', 'してはいけない（禁止）']], 44, [150, 150], 26, MAIN, GREEN, 12)],
     '「その必要はない」は don\'t have to', GREEN),
   S('なぜ No, you mustn\'t. ではだめなのでしょう。mustn\'t は「絶対にしてはいけない」という禁止の返事になるからです。行かなくてもよいと言いたいのに、行くなと止めていることになります。',
-    qa('mustn\'t と答えてはだめ？', 'A: Must I finish this today?\nB: No, you don\'t have to. You can do it tomorrow.\nB\': No, you mustn\'t. ＝「やってはいけません」', RED, 12),
+    qa('mustn\'t と答えてはだめ？', 'A: Must I finish this today?\nB: No, you don\'t have to.\nB\': No, you mustn\'t.＝「やってはいけない」', RED, 12),
     'mustn\'t は必要を否定していない', RED),
   S('まとめです。must の否定には二種類あります。「必要がない」を言うなら don\'t have to、「してはいけない」を言うなら must not です。答え方の場面でも、同じ落とし穴が待っています。',
-    [...row(['must', 'don\'t have to', 'must not'], 14, MAIN, 12, 40), lb(53, 74, 'しなければ\nならない', 11, C.blue, 'middle'), lb(160, 74, 'しなくて\nよい', 11, C.green, 'middle'), lb(267, 74, 'してはいけない', 11, C.red, 'middle'), lb(160, 130, '「必要がない」と「禁止」は別の意味', 13, C.ink, 'middle', true)],
+    [...cells(['must', 'don\'t have to', 'must not'], 14, MAIN, 12, 40), lb(53, 74, 'しなければ\nならない', 11, C.blue, 'middle'), lb(160, 74, 'しなくて\nよい', 11, C.green, 'middle'), lb(267, 74, 'してはいけない', 11, C.red, 'middle'), lb(160, 130, '「必要がない」と「禁止」は別の意味', 13, C.ink, 'middle', true)],
     'must の否定は 2 種類', MAIN),
 ], 'must の形と答え方');
 
@@ -629,23 +636,23 @@ const u156 = show([
     [...grid([['掲示', '文にすると'], ['No parking.', 'You must not park here.'], ['No smoking.', 'You must not smoke here.'], ['Don\'t touch.', 'You must not touch it.']], 12, [120, 180], 30, MAIN, BLUE, 12)],
     '掲示 ＝ 禁止の短い表現', BLUE),
   S('禁止の強さには順があります。およそ must not ＞ Don\'t 〜. ＞ may not の順です。must not は規則としての重さがあり、may not は「許可しない」という言い方で、もう少し冷静です。',
-    [bx(10, 12, 92, 44, 'must not\n規則としての重み', C.red, FILL.red, 11), ar(104, 34, 114, 34, C.main), bx(116, 12, 92, 44, 'Don\'t 〜.\nその場で言う', C.main, FILL.warm, 11), ar(210, 34, 220, 34, C.main), bx(222, 12, 88, 44, 'may not\n許可しない', C.blue, FILL.blue, 11), lb(160, 86, '強い  →  やや弱い', 12, C.gray, 'middle'), lb(160, 114, '書きかえ問題では この三つが行き来する', 12, C.ink, 'middle', true)],
+    [...cells(['must not\n規則としての重み', 'Don\'t 〜.\nその場で言う', 'may not\n許可しない'], 12, MAIN, 11, 44), lb(160, 86, '強い  →  やや弱い', 12, C.gray, 'middle'), lb(160, 114, '書きかえ問題では この三つが行き来する', 12, C.ink, 'middle', true)],
     '強さ：must not ＞ Don\'t ＞ may not', MAIN),
   S('まとめです。must not は「してはいけない」（禁止）、「する必要はない」は don\'t have to。must not には過去形がないので、「〜してはいけなかった」は wasn\'t allowed to（許されなかった）などで表します。must not を「する必要はない」と訳す誤りは、失点に直結します。',
-    [...row(['must not\n禁止', 'don\'t have to\n必要はない'], 14, MAIN, 12, 48), lb(160, 82, '過去：wasn\'t allowed to 〜（許されなかった）', 12, C.ink, 'middle', true), lb(160, 106, 'I wasn\'t allowed to watch TV after nine.', 12, C.gray, 'middle'), lb(160, 132, '× must not ＝ する必要はない', 12, C.red, 'middle', true)],
+    [...cells(['must not\n禁止', 'don\'t have to\n必要はない'], 14, MAIN, 12, 48), lb(160, 82, '過去：wasn\'t allowed to 〜（許されなかった）', 12, C.ink, 'middle', true), lb(160, 106, 'I wasn\'t allowed to watch TV after nine.', 12, C.gray, 'middle'), lb(160, 132, '× must not ＝ する必要はない', 12, C.red, 'middle', true)],
     '禁止と「必要なし」を取りちがえない', MAIN),
 ], 'must not の禁止');
 
 // ── s159 have to の時制 ──
 const u159 = show([
   S('must は現在にしか立てません。過去も未来も、have to が引き受けます。must の過去は had to、未来は will have to です。',
-    [ln(30, 70, 290, 70, C.gray, false, 3), bx(20, 20, 80, 36, '過去\nhad to', C.green, FILL.green, 13), bx(120, 20, 80, 36, '現在\nmust / have to', C.red, FILL.red, 11), bx(222, 20, 84, 36, '未来\nwill have to', C.blue, FILL.blue, 12), lb(60, 92, 'yesterday', 11, C.gray, 'middle'), lb(160, 92, 'now', 11, C.gray, 'middle'), lb(264, 92, 'tomorrow', 11, C.gray, 'middle'), lb(160, 126, '時制が現在以外になると must は使えない', 12, C.main, 'middle', true)],
+    [ln(30, 70, 290, 70, C.gray, false, 3), bx(20, 20, 80, 36, '過去\nhad to', C.green, FILL.green, 13), bx(108, 20, 104, 36, '現在\nmust / have to', C.red, FILL.red, 12), bx(222, 20, 84, 36, '未来\nwill have to', C.blue, FILL.blue, 12), lb(60, 92, 'yesterday', 11, C.gray, 'middle'), lb(160, 92, 'now', 11, C.gray, 'middle'), lb(264, 92, 'tomorrow', 11, C.gray, 'middle'), lb(160, 126, '時制が現在以外になると must は使えない', 12, C.main, 'middle', true)],
     'must には過去形・未来形がない', MAIN),
   S('過去は had to です。I had to walk home yesterday because I missed the last bus.（最終バスに乗り遅れたので、昨日は歩いて帰らなければならなかった）。主語が何であっても had to です。',
     [big('I had to walk home yesterday\nbecause I missed the last bus.', 14, 46, GREEN, 13), big('She had to take care of her\nlittle brother last Sunday.', 70, 46, GREEN, 13), lb(160, 130, '主語がだれでも had to', 12, C.ink, 'middle')],
     '過去 ＝ had to', GREEN),
   S('過去の疑問文と否定文は、一般動詞の文なので did / didn\'t を使います。Did you have to work last night? — Yes, I did. / No, I didn\'t. / I didn\'t have to go to school yesterday.',
-    [...grid([['形', '例'], ['疑問', 'Did you have to work last night?'], ['答え', 'Yes, I did. / No, I didn\'t.'], ['否定', 'I didn\'t have to go to school.']], 14, [60, 240], 30, MAIN, BLUE, 12), lb(160, 144, 'have to は一般動詞 → did / didn\'t を使う', 12, C.red, 'middle', true)],
+    [...grid([['形', '例'], ['疑問', 'Did you have to work last night?'], ['答え', 'Yes, I did. / No, I didn\'t.'], ['否定', 'I didn\'t have to go to school.']], 14, [60, 240], 30, MAIN, BLUE, 12), lb(160, 150, 'have to は一般動詞 → did / didn\'t を使う', 12, C.red, 'middle', true)],
     '過去の疑問・否定は did で作る', BLUE),
   S('未来は will have to です。You will have to wait for about ten minutes. なぜ × You will must wait. はいけないのでしょう。will も must も助動詞で、助動詞は二つ並べられないからです。have to なら will のうしろに原形 have が置けます。',
     qa('will must とは言えないの？', 'will も must も助動詞\n助動詞は二つ並べられない\n○ You will have to wait.\n（will のうしろに原形 have）', BLUE, 12),
@@ -657,13 +664,13 @@ const u159 = show([
     [big('I didn\'t have to pay for the ticket.\n友達が買ってくれたから', 12, 46, GREEN, 13), ...row(['必要が\nなかった', 'だから\nしていない'], 76, GREEN, 12, 44)],
     'didn\'t have to ＝ する必要がなかった', GREEN),
   S('「してはいけなかった」ではありません。禁止の意味を過去で言うときは、must not に過去形がないので別の言い方をします。We weren\'t allowed to enter the room.（入ることを許されなかった）。didn\'t have to と混同すると意味が正反対になります。',
-    [...grid([['日本語', '英語'], ['入る必要がなかった', 'We didn\'t have to enter the room.'], ['入ってはいけなかった', 'We weren\'t allowed to enter the room.'], ['入れなかった', 'We couldn\'t enter the room.']], 12, [110, 190], 34, MAIN, BLUE, 11)],
+    [...grid([['日本語', '英語'], ['入る必要がなかった', 'We didn\'t have to enter.'], ['入ってはいけなかった', 'We weren\'t allowed to enter.'], ['入れなかった', 'We couldn\'t enter.']], 12, [130, 170], 34, MAIN, BLUE, 12)],
     '「必要なし」と「禁止」は過去でも別', RED),
   S('should have ＋ 過去分詞との違いも確認します。I didn\'t have to go.（行く必要がなかった＝行かなかった）と、I shouldn\'t have gone.（行くべきではなかった＝行ってしまった・後悔）は、行ったか行かなかったかで区別します。',
     [bx(8, 14, 148, 66, 'I didn\'t have to go.\n行く必要がなかった\n→ 行かなかった', C.green, FILL.green, 12), bx(164, 14, 148, 66, 'I shouldn\'t have gone.\n行くべきではなかった\n→ 行ってしまった', C.red, FILL.red, 12), lb(160, 110, '行ったか、行かなかったかで見分ける', 12, C.ink, 'middle', true), lb(160, 134, 'どちらも「行かなくてよかった」と訳せる', 11, C.gray, 'middle')],
     '行ったかどうかで区別する', MAIN),
   S('まとめです。must の過去は had to、未来は will have to。疑問・否定は did / will を使い、didn\'t have to は「必要がなかった」です。和文英訳「昨日は宿題をする必要がなかった」は I didn\'t have to do my homework yesterday. となります。',
-    [...row(['had to\n過去', 'will have to\n未来', 'didn\'t have to\n必要なかった'], 14, MAIN, 11, 52), lb(160, 98, 'He must finish it today.', 12, C.gray, 'middle'), lb(160, 118, '→ He had to finish it yesterday.', 13, C.ink, 'middle', true), lb(160, 140, 'I didn\'t have to do my homework yesterday.', 11, C.ink, 'middle')],
+    [...cells(['had to\n過去', 'will have to\n未来', 'didn\'t have to\n必要なかった'], 14, MAIN, 11, 52), lb(160, 98, 'He must finish it today.', 12, C.gray, 'middle'), lb(160, 118, '→ He had to finish it yesterday.', 13, C.ink, 'middle', true), lb(160, 140, 'I didn\'t have to do my homework yesterday.', 11, C.ink, 'middle')],
     '時制が変わったら have to', MAIN),
 ], 'have to の時制');
 
@@ -722,7 +729,7 @@ const u162 = show([
     qa('「必ず」と言い切ってはいけない？', '本文：The bus should come soon.\n選択肢：The bus will surely come.\n→ should は「はず」で、断定ではない', RED, 12),
     'should は「はず」。言い切りは言いすぎ', RED),
   S('まとめです。「〜べきだ」で意味が通らなければ、「〜のはずだ」を試します。この二つを行き来できると、長文の読み違いが減ります。確信の強さは must ＞ should ＞ may です。',
-    [...row(['人の行動\n〜べきだ', '見込み\n〜のはずだ'], 14, MAIN, 13, 52), lb(160, 98, '根拠がある予想 ＝ should', 13, C.ink, 'middle', true), lb(160, 122, 'must ＞ should ＞ may', 13, C.green, 'middle', true)],
+    [...cells(['人の行動\n〜べきだ', '見込み\n〜のはずだ'], 14, MAIN, 13, 52), lb(160, 98, '根拠がある予想 ＝ should', 13, C.ink, 'middle', true), lb(160, 122, 'must ＞ should ＞ may', 13, C.green, 'middle', true)],
     '義務と推量を行き来する', MAIN),
 ], 'should の推量');
 

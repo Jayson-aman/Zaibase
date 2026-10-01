@@ -955,7 +955,7 @@ F['xf_koko_eigo_s068'] = show([
     [...why('一度話題に出たあとは？'), bx(10, 48, 300, 34, 'A: Is there a post office near here?', C.blue, FILL.blue, 13), bx(10, 94, 300, 34, 'B: Yes. It\'s next to the bank.', C.green, FILL.green, 13), lb(160, 150, 'post office → it', 14, C.green, 'middle', true)],
     '話題に出たら、it / they', BLUE),
   S('❓時制が変わったら？ 過去は There was / were、未来は There will be、助動詞は There must be のように be の形を変えます。will のうしろは原形なので、There will is ではなく There will be です。',
-    [...why('過去・未来・助動詞では？'), ...tbl(['時', '形'], [['過去', 'There was / were ～'], ['未来', 'There will be ～'], ['助動詞', 'There must be ～']], { y0: 56, rh: 30, gap: 8, cols: [BLUE, GREEN], size: 13 }), lb(160, 168, 'There will is a concert.　×', 13, C.red, 'middle', true)],
+    [...why('過去・未来・助動詞では？'), ...tbl(['時', '形'], [['過去', 'There was / were ～'], ['未来', 'There will be ～'], ['助動詞', 'There must be ～']], { y0: 56, rh: 30, gap: 8, cols: [BLUE, GREEN], size: 13 }), lb(160, 180, 'There will is a concert.　×', 13, C.red, 'middle', true)],
     '助動詞のうしろは be（原形）', RED),
   S('まとめです。my・your・the・this・人名がつく特定のものには There is / are を使いません（My bag is on the desk.）。a・some・many・no などの不特定のものに使います。',
     [...row(['特定のもの\nmy / the / this', '不特定のもの\na / some / many'], 40, MAIN, 12, 54), lb(80, 112, 'My bag is ...', 13, C.blue, 'middle', true), lb(240, 112, 'There is a bag ...', 13, C.green, 'middle', true)],
