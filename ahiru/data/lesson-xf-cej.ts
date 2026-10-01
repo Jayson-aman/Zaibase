@@ -1,9 +1,36 @@
 // 中学受験 英語（小4・小6）30 単元の「動く図解スライド」。
 // 「なぜ？」の連鎖で、7枚以上。単元の節（section）ごとに 1 枚の図解をひもづける。
 import type { DiagramElement, DiagramFigure } from './figures';
-import { C, FILL, bx, lb, ar, ln, ci, pg, show, fresh, flow } from './diagram-kit';
+import { C, FILL, bx, lb, ar, ln, ci, show as showKit, fresh, flow } from './diagram-kit';
 
 type Col = [string, string];
+
+// 小学生向け：むずかしい言葉は、スライドの説明文の最初の1か所にだけ読みをそえる
+const YOMI: [string, string][] = [
+  ['一般動詞', 'いっぱんどうし'], ['疑問詞', 'ぎもんし'], ['選択肢', 'せんたくし'], ['複数形', 'ふくすうけい'], ['進行形', 'しんこうけい'],
+  ['形容詞', 'けいようし'], ['具体例', 'ぐたいれい'], ['模範', 'もはん'], ['習慣', 'しゅうかん'], ['複雑', 'ふくざつ'],
+  ['冠詞', 'かんし'], ['名詞', 'めいし'], ['動詞', 'どうし'], ['副詞', 'ふくし'], ['母音', 'ぼいん'], ['主語', 'しゅご'], ['設問', 'せつもん'], ['時刻', 'じこく'], ['変更', 'へんこう'],
+];
+const yomi = (note: string): string => {
+  let out = note;
+  for (const [w, r] of YOMI) {
+    if (out.includes(w + '（')) continue;
+    let from = 0;
+    for (;;) {
+      const i = out.indexOf(w, from);
+      if (i < 0) break;
+      const inLonger = w === '動詞' && out[i - 1] === '般';
+      if (!inLonger) {
+        out = out.slice(0, i + w.length) + '（' + r + '）' + out.slice(i + w.length);
+        break;
+      }
+      from = i + w.length;
+    }
+  }
+  return out;
+};
+const show = (slides: { note: string; add?: DiagramElement[] }[], caption?: string): DiagramFigure =>
+  showKit(slides.map((s) => ({ ...s, note: yomi(s.note) })), caption);
 const BLUE: Col = [C.blue, FILL.blue];
 const GREEN: Col = [C.green, FILL.green];
 const RED: Col = [C.red, FILL.red];
@@ -1008,7 +1035,7 @@ const f_471 = show([
     '空らんをうめて、声に出して読む', BLUE),
   Qt('「歌手になりたい」は、なぜ I want to be a singer. なのでしょう。want（〜したい）のあとに動作を続けるには「to ＋ 動詞のもとの形」が必要で、「〜になる」の動詞が be だからです。I want be ～. は to が抜けて文になりません。',
     'to を入れるのはなぜ？',
-    [...wd([['I', GREEN], ['want', RED], ['to', BLUE], ['be', MAIN], ['a singer.', MAIN]], 58, { size: 12 }), lb(160, 100, '○', 18, C.green, 'middle', true), ...wd(cw(['I', 'want', 'be', 'a singer.'], RED), 116, { total: 220, x0: 50, size: 12 }), lb(160, 160, '', 10)],
+    [...wd([['I', GREEN], ['want', RED], ['to', BLUE], ['be', MAIN], ['a singer.', MAIN]], 58, { size: 12 }), lb(160, 100, '○', 18, C.green, 'middle', true), ...wd(cw(['I', 'want', 'be', 'a singer.'], RED), 116, { total: 220, x0: 50, size: 12 })],
     'want to ＋ もとの形'),
   S('相手にたずねるときは、What\'s your name?（お名前は）、How old are you?（何才）、What sport do you like?（どんなスポーツが好き）、Where are you from?（どこの出身）、What subject do you like?（何の教科が好き）です。',
     L([['What\'s your name? — I\'m Ken.', PURPLE], ['How old are you? — I\'m ten years old.', PURPLE], ['What sport do you like? — I like tennis.', PURPLE], ['Where are you from? — I\'m from Osaka.', PURPLE], ['What subject do you like? — I like science.', PURPLE]], 8, 24, 5, 11),
@@ -1100,7 +1127,7 @@ const f_474 = show([
     'always ＞ usually ＞ often ＞ sometimes ＞ never', BLUE),
   S('ひんどの語を置く場所です。一般動詞の前に置きます（I sometimes play tennis.）。be動詞のときは、そのうしろです（I am always busy.）。動詞のうしろに置いてはいけません。',
     [...wd([['I', GREEN], ['sometimes', RED], ['play', MAIN], ['tennis.', MAIN]], 12, { size: 12 }), lb(160, 54, '一般動詞の前', 12, C.red, 'middle', true), ...wd([['I', GREEN], ['am', MAIN], ['always', RED], ['busy.', MAIN]], 76, { size: 12 }), lb(160, 118, 'be動詞のあと', 12, C.red, 'middle', true),
-      ...wd(cw(['I', 'play', 'sometimes', 'tennis.'], RED), 134, { size: 11, h: 26 })],
+      ...wd(cw(['I', 'play', 'sometimes', 'tennis.'], RED), 134, { size: 11, h: 24, total: 220 }), lb(268, 146, '× うしろ', 11, C.red, 'middle', true)],
     '一般動詞の前、be動詞のあと', GREEN),
   Q('never には、なぜ don\'t を重ねないのでしょう。never はそれ自体に「一度も〜ない」という打ち消しの意味があるからです。I never don\'t eat ～ と書くと、打ち消しが二重になってしまいます。always と取りちがえないことも大切です。',
     'never に don\'t は？', 'never ＝ 一度も〜ない（打ち消し）\nI never eat natto.\n× I never don\'t eat natto.\nnever と always は正反対', 'never だけで打ち消し', RED, 14),
@@ -1109,7 +1136,7 @@ const f_474 = show([
       lb(150, 116, 'Your friend,', 12, C.red, 'start', true), lb(150, 134, 'Ken', 12, C.ink, 'start', true)],
     'Dear ～, 本文　Your friend, 名前', MAIN),
   S('手紙でよく使う言い方です。How are you?（お元気ですか）、I am fine.（元気です）、Please write to me soon.（お返事ください）、See you soon.（また近いうちに）。英文2の質問は、What does he do on Sunday afternoon? — He helps his mother. です。',
-    L([['How are you?　I am fine.', GREEN], ['Please write to me soon.', BLUE], ['See you soon.', BLUE], ['What does he do on Sunday afternoon? — He helps his mother.', PURPLE]], 10, 28, 8, 11),
+    L([['How are you?　I am fine.', GREEN], ['Please write to me soon.', BLUE], ['See you soon.', BLUE], ['What does he do on Sunday afternoon?', PURPLE], ['— He helps his mother.', PURPLE]], 8, 26, 6, 12),
     '手紙のことば と 質問の答え', BLUE),
   S('まとめです。①時こく・曜日・ひんどの語に印をつけて表にする。②ひんどの語は一般動詞の前、be動詞のあと。③never だけで打ち消し。④手紙は Dear ～, で始めて Your friend, で終わる。',
     L([['① 印をつけて 表にまとめる', BLUE], ['② ひんどの語：一般動詞の前・be動詞のあと', GREEN], ['③ never に don\'t は重ねない', RED], ['④ Dear ～,　Your friend,', PURPLE]], 8, 30, 6, 12),

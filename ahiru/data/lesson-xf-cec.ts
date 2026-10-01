@@ -205,7 +205,7 @@ const s071: DiagramFigure = show([
   },
   {
     note: '似た意味の組もセットで覚えます。listen to（意識して聞く）と hear（自然に聞こえる）、look at（意識して見る）と see（自然に見える）。前の二つは前置詞が要り、あとの二つは要りません。',
-    add: fresh(...grid([['意識して', '自然に'], ['listen to', 'hear'], ['look at', 'see']], 30, 6, [130, 130], 30, { size: 14, head: 'b', body: 'm' }), at(95, 100, '前置詞が いる', 11, C.purple), at(225, 100, '前置詞は いらない', 11, C.green), en('I listened to the radio.', 118, 12), en('I heard a strange sound.', 136, 12), ...cap('二つ組で おぼえる', C.ink)),
+    add: fresh(...grid([['意識して', '自然に'], ['listen to', 'hear'], ['look at', 'see']], 30, 6, [130, 130], 30, { size: 14, head: 'b', body: 'm' }), at(95, 108, '前置詞が いる', 11, C.purple), at(225, 108, '前置詞は いらない', 11, C.green), en('I listened to the radio.', 124, 12), en('I heard a strange sound.', 141, 12), ...cap('二つ組で おぼえる', C.ink)),
   },
   {
     note: 'run は自動詞にも他動詞にもなります。He runs fast.（走る）は自動詞、He runs a restaurant.（経営する）は他動詞です。うしろに目的語が直接あるかを見て判断します。',
