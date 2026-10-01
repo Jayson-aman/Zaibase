@@ -281,7 +281,7 @@ const s408 = show([
     [...axes(OX - 100, OY, 20, 300, 10, OY + 6), ...para(2, 0, 3.2, OX - 100, OY, SX, SY * 0.7), ...band1(1, 3).map((e) => (e.t === 'line' ? { ...e, x1: e.x1 - 100, x2: e.x2 - 100 } : e)), ci(OX - 100 + SX, OY - 2 * SY * 0.7, 5, undefined, C.red, FILL.red), ci(OX - 100 + 3 * SX, OY - 18 * SY * 0.7, 5, undefined, C.green, FILL.green), lb(OX - 100 + 3 * SX + 8, OY - 18 * SY * 0.7 + 4, '18', 12, C.green, 'start', true), lb(OX - 100 + SX + 8, OY - 2 * SY * 0.7 - 4, '2', 12, C.red, 'start', true)],
     '変域に 0 が入らない → 両はしで決まる', BLUE),
   S('a が負のとき：y＝−2x²（−3≦x≦1）は逆さまの放物線です。頂点 y＝0 が最大値、遠い端 x＝−3 で最小値 −18。答えは −18≦y≦0 です。',
-    [ar(20, 26, 300, 26, C.gray), ar(OX, 150, OX, 8, C.gray), lb(296, 38, 'x', 11, C.gray, 'end'), lb(OX + 8, 14, 'y', 11, C.gray, 'start'), ...para(-2, -3.4, 3.4, OX, 26, SX, SY * 0.7), ln(OX - 3 * SX, 12, OX - 3 * SX, 150, C.green, true, 1.6), ln(OX + SX, 12, OX + SX, 150, C.green, true, 1.6), ci(OX, 26, 5, undefined, C.green, FILL.green), ci(OX - 3 * SX, 26 + 18 * SY * 0.7, 5, undefined, C.red, FILL.red), lb(OX + 12, 14, '最大 0', 12, C.green, 'start', true), lb(OX - 3 * SX + 8, 26 + 18 * SY * 0.7 + 12, '最小 −18', 12, C.red, 'start', true)],
+    [ar(20, 26, 300, 26, C.gray), ar(OX, 150, OX, 8, C.gray), lb(296, 38, 'x', 11, C.gray, 'end'), lb(OX + 8, 14, 'y', 11, C.gray, 'start'), ...para(-2, -3.4, 3.4, OX, 26, SX, SY * 0.7), ln(OX - 3 * SX, 12, OX - 3 * SX, 150, C.green, true, 1.6), ln(OX + SX, 12, OX + SX, 150, C.green, true, 1.6), ci(OX, 26, 5, undefined, C.green, FILL.green), ci(OX - 3 * SX, 26 + 18 * SY * 0.7, 5, undefined, C.red, FILL.red), lb(OX + 40, 20, '最大 0', 12, C.green, 'start', true), lb(OX - 3 * SX + 8, 26 + 18 * SY * 0.7 + 12, '最小 −18', 12, C.red, 'start', true)],
     'a ＜ 0：−18 ≦ y ≦ 0', RED),
   S('手順をまとめます。①変域に0が入るか確認する。②入るなら、a が正のとき最小値0、負のとき最大値0。③もう一方は、x の絶対値が大きい端の値。④0が入らないなら両はしが最大・最小です。',
     col(['① x の変域に 0 が入る？', '② 入る：a＞0 なら最小0、a＜0 なら最大0', '③ 絶対値が大きい端で もう一方', '④ 入らない：両はしが最大・最小'], 14, 292, 6, MAIN, 12, 26, 10),
@@ -423,7 +423,7 @@ const s413 = show([
 const eq = (l: string, r: string, y: number, size = 16, c: string = C.ink): DiagramElement[] => [lb(150, y, l, size, c, 'end', true), lb(160, y, '＝', size, c, 'middle', true), lb(172, y, r, size, c, 'start', true)];
 const s415 = show([
   S('同じ方程式 2x−5＝3x+7 の解き方を2通り見比べます。上は1行に全部を詰めこんだ答案、下は1行に1つの操作で書いた答案です。',
-    [B(8, 8, 304, 38, '2x−5＝3x+7　2x−3x＝7+5　−x＝12　x＝−12', RED, 10), lb(160, 60, '↑ 1行に詰めこみ ✗', 11, C.red, 'middle', true), ...eq('2x − 5', '3x + 7', 82, 14), ...eq('2x − 3x', '7 + 5', 104, 14), ...eq('−x', '12', 126, 14), lb(268, 82, '← 1行に1操作 ✓', 11, C.green, 'start', true)],
+    [B(8, 8, 304, 38, '2x−5＝3x+7　2x−3x＝7+5　−x＝12　x＝−12', RED, 10), lb(160, 60, '↑ 1行に詰めこみ ✗', 11, C.red, 'middle', true), ...eq('2x − 5', '3x + 7', 82, 14), ...eq('2x − 3x', '7 + 5', 104, 14), ...eq('−x', '12', 126, 14), lb(268, 104, '1行に\n1操作 ✓', 11, C.green, 'middle', true)],
     '1行に1操作で書く'),
   S('❓なぜ1行に1つの操作にするのでしょう。→ 途中式は採点者のためではなく、30分後の自分が検算するために書くからです。詰めこむと、どこで符号を間違えたのか自分でも追えません。',
     qa('なぜ1行に1操作？', '途中式 ＝ 30分後の自分への手紙\n詰めこむと どこで間違えたか\n追えず、見直しが無駄になる', PURPLE),
@@ -481,7 +481,7 @@ const reg = (n: number, cx: number, cy: number, r: number, rot = -90): [number, 
   Array.from({ length: n }, (_, i) => [cx + r * Math.cos(((rot + (360 / n) * i) * Math.PI) / 180), cy + r * Math.sin(((rot + (360 / n) * i) * Math.PI) / 180)] as [number, number]);
 const s418 = show([
   S('角度の問題は、使う知識が10個ほどしかありません。ここを完璧にすると、小問集合の1問が確実に取れます。その中の多角形の4つを使って、正多角形の角度を調べます。',
-    [B(6, 6, 150, 28, '三角形の内角の和 180°', BLUE, 11), B(164, 6, 150, 28, '三角形の外角＝他の2内角の和', BLUE, 10), B(6, 40, 150, 28, 'n角形の内角の和 180×(n−2)', GREEN, 10), B(164, 40, 150, 28, '多角形の外角の和 360°', GREEN, 11), B(6, 74, 150, 28, '正n角形の外角 360÷n', GREEN, 11), B(164, 74, 150, 28, '正n角形の内角 180−360÷n', GREEN, 10), B(6, 108, 150, 28, '二等辺三角形の底角は等しい', GRAY, 10), B(164, 108, 150, 28, '円周角＝中心角の半分', GRAY, 11)],
+    [B(6, 4, 150, 22, '① 三角形の内角の和 180°', BLUE, 10), B(164, 4, 150, 22, '② 三角形の外角＝他の2内角の和', BLUE, 10), B(6, 30, 150, 22, '③ n角形の内角の和 180×(n−2)', GREEN, 10), B(164, 30, 150, 22, '④ 多角形の外角の和 360°', GREEN, 10), B(6, 56, 150, 22, '⑤ 正n角形の外角 360÷n', GREEN, 10), B(164, 56, 150, 22, '⑥ 同位角・錯角は等しい', GRAY, 10), B(6, 82, 150, 22, '⑦ 二等辺三角形の底角は等しい', GRAY, 10), B(164, 82, 150, 22, '⑧ 円周角＝中心角の半分', GRAY, 10), B(6, 108, 150, 22, '⑨ 半円の弧の円周角は90°', GRAY, 10), B(164, 108, 150, 22, '⑩ 内接四角形の対角の和180°', GRAY, 10)],
     '覚えておく知識は10個ほど'),
   S('❓なぜ多角形の外角の和は、いつも360°なのでしょう。→ 周にそって一周歩くと、各頂点で外角のぶんだけ向きを変えます。一周して元の向きにもどるので、向きを変えた合計は360°です。',
     [pg(reg(6, 160, 78, 62), C.green, 'rgba(22,163,74,0.12)'), ...reg(6, 160, 78, 62).map((p) => ci(p[0], p[1], 4, undefined, C.red, FILL.red)), lb(160, 82, '一周＝360°', 15, C.red, 'middle', true), lb(52, 40, '各頂点で\n外角ぶん回る', 11, C.gray, 'middle')],
@@ -499,7 +499,7 @@ const s418 = show([
     [pg(reg(8, 160, 78, 64), C.green, 'rgba(22,163,74,0.12)'), lb(160, 66, '外角 360÷8 ＝ 45°', 12, C.blue, 'middle', true), lb(160, 88, '内角 ＝ 135°', 14, C.red, 'middle', true)],
     '正八角形：外角45°・内角135°', GREEN),
   S('平行線の間のジグザグは、折れ点を通る平行線を1本引きます。上の角が40°、下の角が25°なら、折れ点の角は 40＋25＝65° です。',
-    [ln(20, 36, 300, 36, C.gray, false, 2), ln(20, 124, 300, 124, C.gray, false, 2), lb(300, 28, 'l', 12, C.gray, 'end', true), lb(300, 116, 'm', 12, C.gray, 'end', true), ln(148, 36, 200, 80, C.blue, false, 2), ln(200, 80, 106, 124, C.blue, false, 2), ln(60, 80, 280, 80, C.red, true, 1.4), lb(166, 70, '40°', 12, C.blue, 'middle', true), lb(166, 96, '25°', 12, C.blue, 'middle', true), lb(250, 72, '40 ＋ 25 ＝ 65°', 12, C.red, 'middle', true)],
+    [ln(20, 36, 300, 36, C.gray, false, 2), ln(20, 124, 300, 124, C.gray, false, 2), lb(300, 28, 'l', 12, C.gray, 'end', true), lb(300, 116, 'm', 12, C.gray, 'end', true), ln(148, 36, 200, 80, C.blue, false, 2), ln(200, 80, 106, 124, C.blue, false, 2), ln(60, 80, 280, 80, C.red, true, 1.4), lb(168, 68, '40°', 12, C.blue, 'middle', true), lb(150, 92, '25°', 12, C.blue, 'middle', true), lb(250, 72, '40 ＋ 25 ＝ 65°', 12, C.red, 'middle', true)],
     '折れ点を通る平行線で、錯角を使う', BLUE),
   S('まとめです。正n角形は外角 360÷n から入る。内角は 180−外角。注意点は「1つの内角」と「内角の和」の取りちがえです。問題文の「1つの」に印をつけてから解き始めます。',
     col(['正n角形：外角 ＝ 360 ÷ n', '1つの内角 ＝ 180 − 外角', '「1つの」と「和」を読みちがえない'], 20, 280, 12, MAIN, 13, 30, 14),
@@ -548,7 +548,7 @@ const sticks = (n: number, x0: number, y0: number, sz: number, hiLast = false): 
   Array.from({ length: n }, (_, i) => bx(x0 + i * sz, y0, sz, sz, undefined, hiLast && i === n - 1 ? C.red : C.main, hiLast && i === n - 1 ? FILL.red : FILL.yellow));
 const s424 = show([
   S('マッチ棒で正方形を横一列につなげていきます。正方形が1個なら4本、2個なら7本、3個なら10本必要です。',
-    [...sticks(1, 8, 30, 30), ...sticks(2, 56, 30, 30), ...sticks(3, 134, 30, 30), lb(23, 78, '4本', 13, C.main, 'middle', true), lb(86, 100, '7本', 13, C.main, 'middle', true), lb(179, 78, '10本', 13, C.main, 'middle', true), lb(270, 46, '…', 20, C.gray, 'middle', true)],
+    [...sticks(1, 8, 30, 30), ...sticks(2, 56, 30, 30), ...sticks(3, 134, 30, 30), lb(23, 78, '4本', 13, C.main, 'middle', true), lb(86, 78, '7本', 13, C.main, 'middle', true), lb(179, 78, '10本', 13, C.main, 'middle', true), lb(270, 46, '…', 20, C.gray, 'middle', true)],
     '正方形1個、2個、3個 → 4、7、10本'),
   S('❓本数はどんな規則で増えるのでしょう。→ 4、7、10、13、… と、差はいつも3です。新しい正方形は、となりと1辺を共有するので、足すのは3本だけだからです。',
     [...sticks(2, 56, 20, 36, true), lb(92, 80, '＋3本', 15, C.red, 'middle', true), B(190, 24, 120, 64, '4 → 7 → 10 → 13\n差はいつも 3', MAIN, 13), lb(160, 118, '1辺を共有するので 3本ずつ', 13, C.ink, 'middle', true)],
@@ -612,7 +612,7 @@ const s425 = show([
     [B(14, 14, 292, 36, '相似：BH × 10 ＝ 6 × 6 → BH ＝ 3.6', BLUE, 14), B(14, 62, 292, 36, '検算：12.96 ＋ 23.04 ＝ 36 ＝ 6²', GREEN, 14), lb(160, 128, '2通りの方法で 3.6cm ✓', 14, C.green, 'middle', true)],
     '相似でも同じ答えになる', GREEN),
   S('まとめです。難関私立の大問は、(1)の答えを(2)が使い、(2)の答えを(3)が使う階段です。(2)で詰まったら(1)を、(3)で詰まったら(2)の答えを見返します。',
-    [B(14, 108, 90, 34, '(1) BC＝10', BLUE, 12), B(114, 66, 90, 34, '(2) AH＝4.8', MAIN, 12), B(214, 24, 94, 34, '(3) BH＝3.6', GREEN, 12), ar(104, 120, 124, 104, C.main), ar(204, 78, 224, 62, C.main), lb(160, 138, '前の答えを必ず使う', 13, C.red, 'middle', true)],
+    [B(14, 108, 90, 34, '(1) BC＝10', BLUE, 12), B(114, 66, 90, 34, '(2) AH＝4.8', MAIN, 12), B(214, 24, 94, 34, '(3) BH＝3.6', GREEN, 12), ar(104, 120, 124, 104, C.main), ar(204, 78, 224, 62, C.main), lb(236, 108, '前の答えを必ず使う', 12, C.red, 'middle', true)],
     '誘導は階段。前の答えを使う', MAIN),
 ], '誘導型の大問（直角三角形）');
 
@@ -631,7 +631,7 @@ const s432 = show([
     [B(14, 10, 292, 32, 'x² − 3x − 40 ＝ 0', MAIN, 15), B(14, 50, 292, 32, '(x − 8)(x + 5) ＝ 0', MAIN, 15), B(14, 90, 292, 32, 'x ＝ 8、−5', RED, 17), lb(160, 138, '検算：(−8)×(5) ＝ −40 ✓', 12, C.gray, 'middle')],
     '二次方程式は解が2つ', MAIN),
   S('❓なぜ解を2つのまま答えにしてはいけないのでしょう。→ 長さは正の数だからです。x＝−5 は長さとして適さないので除きます。「不適」とだけでなく、なぜ適さないかを書きます。',
-    [lb(40, 30, 'x ＝ −5', 15, C.red, 'middle', true), lb(40, 52, '長さが負 ✗', 12, C.red, 'middle', true), ln(100, 72, 300, 72, C.gray, false, 2), ...[-5, 0, 8].map((v) => [ci(190 + v * 10, 72, 6, undefined, v < 0 ? C.red : v === 0 ? C.gray : C.green, v < 0 ? FILL.red : v === 0 ? FILL.gray : FILL.green), lb(190 + v * 10, 96, String(v), 12, v < 0 ? C.red : C.ink, 'middle', true)]).flat(), lb(250, 40, '長さは 正の数', 13, C.green, 'middle', true)],
+    [lb(40, 30, 'x ＝ −5', 15, C.red, 'middle', true), lb(40, 52, '長さが負 ✗', 12, C.red, 'middle', true), ln(100, 72, 300, 72, C.gray, false, 2), ...[-5, 0, 8].map((v) => [ci(190 + v * 10, 72, 6, undefined, v < 0 ? C.red : v === 0 ? C.gray : C.green, v < 0 ? FILL.red : v === 0 ? FILL.gray : FILL.green), lb(190 + v * 10, 96, String(v).replace('-', '−'), 12, v < 0 ? C.red : C.ink, 'middle', true)]).flat(), lb(250, 40, '長さは 正の数', 13, C.green, 'middle', true)],
     '長さは正 → x＝−5 は適さない', RED),
   S('④ x＝8 は、縦が 8−3＝5cm となり、問題に適しています。検算：8×5＝40cm²。答は「8cm」と単位をつけて書きます。',
     [B(60, 26, 160, 84, '面積 8×5 ＝ 40cm² ✓', GREEN, 14), lb(140, 124, '横 8 cm', 14, C.blue, 'middle', true), lb(40, 70, '縦\n5', 13, C.green, 'middle', true), lb(268, 70, '答 8cm', 15, C.red, 'middle', true)],
@@ -766,7 +766,7 @@ const s437 = show([
     [B(20, 40, 27, 40, '①', RED, 12), B(47, 40, 27, 40, '②', MAIN, 12), B(74, 40, 54, 40, '③', BLUE, 12), B(128, 40, 54, 40, '④', GREEN, 12), B(182, 40, 108, 40, '⑤', PURPLE, 12), lb(33, 98, '30秒', 10, C.gray, 'middle'), lb(60, 98, '30秒', 10, C.gray, 'middle'), lb(101, 98, '1分', 11, C.gray, 'middle'), lb(155, 98, '1分', 11, C.gray, 'middle'), lb(236, 98, '2分', 11, C.gray, 'middle'), lb(160, 126, '合計 5分', 14, C.ink, 'middle', true)],
     '5分の使い方', MAIN),
   S('❓なぜ解答欄のずれが最優先なのでしょう。→ 1つずれると、それ以降の答えが全部となりの問題の欄に入ってしまい、全滅するからです。もっとも被害が大きいので最初に確認します。',
-    [lb(60, 18, '問題', 12, C.gray, 'middle', true), lb(160, 18, '→', 12, C.gray, 'middle'), lb(260, 18, '解答欄', 12, C.gray, 'middle', true), ...[1, 2, 3, 4].map((n, i) => [B(30, 28 + i * 28, 60, 24, '問' + n, BLUE, 12), ar(94, 40 + i * 28, 214, 40 + i * 28 + 28, C.red), B(220, 28 + i * 28, 80, 24, '欄' + (n + 1), RED, 12)]).flat().slice(0, 12)],
+    [lb(60, 12, '問題', 12, C.gray, 'middle', true), lb(260, 12, '解答欄', 12, C.gray, 'middle', true), ...[1, 2, 3, 4, 5].map((n, i) => B(30, 20 + i * 25, 60, 20, n === 1 ? '問1 飛ばす' : '問' + n, n === 1 ? GRAY : BLUE, 11)), ...[1, 2, 3, 4, 5].map((n, i) => B(220, 20 + i * 25, 80, 20, '欄' + n + (n === 5 ? '（空）' : ''), n === 5 ? GRAY : RED, 11)), ...[2, 3, 4, 5].map((n) => ar(94, 30 + (n - 1) * 25, 216, 30 + (n - 2) * 25, C.red))],
     '1つずれると それ以降が全滅', RED),
   S('② 空欄を確認します。答えを書いていない欄がないか見ます。記号選択なら必ず何か書き、証明問題も「△ABC と △DEF において」と書き出すだけで点が入ることがあります。',
     [B(14, 14, 142, 56, '記号選択\nア イ ウ エ\n必ず1つ書く', GREEN, 12), B(164, 14, 142, 56, '証明\n書き出しだけでも\n部分点', BLUE, 12), lb(160, 98, '無解答は 確実に0点', 15, C.red, 'middle', true), lb(160, 124, '何か書けば 0点より上', 13, C.ink, 'middle')],
@@ -792,8 +792,8 @@ const zig = (opt: { n?: boolean; a?: boolean; b?: boolean }): DiagramElement[] =
   ln(...ZQ, ...ZP, C.ink, false, 2), ln(...ZP, ...ZR, C.ink, false, 2),
   lb(ZQ[0] - 6, ZQ[1] - 6, 'Q', 12, C.ink, 'middle', true), lb(ZP[0] + 10, ZP[1] - 2, 'P', 13, C.ink, 'middle', true), lb(ZR[0] - 6, ZR[1] + 12, 'R', 12, C.ink, 'middle', true),
   ...(opt.n ? [ln(60, 80, 290, 80, C.red, true, 1.6), lb(276, 72, 'n', 13, C.red, 'middle', true)] : []),
-  ...(opt.a ? [sc(ZP[0], ZP[1], 28, 140, 180, C.blue, 'rgba(2,132,199,0.3)'), lb(164, 66, '40°', 12, C.blue, 'middle', true)] : []),
-  ...(opt.b ? [sc(ZP[0], ZP[1], 28, 180, 205, C.green, 'rgba(22,163,74,0.3)'), lb(164, 98, '25°', 12, C.green, 'middle', true)] : []),
+  ...(opt.a ? [sc(ZP[0], ZP[1], 28, 140, 180, C.blue, 'rgba(2,132,199,0.3)'), lb(160, 68, '40°', 12, C.blue, 'middle', true)] : []),
+  ...(opt.b ? [sc(ZP[0], ZP[1], 28, 180, 205, C.green, 'rgba(22,163,74,0.3)'), lb(150, 92, '25°', 12, C.green, 'middle', true)] : []),
 ];
 const s439 = show([
   S('平行な2直線 l、m のあいだに、折れ線 Q−P−R があります。Q は l 上、R は m 上にあり、QP と l のつくる角が40°、PR と m のつくる角が25°です。折れ点の角 ∠QPR は何度でしょうか。',
@@ -809,13 +809,13 @@ const s439 = show([
     [...zig({ n: true, a: true, b: true })],
     '下の角も 25°（錯角）', GREEN),
   S('青い角と緑の角を合わせると、折れ点の角 ∠QPR になります。40°＋25°＝65°。補助線を1本引いただけで、足し算で答えが出ました。',
-    [...zig({ n: true, a: true, b: true }), lb(70, 100, '∠QPR\n＝ 40°＋25°\n＝ 65°', 13, C.red, 'middle', true)],
+    [...zig({ n: true, a: true, b: true }), lb(232, 102, '∠QPR\n＝ 40°＋25°\n＝ 65°', 12, C.red, 'middle', true)],
     '∠QPR ＝ 40° ＋ 25° ＝ 65°', RED),
   S('❓足し算だけを覚えればよいでしょうか。→ いいえ。折れ点がとなりの直線の向こう側に飛び出す形では、角を引くことがあります。足すか引くかは、補助線を引いて錯角を図に書きこめば自然にわかります。',
     [B(14, 14, 142, 56, '折れ点が\n平行線のあいだ\n→ 足す', GREEN, 12), B(164, 14, 142, 56, '折れ点が\n外に飛び出す\n→ 引くことも', RED, 12), lb(160, 100, '「a＋b」と丸暗記しない', 14, C.red, 'middle', true), lb(160, 124, '必ず補助線を引いて確かめる', 13, C.ink, 'middle')],
     '足すか引くかは 図で決まる', RED),
   S('書き込みの習慣。補助線を引いたら、補助線と元の平行線にはさまれた角に、錯角どうしで同じ記号（●、▲ など）を書きこみます。記号が増えたら、あとは角を足し引きするだけです。',
-    [...zig({ n: true, a: true, b: true }), lb(70, 104, '同じ角に\n同じ印を', 12, C.main, 'middle', true)],
+    [...zig({ n: true, a: true, b: true }), lb(232, 102, '同じ角に\n同じ印を', 12, C.main, 'middle', true)],
     '等しい角に 同じ印をつける', MAIN),
   S('まとめです。平行線のあいだの折れ線は、折れ点を通る平行線を引く。錯角を書きこんで、足すか引くかを図で決める。例：上40°、下25°のとき、折れ点の角は65°です。',
     col(['折れ点を通る平行線を引く', '錯角を図に書きこむ', '足すか引くかは 図で決める'], 30, 260, 12, MAIN, 13, 30, 14),
@@ -826,9 +826,9 @@ const s439 = show([
 const GOX = 46, GOY = 140, GSX = 62, GSY = 7;
 const gp = (x: number, y: number): [number, number] => [GOX + x * GSX, GOY - y * GSY];
 const g2 = (opt: { pts?: boolean; chord?: boolean }): DiagramElement[] => [
-  ...axes(GOX, GOY, 20, 300, 8, GOY + 4), ...para(2, 0, 3.2, GOX, GOY, GSX, GSY),
+  ...axes(GOX, GOY, 20, 300, 8, GOY + 4), ...para(2, 0, 3.1, GOX, GOY, GSX, GSY),
   ...(opt.chord ? [ln(...gp(1, 2), ...gp(3, 18), C.red, false, 2.4)] : []),
-  ...(opt.pts ? [ci(...gp(1, 2), 5, undefined, C.red, FILL.red), ci(...gp(3, 18), 5, undefined, C.red, FILL.red), lb(gp(1, 2)[0] + 8, gp(1, 2)[1] + 12, '(1、2)', 11, C.red, 'start', true), lb(gp(3, 18)[0] + 8, gp(3, 18)[1] + 4, '(3、18)', 11, C.red, 'start', true)] : []),
+  ...(opt.pts ? [ci(...gp(1, 2), 5, undefined, C.red, FILL.red), ci(...gp(3, 18), 5, undefined, C.red, FILL.red), lb(gp(1, 2)[0] + 6, gp(1, 2)[1] - 10, '(1、2)', 11, C.red, 'start', true), lb(gp(3, 18)[0] + 8, gp(3, 18)[1] + 4, '(3、18)', 11, C.red, 'start', true)] : []),
   lb(GOX + 86, 30, 'y＝2x²', 12, C.blue, 'start', true),
 ];
 const HOX = 50, HOY = 140, HSX = 54, HSY = 12;
@@ -836,7 +836,7 @@ const hp = (x: number, y: number): [number, number] => [HOX + x * HSX, HOY - y *
 const h2 = (pts: boolean): DiagramElement[] => [
   ...axes(HOX, HOY, 20, 300, 8, HOY + 4), ...para(1, 0, 3.2, HOX, HOY, HSX, HSY), ln(...hp(0.75, 0), ...hp(3.3, 10.2), C.green, false, 2),
   lb(hp(3.3, 10.2)[0] + 4, hp(3.3, 10.2)[1] + 6, 'y＝4x−3', 12, C.green, 'start', true), lb(hp(2.3, 5.3)[0] - 56, hp(2.3, 5.3)[1], 'y＝x²', 12, C.blue, 'end', true),
-  ...(pts ? [ci(...hp(1, 1), 5, undefined, C.red, FILL.red), ci(...hp(3, 9), 5, undefined, C.red, FILL.red), lb(hp(1, 1)[0] + 6, hp(1, 1)[1] + 14, '(1、1)', 11, C.red, 'start', true), lb(hp(3, 9)[0] - 8, hp(3, 9)[1] - 4, '(3、9)', 11, C.red, 'end', true)] : []),
+  ...(pts ? [ci(...hp(1, 1), 5, undefined, C.red, FILL.red), ci(...hp(3, 9), 5, undefined, C.red, FILL.red), lb(hp(1, 1)[0] + 6, hp(1, 1)[1] - 12, '(1、1)', 11, C.red, 'start', true), lb(hp(3, 9)[0] - 8, hp(3, 9)[1] - 4, '(3、9)', 11, C.red, 'end', true)] : []),
 ];
 const s444 = show([
   S('変化の割合は、一次関数と二次関数でまったく性質が違います。一次関数 y＝ax＋b はどこを取っても a（傾き）で一定。二次関数 y＝ax² は区間によって変わります。',
@@ -875,10 +875,10 @@ const kbase = (): DiagramElement[] => [
 ];
 const s446 = show([
   S('座標平面上の2点 A(1、2)、B(5、5) の距離を求めます。x 方向の差は 5−1＝4、y 方向の差は 5−2＝3 です。',
-    [pg([[52, 86], [140, 86], [140, 20]], C.gray, 'rgba(2,132,199,0.12)'), ci(52, 86, 4, undefined, C.red, FILL.red), ci(140, 20, 4, undefined, C.red, FILL.red), lb(44, 98, 'A(1、2)', 12, C.red, 'start', true), lb(146, 18, 'B(5、5)', 12, C.red, 'start', true), lb(96, 100, 'x の差 4', 12, C.blue, 'middle', true), lb(170, 56, 'y の差 3', 12, C.blue, 'start', true), lb(250, 60, 'AB ＝ ？', 16, C.main, 'middle', true)],
+    [pg([[70, 96], [150, 96], [150, 30]], C.gray, 'rgba(2,132,199,0.12)'), ci(70, 96, 4, undefined, C.red, FILL.red), ci(150, 30, 4, undefined, C.red, FILL.red), lb(70, 112, 'A(1、2)', 12, C.red, 'middle', true), lb(158, 26, 'B(5、5)', 12, C.red, 'start', true), lb(112, 124, 'x の差 4', 12, C.blue, 'middle', true), lb(160, 66, 'y の差 3', 12, C.blue, 'start', true), lb(250, 80, 'AB ＝ ？', 16, C.main, 'middle', true)],
     '2点の x の差 4、y の差 3'),
   S('❓なぜ三平方の定理を使うのでしょう。→ x の差と y の差を2辺とする直角三角形ができ、AB はその斜辺にあたるからです。AB＝√(4²＋3²)＝√25＝5。斜辺は2辺（3と4）より長く、2辺の和（7）より短いので妥当です。',
-    [pg([[52, 86], [140, 86], [140, 20]], C.gray, 'rgba(2,132,199,0.12)'), ln(52, 86, 140, 20, C.red, false, 3), lb(96, 100, '4', 13, C.blue, 'middle', true), lb(150, 56, '3', 13, C.blue, 'start', true), lb(250, 50, 'AB ＝ √(16＋9)', 13, C.red, 'middle', true), lb(250, 72, '＝ √25 ＝ 5', 15, C.red, 'middle', true), lb(250, 96, '3 ＜ 5 ＜ 7', 12, C.gray, 'middle')],
+    [pg([[70, 96], [150, 96], [150, 30]], C.gray, 'rgba(2,132,199,0.12)'), ln(70, 96, 150, 30, C.red, false, 3), lb(110, 112, '4', 13, C.blue, 'middle', true), lb(160, 66, '3', 13, C.blue, 'start', true), lb(250, 50, 'AB ＝ √(16＋9)', 13, C.red, 'middle', true), lb(250, 72, '＝ √25 ＝ 5', 15, C.red, 'middle', true), lb(250, 96, '3 ＜ 5 ＜ 7', 12, C.gray, 'middle')],
     '2点間の距離 ＝ 直角三角形の斜辺', RED),
   S('もう一組。A(−2、2)、B(4、8) では、x の差が 4−(−2)＝6、y の差が 8−2＝6。AB＝√(36＋36)＝√72＝6√2 です。√72＝√(36×2)＝6√2。',
     [B(14, 16, 142, 40, 'x の差 ＝ 6', BLUE, 15), B(164, 16, 142, 40, 'y の差 ＝ 6', BLUE, 15), B(14, 70, 292, 40, 'AB ＝ √(36 ＋ 36) ＝ √72 ＝ 6√2', MAIN, 15), lb(160, 130, '√72 ＝ √(36×2) ＝ 6√2', 12, C.gray, 'middle')],
@@ -887,7 +887,7 @@ const s446 = show([
     [...kbase(), lb(250, 40, 'y＝x＋4', 12, C.main, 'start', true), lb(70, 50, 'O から AB\nまでの距離 h?', 12, C.purple, 'middle', true)],
     '点と直線の距離 h を求めたい', PURPLE),
   S('まず、△OAB の面積を、軸上の線分を底辺にして求めます。直線 AB は y 切片が4（点 D(0、4)）です。OD＝4 を底辺に、A と B を結べば、面積は 1/2×4×2＋1/2×4×4＝4＋8＝12。（1/2×4×(4−(−2))＝12 とも書けます。）',
-    [...kbase(), pg([kp(0, 0), kp(-2, 2), kp(4, 8)], C.purple, 'rgba(147,51,234,0.2)'), ln(...kp(0, 0), ...kp(0, 4), C.red, false, 3.5), ci(...kp(0, 4), 3.5, undefined, C.red, FILL.red), lb(KOX + 8, kp(0, 4)[1] - 6, 'D(0、4)', 11, C.red, 'start', true), lb(250, 40, '△OAB ＝ 12', 14, C.purple, 'start', true)],
+    [...kbase(), pg([kp(0, 0), kp(-2, 2), kp(4, 8)], C.purple, 'rgba(147,51,234,0.2)'), ln(...kp(0, 0), ...kp(0, 4), C.red, false, 3.5), ci(...kp(0, 4), 3.5, undefined, C.red, FILL.red), lb(KOX + 8, kp(0, 4)[1] - 6, 'D(0、4)', 11, C.red, 'start', true), lb(62, 56, '△OAB\n＝ 12', 13, C.purple, 'middle', true)],
     '底辺 OD＝4 で 面積 ＝ 12', PURPLE),
   S('❓次に、AB を底辺とみるとどうなるでしょう。→ 高さが求めたい h になります。AB＝6√2 なので 1/2×6√2×h＝12、3√2×h＝12、h＝4÷√2＝2√2（約2.83）です。',
     qa('AB を底辺にすると？', '同じ面積12を 別の底辺で書く\n1/2 × 6√2 × h ＝ 12\n3√2 × h ＝ 12　h ＝ 2√2', PURPLE),
@@ -983,7 +983,7 @@ const s449 = show([
     tbl([['短い辺', '中の辺', '斜辺'], ['3', '4', '5'], ['5', '12', '13'], ['8', '15', '17']], 40, 14, [80, 80, 80], 28, BLUE, 14),
     '整数比：3:4:5、5:12:13、8:15:17', BLUE),
   S('円の公式。円周角＝中心角÷2、半円の弧に対する円周角＝90°、円に内接する四角形の対角の和＝180°、接線は接点で半径と垂直。例：中心角100°なら、同じ弧の円周角は50°です。',
-    [ci(160, 72, 52, undefined, C.gray, '#FFFFFF'), ln(160, 72, 114, 98, C.red, false, 2), ln(160, 72, 206, 98, C.red, false, 2), ln(160, 20, 114, 98, C.blue, false, 2), ln(160, 20, 206, 98, C.blue, false, 2), lb(160, 86, '100°', 11, C.red, 'middle', true), lb(160, 36, '50°', 11, C.blue, 'middle', true), lb(260, 60, '円周角\n＝ 中心角÷2', 12, C.ink, 'middle', true)],
+    [ci(160, 72, 52, undefined, C.gray, '#FFFFFF'), ln(160, 72, 120, 105, C.red, false, 2), ln(160, 72, 200, 105, C.red, false, 2), ln(160, 20, 120, 105, C.blue, false, 2), ln(160, 20, 200, 105, C.blue, false, 2), lb(160, 92, '100°', 11, C.red, 'middle', true), lb(160, 42, '50°', 11, C.blue, 'middle', true), lb(260, 60, '円周角\n＝ 中心角÷2', 12, C.ink, 'middle', true)],
     '円周角 ＝ 中心角 ÷ 2', BLUE),
   S('まとめです。直前期は、公式を白紙に自分で書き出して「使える形」になっているかを確かめます。柱は 1/3 なし、すいは 1/3。球の体積は3乗、表面積は2乗。',
     col(['柱：底面積×高さ　すい：×1/3', '球：体積 (4/3)πr³・表面積 4πr²', '特別な三角形を 白紙に書く'], 14, 292, 12, MAIN, 12, 30, 14),
