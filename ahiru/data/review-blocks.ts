@@ -319,17 +319,27 @@ export const REVIEW_BLOCKS: ReviewBlock[] = [
 
 type Q = { subject?: string; examType?: string; question?: string; answer?: string; explanation?: string; hint?: string };
 
-/** その問題でつまずきそうな前提を、最大 max 個まで返す（算数だけ。登録順＝優先順）。 */
+/** 語が何回出てくるか（問題文・答えは3倍の重みで数える） */
+function weight(re: RegExp, q: Q): number {
+  const g = new RegExp(re.source, 'g');
+  const count = (t: string | undefined) => (t ? (t.match(g) ?? []).length : 0);
+  return 3 * (count(q.question) + count(q.answer)) + count(q.explanation) + count(q.hint);
+}
+
+/**
+ * その問題でつまずきそうな前提を、最大 max 個まで返す（算数だけ）。
+ * 関係の深い順（問題文に出る語を重く、解説に出る回数も数える）。同じ重みなら登録順。
+ */
 export function reviewBlocksFor(q: Q, max = 2): ReviewBlock[] {
   if (q.subject !== undefined && q.subject !== 'sansu') return [];
   const text = [q.question, q.answer, q.explanation, q.hint].filter(Boolean).join('\n');
   if (!text) return [];
   const exam = q.examType === 'koko' ? 'koko' : 'chugaku';
-  const out: ReviewBlock[] = [];
-  for (const b of REVIEW_BLOCKS) {
-    if (b.exam && b.exam !== exam) continue;
-    if (b.test.test(text)) out.push(b);
-    if (out.length >= max) break;
-  }
-  return out;
+  const hits: { b: ReviewBlock; w: number; i: number }[] = [];
+  REVIEW_BLOCKS.forEach((b, i) => {
+    if (b.exam && b.exam !== exam) return;
+    if (b.test.test(text)) hits.push({ b, w: weight(b.test, q), i });
+  });
+  hits.sort((x, y) => y.w - x.w || x.i - y.i);
+  return hits.slice(0, max).map((h) => h.b);
 }
