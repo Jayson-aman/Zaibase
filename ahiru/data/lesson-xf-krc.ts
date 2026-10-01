@@ -947,7 +947,7 @@ const f170 = show([
 // ── s173 てこと輪軸 ──
 const lever = (): DiagramElement[] => [
   ln(30, 100, 290, 100, C.main, false, 5), pg([[220, 104], [204, 130], [236, 130]], C.gray, FILL.gray),
-  lb(220, 142, '支点', 11, C.gray, 'middle'), ar(40, 56, 40, 94, C.green), lb(40, 46, '力点', 11, C.green, 'middle', true), ar(280, 106, 280, 140, C.red), lb(262, 152, '作用点（60N）', 11, C.red, 'middle', true),
+  lb(220, 142, '支点', 11, C.gray, 'middle'), ar(40, 56, 40, 94, C.green), lb(40, 46, '力点', 11, C.green, 'middle', true), ar(280, 106, 280, 140, C.red), lb(262, 84, '作用点（60N）', 11, C.red, 'middle', true),
   ln(40, 168, 220, 168, C.blue), lb(130, 181, '3.0m', 12, C.blue, 'middle', true), ln(220, 168, 280, 168, C.red), lb(250, 181, '1.0m', 12, C.red, 'middle', true),
 ];
 const f173 = show([
