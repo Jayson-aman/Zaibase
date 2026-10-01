@@ -82,7 +82,9 @@ function withDiagrams(sections: FormulaSection[]): FormulaSection[] {
         const idx = seen[key] ?? 0;
         seen[key] = idx + 1;
         const free = idx < FREE_FORMULAS_PER_CELL;
-        const fig = it.figure || !FORMULA_DIAGRAMS[it.label] ? it.figure : FORMULA_DIAGRAMS[it.label];
+        // 項目に直接書かれた図があれば優先する。ただし、あとから足した動く図解のほうがスライドが多いときはそちらを使う。
+        const dg = FORMULA_DIAGRAMS[it.label];
+        const fig = !dg ? it.figure : !it.figure || ((dg.steps?.length ?? 0) > ((it.figure as { steps?: string[] }).steps?.length ?? 0)) ? dg : it.figure;
         return { ...it, ...(free && it.locked ? { locked: false } : {}), ...(fig ? { figure: fig } : {}) };
       }),
     };
