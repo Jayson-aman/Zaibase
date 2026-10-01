@@ -2,7 +2,7 @@
 // 「なぜ？」の連鎖で7枚以上。上半分に図、下の帯（band）にそのスライドのひとこと。
 import type { DiagramFigure } from './figures';
 import type { DiagramElement } from './figures';
-import { C, FILL, bx, lb, ar, ln, ci, show, flow, band, fresh } from './diagram-kit';
+import { C, FILL, bx, lb, ar, ln, ci, show, flow, band, fresh, cover } from './diagram-kit';
 
 type E = DiagramElement;
 const cap = (t: string, color: string = C.ink, size = 12) => band(150, lb(160, 190, t, size, color, 'middle', true));
@@ -204,6 +204,43 @@ const s008: DiagramFigure = show([
     add: fresh(bx(15, 12, 290, 28, '-ee・-eer・-ese・-oo(n)・-self は語尾が強い', C.red, FILL.red, 11), bx(15, 46, 290, 28, '付くと、強い場所が後ろへ動く', C.blue, FILL.blue, 12), bx(15, 80, 290, 28, '例外：coffee・committee', C.gray, FILL.gray, 12), bx(15, 114, 290, 28, '-ing・-ed・-ly などは動かさない', C.green, FILL.green, 12), ...cap('強いのは 1 か所だけ', C.green)),
   },
 ], '語尾自身を強く読む型');
+
+// ───────── koko_eigo_08_conjunction 文の構造 ─────────
+const lrow = (label: string, text: string, y: number, color: string, fill: string, size = 11): E[] => [lb(12, y + 14, label, 11, color, 'start', true), bx(78, y, 232, 28, text, color, fill, size)];
+const e08: DiagramFigure = show([
+  {
+    note: '文の構造は三つに分けられます。単文は「主語＋動詞」の組が一つ。重文は and・but・or・so で対等な節を並べた文。複文は、when・that・who などで主節に従属節をつけた文です。',
+    add: [head('単文・重文・複文'), bx(10, 26, 300, 26, '単文　I like music.', C.blue, FILL.blue, 11), bx(10, 58, 300, 26, '重文　I like music, and my sister likes sports.', C.green, FILL.green, 10), bx(10, 90, 300, 26, '複文　I know that he is honest.', C.red, FILL.red, 11), ...cap('主語＋動詞の組が、いくつ・どうつながるか')],
+  },
+  {
+    note: '❓なぜ文の構造を調べるのでしょう。→ 長い文でも、従属節をかっこでくくれば、残った部分が主節になり、文の骨格（だれがどうした）が見えてくるからです。長文読解の正確さが上がります。',
+    add: fresh(head('かっこでくくって骨格を出す'), bx(10, 28, 300, 32, '[When I was walking in the park,] I saw a dog [which was very big.]', C.gray, FILL.gray, 9), ar(160, 62, 160, 84, C.main), bx(70, 88, 180, 30, 'I saw a dog', C.red, FILL.red, 14), ...cap('骨格 ＝ 私は犬を見た', C.red)),
+  },
+  {
+    note: '例を分けて見ましょう。When I was walking in the park（公園を歩いていたとき）は「いつ」を補足する従属節。I saw a dog が主節で、文の骨格。which was very big（とても大きい）は「どんな犬か」を補足する従属節です。',
+    add: fresh(head('主節を先に、従属節で補足'), ...lrow('いつ', '[When I was walking in the park,]', 26, C.gray, FILL.gray, 10), ...lrow('骨格', 'I saw a dog', 62, C.red, FILL.red, 13), ...lrow('どんな犬', '[which was very big.]', 98, C.gray, FILL.gray, 11), ...cap('主節の意味 → 従属節で補足', C.red)),
+  },
+  {
+    note: '構造分析の手順です。①接続詞・関係詞（that・when・because・who・which）に印をつける。②その節がどこで終わるかを見極める。③従属節を［　］でくくり、主節の S と V を決める。④主節の意味を先に、従属節で補足する。',
+    add: fresh(...flow(['① 接続詞に\n印をつける', '② 節の\n終わりを探す', '③ [ ]でくくる\nS・V を決める', '④ 主節→従属節\nの順に読む'], 26, { h: 70, size: 10, color: C.blue, fill: FILL.blue, gap: 12 }).flat(), ...cap('主節の S・V を確定する', C.blue)),
+  },
+  {
+    note: '❓接続詞と前置詞は、なぜまちがえやすいのでしょう。→ 意味がほとんど同じ組があるからです。because と because of、though と in spite of、while と during。見分けは、うしろに何が来るかです。',
+    add: fresh(head('意味が同じ組'), bx(10, 28, 145, 26, 'because', C.blue, FILL.blue, 12), bx(165, 28, 145, 26, 'because of', C.green, FILL.green, 12), bx(10, 60, 145, 26, 'though', C.blue, FILL.blue, 12), bx(165, 60, 145, 26, 'in spite of', C.green, FILL.green, 12), bx(10, 92, 145, 26, 'while', C.blue, FILL.blue, 12), bx(165, 92, 145, 26, 'during', C.green, FILL.green, 12), lb(82, 136, '接続詞', 11, C.blue, 'middle', true), lb(237, 136, '前置詞', 11, C.green, 'middle', true), ...band(150, lb(160, 190, '意味は近いが、うしろの形がちがう', 12, C.ink, 'middle', true))),
+  },
+  {
+    note: '見分け方は一つです。接続詞のうしろは〈主語＋動詞〉、前置詞のうしろは〈名詞・動名詞〉。because it was cold は主語と動詞が続くので接続詞。because of the cold は名詞が続くので前置詞です。',
+    add: fresh(head('うしろの形で見分ける'), bx(10, 28, 300, 30, '接続詞 ＋ 主語 ＋ 動詞　because it was cold', C.blue, FILL.blue, 11), bx(10, 66, 300, 30, '前置詞 ＋ 名詞　because of the cold', C.green, FILL.green, 11), lb(160, 118, '× because of it was cold', 12, C.red, 'middle', true), ...cap('接続詞：S＋V、前置詞：名詞', C.ink)),
+  },
+  {
+    note: '入試の書きかえで確かめましょう。We stayed home because it was very cold. を because of で書きかえると、うしろを名詞にします。→ We stayed home because of the very cold weather.',
+    add: fresh(head('because → because of'), bx(10, 28, 300, 30, 'We stayed home [because it was very cold].', C.blue, FILL.blue, 10), ar(160, 60, 160, 78, C.main), bx(10, 82, 300, 30, 'We stayed home [because of the very cold weather].', C.green, FILL.green, 9), lb(160, 128, 'S＋V（it was very cold）→ 名詞（the very cold weather）', 10, C.gray, 'middle'), ...cap('うしろを名詞に直す', C.green)),
+  },
+  {
+    note: 'まとめです。文は単文・重文・複文に分けられる。従属節を［　］でくくると主節の骨格が見える。接続詞のうしろは主語＋動詞、前置詞のうしろは名詞。',
+    add: fresh(bx(15, 14, 290, 30, '単文・重文・複文を見分ける', C.blue, FILL.blue, 12), bx(15, 52, 290, 30, '[従属節] をくくって主節を見つける', C.red, FILL.red, 12), bx(15, 90, 290, 30, '接続詞 ＋ S・V ／ 前置詞 ＋ 名詞', C.green, FILL.green, 12), ...cap('骨格から読む', C.green)),
+  },
+], '文の構造と、接続詞・前置詞');
 
 // ───────── koko_eigo_s012 発音問題の解き方 ─────────
 const s012: DiagramFigure = show([
@@ -461,7 +498,7 @@ const e03: DiagramFigure = show([
   },
   {
     note: 'ステップ③：動詞を -ing 形にします。was は be 動詞なので Being になります。Being tired, I went to bed early. 「疲れていたので、早く寝た」の意味です。',
-    add: [...r2.els, ar(r1.xs[2] + 14, 58, r2.xs[0] + 22, 90, C.green), lb(250, 78, 'was → Being', 11, C.green, 'middle', true), ...band(150, lb(160, 190, '③ 動詞を -ing 形にする', 12, C.green, 'middle', true))],
+    add: [cover(0, 46, 320, 104), ...r2.els, ar(r1.xs[2] + 14, 58, r2.xs[0] + 22, 90, C.green), lb(250, 78, 'was → Being', 11, C.green, 'middle', true), ...band(150, lb(160, 190, '③ 動詞を -ing 形にする', 12, C.green, 'middle', true))],
   },
   {
     note: '❓Being は必ず必要でしょうか。→ いいえ。Being は省略できます。すると Tired, I went to bed early. になります。Being は「～であること」という意味が薄い語なので、省いても意味は変わりません。',
@@ -564,7 +601,7 @@ const e05: DiagramFigure = show([
   },
   {
     note: '次は日本語を英語にする練習です。❓なぜ語順を入れかえるのでしょう。→ 日本語は動詞が最後ですが、英語は動詞が主語のすぐ後ろに来るからです。「私は毎日図書館で本を読む」は、I read books in the library every day. の順になります。',
-    add: fresh(head('動詞は主語のすぐ後ろ'), lb(10, 30, '日本語', 11, C.gray, 'start', true), ...rowb(['私は', '毎日', '図書館で', '本を', '読む'], 36, 24, C.gray, FILL.gray, 10, 10, 310, 4), lb(10, 82, '英語', 11, C.red, 'start', true), ...rowb(['I', 'read', 'books', 'in the library', 'every day'], 88, 24, C.red, FILL.red, 9, 10, 310, 4), ar(260, 62, 100, 86, C.main, true), ...cap('読む（V）を主語の後ろへ', C.red)),
+    add: fresh(head('動詞は主語のすぐ後ろ'), lb(10, 28, '日本語', 11, C.gray, 'start', true), ...rowb(['私は', '毎日', '図書館で', '本を', '読む'], 38, 24, C.gray, FILL.gray, 10, 10, 310, 4), lb(10, 82, '英語', 11, C.red, 'start', true), ...chips(['I', 'read', 'books', 'in the library', 'every day'], 92, C.red, FILL.red, 10, 10, 24).els, ar(280, 64, 80, 90, C.main, true), ...cap('読む（V）を主語の後ろへ', C.red)),
   },
   {
     note: '❓日本語で主語が省かれているときは? → 英語では必ず主語を補います。「今日は雨が降っています」は、天気を表す It を主語にして It is raining today. と書きます。',
@@ -572,13 +609,93 @@ const e05: DiagramFigure = show([
   },
   {
     note: 'よく使う基本の構文があります。There is／are 〜（〜がある）、It takes 〜 to …（…するのに〜かかる）、It is … to 〜（〜することは…だ）、I want you to 〜（あなたに〜してほしい）。どれも英作文でそのまま使える型です。',
-    add: fresh(head('英作文で使える型'), bx(10, 22, 300, 26, 'There is a cat on the roof.', C.blue, FILL.blue, 11), bx(10, 52, 300, 26, 'It takes 30 minutes to walk to school.', C.green, FILL.green, 11), bx(10, 82, 300, 26, 'It is important to study every day.', C.red, FILL.red, 11), bx(10, 112, 300, 26, 'I want you to come with me.', C.purple, FILL.purple, 11), ...cap('型ごと覚えて使う')),
+    add: fresh(head('英作文で使える型'), bx(10, 28, 300, 26, 'There is a cat on the roof.', C.blue, FILL.blue, 11), bx(10, 58, 300, 26, 'It takes 30 minutes to walk to school.', C.green, FILL.green, 11), bx(10, 88, 300, 26, 'It is important to study every day.', C.red, FILL.red, 11), bx(10, 118, 300, 26, 'I want you to come with me.', C.purple, FILL.purple, 11), ...cap('型ごと覚えて使う')),
   },
   {
     note: 'まとめです。英語の文は五つの型のどれか。SVC は S＝C、SVOC は O＝C。日本語を英語にするときは、①主語を補う ②時制を決める ③動詞を主語のすぐ後ろに置く、の順に考えます。',
     add: fresh(bx(15, 14, 290, 30, '5 文型：SV・SVC・SVO・SVOO・SVOC', C.blue, FILL.blue, 12), bx(15, 52, 290, 30, 'SVC は S ＝ C、SVOC は O ＝ C', C.purple, FILL.purple, 12), bx(15, 90, 290, 30, '主語を補う → 時制 → 動詞は主語の後ろ', C.green, FILL.green, 12), ...cap('型に当てはめて書く', C.green)),
   },
 ], '英語の基本文型（5文型）');
+
+// ───────── koko_eigo_06_vocab 前置詞のイメージ ─────────
+const e06: DiagramFigure = show([
+  {
+    note: '❓前置詞は、なぜ一つずつ暗記せずに「イメージ」で覚えるのでしょう。→ in・on・at は、場所でも時でも同じ核のイメージを持っているからです。at は「一点」、on は「面に接している」、in は「囲まれた中」です。',
+    add: [head('前置詞の核のイメージ'), ci(55, 56, 5, undefined, C.red, FILL.red), lb(55, 90, 'at ＝ 一点', 12, C.red, 'middle', true), ln(125, 70, 195, 70, C.gray, false, 3), ci(160, 60, 10, undefined, C.blue, FILL.blue), lb(160, 90, 'on ＝ 面に接する', 12, C.blue, 'middle', true), bx(225, 36, 70, 44, undefined, C.green, FILL.green), ci(260, 58, 6, undefined, C.green, '#FFFFFF'), lb(260, 90, 'in ＝ 囲まれた中', 12, C.green, 'middle', true), ...cap('場所にも時にも使える核', C.ink)],
+  },
+  {
+    note: 'at は「一点」です。at the station（駅に）、at noon（正午に）、at 3 o\'clock（3時に）。場所でも時刻でも、ぴたりと一点を指します。',
+    add: fresh(head('at ＝ 一点'), ci(160, 62, 6, undefined, C.red, FILL.red), bx(20, 90, 130, 30, 'at the station', C.red, FILL.red, 12), bx(170, 90, 130, 30, 'at noon', C.red, FILL.red, 12), lb(85, 132, '場所の一点', 11, C.gray, 'middle'), lb(235, 132, '時刻の一点', 11, C.gray, 'middle'), ...cap('一点で見る', C.red)),
+  },
+  {
+    note: 'on は「面に接している」です。on the table（テーブルの上）、on the wall（壁に）。時間では、on Monday や on my birthday のように、特定の日に接している感じになります。',
+    add: fresh(head('on ＝ 面に接する'), ln(60, 70, 260, 70, C.gray, false, 3), ci(160, 60, 10, undefined, C.blue, FILL.blue), bx(15, 92, 94, 28, 'on the table', C.blue, FILL.blue, 11), bx(113, 92, 94, 28, 'on Monday', C.blue, FILL.blue, 11), bx(211, 92, 98, 28, 'on my birthday', C.blue, FILL.blue, 10), ...cap('その面（その日）に接している', C.blue)),
+  },
+  {
+    note: 'in は「囲まれた中」です。in the room（部屋の中）、in July（7月という期間の中）、in trouble（困りごとの中）、in English（英語という枠の中）。初めて見る熟語も、核が分かれば意味の見当がつきます。',
+    add: fresh(head('in ＝ 囲まれた中'), bx(110, 26, 100, 56, undefined, C.green, FILL.green), ci(160, 54, 6, undefined, C.green, '#FFFFFF'), ...rowb(['in the room', 'in July', 'in trouble', 'in English'], 96, 28, C.green, FILL.green, 10, 10, 310, 6), ...cap('空間・期間・状態・言語の「中」', C.green)),
+  },
+  {
+    note: '❓by と until のちがいは? → by は「期限の点」、until は「続く線」のイメージです。I will finish it by Monday. は月曜までに終える（期限）。I studied until midnight. は夜中までずっと勉強した（継続）。',
+    add: fresh(head('by ＝ 点、until ＝ 線'), ln(30, 52, 290, 52, C.gray), ci(250, 52, 6, undefined, C.red, FILL.red), lb(250, 36, '月曜', 11, C.red, 'middle', true), ln(40, 76, 250, 76, C.blue, false, 5), lb(145, 94, 'until：ずっと続ける', 11, C.blue, 'middle', true), ci(250, 116, 6, undefined, C.red, FILL.red), lb(150, 118, 'by：その前に終える', 11, C.red, 'middle', true), ...cap('by は期限、until は継続')),
+  },
+  {
+    note: '次は熟語です。❓look forward to のあとが -ing なのはなぜでしょう。→ この to は不定詞の to ではなく前置詞だからです。前置詞のあとには名詞が来ます。動詞を続けたいときは、名詞の形の動名詞（-ing）にします。',
+    add: fresh(head('この to は前置詞！', C.red), ...rowb(['look forward', 'to', 'seeing you'], 30, 36, C.blue, FILL.blue, 12, 20, 300, 8), lb(160, 82, '前置詞のあとは名詞の形', 12, C.ink, 'middle', true), lb(160, 106, '○ I look forward to seeing you.', 12, C.green, 'middle', true), lb(160, 128, '× I look forward to see you.', 12, C.red, 'middle', true), ...cap('to のあとは -ing', C.red)),
+  },
+  {
+    note: 'to を見ると、原形を続けたくなります。でも be used to -ing（〜するのに慣れている）も、同じ前置詞の to です。「to のあとに -ing が来る熟語」としてまとめて覚えておきましょう。',
+    add: fresh(head('to のあとが -ing になる熟語'), bx(15, 28, 290, 30, 'look forward to -ing　〜を楽しみにする', C.red, FILL.red, 12), bx(15, 66, 290, 30, 'be used to -ing　〜に慣れている', C.red, FILL.red, 12), lb(160, 118, '不定詞の to なら、原形が続く', 11, C.gray, 'middle'), ...cap('前置詞の to は -ing', C.red)),
+  },
+  {
+    note: '❓なぜ語形変化を 4 形セットで覚えるのでしょう。→ 一つの語幹から名詞・形容詞・副詞が作れるうえ、入試の変形問題は「文の中でどの品詞が要るか」を問うからです。nation→national→nationally→nationality。',
+    add: fresh(head('4 形セットで覚える'), ci(160, 62, 26, 'nation', C.main, FILL.warm, 11), bx(10, 28, 90, 26, 'national 形容詞', C.blue, FILL.blue, 10), bx(220, 28, 90, 26, 'nationally 副詞', C.green, FILL.green, 10), bx(110, 104, 100, 26, 'nationality 名詞', C.red, FILL.red, 10), ln(100, 44, 136, 54, C.gray), ln(220, 44, 184, 54, C.gray), ln(160, 88, 160, 104, C.gray), ...cap('品詞を見分けて選ぶ', C.ink)),
+  },
+  {
+    note: '確かめのしかたです。①前置詞は核のイメージで説明できるか。②時は at（時刻）・on（曜日・日付）・in（月・年・季節）・by（期限）・until（継続）。③to のあとが -ing になる熟語を確かめる。④語形変化は文中の品詞から選ぶ。',
+    add: fresh(bx(15, 12, 290, 28, '① 核：at 点・on 接触・in 中', C.blue, FILL.blue, 12), bx(15, 46, 290, 28, '② 時：at 時刻・on 日・in 月年季節', C.green, FILL.green, 12), bx(15, 80, 290, 28, '③ look forward to -ing', C.red, FILL.red, 12), bx(15, 114, 290, 28, '④ 語形変化は 4 形セット', C.purple, FILL.purple, 12), ...cap('イメージで覚えると、初めての熟語も読める', C.green)),
+  },
+], '前置詞の核のイメージと熟語');
+
+// ───────── koko_eigo_07_subjunctive 仮定法過去 ─────────
+const e07: DiagramFigure = show([
+  {
+    note: '「もし〜だったら…なのに」と、現実と反対のことや、実現しそうにないことを言う言い方が仮定法（かていほう）です。ふつうの条件文との見分けが、いちばん大切です。',
+    add: [head('ふつうの条件 と 仮定法'), bx(10, 28, 145, 62, 'If it rains tomorrow,\nI will stay home.\n（あり得る）', C.blue, FILL.blue, 10), bx(165, 28, 145, 62, 'If I were a bird,\nI would fly to you.\n（あり得ない）', C.red, FILL.red, 10), lb(82, 108, '動詞は現在形', 11, C.blue, 'middle', true), lb(237, 108, '動詞は過去形', 11, C.red, 'middle', true), ...cap('実現できるか、事実に反するか')],
+  },
+  {
+    note: '❓仮定法なのに、なぜ動詞が過去形になるのでしょう。→ 過去形には「今から遠い」だけでなく、「現実から遠い」という感じもあるからです。事実に反する仮定は現実から離れた話なので、動詞を一つ前の時制にずらします。形は過去形でも、意味は現在のことです。',
+    add: fresh(head('一歩ずらして「現実から遠ざける」'), bx(15, 28, 130, 36, '現在形\nあり得る・現実に近い', C.blue, FILL.blue, 10), bx(175, 28, 130, 36, '過去形\n現実から遠い', C.red, FILL.red, 10), ar(148, 46, 172, 46, C.main), lb(160, 80, '形は過去形、意味は「今」のこと', 12, C.red, 'middle', true), ...cap('時制を一つ前にずらす', C.red)),
+  },
+  {
+    note: '仮定法過去の形です。if の節は〈過去形〉、主節は〈would／could／might＋動詞の原形〉。If I had enough money, I would buy a new bike.（お金が十分あれば、新しい自転車を買うのに）。',
+    add: fresh(head('仮定法過去の形'), bx(10, 28, 140, 36, 'If I had enough\nmoney,', C.blue, FILL.blue, 11), bx(160, 28, 150, 36, 'I would buy a\nnew bike.', C.red, FILL.red, 11), lb(80, 78, 'if ＋ 過去形', 11, C.blue, 'middle', true), lb(235, 78, 'would ＋ 原形', 11, C.red, 'middle', true), ...cap('過去形 ／ would＋原形')),
+  },
+  {
+    note: '❓その文は、現実ではどうなのでしょう。→ 現実は「お金がないから、買えない」です。仮定法は、現実と反対のことを言うので、本当の意味は「でも、実際は買えない」とセットで考えます。',
+    add: fresh(head('現実とセットで読む'), bx(15, 28, 290, 30, 'If I had enough money, I would buy a bike.', C.red, FILL.red, 11), ar(160, 60, 160, 80, C.main), bx(15, 84, 290, 30, '現実：お金がない　→　買えない', C.gray, FILL.gray, 12), ...cap('仮定法は現実と反対', C.red)),
+  },
+  {
+    note: 'be動詞は、主語が I・he・she・it でも were を使うのが原則です。If I were you, I would study harder.（私があなたなら、もっと勉強するのに）。「私だったら〜する」とアドバイスするときの定番です。',
+    add: fresh(head('be 動詞は were'), bx(15, 28, 290, 30, 'If I were you, I would study harder.', C.red, FILL.red, 12), lb(160, 80, 'I でも he でも were', 12, C.ink, 'middle', true), lb(160, 104, '（会話では was を使うこともある）', 11, C.gray, 'middle'), ...cap('アドバイスの定番表現', C.red)),
+  },
+  {
+    note: '主節の助動詞は意味で使い分けます。would は「〜だろうに」、could は「〜できるのに」、might は「〜かもしれないのに」。If it were sunny, we could play outside.（晴れていたら、外で遊べるのに）。',
+    add: fresh(head('would・could・might'), bx(10, 28, 96, 40, 'would\n〜だろうに', C.blue, FILL.blue, 12), bx(112, 28, 96, 40, 'could\n〜できるのに', C.green, FILL.green, 11), bx(214, 28, 96, 40, 'might\n〜かもしれない', C.purple, FILL.purple, 10), lb(160, 98, 'If it were sunny, we could play outside.', 11, C.ink, 'middle', true), ...cap('意味で選ぶ')),
+  },
+  {
+    note: '❓過去の事実に反するときは? → さらに一歩、過去へずらします。仮定法過去完了です。If I had studied harder, I would have passed the exam.（もっと勉強していたら、合格していたのに）。形は、if の節が〈had＋過去分詞〉、主節が〈would have＋過去分詞〉です。',
+    add: fresh(head('過去の事実に反する → もう一歩ずらす'), bx(10, 26, 300, 26, '仮定法過去　：過去形 ／ would＋原形', C.blue, FILL.blue, 11), bx(10, 58, 300, 26, '仮定法過去完了：had＋過去分詞 ／ would have＋過去分詞', C.red, FILL.red, 10), lb(160, 108, 'If I had studied harder, I would have passed.', 11, C.ink, 'middle', true), ...cap('現在は過去形、過去は過去完了', C.red)),
+  },
+  {
+    note: '見分ける手順です。①実現できる話か、事実に反する話か。②実現できるなら直説法（現在形）、反するなら仮定法（過去形）。③いつの話か。今なら過去形、過去なら had＋過去分詞。When・if の時の副詞節の現在形と混同しないでください。',
+    add: fresh(...flow(['実現できる?\n事実に反する?', '反する →\n仮定法', '今なら過去形\n過去なら had＋pp'], 26, { h: 66, size: 10, color: C.blue, fill: FILL.blue }).flat(), ...cap('「実現可能か」で見分ける', C.blue)),
+  },
+  {
+    note: 'まとめです。仮定法は現実と反対のことを言う。時制を一つ前にずらすので、形は過去形でも意味は現在。過去のことなら had＋過去分詞と would have＋過去分詞。be動詞は were。',
+    add: fresh(bx(15, 14, 290, 30, '事実に反する仮定 → 時制を一歩ずらす', C.red, FILL.red, 12), bx(15, 52, 290, 30, '今：過去形・were ／ would＋原形', C.blue, FILL.blue, 12), bx(15, 90, 290, 30, '過去：had＋過去分詞 ／ would have＋pp', C.green, FILL.green, 12), ...cap('現実と反対の話', C.green)),
+  },
+], '仮定法過去と過去完了');
 
 export const XF_KEA_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_eigo_s001': s001,
@@ -594,6 +711,9 @@ export const XF_KEA_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_eigo_03_infinitive': e03,
   'xf_koko_eigo_04_reading': e04,
   'xf_koko_eigo_05_writing': e05,
+  'xf_koko_eigo_06_vocab': e06,
+  'xf_koko_eigo_07_subjunctive': e07,
+  'xf_koko_eigo_08_conjunction': e08,
 };
 
 export const XF_KEA_SECTIONS: Record<string, string> = {
@@ -610,4 +730,7 @@ export const XF_KEA_SECTIONS: Record<string, string> = {
   'koko_eigo_03_infinitive#3': 'xf_koko_eigo_03_infinitive',
   'koko_eigo_04_reading#0': 'xf_koko_eigo_04_reading',
   'koko_eigo_05_writing#0': 'xf_koko_eigo_05_writing',
+  'koko_eigo_06_vocab#4': 'xf_koko_eigo_06_vocab',
+  'koko_eigo_07_subjunctive#0': 'xf_koko_eigo_07_subjunctive',
+  'koko_eigo_08_conjunction#3': 'xf_koko_eigo_08_conjunction',
 };
