@@ -27,9 +27,26 @@ import { XF_HG_FIGURES, XF_HG_SECTIONS } from './lesson-xf-hg';
 import { XF_HH_FIGURES, XF_HH_SECTIONS } from './lesson-xf-hh';
 import { XF_HI_FIGURES, XF_HI_SECTIONS } from './lesson-xf-hi';
 import { XF_HJ_FIGURES, XF_HJ_SECTIONS } from './lesson-xf-hj';
+import { XF_KSA_FIGURES, XF_KSA_SECTIONS } from './lesson-xf-ksa';
 import { XF_KSB_FIGURES, XF_KSB_SECTIONS } from './lesson-xf-ksb';
+import { XF_KSC_FIGURES, XF_KSC_SECTIONS } from './lesson-xf-ksc';
+import { XF_KSD_FIGURES, XF_KSD_SECTIONS } from './lesson-xf-ksd';
+import { XF_KSE_FIGURES, XF_KSE_SECTIONS } from './lesson-xf-kse';
+import { XF_KSF_FIGURES, XF_KSF_SECTIONS } from './lesson-xf-ksf';
+import { XF_KSG_FIGURES, XF_KSG_SECTIONS } from './lesson-xf-ksg';
+import { XF_KSH_FIGURES, XF_KSH_SECTIONS } from './lesson-xf-ksh';
 import { XF_KSI_FIGURES, XF_KSI_SECTIONS } from './lesson-xf-ksi';
+import { XF_KRA_FIGURES, XF_KRA_SECTIONS } from './lesson-xf-kra';
+import { XF_KRB_FIGURES, XF_KRB_SECTIONS } from './lesson-xf-krb';
+import { XF_KRC_FIGURES, XF_KRC_SECTIONS } from './lesson-xf-krc';
 import { XF_KRD_FIGURES, XF_KRD_SECTIONS } from './lesson-xf-krd';
+import { XF_KRE_FIGURES, XF_KRE_SECTIONS } from './lesson-xf-kre';
+import { XF_KRF_FIGURES, XF_KRF_SECTIONS } from './lesson-xf-krf';
+import { XF_KRG_FIGURES, XF_KRG_SECTIONS } from './lesson-xf-krg';
+import { XF_KRH_FIGURES, XF_KRH_SECTIONS } from './lesson-xf-krh';
+import { XF_KRI_FIGURES, XF_KRI_SECTIONS } from './lesson-xf-kri';
+import { XF_KRJ_FIGURES, XF_KRJ_SECTIONS } from './lesson-xf-krj';
+import { XF_KKA_FIGURES, XF_KKA_SECTIONS } from './lesson-xf-kka';
 
 export const EXTRA_LESSON_FIGURES: Record<string, Figure> = {
   ...XF_SA_FIGURES,
@@ -54,9 +71,26 @@ export const EXTRA_LESSON_FIGURES: Record<string, Figure> = {
   ...XF_HH_FIGURES,
   ...XF_HI_FIGURES,
   ...XF_HJ_FIGURES,
+  ...XF_KSA_FIGURES,
   ...XF_KSB_FIGURES,
+  ...XF_KSC_FIGURES,
+  ...XF_KSD_FIGURES,
+  ...XF_KSE_FIGURES,
+  ...XF_KSF_FIGURES,
+  ...XF_KSG_FIGURES,
+  ...XF_KSH_FIGURES,
   ...XF_KSI_FIGURES,
+  ...XF_KRA_FIGURES,
+  ...XF_KRB_FIGURES,
+  ...XF_KRC_FIGURES,
   ...XF_KRD_FIGURES,
+  ...XF_KRE_FIGURES,
+  ...XF_KRF_FIGURES,
+  ...XF_KRG_FIGURES,
+  ...XF_KRH_FIGURES,
+  ...XF_KRI_FIGURES,
+  ...XF_KRJ_FIGURES,
+  ...XF_KKA_FIGURES,
 };
 
 export const EXTRA_SECTION_FIGURES: Record<string, string> = {
@@ -82,7 +116,24 @@ export const EXTRA_SECTION_FIGURES: Record<string, string> = {
   ...XF_HH_SECTIONS,
   ...XF_HI_SECTIONS,
   ...XF_HJ_SECTIONS,
+  ...XF_KSA_SECTIONS,
   ...XF_KSB_SECTIONS,
+  ...XF_KSC_SECTIONS,
+  ...XF_KSD_SECTIONS,
+  ...XF_KSE_SECTIONS,
+  ...XF_KSF_SECTIONS,
+  ...XF_KSG_SECTIONS,
+  ...XF_KSH_SECTIONS,
   ...XF_KSI_SECTIONS,
+  ...XF_KRA_SECTIONS,
+  ...XF_KRB_SECTIONS,
+  ...XF_KRC_SECTIONS,
   ...XF_KRD_SECTIONS,
+  ...XF_KRE_SECTIONS,
+  ...XF_KRF_SECTIONS,
+  ...XF_KRG_SECTIONS,
+  ...XF_KRH_SECTIONS,
+  ...XF_KRI_SECTIONS,
+  ...XF_KRJ_SECTIONS,
+  ...XF_KKA_SECTIONS,
 };
