@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { useFocusEffect } from 'expo-router';
 import { Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
@@ -81,7 +82,8 @@ export function useFormulaUnlocks(): FormulaUnlocksState {
     mounted.current = true;
     getUnlockedFormulaIds()
       .then((ids) => {
-        if (mounted.current) setUnlockedIds(ids);
+        // 画面が開いたあとにStripeの確認などで足された分を消さないよう、合成する
+        if (mounted.current) setUnlockedIds((prev) => new Set([...prev, ...ids]));
       })
       .finally(() => {
         if (mounted.current) setLoading(false);
@@ -107,6 +109,18 @@ export function useFormulaUnlocks(): FormulaUnlocksState {
     };
   }, []);
 
+  // 別の画面（単元ページなど）で買った分を、この画面に戻ったときに反映する。
+  // 反映しないと鍵と購入ボタンが残り、もう一度押すと二重に課金されてしまう。
+  useFocusEffect(
+    useCallback(() => {
+      getUnlockedFormulaIds()
+        .then((ids) => {
+          if (mounted.current) setUnlockedIds((prev) => new Set([...prev, ...ids]));
+        })
+        .catch(() => {});
+    }, []),
+  );
+
   const unlockFormula = useCallback(
     async (figureId: string, kind: 'formula' | 'bundle' = 'formula'): Promise<UnlockPurchaseResult> => {
       const target = kind === 'bundle' ? bundleProduct : product;
@@ -128,6 +142,16 @@ export function useFormulaUnlocks(): FormulaUnlocksState {
       }
       if (target == null) {
         return { ok: false, message: 'この機能は準備中です。しばらくしてからもう一度お試しください。' };
+      }
+      // 買う直前に最新の解放済み一覧を確かめる。すでに解放されていれば課金しない（二重課金の防止）。
+      try {
+        const fresh = await getUnlockedFormulaIds();
+        if (fresh.has(figureId)) {
+          if (mounted.current) setUnlockedIds((prev) => new Set([...prev, ...fresh]));
+          return { ok: true };
+        }
+      } catch {
+        // 取得に失敗したときは、そのまま購入に進む（購入自体はサーバー側で二重解放されない）
       }
       setPurchasingFigureId(figureId);
       // 前回この公式を購入したときに、決済は成功したがサーバー確認が未完了の

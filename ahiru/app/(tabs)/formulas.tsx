@@ -23,6 +23,7 @@ import InlineQuiz from '../../components/InlineQuiz';
 import { formulaImages } from '../../data/formulaImages';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
 import { PRICES, formatYen, FORMULA_BUNDLE_ITEM_CAP } from '../../constants/pricing';
+import { confirmDialog, noticeDialog } from '../../utils/dialog';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 
@@ -35,16 +36,6 @@ function formatMoney(value: number, currency: string): string {
   } catch {
     return `${currency} ${value.toFixed(2)}`;
   }
-}
-
-/** 購入前の確認（うっかりタップで課金画面が出ないように、説明つきで一度確かめる） */
-function confirmPurchase(title: string, message: string): Promise<boolean> {
-  return new Promise((resolve) => {
-    Alert.alert(title, message, [
-      { text: 'やめる', style: 'cancel', onPress: () => resolve(false) },
-      { text: '購入へ進む', onPress: () => resolve(true) },
-    ], { cancelable: true, onDismiss: () => resolve(false) });
-  });
 }
 
 const LIST_FOOTER = <View style={{ height: 120 }} />;
@@ -135,6 +126,8 @@ const FormulaRow = React.memo(function FormulaRow({
           </View>
 
           {/* おすすめ：この教科ぜんぶ */}
+          {/* ロック項目が少なくて、まとめ買いのほうが高くなる教科では出さない */}
+          {bundleOffPercent > 0 && (
           <View style={[styles.bundleCard, { borderColor: accent }]}>
             <View style={[styles.bundleBadge, { backgroundColor: accent }]}>
               <Text style={styles.bundleBadgeText}>おすすめ・上限つき</Text>
@@ -160,6 +153,7 @@ const FormulaRow = React.memo(function FormulaRow({
               )}
             </TouchableOpacity>
           </View>
+          )}
 
           {/* 1項目ずつ買う場合。買った数が上限に届いたら、のこりは自動で全部ひらく */}
           <View style={styles.singleBox}>
@@ -372,35 +366,35 @@ export default function FormulasScreen() {
   const bundleOffPercent = Math.max(0, Math.round((1 - bundleValue / Math.max(0.01, fullValue)) * 100));
 
   const handleUnlock = React.useCallback(async (label: string) => {
-    const ok = await confirmPurchase(
+    const ok = await confirmDialog(
       '購入の確認',
       `「${label}」を ${priceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
     );
     if (!ok) return;
     const result = await unlockFormula(label);
     if (!result.ok) {
-      Alert.alert('購入できませんでした', result.message);
+      noticeDialog('購入できませんでした', result.message);
       return;
     }
     if (boughtCount + 1 >= FORMULA_BUNDLE_ITEM_CAP && boughtCount < FORMULA_BUNDLE_ITEM_CAP) {
-      Alert.alert('ぜんぶそろいました', 'この教科の公式集は、のこりも全部ずっと無料で見られます。');
+      noticeDialog('ぜんぶそろいました', 'この教科の公式集は、のこりも全部ずっと無料で見られます。');
       return;
     }
-    Alert.alert('解放しました', `「${label}」はこれ以降ずっと無料で見られます。あと${FORMULA_BUNDLE_ITEM_CAP - boughtCount - 1}項目で、この教科は全部そろいます。`);
+    noticeDialog('解放しました', `「${label}」はこれ以降ずっと無料で見られます。あと${FORMULA_BUNDLE_ITEM_CAP - boughtCount - 1}項目で、この教科は全部そろいます。`);
   }, [unlockFormula, boughtCount, priceLabel]);
 
   const handleUnlockBundle = React.useCallback(async (id: string) => {
-    const ok = await confirmPurchase(
+    const ok = await confirmDialog(
       '購入の確認',
       `この教科のロック中の公式${bundleCount}項目を、ぜんぶ ${bundlePriceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
     );
     if (!ok) return;
     const result = await unlockFormula(id, 'bundle');
     if (!result.ok) {
-      Alert.alert('購入できませんでした', result.message);
+      noticeDialog('購入できませんでした', result.message);
       return;
     }
-    Alert.alert('解放しました', 'この教科の公式集は、これ以降ずっと無料で見られます。');
+    noticeDialog('解放しました', 'この教科の公式集は、これ以降ずっと無料で見られます。');
   }, [unlockFormula, bundleCount, bundlePriceLabel]);
 
   // セクション見出しと項目を1本のリストにならし、FlatListで仮想化できるようにする
@@ -505,7 +499,7 @@ export default function FormulasScreen() {
           bundlePurchasing={purchasingFigureId === bundleId}
           onUnlockBundle={handleUnlockBundle}
           boughtCount={boughtCount}
-          bundleItemCap={FORMULA_BUNDLE_ITEM_CAP}
+          bundleItemCap={Math.min(FORMULA_BUNDLE_ITEM_CAP, bundleCount)}
           fullPriceLabel={fullPriceLabel}
           bundleOffPercent={bundleOffPercent}
         />

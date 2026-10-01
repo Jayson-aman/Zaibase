@@ -179,6 +179,8 @@ export default function QuizScreen() {
 
   const { questions: subjectPool, loading: questionsLoading } = useSubjectQuestions(subjectKey);
   const { unlockedIds: unlockedFormulaIds } = useFormulaUnlocks();
+  // Setが差しかえられるたびに出題が組み直されないよう、中身から作った文字列を依存にする
+  const unlockedFormulaKey = React.useMemo(() => [...unlockedFormulaIds].sort().join('|'), [unlockedFormulaIds]);
 
   // 「もう一度チャレンジ」で毎回シャッフルし直すためのキー
   const [restartKey, setRestartKey] = useState(0);
@@ -244,7 +246,7 @@ export default function QuizScreen() {
     }
     const filtered = filterQuestions(all, examType, course, difficultyFilter, isPro || isMax, gradeFilter);
     return shuffle(filtered);
-  }, [subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, testModeKey, course, examType, isPro, isMax, topicParam, restartKey, gradeFilter, unlockedFormulaIds]);
+  }, [subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, testModeKey, course, examType, isPro, isMax, topicParam, restartKey, gradeFilter, unlockedFormulaKey]);
 
   // 無料/Pro/MAXユーザーがMAX限定モードにどれだけ到達しているかを集計できるよう記録する。
   // baseQuestions（useMemo）はレンダー中に副作用を起こしたくないため、別のeffectで発火する。

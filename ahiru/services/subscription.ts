@@ -211,12 +211,12 @@ export const PRODUCT_ID_PRO = 'com.zaibase.exam.promonthly';
 export const PRODUCT_ID_MAX = 'com.zaibase.exam.maxmonthly';
 export const PRODUCT_ID_VOCAB_MONTHLY = 'com.zaibase.exam.vocabmonthly';
 export const PRODUCT_ID_VOCAB_YEARLY = 'com.zaibase.exam.vocabyearly';
-// ⚠️ 公式集（無料5個超）を1個¥50で買い切り解放する消費型（Consumable）商品。
+// ⚠️ 公式集（各教科の先頭8項目を超えた分）を1個¥200で買い切り解放する消費型（Consumable）商品。
 // Pro/Maxの月額課金とは別枠。App Store Connect / Google Play Console / RevenueCat の
-// いずれにも「このID・消費型・¥50」で新規登録するまでは fetchFormulaUnlockProduct が
+// いずれにも「このID・消費型・¥200」で登録するまでは fetchFormulaUnlockProduct が
 // 空を返し続け、購入ボタンは「準備中」表示のままになる。
 export const PRODUCT_ID_FORMULA_UNLOCK = 'com.zaibase.exam.formulaunlock';
-// ⚠️ 公式集のまとめ買い（受験種別×教科）。消費型・¥980。App Store Connect / Google Play Console /
+// ⚠️ 公式集のまとめ買い（受験種別×教科）。消費型・¥2,980。App Store Connect / Google Play Console /
 // RevenueCat に、このIDで新規登録するまでは、まとめ買いのボタンは「準備中」表示のままになる。
 export const PRODUCT_ID_FORMULA_BUNDLE = 'com.zaibase.exam.formulabundle';
 // ⚠️ 学年×科目ごとに追加した新規単元（無料5個超）を1個¥150で買い切り解放する消費型商品。

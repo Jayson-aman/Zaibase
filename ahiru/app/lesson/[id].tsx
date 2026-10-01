@@ -23,6 +23,7 @@ import HomeButton from '../../components/HomeButton';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
+import { confirmDialog, noticeDialog } from '../../utils/dialog';
 import { useUnitUnlocks } from '../../hooks/useUnitUnlocks';
 import { subjectInfo } from '../../data/questions-meta';
 
@@ -62,33 +63,31 @@ export default function LessonDetailScreen() {
   }, [lesson, isKoushikiLesson, subjectPool, isMax]);
 
   async function handleUnlockFormula(figureId: string, heading: string) {
+    const okFormula = await confirmDialog(
+      '購入の確認',
+      `「${heading}」を ${formulaUnlockPriceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
+    );
+    if (!okFormula) return;
     const result = await unlockFormula(figureId);
     if (!result.ok) {
-      Alert.alert('購入できませんでした', result.message);
+      noticeDialog('購入できませんでした', result.message);
       return;
     }
-    Alert.alert('解放しました', `「${heading}」はこれ以降ずっと無料で見られます。`);
+    noticeDialog('解放しました', `「${heading}」はこれ以降ずっと無料で見られます。`);
   }
 
   async function handleUnlockUnit(lessonId: string, title: string) {
-    const ok = await new Promise<boolean>((resolve) => {
-      Alert.alert(
-        '購入の確認',
-        `「${title}」を ${unitUnlockPriceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
-        [
-          { text: 'やめる', style: 'cancel', onPress: () => resolve(false) },
-          { text: '購入へ進む', onPress: () => resolve(true) },
-        ],
-        { cancelable: true, onDismiss: () => resolve(false) },
-      );
-    });
+    const ok = await confirmDialog(
+      '購入の確認',
+      `「${title}」を ${unitUnlockPriceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
+    );
     if (!ok) return;
     const result = await unlockUnit(lessonId);
     if (!result.ok) {
-      Alert.alert('購入できませんでした', result.message);
+      noticeDialog('購入できませんでした', result.message);
       return;
     }
-    Alert.alert('解放しました', `「${title}」はこれ以降ずっと無料で見られます。`);
+    noticeDialog('解放しました', `「${title}」はこれ以降ずっと無料で見られます。`);
   }
 
   if (!lesson) {
