@@ -1199,7 +1199,7 @@ const u15: DiagramFigure = show([
     ),
   },
   {
-    note: '④ ie で終わる語は、ie を y に変えて -ing をつけます：die → dying、lie → lying、tie → tying。❓なぜ変えるのでしょう。→ die ＋ ing のままだと dieing と i と e と i が並びすぎて読みにくいので、ie を y にして形を整えます。',
+    note: '④ ie で終わる語は、ie を y に変えて -ing をつけます：die → dying、lie → lying、tie → tying。❓なぜ変えるのでしょう。→ die ＋ ing のまま dieing と書くと、i・e・i と母音字（ぼいんじ）が3つ並んで読みにくくなるので、ie を y にするきまりになっています。',
     add: fresh(
       ...[['die', 'dying'], ['lie', 'lying'], ['tie', 'tying']].flatMap(([a, b], i) => [
         bx(40, 14 + i * 38, 90, 28, a, C.gray, FILL.gray, 15), ar(132, 28 + i * 38, 170, 28 + i * 38, C.main), bx(172, 14 + i * 38, 100, 28, b, C.red, FILL.red, 15),
@@ -1438,7 +1438,7 @@ const u18: DiagramFigure = show([
     note: '場面に登場人物が何人かいて、それぞれ別の動作をしているときは、主語ごとに文を分けます。男の子はサッカー、女の子は読書なら、One boy is playing soccer. A girl is reading a book near him. となります。今まさにしている動作を描くときは現在進行形を使います。',
     add: fresh(
       bx(10, 10, 140, 40, '男の子\nサッカー', C.blue, FILL.blue, 12), bx(170, 10, 140, 40, '女の子\n本を読む', C.red, FILL.red, 12),
-      bx(8, 66, 148, 40, 'One boy is playing soccer.', C.blue, FILL.blue, 11), bx(164, 66, 148, 40, 'A girl is reading a book near him.', C.red, FILL.red, 10),
+      bx(8, 66, 148, 46, 'One boy is playing\nsoccer.', C.blue, FILL.blue, 12), bx(164, 66, 148, 46, 'A girl is reading a book\nnear him.', C.red, FILL.red, 12),
       lb(160, 128, '主語ごとに文を分ける', 12, C.ink, 'middle', true),
       ...cap('人が違えば、文も別', C.main),
     ),
@@ -1469,17 +1469,17 @@ const u19: DiagramFigure = show([
   {
     note: '電話の会話には、決まった流れと決まり文句があります。知っていると、場面がすぐにイメージできます。流れは、①電話を受ける、②取り次ぎをたのむ、③本人が出る、④不在を伝える、⑤伝言、⑥かけ直し、の6つです。',
     add: [
-      ...stack(['① 受ける　Hello, this is ～ speaking.', '② たのむ　May I speak to ～?', '③ 本人　Speaking.'], 8, 150, 8, { h: 28, gap: 8, size: 9, color: C.blue, fill: FILL.blue }).flat(),
-      ...stack(['④ 不在　I\'m sorry, he is out now.', '⑤ 伝言　Can I take a message?', '⑥ かけ直し　call me back'], 162, 150, 8, { h: 28, gap: 8, size: 9, color: C.red, fill: FILL.red }).flat(),
+      ...[['① 受ける', 'Hello, this is ～ speaking.', 'b'], ['② たのむ', 'May I speak to ～?', 'b'], ['③ 本人が出る', 'Speaking.', 'b'], ['④ 不在', "I'm sorry, he is out now.", 'r'], ['⑤ 伝言', 'Can I take a message?', 'r'], ['⑥ かけ直し', 'Could you ask him to call me back?', 'r']].map(([a, t, k], i) =>
+        bx(i < 3 ? 6 : 164, 8 + (i % 3) * 46, 150, 38, `${a}\n${t}`, K[k as Kd][0], K[k as Kd][1], 10)),
       ...cap('電話の6つの流れ'),
     ],
   },
   {
     note: 'はじめの2つです。電話を受けた人は Hello, this is 〜 speaking.（もしもし、〜です）と名のります。かけた人は May I speak to Mr. Green, please?（グリーン先生をお願いできますか）と取り次ぎをたのみます。本人が出たら Speaking.（私です）と答えます。',
     add: fresh(
-      bx(10, 10, 220, 30, 'May I speak to Mr. Green, please?', C.blue, FILL.blue, 12), lb(14, 6, 'かける人', 9, C.blue, 'start', true),
-      bx(90, 50, 220, 30, 'Hello, this is ～ speaking.', C.green, FILL.green, 12), lb(94, 46, '受ける人', 9, C.green, 'start', true),
-      bx(90, 90, 120, 30, 'Speaking.', C.red, FILL.red, 14), lb(94, 86, '本人が出る', 9, C.red, 'start', true),
+      tag(4, 16, 58, 'かける人', 'b', 10), bx(66, 10, 248, 32, 'May I speak to Mr. Green, please?', C.blue, FILL.blue, 12),
+      tag(4, 62, 58, '受ける人', 'g', 10), bx(66, 56, 248, 32, 'Hello, this is ～ speaking.', C.green, FILL.green, 12),
+      tag(4, 108, 58, '本人が出る', 'r', 10), bx(66, 102, 248, 32, 'Speaking.', C.red, FILL.red, 14),
       ...cap('取り次ぎ → 本人は Speaking.', C.main),
     ),
   },
@@ -1496,18 +1496,18 @@ const u19: DiagramFigure = show([
   {
     note: '会話文を読んでみましょう。Tom: Hello, this is Tom. May I speak to Emma? / Mother: I’m sorry, Tom. She’s not home now. She’s at the library. / Tom: I see. Could you tell her to call me when she gets home? / Mother: Sure, I will.',
     add: fresh(
-      bx(10, 6, 220, 26, 'Tom: Hello, this is Tom. May I speak to Emma?', C.blue, FILL.blue, 9),
-      bx(90, 36, 222, 26, "Mother: I'm sorry, Tom. She's not home now.\nShe's at the library.", C.green, FILL.green, 8),
-      bx(10, 66, 220, 26, 'Tom: I see. Could you tell her to call me when she gets home?', C.blue, FILL.blue, 8),
-      bx(90, 96, 222, 26, 'Mother: Sure, I will.', C.green, FILL.green, 11),
+      bx(4, 4, 236, 30, 'Tom: Hello, this is Tom.\nMay I speak to Emma?', C.blue, FILL.blue, 10),
+      bx(80, 38, 236, 30, "Mother: I'm sorry, Tom. She's not home now.\nShe's at the library.", C.green, FILL.green, 10),
+      bx(4, 72, 236, 30, 'Tom: I see. Could you tell her to call me\nwhen she gets home?', C.blue, FILL.blue, 10),
+      bx(80, 106, 236, 28, 'Mother: Sure, I will.', C.green, FILL.green, 11),
       ...cap('トムが エマ に電話した場面'),
     ),
   },
   {
     note: '❓Why isn’t Emma at home?（なぜエマは家にいないのですか）の答えはどこにあるでしょう。→ 母親の言葉の中です。She’s at the library.（図書館にいます）。不在の理由は、必ず本文の中にはっきり書かれています。会話の流れの中で自然に答えが出てきます。',
     add: fresh(
-      bx(90, 10, 222, 38, "Mother: I'm sorry, Tom. She's not home now.\nShe's at the library.", C.green, FILL.green, 9),
-      ar(250, 76, 250, 52, C.red), bx(110, 78, 200, 30, 'She is at the library.', C.red, FILL.red, 13),
+      bx(30, 8, 260, 40, "Mother: I'm sorry, Tom. She's not home now.\nShe's at the library.", C.green, FILL.green, 11),
+      ar(160, 78, 160, 52, C.red), bx(90, 80, 140, 30, 'She is at the library.', C.red, FILL.red, 13),
       lb(160, 128, '理由は本文にそのまま書いてある', 12, C.ink, 'middle', true),
       ...cap('答えは本文の中から探す', C.red),
     ),

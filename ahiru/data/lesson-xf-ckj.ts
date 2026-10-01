@@ -2,7 +2,7 @@
 // 「なぜ？」の連鎖で7枚以上。上に図、下の帯にそのスライドのひとこと。
 import type { DiagramElement, DiagramFigure } from './figures';
 import type { Slide } from './diagram-kit';
-import { show, bx, lb, ar, ln, ci, fresh, C, FILL } from './diagram-kit';
+import { show, bx, lb, ar, ln, ci, pg, fresh, C, FILL } from './diagram-kit';
 
 type K = 'b' | 'g' | 'r' | 'p' | 'y' | 'm' | 'k';
 const COL: Record<K, [string, string]> = {

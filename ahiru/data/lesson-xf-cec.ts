@@ -1067,7 +1067,7 @@ const s113: DiagramFigure = show([
   },
   {
     note: '❓なぜ My family is five. は変なのでしょう。→ family は「人数」ではなく、人々を一つにまとめた「まとまりの名前」だからです。まとまりが一つなので単数で、five（5つ）では数えられません。人数は people を数えて言います。',
-    add: fresh(...[0, 1, 2, 3, 4].map((i) => ci(80 + i * 40, 48, 12, '人', C.blue, FILL.blue, 10)), brkb(64, 256, 78, 'family ＝ ひとまとまりの名前', C.main), at(160, 120, 'family は「人数」ではない', 12, C.red, true), ...cap('まとまりを 表す名詞', C.main)),
+    add: fresh(...[0, 1, 2, 3, 4].map((i) => ci(80 + i * 40, 48, 12, '人', C.blue, FILL.blue, 10)), ...brkb(64, 256, 78, 'family ＝ ひとまとまりの名前', C.main), at(160, 124, 'family は「人数」ではない', 12, C.red, true), ...cap('まとまりを 表す名詞', C.main)),
   },
   {
     note: 'family・team・class・group・club は、一つのまとまりとして単数あつかいです。My family is large.、Our team is very strong.、Our class has thirty students. is・has・was を使います。',
