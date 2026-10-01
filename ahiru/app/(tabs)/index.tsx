@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { schoolQuestionStats } from '../../data/school-counts';
 import {
   View,
   Text,
@@ -546,6 +547,14 @@ export default function HomeScreen() {
                                   </Text>
                                 )}
                               </View>
+                              {(() => {
+                                const st = schoolQuestionStats(s.key);
+                                return st.total > 0 ? (
+                                  <Text style={[styles.schoolCardCount, isSelected && { color: '#FFF' }]}>
+                                    {st.subjects}科・全{st.total}問
+                                  </Text>
+                                ) : null;
+                              })()}
                             </TouchableOpacity>
                           );
                         })}
@@ -1155,6 +1164,7 @@ const styles = StyleSheet.create({
     lineHeight: 18,
     marginBottom: 4,
   },
+  schoolCardCount: { fontSize: 12, fontWeight: '800', color: '#0F766E', marginTop: 4 },
   schoolCardMeta: {
     flexDirection: 'row',
     gap: 4,

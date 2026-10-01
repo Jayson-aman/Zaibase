@@ -1,4 +1,5 @@
 import React from 'react';
+import { schoolQuestionStats } from '../../data/school-counts';
 import {
   View,
   Text,
@@ -166,6 +167,11 @@ export default function SchoolsScreen() {
                       <Text style={styles.schoolName}>{school.name}</Text>
                       {school.note && <Text style={styles.schoolNote}>{school.note}</Text>}
                       <Text style={styles.schoolMeta}>偏差値 {school.hensachi}　{school.gender}</Text>
+                      {schoolQuestionStats(school.key).total > 0 && (
+                        <Text style={styles.schoolCount}>
+                          {schoolQuestionStats(school.key).subjects}科・全{schoolQuestionStats(school.key).total}問（各科目 無料5問）
+                        </Text>
+                      )}
                     </View>
                   </View>
                   <View style={styles.schoolRight}>
@@ -272,6 +278,7 @@ const styles = StyleSheet.create({
     fontSize: 11,
     marginTop: 1,
   },
+  schoolCount: { fontSize: 12, fontWeight: '800', color: '#0F766E', marginTop: 2 },
   schoolMeta: {
     color: D.muted,
     fontSize: 11,
