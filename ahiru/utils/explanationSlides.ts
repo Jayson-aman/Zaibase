@@ -48,7 +48,22 @@ export function parseSections(text: string): { heading: string; body: string }[]
   }
   if (head !== null) out.push({ heading: head, body: text.slice(last).trim() });
   else if (text.trim() && out.length === 0) out.push({ heading: '', body: text.trim() });
-  return out.filter((s) => s.body !== '' || s.heading !== '');
+  // 見出しが続いて本文が空の節（【答え】【目的】… や 【解法】【なぜそうなるのか】…）は、空の枚が出ないよう直す。
+  // 次の見出しが型のどれにも当たらない（目的など）なら、その節を取りこんで1つにする。型の見出しなら、空の節を落とす。
+  const fixed: { heading: string; body: string }[] = [];
+  for (let i = 0; i < out.length; i++) {
+    const cur = out[i];
+    const next = out[i + 1];
+    if (cur.heading !== '' && cur.body === '' && next) {
+      if (next.heading !== '' && kindOf(next.heading) === 'other') {
+        fixed.push({ heading: cur.heading, body: `【${next.heading}】${next.body}` });
+        i++;
+      }
+      continue;
+    }
+    fixed.push(cur);
+  }
+  return fixed.filter((s) => s.body !== '' || s.heading !== '');
 }
 
 /** 文を「。」「！」「？」「改行」で分ける（かっこの中は切らない） */
