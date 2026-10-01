@@ -1152,7 +1152,7 @@ const f75 = show([
 const f76 = show([
   {
     note: '日本の国土の約4分の3は山地・丘陵で、耕地として使えるのは国土のおよそ12%（2023年）にすぎません。',
-    add: [lb(160, 12, '日本の国土', 11, C.gray, 'middle', true), bx(20, 24, 280, 36, undefined, C.gray, FILL.gray), bx(20, 24, 210, 36, '山地・丘陵 約4分の3', C.main, FILL.warm, 12), bx(20, 24, 33.6, 36, undefined, C.green, FILL.green), lb(37, 78, '耕地 約12%', 11, C.green, 'middle', true), ...cap('耕地は国土の約12%', C.green)],
+    add: [lb(160, 12, '日本の国土', 11, C.gray, 'middle', true), bx(20, 24, 210, 36, '山地・丘陵 約4分の3', C.main, FILL.warm, 12), bx(230, 24, 33.6, 36, undefined, C.green, FILL.green), bx(263.6, 24, 36.4, 36, 'その他', C.gray, FILL.gray, 9), ar(247, 80, 247, 62, C.green), lb(247, 92, '耕地 約12%', 11, C.green, 'middle', true), ...cap('耕地は国土の約12%', C.green)],
   },
   {
     note: '❓せまい耕地は、農家にどう影響するでしょう。→ その耕地を多くの農家で分け合うため、農家1戸あたりの経営耕地面積は、北海道を除く都府県で約2ヘクタール前後にとどまります。アメリカやオーストラリアの大規模農場とは桁がちがいます。',

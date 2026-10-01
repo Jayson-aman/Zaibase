@@ -1158,6 +1158,137 @@ const e209: DiagramFigure = show([
   },
 ], '並べかえ：受動態');
 
+// ───────── new20_j2_eigo_10 並べかえ⑩：接続詞 ─────────
+const e210: DiagramFigure = show([
+  {
+    note: '接続詞は、2つの節（主語 ＋ 動詞のかたまり）をつなぐ語です。接続詞のあとには、必ず〈主語 ＋ 動詞〉のセットが続きます。並べかえでは、まず接続詞を見つけ、そのすぐあとに主語と動詞を置きます。',
+    add: [bx(10, 24, 120, 40, '節①\n主語 ＋ 動詞', C.blue, FILL.blue, 11), bx(140, 24, 40, 40, '接続詞', C.red, FILL.red, 9), bx(190, 24, 120, 40, '節②\n主語 ＋ 動詞', C.green, FILL.green, 11), lb(160, 92, '接続詞のあとに 〈主語 ＋ 動詞〉', 12, C.ink, 'middle', true), ...cap('節と節を つなぐ')],
+  },
+  {
+    note: 'when は「〜するとき」です。When I got home, it was raining.（家に着いたとき、雨が降っていた）。when のあとに I got home という主語と動詞が続いています。',
+    add: fresh(bx(5, 20, 50, 34, 'When', C.red, FILL.red, 13), bx(60, 20, 130, 34, 'I got home,', C.blue, FILL.blue, 13), bx(195, 20, 120, 34, 'it was raining.', C.green, FILL.green, 12), lb(160, 78, 'when ＋ 主語 ＋ 動詞', 13, C.ink, 'middle', true), ...cap('when ＝ 〜するとき')),
+  },
+  {
+    note: '❓because は、どこに置くことが多いのでしょう。→ 理由を表す節を作るので、通常は主節のあとに続けます。I stayed home because I was sick.（病気だったので家にいた）。「結果 → 理由」の順です。',
+    add: fresh(bx(5, 20, 150, 34, 'I stayed home', C.green, FILL.green, 13), bx(160, 20, 150, 34, 'because I was sick.', C.red, FILL.red, 12), lb(80, 78, '結果', 12, C.green, 'middle', true), lb(235, 78, '理由', 12, C.red, 'middle', true), ...cap('because ＋ 理由の節')),
+  },
+  {
+    note: '❓if の節の中では、なぜ will を使わないのでしょう。→ 時や条件を表す副詞節の中では、未来のことでも現在形を使うきまりだからです。If it is sunny tomorrow, we will go on a picnic.（もし明日晴れたら、ピクニックに行く）。× If it will be sunny … とはしません。',
+    add: fresh(bx(5, 14, 160, 34, 'If it is sunny tomorrow,', C.blue, FILL.blue, 11), bx(170, 14, 145, 34, 'we will go on a picnic.', C.green, FILL.green, 10), lb(85, 64, 'if の節 ＝ 現在形', 12, C.blue, 'middle', true), lb(242, 64, '主節 ＝ will', 12, C.green, 'middle', true), bx(30, 86, 260, 32, '× If it will be sunny tomorrow,', C.red, FILL.red, 12), ...cap('if 節の中は 未来でも現在形', C.red)),
+  },
+  {
+    note: '❓コンマは、いつ必要なのでしょう。→ 接続詞の節が文頭に来るときは、主節との間にコンマを置きます。When I got home, it was raining. 節が後ろに来るときはコンマは要りません。It was raining when I got home.',
+    add: fresh(bx(10, 14, 300, 34, 'When I got home, it was raining.', C.blue, FILL.blue, 13), lb(160, 62, '節が文頭 → コンマが必要', 12, C.blue, 'middle', true), bx(10, 76, 300, 34, 'It was raining when I got home.', C.green, FILL.green, 12), lb(160, 124, '節が後ろ → コンマ不要', 12, C.green, 'middle', true), ...cap('文頭の節のあとに「,」')),
+  },
+  {
+    note: '例題です。（ tomorrow / rains / if / it ）, we will stay home. は、If it rains tomorrow, we will stay home.（もし明日雨が降ったら、家にいる）。if のあとに〈主語 it ＋ 動詞 rains〉、動詞は現在形です。',
+    add: fresh(bx(5, 20, 40, 34, 'If', C.red, FILL.red, 13), bx(50, 20, 40, 34, 'it', C.blue, FILL.blue, 13), bx(95, 20, 70, 34, 'rains', C.blue, FILL.blue, 13), bx(170, 20, 100, 34, 'tomorrow,', C.gray, FILL.gray, 12), lb(160, 80, 'If ＋ 主語 ＋ 現在形, we will …', 13, C.ink, 'middle', true), ...cap('If it rains tomorrow, …')),
+  },
+  {
+    note: '❓that は何をする語でしょう。→ 「〜ということ」の意味で、think、know、hope、believe などの動詞の目的語になる節を作ります。I think that he is right.（彼は正しいと思う）。that のあとにも〈主語 ＋ 動詞〉が続きます。',
+    add: fresh(bx(5, 20, 40, 34, 'I', C.gray, FILL.gray, 13), bx(50, 20, 70, 34, 'think', C.red, FILL.red, 13), bx(125, 20, 60, 34, 'that', C.main, FILL.warm, 13), bx(190, 20, 120, 34, 'he is right.', C.blue, FILL.blue, 12), lb(100, 76, '動詞', 11, C.red, 'middle', true), lb(250, 76, '〜ということ（目的語）', 11, C.blue, 'middle', true), ...cap('think／know／hope ＋ that ＋ 節')),
+  },
+  {
+    note: '並べかえの手順は、①動詞（think など）を見つける、②その直後に that を置く、③that のあとに〈主語 ＋ 動詞〉を続ける、です。例題（ that / think / he / I / busy / is ）は I think that he is busy. 会話では that を省略した I think he is busy. も同じ意味です。',
+    add: fresh(bx(5, 14, 40, 32, 'I', C.gray, FILL.gray, 12), bx(50, 14, 70, 32, 'think', C.red, FILL.red, 12), bx(125, 14, 60, 32, 'that', C.main, FILL.warm, 12), bx(190, 14, 120, 32, 'he is busy.', C.blue, FILL.blue, 12), bx(15, 66, 290, 32, 'I think he is busy.（that 省略）', C.green, FILL.green, 12), lb(160, 122, '選択肢に that がなければ 省略した形', 11, C.ink, 'middle', true), ...cap('① 動詞 ② that ③ 主語＋動詞')),
+  },
+  {
+    note: '❓that には、ほかの that もあるのでしょうか。→ あります。指示代名詞の that（あれ、それ）は I like that. のように名詞の働きをします。動詞のすぐあとに来て、〈主語 ＋ 動詞〉が続く that が接続詞です。',
+    add: fresh(bx(10, 14, 300, 34, 'I think that he is right.（接続詞）', C.main, FILL.warm, 12), lb(160, 62, 'that のあとに 主語 ＋ 動詞', 11, C.main, 'middle', true), bx(10, 78, 300, 34, 'I like that.（あれ ＝ 指示代名詞）', C.blue, FILL.blue, 12), lb(160, 126, 'that のあとが 続かない', 11, C.blue, 'middle', true), ...cap('あとに節が続く that ＝ 接続詞')),
+  },
+  {
+    note: 'まとめです。接続詞のあとには〈主語 ＋ 動詞〉が続きます。when・if・because は節をつなぎ、文頭の節にはコンマ。if 節の中は未来でも現在形。that は think などの目的語になる節を作り、省略されることもあります。',
+    add: sum3('接続詞 ＋ 主語 ＋ 動詞 ／ 文頭の節にコンマ', 'if 節・when 節の中は 現在形', 'think ＋ that ＋ 節（that は省略もできる）', '接続詞の並べかえができる'),
+  },
+], '並べかえ：接続詞');
+
+// ───────── new20_j2_eigo_11 誤文訂正①：時制の誤り ─────────
+const wrong = (y: number, bad: string, good: string, why: string) => [
+  bx(10, y, 300, 28, '誤：' + bad, C.red, FILL.red, 11), bx(10, y + 34, 300, 28, '正：' + good, C.green, FILL.green, 11), lb(160, y + 76, why, 11, C.ink, 'middle', true),
+];
+const e211: DiagramFigure = show([
+  {
+    note: '誤文訂正は、正しい文をゼロから作るのではなく、どこがまちがっているかを見つける問題です。まず動詞（や be動詞）の形に注目します。時制のまちがいは見落としやすいので、型として覚えます。',
+    add: [bx(15, 20, 290, 34, '① 動詞（be動詞）の形を見る', C.blue, FILL.blue, 13), bx(15, 62, 290, 34, '② 主語と合っているか', C.main, FILL.warm, 13), bx(15, 104, 290, 34, '③ 時制に関係する下線から確認', C.green, FILL.green, 12), ...cap('まず動詞の形')],
+  },
+  {
+    note: '過去進行形の誤り①は、be動詞と主語の不一致です。誤：They was watching TV at that time. 正：They were watching TV at that time. ❓なぜ誤りなのでしょう。→ 主語の they は複数なので、was ではなく were を使います。',
+    add: fresh(...wrong(14, 'They was watching TV …', 'They were watching TV …', 'they は複数 → were'), ...cap('主語と be動詞の一致', C.red)),
+  },
+  {
+    note: '誤り②は、be動詞の抜け落ちです。誤：I studying English when you called. 正：I was studying English when you called. ❓なぜ誤りなのでしょう。→ 動詞の ing 形だけでは文が成り立たないからです。必ず be動詞とセットで使います。',
+    add: fresh(...wrong(14, 'I studying English …', 'I was studying English …', 'ing 形は be動詞とセット'), ...cap('be動詞を落とさない', C.red)),
+  },
+  {
+    note: '誤り③は、when 節の中まで進行形にしてしまう誤りです。誤：I was reading a book when he was coming into the room. 正：I was reading a book when he came into the room. 割りこんだ一瞬の動作は過去形、続いていた背景の動作だけが過去進行形です。',
+    add: fresh(...wrong(14, '… when he was coming …', '… when he came into the room.', '割りこんだ動作は 過去形'), ...cap('when 節の中は過去形', C.red)),
+  },
+  {
+    note: '見つけ方のコツです。下線部に ing 形の動詞があれば、その直前に be動詞があるかを確かめます。あれば、その be動詞が主語と一致しているかを確かめます。この2段階の確認で、過去進行形の誤りはほぼ見つかります。',
+    add: fresh(bx(15, 14, 290, 34, '① ing 形の直前に be動詞があるか', C.blue, FILL.blue, 12), ar(160, 52, 160, 66, C.main), bx(15, 70, 290, 34, '② その be動詞は 主語と一致しているか', C.blue, FILL.blue, 12), ...cap('2段階で確認する')),
+  },
+  {
+    note: '未来表現の誤り①は、be going to の be動詞の抜け落ちです。誤：She going to visit her aunt next week. 正：She is going to visit her aunt next week. going to の前には、必ず be動詞（am・is・are）が必要です。',
+    add: fresh(...wrong(14, 'She going to visit …', 'She is going to visit …', 'going to の前に be動詞'), ...cap('be going to は be動詞が必要', C.red)),
+  },
+  {
+    note: '誤り②は、will のあとに原形以外を置く誤りです。誤：He will comes tomorrow. 正：He will come tomorrow. ❓なぜ誤りなのでしょう。→ will のあとは主語が何であっても必ず動詞の原形で、3人称単数でも s は付けません。',
+    add: fresh(...wrong(14, 'He will comes tomorrow.', 'He will come tomorrow.', 'will のあとは 原形（s なし）'), ...cap('助動詞のあとは原形', C.red)),
+  },
+  {
+    note: '誤り③は、if 節の中で will を使う誤りです。誤：If it will be sunny tomorrow, we will go hiking. 正：If it is sunny tomorrow, we will go hiking. 時や条件を表す副詞節の中では、未来のことでも現在形を使います。',
+    add: fresh(...wrong(14, 'If it will be sunny …', 'If it is sunny …, we will go hiking.', '時・条件の節 ＝ 現在形'), ...cap('if 節・when 節に will を使わない', C.red)),
+  },
+  {
+    note: '誤り④は、be going to の be動詞と主語の不一致です。誤：I are going to join the club. 正：I am going to join the club. 主語 I には am を使います。are や is と混同しないようにします。',
+    add: fresh(...wrong(14, 'I are going to join …', 'I am going to join the club.', 'I には am'), ...cap('I → am', C.red)),
+  },
+  {
+    note: 'まとめです。誤文訂正は、動詞の形から見ます。ing 形には be動詞、be動詞は主語と一致、will のあとは原形、if・when 節の中は未来でも現在形、be going to には be動詞。この型で見つけます。',
+    add: sum3('ing 形 → be動詞があるか・主語と一致するか', 'will ＋ 原形 ／ be going to には be動詞', 'if・when 節の中は 現在形（will なし）', '時制の誤りを見つけられる'),
+  },
+], '誤文訂正：時制');
+
+// ───────── new20_j2_eigo_12 誤文訂正②：助動詞のあとの動詞の形 ─────────
+const e212: DiagramFigure = show([
+  {
+    note: '助動詞の問題での誤りは、意味の勘違いよりも、あとに続く動詞の形に集中します。助動詞（must、should、may、will、can など）のあとは、必ず動詞の原形です。この1点を、いちばん先に確かめます。',
+    add: [bx(10, 24, 100, 40, '助動詞\nmust／should', C.red, FILL.red, 11), ar(114, 44, 140, 44, C.main), bx(144, 24, 166, 40, '動詞の原形', C.green, FILL.green, 14), lb(160, 96, '直前に助動詞 → 原形かを最優先で確認', 12, C.ink, 'middle', true), ...cap('助動詞のあとは原形')],
+  },
+  {
+    note: '誤り①は、助動詞のあとに to を置く誤りです。誤：You should to see a doctor. 正：You should see a doctor. ❓なぜ誤りなのでしょう。→ should・must・may などの助動詞のあとは原形だけで、to は不要です。has to や want to と混同しやすいので注意します。',
+    add: fresh(...wrong(14, 'You should to see a doctor.', 'You should see a doctor.', 'should のあとに to は不要'), ...cap('助動詞 ＋ to は誤り', C.red)),
+  },
+  {
+    note: '誤り②は、助動詞のあとの動詞に s を付ける誤りです。誤：He must comes home early. 正：He must come home early. 助動詞の後ろの動詞は、主語が何であっても s を付けません。',
+    add: fresh(...wrong(14, 'He must comes home early.', 'He must come home early.', '主語が he でも s なし'), ...cap('助動詞のあとは s なし', C.red)),
+  },
+  {
+    note: '誤り③は、must not と don\'t have to の意味の取りちがえです。「開けてはいけない」のつもりで You don\'t have to open the door. と書くのは誤りです。don\'t have to は「〜する必要がない」。禁止は You must not open the door. です。',
+    add: fresh(bx(10, 14, 300, 30, "× You don't have to open the door.（禁止のつもり）", C.red, FILL.red, 10), bx(10, 50, 300, 30, '○ You must not open the door.（禁止）', C.green, FILL.green, 11), lb(160, 104, "don't have to ＝ 必要がない", 12, C.blue, 'middle', true), lb(160, 126, 'must not ＝ してはいけない', 12, C.red, 'middle', true), ...cap('意味が文脈と合うか')),
+  },
+  {
+    note: '見つけ方のコツです。下線部の直前に must、should、may などの助動詞があれば、その動詞が原形になっているかを最優先で確認します。to が入っていないか、s が付いていないか、の2点を見ます。',
+    add: fresh(bx(15, 14, 290, 34, '① 助動詞の直前か？', C.blue, FILL.blue, 13), bx(15, 56, 290, 34, '② to が入っていないか', C.main, FILL.warm, 13), bx(15, 98, 290, 34, '③ s が付いていないか', C.green, FILL.green, 13), ...cap('原形かどうかを見る')),
+  },
+  {
+    note: '誤り④は、have to の3人称単数です。誤：She have to finish her homework. 正：She has to finish her homework. have to は一般動詞と同じ扱いなので、主語が he・she・it のときは has to になります。',
+    add: fresh(...wrong(14, 'She have to finish …', 'She has to finish her homework.', '3人称単数 → has to'), ...cap('have to は has to になる', C.red)),
+  },
+  {
+    note: '誤り⑤は、疑問文・否定文で do／does を忘れる誤りです。誤：You have to go now? 正：Do you have to go now? 誤：She doesn\'t has to come. 正：She doesn\'t have to come. ❓なぜ doesn\'t のあとは have なのでしょう。→ do／does のあとの動詞は原形に戻るからです。',
+    add: fresh(bx(10, 10, 300, 26, '× You have to go now?', C.red, FILL.red, 11), bx(10, 40, 300, 26, '○ Do you have to go now?', C.green, FILL.green, 11), bx(10, 76, 300, 26, "× She doesn't has to come.", C.red, FILL.red, 11), bx(10, 106, 300, 26, "○ She doesn't have to come.", C.green, FILL.green, 11), ...cap('do／does のあとは 原形 have')),
+  },
+  {
+    note: '❓助動詞を2つ並べてもよいでしょうか。→ いけません。助動詞は1つの動詞に対して2つ並べて使えないからです。誤：She will can speak English well. 正：She will be able to speak English well. can の未来を表したいときは will be able to に言いかえます。',
+    add: fresh(...wrong(14, 'She will can speak English.', 'She will be able to speak English.', 'can の未来 → will be able to'), ...cap('助動詞は2つ並べない', C.red)),
+  },
+  {
+    note: 'まとめです。助動詞のあとは原形（to なし・s なし）。have to は一般動詞なので has to、疑問文・否定文は do／does。must not と don\'t have to は意味が逆。助動詞は2つ並べず、will be able to に言いかえます。',
+    add: sum3('助動詞のあとは原形（to なし・s なし）', 'have to ： has to ／ do・does ＋ have to', 'must not ≠ don\'t have to ／ will can は不可', '助動詞の誤りを見つけられる'),
+  },
+], '誤文訂正：助動詞');
+
 export const XF_KEJ_FIGURES: Record<string, DiagramFigure> = {
   'xf_new20_j1_eigo_03': e03,
   'xf_new20_j1_eigo_04': e04,
@@ -1186,6 +1317,9 @@ export const XF_KEJ_FIGURES: Record<string, DiagramFigure> = {
   'xf_new20_j2_eigo_07': e207,
   'xf_new20_j2_eigo_08': e208,
   'xf_new20_j2_eigo_09': e209,
+  'xf_new20_j2_eigo_10': e210,
+  'xf_new20_j2_eigo_11': e211,
+  'xf_new20_j2_eigo_12': e212,
 };
 
 export const XF_KEJ_SECTIONS: Record<string, string> = {
@@ -1216,4 +1350,7 @@ export const XF_KEJ_SECTIONS: Record<string, string> = {
   'new20_j2_eigo_07#0': 'xf_new20_j2_eigo_07',
   'new20_j2_eigo_08#0': 'xf_new20_j2_eigo_08',
   'new20_j2_eigo_09#0': 'xf_new20_j2_eigo_09',
+  'new20_j2_eigo_10#0': 'xf_new20_j2_eigo_10',
+  'new20_j2_eigo_11#0': 'xf_new20_j2_eigo_11',
+  'new20_j2_eigo_12#0': 'xf_new20_j2_eigo_12',
 };
