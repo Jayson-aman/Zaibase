@@ -506,7 +506,7 @@ const bar = (i: number, v: number, color: string = C.blue, fill: string = FILL.b
 const allBars = (hi?: number[], avgLine?: boolean): DiagramElement[] => [
   ln(14, 140, 306, 140, C.gray),
   ...DATA.flatMap((v, i) => (hi?.includes(i) ? bar(i, v, C.red, FILL.red) : bar(i, v))),
-  ...(avgLine ? [ln(14, 80, 306, 80, C.green, true), lb(308, 72, '平均50', 9, C.green, 'end', true)] : []),
+  ...(avgLine ? [ln(14, 80, 306, 80, C.green, true), lb(16, 72, '平均50', 10, C.green, 'start', true)] : []),
 ];
 const n10_07: DiagramFigure = show(
   [
@@ -520,7 +520,7 @@ const n10_07: DiagramFigure = show(
     },
     {
       note: '❓平均が正しいか、どう確かめるのでしょう。→ 平均より小さい記録の不足は、9＋5＋5＋2＝21。平均より大きい記録の余りは、2＋2＋2＋5＋10＝21。引く分と足す分が同じなので、50は、ちょうど平らにならした値です。',
-      add: [...mid(bx(15, 100, 135, 44, '平均より小さい\n9＋5＋5＋2＝21', C.blue, FILL.blue, 11), bx(170, 100, 135, 44, '平均より大きい\n2＋2＋2＋5＋10＝21', C.red, FILL.red, 11)), ...cap('不足21 ＝ 余り21 → 平均50は正しい', C.green)],
+      add: fresh(lb(160, 22, '平均50とのずれを、ぜんぶ書き出す', 12, C.ink, 'middle', true), bx(10, 40, 142, 60, '平均より小さい記録\n9＋5＋5＋2＝21', C.blue, FILL.blue, 11), bx(168, 40, 142, 60, '平均より大きい記録\n2＋2＋2＋5＋10＝21', C.red, FILL.red, 11), lb(160, 125, '41・45・45・48 と 52・52・52・55・60', 10, C.gray), ...cap('不足21 ＝ 余り21 → 平均50は正しい', C.green)),
     },
     {
       note: '❓中央値（ちゅうおうち）は何でしょう。→ 小さい順に並べたときの、真ん中の人の記録です。9人なら5番目。41・45・45・48・［52］・52・52・55・60 で、中央値は52回。❓なぜ中央値が必要なのでしょう。→ 平均は、1人だけ極端な記録の人がいると引っぱられますが、真ん中の人は動かないからです。',
@@ -599,7 +599,7 @@ const n10_08: DiagramFigure = show(
     },
     {
       note: '❓グラフの傾き（かたむき）が速さになるのは、なぜでしょう。→ 傾きとは、「横に1進んだとき、縦にどれだけ上がるか」です。横に1時間進むと、縦に6km上がります。「横1あたりの縦の増え方」は「1時間あたりの道のり」そのもの。だから傾きが速さです。',
-      add: [ln(GRX(0), GRY(0), GRX(1), GRY(0), C.blue, true, 2), ln(GRX(1), GRY(0), GRX(1), GRY(6), C.red, true, 2), lb(GRX(0.5), 128, '横1時間', 10, C.blue, 'middle', true), lb(GRX(1) + 6, GRY(3), '縦6km', 10, C.red, 'start', true), ...cap('横1あたり縦6km ＝ 速さ時速6km', C.red)],
+      add: [ln(GRX(0), GRY(0), GRX(1), GRY(0), C.blue, true, 2), ln(GRX(1), GRY(0), GRX(1), GRY(6), C.red, true, 2), lb(GRX(0.5) + 14, 134, '横1', 10, C.blue, 'middle', true), lb(GRX(1) + 6, GRY(3), '縦6km', 10, C.red, 'start', true), ...cap('横1あたり縦6km ＝ 速さ時速6km', C.red)],
     },
     {
       note: '❓傾きが急な直線は、どちらが速いのでしょう。時速9kmの直線を重ねて描きます。同じ1時間で、縦に9km上がるので、傾きが急です。急な直線ほど、同じ時間でたくさん進んでいます。つまり速いのです。',
@@ -642,15 +642,15 @@ const n10_09: DiagramFigure = show(
     },
     {
       note: '❓では、高さ10cmの角柱には何個入るのでしょう。→ その板を10段積むので、36個×10段＝360個ぶん。だから体積は360cm³です。「底面積×高さ」とは、「1段に入る個数」×「段の数」のことです。',
-      add: fresh(...stackBoxes(40, 100, 10, C.main, FILL.warm), lb(90, 18, '1段36個', 10, C.blue, 'middle', true), bx(170, 40, 140, 56, '36個 × 10段\n＝ 360個ぶん\n＝ 360cm³', C.green, FILL.green, 12), ...cap('体積 ＝ 底面積 × 高さ', C.green)),
+      add: fresh(...stackBoxes(40, 100, 10, C.main, FILL.warm), lb(90, 13, '1段36個', 10, C.blue, 'middle', true), bx(170, 40, 140, 56, '36個 × 10段\n＝ 360個ぶん\n＝ 360cm³', C.green, FILL.green, 12), ...cap('体積 ＝ 底面積 × 高さ', C.green)),
     },
     {
       note: '❓円柱でも同じでしょうか。→ 同じです。底面が円でも、板を積み重ねるのは同じ考え方です。底面の半径が5cmなら、底面積は5×5×3.14＝78.5cm²。高さ8cmだから、78.5×8＝628cm³。底面が四角でも円でも、公式は同じ「底面積×高さ」です。',
-      add: fresh(ci(70, 76, 40, '底面積\n78.5cm²', C.blue, FILL.blue, 11), ...stackBoxes(190, 90, 8, C.blue, FILL.blue), lb(240, 18, '高さ8cm', 10, C.ink, 'middle', true), ...cap('78.5 × 8 ＝ 628cm³', C.blue)),
+      add: fresh(ci(70, 76, 40, '底面積\n78.5cm²', C.blue, FILL.blue, 11), ...stackBoxes(190, 90, 8, C.blue, FILL.blue), lb(235, 13, '高さ8cm', 10, C.ink, 'middle', true), ...cap('78.5 × 8 ＝ 628cm³', C.blue)),
     },
     {
       note: '次は側面積（そくめんせき）です。❓なぜ「底面の周りの長さ×高さ」になるのでしょう。缶のラベルをはがして広げると、長方形になります。横の長さは、缶の周り（円周）。たての長さは、缶の高さです。だから 面積は 周り×高さ。底面の半径5cmの円周は5×2×3.14＝31.4cm、高さ8cmなので、31.4×8＝251.2cm²。',
-      add: fresh(bx(30, 45, 50, 40, 'かん', C.main, FILL.warm, 12), ar(88, 65, 128, 65, C.gray), bx(135, 45, 157, 40, '側面（長方形）', C.green, FILL.green, 12), lb(213, 98, '横 ＝ 円周 31.4cm', 11, C.green, 'middle', true), lb(130, 65, '8cm', 11, C.ink, 'end'), ...cap('31.4 × 8 ＝ 251.2cm²', C.green)),
+      add: fresh(bx(30, 45, 50, 40, 'かん', C.main, FILL.warm, 12), ar(88, 65, 128, 65, C.gray), bx(135, 45, 157, 40, '側面（長方形）', C.green, FILL.green, 12), lb(213, 98, '横 ＝ 円周 31.4cm', 11, C.green, 'middle', true), lb(296, 65, '8cm', 11, C.ink, 'start'), ...cap('31.4 × 8 ＝ 251.2cm²', C.green)),
     },
     {
       note: '角柱でも同じです。底面が1辺6cmの正方形で高さ10cmの四角柱。4つの側面（そくめん）をつなげて広げると、1まいの長方形になります。横は6×4＝24cm（底面の周り）、たては10cm（高さ）。24×10＝240cm²。1まいは6×10＝60cm²で、4まいで240cm²です。',
