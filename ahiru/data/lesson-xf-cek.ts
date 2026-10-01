@@ -511,7 +511,7 @@ const u13: DiagramFigure = show([
   },
   {
     note: `別（わか）れるときのあいさつです。Goodbye.（さようなら）・Bye.（じゃあね）・See you.（またね）・See you tomorrow.（また明日）・Take care.（気をつけてね）。`,
-    add: fresh(T('別れのあいさつ'), ...tab([['Goodbye.', 'さようなら'], ['Bye.', 'じゃあね'], ['See you.', 'またね'], ['See you tomorrow.', 'また明日'], ['Take care.', '気をつけてね']], 34, [150, 140], { h: 28, color: C.red, fill: FILL.red, size: 12 }), K('別れるときの言葉')),
+    add: fresh(T('別れのあいさつ'), ...tab([['Goodbye.', 'さようなら'], ['Bye.', 'じゃあね'], ['See you.', 'またね'], ['See you tomorrow.', 'また明日'], ['Take care.', '気をつけてね']], 34, [150, 140], { h: 28, head: false, color: C.red, fill: FILL.red, size: 12 }), K('別れるときの言葉')),
   },
   {
     note: `会話（かいわ）の流（なが）れです。時間のあいさつ → 調子をたずねる → 別れのあいさつ。A: Good morning! B: Good morning! How are you? A: I'm fine, thank you. And you? B: I'm good, thanks. A: See you later! B: Bye!`,
@@ -551,7 +551,7 @@ const u14: DiagramFigure = show([
   },
   {
     note: `❓自己紹介（じこしょうかい）はどんな順番（じゅんばん）で組（く）み立てる？→ あいさつ → 名前 → 年れい → 出身 → 好きなもの → Nice to meet you. の順です。Nice to meet you.（はじめまして）は初めて会う相手（あいて）にだけ使い、2回目からは Nice to see you again. にします。`,
-    add: fresh(T('自己紹介の型'), ...tab([['①', 'Hello.'], ['②', 'My name is Yuki.'], ['③', `I'm ten years old.`], ['④', `I'm from Osaka.`], ['⑤', 'I like soccer and dogs.'], ['⑥', 'Nice to meet you.']], 28, [36, 220], { h: 26, color: C.green, fill: FILL.green, size: 12 }), K('はじめて会う人に Nice to meet you.')),
+    add: fresh(T('自己紹介の型'), ...tab([['①', 'Hello.'], ['②', 'My name is Yuki.'], ['③', `I'm ten years old.`], ['④', `I'm from Osaka.`], ['⑤', 'I like soccer and dogs.'], ['⑥', 'Nice to meet you.']], 28, [36, 220], { h: 26, head: false, color: C.green, fill: FILL.green, size: 12 }), K('はじめて会う人に Nice to meet you.')),
   },
   {
     note: `まとめです。①名前は I'm 〜. か My name is 〜. のどちらか一つ。②from は出身、live in は今の住まい。③最後は Nice to meet you.`,
@@ -567,15 +567,15 @@ const u15: DiagramFigure = show([
   },
   {
     note: `❓理由（りゆう）も伝（つた）えたいときは？→ because（〜だから）を使います。I'm happy because it's my birthday today.（今日は誕生日（たんじょうび）なのでうれしい）。「気持ち」と「理由」を1つの文で言えます。`,
-    add: fresh(T('気持ち ＋ because ＋ 理由'), B(10, 40, 130, `I'm happy`, C.blue, FILL.blue, 40, 14), B(150, 40, 70, 'because', C.red, FILL.red, 40, 12), B(228, 40, 84, `it's my birthday today.`, C.green, FILL.green, 40, 8), lb(75, 96, '気持ち', 12, C.blue, 'middle', true), lb(185, 96, 'だから', 12, C.red, 'middle', true), lb(270, 96, '理由', 12, C.green, 'middle', true), K('1つの文に 気持ちと理由')),
+    add: fresh(T('気持ち ＋ because ＋ 理由'), B(10, 34, 300, `I'm happy`, C.blue, FILL.blue, 32, 15), lb(262, 50, '気持ち', 11, C.blue, 'middle', true), B(110, 72, 100, 'because', C.red, FILL.red, 28, 13), lb(262, 86, 'だから', 11, C.red, 'middle', true), B(10, 108, 300, `it's my birthday today.`, C.green, FILL.green, 32, 15), lb(262, 124, '理由', 11, C.green, 'middle', true), K('1つの文に 気持ちと理由')),
   },
   {
     note: `ほかの例（れい）です。I'm tired because I ran a lot.（たくさん走（はし）ったので疲れています）。ran は run（走る）の過去形（かこけい）です。`,
-    add: fresh(T('例 その1'), B(10, 40, 130, `I'm tired`, C.blue, FILL.blue, 40, 14), B(150, 40, 70, 'because', C.red, FILL.red, 40, 12), B(228, 40, 84, 'I ran a lot.', C.green, FILL.green, 40, 11), lb(160, 110, 'run（走る）→ ran（走った）', 13, C.ink, 'middle', true), K('疲れている理由')),
+    add: fresh(T('例 その1'), B(10, 34, 300, `I'm tired`, C.blue, FILL.blue, 32, 15), B(110, 72, 100, 'because', C.red, FILL.red, 28, 13), B(10, 108, 300, 'I ran a lot.', C.green, FILL.green, 32, 15), lb(160, 160, 'run（走る）→ ran（走った）', 13, C.ink, 'middle', true), K('疲れている理由')),
   },
   {
     note: `もう一つ。I'm hungry because I didn't eat breakfast.（朝ごはんを食（た）べなかったのでお腹（なか）がすいています）。didn't は did not の短縮形（たんしゅくけい）で「〜しなかった」の意味（いみ）です。`,
-    add: fresh(T('例 その2'), B(10, 40, 120, `I'm hungry`, C.blue, FILL.blue, 40, 13), B(138, 40, 70, 'because', C.red, FILL.red, 40, 12), B(216, 40, 96, `I didn't eat breakfast.`, C.green, FILL.green, 40, 8), lb(160, 110, `didn't ＝ did not（〜しなかった）`, 13, C.ink, 'middle', true), K('お腹がすいている理由')),
+    add: fresh(T('例 その2'), B(10, 34, 300, `I'm hungry`, C.blue, FILL.blue, 32, 15), B(110, 72, 100, 'because', C.red, FILL.red, 28, 13), B(10, 108, 300, `I didn't eat breakfast.`, C.green, FILL.green, 32, 15), lb(160, 160, `didn't ＝ did not（〜しなかった）`, 13, C.ink, 'middle', true), K('お腹がすいている理由')),
   },
   {
     note: `❓会話（かいわ）では？→ A: How are you today? B: I'm a little tired. A: Why?（どうして？）B: Because I practiced soccer this morning.（今朝（けさ）サッカーを練習（れんしゅう）したから）。理由だけを Because 〜. と答えることもできます。`,

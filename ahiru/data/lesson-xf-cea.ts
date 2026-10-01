@@ -1,7 +1,7 @@
 // 中学受験 英語の単元に、動く図解スライドを1つずつ（TAG=cea）。
 // 「なぜ？」の連鎖で7枚以上。上半分に図、下の帯（band）にそのスライドのひとこと。
 import type { DiagramFigure, DiagramElement } from './figures';
-import { C, FILL, bx, lb, ar, ln, ci, show, flow, band, fresh, cover } from './diagram-kit';
+import { C, FILL, bx, lb, ar, ln, ci, show, flow, stack, band, fresh, cover } from './diagram-kit';
 
 type E = DiagramElement;
 const cap = (t: string, color: string = C.ink, size = 12) => band(150, lb(160, 190, t, size, color, 'middle', true));
@@ -77,8 +77,8 @@ const u01: DiagramFigure = show([
   {
     note: '❓SVCの C（補語）とは何でしょう。→ 主語の様子や正体を説明する言葉で、S＝C（主語＝補語）の関係になります。She is kind.（彼女は親切だ）では she＝kind。He became a doctor.（彼は医者になった）では he＝a doctor です。',
     add: fresh(
-      ...sent([['She', 'b', 'S'], ['is', 'r', 'V'], ['kind', 'p', 'C']], 16, 30, 14), lb(160, 66, 'She ＝ kind（彼女＝親切）', 12, C.purple, 'middle', true),
-      ...sent([['He', 'b', 'S'], ['became', 'r', 'V'], ['a doctor', 'p', 'C']], 88, 30, 14), lb(160, 138, 'He ＝ a doctor（彼＝医者）', 12, C.purple, 'middle', true),
+      ...sent([['She', 'b'], ['is', 'r'], ['kind', 'p']], 16, 30, 14), lb(160, 62, 'She ＝ kind（彼女＝親切）', 12, C.purple, 'middle', true),
+      ...sent([['He', 'b'], ['became', 'r'], ['a doctor', 'p']], 88, 30, 14), lb(160, 134, 'He ＝ a doctor（彼＝医者）', 12, C.purple, 'middle', true),
       ...cap('SVC は S＝C になる', C.purple),
     ),
   },
@@ -150,9 +150,9 @@ const u02: DiagramFigure = show([
   {
     note: '❓では2回目に出るときは、なぜ the なのでしょう。→ もう話に出たので、どの犬か二人とも分かっているからです。I have a dog. The dog is very cute.（その犬はとてもかわいい）。最初は a、2回目からは the に変わります。',
     add: fresh(
-      ...sent([['I have a dog.', 'b', '1回目 → a']], 14, 30, 14, 30, 290),
-      ...sent([['The dog is very cute.', 'r', '2回目 → the']], 74, 30, 14, 30, 290),
-      ar(160, 46, 160, 72, C.main), lb(214, 60, 'もう分かる', 11, C.main, 'middle', true),
+      ...sent([['I have a dog.', 'b']], 10, 30, 14, 30, 290), tag(30, 46, 100, '1回目 → a', 'b', 11),
+      ...sent([['The dog is very cute.', 'r']], 86, 30, 14, 30, 290), tag(30, 122, 100, '2回目 → the', 'r', 11),
+      ar(240, 48, 240, 84, C.main), lb(246, 66, 'もう分かる', 11, C.main, 'start', true),
       ...cap('同じ犬だから the', C.red),
     ),
   },
@@ -257,8 +257,8 @@ const u03: DiagramFigure = show([
   {
     note: '例を見ましょう。He studied hard. Therefore, he passed the exam.（彼は熱心に勉強した。だから試験に合格した）。Therefore の前が原因、うしろが結果です。Many animals hibernate. For example, bears sleep through winter.（多くの動物は冬眠する。たとえば、クマは冬のあいだ眠り続ける）では、うしろが具体例です。',
     add: fresh(
-      bx(10, 12, 128, 30, 'He studied hard.', C.blue, FILL.blue, 12), ar(140, 27, 168, 27, C.main), bx(170, 12, 140, 30, 'he passed the exam.', C.green, FILL.green, 11), lb(160, 56, 'Therefore ＝ 原因 → 結果', 12, C.main, 'middle', true),
-      bx(10, 78, 128, 30, 'Many animals hibernate.', C.blue, FILL.blue, 10), ar(140, 93, 168, 93, C.main), bx(170, 78, 140, 30, 'bears sleep through winter.', C.green, FILL.green, 10), lb(160, 122, 'For example ＝ 具体例', 12, C.main, 'middle', true),
+      bx(4, 12, 150, 30, 'He studied hard.', C.blue, FILL.blue, 12), ar(156, 27, 166, 27, C.main), bx(168, 12, 148, 30, 'he passed the exam.', C.green, FILL.green, 12), lb(160, 56, 'Therefore ＝ 原因 → 結果', 12, C.main, 'middle', true),
+      bx(4, 78, 150, 30, 'Many animals hibernate.', C.blue, FILL.blue, 11), ar(156, 93, 166, 93, C.main), bx(168, 78, 148, 30, 'bears sleep through winter.', C.green, FILL.green, 11), lb(160, 122, 'For example ＝ 具体例', 12, C.main, 'middle', true),
       ...cap('合図の前後の関係を見る', C.main),
     ),
   },
@@ -370,9 +370,9 @@ const u05: DiagramFigure = show([
   {
     note: '❓なぜ「名詞的」と呼ぶのでしょう。→ to study English のかたまり全体が「英語を勉強すること」という名詞と同じ働きをして、主語（しゅご）・目的語（もくてきご）・補語（ほご）になれるからです。',
     add: fresh(
-      ...sent([['To study English', 'b'], ['is', 'y'], ['important.', 'y']], 10, 28, 12, 10, 310), lb(100, 52, '主語（〜することは）', 10, C.blue, 'middle', true),
-      ...sent([['I want', 'y'], ['to become a doctor.', 'b']], 66, 28, 12, 10, 310), lb(220, 108, '目的語（〜することを）', 10, C.blue, 'middle', true),
-      ...sent([['My dream is', 'y'], ['to travel the world.', 'b']], 118, 24, 12, 10, 310),
+      ...sent([['To study English', 'b', '主語（〜することは）'], ['is', 'y'], ['important.', 'y']], 6, 26, 12, 10, 310),
+      ...sent([['I want', 'y'], ['to become a doctor.', 'b', '目的語（〜することを）']], 52, 26, 12, 10, 310),
+      ...sent([['My dream is', 'y'], ['to travel the world.', 'b', '補語（〜すること）']], 98, 26, 12, 10, 310),
       ...cap('かたまり全体が名詞のはたらき', C.blue),
     ),
   },
@@ -406,7 +406,7 @@ const u05: DiagramFigure = show([
     note: '❓too 〜 to ... はなぜ「〜すぎて…できない」なのでしょう。→ too は「ちょうどよい限度を過ぎている」という意味だからです。This box is too heavy to carry. は、重さが運べる限度を過ぎているので「運べない」。He is too young to drive a car. も同じで、若さが運転できる年れいに届いていません。',
     add: fresh(
       bx(20, 30, 250, 26, 'heavy（重い）', C.red, FILL.red, 12), ln(190, 20, 190, 70, C.gray, true, 2), lb(190, 84, '運べる限度', 11, C.gray, 'middle', true),
-      lb(230, 46, '← 限度をこえた', 10, C.red, 'middle', true),
+      lb(240, 68, '↑ 限度をこえた', 10, C.red, 'middle', true),
       ...sent([['This box is', 'y'], ['too heavy', 'r'], ['to carry.', 'y']], 100, 28, 12, 10, 310),
       ...cap('too 〜 to ... ＝ 〜すぎて…できない', C.red),
     ),
@@ -474,8 +474,8 @@ const u06: DiagramFigure = show([
     note: '❓では「いいですよ」は、どう答えるのでしょう。→ 「いやではない」と、否定（ひてい）の形で答えます。Of course not.（もちろんいやではありません）、Not at all.（ぜんぜん）、Certainly.（もちろん）が「いいですよ」。ことわるときは I’m sorry, but I’m busy now.（すみません、いま忙しいです）です。',
     add: fresh(
       ...bub(10, 22, 220, 'A', 'Would you mind closing the window?', 'b'),
-      bx(20, 66, 280, 22, 'いいよ → Of course not. / Not at all. / Certainly.', C.green, FILL.green, 11),
-      bx(20, 96, 280, 22, "ことわる → I'm sorry, but I'm busy now.", C.red, FILL.red, 11),
+      bx(20, 62, 280, 38, 'いいよ → Of course not.\nNot at all. / Certainly.', C.green, FILL.green, 12),
+      bx(20, 106, 280, 38, "ことわる → I'm sorry, but\nI'm busy now.", C.red, FILL.red, 12),
       ...cap('「いいよ」は not で答える！', C.green),
     ),
   },
@@ -503,7 +503,7 @@ const u06: DiagramFigure = show([
     note: '道を聞くときは Excuse me. Could you tell me the way to the station?（駅への道を教えてもらえますか）。答えは Go straight and turn left at the first corner.（まっすぐ行って、最初の角を左に曲がる）、It’s on your right.（右手にあります）の流れです。',
     add: fresh(
       bx(10, 10, 300, 28, "Could you tell me the way to the station?", C.green, FILL.green, 11),
-      ...flow(['Go straight.\nまっすぐ', 'Turn left at the\nfirst corner.', "It's on your right.\n右手にあります"], 56, { h: 64, size: 10, color: C.blue, fill: FILL.blue, gap: 14 }).flat(),
+      ...stack(['Go straight.（まっすぐ）', 'Turn left at the first corner.（最初の角を左）', "It's on your right.（右手にあります）"], 20, 280, 46, { h: 26, gap: 12, size: 12, color: C.blue, fill: FILL.blue }).flat(),
       ...cap('道案内は 3つの動きを順に', C.blue),
     ),
   },
@@ -673,6 +673,480 @@ const u08: DiagramFigure = show([
   },
 ], '一般動詞：三人称単数の s');
 
+// ───────── eigo_09_gimonshi how の使い方 ─────────
+const u09: DiagramFigure = show([
+  {
+    note: 'how は「どうやって」だけでなく、うしろに形容詞（けいようし）や副詞（ふくし）をつけて「どのくらい〜？」とたずねる便利な疑問詞（ぎもんし）です。how 単独、how many、how much、how old、how long など、順に見ていきましょう。',
+    add: [
+      bx(10, 10, 300, 28, 'how ＝ どうやって（方法・様子）', C.blue, FILL.blue, 13),
+      bx(10, 46, 300, 28, 'how ＋ 形容詞 ＝ どのくらい〜？（程度）', C.red, FILL.red, 13),
+      ...rowb(['how many', 'how much', 'how old', 'how long'], 84, 30, 'm', 11, 10, 310, 5),
+      ...cap('うしろの言葉しだいで、たずねる中身が変わる'),
+    ],
+  },
+  {
+    note: 'まず how 単独です。方法は How do you go to school?（どうやって学校へ行きますか）— By bus.。状態は How are you?（元気ですか）— I’m fine, thank you.。様子は How is the weather?（天気はどうですか）— It’s sunny.。',
+    add: fresh(
+      ...[['How do you go to school?', 'By bus.', '方法'], ['How are you?', "I'm fine, thank you.", '状態'], ['How is the weather?', "It's sunny.", '様子']].flatMap(([q, a, t], i) => [
+        tag(8, 12 + i * 42, 44, t, 'm', 11), bx(56, 8 + i * 42, 140, 28, q, C.blue, FILL.blue, 11), ar(198, 22 + i * 42, 214, 22 + i * 42, C.main), bx(216, 8 + i * 42, 96, 28, a, C.green, FILL.green, 10),
+      ]),
+      ...cap('how 単独は「どうやって・どんな具合」', C.blue),
+    ),
+  },
+  {
+    note: '❓how many のうしろの名詞は、なぜ複数形（ふくすうけい）なのでしょう。→ many は「たくさんの」という意味で、2つ以上の数えられるものに使うからです。How many books do you have?（本を何冊持っていますか）— I have ten.。books のように s がつきます。',
+    add: fresh(
+      ...sent([['How many', 'r'], ['books', 'b'], ['do you have?', 'y']], 14, 30, 14, 10, 310),
+      ...Array.from({ length: 10 }, (_, i) => bx(30 + i * 26, 76, 20, 26, '', C.blue, FILL.blue)),
+      lb(160, 120, 'I have ten.（10冊）', 13, C.green, 'middle', true),
+      ...cap('数えられる名詞の複数形 → many', C.red),
+    ),
+  },
+  {
+    note: '❓では how much はいつ使うのでしょう。→ 数えられないもの（水・お金など）の量をたずねるときと、値段をたずねるときです。How much water do you need?（水はどれくらい必要ですか）。How much is this bag?（このかばんはいくらですか）— It’s 2,000 yen.。数えられるなら many、数えられないなら much です。',
+    add: fresh(
+      bx(10, 10, 148, 50, 'How many ＋ 複数形\n数えられる（本・人）', C.blue, FILL.blue, 11), bx(162, 10, 148, 50, 'How much ＋ 名詞\n数えられない（水・お金）', C.red, FILL.red, 11),
+      ...sent([['How much', 'r'], ['is this bag?', 'y']], 76, 28, 13, 10, 200), ar(204, 90, 220, 90, C.main), bx(222, 76, 88, 28, "It's 2,000 yen.", C.green, FILL.green, 10),
+      lb(160, 128, '値段もたずねられる', 12, C.red, 'middle', true),
+      ...cap('数えられる → many、数えられない → much', C.red),
+    ),
+  },
+  {
+    note: '年れいは How old are you?（何歳ですか）— I’m twelve (years old).。物の古さにも使えて、How old is this temple?（この寺はできて何年ですか）とたずねられます。old は「年をとった」ではなく、ここでは「どのくらいの年れいか」の程度（ていど）を表します。',
+    add: fresh(
+      ...sent([['How old', 'r'], ['are you?', 'y']], 14, 30, 14, 10, 200), ar(204, 29, 220, 29, C.main), bx(222, 14, 88, 30, "I'm twelve.", C.green, FILL.green, 12),
+      ...sent([['How old', 'r'], ['is this temple?', 'y']], 70, 30, 14, 10, 230), lb(160, 118, 'どのくらい古いか（年れい）をたずねる', 12, C.ink, 'middle', true),
+      ...cap('how old ＝ 年れい・古さ', C.red),
+    ),
+  },
+  {
+    note: '❓ほかの how ＋ 形容詞は、どうなるのでしょう。→ すべて同じ作りで、形容詞の「どのくらい」をたずねます。how long（長さ・期間）、how tall（身長）、how far（距離（きょり））、how often（回数・頻度（ひんど））。How often do you play tennis? — Twice a week.（週に2回）。',
+    add: fresh(
+      ...grid([['how ＋ ', 'たずねること', '答えの例'], ['long', '長さ・期間', 'Two weeks.'], ['tall', '身長', "I'm 150 cm."], ['far', '距離', 'About 1 km.'], ['often', '頻度', 'Twice a week.']], 10, 8, [60, 100, 130], 24, ['r', 'y', 'g'], 12),
+      ...cap('「how ＋ 形容詞」＝ どのくらい〜？', C.red),
+    ),
+  },
+  {
+    note: '共通のルールをまとめると、how のあとに知りたい言葉（形容詞・副詞）を置けば、その「どのくらい」をたずねる文になります。そのあとはふつうの疑問文の順（do you 〜 / are you 〜 / is it 〜）です。',
+    add: fresh(
+      bx(20, 14, 80, 36, 'How', C.blue, FILL.blue, 16), lb(110, 32, '＋', 16, C.ink), bx(124, 14, 100, 36, '形容詞・副詞', C.red, FILL.red, 13), lb(234, 32, '＋', 16, C.ink), bx(246, 14, 64, 36, 'ふつうの\n疑問文', C.green, FILL.green, 10),
+      ...sent([['How', 'b'], ['tall', 'r'], ['are you?', 'g']], 82, 30, 14, 20, 300), lb(160, 128, 'どのくらい 背が高い あなたは？ → 身長をたずねる', 11, C.ink, 'middle', true),
+      ...cap('知りたい言葉を how のうしろに置く', C.main),
+    ),
+  },
+  {
+    note: 'まとめです。方法・様子は how だけ。数えられるものの数は how many、数えられない量と値段は how much。年れいは how old。長さ・身長・距離・頻度は how long / tall / far / often。「how ＋ 形容詞で、どのくらい〜？」と覚えます。',
+    add: fresh(
+      bx(15, 10, 290, 24, 'how ＝ どうやって・どんな具合', C.blue, FILL.blue, 12),
+      bx(15, 38, 290, 24, 'how many ＋ 複数形 ／ how much ＋ 数えられない・値段', C.red, FILL.red, 11),
+      bx(15, 66, 290, 24, 'how old（年れい）', C.green, FILL.green, 12),
+      bx(15, 94, 290, 24, 'how long・tall・far・often（長さ・身長・距離・頻度）', C.purple, FILL.purple, 11),
+      ...cap('how ＋ 形容詞 ＝ どのくらい〜？', C.main),
+    ),
+  },
+], 'how：うしろの言葉で「どのくらい」をたずねる');
+
+// ───────── eigo_10_can_meirei can ─────────
+const u10: DiagramFigure = show([
+  {
+    note: 'can は「〜できる」という意味で、動詞（どうし）を助ける言葉なので助動詞（じょどうし）といいます。形は「主語（しゅご）＋ can ＋ 動詞のもとの形」です。I can swim.（私は泳げる）、Birds can fly.（鳥は飛べる）。',
+    add: [
+      ...sent([['I', 'b'], ['can', 'r'], ['swim.', 'g']], 20, 32, 15, 20, 300),
+      ...sent([['Birds', 'b'], ['can', 'r'], ['fly.', 'g']], 76, 32, 15, 20, 300),
+      lb(160, 128, '主語 ＋ can ＋ 動詞のもとの形', 13, C.ink, 'middle', true),
+      ...cap('can ＝ 〜できる'),
+    ],
+  },
+  {
+    note: '❓she が主語でも、なぜ can のあとの動詞に s をつけないのでしょう。→ 人や時を表す役目は can が引き受けているので、あとの動詞は変化しなくてよいからです。She speaks English. は、can が入ると She can speak English. になり、speaks の s は消えます。',
+    add: fresh(
+      ...sent([['She', 'b'], ['speaks', 'y'], ['English.', 'g']], 14, 30, 14, 10, 310),
+      ar(160, 48, 160, 66, C.main),
+      ...sent([['She', 'b'], ['can', 'r'], ['speak', 'y'], ['English.', 'g']], 70, 30, 14, 10, 310),
+      lb(160, 118, 'can があると s は不要', 13, C.red, 'middle', true),
+      ...cap('× She can speaks　○ She can speak', C.red),
+    ),
+  },
+  {
+    note: '否定文（ひていぶん）は can のあとに not をつけます。can not は1語にして cannot、短くすると can’t です。I can’t ride a bike.（私は自転車に乗れない）。He can’t cook.（彼は料理ができない）。ここでもあとの動詞はもとの形です。',
+    add: fresh(
+      ...sent([['I', 'b'], ['can’t', 'r'], ['ride', 'y'], ['a bike.', 'g']], 20, 32, 14, 10, 310),
+      lb(160, 74, 'can ＋ not ＝ cannot ＝ can’t', 13, C.red, 'middle', true),
+      ...sent([['He', 'b'], ['can’t', 'r'], ['cook.', 'y']], 98, 32, 14, 20, 300),
+      ...cap('ないときは not を can のうしろに', C.red),
+    ),
+  },
+  {
+    note: '疑問文（ぎもんぶん）は can を文の最初に出します。Can you swim?（泳げますか）。答えは Yes, I can. か No, I can’t.。Can you play the guitar? も同じ形で、答えにも can を使います。',
+    add: fresh(
+      ...sent([['Can', 'r'], ['you', 'b'], ['swim?', 'g']], 14, 32, 15, 20, 300),
+      ar(160, 52, 160, 68, C.main),
+      bx(30, 70, 120, 30, 'Yes, I can.', C.green, FILL.green, 14), bx(170, 70, 120, 30, "No, I can't.", C.red, FILL.red, 14),
+      lb(160, 124, 'can を前に出す → 答えも can で', 12, C.ink, 'middle', true),
+      ...cap('Can ＋ 主語 ＋ 動詞のもとの形 ?', C.blue),
+    ),
+  },
+  {
+    note: 'can はほかの言い方もあります。be able to（〜することができる）です。I can swim. = I am able to swim. と同じ意味です。形は be動詞 ＋ able to ＋ 動詞のもとの形です。',
+    add: fresh(
+      ...sent([['I', 'b'], ['can', 'r'], ['swim.', 'g']], 20, 30, 14, 10, 310),
+      lb(160, 66, '＝（同じ意味）', 13, C.main, 'middle', true),
+      ...sent([['I', 'b'], ['am able to', 'r'], ['swim.', 'g']], 82, 30, 14, 10, 310),
+      ...cap('can ＝ be able to', C.main),
+    ),
+  },
+  {
+    note: '❓では、未来のことを言うとき、なぜ will can ではなく will be able to なのでしょう。→ 助動詞は2つ並べられないからです。will も can も助動詞なので、can のかわりに be able to を使い、あとは be のもとの形にします。I will be able to swim soon.（もうすぐ泳げるようになる）。',
+    add: fresh(
+      bx(20, 16, 130, 30, 'will can swim', C.red, FILL.red, 14), lb(85, 60, '× 助動詞が2つ', 12, C.red, 'middle', true),
+      ...sent([['I', 'b'], ['will', 'r'], ['be able to', 'g'], ['swim soon.', 'y']], 86, 32, 13, 10, 310),
+      lb(160, 138, '○ will ＋ be able to ＋ 動詞のもとの形', 12, C.green, 'middle', true),
+      ...cap('助動詞は2つ並べられない', C.red),
+    ),
+  },
+  {
+    note: 'will・must・should・may も、can と同じ仲間（助動詞）です。きまりは3つ。①あとの動詞はいつももとの形。②助動詞は2つ並べない。③否定は助動詞のうしろに not、疑問は助動詞を前に出す。You must do your homework.（宿題をしなければならない）。',
+    add: fresh(
+      ...rowb(['can', 'will', 'must', 'should', 'may'], 10, 28, 'r', 12, 10, 310, 6),
+      bx(15, 54, 290, 24, '① あとの動詞はもとの形（s なし）', C.blue, FILL.blue, 12),
+      bx(15, 82, 290, 24, '② 助動詞は2つ並べない', C.green, FILL.green, 12),
+      bx(15, 110, 290, 24, '③ 否定は not、疑問は前に出す', C.purple, FILL.purple, 12),
+      ...cap('助動詞の3つのきまり', C.main),
+    ),
+  },
+  {
+    note: 'まとめです。can ＝ 〜できる。あとの動詞はもとの形で s なし。否定は can’t（cannot）、疑問は Can you 〜?。未来や完了では be able to を使う。助動詞は2つ並べられない、というきまりが一番のポイントです。',
+    add: fresh(
+      bx(15, 10, 290, 26, 'I can swim.（主語 ＋ can ＋ 原形）', C.blue, FILL.blue, 12),
+      bx(15, 40, 290, 26, "否定：can't　疑問：Can you ～?", C.red, FILL.red, 12),
+      bx(15, 70, 290, 26, 'be able to で言いかえられる', C.green, FILL.green, 12),
+      bx(15, 100, 290, 26, 'will can ではなく will be able to', C.purple, FILL.purple, 12),
+      ...cap('あとの動詞は、いつももとの形', C.main),
+    ),
+  },
+], 'can：助動詞のあとは、動詞のもとの形');
+
+// ───────── eigo_11_aisatsu_kaiwa 数の言い方 ─────────
+const u11: DiagramFigure = show([
+  {
+    note: '数には2種類あります。ものの数を表す基数（きすう）は one, two, three…。順番を表す序数（じょすう）は first, second, third…。日付・時間・値段・電話番号など、あらゆる場面で使うので、セットで覚えましょう。',
+    add: [
+      bx(10, 14, 148, 54, '基数（きすう）\none, two, three…\nものの数', C.blue, FILL.blue, 12), bx(162, 14, 148, 54, '序数（じょすう）\nfirst, second, third…\n順番', C.red, FILL.red, 12),
+      ...rowb(['3つ', '3番目'], 84, 24, 'y', 12, 40, 280, 40),
+      lb(160, 124, 'three（3つ）　third（3番目）', 12, C.ink, 'middle', true),
+      ...cap('数 と 順番 はペアで覚える'),
+    ],
+  },
+  {
+    note: '1〜12は一つずつ覚えます。13〜19は -teen がつきます：thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen。❓ふつうの形と何がちがうのでしょう。→ thirteen・fifteen・eighteen は three・five・eight と少しつづりが変わる特別な形なので、気をつけます。',
+    add: fresh(
+      ...rowb(['thirteen', 'fourteen', 'fifteen', 'sixteen'], 12, 28, 'b', 11, 8, 312, 4),
+      ...rowb(['seventeen', 'eighteen', 'nineteen'], 46, 28, 'b', 11, 8, 312, 4),
+      lb(160, 92, 'つづりが変わる特別な形', 12, C.red, 'middle', true),
+      ...rowb(['thirteen（three でない）', 'fifteen（five でない）', 'eighteen（eight でない）'], 106, 28, 'r', 9, 8, 312, 4),
+      ...cap('13〜19は -teen、3つは特別', C.red),
+    ),
+  },
+  {
+    note: '何十は twenty(20)、thirty(30)、forty(40)、fifty(50)、sixty(60)、seventy(70)、eighty(80)、ninety(90)。❓forty のつづりで気をつけることは？→ four の u がなくなり、fourty ではなく forty と書きます。',
+    add: fresh(
+      ...rowb(['twenty', 'thirty', 'forty', 'fifty'], 10, 28, 'b', 12, 10, 310, 5),
+      ...rowb(['sixty', 'seventy', 'eighty', 'ninety'], 44, 28, 'b', 12, 10, 310, 5),
+      bx(100, 92, 120, 30, 'forty（40）', C.red, FILL.red, 15), lb(160, 140, 'u がなくなる（× fourty）', 12, C.red, 'middle', true),
+      ...cap('40 は forty、u なし', C.red),
+    ),
+  },
+  {
+    note: '21以上はハイフンでつなぎます。21は twenty-one、35は thirty-five。100は one hundred、1,000は one thousand、235は two hundred (and) thirty-five。❓hundred は複数でも s をつけない？→ そうです。two hundred が正しく、two hundreds は×です。',
+    add: fresh(
+      ...[['21', 'twenty-one'], ['35', 'thirty-five'], ['100', 'one hundred'], ['235', 'two hundred thirty-five']].flatMap(([n, w], i) => [
+        bx(10, 8 + i * 30, 50, 24, n, C.gray, FILL.gray, 13), ar(62, 20 + i * 30, 80, 20 + i * 30, C.main), bx(82, 8 + i * 30, 226, 24, w, C.blue, FILL.blue, 13),
+      ]),
+      lb(160, 134, '○ two hundred　× two hundreds', 12, C.red, 'middle', true),
+      ...cap('21〜99 はハイフン。hundred に s なし', C.blue),
+    ),
+  },
+  {
+    note: '序数は first(1st)、second(2nd)、third(3rd)が特別で、そのあとは fourth(4th)、fifth(5th)と -th がつくのが基本です。❓1st・2nd・3rd はなぜ特別といわれるのでしょう。→ one・two・three とは別の言葉を使うからです。それ以外は基数に -th をつけます。',
+    add: fresh(
+      ...grid([['基数', '序数', '略'], ['one', 'first', '1st'], ['two', 'second', '2nd'], ['three', 'third', '3rd'], ['four', 'fourth', '4th'], ['five', 'fifth', '5th']], 30, 6, [90, 110, 60], 20, ['b', 'r', 'g'], 12),
+      ...cap('1・2・3番目は特別な形', C.red),
+    ),
+  },
+  {
+    note: '❓序数のつづりで、まちがえやすいところは？→ 5番目は fifth（five の ve が f に）、9番目は ninth（nine の e がなくなる）、12番目は twelfth（twelve の ve が f に）。20番目は twentieth、21番目は twenty-first です。',
+    add: fresh(
+      ...grid([['数', '序数', 'ポイント'], ['5', 'fifth', 've → f'], ['9', 'ninth', 'e がなくなる'], ['12', 'twelfth', 've → f'], ['20', 'twentieth', 'y → ieth'], ['21', 'twenty-first', 'first をつける']], 14, 6, [50, 110, 130], 20, ['y', 'r', 'g'], 12),
+      ...cap('fifth・ninth・twelfth に注意', C.red),
+    ),
+  },
+  {
+    note: '序数は、日付・順番・回数に使います。May 5th（5月5日）、the third of April（4月3日）、the first floor（1階）、the second question（2問目）、the first time（初めて）。「〜番目の」には the がつくのがふつうです。',
+    add: fresh(
+      ...[['日付', 'May 5th / the third of April'], ['階・順番', 'the first floor / the second question'], ['回数', 'the first time（初めて）']].flatMap(([a, b], i) => [
+        tag(10, 18 + i * 40, 56, a, 'm', 11), bx(70, 14 + i * 40, 240, 28, b, C.red, FILL.red, 12),
+      ]),
+      ...cap('序数には the をつけて使うことが多い', C.red),
+    ),
+  },
+  {
+    note: '電話番号と年号の読み方です。電話番号は数字を1つずつ読みます（0はゼロまたはオー）。年号は2けたずつ読み、1999は nineteen ninety-nine、2026は twenty twenty-six です。',
+    add: fresh(
+      bx(10, 12, 300, 28, '090 → zero nine zero（1つずつ）', C.blue, FILL.blue, 13),
+      bx(10, 52, 300, 28, '1999 → nineteen ninety-nine（19｜99）', C.green, FILL.green, 12),
+      bx(10, 92, 300, 28, '2026 → twenty twenty-six（20｜26）', C.green, FILL.green, 12),
+      ...cap('電話は1つずつ、年は2けたずつ', C.main),
+    ),
+  },
+  {
+    note: 'まとめです。13〜19は -teen、40は forty、21以上はハイフン、hundred に s なし。序数は first・second・third が特別で、あとは -th。fifth・ninth・twelfth のつづりに注意します。電話は1つずつ、年は2けたずつ読みます。',
+    add: fresh(
+      bx(15, 10, 290, 26, '基数：-teen、forty、twenty-one（ハイフン）', C.blue, FILL.blue, 12),
+      bx(15, 40, 290, 26, '序数：first・second・third、あとは -th', C.red, FILL.red, 12),
+      bx(15, 70, 290, 26, 'つづり注意：fifth・ninth・twelfth', C.purple, FILL.purple, 12),
+      bx(15, 100, 290, 26, '電話は1つずつ、年は2けたずつ', C.green, FILL.green, 12),
+      ...cap('数は つづりと読み方をセットで', C.main),
+    ),
+  },
+], '数の言い方：基数と序数');
+
+// ───────── eigo_12_zenchishi 時を表す前置詞 ─────────
+const u12: DiagramFigure = show([
+  {
+    note: '前置詞（ぜんちし）は、名詞（めいし）の前に置いて、場所や時を表す小さな言葉です。時を表す at・on・in は、時の「広さ」で使い分けます。せまい順に at（時刻）、on（曜日・日付）、in（月・季節・年）です。',
+    add: [
+      bx(10, 8, 300, 132, '', C.blue, FILL.blue),
+      lb(160, 22, 'in：月・季節・年（広い）', 12, C.blue, 'middle', true),
+      bx(30, 34, 260, 98, '', C.green, FILL.green), lb(160, 48, 'on：曜日・日付（ふつう）', 12, C.green, 'middle', true),
+      bx(50, 60, 220, 62, '', C.red, FILL.red), lb(160, 80, 'at：時刻（せまい一点）', 12, C.red, 'middle', true), lb(160, 102, 'at seven', 13, C.red, 'middle', true),
+      ...cap('時の広さ：at ＜ on ＜ in'),
+    ],
+  },
+  {
+    note: '❓なぜ時刻は at なのでしょう。→ at は地図上の「一点」を指すイメージの言葉で、7時のようなぴったりの一点の時にぴったりだからです。at seven（7時に）、at noon（正午に）、at night（夜に）。',
+    add: fresh(
+      ln(20, 70, 300, 70, C.gray, false, 2), ci(160, 70, 8, '', C.red, FILL.red),
+      lb(160, 46, 'at seven　（7時の一点）', 14, C.red, 'middle', true), lb(160, 98, '時刻・時の一点 → at', 13, C.red, 'middle', true),
+      ...rowb(['at seven', 'at noon', 'at night'], 114, 24, 'r', 12, 20, 300, 8),
+      ...cap('一点の時 → at', C.red),
+    ),
+  },
+  {
+    note: '❓on は何に使うのでしょう。→ 曜日や日付のように「その日」という、一日ぶんの広さのときです。on Monday（月曜日に）、on May 5th（5月5日に）、on my birthday（誕生日に）。at より広く、in より狭い中間です。',
+    add: fresh(
+      bx(20, 20, 280, 40, '', C.green, FILL.green), lb(160, 40, '一日ぶんの広さ', 13, C.green, 'middle', true),
+      ...rowb(['on Monday', 'on May 5th', 'on my birthday'], 84, 28, 'g', 11, 10, 310, 6),
+      ...cap('曜日・日付 → on', C.green),
+    ),
+  },
+  {
+    note: '❓in は何に使うのでしょう。→ 月・季節・年のような、広い期間に使います。in April（4月に）、in summer（夏に）、in 2026（2026年に）。at → on → in と、せまい時から広い時へ広がっていくと覚えます。',
+    add: fresh(
+      bx(10, 12, 300, 36, '', C.blue, FILL.blue), lb(160, 30, '月・季節・年の広さ', 13, C.blue, 'middle', true),
+      ...rowb(['in April', 'in summer', 'in 2026'], 64, 28, 'b', 12, 10, 310, 6),
+      ...flow(['at', 'on', 'in'], 106, { h: 28, size: 14, color: C.main, fill: FILL.yellow, gap: 40 }).flat(),
+      ...cap('せまい → 広い：at → on → in', C.blue),
+    ),
+  },
+  {
+    note: '期間（きかん）を表す for と during です。for のうしろには「10年」「2時間」のような数字をふくむ長さが来ます。I have lived here for ten years.（10年間ここに住んでいる）。during のうしろには「夏休み」「映画」のような特定の期間を表す名詞が来ます。',
+    add: fresh(
+      bx(10, 10, 148, 40, 'for ＋ 数字の長さ\nfor ten years', C.blue, FILL.blue, 12), bx(162, 10, 148, 40, 'during ＋ 名詞\nduring the summer vacation', C.green, FILL.green, 10),
+      ...sent([['We waited', 'y'], ['for two hours.', 'b']], 70, 28, 12, 8, 156), ...sent([['She fell asleep', 'y'], ['during the movie.', 'g']], 70, 28, 11, 162, 314),
+      ...cap('数 → for、名詞 → during', C.main),
+    ),
+  },
+  {
+    note: '❓during two hours はなぜだめなのでしょう。→ during は「いつの期間か」を名詞で言う言葉で、「どれだけの長さか」を数で言うのは for の仕事だからです。2時間なら for two hours が正しい形です。',
+    add: fresh(
+      bx(20, 16, 130, 30, 'during two hours', C.red, FILL.red, 13), lb(85, 60, '× 数の長さに during', 12, C.red, 'middle', true),
+      bx(170, 16, 130, 30, 'for two hours', C.green, FILL.green, 13), lb(235, 60, '○ 数の長さは for', 12, C.green, 'middle', true),
+      lb(160, 106, '数字が入っていれば for', 13, C.ink, 'middle', true),
+      ...cap('during のあとは数字でなく名詞', C.red),
+    ),
+  },
+  {
+    note: '期限（きげん）を表す by と until です。by は「〜までに」で、その時までに動作が終わること。Please finish this work by Friday.（金曜日までにこの仕事を終えて）。until は「〜まで（ずっと）」で、その時まで状態が続くこと。I will wait here until five.（5時までここで待つ）。',
+    add: fresh(
+      ln(20, 44, 300, 44, C.gray, false, 2), lb(290, 30, '金曜', 11, C.ink, 'middle', true), ln(290, 38, 290, 50, C.ink, false, 2),
+      ar(150, 62, 290, 62, C.red), ci(150, 62, 5, '', C.red, FILL.red), lb(80, 76, '終わる（完了）', 11, C.red, 'middle', true), lb(220, 76, 'by Friday', 13, C.red, 'middle', true),
+      ln(20, 108, 300, 108, C.gray, false, 2), lb(290, 94, '5時', 11, C.ink, 'middle', true), ln(290, 102, 290, 114, C.ink, false, 2),
+      bx(40, 120, 250, 12, '', C.green, FILL.green), lb(80, 142, 'ずっと待つ（継続）', 11, C.green, 'middle', true), lb(220, 142, 'until five', 13, C.green, 'middle', true),
+      ...cap('by ＝ 完了　until ＝ 継続', C.main),
+    ),
+  },
+  {
+    note: '見分け方は動詞です。finish・return・submit のように「終わる動作」なら by、wait・stay・sleep のように「続く状態」なら until。Submit your homework by Monday.（月曜までに提出）／She stayed at her aunt’s house until Monday.（月曜まで滞在した）。',
+    add: fresh(
+      bx(10, 12, 148, 32, '終わる動作\nfinish・return・submit', C.red, FILL.red, 11), ar(84, 46, 84, 62, C.red), bx(36, 64, 96, 26, 'by', C.red, FILL.red, 16),
+      bx(162, 12, 148, 32, '続く状態\nwait・stay・sleep', C.green, FILL.green, 11), ar(236, 46, 236, 62, C.green), bx(188, 64, 96, 26, 'until', C.green, FILL.green, 16),
+      lb(160, 116, 'Submit your homework by Monday.', 11, C.red, 'middle', true), lb(160, 134, 'She stayed there until Monday.', 11, C.green, 'middle', true),
+      ...cap('動詞を見れば、by か until か分かる', C.main),
+    ),
+  },
+  {
+    note: 'まとめです。時刻は at、曜日・日付は on、月・季節・年は in。数字の長さは for、名詞の期間は during。完了する動作の期限は by、続く状態の期限は until。そのほか since（〜から）、within（〜以内に）もあります。',
+    add: fresh(
+      bx(15, 10, 290, 24, 'at 時刻　on 曜日・日付　in 月・季節・年', C.blue, FILL.blue, 12),
+      bx(15, 40, 290, 24, 'for ＋ 数字の長さ　during ＋ 名詞', C.green, FILL.green, 12),
+      bx(15, 70, 290, 24, 'by ＝ 完了　until ＝ 継続', C.red, FILL.red, 12),
+      bx(15, 100, 290, 24, 'since ＝ 〜から　within ＝ 〜以内に', C.purple, FILL.purple, 12),
+      ...cap('時の前置詞は広さと動詞で選ぶ', C.main),
+    ),
+  },
+], '時の前置詞：at・on・in と for・during・by・until');
+
+// ───────── eigo_13_hikaku 比較級・最上級の作り方 ─────────
+const u13: DiagramFigure = show([
+  {
+    note: '比較（ひかく）の表現は、形容詞（けいようし）や副詞（ふくし）の形を変えて作ります。もとの形（原級）、2つを比べる比較級（ひかくきゅう）、3つ以上でいちばんの最上級（さいじょうきゅう）です。tall（背が高い）なら tall → taller → tallest。',
+    add: [
+      ...flow(['tall\nもとの形', 'taller\nより高い', 'tallest\nいちばん高い'], 28, { h: 70, size: 13, color: C.blue, fill: FILL.blue, gap: 16 }).flat(),
+      ...cap('原級 → 比較級（-er）→ 最上級（-est）'),
+    ],
+  },
+  {
+    note: '短い語（1音節（おんせつ））は、そのまま -er / -est をつけます。tall → taller → tallest、small → smaller → smallest、long → longer → longest。いちばん基本の形です。',
+    add: fresh(
+      ...[['tall', 'taller', 'tallest'], ['small', 'smaller', 'smallest'], ['long', 'longer', 'longest']].flatMap(([a, b, c], i) => [
+        bx(10, 14 + i * 38, 90, 28, a, C.gray, FILL.gray, 14), ar(102, 28 + i * 38, 114, 28 + i * 38, C.main), bx(116, 14 + i * 38, 90, 28, b, C.blue, FILL.blue, 14), ar(208, 28 + i * 38, 220, 28 + i * 38, C.main), bx(222, 14 + i * 38, 88, 28, c, C.red, FILL.red, 13),
+      ]),
+      ...cap('そのまま -er / -est', C.blue),
+    ),
+  },
+  {
+    note: '❓e で終わる語は、なぜ -r / -st だけなのでしょう。→ すでに e があるので、-er をそのままつけると e が2つ重なってしまうからです。e は1つにして、large → larger → largest、nice → nicer → nicest となります。',
+    add: fresh(
+      ...sent([['large', 'y'], ['＋ er', 'b'], ['→', 'm'], ['larger', 'r']], 16, 30, 14, 10, 310), lb(160, 62, 'large＋er で e が重なる → e は1つ', 12, C.red, 'middle', true),
+      ...[['large', 'larger', 'largest'], ['nice', 'nicer', 'nicest']].flatMap(([a, b, c], i) => [
+        bx(20, 84 + i * 32, 80, 24, a, C.gray, FILL.gray, 13), ar(102, 96 + i * 32, 114, 96 + i * 32, C.main), bx(116, 84 + i * 32, 80, 24, b, C.blue, FILL.blue, 13), ar(198, 96 + i * 32, 210, 96 + i * 32, C.main), bx(212, 84 + i * 32, 88, 24, c, C.red, FILL.red, 13),
+      ]),
+      ...cap('e で終わる → -r / -st', C.red),
+    ),
+  },
+  {
+    note: '❓big は、なぜ biger ではなく bigger なのでしょう。→ 「短い母音＋子音字」で終わる語は、最後の子音字を重ねます。子音字を重ねないと、前の i が「アイ」と読まれてしまうので、短い音のまま保つために g を重ねるのです。big → bigger → biggest、hot → hotter → hottest。',
+    add: fresh(
+      ...sent([['big', 'y'], ['→', 'm'], ['bigger', 'r'], ['→', 'm'], ['biggest', 'r']], 14, 30, 13, 10, 310),
+      bx(30, 62, 120, 24, '× biger（i が「アイ」になる）', C.red, FILL.red, 9), bx(170, 62, 120, 24, '○ bigger（i は短いまま）', C.green, FILL.green, 10),
+      ...sent([['hot', 'y'], ['→', 'm'], ['hotter', 'r'], ['→', 'm'], ['hottest', 'r']], 106, 30, 13, 10, 310),
+      ...cap('短い母音 ＋ 子音 → 子音を重ねる', C.red),
+    ),
+  },
+  {
+    note: '「子音字＋y」で終わる語は、y を i に変えます。easy → easier → easiest、happy → happier → happiest。三単現（さんたんげん）の s のときと同じ考え方です（study → studies）。',
+    add: fresh(
+      ...[['easy', 'easier', 'easiest'], ['happy', 'happier', 'happiest']].flatMap(([a, b, c], i) => [
+        bx(10, 22 + i * 44, 90, 30, a, C.gray, FILL.gray, 14), ar(102, 37 + i * 44, 114, 37 + i * 44, C.main), bx(116, 22 + i * 44, 90, 30, b, C.blue, FILL.blue, 14), ar(208, 37 + i * 44, 220, 37 + i * 44, C.main), bx(222, 22 + i * 44, 88, 30, c, C.red, FILL.red, 13),
+      ]),
+      lb(160, 118, 'y を i に変えて -er / -est', 13, C.red, 'middle', true),
+      ...cap('子音 ＋ y → y を i に', C.red),
+    ),
+  },
+  {
+    note: '❓長い語はどうするのでしょう。→ -er をつけると言いにくいので、前に more / most を置きます。beautiful → more beautiful → most beautiful（美しい）。目安は、母音のかたまりが3つ以上の語です。famous・difficult・important なども同じです。',
+    add: fresh(
+      ...sent([['beautiful', 'y'], ['more beautiful', 'b'], ['most beautiful', 'r']], 16, 32, 12, 8, 312),
+      lb(160, 68, '前に more / most を置く', 13, C.red, 'middle', true),
+      ...rowb(['famous', 'difficult', 'important'], 90, 26, 'm', 12, 20, 300, 8),
+      lb(160, 134, 'どれも more ○○ ／ most ○○', 12, C.ink, 'middle', true),
+      ...cap('長い語は more / most', C.red),
+    ),
+  },
+  {
+    note: '形が全く変わる不規則（ふきそく）な語は暗記が必要です。good / well → better → best。bad → worse → worst。many / much → more → most。little → less → least。good と well はどちらも better・best になります。',
+    add: fresh(
+      ...grid([['原級', '比較級', '最上級'], ['good / well', 'better', 'best'], ['bad', 'worse', 'worst'], ['many / much', 'more', 'most'], ['little', 'less', 'least']], 14, 8, [100, 90, 90], 24, ['y', 'b', 'r'], 12),
+      ...cap('形が変わる語は丸暗記', C.main),
+    ),
+  },
+  {
+    note: 'まとめです。ふつうの短い語は -er / -est。e で終わるなら -r / -st。短い母音＋子音は子音を重ねる。子音＋y は y を i に。長い語は more / most。good・bad・many・little は不規則。語の形を見て、順に当てはめます。',
+    add: fresh(
+      bx(15, 8, 290, 22, 'ふつう：-er / -est　e終わり：-r / -st', C.blue, FILL.blue, 12),
+      bx(15, 34, 290, 22, '短母音＋子音：重ねる（big → bigger）', C.red, FILL.red, 12),
+      bx(15, 60, 290, 22, '子音＋y：y → i（easy → easier）', C.purple, FILL.purple, 12),
+      bx(15, 86, 290, 22, '長い語：more / most', C.green, FILL.green, 12),
+      bx(15, 112, 290, 22, '不規則：good → better → best など', C.main, FILL.warm, 12),
+      ...cap('語の形を見て、順に当てはめる', C.main),
+    ),
+  },
+], '比較級・最上級：語の形で作り方が決まる');
+
+// ───────── eigo_14_there_is_are ─────────
+const u14: DiagramFigure = show([
+  {
+    note: '「〜がある」「〜がいる」と、ものの存在（そんざい）を伝える形が There is / There are です。あとに来る名詞が1つなら There is、2つ以上なら There are を使います。There is a cat on the sofa.（ソファの上に猫が1匹いる）。',
+    add: [
+      ...sent([['There is', 'r'], ['a cat', 'b'], ['on the sofa.', 'g']], 20, 32, 14, 10, 310),
+      ...sent([['There are', 'r'], ['three books', 'b'], ['on the desk.', 'g']], 76, 32, 14, 10, 310),
+      lb(160, 132, '1つ → is　　2つ以上 → are', 13, C.ink, 'middle', true),
+      ...cap('There is ＋ 単数　／　There are ＋ 複数'),
+    ],
+  },
+  {
+    note: '❓文の最初の There は「そこに」という意味でしょうか。→ いいえ。There は形だけの主語で、日本語には訳しません。本当の主語は、is / are のあとの名詞です。実際の場所は、文の最後（on the sofa）に書かれています。',
+    add: fresh(
+      ...sent([['There', 'y', '訳さない'], ['is', 'r'], ['a cat', 'b', '本当の主語'], ['on the sofa.', 'g', '場所']], 20, 32, 13, 6, 314),
+      lb(160, 100, '場所は文の最後！', 13, C.green, 'middle', true),
+      ...cap('There は形だけの主語', C.red),
+    ),
+  },
+  {
+    note: '❓では、is と are は何で決まるのでしょう。→ あとに来る名詞が1つか2つ以上かです。a cat は1匹なので is、three books は3冊なので are。There があるからではなく、本当の主語に合わせます。',
+    add: fresh(
+      bx(10, 14, 140, 30, 'a cat（1匹）', C.blue, FILL.blue, 14), ar(80, 46, 80, 62, C.main), bx(40, 64, 80, 28, 'is', C.red, FILL.red, 16),
+      bx(170, 14, 140, 30, 'three books（3冊）', C.blue, FILL.blue, 13), ar(240, 46, 240, 62, C.main), bx(200, 64, 80, 28, 'are', C.red, FILL.red, 16),
+      lb(160, 120, 'あとの名詞の数に合わせる', 13, C.ink, 'middle', true),
+      ...cap('is / are は本当の主語で決まる', C.red),
+    ),
+  },
+  {
+    note: '❓名詞が2つ並ぶときは？→ いちばん近い名詞に合わせるのが基本です。There is a pen and two notebooks on the desk. は、近い a pen が1つなので is。There are two notebooks and a pen on the desk. は、近い two notebooks が複数なので are です。',
+    add: fresh(
+      ...sent([['There is', 'r'], ['a pen', 'b'], ['and two notebooks', 'y']], 14, 30, 12, 6, 314), lb(80, 58, '近い a pen は1つ → is', 11, C.red, 'middle', true),
+      ...sent([['There are', 'r'], ['two notebooks', 'b'], ['and a pen', 'y']], 84, 30, 12, 6, 314), lb(100, 128, '近い two notebooks は複数 → are', 11, C.red, 'middle', true),
+      ...cap('いちばん近い名詞に合わせる', C.red),
+    ),
+  },
+  {
+    note: '数えられない名詞（水など）にも使えます。There is some water in the bottle.（ボトルに水がある）。水は1つ、2つと数えないので単数あつかいで is です。数が多いときは a lot of を使い、There are a lot of students in the gym.（体育館にたくさんの生徒がいる）となります。',
+    add: fresh(
+      bx(10, 10, 148, 50, 'some water\n数えられない → is', C.blue, FILL.blue, 12), bx(162, 10, 148, 50, 'a lot of students\n複数 → are', C.green, FILL.green, 12),
+      ...sent([['There is', 'r'], ['some water', 'b'], ['in the bottle.', 'g']], 76, 28, 12, 6, 314),
+      ...sent([['There are', 'r'], ['a lot of students', 'b'], ['in the gym.', 'g']], 112, 28, 11, 6, 314),
+      ...cap('水は is、たくさんの生徒は are', C.main),
+    ),
+  },
+  {
+    note: '日本語から作るときの手順です。「ソファの上に猫が1匹いる」。①There is / are で始める。②あとの名詞を決める：a cat（1匹なので is）。③最後に場所を置く：on the sofa。これで There is a cat on the sofa. が完成します。',
+    add: fresh(
+      ...flow(['① There\nis / are', '② 名詞\na cat', '③ 場所\non the sofa'], 14, { h: 46, size: 11, color: C.blue, fill: FILL.blue, gap: 16 }).flat(),
+      ar(160, 64, 160, 80, C.main),
+      ...sent([['There is', 'r'], ['a cat', 'b'], ['on the sofa.', 'g']], 84, 32, 14, 10, 310),
+      ...cap('手順どおりに組み立てる', C.main),
+    ),
+  },
+  {
+    note: '❓There is の cat は「どの猫」でもよいのでしょうか。→ はい。この形は、初めて話に出す、どれと決まっていないものに使うからです。a cat や some water、a lot of students がその例です。',
+    add: fresh(
+      bx(10, 14, 148, 42, '○ a cat / some water\nどれと決まっていない', C.green, FILL.green, 11), bx(162, 14, 148, 42, '× the cat / my cat\n決まっているもの', C.red, FILL.red, 11),
+      lb(160, 80, 'There is / are に向くのは 初めて話に出すもの', 12, C.ink, 'middle', true),
+      ...cap('決まっていないものの存在を言う形', C.main),
+    ),
+  },
+  {
+    note: 'まとめです。There is ＋ 単数、There are ＋ 複数。There は訳さない形だけの主語で、本当の主語はあとの名詞。2つ並ぶときは近い名詞に合わせる。場所は文の最後に置きます。',
+    add: fresh(
+      bx(15, 10, 290, 26, 'There is ＋ 単数／There are ＋ 複数', C.blue, FILL.blue, 12),
+      bx(15, 40, 290, 26, 'There は訳さない。主語はあとの名詞', C.red, FILL.red, 12),
+      bx(15, 70, 290, 26, '2つ並ぶときは、近い名詞に合わせる', C.green, FILL.green, 12),
+      bx(15, 100, 290, 26, '場所は文の最後に置く', C.purple, FILL.purple, 12),
+      ...cap('主語はあとの名詞、が合言葉', C.main),
+    ),
+  },
+], 'There is / are：あとの名詞に合わせる');
+
 export const XF_CEA_FIGURES: Record<string, DiagramFigure> = {
   'xf_eigo_01_bunpo_kihon': u01,
   'xf_eigo_02_meishi_daimeishi': u02,
@@ -682,6 +1156,12 @@ export const XF_CEA_FIGURES: Record<string, DiagramFigure> = {
   'xf_eigo_06_listening_speaking': u06,
   'xf_eigo_07_alphabet_phonics': u07,
   'xf_eigo_08_be_ippan_doushi': u08,
+  'xf_eigo_09_gimonshi': u09,
+  'xf_eigo_10_can_meirei': u10,
+  'xf_eigo_11_aisatsu_kaiwa': u11,
+  'xf_eigo_12_zenchishi': u12,
+  'xf_eigo_13_hikaku': u13,
+  'xf_eigo_14_there_is_are': u14,
 };
 export const XF_CEA_SECTIONS: Record<string, string> = {
   'eigo_01_bunpo_kihon#0': 'xf_eigo_01_bunpo_kihon',
@@ -692,4 +1172,10 @@ export const XF_CEA_SECTIONS: Record<string, string> = {
   'eigo_06_listening_speaking#1': 'xf_eigo_06_listening_speaking',
   'eigo_07_alphabet_phonics#1': 'xf_eigo_07_alphabet_phonics',
   'eigo_08_be_ippan_doushi#1': 'xf_eigo_08_be_ippan_doushi',
+  'eigo_09_gimonshi#2': 'xf_eigo_09_gimonshi',
+  'eigo_10_can_meirei#0': 'xf_eigo_10_can_meirei',
+  'eigo_11_aisatsu_kaiwa#2': 'xf_eigo_11_aisatsu_kaiwa',
+  'eigo_12_zenchishi#1': 'xf_eigo_12_zenchishi',
+  'eigo_13_hikaku#0': 'xf_eigo_13_hikaku',
+  'eigo_14_there_is_are#0': 'xf_eigo_14_there_is_are',
 };
