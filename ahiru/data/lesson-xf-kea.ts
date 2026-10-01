@@ -1094,7 +1094,7 @@ const e19: DiagramFigure = show([
   },
   {
     note: '❓直後の発言から、何が分かるでしょう。→ A は「代わりに紅茶を持ってきます」と言っています。「代わりに」ということは、B はコーヒーを断ったのです。',
-    add: fresh(...bubA(14, 'Would you like some more coffee?'), ...bubB(48, '（　　空所　　）', C.red, FILL.red, 12), ...bubA(82, 'OK, I\'ll bring you some tea instead.', C.red, FILL.red), ar(160, 80, 160, 78, C.red), lb(160, 128, '「代わりに紅茶」＝ コーヒーは断った', 12, C.red, 'middle', true), ...cap('instead がヒント', C.red)),
+    add: fresh(...bubA(14, 'Would you like some more coffee?'), ...bubB(48, '（　　空所　　）', C.red, FILL.red, 12), ...bubA(82, 'OK, I\'ll bring you some tea instead.', C.red, FILL.red), lb(160, 128, '「代わりに紅茶」＝ コーヒーは断った', 12, C.red, 'middle', true), ...cap('instead がヒント', C.red)),
   },
   {
     note: '答えは No, thank you. I don\'t really like coffee. です。断る言葉が入ると、直後の「代わりに紅茶を持ってきます」と自然につながります。',
