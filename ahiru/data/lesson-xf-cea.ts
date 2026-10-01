@@ -1469,7 +1469,7 @@ const u19: DiagramFigure = show([
   {
     note: '電話の会話には、決まった流れと決まり文句があります。知っていると、場面がすぐにイメージできます。流れは、①電話を受ける、②取り次ぎをたのむ、③本人が出る、④不在を伝える、⑤伝言、⑥かけ直し、の6つです。',
     add: [
-      ...[['① 受ける', 'Hello, this is ～ speaking.', 'b'], ['② たのむ', 'May I speak to ～?', 'b'], ['③ 本人が出る', 'Speaking.', 'b'], ['④ 不在', "I'm sorry, he is out now.", 'r'], ['⑤ 伝言', 'Can I take a message?', 'r'], ['⑥ かけ直し', 'Could you ask him to call me back?', 'r']].map(([a, t, k], i) =>
+      ...[['① 受ける', 'Hello, this is ～ speaking.', 'b'], ['② たのむ', 'May I speak to ～?', 'b'], ['③ 本人が出る', 'Speaking.', 'b'], ['④ 不在', "I'm sorry, he is out now.", 'r'], ['⑤ 伝言', 'Can I take a message?', 'r'], ['⑥ かけ直し', 'ask him to call me back', 'r']].map(([a, t, k], i) =>
         bx(i < 3 ? 6 : 164, 8 + (i % 3) * 46, 150, 38, `${a}\n${t}`, K[k as Kd][0], K[k as Kd][1], 10)),
       ...cap('電話の6つの流れ'),
     ],
@@ -1544,7 +1544,7 @@ const u19: DiagramFigure = show([
 // ───────── eigo_20_tansuu_fukusuu 複数形の作り方 ─────────
 const u20: DiagramFigure = show([
   {
-    note: '名詞（めいし）を複数形（ふくすうけい）にするときの、つづりの変え方は5つあります。そのまま s、es をつける、y を i に変えて es、f を v に変えて es、そして形が変わる不規則なもの。語の終わりを見て、どれに当てはまるか決めます。',
+    note: '名詞（めいし）を複数形（ふくすうけい）にするときの、つづりの変え方は4つのきまりがあります。そのまま s、es をつける、y を i に変えて es、f を v に変えて es。このほか、形が全く変わる不規則なものもあります。語の終わりを見て、どれに当てはまるか決めます。',
     add: [
       ...[['そのまま s', 'book → books', 'b'], ['s・x・ch・sh・o → es', 'box → boxes', 'g'], ['子音＋y → ies', 'city → cities', 'r'], ['f・fe → ves', 'leaf → leaves', 'p']].flatMap(([a, b, k], i) => [
         bx(10, 10 + i * 33, 150, 26, a, K[k as Kd][0], K[k as Kd][1], 12), bx(168, 10 + i * 33, 142, 26, b, K[k as Kd][0], K[k as Kd][1], 12),
@@ -1567,7 +1567,7 @@ const u20: DiagramFigure = show([
       ...rowb(['bus → buses', 'box → boxes'], 10, 28, 'g', 12, 10, 310, 8),
       ...rowb(['watch → watches', 'dish → dishes'], 44, 28, 'g', 12, 10, 310, 8),
       bx(60, 80, 200, 26, 'tomato → tomatoes', C.green, FILL.green, 13),
-      lb(160, 126, '× ピアノ類は例外：pianos・photos・radios', 11, C.red, 'middle', true),
+      lb(160, 126, '例外：o でも s だけ → pianos・photos・radios', 11, C.red, 'middle', true),
       ...cap('言いにくい語尾には es を足す', C.green),
     ),
   },
@@ -1595,7 +1595,7 @@ const u20: DiagramFigure = show([
     note: '❓s のつづりは同じなのに、読み方はなぜ変わるのでしょう。→ 直前の音で決まるからです。p・t・k・f のような息だけの音のあとは「ス」（cats・books）、声のある音や母音のあとは「ズ」（dogs・pens）、s・x・ch・sh・z のあとは「イズ」（buses・watches）です。',
     add: fresh(
       bx(8, 10, 98, 64, 'ス [s]\ncats\nbooks', C.blue, FILL.blue, 12), bx(111, 10, 98, 64, 'ズ [z]\ndogs\npens', C.green, FILL.green, 12), bx(214, 10, 98, 64, 'イズ [iz]\nbuses\nwatches', C.red, FILL.red, 12),
-      lb(57, 88, '息だけの音のあと', 10, C.blue, 'middle', true), lb(160, 88, '声のある音・母音のあと', 10, C.green, 'middle', true), lb(263, 88, 's・x・ch・sh のあと', 10, C.red, 'middle', true),
+      lb(57, 90, '息だけの音\nのあと', 10, C.blue, 'middle', true), lb(160, 90, '声のある音・\n母音のあと', 10, C.green, 'middle', true), lb(263, 90, 's・x・ch・sh\nのあと', 10, C.red, 'middle', true),
       ...cap('直前の音で s の読み方が決まる', C.main),
     ),
   },
@@ -1764,6 +1764,560 @@ const u22: DiagramFigure = show([
   },
 ], '付加疑問文：反対の形でたずね返す');
 
+// ───────── eigo_s004 読みまちがえられやすい字 ─────────
+const big = (x: number, y: number, t: string, c: string = C.ink, size = 34) => lb(x, y, t, size, c, 'middle', true);
+const s004: DiagramFigure = show([
+  {
+    note: '英語の文字の書き方には、ブロック体（活字（かつじ）に近い、1文字ずつ離した字）と、続けて書く筆記体（ひっきたい）があります。中学入試や英検で書くのは、すべてブロック体です。うまい字でなくてよく、他人がひと目で読める字が正解になる字です。',
+    add: [
+      bx(10, 14, 140, 54, 'ブロック体\nbook', C.green, FILL.green, 14), bx(170, 14, 140, 54, '筆記体\n（つなげて書く）', C.gray, FILL.gray, 12),
+      lb(80, 90, '○ 入試で書く字', 12, C.green, 'middle', true), lb(240, 90, '入試ではほぼ出ない', 12, C.gray, 'middle', true),
+      ...cap('書くのはブロック体'),
+    ],
+  },
+  {
+    note: '❓答案（とうあん）の字で、なぜ「読みまちがえられない」ことが大切なのでしょう。→ 採点（さいてん）する人は、書いた本人ではないからです。自分では書けているつもりでも、別の字に読めてしまえば不正解になります。',
+    add: fresh(
+      bx(20, 20, 110, 40, '書いた本人\nfive のつもり', C.blue, FILL.blue, 12), ar(132, 40, 180, 40, C.main), bx(182, 20, 120, 40, '採点する人\nfiue に見える', C.red, FILL.red, 12),
+      lb(160, 92, 'v の下を丸めると u に見える', 13, C.red, 'middle', true),
+      lb(160, 118, 'five → fiue', 14, C.red, 'middle', true),
+      ...cap('読むのは、別の人', C.red),
+    ),
+  },
+  {
+    note: 'まぎらわしい字を見ていきます。①u と v。u は下が丸く、v は下がとがります。v の下を丸めると u になってしまいます。②n と h。h は上に高くのばし、n はのばしません。中途半端な高さだと、どちらか分かりません。',
+    add: fresh(
+      big(50, 50, 'u'), lb(50, 84, '下が丸い', 11, C.blue, 'middle', true), big(120, 50, 'v', C.red), lb(120, 84, '下がとがる', 11, C.red, 'middle', true),
+      big(200, 50, 'n'), lb(200, 84, 'のばさない', 11, C.blue, 'middle', true), big(270, 50, 'h', C.red), lb(270, 84, '高くのばす', 11, C.red, 'middle', true),
+      ln(10, 118, 310, 118, C.gray, true), lb(160, 134, 'hot（暑い）と not（〜ない）は n と h の高さで決まる', 11, C.ink, 'middle', true),
+      ...cap('u と v、n と h', C.main),
+    ),
+  },
+  {
+    note: '③a と o。a は右側にたての棒がつきます。丸だけで棒を書かないと o になります。cat が cot に見える例があります。❓なぜ棒が大切なのでしょう。→ その棒だけが a と o の区別だからです。',
+    add: fresh(
+      big(70, 48, 'a', C.red, 40), lb(70, 84, '右に棒がある', 11, C.red, 'middle', true), big(160, 48, 'o', C.blue, 40), lb(160, 84, '丸だけ', 11, C.blue, 'middle', true),
+      ...sent([['cat', 'r'], ['cot', 'b']], 100, 28, 14, 200, 300), ar(196, 114, 218, 114, C.main),
+      lb(110, 116, '棒をわすれると', 12, C.red, 'middle', true),
+      ...cap('a の棒は わすれずに', C.red),
+    ),
+  },
+  {
+    note: '④q と g。q は下の棒をまっすぐ下ろし、g は下を左に曲げます。⑤r と v。r は右上に短くはらうだけ。大きくはらうと v に見えます。どちらも「書き終わりの形」が決め手です。',
+    add: fresh(
+      big(50, 46, 'q', C.red), lb(50, 82, 'まっすぐ下ろす', 10, C.red, 'middle', true), big(120, 46, 'g', C.blue), lb(120, 82, '左に曲げる', 10, C.blue, 'middle', true),
+      big(200, 46, 'r', C.red), lb(200, 82, '短くはらう', 10, C.red, 'middle', true), big(270, 46, 'v', C.blue), lb(270, 82, '大きくはらうと…', 10, C.blue, 'middle', true),
+      lb(160, 124, '書き終わりの形が決め手', 13, C.ink, 'middle', true),
+      ...cap('q と g、r と v', C.main),
+    ),
+  },
+  {
+    note: '⑥大文字の I と小文字の l と数字の 1。大文字の I は上下に短い横棒をつけます。これを忘れて縦棒1本だけで書くと、小文字の l と区別がつきません。',
+    add: fresh(
+      big(70, 48, 'I', C.red, 40), lb(70, 84, '上下に横棒', 11, C.red, 'middle', true), big(160, 48, 'l', C.blue, 40), lb(160, 84, '縦棒1本', 11, C.blue, 'middle', true), big(250, 48, '1', C.green, 40), lb(250, 84, '数字の1', 11, C.green, 'middle', true),
+      lb(160, 124, '大文字 I は横棒をつけて区別する', 12, C.ink, 'middle', true),
+      ...cap('I と l と 1', C.red),
+    ),
+  },
+  {
+    note: '答案を書くときの約束です。①単語のあいだは1文字分あける。あけないと2語が1語に見えます（I am a student.）。②文字と文字はつなげない。③文の終わりにはピリオド（.）、疑問文にはクエスチョンマーク（?）をつける。これも採点の対象になります。',
+    add: fresh(
+      ...sent([['I', 'b'], ['am', 'b'], ['a', 'b'], ['student', 'b'], ['.', 'r']], 16, 32, 14, 40, 280, 14),
+      lb(160, 68, '単語と単語のあいだを あける', 12, C.blue, 'middle', true),
+      bx(14, 86, 144, 30, '② 文字をつなげない', C.green, FILL.green, 12), bx(162, 86, 144, 30, '③ . と ? をつける', C.red, FILL.red, 12),
+      ...cap('あけて・つなげず・記号をつける', C.main),
+    ),
+  },
+  {
+    note: 'まとめです。入試で書くのはブロック体。採点者は書いた本人ではないので、まぎらわしい字（u／v、n／h、a／o、q／g、r／v、I／l／1）は形をはっきり書き分ける。書き終わったら「知らない人が読んだらどう見えるか」で読み返し、あやしい字は書き直します。',
+    add: fresh(
+      bx(15, 10, 290, 24, 'ブロック体で、他人が読める字を書く', C.blue, FILL.blue, 12),
+      bx(15, 38, 290, 24, 'u／v　n／h　a／o　q／g　r／v　I／l／1', C.red, FILL.red, 12),
+      bx(15, 66, 290, 24, '単語のあいだをあける・文字をつなげない', C.green, FILL.green, 12),
+      bx(15, 94, 290, 24, '最後に「知らない人の目」で読み返す', C.purple, FILL.purple, 12),
+      ...cap('読みやすさ ＝ 得点', C.main),
+    ),
+  },
+], '読みまちがえやすい字：書き分けのポイント');
+
+// ───────── eigo_s007 a と e を区別する ─────────
+const s007: DiagramFigure = show([
+  {
+    note: '英語には、母音字（ぼいんじ）を1字入れかえるだけで別の語になるペアがたくさんあります。これをミニマルペアといいます。たとえば bad（悪い）と bed（ベッド）。書き取り問題では、どちらを書くかで得点が決まります。',
+    add: [
+      ...sent([['bad', 'r', '悪い'], ['bed', 'b', 'ベッド']], 30, 44, 24, 30, 290, 30),
+      ar(150, 52, 172, 52, C.main), lb(160, 36, 'a → e', 11, C.main, 'middle', true),
+      lb(160, 126, '1字ちがうだけで、意味が変わる', 13, C.ink, 'middle', true),
+      ...cap('ミニマルペア ＝ 1字だけちがう語'),
+    ],
+  },
+  {
+    note: 'a と e のペアを見ていきます。bad（悪い）／bed（ベッド）、man（男性・1人）／men（男性・複数）、pan（フライパン）／pen（ペン）、sad（悲しい）／said（言った）、band（バンド）／bend（曲げる）。',
+    add: fresh(
+      ...[['bad', 'bed'], ['man', 'men'], ['pan', 'pen'], ['sad', 'said'], ['band', 'bend']].flatMap(([a, b], i) => [
+        bx(30, 8 + i * 27, 100, 22, a, C.red, FILL.red, 13), lb(160, 19 + i * 27, '⇔', 13, C.main, 'middle', true), bx(190, 8 + i * 27, 100, 22, b, C.blue, FILL.blue, 13),
+      ]),
+      ...cap('a ⇔ e で別の語', C.main),
+    ),
+  },
+  {
+    note: '❓a と e の音は、どうちがうのでしょう。→ 口の開き方がちがいます。a は口を横に大きく開き、あごを下げて「ェア」に近い音を出します。e は口の開きが小さく、日本語の「エ」に近い音です。',
+    add: fresh(
+      bx(30, 22, 100, 56, '', C.red, FILL.red), lb(80, 50, 'a　ェア', 15, C.red, 'middle', true), lb(80, 98, '口を大きく開く', 12, C.red, 'middle', true),
+      bx(190, 32, 100, 34, '', C.blue, FILL.blue), lb(240, 50, 'e　エ', 15, C.blue, 'middle', true), lb(240, 98, '開きは小さめ', 12, C.blue, 'middle', true),
+      lb(160, 128, '口の開き方のちがいで音を分ける', 12, C.ink, 'middle', true),
+      ...cap('a は大きく、e は小さく', C.main),
+    ),
+  },
+  {
+    note: '❓どちらの音が難しいのでしょう。→ 日本人にとっては a のほうが難しいです。日本語にない音だからです。そこで「a は大きく開く音」と決めて練習します。決まりごとにしておくと、聞き分けも書き分けも安定します。',
+    add: fresh(
+      bx(20, 20, 130, 40, 'a ＝ 日本語にない音\n（むずかしい）', C.red, FILL.red, 12), bx(170, 20, 130, 40, 'e ＝ 日本語の「エ」\nに近い', C.blue, FILL.blue, 12),
+      ar(85, 62, 85, 80, C.red), bx(20, 82, 130, 30, '大きく開くと決める', C.red, FILL.red, 12),
+      ...cap('決めごとにして練習する', C.red),
+    ),
+  },
+  {
+    note: 'man と men は特に大切です。単数と複数のちがいが、この1字だけで表されるからです。man（男性1人）→ men（男性たち）。同じように woman（女性1人）→ women（女性たち）もありますが、women は「ウィミン」と読むので、つづりの o と音がずれます。ここは丸暗記します。',
+    add: fresh(
+      ...sent([['man', 'b', '1人'], ['→', 'm'], ['men', 'r', '複数']], 14, 32, 18, 20, 300),
+      ...sent([['woman', 'b', '1人'], ['→', 'm'], ['women', 'r', '複数']], 84, 32, 18, 20, 300),
+      lb(160, 144, 'women は「ウィミン」と読む', 12, C.red, 'middle', true),
+      ...cap('1字で単数と複数が変わる', C.red),
+    ),
+  },
+  {
+    note: '❓ペアは、どう覚えればよいのでしょう。→ 必ず2語セットで、意味・つづり・例文の3点をノートにまとめます。片方だけ覚えると、テストでもう片方と必ず混同するからです。',
+    add: fresh(
+      ...grid([['', 'つづり', '意味', '例文'], ['1', 'pan', 'フライパン', 'a pan'], ['2', 'pen', 'ペン', 'a pen']], 10, 14, [28, 70, 90, 100], 26, ['y', 'r', 'g', 'b'], 12),
+      lb(160, 100, '2語セットで 3点を書く', 13, C.ink, 'middle', true),
+      ...cap('片方だけ覚えると、必ず混同する', C.red),
+    ),
+  },
+  {
+    note: 'まとめです。a と e は1字ちがいで別の語になる。a は口を大きく開く「ェア」、e は小さい「エ」。man／men、woman／women のように単数・複数を表すペアもある。ペアは2語セットで、意味・つづり・例文を覚えます。',
+    add: fresh(
+      bx(15, 10, 290, 24, 'bad／bed　pan／pen　sad／said　band／bend', C.blue, FILL.blue, 12),
+      bx(15, 38, 290, 24, 'a は口を大きく開く（ェア）', C.red, FILL.red, 12),
+      bx(15, 66, 290, 24, 'man／men、woman／women（単複）', C.green, FILL.green, 12),
+      bx(15, 94, 290, 24, 'ペアは2語セットで覚える', C.purple, FILL.purple, 12),
+      ...cap('1字のちがいを聞き分け、書き分ける', C.main),
+    ),
+  },
+], 'a と e：1字ちがいのペア');
+
+// ───────── eigo_s008 「ア」に聞こえる3つの音 ─────────
+const s008: DiagramFigure = show([
+  {
+    note: '日本語の母音は「ア・イ・ウ・エ・オ」の5つだけですが、英語の母音はその4倍近くあります。特に短母音（たんぼいん）の a・o・u は、日本語のカタカナに直すとどれも「ア」になってしまうので、区別ができなくなります。',
+    add: [
+      ...sent([['cat', 'r'], ['hot', 'b'], ['cup', 'g']], 22, 36, 18, 20, 300, 14),
+      lb(160, 76, '↓ カタカナにすると…', 12, C.ink, 'middle', true),
+      ...sent([['キャット', 'r'], ['ホット', 'b'], ['カップ', 'g']], 94, 28, 14, 20, 300, 14),
+      lb(160, 134, 'どれも「ア」に聞こえてしまう', 12, C.red, 'middle', true),
+      ...cap('カタカナでは区別できない'),
+    ],
+  },
+  {
+    note: '❓どうやって区別するのでしょう。→ 音ではなく、口の形を先に決めます。a は口を横に大きく開き、あごを下げて「ェア」。o は口を丸くたてに開けます。u は口をほとんど開けず、のどの奥で短く弱く出します。',
+    add: fresh(
+      bx(10, 22, 92, 34, '', C.red, FILL.red), lb(56, 38, 'a', 18, C.red, 'middle', true), lb(56, 76, '横に大きく\n「ェア」', 11, C.red, 'middle', true),
+      bx(134, 12, 50, 56, '', C.blue, FILL.blue), lb(159, 40, 'o', 18, C.blue, 'middle', true), lb(159, 86, 'たてに丸く', 11, C.blue, 'middle', true),
+      bx(236, 32, 60, 14, '', C.green, FILL.green), lb(266, 62, 'u', 18, C.green, 'middle', true), lb(266, 90, 'ほとんど\n開けない', 11, C.green, 'middle', true),
+      lb(160, 132, 'a は「横」、o は「たて」、u は「開けない」', 12, C.ink, 'middle', true),
+      ...cap('口の形を先に決める', C.main),
+    ),
+  },
+  {
+    note: 'a と u のペアです。cat（ねこ）／cut（切る）、bag（かばん）／bug（虫）、cap（帽子）／cup（コップ）。口の形を変えれば、別の語として聞き分けられます。',
+    add: fresh(
+      ...[['cat（ねこ）', 'cut（切る）'], ['bag（かばん）', 'bug（虫）'], ['cap（帽子）', 'cup（コップ）']].flatMap(([a, b], i) => [
+        bx(14, 14 + i * 38, 130, 28, a, C.red, FILL.red, 13), lb(160, 28 + i * 38, '⇔', 14, C.main, 'middle', true), bx(176, 14 + i * 38, 130, 28, b, C.green, FILL.green, 13),
+      ]),
+      lb(80, 132, 'a：横に大きく', 11, C.red, 'middle', true), lb(240, 132, 'u：開けない', 11, C.green, 'middle', true),
+      ...cap('a と u のペア', C.main),
+    ),
+  },
+  {
+    note: 'o と u、o と a のペアです。not（〜ない）／nut（木の実）、box（箱）／bus（バス）、hot（暑い）／hut（小屋）。o は口をたてに丸く、u は開けない、と口の形で分けます。',
+    add: fresh(
+      ...[['not（〜ない）', 'nut（木の実）'], ['box（箱）', 'bus（バス）'], ['hot（暑い）', 'hut（小屋）']].flatMap(([a, b], i) => [
+        bx(14, 14 + i * 38, 130, 28, a, C.blue, FILL.blue, 13), lb(160, 28 + i * 38, '⇔', 14, C.main, 'middle', true), bx(176, 14 + i * 38, 130, 28, b, C.green, FILL.green, 13),
+      ]),
+      lb(80, 132, 'o：たてに丸く', 11, C.blue, 'middle', true), lb(240, 132, 'u：開けない', 11, C.green, 'middle', true),
+      ...cap('o と u のペア', C.main),
+    ),
+  },
+  {
+    note: '❓カタカナ語に引っぱられるとどうなるのでしょう。→ 「カップ」は cup ですが、「キャップ」は cap、「バッグ」は bag ですが「バグ」は bug です。日本語になっている語こそ、つづりを確かめます。',
+    add: fresh(
+      ...[['カップ', 'cup'], ['キャップ', 'cap'], ['バッグ', 'bag'], ['バグ', 'bug']].flatMap(([a, b], i) => [
+        bx(20 + (i % 2) * 150, 14 + Math.floor(i / 2) * 50, 64, 32, a, C.gray, FILL.gray, 12), ar(86 + (i % 2) * 150, 30 + Math.floor(i / 2) * 50, 100 + (i % 2) * 150, 30 + Math.floor(i / 2) * 50, C.main), bx(102 + (i % 2) * 150, 14 + Math.floor(i / 2) * 50, 50, 32, b, C.red, FILL.red, 14),
+      ]),
+      lb(160, 126, '日本語になっている語ほど、つづりを確かめる', 12, C.ink, 'middle', true),
+      ...cap('カタカナ語はつづりに注意', C.red),
+    ),
+  },
+  {
+    note: 'つづりを手がかりにするのが、現実的な方法です。「ぼうしをかぶる」なら cap または hat。「コップ1ぱいの水」なら a cup of water。「バスに乗る」なら take a bus。「暑い日」なら a hot day。意味から母音を決めます。',
+    add: fresh(
+      ...[['ぼうしをかぶる', 'cap / hat'], ['コップ1ぱいの水', 'a cup of water'], ['バスに乗る', 'take a bus'], ['暑い日', 'a hot day']].flatMap(([a, b], i) => [
+        bx(10, 8 + i * 33, 140, 26, a, C.blue, FILL.blue, 12), ar(152, 21 + i * 33, 168, 21 + i * 33, C.main), bx(170, 8 + i * 33, 140, 26, b, C.green, FILL.green, 12),
+      ]),
+      ...cap('意味から母音を決める', C.green),
+    ),
+  },
+  {
+    note: '文全体で確かめるのも大切です。I have a cat.（ねこを飼っている）と I cut my finger.（指を切った）では、文の形も意味もまったくちがいます。1語だけを見ずに、まわりの語といっしょに考えます。',
+    add: fresh(
+      ...sent([['I have', 'y'], ['a cat.', 'r']], 20, 32, 14, 10, 310), lb(160, 66, 'ねこを飼っている', 12, C.red, 'middle', true),
+      ...sent([['I', 'y'], ['cut', 'g'], ['my finger.', 'y']], 88, 32, 14, 10, 310), lb(160, 134, '指を切った', 12, C.green, 'middle', true),
+      ...cap('まわりの語と いっしょに考える', C.main),
+    ),
+  },
+  {
+    note: 'まとめです。a・o・u はカタカナではどれも「ア」になる。a は横に大きく、o はたてに丸く、u は開けない、と口の形で区別する。つづりと意味と文全体を手がかりに、cat と cut、cap と cup、hot と hut を書き分けます。',
+    add: fresh(
+      bx(15, 10, 290, 24, 'a：横に大きく　o：たてに丸く　u：開けない', C.blue, FILL.blue, 12),
+      bx(15, 38, 290, 24, 'cat／cut　bag／bug　cap／cup', C.red, FILL.red, 12),
+      bx(15, 66, 290, 24, 'not／nut　box／bus　hot／hut', C.green, FILL.green, 12),
+      bx(15, 94, 290, 24, '意味と文全体で つづりを確かめる', C.purple, FILL.purple, 12),
+      ...cap('口の形とつづりで見分ける', C.main),
+    ),
+  },
+], '「ア」に聞こえる a・o・u の聞き分け');
+
+// ───────── eigo_s009 有声音と無声音 ─────────
+const s009: DiagramFigure = show([
+  {
+    note: 'のどに手をあてて「ズー」と言うとふるえますが、「スー」と言うとふるえません。このふるえ（声帯（せいたい）の振動（しんどう））があるかないかで、子音（しいん）は2つに分かれます。ふるえるのが有声音（ゆうせいおん）、息だけなのが無声音（むせいおん）です。',
+    add: [
+      bx(20, 14, 120, 50, 'ズー\nふるえる', C.red, FILL.red, 16), bx(180, 14, 120, 50, 'スー\nふるえない', C.blue, FILL.blue, 16),
+      lb(80, 82, '有声音（声がある）', 12, C.red, 'middle', true), lb(240, 82, '無声音（息だけ）', 12, C.blue, 'middle', true),
+      lb(160, 120, 'のどに手をあてて たしかめよう', 12, C.ink, 'middle', true),
+      ...cap('のどのふるえで 2つに分かれる'),
+    ],
+  },
+  {
+    note: '有声音は、b・d・g・v・z・m・n・l・r・w・j など。無声音は、p・t・k・f・s・h・ch・sh など。この2つのグループをまず知っておきます。',
+    add: fresh(
+      bx(10, 12, 300, 52, '有声音：b　d　g　v　z　m　n　l　r　w　j', C.red, FILL.red, 14),
+      bx(10, 74, 300, 52, '無声音：p　t　k　f　s　h　ch　sh', C.blue, FILL.blue, 14),
+      ...cap('声があるか、息だけか', C.main),
+    ),
+  },
+  {
+    note: '対になっている6組があります。b（ブ）／p（プ）、d（ドゥ）／t（トゥ）、g（グ）／k（ク）、v（ヴ）／f（フ）、z（ズ）／s（ス）、j（ヂ）／ch（チ）。左が有声音、右が無声音です。',
+    add: fresh(
+      ...grid([['有声音', '無声音'], ['b（ブ）', 'p（プ）'], ['d（ドゥ）', 't（トゥ）'], ['g（グ）', 'k（ク）'], ['v（ヴ）', 'f（フ）'], ['z（ズ）', 's（ス）'], ['j（ヂ）', 'ch（チ）']], 40, 4, [110, 120], 17, ['r', 'b'], 11),
+      ...cap('6つの対（つい）', C.main),
+    ),
+  },
+  {
+    note: '❓この対は、何がちがって何が同じなのでしょう。→ 口の形も舌の位置もまったく同じで、声を出すか出さないかだけがちがいます。b と p ならどちらもくちびるを閉じて開く、d と t なら舌先を上の歯ぐきにつける、という点が共通です。',
+    add: fresh(
+      bx(10, 12, 140, 36, 'b（ブ）\nくちびるを閉じて開く', C.red, FILL.red, 11), bx(170, 12, 140, 36, 'p（プ）\nくちびるを閉じて開く', C.blue, FILL.blue, 11),
+      lb(160, 30, '＝', 20, C.main, 'middle', true),
+      bx(10, 62, 140, 36, 'd（ドゥ）\n舌先を歯ぐきにつける', C.red, FILL.red, 11), bx(170, 62, 140, 36, 't（トゥ）\n舌先を歯ぐきにつける', C.blue, FILL.blue, 11),
+      lb(160, 80, '＝', 20, C.main, 'middle', true),
+      lb(160, 122, '口は同じ。ちがうのは 声のあるなしだけ', 12, C.ink, 'middle', true),
+      ...cap('声のあるなしだけがちがう', C.main),
+    ),
+  },
+  {
+    note: '❓だから b と p、d と t を聞きまちがえやすいのですね。→ そのとおりです。口の形が同じなので、声のふるえが聞き取れないと、別の音に聞こえてしまうからです。のどに手をあてて、自分で確かめながら練習します。',
+    add: fresh(
+      ...sent([['b', 'r', 'ふるえる'], ['⇔', 'm'], ['p', 'b', 'ふるえない']], 14, 40, 22, 40, 280, 30),
+      ...sent([['d', 'r', 'ふるえる'], ['⇔', 'm'], ['t', 'b', 'ふるえない']], 84, 40, 22, 40, 280, 30),
+      ...cap('のどに手をあてて練習', C.red),
+    ),
+  },
+  {
+    note: '❓この6組は、何に役立つのでしょう。→ -s の発音（ス か ズ か）や -ed の発音（ト か ド か）を決めるときに必ず使います。たとえば cats は t が無声音なので s は「ス」、dogs は g が有声音なので s は「ズ」と読みます。フォニックスの土台です。',
+    add: fresh(
+      bx(20, 14, 130, 40, 'cats\nt は無声音 → ス', C.blue, FILL.blue, 12), bx(170, 14, 130, 40, 'dogs\ng は有声音 → ズ', C.red, FILL.red, 12),
+      ar(85, 56, 85, 74, C.blue), bx(40, 76, 90, 28, 's ＝ ス', C.blue, FILL.blue, 13), ar(235, 56, 235, 74, C.red), bx(190, 76, 90, 28, 's ＝ ズ', C.red, FILL.red, 13),
+      ...cap('直前の音の「声」で決まる', C.main),
+    ),
+  },
+  {
+    note: 'まとめです。子音は、のどがふるえる有声音と、息だけの無声音に分かれる。b／p、d／t、g／k、v／f、z／s、j／ch の6組は、口の形が同じで声のあるなしだけがちがう。この対は -s や -ed の発音にも役立ちます。',
+    add: fresh(
+      bx(15, 10, 290, 24, '有声音（ふるえる）と無声音（息だけ）', C.blue, FILL.blue, 12),
+      bx(15, 38, 290, 24, 'b／p　d／t　g／k　v／f　z／s　j／ch', C.red, FILL.red, 12),
+      bx(15, 66, 290, 24, '口の形は同じ。声のあるなしだけがちがう', C.green, FILL.green, 12),
+      bx(15, 94, 290, 24, '-s や -ed の発音にも使う', C.purple, FILL.purple, 12),
+      ...cap('のどに手をあてて確かめよう', C.main),
+    ),
+  },
+], '有声音と無声音：声のあるなし');
+
+// ───────── eigo_s013 母音字が2つ並ぶとき ─────────
+const pair2 = (x: number, y: number, a: string, b: string) => [bx(x, y, 34, 34, a, C.red, FILL.red, 20), bx(x + 38, y, 34, 34, b, C.gray, FILL.gray, 20)];
+const s013: DiagramFigure = show([
+  {
+    note: '母音字（ぼいんじ）が2つ並んだとき、前の字をアルファベットの名前で読み、うしろの字は読まない。これが基本のきまりです。英語圏の学校では「2つの母音が歩くと、前のほうが話をする」と教えられます。',
+    add: [
+      ...pair2(60, 20, 'a', 'i'), lb(96, 70, 'a だけ読む', 12, C.red, 'middle', true), lb(96, 88, '「エイ」', 12, C.red, 'middle', true),
+      ...pair2(190, 20, 'e', 'a'), lb(226, 70, 'e だけ読む', 12, C.red, 'middle', true), lb(226, 88, '「イー」', 12, C.red, 'middle', true),
+      lb(160, 128, '前が話をして、うしろは だまる', 13, C.ink, 'middle', true),
+      ...cap('2つ並んだら 前の字が名前を言う'),
+    ],
+  },
+  {
+    note: 'ai は「エイ」：rain, train, wait, paint, tail, mail。ay も「エイ」で、語の終わりに使います：day, play, say, way, may, stay。❓なぜ ai と ay があるのでしょう。→ 同じ音を、語のとちゅうでは ai、語の終わりでは ay と書き分けるからです。',
+    add: fresh(
+      bx(10, 10, 148, 40, 'ai ＝ エイ（とちゅう）\nrain  train  wait', C.blue, FILL.blue, 11), bx(162, 10, 148, 40, 'ay ＝ エイ（終わり）\nday  play  say', C.green, FILL.green, 11),
+      lb(160, 74, '同じ音を 位置で書き分ける', 12, C.ink, 'middle', true),
+      ...sent([['r-ai-n', 'b', 'とちゅう'], ['d-ay', 'g', '終わり']], 96, 28, 14, 40, 280, 30),
+      ...cap('とちゅうは ai、終わりは ay', C.blue),
+    ),
+  },
+  {
+    note: 'ea と ee は「イー」：eat, sea, tea, read（読む）／see, tree, green, week。oa は「オウ」：boat, coat, road, soap。「イー」はとちゅうでは ea か ee、「オウ」はとちゅうでは oa、語の終わりでは ow（snow など）と覚えます。',
+    add: fresh(
+      bx(10, 10, 148, 44, 'ea・ee ＝ イー\neat  tea  see  tree', C.blue, FILL.blue, 12), bx(162, 10, 148, 44, 'oa ＝ オウ\nboat  coat  road', C.green, FILL.green, 12),
+      lb(160, 82, '終わりでは…', 12, C.ink, 'middle', true),
+      ...sent([['オウ → ow', 'g'], ['イー → ee・y', 'b']], 94, 28, 12, 20, 300, 20),
+      ...cap('音ごとに つづりの型がある', C.main),
+    ),
+  },
+  {
+    note: 'ie は「イー」と「アイ」があります：field, piece（イー）／pie, tie, lie（アイ・語の終わり）。ui・ue は「ウー・ユー」：fruit, juice／blue, true, Tuesday。❓なぜ ie は2通りなのでしょう。→ 語のとちゅうでは「イー」、語の終わりでは「アイ」と、位置で分かれるからです。',
+    add: fresh(
+      bx(10, 10, 148, 44, 'ie（とちゅう）＝ イー\nfield  piece', C.blue, FILL.blue, 12), bx(162, 10, 148, 44, 'ie（終わり）＝ アイ\npie  tie  lie', C.red, FILL.red, 12),
+      bx(10, 70, 148, 44, 'ui ＝ ウー\nfruit  juice', C.green, FILL.green, 12), bx(162, 70, 148, 44, 'ue ＝ ウー・ユー\nblue  true  Tuesday', C.purple, FILL.purple, 11),
+      ...cap('位置で音が変わる ie', C.main),
+    ),
+  },
+  {
+    note: '知らない語に出会ったときの使い方です。①まず母音字の並びをさがす。②並んでいたら長母音（ちょうぼいん）で読んでみる。たとえば train なら t-r-ai-n で ai を「エイ」と読み、トゥレイン。これが読解の第一手です。',
+    add: fresh(
+      ...flow(['① 母音字の\n並びをさがす', '② 前の字を\n名前で読む', '③ 単語に\nなるか確かめる'], 14, { h: 52, size: 11, color: C.blue, fill: FILL.blue, gap: 16 }).flat(),
+      ...[['t', 'gray'], ['r', 'gray']].map(([t], i) => bx(60 + i * 40, 90, 34, 34, t, C.gray, FILL.gray, 18)),
+      ...pair2(140, 90, 'a', 'i'), bx(216, 90, 34, 34, 'n', C.gray, FILL.gray, 18),
+      ...cap('train ＝ t-r-ai-n ＝ トゥレイン', C.main),
+    ),
+  },
+  {
+    note: 'まとめです。母音字が2つ並んだら、前の字を名前の音で読み、うしろは読まない。ai と ay、oa と ow のように、とちゅうと終わりで書き分ける型がある。ie は位置によって「イー」か「アイ」になる。',
+    add: fresh(
+      bx(15, 10, 290, 24, '2つ並んだら 前を名前の音で読む', C.red, FILL.red, 12),
+      bx(15, 38, 290, 24, 'ai／ay（エイ）　oa／ow（オウ）', C.blue, FILL.blue, 12),
+      bx(15, 66, 290, 24, 'ea・ee（イー）　ie（イー／アイ）', C.green, FILL.green, 12),
+      bx(15, 94, 290, 24, '知らない語は 長母音で読んでみる', C.purple, FILL.purple, 12),
+      ...cap('並びを見つけたら、まず長母音で', C.main),
+    ),
+  },
+], '母音字が2つ並ぶとき：前の字が名前を言う');
+
+// ───────── eigo_s015 oo の長短 ─────────
+const s015: DiagramFigure = show([
+  {
+    note: 'oo は、英語の中でも特に読み分けが必要なつづりです。長い「ウー」と、短い「ウ」の2つの読み方があります。長いのは school, food, moon、短いのは book, look, good などです。',
+    add: [
+      bx(10, 14, 148, 56, '長い「ウー」\nschool  food  moon', C.blue, FILL.blue, 13), bx(162, 14, 148, 56, '短い「ウ」\nbook  look  good', C.red, FILL.red, 13),
+      lb(160, 100, 'oo には 2通りの読み方がある', 13, C.ink, 'middle', true),
+      ...cap('oo は長い？ 短い？'),
+    ],
+  },
+  {
+    note: '❓音のちがいはどこにあるのでしょう。→ 口の力のちがいです。長い「ウー」は口を強くすぼめてのばし、短い「ウ」は口の力を抜いて短く出します。日本語の「ウ」は、短い「ウ」に近い音です。',
+    add: fresh(
+      bx(30, 30, 40, 30, '', C.blue, FILL.blue), lb(50, 78, '強くすぼめて\nのばす', 11, C.blue, 'middle', true), lb(50, 104, '長い「ウー」', 12, C.blue, 'middle', true),
+      bx(228, 22, 62, 46, '', C.red, FILL.red), lb(259, 78, '力を抜いて\n短く', 11, C.red, 'middle', true), lb(259, 104, '短い「ウ」', 12, C.red, 'middle', true),
+      lb(160, 46, '⇔', 20, C.main, 'middle', true),
+      ...cap('口の力で音を分ける', C.main),
+    ),
+  },
+  {
+    note: '長い「ウー」の語：school, food, moon, room, soon, too, zoo, pool, cool, tool, roof, noon, afternoon, choose。短い「ウ」の語：book, look, good, cook, took, foot, wood, stood, hook, shook。',
+    add: fresh(
+      bx(8, 8, 304, 56, 'school  food  moon  room  soon\ntoo  zoo  pool  cool  tool\nroof  noon  choose', C.blue, FILL.blue, 11), lb(160, 76, '長い「ウー」', 12, C.blue, 'middle', true),
+      bx(8, 88, 304, 40, 'book  look  good  cook  took\nfoot  wood  stood  hook  shook', C.red, FILL.red, 11), lb(160, 140, '短い「ウ」', 12, C.red, 'middle', true),
+      ...cap('たくさんの例', C.main),
+    ),
+  },
+  {
+    note: '❓ひとつずつ覚えるしかないのでしょうか。→ 目安があります。①-ook で終わる語はほぼ短い「ウ」：book, look, cook, took, shook, hook。つづりの終わり方を見れば、読み方の見当がつきます。',
+    add: fresh(
+      bx(40, 14, 240, 34, '-ook ＝ ほぼ短い「ウ」', C.red, FILL.red, 15),
+      ...rowb(['book', 'look', 'cook'], 66, 28, 'r', 13, 20, 300, 8),
+      ...rowb(['took', 'shook', 'hook'], 100, 28, 'r', 13, 20, 300, 8),
+      ...cap('-ook は短い', C.red),
+    ),
+  },
+  {
+    note: '②-ood は分かれます：good, stood, wood は短い「ウ」、food, mood は長い「ウー」。③-oon, -ool, -oom は長い「ウー」：moon, soon, school, pool, room。-ood だけは語ごとに覚えます。',
+    add: fresh(
+      bx(8, 8, 304, 22, '-ood ＝ 分かれる', C.purple, FILL.purple, 13),
+      ...rowb(['good', 'stood', 'wood'], 36, 26, 'r', 12, 8, 160, 6), ...rowb(['food', 'mood'], 36, 26, 'b', 12, 166, 312, 6),
+      bx(8, 76, 304, 22, '-oon・-ool・-oom ＝ 長い「ウー」', C.blue, FILL.blue, 12),
+      ...rowb(['moon', 'soon', 'school', 'pool', 'room'], 104, 26, 'b', 11, 8, 312, 4),
+      ...cap('終わり方で見当をつける', C.main),
+    ),
+  },
+  {
+    note: '❓foot と food と feet は、どうちがうのでしょう。→ foot（足・単数）の oo は短い「ウ」、feet はその複数形で ee になります。food（食べ物）は oo が長い「ウー」で、まったく別の語です。つづりも意味もちがう3語を混同しないようにします。',
+    add: fresh(
+      ...sent([['foot', 'r', '足（1つ）'], ['feet', 'r', '足（複数）'], ['food', 'b', '食べ物']], 22, 38, 20, 14, 306, 14),
+      lb(160, 100, 'foot の oo は短く、food の oo は長く', 12, C.ink, 'middle', true),
+      ...cap('foot・feet・food は別の語', C.red),
+    ),
+  },
+  {
+    note: 'よく出る組み合わせも、声に出して覚えます。go to school（学校へ行く）の school は長い「ウー」、read a book（本を読む）の book は短い「ウ」。❓同じ oo なのになぜ音がちがうのでしょう。→ 長短は語ごとに決まっているので、語のまとまりごとに読み方も覚えるのが近道だからです。',
+    add: fresh(
+      ...sent([['go to', 'y'], ['school', 'b']], 14, 32, 14, 10, 310), lb(160, 60, 'oo ＝ 長い「ウー」', 12, C.blue, 'middle', true),
+      ...sent([['read a', 'y'], ['book', 'r']], 84, 32, 14, 10, 310), lb(160, 130, 'oo ＝ 短い「ウ」', 12, C.red, 'middle', true),
+      ...cap('語のまとまりで覚える', C.main),
+    ),
+  },
+  {
+    note: 'まとめです。oo は長い「ウー」と短い「ウ」がある。-ook は短い、-oon・-ool・-oom は長い、-ood は good・stood・wood が短く food・mood が長い。長いのは口を強くすぼめ、短いのは力を抜く。foot・feet・food は混同しないように。',
+    add: fresh(
+      bx(15, 8, 290, 22, '-ook ＝ 短い「ウ」', C.red, FILL.red, 12),
+      bx(15, 34, 290, 22, '-oon・-ool・-oom ＝ 長い「ウー」', C.blue, FILL.blue, 12),
+      bx(15, 60, 290, 22, '-ood ＝ good・stood・wood は短い、food・mood は長い', C.purple, FILL.purple, 10),
+      bx(15, 86, 290, 22, '長い＝口をすぼめる、短い＝力を抜く', C.green, FILL.green, 12),
+      bx(15, 112, 290, 22, 'foot・feet・food は別の語', C.main, FILL.warm, 12),
+      ...cap('終わり方と口の力で読み分ける', C.main),
+    ),
+  },
+], 'oo の長短：終わり方で見当をつける');
+
+// ───────── eigo_s016 r のついた母音 ─────────
+const s016: DiagramFigure = show([
+  {
+    note: '母音字のあとに r が来ると、その母音は短母音でも長母音でもない、特別な音になります。これを r 音性母音（おんせいぼいん）といいます。つづりは ar・or・er・ir・ur の5つです。',
+    add: [
+      ...rowb(['ar', 'or', 'er', 'ir', 'ur'], 20, 44, 'r', 22, 10, 310, 8),
+      lb(160, 90, '母音 ＋ r ＝ 特別な音', 14, C.ink, 'middle', true),
+      lb(160, 116, '短くも長くもない、英語らしい音', 12, C.gray, 'middle', true),
+      ...cap('r がつくと 母音の音が変わる'),
+    ],
+  },
+  {
+    note: 'ar は「アー」：car, park, star, hard, farm, garden, market, party, start, dark。口を大きく開いて「アー」と言い、あとに r の音がかすかに残ります。',
+    add: fresh(
+      bx(40, 12, 80, 44, 'ar', C.red, FILL.red, 24), lb(190, 34, '＝「アー」', 18, C.red, 'middle', true),
+      ...rowb(['car', 'park', 'star', 'farm'], 76, 26, 'r', 13, 10, 310, 6),
+      ...rowb(['hard', 'garden', 'party'], 108, 26, 'r', 13, 40, 280, 6),
+      ...cap('ar ＝ アー', C.red),
+    ),
+  },
+  {
+    note: 'or は「オー」：for, short, morning, north, sport, story, corner, born。口を丸くして「オー」と言い、r の音を軽く添えます。',
+    add: fresh(
+      bx(40, 12, 80, 44, 'or', C.blue, FILL.blue, 24), lb(190, 34, '＝「オー」', 18, C.blue, 'middle', true),
+      ...rowb(['for', 'short', 'morning', 'north'], 76, 26, 'b', 12, 10, 310, 6),
+      ...rowb(['sport', 'story', 'corner'], 108, 26, 'b', 13, 40, 280, 6),
+      ...cap('or ＝ オー', C.blue),
+    ),
+  },
+  {
+    note: 'er・ir・ur は、どれも「アー」に近い同じ音です：her, teacher, water／bird, girl, first, shirt／turn, hurt, church, nurse。❓つづりが3つあるのに音は1つ、というのはなぜ困るのでしょう。→ 音を聞いてもつづりが決められないからです。',
+    add: fresh(
+      bx(10, 12, 92, 40, 'er\nher', C.green, FILL.green, 14), bx(114, 12, 92, 40, 'ir\nbird', C.green, FILL.green, 14), bx(218, 12, 92, 40, 'ur\nturn', C.green, FILL.green, 14),
+      ar(56, 54, 130, 80, C.green), ar(160, 54, 160, 80, C.green), ar(264, 54, 190, 80, C.green),
+      bx(110, 82, 100, 30, '同じ「アー」', C.red, FILL.red, 14),
+      lb(160, 132, '音だけではつづりが決まらない', 12, C.ink, 'middle', true),
+      ...cap('er・ir・ur は同じ音', C.green),
+    ),
+  },
+  {
+    note: '❓では、どう書き分ければよいのでしょう。→ 語ごとに覚えます。her（彼女の）、bird（鳥）、turn（曲がる）の母音の音は同じですが、つづりは語ごとにちがいます。first（1番目）、third（3番目）など、数の語で ir を使うものは入試によく出ます。',
+    add: fresh(
+      ...[['her', '彼女の', 'er'], ['bird', '鳥', 'ir'], ['turn', '曲がる', 'ur']].flatMap(([a, b, c], i) => [
+        bx(30, 14 + i * 38, 90, 28, a, C.green, FILL.green, 15), lb(170, 28 + i * 38, b, 13, C.ink, 'middle', true), tag(230, 18 + i * 38, 50, c, 'r', 12),
+      ]),
+      lb(160, 132, 'first・third は ir（数の語）', 12, C.red, 'middle', true),
+      ...cap('つづりは語ごとに覚える', C.green),
+    ),
+  },
+  {
+    note: '語の終わりの -er は特に多いつづりです：teacher, water, sister, brother, winter, summer, dinner, letter, computer。「〜する人」を表す -er（teacher）や、比較級の -er も同じ「アー」の音です。',
+    add: fresh(
+      ...rowb(['teacher', 'water', 'sister'], 10, 28, 'g', 12, 10, 310, 6),
+      ...rowb(['brother', 'winter', 'summer'], 44, 28, 'g', 12, 10, 310, 6),
+      ...rowb(['dinner', 'letter', 'computer'], 78, 28, 'g', 12, 10, 310, 6),
+      lb(160, 128, '-er は語の終わりに多い。音は「アー」', 12, C.ink, 'middle', true),
+      ...cap('語の終わりの -er', C.green),
+    ),
+  },
+  {
+    note: 'まとめです。母音字のあとに r が来ると、特別な音になる。ar は「アー」、or は「オー」。er・ir・ur は同じ「アー」なので、つづりは語ごとに覚える。-er は語の終わりに多く、first・third は ir を使います。',
+    add: fresh(
+      bx(15, 10, 290, 24, 'ar ＝ アー　or ＝ オー', C.red, FILL.red, 13),
+      bx(15, 38, 290, 24, 'er・ir・ur ＝ どれも同じ「アー」', C.green, FILL.green, 13),
+      bx(15, 66, 290, 24, 'つづりは語ごとに覚える', C.blue, FILL.blue, 13),
+      bx(15, 94, 290, 24, 'first・third は ir、-er は語の終わり', C.purple, FILL.purple, 12),
+      ...cap('r の前の母音は 特別な音', C.main),
+    ),
+  },
+], 'r のついた母音：ar・or・er・ir・ur');
+
+// ───────── eigo_s018 s で始まる子音連結 ─────────
+const s018: DiagramFigure = show([
+  {
+    note: 's は、ほかの子音（しいん）と組んで語の最初に立つことがとても多い文字です。school, sky, small, snow, speak, stop, swim, sleep のように、s のあとにもう1つ子音が続く形を子音連結（れんけつ）といいます。',
+    add: [
+      ...rowb(['school', 'sky', 'small', 'snow'], 20, 32, 'r', 13, 10, 310, 6),
+      ...rowb(['speak', 'stop', 'swim', 'sleep'], 62, 32, 'r', 13, 10, 310, 6),
+      lb(160, 118, 's ＋ 子音 ＝ 語の最初のかたまり', 13, C.ink, 'middle', true),
+      ...cap('s ＋ 子音 の連結'),
+    ],
+  },
+  {
+    note: 's ＋ 子音（2つ）の仲間です。sc/sk：school, sky, skate, skirt。sm：small, smile, smoke。sn：snow, snake。sp：sport, speak, spring, spoon。st：stop, study, star, student, stand。sw：swim, sweet, sweater。sl：sleep, slow。',
+    add: fresh(
+      ...grid([['連結', '例'], ['sc / sk', 'school  sky  skate'], ['sm', 'small  smile  smoke'], ['sn', 'snow  snake'], ['sp', 'sport  speak  spoon'], ['st', 'stop  study  star'], ['sw / sl', 'swim  sweet  sleep']], 20, 6, [70, 200], 18, ['r', 'b'], 11),
+      ...cap('s ＋ 子音（2つ）', C.main),
+    ),
+  },
+  {
+    note: 'もっと長い連結もあります。s ＋ 子音 ＋ 子音（3つ）：str（street, strong, string, strange）、spr（spring, spread）、scr（scream, screen）、spl（split）、squ（square）。',
+    add: fresh(
+      ...grid([['連結', '例'], ['str', 'street  strong  string'], ['spr', 'spring  spread'], ['scr', 'scream  screen'], ['spl', 'split'], ['squ', 'square']], 20, 10, [70, 200], 20, ['p', 'b'], 12),
+      ...cap('s ＋ 子音 ＋ 子音（3つ）', C.purple),
+    ),
+  },
+  {
+    note: '❓語の最初に立てる子音は、最大でいくつでしょう。→ 最大3つで、しかも1つ目は必ず s です。これは英語の音のきまりで、例外はありません。str・spr・scr・spl・squ はどれも s で始まっています。',
+    add: fresh(
+      ...sent([['s', 'r'], ['t', 'b'], ['r', 'b']], 24, 44, 24, 80, 240, 14), lb(160, 86, '1つ目は必ず s', 13, C.red, 'middle', true),
+      lb(160, 112, '最大3つ。例外なし', 13, C.ink, 'middle', true),
+      ...cap('語頭の子音は最大3つ、はじめは s', C.red),
+    ),
+  },
+  {
+    note: '❓発音で気をつけることは？→ s のあとの p・t・k は、息を強く出しません。だから speak の p は、日本語の「ペ」より「ベ」に近く聞こえます。student の t も「デュ」に近く聞こえることがあります。',
+    add: fresh(
+      bx(20, 20, 130, 44, 'speak\np は「ベ」に近い', C.red, FILL.red, 12), bx(170, 20, 130, 44, 'student\nt は「デュ」に近い', C.blue, FILL.blue, 11),
+      lb(160, 92, 's のあとの p・t・k は 息を強く出さない', 12, C.ink, 'middle', true),
+      ...cap('息を強く出さない', C.red),
+    ),
+  },
+  {
+    note: '❓カタカナで言うと、何がちがってしまうのでしょう。→ street を「ストリート」と言うと、母音が3つ入ってしまいます。英語では s・t・r の3つの子音をひとかたまりで言います。3子音をまとめて練習すると、はっきり聞こえます。',
+    add: fresh(
+      bx(10, 14, 148, 46, 'ストリート\nス・ト・リ・ー・ト', C.red, FILL.red, 12), bx(162, 14, 148, 46, 'street\nstr をひとかたまり', C.green, FILL.green, 12),
+      lb(84, 82, '母音が3つ入る', 12, C.red, 'middle', true), lb(236, 82, 'str を一気に', 12, C.green, 'middle', true),
+      ...cap('3つの子音を ひとかたまりで', C.green),
+    ),
+  },
+  {
+    note: 'まとめです。s は子音と組んで語の最初に立つ。2つ（sk・sm・sn・sp・st・sw・sl）と3つ（str・spr・scr・spl・squ）の連結がある。語頭の子音は最大3つで1つ目は必ず s。s のあとの p・t・k は息を強く出さず、3つの子音はひとかたまりで言います。',
+    add: fresh(
+      bx(15, 10, 290, 24, 's ＋ 子音（sk・sm・sn・sp・st・sw・sl）', C.blue, FILL.blue, 12),
+      bx(15, 38, 290, 24, 's ＋ 子音 ＋ 子音（str・spr・scr・spl・squ）', C.purple, FILL.purple, 11),
+      bx(15, 66, 290, 24, '語頭は最大3つ、はじめは必ず s', C.red, FILL.red, 12),
+      bx(15, 94, 290, 24, 'p・t・k は息を強く出さない', C.green, FILL.green, 12),
+      ...cap('s で始まる連結を ひとかたまりで', C.main),
+    ),
+  },
+], 's で始まる子音連結');
+
 export const XF_CEA_FIGURES: Record<string, DiagramFigure> = {
   'xf_eigo_01_bunpo_kihon': u01,
   'xf_eigo_02_meishi_daimeishi': u02,
@@ -1787,6 +2341,14 @@ export const XF_CEA_FIGURES: Record<string, DiagramFigure> = {
   'xf_eigo_20_tansuu_fukusuu': u20,
   'xf_eigo_21_setsuzokushi': u21,
   'xf_eigo_22_kantanbun': u22,
+  'xf_eigo_s004': s004,
+  'xf_eigo_s007': s007,
+  'xf_eigo_s008': s008,
+  'xf_eigo_s009': s009,
+  'xf_eigo_s013': s013,
+  'xf_eigo_s015': s015,
+  'xf_eigo_s016': s016,
+  'xf_eigo_s018': s018,
 };
 export const XF_CEA_SECTIONS: Record<string, string> = {
   'eigo_01_bunpo_kihon#0': 'xf_eigo_01_bunpo_kihon',
@@ -1811,4 +2373,12 @@ export const XF_CEA_SECTIONS: Record<string, string> = {
   'eigo_20_tansuu_fukusuu#0': 'xf_eigo_20_tansuu_fukusuu',
   'eigo_21_setsuzokushi#1': 'xf_eigo_21_setsuzokushi',
   'eigo_22_kantanbun#2': 'xf_eigo_22_kantanbun',
+  'eigo_s004#1': 'xf_eigo_s004',
+  'eigo_s007#0': 'xf_eigo_s007',
+  'eigo_s008#0': 'xf_eigo_s008',
+  'eigo_s009#0': 'xf_eigo_s009',
+  'eigo_s013#0': 'xf_eigo_s013',
+  'eigo_s015#1': 'xf_eigo_s015',
+  'eigo_s016#0': 'xf_eigo_s016',
+  'eigo_s018#0': 'xf_eigo_s018',
 };

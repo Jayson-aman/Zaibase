@@ -10,13 +10,13 @@ type Mark = Record<number, [string, string]>;
 const cap = (t: string, color: string = C.ink, size = 12): E[] => band(150, lb(160, 190, t, size, color, 'middle', true));
 const cap2 = (t1: string, t2: string, color: string, fill: string): E[] =>
   band(150, lb(160, 165, t1, 11, C.gray, 'middle'), bx(20, 178, 280, 46, t2, color, fill, 13));
-/** 図を足して、下の帯を書きかえる。 */
+// 図を足して、下の帯を書きかえる。
 const S = (note: string, top: E[], c: E[]): Slide => ({ note, add: [...top, ...c] });
-/** 画面全体を白紙にして、新しい図に切りかえる。 */
+// 画面全体を白紙にして、新しい図に切りかえる。
 const F = (note: string, top: E[], c: E[]): Slide => ({ note, add: [...fresh(...top), ...c] });
 const head = (t: string, color: string = C.ink, y = 14): E => lb(160, y, t, 12, color, 'middle', true);
 
-/** 英単語を1文字ずつの箱にして中央そろえで並べる。mark で文字ごとに色を変える。 */
+// 英単語を1文字ずつの箱にして中央そろえで並べる。mark で文字ごとに色を変える。
 const tiles = (word: string, cx: number, y: number, o?: { w?: number; h?: number; size?: number; gap?: number; mark?: Mark; base?: [string, string] }): E[] => {
   const w = o?.w ?? 22;
   const h = o?.h ?? 26;
@@ -35,31 +35,31 @@ const RD: [string, string] = [C.red, FILL.red];
 const GR: [string, string] = [C.green, FILL.green];
 const PU: [string, string] = [C.purple, FILL.purple];
 const YE: [string, string] = [C.main, FILL.yellow];
-/** 範囲 [a,b] の文字に同じ色をつける。 */
+// 範囲 [a,b] の文字に同じ色をつける。
 const rng = (a: number, b: number, m: [string, string], into: Mark = {}): Mark => {
   for (let i = a; i <= b; i++) into[i] = m;
   return into;
 };
-/** 横に等間隔の箱を並べる。 */
+// 横に等間隔の箱を並べる。
 const rowb = (texts: string[], y: number, h: number, color: string, fill: string, size = 12, x0 = 10, x1 = 310, gap = 6): E[] => {
   const n = texts.length;
   const w = (x1 - x0 - gap * (n - 1)) / n;
   return texts.map((t, i) => bx(x0 + i * (w + gap), y, w, h, t, color, fill, size));
 };
-/** 左右に「語」と「ひとこと」を並べた表の1行。 */
+// 左右に「語」と「ひとこと」を並べた表の1行。
 const trow = (y: number, left: string, right: string, color: string, fill: string, lw = 96, h = 24, size = 12): E[] => [
   bx(14, y, lw, h, left, color, fill, size),
   bx(14 + lw + 6, y, 292 - lw - 6, h, right, C.gray, '#FFFFFF', size - 1),
 ];
-/** 語の下に音（ひとこと）を矢印でつなぐ。 */
+// 語の下に音（ひとこと）を矢印でつなぐ。
 const sound = (cx: number, y: number, t: string, color: string, fill: string, w = 70): E[] => [
   ar(cx, y, cx, y + 16, color),
   bx(cx - w / 2, y + 18, w, 24, t, color, fill, 12),
 ];
-/** ×と○を並べる（左が×、右が○）。 */
+// ×と○を並べる（左が×、右が○）。
 const ng = (x: number, y: number, w: number, t: string): E[] => [bx(x, y, w, 30, t, C.red, FILL.red, 13), lb(x + w / 2, y - 7, '×', 12, C.red, 'middle', true)];
 const ok = (x: number, y: number, w: number, t: string): E[] => [bx(x, y, w, 30, t, C.green, FILL.green, 13), lb(x + w / 2, y - 7, '○', 12, C.green, 'middle', true)];
-/** ×の語 → ○の語 を横に並べた1行。 */
+// ×の語 → ○の語 を横に並べた1行。
 const pair = (y: number, bad: string, good: string, w0 = 120): E[] => {
   const w = Math.min(w0, 134);
   return [
@@ -68,30 +68,30 @@ const pair = (y: number, bad: string, good: string, w0 = 120): E[] => {
     bx(306 - w, y, w, 24, good, C.green, FILL.green, 12),
   ];
 };
-/** ×の文 → ○の文 を縦に並べた2段（長い文用）。 */
+// ×の文 → ○の文 を縦に並べた2段（長い文用）。
 const vpair = (y: number, bad: string, good: string): E[] => [
   bx(14, y, 292, 26, bad, C.red, FILL.red, 13),
   ar(160, y + 28, 160, y + 40, C.gray),
   bx(14, y + 42, 292, 26, good, C.green, FILL.green, 13),
 ];
-/** tiles の上に 1,2,3… の番号をふる。 */
+// tiles の上に 1,2,3… の番号をふる。
 const nums = (n: number, cx: number, y: number, w = 22, gap = 2): E[] => {
   const x0 = cx - (n * w + (n - 1) * gap) / 2;
   return Array.from({ length: n }, (_, i) => lb(x0 + i * (w + gap) + w / 2, y, String(i + 1), 9, C.gray, 'middle'));
 };
-/** 音節の区切り：左に語、右へ音節の箱をならべる。 */
+// 音節の区切り：左に語、右へ音節の箱をならべる。
 const sylrow = (y: number, word: string, parts: string[], color: string, fill: string, bw = 56, x0 = 84): E[] => [
   lb(x0 - 8, y + 14, word, 12, C.ink, 'end', true),
   ...parts.map((p, i) => bx(x0 + i * (bw + 4), y, bw, 28, p, color, fill, 12)),
   ci(300, y + 14, 12, String(parts.length), C.main, FILL.yellow, 12),
 ];
-/** 左の箱 → 右の箱（青 → 緑）。 */
+// 左の箱 → 右の箱（青 → 緑）。
 const arow = (y: number, left: string, right: string, lw = 150, size = 12): E[] => [
   bx(14, y, lw, 26, left, C.blue, FILL.blue, size),
   ar(14 + lw + 2, y + 13, 14 + lw + 24, y + 13, C.gray),
   bx(14 + lw + 26, y, 292 - lw - 26, 26, right, C.green, FILL.green, size),
 ];
-/** 文の部品（S・V・M など）を横に並べる。parts は [文字, 種類, 幅] */
+// 文の部品（S・V・M など）を横に並べる。parts は [文字, 種類, 幅]
 const svm = (y: number, parts: [string, 'S' | 'V' | 'M' | 'X', number][], x0 = 10, h = 28): E[] => {
   let x = x0;
   const out: E[] = [];
@@ -113,7 +113,7 @@ const s019: DiagramFigure = show([
     [...tiles('lunch', 160, 22, { mark: rng(3, 4, RD) }), ln(186, 52, 222, 52, C.red), ar(112, 50, 112, 76, C.gray), ar(136, 50, 136, 76, C.gray), ar(160, 50, 160, 76, C.gray), ar(204, 52, 204, 76, C.red),
       ci(112, 90, 12, 'l', C.gray, FILL.gray), ci(136, 90, 12, 'u', C.gray, FILL.gray), ci(160, 90, 12, 'n', C.gray, FILL.gray), ci(204, 90, 16, 'ch', C.red, FILL.red), lb(160, 126, '文字は5つ、音は4つ', 12, C.ink, 'middle', true)],
     cap('ch ＝ 2文字で1つの「チ」', C.red)),
-  F('❓では、watch はなぜ ch ではなく tch と3文字も使うのでしょう。→ 手がかりは、直前の母音（ぼいん）です。watch の a は短い母音、teach の ea は長い母音です。',
+  F('❓では、watch はなぜ ch ではなく tch と3文字も使うのでしょう。→ 手がかりは、直前（ちょくぜん）の母音（ぼいん）です。watch の a は短い母音、teach の ea は長い母音です。',
     [head('watch と teach をくらべる'), ...tiles('watch', 80, 34, { w: 20, mark: { 1: RD, 2: YE, 3: YE, 4: YE } }), ...tiles('teach', 240, 34, { w: 20, mark: { 1: GR, 2: GR, 3: YE, 4: YE } }),
       lb(80, 80, 'a ＝ 短い母音', 11, C.red, 'middle', true), lb(240, 80, 'ea ＝ 長い母音', 11, C.green, 'middle', true),
       bx(40, 96, 80, 26, 'tch で書く', C.main, FILL.yellow, 12), bx(200, 96, 80, 26, 'ch で書く', C.main, FILL.yellow, 12)],
@@ -131,7 +131,7 @@ const s019: DiagramFigure = show([
     [ci(160, 40, 22, 'ch', C.main, FILL.yellow, 16), ar(140, 58, 70, 86, C.blue), ar(160, 62, 160, 86, C.green), ar(180, 58, 250, 86, C.red),
       bx(14, 88, 92, 26, 'チ  chair lunch', C.blue, FILL.blue, 11), bx(114, 88, 92, 26, 'ク  school', C.green, FILL.green, 11), bx(214, 88, 92, 26, 'シュ  machine', C.red, FILL.red, 11), lb(160, 128, 'ch は「チ・ク・シュ」の3通り', 12, C.ink, 'middle', true)],
     cap('school は「スクール」', C.green)),
-  F('まとめです。sh は「シュ」、ch は「チ」。語の終わりの「チ」は、短い母音1字のあとなら tch です。watch を wach と書かないように、「短い音のあとの語末のチは tch」と唱えましょう。',
+  F('まとめです。sh は「シュ」、ch は「チ」。語の終わりの「チ」は、短い母音1字のあとなら tch です。watch を wach と書かないように、「短い音のあとの語末（ごまつ）のチは tch」と唱えましょう。',
     [bx(20, 14, 280, 30, 'sh ＝ シュ（she, fish）', C.blue, FILL.blue, 13), bx(20, 52, 280, 30, 'ch ＝ チ（chair, lunch）', C.red, FILL.red, 13), bx(20, 90, 280, 30, '短い母音1字のあとの語末は tch（watch）', C.main, FILL.yellow, 12)],
     cap('wach ✕  →  watch ○', C.green)),
 ], '二重子音字：sh・ch・tch');
@@ -148,7 +148,7 @@ const s020: DiagramFigure = show([
     [...tiles('black', 160, 22, { mark: rng(3, 4, RD) }), ln(186, 52, 222, 52, C.red), ar(112, 50, 112, 76, C.gray), ar(136, 50, 136, 76, C.gray), ar(160, 50, 160, 76, C.gray), ar(204, 52, 204, 76, C.red),
       ci(112, 90, 12, 'b', C.gray, FILL.gray), ci(136, 90, 12, 'l', C.gray, FILL.gray), ci(160, 90, 12, 'a', C.gray, FILL.gray), ci(204, 90, 16, 'ck', C.red, FILL.red), lb(160, 126, '文字は5つ、音は4つ', 12, C.ink, 'middle', true)],
     cap('ck ＝ 2文字で1つの「ク」', C.red)),
-  F('❓いつ ck を使い、いつ k だけでしょう。→ 短い母音1字のすぐあとの、語の終わりだけ ck です。back・clock・duck は ck。book・week は長い母音のあと、milk・bank は子音（しいん）のあとなので k だけです。tch と同じきまりです。',
+  F('❓いつ ck を使い、いつ k だけでしょう。→ 短い母音（ぼいん）1字のすぐあとの、語の終わりだけ ck です。back・clock・duck は ck。book・week は長い母音のあと、milk・bank は子音（しいん）のあとなので k だけです。tch と同じきまりです。',
     [head('ck と k の使い分け'), ...trow(28, '短い母音のあと', 'back   clock   duck → ck', C.red, FILL.red, 110), ...trow(58, '長い母音のあと', 'book   week   look → k', C.green, FILL.green, 110), ...trow(88, '子音のあと', 'milk   bank   think → k', C.green, FILL.green, 110)],
     cap('black を blak と書かない', C.red)),
   F('ng は「ン」と「グ」の2つではなく、鼻に息をぬく1つの音です。sing は s・i・ng の3つの音です。',
@@ -179,7 +179,7 @@ const s022: DiagramFigure = show([
   F('❓wh はどう読むのでしょう。→ h は読まず、w だけの音になるのがふつうです。what・when・where・which・why・white・whale が仲間です。',
     [...tiles('what', 160, 22, { mark: { 0: BL, 1: RD } }), lb(160, 66, 'h は読まない → w の音だけ', 12, C.red, 'middle', true), ...trow(80, 'wh ＝ w', 'what  when  where  which  why', C.blue, FILL.blue, 70, 24, 11), ...trow(110, 'ほかにも', 'white（白い）  whale（クジラ）', C.blue, FILL.blue, 70, 24, 11)],
     cap('wh の基本は w の音', C.blue)),
-  F('❓では、who はどう読むのでしょう。→ who だけは逆で、w を読まずに h の音になります。who（フー）・whose・whom・whole の4語です。whole（全体の）と hole（あな）は同じ発音です。',
+  F('❓では、who はどう読むのでしょう。→ who だけは逆で、w を読まずに h の音になります。who（フー）・whose・whom・whole の4語です。whole（全体の）と hole（あな）は同じ発音（はつおん）です。',
     [...tiles('who', 160, 22, { mark: { 0: RD, 1: GR, 2: GR } }), lb(160, 66, 'w を読まない → 「フー」', 12, C.red, 'middle', true), bx(30, 82, 260, 30, 'who  whose  whom  whole', C.red, FILL.red, 14), lb(160, 128, 'この4語だけが例外', 12, C.ink, 'middle', true)],
     cap('who は「フー」', C.red)),
   F('同じ発音で意味がちがう組もあります。where（どこ）と wear（着る）、which（どちら）と witch（魔女）、whole と hole です。つづりで見分けます。',
@@ -208,7 +208,7 @@ const s023: DiagramFigure = show([
   F('同じ形の仲間をまとめて覚えます。語の最初の kn は k を読まず、wr は w を読まず、語の終わりの -mb は b を読みません。',
     [head('3つのパターン'), ...trow(26, 'kn（k は読まない）', 'knife  knee  knock  knot', C.red, FILL.red, 110), ...trow(56, 'wr（w は読まない）', 'write  wrong  wrist  wrap', C.red, FILL.red, 110), ...trow(86, '-mb（b は読まない）', 'climb  lamb  thumb  comb', C.red, FILL.red, 110)],
     cap('読まない文字をふくめて書く', C.red)),
-  F('❓なぜ読まないのに書くのでしょう。→ 昔の英語では、これらの文字も実際に発音されていたからです。発音だけが時代とともに変わり、つづりは昔のまま残りました。',
+  F('❓なぜ読まないのに書くのでしょう。→ 昔の英語では、これらの文字も実際に発音（はつおん）されていたからです。発音だけが時代とともに変わり、つづりは昔のまま残りました。',
     [bx(20, 18, 130, 44, '昔の英語\nk も発音した', C.gray, FILL.gray, 12), ar(152, 40, 168, 40, C.main), bx(170, 18, 130, 44, 'いまの英語\n音だけ変わった', C.blue, FILL.blue, 12), bx(20, 78, 280, 30, 'つづりは昔のまま残った', C.main, FILL.yellow, 13)],
     cap('だから音から書けない', C.main)),
   F('❓では、どうやって覚えればよいでしょう。→ 理由を考えても今の音とはつながらないので、同じ形の仲間でまとめて覚えるのがいちばん速いです。write は「ライト」と読みます。',
@@ -217,13 +217,13 @@ const s023: DiagramFigure = show([
   F('サイレントレターのせいで、発音が同じ別の語ができます。know と no、write と right、knight と night、knew と new、hour と our、whole と hole。聞き取りでは意味から決めます。',
     [head('発音が同じ組'), ...trow(26, 'know', 'no（いいえ）', C.purple, FILL.purple, 90, 22, 11), ...trow(50, 'write', 'right（右・正しい）', C.purple, FILL.purple, 90, 22, 11), ...trow(74, 'knight', 'night（夜）', C.purple, FILL.purple, 90, 22, 11), ...trow(98, 'knew', 'new（新しい）', C.purple, FILL.purple, 90, 22, 11), ...trow(122, 'hour', 'our（私たちの）', C.purple, FILL.purple, 90, 22, 11)],
     cap('音は同じ、つづりはちがう', C.purple)),
-  F('❓write と right はどう見分けるのでしょう。→ 意味と文の形で決めます。「書く」という動作なら動詞の write、「右」「正しい」なら right です。',
+  F('❓write と right はどう見分けるのでしょう。→ 意味と文の形で決めます。「書く」という動作なら動詞（どうし）の write、「右」「正しい」なら right です。',
     [bx(14, 18, 140, 40, 'Write your name.', C.blue, FILL.blue, 12), bx(166, 18, 140, 40, 'Turn right.', C.blue, FILL.blue, 12), lb(84, 76, '書きなさい → write', 12, C.ink, 'middle', true), lb(236, 76, '右に曲がれ → right', 12, C.ink, 'middle', true), ar(84, 84, 84, 104, C.blue), ar(236, 84, 236, 104, C.blue), bx(34, 106, 100, 24, '動詞 write', C.blue, FILL.blue, 12), bx(186, 106, 100, 24, '右 right', C.blue, FILL.blue, 12)],
     cap('音が同じなら意味で決める')),
   F('climb に ed を付けても b は残ります。climbed と書きます。climed のように b を落とすと、まちがいです。',
     [...tiles('climbed', 160, 22, { mark: { 4: RD } }), lb(160, 66, 'b は読まないが、書くときは必要', 12, C.red, 'middle', true), ...ng(40, 96, 110, 'climed'), ...ok(170, 96, 110, 'climbed')],
     cap('読まない b も書く', C.red)),
-  F('まとめです。kn・wr・語末の -mb は、書くのに読まない文字です。昔の発音の名残なので、仲間でまとめて覚えます。know を no、write を rite と書かないように、語頭の k と w を意識しましょう。',
+  F('まとめです。kn・wr・語末（ごまつ）の -mb は、書くのに読まない文字です。昔の発音の名残なので、仲間でまとめて覚えます。know を no、write を rite と書かないように、語頭の k と w を意識しましょう。',
     [bx(20, 14, 280, 30, 'kn：know knife knee', C.red, FILL.red, 13), bx(20, 52, 280, 30, 'wr：write wrong wrist', C.red, FILL.red, 13), bx(20, 90, 280, 30, '-mb：climb lamb thumb', C.red, FILL.red, 13)],
     cap('読まない文字も書く', C.main)),
 ], '読まない文字：kn・wr・-mb');
@@ -233,7 +233,7 @@ const s024: DiagramFigure = show([
   S('night の gh は読みません。igh でひとまとまりになって、「アイ」と読みます。light・high・bright も同じです。',
     [...tiles('night', 160, 22, { mark: { 1: BL, 2: RD, 3: RD } }), lb(160, 66, 'igh ＝ 「アイ」（gh は読まない）', 12, C.blue, 'middle', true), bx(30, 82, 260, 30, 'night  light  high  bright', C.blue, FILL.blue, 14)],
     cap('igh ＝ アイ', C.blue)),
-  F('❓ought や augh の gh はどうでしょう。→ これも読みません。bought・thought・caught・taught・daughter は「オー」と読みます。動詞の過去形（かこけい）に多いのが特ちょうです。',
+  F('❓ought や augh の gh はどうでしょう。→ これも読みません。bought・thought・caught・taught・daughter は「オー」と読みます。動詞（どうし）の過去形（かこけい）に多いのが特ちょうです。',
     [head('ought・augh ＝「オー」', C.purple), ...trow(26, 'buy', 'bought', C.purple, FILL.purple, 70, 22, 11), ...trow(50, 'think', 'thought', C.purple, FILL.purple, 70, 22, 11), ...trow(74, 'catch', 'caught', C.purple, FILL.purple, 70, 22, 11), ...trow(98, 'teach', 'taught', C.purple, FILL.purple, 70, 22, 11), lb(160, 132, 'むすめ ＝ daughter も「オー」', 11, C.ink, 'middle', true)],
     cap('過去形に gh が多い', C.purple)),
   F('❓gh はいつも読まないのでしょうか。→ いいえ。laugh・enough・cough・tough では gh が f の音になります。laugh は「ラフ」、enough は「イナフ」です。',
@@ -277,10 +277,10 @@ const s025: DiagramFigure = show([
   F('❓g はいつも きまりどおりでしょうか。→ いいえ。get・give・girl・gift・begin・forget・together・tiger は、e・i の前なのに「グ」です。日常でよく使う語なので、先に覚えます。',
     [head('e・i の前なのに「グ」', C.red), ...tiles('girl', 66, 30, { w: 20, mark: { 0: RD } }), ...tiles('get', 160, 30, { w: 20, mark: { 0: RD } }), ...tiles('give', 254, 30, { w: 20, mark: { 0: RD } }), lb(160, 82, 'gift  begin  forget  together  tiger', 12, C.ink, 'middle', true), lb(160, 108, '例外のほうを先に覚える', 12, C.red, 'middle', true)],
     cap('girl は「ガール」', C.red)),
-  F('語の終わりで「ジ」の音になるときは、e を付けて -ge と書きます（age・page・large・change）。短い母音のあとなら dge です（bridge・edge・judge）。ck や tch と同じ考え方です。',
+  F('語の終わりで「ジ」の音になるときは、e を付けて -ge と書きます（age・page・large・change）。短い母音（ぼいん）のあとなら dge です（bridge・edge・judge）。ck や tch と同じ考え方です。',
     [head('語の終わりの「ジ」'), ...trow(26, '-ge', 'age  page  large  change', C.red, FILL.red, 70), ...trow(56, '-dge', 'bridge  edge  judge', C.red, FILL.red, 70), lb(160, 104, '短い母音1字のあとは dge', 12, C.main, 'middle', true)],
     cap('g だけで語を終えない', C.red)),
-  F('まとめです。c は「e・i・y の前なら ス、それ以外は ク」で確実に決まります。g は「e・i・y の前なら ジが多い」ですが、get・give・girl などの例外があります。',
+  F('まとめです。c は「e・i・y の前なら ス、それ以外は ク」で確実に決まります。g は「e・i・y の前なら ジが多い」ですが、get・give・girl などの例外（れいがい）があります。',
     [bx(20, 14, 280, 34, 'c：e・i・y の前 → ス、ほかは ク', C.blue, FILL.blue, 13), bx(20, 56, 280, 34, 'g：e・i・y の前 → ジが多い', C.red, FILL.red, 13), bx(20, 98, 280, 28, '例外：get give girl gift', C.purple, FILL.purple, 13)],
     cap('c のほうが確実', C.main)),
 ], 'つづりの例外：c と g');
@@ -296,8 +296,8 @@ const s027: DiagramFigure = show([
   F('❓cake は母音字が a と e の2つありますが、何音節でしょう。→ 1音節です。e は読まないので、母音の音は「エイ」ひとつだけ。rain も a と i の2文字で「エイ」1つの音です。数えるのは母音の「字」ではなく「音」です。',
     [...tiles('cake', 80, 24, { mark: { 1: BL, 3: RD } }), ...tiles('rain', 240, 24, { mark: { 1: BL, 2: BL } }), lb(80, 70, 'e は読まない', 11, C.red, 'middle'), lb(240, 70, 'ai ＝ エイ 1つ', 11, C.blue, 'middle'), bx(40, 86, 80, 28, '1音節', C.main, FILL.yellow, 14), bx(200, 86, 80, 28, '1音節', C.main, FILL.yellow, 14)],
     cap('母音字の数 ≠ 母音の音の数', C.red)),
-  F('体でも確かめられます。あごの下に手のこうをあてて、ゆっくり発音します。母音を出すときにあごが下がるので、下がった回数が音節の数です。strike はあごが下がるのが1回、つまり1音節です。',
-    [ci(90, 54, 36, undefined, C.gray, FILL.warm), ci(78, 46, 3, undefined, C.gray, C.gray), ci(102, 46, 3, undefined, C.gray, C.gray), ln(78, 70, 102, 70, C.gray), lb(90, 102, 'あご', 11, C.ink, 'middle', true), bx(50, 112, 80, 24, '手のこう', C.main, FILL.yellow, 11), ar(90, 112, 90, 106, C.main), bx(180, 30, 120, 34, 'strike', C.red, FILL.red, 16), lb(240, 84, 'あごが下がるのは', 11, C.ink, 'middle'), lb(240, 104, '1回 → 1音節', 13, C.red, 'middle', true)],
+  F('体でも確かめられます。あごの下に手のこうをあてて、ゆっくり発音（はつおん）します。母音を出すときにあごが下がるので、下がった回数が音節の数です。strike はあごが下がるのが1回、つまり1音節です。',
+    [ci(90, 54, 36, undefined, C.gray, FILL.warm), ci(78, 46, 3, undefined, C.gray, C.gray), ci(102, 46, 3, undefined, C.gray, C.gray), ln(78, 70, 102, 70, C.gray),  bx(34, 108, 112, 24, '手のこう（あごの下）', C.main, FILL.yellow, 11), ar(90, 108, 90, 92, C.main), bx(180, 30, 120, 34, 'strike', C.red, FILL.red, 16), lb(240, 84, 'あごが下がるのは', 11, C.ink, 'middle'), lb(240, 104, '1回 → 1音節', 13, C.red, 'middle', true)],
     cap('あごが下がった回数を数える', C.main)),
   F('音節の数が分かると、長い語も読めます。beautiful は beau・ti・ful の3音節、computer は com・pu・ter の3音節、interesting は in・ter・est・ing の4音節です。',
     [...sylrow(14, 'beautiful', ['beau', 'ti', 'ful'], C.blue, FILL.blue, 52), ...sylrow(52, 'computer', ['com', 'pu', 'ter'], C.blue, FILL.blue, 52), ...sylrow(90, 'interesting', ['in', 'ter', 'est', 'ing'], C.blue, FILL.blue, 44)],
@@ -349,10 +349,10 @@ const s034: DiagramFigure = show([
   S('ローマ字と英語は、同じアルファベットを使いますが、まったく別のきまりで動いています。ローマ字は日本語を書くための道具で、英語のつづりのきまりとは別ものです。',
     [bx(14, 20, 124, 56, 'ローマ字\n日本語を書く道具', C.green, FILL.green, 12), lb(160, 48, '≠', 22, C.red, 'middle', true), bx(182, 20, 124, 56, '英語\n英語のきまり', C.blue, FILL.blue, 12), lb(160, 110, '同じ文字でも ちがうルール', 12, C.ink, 'middle', true)],
     cap('頭を切りかえる', C.main)),
-  F('ローマ字では、a・i・u・e・o が ア・イ・ウ・エ・オ の1つの音だけを表します。つづりを見れば読み方が必ず決まり、例外がありません。',
+  F('ローマ字では、a・i・u・e・o が ア・イ・ウ・エ・オ の1つの音だけを表します。つづりを見れば読み方が必ず決まり、例外（れいがい）がありません。',
     [head('ローマ字のきまり', C.green), ...rowb(['a\nア', 'i\nイ', 'u\nウ', 'e\nエ', 'o\nオ'], 28, 50, C.green, FILL.green, 13), lb(160, 104, '1つの文字 ＝ 1つの音', 13, C.ink, 'middle', true), lb(160, 128, 'ke ＝ け   ike ＝ いけ', 12, C.gray, 'middle')],
     cap('例外のないルール', C.green)),
-  F('❓like をローマ字のきまりで読むとどうなるでしょう。→ 語末の e も「エ」と読んで「リケ」になってしまいます。でも英語では、語末の e は読まず、「ライク」です。',
+  F('❓like をローマ字のきまりで読むとどうなるでしょう。→ 語末（ごまつ）の e も「エ」と読んで「リケ」になってしまいます。でも英語では、語末の e は読まず、「ライク」です。',
     [...tiles('like', 160, 18, { mark: { 3: RD } }), lb(160, 62, '語末の e は読まない', 12, C.red, 'middle', true), ...ng(40, 90, 110, 'リケ'), ...ok(170, 90, 110, 'ライク')],
     cap('ローマ字読みは ×', C.red)),
   F('name も同じです。ローマ字読みでは「ナメ」ですが、英語では語末の e を読まず、そのかわり a がアルファベットの名前（エイ）で読まれて「ネイム」になります。これをマジック e といいます。',
@@ -367,10 +367,10 @@ const s034: DiagramFigure = show([
   F('u と ei も同じです。英語の u は、cup では「ア」に近く、use では「ユー」。ei は、ローマ字の sensei では「エイ」ですが、英語では receive の「イー」や eight の「エイ」です。',
     [head('英語は1つの文字に読みがいくつもある'), ...trow(26, 'u', 'ローマ字 ウ ／ 英語 ア・ユー', C.purple, FILL.purple, 50, 28), ...trow(62, 'ei', 'ローマ字 エイ ／ 英語 イー・エイ', C.purple, FILL.purple, 50, 28)],
     cap('文字の音は言語ごとにちがう', C.purple)),
-  F('日本語がそのまま英語になった語もあります。sushi・tempura・judo・origami・tsunami・manga などは、つづりはローマ字に近いままですが、発音は英語風になります。',
+  F('日本語がそのまま英語になった語もあります。sushi・tempura・judo・origami・tsunami・manga などは、つづりはローマ字に近いままですが、発音（はつおん）は英語風になります。',
     [head('日本語から英語になった語'), ...rowb(['sushi', 'tempura', 'judo'], 28, 30, C.green, FILL.green, 13), ...rowb(['origami', 'tsunami', 'manga'], 68, 30, C.green, FILL.green, 13), lb(160, 126, 'つづりはローマ字に近い・音は英語風', 12, C.ink, 'middle', true)],
     cap('音は英語風になる', C.green)),
-  F('まとめです。ローマ字は日本語を書く道具で、英語のつづりのきまりとは別ものです。英語の語を見たら、まず「短い母音・長い母音・マジック e」を思い出し、ローマ字のきまりは頭からはなしましょう。',
+  F('まとめです。ローマ字は日本語を書く道具で、英語のつづりのきまりとは別ものです。英語の語を見たら、まず「短い母音（ぼいん）・長い母音・マジック e」を思い出し、ローマ字のきまりは頭からはなしましょう。',
     [bx(20, 14, 280, 30, 'ローマ字 ＝ 日本語を書く道具', C.green, FILL.green, 13), bx(20, 52, 280, 30, '英語 ＝ マジック e や読まない文字がある', C.blue, FILL.blue, 12), bx(20, 90, 280, 30, 'like ＝ ライク（リケ ✕）', C.red, FILL.red, 13)],
     cap('ローマ字のくせを切りはなす', C.main)),
 ], 'ローマ字読みで英語を読まない');
@@ -380,7 +380,7 @@ const s035: DiagramFigure = show([
   S('英語の文で自分の名前を書くとき、姓（せい）も名（めい）も、最初の1文字を大文字にします。姓と名のあいだは1文字分あけます。',
     [...pair(22, 'kota sato', 'Kota Sato', 126), ...tiles('Kota', 90, 78, { mark: { 0: RD } }), ...tiles('Sato', 230, 78, { mark: { 0: RD } }), lb(160, 126, '最初の1文字が大文字（赤）', 12, C.red, 'middle', true)],
     cap('姓も名も大文字で始める', C.red)),
-  F('❓どちらを先に書くのでしょう。→ 昔は「名－姓」(Kota Sato) がふつうでしたが、いまは「姓－名」(Sato Kota) が公用文の原則です。どちらでも通じるので、学校の指示があればそれに従います。答案の中では順番をそろえます。',
+  F('❓どちらを先に書くのでしょう。→ 昔は「名－姓」(Kota Sato) がふつうでしたが、いまは「姓－名」(Sato Kota) が公用文（こうようぶん）の原則です。どちらでも通じるので、学校の指示があればそれに従います。答案の中では順番をそろえます。',
     [bx(14, 18, 140, 40, 'Kota Sato\n名 － 姓', C.blue, FILL.blue, 13), bx(166, 18, 140, 40, 'Sato Kota\n姓 － 名', C.green, FILL.green, 13), lb(84, 76, 'かつての書き方', 11, C.gray, 'middle'), lb(236, 76, 'いまの原則（公用文）', 11, C.gray, 'middle'), bx(40, 92, 240, 30, '答案の中では順番をそろえる', C.main, FILL.yellow, 13)],
     cap('指示があれば、その順に', C.main)),
   F('❓姓と名を取りちがえられないようにするには？ → 姓をすべて大文字で書く方法があります。SATO Kota と書けば、SATO が姓だとはっきりします。',
@@ -412,7 +412,7 @@ const s036: DiagramFigure = show([
     [...tiles('Wednesday', 108, 8, { w: 20, gap: 1, h: 26, size: 14, mark: { 2: RD } }), lb(216, 21, 'd を落とさない', 12, C.red, 'start', true), ...tiles('Thursday', 108, 40, { w: 20, gap: 1, h: 26, size: 14, mark: { 3: RD } }), lb(216, 53, 'r を落とさない', 12, C.red, 'start', true),
       ...tiles('Tuesday', 108, 72, { w: 20, gap: 1, h: 26, size: 14, mark: { 1: RD, 2: RD } }), lb(216, 85, 'u → e の順', 12, C.red, 'start', true), ...tiles('Saturday', 108, 104, { w: 20, gap: 1, h: 26, size: 14, mark: { 3: RD } }), lb(216, 117, 'u を書く', 12, C.red, 'start', true)],
     cap('赤い文字が落としやすい', C.red)),
-  F('❓なぜ聞こえない文字があるのでしょう。→ 英語のつづりは、昔の発音のまま残っているからです。Wednesday はもともと「ウォーデンの日」という意味で、発音が変わっても文字は変わりませんでした。',
+  F('❓なぜ聞こえない文字があるのでしょう。→ 英語のつづりは、昔の発音（はつおん）のまま残っているからです。Wednesday はもともと「ウォーデンの日」という意味で、発音が変わっても文字は変わりませんでした。',
     [bx(14, 20, 130, 44, '昔\nウォーデンの日', C.gray, FILL.gray, 12), ar(146, 42, 172, 42, C.main), bx(176, 20, 130, 44, 'いま\nWednesday', C.blue, FILL.blue, 13), lb(160, 90, '発音は変わった ／ 文字は昔のまま', 12, C.red, 'middle', true), lb(160, 116, '→ 音のとおりに書くと文字が落ちる', 12, C.ink, 'middle')],
     cap('音だけが変わった', C.main)),
   F('❓では、どう覚えればよいでしょう。→ 書く用の読み方で区切ります。Wednesday は「ウェド・ネス・デイ」、Tuesday は Tues＋day、Thursday は Thurs＋day、Saturday は Sat＋ur＋day です。',
@@ -424,7 +424,7 @@ const s036: DiagramFigure = show([
   F('❓なぜ文のとちゅうでも大文字なのでしょう。→ 曜日と月は固有名詞（こゆうめいし）で、人名・地名・曜日・月の名前は大文字で始めるきまりだからです。',
     [head('固有名詞は大文字で始める'), ...rowb(['人名\nKen', '地名\nTokyo', '曜日\nMonday', '月\nJune'], 26, 44, C.blue, FILL.blue, 12), ...pair(90, 'on sunday', 'on Sunday', 126)],
     cap('小文字だと不正解', C.red)),
-  F('前置詞（ぜんちし）は決まった組み合わせです。曜日の前には on（on Monday）、月の前には in（in June）、日付まで言うときは on（on June 10）。June 10 は序数で読んで「ジューン・テンス」です。',
+  F('前置詞（ぜんちし）は決まった組み合わせです。曜日の前には on（on Monday）、月の前には in（in June）、日付まで言うときは on（on June 10）。June 10 は序数（じょすう）で読んで「ジューン・テンス」です。',
     [head('on と in'), ...trow(26, 'on ＋ 曜日', 'on Sunday   on Monday', C.purple, FILL.purple, 100, 26), ...trow(58, 'in ＋ 月', 'in June   in April', C.purple, FILL.purple, 100, 26), ...trow(90, 'on ＋ 日付', 'on June 10（June tenth）', C.purple, FILL.purple, 100, 26)],
     cap('on ＋ 曜日、in ＋ 月', C.purple)),
   F('確かめのしかたです。①大文字で始まっているか ②落としやすい文字（Wednesday の d、Thursday の r、Saturday の u、February の r、August の t）を書いたか ③区切って読めるか ④on・in を正しく使ったか。',
@@ -434,7 +434,7 @@ const s036: DiagramFigure = show([
 
 // ───────── eigo_s037 まちがえやすいつづり②：弱く読む部分がある語 ─────────
 const s037: DiagramFigure = show([
-  S('favorite（お気に入りの）を、聞こえたとおりに書くと favrite になりやすい語です。まん中の o は発音では弱く、ほとんど聞こえません。でも、書くときには必要です。',
+  S('favorite（お気に入りの）を、聞こえたとおりに書くと favrite になりやすい語です。まん中の o は発音（はつおん）では弱く、ほとんど聞こえません。でも、書くときには必要です。',
     [...tiles('favorite', 160, 22, { w: 22, gap: 2, mark: { 3: RD } }), lb(160, 66, 'o が消えて聞こえる', 12, C.red, 'middle', true), ...ng(40, 90, 110, 'favrite'), ...ok(170, 90, 110, 'favorite')],
     cap('聞こえない o も書く', C.red)),
   F('❓なぜ消えるのでしょう。→ 英語では、強く読まない音節の母音（ぼいん）は弱くあいまいになり、ほとんど聞こえなくなるからです。favorite は fa・vo・rite の3音節ですが、耳には2音節に近く聞こえます。',
@@ -474,13 +474,13 @@ const s038: DiagramFigure = show([
   F('重ねる語を仲間でまとめます。r は tomorrow・sorry・carry・hurry、n は dinner・tennis、m は summer、p は happy・apple、t は letter・better・little、そのほかに soccer・hobby・address があります。',
     [...trow(10, 'r', 'tomorrow  sorry  carry  hurry', C.red, FILL.red, 60, 22, 12), ...trow(36, 'n', 'dinner  tennis  running', C.red, FILL.red, 60, 22, 12), ...trow(62, 'm ・ p', 'summer  happy  apple', C.red, FILL.red, 60, 22, 12), ...trow(88, 't', 'letter  better  little', C.red, FILL.red, 60, 22, 12), ...trow(114, 'ほか', 'soccer  hobby  address', C.red, FILL.red, 60, 22, 12)],
     cap('二重にする文字は赤', C.red)),
-  F('❓run に ing を付けると、なぜ running になるのでしょう。→ 最後の子音を重ねるきまりがあるからです。重ねるのは、3つの条件がそろったときだけです。',
+  F('❓run に ing を付けると、なぜ running になるのでしょう。→ 最後の子音（しいん）を重ねるきまりがあるからです。重ねるのは、3つの条件（じょうけん）がそろったときだけです。',
     [...tiles('run', 62, 30, { mark: { 2: RD } }), ar(104, 43, 150, 43, C.main), lb(127, 34, '＋ing', 11, C.main, 'middle'), ...tiles('running', 235, 30, { w: 20, mark: { 2: RD, 3: RD } }), lb(160, 90, '最後の n を重ねてから ing', 12, C.ink, 'middle', true)],
     cap('子音を重ねてから ing', C.red)),
-  F('3つの条件です。①1音節の語（または最後の音節を強く読む語）②母音字が1つだけ ③子音字1つで終わる。run→running、swim→swimming、sit→sitting、stop→stopping、big→bigger、begin→beginning が当てはまります。',
+  F('3つの条件です。①1音節の語（または最後の音節を強く読む語）②母音（ぼいん）字が1つだけ ③子音字1つで終わる。run→running、swim→swimming、sit→sitting、stop→stopping、big→bigger、begin→beginning が当てはまります。',
     [...rowb(['① 1音節\n(最後の音節を強く)', '② 母音字が\n1つだけ', '③ 子音字1つ\nで終わる'], 14, 46, C.blue, FILL.blue, 11, 10, 310, 6), ar(160, 62, 160, 73, C.main), bx(30, 76, 260, 20, 'run → running     swim → swimming', C.main, FILL.yellow, 11), bx(30, 99, 260, 20, 'sit → sitting     stop → stopping', C.main, FILL.yellow, 11), bx(30, 122, 260, 20, 'big → bigger     begin → beginning', C.main, FILL.yellow, 11)],
     cap('3つそろったら重ねる', C.main)),
-  F('❓重ねない語はどんな語でしょう。→ 母音字が2つある語（read→reading）、子音字が2つ続く語（help→helping）、語末が e の語（make→making）、最後の音節を強く読まない語（visit→visiting）です。',
+  F('❓重ねない語はどんな語でしょう。→ 母音字が2つある語（read→reading）、子音字が2つ続く語（help→helping）、語末（ごまつ）が e の語（make→making）、最後の音節を強く読まない語（visit→visiting）です。',
     [head('重ねない場合'), ...trow(24, '母音字が2つ', 'read → reading', C.green, FILL.green, 110, 24), ...trow(52, '子音字が2つ続く', 'help → helping', C.green, FILL.green, 110, 24), ...trow(80, '語末が e', 'make → making', C.green, FILL.green, 110, 24), ...trow(108, '強く読まない', 'visit → visiting', C.green, FILL.green, 110, 24)],
     cap('条件がひとつでも欠けたら重ねない', C.green)),
   F('重ねるかどうかで、意味がかわる語もあります。hop（ぴょんと跳ぶ）は hopping、hope（望む）は hoping。1文字ちがいでまったく別の語になります。plan は planning、play は playing です。',
@@ -521,13 +521,13 @@ const s039: DiagramFigure = show([
 
 // ───────── eigo_s040 総仕上げ：書き取り（ディクテーション）の手順 ─────────
 const s040: DiagramFigure = show([
-  S('書き取り（ディクテーション）は、3回に分けて進めます。1回目は書かずに意味をつかみ、2回目は語を書き、3回目に点検します。手順を決めておくと、聞きもらしても立て直せます。',
+  S('書き取り（ディクテーション）は、3回に分けて進めます。1回目は書かずに意味をつかみ、2回目は語を書き、3回目に点検（てんけん）します。手順（てじゅん）を決めておくと、聞きもらしても立て直せます。',
     [bx(8, 20, 92, 60, '1回目\n聞いて\n意味をつかむ', C.blue, FILL.blue, 11), ar(100, 50, 114, 50, C.main), bx(114, 20, 92, 60, '2回目\n語を書く', C.green, FILL.green, 10), ar(206, 50, 220, 50, C.main), bx(220, 20, 92, 60, '3回目\n点検する', C.red, FILL.red, 11)],
     cap('聞く → 書く → 点検', C.main)),
-  F('❓2回目で聞き取れない所があったら？ → 空白にして下線を引き、先へ進みます。全部を書こうとして止まると、そのあとを聞きのがすからです。',
+  F('❓2回目で聞き取れない所があったら？ → 空白（くうはく）にして下線を引き、先へ進みます。全部を書こうとして止まると、そのあとを聞きのがすからです。',
     [bx(14, 20, 292, 36, 'He ______ soccer every day.', C.gray, FILL.gray, 14), ar(110, 60, 110, 80, C.main), bx(40, 82, 150, 28, 'あとで 3回目に補う', C.main, FILL.yellow, 12), lb(160, 128, '止まらずに先へ進む', 12, C.ink, 'middle', true)],
     cap('空白にして先へ進む', C.main)),
-  F('❓聞こえなかった弱い語は、どう補うのでしょう。→ 文法で決まっているので、知識で補えます。He play soccer. と聞こえても、主語が He で現在の文なら plays に決まります。',
+  F('❓聞こえなかった弱い語は、どう補うのでしょう。→ 文法（ぶんぽう）で決まっているので、知識（ちしき）で補えます。He play soccer. と聞こえても、主語（しゅご）が He で現在（げんざい）の文なら plays に決まります。',
     [...ng(14, 22, 130, 'He play soccer.'), ...ok(176, 22, 130, 'He plays soccer.'), lb(160, 76, '主語 He ＋ 現在の文', 12, C.ink, 'middle', true), ar(160, 84, 160, 100, C.main), bx(110, 102, 100, 26, '動詞に s', C.main, FILL.yellow, 13)],
     cap('弱い -s は文法で補う', C.main)),
   F('two cat と聞こえたら、two（2つ）があるので cats に決まります。a・the・to・of・and のような弱く短い語も、文の意味と文法から補えます。',
@@ -536,7 +536,7 @@ const s040: DiagramFigure = show([
   F('音がつながって聞こえる所は、知っている語に分けます。an apple は「アナポー」、a lot of は「アロラヴ」、want to は「ワナ」に近く聞こえます。',
     [head('音のつながりをほどく'), ...trow(26, 'an apple', 'アナポー → an ＋ apple', C.purple, FILL.purple, 90, 26), ...trow(60, 'a lot of', 'アロラヴ → a ＋ lot ＋ of', C.purple, FILL.purple, 90, 26), ...trow(94, 'want to', 'ワナ → want ＋ to', C.purple, FILL.purple, 90, 26)],
     cap('かたまりを語に分ける', C.purple)),
-  F('3回目の点検は6つです。①文の最初は大文字か ②人名・地名・曜日・月・I は大文字か ③ピリオド（.）か ? があるか ④三単現（さんたんげん）の s ⑤複数の s ⑥過去形。',
+  F('3回目の点検は6つです。①文の最初は大文字か ②人名・地名・曜日（ようび）・月・I は大文字か ③ピリオド（.）か ? があるか ④三単現（さんたんげん）の s ⑤複数（ふくすう）の s ⑥過去形（かこけい）。',
     [...rowb(['① 文頭は\n大文字', '② 人名・地名\n曜日・月・I'], 10, 40, C.blue, FILL.blue, 11, 10, 310, 8), ...rowb(['③ 文末の\n. か ?', '④ 三単現の s'], 56, 40, C.green, FILL.green, 11, 10, 310, 8), ...rowb(['⑤ 複数の s', '⑥ 過去形'], 102, 40, C.red, FILL.red, 11, 10, 310, 8)],
     cap('6つの点検を毎回する', C.main)),
   F('知らない語が出ても、空白にしません。「キャット」と聞こえたら短い a で cat、「ネイム」と聞こえたらマジック e で name と、フォニックスで音から組み立てます。部分点がもらえることもあります。',
@@ -568,7 +568,7 @@ const s041: DiagramFigure = show([
   F('形容詞（けいようし）が来る文ほど、be動詞を落としやすいので注意です。She kind. ではなく She is kind.、We happy. ではなく We are happy.、I hungry. ではなく I am hungry. です。',
     [head('形容詞だけでは文にならない'), ...pair(26, 'She kind.', 'She is kind.'), ...pair(62, 'We happy.', 'We are happy.'), ...pair(98, 'I hungry.', 'I am hungry.')],
     cap('kind・happy・hungry は形容詞', C.red)),
-  F('あとに来る語が数えられる名詞の単数なら、a（母音の音で始まる語には an）を付けます。I am a doctor.（私は医者です）、He is an English teacher.（彼は英語の先生です）。',
+  F('あとに来る語が数えられる名詞（めいし）の単数（たんすう）なら、a（母音の音で始まる語には an）を付けます。I am a doctor.（私は医者です）、He is an English teacher.（彼は英語の先生です）。',
     [head('a と an'), ...trow(28, 'I am ＋ a', 'a doctor  （医者）', C.blue, FILL.blue, 80, 28, 13), ...trow(66, 'He is ＋ an', 'an English teacher  （母音の音で始まる）', C.blue, FILL.blue, 80, 28, 12), lb(160, 118, '数えられる名詞が1つのとき', 12, C.ink, 'middle', true)],
     cap('名詞が来たら a / an を確かめる', C.blue)),
   F('ただし、人の名前のように1つしかないものには a を付けません。I am Ken.（○）、I am a Ken.（✕）です。',
@@ -581,7 +581,7 @@ const s041: DiagramFigure = show([
 
 // ───────── eigo_s043 be動詞③：主語になる代名詞 ─────────
 const s043: DiagramFigure = show([
-  S('同じ名詞をくり返さないために、二度目からは代名詞（だいめいし）に置きかえます。主語になる代名詞は、I・you・he・she・it・we・they の7つです。',
+  S('同じ名詞（めいし）をくり返さないために、二度目からは代名詞（だいめいし）に置きかえます。主語（しゅご）になる代名詞は、I・you・he・she・it・we・they の7つです。',
     [head('主語になる代名詞'), ...rowb(['I', 'you', 'he', 'she'], 28, 36, C.blue, FILL.blue, 15), ...rowb(['it', 'we', 'they'], 74, 36, C.blue, FILL.blue, 15, 10, 240, 6)],
     cap('7つを押さえる', C.blue)),
   F('一人・一つのときです。he は男性一人、she は女性一人、it は人以外の一つ。Ken → he、Mika → she、this bag → it になります。',
@@ -596,7 +596,7 @@ const s043: DiagramFigure = show([
   F('自分は入らず、相手が入っているときは you です（You and Tom → you）。自分も相手も入っていなければ they です（Ken and Mika → they、My father and mother → they）。',
     [head('自分が入るか、相手が入るか'), ...arow(26, 'You and Tom', 'you', 170, 13), ...arow(62, 'Ken and Mika', 'they', 170, 13), ...arow(98, 'My father and mother', 'they', 170, 12)],
     cap('入っているのはだれ？', C.main)),
-  F('❓代名詞が決まると、be動詞も決まるのでしょうか。→ はい。I は am、he・she・it は is、you・we・they は are です。主語を代名詞に置きかえてから be動詞を選ぶと、まちがいが減ります。',
+  F('❓代名詞が決まると、be動詞（どうし）も決まるのでしょうか。→ はい。I は am、he・she・it は is、you・we・they は are です。主語を代名詞に置きかえてから be動詞を選ぶと、まちがいが減ります。',
     [head('代名詞 → be動詞'), ...trow(26, 'I', 'am', C.red, FILL.red, 110, 28, 14), ...trow(62, 'he / she / it', 'is', C.red, FILL.red, 110, 28, 14), ...trow(98, 'you / we / they', 'are', C.red, FILL.red, 110, 28, 14)],
     cap('代名詞が決まれば be動詞も決まる', C.red)),
   F('犬やねこなど、人以外の動物は it で受けるのが基本です。That dog is very big. は It is very big. になります。飼っている動物を he や she と呼ぶこともありますが、入試で「代名詞にかえよ」と問われたら it です。',
@@ -612,7 +612,7 @@ const s044: DiagramFigure = show([
   S("会話では、I am を I'm のようにつづめます。これを短縮形（たんしゅくけい）といいます。アポストロフィ（'）は、文字を省いた（はぶいた）しるしです。",
     [bx(30, 40, 100, 34, 'I am', C.gray, FILL.gray, 16), ar(134, 57, 174, 57, C.main), bx(180, 40, 110, 34, "I'm", C.green, FILL.green, 16), lb(160, 100, "a を省いたところに ' を置く", 12, C.red, 'middle', true)],
     cap("' ＝ 文字を省いたしるし", C.red)),
-  F("〈主語＋be動詞〉は、you're・he's・she's・it's・we're・they're・that's のようにつづまります。",
+  F("〈主語（しゅご）＋be動詞（どうし）〉は、you're・he's・she's・it's・we're・they're・that's のようにつづまります。",
     [head('主語＋be動詞'), ...rowb(["you are\n→ you're", "he is\n→ he's", "she is\n→ she's", "it is\n→ it's"], 26, 44, C.blue, FILL.blue, 11), ...rowb(["we are\n→ we're", "they are\n→ they're", "that is\n→ that's"], 78, 44, C.blue, FILL.blue, 11, 10, 240, 6)],
     cap('主語と be動詞をつづめる', C.blue)),
   F("〈be動詞＋not〉は、is not → isn't、are not → aren't です。省いた文字（o）のあった場所にアポストロフィを置くので、位置をまちがえません。",
@@ -640,7 +640,7 @@ const s044: DiagramFigure = show([
 
 // ───────── eigo_s045 be動詞⑤：「〜にいる・〜にある」 ─────────
 const s045: DiagramFigure = show([
-  S('be動詞には、「〜です（＝）」のほかに、「〜にいる・〜にある」という意味もあります。うしろに場所を表す語が来ると、この「存在（そんざい）」の意味になります。',
+  S('be動詞（どうし）には、「〜です（＝）」のほかに、「〜にいる・〜にある」という意味もあります。うしろに場所を表す語が来ると、この「存在（そんざい）」の意味になります。',
     [bx(14, 26, 140, 54, 'He is a doctor.\n〜です（＝）', C.blue, FILL.blue, 12), bx(166, 26, 140, 54, 'My father is in\nthe kitchen.\n〜にいる', C.green, FILL.green, 11), lb(160, 110, 'うしろが場所なら「いる・ある」', 12, C.ink, 'middle', true)],
     cap('be動詞の2つの意味', C.main)),
   F('場所を表す語です。in（〜の中に）・on（〜の上に）・under（〜の下に）・near（〜の近くに）・by（〜のそばに）・at（〜に）。どの意味でも am / is / are の使い分けは変わりません。',
@@ -653,7 +653,7 @@ const s045: DiagramFigure = show([
   F('「〜がある・〜がいる」と、聞き手がまだ知らないものを新しく話題に出すときは、There is / There are で始めます。There is a cat under the table.（テーブルの下にねこが一匹います）。',
     [bx(14, 14, 292, 28, 'There is a cat under the table.', C.blue, FILL.blue, 13), bx(14, 56, 292, 30, 'There is ＋ 単数のもの ＋ 場所', C.green, FILL.green, 13), bx(14, 94, 292, 30, 'There are ＋ 複数のもの ＋ 場所', C.green, FILL.green, 13)],
     cap('新しく話題に出すとき', C.blue)),
-  F('❓is と are は、どう決めるのでしょう。→ There のうしろの名詞に合わせます。There は数を決めません。There are three parks in my town. は、three parks が複数なので are です。',
+  F('❓is と are は、どう決めるのでしょう。→ There のうしろの名詞（めいし）に合わせます。There は数を決めません。There are three parks in my town. は、three parks が複数（ふくすう）なので are です。',
     [bx(14, 34, 70, 30, 'There', C.gray, FILL.gray, 14), bx(112, 34, 60, 30, 'are', C.red, FILL.red, 14), bx(206, 34, 100, 30, 'three parks', C.blue, FILL.blue, 13), ar(203, 49, 175, 49, C.red), lb(160, 98, 'うしろの名詞が複数 → are', 13, C.red, 'middle', true), lb(160, 122, 'There は数を決めない', 12, C.gray, 'middle')],
     cap('There のうしろの名詞を数える', C.red)),
   F('❓My book は There is で言えるでしょうか。→ 言えません。the・my・this が付いた「すでに決まったもの」は、There is のあとに置きません。ふつうの文にして、My book is on the desk. と言います。',
@@ -666,7 +666,7 @@ const s045: DiagramFigure = show([
 
 // ───────── eigo_s048 be動詞の疑問文への答え方 ─────────
 const s048: DiagramFigure = show([
-  S('Are you hungry?（おなかがすいていますか）に答えるときは、Yes か No のあとに〈主語＋be動詞〉を続けます。Yes, I am. / No, I am not. です。',
+  S('Are you hungry?（おなかがすいていますか）に答えるときは、Yes か No のあとに〈主語（しゅご）＋be動詞（どうし）〉を続けます。Yes, I am. / No, I am not. です。',
     [bx(60, 14, 200, 30, 'Are you hungry?', C.blue, FILL.blue, 14), ar(110, 48, 70, 70, C.green), ar(210, 48, 250, 70, C.red), bx(14, 72, 130, 30, 'Yes, I am.', C.green, FILL.green, 14), bx(176, 72, 130, 30, 'No, I am not.', C.red, FILL.red, 14), lb(160, 126, 'Yes, 主語＋be動詞 ／ No, 主語＋be動詞＋not', 11, C.gray, 'middle')],
     cap('問いの動詞をくり返す', C.main)),
   F('❓問いの you は、そのまま答えに使えるでしょうか。→ 使えません。たずねられているのは自分のことなので、I にかえます。Yes, you are. では「はい、あなたはそうです」となってしまいます。',
@@ -675,10 +675,10 @@ const s048: DiagramFigure = show([
   F('二人以上を聞かれたら we で答えます。Are you and Tom in the same class? － Yes, we are. です。',
     [bx(14, 14, 292, 30, 'Are you and Tom in the same class?', C.blue, FILL.blue, 12), ar(160, 48, 160, 70, C.main), bx(80, 72, 160, 30, 'Yes, we are.', C.green, FILL.green, 14), lb(160, 126, 'you and Tom ＝ 二人以上 → we', 12, C.ink, 'middle', true)],
     cap('二人以上なら we', C.green)),
-  F('主語は代名詞に置きかえます。Is Ken your brother? － Yes, he is.（Yes, Ken is. ではない）。this と that は it、these と those は they で受けます。',
+  F('主語は代名詞（だいめいし）に置きかえます。Is Ken your brother? － Yes, he is.（Yes, Ken is. ではない）。this と that は it、these と those は they で受けます。',
     [head('問いの主語 → 答えの代名詞'), ...arow(26, 'Ken', 'he', 170, 13), ...arow(62, 'this / that', 'it', 170, 13), ...arow(98, 'these / those', 'they', 170, 13)],
     cap('Yes, Ken is. は ×', C.red)),
-  F('❓Yes の答えは短縮してよいでしょうか。→ いけません。be動詞が文の最後に来るときは短縮形にできません。Yes, I\'m. ではなく Yes, I am.、Yes, he\'s. ではなく Yes, he is. です。',
+  F('❓Yes の答えは短縮してよいでしょうか。→ いけません。be動詞が文の最後に来るときは短縮形（たんしゅくけい）にできません。Yes, I\'m. ではなく Yes, I am.、Yes, he\'s. ではなく Yes, he is. です。',
     [head('Yes の答えは短縮しない'), ...pair(28, "Yes, I'm.", 'Yes, I am.'), ...pair(64, "Yes, he's.", 'Yes, he is.'), ...pair(100, "Yes, they're.", 'Yes, they are.')],
     cap('文の最後の be動詞は短縮しない', C.red)),
   F("No の答えでは、not が最後に来るので、be動詞を短縮できます。No, I am not. / No, I'm not.、No, he is not. / No, he isn't. / No, he's not. のどれでも正しい答えです。",
@@ -694,13 +694,13 @@ const s048: DiagramFigure = show([
 
 // ───────── eigo_s050 一般動詞①：be動詞ではない動詞 ─────────
 const s050: DiagramFigure = show([
-  S('英語の動詞は、be動詞（am・is・are）と、それ以外の一般動詞（いっぱんどうし）の2つに分かれます。一般動詞は「〜する」という動作や、気持ち・状態を表します。',
+  S('英語の動詞（どうし）は、be動詞（am・is・are）と、それ以外の一般動詞（いっぱんどうし）の2つに分かれます。一般動詞は「〜する」という動作や、気持ち・状態を表します。',
     [bx(14, 20, 140, 60, 'be動詞\nam  is  are', C.red, FILL.red, 14), bx(166, 20, 140, 60, '一般動詞\nplay  like  have\ngo  study …', C.blue, FILL.blue, 12), lb(160, 110, 'この2つのグループ', 13, C.ink, 'middle', true)],
     cap('be動詞 ／ 一般動詞', C.main)),
   F('動作を表す一般動詞は play・run・go・come・study・read・write・eat・speak。気持ちや状態を表すものは like・want・know・have・live・need です。',
     [head('一般動詞のなかま'), ...trow(26, '動作', 'play  run  go  study', C.blue, FILL.blue, 100, 28, 12), ...trow(64, '気持ち・状態', 'like  want  know  have', C.green, FILL.green, 100, 28, 12)],
     cap('am・is・are 以外はぜんぶ', C.blue)),
-  F('❓I like English.（私は英語が好きです）は、「です」で終わるので be動詞でしょうか。→ いいえ。動詞は like です。日本語の「です」ではなく、使われている語で判断します。',
+  F('❓I like English.（私は英語が好きです）は、「です」で終わるので be動詞でしょうか。→ いいえ。動詞は like です。日本語の「です」ではなく、使われている語で判断（はんだん）します。',
     [bx(14, 14, 292, 28, '私は 英語が 好きです', C.gray, FILL.gray, 13), ar(160, 46, 160, 62, C.main), bx(14, 66, 70, 30, 'I', C.blue, FILL.blue, 14), bx(94, 66, 80, 30, 'like', C.red, FILL.red, 14), bx(184, 66, 122, 30, 'English.', C.blue, FILL.blue, 14), lb(160, 126, '動詞は like（一般動詞）', 13, C.red, 'middle', true)],
     cap('be動詞は入らない', C.red)),
   F('❓I am play tennis. はなぜ誤りなのでしょう。→ 動詞が2つ並んでいるからです。英語の文に動詞は1つだけ。play を使うなら am は要りません。',
@@ -709,7 +709,7 @@ const s050: DiagramFigure = show([
   F('ほかにも He is likes music.、We are study English. はどれも動詞が2つです。be動詞は「＝」を表すので、そこへ play や like をもう1つ足すことはできません。',
     [head('動詞を2つ並べない'), ...pair(28, 'He is likes music.', 'He likes music.', 140), ...pair(64, 'We are study English.', 'We study English.', 140), ...pair(100, 'I am like dogs.', 'I like dogs.', 140)],
     cap('二重の動詞は ×', C.red)),
-  F('語順にも注意です。日本語は「私は テニスを します」と動詞が最後ですが、英語は I play tennis の順で、「何を」が動詞のうしろに来ます。',
+  F('語順（ごじゅん）にも注意です。日本語は「私は テニスを します」と動詞が最後ですが、英語は I play tennis の順で、「何を」が動詞のうしろに来ます。',
     [bx(14, 14, 90, 28, '私は', C.gray, FILL.gray, 13), bx(114, 14, 90, 28, 'テニスを', C.gray, FILL.gray, 13), bx(214, 14, 90, 28, 'します', C.gray, FILL.gray, 13), bx(14, 98, 90, 28, 'I', C.blue, FILL.blue, 13), bx(114, 98, 90, 28, 'play', C.red, FILL.red, 13), bx(214, 98, 90, 28, 'tennis', C.green, FILL.green, 13),
       ar(59, 44, 59, 96, C.blue), ar(260, 44, 164, 96, C.red), ar(159, 44, 259, 96, C.green)],
     cap('動詞は主語のすぐあと', C.main)),
@@ -723,13 +723,13 @@ const s050: DiagramFigure = show([
 
 // ───────── eigo_s052 三人称単数現在の -s ①：付ける・付けないの見分け ─────────
 const s052: DiagramFigure = show([
-  S('He play soccer. は日本語の感覚ではおかしくありませんが、英語では He plays soccer. と動詞に -s が付きます。主語が「自分でも相手でもない1人」のときだけ付くきまりです。',
+  S('He play soccer. は日本語の感覚ではおかしくありませんが、英語では He plays soccer. と動詞（どうし）に -s が付きます。主語（しゅご）が「自分でも相手でもない1人」のときだけ付くきまりです。',
     [...pair(30, 'He play soccer.', 'He plays soccer.', 136), lb(160, 86, '動詞のおわりに s', 13, C.red, 'middle', true), lb(160, 112, '主語が「自分でも相手でもない1人」のとき', 12, C.ink, 'middle')],
     cap('三単現の -s', C.red)),
-  F('❓「三人称」とは何でしょう。→ 一人称は I・we（自分をふくむ）、二人称は you（相手）、三人称はそれ以外のすべて（he, she, it, Ken, my mother, the dog …）です。',
+  F('❓「三人称（さんにんしょう）」とは何でしょう。→ 一人称は I・we（自分をふくむ）、二人称は you（相手）、三人称はそれ以外のすべて（he, she, it, Ken, my mother, the dog …）です。',
     [head('人称の分け方'), ...trow(26, '一人称', 'I ・ we （自分）', C.blue, FILL.blue, 90, 28, 12), ...trow(62, '二人称', 'you （相手）', C.green, FILL.green, 90, 28, 12), ...trow(98, '三人称', 'he  she  it  Ken  the dog', C.red, FILL.red, 90, 28, 11)],
     cap('それ以外はぜんぶ三人称', C.red)),
-  F('単数は一人・一つ、複数は二つ以上です。-s が付くのは、①三人称 ②単数 ③現在の文、この3つがそろったときだけです。',
+  F('単数（たんすう）は一人・一つ、複数（ふくすう）は二つ以上です。-s が付くのは、①三人称 ②単数 ③現在（げんざい）の文、この3つがそろったときだけです。',
     [...rowb(['① 三人称', '② 単数', '③ 現在の文'], 14, 40, C.blue, FILL.blue, 13, 10, 310, 8), ar(160, 58, 160, 78, C.main), bx(70, 82, 180, 32, '動詞に -s を付ける', C.red, FILL.red, 14), lb(160, 130, '1つでも欠けたら付けない', 12, C.ink, 'middle', true)],
     cap('3つそろったときだけ', C.red)),
   F('例です。He plays tennis.、She likes music.、My father works at a bank.、This bus goes to the station. 主語はどれも三人称で単数です。',
@@ -741,7 +741,7 @@ const s052: DiagramFigure = show([
   F('主語が複数のときも付けません。My friends like soccer.（My friends likes ✕）、They live in Tokyo. です。',
     [...pair(30, 'My friends likes soccer.', 'My friends like soccer.', 142), lb(160, 86, '主語が複数 → -s なし', 13, C.ink, 'middle', true), bx(70, 100, 180, 28, 'They live in Tokyo.', C.green, FILL.green, 13)],
     cap('複数には付けない', C.main)),
-  F('❓reads の s と books の s は同じものでしょうか。→ ちがいます。動詞の s は「主語が三人称単数」の合図、名詞の s は「二つ以上」の合図です。動詞の -s を決めるのは、いつでも主語です。',
+  F('❓reads の s と books の s は同じものでしょうか。→ ちがいます。動詞の s は「主語が三人称単数」の合図、名詞（めいし）の s は「二つ以上」の合図です。動詞の -s を決めるのは、いつでも主語です。',
     [bx(14, 20, 50, 28, 'He', C.blue, FILL.blue, 14), bx(70, 20, 80, 28, 'reads', C.red, FILL.red, 14), bx(156, 20, 90, 28, 'books', C.green, FILL.green, 14), lb(98, 74, '主語 He が三人称単数', 11, C.red, 'middle'), lb(216, 74, '本が二冊以上', 11, C.green, 'middle'), bx(60, 96, 200, 28, 'He has three dogs.', C.main, FILL.yellow, 13), lb(160, 138, '動詞 has を決めるのは主語 He', 11, C.gray, 'middle')],
     cap('動詞の -s は主語で決まる', C.red)),
   F('まとめです。三人称・単数・現在の3つがそろったときだけ、動詞に -s を付けます。I と you、複数の主語には付けません。-s を決めるのは、いつでも主語です。',
@@ -751,7 +751,7 @@ const s052: DiagramFigure = show([
 
 // ───────── eigo_s054 三人称単数現在の -s ③：y で終わる動詞と have ─────────
 const s054: DiagramFigure = show([
-  S('study は studies になるのに、play は plays です。同じ y で終わるのに、変わり方がちがいます。分かれ目は、y の直前の文字です。',
+  S('study は studies になるのに、play は plays です。同じ y で終わるのに、変わり方がちがいます。分かれ目は、y の直前（ちょくぜん）の文字です。',
     [...tiles('study', 80, 22, { mark: { 3: BL, 4: RD } }), ar(80, 54, 80, 70, C.main), ...tiles('studies', 80, 74, { w: 18, mark: { 3: BL, 4: RD, 5: RD } }), ...tiles('play', 240, 22, { mark: { 2: BL, 3: GR } }), ar(240, 54, 240, 70, C.main), ...tiles('plays', 240, 74, { mark: { 2: BL, 3: GR, 4: GR } }), lb(160, 130, 'y の直前を見る', 13, C.ink, 'middle', true)],
     cap('study → studies ／ play → plays', C.main)),
   F('❓直前が子音（しいん）のとき、どうなるのでしょう。→ y を i にかえて -es を付けます。study の y の前は d（子音）なので studies。carry → carries、try → tries、cry → cries、fly → flies です。',
@@ -760,44 +760,44 @@ const s054: DiagramFigure = show([
   F('直前が母音（ぼいん）のときは、そのまま -s です。play の y の前は a（母音）なので plays。stay → stays、enjoy → enjoys、buy → buys、say → says です。',
     [...tiles('play', 108, 12, { mark: { 2: GR, 3: BL } }), lb(200, 25, 'a は母音', 12, C.green, 'start', true), ar(108, 42, 108, 58, C.main), ...tiles('plays', 108, 62, { w: 20, mark: { 4: GR } }), lb(200, 75, 'そのまま s', 12, C.green, 'start', true), lb(160, 118, 'stay → stays   enjoy → enjoys', 12, C.ink, 'middle', true), lb(160, 136, 'buy → buys   say → says', 12, C.ink, 'middle', true)],
     cap('母音＋y → そのまま s', C.green)),
-  F('母音は a・i・u・e・o の5つだけで、それ以外はすべて子音です。手順は「語尾が y か → 直前の1文字は母音か子音か」の2段階で確かめます。',
+  F('母音は a・i・u・e・o の5つだけで、それ以外はすべて子音です。手順（てじゅん）は「語尾が y か → 直前の1文字は母音か子音か」の2段階で確かめます。',
     [head('母音は5つだけ'), ...rowb(['a', 'i', 'u', 'e', 'o'], 22, 34, C.green, FILL.green, 16), bx(14, 72, 130, 40, '① 語尾は y か？', C.blue, FILL.blue, 13), ar(148, 92, 168, 92, C.main), bx(172, 72, 134, 40, '② 直前は\n母音か子音か？', C.blue, FILL.blue, 12)],
     cap('子音なら ies、母音なら s', C.main)),
   F('have だけは特別で、has になります。haves という語はありません。I have a dog. → He has a dog. です。',
     [...ng(14, 30, 130, 'haves'), ...ok(176, 30, 130, 'has'), bx(30, 84, 260, 28, 'I have a dog.  →  He has a dog.', C.blue, FILL.blue, 13)],
     cap('have は完全な例外', C.red)),
-  F('go は goes、do は does のように、o で終わる動詞は -es を付けます。入試でとくに出るのは has・goes・does の3つです。',
+  F('go は goes、do は does のように、o で終わる動詞（どうし）は -es を付けます。入試でとくに出るのは has・goes・does の3つです。',
     [head('とくに出る3つ'), ...trow(26, 'go', 'goes  （o で終わる → es）', C.purple, FILL.purple, 80, 28, 13), ...trow(62, 'do', 'does  （o で終わる → es）', C.purple, FILL.purple, 80, 28, 13), ...trow(98, 'have', 'has  （完全な例外）', C.purple, FILL.purple, 80, 28, 13)],
     cap('has・goes・does', C.purple)),
-  F('名詞の複数形も同じ規則です。city → cities、country → countries、baby → babies（子音＋y）。boy → boys、day → days、key → keys（母音＋y）。動詞と名詞で同じ規則が働きます。',
+  F('名詞（めいし）の複数（ふくすう）形も同じ規則（きそく）です。city → cities、country → countries、baby → babies（子音＋y）。boy → boys、day → days、key → keys（母音＋y）。動詞と名詞で同じ規則が働きます。',
     [bx(14, 14, 140, 28, '子音＋y → ies', C.red, FILL.red, 13), bx(166, 14, 140, 28, '母音＋y → s', C.green, FILL.green, 13), bx(14, 50, 140, 70, 'city → cities\ncountry → countries\nbaby → babies', C.red, FILL.red, 12), bx(166, 50, 140, 70, 'boy → boys\nday → days\nkey → keys', C.green, FILL.green, 12)],
     cap('名詞でも同じ規則', C.main)),
-  F('まとめです。y で終わる動詞は、直前が子音なら y を i にして -es、母音ならそのまま -s。have だけは has。まず「y の直前の1文字」を見る習慣をつけましょう。',
+  F('まとめです。y で終わる動詞は、直前が子音なら y を i にして -es、母音ならそのまま -s。have だけは has。まず「y の直前の1文字」を見る習慣（しゅうかん）をつけましょう。',
     [bx(20, 14, 280, 30, '子音＋y → studies', C.red, FILL.red, 13), bx(20, 52, 280, 30, '母音＋y → plays', C.green, FILL.green, 13), bx(20, 90, 280, 30, 'have → has', C.blue, FILL.blue, 13)],
     cap('studys ✕ → studies ○', C.green)),
 ], 'y で終わる動詞と have の三単現');
 
 // ───────── eigo_s055 三人称単数現在の -s ④：主語を正しく見つける ─────────
 const s055: DiagramFigure = show([
-  S('The boy with two dogs run fast. はどこがまちがいでしょう。走るのは boy 1人なので runs です。dogs につられて複数だと思ってしまうのが、まちがいの原因です。',
+  S('The boy with two dogs run fast. はどこがまちがいでしょう。走るのは boy 1人なので runs です。dogs につられて複数（ふくすう）だと思ってしまうのが、まちがいの原因（げんいん）です。',
     [...svm(22, [['The boy', 'S', 62], ['with two dogs', 'M', 106], ['run', 'V', 40], ['fast.', 'M', 52]], 18), ar(60, 54, 150, 82, C.blue), lb(160, 96, '動詞の形を決めるのは boy（1人）', 12, C.ink, 'middle', true), bx(70, 108, 180, 28, 'runs に直す', C.green, FILL.green, 13)],
     cap('主語の中心の名詞を見る', C.main)),
-  F('❓どれが主語の中心でしょう。→ with・in・from・of などの前置詞（ぜんちし）で始まるかたまりは、前の名詞を説明するだけで、主語の中心ではありません。線を引いて消すと主語が見えてきます。',
+  F('❓どれが主語（しゅご）の中心でしょう。→ with・in・from・of などの前置詞（ぜんちし）で始まるかたまりは、前の名詞（めいし）を説明するだけで、主語の中心ではありません。線を引いて消すと主語が見えてきます。',
     [head('前置詞のかたまりは消す'), ...svm(26, [['The girl', 'S', 62], ['with two dogs', 'M', 92], ['lives', 'V', 46], ['near my house.', 'M', 86]], 10), lb(160, 80, '↑ 消してしまう', 11, C.gray, 'middle'), bx(70, 94, 180, 30, 'The girl lives', C.green, FILL.green, 14)],
     cap('with two dogs は説明だけ', C.main)),
   F('同じように見ていきましょう。The students in my class study very hard. の主語の中心は The students（複数）なので study。A boy from Canada speaks Japanese well. は A boy（1人）なので speaks です。',
     [...svm(16, [['The students', 'S', 80], ['in my class', 'M', 76], ['study', 'V', 48], ['very hard.', 'M', 68]], 10), lb(160, 60, '複数 → study', 12, C.green, 'middle', true), ...svm(84, [['A boy', 'S', 52], ['from Canada', 'M', 84], ['speaks', 'V', 56], ['Japanese well.', 'M', 92]], 10), lb(160, 128, '1人 → speaks', 12, C.green, 'middle', true)],
     cap('my class にひかれない', C.red)),
-  F('❓Everyone は「みんな」だから複数でしょうか。→ いいえ。everyone・everybody と every＋単数名詞は、意味は「みんな」でも単数あつかいです。Everyone likes this song. Every student has a computer.',
+  F('❓Everyone は「みんな」だから複数でしょうか。→ いいえ。everyone・everybody と every＋単数（たんすう）名詞は、意味は「みんな」でも単数あつかいです。Everyone likes this song. Every student has a computer.',
     [head('単数あつかいの主語', C.green), bx(14, 28, 292, 28, 'Everyone likes this song.', C.green, FILL.green, 13), bx(14, 64, 292, 28, 'Every student has a computer.', C.green, FILL.green, 13), lb(160, 116, '意味は「みんな」でも -s を付ける', 12, C.red, 'middle', true)],
     cap('every は単数あつかい', C.green)),
   F('and でつなぐと複数です。My family and I go to the beach every summer. 複数なので go です。These books are interesting. も複数です。',
     [head('and でつなぐと複数'), bx(14, 28, 292, 28, 'My family and I go to the beach.', C.blue, FILL.blue, 12), bx(14, 64, 292, 28, 'These books are interesting.', C.blue, FILL.blue, 13), lb(160, 116, '複数の主語 → -s なし', 12, C.ink, 'middle', true)],
     cap('and は 複数のしるし', C.blue)),
-  F('三単現の -s は「現在の文の一般動詞」だけの話です。過去の文（He played）や be動詞の文（He is）には関係しません。',
+  F('三単現（さんたんげん）の -s は「現在（げんざい）の文の一般動詞（いっぱんどうし）」だけの話です。過去の文（He played）や be動詞の文（He is）には関係しません。',
     [bx(14, 24, 292, 28, '現在の文の一般動詞  → -s を考える', C.green, FILL.green, 13), bx(14, 60, 292, 28, '過去の文（He played）  → 関係なし', C.gray, FILL.gray, 13), bx(14, 96, 292, 28, 'be動詞の文（He is）  → 関係なし', C.gray, FILL.gray, 13)],
     cap('現在の一般動詞だけ', C.main)),
-  F('書いたあとの確認は3つです。①主語はどれか ②単数か複数か ③現在の文か。この確認だけで、失点が大きく減ります。',
+  F('書いたあとの確認（かくにん）は3つです。①主語はどれか ②単数か複数か ③現在の文か。この確認だけで、失点が大きく減ります。',
     [bx(20, 14, 280, 30, '① 主語はどれか', C.blue, FILL.blue, 13), bx(20, 52, 280, 30, '② 単数か複数か', C.green, FILL.green, 13), bx(20, 90, 280, 30, '③ 現在の文か', C.red, FILL.red, 13)],
     cap('口の中で3つ確かめる', C.main)),
   F('まとめです。動詞の形を決めるのは、主語の中心の名詞です。前置詞のかたまりは消して考え、everyone や every＋名詞は単数あつかいにします。',
@@ -807,50 +807,50 @@ const s055: DiagramFigure = show([
 
 // ───────── eigo_s057 一般動詞の否定文②：does not（doesn't）と原形 ─────────
 const s057: DiagramFigure = show([
-  S("He doesn't plays soccer. は最頻出（さいひんしゅつ）のまちがいです。doesn't を使ったら、動詞は原形（げんけい）の play にもどします。",
+  S("He doesn't plays soccer. は最頻出（さいひんしゅつ）のまちがいです。doesn't を使ったら、動詞（どうし）は原形（げんけい）の play にもどします。",
     [...vpair(14, "He doesn't plays soccer.", "He doesn't play soccer."), lb(160, 104, "doesn't のあとは原形", 14, C.red, 'middle', true), lb(160, 128, '原形 ＝ -s も -es も付かない形', 12, C.ink, 'middle')],
     cap("doesn't plays ✕ → doesn't play ○", C.red)),
-  F("❓なぜ plays ではだめなのでしょう。→ 「三人称単数」という情報を、does がすでに引き受けているからです。動詞にも -s を付けると二重になります。-s は文の中に1つだけです。",
+  F("❓なぜ plays ではだめなのでしょう。→ 「三人称（さんにんしょう）単数（たんすう）」という情報を、does がすでに引き受けているからです。動詞にも -s を付けると二重になります。-s は文の中に1つだけです。",
     [bx(14, 30, 60, 34, 'He', C.blue, FILL.blue, 14), bx(84, 30, 110, 34, "doesn't", C.red, FILL.red, 14), bx(204, 30, 102, 34, 'play', C.green, FILL.green, 14), lb(139, 84, '三単現の仕事は', 11, C.red, 'middle'), lb(139, 100, 'ここが引き受ける', 11, C.red, 'middle'), lb(255, 90, '原形のまま', 12, C.green, 'middle', true)],
     cap('-s は文の中に1か所だけ', C.red)),
-  F("使い分けは主語で決まります。I・you・we・they と複数の名詞なら don't、he・she・it と単数の名詞なら doesn't です。",
+  F("使い分けは主語（しゅご）で決まります。I・you・we・they と複数（ふくすう）の名詞（めいし）なら don't、he・she・it と単数の名詞なら doesn't です。",
     [head('don\'t か doesn\'t か'), ...trow(26, "don't", 'I / you / we / they ・複数の名詞', C.blue, FILL.blue, 70, 30, 12), ...trow(66, "doesn't", 'he / she / it ・単数の名詞', C.red, FILL.red, 70, 30, 12)],
     cap('主語を見て選ぶ', C.main)),
-  F("肯定文で has だった動詞も、否定文では原形の have にもどります。He has a bike. → He doesn't have a bike. です。He doesn't has a bike. は誤りです。",
+  F("肯定文で has だった動詞も、否定文（ひていぶん）では原形の have にもどります。He has a bike. → He doesn't have a bike. です。He doesn't has a bike. は誤りです。",
     [bx(14, 18, 292, 28, 'He has a bike.', C.blue, FILL.blue, 13), ar(160, 50, 160, 66, C.main), bx(14, 70, 292, 28, "He doesn't have a bike.", C.green, FILL.green, 13), ...ng(60, 118, 200, "He doesn't has a bike.")],
     cap('has → have にもどす', C.red)),
   F("ほかの動詞も同じです。goes → go、does → do、studies → study、watches → watch、teaches → teach と、-s / -es を取って原形にします。",
     [head('原形にもどす'), ...rowb(['goes\n→ go', 'does\n→ do', 'studies\n→ study'], 24, 46, C.green, FILL.green, 12, 10, 310, 8), ...rowb(['watches\n→ watch', 'teaches\n→ teach'], 78, 46, C.green, FILL.green, 12, 10, 210, 8)],
     cap('-s / -es を取る', C.green)),
-  F("書いたあとの確認は2つです。①主語は三人称単数か → doesn't ②そのうしろの動詞は原形か。②は、肯定文の形（plays, has）が指に残りやすいので、意識して見直します。",
+  F("書いたあとの確認（かくにん）は2つです。①主語は三人称単数か → doesn't ②そのうしろの動詞は原形か。②は、肯定文の形（plays, has）が指に残りやすいので、意識して見直します。",
     [bx(20, 24, 280, 36, "① 主語は三人称単数か  → doesn't", C.blue, FILL.blue, 13), bx(20, 74, 280, 36, '② うしろの動詞は原形か', C.red, FILL.red, 13), lb(160, 130, '肯定文の形が指に残りやすい', 12, C.ink, 'middle')],
     cap('この2つを毎回確かめる', C.main)),
   F("つづりにも注意です。does not を短縮すると doesn't です。does'nt や dose'nt と書くまちがいが多いので、アポストロフィの位置（n と t のあいだ）を確かめます。",
     [...tiles("doesn't", 160, 16, { w: 22, mark: { 5: RD } }), lb(160, 56, "' は n と t のあいだ", 12, C.red, 'middle', true), ...ng(14, 84, 130, "does'nt"), ...ok(176, 84, 130, "doesn't"), lb(160, 134, "dose'nt も ×", 11, C.gray, 'middle')],
     cap("n't の形で覚える", C.red)),
-  F("まとめです。主語が三人称単数なら doesn't。そのうしろの動詞は必ず原形で、has も have にもどします。三単現の -s は文の中で1か所だけです。",
+  F("まとめです。主語が三人称単数なら doesn't。そのうしろの動詞は必ず原形で、has も have にもどします。三単現（さんたんげん）の -s は文の中で1か所だけです。",
     [bx(20, 14, 280, 30, "三人称単数 → doesn't", C.blue, FILL.blue, 13), bx(20, 52, 280, 30, '動詞は原形（-s を取る）', C.red, FILL.red, 13), bx(20, 90, 280, 30, 'has → have', C.green, FILL.green, 13)],
     cap("He doesn't play soccer. ○", C.green)),
 ], "does not（doesn't）と原形");
 
 // ───────── eigo_s059 一般動詞の疑問文②：Does 〜? と答え方 ─────────
 const s059: DiagramFigure = show([
-  S('Does he plays tennis? と書いてしまう人が絶えません。Does がすでに三単現を表しているので、動詞は原形にもどします。',
+  S('Does he plays tennis? と書いてしまう人が絶えません。Does がすでに三単現（さんたんげん）を表しているので、動詞（どうし）は原形（げんけい）にもどします。',
     [...vpair(14, 'Does he plays tennis?', 'Does he play tennis?'), lb(160, 110, 'Does のあとは原形', 14, C.red, 'middle', true)],
     cap('Does he plays ✕ → Does he play ○', C.red)),
-  F('形は〈Does＋主語＋動詞の原形〜?〉です。主語が he・she・it や一人・一つの名詞のとき、Do ではなく Does で文を始めます。',
+  F('形は〈Does＋主語（しゅご）＋動詞の原形〜?〉です。主語が he・she・it や一人・一つの名詞（めいし）のとき、Do ではなく Does で文を始めます。',
     [head('Does ＋ 主語 ＋ 原形'), ...pair(26, 'He plays soccer.', 'Does he play soccer?', 128), ...pair(62, 'She likes English.', 'Does she like English?', 128), ...pair(98, 'They live here.', 'Do they live here?', 142)],
     cap('Does が文のはじめに出る', C.blue)),
   F('動詞はいつも原形です。Does she studies math? ではなく Does she study math?、Does he has a car? ではなく Does he have a car? です。',
     [head('原形にもどす'), ...pair(26, 'Does he plays soccer?', 'Does he play soccer?', 142), ...pair(62, 'Does she studies math?', 'Does she study math?', 142), ...pair(98, 'Does he has a car?', 'Does he have a car?', 142)],
     cap('-s も has も ×', C.red)),
-  F('❓なぜ原形なのでしょう。→ 否定文と同じ理由です。「三人称単数」という情報を、Does がすでに持っているからです。Do / Does / Did のうしろの動詞は、いつでも原形です。',
+  F('❓なぜ原形なのでしょう。→ 否定文（ひていぶん）と同じ理由です。「三人称（さんにんしょう）単数（たんすう）」という情報を、Does がすでに持っているからです。Do / Does / Did のうしろの動詞は、いつでも原形です。',
     [bx(14, 30, 70, 34, 'Does', C.red, FILL.red, 14), bx(94, 30, 60, 34, 'he', C.blue, FILL.blue, 14), bx(164, 30, 80, 34, 'play', C.green, FILL.green, 14), bx(254, 30, 52, 34, '?', C.gray, FILL.gray, 14), lb(49, 82, '三単現を持つ', 11, C.red, 'middle'), lb(204, 82, '原形', 12, C.green, 'middle', true), lb(160, 120, 'Do・Does・Did のうしろは原形', 13, C.ink, 'middle', true)],
     cap('否定文も疑問文も同じ規則', C.main)),
   F('答え方は、Does で聞かれたら does で答えます。Yes, he does. / No, he doesn\'t. です。',
     [bx(40, 14, 240, 30, 'Does he play the piano?', C.blue, FILL.blue, 14), ar(110, 48, 70, 70, C.green), ar(210, 48, 250, 70, C.red), bx(14, 72, 130, 30, 'Yes, he does.', C.green, FILL.green, 14), bx(176, 72, 130, 30, "No, he doesn't.", C.red, FILL.red, 14)],
     cap('Does → does で答える', C.main)),
-  F('答えの主語は代名詞にします。Does Ken live near here? － Yes, he does.（Yes, Ken does. ではない）。Does that dog have a name? － Yes, it does. です。',
+  F('答えの主語は代名詞（だいめいし）にします。Does Ken live near here? － Yes, he does.（Yes, Ken does. ではない）。Does that dog have a name? － Yes, it does. です。',
     [head('問いの主語 → 答えの代名詞'), ...arow(26, 'Ken', 'he', 170, 13), ...arow(62, 'that dog', 'it', 170, 13), ...arow(98, 'your sister', 'she', 170, 13)],
     cap('Yes, Ken does. は ×', C.red)),
   F('❓Does 〜? に Yes, she is. と答えてよいでしょうか。→ いけません。問いの最初の語と、答えに使う語をそろえます。Does なら does、Is なら is です。',
@@ -863,22 +863,22 @@ const s059: DiagramFigure = show([
 
 // ───────── eigo_s061 混同を防ぐ①：一文に動詞は一つ ─────────
 const s061: DiagramFigure = show([
-  S('I am like dogs. も He is play baseball. も、まちがいの正体は同じです。動詞を2つ並べていることです。',
+  S('I am like dogs. も He is play baseball. も、まちがいの正体は同じです。動詞（どうし）を2つ並べていることです。',
     [bx(14, 16, 50, 28, 'I', C.blue, FILL.blue, 13), bx(70, 16, 50, 28, 'am', C.red, FILL.red, 13), bx(126, 16, 60, 28, 'like', C.red, FILL.red, 13), bx(192, 16, 70, 28, 'dogs.', C.blue, FILL.blue, 13), lb(100, 62, '動詞が2つ', 13, C.red, 'middle', true), ar(160, 74, 160, 90, C.main), bx(70, 94, 180, 28, 'I like dogs.', C.green, FILL.green, 14)],
     cap('動詞は一つだけ', C.red)),
-  F('❓なぜ動詞を2つ書いてしまうのでしょう。原因は3つあります。①日本語の「です・ます」に引かれる ②主語のあとには am / is / are と手が覚えている ③「〜しています」を進行形と思ってしまう。',
+  F('❓なぜ動詞を2つ書いてしまうのでしょう。原因（げんいん）は3つあります。①日本語の「です・ます」に引かれる ②主語（しゅご）のあとには am / is / are と手が覚えている ③「〜しています」を進行形（しんこうけい）と思ってしまう。',
     [bx(14, 12, 292, 34, '① 「です・ます」に引かれる', C.blue, FILL.blue, 13), bx(14, 52, 292, 34, '② 主語のあとに be動詞を書く手ぐせ', C.green, FILL.green, 13), bx(14, 92, 292, 34, '③ 「〜しています」を進行形と思う', C.red, FILL.red, 13)],
     cap('原因は3つ', C.main)),
-  F('日本語では「〜です」「〜にいます」と訳すのに、英語では一般動詞を使う語があります。live（住んでいる）、belong to（所属している）、have（持っている）、know（知っている）。be動詞を足さないようにします。',
+  F('日本語では「〜です」「〜にいます」と訳すのに、英語では一般動詞（いっぱんどうし）を使う語があります。live（住んでいる）、belong to（所属している）、have（持っている）、know（知っている）。be動詞を足さないようにします。',
     [head('be動詞を足さない'), ...pair(26, 'I am live in Osaka.', 'I live in Osaka.', 140), ...pair(62, 'I am know him.', 'I know him.', 140), ...pair(98, 'I am have two sisters.', 'I have two sisters.', 140)],
     cap('live・know・have は一般動詞', C.red)),
-  F('❓では、be動詞を使うのはどんなときでしょう。→ うしろに形容詞（様子を表す語）や名詞（名前）、場所が続くときです。I am happy.、He is a doctor.、She is at home.',
+  F('❓では、be動詞を使うのはどんなときでしょう。→ うしろに形容詞（けいようし）、つまり様子を表す語や、名詞（めいし）、つまり名前、そして場所が続くときです。I am happy.、He is a doctor.、She is at home.',
     [head('be動詞を使う文', C.green), bx(14, 28, 292, 28, 'I am happy.   （様子）', C.green, FILL.green, 13), bx(14, 64, 292, 28, 'He is a doctor.   （名前）', C.green, FILL.green, 13), bx(14, 100, 292, 28, 'She is at home.   （場所）', C.green, FILL.green, 13)],
     cap('様子・名前・場所 → be動詞', C.green)),
   F('切り分けのしかたです。うしろに来るのが「動作を表す語」なら一般動詞だけ、「名前・様子を表す語」なら be動詞です。',
     [bx(14, 20, 130, 40, 'うしろが\n動作を表す語', C.blue, FILL.blue, 12), ar(148, 40, 168, 40, C.main), bx(172, 20, 134, 40, '一般動詞だけ', C.blue, FILL.blue, 13), bx(14, 78, 130, 40, 'うしろが\n名前・様子', C.red, FILL.red, 12), ar(148, 98, 168, 98, C.main), bx(172, 78, 134, 40, 'be動詞', C.red, FILL.red, 13)],
     cap('うしろの語で切り分ける', C.main)),
-  F('❓「毎日サッカーをしています」は進行形でしょうか。→ 習慣（毎日のこと）なので、現在形の I play soccer every day. です。今この瞬間の動作なら I am playing soccer now. と ing の形にします。',
+  F('❓「毎日サッカーをしています」は進行形でしょうか。→ 習慣（しゅうかん）、つまり毎日のことなので、現在（げんざい）形の I play soccer every day. です。今この瞬間の動作なら I am playing soccer now. と ing の形にします。',
     [bx(14, 20, 292, 30, 'I play soccer every day.   （習慣）', C.green, FILL.green, 13), bx(14, 66, 292, 30, 'I am playing soccer now.   （いま）', C.blue, FILL.blue, 13), lb(160, 122, '習慣は現在形、いまの動作は ing の形', 12, C.ink, 'middle', true)],
     cap('原形を並べない', C.main)),
   F('書き終わったら、動詞に丸を付けてみます。丸が2つ付いたら、どちらかが余分です。He is plays baseball. は is と plays の2つに丸が付くので、まちがいと分かります。',
@@ -891,13 +891,13 @@ const s061: DiagramFigure = show([
 
 // ───────── eigo_s062 混同を防ぐ②：否定文は isn't か doesn't か ─────────
 const s062: DiagramFigure = show([
-  S("否定文を作るとき、not だけでよいのか、do を借りるのか。決め手は、もとの文の動詞が be動詞かどうか、その一点です。",
+  S("否定文（ひていぶん）を作るとき、not だけでよいのか、do を借りるのか。決め手は、もとの文の動詞（どうし）が be動詞かどうか、その一点です。",
     [bx(70, 8, 180, 30, 'もとの文の動詞は？', C.blue, FILL.blue, 13), ar(130, 42, 78, 68, C.red), ar(190, 42, 242, 68, C.green), bx(14, 70, 140, 34, 'am / is / are', C.red, FILL.red, 13), bx(166, 70, 140, 34, 'それ以外（一般動詞）', C.green, FILL.green, 12), ar(84, 108, 84, 122, C.main), ar(236, 108, 236, 122, C.main), lb(84, 134, 'not を後ろに', 12, C.red, 'middle', true), lb(236, 134, "don't / doesn't を前に", 11, C.green, 'middle', true)],
     cap('動詞の種類で決める', C.main)),
   F("be動詞の文は、うしろに not を置くだけです。He is a teacher. → He isn't a teacher.、They are busy. → They aren't busy.、I am tired. → I'm not tired. です。",
     [head('be動詞 → not をうしろに', C.red), ...pair(26, 'He is a teacher.', "He isn't a teacher.", 142), ...pair(62, 'They are busy.', "They aren't busy.", 142), ...pair(98, 'I am tired.', "I'm not tired.", 142)],
     cap('be動詞だけで否定できる', C.red)),
-  F("一般動詞の文は、動詞の前に don't / doesn't を置きます。He speaks Japanese. → He doesn't speak Japanese.、They play tennis. → They don't play tennis. です。",
+  F("一般動詞（いっぱんどうし）の文は、動詞の前に don't / doesn't を置きます。He speaks Japanese. → He doesn't speak Japanese.、They play tennis. → They don't play tennis. です。",
     [head("一般動詞 → don't / doesn't を前に", C.green), ...pair(26, 'He speaks Japanese.', "He doesn't speak Japanese.", 142), ...pair(62, 'They play tennis.', "They don't play tennis.", 142), ...pair(98, 'I know him.', "I don't know him.", 142)],
     cap('動詞は原形にもどす', C.green)),
   F("❓二方向のまちがいを見つけましょう。He doesn't a teacher. は動詞がゼロ（is が消えた）、He isn't speak Japanese. は動詞が二つ（is と speak）。どちらも動詞を数えれば気づけます。",
@@ -906,10 +906,10 @@ const s062: DiagramFigure = show([
   F("❓なぜ be動詞は not だけで、一般動詞は do を借りるのでしょう。→ be動詞は、それ自体が「〜である」という意味を持ち、うしろに not を置くだけで否定できます。ところが一般動詞は、そのままでは not を付けられないので、「do」という手伝いの語を借ります。",
     [bx(14, 14, 60, 30, 'He', C.blue, FILL.blue, 13), bx(80, 14, 50, 30, 'is', C.red, FILL.red, 13), bx(136, 14, 60, 30, 'not', C.gray, FILL.gray, 13), lb(250, 29, 'そのまま付く', 12, C.red, 'middle', true), bx(14, 70, 60, 30, 'He', C.blue, FILL.blue, 13), bx(80, 70, 90, 30, "doesn't", C.green, FILL.green, 13), bx(176, 70, 80, 30, 'speak', C.green, FILL.green, 13), lb(160, 124, 'do が 手伝いの語になる', 12, C.green, 'middle', true)],
     cap('一般動詞は do を借りる', C.green)),
-  F("手順は3段階です。①もとの文の動詞をさがす ②am / is / are ならうしろに not ③それ以外なら、主語を見て don't か doesn't を選び、動詞を原形にする。",
+  F("手順（てじゅん）は3段階です。①もとの文の動詞をさがす ②am / is / are ならうしろに not ③それ以外なら、主語（しゅご）を見て don't か doesn't を選び、動詞を原形（げんけい）にする。",
     [bx(20, 10, 280, 32, '① もとの文の動詞をさがす', C.blue, FILL.blue, 13), ar(160, 44, 160, 52, C.main), bx(20, 54, 280, 32, '② be動詞 → not をうしろに', C.red, FILL.red, 13), ar(160, 88, 160, 96, C.main), bx(20, 98, 280, 32, "③ 一般動詞 → don't / doesn't ＋ 原形", C.green, FILL.green, 12)],
     cap('3段階で決める', C.main)),
-  F("have は一般動詞なので、I don't have a dog. です（I am not have ✕）。また、There is の文の否定は、be動詞の規則にしたがって There isn't ... となります。",
+  F("have は一般動詞なので、I don't have a dog. です（I am not have ✕）。また、There is の文の否定は、be動詞の規則（きそく）にしたがって There isn't ... となります。",
     [...pair(20, 'I am not have a dog.', "I don't have a dog.", 140), bx(14, 66, 292, 28, "There is a cat.  →  There isn't a cat.", C.blue, FILL.blue, 12), lb(160, 120, 'There is は be動詞 → not をうしろに', 12, C.ink, 'middle', true)],
     cap('have は一般動詞', C.main)),
   F("まとめです。be動詞の文は not だけ、一般動詞の文は do を借ります。決め手は、もとの文の動詞が be動詞かどうか。作ったら、動詞が一つあるか数えましょう。",
@@ -919,13 +919,13 @@ const s062: DiagramFigure = show([
 
 // ───────── eigo_s063 混同を防ぐ③：疑問文は Are you か Do you か ─────────
 const s063: DiagramFigure = show([
-  S('疑問文の作り方は、be動詞の文と一般動詞の文でまったくちがいます。be動詞は主語の前に出し、一般動詞は Do / Does を先頭に置きます。',
+  S('疑問文（ぎもんぶん）の作り方は、be動詞（どうし）の文と一般動詞（いっぱんどうし）の文でまったくちがいます。be動詞は主語（しゅご）の前に出し、一般動詞は Do / Does を先頭に置きます。',
     [bx(14, 16, 142, 34, 'You are a student.', C.red, FILL.red, 12), ar(85, 54, 85, 70, C.main), bx(14, 74, 142, 34, 'Are you a student?', C.red, FILL.red, 12), bx(164, 16, 142, 34, 'You play tennis.', C.green, FILL.green, 12), ar(235, 54, 235, 70, C.main), bx(164, 74, 142, 34, 'Do you play tennis?', C.green, FILL.green, 12), lb(85, 128, 'be動詞を前に出す', 11, C.red, 'middle', true), lb(235, 128, 'Do を先頭に置く', 11, C.green, 'middle', true)],
     cap('2つの作り方', C.main)),
   F('be動詞の文です。You are a student. → Are you a student?、He is kind. → Is he kind?、They are at home. → Are they at home? be動詞を主語の前に出します。',
     [head('be動詞を前に出す', C.red), ...pair(26, 'You are a student.', 'Are you a student?', 138), ...pair(62, 'He is kind.', 'Is he kind?', 138), ...pair(98, 'They are at home.', 'Are they at home?', 138)],
     cap('be動詞は前に出すだけ', C.red)),
-  F('一般動詞の文です。You play tennis. → Do you play tennis?、He plays tennis. → Does he play tennis? Do / Does を先頭に置き、動詞は原形にします。',
+  F('一般動詞の文です。You play tennis. → Do you play tennis?、He plays tennis. → Does he play tennis? Do / Does を先頭に置き、動詞は原形（げんけい）にします。',
     [head('Do / Does を先頭に置く', C.green), ...pair(26, 'You play tennis.', 'Do you play tennis?', 138), ...pair(62, 'He plays tennis.', 'Does he play tennis?', 138), ...pair(98, 'They live here.', 'Do they live here?', 138)],
     cap('動詞は原形', C.green)),
   F('❓Are you have a pen? はなぜ誤りなのでしょう。→ are と have の動詞が2つ並んでいるからです。have は「持っている」の一般動詞なので、Do you have a pen? が正しい形です。',
@@ -947,7 +947,7 @@ const s063: DiagramFigure = show([
 
 // ───────── eigo_s066 第1文型 SV ─────────
 const s066: DiagramFigure = show([
-  S('第1文型は、主語（S）と動詞（V）だけで意味が完成する文です。Birds fly.（鳥が飛ぶ）、He runs.（彼は走る）。「何を」も「どんなだ」も要りません。',
+  S('第1文型は、主語（しゅご）の S と動詞（どうし）の V だけで意味が完成（かんせい）する文です。Birds fly.（鳥が飛ぶ）、He runs.（彼は走る）。「何を」も「どんなだ」も要りません。',
     [...svm(26, [['Birds', 'S', 100], ['fly.', 'V', 100]], 40, 34), lb(160, 86, 'S（主語）＋ V（動詞）', 13, C.ink, 'middle', true), ...svm(106, [['He', 'S', 100], ['runs.', 'V', 100]], 40, 30)],
     cap('S ＋ V だけで文になる', C.main)),
   F('❓うしろに語句が続いたら、もう第1文型ではないのでしょうか。→ 場所や時を表す語句は修飾語（M）なので、文型は SV のままです。I go to school. は S＝I、V＝go、to school は M です。',
@@ -959,10 +959,10 @@ const s066: DiagramFigure = show([
   F('第1文型の代表的な動詞は、go・come・run・walk・swim・live・sit・stand・sleep・arrive・happen です。これらは動詞だけで意味が完成します。',
     [head('SV の動詞'), ...rowb(['go', 'come', 'run', 'walk'], 24, 30, C.red, FILL.red, 13), ...rowb(['swim', 'live', 'sit', 'stand'], 60, 30, C.red, FILL.red, 13), ...rowb(['sleep', 'arrive', 'happen'], 96, 30, C.red, FILL.red, 13, 10, 240, 6)],
     cap('動作だけで意味が通る', C.red)),
-  F('見分けるコツは「動詞のうしろに、前置詞なしの名詞があるか」です。なければ第1文型。前置詞（to, in, at など）から始まるかたまりは、目的語になれません。',
+  F('見分けるコツは「動詞のうしろに、前置詞（ぜんちし）なしの名詞（めいし）があるか」です。なければ第1文型。前置詞（to, in, at など）から始まるかたまりは、目的語（もくてきご）になれません。',
     [bx(70, 8, 180, 30, '動詞のうしろに', C.blue, FILL.blue, 13), bx(70, 40, 180, 30, '前置詞なしの名詞は？', C.blue, FILL.blue, 13), ar(110, 72, 70, 92, C.green), ar(210, 72, 250, 92, C.red), bx(14, 94, 130, 40, 'ない\n→ 第1文型', C.green, FILL.green, 12), bx(176, 94, 130, 40, 'ある\n→ ほかの文型', C.red, FILL.red, 12)],
     cap('前置詞のかたまりは目的語ではない', C.main)),
-  F('❓「公園を走る」の「を」は目的語でしょうか。→ いいえ。英語では in the park という修飾語です。He runs the park. ではなく He runs in the park. です。日本語の「を」だけで目的語を判断してはいけません。',
+  F('❓「公園を走る」の「を」は目的語でしょうか。→ いいえ。英語では in the park という修飾語です。He runs the park. ではなく He runs in the park. です。日本語の「を」だけで目的語を判断（はんだん）してはいけません。',
     [...pair(24, 'He runs the park.', 'He runs in the park.', 138), lb(160, 80, '「公園を」でも in the park は M', 12, C.ink, 'middle', true), ...svm(98, [['He', 'S', 40], ['runs', 'V', 60], ['in the park.', 'M', 110]], 20, 28)],
     cap('日本語の「を」にひかれない', C.red)),
   F('逆に、前置詞が要らない動詞もあります。enter・reach・discuss は前置詞なしで目的語をとります（I entered the room.）。arrive・go・listen は前置詞が必要です（arrive at the station）。',

@@ -759,7 +759,7 @@ const u30: DiagramFigure = show([
   },
   {
     note: 'お客の答え方です。I\'m looking for a birthday present for my mother.（母への誕生日プレゼントを探しています）、Do you have any T-shirts?（Tシャツはありますか）、I\'d like a cap, please.（帽子がほしいのですが）、I\'m just looking, thank you.（見ているだけです）。',
-    add: fresh(bx(6, 6, 308, 26, "I'm looking for a birthday present for my mother.", C.green, FILL.green, 10), bx(6, 38, 308, 26, 'Do you have any T-shirts?', C.green, FILL.green, 12), bx(6, 70, 308, 26, "I'd like a cap, please.", C.green, FILL.green, 12), bx(6, 102, 308, 26, "I'm just looking, thank you.", C.green, FILL.green, 12), lb(160, 140, '見ているだけです（すぐに買わないとき）', 10, C.green, 'middle', true), ...band(150, lb(160, 192, 'お客の答え方', 12, C.green, 'middle', true))),
+    add: fresh(bx(6, 2, 308, 34, "I'm looking for a birthday\npresent for my mother.", C.green, FILL.green, 11), bx(6, 40, 308, 26, 'Do you have any T-shirts?', C.green, FILL.green, 12), bx(6, 70, 308, 26, "I'd like a cap, please.", C.green, FILL.green, 12), bx(6, 100, 308, 26, "I'm just looking, thank you.", C.green, FILL.green, 12), lb(160, 140, '見ているだけです（すぐに買わないとき）', 10, C.green, 'middle', true), ...band(150, lb(160, 192, 'お客の答え方', 12, C.green, 'middle', true))),
   },
   {
     note: '❓お店で、なぜ I want ではなく I\'d like を使うのでしょう。→ I\'d like ~, please. のほうがていねいで、お店や目上の人との会話にふさわしいからです。店員さんのほうも、This way, please.（こちらへどうぞ）、We have a lot of colors.（色々な色がございます）、This one is very popular.（これはとても人気です）と案内します。',
@@ -803,7 +803,7 @@ const u31: DiagramFigure = show([
   },
   {
     note: '基本の動作です。Go straight.（まっすぐ進む）、Turn left / right at the corner.（角を左／右に曲がる）、Cross the street.（通りを渡る）。',
-    add: fresh(ln(55, 120, 55, 40, C.red, false, 3), ar(55, 46, 55, 30, C.red), lb(55, 140, 'Go straight', 11, C.red, 'middle', true), ln(160, 120, 160, 70, C.green, false, 3), ln(160, 70, 120, 70, C.green, false, 3), ar(130, 70, 108, 70, C.green), lb(160, 140, 'Turn left', 11, C.green, 'middle', true), bx(220, 60, 90, 36, undefined, C.gray, FILL.gray), lb(265, 78, 'street', 10, C.gray, 'middle', true), ln(265, 120, 265, 106, C.blue, false, 3), ar(265, 106, 265, 40, C.blue), lb(265, 140, 'Cross the street', 10, C.blue, 'middle', true), ...band(150, lb(160, 192, '3つの基本の動き', 12, C.main, 'middle', true))),
+    add: fresh(ln(55, 120, 55, 40, C.red, false, 3), ar(55, 46, 55, 30, C.red), lb(55, 140, 'Go straight', 11, C.red, 'middle', true), ln(160, 120, 160, 70, C.green, false, 3), ln(160, 70, 120, 70, C.green, false, 3), ar(130, 70, 108, 70, C.green), lb(160, 140, 'Turn left', 11, C.green, 'middle', true), bx(220, 60, 90, 36, undefined, C.gray, FILL.gray), lb(246, 78, 'street', 10, C.gray, 'middle', true), ln(288, 120, 288, 106, C.blue, false, 3), ar(288, 106, 288, 40, C.blue), lb(265, 140, 'Cross the street', 10, C.blue, 'middle', true), ...band(150, lb(160, 192, '3つの基本の動き', 12, C.main, 'middle', true))),
   },
   {
     note: '目印を伝えることばです。on your right / left（あなたの右手／左手に）、next to ~（〜の隣に）、across from ~（〜の向かいに）、between A and B（AとBの間に）。例：You will see the library on your right.（右手に図書館が見えます）。',
@@ -811,7 +811,7 @@ const u31: DiagramFigure = show([
   },
   {
     note: '❓なぜ動作と目印をセットで伝えるのでしょう。→ 目印がないと、聞いた人はどこで曲がればよいかわからないからです。Go straight for three blocks, and turn right at the bookstore. The museum is on your left, next to the park.（3区画まっすぐ進んで、本屋のところを右に曲がってください。美術館は左手、公園の隣にあります）。',
-    add: fresh(ci(60, 130, 8, '', C.red, FILL.red), ln(60, 122, 60, 62, C.red, false, 3), ln(48, 106, 72, 106, C.gray), ln(48, 86, 72, 86, C.gray), ln(48, 66, 72, 66, C.gray), lb(34, 94, '3 blocks', 9, C.gray, 'middle'), bx(70, 46, 70, 22, 'bookstore', C.purple, FILL.purple, 10), ln(60, 62, 190, 62, C.green, false, 3), ar(180, 62, 204, 62, C.green), bx(100, 14, 74, 24, 'museum', C.blue, FILL.blue, 10), bx(178, 14, 60, 24, 'park', C.green, FILL.green, 10), lb(240, 30, '← 左手', 10, C.blue, 'start', true), lb(214, 86, 'turn right', 11, C.green, 'start', true), ...cap('動作 ＋ 目印', C.main)),
+    add: fresh(ci(100, 132, 8, '', C.red, FILL.red), ln(100, 124, 100, 62, C.red, false, 3), ln(92, 106, 108, 106, C.gray), ln(92, 86, 108, 86, C.gray), ln(92, 66, 108, 66, C.gray), lb(84, 90, '3 blocks', 10, C.gray, 'end'), bx(14, 48, 70, 22, 'bookstore', C.purple, FILL.purple, 10), ln(100, 62, 200, 62, C.green, false, 3), ar(190, 62, 214, 62, C.green), bx(122, 22, 70, 22, 'museum', C.blue, FILL.blue, 10), bx(198, 22, 60, 22, 'park', C.green, FILL.green, 10), lb(268, 33, '← 左手', 10, C.blue, 'start', true), lb(150, 82, 'turn right', 11, C.green, 'start', true), ...cap('動作 ＋ 目印', C.main)),
   },
   {
     note: '距離や時間を足すと親切です。It\'s about five minutes on foot.（歩いて約5分です）、It\'s about 200 meters ahead.（この先約200メートルです）、It takes about ten minutes by bus.（バスで約10分かかります）。',
@@ -903,6 +903,258 @@ const u33: DiagramFigure = show([
   },
 ], '空港・旅行の会話：場面ごとの質問と答え');
 
+// ───────── new20_e6_eigo_14 簡単な長文読解①：友達からの手紙を読む ─────────
+const u34: DiagramFigure = show([
+  {
+    note: '手紙・メールには決まった型があります。①呼びかけ（Dear ＋ 名前,）、②本文（近況報告 → 本題 → 結びの言葉）、③結びの表現（Your friend, など）、④差出人の名前。この型を知っていると、どこに何が書いてあるか予測しながら読めます。',
+    add: [bx(30, 4, 260, 138, undefined, C.main, FILL.warm), lb(46, 22, 'Dear Emily,', 12, C.blue, 'start', true), lb(46, 52, '近況報告 → 本題 → 結びの言葉', 11, C.green, 'start', true), lb(46, 80, '（本文）', 11, C.gray, 'start'), lb(46, 108, 'Your friend,', 12, C.purple, 'start', true), lb(46, 128, 'Yuki', 12, C.red, 'start', true), lb(270, 22, '①呼びかけ', 10, C.blue, 'end'), lb(270, 108, '③結び', 10, C.purple, 'end'), lb(270, 128, '④差出人', 10, C.red, 'end'), ...cap('手紙の型')],
+  },
+  {
+    note: '手紙の始めは近況報告です。How are you doing?（元気にしていますか）、I hope you are doing well.（元気に過ごしていることを願っています）、It\'s been a while since we last talked.（最後に話してからしばらく経ちますね）。',
+    add: fresh(bx(6, 10, 308, 28, 'How are you doing?', C.blue, FILL.blue, 13), lb(160, 52, '元気にしていますか', 11, C.blue, 'middle', true), bx(6, 62, 308, 28, 'I hope you are doing well.', C.green, FILL.green, 13), lb(160, 104, '元気に過ごしていることを願っています', 11, C.green, 'middle', true), bx(6, 114, 308, 28, "It's been a while since we last talked.", C.purple, FILL.purple, 10), ...band(150, lb(160, 192, '近況報告のあいさつ', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '❓手紙の冒頭は、なぜ軽く読んでよいのでしょう。→ あいさつと近況が書かれているだけで、本題（いちばん伝えたいこと）は書かれていないことが多いからです。モデル文でも、引っ越して3か月、あなたが恋しい、カナダで元気でいることを願う、というあいさつだけです。設問は中盤〜終盤を重点的に読みます。',
+    add: fresh(bx(6, 6, 308, 56, 'Dear Emily,\nHow are you doing? It\'s been three months since\nI moved to Japan, and I miss you a lot.', C.gray, FILL.gray, 10), lb(160, 78, '冒頭 ＝ あいさつと近況', 12, C.gray, 'middle', true), ar(160, 88, 160, 100, C.main), bx(6, 104, 308, 36, '本題は中盤〜終盤にある', C.red, FILL.red, 14), ...band(150, lb(160, 192, '設問は 中盤〜終盤を重点的に', 12, C.red, 'middle', true))),
+  },
+  {
+    note: '本題のパターン1つ目は「お願い」です。Can you send me some photos of your school?（学校の写真を送ってくれますか）。I was wondering if you could visit me next summer.（来年の夏、私を訪ねてきてくれないかと思っています）は、Can you ~? よりていねいなお願いです。',
+    add: fresh(bx(6, 12, 308, 30, 'Can you send me some photos of your school?', C.blue, FILL.blue, 10), lb(160, 56, '学校の写真を送ってくれますか', 11, C.blue, 'middle', true), bx(6, 72, 308, 40, 'I was wondering if you could\nvisit me next summer.', C.green, FILL.green, 11), lb(160, 126, '来年の夏、訪ねてきてくれないかと思っています（ていねい）', 10, C.green, 'middle', true), ...band(150, lb(160, 192, 'お願いのパターン', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '2つ目は「誘い」、3つ目は「報告」です。Would you like to come to my birthday party?（私の誕生日パーティーに来ませんか）、I hope you can come.（来てくれるとうれしいです）。I just wanted to let you know that I got a new dog.（新しい犬を飼ったことを知らせたくて）、Guess what? I made a new friend at school!（聞いて！学校で新しい友達ができたの！）。',
+    add: fresh(lb(80, 10, '誘い', 13, C.green, 'middle', true), bx(6, 26, 148, 40, 'Would you like to\ncome to my party?', C.green, FILL.green, 10), bx(6, 72, 148, 28, 'I hope you can come.', C.green, FILL.green, 10), lb(240, 10, '報告', 13, C.purple, 'middle', true), bx(166, 26, 148, 40, 'I just wanted to let\nyou know that ~', C.purple, FILL.purple, 10), bx(166, 72, 148, 28, 'Guess what? ~', C.purple, FILL.purple, 11), lb(160, 118, '来てくれるとうれしい ／ 新しい犬を飼ったよ', 11, C.ink, 'middle', true), ...cap('誘いと報告', C.main)),
+  },
+  {
+    note: '❓本題の始まりは、どう見つけるのでしょう。→ By the way（ところで）や Actually（実は）が、あいさつから本題に切りかわる合図だからです。By the way, I\'m having a birthday party next Saturday. I was wondering if you could come.（ところで、来週の土曜日に誕生日パーティーをします。来てくれないかと思っています）。',
+    add: fresh(bx(6, 10, 100, 28, 'あいさつ', C.gray, FILL.gray, 12), ar(108, 24, 120, 24, C.main), bx(122, 10, 190, 28, 'By the way, / Actually,', C.red, FILL.red, 13), lb(160, 56, 'ここから 本題 が始まる合図', 12, C.red, 'middle', true), bx(6, 74, 308, 48, "By the way, I'm having a birthday party\nnext Saturday. I was wondering if you could come.", C.blue, FILL.blue, 10), ...band(150, lb(160, 192, '合図のことばを見のがさない', 12, C.red, 'middle', true))),
+  },
+  {
+    note: '手紙全体を読んで、4点を確かめます。①差出人・宛先：Yuki が Emily に宛てた手紙。②本題：誕生日パーティーへの誘い（オンライン参加でもよい）。③追加情報：書道を始めたこと。④結びの依頼：返事を書いて、学校生活を教えてほしい。',
+    add: fresh(bx(6, 6, 308, 26, '① 差出人・宛先　Yuki → Emily', C.blue, FILL.blue, 11), bx(6, 36, 308, 26, '② 本題　誕生日パーティーの誘い（オンラインでも）', C.red, FILL.red, 10), bx(6, 66, 308, 26, '③ 追加　書道を習い始めた', C.green, FILL.green, 11), bx(6, 96, 308, 26, '④ 結び　返事で学校生活を教えて', C.purple, FILL.purple, 11), ...cap('手紙を読む4つのチェック', C.main)),
+  },
+  {
+    note: 'まとめです。手紙の読解は、型（Dear ~, / Your friend,）を知る → 冒頭のあいさつは軽く読む → By the way 以降の本題（お願い・誘い・報告）を確かめる → 最後の依頼を確かめる、の順に読みます。「本題は何か」「相手に何をしてほしいか」の二つが、最もよく問われます。',
+    add: fresh(...flow(['型を知る', 'あいさつは\n軽く', 'By the way\n以降が本題', '最後の\n依頼'], 20, { h: 74, size: 11, color: C.blue, fill: FILL.blue, gap: 8, pad: 6 }).flat(), lb(160, 118, '問われやすい：本題 と 相手への依頼', 12, C.red, 'middle', true), ...cap('手紙の読み方の順', C.green)),
+  },
+], '友達からの手紙：型と本題');
+
+// ───────── new20_e6_eigo_15 簡単な長文読解②：動物・自然についての説明文 ─────────
+const u35: DiagramFigure = show([
+  {
+    note: '動物や自然の説明文は、多くの場合「話題の紹介 → いくつかの特徴 → まとめ」という構成です。特徴は、見た目・大きさ、行動・習性、ほかの生き物とのちがい、などが順に説明されます。段落ごとの役割を意識すると整理しながら読めます。',
+    add: [...flow(['話題の\n紹介', '特徴①\n見た目', '特徴②\n行動', '特徴③\nちがい'], 10, { h: 60, size: 11, color: C.blue, fill: FILL.blue, gap: 8, pad: 6 }).flat(), ar(160, 74, 160, 90, C.main), bx(60, 94, 200, 34, 'まとめ（全体の要点）', C.red, FILL.red, 13), ...cap('説明文の組み立て')],
+  },
+  {
+    note: '説明文の始まりです。Have you ever heard of the axolotl?（ウーパールーパーについて聞いたことがありますか）は、「これから説明しますよ」という問いかけのサインです。It is a kind of salamander that lives in lakes in Mexico.（メキシコの湖にすむサンショウウオの一種です）と話題が紹介されます。',
+    add: fresh(bx(6, 10, 308, 30, 'Have you ever heard of the axolotl?', C.blue, FILL.blue, 12), lb(160, 54, '→ これから説明しますよ、という合図', 11, C.blue, 'middle', true), bx(6, 70, 308, 40, 'It is a kind of salamander that\nlives in lakes in Mexico.', C.green, FILL.green, 11), lb(160, 124, 'メキシコの湖にすむ、サンショウウオの一種', 11, C.green, 'middle', true), ...band(150, lb(160, 192, '問いかけ → 話題の紹介', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '❓Unlike ~ のあとには、なぜ大切な情報が続くのでしょう。→ Unlike ~（〜と違って）は対比を表す表現で、「ほかの生き物と何が違うのか」という、その生き物のいちばんの特徴が続くことが多いからです。Unlike other salamanders, axolotls usually keep their gills even after they become adults.（ほかのサンショウウオと違い、ウーパールーパーは大人になってもえらを保持することが多い）。',
+    add: fresh(bx(6, 8, 308, 32, 'Unlike other salamanders,', C.red, FILL.red, 13), lb(160, 54, 'ほかのサンショウウオと ちがって', 11, C.red, 'middle', true), bx(6, 68, 308, 44, 'axolotls usually keep their gills\neven after they become adults.', C.green, FILL.green, 11), lb(160, 126, '大人になっても えらを保持している', 11, C.green, 'middle', true), ...band(150, lb(160, 192, 'Unlike ~ は特徴の合図', 12, C.red, 'middle', true))),
+  },
+  {
+    note: '❓数字が出てきたら、どうするのでしょう。→ 設問でピンポイントに問われやすいので、丸で囲むなどして目立たせます。Axolotls can grow up to 30 centimeters long.（体長30センチまで成長する）、They can live for more than 10 years.（10年以上生きる）。up to は「最大で」、more than は「〜以上」です。',
+    add: fresh(bx(6, 14, 188, 26, '30 centimeters', C.blue, FILL.blue, 13), bx(200, 14, 114, 26, 'up to ＝ 最大で', C.blue, FILL.blue, 10), lb(160, 56, '体長は 30センチまで', 11, C.blue, 'middle', true), bx(6, 76, 130, 26, '10 years', C.green, FILL.green, 13), bx(144, 76, 170, 26, 'more than ＝ 〜以上', C.green, FILL.green, 10), lb(160, 118, '10年以上 生きる', 11, C.green, 'middle', true), ...band(150, lb(160, 192, '数字は目立たせて読む', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '理由と比較です。Because axolotls keep their gills, they can breathe underwater their whole lives.（えらを保持しているため、一生水中で呼吸できる）。Axolotls are more unusual than other salamanders because they don\'t go through a full change into adults.（完全には大人の姿に変化しないため、ほかのサンショウウオよりも珍しい）。than が出たら、何と何を比べているかを確かめます。',
+    add: fresh(bx(6, 8, 308, 40, 'Because axolotls keep their gills,\nthey can breathe underwater their whole lives.', C.green, FILL.green, 10), lb(160, 60, 'えらがあるから（理由）→ 一生水中で呼吸（結果）', 10, C.green, 'middle', true), bx(6, 76, 308, 40, 'Axolotls are more unusual than other salamanders\nbecause they don\'t go through a full change.', C.blue, FILL.blue, 10), lb(160, 128, 'than ＝ 何と何を比べているか確かめる', 10, C.blue, 'middle', true), ...band(150, lb(160, 192, '理由と比較に注意', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '❓However のあとには、なぜ注目するのでしょう。→ それまでの説明と対照的な内容、多くは問題点や課題が続くからです。However, axolotls now live in only a few lakes, and they are an endangered species.（しかし、今ではわずかな湖にしかすんでおらず、絶滅危惧種〈ぜつめつきぐしゅ〉です）。ここで文章の流れが転換します。',
+    add: fresh(bx(6, 10, 148, 50, 'それまで\n特徴の説明', C.blue, FILL.blue, 12), bx(166, 10, 148, 50, 'However,\n転換', C.red, FILL.red, 13), ar(156, 35, 164, 35, C.main), bx(6, 76, 308, 40, 'axolotls now live in only a few lakes,\nand they are an endangered species.', C.red, FILL.red, 10), lb(160, 130, 'わずかな湖にしかすんでおらず、絶滅危惧種', 10, C.red, 'middle', true), ...band(150, lb(160, 192, 'However の後に 課題が続く', 12, C.red, 'middle', true))),
+  },
+  {
+    note: '代名詞（だいめいし）は、直前の文から何を指すかを確かめます。Axolotls live in only a few lakes in Mexico. They are now an endangered species. の They は、直前の Axolotls（複数）を指します。単数か複数か、人か物かをヒントにします。',
+    add: fresh(bx(6, 14, 308, 30, 'Axolotls live in only a few lakes in Mexico.', C.blue, FILL.blue, 11), bx(6, 76, 308, 30, 'They are now an endangered species.', C.green, FILL.green, 12), ar(40, 74, 40, 46, C.red), lb(160, 62, 'They ＝ Axolotls（複数）', 12, C.red, 'middle', true), lb(160, 126, '代名詞は 直前の文から さがす', 12, C.ink, 'middle', true), ...band(150, lb(160, 192, 'They / It が指すものを確かめる', 12, C.main, 'middle', true))),
+  },
+  {
+    note: 'この文章の要点は3つです。①特徴：えらを保持したまま大人になる。②大きさ・寿命：最大30センチ、10年以上生きる。③現状：However 以降で「絶滅危惧種」という転換が起きている。多くの人が守るために努力している、という結びです。',
+    add: fresh(bx(6, 6, 308, 28, '① えらを保持したまま大人になる', C.blue, FILL.blue, 12), bx(6, 40, 308, 28, '② 最大30センチ、10年以上生きる', C.green, FILL.green, 12), bx(6, 74, 308, 28, '③ However 以降：絶滅危惧種', C.red, FILL.red, 12), lb(160, 122, '多くの人が守るために努力している', 11, C.ink, 'middle', true), ...cap('文章の要点3つ', C.main)),
+  },
+], '動物の説明文：構成・数字・However');
+
+// ───────── new20_e6_eigo_16 簡単な長文読解③：伝記文で人物の人生を読み取る ─────────
+const u36: DiagramFigure = show([
+  {
+    note: '伝記文（でんきぶん）は、人物の人生を時間の順に語る文章です。多くは「生まれ・子どものころ → きっかけ → 努力・挑戦 → 成し遂げたこと → 今の評価」の順に書かれます。',
+    add: [...flow(['生まれ\n子ども時代', 'きっかけ', '努力\n挑戦', '成し遂げた\nこと'], 14, { h: 66, size: 11, color: C.blue, fill: FILL.blue, gap: 8, pad: 6 }).flat(), ar(160, 84, 160, 98, C.main), bx(60, 102, 200, 32, '今どう評価されているか', C.red, FILL.red, 13), ...cap('伝記文の流れ')],
+  },
+  {
+    note: '冒頭を読みます。Wangari Maathai was born in Kenya in 1940.（1940年にケニアで生まれた）。When she was a child, she loved nature.（子どものころ自然が大好きだった）。Later, she studied biology in the United States and became the first woman in East Africa to earn a doctorate degree.（その後アメリカで生物学を学び、東アフリカの女性として初めて博士号を取った）。',
+    add: fresh(...flow(['1940\nborn in\nKenya', 'a child\nloved\nnature', 'studied\nbiology in\nthe U.S.', 'first woman\nin East Africa\ndoctorate'], 14, { h: 80, size: 10, color: C.blue, fill: FILL.blue, gap: 8, pad: 6 }).flat(), lb(160, 118, '年号と順番を つかむ', 12, C.ink, 'middle', true), ...cap('ワンガリ・マータイの生い立ち', C.main)),
+  },
+  {
+    note: '❓年号や年齢のことばに、なぜ印をつけるのでしょう。→ 出来事の順序を見失わないためです。When she was ten years old, ~（10歳のとき）、In 1990, ~（1990年に）、After graduating from ~, ~（〜を卒業したあと）、Later in her life, ~（人生の後半で）。伝記の設問は、時系列の並べかえや対応がよく問われます。',
+    add: fresh(bx(6, 8, 308, 24, 'When she was ten years old, ~', C.blue, FILL.blue, 11), bx(6, 36, 308, 24, 'In 1990, ~', C.blue, FILL.blue, 11), bx(6, 64, 308, 24, 'After graduating from ~, ~', C.blue, FILL.blue, 11), bx(6, 92, 308, 24, 'Later in her life, ~', C.blue, FILL.blue, 11), lb(160, 134, '10歳のとき ／ 1990年に ／ 卒業後 ／ 人生の後半で', 10, C.ink, 'middle', true), ...band(150, lb(160, 192, '時間のことばに印をつける', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '伝記でほぼ必ず出てくるのが「困難」です。It was not easy for her to ~.（彼女にとって〜するのは簡単ではなかった）、Many people did not believe in her idea.（多くの人が彼女の考えを信じなかった）、She faced a lot of difficulties.（彼女は多くの困難に直面した）。',
+    add: fresh(bx(6, 10, 308, 28, 'It was not easy for her to ~.', C.red, FILL.red, 12), lb(160, 50, '彼女にとって〜するのは簡単ではなかった', 11, C.red, 'middle', true), bx(6, 62, 308, 28, 'Many people did not believe in her idea.', C.red, FILL.red, 11), lb(160, 102, '多くの人が彼女の考えを信じなかった', 11, C.red, 'middle', true), bx(6, 112, 308, 28, 'She faced a lot of difficulties.', C.red, FILL.red, 12), ...band(150, lb(160, 192, '困難を表すことば', 12, C.red, 'middle', true))),
+  },
+  {
+    note: '❓Despite ~ や but のあとが大切なのは、なぜでしょう。→ 「あきらめなかった」「続けた」という行動の部分に、その人物の強さや考え方が表れるからです。Despite these difficulties, she never gave up.（これらの困難にもかかわらず、決してあきらめなかった）。She kept planting trees with local women.（地元の女性たちと木を植え続けた）。together they planted more than 30 million trees（3000万本以上の木を植えた）。',
+    add: fresh(bx(6, 8, 100, 28, 'Despite ~,', C.gray, FILL.gray, 13), ar(108, 22, 118, 22, C.main), bx(120, 8, 194, 28, 'she never gave up.', C.green, FILL.green, 13), lb(160, 48, '困難にもかかわらず、あきらめなかった', 11, C.green, 'middle', true), bx(6, 64, 308, 28, 'She kept planting trees with local women.', C.green, FILL.green, 10), lb(160, 104, '地元の女性たちと木を植え続けた', 11, C.green, 'middle', true), bx(60, 114, 200, 26, '30 million trees ＝ 3000万本以上', C.main, FILL.warm, 11), ...band(150, lb(160, 192, '乗りこえた行動に その人の強さ', 12, C.green, 'middle', true))),
+  },
+  {
+    note: '人物の考えは、言葉からも読み取れます。She believed that small actions could change the world.（小さな行動が世界を変えられると信じていた）。"You can start where you are," she said.（「あなたは今いる場所から始められる」と彼女は言った）。引用符（" "）の中の言葉は、その人物の考えがそのまま表れる大切な部分です。',
+    add: fresh(bx(6, 10, 308, 40, 'She believed that small actions\ncould change the world.', C.purple, FILL.purple, 12), lb(160, 64, '小さな行動が世界を変えられると信じていた', 11, C.purple, 'middle', true), bx(6, 80, 308, 36, '"You can start where you are," she said.', C.blue, FILL.blue, 12), lb(160, 130, '「今いる場所から始められる」と彼女は言った', 10, C.blue, 'middle', true), ...band(150, lb(160, 192, '信念と引用符の言葉', 12, C.purple, 'middle', true))),
+  },
+  {
+    note: '結びは「今の評価」です。In 2004, she became the first African woman to win the Nobel Peace Prize.（2004年、アフリカの女性として初めてノーベル平和賞を受賞した）。Today, she is remembered as a great leader who showed that one person\'s small actions can change the world.（今日、一人の小さな行動が世界を変えられることを示した偉大なリーダーとして記憶されている）。',
+    add: fresh(bx(6, 10, 308, 40, 'In 2004, she became the first African woman\nto win the Nobel Peace Prize.', C.red, FILL.red, 10), lb(160, 64, '2004年、ノーベル平和賞', 11, C.red, 'middle', true), bx(6, 78, 308, 50, 'Today, she is remembered as a great leader\nwho showed that one person\'s small actions\ncan change the world.', C.main, FILL.warm, 10), ...band(150, lb(160, 192, '結びに 要旨が集まる', 12, C.main, 'middle', true))),
+  },
+  {
+    note: 'まとめの手順です。①時間のことばに印をつけて順序をつかむ、②困難と、それを乗りこえた行動を確かめる、③信念（believed that ~ / said "~"）と今の評価を確かめる、④③をつなげると、文章全体の要旨が見える。タイトルや要旨を選ぶ問題では、結びの部分が最大のヒントです。',
+    add: fresh(bx(6, 6, 308, 26, '① 時間のことばで順序をつかむ', C.blue, FILL.blue, 11), bx(6, 36, 308, 26, '② 困難 → 乗りこえた行動', C.red, FILL.red, 11), bx(6, 66, 308, 26, '③ 信念（believed ・ said）と今の評価', C.purple, FILL.purple, 11), bx(6, 96, 308, 26, '④ ③をつなぐと 要旨が見える', C.green, FILL.green, 11), ...cap('伝記文を読む4つの手順', C.main)),
+  },
+], '伝記文：順序・困難・信念');
+
+// ───────── new20_e6_eigo_17 音の変化①：リンキング ─────────
+const u37: DiagramFigure = show([
+  {
+    note: '英語を話すときは、単語と単語の間にほとんど「間」を置きません。子音で終わる語のあとに、母音で始まる語が続くと、2つの音がつながって、1つの単語のように聞こえます。これをリンキング（つながる音）といいます。たとえば an apple は「アナプル」のように聞こえます。',
+    add: [bx(30, 14, 70, 34, 'an', C.blue, FILL.blue, 15), bx(110, 14, 100, 34, 'apple', C.green, FILL.green, 15), ar(160, 54, 160, 80, C.main), bx(70, 84, 180, 38, 'ア・ナ・プル', C.red, FILL.red, 16), lb(160, 136, 'n の音と a の音が つながる', 11, C.ink, 'middle', true), ...cap('子音 ＋ 母音 → つながる')],
+  },
+  {
+    note: '代表的な例です。an apple →「アナプル」、turn off →「ターノフ」、come on →「カモン」。come on は、日本語のカタカナ語としてもなじみのある音です。リンキングは特別なことではなく、ふだんから耳にしているものです。',
+    add: fresh(bx(6, 10, 120, 28, 'an apple', C.blue, FILL.blue, 13), ar(128, 24, 150, 24, C.main), bx(154, 10, 160, 28, 'アナプル', C.red, FILL.red, 14), bx(6, 50, 120, 28, 'turn off', C.blue, FILL.blue, 13), ar(128, 64, 150, 64, C.main), bx(154, 50, 160, 28, 'ターノフ', C.red, FILL.red, 14), bx(6, 90, 120, 28, 'come on', C.blue, FILL.blue, 13), ar(128, 104, 150, 104, C.main), bx(154, 90, 160, 28, 'カモン', C.red, FILL.red, 14), ...cap('つながって 聞こえる例', C.main)),
+  },
+  {
+    note: '❓なぜつながるのでしょう。→ 英語は、息の流れを止めずに単語をつなげて発音することばだからです。子音で終わったあと、すぐに母音が続くと、口の形が自然に次の音へ移り、2つの音が1つのかたまりに聞こえます。',
+    add: fresh(lb(60, 14, '日本語の感覚', 12, C.gray, 'middle', true), bx(10, 24, 40, 24, 'an', C.gray, FILL.gray, 11), bx(60, 24, 70, 24, 'apple', C.gray, FILL.gray, 11), lb(80, 62, '一語ずつ区切る', 11, C.gray, 'middle'), lb(240, 14, '英語の感じ', 12, C.red, 'middle', true), bx(170, 24, 140, 24, 'an apple', C.red, FILL.red, 12), lb(240, 62, '息が止まらずに つながる', 11, C.red, 'middle', true), ar(172, 90, 308, 90, C.red), lb(160, 116, '息の流れを止めない', 13, C.ink, 'middle', true), ...cap('息のながれを止めない', C.red)),
+  },
+  {
+    note: '❓聞こえ方が変わるなら、つづりも変わるのでしょうか。→ いいえ。リンキングは「発音（音）」の変化であって、つづりは変わりません。an apple は「アナプル」と聞こえても、書くときは an apple のままです。リスニングとつづりを混同しないようにしましょう。',
+    add: fresh(bx(10, 12, 140, 34, '聞こえ方\nアナプル', C.red, FILL.red, 13), bx(170, 12, 140, 34, '書き方\nan apple', C.blue, FILL.blue, 13), lb(160, 66, '音は変わっても、つづりは変わらない', 12, C.ink, 'middle', true), bx(60, 86, 200, 32, '✕  anapple と書かない', C.red, FILL.red, 12), ...cap('音の変化 ≠ つづりの変化', C.red)),
+  },
+  {
+    note: '同じ（似た）子音が続くときは、音が1つにまとまります。good day は「グッデイ」、big game は「ビゲーム」のように聞こえます。前の語の最後の子音がほとんど発音されず、次の語の最初の子音と重なります。',
+    add: fresh(bx(6, 14, 130, 30, 'good day', C.blue, FILL.blue, 14), ar(138, 29, 166, 29, C.main), bx(170, 14, 144, 30, 'グッデイ', C.red, FILL.red, 14), lb(160, 60, 'd の音が 1つにまとまる', 11, C.ink, 'middle', true), bx(6, 78, 130, 30, 'big game', C.blue, FILL.blue, 14), ar(138, 93, 166, 93, C.main), bx(170, 78, 144, 30, 'ビゲーム', C.red, FILL.red, 14), lb(160, 124, 'g の音が 1つにまとまる', 11, C.ink, 'middle', true), ...cap('同じ子音は 1つになる', C.main)),
+  },
+  {
+    note: 't や d のあとに you が続くと、「チュ」「ジュ」のように聞こえます。want you →「ワンチュ」、did you →「ディジュ」。What did you eat? は「ワッ・ディジュ・イート」のように聞こえます。Did you ~? や What do you ~? の疑問文でとてもよく起こるので、会話文のリスニングで頻出です。',
+    add: fresh(bx(6, 12, 130, 28, 'want you', C.blue, FILL.blue, 13), ar(138, 26, 166, 26, C.main), bx(170, 12, 144, 28, 'ワンチュ', C.red, FILL.red, 14), bx(6, 50, 130, 28, 'did you', C.blue, FILL.blue, 13), ar(138, 64, 166, 64, C.main), bx(170, 50, 144, 28, 'ディジュ', C.red, FILL.red, 14), bx(6, 88, 308, 28, 'What did you eat?', C.green, FILL.green, 13), lb(160, 132, 'ワッ・ディジュ・イート', 12, C.green, 'middle', true), ...band(150, lb(160, 192, 't / d ＋ you は チュ・ジュに', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '声に出して練習します。Did you see it?（ディジュ・シー・イット）、What do you want?（ワッダユー・ウォント）、Nice to meet you.（ナイス・トゥ・ミーチュー）。リンキングされた音を、「そういう決まった音のかたまり」として耳と口で覚えるのが、いちばん効果的な対策です。',
+    add: fresh(bx(6, 8, 308, 26, 'Did you see it?　ディジュ・シー・イット', C.blue, FILL.blue, 12), bx(6, 40, 308, 26, 'What do you want?　ワッダユー・ウォント', C.green, FILL.green, 12), bx(6, 72, 308, 26, 'Nice to meet you.　ナイス・トゥ・ミーチュー', C.purple, FILL.purple, 12), lb(160, 118, '音のかたまりとして 耳と口で覚える', 12, C.ink, 'middle', true), ...cap('声に出して練習', C.main)),
+  },
+  {
+    note: 'よくある崩れた形もあります。want to → ワナ、going to → ゴナ、got to → ガラ（ガッタ）。I\'m going to study. は「アイム・ゴナ・スタディ」。リスニングでは、①先に設問と選択肢の単語を確かめ、②頻出パターンが聞こえたら次の内容に集中し、③1語ずつではなく「かたまり」で意味をつかみます。',
+    add: fresh(bx(6, 6, 98, 26, 'want to', C.blue, FILL.blue, 12), lb(155, 19, '→ ワナ', 12, C.red, 'middle', true), bx(111, 6, 98, 26, 'going to', C.blue, FILL.blue, 12), lb(260, 19, '→ ゴナ', 12, C.red, 'middle', true), bx(6, 40, 98, 26, 'got to', C.blue, FILL.blue, 12), lb(155, 53, '→ ガラ', 12, C.red, 'middle', true), bx(6, 78, 308, 20, '① 先に設問と選択肢を確かめる', C.green, FILL.green, 11), bx(6, 102, 308, 20, '② 頻出パターンを合図に集中', C.green, FILL.green, 11), bx(6, 126, 308, 20, '③ かたまりで意味をつかむ', C.green, FILL.green, 11), ...band(150, lb(160, 192, 'リスニングのコツ', 12, C.main, 'middle', true))),
+  },
+], '音のつながり：リンキング');
+
+// ───────── new20_e6_eigo_18 音の変化②：弱い語と消える・変わる音 ─────────
+const u38: DiagramFigure = show([
+  {
+    note: '英語の文には「強く読む語」と「弱く読む語」があります。強く読むのは意味の中心になる語（名詞・動詞・形容詞・副詞・疑問詞など）、弱く読むのは文法のはたらきをする語（a / the、to / for / of、and / but など）です。I want to go to the park. では、want・go・park が強く、to・to・the が弱く読まれます。',
+    add: [bx(6, 6, 148, 26, '強く（意味の中心）', C.red, FILL.red, 11), bx(166, 6, 148, 26, '弱く（文法の語）', C.gray, FILL.gray, 11), lb(80, 48, '名詞・動詞・形容詞…', 11, C.red, 'middle', true), lb(240, 48, 'a / the ・ to / for ・ and', 11, C.gray, 'middle', true), bx(6, 70, 308, 30, 'I want to go to the park.', C.blue, FILL.blue, 14), lb(160, 118, '強い：want ・ go ・ park　弱い：to ・ to ・ the', 11, C.ink, 'middle', true), ...cap('強く読む語・弱く読む語')],
+  },
+  {
+    note: '弱く読まれる語は、短く、あいまいな母音で発音されます。to は「トゥー」ではなく軽く「タ」、for は「フォー」ではなく「フォ」、and は「アンド」ではなく「アン」か「ン」、a は「エイ」ではなく軽く「ア」です。',
+    add: fresh(bx(6, 8, 148, 28, 'to', C.gray, FILL.gray, 14), lb(236, 22, 'トゥー → 軽く「タ」', 12, C.red, 'middle', true), bx(6, 42, 148, 28, 'for', C.gray, FILL.gray, 14), lb(236, 56, 'フォー → 軽く「フォ」', 12, C.red, 'middle', true), bx(6, 76, 148, 28, 'and', C.gray, FILL.gray, 14), lb(236, 90, 'アンド → 「アン」「ン」', 12, C.red, 'middle', true), bx(6, 110, 148, 28, 'a', C.gray, FILL.gray, 14), lb(236, 124, 'エイ → 軽く「ア」', 12, C.red, 'middle', true), ...band(150, lb(160, 192, '弱く短く読まれる', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '❓なぜ強弱をつけるのでしょう。→ 意味の中心になる語を目立たせ、英語らしいリズムを作るためです。I WANT to GO to the PARK. のように、強い語だけが大きく、弱い語は小さく短くなります。このリズムを意識して聞くことが、自然な英語耳への第一歩です。',
+    add: fresh(bx(6, 40, 40, 70, 'I', C.gray, FILL.gray, 11), bx(52, 20, 60, 90, 'WANT', C.red, FILL.red, 14), bx(118, 70, 30, 40, 'to', C.gray, FILL.gray, 10), bx(154, 20, 40, 90, 'GO', C.red, FILL.red, 14), bx(200, 70, 30, 40, 'to', C.gray, FILL.gray, 10), bx(236, 70, 34, 40, 'the', C.gray, FILL.gray, 10), bx(276, 20, 38, 90, 'PARK', C.red, FILL.red, 11), lb(160, 130, '強い語が大きく、弱い語は小さく短く', 11, C.ink, 'middle', true), ...cap('強弱のリズム', C.red)),
+  },
+  {
+    note: '音が消える「脱落（だつらく）」です。語の最後の子音（特に t や d）のあとに別の子音が続くと、その音がほとんど発音されなくなります。next day は t がほとんど聞こえず「ネクス・デイ」、best friend は t が消えて「ベス・フレンド」のように聞こえます。',
+    add: fresh(bx(6, 12, 130, 30, 'next day', C.blue, FILL.blue, 14), ar(138, 27, 166, 27, C.main), bx(170, 12, 144, 30, 'ネクス・デイ', C.red, FILL.red, 13), lb(160, 56, 'next の t が消える', 11, C.ink, 'middle', true), bx(6, 76, 130, 30, 'best friend', C.blue, FILL.blue, 14), ar(138, 91, 166, 91, C.main), bx(170, 76, 144, 30, 'ベス・フレンド', C.red, FILL.red, 13), lb(160, 120, 'best の t が消える', 11, C.ink, 'middle', true), ...band(150, lb(160, 192, '音が消える ＝ 脱落', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '音が変わる「同化（どうか）」です。隣り合う2つの音が影響しあって、別の音になります。don\'t you は「ドンチュ」、miss you は「ミシュ」のように聞こえます。t / d ＋ 子音なら音が消えやすく、t / d ＋ you ならチュ・ジュに変わりやすい、とまとめられます。',
+    add: fresh(bx(6, 10, 130, 30, "don't you", C.blue, FILL.blue, 14), ar(138, 25, 166, 25, C.main), bx(170, 10, 144, 30, 'ドンチュ', C.red, FILL.red, 14), bx(6, 50, 130, 30, 'miss you', C.blue, FILL.blue, 14), ar(138, 65, 166, 65, C.main), bx(170, 50, 144, 30, 'ミシュ', C.red, FILL.red, 14), bx(6, 94, 148, 30, 't / d ＋ 子音\n→ 消えやすい', C.green, FILL.green, 10), bx(166, 94, 148, 30, 't / d ＋ you\n→ チュ・ジュに', C.green, FILL.green, 10), ...band(150, lb(160, 192, '音が変わる ＝ 同化', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '練習です。Would you like something to drink? は、would you が「ウジュ」、to が弱く「タ」になり、全体で「ウジュ・ライク・サムシン・タ・ドリンク」のように聞こえます。What would you like to eat? も、would you は「ウジュ」、like to は「ライク・タ」と速くなめらかに聞こえます。',
+    add: fresh(bx(6, 10, 308, 30, 'Would you like something to drink?', C.blue, FILL.blue, 12), ar(160, 44, 160, 60, C.main), bx(6, 64, 308, 34, 'ウジュ・ライク・サムシン・タ・ドリンク', C.red, FILL.red, 12), lb(160, 118, 'would you → ウジュ ／ to → タ', 12, C.ink, 'middle', true), ...band(150, lb(160, 192, '聞こえ方に 慣れる', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '❓リスニングでは、どう対策するのでしょう。→ ①意味の中心の語を聞き取ることに集中し、弱い語は文法で補う。②not や don\'t のような否定の短い語は特に注意（聞き逃すと意味が正反対になるため）。③知っている語が聞き取れないときは「弱形・脱落・同化かも」と考えて、文脈で埋める。',
+    add: fresh(bx(6, 8, 308, 34, '① 意味の中心の語に集中\n弱い語は文法で補う', C.blue, FILL.blue, 11), bx(6, 48, 308, 34, '② not ・ don\'t は特に注意\n（意味が正反対になる）', C.red, FILL.red, 11), bx(6, 88, 308, 34, '③ 聞き取れない語は\n「音の変化かも」と考える', C.green, FILL.green, 11), ...cap('リスニング本番の3つの対策', C.main)),
+  },
+  {
+    note: '家庭でできる練習は3ステップです。①短い会話文をゆっくり音声で聞く → ②同じ文をふつうの速さで聞く → ③自分でも同じリズムをまねて声に出す。耳と口の両方で、音の変化に慣れていきます。音読やシャドーイングもおすすめです。',
+    add: fresh(...flow(['ゆっくり\n聞く', 'ふつうの速さで\n聞く', 'まねして\n声に出す'], 22, { h: 70, size: 12, color: C.blue, fill: FILL.blue, gap: 14, pad: 10 }).flat(), lb(160, 118, 'くりかえして 耳と口を慣らす', 12, C.red, 'middle', true), ...cap('家でできる 3ステップ', C.green)),
+  },
+], '弱い語・脱落・同化');
+
+// ───────── new20_e6_eigo_19 英検5級レベル総合演習 ─────────
+const u39: DiagramFigure = show([
+  {
+    note: '英検5級の筆記は3つのパターンが中心です。①短文の語句・文法選択（空所に合う語を4つから選ぶ）、②会話文の空所補充（自然な発言を選ぶ）、③語句の並べかえ。リスニングは絵を見て答える形式と、会話の最後の受け答えを選ぶ形式が中心です。',
+    add: [bx(6, 8, 308, 30, '① 短文の語句・文法選択', C.blue, FILL.blue, 13), bx(6, 44, 308, 30, '② 会話文の空所補充', C.green, FILL.green, 13), bx(6, 80, 308, 30, '③ 語句の並べかえ', C.purple, FILL.purple, 13), lb(160, 128, '＋ リスニング', 12, C.red, 'middle', true), ...cap('5級の筆記3パターン')],
+  },
+  {
+    note: '例題①です。My sister ( ) to school every day. 選択肢は 1. go　2. goes　3. going　4. went。every day（毎日）から現在の習慣とわかります。主語 My sister は三人称単数なので、動詞に -s が必要です。答えは 2. goes です。',
+    add: fresh(bx(6, 8, 308, 30, 'My sister (   ) to school every day.', C.blue, FILL.blue, 13), lb(60, 56, '1. go', 12, C.gray, 'middle', true), lb(130, 56, '2. goes', 13, C.green, 'middle', true), lb(200, 56, '3. going', 12, C.gray, 'middle', true), lb(270, 56, '4. went', 12, C.gray, 'middle', true), bx(6, 72, 148, 30, 'every day → 現在の習慣', C.green, FILL.green, 10), bx(166, 72, 148, 30, 'My sister → 三人称単数', C.green, FILL.green, 10), lb(160, 122, '答え：2. goes', 14, C.green, 'middle', true), ...band(150, lb(160, 192, '空所の前後に 手がかり', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '例題②です。A: What time is it now?　B: It\'s ( ) nine. 選択肢は 1. in　2. on　3. at　4. to。時刻の前に置く前置詞は at です。at nine で「9時に」という意味になります。答えは 3. at です。',
+    add: fresh(bx(6, 8, 308, 30, "B: It's (   ) nine.", C.blue, FILL.blue, 14), lb(60, 56, '1. in', 12, C.gray, 'middle', true), lb(130, 56, '2. on', 12, C.gray, 'middle', true), lb(200, 56, '3. at', 13, C.green, 'middle', true), lb(270, 56, '4. to', 12, C.gray, 'middle', true), bx(40, 74, 240, 30, '時刻の前の前置詞は at', C.green, FILL.green, 13), lb(160, 122, '答え：3. at（9時に）', 14, C.green, 'middle', true), ...band(150, lb(160, 192, '決まった組み合わせ', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '例題③です。There ( ) two cats under the table. 選択肢は 1. is　2. are　3. was　4. am。There is / are のあとの動詞は、そのあとに続く名詞の数に合わせます。two cats は複数なので、答えは 2. are です。',
+    add: fresh(bx(6, 8, 308, 30, 'There (   ) two cats under the table.', C.blue, FILL.blue, 12), lb(60, 56, '1. is', 12, C.gray, 'middle', true), lb(130, 56, '2. are', 13, C.green, 'middle', true), lb(200, 56, '3. was', 12, C.gray, 'middle', true), lb(270, 56, '4. am', 12, C.gray, 'middle', true), bx(40, 74, 240, 30, 'two cats ＝ 複数 → are', C.green, FILL.green, 13), lb(160, 122, '答え：2. are', 14, C.green, 'middle', true), ...band(150, lb(160, 192, 'あとの名詞の数に合わせる', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '語句選択の手がかりは3つです。①時を表す語（every day・now）、②主語の数（三人称単数か複数か）、③決まった組み合わせ（at＋時刻）。この3つを探すと、確実に絞り込めます。',
+    add: fresh(bx(6, 10, 308, 32, '① 時を表す語　every day ・ now', C.blue, FILL.blue, 12), bx(6, 50, 308, 32, '② 主語の数　単数か複数か', C.green, FILL.green, 12), bx(6, 90, 308, 32, '③ 決まった組み合わせ　at ＋ 時刻', C.purple, FILL.purple, 12), ...cap('3つの手がかり', C.main)),
+  },
+  {
+    note: '会話文の空所補充では、空所の前の発言が質問か提案かを見きわめ、その応答を選びます。A: Would you like some tea? には B: Yes, please.。A: How was your weekend? には B: It was great.（How was ~? は感想をたずねる）。❓文法が正しいだけでは不十分で、「会話としてつながるか」が基準です。',
+    add: fresh(bx(6, 8, 308, 26, 'A: Would you like some tea?', C.gray, FILL.gray, 12), bx(6, 38, 308, 26, 'B: Yes, please.', C.green, FILL.green, 12), lb(160, 76, 'Would you like ~? ＝ すすめる → Yes / No', 11, C.green, 'middle', true), bx(6, 92, 308, 26, 'A: How was your weekend?', C.gray, FILL.gray, 12), bx(6, 122, 308, 24, 'B: It was great. I went to the zoo.', C.green, FILL.green, 11), ...band(150, lb(160, 192, '会話として つながるものを選ぶ', 12, C.green, 'middle', true))),
+  },
+  {
+    note: '並べかえ問題です。( is / your / this / bag / ) ? 手順は、①動詞を探す（is）、②疑問文なので be動詞を主語の前に置く、③残りを意味が通るように当てはめる。答えは Is this your bag? です。',
+    add: fresh(bx(6, 8, 308, 28, '( is / your / this / bag ) ?', C.blue, FILL.blue, 13), ...flow(['① 動詞\nis', '② 疑問文\nis を前に', '③ 残りを\n並べる'], 48, { h: 50, size: 11, color: C.green, fill: FILL.green, gap: 14, pad: 8 }).flat(), bx(60, 108, 200, 30, 'Is this your bag?', C.green, FILL.green, 15), ...band(150, lb(160, 192, 'まず動詞をさがす', 12, C.main, 'middle', true))),
+  },
+  {
+    note: 'リスニングは3つのパートです。パート1：絵を見て合う英文を選ぶ（絵の中の人・物・動作を先に確認）。パート2：短い会話の最後の応答を選ぶ（会話文問題と同じ考え方）。パート3：やや長い会話や英文の内容に合う絵・選択肢を選ぶ（数字・場所・人物名に集中）。どの場合も、放送前に選択肢に目を通します。',
+    add: fresh(bx(6, 6, 308, 34, 'パート1　絵を見て 合う英文を選ぶ', C.blue, FILL.blue, 11), bx(6, 46, 308, 34, 'パート2　会話の最後の応答を選ぶ', C.green, FILL.green, 11), bx(6, 86, 308, 34, 'パート3　数字・場所・人物名に集中', C.purple, FILL.purple, 11), lb(160, 136, '放送の前に 選択肢に目を通す', 12, C.red, 'middle', true), ...cap('リスニングの3パート', C.main)),
+  },
+], '英検5級：語句選択・会話文・並べかえ');
+
+// ───────── new20_e6_eigo_20 英検4級レベル総合演習 ─────────
+const u40: DiagramFigure = show([
+  {
+    note: '英検4級では、5級の基礎に加えて新しい文法が問われます。現在完了（have / has＋過去分詞）、不定詞（to＋原形）、比較級・最上級、受動態、接続詞（when・if・because）。長文問題（Eメール・掲示文）も加わります。',
+    add: [bx(6, 4, 308, 24, '現在完了　I have just finished my homework.', C.blue, FILL.blue, 10), bx(6, 32, 308, 24, '不定詞　It\'s fun to swim.', C.green, FILL.green, 11), bx(6, 60, 308, 24, '比較　This book is more interesting than that one.', C.purple, FILL.purple, 10), bx(6, 88, 308, 24, '受動態　This song is loved by many people.', C.red, FILL.red, 10), bx(6, 116, 308, 24, '接続詞　I was happy when I saw you.', C.main, FILL.warm, 10), ...cap('4級で新しく問われる文法')],
+  },
+  {
+    note: '例題①です。A: Have you ( ) finished your homework?　B: Yes, I have. 選択肢は 1. yet　2. already　3. still　4. never。Have you already finished ~? は完了の疑問文として自然な組み合わせです。yet は主に疑問文の文末や否定文で使われます。答えは 2. already です。',
+    add: fresh(bx(6, 8, 308, 30, 'Have you (   ) finished your homework?', C.blue, FILL.blue, 12), lb(60, 56, '1. yet', 12, C.gray, 'middle', true), lb(130, 56, '2. already', 13, C.green, 'middle', true), lb(200, 56, '3. still', 12, C.gray, 'middle', true), lb(270, 56, '4. never', 12, C.gray, 'middle', true), bx(6, 72, 148, 30, 'already ＝ もう（完了）', C.green, FILL.green, 11), bx(166, 72, 148, 30, 'yet ＝ 文末・否定文で', C.gray, FILL.gray, 11), lb(160, 122, '答え：2. already', 14, C.green, 'middle', true), ...band(150, lb(160, 192, '完了の疑問文', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '例題②です。This mountain is ( ) than that one. 選択肢は 1. high　2. higher　3. highest　4. more high。than があるので、比較級が入ります。high は -er を付ける規則変化なので higher が正解です。答えは 2. higher です。',
+    add: fresh(bx(6, 8, 308, 30, 'This mountain is (   ) than that one.', C.blue, FILL.blue, 12), lb(60, 56, '1. high', 12, C.gray, 'middle', true), lb(130, 56, '2. higher', 13, C.green, 'middle', true), lb(200, 56, '3. highest', 12, C.gray, 'middle', true), lb(270, 56, '4. more high', 11, C.gray, 'middle', true), bx(40, 74, 240, 30, 'than があるので 比較級', C.green, FILL.green, 13), lb(160, 122, '答え：2. higher', 14, C.green, 'middle', true), ...band(150, lb(160, 192, 'than → 比較級', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '4級から加わる長文問題は、Eメールのやり取りや掲示がよく題材になります。件名（Subject）・差出人（From）・宛先（To）も読み取る対象です。例：Subject: About the school festival / From: Emma / To: Yuki / Hi Yuki, are you free next Saturday? Our school is having a festival, and I want to go with you. It starts at 10 a.m.',
+    add: fresh(bx(30, 4, 260, 138, undefined, C.main, FILL.warm), lb(46, 20, 'Subject: About the school festival', 10, C.ink, 'start', true), lb(46, 38, 'From: Emma', 11, C.blue, 'start', true), lb(46, 56, 'To: Yuki', 11, C.green, 'start', true), lb(46, 80, 'Hi Yuki, are you free next Saturday?', 10, C.ink, 'start'), lb(46, 98, 'Our school is having a festival, and', 10, C.ink, 'start'), lb(46, 114, 'I want to go with you. It starts at 10 a.m.', 10, C.ink, 'start'), ...cap('Eメール形式の長文')),
+  },
+  {
+    note: '❓内容一致問題で、なぜ本文のことばをそのまま探してはいけないのでしょう。→ 4級では、同じ内容を別の言い方に言いかえた選択肢が正解になることが多いからです。本文の I want to go with you. は、選択肢では She wants to go to the festival with Yuki. のように言いかえられます。',
+    add: fresh(bx(6, 10, 308, 28, 'I want to go with you.　（本文）', C.blue, FILL.blue, 12), ar(160, 42, 160, 62, C.main), bx(6, 66, 308, 40, 'She wants to go to the festival\nwith Yuki.　（選択肢）', C.green, FILL.green, 11), lb(160, 124, '同じ意味を ちがう言い方で', 12, C.ink, 'middle', true), ...band(150, lb(160, 192, '言いかえに注意', 12, C.green, 'middle', true))),
+  },
+  {
+    note: '語句整序（ごくせいじょ）は、5級より長い文になります。( to / want / I / be / a / doctor / in the future ). まず主語と動詞で骨組み I want to be を作り、そこに a doctor、時を表す in the future を組み合わせます。不定詞（to＋原形）はひとかたまりで考えます。',
+    add: fresh(bx(6, 8, 308, 28, '( to / want / I / be / a / doctor / in the future )', C.blue, FILL.blue, 10), ...flow(['I want\nto be', 'a doctor', 'in the\nfuture'], 50, { h: 44, size: 12, color: C.green, fill: FILL.green, gap: 14, pad: 8 }).flat(), lb(160, 110, '① 主語と動詞　② to ＋ 原形は かたまり　③ 時の語は 最後', 10, C.ink, 'middle', true), lb(160, 130, 'I want to be a doctor in the future.', 12, C.green, 'middle', true), ...band(150, lb(160, 192, '骨組みから組み立てる', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '4級のリスニングは、5級より会話が長く、Eメールの内容を問う問題も出ます。「だれが・何を・いつ」を聞き取るだけでなく、会話全体の流れ（提案 → 断る理由 → 代わりの案）まで追います。',
+    add: fresh(...flow(['提案', '断る理由', '代わりの案'], 20, { h: 60, size: 13, color: C.blue, fill: FILL.blue, gap: 16, pad: 10 }).flat(), lb(160, 104, 'だれが・何を・いつ ＋ 全体の流れ', 13, C.ink, 'middle', true), ...cap('会話の流れを追う', C.main)),
+  },
+  {
+    note: '総仕上げの進め方です。①これまでの単元で学んだ文法・表現を横断的に復習する。②過去形・未来表現・比較・道案内・買い物・お知らせ文など、場面ごとの型を思い出しながら模擬問題を解く。③まちがえた問題は「知らなかった」のか「わかっていたのに読みまちがえた」のかを区別し、後者は同じような問題でもう一度確かめる。',
+    add: fresh(bx(6, 8, 308, 32, '① 学んだ文法・表現を 横断的に復習', C.blue, FILL.blue, 11), bx(6, 46, 308, 32, '② 場面ごとの型を思い出して 模擬問題', C.green, FILL.green, 11), bx(6, 84, 308, 44, '③ まちがいを区別する\n知らなかった ／ 読みまちがえた', C.red, FILL.red, 11), ...cap('総仕上げの3ステップ', C.main)),
+  },
+], '英検4級：新しい文法と長文');
+
 export const XF_CEL_FIGURES: Record<string, DiagramFigure> = {
   'xf_new20_e5_eigo_11': u11,
   'xf_new20_e5_eigo_12': u12,
@@ -927,6 +1179,13 @@ export const XF_CEL_FIGURES: Record<string, DiagramFigure> = {
   'xf_new20_e6_eigo_11': u31,
   'xf_new20_e6_eigo_12': u32,
   'xf_new20_e6_eigo_13': u33,
+  'xf_new20_e6_eigo_14': u34,
+  'xf_new20_e6_eigo_15': u35,
+  'xf_new20_e6_eigo_16': u36,
+  'xf_new20_e6_eigo_17': u37,
+  'xf_new20_e6_eigo_18': u38,
+  'xf_new20_e6_eigo_19': u39,
+  'xf_new20_e6_eigo_20': u40,
 };
 
 export const XF_CEL_SECTIONS: Record<string, string> = {
@@ -953,4 +1212,11 @@ export const XF_CEL_SECTIONS: Record<string, string> = {
   'new20_e6_eigo_11#0': 'xf_new20_e6_eigo_11',
   'new20_e6_eigo_12#0': 'xf_new20_e6_eigo_12',
   'new20_e6_eigo_13#0': 'xf_new20_e6_eigo_13',
+  'new20_e6_eigo_14#0': 'xf_new20_e6_eigo_14',
+  'new20_e6_eigo_15#0': 'xf_new20_e6_eigo_15',
+  'new20_e6_eigo_16#0': 'xf_new20_e6_eigo_16',
+  'new20_e6_eigo_17#0': 'xf_new20_e6_eigo_17',
+  'new20_e6_eigo_18#0': 'xf_new20_e6_eigo_18',
+  'new20_e6_eigo_19#0': 'xf_new20_e6_eigo_19',
+  'new20_e6_eigo_20#0': 'xf_new20_e6_eigo_20',
 };
