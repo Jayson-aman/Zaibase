@@ -28,12 +28,12 @@ If sign-in is requested, please use the demo account provided in App Review Info
 ==================================================
 3) 単元解放  com.zaibase.exam.unitunlock  （消耗型・¥150）
 ==================================================
-This is a consumable in-app purchase that unlocks ONE locked textbook lesson (単元) in our exam-prep app. It is not a subscription and does not renew.
+This is a consumable in-app purchase that unlocks ONE additional textbook lesson (単元) in our exam-prep app. It is not a subscription and does not renew.
 
-Context: in the textbook section, the first 15 lessons of each subject and exam type are free. Additional lessons are locked (the top of each locked lesson can still be previewed) and can be unlocked one at a time for ¥150 with this consumable. Each purchase unlocks one lesson permanently.
+Context: the app's textbook has about 5,700 lessons. The first 15 lessons of each subject and exam type are free, and the rest are included in the PRO/MAX subscriptions. In addition, a set of extra lessons for each grade and subject (for example, grade 4 math) can also be bought one at a time with this consumable, for users who do not want a subscription. In each grade and subject, the first 5 of these extra lessons are free; the other lessons are locked (the top of each locked lesson can still be previewed) and can be unlocked one at a time for ¥150. Each purchase unlocks one lesson permanently.
 
-How to find it in the app:
-Home -> choose an exam type -> 教科書 (Textbook) -> choose a subject (e.g. 算数) -> scroll down the lesson list past the first 15 lessons -> open any locked lesson -> tap "¥150で解放する".
+How to find it in the app (example lesson):
+Home -> choose 中学受験 (junior-high exam) -> 教科書 (Textbook) -> 算数 (Math) -> open the grade 4 lesson titled "わり算のあまりの活用(あまりの処理を判断する文章題)". It is locked, and the "¥150で解放する" button is shown on the lesson page. (Other locked extra lessons, such as "和差算の基礎(2つの数の和と差から求める)", work the same way.) Other locked lessons that are not part of this extra set show the PRO/MAX subscription screen instead.
 
 If sign-in is requested, please use the demo account provided in App Review Information. The attached screenshot shows the locked lesson with the ¥150 unlock button.
 
