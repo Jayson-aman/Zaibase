@@ -1116,7 +1116,7 @@ const f_koko_math_s256: DiagramFigure = (() => {
       },
       {
         note: '❓面積比はいくつでしょう。→ 面積は縦×横なので、相似比の2乗。2²：5²＝4：25。1辺2の正方形の面積は4、1辺5の正方形の面積は25、というイメージです。',
-        add: fresh(bx(40, 30, 48, 48, '4', C.blue, FILL.blue, 15), bx(140, 18, 120, 120, '25', C.gray, FILL.gray, 18), lb(64, 92, '辺 2', 11, C.blue, 'middle', true), lb(200, 150, '辺 5', 11, C.gray, 'middle', true), ...cap2('面積比 ＝ 相似比の2乗', '△ADE：△ABC ＝ 4：25', C.main, FILL.warm)),
+        add: fresh(bx(40, 30, 48, 48, '4', C.blue, FILL.blue, 15), bx(140, 18, 120, 120, '25', C.gray, FILL.gray, 18), lb(64, 92, '辺 2', 11, C.blue, 'middle', true), lb(272, 78, '辺 5', 11, C.gray, 'start', true), ...cap2('面積比 ＝ 相似比の2乗', '△ADE：△ABC ＝ 4：25', C.main, FILL.warm)),
       },
       {
         note: '❓台形の面積はどうやって出すのでしょう。→ 台形＝△ABC−△ADE です。比では 25−4＝21。つまり △ADE：台形DBCE＝4：21。△ADEが8cm²なら、1あたり2cm²。台形は 21×2＝42cm²、△ABCは 25×2＝50cm² です。',
@@ -1128,7 +1128,7 @@ const f_koko_math_s256: DiagramFigure = (() => {
       },
       {
         note: '❓頂点から測った円錐の体積比は？ → 相似比が1：2：3 なので、体積比は1³：2³：3³＝1：8：27 です。ただし、これは「頂点から測った3つの円錐」の体積で、切り分けた3つの部分ではありません。',
-        add: [hi([ap, l3, r3], C.green, 0.3), hi([ap, l6, r6], C.blue, 0.15), lb(250, 36, '頂点からの円錐', 11, C.ink, 'middle', true), lb(250, 58, '3cmまで → 1', 12, C.green, 'middle', true), lb(250, 78, '6cmまで → 8', 12, C.blue, 'middle', true), lb(250, 98, '9cmまで → 27', 12, C.ink, 'middle', true), ...cap('累積の体積比 ＝ 1³：2³：3³ ＝ 1：8：27', C.main)],
+        add: [bx(198, 22, 122, 90, undefined, '#FFFFFF', '#FFFFFF'), hi([ap, l3, r3], C.green, 0.3), hi([ap, l6, r6], C.blue, 0.15), lb(250, 36, '頂点からの円錐', 11, C.ink, 'middle', true), lb(250, 58, '3cmまで → 1', 12, C.green, 'middle', true), lb(250, 78, '6cmまで → 8', 12, C.blue, 'middle', true), lb(250, 98, '9cmまで → 27', 12, C.ink, 'middle', true), ...cap('累積の体積比 ＝ 1³：2³：3³ ＝ 1：8：27', C.main)],
       },
       {
         note: '❓では、切り分けた各部分は？ → 差をとります。上は1、中は 8−1＝7、下は 27−8＝19。比は1：7：19。1＋7＋19＝27 で全体と一致します。「1：8：27」と答えるのは、累積と各層を混ぜたまちがいです。',
@@ -1278,6 +1278,244 @@ const f_koko_math_s260: DiagramFigure = (() => {
   );
 })();
 
+// ───────── s263 特別な直角三角形の使い分けと補助線 ─────────
+const f_koko_math_s263: DiagramFigure = (() => {
+  const A: Pt = [160, 50], B: Pt = [56, 110], Cc: Pt = [264, 110], H: Pt = [160, 110];
+  const fig = (): El[] => [shape([A, B, Cc], C.ink, 'rgba(0,0,0,0)'), ...names({ A, B, C: Cc }, { A: [0, -9], B: [-9, 8], C: [9, 8] })];
+  // 150° の図
+  const A2: Pt = [110, 112], C2: Pt = [260, 112], B2: Pt = [26.9, 64], H2: Pt = [26.9, 112];
+  return show(
+    [
+      {
+        note: '問題です。∠A＝120°、AB＝AC＝6cm の二等辺三角形ABCの面積を求めます。直角がない三角形なので、そのままでは三平方の定理も辺の比も使えません。',
+        add: [...fig(), ...arc(A, B, Cc, 20, C.red), lb(160, 76, '120°', 10, C.red, 'middle', true), tag('6', B, A, -10), tag('6', A, Cc, -10), ...cap('∠A＝120°、AB＝AC＝6cm の面積は？', C.ink)],
+      },
+      {
+        note: '❓「(1/2)×6×6＝18cm²」としてよいでしょうか。→ いけません。(1/2)×2辺の積 が使えるのは、2辺がつくる角が90°のときだけです。ここは120°のはさむ角で、直角ではありません。',
+        add: [lb(160, 100, '× 18cm²', 14, C.red, 'middle', true), ...cap2('はさむ角が 90° ではない', '「2辺の積÷2」は使えない', C.red, FILL.red)],
+      },
+      {
+        note: '❓どうやって直角を作るのでしょう。→ 頂点Aから底辺BCに垂線AHを引きます。二等辺三角形では、この垂線が頂角を二等分し、底辺も二等分します。だから ∠BAH＝∠CAH＝120°÷2＝60° です。',
+        add: [bx(100, 88, 120, 22, undefined, '#FFFFFF', '#FFFFFF'), seg(A, H, C.blue, true, 2), ...rt(H, A, Cc, 8), dot(H), nm('H', H, 0, 12), ...arc(A, B, H, 24, C.green), ...arc(A, H, Cc, 24, C.green), ...cap('垂線 AH で 直角を作る（∠BAH＝∠CAH＝60°）', C.blue, 11)],
+      },
+      {
+        note: '❓△ABHはどんな三角形でしょう。→ 角は 90°、60°、そして残りは 180°−90°−60°＝30°。30°・60°・90° の直角三角形です。辺の比は、30°の向かい側：60°の向かい側：斜辺＝1：√3：2 です。',
+        add: fresh(...fig(), seg(A, H, C.blue, true, 2), ...rt(H, A, Cc, 8), hi([A, B, H], C.blue, 0.2), ...arc(B, A, H, 22, C.red), lb(98, 104, '30°', 9, C.red, 'start', true), lb(176, 80, '1', 12, C.blue, 'start', true), lb(108, 126, '√3', 12, C.blue, 'middle', true), lb(98, 70, '2', 12, C.blue, 'end', true), ...cap2('30°・60°・90° の直角三角形', 'AH：BH：AB ＝ 1：√3：2', C.blue, FILL.blue)),
+      },
+      {
+        note: '❓長さを出しましょう。斜辺 AB＝6 は、比の「2」にあたります。1あたり3cm。だから AH＝1×3＝3cm、BH＝√3×3＝3√3cm です。',
+        add: fresh(...fig(), seg(A, H, C.blue, true, 2), ...rt(H, A, Cc, 8), hi([A, B, H], C.blue, 0.2), lb(168, 84, '3', 12, C.blue, 'start', true), lb(108, 126, 'BH ＝ 3√3', 12, C.blue, 'middle', true), lb(98, 70, '6', 12, C.ink, 'end', true), ...cap2('AB＝6 が比の 2 → 1 は 3cm', 'AH ＝ 3、BH ＝ 3√3', C.green, FILL.green)),
+      },
+      {
+        note: '❓面積は？ → 二等辺三角形なので BC＝BH×2＝2×3√3＝6√3cm。底辺BC、高さAHを使って (1/2)×6√3×3＝9√3cm²（約15.6cm²）。18cm²とはちがう、とわかります。',
+        add: fresh(...fig(), hi([A, B, Cc], C.green, 0.15), seg(A, H, C.blue, true, 2), ...rt(H, A, Cc, 8), lb(112, 126, '3√3', 11, C.ink, 'middle', true), lb(210, 126, '3√3', 11, C.ink, 'middle', true), lb(176, 84, '3', 12, C.blue, 'start', true), ...cap2('BC ＝ 6√3、高さ AH ＝ 3', '面積 ＝ (1/2)×6√3×3 ＝ 9√3 cm²', C.green, FILL.green)),
+      },
+      {
+        note: '❓150°が出てきたらどうするのでしょう。∠A＝150°、AB＝8cm のとき。→ 頂点Bから、辺ACを延ばした直線に垂線BHを引きます。外側の角 ∠BAH＝180°−150°＝30° で、30°・60°・90°の直角三角形ができます。BH＝8×1/2＝4cm、AH＝4√3cm。垂線の足Hは、辺ACの外側に落ちます。',
+        add: fresh(seg(A2, C2), seg(A2, B2), seg(B2, C2), seg([16, 112], A2, C.gray, true, 1.6), seg(B2, H2, C.blue, true, 2), ...rt(H2, B2, A2, 7), ...arc(A2, B2, C2, 26, C.red), ...arc(A2, B2, H2, 16, C.green), lb(108, 92, '150°', 9, C.red, 'middle', true), lb(70, 106, '30°', 9, C.green, 'middle', true), ...names({ A: A2, B: B2, C: C2, H: H2 }, { A: [4, 12], B: [0, -9], C: [9, 4], H: [0, 12] }), lb(14, 90, '4', 11, C.blue, 'middle', true), lb(66, 124, '4√3', 11, C.blue, 'middle', true), ...cap('垂線の足は 辺の外側（延長上）にくる', C.blue)),
+      },
+      {
+        note: 'まとめです。角度に45°があれば 1：1：√2、30°・60°があれば 1：√3：2。120°や150°は、補角（60°・30°）をつくる垂線を引いて分解します。直角がない三角形では、自分で垂線を引いて直角を作ります。',
+        add: fresh(...rows(['45° → 1：1：√2（直角二等辺三角形）', '30°・60° → 1：√3：2', '120°・150° → 垂線を引いて 60°・30° に分解', '垂線の足が辺の外側にくる場合は 図を正しくかく'], { size: 12 }), ...cap('角度を見て、使う比を決める', C.ink)),
+      },
+    ],
+    '鈍角の分解と、外側に落ちる垂線',
+  );
+})();
+
+// ───────── s265 四角形の対角線と三平方の定理（台形） ─────────
+const f_koko_math_s265: DiagramFigure = (() => {
+  const B: Pt = [50, 120], Cc: Pt = [260, 120], A: Pt = [110, 75], D: Pt = [200, 75], H: Pt = [110, 120], I: Pt = [200, 120];
+  const trap = (): El[] => [shape([A, B, Cc, D]), ...names({ A, B, C: Cc, D }, { A: [-4, -9], B: [-9, 8], C: [9, 8], D: [4, -9] })];
+  // 長方形と対角線
+  const R: Pt[] = [[88, 40], [232, 40], [232, 100], [88, 100]];
+  return show(
+    [
+      {
+        note: '問題です。AD∥BC の台形ABCDで、AD＝6cm、BC＝14cm、AB＝DC＝5cm（脚の長さが等しい等脚台形）。面積を求めます。台形の面積は (上底＋下底)×高さ÷2 なので、高さを出すのが目標です。',
+        add: [...trap(), tag('6', A, D, -10), tag('14', B, Cc, 22), tag('5', B, A, 10), tag('5', Cc, D, -10), ...cap('AD＝6　BC＝14　AB＝DC＝5　面積は？', C.ink)],
+      },
+      {
+        note: '❓脚の5cmを高さとして (1/2)×(6＋14)×5＝50cm² としてよいでしょうか。→ いけません。ABは斜めの辺で、高さ（上底と下底のあいだの垂直な距離）ではないからです。高さより長い辺になっています。',
+        add: [seg(A, B, C.red, false, 3), seg(D, Cc, C.red, false, 3), lb(160, 100, '× 50cm²', 14, C.red, 'middle', true), ...cap('斜めの辺 5 は 高さではない', C.red)],
+      },
+      {
+        note: '❓高さはどうやって作るのでしょう。→ AとDから、下底BCに垂線AH、DIを引きます。すると四角形AHIDは長方形になり、HI＝AD＝6cm になります。',
+        add: fresh(...trap(), seg(A, H, C.blue, true, 2), seg(D, I, C.blue, true, 2), ...rt(H, A, Cc, 7), ...rt(I, D, B, 7), dot(H), dot(I), nm('H', H, 0, 11), nm('I', I, 0, 11), hi([A, H, I, D], C.blue, 0.2), tag('6', H, I, 22), ...cap('長方形 AHID ができる（HI＝AD＝6）', C.blue)),
+      },
+      {
+        note: '❓残りの BH と IC はいくつでしょう。→ 下底14cmから、長方形の部分6cmを引くと、残りは 14−6＝8cm。等脚台形は左右対称なので、これが左右に4cmずつ分かれます。BH＝IC＝4cm です。',
+        add: [tag('4', B, H, 22, C.red), tag('4', I, Cc, 22, C.red), ...cap2('14 − 6 ＝ 8　左右対称なので', 'BH ＝ IC ＝ 4 cm', C.red, FILL.red)],
+      },
+      {
+        note: '❓高さAHはいくつでしょう。→ △ABHは直角三角形で、斜辺AB＝5、BH＝4。AH²＝5²−4²＝25−16＝9、AH＝3cm。3：4：5の直角三角形だと気づけば、すぐに3とわかります。',
+        add: fresh(...trap(), seg(A, H, C.blue, true, 2), ...rt(H, A, Cc, 7), hi([A, B, H], C.green, 0.3), lb(116, 100, '3', 12, C.green, 'start', true), lb(80, 134, '4', 12, C.green, 'middle', true), lb(70, 90, '5', 12, C.ink, 'end', true), ...cap2('AH² ＝ 5² − 4² ＝ 25 − 16 ＝ 9', '高さ AH ＝ 3 cm', C.green, FILL.green)),
+      },
+      {
+        note: '❓面積は？ → (1/2)×(6＋14)×3＝30cm²。長方形と2つの三角形に分けて確かめることもできます。長方形 6×3＝18、三角形は (1/2)×4×3＝6 が2つ。18＋6＋6＝30 で一致します。',
+        add: fresh(...trap(), hi([A, H, I, D], C.blue, 0.3), hi([A, B, H], C.green, 0.3), hi([D, I, Cc], C.green, 0.3), lb(155, 100, '18', 13, C.blue, 'middle', true), lb(95, 104, '6', 12, C.green, 'middle', true), lb(215, 104, '6', 12, C.green, 'middle', true), ...cap2('(1/2)×(6＋14)×3 ＝ 30 cm²', '検算：18 ＋ 6 ＋ 6 ＝ 30', C.green, FILL.green)),
+      },
+      {
+        note: '❓対角線から辺を求める問題はどうするのでしょう。たとえば対角線が13cm、一辺が5cmの長方形。→ 対角線は直角三角形の斜辺です。もう1辺は √(13²−5²)＝√144＝12cm。縦5、横12、対角線13は覚えておきたい組です。',
+        add: fresh(shape(R, C.blue, FILL.blue), seg(R[0], R[2], C.red, false, 2.2), ...rt(R[3], R[0], R[2], 7), lb(160, 116, '12', 12, C.ink, 'middle', true), lb(78, 70, '5', 12, C.ink, 'end', true), lb(180, 62, '13', 12, C.red, 'middle', true), ...cap2('対角線13は 直角三角形の斜辺', 'もう1辺 ＝ √(13²−5²) ＝ 12 cm', C.red, FILL.red)),
+      },
+      {
+        note: 'まとめです。台形は、上の頂点から下底に垂線を下ろして直角三角形を作り、高さを出します。等脚台形なら、下底の余りが左右に等分されます。斜めの辺は高さではありません。長方形の対角線は、縦と横を直角をはさむ2辺とする斜辺です。',
+        add: fresh(...rows(['台形 → 垂線を下ろして 直角三角形を作る', '等脚台形 → 下底の余りは 左右に等分', '斜めの辺は 高さに使わない（高さは三平方で出す）', '長方形の対角線 ＝ √(縦²＋横²)'], { size: 12 }), ...cap('直角を作り出せば 三平方が使える', C.ink)),
+      },
+    ],
+    '台形と、対角線が与えられた問題',
+  );
+})();
+
+// ───────── s267 円の接線の長さと2つの円 ─────────
+const f_koko_math_s267: DiagramFigure = (() => {
+  const O: Pt = [90, 76], P: Pt = [190, 76], T: Pt = [126, 28], T2: Pt = [126, 124];
+  const disc = (c: Pt, r: number, col: string = C.ink, fill: string = 'rgba(0,0,0,0)'): El => ci(c[0], c[1], r, undefined, col, fill);
+  const fig = (): El[] => [disc(O, 60), seg(O, P, C.gray, true, 1.4), seg(P, T, C.ink, false, 2), seg(P, T2, C.ink, false, 2), seg(O, T, C.ink, false, 1.6), seg(O, T2, C.ink, false, 1.6), dot(O), dot(T), dot(T2), dot(P), ...names({ O, P, T, "T'": T2 }, { O: [-8, 4], P: [10, 0], T: [0, -9], "T'": [0, 12] })];
+  // 内接円
+  const A: Pt = [120, 27], B: Pt = [100, 125], Cc: Pt = [220, 125], I: Pt = [140, 92.33];
+  const Dd: Pt = [140, 125];
+  const Ee = at(A, Cc, 60 / 140), Ff = at(A, B, 60 / 100);
+  const inc = (): El[] => [shape([A, B, Cc], C.ink, 'rgba(0,0,0,0)'), disc(I, 32.66, C.blue), dot(Dd), dot(Ee), dot(Ff), ...names({ A, B, C: Cc, D: Dd, E: Ee, F: Ff }, { A: [0, -9], B: [-9, 8], C: [9, 8], D: [0, 11], E: [10, -2], F: [-10, -2] })];
+  // 2円
+  const o1: Pt = [90, 86], o2: Pt = [160, 86];
+  const T1: Pt = [111.4, 40.8], T22: Pt = [168.6, 67.9], Q: Pt = [102.8, 58.9];
+  return show(
+    [
+      {
+        note: '円の外の点Pからひもを張ると、ぴんと張った位置が接線です。半径3cm、中心OからPまで5cmのとき、接線の長さPT（Tは接点）を求めます。',
+        add: [...fig(), lb(100, 112, '3', 11, C.ink, 'middle', true), lb(150, 88, '5', 11, C.gray, 'middle', true), lb(165, 46, '?', 12, C.red, 'middle', true), ...cap('半径3、OP＝5 のとき 接線 PT は？', C.ink)],
+      },
+      {
+        note: '❓接点Tで、半径と接線はどう交わっているでしょう。→ 円の接線は、接点を通る半径に垂直です。だから ∠OTP＝90° で、△OTPは直角三角形になります。',
+        add: [...rt(T, O, P, 8), hi([O, T, P], C.blue, 0.25), ...cap('∠OTP ＝ 90°（接線 ⟂ 半径）', C.red)],
+      },
+      {
+        note: '❓どの辺が斜辺でしょう。→ 直角のT の向かい側のOPです。OP＝5が斜辺、OT＝3が1辺。だから PT²＝5²−3²＝25−9＝16、PT＝4cm。5²＋3² としてしまう（斜辺をまちがえる）のが典型のミスです。',
+        add: [lb(100, 112, '3', 11, C.ink, 'middle', true), ...cap2('斜辺は OP（直角の向かい側）', 'PT ＝ √(5²−3²) ＝ √16 ＝ 4 cm', C.green, FILL.green)],
+      },
+      {
+        note: '❓Pから引ける接線は何本あって、長さはどうなるでしょう。→ 2本あり、長さは等しくなります。△OTPと△OT\'Pは、斜辺OPが共通、OT＝OT\'（半径）で、直角三角形の合同条件を満たすからです。PT＝PT\'＝4cm。',
+        add: fresh(...fig(), hi([O, T, P], C.blue, 0.2), hi([O, T2, P], C.green, 0.2), ...tick(P, T, 2), ...tick(P, T2, 2), ...tick(O, T, 1, C.blue), ...tick(O, T2, 1, C.blue), ...cap2('△OTP ≡ △OT\'P（斜辺と他の1辺が等しい）', 'PT ＝ PT\' ＝ 4 cm', C.red, FILL.red, 12)),
+      },
+      {
+        note: '次は三角形の内接円です。△ABCの内接円が辺BC、CA、ABと点D、E、Fで接しているとき、頂点から接点までの2本の接線の長さは等しくなります。AE＝AF、BF＝BD、CD＝CE。AB＝5、BC＝6、CA＝7 とします。',
+        add: fresh(...inc(), ...tick(A, Ff, 1, C.red), ...tick(A, Ee, 1, C.red), ...tick(B, Ff, 2, C.green), ...tick(B, Dd, 2, C.green), ...tick(Cc, Dd, 3, C.purple), ...tick(Cc, Ee, 3, C.purple), lb(60, 76, 'AB＝5', 11, C.ink, 'middle', true), lb(260, 76, 'CA＝7', 11, C.ink, 'middle', true), lb(160, 144, 'BC＝6', 11, C.ink, 'middle', true), ...cap('AE＝AF　BF＝BD　CD＝CE', C.main)),
+      },
+      {
+        note: '❓長さを出すには？ AE＝AF＝x、BF＝BD＝y、CD＝CE＝z とおくと、x＋y＝5、y＋z＝6、z＋x＝7。3つを全部足すと 2(x＋y＋z)＝18、x＋y＋z＝9。だから z＝9−5＝4、x＝9−6＝3、y＝9−7＝2。検算：3＋2＝5、2＋4＝6、4＋3＝7 ✓',
+        add: fresh(...rows(['x＋y＝5　y＋z＝6　z＋x＝7', '全部を足す：2(x＋y＋z)＝18　x＋y＋z＝9', 'z＝9−5＝4　x＝9−6＝3　y＝9−7＝2', '検算：3＋2＝5　2＋4＝6　4＋3＝7'], { size: 12 }), ...cap('AE＝AF＝3、BF＝BD＝2、CD＝CE＝4', C.green)),
+      },
+      {
+        note: '2つの円の位置関係です。半径5cmと2cmの円が外側で接する（外接）とき、中心間の距離は半径の和 5＋2＝7cm。小さい円が大きい円の内側で接する（内接）ときは、半径の差 5−2＝3cm です。接点と2つの中心は、一直線に並びます。',
+        add: fresh(disc([70, 76], 40, C.blue, 'rgba(2,132,199,0.1)'), disc([126, 76], 16, C.green, 'rgba(22,163,74,0.15)'), seg([70, 76], [126, 76], C.red, false, 2), dot([70, 76]), dot([126, 76]), lb(98, 22, '外接', 12, C.ink, 'middle', true), lb(70, 128, 'd ＝ 5＋2 ＝ 7', 11, C.red, 'middle', true), disc([240, 76], 40, C.blue, 'rgba(2,132,199,0.1)'), disc([264, 76], 16, C.green, 'rgba(22,163,74,0.15)'), seg([240, 76], [264, 76], C.red, false, 2), dot([240, 76]), dot([264, 76]), lb(240, 22, '内接', 12, C.ink, 'middle', true), lb(250, 128, 'd ＝ 5−2 ＝ 3', 11, C.red, 'middle', true), ...cap('外接は和、内接は差', C.red)),
+      },
+      {
+        note: '❓共通外接線（2つの円の外側に接する線）の長さは？ 外接する半径5と2の円では、中心間 d＝7。小さい円の中心から大きい円の半径に垂線を下ろすと、直角三角形ができます。1辺は半径の差 5−2＝3、斜辺は d＝7、もう1辺が求める接線の長さ。√(7²−3²)＝√40＝2√10cm（約6.32cm）です。',
+        add: fresh(disc(o1, 50, C.blue, 'rgba(2,132,199,0.1)'), disc(o2, 20, C.green, 'rgba(22,163,74,0.15)'), seg(T1, T22, C.red, false, 2.6), seg(o1, T1, C.ink, false, 1.5), seg(o2, T22, C.ink, false, 1.5), seg(o1, o2, C.gray, true, 1.5), seg(o2, Q, C.blue, true, 1.8), dot(o1), dot(o2), dot(Q), ...rt(Q, o1, o2, 6), lb(96, 58, '3', 11, C.blue, 'end', true), lb(136, 78, 'd＝7', 10, C.gray, 'middle', true), lb(250, 44, '接線の長さ ?', 11, C.red, 'middle', true), ...cap2('接線の長さ ＝ √(d²−(r₁−r₂)²)', '＝ √(49−9) ＝ √40 ＝ 2√10 cm', C.red, FILL.red, 12)),
+      },
+    ],
+    '接線の長さ',
+  );
+})();
+
+// ───────── s270 折り返し問題と三平方の定理 ─────────
+const f_koko_math_s270: DiagramFigure = (() => {
+  const A: Pt = [60, 20], B: Pt = [60, 128], Cc: Pt = [204, 128], D: Pt = [204, 20];
+  const E: Pt = [91.5, 128], F: Pt = [172.5, 20];
+  const M = mid(A, Cc);
+  const rectF = (): El[] => [shape([A, B, Cc, D], C.ink, 'rgba(0,0,0,0)'), ...names({ A, B, C: Cc, D }, { A: [-8, -4], B: [-8, 8], C: [9, 8], D: [9, -4] })];
+  return show(
+    [
+      {
+        note: '紙を折ると、折る前と後で重なる部分は形も大きさも変わりません。長方形ABCDで AB＝6cm、BC＝8cm。頂点Aが頂点Cに重なるように折り、折り目が辺BCと交わる点をEとします。BEの長さを求めます。',
+        add: [...rectF(), seg(E, F, C.red, true, 2), dot(E), dot(F), nm('E', E, 0, 11, C.red), nm('F', F, 0, -9, C.red), tag('6', B, A, 10), tag('8', B, Cc, 14), ...cap('A が C に重なるように折る　BE は？', C.red)],
+      },
+      {
+        note: '❓折り返すと、どの長さが等しくなるのでしょう。→ 折り返しは合同な移動なので、Aが移ったCに対して、折り目上の点Eからの距離が等しくなります。AE＝CE。この「等しい」を使って方程式を作ります。',
+        add: [seg(A, E, C.blue, false, 2.4), seg(E, Cc, C.blue, false, 2.4), seg(A, Cc, C.gray, true, 1.4), ...tick(A, E, 2, C.blue), ...tick(E, Cc, 2, C.blue), ...cap('折り返し → AE ＝ EC', C.blue)],
+      },
+      {
+        note: '❓わからない長さは、どうおけばよいでしょう。→ 求めたい BE を x とおきます。BC＝8なので EC＝8−x。AE＝EC なので AE も 8−x です。',
+        add: [lb(76, 140, 'x', 13, C.red, 'middle', true), lb(150, 140, '8 − x', 13, C.blue, 'middle', true), ...cap2('BE ＝ x とおく', 'EC ＝ 8 − x', C.main, FILL.warm)],
+      },
+      {
+        note: '❓xを含む式をどうやって作るのでしょう。→ △ABEは、Bが直角の直角三角形です。AB＝6、BE＝x、斜辺AE。三平方の定理で AE²＝AB²＋BE²＝6²＋x²＝36＋x²。',
+        add: fresh(...rectF(), hi([A, B, E], C.green, 0.3), ...rt(B, A, Cc, 8), seg(A, E, C.blue, false, 2.4), dot(E), nm('E', E, 0, 11, C.red), lb(70, 74, '6', 12, C.ink, 'end', true), lb(76, 140, 'x', 13, C.red, 'middle', true), ...cap2('△ABE は B が直角', 'AE² ＝ 6² ＋ x² ＝ 36 ＋ x²', C.green, FILL.green)),
+      },
+      {
+        note: '❓2つの式をどうつなぐのでしょう。→ AE＝EC なので、AE²＝EC²。36＋x²＝(8−x)²。右辺を展開すると 64−16x＋x²。両辺のx²が消えて、1次式になります。',
+        add: fresh(...rows(['AE ＝ EC　だから　AE² ＝ EC²', '36 ＋ x² ＝ (8 − x)²', '36 ＋ x² ＝ 64 − 16x ＋ x²', '両辺の x² が消える　36 ＝ 64 − 16x'], { size: 13 }), ...cap('x² が消えるので 1次式になる', C.main)),
+      },
+      {
+        note: '❓解きましょう。→ 36＝64−16x。16x＝64−36＝28。x＝28÷16＝7/4＝1.75。BE＝1.75cm、EC＝8−1.75＝6.25cm。検算：AE²＝36＋1.75²＝36＋3.0625＝39.0625、EC²＝6.25²＝39.0625 で一致します。',
+        add: fresh(...rectF(), seg(A, E, C.blue, false, 2.4), seg(E, Cc, C.blue, false, 2.4), seg(E, F, C.red, true, 1.6), dot(E), nm('E', E, 0, 11, C.red), lb(76, 140, '1.75', 11, C.red, 'middle', true), lb(150, 140, '6.25', 11, C.blue, 'middle', true), lb(120, 66, '6.25', 11, C.blue, 'end', true), ...cap2('16x ＝ 28　x ＝ 7/4 ＝ 1.75', 'BE ＝ 1.75 cm　EC ＝ 6.25 cm', C.green, FILL.green)),
+      },
+      {
+        note: '❓「AがCに重なるのだから、折り目はBCの真ん中を通る」と考えて BE＝4cm としてよいでしょうか。→ いけません。折り目は、重なる2点AとCを結ぶ線分の垂直二等分線で、通るのはACの中点です。BCの中点ではありません。',
+        add: fresh(...rectF(), seg(A, Cc, C.gray, true, 1.6), seg(E, F, C.red, false, 2), dot(M, C.red), nm('M', M, 8, -8, C.red), ...tick(A, M, 1, C.blue), ...tick(M, Cc, 1, C.blue), ...rt(M, Cc, F, 7), ci(132, 128, 3.5, undefined, C.gray, C.gray), lb(132, 142, 'BCの中点（通らない）', 9, C.gray, 'middle', true), ...cap('折り目は AC の垂直二等分線', C.red)),
+      },
+      {
+        note: '❓折り目の長さEFはどう出すのでしょう。→ AF＝EC＝6.25（対称）なので、Fは頂点Dから見て 8−6.25＝1.75cm のところ。EとFの横のずれは 6.25−1.75＝4.5cm、縦は6cm。直角三角形で EF＝√(4.5²＋6²)＝√56.25＝7.5cm です（3：4：5の1.5倍）。',
+        add: fresh(...rectF(), seg(E, F, C.red, false, 2.6), seg(E, [172.5, 128], C.gray, true, 1.8), seg([172.5, 128], F, C.gray, true, 1.8), ...rt([172.5, 128], E, F, 7), dot(E), dot(F), nm('E', E, 0, 11, C.red), nm('F', F, 0, -9, C.red), lb(132, 120, '4.5', 11, C.ink, 'middle', true), lb(182, 74, '6', 12, C.ink, 'start', true), lb(120, 58, '7.5', 12, C.red, 'end', true), ...cap2('EF ＝ √(4.5² ＋ 6²) ＝ √56.25', '＝ 7.5 cm', C.red, FILL.red)),
+      },
+    ],
+    '折り返しの基本と方程式の立て方',
+  );
+})();
+
+// ───────── s277 弦の性質：中心からの垂線は弦を二等分する ─────────
+const f_koko_math_s277: DiagramFigure = (() => {
+  const O: Pt = [160, 70];
+  const Aa: Pt = [112, 106], Bb: Pt = [208, 106], M: Pt = [160, 106];
+  const circle = (): El[] => [ci(O[0], O[1], 60, undefined, C.ink, 'rgba(0,0,0,0)'), dot(O), nm('O', O, 0, -9)];
+  const chord = (): El[] => [seg(Aa, Bb, C.ink, false, 2), dot(Aa), dot(Bb), nm('A', Aa, -9, 6), nm('B', Bb, 9, 6)];
+  // 長さのちがう弦
+  const P1: Pt = [104.6, 93], Q1: Pt = [215.4, 93], R1: Pt = [137, 15], S1: Pt = [183, 15];
+  // 3点を通る円
+  const O3: Pt = [160, 70];
+  const a3 = onC(O3, 55, 200), b3 = onC(O3, 55, 320), c3 = onC(O3, 55, 80);
+  const m1 = mid(a3, b3), m2 = mid(b3, c3);
+  return show(
+    [
+      {
+        note: '問題です。半径10cmの円Oで、弦ABの長さは16cmです。中心Oから弦ABまでの距離を求めます。距離とは、中心から弦におろした垂線の長さのことです。',
+        add: [...circle(), ...chord(), seg(O, M, C.red, true, 2), dot(M), nm('M', M, 0, 11), lb(160, 144, 'AB＝16、半径10', 11, C.ink, 'middle', true), ...cap('中心Oから弦ABまでの距離 OM は？', C.red)],
+      },
+      {
+        note: '❓まず、OAとOBについて何が言えるでしょう。→ どちらも円の半径なので OA＝OB＝10cm。△OABは二等辺三角形です。',
+        add: [seg(O, Aa, C.blue, false, 2), seg(O, Bb, C.blue, false, 2), ...tick(O, Aa, 1, C.blue), ...tick(O, Bb, 1, C.blue), hi([O, Aa, Bb], C.blue, 0.1), ...cap('OA ＝ OB（半径）→ 二等辺三角形', C.blue)],
+      },
+      {
+        note: '❓垂線の足Mは、なぜ弦ABの真ん中になるのでしょう。→ △OAMと△OBMを比べます。斜辺OA＝OB（半径）、OMは共通、∠OMA＝∠OMB＝90°。直角三角形の斜辺と他の1辺が等しいので合同で、AM＝BM。MはABの中点です。',
+        add: fresh(...circle(), ...chord(), seg(O, M, C.red, false, 2), seg(O, Aa, C.blue, false, 2), seg(O, Bb, C.blue, false, 2), hi([O, Aa, M], C.blue, 0.25), hi([O, Bb, M], C.green, 0.25), ...rt(M, O, Bb, 7), ...rt(M, O, Aa, 7), ...tick(O, Aa, 1, C.blue), ...tick(O, Bb, 1, C.blue), ...tick(Aa, M, 2), ...tick(M, Bb, 2), ...cap2('△OAM ≡ △OBM（斜辺と他の1辺）', 'AM ＝ BM（M は弦の中点）', C.main, FILL.warm)),
+      },
+      {
+        note: '❓この事実で、何ができるのでしょう。→ 弦を半分にして直角三角形がつくれます。AM＝16÷2＝8cm。三平方の定理で使うのは、弦の全体ではなく「半分」です。',
+        add: [lb(136, 118, '8', 12, C.red, 'middle', true), lb(184, 118, '8', 12, C.red, 'middle', true), lb(134, 82, '10', 12, C.blue, 'end', true), ...cap2('使うのは 弦の半分', 'AM ＝ 16 ÷ 2 ＝ 8 cm', C.red, FILL.red)],
+      },
+      {
+        note: '❓OMを求めましょう。→ 直角三角形OMAで、斜辺OA＝10、AM＝8。OM²＝10²−8²＝100−64＝36。OM＝6cm。3：4：5の2倍（6：8：10）になっています。',
+        add: [lb(166, 90, '6', 12, C.green, 'start', true), ...cap2('OM² ＝ 10² − 8² ＝ 100 − 64 ＝ 36', 'OM ＝ 6 cm', C.green, FILL.green)],
+      },
+      {
+        note: '❓弦の全体16を、そのまま三平方に入れるとどうなるでしょう。→ √(10²−16²)＝√(100−256)＝√(−156)。根号の中が負になって、答えが出ません。これは「半分にする一手間」を忘れたサインです。図に8と書きこんでから計算します。',
+        add: fresh(bx(10, 14, 300, 44, '× OM ＝ √(10² − 16²) ＝ √(−156)　答えが出ない', C.red, FILL.red, 13), bx(10, 70, 300, 44, '○ OM ＝ √(10² − 8²) ＝ √36 ＝ 6', C.green, FILL.green, 14), ...cap('弦は「半分」にしてから使う', C.red)),
+      },
+      {
+        note: '❓弦の長さと、中心からの距離には、どんな関係があるのでしょう。半径13cmの円で、弦PQ＝24cm、弦RS＝10cm。中心からの距離は √(169−144)＝5cm と √(169−25)＝12cm。長い弦のほうが中心に近い。半径は同じなので、長い弦をとるには中心の近くを通るしかありません。',
+        add: fresh(ci(O[0], O[1], 60, undefined, C.ink, 'rgba(0,0,0,0)'), dot(O), nm('O', O, 0, 11), seg(P1, Q1, C.blue, false, 2.4), seg(R1, S1, C.red, false, 2.4), seg(O, [160, 93], C.blue, true, 1.5), seg(O, [160, 15], C.red, true, 1.5), lb(236, 94, 'PQ＝24（距離5）', 10, C.blue, 'start', true), lb(196, 15, 'RS＝10（距離12）', 10, C.red, 'start', true), ...cap('長い弦ほど 中心に近い', C.main)),
+      },
+      {
+        note: 'もうひとつ。弦の垂直二等分線は、必ず中心を通ります。だから、円周上の3点A、B、Cが与えられたら、弦ABの垂直二等分線と弦BCの垂直二等分線の交点が、その円の中心です。弧の一部だけから中心を求める作図問題は、この考え方を使います。',
+        add: fresh(ci(O3[0], O3[1], 55, undefined, C.gray, 'rgba(0,0,0,0)'), seg(a3, b3), seg(b3, c3), seg(m1, [2 * O3[0] - m1[0], 2 * O3[1] - m1[1]], C.red, true, 1.6), seg(m2, [2 * O3[0] - m2[0], 2 * O3[1] - m2[1]], C.blue, true, 1.6), ...rt(m1, O3, a3, 6), ...rt(m2, O3, b3, 6), dot(a3), dot(b3), dot(c3), dot(O3, C.red), ...names({ A: a3, B: b3, C: c3 }, { A: [-9, 4], B: [9, 8], C: [0, -9] }), nm('O', O3, 8, -8, C.red), ...cap('2本の垂直二等分線の交点 ＝ 円の中心', C.main)),
+      },
+    ],
+    'なぜ垂線の足が中点になるのか',
+  );
+})();
+
 export const XF_KSE_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_math_s222': f_koko_math_s222,
   'xf_koko_math_s223': f_koko_math_s223,
@@ -1304,6 +1542,11 @@ export const XF_KSE_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_math_s258': f_koko_math_s258,
   'xf_koko_math_s259': f_koko_math_s259,
   'xf_koko_math_s260': f_koko_math_s260,
+  'xf_koko_math_s263': f_koko_math_s263,
+  'xf_koko_math_s265': f_koko_math_s265,
+  'xf_koko_math_s267': f_koko_math_s267,
+  'xf_koko_math_s270': f_koko_math_s270,
+  'xf_koko_math_s277': f_koko_math_s277,
 };
 
 export const XF_KSE_SECTIONS: Record<string, string> = {
@@ -1332,4 +1575,9 @@ export const XF_KSE_SECTIONS: Record<string, string> = {
   'koko_math_s258#0': 'xf_koko_math_s258',
   'koko_math_s259#0': 'xf_koko_math_s259',
   'koko_math_s260#0': 'xf_koko_math_s260',
+  'koko_math_s263#1': 'xf_koko_math_s263',
+  'koko_math_s265#1': 'xf_koko_math_s265',
+  'koko_math_s267#0': 'xf_koko_math_s267',
+  'koko_math_s270#0': 'xf_koko_math_s270',
+  'koko_math_s277#0': 'xf_koko_math_s277',
 };
