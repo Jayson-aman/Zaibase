@@ -12,6 +12,27 @@ const side = (...ls: [string, string?, number?][]) => [
   cover(225, 14, 95, 130),
   ...ls.map(([t, c, y], i) => lb(230, y ?? 36 + i * 22, t, 12, c ?? C.ink, 'start', true)),
 ];
+/** 座標平面の道具。ox,oy=原点の位置、sx,sy=1目もりの長さ（px）。 */
+type Mp = { X: (x: number) => number; Y: (y: number) => number };
+const mkMap = (ox: number, oy: number, sx: number, sy: number): Mp => ({ X: (x) => ox + sx * x, Y: (y) => oy - sy * y });
+const cAxes = (m: Mp, x0: number, x1: number, y0: number, y1: number) => [
+  ar(m.X(x0), m.Y(0), m.X(x1), m.Y(0), C.gray), ar(m.X(0), m.Y(y0), m.X(0), m.Y(y1), C.gray),
+  lb(m.X(x1) - 2, m.Y(0) + 11, 'x', 11, C.gray, 'end'), lb(m.X(0) + 8, m.Y(y1) + 4, 'y', 11, C.gray, 'start'), lb(m.X(0) - 4, m.Y(0) + 11, 'O', 11, C.gray, 'end', true),
+];
+const cParab = (m: Mp, a: number, x0: number, x1: number, ymax: number, color: string = C.purple) => {
+  const out = [];
+  for (let x = x0; x < x1 - 1e-9; x += 0.25) {
+    const xa = x, xb = x + 0.25;
+    if (a * xb * xb > ymax || a * xa * xa > ymax) continue;
+    out.push(ln(m.X(xa), m.Y(a * xa * xa), m.X(xb), m.Y(a * xb * xb), color, false, 2));
+  }
+  return out;
+};
+const cPt = (m: Mp, x: number, y: number, name: string, color: string = C.red, dx = 6, dy = -6) => [
+  ci(m.X(x), m.Y(y), 3.5, undefined, color, color), lb(m.X(x) + dx, m.Y(y) + dy, name, 11, color, dx < 0 ? 'end' : 'start', true),
+];
+const cLine = (m: Mp, x0: number, y0: number, x1: number, y1: number, color: string = C.blue, dashed = false, w = 2) =>
+  ln(m.X(x0), m.Y(y0), m.X(x1), m.Y(y1), color, dashed, w);
 // ───────── koko_math_s337 正四角すいの高さ ─────────
 const s337: DiagramFigure = show([
   {
@@ -577,7 +598,7 @@ const s365: DiagramFigure = show([
   },
   {
     note: '❓個数が奇数のときは？→ 5個なので、真ん中は3番目の5です。5の左に2個、右にも2個あって、ちょうど真ん中だからです。(2n+1)個なら(n+1)番目が中央値です。',
-    add: fresh(...numRow([1, 3, 5, 7, 9], 40, C.blue, FILL.blue, 44, 24, 12), bx(124, 36, 52, 38, '5', C.red, FILL.red, 14), lb(70, 100, '左に2個', 12, C.ink, 'middle', true), lb(250, 100, '右に2個', 12, C.ink, 'middle', true), ...cap('奇数個 → 真ん中の1つ（3番目）', C.red)),
+    add: fresh(...numRow([1, 3, 5, 7, 9], 40, C.blue, FILL.blue, 44, 24, 12), bx(136, 40, 44, 30, '5', C.red, FILL.red, 13), lb(70, 100, '左に2個', 12, C.ink, 'middle', true), lb(250, 100, '右に2個', 12, C.ink, 'middle', true), ...cap('奇数個 → 真ん中の1つ（3番目）', C.red)),
   },
   {
     note: '次の問題です。データ 30、40、45、50、55、60、65、70、80、95（10個）の中央値を求めます。すでに小さい順に並んでいます。',
@@ -585,7 +606,7 @@ const s365: DiagramFigure = show([
   },
   {
     note: '❓真ん中はどこでしょう。→ 10個なので、5番目の55と6番目の60が真ん中に並びます。真ん中の値が1つに決まりません。',
-    add: [bx(121, 46, 28, 38, '55', C.red, FILL.red, 12), bx(152, 46, 28, 38, '60', C.red, FILL.red, 12), lb(150, 106, '5番目 と 6番目', 12, C.red, 'middle', true), ...cap('真ん中が2つある', C.red)],
+    add: [bx(133, 50, 28, 30, '55', C.red, FILL.red, 12), bx(164, 50, 28, 30, '60', C.red, FILL.red, 12), lb(162, 106, '5番目 と 6番目', 12, C.red, 'middle', true), ...cap('真ん中が2つある', C.red)],
   },
   {
     note: '❓55と60のどちらを選べばよいでしょうか。→ どちらか片方を選ぶと、かたよってしまいます。そこで2つの平均を取ります。(55＋60)÷2＝57.5。これが中央値です。',
@@ -657,7 +678,7 @@ const s371: DiagramFigure = show([
   },
   {
     note: '①まず中央値（箱の中の太い線）で、全体の水準を比べます。A組は65点、B組は64点で、ほぼ同じです。水準に大きな差はありません。',
-    add: [ln(bpX(65), 18, bpX(65), 52, C.red, true, 2), ln(bpX(64), 60, bpX(64), 92, C.red, true, 2), lb(160, 100, '', 10), ...band(135, lb(160, 160, '中央値：A組 65点、B組 64点', 12, C.red, 'middle', true), lb(160, 188, 'ほぼ同じ → 水準は同程度', 13, C.ink, 'middle', true))],
+    add: [ln(bpX(65), 18, bpX(65), 52, C.red, true, 2), ln(bpX(64), 60, bpX(64), 92, C.red, true, 2), ...band(135, lb(160, 160, '中央値：A組 65点、B組 64点', 12, C.red, 'middle', true), lb(160, 188, 'ほぼ同じ → 水準は同程度', 13, C.ink, 'middle', true))],
   },
   {
     note: '❓では、何がちがうのでしょう。→ 散らばり方です。箱の長さ（四分位範囲〈しぶんいはんい〉）を比べます。A組は74−52＝22点、B組は70−58＝12点で、B組のほうが小さくなっています。',
@@ -729,6 +750,258 @@ const s372: DiagramFigure = show([
   },
 ], '全数調査と標本調査');
 
+// ───────── koko_math_s373 標本から母集団を推定する ─────────
+const pondFish = (marked: number[], n: number, cx: number, cy: number, r: number) => {
+  const out = [];
+  for (let i = 0; i < n; i++) {
+    const a = i * 2.4, rr = (r - 8) * Math.sqrt((i + 0.5) / n);
+    const hit = marked.includes(i);
+    out.push(ci(cx + rr * Math.cos(a), cy + rr * Math.sin(a), 3, undefined, hit ? C.red : C.blue, hit ? C.red : FILL.blue));
+  }
+  return out;
+};
+const s373: DiagramFigure = show([
+  {
+    note: '問題です。ある池の魚の数を調べます。池の魚をすべて数えるのは無理なので、標本調査を使います。魚を100匹つかまえて印をつけ、池にもどします。数日後、80匹をつかまえたところ、印のついた魚が5匹いました。池の魚はおよそ何匹でしょう。',
+    add: [ci(90, 76, 66, undefined, C.blue, FILL.blue), ...pondFish([0, 3, 7, 11, 17, 24, 29], 30, 90, 76, 66), lb(90, 12, '池（N匹）', 12, C.blue, 'middle', true), ...side(['①100匹に印', C.red, 50], ['②80匹とる', C.ink, 80], ['③印は5匹', C.red, 110]), ...cap('池の魚はおよそ何匹？')],
+  },
+  {
+    note: '❓どう考えればよいでしょう。→ 標本調査の基本は、「標本での割合＝母集団での割合」とみなすことです。つかまえた80匹の中の印の割合は、池全体の印の割合に近いはずだと考えます。',
+    add: fresh(bx(15, 14, 290, 40, '標本での割合 ＝ 母集団での割合', C.main, FILL.warm, 14), ar(160, 62, 160, 86, C.gray), lb(160, 104, '（とみなす）', 13, C.ink, 'middle', true), ...cap('標本は母集団の縮図', C.main)),
+  },
+  {
+    note: 'まず標本の割合です。つかまえた80匹のうち、印のついた魚が5匹。印の割合は5/80です。',
+    add: fresh(ci(90, 76, 56, undefined, C.green, FILL.green), ...pondFish([3, 17, 33, 52, 70], 80, 90, 76, 56).slice(0, 80), lb(90, 12, 'つかまえた80匹', 12, C.green, 'middle', true), ...side(['印の割合', C.red, 60], ['5/80', C.red, 86]), ...cap('標本：5 ÷ 80', C.green)),
+  },
+  {
+    note: '次に池全体の印の割合です。池にはN匹いて、その中の印のついた魚は、最初につけた100匹です。だから池全体の印の割合は100/Nです。',
+    add: fresh(ci(90, 76, 66, undefined, C.blue, FILL.blue), ...pondFish([0, 3, 7, 11, 17, 24, 29], 30, 90, 76, 66), lb(90, 12, '池全体 N匹', 12, C.blue, 'middle', true), ...side(['印は100匹', C.red, 60], ['割合は', C.ink, 86], ['100/N', C.red, 110]), ...cap('母集団：100 ÷ N', C.blue)),
+  },
+  {
+    note: '2つの割合が等しいとみなして、式を立てます。100/N＝5/80。たがいちがいにかけて5N＝100×80＝8000、N＝1600。池の魚はおよそ1600匹です。',
+    add: fresh(bx(30, 14, 260, 36, '100/N ＝ 5/80', C.main, FILL.warm, 16), bx(30, 60, 260, 36, '5 × N ＝ 100 × 80 ＝ 8000', C.blue, FILL.blue, 14), bx(30, 106, 260, 36, 'N ＝ 1600', C.green, FILL.green, 16), ...cap('答え：およそ1600匹', C.green)),
+  },
+  {
+    note: '❓答えが正しいか検算します。もし池に1600匹いたら、印の割合は100/1600＝1/16です。80匹をつかまえたとき、その1/16は80×(1/16)＝5匹。問題の「5匹」と一致しました。',
+    add: fresh(bx(15, 24, 290, 34, '池に1600匹 → 印の割合 100/1600 ＝ 1/16', C.blue, FILL.blue, 12), bx(15, 68, 290, 34, '80匹の 1/16 ＝ 80 ÷ 16 ＝ 5匹 ✓', C.green, FILL.green, 13), ...cap('問題の「5匹」と一致', C.green)),
+  },
+  {
+    note: '❓なぜ「割合が等しい」とみなしてよいのでしょう。→ 無作為にとった標本は母集団の縮図になるからです。ただし、印のついた魚が池全体に散らばっていること、その間に魚が増減していないこと、印の有無でつかまりやすさが変わらないこと、が前提です。',
+    add: fresh(bx(15, 10, 290, 30, '前提① 印つきが池全体に散らばっている', C.main, FILL.warm, 12), bx(15, 46, 290, 30, '前提② その間に魚が増えたり減ったりしない', C.main, FILL.warm, 12), bx(15, 82, 290, 30, '前提③ つかまりやすさが同じ', C.main, FILL.warm, 12), ...cap('無作為だからこそ「みなせる」', C.red)),
+  },
+  {
+    note: 'まとめです。標本の割合を母集団の割合とみなして比例式を立て、「およそ」を付けて答えます。製品2000個から100個取り出して3個が不良品なら、2000×(3/100)＝60で、およそ60個と推定できます。',
+    add: fresh(bx(15, 14, 290, 34, '標本の割合 ＝ 母集団の割合 で式を立てる', C.main, FILL.warm, 12), bx(15, 56, 290, 34, '例：2000 × 3/100 ＝ 60 → およそ60個', C.blue, FILL.blue, 12), bx(15, 98, 290, 34, '答えには「およそ」と単位をつける', C.red, FILL.red, 12), ...cap('推定は「みなす」計算', C.main)),
+  },
+], '標本から母集団を推定する');
+
+// ───────── koko_math_s375 割合と実数を区別する ─────────
+const bar = (x: number, h: number, color: string, fill: string, name: string, val: string) => [
+  bx(x, 120 - h, 34, h, undefined, color, fill), lb(x + 17, 120 - h - 8, val, 10, color, 'middle', true), lb(x + 17, 133, name, 10, C.ink, 'middle'),
+];
+const bars4 = () => [...bar(28, 100, C.blue, FILL.blue, 'A昨年', '1000'), ...bar(72, 80, C.blue, FILL.blue, 'A今年', '800'), ...bar(176, 20, C.green, FILL.green, 'B昨年', '200'), ...bar(220, 19, C.green, FILL.green, 'B今年', '190'), ln(14, 120, 306, 120, C.gray)];
+const s375: DiagramFigure = show([
+  {
+    note: '問題です。交通事故の件数が、A市で昨年1000件から今年800件に、B市で昨年200件から今年190件に変わりました。この資料から、いろいろなことが読み取れます。',
+    add: [...bars4(), ...cap('A市とB市の事故件数')],
+  },
+  {
+    note: '❓「事故が減った割合が大きいのはどちらか」と聞かれたら？→ 割合（減少率）を比べます。A市は200件減って200÷1000＝20％減、B市は10件減って10÷200＝5％減。A市のほうが大きいです。',
+    add: [...band(135, bx(20, 150, 130, 34, 'A市 200÷1000\n＝20％減', C.blue, FILL.blue, 11), bx(170, 150, 130, 34, 'B市 10÷200\n＝5％減', C.green, FILL.green, 11), lb(160, 210, '減少率が大きいのは A市', 13, C.red, 'middle', true))],
+  },
+  {
+    note: '❓「事故の件数が少ないのはどちらか」と聞かれたら？→ 件数(実数)を比べます。A市は800件、B市は190件で、B市のほうが少ないです。割合の答えとは逆になりました。',
+    add: [...band(135, bx(20, 150, 130, 34, 'A市 今年 800件', C.blue, FILL.blue, 12), bx(170, 150, 130, 34, 'B市 今年 190件', C.green, FILL.green, 12), lb(160, 210, '件数が少ないのは B市', 13, C.red, 'middle', true))],
+  },
+  {
+    note: '❓「減った件数が多いのはどちらか」と聞かれたら？→ A市は200件減、B市は10件減。A市のほうが多いです。3つの問いの答えは「A市・B市・A市」と、観点によって変わりました。',
+    add: [...band(135, bx(20, 150, 130, 34, 'A市 200件減', C.blue, FILL.blue, 12), bx(170, 150, 130, 34, 'B市 10件減', C.green, FILL.green, 12), lb(160, 210, '減った件数が多いのは A市', 13, C.red, 'middle', true))],
+  },
+  {
+    note: '❓割合だけで、実数がわかるでしょうか。→ わかりません。「ある会社の売上に占めるアジアの割合が30％から25％に下がった」とき、全体の売上が大きく伸びていれば、アジアの売上額は増えているかもしれません。',
+    add: fresh(bx(15, 14, 140, 54, '割合 30％ → 25％', C.blue, FILL.blue, 13), bx(165, 14, 140, 54, '全体が2倍に増えると…', C.main, FILL.warm, 12), lb(160, 98, '30％×100 ＝ 30　25％×200 ＝ 50', 13, C.ink, 'middle', true), lb(160, 120, '割合は下がっても 売上額は増える', 12, C.red, 'middle', true), ...cap('割合だけでは実数は決まらない', C.red)),
+  },
+  {
+    note: '❓では実数だけで、割合がわかるでしょうか。→ わかりません。ある高校の合格者が50人から60人に増えても、受験者が100人から200人に増えていれば、合格率は50％から30％に下がっています。',
+    add: fresh(bx(15, 14, 140, 54, '合格者 50人 → 60人', C.green, FILL.green, 13), bx(165, 14, 140, 54, '受験者 100人 → 200人', C.main, FILL.warm, 12), lb(160, 98, '50÷100 ＝ 50％　60÷200 ＝ 30％', 13, C.ink, 'middle', true), lb(160, 120, '人数は増えても 合格率は下がる', 12, C.red, 'middle', true), ...cap('実数だけでは割合は決まらない', C.red)),
+  },
+  {
+    note: '❓こうならないために何を確かめればよいでしょう。→ 資料に総数が書かれているかです。総数がなければ、割合から実数を語ることも、実数から割合を語ることもできません。',
+    add: fresh(bx(15, 20, 290, 40, '総数（もとにする数）は書いてあるか？', C.main, FILL.warm, 14), bx(15, 74, 290, 40, '書いてない → 言い切れない', C.red, FILL.red, 14), ...cap('まず総数を探す', C.main)),
+  },
+  {
+    note: 'まとめです。割合と実数は別のものです。問われているのが割合か実数かに線を引き、必要な数が資料にそろっているかを先に判断しましょう。',
+    add: fresh(bx(15, 14, 290, 34, '割合を聞かれた → 割合を比べる', C.blue, FILL.blue, 13), bx(15, 56, 290, 34, '件数を聞かれた → 実数を比べる', C.green, FILL.green, 13), bx(15, 98, 290, 34, '総数がないときは 言い切らない', C.red, FILL.red, 13), ...cap('何を聞かれているかを確かめる', C.main)),
+  },
+], '割合と実数を区別する');
+
+// ───────── koko_math_s377 面積を2等分する直線 ─────────
+const m377 = mkMap(100, 136, 22, 12.5);
+const base377 = () => [...cAxes(m377, -3.5, 5.5, -1, 10), ...cParab(m377, 0.5, -3, 4.5, 11), ...cPt(m377, -2, 2, 'A(-2,2)', C.red, -6, 4), ...cPt(m377, 4, 8, 'B(4,8)', C.red, 6, 2), cLine(m377, -2, 2, 4, 8, C.blue), pg([[m377.X(0), m377.Y(0)], [m377.X(-2), m377.Y(2)], [m377.X(4), m377.Y(8)]], C.blue, 'rgba(2,132,199,0.12)')];
+const s377: DiagramFigure = show([
+  {
+    note: '問題です。放物線 y＝(1/2)x² 上に、x座標が−2の点Aと4の点Bがあります。直線ABはy＝x+4で、△OABの面積は12です。この三角形の面積を2等分する直線を求めます。',
+    add: [...base377(), ...side(['△OAB', C.blue, 40], ['面積 12', C.blue, 62], ['これを半分', C.red, 96], ['6 と 6 に', C.red, 118]), ...cap('面積を2等分する直線は？')],
+  },
+  {
+    note: '❓どんな線が面積を2等分するのでしょう。→ 頂点と、向かいあう辺の中点を結ぶ線（中線）です。中線で分けた2つの三角形は、底辺が等しく、高さも共通なので、面積がかならず等しくなります。',
+    add: fresh(pg([[40, 110], [160, 110], [100, 24]], C.blue, FILL.blue), ln(100, 24, 100, 110, C.red, false, 2), ci(100, 110, 3.5, undefined, C.red, C.red), lb(70, 128, '底辺 等しい', 11, C.ink, 'middle', true), lb(130, 128, '底辺 等しい', 11, C.ink, 'middle', true), lb(240, 50, '高さは 共通', 12, C.main, 'middle', true), lb(240, 74, '→ 面積は等しい', 12, C.red, 'middle', true), ...cap('中線は 面積を 2等分', C.red)),
+  },
+  {
+    note: '原点Oは三角形の頂点なので、向かいあう辺ABの中点Mを通ればよいことになります。中点の座標は、両はしの座標の平均です。xは(−2＋4)÷2＝1、yは(2＋8)÷2＝5。M(1,5)です。',
+    add: fresh(...base377(), ...cPt(m377, 1, 5, 'M(1,5)', C.green, 6, -2), ...side(['M は AB の', C.green, 40], ['中点', C.green, 62], ['x:(-2+4)÷2', C.ink, 96], ['y:(2+8)÷2', C.ink, 118]), ...cap('中点は座標の平均', C.green)),
+  },
+  {
+    note: '原点Oと点M(1,5)を通る直線は、傾きが5÷1＝5、原点を通るのでy＝5xです。これが△OABの面積を2等分する直線です。',
+    add: [cLine(m377, 0, 0, 1.6, 8, C.green, false, 3), ...side(['原点と M を', C.green, 40], ['通る直線', C.green, 62], ['傾き 5÷1＝5', C.ink, 96], ['y＝5x', C.green, 122]), ...cap('答え：y＝5x', C.green)],
+  },
+  {
+    note: '❓本当に面積が半分でしょうか。検算します。△OAMは、OC＝4(Cは直線ABとy軸の交点(0,4))を底辺とみて、高さは「Mのx座標−Aのx座標」＝1−(−2)＝3。面積は(1/2)×4×3＝6。12の半分になっています。',
+    add: [...cPt(m377, 0, 4, 'C(0,4)', C.main, 6, -4), pg([[m377.X(0), m377.Y(0)], [m377.X(-2), m377.Y(2)], [m377.X(1), m377.Y(5)]], C.green, 'rgba(22,163,74,0.2)'), ...side(['△OAM', C.green, 40], ['(1/2)×4×3', C.ink, 70], ['＝6 ✓', C.green, 96], ['12の半分', C.green, 122]), ...cap('検算：6 ＝ 12 ÷ 2', C.green)],
+  },
+  {
+    note: '❓Mを、放物線上でx座標が1の点(1,1/2)としてよいでしょうか。→ いけません。中点は線分AB上の点で、両はしの座標の平均で求めます。放物線上の点は、ABの中点ではありません。',
+    add: fresh(...base377(), ...cPt(m377, 1, 0.5, '(1,1/2)', C.red, 6, 6), ...cPt(m377, 1, 5, 'M', C.green, 6, -2), ...side(['放物線上の点は', C.red, 40], ['中点ではない', C.red, 62], ['中点は AB 上', C.green, 96]), ...cap('中点は線分の上、座標の平均', C.red)),
+  },
+  {
+    note: '次に、y軸上の点P(0,p)で△PAB＝△OABとなる点を求めます。線分PCを底辺と見ます(C(0,4))。高さはAとBのx座標の差で6。面積は(1/2)×|p−4|×6＝3|p−4|です。',
+    add: fresh(...base377(), ...cPt(m377, 0, 4, 'C', C.main, 6, 6), ...side(['底辺 PC', C.main, 40], ['高さ 6', C.main, 62], ['面積', C.ink, 96], ['3×|p−4|', C.red, 118]), ...cap('P(0,p) を動かして考える', C.main)),
+  },
+  {
+    note: '面積が12になるので、3|p−4|＝12、|p−4|＝4。よってp＝8またはp＝0です。p＝0は原点Oそのものなので、「原点と異なる点」ならP(0,8)になります。OとPは、直線ABをはさんで反対側にあります。',
+    add: fresh(...base377(), ...cPt(m377, 0, 8, 'P(0,8)', C.red, 8, 0), cLine(m377, 0, 8, -2, 2, C.red, true, 1.6), cLine(m377, 0, 8, 4, 8, C.red, true, 1.6), ...side(['|p−4|＝4', C.ink, 40], ['p＝8 か p＝0', C.ink, 62], ['0 は O と同じ', C.gray, 96], ['答え P(0,8)', C.red, 122]), ...cap('P(0,8)：OとAB反対側', C.red)),
+  },
+  {
+    note: 'まとめです。面積の2等分は「中線」、頂点と向かいあう辺の中点を通る直線。中点は座標の平均。同じ面積になる点は、底辺を決めて高さをそろえて探します。',
+    add: fresh(bx(15, 14, 290, 34, '2等分 → 頂点と対辺の中点を通る', C.main, FILL.warm, 13), bx(15, 56, 290, 34, '中点 → 座標の平均', C.green, FILL.green, 13), bx(15, 98, 290, 34, '同じ面積 → 底辺と高さをそろえる', C.blue, FILL.blue, 13), ...cap('y＝5x と P(0,8)', C.main)),
+  },
+], '面積を2等分する直線');
+
+// ───────── koko_math_s379 軸に平行な線分で面積比 ─────────
+const m379 = mkMap(130, 130, 30, 20);
+const base379 = () => [...cAxes(m379, -3.2, 3.4, -1, 6), ...cParab(m379, 1, -2.3, 2.3, 5.5), ...cPt(m379, -2, 4, 'A(-2,4)', C.red, -6, -2), ...cPt(m379, 1, 1, 'B(1,1)', C.red, 6, 8), cLine(m379, -2, 4, 1, 1, C.blue), ...cPt(m379, 0, 2, 'C', C.main, 6, -4)];
+const s379: DiagramFigure = show([
+  {
+    note: '問題です。放物線 y＝x² 上に、x座標が−2の点Aと1の点Bをとります。Aは(−2,4)、Bは(1,1)。直線ABはy＝−x+2で、y軸との交点はC(0,2)です。三角形の面積の比を求めます。',
+    add: [...base379(), ...side(['A(-2,4)', C.red, 40], ['B(1,1)', C.red, 62], ['AB: y＝−x+2', C.blue, 96], ['C(0,2)', C.main, 118]), ...cap('△OAB と △ABD の面積比は？')],
+  },
+  {
+    note: '△OABの面積から求めます。OC＝2を底辺とみて、高さはAとBのx座標の差1−(−2)＝3。面積は(1/2)×2×3＝3です。',
+    add: [pg([[m379.X(0), m379.Y(0)], [m379.X(-2), m379.Y(4)], [m379.X(1), m379.Y(1)]], C.blue, 'rgba(2,132,199,0.15)'), ...side(['底辺 OC＝2', C.blue, 40], ['高さ 3', C.blue, 62], ['(1/2)×2×3', C.ink, 96], ['＝3', C.blue, 122]), ...cap('△OAB ＝ 3', C.blue)],
+  },
+  {
+    note: '❓Aと同じ高さにある放物線上の点Dはどこでしょう。→ y座標が4になるのはx²＝4、つまりx＝±2。x＝−2はA自身なので、もう一方のx＝2がDです。D(2,4)。',
+    add: fresh(...base379(), ...cPt(m379, 2, 4, 'D(2,4)', C.green, 6, -2), cLine(m379, -2, 4, 2, 4, C.green, false, 2.5), ...side(['x²＝4', C.ink, 40], ['x＝2 か −2', C.ink, 62], ['−2 は A', C.gray, 96], ['D(2,4)', C.green, 122]), ...cap('AとDは 同じ高さ', C.green)),
+  },
+  {
+    note: '❓どうして「同じ高さの2点」をとるのでしょう。→ 線分ADがx軸に平行になるからです。x軸に平行な線分を底辺にすると、高さはy座標の差だけで出るので、面積がすぐ計算できます。',
+    add: [...band(135, bx(20, 150, 130, 34, '線分AD はx軸に平行\n長さ 2−(−2)＝4', C.green, FILL.green, 11), bx(170, 150, 130, 34, '高さは y座標の差\nだけで出る', C.blue, FILL.blue, 11), lb(160, 214, '平行な線分は 最強の道具', 12, C.main, 'middle', true))],
+  },
+  {
+    note: '△ABDの面積です。底辺ADは4。高さは、Bから直線ADまでの距離で、y座標の差4−1＝3。面積は(1/2)×4×3＝6です。',
+    add: fresh(...base379(), ...cPt(m379, 2, 4, 'D', C.green, 6, -2), cLine(m379, -2, 4, 2, 4, C.green, false, 2.5), pg([[m379.X(-2), m379.Y(4)], [m379.X(1), m379.Y(1)], [m379.X(2), m379.Y(4)]], C.green, 'rgba(22,163,74,0.2)'), cLine(m379, 1, 1, 1, 4, C.red, true, 1.6), ...side(['底辺 AD＝4', C.green, 40], ['高さ 4−1＝3', C.green, 62], ['(1/2)×4×3', C.ink, 96], ['＝6', C.green, 122]), ...cap('△ABD ＝ 6', C.green)),
+  },
+  {
+    note: '面積比を出します。△OAB：△ABD＝3：6＝1：2です。',
+    add: [...band(135, bx(20, 150, 130, 34, '△OAB ＝ 3', C.blue, FILL.blue, 13), lb(165, 167, ':', 18, C.ink, 'middle', true), bx(180, 150, 120, 34, '△ABD ＝ 6', C.green, FILL.green, 13), lb(160, 214, '3 : 6 ＝ 1 : 2', 14, C.main, 'middle', true))],
+  },
+  {
+    note: '❓面積比は、相似比の2乗でよいでしょうか。→ いけません。△OABと△ABDは相似ではないからです。面積比の出し方は3つ。①底辺が共通なら高さの比、②高さが共通なら底辺の比、③相似なら相似比の2乗。どれにあたるかを先に判断します。',
+    add: fresh(bx(10, 10, 300, 32, '① 底辺が共通 → 面積比 ＝ 高さの比', C.blue, FILL.blue, 12), bx(10, 48, 300, 32, '② 高さが共通 → 面積比 ＝ 底辺の比', C.green, FILL.green, 12), bx(10, 86, 300, 32, '③ 相似 → 面積比 ＝ 相似比の2乗', C.red, FILL.red, 12), lb(160, 134, '今回は③ではない（相似でない）', 11, C.red, 'middle', true), ...cap('まず共通なものを探す', C.main)),
+  },
+  {
+    note: 'まとめです。y座標が等しい2点をとると、x軸に平行な線分ができます。それを底辺にして高さをy座標の差で出すと、面積が簡単に求まります。面積比は、共通の底辺か高さを探してから出します。',
+    add: fresh(...base379(), cLine(m379, -2, 4, 2, 4, C.green, false, 2.5), ...cPt(m379, 2, 4, 'D', C.green, 6, -2), ...band(135, lb(160, 164, '△OAB : △ABD ＝ 3 : 6 ＝ 1 : 2', 14, C.main, 'middle', true), lb(160, 196, '同じ高さの2点 → x軸に平行な底辺', 12, C.green, 'middle', true))),
+  },
+], '軸に平行な線分で面積比を出す');
+
+// ───────── koko_math_s380 線分の比と面積の比 ─────────
+const m380 = mkMap(190, 122, 14, 13);
+const base380 = () => [...cAxes(m380, -9.5, 5.5, -2, 8), ...cParab(m380, 0.25, -5.5, 5.5, 7.5), ...cPt(m380, -2, 1, 'A', C.red, -4, 10), ...cPt(m380, 4, 4, 'B', C.red, 5, 0), cLine(m380, -3, 0.5, 5, 4.5, C.blue), ...cPt(m380, 0, 2, 'C', C.main, 5, -5)];
+const s380: DiagramFigure = show([
+  {
+    note: '問題です。放物線 y＝(1/4)x² 上に、x座標が−2の点Aと4の点Bをとります。A(−2,1)、B(4,4)。直線ABはy＝(1/2)x+2で、y軸との交点はC(0,2)です。',
+    add: [...base380(), pg([[m380.X(0), m380.Y(0)], [m380.X(-2), m380.Y(1)], [m380.X(4), m380.Y(4)]], C.blue, 'rgba(2,132,199,0.1)'), ...cap('A・B・C と △OAB')],
+  },
+  {
+    note: '❓△OACと△OCBの面積比は、どう求めればよいでしょう。→ 2つの三角形は、頂点Oから直線ABにおろした高さが共通です。底辺ACとCBは、直線AB上に一直線に並んでいます。だから面積比は底辺の比 AC：CB になります。',
+    add: [cLine(m380, 0, 0, 0, 2, C.red, true, 1.6), ...band(135, bx(20, 150, 130, 34, '高さが共通\n(Oから直線ABまで)', C.red, FILL.red, 11), bx(170, 150, 130, 34, '面積比 ＝ 底辺の比\nAC : CB', C.blue, FILL.blue, 11), lb(160, 214, '底辺が一直線に並ぶ場合', 12, C.ink, 'middle', true))],
+  },
+  {
+    note: '❓AC：CBはいくつでしょう。→ 直線AB上の点が線分を分ける比は、x座標の差の比に等しくなります。ACは0−(−2)＝2、CBは4−0＝4で、AC：CB＝2：4＝1：2です。',
+    add: [...band(135, lb(160, 158, '直線AB上では x座標の差の比で分かる', 12, C.ink, 'middle', true), bx(20, 168, 130, 34, 'AC ＝ 0−(−2) ＝ 2', C.blue, FILL.blue, 12), bx(170, 168, 130, 34, 'CB ＝ 4−0 ＝ 4', C.blue, FILL.blue, 12), lb(160, 224, 'AC : CB ＝ 2 : 4 ＝ 1 : 2', 13, C.main, 'middle', true))],
+  },
+  {
+    note: 'y座標の差でも確かめます。ACは2−1＝1、CBは4−2＝2で、やはり1：2。線分上の点なので、xでもyでも同じ比になります。',
+    add: [...band(135, bx(20, 150, 130, 34, 'AC ＝ 2−1 ＝ 1\n(y座標の差)', C.green, FILL.green, 11), bx(170, 150, 130, 34, 'CB ＝ 4−2 ＝ 2\n(y座標の差)', C.green, FILL.green, 11), lb(160, 214, 'x でも y でも 1 : 2 ✓', 13, C.green, 'middle', true))],
+  },
+  {
+    note: '△OAB全体の面積は、OC＝2を底辺として、x座標の差4−(−2)＝6が高さ。(1/2)×2×6＝6です。これを1：2に分けるので、△OAC＝2、△OCB＝4。検算すると、(1/2)×2×2＝2、(1/2)×2×4＝4で合っています。',
+    add: [pg([[m380.X(0), m380.Y(0)], [m380.X(-2), m380.Y(1)], [m380.X(0), m380.Y(2)]], C.green, 'rgba(22,163,74,0.25)'), pg([[m380.X(0), m380.Y(0)], [m380.X(0), m380.Y(2)], [m380.X(4), m380.Y(4)]], C.red, 'rgba(225,29,72,0.2)'), ...band(135, lb(160, 160, '△OAB ＝ (1/2)×2×6 ＝ 6', 12, C.ink, 'middle', true), bx(30, 172, 120, 32, '△OAC ＝ 2', C.green, FILL.green, 13), bx(170, 172, 120, 32, '△OCB ＝ 4', C.red, FILL.red, 13), lb(160, 222, '2 : 4 ＝ 1 : 2 ✓', 12, C.main, 'middle', true))],
+  },
+  {
+    note: '次に、x軸上に△DAB＝△OABとなる点D(原点と異なる)を求めます。❓どうすればよいでしょう。→ 底辺ABを共通にして、高さをそろえる「等積変形」を使います。Oを通りABに平行な直線 y＝(1/2)x を、反対側にも同じ間隔でとります。',
+    add: fresh(...base380(), cLine(m380, -9, -4.5, 5, 2.5, C.gray, true, 1.6), cLine(m380, -9, -2.5, 5, 4.5, C.blue, false, 2), cLine(m380, -9, -0.5, 5, 6.5, C.green, true, 2), ...band(135, bx(20, 150, 280, 34, '平行線は 同じ間隔 → 高さが同じ', C.green, FILL.green, 12), lb(160, 214, 'O を通る線と 反対側の線', 12, C.ink, 'middle', true))),
+  },
+  {
+    note: '直線ABの切片は2、Oを通る平行線の切片は0で、差は2。反対側の平行線は切片が2＋2＝4なので、y＝(1/2)x+4です。x軸との交点は、0＝(1/2)x+4よりx＝−8。D(−8,0)です。',
+    add: fresh(...base380(), cLine(m380, -9, -0.5, 5, 6.5, C.green, false, 2.5), ...cPt(m380, -8, 0, 'D(-8,0)', C.green, 0, -10), ...band(135, lb(160, 158, '切片：0 → 2 → 4（差は2ずつ）', 12, C.ink, 'middle', true), bx(40, 170, 240, 32, 'y＝(1/2)x+4 で y＝0 → x＝−8', C.green, FILL.green, 13), lb(160, 222, 'D(−8, 0)', 14, C.main, 'middle', true))),
+  },
+  {
+    note: '❓答えは正しいでしょうか。検算します。Dを通りy軸に平行な直線x＝−8がABと交わる点は(−8,−2)。この線分の長さは0−(−2)＝2。△DAB＝(1/2)×2×6＝6で、△OABの6と一致します。',
+    add: fresh(bx(15, 14, 290, 34, '線分 (−8,0)〜(−8,−2) の長さ ＝ 2', C.blue, FILL.blue, 12), bx(15, 56, 290, 34, 'x座標の差 4−(−2)＝6 が高さ', C.blue, FILL.blue, 12), bx(15, 98, 290, 34, '△DAB ＝ (1/2)×2×6 ＝ 6 ✓', C.green, FILL.green, 13), ...cap('△OAB ＝ 6 と一致', C.green)),
+  },
+  {
+    note: 'まとめです。底辺が一直線上に並ぶ三角形は、高さが共通なので面積比＝底辺の比。同じ面積の点を探すときは、平行線で高さをそろえます。「面積比＝底辺の比」は高さが共通のときだけ使えます。',
+    add: fresh(bx(15, 14, 290, 34, '高さが共通 → 面積比 ＝ 底辺の比', C.blue, FILL.blue, 13), bx(15, 56, 290, 34, '同じ面積 → 平行線で高さをそろえる', C.green, FILL.green, 13), bx(15, 98, 290, 34, '図に高さを書いて 共通か確かめる', C.red, FILL.red, 13), ...cap('AC:CB＝1:2、D(−8,0)', C.main)),
+  },
+], '線分の比と面積の比');
+
+// ───────── koko_math_s384 台形の周を動く点 ─────────
+const trap = () => [pg([[30, 20], [130, 20], [190, 100], [30, 100]], C.blue, FILL.blue), lb(22, 20, 'A', 12, C.ink, 'end', true), lb(136, 16, 'D', 12, C.ink, 'start', true), lb(196, 106, 'C', 12, C.ink, 'start', true), lb(22, 106, 'B', 12, C.ink, 'end', true), lb(80, 14, '5cm', 11, C.gray, 'middle'), lb(14, 62, '4cm', 11, C.gray, 'end'), lb(110, 116, '8cm', 11, C.gray, 'middle')];
+const s384: DiagramFigure = show([
+  {
+    note: '問題です。台形ABCDは、AD∥BC、AD＝5cm、BC＝8cm、AB＝4cm、∠A＝∠B＝90°です。点PはAを出発し、A→D→C→Bの順に毎秒1cmで動きます。t秒後の△ABPの面積をy cm²として、yをtの式で表します。',
+    add: [...trap(), ar(40, 26, 110, 26, C.red), ...side(['P は A から', C.red, 40], ['A→D→C→B', C.red, 62], ['毎秒 1cm', C.red, 84]), ...cap('△ABP の面積 y を t で表す')],
+  },
+  {
+    note: '❓辺DCの長さは？→ DからBCに垂線をおろし、足をHとします。HC＝8−5＝3、DH＝AB＝4。三平方の定理でDC＝√(3²+4²)＝√25＝5cm。3：4：5の直角三角形です。',
+    add: [ln(130, 20, 130, 100, C.gray, true), lb(118, 62, '4', 11, C.gray, 'end'), lb(160, 112, '3', 11, C.red, 'middle', true), ...side(['HC＝8−5＝3', C.ink, 40], ['DH＝AB＝4', C.ink, 62], ['DC＝√25', C.ink, 92], ['＝5cm', C.red, 114]), ...cap('DC ＝ 5cm（3：4：5）', C.red)],
+  },
+  {
+    note: '❓PがD、C、Bに着くのは何秒後でしょう。→ A→Dは5cmで5秒後、D→Cも5cmで10秒後、C→Bは8cmで18秒後です。区間は 0≦t≦5、5≦t≦10、10≦t≦18 の3つに分かれます。',
+    add: fresh(...[['0〜5秒', 'A→D 5cm', C.blue, FILL.blue, 18, 82], ['5〜10秒', 'D→C 5cm', C.red, FILL.red, 100, 82], ['10〜18秒', 'C→B 8cm', C.green, FILL.green, 182, 130]].map(([a, b, c, f, x, w]) => bx(x as number, 30, w as number, 56, `${a}\n${b}`, c as string, f as string, 12)), lb(30, 108, '0', 11, C.ink, 'middle'), lb(100, 108, '5', 11, C.ink, 'middle'), lb(182, 108, '10', 11, C.ink, 'middle'), lb(312, 108, '18', 11, C.ink, 'end'), ...cap('3つの区間で式が変わる', C.main)),
+  },
+  {
+    note: '❓どうやって面積を求めましょう。→ 底辺をAB(4cm、動かない)と見ます。∠A＝∠B＝90°なので、高さは「PからABまでの横の距離」です。だから y＝(1/2)×4×(横の距離)＝2×(横の距離)になります。',
+    add: fresh(...trap(), pg([[30, 20], [30, 100], [130, 20]], C.red, 'rgba(225,29,72,0.15)'), ln(30, 20, 130, 20, C.red, false, 3), lb(80, 38, '横の距離', 11, C.red, 'middle', true), ...side(['底辺 AB＝4', C.ink, 40], ['高さ＝横の距離', C.red, 62], ['y＝2×横の距離', C.main, 94]), ...cap('底辺を AB に固定する', C.main)),
+  },
+  {
+    note: '①0≦t≦5(PはAD上)。横の距離はそのまま進んだ長さtなので、y＝2t。t＝5のとき、y＝10です。',
+    add: fresh(...trap(), ln(30, 20, 130, 20, C.blue, false, 3), ...side(['①AD 上', C.blue, 40], ['横の距離＝t', C.blue, 62], ['y＝2t', C.blue, 94], ['t＝5で y＝10', C.ink, 118]), ...cap('0≦t≦5　y＝2t', C.blue)),
+  },
+  {
+    note: '②5≦t≦10(PはDC上)。❓横の距離は毎秒1cmずつ増えるでしょうか。→ いいえ。斜辺5cmを進む間に、横には3cmしか進みません。横方向の速さは毎秒3/5cm。だから横の距離は5＋(3/5)(t−5)で、y＝2×{5＋(3/5)(t−5)}＝10＋(6/5)(t−5)です。t＝10のとき、y＝16。',
+    add: fresh(...trap(), ln(130, 20, 190, 100, C.red, false, 3), ...side(['②DC 上', C.red, 36], ['5cm 進む間に', C.ink, 58], ['横は 3cm だけ', C.red, 80], ['横の速さ 3/5', C.red, 102], ['t＝10で y＝16', C.ink, 124]), ...cap('5≦t≦10　y＝10＋(6/5)(t−5)', C.red, 11)),
+  },
+  {
+    note: '③10≦t≦18(PはCB上)。CからBへ戻るので横の距離は減ります。C(8)から(t−10)だけ戻るので横の距離は8−(t−10)＝18−t。y＝2(18−t)＝36−2t。t＝10のときy＝16、t＝18のときy＝0です。',
+    add: fresh(...trap(), ln(190, 100, 30, 100, C.green, false, 3), ...side(['③CB 上', C.green, 40], ['横＝18−t', C.green, 62], ['y＝36−2t', C.green, 94], ['t＝18で y＝0', C.ink, 118]), ...cap('10≦t≦18　y＝36−2t', C.green)),
+  },
+  {
+    note: '❓式が正しいか確かめます。区間の切れ目の値が前後で一致するかを見ます。t＝5でy＝10と10、t＝10でy＝16と16、t＝18でy＝0。すべて一致しました。グラフは折れ線になります。',
+    add: fresh(...(() => { const X = (t: number) => 30 + 14 * t, Y = (y: number) => 130 - 6.5 * y; return [ar(X(0), Y(0), X(19), Y(0), C.gray), ar(X(0), Y(0), X(0), Y(18), C.gray), ln(X(0), Y(0), X(5), Y(10), C.blue, false, 3), ln(X(5), Y(10), X(10), Y(16), C.red, false, 3), ln(X(10), Y(16), X(18), Y(0), C.green, false, 3), ci(X(5), Y(10), 3.5, undefined, C.ink, C.ink), ci(X(10), Y(16), 3.5, undefined, C.ink, C.ink), lb(X(5) - 4, Y(10) - 4, '10', 11, C.ink, 'end', true), lb(X(10), Y(16) - 8, '16', 11, C.ink, 'middle', true), lb(X(5), Y(0) + 12, '5', 11, C.ink, 'middle'), lb(X(10), Y(0) + 12, '10', 11, C.ink, 'middle'), lb(X(18), Y(0) + 12, '18', 11, C.ink, 'middle'), lb(X(19) + 4, Y(0) + 4, 't', 11, C.gray, 'start')]; })(), ...cap('切れ目がつながる折れ線', C.main)),
+  },
+  {
+    note: '❓y＝13になるのは何秒後でしょう。②では10＋(6/5)(t−5)＝13から(6/5)(t−5)＝3、t−5＝2.5、t＝7.5(範囲内)。③では36−2t＝13から2t＝23、t＝11.5(範囲内)。①では2t＝13からt＝6.5ですが範囲外で不適。答えは7.5秒後と11.5秒後です。',
+    add: fresh(bx(15, 10, 290, 30, '①2t＝13 → t＝6.5　範囲外で不適', C.gray, FILL.gray, 12), bx(15, 46, 290, 30, '②t＝7.5　5≦t≦10 で適する', C.red, FILL.red, 12), bx(15, 82, 290, 30, '③t＝11.5　10≦t≦18 で適する', C.green, FILL.green, 12), ...cap('答え：7.5秒後 と 11.5秒後', C.main)),
+  },
+  {
+    note: 'まとめです。動点の問題は、固定できる底辺を探し、高さを時刻の式にします。区間ごとに式を作り、区間の切れ目で値が合うかを必ず確かめます。斜辺の区間では、横の速さが変わることに注意しましょう。',
+    add: fresh(bx(15, 14, 290, 34, '底辺を固定 → 高さをtの式に', C.blue, FILL.blue, 13), bx(15, 56, 290, 34, '区間ごとに式を作る', C.green, FILL.green, 13), bx(15, 98, 290, 34, '切れ目で値が合うか確かめる', C.red, FILL.red, 13), ...cap('斜辺では 横の速さが変わる', C.main)),
+  },
+], '台形の周を動く点と面積');
+
 
 export const XF_KSG_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_math_s337': s337,
@@ -749,6 +1022,12 @@ export const XF_KSG_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_math_s367': s367,
   'xf_koko_math_s371': s371,
   'xf_koko_math_s372': s372,
+  'xf_koko_math_s373': s373,
+  'xf_koko_math_s375': s375,
+  'xf_koko_math_s377': s377,
+  'xf_koko_math_s379': s379,
+  'xf_koko_math_s380': s380,
+  'xf_koko_math_s384': s384,
 };
 
 export const XF_KSG_SECTIONS: Record<string, string> = {
@@ -770,4 +1049,10 @@ export const XF_KSG_SECTIONS: Record<string, string> = {
   'koko_math_s367#0': 'xf_koko_math_s367',
   'koko_math_s371#0': 'xf_koko_math_s371',
   'koko_math_s372#0': 'xf_koko_math_s372',
+  'koko_math_s373#0': 'xf_koko_math_s373',
+  'koko_math_s375#0': 'xf_koko_math_s375',
+  'koko_math_s377#1': 'xf_koko_math_s377',
+  'koko_math_s379#1': 'xf_koko_math_s379',
+  'koko_math_s380#1': 'xf_koko_math_s380',
+  'koko_math_s384#1': 'xf_koko_math_s384',
 };
