@@ -2,18 +2,20 @@
  * ahiru（中学受験・高校受験対策）保護者向けフィードバック
  *
  * sendFeedback — 生徒からの感想・要望（選択式＋自由記述）を受け取り、
- *   ①Firestore（feedbackSubmissions）に保存 ②Slackへ通知する。
+ *   ①Firestore（feedbackSubmissions）に保存 ②LINEへ通知する。
  *
  * 全科目・両受験種別（中学受験・高校受験）・単元をまたいで汎用的に使える
  * ようにするため、subject・examType・context（単元・マンガ）は
  * すべて任意項目にしてある。
  *
- * 必須 Secrets:
- *   SLACK_FEEDBACK_WEBHOOK_URL（Slack Incoming Webhook URL）
+ * 必須 Secrets（LINE Messaging API。LINE Notify は2025/3に終了したため使わない）:
+ *   LINE_CHANNEL_ACCESS_TOKEN（Messaging APIチャネルの長期チャネルアクセストークン）
+ *   LINE_NOTIFY_TO（通知を受け取る人のLINEユーザーID。U から始まる33文字）
  *
  * セットアップ:
- *   firebase functions:secrets:set SLACK_FEEDBACK_WEBHOOK_URL
- *   （未設定の場合はFirestoreへの保存のみ行い、Slack通知はスキップする）
+ *   firebase functions:secrets:set LINE_CHANNEL_ACCESS_TOKEN
+ *   firebase functions:secrets:set LINE_NOTIFY_TO
+ *   （未設定、または placeholder のままの場合はFirestoreへの保存のみ行い、LINE通知はスキップする）
  *
  * コスト保護:
  *   feedbackUsage/{uid} で1日あたりの送信回数を記録し、DAILY_LIMIT を超えたら拒否する。
@@ -23,7 +25,8 @@ const { getFirestore, FieldValue } = require("firebase-admin/firestore");
 const { defineSecret } = require("firebase-functions/params");
 
 const db = getFirestore();
-const SLACK_FEEDBACK_WEBHOOK_URL = defineSecret("SLACK_FEEDBACK_WEBHOOK_URL");
+const LINE_CHANNEL_ACCESS_TOKEN = defineSecret("LINE_CHANNEL_ACCESS_TOKEN");
+const LINE_NOTIFY_TO = defineSecret("LINE_NOTIFY_TO");
 
 const DAILY_LIMIT = 15;
 const MAX_COMMENT_LEN = 1000;
@@ -69,7 +72,7 @@ function sanitizeText(v, maxLen) {
   return t === "" ? undefined : t;
 }
 
-async function postToSlack(webhookUrl, payload) {
+async function postToLine(token, to, payload) {
   const subjectLabel =
     payload.subject == null
       ? "（科目未指定）"
@@ -84,7 +87,7 @@ async function postToSlack(webhookUrl, payload) {
       : "（受験種別未指定）";
 
   const lines = [
-    `📮 *ahiru フィードバック*`,
+    `📮 ahiru フィードバック`,
     `カテゴリ: ${payload.category}`,
     `科目: ${subjectLabel} / ${examLabel}`,
   ];
@@ -96,18 +99,24 @@ async function postToSlack(webhookUrl, payload) {
     lines.push(payload.comment);
   }
 
-  const res = await fetch(webhookUrl, {
+  const res = await fetch("https://api.line.me/v2/bot/message/push", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ text: lines.join("\n") }),
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({
+      to,
+      messages: [{ type: "text", text: lines.join("\n").slice(0, 4900) }],
+    }),
   });
   if (!res.ok) {
-    throw new Error(`Slack webhook returned ${res.status}`);
+    throw new Error(`LINE push returned ${res.status}`);
   }
 }
 
 exports.sendFeedback = onCall(
-  { region: "asia-northeast1", secrets: [SLACK_FEEDBACK_WEBHOOK_URL] },
+  { region: "asia-northeast1", secrets: [LINE_CHANNEL_ACCESS_TOKEN, LINE_NOTIFY_TO] },
   async (req) => {
     const uid = req.auth?.uid;
     if (!uid) throw new HttpsError("unauthenticated", "ログインが必要です");
@@ -142,12 +151,13 @@ exports.sendFeedback = onCall(
     };
     await db.collection("feedbackSubmissions").add(record);
 
-    const webhookUrl = SLACK_FEEDBACK_WEBHOOK_URL.value();
-    if (webhookUrl) {
+    const token = LINE_CHANNEL_ACCESS_TOKEN.value();
+    const to = LINE_NOTIFY_TO.value();
+    if (token && to && token !== "placeholder" && to !== "placeholder") {
       try {
-        await postToSlack(webhookUrl, { category, comment, subject, examType, context });
+        await postToLine(token, to, { category, comment, subject, examType, context });
       } catch {
-        // Slack通知が失敗しても、Firestoreへの保存自体は成功しているので
+        // LINE通知が失敗しても、Firestoreへの保存自体は成功しているので
         // 生徒側にはエラーを見せない（あとでFirestoreから拾える）。
       }
     }
