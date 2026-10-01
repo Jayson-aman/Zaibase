@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, type TextStyle } from 'react-native';
+import { Platform, StyleSheet, Text, View, type TextStyle } from 'react-native';
 
 /**
  * 画面に出す本文の「大切なところ」を太字の赤で強調する。
@@ -16,20 +16,83 @@ const EMPHASIS: TextStyle = { fontWeight: '900', color: '#C0392B' };
 
 const SPLIT = /(\*\*[^*]+?\*\*)/g;
 
-/** 文字列を、強調部分を <Text> で包んだノードの配列にする。既存の <Text> の中でそのまま使える。 */
-export function rich(text: string | null | undefined): React.ReactNode {
+/**
+ * 分数を縦に表示する（分子の下に横棒、その下に分母）。
+ * ユーザーから「1/2 ではなく、上と下に分けて、横棒を引いて表示できないか」と要望があった（2026/10/1）。
+ *
+ * 文字列の中の「数字/数字」だけを対象にする。日付（2026/10/1）や単位（km/h）は数字どうしでないので触らない。
+ * 「1と7/12」「2 3/4」は、整数の部分はそのまま、分数の部分だけを縦にする。
+ * ⚠️ <Text> の中に <View> を入れる作りなので、親の文字サイズ・色は引きつがれない。
+ *    size / color を rich() の第2引数で渡せる（渡さなければ 16 / 濃い茶色）。
+ * ⚠️ FigureView の図解の中の文字は SVG なので、ここを通らない（図の中は「1/2」のまま）。
+ */
+const FRACTION = /(^|[^\d./])(\d{1,5})\/(\d{1,5})(?![\d./])/g;
+
+export type RichOpts = { size?: number; color?: string; bold?: boolean };
+
+function Fraction({ n, d, size, color, bold }: { n: string; d: string; size: number; color: string; bold: boolean }) {
+  const fs = Math.round(size * 0.82);
+  const text: TextStyle = { fontSize: fs, lineHeight: Math.round(fs * 1.2), color, fontWeight: bold ? '900' : '600', textAlign: 'center' };
+  const wide = Math.max(n.length, d.length);
+  return (
+    <View
+      style={[
+        styles.fraction,
+        Platform.OS === 'web'
+          ? ({ display: 'inline-flex', verticalAlign: 'middle' } as object)
+          : { transform: [{ translateY: Math.round(size * 0.42) }] },
+        { minWidth: wide * fs * 0.62 + 4 },
+      ]}
+      accessible
+      accessibilityLabel={`${d}分の${n}`}
+    >
+      <Text style={text}>{n}</Text>
+      <View style={[styles.bar, { backgroundColor: color }]} />
+      <Text style={text}>{d}</Text>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  fraction: { alignItems: 'center', justifyContent: 'center', marginHorizontal: 2 },
+  bar: { height: 1.4, alignSelf: 'stretch', marginVertical: 1 },
+});
+
+/** 平文の中の「数字/数字」を縦の分数に置きかえる。分数が無ければ文字列のまま返す。 */
+function withFractions(str: string, opts: RichOpts, keyBase: string): React.ReactNode {
+  if (!str.includes('/')) return str;
+  const out: React.ReactNode[] = [];
+  let last = 0;
+  let k = 0;
+  FRACTION.lastIndex = 0;
+  let m: RegExpExecArray | null;
+  while ((m = FRACTION.exec(str)) !== null) {
+    const start = m.index + m[1].length;
+    if (start > last) out.push(str.slice(last, start));
+    out.push(
+      <Fraction key={`${keyBase}f${k++}`} n={m[2]} d={m[3]} size={opts.size ?? 16} color={opts.color ?? '#2B2420'} bold={opts.bold ?? false} />,
+    );
+    last = m.index + m[0].length;
+  }
+  if (out.length === 0) return str;
+  if (last < str.length) out.push(str.slice(last));
+  return out;
+}
+
+/** 文字列を、強調部分を <Text> で包み、分数を縦にしたノードの配列にする。既存の <Text> の中でそのまま使える。 */
+export function rich(text: string | null | undefined, opts: RichOpts = {}): React.ReactNode {
   const s = text ?? '';
-  if (!s.includes('**')) return s;
+  if (!s.includes('**')) return withFractions(s, opts, 'r');
   const parts = s.split(SPLIT);
   return parts.map((p, i) => {
     if (p.startsWith('**') && p.endsWith('**') && p.length >= 4) {
       return (
         <Text key={i} style={EMPHASIS}>
-          {p.slice(2, -2)}
+          {withFractions(p.slice(2, -2), { ...opts, color: '#C0392B', bold: true }, `b${i}`)}
         </Text>
       );
     }
-    return p;
+    return <React.Fragment key={i}>{withFractions(p, opts, `p${i}`)}</React.Fragment>;
   });
 }
 

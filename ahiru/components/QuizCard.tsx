@@ -164,7 +164,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             </View>
           )}
           <Text style={styles.questionLabel}>問 題</Text>
-          <Text style={[styles.questionTextChoice, qFit]}>{question.question}</Text>
+          <Text style={[styles.questionTextChoice, qFit]}>{rich(question.question, { size: (qFit as { fontSize?: number }).fontSize ?? 18, color: '#221C18', bold: true })}</Text>
           {figure != null ? (
             <FigureView figure={figure} />
           ) : illustration != null ? (
@@ -228,7 +228,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
                             showResult && isSelected && !isCorrect && styles.choiceTextWrong,
                           ]}
                           numberOfLines={3}
-                        >{displayText}</Text>
+                        >{rich(displayText, { size: 17, color: '#221C18' })}</Text>
                         {showResult && isCorrect && (
                           <Text style={styles.choiceCorrectMark}>✓</Text>
                         )}
@@ -273,7 +273,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             </View>
           )}
           <Text style={styles.questionLabel}>問 題</Text>
-          <Text style={[styles.questionText, qFit]}>{question.question}</Text>
+          <Text style={[styles.questionText, qFit]}>{rich(question.question, { size: (qFit as { fontSize?: number }).fontSize ?? 20, color: '#221C18', bold: true })}</Text>
           {/*
             小問（問1〜問4）。これを出していなかったため、たとえば
             「1辺が6cmの立方体の容器があります。1L＝1000cm³とします。」だけが
@@ -323,7 +323,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
               {question.subQuestions.map((sq) => (
                 <View key={sq.label} style={styles.subQAnswerRow}>
                   <Text style={styles.subQAnswerLabel}>{sq.label}　{sq.prompt}</Text>
-                  <Text style={styles.subQAnswerText}>{sq.answer}</Text>
+                  <Text style={styles.subQAnswerText}>{rich(sq.answer, { size: 16, color: '#00694A', bold: true })}</Text>
                   {sq.explanation != null && (
                     <Text style={styles.subQAnswerExpl}>{sq.explanation}</Text>
                   )}
@@ -334,7 +334,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             <>
               <Text style={styles.answerLabel}>{question.isWritten ? '模範解答' : '答 え'}</Text>
               <Text style={[styles.answerText, aFit, { textAlign: answerAlign }]}>
-                {question.answer}
+                {rich(question.answer, { size: (aFit as { fontSize?: number }).fontSize ?? 25, color: '#221C18', bold: true })}
               </Text>
             </>
           )}

@@ -1,3 +1,4 @@
+import { rich } from '../../components/RichText';
 import React, { useState } from 'react';
 import {
   View,
@@ -101,7 +102,7 @@ const FormulaRow = React.memo(function FormulaRow({
           <Text style={styles.formulaLabelText}>{item.label}</Text>
         </View>
         <View style={[styles.formulaBox, { borderColor: accent + '55' }]}>
-          <Text style={[styles.formulaText, { color: accent }]}>{item.formula}</Text>
+          <Text style={[styles.formulaText, { color: accent }]}>{rich(item.formula, { size: 15, color: accent, bold: true })}</Text>
         </View>
         <View style={styles.lockCard}>
           <Text style={styles.lockIcon}>🔒</Text>
@@ -191,8 +192,8 @@ const FormulaRow = React.memo(function FormulaRow({
         </View>
 
         <View style={styles.formulaBox}>
-          <Text style={[styles.formulaText, { color: accent }]}>{item.formula}</Text>
-          {item.note && <Text style={styles.formulaNote}>{item.note}</Text>}
+          <Text style={[styles.formulaText, { color: accent }]}>{rich(item.formula, { size: 15, color: accent, bold: true })}</Text>
+          {item.note && <Text style={styles.formulaNote}>{rich(item.note, { size: 11, color: '#888' })}</Text>}
         </View>
 
         {item.explanation && (

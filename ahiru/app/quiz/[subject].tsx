@@ -818,7 +818,7 @@ export default function QuizScreen() {
           <View style={styles.wrongFeedbackWrap}>
             <View style={styles.wrongHeader}>
               <Text style={styles.wrongHeaderText}>✗ 不正解！</Text>
-              <Text style={styles.wrongCorrectAnswer}>正解：{currentQuestion.answer}</Text>
+              <Text style={styles.wrongCorrectAnswer}>正解：{rich(currentQuestion.answer, { size: 18, color: '#555', bold: true })}</Text>
             </View>
 
             {/* 励みになる言葉 */}

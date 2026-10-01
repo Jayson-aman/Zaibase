@@ -86,7 +86,7 @@ export default function InlineQuiz({ items, label = 'この公式の一問一答
         )}
       </View>
 
-      <Text style={styles.question}>{q.question}</Text>
+      <Text style={styles.question}>{rich(q.question, { size: 17, color: '#2B2420', bold: true })}</Text>
 
       {figure != null && <FigureView figure={figure} />}
 
@@ -112,7 +112,7 @@ export default function InlineQuiz({ items, label = 'この公式の一問一答
       {revealed && (
         <View style={styles.answerBox}>
           <Text style={styles.answerLabel}>{q.isWritten ? '模範解答' : '答え'}</Text>
-          <Text style={styles.answerText}>{q.answer}</Text>
+          <Text style={styles.answerText}>{rich(q.answer, { size: 15, color: '#2B2420' })}</Text>
 
           {q.subQuestions != null &&
             q.subQuestions.map((sub, i) => (
