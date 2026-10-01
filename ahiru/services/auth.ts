@@ -33,7 +33,7 @@ function friendlyError(code: string | undefined): string {
     case 'auth/network-request-failed':
       return 'ネットワークエラーです。接続を確認してください。';
     default:
-      return 'エラーが発生しました。もう一度お試しください。';
+      return `エラーが発生しました。もう一度お試しください。${code ? `（${code}）` : ''}`;
   }
 }
 
