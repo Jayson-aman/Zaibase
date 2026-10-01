@@ -87,6 +87,46 @@ const wb = (
 // 表の下に置く一言の y 座標（行数 n, 先頭 y0, 行の高さ rh, すきま gap）
 const under = (n: number, y0 = 52, rh = 24, gap = 5): number => y0 + n * (rh + gap) - gap + 13;
 
+
+// 文を語のかたまりに分けて横に並べる（語順の箱）。! を付けたかたまりは強調、? は空欄。
+const sl = (parts: string[], y: number, o: { h?: number; size?: number; cols?: Col[]; x0?: number; w?: number } = {}): DiagramElement[] => {
+  const x0 = o.x0 ?? 10;
+  const W = o.w ?? 300;
+  const gap = 4;
+  const wt = parts.map((t) => [...t.replace(/^[!?]/, '')].reduce((u, ch) => u + (ch.charCodeAt(0) < 256 ? 0.55 : 1), 0) + 1.6);
+  const tot = wt.reduce((a, b) => a + b, 0);
+  const avail = W - gap * (parts.length - 1);
+  let x = x0;
+  const palette: Col[] = o.cols ?? [BLUE, GREEN, MAIN, PURPLE, GRAY];
+  return parts.map((t, i) => {
+    const w = (wt[i] / tot) * avail;
+    const hi = t.startsWith('!');
+    const empty = t.startsWith('?');
+    const txt = hi || empty ? t.slice(1) : t;
+    const col = palette[i % palette.length];
+    const el = bx(x, y, w, o.h ?? 34, txt, hi ? C.red : empty ? C.gray : col[0], hi ? FILL.yellow : empty ? '#FFFFFF' : col[1], o.size ?? 12);
+    x += w + gap;
+    return el;
+  });
+};
+
+// 順に確かめる縦の流れ（三単現のつづり用）
+const stackFlow = (): DiagramElement[] => {
+  const items: [string, string, Col][] = [
+    ['① have？', 'has', PURPLE],
+    ['② -s -x -ch -sh -o？', '-es　(watches / goes)', RED],
+    ['③ 子音字＋y？', 'y → i + es　(studies)', RED],
+    ['④ それ以外', '-s　(plays / runs)', GREEN],
+  ];
+  const out: DiagramElement[] = [];
+  items.forEach((it, i) => {
+    const y = 10 + i * 40;
+    out.push(bx(10, y, 140, 30, it[0], it[2][0], it[2][1], 12));
+    out.push(ar(152, y + 15, 166, y + 15, C.main));
+    out.push(bx(168, y, 142, 30, it[1], it[2][0], FILL.yellow, 12));
+  });
+  return out;
+};
 const F: Record<string, DiagramFigure> = {};
 const SEC: Record<string, string> = {};
 
@@ -289,7 +329,7 @@ SEC['koko_eigo_s025#1'] = 'xf_koko_eigo_s025';
 // ── 派生語④：否定の接頭辞 ──
 F['xf_koko_eigo_s026'] = show([
   S('possible の反対は、unpossible ではなく impossible です。❓なぜ un- ではだめなのでしょう。実は否定の接頭辞は、うしろに続く音によって使い分けられています。',
-    [...why('possible の反対は、なぜ impossible？'), ...wb([['possible', 'un-', 'unpossible　×'], ['possible', 'im-', '!impossible　○']], { y0: 60, rh: 36, gap: 14, size: 11 })],
+    [...why('possible の反対は、なぜ impossible？'), ...wb([['possible', 'un-', 'unpossible　×']], { y0: 56, rh: 36, size: 11, color: RED }), ...wb([['possible', 'im-', 'impossible　○']], { y0: 108, rh: 36, size: 11 })],
     '否定の接頭辞は、うしろの音で決まる', PURPLE),
   S('un- はもっとも広く使える否定の接頭辞です。happy→unhappy、kind→unkind、lucky→unlucky、usual→unusual、fair→unfair。動詞に付くと「元に戻す」（lock→unlock）の意味にもなります。',
     [...why('un- は、どんな語に付く？'), ...tbl(['もとの語', '反対の語'], [['happy', 'unhappy'], ['kind', 'unkind'], ['usual', 'unusual'], ['fair', 'unfair']], { y0: 56, rh: 26, gap: 6, cols: [BLUE, RED] })],
@@ -318,7 +358,7 @@ SEC['koko_eigo_s026#1'] = 'xf_koko_eigo_s026';
 // ── 派生語⑤：意味を変える接頭辞 ──
 F['xf_koko_eigo_s027'] = show([
   S('export と import は、うしろの port（運ぶ）が同じで、前の ex-（外へ）と im-（中へ）だけがちがいます。接頭辞（せっとうじ）の意味を知っていれば、初めて見る語でも見当がつきます。',
-    [...why('接頭辞を知ると、何が良いの？'), ...wb([['ex-（外へ）', 'port', '!export'], ['im-（中へ）', 'port', '!import']], { y0: 60, rh: 36, gap: 14, size: 11 }), lb(160, 150, '外へ運ぶ ＝ 輸出　中へ運ぶ ＝ 輸入', 13, C.green, 'middle', true)],
+    [...why('接頭辞を知ると、何が良いの？'), ...wb([['ex-（外へ）', 'port', '!export'], ['im-（中へ）', 'port', '!import']], { y0: 60, rh: 36, gap: 14, size: 11 }), lb(160, 166, '外へ運ぶ ＝ 輸出　中へ運ぶ ＝ 輸入', 13, C.green, 'middle', true)],
     '接頭辞＋語根 に分けて考える', GREEN),
   S('re- は「再び・元へ」の意味です。rebuild（建て直す）、rewrite（書き直す）、return（戻る）、repeat（くり返す）、replace（取りかえる）。',
     [...why('re- は、どんな意味？'), ...tbl(['接頭辞付きの語', '意味'], [['rebuild', '建て直す'], ['rewrite', '書き直す'], ['repeat', 'くり返す'], ['replace', '取りかえる']], { y0: 56, rh: 26, gap: 6, cols: [BLUE, GREEN] })],
@@ -343,6 +383,195 @@ F['xf_koko_eigo_s027'] = show([
     '意味の見当をつける道具', MAIN),
 ], '意味を変える接頭辞');
 SEC['koko_eigo_s027#0'] = 'xf_koko_eigo_s027';
+// ── 反意語②：向きのある動詞の対 ──
+F['xf_koko_eigo_s029'] = show([
+  S('「借りる」と「貸す」は、同じ出来事を反対側から見た言い方です。日本語では主語がなくても通じますが、英語では borrow と lend を選んだ時点で「だれからだれへ」が決まります。',
+    [...why('borrow と lend は、なぜ別の語なの？'), bx(14, 52, 100, 46, '友だち', C.blue, FILL.blue, 15), bx(206, 52, 100, 46, '自分', C.green, FILL.green, 15), ar(116, 66, 204, 66, C.main), ar(204, 86, 116, 86, C.main), lb(160, 56, '本', 12, C.main, 'middle', true), lb(160, 112, '同じ出来事を、立場で言い分ける', 13, C.red, 'middle', true)],
+    '主語が「だれ」かを先に決める', PURPLE),
+  S('自分が受け取る側なら borrow（借りる）、自分が渡す側なら lend（貸す）です。I borrowed a book from him.（彼から本を借りた）／ He lent me a book.（彼は私に本を貸した）',
+    [...why('どちらの語を選ぶ？'), bx(10, 48, 144, 36, 'borrow（借りる）', C.green, FILL.green, 13), bx(166, 48, 144, 36, 'lend（貸す）', C.red, FILL.red, 13), lb(82, 100, '自分が受け取る側', 12, C.green, 'middle', true), lb(238, 100, '自分が渡す側', 12, C.red, 'middle', true), bx(10, 116, 144, 40, 'I borrowed a book\nfrom him.', C.green, FILL.green, 11), bx(166, 116, 144, 40, 'He lent me a book.', C.red, FILL.red, 11)],
+    '受け取る側 → borrow　渡す側 → lend', MAIN),
+  S('buy と sell も同じです。I bought this bike from my uncle.（おじから買った）／ My uncle sold this bike to me.（おじが私に売った）。teach と learn も、教える側と学ぶ側の対になっています。',
+    [...why('buy / sell、teach / learn も向きの対？'), ...tbl(['受け取る側', '渡す側'], [['borrow（借りる）', 'lend（貸す）'], ['buy（買う）', 'sell（売る）'], ['learn（学ぶ）', 'teach（教える）'], ['take（取る）', 'give（与える）']], { y0: 56, rh: 26, gap: 6, cols: [GREEN, RED] })],
+    '向きのある動詞は、対で覚える', MAIN),
+  S('❓日本語から訳すとき、どうまちがえやすい？ 「私は彼にペンを貸した」を I borrowed him my pen. としてしまうことです。私が渡す側なので lend を使い、過去形は lent です。',
+    [...why('「彼にペンを貸した」を英語にすると？'), ...sl(['I', '!lent', 'him', 'my pen.'], 56, { h: 40, size: 14 }), lb(160, 118, 'I borrowed him my pen.　×', 13, C.red, 'middle', true), lb(160, 142, '私が渡す側 → lend（過去形は lent）', 13, C.green, 'middle', true)],
+    '主語が「渡す側」なら lend', RED),
+  S('動作にも反対の語の対があります。come／go、open／close、push／pull、start／finish、win／lose、put on（着る）／take off（脱ぐ）、turn on（つける）／turn off（消す）。',
+    [...why('動作の反対語は？'), ...tbl(['', ''], [['come（来る）', 'go（行く）'], ['push（押す）', 'pull（引く）'], ['win（勝つ）', 'lose（負ける）'], ['put on（着る）', 'take off（脱ぐ）']], { y0: 50, rh: 26, gap: 6, cols: [BLUE, RED] })],
+    '動作の対', BLUE),
+  S('名詞にも決まった対があります。question／answer、war／peace、success／failure、cause（原因）／effect（結果）。接頭辞で作る反意語もあります。possible／impossible、agree／disagree。',
+    [...why('名詞の反対語は？'), ...tbl(['', ''], [['question（質問）', 'answer（答え）'], ['war（戦争）', 'peace（平和）'], ['success（成功）', 'failure（失敗）'], ['cause（原因）', 'effect（結果）']], { y0: 50, rh: 26, gap: 6, cols: [BLUE, RED] })],
+    '名詞の対', BLUE),
+  S('❓close は、なぜ「近い」と「閉まっている」で形がちがうの？ 動詞 close [kloʊz]（閉める）、形容詞 close [kloʊs]（近い）は、つづりが同じで発音も意味もちがいます。「閉まっている」は closed と d が必要です。',
+    [...why('close と closed は何がちがう？'), ...sl(['The shop', 'is', '!closed', 'today.'], 52, { h: 34 }), lb(160, 104, '「閉まっている」→ 過去分詞 closed', 12, C.green, 'middle', true), ...sl(['The shop', 'is', '!close', '.'], 124, { h: 34, cols: [RED] }), lb(160, 174, '「その店は近い」の意味になる', 12, C.red, 'middle', true)],
+    '「閉まっている」は closed', RED),
+  S('まとめです。向きのある動詞（borrow／lend、buy／sell、teach／learn）は、英作文の前に主語を決めてから選びます。反意語は、対にして覚えましょう。',
+    [...row(['向きの対\nborrow/lend', '動作の対\nopen/close', '名詞の対\nwar/peace'], 40, MAIN, 12, 64), lb(160, 130, 'The shop is closed.（閉まっている）', 13, C.green, 'middle', true), lb(160, 154, 'The shop is close.（近い）', 13, C.red, 'middle', true)],
+    'まず「だれが主語か」を決める', MAIN),
+], '向きのある動詞と反意語');
+SEC['koko_eigo_s029#0'] = 'xf_koko_eigo_s029';
+
+// ── 同意語・言いかえ①：助動詞・自動詞・他動詞 ──
+F['xf_koko_eigo_s030'] = show([
+  S('文法事項の書きかえも、同意表現の一種として出ます。can ＝ be able to、must ＝ have to、will ＝ be going to（be going to は「すでに決めていること」を表す点が少しちがいます）。',
+    [...why('助動詞は、何に書きかえられる？'), ...tbl(['', ''], [['can', 'be able to'], ['must', 'have to'], ['will', 'be going to']], { y0: 56, rh: 30, gap: 8, cols: [BLUE, GREEN], size: 14 })],
+    '助動詞 ＝ 熟語で書きかえ', BLUE),
+  S('❓must not と don\'t have to は、同じ意味？ いいえ。must not は「〜してはいけない」（禁止）、don\'t have to は「〜する必要はない」（不要）で、意味がちがいます。',
+    [...why('must not と don\'t have to は同じ？'), bx(10, 48, 144, 34, 'must not', C.red, FILL.red, 15), bx(166, 48, 144, 34, 'don\'t have to', C.green, FILL.green, 15), lb(82, 96, '禁止（してはいけない）', 12, C.red, 'middle', true), lb(238, 96, '不要（しなくてよい）', 12, C.green, 'middle', true), bx(10, 112, 144, 44, 'You must not\nswim here.', C.red, FILL.red, 12), bx(166, 112, 144, 44, 'You don\'t have to\nswim.', C.green, FILL.green, 12)],
+    '禁止と不要はちがう', RED),
+  S('数量や時を表す表現にも言いかえがあります。a lot of ＝ lots of ＝ many（数えられる）／much（数えられない）。right away ＝ at once ＝ immediately（すぐに）、at last ＝ finally（ついに）。',
+    [...why('数量・時の言いかえは？'), ...tbl(['', ''], [['a lot of', 'lots of / many / much'], ['right away', 'at once / immediately'], ['these days', 'nowadays'], ['at last', 'finally']], { y0: 50, rh: 26, gap: 6, cols: [BLUE, GREEN], size: 11 })],
+    '意味が同じ表現をセットで', BLUE),
+  S('❓reach の後ろに to は要るの？ 要りません。reach は他動詞（たどうし）で、目的語を直接とるからです。I reached the station.（○）　I reached to the station.（×）',
+    [...why('「駅に着く」の reach に to は要る？'), ...sl(['I', '!reached', 'the station.'], 54, { h: 38, size: 14 }), lb(160, 110, '他動詞は、すぐ後ろに目的語を置く', 13, C.green, 'middle', true), lb(160, 136, 'I reached to the station.　×', 13, C.red, 'middle', true)],
+    'reach ＋ 目的語（前置詞なし）', GREEN),
+  S('❓では、arrive は？ arrive は自動詞（じどうし）で、目的語を直接とれません。前置詞が必要です。I arrived at the station.（○）　I arrived the station.（×）。get も get to と to が要ります。',
+    [...why('arrive や get には前置詞が要る？'), ...sl(['I', '!arrived', '!at', 'the station.'], 54, { h: 38, size: 13 }), lb(160, 110, '自動詞は、前置詞を入れて目的語につなぐ', 13, C.blue, 'middle', true), ...sl(['I', 'got', '!to', 'the station.'], 130, { h: 34, size: 13 })],
+    'arrive at ／ get to', BLUE),
+  S('❓discuss に about は要るの？ 要りません。discuss は他動詞で、about を付けると誤りです。We discussed the problem.（○）　We discussed about the problem.（×）。一方、talk は自動詞なので talk about が必要です。',
+    [...why('discuss に about は要る？'), ...sl(['We', '!discussed', 'the problem.'], 54, { h: 36, size: 13 }), ...sl(['We', '!talked', '!about', 'the problem.'], 108, { h: 36, size: 13, cols: [BLUE] }), lb(160, 160, '同じ「〜について話す」でも、形がちがう', 12, C.red, 'middle', true)],
+    'discuss ＝ 他動詞　talk ＝ 自動詞', RED),
+  S('marry も他動詞です。He married her.（彼は彼女と結婚した）。日本語の「〜と」に引かれて with を入れると誤りです（He married with her. は×）。enter、attend も前置詞をとりません。',
+    [...why('「〜と結婚する」に with は要る？'), ...sl(['He', '!married', 'her.'], 54, { h: 38, size: 14 }), lb(160, 110, 'with を入れない', 13, C.red, 'middle', true), ...tbl(['前置詞なしの他動詞', ''], [['enter（〜に入る）', 'attend（〜に出席する）']], { y0: 148, rh: 26, gap: 6, cols: [BLUE, BLUE], size: 11 })],
+    '日本語の「〜と」「〜に」に引かれない', RED),
+  S('まとめです。他動詞（reach・discuss・marry・enter・attend）は前置詞なし。自動詞（arrive・get・talk）は前置詞が必要。書きかえは、意味と形の両方を確かめます。',
+    [...row(['他動詞\n前置詞なし', '自動詞\n前置詞あり'], 40, MAIN, 12, 54), lb(160, 118, 'reach the station　arrive at the station', 13, C.green, 'middle', true), lb(160, 142, 'discuss the problem　talk about the problem', 13, C.green, 'middle', true)],
+    '意味が同じでも形はちがう', MAIN),
+], '自動詞と他動詞・助動詞の言いかえ');
+SEC['koko_eigo_s030#1'] = 'xf_koko_eigo_s030';
+
+// ── 使い分け①：say／tell／speak／talk ──
+F['xf_koko_eigo_s032'] = show([
+  S('「彼は忙しいと言った」を英語にすると、say と tell のどちらでしょう。❓なぜ日本語の訳では決まらないの？ 決めるのは「すぐ後ろに人が来るかどうか」という形だからです。',
+    [...why('「言う」は、どうやって選ぶ？'), ...row(['say', 'tell', 'speak', 'talk'], 52, MAIN, 15, 44), lb(160, 122, 'どれも「言う・話す」と訳せる', 13, C.ink, 'middle'), lb(160, 146, '選ぶ手がかりは、うしろの形', 13, C.red, 'middle', true)],
+    '意味ではなく「形」で選ぶ', PURPLE),
+  S('say は「内容を言う」語です。すぐ後ろに人を置けません。人を示すときは to を使います。He said to me that he was busy.（○）　He said me that ...（×）',
+    [...why('say の後ろに人は置ける？'), ...sl(['He', '!said', 'to me', 'that he was busy.'], 54, { h: 38, size: 12 }), lb(160, 112, '人は to で示す', 13, C.green, 'middle', true), lb(160, 138, 'He said me that he was busy.　×', 13, C.red, 'middle', true)],
+    'say ＋（to 人）＋ 内容', GREEN),
+  S('tell は「人に伝える」語です。すぐ後ろに必ず人が来ます。He told me that he was busy.（○）　He told that he was busy.（×：人が抜けている）',
+    [...why('tell の後ろには何が来る？'), ...sl(['He', '!told', '!me', 'that he was busy.'], 54, { h: 38, size: 12 }), lb(160, 112, 'tell ＋ 人 ＋ 内容', 14, C.blue, 'middle', true), lb(160, 138, 'He told that he was busy.　×', 13, C.red, 'middle', true)],
+    'tell の直後には必ず人', BLUE),
+  S('❓He said me that ... が誤りなのはなぜ？ 「私に言った」を日本語の語順のまま置き、tell の形（tell 人）と say の形が頭の中で混ざったからです。直す方法は2つ。He told me that ...、または He said to me that ...。',
+    [...why('He said me ... は、どう直す？'), ...sl(['He', 'said', 'me', 'that ...'], 50, { h: 30, size: 12, cols: [RED] }), ar(160, 84, 160, 98, C.main), ...sl(['He', '!told', 'me', 'that ...'], 100, { h: 30, size: 12, cols: [GREEN] }), ...sl(['He', 'said', '!to', 'me', 'that ...'], 142, { h: 30, size: 12, cols: [GREEN] })],
+    'tell 人 か、say to 人', RED),
+  S('speak は「言語」や「一方向の発話」に使います。She speaks English very well.（言語）、May I speak to Mr. Brown?（電話で）。後ろに言語が来たら speak です。',
+    [...why('speak は、どんなときに使う？'), ...sl(['She', '!speaks', 'English', 'very well.'], 54, { h: 36, size: 12 }), ...sl(['May I', '!speak', 'to', 'Mr. Brown?'], 104, { h: 36, size: 12, cols: [GREEN] }), lb(160, 160, '言語、または一方向に話す', 13, C.green, 'middle', true)],
+    'speak ＋ 言語　speak to 人', GREEN),
+  S('talk は「会話をする」語です。about や with が続きます。I talked with my friend about the movie.（友だちと映画について話した）。',
+    [...why('talk は、どんな形で使う？'), ...sl(['I', '!talked', '!with', 'my friend', '!about', 'the movie.'], 54, { h: 40, size: 11 }), lb(160, 118, 'talk with 人 / talk about 事', 14, C.purple, 'middle', true)],
+    '会話 ＝ talk（with 人・about 事）', PURPLE),
+  S('見分け方のまとめです。直後に人が来る → tell。直後に内容が来る → say。言語が来る → speak。about や with が続く → talk。「言った」という日本語ではなく、英文の形で決めます。',
+    [...tbl(['うしろに来るもの', '使う語'], [['直後に人', 'tell'], ['直後に内容', 'say'], ['言語', 'speak'], ['about / with', 'talk']], { y0: 30, rh: 28, gap: 6, cols: [BLUE, GREEN], size: 14 })],
+    '形を見て、語を決める', MAIN),
+], 'say / tell / speak / talk の使い分け');
+SEC['koko_eigo_s032#0'] = 'xf_koko_eigo_s032';
+// ── 一般動詞①：動作や状態を表す動詞 ──
+F['xf_koko_eigo_s037'] = show([
+  S('「私はサッカーが好きです」と言いたいのに、be動詞だけでは「私＝好き」という妙な文になります。❓では、動きや気持ちはどう表すの？ それを受け持つのが一般動詞です。',
+    [...why('「好き」は、be動詞では言えないの？'), ...sl(['I', 'am', 'soccer.'], 54, { h: 36, size: 14, cols: [BLUE, GRAY, GREEN] }), lb(160, 110, '「私＝サッカー」になってしまう', 13, C.red, 'middle', true), ...sl(['I', '!like', 'soccer.'], 130, { h: 36, size: 14 })],
+    '動きや気持ちは一般動詞で言う', PURPLE),
+  S('be動詞（am／are／is）は、主語とうしろの語を「＝」で結ぶ動詞です。それ自体に動作の意味はありません。I am busy.（私は忙しい）／ He is my brother.（彼は私の兄です）',
+    [...why('be動詞は、何をする動詞？'), ...sl(['I', '!am', 'busy.'], 52, { h: 36, size: 14 }), ...sl(['He', '!is', 'my brother.'], 100, { h: 36, size: 14 }), lb(160, 160, '主語 ＝ うしろの語', 14, C.blue, 'middle', true)],
+    'be動詞 ＝「＝」で結ぶ', BLUE),
+  S('一般動詞は、be動詞（am／are／is／was／were）以外のすべての動詞です。動作を表す play・run・go・eat と、状態を表す like・know・have・want があります。',
+    [...why('一般動詞には、どんなものがある？'), bx(10, 48, 144, 30, '動作', C.green, FILL.green, 14), bx(166, 48, 144, 30, '状態・気持ち', C.blue, FILL.blue, 14), bx(10, 84, 144, 66, 'play　run　go\ncome　study\neat　watch　read', C.green, FILL.green, 13), bx(166, 84, 144, 66, 'like　know\nhave　want\nlive　need　love', C.blue, FILL.blue, 13)],
+    '一般動詞 ＝ be動詞以外すべて', GREEN),
+  S('❓「好きです」の「です」は、be動詞ではないの？ 日本語では「です・ます」で終わるので be動詞を入れたくなります。しかし英語では like という一般動詞1語で表すので、be動詞は要りません。',
+    [...why('I am like dogs. は、なぜ誤り？'), ...sl(['I', '!am', '!like', 'dogs.'], 54, { h: 36, size: 14, cols: [BLUE, RED, RED, GREEN] }), lb(160, 108, '動詞が2つ並んでいる　×', 13, C.red, 'middle', true), ...sl(['I', '!like', 'dogs.'], 128, { h: 36, size: 14 }), lb(160, 180, '○ 動詞は1つ', 13, C.green, 'middle', true)],
+    '× I am like dogs.　○ I like dogs.', RED),
+  S('同じ理由で、He is have a car. も誤りです。have が述語になるので is は要りません。主語が三人称単数（he）なので、has にします。He has a car.（彼は車を持っている）',
+    [...why('He is have a car. は、どう直す？'), ...sl(['He', '!is', '!have', 'a car.'], 54, { h: 36, size: 14, cols: [BLUE, RED, RED, GREEN] }), ar(160, 94, 160, 112, C.main), ...sl(['He', '!has', 'a car.'], 116, { h: 36, size: 14 }), lb(160, 172, 'have は he のとき has になる', 12, C.green, 'middle', true)],
+    '動詞は1つ。he のときは has', GREEN),
+  S('❓主語によって動詞の形は変わるの？ 一般動詞は、主語が三人称単数（I と you 以外の1人・1つ）で現在の話のときだけ、-s／-es が付きます。それ以外は原形のままです。',
+    [...why('動詞の形が変わるのは、いつ？'), ...tbl(['主語', '動詞'], [['I / You', 'play'], ['We / They', 'play'], ['!He / She / It', '!plays']], { y0: 56, rh: 30, gap: 8, cols: [BLUE, GREEN], size: 14 })],
+    '三人称・単数・現在 のときだけ -s', RED),
+  S('まとめです。動作や気持ちは一般動詞で表し、be動詞は入れません。1つの文に動詞は原則1つ。三人称単数・現在のときだけ -s を付けます。',
+    [...row(['動作・状態\n＝ 一般動詞', 'be動詞は\n入れない', '三単現のとき\n-s'], 40, MAIN, 12, 64), lb(160, 130, 'I like dogs.　He has a car.', 14, C.green, 'middle', true)],
+    '動詞は1つ、形は主語で変わる', MAIN),
+], '一般動詞と be動詞');
+SEC['koko_eigo_s037#0'] = 'xf_koko_eigo_s037';
+
+// ── 一般動詞②：三人称単数現在の -s ──
+F['xf_koko_eigo_s038'] = show([
+  S('He play soccer. と書いて減点された経験はありませんか。三人称単数の主語で現在の話なら、動詞に -s を付けます。ただし、付け方には4つの規則があります。',
+    [...why('三単現の -s は、ただ s を足すだけ？'), ...sl(['He', '!play', 'soccer.'], 54, { h: 36, size: 14, cols: [BLUE, RED, GREEN] }), lb(160, 108, '×', 22, C.red, 'middle', true), ...sl(['He', '!plays', 'soccer.'], 128, { h: 36, size: 14 })],
+    '三人称単数・現在 → -s', RED),
+  S('① 大多数の動詞は、そのまま -s を付けます。play→plays、run→runs、like→likes、come→comes、read→reads、speak→speaks。',
+    [...why('いちばん基本の付け方は？'), ...tbl(['原形', '三単現'], [['play', 'plays'], ['run', 'runs'], ['like', 'likes'], ['come', 'comes']], { y0: 56, rh: 26, gap: 6, cols: [BLUE, GREEN] })],
+    '① そのまま -s', GREEN),
+  S('② -s、-x、-ch、-sh、-o で終わる語は -es を付けます。❓なぜ e を足すの？ s だけを足すと発音しにくいので、e を補うからです。watch→watches、wash→washes、pass→passes、fix→fixes、go→goes、do→does。',
+    [...why('なぜ -es になる語があるの？'), ...tbl(['語尾', '例'], [['-ch / -sh', 'watch → watches'], ['-s / -x', 'pass → passes'], ['-o', 'go → goes']], { y0: 56, rh: 30, gap: 8, cols: [RED, GREEN], size: 12 })],
+    '② -s -x -ch -sh -o → -es', RED),
+  S('③ 「子音字（しいんじ）＋y」で終わる語は、y を i に変えて -es を付けます。study→studies、cry→cries、carry→carries、try→tries、fly→flies。study の y の前は d（子音字）です。',
+    [...why('study は、なぜ studies？'), ...row(['stud', 'y → i', '＋ es'], 52, MAIN, 14, 40), ...tbl(['原形', '三単現'], [['cry', 'cries'], ['carry', 'carries'], ['try', 'tries']], { y0: 118, rh: 22, gap: 4, cols: [BLUE, GREEN], size: 11 })],
+    '③ 子音字＋y → y を i に', RED),
+  S('❓では、y で終わる語はすべて ies？ いいえ。④ 「母音字＋y」の語は、そのまま -s を付けます。play→plays、stay→stays、enjoy→enjoys、buy→buys。play の y の前は a（母音字）です。',
+    [...why('play は、plaies にならないの？'), ...tbl(['y の前', '付け方', '例'], [['子音字（d）', 'y → i + es', 'study → studies'], ['母音字（a）', 'そのまま + s', 'play → plays']], { y0: 56, rh: 34, gap: 10, cols: [RED, MAIN, GREEN], size: 11 }), lb(160, 150, 'y の1つ前の文字を、必ず確かめる', 13, C.red, 'middle', true)],
+    '④ 母音字＋y → そのまま s', RED),
+  S('have だけは特別な形で、have→has になります。haves とは書きません。それ以外の動詞は、さきの4つの規則で付け方が決まります。',
+    [...why('have の三単現は？'), ...tbl(['原形', '三単現'], [['have', '!has']], { y0: 70, rh: 36, cols: [BLUE, GREEN], size: 16 }), lb(160, 130, 'haves　×', 16, C.red, 'middle', true)],
+    'have → has（特別な形）', PURPLE),
+  S('まとめです。語尾を順に確かめます。① have か？ → has　② -s -x -ch -sh -o か？ → -es　③ 子音字＋y か？ → ies　④ それ以外 → -s',
+    [...stackFlow()],
+    '語尾を順に確かめる', MAIN),
+], '三単現の -s の付け方');
+SEC['koko_eigo_s038#0'] = 'xf_koko_eigo_s038';
+
+// ── be動詞と一般動詞を混ぜない ──
+F['xf_koko_eigo_s039'] = show([
+  S('英作文でいちばん多い減点は、I am play tennis. のように、be動詞と一般動詞を同時に置いてしまう誤りです。❓なぜ起きるのでしょう。日本語の「〜します」「〜です」の感覚をそのまま持ちこむからです。',
+    [...why('なぜ I am play tennis. と書いてしまう？'), bx(14, 48, 292, 40, '私は テニスを します / 私は 忙しい です', C.gray, FILL.gray, 13), ...sl(['I', '!am', '!play', 'tennis.'], 104, { h: 36, size: 14, cols: [BLUE, RED, RED, GREEN] }), lb(160, 160, '「ます」を be動詞で訳してしまう　×', 12, C.red, 'middle', true)],
+    '日本語の語尾を英語にしない', PURPLE),
+  S('英語の文は「主語＋述語動詞」が骨組みです。述語動詞は1つ。動作を言うなら一般動詞だけ、名詞や形容詞を述語にするなら be動詞だけを置きます。',
+    [...why('文の骨組みはどうなっている？'), ...sl(['主語', '述語動詞（1つ）', 'ほかの語'], 54, { h: 36, size: 13, cols: [BLUE, RED, GREEN] }), bx(10, 106, 144, 46, '動作を言う\n→ 一般動詞だけ', C.green, FILL.green, 12), bx(166, 106, 144, 46, '名詞・形容詞\n→ be動詞だけ', C.blue, FILL.blue, 12)],
+    '述語動詞は1つ', BLUE),
+  S('直し方を見ましょう。× I am play tennis. → ○ I play tennis.　× He is have two dogs. → ○ He has two dogs.　× My mother is cook dinner. → ○ My mother cooks dinner.',
+    [...why('動詞が2つあるときは、どう直す？'), ...tbl(['誤り', '正しい文'], [['I am play tennis.', '!I play tennis.'], ['He is have two dogs.', '!He has two dogs.'], ['My mother is cook ...', '!My mother cooks ...']], { y0: 56, rh: 32, gap: 10, cols: [RED, GREEN], size: 11 })],
+    'be動詞を取り、動詞の形を整える', GREEN),
+  S('❓では、be動詞はいつも要らないの？ いいえ。うしろが名詞や形容詞のときは、be動詞がないと文になりません。× She kind to everyone. → ○ She is kind to everyone.',
+    [...why('be動詞が必要なのは、どんなとき？'), ...sl(['She', 'kind', 'to everyone.'], 54, { h: 36, size: 13, cols: [BLUE, RED, GREEN] }), lb(160, 106, '述語になる動詞がない　×', 13, C.red, 'middle', true), ...sl(['She', '!is', 'kind', 'to everyone.'], 126, { h: 36, size: 13 })],
+    '名詞・形容詞のときは be動詞が必要', BLUE),
+  S('❓どうすれば、ミスに気づけるの？ 書いたあとに「動詞はいくつあるか」を数えます。動作なら一般動詞が1つ、名詞や形容詞なら be動詞が1つ。0個なら足し、2個なら片方を消します。',
+    [...why('書いたあと、何を確かめる？'), ...row(['動詞を\n数える', '0個\n→ 足す', '2個\n→ 消す'], 52, MAIN, 12, 54), lb(160, 130, '1個ならOK', 14, C.green, 'middle', true)],
+    '動詞の数 ＝ 1 を確かめる', MAIN),
+  S('ただし I am playing tennis now. は正しい文です。❓なぜ be動詞と動詞が並んでいるの？ ing形は「〜している」を表す形で、be動詞と組み合わせて1つの述語をつくるからです。原形が並んでいたら誤りです。',
+    [...why('am playing は、なぜ正しいの？'), ...sl(['I', '!am', '!playing', 'tennis now.'], 54, { h: 36, size: 13, cols: [BLUE, GREEN, GREEN, MAIN] }), lb(160, 108, 'be動詞 ＋ ing形 ＝ 1つの述語', 13, C.green, 'middle', true), lb(160, 134, 'I am play（原形）　×　　I am playing（ing形）　○', 12, C.ink, 'middle')],
+    '原形が並んだら誤り、ing形は正しい', GREEN),
+  S('まとめです。動詞は1つ。動作なら一般動詞、名詞・形容詞なら be動詞。書いたあとに動詞を数える習慣をつければ、am play のような誤りは消えます。',
+    [...row(['動作\n→ play', '名詞・形容詞\n→ is kind', '数えて\n確認'], 40, MAIN, 12, 64), lb(160, 130, 'I play tennis.　She is kind.', 14, C.green, 'middle', true)],
+    '動詞は1つ', MAIN),
+], 'be動詞と一般動詞を混ぜない');
+SEC['koko_eigo_s039#0'] = 'xf_koko_eigo_s039';
+
+// ── 過去の文：一般動詞の過去形 ──
+F['xf_koko_eigo_s040'] = show([
+  S('❓I go to the library yesterday. は、なぜ誤り？ yesterday（昨日）という過去の合図があるのに、動詞が現在形のままだからです。英語では文末まで見てから時制を決めます。',
+    [...why('yesterday があるのに go のままでいい？'), ...sl(['I', '!go', 'to the library', '!yesterday.'], 54, { h: 36, size: 12, cols: [BLUE, RED, GREEN, YELLOW] }), lb(160, 108, '過去の合図があれば、動詞は過去形', 13, C.red, 'middle', true), ...sl(['I', '!went', 'to the library', 'yesterday.'], 128, { h: 36, size: 12 })],
+    '時を表す語を見て、時制を決める', RED),
+  S('一般動詞の過去形は、規則変化と不規則変化に分かれます。規則変化の基本は -ed を付けること。play→played、watch→watched、want→wanted。',
+    [...why('規則動詞の過去形は、どう作る？'), ...tbl(['原形', '過去形'], [['play', 'played'], ['watch', 'watched'], ['want', 'wanted']], { y0: 56, rh: 30, gap: 8, cols: [BLUE, GREEN], size: 14 })],
+    '① そのまま -ed', GREEN),
+  S('e で終わる語は -d だけを付けます。like→liked、live→lived、use→used。e をもう一度書いて likeed とはしません。',
+    [...why('e で終わる語は、どうなる？'), ...tbl(['原形', '過去形'], [['like', 'liked'], ['live', 'lived'], ['use', 'used']], { y0: 56, rh: 30, gap: 8, cols: [BLUE, GREEN], size: 14 })],
+    '② e で終わる語は -d', GREEN),
+  S('「子音字＋y」は y を i に変えて -ed を付けます。study→studied、cry→cried、carry→carried。これは三単現（studies）と同じ考え方です。',
+    [...why('study の過去形は studyed？'), ...tbl(['原形', '過去形'], [['study', '!studied'], ['cry', '!cried'], ['carry', '!carried']], { y0: 56, rh: 30, gap: 8, cols: [BLUE, GREEN], size: 14 })],
+    '③ 子音字＋y → y を i に', RED),
+  S('❓stop の過去形は、なぜ stopped？ 短い母音のあとに子音字が1つで終わる語は、子音字を重ねてから -ed を付けます。stop→stopped、plan→planned。重ねないと、母音の読み方が変わってしまうからです。',
+    [...why('stop は、なぜ p を重ねる？'), ...tbl(['原形', '過去形'], [['stop', '!stopped'], ['plan', '!planned']], { y0: 56, rh: 34, gap: 10, cols: [BLUE, GREEN], size: 14 }), lb(160, 156, '短い母音 ＋ 子音字1つ → 子音字を重ねる', 12, C.red, 'middle', true)],
+    '④ 子音字を重ねる', RED),
+  S('不規則動詞は形そのものが変わるので、丸暗記します。go→went、come→came、see→saw、have→had、do→did、get→got、take→took、make→made、write→wrote。',
+    [...why('不規則動詞には、どんなものがある？'), ...tbl(['原形', '過去形', '原形', '過去形'], [['go', 'went', 'take', 'took'], ['come', 'came', 'make', 'made'], ['see', 'saw', 'write', 'wrote'], ['have', 'had', 'get', 'got']], { y0: 56, rh: 26, gap: 6, cols: [BLUE, GREEN, BLUE, GREEN], size: 12 })],
+    '不規則動詞は暗記', MAIN),
+  S('read や put、cut は、過去形でも形が変わりません。read の過去形はつづりが同じで、発音だけ /red/ に変わります。つづりだけでは時制が決まらないので、yesterday などの合図で確かめます。',
+    [...why('形が変わらない動詞は？'), ...tbl(['原形', '過去形'], [['read（リード）', 'read（レッド）'], ['put', 'put'], ['cut', 'cut']], { y0: 56, rh: 30, gap: 8, cols: [BLUE, GREEN], size: 13 })],
+    '合図の語で時制を確かめる', PURPLE),
+  S('まとめです。過去の合図があれば過去形に。主語が何でも過去形は1つの形です（三単現の -s は付けません）。❓ He was played soccer. はなぜ誤り？ played だけで過去を表せるので was は不要です。',
+    [...sl(['I', 'He', 'They'], 36, { h: 30, size: 13 }), ar(160, 70, 160, 86, C.main), bx(110, 88, 100, 32, 'played', C.green, FILL.green, 15), lb(160, 140, 'He was played soccer.　×', 13, C.red, 'middle', true), lb(160, 162, 'He played soccer last Sunday.　○', 13, C.green, 'middle', true)],
+    '主語が何でも、過去形は同じ形', MAIN),
+], '一般動詞の過去形');
+SEC['koko_eigo_s040#1'] = 'xf_koko_eigo_s040';
 
 export const XF_KEB_FIGURES: Record<string, DiagramFigure> = F;
 export const XF_KEB_SECTIONS: Record<string, string> = SEC;

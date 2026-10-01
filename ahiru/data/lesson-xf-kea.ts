@@ -205,12 +205,302 @@ const s008: DiagramFigure = show([
   },
 ], '語尾自身を強く読む型');
 
+// ───────── koko_eigo_s012 発音問題の解き方 ─────────
+const s012: DiagramFigure = show([
+  {
+    note: '発音問題は「下線部の発音が他の三つと異なるものを一つ選べ」という形が中心です。たとえば food・moon・room・book のうち、oo の音がちがうのはどれでしょう。',
+    add: [head('oo の音がちがう語は？'), ...rowb(['food', 'moon', 'room', 'book'], 30, 40, C.blue, FILL.blue, 14), lb(160, 98, '三つが同じ音、一つだけちがう', 12, C.ink, 'middle', true), ...cap('答えを見つける問題')],
+  },
+  {
+    note: '❓どこから考えればよいでしょう。→ 確実に知っている語から音を決めます。food・moon・room は長い [uː]（ウー）、book は短い [ʊ]（ウ）。だから答えは book です。',
+    add: fresh(head('分かる語から音を決める'), ...rowb(['food\n[uː]', 'moon\n[uː]', 'room\n[uː]'], 28, 44, C.blue, FILL.blue, 13, 10, 230, 6), bx(240, 28, 70, 44, 'book\n[ʊ]', C.red, FILL.red, 13), lb(120, 94, '多数派（長い音）', 11, C.blue, 'middle'), lb(275, 94, '少数派 → 答え', 11, C.red, 'middle', true), ...cap('先に分かる語を分類する', C.blue)),
+  },
+  {
+    note: '❓よく出る音は何でしょう。→ 実は数個のグループに限られます。まず [ʌ]（短い「ア」）。come・some・love・month・country・young は、つづりが o・ou でばらばらなのに音は同じです。',
+    add: fresh(head('グループ① [ʌ] 短い「ア」'), ...rowb(['come', 'some', 'love'], 28, 34, C.red, FILL.red, 13, 10, 310, 8), ...rowb(['month', 'country', 'young'], 70, 34, C.red, FILL.red, 13, 10, 310, 8), lb(160, 126, 'つづりは o・ou・ove とばらばら、音は同じ', 11, C.gray, 'middle'), ...cap('つづりより音で覚える', C.red)),
+  },
+  {
+    note: '次に oo のペア。[uː]（長い）は food・moon・school・room・soup。[ʊ]（短い）は book・good・look・foot・put・full・woman。could・would・should も [ʊ] です。',
+    add: fresh(lb(10, 18, '[uː] 長い「ウー」', 12, C.blue, 'start', true), ...rowb(['food', 'moon', 'school', 'room', 'soup'], 26, 28, C.blue, FILL.blue, 11, 10, 310, 5), lb(10, 74, '[ʊ] 短い「ウ」', 12, C.red, 'start', true), ...rowb(['book', 'good', 'look', 'foot', 'put'], 82, 28, C.red, FILL.red, 11, 10, 310, 5), lb(160, 130, 'full・woman・could・would・should も [ʊ]', 11, C.gray, 'middle'), ...cap('oo でも 2 通りある', C.ink)),
+  },
+  {
+    note: '[e] のグループは、つづりが広がります。head・bread・said・many・friend・ready・weather は ea・ai・a・ie ですが、どれも [e]。まとめて音で覚える価値が高いグループです。',
+    add: fresh(head('グループ② [e]'), ...rowb(['head', 'bread', 'said', 'many'], 28, 32, C.red, FILL.red, 13), ...rowb(['friend', 'ready', 'weather'], 70, 32, C.red, FILL.red, 13, 30, 290, 8), lb(160, 124, 'つづり ea・ai・a・ie → 音は全部 [e]', 11, C.gray, 'middle'), ...cap('say の過去 said も [e]', C.red)),
+  },
+  {
+    note: '❓ほかの母音グループは？ → [ɔː] は all・talk・water・daughter、[aɪ] は like・high・buy・eye・sky、[eɪ] は make・rain・eight・great、[ɜːr] は bird・girl・work・world・learn です。',
+    add: fresh(head('ほかの頻出グループ'), bx(10, 28, 148, 44, '[ɔː]\nall・talk・water', C.blue, FILL.blue, 11), bx(162, 28, 148, 44, '[aɪ]\nlike・high・buy・eye', C.green, FILL.green, 11), bx(10, 78, 148, 44, '[eɪ]\nmake・rain・eight', C.purple, FILL.purple, 11), bx(162, 78, 148, 44, '[ɜːr]\nbird・girl・work', C.main, FILL.warm, 11), ...cap('代表語で音を覚える')),
+  },
+  {
+    note: '❓なぜ出題されるのは「見た目が近い語」なのでしょう。→ 同じ語族なのに母音が変わる語は、もとの語の音を知っているぶん「同じだ」と決めつけやすいからです。woman [ʊ]→women [ɪ]、child [aɪ]→children [ɪ]、say→says・said [e]、break [eɪ]→breakfast [e]。',
+    add: fresh(head('同じ語族でも音が変わる', C.red), ...[['woman [ʊ]', 'women [ɪ]'], ['child [aɪ]', 'children [ɪ]'], ['break [eɪ]', 'breakfast [e]'], ['say [eɪ]', 'said [e]']].flatMap(([a, b], i) => [bx(20, 26 + i * 28, 110, 22, a, C.blue, FILL.blue, 11), ar(134, 37 + i * 28, 176, 37 + i * 28, C.red), bx(180, 26 + i * 28, 120, 22, b, C.red, FILL.red, 11)]), ...cap('派生語は、もとの語と比べ直す', C.red)),
+  },
+  {
+    note: '解く手順です。①下線部が -s や -ed なら、直前の音だけを見る。②母音なら、確実に分かる基本語から音を決める。③決めた音のグループに入るか調べる。④決まらなければ、多数派の三つを消して一つ残す。',
+    add: fresh(...flow(['-s・-ed は\n直前の音', '基本語から\n音を決める', 'グループに\n分ける', '多数派を\n消す'], 24, { h: 62, size: 10, color: C.blue, fill: FILL.blue, gap: 14 }).flat(), ...cap('三つ同じ、一つちがう', C.blue)),
+  },
+  {
+    note: 'まとめです。出る音は数個のグループ。つづりが同じで音がちがう組（good と food）と、つづりがちがって音が同じ組（head と said）の両方が出る。派生語は、もとの語と必ず比べ直す。',
+    add: fresh(bx(15, 14, 290, 30, '出る音は数個のグループ', C.blue, FILL.blue, 12), bx(15, 52, 290, 30, 'good／food、head／said の両方', C.red, FILL.red, 12), bx(15, 90, 290, 30, '派生語は、もとの語と比べ直す', C.green, FILL.green, 12), ...cap('分かる語から決める', C.green)),
+  },
+], '発音問題：音のグループで解く');
+
+// ───────── koko_eigo_s015 三人称単数現在形のつづり ─────────
+const s015: DiagramFigure = show([
+  {
+    note: '主語が he や she になったとたん、動詞にだけ s が付きます。I play. は play のまま、He plays. は s が付く。この s は複数の s とは反対で、主語が「一人」のときに付くものです。',
+    add: [bx(20, 24, 130, 40, 'I play.', C.blue, FILL.blue, 15), bx(170, 24, 130, 40, 'He plays.', C.red, FILL.red, 15), lb(85, 86, '主語が I', 11, C.gray, 'middle'), lb(235, 86, '主語が一人（三人称単数）', 11, C.red, 'middle', true), ...cap('主語が he・she・it なら s')],
+  },
+  {
+    note: '❓三人称単数とは、だれのことでしょう。→ I と you 以外の「一人（一つ）」です。my brother・that boy・this book、それに everyone・everything もすべて三人称単数です。Everyone likes music. となります。',
+    add: fresh(head('三人称単数 ＝ I と you 以外の一人（一つ）'), ...rowb(['he', 'she', 'it'], 26, 30, C.red, FILL.red, 14), ...rowb(['my brother', 'that boy', 'this book'], 66, 30, C.red, FILL.red, 11), ...rowb(['everyone', 'everything'], 106, 30, C.red, FILL.red, 12, 50, 270, 10), ...cap('everyone は「みんな」でも単数', C.red)),
+  },
+  {
+    note: 'つくり方は四つです。①原則は -s：plays・likes・runs・works。',
+    add: fresh(head('① 原則：そのまま s'), ...rowb(['play→plays', 'like→likes'], 30, 36, C.blue, FILL.blue, 13, 20, 300, 10), ...rowb(['run→runs', 'work→works'], 76, 36, C.blue, FILL.blue, 13, 20, 300, 10), ...cap('ふつうは s を足すだけ', C.blue)),
+  },
+  {
+    note: '❓s・x・ch・sh・o で終わる語はどうでしょう。→ es を付けます。pass→passes、mix→mixes、teach→teaches、wash→washes、go→goes。発音は [ɪz] になる語が多く、-es と書く目印になります。',
+    add: fresh(head('② s・x・ch・sh・o で終わる → es'), ...rowb(['pass→passes', 'mix→mixes'], 28, 32, C.red, FILL.red, 12, 20, 300, 10), ...rowb(['teach→teaches', 'wash→washes'], 68, 32, C.red, FILL.red, 12, 20, 300, 10), ...rowb(['go→goes', 'finish→finishes'], 108, 32, C.red, FILL.red, 12, 20, 300, 10), ...cap('es を付ける', C.red)),
+  },
+  {
+    note: '③「子音字＋y」は y を i に変えて es。study→studies、try→tries、fly→flies。でも「母音字＋y」はそのまま。play→plays、say→says、buy→buys です。',
+    add: fresh(head('③ y で終わる語'), lb(10, 36, '子音字＋y', 12, C.red, 'start', true), bx(90, 24, 100, 28, 'study', C.gray, FILL.gray, 12), ar(194, 38, 226, 38, C.red), bx(230, 24, 80, 28, 'studies', C.red, FILL.red, 12), lb(10, 84, '母音字＋y', 12, C.blue, 'start', true), bx(90, 72, 100, 28, 'play', C.gray, FILL.gray, 12), ar(194, 86, 226, 86, C.blue), bx(230, 72, 80, 28, 'plays', C.blue, FILL.blue, 12), lb(160, 124, 'try→tries、fly→flies、say→says、buy→buys', 11, C.gray, 'middle'), ...cap('y の前が子音字なら ies', C.red)),
+  },
+  {
+    note: '④特別な形が四つあります。have→has（形が変わる）、do→does（発音は [dʌz]）、go→goes（発音は [goʊz]）、be→is。says だけは [sez] と特別に読みます。',
+    add: fresh(head('④ 特別な形'), ...rowb(['have→has', 'do→does'], 28, 36, C.main, FILL.warm, 13, 20, 300, 10), ...rowb(['go→goes', 'be→is'], 74, 36, C.main, FILL.warm, 13, 20, 300, 10), lb(160, 126, 'does [dʌz]、goes [goʊz]、says [sez]', 11, C.gray, 'middle'), ...cap('この四つは暗記', C.main)),
+  },
+  {
+    note: '❓疑問文や否定文では、s を残してよいのでしょうか。→ いけません。does がすでに「三人称単数・現在」を表しているので、動詞は原形に戻します。Does he play the guitar? が正しく、Does he plays は誤りです。',
+    add: fresh(head('does があれば、動詞は原形'), bx(15, 28, 290, 30, 'Does he play the guitar?   ○', C.green, FILL.green, 12), bx(15, 66, 290, 30, 'Does he plays the guitar?   ×', C.red, FILL.red, 12), lb(160, 118, 'She doesn\'t like natto.（likes ではない）', 11, C.gray, 'middle'), ...cap('does・did・助動詞の後ろは原形', C.red)),
+  },
+  {
+    note: '判断の手順です。①現在の文か（過去なら s は不要）。②主語は三人称単数か（I・you・複数なら不要）。③does・didn\'t・助動詞があるか（あれば原形）。この三つを順に見れば迷いません。',
+    add: fresh(...flow(['現在の\n文か', '主語は\n三人称単数', 'does・助動詞\nなし?'], 26, { h: 62, size: 11, color: C.blue, fill: FILL.blue }).flat(), lb(160, 112, 'ぜんぶ YES のときだけ s を付ける', 12, C.ink, 'middle', true), ...cap('三つ確かめる', C.blue)),
+  },
+  {
+    note: '❓主語が長いときの落とし穴は？ → 直前の名詞につられることです。The boy with two dogs runs fast. の主語は The boy（一人）なので runs。dogs（複数）に引かれて run としてはいけません。',
+    add: fresh(head('主語はどれ？'), bx(10, 30, 70, 32, 'The boy', C.red, FILL.red, 13), bx(84, 30, 120, 32, 'with two dogs', C.gray, FILL.gray, 12), bx(208, 30, 100, 32, 'runs fast.', C.red, FILL.red, 13), lb(45, 80, '主語（一人）', 11, C.red, 'middle', true), lb(144, 80, 'ここにつられない', 11, C.gray, 'middle'), ...cap('主語の中心の名詞で決める', C.red)),
+  },
+  {
+    note: 'まとめです。三単現の s は、原則 s、s・x・ch・sh・o は es、子音字＋y は ies、特別な形は has・does・goes。疑問文・否定文・助動詞のあとは原形に戻す。',
+    add: fresh(bx(15, 12, 290, 28, 's／es／ies を付け分ける', C.blue, FILL.blue, 12), bx(15, 46, 290, 28, '特別：has・does・goes', C.main, FILL.warm, 12), bx(15, 80, 290, 28, 'does・did・助動詞の後ろは原形', C.red, FILL.red, 12), bx(15, 114, 290, 28, '長い主語は、中心の名詞を見る', C.green, FILL.green, 12), ...cap('s を付けるのは、現在・一人のとき', C.green)),
+  },
+], '三人称単数現在形のつづり');
+
+// ───────── koko_eigo_s016 -ing と -ed のつづり ─────────
+const lets = (word: string, kinds: string, x0: number, y: number, w = 40): E[] =>
+  [...word].map((ch, i) => bx(x0 + i * (w + 6), y, w, w, ch, kinds[i] === 'v' ? C.red : C.blue, kinds[i] === 'v' ? FILL.red : FILL.blue, 18));
+const s016: DiagramFigure = show([
+  {
+    note: 'run は running と n を重ねるのに、visit は visiting のまま。❓なぜ片方だけ重ねるのでしょう。ここには「短い母音」と「アクセントの位置」という条件があります。',
+    add: [bx(15, 24, 140, 50, 'run → running\nn を重ねる', C.red, FILL.red, 13), bx(165, 24, 140, 50, 'visit → visiting\n重ねない', C.blue, FILL.blue, 13), ...cap('なぜ片方だけ重ねる？')],
+  },
+  {
+    note: 'つくり方は三つです。①そのまま付ける（playing・played）。②語尾の e を取って付ける。③子音字を重ねて付ける。',
+    add: fresh(head('-ing の三つのつくり方'), bx(15, 26, 290, 28, '① そのまま　play → playing', C.blue, FILL.blue, 12), bx(15, 60, 290, 28, '② e を取る　make → making', C.green, FILL.green, 12), bx(15, 94, 290, 28, '③ 重ねる　　run → running', C.red, FILL.red, 12), ...cap('条件で使い分ける')),
+  },
+  {
+    note: '②は語尾が e の語です。make→making、come→coming、write→writing、use→using。-ed のほうは e が残るので、d を足すだけです（used・lived・danced）。',
+    add: fresh(head('② 語尾の e を取って ing'), ...rowb(['make→making', 'come→coming'], 28, 32, C.green, FILL.green, 12, 20, 300, 10), ...rowb(['write→writing', 'use→using'], 68, 32, C.green, FILL.green, 12, 20, 300, 10), lb(160, 126, '-ed は e が残る：use→used、live→lived', 11, C.gray, 'middle'), ...cap('e を取って ing', C.green)),
+  },
+  {
+    note: '❓③で重ねる条件は何でしょう。→ 「子音字・母音字・子音字」で終わることです。run は r・u・n。最後が子音字、その前が母音字1つ、その前が子音字。三つそろって初めて重ねます。',
+    add: fresh(head('run ＝ 子音・母音・子音'), ...lets('run', 'cvc', 90, 28), lb(110, 84, '子音', 11, C.blue, 'middle', true), lb(160, 84, '母音', 11, C.red, 'middle', true), lb(210, 84, '子音', 11, C.blue, 'middle', true), lb(160, 112, '→ 最後の n を重ねて running', 12, C.red, 'middle', true), ...cap('子音・母音・子音なら重ねる', C.red)),
+  },
+  {
+    note: 'rain は母音字が二つ（ai）なので raining。help は最後が子音字二つ（lp）なので helping。形がちがうので重ねません。',
+    add: fresh(head('重ねない形'), ...lets('rain', 'cvvc', 14, 28, 30), lb(83, 86, '母音字が 2 つ → raining', 11, C.ink, 'middle', true), ...lets('help', 'cvcc', 176, 28, 28), lb(241, 86, '子音字が 2 つ → helping', 11, C.ink, 'middle', true), ...cap('形が合わなければ、そのまま ing', C.blue)),
+  },
+  {
+    note: '❓なぜ子音字を重ねるのでしょう。→ 母音を短いままに保つためです。stop に ing をそのまま付けて stoping と書くと、マジック e と同じ形に見えて、o を長く読んでしまいます。p を重ねると、o は短いままだと伝わります。',
+    add: fresh(head('重ねるのは、母音を短く保つため'), bx(20, 28, 130, 40, 'stoping', C.red, FILL.red, 16), lb(85, 84, 'o が長く読めてしまう', 11, C.red, 'middle', true), bx(170, 28, 130, 40, 'stopping', C.green, FILL.green, 16), lb(235, 84, 'o は短いまま', 11, C.green, 'middle', true), ...cap('つづりの規則には理由がある', C.green)),
+  },
+  {
+    note: '❓2音節以上の語は、どう決めるのでしょう。→ アクセント（強く読む所）の位置で決まります。後ろにあれば重ねる（be-GIN→beginning、for-GET→forgetting）。前にあれば重ねません（VIS-it→visiting、OP-en→opening）。',
+    add: fresh(lb(10, 18, 'アクセントが後ろ → 重ねる', 11, C.red, 'start', true), ...syl(['be', 'GIN'], 1, 20, 10, 150, 26), lb(160, 52, 'beginning', 12, C.red, 'start', true), lb(10, 84, 'アクセントが前 → 重ねない', 11, C.blue, 'start', true), ...syl(['VIS', 'it'], 0, 86, 10, 150, 26), lb(10, 124, 'visiting と書く（visitting ではない）', 11, C.blue, 'start', true), ...cap('強く読む音節の位置を見る', C.red)),
+  },
+  {
+    note: '例外もあります。語尾が ee の語は e を取りません（see→seeing、agree→agreeing）。語尾が ie の語は ie を y に変えます（lie→lying、die→dying、tie→tying）。',
+    add: fresh(head('-ing の例外'), ...rowb(['see→seeing', 'agree→agreeing'], 28, 32, C.main, FILL.warm, 12, 20, 300, 10), ...rowb(['lie→lying', 'die→dying', 'tie→tying'], 74, 32, C.main, FILL.warm, 12, 20, 300, 8), ...cap('ee はそのまま、ie は y', C.main)),
+  },
+  {
+    note: '見分け方です。①語尾が e か。②子音・母音・子音か（2音節以上はアクセントが後ろか）。③ee や ie の例外ではないか。この順に確かめます。',
+    add: fresh(...flow(['語尾が e\nなら取る', '子音・母音・\n子音なら重ねる', 'アクセント\nは後ろか', 'ee・ie の\n例外'], 24, { h: 66, size: 10, color: C.blue, fill: FILL.blue, gap: 12 }).flat(), ...cap('-ed も同じ規則（stopped）', C.blue)),
+  },
+  {
+    note: 'まとめです。e で終われば e を取る。子音・母音・子音で終わり、アクセントが後ろなら重ねる。重ねるのは母音を短く保つため。ee はそのまま、ie は y に変える。',
+    add: fresh(bx(15, 12, 290, 28, 'e で終わる → e を取る', C.green, FILL.green, 12), bx(15, 46, 290, 28, '子音・母音・子音（後ろ強）→ 重ねる', C.red, FILL.red, 12), bx(15, 80, 290, 28, '重ねる理由：母音を短く保つ', C.blue, FILL.blue, 12), bx(15, 114, 290, 28, 'ee はそのまま、ie は y', C.main, FILL.warm, 12), ...cap('-ed のつづりも同じ', C.green)),
+  },
+], '-ing と -ed のつづりの決まり');
+
+// ───────── koko_eigo_01_tense 時制の形がこう決まるわけ ─────────
+const timeline = (y = 62): E[] => [ln(20, y, 300, y, C.gray), ar(290, y, 304, y, C.gray), lb(300, y + 14, '時間', 10, C.gray, 'end'), ci(240, y, 7, undefined, C.red, FILL.red), lb(240, y + 18, '今', 11, C.red, 'middle', true)];
+const e01: DiagramFigure = show([
+  {
+    note: '時制（じせい）の形には、すべて理由があります。この図解では三つの「なぜ」を解きます。①なぜ when・if の節は未来でも現在形か。②なぜ現在完了は yesterday と使えないか。③なぜ must not と don\'t have to は正反対か。',
+    add: [head('三つの「なぜ」'), bx(15, 28, 290, 28, '① なぜ if の節は、未来でも現在形？', C.blue, FILL.blue, 12), bx(15, 62, 290, 28, '② なぜ現在完了は yesterday と使えない？', C.green, FILL.green, 12), bx(15, 96, 290, 28, '③ なぜ must not と don\'t have to は逆？', C.red, FILL.red, 12), ...cap('理由が分かれば暗記が減る')],
+  },
+  {
+    note: '❓まず、過去形は何を表す形でしょう。→ 「今と切れた過去の一点」です。I visited Kyoto last year. は、去年の一点に起きたことで、今とはつながっていません。',
+    add: fresh(head('過去形 ＝ 今と切れた一点'), ...timeline(), ci(90, 62, 7, undefined, C.blue, FILL.blue), lb(90, 44, 'last year', 11, C.blue, 'middle', true), ln(98, 62, 232, 62, C.gray, true), lb(165, 86, '切れている', 11, C.gray, 'middle'), bx(40, 108, 240, 28, 'I visited Kyoto last year.', C.blue, FILL.blue, 12), ...cap('過去形：今とは関係なし', C.blue)),
+  },
+  {
+    note: '❓では現在完了は？ → 「過去の出来事が今とつながっている」ことを表す形です。have lived here for 5 years は、5年前から今までずっとつながっています。',
+    add: fresh(head('現在完了 ＝ 今とつながる'), ...timeline(), ci(110, 62, 7, undefined, C.green, FILL.green), ln(117, 62, 233, 62, C.green, false, 5), lb(110, 44, '5年前', 11, C.green, 'middle', true), lb(175, 86, 'つながっている', 11, C.green, 'middle', true), bx(30, 108, 260, 28, 'I have lived here for 5 years.', C.green, FILL.green, 12), ...cap('現在完了：今につながる', C.green)),
+  },
+  {
+    note: '❓だから yesterday・last year・in 2020 のような「過去の一点を指す語」は、過去形とだけ組みます。現在完了とは組めません。× I have visited Kyoto last year. ○ I visited Kyoto last year.',
+    add: fresh(head('過去の一点を指す語は、過去形と'), bx(15, 28, 290, 30, '× I have visited Kyoto last year.', C.red, FILL.red, 12), bx(15, 66, 290, 30, '○ I visited Kyoto last year.', C.green, FILL.green, 12), lb(160, 118, 'last year は「切れた一点」だから', 12, C.ink, 'middle', true), ...cap('一点を指す語 ＝ 過去形', C.green)),
+  },
+  {
+    note: '❓have been to と have gone to のちがいも、同じ理由です。「今どうなっているか」を表すのが現在完了だからです。She has been to Paris. は今ここにいる。She has gone to Paris. は今はここにいません。',
+    add: fresh(head('今どこにいるか？'), bx(15, 28, 140, 44, 'has been to Paris\n行ったことがある', C.green, FILL.green, 10), bx(165, 28, 140, 44, 'has gone to Paris\n行ってしまった', C.red, FILL.red, 10), lb(85, 92, '今はここにいる', 12, C.green, 'middle', true), lb(235, 92, '今はここにいない', 12, C.red, 'middle', true), ...cap('現在完了は、今の状態を表す')),
+  },
+  {
+    note: '❓次に、なぜ when・if・after・before・until が導く節は、未来でも現在形なのでしょう。If it rains tomorrow, I will stay home. では、予測しているのは主節の will です。条件の側にまで will を付けると、予測の意味が重なります。',
+    add: fresh(head('will は 1 回あれば足りる'), bx(15, 28, 130, 36, 'If it rains\ntomorrow,', C.blue, FILL.blue, 12), bx(165, 28, 140, 36, 'I will stay\nhome.', C.red, FILL.red, 12), lb(80, 82, '条件を置くだけ → 現在形', 11, C.blue, 'middle', true), lb(235, 82, '予測は ここで → will', 11, C.red, 'middle', true), lb(160, 112, '× If it will rain …', 12, C.red, 'middle', true), ...cap('条件の節には will を付けない', C.blue)),
+  },
+  {
+    note: '❓最後に、must not と don\'t have to はなぜ正反対なのでしょう。→ not が打ち消す相手がちがうからです。must not は「するな」（動作を打ち消す＝禁止）。don\'t have to は have to（義務）を打ち消すので「しなくてよい」（不要）です。',
+    add: fresh(head('not が何を打ち消すか'), bx(15, 26, 290, 40, 'You must [ not enter ]\n→ 入ってはいけない（禁止）', C.red, FILL.red, 11), bx(15, 74, 290, 40, 'You [ don\'t have to ] enter\n→ 入らなくてもよい（不要）', C.blue, FILL.blue, 11), ...cap('正反対の意味になる', C.red)),
+  },
+  {
+    note: '助動詞＋have＋過去分詞は、「過去のことを今推測する」形です。must have been（〜だったに違いない）、should have studied（〜すべきだったのに）、can\'t have said（〜したはずがない）。助動詞の意味を過去に向けたものです。',
+    add: fresh(head('助動詞 ＋ have ＋ 過去分詞'), bx(15, 26, 290, 28, 'must have been 〜　〜だったに違いない', C.blue, FILL.blue, 11), bx(15, 60, 290, 28, 'should have studied　勉強すべきだったのに', C.green, FILL.green, 11), bx(15, 94, 290, 28, 'can\'t have said　言ったはずがない', C.red, FILL.red, 11), ...cap('過去への推測・後悔', C.ink)),
+  },
+  {
+    note: '確かめのしかたです。①時を表す語で時制を決める（yesterday は過去形、just・already・for・since は現在完了、when・if の節は現在形）。②助動詞や did のあとは原形、have のあとは過去分詞。③must not と don\'t have to を訳で読み返す。',
+    add: fresh(...flow(['時を表す語で\n時制を決める', '原形か\n過去分詞か', '訳で読み\n返す'], 26, { h: 62, size: 11, color: C.blue, fill: FILL.blue }).flat(), lb(160, 112, '× can plays　× Did you played　× have saw', 11, C.red, 'middle', true), ...cap('3 つの確かめ', C.blue)),
+  },
+  {
+    note: 'まとめです。時制は「今とのつながり」で決まる。過去形は切れた一点、現在完了は今につながる。if・when の節は条件を置くだけなので現在形。not が打ち消す相手で、must not と don\'t have to を分ける。',
+    add: fresh(bx(15, 14, 290, 30, '過去形＝切れた一点、現在完了＝つながる', C.blue, FILL.blue, 12), bx(15, 52, 290, 30, 'if・when の節＝条件を置くだけ → 現在形', C.green, FILL.green, 12), bx(15, 90, 290, 30, 'not の打ち消す相手で意味が逆になる', C.red, FILL.red, 12), ...cap('理由から覚える', C.green)),
+  },
+], '時制の形が決まるわけ');
+
+// ───────── koko_eigo_02_comparison 比較・関係詞のなぜ ─────────
+const bar = (x: number, h: number, name: string, color: string, fill: string, w = 40, base = 124): E[] => [bx(x, base - h, w, h, undefined, color, fill), lb(x + w / 2, base + 12, name, 10, C.ink, 'middle', true)];
+const e02: DiagramFigure = show([
+  {
+    note: '比較の三つの形は「何と比べるか」のちがいです。原級（as ～ as）は同じ程度、比較級（-er than）は二つの差、最上級（the -est）は三つ以上の中の一番です。',
+    add: [head('比べ方は 3 つ'), bx(10, 28, 96, 56, '原級\nas tall as\n同じ程度', C.blue, FILL.blue, 11), bx(112, 28, 96, 56, '比較級\ntaller than\n二つの差', C.green, FILL.green, 11), bx(214, 28, 96, 56, '最上級\nthe tallest\n三つ以上で一番', C.red, FILL.red, 11), ...cap('何と比べるかで形が決まる')],
+  },
+  {
+    note: '❓最上級を、別の言い方で表せるでしょうか。→ 「富士山は日本で一番高い」は、比べ方を変えれば同じ内容を言えます。まず、富士山と他の山の高さを並べてみましょう。富士山だけが飛びぬけて高いとします。',
+    add: fresh(head('Mt. Fuji はほかの山より高い'), ...bar(50, 84, 'Mt. Fuji', C.red, FILL.red, 50), ...bar(125, 56, 'A', C.gray, FILL.gray), ...bar(190, 44, 'B', C.gray, FILL.gray), ...bar(255, 34, 'C', C.gray, FILL.gray), ...cap('富士山が一番高い')),
+  },
+  {
+    note: '言いかえ①：比較級を使います。Mt. Fuji is higher than any other mountain. 他のどの山よりも高い、という意味です。言いかえ②：No other mountain is as high as Mt. Fuji. 他のどの山も富士山ほど高くない。三つの文は同じ内容です。',
+    add: fresh(head('同じ内容の 3 つの言い方'), bx(10, 24, 300, 28, 'Mt. Fuji is the highest mountain.', C.red, FILL.red, 11), bx(10, 58, 300, 28, 'Mt. Fuji is higher than any other mountain.', C.green, FILL.green, 11), bx(10, 92, 300, 28, 'No other mountain is as high as Mt. Fuji.', C.blue, FILL.blue, 11), ...cap('比べ方を変えると言いかえられる', C.green)),
+  },
+  {
+    note: '❓なぜ any other や no other のあとは単数名詞なのでしょう。→ 「他の山を一つ一つ取り出して、富士山と比べている」からです。A と比べ、B と比べ、C と比べる。どれと比べても富士山が上、という意味なので mountain は単数です。',
+    add: fresh(head('一つ一つと比べている'), ...bar(40, 84, 'Fuji', C.red, FILL.red, 44), ...bar(120, 56, 'A', C.gray, FILL.gray), ...bar(180, 44, 'B', C.gray, FILL.gray), ...bar(240, 34, 'C', C.gray, FILL.gray), ar(70, 36, 135, 66, C.red), ar(70, 36, 195, 80, C.red), ar(70, 36, 255, 90, C.red), ...cap('any other mountain（単数）', C.red)),
+  },
+  {
+    note: '❓not as ～ as は、どう言いかえられるのでしょう。→ 「同じ程度に達していない」という意味です。Ken is not as tall as Mike. は、マイクのほうが高いので、Mike is taller than Ken. と言いかえられます。as のあとに来るのが「上の人」です。',
+    add: fresh(head('not as ～ as ＝ 達していない'), ...bar(80, 60, 'Ken', C.blue, FILL.blue), ...bar(200, 82, 'Mike', C.red, FILL.red), ln(110, 62, 240, 62, C.gray, true), lb(160, 52, '同じ高さに届かない', 10, C.gray, 'middle'), bx(10, 134, 300, 0, undefined, '#FFFFFF', '#FFFFFF'), ...cap('Mike is taller than Ken.', C.red)),
+  },
+  {
+    note: '次は関係代名詞です。❓なぜ who・whom・whose のように形が分かれるのでしょう。→ 関係代名詞は、もとの文で主語・目的語・所有をしていた名詞の「代わり」だからです。もとの文での働きによって、形が決まります。',
+    add: fresh(head('もとの文での働きで形が決まる'), bx(10, 26, 300, 28, 'The boy is Ken.　+　He is playing soccer.', C.gray, FILL.gray, 11), ar(160, 56, 160, 76, C.main), lb(190, 66, 'He → who', 11, C.main, 'start', true), bx(10, 80, 300, 28, 'The boy who is playing soccer is Ken.', C.blue, FILL.blue, 11), ...cap('名詞の代わりになる', C.blue)),
+  },
+  {
+    note: '主語の代わりは who・which（主格）、目的語の代わりは who(m)・which・that（目的格）、「～の」の代わりは whose（所有格）。目的格は、節の中に主語が別にあるので、省略できます。The book (which) I bought is interesting.',
+    add: fresh(head('3 つの格'), bx(10, 26, 300, 30, '主格　who／which　The boy who is …', C.blue, FILL.blue, 11), bx(10, 62, 300, 30, '目的格　whom／which／that（省略可）', C.green, FILL.green, 11), bx(10, 98, 300, 30, '所有格　whose　a girl whose father …', C.red, FILL.red, 11), ...cap('目的格は省略できる', C.green)),
+  },
+  {
+    note: '❓なぜ先行詞によっては that しか使えないのでしょう。→ 先行詞が最上級・序数・all／every／no・something などのとき、先行詞がすでに「唯一・全部・不特定」と強く限定されています。限定を受ける語の that が合います。',
+    add: fresh(head('that だけを使う先行詞', C.red), ...rowb(['最上級・序数', 'all・every・no', 'something\nanything'], 26, 44, C.red, FILL.red, 11), lb(160, 92, 'This is the best movie that I have ever seen.', 11, C.ink, 'middle', true), lb(160, 114, 'Everything that he says is true.', 11, C.ink, 'middle', true), ...cap('強く限定された先行詞 → that', C.red)),
+  },
+  {
+    note: '❓コンマ付きの非制限用法（、which）で that が使えないのはなぜ? → that は限定専用の語で、補足説明には向かないからです。He passed the exam, which made his mother happy. が正しく、, that は使えません。',
+    add: fresh(head('コンマあり ＝ 補足説明'), bx(10, 28, 300, 30, 'He passed the exam, which made his mother happy.', C.green, FILL.green, 11), bx(10, 70, 300, 30, '× …the exam, that made his mother happy.', C.red, FILL.red, 11), lb(160, 122, 'that は限定専用。補足には which／who', 11, C.ink, 'middle', true), ...cap('コンマの後ろに that は使えない', C.red)),
+  },
+  {
+    note: '❓what はなぜ先行詞を持たないのでしょう。→ what 自体が「～こと・もの」という先行詞を中に含んでいるからです。What he said surprised me. は The thing that he said … と同じ。× the thing what は誤りです。',
+    add: fresh(head('what ＝ the thing that'), bx(10, 28, 300, 30, 'What he said surprised me.', C.green, FILL.green, 12), lb(160, 76, '＝', 14, C.main, 'middle', true), bx(10, 88, 300, 30, 'The thing that he said surprised me.', C.blue, FILL.blue, 12), ...cap('× the thing what', C.red)),
+  },
+  {
+    note: '関係詞を選ぶ手順です。①先行詞の種類（人か物か、最上級か）を見る。②あとの文が完全か不完全かを見る。完全な文なら関係副詞（where・when・why・how）、不完全なら関係代名詞。the way how は誤りです。',
+    add: fresh(...flow(['先行詞は\n何か', 'あとの文は\n完全？不完全？', '完全→関係副詞\n不完全→関係代名詞'], 26, { h: 66, size: 10, color: C.blue, fill: FILL.blue }).flat(), lb(160, 118, '最上級・序数・all などの先行詞なら that', 11, C.ink, 'middle', true), ...cap('先行詞→あとの文の順に見る', C.blue)),
+  },
+  {
+    note: 'まとめです。比較は何と比べるかで三つの形に分かれ、最上級は「他のどの一つも及ばない」と言いかえられる。関係代名詞は、もとの文での名詞の働きで格が決まる。強く限定された先行詞は that、補足（コンマ）は which・who。',
+    add: fresh(bx(15, 14, 290, 30, '最上級 ＝ 他のどれにも負けない', C.red, FILL.red, 12), bx(15, 52, 290, 30, '関係代名詞 ＝ もとの名詞の代わり', C.blue, FILL.blue, 12), bx(15, 90, 290, 30, '限定が強ければ that、補足なら which', C.green, FILL.green, 12), ...cap('理由から覚える', C.green)),
+  },
+], '比較と関係詞の「なぜ」');
+
+// ───────── koko_eigo_03_infinitive 分詞構文 ─────────
+/** 英語のことばを 1 語ずつ箱にして横に並べる。x と幅を返すので、あとで打ち消し線を引ける。 */
+const chips = (words: string[], y: number, color: string, fill: string, x0 = 6, size = 10, h = 26) => {
+  const ws = words.map((w) => Math.max(20, w.length * 5.6 + 10));
+  const xs: number[] = [];
+  let x = x0;
+  ws.forEach((w) => { xs.push(x); x += w + 5; });
+  const els: E[] = words.map((w, i) => bx(xs[i], y, ws[i], h, w, color, fill, size));
+  return { els, xs, ws };
+};
+const strike = (c: { xs: number[]; ws: number[] }, i: number, y: number, h = 26): E => ln(c.xs[i] - 1, y + h / 2, c.xs[i] + c.ws[i] + 1, y + h / 2, C.red, false, 3);
+const r1 = chips(['Because', 'I', 'was', 'tired,', 'I', 'went to bed early.'], 30, C.blue, FILL.blue);
+const r2 = chips(['Being', 'tired,', 'I', 'went to bed early.'], 92, C.green, FILL.green);
+const e03: DiagramFigure = show([
+  {
+    note: '分詞構文（ぶんしこうぶん）は、「Because I was tired」のような副詞節（接続詞を含む節）を、分詞を使って短くした表現です。主に書き言葉で使います。',
+    add: [head('接続詞のある節を、短くする'), ...r1.els, lb(160, 80, '長い文を すっきり短くする', 12, C.ink, 'middle', true), ...cap('Because I was tired, …')],
+  },
+  {
+    note: 'ステップ①：接続詞を省略します。Because を消します。これだけでは、だれが tired なのか、どんな理由なのかが分かるか、次に考えます。',
+    add: [strike(r1, 0, 30), ...band(150, lb(160, 190, '① 接続詞 Because を消す', 12, C.red, 'middle', true))],
+  },
+  {
+    note: '❓ステップ②：なぜ主語 I を省略できるのでしょう。→ 副詞節の主語（I）が、主節の主語（I）と同じだからです。同じ人のことだと分かるので、一方を省いてよいのです。',
+    add: [strike(r1, 1, 30), ar(r1.xs[1] + 10, 58, r1.xs[4] + 10, 58, C.red, true), lb(160, 76, '同じ I だから、前の I は省ける', 11, C.red, 'middle', true), ...band(150, lb(160, 190, '② 主節と同じ主語は省く', 12, C.red, 'middle', true))],
+  },
+  {
+    note: 'ステップ③：動詞を -ing 形にします。was は be 動詞なので Being になります。Being tired, I went to bed early. 「疲れていたので、早く寝た」の意味です。',
+    add: [...r2.els, ar(r1.xs[2] + 14, 58, r2.xs[0] + 22, 90, C.green), lb(250, 78, 'was → Being', 11, C.green, 'middle', true), ...band(150, lb(160, 190, '③ 動詞を -ing 形にする', 12, C.green, 'middle', true))],
+  },
+  {
+    note: '❓Being は必ず必要でしょうか。→ いいえ。Being は省略できます。すると Tired, I went to bed early. になります。Being は「～であること」という意味が薄い語なので、省いても意味は変わりません。',
+    add: [strike(r2, 0, 92), ...band(150, lb(160, 175, 'Tired, I went to bed early.', 14, C.green, 'middle', true), lb(160, 205, 'Being は省いてもよい', 11, C.gray, 'middle'))],
+  },
+  {
+    note: '❓分詞構文は、どんな意味になるのでしょう。→ 接続詞を消してしまったので、意味は文脈で決まります。時（～のとき）、条件（もし～なら）、理由（～なので）の三つが代表です。',
+    add: fresh(head('意味は文脈で決まる'), bx(10, 26, 300, 30, 'Walking along the street, I met Tom.  → 時', C.blue, FILL.blue, 10), bx(10, 62, 300, 30, 'Turning to the right, you will see it.  → 条件', C.green, FILL.green, 10), bx(10, 98, 300, 30, 'Being sick, she didn\'t go to school.  → 理由', C.red, FILL.red, 10), ...cap('when／if／because のどれかを文脈で選ぶ')),
+  },
+  {
+    note: '否定のときは、Not を -ing の前に置きます。たとえば「答えを知らなかったので、彼は黙っていた」は、Not knowing the answer, he kept silent. となります。',
+    add: fresh(head('否定は Not を -ing の前に'), bx(10, 30, 300, 30, 'Not knowing the answer, he kept silent.', C.red, FILL.red, 11), lb(160, 82, '× Knowing not the answer, …', 12, C.red, 'middle', true), ...cap('Not は -ing の前', C.red)),
+  },
+  {
+    note: '❓出来事の順番がちがうときは？ → 主節の動詞より前に起きたことは、Having＋過去分詞で表します。Having finished my homework, I watched TV. 先に宿題を終え、そのあとテレビを見ました。',
+    add: fresh(head('先に起きたこと ＝ Having ＋ 過去分詞'), ln(30, 62, 290, 62, C.gray), ci(90, 62, 6, undefined, C.blue, FILL.blue), ci(230, 62, 6, undefined, C.red, FILL.red), lb(90, 44, 'finished', 11, C.blue, 'middle', true), lb(230, 44, 'watched', 11, C.red, 'middle', true), ar(100, 62, 220, 62, C.main), lb(160, 82, '先', 11, C.gray, 'middle'), bx(10, 100, 300, 30, 'Having finished my homework, I watched TV.', C.blue, FILL.blue, 10), ...cap('主節より前の出来事')),
+  },
+  {
+    note: '❓受け身の意味のときは? → 分詞を過去分詞にします。Seen from the top of the mountain, the city looked beautiful.（山の頂上から見ると、その街は美しく見えた）。街は「見られる」側なので Seen です。× Seeing ではありません。',
+    add: fresh(head('受け身なら、過去分詞から始める'), bx(10, 28, 300, 30, 'Seen from the top of the mountain, the city looked beautiful.', C.green, FILL.green, 9), lb(160, 82, 'the city は「見られる」側 → Seen', 12, C.green, 'middle', true), lb(160, 108, '× Seeing from the top …', 12, C.red, 'middle', true), ...cap('する側なら -ing、される側なら Seen', C.green)),
+  },
+  {
+    note: 'まとめです。分詞構文は、①接続詞を消す ②同じ主語を消す ③動詞を -ing にする、の順で作る。意味は文脈で決める。否定は Not を前に、先の出来事は Having＋過去分詞、受け身は過去分詞。',
+    add: fresh(bx(15, 12, 290, 28, '① 接続詞 ② 同じ主語 を消す ③ -ing にする', C.blue, FILL.blue, 11), bx(15, 46, 290, 28, '意味は文脈（時・条件・理由）', C.green, FILL.green, 12), bx(15, 80, 290, 28, '否定：Not ＋ -ing、先の出来事：Having ＋ 過去分詞', C.red, FILL.red, 10), bx(15, 114, 290, 28, '受け身：Seen の形', C.main, FILL.warm, 12), ...cap('4 ステップで作る', C.green)),
+  },
+], '分詞構文の作り方');
+
 export const XF_KEA_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_eigo_s001': s001,
   'xf_koko_eigo_s003': s003,
   'xf_koko_eigo_s004': s004,
   'xf_koko_eigo_s005': s005,
   'xf_koko_eigo_s008': s008,
+  'xf_koko_eigo_s012': s012,
+  'xf_koko_eigo_s015': s015,
+  'xf_koko_eigo_s016': s016,
+  'xf_koko_eigo_01_tense': e01,
+  'xf_koko_eigo_02_comparison': e02,
+  'xf_koko_eigo_03_infinitive': e03,
 };
 
 export const XF_KEA_SECTIONS: Record<string, string> = {
@@ -219,4 +509,10 @@ export const XF_KEA_SECTIONS: Record<string, string> = {
   'koko_eigo_s004#0': 'xf_koko_eigo_s004',
   'koko_eigo_s005#0': 'xf_koko_eigo_s005',
   'koko_eigo_s008#0': 'xf_koko_eigo_s008',
+  'koko_eigo_s012#0': 'xf_koko_eigo_s012',
+  'koko_eigo_s015#0': 'xf_koko_eigo_s015',
+  'koko_eigo_s016#0': 'xf_koko_eigo_s016',
+  'koko_eigo_01_tense#4': 'xf_koko_eigo_01_tense',
+  'koko_eigo_02_comparison#4': 'xf_koko_eigo_02_comparison',
+  'koko_eigo_03_infinitive#3': 'xf_koko_eigo_03_infinitive',
 };
