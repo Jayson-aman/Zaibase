@@ -329,7 +329,7 @@ first（第一に）・second（第二に）・also（また）・too（〜も�
 ・take a bath（お風呂に入る）— bath（バス、風呂）、take a shower（シャワーを浴びる）
 ・watch TV（テレビを見る）
 ・read a book（本を読む）
-・go to bed（寝る、ベッドに入る）— sleep（眠る）とのちがいに注意。go to bed は「寝床に入る」動作、sleep は「実際に眠っている」状態。I go to bed at nine, but I can't sleep soon.（9時に寝床に入るが、すぐには眠れない）のように区別される。
+・go to bed（寝る、ベッドに入る）— sleep（眠る）とのちがいに注意。go to bed は「寝床に入る」動作、sleep は「実際に眠っている」状態。I go to bed at nine, but I can't fall asleep right away.（9時に寝床に入るが、すぐには眠れない）のように区別される。
 
 ■ 順序を表すつなぎ語
 一日の流れを文章として説明するときは、時間の順番を示す語を使うと分かりやすくなります。

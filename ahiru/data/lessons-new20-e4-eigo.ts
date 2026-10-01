@@ -32,7 +32,7 @@ export const lessonsNew20E4Eigo: Lesson[] = [
 ・four と for（〜のために）は同じ発音（フォー）。書くときのつづりを間違えないようにする。
 
 ⚠ よくある間違い
-・nine を「ナイン」ではなく「ニネ」と読んでしまう→ i は「アイ」の音になる（like「マイン=mine」と同じ）。
+・nine を「ナイン」ではなく「ニネ」と読んでしまう→ i は「アイ」の音になる（nine と mine は同じ音の仲間）。
 ・one の発音は「オネ」ではなく「ワン」。o なのに w の音から始まる、英語特有の読み方なので丸ごと覚える。`,
       },
       {
@@ -691,7 +691,7 @@ soccer player（サッカー プレイヤー）＝サッカー選手
 vet（ベット）＝獣医（veterinarianの短い言い方）
 
 ★ つくりから覚えるコツ
-・動詞＋erで「〜する人」を表す語が多い（teach→teacher、sing→singer、cook→cook）。
+・動詞＋erで「〜する人」を表す語が多い（teach→teacher、sing→singer、play→player）。
 ・「〜選手」は sport（スポーツ名）+ player の組み合わせで作れる（baseball player, tennis playerなど）。
 
 ⚠ police officer・firefighter は2語で1つの職業を表す語。間にスペースを忘れずに書く。`,

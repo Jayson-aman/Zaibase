@@ -60,10 +60,19 @@ const sound = (cx: number, y: number, t: string, color: string, fill: string, w 
 const ng = (x: number, y: number, w: number, t: string): E[] => [bx(x, y, w, 30, t, C.red, FILL.red, 13), lb(x + w / 2, y - 7, '×', 12, C.red, 'middle', true)];
 const ok = (x: number, y: number, w: number, t: string): E[] => [bx(x, y, w, 30, t, C.green, FILL.green, 13), lb(x + w / 2, y - 7, '○', 12, C.green, 'middle', true)];
 /** ×の語 → ○の語 を横に並べた1行。 */
-const pair = (y: number, bad: string, good: string, w = 120): E[] => [
-  bx(14, y, w, 24, bad, C.red, FILL.red, 12),
-  ar(14 + w + 4, y + 12, 306 - w - 4, y + 12, C.gray),
-  bx(306 - w, y, w, 24, good, C.green, FILL.green, 12),
+const pair = (y: number, bad: string, good: string, w0 = 120): E[] => {
+  const w = Math.min(w0, 134);
+  return [
+    bx(14, y, w, 24, bad, C.red, FILL.red, 12),
+    ar(14 + w + 4, y + 12, 306 - w - 4, y + 12, C.gray),
+    bx(306 - w, y, w, 24, good, C.green, FILL.green, 12),
+  ];
+};
+/** ×の文 → ○の文 を縦に並べた2段（長い文用）。 */
+const vpair = (y: number, bad: string, good: string): E[] => [
+  bx(14, y, 292, 26, bad, C.red, FILL.red, 13),
+  ar(160, y + 28, 160, y + 40, C.gray),
+  bx(14, y + 42, 292, 26, good, C.green, FILL.green, 13),
 ];
 /** tiles の上に 1,2,3… の番号をふる。 */
 const nums = (n: number, cx: number, y: number, w = 22, gap = 2): E[] => {
@@ -79,8 +88,8 @@ const sylrow = (y: number, word: string, parts: string[], color: string, fill: s
 /** 左の箱 → 右の箱（青 → 緑）。 */
 const arow = (y: number, left: string, right: string, lw = 150, size = 12): E[] => [
   bx(14, y, lw, 26, left, C.blue, FILL.blue, size),
-  ar(14 + lw + 1, y + 13, 306 - (292 - lw - 8) - 1, y + 13, C.gray),
-  bx(306 - (292 - lw - 8), y, 292 - lw - 8, 26, right, C.green, FILL.green, size),
+  ar(14 + lw + 2, y + 13, 14 + lw + 24, y + 13, C.gray),
+  bx(14 + lw + 26, y, 292 - lw - 26, 26, right, C.green, FILL.green, size),
 ];
 /** 文の部品（S・V・M など）を横に並べる。parts は [文字, 種類, 幅] */
 const svm = (y: number, parts: [string, 'S' | 'V' | 'M' | 'X', number][], x0 = 10, h = 28): E[] => {
@@ -582,7 +591,7 @@ const s043: DiagramFigure = show([
     [head('二つ以上'), ...trow(26, 'we', '自分をふくむ 二人以上', C.green, FILL.green, 70, 28, 12), ...trow(62, 'you', '相手をふくむ 二人以上', C.green, FILL.green, 70, 28, 12), ...trow(98, 'they', '自分も相手もふくまない 二つ以上', C.green, FILL.green, 70, 28, 12)],
     cap('they は人にもものにも', C.green)),
   F('❓Ken and I は何に置きかえるでしょう。→ 自分（I）が入っているので we です。they ではありません。My family and I も we になります。',
-    [bx(14, 26, 130, 30, 'Ken and I', C.blue, FILL.blue, 14), ar(148, 41, 188, 41, C.main), bx(192, 26, 114, 30, 'we', C.green, FILL.green, 15), lb(160, 82, '自分（I）が入っている → we', 13, C.ink, 'middle', true), ...ng(14, 100, 130, 'They'), lb(190, 114, '「and I」を見たら we', 12, C.red, 'start', true)],
+    [bx(14, 26, 130, 30, 'Ken and I', C.blue, FILL.blue, 14), ar(148, 41, 188, 41, C.main), bx(192, 26, 114, 30, 'we', C.green, FILL.green, 15), lb(160, 76, '自分（I）が入っている → we', 13, C.ink, 'middle', true), ...ng(14, 104, 130, 'They'), lb(190, 118, '「and I」を見たら we', 12, C.red, 'start', true)],
     cap('「〇〇と私」は we', C.green)),
   F('自分は入らず、相手が入っているときは you です（You and Tom → you）。自分も相手も入っていなければ they です（Ken and Mika → they、My father and mother → they）。',
     [head('自分が入るか、相手が入るか'), ...arow(26, 'You and Tom', 'you', 170, 13), ...arow(62, 'Ken and Mika', 'they', 170, 13), ...arow(98, 'My father and mother', 'they', 170, 12)],
@@ -594,7 +603,7 @@ const s043: DiagramFigure = show([
     [bx(14, 26, 292, 30, 'That dog is very big.', C.blue, FILL.blue, 14), ar(160, 60, 160, 80, C.main), bx(14, 84, 292, 30, 'It is very big.', C.green, FILL.green, 14), lb(160, 132, 'be動詞も it なので is', 12, C.ink, 'middle', true)],
     cap('動物は it で受ける', C.main)),
   F('まとめです。一人は he・she、一つは it、二つ以上は we・you・they。「〇〇と私」は we、「〇〇とあなた」は you、自分も相手も入らなければ they。代名詞が決まれば be動詞も決まります。',
-    [bx(20, 14, 280, 30, 'he・she（人）／ it（人以外）', C.blue, FILL.blue, 13), bx(20, 52, 280, 30, '「〇〇と私」→ we', C.green, FILL.green, 13), bx(20, 90, 280, 30, 'I→am   he・she・it→is   we・you・they→are', C.red, FILL.red, 11)],
+    [bx(20, 14, 280, 30, 'he・she（人）／ it（人以外）', C.blue, FILL.blue, 13), bx(20, 52, 280, 30, '「〇〇と私」→ we', C.green, FILL.green, 13), bx(20, 90, 280, 30, 'be動詞も決まる（am / is / are）', C.red, FILL.red, 13)],
     cap('Ken and I → We ○', C.green)),
 ], '主語になる代名詞の選び方');
 
@@ -645,7 +654,7 @@ const s045: DiagramFigure = show([
     [bx(14, 14, 292, 28, 'There is a cat under the table.', C.blue, FILL.blue, 13), bx(14, 56, 292, 30, 'There is ＋ 単数のもの ＋ 場所', C.green, FILL.green, 13), bx(14, 94, 292, 30, 'There are ＋ 複数のもの ＋ 場所', C.green, FILL.green, 13)],
     cap('新しく話題に出すとき', C.blue)),
   F('❓is と are は、どう決めるのでしょう。→ There のうしろの名詞に合わせます。There は数を決めません。There are three parks in my town. は、three parks が複数なので are です。',
-    [bx(14, 40, 70, 30, 'There', C.gray, FILL.gray, 14), bx(94, 40, 60, 30, 'are', C.red, FILL.red, 14), bx(164, 40, 142, 30, 'three parks', C.blue, FILL.blue, 14), ar(235, 76, 124, 100, C.red), lb(180, 118, 'うしろの名詞が複数 → are', 12, C.red, 'middle', true)],
+    [bx(14, 34, 70, 30, 'There', C.gray, FILL.gray, 14), bx(112, 34, 60, 30, 'are', C.red, FILL.red, 14), bx(206, 34, 100, 30, 'three parks', C.blue, FILL.blue, 13), ar(203, 49, 175, 49, C.red), lb(160, 98, 'うしろの名詞が複数 → are', 13, C.red, 'middle', true), lb(160, 122, 'There は数を決めない', 12, C.gray, 'middle')],
     cap('There のうしろの名詞を数える', C.red)),
   F('❓My book は There is で言えるでしょうか。→ 言えません。the・my・this が付いた「すでに決まったもの」は、There is のあとに置きません。ふつうの文にして、My book is on the desk. と言います。',
     [...ng(14, 34, 292, 'There is my book on the desk.'), ...ok(14, 86, 292, 'My book is on the desk.'), lb(160, 130, '聞き手が知っているものは ふつうの文で', 12, C.ink, 'middle', true)],
@@ -689,7 +698,7 @@ const s050: DiagramFigure = show([
     [bx(14, 20, 140, 60, 'be動詞\nam  is  are', C.red, FILL.red, 14), bx(166, 20, 140, 60, '一般動詞\nplay  like  have\ngo  study …', C.blue, FILL.blue, 12), lb(160, 110, 'この2つのグループ', 13, C.ink, 'middle', true)],
     cap('be動詞 ／ 一般動詞', C.main)),
   F('動作を表す一般動詞は play・run・go・come・study・read・write・eat・speak。気持ちや状態を表すものは like・want・know・have・live・need です。',
-    [head('一般動詞のなかま'), ...trow(26, '動作', 'play  run  go  study  read  eat', C.blue, FILL.blue, 100, 28, 12), ...trow(64, '気持ち・状態', 'like  want  know  have  live  need', C.green, FILL.green, 100, 28, 12)],
+    [head('一般動詞のなかま'), ...trow(26, '動作', 'play  run  go  study', C.blue, FILL.blue, 100, 28, 12), ...trow(64, '気持ち・状態', 'like  want  know  have', C.green, FILL.green, 100, 28, 12)],
     cap('am・is・are 以外はぜんぶ', C.blue)),
   F('❓I like English.（私は英語が好きです）は、「です」で終わるので be動詞でしょうか。→ いいえ。動詞は like です。日本語の「です」ではなく、使われている語で判断します。',
     [bx(14, 14, 292, 28, '私は 英語が 好きです', C.gray, FILL.gray, 13), ar(160, 46, 160, 62, C.main), bx(14, 66, 70, 30, 'I', C.blue, FILL.blue, 14), bx(94, 66, 80, 30, 'like', C.red, FILL.red, 14), bx(184, 66, 122, 30, 'English.', C.blue, FILL.blue, 14), lb(160, 126, '動詞は like（一般動詞）', 13, C.red, 'middle', true)],
@@ -718,7 +727,7 @@ const s052: DiagramFigure = show([
     [...pair(30, 'He play soccer.', 'He plays soccer.', 136), lb(160, 86, '動詞のおわりに s', 13, C.red, 'middle', true), lb(160, 112, '主語が「自分でも相手でもない1人」のとき', 12, C.ink, 'middle')],
     cap('三単現の -s', C.red)),
   F('❓「三人称」とは何でしょう。→ 一人称は I・we（自分をふくむ）、二人称は you（相手）、三人称はそれ以外のすべて（he, she, it, Ken, my mother, the dog …）です。',
-    [head('人称の分け方'), ...trow(26, '一人称', 'I ・ we （自分）', C.blue, FILL.blue, 90, 28, 12), ...trow(62, '二人称', 'you （相手）', C.green, FILL.green, 90, 28, 12), ...trow(98, '三人称', 'he  she  it  Ken  my mother  the dog', C.red, FILL.red, 90, 28, 11)],
+    [head('人称の分け方'), ...trow(26, '一人称', 'I ・ we （自分）', C.blue, FILL.blue, 90, 28, 12), ...trow(62, '二人称', 'you （相手）', C.green, FILL.green, 90, 28, 12), ...trow(98, '三人称', 'he  she  it  Ken  the dog', C.red, FILL.red, 90, 28, 11)],
     cap('それ以外はぜんぶ三人称', C.red)),
   F('単数は一人・一つ、複数は二つ以上です。-s が付くのは、①三人称 ②単数 ③現在の文、この3つがそろったときだけです。',
     [...rowb(['① 三人称', '② 単数', '③ 現在の文'], 14, 40, C.blue, FILL.blue, 13, 10, 310, 8), ar(160, 58, 160, 78, C.main), bx(70, 82, 180, 32, '動詞に -s を付ける', C.red, FILL.red, 14), lb(160, 130, '1つでも欠けたら付けない', 12, C.ink, 'middle', true)],
@@ -733,7 +742,7 @@ const s052: DiagramFigure = show([
     [...pair(30, 'My friends likes soccer.', 'My friends like soccer.', 142), lb(160, 86, '主語が複数 → -s なし', 13, C.ink, 'middle', true), bx(70, 100, 180, 28, 'They live in Tokyo.', C.green, FILL.green, 13)],
     cap('複数には付けない', C.main)),
   F('❓reads の s と books の s は同じものでしょうか。→ ちがいます。動詞の s は「主語が三人称単数」の合図、名詞の s は「二つ以上」の合図です。動詞の -s を決めるのは、いつでも主語です。',
-    [bx(14, 20, 50, 28, 'He', C.blue, FILL.blue, 14), bx(70, 20, 80, 28, 'reads', C.red, FILL.red, 14), bx(156, 20, 90, 28, 'books', C.green, FILL.green, 14), lb(98, 74, '主語 He が三人称単数', 11, C.red, 'middle'), lb(216, 74, '本が二冊以上', 11, C.green, 'middle'), ar(39, 52, 100, 52, C.red), bx(40, 96, 240, 28, 'He has three dogs.  （主語 He → has）', C.main, FILL.yellow, 11)],
+    [bx(14, 20, 50, 28, 'He', C.blue, FILL.blue, 14), bx(70, 20, 80, 28, 'reads', C.red, FILL.red, 14), bx(156, 20, 90, 28, 'books', C.green, FILL.green, 14), lb(98, 74, '主語 He が三人称単数', 11, C.red, 'middle'), lb(216, 74, '本が二冊以上', 11, C.green, 'middle'), bx(60, 96, 200, 28, 'He has three dogs.', C.main, FILL.yellow, 13), lb(160, 138, '動詞 has を決めるのは主語 He', 11, C.gray, 'middle')],
     cap('動詞の -s は主語で決まる', C.red)),
   F('まとめです。三人称・単数・現在の3つがそろったときだけ、動詞に -s を付けます。I と you、複数の主語には付けません。-s を決めるのは、いつでも主語です。',
     [bx(20, 14, 280, 30, '三人称 ＋ 単数 ＋ 現在 → -s', C.red, FILL.red, 13), bx(20, 52, 280, 30, 'I・you・複数 → -s なし', C.blue, FILL.blue, 13), bx(20, 90, 280, 30, '決めるのは主語', C.green, FILL.green, 13)],
@@ -774,7 +783,7 @@ const s055: DiagramFigure = show([
     [...svm(22, [['The boy', 'S', 62], ['with two dogs', 'M', 106], ['run', 'V', 40], ['fast.', 'M', 52]], 18), ar(60, 54, 150, 82, C.blue), lb(160, 96, '動詞の形を決めるのは boy（1人）', 12, C.ink, 'middle', true), bx(70, 108, 180, 28, 'runs に直す', C.green, FILL.green, 13)],
     cap('主語の中心の名詞を見る', C.main)),
   F('❓どれが主語の中心でしょう。→ with・in・from・of などの前置詞（ぜんちし）で始まるかたまりは、前の名詞を説明するだけで、主語の中心ではありません。線を引いて消すと主語が見えてきます。',
-    [head('前置詞のかたまりは消す'), ...svm(26, [['The girl', 'S', 68], ['with two dogs', 'M', 110], ['lives', 'V', 50], ['near my house.', 'M', 84]], 10), lb(160, 80, '↑ 消してしまう', 11, C.gray, 'middle'), bx(70, 94, 180, 30, 'The girl lives', C.green, FILL.green, 14)],
+    [head('前置詞のかたまりは消す'), ...svm(26, [['The girl', 'S', 62], ['with two dogs', 'M', 92], ['lives', 'V', 46], ['near my house.', 'M', 86]], 10), lb(160, 80, '↑ 消してしまう', 11, C.gray, 'middle'), bx(70, 94, 180, 30, 'The girl lives', C.green, FILL.green, 14)],
     cap('with two dogs は説明だけ', C.main)),
   F('同じように見ていきましょう。The students in my class study very hard. の主語の中心は The students（複数）なので study。A boy from Canada speaks Japanese well. は A boy（1人）なので speaks です。',
     [...svm(16, [['The students', 'S', 80], ['in my class', 'M', 76], ['study', 'V', 48], ['very hard.', 'M', 68]], 10), lb(160, 60, '複数 → study', 12, C.green, 'middle', true), ...svm(84, [['A boy', 'S', 52], ['from Canada', 'M', 84], ['speaks', 'V', 56], ['Japanese well.', 'M', 92]], 10), lb(160, 128, '1人 → speaks', 12, C.green, 'middle', true)],
@@ -799,7 +808,7 @@ const s055: DiagramFigure = show([
 // ───────── eigo_s057 一般動詞の否定文②：does not（doesn't）と原形 ─────────
 const s057: DiagramFigure = show([
   S("He doesn't plays soccer. は最頻出（さいひんしゅつ）のまちがいです。doesn't を使ったら、動詞は原形（げんけい）の play にもどします。",
-    [...pair(30, "He doesn't plays soccer.", "He doesn't play soccer.", 142), lb(160, 86, "doesn't のあとは原形", 14, C.red, 'middle', true), lb(160, 112, '原形 ＝ -s も -es も付かない形', 12, C.ink, 'middle')],
+    [...vpair(14, "He doesn't plays soccer.", "He doesn't play soccer."), lb(160, 104, "doesn't のあとは原形", 14, C.red, 'middle', true), lb(160, 128, '原形 ＝ -s も -es も付かない形', 12, C.ink, 'middle')],
     cap("doesn't plays ✕ → doesn't play ○", C.red)),
   F("❓なぜ plays ではだめなのでしょう。→ 「三人称単数」という情報を、does がすでに引き受けているからです。動詞にも -s を付けると二重になります。-s は文の中に1つだけです。",
     [bx(14, 30, 60, 34, 'He', C.blue, FILL.blue, 14), bx(84, 30, 110, 34, "doesn't", C.red, FILL.red, 14), bx(204, 30, 102, 34, 'play', C.green, FILL.green, 14), lb(139, 84, '三単現の仕事は', 11, C.red, 'middle'), lb(139, 100, 'ここが引き受ける', 11, C.red, 'middle'), lb(255, 90, '原形のまま', 12, C.green, 'middle', true)],
@@ -827,10 +836,10 @@ const s057: DiagramFigure = show([
 // ───────── eigo_s059 一般動詞の疑問文②：Does 〜? と答え方 ─────────
 const s059: DiagramFigure = show([
   S('Does he plays tennis? と書いてしまう人が絶えません。Does がすでに三単現を表しているので、動詞は原形にもどします。',
-    [...pair(30, 'Does he plays tennis?', 'Does he play tennis?', 142), lb(160, 86, 'Does のあとは原形', 14, C.red, 'middle', true)],
+    [...vpair(14, 'Does he plays tennis?', 'Does he play tennis?'), lb(160, 110, 'Does のあとは原形', 14, C.red, 'middle', true)],
     cap('Does he plays ✕ → Does he play ○', C.red)),
   F('形は〈Does＋主語＋動詞の原形〜?〉です。主語が he・she・it や一人・一つの名詞のとき、Do ではなく Does で文を始めます。',
-    [head('Does ＋ 主語 ＋ 原形'), ...pair(26, 'He plays soccer.', 'Does he play soccer?', 128), ...pair(62, 'She likes English.', 'Does she like English?', 128), ...pair(98, 'Your father works here.', 'Does your father work here?', 142)],
+    [head('Does ＋ 主語 ＋ 原形'), ...pair(26, 'He plays soccer.', 'Does he play soccer?', 128), ...pair(62, 'She likes English.', 'Does she like English?', 128), ...pair(98, 'They live here.', 'Do they live here?', 142)],
     cap('Does が文のはじめに出る', C.blue)),
   F('動詞はいつも原形です。Does she studies math? ではなく Does she study math?、Does he has a car? ではなく Does he have a car? です。',
     [head('原形にもどす'), ...pair(26, 'Does he plays soccer?', 'Does he play soccer?', 142), ...pair(62, 'Does she studies math?', 'Does she study math?', 142), ...pair(98, 'Does he has a car?', 'Does he have a car?', 142)],
@@ -920,7 +929,7 @@ const s063: DiagramFigure = show([
     [head('Do / Does を先頭に置く', C.green), ...pair(26, 'You play tennis.', 'Do you play tennis?', 138), ...pair(62, 'He plays tennis.', 'Does he play tennis?', 138), ...pair(98, 'They live here.', 'Do they live here?', 138)],
     cap('動詞は原形', C.green)),
   F('❓Are you have a pen? はなぜ誤りなのでしょう。→ are と have の動詞が2つ並んでいるからです。have は「持っている」の一般動詞なので、Do you have a pen? が正しい形です。',
-    [...ng(14, 22, 292, 'Do you are a student?'), lb(160, 66, 'do と are', 11, C.red, 'middle'), ...ng(14, 84, 292, 'Are you have a pen?'), lb(160, 128, 'are と have', 11, C.red, 'middle')],
+    [...ng(14, 22, 292, 'Do you are a student?'), lb(160, 64, 'do と are が並んでいる', 12, C.red, 'middle'), ...ng(14, 92, 292, 'Are you have a pen?'), lb(160, 134, 'are と have が並んでいる', 12, C.red, 'middle')],
     cap('動詞が二つ並んでいる', C.red)),
   F('❓Do は動詞の数に数えないのでしょうか。→ 数えません。Do / Does は動作の意味を持たない「疑問文の合図の語」です。正しい疑問文は「合図の語＋動詞1つ」か「be動詞＋主語」のどちらかです。',
     [bx(14, 20, 70, 32, 'Do', C.gray, FILL.gray, 14), bx(90, 20, 70, 32, 'you', C.blue, FILL.blue, 14), bx(166, 20, 70, 32, 'play', C.red, FILL.red, 14), lb(49, 68, '合図の語', 12, C.gray, 'middle', true), lb(201, 68, '動詞は1つ', 12, C.red, 'middle', true), bx(14, 90, 70, 32, 'Are', C.red, FILL.red, 14), bx(90, 90, 70, 32, 'you', C.blue, FILL.blue, 14), lb(220, 106, 'be動詞が動詞', 12, C.red, 'middle', true)],
@@ -929,7 +938,7 @@ const s063: DiagramFigure = show([
     [head('問いの最初の語 ＝ 答えの語'), ...trow(26, 'Are you hungry?', 'Yes, I am.', C.red, FILL.red, 140, 28, 12), ...trow(62, 'Is he your brother?', 'Yes, he is.', C.red, FILL.red, 140, 28, 12), ...trow(98, 'Do you like music?', 'Yes, I do.', C.green, FILL.green, 140, 28, 12)],
     cap('問いの最初の語を見る', C.main)),
   F('混ぜてはいけません。Do you like music? に Yes, I am. は×、Are you a student? に Yes, I do. も×です。「持っていますか」は Do you have 〜?、「いますか」は Are you at home? です。',
-    [...pair(16, 'Do you like music? － Yes, I am.', 'Yes, I do.', 126), ...pair(52, 'Are you a student? － Yes, I do.', 'Yes, I am.', 126), ...trow(94, '持っていますか', 'Do you have a pen?', C.green, FILL.green, 100, 26, 12), ...trow(124, 'いますか', 'Are you at home?', C.green, FILL.green, 100, 26, 12)],
+    [bx(14, 10, 146, 26, 'Do you like music?', C.blue, FILL.blue, 12), bx(170, 10, 136, 26, 'Yes, I am.   ×', C.red, FILL.red, 12), bx(14, 42, 146, 26, 'Are you a student?', C.blue, FILL.blue, 12), bx(170, 42, 136, 26, 'Yes, I do.   ×', C.red, FILL.red, 12), ...trow(78, '持っていますか', 'Do you have a pen?', C.green, FILL.green, 100, 24, 12), ...trow(108, 'いますか', 'Are you at home?', C.green, FILL.green, 100, 24, 12)],
     cap('訳ではなく、動詞で決める', C.red)),
   F('まとめです。be動詞の文は be動詞を前に出し、一般動詞の文は Do / Does を借ります。Do / Does は動詞に数えません。答えの語は問いの最初の語とそろえます。',
     [bx(20, 14, 280, 30, 'be動詞 → 前に出す（Are you ～?）', C.red, FILL.red, 13), bx(20, 52, 280, 30, '一般動詞 → Do / Does（Do you ～?）', C.green, FILL.green, 12), bx(20, 90, 280, 30, '答えは問いの最初の語でそろえる', C.blue, FILL.blue, 13)],

@@ -714,6 +714,195 @@ const u28: DiagramFigure = show([
   },
 ], '趣味の自己紹介：ing の形と3つの足し方');
 
+// ───────── new20_e6_eigo_09 友達や家族を比べる ─────────
+const hbar = (x: number, h: number, t: string, c: string, f: string) => bx(x, 136 - h, 56, h, t, c, f, 11);
+const u29: DiagramFigure = show([
+  {
+    note: '人を比べるときの形は3つです。2人（2つ）を比べるときは「比較級＋than」、3人以上の中でいちばんのときは「the＋最上級＋in…」、同じくらいのときは「as ~ as」です。',
+    add: [bx(6, 10, 308, 28, 'My brother is taller than me.', C.blue, FILL.blue, 12), lb(160, 52, '兄は私より背が高い（二つを比べる）', 11, C.blue, 'middle', true), bx(6, 62, 308, 28, 'My father is the tallest in my family.', C.green, FILL.green, 12), lb(160, 104, '父は家族の中でいちばん背が高い', 11, C.green, 'middle', true), bx(6, 112, 308, 28, 'I am as tall as my mother.', C.purple, FILL.purple, 12), ...cap('比べる3つの形')],
+  },
+  {
+    note: '家族の背の高さを並べてみます。父がいちばん高く、兄は私より高く、私と母は同じくらいです。これを文にすると、My brother is taller than me.、My father is the tallest in my family.、I am as tall as my mother. になります。',
+    add: fresh(ln(8, 136, 312, 136, C.gray), hbar(24, 104, 'father', C.green, FILL.green), hbar(98, 90, 'brother', C.blue, FILL.blue), hbar(172, 76, 'me', C.red, FILL.red), hbar(246, 76, 'mother', C.purple, FILL.purple), lb(126, 22, '兄 ＞ 私', 11, C.blue, 'middle', true), lb(52, 12, 'いちばん高い', 11, C.green, 'middle', true), lb(240, 48, '私 ＝ 母', 11, C.purple, 'middle', true), ...cap('背の高さをくらべる')),
+  },
+  {
+    note: '❓なぜ「私より」「家族の中で」と相手を書くのでしょう。→ My brother is tall.（兄は背が高い）だけでは、どれくらい高いのかが伝わらないからです。比べる相手や範囲（than me・in my family）を示すと、はじめて具体的になります。',
+    add: fresh(bx(6, 12, 308, 28, 'My brother is tall.', C.gray, FILL.gray, 13), lb(160, 54, 'どれくらい高いかわからない', 11, C.gray, 'middle', true), bx(6, 70, 308, 26, 'My brother is taller than me.', C.green, FILL.green, 12), bx(6, 102, 308, 26, 'He is the tallest in my family.', C.green, FILL.green, 12), lb(160, 142, '比べる相手・範囲を書くと具体的', 11, C.green, 'middle', true), ...band(150, lb(160, 192, '比べる相手をはっきり', 12, C.green, 'middle', true))),
+  },
+  {
+    note: '性格や特技も比べられます。My sister is kinder than me.（妹は私より優しい）、He is the funniest person in our class.（彼はクラスでいちばんおもしろい人）。funny は y を i に変えて funniest になります。She sings the best in our chorus club.（合唱部でいちばん歌がうまい）の best は good / well の最上級で、不規則な変化です。',
+    add: fresh(bx(6, 8, 308, 26, 'My sister is kinder than me.', C.blue, FILL.blue, 12), bx(6, 40, 308, 26, 'He is the funniest person in our class.', C.green, FILL.green, 11), lb(160, 80, 'funny → funniest（y を i に変えて est）', 11, C.green, 'middle', true), bx(6, 94, 308, 26, 'She sings the best in our chorus club.', C.purple, FILL.purple, 11), lb(160, 134, 'good / well → best（不規則）', 11, C.purple, 'middle', true), ...band(150, lb(160, 192, '性格・特技もくらべる', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '同じくらいは as ~ as、そうでないときは not as ~ as です。I am as tall as my mother.（母と同じくらいの背）、My cat is not as active as my dog.（うちの猫は犬ほど活発ではない）。not as ~ as は「〜ほどではない」という意味です。',
+    add: fresh(bx(6, 14, 308, 28, 'I am as tall as my mother.', C.purple, FILL.purple, 12), lb(160, 56, '母と同じくらいの背の高さ', 11, C.purple, 'middle', true), bx(6, 72, 308, 28, 'My cat is not as active as my dog.', C.red, FILL.red, 12), lb(160, 114, '猫は犬ほど活発ではない（犬 ＞ 猫）', 11, C.red, 'middle', true), ...cap('as ~ as ・ not as ~ as', C.main)),
+  },
+  {
+    note: '❓「ずっと高い」と強めたいとき、なぜ very ではなく much を使うのでしょう。→ very は「程度が高い」ことを表すことばで、比較級が表す二つの差には付けられないからです。差が大きいことを言うには、much・a lot・far を比較級の前に置きます。My brother is much taller than me. は正しく、very taller は誤りです。',
+    add: fresh(bx(6, 12, 308, 28, 'My brother is much taller than me.', C.green, FILL.green, 12), lb(160, 54, '兄は私よりずっと背が高い', 11, C.green, 'middle', true), bx(6, 68, 308, 28, 'This question is far more difficult.', C.green, FILL.green, 11), bx(6, 106, 308, 28, '✕  very taller', C.red, FILL.red, 13), ...band(150, lb(160, 192, '比較級は much・a lot・far で強める', 12, C.green, 'middle', true))),
+  },
+  {
+    note: '最上級を強める決まり文句です。kinder than anyone else I know（私が知るだれよりも優しい）、the smartest dog I have ever seen（今まで見た中でいちばん賢い犬）。紹介文に使うと、ぐっと文章が引き立ちます。',
+    add: fresh(bx(6, 12, 308, 32, 'He is kinder than anyone else I know.', C.blue, FILL.blue, 11), lb(160, 58, '私が知るだれよりも優しい', 11, C.blue, 'middle', true), bx(6, 74, 308, 32, 'She is the smartest dog I have ever seen.', C.green, FILL.green, 10), lb(160, 120, '今まで見た中でいちばん賢い犬', 11, C.green, 'middle', true), ...cap('than anyone else ・ I have ever seen', C.main, 11)),
+  },
+  {
+    note: '❓than のあとの代名詞は me と I のどちらでしょう。→ 書き言葉では than I am が文法的に正しいとされますが、会話では than me が一般的です。中学入試では than me でも問題ないことが多いですが、学校の文法問題では than I（am）も覚えておきましょう。まとめ：二つ → 比較級＋than、三つ以上 → the＋最上級、同じ → as ~ as。',
+    add: fresh(bx(6, 14, 148, 40, 'than me\n会話でよく使う', C.blue, FILL.blue, 12), bx(166, 14, 148, 40, 'than I (am)\n文法問題で出る', C.green, FILL.green, 12), lb(160, 76, '両方 覚えておこう', 13, C.ink, 'middle', true), lb(160, 104, '二つ ＝ 比較級＋than　三つ以上 ＝ the＋最上級', 11, C.ink, 'middle', true), lb(160, 124, '同じ ＝ as ~ as', 11, C.ink, 'middle', true), ...cap('比べる形の まとめ', C.main)),
+  },
+], '比べる文：比較級・最上級・as ~ as');
+
+// ───────── new20_e6_eigo_10 買い物の会話を組み立てる ─────────
+const u30: DiagramFigure = show([
+  {
+    note: '買い物の会話は、店員の声かけから始まります。May I help you?（いらっしゃいませ／お手伝いしましょうか）、Are you looking for something?（何かお探しですか）。この受け答えがスムーズだと、その後の会話全体が自然になります。',
+    add: [bx(6, 10, 308, 30, 'May I help you?', C.blue, FILL.blue, 14), lb(160, 54, 'いらっしゃいませ ／ お手伝いしましょうか', 11, C.blue, 'middle', true), bx(6, 72, 308, 30, 'Are you looking for something?', C.blue, FILL.blue, 13), lb(160, 116, '何かお探しですか', 11, C.blue, 'middle', true), ...cap('店員の声かけ')],
+  },
+  {
+    note: 'お客の答え方です。I\'m looking for a birthday present for my mother.（母への誕生日プレゼントを探しています）、Do you have any T-shirts?（Tシャツはありますか）、I\'d like a cap, please.（帽子がほしいのですが）、I\'m just looking, thank you.（見ているだけです）。',
+    add: fresh(bx(6, 6, 308, 26, "I'm looking for a birthday present for my mother.", C.green, FILL.green, 10), bx(6, 38, 308, 26, 'Do you have any T-shirts?', C.green, FILL.green, 12), bx(6, 70, 308, 26, "I'd like a cap, please.", C.green, FILL.green, 12), bx(6, 102, 308, 26, "I'm just looking, thank you.", C.green, FILL.green, 12), lb(160, 140, '見ているだけです（すぐに買わないとき）', 10, C.green, 'middle', true), ...band(150, lb(160, 192, 'お客の答え方', 12, C.green, 'middle', true))),
+  },
+  {
+    note: '❓お店で、なぜ I want ではなく I\'d like を使うのでしょう。→ I\'d like ~, please. のほうがていねいで、お店や目上の人との会話にふさわしいからです。店員さんのほうも、This way, please.（こちらへどうぞ）、We have a lot of colors.（色々な色がございます）、This one is very popular.（これはとても人気です）と案内します。',
+    add: fresh(bx(6, 10, 148, 30, 'I want a cap.', C.gray, FILL.gray, 13), bx(166, 10, 148, 30, "I'd like a cap, please.", C.green, FILL.green, 11), lb(80, 54, 'ふつう', 11, C.gray, 'middle', true), lb(240, 54, 'ていねい（お店向き）', 11, C.green, 'middle', true), bx(6, 76, 308, 24, 'This way, please.　こちらへどうぞ', C.blue, FILL.blue, 11), bx(6, 104, 308, 24, 'This one is very popular.　これは人気です', C.blue, FILL.blue, 11), ...cap('お店では I\'d like ~, please.', C.green)),
+  },
+  {
+    note: 'サイズを相談します。Do you have a bigger one?（もっと大きいのはありますか）、Do you have a smaller size?（もっと小さいサイズはありますか）。Can I try this on?（これを試着してもいいですか）と聞くと、Sure, the fitting room is over there.（もちろんです、試着室はあちらです）と返ってきます。',
+    add: fresh(bx(6, 6, 308, 26, 'Do you have a bigger one?', C.blue, FILL.blue, 12), bx(6, 38, 308, 26, 'Do you have a smaller size?', C.blue, FILL.blue, 12), bx(6, 70, 308, 26, 'Can I try this on?', C.green, FILL.green, 12), bx(6, 102, 308, 26, 'Sure, the fitting room is over there.', C.purple, FILL.purple, 11), lb(160, 142, '試着していいですか → 試着室はあちら', 10, C.ink, 'middle', true), ...band(150, lb(160, 192, 'サイズと試着', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '色もたずねられます。Do you have this in blue?（これの青色はありますか）、What colors do you have?（何色がありますか）。in blue の in は「〜色で」という意味で使われています。',
+    add: fresh(bx(6, 14, 308, 30, 'Do you have this in blue?', C.blue, FILL.blue, 13), lb(160, 58, 'これの青色はありますか', 12, C.blue, 'middle', true), bx(6, 76, 308, 30, 'What colors do you have?', C.green, FILL.green, 13), lb(160, 120, '何色がありますか', 12, C.green, 'middle', true), ...cap('色をたずねる', C.main)),
+  },
+  {
+    note: '❓値段のたずね方で、なぜ is と are を使い分けるのでしょう。→ ものの数に合わせるからです。ひとつのものは How much is it?（It\'s 1,500 yen.）、靴 shoes のように複数のものは How much are these shoes?（They\'re 3,000 yen.）と、be動詞も答えの代名詞も変わります。',
+    add: fresh(bx(6, 8, 148, 28, 'How much is it?', C.blue, FILL.blue, 12), lb(80, 48, '単数（ひとつ）', 11, C.blue, 'middle', true), bx(6, 60, 148, 28, "It's 1,500 yen.", C.blue, FILL.blue, 12), bx(166, 8, 148, 28, 'How much are these shoes?', C.red, FILL.red, 10), lb(240, 48, '複数（2つで1組）', 11, C.red, 'middle', true), bx(166, 60, 148, 28, "They're 3,000 yen.", C.red, FILL.red, 12), lb(160, 112, 'ものの数に合わせて is / are', 12, C.ink, 'middle', true), ...cap('値段のたずね方', C.main)),
+  },
+  {
+    note: '高いと感じたときは That\'s a little expensive.（それは少し高いですね）と言い、Do you have a cheaper one?（もっと安いのはありますか）とたずねます。bigger・smaller・cheaper は、どれも「もっと〜」を表す形です。',
+    add: fresh(bx(6, 14, 308, 30, "That's a little expensive.", C.red, FILL.red, 13), lb(160, 58, '少し高いですね', 12, C.red, 'middle', true), ar(160, 66, 160, 80, C.main), bx(6, 84, 308, 30, 'Do you have a cheaper one?', C.green, FILL.green, 13), lb(160, 128, 'もっと安いのはありますか', 12, C.green, 'middle', true), ...cap('値段を相談する', C.main)),
+  },
+  {
+    note: '会計です。I\'ll take this one.（これにします）、That will be 2,000 yen.（2,000円になります）、Here you are.（はい、どうぞ。ものを渡すときの決まり文句）、Here\'s your change.（お釣りです）、Keep the change.（お釣りはとっておいてください）。',
+    add: fresh(bx(6, 6, 148, 26, "I'll take this one.", C.blue, FILL.blue, 11), lb(240, 19, 'これにします', 11, C.ink, 'middle', true), bx(6, 38, 148, 26, 'That will be 2,000 yen.', C.green, FILL.green, 10), lb(240, 51, '2,000円になります', 11, C.ink, 'middle', true), bx(6, 70, 148, 26, 'Here you are.', C.purple, FILL.purple, 11), lb(240, 83, 'はい、どうぞ', 11, C.ink, 'middle', true), bx(6, 102, 148, 26, "Here's your change.", C.main, FILL.warm, 11), lb(240, 115, 'お釣りです', 11, C.ink, 'middle', true), ...cap('会計の言い方', C.main)),
+  },
+  {
+    note: 'まとめです。買い物の会話は、①声をかける（May I help you?）→ ②探しているものを伝える（I\'m looking for ~）→ ③サイズ・色・値段を相談する → ④会計する（I\'ll take this one.）の順に進みます。せりふを暗記せず、「聞かれたら何を答えるか」の流れで覚えましょう。',
+    add: fresh(...flow(['声かけ\nMay I\nhelp you?', '探す\nI\'m looking\nfor ~', '相談\nbigger\ncheaper', '会計\nI\'ll take\nthis one.'], 14, { h: 82, size: 10, color: C.blue, fill: FILL.blue, gap: 8, pad: 6 }).flat(), lb(160, 118, '店員役とお客役で 声に出す', 12, C.red, 'middle', true), ...cap('買い物の4ステップ', C.green)),
+  },
+], '買い物の会話：声かけ・相談・会計');
+
+// ───────── new20_e6_eigo_11 道案内をスムーズに ─────────
+const u31: DiagramFigure = show([
+  {
+    note: '道をたずねる言い方です。Excuse me. How can I get to the station?（すみません、駅へはどう行けばいいですか）、Could you tell me the way to the library?（図書館への道を教えていただけますか）、Is there a post office near here?（この近くに郵便局はありますか）。',
+    add: [bx(6, 6, 308, 36, 'Excuse me. How can I get to the station?', C.blue, FILL.blue, 11), lb(160, 56, '駅へはどう行けばいいですか', 11, C.blue, 'middle', true), bx(6, 70, 308, 28, 'Could you tell me the way to the library?', C.green, FILL.green, 10), lb(160, 112, '図書館への道を教えていただけますか', 11, C.green, 'middle', true), bx(6, 122, 308, 24, 'Is there a post office near here?', C.purple, FILL.purple, 11), ...cap('道をたずねる')],
+  },
+  {
+    note: '❓Could you tell me the way to ~? と How can I get to ~? は何がちがうのでしょう。→ Could you tell me the way to ~? のほうが少していねいです。試験の会話文ではどちらも出ます。案内できないときは Sorry, I\'m not from around here.（この辺りの者ではないので）と言い、I\'m not sure, but you can ask that police officer.（わかりませんが、あの警察官に聞いてみてください）と続けます。',
+    add: fresh(bx(6, 8, 148, 32, 'How can I get to ~?', C.blue, FILL.blue, 11), lb(80, 52, 'ふつう', 11, C.blue, 'middle', true), bx(166, 8, 148, 32, 'Could you tell me\nthe way to ~?', C.green, FILL.green, 10), lb(240, 52, '少していねい', 11, C.green, 'middle', true), bx(6, 76, 308, 26, "Sorry, I'm not from around here.", C.red, FILL.red, 11), lb(160, 116, 'この辺りの者ではないので（案内できないとき）', 10, C.red, 'middle', true), ...cap('たずね方と、ことわり方', C.main)),
+  },
+  {
+    note: '基本の動作です。Go straight.（まっすぐ進む）、Turn left / right at the corner.（角を左／右に曲がる）、Cross the street.（通りを渡る）。',
+    add: fresh(ln(55, 120, 55, 40, C.red, false, 3), ar(55, 46, 55, 30, C.red), lb(55, 140, 'Go straight', 11, C.red, 'middle', true), ln(160, 120, 160, 70, C.green, false, 3), ln(160, 70, 120, 70, C.green, false, 3), ar(130, 70, 108, 70, C.green), lb(160, 140, 'Turn left', 11, C.green, 'middle', true), bx(220, 60, 90, 36, undefined, C.gray, FILL.gray), lb(265, 78, 'street', 10, C.gray, 'middle', true), ln(265, 120, 265, 106, C.blue, false, 3), ar(265, 106, 265, 40, C.blue), lb(265, 140, 'Cross the street', 10, C.blue, 'middle', true), ...band(150, lb(160, 192, '3つの基本の動き', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '目印を伝えることばです。on your right / left（あなたの右手／左手に）、next to ~（〜の隣に）、across from ~（〜の向かいに）、between A and B（AとBの間に）。例：You will see the library on your right.（右手に図書館が見えます）。',
+    add: fresh(bx(6, 6, 148, 26, 'on your right / left', C.blue, FILL.blue, 11), lb(240, 19, '右手に／左手に', 11, C.ink, 'middle', true), bx(6, 36, 148, 26, 'next to ~', C.green, FILL.green, 11), lb(240, 49, '〜の隣に', 11, C.ink, 'middle', true), bx(6, 66, 148, 26, 'across from ~', C.purple, FILL.purple, 11), lb(240, 79, '〜の向かいに', 11, C.ink, 'middle', true), bx(6, 96, 148, 26, 'between A and B', C.red, FILL.red, 11), lb(240, 109, 'AとBの間に', 11, C.ink, 'middle', true), lb(160, 138, 'You will see the library on your right.', 10, C.blue, 'middle', true), ...band(150, lb(160, 192, '目印を伝えることば', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '❓なぜ動作と目印をセットで伝えるのでしょう。→ 目印がないと、聞いた人はどこで曲がればよいかわからないからです。Go straight for three blocks, and turn right at the bookstore. The museum is on your left, next to the park.（3区画まっすぐ進んで、本屋のところを右に曲がってください。美術館は左手、公園の隣にあります）。',
+    add: fresh(ci(60, 130, 8, '', C.red, FILL.red), ln(60, 122, 60, 62, C.red, false, 3), ln(48, 106, 72, 106, C.gray), ln(48, 86, 72, 86, C.gray), ln(48, 66, 72, 66, C.gray), lb(34, 94, '3 blocks', 9, C.gray, 'middle'), bx(70, 46, 70, 22, 'bookstore', C.purple, FILL.purple, 10), ln(60, 62, 190, 62, C.green, false, 3), ar(180, 62, 204, 62, C.green), bx(100, 14, 74, 24, 'museum', C.blue, FILL.blue, 10), bx(178, 14, 60, 24, 'park', C.green, FILL.green, 10), lb(240, 30, '← 左手', 10, C.blue, 'start', true), lb(214, 86, 'turn right', 11, C.green, 'start', true), ...cap('動作 ＋ 目印', C.main)),
+  },
+  {
+    note: '距離や時間を足すと親切です。It\'s about five minutes on foot.（歩いて約5分です）、It\'s about 200 meters ahead.（この先約200メートルです）、It takes about ten minutes by bus.（バスで約10分かかります）。',
+    add: fresh(bx(6, 10, 308, 28, "It's about five minutes on foot.", C.blue, FILL.blue, 12), lb(160, 50, '歩いて約5分', 11, C.blue, 'middle', true), bx(6, 62, 308, 28, "It's about 200 meters ahead.", C.green, FILL.green, 12), lb(160, 102, 'この先約200メートル', 11, C.green, 'middle', true), bx(6, 112, 308, 28, 'It takes about ten minutes by bus.', C.purple, FILL.purple, 11), ...band(150, lb(160, 192, 'きょりと時間を 足す', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '案内の最後は You can\'t miss it.（見逃すことはありません＝すぐわかりますよ）や It\'s right in front of you.（すぐ目の前にあります）で締めます。会話の例：「花屋で左、公園の向かい、歩いて約7分」と教えられて、A は Got it. Thank you!（わかりました、ありがとう）と言います。',
+    add: fresh(bx(6, 10, 308, 30, "You can't miss it.", C.green, FILL.green, 14), lb(160, 54, 'すぐわかりますよ', 12, C.green, 'middle', true), bx(6, 70, 308, 30, "It's right in front of you.", C.green, FILL.green, 13), lb(160, 114, 'すぐ目の前にあります', 12, C.green, 'middle', true), ...cap('案内の締めの一言', C.green)),
+  },
+  {
+    note: 'まとめです。道案内は「動作 → 目印 → 距離・時間」の3点セットで伝えます。聞くとき・読むときも、地図の上で道順をなぞりながら、この3つを確かめましょう。',
+    add: fresh(...flow(['動作\nGo straight\nTurn left', '目印\nat the\nbookstore', '距離・時間\nfive minutes\non foot'], 20, { h: 80, size: 11, color: C.blue, fill: FILL.blue, gap: 14, pad: 8 }).flat(), lb(160, 128, '最後に You can\'t miss it.', 12, C.red, 'middle', true), ...cap('動作 → 目印 → 距離', C.green)),
+  },
+], '道案内：動作・目印・距離');
+
+// ───────── new20_e6_eigo_12 レストランでの会話を組み立てる ─────────
+const u32: DiagramFigure = show([
+  {
+    note: 'レストランに入ると、まず人数をたずねられます。How many people?（何名様ですか）に、A table for two, please.（2人用の席をお願いします）と答えます。This way, please.（こちらへどうぞ）と案内されます。',
+    add: [bx(6, 10, 308, 28, 'Waiter: How many people?', C.blue, FILL.blue, 12), lb(160, 50, '何名様ですか', 11, C.blue, 'middle', true), bx(6, 62, 308, 28, 'Customer: A table for two, please.', C.green, FILL.green, 12), lb(160, 102, '2人用の席をお願いします', 11, C.green, 'middle', true), bx(6, 112, 308, 28, 'Waiter: This way, please.', C.blue, FILL.blue, 12), ...cap('入店して席へ')],
+  },
+  {
+    note: '❓How many people? に、なぜ文で答えるのでしょう。→ 数字だけの Two. でも通じますが、会話文では A table for ~, please.（〜人用の席を）と文で答えるのが自然だからです。席の希望は Can we have a table by the window?（窓際の席にできますか）、We\'d like a table for four, please.（4人用の席をお願いします）。メニューを渡されたら Here is the menu. Take your time.（ごゆっくりどうぞ）に Thank you. と答えます。',
+    add: fresh(bx(6, 6, 308, 26, 'Can we have a table by the window?', C.blue, FILL.blue, 11), lb(160, 44, '窓際の席にできますか', 11, C.blue, 'middle', true), bx(6, 56, 308, 26, "We'd like a table for four, please.", C.green, FILL.green, 11), lb(160, 94, '4人用の席をお願いします', 11, C.green, 'middle', true), bx(6, 106, 308, 26, 'Here is the menu. Take your time.', C.purple, FILL.purple, 11), lb(160, 144, 'メニューです。ごゆっくりどうぞ', 10, C.purple, 'middle', true), ...band(150, lb(160, 192, '席の希望と、メニュー', 12, C.main, 'middle', true))),
+  },
+  {
+    note: 'おすすめをたずねるときは What do you recommend?（おすすめは何ですか）。答えは I recommend the beef curry. It\'s very popular here.（ビーフカレーがおすすめです。ここでとても人気です）です。recommend は「すすめる」という意味です。',
+    add: fresh(bx(6, 12, 308, 30, 'What do you recommend?', C.blue, FILL.blue, 14), lb(160, 56, 'おすすめは何ですか', 12, C.blue, 'middle', true), ar(160, 66, 160, 80, C.main), bx(6, 84, 308, 40, 'I recommend the beef curry.\nIt\'s very popular here.', C.green, FILL.green, 12), lb(160, 138, 'ビーフカレーがおすすめです。ここで人気', 11, C.green, 'middle', true), ...band(150, lb(160, 192, 'おすすめをたずねる', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '注文です。I\'d like the hamburger steak, please.（ハンバーグステーキをお願いします）、Can I have a salad, too?（サラダもいただけますか）。店員さんは What would you like?（何になさいますか）とたずねます。',
+    add: fresh(bx(6, 10, 308, 30, "I'd like the hamburger steak, please.", C.green, FILL.green, 12), lb(160, 54, 'ハンバーグステーキをお願いします', 11, C.green, 'middle', true), bx(6, 68, 308, 30, 'Can I have a salad, too?', C.green, FILL.green, 13), lb(160, 112, 'サラダもいただけますか', 11, C.green, 'middle', true), bx(6, 122, 308, 24, 'Waiter: What would you like?', C.blue, FILL.blue, 11), ...band(150, lb(160, 192, '注文する', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '❓注文のとき、なぜ I want ではなく I\'d like を使うのでしょう。→ I\'d like ~. のほうがていねいで、接客の会話にふさわしいからです。I want a hamburger. もまちがいではありませんが、問題では I\'d like ~. のほうが自然な選択として問われやすいです。',
+    add: fresh(bx(6, 14, 148, 34, 'I want a hamburger.', C.gray, FILL.gray, 11), lb(80, 62, 'まちがいではない', 11, C.gray, 'middle', true), bx(166, 14, 148, 34, "I'd like a hamburger.", C.green, FILL.green, 11), lb(240, 62, 'ていねいで自然', 11, C.green, 'middle', true), lb(160, 104, 'お店では I\'d like ~. を選ぶ', 13, C.ink, 'middle', true), ...cap('レストランでの注文はていねいに', C.green)),
+  },
+  {
+    note: '飲み物と追加です。What would you like to drink?（お飲み物は何になさいますか）に I\'ll have orange juice, please.（オレンジジュースをお願いします）。Anything else?（他に何かございますか）に No, that\'s all, thank you.（いいえ、以上です）。',
+    add: fresh(bx(6, 6, 308, 26, 'Waiter: What would you like to drink?', C.blue, FILL.blue, 11), bx(6, 38, 308, 26, "Customer: I'll have orange juice, please.", C.green, FILL.green, 11), bx(6, 70, 308, 26, 'Waiter: Anything else?', C.blue, FILL.blue, 11), bx(6, 102, 308, 26, "Customer: No, that's all, thank you.", C.green, FILL.green, 11), lb(160, 144, '他にありますか？ → 以上です', 10, C.ink, 'middle', true), ...band(150, lb(160, 192, '飲み物と、追加のやり取り', 12, C.main, 'middle', true))),
+  },
+  {
+    note: 'お会計です。Check, please. か Can I have the bill, please?（お会計をお願いします）。That will be 1,800 yen.（1,800円になります）、Here you are.（どうぞ）、Have a nice day.（良い一日を）。',
+    add: fresh(bx(6, 6, 308, 26, 'Can I have the bill, please?', C.green, FILL.green, 12), bx(6, 38, 308, 26, 'That will be 1,800 yen.', C.blue, FILL.blue, 12), bx(6, 70, 308, 26, 'Here you are.', C.green, FILL.green, 12), bx(6, 102, 308, 26, 'Have a nice day.', C.blue, FILL.blue, 12), lb(160, 144, 'Check, please. でも お会計をお願いできる', 10, C.ink, 'middle', true), ...band(150, lb(160, 192, '会計の言い方', 12, C.main, 'middle', true))),
+  },
+  {
+    note: 'まとめです。レストランの会話は、入店（人数・席）→ 注文（おすすめ・飲み物・追加）→ 会計（bill）の順に進みます。買い物の会話と同じ「入る・頼む・払う」の流れなので、1つの場面を覚えれば似た場面にも使えます。',
+    add: fresh(...flow(['入店\nA table\nfor two', '注文\nI\'d like\n~, please.', '追加\nAnything\nelse?', '会計\nthe bill,\nplease.'], 14, { h: 82, size: 10, color: C.blue, fill: FILL.blue, gap: 8, pad: 6 }).flat(), lb(160, 118, '買い物の会話と よく似た流れ', 12, C.red, 'middle', true), ...cap('入店 → 注文 → 会計', C.green)),
+  },
+], 'レストランの会話：入店から会計まで');
+
+// ───────── new20_e6_eigo_13 空港・旅行での会話 ─────────
+const u33: DiagramFigure = show([
+  {
+    note: '空港のチェックインカウンターでは、決まった質問をされます。May I see your passport and ticket, please?（パスポートとチケットを見せていただけますか）に Here you are.（どうぞ）。Window or aisle seat?（窓側と通路側、どちらがよろしいですか）に Window seat, please.（窓側でお願いします）。',
+    add: [bx(6, 6, 308, 26, 'Staff: May I see your passport and ticket, please?', C.blue, FILL.blue, 10), bx(6, 38, 308, 24, 'Passenger: Here you are.', C.green, FILL.green, 11), bx(6, 68, 308, 24, 'Staff: Window or aisle seat?', C.blue, FILL.blue, 11), bx(6, 98, 308, 24, 'Passenger: Window seat, please.', C.green, FILL.green, 11), lb(160, 138, '窓側（window）か 通路側（aisle）か', 10, C.ink, 'middle', true), ...cap('チェックイン①')],
+  },
+  {
+    note: '荷物についての会話です。How many bags are you checking in?（お預けになる荷物はいくつですか）に Just one, please.（1つだけです）。Please put your bag on the scale.（かばんをはかりに乗せてください）。I\'m sorry, this is over the weight limit.（申し訳ございません、重量制限を超えています）と言われることもあります。check in a bag は「かばんを預ける」という意味の動詞のまとまりで、名詞の check-in（ハイフンあり）とは形で区別します。',
+    add: fresh(bx(6, 6, 308, 26, 'How many bags are you checking in?', C.blue, FILL.blue, 11), bx(6, 36, 308, 24, 'Just one, please.', C.green, FILL.green, 11), bx(6, 64, 308, 24, 'Please put your bag on the scale.', C.blue, FILL.blue, 11), bx(6, 92, 308, 26, "I'm sorry, this is over the weight limit.", C.red, FILL.red, 10), lb(160, 134, 'weight limit ＝ 重量制限', 10, C.red, 'middle', true), ...band(150, lb(160, 192, 'チェックイン②（荷物）', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '搭乗券（とうじょうけん）を受け取ります。Here is your boarding pass. Your flight leaves from Gate 25 at 10:30.（こちらが搭乗券です。あなたの便は10時30分にゲート25から出発します）。ゲート番号と出発時刻が、聞き取りのポイントです。',
+    add: fresh(bx(40, 10, 240, 90, undefined, C.main, FILL.warm), lb(160, 28, 'boarding pass', 13, C.main, 'middle', true), lb(60, 56, 'Gate:  25', 14, C.blue, 'start', true), lb(60, 84, 'Time:  10:30', 14, C.red, 'start', true), lb(160, 122, 'Your flight leaves from Gate 25 at 10:30.', 10, C.ink, 'middle', true), lb(160, 138, '10時30分にゲート25から出発', 10, C.ink, 'middle', true), ...band(150, lb(160, 192, '数字（ゲートと時刻）を聞き取る', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '飛行機の中の会話です。Excuse me, where is seat 24A?（24Aの座席はどこですか）に It\'s over there, next to the window.（あちらです、窓の隣です）。客室乗務員（きゃくしつじょうむいん）は Would you like something to drink?（お飲み物はいかがですか）、Please fasten your seatbelt.（シートベルトをお締めください）、We will be landing soon.（まもなく着陸いたします）と言います。',
+    add: fresh(bx(6, 6, 308, 24, 'Excuse me, where is seat 24A?', C.green, FILL.green, 11), bx(6, 34, 308, 24, "It's over there, next to the window.", C.blue, FILL.blue, 11), bx(6, 62, 308, 24, 'Would you like something to drink?', C.blue, FILL.blue, 11), bx(6, 90, 308, 24, 'Please fasten your seatbelt.', C.blue, FILL.blue, 11), bx(6, 118, 308, 24, 'We will be landing soon.', C.blue, FILL.blue, 11), ...cap('機内の会話')),
+  },
+  {
+    note: '❓なぜ Do you want ~? ではなく Would you like ~? なのでしょう。→ would が「もしよろしければ」というやわらかさを足すことばだからです。Would you like ~? は「〜はいかがですか」とすすめるときの決まり文句で、接客の場面でよく使われます。',
+    add: fresh(bx(6, 14, 148, 34, 'Do you want ~?', C.gray, FILL.gray, 13), lb(80, 62, 'ふつう', 11, C.gray, 'middle', true), bx(166, 14, 148, 34, 'Would you like ~?', C.green, FILL.green, 13), lb(240, 62, 'ていねい（すすめる）', 11, C.green, 'middle', true), bx(30, 88, 260, 30, 'Would you like something to drink?', C.green, FILL.green, 11), lb(160, 134, 'お飲み物はいかがですか', 11, C.green, 'middle', true), ...band(150, lb(160, 192, '接客では Would you like ~?', 12, C.green, 'middle', true))),
+  },
+  {
+    note: '機内アナウンスです。Please stay in your seat.（お席にお座りください）、We are now beginning our descent.（ただいま降下を始めております）、Thank you for flying with us.（ご搭乗ありがとうございました）。',
+    add: fresh(bx(6, 10, 308, 28, 'Please stay in your seat.', C.blue, FILL.blue, 12), lb(160, 50, 'お席にお座りください', 11, C.blue, 'middle', true), bx(6, 62, 308, 28, 'We are now beginning our descent.', C.blue, FILL.blue, 11), lb(160, 102, 'ただいま降下を始めております', 11, C.blue, 'middle', true), bx(6, 114, 308, 26, 'Thank you for flying with us.', C.blue, FILL.blue, 11), ...band(150, lb(160, 192, '機内アナウンス', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '入国審査です。What\'s the purpose of your visit?（訪問の目的は何ですか）に Sightseeing.（観光です）か I\'m here on business.（仕事で来ています）。How long will you stay?（どのくらい滞在しますか）に For one week.（1週間です）。Where will you be staying?（どこに滞在しますか）に At a hotel in the city.（市内のホテルです）。',
+    add: fresh(bx(6, 6, 190, 26, "What's the purpose of your visit?", C.blue, FILL.blue, 10), bx(204, 6, 110, 26, 'Sightseeing.', C.green, FILL.green, 11), bx(6, 38, 190, 26, 'How long will you stay?', C.blue, FILL.blue, 11), bx(204, 38, 110, 26, 'For one week.', C.green, FILL.green, 11), bx(6, 70, 190, 26, 'Where will you be staying?', C.blue, FILL.blue, 11), bx(204, 70, 110, 26, 'At a hotel.', C.green, FILL.green, 11), lb(160, 116, '目的 ・ 期間 ・ 滞在先', 13, C.red, 'middle', true), lb(160, 136, 'I\'m here on business. ＝ 仕事で来ています', 10, C.ink, 'middle', true), ...band(150, lb(160, 192, '入国審査でたずねられること', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '❓なぜ旅行英語は、場面ごとに覚えると得点しやすいのでしょう。→ 聞かれることがほぼ決まっていて、決まった質問には決まった答え方があるからです。場面がわかれば、知らない語が出ても内容を推測できます。入国審査では「目的」と「期間」の二つがほぼ必ず聞かれます。',
+    add: fresh(bx(6, 8, 98, 54, 'チェックイン\npassport\nwindow or aisle', C.blue, FILL.blue, 10), bx(111, 8, 98, 54, '機内\nsomething to\ndrink?', C.green, FILL.green, 10), bx(216, 8, 98, 54, '入国審査\npurpose\nhow long', C.red, FILL.red, 10), lb(160, 88, '場面がわかれば、質問を予想できる', 13, C.ink, 'middle', true), lb(160, 112, '入国審査は 目的 と 期間 が定番', 12, C.red, 'middle', true), ...cap('場面ごとに セットで覚える', C.main)),
+  },
+  {
+    note: 'まとめです。旅行英語は、チェックイン（passport・seat・bags）→ 機内（drink・seatbelt・landing）→ 入国審査（purpose・how long・where）の順に、場面ごとの質問と答えをセットで覚えます。質問の中身を先に予想してから聞くと、聞き取りやすくなります。',
+    add: fresh(...flow(['チェック\nイン', '機内', '入国\n審査'], 14, { h: 52, size: 12, color: C.blue, fill: FILL.blue, gap: 14, pad: 10 }).flat(), lb(160, 86, 'passport ・ seat ・ bags', 11, C.blue, 'middle', true), lb(160, 104, 'drink ・ seatbelt ・ landing', 11, C.green, 'middle', true), lb(160, 122, 'purpose ・ how long ・ where', 11, C.red, 'middle', true), ...cap('3つの場面を順に', C.green)),
+  },
+], '空港・旅行の会話：場面ごとの質問と答え');
+
 export const XF_CEL_FIGURES: Record<string, DiagramFigure> = {
   'xf_new20_e5_eigo_11': u11,
   'xf_new20_e5_eigo_12': u12,
@@ -733,6 +922,11 @@ export const XF_CEL_FIGURES: Record<string, DiagramFigure> = {
   'xf_new20_e6_eigo_06': u26,
   'xf_new20_e6_eigo_07': u27,
   'xf_new20_e6_eigo_08': u28,
+  'xf_new20_e6_eigo_09': u29,
+  'xf_new20_e6_eigo_10': u30,
+  'xf_new20_e6_eigo_11': u31,
+  'xf_new20_e6_eigo_12': u32,
+  'xf_new20_e6_eigo_13': u33,
 };
 
 export const XF_CEL_SECTIONS: Record<string, string> = {
@@ -754,4 +948,9 @@ export const XF_CEL_SECTIONS: Record<string, string> = {
   'new20_e6_eigo_06#0': 'xf_new20_e6_eigo_06',
   'new20_e6_eigo_07#0': 'xf_new20_e6_eigo_07',
   'new20_e6_eigo_08#0': 'xf_new20_e6_eigo_08',
+  'new20_e6_eigo_09#0': 'xf_new20_e6_eigo_09',
+  'new20_e6_eigo_10#0': 'xf_new20_e6_eigo_10',
+  'new20_e6_eigo_11#0': 'xf_new20_e6_eigo_11',
+  'new20_e6_eigo_12#0': 'xf_new20_e6_eigo_12',
+  'new20_e6_eigo_13#0': 'xf_new20_e6_eigo_13',
 };
