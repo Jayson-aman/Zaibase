@@ -4,7 +4,11 @@ import { Alert, Platform } from 'react-native';
  * 「はい／いいえ」の確認。react-native-web の Alert.alert は何もしない（空の関数）ので、
  * Web版では window.confirm を使う。使わないと、Web版の購入ボタンが何も起きなくなる。
  */
-export function confirmDialog(title: string, message: string): Promise<boolean> {
+export function confirmDialog(
+  title: string,
+  message: string,
+  labels?: { confirm?: string; cancel?: string },
+): Promise<boolean> {
   if (Platform.OS === 'web') {
     try {
       return Promise.resolve(window.confirm(`${title}\n\n${message}`));
@@ -17,8 +21,8 @@ export function confirmDialog(title: string, message: string): Promise<boolean> 
       title,
       message,
       [
-        { text: 'やめる', style: 'cancel', onPress: () => resolve(false) },
-        { text: '購入へ進む', onPress: () => resolve(true) },
+        { text: labels?.cancel ?? 'やめる', style: 'cancel', onPress: () => resolve(false) },
+        { text: labels?.confirm ?? '購入へ進む', onPress: () => resolve(true) },
       ],
       { cancelable: true, onDismiss: () => resolve(false) },
     );
@@ -36,4 +40,23 @@ export function noticeDialog(title: string, message: string): void {
     return;
   }
   Alert.alert(title, message);
+}
+
+/**
+ * 買い切りの購入の前に、ログイン（無料のアカウント登録）を求める。
+ * 購入をアカウントに結びつけておかないと、再インストールや機種変更で解放が消えてしまう。
+ * 返り値は「このまま購入に進んでよいか」。ログインしていなければ、案内を出して false を返す。
+ */
+export async function ensureLoggedInForPurchase(
+  isLoggedIn: boolean,
+  goLogin: () => void,
+): Promise<boolean> {
+  if (isLoggedIn) return true;
+  const go = await confirmDialog(
+    'ログインが必要です',
+    '買い切りの購入は、アカウントに保存されます。再インストールや機種変更のときも、解放した内容を引き継げます。\n\n無料のアカウント登録（メールアドレス）をしてから、もう一度お試しください。',
+    { confirm: 'ログインへ', cancel: 'あとで' },
+  );
+  if (go) goLogin();
+  return false;
 }

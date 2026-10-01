@@ -81,6 +81,20 @@ async function unlockIfNeeded(config, uid, itemId) {
   );
 }
 
+// そのセッションの支払いが、すでに返金・チャージバックされているか。
+// Checkoutセッションの payment_status は返金後も "paid" のままなので、過去のsession_idで
+// confirmAhiruUnlockCheckout を呼ぶと、取り消したはずの解放が復活してしまう。
+// 支払い（PaymentIntent）の最新の請求（charge）を見て判定する。
+async function isSessionRefunded(stripe, session) {
+  const pi = session.payment_intent;
+  if (!pi) return false;
+  const piId = typeof pi === "string" ? pi : pi.id;
+  const intent = await stripe.paymentIntents.retrieve(piId, { expand: ["latest_charge"] });
+  const ch = intent.latest_charge;
+  if (!ch || typeof ch === "string") return false;
+  return ch.refunded === true || (ch.amount_refunded ?? 0) > 0 || ch.disputed === true;
+}
+
 // 返金・チャージバックされたら解放を取り消す。
 async function revokeIfRefunded(stripe, charge) {
   const pi = charge.payment_intent;
@@ -199,6 +213,9 @@ exports.confirmAhiruUnlockCheckout = onCall(
     if (session.payment_status !== "paid") {
       throw new HttpsError("failed-precondition", "決済が完了していません");
     }
+    if (await isSessionRefunded(stripe, session)) {
+      throw new HttpsError("failed-precondition", "この決済は返金済みのため、解放できません");
+    }
 
     const type = session.metadata?.type;
     const itemId = session.metadata?.item_id;
@@ -240,7 +257,14 @@ exports.ahiruUnlockWebhook = onRequest(
           const itemId = obj.metadata?.item_id;
           const config = TYPE_CONFIG[type];
           if (uid && config && itemId) {
-            await unlockIfNeeded(config, uid, itemId);
+            // 返金後に、同じ完了イベントが再送されても解放し直さない。確認に失敗したときは、解放を優先する。
+            let refunded = false;
+            try {
+              refunded = await isSessionRefunded(stripe, obj);
+            } catch (err) {
+              console.error("ahiruUnlockWebhook refund check error:", err.message);
+            }
+            if (!refunded) await unlockIfNeeded(config, uid, itemId);
           }
         }
       } else if (event.type === "charge.refunded" || event.type === "charge.dispute.created") {

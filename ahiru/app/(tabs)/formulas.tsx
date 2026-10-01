@@ -23,7 +23,8 @@ import InlineQuiz from '../../components/InlineQuiz';
 import { formulaImages } from '../../data/formulaImages';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
 import { PRICES, formatYen, FORMULA_BUNDLE_ITEM_CAP } from '../../constants/pricing';
-import { confirmDialog, noticeDialog } from '../../utils/dialog';
+import { confirmDialog, noticeDialog, ensureLoggedInForPurchase } from '../../utils/dialog';
+import { useAuthUser } from '../../hooks/useAuthUser';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 
@@ -280,6 +281,7 @@ function subjectLabel(key: Subject, examType: ExamType): string {
 
 export default function FormulasScreen() {
   const router = useRouter();
+  const { isLoggedIn } = useAuthUser();
   const [subject, setSubject] = useState<Subject>('算数');
   // 図解画像の一辺。画面幅から1回だけ決める。行ごとに測り直すと、
   // スクロールで行が外れて戻るたびに測り直しが走り、画像が点滅する。
@@ -366,6 +368,7 @@ export default function FormulasScreen() {
   const bundleOffPercent = Math.max(0, Math.round((1 - bundleValue / Math.max(0.01, fullValue)) * 100));
 
   const handleUnlock = React.useCallback(async (label: string) => {
+    if (!(await ensureLoggedInForPurchase(isLoggedIn, () => router.push('/login' as any)))) return;
     const ok = await confirmDialog(
       '購入の確認',
       `「${label}」を ${priceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
@@ -381,9 +384,10 @@ export default function FormulasScreen() {
       return;
     }
     noticeDialog('解放しました', `「${label}」はこれ以降ずっと無料で見られます。あと${FORMULA_BUNDLE_ITEM_CAP - boughtCount - 1}項目で、この教科は全部そろいます。`);
-  }, [unlockFormula, boughtCount, priceLabel]);
+  }, [unlockFormula, boughtCount, priceLabel, isLoggedIn, router]);
 
   const handleUnlockBundle = React.useCallback(async (id: string) => {
+    if (!(await ensureLoggedInForPurchase(isLoggedIn, () => router.push('/login' as any)))) return;
     const ok = await confirmDialog(
       '購入の確認',
       `この教科のロック中の公式${bundleCount}項目を、ぜんぶ ${bundlePriceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
@@ -395,7 +399,7 @@ export default function FormulasScreen() {
       return;
     }
     noticeDialog('解放しました', 'この教科の公式集は、これ以降ずっと無料で見られます。');
-  }, [unlockFormula, bundleCount, bundlePriceLabel]);
+  }, [unlockFormula, bundleCount, bundlePriceLabel, isLoggedIn, router]);
 
   // セクション見出しと項目を1本のリストにならし、FlatListで仮想化できるようにする
   type Row =

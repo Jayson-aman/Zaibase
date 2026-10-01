@@ -21,7 +21,7 @@ const PENDING_KEY_PREFIX = 'unit_unlock_pending_';
 
 async function markPurchasePending(lessonId: string): Promise<void> {
   try {
-    await AsyncStorage.setItem(`${PENDING_KEY_PREFIX}${lessonId}`, '1');
+    await AsyncStorage.setItem(`${PENDING_KEY_PREFIX}${lessonId}`, String(Date.now()));
   } catch {
     // 保存に失敗しても処理は続行する
   }
@@ -29,7 +29,16 @@ async function markPurchasePending(lessonId: string): Promise<void> {
 
 async function isPurchasePending(lessonId: string): Promise<boolean> {
   try {
-    return (await AsyncStorage.getItem(`${PENDING_KEY_PREFIX}${lessonId}`)) === '1';
+    const v = await AsyncStorage.getItem(`${PENDING_KEY_PREFIX}${lessonId}`);
+    if (!v) return false;
+    // 24時間たっても確認できないものは「確認待ち」を解く。解かないと、別の理由で確認が通らない項目を
+    // 二度と買えなくなる。（決済から24時間たてば、RevenueCat側にも購入が反映されている）
+    const t = Number(v);
+    if (t > 1 && Date.now() - t > 24 * 60 * 60 * 1000) {
+      await AsyncStorage.removeItem(`${PENDING_KEY_PREFIX}${lessonId}`);
+      return false;
+    }
+    return true;
   } catch {
     return false;
   }

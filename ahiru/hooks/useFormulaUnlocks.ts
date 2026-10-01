@@ -22,7 +22,7 @@ const PENDING_KEY_PREFIX = 'formula_unlock_pending_';
 
 async function markPurchasePending(figureId: string): Promise<void> {
   try {
-    await AsyncStorage.setItem(`${PENDING_KEY_PREFIX}${figureId}`, '1');
+    await AsyncStorage.setItem(`${PENDING_KEY_PREFIX}${figureId}`, String(Date.now()));
   } catch {
     // 保存に失敗しても処理は続行する（最悪ケースは確認リトライが尽きた後の
     // 再購入リスクが残るだけで、確認自体は今回の呼び出し内でリトライされる）
@@ -31,7 +31,16 @@ async function markPurchasePending(figureId: string): Promise<void> {
 
 async function isPurchasePending(figureId: string): Promise<boolean> {
   try {
-    return (await AsyncStorage.getItem(`${PENDING_KEY_PREFIX}${figureId}`)) === '1';
+    const v = await AsyncStorage.getItem(`${PENDING_KEY_PREFIX}${figureId}`);
+    if (!v) return false;
+    // 24時間たっても確認できないものは「確認待ち」を解く。解かないと、別の理由で確認が通らない項目を
+    // 二度と買えなくなる。（決済から24時間たてば、RevenueCat側にも購入が反映されている）
+    const t = Number(v);
+    if (t > 1 && Date.now() - t > 24 * 60 * 60 * 1000) {
+      await AsyncStorage.removeItem(`${PENDING_KEY_PREFIX}${figureId}`);
+      return false;
+    }
+    return true;
   } catch {
     return false;
   }

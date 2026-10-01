@@ -23,13 +23,15 @@ import HomeButton from '../../components/HomeButton';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
-import { confirmDialog, noticeDialog } from '../../utils/dialog';
+import { confirmDialog, noticeDialog, ensureLoggedInForPurchase } from '../../utils/dialog';
+import { useAuthUser } from '../../hooks/useAuthUser';
 import { useUnitUnlocks } from '../../hooks/useUnitUnlocks';
 import { subjectInfo } from '../../data/questions-meta';
 
 export default function LessonDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
+  const { isLoggedIn } = useAuthUser();
   // loading を見ずに isPro/isMax だけで分岐すると、課金状態の取得が終わるまでの
   // 一瞬、加入者にも「Proプランで閲覧できます」のロック画面が出てしまう。
   const { isPro: subIsPro, isMax: subIsMax, loading: subLoading } = useSubscription();
@@ -63,6 +65,7 @@ export default function LessonDetailScreen() {
   }, [lesson, isKoushikiLesson, subjectPool, isMax]);
 
   async function handleUnlockFormula(figureId: string, heading: string) {
+    if (!(await ensureLoggedInForPurchase(isLoggedIn, () => router.push('/login' as any)))) return;
     const okFormula = await confirmDialog(
       '購入の確認',
       `「${heading}」を ${formulaUnlockPriceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
@@ -77,6 +80,7 @@ export default function LessonDetailScreen() {
   }
 
   async function handleUnlockUnit(lessonId: string, title: string) {
+    if (!(await ensureLoggedInForPurchase(isLoggedIn, () => router.push('/login' as any)))) return;
     const ok = await confirmDialog(
       '購入の確認',
       `「${title}」を ${unitUnlockPriceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
