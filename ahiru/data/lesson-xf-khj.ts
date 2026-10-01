@@ -1,7 +1,7 @@
 // 高校受験 社会（地理の総復習・資料の読み取り・歴史 古代〜近世）30 単元の「動く図解スライド」。
 // 「なぜ？」の連鎖で、7枚以上。単元の節（section）ごとに 1 枚の図解をひもづける。
 import type { DiagramElement, DiagramFigure } from './figures';
-import { C, FILL, bx, lb, ar, ln, ci, pg, show, fresh, band, flow, stack } from './diagram-kit';
+import { C, FILL, bx, lb, ar, ln, ci, pg, show, fresh, flow, stack } from './diagram-kit';
 
 type Col = [string, string];
 const BLUE: Col = [C.blue, FILL.blue];
@@ -10,7 +10,6 @@ const RED: Col = [C.red, FILL.red];
 const MAIN: Col = [C.main, FILL.warm];
 const PURPLE: Col = [C.purple, FILL.purple];
 const GRAY: Col = [C.gray, FILL.gray];
-const YELLOW: Col = [C.main, FILL.yellow];
 type El = DiagramElement;
 
 const cap = (t: string, c: Col = BLUE, size = 12): El => {
@@ -21,11 +20,6 @@ const cap = (t: string, c: Col = BLUE, size = 12): El => {
 const S = (note: string, top: El[], capText: string, c: Col = BLUE, size = 12) => ({
   note,
   add: fresh(...top, cap(capText, c, size)),
-});
-// 前の図に描き足し、下の帯だけ書きかえる
-const A = (note: string, top: El[], capText: string, c: Col = BLUE, size = 12) => ({
-  note,
-  add: [...top, ...band(164, cap(capText, c, size))],
 });
 // 「なぜ？」の問い → 答え
 const Q = (note: string, q: string, a: string, capText: string, c: Col = BLUE, aSize = 12) =>
