@@ -12,6 +12,7 @@ import { kokoEigoLessons } from './lessons-koko-eigo';
 import { kokoShakaiLessons } from './lessons-koko-shakai';
 
 import { EXTRA_SECTION_FIGURES } from './lesson-extra-figures';
+import { EXTRA_SECTIONS } from './lesson-extra-sections';
 
 export type { Lesson };
 
@@ -39,6 +40,11 @@ export const allLessons: Lesson[] = baseLessons.map((l) => {
     changed = true;
     return { ...sec, figureId: fid };
   });
+  // 前提になる計算の出し方（data/lesson-extra-sections.ts）を、節0の直後に差しこむ。
+  const extra = EXTRA_SECTIONS[l.id];
+  if (extra && extra.length > 0) {
+    return { ...l, sections: [...sections.slice(0, 1), ...extra, ...sections.slice(1)] };
+  }
   return changed ? { ...l, sections } : l;
 });
 
