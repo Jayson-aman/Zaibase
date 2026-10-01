@@ -368,7 +368,7 @@ XF['xf_eigo_s350'] = show([
     [hd('母音字 ＋ y → そのまま -s'), ...vs('monkies', 'monkeys', 38, 44, 15), lb(160, 104, 'monkey の y の前は e（母音字）', 13, C.blue, 'middle', true), lb(160, 126, 'boy → boys ／ day → days', 13, C.gray)],
     '入試で必ず問われる monkeys', RED),
   FS('まとめです。①sheep・deer・fish は同じ形。②mouse → mice、goose → geese。③f → ves。④-x などは -es。⑤子音字 ＋ y は ies、母音字 ＋ y は ys。',
-    [hd('まとめ'), ...grid([['① sheep deer fish\n形がそのまま', BLUE], ['② mice geese\n形が変わる', MAIN], ['③ wolf → wolves\nf → ves', GREEN], ['④ fox → foxes\n-x は -es', GREEN], ['⑤ butterflies\n子音字＋y → ies', RED], ['⑤ monkeys\n母音字＋y → ys', RED]], 28, 40, 11)],
+    [hd('まとめ'), ...grid([['① sheep deer fish\n形がそのまま', BLUE], ['② mice geese\n形が変わる', MAIN], ['③ wolf → wolves\nf → ves', GREEN], ['④ fox → foxes\n-x は -es', GREEN], ['⑤ butterflies\n子音字＋y → ies', RED], ['⑤ monkeys\n母音字＋y → ys', RED]], 28, 34, 11)],
     '動物の複数形は、パターンごとに覚える', MAIN),
 ], '動物の複数形のきまり');
 
