@@ -19,7 +19,6 @@ const units = (s: string) => Math.max(...s.split('\n').map((l) => [...l].reduce(
 const tw = (s: string, z: number) => units(s) * z + 14;
 
 /** 一行に並べる箱。幅は文字数から決め、はみ出すときは文字を小さくする。 */
-export const XF_KEG_WARN: string[] = []; // WARN-DEV
 let lastEnd = 300;
 const row = (y: number, items: [string, K?][], size = 12, h = 26, gap = 5): DiagramElement[] => {
   const total = (z: number) => items.reduce((a, [t]) => a + tw(t, z), 0) + gap * (items.length - 1);
@@ -34,25 +33,19 @@ const row = (y: number, items: [string, K?][], size = 12, h = 26, gap = 5): Diag
     return e;
   });
   lastEnd = x - gap;
-  if (z < 10.5) XF_KEG_WARN.push('row ' + z + ' ' + items.map((i) => i[0]).join('|')); // WARN-DEV
   return out;
 };
 /** 箱（色キーつき） */
 const nb = (x: number, y: number, w: number, h: number, t: string, k: K = 'm', size = 12) => {
   lastEnd = x + w;
-  if (size > 0 && (w - 8) / Math.max(units(t), 0.1) < 10) XF_KEG_WARN.push('nb ' + ((w - 8) / Math.max(units(t), 0.1)).toFixed(1) + ' ' + t); // WARN-DEV
   return bx(x, y, w, h, t, KC[k][0], KC[k][1], size);
 };
-const chk = (t: string, size: number) => { if (312 / Math.max(units(t), 0.1) < Math.min(size, 10.5)) XF_KEG_WARN.push('lb ' + (312 / units(t)).toFixed(1) + ' ' + t); return true; }; // WARN-DEV
 /** 上のタイトル */
-const tt = (t: string, k: K = 'm', y = 14) => (chk(t, 12), lb(160, y, t, 12, TXT[k], 'middle', true));
+const tt = (t: string, k: K = 'm', y = 14) => lb(160, y, t, 12, TXT[k], 'middle', true);
 /** 下のひとこと */
-const cp = (t: string, k: K = 'm', y = 205, size = 13) => (chk(t, size), lb(160, y, t, size, TXT[k], 'middle', true));
+const cp = (t: string, k: K = 'm', y = 205, size = 13) => lb(160, y, t, size, TXT[k], 'middle', true);
 /** 小さな説明文 */
-const sm = (x: number, y: number, t: string, k: K = 'n', size = 11, anchor: 'start' | 'middle' | 'end' = 'middle') => {
-  if (312 / Math.max(units(t), 0.1) < 10) XF_KEG_WARN.push('sm ' + t); // WARN-DEV
-  return lb(x, y, t, size, TXT[k], anchor, false);
-};
+const sm = (x: number, y: number, t: string, k: K = 'n', size = 11, anchor: 'start' | 'middle' | 'end' = 'middle') => lb(x, y, t, size, TXT[k], anchor, false);
 /** ○と× */
 const mx = () => Math.min(lastEnd + 12, 312);
 const ok = (_x: number, y: number) => lb(mx(), y, '○', 20, C.green, 'middle', true);
@@ -1024,12 +1017,12 @@ reg('koko_eigo_s316', 0, [
     cp('if 節の中は現在形（× If you will turn）', 'm', 185, 12)),
   S('逆向きの書きかえもできます。If you get up early, you will catch the first train. → Get up early, and you will catch the first train. if 節の主語 you と If を取り、動詞を原形にして命令文にします。',
     tt('If → 命令文, and'),
-    ...row(28, [['If you get up early,', 'b']], 13, 26),
-    ...row(58, [['you will catch the first train.', 'g']], 13, 26),
-    ar(160, 88, 160, 104, C.main),
-    ...row(110, [['Get up early,', 'b'], ['and', 'p']], 13, 26),
-    ...row(140, [['you will catch the first train.', 'g']], 13, 26),
-    cp('If と主語を取り、原形で始める', 'm', 190, 13)),
+    ...row(32, [['If you get up early,', 'b']], 13, 26),
+    ...row(62, [['you will catch the first train.', 'g']], 13, 26),
+    ar(160, 92, 160, 108, C.main),
+    ...row(114, [['Get up early,', 'b'], ['and', 'p']], 13, 26),
+    ...row(144, [['you will catch the first train.', 'g']], 13, 26),
+    cp('If と主語を取り、原形で始める', 'm', 196, 13)),
   S('and と or を比べます。Get up early, and you will catch the first train.（早く起きれば間に合う）。Get up early, or you will miss the first train.（早く起きないと乗り遅れる）。and は肯定の if、or は否定の if に対応します。',
     tt('and と or'),
     nb(10, 36, 142, 44, 'and\n早く起きれば…', 'g', 13), nb(168, 36, 142, 44, 'or\n早く起きないと…', 'r', 13),
@@ -1076,8 +1069,8 @@ reg('koko_eigo_s318', 0, [
     sm(160, 190, 'Because it was raining, I stayed home.', 'n', 12)),
   S('「熱があったので学校を休んだ」で確かめましょう。I had a fever, so I was absent from school.（理由が先）。I was absent from school because I had a fever.（結果が先）。内容は同じで、書く順序によって接続詞が変わります。',
     tt('同じ内容を2通りで'),
-    ...row(26, [['I had a fever,', 'b'], ['so', 'p']], 13, 26),
-    ...row(56, [['I was absent from school.', 'g']], 13, 26),
+    ...row(32, [['I had a fever,', 'b'], ['so', 'p']], 13, 26),
+    ...row(62, [['I was absent from school.', 'g']], 13, 26),
     ...row(106, [['I was absent from school', 'g'], ['because', 'p']], 12, 26),
     ...row(136, [['I had a fever.', 'b']], 13, 26),
     cp('順序で接続詞が決まる', 'm', 190, 14)),

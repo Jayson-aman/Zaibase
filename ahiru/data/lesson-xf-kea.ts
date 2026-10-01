@@ -457,7 +457,7 @@ const e03: DiagramFigure = show([
   },
   {
     note: '❓ステップ②：なぜ主語 I を省略できるのでしょう。→ 副詞節の主語（I）が、主節の主語（I）と同じだからです。同じ人のことだと分かるので、一方を省いてよいのです。',
-    add: [strike(r1, 1, 30), ar(r1.xs[1] + 10, 58, r1.xs[4] + 10, 58, C.red, true), lb(160, 76, '同じ I だから、前の I は省ける', 11, C.red, 'middle', true), ...band(150, lb(160, 190, '② 主節と同じ主語は省く', 12, C.red, 'middle', true))],
+    add: [strike(r1, 1, 30), ar(r1.xs[1] + 10, 64, r1.xs[4] + 10, 64, C.red, true), lb(160, 82, '同じ I だから、前の I は省ける', 11, C.red, 'middle', true), ...band(150, lb(160, 190, '② 主節と同じ主語は省く', 12, C.red, 'middle', true))],
   },
   {
     note: 'ステップ③：動詞を -ing 形にします。was は be 動詞なので Being になります。Being tired, I went to bed early. 「疲れていたので、早く寝た」の意味です。',
