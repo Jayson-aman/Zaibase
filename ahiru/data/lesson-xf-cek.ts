@@ -594,6 +594,186 @@ const u15: DiagramFigure = show([
     add: fresh(B(10, 20, 300, `① I'm ＋ 気持ち（tired, happy…）`, C.blue, FILL.blue, 36), B(10, 68, 300, '② because ＋ 理由', C.red, FILL.red, 36), B(10, 116, 300, `③ Are you OK? / What's wrong?`, C.green, FILL.green, 36), K('気持ちの答え方')),
   },
 ], '気持ちの答え方');
+
+// ───────── What's this?でものをたずねる ─────────
+const u16: DiagramFigure = show([
+  {
+    note: `❓this と that は、どうちがうの？→ 話（はな）し手（て）からの距離（きょり）です。近（ちか）くにあるものは this、離（はな）れているものは that。日本語（にほんご）の「これ・あれ」と同（おな）じ区別（くべつ）です。`,
+    add: fresh(T('近い → this / 遠い → that'), ci(40, 90, 16, '私', C.main, FILL.warm, 12), ci(100, 90, 12, '', C.red, FILL.red), lb(100, 120, 'this', 14, C.red, 'middle', true), ci(250, 90, 12, '', C.blue, FILL.blue), lb(250, 120, 'that', 14, C.blue, 'middle', true), ln(60, 90, 86, 90, C.red), ln(60, 90, 236, 90, C.blue, true), K('距離で選ぶ')),
+  },
+  {
+    note: `近（ちか）くのものは What's this?（これは何（なん）ですか）とたずね、It's an apple.（りんごです）のように答（こた）えます。What's は What is を短（みじか）くした形（かたち）です。`,
+    add: fresh(T('近いもの'), B(10, 34, 220, `What's this?`, C.blue, FILL.blue, 30, 14), B(90, 78, 220, `It's an apple.`, C.green, FILL.green, 30, 14), lb(160, 138, `What's ＝ What is`, 13, C.ink, 'middle', true), K('近くのものは this')),
+  },
+  {
+    note: `遠（とお）くのものは What's that?（あれは何ですか）とたずね、It's a bird.（鳥です）のように答えます。`,
+    add: fresh(T('遠いもの'), B(10, 34, 220, `What's that?`, C.blue, FILL.blue, 30, 14), B(90, 78, 220, `It's a bird.`, C.green, FILL.green, 30, 14), K('遠くのものは that')),
+  },
+  {
+    note: `❓答（こた）えの a と an は、どうやって決（き）めるの？→ 次（つぎ）の語の最初の音（おと）が母音（ぼいん）（あ・い・う・え・お の音）かどうかで決まります。an apple・an orange、a pen・a car。`,
+    add: fresh(T('a か an か'), B(10, 38, 60, 'an', C.red, FILL.red), B(76, 38, 90, 'apple', C.blue, FILL.blue), B(180, 38, 60, 'an', C.red, FILL.red), B(246, 38, 64, 'orange', C.blue, FILL.blue, 26, 11), B(10, 90, 60, 'a', C.gray, FILL.gray), B(76, 90, 90, 'pen', C.blue, FILL.blue), B(180, 90, 60, 'a', C.gray, FILL.gray), B(246, 90, 64, 'car', C.blue, FILL.blue), K('次の語の最初の音で決める')),
+  },
+  {
+    note: `❓2つ以上（いじょう）のものは？→ 形（かたち）が全部（ぜんぶ）変（か）わります。What are these?（これらは何ですか）— They are apples.（りんごです）。質問（しつもん）も答えも、複数形（ふくすうけい）の形になります。`,
+    add: fresh(T('2つ以上になると'), B(10, 34, 300, 'What are these?', C.blue, FILL.blue, 30, 14), ci(100, 96, 12, '', C.red, FILL.red), ci(130, 96, 12, '', C.red, FILL.red), ci(160, 96, 12, '', C.red, FILL.red), B(10, 124, 300, 'They are apples.', C.green, FILL.green, 30, 14), K('質問も答えも複数形')),
+  },
+  {
+    note: `対応表（たいおうひょう）です。this（これ）⇔ these（これら）、that（あれ）⇔ those（あれら）、It's 〜.（それは〜です）⇔ They are 〜.（それらは〜です）。単数（たんすう）と複数（ふくすう）で、形がすべて変わります。`,
+    add: fresh(T('単数 と 複数'), ...tab([['1つ', '2つ以上'], ['this', 'these'], ['that', 'those'], [`It's 〜.`, 'They are 〜.']], 34, [120, 140], { h: 32, color: C.green, fill: FILL.green, size: 13 }), K('形がセットで変わる')),
+  },
+  {
+    note: `❓this/that/these/those を一度（いちど）に整理（せいり）するには？→「近い・遠い」と「1つ・2つ以上」の2つの区別（くべつ）を組（く）み合わせた表にします。近い1つ＝this、近い2つ以上＝these、遠い1つ＝that、遠い2つ以上＝those。`,
+    add: fresh(T('距離 × 数'), B(60, 34, 110, '1つ', C.gray, FILL.gray, 26), B(176, 34, 110, '2つ以上', C.gray, FILL.gray, 26), B(10, 64, 46, '近い', C.gray, FILL.gray, 52), B(10, 120, 46, '遠い', C.gray, FILL.gray, 52), B(60, 64, 110, 'this', C.red, FILL.red, 52, 18), B(176, 64, 110, 'these', C.red, FILL.red, 52, 18), B(60, 120, 110, 'that', C.blue, FILL.blue, 52, 18), B(176, 120, 110, 'those', C.blue, FILL.blue, 52, 18), K('2つの区別が同時に関わる')),
+  },
+  {
+    note: `まとめです。①近いなら this、遠いなら that。②2つ以上なら these / those で、答えも They are 〜. になる。③a か an は次の語の最初の音で決める。`,
+    add: fresh(B(10, 20, 300, '① 近い this / 遠い that', C.blue, FILL.blue, 36), B(10, 68, 300, '② 複数は these・those と They are', C.green, FILL.green, 36), B(10, 116, 300, '③ a か an は最初の音で決める', C.red, FILL.red, 36), K('this と that')),
+  },
+], 'this と that');
+
+// ───────── 教室でよく使う先生の指示表現 ─────────
+const u17: DiagramFigure = show([
+  {
+    note: `❓先生（せんせい）の指示（しじ）には、なぜ主語（しゅご）がないの？→ 命令文（めいれいぶん）は、主語を言わず動詞（どうし）から始（はじ）める形（かたち）だからです。You stand up. ではなく、Stand up.（立って）と言います。`,
+    add: fresh(T('命令文 ＝ 動詞から始める'), B(10, 36, 140, 'You stand up.', C.gray, FILL.gray, 36, 14), ar(155, 54, 180, 54, C.red), B(184, 36, 126, 'Stand up.', C.green, FILL.green, 36, 16), lb(160, 100, '主語（You）を言わない', 13, C.red, 'middle', true), K('動詞をそのまま先頭に')),
+  },
+  {
+    note: `動作（どうさ）の指示です。Stand up.（立ちなさい）、Sit down.（座（すわ）りなさい）、Listen.（聞（き）きなさい）、Look at me.（私を見なさい）。`,
+    add: fresh(T('動作の指示'), ...tab([['Stand up.', '立ちなさい'], ['Sit down.', '座りなさい'], ['Listen.', '聞きなさい'], ['Look at me.', '私を見なさい']], 34, [150, 140], { h: 32, head: false, color: C.blue, fill: FILL.blue, size: 13 }), K('動作をうながす')),
+  },
+  {
+    note: `もう少（すこ）し。Repeat after me.（私のあとについて言いなさい）、Raise your hand.（手を挙（あ）げなさい）、Come here.（ここに来（き）なさい）。`,
+    add: fresh(T('動作の指示 その2'), ...tab([['Repeat after me.', '私のあとについて言う'], ['Raise your hand.', '手を挙げなさい'], ['Come here.', 'ここに来なさい']], 40, [150, 150], { h: 34, head: false, color: C.blue, fill: FILL.blue, size: 12 }), K('命令文は動詞から')),
+  },
+  {
+    note: `Listen. のあとに to を付（つ）けると、聞く相手（あいて）が言えます。Listen to me.（私の話を聞いて）。Listen. だけでも「聞いて」という指示になります。`,
+    add: fresh(T('Listen と Listen to'), B(10, 38, 140, 'Listen.', C.blue, FILL.blue, 36, 16), lb(80, 92, '聞いて', 13, C.blue, 'middle', true), B(170, 38, 140, 'Listen to me.', C.green, FILL.green, 36, 14), lb(240, 92, '私の話を聞いて', 13, C.green, 'middle', true), K('to のあとに聞く相手')),
+  },
+  {
+    note: `❓please を付けるとどうなる？→ 少（すこ）していねいな言い方になります。Stand up, please.（立ってください）。先生の指示にもよく please が付きます。`,
+    add: fresh(T('please でていねいに'), B(10, 38, 140, 'Stand up.', C.blue, FILL.blue, 36, 15), B(170, 38, 140, 'Stand up, please.', C.green, FILL.green, 36, 13), lb(80, 92, '命令', 13, C.blue, 'middle', true), lb(240, 92, 'ていねい', 13, C.green, 'middle', true), K('please を付ける')),
+  },
+  {
+    note: `教科書（きょうかしょ）やノートの指示です。Open your textbook.（教科書を開（ひら）いて）、Close your book.（本を閉（と）じて）、Take out your notebook.（ノートを出して）、Write your name.（名前を書（か）いて）、Turn to page 10.（10ページを開いて）。`,
+    add: fresh(T('道具の指示'), ...tab([['Open your textbook.', '教科書を開く'], ['Close your book.', '本を閉じる'], ['Take out your notebook.', 'ノートを出す'], ['Write your name.', '名前を書く'], ['Turn to page 10.', '10ページを開く']], 32, [180, 120], { h: 28, head: false, color: C.green, fill: FILL.green, size: 11 }), K('page ＋ 数字')),
+  },
+  {
+    note: `❓わからなかったらどうする？→ Pardon?（もう一度言ってください）、One more time, please.（もう一度お願いします）、I don't understand.（わかりません）と伝（つた）えます。わかったときは OK. / I see. / Sure. です。`,
+    add: fresh(T('返事'), B(10, 34, 140, 'Pardon?', C.red, FILL.red, 28, 14), B(160, 34, 150, 'One more time, please.', C.red, FILL.red, 28, 10), B(10, 70, 300, `I don't understand.`, C.red, FILL.red, 28, 13), B(10, 114, 90, 'OK.', C.green, FILL.green, 28, 14), B(110, 114, 90, 'I see.', C.green, FILL.green, 28, 14), B(210, 114, 100, 'Sure.', C.green, FILL.green, 28, 14), K('わからない / わかった')),
+  },
+  {
+    note: `まとめです。①命令文は動詞から始める。②please を付けるとていねい。③わからないときは Pardon? / One more time, please. と伝える。`,
+    add: fresh(B(10, 20, 300, '① 命令文は 動詞から始める', C.blue, FILL.blue, 36), B(10, 68, 300, '② please でていねいに', C.green, FILL.green, 36), B(10, 116, 300, '③ Pardon? で聞き返す', C.red, FILL.red, 36), K('先生の指示')),
+  },
+], '先生の指示');
+
+// ───────── 教室でよく使うお願い・返事の表現 ─────────
+const u18: DiagramFigure = show([
+  {
+    note: `❓先生や友達（ともだち）に「〜してもいいですか」と許可（きょか）を求（もと）めるには？→ Can I 〜? の形（かたち）を使います。Can I go to the restroom?（トイレに行ってもいいですか）。`,
+    add: fresh(T('許可を求める ＝ Can I 〜?'), B(10, 34, 300, 'Can I go to the restroom?', C.blue, FILL.blue, 32, 14), B(10, 82, 300, 'Can I drink water?', C.blue, FILL.blue, 32, 14), B(10, 130, 300, 'Can I open the window?', C.blue, FILL.blue, 32, 14), K('Can I ＋ 動詞')),
+  },
+  {
+    note: `先生（せんせい）の返事（へんじ）です。Yes, you can.（はい、いいですよ）、Sure, go ahead.（もちろん、どうぞ）、Sorry, not now.（ごめんなさい、今はだめです）、Wait a minute, please.（少（すこ）し待（ま）ってください）。`,
+    add: fresh(T('許可の返事'), B(10, 34, 300, 'Yes, you can.   Sure, go ahead.', C.green, FILL.green, 32, 13), B(10, 82, 300, 'Sorry, not now.', C.red, FILL.red, 32, 14), B(10, 130, 300, 'Wait a minute, please.', C.red, FILL.red, 32, 14), K('OK の返事と ことわる返事')),
+  },
+  {
+    note: `❓物を借（か）りたいときは？→ Can I borrow 〜?（〜を借りてもいいですか）。Can I borrow your eraser? — Sure. Here you are.（いいよ。どうぞ）と、物を渡（わた）すときは Here you are. と言います。`,
+    add: fresh(T('借りる'), B(10, 32, 250, 'Can I borrow your eraser?', C.blue, FILL.blue, 28, 13), B(60, 66, 250, 'Sure. Here you are.', C.green, FILL.green, 28, 13), B(10, 100, 250, 'Thank you.', C.blue, FILL.blue, 28, 13), B(60, 134, 250, `You're welcome.`, C.green, FILL.green, 28, 13), K('Thank you. ⇔ You are welcome.')),
+  },
+  {
+    note: `❓borrow と use はどうちがう？→ borrow は「持ち帰ってもよいくらい借りる」、use は「その場で使う」ニュアンスのちがいがあります。教室ではどちらもよく使われます。Can I use your pencil?`,
+    add: fresh(T('borrow と use'), B(10, 34, 140, 'borrow', C.blue, FILL.blue, 36, 16), lb(80, 88, '借りる', 13, C.blue, 'middle', true), B(170, 34, 140, 'use', C.red, FILL.red, 36, 16), lb(240, 88, 'その場で使う', 13, C.red, 'middle', true), B(10, 120, 300, 'Can I use your pencil?', C.green, FILL.green, 32, 14), K('どちらも教室でよく使う')),
+  },
+  {
+    note: `Sorry, I don't have one.（ごめん、持っていません）と答えることもできます。ことわるときも、Sorry. から始めると感じがよくなります。`,
+    add: fresh(T('ことわるとき'), B(10, 34, 250, 'Can I borrow your ruler?', C.blue, FILL.blue, 30, 13), B(60, 80, 250, `Sorry, I don't have one.`, C.red, FILL.red, 30, 13), K('Sorry. から始める')),
+  },
+  {
+    note: `❓困（こま）ったときは？→ I don't know.（わかりません）、Help me, please.（助けてください）、Can you help me?（手伝ってもらえますか）。I need a pencil.（えんぴつが必要です）。`,
+    add: fresh(T('困ったとき'), B(10, 32, 300, `I don't know.`, C.red, FILL.red, 28, 13), B(10, 66, 300, 'Help me, please.', C.red, FILL.red, 28, 13), B(10, 100, 300, 'Can you help me?', C.red, FILL.red, 28, 13), B(10, 134, 300, 'I need a pencil.', C.red, FILL.red, 28, 13), K('助けを求める')),
+  },
+  {
+    note: `助（たす）けるときの返事（へんじ）は、Sure, I'll help you.（もちろん、手伝うよ）、No problem.（いいよ）。ありがとうと言われたら You're welcome.（どういたしまして）と答えます。`,
+    add: fresh(T('助けるとき'), B(10, 34, 300, `Sure, I'll help you.`, C.green, FILL.green, 30, 14), B(10, 76, 300, 'No problem.', C.green, FILL.green, 30, 14), B(10, 118, 300, `You're welcome.`, C.green, FILL.green, 30, 14), K('Thank you. への返事')),
+  },
+  {
+    note: `まとめです。①許可は Can I 〜?。②返事は Yes, you can. / Sorry, not now.。③借りるときは Can I borrow 〜?、渡すときは Here you are.。`,
+    add: fresh(B(10, 20, 300, '① 許可 ＝ Can I 〜?', C.blue, FILL.blue, 36), B(10, 68, 300, '② Yes, you can. / Sorry, not now.', C.green, FILL.green, 36), B(10, 116, 300, '③ Here you are. / Thank you.', C.red, FILL.red, 36), K('お願いと返事')),
+  },
+], 'お願いと返事');
+
+// ───────── 好きなものを伝える ─────────
+const u19: DiagramFigure = show([
+  {
+    note: `好（す）きを伝（つた）える形（かたち）は I like 〜. です。like のあとに好きなものをそのまま続（つづ）けます。日本語の「〜が好き」の「が」にあたる語は、英語にはいりません。`,
+    add: fresh(T('I like 〜.'), B(10, 38, 60, 'I', C.gray, FILL.gray, 34, 16), B(76, 38, 80, 'like', C.red, FILL.red, 34, 16), B(162, 38, 148, 'soccer.', C.blue, FILL.blue, 34, 16), lb(160, 100, '「が」にあたる語はいらない', 13, C.red, 'middle', true), K('like のあとに すぐ名詞')),
+  },
+  {
+    note: `❓好きではないときは？→ don't（do not の短縮形（たんしゅくけい））を like の前（まえ）に置（お）きます。I don't like natto.（納豆（なっとう）が好きではありません）。`,
+    add: fresh(T('否定文'), B(10, 38, 60, 'I', C.gray, FILL.gray, 34, 16), B(76, 38, 76, `don't`, C.red, FILL.red, 34, 16), B(158, 38, 70, 'like', C.gray, FILL.gray, 34, 16), B(234, 38, 76, 'natto.', C.blue, FILL.blue, 34, 14), lb(114, 88, '前に置く', 12, C.red, 'middle', true), K('don\'t を like の前に')),
+  },
+  {
+    note: `❓I not like としてはだめ？→ だめです。like のような一般動詞（いっぱんどうし）を否定（ひてい）するときは、必（かなら）ず don't（または doesn't）を使います。not だけを置いてはいけません。`,
+    add: fresh(T('not だけは×'), B(20, 40, 280, 'I not like natto.', C.red, FILL.red, 36, 16), lb(160, 96, '×', 18, C.red, 'middle', true), B(20, 116, 280, `I don't like natto.`, C.green, FILL.green, 36, 16), lb(160, 172, '○', 18, C.green, 'middle', true), K('一般動詞には don\'t')),
+  },
+  {
+    note: `❓好きかどうかをたずねるには？→ Do を文の先頭（せんとう）に出して Do you like dogs? とします。答えは Yes, I do. / No, I don't. の決まった形です。`,
+    add: fresh(T('Do you like 〜?'), B(10, 34, 300, 'Do you like dogs?', C.blue, FILL.blue, 32, 15), B(10, 82, 140, 'Yes, I do.', C.green, FILL.green, 32, 14), B(170, 82, 140, `No, I don't.`, C.red, FILL.red, 32, 14), K('Do で聞いて do で答える')),
+  },
+  {
+    note: `❓「どんな〜が好き？」は？→ What＋名詞＋do you like? を使います。What sport do you like? — I like basketball.（バスケットボールが好きです）、What food do you like? — I like pizza.`,
+    add: fresh(T('What ＋ 名詞 ＋ do you like?'), B(10, 32, 300, 'What sport do you like?', C.blue, FILL.blue, 28, 13), B(60, 64, 250, 'I like basketball.', C.green, FILL.green, 28, 13), B(10, 104, 300, 'What food do you like?', C.blue, FILL.blue, 28, 13), B(60, 136, 250, 'I like pizza.', C.green, FILL.green, 28, 13), K('具体的にたずねる')),
+  },
+  {
+    note: `❓理由（りゆう）を言いたいときは？→ because（〜だから）を使います。I like soccer because it's fun.（サッカーは楽しいので好き）、I like dogs because they are cute.（犬はかわいいので好き）。`,
+    add: fresh(T('好きな理由'), B(10, 34, 300, 'I like soccer', C.blue, FILL.blue, 28, 14), B(110, 68, 100, 'because', C.red, FILL.red, 26, 13), B(10, 100, 300, `it's fun.`, C.green, FILL.green, 28, 14), B(10, 138, 300, 'I like dogs because they are cute.', C.purple, FILL.purple, 28, 12), K('because で理由をつなぐ')),
+  },
+  {
+    note: `相手（あいて）と好みが同（おな）じだったときは Me too!（私も！）と言います。A: Do you like sports? B: Yes, I do. I like swimming. A: Me too! 会話にリズムが生（う）まれます。`,
+    add: fresh(T('会話'), B(10, 32, 200, 'Do you like sports?', C.blue, FILL.blue, 28, 13), B(100, 66, 210, 'Yes, I do. I like swimming.', C.green, FILL.green, 28, 12), B(10, 100, 200, 'Me too!', C.blue, FILL.blue, 28, 14), K('同じ好みなら Me too!')),
+  },
+  {
+    note: `まとめです。①I like 〜.（が は入れない）。②否定は I don't like 〜.。③たずねるときは Do you like 〜?。④理由は because。`,
+    add: fresh(B(10, 14, 300, '① I like 〜.', C.blue, FILL.blue, 30), B(10, 52, 300, `② I don't like 〜.`, C.red, FILL.red, 30), B(10, 90, 300, '③ Do you like 〜? — Yes, I do.', C.green, FILL.green, 30), B(10, 128, 300, '④ because で理由', C.purple, FILL.purple, 30), K('好きを伝える')),
+  },
+], '好きを伝える');
+
+// ───────── できることを伝える ─────────
+const u20: DiagramFigure = show([
+  {
+    note: `できることを伝（つた）えるには、can（〜できる）を使（つか）います。I can swim.（私は泳（およ）げます）、I can play the piano.（ピアノをひけます）。can のあとは動詞（どうし）をそのままの形（原形（げんけい））で続けます。`,
+    add: fresh(T('I can ＋ 動詞'), B(10, 38, 60, 'I', C.gray, FILL.gray, 34, 16), B(76, 38, 80, 'can', C.red, FILL.red, 34, 16), B(162, 38, 148, 'swim.', C.blue, FILL.blue, 34, 16), B(10, 90, 300, 'I can play the piano.', C.blue, FILL.blue, 30, 14), K('can のあとは 原形')),
+  },
+  {
+    note: `❓He can swim. で、なぜ swims にしないの？→ can は「〜できる」という意味（いみ）を動詞に足（た）す語（助動詞（じょどうし））で、主語（しゅご）に合（あ）わせて形を変える役目は can が引（ひ）き受（う）けているからです。だからあとの動詞は原形のままです。`,
+    add: fresh(T('形の変化は can が担当'), B(10, 38, 70, 'He', C.gray, FILL.gray, 34, 16), B(86, 38, 80, 'can', C.red, FILL.red, 34, 16), B(172, 38, 100, 'swim', C.green, FILL.green, 34, 16), B(40, 100, 240, 'He can swims.   ×', C.red, FILL.red, 28, 13), B(40, 136, 240, 'He can swimming.   ×', C.red, FILL.red, 28, 13), K('s も ing も つけない', C.red)),
+  },
+  {
+    note: `できないときは I can't 〜. と言います。can't は cannot の短縮形（たんしゅくけい）で、それ自体（じたい）に打（う）ち消（け）しの意味が入っています。I can't swim.（泳げません）、I can't ski.（スキーができません）。`,
+    add: fresh(T('できないとき'), B(10, 38, 60, 'I', C.gray, FILL.gray, 34, 16), B(76, 38, 90, `can't`, C.red, FILL.red, 34, 16), B(172, 38, 100, 'swim.', C.blue, FILL.blue, 34, 16), lb(160, 100, `can't ＝ cannot`, 14, C.red, 'middle', true), B(40, 120, 240, `I can't ski.`, C.blue, FILL.blue, 30, 14), K('can\'t ＝ できない')),
+  },
+  {
+    note: `❓たずねるときは？→ can を主語（しゅご）の前（まえ）に出して Can you swim? とします。be 動詞（どうし）の疑問文（ぎもんぶん）（Are you 〜?）と同じ作り方です。`,
+    add: fresh(T('can を前に出す'), B(10, 36, 140, 'You can swim.', C.gray, FILL.gray, 34, 13), ar(155, 53, 180, 53, C.red), B(184, 36, 126, 'Can you swim?', C.blue, FILL.blue, 34, 13), lb(160, 100, 'Are you 〜? と同じ作り方', 13, C.ink, 'middle', true), K('can を主語の前に')),
+  },
+  {
+    note: `❓答えはどう言う？→ 質問に使った can をくり返して、Yes, I can. / No, I can't. と答えます。`,
+    add: fresh(T('can をくり返して答える'), B(10, 34, 300, 'Can you swim?', C.blue, FILL.blue, 32, 15), B(10, 82, 140, 'Yes, I can.', C.green, FILL.green, 32, 14), B(170, 82, 140, `No, I can't.`, C.red, FILL.red, 32, 14), K('質問の can をくり返す')),
+  },
+  {
+    note: `広（ひろ）くたずねるときは What can you do?（あなたは何ができますか）。答えは I can play soccer well.（サッカーが上手（じょうず）にできます）。well（上手に）を付けると、できる程度（ていど）も伝えられます。`,
+    add: fresh(T('何ができる？'), B(10, 34, 300, 'What can you do?', C.blue, FILL.blue, 32, 15), B(10, 82, 300, 'I can play soccer well.', C.green, FILL.green, 32, 14), lb(160, 138, 'well ＝ 上手に', 13, C.ink, 'middle', true), K('くわしく伝える')),
+  },
+  {
+    note: `友達（ともだち）を紹介（しょうかい）するときも同（おな）じです。My friend can run very fast.（友達はとても速く走れます）、He can speak English well.（彼は英語を上手に話せます）。三人称（さんにんしょう）でも can の形は変わりません。`,
+    add: fresh(T('友達を紹介する'), B(10, 36, 300, 'My friend can run very fast.', C.green, FILL.green, 34, 14), B(10, 84, 300, 'He can speak English well.', C.green, FILL.green, 34, 14), lb(160, 144, 'He でも can は同じ形', 13, C.red, 'middle', true), K('can は形が変わらない')),
+  },
+  {
+    note: `まとめです。①can のあとは原形。②できないときは can't。③たずねるときは can を前に出す。④答えは can をくり返す。`,
+    add: fresh(B(10, 14, 300, '① I can ＋ 動詞の原形', C.blue, FILL.blue, 30), B(10, 52, 300, `② できないときは can't`, C.red, FILL.red, 30), B(10, 90, 300, '③ Can you 〜? — Yes, I can.', C.green, FILL.green, 30), B(10, 128, 300, '④ s も ing もつけない', C.purple, FILL.purple, 30), K('できること')),
+  },
+], 'できることを伝える');
 export const XF_CEK_FIGURES: Record<string, DiagramFigure> = {
   'xf_new20_e4_eigo_01': u01,
   'xf_new20_e4_eigo_02': u02,
@@ -610,4 +790,9 @@ export const XF_CEK_FIGURES: Record<string, DiagramFigure> = {
   'xf_new20_e4_eigo_13': u13,
   'xf_new20_e4_eigo_14': u14,
   'xf_new20_e4_eigo_15': u15,
+  'xf_new20_e4_eigo_16': u16,
+  'xf_new20_e4_eigo_17': u17,
+  'xf_new20_e4_eigo_18': u18,
+  'xf_new20_e4_eigo_19': u19,
+  'xf_new20_e4_eigo_20': u20,
 };

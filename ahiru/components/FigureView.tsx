@@ -1768,7 +1768,7 @@ export default function FigureView({
               </TouchableOpacity>
             ) : isPreviewLimited ? (
               <View style={[styles.slideBtn, styles.slideBtnLocked]}>
-                <Text style={styles.slideBtnText}>🔒 続きは購入すると見られます</Text>
+                <Text style={styles.slideBtnText} numberOfLines={1}>🔒 続きは解放すると</Text>
               </View>
             ) : (
               <TouchableOpacity style={styles.slideBtn} onPress={replay} activeOpacity={0.8}>

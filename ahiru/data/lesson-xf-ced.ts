@@ -749,6 +749,522 @@ const eigo_s147 = S([
   },
 ], 'just と already の位置');
 
+// ───────── eigo_s148 現在完了⑦：yet の二つの意味 ─────────
+const eigo_s148 = S([
+  {
+    note: '同じ yet でも、否定文では「まだ」、疑問文では「もう」と、日本語の訳が反対になります。Have you washed the dishes yet? は「もう皿を洗いましたか」です。なぜ訳が反対になるのか、見ていきましょう。',
+    add: [wide(16, "I haven't washed the dishes yet.", C.red, FILL.red, 12, 28), lb(160, 54, 'まだ洗っていません', 11, C.red), wide(72, 'Have you washed the dishes yet?', C.blue, FILL.blue, 12, 28), lb(160, 110, 'もう洗いましたか', 11, C.blue), ...cap('yet は「まだ」？「もう」？')],
+  },
+  {
+    note: '否定文の yet は「まだ〜していない」です。I haven\'t finished my homework yet.（まだ宿題を終えていません）、She hasn\'t come home yet.（彼女はまだ帰ってきていません）、The store hasn\'t opened yet.（その店はまだ開いていません）。yet は文の最後に置きます。',
+    add: fresh(wide(10, "I haven't finished my homework yet.", C.red, FILL.red, 12, 26), wide(42, "She hasn't come home yet.", C.red, FILL.red, 12, 26), wide(74, "The store hasn't opened yet.", C.red, FILL.red, 12, 26), lb(160, 116, '否定文 → まだ〜ない', 13, C.red, 'middle', true), ...cap('否定文の yet ＝ まだ')),
+  },
+  {
+    note: '疑問文の yet は「もう〜しましたか」です。Have you finished your homework yet?（もう宿題を終えましたか）、Has the bus come yet?（バスはもう来ましたか）。答えは Yes, I have.（はい、終えました）/ No, not yet.（いいえ、まだです）。',
+    add: fresh(wide(10, 'Have you finished your homework yet?', C.blue, FILL.blue, 12, 26), bx(20, 48, 130, 28, 'Yes, I have.', C.green, FILL.green, 12), bx(170, 48, 130, 28, 'No, not yet.', C.red, FILL.red, 12), wide(92, 'Has the bus come yet?', C.blue, FILL.blue, 12, 26), lb(160, 134, '疑問文 → もう〜しましたか', 13, C.blue, 'middle', true), ...cap('疑問文の yet ＝ もう')),
+  },
+  {
+    note: '❓なぜ訳が反対になるのでしょう。→ yet はもともと「今の時点で」という意味の言葉だからです。否定文では「今の時点でまだ〜ない」、疑問文では「今の時点でもう〜したか」となります。日本語の訳が反対に見えるだけで、はたらきは同じです。',
+    add: fresh(bx(90, 10, 140, 30, 'yet ＝ 今の時点で', C.main, FILL.warm, 13), ar(130, 42, 70, 66, C.red), ar(190, 42, 250, 66, C.blue), bx(10, 68, 140, 58, '否定文\n今の時点で\nまだ〜ない', C.red, FILL.red, 11), bx(170, 68, 140, 58, '疑問文\n今の時点で\nもう〜したか', C.blue, FILL.blue, 11), ...cap('はたらきは同じ、訳が反対に見えるだけ')),
+  },
+  {
+    note: '答え方の決まりもあります。No, not yet. は「いいえ、まだです」という決まった言い方で、会話文の空所補充でよく出ます。Yes, I have already finished it. のように already で答えることもできます。',
+    add: fresh(wide(10, 'Have you eaten lunch yet?', C.blue, FILL.blue, 13, 28), wide(50, 'No, not yet.　（いいえ、まだです）', C.red, FILL.red, 12, 28), wide(86, 'Yes, I have already finished it.', C.green, FILL.green, 12, 28), ...cap('決まり文句 No, not yet.')),
+  },
+  {
+    note: '❓still はどうでしょう。→ still は「まだ〜している」と、以前からの状態が今も続くことを表し、動詞の前に置きます。He is still sleeping.（彼はまだねむっています）、I still remember her name.（私はまだ彼女の名前を覚えています）。文末には置きません。',
+    add: fresh(...row([['He', C.gray, FILL.gray], ['is', C.purple, FILL.purple], ['still', C.red, FILL.red], ['sleeping.', C.green, FILL.green]], 16, { h: 32, size: 14 }), lb(160, 64, 'still は 動詞の前（文末には置かない）', 12, C.red, 'middle', true), wide(86, 'I still remember her name.', C.blue, FILL.blue, 12, 28), ...cap('still ＝ 続いている')),
+  },
+  {
+    note: '三つの語をまとめます。already は「もう」で、肯定文の have と過去分詞の間。yet は「まだ／もう」で、否定文・疑問文の文末。still は「まだ〜している」で、動詞の前。He has already arrived. / He hasn\'t arrived yet. / He is still waiting.',
+    add: fresh(...tbl(8, 8, [70, 110, 124], [['語', '意味と文', '位置'], ['already', '肯定文：もう', 'have と過去分詞の間'], ['yet', '否定：まだ／疑問：もう', '文末'], ['still', 'まだ〜している', '動詞の前']], { h: 30, size: 10, colors: [C.red, C.blue, C.gray] }), lb(160, 136, 'He has already arrived. / He hasn\'t arrived yet.', 10, C.gray, 'middle'), ...cap('already ・ yet ・ still')),
+  },
+  {
+    note: '❓「私はまだ昼食を食べていません」を I don\'t eat lunch yet. と書くのはなぜまちがいなのでしょう。→ 現在形の否定は「ふだん食べない」という習慣の意味になってしまうからです。「まだ〜していない」は、現在完了の否定文に yet をつけて I haven\'t eaten lunch yet. と書きます。eat の過去分詞は eaten です。',
+    add: fresh(wide(10, "I don't eat lunch yet.", C.red, FILL.red, 13, 28), lb(160, 50, '「ふだん食べない」の意味になる', 11, C.red), wide(68, "I haven't eaten lunch yet.", C.green, FILL.green, 13, 28), lb(160, 108, 'eat - ate - eaten', 12, C.ink, 'middle', true), ...cap('まだ〜ない ＝ 現在完了の否定 ＋ yet')),
+  },
+  {
+    note: 'まとめです。yet を見たら、まず否定文か疑問文かを確かめます。否定文なら「まだ」、疑問文なら「もう」。どちらも文末に置きます。still は「まだ〜している」で、動詞の前です。',
+    add: fresh(wide(10, "否定文：I haven't ... yet. ＝ まだ〜ない", C.red, FILL.red, 12, 28), wide(44, '疑問文：Have you ... yet? ＝ もう〜したか', C.blue, FILL.blue, 12, 28), wide(78, 'still：He is still sleeping.（まだ〜している）', C.purple, FILL.purple, 11, 28), ...cap('文の形を先に見る', C.main)),
+  },
+], 'yet の二つの意味');
+
+// ───────── eigo_s149 現在完了⑧：結果が今に残る ─────────
+const eigo_s149 = S([
+  {
+    note: 'I lost my key. と I have lost my key. はどうちがうのでしょう。どちらも「かぎをなくした」ですが、伝わることがちがいます。今の状況まで伝えるのはどちらでしょう。',
+    add: [wide(16, 'I lost my key.', C.blue, FILL.blue, 13, 28), wide(54, 'I have lost my key.', C.green, FILL.green, 13, 28), lb(160, 110, '伝わることが ちがう', 13, C.ink, 'middle', true), ...cap('過去形と現在完了のちがい')],
+  },
+  {
+    note: 'I lost my key. は、「なくした」という過去の事実だけを言います。今も見つかっていないのか、もう見つかったのかは、この文からは分かりません。',
+    add: fresh(...row([['過去', C.blue, FILL.blue], ['なくした', C.red, FILL.red], ['今？', C.gray, FILL.gray]], 24, { h: 34, size: 14 }), wide(76, 'I lost my key.', C.blue, FILL.blue, 13, 28), lb(160, 122, '今どうなっているかは 分からない', 12, C.gray, 'middle'), ...cap('過去形 ＝ 過去の事実だけ')),
+  },
+  {
+    note: '❓では I have lost my key. は？ → 「なくして、今も見つかっていない」まで伝わります。過去の出来事が、今の状態につながっているからです。だから今こまっている、という気持ちも伝わります。',
+    add: fresh(ln(20, 50, 300, 50, C.gray, false, 2), ci(60, 50, 6, '', C.red, FILL.red), ci(260, 50, 6, '', C.green, FILL.green), lb(60, 32, 'なくした', 11, C.red, 'middle', true), lb(260, 32, '今', 11, C.green, 'middle', true), ln(66, 70, 254, 70, C.green, false, 4), lb(160, 90, '今も見つかっていない', 12, C.green, 'middle', true), wide(104, 'I have lost my key.', C.green, FILL.green, 13, 28), ...cap('現在完了 ＝ 結果が今に残る')),
+  },
+  {
+    note: 'このような言い方がほかにもあります。have broken（こわして、今もこわれている）: He has broken the window.（彼が窓をこわしてしまった＝今も割れたまま）。have become（〜になって、今もそうである）: It has become warm.（暖かくなった＝今は暖かい）。',
+    add: fresh(...tbl(8, 8, [100, 200], [['形', '今の状態'], ['have lost', 'なくして、今もない'], ['have broken', 'こわして、今もこわれている'], ['have become', 'なって、今もそうである'], ['have caught a cold', '風邪をひいて、今もひいている']], { h: 26, size: 10, colors: [C.green, C.gray] }), ...cap('どれも「〜してしまった。だから今こう」')),
+  },
+  {
+    note: '❓He has gone to America. は？ → 「行ってしまって、今ここにいない」という結果です。「行ったことがある」という経験は have been to を使って、He has been to America. と言います。gone to は「行ったきり」です。',
+    add: fresh(wide(10, 'He has gone to America.', C.green, FILL.green, 13, 28), lb(160, 50, '行ってしまった（今ここにいない）', 12, C.green), wide(68, 'He has been to America.', C.blue, FILL.blue, 13, 28), lb(160, 108, '行ったことがある（今はここにいる）', 12, C.blue), ...cap('gone to ≠ been to')),
+  },
+  {
+    note: '❓結果が今は残っていないときは？ → 過去形を使います。She lost her wallet, but she found it later.（財布をなくしたが、あとで見つけた）。「今はある」のに現在完了を使うと、「今もない」という意味とぶつかってしまいます。',
+    add: fresh(wide(14, 'She lost her wallet, but she found it later.', C.green, FILL.green, 11, 30), lb(160, 62, '今はある → 過去形', 12, C.green, 'middle', true), wide(80, 'She has lost her wallet, but she found it.', C.red, FILL.red, 10, 30), ng(160, 128), ...cap('「今もない」と「今はある」はぶつかる')),
+  },
+  {
+    note: '会話では、現在完了は「だから今こまっている」と今の事情を伝えるのにぴったりです。A: Why are you looking for something?（何をさがしているの）B: I\'ve lost my glasses.（めがねをなくしてしまって）。',
+    add: fresh(bx(10, 10, 300, 28, 'A: Why are you looking for something?', C.gray, FILL.gray, 12), ar(160, 40, 160, 54, C.blue), bx(10, 56, 300, 30, "B: I've lost my glasses.", C.green, FILL.green, 13), lb(160, 108, '理由（今こまっている事情）を伝える', 12, C.green, 'middle', true), ...cap('理由を説明するときに よく出る')),
+  },
+  {
+    note: '注意があります。yesterday や last week のように「いつ」を言う語といっしょには、現在完了を使いません。I have lost my key yesterday. はまちがいで、I lost my key yesterday.（過去形）にします。くわしくは s154 の単元で学びます。',
+    add: fresh(wide(14, 'I have lost my key yesterday.', C.red, FILL.red, 12, 28), ng(160, 56), wide(70, 'I lost my key yesterday.', C.green, FILL.green, 13, 28), ok(160, 114), ...cap('「いつ」を言うなら 過去形')),
+  },
+  {
+    note: 'まとめです。現在完了は「その結果、今どうなのか」を伝える形です。have lost・have gone・have broken など、「〜してしまった。だから今こうだ」という二段構えの意味になります。過去形は過去の事実だけを言います。',
+    add: fresh(bx(10, 14, 145, 44, '過去形\n過去の事実だけ', C.blue, FILL.blue, 12), bx(165, 14, 145, 44, '現在完了\n結果が今に残る', C.green, FILL.green, 12), wide(76, 'I have lost my key. ＝ なくして、今もない', C.green, FILL.green, 11, 28), ...cap('今の状態まで伝える形', C.main)),
+  },
+], '結果が今に残る現在完了');
+
+// ───────── eigo_s151 現在完了⑩：ever・never・before と回数 ─────────
+const eigo_s151 = S([
+  {
+    note: '「私はその本を一度も読んだことがありません」を英語にします。「一度も」を先に言いたくて I never have read the book. と書いてしまう人がいます。never はどこに置くのでしょう。',
+    add: [wide(16, 'I never have read the book.', C.red, FILL.red, 13, 30), ng(160, 64), lb(160, 92, 'never の位置は？', 13, C.ink, 'middle', true), ...cap('語の位置')],
+  },
+  {
+    note: '❓なぜ never は have と過去分詞のあいだなのでしょう。→ ever・never・just・already は動作の「あり方」を説明する言葉で、動詞にくっついて説明するからです。だから「have ＋ never ＋ 過去分詞」をかたまりで覚えます。',
+    add: fresh(...row([['I', C.gray, FILL.gray], ['have', C.purple, FILL.purple], ['never', C.red, FILL.red], ['read', C.green, FILL.green], ['the book.', C.gray, FILL.gray]], 20, { h: 34, size: 13 }), lb(160, 72, 'ever / never / just / already は「中」', 12, C.red, 'middle', true), wide(92, 'Have you ever visited Kyoto?', C.blue, FILL.blue, 12, 26), ...cap('have ＋ never ＋ 過去分詞')),
+  },
+  {
+    note: '❓では before は？ → before（以前に）や yet、回数の言葉は、文全体に「いつ・何回」という情報を足す言葉なので、文の終わりに置きます。I have seen him before.（以前に彼に会ったことがあります）、I have seen him twice.（2回会ったことがあります）。',
+    add: fresh(...row([['I', C.gray, FILL.gray], ['have', C.purple, FILL.purple], ['seen', C.green, FILL.green], ['him', C.gray, FILL.gray], ['before.', C.red, FILL.red]], 20, { h: 34, size: 13 }), lb(160, 72, 'before ・ yet ・ 回数は「後ろ」', 12, C.red, 'middle', true), wide(92, 'I have seen him twice.', C.blue, FILL.blue, 12, 26), ...cap('文全体の情報は 文末')),
+  },
+  {
+    note: '回数の言い方です。once（1回）、twice（2回）、three times（3回）、four times（4回）、many times（何度も）。1回と2回だけは once・twice という特別な語を使い、3回からは「数＋times」です。',
+    add: fresh(...tbl(40, 8, [110, 130], [['回数', '英語'], ['1回', 'once'], ['2回', 'twice'], ['3回', 'three times'], ['何度も', 'many times']], { h: 24, size: 12, colors: [C.gray, C.green] }), lb(160, 141, 'I have been to Hokkaido once.', 11, C.gray, 'middle'), ...cap('1回・2回だけ特別')),
+  },
+  {
+    note: '回数をたずねるときは How many times have you 〜? です。How many times have you been to Kyoto?（何回、京都へ行ったことがありますか）答えは Three times. / Only once. / Never. のように、短く答えます。',
+    add: fresh(wide(10, 'How many times have you been to Kyoto?', C.blue, FILL.blue, 12, 28), bx(10, 52, 95, 30, 'Three times.', C.green, FILL.green, 11), bx(113, 52, 95, 30, 'Only once.', C.green, FILL.green, 11), bx(216, 52, 94, 30, 'Never.', C.red, FILL.red, 11), lb(160, 104, 'Have you ever 〜? → Yes, I have. / No, never.', 11, C.gray, 'middle'), ...cap('回数は How many times')),
+  },
+  {
+    note: '❓「以前に」は before、では ago は使えるのでしょうか。→ I have met him ago. はまちがいです。ago は three days ago のように数量とセットで使い、しかも過去形といっしょに使う言葉だからです。「以前に」と現在完了なら before です。',
+    add: fresh(wide(10, 'I have met him ago.', C.red, FILL.red, 13, 26), ng(160, 48), wide(60, 'I have met him before.', C.green, FILL.green, 13, 26), lb(160, 100, '現在完了 ＋ before（以前に）', 11, C.green), wide(114, 'I met him three days ago.', C.blue, FILL.blue, 12, 26), ...cap('ago は 過去形とセット')),
+  },
+  {
+    note: '❓なぜ ago は現在完了と使えないのでしょう。→ ago は「今から3日さかのぼった過去の一点」を指す言葉だからです。現在完了は「過去から今までの幅」を表すので、一点を指す言葉（ago・yesterday・last year）とは合いません。before は時点を指さないので使えます。',
+    add: fresh(ln(20, 40, 300, 40, C.gray, false, 2), ci(60, 40, 6, '', C.red, FILL.red), ci(260, 40, 6, '', C.green, FILL.green), lb(60, 22, 'three days ago', 11, C.red, 'middle', true), lb(260, 22, '今', 11, C.green, 'middle', true), lb(60, 62, '過去の一点', 11, C.red), ln(66, 84, 254, 84, C.blue, false, 4), lb(160, 102, '現在完了は 過去から今までの幅', 12, C.blue, 'middle', true), lb(160, 126, '一点を指す語とは 合わない', 12, C.red, 'middle'), ...cap('点と幅はぶつかる')),
+  },
+  {
+    note: '確かめのしかたです。①中に置く語（ever・never・just・already）と、文末に置く語（before・yet・回数）に分けて言えるか。②I never have read は×、I have never read が正しい。③「以前に」は before、「〇日前に」は ago（過去形）。',
+    add: fresh(...tbl(10, 8, [100, 100, 100], [['中', '文末', '過去形とセット'], ['ever', 'before', 'ago'], ['never', 'yet', 'three days ago'], ['just / already', 'once / twice', '（なし）']], { h: 28, size: 11, colors: [C.green, C.blue, C.red] }), ...cap('3つのグループで覚える')),
+  },
+  {
+    note: 'まとめです。ever・never は動作のあり方なので中に、before・yet・回数は文全体への情報なので文末に置く。ago は過去の一点なので過去形と使い、現在完了には before を使います。',
+    add: fresh(wide(10, 'I have never read the book.', C.green, FILL.green, 12, 28), wide(44, 'I have met him before.', C.blue, FILL.blue, 12, 28), wide(78, 'I met him three days ago.', C.purple, FILL.purple, 12, 28), ...cap('位置と時制をセットで覚える', C.main)),
+  },
+], 'ever・never・before と回数の言い方');
+
+// ───────── eigo_s152 現在完了⑪：have been to と have gone to ─────────
+const eigo_s152 = S([
+  {
+    note: 'He has been to America. と He has gone to America. は、to のあとが同じでも意味が大きくちがいます。前者は「行ったことがある」、後者は「行ってしまって、今ここにいない」です。しくみが分かれば取りちがえません。',
+    add: [wide(16, 'He has been to America.', C.blue, FILL.blue, 13, 28), wide(54, 'He has gone to America.', C.green, FILL.green, 13, 28), lb(160, 110, 'どうちがう？', 13, C.ink, 'middle', true), ...cap('been to と gone to')],
+  },
+  {
+    note: '❓been to はどんな意味でしょう。→ 「行ったことがある」（経験）です。その場所を訪れたことがあり、今はもどってきています。I have been to Kyoto three times.（京都へ3回行ったことがあります）。',
+    add: fresh(bx(10, 20, 80, 36, 'ここ（今）', C.green, FILL.green, 12), bx(230, 20, 80, 36, 'アメリカ', C.blue, FILL.blue, 12), ar(130, 30, 230, 30, C.blue), ar(230, 46, 130, 46, C.green), lb(160, 80, '行って、帰ってきた', 12, C.green, 'middle', true), wide(96, 'I have been to Kyoto three times.', C.blue, FILL.blue, 11, 26), ...cap('been to ＝ 行って帰ってきた')),
+  },
+  {
+    note: '❓gone to は？ → 「行ってしまって、今ここにいない」（結果）です。He has gone to America. は、アメリカへ行ったきり、この場にいないことを表します。',
+    add: fresh(bx(10, 20, 80, 36, 'ここ（今）', C.gray, FILL.gray, 12), bx(230, 20, 80, 36, 'アメリカ\n（今そこ）', C.green, FILL.green, 11), ar(100, 38, 226, 38, C.green), lb(160, 80, '行ったきり。ここにはいない', 12, C.green, 'middle', true), wide(96, 'He has gone to America.', C.green, FILL.green, 12, 26), ...cap('gone to ＝ 行ったきり')),
+  },
+  {
+    note: '❓been in は？ → 「〜にずっといる」（継続）です。She has been in Osaka for three years.（彼女は3年間ずっと大阪にいます）。in は「その中にいる」状態を表すので、継続の意味になります。',
+    add: fresh(wide(10, 'She has been in Osaka for three years.', C.purple, FILL.purple, 11, 28), ln(40, 70, 280, 70, C.purple, false, 4), lb(160, 56, '3年間ずっと大阪に', 11, C.purple), lb(160, 92, 'in ＝ その中にいる ＝ 状態', 12, C.ink, 'middle', true), ...cap('been in ＝ ずっといる')),
+  },
+  {
+    note: '三つをまとめて並べます。been to は「行って帰ってきた」、gone to は「行ったきり」、been in は「ずっとそこにいる」です。前置詞が to か in かでも、been か gone かでも意味が変わります。',
+    add: fresh(...tbl(8, 8, [84, 90, 130], [['形', '意味', '例'], ['been to', '行ったことがある', 'been to Kyoto'], ['gone to', '行ってしまった', 'gone to America'], ['been in', 'ずっといる', 'been in Osaka']], { h: 32, size: 11, colors: [C.blue, C.gray, C.green] }), ...cap('3つを並べて区別')),
+  },
+  {
+    note: '❓I have gone to Kyoto. と自分のことに使えるでしょうか。→ 使えません。「行ってしまって今ここにいない」のは話している本人になってしまい、おかしいからです。自分のことは I have been to Kyoto.（行ったことがある）と言います。',
+    add: fresh(wide(10, 'I have gone to Kyoto.', C.red, FILL.red, 13, 26), ng(160, 48), lb(160, 66, '話している本人が「ここにいない」？', 11, C.red), wide(84, 'I have been to Kyoto.', C.green, FILL.green, 13, 26), ok(160, 124), ...cap('I / we には gone to を使わない')),
+  },
+  {
+    note: '三人称なら、今どこにいるかで使い分けます。He has been to Kyoto.（彼は京都へ行ったことがある＝今ここにいる）。He has gone to Kyoto.（彼は京都へ行ってしまった＝今ここにいない）。また、前置詞を落とさず、I have been to Kyoto. と to を書きます。',
+    add: fresh(wide(10, 'He has been to Kyoto.', C.blue, FILL.blue, 12, 26), lb(160, 46, '今ここにいる', 11, C.blue), wide(60, 'He has gone to Kyoto.', C.green, FILL.green, 12, 26), lb(160, 96, '今ここにいない', 11, C.green), wide(110, 'I have been Kyoto.', C.red, FILL.red, 12, 24), ng(280, 122), ...cap('to を落とさない')),
+  },
+  {
+    note: 'been to に just や already がつくと意味が変わります。I have just been to the post office.（郵便局へ行ってきたところです）は完了の意味です。合図の語を見てから訳を決めましょう。また「彼女は3日間ずっと病院にいます」は been in で、She has been in the hospital for three days. です。',
+    add: fresh(wide(10, 'I have just been to the post office.', C.blue, FILL.blue, 11, 28), lb(160, 50, '行ってきたところ（完了）', 11, C.blue), wide(68, 'She has been in the hospital for three days.', C.purple, FILL.purple, 10, 28), lb(160, 108, '3日間ずっといる（継続）', 11, C.purple), ...cap('for があれば been in')),
+  },
+  {
+    note: 'まとめです。been to は「行って帰ってきた」、gone to は「行ったきり」、been in は「ずっといる」。I や we には gone to を使いません。',
+    add: fresh(wide(10, 'been to ＝ 行って帰ってきた（経験）', C.blue, FILL.blue, 12, 28), wide(44, 'gone to ＝ 行ったきり（今いない）', C.green, FILL.green, 12, 28), wide(78, 'been in ＝ ずっといる（継続）', C.purple, FILL.purple, 12, 28), ...cap('I / we には gone を使わない', C.main)),
+  },
+], 'have been to と have gone to');
+
+// ───────── eigo_s154 現在完了と過去形②：いっしょに使えない語 ─────────
+const eigo_s154 = S([
+  {
+    note: 'I have finished it yesterday. はまちがいです。現在完了は今とつながる形なので、yesterday のように過去の一点を指す言葉とは同居できません。どの言葉が使えて、どの言葉が使えないのかを整理します。',
+    add: [wide(16, 'I have finished it yesterday.', C.red, FILL.red, 13, 30), ng(160, 64), lb(160, 92, 'どこがいけない？', 13, C.ink, 'middle', true), ...cap('いっしょに使えない語')],
+  },
+  {
+    note: '❓なぜ yesterday と現在完了はぶつかるのでしょう。→ 現在完了は「過去から今まで」を一本の線でとらえる形です。yesterday は線の途中の一点だけを指すので、線と点が矛盾してしまいます。',
+    add: fresh(ln(20, 56, 300, 56, C.gray, false, 2), ci(60, 56, 6, '', C.red, FILL.red), ci(260, 56, 6, '', C.green, FILL.green), lb(60, 38, 'yesterday', 11, C.red, 'middle', true), lb(260, 38, '今', 11, C.green, 'middle', true), ln(66, 80, 254, 80, C.blue, false, 4), lb(160, 98, '現在完了：過去から今までの線', 12, C.blue, 'middle', true), lb(160, 122, 'yesterday：途中の一点', 12, C.red, 'middle'), ...cap('線と点はぶつかる')),
+  },
+  {
+    note: '使えない語は、yesterday・last night / week / year・three days ago・a long time ago・just now・then・in 2020・When 〜? などです。これらは「過去の一点」を指します。使うなら過去形にします。',
+    add: fresh(...tbl(12, 8, [140, 156], [['使えない（一点を指す）', '正しい文（過去形）'], ['yesterday', 'I finished it yesterday.'], ['three days ago', 'I finished it three days ago.'], ['last year', 'He came to Japan last year.'], ['in 2020 / then', '過去形にする']], { h: 26, size: 10, colors: [C.red, C.green] }), ...cap('一点を指す語 → 過去形')),
+  },
+  {
+    note: '使える語は、for・since・just・already・yet・ever・never・before・回数（once / twice / times）・today・this week です。❓なぜ使えるの？ → これらは「今を含む範囲」や「どのくらい・何回・もう／まだ」を表す言葉で、線と矛盾しないからです。',
+    add: fresh(...tbl(12, 8, [140, 156], [['使える（今を含む）', '例'], ['for / since', 'for ten years'], ['just / already / yet', 'just finished'], ['ever / never / before', 'never been'], ['once / twice / today', 'twice today']], { h: 26, size: 10, colors: [C.green, C.gray] }), ...cap('今を含む語は 現在完了と両立')),
+  },
+  {
+    note: '疑問文では When と How long が対になります。When did you come to Japan?（いつ日本に来たのですか）— Three years ago. How long have you been in Japan?（どのくらい日本にいますか）— For three years. When は必ず過去形とセットです。',
+    add: fresh(wide(10, 'When did you come to Japan?', C.blue, FILL.blue, 12, 28), lb(160, 50, '過去形 ― Three years ago.', 11, C.blue), wide(66, 'How long have you been in Japan?', C.green, FILL.green, 12, 28), lb(160, 106, '現在完了 ― For three years.', 11, C.green), wide(118, 'When have you come to Japan?', C.red, FILL.red, 11, 24), ng(290, 130), ...cap('When ＝ 過去形、How long ＝ 現在完了')),
+  },
+  {
+    note: '❓「3年前に日本に来て、今もここにいる」を一つの文で言えますか。→ 言えません。一つの文に「3年前」と現在完了を同居させられないので、二つの文に分けます。I came to Japan three years ago. And I have been here since then.',
+    add: fresh(wide(10, 'I came to Japan three years ago.', C.blue, FILL.blue, 12, 28), lb(160, 50, '過去形：3年前の一点', 11, C.blue), wide(64, 'And I have been here since then.', C.green, FILL.green, 12, 28), lb(160, 104, '現在完了：それからずっと', 11, C.green), ...cap('二つの文に分ける')),
+  },
+  {
+    note: '書きかえの問題もあります。He died three years ago.（彼は3年前に亡くなった）＝ He has been dead for three years. ＝ It has been three years since he died. 「3年前に死んだ」は「死んだ状態が3年続いている」と考えると、現在完了に置きかえられます。',
+    add: fresh(wide(8, 'He died three years ago.', C.blue, FILL.blue, 12, 26), lb(160, 44, '＝', 16, C.ink, 'middle', true), wide(54, 'He has been dead for three years.', C.green, FILL.green, 11, 26), lb(160, 90, '＝', 16, C.ink, 'middle', true), wide(100, 'It has been three years since he died.', C.green, FILL.green, 10, 26), ...cap('死んだ状態が3年続いている')),
+  },
+  {
+    note: 'today や this week は「今を含む期間」なので現在完了と使えます。I have seen him twice today.（今日、彼に2回会いました）。ただし、今日がもう終わった話をするなら過去形です。今を含むかどうかで判断します。',
+    add: fresh(wide(14, 'I have seen him twice today.', C.green, FILL.green, 12, 28), lb(160, 56, '今日はまだ続いている → 現在完了', 11, C.green), wide(78, 'I saw him twice today.', C.blue, FILL.blue, 12, 28), lb(160, 118, '今日がもう終わった話 → 過去形', 11, C.blue), ...cap('今を含むかで判断')),
+  },
+  {
+    note: 'まとめです。「いつ」を言いたいなら過去形、「今どうか」を言いたいなら現在完了。yesterday・ago・last 〜・When は過去形。for・since・already・yet・ever・never・before・回数は現在完了です。',
+    add: fresh(wide(10, '「いつ」→ 過去形：yesterday / ago / last / When', C.blue, FILL.blue, 11, 28), wide(44, '「今どうか」→ 現在完了：for / since / yet / ever', C.green, FILL.green, 11, 28), wide(78, 'When did you ...?　／　How long have you ...?', C.purple, FILL.purple, 11, 28), ...cap('語を見たら時制が決まる', C.main)),
+  },
+], '現在完了と過去形：いっしょに使えない語');
+
+// ───────── eigo_s159 can④：許可と依頼の can、can't の「はずがない」 ─────────
+const eigo_s159 = S([
+  {
+    note: 'Can I open the window? と Can you open the window? ちがうのは1語だけですが、意味は入れかわります。前者は「開けてもいいですか」、後者は「開けてくれますか」です。だれが動作をするのかが決め手です。',
+    add: [wide(16, 'Can I open the window?', C.blue, FILL.blue, 13, 28), wide(54, 'Can you open the window?', C.green, FILL.green, 13, 28), lb(160, 110, '1語ちがうだけで 意味が入れかわる', 12, C.ink, 'middle', true), ...cap('許可と依頼')],
+  },
+  {
+    note: '❓Can I 〜? はどんな意味でしょう。→ 「（私が）〜してもいいですか」と、許可を求める言い方です。Can I use your dictionary?（辞書を使ってもいいですか）、Can I have some water?（お水をいただけますか）。自分が何かをしたいときに使います。',
+    add: fresh(bx(15, 14, 100, 40, '私（I）が\nする', C.blue, FILL.blue, 13), ar(120, 34, 190, 34, C.blue), bx(194, 14, 110, 40, '許可を\nもらう', C.green, FILL.green, 13), wide(70, 'Can I use your dictionary?', C.blue, FILL.blue, 12, 28), wide(104, 'Can I have some water?', C.blue, FILL.blue, 12, 28), ...cap('Can I 〜? ＝ してもいいですか')),
+  },
+  {
+    note: '❓Can you 〜? は？ → 「（あなたが）〜してくれませんか」と、相手にお願いする言い方です。Can you open the window?（窓を開けてくれませんか）、Can you help me with my homework?（宿題を手伝ってくれませんか）。するのは相手です。',
+    add: fresh(bx(15, 14, 100, 40, 'あなた（you）が\nする', C.green, FILL.green, 12), ar(120, 34, 190, 34, C.green), bx(194, 14, 110, 40, 'お願い\nする', C.purple, FILL.purple, 13), wide(70, 'Can you open the window?', C.green, FILL.green, 12, 28), wide(104, 'Can you help me with my homework?', C.green, FILL.green, 11, 28), ...cap('Can you 〜? ＝ してくれませんか')),
+  },
+  {
+    note: '❓なぜ主語を見ればよいのでしょう。→ 動作をするのがだれなのかを、主語がはっきり示すからです。「窓を開けてくれませんか」と日本語には主語がありませんが、開けるのは相手なので Can you を選びます。「相手にしてもらう＝ you」「自分がする＝ I」と、先に決めます。',
+    add: fresh(...tbl(14, 10, [100, 100, 98], [['主語', '動作をする人', '意味'], ['Can I 〜?', '私', '〜してもいい？'], ['Can you 〜?', 'あなた', '〜してくれる？']], { h: 32, size: 12, colors: [C.blue, C.gray, C.green] }), wide(112, '「窓を開けてくれませんか」＝ Can you open the window?', C.green, FILL.green, 10, 26), ...cap('動作をする人を先に決める')),
+  },
+  {
+    note: '答え方は、どちらも同じです。承諾（しょうだく）は Sure. / Of course. / All right. / No problem. 断るときは I\'m sorry, I can\'t. / Sorry, but I\'m busy now. Yes, you can. とも言えますが、上から許可を出すひびきになることがあるので、会話では Sure. がよく使われます。',
+    add: fresh(wide(10, 'Can you open the window?', C.green, FILL.green, 13, 28), bx(8, 52, 146, 56, 'OK のとき\nSure. / Of course.\nAll right. / No problem.', C.green, FILL.green, 11), bx(166, 52, 146, 56, '断るとき\nI\'m sorry, I can\'t.\nSorry, but I\'m busy.', C.red, FILL.red, 11), ...cap('会話では Sure. が自然')),
+  },
+  {
+    note: 'can には、もう一つの意味があります。can\'t は「〜できない」のほかに、「〜のはずがない」という強い打ち消しの推量（すいりょう）も表します。It can\'t be true.（それが本当のはずがない）。上位校や英検3級で問われる用法です。',
+    add: fresh(wide(14, "It can't be true.", C.purple, FILL.purple, 13, 28), lb(160, 56, 'それが本当のはずがない', 12, C.ink, 'middle', true), wide(78, "He can't be at home. His bike isn't here.", C.purple, FILL.purple, 11, 28), lb(160, 118, '彼が家にいるはずがない。自転車がないもの', 11, C.gray), ...cap("can't be 〜 ＝ 〜のはずがない")),
+  },
+  {
+    note: '❓must be との関係は？ → must be 〜（〜にちがいない）の反対が can\'t be 〜（〜のはずがない）で、二つは対です。「〜でないにちがいない」と言いたくて must not be とするのは、よくあるまちがいです。must not は「してはいけない」という禁止になってしまいます。',
+    add: fresh(bx(10, 14, 145, 40, 'must be 〜\n〜にちがいない', C.green, FILL.green, 12), bx(165, 14, 145, 40, "can't be 〜\n〜のはずがない", C.red, FILL.red, 12), lb(160, 72, '← 対になっている →', 12, C.ink, 'middle', true), wide(92, 'must not be 〜 ＝ 禁止になってしまう', C.red, FILL.red, 11, 26), ...cap('反対語として覚える')),
+  },
+  {
+    note: '見分け方です。うしろが be や動詞の原形でも、文の内容が「能力」ではなく「そんなことはありえない」という判断なら推量の can\'t です。She can\'t be twenty.（彼女が20歳のはずがない）は能力の話ではありません。訳して意味が通らないときは推量を疑います。',
+    add: fresh(wide(12, "She can't be twenty.", C.purple, FILL.purple, 13, 28), lb(160, 56, '彼女が20歳のはずがない（能力の話ではない）', 11, C.ink), wide(78, "That story can't be true.", C.purple, FILL.purple, 12, 28), lb(160, 116, '× 本当にすることができない', 11, C.red), ...cap('意味が通らなければ 推量を疑う')),
+  },
+  {
+    note: 'まとめです。Can I 〜? は許可を求める、Can you 〜? は相手へのお願い。どちらも Sure. などで答える。can\'t be 〜 は「〜のはずがない」で、must be の反対です。',
+    add: fresh(wide(10, 'Can I 〜?　私がしてもいい？', C.blue, FILL.blue, 12, 28), wide(44, 'Can you 〜?　あなたがしてくれる？', C.green, FILL.green, 12, 28), wide(78, "can't be 〜　〜のはずがない（↔ must be）", C.purple, FILL.purple, 11, 28), ...cap('主語を見て意味を決める', C.main)),
+  },
+], 'Can I と Can you、can\'t be');
+
+// ───────── eigo_s160 may①：許可の may ─────────
+const eigo_s160 = S([
+  {
+    note: 'お店に入ると、店員さんが May I help you? と声をかけてきます。直訳すると「私はあなたを手伝ってもよいですか」。日本語の「いらっしゃいませ」にあたる決まり文句です。may って、どんな言葉なのでしょう。',
+    add: [bx(60, 14, 200, 40, 'May I help you?', C.blue, FILL.blue, 15), lb(160, 76, '直訳：私はあなたを手伝ってもよいですか', 11, C.gray), lb(160, 100, '＝「いらっしゃいませ」', 13, C.main, 'middle', true), ...cap('店員さんの決まり文句')],
+  },
+  {
+    note: 'may の第一の意味は「〜してもよい」という許可です。May I 〜? は「〜してもよろしいですか」と、ていねいに許可を求めます。May I come in?（入ってもよろしいですか）、May I use your phone?（電話をお借りしてもよろしいですか）。',
+    add: fresh(wide(10, 'May I come in?', C.blue, FILL.blue, 13, 26), wide(42, 'May I use your phone?', C.blue, FILL.blue, 13, 26), wide(74, 'May I ask you a question?', C.blue, FILL.blue, 13, 26), lb(160, 122, '〜してもよろしいですか', 12, C.ink, 'middle', true), ...cap('May I 〜? ＝ ていねいな許可')),
+  },
+  {
+    note: '❓Can I 〜? とどうちがうのでしょう。→ may は相手にへりくだって許しを求める言葉なので、Can I 〜? よりていねいです。友達には Can I、店員さんや先生には May I、さらにていねいなら Could I と、場面で選びます。',
+    add: fresh(...row([['Can I 〜?', C.blue, FILL.blue], ['May I 〜?', C.green, FILL.green], ['Could I 〜?', C.purple, FILL.purple]], 20, { h: 34, size: 13, gap: 14 }), ar(60, 66, 250, 66, C.gray), lb(160, 54, 'ていねいさ', 11, C.gray), lb(60, 90, '友達に', 11, C.blue), lb(160, 90, '店員・先生に', 11, C.green), lb(262, 90, 'さらに', 11, C.purple), ...cap('相手と場面で選ぶ')),
+  },
+  {
+    note: '答え方です。承諾は Sure. / Of course. / Certainly. / Yes, please do. 断りは I\'m sorry, but you can\'t. / I\'m afraid not. No, you may not. は「だめです」と強くはねつけるひびきになるので、ふつうは I\'m sorry をつけてやわらげます。',
+    add: fresh(wide(10, 'May I take a picture here?', C.blue, FILL.blue, 12, 26), bx(8, 48, 146, 52, 'OK のとき\nSure. / Of course.\nCertainly.', C.green, FILL.green, 11), bx(166, 48, 146, 52, '断るとき\nI\'m sorry, but you can\'t.\nI\'m afraid not.', C.red, FILL.red, 10), ...cap('断るときは I\'m sorry をそえる')),
+  },
+  {
+    note: '❓May you 〜? と言えるでしょうか。→ 言えません。相手に何かを頼むときに May you 〜? とは言いません。may で許可を求められるのは、主語が I のときだけです。頼むときは Can you / Will you / Could you 〜? を使います。',
+    add: fresh(wide(10, 'May you carry my bag?', C.red, FILL.red, 13, 26), ng(160, 48), wide(60, 'Could you carry my bag?', C.green, FILL.green, 13, 26), lb(160, 104, '（Can you 〜? / Will you 〜? も可）', 11, C.gray), ...cap('許可の may は 主語が I')),
+  },
+  {
+    note: '会話の決まり文句です。店では、店員 May I help you? — 客 Yes, please. I\'m looking for a T-shirt.（Tシャツを探しています）/ No, thank you. I\'m just looking.（見ているだけです）。電話では May I speak to Ken, please?（ケンさんをお願いします）と言います。',
+    add: fresh(bx(10, 8, 300, 26, '店員：May I help you?', C.gray, FILL.gray, 12), bx(10, 38, 145, 34, "Yes, please.\nI'm looking for a T-shirt.", C.green, FILL.green, 9), bx(165, 38, 145, 34, "No, thank you.\nI'm just looking.", C.red, FILL.red, 10), wide(86, 'May I speak to Ken, please?（電話）', C.blue, FILL.blue, 11, 26), ...cap('場面ごと丸ごと覚える')),
+  },
+  {
+    note: '❓May I help you? を「私を手伝ってくれますか」と取りちがえる人が多いのですが、どうして？ → 動作をするのは I（店員）だからです。「（私が）お手伝いしましょうか」という申し出です。「手伝ってくれますか」と頼むときは Can you help me? と言います。',
+    add: fresh(wide(10, 'May I help you?', C.blue, FILL.blue, 13, 26), lb(160, 48, '＝ 私がお手伝いしましょうか（申し出）', 12, C.blue, 'middle', true), wide(66, 'Can you help me?', C.green, FILL.green, 13, 26), lb(160, 104, '＝ 手伝ってくれますか（お願い）', 12, C.green, 'middle', true), ...cap('するのはだれか')),
+  },
+  {
+    note: 'もう1つ、You may go home now.（もう帰ってよろしい）のように、平らな文の may は、先生が生徒に言うような、上の立場から許可を与えるひびきになります。友達どうしでは使いません。',
+    add: fresh(wide(14, 'You may go home now.', C.purple, FILL.purple, 13, 28), lb(160, 56, 'もう帰ってよろしい', 12, C.ink, 'middle', true), lb(160, 84, '先生 → 生徒　のような上から目線', 12, C.purple, 'middle'), lb(160, 110, '友達どうしでは使わない', 12, C.red, 'middle', true), ...cap('平らな文の may は上から許可')),
+  },
+  {
+    note: 'まとめです。May I 〜? は「〜してもよろしいですか」。may のうしろは動詞の原形で、to はつけません。答えは Sure. / Of course. / I\'m sorry, but 〜。May you 〜? とは言いません。May I help you? は店員の決まり文句です。',
+    add: fresh(wide(10, 'May I ＋ 原形 〜?（to は つけない）', C.blue, FILL.blue, 12, 28), wide(44, '答え：Sure. / I\'m sorry, but 〜.', C.green, FILL.green, 12, 28), wide(78, 'May you 〜? は ない　　May I help you? ＝ 店員の決まり文句', C.red, FILL.red, 9, 28), ...cap('主語は I のとき', C.main)),
+  },
+], '許可の may');
+
+// ───────── eigo_s162 may③：許可と推量の見分け方 ─────────
+const eigo_s162 = S([
+  {
+    note: 'may には「〜してもよい」（許可）と「〜かもしれない」（推量）の二つの意味があります。You may go home. は「帰ってよろしい」とも「帰るかもしれない」とも読めそうです。どこを見れば決められるのでしょう。',
+    add: [bx(10, 20, 145, 44, 'may\n〜してもよい', C.blue, FILL.blue, 13), bx(165, 20, 145, 44, 'may\n〜かもしれない', C.green, FILL.green, 13), lb(160, 92, '許可　　　　　　　　推量', 12, C.gray, 'middle'), lb(160, 120, '見分ける手順を作ろう', 13, C.main, 'middle', true), ...cap('may の二つの意味')],
+  },
+  {
+    note: '手順①：主語と文の形を見ます。May I 〜? / May we 〜? は許可。You may 〜. も許可（〜してよろしい）。He / She / It / They may 〜. は、ほとんど推量（〜かもしれない）です。',
+    add: fresh(...tbl(8, 8, [150, 154], [['形', '意味'], ['May I / May we 〜?', '許可'], ['You may 〜.', '許可（〜してよろしい）'], ['He / She / It / They may 〜.', '推量（〜かもしれない）']], { h: 30, size: 11, colors: [C.blue, C.green] }), ...cap('① 主語と形を見る')),
+  },
+  {
+    note: '手順②：日本語にして通るほうを選びます。It may be cold tomorrow. を「明日は寒くてもよい」と訳しても意味が通りません。「明日は寒いかもしれない」なら通ります。だから推量です。',
+    add: fresh(wide(10, 'It may be cold tomorrow.', C.purple, FILL.purple, 13, 28), wide(50, '明日は寒くてもよい（許可）', C.red, FILL.red, 12, 26), ng(290, 63), wide(86, '明日は寒いかもしれない（推量）', C.green, FILL.green, 12, 26), ok(290, 99), ...cap('② 日本語にして 通るほう')),
+  },
+  {
+    note: '手順③：内容がマイナスなら推量を疑います。He may be sick.（病気かもしれない）、The train may be late.（電車は遅れるかもしれない）。「病気になってよい」「遅れてよい」と許可することは、ふつうないからです。',
+    add: fresh(wide(14, 'He may be sick.', C.green, FILL.green, 13, 28), lb(160, 56, '病気かもしれない（推量）', 12, C.green), wide(78, 'The train may be late.', C.green, FILL.green, 13, 28), lb(160, 120, '電車は遅れるかもしれない（推量）', 12, C.green), ...cap('③ マイナスの内容 ＝ 推量')),
+  },
+  {
+    note: '❓might はどう使うのでしょう。→ might は許可の意味がほとんどなく、ほぼ推量専用です。might が出てきたら「ひょっとすると〜かもしれない」と訳せば当たります。',
+    add: fresh(wide(12, 'He might be late.', C.green, FILL.green, 13, 28), lb(160, 56, 'ひょっとすると 遅れるかもしれない', 12, C.ink, 'middle', true), lb(160, 90, 'might ＝ ほぼ推量専用', 13, C.main, 'middle', true), ...cap('might は推量専用')),
+  },
+  {
+    note: '言いかえも覚えます。許可の may は can で言いかえられます。May I use this computer? ＝ Can I use this computer? 推量の may は maybe（たぶん）を使った文で言いかえます。She may come tomorrow. ＝ Maybe she will come tomorrow.',
+    add: fresh(wide(8, 'May I use this computer? ＝ Can I use ...?', C.blue, FILL.blue, 11, 26), lb(160, 44, '許可 ⇔ can', 12, C.blue, 'middle', true), wide(62, 'She may come tomorrow.', C.green, FILL.green, 12, 26), lb(160, 98, '＝', 14, C.ink, 'middle', true), wide(108, 'Maybe she will come tomorrow.', C.green, FILL.green, 12, 26), ...cap('推量 ⇔ maybe ＋ will')),
+  },
+  {
+    note: '❓maybe と may be は同じでしょうか。→ ちがいます。maybe は「たぶん」という1語の副詞、may be は助動詞 may ＋ be の2語です。She may be late. ＝ Maybe she will be late. のように、空所のあとに完全な文が続くなら maybe です。また、Maybe は It will maybe rain. ではなく、文頭に置いて Maybe it will rain. と書きます。',
+    add: fresh(bx(10, 14, 145, 44, 'maybe\n1語・副詞\n「たぶん」', C.green, FILL.green, 11), bx(165, 14, 145, 44, 'may be\n2語・助動詞＋be\n「〜かもしれない」', C.blue, FILL.blue, 10), wide(76, 'Maybe it will rain.　（文頭に置く）', C.green, FILL.green, 12, 26), ...cap('maybe と may be は別')),
+  },
+  {
+    note: 'ていねいさの階段（かいだん）も確かめます。Can I 〜?（友達に）、May I 〜?（目上の人に）、Could I 〜?（さらにていねい）。会話では、A: May I sit here? B: Sure. Go ahead.（どうぞ）のように答えます。',
+    add: fresh(bx(10, 10, 300, 28, 'A: May I sit here?', C.gray, FILL.gray, 12), ar(160, 40, 160, 54, C.blue), bx(10, 56, 145, 30, 'B: Sure. Go ahead.', C.green, FILL.green, 12), bx(165, 56, 145, 30, "B: I'm sorry, but my friend is coming.", C.red, FILL.red, 8), ...cap('許可の答え方')),
+  },
+  {
+    note: 'まとめです。May I 〜? と You may 〜. は許可。He / She / It may 〜. と内容がマイナスなら推量。might はほぼ推量専用。許可は can、推量は maybe で言いかえられます。',
+    add: fresh(wide(10, '許可：May I 〜? / You may 〜.（＝ can）', C.blue, FILL.blue, 12, 28), wide(44, '推量：He may 〜. / マイナスの内容（＝ maybe）', C.green, FILL.green, 11, 28), wide(78, 'might ＝ ほぼ推量専用', C.purple, FILL.purple, 12, 28), ...cap('日本語にして意味で分ける', C.main)),
+  },
+], 'may の二つの意味の見分け方');
+
+// ───────── eigo_s163 must①：「〜しなければならない」 ─────────
+const eigo_s163 = S([
+  {
+    note: '「もう帰らなければなりません」を英語で言うと、I must go home now. の5語で足ります。「しなければならない」という気持ちは must 1語が引き受け、動詞は原形のまま。英語の身軽さがよく分かります。',
+    add: [...row([['I', C.gray, FILL.gray], ['must', C.red, FILL.red], ['go', C.green, FILL.green], ['home', C.gray, FILL.gray], ['now.', C.gray, FILL.gray]], 20, { h: 34, size: 14 }), lb(160, 76, '「しなければならない」は must 1語', 12, C.red, 'middle', true), lb(160, 100, 'うしろは 動詞の原形', 12, C.green, 'middle', true), ...cap('must ＋ 原形')],
+  },
+  {
+    note: '❓must はどんな意味でしょう。→ 「〜しなければならない」という強い義務です。規則で決まっていることや、話し手が「絶対にそうすべきだ」と思っていることに使います。You must wash your hands before dinner.（夕食の前に手を洗いなさい）、We must be quiet in the library.（図書館では静かにしなければならない）。',
+    add: fresh(wide(10, 'You must wash your hands before dinner.', C.red, FILL.red, 11, 28), wide(44, 'We must be quiet in the library.', C.red, FILL.red, 12, 28), lb(160, 92, '規則・強い義務', 12, C.ink, 'middle', true), ...cap('must ＝ しなければならない')),
+  },
+  {
+    note: '❓主語が she のとき、must に s はつくでしょうか。→ つきません。She must study hard for the test. のように、must は形が1つしかなく、うしろの動詞も原形のままです。「変わらない代わりに、意味が強い」と覚えます。',
+    add: fresh(wide(12, 'She must study hard for the test.', C.green, FILL.green, 12, 28), wide(48, 'She musts study hard.', C.red, FILL.red, 12, 28), ng(290, 61), wide(84, 'She must studies hard.', C.red, FILL.red, 12, 28), ng(290, 97), ...cap('s もつかない。to もつかない')),
+  },
+  {
+    note: '否定文は must not（mustn\'t）で、「〜してはいけない」という強い禁止になります。You must not run here.（ここで走ってはいけません）。「〜しなくてよい」という意味ではないところが最大のポイントです。',
+    add: fresh(wide(14, 'You must not run here.', C.red, FILL.red, 13, 28), lb(160, 56, 'ここで走ってはいけません（禁止）', 12, C.red, 'middle', true), lb(160, 86, '× 走らなくてよい', 12, C.gray, 'middle'), lb(160, 112, "短縮形は mustn't", 12, C.ink, 'middle'), ...cap('must not ＝ してはいけない')),
+  },
+  {
+    note: '疑問文は Must ＋ 主語 ＋ 原形 〜? で、do は使いません。Must I go now?（もう行かなければなりませんか）答えは Yes, you must. / No, you don\'t have to.（いいえ、その必要はありません）。❓No, you mustn\'t. と答えてもいい？ → だめです。「行ってはいけない」という別の意味になってしまいます。',
+    add: fresh(wide(10, 'Must I go now?', C.blue, FILL.blue, 13, 26), bx(10, 48, 145, 30, 'Yes, you must.', C.green, FILL.green, 12), bx(165, 48, 145, 30, "No, you don't have to.", C.red, FILL.red, 10), wide(94, "No, you mustn't. ＝ 行ってはいけない（別の意味）", C.gray, FILL.gray, 10, 26), ng(290, 118), ...cap('No の答えは don\'t have to')),
+  },
+  {
+    note: '❓must には弱点があります。それは過去形と未来形がないことです。過去の「〜しなければならなかった」は had to を使います。I had to walk home yesterday.（昨日は歩いて帰らなければならなかった）。I must walk home yesterday. とは書けません。',
+    add: fresh(wide(10, 'I must walk home yesterday.', C.red, FILL.red, 12, 26), ng(160, 48), wide(60, 'I had to walk home yesterday.', C.green, FILL.green, 12, 26), ok(160, 104), ...cap('過去は had to')),
+  },
+  {
+    note: '未来の「〜しなければならないだろう」は will have to です。You will have to get up early tomorrow. 助動詞は2つ並べられないので、will must はまちがいです。',
+    add: fresh(wide(10, 'You will must get up early tomorrow.', C.red, FILL.red, 11, 26), ng(160, 48), wide(60, 'You will have to get up early tomorrow.', C.green, FILL.green, 11, 26), ok(160, 104), lb(160, 130, '助動詞は 2つ並べられない', 11, C.gray, 'middle'), ...cap('未来は will have to')),
+  },
+  {
+    note: '❓must のうしろに to を入れて You must to go. と書くまちがいが多いのはなぜ？ → have to の to につられるからです。「to がつくのは have to のほうだけ」と唱えて覚えます。また、must は命令に近い強さがあり、目上の人にはきつく響くので、会話では have to や should を使うことが多いです。',
+    add: fresh(wide(10, 'You must to go.', C.red, FILL.red, 13, 26), ng(160, 48), wide(60, 'You must go.', C.green, FILL.green, 13, 26), wide(96, 'You have to go.　（to は have にくっつく）', C.blue, FILL.blue, 11, 26), ...cap('to がつくのは have to')),
+  },
+  {
+    note: 'まとめです。must ＋ 原形で「〜しなければならない」。s も to もつけない。否定の must not は禁止。過去は had to、未来は will have to で補います。',
+    add: fresh(wide(10, 'must ＋ 原形　（s も to もつけない）', C.blue, FILL.blue, 12, 28), wide(44, 'must not ＝ 禁止　／　Must I 〜? ＝ 疑問', C.red, FILL.red, 11, 28), wide(78, '過去：had to　　未来：will have to', C.green, FILL.green, 12, 28), ...cap('形は1つ、意味は強い', C.main)),
+  },
+], 'must：しなければならない');
+
+// ───────── eigo_s165 have to②：had to と will have to ─────────
+const eigo_s165 = S([
+  {
+    note: 'must には過去形も未来形もありません。では「昨日は早く起きなければならなかった」はどう言うのでしょう。ここで have to が活やくします。時制を自由に動かせるのが have to の強みです。',
+    add: [...tbl(20, 10, [100, 90, 90], [['', 'must', 'have to'], ['現在', 'must', 'have to'], ['過去', '（なし）', 'had to'], ['未来', '（なし）', 'will have to']], { h: 30, size: 12, colors: [C.gray, C.red, C.green] }), ...cap('have to は時制を動かせる')],
+  },
+  {
+    note: '過去は have to の過去形 had to を使います。I had to stay home last Sunday.（この前の日曜は家にいなければならなかった）、She had to take care of her brother.（彼女は弟の世話をしなければならなかった）。had to は主語が何でも had to のままです。',
+    add: fresh(wide(10, 'I had to stay home last Sunday.', C.green, FILL.green, 12, 28), wide(46, 'She had to take care of her brother.', C.green, FILL.green, 12, 28), lb(160, 98, '主語が何でも had to のまま', 12, C.ink, 'middle', true), lb(160, 122, '手がかり：yesterday / last week / then', 11, C.gray, 'middle'), ...cap('過去 ＝ had to ＋ 原形')),
+  },
+  {
+    note: '過去の否定は didn\'t have to で、「〜する必要がなかった」という意味です。I didn\'t have to go to school yesterday.（昨日は学校へ行かなくてよかった）。「行かなければならなかった」の否定ではなく、「行く必要がなかった」です。',
+    add: fresh(wide(14, "I didn't have to go to school yesterday.", C.red, FILL.red, 11, 28), lb(160, 60, '昨日は学校へ行かなくてよかった', 12, C.ink, 'middle', true), lb(160, 90, '＝ 行く必要がなかった', 12, C.red, 'middle'), lb(160, 116, "didn't のあとは have（原形）", 11, C.gray, 'middle'), ...cap("didn't have to ＝ する必要がなかった")),
+  },
+  {
+    note: '❓過去の疑問文はどうなるのでしょう。Did you had to walk home? と書くとまちがいです。Did を使ったら、うしろは had to ではなく have to にもどります。Did you have to walk home?（歩いて帰らなければならなかったの）。答えは Yes, I did. / No, I didn\'t.',
+    add: fresh(wide(10, 'Did you had to walk home?', C.red, FILL.red, 12, 26), ng(160, 48), wide(60, 'Did you have to walk home?', C.green, FILL.green, 12, 26), ok(160, 104), lb(160, 128, '過去のしるしは Did だけで十分', 11, C.gray, 'middle'), ...cap('Did のあとは have to')),
+  },
+  {
+    note: '未来は will have to です。You will have to wait for an hour.（一時間待たなければならないでしょう）。❓なぜ will must ではだめなの？ → 助動詞を二つ並べられないからです。will を残して、must を have to に置きかえます。',
+    add: fresh(wide(10, 'We will must get up at six.', C.red, FILL.red, 12, 26), ng(160, 48), wide(60, 'We will have to get up at six.', C.green, FILL.green, 12, 26), ok(160, 104), lb(160, 128, 'will ＋ must は 助動詞が2つ', 11, C.gray, 'middle'), ...cap('未来は will have to')),
+  },
+  {
+    note: '❓will のあとの have は has にならないの？ → なりません。will のうしろは原形なので have のままです。He will have to go. が正しく、He will has to go. はまちがいです。',
+    add: fresh(wide(14, 'He will has to go.', C.red, FILL.red, 13, 28), ng(160, 56), wide(70, 'He will have to go.', C.green, FILL.green, 13, 28), ok(160, 114), ...cap('will のあとは 原形 have')),
+  },
+  {
+    note: '未来の否定は won\'t have to で、「〜する必要はないでしょう」です。You won\'t have to pay for it.（それにお金をはらう必要はないでしょう）。疑問文は Will I have to change trains?（電車を乗りかえなければなりませんか）— Yes, you will. / No, you won\'t.',
+    add: fresh(wide(10, "You won't have to pay for it.", C.red, FILL.red, 12, 28), lb(160, 48, '払う必要はないでしょう', 11, C.gray), wide(62, 'Will I have to change trains?', C.blue, FILL.blue, 12, 28), bx(20, 100, 130, 26, 'Yes, you will.', C.green, FILL.green, 11), bx(170, 100, 130, 26, "No, you won't.", C.red, FILL.red, 11), ...cap('未来の否定と疑問')),
+  },
+  {
+    note: 'まとめ表です。現在は must / have to（has to）。過去は had to（must には過去形なし）。未来は will have to（must には未来形なし）。否定は must not（禁止）と don\'t have to（必要ない）で、意味がちがいます。',
+    add: fresh(...tbl(8, 8, [90, 214], [['時', '形'], ['現在', 'must / have to（has to）'], ['過去', 'had to ／ didn\'t have to'], ['未来', 'will have to ／ won\'t have to'], ['否定', 'must not（禁止）／ don\'t have to（不要）']], { h: 26, size: 11, colors: [C.gray, C.blue] }), ...cap('時を表す語が手がかり')),
+  },
+], 'had to と will have to');
+
+// ───────── eigo_s168 should①：すべきだ・したほうがよい ─────────
+const eigo_s168 = S([
+  {
+    note: 'かぜをひいた友だちに「病院に行ったほうがいいよ」と言いたいとき、must を使うと「行かなければだめだ」と命令のようにひびきます。ここで使うのが should です。強さのちがいを見ていきましょう。',
+    add: [wide(14, 'You must see a doctor.', C.red, FILL.red, 13, 28), lb(160, 54, '行かなければだめだ（強い）', 11, C.red), wide(72, 'You should see a doctor.', C.green, FILL.green, 13, 28), lb(160, 112, '行ったほうがいいよ（やわらかい助言）', 11, C.green), ...cap('must より弱い助言')],
+  },
+  {
+    note: 'should は「〜したほうがいいよ」とすすめたり、「〜すべきだ」と軽く義務を示したりする助動詞です。must ほど強くないので、友達にも先生にも使いやすいです。You should take an umbrella. It may rain.（かさを持っていったほうがいい。雨が降るかもしれない）。',
+    add: fresh(wide(10, 'You should see a doctor.', C.green, FILL.green, 12, 26), wide(42, 'You should take an umbrella.', C.green, FILL.green, 12, 26), wide(74, 'We should help each other.', C.green, FILL.green, 12, 26), lb(160, 122, 'すすめる・軽い義務', 12, C.ink, 'middle', true), ...cap('should ＝ したほうがいい')),
+  },
+  {
+    note: '❓should のうしろの形は？ → 助動詞なので、うしろは動詞の原形です。三単現の s も、to もつきません。He should goes. も He should to go. もまちがいで、He should go. が正しいです。can・may・must・will と同じ決まりです。',
+    add: fresh(wide(10, 'He should goes.', C.red, FILL.red, 12, 24), ng(290, 22), wide(40, 'He should to go.', C.red, FILL.red, 12, 24), ng(290, 52), wide(70, 'He should go.', C.green, FILL.green, 13, 26), ok(290, 83), lb(160, 118, 'can / may / must / will / should は 同じ決まり', 11, C.gray, 'middle'), ...cap('should ＋ 原形')),
+  },
+  {
+    note: '否定文は should not（shouldn\'t）で、「〜しないほうがいい」というやわらかい打ち消しです。You shouldn\'t eat too much.（食べすぎないほうがいい）。must not（絶対にするな）ほど強くありません。',
+    add: fresh(wide(10, "You shouldn't eat too much.", C.blue, FILL.blue, 12, 26), lb(160, 48, '食べすぎないほうがいい', 11, C.gray), wide(62, 'You must not eat too much.', C.red, FILL.red, 12, 26), lb(160, 100, '食べすぎてはいけない（禁止）', 11, C.gray), lb(160, 126, 'should not は やわらかい', 12, C.blue, 'middle', true), ...cap("shouldn't ＝ しないほうがいい")),
+  },
+  {
+    note: '疑問文は Should I 〜?（〜したほうがいいですか）です。Should I bring my lunch?（お弁当を持っていったほうがいいですか）答えは Yes, you should. / No, you don\'t have to.（その必要はありません）/ No, you shouldn\'t.（やめたほうがいい）。',
+    add: fresh(wide(10, 'Should I bring my lunch?', C.blue, FILL.blue, 13, 26), bx(8, 48, 98, 44, 'Yes, you\nshould.', C.green, FILL.green, 11), bx(111, 48, 98, 44, "No, you don't\nhave to.", C.gray, FILL.gray, 10), bx(214, 48, 98, 44, "No, you\nshouldn't.", C.red, FILL.red, 11), lb(160, 112, '必要ない と やめたほうがいい は 別の意味', 11, C.ink, 'middle'), ...cap('質問の内容に合う答えを選ぶ')),
+  },
+  {
+    note: '会話では、疑問詞といっしょに「何をしたらいいですか」と相談する場面が多いです。語順は「疑問詞 ＋ should ＋ 主語 ＋ 動詞の原形」です。What should I do?（私はどうしたらよいですか）、Where should we meet?（どこで待ち合わせましょうか）。',
+    add: fresh(...row([['What', C.red, FILL.red], ['should', C.purple, FILL.purple], ['I', C.gray, FILL.gray], ['do?', C.green, FILL.green]], 14, { h: 32, size: 14 }), wide(58, 'Where should we meet?', C.blue, FILL.blue, 12, 26), wide(90, 'Which bus should I take?', C.blue, FILL.blue, 12, 26), ...cap('疑問詞 ＋ should ＋ 主語 ＋ 原形')),
+  },
+  {
+    note: '❓What I should do? はなぜまちがいなのでしょう。→ 日本語は「私は何をすべきですか」と主語が先に来ますが、英語では疑問詞のすぐうしろに助動詞、その次に主語を置くからです。順番を固定して覚えます。',
+    add: fresh(wide(12, 'What I should do?', C.red, FILL.red, 13, 28), ng(160, 54), wide(70, 'What should I do?', C.green, FILL.green, 13, 28), lb(160, 118, '疑問詞 → 助動詞 → 主語', 12, C.ink, 'middle', true), ...cap('日本語の順番につられない')),
+  },
+  {
+    note: '助言を表す言い方は、ほかにもあります。You should go to bed early. ＝ You had better go to bed early.（もっと強い）＝ Why don\'t you go to bed early?（早く寝たらどう？）＝ How about going to bed early?（早く寝るのはどう？）。',
+    add: fresh(wide(8, 'You should go to bed early.', C.green, FILL.green, 12, 24), wide(38, 'You had better go to bed early.（もっと強い）', C.red, FILL.red, 10, 24), wide(68, "Why don't you go to bed early?（〜したらどう）", C.blue, FILL.blue, 10, 24), wide(98, 'How about going to bed early?', C.blue, FILL.blue, 11, 24), ...cap('助言の言い方いろいろ')),
+  },
+  {
+    note: 'まとめです。should ＋ 原形で「〜したほうがいい」。否定は shouldn\'t。疑問は Should I 〜? と What should I do?。must より弱い、やわらかい助言です。s も to もつけません。',
+    add: fresh(wide(10, 'should ＋ 原形　（s も to もつけない）', C.green, FILL.green, 12, 28), wide(44, "否定：shouldn't　疑問：Should I 〜?", C.blue, FILL.blue, 12, 28), wide(78, 'What should I do?　（疑問詞 → should → 主語）', C.purple, FILL.purple, 11, 28), ...cap('やわらかい助言', C.main)),
+  },
+], 'should：すべきだ・したほうがよい');
+
+// ───────── eigo_s170 should②：助言・提案の表現 ─────────
+const eigo_s170 = S([
+  {
+    note: '「勉強したら？」とすすめるとき、英語では Why don\'t you study? と言います。直訳は「なぜ勉強しないの？」。責めているように見えますが、実はやさしいすすめの言い方です。日本語から想像しにくい表現をまとめて覚えます。',
+    add: [wide(16, "Why don't you study?", C.purple, FILL.purple, 14, 30), lb(160, 66, '直訳：なぜ勉強しないの？', 12, C.red, 'middle'), lb(160, 92, '本当は：勉強したらどう？', 13, C.green, 'middle', true), ...cap('Why don\'t you 〜? ＝ 提案')],
+  },
+  {
+    note: 'まず、You should 〜.（〜したほうがいい）。You should try this cake.（このケーキを食べてみるといいよ）。次に Why don\'t you 〜?（〜したらどうですか）。Why don\'t you ask your teacher?（先生に聞いてみたらどう）。形は否定疑問文ですが、理由をたずねる文ではなく、提案の決まり文句です。',
+    add: fresh(wide(10, 'You should try this cake.', C.green, FILL.green, 12, 26), lb(160, 46, 'このケーキを食べてみるといいよ', 11, C.gray), wide(62, "Why don't you ask your teacher?", C.purple, FILL.purple, 12, 26), lb(160, 98, '先生に聞いてみたらどう', 11, C.gray), lb(160, 126, '理由をたずねる文ではない', 12, C.red, 'middle', true), ...cap('すすめる言い方')),
+  },
+  {
+    note: '❓How about 〜? は？ → 「〜はどうですか」とすすめる言い方です。How about this one?（こちらはいかがですか）のように、うしろは名詞か、動詞の -ing 形にします。❓なぜ -ing なのか？ → about は前置詞で、前置詞のうしろに動詞を続けるときは -ing 形（動名詞）にするからです。',
+    add: fresh(wide(10, 'How about this one?', C.blue, FILL.blue, 12, 26), lb(160, 46, 'うしろは名詞', 11, C.gray), wide(60, 'How about going to the movies?', C.blue, FILL.blue, 12, 26), lb(160, 96, 'うしろは動詞の -ing 形', 11, C.gray), wide(110, 'How about to go to the movies?', C.red, FILL.red, 11, 24), ng(290, 122), ...cap('about は前置詞 → -ing')),
+  },
+  {
+    note: 'いっしょにしよう、と誘う言い方もあります。Why don\'t we play tennis? ＝ Shall we play tennis? ＝ Let\'s play tennis. ❓you と we のちがいは？ → Why don\'t you 〜? は「あなたへの提案」、Why don\'t we 〜? は「いっしょにやろう」という誘いです。',
+    add: fresh(wide(8, "Why don't we play tennis?", C.purple, FILL.purple, 12, 24), wide(38, 'Shall we play tennis?', C.purple, FILL.purple, 12, 24), wide(68, "Let's play tennis.", C.purple, FILL.purple, 12, 24), lb(160, 108, 'どれも「いっしょにテニスをしよう」', 12, C.ink, 'middle', true), lb(160, 130, 'you ＝ あなたが　　we ＝ いっしょに', 11, C.gray, 'middle'), ...cap('you と we を読み分ける')),
+  },
+  {
+    note: '提案されたときの返事（へんじ）も決まっています。賛成するとき: That\'s a good idea.（いい考えですね）、Sounds good.（よさそうですね）、Yes, let\'s.（そうしましょう）、Sure. / Of course. / All right.（いいですよ）。',
+    add: fresh(lb(160, 12, '賛成するとき', 13, C.green, 'middle', true), wide(26, "That's a good idea.", C.green, FILL.green, 12, 24), wide(54, 'Sounds good.', C.green, FILL.green, 12, 24), wide(82, "Yes, let's.（Let's 〜. / Shall we 〜? に対して）", C.green, FILL.green, 10, 24), wide(110, 'Sure. / Of course. / All right.', C.green, FILL.green, 12, 24), ...cap('賛成の返事')),
+  },
+  {
+    note: '断るときは、I\'m sorry, I can\'t.（すみません、できません）、Sorry, but I have to help my mother.（ごめんなさい、母を手伝わないといけないので）、Maybe next time.（また今度ね）。断るときは、理由を一言そえるのが自然です。',
+    add: fresh(lb(160, 12, '断るとき', 13, C.red, 'middle', true), wide(26, "I'm sorry, I can't.", C.red, FILL.red, 12, 24), wide(54, 'Sorry, but I have to help my mother.', C.red, FILL.red, 11, 24), wide(82, 'Maybe next time.', C.red, FILL.red, 12, 24), lb(160, 122, '理由を一言そえるのが自然', 12, C.ink, 'middle', true), ...cap('断る返事')),
+  },
+  {
+    note: '会話の流れです。A: I have a bad cold.（ひどいかぜをひいてしまって）B: Why don\'t you go home and rest?（家に帰って休んだらどう）A: That\'s a good idea. Thank you.（それはいい考えだね。ありがとう）。',
+    add: fresh(bx(10, 8, 300, 26, 'A: I have a bad cold.', C.gray, FILL.gray, 12), bx(10, 40, 300, 28, "B: Why don't you go home and rest?", C.purple, FILL.purple, 12), bx(10, 74, 300, 28, "A: That's a good idea. Thank you.", C.green, FILL.green, 12), ...cap('提案 → 賛成の流れ')),
+  },
+  {
+    note: '❓Why don\'t you 〜? に Because 〜 と理由を答えてもいい？ → いけません。提案なので、Sure. や That\'s a good idea. のように、賛成か不賛成かで答えます。「Why don\'t you come with us?」は「私たちといっしょに来ませんか」です。',
+    add: fresh(wide(10, "Why don't you come with us?", C.purple, FILL.purple, 12, 26), lb(160, 46, '私たちといっしょに来ませんか', 11, C.gray), wide(62, 'Because I am busy.', C.red, FILL.red, 12, 26), ng(290, 75), wide(98, "Sure. / That's a good idea.", C.green, FILL.green, 12, 26), ok(290, 111), ...cap('理由ではなく 賛成・不賛成で答える')),
+  },
+  {
+    note: 'まとめです。You should 〜. / Why don\'t you 〜? / How about 〜ing? はすすめる言い方。Why don\'t we 〜? / Shall we 〜? / Let\'s 〜. は誘う言い方。返事は That\'s a good idea. / Sounds good. / Sorry, I can\'t.',
+    add: fresh(wide(10, "すすめる：should / Why don't you 〜? / How about 〜ing?", C.green, FILL.green, 10, 28), wide(44, "誘う：Why don't we 〜? / Shall we 〜? / Let's 〜.", C.purple, FILL.purple, 10, 28), wide(78, "返事：That's a good idea. / Sorry, I can't.", C.blue, FILL.blue, 10, 28), ...cap('決まり文句を丸ごと覚える', C.main)),
+  },
+], '助言・提案の言い方');
+
+// ───────── eigo_s171 will①：未来と意志 ─────────
+const eigo_s171 = S([
+  {
+    note: '「明日は雨が降るでしょう」も「私が持ちますよ」も、英語ではどちらも will を使えます。予想（よそう）と意志（いし）という別のことを、1語でまかなっているのです。will の形を順に見ていきましょう。',
+    add: [wide(14, 'It will rain tomorrow.', C.blue, FILL.blue, 13, 28), lb(160, 54, '明日は雨が降るでしょう（予想）', 11, C.gray), wide(70, "I'll carry it.", C.green, FILL.green, 13, 28), lb(160, 110, '私が持ちますよ（意志）', 11, C.gray), ...cap('will ＝ 予想と意志')],
+  },
+  {
+    note: 'will は未来のことを表す助動詞で、「〜するだろう」（予想）と「〜するつもりだ」（意志）の二つの意味があります。It will be sunny tomorrow.（明日は晴れるでしょう）は予想、I will call you tonight.（今夜、電話するね）は意志です。',
+    add: fresh(...tbl(8, 8, [90, 110, 104], [['意味', '例', '訳'], ['予想', 'It will be sunny.', '晴れるでしょう'], ['意志', 'I will call you.', '電話するね'], ['予想', 'He will be fifteen.', '15歳になる']], { h: 30, size: 10, colors: [C.blue, C.green, C.gray] }), lb(160, 138, 'tomorrow / next week / soon があれば 未来', 11, C.ink, 'middle'), ...cap('will ＋ 動詞の原形')),
+  },
+  {
+    note: '❓主語が he のとき、will や動詞に s はつくでしょうか。→ つきません。助動詞のあとは原形で、will 自身も wills にはなりません。He will come. が正しく、He wills come. も He will comes. もまちがいです。',
+    add: fresh(wide(10, 'He will come.', C.green, FILL.green, 13, 26), ok(290, 23), wide(44, 'He wills come.', C.red, FILL.red, 13, 26), ng(290, 57), wide(78, 'He will comes.', C.red, FILL.red, 13, 26), ng(290, 91), ...cap('s は つかない')),
+  },
+  {
+    note: '否定文は will not の短縮形 won\'t です。I won\'t tell anyone.（だれにも言わないよ）、It won\'t rain this afternoon. willn\'t とは書きません。疑問文は Will you be free tomorrow?（明日はひまですか）— Yes, I will. / No, I won\'t.',
+    add: fresh(wide(10, "I won't tell anyone.", C.red, FILL.red, 12, 26), lb(160, 46, "will not → won't（willn't ではない）", 11, C.gray), wide(60, 'Will you be free tomorrow?', C.blue, FILL.blue, 12, 26), bx(20, 98, 130, 26, 'Yes, I will.', C.green, FILL.green, 12), bx(170, 98, 130, 26, "No, I won't.", C.red, FILL.red, 12), ...cap('won\'t と Will 〜?')),
+  },
+  {
+    note: '会話では短縮形も大切です。I\'ll / You\'ll / He\'ll / We\'ll / They\'ll は会話文で必ず出ます。読めるだけでなく、書けるようにしておきます。',
+    add: fresh(...tbl(40, 10, [110, 130], [['短縮しない形', '短縮形'], ['I will', "I'll"], ['You will', "You'll"], ['He will', "He'll"], ['We will / They will', "We'll / They'll"]], { h: 26, size: 12, colors: [C.gray, C.green] }), ...cap('書ける短縮形')),
+  },
+  {
+    note: '❓未来を表す言い方はほかにありますか。→ be going to があります。前から決めていた予定に使います。I am going to visit my grandmother next Sunday.（次の日曜に祖母を訪ねる予定です）。be動詞は主語に合わせて am / is / are と変わります。',
+    add: fresh(wide(10, 'I am going to visit my grandmother next Sunday.', C.green, FILL.green, 10, 28), lb(160, 52, '前から決めていた予定', 12, C.green, 'middle', true), wide(70, 'She is going to buy a new bag.', C.green, FILL.green, 12, 26), lb(160, 114, 'うしろは動詞の原形（× buys）', 11, C.red, 'middle'), ...cap('be going to ＝ 前から決めた予定')),
+  },
+  {
+    note: '❓will との使い分けは？ → will は「その場で決めた意志」や「ただの予想」に使います。A: The phone is ringing. B: I\'ll get it.（ぼくが出るよ）は今その場で決めたことです。I think it will rain tomorrow.（明日は雨だと思う）は予想です。',
+    add: fresh(bx(8, 8, 146, 52, 'will\nその場で決めた意志\nただの予想', C.blue, FILL.blue, 11), bx(166, 8, 146, 52, 'be going to\n前から決めていた予定', C.green, FILL.green, 11), wide(72, "A: The phone is ringing.　B: I'll get it.", C.blue, FILL.blue, 11, 26), wide(104, 'I think it will rain tomorrow.', C.blue, FILL.blue, 12, 26), ...cap('いつ決めたかで選ぶ')),
+  },
+  {
+    note: 'be going to の否定・疑問は be動詞を動かします。I\'m not going to go out today. / Are you going to play soccer? — Yes, I am. / No, I\'m not. will の疑問文とは作り方がちがいます。また、if や when のあとでは、未来のことでも現在形を使います。If it is fine tomorrow, we will go on a picnic.',
+    add: fresh(wide(8, "I'm not going to go out today.", C.red, FILL.red, 11, 24), wide(38, 'Are you going to play soccer?', C.blue, FILL.blue, 11, 24), lb(160, 76, '― Yes, I am. / No, I\'m not.', 11, C.gray), wide(92, 'If it is fine tomorrow, we will go on a picnic.', C.purple, FILL.purple, 10, 26), lb(160, 128, 'if のあとは 未来でも現在形', 11, C.purple, 'middle', true), ...cap('be動詞を動かす')),
+  },
+  {
+    note: 'まとめです。will ＋ 動詞の原形は、予想と意志。s はつかず、否定は won\'t、疑問は Will 〜?。be going to は前から決めていた予定。if や when のあとは現在形です。',
+    add: fresh(wide(10, 'will ＋ 原形　（s なし）　否定 won\'t', C.blue, FILL.blue, 12, 28), wide(44, 'be going to ＋ 原形　（前から決めた予定）', C.green, FILL.green, 12, 28), wide(78, 'if / when のあとは 現在形', C.purple, FILL.purple, 12, 28), ...cap('予想と意志、予定', C.main)),
+  },
+], 'will：未来と意志');
+
 export const XF_CED_FIGURES: Record<string, DiagramFigure> = {
   'xf_eigo_s118': eigo_s118,
   'xf_eigo_s119': eigo_s119,
@@ -767,6 +1283,19 @@ export const XF_CED_FIGURES: Record<string, DiagramFigure> = {
   'xf_eigo_s143': eigo_s143,
   'xf_eigo_s145': eigo_s145,
   'xf_eigo_s147': eigo_s147,
+  'xf_eigo_s148': eigo_s148,
+  'xf_eigo_s149': eigo_s149,
+  'xf_eigo_s151': eigo_s151,
+  'xf_eigo_s152': eigo_s152,
+  'xf_eigo_s154': eigo_s154,
+  'xf_eigo_s159': eigo_s159,
+  'xf_eigo_s160': eigo_s160,
+  'xf_eigo_s162': eigo_s162,
+  'xf_eigo_s163': eigo_s163,
+  'xf_eigo_s165': eigo_s165,
+  'xf_eigo_s168': eigo_s168,
+  'xf_eigo_s170': eigo_s170,
+  'xf_eigo_s171': eigo_s171,
 };
 
 export const XF_CED_SECTIONS: Record<string, string> = {
@@ -787,4 +1316,17 @@ export const XF_CED_SECTIONS: Record<string, string> = {
   'eigo_s143#0': 'xf_eigo_s143',
   'eigo_s145#0': 'xf_eigo_s145',
   'eigo_s147#0': 'xf_eigo_s147',
+  'eigo_s148#0': 'xf_eigo_s148',
+  'eigo_s149#0': 'xf_eigo_s149',
+  'eigo_s151#2': 'xf_eigo_s151',
+  'eigo_s152#0': 'xf_eigo_s152',
+  'eigo_s154#0': 'xf_eigo_s154',
+  'eigo_s159#0': 'xf_eigo_s159',
+  'eigo_s160#0': 'xf_eigo_s160',
+  'eigo_s162#0': 'xf_eigo_s162',
+  'eigo_s163#0': 'xf_eigo_s163',
+  'eigo_s165#0': 'xf_eigo_s165',
+  'eigo_s168#0': 'xf_eigo_s168',
+  'eigo_s170#0': 'xf_eigo_s170',
+  'eigo_s171#0': 'xf_eigo_s171',
 };

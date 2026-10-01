@@ -91,6 +91,21 @@ const brkb = (x1: number, x2: number, y: number, t: string, color: string = C.gr
 ];
 /** 好きな x の位置に中央ぞろえのラベル */
 const at = (x: number, y: number, t: string, size = 11, color: string = C.gray, bold = false) => lb(x, y, t, size, color, 'middle', bold);
+/** 縦にならべた手順の箱（矢印でつなぐ） */
+function steps(items: [string, KK][], o?: { y0?: number; h?: number; gap?: number; size?: number; x?: number; w?: number }): DiagramElement[] {
+  const y0 = o?.y0 ?? 12;
+  const h = o?.h ?? 32;
+  const gap = o?.gap ?? 12;
+  const x = o?.x ?? 24;
+  const w = o?.w ?? 272;
+  const out: DiagramElement[] = [];
+  items.forEach(([t, k], i) => {
+    const y = y0 + i * (h + gap);
+    if (i > 0) out.push(ar(x + w / 2, y - gap + 1, x + w / 2, y - 1, C.gray));
+    out.push(bx(x, y, w, h, t, K[k][0], K[k][1], o?.size ?? 13));
+  });
+  return out;
+}
 
 // ───────── eigo_s068 SVC をつくる動詞 ─────────
 const w68: Wd[] = [['This soup', 'b', 'S'], ['smells', 'm', 'V'], ['good', 'g', 'C']];
@@ -540,7 +555,7 @@ const s087: DiagramFigure = show([
   },
   {
     note: 's・x・ch・sh で終わる語には -es を付けます。bus→buses、class→classes、box→boxes、fox→foxes、watch→watches、church→churches、sandwich→sandwiches、dish→dishes、brush→brushes。',
-    add: fresh(...grid([['語尾', '例'], ['s', 'bus → buses ／ class → classes'], ['x', 'box → boxes ／ fox → foxes'], ['ch', 'watch → watches ／ church → churches'], ['sh', 'dish → dishes ／ brush → brushes']], 8, 8, [44, 256], 30, { size: 12, head: 'b', body: 'n', firstCol: 'm' }), ...cap('s・x・ch・sh → -es', C.blue)),
+    add: fresh(...grid([['語尾', '例'], ['s', 'bus → buses ／ class → classes'], ['x', 'box → boxes ／ fox → foxes'], ['ch', 'watch → watches ／ church → churches'], ['sh', 'dish → dishes ／ brush → brushes']], 8, 6, [44, 256], 26, { size: 12, head: 'b', body: 'n', firstCol: 'm' }), ...cap('s・x・ch・sh → -es', C.blue)),
   },
   {
     note: '❓o で終わる語は？ → 二つに分かれます。-es を付ける語：potato→potatoes、tomato→tomatoes、hero→heroes、echo→echoes。-s だけの語：piano→pianos、photo→photos、radio→radios、kilo→kilos、zoo→zoos。',
@@ -572,15 +587,15 @@ const s088: DiagramFigure = show([
   },
   {
     note: '❓分かれ目はどこでしょう。→ y の一つ前の文字です。city は t が前（子音字（しいんじ））、day は a が前（母音字（ぼいんじ））。母音字は a・i・u・e・o の五文字です。',
-    add: fresh(...[['c','i','t','y'], ['d','a','y']].flatMap((r, ri) => r.map((ch, i) => bx(60 + i * 40 + (ri === 1 ? 20 : 0), 20 + ri * 60, 36, 36, ch, i === r.length - 2 ? (ri === 0 ? C.red : C.green) : C.gray, i === r.length - 2 ? (ri === 0 ? FILL.red : FILL.green) : FILL.gray, 16))), at(250, 38, '一つ前が t（子音字）', 11, C.red, true), at(250, 98, '一つ前が a（母音字）', 11, C.green, true), ...cap('y の「一つ前」を 見る', C.main)),
+    add: fresh(...[['c','i','t','y'], ['d','a','y']].flatMap((r, ri) => r.map((ch, i) => bx(70 + i * 44 + (ri === 1 ? 22 : 0), 14 + ri * 62, 38, 36, ch, i === r.length - 2 ? (ri === 0 ? C.red : C.green) : C.gray, i === r.length - 2 ? (ri === 0 ? FILL.red : FILL.green) : FILL.gray, 16))), at(160, 62, 'y の一つ前が t（子音字）→ y は i に変わる', 11, C.red, true), at(160, 124, 'y の一つ前が a（母音字）→ そのまま', 11, C.green, true), ...cap('y の「一つ前」を 見る', C.main)),
   },
   {
     note: '子音字＋y は、y を i に変えて -es を付けます。city→cities、country→countries、baby→babies、story→stories、family→families、library→libraries、party→parties、hobby→hobbies。',
-    add: fresh(...row([['city', 'b'], ['c i t y', 'n'], ['cities', 'g']], 14, { size: 14, h: 30 }), ...row([['y を i に', 'r'], ['＋ es', 'g']], 62, { size: 14, h: 30, x0: 60, x1: 260 }), ...grid([['baby', 'babies'], ['story', 'stories'], ['family', 'families']], 40, 102, [120, 120], 14, { size: 10 }), ...cap('子音字＋y → y を i にして -es', C.red)),
+    add: fresh(...row([['city', 'b'], ['c i t y', 'n'], ['cities', 'g']], 14, { size: 14, h: 30 }), ...row([['y を i に', 'r'], ['＋ es', 'g']], 62, { size: 14, h: 30, x0: 60, x1: 260 }), en('baby → babies', 108, 12), en('story → stories ／ family → families', 126, 12), ...cap('子音字＋y → y を i にして -es', C.red)),
   },
   {
     note: '母音字＋y は、そのまま -s です。boy→boys、day→days、key→keys、toy→toys、monkey→monkeys、way→ways、holiday→holidays。boies や dayes と書かないようにします。',
-    add: fresh(...row([['boy', 'b'], ['→', 'n'], ['boys', 'g']], 16, { size: 14, h: 30 }), ...row([['day', 'b'], ['→', 'n'], ['days', 'g']], 56, { size: 14, h: 30 }), ...row([['key', 'b'], ['→', 'n'], ['keys', 'g']], 96, { size: 14, h: 30 }), at(285, 34, '× boies', 11, C.red), ...cap('母音字＋y は そのまま -s', C.green)),
+    add: fresh(...row([['boy', 'b'], ['→', 'n'], ['boys', 'g']], 16, { size: 14, h: 30 }), ...row([['day', 'b'], ['→', 'n'], ['days', 'g']], 56, { size: 14, h: 30 }), ...row([['key', 'b'], ['→', 'n'], ['keys', 'g']], 96, { size: 14, h: 30 }), at(160, 138, '× boies  × dayes  × keies', 11, C.red), ...cap('母音字＋y は そのまま -s', C.green)),
   },
   {
     note: '手順は三つです。①語尾が y か確かめる。②y のすぐ左の一文字を見る。③a・i・u・e・o なら -s、それ以外なら y を i に変えて -es。boy を boies としてしまう誤りは、②をとばすことから起こります。',
@@ -620,7 +635,7 @@ const s091: DiagramFigure = show([
   },
   {
     note: '❓glass と cup はどう使い分けるのでしょう。→ glass はガラスのコップなので冷たい飲み物（水・牛乳・ジュース）、cup は取っ手のついた温かい飲み物用なので、コーヒーや紅茶に使います。a cup of water とは、ふつう言いません。',
-    add: fresh(...row([['glass', 'b', '冷たい'], ['cup', 'r', '温かい']], 14, { size: 16, h: 36, x0: 20, x1: 300, gap: 30 }), at(80, 72, 'water・milk・juice', 12, C.blue, true), at(240, 72, 'coffee・tea', 12, C.red, true), en('a glass of milk', 100, 13), en('a cup of tea', 124, 13), ...cap('冷たい＝glass ／ 温かい＝cup', C.main)),
+    add: fresh(...row([['glass（冷たい）', 'b'], ['cup（温かい）', 'r']], 14, { size: 14, h: 36, x0: 10, x1: 310, gap: 20 }), at(80, 66, 'water・milk・juice', 11, C.blue, true), at(240, 66, 'coffee・tea', 11, C.red, true), en('a glass of milk', 100, 13), en('a cup of tea', 124, 13), ...cap('冷たい＝glass ／ 温かい＝cup', C.main)),
   },
   {
     note: 'そのほかの入れ物です。a bottle of water（びん・ペットボトル1本の水）、a can of coffee（かん1本のコーヒー）、a bowl of rice（茶わん1ぱいのごはん）、a bowl of soup（スープ1ぱい）、a spoonful of sugar（スプーン1ぱいの砂糖）。',
@@ -660,7 +675,7 @@ const s092: DiagramFigure = show([
   },
   {
     note: '複数にするときも、piece のほうを複数形にします。two pieces of paper（紙2枚）。I need two pieces of paper. また、two informations や an advice は誤りで、two pieces of information、a piece of advice と言います。',
-    add: fresh(...row([['two pieces', 'g'], ['of', 'n'], ['paper', 'n']], 20, { size: 15, h: 34 }), at(cx([['two pieces', 'g'], ['of', 'n'], ['paper', 'n']], 0, { size: 15 }), 66, '← 複数形', 11, C.green, true), ngb(60, 96, 200, '✗ two informations', 13), okb(60, 126, 200, '○ two pieces of information', 12), ...cap('複数にするのは piece', C.green)),
+    add: fresh(...row([['two pieces', 'g'], ['of', 'n'], ['paper', 'n']], 20, { size: 15, h: 34 }), at(cx([['two pieces', 'g'], ['of', 'n'], ['paper', 'n']], 0, { size: 15 }), 66, '← 複数形', 11, C.green, true), ngb(60, 84, 200, '✗ two informations', 13), okb(60, 114, 200, '○ two pieces of information', 12), ...cap('複数にするのは piece', C.green)),
   },
   {
     note: 'もっと正確に言うために、物ごとに決まった単位もあります。紙は a sheet of paper（薄い1枚）、パンは a slice of bread（うすく切った1枚）と a loaf of bread（切る前の1斤）、チーズは a slice of cheese、板チョコは a bar of chocolate。',
@@ -700,7 +715,7 @@ const s093: DiagramFigure = show([
   },
   {
     note: '❓2足以上のときは、どちらを複数形にするのでしょう。→ pair のほうです。two pairs of shoes（くつ2足）。shoes は最初から複数形なのでそのままにします。× two pair of shoes、× two pairs of shoe はどちらも誤りです。',
-    add: fresh(...row([['two pairs', 'g'], ['of', 'n'], ['shoes', 'n']], 20, { size: 16, h: 36 }), at(cx([['two pairs', 'g'], ['of', 'n'], ['shoes', 'n']], 0, { size: 16 }), 70, '← pair を複数形', 11, C.green, true), ngb(40, 96, 240, '✗ two pair of shoes', 13), ngb(40, 126, 240, '✗ two pairs of shoe', 13), ...cap('複数形にするのは pair', C.green)),
+    add: fresh(...row([['two pairs', 'g'], ['of', 'n'], ['shoes', 'n']], 20, { size: 16, h: 36 }), at(cx([['two pairs', 'g'], ['of', 'n'], ['shoes', 'n']], 0, { size: 16 }), 70, '← pair を複数形', 11, C.green, true), ngb(40, 88, 240, '✗ two pair of shoes', 13), ngb(40, 118, 240, '✗ two pairs of shoe', 13), ...cap('複数形にするのは pair', C.green)),
   },
   {
     note: 'これらの語が主語になると、動詞は複数あつかいです。My glasses are new.（私のめがねは新しい）。These scissors are very sharp. Where are my socks? ただし主語の中心が pair のときは、a pair なら単数です。A pair of shoes is on the floor. Two pairs of gloves are in the box.',
@@ -715,6 +730,298 @@ const s093: DiagramFigure = show([
     add: fresh(...row([['shoes', 'b'], ['a pair of shoes', 'm'], ['two pairs of shoes', 'g']], 28, { size: 12, h: 44, x0: 6, x1: 314, gap: 10 }), en('He wears glasses.', 100, 13), ...cap('二つで一組 → pair', C.main)),
   },
 ], '二つで一組：a pair of');
+
+// ───────── eigo_s095 a / an の基本 ─────────
+const s095: DiagramFigure = show([
+  {
+    note: '問題です。「私は生徒です」を I am student. と書いてよいでしょうか。日本語には冠詞（かんし）という語がないので、つい書き忘れてしまいます。',
+    add: [...row([['I', 'b'], ['am', 'm'], ['student.', 'r']], 40, { size: 16, h: 36 }), ...cap('student の前に 何か いるかな？', C.red)],
+  },
+  {
+    note: '❓なぜ a が要るのでしょう。→ 数えられる名詞が1つのとき、英語は「裸（はだか）」のまま置けません。a は one（1）から生まれた語で、「一つの」「ある〜」という意味を持っています。まだ相手が知らない1つを言うときに使います。',
+    add: fresh(...row([['I', 'b'], ['am', 'm'], ['a', 'y'], ['student.', 'g']], 28, { size: 16, h: 36 }), at(160, 86, 'a ＝ 「一つの」「ある〜」', 12, C.main, true), at(160, 108, 'もとは one（1）', 12, C.gray), ...cap('数えられる名詞が 1つ → a', C.main)),
+  },
+  {
+    note: 'a を使う三つの条件です。①数えられる名詞、②単数（1つ）、③まだ特定していない（どれかを決めていない）。この三つがそろったとき a を付けます。A boy is running in the park.（1人の男の子が公園を走っている）。',
+    add: fresh(...row([['① 数えられる', 'b'], ['② 1つ', 'g'], ['③ 特定しない', 'p']], 22, { size: 13, h: 40, x0: 8, x1: 312, gap: 10 }), at(160, 84, '3つとも そろったら a', 13, C.main, true), en('A boy is running in the park.', 112, 12), ...cap('三条件が そろうと a', C.main)),
+  },
+  {
+    note: '❓どんなときに a を付けてはいけないのでしょう。→ 複数形（× a books）、数えられない名詞（× a water・× a music）、my・this・the がすでに付いているもの（× a my bag）です。a は「一つの」なので、複数や、数えないものには付けられません。',
+    add: fresh(...[['a books', '複数形'], ['a water', '数えない名詞'], ['a my bag', 'my が付いた'] ].flatMap(([a, b], i) => [ngb(30, 10 + i * 40, 110, '✗ ' + a, 13), ar(144, 23 + i * 40, 160, 23 + i * 40, C.gray), bx(164, 10 + i * 40, 126, 26, b, C.gray, FILL.gray, 12)]), ...cap('a は 「一つの」だから 使えない', C.red)),
+  },
+  {
+    note: '英語では、職業や身分を言うときにも a を付けます。She is a teacher.（彼女は先生です）。My father is a doctor. I want to be a soccer player. 日本語には対応する語がないので、忘れやすいところです。',
+    add: fresh(...row([['She', 'b'], ['is', 'm'], ['a teacher.', 'g']], 20, { size: 14, h: 32 }), ...row([['My father', 'b'], ['is', 'm'], ['a doctor.', 'g']], 64, { size: 14, h: 32 }), ...row([['I want to be', 'b'], ['a soccer player.', 'g']], 108, { size: 13, h: 32 }), ...cap('職業を言うときも a', C.main)),
+  },
+  {
+    note: '❓「犬が好きです」は I like a dog. でしょうか。→ ちがいます。a を付けると「ある特定の1ぴきの犬が好き」という不自然な意味になります。種類全体を言いたいときは、複数形を使います。I like dogs.',
+    add: fresh(...row([['I like a dog.', 'r']], 16, { size: 14, h: 32, x0: 20, x1: 300 }), at(160, 62, '✗ ある 1ぴきの 犬が 好き？', 12, C.red, true), ...row([['I like dogs.', 'g']], 84, { size: 14, h: 32, x0: 20, x1: 300 }), at(160, 130, '○ 犬というもの全体が 好き', 12, C.green, true), ...cap('好ききらいは 複数形が 安全', C.green)),
+  },
+  {
+    note: '数えられない名詞なら、そのままです。I like music. I like water.（× a music・× a water）。また、A dog is a friendly animal.（犬というものは人なつこい動物だ）のように、1ぴきを代表として全体を表す使い方もありますが、中学入試ではまれです。',
+    add: fresh(...row([['I like music.', 'g'], ['I like water.', 'g']], 20, { size: 13, h: 32, x0: 8, x1: 312, gap: 12 }), at(160, 68, '数えない名詞は そのまま', 12, C.green, true), en('A dog is a friendly animal.', 100, 12), jp('（1ぴきを代表にして 全体を言う。まれ）', 120, 10), ...cap('a は 数えられる 単数だけ', C.main)),
+  },
+  {
+    note: 'まとめの例文です。I have a dog.（初めて話に出す1ぴき）。It is very cute.（その犬は）。I like dogs very much.（犬というもの全体）。My uncle is a vet.（職業）。a を付けるか迷ったら、数えられる・単数・特定しない、の三つを確かめます。',
+    add: fresh(...grid([['場面', '文'], ['初めての1つ', 'I have a dog.'], ['全体', 'I like dogs.'], ['職業', 'My uncle is a vet.'], ['数えない', 'I like music.']], 8, 8, [90, 210], 28, { size: 12, head: 'b', body: 'n', firstCol: 'm' }), ...cap('三条件で a を 決める', C.main)),
+  },
+], 'a / an：数えられる・単数・特定しない');
+
+// ───────── eigo_s097 a / an を付けてはいけない場面 ─────────
+const s097: DiagramFigure = show([
+  {
+    note: '問題です。「私の友達」を a my friend と言ってよいでしょうか。my が付いているのに、a も付けたくなります。',
+    add: [...row([['a', 'y'], ['my', 'b'], ['friend', 'n']], 40, { size: 17, h: 38 }), ...cap('「私の」も「一つの」も 言いたいけれど…', C.red)],
+  },
+  {
+    note: '❓なぜ a と my は並べられないのでしょう。→ 名詞の前の「限定することば」の場所は、原則として一つだけだからです。my は「だれのものか」でどれのことかを決めています。a は「どれでもよい一つ」を表すので、決めているのと決めていないのが同時になり、矛盾します。',
+    add: fresh(bx(110, 34, 100, 40, '', C.gray, FILL.gray), at(160, 54, '入る場所は 1つ', 12, C.gray, true), ...row([['a', 'y'], ['my', 'b'], ['this', 'g']], 100, { size: 14, h: 30, x0: 50, x1: 270, gap: 16 }), ar(100, 98, 130, 76, C.gray), ar(160, 98, 160, 78, C.gray), ar(220, 98, 190, 76, C.gray), ...cap('どれか 一つだけ', C.ink)),
+  },
+  {
+    note: '並べられない組み合わせです。× a my bag → my bag、× a this book → this book、× the my house → my house、× a Ken\'s pen → Ken\'s pen。名詞の前には限定することばを一つだけ置きます。',
+    add: fresh(...[['a my bag', 'my bag'], ['a this book', 'this book'], ['the my house', 'my house'], ["a Ken's pen", "Ken's pen"]].flatMap(([a, b], i) => [ngb(14, 8 + i * 34, 120, a, 12), ar(138, 21 + i * 34, 160, 21 + i * 34, C.gray), okb(164, 8 + i * 34, 130, b, 12)]), ...cap('名詞の前は 一つだけ', C.red)),
+  },
+  {
+    note: '❓でも「私の友達の一人」と言いたいときは？ → of の形を使います。a friend of mine（私の友達の一人）。a と、「私の」を表す mine を、of でつなぎます。a book of mine（私の本の一冊）も同じ作りです。',
+    add: fresh(...row([['a friend', 'y'], ['of', 'p'], ['mine', 'b']], 28, { size: 16, h: 36 }), at(cx([['a friend', 'y'], ['of', 'p'], ['mine', 'b']], 0, { size: 16 }), 80, '「一つの」', 11, C.main, true), at(cx([['a friend', 'y'], ['of', 'p'], ['mine', 'b']], 2, { size: 16 }), 80, '「私の」', 11, C.blue, true), en('a book of mine', 108, 13), ...cap('a ＋ 名詞 ＋ of ＋ 所有代名詞', C.main)),
+  },
+  {
+    note: 'of のうしろは所有代名詞（mine・yours・his・hers・ours・theirs）にします。× a friend of my は誤りです。He is a friend of mine. は、She is one of my friends. と同じ意味です。',
+    add: fresh(...row([['a friend of my', 'r']], 20, { size: 15, h: 34, x0: 30, x1: 290 }), at(160, 68, '✗ my は 名詞が いる形', 12, C.red, true), ...row([['a friend of mine', 'g']], 88, { size: 15, h: 34, x0: 30, x1: 290 }), at(160, 136, '○ mine は それだけで「私のもの」', 12, C.green, true), ...cap('of の あとは mine・yours・his…', C.green)),
+  },
+  {
+    note: 'ほかにも冠詞を付けない決まった言い方があります。スポーツ名（play tennis）、教科名・言語名（study math／speak Japanese）、食事の名前（have lunch）。ただし楽器は the が必要（play the piano）。',
+    add: fresh(...grid([['種類', '冠詞なし'], ['スポーツ', 'play tennis'], ['教科・言語', 'study math／speak Japanese'], ['食事', 'have lunch'], ['（楽器は the）', 'play the piano']], 8, 8, [100, 200], 28, { size: 12, head: 'b', body: 'n', firstCol: 'm' }), ...cap('決まった言い方は 冠詞なし', C.blue)),
+  },
+  {
+    note: '季節・月・曜日（in spring／in April／on Monday）、固有名詞（I live in Osaka. × in an Osaka）、不可算名詞や複数形（I like music.／There are books.）にも a は付きません。食事でも I had a big breakfast. のように形容詞が付くと a が要ります。',
+    add: fresh(...row([['in spring', 'b'], ['on Monday', 'b'], ['in Osaka', 'b']], 14, { size: 13, h: 30, x0: 8, x1: 312, gap: 8 }), ...row([['I like music.', 'g'], ['books', 'g']], 56, { size: 13, h: 30, x0: 8, x1: 312, gap: 8 }), ...row([['have lunch', 'n'], ['had a big breakfast', 'y']], 98, { size: 12, h: 30, x0: 8, x1: 312, gap: 8 }), at(160, 140, '形容詞が付くと a が要る', 11, C.main, true), ...cap('まず「付けない場面」を 覚える', C.ink)),
+  },
+  {
+    note: 'まとめです。a を付けるか迷ったら、①まず数えられる名詞か、②前に my や this がないか、③決まった言い方でないか、の順に確かめます。名詞の前に my・this・\'s があったら a／an／the は不要です。',
+    add: fresh(...steps([['① まず 数えられる名詞？', 'b'], ['② 前に my・this・\'s は ない？', 'm'], ['③ 決まった言い方では ない？', 'g']], { y0: 14, h: 34, gap: 14 }), ...cap('3つ たしかめてから a', C.green)),
+  },
+], 'a / an を付けてはいけない場面');
+
+// ───────── eigo_s100 the の基本② ─────────
+const s100: DiagramFigure = show([
+  {
+    note: '問題です。「太陽は明るい」を A sun is bright. と書いてよいでしょうか。the sun と a sun、どちらでしょう。',
+    add: [...row([['A sun', 'r'], ['The sun', 'g']], 30, { size: 16, h: 40, x0: 30, x1: 290, gap: 24 }), ...cap('どちらの 言い方？', C.ink)],
+  },
+  {
+    note: '❓なぜ the sun なのでしょう。→ 世の中に一つしかないものは、言った時点で「どれのことか」が決まるからです。the は「相手にもどれかわかる、あれ」を表します。A sun と言うと、太陽がいくつもあることになってしまいます。',
+    add: fresh(ci(160, 56, 28, 'sun', C.main, FILL.yellow, 14), at(160, 104, '1つしかない → どれか決まる', 12, C.main, true), ...row([['The sun', 'g'], ['A sun', 'r']], 118, { size: 12, h: 26, x0: 60, x1: 260, gap: 30 }), ...cap('1つしかない → the', C.main)),
+  },
+  {
+    note: '世界に一つしかないものです。the sun（太陽）、the moon（月）、the earth（地球）、the sky（空）、the sea（海）、the world（世界）。方角も in the east・in the west・in the north・in the south と the を付けます。',
+    add: fresh(...row([['the sun', 'y'], ['the moon', 'b'], ['the earth', 'g']], 14, { size: 14, h: 32 }), ...row([['the sky', 'b'], ['the sea', 'b'], ['the world', 'g']], 58, { size: 14, h: 32 }), ...row([['in the east', 'm'], ['in the west', 'm']], 102, { size: 13, h: 32, x0: 20, x1: 300, gap: 16 }), ...cap('天体・自然・方角に the', C.main)),
+  },
+  {
+    note: '❓楽器とスポーツはどうちがうのでしょう。→ 楽器を演奏するときは the を付けます（play the piano／play the guitar）。スポーツには何も付けません（play soccer／play tennis）。「楽器には the、スポーツには何も付けない」と対にして覚えます。',
+    add: fresh(...row([['play the piano', 'g'], ['play tennis', 'b']], 24, { size: 13, h: 36, x0: 8, x1: 312, gap: 16 }), at(80, 78, '楽器 → the', 12, C.green, true), at(240, 78, 'スポーツ → なし', 12, C.blue, true), en('play the guitar ／ play the violin', 108, 12), en('play soccer ／ play baseball', 128, 12), ...cap('楽器 the ／ スポーツ なし', C.main)),
+  },
+  {
+    note: '序数（〜番目）にも the を付けます。the first（1番目の）、the second、the third、the fifth。January is the first month of the year.（1月は1年の最初の月だ）。「何番目か」は一つに決まるからです。',
+    add: fresh(...row([['the first', 'g'], ['the second', 'g'], ['the third', 'g']], 20, { size: 14, h: 32 }), at(160, 70, '何番目かは 一つに きまる', 12, C.green, true), en('January is the first month of the year.', 100, 11), ...cap('序数（〜番目）に the', C.green)),
+  },
+  {
+    note: '❓最上級にも the が付くのはなぜでしょう。→ 「いちばん〜」は一つに決まるからです。He is the tallest boy in our class.（クラスでいちばん背が高い男の子）。This is the most beautiful lake in Japan.（日本でいちばん美しい湖）。',
+    add: fresh(...row([['He is', 'b'], ['the tallest', 'g'], ['boy in our class.', 'n']], 20, { size: 12, h: 32 }), at(160, 68, 'いちばん → 一人に決まる → the', 12, C.green, true), ...row([['the best', 'g'], ['the tallest', 'g'], ['the most beautiful', 'g']], 98, { size: 12, h: 30 }), ...cap('最上級（いちばん）に the', C.green)),
+  },
+  {
+    note: 'そのほかの決まった形もあります。the same（同じ）：We are in the same class. on the Internet（インターネットで）。in the morning・in the afternoon・in the evening（午前・午後・夕方）。play the piano と同じく、the を落とさないようにします。',
+    add: fresh(...grid([['決まった形', '例'], ['the same', 'in the same class'], ['on the Internet', 'I found it on the Internet.'], ['in the morning', 'in the afternoon / evening']], 8, 10, [110, 190], 30, { size: 12, head: 'b', body: 'n', firstCol: 'm' }), ...cap('the を 落とさない', C.blue)),
+  },
+  {
+    note: 'まとめです。1つしかないもの・方角・楽器・序数・最上級には the。スポーツ名や教科名には付けません。「いちばん」「〜番目」「世界に一つ」と言えたら the、と覚えます。',
+    add: fresh(...row([['世界に一つ', 'y'], ['楽器', 'g'], ['序数', 'b'], ['最上級', 'p']], 28, { size: 13, h: 40, x0: 8, x1: 312, gap: 8 }), at(160, 96, 'に は the', 14, C.main, true), ...cap('「1つに決まる」→ the', C.main)),
+  },
+], 'the の基本②：一つに決まるものに the');
+
+// ───────── eigo_s101 固有名詞と the ─────────
+const s101: DiagramFigure = show([
+  {
+    note: '問題です。信濃川は the Shinano River で the が付きますが、琵琶湖は Lake Biwa で the が付きません。同じ地名なのに、なぜ分かれるのでしょう。',
+    add: [...row([['the Shinano River', 'b'], ['Lake Biwa', 'g']], 30, { size: 13, h: 40, x0: 8, x1: 312, gap: 14 }), ...cap('川には the、湖には なし？', C.red)],
+  },
+  {
+    note: 'the を付ける固有名詞は四つの型です。①川（the Shinano River・the Nile）、②海・大洋（the Pacific Ocean・the Atlantic Ocean）、③山脈（the Alps・the Rocky Mountains）、④複数形の国名（the United States・the Philippines・the Netherlands）。',
+    add: fresh(...grid([['型', '例'], ['川', 'the Shinano River／the Nile'], ['海・大洋', 'the Pacific Ocean'], ['山脈', 'the Alps'], ['複数形の国名', 'the United States']], 8, 8, [100, 200], 28, { size: 12, head: 'b', body: 'n', firstCol: 'm' }), ...cap('川・海・山脈・複数の国名', C.blue)),
+  },
+  {
+    note: '❓なぜ山脈には the が付くのでしょう。→ 山脈は山がいくつも連なっているので、複数の感じがあるからです。同じように、the United States や the Philippines は -s が付いた複数形の国名で、the が付きます。',
+    add: fresh(...row([['the Alps', 'b']], 14, { size: 14, h: 30, x0: 20, x1: 150 }), at(85, 56, 'アルプス山脈（連なっている）', 10, C.blue, true), ...row([['Mt. Fuji', 'g']], 14, { size: 14, h: 30, x0: 170, x1: 300 }), at(235, 56, '単独の山', 11, C.green, true), ...row([['the Philippines', 'b'], ['the Netherlands', 'b']], 84, { size: 12, h: 30 }), at(160, 130, '-s が付いた複数形の国名にも the', 11, C.blue, true), ...cap('連なる／複数 → the', C.blue)),
+  },
+  {
+    note: 'the を付けない固有名詞です。湖（Lake Biwa・Lake Michigan）、単独の山（Mt. Fuji・Mt. Everest）、国名・都市名・大陸名（Japan・Osaka・London・Asia）。川と対になる「湖」を、まちがえやすいところです。',
+    add: fresh(...grid([['型', '例（the なし）'], ['湖', 'Lake Biwa／Lake Michigan'], ['単独の山', 'Mt. Fuji／Mt. Everest'], ['国・都市・大陸', 'Japan／Osaka／Asia']], 8, 6, [100, 200], 26, { size: 12, head: 'g', body: 'n', firstCol: 'm' }), en('I live in Japan.（× in the Japan）', 128, 12), ...cap('湖・単独の山・国・都市 → なし', C.green)),
+  },
+  {
+    note: 'この対比がそのまま入試問題になります。the Shinano River ⇔ Lake Biwa。the Alps ⇔ Mt. Fuji。the United States ⇔ Japan。the Pacific Ocean ⇔ Tokyo Bay（東京湾は the を付けないことが多い）。左右を対にして覚えます。',
+    add: fresh(...[['the Shinano River', 'Lake Biwa'], ['the Alps', 'Mt. Fuji'], ['the United States', 'Japan'], ['the Pacific Ocean', 'Tokyo Bay']].flatMap(([a, b], i) => [bx(8, 8 + i * 34, 140, 28, a, C.blue, FILL.blue, 12), at(160, 22 + i * 34, '⇔', 14, C.gray, true), bx(172, 8 + i * 34, 140, 28, b, C.green, FILL.green, 12)]), ...cap('左は the あり、右は なし', C.main)),
+  },
+  {
+    note: '新聞・船・公共の建物にも the が付きます。the Asahi Shimbun（朝日新聞）、the Titanic（タイタニック号）、the White House（ホワイトハウス）、the British Museum（大英博物館）。',
+    add: fresh(...row([['the Asahi Shimbun', 'b']], 14, { size: 13, h: 30, x0: 30, x1: 290 }), at(160, 56, '新聞', 11, C.blue, true), ...row([['the Titanic', 'b'], ['the White House', 'b']], 74, { size: 13, h: 30, x0: 8, x1: 312, gap: 12 }), at(80, 116, '船', 11, C.blue, true), at(240, 116, '公共の建物', 11, C.blue, true), ...cap('新聞・船・建物にも the', C.blue)),
+  },
+  {
+    note: '駅・空港・公園・通り・人名・曜日・月・祝日には the を付けません。Tokyo Station（東京駅）、Narita Airport（成田空港）、Central Park（セントラルパーク）、Ken、Monday、April、Christmas。',
+    add: fresh(...row([['Tokyo Station', 'g'], ['Narita Airport', 'g']], 16, { size: 12, h: 30 }), ...row([['Central Park', 'g'], ['Broadway', 'g']], 58, { size: 12, h: 30 }), ...row([['Ken', 'g'], ['Monday', 'g'], ['April', 'g'], ['Christmas', 'g']], 100, { size: 12, h: 30 }), ...cap('駅・空港・公園・人名・月・曜日 → なし', C.green)),
+  },
+  {
+    note: 'まとめです。the が付くのは「川・海・山脈・複数形の国名」の四つに、新聞・船・公共の建物。それ以外の湖・単独の山・国・都市・駅・人名は the なしと考えてよいです。',
+    add: fresh(...row([['the あり\n川・海・山脈\n複数形の国名', 'b'], ['the なし\n湖・単独の山・国\n都市・駅・人名', 'g']], 20, { size: 13, h: 90, x0: 16, x1: 304, gap: 16 }), ...cap('四つ＋新聞・船・建物 だけ the', C.main)),
+  },
+], '固有名詞と the：付く名前・付かない名前');
+
+// ───────── eigo_s102 冠詞を付けない決まった言い方 ─────────
+const s102: DiagramFigure = show([
+  {
+    note: '問題です。go to school と go to the school。the があるかないかだけのちがいですが、意味は同じでしょうか。',
+    add: [...row([['go to school', 'b'], ['go to the school', 'g']], 30, { size: 13, h: 40, x0: 8, x1: 312, gap: 14 }), ...cap('the が あるか ないか', C.ink)],
+  },
+  {
+    note: '❓なぜ意味が変わるのでしょう。→ 建物や場所を「本来の目的で使う」ときは冠詞を落とすからです。go to school は「勉強しに学校へ行く（通学する）」。go to the school は「学校という建物へ行く」で、勉強が目的とは限りません。',
+    add: fresh(...row([['go to school', 'b']], 14, { size: 14, h: 32, x0: 10, x1: 150 }), at(80, 60, '勉強しに行く（通学）', 11, C.blue, true), ...row([['go to the school', 'g']], 14, { size: 13, h: 32, x0: 166, x1: 310 }), at(238, 60, '建物へ行く', 11, C.green, true), en('My mother came to the school to meet my teacher.', 100, 10), jp('母は 先生に会いに「建物」へ来た → the', 120, 11, C.green), ...cap('目的で使うなら 冠詞なし', C.blue)),
+  },
+  {
+    note: '本来の目的で使う代表です。go to school（学校へ行く）、go to bed（ねる）、go to church（礼拝に行く）、go to work（仕事に行く）、be in bed（ねている）、be at school（授業を受けている）。',
+    add: fresh(...grid([['冠詞なし', '目的'], ['go to school', '勉強する'], ['go to bed', 'ねる'], ['go to church', '礼拝する'], ['go to work', '仕事をする'], ['be in bed', 'ねている']], 8, 4, [150, 150], 23, { size: 12, head: 'b', body: 'n', firstCol: 'm' }), ...cap('場所の「本来の目的」で使う', C.blue)),
+  },
+  {
+    note: '❓ベッドはどんなときに the が付くのでしょう。→ ねるためではなく、家具としてのベッドをさすときです。There is a big bed in the room. I sat on the bed.（部屋に大きなベッドがある。私はそのベッドにすわった）。このベッドは家具なので the bed です。',
+    add: fresh(...row([['went to bed', 'b']], 14, { size: 14, h: 30, x0: 10, x1: 150 }), at(80, 56, '→ ねた', 12, C.blue, true), ...row([['sat on the bed', 'g']], 14, { size: 13, h: 30, x0: 166, x1: 310 }), at(238, 56, '→ 家具の ベッドに すわった', 10, C.green, true), en('I sat on the bed.', 100, 13), ...cap('目的 → なし ／ 物としての 家具 → the', C.main)),
+  },
+  {
+    note: '交通手段も冠詞なしです。by bus（バスで）、by train（電車で）、by car（車で）、by bike（自転車で）、by plane（飛行機で）、by ship（船で）。× by a bus、× by the bus とは言いません。ただし「徒歩で」は on foot という別の形です。',
+    add: fresh(...grid([['手段', '言い方'], ['バス', 'by bus'], ['電車', 'by train'], ['自転車', 'by bike'], ['徒歩（歩いて）', 'on foot']], 8, 8, [110, 190], 28, { size: 12, head: 'b', body: 'n', firstCol: 'm' }), ...cap('by ＋ 乗り物（冠詞なし）', C.blue)),
+  },
+  {
+    note: '❓では「そのバスに乗る」はどう言うのでしょう。→ take the bus です。by bus は「バスという手段で」という言い方なので冠詞がありません。take the bus は、特定のそのバスを乗るという意味なので the が付きます。',
+    add: fresh(...row([['by bus', 'b']], 14, { size: 15, h: 32, x0: 10, x1: 150 }), at(80, 60, '手段（バスで）', 12, C.blue, true), ...row([['take the bus', 'g']], 14, { size: 14, h: 32, x0: 166, x1: 310 }), at(238, 60, 'そのバスに乗る', 12, C.green, true), en('I go to school by bus.', 100, 13), en('I go to school on foot.', 122, 13), ...cap('手段 → なし ／ そのバス → the', C.main)),
+  },
+  {
+    note: 'そのほかの無冠詞表現です。at home（家で）、at school（学校で）、at work（仕事中で）、in class（授業中で）、at night（夜に）。I stayed at home yesterday. Don\'t talk in class. 食事（have lunch）・スポーツ（play tennis）・教科（study English）も同じです。',
+    add: fresh(...row([['at home', 'g'], ['at school', 'g'], ['in class', 'g'], ['at night', 'g']], 14, { size: 12, h: 30, x0: 6, x1: 314, gap: 8 }), ...row([['have lunch', 'b'], ['play tennis', 'b'], ['study English', 'b']], 62, { size: 12, h: 30, x0: 6, x1: 314, gap: 8 }), en('I stayed at home yesterday.', 112, 12), en("Don't talk in class.", 130, 12), ...cap('決まった言い方は 冠詞なし', C.green)),
+  },
+  {
+    note: 'まとめです。対にして覚えます。go to school（通学する）⇔ go to the school（建物へ行く）、play tennis（スポーツ）⇔ play the piano（楽器）、by bus（手段）⇔ take the bus（そのバス）。左右のちがいを説明できれば、冠詞の問題で迷いません。',
+    add: fresh(...[['go to school', 'go to the school'], ['play tennis', 'play the piano'], ['by bus', 'take the bus']].flatMap(([a, b], i) => [bx(8, 12 + i * 44, 140, 34, a, C.blue, FILL.blue, 12), at(160, 29 + i * 44, '⇔', 14, C.gray, true), bx(172, 12 + i * 44, 140, 34, b, C.green, FILL.green, 12)]), ...cap('冠詞なし ⇔ the 付き', C.main)),
+  },
+], '冠詞を付けない決まった言い方');
+
+// ───────── eigo_s104 人称代名詞① 主格 ─────────
+const s104: DiagramFigure = show([
+  {
+    note: '問題です。日本語では「昨日、公園に行った。楽しかった。」と主語（しゅご）を言わなくても通じます。英語でも主語は言わなくてよいのでしょうか。',
+    add: [jp('「公園に行った。 楽しかった。」', 24, 12, C.ink), ...row([['Went to the park.', 'r'], ['Was fun.', 'r']], 50, { size: 12, h: 32, x0: 8, x1: 312, gap: 14 }), ...cap('主語が ない英語は…？', C.red)],
+  },
+  {
+    note: '❓なぜ英語は主語を置くのでしょう。→ 英語では、動詞の前に必ず「だれが・何が」を置くきまりだからです。I go to school. の I をとって Go to school. とすると、「学校へ行きなさい」という命令文になってしまいます。',
+    add: fresh(...row([['I', 'b'], ['go to school.', 'm']], 14, { size: 14, h: 32, x0: 30, x1: 290 }), at(160, 58, '（私は）学校へ行く', 11, C.green, true), ...row([['Go to school.', 'r']], 84, { size: 14, h: 32, x0: 30, x1: 290 }), at(160, 128, '→ 「学校へ行きなさい」（命令文）', 11, C.red, true), ...cap('主語を おとすと 別の意味', C.red)),
+  },
+  {
+    note: '❓では、主語に同じ名前を何度もくり返すとどうなるでしょう。→ くどくなります。そこで二度目からは代名詞（だいめいし）に置きかえます。Ken is my friend. Ken is very kind. → Ken is my friend. He is very kind.',
+    add: fresh(...row([['Ken is my friend.', 'b']], 14, { size: 13, h: 30, x0: 30, x1: 290 }), ...row([['Ken is very kind.', 'r']], 54, { size: 13, h: 30, x0: 30, x1: 290 }), at(160, 102, '↓ くり返しを さける', 11, C.gray, true), ...row([['He is very kind.', 'g']], 112, { size: 13, h: 30, x0: 30, x1: 290 }), ...cap('二度目から 代名詞（He）', C.green)),
+  },
+  {
+    note: '主格（しゅかく）の一覧です。I（私は）、you（あなたは）、he（彼は）、she（彼女は）、it（それは）、we（私たちは）、they（彼らは・それらは）。男性1人は he、女性1人は she、物や動物1つは it、2人以上・2つ以上は they です。',
+    add: fresh(...grid([['人・物', '主格'], ['男性1人', 'he'], ['女性1人', 'she'], ['物・動物1つ', 'it'], ['2人以上・2つ以上', 'they']], 20, 8, [160, 120], 28, { size: 12, head: 'b', body: 'n', firstCol: 'm' }), ...cap('だれ・何かで 代名詞を えらぶ', C.blue)),
+  },
+  {
+    note: 'it には「それは」と訳さない使い方があります。天気・時間・曜日・日付・距離・明暗を表す文です。It is rainy today.（今日は雨だ）、It is seven o\'clock.（7時です）、It is Monday today.、It is dark outside.（外は暗い）。',
+    add: fresh(...grid([['内容', '文'], ['天気', 'It is rainy today.'], ['時間', "It is seven o'clock."], ['曜日', 'It is Monday today.'], ['明暗', 'It is dark outside.']], 8, 8, [70, 230], 28, { size: 12, head: 'p', body: 'n', firstCol: 'm' }), ...cap('「それは」と 訳さない it', C.purple)),
+  },
+  {
+    note: 'たずね方と答え方も it で受けます。What time is it now? → It is nine thirty.（今何時ですか）。How is the weather today? → It is sunny.（天気はどうですか）。What day is it today? → It is Friday.（何曜日ですか）。',
+    add: fresh(...[['What time is it now?', 'It is nine thirty.'], ['How is the weather today?', 'It is sunny.'], ['What day is it today?', 'It is Friday.']].flatMap(([a, b], i) => [bx(8, 10 + i * 44, 170, 32, a, C.blue, FILL.blue, 11), ar(180, 26 + i * 44, 196, 26 + i * 44, C.gray), bx(200, 10 + i * 44, 112, 32, b, C.green, FILL.green, 11)]), ...cap('答えも It is ...', C.green)),
+  },
+  {
+    note: '❓二人以上を主語で並べるときの順番は？ → 自分（I）は最後に置きます。Taro and I are good friends.（太郎と私は仲のよい友達です）。You and I are in the same class. × Me and Taro are ... は誤りで、主語の位置なので I を使います。',
+    add: fresh(...row([['Taro', 'b'], ['and', 'n'], ['I', 'g']], 16, { size: 16, h: 34, x0: 40, x1: 280 }), at(160, 64, '自分は 最後', 12, C.green, true), ...row([['Me and Taro', 'r']], 86, { size: 15, h: 32, x0: 50, x1: 270 }), at(160, 130, '✗ 主語は I（Me は 目的格）', 11, C.red, true), ...cap('主語は I、自分は 最後', C.green)),
+  },
+  {
+    note: '主語が複数になると、動詞も変わります。He is my friend. → He and I are good friends.／ She likes soccer. → She and her sister like soccer. まとめ：英語は主語を省けない、代わりに代名詞を使う、it は天気や時間の主語にもなる。',
+    add: fresh(...row([['He is', 'b'], ['→', 'n'], ['He and I are', 'g']], 20, { size: 13, h: 32, x0: 8, x1: 312, gap: 8 }), ...row([['She likes', 'b'], ['→', 'n'], ['She and her sister like', 'g']], 70, { size: 12, h: 32, x0: 8, x1: 312, gap: 8 }), at(160, 130, '二人以上 → are・like（-s なし）', 11, C.green, true), ...cap('主語を 省かず、数に合わせる', C.ink)),
+  },
+], '主格の代名詞：主語は省かない');
+
+// ───────── eigo_s106 人称代名詞③ 所有格 ─────────
+const s106: DiagramFigure = show([
+  {
+    note: '問題です。「私の本」は my book、「ケンの本」は Ken\'s book。では、a と my を重ねて a my book と言えるでしょうか。',
+    add: [...row([['a', 'y'], ['my', 'b'], ['book', 'n']], 40, { size: 17, h: 38 }), ...cap('重ねて 言えるのかな？', C.red)],
+  },
+  {
+    note: '❓なぜ重ねられないのでしょう。→ my や your のような所有格（しょゆうかく）は、「だれのものか」を示して、その名詞がどれのことかをもう決めているからです。a は「どれでもよい一つ」、the は「相手にわかるあれ」なので、重ねると矛盾します。',
+    add: fresh(...row([['my', 'b'], ['book', 'n']], 14, { size: 16, h: 34, x0: 50, x1: 270 }), at(160, 62, 'my が「どれか」を決めている', 12, C.blue, true), ...row([['a', 'y'], ['my', 'b'], ['book', 'n']], 86, { size: 15, h: 32, x0: 50, x1: 270 }), at(160, 130, '✗ 「どれでも」と「私の」が けんか', 11, C.red, true), ...cap('所有格が ついたら a・the は なし', C.red)),
+  },
+  {
+    note: '所有格の一覧です。I→my、you→your、he→his、she→her、it→its、we→our、they→their。必ずうしろに名詞が来ます。This is my bag. Her father is a teacher. The dog wagged its tail.',
+    add: fresh(...grid([['主格', 'I', 'you', 'he', 'she', 'it', 'we', 'they'], ['所有格', 'my', 'your', 'his', 'her', 'its', 'our', 'their']], 6, 24, [48, 36, 40, 36, 38, 34, 38, 40], 40, { size: 12, head: 'b', body: 'g' }), en('This is my bag.', 118, 13), ...cap('所有格の うしろには 名詞', C.green)),
+  },
+  {
+    note: '❓両方言いたいときはどうするのでしょう。→ a book of mine のように、of の形にします（「私の本の一冊」）。所有格が付いた名詞に、a や the は重ねません。',
+    add: fresh(...row([['a book', 'y'], ['of', 'p'], ['mine', 'b']], 28, { size: 16, h: 36 }), at(160, 84, '「一つの」と「私の」を 両方 言える', 12, C.main, true), ...row([['my book', 'g'], ['his car', 'g']], 104, { size: 14, h: 30, x0: 40, x1: 280, gap: 20 }), ...cap('両方なら a ... of mine', C.main)),
+  },
+  {
+    note: '代名詞ではなく、ふつうの名詞の「〜の」には ’s を使います。人や動物に付けます。Ken’s book（ケンの本）、my father’s car（父の車）、the dog’s name（その犬の名前）。複数形の -s で終わる語には ’ だけ付けます：the students’ room。',
+    add: fresh(...row([["Ken's book", 'g'], ["my father's car", 'g']], 14, { size: 13, h: 30, x0: 8, x1: 312, gap: 10 }), ...row([["the students' room", 'b']], 62, { size: 13, h: 30, x0: 40, x1: 280 }), at(160, 104, '-s で終わる複数 → \' だけ', 11, C.blue, true), en("children's books ／ women's clothes", 128, 12), ...cap('生き物の「〜の」→ \'s', C.green)),
+  },
+  {
+    note: '❓物には ’s ではなく of を使うのはなぜでしょう。→ ’s は「持ち主」を表す形だからです。人や動物は持ち主になれますが、車や山は何かを「持つ」わけではないので、the color of the car のように of で「〜の一部・〜に属する」と言います。',
+    add: fresh(...row([['the color of the car', 'g']], 14, { size: 13, h: 30, x0: 30, x1: 290 }), ...row([['the top of the mountain', 'g']], 54, { size: 13, h: 30, x0: 30, x1: 290 }), ...row([["the car's color", 'r']], 98, { size: 13, h: 30, x0: 60, x1: 260 }), at(160, 140, '✗ ふつうは言わない', 11, C.red, true), ...cap('生き物でない → of', C.green)),
+  },
+  {
+    note: 'its と it\'s はまったく別物です。its（それの）は所有格で、The cat is licking its paw. it\'s は it is の短縮形で、It\'s cold today. アポストロフィは短縮の印なので、所有格の its には付きません。today\'s newspaper のように時を表す語は例外で \'s を使います。',
+    add: fresh(...row([['its', 'b'], ["it's", 'm']], 14, { size: 17, h: 36, x0: 40, x1: 280, gap: 30 }), at(80, 64, 'それの', 12, C.blue, true), at(240, 64, 'it is', 12, C.main, true), en('The cat is licking its paw.', 92, 12), en("It's cold today.", 112, 12), en("today's newspaper（時は 例外）", 132, 11, C.gray), ...cap("アポストロフィは 短縮の印", C.main)),
+  },
+  {
+    note: '「私の父の車」のように「の」が二つあるときは、英語でも二つ必要です。my father\'s car（my→father、father\'s→car）。まとめ：所有格は冠詞と重ねない。人・動物は \'s、物は of。its にアポストロフィは付かない。',
+    add: fresh(...row([['my', 'b'], ["father's", 'g'], ['car', 'n']], 20, { size: 16, h: 36 }), at(cx([['my', 'b'], ["father's", 'g'], ['car', 'n']], 0, { size: 16 }), 70, '私の', 11, C.blue, true), at(cx([['my', 'b'], ["father's", 'g'], ['car', 'n']], 1, { size: 16 }), 70, '父の', 11, C.green, true), at(160, 110, '「の」が二つ → 英語も二つ', 12, C.main, true), ...cap('生き物 \'s ／ 物 of ／ its に \' なし', C.main)),
+  },
+], '所有格：冠詞と重ねない、\'s と of');
+
+// ───────── eigo_s107 人称代名詞④ 所有代名詞 ─────────
+const s107: DiagramFigure = show([
+  {
+    note: '問題です。「これは私のものです」を This is mine book. と書いてよいでしょうか。mine のうしろに book を置いています。',
+    add: [...row([['This is', 'n'], ['mine', 'b'], ['book.', 'r']], 40, { size: 16, h: 36 }), ...cap('mine の うしろに 名詞？', C.red)],
+  },
+  {
+    note: '❓なぜ mine のうしろに名詞を置けないのでしょう。→ mine は my book をまるごと一語にした形（「私のもの」）だからです。名詞の意味がすでに入っているので、うしろに book は要りません。This is my book. か This is mine. と言います。',
+    add: fresh(...row([['my', 'b'], ['book', 'n']], 16, { size: 16, h: 34, x0: 40, x1: 180 }), ar(210, 34, 236, 34, C.gray), ...row([['mine', 'g']], 16, { size: 16, h: 34, x0: 240, x1: 310 }), at(160, 76, 'my ＋ 名詞 ＝ mine（一語）', 12, C.main, true), ...row([['This is my book.', 'g'], ['This is mine.', 'g']], 98, { size: 13, h: 30, x0: 8, x1: 312, gap: 14 }), ...cap('名詞を ふくんだ 形', C.main)),
+  },
+  {
+    note: '所有代名詞（しょゆうだいめいし）の一覧です。my book→mine（私のもの）、your book→yours、his book→his、her book→hers、our book→ours、their book→theirs。it には所有代名詞がありません。',
+    add: fresh(...grid([['〜の', '〜のもの'], ['my', 'mine'], ['your', 'yours'], ['his', 'his'], ['her', 'hers'], ['our', 'ours'], ['their', 'theirs']], 40, 2, [120, 120], 20, { size: 11, head: 'b', body: 'g' }), ...cap('his は 同じ形、it には ない', C.blue)),
+  },
+  {
+    note: '❓アポストロフィは付けるのでしょうか。→ 付けません。hers・yours・ours・theirs が正しく、× her\'s・× your\'s は誤りです。名詞に付ける Ken\'s とちがい、代名詞にはアポストロフィを使いません。書き取り問題でねらわれます。',
+    add: fresh(...[["her's", 'hers'], ["your's", 'yours'], ["their's", 'theirs']].flatMap(([a, b], i) => [ngb(40, 10 + i * 36, 100, '✗ ' + a, 13), ar(144, 23 + i * 36, 170, 23 + i * 36, C.gray), okb(174, 10 + i * 36, 100, '○ ' + b, 13)]), en("Ken's（名詞）には 付く", 124, 12, C.gray), ...cap('代名詞に \' は 付けない', C.red)),
+  },
+  {
+    note: '所有代名詞は、「だれのもの？」とたずねる文への答えによく使います。Whose bag is this? → It\'s mine.（私のものです）。Whose pens are these? → They are hers.（彼女のものです）。',
+    add: fresh(...row([['Whose bag is this?', 'b']], 14, { size: 13, h: 30, x0: 30, x1: 290 }), ar(160, 48, 160, 62, C.gray), ...row([["It's mine.", 'g']], 66, { size: 14, h: 30, x0: 30, x1: 290 }), ...row([['Whose pens are these?', 'b']], 108, { size: 12, h: 26, x0: 8, x1: 190 }), ...row([['They are hers.', 'g']], 108, { size: 12, h: 26, x0: 196, x1: 312 }), ...cap('Whose への答えに 所有代名詞', C.main)),
+  },
+  {
+    note: '名詞の場合は ’s がそのまま「〜のもの」になります。Whose is this bag? → It\'s Ken\'s.（ケンのものです）。「だれの」がうしろの名詞につくか（Whose bag is this?）、単独か（Whose is this bag?）でも形が変わります。',
+    add: fresh(...row([['Whose is this bag?', 'b']], 14, { size: 13, h: 30, x0: 30, x1: 290 }), ar(160, 48, 160, 62, C.gray), ...row([["It's Ken's.", 'g']], 66, { size: 14, h: 30, x0: 30, x1: 290 }), at(160, 114, "Ken's ＝「ケンの もの」", 12, C.green, true), ...cap('名詞は \'s だけで「〜のもの」', C.green)),
+  },
+  {
+    note: '「私の友達の一人」と、a と my を両方使いたいときは of を使います。a friend of mine、a book of his、some friends of ours。of のうしろは所有代名詞にします。× a friend of my は誤りです。',
+    add: fresh(...row([['a friend', 'y'], ['of', 'p'], ['mine', 'g']], 16, { size: 15, h: 34 }), en('a book of his', 76, 13), en('some friends of ours', 98, 13), ngb(60, 114, 200, '✗ a friend of my', 12), ...cap('a ＋ 名詞 ＋ of ＋ 所有代名詞', C.main)),
+  },
+  {
+    note: '比べる文でもよく使います。My hair is longer than hers.（私の髪は彼女のより長い）。Your idea is better than mine.（あなたの考えは私のよりよい）。than のうしろで、同じ名詞のくり返し（her hair）をさけるために所有代名詞を使います。',
+    add: fresh(...row([['My hair is longer than', 'b'], ['hers.', 'g']], 20, { size: 12, h: 32 }), at(cx([['My hair is longer than', 'b'], ['hers.', 'g']], 1, { size: 12 }), 70, '= her hair', 11, C.green, true), ...row([['Your idea is better than', 'b'], ['mine.', 'g']], 92, { size: 12, h: 32 }), at(cx([['Your idea is better than', 'b'], ['mine.', 'g']], 1, { size: 12 }), 142, '= my idea', 11, C.green, true), ...cap('くり返しを さける', C.green)),
+  },
+  {
+    note: 'まとめです。my は名詞とセットで、mine は単独で使う。mine のうしろに名詞は置かない。hers・yours・ours・theirs にアポストロフィは付けない。練習：This is my desk, and that is hers.／Is this umbrella yours?／These books are ours.',
+    add: fresh(...row([['my ＋ 名詞', 'b'], ['mine', 'g']], 24, { size: 15, h: 40, x0: 20, x1: 300, gap: 24 }), at(cx([['my ＋ 名詞', 'b'], ['mine', 'g']], 0, { size: 15, x0: 20, x1: 300, gap: 24 }), 80, 'セットで', 11, C.blue, true), at(cx([['my ＋ 名詞', 'b'], ['mine', 'g']], 1, { size: 15, x0: 20, x1: 300, gap: 24 }), 80, '単独で', 11, C.green, true), en('That is hers.', 108, 13), en('Is this umbrella yours?', 128, 13), ...cap('mine・hers に 名詞も \' も なし', C.green)),
+  },
+], '所有代名詞：「〜のもの」');
 
 export const XF_CEC_FIGURES: Record<string, DiagramFigure> = {
   'xf_eigo_s068': s068,
@@ -734,6 +1041,14 @@ export const XF_CEC_FIGURES: Record<string, DiagramFigure> = {
   'xf_eigo_s091': s091,
   'xf_eigo_s092': s092,
   'xf_eigo_s093': s093,
+  'xf_eigo_s095': s095,
+  'xf_eigo_s097': s097,
+  'xf_eigo_s100': s100,
+  'xf_eigo_s101': s101,
+  'xf_eigo_s102': s102,
+  'xf_eigo_s104': s104,
+  'xf_eigo_s106': s106,
+  'xf_eigo_s107': s107,
 };
 
 export const XF_CEC_SECTIONS: Record<string, string> = {
@@ -754,4 +1069,12 @@ export const XF_CEC_SECTIONS: Record<string, string> = {
   'eigo_s091#0': 'xf_eigo_s091',
   'eigo_s092#0': 'xf_eigo_s092',
   'eigo_s093#0': 'xf_eigo_s093',
+  'eigo_s095#0': 'xf_eigo_s095',
+  'eigo_s097#0': 'xf_eigo_s097',
+  'eigo_s100#0': 'xf_eigo_s100',
+  'eigo_s101#0': 'xf_eigo_s101',
+  'eigo_s102#0': 'xf_eigo_s102',
+  'eigo_s104#0': 'xf_eigo_s104',
+  'eigo_s106#0': 'xf_eigo_s106',
+  'eigo_s107#0': 'xf_eigo_s107',
 };

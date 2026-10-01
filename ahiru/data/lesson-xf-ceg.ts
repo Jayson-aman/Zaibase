@@ -8,7 +8,6 @@ const TN: Record<Tone, [string, string]> = {
   b: [C.blue, FILL.blue], g: [C.green, FILL.green], r: [C.red, FILL.red], m: [C.main, FILL.warm],
   p: [C.purple, FILL.purple], y: [C.main, FILL.yellow], n: [C.gray, FILL.gray],
 };
-const TC: Record<Tone, string> = { b: C.blue, g: C.green, r: C.red, m: C.main, p: C.purple, y: C.main, n: C.gray };
 type It = [string, Tone?];
 type RO = { h?: number; size?: number; gap?: number; w?: number };
 const tw = (t: string, s: number) =>
@@ -386,7 +385,7 @@ FIGS['xf_eigo_s310'] = show([
   F('❓不定詞との関係は？→ what to do ＝ what I should do。how to use it ＝ how I should use it。不定詞の形は短く言えますが、主語を示せないのが弱点です。',
     '不定詞との関係', [...row(26, [['what to do', 'b'], ['＝', 'n'], ['what I should do', 'g']], { h: 26 }), ...row(66, [['how to use it', 'b'], ['＝', 'n'], ['how I should use it', 'g']], { h: 26, size: 11 }), gl(160, 112, '不定詞は短いが、主語を示せない')], '不定詞 ≒ 疑問詞 ＋ 主語 ＋ should', C.main),
   F('❓いつも不定詞でいいのでしょうか。→ いいえ。動作をする人が主語と同じときだけです。「彼が何をすべきか」を I don\'t know what to do. と書くと「わたしが」になってしまいます。別の人なら間接疑問を使います。',
-    '主語がちがうとき', [...row(26, [["I don't know what to do.", 'b']], { h: 26 }), gl(160, 64, '何をするのは → わたし'), ...row(84, [["I don't know what he should do.", 'g']], { h: 26, size: 11 }), gl(160, 122, '何をするのは → 彼（だから間接疑問）')], '人がちがえば間接疑問', C.green),
+    '主語がちがうとき', [...row(26, [["I don't know what to do.", 'b']], { h: 26 }), gl(160, 64, 'する人は → わたし'), ...row(84, [["I don't know what he should do.", 'g']], { h: 26, size: 11 }), gl(160, 122, 'する人は → 彼（だから間接疑問）')], '人がちがえば間接疑問', C.green),
   F('過去のことも、不定詞では言えません。I don\'t know where he went.（彼がどこへ行ったか知らない）。不定詞には時制がないので、過去は間接疑問で言います。まとめ：疑問詞のあとは主語＋動詞、does は消す、人がちがうなら間接疑問。',
     'まとめ', [...row(24, [["I don't know where he went.", 'g']], { h: 26 }), gl(160, 60, '過去は間接疑問で言う'), bx(14, 76, 292, 24, '疑問詞 ＋ 主語 ＋ 動詞', C.blue, FILL.blue, 12), bx(14, 106, 292, 24, 'do / does / did は消す', C.green, FILL.green, 12)], '間接疑問の語順', C.main),
 ], '間接疑問の語順');
@@ -396,9 +395,9 @@ FIGS['xf_eigo_s312'] = show([
   F('It is easy to swim. は「泳ぐことは簡単だ」ですが、だれにとって簡単なのかを言っていません。そこで「わたしには簡単だ」と付け足すには、to の前に for me を入れます。for と of の使い分けまで、「なぜ？」でたどります。',
     'だれにとって？', [...row(30, [['It is easy', 'b'], ['to swim.', 'g']], { h: 28 }), gl(160, 68, '泳ぐのはだれ？ → わからない'), ...row(86, [['It is easy', 'b'], ['for me', 'r'], ['to swim.', 'g']], { h: 28 }), gl(160, 124, '→ わたしにとって簡単')], 'to の前に for 人', C.main),
   F('❓for me は、何を表しているのでしょう。→ 泳ぐ人は me、つまり不定詞の動作をする人です。だから「わたしにとって」より「わたしが泳ぐのは簡単だ」と読むと、すっきりします。',
-    'for 人 ＝ 動作をする人', [bx(60, 30, 80, 30, 'for me', C.red, FILL.red, 13), ar(100, 62, 100, 90, C.red), bx(60, 94, 80, 30, 'to swim', C.green, FILL.green, 13), gl(230, 78, '泳ぐのは me'), gl(160, 142, '「わたしが泳ぐのは簡単だ」')], 'for 人 ＝ 意味の上の主語', C.red),
+    'for 人 ＝ 動作をする人', [bx(60, 30, 80, 30, 'for me', C.red, FILL.red, 13), ar(100, 62, 100, 90, C.red), bx(60, 94, 80, 30, 'to swim', C.green, FILL.green, 13), gl(190, 78, '泳ぐのは me'), gl(160, 142, '「わたしが泳ぐのは簡単だ」')], 'for 人 ＝ 意味の上の主語', C.red),
   F('位置は「形容詞のあと・to の前」と決まっています。It is easy for me to swim.（○）。It is for me easy to swim.（×）。形容詞と to をつなぐ場所に、人を入れるイメージです。',
-    '置く場所', [...row(30, [['It is easy', 'b'], ['for me', 'r'], ['to swim.', 'g']], { h: 28 }), lb(160, 70, '○', 14, C.green, 'middle', true), ...row(88, [['It is', 'b'], ['for me', 'r'], ['easy to swim.', 'g']], { h: 28 }), lb(160, 128, '× 形容詞の前に入れない', 12, C.red, 'middle', true)], '形容詞のあと、to の前', C.green),
+    '置く場所', [...row(30, [['It is easy', 'b'], ['for me', 'r'], ['to swim.', 'g']], { h: 28 }), lb(160, 70, '○ この位置', 12, C.green, 'middle', true), ...row(88, [['It is', 'b'], ['for me', 'r'], ['easy to swim.', 'g']], { h: 28 }), lb(160, 128, '× 形容詞の前に入れない', 12, C.red, 'middle', true)], '形容詞のあと、to の前', C.green),
   F('代名詞（だいめいし）は目的格にします。I → for me、he → for him、she → for her、we → for us、they → for them。for のあとは前置詞のあとなので、for I とは書きません。',
     '代名詞の形', [...row(24, [['I → for me', 'r'], ['he → for him', 'r']], { h: 26 }), ...row(60, [['she → for her', 'r'], ['we → for us', 'r']], { h: 26 }), ...row(96, [['they → for them', 'r']], { h: 26 }), gl(160, 138, '前置詞のあとは目的格')], 'for のあとは目的格', C.red),
   F('例です。It is difficult for children to read this book.（子どもがこの本を読むのは難しい）。It is necessary for us to study every day.（わたしたちが毎日勉強することは必要だ）。',
@@ -414,7 +413,7 @@ FIGS['xf_eigo_s312'] = show([
 // ───────── eigo_s315 書きかえパターン ─────────
 FIGS['xf_eigo_s315'] = show([
   F('入試では「ほぼ同じ内容の文に書きかえなさい」という問題がよく出ます。不定詞では、使う材料が四つ決まっています。四つの型を並べて、どちらからでも変換できるようにします。',
-    '四つの書きかえ', [bx(10, 24, 148, 28, '① To ～ is ... ⇔ It is ... to ～', C.blue, FILL.blue, 9.5), bx(162, 24, 148, 28, '② too ... to ～', C.green, FILL.green, 11), bx(10, 62, 148, 28, '③ ... enough to ～', C.purple, FILL.purple, 11), bx(162, 62, 148, 28, '④ 疑問詞 ＋ to', C.red, FILL.red, 11), gl(160, 112, '書きかえ問題はこの四つ')], '不定詞の書きかえ四つ', C.main),
+    '四つの書きかえ', [bx(10, 24, 148, 28, '① 形式主語 It', C.blue, FILL.blue, 11), bx(162, 24, 148, 28, '② too ... to ～', C.green, FILL.green, 11), bx(10, 62, 148, 28, '③ ... enough to ～', C.purple, FILL.purple, 11), bx(162, 62, 148, 28, '④ 疑問詞 ＋ to', C.red, FILL.red, 11), gl(160, 112, '書きかえ問題はこの四つ')], '不定詞の書きかえ四つ', C.main),
   F('①形式主語（けいしきしゅご）です。To learn English is important. ＝ It is important to learn English. ❓なぜ It を使うのでしょう。→ 主語の to learn English が長いので、まず It を置いて、本当の中身を後ろへ回すのです。',
     '① To ～ is ... ＝ It is ... to ～', [...row(26, [['To learn English is important.', 'b']], { h: 26, size: 11 }), lb(160, 66, '＝', 16, C.ink, 'middle', true), ...row(80, [['It is important', 'g'], ['to learn English.', 'b']], { h: 26, size: 11 }), gl(160, 124, 'It は仮の主語、本当の主語は to 以下')], '形式主語 It', C.blue),
   F('②too ... to ～。He is too tired to work. ＝ He is so tired that he can\'t work. 「疲れすぎていて働けない」。❓なぜ can\'t なのでしょう。→ too は「〜しすぎて…できない」という否定の意味を持つからです。',
@@ -426,16 +425,236 @@ FIGS['xf_eigo_s315'] = show([
   F('チェック①：時制をそろえます。The soup was too hot to eat. ＝ The soup was so hot that I couldn\'t eat it. もとの文が過去なら、書きかえた文の助動詞も過去（couldn\'t）にします。',
     '時制をそろえる', [...row(26, [['The soup was too hot to eat.', 'g']], { h: 26 }), lb(160, 66, '＝', 16, C.ink, 'middle', true), ...row(80, [["The soup was so hot that I couldn't eat it.", 'g']], { h: 26, size: 10.5 }), gl(160, 124, 'was（過去）→ couldn\'t（過去）'), gl(160, 140, '× can\'t のままにしない')], 'もとの文が過去なら couldn\'t', C.red),
   F('チェック②：目的語の it を補います。This tea is too hot to drink. ＝ This tea is so hot that I can\'t drink it. to drink には目的語がいりませんが、that の文では drink it と書かなければなりません。',
-    '目的語の it を補う', [...row(26, [['This tea is too hot to drink.', 'b']], { h: 26 }), lb(160, 66, '＝', 16, C.ink, 'middle', true), ...row(80, [["This tea is so hot that I can't drink it.", 'b']], { h: 26, size: 10.5 }), ar(250, 116, 250, 106, C.red), gl(160, 130, 'it を書き忘れない（赤い矢印の語）', C.red)], 'drink のあとに it', C.blue),
+    '目的語の it を補う', [...row(26, [['This tea is too hot to drink.', 'b']], { h: 26 }), lb(160, 66, '＝', 16, C.ink, 'middle', true), ...row(80, [["This tea is so hot that I can't drink it.", 'b']], { h: 26, size: 10.5 }), gl(160, 122, 'drink のあとの it を書き忘れない', C.red)], 'drink のあとに it', C.blue),
   F('チェック③：for 人 は主語になります。The book is too difficult for me to read. ＝ The book is so difficult that I can\'t read it. for me が I になります。まとめ：時制・it・for 人 の三つを必ず確かめます。',
-    'for 人 ＋ to ～ の書きかえ', [...row(24, [['The book is too difficult for me to read.', 'g']], { h: 26, size: 10.5 }), lb(160, 64, '＝', 16, C.ink, 'middle', true), ...row(76, [["The book is so difficult that I can't read it.", 'g']], { h: 26, size: 10 }), bx(30, 112, 80, 24, '時制', C.red, FILL.red, 12), bx(120, 112, 80, 24, 'it', C.red, FILL.red, 12), bx(210, 112, 80, 24, 'for 人', C.red, FILL.red, 12)], '時制・it・for 人 を確かめる', C.red),
+    'for 人 ＋ to ～ の書きかえ', [...row(14, [['The book is too difficult\nfor me to read.', 'g']], { h: 38 }), lb(160, 64, '＝', 16, C.ink, 'middle', true), ...row(74, [["The book is so difficult\nthat I can't read it.", 'g']], { h: 38 }), bx(30, 120, 80, 24, '時制', C.red, FILL.red, 12), bx(120, 120, 80, 24, 'it', C.red, FILL.red, 12), bx(210, 120, 80, 24, 'for 人', C.red, FILL.red, 12)], '時制・it・for 人 を確かめる', C.red),
 ], '不定詞の書きかえパターン');
+
+// ───────── eigo_s317 主語・補語になる動名詞 ─────────
+FIGS['xf_eigo_s317'] = show([
+  F('「写真をとることが趣味です」を My hobby is take pictures. とは言えません。is のあとに動詞をそのまま置けないからです。taking にすれば通じます。動名詞（どうめいし）を、「なぜ？」で見ていきましょう。',
+    '動詞を名詞にかえる', [...row(30, [['My hobby is take pictures.', 'r']], { h: 28 }), lb(160, 72, '× is のあとに動詞はそのまま置けない', 12, C.red, 'middle', true), ...row(92, [['My hobby is taking pictures.', 'g']], { h: 28 }), lb(160, 134, '○ taking（動名詞）にする', 12, C.green, 'middle', true)], 'is のあとは taking', C.green),
+  F('❓動名詞とは何でしょう。→ 動詞に ing を付けて、「〜すること」という名詞（めいし）にしたものです。take（とる）→ taking（とること）。動詞が名詞に変身（へんしん）します。',
+    '動詞 ＋ ing ＝ 「〜すること」', [...row(30, [['take', 'b'], ['→', 'n'], ['taking', 'g']], { h: 28, size: 14 }), gl(160, 66, 'とる → とること'), ...row(86, [['play', 'b'], ['→', 'n'], ['playing', 'g']], { h: 28, size: 14 }), gl(160, 122, 'する → すること')], '動名詞 ＝ 〜すること（名詞）', C.green),
+  F('文の先頭に置くと、主語（しゅご）になります。Playing the piano is a lot of fun.（ピアノをひくことはとても楽しい）。「〜することは」という意味の主語です。',
+    '主語になる動名詞', [...row(28, [['Playing the piano', 'g'], ['is', 'b'], ['fun.', 'n']], { h: 28 }), gl(160, 66, '主語（〜することは）'), ...row(88, [['Getting up early', 'g'], ['is', 'b'], ['good.', 'n']], { h: 28 }), gl(160, 126, '早起きは よい')], '文頭の ～ing は 主語', C.green),
+  F('❓なぜ are ではなく is なのでしょう。→ Playing the piano は「ピアノをひくこと」という一つのことがらだからです。一つのこととして、単数（たんすう）あつかいになります。',
+    '一つのこと → is', [bx(14, 34, 180, 36, 'Playing the piano', C.green, FILL.green, 13), lb(256, 52, '＝ 一つのこと', 12, C.green, 'middle', true), ar(104, 74, 104, 96, C.blue), bx(54, 98, 100, 30, 'is（単数）', C.blue, FILL.blue, 13), gl(230, 112, '× are')], '動名詞の主語は単数あつかい', C.blue),
+  F('例です。Getting up early is good for your health.（早起きは健康によい）。Studying English every day is important.（毎日英語を勉強することは大切だ）。主語は、動詞 is が出てくるところまでです。',
+    '主語の長さを見きわめる', [...row(24, [['Studying English every day', 'g'], ['is', 'b']], { h: 26, size: 12 }), ln(24, 58, 218, 58, C.green, false, 3), gl(120, 76, '主語はここまで'), gl(160, 100, 'is が出てきたら、そこで主語は終わり'), ...row(114, [['important.', 'n']], { h: 24 })], '主語は動詞が出るまで', C.green),
+  F('補語（ほご）になる使い方もあります。My hobby is taking pictures.（趣味は写真をとること）。My hobby ＝ taking pictures と、イコールの関係です。',
+    '補語になる動名詞', [...row(30, [['My hobby', 'b'], ['is', 'n'], ['taking pictures.', 'g']], { h: 28 }), lb(160, 76, '趣味 ＝ 写真をとること', 13, C.green, 'middle', true), ...ex(94, 'Her job is helping sick people.', '仕事は病気の人を助けること', 'g', { size: 11 })], 'be動詞のあとの ～ing ＝ 補語', C.green),
+  F('イコールなので、前と後ろを入れかえても意味はかわりません。My hobby is collecting stamps. ＝ Collecting stamps is my hobby.',
+    '入れかえてもOK', [...row(30, [['My hobby is collecting stamps.', 'b']], { h: 28 }), lb(160, 76, '＝', 18, C.ink, 'middle', true), ...row(92, [['Collecting stamps is my hobby.', 'g']], { h: 28 }), gl(160, 134, '趣味 ＝ 切手集め')], '主語と補語は入れかえられる', C.main),
+  F('進行形（しんこうけい）と区別します。He is teaching English now.（今教えている）は進行形。His job is teaching English.（仕事は英語を教えること）は動名詞。主語が job・hobby などなら動名詞です。まとめ：動名詞は「〜すること」。',
+    '進行形との区別', [...row(26, [['He is teaching English now.', 'b']], { h: 26 }), gl(160, 64, '今している → 進行形'), ...row(84, [['His job is teaching English.', 'g']], { h: 26 }), gl(160, 122, '仕事 ＝ 教えること → 動名詞')], '主語が job・hobby なら動名詞', C.main),
+], '主語・補語になる動名詞');
+
+// ───────── eigo_s318 目的語になる動名詞 ─────────
+FIGS['xf_eigo_s318'] = show([
+  F('I enjoyed to swim. は、言いたいことは伝わっても英語としては誤りです。enjoy のあとは swimming としか組みません。なぜ動詞によって相手が決まっているのか、「なぜ？」でたどります。',
+    'enjoy のあとの形', [...row(30, [['I enjoyed to swim.', 'r']], { h: 28 }), lb(160, 72, '× to は付かない', 12, C.red, 'middle', true), ...row(92, [['I enjoyed swimming.', 'g']], { h: 28 }), lb(160, 134, '○ 動名詞（swimming）', 12, C.green, 'middle', true)], 'enjoy ＋ ～ing', C.green),
+  F('動名詞（どうめいし）だけを目的語にとる動詞です。enjoy（楽しむ）・finish（終える）・stop（やめる）・give up（あきらめる）・mind（いやがる）・practice（練習する）・avoid（さける）。',
+    '動名詞専用の動詞', [...row(24, [['enjoy 楽しむ', 'g'], ['finish 終える', 'g']], { h: 26 }), ...row(56, [['stop やめる', 'g'], ['give up あきらめる', 'g']], { h: 26 }), ...row(88, [['mind いやがる', 'g'], ['practice 練習する', 'g']], { h: 26 }), ...row(120, [['avoid さける', 'g']], { h: 26 })], '動詞 ＋ ～ing', C.green),
+  F('❓なぜこれらは ing なのでしょう。→ 楽しむ・終える・やめる・あきらめる・練習する…は、すでにやっていること、現にやっていることを相手にする動詞だからです。まだ先のことを表す to とは向きが反対です。',
+    'ing は「すでにしていること」', [ln(20, 90, 300, 90, C.gray, false, 2), ci(100, 90, 7, undefined, C.green, FILL.green), lb(100, 112, '今・すでに', 11, C.green, 'middle'), ci(240, 90, 7, undefined, C.gray, FILL.gray), lb(240, 112, 'これから', 11, C.gray, 'middle'), lb(100, 66, 'enjoy ～ing', 13, C.green, 'middle', true), lb(240, 66, 'hope to ～', 13, C.gray, 'middle', true)], 'ing ＝ すでにしていること', C.green),
+  F('例です。I enjoyed talking with you.（あなたと話せて楽しかった）。He finished doing his homework.（宿題をし終えた）。She stopped watching TV.（テレビを見るのをやめた）。',
+    '例文', [...row(24, [['I enjoyed talking with you.', 'g']], { h: 24 }), ...row(62, [['He finished doing his homework.', 'g']], { h: 24, size: 11 }), ...row(100, [['She stopped watching TV.', 'g']], { h: 24 }), gl(160, 142, 'すべて 動詞 ＋ ～ing')], '楽しむ・終える・やめる', C.green),
+  F('前置詞（ぜんちし）のあとも動名詞です。Thank you for helping me.（手伝ってくれてありがとう）。How about going shopping?（買い物に行くのはどう）。❓なぜでしょう。→ 前置詞のあとには名詞が来ます。動名詞は名詞の仲間だからです。',
+    '前置詞のあとも ing', [...row(26, [['Thank you for helping me.', 'b']], { h: 26 }), ...row(66, [['How about going shopping?', 'b']], { h: 26 }), bx(30, 108, 120, 28, 'for / about ＝ 前置詞', C.blue, FILL.blue, 11), bx(170, 108, 120, 28, 'あとは 名詞の仲間', C.green, FILL.green, 11), ar(152, 122, 168, 122, C.main)], '前置詞のあとは ～ing', C.blue),
+  F('look forward to ~ing に気をつけます。I\'m looking forward to seeing you.（会うのを楽しみにしている）。ここの to は不定詞ではなく前置詞なので、あとは seeing です。上位校でねらわれます。',
+    'look forward to ～ing', [...row(28, [["I'm looking forward to seeing you.", 'p']], { h: 28, size: 11 }), bx(120, 70, 36, 24, 'to', C.red, FILL.red, 13), gl(160, 112, 'この to は 前置詞'), lb(160, 134, '× to see ／ ○ to seeing', 12, C.red, 'middle', true)], 'この to は前置詞', C.purple),
+  F('否定（ひてい）の形です。I\'m sorry for not calling you.（電話しなくてごめんなさい）。not は、動名詞のすぐ前に置きます。',
+    '否定の形', [...row(30, [["I'm sorry for", 'n'], ['not', 'r'], ['calling you.', 'g']], { h: 28 }), ar(160, 66, 160, 80, C.red), gl(160, 100, 'not は ～ing の すぐ前'), gl(160, 124, '（電話しなくて ごめんなさい）')], 'not ＋ ～ing', C.red),
+  F('まとめです。①enjoy・finish・stop は ～ing だけ。②前置詞のあとの動詞は必ず ～ing。③look forward to のあとも ～ing。before・after・without・by・for・at・about・of は、すべて前置詞です。',
+    'まとめ', [bx(14, 24, 292, 28, '① enjoy / finish / stop ＋ ～ing', C.green, FILL.green, 12), bx(14, 60, 292, 28, '② 前置詞のあとの動詞は ～ing', C.blue, FILL.blue, 12), bx(14, 96, 292, 28, '③ look forward to ～ing', C.purple, FILL.purple, 12)], '目的語になる動名詞', C.main),
+], '目的語になる動名詞');
+
+// ───────── eigo_s319 前置詞＋動名詞 ─────────
+FIGS['xf_eigo_s319'] = show([
+  F('「歌が得意です」を I am good at sing. とは言いません。at は前置詞（ぜんちし）なので、singing に変えます。この決まりがわかると、be good at・be interested in などが同じ理由で片づきます。',
+    '前置詞のあとは ing', [...row(30, [['I am good at sing.', 'r']], { h: 28 }), lb(160, 72, '× at のあとに動詞はそのまま置けない', 11, C.red, 'middle', true), ...row(92, [['I am good at singing.', 'g']], { h: 28 }), lb(160, 134, '○ singing（動名詞）', 12, C.green, 'middle', true)], 'at ＋ singing', C.green),
+  F('❓なぜ前置詞のあとは ing なのでしょう。→ 前置詞のあとには、必ず名詞（または名詞の仲間）が来るからです。動名詞は「〜すること」という名詞の仲間なので、動詞を前置詞のあとに置くときは ing にして名詞にします。',
+    '前置詞 ＋ 名詞の仲間', [bx(14, 36, 90, 34, '前置詞\nat', C.blue, FILL.blue, 12), lb(130, 54, '＋', 18, C.blue, 'middle', true), bx(156, 36, 150, 34, '名詞の仲間\nsinging（動名詞）', C.green, FILL.green, 12), gl(160, 100, '動詞のままでは名詞にならない'), gl(160, 122, 'だから ing を付ける')], '前置詞のあとは名詞の仲間', C.main),
+  F('セットで覚えましょう。be good at（得意）・be bad at（苦手）・be interested in（興味がある）・be afraid of（こわい）・be proud of（誇りに思う）・be tired of（うんざり）・be fond of（好き）。',
+    'セットで覚える', [...row(24, [['be good at 得意', 'b'], ['be bad at 苦手', 'b']], { h: 26 }), ...row(56, [['be interested in 興味がある', 'g']], { h: 26 }), ...row(88, [['be afraid of こわい', 'p'], ['be proud of 誇り', 'p']], { h: 26, size: 11 }), ...row(120, [['be tired of うんざり', 'r'], ['be fond of 好き', 'r']], { h: 26, size: 11 })], '形容詞 ＋ 前置詞 ＋ ～ing', C.main),
+  F('例です。She is good at cooking.（料理が得意）。I am interested in learning Chinese.（中国語を学ぶことに興味がある）。He is afraid of making mistakes.（まちがえるのをこわがる）。前置詞まで含めて一つの表現です。',
+    '例文', [...row(24, [['She is good at cooking.', 'b']], { h: 24 }), ...row(62, [['I am interested in learning Chinese.', 'b']], { h: 24, size: 11 }), ...row(100, [['He is afraid of making mistakes.', 'b']], { h: 24, size: 11 }), gl(160, 142, 'at / in / of のあとは ～ing')], '前置詞を落とさない', C.blue),
+  F('時や方法の前置詞でも同じです。before eating（食べる前に）・after doing（したあとで）・without saying（言わずに）・by reading（読むことで）。',
+    '時・方法の前置詞', [...row(24, [['before eating', 'g'], ['after doing', 'g']], { h: 26 }), ...row(58, [['without saying', 'g'], ['by reading', 'g']], { h: 26 }), gl(160, 104, 'どれも 前置詞 ＋ ～ing'), gl(160, 124, '食べる前に／したあとで／言わずに／読むことで')], '前置詞 ＋ ～ing', C.green),
+  F('by ～ing は「〜することによって」です。We can save water by turning off the tap.（じゃ口を閉めることで水を節約できる）。方法を言いたいときに使えるので、英作文でとても便利です。',
+    'by ～ing ＝ ～することによって', [...ex(26, 'We can save water by turning off the tap.', 'じゃ口を閉めることで水を節約できる', 'g', { size: 10.5 }), bx(70, 90, 180, 30, 'by ＋ turning off ＝ 方法', C.green, FILL.green, 12)], '方法は by ＋ ～ing', C.green),
+  F('look forward to ～ing に注意します。I\'m looking forward to seeing you again.（またお会いできるのを楽しみにしています）。この to は前置詞なので、あとは seeing です。手紙やメールの結びによく出ます。',
+    'look forward to ～ing', [...row(28, [["I'm looking forward to seeing you again.", 'p']], { h: 28, size: 10.5 }), bx(110, 70, 40, 24, 'to', C.red, FILL.red, 13), gl(160, 108, 'この to は前置詞'), lb(160, 132, '× to see ／ ○ to seeing', 12, C.red, 'middle', true)], 'to のあとが ～ing になる例外', C.purple),
+  F('❓前置詞の to と不定詞の to は、どう見分けるのでしょう。→ あとを見ます。to school（名詞）は前置詞、to go（原形）は不定詞です。まとめ：前置詞のあとの動詞は必ず ～ing。',
+    'to の見分け方', [bx(14, 30, 138, 40, '前置詞の to\nto school / to seeing', C.blue, FILL.blue, 11), bx(168, 30, 138, 40, '不定詞の to\nto go / to see', C.green, FILL.green, 11), gl(83, 92, 'あとは名詞・～ing'), gl(237, 92, 'あとは原形'), gl(160, 124, 'Thank you for to help. ×  → for helping ○')], '前置詞のあとは必ず ～ing', C.main),
+], '前置詞＋動名詞');
+
+// ───────── eigo_s321 動名詞だけをとる動詞 ─────────
+FIGS['xf_eigo_s321'] = show([
+  F('enjoy・finish・stop・practice——この仲間に共通するのは、すでに始まっていること、実際にしていることを扱う点です。だからあとは ing になります。まとまりで感じをつかみましょう。',
+    '動名詞専用の仲間', [...row(24, [['enjoy', 'g'], ['finish', 'g'], ['stop', 'g'], ['give up', 'g']], { h: 26 }), ...row(60, [['mind', 'g'], ['practice', 'g'], ['avoid', 'g'], ['keep', 'g']], { h: 26 }), gl(160, 110, 'このあと 必ず ～ing')], '動詞 ＋ ～ing 専用', C.green),
+  F('❓共通点は何でしょう。→ 楽しむ・終える・やめる・あきらめる・練習する・さける・続ける。どれも「すでに行っていること」や「くり返し行うこと」が相手です。だから、実際に行われている感じの強い ing が合います。',
+    '共通点は「実際にしていること」', [bx(40, 28, 240, 30, 'すでに行っている・くり返しのこと', C.green, FILL.green, 13), ar(160, 60, 160, 84, C.green), bx(100, 88, 120, 30, '～ing（動名詞）', C.blue, FILL.blue, 13), gl(160, 138, 'まだ先のことなら to ＋ 原形')], '実際にしていることは ing', C.green),
+  F('例です。We enjoyed swimming in the sea.（海で泳いで楽しんだ）。Have you finished cleaning your room?（部屋のそうじは終わりましたか）。Stop talking, please.（話すのをやめてください）。',
+    '例文①', [...row(24, [['We enjoyed swimming in the sea.', 'g']], { h: 24, size: 11 }), ...row(62, [['Have you finished cleaning your room?', 'g']], { h: 24, size: 10.5 }), ...row(100, [['Stop talking, please.', 'g']], { h: 24 })], 'enjoy ／ finish ／ stop', C.green),
+  F('keep ～ing は「〜し続ける」です。The baby kept crying all night.（赤ちゃんは一晩じゅう泣き続けた）。Keep going straight.（まっすぐ進み続けてください）は道案内でよく使います。',
+    'keep ～ing', [...ex(26, 'The baby kept crying all night.', '赤ちゃんは一晩じゅう泣き続けた', 'g'), ...ex(86, 'Keep going straight.', 'まっすぐ進み続けてください', 'g')], 'keep ～ing ＝ 〜し続ける', C.green),
+  F('あきらめる・さけるも ing です。He gave up trying to fix it.（彼はそれを直そうとするのをあきらめた）。You should avoid eating too much.（食べすぎはさけるべきだ）。',
+    'give up と avoid', [...row(24, [['He gave up trying to fix it.', 'g']], { h: 26 }), gl(160, 62, '直そうとするのをあきらめた'), ...row(84, [['You should avoid eating too much.', 'g']], { h: 26, size: 11 }), gl(160, 122, '食べすぎは さける')], 'give up ～ing ／ avoid ～ing', C.green),
+  F('❓to を付けたらどうなるでしょう。→ enjoy to play、finish to do は誤りです。stop は少しちがい、stop talking は「話すのをやめる」、stop to talk は「立ち止まって話す」と、別の意味になります。',
+    'stop ～ing と stop to ～', [...row(26, [['stop talking', 'g']], { h: 26 }), gl(160, 62, '話すのをやめる'), ...row(80, [['stop to talk', 'b']], { h: 26 }), gl(160, 116, '立ち止まって話す（別の意味）'), lb(160, 138, '× enjoy to play ／ × finish to do', 11, C.red, 'middle', true)], 'to を付けると誤り（stop は別の意味）', C.red),
+  F('Would you mind ～ing? を見ます。「窓を開けていただけませんか」というていねいな依頼（いらい）です。mind は「いやだと思う」の意味なので、直訳は「窓を開けることをいやだと思いますか」です。',
+    'Would you mind ～ing?', [...ex(26, 'Would you mind opening the window?', '窓を開けていただけませんか', 'p', { size: 11 }), bx(30, 90, 260, 36, '直訳：窓を開けることを いやだと思いますか？', C.purple, FILL.purple, 11)], 'mind ＝ いやだと思う', C.purple),
+  F('❓答え方はどうするのでしょう。→ 引き受けるなら No, not at all.（いいえ、まったくかまいません）。「いやだと思いますか」に「いいえ」と答えるからです。断るなら I\'m sorry, but ... と理由を言います。まとめ：mind も ing 専用です。',
+    'Would you mind ～? の答え', [...row(26, [['Would you mind opening the window?', 'p']], { h: 26, size: 10.5 }), ...row(66, [['No, not at all.', 'g']], { h: 26 }), gl(160, 104, 'いいえ（いやではない）＝ いいですよ'), ...row(116, [["I'm sorry, but I have a cold.", 'r']], { h: 24, size: 10.5 }), gl(160, 148 - 2, '')], 'No ＝ いいですよ', C.green),
+], '動名詞だけをとる動詞');
+
+// ───────── eigo_s322 不定詞だけをとる動詞 ─────────
+FIGS['xf_eigo_s322'] = show([
+  F('want・hope・decide・promise・plan——どれも、まだしていない「これから」のことを表します。だからあとは、これから向かう感じのある to＋原形です。人をはさむ形（want 人 to ～）もあわせて見ます。',
+    '不定詞専用の仲間', [...row(24, [['want', 'b'], ['hope', 'b'], ['decide', 'b']], { h: 26 }), ...row(60, [['promise', 'b'], ['plan', 'b'], ['expect', 'b']], { h: 26 }), gl(160, 110, 'このあと to ＋ 原形')], '動詞 ＋ to ＋ 原形 専用', C.blue),
+  F('❓共通点は？→ 望む・決める・約束する・計画する・期待する。どれも行動の前の段階（だんかい）で、これからのことを相手にしています。だから「向かう」感じの to が合います。',
+    '共通点は「これから」', [ln(20, 90, 300, 90, C.gray, false, 2), ci(80, 90, 7, undefined, C.gray, FILL.gray), lb(80, 112, '今', 11, C.gray, 'middle'), ci(250, 90, 7, undefined, C.blue, FILL.blue), lb(250, 112, 'これから', 11, C.blue, 'middle'), ar(88, 78, 240, 78, C.blue), lb(160, 60, 'want / hope / decide ＋ to', 12, C.blue, 'middle', true)], '未来向きの動詞は to', C.blue),
+  F('例です。I want to be a scientist.（科学者になりたい）。We hope to see you soon.（すぐに会えるといいな）。He decided to study abroad.（彼は留学することに決めた）。',
+    '例文', [...row(24, [['I want to be a scientist.', 'b']], { h: 24 }), ...row(62, [['We hope to see you soon.', 'b']], { h: 24 }), ...row(100, [['He decided to study abroad.', 'b']], { h: 24 }), gl(160, 142, 'すべて 動詞 ＋ to ＋ 原形')], 'want to ／ hope to ／ decide to', C.blue),
+  F('「人に〜してほしい」の形です。I want you to help me.（あなたに手伝ってほしい）。並べ方は「動詞＋人＋to＋原形」。人を to の前にはさみます。',
+    '動詞 ＋ 人 ＋ to ＋ 原形', [...row(30, [['I', 'n'], ['want', 'b'], ['you', 'r'], ['to help me.', 'g']], { h: 28 }), gl(160, 68, '人（you）が to の前に入る'), bx(30, 90, 260, 32, 'あなたに 手伝って ほしい', C.blue, FILL.blue, 13)], 'want 人 to ～', C.blue),
+  F('tell と ask も同じ形です。My mother told me to clean my room.（母は部屋をそうじするように言った）。He asked me to open the door.（彼はドアを開けるよう頼んだ）。',
+    'tell 人 to ～ ／ ask 人 to ～', [...row(24, [['My mother told me to clean my room.', 'g']], { h: 26, size: 10.5 }), gl(160, 62, '言った（命令に近い）'), ...row(84, [['He asked me to open the door.', 'b']], { h: 26 }), gl(160, 122, '頼んだ（お願い）')], '動詞 ＋ 人 ＋ to ＋ 原形', C.main),
+  F('訳し分けです。want 人 to ～ は「〜してほしい」、tell 人 to ～ は「〜するように言う」（命令に近い）、ask 人 to ～ は「〜するよう頼む」（お願い）。同じ形で、強さがちがいます。',
+    '訳し分け', [...row(24, [['want 人 to ～', 'b'], ['〜してほしい', 'n']], { h: 26 }), ...row(60, [['tell 人 to ～', 'g'], ['〜するように言う', 'n']], { h: 26 }), ...row(96, [['ask 人 to ～', 'p'], ['〜するよう頼む', 'n']], { h: 26 })], '同じ形で、強さがちがう', C.main),
+  F('❓hope は同じ形にできるでしょうか。→ できません。hope you to come は誤りです。hope は「人＋to」の形をとれないので、相手のことなら hope (that) 文を使います。',
+    'hope は人をはさめない', [...row(26, [['I want you to come.', 'g']], { h: 26 }), lb(160, 64, '○ ふつうの形', 12, C.green, 'middle', true), ...row(80, [['I hope you to come.', 'r']], { h: 26 }), lb(160, 118, '× hope は 人 ＋ to の形が使えない', 12, C.red, 'middle', true)], 'hope 人 to ～ は誤り', C.red),
+  F('否定（ひてい）は not を to の前に置きます。My mother told me not to go out at night.（夜に外出しないように言った）。まとめ：want・hope・decide・promise・plan は to 専用。人をはさむのは want・tell・ask。否定は not to。',
+    '否定の形', [...row(26, [['My mother told me', 'n'], ['not', 'r'], ['to go out.', 'g']], { h: 28, size: 11 }), gl(160, 64, 'not は to の前'), lb(160, 92, '× told me to not go out', 12, C.red, 'middle', true), bx(30, 108, 260, 30, 'not は必ず to の前（not to ＋ 原形）', C.red, FILL.red, 11)], 'not to ＋ 原形', C.red),
+], '不定詞だけをとる動詞');
+
+// ───────── eigo_s325 分詞：二語以上は後ろ ─────────
+FIGS['xf_eigo_s325'] = show([
+  F('a sleeping baby は前から、the boy running in the park は後ろから説明します。同じ ing なのに位置が変わるのは、running in the park が三語のかたまりだからです。「なぜ？」で確かめましょう。',
+    '位置がかわる ing', [...row(30, [['a', 'n'], ['sleeping', 'g'], ['baby', 'b']], { h: 28 }), gl(160, 68, '一語 → 名詞の前'), ...row(86, [['the', 'n'], ['boy', 'b'], ['running in the park', 'g']], { h: 28, size: 11 }), gl(160, 124, '二語以上 → 名詞の後ろ')], '一語は前、二語以上は後ろ', C.main),
+  F('❓なぜ後ろに置くのでしょう。→ 英語には「長い説明は名詞のあとへ」という原則があるからです。running in the park のように語がつながると、名詞の前に置くには長すぎるので、後ろに回ります。',
+    '長いものは後ろへ', [bx(10, 34, 70, 30, 'the boy', C.blue, FILL.blue, 13), bx(90, 34, 220, 30, 'running in the park', C.green, FILL.green, 13), ar(300, 70, 100, 70, C.green), gl(200, 90, 'この長い説明が boy にかかる'), gl(160, 124, '前に置くには 長すぎる')], '長い説明は名詞の後ろ', C.green),
+  F('例です。The boy running in the park is my brother.（公園で走っている少年はわたしの弟だ）。日本語にするときは、後ろから前へ「訳し上げ」ます。「少年 ← 公園で走っている」を逆にして読みます。',
+    '訳し上げる', [...row(26, [['The boy', 'b'], ['running in the park', 'g'], ['is my brother.', 'n']], { h: 28, size: 11 }), gl(160, 78, '先に「公園で走っている」と言い、そのあと「少年」'), gl(160, 102, '後ろの説明を、前の名詞にかぶせる'), gl(160, 126, '＝ 公園で走っている少年は わたしの弟だ')], '後ろから前へ訳し上げる', C.green),
+  F('ほかの例です。Do you know the girl playing the piano?（ピアノをひいている女の子を知っていますか）。The man standing by the door is our teacher.（ドアのそばに立っている男の人は先生だ）。',
+    'ほかの例', [...row(18, [['the girl playing the piano', 'g']], { h: 22 }), gl(160, 50, 'ピアノをひいている女の子'), ...row(62, [['the man standing by the door', 'g']], { h: 22 }), gl(160, 94, 'ドアのそばに立っている男の人'), ...row(106, [['the cat sleeping on the sofa', 'g']], { h: 22 }), gl(160, 138, 'ソファの上で眠っているねこ')], '名詞 ＋ ～ing ＋ 語句', C.green),
+  F('主語が長いと、動詞が遠くなります。The students studying in the library are my classmates. 主語は studying in the library までのかたまり全体で、動詞は are です。',
+    '文の動詞を見つける', [...row(24, [['The students studying in the library', 'b'], ['are', 'g']], { h: 28, size: 11 }), ln(14, 62, 252, 62, C.blue, false, 3), gl(133, 80, '主語（全体）'), gl(160, 112, '動詞は are（studying ではない）')], 'まず文の動詞をさがす', C.blue),
+  F('❓なぜ studying は文の動詞ではないのでしょう。→ be動詞（is・are）がないからです。名詞の直後の ～ing に be動詞が付いていないときは、それは動詞ではなく、名詞の説明のかたまりです。',
+    'be動詞があるかどうか', [...row(26, [['The woman talking with my mother', 'g']], { h: 26, size: 11 }), gl(160, 62, 'talking に be動詞なし → 説明'), ...row(80, [['is a doctor.', 'b']], { h: 26 }), gl(160, 118, 'この is が 文の動詞'), gl(160, 134, '「母と話している女性は医者だ」')], 'be動詞のない ～ing は説明', C.green),
+  F('関係代名詞（かんけいだいめいし）との関係です。the boy running in the park ＝ the boy who is running in the park。分詞は「who is」を省いた形と見ることができます。あとの単元で学ぶ関係代名詞とつながります。',
+    '関係代名詞とのつながり', [...row(26, [['the boy running in the park', 'g']], { h: 26 }), lb(160, 66, '＝', 16, C.ink, 'middle', true), ...row(80, [['the boy who is running in the park', 'p']], { h: 26, size: 11 }), gl(160, 124, 'who is を省くと ing だけが残る')], 'ing ＝ who is ～ing の省略形', C.purple),
+  F('まとめです。①二語以上の ing は名詞の後ろ。②後ろから前へ訳し上げる。③be動詞のない ing は説明のかたまり。動詞が二つに見えたら、前の ing は説明だと考えます。',
+    'まとめ', [bx(14, 24, 292, 28, '① 二語以上の ing は名詞の後ろ', C.green, FILL.green, 12), bx(14, 60, 292, 28, '② 後ろから前へ訳し上げる', C.blue, FILL.blue, 12), bx(14, 96, 292, 28, '③ be動詞のない ing は説明', C.purple, FILL.purple, 12)], '分詞②', C.main),
+], '二語以上の分詞は名詞の後ろ');
+
+// ───────── eigo_s327 現在分詞と過去分詞 ─────────
+FIGS['xf_eigo_s327'] = show([
+  F('the boy calling my name と the boy called Ken。前者は名前を呼んでいる少年、後者はケンと呼ばれている少年です。ing か過去分詞かを決めるのは、名詞が「する側」か「される側」かの一点だけです。',
+    'ing か 過去分詞か', [...row(30, [['the boy', 'b'], ['calling my name', 'g']], { h: 28 }), gl(160, 68, 'わたしの名前を呼んでいる少年'), ...row(86, [['the boy', 'b'], ['called Ken', 'r']], { h: 28 }), gl(160, 124, 'ケンと呼ばれている少年')], 'する側か、される側か', C.main),
+  F('名詞が動作を「する側」なら、現在分詞（ing）です。the girl reading a book（本を読んでいる女の子）は、女の子が読んでいます。the dog running in the yard（庭を走っている犬）は、犬が走っています。',
+    'する側 → ing', [ci(70, 70, 22, '女の子', C.blue, FILL.blue, 11), ar(94, 70, 150, 70, C.green), bx(152, 54, 110, 32, 'reading a book', C.green, FILL.green, 11), gl(160, 112, '女の子が する側'), gl(160, 132, 'the girl reading a book')], 'する側 ＝ ～ing', C.green),
+  F('名詞が動作を「される側」なら、過去分詞です。the window broken by the ball（ボールでこわされた窓）は、窓がこわされています。the book read by many people（多くの人に読まれる本）は、本が読まれます。',
+    'される側 → 過去分詞', [bx(14, 54, 110, 32, 'broken by the ball', C.red, FILL.red, 11), ar(126, 70, 182, 70, C.red), ci(220, 70, 24, '窓', C.blue, FILL.blue, 12), gl(160, 112, '窓が される側'), gl(160, 132, 'the window broken by the ball')], 'される側 ＝ 過去分詞', C.red),
+  F('❓迷ったときの確かめ方は？→ 名詞を主語にして文を作ります。The boy calls my name.（少年が呼ぶ）なら calling。The boy is called Ken.（少年が呼ばれる）なら called。文にすると、する・されるがはっきりします。',
+    '名詞を主語にして確かめる', [...row(26, [['The boy calls my name.', 'g']], { h: 26 }), gl(160, 64, '少年が呼ぶ → calling'), ...row(84, [['The boy is called Ken.', 'r']], { h: 26 }), gl(160, 122, '少年が呼ばれる → called')], '文にして、する・されるを確かめる', C.main),
+  F('同じ動詞でくらべます。the man teaching English（英語を教えている男の人）は、男の人が教える側。English taught by him（彼に教えられる英語）は、英語が教えられる側。同じ teach でも形がかわります。',
+    '同じ動詞でくらべる', [...row(26, [['the man', 'b'], ['teaching English', 'g']], { h: 26 }), gl(160, 62, '男の人が教える → ing'), ...row(84, [['English', 'b'], ['taught by him', 'r']], { h: 26 }), gl(160, 122, '英語が教えられる → 過去分詞')], '名詞とのかんけいで形がかわる', C.main),
+  F('感情を表す語にも、同じ考え方があてはまります。The game was exciting.（その試合はわくわくさせるものだった）は ing。I was excited.（わたしはわくわくした）は過去分詞。まわりをその気持ちにさせるなら ing、させられた人なら過去分詞です。',
+    'exciting と excited', [...row(24, [['The game was exciting.', 'g']], { h: 26 }), gl(160, 62, '試合が わくわくさせる（ing）'), ...row(80, [['I was excited.', 'r']], { h: 26 }), gl(160, 118, 'わたしが わくわくさせられた（過去分詞）')], '人は過去分詞、ものは ing（多い）', C.main),
+  F('❓まちがえるとどうなるでしょう。→ 意味が正反対になります。I was bored.（わたしは退屈した）に対して、I am boring. と言うと「わたしは退屈な人間だ」という意味になってしまいます。I am interesting in music. も誤りで、I am interested in music. が正しい。',
+    '意味が正反対になる', [...row(26, [['I was bored.', 'g']], { h: 26 }), gl(160, 62, '退屈した（わたしが）'), ...row(80, [['I am boring.', 'r']], { h: 26 }), gl(160, 118, '退屈な人間だ（相手を退屈にさせる）')], '人が主語なら 過去分詞が多い', C.red),
+  F('まとめです。①名詞がする側なら ing。②される側なら過去分詞。③迷ったら、名詞を主語にして文を作る。感情の語は、人が主語なら excited・interested、ものが主語なら exciting・interesting が多いです。',
+    'まとめ', [bx(14, 24, 292, 28, '① する側 ＝ ～ing', C.green, FILL.green, 12), bx(14, 60, 292, 28, '② される側 ＝ 過去分詞', C.red, FILL.red, 12), bx(14, 96, 292, 28, '③ 名詞を主語にして文にして確かめる', C.blue, FILL.blue, 11)], '分詞④', C.main),
+], '現在分詞と過去分詞');
+
+// ───────── eigo_s329 主格の which・that ─────────
+FIGS['xf_eigo_s329'] = show([
+  F('先行詞（せんこうし）が人なら who。では、犬やバスのときはどうするのでしょう。英語は人とそれ以外を区別するので、もの・動物には which を使います。that はどちらにも使えます。使い分けを例文で確かめます。',
+    '人は who、ものは which', [bx(14, 30, 138, 44, '人\nthe boy who runs', C.blue, FILL.blue, 12), bx(168, 30, 138, 44, 'もの・動物\nthe bus which goes', C.green, FILL.green, 11), gl(160, 100, 'that は どちらにも使える'), gl(160, 122, '（人・もの どちらでもOK）')], '人 → who ／ もの → which', C.main),
+  F('例です。This is the bus which goes to the station.（これは駅へ行くバスです）。the bus が先行詞で、which goes to the station が、その bus を後ろから説明しています。',
+    'バスを説明する which', [...row(26, [['This is', 'n'], ['the bus', 'b'], ['which goes to the station.', 'g']], { h: 28, size: 11 }), ar(230, 64, 150, 64, C.green), gl(160, 86, 'bus を 後ろから説明する'), gl(160, 112, '「駅へ行くバス」')], 'which goes ... ＝ 先行詞を説明', C.green),
+  F('❓which は、文の中でどんなはたらきをしているのでしょう。→ 主語の役です。which goes の goes の「行く」のは、bus。つまり which が主語のかわりをしていて、あとに動詞が続きます。これを主格といいます。',
+    'which は主語のかわり', [...row(30, [['the bus', 'b'], ['which', 'r'], ['goes', 'g']], { h: 28 }), ar(160, 66, 160, 84, C.red), gl(160, 102, 'which ＝ the bus（主語）'), gl(160, 126, 'あとに 動詞 goes が続く（主格）')], 'which のあとは動詞', C.red),
+  F('二つの文をつなぐ手順です。I want a computer. と It is small and light. を、It を which に変えて、先行詞のすぐ後ろに置きます。I want a computer which is small and light.（小さくて軽いコンピューターがほしい）。',
+    '二つの文をつなぐ', [...row(28, [['I want a computer.', 'b']], { h: 22 }), ...row(58, [['It is small and light.', 'g']], { h: 22 }), ar(160, 84, 160, 100, C.main), ...row(104, [['I want a computer which is small and light.', 'p']], { h: 26, size: 10.5 }), gl(160, 142, 'It → which にして 後ろに置く')], 'It を which に変える', C.main),
+  F('that で言いかえられます。This is the bus that goes to the station.（バスのとき）。I know a boy that plays the piano well.（人のときも使える）。that は人にも、ものにも使える万能の関係代名詞です。',
+    'that でも言える', [...row(24, [['the bus that goes ...', 'g']], { h: 26 }), gl(160, 62, 'もの → which の代わりに that'), ...row(80, [['a boy that plays the piano', 'b']], { h: 26 }), gl(160, 118, '人 → who の代わりに that')], 'that は万能', C.blue),
+  F('動詞の形は、先行詞の数に合わせます。a book which is ...（単数）、books which are ...（複数）。I like books which have a lot of pictures.（絵がたくさんある本が好き）は、books が複数なので have（s なし）です。',
+    '動詞は先行詞に合わせる', [...row(24, [['a book which is', 'b']], { h: 26 }), gl(160, 62, '単数 → is'), ...row(78, [['books which are', 'g']], { h: 26 }), gl(160, 116, '複数 → are / have')], '先行詞が単数か複数か', C.main),
+  F('❓I have a dog which it has long ears. はなぜ誤りなのでしょう。→ which が主語の役をしているので、it はいらないからです。which が it のかわりなのに、さらに it を書くと、主語が二つになってしまいます。',
+    'it はいらない', [...row(26, [['I have a dog which it has long ears.', 'r']], { h: 26, size: 11 }), lb(160, 64, '× which が it の かわり', 12, C.red, 'middle', true), ...row(82, [['I have a dog which has long ears.', 'g']], { h: 26, size: 11 }), lb(160, 120, '○ it は書かない', 12, C.green, 'middle', true)], 'which と it は重ねない', C.red),
+  F('長い文は、かたまりに分けて読みます。The train which leaves at six is always crowded. 主語は The train which leaves at six（六時に出る電車）、動詞は is。まとめ：もの・動物は which か that、あとに動詞、先行詞の数に合わせる。',
+    '長い文を読み解く', [...row(24, [['The train which leaves at six', 'b'], ['is', 'g']], { h: 28, size: 11 }), ln(14, 60, 250, 60, C.blue, false, 3), gl(130, 78, '主語（かたまり）'), gl(160, 110, '「六時に出る電車は いつもこんでいる」'), gl(160, 130, 'leaves は説明の中の動詞、is が文の動詞')], '主語のかたまりを見つける', C.main),
+], '主格の which・that');
+
+// ───────── eigo_s331 先行詞が人の目的格 ─────────
+FIGS['xf_eigo_s331'] = show([
+  F('「昨日会った男の人」は the man whom I met yesterday ですが、実際の会話では the man I met yesterday と言うのがふつうです。whom は正式すぎるのです。教科書の形と実際の形の両方を知っておきます。',
+    '正式な形とふだんの形', [...row(30, [['the man whom I met yesterday', 'g']], { h: 28 }), gl(160, 68, '正式な形（かたい）'), ...row(86, [['the man I met yesterday', 'b']], { h: 28 }), gl(160, 124, '会話ではこれがふつう（whom を省く）')], 'whom は省略するのがふつう', C.main),
+  F('❓whom は何のはたらきをしているのでしょう。→ met の目的語です。もとの文は I met him. 「彼に会った」の him が、前に出て whom に変わりました。目的語の役なので、目的格といいます。',
+    'whom ＝ 目的語のかわり', [...row(24, [['I met him.', 'b']], { h: 26 }), ar(160, 54, 160, 72, C.main), ...row(76, [['the man', 'g'], ['whom', 'r'], ['I met', 'b']], { h: 26 }), gl(160, 122, 'him → whom（met の目的語）'), gl(160, 138, 'あとは「主語＋動詞」')], 'whom のあとは 主語＋動詞', C.red),
+  F('主格とくらべます。The man who lives next door is kind. は who のあとが動詞 lives（主格）。The man whom I met is kind. は whom のあとが主語＋動詞 I met（目的格）。あとに続く形で区別します。',
+    '主格と目的格のちがい', [...row(26, [['the man', 'b'], ['who', 'r'], ['lives next door', 'g']], { h: 26, size: 11 }), gl(160, 62, '主格：あとが 動詞'), ...row(84, [['the man', 'b'], ['whom', 'r'], ['I met', 'g']], { h: 26 }), gl(160, 120, '目的格：あとが 主語＋動詞')], 'あとの形で見分ける', C.main),
+  F('目的格は、who や that でも言えます。The girl who(m) you saw is my sister. ／ The student that our teacher praised is Ken. ふだんの英語では、whom よりこちらがよく使われます。',
+    'who・that でも言える', [...row(26, [['the girl whom you saw', 'g']], { h: 26 }), ...row(62, [['the girl who you saw', 'g']], { h: 26 }), ...row(98, [['the girl that you saw', 'g']], { h: 26 }), gl(160, 140, 'どれも同じ意味（省略してもよい）')], 'whom ＝ who ＝ that', C.green),
+  F('前置詞が残る形もあります。The girl whom I talked with is Yumi.（わたしが話した女の子はユミ）。もとの文が I talked with her. なので、with が最後に残ります。a friend to play with と同じ考え方です。',
+    '前置詞が残る', [...row(24, [['I talked with her.', 'b']], { h: 24 }), ar(160, 52, 160, 68, C.main), ...row(72, [['The girl', 'b'], ['whom', 'r'], ['I talked', 'g'], ['with', 'p']], { h: 26, size: 12 }), gl(160, 118, 'her → whom が前へ、with は残る')], '前置詞は文末に残る', C.purple),
+  F('省略（しょうりゃく）して読む練習です。the man I met は、間に whom（または who・that）が隠れています。名詞のすぐあとに「主語＋動詞」が来たら、関係代名詞が省かれていると考えましょう。',
+    '省略を見ぬく', [...row(26, [['the man', 'b'], ['（whom）', 'n'], ['I met', 'g']], { h: 28 }), ar(160, 62, 160, 82, C.main), gl(160, 100, '名詞のすぐあとに 主語＋動詞'), gl(160, 122, '→ 関係代名詞が省かれている')], '名詞 ＋ 主語 ＋ 動詞 ＝ 省略', C.main),
+  F('まとめ表です。先行詞が人：主格は who（that）、目的格は whom・who（that）。先行詞がもの：主格も目的格も which（that）。①先行詞は人かもの？②あとは動詞か、主語＋動詞か？で決まります。',
+    '関係代名詞のまとめ表', [bx(14, 24, 80, 24, '', C.gray, FILL.gray), bx(100, 24, 100, 24, '主格', C.blue, FILL.blue, 12), bx(206, 24, 100, 24, '目的格', C.green, FILL.green, 12), bx(14, 54, 80, 28, '人', C.gray, FILL.gray, 12), bx(100, 54, 100, 28, 'who / that', C.blue, FILL.blue, 11), bx(206, 54, 100, 28, 'whom / who / that', C.green, FILL.green, 10.5), bx(14, 88, 80, 28, 'もの', C.gray, FILL.gray, 12), bx(100, 88, 100, 28, 'which / that', C.blue, FILL.blue, 11), bx(206, 88, 100, 28, 'which / that', C.green, FILL.green, 11)], '①人かもの ②あとの形', C.main),
+  F('最後に、that が好まれる場合です。This is the best movie that I have ever seen.（今まで見た中で最高の映画）。the best・the only・the first・all・every が先行詞に付くときは、that を使うのがふつうです。また、関係代名詞は「だれ・どれ」とは訳しません。',
+    'that が好まれる場合', [...ex(26, 'This is the best movie that I have ever seen.', '今まで見た中で最高の映画', 'p', { size: 10.5 }), ...row(92, [['the best', 'p'], ['the only', 'p'], ['the first', 'p'], ['all / every', 'p']], { h: 26, size: 11 }), gl(160, 134, 'これらが付いたら that')], '強い限定の語のあとは that', C.purple),
+], '先行詞が人のときの目的格');
+
+// ───────── eigo_s332 that の使い分け ─────────
+FIGS['xf_eigo_s332'] = show([
+  F('that は、人にもものにも使える万能の関係代名詞です。ところが、that でなければならない場面もあります。なぜそこだけ that なのか、さらに、いろいろな that の見分け方まで、「なぜ？」でたどります。',
+    'that は万能', [bx(40, 30, 100, 32, '人', C.blue, FILL.blue, 13), bx(180, 30, 100, 32, 'もの', C.green, FILL.green, 13), ar(90, 66, 150, 92, C.purple), ar(230, 66, 170, 92, C.purple), bx(110, 94, 100, 32, 'that', C.purple, FILL.purple, 15)], '人にもものにも that', C.purple),
+  F('that が好まれる場合①。先行詞に最上級・序数・only・all・every が付くときです。This is the most interesting book that I have ever read.（今まで読んだ中でいちばんおもしろい本）。',
+    'that が好まれる場合①', [...row(24, [['the most interesting book', 'p'], ['that', 'r']], { h: 26 }), gl(160, 62, '最上級が付く → that'), ...row(80, [['the first student', 'p'], ['that', 'r']], { h: 26 }), gl(160, 118, '序数（first）が付く → that')], '最上級・序数のあとは that', C.purple),
+  F('❓なぜここは that なのでしょう。→ the only・the first・all のような語は、「たった一つ」「ぜんぶ」と、範囲（はんい）を強くしぼる語です。そういう強い限定のあとは、that を使うのが英語の習慣（しゅうかん）になっています。',
+    '強い限定のあとは that', [...row(24, [['the only friend', 'p']], { h: 26 }), ...row(60, [['all', 'p'], ['everything', 'p']], { h: 26 }), gl(160, 102, '「たった一つ」「ぜんぶ」と範囲をしぼる'), ...row(114, [['→ that を使う', 'r']], { h: 26 })], '範囲をしぼる語 ＋ that', C.purple),
+  F('that が好まれる場合②。先行詞が「人ともの」の両方のとき。Look at the boy and the dog that are running.（走っている少年と犬を見て）。人は who、ものは which なので、両方ならどちらも使えません。that を使います。',
+    '人ともの、両方', [ci(80, 56, 20, '少年', C.blue, FILL.blue, 11), lb(130, 56, '＋', 16, C.ink, 'middle', true), ci(180, 56, 20, '犬', C.green, FILL.green, 12), lb(250, 56, 'that are running', 12, C.purple, 'middle', true), gl(160, 100, 'who と which を 使い分けられない'), gl(160, 124, '→ that がべんり')], '人＋もの ＝ that', C.purple),
+  F('everything・something・anything のあとも that です。Tell me everything that you know.（あなたが知っていることをすべて教えて）。まとめると、that が好まれるのは、最上級・序数・only・all・every・everything と、人＋ものの場合です。',
+    'everything のあとも that', [...ex(26, 'Tell me everything that you know.', 'あなたが知っていることをすべて教えて', 'p', { size: 11 }), ...row(92, [['everything', 'p'], ['something', 'p'], ['anything', 'p']], { h: 26, size: 11 }), gl(160, 134, 'のあとは that')], '-thing のあとは that', C.purple),
+  F('次は、いろいろな that の区別です。that には三つあります。①指示語（あれ・あの）：That is my house. ②接続詞（〜ということ）：I think that he is right. ③関係代名詞：This is the book that I bought yesterday.',
+    '三つの that', [...row(24, [['① That is my house.', 'n']], { h: 24, size: 11 }), gl(160, 56, 'あれ・あの（指示語）'), ...row(68, [['② I think that he is right.', 'b']], { h: 24, size: 11 }), gl(160, 100, '〜ということ（接続詞）'), ...row(112, [['③ the book that I bought', 'g']], { h: 24, size: 11 }), gl(160, 144, '前の名詞を説明（関係代名詞）')], 'that は三種類', C.main),
+  F('❓どう見分けるのでしょう。→ that のあとの文を見ます。主語も目的語もそろった完全な文なら接続詞。主語か目的語が欠けた不完全な文なら関係代名詞。I know a boy that is kind. は、that のあとに主語がありません。',
+    'あとの文が完全か不完全か', [...row(26, [['I know that he is kind.', 'b']], { h: 26 }), gl(160, 64, '主語 he も あり → 完全 → 接続詞'), ...row(84, [['I know a boy that is kind.', 'g']], { h: 26 }), gl(160, 122, '主語がない → 不完全 → 関係代名詞')], '完全な文なら接続詞', C.main),
+  F('省略についてです。接続詞の that は省略できます（I think he is right.）。目的格の関係代名詞も省略できます。でも、主格の関係代名詞の that は省略できません。まとめ：最上級や only は that、あとの文で that の種類を見分ける。',
+    '省略できるもの', [...row(20, [['I think (that) he is right.', 'b']], { h: 22 }), gl(160, 52, '接続詞 → 省略できる'), ...row(62, [['the book (that) I bought', 'g']], { h: 22 }), gl(160, 94, '目的格 → 省略できる'), ...row(104, [['a boy that is kind', 'r']], { h: 22 }), gl(160, 136, '主格 → 省略できない')], '省略できるのは接続詞と目的格', C.main),
+], 'that を使う場合・使えない場合');
+
+// ───────── eigo_s334 長文で見ぬく ─────────
+FIGS['xf_eigo_s334'] = show([
+  F('長文でつまずく原因の多くは、単語ではなく「文の本当の動詞がどれかわからない」ことです。名詞のうしろに説明がくっつくと、動詞のような語が二つも三つも並んで見えます。かたまりを切り分ける練習をします。',
+    '動詞が何個も見える', [...row(28, [['The students', 'b'], ['who study English', 'g'], ['can speak it well.', 'r']], { h: 28, size: 11 }), gl(160, 68, 'study と speak、どちらが文の動詞？'), gl(160, 92, '→ かたまりに切り分ければわかる')], '文の動詞はどれ？', C.main),
+  F('名詞の後ろにつく説明は三種類です。①to不定詞（homework to do）、②分詞（the boy running）、③関係詞節（the book I bought）。どれも「名詞 ← 後ろから説明」という、同じしくみです。',
+    '後ろから説明する三種類', [...row(24, [['homework to do', 'g']], { h: 26 }), gl(160, 60, '① to 不定詞'), ...row(72, [['the boy running in the park', 'b']], { h: 26 }), gl(160, 108, '② 分詞'), ...row(118, [['the book I bought', 'p']], { h: 24 })], '名詞 ＋ 説明のかたまり', C.main),
+  F('言いかえの関係もあります。the boy running in the park ＝ the boy who is running in the park。the letter written in English ＝ the letter which was written in English。分詞は「関係代名詞＋be動詞」を省いた形と見られます。',
+    '言いかえの関係', [...row(26, [['the boy running in the park', 'b']], { h: 26 }), lb(160, 66, '＝', 16, C.ink, 'middle', true), ...row(78, [['the boy who is running in the park', 'p']], { h: 26, size: 11 }), gl(160, 124, 'who is を省いた形が分詞')], '分詞 ＝ 関係代名詞 ＋ be動詞の省略', C.purple),
+  F('手順です。①文の先頭の名詞をさがす。②その直後から説明が始まっていないか見る。③説明のかたまりが終わったところに出てくる動詞が、文全体の動詞。④骨組みだけを先に訳し、あとから説明を組みこむ。',
+    '骨組みを取り出す手順', [...[ '① 先頭の名詞をさがす', '② 直後から説明が始まるか見る', '③ かたまりのあとの動詞が本当の動詞'].map((t, i) => bx(20, 28 + i * 36, 280, 28, t, [C.blue, C.green, C.red][i], [FILL.blue, FILL.green, FILL.red][i], 12)), gl(160, 140, '④ 骨組みを先に訳す')], '説明を先にとばして骨組みへ', C.main),
+  F('例①。The students who study English every day can speak it well. 主語は The students who study English every day（毎日英語を勉強する生徒たち）、動詞は can speak。study は説明の中の動詞です。',
+    '例①', [...row(28, [['The students', 'b'], ['who study English every day', 'n']], { h: 26, size: 11 }), ...row(64, [['can speak', 'r'], ['it well.', 'n']], { h: 26 }), gl(160, 106, '骨組み：The students ＋ can speak'), gl(160, 126, '「毎日英語を勉強する生徒は、上手に話せる」')], '骨組み ＝ 主語 ＋ can speak', C.blue),
+  F('例②。The book my father gave me for my birthday is very useful. 名詞 The book のすぐあとに「主語＋動詞」my father gave がありますが、これは説明のかたまり（関係代名詞が省略）。文の動詞はそのあとの is です。',
+    '例②', [...row(28, [['The book', 'b'], ['my father gave me for my birthday', 'n']], { h: 26, size: 10.5 }), ...row(64, [['is', 'r'], ['very useful.', 'n']], { h: 26 }), gl(160, 106, '骨組み：The book ＋ is'), gl(160, 126, '「父が誕生日にくれた本はとても役に立つ」')], '説明の中の gave は文の動詞ではない', C.blue),
+  F('例③。The girl standing at the gate with a red bag is my cousin. The girl のあとの standing at the gate with a red bag が説明。文の動詞は is です。❓standing を文の動詞と取りちがえると？→ 訳が根本から狂います。',
+    '例③', [...row(28, [['The girl', 'b'], ['standing at the gate with a red bag', 'n']], { h: 26, size: 10.5 }), ...row(64, [['is', 'r'], ['my cousin.', 'n']], { h: 26 }), gl(160, 106, '骨組み：The girl ＋ is'), lb(160, 130, '× standing を文の動詞にしない', 12, C.red, 'middle', true)], '説明の動詞は、文の動詞ではない', C.red),
+  F('まとめです。①名詞のあとの説明は、不定詞・分詞・関係詞節の三種類。②かたまりの外の動詞が文の動詞。③動詞が複数あるときは、骨組みを先に決める。主語が長いときは、区切りを鉛筆で示しながら読みましょう。',
+    'まとめ', [bx(14, 24, 292, 28, '① 説明は三種類（to・ing/ed・関係詞）', C.blue, FILL.blue, 11), bx(14, 60, 292, 28, '② かたまりの外の動詞が文の動詞', C.green, FILL.green, 12), bx(14, 96, 292, 28, '③ 骨組みを先に決める', C.red, FILL.red, 12)], '後置修飾を見ぬく', C.main),
+], '長文で見ぬく後置修飾');
 
 export const XF_CEG_FIGURES: Record<string, DiagramFigure> = FIGS;
 
 /** 図解をつける節（'<単元id>#<節番号>'）。 */
 const SEC0 = new Set<string>(Object.keys(FIGS).map((k) => k.replace(/^xf_/, '')));
-const SEC_OVERRIDE: Record<string, number> = {};
+const SEC_OVERRIDE: Record<string, number> = { eigo_s334: 1 };
 export const XF_CEG_SECTIONS: Record<string, string> = Object.fromEntries(
   [...SEC0].map((id) => [`${id}#${SEC_OVERRIDE[id] ?? 0}`, `xf_${id}`]),
 );

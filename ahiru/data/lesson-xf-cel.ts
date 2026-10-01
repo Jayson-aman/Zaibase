@@ -400,6 +400,248 @@ const u20: DiagramFigure = show([
   },
 ], '動物園の案内：位置・道順・時間');
 
+const two = (y: number, en: string, ja: string, c: string, f: string, size = 12) => [bx(6, y, 308, 28, en, c, f, size), lb(160, y + 38, ja, 11, c, 'middle', true)];
+
+// ───────── new20_e6_eigo_01 過去形で自分のことを話す ─────────
+const u21: DiagramFigure = show([
+  {
+    note: '過去のことを言うときは、動詞を過去形にします。I played tennis yesterday.（私は昨日テニスをした）、She watched a movie last night.（彼女は昨夜映画を見た）、We visited Kyoto last summer.（私たちは去年の夏、京都を訪れた）。「主語＋過去形の動詞＋時を表すことば」の型です。',
+    add: [...two(2, 'I played tennis yesterday.', '私は昨日テニスをした', C.blue, FILL.blue), ...two(50, 'She watched a movie last night.', '彼女は昨夜映画を見た', C.green, FILL.green), ...two(98, 'We visited Kyoto last summer.', '私たちは去年の夏、京都を訪れた', C.purple, FILL.purple), ...cap('動詞を過去形にすると「〜した」')],
+  },
+  {
+    note: '❓なぜ、She のときに s を付けないのでしょう。→ 三人称単数（さんにんしょうたんすう）の s は現在形だけのきまりで、過去形には存在しないからです。I でも She でも We でも、過去形の動詞は played のまま変わりません。',
+    add: fresh(bx(6, 20, 96, 40, 'I\nplayed', C.blue, FILL.blue, 13), bx(112, 20, 96, 40, 'She\nplayed', C.green, FILL.green, 13), bx(218, 20, 96, 40, 'We\nplayed', C.purple, FILL.purple, 13), lb(160, 86, 'どの主語でも played のまま', 13, C.red, 'middle', true), lb(160, 112, '（現在形の gets・goes の s は付けない）', 11, C.gray, 'middle'), ...cap('過去形は 主語で形が変わらない', C.red)),
+  },
+  {
+    note: '「いつ」を表すことばを覚えます。yesterday（昨日）、last night（昨夜）、last week（先週）、two days ago（2日前）、this morning（今朝）。ふつうは文の終わりに置きますが、強調したいときは文の最初に置いて、コンマで区切ります。',
+    add: fresh(bx(6, 6, 148, 24, 'yesterday　昨日', C.blue, FILL.blue, 11), bx(166, 6, 148, 24, 'last night　昨夜', C.blue, FILL.blue, 11), bx(6, 36, 148, 24, 'last week　先週', C.blue, FILL.blue, 11), bx(166, 36, 148, 24, 'two days ago　2日前', C.blue, FILL.blue, 11), bx(6, 66, 148, 24, 'this morning　今朝', C.blue, FILL.blue, 11), bx(6, 100, 308, 28, 'Yesterday, I cleaned my room.', C.green, FILL.green, 12), lb(160, 142, '文の最初に置くと強調（コンマで区切る）', 11, C.green, 'middle', true), ...band(150, lb(160, 192, '「いつ」を表すことば', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '❓否定文では、なぜ didn\'t のあとの動詞を原形にもどすのでしょう。→ did がすでに「過去」の目印を持っているからです。過去の目印は1つで足りるので、あとの動詞は原形（げんけい）です。I didn\'t played. のように ed を重ねると、二重に過去形にしてしまうまちがいになります。',
+    add: fresh(bx(6, 14, 40, 32, 'I', C.gray, FILL.gray, 13), bx(52, 14, 76, 32, "didn't", C.red, FILL.red, 13), bx(134, 14, 66, 32, 'play', C.green, FILL.green, 13), bx(206, 14, 108, 32, 'soccer.', C.gray, FILL.gray, 13), lb(90, 62, '過去の目印', 11, C.red, 'middle', true), lb(167, 62, '原形', 11, C.green, 'middle', true), bx(40, 90, 240, 32, "✕  I didn't played.", C.red, FILL.red, 13), lb(160, 138, 'ed を重ねると 二重の過去形', 11, C.red, 'middle', true), ...band(150, lb(160, 192, 'did の後ろは 原形', 12, C.red, 'middle', true))),
+  },
+  {
+    note: '疑問文も did を使います。Did you play soccer? は「サッカーをしましたか」。答えは Yes, I did.（はい、しました）か No, I didn\'t.（いいえ、しませんでした）です。ここでも、あとの動詞 play は原形のままです。',
+    add: fresh(bx(6, 12, 308, 32, 'Did you play soccer?', C.blue, FILL.blue, 14), lb(160, 60, 'サッカーをしましたか', 12, C.blue, 'middle', true), bx(6, 78, 148, 30, 'Yes, I did.', C.green, FILL.green, 13), bx(166, 78, 148, 30, "No, I didn't.", C.red, FILL.red, 13), lb(80, 124, 'はい、しました', 11, C.green, 'middle', true), lb(240, 124, 'いいえ、しませんでした', 11, C.red, 'middle', true), ...cap('Did ＋ 主語 ＋ 動詞の原形', C.main)),
+  },
+  {
+    note: '過去形のつくり方は2種類あります。規則動詞は ed を付けます。play→played、watch→watched。study のように y で終わる語は、y を i に変えて ed を付けるので studied です。不規則動詞は形が変わります。go→went、eat→ate、do→did、wake→woke。',
+    add: fresh(lb(80, 14, '規則（ed を付ける）', 12, C.blue, 'middle', true), bx(6, 24, 148, 26, 'play → played', C.blue, FILL.blue, 12), bx(6, 56, 148, 26, 'watch → watched', C.blue, FILL.blue, 12), bx(6, 88, 148, 26, 'study → studied', C.blue, FILL.blue, 12), lb(80, 128, 'y を i に変えて ed', 10, C.blue, 'middle'), lb(240, 14, '不規則（形が変わる）', 12, C.red, 'middle', true), bx(166, 24, 148, 26, 'go → went', C.red, FILL.red, 12), bx(166, 56, 148, 26, 'eat → ate', C.red, FILL.red, 12), bx(166, 88, 148, 26, 'do → did', C.red, FILL.red, 12), bx(166, 120, 148, 22, 'wake → woke', C.red, FILL.red, 11), ...cap('2しゅるいの 過去形', C.main)),
+  },
+  {
+    note: '一日の流れを語ってみましょう。「昨日、7時に起きた。朝食を食べ、1時間算数を勉強した。そのあと公園でサッカーをした。夕方、テレビを見て宿題をした。10時に寝た」。woke・ate・studied・played・watched・did・went と、規則と不規則が混ざっています。',
+    add: fresh(...flow(['woke up\nat seven', 'ate\nbreakfast', 'studied math\nfor an hour'], 8, { h: 48, size: 10, color: C.blue, fill: FILL.blue, gap: 14, pad: 8 }).flat(), ...flow(['played soccer\nin the park', 'watched TV,\ndid homework', 'went to bed\nat ten'], 78, { h: 48, size: 10, color: C.green, fill: FILL.green, gap: 14, pad: 8 }).flat(), ...cap('時間の流れどおりに 並べる', C.main)),
+  },
+  {
+    note: '❓なぜ、順番どおりに話すのでしょう。→ 聞いている人が場面を思いうかべやすいからです。first（まず）、then / after that（それから）、finally（最後に）のつなぎ語を使うと、さらに流れが伝わります。',
+    add: fresh(...flow(['first\nまず', 'then\nそれから', 'after that\nそのあと', 'finally\n最後に'], 30, { h: 60, size: 11, color: C.purple, fill: FILL.purple, gap: 8, pad: 6 }).flat(), lb(160, 116, '動作を時間の順に ならべて話す', 12, C.ink, 'middle', true), ...cap('つなぎ語で 流れをしめす', C.purple)),
+  },
+  {
+    note: '一日の話によく出る不規則動詞です。get up→got up、have→had、go→went、come→came、see→saw、read→read（つづりは同じで、発音が「レッド」に変わる）、make→made、buy→bought、meet→met、run→ran、swim→swam。goed や eated のように ed を付けるのはまちがいです。ペアで声に出して覚えましょう。',
+    add: fresh(bx(6, 4, 98, 24, 'get up → got up', C.red, FILL.red, 10), bx(111, 4, 98, 24, 'have → had', C.red, FILL.red, 10), bx(216, 4, 98, 24, 'go → went', C.red, FILL.red, 10), bx(6, 32, 98, 24, 'come → came', C.red, FILL.red, 10), bx(111, 32, 98, 24, 'see → saw', C.red, FILL.red, 10), bx(216, 32, 98, 24, 'read → read', C.red, FILL.red, 10), bx(6, 60, 98, 24, 'make → made', C.red, FILL.red, 10), bx(111, 60, 98, 24, 'buy → bought', C.red, FILL.red, 10), bx(216, 60, 98, 24, 'meet → met', C.red, FILL.red, 10), bx(6, 88, 98, 24, 'run → ran', C.red, FILL.red, 10), bx(111, 88, 98, 24, 'swim → swam', C.red, FILL.red, 10), lb(160, 130, '✕  goed ・ eated ・ buyed', 12, C.red, 'middle', true), ...cap('ペアで 声に出して 覚える', C.main)),
+  },
+  {
+    note: '週末の日記を書いてみましょう。Last Saturday, I got up late in the morning. In the afternoon, I went shopping with my mother. It was fun. In the evening, I cooked dinner with my sister. I went to bed at eleven. 最後に It was fun. のような感想を足すと、気持ちが伝わります。',
+    add: fresh(bx(6, 4, 308, 24, 'Last Saturday, I got up late in the morning.', C.blue, FILL.blue, 10), bx(6, 32, 308, 24, 'In the afternoon, I went shopping with my mother.', C.blue, FILL.blue, 10), bx(6, 60, 308, 24, 'It was fun.', C.red, FILL.red, 11), bx(6, 88, 308, 24, 'In the evening, I cooked dinner with my sister.', C.blue, FILL.blue, 10), bx(6, 116, 308, 24, 'I went to bed at eleven.', C.blue, FILL.blue, 10), ...cap('感想の一文で 気持ちが伝わる', C.red)),
+  },
+  {
+    note: '感想の文で was と were を使い分けます。主語が I・he・she・it のときは was、you・we・they のときは were です。My friends were happy.（私の友達はうれしそうだった）。まとめ：過去形は主語で変わらない、否定と疑問は did＋原形、不規則動詞はペアで覚える、順番どおりに話して感想を足す、です。',
+    add: fresh(bx(6, 10, 148, 40, 'I ・ he ・ she ・ it\n→ was', C.blue, FILL.blue, 12), bx(166, 10, 148, 40, 'you ・ we ・ they\n→ were', C.green, FILL.green, 12), bx(6, 64, 308, 30, 'My friends were happy.', C.green, FILL.green, 13), lb(160, 110, '友達（複数）だから were', 12, C.green, 'middle', true), lb(160, 132, 'did の後ろは原形・順番どおり・感想を足す', 11, C.ink, 'middle', true), ...cap('was と were の使い分け', C.main)),
+  },
+], '過去形で一日を語る');
+
+// ───────── new20_e6_eigo_02 思い出を伝える①：夏休みの思い出 ─────────
+const u22: DiagramFigure = show([
+  {
+    note: '夏休みの思い出の文章は、3つのブロックで組み立てます。①導入（いつ・どこへ行ったか）、②出来事（何をしたか）、③感想（どう感じたか）。いきなり出来事を並べず、この型に入れるとまとまった文章になります。',
+    add: [bx(6, 6, 308, 38, 'Last summer, I went to Okinawa\nwith my family.', C.blue, FILL.blue, 11), bx(6, 50, 308, 50, 'First, we went to the beach.\nThen, we swam in the sea.\nAfter that, we ate shaved ice.', C.green, FILL.green, 11), bx(6, 106, 308, 34, 'It was one of the best days of my life.', C.red, FILL.red, 11), ...cap('①導入　②出来事　③感想')],
+  },
+  {
+    note: '❓出来事を並べるとき、なぜつなぎ語を使うのでしょう。→ 動詞を並べるだけだと単調になるからです。first（まず）、next / then（次に）、after that（そのあと）、finally / in the end（最後に）を使うと、「流れ」が読む人に伝わります。',
+    add: fresh(...flow(['first\nまず', 'next / then\n次に', 'after that\nそのあと', 'finally\n最後に'], 20, { h: 64, size: 11, color: C.blue, fill: FILL.blue, gap: 8, pad: 6 }).flat(), lb(160, 112, '出来事を時間の順にならべる', 12, C.ink, 'middle', true), ...cap('つなぎ語で 流れが伝わる', C.blue)),
+  },
+  {
+    note: '❓出来事は、いくつ書けばよいのでしょう。→ 3〜4個にしぼって、それぞれに It was fun. のような簡単な感想を添えるのがよいです。10個の事実を並べるより、採点する人にも伝わりやすくなります。',
+    add: fresh(bx(10, 10, 140, 70, '✕\n10個の事実を\nならべる', C.red, FILL.red, 12), bx(170, 10, 140, 70, '○\n3〜4個＋\n簡単な感想', C.green, FILL.green, 12), lb(160, 104, '出来事を つめこみすぎない', 12, C.ink, 'middle', true), ...cap('しぼって、感想を添える', C.green)),
+  },
+  {
+    note: '感想の表し方の1つ目は It was ~.（それは〜だった）です。形容詞（けいようし）を1つ入れるだけです。It was exciting.（わくわくした）、It was amazing.（すごかった）、It was a little scary.（少し怖かった）。',
+    add: fresh(bx(10, 10, 300, 28, 'It was exciting.　わくわくした', C.blue, FILL.blue, 12), bx(10, 46, 300, 28, 'It was amazing.　すごかった', C.blue, FILL.blue, 12), bx(10, 82, 300, 28, 'It was a little scary.　少し怖かった', C.blue, FILL.blue, 12), ...cap('パターン① It was ~.', C.blue)),
+  },
+  {
+    note: '2つ目は I was ~.（私は〜な気持ちだった）で、自分の感情を言います。I was so happy.（とてもうれしかった）、I was surprised.（驚いた）、I was nervous at first.（最初は緊張した）。',
+    add: fresh(bx(10, 10, 300, 28, 'I was so happy.　とてもうれしかった', C.green, FILL.green, 12), bx(10, 46, 300, 28, 'I was surprised.　驚いた', C.green, FILL.green, 12), bx(10, 82, 300, 28, 'I was nervous at first.　最初は緊張した', C.green, FILL.green, 12), ...cap('パターン② I was ~.', C.green)),
+  },
+  {
+    note: '❓3つ目の I enjoyed ~ing. で、なぜ ing を使うのでしょう。→ enjoy は、あとに動名詞（ing の形）だけを置く動詞で、to＋動詞は使えないからです。I enjoyed swimming in the sea.（海で泳いで楽しかった）が正しく、I enjoyed to swim. はまちがいです。',
+    add: fresh(bx(10, 10, 300, 30, 'I enjoyed swimming in the sea.', C.purple, FILL.purple, 12), lb(160, 54, '海で泳いで楽しかった', 12, C.purple, 'middle', true), bx(10, 70, 300, 30, '✕  I enjoyed to swim.', C.red, FILL.red, 13), lb(160, 114, 'enjoy ＋ ing（to は使えない）', 12, C.red, 'middle', true), ...cap('パターン③ I enjoyed ~ing.', C.purple)),
+  },
+  {
+    note: '一番の思い出を強調するには、My favorite part was ~.（一番よかったのは〜だった）や The best thing about the trip was ~.（旅行で一番よかったのは〜だった）を使います。My favorite part was watching the fireworks.（一番よかったのは花火を見たことだった）。',
+    add: fresh(bx(10, 10, 300, 30, 'My favorite part was ~.', C.red, FILL.red, 13), bx(10, 48, 300, 30, 'The best thing about the trip was ~.', C.red, FILL.red, 12), bx(10, 90, 300, 34, 'My favorite part was\nwatching the fireworks.', C.main, FILL.warm, 12), lb(160, 138, '一番よかったのは花火を見たこと', 11, C.main, 'middle', true), ...band(150, lb(160, 192, '一番の思い出を強調する', 12, C.red, 'middle', true))),
+  },
+  {
+    note: '完成した文章です。長野のおばあさんの家に行って、まずハイキング、次に虫とり、それからカレー作り。It was a lot of fun.（とても楽しかった）。一番よかったのは夜にたくさんの星を見たこと。街では見たことがなかったので、とても驚きました。',
+    add: fresh(bx(6, 6, 308, 28, 'Last summer, I went to my grandmother\'s house in Nagano.', C.blue, FILL.blue, 10), ...flow(['First,\nhiked', 'Next,\ncaught insects', 'Then,\nmade curry'], 40, { h: 44, size: 10, color: C.green, fill: FILL.green, gap: 12, pad: 8 }).flat(), bx(6, 92, 308, 24, 'It was a lot of fun, and the curry was delicious.', C.red, FILL.red, 10), bx(6, 120, 308, 24, 'My favorite part was seeing so many stars at night.', C.main, FILL.warm, 10), ...cap('導入 → 出来事 → 感想', C.main)),
+  },
+  {
+    note: '書き終えたら点検します。①動詞はすべて過去形か、②出来事は3〜4個に しぼって つなぎ語でつないだか、③最後に感想の文を入れたか、④ I went・We swam のように主語と動詞が合っているか。「どう感じたか、なぜか」を書けると差がつきます。',
+    add: fresh(bx(10, 6, 300, 26, '✓ ① 動詞は すべて過去形', C.blue, FILL.blue, 12), bx(10, 36, 300, 26, '✓ ② 出来事は3〜4個、つなぎ語で', C.green, FILL.green, 12), bx(10, 66, 300, 26, '✓ ③ 感想の文を 入れた', C.red, FILL.red, 12), bx(10, 96, 300, 26, '✓ ④ 主語と動詞が 合っている', C.purple, FILL.purple, 12), ...cap('どう感じたか・なぜかを書く', C.main)),
+  },
+], '思い出の文章：導入・出来事・感想');
+
+// ───────── new20_e6_eigo_03 思い出を伝える②：学校行事の思い出をスピーチする ─────────
+const u23: DiagramFigure = show([
+  {
+    note: 'スピーチは、聞いている人を意識して5つのブロックで組み立てます。①呼びかけ・自己紹介、②話題の紹介、③出来事、④感想・学んだこと、⑤締めの一言です。',
+    add: [bx(6, 4, 308, 24, '① 呼びかけ　Hello, everyone.', C.blue, FILL.blue, 11), bx(6, 32, 308, 24, '② 話題　いつ・どこで・何の行事か', C.green, FILL.green, 11), bx(6, 60, 308, 24, '③ 出来事　2〜3個の場面', C.purple, FILL.purple, 11), bx(6, 88, 308, 24, '④ 感想・学んだこと', C.main, FILL.warm, 11), bx(6, 116, 308, 24, '⑤ 締め　Thank you for listening.', C.red, FILL.red, 11), ...cap('スピーチの5ブロック')],
+  },
+  {
+    note: '①と②の例です。Hello, everyone. Today I want to talk about my school trip.（みなさん、こんにちは。今日は修学旅行について話します）。Last October, my class went to Kyoto and Nara for two days.（去年の10月、私のクラスは京都と奈良に2日間行きました）。呼びかけで始め、いつ・どこかをすぐ伝えます。',
+    add: fresh(bx(6, 8, 308, 40, 'Hello, everyone.\nToday I want to talk about my school trip.', C.blue, FILL.blue, 11), lb(160, 62, 'みなさん、こんにちは。今日は修学旅行について話します', 10, C.blue, 'middle', true), bx(6, 78, 308, 40, 'Last October, my class went to\nKyoto and Nara for two days.', C.green, FILL.green, 11), lb(160, 132, '去年の10月、京都と奈良に2日間行きました', 10, C.green, 'middle', true), ...band(150, lb(160, 192, '呼びかけ → 話題の紹介', 12, C.blue, 'middle', true))),
+  },
+  {
+    note: '❓出来事は、なぜ2〜3個の場面にしぼるのでしょう。→ 全部を話すと、聞いている人の記憶に残らないからです。On the first day, we visited an old temple. On the second day, we made traditional sweets.（1日目は古いお寺を訪れ、2日目は伝統的なお菓子を作った）のように、印象に残った場面を選びます。',
+    add: fresh(bx(6, 10, 148, 70, 'On the first day,\nwe visited an\nold temple.', C.green, FILL.green, 11), bx(166, 10, 148, 70, 'On the second day,\nwe made\ntraditional sweets.', C.green, FILL.green, 11), lb(80, 96, '1日目：お寺', 12, C.green, 'middle', true), lb(240, 96, '2日目：お菓子作り', 12, C.green, 'middle', true), ...cap('印象に残った場面を 選ぶ', C.green)),
+  },
+  {
+    note: '❓その場にいるように伝えるには、どうするのでしょう。→ 見たもの・聞いたもの・感じたことを1つ足します。I saw a lot of beautiful autumn leaves.（きれいな紅葉を見た）、I heard a lot of interesting stories from the guide.（ガイドさんから面白い話を聞いた）、The mochi we made was very sticky, but it was delicious.（作ったおもちはとても伸びたが、おいしかった）。',
+    add: fresh(bx(6, 8, 308, 32, 'I saw a lot of beautiful autumn leaves.', C.blue, FILL.blue, 11), lb(160, 52, '見た：きれいな紅葉', 11, C.blue, 'middle', true), bx(6, 62, 308, 32, 'I heard a lot of interesting stories\nfrom the guide.', C.green, FILL.green, 10), lb(160, 106, '聞いた：ガイドさんの面白い話', 11, C.green, 'middle', true), bx(6, 116, 308, 26, 'The mochi was very sticky, but delicious.', C.purple, FILL.purple, 10), ...band(150, lb(160, 192, '見る・聞く・感じる を足す', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '❓「大変だったこと」を話すと、なぜよいスピーチになるのでしょう。→ うまくいかなかったことを正直に話し、そこから何を得たかを伝えると、聞き手の共感を得やすいからです。リレーの前は緊張した → 友達が応援してくれた → 全力を出した → 一緒にゴールできてうれしかった、という流れです。',
+    add: fresh(...flow(['nervous\n緊張した', 'friends\ncheered', 'I did\nmy best', 'so happy\nうれしい'], 24, { h: 60, size: 10, color: C.green, fill: FILL.green, gap: 10, pad: 6 }).flat(), lb(160, 108, '大変だったこと → のりこえたこと', 12, C.ink, 'middle', true), ...cap('完ぺきでなくても 伝わる', C.green)),
+  },
+  {
+    note: '学んだことを伝える言い方です。I learned that ~.（〜だと学んだ）、I realized that ~.（〜だと気づいた）、Thanks to ~, I could ...（〜のおかげで…できた）。例は I learned that teamwork is very important.（チームワークがとても大切だと学んだ）です。',
+    add: fresh(bx(6, 8, 308, 28, 'I learned that ~.　〜だと学んだ', C.blue, FILL.blue, 12), bx(6, 44, 308, 28, 'I realized that ~.　〜だと気づいた', C.green, FILL.green, 12), bx(6, 80, 308, 28, 'Thanks to ~, I could ...　〜のおかげで…できた', C.purple, FILL.purple, 11), lb(160, 126, 'I learned that teamwork is very important.', 11, C.blue, 'middle', true), ...band(150, lb(160, 192, '経験から得たことを伝える', 12, C.main, 'middle', true))),
+  },
+  {
+    note: '❓スピーチの最後は、なぜ「Thank you for listening.」なのでしょう。→ 聞いてくれた人へのお礼で終えるのが基本のマナーだからです。for のあとは ing の形なので、Thank you for listen. はまちがいです。This event taught me a lot, and I will never forget it.（この行事はたくさんのことを教えてくれ、決して忘れません）で全体をまとめてから言います。',
+    add: fresh(bx(6, 10, 308, 40, 'This event taught me a lot,\nand I will never forget it.', C.blue, FILL.blue, 11), bx(6, 62, 308, 28, 'Thank you for listening.', C.green, FILL.green, 13), bx(6, 100, 308, 26, '✕  Thank you for listen.', C.red, FILL.red, 12), lb(160, 140, 'for のあとは ing の形', 11, C.red, 'middle', true), ...band(150, lb(160, 192, '一言まとめて、お礼で終える', 12, C.green, 'middle', true))),
+  },
+  {
+    note: '行事のことばを覚えます。sports day（運動会）、school trip（修学旅行）、chorus contest（合唱コンクール）、relay（リレー）、tug-of-war（綱引き）、graduation ceremony（卒業式）。まとめ：呼びかけ → 話題 → 2〜3個の出来事（描写つき）→ 学んだこと → お礼、の順で話します。',
+    add: fresh(bx(6, 6, 148, 24, 'sports day　運動会', C.blue, FILL.blue, 11), bx(166, 6, 148, 24, 'school trip　修学旅行', C.blue, FILL.blue, 11), bx(6, 36, 148, 24, 'chorus contest　合唱', C.blue, FILL.blue, 10), bx(166, 36, 148, 24, 'relay　リレー', C.blue, FILL.blue, 11), bx(6, 66, 148, 24, 'tug-of-war　綱引き', C.blue, FILL.blue, 11), bx(166, 66, 148, 24, 'graduation ceremony', C.blue, FILL.blue, 10), lb(160, 114, '呼びかけ→話題→出来事→学び→お礼', 12, C.main, 'middle', true), ...cap('行事のことばと、話す順番', C.main)),
+  },
+], '行事のスピーチの組み立て');
+
+// ───────── new20_e6_eigo_04 未来の予定を伝える①：週末の予定を友達と相談する ─────────
+const u24: DiagramFigure = show([
+  {
+    note: '友達を誘うときは、まず相手の予定をたずねます。Are you free this Saturday?（今週の土曜日は空いている？）、Do you have any plans for the weekend?（週末に何か予定はある？）、What are you doing this Sunday?（今度の日曜日、何か予定は？）。',
+    add: [...two(2, 'Are you free this Saturday?', '今週の土曜日は空いている？', C.blue, FILL.blue), ...two(50, 'Do you have any plans for the weekend?', '週末に何か予定はある？', C.green, FILL.green, 11), ...two(98, 'What are you doing this Sunday?', '今度の日曜日、何か予定は？', C.purple, FILL.purple), ...cap('相手の都合をたずねる')],
+  },
+  {
+    note: '答え方です。空いているときは I\'m free. か I don\'t have any plans.（予定はありません）。予定があるときは I\'m going to visit my grandmother.（祖母を訪ねる予定です）や I have a piano lesson.（ピアノのレッスンがあります）と言います。',
+    add: fresh(lb(80, 14, '空いているとき', 12, C.green, 'middle', true), bx(6, 24, 148, 28, "I'm free.", C.green, FILL.green, 12), bx(6, 58, 148, 40, "I don't have\nany plans.", C.green, FILL.green, 12), lb(240, 14, '予定があるとき', 12, C.red, 'middle', true), bx(166, 24, 148, 40, "I'm going to visit\nmy grandmother.", C.red, FILL.red, 11), bx(166, 70, 148, 28, 'I have a piano lesson.', C.red, FILL.red, 10), ...cap('答え方は 2つ', C.main)),
+  },
+  {
+    note: '❓なぜ「Do you free?」ではないのでしょう。→ Are you free? は be動詞（are）の疑問文だからです。be動詞の疑問文には Do を使いません。「空いている」は am・are・is のなかまに free を続ける形です。',
+    add: fresh(bx(6, 14, 70, 32, 'Are', C.green, FILL.green, 14), bx(82, 14, 70, 32, 'you', C.gray, FILL.gray, 14), bx(158, 14, 100, 32, 'free?', C.gray, FILL.gray, 14), lb(41, 62, 'be動詞', 11, C.green, 'middle', true), bx(30, 88, 260, 32, '✕  Do you free?', C.red, FILL.red, 14), lb(160, 138, 'be動詞の疑問文に Do は使わない', 12, C.red, 'middle', true), ...band(150, lb(160, 192, 'Are you free? が正しい', 12, C.green, 'middle', true))),
+  },
+  {
+    note: '❓will と be going to は、会話でどう使い分けるのでしょう。→ その場で決めたことは will、前から決まっていた予定は be going to です。「新しいパン屋に行こう」と誘われて、その場で「うん、一緒に行くよ」と決めるなら I will go with you!。「土曜日は？」と聞かれて、前からピアノがあるなら I\'m going to have a piano lesson. です。',
+    add: fresh(bx(6, 8, 148, 28, 'will', C.blue, FILL.blue, 14), lb(80, 50, 'その場で決める', 12, C.blue, 'middle', true), bx(6, 62, 148, 56, "A: Let's go to the new bakery.\nB: OK, I will go with you!", C.blue, FILL.blue, 9), bx(166, 8, 148, 28, 'be going to', C.red, FILL.red, 14), lb(240, 50, '前から決まっている', 12, C.red, 'middle', true), bx(166, 62, 148, 56, "A: Are you free Saturday?\nB: Sorry, I'm going to have a piano lesson.", C.red, FILL.red, 9), ...cap('決めた時が その場か、前か', C.main)),
+  },
+  {
+    note: 'be going to には、もう1つ使い方があります。目の前の根拠（こんきょ）から予測するときです。Look at the sky. It\'s going to rain soon.（空を見て。もうすぐ雨が降りそうだ）。空のようすという根拠があるので、be going to を使います。',
+    add: fresh(bx(10, 14, 130, 36, 'Look at the sky.', C.blue, FILL.blue, 12), lb(75, 64, '根拠：空のようす', 11, C.blue, 'middle', true), ar(142, 32, 176, 32, C.main), bx(180, 14, 130, 36, "It's going to rain soon.", C.red, FILL.red, 10), lb(245, 64, 'もうすぐ雨が降りそう', 11, C.red, 'middle', true), lb(160, 104, '根拠がある予測 → be going to', 13, C.ink, 'middle', true), ...cap('見えている根拠から 予測する', C.red)),
+  },
+  {
+    note: '誘う言い方は3つあります。Would you like to come with us?（一緒に来ませんか）は to のあとが動詞の原形、How about coming with us?（一緒に来るのはどう？）は about のあとが ing の形、Let\'s go together.（一緒に行こう）です。❓Would you like to going としないのは、to のあとは必ず原形だからです。',
+    add: fresh(bx(6, 8, 308, 28, 'Would you like to come with us?', C.blue, FILL.blue, 12), lb(160, 48, 'to ＋ 動詞の原形', 11, C.blue, 'middle', true), bx(6, 58, 308, 28, 'How about coming with us?', C.green, FILL.green, 12), lb(160, 98, 'about ＋ ing の形', 11, C.green, 'middle', true), bx(6, 108, 308, 28, "Let's go together.", C.purple, FILL.purple, 12), ...band(150, lb(160, 192, '✕ Would you like to going', 12, C.red, 'middle', true))),
+  },
+  {
+    note: '誘いを受けるときは Sure, I\'d love to.（ぜひ）、That sounds fun.（楽しそう）、OK, let\'s go.（いいね、行こう）。断るときは I\'m sorry, I can\'t. I already have plans that day.（ごめんなさい、行けません。その日はもう予定があるんです）と、理由をそえて言います。',
+    add: fresh(lb(80, 14, '受ける', 13, C.green, 'middle', true), bx(6, 24, 148, 28, "Sure, I'd love to.", C.green, FILL.green, 12), bx(6, 58, 148, 28, 'That sounds fun.', C.green, FILL.green, 12), bx(6, 92, 148, 28, "OK, let's go.", C.green, FILL.green, 12), lb(240, 14, '断る', 13, C.red, 'middle', true), bx(166, 24, 148, 96, "I'm sorry, I can't.\nI already have\nplans that day.", C.red, FILL.red, 12), ...cap('断るときは 理由もそえる', C.main)),
+  },
+  {
+    note: '誘いを受けたら、最後に時間と場所を決めます。What time should we meet?（何時に待ち合わせる？）、Let\'s meet at the station at ten.（10時に駅で待ち合わせよう）、OK, see you then!（じゃあその時にね！）。Where should we meet? で場所をたずねることもできます。',
+    add: fresh(bx(6, 8, 308, 30, 'B: What time should we meet?', C.blue, FILL.blue, 12), bx(6, 46, 308, 30, "A: Let's meet at the station at ten.", C.green, FILL.green, 12), bx(6, 84, 308, 30, 'B: OK, see you then!', C.blue, FILL.blue, 12), lb(160, 130, 'Where should we meet?　どこで待ち合わせる？', 11, C.ink, 'middle', true), ...cap('日時と場所を 決める', C.main)),
+  },
+  {
+    note: 'まとめです。会話は、①誘う → ②都合を確認 → ③受ける・断る → ④詳細（時間・場所）を決める、の順に進みます。旅行や買い物など話題が変わっても、同じ型で組み立てられます。',
+    add: fresh(...flow(['誘う', '都合を\n確認', '受ける\n断る', '時間・場所\nを決める'], 22, { h: 70, size: 12, color: C.blue, fill: FILL.blue, gap: 8, pad: 6 }).flat(), lb(160, 118, 'その場で決めたら will、前から決まっていたら be going to', 10, C.red, 'middle', true), ...cap('会話の4ステップ', C.green)),
+  },
+], '週末の予定を相談する会話');
+
+// ───────── new20_e6_eigo_05 未来の予定を伝える②：お知らせ文・予告文を読む ─────────
+const u25: DiagramFigure = show([
+  {
+    note: 'お知らせ文を読みます。学校祭のお知らせです。物語文とちがい、「事実」を正確に拾う読み方が必要です。まず全体をながめましょう。',
+    add: [bx(6, 4, 308, 138, undefined, C.main, FILL.warm), lb(160, 20, 'School Festival Notice', 12, C.ink, 'middle', true), lb(16, 40, 'Our school festival will be held on', 10, C.ink, 'start'), lb(16, 56, 'Saturday, November 14th. It will start', 10, C.ink, 'start'), lb(16, 72, 'at nine a.m. and end at three p.m.', 10, C.ink, 'start'), lb(16, 88, 'All students and their families are welcome.', 10, C.ink, 'start'), lb(16, 104, 'Please bring your own lunch. If it rains, the', 10, C.ink, 'start'), lb(16, 120, 'event will be held in the gym instead of the schoolyard.', 10, C.ink, 'start'), ...cap('学校祭のお知らせ')],
+  },
+  {
+    note: '❓どんな順で読めばよいのでしょう。→ 5つの質問を頭に置いて、答えを拾います。What（何が）：school festival、When（いつ）：11月14日土曜日の午前9時〜午後3時、Where（どこで）：校庭（雨なら体育館）、Who（だれが）：全生徒と家族、持ち物：お弁当（lunch）です。',
+    add: fresh(bx(6, 4, 70, 24, 'What', C.blue, FILL.blue, 11), bx(80, 4, 234, 24, 'school festival　学校祭', C.blue, FILL.blue, 11), bx(6, 32, 70, 24, 'When', C.green, FILL.green, 11), bx(80, 32, 234, 24, 'Sat., Nov. 14th　9 a.m. – 3 p.m.', C.green, FILL.green, 11), bx(6, 60, 70, 24, 'Where', C.purple, FILL.purple, 11), bx(80, 60, 234, 24, 'schoolyard（雨なら gym）', C.purple, FILL.purple, 11), bx(6, 88, 70, 24, 'Who', C.main, FILL.warm, 11), bx(80, 88, 234, 24, 'all students and their families', C.main, FILL.warm, 11), bx(6, 116, 70, 24, '持ち物', C.red, FILL.red, 11), bx(80, 116, 234, 24, 'lunch　お弁当', C.red, FILL.red, 11), ...cap('5つの質問で 情報を拾う', C.main)),
+  },
+  {
+    note: '❓お知らせ文では、なぜ be going to より will がよく使われるのでしょう。→ 話し手個人の予定ではなく、「公式に決まっていること」や「客観的な予測」を伝える場面が多いからです。The concert will be held on May 5th.（コンサートは5月5日に開催されます）。',
+    add: fresh(bx(6, 10, 148, 40, 'be going to\n個人の予定', C.gray, FILL.gray, 12), bx(166, 10, 148, 40, 'will\n公式・客観的', C.blue, FILL.blue, 12), ar(160, 64, 160, 80, C.blue), bx(6, 84, 308, 30, 'The concert will be held on May 5th.', C.blue, FILL.blue, 12), lb(160, 130, 'コンサートは5月5日に開催されます', 11, C.blue, 'middle', true), ...cap('お知らせは will が多い', C.blue)),
+  },
+  {
+    note: '❓「開催される」は、なぜ be held と受け身で書くのでしょう。→ コンサート自身が「開催する」のではなく、「開催される」立場だからです。The concert will hold ~. と書くのはまちがいです。take place も「行われる」という意味で使えます。The event will take place in the park.（イベントは公園で行われます）。',
+    add: fresh(bx(6, 10, 308, 30, 'The concert will be held ~.', C.green, FILL.green, 13), lb(160, 54, '開催される（受け身）', 12, C.green, 'middle', true), bx(6, 68, 308, 30, '✕  The concert will hold ~.', C.red, FILL.red, 13), bx(6, 108, 308, 30, 'The event will take place in the park.', C.blue, FILL.blue, 11), ...band(150, lb(160, 192, 'be held ＝ take place ＝ 行われる', 12, C.green, 'middle', true))),
+  },
+  {
+    note: '変更や中止の知らせです。The trip will be canceled if it rains.（雨天の場合、遠足は中止になります）、The date has been changed to June 2nd.（日付は6月2日に変更されました）。canceled は「中止された」、changed は「変更された」です。',
+    add: fresh(bx(6, 14, 308, 30, 'The trip will be canceled if it rains.', C.red, FILL.red, 12), lb(160, 58, '雨天の場合、遠足は中止になります', 11, C.red, 'middle', true), bx(6, 78, 308, 30, 'The date has been changed to June 2nd.', C.blue, FILL.blue, 12), lb(160, 122, '日付は6月2日に変更されました', 11, C.blue, 'middle', true), ...cap('変更・中止の知らせ', C.main)),
+  },
+  {
+    note: '持ち物・注意の言い方です。Please bring your umbrella.（傘をお持ちください）、Don\'t forget to bring your ID card.（IDカードを忘れずにお持ちください）、Students should arrive by eight thirty.（生徒は8時30分までに到着してください）。by は「〜までに」です。',
+    add: fresh(bx(6, 10, 308, 28, 'Please bring your umbrella.', C.blue, FILL.blue, 12), lb(160, 50, '傘をお持ちください', 11, C.blue, 'middle', true), bx(6, 60, 308, 28, "Don't forget to bring your ID card.", C.green, FILL.green, 12), lb(160, 100, 'IDカードを忘れずにお持ちください', 11, C.green, 'middle', true), bx(6, 110, 308, 28, 'Students should arrive by eight thirty.', C.purple, FILL.purple, 11), ...band(150, lb(160, 192, 'by ＝ 〜までに（8時30分まで）', 12, C.purple, 'middle', true))),
+  },
+  {
+    note: '天気予報も「未来のお知らせ」です。It will be sunny tomorrow.（明日は晴れるでしょう）。It will be cloudy in the morning and rainy in the afternoon.（午前は曇り、午後は雨でしょう）。The high will be 25 degrees, and the low will be 15 degrees.（最高気温は25度、最低気温は15度でしょう）。',
+    add: fresh(bx(6, 6, 100, 26, 'sunny　晴れ', C.main, FILL.yellow, 11), bx(110, 6, 100, 26, 'cloudy　曇り', C.gray, FILL.gray, 11), bx(214, 6, 100, 26, 'rainy　雨', C.blue, FILL.blue, 11), bx(6, 38, 100, 26, 'snowy　雪', C.blue, FILL.blue, 11), bx(110, 38, 100, 26, 'windy　風が強い', C.green, FILL.green, 10), bx(214, 38, 100, 26, 'foggy　霧', C.gray, FILL.gray, 11), bx(6, 76, 308, 26, 'The high will be 25 degrees,', C.red, FILL.red, 11), bx(6, 106, 308, 26, 'and the low will be 15 degrees.', C.blue, FILL.blue, 11), ...cap('天気のことば と 気温', C.main)),
+  },
+  {
+    note: 'モデル文を読み取ります。「午前中は曇りですが、午後は晴れるでしょう。最高気温は20度です。念のため傘をお忘れなく」。午前は曇り、午後は晴れ（clear up は天気が回復する）、最高気温は20度、持ち物は傘（念のため）。この4つの情報が読み取れます。',
+    add: fresh(bx(6, 10, 148, 40, 'morning\ncloudy　曇り', C.gray, FILL.gray, 12), ar(156, 30, 164, 30, C.main), bx(166, 10, 148, 40, 'afternoon\nclear up　晴れ', C.main, FILL.yellow, 12), bx(6, 62, 148, 28, 'high ＝ 20 degrees', C.red, FILL.red, 11), bx(166, 62, 148, 28, "don't forget your umbrella", C.blue, FILL.blue, 9), lb(160, 112, '午前：曇り　午後：晴れ　最高20度　傘は念のため', 11, C.ink, 'middle', true), ...cap('4つの情報を 読み取る', C.main)),
+  },
+  {
+    note: 'まとめです。お知らせ文は、①What・When・Where・Who・持ち物の5つを拾う、②公式な予定は will と be held、③変更・中止・持ち物・注意のことばを見のがさない、④天気予報は天気・気温・持ち物の4つを読み取る。全部を訳そうとせず、聞かれているキーワードを先に探しましょう。',
+    add: fresh(bx(10, 6, 300, 26, '① What・When・Where・Who・持ち物', C.blue, FILL.blue, 11), bx(10, 36, 300, 26, '② will ・ be held ・ take place', C.green, FILL.green, 11), bx(10, 66, 300, 26, '③ canceled ・ changed ・ Don\'t forget', C.purple, FILL.purple, 11), bx(10, 96, 300, 26, '④ 天気予報：天気・気温・持ち物', C.red, FILL.red, 11), ...cap('キーワードを 先に探す', C.main)),
+  },
+], 'お知らせ文と天気予報の読み方');
+
+// ───────── new20_e6_eigo_06 将来の夢①：What do you want to be? に答える ─────────
+const u26: DiagramFigure = show([
+  {
+    note: '将来の夢のたずね方と、答え方の型です。What do you want to be in the future?（あなたは将来何になりたいですか）に、I want to be a ＋ 職業名.（私は〜になりたい）と答えます。I want to be a doctor. なら「医者になりたい」です。',
+    add: [bx(6, 10, 308, 32, 'What do you want to be in the future?', C.blue, FILL.blue, 12), lb(160, 56, 'あなたは将来何になりたいですか', 11, C.blue, 'middle', true), ar(160, 66, 160, 80, C.main), bx(6, 84, 308, 32, 'I want to be a doctor.', C.green, FILL.green, 14), lb(160, 130, '私は医者になりたい', 11, C.green, 'middle', true), ...cap('夢をたずねる・答える')],
+  },
+  {
+    note: '❓職業名の前の a と an は、どう使い分けるのでしょう。→ つづりではなく、音で決まります。doctor は子音の音で始まるので a doctor、English teacher は母音の音（エ）で始まるので an English teacher です。',
+    add: fresh(bx(10, 14, 140, 34, 'a doctor', C.blue, FILL.blue, 14), lb(80, 64, 'ド…（子音の音）', 11, C.blue, 'middle', true), bx(170, 14, 140, 34, 'an English teacher', C.red, FILL.red, 12), lb(240, 64, 'エ…（母音の音）', 11, C.red, 'middle', true), lb(160, 104, '母音の音で始まる語の前は an', 13, C.ink, 'middle', true), ...cap('a と an は 音で決まる', C.main)),
+  },
+  {
+    note: 'よく使う職業名です。doctor（医者）、nurse（看護師）、teacher（先生）、vet（獣医〈じゅうい〉）、scientist（科学者）、pilot（パイロット）、astronaut（宇宙飛行士）、soccer player（サッカー選手）、cook（コック）、pastry chef（パティシエ）、firefighter（消防士）、police officer（警察官）。',
+    add: fresh(bx(6, 4, 98, 24, 'doctor　医者', C.blue, FILL.blue, 10), bx(111, 4, 98, 24, 'nurse　看護師', C.blue, FILL.blue, 10), bx(216, 4, 98, 24, 'teacher　先生', C.blue, FILL.blue, 10), bx(6, 32, 98, 24, 'vet　獣医', C.blue, FILL.blue, 10), bx(111, 32, 98, 24, 'scientist　科学者', C.blue, FILL.blue, 9), bx(216, 32, 98, 24, 'pilot　パイロット', C.blue, FILL.blue, 9), bx(6, 60, 98, 24, 'astronaut', C.blue, FILL.blue, 10), bx(111, 60, 98, 24, 'soccer player', C.blue, FILL.blue, 10), bx(216, 60, 98, 24, 'cook　コック', C.blue, FILL.blue, 10), bx(6, 88, 98, 24, 'pastry chef', C.blue, FILL.blue, 10), bx(111, 88, 98, 24, 'firefighter', C.blue, FILL.blue, 10), bx(216, 88, 98, 24, 'police officer', C.blue, FILL.blue, 10), lb(160, 128, '職業名の前には a か an', 12, C.ink, 'middle', true), ...cap('よく使う職業名', C.main)),
+  },
+  {
+    note: '❓なぜ理由を加えるのでしょう。→ 職業名だけでは考えが伝わらず、because（〜だから）で理由をつけると説得力が出るからです。I want to be a vet because I love animals.（動物が大好きだから獣医になりたい）。',
+    add: fresh(bx(6, 14, 188, 32, 'I want to be a vet', C.blue, FILL.blue, 13), bx(200, 14, 114, 32, 'because', C.red, FILL.red, 13), bx(6, 62, 308, 32, 'I love animals.', C.green, FILL.green, 14), lb(160, 112, '動物が大好きだから獣医になりたい', 12, C.ink, 'middle', true), ...cap('夢 ＋ because ＋ 理由', C.red)),
+  },
+  {
+    note: '❓because のあとに名詞だけを置いてもよいでしょうか。→ いけません。because のあとは「主語＋動詞」の文が続きます。because animal ではなく、because I love animals とします。I want to be a scientist because I am interested in space.（宇宙に興味があるから科学者になりたい）のように言います。',
+    add: fresh(bx(6, 10, 308, 30, '✕  because animal', C.red, FILL.red, 14), bx(6, 52, 308, 30, '○  because I love animals', C.green, FILL.green, 14), bx(6, 94, 308, 36, 'I want to be a scientist because\nI am interested in space.', C.blue, FILL.blue, 11), ...band(150, lb(160, 192, 'because のあとは 主語＋動詞', 12, C.red, 'middle', true))),
+  },
+  {
+    note: '理由をふくらませる言い方です。I am interested in ~.（〜に興味がある）、I like ~ing.（〜することが好き）、I am good at ~ing.（〜することが得意）。例：I am interested in science. / I like taking care of animals. / I am good at drawing pictures.',
+    add: fresh(bx(6, 8, 200, 28, 'I am interested in science.', C.blue, FILL.blue, 11), lb(214, 22, '理科に興味がある', 11, C.ink, 'start', true), bx(6, 46, 200, 28, 'I like taking care of animals.', C.green, FILL.green, 10), lb(214, 60, '世話をするのが好き', 11, C.ink, 'start', true), bx(6, 84, 200, 28, 'I am good at drawing pictures.', C.purple, FILL.purple, 10), lb(214, 98, '絵を描くのが得意', 11, C.ink, 'start', true), ...cap('興味・好き・得意を 足す', C.main)),
+  },
+  {
+    note: '夢がまだ決まっていないときも、正直に言えます。I haven\'t decided yet.（まだ決めていません）、I don\'t know yet, but I\'m interested in a lot of things.（まだわからないけど、いろいろなことに興味がある）、I have some dreams, but I haven\'t chosen one yet.（夢はいくつかあるけど、まだ1つにしぼっていない）。',
+    add: fresh(bx(6, 8, 308, 28, "I haven't decided yet.", C.blue, FILL.blue, 12), bx(6, 42, 308, 36, "I don't know yet, but I'm interested\nin a lot of things.", C.green, FILL.green, 11), bx(6, 84, 308, 36, "I have some dreams, but I haven't\nchosen one yet.", C.purple, FILL.purple, 11), ...cap('決まっていないときの答え方', C.main)),
+  },
+  {
+    note: 'まとめて短いスピーチにします。My dream is to be a vet.（夢）→ I want to be a vet because I love animals very much.（理由）→ I have a dog, and I take care of him every day.（今していること）→ In the future, I want to help sick animals.（将来）→ I will study hard to make my dream come true.（夢をかなえるために一生懸命勉強します）。',
+    add: fresh(bx(6, 4, 308, 24, '夢　My dream is to be a vet.', C.blue, FILL.blue, 10), bx(6, 32, 308, 24, '理由　I love animals very much.', C.red, FILL.red, 10), bx(6, 60, 308, 24, '今　I take care of my dog every day.', C.green, FILL.green, 10), bx(6, 88, 308, 24, '将来　I want to help sick animals.', C.purple, FILL.purple, 10), bx(6, 116, 308, 24, '決意　I will make my dream come true.', C.main, FILL.warm, 10), ...cap('夢 → 理由 → 今 → 将来 → 決意', C.main)),
+  },
+], '将来の夢を答える型');
+
 export const XF_CEL_FIGURES: Record<string, DiagramFigure> = {
   'xf_new20_e5_eigo_11': u11,
   'xf_new20_e5_eigo_12': u12,
@@ -411,6 +653,12 @@ export const XF_CEL_FIGURES: Record<string, DiagramFigure> = {
   'xf_new20_e5_eigo_18': u18,
   'xf_new20_e5_eigo_19': u19,
   'xf_new20_e5_eigo_20': u20,
+  'xf_new20_e6_eigo_01': u21,
+  'xf_new20_e6_eigo_02': u22,
+  'xf_new20_e6_eigo_03': u23,
+  'xf_new20_e6_eigo_04': u24,
+  'xf_new20_e6_eigo_05': u25,
+  'xf_new20_e6_eigo_06': u26,
 };
 
 export const XF_CEL_SECTIONS: Record<string, string> = {
@@ -424,4 +672,10 @@ export const XF_CEL_SECTIONS: Record<string, string> = {
   'new20_e5_eigo_18#0': 'xf_new20_e5_eigo_18',
   'new20_e5_eigo_19#0': 'xf_new20_e5_eigo_19',
   'new20_e5_eigo_20#0': 'xf_new20_e5_eigo_20',
+  'new20_e6_eigo_01#0': 'xf_new20_e6_eigo_01',
+  'new20_e6_eigo_02#0': 'xf_new20_e6_eigo_02',
+  'new20_e6_eigo_03#0': 'xf_new20_e6_eigo_03',
+  'new20_e6_eigo_04#0': 'xf_new20_e6_eigo_04',
+  'new20_e6_eigo_05#0': 'xf_new20_e6_eigo_05',
+  'new20_e6_eigo_06#0': 'xf_new20_e6_eigo_06',
 };
