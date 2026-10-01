@@ -19,6 +19,7 @@ import { GRADE_ORDER, type GradeKey } from '../../data/grades';
 import { getKoushikiFormulaIdForQuestion, isKoushikiFormulaFree } from '../../data/koushiki-access';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
 import { explanationText, hintText } from '../../utils/explanation';
+import ReviewBlocks from '../../components/ReviewBlocks';
 import { getQuickTrick } from '../../data/quick-tricks';
 
 // 「レベル別ドリル」「入試対策」は問題プールから毎回ランダムに出題するため、
@@ -853,6 +854,7 @@ export default function QuizScreen() {
                 {hintText(currentQuestion) !== '' && (
                   <Text style={styles.wrongExplanationText}>💡 {rich(hintText(currentQuestion))}</Text>
                 )}
+                <ReviewBlocks q={currentQuestion} />
                 {getQuickTrick(currentQuestion.id) != null && (
                   <View style={styles.tipRow}>
                     <Text style={styles.trickLabel}>⚡ はやく解くコツ</Text>

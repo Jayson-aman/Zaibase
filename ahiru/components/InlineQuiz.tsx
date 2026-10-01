@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { rich } from './RichText';
+import ReviewBlocks from './ReviewBlocks';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import type { Question, QuestionSubItem } from '../data/questions-meta';
 import type { Figure } from '../data/figures';
@@ -139,6 +140,7 @@ export default function InlineQuiz({ items, label = 'この公式の一問一答
               <Text style={styles.explanationText}>{rich(q.explanation)}</Text>
             </View>
           )}
+          <ReviewBlocks q={{ question: q.question, answer: q.answer, explanation: q.explanation }} />
         </View>
       )}
 

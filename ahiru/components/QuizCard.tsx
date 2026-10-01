@@ -20,6 +20,7 @@ import { Question, subjectInfo } from '../data/questions-meta';
 import SubjectIcon from './SubjectIcon';
 import { getHistoryThemeLabel } from '../data/images';
 import { explanationText, hintText } from '../utils/explanation';
+import ReviewBlocks from './ReviewBlocks';
 import { getQuickTrick } from '../data/quick-tricks';
 import { getSubjectThemeLabel, getSubjectIllustration } from '../data/subjectImages';
 import { getFigure } from '../data/figures';
@@ -251,6 +252,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
               {hintText(question) !== '' && (
                 <Text style={styles.hintText}>💡 {rich(hintText(question))}</Text>
               )}
+              <ReviewBlocks q={question} />
               {getQuickTrick(question.id) != null && (
                 <View style={styles.trickBox}>
                   <Text style={styles.trickLabel}>⚡ はやく解くコツ</Text>
@@ -376,6 +378,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
               {hintText(question) !== '' && (
                 <Text style={styles.hintText}>💡 {rich(hintText(question))}</Text>
               )}
+              <ReviewBlocks q={question} />
               {getQuickTrick(question.id) != null && (
                 <View style={styles.trickBox}>
                   <Text style={styles.trickLabel}>⚡ はやく解くコツ</Text>
