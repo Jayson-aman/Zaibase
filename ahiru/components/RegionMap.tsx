@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Svg, { Path, Circle, Text as SvgText, G } from 'react-native-svg';
 import { prefectureShapes } from '../data/japanPrefectures';
-import { mountainRanges, rivers } from '../data/geographyTerrain';
+import { rangeLines, riverLines, peaks } from '../data/geographyTerrainDetail';
 import { regionMaps } from '../data/geographyRegionMaps';
 import { project } from '../data/geoProject';
 
@@ -54,8 +54,11 @@ export default function RegionMap({ regionId, regionKey, width, focus = 'all' }:
   const k = vb.w / width; // 1画面px あたりの viewBox 座標の長さ。文字・線の太さをこれで割り戻す
   const fs = (px: number) => px * k;
 
-  const mtns = mountainRanges.filter((m) => m.region.includes(regionKey) || regionKey.includes(m.region));
-  const rvs = rivers.filter((r) => r.region.includes(regionKey) || regionKey.includes(r.region));
+  const mtns = rangeLines.filter((m) => m.regions.includes(regionId));
+  const rvs = riverLines.filter((r) => r.regions.includes(regionId));
+  const pks = peaks.filter((q) => q.regions.includes(regionId));
+  const poly = (pts: [number, number][]) =>
+    pts.map((q, i) => { const [x, y] = project(q[0], q[1]); return `${i ? 'L' : 'M'}${x.toFixed(1)} ${y.toFixed(1)}`; }).join(' ');
   const dim = focus === 'terrain' ? 0.55 : 1;
 
   const label = (name: string, lat: number, lon: number, opts: { size: number; color: string; weight?: '700' | '400'; dy?: number; anchor?: 'start' | 'middle' | 'end' }) => {
@@ -105,15 +108,38 @@ export default function RegionMap({ regionId, regionKey, width, focus = 'all' }:
           />
         ))}
 
-        {/* 山脈（茶色のギザギザ） */}
-        {mtns.map((m) => (
-          <Path key={`m_${m.id}`} d={m.path} fill="none" stroke="#7A5230" strokeWidth={fs(focus === 'terrain' ? 3.4 : 2.4)} strokeLinecap="round" strokeLinejoin="miter" />
+        {/* 川（水源→河口。青い曲線。河口に向かって太くなる） */}
+        {rvs.map((r) => (
+          <Path key={`r_${r.id}`} d={poly(r.pts)} fill="none" stroke="#1E88E5" strokeWidth={fs(focus === 'terrain' ? 2.6 : 2)} strokeLinecap="round" strokeLinejoin="round" />
         ))}
 
-        {/* 川（青い線） */}
-        {rvs.map((r) => (
-          <Path key={`r_${r.id}`} d={r.path} fill="none" stroke="#1E88E5" strokeWidth={fs(focus === 'terrain' ? 3 : 2.2)} strokeLinecap="round" strokeLinejoin="round" />
+        {/* 山脈（尾根の道すじ。茶色の太い線に三角をならべる） */}
+        {mtns.map((m) => (
+          <G key={`m_${m.id}`}>
+            <Path d={poly(m.pts)} fill="none" stroke="#B08968" strokeWidth={fs(focus === 'terrain' ? 6 : 4.5)} strokeLinecap="round" strokeLinejoin="round" opacity={0.55} />
+            {m.pts.map((q, i) => {
+              const [x, y] = project(q[0], q[1]);
+              const t = fs(3.2);
+              return <Path key={i} d={`M${x} ${y - t} L${x + t} ${y + t * 0.8} L${x - t} ${y + t * 0.8} Z`} fill="#7A5230" />;
+            })}
+          </G>
         ))}
+
+        {/* 主な山（標高つき） */}
+        {pks.map((q) => {
+          const [x, y] = project(q.lat, q.lon);
+          const t = fs(4);
+          return (
+            <G key={`pk_${q.name}`}>
+              <Path d={`M${x} ${y - t} L${x + t} ${y + t * 0.8} L${x - t} ${y + t * 0.8} Z`} fill="#C2410C" stroke="#FFFFFF" strokeWidth={fs(0.8)} />
+              {(focus === 'terrain' || q.h >= 3000) && label(focus === 'terrain' ? `${q.name} ${q.h.toLocaleString()}m` : q.name, q.lat, q.lon, { size: 9.5, color: '#9A3412', weight: '700', dy: 13 })}
+            </G>
+          );
+        })}
+
+        {/* 山脈・川の名前 */}
+        {mtns.map((m) => label(m.name.replace(/（.*）/, ''), m.label[0], m.label[1], { size: 10, color: '#6B4423' }))}
+        {rvs.map((r) => label(r.name.replace(/（.*）/, ''), r.label[0], r.label[1], { size: 10, color: '#0D5FB3', weight: '400' }))}
 
         {/* 海・海流の名前 */}
         {data.seas.map((s) =>
@@ -125,10 +151,10 @@ export default function RegionMap({ regionId, regionKey, width, focus = 'all' }:
         )}
 
         {/* 平野・盆地・半島 */}
-        {data.plains.map((s) => label(s.name, s.lat, s.lon, { size: 10.5, color: '#2E7D32', dy: 13 }))}
+        {focus === 'all' && data.plains.map((s) => label(s.name, s.lat, s.lon, { size: 10.5, color: '#2E7D32', dy: 13 }))}
 
         {/* おもな都市 */}
-        {data.cities.map((c) => {
+        {focus === 'all' && data.cities.map((c) => {
           const [x, y] = project(c.lat, c.lon);
           return (
             <G key={`c_${c.name}`}>
@@ -153,8 +179,8 @@ export default function RegionMap({ regionId, regionKey, width, focus = 'all' }:
       <View style={styles.legend}>
         <Text style={styles.legendItem}>🔴 県庁所在地</Text>
         <Text style={styles.legendItem}>⚫ おもな都市</Text>
-        <Text style={styles.legendItem}>🟫 山脈</Text>
-        <Text style={styles.legendItem}>🔵 川</Text>
+        <Text style={styles.legendItem}>🟫 山脈（▲＝山・赤は主な山）</Text>
+        <Text style={styles.legendItem}>🔵 川（水源→河口）</Text>
         <Text style={styles.legendItem}>🟢 平野・半島</Text>
         <Text style={[styles.legendItem, { color: '#D32F2F' }]}>赤字＝暖流</Text>
         <Text style={[styles.legendItem, { color: '#1565C0' }]}>青字＝寒流</Text>
