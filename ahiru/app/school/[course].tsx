@@ -172,8 +172,14 @@ export default function SchoolCurriculumScreen() {
   const [activeSubject, setActiveSubject] = useState<SubjectKey>('sansu');
   const { questions } = useAllQuestions();
 
-  const meta = SCHOOL_META[course ?? ''] ?? { name: course ?? '学校', emoji: '🏫', hensachi: '—', region: '—' };
   const courseInfo = course ? getCourseInfo(course as any) : null;
+  // 学校の表示名は SCHOOL_META に無い学校（四天王寺・星光・東京/名古屋/福岡など）でも、courses.ts の定義から出す
+  const meta = SCHOOL_META[course ?? ''] ?? {
+    name: courseInfo?.name ?? course ?? '学校',
+    emoji: courseInfo?.emoji ?? '🏫',
+    hensachi: courseInfo?.hensachi ?? '—',
+    region: '—',
+  };
   const examType = courseInfo?.examType ?? 'chugaku';
 
   // Question counts per stage
@@ -317,6 +323,26 @@ export default function SchoolCurriculumScreen() {
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
       >
+        {/* この学校の問題を、すぐ解く */}
+        {stageCounts.kakomon > 0 && (
+          <TouchableOpacity
+            style={styles.startCta}
+            activeOpacity={0.85}
+            onPress={() => {
+              if (subLoading) return;
+              router.push(`/quiz/${activeSubject}?mode=kakomon&course=${course}&examType=${examType}` as any);
+            }}
+            accessibilityRole="button"
+          >
+            <Text style={styles.startCtaTitle}>
+              ▶ {meta.name}の{SUBJECTS.find((x) => x.key === activeSubject)?.label ?? ''}の問題を解く
+            </Text>
+            <Text style={styles.startCtaSub}>
+              この学校の入試傾向問題 {stageCounts.kakomon}問（無料で5問・全部はMAXプラン）
+            </Text>
+          </TouchableOpacity>
+        )}
+
         {STAGES.map((stage, idx) => {
           const unlocked = hasAccess(stage.tier);
           const count = stageCounts[stage.key];
@@ -405,6 +431,15 @@ export default function SchoolCurriculumScreen() {
 }
 
 const styles = StyleSheet.create({
+  startCta: {
+    backgroundColor: '#B5622E',
+    borderRadius: 14,
+    paddingVertical: 14,
+    paddingHorizontal: 16,
+    marginBottom: 14,
+  },
+  startCtaTitle: { color: '#FFFFFF', fontSize: 17, fontWeight: '900' },
+  startCtaSub: { color: '#FFE9D6', fontSize: 12.5, fontWeight: '700', marginTop: 4 },
   safe: { flex: 1, backgroundColor: D.bg },
   topBar: {
     flexDirection: 'row',

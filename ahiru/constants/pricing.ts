@@ -19,7 +19,7 @@ const isWeb = Platform.OS === 'web';
 
 /** 税込の月額・年額（円）。iOS App Store・Google Play・（Pro/Max以外は）Webで共通 */
 export const PRICES = {
-  // Pro：受験5科目（聞き流し・全13,000問・くわしい解説・教科書）。
+  // Pro：受験5科目（聞き流し・全16,000問・くわしい解説・教科書）。
   proMonthly: 1980,
   // Max：受験Pro＋英単語Pro（英検含む）＋AI弱点コーチの全部入り。
   // 単品合計（Pro¥1,980＋英単語Pro¥1,680＝¥3,660）より割安に設定。

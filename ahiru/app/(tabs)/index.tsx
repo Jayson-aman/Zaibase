@@ -522,6 +522,8 @@ export default function HomeScreen() {
                                 if (needsPro && !isPro) { setPaywallVisible(true); return; }
                                 setSelectedCourse(s.key);
                                 setCourseTab('school');
+                                // 学校をタップしたら、その学校の問題の画面へ進む（教科を選んで、すぐ問題が出る）
+                                router.push(`/school/${s.key}` as any);
                               }}
                               activeOpacity={0.8}
                             >

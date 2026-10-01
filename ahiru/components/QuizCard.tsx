@@ -20,7 +20,7 @@ import { Question, subjectInfo } from '../data/questions-meta';
 import SubjectIcon from './SubjectIcon';
 import { getHistoryThemeLabel } from '../data/images';
 import { explanationText, hintText } from '../utils/explanation';
-import ReviewBlocks from './ReviewBlocks';
+import ExplanationSlides from './ExplanationSlides';
 import { getQuickTrick } from '../data/quick-tricks';
 import { getSubjectThemeLabel, getSubjectIllustration } from '../data/subjectImages';
 import { getFigure } from '../data/figures';
@@ -246,13 +246,10 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
           {selectedChoice != null && (question.explanation != null || question.hint != null) && (
             <View style={styles.hintBox}>
               <Text style={styles.hintLabel}>📖 解説</Text>
-              <Text style={styles.hintText}>
-                {rich(explanationText(question))}
-              </Text>
+              <ExplanationSlides key={question.id} q={question} />
               {hintText(question) !== '' && (
                 <Text style={styles.hintText}>💡 {rich(hintText(question))}</Text>
               )}
-              <ReviewBlocks q={question} />
               {getQuickTrick(question.id) != null && (
                 <View style={styles.trickBox}>
                   <Text style={styles.trickLabel}>⚡ はやく解くコツ</Text>
@@ -372,13 +369,10 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
           {(question.explanation != null || question.hint != null) && (
             <View style={styles.hintBox}>
               <Text style={styles.hintLabel}>📖 解説</Text>
-              <Text style={styles.hintText}>
-                {rich(explanationText(question))}
-              </Text>
+              <ExplanationSlides key={question.id} q={question} />
               {hintText(question) !== '' && (
                 <Text style={styles.hintText}>💡 {rich(hintText(question))}</Text>
               )}
-              <ReviewBlocks q={question} />
               {getQuickTrick(question.id) != null && (
                 <View style={styles.trickBox}>
                   <Text style={styles.trickLabel}>⚡ はやく解くコツ</Text>

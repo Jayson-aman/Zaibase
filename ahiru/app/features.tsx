@@ -64,7 +64,7 @@ const CURRICULUM = [
     color: '#2A9460',
     target: '小3〜小4生 / 中1〜中2生',
     desc: '受験の土台固め。計算・漢字・基本概念をしっかり定着。',
-    count: '各科目 400問以上',
+    count: '各科目 600問以上',
   },
   {
     level: '標準',
@@ -72,7 +72,7 @@ const CURRICULUM = [
     color: '#4B8FE4',
     target: '小5〜小6生 / 中2〜中3生',
     desc: '入試頻出問題を網羅。思考力・応用力を養う実戦問題。',
-    count: '各科目 700問以上',
+    count: '各科目 1,000問以上',
   },
   {
     level: '発展',
@@ -80,7 +80,7 @@ const CURRICULUM = [
     color: '#C8A84B',
     target: '最難関中学受験 / 難関高校受験',
     desc: '最難関問題・難関校対策。本番直前の実力完成。',
-    count: '各科目 1000問以上',
+    count: '各科目 1,100問以上',
   },
 ];
 
@@ -133,7 +133,7 @@ const FEATURES = [
 const CONTENT_FACTS = [
   {
     text: '算数・国語・理科・社会・英語の5科目を、基礎から発展まで難易度別に収録。まちがえた問題は自動で記録され、あとから復習できます。',
-    name: '5科目 13,000問以上',
+    name: '5科目 16,000問以上',
     result: '収録問題数',
   },
   {
@@ -202,7 +202,7 @@ export default function FeaturesPage() {
 
             <Text style={styles.heroSub}>
               中学受験・高校受験の対策アプリ。{'\n'}
-              算数・国語・理科・社会・英語の5科目 13,000問以上 × 動く図解 × 学校別コース。{'\n'}
+              算数・国語・理科・社会・英語の5科目 16,000問以上 × 動く図解 × 学校別コース。{'\n'}
               AI弱点コーチで志望校合格を目指す。
             </Text>
 
@@ -214,7 +214,7 @@ export default function FeaturesPage() {
             {/* スタッツ */}
             <View style={[styles.heroStats, glassBlur]}>
               {[
-                { num: '13,000', unit: '問+', label: '問題数' },
+                { num: '16,000', unit: '問+', label: '問題数' },
                 { num: '5', unit: '科目', label: '対応科目' },
                 { num: '動く', unit: '図解', label: '解説アニメ' },
                 { num: 'AI', unit: '搭載', label: '弱点分析' },
@@ -406,7 +406,8 @@ export default function FeaturesPage() {
             {[
               '✓ 無料プランの全機能',
               '✓ 聞き流しモード（全5科目）',
-              '✓ 全13,000問＋難関校の発展問題',
+              '✓ 全16,000問＋難関校の発展問題',
+              '✓ 学校別コース50校（各校100問以上）',
               '✓ くわしい解説・覚え方つき',
             ].map((f) => (
               <Text key={f} style={[styles.planFeature, { color: '#7A3FD0' }]}>{f}</Text>
