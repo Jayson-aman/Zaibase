@@ -17,6 +17,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import Svg, { Path as SvgPath, G as SvgG } from 'react-native-svg';
 import RegionMap from './RegionMap';
+import { geographyCulture } from '../data/geographyCulture';
 import {
   geographyRegions,
   industrialZoneSummary,
@@ -376,6 +377,7 @@ function RegionDetail({
   layer: GeoLayerId;
   onClose: () => void;
 }) {
+  const culture = geographyCulture[region.id];
   const ag = region.agriculture;
   const fi = region.fishery;
   // 「山と川」レイヤーで地域を選んだとき用：この地域にある山地・山脈を抽出。
@@ -421,6 +423,19 @@ function RegionDetail({
           <DetailSection title="🌤 気候" items={[region.climate]} />
           <DetailSection title="✨ 特色" items={region.features} />
           <DetailSection title="🏙 主要都市" items={region.cities.map((c) => `${c.name} — ${c.note}`)} />
+          {culture && <StudyBox study={culture.study} />}
+          {culture && (
+            <View style={styles.detailSection}>
+              <Text style={styles.detailSectionTitle}>🎎 まつり・文化・名物（くわしく）</Text>
+              {culture.items.map((it) => (
+                <View key={it.name} style={styles.cultureCard}>
+                  <Text style={styles.cultureName}>{it.name}</Text>
+                  <Text style={styles.cultureMeta}>📍 {it.place}　🗓 {it.season}</Text>
+                  <Text style={styles.detailItem}>{it.what}</Text>
+                </View>
+              ))}
+            </View>
+          )}
         </>
       )}
 
@@ -539,6 +554,18 @@ function RegionDetail({
   );
 }
 
+function StudyBox({ study }: { study: { elementary: string; chugaku: string; koko: string; musts: string[] } }) {
+  return (
+    <View style={styles.studyBox}>
+      <Text style={styles.studyTitle}>📚 何年生で習う？ どう出る？</Text>
+      <Text style={styles.studyLine}>🏫 小学校：{study.elementary}</Text>
+      <Text style={styles.studyLine}>✏️ 中学受験：{study.chugaku}</Text>
+      <Text style={styles.studyLine}>📝 高校受験（中学地理）：{study.koko}</Text>
+      <Text style={styles.studyLine}>📍 位置をおぼえる：{study.musts.join('・')}</Text>
+    </View>
+  );
+}
+
 function DetailSection({ title, items }: { title: string; items: string[] }) {
   return (
     <View style={styles.detailSection}>
@@ -551,6 +578,12 @@ function DetailSection({ title, items }: { title: string; items: string[] }) {
 }
 
 const styles = StyleSheet.create({
+  studyBox: { backgroundColor: '#FFF7E0', borderRadius: 12, padding: 12, marginTop: 10, borderWidth: 1, borderColor: '#F2D88A' },
+  studyTitle: { fontSize: 15, fontWeight: '800', color: '#7A4E00', marginBottom: 6 },
+  studyLine: { fontSize: 13, lineHeight: 20, color: '#4A3B1A', marginTop: 3 },
+  cultureCard: { backgroundColor: '#F8FAFC', borderRadius: 10, padding: 10, marginTop: 8, borderWidth: 1, borderColor: '#E2E8F0' },
+  cultureName: { fontSize: 15, fontWeight: '800', color: '#1E293B' },
+  cultureMeta: { fontSize: 12, color: '#64748B', marginVertical: 3 },
   zoomMapTitle: { fontSize: 14, fontWeight: '800', color: '#334155', marginTop: 4 },
   root: { marginBottom: 20 },
   headerRow: {
