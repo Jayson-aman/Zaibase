@@ -496,7 +496,7 @@ Good morning. Here is today's weather. It will be cloudy in the morning, but it 
 　My dream is to be a vet. I want to be a vet because I love animals very much. I have a dog, and I take care of him every day. In the future, I want to help sick animals and their owners. I will study hard to make my dream come true.
 　（私の夢は獣医になることです。動物が大好きだから獣医になりたいです。私は犬を飼っていて、毎日世話をしています。将来は病気の動物とその飼い主を助けたいです。夢をかなえるために一生懸命勉強します。）
 
-★ ポイント：make my dream come true（夢をかなえる）は将来の夢スピーチの締めによく使われる決まり文句。covered「夢」を語る作文・面接では、この一言で結ぶと印象がまとまる。`,
+★ ポイント：make my dream come true（夢をかなえる）は将来の夢スピーチの締めによく使われる決まり文句。「夢」を語る作文・面接では、この一言で結ぶと印象がまとまる。`,
       },
     ],
   },
@@ -552,7 +552,7 @@ To make my dream come true, I read books about animals every week. I also help m
 　I want to be someone who ~.（〜する人になりたい）※人物像を伝える便利な形
 　　例）I want to be someone who can help people in need.（困っている人を助けられる人になりたい）
 
-⚠ 注意：someone who のあとには「主語のはたらきをする文」が続く。someone who help ではなく someone who can help のように、動詞の形にも注意する（who が主語の役割をするので、動詞は who の後ろにそのまま続く）。`,
+⚠ 注意：someone who のあとには「主語のはたらきをする文」が続く。someone who help ではなく someone who helps（または someone who can help）のように、動詞の形にも注意する（who が主語の役割をするので、動詞は who の後ろにそのまま続き、三人称単数なら s がつく）。`,
       },
       {
         heading: '3. スピーチをまとめる：完成モデルと締めの表現',
@@ -584,7 +584,7 @@ Hello, everyone. Today I want to talk about my dream. My dream is to be a vet. W
     keyPoints: [
       `動名詞（動詞のing形）は「〜すること」という意味の名詞のはたらきをする`,
       `like ~ing／enjoy ~ing／be interested in ~ing／be good at ~ing はすべて動詞のあとに-ing形を置く`,
-      `like と enjoy はどちらも to不定詞も使えるが、be good at・be interested inのあとは必ず-ing（前置詞のあとだから）`,
+      `like は to不定詞も -ing も使えるが、enjoy は -ing だけ。be good at・be interested inのあとは必ず-ing（前置詞のあとだから）`,
       `how often（頻度）や how long（期間）を添えると趣味の説明に具体性が出る`,
       `自己紹介では「趣味→理由・きっかけ→頻度→得意なこと」の順で話すとまとまりが良い`,
     ],
