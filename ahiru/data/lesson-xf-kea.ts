@@ -1080,6 +1080,157 @@ const e18: DiagramFigure = show([
   },
 ], '内容一致問題のひっかけ');
 
+// ───────── koko_eigo_19_dialogue_reading 発言選択型 ─────────
+const bubA = (y: number, t: string, color = C.blue, fill: string = FILL.blue, size = 10): E[] => [lb(8, y + 14, 'A', 12, C.blue, 'start', true), bx(24, y, 230, 28, t, color, fill, size)];
+const bubB = (y: number, t: string, color = C.green, fill: string = FILL.green, size = 10): E[] => [bx(66, y, 230, 28, t, color, fill, size), lb(306, y + 14, 'B', 12, C.green, 'end', true)];
+const e19: DiagramFigure = show([
+  {
+    note: '対話文の空所補充は、「次の発言」から逆算するのがいちばん効果的です。空所の前だけでなく、直後の発言がどう応じているかを手がかりにします。',
+    add: [head('空所の「あと」を見る'), ...bubA(24, 'Would you like some more coffee?'), ...bubB(60, '（　　空所　　）', C.red, FILL.red, 12), ...bubA(96, 'OK, I\'ll bring you some tea instead.'), ...cap('直後の発言から逆算する')],
+  },
+  {
+    note: '解く手順です。①空所の直前の発言を確認する。②空所の直後の発言を確認する（それにどう応じているか）。③直後と自然につながる内容を選ぶ。④選択肢の文末（疑問文・提案・断りなど）が、直後と矛盾しないか確かめる。',
+    add: fresh(head('解く手順'), bx(10, 24, 300, 24, '① 直前の発言を確認する', C.blue, FILL.blue, 11), bx(10, 52, 300, 24, '② 直後の発言を確認する', C.red, FILL.red, 11), bx(10, 80, 300, 24, '③ 直後と自然につながるものを選ぶ', C.green, FILL.green, 11), bx(10, 108, 300, 24, '④ 文末が直後と矛盾しないか確かめる', C.purple, FILL.purple, 11), ...cap('「直後」が決め手', C.red)),
+  },
+  {
+    note: '❓直後の発言から、何が分かるでしょう。→ A は「代わりに紅茶を持ってきます」と言っています。「代わりに」ということは、B はコーヒーを断ったのです。',
+    add: fresh(...bubA(14, 'Would you like some more coffee?'), ...bubB(48, '（　　空所　　）', C.red, FILL.red, 12), ...bubA(82, 'OK, I\'ll bring you some tea instead.', C.red, FILL.red), ar(160, 80, 160, 78, C.red), lb(160, 128, '「代わりに紅茶」＝ コーヒーは断った', 12, C.red, 'middle', true), ...cap('instead がヒント', C.red)),
+  },
+  {
+    note: '答えは No, thank you. I don\'t really like coffee. です。断る言葉が入ると、直後の「代わりに紅茶を持ってきます」と自然につながります。',
+    add: fresh(...bubA(14, 'Would you like some more coffee?'), ...bubB(48, 'No, thank you. I don\'t really like coffee.', C.green, FILL.green, 10), ...bubA(82, 'OK, I\'ll bring you some tea instead.'), lb(160, 130, '断る → 代わりを出す、で話がつながる', 12, C.green, 'middle', true), ...cap('直後と矛盾しない選択肢', C.green)),
+  },
+  {
+    note: '❓Yes, please. では、なぜだめなのでしょう。→ 選択肢だけを見ると自然な返事でも、直後が「代わりに紅茶を持ってきます」だと話がつながらないからです。選択肢が単独で正しくても、前後と合わなければ不正解です。',
+    add: fresh(...bubA(14, 'Would you like some more coffee?'), ...bubB(48, 'Yes, please.', C.red, FILL.red, 12), ...bubA(82, 'OK, I\'ll bring you some tea instead.'), lb(160, 128, '× 「紅茶に変える」理由がない', 12, C.red, 'middle', true), ...cap('単独で自然でも、つながらなければ×', C.red)),
+  },
+  {
+    note: '選択肢が全部 Yes／No で始まるときは、先に質問の種類を確認します。疑問詞のついた疑問文には、Yes／No で答える選択肢は基本的に不正解です。Where did you buy that bag? に No, I didn\'t. は成り立ちません。',
+    add: fresh(head('質問の種類を先に確認'), bx(15, 26, 290, 28, 'Where did you buy that bag?', C.blue, FILL.blue, 12), bx(15, 62, 290, 28, '× No, I didn\'t.', C.red, FILL.red, 12), bx(15, 98, 290, 28, '○ At a shop near the station.', C.green, FILL.green, 12), ...cap('疑問詞の質問には、具体的に答える', C.green)),
+  },
+  {
+    note: 'まとめです。対話文の空所は、直後の発言から逆算する。選択肢は、直後と矛盾しないかを確かめる。疑問詞のついた質問には、Yes／No で答える選択肢は選ばない。',
+    add: fresh(bx(15, 14, 290, 30, '空所の直後の発言から逆算する', C.red, FILL.red, 12), bx(15, 52, 290, 30, '直後と矛盾しないかを確かめる', C.green, FILL.green, 12), bx(15, 90, 290, 30, '疑問詞の質問には Yes／No で答えない', C.blue, FILL.blue, 12), ...cap('前後の流れを大事に', C.green)),
+  },
+], '対話文の空所補充（発言選択型）');
+
+// ───────── koko_eigo_20_translation_patterns 使役 ─────────
+const caus = (s: string, o: string, mark: string, color: string, fill: string, ex: string, y = 28): E[] => [bx(10, y, 80, 40, s, color, fill, 11), ar(94, y + 20, 214, y + 20, color), lb(154, y + 8, mark, 11, color, 'middle', true), bx(218, y, 92, 40, o, C.gray, FILL.gray, 11), lb(160, y + 62, ex, 11, C.ink, 'middle', true)];
+const e20: DiagramFigure = show([
+  {
+    note: '日本語の「〜させる」「〜してもらう」は、場面によって英語では動詞が変わります。make・have・let・get の四つです。ちがいは、「どんな気持ちで、相手にさせるか」です。',
+    add: [head('「〜させる」の 4 つの動詞'), ...rowb(['make\n強制', 'have\n当然・依頼', 'let\n許可', 'get\n説得'], 26, 60, C.blue, FILL.blue, 11, 10, 310, 6), ...cap('日本語の文脈で見分ける')],
+  },
+  {
+    note: 'make＋O＋原形は、「（強制的に）〜させる」です。My mother made me clean my room.（母は私に部屋を掃除させた）。いやでも、させる感じがあります。',
+    add: fresh(head('make：強制的にさせる'), ...caus('My mother', 'me', 'made', C.red, FILL.red, 'My mother made me clean my room.'), ...cap('make ＋ O ＋ 原形', C.red)),
+  },
+  {
+    note: 'have＋O＋原形は、「（当然のこととして）〜してもらう・させる」です。I had my brother carry the bag.（弟に鞄を運んでもらった）。頼んで当たり前、という感じです。',
+    add: fresh(head('have：当然のこととして頼む'), ...caus('I', 'my brother', 'had', C.blue, FILL.blue, 'I had my brother carry the bag.'), ...cap('have ＋ O ＋ 原形', C.blue)),
+  },
+  {
+    note: 'let＋O＋原形は、「許可して〜させてあげる」です。My father let me use his car.（父は私に車を使わせてくれた）。相手がしたいことを、認めるのが let です。',
+    add: fresh(head('let：許可してやらせる'), ...caus('My father', 'me', 'let', C.green, FILL.green, 'My father let me use his car.'), ...cap('let ＋ O ＋ 原形', C.green)),
+  },
+  {
+    note: '❓get だけ、形がちがうのはなぜでしょう。→ get は「説得してさせる」ので、相手が動くまでに働きかけが必要で、to 不定詞（to＋動詞）を使います。She got her son to clean his room.（彼女は息子を説得して部屋を掃除させた）。',
+    add: fresh(head('get：説得して、to ＋ 動詞'), ...caus('She', 'her son', 'got', C.purple, FILL.purple, 'She got her son to clean his room.'), lb(160, 128, 'to が必要！　make・have・let は to なし', 11, C.red, 'middle', true), ...cap('get ＋ O ＋ to 不定詞', C.purple)),
+  },
+  {
+    note: '形をまとめると、make・have・let のあとは原形、get のあとは to 不定詞です。To をつけまちがえないようにしましょう。',
+    add: fresh(head('形のちがい'), bx(10, 26, 300, 28, 'make／have／let ＋ O ＋ 原形', C.blue, FILL.blue, 12), bx(10, 60, 300, 28, 'get ＋ O ＋ to 不定詞', C.purple, FILL.purple, 12), lb(160, 112, '× My mother made me to clean my room.', 12, C.red, 'middle', true), ...cap('to の有無で見分ける')),
+  },
+  {
+    note: '❓「髪を切ってもらう」「バッグを盗まれる」は、どう言うのでしょう。→ have／get＋O＋過去分詞です。I had my hair cut yesterday.（昨日髪を切ってもらった）、She had her bag stolen.（バッグを盗まれた）。',
+    add: fresh(head('have／get ＋ O ＋ 過去分詞'), bx(10, 26, 300, 28, 'I had my hair cut yesterday.　切ってもらった', C.blue, FILL.blue, 10), bx(10, 60, 300, 28, 'I got my bike fixed at the shop.　直してもらった', C.green, FILL.green, 10), bx(10, 94, 300, 28, 'She had her bag stolen on the train.　盗まれた', C.red, FILL.red, 10), ...cap('してもらう・被害', C.ink)),
+  },
+  {
+    note: '❓原形か、過去分詞か、どう決めるのでしょう。→ O と動詞の関係で決めます。my brother は「運ぶ」側なので原形（能動）。my hair は「切られる」側なので過去分詞（受動）。自分でするのか、される側なのかを見ます。',
+    add: fresh(head('O と動詞の関係'), bx(10, 26, 145, 34, 'my brother carry', C.blue, FILL.blue, 12), bx(165, 26, 145, 34, 'my hair cut', C.red, FILL.red, 12), lb(82, 78, '弟が運ぶ（能動）', 12, C.blue, 'middle', true), lb(237, 78, '髪は切られる（受動）', 12, C.red, 'middle', true), lb(82, 102, '→ 原形', 13, C.blue, 'middle', true), lb(237, 102, '→ 過去分詞', 13, C.red, 'middle', true), ...cap('する側か、される側か')),
+  },
+  {
+    note: 'まとめです。強制は make、当然は have、許可は let、説得は get。make・have・let のあとは原形、get は to 不定詞。してもらう・被害は have／get＋O＋過去分詞。O が「する」側なら原形、「される」側なら過去分詞。',
+    add: fresh(bx(15, 12, 290, 28, 'make 強制 ／ have 当然 ／ let 許可 ／ get 説得', C.blue, FILL.blue, 10), bx(15, 46, 290, 28, 'make・have・let ＋ 原形、get ＋ to', C.green, FILL.green, 11), bx(15, 80, 290, 28, 'してもらう・被害 ＝ have／get ＋ O ＋ 過去分詞', C.red, FILL.red, 10), bx(15, 114, 290, 28, 'O が「する」→ 原形、「される」→ 過去分詞', C.purple, FILL.purple, 10), ...cap('日本語の気持ちで選ぶ', C.green)),
+  },
+], '「〜させる」「〜してもらう」の訳し分け');
+
+// ───────── koko_eigo_21_passive_advanced 原形不定詞の受動態 ─────────
+const a1 = chips(['I', 'saw', 'him', 'enter', 'the room.'], 30, C.blue, FILL.blue, 10, 12, 28);
+const p1 = chips(['He', 'was seen', 'to', 'enter', 'the room.'], 96, C.green, FILL.green, 10, 12, 28);
+const e21: DiagramFigure = show([
+  {
+    note: '知覚動詞（see・hear・feel）の文を受動態にすると、能動態にはなかった to が現れます。入試で最重要の変化点です。まず、能動態を確認しましょう。I saw him enter the room.（彼が部屋に入るのを見た）。enter は原形です。',
+    add: [head('能動態：動詞の原形'), ...a1.els, lb(160, 76, 'saw ＋ him ＋ 原形（enter）', 12, C.blue, 'middle', true), ...cap('see ＋ O ＋ 原形')],
+  },
+  {
+    note: '受動態にします。①目的語 him を主語 He にする。②saw を was seen にする。③原形 enter の前に to をつける。→ He was seen to enter the room.（彼は部屋に入るのを見られた）。',
+    add: fresh(head('能動態 → 受動態'), ...a1.els, ar(160, 62, 160, 92, C.main), ...p1.els, bx(p1.xs[2] - 2, 94, p1.ws[2] + 4, 32, undefined, C.red, FILL.red), lb(p1.xs[2] + p1.ws[2] / 2, 112, 'to', 13, C.red, 'middle', true), ...band(150, lb(160, 175, 'He was seen to enter the room.', 13, C.green, 'middle', true), lb(160, 205, '原形 enter の前に to が出る', 11, C.red, 'middle', true))),
+  },
+  {
+    note: '❓なぜ to が出るのでしょう。→ 能動態では、see などの直後に置く形のときだけ to を落とす決まりです。受動態では動詞が was seen と形を変えるので、ふつうの to 不定詞の形にもどる、と覚えておきましょう。「能動は原形、受動は to＋動詞」と、セットで暗記します。',
+    add: fresh(head('能動と受動でセットで覚える'), bx(15, 28, 135, 40, '能動態\nsaw him enter', C.blue, FILL.blue, 12), bx(170, 28, 135, 40, '受動態\nwas seen to enter', C.green, FILL.green, 11), ar(152, 48, 168, 48, C.main), lb(160, 96, '能動は原形、受動は to ＋ 動詞', 13, C.red, 'middle', true), ...cap('to が「出現」する', C.red)),
+  },
+  {
+    note: 'hear でも同じです。They heard her sing a song. → She was heard to sing a song.（彼女は歌を歌うのを聞かれた）。see・hear・feel などの知覚動詞は、みんな同じ型です。',
+    add: fresh(head('hear も同じ型'), bx(10, 28, 300, 30, 'They heard her sing a song.', C.blue, FILL.blue, 12), ar(160, 60, 160, 78, C.main), bx(10, 82, 300, 30, 'She was heard to sing a song.', C.green, FILL.green, 12), ...cap('see・hear・feel は同じ型', C.green)),
+  },
+  {
+    note: '❓-ing の形のときは、どうなるのでしょう。→ 進行中の動作を表す -ing 形は、そのまま使います。I saw him crossing the street. → He was seen crossing the street. to が必要なのは、原形の場合だけです。',
+    add: fresh(head('-ing なら to はいらない'), bx(10, 28, 300, 30, 'I saw him crossing the street.', C.blue, FILL.blue, 12), ar(160, 60, 160, 78, C.main), bx(10, 82, 300, 30, 'He was seen crossing the street.', C.green, FILL.green, 12), lb(160, 128, 'to が必要なのは、原形のときだけ', 12, C.red, 'middle', true), ...cap('-ing はそのまま')),
+  },
+  {
+    note: '使役動詞の make も同じです。His mother made him clean his room. → He was made to clean his room.（彼は部屋を掃除させられた）。make＋O＋原形が、be made to＋原形になります。',
+    add: fresh(head('make も to が出る'), bx(10, 28, 300, 30, 'His mother made him clean his room.', C.blue, FILL.blue, 12), ar(160, 60, 160, 78, C.main), bx(10, 82, 300, 30, 'He was made to clean his room.', C.green, FILL.green, 12), lb(160, 128, 'be made to ＋ 原形', 13, C.red, 'middle', true), ...cap('make ＋ O ＋ 原形 → be made to', C.green)),
+  },
+  {
+    note: '❓have と let は、受動態にしないのでしょうか。→ ほとんど使いません。let の受動態は英語として不自然になるので、入試では出ません。「許可された」は、He was allowed to use the computer. のように allow で言いかえます。',
+    add: fresh(head('have・let は受動態にしない'), bx(15, 28, 135, 34, 'have ／ let の受動態', C.gray, FILL.gray, 11), bx(170, 28, 135, 34, 'ほとんど使わない', C.red, FILL.red, 12), ar(160, 66, 160, 84, C.main), bx(15, 88, 290, 30, 'He was allowed to use the computer.', C.green, FILL.green, 11), ...cap('let は allow で言いかえる', C.green)),
+  },
+  {
+    note: 'まとめです。知覚動詞と make の SVOC は、受動態にすると原形に to がつく。-ing 形はそのまま。have・let は受動態にせず、allow などで言いかえる。「能動は原形、受動は to＋動詞」とセットで覚えましょう。',
+    add: fresh(bx(15, 14, 290, 30, '知覚動詞・make：受動態で to が出る', C.red, FILL.red, 12), bx(15, 52, 290, 30, '-ing 形は、そのまま', C.blue, FILL.blue, 12), bx(15, 90, 290, 30, 'have・let は受動態にしない（allow）', C.green, FILL.green, 12), ...cap('能動は原形、受動は to ＋ 動詞', C.green)),
+  },
+], '知覚動詞・使役動詞の受動態');
+
+// ───────── koko_eigo_22_verb_patterns SVOO と SVO＋to/for ─────────
+const v1 = chips(['He', 'gave', 'me', 'a present.'], 30, C.blue, FILL.blue, 10, 13, 30);
+const v2 = chips(['He', 'gave', 'a present', 'to', 'me.'], 96, C.green, FILL.green, 10, 13, 30);
+const e22: DiagramFigure = show([
+  {
+    note: '「人に物を〜する」という SVOO の文は、物を先に出して、前置詞（to か for）を使った SVO の形に書きかえられます。He gave me a present. = He gave a present to me.',
+    add: [head('SVOO ⇔ SVO ＋ to／for'), ...v1.els, lb(160, 80, '人（me）→ 物（a present）の順', 12, C.blue, 'middle', true), ...cap('He gave me a present.')],
+  },
+  {
+    note: '書きかえの手順です。①物（a present）を前に出す。②人（me）をうしろに回す。③人の前に前置詞（to）を置く。これで SVO＋to の形になります。',
+    add: fresh(head('人と物を入れかえ、前置詞をつける'), ...v1.els, ar(160, 64, 160, 92, C.main), ...v2.els, bx(v2.xs[3] - 1, 94, v2.ws[3] + 2, 34, undefined, C.red, FILL.red), lb(v2.xs[3] + v2.ws[3] / 2, 111, 'to', 14, C.red, 'middle', true), ...band(150, lb(160, 175, 'He gave a present to me.', 13, C.green, 'middle', true), lb(160, 205, '人の前に to を置く', 11, C.red, 'middle', true))),
+  },
+  {
+    note: '❓to と for は、どう使い分けるのでしょう。→ 動詞のイメージで決まります。物が実際に相手に届く・伝わる動詞は to。相手のために（代わりに）何かをする動詞は for です。',
+    add: fresh(head('to と for のイメージ'), bx(10, 26, 145, 56, 'to\n物が相手に\n届く・伝わる', C.blue, FILL.blue, 12), bx(165, 26, 145, 56, 'for\n相手のために\nしてあげる', C.green, FILL.green, 12), lb(82, 102, '渡す・伝える', 11, C.blue, 'middle'), lb(237, 102, '買う・作る', 11, C.green, 'middle'), ...cap('動詞のイメージで選ぶ')),
+  },
+  {
+    note: 'to を使う動詞は、give・show・teach・tell・send・lend・pass・write です。She teaches us English. → She teaches English to us.（私たちに英語を教える）。I\'ll send you the photos. → I\'ll send the photos to you.',
+    add: fresh(head('to のグループ'), ...rowb(['give', 'show', 'teach', 'tell'], 26, 28, C.blue, FILL.blue, 12, 10, 310, 6), ...rowb(['send', 'lend', 'pass', 'write'], 58, 28, C.blue, FILL.blue, 12, 10, 310, 6), lb(160, 110, 'She teaches English to us.', 12, C.ink, 'middle', true), lb(160, 132, 'I\'ll send the photos to you.', 12, C.ink, 'middle', true), ...cap('届く・伝わる動詞は to', C.blue)),
+  },
+  {
+    note: 'for を使う動詞は、buy・make・cook・get・find・choose です。My father bought me a bike. → My father bought a bike for me.（私のために自転車を買った）。She made him a cake. → She made a cake for him.',
+    add: fresh(head('for のグループ'), ...rowb(['buy', 'make', 'cook'], 26, 28, C.green, FILL.green, 12, 10, 310, 6), ...rowb(['get', 'find', 'choose'], 58, 28, C.green, FILL.green, 12, 10, 310, 6), lb(160, 110, 'My father bought a bike for me.', 12, C.ink, 'middle', true), lb(160, 132, 'She made a cake for him.', 12, C.ink, 'middle', true), ...cap('相手のために行う動詞は for', C.green)),
+  },
+  {
+    note: 'ask だけは特別で、to でも for でもなく of を使います。I asked him a favor. → I asked a favor of him.（彼にお願いをした）。「お願い（物・こと）を、彼に求める」という意味の動詞なので、to・for とはちがう of になります。',
+    add: fresh(head('ask は of'), bx(10, 28, 300, 30, 'I asked him a favor.', C.blue, FILL.blue, 13), ar(160, 60, 160, 78, C.main), bx(10, 82, 300, 30, 'I asked a favor of him.', C.red, FILL.red, 13), ...cap('ask だけは of', C.red)),
+  },
+  {
+    note: '❓代名詞のときは、どうなるのでしょう。→ 物が代名詞（it・them）のときは、SVO＋前置詞の形にします。× Give me it. ではなく、Give it to me. が正しい形です。',
+    add: fresh(head('物が it・them のとき'), bx(10, 28, 300, 30, '× Give me it.', C.red, FILL.red, 14), bx(10, 66, 300, 30, '○ Give it to me.', C.green, FILL.green, 14), lb(160, 118, '物が代名詞 → SVO ＋ to／for の形', 12, C.ink, 'middle', true), ...cap('Give it to me.', C.green)),
+  },
+  {
+    note: 'まとめです。SVOO は SVO＋to／for に書きかえられる。届く・伝わる動詞は to、相手のためにする動詞は for、ask は of。物が代名詞のときは、前置詞の形にする。',
+    add: fresh(bx(15, 14, 290, 30, 'SVOO ⇔ SVO ＋ to／for（人は後ろへ）', C.blue, FILL.blue, 12), bx(15, 52, 290, 30, 'give 型は to、buy 型は for、ask は of', C.green, FILL.green, 12), bx(15, 90, 290, 30, '物が代名詞 → Give it to me.', C.red, FILL.red, 12), ...cap('動詞のイメージで選ぶ', C.green)),
+  },
+], 'SVOO と SVO ＋ to／for の書きかえ');
+
 export const XF_KEA_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_eigo_s001': s001,
   'xf_koko_eigo_s003': s003,
@@ -1107,6 +1258,10 @@ export const XF_KEA_FIGURES: Record<string, DiagramFigure> = {
   'xf_koko_eigo_16_functional_scenes': e16,
   'xf_koko_eigo_17_eiken_expressions': e17,
   'xf_koko_eigo_18_question_types': e18,
+  'xf_koko_eigo_19_dialogue_reading': e19,
+  'xf_koko_eigo_20_translation_patterns': e20,
+  'xf_koko_eigo_21_passive_advanced': e21,
+  'xf_koko_eigo_22_verb_patterns': e22,
 };
 
 export const XF_KEA_SECTIONS: Record<string, string> = {
@@ -1136,4 +1291,8 @@ export const XF_KEA_SECTIONS: Record<string, string> = {
   'koko_eigo_16_functional_scenes#0': 'xf_koko_eigo_16_functional_scenes',
   'koko_eigo_17_eiken_expressions#0': 'xf_koko_eigo_17_eiken_expressions',
   'koko_eigo_18_question_types#0': 'xf_koko_eigo_18_question_types',
+  'koko_eigo_19_dialogue_reading#2': 'xf_koko_eigo_19_dialogue_reading',
+  'koko_eigo_20_translation_patterns#2': 'xf_koko_eigo_20_translation_patterns',
+  'koko_eigo_21_passive_advanced#2': 'xf_koko_eigo_21_passive_advanced',
+  'koko_eigo_22_verb_patterns#2': 'xf_koko_eigo_22_verb_patterns',
 };
