@@ -1040,7 +1040,7 @@ const e17: DiagramFigure = show([
 ], 'used to ・ be used to ・ get used to');
 
 // ───────── koko_eigo_18_question_types 内容一致のひっかけ ─────────
-const pairRow = (y: number, left: string, right: string, lc = C.blue, rc = C.red): E[] => [bx(10, y, 142, 34, left, lc, FILL.blue, 10), lb(160, y + 17, '→', 14, C.main, 'middle', true), bx(168, y, 142, 34, right, rc, FILL.red, 10)];
+const pairRow = (y: number, left: string, right: string, lc: string = C.blue, rc: string = C.red): E[] => [bx(10, y, 142, 34, left, lc, FILL.blue, 10), lb(160, y + 17, '→', 14, C.main, 'middle', true), bx(168, y, 142, 34, right, rc, FILL.red, 10)];
 const e18: DiagramFigure = show([
   {
     note: '内容一致問題の選択肢は、本文と一見似ているのに、微妙にちがうものが並びます。代表的な「ひっかけ」の型を知っておくと、選ぶ速さと正しさが上がります。',
@@ -1081,8 +1081,8 @@ const e18: DiagramFigure = show([
 ], '内容一致問題のひっかけ');
 
 // ───────── koko_eigo_19_dialogue_reading 発言選択型 ─────────
-const bubA = (y: number, t: string, color = C.blue, fill: string = FILL.blue, size = 10): E[] => [lb(8, y + 14, 'A', 12, C.blue, 'start', true), bx(24, y, 230, 28, t, color, fill, size)];
-const bubB = (y: number, t: string, color = C.green, fill: string = FILL.green, size = 10): E[] => [bx(66, y, 230, 28, t, color, fill, size), lb(306, y + 14, 'B', 12, C.green, 'end', true)];
+const bubA = (y: number, t: string, color: string = C.blue, fill: string = FILL.blue, size = 10): E[] => [lb(8, y + 14, 'A', 12, C.blue, 'start', true), bx(24, y, 230, 28, t, color, fill, size)];
+const bubB = (y: number, t: string, color: string = C.green, fill: string = FILL.green, size = 10): E[] => [bx(66, y, 230, 28, t, color, fill, size), lb(306, y + 14, 'B', 12, C.green, 'end', true)];
 const e19: DiagramFigure = show([
   {
     note: '対話文の空所補充は、「次の発言」から逆算するのがいちばん効果的です。空所の前だけでなく、直後の発言がどう応じているかを手がかりにします。',

@@ -43,10 +43,11 @@ const nb = (x: number, y: number, w: number, h: number, t: string, k: K = 'm', s
   if (size > 0 && (w - 8) / Math.max(units(t), 0.1) < 10) XF_KEG_WARN.push('nb ' + ((w - 8) / Math.max(units(t), 0.1)).toFixed(1) + ' ' + t); // WARN-DEV
   return bx(x, y, w, h, t, KC[k][0], KC[k][1], size);
 };
+const chk = (t: string, size: number) => { if (312 / Math.max(units(t), 0.1) < Math.min(size, 10.5)) XF_KEG_WARN.push('lb ' + (312 / units(t)).toFixed(1) + ' ' + t); return true; }; // WARN-DEV
 /** 上のタイトル */
-const tt = (t: string, k: K = 'm', y = 14) => lb(160, y, t, 12, TXT[k], 'middle', true);
+const tt = (t: string, k: K = 'm', y = 14) => chk(t, 12) && lb(160, y, t, 12, TXT[k], 'middle', true);
 /** 下のひとこと */
-const cp = (t: string, k: K = 'm', y = 205, size = 13) => lb(160, y, t, size, TXT[k], 'middle', true);
+const cp = (t: string, k: K = 'm', y = 205, size = 13) => chk(t, size) && lb(160, y, t, size, TXT[k], 'middle', true);
 /** 小さな説明文 */
 const sm = (x: number, y: number, t: string, k: K = 'n', size = 11, anchor: 'start' | 'middle' | 'end' = 'middle') => {
   if (312 / Math.max(units(t), 0.1) < 10) XF_KEG_WARN.push('sm ' + t); // WARN-DEV
