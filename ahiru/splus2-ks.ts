@@ -217,7 +217,7 @@ export const SPLUS2_KS: Question[] = [
     "question": "次の日本語の意味になるように、( )内の語（句）を並べかえて英文を完成させなさい。ただし、文頭にくる語も小文字で示してある。\n「駅への行き方を教えていただけませんか。」\n( how / to / me / tell / get / you / to / the station / could )",
     "answer": "Could you tell me how to get to the station?",
     "hint": "「〜していただけませんか」は could you で始める。「行き方」は how to＋動詞の形。",
-    "explanation": "【何を聞かれているか】語を並べかえて、ていねいな依頼の英文を作る。\n【なぜその語順なのか】「〜していただけませんか」は、**Could you＋動詞の原形〜?** で表すていねいな依頼。「（人）に（もの）を教える」は tell＋人＋もの の順で、「もの」にあたる部分が「駅への行き方」。「〜の仕方」は **how to＋動詞の原形** で表す。\n【ステップ1】Could you tell ... の形で始める。\n【ステップ2】tell のあとは「人」にあたる me を置く。\n【ステップ3】「行き方」は how to get to the station。get to は「〜に着く、行く」。\n【答え】Could you tell me how to get to the station?\n【確かめ】to が2つあるが、「how to（不定詞）」と「get to（〜へ）」で働きが違う。文頭は大文字、文末は疑問符(?)にする。\n【よくあるまちがい】how to を how go や how to go to にしてしまう（意味は通るが、語群にない語は使えない）。**to が2回登場する**ことに気づく。",
+    "explanation": "【何を聞かれているか】語を並べかえて、ていねいな依頼の英文を作る。\n【なぜその語順なのか】「〜していただけませんか」は、**Could you＋動詞の原形〜?** で表すていねいな依頼。「（人）に（もの）を教える」は tell＋人＋もの の順で、「もの」にあたる部分が「駅への行き方」。「〜の仕方」は **how to＋動詞の原形** で表す。\n【ステップ1】Could you tell ... の形で始める。\n【ステップ2】tell のあとは「人」にあたる me を置く。\n【ステップ3】「行き方」は how to get to the station。get to は「〜に着く、行く」。\n【答え】Could you tell me how to get to the station?\n【確かめ】to が2つあるが、「how to（不定詞）」と「get to（〜へ）」で働きが違う。文頭は大文字、文末は疑問符(?)にする。\n【よくあるまちがい】how to get を how get や how go にしてしまう。**to が2回登場する**ことに気づく。",
     "memoryTip": "Could you tell me how to ～? ＝ ～の仕方を教えていただけませんか"
   },
   {
@@ -256,7 +256,7 @@ export const SPLUS2_KS: Question[] = [
     "difficulty": "advanced",
     "course": "koko-shitennoji",
     "examType": "koko",
-    "question": "次の日本語を、指定された語数・文型の英語にしなさい。\n問1：「この問題はとても難しかったので、だれも解くことができなかった。」（so ... that を使う）\n問2：「彼女が昨日読んでいた本は、私の姉によって書かれた。」（関係代名詞と受動態を使う）",
+    "question": "次の日本語を、指定された構文を使った英語にしなさい。\n問1：「この問題はとても難しかったので、だれも解くことができなかった。」（so ... that を使う）\n問2：「彼女が昨日読んでいた本は、私の姉によって書かれた。」（関係代名詞と受動態を使う）",
     "answer": "問1: This problem was so difficult that nobody could solve it. / 問2: The book which she was reading yesterday was written by my sister.",
     "hint": "問1は so＋形容詞＋that＋文。問2は「本」を説明する部分を後ろにつけて、全体の述語を受け身にする。",
     "explanation": "【何を聞かれているか】構文を使った和文英訳。問1は「とても〜なので…」、問2は「関係代名詞＋受動態」。\n【なぜその文型なのか】**so ～ that …**は「とても～なので…だ」という結果を表す構文。**関係代名詞**は、名詞（先行詞）に説明を加えるはたらきを持つ。ここでは「本」＝先行詞、「彼女が昨日読んでいた」＝説明で、その本は「書かれた」＝受け身。\n【ステップ1】問1：主語は This problem。was so difficult（とても難しかった）＋that＋結果（だれも解けなかった）。「だれも〜ない」は nobody を主語にし、動詞は肯定の形で could solve it。\n【ステップ2】問2：先行詞 The book（もの）のあとに、which she was reading yesterday（彼女が昨日読んでいた）をつける。目的格なので which は省略できる（that も可）。\n【ステップ3】全体の述語は「書かれた」＝ was written by my sister。\n【答え】問1 This problem was so difficult that nobody could solve it. 問2 The book which she was reading yesterday was written by my sister.\n【確かめ】問1：「nobody」と「not」を重ねて二重否定にしていないか確認。問2：先行詞が the book なので who ではなく which を使っている。\n【よくあるまちがい】問1で、**nobody could not solve** のように否定を二重にする。問2で、書いた人を表す by my sister を忘れる、または write を written ではなく wrote にする。",
