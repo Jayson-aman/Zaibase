@@ -801,7 +801,7 @@ const coilTurns = (n: number, rev = false): E[] => {
   const sp = 130 / n;
   return Array.from({ length: n }, (_, i) => (rev ? ln(x0 + i * sp + 10, 54, x0 + i * sp, 100, C.red, false, 2) : ln(x0 + i * sp, 54, x0 + i * sp + 10, 100, C.red, false, 2)));
 };
-const magnetWires = (battLabel = '電池'): E[] => [bx(14, 68, 48, 24, battLabel, C.main, FILL.warm, 11), W(38, 68, 38, 48), W(38, 48, 100, 48), W(100, 48, 100, 54), W(240, 100, 240, 120), W(240, 120, 38, 120), W(38, 120, 38, 92)];
+const magnetWires = (battLabel = '電池'): E[] => [bx(14, 68, 48, 24, battLabel, C.main, FILL.warm, battLabel.includes('\n') ? 9 : 11), W(38, 68, 38, 48), W(38, 48, 100, 48), W(100, 48, 100, 54), W(240, 100, 240, 120), W(240, 120, 38, 120), W(38, 120, 38, 92)];
 const poles = (nRight: string, nLeft: string): E[] => [lb(250, 77, nRight, 16, nRight === 'N' ? C.red : C.blue, 'middle', true), lb(76, 77, nLeft, 16, nLeft === 'N' ? C.red : C.blue, 'middle', true)];
 const hoseiRi01 = show([
   {

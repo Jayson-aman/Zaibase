@@ -714,7 +714,7 @@ Students at our school must wear their school uniform. They must not use their s
 ① [ you / eaten / have / ever / natto ]?
   （あなたは今までに納豆を食べたことがありますか）
 
-② [ finished / has / she / yet / not ] her report.
+② [ finished / has / she / yet / not / her report ].
   （彼女はまだレポートを終えていない）`,
     answer: `① Have you ever eaten natto?
 ② She has not finished her report yet.`,

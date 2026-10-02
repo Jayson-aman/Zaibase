@@ -723,7 +723,7 @@ come up with〜：（考え・計画・解決策を）思いつく
   {
     id: 'koko_nyushi_eigo3_28',
     subject: 'eigo',
-    question: '次の語を並べ替えて正しい英文を作れ。（1語不要な語が含まれる）\n（ have / for / we / been / since / practicing / this song / two weeks / from ）\n「私たちはこの歌を2週間ずっと練習している。」',
+    question: '次の語を並べ替えて正しい英文を作れ。（1語不要な語が含まれる）\n（ have / for / we / been / since / practicing / this song / two weeks ）\n「私たちはこの歌を2週間ずっと練習している。」',
     answer: 'We have been practicing this song for two weeks.',
     hint: '「2週間ずっと〜している」は現在完了進行形。for（〜の間）か since（〜以来）かを判断する。',
     explanation: `【出題意図】
@@ -731,7 +731,7 @@ come up with〜：（考え・計画・解決策を）思いつく
 
 【解説】
 「2週間」は期間（duration）なので for を使う。since は起点（since April など）に使う。
-不要語：from（× we have been practicing this song from two weeks → from は不可）
+不要語：since（since は「〜以来」と起点を表す語。two weeks は期間なので for を使う：× we have been practicing this song since two weeks）
 
 正しい語順：
 We have been practicing this song for two weeks.

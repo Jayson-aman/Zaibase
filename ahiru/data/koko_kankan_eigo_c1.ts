@@ -534,9 +534,7 @@ Artificial intelligence, which was once considered science fiction, is now part 
     question: `次の日本語を英語に訳しなさい。（30語以上、分詞構文を1つ使うこと）
 
 「彼女が言ったことに驚いて、私は何と答えればよいかわからなかった。もし彼女がもっと早く教えてくれていたら、私はもっとうまく準備できていたのに。」`,
-    answer: `（解答例）Surprised at what she said, I didn't know what to say. If she had told me earlier, I could have prepared much better.（22語→語数を増やす必要あり）
-
-（30語以上の解答例）Being surprised at what she had told me, I had no idea what to say in response. If only she had told me about it earlier, I could have prepared myself much better for the situation.（35語）`,
+    answer: `（解答例）Being surprised at what she had told me, I had no idea what to say in response. If only she had told me about it earlier, I could have prepared myself much better for the situation.（36語）`,
     hint: '「驚いて」→分詞構文Surprised at〜またはBeing surprised at〜。「もし〜していたら〜できたのに」→仮定法過去完了。',
     explanation: `【出題意図】分詞構文と仮定法過去完了を組み合わせた和文英訳。感情の分詞構文・関係詞what・仮定法の複合運用を問う。【解説】「彼女が言ったことに驚いて」→Being surprised at what she had told me（whatは「〜すること・もの」を表す関係代名詞、she had toldは私が驚いた時点よりも前の出来事なので過去完了にすると精密）。「何と答えればよいかわからなかった」→had no idea what to say（疑問詞+to不定詞）。「もし彼女がもっと早く教えてくれていたら」→If she had told me earlier（仮定法過去完了のif節）。「もっとうまく準備できていたのに」→I could have prepared much better（仮定法過去完完了の帰結節）。【注意点】感情を表す分詞構文はBeing+p.p.の形が基本だが、Being省略でSurprisedのみで始めることも可能。仮定法過去完了はhad+p.p.（if節）とwould/could have+p.p.（主節）の組み合わせを正確に対応させる。【関連知識】If only〜（〜でありさえすれば）は仮定法の強い願望・後悔を表す表現として頻出。`,
     pitfall: 'If she told me earlierと仮定法過去にすると、過去の後悔ではなく現在の仮定になり文脈と矛盾する。',
@@ -822,9 +820,7 @@ Little did the villagers know that the quiet stranger who had arrived that morni
     question: `次の日本語を英語に訳しなさい。（40語以上。分詞構文と関係代名詞の非制限用法をそれぞれ1つ以上使うこと）
 
 「駅から遠く離れたところに住んでいるので、彼女は毎朝早く起きなければならない。彼女の兄は、大学で経済学を専攻しているのだが、車で彼女を駅まで送ってくれることがある。」`,
-    answer: `（解答例）Living far from the station, she has to get up early every morning. Her brother, who is majoring in economics at university, sometimes drives her to the station by car.（30語→語数を増やす必要あり）
-
-（40語以上の解答例）Since she is living quite far away from the nearest train station, living there means she has to wake up very early every single morning. Her older brother, who happens to be majoring in economics at university, sometimes kindly drives her all the way to the station by car.（46語）`,
+    answer: `（解答例）Living quite far away from the nearest train station, she has to wake up very early every single morning. Her older brother, who happens to be majoring in economics at university, sometimes kindly drives her all the way to the station by car.（43語）`,
     hint: '「〜なので」→理由の分詞構文Living far from〜。「彼女の兄は、〜専攻しているのだが」→非制限用法の関係代名詞who。',
     explanation: `【出題意図】理由を表す分詞構文と非制限用法の関係代名詞を組み合わせた自由英作文。複文構造を英語で正確に表現する力を問う。【解説】「駅から遠く離れたところに住んでいるので」→理由を表す分詞構文Living far from the station（Because she lives far from the stationの書き換え）。「彼女は毎朝早く起きなければならない」→she has to get up early every morning。「彼女の兄は、大学で経済学を専攻しているのだが」→Her brother, who is majoring in economics at university,（非制限用法。兄が1人しかいないことを前提に補足情報として専攻を加える）。「車で彼女を駅まで送ってくれることがある」→sometimes drives her to the station by car。【注意点】非制限用法はコンマを忘れずに付け、thatではなくwhoを使う。分詞構文の主語（Living〜の意味上の主語）は主節の主語sheと一致させる。【関連知識】理由の分詞構文はBecause/Since/Asで始まる節から接続詞と主語を省略して作ることができる。`,
     pitfall: 'Her brother who is majoring in economicsとコンマを忘れると、複数いる兄弟の中から専攻で限定する制限用法の意味に変わってしまう。',

@@ -649,14 +649,14 @@ which＋名詞（which vegetables, which bag）で「どの〜」という限定
   {
     id: 'koko_nyushi_eigo7_28',
     subject: 'eigo',
-    question: '次の語を並べ替えて正しい英文を作れ。（1語不要な語が含まれる）\n（ have / been / I / cooking / for / since / an hour / from ）\n「私は1時間ずっと料理をしている。」',
+    question: '次の語を並べ替えて正しい英文を作れ。（1語不要な語が含まれる）\n（ have / been / I / cooking / for / since / an hour ）\n「私は1時間ずっと料理をしている。」',
     answer: 'I have been cooking for an hour.',
     hint: '「1時間ずっと〜している」は現在完了進行形。for（〜の間）か since（〜以来）かを判断する。',
     explanation: `【出題意図】
 現在完了進行形（have been + Ving）の語順と、for / since の使い分けを問う問題。不要語の識別も含む。
 
 【解説】
-「an hour（1時間）」は期間（duration）なので for を使う。since は起点に使う。不要語：from（× I have been cooking from an hour → from は不可）。
+「an hour（1時間）」は期間（duration）なので for を使う。since は起点に使う。不要語：since（since は「〜以来」と起点を表す語。an hour は期間なので for を使う：× I have been cooking since an hour）。
 
 正しい語順：
 I have been cooking for an hour.
@@ -751,7 +751,7 @@ buy＋人＋物＝人のために物を買う（第4文型）。
   {
     id: 'koko_nyushi_eigo7_33',
     subject: 'eigo',
-    question: '次の語を並べ替えて正しい英文を作れ。\n（ this / heavy / carry / is / enough / light / for / to / my / grandmother / bag ）\n「このバッグは祖母が運べるほど軽い。」',
+    question: '次の語を並べ替えて正しい英文を作れ。（1語不要な語が含まれる）\n（ this / heavy / carry / is / enough / light / for / to / my / grandmother / bag ）\n「このバッグは祖母が運べるほど軽い。」',
     answer: 'This bag is light enough for my grandmother to carry.',
     hint: '「〜が…するのに十分〜だ」は 形容詞＋enough＋for＋人＋to 動詞 の形。',
     explanation: `【出題意図】

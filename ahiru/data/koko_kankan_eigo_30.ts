@@ -351,7 +351,7 @@ A: Thanks. I'll try that.
 ② [ the / is / is / who / woman / that ] standing by the door?
   （ドアのそばに立っている女性は誰ですか）
 
-③ [ has / she / for / been / years / ten ] a nurse.
+③ [ has / she / for / been / years / ten / a nurse ].
   （彼女は10年間看護師をしている）`,
     answer: `① I don't know what to do next.
 ② Who is the woman that is standing by the door?

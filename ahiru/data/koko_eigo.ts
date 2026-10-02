@@ -199,7 +199,7 @@ export const ktEigo: Question[] = [
     question:
       '高度な英作文。「スマートフォンの使用時間を制限することの賛否について、あなたの考えを60語以上で書け。理由を2つ挙げること。」',
     answer:
-      'I agree that we should limit smartphone use. First, spending too much time on smartphones can harm our health, especially our eyesight and sleep. Second, it can reduce face-to-face communication with family and friends. Of course, smartphones are useful, but we need to use them wisely and set a time limit.（約60語）',
+      'I agree that we should limit smartphone use. First, spending too much time on smartphones can harm our health, especially our eyesight and sleep. Second, it can reduce face-to-face communication with family and friends. For example, many students stay up late using their phones, and they feel tired at school the next day. Of course, smartphones are useful, but we need to use them wisely and set a time limit.（70語）',
     hint: 'I agree/disagree thatで意見を示す。First, Second,で理由を2つ。反論も少し触れるとより高評価',
     explanation:
       '意見文の型：①意見(agree/disagree)②First（理由1）③Second（理由2）④反論への言及(Of course, but...)⑤まとめ。語数管理：60語を超えるよう意識。減点ポイント：スペルミス・三単現のs漏れ・時制の混乱。高評価ポイント：because/although/however等の接続詞使用・具体例・論理的構成。',

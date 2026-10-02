@@ -66,7 +66,7 @@ export const gradeJ2RikaQuestions: Question[] = [
     grade: 'j2',
     difficulty: 'standard',
     question: '炭素が酸素と結びついて二酸化炭素になる化学変化を、化学反応式で表しなさい。',
-    figureDescription: '炭素の燃焼を表す化学反応式の図（C + O2 → CO2）',
+    figureDescription: '炭素の燃焼を表す化学反応式の図',
     answer: 'C + O2 → CO2',
     hint: '炭素原子1個と酸素分子1個(酸素原子2個)が結びつく反応。左右で原子の種類と数が同じになっているか確かめる。',
     explanation:
@@ -80,7 +80,7 @@ export const gradeJ2RikaQuestions: Question[] = [
     difficulty: 'standard',
     question:
       '次の化学反応式の空欄に適する係数を入れて、化学反応式を完成させなさい。\n（　）H2 ＋ O2 → （　）H2O',
-    figureDescription: '水素の燃焼を表す化学反応式の図（2H2 + O2 → 2H2O）',
+    figureDescription: '水素の燃焼を表す化学反応式の図',
     answer: '2H2 + O2 → 2H2O',
     hint: '質量保存の法則より、反応の前後で原子の種類と数は変わらない。まず酸素原子の数から考える。',
     explanation:
@@ -150,7 +150,7 @@ export const gradeJ2RikaQuestions: Question[] = [
     difficulty: 'advanced',
     question:
       '石灰石（炭酸カルシウム CaCO3）にうすい塩酸（HCl）を加えると、塩化カルシウム（CaCl2）・水・二酸化炭素ができる。この化学変化を化学反応式で表しなさい。',
-    figureDescription: '石灰石と塩酸の反応を表す化学反応式の図（CaCO3 + 2HCl → CaCl2 + H2O + CO2）',
+    figureDescription: '石灰石と塩酸の反応を表す化学反応式の図',
     answer: 'CaCO3 + 2HCl → CaCl2 + H2O + CO2',
     hint: 'まずCaの数をそろえ、次にClの数から左辺のHClの係数を決める。最後にH、C、Oの数がすべて一致しているか確認する。',
     explanation:
@@ -207,7 +207,7 @@ export const gradeJ2RikaQuestions: Question[] = [
     difficulty: 'standard',
     question:
       '鉄くぎを空気中に長期間置いておくと、表面がさびて酸化鉄(III) Fe2O3になる。この化学変化を化学反応式で表しなさい。',
-    figureDescription: '鉄の酸化（さび）を表す化学反応式の図（4Fe + 3O2 → 2Fe2O3）',
+    figureDescription: '鉄の酸化（さび）を表す化学反応式の図',
     answer: '4Fe + 3O2 → 2Fe2O3',
     hint: '酸化鉄(III)の化学式Fe2O3をもとに、鉄原子・酸素原子の数がそろうように係数を決める。',
     explanation:
@@ -221,7 +221,7 @@ export const gradeJ2RikaQuestions: Question[] = [
     difficulty: 'standard',
     question:
       '酸化銅（CuO）の粉末と炭素（C）の粉末をよく混ぜ合わせて加熱すると、赤色の銅と二酸化炭素が発生する。この化学変化を化学反応式で表しなさい。',
-    figureDescription: '酸化銅の炭素による還元を表す化学反応式の図（2CuO + C → 2Cu + CO2）',
+    figureDescription: '酸化銅の炭素による還元を表す化学反応式の図',
     answer: '2CuO + C → 2Cu + CO2',
     hint: '酸化銅は酸素を失って銅になり（還元）、炭素は酸素と結びついて二酸化炭素になる（酸化）ことをふまえて係数を決める。',
     explanation:
@@ -236,7 +236,7 @@ export const gradeJ2RikaQuestions: Question[] = [
     isWritten: true,
     question:
       '酸化銅を試験管に入れ、水素を送りながら加熱すると銅と水ができる。①この化学変化を化学反応式で表しなさい。②この実験で、加熱をやめる前に必ず行わなければならない操作は何か、理由もふくめて答えなさい。',
-    figureDescription: '酸化銅の水素による還元を表す化学反応式の図（CuO + H2 → Cu + H2O）',
+    figureDescription: '酸化銅の水素による還元を表す化学反応式の図',
     answer:
       '①CuO + H2 → Cu + H2O　②加熱をやめた後もしばらく水素を送り続け、試験管が冷えてから水素を止める。冷える前に水素を止めて空気（酸素）が試験管内に入ると、還元されたばかりの熱い銅が再び酸化されてしまうため。',
     hint: '実験の後半で、熱いままの銅に空気が触れるとどうなるかを考える。',

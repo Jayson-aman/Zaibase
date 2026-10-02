@@ -704,7 +704,7 @@ the city where she was born = the city in which she was born
   {
     id: 'koko_nyushi_eigo_28',
     subject: 'eigo',
-    question: '次の語を並べ替えて正しい英文を作れ。（1語不要な語が含まれる）\n（ have / for / I / been / since / living / here / from / ten years ）\n「私はここに10年間住んでいる。」',
+    question: '次の語を並べ替えて正しい英文を作れ。（1語不要な語が含まれる）\n（ have / for / I / been / since / living / here / ten years ）\n「私はここに10年間住んでいる。」',
     answer: 'I have been living here for ten years.',
     hint: '「10年間ずっと〜している」は現在完了進行形。for（〜の間）か since（〜以来）かを判断する。',
     explanation: `【出題意図】
@@ -712,7 +712,7 @@ the city where she was born = the city in which she was born
 
 【解説】
 「10年間」は期間（duration）なので for を使う。since は起点（since 2010 / since I was a child）に使う。
-不要語：from（× I have been living here from ten years → from は不可）
+不要語：since（since は「〜以来」と起点を表す語。ten years は期間なので for を使う：× I have been living here since ten years）
 
 正しい語順：
 I have been living here for ten years.

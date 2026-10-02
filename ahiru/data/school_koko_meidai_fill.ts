@@ -853,8 +853,8 @@ B: Thanks! I'm glad I did it.
 
 Put the words in the correct order to make a natural English sentence. Each set has one extra word that is NOT used.
 
-1. [ than / this / more / difficult / is / hard / that ] question.
-2. [ has / never / I / such / seen / a / beautiful / view / more ].
+1. [ than / this / more / difficult / is / hard / that / question ].
+2. [ have / never / I / such / seen / a / beautiful / view / more ].
 3. [ what / do / to / know / don't / I / say ].`,
     answer: '1. This question is more difficult than that. （hardは不要）　2. I have never seen such a beautiful view. （moreは不要）　3. I don\'t know what to say. （doは不要）',
     hint: '1「more difficult than 〜」の比較級構文で、形容詞difficultとhardの両方は使わない。2「such a + 形容詞 + 名詞」の構文。3「don\'t know + 疑問詞 + to不定詞」。',

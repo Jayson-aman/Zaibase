@@ -416,11 +416,11 @@ export const lessonFigsNew20E4Sansu: Record<string, Figure> = {
   n20e4_20_a: {
     kind: 'polygon',
     points: [
-      { x: 5, y: 8, label: 'A' },
+      { x: 0.714, y: 4.949, label: 'A' },
       { x: 0, y: 0, label: 'B' },
-      { x: 10, y: 0, label: 'C' },
+      { x: 7, y: 0, label: 'C' },
     ],
-    sideLabels: ['AB＝5cm', 'BC＝7cm', 'CA＝6cm'],
+    sideLabels: ['AB＝5cm', 'BC＝7cm', 'CA＝8cm'],
     equalAngles: [[0]],
     caption: '三角形ABC。対応する三角形PQRでは、A↔P、B↔Q、C↔Rの順に辺・角が対応する',
     steps: [
@@ -429,7 +429,7 @@ export const lessonFigsNew20E4Sansu: Record<string, Figure> = {
       '合同な図形では、対応する角の大きさもそれぞれすべて等しい(角A＝角P、角B＝角Q、角C＝角R)',
       '図形が回転していたり裏返しになっていても、重ねてぴったり一致すれば合同である',
       '合同の記号は「≡」で表し、三角形ABC≡三角形PQRのように、対応する頂点の順番をそろえて書く',
-      '例題：AB＝5cm、BC＝7cm、CA＝6cm、角A＝50°のとき、対応する辺PQ＝5cm、角P＝50°になる',
+      '例題：AB＝5cm、BC＝7cm、CA＝8cm、角A＝60°のとき、対応する辺PQ＝5cm、角P＝60°になる',
       '見た目の形が似ているだけでは合同と判断できない。対応する辺の長さ・角の大きさがすべて等しいと確認できて初めて合同といえる',
     ],
   },
