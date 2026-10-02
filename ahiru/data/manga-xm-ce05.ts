@@ -285,7 +285,7 @@ export const XM_CE05_SCRIPTS: Record<string, MangaScript> = {
       { speaker: 't', line: `では tea はどうなる？` },
       { speaker: 's2', line: `数えられないままだから、形は変わりません。three cups of tea です。` },
       { speaker: 't', line: `複数形にするのは、数えている入れ物やかたまり（cup・glass・bottle・piece）のほう。of のうしろの数えられない名詞は、いくつあっても形を変えない。`, emphasis: true },
-      { speaker: 's1', line: `見直すときは of を探して、その左の語に s があるかを確かめます。` },
+      { speaker: 's1', line: `最後にもう一度 of を探して、その左の語に s があるかを確かめます。` },
     ],
   },
 
