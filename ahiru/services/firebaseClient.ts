@@ -53,6 +53,13 @@ export async function getFirebaseAuth(): Promise<Auth> {
 
 async function ensureSignedIn(): Promise<string> {
   const auth = await getFirebaseAuth();
+  // 保存済みのログイン状態を読み込み終わるまで待つ。待たずに currentUser を見ると、
+  // ログイン済みでも一瞬 null で、匿名ログインが新しいユーザーに差し替えてしまう。
+  try {
+    await auth.authStateReady();
+  } catch {
+    // 待てない環境では、そのまま続ける
+  }
   if (auth.currentUser) return auth.currentUser.uid;
   const { signInAnonymously } = await import('firebase/auth');
   const cred = await signInAnonymously(auth);

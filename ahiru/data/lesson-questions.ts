@@ -122,6 +122,8 @@ export function getRelatedQuestions(lesson: Lesson, pool: Question[], opts: Opti
     // 長文読解は設問だけ出しても解けないので、その場で解く一問一答には向かない。
     // 本文がpassageではなくquestionに直接書かれている大問もあるため、長さでも弾く。
     if (q.passage != null && q.passage !== '') return false;
+    // 選択肢つきの問題は、その場の一問一答（書いて答える形）では選択肢が出ないので解けない。
+    if ((q.choices ?? []).length > 0) return false;
     if (q.question.length > MAX_QUESTION_LENGTH) return false;
     return true;
   });

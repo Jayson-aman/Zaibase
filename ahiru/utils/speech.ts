@@ -180,6 +180,7 @@ export function toSpeechText(text: string): string {
     .replace(/≈/g, 'およそ')
     .replace(/≦/g, 'いか')
     .replace(/≧/g, 'いじょう')
+    .replace(/ルート(\d+)\/(\d+)/g, '$2分のルート$1')
     .replace(/(\d+)\/(\d+)/g, '$2分の$1')
     .replace(/₁/g, '1')
     .replace(/₂/g, '2')

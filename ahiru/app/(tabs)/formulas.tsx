@@ -74,8 +74,12 @@ const FormulaRow = React.memo(function FormulaRow({
   bundleItemCap,
   fullPriceLabel,
   bundleOffPercent,
+  reviewSubject,
+  reviewExamType,
 }: {
   item: FormulaItem;
+  reviewSubject: string;
+  reviewExamType: string;
   accent: string;
   bypassLock: boolean;
   isUnlocked: boolean;
@@ -268,6 +272,8 @@ const FormulaRow = React.memo(function FormulaRow({
               question: qz.q,
               answer: qz.a,
               explanation: qz.explanation,
+              subject: reviewSubject,
+              examType: reviewExamType,
             }))}
           />
         )}
@@ -507,6 +513,8 @@ export default function FormulasScreen() {
           bundleItemCap={Math.min(FORMULA_BUNDLE_ITEM_CAP, bundleCount)}
           fullPriceLabel={fullPriceLabel}
           bundleOffPercent={bundleOffPercent}
+          reviewSubject={subject === '算数' ? 'sansu' : 'other'}
+          reviewExamType={examType}
         />
       ),
     [
@@ -528,6 +536,8 @@ export default function FormulasScreen() {
       boughtCount,
       fullPriceLabel,
       bundleOffPercent,
+      subject,
+      examType,
     ],
   );
 

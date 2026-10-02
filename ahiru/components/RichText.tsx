@@ -26,7 +26,7 @@ const SPLIT = /(\*\*[^*]+?\*\*)/g;
  *    size / color を rich() の第2引数で渡せる（渡さなければ 16 / 濃い茶色）。
  * ⚠️ FigureView の図解の中の文字は SVG なので、ここを通らない（図の中は「1/2」のまま）。
  */
-const FRACTION = /(^|[^\d./])(\d{1,5})\/(\d{1,5})(?![\d./])/g;
+const FRACTION = /(^|[^\d./√π])(\d{1,5})\/(\d{1,5})(?![\d./])/g;
 
 export type RichOpts = { size?: number; color?: string; bold?: boolean };
 

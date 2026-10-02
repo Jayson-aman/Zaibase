@@ -1486,9 +1486,15 @@ export default function FigureView({
   question,
   manual = false,
   previewSlides,
+  hideAnswerText,
 }: {
   figure: Figure;
   animated?: boolean;
+  /**
+   * true のとき、手順（steps）と説明文（caption）を出さず、図そのものだけ見せる。
+   * 問題文の横に置く図では、解く前に手順や答えが読めてしまうのを防ぐため。
+   */
+  hideAnswerText?: boolean;
   /**
    * 買う前の人に見せる枚数。指定すると、その枚数目で止まり、続きは「購入で見られる」表示になる。
    * ロック中の単元の「ためし表示」で使う。省略すると全部見られる。
@@ -1785,10 +1791,10 @@ export default function FigureView({
         </View>
       )}
       {animated && !slideMode && <Text style={styles.replayHint}>▶ タップで再生（動く解説）</Text>}
-      {!slideMode && figure.steps != null && figure.steps.length > 0 && (
+      {!hideAnswerText && !slideMode && figure.steps != null && figure.steps.length > 0 && (
         <StepsList steps={figure.steps} animated={animated} stepReached={stepReached} />
       )}
-      {figure.caption != null && <Text style={styles.caption}>{figure.caption}</Text>}
+      {!hideAnswerText && figure.caption != null && <Text style={styles.caption}>{figure.caption}</Text>}
     </View>
   );
 }

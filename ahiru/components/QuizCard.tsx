@@ -51,7 +51,9 @@ type Props = {
 const { width } = Dimensions.get('window');
 
 function extractTrailingUnit(text: string): string {
-  const m = text.trim().match(/(cm²|㎠|cm³|km²|m²|㎡|mm|km|cm|m|kg|g|[%％]|円|羽|本|個|匹|頭|枚|冊|杯|台|艘|門|度|℃|時間|分|秒)$/u);
+  // 数字の直後にある単位だけを単位とみなす。
+  // （語の終わりの g・度・門・分 まで単位とみなすと、looking が lookin に、「こう門」が「こう」になる）
+  const m = text.trim().match(/[0-9０-９][0-9０-９.,/]*\s*(cm²|㎠|cm³|km²|m²|㎡|mm|km|cm|m|kg|g|[%％]|円|羽|本|個|匹|頭|枚|冊|杯|台|艘|門|度|℃|時間|分|秒)$/u);
   return m ? m[1] : '';
 }
 
@@ -166,7 +168,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
           <Text style={styles.questionLabel}>問 題</Text>
           <Text style={[styles.questionTextChoice, qFit]}>{rich(question.question, { size: (qFit as { fontSize?: number }).fontSize ?? 18, color: '#221C18', bold: true })}</Text>
           {figure != null ? (
-            <FigureView figure={figure} />
+            <FigureView figure={figure} hideAnswerText />
           ) : illustration != null ? (
             <Image source={illustration} style={styles.subjectImage} resizeMode="cover" />
           ) : question.figureDescription != null ? (
@@ -288,7 +290,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             </View>
           )}
           {figure != null ? (
-            <FigureView figure={figure} />
+            <FigureView figure={figure} hideAnswerText />
           ) : illustration != null ? (
             <Image source={illustration} style={styles.subjectImage} resizeMode="cover" />
           ) : question.figureDescription != null ? (

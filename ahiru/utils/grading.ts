@@ -81,6 +81,11 @@ const SUPSUB: Record<string, string> = {
   '⁺': '+', '⁻': '-',
 };
 
+const COMPAT_UNITS: Record<string, string> = {
+  '㎜': 'mm', '㎝': 'cm', '㎞': 'km', '㎎': 'mg', '㎏': 'kg', '㎖': 'ml', '㎗': 'dl', 'ℓ': 'l',
+  '㎡': 'm2', '㎠': 'cm2', '㎤': 'cm3', '㎥': 'm3', '㎢': 'km2',
+};
+
 /**
  * 見くらべるための形にそろえる。
  *
@@ -89,6 +94,8 @@ const SUPSUB: Record<string, string> = {
 export function normalize(s: string): string {
   let t = toHalfWidth(String(s ?? ''));
   t = t.replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹₀₁₂₃₄₅₆₇₈₉⁺⁻]/g, (c) => SUPSUB[c] ?? c);
+  // IME で出る組文字（㎠ ㎡ ㎝ ㎏ ℓ など）を、ふつうの書き方（cm2 m2 cm kg l）にそろえる
+  t = t.replace(/[㎜㎝㎞㎎㎏㎖㎗ℓ㎡㎠㎤㎥㎢]/g, (c) => COMPAT_UNITS[c] ?? c);
   // 「答え：」「答え】」のような書き出しは、答えそのものではないので落とす
   t = t.replace(/^\s*(?:答え|こたえ|解答|答)\s*[:：]?\s*/u, '');
   // 「2x2x3x5」のように、数と数のあいだの x はかけ算の × とみなす
@@ -119,6 +126,13 @@ const UNIT_TAIL =
 /** 「時速」「秒速」などの前につく言い方も、あってもなくてもよいことにする */
 const SPEED_HEAD = /^(?:時速|分速|秒速|約|およそ)/;
 
+/** 書き方がちがうだけの単位を同じものにそろえる（度と°、個とつとこ） */
+function canonicalUnit(u: string): string {
+  if (u === '°') return '度';
+  if (u === 'つ' || u === 'こ') return '個';
+  return u;
+}
+
 /**
  * 「45kg」を 数の部分「45」と 単位「kg」に分ける。
  *
@@ -129,7 +143,7 @@ const SPEED_HEAD = /^(?:時速|分速|秒速|約|およそ)/;
 function numericCore(s: string): { num: string; unit: string } | null {
   let t = s.replace(SPEED_HEAD, '');
   const m = t.match(UNIT_TAIL);
-  const unit = m ? m[1] : '';
+  const unit = canonicalUnit(m ? m[1] : '');
   t = t.replace(UNIT_TAIL, '');
   if (t === '') return null;
   // 数・小数・分数・比・マイナス・π だけでできているか
@@ -162,7 +176,18 @@ export function acceptedAnswers(answer: string): string[] {
   for (const m of raw.matchAll(/[（(]([^）)]*)[）)]/g)) {
     const inner = m[1].trim();
     // 「（合っている）」のような説明のかっこは答えではないので、短いものだけ拾う
+    // ⚠️ 「（1）3 （2）2」の (1) (2) は小問の番号なので、答えとして登録しない（「1」だけで○になってしまう）
+    if (/^[0-9０-９]{1,2}$/.test(inner)) continue;
     if (inner && inner.length <= 24 && !/[はがをにでと]/.test(inner.slice(0, 1))) add(inner);
+  }
+  // 「x＝3」「y＝2x」のような式の形の答えは、右辺だけ（「3」）で書いても正解にする。
+  // ただし小問をまとめた答え（「x＝3、y＝2」）は、ぜんぶ書いたときだけ正解にしたいので外す。
+  const eq = raw.match(/^[a-zA-Zａ-ｚＡ-Ｚ]\s*[=＝]\s*([^、，,=＝]+)$/);
+  if (eq) add(eq[1]);
+  // 帯分数（1と2/3）は、仮分数（5/3）で書いても正解にする
+  for (const piece of [raw, ...[...raw.matchAll(/[（(]([^）)]*)[）)]/g)].map((m) => m[1])]) {
+    const imp = mixedToImproper(piece);
+    if (imp) add(imp);
   }
   // 「〜です」「〜になる」のような言い回しを外した形
   add(raw.replace(/(?:です|でした|になる|になります|である)。?$/u, ''));
@@ -192,6 +217,32 @@ export function isProse(answer: string): boolean {
   return false;
 }
 
+/** 帯分数「1と2/3」を仮分数「5/3」に直した文字列を返す（帯分数でなければ null） */
+function mixedToImproper(raw: string): string | null {
+  const m = toHalfWidth(String(raw ?? '')).replace(/\s/g, '').match(/^(-?[0-9]+)(?:と|\+)([0-9]+)\/([0-9]+)$/);
+  if (!m || Number(m[3]) === 0) return null;
+  const w = Number(m[1]);
+  const d = Number(m[3]);
+  return `${w * d + Number(m[2])}/${d}`;
+}
+
+/** 「0.5」と「1/2」のように、書き方（小数と分数）がちがうだけで値が同じか */
+function sameValueDifferentForm(x: string, y: string, rawInput: string, rawAnswer: string): boolean {
+  // 「1と2/3」は normalize で「12/3」になってしまうので、帯分数が絡むときは見ない
+  if (/と/.test(rawInput) || /と/.test(rawAnswer)) return false;
+  const val = (t: string): number | null => {
+    if (/^-?[0-9]+(?:\.[0-9]+)?$/.test(t)) return parseFloat(t);
+    const m = t.match(/^(-?[0-9]+)\/([0-9]+)$/);
+    if (m && Number(m[2]) !== 0) return Number(m[1]) / Number(m[2]);
+    return null;
+  };
+  const isFrac = (t: string) => t.includes('/');
+  if (isFrac(x) === isFrac(y)) return false;
+  const vx = val(x);
+  const vy = val(y);
+  return vx != null && vy != null && Math.abs(vx - vy) < 1e-9;
+}
+
 /**
  * 書かれた答えを採点する。
  *
@@ -211,7 +262,20 @@ export function judge(input: string, answer: string): Judgement {
     // 数の答えは、単位を書かなくても正解。ただし「ちがう単位」を書いたら不正解。
     const a = numericCore(got);
     const b = numericCore(ok);
-    if (a != null && b != null && a.num === b.num && (a.unit === '' || a.unit === b.unit)) return 'correct';
+    // 模範解答に単位が無いときは、子どもが単位をつけても正解（「24個」と「24」）
+    if (a != null && b != null && a.num === b.num && (a.unit === '' || b.unit === '' || a.unit === b.unit)) return 'correct';
+    // 小数と分数のちがい（0.5 と 1/2）は同じ値なら正解。約分のしかた（2/4 と 1/2）は区別する。
+    if (a != null && b != null && (a.unit === '' || b.unit === '' || a.unit === b.unit) && sameValueDifferentForm(a.num, b.num, input, answer)) {
+      return 'correct';
+    }
+  }
+  // 帯分数で書いたとき、模範解答が仮分数でもよい
+  const impIn = mixedToImproper(input);
+  if (impIn && oks.includes(normalize(impIn))) return 'correct';
+  // 「x＝3」と書いたとき、模範解答が「3」だけでもよい
+  const lhs = got.match(/^[a-z]=(.+)$/);
+  if (lhs && !/=/.test(normalize(answer))) {
+    for (const ok of oks) if (lhs[1] === ok || stripTailPunct(lhs[1]) === stripTailPunct(ok)) return 'correct';
   }
   return isProse(answer) ? 'review' : 'wrong';
 }

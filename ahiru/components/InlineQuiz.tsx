@@ -22,6 +22,9 @@ export type InlineQuizItem = {
   isWritten?: boolean;
   rubricPoints?: string[];
   subQuestions?: QuestionSubItem[];
+  /** おさらいブロックの出しわけに使う（算数・数学のおさらいを他教科に出さないため） */
+  subject?: string;
+  examType?: string;
 };
 
 export function questionsToQuizItems(questions: Question[]): InlineQuizItem[] {
@@ -33,6 +36,8 @@ export function questionsToQuizItems(questions: Question[]): InlineQuizItem[] {
     isWritten: q.isWritten,
     rubricPoints: q.rubricPoints,
     subQuestions: q.subQuestions,
+    subject: q.subject,
+    examType: q.examType,
   }));
 }
 
@@ -88,7 +93,7 @@ export default function InlineQuiz({ items, label = 'この公式の一問一答
 
       <Text style={styles.question}>{rich(q.question, { size: 17, color: '#2B2420', bold: true })}</Text>
 
-      {figure != null && <FigureView figure={figure} />}
+      {figure != null && <FigureView figure={figure} hideAnswerText />}
 
       {q.subQuestions != null && q.subQuestions.length > 0 && (
         <View style={styles.subList}>
@@ -140,7 +145,7 @@ export default function InlineQuiz({ items, label = 'この公式の一問一答
               <Text style={styles.explanationText}>{rich(q.explanation)}</Text>
             </View>
           )}
-          <ReviewBlocks q={{ question: q.question, answer: q.answer, explanation: q.explanation }} />
+          <ReviewBlocks q={{ subject: q.subject ?? 'other', examType: q.examType, question: q.question, answer: q.answer, explanation: q.explanation }} />
         </View>
       )}
 
