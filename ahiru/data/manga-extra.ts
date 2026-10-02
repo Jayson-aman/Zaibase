@@ -25,6 +25,26 @@ import { XM_KEX_SCRIPTS, XM_KEX_SECTIONS } from './manga-xm-kex';
 import { XM_KEY_SCRIPTS, XM_KEY_SECTIONS } from './manga-xm-key';
 import { XM_KHX_SCRIPTS, XM_KHX_SECTIONS } from './manga-xm-khx';
 import { XM_KHY_SCRIPTS, XM_KHY_SECTIONS } from './manga-xm-khy';
+import { XM_CS03_SCRIPTS, XM_CS03_SECTIONS } from './manga-xm-cs03';
+import { XM_CK03_SCRIPTS, XM_CK03_SECTIONS } from './manga-xm-ck03';
+import { XM_CR03_SCRIPTS, XM_CR03_SECTIONS } from './manga-xm-cr03';
+import { XM_CH03_SCRIPTS, XM_CH03_SECTIONS } from './manga-xm-ch03';
+import { XM_CE03_SCRIPTS, XM_CE03_SECTIONS } from './manga-xm-ce03';
+import { XM_KS03_SCRIPTS, XM_KS03_SECTIONS } from './manga-xm-ks03';
+import { XM_KR03_SCRIPTS, XM_KR03_SECTIONS } from './manga-xm-kr03';
+import { XM_KK03_SCRIPTS, XM_KK03_SECTIONS } from './manga-xm-kk03';
+import { XM_KE03_SCRIPTS, XM_KE03_SECTIONS } from './manga-xm-ke03';
+import { XM_KH03_SCRIPTS, XM_KH03_SECTIONS } from './manga-xm-kh03';
+import { XM_CS04_SCRIPTS, XM_CS04_SECTIONS } from './manga-xm-cs04';
+import { XM_CK04_SCRIPTS, XM_CK04_SECTIONS } from './manga-xm-ck04';
+import { XM_CR04_SCRIPTS, XM_CR04_SECTIONS } from './manga-xm-cr04';
+import { XM_CH04_SCRIPTS, XM_CH04_SECTIONS } from './manga-xm-ch04';
+import { XM_CE04_SCRIPTS, XM_CE04_SECTIONS } from './manga-xm-ce04';
+import { XM_KS04_SCRIPTS, XM_KS04_SECTIONS } from './manga-xm-ks04';
+import { XM_KR04_SCRIPTS, XM_KR04_SECTIONS } from './manga-xm-kr04';
+import { XM_KK04_SCRIPTS, XM_KK04_SECTIONS } from './manga-xm-kk04';
+import { XM_KE04_SCRIPTS, XM_KE04_SECTIONS } from './manga-xm-ke04';
+import { XM_KH04_SCRIPTS, XM_KH04_SECTIONS } from './manga-xm-kh04';
 
 export const EXTRA_MANGA_SCRIPTS: Record<string, MangaScript> = {
   ...XM_CSX_SCRIPTS,
@@ -47,6 +67,26 @@ export const EXTRA_MANGA_SCRIPTS: Record<string, MangaScript> = {
   ...XM_KEY_SCRIPTS,
   ...XM_KHX_SCRIPTS,
   ...XM_KHY_SCRIPTS,
+  ...XM_CS03_SCRIPTS,
+  ...XM_CK03_SCRIPTS,
+  ...XM_CR03_SCRIPTS,
+  ...XM_CH03_SCRIPTS,
+  ...XM_CE03_SCRIPTS,
+  ...XM_KS03_SCRIPTS,
+  ...XM_KR03_SCRIPTS,
+  ...XM_KK03_SCRIPTS,
+  ...XM_KE03_SCRIPTS,
+  ...XM_KH03_SCRIPTS,
+  ...XM_CS04_SCRIPTS,
+  ...XM_CK04_SCRIPTS,
+  ...XM_CR04_SCRIPTS,
+  ...XM_CH04_SCRIPTS,
+  ...XM_CE04_SCRIPTS,
+  ...XM_KS04_SCRIPTS,
+  ...XM_KR04_SCRIPTS,
+  ...XM_KK04_SCRIPTS,
+  ...XM_KE04_SCRIPTS,
+  ...XM_KH04_SCRIPTS,
 };
 
 export const EXTRA_MANGA_SECTIONS: Record<string, string> = {
@@ -70,4 +110,24 @@ export const EXTRA_MANGA_SECTIONS: Record<string, string> = {
   ...XM_KEY_SECTIONS,
   ...XM_KHX_SECTIONS,
   ...XM_KHY_SECTIONS,
+  ...XM_CS03_SECTIONS,
+  ...XM_CK03_SECTIONS,
+  ...XM_CR03_SECTIONS,
+  ...XM_CH03_SECTIONS,
+  ...XM_CE03_SECTIONS,
+  ...XM_KS03_SECTIONS,
+  ...XM_KR03_SECTIONS,
+  ...XM_KK03_SECTIONS,
+  ...XM_KE03_SECTIONS,
+  ...XM_KH03_SECTIONS,
+  ...XM_CS04_SECTIONS,
+  ...XM_CK04_SECTIONS,
+  ...XM_CR04_SECTIONS,
+  ...XM_CH04_SECTIONS,
+  ...XM_CE04_SECTIONS,
+  ...XM_KS04_SECTIONS,
+  ...XM_KR04_SECTIONS,
+  ...XM_KK04_SECTIONS,
+  ...XM_KE04_SECTIONS,
+  ...XM_KH04_SECTIONS,
 };
