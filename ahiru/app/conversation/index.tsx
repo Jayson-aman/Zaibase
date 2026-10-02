@@ -8,7 +8,6 @@ import {
   StyleSheet,
   SafeAreaView,
   ActivityIndicator,
-  Alert,
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
@@ -16,6 +15,7 @@ import { useRouter } from 'expo-router';
 import { chatEnglishConversation, type ConversationMessage } from '../../services/aiConversation';
 import HomeButton from '../../components/HomeButton';
 import { levelColor, levelLabel, type VocabLevel } from '../../data/vocab-meta';
+import { alertCompat } from '../../utils/dialog';
 
 const LEVEL_OPTIONS: VocabLevel[] = ['eiken_pre2', 'eiken_2', 'eiken_1', 'toeic_800'];
 
@@ -75,7 +75,7 @@ export default function ConversationScreen() {
       const msg = err?.message ?? 'エラーが発生しました。もう一度試してください。';
       // 無料枠の上限で止まった場合は、エラーではなく案内として見せる
       const isLimit = err?.code === 'functions/resource-exhausted';
-      Alert.alert(isLimit ? '本日の練習は終了です' : 'AIからの返信エラー', msg);
+      alertCompat(isLimit ? '本日の練習は終了です' : 'AIからの返信エラー', msg);
       setMessages(messages); // revert
     } finally {
       setLoading(false);

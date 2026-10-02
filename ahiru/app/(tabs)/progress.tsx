@@ -6,7 +6,6 @@ import {
   StyleSheet,
   SafeAreaView,
   TouchableOpacity,
-  Alert,
   ActivityIndicator,
   Linking,
 } from 'react-native';
@@ -21,13 +20,14 @@ import Paywall from '../../components/Paywall';
 import SubjectIcon from '../../components/SubjectIcon';
 import { useAuthUser } from '../../hooks/useAuthUser';
 import { signOutUser, deleteAccount, AuthError } from '../../services/auth';
+import { alertCompat } from '../../utils/dialog';
 
 const SUBJECTS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
 
 function AccountCard() {
   const { isLoggedIn, email } = useAuthUser();
   async function handleLogout() {
-    Alert.alert('ログアウト', 'ログアウトしますか？', [
+    alertCompat('ログアウト', 'ログアウトしますか？', [
       { text: 'キャンセル', style: 'cancel' },
       {
         text: 'ログアウト',
@@ -40,7 +40,7 @@ function AccountCard() {
   }
   // Appleのガイドライン5.1.1(v)により、アプリ内でアカウント削除ができる必要がある。
   async function handleDeleteAccount() {
-    Alert.alert(
+    alertCompat(
       'アカウントを削除',
       'アカウントと学習記録を完全に削除します。この操作は取り消せません。\n\n' +
         '※ サブスクリプションはApple IDに紐づいているため、この操作では解約されません。' +
@@ -53,10 +53,10 @@ function AccountCard() {
           onPress: () => {
             deleteAccount()
               .then(() => {
-                Alert.alert('削除しました', 'アカウントを削除しました。ご利用ありがとうございました。');
+                alertCompat('削除しました', 'アカウントを削除しました。ご利用ありがとうございました。');
               })
               .catch((e) => {
-                Alert.alert(
+                alertCompat(
                   '削除できませんでした',
                   e instanceof AuthError ? e.message : 'もう一度お試しください。',
                 );
@@ -126,7 +126,7 @@ export default function ProgressScreen() {
   );
 
   function handleReset() {
-    Alert.alert(
+    alertCompat(
       'リセット確認',
       '全ての学習記録を削除しますか？',
       [
@@ -152,7 +152,7 @@ export default function ProgressScreen() {
         .map((q) => ({ question: q.question, answer: q.answer }));
 
       if (items.length === 0) {
-        Alert.alert(
+        alertCompat(
           'まだデータがありません',
           'もう少し問題に挑戦すると、AIコーチが弱点を分析できるようになります。'
         );
@@ -165,7 +165,7 @@ export default function ProgressScreen() {
         const advice = await getWeakPointCoaching(subjectInfo[subjectKey].name, items);
         setCoachAdvice(advice);
       } catch {
-        Alert.alert('エラー', 'AIコーチの呼び出しに失敗しました。もう一度お試しください。');
+        alertCompat('エラー', 'AIコーチの呼び出しに失敗しました。もう一度お試しください。');
       } finally {
         setCoachLoading(false);
       }
@@ -231,7 +231,7 @@ export default function ProgressScreen() {
       '',
       `送信日：${today}`,
       '',
-      '※この成績は本人が自己採点した記録です。目安としてご確認ください。',
+      '※この成績は、アプリが自動で採点した記録（記述問題は含みません）です。目安としてご確認ください。',
     ];
     const subject = encodeURIComponent('【Zaibase受験】学習成績のご報告');
     const body = encodeURIComponent(lines.join('\n'));
@@ -239,7 +239,7 @@ export default function ProgressScreen() {
     try {
       await Linking.openURL(url);
     } catch {
-      Alert.alert(
+      alertCompat(
         'メールを開けませんでした',
         'この端末でメールアプリを開けませんでした。メールアプリが設定されているかご確認ください。',
       );
@@ -292,7 +292,7 @@ export default function ProgressScreen() {
                 <Text style={styles.rankingTotal}>/ {ranking.totalUsers}人中</Text>
               </View>
               <Text style={styles.rankingPct}>
-                上位 {Math.round((ranking.rank / ranking.totalUsers) * 100)}% に入っています
+                上位 {ranking.totalUsers > 0 ? Math.round((ranking.rank / ranking.totalUsers) * 100) : 100}% に入っています
               </Text>
               {ranking.rank <= 10 && (
                 <View style={styles.rankingBadge}>

@@ -52,7 +52,11 @@ export default function RootLayout() {
   }, []);
 
   async function handleConsent() {
-    await AsyncStorage.setItem(CONSENT_KEY, '1');
+    try {
+      await AsyncStorage.setItem(CONSENT_KEY, '1');
+    } catch {
+      // 保存できない環境でも、同意画面は閉じて先へ進めるようにする
+    }
     setShowConsent(false);
   }
 

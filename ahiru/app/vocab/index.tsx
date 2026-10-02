@@ -10,7 +10,6 @@ import {
   Animated,
   Dimensions,
   ActivityIndicator,
-  Alert,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useAuthUser } from '../../hooks/useAuthUser';
@@ -31,6 +30,7 @@ import { levelColor, levelLabel } from '../../data/vocab-meta';
 import { vocabWords } from '../../data/vocab_words';
 import { vocabUsageNotes } from '../../data/vocab-usage-notes';
 import { useFonts, BIZUDGothic_400Regular, BIZUDGothic_700Bold } from '@expo-google-fonts/biz-udgothic';
+import { alertCompat } from '../../utils/dialog';
 
 // 教科書体に近い、可読性重視のUD（ユニバーサルデザイン）フォント
 const TEXTBOOK_REGULAR = 'BIZUDGothic_400Regular';
@@ -228,7 +228,7 @@ export default function VocabScreen() {
       // 何も起きない（無音のまま完了する）ので、押し間違いと区別できるよう
       // はっきり伝える。
       if (!ok) {
-        Alert.alert(
+        alertCompat(
           '読み上げできませんでした',
           'この端末の読み上げ機能を利用できませんでした。端末を再起動するか、しばらくしてからもう一度お試しください。'
         );

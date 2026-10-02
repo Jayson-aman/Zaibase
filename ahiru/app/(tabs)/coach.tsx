@@ -7,7 +7,6 @@ import {
   SafeAreaView,
   TouchableOpacity,
   ActivityIndicator,
-  Alert,
   TextInput,
 } from 'react-native';
 import { useFocusEffect } from 'expo-router';
@@ -19,6 +18,7 @@ import { getWeakPointCoaching } from '../../services/aiCoach';
 import Paywall from '../../components/Paywall';
 import SubjectIcon from '../../components/SubjectIcon';
 import { PRO_PRICE_LABEL, MAX_PRICE_LABEL } from '../../constants/pricing';
+import { alertCompat } from '../../utils/dialog';
 
 // ─── palette ────────────────────────────────────────────────────────────────
 const C = {
@@ -215,7 +215,7 @@ export default function CoachScreen() {
     // Pro購入者がボタンを押した瞬間に「Maxにアップグレードして」と拒否される。
     if (!isMax) { setPaywallVisible(true); return; }
     if (!worstSubject) {
-      Alert.alert('まだデータがありません', '問題に挑戦するとAIが弱点を分析できるようになります。');
+      alertCompat('まだデータがありません', '問題に挑戦するとAIが弱点を分析できるようになります。');
       return;
     }
     const wrongIds = progressData[worstSubject]?.wrongQuestionIds ?? [];
@@ -224,7 +224,7 @@ export default function CoachScreen() {
       .filter((q): q is NonNullable<typeof q> => q != null)
       .map((q) => ({ question: q.question, answer: q.answer }));
     if (items.length === 0) {
-      Alert.alert('まだデータがありません', '問題に挑戦するとAIが弱点を分析できるようになります。');
+      alertCompat('まだデータがありません', '問題に挑戦するとAIが弱点を分析できるようになります。');
       return;
     }
     setCoachLoading(true);
@@ -233,7 +233,7 @@ export default function CoachScreen() {
       const advice = await getWeakPointCoaching(subjectInfo[worstSubject].name, items);
       setCoachAdvice(advice);
     } catch (err) {
-      Alert.alert('AIコーチ', aiErrorMessage(err));
+      alertCompat('AIコーチ', aiErrorMessage(err));
     } finally {
       setCoachLoading(false);
     }
@@ -241,7 +241,7 @@ export default function CoachScreen() {
 
   async function handleEssaySubmit() {
     if (!isMax) { setPaywallVisible(true); return; }
-    if (!essayInput.trim()) { Alert.alert('記述を入力してください'); return; }
+    if (!essayInput.trim()) { alertCompat('記述を入力してください'); return; }
     setEssayLoading(true);
     setEssayFeedback(null);
     try {
@@ -251,7 +251,7 @@ export default function CoachScreen() {
       ]);
       setEssayFeedback(feedback);
     } catch (err) {
-      Alert.alert('AI添削', aiErrorMessage(err));
+      alertCompat('AI添削', aiErrorMessage(err));
     } finally {
       setEssayLoading(false);
     }

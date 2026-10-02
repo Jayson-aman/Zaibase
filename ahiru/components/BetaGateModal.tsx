@@ -6,11 +6,11 @@ import {
   TextInput,
   TouchableOpacity,
   StyleSheet,
-  Alert,
   ActivityIndicator,
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
+import { alertCompat } from '../utils/dialog';
 
 interface Props {
   visible: boolean;
@@ -34,7 +34,7 @@ export default function BetaGateModal({ visible, onClose, onUnlocked, unlock }: 
         setShowInput(false);
         onUnlocked();
       } else {
-        Alert.alert('コードが違います', '入力したコードが正しくありません。');
+        alertCompat('コードが違います', '入力したコードが正しくありません。');
       }
     } finally {
       setChecking(false);

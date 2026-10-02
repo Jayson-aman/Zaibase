@@ -60,3 +60,31 @@ export async function ensureLoggedInForPurchase(
   if (go) goLogin();
   return false;
 }
+
+type AlertButton = { text?: string; style?: 'default' | 'cancel' | 'destructive'; onPress?: () => void | Promise<void> };
+
+/**
+ * Alert.alert の置きかえ。react-native-web の Alert.alert は何もしないので、Web版では
+ * ボタンが2つ以上なら window.confirm、1つ以下なら window.alert にする。
+ * （ログアウト・アカウント削除・リセット・エラー通知が、Webで無反応になっていた）
+ */
+export function alertCompat(title: string, message?: string, buttons?: AlertButton[]): void {
+  if (Platform.OS !== 'web') {
+    Alert.alert(title, message, buttons);
+    return;
+  }
+  const text = message ? `${title}\n\n${message}` : title;
+  const action = buttons?.find((b) => b.style !== 'cancel');
+  const cancel = buttons?.find((b) => b.style === 'cancel');
+  try {
+    if (buttons && buttons.length > 1) {
+      if (window.confirm(text)) void action?.onPress?.();
+      else void cancel?.onPress?.();
+    } else {
+      window.alert(text);
+      void buttons?.[0]?.onPress?.();
+    }
+  } catch {
+    // 表示できなくても処理は続ける
+  }
+}

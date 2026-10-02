@@ -235,6 +235,12 @@ exports.confirmAhiruUnlockCheckout = onCall(
 exports.ahiruUnlockWebhook = onRequest(
   { region: "asia-northeast1", secrets: [STRIPE_KEY, STRIPE_WH] },
   async (req, res) => {
+    // シークレットが未設定（placeholder）のままだと、署名の鍵が公開の文字列になり、
+    // 誰でも偽の決済完了イベントで無料解放できてしまう。本物の鍵が入るまで受け付けない。
+    if (!String(STRIPE_WH.value()).startsWith("whsec_")) {
+      console.error("ahiruUnlockWebhook: AHIRU_STRIPE_WEBHOOK_SECRET が未設定です");
+      return res.status(503).send("Webhook not configured");
+    }
     const stripe = require("stripe")(STRIPE_KEY.value());
     let event;
     try {
@@ -257,13 +263,9 @@ exports.ahiruUnlockWebhook = onRequest(
           const itemId = obj.metadata?.item_id;
           const config = TYPE_CONFIG[type];
           if (uid && config && itemId) {
-            // 返金後に、同じ完了イベントが再送されても解放し直さない。確認に失敗したときは、解放を優先する。
-            let refunded = false;
-            try {
-              refunded = await isSessionRefunded(stripe, obj);
-            } catch (err) {
-              console.error("ahiruUnlockWebhook refund check error:", err.message);
-            }
+            // 返金後に、同じ完了イベントが再送されても解放し直さない。
+            // 確認に失敗したときは例外のまま外へ出し、500 を返して Stripe に再送させる。
+            const refunded = await isSessionRefunded(stripe, obj);
             if (!refunded) await unlockIfNeeded(config, uid, itemId);
           }
         }
@@ -273,6 +275,8 @@ exports.ahiruUnlockWebhook = onRequest(
       }
     } catch (err) {
       console.error("ahiruUnlockWebhook handling error:", err);
+      // 200 を返すと Stripe が再送せず、「入金済みなのに未解放」「返金済みなのに解放が残る」が直らない。
+      return res.status(500).send("Webhook handling error");
     }
 
     res.json({ received: true });

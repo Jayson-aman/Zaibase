@@ -101,6 +101,8 @@ export default function LoginScreen() {
             autoComplete={isSignup ? 'new-password' : 'current-password'}
             value={password}
             onChangeText={setPassword}
+            onSubmitEditing={submit}
+            returnKeyType="go"
             editable={!busy}
           />
 

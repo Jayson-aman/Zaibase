@@ -7,7 +7,6 @@ import {
   Modal,
   ActivityIndicator,
   ScrollView,
-  Alert,
   Platform,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -31,6 +30,7 @@ import {
 } from '../services/subscription';
 import { PRO_FEATURES, MAX_FEATURES } from '../constants/proAccess';
 import { useAuthUser } from '../hooks/useAuthUser';
+import { alertCompat } from '../utils/dialog';
 
 interface Props {
   visible: boolean;
@@ -83,7 +83,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
       onPurchased();
     } catch (err: any) {
       if (!err?.userCancelled) {
-        Alert.alert('購入エラー', 'もう一度お試しください。');
+        alertCompat('購入エラー', 'もう一度お試しください。');
       }
     } finally {
       setPurchasing(false);
@@ -94,7 +94,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
     // iOS / Android はストアの購入履歴から復元するためログイン不要。
     // Web 版のみ、Stripe 購入をアカウントで管理するためログインを促す。
     if (isWeb && !isLoggedIn) {
-      Alert.alert(
+      alertCompat(
         'ログインが必要です',
         'Web版でご購入を復元するにはログインが必要です。',
         [
@@ -112,16 +112,16 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
       const restored =
         tierFromCustomerInfo(info) !== 'free' || hasVocabEntitlement(info);
       if (restored) {
-        Alert.alert('復元しました', 'ご購入内容を復元しました。');
+        alertCompat('復元しました', 'ご購入内容を復元しました。');
         onPurchased();
       } else {
-        Alert.alert(
+        alertCompat(
           '復元できる購入がありません',
           'このApple IDでのご購入が見つかりませんでした。購入時と同じApple IDでサインインしているかご確認ください。',
         );
       }
     } catch {
-      Alert.alert('復元エラー', '購入の復元に失敗しました。');
+      alertCompat('復元エラー', '購入の復元に失敗しました。');
     } finally {
       setPurchasing(false);
     }

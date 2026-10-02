@@ -132,9 +132,10 @@ exports.sendFeedback = onCall(
     const context =
       data.context != null && typeof data.context === "object"
         ? {
-            lessonId: sanitizeText(data.context.lessonId, 200),
-            lessonTitle: sanitizeText(data.context.lessonTitle, 200),
-            mangaId: sanitizeText(data.context.mangaId, 200),
+            // Firestore は undefined を拒否するので、無い欄は null にする
+            lessonId: sanitizeText(data.context.lessonId, 200) ?? null,
+            lessonTitle: sanitizeText(data.context.lessonTitle, 200) ?? null,
+            mangaId: sanitizeText(data.context.mangaId, 200) ?? null,
           }
         : undefined;
 

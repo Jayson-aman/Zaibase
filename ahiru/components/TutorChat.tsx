@@ -8,13 +8,13 @@ import {
   StyleSheet,
   Modal,
   ActivityIndicator,
-  Alert,
   KeyboardAvoidingView,
   Platform,
   Image,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { askTutor, type TutorMessage } from '../services/aiTutor';
+import { alertCompat } from '../utils/dialog';
 
 const TURN_LIMIT = 6;
 
@@ -50,7 +50,7 @@ export default function TutorChat({ visible, onClose, initialQuestion, subjectCo
         await import('expo-image-picker');
       const { status } = await requestMediaLibraryPermissionsAsync();
       if (status !== 'granted') {
-        Alert.alert('権限が必要です', '写真を使うには「写真へのアクセス」を許可してください。');
+        alertCompat('権限が必要です', '写真を使うには「写真へのアクセス」を許可してください。');
         return;
       }
       const result = await launchImageLibraryAsync({
@@ -64,7 +64,7 @@ export default function TutorChat({ visible, onClose, initialQuestion, subjectCo
         setImageBase64(result.assets[0].base64 ?? null);
       }
     } catch {
-      Alert.alert('エラー', '画像の読み込みに失敗しました。');
+      alertCompat('エラー', '画像の読み込みに失敗しました。');
     }
   }, []);
 
@@ -93,7 +93,7 @@ export default function TutorChat({ visible, onClose, initialQuestion, subjectCo
         await import('expo-image-picker');
       const { status } = await requestCameraPermissionsAsync();
       if (status !== 'granted') {
-        Alert.alert('権限が必要です', 'カメラを使うには「カメラへのアクセス」を許可してください。');
+        alertCompat('権限が必要です', 'カメラを使うには「カメラへのアクセス」を許可してください。');
         return;
       }
       const result = await launchCameraAsync({
@@ -107,7 +107,7 @@ export default function TutorChat({ visible, onClose, initialQuestion, subjectCo
         setImageBase64(result.assets[0].base64 ?? null);
       }
     } catch {
-      Alert.alert('エラー', 'カメラの起動に失敗しました。');
+      alertCompat('エラー', 'カメラの起動に失敗しました。');
     }
   }, []);
 
@@ -140,7 +140,7 @@ export default function TutorChat({ visible, onClose, initialQuestion, subjectCo
       setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 100);
     } catch (err: any) {
       const msg = err?.message ?? 'エラーが発生しました。もう一度試してね。';
-      Alert.alert('AIからの返信エラー', msg);
+      alertCompat('AIからの返信エラー', msg);
       setMessages(messages); // revert
     } finally {
       setLoading(false);

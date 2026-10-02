@@ -265,6 +265,8 @@ export default function QuizScreen() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
+  // 記述（正誤をつけない）問題の数。満点・正解率の分母から除く
+  const [reviewCount, setReviewCount] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [finished, setFinished] = useState(false);
   const [savedProgress, setSavedProgress] = useState(false);
@@ -303,6 +305,7 @@ export default function QuizScreen() {
     setQueue(baseQuestions);
     setCurrentIndex(0);
     setScore(0);
+    setReviewCount(0);
     setRevealed(false);
     setFinished(false);
     setSavedProgress(false);
@@ -384,9 +387,12 @@ export default function QuizScreen() {
     if (currentIndex + 1 >= total) {
       if (!savedProgress) {
         setSavedProgress(true);
-        await saveProgress(subjectKey, currentScore, total, currentWrongIds);
-        submitRankingScore(currentScore, total).catch(() => {});
-        maybeRequestReview(currentScore, total).catch(() => {});
+        const scoredTotal = total - reviewCount;
+        if (scoredTotal > 0) {
+          await saveProgress(subjectKey, currentScore, scoredTotal, currentWrongIds);
+          submitRankingScore(currentScore, scoredTotal).catch(() => {});
+          maybeRequestReview(currentScore, scoredTotal).catch(() => {});
+        }
       }
       setFinished(true);
     } else {
@@ -499,6 +505,7 @@ export default function QuizScreen() {
       // 記述問題：正誤をつけず、点数にも数えない。
       // カードが模範解答を見せ、「見くらべたので次へ」で自分で進む。
       answeringRef.current = false;
+      setReviewCount((c) => c + 1);
       if (hitLimit) setShowPaywall(true);
       return;
     }
@@ -603,7 +610,8 @@ export default function QuizScreen() {
   }
 
   if (finished) {
-    const pct = Math.round((score / total) * 100);
+    const scoredTotal = total - reviewCount;
+    const pct = scoredTotal > 0 ? Math.round((score / scoredTotal) * 100) : 100;
     let message = '';
     let emoji = '';
     if (pct === 100) {
@@ -640,7 +648,7 @@ export default function QuizScreen() {
               <View style={styles.resultScoreRow}>
                 <Text style={styles.resultScore}>{score}</Text>
                 <Text style={styles.resultScoreSep}> / </Text>
-                <Text style={styles.resultScoreTotal}>{total}</Text>
+                <Text style={styles.resultScoreTotal}>{scoredTotal}</Text>
                 <Text style={styles.resultScoreLabel}> 問正解</Text>
               </View>
               <Text style={[styles.resultPct, { color: info.color }]}>{pct}%</Text>
