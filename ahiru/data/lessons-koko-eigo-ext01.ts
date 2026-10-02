@@ -63,7 +63,7 @@ plan（計画）[plæn] → plane（飛行機）[pleɪn]
 a＝[eɪ]／e＝[iː]／i＝[aɪ]／o＝[oʊ]／u＝[juː] または [uː]
 つまり「エイ・イー・アイ・オウ・ユー」であり、アルファベットを言うときの音そのものである。make, these, time, home, use はすべてこの形にあてはまる。
 
-⚠ 注意：この規則には有名な例外がある。have, give, live（住む）, come, some, love, none, done は e で終わるのに母音は短いままである。これは英語では語を v で終わらせない習慣があり、意味のない e を付けているためで、e が音を変えているわけではない。「love を [loʊv] と読む」といった誤りはここから生まれる。`,
+⚠ 注意：この規則には有名な例外がある。have, give, live（住む）, love, come, some, none, done は e で終わるのに母音は短いままである。have, give, live, love は、英語では語を v で終わらせない習慣があるため、意味のない e を付けているだけで、e が音を変えているわけではない。come, some, none, done は v で終わる語ではなく、つづりの歴史による別の例外なので、語として覚える。「love を [loʊv] と読む」といった誤りはここから生まれる。`,
       },
     ],
     trapExamples: [
@@ -81,7 +81,7 @@ a＝[eɪ]／e＝[iː]／i＝[aɪ]／o＝[oʊ]／u＝[juː] または [uː]
         trapExplanation: 'マジック e の規則を覚えたてのときに、形だけを見て機械的にあてはめてしまう。gave [geɪv] が実際にその読み方をするので、なおさら正しく見える。',
         correctAnswer: '誤り（have は [hæv]、a は短い音）',
         correctExplanation:
-          '英語では語末を v で終わらせないため、have, give, live, love, come, some には意味のない e が付いている。この e はマジック e ではないので母音は短いままである。gave, five, drive のようにアルファベット読みになる語と混同しないよう、have 型の例外は語として覚えてしまうのが早い。',
+          '英語では語末を v で終わらせないため、have, give, live, love には意味のない e が付いている。この e はマジック e ではないので母音は短いままである。come, some, none, done も短い音の例外だが、v とは関係のないつづりの歴史による例外なので、語として覚える。gave, five, drive のようにアルファベット読みになる語と混同しないよう、have 型の例外は語として覚えてしまうのが早い。',
       },
     ],
   },
@@ -532,7 +532,7 @@ in-for-MÁ-tion, in-VÉN-tion, QUÉS-tion, dis-CÚS-sion, mu-SÍ-cian, tra-DÍ-t
 fan-TÁS-tic, e-LÉC-tric, dra-MÁT-ic, sci-en-TÍF-ic, e-co-NÓM-ic, at-LÁN-tic, spe-CÍF-ic
 ※ 例外：Árabic, pólitics, cátholic は前に来る。
 
-■ -ial／-ious／-ial
+■ -ial／-ious
 of-FÍ-cial, ma-TÉ-ri-al, de-LÍ-cious, mys-TÉ-ri-ous, am-BÍ-tious
 
 ★ ポイント：この型の語は、日本語のカタカナ語になっているものが多い。「インフォメーション」「エレクトリック」と平らに読む癖が邪魔をするので、「メ」「レ」を強く長く言う練習をしておく。`,
@@ -543,11 +543,11 @@ of-FÍ-cial, ma-TÉ-ri-al, de-LÍ-cious, mys-TÉ-ri-ous, am-BÍ-tious
         body: `もう一つの型は、語末から三つ目の音節を強く読むものである。語尾が -ity, -ical, -graphy, -logy などのときに起こる。
 
 ■ -ity／-ety
-a-BÍL-i-ty（a-bil-i-ty の3番目から数えて…語末 ty から数えて三つ目が BIL）
+a-BÍL-i-ty（語末の ty から数えて、ty が一つ目、i が二つ目、BIL が三つ目）
 u-ni-VÉR-si-ty, ac-TÍV-i-ty, pos-si-BÍL-i-ty, so-CÍ-e-ty, va-RÍ-e-ty, ma-JÓR-i-ty
 
 ■ -ical
-e-co-NÓM-i-cal, po-LÍT-i-cal, MÚ-si-cal, prac-ti-cal → PRÁC-ti-cal, his-TÓR-i-cal
+e-co-NÓM-i-cal, po-LÍT-i-cal, MÚ-si-cal, PRÁC-ti-cal, his-TÓR-i-cal
 
 ■ -graphy／-logy／-ology
 pho-TÓG-ra-phy, ge-ÓG-ra-phy, bi-ÓL-o-gy, tech-NÓL-o-gy, psy-CHÓL-o-gy

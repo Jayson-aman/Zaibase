@@ -498,7 +498,7 @@ give（あげる）、show（見せる・教える）、tell（伝える）、te
           '日本語の「駅への道を（私に）教えて」の順に置いてしまい、show のあとに物を先に出した。人を表す me が行き場を失って文末に取り残されている。',
         correctAnswer: 'Can you show me the way to the station?',
         correctExplanation:
-          'show, give, tell, teach などは＜動詞＋人＋物＞の順に置く。人を後ろに回したいときは to が必要で Can you show the way to the station to me? となるが、to が一つしかない語群ではこの形は作れない。語群に to for が足りるかどうかで型を決める。',
+          'show, give, tell, teach などは＜動詞＋人＋物＞の順に置く。人を後ろに回したいときは to が必要で Can you show the way to the station to me? となるが、この形には to が余分に1つ必要である。この語群の to は to the station の1つだけなので作れない。語群に to や for が余っているかどうかで、どちらの型を作るかを決める。',
       },
     ],
   },

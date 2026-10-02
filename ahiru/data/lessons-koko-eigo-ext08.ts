@@ -1062,7 +1062,7 @@ to〜 の直前を見る。be動詞＋感情形容詞 なら原因、動作動�
 ■ ①直前が名詞・代名詞 → 形容詞的用法
 例）I have a lot of work to do.（work＝名詞）
 例）Give me something to drink.（something＝代名詞）
-ただし tell me to go のように「動詞＋人＋to〜」の形（s280）は例外で、名詞的用法の一種として扱う。
+ただし tell me to go のように「動詞＋人＋to〜」の形（s280）は、三用法のどれかに分けるのではなく、独立した形として扱う。
 
 ■ ②直前が be動詞＋感情形容詞 → 副詞的用法（原因）
 例）I was glad to hear from you.
@@ -3460,7 +3460,7 @@ be動詞が -ing の直前にあれば進行形、名詞の直後にいきなり
     id: 'koko_eigo_s295',
     subject: 'eigo',
     examType: 'koko',
-    title: '分詞・動名詞・不定詞：後置修飾の総合識別',
+    title: '分詞・動名詞・不定詞：名詞を修飾する形の総合識別',
     description: '名詞のうしろに続く -ing・過去分詞・to不定詞を、正確に読み分けて訳す',
     intro: 'a swimming pool は「泳いでいるプール」ではありません。a swimming boy なら「泳いでいる少年」なのに、なぜ違うのか。同じ -ing でも、動名詞（〜するための）と現在分詞（〜している）では意味がまるで変わります。最後にこの単元の全体を、識別という一点でまとめ上げます。',
     order: 795,

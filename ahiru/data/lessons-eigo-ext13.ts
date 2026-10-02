@@ -253,7 +253,7 @@ snow（雪）／window（まど）／yellow（黄色）／know（知っている
 
 ■ au・aw
 「オー」に近い音。
-autumn（秋）／because（なぜなら）
+autumn（秋）／August（8月）
 saw（のこぎり、see の過去形）／draw（絵をかく）／straw（ストロー）
 
 ■ oo

@@ -990,15 +990,15 @@ WH疑問文でbe動詞を使う場合：疑問詞 ＋ be動詞 ＋ 主語
 【問題2】次の日本語を英語にしなさい。（6語以上で答えること）
 「私は将来、英語の先生になりたいと思っています。」
 
-【解答例】I want to be an English teacher in the future.（9語）
-【別解】I hope to become an English teacher when I grow up.（10語）
+【解答例】I want to be an English teacher in the future.（10語）
+【別解】I hope to become an English teacher when I grow up.（11語）
 【解説】「〜になりたい」= want to be / hope to become。「将来」= in the future / when I grow up。「英語の先生」= an English teacher（冠詞anを忘れない）。
 
 【問題3】次のテーマについて、60語程度の英語で自分の意見を書きなさい。
 「スマートフォンは子どもにとって良いものか、悪いものか？」
 
 【解答例】
-I think that smartphones are useful for children. First, they can learn many things by searching the internet. For example, I often use my phone to look up new words when I study English. However, we should not use smartphones too much. In conclusion, if children use them wisely, smartphones are a helpful tool.（約60語）
+I think that smartphones are useful for children. First, they can learn many things by searching the internet. For example, I often use my phone to look up new words when I study English. However, we should not use smartphones too much. In conclusion, if children use them wisely, smartphones are a helpful tool.（54語）
 【ポイント】First→For example→However→In conclusionの流れで論理的に展開している。`,
       },
       {
@@ -1592,7 +1592,7 @@ d) How long did it take?
 ■ 英語圏の文化・習慣（入試背景知識問題）
 入試では英語圏の文化的慣習を問う長文が出る。知識として押さえておこう。
 
-・Thanks giving（感謝祭）：11月の第4木曜日、アメリカの伝統的な祝日。七面鳥を食べる。
+・Thanksgiving（感謝祭）：11月の第4木曜日、アメリカの伝統的な祝日。七面鳥を食べる。
 ・Halloween（ハロウィン）：10月31日。子どもが仮装して "Trick or treat!" と言ってお菓子をもらう。
 ・Christmas（クリスマス）：12月25日。プレゼントを交換する習慣。サンタクロース（Santa Claus）。
 ・チップ（Tipping）：アメリカではレストランでの飲食後に15〜20%のチップを払う習慣がある。
@@ -2763,7 +2763,7 @@ spring（春）, summer（夏）, fall / autumn（秋）, winter（冬）
 ・Speaking.（私です）※本人が出たとき
 ・Hold on, please. / Just a moment, please.（少々お待ちください）
 ・Can I take a message?（伝言をうかがいましょうか）／ Can I leave a message?（伝言をお願いできますか）
-⚠ 注意：電話では自分を this is 〜、相手を you ではなく you のままだが、名乗りは this is。I am Tom とは言わない。
+⚠ 注意：電話で名乗るときは this is 〜 を使う。I am Tom とは言わない。
 
 ■ レストラン・食事での会話
 ・注文をとる：Are you ready to order?（ご注文はお決まりですか）
@@ -3858,7 +3858,7 @@ d) It's my favorite.
 【解答】c)
 【解説】「今何時ですか」という時刻をたずねる質問には、時刻で答える。
 
-【問題2】次のEメールの一部を読んで、下線部の意味に最も近いものを選びなさい。（4級レベル）
+【問題2】次のEメールの一部を読んで、その意味に最も近いものを選びなさい。（4級レベル）
 "I'm looking forward to seeing you next month."
 a) 私はあなたに会うのが心配だ
 b) 私はあなたに会うのを楽しみにしている
@@ -4038,15 +4038,15 @@ B: Neither can I.（私も話せません）
 
 ■ 比較文での省略（as 〜 as / than のあとの省略）
 比較の文では、比較対象の重複部分がよく省略される。
-例）Tom is taller than Ken is tall.（もとの完全な文）
-→ Tom is taller than Ken (is).（重複するtallを省略、isも省略可）
+例）Tom is taller than Ken is.（もとの完全な文）
+→ Tom is taller than Ken.（重複する is を省略）
 
 ■ 従属節での主語＋be動詞の省略（分詞構文的な省略）
 接続詞（when/while/if/although等）の後ろで、主節と主語が同じ場合、「主語＋be動詞」が省略されることがある。
 例）When I was young, I lived in Osaka.
 → When young, I lived in Osaka.（When I wasが省略され、youngだけが残る）
-例）While walking to school, I met my teacher.
-→ While I was walking to school, I met my teacher.（Iwasが省略され、walkingが残る）
+例）While I was walking to school, I met my teacher.
+→ While walking to school, I met my teacher.（I was が省略され、walking が残る）
 ⚠ 注意：この省略は主節と従属節の主語が同じときだけ可能。
 
 ■ 不定詞・動名詞の意味上の主語の省略
@@ -4076,7 +4076,7 @@ B: (   ) have I.
 【解答】Neither
 【解説】相手の否定文（never been）に対して「私も〜ない」と同意するので、Neitherを使った倒置表現。
 
-【問題3】次の並び替え問題を完成させなさい。（1語不足）
+【問題3】次の並び替え問題を完成させなさい。（すべての語を使う）
 （seen / never / I / such / beautiful / a / view / have）
 
 【解答】Never have I seen such a beautiful view.
@@ -4516,9 +4516,17 @@ Kate: Here you are.
 【解答】1,200 yen.
 【解説】"That will be 1,200 yen."が金額の答え。
 
-【問題4】次の文が入る最も適切な位置を選びなさい。
-"Would you like anything to drink?"
-すでに本文中にあるが、これと似た構造の設問として「本文中のどの発言が、次の発言の理由になっているか」を問う問題にも応用できる。
+【問題4】次の会話の（　　）に入る最も適切な文を選びなさい。
+Waiter: (　　)
+Kate: Yes, I'll have orange juice.
+
+a) Would you like anything to drink?
+b) How much is it?
+c) What time is it?
+d) Where is the station?
+
+【解答】a)
+【解説】Kate が飲み物を答えているので、直前の Waiter の発言は飲み物をたずねる文になる。
 
 ★ 入試対策ポイント：
 ■ 話者を整理し、質問と答えの対応を確認しながら読む

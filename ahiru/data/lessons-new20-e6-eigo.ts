@@ -1240,8 +1240,8 @@ Have you ever heard of ~?（〜を聞いたことがありますか）という�
 
 ■ 数字に関する表現
 　Axolotls can grow up to 30 centimeters long.（ウーパールーパーは体長30センチまで成長することがある）
-　They can live for more than 10 years.（10年以上生きることができる）
-　→ 「up to（最大で）」「more than（〜以上）」のような数の範囲を表す語に注意する。
+　They can live for more than 10 years.（10年をこえて生きることができる）
+　→ 「up to（最大で）」「more than（〜より多い。ちょうどは入らない）」のような数の範囲を表す語に注意する。
 
 ■ 比較を表す表現
 　Axolotls are more unusual than other salamanders because they don't go through a full change into adults.
@@ -1266,11 +1266,11 @@ Have you ever heard of ~?（〜を聞いたことがありますか）という�
 
 ■ 完成モデル（全体）
 Have you ever heard of the axolotl? It is a kind of salamander that lives in lakes in Mexico. Unlike other salamanders, axolotls usually keep their gills even after they become adults. Because of this, they can breathe underwater their whole lives. Axolotls can grow up to 30 centimeters long, and they can live for more than 10 years. However, axolotls now live in only a few lakes, and they are an endangered species. Many people are working hard to protect them.
-（ウーパールーパーについて聞いたことがありますか。それはメキシコの湖に生息するサンショウウオの一種です。他のサンショウウオと違い、ウーパールーパーは大人になってもえらを保持することが多いです。このため、一生水中で呼吸することができます。ウーパールーパーは体長30センチまで成長することがあり、10年以上生きることができます。しかし、ウーパールーパーは今ではわずかな湖にしか生息しておらず、絶滅危惧種となっています。多くの人がウーパールーパーを守るために努力しています。）
+（ウーパールーパーについて聞いたことがありますか。それはメキシコの湖に生息するサンショウウオの一種です。他のサンショウウオと違い、ウーパールーパーは大人になってもえらを保持することが多いです。このため、一生水中で呼吸することができます。ウーパールーパーは体長30センチまで成長することがあり、10年をこえて生きることができます。しかし、ウーパールーパーは今ではわずかな湖にしか生息しておらず、絶滅危惧種となっています。多くの人がウーパールーパーを守るために努力しています。）
 
 ■ この文章から読み取れる要点
 　①ウーパールーパーの特徴：えらを保持したまま大人になる
-　②大きさ・寿命：最大30センチ、10年以上生きる
+　②大きさ・寿命：最大30センチ、10年をこえて生きる
 　③現状：however（しかし）以降で「絶滅危惧種」という転換が起きている
 
 ★ ポイント：However（しかし）のあとには、それまでの説明と対照的な内容（多くは問題点や課題）が続く。この転換に気づけると、文章の要旨（何を最も伝えたいか）をつかみやすくなる。`,
@@ -1569,7 +1569,7 @@ Wangari Maathai believed that protecting nature and helping people were connecte
 ■ 例題①
 　A: Would you like some tea?
 　B: ( )
-　1. Yes, please.　2. I'm fine, thanks.　3. See you.　4. Nice to meet you.
+　1. Yes, please.　2. It's Monday.　3. See you.　4. Nice to meet you.
 　→ Would you like ~?（〜はいかがですか）という申し出への返事なので、Yes, please.（はい、お願いします）が自然。
 
 ■ 例題②

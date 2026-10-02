@@ -1806,7 +1806,7 @@ dark blue（濃い青・紺）／light blue（水色）／bright red（あざや
 What color is your bag?（かばんは何色ですか。）
 — It is blue.／It's a blue bag.
 What color do you like?（何色が好きですか。）
-— I like green (the) best.
+— I like green best.
 
 ★ ポイント：color のつづりはアメリカ英語。イギリス英語では colour と書く。入試ではどちらでも正解になるが、教科書に合わせて color と書くのが無難である。
 
