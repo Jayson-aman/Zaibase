@@ -233,6 +233,7 @@ export const XM_KS06_SCRIPTS: Record<string, MangaScript> = {
       { speaker: 't', line: 'x軸に平行な線分を底辺にすると、B(1,1)からの高さはどう出る？' },
       { speaker: 's1', line: 'yの差だけでいい。4−1＝3だから、△ABD＝4×3÷2＝6。', },
       { speaker: 't', line: 'yが等しい2点をとると、x軸に平行な線分ができる。底辺は座標の差、高さはyの差で出せる。放物線の面積問題の道具だよ。', emphasis: true },
+      { speaker: 's2', line: '放物線の問題は、まず対称な点を見つけて、x軸に平行な線分を作る。そこから始めればいいんだね。' },
     ],
   },
   koko_math_s342_xm: {
@@ -249,6 +250,7 @@ export const XM_KS06_SCRIPTS: Record<string, MangaScript> = {
       { speaker: 't', line: '24個のうち、百の位が0になっていたものは何個あったと考えられる？' },
       { speaker: 's2', line: '0を百の位に置いて、残り3枚から2枚を並べるから3×2＝6個。24−6＝18で一致した。' },
       { speaker: 't', line: '整数を作る問題は、きびしい条件の位から先に決める。最高位に0は置けない。これが鉄則だよ。', emphasis: true },
+      { speaker: 's2', line: '偶数を作るなら一の位から決めるのも、同じ考え方だね。' },
     ],
   },
   koko_math_s058_xm: {
@@ -281,6 +283,7 @@ export const XM_KS06_SCRIPTS: Record<string, MangaScript> = {
       { speaker: 't', line: 'グラフの最大値16で検算しよう。AD×AB÷2にAD＝8、AB＝4を入れると？' },
       { speaker: 's1', line: '8×4÷2＝16。グラフの最大値と一致した。' },
       { speaker: 't', line: '折れ目のx座標は、出発してからの通算の時間。区間の長さは、その差をとって出そう。', emphasis: true },
+      { speaker: 's2', line: '速さが毎秒1cmなら、時間の差がそのまま長さになるんだね。' },
     ],
   },
   koko_math_s075_xm: {
@@ -345,6 +348,7 @@ export const XM_KS06_SCRIPTS: Record<string, MangaScript> = {
       { speaker: 't', line: 'では、√2+√8のほうは？' },
       { speaker: 's1', line: '√8＝2√2に直して、√2+2√2＝3√2。こっちは中の数をたせない。' },
       { speaker: 't', line: 'かけ算とわり算は、中の数をまとめてよい。たし算とひき算は、根号の中をそろえてから係数をたす。この区別が急所だよ。', emphasis: true },
+      { speaker: 's2', line: '(−2√5)²は、符号も係数も2乗して4×5＝20になるね。' },
     ],
   },
   koko_math_s053_xm: {
@@ -409,6 +413,7 @@ export const XM_KS06_SCRIPTS: Record<string, MangaScript> = {
       { speaker: 't', line: 'なぜ、側面は1つの長方形になるの？' },
       { speaker: 's1', line: '底面の辺ごとに5cm×9cmの面が1枚ずつあって、4枚つながるから。20cm×9cmの長方形になる。' },
       { speaker: 't', line: '角柱の表面積は、底面の周×高さ＋底面積×2。底面は上下に2つあることを忘れないで。', emphasis: true },
+      { speaker: 's2', line: '側面のよこを、1辺分の5cmにしてもいけないんだね。' },
     ],
   },
   koko_math_s359_xm: {
@@ -441,6 +446,7 @@ export const XM_KS06_SCRIPTS: Record<string, MangaScript> = {
       { speaker: 't', line: '符号を決めたあとは、絶対値だけで計算しよう。' },
       { speaker: 's1', line: '4×5÷2×1＝10。だから答えは−10だ。' },
       { speaker: 't', line: '乗除は「符号を決める」と「絶対値を計算する」を2段階に分ける。暗算で一気に済ませようとした瞬間に、ミスが起きるよ。', emphasis: true },
+      { speaker: 's2', line: '−3²と(−3)²のちがいも、かっこがあるかないかで決まるんだね。' },
     ],
   },
   koko_math_s072_xm: {
