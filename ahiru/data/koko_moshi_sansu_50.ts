@@ -449,7 +449,7 @@ export const kokoMoshiSansu50: Question[] = [
     question:
       '図のように、AB = 6 cm、BC = 8 cm の長方形 ABCD がある。辺 CD 上の点 E から点 A へ線分 AE を引いたとき、△ABE と △ADE の面積の比が 3 : 1 であった。DE の長さを求めなさい。',
     figureDescription:
-      '長方形 ABCD（AB=8cm、BC=6cm）の辺 CD 上に点 E をとり、頂点 A と点 E を線分 AE で結んでいる。これにより長方形の内部に △ABE と △ADE ができ、その面積比が 3:1 になっている。',
+      '長方形 ABCD（AB=6cm、BC=8cm）の辺 CD 上に点 E をとり、頂点 A と点 E を線分 AE で結んでいる。これにより長方形の内部に △ABE と △ADE ができ、その面積比が 3:1 になっている。',
     answer: 'DE = 2 cm',
     hint: '△ABEと△ADEは高さABを共有する（ADの垂線として）か、底辺CDを共有する。底辺CDを共有して考える。',
     explanation:

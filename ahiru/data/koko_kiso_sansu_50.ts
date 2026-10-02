@@ -716,7 +716,7 @@ export const kokoKisoSansu50: Question[] = [
   {
     id: 'koko_kiso_sansu_48',
     figureDescription:
-      'データの散らばりを表す箱ひげ図。長方形の箱の左端が第1四分位数10、右端が第3四分位数22の位置にあり、箱の横幅が四分位範囲（22−10＝12）にあたる。',
+      'データの散らばりを表す箱ひげ図。長方形の箱の左端が第1四分位数10、右端が第3四分位数22の位置にある。箱の横幅が四分位範囲にあたる。',
     subject: 'sansu',
     course: 'koko-general',
     examType: 'koko',

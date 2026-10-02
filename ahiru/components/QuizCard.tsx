@@ -337,20 +337,6 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
               </Text>
             </>
           )}
-          {/* 小問ごとの答えと解説。まとめた1行だけでは、どの問がどうしてそうなるのか分からない */}
-          {question.subQuestions != null && question.subQuestions.length > 0 && (
-            <View style={styles.subAnswerList}>
-              {question.subQuestions.map((sub, i) => (
-                <View key={i} style={styles.subAnswerBox}>
-                  <Text style={styles.subAnswerLabel}>{sub.label}</Text>
-                  <Text style={styles.subAnswerText}>{sub.answer}</Text>
-                  {sub.explanation != null && sub.explanation !== '' && (
-                    <Text style={styles.subAnswerExpl}>{sub.explanation}</Text>
-                  )}
-                </View>
-              ))}
-            </View>
-          )}
           {question.isWritten && question.rubricPoints != null && question.rubricPoints.length > 0 && (
             <View style={styles.rubricBox}>
               <Text style={styles.rubricLabel}>✅ 自己採点チェックリスト</Text>

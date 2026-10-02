@@ -51,6 +51,7 @@ import Fireworks from '../../components/Fireworks';
 import AnswerInput, { type SubmitResult } from '../../components/AnswerInput';
 import { getFigure } from '../../data/figures';
 import FigureView from '../../components/FigureView';
+import { shuffledChoices } from '../../utils/choices';
 import { pickEncouragement, pickStreakEncouragement } from '../../data/encouragements';
 import SubjectIcon from '../../components/SubjectIcon';
 
@@ -342,7 +343,8 @@ export default function QuizScreen() {
   const diffInfo = difficultyFilter ? DIFF_LABELS[difficultyFilter] : null;
   const currentFigure = currentQuestion ? getFigure(currentQuestion.id) : undefined;
 
-  const currentChoices = currentQuestion?.choices;
+  // 正解が1番目に偏った問題群があるので、表示のときに並べ替える（同じ起動中は同じ並び）
+  const currentChoices = currentQuestion ? shuffledChoices(currentQuestion.id, currentQuestion.choices) : undefined;
 
   function handleReveal() {
     setRevealed(true);

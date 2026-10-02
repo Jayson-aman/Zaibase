@@ -457,7 +457,7 @@ export const chugakuSansuEx01: Question[] = [
     difficulty: 'standard',
     maxOnly: false,
     question:
-      '体積の応用：半径3cm、高さ10cmの円柱の中に、底面の直径と高さが等しい円すいが入っています。円柱と円すいの体積の差を求めなさい。（円周率は3.14とします）',
+      '体積の応用：半径3cm、高さ10cmの円柱の中に、その円柱と同じ底面・同じ高さの円すいが入っています。円柱と円すいの体積の差を求めなさい。（円周率は3.14とします）',
     answer:
       '円柱282.6cm³、円すい94.2cm³、差188.4cm³',
     hint:
@@ -593,7 +593,7 @@ export const chugakuSansuEx01: Question[] = [
     course: 'general',
     difficulty: 'advanced',
     maxOnly: true,
-    question: '平面図形の応用：1辺10cmの正方形の内部に、4つの頂点から等距離の点Oから各辺の中点まで線を引いたとき、できる図形は何ですか。またその図形の面積を求めなさい。',
+    question: '平面図形の応用：1辺10cmの正方形の各辺の中点を順に結ぶと、どんな図形ができますか。またその図形の面積を求めなさい。',
     answer: '正方形の内接正方形（頂点が各辺の中点）。面積=10²÷2=50cm²。',
     hint: '各辺の中点を結ぶと正方形の半分の面積の正方形ができる。面積=元の正方形の1/2。',
     explanation:
