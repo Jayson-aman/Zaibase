@@ -700,7 +700,7 @@ export const kokugoExtra2a: Question[] = [
   {
     id: 'ke2_059',
     subject: 'kokugo' as const,
-    question: '「ふぜい」を漢字に直しなさい。（風情という意味で）',
+    question: '「ふぜい」を漢字に直しなさい。（しみじみとした味わいや趣という意味で）',
     answer: '風情',
     hint: 'しみじみとした味わいや趣のことです。',
     explanation:
@@ -724,7 +724,7 @@ export const kokugoExtra2a: Question[] = [
   {
     id: 'ke2_061',
     subject: 'kokugo' as const,
-    question: '「せっきょく」を漢字に直しなさい。（積極という意味で）',
+    question: '「せっきょく」を漢字に直しなさい。（自分から進んで取り組む様子という意味で）',
     answer: '積極',
     hint: '自分から進んで物事に取り組む様子です。',
     explanation:
@@ -796,7 +796,7 @@ export const kokugoExtra2a: Question[] = [
   {
     id: 'ke2_067',
     subject: 'kokugo' as const,
-    question: '「こうどう」を漢字に直しなさい。（行動という意味で）',
+    question: '「こうどう」を漢字に直しなさい。（実際に何かをするという意味で）',
     answer: '行動',
     hint: '実際に何かをすることです。',
     explanation:

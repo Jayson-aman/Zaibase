@@ -475,7 +475,7 @@ I'm looking forward to seeing you.（あなたに会えるのを楽しみにし�
     keyPoints: [
       '関係代名詞 what ＝ the thing(s) that ～。「～するもの」「～すること」と訳す。',
       'what の前に先行詞（名詞）は置かない。what 自体に「もの・こと」の意味が入っているから。',
-      '形は２つ：what ＋ 主語 ＋ 動詞（what you want）、what ＋ 動詞（what happened）。',
+      '形は2つ：what ＋ 主語 ＋ 動詞（what you want）、what ＋ 動詞（what happened）。',
       'what のうしろは名詞が一つ欠けた形。欠けているのが目的語なら what ＋ S ＋ V、主語なら what ＋ V。',
       '先行詞があるときは which／that を使い、what は使わない（the book that I bought）。',
       'all・everything・anything などが先行詞のときは that を使う。what は付けない（Everything that he said）。',

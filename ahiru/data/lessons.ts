@@ -10,6 +10,8 @@ import { kokoRikaLessons } from './lessons-koko-rika';
 import { kokoKokugoLessons } from './lessons-koko-kokugo';
 import { kokoEigoLessons } from './lessons-koko-eigo';
 import { kokoShakaiLessons } from './lessons-koko-shakai';
+// 問題に対して足りなかった分野を補う単元
+import { gapLessons } from './lessons-gap';
 
 import { EXTRA_SECTION_FIGURES } from './lesson-extra-figures';
 import { EXTRA_MANGA_SECTIONS } from './manga-extra';
@@ -29,6 +31,7 @@ export const baseLessons: Lesson[] = [
   ...kokoKokugoLessons,
   ...kokoEigoLessons,
   ...kokoShakaiLessons,
+  ...gapLessons,
 ];
 
 // あとから足した動く図解（data/lesson-extra-figures.ts）を、図解のない節に取りつける。
