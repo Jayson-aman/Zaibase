@@ -380,7 +380,7 @@ short は、前後の語が hair や rope なら long、前後が人なら tall�
       '原形は「最初から最後まで」、〜ing は「している最中」を表す（I saw him cross / crossing the street.）。',
       'この形の動詞のあとには to をつけず、動詞に s・ed・ing もつけない。',
       'want・tell・ask のあとは〈人 ＋ to ＋ 原形〉。to がいるかどうかが見分けのポイント。',
-      'make me happy のように、あとに形容詞が来る形（SVOC）とは別。原形が来るのは「させる」の make。',
+      'make me happy のように、あとに形容詞が来る形とは別。原形が来るのは「させる」の make。',
       '受け身になると to が出てくる（I was made to clean the room.）。',
     ],
     sections: [
@@ -451,7 +451,7 @@ make・let・have や see・hear では、させる（許す・見る）とい�
 〈人 ＋ 原形〉をとる：make・let・have・see・hear・watch・feel（させる・許す・見る・聞く）
 
 ■ make のあとに形容詞が来る形とのちがい
-The news made me happy.（その知らせは私をうれしくさせた）のように、make のあとに形容詞が来る形（SVOC）もあります。あとの語が形容詞（happy）なら「〜の状態にする」、動詞の原形（laugh）なら「〜させる」です。
+The news made me happy.（その知らせは私をうれしくさせた）のように、make のあとに形容詞が来る形もあります。あとの語が形容詞（happy）なら「〜の状態にする」、動詞の原形（laugh）なら「〜させる」です。
 　The movie made me cry.（その映画は私を泣かせた）
 
 ■ 受け身になると to が出てくる

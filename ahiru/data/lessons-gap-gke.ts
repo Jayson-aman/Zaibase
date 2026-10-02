@@ -374,7 +374,7 @@ talk about the plan（その計画について話す）
 ask for help（助けを求める）
 agree with you（あなたに賛成する）
 
-■ 3語の熟語（動詞＋副詞＋前置詞）
+■ 3語の熟語（動詞＋副詞＋前置詞など）
 get along with ～（～と仲よくやっていく）　Ken gets along with everyone.
 come up with ～（～を思いつく）　She came up with a good idea.
 run out of ～（～を使い果たす）　We ran out of milk.
@@ -437,7 +437,7 @@ I'm looking forward to seeing you.（あなたに会えるのを楽しみにし�
         heading: '確かめ（検算）のしかた',
         body: `動詞＋前置詞や熟語を使った英文は、次の4点で確かめる。
 
-①前置詞が落ちていないか：wait・listen・look・talk・ask などの後ろに、対象を示す前置詞（for・to・at・about・for）が入っているか。
+①前置詞が落ちていないか：wait・listen・look・talk・ask などの後ろに、対象を示す前置詞（for・to・at・about）が入っているか。
 ②前置詞の種類は合っているか：at＝見る、for＝探す、after＝世話、to＝聞く／尊敬、のようにイメージで確認する。
 ③3語の熟語を割っていないか：get along with は、with のあとに目的語。get along の途中に目的語を入れない。
 ④to のあとの形：look forward to ～ は前置詞の to なので、動詞を続けるなら -ing にする。
@@ -635,7 +635,7 @@ what は節の中では、欠けた名詞（目的語や主語）の役をする
 what he wants という形は、2通りに読める。
 ①疑問詞（間接疑問）：I don't know what he wants.（彼が何をほしがっているか知らない）
 ②関係代名詞：I'll buy what he wants.（彼がほしがっているものを買う）
-見分け方は訳し方で決める。「何を～か」と読んで自然なら疑問詞、「～もの・～こと」と読んで自然なら関係代名詞。know・ask・wonder・tell のように「知る・たずねる」動詞のあとは疑問詞で読むことが多く、buy・show・take などの動作を表す動詞のあとは、関係代名詞で読むことが多い。両方で読める文もあり、入試の和訳ではどちらも認められる。
+見分け方は訳し方で決める。「何を～か」と読んで自然なら疑問詞、「～もの・～こと」と読んで自然なら関係代名詞。know・ask・wonder・tell のように「知る・たずねる」動詞のあとは疑問詞で読むことが多く、buy・show・take などの動作を表す動詞のあとは、関係代名詞で読むことが多い。両方で読める文もあるので、前後の文脈で決める。
 
 ■ what we call ～／what is called ～
 He is what we call a walking dictionary.（彼はいわゆる生き字引だ）
@@ -719,7 +719,7 @@ what 節が主語のときは、単数として扱うのが基本である。Wha
     keyPoints: [
       'so ＋ 形容詞／副詞 ＋ that ＋ 主語 ＋ 動詞：「とても～なので…」「…なほど～だ」。',
       'such ＋ (a／an) ＋ (形容詞) ＋ 名詞 ＋ that ＋ 主語 ＋ 動詞：名詞がついているときは such を使う。',
-      '見分けは「名詞があるか」：so のあとは形容詞か副詞だけ、such のあとは名詞を含む。',
+      '見分けは「名詞があるか」：so のあとは形容詞か副詞だけ、such のあとは名詞を含む（ただし many・much・few・little は so many books のように so を使う）。',
       'such のうしろの名詞が複数形・数えられない名詞のときは a／an は付けない（such nice people、such good weather）。',
       'that 節の時制は、主節の時制にそろえる。過去の文なら that 節も過去（could, couldn\'t）。',
       'that は会話では省略されることが多い（I was so tired I fell asleep.）。',
@@ -731,12 +731,18 @@ what 節が主語のときは、単数として扱うのが基本である。Wha
         body: `■ so ＋ 形容詞／副詞 ＋ that …
 The test was so difficult that nobody could finish it.（テストはとても難しかったので、だれも終えられなかった）
 He ran so fast that I couldn't catch up with him.（彼はとても速く走ったので、私は追いつけなかった）
-so のうしろには、形容詞（difficult）や副詞（fast）だけが来る。名詞は来ない。
+so のうしろには、ふつう形容詞（difficult）や副詞（fast）だけが来る。名詞は来ない（例外は次の many・much など）。
 
 ■ such ＋ (a／an) ＋ (形容詞) ＋ 名詞 ＋ that …
 It was such a hot day that we stayed inside.（とても暑い日だったので、私たちは家の中にいた）
 She is such a kind girl that everyone likes her.（彼女はとても親切な女の子なので、みんなに好かれている）
 名詞（day, girl）があるときは such を使い、〈such ＋ a／an ＋ 形容詞 ＋ 名詞〉の順に並べる。
+
+■ 例外：many・much・few・little
+many・much・few・little は形容詞の働きなので、名詞がついても so を使う。
+He has so many books that he can't carry them.（彼はとてもたくさん本を持っているので、運べない）
+She had so much homework that she couldn't go out.（彼女は宿題がとても多かったので、出かけられなかった）
+この形では、名詞があっても such ではなく so である。
 
 ■ a／an が付かない場合
 such nice people（とても親切な人々）、such good weather（とてもよい天気）
@@ -1371,7 +1377,7 @@ discover（動詞）→ discovery（名詞）
 develop（動詞）→ development（名詞）
 connect（動詞）→ connection（名詞）
 use（動詞）→ useful（役に立つ）↔ useless（役に立たない）
--ion や -ery は「動詞を名詞にする語尾」、-er や -or は「～する人」、-ful は「～に満ちた」、-less は「～がない」を表す。
+-ion・-ment・-y は「動詞を名詞にする語尾」、-er や -or は「～する人」、-ful は「～に満ちた」、-less は「～がない」を表す。
 
 ■ invent と discover
 invent は、世の中になかったものを新しく作り出すこと。電話や電球のように、人が作ったものに使う。
