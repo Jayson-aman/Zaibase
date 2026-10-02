@@ -44,3 +44,7 @@ exports.ahiruUnlockWebhook = stripeUnlock.ahiruUnlockWebhook;
 // ── 保護者向けフィードバック（感想・要望をSlackへ通知） ──────────────────
 const feedback = require("./feedback");
 exports.sendFeedback = feedback.sendFeedback;
+
+// アカウント削除（サーバー側データの完全削除）
+const accountDeletion = require("./accountDeletion");
+exports.deleteMyData = accountDeletion.deleteMyData;

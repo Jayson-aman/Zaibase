@@ -177,9 +177,9 @@ exports.createAhiruUnlockCheckout = onCall(
       success_url: appendQuery(base, "unlock_success=1&session_id={CHECKOUT_SESSION_ID}"),
       cancel_url: appendQuery(base, "unlock_cancel=1"),
       metadata: { firebase_uid: uid, type, item_id: itemId },
-      payment_method_options: {
-        card: { statement_descriptor_suffix_kanji: "ahiru" },
-      },
+      // カードに固定する。コンビニ払いなどの遅延決済が出ると、入金前は unpaid のまま完了イベントが来て、
+      // 入金後を処理していない当コードでは永久に未解放になる。
+      payment_method_types: ["card"],
       locale: "ja",
     });
 

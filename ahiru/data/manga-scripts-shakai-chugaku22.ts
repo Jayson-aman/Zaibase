@@ -20,7 +20,7 @@ export const mangaScriptsShakaiChugaku22: Record<string, MangaScript> = {
     title: 'インドはASEANに加盟している東南アジアの国?',
     panels: [
       { speaker: 's1', line: 'インドってASEANに加盟している東南アジアの国だよね?' },
-      { speaker: 't', line: 'ASEANの加盟10か国(インドネシア・フィリピン・マレーシア・シンガポール・タイなど)を思い出そう。インドはその中に入っている?' },
+      { speaker: 't', line: 'ASEANの加盟11か国(インドネシア・フィリピン・マレーシア・シンガポール・タイなど)を思い出そう。インドはその中に入っている?' },
       { speaker: 's2', line: 'あ、入ってない!' },
       { speaker: 't', line: 'その通り。じゃあインドは、アジアの中でどの地域に分類される?' },
       { speaker: 's1', line: '南アジア!' },

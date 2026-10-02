@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import {
   View,
   Text,
@@ -26,6 +26,8 @@ export default function LoginScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [busy, setBusy] = useState(false);
+  // 連打・Enterの二度押しで、登録や送信が2回走らないようにする（stateの更新は遅れるため ref でも守る）
+  const busyRef = useRef(false);
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
 
@@ -38,6 +40,8 @@ export default function LoginScreen() {
       setError('メールアドレスとパスワードを入力してください。');
       return;
     }
+    if (busyRef.current) return;
+    busyRef.current = true;
     setBusy(true);
     try {
       if (isSignup) await signUpEmail(email, password);
@@ -46,6 +50,7 @@ export default function LoginScreen() {
     } catch (e) {
       setError(e instanceof AuthError ? e.message : 'エラーが発生しました。');
     } finally {
+      busyRef.current = false;
       setBusy(false);
     }
   }
@@ -79,7 +84,7 @@ export default function LoginScreen() {
           <Text style={styles.logo}>🎓</Text>
           <Text style={styles.title}>{isSignup ? 'アカウント作成' : 'ログイン'}</Text>
           <Text style={styles.subtitle}>
-            アカウントでログインすると、学習の記録やご購入内容を引き継げます。
+            アカウントでログインすると、ご購入内容を別の端末にも引き継げます。
           </Text>
 
           <TextInput

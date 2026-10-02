@@ -290,17 +290,18 @@ export const figuresSansuGap1: Record<string, Figure> = {
     caption: '1辺2cmの正方形の角を中心とするおうぎ形と正方形を組み合わせた三日月型',
   },
 
-  // 底辺10cm・高さ12cm（ともに与件）の三角形。頂角30°（与件）。面積は解答なので示さない。
+  // 面積60cm²（与件）の平行四辺形ABCD。点Pは辺BC上のどこか。三角形APDの面積は解答なので示さない。
   nichinoken_figure_08: {
     kind: 'polygon',
     points: [
-      { x: 0, y: 0, label: 'A' },
-      { x: 10, y: 0, label: 'B' },
-      { x: 3, y: 12, label: 'C' },
+      { x: 3, y: 6, label: 'A' },
+      { x: 0, y: 0, label: 'B' },
+      { x: 5, y: 0, label: 'P' },
+      { x: 8, y: 0, label: 'C' },
+      { x: 11, y: 6, label: 'D' },
     ],
-    sideLabels: ['10cm', null, null],
-    heights: [{ from: 2, toEdge: [0, 1], label: '12cm' }],
-    caption: '頂角C=30°',
+    diagonals: [[0, 2], [2, 4]],
+    caption: '平行四辺形ABCD（面積60cm²）。点Pは辺BC上',
   },
 
   // 半径8cm（与件）の四分円。内接する正方形の対角線は半径と同じ8cm。正方形の面積は解答なので示さない。
@@ -311,17 +312,17 @@ export const figuresSansuGap1: Record<string, Figure> = {
     caption: '内接する正方形の対角線=半径=8cm',
   },
 
-  // 下底7cm・上底5cm（ともに与件）の台形。左下の角60°（与件）。左の斜辺の長さ・周の長さは解答なので示さない。
+  // 下底10cm・上底6cm（ともに与件）の等脚台形。左下・右下の角はどちらも60°（与件）。斜辺の長さ・周の長さは解答なので示さない。
   nichinoken_perimeter_02: {
     kind: 'polygon',
     points: [
       { x: 0, y: 0, label: 'D' },
-      { x: 7, y: 0, label: 'C' },
-      { x: 7.31, y: 4, label: 'B' },
-      { x: 2.31, y: 4, label: 'A' },
+      { x: 10, y: 0, label: 'C' },
+      { x: 8, y: 3.46, label: 'B' },
+      { x: 2, y: 3.46, label: 'A' },
     ],
-    sideLabels: ['7cm', null, '5cm', null],
-    caption: '∠D=60°',
+    sideLabels: ['10cm', null, '6cm', null],
+    caption: '左下・右下の角はどちらも60°',
   },
 
   // 長方形ABCD。AB=8cm・BC=6cm・対角線AC=10cm（すべて与件）。頂点Cを中心に倒したとき頂点Aが描く弧の長さは解答なので示さない。

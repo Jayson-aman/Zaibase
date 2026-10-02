@@ -130,8 +130,8 @@ const isan: DiagramFigure = show([
   },
   {
     note: '世界遺産は2種類。自然の宝が自然遺産、人がつくった宝が文化遺産です。日本の自然遺産は5つあります（知床・白神山地・小笠原諸島・屋久島と、奄美・沖縄）。',
-    add: fresh(bx(20, 12, 130, 34, '自然遺産（5つ）', C.green, FILL.green, 13), bx(170, 12, 130, 34, '文化遺産', C.red, FILL.red, 13),
-      bx(20, 52, 130, 24, '知床（北海道）', C.green, FILL.green, 12), bx(20, 80, 130, 24, '白神山地（青森・秋田）', C.green, FILL.green, 11), bx(20, 108, 130, 24, '小笠原諸島（東京都）', C.green, FILL.green, 11), bx(20, 136, 130, 24, '屋久島（鹿児島県）', C.green, FILL.green, 12), bx(20, 164, 130, 24, '奄美・沖縄（鹿児島・沖縄）', C.green, FILL.green, 10),
+    add: fresh(bx(20, 6, 130, 26, '自然遺産（5つ）', C.green, FILL.green, 13), bx(170, 6, 130, 26, '文化遺産', C.red, FILL.red, 13),
+      bx(20, 36, 130, 19, '知床（北海道）', C.green, FILL.green, 11), bx(20, 58, 130, 19, '白神山地（青森・秋田）', C.green, FILL.green, 11), bx(20, 80, 130, 19, '小笠原諸島（東京都）', C.green, FILL.green, 11), bx(20, 102, 130, 19, '屋久島（鹿児島県）', C.green, FILL.green, 11), bx(20, 124, 130, 19, '奄美・沖縄（鹿児島・沖縄）', C.green, FILL.green, 10),
       ...cap('自然遺産は5つ、位置といっしょに', C.green, FILL.green)),
   },
   {

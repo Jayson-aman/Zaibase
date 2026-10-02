@@ -514,7 +514,7 @@ function VocabPaywall({ onClose, onPurchased }: { onClose: () => void; onPurchas
       await purchaseProduct(product);
       onPurchased();
     } catch (err: any) {
-      if (!err?.userCancelled) {
+      if (!(err?.userCancelled || err?.errorCode === 1)) {
         alert('購入エラー。もう一度お試しください。');
       }
     } finally {

@@ -205,7 +205,7 @@ const nisshu: DiagramFigure = show([
 const sideRay = (elev: number, color: string, text: string): DiagramElement[] => {
   const a = (elev * Math.PI) / 180;
   const ex = 60 + 200 * Math.cos(a);
-  const ey = 120 - 200 * Math.sin(a) * 0.55;
+  const ey = 120 - 200 * Math.sin(a) * 0.45;
   return [ln(60, 120, ex, ey, color, false, 2), lb(ex, ey - 8, text, 10, color, 'middle', true)];
 };
 const tiltEarth = (cx: number, cy: number, label: string, color: string): DiagramElement[] => [

@@ -82,7 +82,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
       await purchaseProduct(product);
       onPurchased();
     } catch (err: any) {
-      if (!err?.userCancelled) {
+      if (!(err?.userCancelled || err?.errorCode === 1)) {
         alertCompat('購入エラー', 'もう一度お試しください。');
       }
     } finally {

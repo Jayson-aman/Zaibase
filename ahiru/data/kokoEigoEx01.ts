@@ -91,7 +91,7 @@ export const kokoEigoEx01: Question[] = [
     difficulty: 'basic',
     question: '（　）内に適切な語を入れなさい。\nAre you ( ) to go shopping tomorrow?',
     answer: 'going',
-    hint: 'be going to + 動詞の原形で未来を表す。',
+    hint: 'be動詞のあとに入れて、「〜するつもりだ」という未来の予定を表す形を考える。主語が you なので be動詞は Are。',
     explanation: `be going to は「〜するつもりだ」という近未来の予定や意図を表す。この文では Are you going to ...? という疑問文になっている。tomorrow（明日）は未来を示す語。go shopping は「買い物に行く」という意味。`,
   },
   {
@@ -836,11 +836,11 @@ all over the world（世界中で）は頻出表現なので覚えておこう�
     course: 'koko-general',
     difficulty: 'advanced',
     question:
-      '次の日本語に合うように、空所に適切な語を入れなさい。\n\n天気がよければ、私たちは明日海に行くつもりだ。\n\n( ) the weather fine, we would go to the sea tomorrow.',
+      '次の日本語に合うように、空所に適切な語を入れなさい。\n\nもし（実際にはそうではないが）天気がよければ、私たちは明日海に行くのだが。\n\n( ) the weather fine, we would go to the sea tomorrow.',
     answer: 'Were',
     hint: '倒置による仮定法。If を省略すると were が文頭に来る。',
     explanation:
-      '【何を聞かれているか】\n「天気がよければ、私たちは明日海に行くつもりだ。」という日本語に合うように、仮定法の条件節にIfを使わない倒置形を完成させる問題。\n\n【なぜWereを文頭に置くのか】\n仮定法の条件節では、Ifを省略してwere/had/shouldを文頭に出す倒置形が使われることがある（特に書き言葉で）。"If the weather were fine"を倒置すると"Were the weather fine"になる。\n\n【ポイント1】通常の仮定法過去の形を確認する\n"If the weather were fine, we would go to the sea tomorrow."が、倒置前の元の形。\n\n【ポイント2】倒置の作り方を確認する\nIfを省略し、be動詞のwereを主語（the weather）の前に移動して文頭に置く。\n\n【ポイント3】主節の形を確認する\n条件節が仮定法（were）なので、主節もそれに合わせてwould＋動詞の原形（would go）にする。\n\n【答え】\nWere\n\n【確かめ】\n"Were the weather fine, we would go to the sea tomorrow."が、"If the weather were fine, we would go to the sea tomorrow."と同じ意味になっていることを確認する。\n\n【よくあるまちがい】\n条件節はWereという仮定法の形にしているのに、主節をwillのままにしてしまうミス。条件節が仮定法なら、主節もwouldに合わせる必要がある。\n\n【ここが絶対】\n仮定法の倒置（Were〜、Had〜、Should〜）は、条件節と主節の両方を仮定法の形（were/had+would/could）でそろえる。Had it not been for〜（〜がなければ）、Should you need〜（万が一必要なら）も同様の倒置表現。',
+      '【何を聞かれているか】\n「もし（実際にはそうではないが）天気がよければ、私たちは明日海に行くのだが。」という日本語に合うように、仮定法の条件節にIfを使わない倒置形を完成させる問題。\n\n【なぜWereを文頭に置くのか】\n仮定法の条件節では、Ifを省略してwere/had/shouldを文頭に出す倒置形が使われることがある（特に書き言葉で）。"If the weather were fine"を倒置すると"Were the weather fine"になる。\n\n【ポイント1】通常の仮定法過去の形を確認する\n"If the weather were fine, we would go to the sea tomorrow."が、倒置前の元の形。\n\n【ポイント2】倒置の作り方を確認する\nIfを省略し、be動詞のwereを主語（the weather）の前に移動して文頭に置く。\n\n【ポイント3】主節の形を確認する\n条件節が仮定法（were）なので、主節もそれに合わせてwould＋動詞の原形（would go）にする。\n\n【答え】\nWere\n\n【確かめ】\n"Were the weather fine, we would go to the sea tomorrow."が、"If the weather were fine, we would go to the sea tomorrow."と同じ意味になっていることを確認する。\n\n【よくあるまちがい】\n条件節はWereという仮定法の形にしているのに、主節をwillのままにしてしまうミス。条件節が仮定法なら、主節もwouldに合わせる必要がある。\n\n【ここが絶対】\n仮定法の倒置（Were〜、Had〜、Should〜）は、条件節と主節の両方を仮定法の形（were/had+would/could）でそろえる。Had it not been for〜（〜がなければ）、Should you need〜（万が一必要なら）も同様の倒置表現。',
   },
   {
     id: 'koko_eigo_ex01_066',
@@ -870,7 +870,7 @@ She was cooking, ( ) a song.`,
 
 We ( ) ( ) friends for more than ten years.`,
     answer: 'have been',
-    hint: '現在完了（継続）。状態の継続には have been を使う。',
+    hint: '現在完了（継続）。「ずっと友人だ」という状態が今まで続いていることを表す形を考える。',
     explanation:
       '【何を聞かれているか】\n「私たちは10年以上友人同士だ。」という日本語に合うように、現在完了の文を完成させる問題。\n\n【なぜhave beenを使うのか】\n「（状態が）ずっと続いている」という状態の継続を表すときは、現在完了（have/has been＋形容詞/名詞）を使う。\n\n【ポイント1】現在完了（継続）の公式を確認する\n主語＋have/has been＋形容詞/名詞〜。\n\n【ポイント2】主語Weとhaveの対応を確認する\n主語We（複数）に対応するのはhave。\n\n【ポイント3】"for more than ten years"の役割を確認する\n継続の期間を表す語句で、現在完了とセットで使われる。\n\n【答え】\nhave been\n\n【確かめ】\n"have been friends"が「友人同士である状態がずっと続いている」という意味を表していることを確認する。\n\n【よくあるまちがい】\nhave beenを忘れて"We friends for ten years."のようにbe動詞を抜かしてしまうミス。状態の継続にはhave been＋名詞/形容詞が必要。\n\n【ここが絶対】\n"have/has been＋形容詞/名詞＋for＋期間"＝「（状態が）ずっと〜だ」という現在完了（継続）の形をセットで覚える。',
   },
@@ -886,7 +886,7 @@ We ( ) ( ) friends for more than ten years.`,
 
 ( ) tired, he fell asleep on the train.`,
     answer: 'Being',
-    hint: '理由を表す分詞構文。be動詞の -ing 形は Being となる。',
+    hint: '理由を表す分詞構文。「〜なので」を、接続詞を使わず動詞のing形で言いかえる。',
     explanation: `分詞構文は理由を表す場合もあり、「〜なので」という意味になる。
 Because he was tired → Being tired という分詞構文に変換できる。
 be動詞の -ing 形は Being で、Being tired は「疲れていたので」という理由を示す。
@@ -921,7 +921,7 @@ By the time he arrived, she ( ) ( ) ( ) for three hours.`,
 
 ( ) frankly, the movie was not very interesting.`,
     answer: 'Speaking',
-    hint: '慣用的分詞構文（独立分詞構文）。Speaking frankly = Frankly speaking。',
+    hint: '慣用的な分詞構文。「率直に言えば」と文全体を修飾する、決まった言い方を考える。',
     explanation:
       '【何を聞かれているか】\n「率直に言えば、その映画はあまり面白くなかった。」という日本語に合うように、慣用的な分詞構文を完成させる問題。\n\n【なぜSpeakingという分詞構文を使うのか】\n"Speaking frankly"（率直に言えば）は、主節の主語と分詞の意味上の主語が一致しない、独立分詞構文（慣用表現）の代表例で、"Frankly speaking"とも言う。\n\n【ポイント1】慣用的な分詞構文を確認する\nSpeaking frankly（率直に言えば）、Strictly speaking（厳密に言えば）、Generally speaking（一般的に言えば）などは、決まり文句として覚える。\n\n【ポイント2】主語の一致を気にしない理由を確認する\nこれらの表現は慣用表現として固定化されているため、主節の主語と分詞の意味上の主語が一致しなくても使うことができる。\n\n【ポイント3】文全体の意味を確認する\n"Speaking frankly, the movie was not very interesting."＝「率直に言えば、その映画はあまり面白くなかった」。\n\n【答え】\nSpeaking\n\n【確かめ】\n"Speaking frankly"が文頭に置かれ、コンマの後ろに主節が続いていることを確認する。\n\n【よくあるまちがい】\n分詞構文の主語が主節の主語と一致しないことを気にして、別の表現に変えてしまうミス。慣用的な分詞構文は主語の一致を問わない例外。\n\n【ここが絶対】\nSpeaking frankly（＝Frankly speaking）、Strictly speaking、Generally speakingなどの慣用的な分詞構文を、決まり文句としてセットで覚える。',
   },
@@ -939,7 +939,7 @@ By the time he arrived, she ( ) ( ) ( ) for three hours.`,
 
 I ( ) a shower this morning.`,
     answer: 'took',
-    hint: 'take a shower で「シャワーを浴びる」。',
+    hint: '「シャワーを浴びる」は、動詞＋a shower の決まった言い方。時を表す語（this morning）から過去形にする。',
     explanation: `「シャワーを浴びる」は take a shower という熟語表現。
 have a shower も同じ意味で使われる（主に英国英語）。
 take を使う表現は他にも多く、take a walk（散歩する）、take a rest（休む）、take a photo（写真を撮る）なども重要。
@@ -958,7 +958,7 @@ I took a shower this morning. が正解。`,
 
 ( ) care! A car is coming.`,
     answer: 'Take',
-    hint: 'take care で「気をつける」。命令文は動詞の原形で始める。',
+    hint: '「気をつけて」は決まった短い命令文。命令文は動詞の原形で始め、care とセットで使う動詞を考える。',
     explanation: `Take care! は「気をつけて！」という意味の慣用表現。
 Be careful! も同じ意味で使われる。
 take care of 〜（〜の世話をする）、take care of oneself（自分の体を大切にする）も重要な表現。
@@ -977,7 +977,7 @@ Take care when you cross the road.（道路を渡るときは気をつけて）�
 
 She ( ) with my suggestion.`,
     answer: 'agreed',
-    hint: 'agree with 〜 で「〜に賛成する・同意する」。',
+    hint: '「賛成する」を表す動詞＋前置詞 with のセット。時制は過去。',
     explanation: `agree with 〜 は「〜に賛成する、〜と意見が一致する」という意味の重要熟語。
 agree on 〜 は「〜について合意する」、agree to 〜 は「〜に同意する（提案・条件に）」という意味になる。
 反対の意味は disagree（賛成しない）や object to 〜（〜に反対する）。
@@ -996,7 +996,7 @@ She agreed with my suggestion. が正解。
 
 He ( ) the bus.`,
     answer: 'missed',
-    hint: 'miss the bus で「バスに乗り遅れる」。',
+    hint: '「乗り遅れる」を表す動詞を考える。時制は過去で、この動詞は規則変化。',
     explanation: `「乗り遅れる」は miss を使い、miss the bus（バスに乗り遅れる）、miss the train（電車に乗り遅れる）となる。
 lose も「失う」という意味で混同しやすいが、乗り物を逃す場合は miss を使う。
 miss には他にも「〜がいなくて寂しい」（I miss you. = あなたがいなくて寂しい）という意味もある。
@@ -1015,7 +1015,7 @@ be late for 〜（〜に遅刻する）との違いも確認しておこう。`,
 
 I like ( ) ( ) music.`,
     answer: 'listening to',
-    hint: 'listen to 〜 で「〜を聴く」。like の後ろは動名詞（-ing）。',
+    hint: 'like の後ろに動詞を続けるときは -ing 形。「聴く」は前置詞とセットで使う動詞。',
     explanation:
       '【何を聞かれているか】\n「私は音楽を聴くのが好きだ。」という日本語に合うように、動名詞を使った文を完成させる問題。\n\n【なぜlisten toと動名詞を組み合わせるのか】\n「音楽を聴く」はlisten to musicという熟語で表し、likeの後ろで「〜すること」という動作を表したいときは、動名詞（-ing形）にして続ける。\n\n【ポイント1】listen toの意味を確認する\nlisten to〜＝「〜を聴く」という熟語。toを忘れないことが重要。\n\n【ポイント2】likeの後ろの形を確認する\nlikeの後ろには動名詞（-ing）または不定詞（to不定詞）が来る。\n\n【ポイント3】文を組み立てる\n"I like listening to music."＝「私は音楽を聴くのが好きだ」。\n\n【答え】\nlistening to\n\n【確かめ】\n"listening"の後ろに"to"が続いていて、"listen to music"という熟語が正しく動名詞化されているか確認する。\n\n【よくあるまちがい】\ntoを忘れて"listening music"としてしまうミス。listen toは1つのまとまりの熟語なので、動名詞にしてもtoは残す。\n\n【ここが絶対】\nlisten to〜（〜を聴く）という熟語を、likeの後ろで動名詞listening toの形にしてセットで覚える。',
   },
@@ -1031,7 +1031,7 @@ I like ( ) ( ) music.`,
 
 Please tell me how ( ) solve the problem.`,
     answer: 'to',
-    hint: '疑問詞 + to不定詞。how to do で「どのように〜するか・〜の仕方」。',
+    hint: '疑問詞 + to不定詞。「〜の仕方」の疑問詞のあとに、動詞の原形の前につく語を入れる。',
     explanation: `疑問詞 + to不定詞 は「どのように〜するか・〜の仕方」などを表す表現。
 how to 〜（〜の仕方）、what to 〜（何を〜すべきか）、where to 〜（どこで〜すべきか）などがある。
 Please tell me how to solve the problem. が正解。
@@ -1050,7 +1050,7 @@ tell + 人 + how to 〜 は「人に〜の仕方を教える」という意味�
 
 She can speak not only English ( ) also French.`,
     answer: 'but',
-    hint: 'not only A but also B で「AだけでなくBも」。',
+    hint: '「AだけでなくBも」の相関表現。not only とペアになる接続詞を考える。',
     explanation: `not only A but also B は「AだけでなくBも」という意味の重要な相関接続詞。
 not only と but also はセットで使い、A と B には同じ品詞・形の表現が来る（並列関係）。
 She can speak not only English but also French. が正解。
@@ -1070,13 +1070,26 @@ both A and B（AとBの両方）、either A or B（AかBのどちらか）、nei
 一方では、この計画には多くの利点がある。
 
 ( ) the ( ) hand, this plan has many advantages.`,
-    answer: 'On, other',
-    hint: 'on the other hand で「一方では」という対比を表す重要イディオム。',
-    explanation: `on the other hand は「一方では、他方では」という意味で、対比を表す重要なイディオム。
-on one hand（一方では）と対になって使われることが多い。
-on one hand, ... on the other hand, ... の形で「一方では〜、他方では〜」という対比構文を作る。
-論説文や意見文でよく使われる表現で、接続副詞として文頭または文中に置く。
-advantage（利点）の反意語は disadvantage（欠点）。`,
+    answer: 'On, one',
+    hint: '「一方では」と「他方では」を対にして使う対比のイディオム。「他方では」のほうは other を使う。',
+    explanation: `【何を聞かれているか】
+「一方では、この計画には多くの利点がある。」に合うように、文頭の決まった言い方を完成させる問題。
+
+【なぜ one なのか】
+二つの面を対比するとき、最初に述べるほうを on the one hand（一方では）、あとに述べるほうを on the other hand（他方では）という。この文は「一方では」なので、one を入れる。
+
+【ステップ1】日本語が「一方では」か「他方では」かを見分ける。
+【ステップ2】「一方では」は On the one hand、「他方では」は On the other hand とする。
+【ステップ3】空所は ( ) the ( ) hand の二つなので、On と one を入れる。
+
+【答え】
+On, one（On the one hand, this plan has many advantages.）
+
+【確かめ】
+続きに「他方では欠点もある」と述べるなら、On the other hand, ... と対にして使えることを確かめる。
+
+【よくあるまちがい】
+on the other hand だけをおぼえていて、一方の側にも other を入れてしまう。advantage（利点）の反意語は disadvantage（欠点）。`,
   },
   {
     id: 'koko_eigo_ex01_079',
@@ -1090,7 +1103,7 @@ advantage（利点）の反意語は disadvantage（欠点）。`,
 
 ( ) ( ) the bad weather, they continued the game.`,
     answer: 'In spite of',
-    hint: 'in spite of 〜 で「〜にもかかわらず」。despite と同義。',
+    hint: '「〜にもかかわらず」を表す3語の前置詞句。1語の despite と同じ意味。',
     explanation:
       '【何を聞かれているか】\n「悪天候にもかかわらず、彼らは試合を続けた。」という日本語に合うように、逆接を表す前置詞句を完成させる問題。\n\n【なぜin spite ofを使うのか】\n「〜にもかかわらず」という逆接の意味を、名詞（the bad weather）の前に置いて表すときは、in spite of（またはdespite）という前置詞句を使う。\n\n【ポイント1】in spite ofの意味を確認する\nin spite of〜＝「〜にもかかわらず」。despiteも同じ意味で使える。\n\n【ポイント2】後ろに続く形を確認する\nin spite of／despiteの後ろには名詞・名詞句・動名詞が続く（節は続けない）。\n\n【ポイント3】節を続けたい場合の語を確認する\n「主語＋動詞」の節を続けたいときは、although／though／even thoughを使う。\n\n【答え】\nIn spite of\n\n【確かめ】\n"In spite of"の後ろに"the bad weather"という名詞句が続いていることを確認する。\n\n【よくあるまちがい】\nin spite ofの後ろに「主語＋動詞」の節を続けてしまうミス。節を続けたいときはalthough等を使う。\n\n【ここが絶対】\nin spite of／despite（＋名詞）＝although／though（＋節）という、同じ意味を表す表現の使い分けをセットで覚える。',
   },
@@ -1106,7 +1119,7 @@ advantage（利点）の反意語は disadvantage（欠点）。`,
 
 ( ) a result, many people lost their homes.`,
     answer: 'As',
-    hint: 'as a result で「その結果（として）」という因果関係を表すイディオム。',
+    hint: '「その結果（として）」という因果関係を文頭で表すイディオム。a result の前の1語を考える。',
     explanation: `as a result は「その結果（として）」という意味で、原因と結果の関係を示す接続副詞句。
 文頭または文中（therefore と同様の位置）で使われ、コンマを伴うことが多い。
 as a result of 〜（〜の結果として）の形で使うこともある。
@@ -1125,7 +1138,7 @@ As a result, many people lost their homes. が正解。`,
 
 She asked me to ( ) something ( ) secret.`,
     answer: 'keep, a',
-    hint: 'keep 〜 secret で「〜を秘密にする」。keep + 目的語 + 形容詞（SVOC構文）。',
+    hint: '「秘密にしておく」は、SVOC 構文（動詞＋目的語＋名詞）。secret の前に冠詞が必要か考える。',
     explanation: `keep + 目的語 + 形容詞 は「目的語を〜の状態に保つ」という SVOC 構文。
 keep something secret は「何かを秘密にする」という意味の重要表現。
 ask 人 to do は「人に〜するよう頼む」という意味。
@@ -1144,7 +1157,7 @@ keep + 目的語 + 形容詞 の形には他に keep the door open（ドアを�
 
 I ( ) ( ) the idea.`,
     answer: 'gave up',
-    hint: 'give up 〜 で「〜をあきらめる・やめる」。句動詞の重要表現。',
+    hint: '「あきらめる」を表す句動詞（動詞＋副詞）。時制は過去で、この動詞は不規則変化。',
     explanation: `give up 〜 は「〜をあきらめる、断念する」という意味の重要な句動詞（phrasal verb）。
 I gave up the idea.（その考えをあきらめた）が正解。
 give up は目的語が代名詞の場合、give it up のように動詞と副詞の間に置く。
@@ -1163,7 +1176,7 @@ give up の他にも重要な句動詞：give in（屈する）、give away（�
 
 He was unable to ( ) his promise.`,
     answer: 'keep',
-    hint: 'keep a promise で「約束を守る」。break a promise は「約束を破る」。',
+    hint: '「約束を守る」は、promise と相性のよい動詞を使う。反対の「約束を破る」は break。',
     explanation: `keep a promise は「約束を守る」という意味の重要熟語。
 反対の表現は break a promise（約束を破る）。
 He was unable to keep his promise. が正解。
@@ -1219,7 +1232,7 @@ After months of hard work, the scientist finally made a breakthrough in cancer r
 
 She is, ( ) ( ) ( ), a modern Shakespeare.`,
     answer: 'so to speak',
-    hint: 'so to speak で「いわば・言うなれば」という慣用句。',
+    hint: '「いわば・言うなれば」を表す、3語の挿入句。to 不定詞を使った決まった言い方。',
     explanation: `so to speak は「いわば、言うなれば」という意味の重要イディオム。
 文中（通常はコンマで囲まれて）に挿入して使う。
 as it were も同じ意味で使われる（She is, as it were, a modern Shakespeare.）。
@@ -1257,7 +1270,7 @@ too little, too late（あまりにも少なく遅すぎる）は英語の決ま
 
 ( ) ( ) ( ), health is one of the most important things.`,
     answer: 'It goes without',
-    hint: 'It goes without saying that 〜 で「〜は言うまでもない」。',
+    hint: '「〜は言うまでもない」を表す定型表現。主語 It のあとに動詞が続き、前置詞＋ing の形になる。',
     explanation: `It goes without saying that 〜 は「〜は言うまでもない」という意味の重要な慣用表現。
 It が形式主語で、真の主語は that 節（that health is...）。
 without saying は「言わなくても」という意味で、全体で「言わずとも済む＝言うまでもない」となる。
@@ -1276,7 +1289,7 @@ Needless to say も同様の意味（Needless to say, health is...）。`,
 
 ( ) ( ) my efforts, the project succeeded.`,
     answer: 'Thanks to',
-    hint: 'thanks to 〜 で「〜のおかげで（良い結果）」。due to は中立的・否定的な原因にも使う。',
+    hint: '「〜のおかげで」と、よい結果の原因を表す2語の前置詞句。due to は中立的・否定的な原因にも使う。',
     explanation: `thanks to 〜 は「〜のおかげで」という意味で、良い結果をもたらした原因を示すときに使う。
 due to 〜 も「〜のために（原因）」という意味だが、良い・悪い両方の原因に使える。
 owing to 〜、because of 〜 も同様の意味の前置詞句。
@@ -1329,7 +1342,7 @@ say は say to + 人 の形を使う（She said to me that...）との違いを�
     examType: 'koko',
     course: 'koko-general',
     difficulty: 'standard',
-    question: `次の語句を正しい順に並べ替え、英文を完成させなさい。
+    question: `次の語句を正しい順に並べ替え、英文を完成させなさい。（不要な語が1語含まれる）
 
 ( have / how / do / go / you / often / to ) the gym?
 
@@ -1380,7 +1393,7 @@ What do you want to be when you grow up? が正解。`,
     examType: 'koko',
     course: 'koko-general',
     difficulty: 'standard',
-    question: `次の語句を正しい順に並べ替え、英文を完成させなさい。
+    question: `次の語句を正しい順に並べ替え、英文を完成させなさい。（不要な語が1語含まれる）
 
 ( the / was / book / written / by / this ) a famous author.
 
@@ -1420,16 +1433,16 @@ too 〜 to do（〜すぎて〜できない）との違いも確認しよう（S
     difficulty: 'standard',
     question: `次の語句を正しい順に並べ替え、英文を完成させなさい。
 
-( have / when / did / you / last / seen / you / him )?
+( when / did / you / last / see / him )?
 
 日本語訳：あなたが最後に彼に会ったのはいつですか？`,
     answer: 'When did you last see him?',
-    hint: 'When + 過去疑問文。last は副詞として「最後に」。see の過去形は saw。',
+    hint: 'When + 過去疑問文。last は副詞として「最後に」の意味。did のあとの動詞は原形になる。',
     explanation: `「最後に〜したのはいつ？」は When did you last 〜? という疑問文で表す。
 last は副詞として「最後に」という意味で、動詞の前に置く。
-see の過去形は saw なので、Did you last see him? の語順になる。
+Did のあとの動詞は原形なので、Did you last see him? の語順になる。
 When did you last see him? が正解。
-have は不要（現在完了の疑問文 When have you seen him? は通常使わない）。`,
+語群の語はすべて使う（過去の一時点をたずねる When には現在完了ではなく過去形の疑問文を使う）。`,
   },
   {
     id: 'koko_eigo_ex01_098',
@@ -1437,7 +1450,7 @@ have は不要（現在完了の疑問文 When have you seen him? は通常使�
     examType: 'koko',
     course: 'koko-general',
     difficulty: 'standard',
-    question: `次の語句を正しい順に並べ替え、英文を完成させなさい。
+    question: `次の語句を正しい順に並べ替え、英文を完成させなさい。（不要な語が2語含まれる）
 
 ( made / the noise / her / so / that / was / loud / she ) couldn't sleep.
 
@@ -1456,7 +1469,7 @@ made は不要（noise は make ではなく be動詞と組み合わせる）。
     examType: 'koko',
     course: 'koko-general',
     difficulty: 'standard',
-    question: `次の語句を正しい順に並べ替え、英文を完成させなさい。
+    question: `次の語句を正しい順に並べ替え、英文を完成させなさい。（不要な語が1語含まれる）
 
 ( have / I / wish / I / more / had / time ).
 
@@ -1472,7 +1485,7 @@ made は不要（noise は make ではなく be動詞と組み合わせる）。
     examType: 'koko',
     course: 'koko-general',
     difficulty: 'standard',
-    question: `次の語句を正しい順に並べ替え、英文を完成させなさい。
+    question: `次の語句を正しい順に並べ替え、英文を完成させなさい。（不要な語が1語含まれる）
 
 ( is / Japan / that / known / the / for ) beautiful cherry blossoms.
 
@@ -1547,7 +1560,7 @@ If it had not been for your help, I couldn't have finished the project. が正�
     examType: 'koko',
     course: 'koko-general',
     difficulty: 'advanced',
-    question: `次の語句を正しい順に並べ替え、英文を完成させなさい。
+    question: `次の語句を正しい順に並べ替え、英文を完成させなさい。（不要な語が1語含まれる）
 
 ( the / be / population / expected / world / to / is ) reach 10 billion by 2050.
 
@@ -1660,7 +1673,7 @@ make it possible to 〜（〜を可能にする）、consider it important to �
     difficulty: 'advanced',
     question: `次の語句を正しい順に並べ替え、英文を完成させなさい。
 
-( not / did / realize / little / he / that / how ) people would read his book.
+( did / realize / little / he / how / few ) people would read his book.
 
 日本語訳：彼は、いかに少ない人しか自分の本を読まないかに気づかなかった。`,
     answer: 'Little did he realize how few people would read his book.',

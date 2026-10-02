@@ -621,16 +621,16 @@ export const figuresSansuGap5: Record<string, Figure> = {
     yRange: [0, 30],
     points: [{ x: 3, y: 12, label: '(3, 12)' }],
   },
-  // 三角形、底辺8cm・高さ5cm(すべて与えられた値)。面積は解答。
+  // 三角形、底辺12cm・高さ7cm(すべて与えられた値)。面積は解答。
   chugaku_sansu_ex_02_008: {
     kind: 'polygon',
     points: [
       { x: 0, y: 0 },
-      { x: 8, y: 0 },
-      { x: 3, y: 5 },
+      { x: 12, y: 0 },
+      { x: 4, y: 7 },
     ],
-    sideLabels: ['8cm', null, null],
-    heights: [{ from: 2, toEdge: [0, 1], label: '5cm' }],
+    sideLabels: ['12cm', null, null],
+    heights: [{ from: 2, toEdge: [0, 1], label: '7cm' }],
   },
   // 台形、上底4cm・下底8cm・高さ5cm(すべて与えられた値)。面積は解答。
   chugaku_sansu_ex_02_010: {

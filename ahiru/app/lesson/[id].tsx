@@ -22,6 +22,7 @@ import { useSubjectQuestions } from '../../hooks/useSubjectQuestions';
 import VideoPlayer from '../../components/VideoPlayer';
 import { getLessonVideo } from '../../data/videos';
 import HomeButton from '../../components/HomeButton';
+import Paywall from '../../components/Paywall';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
@@ -37,6 +38,7 @@ export default function LessonDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
   const { isLoggedIn } = useAuthUser();
+  const [paywallVisible, setPaywallVisible] = React.useState(false);
   // loading を見ずに isPro/isMax だけで分岐すると、課金状態の取得が終わるまでの
   // 一瞬、加入者にも「Proプランで閲覧できます」のロック画面が出てしまう。
   const { isPro: subIsPro, isMax: subIsMax, loading: subLoading } = useSubscription();
@@ -78,9 +80,11 @@ export default function LessonDetailScreen() {
     if (!okFormula) return;
     const result = await unlockFormula(figureId);
     if (!result.ok) {
-      noticeDialog('購入できませんでした', result.message);
+      if (!result.cancelled) noticeDialog('購入できませんでした', result.message);
       return;
     }
+    // Web は決済ページへ移動するので、ここでは「解放しました」と言わない（支払い前に言うと誤解を生む）
+    if (result.redirected) return;
     noticeDialog('解放しました', `「${heading}」はこれ以降ずっと無料で見られます。`);
   }
 
@@ -93,9 +97,11 @@ export default function LessonDetailScreen() {
     if (!ok) return;
     const result = await unlockUnit(lessonId);
     if (!result.ok) {
-      noticeDialog('購入できませんでした', result.message);
+      if (!result.cancelled) noticeDialog('購入できませんでした', result.message);
       return;
     }
+    // Web は決済ページへ移動するので、ここでは「解放しました」と言わない（支払い前に言うと誤解を生む）
+    if (result.redirected) return;
     noticeDialog('解放しました', `「${title}」はこれ以降ずっと無料で見られます。`);
   }
 
@@ -236,6 +242,9 @@ export default function LessonDetailScreen() {
             <Text style={styles.lockedText}>
               🔒 このコンテンツはProプランで閲覧できます
             </Text>
+            <TouchableOpacity style={styles.lockedPlanBtn} onPress={() => setPaywallVisible(true)} activeOpacity={0.85}>
+              <Text style={styles.lockedPlanBtnText}>プランを見る</Text>
+            </TouchableOpacity>
           </View>
         )}
         {!subLoading && !(isNew20 && unitUnlocksLoading) && contentUnlocked && (
@@ -334,6 +343,11 @@ export default function LessonDetailScreen() {
           </>
         )}
       </ScrollView>
+      <Paywall
+        visible={paywallVisible}
+        onClose={() => setPaywallVisible(false)}
+        onPurchased={() => setPaywallVisible(false)}
+      />
     </SafeAreaView>
   );
 }
@@ -397,6 +411,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   lockedText: { fontSize: 15, color: '#8B5A38', fontWeight: '600', textAlign: 'center' },
+  lockedPlanBtn: { marginTop: 12, backgroundColor: '#8B5A38', borderRadius: 10, paddingVertical: 10, paddingHorizontal: 22 },
+  lockedPlanBtnText: { color: '#FFFFFF', fontWeight: '800', fontSize: 15 },
   unlockUnitBtn: {
     backgroundColor: '#B5622E',
     borderRadius: 8,

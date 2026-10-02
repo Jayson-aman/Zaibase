@@ -107,7 +107,7 @@ export const DIAGRAMS_EIGO_B: Record<string, DiagramFigure> = {
     },
     {
       note: '❓by と with はどう見分ける？→「乗り物・連絡の手段」なら by、「手に持って使う道具」なら with です。❓なぜ分ける？→日本語はどちらも「〜で」ですが、英語は「手段」と「道具」を別の考えとして扱うからです。',
-      add: [...fresh(B(20, 20, 130, 30, 'by（手段）', 'p', 14), B(170, 20, 130, 30, 'with（道具）', 'y', 14), lb(85, 72, 'bus / train / e-mail', 12, C.purple, 'middle'), lb(235, 72, 'pen / chopsticks', 12, C.main, 'middle'), lb(85, 100, '冠詞なし', 12, C.purple, 'middle', true), lb(235, 100, 'a などがつく（数えられる道具なら）', 12, C.main, 'middle', true)), ...cap('乗り物は by、道具は with', C.main, FILL.yellow)],
+      add: [...fresh(B(20, 20, 130, 30, 'by（手段）', 'p', 14), B(170, 20, 130, 30, 'with（道具）', 'y', 14), lb(85, 72, 'bus / train / e-mail', 12, C.purple, 'middle'), lb(235, 72, 'pen / chopsticks', 12, C.main, 'middle'), lb(85, 100, '冠詞なし', 12, C.purple, 'middle', true), lb(235, 100, 'a などがつく\n（数えられる道具なら）', 12, C.main, 'middle', true)), ...cap('乗り物は by、道具は with', C.main, FILL.yellow)],
     },
     {
       note: 'by には「そばに」の意味もあります。sit by the window は「まどのそばにすわる」です。❓at や in とのちがいは？→by は「すぐ近く」を表す語です。sit by the window を、まるごと1つの言い方として覚えましょう。',

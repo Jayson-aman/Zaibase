@@ -41,32 +41,32 @@ export const figuresCoreRika: Record<string, Figure> = {
     caption: '塩酸と水酸化ナトリウム水溶液の中和。酸とアルカリが打ち消し合って、塩と水ができる',
   },
 
-  // rika_24 直列回路：3Ω＋6Ω＝9Ω
+  // rika_24 直列回路：抵抗3＋抵抗6＝9（豆電球1個分の抵抗を1とする言い方）
   rika_24: {
     kind: 'circuit',
     layout: 'series',
     series: [
-      { type: 'resistor', label: '3Ω' },
-      { type: 'resistor', label: '6Ω' },
+      { type: 'resistor', label: '抵抗3' },
+      { type: 'resistor', label: '抵抗6' },
     ],
     battery: { label: '電池', cells: 1 },
-    caption: '直列：合成抵抗 = 3 + 6 = 9Ω',
+    caption: '直列：全体の抵抗 ＝ 3 ＋ 6 ＝ 9',
   },
 
-  // rika_25 並列回路：3Ωと6Ω → 2Ω
+  // rika_25 並列回路：抵抗3と抵抗6 → 全体の抵抗2（電池1個・豆電球1個の電流を①とする言い方）
   rika_25: {
     kind: 'circuit',
     layout: 'parallel',
     branches: [
-      [{ type: 'resistor', label: '3Ω' }],
-      [{ type: 'resistor', label: '6Ω' }],
+      [{ type: 'resistor', label: '抵抗3' }],
+      [{ type: 'resistor', label: '抵抗6' }],
     ],
     battery: { label: '電池', cells: 1 },
-    caption: '並列：1/R = 1/3 + 1/6 = 1/2 → R = 2Ω',
+    caption: '並列：電池1個なら電流は 1/3 ＋ 1/6 ＝ 1/2、抵抗 ＝ 1 ÷ 1/2 ＝ 2',
     steps: [
-      '合成抵抗の式：1/R = 1/3 + 1/6',
-      '通分して計算：1/R = 2/6 + 1/6 = 3/6 = 1/2',
-      'R = 2Ω',
+      '電池1個のとき、並列では枝ごとに電流が流れる。抵抗3の枝は 1÷3＝1/3、抵抗6の枝は 1÷6＝1/6',
+      '全体の電流は枝の電流の合計。通分して 1/3 ＋ 1/6 ＝ 2/6 ＋ 1/6 ＝ 3/6 ＝ 1/2',
+      '抵抗 ＝ 電池の数 ÷ 電流 ＝ 1 ÷ 1/2 ＝ 2',
     ],
   },
 

@@ -1001,11 +1001,11 @@ export const figuresSansuGap4: Record<string, Figure> = {
     shape: 'sphere',
     labels: { radius: '6cm' },
   },
-  // 縦4cm・横5cm・高さ3cm(与えられた値)の直方体。体対角線の長さは解答。
+  // 縦2cm・横3cm・高さ6cm(与えられた値)の直方体。体対角線の長さは解答。
   oyo_sansu_054: {
     kind: 'solid',
     shape: 'cuboid',
-    labels: { width: '5cm', depth: '4cm', height: '3cm' },
+    labels: { width: '3cm', depth: '2cm', height: '6cm' },
     caption: '体対角線(最も長い対角線)の長さは解答。',
   },
   // 円錐台(上底の半径2cm・下底の半径5cm・高さ6cm、与えられた値)を側面から見た断面(台形)。体積は解答。

@@ -43,6 +43,16 @@ function emitEntitlementChanged(info: unknown): void {
   entitlementListeners.forEach((listener) => listener(info));
 }
 
+// ログイン・ログアウトでユーザーが変わったら、プラン表示も取り直す。
+// （Webにはネイティブの更新リスナーが無く、取り直さないとPro表示や無料表示が古いまま残る）
+async function refreshEntitlements(): Promise<void> {
+  try {
+    emitEntitlementChanged(await getCustomerInfo());
+  } catch {
+    // 取り直せなくても致命的ではない
+  }
+}
+
 async function getWebPurchases() {
   const { Purchases } = await import('@revenuecat/purchases-js');
   if (Purchases.isConfigured()) return Purchases.getSharedInstance();
@@ -82,6 +92,7 @@ export async function identifyUser(uid: string): Promise<void> {
         };
         if (typeof inst.changeUser === 'function') {
           await inst.changeUser(uid);
+          await refreshEntitlements();
           return;
         }
       }
@@ -90,6 +101,7 @@ export async function identifyUser(uid: string): Promise<void> {
       const Purchases = (await import('react-native-purchases')).default;
       await Purchases.logIn(uid);
     }
+    await refreshEntitlements();
   } catch {
     // 紐付け失敗は致命的ではない（購入自体は可能）
   }
@@ -119,6 +131,7 @@ export async function logoutUser(): Promise<void> {
       const Purchases = (await import('react-native-purchases')).default;
       await Purchases.logOut();
     }
+    await refreshEntitlements();
   } catch {
     // ignore
   }
@@ -403,6 +416,12 @@ export async function startStripeUnlockCheckout(
   // 見られなくなる（Paywallの月額課金と同じ理由でログイン必須にする）。
   const { getFirebaseAuth } = await import('./firebaseClient');
   const auth = await getFirebaseAuth();
+  // 保存済みのログイン状態の読み込みが終わるまで待つ（待たないと、ログイン済みでも「ログインが必要」と出る）
+  try {
+    await auth.authStateReady();
+  } catch {
+    // 待てない環境では、そのまま判定する
+  }
   if (!auth.currentUser || auth.currentUser.isAnonymous) {
     throw new Error('ご購入にはログインが必要です。ログインしてからもう一度お試しください。');
   }
@@ -466,7 +485,7 @@ export async function purchaseProduct(product: unknown): Promise<unknown> {
   let customerInfo: unknown;
   if (isWeb) {
     const purchases = await getWebPurchases();
-    const result = await purchases.purchase({ rcPackage: unwrapWebPackage(product) as never });
+    const result = await purchases.purchase({ rcPackage: unwrapWebPackage(product) as never, selectedLocale: 'ja' });
     customerInfo = result.customerInfo;
   } else {
     const Purchases = (await import('react-native-purchases')).default;
@@ -483,7 +502,7 @@ export async function purchasePackage(pkg: unknown): Promise<unknown> {
   let customerInfo: unknown;
   if (isWeb) {
     const purchases = await getWebPurchases();
-    const result = await purchases.purchase({ rcPackage: unwrapWebPackage(pkg) as never });
+    const result = await purchases.purchase({ rcPackage: unwrapWebPackage(pkg) as never, selectedLocale: 'ja' });
     customerInfo = result.customerInfo;
   } else {
     const Purchases = (await import('react-native-purchases')).default;

@@ -746,11 +746,11 @@ export const kokoOyoEigo50: Question[] = [
     difficulty: 'advanced',
     maxOnly: true,
     question:
-      '次の語句を並べ替えて、正しい英文を作りなさい。（１語不要）\n\n[ is / the / tallest / most tall / building / in / this / city ]\n\nThis is _____ _____ _____ _____ _____ .',
-    answer: 'This is the tallest building in the city.',
+      '次の語句を並べ替えて、正しい英文を作りなさい。（１語不要）\n\n[ the / tallest / most / building / in / this / city ]\n\nThis is _____ _____ _____ _____ _____ _____ .',
+    answer: 'This is the tallest building in this city.',
     hint: '最上級の形容詞の作り方：短い語は -est、長い語は most。tall はどちら？',
     explanation:
-      '【解法のコツ】\n最上級の作り方：\n・短い語（1〜2音節）→ -est（tall → tallest）\n・長い語（3音節以上）→ most ＋ 形容詞（beautiful → most beautiful）\n\ntall は1音節なので "tallest" が正解。"most tall" は誤りで不要語。\n"This is the tallest building in the city."\n最上級には必ず "the" をつける！\n英語は必ずできるようになる！最上級は「the ＋ 形容詞-est ＋ 名詞 ＋ in/of」が基本形！',
+      '【解法のコツ】\n最上級の作り方：\n・短い語（1〜2音節）→ -est（tall → tallest）\n・長い語（3音節以上）→ most ＋ 形容詞（beautiful → most beautiful）\n\ntall は1音節なので "tallest" が正解。"most tall" は誤りで不要語。\n"This is the tallest building in this city."\n不要語は most。最上級には必ず "the" をつける！\n英語は必ずできるようになる！最上級は「the ＋ 形容詞-est ＋ 名詞 ＋ in/of」が基本形！',
     pitfall:
       'most tall は絶対に使わない！tall の最上級は tallest（-est 形）のみ。most は3音節以上の長い語に使う。',
     memoryTip:
@@ -782,11 +782,11 @@ export const kokoOyoEigo50: Question[] = [
     difficulty: 'advanced',
     maxOnly: true,
     question:
-      '次の語句を並べ替えて、正しい英文を作りなさい。（１語不要）\n\n[ nice / how / she / is / what / sings ]\n\n_____ _____ she sings!',
+      '次の語句を並べ替えて、正しい英文を作りなさい。（１語不要）\n\n[ nicely / how / what ]\n\n_____ _____ she sings!',
     answer: 'How nicely she sings!',
     hint: '感嘆文のパターンを思い出そう。副詞を使うには How を使う。',
     explanation:
-      '【解法のコツ】\n感嘆文のパターン：\n・What ＋ （a/an）＋ 形容詞 ＋ 名詞 ＋ S ＋ V !（名詞を強調）\n・How ＋ 形容詞/副詞 ＋ S ＋ V !（形容詞・副詞を強調）\n\n"she sings"（動詞）を強調するには副詞が必要 → nice（形容詞）→ nicely（副詞）\n"How nicely she sings!"\n不要語：what、nice（nicelyに変換するため）\n英語は必ずできるようになる！感嘆文は How ＋ 副詞 / What ＋ 名詞 の2パターンを覚えよう！',
+      '【解法のコツ】\n感嘆文のパターン：\n・What ＋ （a/an）＋ 形容詞 ＋ 名詞 ＋ S ＋ V !（名詞を強調）\n・How ＋ 形容詞/副詞 ＋ S ＋ V !（形容詞・副詞を強調）\n\n"she sings"（動詞）を強調するには副詞が必要 → nicely（副詞）を使う\n"How nicely she sings!"\n不要語：what（名詞を強調するときの感嘆文に使う語）\n英語は必ずできるようになる！感嘆文は How ＋ 副詞 / What ＋ 名詞 の2パターンを覚えよう！',
     pitfall:
       '"nice" のまま使うと "How nice she sings" は不自然（nice は形容詞で副詞的に動詞を修飾できない）。副詞 "nicely" に変換が必要。',
     memoryTip:

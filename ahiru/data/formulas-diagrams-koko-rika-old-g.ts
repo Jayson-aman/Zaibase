@@ -361,7 +361,7 @@ const nenshu: DiagramFigure = show([
   },
   {
     note: '❓季節によって見える星座が変わるのはなぜでしょう。地球が公転すると、夜の側が向く方向が変わり、見える星座が入れかわるからです。図の矢印が、真夜中に見える方向です。',
-    add: fresh(...orbit(46), ...[90, 0, 270, 180].flatMap((d, i) => [earthDot(d, undefined, 46), ar(epos(d, 46)[0] + 10 * Math.cos((d * Math.PI) / 180), epos(d, 46)[1] - 10 * Math.sin((d * Math.PI) / 180), epos(d, 74)[0], epos(d, 74)[1], C.purple), lb(epos(d, 88)[0], epos(d, 88)[1], '星座' + 'アイウエ'[i], 11, C.purple, 'middle', true)]), ...say('夜の側の方向が変わる → 見える星座が変わる', C.purple, FILL.purple, 12)),
+    add: fresh(...orbit(38), ...[90, 0, 270, 180].flatMap((d, i) => [earthDot(d, undefined, 38), ar(epos(d, 38)[0] + 9 * Math.cos((d * Math.PI) / 180), epos(d, 38)[1] - 9 * Math.sin((d * Math.PI) / 180), epos(d, 58)[0], epos(d, 58)[1], C.purple), lb(epos(d, d === 0 || d === 180 ? 82 : 69)[0] + (d === 270 ? 8 : 0), epos(d, d === 270 ? 56 : 69)[1] + 4, '星座' + 'アイウエ'[i], 11, C.purple, d === 270 ? 'start' : 'middle', true)]), ...say('夜の側の方向が変わる → 見える星座が変わる', C.purple, FILL.purple, 12)),
   },
   {
     note: '❓では、太陽と同じ方向にある星座はどうでしょう。その星座は昼の側にあるので、太陽の光で空が明るく、夜には見えません。',

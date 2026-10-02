@@ -573,12 +573,14 @@ export const kokoSansuEx12: Question[] = [
     course: 'koko-nishiyamato',
     difficulty: 'advanced',
     maxOnly: true,
-    question: '△ABC で ∠C=90°、AB=c、BC=a、AC=b のとき、sinA、cosA、tanA を a,b,c で表せ。',
+    question:
+      '【高校先取り】△ABC で ∠C=90°、AB=c、BC=a、AC=b のとき、sinA、cosA、tanA を a,b,c で表せ。',
     answer: 'sinA=a/c、cosA=b/c、tanA=a/b',
     hint: '直角三角形で ∠A の対辺=BC=a、隣辺=AC=b、斜辺=AB=c。',
     explanation:
       '【何を聞かれているか】∠C=90°の直角三角形ABCで、sinA、cosA、tanAを辺の長さa,b,cを使って表す。\n【なぜその式なのか】三角比は「どの角から見た対辺・隣辺・斜辺か」で決まる。∠Aを基準にしたときの3辺の役割を正しく見分ける必要がある。\n【ステップ1】直角三角形で斜辺は直角の向かいの辺AB=c。∠Aの対辺（向かい側の辺）はBC=a、∠Aの隣にある辺（斜辺以外）はAC=b。\n【ステップ2】sinA＝対辺/斜辺＝a/c。cosA＝隣辺/斜辺＝b/c。\n【ステップ3】tanA＝対辺/隣辺＝a/b。\n【答え】sinA=a/c、cosA=b/c、tanA=a/b\n【確かめ】3:4:5の直角三角形(a=3,b=4,c=5)で確認すると、sinA=3/5,cosA=4/5,tanA=3/4となり、実際の角度の性質と一致する。\n【よくあるまちがい】対辺・隣辺・斜辺の対応をまちがえる（∠Aの対辺は∠Aの向かい側にある辺BCであってACではない）。\n【ここが絶対】sin・cos・tanは高校で習う内容で高校入試には出ないが、この問題は【高校先取り】として三角比の定義（sin=対/斜、cos=隣/斜、tan=対/隣）を扱っている。',
-    pitfall: '対辺・隣辺・斜辺の対応を間違えるミスに注意（∠A の対辺は∠A の向かいにある辺）。',
+    pitfall:
+      '対辺・隣辺・斜辺の対応を間違えるミスに注意（∠A の対辺は∠A の向かいにある辺）。sin・cos・tan は高校で習う記号で、高校入試には出ない。中学では「対辺：斜辺＝a：c」のように辺の比で考える。',
     memoryTip: '「sin=対/斜、cos=隣/斜、tan=対/隣」——どの角基準かを明確に。',
   },
   {

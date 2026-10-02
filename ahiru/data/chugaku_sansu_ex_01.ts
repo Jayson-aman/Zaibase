@@ -407,8 +407,7 @@ export const chugakuSansuEx01: Question[] = [
     maxOnly: false,
     question:
       '面積の応用：上底6cm、下底10cm、高さ8cmの台形の面積を求めなさい。また、この台形の中に半径3cmの円をかいたとき、円の面積を求め、それが台形の面積の何%にあたるかを小数第1位まで求めなさい。（円周率は3.14とします）',
-    figureDescription:
-      '上底6cm、下底10cm、高さ8cmの台形が描かれ、その内側に半径3cmの円が台形の辺に接する（内接する）ように収まっている。',
+    figureDescription: '上底6cm、下底10cm、高さ8cmの台形の内側に、半径3cmの円が1つかかれている。',
     answer:
       '台形の面積64cm²、円の面積28.26cm²、約44.2%',
     hint:

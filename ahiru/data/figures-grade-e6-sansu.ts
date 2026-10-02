@@ -224,10 +224,10 @@ export const figuresGradeE6Sansu: Record<string, Figure> = {
     kind: 'polygon',
     points: [
       { x: 0, y: 0, label: 'D' },
-      { x: 14, y: 0, label: 'E' },
-      { x: 5, y: 9, label: 'F' },
+      { x: 10, y: 0, label: 'E' },
+      { x: 11.4, y: 13.93, label: 'F' },
     ],
-    sideLabels: ['14cm', '18cm', '10cm'],
+    sideLabels: ['10cm', '14cm', '18cm'],
     caption: 'ABC(5,7,9cm)を2倍に拡大したDEF(10,14,18cm)',
     steps: [
       'ABに対応する辺DEの長さを求める:AB×2',

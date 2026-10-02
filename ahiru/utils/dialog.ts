@@ -13,7 +13,8 @@ export function confirmDialog(
     try {
       return Promise.resolve(window.confirm(`${title}\n\n${message}`));
     } catch {
-      return Promise.resolve(true);
+      // 確認画面を出せないときは、購入などを勝手に進めない
+      return Promise.resolve(false);
     }
   }
   return new Promise((resolve) => {

@@ -519,7 +519,7 @@ const niten: DiagramFigure = show([
 ]);
 
 // ── 34. 直線の交点の求め方 ──
-const gX = G(40, 126, 14, 30, 240, 8, 120);
+const gX = G(100, 126, 10, 60, 150, 8, 118);
 const kouten: DiagramFigure = show([
   {
     note: 'y ＝ 2x ＋ 1 と y ＝ −x ＋ 7 の2直線があります。交点とは、2本の直線が同じ場所でぶつかる点です。座標を求めます。',

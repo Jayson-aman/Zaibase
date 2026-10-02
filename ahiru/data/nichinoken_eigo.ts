@@ -191,14 +191,13 @@ export const nichinokenEigo: Question[] = [
     id: 'nk_eigo_reading_04',
     subject: 'eigo',
     question: '次の本文の空欄（　）に最もふさわしい語を選びなさい。\n"Regular exercise is good for your health. ( ), you should also eat balanced meals and get enough sleep."',
-    answer: 'However',
-    hint: '前の文と後の文の関係は「逆接・追加・結果」のどれ？',
+    answer: 'In addition',
+    hint: '前の文と後の文の関係は「逆接・追加・結果」のどれ？ 2文目の should also に注目する。',
     explanation:
-      '【何を聞かれているか】\n"Regular exercise is good for your health. ( ), you should also eat balanced meals and get enough sleep."の空欄に入る、最も適切な語を選ぶ問題。\n\n【なぜHoweverが正解なのか】\n1文目「運動は健康に良い」だけでは十分ではなく、「（それだけに頼らず）バランスの良い食事や十分な睡眠も必要だ」という注意を付け加えるとき、英語では単なる追加（In addition）ではなく、"However"を使って「大切な注意点」として示すことがよくある。\n\n【ポイント1】前後の文の関係を確認する\n1文目は運動の良さを述べ、2文目は運動だけでは足りない（他の要素も必要）と述べている。「運動は良いが、それだけではない」という、軽い注意・限定のニュアンスがある。\n\n【ポイント2】"In addition"を選ばない理由を確認する\n2文目にはすでに"should also eat"（食事も）という"also"（〜も）が入っているため、"In addition"（さらに）を重ねると意味が二重になってしまう。Howeverならこの重複が起きない。\n\n【ポイント3】BecauseとAlthoughを消去する\nBecauseは理由を導く語で、2文目が1文目の理由になっていないので合わない。Althoughは譲歩の接続詞で、単独の文の先頭に置いて次の文とつなぐ使い方はできない。\n\n【答え】\nHowever\n\n【確かめ】\n"However, you should also eat balanced meals and get enough sleep."が、「運動は良いが、それだけに頼らず食事や睡眠も大切だ」という注意喚起として自然に読めることを確認する。\n\n【よくあるまちがい】\n"also"が2文目にすでにあることに気づかず、"In addition"を選んで意味を重複させてしまうミス。\n\n【ここが絶対】\nHoweverは「反対」だけでなく、「大切な注意点を付け加える」場面でも使われることを覚えておく。すでにalsoがある文にIn additionを重ねると意味が二重になることにも注意する。',
+      '【何を聞かれているか】\n"Regular exercise is good for your health. ( ), you should also eat balanced meals and get enough sleep."の空欄に入る、最も適切な語句を選ぶ問題。\n\n【なぜIn additionが正解なのか】\n1文目は「運動は健康によい」、2文目は「バランスのよい食事と十分な睡眠も大切だ」と、よいことをもう一つ付け加えている。前の内容に別の内容を足すときは、「さらに・そのうえ」を表すIn additionを使う。2文目の also（〜も）も、足していく流れを示す目印になっている。\n\n【ステップ1】前後の文の関係を確かめる\n1文目も2文目も「健康のためによいこと」を述べていて、反対の内容ではない。つまり「逆接」ではなく「追加」の関係である。\n\n【ステップ2】選択肢を一つずつ確かめる\nHowever（しかし）は反対の内容をつなぐ語なので合わない。Because（なぜなら）は理由を導く語で、2文目が1文目の理由になっていないので合わない。Although（〜だけれども）は文と文をつなぐ接続詞で、単独の文の先頭には置けない。\n\n【答え】\nIn addition\n\n【確かめ】\n"In addition, you should also eat balanced meals and get enough sleep." と読むと、「さらに、バランスのよい食事と十分な睡眠も大切だ」となり、自然につながる。\n\n【よくあるまちがい】\n文の最初の空欄を見ると、とりあえずHoweverを選びたくなる。しかし、前後が反対の内容かどうかを確かめずに選んではいけない。',
     difficulty: 'advanced',
     maxOnly: true,
-    choices: ['However', 'Because', 'Although', 'In addition'],
-  },
+    choices: ['However', 'Because', 'Although', 'In addition'],  },
 
   // ============================================================
   // 英作文（日本語→英語）
@@ -252,11 +251,11 @@ export const nichinokenEigo: Question[] = [
   {
     id: 'nk_eigo_pronunciation_02',
     subject: 'eigo',
-    question: '次のうち、アクセント（強勢）の位置が他と異なるものを選びなさい。\nde-LI-cious / beau-TI-ful / im-POR-tant / com-PU-ter',
+    question: '次のうち、アクセント（強勢）の位置が他と異なるものを選びなさい。\nde-LI-cious / BEAU-ti-ful / im-POR-tant / com-PU-ter',
     answer: 'beautiful',
     hint: 'beautiful は前（第1音節）にアクセント。他は第2音節。',
     explanation:
-      '【何を聞かれているか】\ndelicious・beautiful・important・computerのうち、アクセント（強勢）の位置が他と異なるものを選ぶ問題。\n\n【なぜbeautifulだけアクセントの位置が違うのか】\ndelicious・important・computerはいずれも第2音節にアクセントがあるが、beautifulだけは第1音節にアクセントがある。\n\n【ポイント1】第2音節にアクセントがある語を確認する\nde-LI-cious、im-POR-tant、com-PU-terは、いずれも2番目の音節を強く読む。\n\n【ポイント2】beautifulのアクセントを確認する\nbeautifulはBEA-u-ti-fulのように、最初の音節にアクセントがある。\n\n【ポイント3】3音節以上の語のアクセントに注意することを確認する\n3音節以上の単語は、アクセントの位置が語によって異なるため、入試でもよく問われる。\n\n【答え】\nbeautiful\n\n【確かめ】\ndelicious・important・computerがすべて2番目の音節にアクセントがあり、beautifulだけが1番目の音節にアクセントがあることを確認する。\n\n【よくあるまちがい】\nアクセントの位置を意識せず、綴りの長さだけで判断してしまうミス。単語ごとにアクセントの位置を実際に発音して確認する必要がある。\n\n【ここが絶対】\n3音節以上の単語はアクセントの位置が語によって異なるため、単語ごとに正確な位置を覚える。',
+      '【何を聞かれているか】\ndelicious・beautiful・important・computerのうち、アクセント（強勢）の位置が他と異なるものを選ぶ問題。\n\n【なぜbeautifulだけアクセントの位置が違うのか】\ndelicious・important・computerはいずれも第2音節にアクセントがあるが、beautifulだけは第1音節にアクセントがある。\n\n【ポイント1】第2音節にアクセントがある語を確認する\nde-LI-cious、im-POR-tant、com-PU-terは、いずれも2番目の音節を強く読む。\n\n【ポイント2】beautifulのアクセントを確認する\nbeautifulはBEAU-ti-fulのように、最初の音節にアクセントがある。\n\n【ポイント3】3音節以上の語のアクセントに注意することを確認する\n3音節以上の単語は、アクセントの位置が語によって異なるため、入試でもよく問われる。\n\n【答え】\nbeautiful\n\n【確かめ】\ndelicious・important・computerがすべて2番目の音節にアクセントがあり、beautifulだけが1番目の音節にアクセントがあることを確認する。\n\n【よくあるまちがい】\nアクセントの位置を意識せず、綴りの長さだけで判断してしまうミス。単語ごとにアクセントの位置を実際に発音して確認する必要がある。\n\n【ここが絶対】\n3音節以上の単語はアクセントの位置が語によって異なるため、単語ごとに正確な位置を覚える。',
     difficulty: 'advanced',
     maxOnly: true,
     choices: ['delicious', 'beautiful', 'important', 'computer'],

@@ -32,6 +32,20 @@ function friendlyError(code: string | undefined): string {
       return '試行回数が多すぎます。しばらくしてからお試しください。';
     case 'auth/network-request-failed':
       return 'ネットワークエラーです。接続を確認してください。';
+    case 'auth/user-disabled':
+      return 'このアカウントは利用できません。info@zaibase.group までご連絡ください。';
+    case 'auth/missing-password':
+      return 'パスワードを入力してください。';
+    case 'auth/missing-email':
+      return 'メールアドレスを入力してください。';
+    case 'auth/operation-not-allowed':
+    case 'auth/unauthorized-domain':
+      return 'この方法でのログインは、現在ご利用いただけません。';
+    case 'auth/requires-recent-login':
+    case 'auth/user-token-expired':
+      return 'セキュリティのため、パスワードの入力が必要です。';
+    case 'auth/credential-already-in-use':
+      return 'このメールアドレスは既に登録されています。ログインしてください。';
     default:
       return `エラーが発生しました。もう一度お試しください。${code ? `（${code}）` : ''}`;
   }
@@ -39,12 +53,64 @@ function friendlyError(code: string | undefined): string {
 
 export class AuthError extends Error {}
 
+// ── 端末に残る学習記録を、アカウントごとに分けて持つ ─────────────────
+// 学習記録・フィードバック控えなどはこの端末の AsyncStorage にあり、キーにユーザーを含まない。
+// そのままだと、ログアウトして別の人がログインしても前の人の記録が見え、記録も混ざる。
+// ユーザーが変わるたびに、いまの記録を「そのユーザー用の退避先」へ移し、
+// 新しいユーザーの退避分があればそれを戻す（無ければ空にする）。
+const USER_DATA_KEYS = ['@entrance_exam_progress', '@ahiru_feedback_log', '@entrance_exam_review_prompt'];
+const STASH_PREFIX = '@ahiru_stash/';
+const PENDING_PREFIXES = ['formula_unlock_pending_', 'unit_unlock_pending_'];
+
+async function getStorage() {
+  return (await import('@react-native-async-storage/async-storage')).default;
+}
+
+/** fromKey（uid か 'anon'）の記録を退避し、toKey の退避分を戻す。同じ人なら何もしない。 */
+async function swapLocalUserData(fromKey: string, toKey: string): Promise<void> {
+  if (fromKey === toKey) return;
+  try {
+    const storage = await getStorage();
+    const current = await storage.multiGet(USER_DATA_KEYS);
+    const saved: Record<string, string> = {};
+    for (const [k, v] of current) if (v != null) saved[k] = v;
+    await storage.setItem(STASH_PREFIX + fromKey, JSON.stringify(saved));
+    await storage.multiRemove(USER_DATA_KEYS);
+    // 購入の「確認待ち」フラグは別の人の購入を妨げるので持ち越さない
+    const keys = await storage.getAllKeys();
+    const pending = keys.filter((k) => PENDING_PREFIXES.some((p) => k.startsWith(p)));
+    if (pending.length > 0) await storage.multiRemove(pending);
+    const next = await storage.getItem(STASH_PREFIX + toKey);
+    if (next != null) {
+      const restored = JSON.parse(next) as Record<string, string>;
+      await storage.multiSet(Object.entries(restored));
+      await storage.removeItem(STASH_PREFIX + toKey);
+    }
+  } catch {
+    // 退避できなくてもログイン自体は続ける
+  }
+}
+
+function localKeyOf(u: { uid: string; isAnonymous: boolean } | null | undefined): string {
+  return u && !u.isAnonymous ? u.uid : 'anon';
+}
+
 export async function signUpEmail(email: string, password: string): Promise<AuthUser> {
   if (!isFirebaseConfigured()) throw new AuthError('この機能は準備中です');
   const auth = await getFirebaseAuth();
-  const { createUserWithEmailAndPassword } = await import('firebase/auth');
+  const { createUserWithEmailAndPassword, linkWithCredential, EmailAuthProvider } = await import('firebase/auth');
   try {
+    // 匿名のまま使っていたなら、そのアカウントにメールを結びつける。
+    // UID が変わらないので、匿名のあいだに買った購入・解放・学習記録が新しいアカウントに引き継がれる。
+    const current = auth.currentUser;
+    if (current != null && current.isAnonymous) {
+      const cred = await linkWithCredential(current, EmailAuthProvider.credential(email.trim(), password));
+      await identifyUser(cred.user.uid);
+      return toAuthUser(cred.user);
+    }
+    const before = localKeyOf(current);
     const cred = await createUserWithEmailAndPassword(auth, email.trim(), password);
+    await swapLocalUserData(before, localKeyOf(cred.user));
     await identifyUser(cred.user.uid);
     return toAuthUser(cred.user);
   } catch (e: any) {
@@ -57,7 +123,9 @@ export async function signInEmail(email: string, password: string): Promise<Auth
   const auth = await getFirebaseAuth();
   const { signInWithEmailAndPassword } = await import('firebase/auth');
   try {
+    const before = localKeyOf(auth.currentUser);
     const cred = await signInWithEmailAndPassword(auth, email.trim(), password);
+    await swapLocalUserData(before, localKeyOf(cred.user));
     await identifyUser(cred.user.uid);
     return toAuthUser(cred.user);
   } catch (e: any) {
@@ -68,9 +136,18 @@ export async function signInEmail(email: string, password: string): Promise<Auth
 export async function signOutUser(): Promise<void> {
   const auth = await getFirebaseAuth();
   const { signOut } = await import('firebase/auth');
+  const before = localKeyOf(auth.currentUser);
   await signOut(auth);
+  // 前のユーザーの記録を見せないよう、この端末の記録を退避して空にする（次に同じ人が入れば戻る）
+  await swapLocalUserData(before, 'anon');
   await logoutUser();
 }
+
+/** パスワードの再入力（再認証）が必要なときに投げる。呼び出し側はパスワード入力欄を出して再試行する。 */
+export class ReauthRequired extends AuthError {}
+
+/** 削除後も残してよい端末内のキー（同意と、無料枠の端末カウンタ） */
+const KEEP_AFTER_DELETE = /^(trial_questions_answered|session_free_used_|@?ahiru_terms)/;
 
 /**
  * アカウントを完全に削除する。
@@ -78,47 +155,82 @@ export async function signOutUser(): Promise<void> {
  * Appleのガイドライン5.1.1(v)により、アプリ内でアカウントを作成できる場合は
  * アプリ内で削除もできる必要がある（無いと審査で却下される）。
  *
- * 直前にログインしていないとFirebaseが `auth/requires-recent-login` を返すため、
- * その場合は再ログインを促すメッセージを出す。
+ * 流れ：①パスワードで再認証 ②サーバー（deleteMyData）が、利用回数・解放記録・感想・
+ * アクセス記録・ランキング・RevenueCatの顧客情報と、認証アカウントを削除
+ * ③端末内の記録を消す。
+ * サーバー関数がまだ公開されていない間は、従来どおりクライアントから消せる範囲を消す。
  */
-export async function deleteAccount(): Promise<void> {
+export async function deleteAccount(password?: string): Promise<void> {
   if (!isFirebaseConfigured()) throw new AuthError('この機能は準備中です');
   const auth = await getFirebaseAuth();
   const user = auth.currentUser;
   if (!user) throw new AuthError('ログインしていません。');
+  const authMod = await import('firebase/auth');
 
-  // 先にユーザーに紐づくデータを消してから認証アカウントを消す。
-  // 順序を逆にすると、認証が消えた時点で権限を失い消せなくなる。
-  const uid = user.uid;
-  try {
-    const { getFirestoreDb } = await import('./firebaseClient');
-    const db = await getFirestoreDb();
-    const { doc, deleteDoc } = await import('firebase/firestore');
-    // ランキング登録を削除（他コレクションはサーバー側の管理データで、
-    // クライアントからは削除権限が無いため対象外）
-    await deleteDoc(doc(db, 'examLeaderboard', uid)).catch(() => {});
-  } catch {
-    // Firestore未設定などでも認証アカウントの削除は続行する
-  }
-
-  const { deleteUser } = await import('firebase/auth');
-  try {
-    await deleteUser(user);
-  } catch (e: any) {
-    if (e?.code === 'auth/requires-recent-login') {
+  if (!user.isAnonymous) {
+    // 端末を拾った人がログイン済みのまま削除できないよう、削除の前に必ずパスワードを確かめる
+    if (!password) throw new ReauthRequired('パスワードを入力してください。');
+    if (!user.email) throw new AuthError('メールアドレスが確認できないため、削除できません。');
+    try {
+      await authMod.reauthenticateWithCredential(
+        user,
+        authMod.EmailAuthProvider.credential(user.email, password),
+      );
+    } catch (e: any) {
       throw new AuthError(
-        'セキュリティのため、一度ログアウトしてもう一度ログインしてから削除してください。',
+        e?.code === 'auth/invalid-credential' || e?.code === 'auth/wrong-password'
+          ? 'パスワードが正しくありません。'
+          : friendlyError(e?.code),
       );
     }
-    throw new AuthError(friendlyError(e?.code));
   }
 
-  // 端末に残る学習記録・お試し回数なども消す。
-  // ⚠️ アカウント削除が成功した後に行うこと。先に消すと、再ログインが必要で
-  // 削除に失敗した場合に、アカウントは残ったまま学習記録だけ失われる。
+  let serverDeleted = false;
+  if (!user.isAnonymous) {
+    try {
+      const { callFirebaseFunction } = await import('./firebaseClient');
+      await callFirebaseFunction<Record<string, never>, { ok: boolean }>('deleteMyData', {});
+      serverDeleted = true;
+    } catch (e: any) {
+      const code = String(e?.code ?? '');
+      const notDeployed = code === 'functions/not-found' || code === 'functions/unimplemented';
+      if (!notDeployed) {
+        throw new AuthError('削除に失敗しました。通信状況を確認して、もう一度お試しください。');
+      }
+      // サーバー関数が未公開の間は、クライアントから消せる範囲で削除する
+    }
+  }
+
+  if (!serverDeleted) {
+    try {
+      const { getFirestoreDb } = await import('./firebaseClient');
+      const db = await getFirestoreDb();
+      const { doc, deleteDoc } = await import('firebase/firestore');
+      await deleteDoc(doc(db, 'examLeaderboard', user.uid)).catch(() => {});
+    } catch {
+      // Firestore未設定などでも認証アカウントの削除は続行する
+    }
+    try {
+      await authMod.deleteUser(user);
+    } catch (e: any) {
+      if (e?.code === 'auth/requires-recent-login') {
+        throw new ReauthRequired('セキュリティのため、パスワードの入力が必要です。');
+      }
+      throw new AuthError(friendlyError(e?.code));
+    }
+  } else {
+    // サーバーが認証アカウントを消したので、端末側のログイン状態も捨てる
+    await authMod.signOut(auth).catch(() => {});
+  }
+
+  // 端末に残る学習記録なども消す。
+  // ⚠️ アカウント削除が成功した後に行うこと。先に消すと、削除に失敗したとき
+  // アカウントは残ったまま学習記録だけ失われる。
+  // 同意と無料枠の端末カウンタは残す（消すと、削除→再登録で無料枠が戻る抜け道になる）。
   try {
-    const AsyncStorage = (await import('@react-native-async-storage/async-storage')).default;
-    await AsyncStorage.clear();
+    const storage = await getStorage();
+    const keys = await storage.getAllKeys();
+    await storage.multiRemove(keys.filter((k) => !KEEP_AFTER_DELETE.test(k)));
   } catch {
     // 消せなくても続行
   }

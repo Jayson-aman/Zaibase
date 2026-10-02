@@ -675,7 +675,7 @@ export const kokoSansuEx06: Question[] = [
     maxOnly: true,
     question:
       '円 O の外部の点 P から2本の接線を引き、接点を A, B とする。PA=8cm のとき PB の長さを求めよ。また ∠APB=60° のとき、円の半径と OP の長さを求めよ。',
-    answer: 'PB=8cm（PA=PB）。半径 r=OA=PA×tan30°=8/√3=8√3/3 cm。OP=PA/cos30°=8÷(√3/2)=16/√3=16√3/3 cm。',
+    answer: 'PB=8cm（PA=PB）。半径 r=OA=8/√3=8√3/3 cm（OA:PA=1:√3）。OP=2×OA=16/√3=16√3/3 cm。',
     hint:
       '外部の点からの2本の接線は等しい：PA＝PB＝8。∠OAP＝90°、∠APO＝30°なので △OAP は 30°・60°・90° で辺の比 1：√3：2。',
     explanation:

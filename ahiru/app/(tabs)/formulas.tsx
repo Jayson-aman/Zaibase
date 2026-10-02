@@ -383,9 +383,11 @@ export default function FormulasScreen() {
     if (!ok) return;
     const result = await unlockFormula(label);
     if (!result.ok) {
-      noticeDialog('購入できませんでした', result.message);
+      if (!result.cancelled) noticeDialog('購入できませんでした', result.message);
       return;
     }
+    // Web は決済ページへ移動するので、ここでは「解放しました」と言わない（支払い前に言うと誤解を生む）
+    if (result.redirected) return;
     if (boughtCount + 1 >= FORMULA_BUNDLE_ITEM_CAP && boughtCount < FORMULA_BUNDLE_ITEM_CAP) {
       noticeDialog('ぜんぶそろいました', 'この教科の公式集は、のこりも全部ずっと無料で見られます。');
       return;
@@ -402,9 +404,11 @@ export default function FormulasScreen() {
     if (!ok) return;
     const result = await unlockFormula(id, 'bundle');
     if (!result.ok) {
-      noticeDialog('購入できませんでした', result.message);
+      if (!result.cancelled) noticeDialog('購入できませんでした', result.message);
       return;
     }
+    // Web は決済ページへ移動するので、ここでは「解放しました」と言わない（支払い前に言うと誤解を生む）
+    if (result.redirected) return;
     noticeDialog('解放しました', 'この教科の公式集は、これ以降ずっと無料で見られます。');
   }, [unlockFormula, bundleCount, bundlePriceLabel, isLoggedIn, router]);
 

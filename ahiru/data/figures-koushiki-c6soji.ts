@@ -5,8 +5,8 @@ export const figuresKoushikiC6Soji: Record<string, Figure> = {
     kind: 'polygon',
     points: [
       { x: 0, y: 0, label: 'A2' },
-      { x: 18, y: 0, label: 'B2' },
-      { x: 5, y: 10, label: 'C2' },
+      { x: 10, y: 0, label: 'B2' },
+      { x: 11.4, y: 13.93, label: 'C2' },
     ],
     sideLabels: ['10cm', '14cm', '18cm'],
     caption: '三角形ABC(5cm・7cm・9cm)を相似比1:2で拡大した三角形A2B2C2(10cm・14cm・18cm)',

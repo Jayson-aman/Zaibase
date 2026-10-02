@@ -10,9 +10,10 @@ export const kankanQuestions: Question[] = [
     course: 'kankan', examType: 'chugaku',
     question: 'A君とB君が同じ道を歩く。A君は分速80m、B君は分速60m。A君がB君の12分後に出発して、同じ地点に同時に着いた。道のりは何m？',
     answer: '2880m',
-    hint: 'A君の時間をt分とすると、B君はt+12分。80t = 60(t+12)',
+    hint:
+      '道のりが同じなら、時間の比は速さの逆比。80：60＝4：3 なので、かかる時間の比 A：B＝3：4。この差の1がB君が先に出発した12分。',
     explanation:
-      '【何を聞かれているか】分速80mのA君が、分速60mのB君より12分あとに出発し、同じ地点に同時に着いたとき、道のりを求める。\n【なぜその式なのか】A君の歩いた時間を文字でおくと、B君の歩いた時間はそれより12分長い（先に出発した分）。同じ道のりを歩いているので、2つの「速さ×時間」の式が等しいという関係を使って時間を求める。\n【ステップ1】A君の歩いた時間をt分とすると、B君の歩いた時間は(t+12)分。\n【ステップ2】同じ道のりを歩くので、80t＝60(t+12)という式が成り立つ。展開すると80t＝60t+720。\n【ステップ3】整理すると20t＝720、t＝36分。道のりは80×36＝2880m。\n【答え】2880m\n【確かめ】B君の時間は36+12=48分で、60×48=2880mと同じ道のりになることを確認する。\n【よくあるまちがい】「12分後に出発した」を、B君の時間からA君の時間を引くのではなく、逆にしてしまう。\n【ここが絶対】あとから出発した人の時間を文字でおき、先に出発した人の時間はそれに出発の差を足したものになることを確認してから式を立てる。',
+      '【何を聞かれているか】分速80mのA君が、分速60mのB君より12分あとに出発し、同じ地点に同時に着いたとき、道のり。\n【なぜその式なのか】同じ道のりを進むとき、速さと時間は逆比になる。速さの比が 80：60＝4：3 なので、歩いた時間の比は A：B＝3：4。同時に着いたので、B君が歩いた時間はA君より12分長い。この差が比の差 4−3＝1 にあたる。\n【ステップ1】速さの比 80：60＝4：3 → 時間の比 A：B＝3：4。\n【ステップ2】比の差1が12分なので、A君は 12×3＝36分、B君は 12×4＝48分歩いた。\n【ステップ3】道のり＝80×36＝2880m。\n【答え】2880m\n【確かめ】B君は 60×48＝2880m。A君と同じ道のりになる。時間の差も 48−36＝12分で条件どおり。\n【よくあるまちがい】時間の比を速さの比のまま 4：3 と書いてしまう。速い人ほど時間は短いので、A：B＝3：4。\n【ここが絶対】同じ道のりなら「速さの比の逆が時間の比」。時間の差が比の差にあたることから、比の1にあたる時間を求める。',
   },
   {
     id: 'kankan_sansu_02', subject: 'sansu', difficulty: 'advanced',
@@ -2080,10 +2081,10 @@ export const kokoGeneralQuestions: Question[] = [
   {
     id: 'koko_gen_eigo_14',
     subject: 'eigo',
-    question: '次の英文を正しい語順に並べ替えなさい。\n①（is / hard / studying / she / because / English）.\n②（I / been / have / studying / for / three / hours）.',
-    answer: '①She is studying hard because English is difficult. (例)　②I have been studying for three hours.',
+    question: '次の英文を正しい語順に並べ替えなさい。\n①（is / hard / studying / she / because / English / difficult / is）.（彼女は英語が難しいので一生懸命勉強している）\n②（I / been / have / studying / for / three / hours）.',
+    answer: '①She is studying hard because English is difficult.　②I have been studying for three hours.',
     hint: '①because は接続詞（理由を表す）。②現在完了進行形：have/has been + 動詞ing',
-    explanation: '【解説】\n①She is studying hard because English is difficult.\n（例：彼女は英語が難しいので一生懸命勉強している）\nbecause は「理由」を表す接続詞。SV because SV の形。\n\n②I have been studying for three hours.\n（3時間ずっと勉強している）\n現在完了進行形：have/has + been + 動詞ing\n・過去から現在まで継続している動作を表す\n・for ＋時間 / since ＋起点 と一緒に使う',
+    explanation: '【何を聞かれているか】\n語を並べかえて、①理由を表す文と、②「ずっと〜している」を表す文を作る問題。\n\n【なぜその語順になるのか】\n①は「主語＋動詞（結果）＋because＋主語＋動詞（理由）」の順に並べる。②は現在完了進行形で、have＋been＋動詞ingの形になる。\n\n【ステップ1】①まず前半の「彼女は一生懸命勉強している」を作る。She is studying hard。\n【ステップ2】①because のあとに理由の文を続ける。English is difficult。語群の is は2つあるので、前半と後半で1つずつ使う。\n【ステップ3】②I have been studying を作り、最後に for three hours を置く。for は「〜の間」で、あとに期間が続く。\n\n【答え】\n①She is studying hard because English is difficult.\n②I have been studying for three hours.\n\n【確かめ】\n語群の語（is が2つ、difficult を含む）をすべて使い切ったか、②の語を使い切ったかを数えて確かめる。\n\n【よくあるまちがい】\n②で have been を並べ忘れて studying だけにしてしまう。ずっと続いている動作は have been ＋ ing の形になる。',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
