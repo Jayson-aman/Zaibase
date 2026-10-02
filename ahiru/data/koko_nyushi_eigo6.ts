@@ -20,11 +20,11 @@ export const kokoNyushiEigo6: Question[] = [
   {
     id: 'koko_nyushi_eigo6_02',
     subject: 'eigo',
-    question: `次の（　）内に最も適切な語を選べ。\n\nYou ( ) warm up before you start swimming, or you may hurt your muscles.\n① must  ② should  ③ can  ④ may`,
+    question: `次の（　）内に最も適切な語を選べ。\n\nYou ( ) warm up before you start swimming, or you may hurt your muscles.\n① would  ② should  ③ can  ④ may`,
     answer: `② should`,
     hint: `「〜すべきだ」という強いアドバイス・忠告を表す助動詞を選ぶ。`,
     explanation:
-      '【何を聞かれているか】「You ( ) warm up before you start swimming, or you may hurt your muscles.」の空所に入る適切な助動詞を選ぶ。\n【なぜshouldになるのか】「さもないと筋肉を痛めるかもしれない」という警告が続くことから、規則ではなくアドバイス・忠告を表すshouldが最適だから。\n【ポイント1】①must（規則的な強い義務）、③can（能力・可能性）、④may（許可・推量）はどれもこの文脈に合わない。\n【ポイント2】②should（忠告・アドバイス）が正解。「泳ぎ始める前に準備運動をすべきだ」というアドバイスを表す。\n【ポイント3】"or〜"のあとには「そうしないと〜」という結果が続く。You should〜, or you may…の形はよく使われる。\n【答え】② should\n【確かめ】文全体が「アドバイス＋そうしないとどうなるか」という構造になっているかを確認する。\n【よくあるまちがい】mustを選んでしまい、規則的な義務とアドバイスを混同する。\n【ここが絶対】should＝〜すべきだ（助言）、must／have to＝〜しなければならない（義務）と使い分ける。',
+      '【何を聞かれているか】「You ( ) warm up before you start swimming, or you may hurt your muscles.」の空所に入る適切な助動詞を選ぶ。\n【なぜ should になるのか】「泳ぎ始める前に準備運動をしたほうがよい」という助言を表すには should を使う。「さもないと筋肉を痛めるかもしれない」という注意が続くので、助言・忠告の should が自然につながる。\n【ステップ1】意味を確認する。「泳ぎ始める前に準備運動を（　）。さもないと筋肉を痛めるかもしれない」。\n【ステップ2】① would は「〜するだろう」、③ can は「〜できる」、④ may は「〜かもしれない」で、助言の意味にならない。\n【ステップ3】助言を表す② should を入れる。\n【答え】② should\n【確かめ】You should warm up before you start swimming. と読んで、「準備運動をしたほうがよい」という助言として自然か確かめる。\n【よくあるまちがい】「or〜（さもないと）」があるから強い義務だと考えて、助言と義務を混同する。ここでは忠告なので should を使う。\n【ここが絶対】should＝〜したほうがよい（助言）。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
