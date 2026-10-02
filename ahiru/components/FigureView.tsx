@@ -827,32 +827,38 @@ function LineChartFig({ fig }: { fig: LineChartFigure }) {
 function BarChartFig({ fig }: { fig: BarChartFigure }) {
   const area: Area = { x0: 40, y0: 24, w: VBW - 56, h: VBH - 62 };
   const yMax = fig.yMax ?? ((Math.max(...fig.bars.map((b) => b.value)) * 1.18) || 1);
+  // 負の値（例：気温が氷点下）の棒があるときは、0の線を境に下へ伸ばす。
+  // 以前は負の高さの Rect になり、棒がまったく描かれなかった。
+  const minValue = Math.min(0, ...fig.bars.map((b) => b.value));
+  const yMin = minValue < 0 ? minValue * 1.18 : 0;
+  const span = yMax - yMin || 1;
   const n = fig.bars.length;
   const slot = area.w / n;
   const gap = fig.histogram ? 0 : slot * 0.28;
   const bw = slot - gap;
-  const py = (v: number) => area.y0 + area.h - (v / yMax) * area.h;
+  const py = (v: number) => area.y0 + area.h - ((v - yMin) / span) * area.h;
+  const zeroY = py(0);
   const els: React.ReactNode[] = [];
   // 目盛りは5本前後に抑える。棒の上に実数を出すので、細かい目盛りは不要。
-  const sy = niceStepFor(yMax, 5);
-  for (let y = 0; y <= yMax + 1e-9; y += sy) {
+  const sy = niceStepFor(span, 5);
+  for (let y = Math.ceil(yMin / sy - 1e-9) * sy; y <= yMax + 1e-9; y += sy) {
     els.push(<Line key={`gy${y}`} x1={area.x0} y1={py(y)} x2={area.x0 + area.w} y2={py(y)} stroke={GRID} strokeWidth={1} />);
     els.push(<SvgText key={`gyl${y}`} x={area.x0 - 4} y={py(y) + 3} fontSize={9} fill={AXIS} textAnchor="end">{tickText(y, sy)}</SvgText>);
   }
-  els.push(<Line key="xax" x1={area.x0} y1={area.y0 + area.h} x2={area.x0 + area.w} y2={area.y0 + area.h} stroke={AXIS} strokeWidth={1.6} />);
+  els.push(<Line key="xax" x1={area.x0} y1={zeroY} x2={area.x0 + area.w} y2={zeroY} stroke={AXIS} strokeWidth={1.6} />);
   els.push(<Line key="yax" x1={area.x0} y1={area.y0} x2={area.x0} y2={area.y0 + area.h} stroke={AXIS} strokeWidth={1.6} />);
   fig.bars.forEach((b, i) => {
     const x = area.x0 + slot * i + gap / 2;
     const color = b.color ?? PALETTE[i % PALETTE.length];
+    const vy = py(b.value);
     // 桁の違う値が並ぶと小さい棒が消えてしまうので、最低限の高さを残す
-    const rawH = area.y0 + area.h - py(b.value);
-    const h = b.value > 0 ? Math.max(2, rawH) : rawH;
-    const top = area.y0 + area.h - h;
+    const h = b.value === 0 ? 0 : Math.max(2, Math.abs(zeroY - vy));
+    const top = b.value < 0 ? zeroY : zeroY - h;
     els.push(<Rect key={`b${i}`} x={x} y={top} width={bw} height={h} fill={color} opacity={0.82} stroke={fig.histogram ? '#fff' : color} strokeWidth={fig.histogram ? 1 : 0} />);
-    // 棒の上に実数を出す。目盛りを読まなくても値が分かるようにする。
+    // 棒の先に実数を出す（正は上、負は下）。目盛りを読まなくても値が分かるようにする。
     if (!fig.histogram) {
       els.push(
-        <SvgText key={`bv${i}`} x={x + bw / 2} y={top - 4} fontSize={9.5} fill={INK} textAnchor="middle" fontWeight="bold">
+        <SvgText key={`bv${i}`} x={x + bw / 2} y={b.value < 0 ? top + h + 11 : top - 4} fontSize={9.5} fill={INK} textAnchor="middle" fontWeight="bold">
           {b.value}
         </SvgText>,
       );

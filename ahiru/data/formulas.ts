@@ -73,19 +73,34 @@ const FORMULAS_RAW: Record<Subject, FormulaSection[]> = {
 // 「少ない」と受け取られたため。残りは¥200／まとめ買い¥2,980。
 export const FREE_FORMULAS_PER_CELL = 8;
 function withDiagrams(sections: FormulaSection[]): FormulaSection[] {
-  const seen: Record<string, number> = {};
+  // 受験種別（中学受験／高校受験）ごとに、見える順で先頭の FREE_FORMULAS_PER_CELL 個だけを無料にする。
+  // 受験種別を決めていないセクション（英語がこれにあたる）はどちらの画面にも出るので、
+  // 両方の数え方に1つぶん入れる。別の「どちらも」という数え方を作ると、
+  // 中学受験の画面で8個＋8個の16個が無料になってしまう（英語で実際に起きた）。
+  const seen = { chugaku: 0, koko: 0 };
   return sections.map((sec) => {
-    const key = sec.examType ?? 'both';
     return {
       ...sec,
       items: sec.items.map((it) => {
-        const idx = seen[key] ?? 0;
-        seen[key] = idx + 1;
+        let idx: number;
+        if (sec.examType === 'chugaku') {
+          idx = seen.chugaku;
+          seen.chugaku = idx + 1;
+        } else if (sec.examType === 'koko') {
+          idx = seen.koko;
+          seen.koko = idx + 1;
+        } else {
+          idx = Math.max(seen.chugaku, seen.koko);
+          seen.chugaku = idx + 1;
+          seen.koko = idx + 1;
+        }
         const free = idx < FREE_FORMULAS_PER_CELL;
         // 項目に直接書かれた図があれば優先する。ただし、あとから足した動く図解のほうがスライドが多いときはそちらを使う。
         const dg = FORMULA_DIAGRAMS[it.label];
         const fig = !dg ? it.figure : !it.figure || ((dg.steps?.length ?? 0) > ((it.figure as { steps?: string[] }).steps?.length ?? 0)) ? dg : it.figure;
-        return { ...it, ...(free && it.locked ? { locked: false } : {}), ...(fig ? { figure: fig } : {}) };
+        // 無料の枠を超えた項目は、データに locked が書かれていなくても必ずロックにする
+        // （書き忘れた項目が、いつまでも無料のまま残るのを防ぐ）。
+        return { ...it, locked: free ? false : true, ...(fig ? { figure: fig } : {}) };
       }),
     };
   });

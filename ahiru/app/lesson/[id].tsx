@@ -34,6 +34,27 @@ import { subjectInfo } from '../../data/questions-meta';
 /** 購入前の人に見せる、動く図解の枚数（最初の「❓なぜ？」と、その答えまで） */
 const TRIAL_FIGURE_SLIDES = 2;
 
+/**
+ * ロック中の単元に見せる「ためし読み」の節。
+ * 節が2つ以上あるなら最初の節だけ。節が1つしかない単元（中学受験に91本ある）は、
+ * そのまま出すと本文が全部読めてしまうので、前半の段落だけにする。
+ */
+function trialSections<T extends { body: string }>(sections: T[]): T[] {
+  if (sections.length !== 1) return sections.slice(0, 1);
+  const only = sections[0];
+  const paras = only.body.split(/\n\s*\n/);
+  if (paras.length <= 1) return [{ ...only, body: only.body.slice(0, Math.ceil(only.body.length * 0.45)) }];
+  const target = only.body.length * 0.45;
+  let acc = 0;
+  const kept: string[] = [];
+  for (const para of paras) {
+    kept.push(para);
+    acc += para.length;
+    if (acc >= target) break;
+  }
+  return [{ ...only, body: kept.join('\n\n') }];
+}
+
 export default function LessonDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
@@ -188,7 +209,7 @@ export default function LessonDetailScreen() {
               </View>
             )}
             <LessonRenderer
-              sections={lesson.sections.slice(0, 1)}
+              sections={trialSections(lesson.sections)}
               isMax={false}
               bypassFormulaLock={false}
               unlockedFormulaIds={unlockedFormulaIds}

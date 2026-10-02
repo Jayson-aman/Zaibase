@@ -245,7 +245,7 @@ export const XM_KE07_SCRIPTS: Record<string, MangaScript> = {
     id: 'new20_j1_eigo_02_xm',
     title: "5月5日は May five ではなく May fifth と読む",
     panels: [
-      { speaker: 't', line: "カレンダーに「5/5」や「May 5」と書いてあるね。声に出して読むとき、May five でいいかな？" },
+      { speaker: 't', line: "カレンダーに「5／5」や「May 5」と書いてあるね。声に出して読むとき、May five でいいかな？" },
       { speaker: 's1', line: "書いてあるのが数字の5だから、five だと思います。" },
       { speaker: 't', line: "fifth は five の仲間だね。どんなときに fifth と言うんだろう。" },
       { speaker: 's2', line: "「5番目」のように、順番を言うときです。" },

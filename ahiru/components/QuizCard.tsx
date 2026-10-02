@@ -180,7 +180,17 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             </View>
           ) : null}
           {(() => {
-            const stripLabel = (s: string) => s.replace(/^[A-D]\s+/, '');
+            // 選択肢が「① read」「ア 〜」のように自前のラベルで始まるときは、A〜Dの記号をかさねない
+            // （「A ① read」と二重に見える）。全部の選択肢がそろって同じ種類のラベルで始まるときだけ、
+            // そのラベルを記号として使い、本文からは外す。
+            const OWN = /^([①②③④⑤]|[ア-オ])[\s.．:：)）、]\s*/u;
+            const ownLabels = choices.map((c) => c.trim().match(OWN)?.[1] ?? null);
+            const useOwn =
+              choices.length >= 2 &&
+              ownLabels.every((l) => l != null) &&
+              new Set(ownLabels).size === choices.length;
+            const stripLabel = (s: string) => (useOwn ? s.replace(OWN, '') : s.replace(/^[A-D]\s+/, ''));
+            const shownLabel = (i: number): string => (useOwn ? (ownLabels[i] as string) : choiceLabels[i]);
             const units = choices.map((c) => extractTrailingUnit(stripLabel(c)));
             const first = units[0] ?? '';
             const sharedUnit = first !== '' && units.every((u) => u === first) ? first : '';
@@ -221,7 +231,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
                           <Text style={[
                             styles.choiceLetterText,
                             showResult && (isCorrect || isSelected) && styles.choiceLetterTextResult,
-                          ]}>{choiceLabels[i]}</Text>
+                          ]}>{shownLabel(i)}</Text>
                         </View>
                         <Text
                           style={[

@@ -215,7 +215,7 @@ export default function LessonRenderer({
               const fig = getLessonFigure(section.figureId);
               return fig != null ? <FigureView figure={fig} animated previewSlides={figurePreviewSlides} /> : null;
             })()}
-            {section.mangaId != null && (() => {
+            {section.mangaId != null && figurePreviewSlides == null && (() => {
               const script = getMangaScript(section.mangaId);
               return script != null ? (
                 <MangaDialogue

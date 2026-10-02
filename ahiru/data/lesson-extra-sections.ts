@@ -396,7 +396,6 @@ add([
   'koko_rika_s191',
   'koko_rika_s233',
   'koko_rika_s234',
-  'koko_shakai_s260',
 ], [BLOCK_REDUCE]);
 add([
   'sansu_05_sigoto',
