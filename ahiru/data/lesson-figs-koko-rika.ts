@@ -1301,7 +1301,7 @@ export const lessonFigsKokoRika: Record<string, Figure> = {
       { label: 'シベリア気団', value: -10 },
       { label: 'オホーツク海気団', value: 5 },
       { label: '小笠原気団', value: 28 },
-      { label: '揚子江気団', value: 15 },
+      { label: '長江気団', value: 15 },
     ],
     caption: '日本付近の4つの気団：発生場所により気温・湿り気の性質が大きく異なる（目安の値）',
     steps: [

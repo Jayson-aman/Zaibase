@@ -461,7 +461,7 @@ export const kokoRikaEx01: Question[] = [
     course: 'koko-general',
     difficulty: 'basic',
     question: '日本付近で、夏に発達する暖かく湿った気団は何か。',
-    choices: ['A シベリア気団', 'B オホーツク海気団', 'C 小笠原気団', 'D 揚子江気団'],
+    choices: ['A シベリア気団', 'B オホーツク海気団', 'C 小笠原気団', 'D 長江気団'],
     answer: 'C 小笠原気団',
     hint: '太平洋上にできる高温多湿の気団。',
     explanation:
