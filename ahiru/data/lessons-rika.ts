@@ -1625,7 +1625,7 @@ STEP4：仕事の原理で検算（力×動かす長さが道具によらず一�
     id: 'rika_08_teko_rinjiku',
     subject: 'rika',
     title: 'てこ・輪軸・滑車のつり合い',
-    description: 'てこをかたむけるはたらきの計算からてんびん・輪軸・複合装置まで完全制覇',
+    description: 'てこをかたむけるはたらき（モーメント）の計算からてんびん・輪軸・複合装置まで完全制覇',
     order: 8,
     studyPeriod: '小5後半',
     keyPoints: [
