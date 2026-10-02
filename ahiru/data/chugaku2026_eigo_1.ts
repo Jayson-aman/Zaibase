@@ -318,7 +318,7 @@ She went to school yesterday.
 
 (　) pen is this? — It's Ken's pen.`,
     answer: 'Whose',
-    hint: '「誰の」と持ち主を尋ねるときはWhose+名詞を使う。',
+    hint: '「誰の」と持ち主を尋ねる疑問詞。名詞 pen の前に置く。',
     explanation: `【出題意図】疑問詞Whose（誰の）の使い方を問う。【解説】持ち主を尋ねるときはWhose+名詞の形にする。Whose pen is this?（これは誰のペンですか）。答えはIt's Ken's pen.（それはケンのペンです）のように「人の名前+'s」で表す。【注意点】WhoseとWho's（Who isの短縮形）は発音が同じだが意味が違うので混同しないこと。【関連知識】所有を表す表現：This pen is Ken's.（このペンはケンのものです）のようにKen'sだけで「ケンのもの」という意味にもなる。`,
     pitfall: 'Who pen is this?のようにWhoseの代わりにWhoを使わない。',
     memoryTip: "Whose=「誰の」+名詞、Who's=Who is（「誰が〜ですか」）と発音は同じだが区別して覚える。",
@@ -510,7 +510,7 @@ She went to school yesterday.
 私は将来医者になりたい。
 I (　) (　) be a doctor in the future.`,
     answer: 'want to',
-    hint: '「〜したい」はwant to+動詞の原形。',
+    hint: '「〜したい」を表す2語の表現。あとに動詞の原形が続く。',
     explanation:
       '【何を聞かれているか】\n「私は将来医者になりたい。」という日本語に合うように、"I (　) (　) be a doctor in the future."の空欄を埋める問題。\n\n【なぜwant toを使うのか】\n「〜したい」という願望は、want to＋動詞の原形という決まった形で表す。\n\n【ポイント1】"want to＋動詞の原形"の形を確認する\nwant to＋動詞の原形＝「〜したい」。\n\n【ポイント2】toの後ろが原形であることを確認する\ntoの後ろは必ず動詞の原形（be）を使う。\n\n【ポイント3】三人称単数のときの形を確認する\n主語が三人称単数のときは"wants to"になる（He wants to be a doctor.）。\n\n【答え】\nwant to\n\n【確かめ】\n"I want to be a doctor in the future."が「私は将来医者になりたい」という意味の正しい文になっているか確認する。\n\n【よくあるまちがい】\n"want to being"のように、toの後ろをing形にしてしまうミス。toの後ろは動詞の原形。\n\n【ここが絶対】\n"want to＋原形"＝「〜したい」という形をセットで暗記する。',
     pitfall: 'I want to being a doctor.のようにingにしない。toの後ろは動詞の原形。',

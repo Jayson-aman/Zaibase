@@ -235,7 +235,11 @@ function CoordinateFig({ fig, uid }: { fig: CoordFigure; uid: string }) {
   // 点
   fig.points?.forEach((p, i) => {
     els.push(<SvgCircle key={`pt${i}`} cx={px(p.x)} cy={py(p.y)} r={3.2} fill={INK} />);
-    if (p.label) els.push(<SvgText key={`ptl${i}`} x={px(p.x) + 5} y={py(p.y) - 5} fontSize={11} fill={INK} fontWeight="bold">{p.label}</SvgText>);
+    if (p.label) {
+      // 右端の点のラベルが枠の外へ切れないよう、端に近いときは左側に寄せる
+      const c = clampLabelX(px(p.x) + 5, 'start');
+      els.push(<SvgText key={`ptl${i}`} x={c.x} y={py(p.y) - 5} fontSize={11} fill={INK} fontWeight="bold" textAnchor={c.anchor}>{p.label}</SvgText>);
+    }
   });
 
   return [
@@ -1706,7 +1710,12 @@ export default function FigureView({
   const pos = animated ? progress * N : N;
   /** その部品の不透明度。描き終わったものは 1、描きかけは途中、まだのものは 0 */
   const opacityOf = (i: number) => {
-    if (!animated) return 1;
+    if (!animated) {
+      // 問題の横に置く静止の図解スライド（hideAnswerText）は、最初の1枚ぶんの部品だけを描く。
+      // 全部品（＝答えの数字まで入った最終の絵）を出すと、解く前に答えが見えてしまう。
+      if (hideAnswerText && stepPartsArr != null && stepPartsArr.length > 0) return i < (stepPartsArr[0] ?? 0) ? 1 : 0;
+      return 1;
+    }
     // 1部品ぶんの登場に使う割合。短すぎるとパッと出て見えるので少し長めに取る
     const t = (pos - i) / 0.75;
     return Math.max(0, Math.min(1, t));

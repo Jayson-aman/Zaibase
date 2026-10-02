@@ -484,7 +484,7 @@ be famous for〜：〜で有名だ（理由・特徴を表す for）
     question: '次の（　）内に最も適切な語を選べ。  Don\'t ( ) up on your dream of becoming a pilot, even if it seems difficult now.',
     choices: ['① give', '② take', '③ look', '④ get'],
     answer: '① give',
-    hint: 'give up on〜 は「〜を諦める」という熟語。',
+    hint: '「〜をあきらめる」という熟語。up on 〜 の前に入る動詞を選ぶ。',
     explanation: `【出題意図】
 熟語 give up on〜（〜を諦める）の用法を問う問題。似た形の句動詞との区別。
 

@@ -901,7 +901,7 @@ export const schoolKokoTaki: Question[] = [
     difficulty: 'basic',
     question: '次の日本語に合うように（　）に適切な語を入れなさい。「私は毎朝6時に起きます。」 I ( ) up at six every morning.',
     answer: 'get',
-    hint: '「起きる」は英語で "get up" という熟語で表す。',
+    hint: '「起きる」は〈動詞＋up〉の熟語。主語が I なので、動詞に s はつかない。',
     explanation: '「起きる」は "get up" という熟語で表す。主語がIで現在の習慣を表すので、動詞は原形の "get" をそのまま使う。',
   },
   {

@@ -284,7 +284,7 @@ have＋人＋動詞原形＝「人に〜させる、〜してもらう」。教�
     question: '次の（　）内に最も適切な語を選べ。  Many students decided to take ( ) in the beach cleanup last Sunday.',
     choices: ['① part', '② care', '③ place', '④ turns'],
     answer: '① part',
-    hint: 'take part in〜で「〜に参加する」という熟語。',
+    hint: '「〜に参加する」という熟語。take と in のあいだに入る名詞を選ぶ。',
     explanation:
       '【何を聞かれているか】「Many students decided to take ( ) in the beach cleanup last Sunday.」の空所に入る適切な語を選ぶ。\n【なぜpartになるのか】「〜に参加する」という意味は、take part in〜という決まったイディオムで表すから。\n【ポイント1】take part in〜は「〜に参加する」というjoinとほぼ同義の重要イディオム。\n【ポイント2】②care（take care of〜「〜の世話をする」）、③place（take place「行われる」でinを伴わない）、④turns（take turns「交代でする」）はどれも別のイディオム。\n【ポイント3】①part（take part in〜）が正解。\n【答え】① part\n【確かめ】take part in the beach cleanupで「ビーチの清掃活動に参加する」という意味になっているかを確認する。\n【よくあるまちがい】take part inとtake place（inを伴わない）を混同してしまう。\n【ここが絶対】「〜に参加する」はtake part in〜という決まった形で覚える。inを忘れないこと。',
     difficulty: 'advanced',
@@ -298,7 +298,7 @@ have＋人＋動詞原形＝「人に〜させる、〜してもらう」。教�
     question: '次の（　）内に最も適切な語を選べ。  We need to be more ( ) of the problems that homeless people face every day.',
     choices: ['① aware', '② afraid', '③ ashamed', '④ ready'],
     answer: '① aware',
-    hint: 'be aware of〜で「〜に気づいている、〜を意識している」という熟語。',
+    hint: '「〜に気づいている」という意味の、〈形容詞＋of〉の熟語。',
     explanation:
       '【何を聞かれているか】「We need to be more ( ) of the problems that homeless people face every day.」の空所に入る適切な語を選ぶ。\n【なぜawareになるのか】「〜を意識している、〜に気づいている」という意味は、be aware of〜という決まったイディオムで表すから。\n【ポイント1】be aware of〜は「〜を意識している、〜に気づいている」という重要イディオム。\n【ポイント2】②afraid（be afraid of〜「〜を恐れる」）、③ashamed（be ashamed of〜「〜を恥じる」）、④ready（be ready for〜「〜の準備ができている」、forを使う）はどれも別のイディオム。\n【ポイント3】①aware（be aware of〜）が正解。\n【答え】① aware\n【確かめ】be aware of the problemsで「問題を意識している」という意味になっているかを確認する。\n【よくあるまちがい】be aware ofとbe afraid ofを混同してしまう。\n【ここが絶対】be aware of〜＝〜に気づいている、意識している。似た形のbe afraid of／be proud ofと区別する。',
     difficulty: 'advanced',
@@ -357,7 +357,7 @@ run out of〜＝資源・物が尽きる。似た表現にbe out of〜（〜が�
     question: '次の（　）内に最も適切な語を選べ。  Even a small act of kindness can make a ( ) in someone\'s life.',
     choices: ['① difference', '② decision', '③ direction', '④ distance'],
     answer: '① difference',
-    hint: 'make a difference で「変化をもたらす、役に立つ」という熟語。',
+    hint: '「効果がある・役に立つ」という熟語。make a ○○ の形になる名詞を選ぶ。',
     explanation:
       '【何を聞かれているか】「Even a small act of kindness can make a ( ) in someone\'s life.」の空所に入る適切な語を選ぶ。\n【なぜdifferenceになるのか】「変化をもたらす、大きな影響を与える」という意味は、make a differenceという決まったイディオムで表すから。\n【ポイント1】make a differenceは「変化をもたらす、大きな影響を与える」という重要イディオム。\n【ポイント2】②decision（make a decision「決断する」）、③direction、④distanceはどれも熟語として成立しない。\n【ポイント3】①difference（make a difference）が正解。\n【答え】① difference\n【確かめ】make a difference in someone\'s lifeで「誰かの人生に変化をもたらす」という意味になっているかを確認する。\n【よくあるまちがい】make a decisionと混同してdecisionを選んでしまう。\n【ここが絶対】make a difference（to/in〜）＝〜に良い影響を与える、という決まった形で覚える。',
     difficulty: 'advanced',
@@ -371,7 +371,7 @@ run out of〜＝資源・物が尽きる。似た表現にbe out of〜（〜が�
     question: '次の（　）内に最も適切な語を選べ。  All of us are ( ) for keeping our town clean and safe.',
     choices: ['① responsible', '② possible', '③ available', '④ suitable'],
     answer: '① responsible',
-    hint: 'be responsible for〜で「〜に対して責任がある」という熟語。',
+    hint: '「〜に責任がある」という意味の、〈形容詞＋for〉の熟語。',
     explanation:
       '【何を聞かれているか】「All of us are ( ) for keeping our town clean and safe.」の空所に入る適切な語を選ぶ。\n【なぜresponsibleになるのか】「〜に対して責任がある」という意味は、be responsible for〜という決まったイディオムで表すから。\n【ポイント1】be responsible for〜は「〜に対して責任がある」という重要イディオム。\n【ポイント2】②possible（「可能な」）、③available（「利用可能な」）、④suitable（「適した」）はどれもこの文脈に合わない。\n【ポイント3】①responsible（be responsible for〜）が正解。forのあとには名詞または動名詞が続く。\n【答え】① responsible\n【確かめ】be responsible for keeping our town clean and safeで「町を清潔で安全に保つ責任がある」という意味になっているかを確認する。\n【よくあるまちがい】responsibleとpossibleのスペルや意味を混同してしまう。\n【ここが絶対】be responsible for〜＝〜の責任を負う、という決まった形で覚える。',
     difficulty: 'advanced',
@@ -416,7 +416,7 @@ depend on〜＝rely on〜＝count on〜（すべて「〜に頼る」）。前�
     question: '次の（　）内に最も適切な語を選べ。  It is time for us to take ( ) to solve the problem of poverty in our city.',
     choices: ['① action', '② act', '③ activity', '④ actor'],
     answer: '① action',
-    hint: 'take action で「行動を起こす」という熟語。',
+    hint: '「行動を起こす」という熟語。take のあとに入る名詞を選ぶ。',
     explanation: `【出題意図】
 熟語take action（行動を起こす）の正しい語形を問う問題。
 

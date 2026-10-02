@@ -1908,7 +1908,7 @@ export const eigoExtra: Question[] = [
     course: 'general',
     difficulty: 'standard',
     question: '「There aren\'t any books on the shelf.」の意味は？',
-    choices: ['棚に何冊か本がある。', '棚には本が全くない。', '棚に本がいくつかある。', '棚に本は一冊もない（これと同じ）。'],
+    choices: ['棚に何冊か本がある。', '棚には本が全くない。', '棚に本がいくつかある。', '棚に本が一冊だけある。'],
     answer: '棚には本が全くない。',
     hint: 'aren\'t any は「一つも～ない」という否定の表現です。',
     explanation:

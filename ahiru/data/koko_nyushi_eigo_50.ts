@@ -367,7 +367,7 @@ be interested in〜 は「〜に興味がある」という意味のイディオ
     question: '次の（　）内に最も適切な語を選べ。  Please ( ) care of my dog while I am away.',
     choices: ['① make', '② have', '③ take', '④ give'],
     answer: '③ take',
-    hint: 'take care of〜 で「〜の世話をする」という熟語。',
+    hint: '「〜の世話をする」という熟語。care of とセットで使う動詞を選ぶ。',
     explanation:
       '【何を聞かれているか】「Please ( ) care of my dog while I am away.」の空所に入る適切な動詞を選ぶ。\n【なぜtakeになるのか】「〜の世話をする」という意味は、動詞takeを使ったtake care of〜という決まったイディオムで表すから。\n【ポイント1】take care of〜は「〜の世話をする、〜に気をつける」という重要イディオム。\n【ポイント2】①make care of、②have care of、④give care ofはどれも存在しない表現。\n【ポイント3】takeを含む頻出熟語：take a look at〜（〜を見る）、take part in〜（〜に参加する）、take place（行われる）、take off（脱ぐ、離陸する）。\n【答え】③ take\n【確かめ】take care of my dogで「私の犬の世話をする」という意味になっているかを確認する。\n【よくあるまちがい】make care ofのように、他の動詞をあてはめてしまう。\n【ここが絶対】「〜の世話をする」はtake care of〜という決まった形で覚える。',
     difficulty: 'advanced',

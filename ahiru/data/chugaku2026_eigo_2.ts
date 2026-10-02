@@ -477,9 +477,9 @@ A: Thank you very much.
     question: `次の（　）に適切な語句を入れなさい。
 
 ① Students (　) wear a uniform at this school.（この学校の生徒は制服を着なければならない）
-② You (　) (　) study today. It's a holiday.（今日は勉強する必要はない。休日だから）`,
+② You (　) (　) (　) study today. It's a holiday.（今日は勉強する必要はない。休日だから）`,
     answer: `① must (have to)　② don't have to`,
-    hint: `「〜しなければならない」はmust/have to、「〜する必要はない」はdon't have to。`,
+    hint: `①「〜しなければならない」を表す助動詞を考える。②「〜する必要はない」は、禁止の must not とは別の言い方。空所は3つなので3語で答える。`,
     explanation: `【出題意図】義務を表すmust/have toと、不必要を表すdon't have toの違いを問う。【解説】①「〜しなければならない」はmustまたはhave toで表す→must(またはhave to) wear。②「〜する必要はない」はdon't have to+動詞の原形で表す→don't have to study。【注意点】must notは「〜してはいけない」という禁止の意味になり、don't have toの「する必要がない」とは意味が異なるので混同しない。【関連知識】mustには過去形がないため、過去の義務にはhad toを使う。`,
     pitfall: `②をmust notとすると「勉強してはいけない」という禁止の意味になり誤り。「必要がない」はdon't have to。`,
     memoryTip: `「must not=禁止(してはいけない)」「don't have to=不必要(しなくてよい)」の違いをセットで覚える。`,
@@ -963,7 +963,7 @@ A: Yes, please tell her I will call again later.
 Question: What do you want to do this summer? And why?
 
 （I want to で書き始めること）`,
-    answer: `（解答例）I want to go to the sea with my family this summer. Because swimming in the sea is a lot of fun for me.（22語）
+    answer: `（解答例）I want to go to the sea with my family this summer. Because swimming in the sea is a lot of fun for me.（24語）
 
 （別解）I want to read many books this summer. Because I like stories about animals and adventures.（16語）`,
     hint: `I want to+動詞の原形で「〜したい」を書き、Becauseで理由を続ける。15語以上になるよう文を工夫する。`,

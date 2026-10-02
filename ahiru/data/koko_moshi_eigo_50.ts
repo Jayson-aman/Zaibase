@@ -652,7 +652,7 @@ By the end of the day, Yuki realized something important: she had been so afraid
     question: '空所に入る最も適切な語句を選びなさい。 「______ tired he was, he kept on working.」',
     choices: ['① Although', '② However', '③ Despite', '④ Even though'],
     answer: '② However',
-    hint: '"However + 形容詞/副詞 + 主語 + 動詞" という特殊な構文。"どんなに〜でも" という意味。',
+    hint: '「どんなに〜でも」を表す特殊な構文。〈この語＋形容詞/副詞＋主語＋動詞〉の形になる。',
     explanation: '【文法のポイント】"However + 形容詞/副詞 + 主語 + 動詞" = 「どんなに〜でも」という譲歩を表す構文です。ここでは "However tired he was, ..." となります。"Although" や "Even though" は接続詞なので後ろに主語+動詞の文がそのまま続きます（However のように形容詞が前に出ない）。',
     pitfall: '③"Despite" は前置詞なので後ろに名詞（句）が続く（Despite his tiredness...）。形容詞+SVの構造には使えない。',
     memoryTip: '"However + 形容詞 + S + V" = "No matter how + 形容詞 + S + V" と同義！両方入試に出る。',

@@ -335,7 +335,7 @@ than があるので比較級が必要。exciting は3音節の形容詞なの�
     question: '次の（　）内に最も適切な語を選べ。  Our class is going to take ( ) in the chorus contest next month.',
     choices: ['① place', '② part', '③ care', '④ turns'],
     answer: '② part',
-    hint: 'take part in〜 で「〜に参加する」という熟語になる。',
+    hint: '「〜に参加する」という熟語。take と in のあいだに入る名詞を選ぶ。',
     explanation: `【出題意図】
 take を含む重要熟語 take part in〜（〜に参加する）を正確に知っているかを問う問題。
 
@@ -534,7 +534,7 @@ used to + 動詞原形：かつて〜した（過去の習慣・状態、現在�
     question: '次の（　）内に最も適切な語を選べ。  We need to ( ) up with a good plan for the school festival.',
     choices: ['① come', '② go', '③ get', '④ put'],
     answer: '① come',
-    hint: 'come up with〜 で「〜を思いつく」という意味の熟語。',
+    hint: '「〜を思いつく」という意味の熟語。up with とセットになる動詞を選ぶ。',
     explanation: `【出題意図】
 句動詞 come up with〜（〜を思いつく）の用法を問う問題。
 
@@ -567,7 +567,7 @@ come up with〜：（考え・計画・解決策を）思いつく
     question: '次の（　）内に最も適切な語を選べ。  The brass band practices ( ) 4 p.m. to 6 p.m. every weekday.',
     choices: ['① since', '② from', '③ at', '④ during'],
     answer: '② from',
-    hint: '「〜から…まで」という期間を示す表現 from A to B を選ぶ。',
+    hint: '「4時から6時まで」の「から」にあたる前置詞を選ぶ。「〜まで」の to と対になって使う。',
     explanation:
       '【何を聞かれているか】「The brass band practices ( ) 4 p.m. to 6 p.m. every weekday.」の空所に入る適切な前置詞を選ぶ。\n【なぜfromになるのか】「4時から6時まで」という開始から終了までの期間を表すには、from A to Bという決まった形を使う必要があるから。\n【ポイント1】from A to Bは「AからBまで」を表し、時間・場所どちらにも使える。\n【ポイント2】①since（「〜以来」、現在完了と共に使う起点でtoとセットにはしない）、③at（特定の時刻、範囲は表せない）、④during（〜の間ずっと、from〜to〜のペアとしては使わない）はどれも文脈に合わない。\n【ポイント3】②from（from A to Bの形）が正解。「4時から6時まで練習する」という意味になる。\n【答え】② from\n【確かめ】fromとtoがペアで使われている（from 4 p.m. to 6 p.m.）ことを確認する。\n【よくあるまちがい】sinceを「〜から」という意味だけで覚え、to Bとセットで使えると誤解してしまう。\n【ここが絶対】「AからBまで」の期間を表すときはfrom A to Bを使う。sinceは現在完了形とともに起点を表すときに使う。',
     difficulty: 'advanced',

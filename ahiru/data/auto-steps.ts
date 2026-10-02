@@ -541,7 +541,7 @@ export function autoSteps(figure: Figure, q?: FigureQuestion): string[] | null {
   // 「3つの内角の和 = 180°」のように、その図でいちばん見てほしい点が
   // 書かれていることが多く、自動で組み立てた文より的を射ている。
   const cap = String((figure as { caption?: string }).caption ?? '').trim();
-  if (cap && !body.some((b) => b.includes(cap))) body.push(`この図で見てほしいのは、${cap}。`);
+  if (cap && !body.some((b) => b.includes(cap))) body.push(`この図で見てほしいのは、${cap.replace(/[。.]+$/, '')}。`);
 
   // 印も数値も入っていない図は、上の組み立てだけでは2つ以下にしかならない。
   // そこで「図をどう使うか」を1つ足して、少なくとも読む手がかりが残るようにする。

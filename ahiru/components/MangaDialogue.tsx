@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import type { MangaScript, MangaSpeaker } from '../data/manga-types';
 import type { SubjectKey } from '../data/questions-meta';
 import FeedbackForm from './FeedbackForm';
+import { rich } from './RichText';
 
 type SpeakerInfo = {
   name: string;
@@ -35,6 +36,8 @@ export default function MangaDialogue({ script, context }: Props) {
   const [index, setIndex] = useState(0);
   const [showFeedback, setShowFeedback] = useState(false);
   const panel = script.panels[index];
+  // コマが空の台本でも落ちないようにする
+  if (panel == null) return null;
   const info = SPEAKERS[panel.speaker];
   const total = script.panels.length;
   const isLast = index >= total - 1;
@@ -68,7 +71,7 @@ export default function MangaDialogue({ script, context }: Props) {
           </View>
           <Text style={[styles.speakerName, { color: info.color }]}>{info.name}</Text>
         </View>
-        <Text style={[styles.line, panel.emphasis && styles.lineEmphasis]}>{panel.line}</Text>
+        <Text style={[styles.line, panel.emphasis && styles.lineEmphasis]}>{rich(panel.line, { size: panel.emphasis ? 17 : 15.5, color: panel.emphasis ? '#221C18' : '#2B2420', bold: !!panel.emphasis })}</Text>
       </View>
 
       <View style={styles.navRow}>

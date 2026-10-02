@@ -594,10 +594,10 @@ Yumi: I'd love to visit Kinkakuji and maybe try some traditional Kyoto cuisine!
 
 （解答用紙には「I think」または「I believe」で書き始めること）`,
     answer: `（解答例1 – 制限すべき立場）
-I think junior high school students should limit their smartphone use. Using smartphones too much can cause sleep problems and make it hard to focus on studying. Students should spend more time on hobbies and face-to-face conversations instead. A limit of one hour per day seems reasonable.（53語）
+I think junior high school students should limit their smartphone use. Using smartphones too much can cause sleep problems and make it hard to focus on studying. Students should spend more time on hobbies and face-to-face conversations instead. A limit of one hour per day seems reasonable.（45語）
 
 （解答例2 – 自由に使うべき立場）
-I believe students should be free to use smartphones every day. Smartphones help us learn new things, communicate with friends, and stay safe when we are away from home. However, we should also be responsible and avoid using them during class or late at night.（47語）`,
+I believe students should be free to use smartphones every day. Smartphones help us learn new things, communicate with friends, and stay safe when we are away from home. However, we should also be responsible and avoid using them during class or late at night.（45語）`,
     hint: '「I think / I believe + 主張」の後に「Because / because / This is because」で理由をつなぐ。具体的な理由を1〜2つ挙げて、最後にまとめの文を書くと30語以上になりやすい。',
     explanation: `【出題意図】
 自分の意見を英語で論理的に述べる英作文問題（意見型）。主張・理由・具体例・まとめという意見文の構成力と、30語以上という語数条件を満たす表現力を同時に問う。関大一高・同志社高の英作文形式。

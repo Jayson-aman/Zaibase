@@ -247,7 +247,7 @@ export const kokoKisoEigo50b: Question[] = [
     maxOnly: true,
     question: '次の（　）に適切な前置詞を入れなさい。\n① I\'m interested (　) science.（科学に興味がある）\n② She is good (　) cooking.（彼女は料理が得意だ）\n③ He is afraid (　) dogs.（彼は犬が怖い）\n④ We are proud (　) our team.（私たちはチームを誇りに思う）',
     answer: '① in　② at　③ of　④ of',
-    hint: '熟語は形容詞+前置詞のセットで丸暗記。interested in / good at / afraid of / proud of。',
+    hint: '熟語は形容詞＋前置詞のセットで丸暗記。「興味がある」「得意だ」「こわがる」「誇りに思う」それぞれの前置詞を思い出す。',
     explanation:
       '【何を聞かれているか】①「I\'m interested (　) science.」②「She is good (　) cooking.」③「He is afraid (　) dogs.」④「We are proud (　) our team.」の空所に適切な前置詞を入れる。\n【なぜ前置詞を使い分けるのか】形容詞＋前置詞のセットはそれぞれ決まった組み合わせがあり、interested in、good at、afraid of、proud ofのように前置詞が固定されているから。\n【ポイント1】interested inは「〜に興味がある」、good atは「〜が得意」。\n【ポイント2】afraid ofは「〜が怖い」、proud ofは「〜を誇りに思う」。\n【ポイント3】似た形にfond of（〜が好き）、tired of（〜に飽きた）、full of（〜でいっぱい）、different from（〜と異なる）がある。\n【答え】① in　② at　③ of　④ of\n【確かめ】interested aboutやgood inのように誤った前置詞を使っていないかを確認する。\n【よくあるまちがい】interested aboutやgood inのように前置詞を間違えてしまう。\n【ここが絶対】形容詞＋前置詞のコンビは1セットとして丸ごと覚える。',
     pitfall: '「interested about」「good in」のように前置詞を間違えるミスが多い。セットで覚えること！',
@@ -336,7 +336,7 @@ export const kokoKisoEigo50b: Question[] = [
     maxOnly: true,
     question: '次の日本語に合う英語のイディオムを（　）に書きなさい。\n① 〜と連絡を取る → keep (　) (　) 〜\n② 〜に同意する → (　) (　) 〜\n③ 〜に慣れる → get (　) (　) 〜',
     answer: '① keep in touch with　② agree with　③ get used to',
-    hint: 'keep in touch with（連絡を保つ）、agree with（同意する）、get used to（慣れる）。',
+    hint: '「連絡を取りつづける」「同意する」「慣れる」を表す熟語。それぞれ前置詞や動詞の組み合わせを思い出す。',
     explanation:
       '【何を聞かれているか】①「〜と連絡を取る」②「〜に同意する」③「〜に慣れる」の日本語に合う英語のイディオムを書く。\n【なぜこの熟語を使うのか】これらは前後の単語とセットで決まった意味を持つイディオムで、単語を分解せず1つのまとまりとして覚える必要があるから。\n【ポイント1】①「〜と連絡を取り合う」＝keep in touch with〜（＝stay in contact with）。\n【ポイント2】②「〜に同意する」＝agree with〜（人・意見に使う。agree toは提案・計画に同意するときに使う）。\n【ポイント3】③「〜に慣れる」＝get used to〜（toは前置詞なので後ろは名詞・動名詞。used to Vの「以前は〜していた」と区別する）。\n【答え】① keep in touch with　② agree with　③ get used to\n【確かめ】get used toのあとに動詞が続く場合、-ing形になっているかを確認する。\n【よくあるまちがい】get used toのtoを不定詞のtoと勘違いし、あとに動詞の原形を続けてしまう。\n【ここが絶対】get used to〜のtoは前置詞なので、あとには名詞または動名詞（-ing）が続く。',
     pitfall: '「get used to」の後は動詞の-ing形。「get used to wake up」ではなく「get used to waking up」！',

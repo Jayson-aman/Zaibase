@@ -352,7 +352,7 @@ be worried about〜 は「〜を心配している」という意味のイディ
     question: '次の（　）内に最も適切な語を選べ。  She decided to ( ) up eating fast food after learning about its health risks.',
     choices: ['① give', '② take', '③ make', '④ turn'],
     answer: '① give',
-    hint: 'give up〜ing で「〜するのをやめる」という熟語。',
+    hint: '「〜するのをやめる」を表す、〈動詞＋up＋ing〉の熟語。',
     explanation: `【出題意図】
 動詞 give を含む重要熟語 give up〜（〜をやめる）を正確に知っているかを問う問題。
 
@@ -505,7 +505,7 @@ depend on〜：人・状況・条件などに頼る、左右される場合に�
     question: '次の（　）内に最も適切な語を選べ。  Even small actions like turning off lights can ( ) a difference for the environment.',
     choices: ['① do', '② make', '③ have', '④ take'],
     answer: '② make',
-    hint: 'make a difference で「変化をもたらす、効果がある」という熟語。',
+    hint: '「効果がある・役に立つ」という熟語。a difference の前に入る動詞を選ぶ。',
     explanation: `【出題意図】
 熟語 make a difference（変化をもたらす、効果がある）を正確に知っているかを問う問題。
 

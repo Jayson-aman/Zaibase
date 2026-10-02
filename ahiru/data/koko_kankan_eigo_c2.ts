@@ -958,9 +958,9 @@ Manager: Perfect. We'll be in touch by the end of this week with our decision.`,
 テーマ：「高校生がスマートフォンを授業中に使うことを許可すべきだと思いますか。」
 
 （I think / I don't think で書き始めること）`,
-    answer: `（賛成例）I think high school students should be allowed to use smartphones during class in some situations. Smartphones can be useful tools for looking up information quickly and taking notes efficiently. However, students should use them only when the teacher gives permission, so that they do not get distracted from studying.（46語）
+    answer: `（賛成例）I think high school students should be allowed to use smartphones during class in some situations. Smartphones can be useful tools for looking up information quickly and taking notes efficiently. However, students should use them only when the teacher gives permission, so that they do not get distracted from studying.（50語）
 
-（反対例）I don't think high school students should be allowed to use smartphones during class. Many students would probably use them to check social media or play games instead of listening to the teacher. Furthermore, it could be difficult for teachers to control how each student is using their phone during a lesson.（49語）`,
+（反対例）I don't think high school students should be allowed to use smartphones during class. Many students would probably use them to check social media or play games instead of listening to the teacher. Furthermore, it could be difficult for teachers to control how each student is using their phone during a lesson.（52語）`,
     hint: `主張→理由1→理由2（または譲歩＋補足）の構成で書く。However/Furthermoreなどの接続語で論理をつなぐ。`,
     explanation: `【出題意図】授業中のスマートフォン使用の是非について、35語以上で主張と理由を論理的にまとめる意見英作文を問う。【解説】賛成の理由例：情報検索やメモに便利、ただし教師の許可がある場合に限定するという条件付き賛成の立場。反対の理由例：SNSやゲームに気を取られる可能性、教師が使用状況を管理しにくいこと。いずれの立場でも、however/furthermoreのような論理接続語を使うと文章の流れが明確になる。【注意点】35語以上を確実に満たすため、理由を1つだけでなく、条件や補足（howeverの後の内容等）まで加えて具体性を持たせる。主語と動詞の一致（studentsは複数、smartphoneの単数/複数）にも注意する。【関連知識】スマートフォン・教育関連語彙：distract（気を散らす）、permission（許可）、efficiently（効率的に）は意見英作文で使いやすい語彙。`,
     pitfall: `I think smartphones are useful.のように理由が漠然としたまま終わらせず、「いつ・どのように使うべきか」といった具体的な条件まで踏み込んで書くと説得力が増す。`,
@@ -1000,7 +1000,7 @@ Manager: Perfect. We'll be in touch by the end of this week with our decision.`,
 （I agree / I disagree で書き始めること）`,
     answer: `（賛成例）I agree that high school students should be allowed to have part-time jobs. Working part-time helps students learn how to manage their time and money responsibly. It also gives them a chance to experience the real world outside of school before they graduate.（42語）
 
-（反対例）I disagree that junior high and high school students should work part-time jobs. Their main responsibility at this stage of life is to focus on their studies. If students spend too much time working, they may become too tired to concentrate on schoolwork and lose sleep.（44語）`,
+（反対例）I disagree that junior high and high school students should work part-time jobs. Their main responsibility at this stage of life is to focus on their studies. If students spend too much time working, they may become too tired to concentrate on schoolwork and lose sleep.（46語）`,
     hint: `賛成：時間管理・お金の管理、社会経験。反対：本分は勉強、疲労による学業への悪影響。`,
     explanation: `【出題意図】学生のアルバイトの是非という身近なテーマで、35語以上の理由付きの意見英作文を作成する力を問う。【解説】賛成の理由例：時間とお金の管理を学べる、社会経験を積める。反対の理由例：学業が本分である、働きすぎて集中力や睡眠に悪影響が出る可能性。いずれの立場も「their main responsibility」「real world experience」のような具体的な語句を使うと説得力が増す。【注意点】If節を使う場合はif+現在形（If students spend too much time）とし、条件文の基本形を守る。語数条件（35語以上）を満たすため、理由を2つ以上、または理由＋具体的な影響まで書く。【関連知識】part-time job（アルバイト）、manage time and money（時間とお金を管理する）、concentrate on〜（〜に集中する）はこのテーマで頻出の表現。`,
     pitfall: `賛成・反対どちらの立場でも、単に「楽しいから」「大変だから」のような感想だけで終わらせず、学業や将来への影響という観点まで触れると評価が高くなる。`,
@@ -1018,9 +1018,9 @@ Manager: Perfect. We'll be in touch by the end of this week with our decision.`,
 テーマ：「競争（competition）は生徒の成長にとって良いものだと思いますか。」
 
 （I think / I don't think で書き始めること）`,
-    answer: `（賛成例）I think competition is good for students' growth. When students compete with each other, they often try harder to improve their skills than they would on their own. Moreover, competition can teach students how to accept both success and failure, which is an important life skill.（44語）
+    answer: `（賛成例）I think competition is good for students' growth. When students compete with each other, they often try harder to improve their skills than they would on their own. Moreover, competition can teach students how to accept both success and failure, which is an important life skill.（46語）
 
-（反対例）I don't think competition is always good for students' growth. Too much competition can create unnecessary stress and make students who are not as skilled feel discouraged. Instead, schools should focus more on cooperation, helping students support each other and grow together as a team.（43語）`,
+（反対例）I don't think competition is always good for students' growth. Too much competition can create unnecessary stress and make students who are not as skilled feel discouraged. Instead, schools should focus more on cooperation, helping students support each other and grow together as a team.（45語）`,
     hint: `賛成：努力の促進、成功と失敗を受け入れる力。反対：過度なストレス、協力の重要性。`,
     explanation: `【出題意図】競争と協力という対立するテーマについて、35語以上で自分の立場と理由を論理的に展開する意見英作文を問う。【解説】賛成の理由例：競争によって一人でやるよりも努力するようになる、成功と失敗を受け入れる力が身につく。反対の理由例：過度な競争は不必要なストレスを生み、苦手な生徒を落胆させる可能性がある、協力を重視すべきという主張。moreover/insteadのような接続語を使って理由や代案を明確に示す。【注意点】「competition is good」と単純に述べるだけでなく、「for students' growth（生徒の成長にとって）」という設問の観点に沿った理由を書くことが重要。反対の立場ではinstead（その代わりに）を使って代案（cooperation）を提示すると説得力が増す。【関連知識】competition（競争）、cooperation（協力）、discouraged（落胆した）は学校生活・教育をテーマにした意見英作文で頻出の対立語彙。`,
     pitfall: `賛成・反対のどちらの立場でも、設問のテーマ「生徒の成長」という観点からずれた理由（例：単に楽しいから）だけで終わらせない。`,

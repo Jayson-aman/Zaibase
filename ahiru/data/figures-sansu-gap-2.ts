@@ -440,11 +440,13 @@ export const figuresSansuGap2: Record<string, Figure> = {
     points: [
       { x: 0, y: 0, label: 'A' },
       { x: 5, y: 0, label: 'B' },
-      { x: 7, y: 2, label: 'C' },
-      { x: 2, y: 5, label: 'D' },
+      { x: 6.2, y: 2.75, label: 'C' },
+      { x: 2.8, y: 6.416, label: 'D' },
     ],
     sideLabels: ['5', '3', '5', '7'],
     diagonals: [[0, 2]],
+    // 4点A,B,C,Dを通る円（AB=5, BC=3, CD=5, DA=7 の円に内接する四角形）。中心 (2.5, 2.728)、半径 3.7。
+    circles: [{ x: 2.5, y: 2.728, r: 3.7 }],
   },
   // 放物線 y=x²-4。A,B(x軸との交点)・Pの位置(tは変数)・面積は解答なので点は表示しない。
   koko_sansu_ex_06_035: {

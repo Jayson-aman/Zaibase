@@ -308,7 +308,7 @@ be interested in〜 は「〜に興味がある」という意味のイディオ
     question: '次の（　）内に最も適切な語を選べ。  Many students decided to ( ) part in the science fair this year.',
     choices: ['① make', '② have', '③ take', '④ give'],
     answer: '③ take',
-    hint: 'take part in〜 で「〜に参加する」という熟語。',
+    hint: '「〜に参加する」という熟語。part in とセットになる動詞を選ぶ。',
     explanation:
       '【何を聞かれているか】「Many students decided to ( ) part in the science fair this year.」の空所に入る適切な動詞を選ぶ。\n【なぜtakeになるのか】「〜に参加する」という意味は、動詞takeを使ったtake part in〜という決まったイディオムで表すから。\n【ポイント1】take part in〜は「〜に参加する」という重要イディオム。\n【ポイント2】①make part in、②have part in、④give part inはどれも存在しない表現。\n【ポイント3】takeを含む頻出熟語：take care of〜（世話をする）、take a look at〜（見る）、take place（行われる）。\n【答え】③ take\n【確かめ】take part in the science fairで「科学フェアに参加する」という意味になっているかを確認する。\n【よくあるまちがい】make part inのように、他の動詞をあてはめてしまう。\n【ここが絶対】「〜に参加する」はtake part in〜という決まった形で覚える。',
     difficulty: 'advanced',

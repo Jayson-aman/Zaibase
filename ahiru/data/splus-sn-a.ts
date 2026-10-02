@@ -394,7 +394,7 @@ export const SPLUS_SN_A: Question[] = [
     id: 'seifu-nankai_plus_eigo_01',
     subject: 'eigo',
     question:
-      '次の（　）に入る語を答えなさい。\n問1　"Lake Biwa is the (　　) lake in Japan."（琵琶湖は日本で最も大きい湖です。）　※ big の最上級を入れる\n問2　"This book is (　　) interesting than that one."（この本はあの本よりおもしろいです。）',
+      '次の（　）に入る語を答えなさい。\n問1　"Lake Biwa is the (　　) lake in Japan."（琵琶湖は日本で最も大きい湖です。）　※ large の最上級を入れる\n問2　"This book is (　　) interesting than that one."（この本はあの本よりおもしろいです。）',
     answer: '問1: largest / 問2: more',
     hint: '問1は「最も大きい」を表す形。問2は interesting のように長い語の比較級の作り方。',
     explanation:

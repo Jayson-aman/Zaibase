@@ -128,7 +128,7 @@ export const kkEigo: Question[] = [
     question:
       '条件英作文。テーマ「あなたが将来やってみたい仕事と、その理由」について30語以上で書け。',
     answer:
-      'I want to be a doctor in the future. I want to help sick people and save their lives. I am also interested in science, so I think this job suits me well.（約35語）',
+      'I want to be a doctor in the future. I want to help sick people and save their lives. I am also interested in science, so I think this job suits me well.（33語）',
     hint: 'I want to be a / I would like to work as a 〜で始める。Because/soで理由を続ける',
     explanation:
       '英作文の型：①結論(what)「〜になりたい/〜で働きたい」②理由(why)「because/so」③具体的説明。語数チェック：30語以上を意識。よく使える表現：in the future(将来), I am interested in~(〜に興味がある), I think~(〜と思う), suits me(自分に合っている)。スペル・文法を確認する。',
@@ -265,7 +265,7 @@ export const ktEigo: Question[] = [
     question:
       'テーマ英作文。「外国語を学ぶことの意義について、具体的な経験や例を挙げながら70語以上で自分の考えを書け。」',
     answer:
-      "Learning a foreign language is very important in today's world. First, it allows us to communicate with people from different countries and understand their cultures. For example, if you can speak English, you can make friends all over the world and get access to more information. Second, learning another language helps us understand our own language better. In conclusion, foreign language learning broadens our horizons and connects us to the world.（約80語）",
+      "Learning a foreign language is very important in today's world. First, it allows us to communicate with people from different countries and understand their cultures. For example, if you can speak English, you can make friends all over the world and get access to more information. Second, learning another language helps us understand our own language better. In conclusion, foreign language learning broadens our horizons and connects us to the world.（71語）",
     hint: 'First/Second/In conclusionで構成。具体例(For example)を必ず入れる。allow/broaden horizons等の表現',
     explanation:
       '高得点英作文の要素：①明確な主張「Learning a foreign language is important」②理由1+例(First...For example)③理由2(Second)④まとめ(In conclusion)。高校入試で差がつく表現：allow us to do「〜することを可能にする」、broaden horizons「視野を広げる」、get access to「〜にアクセスする」、connect us to「〜と繋げる」。',

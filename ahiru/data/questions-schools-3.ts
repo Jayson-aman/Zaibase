@@ -260,7 +260,7 @@ export const myojoQuestions: Question[] = [
     question: '（　）に入る最も適切な語を選べ。 "I have lived in Osaka ( ) 2015."',
     choices: ['① for', '② since', '③ during', '④ while'],
     answer: '② since',
-    hint: '特定の時点から現在まで継続 → since＋年・時点',
+    hint: '特定の時点（2015年）から現在まで継続しているときに使う語。年が「起点」を表す。',
     explanation:
       '【何を聞かれているか】\n"I have lived in Osaka ( ) 2015."の空欄に入る、正しい前置詞を選ぶ文法問題。\n\n【なぜsinceを使うのか】\n"2015"という特定の時点（起点）を表す語の前には、「〜から」という意味を表すsinceを使うという決まりがある。\n\n【ポイント1】sinceとforの違いを確認する\nsince＋時点（2015、last year、Mondayなど）＝「〜から」、for＋期間（10 years、three daysなど）＝「〜の間」。\n\n【ポイント2】duringとwhileの意味を確認する\nduring＋名詞の期間（during the summer）＝「〜の間中」、while＋節（主語＋動詞）＝「〜している間」。\n\n【ポイント3】2015が時点であることを確認する\n"2015"は年（特定の時点）を表すので、sinceを使うのが正しい。\n\n【答え】\n② since\n\n【確かめ】\n"I have lived in Osaka since 2015."を訳し、「私は2015年からずっと大阪に住んでいる」という、起点からの継続を表す意味になっていることを確認する。\n\n【よくあるまちがい】\nsinceとforを混同し、時点（2015）の前にforを使ってしまうミス。forは期間（数字＋単位）の前に使う。\n\n【ここが絶対】\nsince＋時点、for＋期間、という使い分けをセットで覚える。',
   },
@@ -843,7 +843,7 @@ export const kinrankaiQuestions: Question[] = [
     course: 'kinrankai', examType: 'chugaku',
     question: '次の会話の（　）に入る語を答えよ。\nA: "What time is it now?"\nB: "It\'s ( ) past three."（3時15分）',
     answer: 'quarter',
-    hint: 'quarter past = 〜時15分過ぎ',
+    hint: '3時15分は、1時間の4分の1がすぎたところ。past の前に入る、4分の1を表す語。',
     explanation:
       '【何を聞かれているか】\n"It\'s ( ) past three."（3時15分）の空欄に入る、正しい語を答える時刻の表現問題。\n\n【なぜquarterを使うのか】\n「15分」は時計の文字盤の4分の1（quarter）に相当することから、英語では"quarter"という語を使って時刻の15分を表す。\n\n【ポイント1】quarterの意味を確認する\nquarter＝4分の1。時計の文字盤を4等分した1つ分が15分にあたる。\n\n【ポイント2】"quarter past〜"の形を確認する\n"quarter past three"＝「3時15分（3時を15分過ぎた）」。\n\n【ポイント3】他の時刻表現も確認する\n"half past three"＝「3時30分」、"quarter to four"＝「3時45分（4時の15分前）」。\n\n【答え】\nquarter\n\n【確かめ】\n"It\'s quarter past three."を訳し、「3時15分です」という意味になっていることを確認する。\n\n【よくあるまちがい】\nquarterを「15」という数字だけの意味だと勘違いしてしまうミス。quarterは「4分の1」という割合を表す語で、時計の文脈で15分を意味する。\n\n【ここが絶対】\nquarter past〜＝〜時15分、half past〜＝〜時30分、quarter to〜＝〜時15分前、という時刻表現をセットで覚える。',
   },
@@ -1121,7 +1121,7 @@ export const otaniQuestions: Question[] = [
     course: 'otani', examType: 'chugaku',
     question: '（　）に入る適切な前置詞を答えよ。\n"The library is ( ) the school and the post office."',
     answer: 'between',
-    hint: '2つのものの間に＝between',
+    hint: '2つのものの「あいだに」を表す前置詞。the school と the post office の2つを結ぶ。',
     explanation:
       '【何を聞かれているか】\n"The library is ( ) the school and the post office."の空欄に入る、正しい前置詞を答える問題。\n\n【なぜbetweenを使うのか】\n「AとBの間に」という、2つのものにはさまれた位置を表すときは、betweenを使うという決まりがある。\n\n【ポイント1】betweenの形を確認する\n"between A and B"＝「AとBの間に」。\n\n【ポイント2】betweenとamongの違いを確認する\nbetween＝2つのものの間、among＝3つ以上のものの間。今回はthe schoolとthe post officeの2つなのでbetween。\n\n【ポイント3】文全体を確認する\n"The library is between the school and the post office."＝「図書館は学校と郵便局の間にある」。\n\n【答え】\nbetween\n\n【確かめ】\n"between"の後ろに"the school and the post office"という2つの場所が並んでいることを確認する。\n\n【よくあるまちがい】\n2つのものの間なのにamongを使ってしまうミス。amongは3つ以上のものの中にあるときに使う。\n\n【ここが絶対】\nbetween（2つの間）とamong（3つ以上の間）の使い分けをセットで覚える。',
   },

@@ -424,9 +424,9 @@ Her success was not so much a matter of talent (　) hard work.
     question: `次の日本語を英語に訳しなさい。（30語以上）
 
 「もし私が学校の校則を変える権限を持っていたら、生徒たちがもっと自由に意見を言える仕組みを作るだろう。学校生活をより良くするために、大人と生徒がお互いの意見に耳を傾けることが大切だと思う。」`,
-    answer: `（解答例）If I had the authority to change our school rules, I would create a system that allows students to express their opinions more freely. I think it is important for adults and students to listen to each other's opinions in order to make our school life better.（41語）
+    answer: `（解答例）If I had the authority to change our school rules, I would create a system that allows students to express their opinions more freely. I think it is important for adults and students to listen to each other's opinions in order to make our school life better.（47語）
 
-（別解）If I had the power to change the school rules, I would make a system in which students could share their ideas more freely. I believe that adults and students should listen to each other to improve our school life together.（37語）`,
+（別解）If I had the power to change the school rules, I would make a system in which students could share their ideas more freely. I believe that adults and students should listen to each other to improve our school life together.（41語）`,
     hint: '「もし〜権限を持っていたら〜だろう」→仮定法過去（If+主語+had+名詞, would+動詞原形）。「〜することが大切だと思う」→I think it is important for+人+to do。',
     explanation: `【出題意図】仮定法過去（If I had the authority...）を用いた和文英訳と、it is important for A to doの構文を組み合わせた総合英作文。【解説】「もし権限を持っていたら」→現在の事実に反する仮定なので仮定法過去：If I had the authority to change our school rules（had+名詞で「持っていたら」を表す）。「仕組みを作るだろう」→would create a system that allows〜（関係代名詞thatを使って仕組みの内容を説明）。「〜することが大切だと思う」→I think it is important for adults and students to listen to each other's opinions（形式主語it+for+人+to do）。【注意点】仮定法過去のif節はIf I have the authorityのように直説法にしないこと。現在の事実に反する仮定はhad+名詞（または動詞の過去形）を使う。【関連知識】authority（権限）、express opinions（意見を表明する）、listen to each other（お互いの意見に耳を傾ける）は学校生活の意見文で頻出のテーマ語彙。`,
     pitfall: 'If I have the authorityと直説法にすると、現在の事実に反する仮定のニュアンスが失われる。',
@@ -641,7 +641,7 @@ If I had taken the earlier train, I (　) at the meeting right now instead of st
 「テクノロジーが便利になればなるほど、私たちは実際に人と顔を合わせて話すことの大切さを忘れがちだと思う。もし私が学校のルールを一つ変えられるとしたら、生徒が休み時間にスマートフォンを使わず友達と話す時間を作るだろう。」`,
     answer: `（解答例）I think that the more convenient technology becomes, the more we tend to forget the importance of talking to people face to face. If I could change one school rule, I would create a time when students talk with their friends without using smartphones during break time.（46語）
 
-（別解）The more convenient technology gets, the easier it is for us to forget how important it is to talk with people in person, I believe. If I were allowed to change just one school rule, I would make a rule that encourages students to spend break time talking with friends instead of using their smartphones.（52語）`,
+（別解）The more convenient technology gets, the easier it is for us to forget how important it is to talk with people in person, I believe. If I were allowed to change just one school rule, I would make a rule that encourages students to spend break time talking with friends instead of using their smartphones.（55語）`,
     hint: '「〜すればするほど…」→the+比較級, the+比較級構文。「もし〜変えられるとしたら」→仮定法過去（If I could change〜, I would〜）。',
     explanation: `【出題意図】the+比較級, the+比較級構文と仮定法過去を組み合わせた高難度の英作文。【解説】「テクノロジーが便利になればなるほど、〜を忘れがちだ」→the more convenient technology becomes, the more we tend to forget〜という「the+比較級, the+比較級」の構文で表す。「もし私が〜変えられるとしたら」→現在の事実に反する仮定なので仮定法過去：If I could change one school rule, I would create〜。【注意点】「the+比較級, the+比較級」構文は、前半・後半とも比較級を文頭に置く倒置的な語順になる点に注意（technology becomes more convenientのような通常の語順にしない）。【関連知識】face to face（顔を合わせて、対面で）、in person（直接会って）は「対面でのコミュニケーション」を表す頻出表現。`,
     pitfall: 'If I can change one school ruleのように直説法にすると、仮定法過去が表す「実際には変えられない」というニュアンスが失われる。',

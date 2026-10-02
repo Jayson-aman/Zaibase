@@ -344,7 +344,7 @@ be famous for〜 は「〜で有名だ」という意味のイディオム。前
     question: '次の（　）内に最も適切な語を選べ。  Every summer, hundreds of local people ( ) part in the traditional dance parade.',
     choices: ['① make', '② have', '③ take', '④ do'],
     answer: '③ take',
-    hint: 'take part in〜で「〜に参加する」という熟語。',
+    hint: '「〜に参加する」という熟語。part in とセットになる動詞を選ぶ。',
     explanation:
       '【何を聞かれているか】「Every summer, hundreds of local people ( ) part in the traditional dance parade.」の空所に入る適切な動詞を選ぶ。\n【なぜtakeになるのか】「〜に参加する」という意味は、動詞takeを使ったtake part in〜という決まったイディオムで表すから。\n【ポイント1】take part in〜は「〜に参加する」（＝join／participate in）という重要イディオム。\n【ポイント2】①make part in、②have part in、④do part inはどれも存在しない表現。\n【ポイント3】takeを含む頻出熟語：take place（行われる）、take care of〜（世話をする）。\n【答え】③ take\n【確かめ】take part in the traditional dance paradeで「伝統的な踊りのパレードに参加する」という意味になっているかを確認する。\n【よくあるまちがい】make part inのように、他の動詞をあてはめてしまう。\n【ここが絶対】「〜に参加する」はtake part in〜という決まった形で覚える。',
     difficulty: 'advanced',
@@ -424,7 +424,7 @@ be known to〜：〜に知られている（対象となる人）
     question: '次の（　）内に最も適切な語を選べ。  This craft has been handed ( ) from generation to generation for over four hundred years.',
     choices: ['① down', '② up', '③ over', '④ off'],
     answer: '① down',
-    hint: 'hand down〜 は「〜を代々伝える、受け継ぐ」という意味の句動詞。',
+    hint: '「代々伝える・受け継ぐ」という意味の句動詞。hand のあとに入る副詞を選ぶ。',
     explanation: `【出題意図】
 句動詞 hand down〜（〜を代々伝える）の用法を問う問題。世代を超えた伝統の継承を表す表現として頻出。
 
@@ -521,7 +521,7 @@ date back to〜：（起源・歴史が）〜にさかのぼる（= go back to�
     question: '次の（　）内に最も適切な語を選べ。  This historical drama is ( ) on real events that happened during the war.',
     choices: ['① based', '② interested', '③ known', '④ filled'],
     answer: '① based',
-    hint: '「〜に基づいている」という意味の熟語 be based on〜 を思い出す。',
+    hint: '「〜に基づいている」という意味の熟語。on とセットになる語（過去分詞）を選ぶ。',
     explanation: `【出題意図】
 熟語 be based on〜（〜に基づいている）を正確に使えるかを問う問題。似た形の他の熟語との混同を防ぐ。
 

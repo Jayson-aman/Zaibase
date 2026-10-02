@@ -439,10 +439,10 @@ export const gradeJ2EigoQuestions: Question[] = [
     question:
       '次の文の（　）に入る正しい形はどれですか。\n(　) English every day is important for you. （毎日英語を勉強することはあなたにとって大切です。）',
     answer: 'To study',
-    choices: ['To study', 'Studying', 'Study', 'Studied'],
+    choices: ['To study', 'Studies', 'Study', 'Studied'],
     hint: '文の最初で主語になる不定詞は〈To+動詞の原形〉の形。大文字で始める。',
     explanation:
-      '【解説】\n不定詞の名詞的用法は文の主語にもなれる。文の最初に来るので、Toの最初の文字は大文字にする。\n動名詞（Studying）を使っても似た意味を表せるが、この問題では不定詞の形を選ぶ。\n答え：To study',
+      '【何を聞かれているか】\n文の主語になる「毎日英語を勉強すること」を、英語でどう言うかを選ぶ問題。\n\n【なぜ To study なのか】\n動詞をそのまま主語にすることはできない。「〜すること」という名詞のはたらきにするために、〈to＋動詞の原形〉（不定詞の名詞的用法）の形にする。\n\n【ステップ1】空所のあとに English every day と is があるので、空所には文の主語になる形が入る。\n【ステップ2】Study は原形、Studied は過去形、Studies は三人称単数の s の形で、いずれも動詞のままなので主語にならない。\n【ステップ3】文の最初に来るので、To の最初の文字は大文字にする。\n\n【答え】\nTo study\n\n【確かめ】\nTo study English every day is important for you. と読んで、「毎日英語を勉強することは大切だ」と意味が通るか確かめる。\n\n【よくあるまちがい】\nStudy English every day is ... のように動詞の原形をそのまま主語にしてしまう。',
   },
   {
     id: 'grade_j2_eigo_29',

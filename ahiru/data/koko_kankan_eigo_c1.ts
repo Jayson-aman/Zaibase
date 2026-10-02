@@ -550,18 +550,37 @@ Artificial intelligence, which was once considered science fiction, is now part 
     question: `次の（　）に最も適切な語句をア〜エから選びなさい。
 
 ① Judging from the sky, it (　) rain this afternoon.
-  ア. must　イ. can　ウ. should　エ. would
+  ア. will　イ. can　ウ. has to　エ. used to
 
 ② The more information we have access to, the (　) it becomes to make a decision.
   ア. easy　イ. easier　ウ. easiest　エ. more easy
 
-③ She speaks English as (　) fluently as a native speaker.
+③ She speaks English (　) fluently as a native speaker.
   ア. so　イ. such　ウ. as　エ. more`,
-    answer: '① ア(must)　② イ(easier)　③ ウ(as)',
-    hint: '①「空模様から判断すると」→高い確信の推量must。②the比較級, the比較級構文。③as〜as構文（原級比較）の最初のas。',
-    explanation: `【出題意図】慣用的分詞構文Judging from〜、the比較級構文、as〜as構文の複合運用を問う。【解説】①Judging from〜（〜から判断すると）は慣用的な分詞構文。空模様から強い確信を持って推量する場合、must（〜に違いない）が適切。②「the more情報, the 比較級」の構文なので、easyの比較級easierを選ぶ。③as fluently as〜（〜と同じくらい流暢に）の原級比較構文の最初のasを選ぶ。【注意点】①のcan/should/wouldは確信度がmustより弱く、文脈（空模様からの明確な判断）には合わない。③はas〜asがセットであり、soやsuchでは代用できない。【関連知識】Judging from〜と同様の慣用分詞構文：Speaking of〜（〜と言えば）、Considering〜（〜を考えると）、Talking of〜（〜と言えば）。`,
-    pitfall: '①でイ(can)を選ぶと「降るかもしれない」程度の弱い推量になり、Judging fromの強い根拠に基づく文脈と合わない。',
-    memoryTip: 'Judging from〜=判断すると→強い確信のmustと相性が良いと覚える。',
+    answer: '① ア(will)　② イ(easier)　③ ウ(as)',
+    hint: '①「空模様から判断すると」→これから起こることの予測を表す助動詞。②the比較級, the比較級構文。③as〜as構文（原級比較）の最初のas。',
+    explanation: `【何を聞かれているか】
+3つの英文の空所に、文の型に合う語を選ぶ問題です。
+
+【なぜそうなるのか】
+①は、空模様という証拠から「これから降る」と未来を予測する言い方です。②は、「～すればするほど、ますます…」という、比較級を2つ重ねるきまりの型。③は、「同じくらい」を表すas ～ asの枠です。
+
+【ステップ1】① Judging from the sky（空を見て判断すると）は、これから起こることの予測を述べる文です。未来の予測には will を使います。can は「～できる」、has to は「～しなければならない」、used to は「以前は～したものだった」で、どれも意味が合いません。
+【ステップ2】② the+比較級, the+比較級
+The more information we have access to, the easier it becomes to make a decision. 「情報が多いほど、決めることが楽になる」。easy の比較級 easier を選びます。
+【ステップ3】③ as ～ as
+She speaks English as fluently as a native speaker. 空所には最初の as が入り、fluently をはさんで2つ目の as につながります。
+
+【答え】
+① ア(will)　② イ(easier)　③ ウ(as)
+
+【確かめ】
+①は日本語に訳して「降るだろう」が自然か、②は the の後に比較級が来ているか、③は as が2つセットになっているかを確認します。
+
+【よくあるまちがい】
+③で so fluently as を選ぶこと。so を使えるのは否定文の場合だけで、肯定文では as にします。また②で、the more easy のように書くのもまちがいです。`,
+    pitfall: '①でイ(can)を選ぶと「降ることができる」という意味になり、予測の文にならない。未来の予測にはwillを使う。',
+    memoryTip: 'Judging from〜（〜から判断すると）のあとは、根拠にもとづく未来の予測なのでwillを使うと覚える。',
   },
   {
     id: 'koko_kankan_eigo_c1_29',
@@ -617,7 +636,7 @@ Having been postponed twice due to bad weather, the marathon finally took place 
     question: `次のテーマについて、英語で意見を述べなさい。（35語以上、仮定法を1つ使うこと）
 
 テーマ：「もしあなたが1年間、世界のどこにでも住めるとしたら、どこに住みたいですか。理由とともに述べなさい。」`,
-    answer: `（解答例）If I could live anywhere in the world for a year, I would choose New Zealand. I love nature, and I believe living there would allow me to experience a slower, more peaceful lifestyle surrounded by beautiful scenery. （36語）`,
+    answer: `（解答例）If I could live anywhere in the world for a year, I would choose New Zealand. I love nature, and I believe living there would allow me to experience a slower, more peaceful lifestyle surrounded by beautiful scenery. （38語）`,
     hint: '仮定法過去（If I could〜, I would〜）を使い、理由を具体的に述べる。',
     explanation: `【出題意図】仮定法過去を用いた自由英作文。現実には起きていない仮定の状況について、理由とともに意見を述べる表現力を問う。【解説】「もし〜できるとしたら」という現実には起こっていない仮定はIf I could live anywhere〜, I would choose〜という仮定法過去の基本形で表す。理由付けにはbecause、and、believeなどでつなぎ、具体的な内容（自然・ライフスタイル等）を加えることで説得力が増す。【注意点】35語以上を確実に満たすため、場所を選んだ理由を1〜2文で具体的に展開する。仮定法の時制のねじれ（If節：過去形、主節：would+原形）を必ず守る。【関連知識】自由英作文で使える理由付け表現：This is because〜、One reason is that〜、For example〜。`,
     pitfall: 'If I can live anywhereと現在形にすると仮定法にならず、単なる条件文になってしまう。',

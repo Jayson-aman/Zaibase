@@ -37,7 +37,7 @@ A: Me too. Let's ask the teacher for one more day.
     question: `次の（　）に適切な語を選びなさい。
 
 ① Our school festival was (　) an exciting event that we still talk about it.（私たちの学園祭は、今でも話題になるほどわくわくする行事だった）
-② There were (　) many food stalls in the schoolyard.（校庭にはとても多くの屋台があった）
+② There were (　) many food stalls in the schoolyard that we could not visit all of them.（校庭には屋台がとても多かったので、全部は回れなかった）
 ③ I had (　) fun that I want to join again next year.（とても楽しかったので来年もまた参加したい）
 
 ア. so　イ. very　ウ. such`,
@@ -665,7 +665,7 @@ Uniforms have long been a standard part of school life in Japan. Supporters argu
 テーマ：「学校でスマートフォンの使用を許可すべきだと思いますか。理由とともに述べなさい。」
 
 （I think / I believe で書き始めること）`,
-    answer: `（賛成例）I think schools should allow students to use smartphones. Students can quickly look up information, communicate with teachers about schedule changes, and use educational apps. If schools set clear rules about when to use them, smartphones can support learning effectively.（38語）
+    answer: `（賛成例）I think schools should allow students to use smartphones. Students can quickly look up information, communicate with teachers about schedule changes, and use educational apps. If schools set clear rules about when to use them, smartphones can support learning effectively.（40語）
 
 （反対例）I believe schools should not allow smartphones during class. Many students would use them for games or social media instead of studying. Without smartphones, students can focus better on lessons and communicate with classmates face to face.（36語）`,
     hint: '主張→理由1・2→まとめの構成で書く。ルール設定などの条件を付けると説得力が増す。',

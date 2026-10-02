@@ -426,7 +426,7 @@ turn を使った句動詞：
     question: '次の（　）内に最も適切な語を選べ。  After the big storm, the whole town was ( ) with thick snow.',
     choices: ['① filled', '② covered', '③ full', '④ made'],
     answer: '② covered',
-    hint: 'be covered with〜（〜で覆われている）という表現を選ぶ。',
+    hint: '「雪におおわれた町」の意味にしたい。with とセットで「おおわれている」を表す語を選ぶ。',
     explanation:
       '【何を聞かれているか】「After the big storm, the whole town was ( ) with thick snow.」の空所に入る適切な語を選ぶ。\n【なぜcoveredになるのか】「（表面が）〜で覆われている」という状態を表すには、be covered with〜という決まったイディオムを使う必要があるから。\n【ポイント1】be covered with〜は「表面が〜で覆われている」状態を表す。\n【ポイント2】①filledはbe filled with〜（〜で満たされている、容器・空間に使う）、③fullはbe full of〜（withとは結びつかない）、④madeはbe made of〜（〜でできている）で、どれも文脈に合わない。\n【ポイント3】be＋過去分詞＋with/of〜の使い分け：be covered with〜（覆われている）、be filled with〜（満たされている）、be made of〜（材料）、be known for〜（〜で知られている）。\n【答え】② covered\n【確かめ】townの表面が雪で「覆われている」という状態を表すのにcoveredが適していることを確認する。\n【よくあるまちがい】be filled with〜と混同してfilledを選んでしまう。\n【ここが絶対】be covered with〜（覆われている）とbe filled with〜（満たされている）は意味がちがうので使い分ける。',
     difficulty: 'advanced',

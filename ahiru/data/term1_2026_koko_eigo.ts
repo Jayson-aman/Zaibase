@@ -559,7 +559,7 @@ Mt. Fuji is the highest mountain in Japan.
 → Mt. Fuji is (　) (　) (　) highest mountains in Japan.
 （富士山は日本で最も高い山の一つだ）`,
     answer: 'one of the',
-    hint: '「最も〜な…の一つ」＝one of the+最上級+複数名詞。',
+    hint: '「最も〜な…の一つ」の言い方。最上級のあとの名詞は複数形になる。',
     explanation: `【出題意図】「one of the+最上級+複数名詞」という最上級の重要書き換え表現を問う。【解説】「富士山は日本で一番高い山だ」を「富士山は日本で最も高い山の一つだ」という意味に変える場合、one of the+最上級+複数名詞（one of the highest mountains）の形にする。最上級の後の名詞は必ず複数形にする点がポイント。【注意点】one of the highest mountainのように名詞を単数形のままにしないこと。「〜の一つ」なので後ろの名詞群は複数存在することが前提。【関連知識】one of the+最上級+複数名詞は「最も〜なものの一つ」という意味で、英作文や読解で非常によく使われる表現。`,
     pitfall: '後ろの名詞をmountainのまま単数形にしないこと。one of the の後は複数形にする。',
     memoryTip: 'one of the+最上級+複数名詞＝「最も〜な…の中の一つ」と丸ごとフレーズで覚える。',
