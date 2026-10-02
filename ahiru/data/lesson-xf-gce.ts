@@ -85,7 +85,7 @@ const f_gce_01 = show([
       bx(10, 10, 96, 112, 'there\n「そこに」\nThere is ～.\n場所を表す', C.blue, FILL.blue, 12),
       bx(112, 10, 96, 112, 'their\n「彼らの」\nあとに名詞\nTheir house', C.green, FILL.green, 12),
       bx(214, 10, 96, 112, 'they\'re\nthey are の\n短縮形\n置きかえできる', C.red, FILL.red, 12),
-      lb(160, 142, '見分け：they are → they\'re／名詞が続く → their／ほかは there', 11, C.ink, 'middle', true),
+      lb(160, 142, 'they are → they\'re／名詞が続く → their／他は there', 11, C.ink, 'middle', true),
     ],
     'they are に置きかえて、意味が通れば they\'re', BLUE),
   S('to・too・two も同じです。two は数の 2、too は「〜も」「〜すぎる」、to は「〜へ」「〜すること」です。数ならtwo、「〜も・〜すぎる」ならtoo、ほかはto と決めます。',
@@ -233,7 +233,7 @@ const f_gce_04 = show([
       bx(10, 8, 145, 34, 'now → then', C.blue, FILL.blue, 14),
       bx(165, 8, 145, 34, 'today → that day', C.blue, FILL.blue, 13),
       bx(10, 50, 145, 34, 'tomorrow → the next day', C.green, FILL.green, 12),
-      bx(165, 50, 145, 34, 'yesterday → the day before', C.green, FILL.green, 11),
+      bx(165, 50, 145, 34, 'yesterday → the\nday before', C.green, FILL.green, 11),
       bx(10, 92, 145, 34, 'here → there', C.red, FILL.red, 14),
       bx(165, 92, 145, 34, 'this → that', C.red, FILL.red, 14),
     ],
@@ -365,7 +365,7 @@ const f_gce_06 = show([
     ],
     'つづりは、1字ずつ確かめる', MAIN),
   S('確かめの3ステップです。①直した文を声に出して読む。②日本語に訳して意味が合うか見る。③合図を言えるか（yesterday があるから過去形、など）とつづりを確かめる。',
-    row(['① 文を声に\n出して読む', '② 日本語に訳して\n意味を見る', '③ 合図を言って\nつづりを見る'], 30, MAIN, 12, 90, 16),
+    row(['① 文を声に\n出して読む', '② 訳して\n意味を見る', '③ 合図を言って\nつづりを見る'], 30, MAIN, 12, 90, 16),
     '読む → 訳す → 合図とつづり', MAIN),
 ], '形は、合図で決める（時・直前の語・主語の数）');
 

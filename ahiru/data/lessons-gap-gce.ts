@@ -848,7 +848,7 @@ as ～ as の間は、原級（もとの形）。as taller as ではない。
 　同じ年なので same。
 　答え：same
 
-★ ここがポイント：**any other ＋ 単数名詞**、**No other ＋ 単数名詞**、**not as ～ as**、**the same** の四つが書きかえで使う中心の形。問4のように、**主語が下位なら not as ～ as** になる。`,
+★ ここがポイント：**any other ＋ 単数名詞**、**No other ＋ 単数名詞**、**not as ～ as**、the same の四つが書きかえで使う中心の形。問4のように、主語が下位なら not as ～ as になる。`,
       },
       {
         heading: '確かめ（検算）のしかた',
