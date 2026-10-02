@@ -53,7 +53,7 @@ January（1月）・February（2月）・March（3月）・April（4月）・May
 ■ グループで覚える
 -ary で終わる：January, February
 -ber で終わる：September, October, November, December（9〜12月がまとまってこの形になる）
-1文字だけの月：May（唯一3文字で、短縮形もそのまま May）
+短縮しない月：May（3文字だけの月で、短縮形もそのまま May）
 
 ■ つづりでまちがえやすい語
 February：真ん中の r を忘れて Febuary と書いてしまう人が非常に多い。Feb-ru-ary と区切って発音しながら書く。

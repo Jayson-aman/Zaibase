@@ -397,6 +397,15 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
             >
               <Text style={styles.legalLinkText}>プライバシーポリシー</Text>
             </TouchableOpacity>
+            <Text style={styles.legalSep}>・</Text>
+            <TouchableOpacity
+              onPress={() => {
+                onClose();
+                router.push('/tokusho');
+              }}
+            >
+              <Text style={styles.legalLinkText}>特定商取引法</Text>
+            </TouchableOpacity>
           </View>
         </ScrollView>
       </LinearGradient>

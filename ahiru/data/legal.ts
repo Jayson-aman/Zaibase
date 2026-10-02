@@ -3,7 +3,17 @@
 
 // 特商法の販売価格は constants/pricing を参照して表示のズレを防ぐ
 // （価格改定時にこのファイルを直し忘れても自動で追随する）。
-import { PRO_PRICE_LABEL, MAX_PRICE_LABEL, VOCAB_MONTHLY_LABEL, VOCAB_YEARLY_LABEL } from '../constants/pricing';
+import {
+  PRO_PRICE_LABEL,
+  MAX_PRICE_LABEL,
+  PRO_YEARLY_PRICE_LABEL,
+  MAX_YEARLY_PRICE_LABEL,
+  VOCAB_MONTHLY_LABEL,
+  VOCAB_YEARLY_LABEL,
+  FORMULA_UNLOCK_PRICE_LABEL,
+  FORMULA_BUNDLE_PRICE_LABEL,
+  UNIT_UNLOCK_PRICE_LABEL,
+} from '../constants/pricing';
 
 export type LegalSection = {
   heading: string;
@@ -189,6 +199,9 @@ export const ahiruTokusho: LegalSection[] = [
       `MAX プラン：${MAX_PRICE_LABEL}（税込）`,
       `英単語Pro（月額）：${VOCAB_MONTHLY_LABEL}（税込）`,
       `英単語Pro（年額）：${VOCAB_YEARLY_LABEL}（税込）`,
+      `Web版の年額プラン：PRO ${PRO_YEARLY_PRICE_LABEL}／MAX ${MAX_YEARLY_PRICE_LABEL}（税込）`,
+      `買い切り（1回のお支払いで、継続課金はありません）：公式集1項目 ${FORMULA_UNLOCK_PRICE_LABEL}／公式集まとめ買い（教科ごと）${FORMULA_BUNDLE_PRICE_LABEL}／単元1つ ${UNIT_UNLOCK_PRICE_LABEL}（いずれも税込）`,
+      '初回限定の導入オファー：対象のサブスクリプションに限り、初回のみの特別価格（例：7日間で¥500）が適用される場合があります。期間が終わると、通常価格で自動更新されます。',
       '※ 価格はアプリ内および各ストアの表示を正とします。',
     ],
   },
@@ -203,7 +216,8 @@ export const ahiruTokusho: LegalSection[] = [
   {
     heading: '支払時期',
     paragraphs: [
-      '購読開始時および各更新日（月額プランは毎月、年額プランは毎年）に、ストアまたはWeb版決済代行会社を通じて自動的に課金されます。',
+      'サブスクリプション：購読開始時および各更新日（月額プランは毎月、年額プランは毎年）に、ストアまたはWeb版決済代行会社を通じて自動的に課金されます。',
+      '買い切り：購入を確定した時点で1回だけ課金されます。以降の課金はありません。',
     ],
   },
   {
@@ -218,14 +232,17 @@ export const ahiruTokusho: LegalSection[] = [
       '【iOS】「設定」→ Apple IDをタップ →「サブスクリプション」→「Zaibase受験」→「サブスクリプションをキャンセルする」',
       '【Android】Google Playアプリを開く →「定期購入」→「Zaibase受験」→「定期購入を解約」',
       '【Web】購入完了時に届くメール内の「サブスクリプション管理」リンクから解約できます。',
-      '解約後も、当該課金期間（月末）まで有料機能を引き続きご利用いただけます。翌月以降の課金は発生しません。',
+      '解約後も、すでにお支払いいただいた課金期間（月額は1か月、年額は1年）の終了まで、有料機能を引き続きご利用いただけます。次回の更新以降の課金は発生しません。',
+      '買い切りは継続課金ではないため、解約の手続きは不要です。',
       '解約の申込みは、各更新日の24時間前までに行ってください。',
     ],
   },
   {
     heading: '返品・返金',
     paragraphs: [
-      'デジタルコンテンツおよびサブスクリプション型サービスの性質上、購入後の返金は原則としてお受けできません。返金の可否は、アプリ版はApple Inc.またはGoogle LLCの、Web版は決済代行会社（Stripe）の返金ポリシーに従います。',
+      'デジタルコンテンツおよびサブスクリプション型サービスの性質上、購入後の返金は原則としてお受けできません。買い切りの公式集・単元も、購入後は解放が完了するため、同様に原則として返金できません。',
+      '返金の可否は、アプリ版はApple Inc.またはGoogle LLCの、Web版は決済代行会社（Stripe）の返金ポリシーに従います。返金が認められた場合は、その分の解放は取り消されます。',
+      '表示された内容と実際のサービスが大きく異なる場合など、当社の責任による不具合があるときは、info@zaibase.group までご連絡ください。個別に対応します。',
     ],
   },
   {

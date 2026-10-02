@@ -289,7 +289,7 @@ const LIST: MangaScript[] = [
     ['t', "you は誰に向かって言った言葉かな。"],
     ['s2', "「私」に向かって言っているから、you は私のこと。"],
     ['t', "その発言を、私が伝えるなら、you は伝える人から見るとどうなる?"],
-    ['s1', "私自身のことだから I になる。He said that I looked tired. だ。"],
+    ['s1', "私自身のことだから I になる。He told me that I looked tired. だ。"],
     ['t', "では He said to Tom, 「You look tired.」を、私が伝えるとしたら?"],
     ['s2', "you は Tom のことだから、he に変わる。He told Tom that he looked tired. だ。"],
     ['t', "you は固定の変換表ではなく、誰が誰に向かって言ったかで決まる。毎回、話した人と聞いた人を確かめてから代名詞を決める。", true],

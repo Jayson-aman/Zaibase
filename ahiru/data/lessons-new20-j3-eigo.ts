@@ -17,7 +17,7 @@ export const lessonsNew20J3Eigo: Lesson[] = [
       '仮定法過去は「今の事実に反する」ことを、動詞を過去形にして表す。',
       '仮定法過去完了は「過去の事実に反する」ことを、had＋過去分詞にして表す。',
       '「形は過去なのに意味は現在」というズレが仮定法の最大の特徴であり、最初のつまずきポイントでもある。',
-      '仮定法は中学の学習指導要領にも入っており、公立・私立を問わず高校入試で狙われる。',
+      '仮定法過去は中3の入試で扱われることがあり、仮定法過去完了は高校の学習内容だが、難関校の入試では出題されることがある。',
     ],
     sections: [
       {
@@ -1046,7 +1046,7 @@ Withoutの反対で、何かが「ある」という条件を仮定するとき�
 ■ my → his / her、me → him / her
 所有格・目的格も同じように、発言者の性別に合わせて変化する。
 　He said, "This is my bag." → He said that that was his bag.
-　She said, "Please help me." → She asked me to help her.（依頼のときは say ではなく ask を使い、〈ask＋人＋to＋動詞の原形〉で書きかえる。I → her のように人の言い方も変わる）
+　She said, "Please help me." → She asked me to help her.（依頼のときは say ではなく ask を使い、〈ask＋人＋to＋動詞の原形〉で書きかえる。発言の中の me は話した本人 She を指すので、her に変わる）
 
 ■ 主語がIで、伝える人自身の発言の場合
 自分自身の発言を間接話法にするときは、Iはそのままのこともある。
@@ -1062,7 +1062,7 @@ you が誰を指すかは場面によって変わる。話しかけた相手が�
 
 　彼が私に向かって言った場合：
 　He said to me, "You look tired."
-　→ He said that I looked tired.（youは「私」を指していたのでIになる）
+　→ He told me that I looked tired.（youは「私」を指していたのでIになる）
 
 　彼が別の人（Tom）に向かって言った場合、それを私が伝えるなら：
 　He said to Tom, "You look tired."
@@ -1083,7 +1083,7 @@ weに伝える人自身が含まれていれば we のまま。含まれてい�
         question: '次を間接話法にしなさい（代名詞の変化のみに注目）。Tom said to me, "I will help you."',
         wrongAnswer: 'Tom said that I will help you.',
         trapExplanation: 'Iをそのまま残してしまい、発言者Tom自身を指すIを、伝える人（私）の視点のheに変える必要があることに気づかない。',
-        correctAnswer: 'Tom said that he would help me.（時制の一致will→wouldは次の課で扱う）',
+        correctAnswer: 'Tom told me that he would help me.（時制の一致will→wouldは次の課で扱う）',
         correctExplanation: '発言の中のIはTom自身を指しているので、伝える人（私）から見るとheになる。またyouは「私（聞き手）」を指していたので、間接話法ではmeになる。代名詞は「誰が言ったか」「誰に向かって言ったか」の両方を確認して決める。',
       },
     ],
