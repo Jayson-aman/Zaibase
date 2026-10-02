@@ -551,7 +551,7 @@ It may be sunny. ＝ Perhaps it will be sunny.
 ※maybe は一語の副詞で「たぶん」。may be（助動詞＋be）と混同しないこと。
 
 ■ ていねいさの階段（許可を求める言い方）
-Can I 〜?（友達に）＜ May I 〜?（目上の人に）＜ Could I 〜?（さらにていねい）
+Can I 〜?（友達に）＜ May I 〜?・Could I 〜?（目上の人に、ていねい）
 どれも答え方は同じで、Sure. / Of course. / I'm sorry, but 〜。
 
 ■ 会話でよく出るやりとり

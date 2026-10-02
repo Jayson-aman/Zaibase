@@ -918,7 +918,7 @@ in front of（〜の前に）／in the middle of（〜の真ん中に）／at th
     targetLevel: 'oyo',
     keyPoints: [
       'near ＝ 近くに（少し離れていてもよい）。by ＝ すぐそばに（near より近い）。',
-      'near は前置詞なので near to my school のように to を入れない。',
+      'near は前置詞なので、ふつう near my school のように to を入れずに書く。',
       'around ＝ 〜の周りに／〜のあちこちに／約〜（数の前では「約」）。',
       'along ＝ 〜に沿って（川・道・かべなど細長いものに沿って）。',
       'against ＝ 〜に寄りかかって／〜に反対して。',
@@ -931,7 +931,7 @@ in front of（〜の前に）／in the middle of（〜の真ん中に）／at th
 ■ near（近くに）
 例）I live near the station.（私は駅の近くに住んでいます。）
 例）There is a park near my house.（私の家の近くに公園があります。）
-near は前置詞なので、後ろに直接名詞を置く。near to とはしない。
+near は前置詞なので、後ろに直接名詞を置く。near to という言い方もあるが、ふつうは to を入れずに書く。
 
 ■ by（すぐそばに）
 例）She was sitting by the window.（彼女は窓ぎわにすわっていました。）
@@ -974,11 +974,11 @@ nearby は一語で「近くに」という副詞なので、後ろに名詞を�
     trapExamples: [
       {
         question: '「私は学校の近くに住んでいます。」の下線部の誤りを直しなさい。　I live near to my school.',
-        wrongAnswer: '誤りはない（near to でよい）',
+        wrongAnswer: '誤りはない（near to のままでよい）',
         trapExplanation: 'next to（〜のとなりに）や close to（〜に近い）という形を覚えているため、near にも to が必要だと考えてしまう。「近い」という意味の語はすべて to を取るように感じられるのが原因である。',
         correctAnswer: 'I live near my school.',
         correctExplanation:
-          'near はそれ自体が前置詞なので、後ろに直接名詞を置く。to を入れるのは close to my school のように close を使うときである。next to は next が形容詞なので to が必要、near は前置詞なので不要、と語ごとに覚え分ける。',
+          'near はそれ自体が前置詞なので、後ろに直接名詞を置き、ふつうは to を入れない（near to という形も使われるが、入試の答案では near my school と書く）。to が必要なのは close to my school や next to my school のように close・next を使うときである。語ごとに覚え分ける。',
       },
       {
         question: '次の英文の下線部の意味を答えなさい。　There were around thirty students in the gym.',
