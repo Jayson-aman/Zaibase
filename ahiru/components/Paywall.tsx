@@ -27,6 +27,7 @@ import {
   restorePurchases,
   tierFromCustomerInfo,
   hasVocabEntitlement,
+  getIntroIneligibleProductIds,
 } from '../services/subscription';
 import { PRO_FEATURES, MAX_FEATURES } from '../constants/proAccess';
 import { useAuthUser } from '../hooks/useAuthUser';
@@ -45,6 +46,8 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
   const [maxYearlyProd, setMaxYearlyProd] = useState<unknown>(null);
   // Web版のみ。年額のパッケージがRevenueCatに作られているときだけ切り替えが出る
   const [yearly, setYearly] = useState(false);
+  // 導入オファーをすでに使った商品（その商品には「まず¥500」を出さない）
+  const [introUsed, setIntroUsed] = useState<Set<string>>(new Set());
   const [loadingOff, setLoadingOff] = useState(true);
   const [purchasing, setPurchasing] = useState(false);
   const { isLoggedIn } = useAuthUser();
@@ -64,6 +67,10 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
         setMaxProd(max);
         setProYearlyProd(proYearly);
         setMaxYearlyProd(maxYearly);
+        const ids = [pro, max]
+          .map((p) => (p as { identifier?: string } | null)?.identifier)
+          .filter((x): x is string => typeof x === 'string');
+        getIntroIneligibleProductIds(ids).then(setIntroUsed).catch(() => {});
       })
       .catch(() => {})
       .finally(() => setLoadingOff(false));
@@ -152,8 +159,19 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
   // のように明示しないと、Appleガイドライン3.1.2（トライアル・オファー条件の明示）に
   // 反するだけでなく、ユーザーが通常価格でいきなり課金されると誤解する。
   const introPriceLabel = (product: unknown): string | null => {
+    const id = (product as any)?.identifier as string | undefined;
+    if (id && introUsed.has(id)) return null;
     const intro = (product as any)?.introPrice as { priceString?: string } | null | undefined;
     return intro?.priceString ?? null;
+  };
+  // お試し期間の長さ（ストアが返す値。取れなければ7日間）
+  const introDays = (product: unknown): string => {
+    const intro = (product as any)?.introPrice as { periodUnit?: string; periodNumberOfUnits?: number } | null | undefined;
+    const n = intro?.periodNumberOfUnits;
+    if (n && intro?.periodUnit === 'DAY') return `${n}日間`;
+    if (n && intro?.periodUnit === 'WEEK') return `${n * 7}日間`;
+    if (n && intro?.periodUnit === 'MONTH') return `${n}か月`;
+    return '7日間';
   };
   const proIntro = introPriceLabel(proProd);
   const maxIntro = introPriceLabel(maxProd);
@@ -222,7 +240,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                   </View>
                   <View style={styles.priceCol}>
                     {proIntro && !showYearly && (
-                      <Text style={styles.introPrice}>まず{proIntro}で7日間</Text>
+                      <Text style={styles.introPrice}>まず{proIntro}で{introDays(proProd)}</Text>
                     )}
                     <Text style={styles.cardPrice} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.6} maxFontSizeMultiplier={1.2}>{proPrice}</Text>
                     {showYearly && <Text style={styles.yearlyNote}>{proYearlyNote}</Text>}
@@ -251,7 +269,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                       <Text style={styles.buyBtnText}>
                         {proBuy
                           ? proIntro && !showYearly
-                            ? `${proIntro}で7日間お試し`
+                            ? `${proIntro}で${introDays(proProd)}お試し`
                             : 'PRO プランを始める'
                           : '準備中'}
                       </Text>
@@ -272,7 +290,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                   </View>
                   <View style={styles.priceCol}>
                     {maxIntro && !showYearly && (
-                      <Text style={styles.introPrice}>まず{maxIntro}で7日間</Text>
+                      <Text style={styles.introPrice}>まず{maxIntro}で{introDays(maxProd)}</Text>
                     )}
                     <Text style={styles.cardPrice} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.6} maxFontSizeMultiplier={1.2}>{maxPrice}</Text>
                     {showYearly && <Text style={styles.yearlyNote}>{maxYearlyNote}</Text>}
@@ -321,7 +339,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                       <Text style={styles.buyBtnText}>
                         {maxBuy
                           ? maxIntro && !showYearly
-                            ? `${maxIntro}で7日間お試し`
+                            ? `${maxIntro}で${introDays(maxProd)}お試し`
                             : 'MAX プランを始める'
                           : '準備中'}
                       </Text>
@@ -348,6 +366,12 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
           >
             <Text style={styles.restoreBtnText}>購入を復元する</Text>
           </TouchableOpacity>
+
+          {(proIntro != null || maxIntro != null) && !showYearly && (
+            <Text style={styles.terms}>
+              {`初回のお試し価格は、${introDays(proIntro != null ? proProd : maxProd)}のあいだだけの特別価格です。期間が終わると、通常価格（PRO ${proPrice}／MAX ${maxPrice}）で自動更新されます。お試しは1つのサブスクリプショングループにつき1回までです。`}
+            </Text>
+          )}
 
           <Text style={styles.terms}>
             {Platform.OS === 'web'

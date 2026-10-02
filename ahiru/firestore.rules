@@ -33,6 +33,7 @@ service cloud.firestore {
       allow create, update: if request.auth != null
         && request.auth.uid == uid
         && request.resource.data.uid == uid
+        && request.resource.data.keys().hasOnly(['uid', 'pct', 'correct', 'total', 'updatedAt'])
         && request.resource.data.pct is int
         && request.resource.data.pct >= 0
         && request.resource.data.pct <= 100
@@ -40,7 +41,10 @@ service cloud.firestore {
         && request.resource.data.total is int
         && request.resource.data.correct >= 0
         && request.resource.data.total > 0
-        && request.resource.data.correct <= request.resource.data.total;
+        && request.resource.data.correct <= request.resource.data.total
+        // 点数と、正解数÷問題数が食いちがう値（1問1正解で100点など、水増し）を弾く。丸めの1点ぶんは許す。
+        && request.resource.data.pct <= (request.resource.data.correct * 100 / request.resource.data.total) + 1
+        && request.resource.data.pct >= (request.resource.data.correct * 100 / request.resource.data.total) - 1;
       // アカウント削除時に本人の登録を消せるようにする
       allow delete: if request.auth != null && request.auth.uid == uid;
     }
@@ -59,6 +63,10 @@ service cloud.firestore {
         && request.resource.data.event.size() < 64
         && request.resource.data.mode is string
         && request.resource.data.mode.size() < 64
+        && (request.resource.data.subject == null || (request.resource.data.subject is string && request.resource.data.subject.size() < 32))
+        && (request.resource.data.examType == null || (request.resource.data.examType is string && request.resource.data.examType.size() < 32))
+        && (request.resource.data.blocked == null || request.resource.data.blocked is bool)
+        && request.resource.data.createdAt == request.time
         && request.resource.data.tier in ['free', 'pro', 'max'];
     }
 

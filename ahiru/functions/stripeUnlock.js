@@ -143,9 +143,15 @@ exports.createAhiruUnlockCheckout = onCall(
     const uid = req.auth?.uid;
     if (!uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
+    // 匿名のアカウントで決済すると、匿名UIDを失った時点で支払い済みの解放が二度と見えなくなる。
+    // クライアントでもログインを求めているが、直接呼ばれても通さない。
+    if (req.auth?.token?.firebase?.sign_in_provider === "anonymous") {
+      throw new HttpsError("failed-precondition", "ご購入にはログイン（無料のアカウント登録）が必要です");
+    }
+
     const { type, itemId, returnUrl } = req.data ?? {};
     const config = TYPE_CONFIG[type];
-    if (!config || typeof itemId !== "string" || itemId.length === 0) {
+    if (!config || typeof itemId !== "string" || itemId.length === 0 || itemId.length > 200) {
       throw new HttpsError("invalid-argument", "type/itemIdが不正です");
     }
     // まとめ買いのIDは決まった形だけ。公式1項目のIDに bundle: を名乗らせない。

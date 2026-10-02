@@ -1,4 +1,5 @@
 import React, { useCallback, useMemo, useState } from 'react';
+import { useExamType } from '../../store/examType';
 import {
   View,
   Text,
@@ -125,7 +126,13 @@ export default function TextbookScreen() {
 
   const [selectedSubject, setSelectedSubject] = useState<SubjectKey | null>(null);
   // 受験種別で絞らないと、中学受験の小学生に中1〜中3の内容が混ざって出てしまう。
+  const { examType: savedExamType } = useExamType();
   const [examType, setExamType] = useState<ExamType>('chugaku');
+  const examTypePicked = React.useRef(false);
+  React.useEffect(() => {
+    // 入口で選んだ受験種別を初期値にする。まだ手で切りかえていないときだけ反映する。
+    if (savedExamType && !examTypePicked.current) setExamType(savedExamType);
+  }, [savedExamType]);
 
   // getLessonsBySubject は毎回 5,000件超をfilter+sortして新しい配列を返す。
   // メモ化しないと再描画のたびに配列の同一性が変わり、FlatListが全行を
@@ -219,7 +226,10 @@ export default function TextbookScreen() {
           <TouchableOpacity
             key={t.key}
             style={[styles.examTypeBtn, examType === t.key && styles.examTypeBtnActive]}
-            onPress={() => setExamType(t.key)}
+            onPress={() => {
+              examTypePicked.current = true;
+              setExamType(t.key);
+            }}
             activeOpacity={0.85}
           >
             <Text style={[styles.examTypeText, examType === t.key && styles.examTypeTextActive]}>

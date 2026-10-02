@@ -47,8 +47,9 @@ exports.unlockContent = onCall(
     if (!uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
     const { type, itemId } = req.data ?? {};
-    const config = TYPE_CONFIG[type];
-    if (!config || typeof itemId !== "string" || itemId.length === 0) {
+    // "constructor" や "__proto__" のような名前を type に渡されても、設定として扱わない
+    const config = typeof type === "string" && Object.prototype.hasOwnProperty.call(TYPE_CONFIG, type) ? TYPE_CONFIG[type] : undefined;
+    if (!config || typeof itemId !== "string" || itemId.length === 0 || itemId.length > 200) {
       throw new HttpsError("invalid-argument", "type/itemIdが不正です");
     }
     if (type === "bundle" ? !BUNDLE_ID_RE.test(itemId) : type === "formula" && isBundleId(itemId)) {

@@ -19,6 +19,9 @@ import { useProGate } from '../../hooks/useProGate';
 import { useSubscription } from '../../hooks/useSubscription';
 import { subjectInfo, type SubjectKey } from '../../data/questions-meta';
 import { useQuestionsBySubjectMap } from '../../hooks/useSubjectQuestions';
+import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
+import { useExamType } from '../../store/examType';
+import { getKoushikiFormulaIdForQuestion, isKoushikiFormulaFree } from '../../data/koushiki-access';
 import type { CourseKey, ExamType } from '../../data/courses';
 import {
   ALL_COURSES, CHUGAKU_COURSES, KOKO_COURSES, CATEGORY_COURSES, SCHOOL_COURSES,
@@ -191,14 +194,26 @@ export default function HomeScreen() {
     setDifficulty(level);
     scrollRef.current?.scrollTo({ y: Math.max(0, subjectSectionY.current - 12), animated: true });
   }
+  // 入口で選んだ受験種別を初期値にする（無いと、高校受験を選んでも毎回「中学受験」で始まる）
+  const { examType: savedExamType, setExamType: saveExamTypeChoice } = useExamType();
   const [examType, setExamType] = useState<ExamType>('chugaku');
+  const examTypePicked = React.useRef(false);
   const [selectedCourse, setSelectedCourse] = useState<CourseKey>('general');
+  React.useEffect(() => {
+    // 保存値の読みこみは非同期。まだ手で切りかえていないときだけ反映する。
+    if (savedExamType && !examTypePicked.current) {
+      setExamType(savedExamType);
+      setSelectedCourse(savedExamType === 'chugaku' ? 'general' : 'koko-general');
+    }
+  }, [savedExamType]);
   const [courseTab, setCourseTab] = useState<'category' | 'school'>('school');
 
   const courses = examType === 'chugaku' ? CHUGAKU_COURSES : KOKO_COURSES;
 
   function handleExamTypeChange(type: ExamType) {
+    examTypePicked.current = true;
     setExamType(type);
+    saveExamTypeChoice(type).catch(() => {});
     // Reset to first course for this exam type
     const firstCourse = type === 'chugaku' ? 'general' : 'koko-general';
     setSelectedCourse(firstCourse);
@@ -244,6 +259,7 @@ export default function HomeScreen() {
   const { hasAccess: betaAccess } = useBetaAccess();
   const { isPro, loading: proLoading, paywallVisible, setPaywallVisible, requirePro } = useProGate(betaAccess);
   const { isMax: subIsMax, loading: maxLoading } = useSubscription();
+  const { unlockedIds: unlockedFormulaIds } = useFormulaUnlocks();
   const isMax = subIsMax || betaAccess;
   // 課金状態の取得中は isPro/isMax が初期値(false)のため、加入者でも
   // MAX/PROロックの判定でペイウォールを誤表示してしまう。確定するまでは
@@ -255,9 +271,16 @@ export default function HomeScreen() {
   const listenQuestions = React.useMemo(() => {
     // 聞き流しは問題そのものが要るので、集計表ではなく元データを使う
     if (listenSubject == null || !questionsBySubject) return [];
-    const qs = difficulty === 'all'
-      ? questionsBySubject[listenSubject]
-      : questionsBySubject[listenSubject].filter((q) => q.difficulty === difficulty);
+    // 問題集と同じ条件で絞る。絞らないと、Max限定の問題や、未購入の公式集の例題、
+    // 選んでいない受験種別の問題まで読み上げてしまう。
+    const allowed = questionsBySubject[listenSubject].filter((q) => {
+      if ((q.examType ?? 'chugaku') !== examType) return false;
+      if (q.maxOnly && !isMax) return false;
+      const figureId = getKoushikiFormulaIdForQuestion(q.id);
+      if (figureId != null && !(isPro || isMax) && !isKoushikiFormulaFree(figureId) && !unlockedFormulaIds.has(figureId)) return false;
+      return true;
+    });
+    const qs = difficulty === 'all' ? allowed : allowed.filter((q) => q.difficulty === difficulty);
     // Fisher-Yates（sort(() => Math.random() - 0.5) は偏るため使わない）
     const a = [...qs];
     for (let i = a.length - 1; i > 0; i--) {
@@ -265,7 +288,7 @@ export default function HomeScreen() {
       [a[i], a[j]] = [a[j], a[i]];
     }
     return a;
-  }, [listenSubject, difficulty, questionsBySubject]);
+  }, [listenSubject, difficulty, questionsBySubject, examType, isMax, isPro, unlockedFormulaIds]);
 
   // Courses that require MAX or Pro
   const maxOnlyCourses = ALL_COURSES.filter(c => c.maxOnly).map(c => c.key);

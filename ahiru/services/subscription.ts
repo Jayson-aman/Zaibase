@@ -205,6 +205,27 @@ export function hasVocabEntitlement(info: unknown): boolean {
   return ENTITLEMENT_VOCAB in active;
 }
 
+/**
+ * 導入オファー（初回特別価格）を使えない商品のIDを返す（ネイティブのみ）。
+ * すでにオファーを使った人に「まず¥500で7日間」と出すと、通常価格で課金されて誤解を招くため。
+ * 判定できないとき（Web・通信失敗・unknown）は空にして、従来どおり表示する。
+ */
+export async function getIntroIneligibleProductIds(productIds: string[]): Promise<Set<string>> {
+  const out = new Set<string>();
+  if (isWeb || !isRevenueCatConfigured() || productIds.length === 0) return out;
+  try {
+    const Purchases = (await import('react-native-purchases')).default;
+    const res = await Purchases.checkTrialOrIntroductoryPriceEligibility(productIds);
+    for (const id of productIds) {
+      // 1 = INTRO_ELIGIBILITY_STATUS_INELIGIBLE（使えない）
+      if ((res as Record<string, { status?: number }>)[id]?.status === 1) out.add(id);
+    }
+  } catch {
+    // 判定できなければ、従来どおりの表示
+  }
+  return out;
+}
+
 export async function getCustomerInfo(): Promise<unknown> {
   if (!isRevenueCatConfigured()) {
     return { entitlements: { active: {} } };

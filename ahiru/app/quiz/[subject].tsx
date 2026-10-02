@@ -357,13 +357,18 @@ export default function QuizScreen() {
    */
   function injectRemedialBasics(): boolean {
     const seenIds = new Set(activeQuestions.map((q) => q.id));
-    const basics = subjectPool.filter(
-      (q) =>
-        (q.examType ?? 'chugaku') === examType &&
-        q.difficulty === 'basic' &&
-        !q.maxOnly &&
-        !seenIds.has(q.id),
-    );
+    // 本題と同じ条件（買い切りの公式集のロック・学年・単元）で絞る。絞らないと、
+    // 未購入の公式集の例題や、別の学年・別の単元の問題が混ざって出てしまう。
+    const topicDef = topicParam ? getTopic(subjectKey, topicParam) : null;
+    const basics = subjectPool.filter((q) => {
+      if ((q.examType ?? 'chugaku') !== examType) return false;
+      if (q.difficulty !== 'basic' || q.maxOnly || seenIds.has(q.id)) return false;
+      const figureId = getKoushikiFormulaIdForQuestion(q.id);
+      if (figureId != null && !(isPro || isMax) && !isKoushikiFormulaFree(figureId) && !unlockedFormulaIds.has(figureId)) return false;
+      if (gradeFilter && q.grade && q.grade !== gradeFilter) return false;
+      if (topicDef && !questionMatchesTopic(q, topicDef)) return false;
+      return true;
+    });
     if (basics.length === 0) return false;
     const pick = shuffle(basics).slice(0, 3);
     setQueue((prev) => {
