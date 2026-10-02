@@ -829,28 +829,10 @@ B：それは心配しないで。回収センターまで車で送ってあげ�
     id: 'koko_nyushi_eigo10_41',
     subject: 'eigo',
     question: '次の英文の（　）に入る最も適切な語句を選べ。  Many elderly people live alone in this area. ( ), a group of students visits them once a week to talk and help with small tasks.',
-    choices: ['① As a result', '② However', '③ For example', '④ Instead'],
-    answer: '① As a result',
-    hint: '前文の内容（高齢者が一人暮らしをしている）を受けて、その結果として行われている取り組みを表すつなぎ言葉を選ぶ。',
-    explanation: `【出題意図】
-文と文をつなぐ副詞（as a result / however / for example / instead）の使い分けを問う問題。
-
-【解説】
-前文「多くの高齢者がこの地域で一人暮らしをしている」という状況を受けて、後文は「学生たちが週に一度訪問する」という対応策・結果を述べている。
-・② However → 逆接（前後で対立する内容が必要）
-・③ For example → 具体例を示す語（前文に対する例ではない）
-・④ Instead → 「代わりに」（合わない）
-・① As a result → 結果・つながりを示す（✓）
-
-日本語訳：「この地域では多くの高齢者が一人暮らしをしている。その結果として、学生のグループが週に一度、彼らと話したり簡単な作業を手伝ったりするために訪問している。」
-
-【文法ポイント】
-文をつなぐ副詞（接続副詞）：as a result（その結果）、however（しかし）、for example（例えば）、in addition（さらに）、therefore（それゆえ）。文脈から論理関係を判断する。
-
-【入試頻出】
-・The town has few young workers. As a result, volunteers play an important role.
-・Some people cannot cook for themselves. As a result, local groups deliver meals to them.
-・This area lacks public transportation. As a result, elderly residents often feel isolated.`,
+    choices: ['① For this reason', '② However', '③ For example', '④ Instead'],
+    answer: '① For this reason',
+    hint: '前文の内容（高齢者が一人暮らしをしている）が、あとの取り組みの理由になっていることに注目して、理由を受けるつなぎ言葉を選ぶ。',
+    explanation: '【何を聞かれているか】\nMany elderly people live alone in this area. ( ), a group of students visits them once a week... の空所に入る、文と文をつなぐ語句を選ぶ問題。\n\n【なぜ For this reason なのか】\n「多くの高齢者が一人暮らしをしている」ことが理由となって、「学生たちが週に一度訪ねている」という取り組みが行われている。前の文を理由としてあとの文につなぐには、For this reason（こうした理由で）を使う。\n\n【ステップ1】前の文と後ろの文の関係を確かめる。前の文は「状況」、後ろの文はその状況に対する「取り組み」。\n【ステップ2】選択肢を一つずつ見る。However は反対の内容をつなぐ語で、ここは反対ではない。For example は前の文の具体例を示す語で、ここは具体例ではない。Instead は「そのかわりに」で、意味が合わない。\n【ステップ3】理由を受ける① For this reason を入れる。\n\n【答え】\n① For this reason\n\n【確かめ】\n「この地域では多くの高齢者が一人暮らしをしている。こうした理由で、学生のグループが週に一度、彼らと話したり簡単な作業を手伝ったりするために訪問している。」と意味が通るか確かめる。\n\n【よくあるまちがい】\nつなぎ言葉を前後の内容の関係を見ずに選んでしまう。「状況→それに対する行動」の関係では、理由を表す語を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',

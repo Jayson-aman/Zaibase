@@ -22,31 +22,10 @@ export const kokoNyushiEigo8: Question[] = [
     id: 'koko_nyushi_eigo8_02',
     subject: 'eigo',
     question: '次の（　）内に最も適切な語を選べ。  You ( ) arrive at the interview room by 8:30, because the door will be locked after that.',
-    choices: ['① must', '② should', '③ have to', '④ need'],
+    choices: ['① may', '② can', '③ have to', '④ need'],
     answer: '③ have to',
     hint: '「8時30分までに」という外部の規則・締め切りがある場合の義務の表現を選ぶ。',
-    explanation: `【出題意図】
-助動詞（must / should / have to / need）の意味の違いを問う問題。義務の強さと、話者の主観か外的状況かというニュアンスの識別が目標。
-
-【解説】
-「the door will be locked after that（それ以降はドアが施錠される）」という外部の規則・状況が理由になっている文脈。
-・① must → 話者の強い主観的義務
-・② should → 「〜すべきだ」（推奨・アドバイス）
-・③ have to → 外的な状況・規則による必要性（✓）
-・④ need → より弱い義務
-
-外部の規則が理由として明示されている場合、入試では have to を選ばせることが多い。
-
-日本語訳：「面接室には8時30分までに到着しなければなりません。それ以降はドアが施錠されるからです。」
-
-【文法ポイント】
-must：話者の判断による強い義務
-have to：状況・規則・外部要因による義務
-should：義務より軽い推奨
-
-【入試頻出】
-・Applicants have to submit their resumes by Friday.
-・過去形は must に過去形がないため had to を使う：I had to work overtime yesterday.`,
+    explanation: '【何を聞かれているか】\nYou ( ) arrive at the interview room by 8:30, because the door will be locked after that. の空所に入る、「到着しなければならない」という義務を表す語句を選ぶ問題。\n\n【なぜ have to なのか】\n「8時30分までに」、「それ以降はドアが施錠される」という決まりが理由になっている。決まりや状況によって「〜しなければならない」という義務を表すには have to を使う。\n\n【ステップ1】意味を確認する。「面接室には8時30分までに到着しなければならない」。\n【ステップ2】選択肢を一つずつ見る。may は「〜してもよい／〜かもしれない」、can は「〜できる」で、義務の意味にならない。need は動詞なので、あとに to がないと動詞の原形を続けられない。\n【ステップ3】義務を表す have to を入れる。You have to arrive at the interview room by 8:30.\n\n【答え】\n③ have to\n\n【確かめ】\n「面接室には8時30分までに到着しなければなりません。それ以降はドアが施錠されるからです。」と訳して意味が通るか確かめる。\n\n【よくあるまちがい】\nneed を選んでしまう。need to arrive なら正しいが、to がないので入らない。\n\n【入試頻出】\n・過去形は had to を使う：I had to work overtime yesterday.',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',

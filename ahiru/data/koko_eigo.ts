@@ -224,11 +224,11 @@ export const ktEigo: Question[] = [
     id: 'kt_eigo_07',
     subject: 'eigo',
     question:
-      '複雑な整序英作文。[ been / long / Japan / for / in / he / has / living ]',
-    answer: 'He has been living in Japan for long.',
+      '複雑な整序英作文。[ been / long / Japan / for / in / he / has / living / a / time ]',
+    answer: 'He has been living in Japan for a long time.',
     hint: '現在完了進行形：have/has been -ing。for+期間',
     explanation:
-      '【何を聞かれているか】[ been / long / Japan / for / in / he / has / living ]を並べ替えて正しい英文を作る。\n【なぜhas been livingという形になるのか】「今もずっと〜し続けている」という継続の動作を強調するには、現在完了進行形（have/has＋been＋動詞のing形）を使う必要があるから。\n【ポイント1】現在完了進行形の形はS＋have/has＋been＋-ing。\n【ポイント2】He has been living in Japanで「ずっと日本に住んでいる」という意味になる。\n【ポイント3】for long（またはfor a long time）で「長い間」という期間を表す。語順はS(He)+has+been+living(動詞)+in Japan(場所)+for long(期間)。\n【答え】He has been living in Japan for long.\n【確かめ】has been livingの語順（has→been→-ing）が正しく並んでいるかを確認する。\n【よくあるまちがい】has living beenのように語順を入れかえてしまう。\n【ここが絶対】現在完了進行形は必ずhave/has→been→動詞のingの順番で並べる。',
+      '【何を聞かれているか】[ been / long / Japan / for / in / he / has / living / a / time ]を並べ替えて正しい英文を作る。\n【なぜhas been livingという形になるのか】「今もずっと〜し続けている」という継続の動作を強調するには、現在完了進行形（have/has＋been＋動詞のing形）を使う必要があるから。\n【ポイント1】現在完了進行形の形はS＋have/has＋been＋-ing。\n【ポイント2】He has been living in Japanで「ずっと日本に住んでいる」という意味になる。\n【ポイント3】for a long time で「長い間」という期間を表す。語順はS(He)+has+been+living(動詞)+in Japan(場所)+for a long time(期間)。\n【答え】He has been living in Japan for a long time.\n【確かめ】has been livingの語順（has→been→-ing）が正しく並んでいるかを確認する。\n【よくあるまちがい】has living beenのように語順を入れかえてしまう。\n【ここが絶対】現在完了進行形は必ずhave/has→been→動詞のingの順番で並べる。',
     difficulty: 'advanced',
     course: 'koko-top',
     examType: 'koko',

@@ -1063,13 +1063,13 @@ export const schoolKokoTokai: Question[] = [
     difficulty: 'advanced',
     course: 'koko-tokai',
     examType: 'koko',
-    passage: `Water shortages are becoming a serious problem in many parts of the world, even in countries that used to have plenty of rain. Some cities are now reusing wastewater after cleaning it carefully, turning it into safe drinking water again. Although this idea sounds unusual to many people at first, scientists say that properly treated water can be just as clean, or even cleaner, than water taken directly from rivers or lakes. As the world's population continues to grow, more cities may need to accept this kind of technology in order to guarantee a stable supply of clean water for the future.`,
-    question: `本文の内容と一致するように、次の英文を完成させなさい。"Scientists say that properly treated wastewater can be (　) than water taken directly from rivers or lakes."`,
-    answer: `just as clean, or even cleaner`,
+    passage: `Water shortages are becoming a serious problem in many parts of the world, even in countries that used to have plenty of rain. Some cities are now reusing wastewater after cleaning it carefully, turning it into safe drinking water again. Although this idea sounds unusual to many people at first, scientists say that properly treated water can be just as clean as, or even cleaner than, water taken directly from rivers or lakes. As the world's population continues to grow, more cities may need to accept this kind of technology in order to guarantee a stable supply of clean water for the future.`,
+    question: `本文の内容と一致するように、次の英文を完成させなさい。"Scientists say that properly treated wastewater can be (　) water taken directly from rivers or lakes."`,
+    answer: `just as clean as, or even cleaner than`,
     hint: `本文中に、専門家（scientists）の見解がそのまま書かれている箇所を探す。`,
     explanation:
-      '【何を聞かれているか】\n本文の内容と一致するように、"properly treated wastewater can be (　) than water taken directly from rivers or lakes."の空欄を埋める問題。\n\n【なぜ本文の表現をそのまま使うのか】\n設問は本文中の専門家（scientists）の見解をそのまま完成させる形式なので、該当箇所を正確に本文から探して抜き出す必要がある。\n\n【ポイント1】該当箇所を確認する\n本文に"scientists say that properly treated water can be just as clean, or even cleaner, than water taken directly from rivers or lakes"とある。\n\n【ポイント2】抜き出す範囲を確認する\n"just as clean, or even cleaner"の部分全体を抜き出す必要がある。\n\n【ポイント3】一部だけ抜き出さないことを確認する\n"just as clean"だけでなく、"or even cleaner"まで含めて完全な形にする。\n\n【答え】\njust as clean, or even cleaner\n\n【確かめ】\n答えに"just as clean"と"or even cleaner"の両方が含まれているか確認する。\n\n【よくあるまちがい】\n"just as clean"だけを抜き出し、"or even cleaner"の部分を書き忘れてしまうミス。\n\n【ここが絶対】\n本文の該当箇所を抜き出す問題は、文の一部だけでなく該当する表現全体を正確に写す。',
-    pitfall: `"just as clean" だけを抜き出し、"or even cleaner" の部分を書き忘れないよう、該当箇所全体を正確に抜き出すこと。`,
+      '【何を聞かれているか】\n本文の内容と一致するように、"properly treated wastewater can be (　) water taken directly from rivers or lakes."の空欄を埋める問題。\n\n【なぜ本文の表現をそのまま使うのか】\n設問は本文中の専門家（scientists）の見解をそのまま完成させる形式なので、該当箇所を正確に本文から探して抜き出す必要がある。\n\n【ポイント1】該当箇所を確認する\n本文に"scientists say that properly treated water can be just as clean as, or even cleaner than, water taken directly from rivers or lakes"とある。\n\n【ポイント2】抜き出す範囲を確認する\n"just as clean as, or even cleaner than"の部分全体を抜き出す必要がある。\n\n【ポイント3】一部だけ抜き出さないことを確認する\n"just as clean as"だけでなく、"or even cleaner than"まで含めて完全な形にする。\n\n【答え】\njust as clean as, or even cleaner than\n\n【確かめ】\n答えに"just as clean as"と"or even cleaner than"の両方が含まれているか確認する。\n\n【よくあるまちがい】\n"just as clean as"だけを抜き出し、"or even cleaner than"の部分を書き忘れてしまうミス。\n\n【ここが絶対】\n本文の該当箇所を抜き出す問題は、文の一部だけでなく該当する表現全体を正確に写す。',
+    pitfall: `"just as clean as" だけを抜き出し、"or even cleaner than" の部分を書き忘れないよう、該当箇所全体を正確に抜き出すこと。`,
   },
   {
     id: 'tokai_eigo_14',

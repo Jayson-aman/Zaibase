@@ -1549,7 +1549,7 @@ export const writtenKokoQuestions: Question[] = [
     isWritten: true,
     question:
       '次の対話の（　　）に入る英文を、6語以上で書きなさい。\n　A: I have a lot of homework this weekend, so I cannot go to the movies with you.\n　B: （　　）\n　A: That is a good idea. Let us go next Saturday.\n　※（　）には「それなら、来週の土曜日に行くのはどうですか」という意味の英文を入れること。',
-    answer: 'Then why do not we go to the movies next Saturday?',
+    answer: "Then why don't we go to the movies next Saturday?",
     rubricPoints: [
       'Why don\'t we 〜? / How about 〜? / Shall we 〜? など、提案する表現を使っている',
       'next Saturday（来週の土曜日）を入れている',
@@ -1557,7 +1557,7 @@ export const writtenKokoQuestions: Question[] = [
       '提案の疑問文なので、文末がクエスチョンマークになっている',
     ],
     explanation:
-      '【何を聞かれているか】対話の空欄に、「それなら、来週の土曜日に行くのはどうですか」という意味の英文を6語以上で書く。\n【なぜWhy don\'t we ~?を使うのか】「〜しませんか」という誘いの表現として最も自然に使われる形がWhy don\'t we 〜?であり、あとに動詞の原形を続けることで「一緒に〜しよう」という提案になるから。\n【ポイント1】Then「それなら」で相手の発言（今週末は忙しい）を受ける。\n【ポイント2】Why don\'t we 〜?は「〜しませんか」という誘いの表現で、あとには動詞の原形が続く。模範解答は短縮形を使うとThen why don\'t we go to the movies next Saturday?となる。\n【ポイント3】別解としてHow about going to the movies next Saturday?と書く場合、How aboutのあとは動名詞（going）になる点に注意する。next Saturdayにはonをつけない。\n【答え】Then why do not we go to the movies next Saturday?\n【確かめ】語数を数えて6語以上あるか、Why don\'t weのあとが動詞の原形（go）になっているかを確認する。\n【よくあるまちがい】How about のあとに動詞の原形（go）を続けてしまう。How aboutのあとは動名詞（going）にする。\n【ここが絶対】Why don\'t we + 動詞の原形、How about + 動名詞、という形の違いを区別する。',
+      '【何を聞かれているか】対話の空欄に、「それなら、来週の土曜日に行くのはどうですか」という意味の英文を6語以上で書く。\n【なぜWhy don\'t we ~?を使うのか】「〜しませんか」という誘いの表現として最も自然に使われる形がWhy don\'t we 〜?であり、あとに動詞の原形を続けることで「一緒に〜しよう」という提案になるから。\n【ポイント1】Then「それなら」で相手の発言（今週末は忙しい）を受ける。\n【ポイント2】Why don\'t we 〜?は「〜しませんか」という誘いの表現で、あとには動詞の原形が続く。模範解答は Then why don\'t we go to the movies next Saturday?（10語）である。\n【ポイント3】別解としてHow about going to the movies next Saturday?と書く場合、How aboutのあとは動名詞（going）になる点に注意する。next Saturdayにはonをつけない。\n【答え】Then why don\'t we go to the movies next Saturday?\n【確かめ】語数を数えて6語以上あるか、Why don\'t weのあとが動詞の原形（go）になっているかを確認する。\n【よくあるまちがい】How about のあとに動詞の原形（go）を続けてしまう。How aboutのあとは動名詞（going）にする。\n【ここが絶対】Why don\'t we + 動詞の原形、How about + 動名詞、という形の違いを区別する。',
   },
   {
     id: 'wk_053',

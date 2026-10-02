@@ -220,7 +220,7 @@ Kota: Good idea. Thanks, Emi.`,
     difficulty: 'advanced',
     question:
       '空所に入る最も適切な語を選びなさい。\n「A: Has Ken finished his homework yet?\nB: Yes, he has ______ finished it.」',
-    choices: ['① just', '② already', '③ yet', '④ ever'],
+    choices: ['① never', '② already', '③ yet', '④ ever'],
     answer: '② already',
     hint: '"Yes" と答えているので、「もう終わらせてしまった」という完了の意味を強める語を考えよう。',
     explanation:

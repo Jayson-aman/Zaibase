@@ -248,7 +248,7 @@ export const gradeJ3EigoQuestions: Question[] = [
     question:
       '次の（A）（B）に入る最も適切な組み合わせを選びなさい。\nA: You look very tired. (A) you (B) all night?\nB: Yes, I have a test tomorrow.',
     answer: 'Have / been studying',
-    choices: ['Have / been studying', 'Do / study', 'Are / studying', 'Did / study'],
+    choices: ['Have / been studying', 'Do / study', 'Are / studying', 'Will / study'],
     hint: '「一晩中ずっと勉強し続けていたから今疲れている」という、過去から今まで続く動作を表す疑問文の形を考える。',
     explanation:
       '「今疲れて見える」のは「一晩中ずっと勉強し続けていた」ことが原因だと考えられるので、過去から現在まで続く動作を表す現在完了進行形の疑問文（Have/Has＋主語＋been＋動詞のing形〜?）を使う。主語がyouなのでHaveを使い、studyにbeen studyingの形を続ける。\n答え：Have / been studying（あなたは一晩中ずっと勉強していたのですか。）',

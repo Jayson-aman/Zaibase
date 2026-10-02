@@ -16,25 +16,27 @@ export const kokoKankanEigo20: Question[] = [
 A: "Have you ever ( ) to Kyoto?"
 B: "Yes, I went there last summer."
 
-① go  ② went  ③ gone  ④ goes`,
-    answer: '③ gone',
+① go  ② went  ③ been  ④ goes`,
+    answer: '③ been',
     hint: '「Have you ever ___?」は現在完了形の疑問文。ever の後ろは過去分詞が入る。',
-    explanation: `【出題意図】
-現在完了形（経験用法）における過去分詞の選択を問う問題。「Have/Has + 主語 + 過去分詞」という現在完了の疑問文の基本形を理解しているかが問われる。
+    explanation: `【何を聞かれているか】
+Have you ever ( ) to Kyoto? の空所に入る、「京都に行ったことがありますか」という経験をたずねる動詞の形を選ぶ問題。
 
-【解説】
-「Have you ever ___?」は「〜したことがありますか」という経験を尋ねる現在完了の疑問文。この形では動詞は必ず過去分詞を使う。go の過去形は went、過去分詞は gone。
-・① go → 動詞原形（Have you go? は文法的に誤り）
-・② went → 過去形（have/has の後ろには使えない）
-・③ gone → 過去分詞（✓）Have you ever gone to Kyoto?
-・④ goes → 3人称単数現在形（have の後ろには使えない）
-Bの返答「I went there last summer」は過去形であり、経験の内容を過去形で補足している点も確認しよう。
+【なぜ been なのか】
+「〜に行ったことがある」という経験は、現在完了の have been to で表す。have の後ろには過去分詞を置く。be動詞の過去分詞は been である。
 
-【注意点】
-have/has の後ろには「動詞原形」ではなく必ず「過去分詞」を置く。go–went–gone のような不規則変化動詞の三形変化を確実に覚えておくこと。「went」は過去形なので現在完了には使えない。
+【ステップ1】Have you ever 〜? は「〜したことがありますか」と経験をたずねる現在完了の疑問文。have のあとは過去分詞。
+【ステップ2】① go は原形、② went は過去形、④ goes は三人称単数の現在形で、いずれも have のあとには置けない。
+【ステップ3】過去分詞の③ been を入れる。Have you ever been to Kyoto?
 
-【関連知識】
-現在完了の4用法：①経験（ever, never, once, twice）②継続（for, since）③完了（already, just, yet）④結果（now, still）。経験用法の頻出表現：「Have you ever been to〜?」（beenはgoの過去分詞としても使われる）も覚えておこう。`,
+【答え】
+③ been
+
+【確かめ】
+Bの返答「Yes, I went there last summer.」は、行ったことがあるという意味で、質問と合っている。
+
+【よくあるまちがい】
+have のあとに過去形の went を置いてしまう。現在完了では過去形ではなく過去分詞を使う。`,
   },
   {
     id: 'koko_kankan_eigo_02',
@@ -594,7 +596,7 @@ Yumi: I'd love to visit Kinkakuji and maybe try some traditional Kyoto cuisine!
 
 （解答用紙には「I think」または「I believe」で書き始めること）`,
     answer: `（解答例1 – 制限すべき立場）
-I think junior high school students should limit their smartphone use. Using smartphones too much can cause sleep problems and make it hard to focus on studying. Students should spend more time on hobbies and face-to-face conversations instead. A limit of one hour per day seems reasonable.（45語）
+I think junior high school students should limit their smartphone use. Using smartphones too much can cause sleep problems and make it hard to focus on studying. Students should spend more time on hobbies and face-to-face conversations instead. A limit of one hour per day seems reasonable.（47語）
 
 （解答例2 – 自由に使うべき立場）
 I believe students should be free to use smartphones every day. Smartphones help us learn new things, communicate with friends, and stay safe when we are away from home. However, we should also be responsible and avoid using them during class or late at night.（45語）`,

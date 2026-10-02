@@ -876,12 +876,12 @@ buy + 人 + 物 = 人のために物を買う（第4文型）
   {
     id: 'koko_nyushi_eigo3_36',
     subject: 'eigo',
-    question: '次の対話の（　）に最も適切な文を選べ。  A: I lost the relay race today, and I feel terrible. B: ( ) You gave it your best shot.',
+    question: '次の対話の（　）に最も適切な文を選べ。  A: I\'m going to run in the relay race tomorrow, and I feel nervous. B: ( ) You have practiced a lot.',
     choices: ['① Don\'t worry.', '② That\'s too bad.', '③ I\'m sorry to hear that.', '④ Never mind.'],
     answer: '① Don\'t worry.',
-    hint: '後に続く「You gave it your best shot.（全力を尽くしたじゃないか）」という励ましの言葉に合う返答を選ぶ。',
+    hint: '後に続く「You have practiced a lot.（たくさん練習してきたじゃないか）」という励ましの言葉につながる返答を選ぶ。',
     explanation:
-      '【何を聞かれているか】「I lost the relay race today, and I feel terrible.」に対するBの返答（このあとYou gave it your best shot.と続く）に合う表現を選ぶ。\n【なぜDon\'t worry.が正しいのか】Aがリレーに負けて落ち込んでいることを伝えており、そのあとBが「全力を尽くしたじゃないか」と励ましているため、その前置きとしては「心配しないで」という励ましの表現が自然につながるから。\n【ポイント1】①Don\'t worry.（心配しないで）は励ましの表現で、後に続くYou gave it your best shot.（全力を尽くしたじゃないか）と自然につながる。\n【ポイント2】②That\'s too bad.と③I\'m sorry to hear that.はどちらも同情・慰めの表現で、励ましの流れには合わない。\n【ポイント3】④Never mind.（気にしないで）は軽い謝罪への返答で、この文脈には不自然。\n【答え】① Don\'t worry.\n【確かめ】選んだ返答のあとにYou gave it your best shot.が自然に続くかを確認する。\n【よくあるまちがい】②That\'s too bad.のように、同情の表現を励ましの場面で使ってしまう。\n【ここが絶対】対話文の空所は、その後に続く文とのつながりを見て、共感なのか励ましなのかを判断する。',
+      '【何を聞かれているか】「I\'m going to run in the relay race tomorrow, and I feel nervous.」（明日リレーに出るので緊張している）に対するBの返答を選ぶ問題。このあとに「You have practiced a lot.」と続く。\n\n【なぜ Don\'t worry. なのか】Aはこれから起こることに不安を感じている。そこでBが「心配しないで」と声をかけ、そのあとで「たくさん練習してきたじゃないか」と理由をそえて励ますのが自然な流れだから。\n\n【ステップ1】Aの気持ちを確かめる。明日のリレーに向けた「緊張・不安」。\n【ステップ2】後ろの文を見る。「たくさん練習してきた」は、不安をやわらげる励ましの言葉。\n【ステップ3】選択肢を見る。② That\'s too bad. と ③ I\'m sorry to hear that. は、悪いことが起きたあとの同情の言葉で、これから起きることへの不安には合わない。④ Never mind. は、軽い失敗や謝罪に「気にしないで」と返す言葉で、この場面には合わない。\n\n【答え】\n① Don\'t worry.\n\n【確かめ】\n「心配しないで。たくさん練習してきたじゃないか。」と読んで、自然につながるか確かめる。\n\n【よくあるまちがい】\n② や ③ のように、同情の言葉を励ましの場面で使ってしまう。これから起こることへの不安には、心配しないでと励ます。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',

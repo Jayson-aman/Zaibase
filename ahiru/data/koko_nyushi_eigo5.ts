@@ -40,28 +40,10 @@ export const kokoNyushiEigo5: Question[] = [
     id: 'koko_nyushi_eigo5_02',
     subject: 'eigo',
     question: '次の（　）内に最も適切な語を選べ。  According to the weather forecast, air pollution levels ( ) be very high this afternoon, so children should stay indoors.',
-    choices: ['① must', '② may', '③ should', '④ will'],
+    choices: ['① must', '② may', '③ cannot', '④ shall'],
     answer: '② may',
     hint: '天気予報の「〜かもしれない」という不確かな可能性を表す助動詞を選ぶ。',
-    explanation: `【出題意図】
-助動詞 may（〜かもしれない：可能性）の用法を、must・should・will との意味の違いから識別する問題。
-
-【解説】
-「天気予報によると」という文脈は、確実な事実ではなく「〜かもしれない」という推測を表す。
-・① must → 「〜に違いない」（強い確信）。予報の弱い推測には強すぎる
-・② may → 「〜かもしれない」（弱い可能性）（✓）
-・③ should → 「〜のはずだ」（根拠のある予想）または「〜すべきだ」（義務）で文脈に合わない
-・④ will → 単純未来（確実な予測になり、予報のニュアンスとずれる）
-
-日本語訳：「天気予報によると、今日の午後は大気汚染のレベルがとても高くなるかもしれないので、子どもたちは屋内にいるべきだ。」
-
-【文法ポイント】
-可能性を表す助動詞の強さの順：must（ほぼ確実）＞ will（かなり確実）＞ should（根拠のある予想）＞ may/might（五分五分・弱い可能性）。
-
-【入試頻出】
-・It may rain later, so take an umbrella.
-・She might be at home now.
-・The bus may be late because of the traffic.`,
+    explanation: '【何を聞かれているか】\nAccording to the weather forecast, air pollution levels ( ) be very high this afternoon, so ... の空所に入る、「かもしれない」という可能性を表す助動詞を選ぶ問題。\n\n【なぜ may なのか】\n天気予報は「必ずそうなる」とは言い切れず、「そうなる可能性がある」と伝えるものである。「〜かもしれない」という弱い可能性を表すには may を使う。\n\n【ステップ1】意味を確認する。「大気汚染のレベルは今日の午後とても高くなる（　）。だから子どもたちは屋内にいるべきだ」。\n【ステップ2】① must は「〜に違いない」で、予報には強すぎる。③ cannot は「〜のはずがない」で、あとの so 以下と矛盾する。④ shall は I / we を主語にする申し出の文で使う語で、ここには合わない。\n【ステップ3】可能性を表す② may を入れる。\n\n【答え】\n② may\n\n【確かめ】\n「天気予報によると、今日の午後は大気汚染のレベルがとても高くなるかもしれないので、子どもたちは屋内にいるべきだ。」と訳して意味が通るか確かめる。\n\n【よくあるまちがい】\n「ほぼ確実」の意味の must を選んでしまう。「〜かもしれない」の弱い可能性なら may。\n\n【入試頻出】\n・It may rain later, so take an umbrella.\n・The bus may be late because of the traffic.',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',

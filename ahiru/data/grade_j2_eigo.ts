@@ -275,7 +275,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     question:
       "次の文の（　）に入る単語はどれですか。\nIt's cold in here. I (　) close the window. （ここは寒いですね。窓を閉めます。）",
     answer: 'will',
-    choices: ['will', 'am going to', 'was', 'do'],
+    choices: ['will', 'did', 'was', 'do'],
     hint: 'その場で決めたことを言うときはwillを使う。',
     explanation:
       '【解説】\nその場で思いついてすぐに決めたことを言うときは will を使う。一方、be going to は前もって決めていた予定に使う。ここでは「今、寒いと気づいて」その場で窓を閉めることを決めているので will が正しい。\n答え：will',

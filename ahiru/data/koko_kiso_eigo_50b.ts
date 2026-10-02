@@ -230,7 +230,7 @@ export const kokoKisoEigo50b: Question[] = [
     examType: 'koko',
     difficulty: 'basic',
     maxOnly: true,
-    question: '次の単語の意味として最も近いものをA〜Dから選びなさい。\n① carefully\nA.丁寧に　B.注意深く　C.幸運に　D.急いで\n② enormous\nA.ふつうの　B.小さな　C.巨大な　D.感情的な\n③ obtain\nA.失う　B.届ける　C.得る　D.借りる',
+    question: '次の単語の意味として最も近いものをA〜Dから選びなさい。\n① carefully\nA.静かに　B.注意深く　C.幸運に　D.急いで\n② enormous\nA.ふつうの　B.小さな　C.巨大な　D.感情的な\n③ obtain\nA.失う　B.届ける　C.得る　D.借りる',
     answer: '① B　② C　③ C',
     hint: 'care（注意）＋-ful＋-ly。enorm-（巨大）はenormous。obtainはget/acquireと同義。',
     explanation:

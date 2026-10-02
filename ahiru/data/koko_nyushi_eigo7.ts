@@ -22,11 +22,11 @@ export const kokoNyushiEigo7: Question[] = [
     id: 'koko_nyushi_eigo7_02',
     subject: 'eigo',
     question: '次の（　）内に最も適切な語を選べ。  We ( ) buy some eggs on the way home, or we won’t be able to make the cake.',
-    choices: ['① must', '② should', '③ can', '④ may'],
+    choices: ['① must', '② might', '③ can', '④ may'],
     answer: '① must',
     hint: '「〜しなければケーキが作れない」という強い必要性を表す助動詞を選ぶ。',
     explanation:
-      '【何を聞かれているか】「We ( ) buy some eggs on the way home, or we won\'t be able to make the cake.」の空所に入る適切な助動詞を選ぶ。\n【なぜmustになるのか】「さもないとケーキが作れない」という強い条件から、話者自身が強く感じている必要性を表すmustが適切だから。\n【ポイント1】②should（〜すべきだ、推奨レベルで弱すぎる）、③can（能力）、④may（許可）はどれもこの強い必要性を表せない。\n【ポイント2】①must（〜しなければならない、強い義務）が正解。\n【ポイント3】mustは話者の主観による強い義務を表す。否定文must notは「〜してはいけない」（禁止）という別の意味になる点に注意（don\'t have to「〜しなくてよい」との違いが頻出）。\n【答え】① must\n【確かめ】"or we won\'t be able to make the cake"という結果が、強い必要性（must）と自然につながっているかを確認する。\n【よくあるまちがい】mustとhave toの意味は近いが、shouldを選んでしまい、強さの違いを見落とす。\n【ここが絶対】must：話者の主観による強い義務。「〜しなければ…できない」という強い条件にはmustを使う。',
+      '【何を聞かれているか】「We ( ) buy some eggs on the way home, or we won\'t be able to make the cake.」の空所に入る適切な助動詞を選ぶ。\n【なぜ must になるのか】「卵を買わないと、ケーキが作れなくなる」という、どうしても必要なことを言っているから。「〜しなければならない」を表す must が合う。\n【ステップ1】意味を確認する。「帰りに卵を買わ（　）。さもないとケーキが作れない」。\n【ステップ2】② might（〜かもしれない）、④ may（〜かもしれない／〜してもよい）、③ can（〜できる）では、「どうしても必要」という意味にならない。\n【ステップ3】義務・必要を表す① must を入れる。\n【答え】① must\n【確かめ】We must buy some eggs on the way home. と読んで、「帰りに卵を買わなければならない」と意味が通るか確かめる。\n【よくあるまちがい】might や may を選んで、「〜かもしれない」の意味にしてしまう。\n【ここが絶対】must＝〜しなければならない（強い必要）。否定の must not は「〜してはいけない」（禁止）で、don\'t have to「〜しなくてよい」とは別の意味。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',

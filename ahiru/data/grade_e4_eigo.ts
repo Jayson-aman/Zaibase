@@ -255,7 +255,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '20',
     hint: '10ずつのまとまりの数を表す単語だよ。',
     explanation:
-      '【答え】20\n\n【twenty の意味】twenty は数の 20 を表す英単語である。\n\n【10のまとまりの言い方】10ごとに、それぞれ専用の言い方がある。\n・10 … ten\n・20 … twenty\n・30 … thirty\n・40 … forty\n・50 … fifty\n・60 … sixty\n・70 … seventy\n・80 … eighty\n・90 … ninety\n20から90までは、ぜんぶ ty で終わる。\n\n【もとの数との関係】\n・two（2）→ twenty（20）\n・three（3）→ thirty（30）… three とつづりがちがうので注意\n・four（4）→ forty（40）… u が消える。いちばんまちがえやすい\n・five（5）→ fifty（50）… ve が f に変わる\n・six → sixty、seven → seventy、eight → eighty、nine → ninety\nthirty・forty・fifty の3つだけ、もとの形から変わる。ここが最重要である。\n\n【teen とのちがい】13から19は teen で終わる。取りちがえやすい。\n・thirteen（13）と thirty（30）\n・fourteen（14）と forty（40）\n・fifteen（15）と fifty（50）\nteen なら10いくつ、ty なら何十と覚える。聞き取りでは、強く読む場所でも見分けられる（thirTEEN は後ろを、THIRty は前を強く読む）。\n\n【21から99の作り方】十の位と一の位をハイフンでつなぐ。\n・21 … twenty-one\n・35 … thirty-five\n・99 … ninety-nine',
+      '【答え】20\n\n【twenty の意味】twenty は数の 20 を表す英単語である。\n\n【10のまとまりの言い方】10ごとに、それぞれ専用の言い方がある。\n・10 … ten\n・20 … twenty\n・30 … thirty\n・40 … forty\n・50 … fifty\n・60 … sixty\n・70 … seventy\n・80 … eighty\n・90 … ninety\n20から90までは、ぜんぶ ty で終わる。\n\n【もとの数との関係】\n・two（2）→ twenty（20）\n・three（3）→ thirty（30）… three とつづりがちがうので注意\n・four（4）→ forty（40）… u が消える。いちばんまちがえやすい\n・five（5）→ fifty（50）… ve が f に変わる\n・six → sixty、seven → seventy、eight → eighty、nine → ninety\nthirty・forty・fifty は、つづりの変わり方がとくにまちがえやすい。ここが最重要である。\n\n【teen とのちがい】13から19は teen で終わる。取りちがえやすい。\n・thirteen（13）と thirty（30）\n・fourteen（14）と forty（40）\n・fifteen（15）と fifty（50）\nteen なら10いくつ、ty なら何十と覚える。聞き取りでは、強く読む場所でも見分けられる（thirTEEN は後ろを、THIRty は前を強く読む）。\n\n【21から99の作り方】十の位と一の位をハイフンでつなぐ。\n・21 … twenty-one\n・35 … thirty-five\n・99 … ninety-nine',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',

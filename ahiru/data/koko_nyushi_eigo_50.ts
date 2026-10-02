@@ -22,31 +22,10 @@ export const kokoNyushiEigo50: Question[] = [
     id: 'koko_nyushi_eigo_02',
     subject: 'eigo',
     question: '次の（　）内に最も適切な語を選べ。  You ( ) finish the report by tomorrow.',
-    choices: ['① must', '② should', '③ have to', '④ need'],
+    choices: ['① may', '② can', '③ have to', '④ need'],
     answer: '③ have to',
     hint: '「明日までに」という締め切りがある場合、最も強い義務・必要性を表す表現を選ぶ。',
-    explanation: `【出題意図】
-助動詞（must / should / have to / need）の意味の違いを問う問題。義務の強さとニュアンスの識別が目標。
-
-【解説】
-「by tomorrow（明日までに）」は締め切りを示し、外部からの必要性を表す文脈。
-・① must → 話者の強い主観的義務「〜しなければならない」（内的義務）
-・② should → 「〜すべきだ」（推奨・アドバイス）
-・③ have to → 外的な状況による必要性「〜しなければならない」（外的義務）（✓）
-・④ need → 動詞として使う場合「〜する必要がある」（より弱い義務）
-
-この問題では締め切りという外部の状況が存在するので have to が最適。mustも文法的には可だが、入試では外的状況を示す文脈では have to を選ばせることが多い。
-
-日本語訳：「あなたは明日までにレポートを仕上げなければならない。」
-
-【文法ポイント】
-must：話者の判断による強い義務（「絶対〜しなければ」）
-have to：状況・規則・外部要因による義務（「〜することになっている」）
-should：義務より軽い推奨（「〜した方がいい」）
-
-【入試頻出】
-・You must / have to be quiet in the library.
-・過去形は must に過去形がないため had to を使う：I had to study hard.`,
+    explanation: '【何を聞かれているか】\nYou ( ) finish the report by tomorrow. の空所に入る、「明日までに仕上げなければならない」という義務を表す語句を選ぶ問題。\n\n【なぜ have to なのか】\n「by tomorrow（明日までに）」という締め切りがあるので、「〜しなければならない」という義務の表現が必要になる。have to が、この義務を表す。\n\n【ステップ1】意味を確認する。「レポートを明日までに仕上げなければならない」。\n【ステップ2】選択肢を一つずつ見る。may は「〜してもよい／〜かもしれない」、can は「〜できる」で、義務の意味にならない。need は「必要とする」という動詞で、あとに to がないと動詞の原形を続けられない（need to finish なら可）。\n【ステップ3】義務を表す have to を入れる。You have to finish the report by tomorrow.\n\n【答え】\n③ have to\n\n【確かめ】\n「あなたは明日までにレポートを仕上げなければならない。」と訳して意味が通るか確かめる。\n\n【よくあるまちがい】\nneed を選んでしまう。need は、あとに to を置かないと動詞の原形を続けられない。\n\n【入試頻出】\n・過去形は have to ではなく had to を使う：I had to study hard.',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
