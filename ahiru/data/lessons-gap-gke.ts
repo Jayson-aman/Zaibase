@@ -85,7 +85,9 @@ Because I was tired, I went to bed early.
 
 【例題4】（　）に入る語を答える。Why are you studying so hard? — （　）I have a test tomorrow.
 ・I have a test tomorrow. は主語と動詞のそろった文で、理由を表している。理由の前に置く接続詞は because。
-・答え：Because`,
+・答え：Because
+
+★ ここがポイント：例題はどれも、**Why のあとは疑問文の語順**、**Because のあとは主語＋動詞**の2点で解ける。`,
       },
       {
         heading: '確かめ（検算）のしかた',
@@ -195,7 +197,9 @@ What is your sister doing? — She's practicing the piano.（いまの動作）
 
 【例題4】（　）に入る語を答える。A：What（　）your brother do? B：He's an engineer.
 ・主語 your brother は三人称単数なので does。答え：does
-・答えの文の engineer は母音の音で始まるので an になっている点も確かめる。`,
+・答えの文の engineer は母音の音で始まるので an になっている点も確かめる。
+
+★ ここがポイント：**do／does の質問は職業**、**be動詞＋ing の質問はいまの動作**。三人称単数なら **does ＋ 原形**になる。`,
       },
       {
         heading: '確かめ（検算）のしかた',
@@ -304,7 +308,9 @@ She is wearing a red cap.（彼女は赤いぼうしをかぶっている）
 
 【例題5】（　）に入る形を選ぶ。He（　）a jacket when I met him. ①put on ②was wearing
 ・出会ったときに着ていた「状態」を言っているので wear を使う。過去の状態なので was wearing。
-・答え：②`,
+・答え：②
+
+★ ここがポイント：**代名詞は動詞と副詞の間**に入れ、**着ている状態は wear** で言う。この2点で例題はすべて解ける。`,
       },
       {
         heading: '確かめ（検算）のしかた',
@@ -423,7 +429,9 @@ I'm looking forward to seeing you.（あなたに会えるのを楽しみにし�
 ・答え：of
 
 【例題5】（　）に入る形を選ぶ。I'm looking forward to（　）you. ①see ②seeing
-・to が前置詞なので、うしろは動名詞。答え：②`,
+・to が前置詞なので、うしろは動名詞。答え：②
+
+★ ここがポイント：**前置詞を落とさない**こと、**3語の熟語はまとまりで覚える**こと。例題の誤りはどれもこの2点だった。`,
       },
       {
         heading: '確かめ（検算）のしかた',
@@ -539,7 +547,9 @@ Everything・all・anything は先行詞の役目を持つ名詞なので、that
 【例題4】並べかえ：( is / I / what / need / time )
 ・「私に必要なもの」＝ what I need が主語。「は」にあたる is のあとに time を置く。
 ・答え：What I need is time.（Time is what I need. でもよい）
-・検算：what I need は動詞 need の目的語が欠けた形になっている。`,
+・検算：what I need は動詞 need の目的語が欠けた形になっている。
+
+★ ここがポイント：**先行詞がなければ what**。迷ったら**the thing that に言いかえて意味が通るか**を確かめる。`,
       },
       {
         heading: '確かめ（検算）のしかた',
@@ -663,7 +673,9 @@ what 節が主語のときは、単数として扱うのが基本である。Wha
 
 【例題5】「彼はいわゆる生き字引だ。」を英語にする。
 ・「いわゆる」は what we call。「生き字引」は a walking dictionary。
-・答え：He is what we call a walking dictionary.`,
+・答え：He is what we call a walking dictionary.
+
+★ ここがポイント：**what 節は名詞のかたまり**で、中の**前置詞は節の最後に残す**。この2点を例題で確かめた。`,
       },
       {
         heading: '確かめ（検算）のしかた',
@@ -774,7 +786,9 @@ He is so strong that he can lift the box. ＝ He is strong enough to lift the bo
 【例題4】It was such a good movie that I saw it twice. を、The movie で始まる文に書きかえる。
 ・such a good movie を形容詞だけの good に直すので、such を so に変える。
 ・答え：The movie was so good that I saw it twice.
-・検算：good は形容詞のみで名詞がない。so で正しい。`,
+・検算：good は形容詞のみで名詞がない。so で正しい。
+
+★ ここがポイント：**名詞があれば such、なければ so**。そして**that 節の時制は主節にそろえる**。`,
       },
       {
         heading: '確かめ（検算）のしかた',
@@ -890,7 +904,9 @@ I was hungry, so I ate a sandwich.（おなかがすいていた。だから、�
 (a) She was so busy that she couldn't eat lunch.
 (b) She worked hard so that she could buy a new bike.
 ・(a) は so のすぐあとに busy があるので、結果・程度「とても忙しかったので昼食を食べられなかった」。
-・(b) は so のすぐあとが that なので目的「自転車を買えるように熱心に働いた」。`,
+・(b) は so のすぐあとが that なので目的「自転車を買えるように熱心に働いた」。
+
+★ ここがポイント：**so のすぐあとが that なら目的**、**形容詞・副詞なら結果**。**過去の文では could** を使う。`,
       },
       {
         heading: '確かめ（検算）のしかた',
@@ -1015,7 +1031,9 @@ Sign up by July 20 (Mon.) at the front desk of the center.
 
 【例題5】What is NOT necessary to bring?
 ・Bring の行：a notebook、a pen、a water bottle。昼食は料金に含まれているので持っていかなくてよい。
-・答え：Lunch（昼食）`,
+・答え：Lunch（昼食）
+
+★ ここがポイント：答えは必ず**本文の根拠の行**から出す。**under・by・included** などの条件の語に印を付ける。`,
       },
       {
         heading: '確かめ（検算）のしかた',
@@ -1140,7 +1158,9 @@ No. 3　9:00　　　　9:15　　　　　9:30
 
 【例題6】How long does it take from the station to City Hall?
 ・No. 1 で 8:00 に出て 8:15 に着く。15分。
-・答え：Fifteen minutes.`,
+・答え：Fifteen minutes.
+
+★ ここがポイント：**表は行と列の交点**を読み、**計算は紙に書く**。おつりは「おつり＋合計＝持っているお金」で検算する。`,
       },
       {
         heading: '確かめ（検算）のしかた',
@@ -1261,7 +1281,9 @@ won't は「ウォウント」と母音を長く、want は「ワント」と短
 
 【例題5】「ウォーラー」と聞こえた。何という語か。
 ・母音にはさまれた t が「ラ」に近い音になる（はじき音）。
-・答え：water（水）`,
+・答え：water（水）
+
+★ ここがポイント：**聞こえた音をまず書き、文法で英文に復元**する。**can は弱く、can't は強く**聞こえる。`,
       },
       {
         heading: '確かめ（検算）のしかた',
@@ -1363,7 +1385,7 @@ Scientists discovered a new kind of fish in the deep sea.（科学者たちは�
 ③In my opinion, we should ～.（私は～すべきだと思う）
 この流れを知っておくと、However や On the other hand の位置で、話の向きが変わることが予想できる。
 
-★ ここがポイント：**invent＝新しく作る、discover＝すでにあるものを見つける**。語尾のきまり（-ion、-er、-ful、-less）で語の品詞と意味が推測できる。`,
+★ ここがポイント：**invent＝新しく作る、discover＝すでにあるものを見つける**。**語尾のきまり**（-ion、-er、-ful、-less）で、語の品詞と意味が推測できる。`,
       },
       {
         heading: '例題：語を選び、語形を変える',
@@ -1386,7 +1408,9 @@ Scientists discovered a new kind of fish in the deep sea.（科学者たちは�
 
 【例題5】次の誤りを直す。I got a lot of informations from the Internet.
 ・information は数えられない名詞なので、複数形にしない。
-・答え：I got a lot of information from the Internet.`,
+・答え：I got a lot of information from the Internet.
+
+★ ここがポイント：空所は**品詞を先に決める**。**information は数えられない**ので s を付けない。`,
       },
       {
         heading: '確かめ（検算）のしかた',
@@ -1508,7 +1532,9 @@ healthy な食べ物は healthy food。health は名詞、healthy は形容詞�
 
 【例題5】「私は頭が痛いので、薬を飲みました。」を英語にする。
 ・「頭が痛い」は I have a headache.。理由は so でつなぐ。「薬を飲む」は take medicine。過去なので took。
-・答え：I had a headache, so I took some medicine.`,
+・答え：I had a headache, so I took some medicine.
+
+★ ここがポイント：**動詞と名詞はセットで覚える**（catch a cold、take medicine）。**good for ～／bad for ～ の for** を落とさない。`,
       },
       {
         heading: '確かめ（検算）のしかた',
