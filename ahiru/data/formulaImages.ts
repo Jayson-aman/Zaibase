@@ -66,7 +66,7 @@ export const formulaImages: Record<string, ImageSourcePropType> = {
   "最小公倍数": require('../assets/formulas/sansu-lcm.png'),
   "分数の通分・約分": require('../assets/formulas/sansu-fractions-reduce.png'),
   "倍数の見分け方": require('../assets/formulas/sansu-divisibility.png'),
-  "てこのつり合い（モーメント）": require('../assets/formulas/rika-lever-balance.png'),
+  "てこのつり合い（かたむけるはたらき）": require('../assets/formulas/rika-lever-balance.png'),
   "棒の重さがあるてこ": require('../assets/formulas/rika-lever-rod-weight.png'),
   "定滑車": require('../assets/formulas/rika-fixed-pulley.png'),
   "動滑車": require('../assets/formulas/rika-movable-pulley.png'),

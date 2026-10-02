@@ -533,7 +533,7 @@ const mitsudo: DiagramFigure = show([
 ]);
 
 export const DIAGRAMS_OLD_RIKAA: Record<string, DiagramFigure> = {
-  'てこのつり合い（モーメント）': teko,
+  'てこのつり合い（かたむけるはたらき）': teko,
   '棒の重さがあるてこ': bou,
   '定滑車': teikassha,
   '動滑車': doukassha,
