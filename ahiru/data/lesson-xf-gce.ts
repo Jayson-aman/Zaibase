@@ -211,61 +211,6 @@ const f_gce_03 = show([
     '種類 → 原形 → 意味', MAIN),
 ], '〈make／let／have／see／hear ＋ 人 ＋ 原形〉');
 
-// ── ④ 直接話法と間接話法（gap_gce_04） ──
-const f_gce_04 = show([
-  S('Tom said, "I am busy." のように、言ったことばをそのまま書く形が直接話法（ちょくせつわほう）です。これを、自分のことばで伝える形（間接話法（かんせつわほう））に書きかえます。',
-    [
-      bx(10, 12, 300, 50, '直接話法\nTom said, "I am busy."', C.blue, FILL.blue, 15),
-      ar(160, 64, 160, 88, C.main),
-      bx(10, 92, 300, 50, '間接話法\nTom said (that) he was busy.', C.green, FILL.green, 15),
-    ],
-    '人のことばを、自分のことばで伝える', MAIN),
-  Q('では、なぜ I が he に変わるのでしょう。→ I は言った本人の Tom のことです。伝えるわたしから見ると、Tom は he です。代名詞は、伝える人から見た呼び方にそろえます。',
-    'なぜ I が he に変わるの？',
-    '"I" は、言った本人（Tom）のこと\n伝えるわたしから見ると Tom は he\n代名詞は、伝える人から見た\n呼び方にそろえる',
-    '代名詞は、伝える人から見た形に', BLUE, 13),
-  Q('では、なぜ am が was に変わるのでしょう。→ 言ったのは過去のできごとです。伝えるわたしは、過去の話として伝えるので、動詞も一つ過去にずらします。',
-    'なぜ am が was に変わるの？',
-    '言ったのは、過去のできごと\n伝えるわたしは、過去の話として伝える\nだから動詞も、一つ過去へずらす\nam → was／will → would／can → could',
-    '過去の話だから、動詞は一つ過去に', GREEN, 13),
-  S('時や場所を表す語も変わります。now は then、today は that day、tomorrow は the next day、yesterday は the day before、here は there、this は that。言った日を基準にして言いかえます。',
-    [
-      bx(10, 8, 145, 34, 'now → then', C.blue, FILL.blue, 14),
-      bx(165, 8, 145, 34, 'today → that day', C.blue, FILL.blue, 13),
-      bx(10, 50, 145, 34, 'tomorrow → the next day', C.green, FILL.green, 12),
-      bx(165, 50, 145, 34, 'yesterday → the\nday before', C.green, FILL.green, 11),
-      bx(10, 92, 145, 34, 'here → there', C.red, FILL.red, 14),
-      bx(165, 92, 145, 34, 'this → that', C.red, FILL.red, 14),
-    ],
-    '時や場所の語も、言った日を基準に', BLUE),
-  Q('では、疑問文はどのように伝えるのでしょう。→ yes/no の疑問文は if でつなぎ、what や where などの疑問詞はそのまま使います。どちらも、あとはふつうの文の語順（主語 ＋ 動詞）にします。',
-    '疑問文は、どう伝えるの？',
-    'yes/no の疑問文 → asked ＋ 人 ＋ if ＋ 主語 ＋ 動詞\nwhere などの疑問詞 → そのまま使う\nあとは ふつうの語順（主語 ＋ 動詞）\ndo は消える',
-    '疑問文は、あとの語順がふつうの文に', PURPLE, 12),
-  S('Ken asked me, "Where do you live?" を直します。where はそのまま。do が消えて、you は I に、live は lived に変わります。語順は〈疑問詞 ＋ 主語 ＋ 動詞〉。',
-    [
-      bx(10, 8, 300, 36, 'Ken asked me, "Where do you live?"', C.blue, FILL.blue, 14),
-      ar(160, 46, 160, 66, C.main),
-      bx(10, 68, 300, 36, 'Ken asked me where I lived.', C.green, FILL.green, 15),
-      lb(160, 122, 'do が消える ／ you → I ／ live → lived', 13, C.ink, 'middle', true),
-      lb(160, 144, '文末は「.」（? は使わない）', 13, C.red, 'middle', true),
-    ],
-    '疑問詞のあとは〈主語 ＋ 動詞〉', GREEN),
-  S('全部いっしょに直します。Tom said to me, "I will visit you tomorrow." ①said to me は told me ②I は he ③will は would ④you は me、tomorrow は the next day。',
-    [
-      bx(10, 6, 300, 34, 'Tom said to me, "I will visit you tomorrow."', C.blue, FILL.blue, 12),
-      lb(160, 54, '① said to me → told me', 13, C.ink, 'middle', true),
-      lb(160, 72, '② I → he　　③ will → would', 13, C.ink, 'middle', true),
-      lb(160, 90, '④ you → me　⑤ tomorrow → the next day', 13, C.ink, 'middle', true),
-      ar(160, 100, 160, 114, C.main),
-      bx(10, 116, 300, 34, 'Tom told me he would visit me the next day.', C.green, FILL.green, 12),
-    ],
-    '5つの直しを、順に', MAIN),
-  S('確かめの3ステップです。①伝える動詞：said to は told、疑問文は asked。②代名詞・時制・時の語を直したか。③疑問文なら語順と、引用符が残っていないか。',
-    row(['① said to は\ntold に', '② 代名詞・時制\n・時の語', '③ 疑問文の\n語順と引用符'], 30, MAIN, 12, 90, 16),
-    '動詞 → 3つの直し → 語順', MAIN),
-], '直接話法 → 間接話法：代名詞・時制・時の語を直す');
-
 // ── ⑤ 比較の書きかえ（gap_gce_05） ──
 const f_gce_05 = show([
   S('Lake Biwa is the largest lake in Japan.（琵琶湖は日本でいちばん大きい湖だ）。この文は、than any other や No other を使って、同じ意味の別の文に書きかえられます。',
@@ -423,7 +368,6 @@ export const XF_GCE_FIGURES: Record<string, DiagramFigure> = {
   'xf_gap_gce_01': f_gce_01,
   'xf_gap_gce_02': f_gce_02,
   'xf_gap_gce_03': f_gce_03,
-  'xf_gap_gce_04': f_gce_04,
   'xf_gap_gce_05': f_gce_05,
   'xf_gap_gce_06': f_gce_06,
   'xf_gap_gce_07': f_gce_07,
@@ -433,7 +377,6 @@ export const XF_GCE_SECTIONS: Record<string, string> = {
   'gap_gce_01#0': 'xf_gap_gce_01',
   'gap_gce_02#0': 'xf_gap_gce_02',
   'gap_gce_03#0': 'xf_gap_gce_03',
-  'gap_gce_04#0': 'xf_gap_gce_04',
   'gap_gce_05#0': 'xf_gap_gce_05',
   'gap_gce_06#0': 'xf_gap_gce_06',
   'gap_gce_07#0': 'xf_gap_gce_07',
