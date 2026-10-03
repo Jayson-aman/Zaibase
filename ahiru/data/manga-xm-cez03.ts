@@ -1,0 +1,103 @@
+import type { MangaScript } from './manga-types';
+
+export const XM_CEZ03_SCRIPTS: Record<string, MangaScript> = {
+  'gap_gce_01_xm': {
+    id: 'gap_gce_01_xm',
+    title: 'there・their・they\'re はどう選ぶ？',
+    panels: [
+      { speaker: 't', line: '（　）dog is very cute. の空所に入る語を考えよう。there・their・they\'re のどれかな？' },
+      { speaker: 's1', line: 'どれも読み方は「ゼア」だから、音ではわからないです。there でいいかな。いちばんよく見る形だし。' },
+      { speaker: 's2', line: 'よく見るから、というだけでは根拠にならない気がします。there は何を表す語でしたっけ？' },
+      { speaker: 't', line: 'いい質問だ。there は「そこに」で、場所を表す。では、空所のすぐあとに来ている語は何かな？' },
+      { speaker: 's1', line: 'dog です。ものの名前、つまり名詞ですね。あれ、「そこに犬」だと意味がつながらない…。' },
+      { speaker: 't', line: '次は they\'re を試そう。これは they are の短縮形だ。They are dog is very cute. と読んで、文になっているかな？' },
+      { speaker: 's2', line: 'なりません。are のあとに is が続いて、動詞が二つ並んでしまいます。' },
+      { speaker: 't', line: '残ったのは their だ。「彼らの」という意味で、あとに名詞が続く。Their dog is very cute.（彼らの犬はとてもかわいい）が正しい。', emphasis: true },
+      { speaker: 's1', line: '確かめ方も分かりました。they are に置きかえて文になれば they\'re、後ろが名詞なら their、場所なら there です。' },
+    ],
+  },
+  'gap_gce_05_xm': {
+    id: 'gap_gce_05_xm',
+    title: 'なぜ any のあとに other がいるのか',
+    panels: [
+      { speaker: 't', line: 'Lake Biwa is the largest lake in Japan. を、than を使って書きかえよう。（　）に何が入るかな？' },
+      { speaker: 's1', line: 'Lake Biwa is larger than any lake in Japan. です。「どの湖よりも大きい」だから、これで同じ意味ですよね？' },
+      { speaker: 't', line: 'ちょっと待って。「日本のどの湖」の中に、琵琶湖自身は入っているかな？' },
+      { speaker: 's2', line: 'あ、入っています。琵琶湖も日本の湖ですから。すると「琵琶湖は琵琶湖より大きい」になってしまう。' },
+      { speaker: 's1', line: 'それはありえないですね。自分と自分は比べられません。' },
+      { speaker: 't', line: 'そこで琵琶湖をのぞく言葉を入れる。それが other だ。any other lake で「ほかのどの湖」になる。' },
+      { speaker: 's2', line: 'もう一つ気になります。lake のあとに s をつけて lakes にしないのはなぜですか？' },
+      { speaker: 't', line: 'any は「どれか1つを取り出しても」という意味だったね。ほかの湖を1つずつ取り出して比べるので、名詞は単数になる。', emphasis: true },
+      { speaker: 's1', line: '確かめます。Lake Biwa is larger than any other lake in Japan. と書けば、other があって lake は単数。これで完成です。' },
+    ],
+  },
+  'gap_gce_06_xm': {
+    id: 'gap_gce_06_xm',
+    title: 'enjoyed のあとは played？ playing？',
+    panels: [
+      { speaker: 't', line: 'She enjoyed (play) the piano yesterday. の（　）内の語を、正しい形に直してみよう。' },
+      { speaker: 's1', line: 'yesterday があるので過去の話です。だから played と書きます。' },
+      { speaker: 't', line: 'ちょっと待って。その文の中には、動詞がいくつあるかな。もう過去形になっている動詞はない？' },
+      { speaker: 's2', line: 'enjoyed が、すでに過去形です。yesterday の合図は、enjoyed のほうで使われているんですね。' },
+      { speaker: 't', line: 'そのとおり。では（　）の直前の語に注目しよう。enjoy のあとには、どんな形が続くのだったかな？' },
+      { speaker: 's1', line: 'enjoy・finish・stop のあとは 〜ing でした。だから playing です。' },
+      { speaker: 's2', line: 'なぜ 〜ing なんでしょう。want のあとは to play になるのに、ちがいが気になります。' },
+      { speaker: 't', line: 'enjoy は、すでにしていることを楽しむ動詞だ。want は、これからしたいことに使う。**これからなら to、すでにしていることなら 〜ing** と考えよう。', emphasis: true },
+      { speaker: 's1', line: '答えは She enjoyed playing the piano yesterday. です。過去は enjoyed がすでに表していたので、確かめると文に動詞が二重に過去になっていません。' },
+    ],
+  },
+  'gap_gce_02_xm': {
+    id: 'gap_gce_02_xm',
+    title: 'short の反対は long？ tall？',
+    panels: [
+      { speaker: 't', line: 'Ken is short, but his brother is（　）. の空所に入る、short の反対の意味の語は何だろう？' },
+      { speaker: 's1', line: 'short の反対は long だと習いました。だから his brother is long です。' },
+      { speaker: 's2', line: 'でも「お兄さんは長い」って、人に使うと変な感じがします。' },
+      { speaker: 't', line: 'いいところに気づいたね。そもそも、反意語はどうやって決まるのだったかな？' },
+      { speaker: 's1', line: '同じものさしの両はしにある語どうし、でした。あれ、ものさしって何でしょう。' },
+      { speaker: 't', line: '文を見てみよう。ここでは何の大きさをくらべているのかな。髪の毛の長さか、それとも背の高さか。' },
+      { speaker: 's2', line: 'ケンくんの背です。だから「背の高さ」のものさしで、short の反対の端にあるのは tall です。' },
+      { speaker: 't', line: '同じ short でも、髪の毛なら long が反対。**ものさしが変われば、反対の語も変わる**。答えは tall だ。', emphasis: true },
+      { speaker: 's1', line: '確かめるには、答えを入れて逆に読んでみます。tall の反対は short にもどるので、ペアとして合っています。' },
+    ],
+  },
+  'gap_gce_07_xm': {
+    id: 'gap_gce_07_xm',
+    title: 'be used to と used to はどうちがう？',
+    panels: [
+      { speaker: 't', line: 'I am used to getting up early. という文を日本語にしてみよう。どんな意味になるかな？' },
+      { speaker: 's1', line: 'used to だから「以前は早起きしていた」です。これで合っていますよね？' },
+      { speaker: 't', line: '待って。「以前は〜した」の used to は、あとにどんな形が来るのだったかな。この文と見くらべてみよう。' },
+      { speaker: 's2', line: '「以前は」の used to は、あとが動詞の原形で、I used to get up early. です。' },
+      { speaker: 's1', line: 'この文には am があって、そのあとが getting になっています。形がちがう…。' },
+      { speaker: 't', line: 'そう。〈be動詞 ＋ used to ＋ 〜ing〉は「〜することに慣れている」という別の意味になる。' },
+      { speaker: 's2', line: 'つまり I am used to getting up early. は「早起きに慣れている」ですね。' },
+      { speaker: 't', line: '**「以前は〜」の used to はあとが原形、「慣れている」はあとが 〜ing**。形のちがいが、意味のちがいを決めているんだよ。', emphasis: true },
+      { speaker: 's1', line: '確かめ方が分かりました。be動詞があるか、あとが原形か 〜ing かを見ます。I used to get up early. なら、今はちがうことになります。' },
+    ],
+  },
+  'gap_gce_03_xm': {
+    id: 'gap_gce_03_xm',
+    title: 'made me のあとに to はいらない？',
+    panels: [
+      { speaker: 't', line: '「母は私に皿を洗わせた」を英語にしよう。My mother made me（　）the dishes.（　）に何を入れる？' },
+      { speaker: 's1', line: 'wash の前に to をつけて、to wash です。want me to wash と同じ形ですよね。' },
+      { speaker: 't', line: 'ちょっと待って。want の場合の「洗う」は、もう洗ったことかな。それとも、これから洗ってほしいことかな。' },
+      { speaker: 's2', line: 'これからのことです。want は「〜してほしい」だから、まだ起きていません。' },
+      { speaker: 't', line: 'では made のほうは？ お母さんが「させた」とき、洗う動作はどうなったのだろう。' },
+      { speaker: 's1', line: '実際に洗いました。無理にでもさせたので、動作がそのまま起きています。あ、だから to がいらないのかも。' },
+      { speaker: 't', line: '考え方としては、そのとおり。**make・let・have のあとは〈人 ＋ 原形〉、want・tell・ask のあとは〈人 ＋ to ＋ 原形〉**だ。', emphasis: true },
+      { speaker: 's2', line: 'しかも原形ですから、washes や washed にもしてはいけませんね。答えは wash です。' },
+      { speaker: 's1', line: '確かめるには、動詞を見ます。make・let・have なら to なし、want・tell・ask なら to あり。My mother made me wash the dishes. で完成です。' },
+    ],
+  },
+};
+
+export const XM_CEZ03_SECTIONS: Record<string, string> = {
+  'gap_gce_01#2': 'gap_gce_01_xm',
+  'gap_gce_05#1': 'gap_gce_05_xm',
+  'gap_gce_06#1': 'gap_gce_06_xm',
+  'gap_gce_02#1': 'gap_gce_02_xm',
+  'gap_gce_07#2': 'gap_gce_07_xm',
+  'gap_gce_03#2': 'gap_gce_03_xm',
+};
