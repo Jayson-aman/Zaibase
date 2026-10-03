@@ -82,7 +82,42 @@ const keep = (xs: (string | null | undefined)[]): string[] =>
 
 // ── 図の種類ごとの組み立て ────────────────────────────
 
+/** 図形の頂点の名前（A・B・P′・A1…）か。言葉（地球・the・apple…）は頂点の名前ではない。 */
+const isVertexName = (l: string): boolean => /^[A-Za-zＡ-Ｚ][′'’0-9₀-₉]*$/.test(l.trim());
+
+/**
+ * 言葉を図の形にならべただけの図（国語・英語・社会・理科にある）か。
+ * 点の名前の半分以上が言葉で、長さ・直角・高さなどの数学の印が1つも無いものがそれにあたる。
+ * これを図形として説明すると「三角形の内角の和は180度」のような的外れな文が出る。
+ */
+function isWordLayout(f: Extract<Figure, { kind: 'polygon' }>): boolean {
+  const pts = f.points ?? [];
+  const labels = pts.map((p) => (p.label ?? '').trim()).filter(Boolean);
+  if (labels.length < 2) return false;
+  const words = labels.filter((l) => !isVertexName(l)).length;
+  if (words * 2 < labels.length) return false;
+  const hasMathMark =
+    (f.sideLabels ?? []).some((x) => x) ||
+    !!f.rightAngles?.length ||
+    !!f.equalSides?.length ||
+    !!f.equalAngles?.length ||
+    !!f.heights?.length ||
+    !!f.diagonals?.length;
+  return !hasMathMark;
+}
+
+function wordLayoutSteps(f: Extract<Figure, { kind: 'polygon' }>): string[] {
+  const labels = (f.points ?? []).map((p) => (p.label ?? '').trim()).filter(Boolean);
+  return [
+    '言葉や記号を、図の形にならべて整理した図。長さや角度を測る図ではない。',
+    `図の中にあるのは ${labels.join('・')}。まず、それぞれが何を表すかを確かめる。`,
+    '線でつながっているものどうしは、関係が深い、または順番がつながっていることを表している。どれとどれが結ばれているかを目で追う。',
+    '真ん中にあるものと、まわりにあるもの、向かい合うものを見分けて、文章や問題のどこと対応しているかを考える。',
+  ];
+}
+
 function polygonSteps(f: Extract<Figure, { kind: 'polygon' }>): string[] {
+  if (isWordLayout(f)) return wordLayoutSteps(f);
   const pts = f.points ?? [];
   if (pts.length < 3) return [];
   const out: string[] = [];
@@ -203,9 +238,14 @@ function circleSteps(f: Extract<Figure, { kind: 'circle' }>): string[] {
  * かつ点の名前が日本語（地球・月・太陽…）なら、それはグラフではない。
  */
 function isSchematic(f: Extract<Figure, { kind: 'coordinate' }>): boolean {
-  if (f.lines?.length || f.parabolas?.length || f.hyperbolas?.length || f.polygon?.length) return false;
-  const labels = (f.points ?? []).map((p) => p.label ?? '');
-  return labels.some((l) => /[ぁ-んァ-ヶ一-龠]/.test(l));
+  // 式のグラフがあれば、模式図ではない
+  if (f.lines?.length || f.parabolas?.length || f.hyperbolas?.length) return false;
+  const labels = (f.points ?? []).map((p) => (p.label ?? '').trim()).filter(Boolean);
+  if (labels.length < 2) return false;
+  // 点の名前が言葉（日本語・英語の語）なら模式図。頂点の名前（A・B・P）なら座標の図。
+  // 以前は日本語の名前だけを見ていて、英語の語（Sun・Earth）や、多角形のある図を見のがしていた。
+  const words = labels.filter((l) => !isVertexName(l)).length;
+  return words * 2 >= labels.length;
 }
 
 function schematicSteps(f: Extract<Figure, { kind: 'coordinate' }>): string[] {
@@ -222,7 +262,7 @@ function schematicSteps(f: Extract<Figure, { kind: 'coordinate' }>): string[] {
       : `図の中に置かれているのは ${named.map((p) => p.label).join('・')}。それぞれがどのあたりにあるかを確かめる。`,
   ];
   if (f.segments?.length) out.push('結んである線は、光の道すじや、ものとものを結ぶ向きを表している。どこからどこへ向かっているかを目で追う。');
-  out.push('図の中の距離は、分かりやすくするために実際の比とは変えてあることが多い。順番と向きを読み取るための図だと考える。');
+  out.push('図の中の距離は、分かりやすく描くために、実際の比と同じとは限らない。まず順番と向きを読み取るための図だと考える。');
   return out;
 }
 
@@ -423,7 +463,12 @@ function barChartSteps(f: Extract<Figure, { kind: 'barChart' }>): string[] {
   out.push(`ならんでいるのは ${bars.map((b) => b.label).join('・')} の${bars.length}本。`);
   const max = bars.reduce((a, b) => (b.value > a.value ? b : a), bars[0]!);
   const min = bars.reduce((a, b) => (b.value < a.value ? b : a), bars[0]!);
-  out.push(`いちばん高いのは ${max.label} で ${max.value}、いちばん低いのは ${min.label} で ${min.value}。差は ${Math.round((max.value - min.value) * 100) / 100}。`);
+  const maxs = bars.filter((b) => b.value === max.value);
+  const mins = bars.filter((b) => b.value === min.value);
+  const diff = Math.round((max.value - min.value) * 100) / 100;
+  out.push(
+    `いちばん高いのは ${maxs.map((b) => b.label).join('・')} で${maxs.length > 1 ? 'どれも' : ' '}${max.value}、いちばん低いのは ${mins.map((b) => b.label).join('・')} で${mins.length > 1 ? 'どれも' : ' '}${min.value}。差は ${diff}。`,
+  );
   out.push('棒グラフは「どれが多いか」を見る図。時間とともにどう変わったかを見たいときは折れ線グラフ、全体にしめる割合を見たいときは円グラフを使う。');
   return out;
 }
@@ -499,6 +544,25 @@ function chemStructSteps(f: Extract<Figure, { kind: 'chemStructure' }>): string[
   return out;
 }
 
+function japanMapSteps(f: Extract<Figure, { kind: 'japanMap' }>): string[] {
+  const ms = (f.markers ?? []).filter((m) => m.label);
+  const out = [
+    '日本列島の地図。北が上、南が下。まず、北海道・本州・四国・九州の位置をたしかめる。',
+  ];
+  if (ms.length) {
+    out.push(`印がついているのは ${ms.map((m) => m.label).join('・')}。地図のどのあたり（北か南か、日本海側か太平洋側か）にあるかを確かめる。`);
+    if (ms.length >= 2) {
+      const north = ms.reduce((a, b) => (b.y < a.y ? b : a));
+      const south = ms.reduce((a, b) => (b.y > a.y ? b : a));
+      if (north !== south) out.push(`この中でいちばん北にあるのは ${north.label}、いちばん南にあるのは ${south.label}。位置の関係は、気候やくらしのちがいを考える手がかりになる。`);
+    }
+  } else {
+    out.push('地図の上の位置と、まわりの海（日本海・太平洋・オホーツク海・東シナ海）との関係を確かめる。');
+  }
+  out.push('場所を覚えるときは、名前だけでなく「どの海に面しているか」「どことどこがとなり合うか」をセットで覚える。');
+  return out;
+}
+
 function bioSteps(f: Extract<Figure, { kind: 'bioDiagram' }>): string[] {
   const base = BIO[f.template];
   if (!base) return [];
@@ -527,6 +591,7 @@ export function autoSteps(figure: Figure, q?: FigureQuestion): string[] | null {
     case 'stratum': body = stratumSteps(figure); break;
     case 'circuit': body = circuitSteps(figure); break;
     case 'bioDiagram': body = bioSteps(figure); break;
+    case 'japanMap': body = japanMapSteps(figure); break;
     case 'barChart': body = barChartSteps(figure); break;
     case 'pieChart': body = pieChartSteps(figure); break;
     case 'chemEquation': body = chemEqSteps(figure); break;

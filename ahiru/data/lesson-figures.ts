@@ -172,6 +172,7 @@ import { lessonFigsNew20J2Rika } from './lesson-figs-new20-j2-rika';
 import { lessonFigsNew20J3Rika } from './lesson-figs-new20-j3-rika';
 
 import { EXTRA_LESSON_FIGURES } from './lesson-extra-figures';
+import { repairChartSteps } from './chart-steps-fix';
 
 export const lessonFigures: Record<string, Figure> = {
   ...EXTRA_LESSON_FIGURES,
@@ -343,6 +344,14 @@ export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsKokoEigoExt12,
 };
 
+const repairedCache = new Map<string, Figure>();
 export function getLessonFigure(figureId: string): Figure | null {
-  return lessonFigures[figureId] ?? null;
+  const raw = lessonFigures[figureId];
+  if (!raw) return null;
+  // 折れ線・棒グラフの定型の説明は、数値と食いちがうことがあるので、読み出すときに直す
+  const hit = repairedCache.get(figureId);
+  if (hit) return hit;
+  const fixed = repairChartSteps(raw);
+  repairedCache.set(figureId, fixed);
+  return fixed;
 }
