@@ -92,12 +92,14 @@ const isVertexName = (l: string): boolean => /^[A-Za-zＡ-Ｚ][′'’0-9₀-₉
  */
 function isWordLayout(f: Extract<Figure, { kind: 'polygon' }>): boolean {
   const pts = f.points ?? [];
-  const labels = pts.map((p) => (p.label ?? '').trim()).filter(Boolean);
+  // 点の名前と、辺に書かれた文字の両方を見る（辺に「あし(下)」のような言葉だけが書かれた図もある）
+  const sideTexts = (f.sideLabels ?? []).map((x) => (x ?? '').trim()).filter(Boolean);
+  const labels = [...pts.map((p) => (p.label ?? '').trim()).filter(Boolean), ...sideTexts];
   if (labels.length < 2) return false;
-  const words = labels.filter((l) => !isVertexName(l)).length;
+  const words = labels.filter((l) => !isVertexName(l) && !/[0-9０-９]/.test(l)).length;
   if (words * 2 < labels.length) return false;
   const hasMathMark =
-    (f.sideLabels ?? []).some((x) => x) ||
+    sideTexts.some((x) => /[0-9０-９]/.test(x)) ||
     !!f.rightAngles?.length ||
     !!f.equalSides?.length ||
     !!f.equalAngles?.length ||
@@ -107,7 +109,10 @@ function isWordLayout(f: Extract<Figure, { kind: 'polygon' }>): boolean {
 }
 
 function wordLayoutSteps(f: Extract<Figure, { kind: 'polygon' }>): string[] {
-  const labels = (f.points ?? []).map((p) => (p.label ?? '').trim()).filter(Boolean);
+  const labels = [
+    ...(f.points ?? []).map((p) => (p.label ?? '').trim()).filter(Boolean),
+    ...(f.sideLabels ?? []).map((x) => (x ?? '').trim()).filter(Boolean),
+  ];
   return [
     '言葉や記号を、図の形にならべて整理した図。長さや角度を測る図ではない。',
     `図の中にあるのは ${labels.join('・')}。まず、それぞれが何を表すかを確かめる。`,

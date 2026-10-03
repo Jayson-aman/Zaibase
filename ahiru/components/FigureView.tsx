@@ -446,7 +446,11 @@ function PolygonFig({ fig }: { fig: PolyFigure }) {
     const B = P[(i + 1) % P.length];
     const mid = { x: (A.x + B.x) / 2, y: (A.y + B.y) / 2 };
     const out = norm({ x: mid.x - c.x, y: mid.y - c.y });
-    els.push(<SvgText key={`sl${i}`} x={mid.x + out.x * 12} y={mid.y + out.y * 12 + 3} fontSize={11} fill={INK} textAnchor="middle">{lab}</SvgText>);
+    // 右にある辺の文字は枠線から右へ、左にある辺の文字は左へのばす。
+    // 中央そろえのままだと、長い文字（「つくり(右)」など）が枠線にかかってしまう。
+    const anchor = out.x > 0.5 ? ('start' as const) : out.x < -0.5 ? ('end' as const) : ('middle' as const);
+    const lc = clampLabelX(mid.x + out.x * 12, anchor);
+    els.push(<SvgText key={`sl${i}`} x={lc.x} y={mid.y + out.y * 12 + 3} fontSize={11} fill={INK} textAnchor={lc.anchor}>{lab}</SvgText>);
   });
 
   // 頂点ラベル
