@@ -87,7 +87,28 @@ const LISTEN_SPEED_OPTIONS: { key: ListenSpeed; label: string }[] = [
 // 無料で試せる単語数。英検対策と同じ「一部無料・続きは加入」方式に合わせる。
 // 全部無料だと、英単語Proの目玉として宣伝している内容が実際には無料で
 // 読めてしまい、宣伝と実態が食い違う。
-const FREE_WORD_LIMIT = 50;
+//
+// ⚠️ 無料分は「いま選んでいる絞り込みの先頭50語」ではなく、全語の中で固定する。
+//    絞り込みごとに先頭50語を数えると、レベル×種類を切り替えるだけで別の50語が
+//    出てきて、合計で数百語が無料のまま読めてしまっていた（2026/10/3 修正）。
+//    今は レベルごとに 単語3・熟語2、英会話は全体で5、のあわせて約50語だけが無料。
+const FREE_WORDS_PER_LEVEL = 3;
+const FREE_PHRASES_PER_LEVEL = 2;
+const FREE_CONVERSATIONS = 5;
+/** 無料で見られる語（全語の中で固定。絞り込みやシャッフルでは変わらない） */
+const FREE_WORD_SET: Set<VocabEntry> = (() => {
+  const out = new Set<VocabEntry>();
+  const seen = new Map<string, { w: number; p: number }>();
+  let conv = 0;
+  for (const w of vocabWords) {
+    if (w.category === 'conversation') { if (conv < FREE_CONVERSATIONS) { conv++; out.add(w); } continue; }
+    const c = seen.get(w.level) ?? { w: 0, p: 0 };
+    if (w.isPhrase) { if (c.p < FREE_PHRASES_PER_LEVEL) { c.p++; out.add(w); } }
+    else if (c.w < FREE_WORDS_PER_LEVEL) { c.w++; out.add(w); }
+    seen.set(w.level, c);
+  }
+  return out;
+})();
 
 export default function VocabScreen() {
   const router = useRouter();
@@ -125,13 +146,13 @@ export default function VocabScreen() {
     });
   }, [levelFilter, typeFilter]);
 
-  // 表示対象。未加入は「安定順の先頭 FREE_WORD_LIMIT 語」に限定してから並べ替える。
+  // 表示対象。未加入は「安定順の先頭の固定された無料分（FREE_WORD_SET）」に限定してから並べ替える。
   //
   // ⚠️ 先にシャッフルしてから slice すると、シャッフルのたびに違う50語が出てきて
   //    無料のまま全語を読めてしまう（＝有料の意味が無くなる）。必ず
   //    「絞り込み → 無料分を切り出す → その中だけ並べ替える」の順にすること。
   const visible = useMemo(() => {
-    const pool = hasVocabPro ? filtered : filtered.slice(0, FREE_WORD_LIMIT);
+    const pool = hasVocabPro ? filtered : filtered.filter((w) => FREE_WORD_SET.has(w));
     // Fisher-Yates シャッフル（偏りのない並べ替え）
     const a = [...pool];
     for (let i = a.length - 1; i > 0; i--) {
@@ -315,10 +336,10 @@ export default function VocabScreen() {
           ))}
         </View>
 
-        {!hasVocabPro && filtered.length > FREE_WORD_LIMIT && (
+        {!hasVocabPro && filtered.length > visible.length && (
           <TouchableOpacity style={s.freeLimitBanner} onPress={() => setShowPaywall(true)} activeOpacity={0.85}>
             <Text style={s.freeLimitText}>
-              無料で{FREE_WORD_LIMIT}語まで試せます。全{filtered.length}語は英単語Proで解放 ▸
+              この絞り込みでは無料で{visible.length}語まで試せます。全{filtered.length}語は英単語Proで解放 ▸
             </Text>
           </TouchableOpacity>
         )}
@@ -326,7 +347,7 @@ export default function VocabScreen() {
         <View style={s.progressRow}>
           <Text style={s.progress}>
             {cardIndex + 1} / {visible.length}
-            {!hasVocabPro && filtered.length > FREE_WORD_LIMIT && `（無料分・全${filtered.length}語）`}　🔀ランダム出題
+            {!hasVocabPro && filtered.length > visible.length && `（無料分・全${filtered.length}語）`}　🔀ランダム出題
           </Text>
           <TouchableOpacity
             style={s.shuffleBtn}

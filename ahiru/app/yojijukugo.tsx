@@ -15,7 +15,7 @@ import { useBetaAccess } from '../hooks/useBetaAccess';
 import Paywall from '../components/Paywall';
 
 // 無料で試せる語数。英単語Proなど他画面と同じ「一部無料・続きは加入」方式に揃える。
-const FREE_YOJIJUKUGO_LIMIT = 5;
+const FREE_YOJIJUKUGO_LIMIT = 3;
 
 const LEVELS: { key: YojijukugoLevel; emoji: string; label: string; color: string }[] = [
   { key: 'elementary', emoji: '🎒', label: '小学生レベル', color: '#B5622E' },
