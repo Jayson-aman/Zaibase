@@ -373,7 +373,7 @@ must be 〜（〜にちがいない） ⇔ can't be 〜（〜のはずがない�
 断り：I'm sorry, but you can't. ／ I'm afraid not.
 No, you may not. は「だめです」と強くはねつけるひびきになるので、ふつうは I'm sorry を付けてやわらげる。
 
-★ ポイント：ていねいさの順は Can I 〜? ＜ May I 〜? ＜ Could I 〜? のイメージ。相手が友達なら Can I、店員さんや先生になら May I、と場面で選ぶ。`,
+★ ポイント：ていねいさの順は Can I 〜? ＜ May I 〜? ≒ Could I 〜? のイメージ。相手が友達なら Can I、店員さんや先生になら May I、と場面で選ぶ。`,
       },
       {
         heading: '会話で覚える決まり文句',
@@ -1918,7 +1918,7 @@ tell me のうしろは「疑問詞＋主語＋動詞」の順になる。これ
     targetLevel: 'oyo',
     keyPoints: [
       'May I 〜? / Could I 〜? ＝「〜してもよろしいですか」。主語は I。',
-      'ていねいさは Can I ＜ May I ＜ Could I の順。',
+      'ていねいさは Can I ＜ May I ≒ Could I の順。',
       'use（その場で使う）と borrow（借りて持っていく）を使い分ける。',
       '電話の May I speak to 〜? への返事は Speaking. / Just a moment, please.',
       '断るときは I\'m sorry, but 〜 とやわらげる。',

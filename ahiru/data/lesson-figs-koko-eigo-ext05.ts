@@ -252,8 +252,8 @@ export const lessonFigsKokoEigoExt05: Record<string, Figure> = {
     points: [
       { x: 15, label: 'Can I' },
       { x: 45, label: 'Is it OK if I' },
-      { x: 70, label: 'May I' },
-      { x: 92, label: 'Could I' },
+      { x: 78, label: 'May I' },
+      { x: 90, label: 'Could I' },
     ],
     caption:
       '許可を求める表現の丁寧さの目安（右へ行くほど改まった言い方）。友だちには Can I 〜?、店や先生には May I 〜? / Could I 〜? を使う。May I と Could I の丁寧さはほぼ同じで、May I のほうがあらたまった響きになる',

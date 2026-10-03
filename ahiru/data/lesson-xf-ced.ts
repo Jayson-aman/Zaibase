@@ -1000,7 +1000,7 @@ const eigo_s160 = S([
     add: fresh(wide(10, 'May I come in?', C.blue, FILL.blue, 13, 26), wide(42, 'May I use your phone?', C.blue, FILL.blue, 13, 26), wide(74, 'May I ask you a question?', C.blue, FILL.blue, 13, 26), lb(160, 122, '〜してもよろしいですか', 12, C.ink, 'middle', true), ...cap('May I 〜? ＝ ていねいな許可')),
   },
   {
-    note: '❓Can I 〜? とどうちがうのでしょう。→ may は相手にへりくだって許しを求める言葉なので、Can I 〜? よりていねいです。友達には Can I、店員さんや先生には May I、さらにていねいなら Could I と、場面で選びます。',
+    note: '❓Can I 〜? とどうちがうのでしょう。→ may は相手にへりくだって許しを求める言葉なので、Can I 〜? よりていねいです。May I も Could I も Can I よりていねいで、ていねいさはほぼ同じです。友達には Can I、店員さんや先生には May I か Could I と、場面で選びます。',
     add: fresh(...row([['Can I 〜?', C.blue, FILL.blue], ['May I 〜?', C.green, FILL.green], ['Could I 〜?', C.purple, FILL.purple]], 20, { h: 34, size: 13, gap: 14 }), ar(60, 72, 250, 72, C.gray), lb(160, 62, 'ていねいさ →', 11, C.gray), lb(60, 96, '友達に', 11, C.blue), lb(160, 96, '店員・先生に', 11, C.green), lb(262, 96, 'さらに', 11, C.purple), ...cap('相手と場面で選ぶ')),
   },
   {
@@ -1060,7 +1060,7 @@ const eigo_s162 = S([
     add: fresh(bx(10, 14, 145, 44, 'maybe\n1語・副詞\n「たぶん」', C.green, FILL.green, 11), bx(165, 14, 145, 44, 'may be\n2語・助動詞＋be\n「〜かもしれない」', C.blue, FILL.blue, 10), wide(76, 'Maybe it will rain.　（文頭に置く）', C.green, FILL.green, 12, 26), ...cap('maybe と may be は別')),
   },
   {
-    note: 'ていねいさの階段（かいだん）も確かめます。Can I 〜?（友達に）、May I 〜?（目上の人に）、Could I 〜?（さらにていねい）。会話では、A: May I sit here? B: Sure. Go ahead.（どうぞ）のように答えます。',
+    note: 'ていねいさの階段（かいだん）も確かめます。Can I 〜?（友達に）、May I 〜? / Could I 〜?（目上の人に。ほぼ同じていねいさ）。会話では、A: May I sit here? B: Sure. Go ahead.（どうぞ）のように答えます。',
     add: fresh(bx(10, 10, 300, 28, 'A: May I sit here?', C.gray, FILL.gray, 12), ar(160, 40, 160, 54, C.blue), bx(10, 56, 145, 44, 'B: Sure. Go ahead.', C.green, FILL.green, 12), bx(165, 56, 145, 44, "B: I'm sorry, but\nmy friend is coming.", C.red, FILL.red, 10), ...cap('許可の答え方')),
   },
   {

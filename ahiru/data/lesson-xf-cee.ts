@@ -225,7 +225,7 @@ reg('eigo_s178', 0, show([
     'May I 〜? ＝ 〜してもよろしいですか', BLUE),
   S('許可を求める言い方は三つあります。Can I 〜?（〜してもいい？）は友だちに、May I 〜?（〜してもよろしいですか）は先生や目上の人に、Could I 〜?（〜させていただけますか）はいちばんていねいです。',
     [w(20, 12, 280, 36, 'Can I 〜?　友だちに', GRAY, 14), ar(160, 50, 160, 60, C.main), w(20, 62, 280, 36, 'May I 〜?　先生・目上の人に', BLUE, 14), ar(160, 100, 160, 110, C.main), w(20, 112, 280, 36, 'Could I 〜?　いちばんていねい', GREEN, 14)],
-    'ていねいさ　Can I ＜ May I ＜ Could I', GREEN),
+    'ていねいさ　Can I ＜ May I ≒ Could I', GREEN),
   S('なぜ May I 〜? と Could you 〜? を取りちがえやすいの？ → どちらもていねいな形で、日本語に直すと似ているからです。見分けるには、I で始まるか you で始まるかを見ます。I なら自分が動き、you なら相手が動きます。',
     [bx(12, 6, 296, 28, 'なぜ？ May I と Could you のちがいは？', PURPLE[0], PURPLE[1], 12), w(10, 44, 140, 50, 'May I 〜?\n私がしてよい？', BLUE, 13), w(170, 44, 140, 50, 'Could you 〜?\nあなたがして', GREEN, 13), t(80, 112, '許可を求める', 12, C.blue, true), t(240, 112, 'たのむ', 12, C.green, true), t(160, 148, 'I か you かで意味が決まる', 12, C.ink, true)],
     '自分がする → I　相手がする → you', MAIN),
@@ -241,8 +241,8 @@ reg('eigo_s178', 0, show([
   S('なぜ May I borrow the bathroom? は誤りなの？ → bathroom は持って帰れないからです。その場で使わせてもらうので use を選びます。May I use the bathroom?（トイレをお借りしてもよいですか）が正しい形です。',
     [bx(12, 6, 296, 30, 'なぜ？ borrow the bathroom は誤り？', PURPLE[0], PURPLE[1], 12), w(20, 48, 280, 34, '× May I borrow the bathroom?', RED, 14), t(160, 98, 'トイレは持っていけない', 12, C.red, true), w(20, 112, 280, 34, '○ May I use the bathroom?', GREEN, 14)],
     'トイレ ＝ use、かさ ＝ borrow', RED),
-  S('まとめです。May I 〜? / Could I 〜? は自分がする許可を求める形で、ていねいさは Can I ＜ May I ＜ Could I の順。ことわるときは I\'m sorry をそえ、「借りる」は use と borrow を使い分けます。',
-    [w(14, 12, 290, 32, '主語は I ＝ 自分がする許可を求める', BLUE, 13), w(14, 52, 290, 32, 'Can I ＜ May I ＜ Could I', GREEN, 13), w(14, 92, 290, 32, 'ことわるとき：I\'m sorry, but ...', RED, 13), w(14, 132, 290, 28, 'use（その場）／ borrow（持っていく）', MAIN, 12)],
+  S('まとめです。May I 〜? / Could I 〜? は自分がする許可を求める形で、ていねいさは Can I ＜ May I ≒ Could I の順。ことわるときは I\'m sorry をそえ、「借りる」は use と borrow を使い分けます。',
+    [w(14, 12, 290, 32, '主語は I ＝ 自分がする許可を求める', BLUE, 13), w(14, 52, 290, 32, 'Can I ＜ May I ≒ Could I', GREEN, 13), w(14, 92, 290, 32, 'ことわるとき：I\'m sorry, but ...', RED, 13), w(14, 132, 290, 28, 'use（その場）／ borrow（持っていく）', MAIN, 12)],
     'I で始まれば、自分がする', YELLOW),
 ], 'May I 〜? / Could I 〜? ＝ 許可を求める'));
 
