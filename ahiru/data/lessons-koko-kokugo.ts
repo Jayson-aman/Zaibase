@@ -2194,6 +2194,7 @@ const kokoKokugoOverviewLessons: Lesson[] = [
   },
   {
     id: 'koko_kokugo_12_ronri_tenkai',
+    studyPeriod: '中3夏',
     subject: 'kokugo',
     examType: 'koko',
     title: '評論文の論理展開（対比・因果・具体と抽象）',
@@ -2382,6 +2383,7 @@ const kokoKokugoOverviewLessons: Lesson[] = [
   },
   {
     id: 'koko_kokugo_13_shiten_shocho',
+    studyPeriod: '中3夏',
     subject: 'kokugo',
     examType: 'koko',
     title: '小説の視点・象徴表現と情景描写の応用',
@@ -2584,6 +2586,7 @@ const kokoKokugoOverviewLessons: Lesson[] = [
   },
   {
     id: 'koko_kokugo_14_kanbun_hatten',
+    studyPeriod: '中3前半',
     subject: 'kokugo',
     examType: 'koko',
     title: '漢文句法の発展（再読文字・比較・抑揚・受身）',
@@ -2763,6 +2766,7 @@ const kokoKokugoOverviewLessons: Lesson[] = [
   },
   {
     id: 'koko_kokugo_15_keigo_jissen',
+    studyPeriod: '中2',
     subject: 'kokugo',
     examType: 'koko',
     title: '敬語の運用実践（5分類と変換トレーニング）',
@@ -2940,6 +2944,7 @@ const kokoKokugoOverviewLessons: Lesson[] = [
   },
   {
     id: 'koko_kokugo_16_kijutsu_saiten',
+    studyPeriod: '中3秋〜直前',
     subject: 'kokugo',
     examType: 'koko',
     title: '記述問題の採点基準を意識した書き方',
@@ -3114,6 +3119,7 @@ const kokoKokugoOverviewLessons: Lesson[] = [
   },
   {
     id: 'koko_kokugo_17_youyaku',
+    studyPeriod: '中3夏',
     subject: 'kokugo',
     examType: 'koko',
     title: '要約力の鍛え方（字数制限別トレーニング）',
@@ -3310,6 +3316,7 @@ const kokoKokugoOverviewLessons: Lesson[] = [
   },
   {
     id: 'koko_kokugo_18_bunpou_ouyou',
+    studyPeriod: '中2',
     subject: 'kokugo',
     examType: 'koko',
     title: '文法の応用（助詞の識別・助動詞の識別発展）',
@@ -3493,6 +3500,7 @@ const kokoKokugoOverviewLessons: Lesson[] = [
   },
   {
     id: 'koko_kokugo_19_gendaishi',
+    studyPeriod: '中1',
     subject: 'kokugo',
     examType: 'koko',
     title: '現代詩の鑑賞と主題把握',
@@ -3686,6 +3694,7 @@ const kokoKokugoOverviewLessons: Lesson[] = [
   },
   {
     id: 'koko_kokugo_20_hihanteki_dokkai',
+    studyPeriod: '中3秋〜直前',
     subject: 'kokugo',
     examType: 'koko',
     title: '新傾向・複数資料の批判的読解（意見比較・情報吟味）',
@@ -3881,6 +3890,7 @@ const kokoKokugoOverviewLessons: Lesson[] = [
   },
   {
     id: 'koko_kokugo_21_kuusho_bunseijo',
+    studyPeriod: '中3秋〜直前',
     subject: 'kokugo',
     examType: 'koko',
     title: '空所補充・文整序問題の攻略',
@@ -4078,6 +4088,7 @@ B：「しかし」（逆接・欠点を述べる）
   },
   {
     id: 'koko_kokugo_22_bungakushi_soseiri',
+    studyPeriod: '中3秋〜直前',
     subject: 'kokugo',
     examType: 'koko',
     title: '文学史の総整理（時代識別と作品ジャンル横断演習）',

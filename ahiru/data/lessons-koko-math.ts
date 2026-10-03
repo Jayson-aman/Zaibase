@@ -2680,6 +2680,7 @@ x + y = 5、xy = 3 のとき、x² + y² と (x − y)² の値を求めよ。
 
   {
     id: 'koko_math_12_quad_figure',
+    studyPeriod: '中3夏',
     subject: 'sansu',
     title: '二次関数と図形の融合問題',
     description: '放物線上の三角形・四角形の面積、等積変形、動点まで融合問題を攻略',
@@ -2933,6 +2934,7 @@ S(t) = −2t² + 8t = −2(t−2)² + 8
 
   {
     id: 'koko_math_13_similar_coord',
+    studyPeriod: '中3夏',
     subject: 'sansu',
     title: '相似の応用（座標平面・線分比の融合）',
     description: '相似を使って座標を求める・線分比から点の位置を決める応用問題を攻略',
@@ -3150,6 +3152,7 @@ Cを通りADに平行な直線を引き、BAの延長との交点をEとする�
 
   {
     id: 'koko_math_14_circle_similar',
+    studyPeriod: '中3夏',
     subject: 'sansu',
     title: '円と相似・方べきの定理',
     description: '接弦定理・方べきの定理・円に内接する図形の相似を体系的に攻略',
@@ -3367,6 +3370,7 @@ Cを通りADに平行な直線を引き、BAの延長との交点をEとする�
 
   {
     id: 'koko_math_15_moving_point',
+    studyPeriod: '中3前半',
     subject: 'sansu',
     title: '動点問題（点の移動とグラフ）',
     description: '点P・Qが図形上を動くときの面積・長さの変化を式とグラフで捉える',
@@ -3599,6 +3603,7 @@ S(t) = −(3/2)t² + (9/2)t = −(3/2)(t² − 3t)
 
   {
     id: 'koko_math_16_sequence_advanced',
+    studyPeriod: '中3夏',
     subject: 'sansu',
     title: '数列・規則性の発展（等比数列の和・群数列）',
     description: '等比数列の和の公式、群数列、格子点の規則性など発展的な数列を攻略',
@@ -3834,6 +3839,7 @@ xの値ごとに「yの取りうる整数の個数」を求め、それを合計
 
   {
     id: 'koko_math_17_probability_advanced',
+    studyPeriod: '中3夏',
     subject: 'sansu',
     title: '場合の数・確率の応用（順列・組合せ・樹形図の効率化）',
     description: '順列・組合せの公式、重複順列、円順列まで場合の数を効率よく数える',
@@ -4054,6 +4060,7 @@ n人を円形（回転して同じものは同じとみなす）に並べる場�
 
   {
     id: 'koko_math_18_data_advanced',
+    studyPeriod: '中3夏',
     subject: 'sansu',
     title: 'データの活用の発展（分散・標準偏差・相関・標本調査）',
     description: '分散・標準偏差、散布図と相関、標本調査まで発展的なデータ分析を攻略',
@@ -4270,6 +4277,7 @@ n人を円形（回転して同じものは同じとみなす）に並べる場�
 
   {
     id: 'koko_math_19_proportion_application',
+    studyPeriod: '中2',
     subject: 'sansu',
     title: '比例・反比例の応用（文章題・水そう・歯車）',
     description: '比例反比例の式を使った文章題、水そうグラフ、歯車の回転数まで幅広く攻略',
@@ -4490,6 +4498,7 @@ n人を円形（回転して同じものは同じとみなす）に並べる場�
 
   {
     id: 'koko_math_20_graph_reading',
+    studyPeriod: '中2',
     subject: 'sansu',
     title: 'グラフの読み取りと変化の割合の応用',
     description: 'ダイヤグラム（速さのグラフ）・複数グラフの比較・変化の割合の応用を体系的に攻略',
@@ -4722,6 +4731,7 @@ A君は9時に家を出発し、毎分60mの速さで1800m離れた駅まで歩�
 
   {
     id: 'koko_math_21_proof_systematic',
+    studyPeriod: '中3夏',
     subject: 'sansu',
     title: '証明問題の書き方の体系整理',
     description: '合同・相似・平行線と比・背理法まで、証明の型を体系的に整理する',
@@ -4952,6 +4962,7 @@ DE∥BCのとき、△ADE∽△ABCを証明する。
 
   {
     id: 'koko_math_22_nyushi_fusion',
+    studyPeriod: '中3秋〜直前',
     subject: 'sansu',
     title: '入試頻出の融合問題演習',
     description: '関数×図形、確率×図形、総合記述問題まで、複数分野をまたぐ融合問題を演習する',

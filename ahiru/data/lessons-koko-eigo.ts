@@ -2393,6 +2393,7 @@ B: It's cloudy and cold.
 
   {
     id: 'koko_eigo_12_perfect_advanced',
+    studyPeriod: '中3前半',
     subject: 'eigo',
     examType: 'koko',
     order: 12,
@@ -2588,6 +2589,7 @@ By the time we arrived, the concert (　　) already (　　).
 
   {
     id: 'koko_eigo_13_participial_advanced',
+    studyPeriod: '中3前半',
     subject: 'eigo',
     examType: 'koko',
     order: 13,
@@ -2799,6 +2801,7 @@ Having not eaten breakfast, I felt very hungry.
 
   {
     id: 'koko_eigo_14_indirect_question_advanced',
+    studyPeriod: '中3前半',
     subject: 'eigo',
     examType: 'koko',
     order: 14,
@@ -2987,6 +2990,7 @@ He (　　) me that I should study harder.
 
   {
     id: 'koko_eigo_15_free_writing',
+    studyPeriod: '中3秋〜直前',
     subject: 'eigo',
     examType: 'koko',
     order: 15,
@@ -3174,6 +3178,7 @@ I think students should do club activities every day. First, it helps them stay 
 
   {
     id: 'koko_eigo_16_functional_scenes',
+    studyPeriod: '中3夏',
     subject: 'eigo',
     examType: 'koko',
     order: 16,
@@ -3349,6 +3354,7 @@ B: (　　)
 
   {
     id: 'koko_eigo_17_eiken_expressions',
+    studyPeriod: '中3夏',
     subject: 'eigo',
     examType: 'koko',
     order: 17,
@@ -3542,6 +3548,7 @@ I couldn't stop myself from crying when I heard the news.
 
   {
     id: 'koko_eigo_18_question_types',
+    studyPeriod: '中3秋〜直前',
     subject: 'eigo',
     examType: 'koko',
     order: 18,
@@ -3708,6 +3715,7 @@ Studying abroad has become more popular among Japanese high school students in r
 
   {
     id: 'koko_eigo_19_dialogue_reading',
+    studyPeriod: '中3夏',
     subject: 'eigo',
     examType: 'koko',
     order: 19,
@@ -3878,6 +3886,7 @@ B: (　　)
 
   {
     id: 'koko_eigo_20_translation_patterns',
+    studyPeriod: '中3夏',
     subject: 'eigo',
     examType: 'koko',
     order: 20,
@@ -4065,6 +4074,7 @@ have/get ＋ 目的語 ＋ 過去分詞の形で表す。
 
   {
     id: 'koko_eigo_21_passive_advanced',
+    studyPeriod: '中3前半',
     subject: 'eigo',
     examType: 'koko',
     order: 21,
@@ -4256,6 +4266,7 @@ This letter (　　) be sent to him by tomorrow.
 
   {
     id: 'koko_eigo_22_verb_patterns',
+    studyPeriod: '中3前半',
     subject: 'eigo',
     examType: 'koko',
     order: 22,

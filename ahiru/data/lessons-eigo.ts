@@ -21,6 +21,7 @@ import { lessonsNew20E6Eigo } from './lessons-new20-e6-eigo';
 const eigoOverviewLessons: Lesson[] = [
   {
     id: 'eigo_01_bunpo_kihon',
+    studyPeriod: '小6前半',
     subject: 'eigo',
     title: '英語の基本文型と時制の完全マスター',
     description: '入試の核心！5文型と時制のルールを体系的に学ぶ',
@@ -284,6 +285,7 @@ I wish ＋ 仮定法過去完了：「〜だったらよかったのになぁ」
   },
   {
     id: 'eigo_02_meishi_daimeishi',
+    studyPeriod: '小6前半',
     subject: 'eigo',
     title: '名詞・代名詞・冠詞の完全理解',
     description: '細かいがよく出る！冠詞と代名詞の使い分けをマスター',
@@ -535,6 +537,7 @@ a) other   b) another   c) the other   d) the others
   },
   {
     id: 'eigo_03_dokkai',
+    studyPeriod: '小6後半・直前',
     subject: 'eigo',
     title: '長文読解の攻略技術',
     description: '入試英語の配点No.1！長文を速く正確に読む',
@@ -795,6 +798,7 @@ d) Why Children Are Better Language Learners
   },
   {
     id: 'eigo_04_eibun',
+    studyPeriod: '小6後半・直前',
     subject: 'eigo',
     title: '英作文・英文並び替えの攻略',
     description: '配点が高い英作文を自信を持って書けるようにする',
@@ -1053,6 +1057,7 @@ I think that smartphones are useful for children. First, they can learn many thi
   },
   {
     id: 'eigo_05_bunpo_oyo',
+    studyPeriod: '小6後半・直前',
     subject: 'eigo',
     title: '不定詞・動名詞・関係詞・接続詞の応用',
     description: '中学英語の集大成！複雑な文を作る文法を完全習得',
@@ -1322,6 +1327,7 @@ a) after   b) until   c) because   d) although
   },
   {
     id: 'eigo_06_listening_speaking',
+    studyPeriod: '小6後半・直前',
     subject: 'eigo',
     title: 'リスニング対策と英語表現の幅を広げる',
     description: '入試リスニング・会話表現・語彙強化の総まとめ',
@@ -1606,6 +1612,7 @@ d) How long did it take?
   },
   {
     id: 'eigo_07_alphabet_phonics',
+    studyPeriod: '小4',
     subject: 'eigo',
     title: 'アルファベット・フォニックス・ローマ字',
     description: '英語のいちばん最初！文字・音・ローマ字の基礎を固める',
@@ -1845,6 +1852,7 @@ iamtom
   },
   {
     id: 'eigo_08_be_ippan_doushi',
+    studyPeriod: '小5前半',
     subject: 'eigo',
     title: 'be動詞と一般動詞の基礎',
     description: '英文づくりの土台！2種類の動詞と肯定・否定・疑問を完全マスター',
@@ -2088,6 +2096,7 @@ be動詞を使った特別な形。「（場所に）〜がある／いる」を
   },
   {
     id: 'eigo_09_gimonshi',
+    studyPeriod: '小5後半',
     subject: 'eigo',
     title: '疑問詞（what/who/where/when/how など）で質問する',
     description: '5W1Hを使いこなす！具体的にたずねる疑問文の作り方',
@@ -2310,6 +2319,7 @@ why のくだけた言い方。ただし語順がふつうの文（主語＋動�
   },
   {
     id: 'eigo_10_can_meirei',
+    studyPeriod: '小5後半',
     subject: 'eigo',
     title: 'can・命令文・助動詞の基礎',
     description: '「できる」「〜しなさい」「〜しよう」を表す表現をマスター',
@@ -2550,6 +2560,7 @@ should より強い忠告。「そうしないとまずい」というニュア�
   },
   {
     id: 'eigo_11_aisatsu_kaiwa',
+    studyPeriod: '小4',
     subject: 'eigo',
     title: 'あいさつ・自己紹介・数・曜日・時間の会話表現',
     description: '英語で話す第一歩！日常の決まり文句と数・時・曜日を身につける',

@@ -30,6 +30,7 @@ import {
   getIntroIneligibleProductIds,
 } from '../services/subscription';
 import { PRO_FEATURES, MAX_FEATURES } from '../constants/proAccess';
+import { useSubscription } from '../hooks/useSubscription';
 import { useAuthUser } from '../hooks/useAuthUser';
 import { alertCompat } from '../utils/dialog';
 
@@ -51,6 +52,10 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
   const [loadingOff, setLoadingOff] = useState(true);
   const [purchasing, setPurchasing] = useState(false);
   const { isLoggedIn } = useAuthUser();
+  // すでに契約中のプランは「ご利用中」にして、二重に購入させない（Maxの人にProを売らない）
+  const { tier: ownedTier } = useSubscription();
+  const proOwned = ownedTier === 'pro' || ownedTier === 'max';
+  const maxOwned = ownedTier === 'max';
   const isWeb = Platform.OS === 'web';
 
   function goLogin() {
@@ -257,17 +262,19 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                     style={[
                       styles.buyBtn,
                       { backgroundColor: '#9B59B6' },
-                      (!proBuy || purchasing) && styles.buyBtnDisabled,
+                      (!proBuy || purchasing || proOwned) && styles.buyBtnDisabled,
                     ]}
-                    onPress={proBuy ? () => handlePurchase(proBuy) : undefined}
-                    disabled={!proBuy || purchasing}
+                    onPress={proBuy && !proOwned ? () => handlePurchase(proBuy) : undefined}
+                    disabled={!proBuy || purchasing || proOwned}
                     activeOpacity={0.8}
                   >
                     {purchasing ? (
                       <ActivityIndicator color="#fff" />
                     ) : (
                       <Text style={styles.buyBtnText}>
-                        {proBuy
+                        {proOwned
+                          ? 'ご利用中'
+                          : proBuy
                           ? proIntro && !showYearly
                             ? `${proIntro}で${introDays(proProd)}お試し`
                             : 'PRO プランを始める'
@@ -327,17 +334,19 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                     style={[
                       styles.buyBtn,
                       { backgroundColor: '#E74C3C' },
-                      (!maxBuy || purchasing) && styles.buyBtnDisabled,
+                      (!maxBuy || purchasing || maxOwned) && styles.buyBtnDisabled,
                     ]}
-                    onPress={maxBuy ? () => handlePurchase(maxBuy) : undefined}
-                    disabled={!maxBuy || purchasing}
+                    onPress={maxBuy && !maxOwned ? () => handlePurchase(maxBuy) : undefined}
+                    disabled={!maxBuy || purchasing || maxOwned}
                     activeOpacity={0.8}
                   >
                     {purchasing ? (
                       <ActivityIndicator color="#fff" />
                     ) : (
                       <Text style={styles.buyBtnText}>
-                        {maxBuy
+                        {maxOwned
+                          ? 'ご利用中'
+                          : maxBuy
                           ? maxIntro && !showYearly
                             ? `${maxIntro}で${introDays(maxProd)}お試し`
                             : 'MAX プランを始める'

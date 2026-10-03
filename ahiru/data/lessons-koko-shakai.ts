@@ -2558,6 +2558,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
   },
   {
     id: 'kshakai_12_industry_structure',
+    studyPeriod: '中2',
     keyPoints: [
       '産業は第一次産業（農林水産業）・第二次産業（鉱工業・建設業）・第三次産業（商業・サービス業・金融・情報通信業）の3つに分類される',
       'ペティ＝クラークの法則：経済が発展するにつれ、就業者の比重が第一次→第二次→第三次産業へ移動する傾向',
@@ -2776,6 +2777,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
   },
   {
     id: 'kshakai_13_energy_resources',
+    studyPeriod: '中2',
     keyPoints: [
       '日本のエネルギー自給率は約11〜13%と主要国の中でも極めて低く、原油・石炭・天然ガスの大部分を輸入に依存する',
       '原油はサウジアラビア・UAEなど中東地域からの輸入が9割以上を占め、中東情勢の変化が日本のエネルギー安全保障に直結する',
@@ -2992,6 +2994,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
   },
   {
     id: 'kshakai_14_local_creation',
+    studyPeriod: '中3前半',
     keyPoints: [
       '地方自治は「民主主義の学校」（ブライス）と呼ばれ、住民が身近な政治に参加することで民主主義を実地に学ぶ場となる',
       '1999年の地方分権一括法で機関委任事務が廃止され、国と地方の関係が「上下・主従」から「対等・協力」へ転換した',
@@ -3195,6 +3198,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
   },
   {
     id: 'kshakai_15_human_rights_poverty',
+    studyPeriod: '中3前半',
     keyPoints: [
       '世界人権宣言（1948年国連採択）は人権保障の国際的な原点。法的拘束力を持たせるため1966年に国際人権規約が採択された',
       '難民の地位に関する条約（難民条約・1951年）により、迫害を逃れた難民を保護する国際的な枠組みが整備された。UNHCR（国連難民高等弁務官事務所）が難民保護を担う',
@@ -3402,6 +3406,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
   },
   {
     id: 'kshakai_16_constitution_precedents',
+    studyPeriod: '中3前半',
     keyPoints: [
       '立憲主義とは、憲法によって国家権力を制限し、国民の権利・自由を守るという考え方。「人の支配」ではなく「法の支配」を実現する仕組み',
       '違憲審査権（違憲立法審査権）はすべての裁判所が持つが、最終的な判断権を持つ最高裁判所は「憲法の番人」と呼ばれる',
@@ -3614,6 +3619,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
   },
   {
     id: 'kshakai_17_climate_agriculture',
+    studyPeriod: '中1',
     keyPoints: [
       'ケッペンの気候区分（熱帯・乾燥帯・温帯・冷帯・寒帯）は、それぞれ特徴的な農業のかたちと強く結びついている',
       '熱帯では焼畑農業・稲の二期作・プランテーション農業（天然ゴム・パーム油・カカオ）が発達する',
@@ -3821,6 +3827,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
   },
   {
     id: 'kshakai_18_diplomatic_history',
+    studyPeriod: '中3夏',
     keyPoints: [
       '1853年のペリー来航をきっかけに日本は開国し、日米和親条約（1854年）・日米修好通商条約（1858年）で欧米との外交関係が始まった',
       '明治政府は不平等条約（領事裁判権・関税自主権欠如）の改正を最重要課題とし、1894年に領事裁判権撤廃、1911年に関税自主権回復を達成した',
@@ -4012,6 +4019,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
   },
   {
     id: 'kshakai_19_economy_advanced',
+    studyPeriod: '中3前半',
     keyPoints: [
       'GDP（国内総生産）は一定期間内にその国内で生産された財・サービスの付加価値の合計。国の経済規模を測る代表的な指標',
       '名目GDPは物価の変動を含んだ金額そのもの、実質GDPは物価変動の影響を除いた金額で、経済成長率は実質GDPの伸び率で測る',
@@ -4221,6 +4229,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
   },
   {
     id: 'kshakai_20_population_urbanization',
+    studyPeriod: '中1',
     keyPoints: [
       '世界人口は増加を続け80億人を突破したが、増加のペースは地域により大きく異なり、サブサハラ・アフリカで特に高い伸びが続く',
       '人口爆発は発展途上国で顕著で、医療の普及による死亡率低下に出生率の低下が追いつかないことが背景',
@@ -4424,6 +4433,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
   },
   {
     id: 'kshakai_21_edo_reforms_advanced',
+    studyPeriod: '中2',
     keyPoints: [
       '江戸時代の三大改革（享保・寛政・天保）はいずれも幕府財政の立て直しと風紀の引き締めを目的としたが、その手法や結果は大きく異なる',
       '享保の改革（徳川吉宗）は上米の制・新田開発・目安箱の設置など、増収と実務改善を重視した比較的評価の高い改革',
@@ -4619,6 +4629,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
   },
   {
     id: 'kshakai_22_statistics_advanced',
+    studyPeriod: '中3秋〜直前',
     keyPoints: [
       '人口ピラミッドは年齢別・男女別の人口構成を表すグラフで、底辺の広さから将来の人口動向を読み取ることができる',
       '年少人口（0〜14歳）・生産年齢人口（15〜64歳）・老年人口（65歳以上）の3区分と、それぞれの割合の変化を追うことが人口統計の基本',
