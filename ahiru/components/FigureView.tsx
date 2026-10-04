@@ -97,6 +97,13 @@ function clampLabelX(x: number, anchor: 'start' | 'middle' | 'end') {
   return { x, anchor };
 }
 
+/**
+ * 目盛り・格子・軸のように「図の下地」にあたる部品の数。buildParts が返した配列をキーにして覚える。
+ * 下地を最後のほうのスライドまで出さないと、棒や線の説明が出ているのに図が空っぽに見える。
+ * （説明が「元値2,000円…」と言っているのに、目盛りの線しか描かれていなかった）
+ */
+const SCAFFOLD = new WeakMap<object, number>();
+
 function CoordinateFig({ fig, uid }: { fig: CoordFigure; uid: string }) {
   const pad = 24;
   const area: Area = { x0: pad, y0: 12, w: VBW - pad * 2, h: VBH - pad * 2 };
@@ -157,6 +164,7 @@ function CoordinateFig({ fig, uid }: { fig: CoordFigure; uid: string }) {
     els.push(<SvgText key={`ty${y}`} x={x0 - 5} y={py(y) + 3.5} fontSize={10} fill={AXIS} textAnchor="end">{+y.toFixed(2)}</SvgText>);
   }
 
+  SCAFFOLD.set(els, els.length);
   const clipId = `coord-${uid}`;
 
   // 塗りつぶし領域
@@ -811,6 +819,7 @@ function LineChartFig({ fig }: { fig: LineChartFigure }) {
   }
   els.push(<Line key="xax" x1={area.x0} y1={area.y0 + area.h} x2={area.x0 + area.w} y2={area.y0 + area.h} stroke={AXIS} strokeWidth={1.6} />);
   els.push(<Line key="yax" x1={area.x0} y1={area.y0} x2={area.x0} y2={area.y0 + area.h} stroke={AXIS} strokeWidth={1.6} />);
+  SCAFFOLD.set(els, els.length);
   fig.series.forEach((s, i) => {
     const color = s.color ?? PALETTE[i % PALETTE.length];
     const pts = s.points.map((p) => `${px(p.x).toFixed(1)},${py(p.y).toFixed(1)}`).join(' ');
@@ -851,6 +860,7 @@ function BarChartFig({ fig }: { fig: BarChartFigure }) {
   }
   els.push(<Line key="xax" x1={area.x0} y1={zeroY} x2={area.x0 + area.w} y2={zeroY} stroke={AXIS} strokeWidth={1.6} />);
   els.push(<Line key="yax" x1={area.x0} y1={area.y0} x2={area.x0} y2={area.y0 + area.h} stroke={AXIS} strokeWidth={1.6} />);
+  SCAFFOLD.set(els, els.length);
   fig.bars.forEach((b, i) => {
     const x = area.x0 + slot * i + gap / 2;
     const color = b.color ?? PALETTE[i % PALETTE.length];
@@ -1587,7 +1597,14 @@ export default function FigureView({
   const targetProgress = slideMode
     ? stepPartsArr && stepPartsArr.length > 0
       ? Math.min(1, (stepPartsArr[Math.min(slide, stepPartsArr.length - 1)] ?? parts.length) / Math.max(parts.length, 1))
-      : Math.min(1, (slide + 1) / buildSlides)
+      : (() => {
+          // 目盛り・格子などの下地は最初のスライドから出しておき、棒・線・点を早めに見せる
+          const base = SCAFFOLD.get(parts) ?? 0;
+          const content = parts.length - base;
+          if (base <= 0 || content <= 0) return Math.min(1, (slide + 1) / buildSlides);
+          const contentSlides = Math.min(buildSlides, Math.max(2, Math.ceil(content / 3)));
+          return Math.min(1, (base + content * Math.min(1, (slide + 1) / contentSlides)) / parts.length);
+        })()
     : 1;
 
   // スライドが変わるたびに、図の描画量を今の値から目標値までなめらかに動かす。

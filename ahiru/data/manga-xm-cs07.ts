@@ -385,7 +385,7 @@ export const XM_CS07_SCRIPTS: Record<string, MangaScript> = {
   },
   'sansu_s471_xm': {
     id: 'sansu_s471_xm',
-    title: "約数の個数は、なぜ「指数に1を足して」かける？",
+    title: "約数の個数は、なぜ「かけた回数に1を足して」かける？",
     panels: [
       { speaker: 't', line: "72の約数の個数を、素因数分解（そいんすうぶんかい）を使って求めよう。72＝2×2×2×3×3だね。" },
       { speaker: 's1', line: "2が3個、3が2個だから、3×2＝6個ですよね？" },

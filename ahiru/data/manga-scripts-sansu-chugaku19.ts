@@ -21,7 +21,7 @@ export const mangaScriptsSansuChugaku19: Record<string, MangaScript> = {
     panels: [
       { speaker: 's1', line: '中点を結んでできたDEとBCの比が1:2だから、△ADEと台形DBCEの面積比も1:2だよね?' },
       { speaker: 't', line: '△ADEと△ABCの相似比が1:2のとき、面積比は相似比をそのまま使う? それとも2乗する?' },
-      { speaker: 's2', line: 'あ、2乗! 1²:2²で1:4になる。' },
+      { speaker: 's2', line: 'あ、2乗! 1×1:2×2で1:4になる。' },
       { speaker: 't', line: 'その通り。じゃあ△ABC全体を4としたとき、△ADEはいくつ?' },
       { speaker: 's1', line: '1!' },
       { speaker: 't', line: 'その通り。じゃあ台形DBCEは、全体4から何を引けば求まる?' },

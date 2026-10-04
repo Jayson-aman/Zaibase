@@ -191,6 +191,33 @@ check(
     .map((l) => l.id),
 );
 
+// 中学受験（小学生）向けの算数に、指数の書き方（2²・3³）や「累乗・指数・N乗」が出ていないか。
+//
+// 指数は中学1年で習う。小学生は「2×2×3」と書き、「同じ数を何回かけたか」と言う。
+// 最大公約数と最小公倍数の単元に「12＝2²×3、18＝2×3²」と書かれていて、
+// ユーザーから「小学生に乗数はわかるかな？」と指摘された（2026/10/4）。
+// 単元・問題集だけでなく、図解の説明文とマンガの台詞も見る（98件＋図解19＋マンガ9が残っていた）。
+// cm²・m³ などの単位は小学校で習うので、直前が英字・単位記号のものは見ない。
+// 「相似比の2乗」「3の2乗」のように言葉で書く N乗 は、塾でも標準の言い方なので見ない（記号の上付き数字・累乗・指数・0乗を見る）。
+// 書きかえの型：2²→2×2、2³→2×2×2、指数→かけた回数、2の累乗→2を何回もかけた数。
+const EXPO_RE = /(?<![A-Za-zａ-ｚＡ-Ｚ㎝㎜㎞㎡㎥ℓ㎖\u3300-\u33FF])[0-9０-９]+[⁰¹²³⁴⁵⁶]|累乗|べき乗|指数|0乗/;
+check(
+  '【単元・問題集・図解・マンガ】小学生向けの算数に指数の書き方が出ている',
+  [
+    ...L.filter((l) => (l.examType ?? 'chugaku') === 'chugaku' && l.subject === 'sansu').flatMap((l) => {
+      const texts = [l.title, l.description, l.intro, ...((l.sections ?? []) as any[]).flatMap((s) => [s.heading, s.body]), ...((l.keyPoints ?? []) as string[]),
+        ...((l.trapExamples ?? []) as any[]).flatMap((t) => [t.question, t.wrongAnswer, t.trapExplanation, t.correctAnswer, t.correctExplanation])];
+      const bad = EXPO_RE.test(texts.map((x) => String(x ?? '')).join('\n'));
+      const figBad = ((l.sections ?? []) as any[]).some((s) => s.figureId && EXPO_RE.test(JSON.stringify(getLessonFigure(s.figureId) ?? '')));
+      const mangaBad = ((l.sections ?? []) as any[]).some((s) => s.mangaId && EXPO_RE.test(JSON.stringify(getMangaScript(s.mangaId) ?? '')));
+      return bad || figBad || mangaBad ? [l.id] : [];
+    }),
+    ...Q.filter((q) => q.examType !== 'koko' && q.subject === 'sansu')
+      .filter((q) => EXPO_RE.test(ELEM_FIELDS.concat(['choices']).map((k) => JSON.stringify(q[k] ?? '')).join('\n')))
+      .map((q) => q.id),
+  ],
+);
+
 // 中学受験（小学生）向けの理科に、中学・高校の生物の用語が出ていないか。
 //
 // 平方根のときとまったく同じ種類の失敗の6回目。中学受験の理科に

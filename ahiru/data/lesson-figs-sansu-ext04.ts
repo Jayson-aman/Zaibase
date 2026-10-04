@@ -685,12 +685,12 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
       { x: -1.2, y: 2, label: 'D' },
       { x: 2.4, y: 2, label: 'E' },
     ],
-    caption: '△ADE∽△ABCで相似比AD:AB＝3:5→面積比＝3²:5²＝9:25。△ADEが27cm²のとき、△ABC＝27×25/9＝75cm²',
+    caption: '△ADE∽△ABCで相似比AD:AB＝3:5→面積比＝3×3:5×5＝9:25。△ADEが27cm²のとき、△ABC＝27×25/9＝75cm²',
     steps: [
       "よこじくが x、たてじくが y。点の位置は（x, y）の順で読む。",
       "図の点は A、B、C。",
       "ぬられた部分の面積を出すときは、じくに平行な線を底辺にとると計算が楽になる。",
-      "△ADE∽△ABCで相似比AD:AB＝3:5→面積比＝3²:5²＝9:25。△ADEが27cm²のとき、△ABC＝27×25/9＝75cm²",
+      "△ADE∽△ABCで相似比AD:AB＝3:5→面積比＝3×3:5×5＝9:25。△ADEが27cm²のとき、△ABC＝27×25/9＝75cm²",
     ],
     buildSteps: 3,
   },
@@ -1574,7 +1574,7 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
     steps: [
       '青の棒は辺の長さ。相似比 3:5 なので、すべての長さが 3:5。周りの長さや弧の長さもこの比。',
       '面積はたて × よこ（底辺 × 高さ ÷ 2）で、長さを 2 つかける。小は 3×3＝9、大は 5×5＝25（赤の棒）。',
-      '面積比は 9:25＝3²:5²。長さが 5/3 倍なら面積は 5/3×5/3＝25/9 倍（約 2.8 倍）。',
+      '面積比は 9:25＝3×3:5×5。長さが 5/3 倍なら面積は 5/3×5/3＝25/9 倍（約 2.8 倍）。',
       '小の面積 27cm² が比の 9 なら 1 あたり 3cm²。大は 3×25＝75cm²。台形（差の部分）は 25−9＝16 で 48cm²。',
       '検算：75÷27＝25/9＝(5/3)²。面積比 4:9 から長さの比に戻すときは 2 乗のもとの数で 2:3。体積なら 3 乗。',
     ],
@@ -1665,7 +1665,7 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
       { from: { x: 2, y: 3 }, to: { x: 4, y: 0 }, dashed: true },
       { from: { x: 6, y: 3 }, to: { x: 4, y: 0 }, dashed: true },
     ],
-    caption: 'D・E が AB・AC の中点なら、AD:AB＝AE:AC＝1:2 で △ADE ∽ △ABC（相似比 1:2）。だから DE ∥ BC、DE＝BC÷2、面積は 1²:2²＝1:4。BC の中点とも結ぶと（点線）合同な 4 つの三角形に分かれ、△ADE は 1 つ、台形 DBCE は 3 つ。△ADE:台形＝1:3。',
+    caption: 'D・E が AB・AC の中点なら、AD:AB＝AE:AC＝1:2 で △ADE ∽ △ABC（相似比 1:2）。だから DE ∥ BC、DE＝BC÷2、面積は 1×1:2×2＝1:4。BC の中点とも結ぶと（点線）合同な 4 つの三角形に分かれ、△ADE は 1 つ、台形 DBCE は 3 つ。△ADE:台形＝1:3。',
     steps: [
       '△ABC。辺 AB の中点 D と辺 AC の中点 E を結ぶ。',
       'AD:AB＝1:2、AE:AC＝1:2 で、はさむ角 A が共通。△ADE ∽ △ABC（相似比 1:2）。だから DE ∥ BC、DE は BC の半分。',

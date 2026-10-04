@@ -5,6 +5,7 @@
 
 import type { Figure } from './figures';
 import { lessonFigsSansu } from './lesson-figs-sansu';
+import { lessonFigsSansuPic } from './lesson-figs-sansu-pic';
 import { lessonFigsRika } from './lesson-figs-rika';
 import { lessonFigsKokoMath } from './lesson-figs-koko-math';
 import { lessonFigsKokoRika } from './lesson-figs-koko-rika';
@@ -219,6 +220,7 @@ export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsNew20J2Rika,
   ...lessonFigsNew20J3Rika,
   ...lessonFigsSansu,
+  ...lessonFigsSansuPic, // 絵（人・箱・線分図）で描き直した図。同じキーなら、こちらが優先
   ...lessonFigsRika,
   ...lessonFigsKokoMath,
   ...lessonFigsKokoRika,

@@ -277,7 +277,7 @@ export const lessonFigsSansu: Record<string, Figure> = {
       { x: -0.8, y: 3, label: 'D' },
       { x: 1.6, y: 3, label: 'E' },
     ],
-    caption: 'DE//BC、AD:AB＝2:5 → DE:BC＝2:5、面積比＝2²:5²＝4:25',
+    caption: 'DE//BC、AD:AB＝2:5 → DE:BC＝2:5、面積比＝2×2:5×5＝4:25',
     steps: [
       '問 図の中の線分DEと底辺BCは、どんな関係になっていますか。',
       '答 平行です。どちらも横向きの線で、高さのちがうところにひかれています。',
@@ -2325,7 +2325,7 @@ export const lessonFigsSansu: Record<string, Figure> = {
     kind: 'solid',
     shape: 'cone',
     labels: { height: '高さ12cm' },
-    caption: '高さ12cmの円すいを頂点から4cmで底面に平行に切ると、相似比4:12＝1:3、上部の小さい円すいと元の円すいの体積比は1³:3³＝1:27',
+    caption: '高さ12cmの円すいを頂点から4cmで底面に平行に切ると、相似比4:12＝1:3、上部の小さい円すいと元の円すいの体積比は1×1×1:3×3×3＝1:27',
     steps: [
       '問 少し考えてみましょう。この円すいの高さは、何cmになっているでしょうか。',
       '答 12cmです。頂点から底面まで、まっすぐはかった長さになります。',
