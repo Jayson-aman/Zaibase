@@ -358,7 +358,7 @@ export const lessonFigsRsPicQ04: Record<string, Figure> = {
 
   // 輪軸＋動滑車
   t4_119: (() => {
-    const cx = 66, cy = 60, Rr = 36, r = 7;
+    const cx = 66, cy = 60, Rr = 36, r = 6;
     const px = 130, py = 100;
     return show(
       [

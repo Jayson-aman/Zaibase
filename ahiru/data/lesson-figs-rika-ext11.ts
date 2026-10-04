@@ -12,7 +12,7 @@ export const lessonFigsRikaExt11: Record<string, Figure> = {
     xRange: [4, 20],
     yRange: [0, 85],
     series: [
-      { label: '夏至の太陽高度', markers: true, points: [ { x: 4.5, y: 0 }, { x: 8, y: 45 }, { x: 12, y: 78.4 }, { x: 16, y: 45 }, { x: 19.5, y: 0 } ] },
+      { label: '夏至の太陽高度', markers: true, points: [ { x: 4.5, y: 0 }, { x: 8.6, y: 45 }, { x: 12, y: 78.4 }, { x: 15.4, y: 45 }, { x: 19.5, y: 0 } ] },
     ],
     caption: '南中高度は正午ごろに最大78.4°(北緯35°・夏至)。日の出・日の入りで高度0°になる',
     steps: [
