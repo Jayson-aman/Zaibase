@@ -115,7 +115,7 @@ export const mangaScriptsShakaiChugaku24: Record<string, MangaScript> = {
   },
   shakai_s364_manga: {
     id: 'shakai_s364_manga',
-    title: '日経平均株価の最高値は1991年?',
+    title: 'バブル期の日経平均株価の最高値は1991年?',
     panels: [
       { speaker: 's1', line: 'バブル経済が崩壊したのは1991年ごろだから、日経平均株価の最高値も1991年だよね?' },
       { speaker: 't', line: '「崩壊した年」と「最高値をつけた年」は同じ? それとも別?' },

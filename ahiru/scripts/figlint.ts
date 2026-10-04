@@ -29,10 +29,38 @@ function bboxOf(el: DiagramElement): { kind: 'label' | 'boxtext'; b: Box; text: 
 const inter = (a: Box, b: Box) => Math.max(0, Math.min(a.x1, b.x1) - Math.max(a.x0, b.x0)) * Math.max(0, Math.min(a.y1, b.y1) - Math.max(a.y0, b.y0));
 const area = (a: Box) => (a.x1 - a.x0) * (a.y1 - a.y0);
 
+// 白でぬりつぶす箱（diagram-kit の cover / band / fresh）は、前のスライドの部品をおおいかくす。
+// 画面に残るのは「おおわれなかった部品」だけなので、おおう直前のスライドごとに検査する。
+const isCover = (p: DiagramElement) => p.t === 'box' && !p.text && p.fill === '#FFFFFF' && p.color === '#FFFFFF';
+const partBox = (p: DiagramElement): Box | null => {
+  const bb = bboxOf(p); if (bb) return bb.b;
+  if (p.t === 'box') return { x0: p.x, x1: p.x + p.w, y0: p.y, y1: p.y + p.h };
+  if (p.t === 'circle') return { x0: p.cx - p.r, x1: p.cx + p.r, y0: p.cy - p.r, y1: p.cy + p.r };
+  if (p.t === 'line' || p.t === 'arrow') return { x0: Math.min(p.x1, p.x2), x1: Math.max(p.x1, p.x2), y0: Math.min(p.y1, p.y2), y1: Math.max(p.y1, p.y2) };
+  return null;
+};
 export function lintDiagram(id: string, f: Figure): string[] {
+  if (f.kind !== 'diagram') return [];
+  const out = new Set<string>();
+  let live: DiagramElement[] = [];
+  let dirty = false;
+  const flush = () => { if (dirty) lintParts(id, live).forEach((x) => out.add(x)); dirty = false; };
+  for (const p of f.parts) {
+    if (isCover(p) && p.t === 'box') {
+      flush();
+      const c: Box = { x0: p.x, x1: p.x + p.w, y0: p.y, y1: p.y + p.h };
+      live = live.filter((q) => { const b = partBox(q); return !b || inter(b, c) < 0.5 * Math.max(1, area(b)); });
+      continue;
+    }
+    live.push(p); dirty = true;
+  }
+  flush();
+  return [...out];
+}
+
+function lintParts(id: string, parts: DiagramElement[]): string[] {
   const out: string[] = [];
-  if (f.kind !== 'diagram') return out;
-  const items = f.parts.map((p, i) => ({ i, p, bb: bboxOf(p) }));
+  const items = parts.map((p, i) => ({ i, p, bb: bboxOf(p) }));
   for (const { i, p, bb } of items) {
     if (!bb) {
       // 円・箱・線の図形そのものが画面の外に出ていないか
@@ -65,7 +93,7 @@ if (require.main === module) {
   let n = 0, bad = 0;
   for (const file of fs.readdirSync(dir).filter((x) => x.startsWith(prefix) && x.endsWith('.ts'))) {
     const src = fs.readFileSync(path.join(dir, file), 'utf8');
-    for (const m of src.matchAll(/^  ['"]?([A-Za-z0-9_]+)['"]?: (?:show\(|\(\(\) =>)/gm)) {
+    for (const m of src.matchAll(/^  ['"]?([A-Za-z0-9_]+)['"]?: (?:show\(|\(\(\) =>|[a-z][A-Za-z0-9_]*,)/gm)) {
       const fig = getLessonFigure(m[1]); if (!fig) { console.log('✗ ' + m[1] + ' が見つからない（配線されていない）'); bad++; continue; }
       n++; const r = lintDiagram(m[1], fig); bad += r.length; r.forEach((x) => console.log('✗ ' + x));
     }

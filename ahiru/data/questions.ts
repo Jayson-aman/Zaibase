@@ -298,6 +298,8 @@ import { gradeKoushikiOyoK2HeikouQuestions } from './grade_koushiki_oyo_k2heikou
 import { gradeKoushikiOyoK1GodoQuestions } from './grade_koushiki_oyo_k1godo';
 import { gradeKoushikiOyoC5KakudoQuestions } from './grade_koushiki_oyo_c5kakudo';
 
+import { ntQuestions } from './questions-nt';
+
 const baseQuestions: Question[] = [
   ...gradeKoushikiOyoC3Tairyoku1Questions,
   ...gradeKoushikiOyoC4Tairyoku2Questions,
@@ -3900,6 +3902,7 @@ const baseQuestions: Question[] = [
   ...gradeJ2EigoQuestions,
   ...gradeE6EigoQuestions,
   ...gradeJ3EigoQuestions,
+  ...ntQuestions,
 ];
 
 // 解説の差しかえ表（データ本体のファイルを書きかえずに、解説だけを新しいものに置きかえる）。

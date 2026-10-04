@@ -232,9 +232,9 @@ check(
   (() => {
     const dir = path.resolve(process.cwd(), 'data');
     const bad: string[] = [];
-    for (const file of fs.readdirSync(dir).filter((x) => (x.startsWith('lesson-figs-sansu-pic') || x.startsWith('lesson-figs-rs-pic')) && x.endsWith('.ts'))) {
+    for (const file of fs.readdirSync(dir).filter((x) => (x.startsWith('lesson-figs-sansu-pic') || x.startsWith('lesson-figs-rs-pic') || x.startsWith('lesson-xf-nt')) && x.endsWith('.ts'))) {
       const src = fs.readFileSync(path.join(dir, file), 'utf8');
-      for (const m of src.matchAll(/^  ['"]?([A-Za-z0-9_]+)['"]?: (?:show\(|\(\(\) =>)/gm)) {
+      for (const m of src.matchAll(/^  ['"]?([A-Za-z0-9_]+)['"]?: (?:show\(|\(\(\) =>|[a-z][A-Za-z0-9_]*,)/gm)) {
         const fig = getLessonFigure(m[1]);
         if (!fig) { bad.push(m[1] + '（配線されていない）'); continue; }
         if (lintDiagram(m[1], fig).length > 0) bad.push(m[1]);

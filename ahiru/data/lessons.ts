@@ -12,6 +12,7 @@ import { kokoEigoLessons } from './lessons-koko-eigo';
 import { kokoShakaiLessons } from './lessons-koko-shakai';
 // 問題に対して足りなかった分野を補う単元
 import { gapLessons } from './lessons-gap';
+import { ntLessons } from './lessons-nt';
 
 import { EXTRA_SECTION_FIGURES } from './lesson-extra-figures';
 import { EXTRA_MANGA_SECTIONS } from './manga-extra';
@@ -32,6 +33,7 @@ export const baseLessons: Lesson[] = [
   ...kokoEigoLessons,
   ...kokoShakaiLessons,
   ...gapLessons,
+  ...ntLessons,
 ];
 
 // あとから足した動く図解（data/lesson-extra-figures.ts）を、図解のない節に取りつける。

@@ -116,6 +116,16 @@ import { XF_RI_FIGURES, XF_RI_SECTIONS } from './lesson-xf-ri';
 import { XF_SA_FIGURES, XF_SA_SECTIONS } from './lesson-xf-sa';
 import { XF_SB_FIGURES, XF_SB_SECTIONS } from './lesson-xf-sb';
 import { XF_SC_FIGURES, XF_SC_SECTIONS } from './lesson-xf-sc';
+import { XF_NTCS_FIGURES, XF_NTCS_SECTIONS } from './lesson-xf-ntcs';
+import { XF_NTCR_FIGURES, XF_NTCR_SECTIONS } from './lesson-xf-ntcr';
+import { XF_NTCK_FIGURES, XF_NTCK_SECTIONS } from './lesson-xf-ntck';
+import { XF_NTCH_FIGURES, XF_NTCH_SECTIONS } from './lesson-xf-ntch';
+import { XF_NTCE_FIGURES, XF_NTCE_SECTIONS } from './lesson-xf-ntce';
+import { XF_NTKS_FIGURES, XF_NTKS_SECTIONS } from './lesson-xf-ntks';
+import { XF_NTKR_FIGURES, XF_NTKR_SECTIONS } from './lesson-xf-ntkr';
+import { XF_NTKK_FIGURES, XF_NTKK_SECTIONS } from './lesson-xf-ntkk';
+import { XF_NTKH_FIGURES, XF_NTKH_SECTIONS } from './lesson-xf-ntkh';
+import { XF_NTKE_FIGURES, XF_NTKE_SECTIONS } from './lesson-xf-ntke';
 
 export const EXTRA_LESSON_FIGURES: Record<string, Figure> = {
   ...XF_CEA_FIGURES,
@@ -229,6 +239,16 @@ export const EXTRA_LESSON_FIGURES: Record<string, Figure> = {
   ...XF_SA_FIGURES,
   ...XF_SB_FIGURES,
   ...XF_SC_FIGURES,
+  ...XF_NTCS_FIGURES,
+  ...XF_NTCR_FIGURES,
+  ...XF_NTCK_FIGURES,
+  ...XF_NTCH_FIGURES,
+  ...XF_NTCE_FIGURES,
+  ...XF_NTKS_FIGURES,
+  ...XF_NTKR_FIGURES,
+  ...XF_NTKK_FIGURES,
+  ...XF_NTKH_FIGURES,
+  ...XF_NTKE_FIGURES,
 };
 
 export const EXTRA_SECTION_FIGURES: Record<string, string> = {
@@ -343,4 +363,14 @@ export const EXTRA_SECTION_FIGURES: Record<string, string> = {
   ...XF_SA_SECTIONS,
   ...XF_SB_SECTIONS,
   ...XF_SC_SECTIONS,
+  ...XF_NTCS_SECTIONS,
+  ...XF_NTCR_SECTIONS,
+  ...XF_NTCK_SECTIONS,
+  ...XF_NTCH_SECTIONS,
+  ...XF_NTCE_SECTIONS,
+  ...XF_NTKS_SECTIONS,
+  ...XF_NTKR_SECTIONS,
+  ...XF_NTKK_SECTIONS,
+  ...XF_NTKH_SECTIONS,
+  ...XF_NTKE_SECTIONS,
 };
