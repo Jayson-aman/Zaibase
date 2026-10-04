@@ -232,7 +232,7 @@ check(
   (() => {
     const dir = path.resolve(process.cwd(), 'data');
     const bad: string[] = [];
-    for (const file of fs.readdirSync(dir).filter((x) => x.startsWith('lesson-figs-sansu-pic') && x.endsWith('.ts'))) {
+    for (const file of fs.readdirSync(dir).filter((x) => (x.startsWith('lesson-figs-sansu-pic') || x.startsWith('lesson-figs-rs-pic')) && x.endsWith('.ts'))) {
       const src = fs.readFileSync(path.join(dir, file), 'utf8');
       for (const m of src.matchAll(/^  ['"]?([A-Za-z0-9_]+)['"]?: (?:show\(|\(\(\) =>)/gm)) {
         const fig = getLessonFigure(m[1]);

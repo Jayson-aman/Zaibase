@@ -6,6 +6,26 @@
 import type { Figure } from './figures';
 import { lessonFigsSansu } from './lesson-figs-sansu';
 import { lessonFigsSansuPic } from './lesson-figs-sansu-pic';
+import { lessonFigsRsPicQ01 } from './lesson-figs-rs-pic-q01';
+import { lessonFigsRsPicQ02 } from './lesson-figs-rs-pic-q02';
+import { lessonFigsRsPicQ03 } from './lesson-figs-rs-pic-q03';
+import { lessonFigsRsPicQ04 } from './lesson-figs-rs-pic-q04';
+import { lessonFigsRsPicQ05 } from './lesson-figs-rs-pic-q05';
+import { lessonFigsRsPicQ06 } from './lesson-figs-rs-pic-q06';
+import { lessonFigsRsPicQ07 } from './lesson-figs-rs-pic-q07';
+import { lessonFigsRsPicQ08 } from './lesson-figs-rs-pic-q08';
+import { lessonFigsRsPicQ09 } from './lesson-figs-rs-pic-q09';
+import { lessonFigsRsPicQ10 } from './lesson-figs-rs-pic-q10';
+import { lessonFigsRsPicQ11 } from './lesson-figs-rs-pic-q11';
+import { lessonFigsRsPicQ12 } from './lesson-figs-rs-pic-q12';
+import { lessonFigsRsPicQ13 } from './lesson-figs-rs-pic-q13';
+import { lessonFigsRsPicQ14 } from './lesson-figs-rs-pic-q14';
+import { lessonFigsRsPicQ15 } from './lesson-figs-rs-pic-q15';
+import { lessonFigsRsPicQ16 } from './lesson-figs-rs-pic-q16';
+import { lessonFigsRsPicQ17 } from './lesson-figs-rs-pic-q17';
+import { lessonFigsRsPicQ18 } from './lesson-figs-rs-pic-q18';
+import { lessonFigsRsPicQ19 } from './lesson-figs-rs-pic-q19';
+import { lessonFigsRsPicQ20 } from './lesson-figs-rs-pic-q20';
 import { lessonFigsSansuPicP01 } from './lesson-figs-sansu-pic-p01';
 import { lessonFigsSansuPicP02 } from './lesson-figs-sansu-pic-p02';
 import { lessonFigsSansuPicP03 } from './lesson-figs-sansu-pic-p03';
@@ -385,6 +405,27 @@ export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsSansuPicP18,
   ...lessonFigsSansuPicP19,
   ...lessonFigsSansuPicP20,
+  // 理科・社会の絵の図
+  ...lessonFigsRsPicQ01,
+  ...lessonFigsRsPicQ02,
+  ...lessonFigsRsPicQ03,
+  ...lessonFigsRsPicQ04,
+  ...lessonFigsRsPicQ05,
+  ...lessonFigsRsPicQ06,
+  ...lessonFigsRsPicQ07,
+  ...lessonFigsRsPicQ08,
+  ...lessonFigsRsPicQ09,
+  ...lessonFigsRsPicQ10,
+  ...lessonFigsRsPicQ11,
+  ...lessonFigsRsPicQ12,
+  ...lessonFigsRsPicQ13,
+  ...lessonFigsRsPicQ14,
+  ...lessonFigsRsPicQ15,
+  ...lessonFigsRsPicQ16,
+  ...lessonFigsRsPicQ17,
+  ...lessonFigsRsPicQ18,
+  ...lessonFigsRsPicQ19,
+  ...lessonFigsRsPicQ20,
 };
 
 const repairedCache = new Map<string, Figure>();

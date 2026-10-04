@@ -1482,7 +1482,7 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
     buildSteps: 3,
   },
 
-  // s153：台形ABCD（下底AB=10、上底DC=6、高さ5）。下底を上底ぶん延長してE。DCEBは平行四辺形なので △DCB＝△DBE、台形＝△ADE
+  // s153：台形ABCD（下底AB=10、上底DC=6、高さ5）。下底を上底ぶん延長してE。底辺（6）も高さ（5）も同じなので △DCB＝△DBE（面積が等しい）、台形＝△ADE
   sext04_s153_naze: {
     kind: 'polygon',
     points: [
@@ -1498,11 +1498,11 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
       { from: { x: 10, y: 0 }, to: { x: 16, y: 0 }, label: 'BE＝6cm（上底と同じ）', dashed: true },
       { from: { x: 2, y: 5 }, to: { x: 16, y: 0 }, label: 'DE', dashed: true },
     ],
-    caption: '台形 ABCD の下底 AB を、上底 DC と同じ 6cm だけ延長して E とする。DC と BE は平行で長さも同じなので DCEB は平行四辺形、対角線 DB で分けた △DCB と △DBE は合同。切り取る △DCB と付け足す △DBE が同じなので、台形 ABCD＝△ADE。底辺 AE＝10＋6＝16、高さ 5 で 40cm²＝(6＋10)×5÷2。',
+    caption: '台形 ABCD の下底 AB を、上底 DC と同じ 6cm だけ延長して E とする。DC と BE は長さが同じ（6cm）で、高さも同じ（5cm）なので、△DCB と △DBE は面積が等しい。切り取る △DCB と付け足す △DBE が同じなので、台形 ABCD＝△ADE。底辺 AE＝10＋6＝16、高さ 5 で 40cm²＝(6＋10)×5÷2。',
     steps: [
       '台形 ABCD。下底 AB＝10cm、上底 DC＝6cm、高さ 5cm。対角線 DB を引く。',
-      '下底 AB を B の先へ、上底と同じ 6cm だけ延長して E（点線）。BE＝DC＝6cm で平行なので、DCEB は平行四辺形。',
-      '平行四辺形 DCEB は対角線 DB で合同な 2 つの三角形に分かれる。△DCB＝△DBE（どちらも 6×5÷2＝15）。',
+      '下底 AB を B の先へ、上底と同じ 6cm だけ延長して E（点線）。BE＝DC＝6cm。2 つの三角形は、底辺が同じ長さになる。',
+      '△DCB と △DBE は、底辺 6cm・高さ 5cm で同じ。△DCB＝△DBE（どちらも 6×5÷2＝15、面積が等しい）。',
       'D と E を結ぶ。台形から △DCB を切り取り、△DBE を付け足した形が △ADE。切った分と足した分が同じなので面積は変わらない。',
       '検算：△ADE＝(10＋6)×5÷2＝40、台形の公式 (6＋10)×5÷2＝40 で一致。台形の公式はこの三角形の面積そのもの。延長を 10cm にすると 50 になり合わない。',
     ],
