@@ -372,7 +372,7 @@ export const lessonFigsRsPicQ08: Record<string, Figure> = {
       { note: '問 溶解度は、水が何gのときの値で表す約束でしょうか。答 水100gあたりの値です。水50gは100gの半分なので、水を2倍にして考えます。',
         add: [ar(100, 100, 150, 100, C.red), lb(125, 90, '水を2倍', 12, C.red, 'middle', true), bx(160, 30, 70, 100, undefined, C.blue, FILL.blue), lb(195, 148, '水100g', 13, C.blue, 'middle', true)] },
       { note: '問 水が2倍なら、とける食塩はどうなるでしょうか。答 とける量も2倍になり、18×2＝36gです。',
-        add: [...spread(174, 68, 4, 5, 14, 14, 3, C.main, FILL.yellow), lb(272, 80, '18×2', 14, C.red, 'middle', true), lb(272, 100, '＝36g', 14, C.red, 'middle', true)] },
+        add: [...spread(174, 68, 4, 4, 14, 14, 3, C.main, FILL.yellow), lb(272, 80, '18×2', 14, C.red, 'middle', true), lb(272, 100, '＝36g', 14, C.red, 'middle', true)] },
       { note: '問 この物質の溶解度は、何gでしょうか。答 36gです。「18g」とそのまま答えるのは、水の量が50gだったことを見落とした、よくあるまちがいです。',
         add: [lb(160, 182, '溶解度 ＝ 36g（水100gあたり）', 14, C.red, 'middle', true), lb(160, 202, '✕ 18g のまま答えない', 13, C.red, 'middle')] },
       { note: '問 答えが正しいか、どう確かめますか。答 水の量を50gにもどします。36×(50÷100)＝18gで、実験の結果と合います。',

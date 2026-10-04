@@ -164,11 +164,11 @@ export const lessonFigsSansuPicP07: Record<string, Figure> = {
   // 下りの式＝上りの式で流れを求める
   sext03_s112_naze: show(
     [
-      { note: '問 同じAB間を、下りは3時間、上りは5時間かかります。速さの比は？ 答 同じ道のりでは時間と速さが逆になるので、3：5の逆で5：3です。',
+      { note: '問 同じAB間を、下りは3時間、上りは5時間かかります（静水時は20km/時）。速さの比は？ 答 同じ道のりでは時間と速さが逆になるので、3：5の逆で5：3です。',
         add: [lb(8, 62, '下り', 13, C.red, 'start', true), lb(8, 80, '3時間', 12, C.red, 'start'), lb(8, 108, '上り', 13, C.main, 'start', true), lb(8, 126, '5時間', 12, C.main, 'start')] },
       { note: '問 速さの比5：3を、箱で表すと？ 答 下りは1個ぶんの箱5つ、上りは3つです。',
         add: [0, 1, 2, 3, 4].map((i) => bx(52 + i * 34, 50, 32, 26, '1', C.red, FILL.red, 12)).concat([0, 1, 2].map((i) => bx(52 + i * 34, 96, 32, 26, '1', C.main, FILL.yellow, 12))) },
-      { note: '問 下りの速さと上りの速さを足すと、何になりますか。答 （静水時＋流れ）＋（静水時−流れ）で、流れが消え、静水時の2倍の40km/時になります。',
+      { note: '問 下りの速さと上りの速さを足すと、何になりますか。答 （静水時＋流れ）＋（静水時−流れ）で、流れが消え、静水時20の2倍の40km/時になります。',
         add: [lb(160, 158, '下り＋上り＝静水時×2＝40（8個分）', 13, C.blue, 'middle', true)] },
       { note: '問 箱1個ぶんは？ 答 40÷8＝5km/時。下りは5×5＝25km/時、上りは3×5＝15km/時です。',
         add: [lb(160, 178, '40÷8＝5　下り25・上り15 km/時', 13, C.red, 'middle', true)] },
@@ -210,7 +210,7 @@ export const lessonFigsSansuPicP07: Record<string, Figure> = {
         add: [bx(40, 52, 240, 28, '正しい時計 50分', C.blue, FILL.blue, 13), bx(40, 92, 216, 28, '狂った時計 45分', C.red, FILL.red, 13)] },
       { note: '問 2つの時計の進みの比は？ 答 45：50＝9：10です。どれだけ時間がたっても、この比は変わりません。',
         add: [lb(160, 148, '45：50＝9：10', 14, C.purple, 'middle', true), lb(160, 164, '時間がたっても比は同じ', 12, C.gray, 'middle')] },
-      { note: '問 狂った時計が90分（10時30分）進んだとき、正しい時計は何分進んでいますか。答 90は9の10倍なので、正しい時計も10の10倍で100分です。',
+      { note: '問 9時に合わせた狂った時計が90分（10時30分）進んだとき、正しい時計は何分進んでいますか。答 90は9の10倍なので、正しい時計も10の10倍で100分です。',
         add: [bx(40, 184, 240, 22, '正しい時計 100分', C.blue, FILL.blue, 12), bx(40, 210, 216, 22, '狂った時計 90分', C.red, FILL.red, 12)] },
       { note: '問 本当の時刻は何時何分でしょうか。答 90÷9×10＝100分なので、9時から100分後の10時40分です。',
         add: [lb(160, 178, '90÷9×10＝100分 → 10時40分', 13, C.red, 'middle', true)] },
@@ -404,7 +404,7 @@ export const lessonFigsSansuPicP07: Record<string, Figure> = {
   // 等積変形で四角形を三角形に変える
   lf_sansu_ext04_152: (() => {
     const X = (x: number) => 24 + 20 * x, Y = (y: number) => 150 - 20 * y;
-    const A: [number, number] = [X(0), Y(0)], B: [number, number] = [X(9), Y(2)], Cc: [number, number] = [X(7), Y(5)], D: [number, number] = [X(0), Y(5)], Ee: [number, number] = [X(13.2), Y(5)];
+    const A: [number, number] = [X(0), Y(0)], B: [number, number] = [X(8.4), Y(2)], Cc: [number, number] = [X(8), Y(5)], D: [number, number] = [X(0), Y(5)], Ee: [number, number] = [X(13.2), Y(5)];
     return show(
       [
         { note: '問 四角形ABCDの面積を、1つの三角形に変えたいです。まず対角線ACを引くと？ 答 四角形が、三角形ACDと三角形ABCに分かれます。',
@@ -417,8 +417,8 @@ export const lessonFigsSansuPicP07: Record<string, Figure> = {
           add: [pg([A, D, Ee], C.red)] },
         { note: '問 三角形ADEの面積は？ 答 底辺DEが13.2cm、高さADが5cmなので、13.2×5÷2＝33cm²です。四角形ABCDも33cm²です。',
           add: [lb(160, 190, '底辺DE 13.2cm　高さAD 5cm', 12, C.red, 'middle', true), lb(160, 206, '13.2×5÷2＝33cm²', 13, C.red, 'middle', true)] },
-        { note: '問 たしかめは？ 答 ACD＝7×5÷2＝17.5、ACE＝（13.2−7）×5÷2＝15.5。合わせて17.5＋15.5＝33cm²で、合います。',
-          add: [lb(160, 224, 'ACD 17.5＋ACE 15.5＝33cm² 合う', 12, C.green, 'middle', true)] },
+        { note: '問 たしかめは？ 答 ACD＝8×5÷2＝20、ACE＝（13.2−8）×5÷2＝13。合わせて20＋13＝33cm²で、合います。',
+          add: [lb(160, 224, 'ACD 20＋ACE 13＝33cm² 合う', 12, C.green, 'middle', true)] },
       ],
       '対角線ACに平行な直線をBから引き、DCの延長との交点をEとすると、三角形ADEは四角形ABCDと同じ面積33cm²',
     );

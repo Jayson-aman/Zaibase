@@ -33,7 +33,7 @@ export const lessonFigsSansuPicP01: Record<string, Figure> = {
       { note: '問 1こ分は、いくらでしょうか。答 2,100÷6＝350円です。全体を6こ分に等しく分けたうちの、1こ分の金額です。',
         add: [lb(20, 122, '1こ分 ＝ 2,100÷6 ＝ 350円', 13, C.red, 'start', true)] },
       { note: '問 A・B・Cは、それぞれいくらでしょうか。答 Aは3こ分で350×3＝1,050円、Bは2こ分で350×2＝700円、Cは1こ分で350円です。',
-        add: [lb(20, 150, 'A', 13, C.blue, 'start', true), ...cells(3, 154, 36, '350', C.blue, FILL.blue), lb(164, 172, '1,050円', 12, C.blue, 'start', true),
+        add: [lb(20, 172, 'A', 13, C.blue, 'start', true), ...cells(3, 154, 36, '350', C.blue, FILL.blue), lb(164, 172, '1,050円', 12, C.blue, 'start', true),
           lb(20, 196, 'B', 13, C.green, 'start', true), ...cells(2, 180, 36, '350', C.green, FILL.green), lb(124, 198, '700円', 12, C.green, 'start', true),
           lb(20, 222, 'C', 13, C.purple, 'start', true), ...cells(1, 206, 36, '350', C.purple, FILL.purple), lb(84, 224, '350円', 12, C.purple, 'start', true)] },
       { note: '問 答えは正しいでしょうか。答 1,050＋700＋350＝2,100円で、全体と同じです。1,050:700:350を350でわると3:2:1にもどります。',
