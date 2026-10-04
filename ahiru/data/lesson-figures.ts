@@ -6,6 +6,26 @@
 import type { Figure } from './figures';
 import { lessonFigsSansu } from './lesson-figs-sansu';
 import { lessonFigsSansuPic } from './lesson-figs-sansu-pic';
+import { lessonFigsSansuPicP01 } from './lesson-figs-sansu-pic-p01';
+import { lessonFigsSansuPicP02 } from './lesson-figs-sansu-pic-p02';
+import { lessonFigsSansuPicP03 } from './lesson-figs-sansu-pic-p03';
+import { lessonFigsSansuPicP04 } from './lesson-figs-sansu-pic-p04';
+import { lessonFigsSansuPicP05 } from './lesson-figs-sansu-pic-p05';
+import { lessonFigsSansuPicP06 } from './lesson-figs-sansu-pic-p06';
+import { lessonFigsSansuPicP07 } from './lesson-figs-sansu-pic-p07';
+import { lessonFigsSansuPicP08 } from './lesson-figs-sansu-pic-p08';
+import { lessonFigsSansuPicP09 } from './lesson-figs-sansu-pic-p09';
+import { lessonFigsSansuPicP10 } from './lesson-figs-sansu-pic-p10';
+import { lessonFigsSansuPicP11 } from './lesson-figs-sansu-pic-p11';
+import { lessonFigsSansuPicP12 } from './lesson-figs-sansu-pic-p12';
+import { lessonFigsSansuPicP13 } from './lesson-figs-sansu-pic-p13';
+import { lessonFigsSansuPicP14 } from './lesson-figs-sansu-pic-p14';
+import { lessonFigsSansuPicP15 } from './lesson-figs-sansu-pic-p15';
+import { lessonFigsSansuPicP16 } from './lesson-figs-sansu-pic-p16';
+import { lessonFigsSansuPicP17 } from './lesson-figs-sansu-pic-p17';
+import { lessonFigsSansuPicP18 } from './lesson-figs-sansu-pic-p18';
+import { lessonFigsSansuPicP19 } from './lesson-figs-sansu-pic-p19';
+import { lessonFigsSansuPicP20 } from './lesson-figs-sansu-pic-p20';
 import { lessonFigsRika } from './lesson-figs-rika';
 import { lessonFigsKokoMath } from './lesson-figs-koko-math';
 import { lessonFigsKokoRika } from './lesson-figs-koko-rika';
@@ -220,7 +240,6 @@ export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsNew20J2Rika,
   ...lessonFigsNew20J3Rika,
   ...lessonFigsSansu,
-  ...lessonFigsSansuPic, // 絵（人・箱・線分図）で描き直した図。同じキーなら、こちらが優先
   ...lessonFigsRika,
   ...lessonFigsKokoMath,
   ...lessonFigsKokoRika,
@@ -344,6 +363,28 @@ export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsKokoEigoExt10,
   ...lessonFigsKokoEigoExt11,
   ...lessonFigsKokoEigoExt12,
+  // 絵（人・箱・線分図）で描き直した図。同じキーなら、必ずこちらが優先されるよう、いちばん最後に並べる
+  ...lessonFigsSansuPic,
+  ...lessonFigsSansuPicP01,
+  ...lessonFigsSansuPicP02,
+  ...lessonFigsSansuPicP03,
+  ...lessonFigsSansuPicP04,
+  ...lessonFigsSansuPicP05,
+  ...lessonFigsSansuPicP06,
+  ...lessonFigsSansuPicP07,
+  ...lessonFigsSansuPicP08,
+  ...lessonFigsSansuPicP09,
+  ...lessonFigsSansuPicP10,
+  ...lessonFigsSansuPicP11,
+  ...lessonFigsSansuPicP12,
+  ...lessonFigsSansuPicP13,
+  ...lessonFigsSansuPicP14,
+  ...lessonFigsSansuPicP15,
+  ...lessonFigsSansuPicP16,
+  ...lessonFigsSansuPicP17,
+  ...lessonFigsSansuPicP18,
+  ...lessonFigsSansuPicP19,
+  ...lessonFigsSansuPicP20,
 };
 
 const repairedCache = new Map<string, Figure>();

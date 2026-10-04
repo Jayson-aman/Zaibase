@@ -11,6 +11,9 @@
 import { allLessons, getLessonsBySubject } from '../data/lessons';
 import { FORMULAS, SUBJECTS } from '../data/formulas';
 import { getLessonFigure } from '../data/lesson-figures';
+import * as fs from 'fs';
+import * as path from 'path';
+import { lintDiagram } from './figlint';
 import { getMangaScript } from '../data/manga-scripts';
 import { questions } from '../data/questions';
 import { explanationText } from '../utils/explanation';
@@ -216,6 +219,29 @@ check(
       .filter((q) => EXPO_RE.test(ELEM_FIELDS.concat(['choices']).map((k) => JSON.stringify(q[k] ?? '')).join('\n')))
       .map((q) => q.id),
   ],
+);
+
+// 算数の「絵の図解」（data/lesson-figs-sansu-pic*.ts）で、文字が画面からはみ出す・重なっていないか。
+//
+// 20チームが作り直した573枚の図のうち、最初の検査は「0件」と報告されていたが、
+// lesson-figures.ts の展開順のせいで古い図が優先され、作り直した図が検査されていなかった
+// （1,039件の指摘が後から出た）。図のキーが実際の画面でどの図に解決されるかを
+// getLessonFigure で読み、diagram だけを scripts/figlint.ts で検査する。
+check(
+  '【図解】絵の図解で、文字が画面からはみ出す・重なる・箱の外に出る',
+  (() => {
+    const dir = path.resolve(process.cwd(), 'data');
+    const bad: string[] = [];
+    for (const file of fs.readdirSync(dir).filter((x) => x.startsWith('lesson-figs-sansu-pic') && x.endsWith('.ts'))) {
+      const src = fs.readFileSync(path.join(dir, file), 'utf8');
+      for (const m of src.matchAll(/^  ['"]?([A-Za-z0-9_]+)['"]?: (?:show\(|\(\(\) =>)/gm)) {
+        const fig = getLessonFigure(m[1]);
+        if (!fig) { bad.push(m[1] + '（配線されていない）'); continue; }
+        if (lintDiagram(m[1], fig).length > 0) bad.push(m[1]);
+      }
+    }
+    return bad;
+  })(),
 );
 
 // 中学受験（小学生）向けの理科に、中学・高校の生物の用語が出ていないか。
