@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Linking, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useSubscription } from '../hooks/useSubscription';
 import { planNotice } from '../utils/planStatus';
@@ -38,6 +38,23 @@ export default function PlanStatusBanner({ onAction }: { onAction: () => void })
   const expiryKey = plan.expiresAt?.toISOString() ?? '';
   if (plan.kind === 'expired' && dismissedAt === expiryKey) return null;
 
+  // お支払いの問題は、プラン選びではなくストアの管理ページで直す。
+  // 開けない／URLが無いときは、ボタンを出さずに案内の文だけにする（押しても何も起きない状態を作らない）。
+  const storeUrl =
+    plan.managementUrl ??
+    (Platform.OS === 'ios'
+      ? 'https://apps.apple.com/account/subscriptions'
+      : Platform.OS === 'android'
+        ? 'https://play.google.com/store/account/subscriptions'
+        : null);
+  const isBilling = plan.kind === 'billing';
+  const actionLabel = isBilling && storeUrl == null ? null : notice.action;
+  function onActionPress() {
+    if (!isBilling) { onAction(); return; }
+    if (storeUrl == null) return;
+    Linking.openURL(storeUrl).catch(() => {});
+  }
+
   function dismiss() {
     setDismissedAt(expiryKey);
     AsyncStorage.setItem(DISMISS_KEY, expiryKey).catch(() => {});
@@ -50,9 +67,9 @@ export default function PlanStatusBanner({ onAction }: { onAction: () => void })
         <Text style={[styles.title, notice.urgent && styles.titleUrgent]}>{notice.title}</Text>
         <Text style={styles.body}>{notice.body}</Text>
         <View style={styles.row}>
-          {notice.action != null && (
-            <TouchableOpacity style={[styles.btn, notice.urgent && styles.btnUrgent]} onPress={onAction} activeOpacity={0.85}>
-              <Text style={styles.btnText}>{notice.action}</Text>
+          {actionLabel != null && (
+            <TouchableOpacity style={[styles.btn, notice.urgent && styles.btnUrgent]} onPress={onActionPress} activeOpacity={0.85}>
+              <Text style={styles.btnText}>{actionLabel}</Text>
             </TouchableOpacity>
           )}
           {plan.kind === 'expired' && (

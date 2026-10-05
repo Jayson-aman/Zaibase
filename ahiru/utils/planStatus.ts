@@ -20,6 +20,8 @@ export type PlanStatus = {
   /** 期限までの日数（切り上げ）。切れたあとは 0 以下 */
   daysLeft: number | null;
   willRenew: boolean;
+  /** ストアの「サブスクリプションの管理」ページ（お支払い方法の直し先）。無いときは null */
+  managementUrl: string | null;
 };
 
 type EntLike = {
@@ -29,22 +31,25 @@ type EntLike = {
   expirationDate?: string | Date | null;
   billingIssueDetectedAt?: string | Date | null;
 };
-type InfoLike = { entitlements?: { active?: Record<string, EntLike>; all?: Record<string, EntLike> } };
+type InfoLike = { managementURL?: string | null; entitlements?: { active?: Record<string, EntLike>; all?: Record<string, EntLike> } };
 
 const DAY = 24 * 60 * 60 * 1000;
 
 function toDate(v: unknown): Date | null {
-  if (v == null) return null;
+  if (v == null || v === '') return null;
   const d = v instanceof Date ? v : new Date(String(v));
   return Number.isNaN(d.getTime()) ? null : d;
 }
 
-const NONE: PlanStatus = { kind: 'none', tier: null, expiresAt: null, daysLeft: null, willRenew: false };
+const NONE: PlanStatus = { kind: 'none', tier: null, expiresAt: null, daysLeft: null, willRenew: false, managementUrl: null };
 
 export function planStatusFromCustomerInfo(info: unknown, now: Date = new Date()): PlanStatus {
   const ents = (info as InfoLike)?.entitlements;
   const active = ents?.active ?? {};
   const all = ents?.all ?? {};
+  // 管理ページのURLは http(s) だけ受け取る（変な値をそのまま開かない）
+  const mu = (info as InfoLike)?.managementURL;
+  const managementUrl = typeof mu === 'string' && /^https?:\/\//.test(mu) ? mu : null;
   const days = (d: Date | null) => (d == null ? null : Math.ceil((d.getTime() - now.getTime()) / DAY));
 
   // いま有効なもの（Max を優先）
@@ -53,8 +58,11 @@ export function planStatusFromCustomerInfo(info: unknown, now: Date = new Date()
     const e = active[activeTier];
     const expiresAt = toDate(e.expirationDate);
     const willRenew = e.willRenew !== false;
-    const base = { tier: activeTier, expiresAt, daysLeft: days(expiresAt), willRenew } as const;
-    if (e.billingIssueDetectedAt != null) return { ...base, kind: 'billing' };
+    const base = { tier: activeTier, expiresAt, daysLeft: days(expiresAt), willRenew, managementUrl } as const;
+    // 空文字・日付として読めない値・未来の日付は「問題あり」とみなさない（誤って赤い帯を出さない）。
+    // 支払いが直ると RevenueCat 側でこの日時は null に戻る。
+    const billingAt = toDate(e.billingIssueDetectedAt);
+    if (billingAt != null && billingAt.getTime() <= now.getTime() + DAY) return { ...base, kind: 'billing' };
     if (e.periodType === 'INTRO' || e.periodType === 'TRIAL') return { ...base, kind: 'trial' };
     if (!willRenew && expiresAt != null) return { ...base, kind: 'ending' };
     return { ...base, kind: 'active' };
@@ -67,7 +75,7 @@ export function planStatusFromCustomerInfo(info: unknown, now: Date = new Date()
     if (at != null && (best == null || at > best.at)) best = { tier: t, at };
   }
   if (best != null) {
-    return { kind: 'expired', tier: best.tier, expiresAt: best.at, daysLeft: days(best.at), willRenew: false };
+    return { kind: 'expired', tier: best.tier, expiresAt: best.at, daysLeft: days(best.at), willRenew: false, managementUrl };
   }
   return NONE;
 }
@@ -116,9 +124,9 @@ export function planNotice(s: PlanStatus, manageHint = 'ストアの設定（App
       return {
         icon: '⚠️',
         title: `${name}のお支払いが完了していません`,
-        body: 'カードの有効期限や残高を確認してください。このままだと、プランが止まることがあります。',
+        body: `お支払い方法（カードや残高）を確認してください。このままだと、プランが止まることがあります。直し方は${manageHint}で確認できます。`,
         urgent: true,
-        action: null,
+        action: 'お支払い方法を確認',
       };
     case 'expired':
       return {

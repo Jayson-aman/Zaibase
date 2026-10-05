@@ -20,6 +20,7 @@ import { explanationText } from '../utils/explanation';
 import { quickTricks } from '../data/quick-tricks';
 import { figures as FIGS } from '../data/figures';
 import { autoSteps } from '../data/auto-steps';
+import { planStatusFromCustomerInfo } from '../utils/planStatus';
 import { maskFigureForProblem, answerTokens, tokenRegex, FIGURE_IS_ANSWER } from '../utils/figure-mask';
 
 type Lesson = (typeof allLessons)[number] & Record<string, any>;
@@ -1723,6 +1724,40 @@ info('日本語の中に英単語が挟まっている（要目視）', latin, 8
     }
   }
   check('【単元】例題の解法が短い、または「なぜ」が書かれていない', bad);
+}
+
+// 契約状態の判定（utils/planStatus）。画面に「お支払いに問題」「お試しが終わる」「期限切れ」を出す元になる。
+// ここを間違えると、問題が無いのに赤い帯が出る／本当に問題があるのに何も出ない、になる。
+{
+  const now = new Date('2026-10-05T12:00:00+09:00');
+  const d = (n: number) => new Date(now.getTime() + n * 86400000).toISOString();
+  const mk = (active: Record<string, unknown>, all: Record<string, unknown> = {}) => ({ entitlements: { active, all } });
+  const k = (info: unknown) => planStatusFromCustomerInfo(info, now).kind;
+  const T = (v: unknown) => ({ periodType: 'NORMAL', willRenew: true, expirationDate: d(20), billingIssueDetectedAt: v });
+  const cases: [string, unknown, string][] = [
+    ['支払いの問題あり（文字列の日時）', mk({ pro: T(d(-1)) }), 'billing'],
+    ['支払いの問題あり（Date型・Web）', mk({ pro: T(new Date(now.getTime() - 86400000)) }), 'billing'],
+    ['支払いの問題なし（null）', mk({ pro: T(null) }), 'active'],
+    ['支払いの問題なし（undefined）', mk({ pro: T(undefined) }), 'active'],
+    ['支払いの問題なし（空文字）', mk({ pro: T('') }), 'active'],
+    ['支払いの問題なし（読めない値）', mk({ pro: T('not-a-date') }), 'active'],
+    ['支払いの問題なし（遠い未来）', mk({ pro: T(d(30)) }), 'active'],
+    ['お試し中で支払いの問題あり', mk({ pro: { ...T(d(-1)), periodType: 'INTRO' } }), 'billing'],
+    ['お試し中', mk({ pro: { periodType: 'INTRO', willRenew: true, expirationDate: d(3) } }), 'trial'],
+    ['解約ずみ', mk({ max: { periodType: 'NORMAL', willRenew: false, expirationDate: d(3) } }), 'ending'],
+    ['期限切れ', mk({}, { pro: { isActive: false, expirationDate: d(-2) } }), 'expired'],
+    ['期限切れで支払いの問題の記録が残っている（赤い帯ではなく期限切れ）', mk({}, { pro: { isActive: false, expirationDate: d(-2), billingIssueDetectedAt: d(-5) } }), 'expired'],
+    ['未契約', mk({}), 'none'],
+    ['情報なし', null, 'none'],
+    ['壊れた情報', { entitlements: 5 }, 'none'],
+  ];
+  check('【契約状態】判定がまちがっている', cases.filter(([, info, want]) => k(info) !== want).map(([n, info, want]) => `${n}（${k(info)}≠${want}）`));
+  const mgmt = (u: unknown) => planStatusFromCustomerInfo({ ...(mk({ pro: T(d(-1)) }) as object), managementURL: u }, now).managementUrl;
+  check('【契約状態】管理ページのURLの受け取り方がまちがっている', [
+    mgmt('https://apps.apple.com/account/subscriptions') === 'https://apps.apple.com/account/subscriptions' ? '' : 'httpsが通らない',
+    mgmt('javascript:alert(1)') === null ? '' : 'javascript: を通している',
+    mgmt(undefined) === null ? '' : '無いのに値が入る',
+  ].filter((x) => x !== ''));
 }
 
 console.log(`\n合計 ${problems} 件`);
