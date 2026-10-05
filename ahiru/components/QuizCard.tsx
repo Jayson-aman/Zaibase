@@ -320,11 +320,15 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
               ))}
             </View>
           )}
-          <View style={styles.tapHint}>
-            <Text style={styles.tapHintText}>
-              {question.isWritten ? '自分の言葉で説明してから、タップして模範解答を見る 👆' : 'タップして答えを見る 👆'}
-            </Text>
-          </View>
+          {/* 書いて答える問題（lockFlip）は、このカードをタップしても答えは出ない（下の欄に書いて答え合わせする）。
+              押せないボタンを出すと、押しても何も起きない上に、その分だけ縦にも長くなる。 */}
+          {!lockFlip && (
+            <View style={styles.tapHint}>
+              <Text style={styles.tapHintText}>
+                {question.isWritten ? '自分の言葉で説明してから、タップして模範解答を見る 👆' : 'タップして答えを見る 👆'}
+              </Text>
+            </View>
+          )}
         </View>
       ) : (
         <View style={styles.answerSide}>
