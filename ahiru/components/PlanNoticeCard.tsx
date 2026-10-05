@@ -9,11 +9,16 @@ export default function PlanNoticeCard({
   actionLabel,
   onActionPress,
   onDismiss,
+  secondaryLabel,
+  onSecondary,
 }: {
   notice: PlanNotice;
   actionLabel: string | null;
   onActionPress: () => void;
   onDismiss?: () => void;
+  /** 2つ目のボタン（例：お支払いを直したあとの「状態を更新する」） */
+  secondaryLabel?: string | null;
+  onSecondary?: () => void;
 }) {
   return (
     <View style={[styles.box, notice.urgent && styles.boxUrgent]}>
@@ -25,6 +30,11 @@ export default function PlanNoticeCard({
           {actionLabel != null && (
             <TouchableOpacity style={[styles.btn, notice.urgent && styles.btnUrgent]} onPress={onActionPress} activeOpacity={0.85}>
               <Text style={styles.btnText}>{actionLabel}</Text>
+            </TouchableOpacity>
+          )}
+          {secondaryLabel != null && onSecondary != null && (
+            <TouchableOpacity style={styles.secondaryBtn} onPress={onSecondary} activeOpacity={0.8}>
+              <Text style={styles.secondaryText}>{secondaryLabel}</Text>
             </TouchableOpacity>
           )}
           {onDismiss != null && (
@@ -60,6 +70,8 @@ const styles = StyleSheet.create({
   btn: { backgroundColor: '#B5622E', paddingHorizontal: 18, paddingVertical: 9, borderRadius: 20 },
   btnUrgent: { backgroundColor: '#C0392B' },
   btnText: { color: '#FFFFFF', fontSize: 14, fontWeight: '800' },
+  secondaryBtn: { borderWidth: 1.5, borderColor: '#C0392B', paddingHorizontal: 14, paddingVertical: 7, borderRadius: 20 },
+  secondaryText: { color: '#A12A1F', fontSize: 13, fontWeight: '800' },
   closeBtn: { paddingHorizontal: 8, paddingVertical: 9 },
   closeText: { color: '#6B5E50', fontSize: 13, fontWeight: '700' },
 });

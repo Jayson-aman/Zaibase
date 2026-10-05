@@ -4,6 +4,7 @@ import {
   getCustomerInfo,
   tierFromCustomerInfo,
   onEntitlementChanged,
+  ensureForegroundRefresh,
   SubscriptionTier,
 } from '../services/subscription';
 import { planStatusFromCustomerInfo, type PlanStatus } from '../utils/planStatus';
@@ -29,6 +30,8 @@ export function useSubscription(): SubscriptionState {
 
   useEffect(() => {
     mounted.current = true;
+    // 前面に戻ったときの取り直しを、アプリ全体で1回だけ登録する
+    ensureForegroundRefresh();
 
     getCustomerInfo()
       .then((info) => {

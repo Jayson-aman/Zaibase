@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Linking, Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useSubscription } from '../hooks/useSubscription';
+import { refreshCustomerInfo } from '../services/subscription';
 import { planNotice } from '../utils/planStatus';
 import PlanNoticeCard from './PlanNoticeCard';
 
@@ -67,6 +68,9 @@ export default function PlanStatusBanner({ onAction }: { onAction: () => void })
       actionLabel={actionLabel}
       onActionPress={onActionPress}
       onDismiss={plan.kind === 'expired' ? dismiss : undefined}
+      // お支払いを直したあと、アプリを閉じなくても帯を消せるようにする
+      secondaryLabel={isBilling ? '直したので更新する' : null}
+      onSecondary={isBilling ? () => { void refreshCustomerInfo(); } : undefined}
     />
   );
 }

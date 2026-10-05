@@ -1,4 +1,4 @@
-import { Platform } from 'react-native';
+import { AppState, Platform } from 'react-native';
 import { callFirebaseFunction } from './firebaseClient';
 
 export type SubscriptionTier = 'free' | 'pro' | 'max';
@@ -236,6 +236,55 @@ export async function getCustomerInfo(): Promise<unknown> {
   }
   const Purchases = (await import('react-native-purchases')).default;
   return Purchases.getCustomerInfo();
+}
+
+/**
+ * 契約情報をストアから取り直して、画面に知らせる。
+ * 支払いの問題を直したあと、アプリに戻っても「お支払いの問題」の帯が消えずに残っていた。
+ * （取り直す処理がどこにも無く、アプリを再起動するまで古い情報のままだった）
+ * ネイティブは RevenueCat のキャッシュを捨ててから取り直す。
+ */
+export async function refreshCustomerInfo(): Promise<void> {
+  if (!isRevenueCatConfigured()) return;
+  try {
+    if (!isWeb) {
+      const Purchases = (await import('react-native-purchases')).default;
+      await Purchases.invalidateCustomerInfoCache();
+    }
+    emitEntitlementChanged(await getCustomerInfo());
+  } catch {
+    // 取り直せなくても、いまの表示はそのまま（致命的ではない）
+  }
+}
+
+// アプリが前面に戻るたびに取り直す。画面ごとに登録すると同時に何度も走るので、
+// アプリ全体で1回だけ登録し、続けて何度も呼ばれないよう15秒あける。
+let foregroundBound = false;
+let lastForegroundRefresh = 0;
+export function ensureForegroundRefresh(): void {
+  if (foregroundBound || !isRevenueCatConfigured()) return;
+  foregroundBound = true;
+  const run = () => {
+    const now = Date.now();
+    if (now - lastForegroundRefresh < 15_000) return;
+    lastForegroundRefresh = now;
+    void refreshCustomerInfo();
+  };
+  try {
+    if (isWeb) {
+      if (typeof document !== 'undefined') {
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'visible') run();
+        });
+      }
+    } else {
+      AppState.addEventListener('change', (st) => {
+        if (st === 'active') run();
+      });
+    }
+  } catch {
+    foregroundBound = false;
+  }
 }
 
 // ⚠️ 製品IDは App Store Connect で一度作成すると削除しても再利用不可（Apple仕様）。
