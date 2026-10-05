@@ -1548,17 +1548,33 @@ Wangari Maathai believed that protecting nature and helping people were connecte
 ■ 例題①
 　My sister ( ) to school every day.
 　1. go　2. goes　3. going　4. went
-　→ every day（毎日）から現在の習慣とわかる。主語 My sister は三人称単数なので、動詞には -s が必要。答えは goes。
+　【何を聞かれているか】空所に入る、動詞の正しい形を選ぶ問題。
+　【手がかり1】every day（毎日）があるので、「いつもしていること」を表す現在の文。過去形の went や、ing形だけの going は合わない。
+　【手がかり2】主語は My sister（私の姉）で、I と you 以外の1人の人、つまり三人称単数。現在の文で主語が三人称単数のときは、動詞に -s や -es をつけるきまりがあるから、go だけでは誤り。
+　【手順】go に -es をつけると goes になる（go は o で終わるので -es）。
+　→ 答えは 2. goes。
+　【確かめ】声に出して My sister goes to school every day. と読み、不自然でないかを確かめる。別の主語で I go to school every day. なら go でよいと比べると、-s が必要な理由がはっきりする。
+　【よくあるまちがい】主語が My sister（1人）だと気づかず、複数の主語のつもりで go を選ぶこと。
 
 ■ 例題②
-　A: What time is it now?　B: It's ( ) nine.
+　A: What time do you get up?　B: I get up ( ) seven.
 　1. in　2. on　3. at　4. to
-　→ 時刻の前に置く前置詞は at。at nine で「9時に」という意味になる。
+　【何を聞かれているか】時刻 seven（7時）の前に入る前置詞を選ぶ問題。
+　【手がかり】What time ~?（何時に〜？）とたずねられ、「7時に起きる」と答える文。「〜時に」と時刻を言うときの前置詞を選ぶ。
+　【なぜ at か】前置詞は、後ろに来る語の種類によって決まっている。時刻（seven、7:30 など）の前は at。曜日（Monday）の前は on、月や季節の前は in を使うので、ここでは in や on は合わない。to は「〜へ」と方向を表す語で、時刻の前には使わない。
+　→ 答えは 3. at。（at seven で「7時に」という意味になる。）
+　【確かめ】I get up at seven. と声に出して読み、「7時に起きる」という意味で自然に聞こえるかを確かめる。
+　【よくあるまちがい】in the morning（朝に）のイメージから in を選ぶこと。in は「朝・午後・夜」「月」「年」の前で使い、時刻そのものの前は at です。
 
 ■ 例題③
 　There ( ) two cats under the table.
 　1. is　2. are　3. was　4. am
-　→ 主語 two cats（複数）に合わせて are を選ぶ。There is/are のあとの動詞は、そのあとに続く名詞の数に合わせる。
+　【何を聞かれているか】There ( ) ... の空所に入る be動詞を選ぶ問題。
+　【手がかり】There is / There are の文では、be動詞は「あとに続く名詞」の数に合わせる。ここでは two cats（2ひきのねこ）で複数。
+　【なぜ are か】is は1つのもの、are は2つ以上のものに使うから。was は過去形なので、時を表す語がないこの文では合わない。am は I のときだけ使う。
+　→ 答えは 2. are。
+　【確かめ】There is a cat under the table. なら a cat（1ぴき）なので is。two cats に変えると are になる、と並べて比べると、数と be動詞の対応がわかる。
+　【よくあるまちがい】There が先に来ているので、There に合わせて is を選んでしまうこと。数を決めるのは、あとの名詞です。
 
 ★ ポイント：語句選択問題は、空所の前後にある「時を表す語（every day、now）」「主語の数（三人称単数か複数か）」「決まった組み合わせ（at＋時刻）」の3つを手がかりに探すと、確実に絞り込める。`,
       },
@@ -1570,7 +1586,16 @@ Wangari Maathai believed that protecting nature and helping people were connecte
 　A: Would you like some tea?
 　B: ( )
 　1. Yes, please.　2. It's Monday.　3. See you.　4. Nice to meet you.
-　→ Would you like ~?（〜はいかがですか）という申し出への返事なので、Yes, please.（はい、お願いします）が自然。
+　【何を聞かれているか】Bの発言として、会話がいちばん自然につながるものを選ぶ問題。
+　【手がかり】A の Would you like some tea? は「お茶はいかがですか」というすすめる言い方（申し出）。申し出には「はい、いただきます」か「いいえ、けっこうです」で答えるのが自然。
+　【選択肢を1つずつ当てはめる】
+　　1. Yes, please.（はい、お願いします）→ 申し出を受けている。自然。
+　　2. It's Monday.（月曜日です）→ 曜日をたずねられたときの答え。お茶の話とつながらない。
+　　3. See you.（またね）→ 別れるときのあいさつ。
+　　4. Nice to meet you.（はじめまして）→ 会ったときのあいさつ。
+　　だから、答えは 1. Yes, please.
+　【確かめ】A と B を続けて読み、「お茶はいかが？」「はい、お願いします」と会話が成り立つことを確かめる。
+　【よくあるまちがい】文法が正しい文なら何でも正解だと思い、It's Monday. のような文を選んでしまうこと。質問の種類と答えの種類が合っているかを見る。
 
 ■ 例題②
 　A: How was your weekend?
@@ -1596,7 +1621,13 @@ Wangari Maathai believed that protecting nature and helping people were connecte
 
 ■ 例題
 　( is / your / this / bag / ) ?
-　→ 疑問文なので be動詞 is を主語の前に置く。並べると Is this your bag? となる。
+　【何を聞かれているか】5つの語を並べかえて、意味の通る疑問文をつくる問題。
+　【手順1】動詞を探す。与えられた語の中で動詞は is（be動詞）だけ。
+　【手順2】骨組みを決める。最後に ? があるので疑問文。be動詞の疑問文は「Be動詞＋主語＋〜?」の順なので、is を文の最初に置く。主語は this。ここまでで Is this ~? になる。
+　【手順3】残りを当てはめる。残りは your と bag。your は名詞 bag の前に置いて「あなたのかばん」になるから、your bag の順。
+　→ 並べると Is this your bag? （これはあなたのかばんですか）。
+　【確かめ】最初の語を大文字にして、声に出して読み、意味が通ることを確かめる。This is your bag. の文の is と this を入れかえた形になっている点も確認する。
+　【よくあるまちがい】this を最初に置いて This is your bag? としてしまうこと。疑問文では、be動詞が主語の前に出ます。
 
 ■ リスニング問題の種類と対策
 　パート1：絵を見て、説明として合う英文を選ぶ → 絵の中の人物・物・動作をあらかじめ確認しておく
@@ -1644,12 +1675,30 @@ Wangari Maathai believed that protecting nature and helping people were connecte
 ■ 例題①（現在完了）
 　A: Have you ( ) finished your homework?　B: Yes, I have.
 　1. yet　2. already　3. still　4. never
-　→ Have you already finished ~? は完了用法の疑問文で自然な組み合わせ。yetは主に疑問文の文末や否定文で使われる。
+　【何を聞かれているか】Have you ( ) finished ~? の空所に入る、現在完了と相性のよい副詞を選ぶ問題。
+　【手がかり】Have you finished ~? は、have＋過去分詞（finished）の現在完了形で、「もう〜してしまいましたか」と今の時点で終わっているかをたずねる完了用法の疑問文。
+　【選択肢を1つずつ考える】
+　　1. yet（もう）→ 疑問文や否定文で使うが、Have you finished your homework yet? のように文の最後に置くのがふつう。have と finished の間には入れない。
+　　2. already（もう、すでに）→ have と過去分詞の間に置いて「もうすでに〜した」を表す。Have you already finished ~? で自然。
+　　3. still（まだ）→ 「まだ〜している」と状態が続くことを言う語で、完了の疑問文には合わない。
+　　4. never（一度も〜ない）→ 否定の意味をもつ語なので、疑問文の Have you ( ) finished ~? には合わず、Yes, I have. という答えとも矛盾する。
+　→ 答えは 2. already。
+　【確かめ】Yes, I have.（はい、終わりました）という答えとつながるか確認する。already finished なら「もう終わった」で、答えと一致する。
+　【よくあるまちがい】yet は「もう」の意味で完了とセットで覚えているため、位置に関係なく選んでしまうこと。空所が have と過去分詞の間にあるときは already です。
 
 ■ 例題②（比較）
 　This mountain is ( ) than that one.
 　1. high　2. higher　3. highest　4. more high
-　→ than があるので比較級が入る。high は -er をつける規則変化なので higher が正解。
+　【何を聞かれているか】than の前に入る、high の正しい形を選ぶ問題。
+　【手がかり】空所のあとに than（〜よりも）がある。「AはBより〜だ」と2つを比べる文では、形容詞を比較級にして、あとに than を置く。
+　【なぜ higher か】high のような短い（1音節の）形容詞は、語の終わりに -er をつけて比較級にする。high → higher。
+　【選択肢を1つずつ考える】
+　　1. high → 比べていない形なので、than とは合わない。
+　　3. highest → 最上級で、「いちばん高い」。than ではなく the highest in ~ の形で使う。
+　　4. more high → more をつけるのは interesting や beautiful のような長い形容詞。high は短いので -er を使う。
+　→ 答えは 2. higher。
+　【確かめ】This mountain is higher than that one.（この山はあの山より高い）と読み、意味が通ることを確かめる。
+　【よくあるまちがい】more interesting のように何でも more をつけると思い、more high と言ってしまうこと。短い語は -er、長い語は more です。
 
 ★ ポイント：4級は5級の範囲がそのまま出題される土台の上に、新しい文法が積み重なる試験。5級レベルの基礎に不安があるまま4級の対策をしても、応用問題でつまずきやすいので、まず土台を固めることが大切。`,
       },

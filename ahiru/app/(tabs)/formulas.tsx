@@ -622,6 +622,9 @@ export default function FormulasScreen() {
       <FlatList
         style={styles.scroll}
         contentContainerStyle={styles.content}
+        // 一問一答の答えを書く欄がキーボードに隠れないようにする
+        automaticallyAdjustKeyboardInsets
+        keyboardShouldPersistTaps="handled"
         data={rows}
         keyExtractor={(r) => r.key}
         // 行の高さがばらばらなリストを少しずつ描画すると、スクロールのたびに

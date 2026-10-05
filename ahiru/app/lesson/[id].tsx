@@ -193,7 +193,7 @@ export default function LessonDetailScreen() {
         </View>
       </View>
 
-      <ScrollView style={styles.scroll} contentContainerStyle={styles.content}>
+      <ScrollView style={styles.scroll} contentContainerStyle={styles.content} automaticallyAdjustKeyboardInsets keyboardShouldPersistTaps="handled">
         {(subLoading || (isNew20 && unitUnlocksLoading)) && (
           <View style={styles.center}>
             <ActivityIndicator color={info.color} />

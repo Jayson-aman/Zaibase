@@ -45,9 +45,11 @@ type Props = {
   tone?: 'blue' | 'brown';
   /** まわりのカードにすでに余白があるとき、横の余白を取る */
   flush?: boolean;
+  /** 入力欄を押したとき。キーボードで隠れないよう、親が画面をずらすのに使う */
+  onFocus?: () => void;
 };
 
-export default function AnswerInput({ question, onSubmit, submitted, tone = 'blue', flush = false }: Props) {
+export default function AnswerInput({ question, onSubmit, submitted, tone = 'blue', flush = false, onFocus }: Props) {
   const c = tone === 'brown'
     ? { accent: '#8B5A38', btn: '#B5622E', border: '#E8DCC8', bg: '#FAF6EF' }
     : { accent: '#0369A1', btn: '#0EA5E9', border: '#BAE6FD', bg: '#F8FAFC' };
@@ -141,6 +143,7 @@ export default function AnswerInput({ question, onSubmit, submitted, tone = 'blu
         style={[styles.input, isWriting && styles.inputTall, { borderColor: c.border, backgroundColor: c.bg }]}
         value={text}
         onChangeText={setText}
+        onFocus={onFocus}
         placeholder={isWriting ? 'ここに自分の言葉で書いてね' : 'ここに答えを書いてね'}
         placeholderTextColor="#94A3B8"
         multiline={isWriting}

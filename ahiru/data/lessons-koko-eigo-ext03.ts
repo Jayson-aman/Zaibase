@@ -2211,17 +2211,46 @@ know / believe / understand / like / love / want / need / have（所有）／see
 （what / was / he / doing / then）を並べかえなさい。
 → What was he doing then?（彼はそのとき何をしていたのですか）
 配られた be動詞が was なので、主語は I か三人称単数だと逆に読み取れる。ここでは he があるので was で正しい。were が配られていたら、主語は you か複数のはずだと確かめられる。
+【解法】
+【何を聞かれているか】5つの語を並べかえて、「彼はそのとき何をしていたのですか」という文を作る。
+【なぜこの考え方か】並べかえは、文の骨組みから作ると迷わない。過去進行形の骨組みは〈was / were＋ing形〉の組なので、まずその組を作る。そのうえで、疑問詞があれば先頭へ出し、残りを順に並べる。
+【ステップ1】was と doing があるので、過去進行形の文だとわかる。主語 he を入れて、he was doing という述語のかたまりを作る。
+【ステップ2】疑問詞 what があるので、先頭に置く。疑問文では be動詞を主語の前に出すので、What was he doing の語順になる。
+【ステップ3】残った then（そのとき）は時を表す語なので、最後に置く。
+【答え】What was he doing then?
+【確かめ】①主語 he は三人称単数なので、be動詞は was で合っている。②doing は ing 形。③then と過去の時制が合っている。④疑問詞の疑問文なので、文末は「?」になっている。
+【よくあるまちがい】What he was doing then? のように、主語を was の前に置いてしまう。疑問詞のある疑問文では、be動詞が主語の前に出る。
 
 ■ 例題2
-（were / when / came / they / I / home / playing / soccer）
+（were / when / came / they / I / home / playing / soccer）を並べかえて、「私が帰ってきたとき、彼らはサッカーをしていました」という文にしなさい。
 → They were playing soccer when I came home.
 または When I came home, they were playing soccer.
 when 節を前に置いたときはコンマが必要になる。
+【解法】
+【何を聞かれているか】8つの語を並べかえて、「私が帰ってきたとき、彼らはサッカーをしていました」という文を作る。
+【なぜこの考え方か】二つの出来事をつなぐ文では、まず「続いていた動作」と「割りこんだ出来事」を見分ける。続いていた動作には過去進行形（were playing）、割りこんだ出来事には過去形（came）を使う。when は「〜したとき」で、割りこんだ出来事の側につく。
+【ステップ1】続いていた動作を作る。were と playing があるので、they were playing soccer。主語 they は複数なので were で合っている。
+【ステップ2】割りこんだ出来事を作る。came があるので、I came home（帰ってきた）。
+【ステップ3】割りこんだ出来事の前に when を置いて、二つをつなぐ。They were playing soccer when I came home.
+【ステップ4】when の節を前に出すこともできる。その場合は、節の終わりにコンマを付ける。When I came home, they were playing soccer.
+【答え】They were playing soccer when I came home.（または When I came home, they were playing soccer.）
+【確かめ】過去進行形が1つ（were playing）、過去形が1つ（came）になっていて、続いていた動作と割りこんだ出来事の関係が日本語の意味と合っている。配られた8語をすべて使っているかも数える。
+【よくあるまちがい】when を playing の側にくっつけて、時制の割りあてを逆にしてしまう。「帰ってきた」が割りこんだ出来事なので、came の側に when を付ける。
 
 ■ 例題3
 （not / she / was / listening / to / me）
 → She was not listening to me.（彼女は私の話を聞いていなかった）
 not は be動詞のうしろに置く。
+【解法】
+【何を聞かれているか】6つの語を並べかえて、「彼女は私の話を聞いていなかった」という文を作る。
+【なぜこの考え方か】過去進行形の否定文は、be動詞のうしろに not を置いて作る。be動詞 was が否定文を作る役目を持っているので、一般動詞の否定文のように did not は使わない。
+【ステップ1】述語のかたまりを作る。she was listening（彼女は聞いていた）。
+【ステップ2】not を be動詞のうしろに入れる。she was not listening。
+【ステップ3】listen は「〜を聞く」というとき to とセットで使う。そのため、残りの to me をそのまま続ける。
+【ステップ4】文頭を大文字にして、文末にピリオドを付ける。
+【答え】She was not listening to me.
+【確かめ】not を取りのぞくと She was listening to me. という肯定文になる。not が was のうしろに入っただけの形になっていることを確かめる。was not は wasn't と短縮してもよい。
+【よくあるまちがい】She did not was listening to me. のように did を使う。または She not was listening to me. のように not の位置を be動詞の前に置く。
 
 ★ ポイント：語順で迷ったら、まず述語のかたまり〈be動詞＋ing形〉を作る。ここが決まれば残りは自然に並ぶ。`,
       },

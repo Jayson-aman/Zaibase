@@ -1705,6 +1705,26 @@ info('日本語の中に英単語が挟まっている（要目視）', latin, 8
   check('【問題集】解く前の画面の図の説明に、答えが書かれている', leakDesc);
 }
 
+// 単元の例題は、見せるなら詳細な計算過程と「なぜそうなるのか」まで書く（2026/10/5 ユーザー指示）。
+// 式を並べて答えを出すだけの例題は、できる子には要らず、できない子には何も伝わらない。
+// 例題ごとに、解法が短い（200字未満）か、理由を述べる言い回しが1つも無いものを数える。
+{
+  const REASON = /なぜ|ので|ため|から|だから|理由|というのは|わけ|したがって|よって|つまり|ことから/;
+  const bad: string[] = [];
+  for (const l of allLessons as any[]) for (const sec of l.sections ?? []) {
+    const lines = String(sec.body ?? '').split('\n');
+    for (let i = 0; i < lines.length; i++) {
+      if (!/^\s*■\s*(入試)?例題|^\s*■\s*例[1-9１-９]|^\s*(例題|例)\s*[1-9１-９①-⑨]?\s*[:：]/.test(lines[i])) continue;
+      let j = i + 1;
+      while (j < lines.length && !/^\s*■|^\s*★|^\s*⚠/.test(lines[j])) j++;
+      const body = lines.slice(i + 1, j).join('\n');
+      const sol = body.includes('【解法】') ? body.slice(body.indexOf('【解法】')) : body;
+      if (sol.length < 200 || !REASON.test(sol)) bad.push(`${l.id}「${lines[i].trim().slice(0, 16)}」`);
+    }
+  }
+  check('【単元】例題の解法が短い、または「なぜ」が書かれていない', bad);
+}
+
 console.log(`\n合計 ${problems} 件`);
 console.log(
   problems === 0

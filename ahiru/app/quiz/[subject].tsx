@@ -283,6 +283,8 @@ export default function QuizScreen() {
   // 正解/不正解ボタンの二重タップ防止。二重に走ると currentIndex が2つ進み、
   // 最後の2問で範囲外になって落ちる。
   const answeringRef = useRef(false);
+  const scrollRef = useRef<ScrollView>(null);
+  const answerYRef = useRef(0);
   // レベル別ドリル・入試対策の「1日あたり無料N問」の消費数。画面を離れて
   // 入り直すだけで無料枠が復活しないよう、AsyncStorageの永続値を読み込んで保持する。
   const sessionFreeUsedRef = useRef(0);
@@ -799,9 +801,15 @@ export default function QuizScreen() {
       </View>
 
       <ScrollView
+        ref={scrollRef}
         style={styles.scroll}
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}
+        // 答えを書く欄がキーボードに隠れて、打っている文字が見えなかった。
+        // iOS はキーボードの高さぶん余白を足して、入力欄を見える位置まで自動でずらす。
+        automaticallyAdjustKeyboardInsets
+        // 入力中に「答え合わせ」を押すと、最初の1回はキーボードを閉じるだけで押せていなかった
+        keyboardShouldPersistTaps="handled"
       >
         {/* Score display */}
         <View style={styles.scoreRow}>
@@ -936,12 +944,16 @@ export default function QuizScreen() {
           先に書いてもらい、機械が採点する（記述問題は正誤をつけず見くらべる）。
         */}
         {!currentChoices && (
-          <AnswerInput
-            key={currentQuestion.id}
-            question={currentQuestion}
-            onSubmit={handleSubmitTyped}
-            submitted={typed}
-          />
+          <View onLayout={(e) => { answerYRef.current = e.nativeEvent.layout.y; }}>
+            <AnswerInput
+              key={currentQuestion.id}
+              question={currentQuestion}
+              onSubmit={handleSubmitTyped}
+              submitted={typed}
+              // キーボードが出たら、入力欄が画面の上のほうに来るまでスクロールする
+              onFocus={() => setTimeout(() => scrollRef.current?.scrollTo({ y: Math.max(0, answerYRef.current - 16), animated: true }), 250)}
+            />
+          </View>
         )}
 
         {/* 記述問題は正誤をつけないので、模範解答を見たら自分で次へ進む */}

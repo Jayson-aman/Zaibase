@@ -502,15 +502,54 @@ Last week, a young woman who used to visit the shop as a child opened a small ca
         heading: '主語のかたまりを( )でくくる',
         body: `■ 例1：The man (who ran it for forty years) was ninety years old.
 S＝The man、V＝was。( )の中は「それを40年間営んでいた」という説明。日本語では「40年間その店をやっていた男性は90歳だった」となり、説明が主語の前に来る。英語は後ろ、日本語は前、という語順の差を意識する。
+【解法】
+【何を聞かれているか】文の主語（S）と動詞（V）を見つけて、意味をとる。
+【なぜこの考え方か】英語では、名詞を説明する語句が名詞のうしろに付く。説明が長くなると、どこまでが主語で、本物の動詞がどれなのか分からなくなる。そこで、説明のかたまりを( )でくくって外し、のこった骨組みを先に読む。
+【ステップ1】The man のうしろに who ran it for forty years が付いている。who は関係代名詞で、The man を説明している。この部分を( )でくくる。
+【ステップ2】( )の中にも動詞 ran があるが、これは「営んでいた」という説明の動詞なので、文全体の V ではない。
+【ステップ3】( )を外した骨組みは The man was ninety years old. S＝The man、V＝was と決まる。
+【ステップ4】意味をとる。( )は「それを40年間営んでいた」。日本語は説明を名詞の前に置くので、「40年間その店をやっていた男性は90歳だった」となる。
+【答え】S＝The man、V＝was。訳は「40年間その店をやっていた男性は90歳だった」。
+【確かめ】( )を取った The man was ninety years old.（その男性は90歳だった）が、意味の通る文になっているかを見る。通れば( )のくくり方は正しい。
+【よくあるまちがい】ran を文全体の動詞と考えて、was との二つの動詞が並んでいるように見てしまう。( )の中の動詞は説明の一部である。
 
 ■ 例2：The books (that he sold) were not new.
 S＝The books（複数）、V＝were。( )内の he sold につられて was と書くと誤り。動詞の形は「本体の名詞」に合わせる。
+【解法】
+【何を聞かれているか】主語（S）と動詞（V）を見つけ、be動詞の形が主語に合っているかを確かめる。
+【なぜこの考え方か】動詞の形（単数か複数か）は、文全体の主語である「本体の名詞」で決まる。( )の中の語は説明であって、主語ではない。だから、本体の名詞を先に見つけ、( )の中の語は見ないようにする。
+【ステップ1】books のうしろの that he sold を( )でくくる。that は関係代名詞で、he sold the books（彼がその本を売った）の the books にあたる。
+【ステップ2】( )の中の he sold は説明なので、文全体の S・V ではない。
+【ステップ3】骨組みは The books were not new. 本体は The books（複数）なので、be動詞は were。he は単数だが、( )の中なので動詞の形には関係しない。
+【答え】S＝The books、V＝were。訳は「彼が売った本は新しくなかった」。
+【確かめ】( )を外した The books were not new. で、books（複数）と were が合っているか確かめる。
+【よくあるまちがい】( )の中の he につられて was と書く。動詞の形は、本体の名詞に合わせる。
 
 ■ 例3：The thing (I remember best) is his memory.
 The thing の後ろにいきなり I remember と〈S＋V〉が続いている。これは関係代名詞 that（または which）が省略された形。「名詞＋S＋V」と並んだら省略を疑う。
+【解法】
+【何を聞かれているか】主語（S）と動詞（V）を見つけ、( )の中の文の成り立ちを説明する。
+【なぜこの考え方か】名詞のうしろに〈S＋V〉がいきなり続く形は、関係代名詞（that / which）が省略されたものである。目的語の働きをする関係代名詞は、なくても意味が通じるので省略できる。この規則を知っていれば、I remember を文全体の S・V と取りちがえない。
+【ステップ1】The thing のうしろに I remember best が続いている。名詞＋S＋V の並びなので、that の省略を疑う。
+【ステップ2】省略を戻すと The thing (that) I remember best。remember の目的語が The thing にあたる（その事を覚えている）。この部分を( )でくくる。
+【ステップ3】( )を外した骨組みは The thing is his memory. S＝The thing、V＝is。
+【ステップ4】意味をとる。「私がいちばんよく覚えていること」が主語で、それが「彼の記憶力」だと言っている。
+【答え】S＝The thing、V＝is。訳は「いちばん覚えているのは彼の記憶力だ」。
+【確かめ】that を入れて The thing that I remember best is his memory. と読んでも、自然な文になるかを見る。自然なら、省略の判断は正しい。
+【よくあるまちがい】I remember を文全体の主語と動詞だと考えて、The thing を浮いた語にしてしまう。
 
 ■ 例4：a young woman (who used to visit the shop as a child) opened a small cafe
 S＝a young woman、V＝opened。( )が9語もあるので、opened を見失いやすい。
+【解法】
+【何を聞かれているか】長い( )がある文で、主語（S）と動詞（V）を見つける。
+【なぜこの考え方か】( )が長いと、( )の中の動詞に目を奪われて、本物の動詞を見落とす。本物の V は( )が閉じた直後に出てくるので、( )を先にくくって外せば、骨組みだけが見える。
+【ステップ1】a young woman のうしろの who used to visit the shop as a child を( )でくくる。who は関係代名詞で、a young woman を説明している。
+【ステップ2】( )の中は9語ある。used to visit は「以前はよく訪れていた」、as a child は「子どものころ」。この visit は説明の動詞で、文全体の V ではない。
+【ステップ3】( )を外すと a young woman opened a small cafe。S＝a young woman、V＝opened と決まる。
+【ステップ4】意味をとる。「子どものころによくその店に来ていた若い女性が、小さなカフェを開いた」。
+【答え】S＝a young woman、V＝opened
+【確かめ】( )を取った a young woman opened a small cafe（若い女性が小さなカフェを開いた）で文が成り立つかを見る。本文の第4段落とも合っている。
+【よくあるまちがい】( )の中の visit を文の V と考えて、「若い女性が店を訪れた」で読み終えてしまう。( )が閉じた直後の語を見る。
 
 例）The old bookshop (near the station) closed last month.
 　　前置詞句も主語を長くする。S＝The old bookshop、V＝closed。
@@ -2653,11 +2692,31 @@ Engineers look at plants and animals, find a useful design, and use the same ide
 発見：カワセミはほとんど水しぶきを立てずに水に入る。くちばしが細長い。
 応用：似た形の先頭部にした
 結果：音が小さくなり、電気の使用量も減った
+【解法】
+【何を聞かれているか】第2段落の新幹線の例が、「問題→発見→応用→結果」の流れで、どう説明されているかを整理する。
+【なぜこの考え方か】説明文の「例」は、定義（自然をまねて新しいものを作ること）が本当だと示すために置かれている。例の出来事を決まった順に分けて読むと、定義とのつながりが見え、設問で問われる場所をすぐ探せる。
+【ステップ1】問題を探す。the Shinkansen made a loud noise when it came out of a tunnel の部分。トンネルから出るときの大きな音が、困りごとである。
+【ステップ2】発見を探す。A kingfisher can enter water almost without a splash. Its beak is long and thin. 自然の側（カワセミ）に、ほとんどしぶきを立てない仕組みがあり、その理由は細長いくちばしだと分かる。
+【ステップ3】応用を探す。The team gave the train a similar nose. 似た形の先頭部を、新幹線に取り入れた。
+【ステップ4】結果を探す。the noise became smaller. The new train also used less electricity. 音が小さくなり、also のあとで電気の使用量も減ったと、結果が一つ増えている。
+【答え】問題＝トンネルでの大きな音、発見＝カワセミの細長いくちばし、応用＝似た形の先頭部、結果＝音が小さくなり電気も減った。
+【確かめ】本文に戻って確かめる。四つがそれぞれ本文の文に対応しているか、そして「自然を観察して、機械に使う」という定義の流れに合っているかを見る。
+【よくあるまちがい】almost without a splash を「まったくしぶきを立てない」と訳す。almost があるので、「ほとんど立てない」が正しい。
 
 ■ 例2（第3段落）：ヤモリとテープ
 発見：ヤモリの足には無数の細かい毛があり、壁を歩ける
 応用：同じ構造のテープを作った
 結果：のりなしでくっつき、何度も使える
+【解法】
+【何を聞かれているか】第3段落のヤモリの例が、どんな流れで説明されているかを整理する。
+【なぜこの考え方か】例が二つあるときは、二つを同じ型で整理すると、共通点が見える。この共通点が、筆者の言いたいこと（要旨）になる。だから、例1と同じ「発見→応用→結果」の型にあてはめて読む。
+【ステップ1】発見を探す。The feet of a gecko have millions of very small hairs, and these hairs let the animal walk on a wall. ヤモリの足には細かい毛が無数にあり、その毛のおかげで壁を歩ける。let ＋ 動物 ＋ 動詞は、「〜できるようにする」という意味。
+【ステップ2】応用を探す。Scientists made a tape with the same structure. 科学者が、同じ構造のテープを作った。
+【ステップ3】結果を探す。It sticks without glue and can be used again and again. のりなしでくっつき、くり返し使える。
+【ステップ4】例1とくらべる。例1にあった「問題」は、この例には書かれていない。それでも、発見→応用→結果の流れは同じである。
+【答え】発見＝ヤモリの足の無数の細かい毛、応用＝同じ構造のテープ、結果＝のりなしでくっつき、何度も使える。
+【確かめ】本文に戻って確かめる。It が指すのは直前に作られた tape（ヤモリではない）。指すものを入れかえて読み、意味が通るかを見る。
+【よくあるまちがい】It sticks の It を gecko と取ってしまう。直前の文の主語は科学者が作った tape なので、It は the tape を指す。
 
 ■ 二つの例の共通点
 どちらも「自然の観察 → 人工物への応用 → 性能の向上」という同じ流れである。共通点こそが筆者の主張であり、最終段落の Nature has been testing designs for millions of years. につながる。

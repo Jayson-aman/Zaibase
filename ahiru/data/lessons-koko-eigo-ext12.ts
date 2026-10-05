@@ -775,20 +775,41 @@ tell は「人に〜を教える」なので SVOO（tell＋人＋もの）。
 
 ■ 例題1
 「この本を読めば、彼の考え方がよくわかります。」
-①主語を補う →「（あなたが）この本を読めば、（あなたは）彼の考え方をよく理解できます」
-②③平易化 →「もしあなたがこの本を読めば、あなたは彼の考えをよく理解できる」
-④模範解答：If you read this book, you will understand his ideas well.
-（if 節の中は未来のことでも現在形 read を使う。これは頻出の減点ポイント）
+【解法】
+【何を聞かれているか】日本語の文を、英語に直す。
+【なぜこの考え方か】日本語は主語を省くし、「読めば」のような言い方は英語の型とそのまま対応しない。そのまま英語にしようとすると詰まるので、先に英語にしやすい日本語へ作り直す。
+【ステップ1】主語を補う。「読めば」「わかります」の主語は書かれていないが、一般的な「あなた」を補う。→「（あなたが）この本を読めば、（あなたは）彼の考え方をよく理解できます」
+【ステップ2】述語をやさしく言いかえる。「彼の考え方がよくわかる」を、「あなたは彼の考えをよく理解できる」（understand his ideas well）にほぐす。
+【ステップ3】「〜すれば…」は if を使う。if の節が条件、主節が結果になる。If you read this book, you will understand ...
+【ステップ4】時制を決める。結果は未来のことなので will を使う。ただし if の節の中は、未来のことでも現在形 read を使う。
+【答え】If you read this book, you will understand his ideas well.
+【確かめ】①if節の動詞が現在形の read になっている。②主節が will ＋ 動詞の原形 understand になっている。③his ideas の形で、「彼の考え」が入っている。
+【よくあるまちがい】If you will read this book と、if節の中にも will を入れてしまう。これは頻出の減点ポイントである。
 
 ■ 例題2
 「私は英語を話すのが得意ではありません。」
-模範解答：I am not good at speaking English.
-（be good at の後ろは動名詞。× I am not good at speak English. は誤り）
+【解法】
+【何を聞かれているか】日本語の文を、英語に直す。
+【なぜこの考え方か】「〜するのが得意だ」は、英語では be good at ＋ 動名詞という決まった型で言う。at は前置詞で、前置詞のうしろには名詞の働きをする語が来る。動詞を名詞の働きにするには ing 形（動名詞）にする。
+【ステップ1】主語を確認する。「私は」とあるので I。
+【ステップ2】「得意ではない」を be good at の否定で表す。「得意だ」は be good at、否定は be の後ろに not で I am not good at。
+【ステップ3】at のうしろに「英語を話すこと」を置く。前置詞のうしろなので、speak を speaking にする。
+【ステップ4】つなげる。
+【答え】I am not good at speaking English.
+【確かめ】主語 I に be動詞 am が合っている。at のうしろが speaking（ing形）になっている。
+【よくあるまちがい】at のうしろを speak（原形）にして、I am not good at speak English. と書く。at は前置詞なので、動詞は ing 形にする。
 
 ■ 例題3
 「昨日から雨が降り続いています。」
-模範解答：It has been raining since yesterday.
-（現在完了進行形が書けなければ It has rained since yesterday. でも意味は通じる。ただし「降り続いている」の継続感は進行形のほうが正確）
+【解法】
+【何を聞かれているか】日本語の文を、英語に直す。
+【なぜこの考え方か】「昨日から」は、過去の一点から今まで続くことを表す。過去から現在までのつながりは、英語では現在完了で言う。さらに「降り続けている」という動作の継続を強く出したいので、現在完了進行形を使う。
+【ステップ1】主語を決める。日本語に主語がない。天気を表す文では it を主語にする。
+【ステップ2】時制を決める。「昨日から今まで続いている」ので現在完了。動作が続いているので、has been ＋ ing形（現在完了進行形）にする。主語が it（三人称単数）なので has。
+【ステップ3】「昨日から」を since yesterday とする。since のうしろには、過去の起点を置く。
+【答え】It has been raining since yesterday.
+【確かめ】has been ＋ raining（ing形）の形になっている。since のうしろに起点 yesterday がある。現在完了進行形が書けなければ、It has rained since yesterday. でも意味は通じる。ただし、降り続く継続感は進行形のほうが正確である。
+【よくあるまちがい】It is raining since yesterday. と現在進行形にする。since は、現在完了（進行形）とセットで使う。
 
 ■ 書き終えたあとの4点確認
 ①三単現の -s は付いているか
@@ -2361,33 +2382,72 @@ It is famous for 〜 .
 ①主語を補う →「私は、明日雨が降るだろうと聞いています」
 ②述語をほぐす →「私は聞いている＋明日雨が降るだろう」
 ③英語にする
-模範解答：I hear that it will rain tomorrow.
-（天気の it を主語にする。× Tomorrow rains. は誤り）
+【解法】
+【何を聞かれているか】「〜そうです」を含む日本語を、英語に直す。
+【なぜこの考え方か】「〜そうです」は、人から聞いた話（伝聞）を表す。日本語は「だれが聞いたか」を省くが、英語は必ず主語が要る。そこで、まず「私は聞いている」と主語を補い、聞いた内容を that 以下に入れる。
+【ステップ1】主語を補う。「私は聞いている」→ I hear。
+【ステップ2】聞いた内容を作る。「明日雨が降る」。天気を表す文では it を主語にする。未来のことなので will を使い、it will rain tomorrow。
+【ステップ3】2つをつなぐ。I hear that it will rain tomorrow.
+【答え】I hear that it will rain tomorrow.
+【確かめ】主語と動詞の組が2つ（I hear ／ it will rain）そろっている。tomorrow があるので、未来を表す will が合っている。
+【よくあるまちがい】Tomorrow rains. のように、it を使わず動詞だけで文を作る。英語の文には主語が必要で、天気の文では it が主語になる。
 
 ■ 例題2
 「私は彼に何と言えばよいかわからなかった。」
 ①主語はすでにある（私は）
 ②述語をほぐす →「わからなかった＋何を言うべきか」
 ③〈疑問詞＋to 不定詞〉を使う
-模範解答：I did not know what to say to him.
+【解法】
+【何を聞かれているか】「何と言えばよいか」を含む日本語を、英語に直す。
+【なぜこの考え方か】「何と言えばよいか」は、「何を言うべきか」という意味である。英語には、これを〈疑問詞＋to不定詞〉（what to say）の一かたまりで言う型がある。名詞のように know のあとに置けるので、文が短く書ける。
+【ステップ1】主語と述語を決める。主語は「私は」で I。「わからなかった」は過去の否定なので did not know。
+【ステップ2】わからなかった内容を作る。「何を言うべきか」→ what to say。
+【ステップ3】「彼に」を足す。say は「〜に言う」というとき、to を使う。say to him。
+【ステップ4】つなげる。
+【答え】I did not know what to say to him.
+【確かめ】did not のあとの know は原形になっている。what のあとが to ＋ 原形 say になっている。
+【よくあるまちがい】did not knew のように、did not のあとを過去形にする。did not のあとは原形である。
 
 ■ 例題3
 「私たちの学校は50年前に建てられました。」
 ②「建てられた」＝受動態
-模範解答：Our school was built fifty years ago.
-（build―built―built。× was build は誤り）
+【解法】
+【何を聞かれているか】「建てられました」を含む日本語を、英語に直す。
+【なぜこの考え方か】学校は自分で建つのではなく、人によって建てられる。「〜される」という受け身は、英語では〈be動詞＋過去分詞〉で表す。過去のことなので、be動詞は was にする。
+【ステップ1】主語を決める。「私たちの学校は」→ Our school。
+【ステップ2】述語を決める。「建てられた」は受動態なので was ＋ 過去分詞。build の変化は build ― built ― built なので、過去分詞は built。
+【ステップ3】「50年前に」を fifty years ago とし、文の最後に置く。
+【答え】Our school was built fifty years ago.
+【確かめ】was のあとが過去分詞 built になっている。ago があるので、過去を表す was が合っている。
+【よくあるまちがい】was build のように、過去分詞にせず原形のままにする。build は不規則に変化するので、built と覚える。
 
 ■ 例題4
 「彼女は3年間ずっとピアノを練習しています。」
 ②「ずっと〜している」＝現在完了（継続）
-模範解答：She has practiced the piano for three years.
-（楽器には the を付ける。主語が三人称単数なので has）
+【解法】
+【何を聞かれているか】「3年間ずっと練習しています」を含む日本語を、英語に直す。
+【なぜこの考え方か】「3年間ずっと〜している」は、3年前から今まで続いていることを表す。過去から現在までのつながりを表すのは現在完了なので、〈have / has ＋ 過去分詞〉を使う。続いた期間は for ＋ 期間で表す。
+【ステップ1】主語と have / has を決める。主語は she（三人称単数）なので has。
+【ステップ2】過去分詞を作る。practice の過去分詞は practiced。
+【ステップ3】楽器の前には the を付ける。the piano。
+【ステップ4】期間を足す。for three years。「3年間」は複数なので years と s を付ける。
+【答え】She has practiced the piano for three years.
+【確かめ】has ＋ 過去分詞 practiced の形になっている。for のあとに期間があり、years が複数形になっている。
+【よくあるまちがい】She practices the piano for three years. と現在形にする。現在形は「いつもしている」で、「3年間ずっと」という継続を表せない。
 
 ■ 例題5
 「この本を読めば、彼の考え方がよくわかります。」
 ①主語を補う →「（あなたが）この本を読めば、（あなたは）彼の考えをよく理解できます」
-模範解答：If you read this book, you will understand his ideas well.
-（if 節の中は未来でも現在形）
+【解法】
+【何を聞かれているか】「〜すれば…」の形の日本語を、英語に直す。
+【なぜこの考え方か】「〜すれば」は条件を表すので、英語では if を使う。if の節が条件、主節が結果という2つの文の組み合わせにして考えると、書きやすい。
+【ステップ1】主語を補う。読む人も、理解する人も「あなた」。→ you。
+【ステップ2】条件の部分を作る。「この本を読めば」→ If you read this book。
+【ステップ3】結果の部分を作る。「彼の考えをよく理解できる」。未来のことなので will を使い、you will understand his ideas well。
+【ステップ4】if 節の中の時制に気をつける。条件の節の中は、未来のことでも現在形 read にする。
+【答え】If you read this book, you will understand his ideas well.
+【確かめ】if 節が現在形（read）、主節が will ＋ 原形（understand）になっている。if 節を前に置いたので、コンマで区切っている。
+【よくあるまちがい】If you will read this book と、if 節にも will を入れる。
 
 ★ ポイント：日本語で主語が省かれているときは、まず I か you を補ってみる。学校・町・建物などが主語になる場合は、受動態を疑う。`,
       },
@@ -2400,18 +2460,45 @@ A: How was your weekend?
 B:（　　　　　）（「家族と京都を訪れました。とても楽しかったです。」）
 模範解答：I visited Kyoto with my family. It was a lot of fun.
 （A が How was 〜? と過去形で聞いているので、答えも過去形にそろえる。× I visit Kyoto は誤り）
+【解法】
+【何を聞かれているか】対話文の（　）に入る英文を、日本語に合わせて書く。
+【なぜこの考え方か】対話では、相手の質問の時制に答えをそろえる。A は How was your weekend?（週末はどうだった）と過去形で聞いているので、答えも過去形でそろえないと、会話がかみ合わない。
+【ステップ1】時制を決める。A の質問が過去形なので、答えも過去形にする。
+【ステップ2】1文目を作る。「家族と京都を訪れました」→ I visited Kyoto with my family。visit の過去形は visited。
+【ステップ3】2文目を作る。「とても楽しかった」→ It was a lot of fun。it は、週末にしたことを指す。
+【答え】I visited Kyoto with my family. It was a lot of fun.
+【確かめ】2文とも過去形（visited、was）になっている。with my family が「家族と」を表している。
+【よくあるまちがい】I visit Kyoto with my family. と現在形にする。過去の週末の話なので、過去形にする。
 
 ■ 例題7
 A: Have you ever been to Hokkaido?
 B:（　　　　　）（「はい、2回行ったことがあります。」）
 模範解答：Yes, I have been there twice.
 （現在完了で聞かれたら現在完了で答える。been to の to は there があるので不要）
+【解法】
+【何を聞かれているか】対話文の（　）に入る英文を、日本語に合わせて書く。
+【なぜこの考え方か】A は Have you ever been to Hokkaido?（北海道に行ったことがありますか）と、現在完了で経験を聞いている。経験を聞かれたら、答えも現在完了（have been）の経験で答える。過去形で答えると、「いつ行ったか」の話になり、質問とずれる。
+【ステップ1】Yes と答え、I have been で現在完了の経験の形にする。
+【ステップ2】場所を言う。Hokkaido をくり返さず、「そこへ」を表す there にする。there は「そこに」という意味の語で、to の意味を含んでいるので、been to there とはしない。
+【ステップ3】回数を足す。「2回」は twice。
+【答え】Yes, I have been there twice.
+【確かめ】have ＋ been（過去分詞）の形になっている。there の前に to が入っていない。回数 twice が文末にある。
+【よくあるまちがい】I have been to there twice. と、there の前に to を入れる。there には「そこへ」の意味が入っているので、to は不要。
 
 ■ 例題8
 A: Could you tell me the way to the station?
 B:（　　　　　）（「この道をまっすぐ行けば、右手に見えますよ。」）
 模範解答：Go straight along this street, and you will see it on your right.
 （命令文＋and で「〜すれば…」を表す）
+【解法】
+【何を聞かれているか】対話文の（　）に入る英文を、日本語に合わせて書く。
+【なぜこの考え方か】道案内では、相手にしてほしい動作を「〜してください」と伝える。それには、動詞の原形で始める命令文が向いている。また、〈命令文＋and ＋ 結果〉は、「〜すれば…」を表す形である。
+【ステップ1】「この道をまっすぐ行けば」を命令文で作る。Go straight along this street。along は「〜に沿って」の意味。
+【ステップ2】結果の部分を作る。「右手に見える」→ you will see it on your right。it は the station（駅）を指す。on your right は「右手に」。
+【ステップ3】2つを、コンマと and でつなぐ。
+【答え】Go straight along this street, and you will see it on your right.
+【確かめ】命令文が動詞の原形 Go で始まっている。and のあとが主語 you ＋ will ＋ 原形 see になっている。it が駅を指している。
+【よくあるまちがい】right を「右手」と直訳して、on the right hand のように言いかえる。on your right で十分に伝わる。
 
 ■ 書き終えたあとの4点確認
 ①三単現の -s：主語が he / she / it / 単数名詞で現在形なら動詞に -s

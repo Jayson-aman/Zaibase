@@ -3234,24 +3234,51 @@ My town has a big park near the station. Many people run there or walk their dog
 ④前後をうめる。
 
 ■ 例1：have been to（〜へ行ったことがある）
-①現在完了の動詞句 → 述語になる。
-②主語を I にする。
-③I have been to 〜 の 〜 に場所を入れる。
-【模範解答】I have been to Kyoto three times. It is a beautiful city with many old temples.
-※ 主語が三人称単数なら has been to に変える。My brother has been to Australia.
+【解法】
+【何を聞かれているか】have been to（〜へ行ったことがある）を使って、まとまった英文を書く。
+【なぜこの考え方か】指定語句は、品詞とはたらきを先に決めると、文のどこに置くかが決まる。have been to は〈have＋過去分詞〉の現在完了で、動詞のかたまりなので述語になる。述語が決まれば、主語と、to のうしろの場所を入れるだけで文が組み立つ。
+【ステップ1】はたらきを確認する。現在完了の動詞句なので、述語になる。
+【ステップ2】主語を決める。自分のことなら書きやすいので I にする。I のときは have、三人称単数のときは has を使う。
+【ステップ3】to のうしろに場所を入れる。I have been to Kyoto. 回数を示す three times を文末に足す。
+【ステップ4】内容を広げるため、もう1文書く。京都は今もある事実を述べるので現在形にする。It is a beautiful city with many old temples.
+【答え（模範解答）】I have been to Kyoto three times. It is a beautiful city with many old temples.
+【確かめ】①have been to が入っている。②have のうしろが過去分詞 been になっている。③to のうしろが場所になっている。④2文とも主語と動詞がそろっている。主語が三人称単数なら has been to に変える。例）My brother has been to Australia.
+【よくあるまちがい】have gone to と書く。have gone to は「行ってしまって今ここにいない」という意味で、「行ったことがある」にならない。
 
 ■ 例2：as 〜 as（〜と同じくらい）
-①比較の型 → 形容詞をはさむ。
-②This book is as interesting as that one.
-※ as と as の間は必ず原級。
+【解法】
+【何を聞かれているか】as 〜 as（〜と同じくらい）を使って、二つのものが同じ程度であることを表す英文を書く。
+【なぜこの考え方か】as 〜 as は〈主語＋be動詞＋as＋形容詞＋as＋比べる相手〉という型で使う。「同じ程度」を言う表現なので、二つの as の間には形容詞をそのままの形（原級）で入れる。比較級にすると「〜より」という別の意味になってしまうためである。
+【ステップ1】型を確認する。〈主語＋be動詞＋as＋形容詞＋as＋相手〉。
+【ステップ2】形容詞を選ぶ。本の話にして interesting（おもしろい）を使う。
+【ステップ3】主語を This book、比べる相手を that one にする。that one は that book のくり返しを避けた言い方。
+【ステップ4】型にあてはめて組み立てる。
+【答え】This book is as interesting as that one.（この本はあの本と同じくらいおもしろい）
+【確かめ】as が2つあり、その間に原級の interesting が入っている。主語 This book は単数なので、be動詞 is も合っている。
+【よくあるまちがい】as more interesting as のように、二つの as の間に比較級を入れる。
 
 ■ 例3：too 〜 to 〜（〜すぎて…できない）
-This bag is too heavy for me to carry.
-※ for 人 を to の前に入れることもできる。
+【解法】
+【何を聞かれているか】too 〜 to 〜（〜すぎて…できない）を使って、英文を書く。
+【なぜこの考え方か】too 〜 to … は「〜すぎるので…できない」という意味の型である。not のような否定の語がなくても、too 自体が「〜すぎる」という否定的な意味を持つので、to … が「できない」になる。「だれにとってできないのか」を言いたいときは、to の前に for 人 を入れる。
+【ステップ1】型を確認する。〈主語＋be動詞＋too＋形容詞＋to＋動詞の原形〉。
+【ステップ2】形容詞と動詞を選ぶ。かばんの話にして、heavy（重い）と carry（運ぶ）を使う。
+【ステップ3】「だれが運べないか」を言うため、to の前に for me を入れる。
+【ステップ4】組み立てる。
+【答え】This bag is too heavy for me to carry.（このかばんは重すぎて、私には運べない）
+【確かめ】too が形容詞の前、to が動詞の原形 carry の前にある。not は入っていない。This bag is so heavy that I can't carry it. と同じ意味になっているかも見る。
+【よくあるまちがい】carry it と書いて、it を足してしまう。carry の目的語は主語の This bag と同じものなので、it は要らない。
 
 ■ 例4：名詞が指定された場合（例：environment）
-名詞は主語か目的語に置く。
-We should think about the environment. We can start by using our own bags.
+【解法】
+【何を聞かれているか】名詞 environment（環境）が指定された条件で、英文を書く。
+【なぜこの考え方か】名詞は、文の中で主語か目的語（前置詞のうしろを含む）になる。動詞のように文の型を決める語ではないので、先に「どの役目にするか」を決めて、その位置にはめこむ。environment は「〜について考える」の目的語にすると、自然な文になる。
+【ステップ1】品詞を確認する。environment は名詞なので、主語か目的語に置く。
+【ステップ2】目的語にする。think about（〜について考える）のうしろに置く。「地球の環境」のように決まったものを指すので、the を付ける。We should think about the environment.
+【ステップ3】具体的な行動をもう1文で書く。by ＋ 〜ing は「〜することによって」。We can start by using our own bags.
+【答え】We should think about the environment. We can start by using our own bags.
+【確かめ】environment が入っている。2文とも主語と動詞がそろっている。by のうしろが using（〜ing形）になっている。
+【よくあるまちがい】the を落として think about environment と書く。ここでは決まったもの（私たちの環境）を指すので the が必要である。
 
 ★ ポイント：指定語句を文の途中に無理やり押しこむと、周りの語順が崩れる。語句を紙に書き、その前後に空欄を作ってからうめると安定する。`,
       },

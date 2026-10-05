@@ -889,7 +889,16 @@ I'm going to visit my aunt tomorrow.
 Ａ：（　　　　　　　）
 Ｂ：It's ten thirty.
 Ａ：Oh, we have to hurry.
-答えが時刻なので、空所には What time is it now? が入る。
+【解法】
+【何を聞かれているか】Ａの空所に、どんな質問が入るか。
+【なぜこの考え方か】対話文では、答え（返事）の中身から、もとの質問がたどれる。質問と答えは、必ず内容がぴったり合っているからである。
+【ステップ1】Ｂの返事 It's ten thirty.（十時三十分です）を見る。これは「時刻」を答えている。
+【ステップ2】時刻を答えるのだから、たずねた質問は時刻をきく文である。
+【ステップ3】時刻をきく形は What time is it now?（今何時ですか）である。
+【ステップ4】そのあとのＡのせりふ Oh, we have to hurry.（ああ、急がなくちゃ）を読む。時刻を知って急ぐ気持ちになったので、つながりが自然である。
+【答え】What time is it now?
+【確かめ】空所に入れて通して読む。Ａ：What time is it now? Ｂ：It's ten thirty. Ａ：Oh, we have to hurry. 質問・答え・感想が一本の流れになる。
+【よくあるまちがい】How is the weather? のように、Ｂの返事の形を見ずに入れる。返事が時刻なら、きく文も時刻でなければ合わない。
 
 ★ ポイント：Ｂの返事だけでなく、そのあとのＡのせりふも読む。「急がなくちゃ」と続いているので、時刻をたずねていることが確かめられる。`,
       },
@@ -974,6 +983,18 @@ I'm going to visit my aunt tomorrow.
 I like summer better than winter. First, I can swim in the sea with my family. Second, we have a long vacation in summer, so I can read many books. That is why I like summer better.
 
 （語数＝40語程度。文の数＝4文）
+
+【解法】
+【何を聞かれているか】夏と冬のどちらが好きかを、四十語程度の英語で書く。
+【なぜこの考え方か】自由英作文は、何を書くかで迷うと時間がなくなる。だから「意見→理由①→理由②→まとめ」の四文の型に内容を流しこむ。型に合わせれば、設問の条件（立場を決める・理由が二つ）を自然に満たせるからである。
+【ステップ1】日本語でメモを作る。「夏。理由①海で泳げる。理由②休みが長い」。先に決めておくと、書くときに迷わない。
+【ステップ2】①意見。I like summer better than winter.（立場を一つに決めるので、どちらも好きとは書かない）
+【ステップ3】②理由①。First, I can swim in the sea with my family.（First で一つ目だと読み手に伝える）
+【ステップ4】③理由②。Second, we have a long vacation in summer, so I can read many books.（理由①とはちがう角度の理由にする）
+【ステップ5】④まとめ。That is why I like summer better.（①をくり返して終わるので、新しい内容を考えずにすむ）
+【答え】上の四文。語数は約40語で、四文になっている。
+【確かめ】①立場は一つか ②理由は角度のちがうものが二つあるか ③四文あるか ④語数が足りているか、を順に指でたどる。
+【よくあるまちがい】理由②が「海が好きだから」で、理由①と同じ内容になってしまう。理由は別の角度にする。
 
 ★ ポイント：①と④はほとんど同じ内容でよい。書く前に日本語で「夏。理由は海で泳げる、休みが長い」とメモしておけば、あとは型に流しこむだけで書き終わる。`,
         figureId: 'lf_eigoext12_437',
