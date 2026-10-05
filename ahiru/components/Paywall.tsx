@@ -30,6 +30,7 @@ import {
   getIntroIneligibleProductIds,
 } from '../services/subscription';
 import { PRO_FEATURES, MAX_FEATURES } from '../constants/proAccess';
+import { planNotice, tierLabel, formatMonthDay } from '../utils/planStatus';
 import { useSubscription } from '../hooks/useSubscription';
 import { useAuthUser } from '../hooks/useAuthUser';
 import { alertCompat } from '../utils/dialog';
@@ -53,7 +54,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
   const [purchasing, setPurchasing] = useState(false);
   const { isLoggedIn } = useAuthUser();
   // すでに契約中のプランは「ご利用中」にして、二重に購入させない（Maxの人にProを売らない）
-  const { tier: ownedTier } = useSubscription();
+  const { tier: ownedTier, plan } = useSubscription();
   const proOwned = ownedTier === 'pro' || ownedTier === 'max';
   const maxOwned = ownedTier === 'max';
   const isWeb = Platform.OS === 'web';
@@ -200,6 +201,23 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
           <Text style={styles.crown}>👑</Text>
           <Text style={styles.title}>プレミアムプラン</Text>
           <Text style={styles.subtitle}>聞き流し学習でさらに力をつける</Text>
+
+          {/* いまの契約と、いつまで使えるか。お試し・解約・期限切れが画面のどこにも出ていなかった */}
+          {(() => {
+            const manage = isWeb ? '購入完了メールの「サブスクリプション管理」リンク' : 'ストアの設定（Apple ID → サブスクリプション）';
+            const n = planNotice(plan, manage);
+            const name = tierLabel(plan.tier);
+            const when = formatMonthDay(plan.expiresAt);
+            if (n == null && !(plan.kind === 'active' && plan.expiresAt != null)) return null;
+            return (
+              <View style={styles.planInfoBox}>
+                <Text style={styles.planInfoTitle}>
+                  {n != null ? `${n.icon} ${n.title}` : `✅ ご契約中：${name}　次の更新日 ${when}`}
+                </Text>
+                {n != null && <Text style={styles.planInfoBody}>{n.body}</Text>}
+              </View>
+            );
+          })()}
 
           {isWeb && !isLoggedIn && (
             <TouchableOpacity style={styles.loginBanner} onPress={goLogin} activeOpacity={0.85}>
@@ -423,6 +441,16 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
 }
 
 const styles = StyleSheet.create({
+  planInfoBox: {
+    marginTop: 10,
+    padding: 12,
+    borderRadius: 12,
+    backgroundColor: '#FFF8E6',
+    borderWidth: 1,
+    borderColor: '#F2D48A',
+  },
+  planInfoTitle: { fontSize: 14, fontWeight: '800', color: '#7A5A12' },
+  planInfoBody: { fontSize: 12.5, lineHeight: 19, color: '#4A4036', marginTop: 4 },
   periodToggle: {
     flexDirection: 'row',
     alignSelf: 'center',
