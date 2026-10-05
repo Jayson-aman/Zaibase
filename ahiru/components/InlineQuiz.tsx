@@ -8,6 +8,7 @@ import { getFigure } from '../data/figures';
 import FigureView from './FigureView';
 import AnswerInput, { type SubmitResult } from './AnswerInput';
 import Fireworks from './Fireworks';
+import { maskFigureForProblem, FIGURE_IS_ANSWER } from '../utils/figure-mask';
 
 /**
  * 公式集（koushiki・Question由来）と公式まとめ（formulas・手書きの一問一答）の
@@ -93,7 +94,7 @@ export default function InlineQuiz({ items, label = 'この公式の一問一答
 
       <Text style={styles.question}>{rich(q.question, { size: 17, color: '#2B2420', bold: true })}</Text>
 
-      {figure != null && <FigureView figure={figure} hideAnswerText />}
+      {figure != null && <FigureView figure={maskFigureForProblem(figure, q)} hideAnswerText />}
 
       {q.subQuestions != null && q.subQuestions.length > 0 && (
         <View style={styles.subList}>

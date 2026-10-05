@@ -26,6 +26,7 @@ import { getSubjectThemeLabel, getSubjectIllustration } from '../data/subjectIma
 import { getFigure } from '../data/figures';
 import { ALL_COURSES } from '../data/courses';
 import FigureView from './FigureView';
+import { maskFigureForProblem, FIGURE_IS_ANSWER } from '../utils/figure-mask';
 import { getQuestionVideo } from '../data/videos';
 import VideoPlayer from './VideoPlayer';
 
@@ -86,7 +87,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
   const figure = getFigure(question.id);
   // 図形化しにくい理科・社会の単元（植物のつくり・人体・時代の様子など）はAI生成の単元イラストで補う。
   // ベクター図形がある問題は図の方が正確なので、そちらを優先する。
-  const illustration = figure == null ? getSubjectIllustration(question.subject, themeText) : null;
+  const illustration = figure == null || FIGURE_IS_ANSWER.has(question.id) ? getSubjectIllustration(question.subject, themeText) : null;
   // 解説動画（レジストリ or 問題データの videoUrl）。あれば解答側で再生。
   const video = getQuestionVideo(question.id, question.videoUrl);
 
@@ -167,8 +168,8 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
           )}
           <Text style={styles.questionLabel}>問 題</Text>
           <Text style={[styles.questionTextChoice, qFit]}>{rich(question.question, { size: (qFit as { fontSize?: number }).fontSize ?? 18, color: '#221C18', bold: true })}</Text>
-          {figure != null ? (
-            <FigureView figure={figure} hideAnswerText />
+          {figure != null && !FIGURE_IS_ANSWER.has(question.id) ? (
+            <FigureView figure={maskFigureForProblem(figure, question)} hideAnswerText />
           ) : illustration != null ? (
             <Image source={illustration} style={styles.subjectImage} resizeMode="cover" />
           ) : question.figureDescription != null ? (
@@ -299,8 +300,8 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
               ))}
             </View>
           )}
-          {figure != null ? (
-            <FigureView figure={figure} hideAnswerText />
+          {figure != null && !FIGURE_IS_ANSWER.has(question.id) ? (
+            <FigureView figure={maskFigureForProblem(figure, question)} hideAnswerText />
           ) : illustration != null ? (
             <Image source={illustration} style={styles.subjectImage} resizeMode="cover" />
           ) : question.figureDescription != null ? (

@@ -20,6 +20,7 @@ import { explanationText } from '../utils/explanation';
 import { quickTricks } from '../data/quick-tricks';
 import { figures as FIGS } from '../data/figures';
 import { autoSteps } from '../data/auto-steps';
+import { maskFigureForProblem, answerTokens, tokenRegex, FIGURE_IS_ANSWER } from '../utils/figure-mask';
 
 type Lesson = (typeof allLessons)[number] & Record<string, any>;
 const L = allLessons as Lesson[];
@@ -1672,6 +1673,37 @@ const latin = L.filter((l) => {
   return false;
 }).map((l) => l.id);
 info('日本語の中に英単語が挟まっている（要目視）', latin, 8);
+
+// 解く前の画面（問題文の下）に出る図と図の説明に、答えが書かれていないか。
+// 図データは「解き終わった状態」で描かれているため、そのまま出すと答えが先に見える
+// （y=2x+2 の直線に「y=2x+2」、「男子 24人」、答えまでの手順①〜⑤まで出ていた）。
+// 実際の画面と同じ utils/figure-mask の伏せ字を通したあとで、なお答えが残るものを数える。
+{
+  const nfk = (x: string) => x.normalize('NFKC').replace(/\s+/g, '').toLowerCase();
+  const SKIPK = new Set(['steps', 'caption', 'id', 'kind', 'color', 'fill', 'buildSteps', 'description']);
+  const strs = (o: unknown, out: string[]) => {
+    if (typeof o === 'string') out.push(o);
+    else if (Array.isArray(o)) o.forEach((x) => strs(x, out));
+    else if (o && typeof o === 'object') for (const [k, v] of Object.entries(o)) if (!SKIPK.has(k)) strs(v, out);
+  };
+  const leakFig: string[] = [];
+  const leakDesc: string[] = [];
+  for (const q of questions as any[]) {
+    const toks = answerTokens(String(q.answer ?? ''));
+    const given = nfk(String(q.question) + (q.subQuestions ?? []).map((s: any) => s.prompt).join(''));
+    const open = toks.filter((t) => !tokenRegex(t).test(given));
+    if (open.length === 0) continue;
+    const f = (FIGS as any)[q.id];
+    if (f && !FIGURE_IS_ANSWER.has(q.id)) {
+      const t: string[] = []; strs(maskFigureForProblem(f, q), t);
+      if (t.some((x) => open.some((tok) => tokenRegex(tok).test(nfk(x))))) leakFig.push(q.id);
+    } else if (!f && q.figureDescription && open.some((tok) => /[0-9]/.test(tok) && tokenRegex(tok).test(nfk(String(q.figureDescription))))) {
+      leakDesc.push(q.id);
+    }
+  }
+  check('【問題集】解く前の画面の図に、答えがそのまま描かれている', leakFig);
+  check('【問題集】解く前の画面の図の説明に、答えが書かれている', leakDesc);
+}
 
 console.log(`\n合計 ${problems} 件`);
 console.log(

@@ -139,8 +139,9 @@ function CoordinateFig({ fig, uid }: { fig: CoordFigure; uid: string }) {
   const els: React.ReactNode[] = [];
 
   // グリッド＋目盛り
-  const sx = niceStep(xr[1] - xr[0]);
-  const sy = niceStep(yr[1] - yr[0]);
+  // 範囲がある程度広いときは、目盛りを整数にする（-1.5 -1 -0.5 0 と0.5きざみで並び、原点の「O」と重なっていた）
+  const sx = (xr[1] - xr[0]) >= 4 ? Math.max(1, niceStep(xr[1] - xr[0])) : niceStep(xr[1] - xr[0]);
+  const sy = (yr[1] - yr[0]) >= 4 ? Math.max(1, niceStep(yr[1] - yr[0])) : niceStep(yr[1] - yr[0]);
   for (let x = Math.ceil(xr[0] / sx) * sx; x <= xr[1] + 1e-9; x += sx) {
     els.push(<Line key={`gx${x}`} x1={px(x)} y1={area.y0} x2={px(x)} y2={area.y0 + area.h} stroke={GRID} strokeWidth={1} />);
   }
@@ -157,6 +158,7 @@ function CoordinateFig({ fig, uid }: { fig: CoordFigure; uid: string }) {
   // 軸目盛り数値
   for (let x = Math.ceil(xr[0] / sx) * sx; x <= xr[1] + 1e-9; x += sx) {
     if (Math.abs(x) < 1e-9) continue;
+    if (x < 0 && x0 - px(x) < 22) continue; // 原点の「O」と重なる
     els.push(<SvgText key={`tx${x}`} x={px(x)} y={y0 + 13} fontSize={10} fill={AXIS} textAnchor="middle">{+x.toFixed(2)}</SvgText>);
   }
   for (let y = Math.ceil(yr[0] / sy) * sy; y <= yr[1] + 1e-9; y += sy) {
@@ -873,7 +875,7 @@ function BarChartFig({ fig }: { fig: BarChartFigure }) {
     if (!fig.histogram) {
       els.push(
         <SvgText key={`bv${i}`} x={x + bw / 2} y={b.value < 0 ? top + h + 11 : top - 4} fontSize={9.5} fill={INK} textAnchor="middle" fontWeight="bold">
-          {b.value}
+          {b.hidden ? '？' : b.value}
         </SvgText>,
       );
     }
@@ -1714,10 +1716,10 @@ export default function FigureView({
           <ChemEquationFig fig={figure as ChemEqFigure} />
         </TouchableOpacity>
         {animated && <Text style={styles.replayHint}>▶ タップで再生</Text>}
-        {figure.steps != null && figure.steps.length > 0 && (
+        {!hideAnswerText && figure.steps != null && figure.steps.length > 0 && (
           <StepsList steps={figure.steps} animated={animated} stepReached={stepReached} />
         )}
-        {figure.caption != null && <Text style={styles.caption}>{figure.caption}</Text>}
+        {!hideAnswerText && figure.caption != null && <Text style={styles.caption}>{figure.caption}</Text>}
       </View>
     );
   }

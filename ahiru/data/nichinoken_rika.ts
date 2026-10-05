@@ -392,9 +392,9 @@ export const nichinokenRika: Question[] = [
     figureDescription: `南中高度の計算（北緯35°の場合）
   天頂
    |
-78.4°|←夏至
-55° | ←春分・秋分
-31.6° |←冬至
+？°|←夏至
+？° | ←春分・秋分
+？°|←冬至
    |
   南地平線`,
   },
@@ -498,7 +498,7 @@ export const nichinokenRika: Question[] = [
   　[動滑車]
        ↓
    [荷物300g]
-  引く力=75g（1/4）`,
+  引く力＝？g`,
   },
   {
     id: 'rika-041',

@@ -238,7 +238,7 @@ export type BarChartFigure = {
   yLabel?: string;
   yMax?: number;
   histogram?: boolean; // 棒を隙間なく並べる（度数分布）
-  bars: { label: string; value: number; color?: string }[];
+  bars: { label: string; value: number; color?: string; /** 問題を解く前の画面で、値の数字を「？」にする（答えが棒の上に書いてあると先に見えてしまう） */ hidden?: boolean }[];
   caption?: string;
   /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
   steps?: string[];

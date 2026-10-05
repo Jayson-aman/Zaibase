@@ -145,5 +145,19 @@ for (const f of dataFiles) {
 }
 report('問題の欄が id より前に置かれている', fieldBeforeId, '欄は id の後ろに置く。前の問題の欄が紛れこんでいないか本文も読む');
 
+// 問題を解く前の画面に出す図は、解き方の手順（steps）と説明文（caption）を隠す。
+// 隠さないと「問題文の下に答えまでの手順①〜⑤がそのまま並ぶ」（実際に起きた）。
+// animated を付けた FigureView は解説側なので対象外。
+const unhidden = [];
+for (const f of files.filter((f) => /components\/(QuizCard|InlineQuiz)\.tsx$/.test(f))) {
+  const src = fs.readFileSync(f, 'utf8');
+  for (const m of src.matchAll(/<FigureView\b[^>]*>/g)) {
+    if (/\banimated\b/.test(m[0])) continue;
+    if (!/\bhideAnswerText\b/.test(m[0]) || !/maskFigureForProblem/.test(m[0]))
+      unhidden.push(`${rel(f)}:${src.slice(0, m.index).split('\n').length}`);
+  }
+}
+report('解く前の画面の図が、手順・答えを隠していない', unhidden, 'hideAnswerText と maskFigureForProblem(figure, question) を付けること');
+
 console.log(`\n合計 ${problems} 件`);
 process.exit(problems === 0 ? 0 : 1);
