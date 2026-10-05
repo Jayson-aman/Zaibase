@@ -20,6 +20,8 @@ export type PlanStatus = {
   /** 期限までの日数（切り上げ）。切れたあとは 0 以下 */
   daysLeft: number | null;
   willRenew: boolean;
+  /** お支払いの問題がストアに確認された日（問題が無いときは null）。原因そのものは通知されない */
+  billingDetectedAt: Date | null;
   /** ストアの「サブスクリプションの管理」ページ（お支払い方法の直し先）。無いときは null */
   managementUrl: string | null;
 };
@@ -41,7 +43,7 @@ function toDate(v: unknown): Date | null {
   return Number.isNaN(d.getTime()) ? null : d;
 }
 
-const NONE: PlanStatus = { kind: 'none', tier: null, expiresAt: null, daysLeft: null, willRenew: false, managementUrl: null };
+const NONE: PlanStatus = { kind: 'none', tier: null, expiresAt: null, daysLeft: null, willRenew: false, managementUrl: null, billingDetectedAt: null };
 
 export function planStatusFromCustomerInfo(info: unknown, now: Date = new Date()): PlanStatus {
   const ents = (info as InfoLike)?.entitlements;
@@ -58,11 +60,11 @@ export function planStatusFromCustomerInfo(info: unknown, now: Date = new Date()
     const e = active[activeTier];
     const expiresAt = toDate(e.expirationDate);
     const willRenew = e.willRenew !== false;
-    const base = { tier: activeTier, expiresAt, daysLeft: days(expiresAt), willRenew, managementUrl } as const;
+    const base = { tier: activeTier as 'pro' | 'max', expiresAt, daysLeft: days(expiresAt), willRenew, managementUrl, billingDetectedAt: null as Date | null };
     // 空文字・日付として読めない値・未来の日付は「問題あり」とみなさない（誤って赤い帯を出さない）。
     // 支払いが直ると RevenueCat 側でこの日時は null に戻る。
     const billingAt = toDate(e.billingIssueDetectedAt);
-    if (billingAt != null && billingAt.getTime() <= now.getTime() + DAY) return { ...base, kind: 'billing' };
+    if (billingAt != null && billingAt.getTime() <= now.getTime() + DAY) return { ...base, billingDetectedAt: billingAt, kind: 'billing' };
     if (e.periodType === 'INTRO' || e.periodType === 'TRIAL') return { ...base, kind: 'trial' };
     if (!willRenew && expiresAt != null) return { ...base, kind: 'ending' };
     return { ...base, kind: 'active' };
@@ -75,7 +77,7 @@ export function planStatusFromCustomerInfo(info: unknown, now: Date = new Date()
     if (at != null && (best == null || at > best.at)) best = { tier: t, at };
   }
   if (best != null) {
-    return { kind: 'expired', tier: best.tier, expiresAt: best.at, daysLeft: days(best.at), willRenew: false, managementUrl };
+    return { kind: 'expired', tier: best.tier, expiresAt: best.at, daysLeft: days(best.at), willRenew: false, managementUrl, billingDetectedAt: null };
   }
   return NONE;
 }
@@ -120,14 +122,24 @@ export function planNotice(s: PlanStatus, manageHint = 'ストアの設定（App
         urgent: left != null && left <= 3,
         action: '続ける',
       };
-    case 'billing':
+    case 'billing': {
+      // 原因（カードの期限切れか、残高不足か、など）は、ストアからアプリには知らされない。
+      // 分かるのは「いつ問題が確認されたか」だけなので、原因は言い切らず、よくある原因を挙げて確認してもらう。
+      const since = s.billingDetectedAt != null ? `${formatMonthDay(s.billingDetectedAt)}に、` : '';
       return {
         icon: '⚠️',
         title: `${name}のお支払いが完了していません`,
-        body: `お支払い方法（カードや残高）を確認してください。このままだと、プランが止まることがあります。直し方は${manageHint}で確認できます。`,
+        body:
+          `${since}ストアがお支払いを受け付けられませんでした。原因はアプリには届かないため、次のどれかに当てはまらないか確認してください。\n` +
+          '・カードの有効期限が切れている／カードを変更した\n' +
+          '・利用限度額や残高が足りない（プリペイド・デビットカードを含む）\n' +
+          '・カード会社が、支払いを承認しなかった\n' +
+          '・ストアに、お支払い方法が登録されていない\n' +
+          `直し方は${manageHint}で確認できます。直るまでのあいだ、ストアが自動で何度か再試行しますが、それでも払えないとプランが止まります。`,
         urgent: true,
         action: 'お支払い方法を確認',
       };
+    }
     case 'expired':
       return {
         icon: '🔒',

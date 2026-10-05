@@ -20,7 +20,7 @@ import { explanationText } from '../utils/explanation';
 import { quickTricks } from '../data/quick-tricks';
 import { figures as FIGS } from '../data/figures';
 import { autoSteps } from '../data/auto-steps';
-import { planStatusFromCustomerInfo } from '../utils/planStatus';
+import { planStatusFromCustomerInfo, planNotice } from '../utils/planStatus';
 import { maskFigureForProblem, answerTokens, tokenRegex, FIGURE_IS_ANSWER } from '../utils/figure-mask';
 
 type Lesson = (typeof allLessons)[number] & Record<string, any>;
@@ -1753,6 +1753,13 @@ info('日本語の中に英単語が挟まっている（要目視）', latin, 8
   ];
   check('【契約状態】判定がまちがっている', cases.filter(([, info, want]) => k(info) !== want).map(([n, info, want]) => `${n}（${k(info)}≠${want}）`));
   const mgmt = (u: unknown) => planStatusFromCustomerInfo({ ...(mk({ pro: T(d(-1)) }) as object), managementURL: u }, now).managementUrl;
+  // 支払いの問題の案内には、問題が確認された日と、よくある原因を載せる（原因そのものはストアから届かないので、言い切らない）
+  const bn = planNotice(planStatusFromCustomerInfo(mk({ pro: T(d(-2)) }), now), 'ストアの設定');
+  check('【契約状態】支払いの問題の案内に、確認された日や原因の候補が無い', [
+    bn?.body.includes('10月3日') ? '' : '確認された日が無い',
+    bn?.body.includes('有効期限') && bn?.body.includes('限度額') ? '' : '原因の候補が無い',
+    bn?.body.includes('ストアの設定') ? '' : '直し先が無い',
+  ].filter((x) => x !== ''));
   check('【契約状態】管理ページのURLの受け取り方がまちがっている', [
     mgmt('https://apps.apple.com/account/subscriptions') === 'https://apps.apple.com/account/subscriptions' ? '' : 'httpsが通らない',
     mgmt('javascript:alert(1)') === null ? '' : 'javascript: を通している',

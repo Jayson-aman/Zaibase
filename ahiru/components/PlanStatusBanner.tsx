@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Linking, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Linking, Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useSubscription } from '../hooks/useSubscription';
 import { planNotice } from '../utils/planStatus';
+import PlanNoticeCard from './PlanNoticeCard';
 
 // 契約の状態をホームの上に出す帯。
 //
@@ -61,50 +62,11 @@ export default function PlanStatusBanner({ onAction }: { onAction: () => void })
   }
 
   return (
-    <View style={[styles.box, notice.urgent && styles.boxUrgent]}>
-      <Text style={styles.icon}>{notice.icon}</Text>
-      <View style={styles.textWrap}>
-        <Text style={[styles.title, notice.urgent && styles.titleUrgent]}>{notice.title}</Text>
-        <Text style={styles.body}>{notice.body}</Text>
-        <View style={styles.row}>
-          {actionLabel != null && (
-            <TouchableOpacity style={[styles.btn, notice.urgent && styles.btnUrgent]} onPress={onActionPress} activeOpacity={0.85}>
-              <Text style={styles.btnText}>{actionLabel}</Text>
-            </TouchableOpacity>
-          )}
-          {plan.kind === 'expired' && (
-            <TouchableOpacity style={styles.closeBtn} onPress={dismiss} activeOpacity={0.7}>
-              <Text style={styles.closeText}>閉じる</Text>
-            </TouchableOpacity>
-          )}
-        </View>
-      </View>
-    </View>
+    <PlanNoticeCard
+      notice={notice}
+      actionLabel={actionLabel}
+      onActionPress={onActionPress}
+      onDismiss={plan.kind === 'expired' ? dismiss : undefined}
+    />
   );
 }
-
-const styles = StyleSheet.create({
-  box: {
-    flexDirection: 'row',
-    gap: 10,
-    marginHorizontal: 16,
-    marginTop: 10,
-    padding: 14,
-    backgroundColor: '#FFF8E6',
-    borderRadius: 14,
-    borderWidth: 1.5,
-    borderColor: '#F2D48A',
-  },
-  boxUrgent: { backgroundColor: '#FDECEA', borderColor: '#E8A39C' },
-  icon: { fontSize: 22, marginTop: 1 },
-  textWrap: { flex: 1 },
-  title: { fontSize: 15, fontWeight: '800', color: '#7A5A12' },
-  titleUrgent: { color: '#A12A1F' },
-  body: { fontSize: 13, lineHeight: 20, color: '#4A4036', marginTop: 4 },
-  row: { flexDirection: 'row', alignItems: 'center', gap: 12, marginTop: 10 },
-  btn: { backgroundColor: '#B5622E', paddingHorizontal: 18, paddingVertical: 9, borderRadius: 20 },
-  btnUrgent: { backgroundColor: '#C0392B' },
-  btnText: { color: '#FFFFFF', fontSize: 14, fontWeight: '800' },
-  closeBtn: { paddingHorizontal: 8, paddingVertical: 9 },
-  closeText: { color: '#6B5E50', fontSize: 13, fontWeight: '700' },
-});
