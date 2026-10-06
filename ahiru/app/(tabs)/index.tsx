@@ -630,8 +630,8 @@ export default function HomeScreen() {
                 <Text style={styles.scholarshipItemTitle}>① 高等学校等就学支援金（国）</Text>
                 <Text style={styles.scholarshipCondition}>
                   【対象】国公私立高校に在籍する生徒{'\n'}
-                  【所得条件】保護者の年収目安910万円未満（市町村民税所得割額＋道府県民税所得割額が50万7千円未満）{'\n'}
-                  【支給額】私立高校：最大年間39万6,000円（加算あり）{'\n'}
+                  【所得条件】2026年度（令和8年度）から所得制限なし（全世帯が対象）。2025年度までは、保護者の年収目安910万円未満が対象でした{'\n'}
+                  【支給額】私立高校：最大年間45万7,200円／公立高校：年間11万8,800円（2026年度〜）{'\n'}
                   【申請】入学時に学校を通じて申請。様式は入学先の学校から配布されます。
                 </Text>
                 <TouchableOpacity
@@ -660,18 +660,19 @@ export default function HomeScreen() {
 
               {/* 3. 大阪府 授業料支援 */}
               <View style={styles.scholarshipItem}>
-                <Text style={styles.scholarshipItemTitle}>③ 大阪府 授業料支援補助金</Text>
+                <Text style={styles.scholarshipItemTitle}>③ 大阪府 授業料無償化（府独自の上乗せ）</Text>
                 <Text style={styles.scholarshipCondition}>
-                  【対象】大阪府内在住で府内私立高校等に在籍する生徒{'\n'}
-                  【所得条件】保護者の年収目安800万円未満（世帯によっては無償化）{'\n'}
-                  【支給額】授業料から就学支援金を差し引いた実質負担分を補助（最大無償）{'\n'}
-                  【申請】入学後4〜5月頃、在籍高校経由で申請。申請様式は学校で配布または大阪府HPからダウンロード可。
+                  【対象】大阪府内に住む高校生等{'\n'}
+                  【所得条件】2026年度（令和8年度）から全学年で所得制限なし。2024年度は高3、2025年度は高2・3から段階的に実施されました{'\n'}
+                  【支給額】国の就学支援金に府が上乗せして、授業料を年間63万円まで補助（授業料が63万円を超える分は学校が負担する仕組み）{'\n'}
+                  【対象外】入学金・教材費・修学旅行積立金などは、無償化の対象に入りません{'\n'}
+                  【申請】在籍高校経由で申請。手続きの時期・様式は学校または大阪府HPで確認してください。
                 </Text>
                 <TouchableOpacity
                   onPress={() => Linking.openURL('https://www.pref.osaka.lg.jp/o180160/shigaku/shigakumushouka/index.html')}
                   activeOpacity={0.75}
                 >
-                  <Text style={styles.scholarshipLink}>▸ 大阪府 私立高校授業料支援補助金</Text>
+                  <Text style={styles.scholarshipLink}>▸ 大阪府 私立高校等の授業料無償化</Text>
                 </TouchableOpacity>
               </View>
 
