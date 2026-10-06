@@ -65,7 +65,9 @@ export function planStatusFromCustomerInfo(info: unknown, now: Date = new Date()
     // 支払いが直ると RevenueCat 側でこの日時は null に戻る。
     const billingAt = toDate(e.billingIssueDetectedAt);
     if (billingAt != null && billingAt.getTime() <= now.getTime() + DAY) return { ...base, billingDetectedAt: billingAt, kind: 'billing' };
-    if (e.periodType === 'INTRO' || e.periodType === 'TRIAL') return { ...base, kind: 'trial' };
+    // react-native-purchases は 'INTRO'、purchases-js（Web）は 'intro'。大文字小文字をそろえて見る
+    const pt = String(e.periodType ?? '').toUpperCase();
+    if (pt === 'INTRO' || pt === 'TRIAL') return { ...base, kind: 'trial' };
     if (!willRenew && expiresAt != null) return { ...base, kind: 'ending' };
     return { ...base, kind: 'active' };
   }
@@ -77,6 +79,13 @@ export function planStatusFromCustomerInfo(info: unknown, now: Date = new Date()
     if (at != null && (best == null || at > best.at)) best = { tier: t, at };
   }
   if (best != null) {
+    // Apple の「支払いの猶予期間」を使わない設定だと、更新に失敗した時点で権利は有効でなくなる。
+    // そのとき「終了しました」だけ出すと、お支払い方法を直せば続けられることが伝わらない。
+    // 失敗の記録（billingIssueDetectedAt）が残っていて、期限から60日以内なら、支払いの問題として出す。
+    const billingAt = toDate(all[best.tier]?.billingIssueDetectedAt);
+    if (billingAt != null && billingAt.getTime() <= now.getTime() + DAY && now.getTime() - best.at.getTime() <= 60 * DAY) {
+      return { kind: 'billing', tier: best.tier, expiresAt: best.at, daysLeft: days(best.at), willRenew: false, managementUrl, billingDetectedAt: billingAt };
+    }
     return { kind: 'expired', tier: best.tier, expiresAt: best.at, daysLeft: days(best.at), willRenew: false, managementUrl, billingDetectedAt: null };
   }
   return NONE;

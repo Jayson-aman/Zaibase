@@ -390,6 +390,13 @@ export default function QuizScreen() {
     };
   }, []);
 
+  // 次の問題に進んだら、いちばん上に戻す。
+  // 長い解説を下まで読んでから進むと、短い次の問題のカードの上が画面の外に残り、
+  // 「タップして答えを見る」の下に白い余白だけが見える状態になっていた。
+  useEffect(() => {
+    scrollRef.current?.scrollTo({ y: 0, animated: false });
+  }, [currentIndex]);
+
   async function advanceOrFinish(currentScore: number, currentWrongIds: string[]) {
     setWaitingNext(false);
     answeringRef.current = false;
@@ -639,6 +646,13 @@ export default function QuizScreen() {
       message = 'もっと練習しよう！';
       emoji = '💪';
     }
+    // 文で書く（正誤をつけない）問題だけで終わったときは、点数が出せない。
+    // 「満点」と出さずに、見くらべてふり返るよう伝える。
+    const noScore = scoredTotal === 0;
+    if (noScore) {
+      message = 'よく書けました！下の模範解答と見くらべてみよう';
+      emoji = '✍️';
+    }
 
     return (
       <SafeAreaView style={[styles.safeArea, { backgroundColor: '#FAF7F2' }]}>
@@ -654,23 +668,27 @@ export default function QuizScreen() {
             <View style={styles.resultCard}>
               <Text style={styles.resultEmoji}>{emoji}</Text>
               <Text style={styles.resultMessage}>{message}</Text>
-              <View style={styles.resultScoreRow}>
-                <Text style={styles.resultScore}>{score}</Text>
-                <Text style={styles.resultScoreSep}> / </Text>
-                <Text style={styles.resultScoreTotal}>{scoredTotal}</Text>
-                <Text style={styles.resultScoreLabel}> 問正解</Text>
-              </View>
-              <Text style={[styles.resultPct, { color: info.color }]}>{pct}%</Text>
+              {!noScore && (
+                <>
+                  <View style={styles.resultScoreRow}>
+                    <Text style={styles.resultScore}>{score}</Text>
+                    <Text style={styles.resultScoreSep}> / </Text>
+                    <Text style={styles.resultScoreTotal}>{scoredTotal}</Text>
+                    <Text style={styles.resultScoreLabel}> 問正解</Text>
+                  </View>
+                  <Text style={[styles.resultPct, { color: info.color }]}>{pct}%</Text>
 
-              {/* Score bar */}
-              <View style={styles.resultBarTrack}>
-                <View
-                  style={[
-                    styles.resultBarFill,
-                    { width: `${pct}%`, backgroundColor: info.color },
-                  ]}
-                />
-              </View>
+                  {/* Score bar */}
+                  <View style={styles.resultBarTrack}>
+                    <View
+                      style={[
+                        styles.resultBarFill,
+                        { width: `${pct}%`, backgroundColor: info.color },
+                      ]}
+                    />
+                  </View>
+                </>
+              )}
             </View>
 
             {/*

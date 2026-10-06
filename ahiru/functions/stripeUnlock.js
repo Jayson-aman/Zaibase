@@ -106,14 +106,15 @@ async function revokeIfRefunded(stripe, charge) {
   const config = TYPE_CONFIG[obj.metadata?.type];
   const itemId = obj.metadata?.item_id;
   if (!uid || !config || !itemId) return;
-  await db.collection(config.collection).doc(uid).set(
-    {
-      unlocked: FieldValue.arrayRemove(itemId),
-      stripeUnlocked: FieldValue.arrayRemove(itemId),
-      updatedAt: FieldValue.serverTimestamp(),
-    },
-    { merge: true }
-  );
+  // 文書があるときだけ取り消す。アカウント削除のあとに返金が来て、空の文書が作り直されるのを防ぐ
+  const ref = db.collection(config.collection).doc(uid);
+  const snap = await ref.get();
+  if (!snap.exists) return;
+  await ref.update({
+    unlocked: FieldValue.arrayRemove(itemId),
+    stripeUnlocked: FieldValue.arrayRemove(itemId),
+    updatedAt: FieldValue.serverTimestamp(),
+  });
 }
 
 // returnUrl は自サイトのURLだけ許可する（クライアントが外部URLを渡せてしまうため）。

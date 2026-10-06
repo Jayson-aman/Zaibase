@@ -19,41 +19,10 @@ const isWebPlatform = Platform.OS === 'web';
 // あとにユーザーがもう一度ボタンを押したときpurchaseProductを再度呼んでしまい、
 // 消耗型商品なので実際に二重課金されてしまう。
 import { useAuthUser } from './useAuthUser';
+import { markPending, isPending, clearPending, listPending } from '../utils/purchasePending';
 const PENDING_KEY_PREFIX = 'formula_unlock_pending_';
 
-async function markPurchasePending(figureId: string): Promise<void> {
-  try {
-    await AsyncStorage.setItem(`${PENDING_KEY_PREFIX}${figureId}`, String(Date.now()));
-  } catch {
-    // 保存に失敗しても処理は続行する（最悪ケースは確認リトライが尽きた後の
-    // 再購入リスクが残るだけで、確認自体は今回の呼び出し内でリトライされる）
-  }
-}
-
-async function isPurchasePending(figureId: string): Promise<boolean> {
-  try {
-    const v = await AsyncStorage.getItem(`${PENDING_KEY_PREFIX}${figureId}`);
-    if (!v) return false;
-    // 24時間たっても確認できないものは「確認待ち」を解く。解かないと、別の理由で確認が通らない項目を
-    // 二度と買えなくなる。（決済から24時間たてば、RevenueCat側にも購入が反映されている）
-    const t = Number(v);
-    if (t > 1 && Date.now() - t > 24 * 60 * 60 * 1000) {
-      await AsyncStorage.removeItem(`${PENDING_KEY_PREFIX}${figureId}`);
-      return false;
-    }
-    return true;
-  } catch {
-    return false;
-  }
-}
-
-async function clearPurchasePending(figureId: string): Promise<void> {
-  try {
-    await AsyncStorage.removeItem(`${PENDING_KEY_PREFIX}${figureId}`);
-  } catch {
-    // 消し忘れても実害はない（次回も確認だけリトライされるため）
-  }
-}
+// 購入の「確認待ち」の記録は utils/purchasePending.ts（ユーザーごと・画面を開いたときに自動で確認をやり直す）
 
 export type UnlockPurchaseResult =
   | { ok: true; /** Webで決済ページへ移動した（まだ購入は終わっていない） */ redirected?: boolean }
@@ -93,6 +62,9 @@ export function useFormulaUnlocks(): FormulaUnlocksState {
   // （足し合わせるだけだと、ログアウトしても前のユーザーの解放内容が残る）
   const { user: authUser } = useAuthUser();
   const uid = authUser?.uid ?? null;
+  // 購入のコールバックの中で、いまのユーザーを読むため
+  const uidRef = useRef<string | null>(uid);
+  uidRef.current = uid;
   const seenUid = useRef<string | null | undefined>(undefined);
   useEffect(() => {
     if (seenUid.current === undefined) {
@@ -149,6 +121,24 @@ export function useFormulaUnlocks(): FormulaUnlocksState {
           if (mounted.current) setUnlockedIds((prev) => new Set([...prev, ...ids]));
         })
         .catch(() => {});
+      // 決済は済んだのに確認に失敗して残っている購入は、ここで確認をやり直す。
+      // （やり直さないと、払ったのに解放されないまま、ボタンを押すと二重に払うことになる）
+      if (!isWebPlatform) {
+        const myUid = uidRef.current;
+        listPending(PENDING_KEY_PREFIX, myUid)
+          .then(async (ids) => {
+            for (const id of ids) {
+              try {
+                await markFormulaUnlocked(id, id.startsWith('bundle:') ? 'bundle' : 'formula');
+                await clearPending(PENDING_KEY_PREFIX, myUid, id);
+                if (mounted.current) setUnlockedIds((prev) => new Set(prev).add(id));
+              } catch {
+                // まだ確認できない。記録は残し、次に画面を開いたときにまたやり直す
+              }
+            }
+          })
+          .catch(() => {});
+      }
     }, []),
   );
 
@@ -187,11 +177,11 @@ export function useFormulaUnlocks(): FormulaUnlocksState {
       setPurchasingFigureId(figureId);
       // 前回この公式を購入したときに、決済は成功したがサーバー確認が未完了の
       // まま終わっている場合は、購入をやり直さずに確認だけをリトライする。
-      const alreadyPurchasedPending = await isPurchasePending(figureId);
+      const alreadyPurchasedPending = await isPending(PENDING_KEY_PREFIX, uidRef.current, figureId);
       if (!alreadyPurchasedPending) {
         try {
           await purchaseProduct(target);
-          await markPurchasePending(figureId);
+          await markPending(PENDING_KEY_PREFIX, uidRef.current, figureId);
         } catch (e) {
           if (mounted.current) setPurchasingFigureId(null);
           if ((e as { userCancelled?: boolean } | null)?.userCancelled) return { ok: false, message: '', cancelled: true };
@@ -205,7 +195,7 @@ export function useFormulaUnlocks(): FormulaUnlocksState {
       for (let attempt = 0; attempt < 3; attempt++) {
         try {
           await markFormulaUnlocked(figureId, kind);
-          await clearPurchasePending(figureId);
+          await clearPending(PENDING_KEY_PREFIX, uidRef.current, figureId);
           if (mounted.current) {
             setUnlockedIds((prev) => new Set(prev).add(figureId));
             setPurchasingFigureId(null);

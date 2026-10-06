@@ -71,7 +71,12 @@ function toHalfWidth(s: string): string {
     .replace(/[，]/g, ',')
     .replace(/[．]/g, '.')
     .replace(/[’‘]/g, "'")
-    .replace(/[”“]/g, '"');
+    .replace(/[”“]/g, '"')
+    // IME で出る全角の記号。「20％」と「20%」、「！」「？」を同じに見る
+    .replace(/％/g, '%')
+    .replace(/！/g, '!')
+    .replace(/？/g, '?')
+    .replace(/；/g, ';');
 }
 
 /** 上付き・下付きの数字をふつうの数字に直す（cm² と cm2 を同じに見る） */
@@ -101,16 +106,32 @@ export function normalize(s: string): string {
   // 「2x2x3x5」のように、数と数のあいだの x はかけ算の × とみなす
   // （y=2x のように x が最後にあるものは文字なのでさわらない）
   t = t.replace(/([0-9)])[xX×](?=[0-9(])/g, '$1*');
-  // 空白・句読点・かぎかっこは、あってもなくても同じとみなす
-  // ⚠️ 半角のコンマも読点と同じあつかい。「1,2,3,4」と「1、2、3、4」で○×が分かれると、
-  //    約数を書き出す問題で正しく解けた子が×をもらう（2026/9/17に実際に起きかけた）
-  t = t.replace(/[\s。、．，,「」『』]/g, '');
-  // 英字は大文字小文字を区別しない
-  t = t.toLowerCase();
   // 分数の「3分の4」を「4/3」の形にそろえる
   t = t.replace(/([0-9]+)分の([0-9]+)/g, '$2/$1');
-  // 「1と4/15」と「1 4/15」を同じに見る
-  t = t.replace(/と([0-9]+\/)/g, '$1');
+  // 帯分数（「1と7/12」「1 7/12」）は、仮分数（19/12）にそろえる。
+  // ⚠️ 以前は「と」を消して「17/12」にしていた。これは 17÷12 という別の数で、
+  //    「1と1/4」の答えに「11/4」（＝2と3/4）と書いても○になっていた（9問）。
+  // ⚠️ 空白を消す前にやる。消してからだと「1 7/12」が「17/12」になってしまう。
+  const toImproper = (w: string, n: string, d: string) => (Number(d) === 0 ? null : `${Number(w) * Number(d) + (Number(w) < 0 || w.startsWith('-') ? -Number(n) : Number(n))}/${d}`);
+  t = t.replace(/(^|[^0-9./])(-?[0-9]+)と([0-9]+)\/([0-9]+)(?![0-9])/g, (m, pre, w, n, d) => {
+    const r = toImproper(w, n, d);
+    return r == null ? m : `${pre}${r}`;
+  });
+  t = t.replace(/(^|[^0-9./])(-?[0-9]+)[ \t]+([0-9]+)\/([0-9]+)(?![0-9])/g, (m, pre, w, n, d) => {
+    const r = toImproper(w, n, d);
+    return r == null ? m : `${pre}${r}`;
+  });
+  // 数を空白でならべた答え（「1 2 3 6」）は、読点でならべた答え（「1、2、3、6」）と同じに見る
+  t = t.replace(/(?<=[0-9])[ \t]+(?=[0-9])/g, ',');
+  // 空白・句読点・かぎかっこは、あってもなくても同じとみなす
+  t = t.replace(/[\s。．「」『』]/g, '');
+  // 読点とコンマは同じ区切りとして、そろえて残す。
+  // ⚠️ 以前は全部消していたので、「1,2,3」と「123」、「12,3」が同じになり、まちがいが○になった。
+  //    ただし「1,000」のような桁区切りは区切りではないので、消す（「1000」と同じに見る）。
+  t = t.replace(/[、,]+/g, ',').replace(/^,|,$/g, '');
+  t = t.replace(/(?<![0-9])([0-9]{1,3}(?:,[0-9]{3})+)(?![0-9])/g, (m) => m.replace(/,/g, ''));
+  // 英字は大文字小文字を区別しない
+  t = t.toLowerCase();
   return t;
 }
 
@@ -122,6 +143,9 @@ function stripTailPunct(s: string): string {
 /** 数と単位に分ける。単位は書いても書かなくてもよいことにする。 */
 const UNIT_TAIL =
   /(cm3|cm2|km2|m3|m2|mm2|cm|mm|km|kg|mg|ml|dl|l|g|m|度|°|℃|%|人|円|個|通り|時間|時|分|秒|本|枚|冊|回|点|才|歳|倍|台|羽|匹|頭|袋|組|色|つ|こ)$/;
+
+/** 単位だけでできた文字列（かっこの中が単位だけのとき、答えとして登録しない） */
+const UNIT_ONLY = new RegExp('^' + UNIT_TAIL.source);
 
 /** 「時速」「秒速」などの前につく言い方も、あってもなくてもよいことにする */
 const SPEED_HEAD = /^(?:時速|分速|秒速|約|およそ)/;
@@ -178,6 +202,8 @@ export function acceptedAnswers(answer: string): string[] {
     // 「（合っている）」のような説明のかっこは答えではないので、短いものだけ拾う
     // ⚠️ 「（1）3 （2）2」の (1) (2) は小問の番号なので、答えとして登録しない（「1」だけで○になってしまう）
     if (/^[0-9０-９]{1,2}$/.test(inner)) continue;
+    // ⚠️ 「6（個）」「10（cm）」のかっこの中は単位だけ。「個」「cm」だけを書いて○になってはいけない
+    if (UNIT_ONLY.test(normalize(inner))) continue;
     if (inner && inner.length <= 24 && !/[はがをにでと]/.test(inner.slice(0, 1))) add(inner);
   }
   // 「x＝3」「y＝2x」のような式の形の答えは、右辺だけ（「3」）で書いても正解にする。
@@ -228,8 +254,6 @@ function mixedToImproper(raw: string): string | null {
 
 /** 「0.5」と「1/2」のように、書き方（小数と分数）がちがうだけで値が同じか */
 function sameValueDifferentForm(x: string, y: string, rawInput: string, rawAnswer: string): boolean {
-  // 「1と2/3」は normalize で「12/3」になってしまうので、帯分数が絡むときは見ない
-  if (/と/.test(rawInput) || /と/.test(rawAnswer)) return false;
   const val = (t: string): number | null => {
     if (/^-?[0-9]+(?:\.[0-9]+)?$/.test(t)) return parseFloat(t);
     const m = t.match(/^(-?[0-9]+)\/([0-9]+)$/);
@@ -259,6 +283,9 @@ export function judge(input: string, answer: string): Judgement {
   for (const ok of oks) {
     if (got === ok) return 'correct';
     if (stripTailPunct(got) === stripTailPunct(ok)) return 'correct';
+    // 区切りのちがい（読点・コンマ・空白）は、数だけの並びでなければ区別しない。
+    // 数だけの並び（約数の書き出しなど）は、「1,2,3」と「123」「12,3」を区別する。
+    if (!/^[0-9,.\/\-]+$/.test(ok) && got.replace(/,/g, '') === ok.replace(/,/g, '')) return 'correct';
     // 数の答えは、単位を書かなくても正解。ただし「ちがう単位」を書いたら不正解。
     const a = numericCore(got);
     const b = numericCore(ok);

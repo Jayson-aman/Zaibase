@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {
+  Keyboard,
   StyleSheet,
   Text,
   TextInput,
@@ -60,6 +61,9 @@ export default function AnswerInput({ question, onSubmit, submitted, tone = 'blu
   function handleSubmit() {
     const input = text.trim();
     if (!input) return;
+    // 採点の表示に切りかわると入力欄が外れる。そのとき iPhone ではキーボードぶんの下余白が
+    // 残ることがあるので、先にキーボードを閉じる。
+    Keyboard.dismiss();
     // 文で書かれた模範解答は、合わなくても×をつけず 'review'（見くらべ）になる
     const result = isWriting ? 'review' : judge(input, question.answer);
     onSubmit({ input, result });

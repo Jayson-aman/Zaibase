@@ -64,6 +64,8 @@ async function deleteRevenueCatSubscriber(uid) {
     await fetch(`https://api.revenuecat.com/v1/subscribers/${encodeURIComponent(uid)}`, {
       method: "DELETE",
       headers: { Authorization: `Bearer ${key}` },
+      // RevenueCat が応答しないと、データを消したあとで関数全体が時間切れになる
+      signal: AbortSignal.timeout(10000),
     });
   } catch {
     // 失敗しても、アカウント削除そのものは進める（ストア側の購読はここでは解約されない）
@@ -94,7 +96,7 @@ exports.deleteMyData = onCall(
       db
         .collection("aiTutorSessions")
         .where(admin.firestore.FieldPath.documentId(), ">=", `${uid}_`)
-        .where(admin.firestore.FieldPath.documentId(), "<", `${uid}_`),
+        .where(admin.firestore.FieldPath.documentId(), "<", `${uid}_\uf8ff`),
     );
     await deleteRevenueCatSubscriber(uid);
     await admin.auth().deleteUser(uid);

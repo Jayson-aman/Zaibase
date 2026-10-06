@@ -60,7 +60,6 @@ export class AuthError extends Error {}
 // 新しいユーザーの退避分があればそれを戻す（無ければ空にする）。
 const USER_DATA_KEYS = ['@entrance_exam_progress', '@ahiru_feedback_log', '@entrance_exam_review_prompt'];
 const STASH_PREFIX = '@ahiru_stash/';
-const PENDING_PREFIXES = ['formula_unlock_pending_', 'unit_unlock_pending_'];
 
 async function getStorage() {
   return (await import('@react-native-async-storage/async-storage')).default;
@@ -76,10 +75,8 @@ async function swapLocalUserData(fromKey: string, toKey: string): Promise<void> 
     for (const [k, v] of current) if (v != null) saved[k] = v;
     await storage.setItem(STASH_PREFIX + fromKey, JSON.stringify(saved));
     await storage.multiRemove(USER_DATA_KEYS);
-    // 購入の「確認待ち」フラグは別の人の購入を妨げるので持ち越さない
-    const keys = await storage.getAllKeys();
-    const pending = keys.filter((k) => PENDING_PREFIXES.some((p) => k.startsWith(p)));
-    if (pending.length > 0) await storage.multiRemove(pending);
+    // 購入の「確認待ち」の記録はユーザーごとに分けて持つ（utils/purchasePending.ts）ので、ここでは消さない。
+    // （以前は全員ぶん消していたため、確認に失敗した人がログインし直すと記録が消え、同じ項目をもう一度買えた）
     const next = await storage.getItem(STASH_PREFIX + toKey);
     if (next != null) {
       const restored = JSON.parse(next) as Record<string, string>;
