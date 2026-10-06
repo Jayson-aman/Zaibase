@@ -79,8 +79,12 @@ async function fetchEntitlements(uid) {
     if (!ent) return false;
     // expires_date が無い = 期限なし（生涯）。ある場合は未来かどうかで判定。
     if (!ent.expires_date) return true;
+    // 請求の猶予期間（更新に失敗したが、ストアが再試行している間）は expires_date が過去になるが、
+    // アプリ側（SDK）はまだ有効と扱う。サーバーも合わせて、遅いほうで判定する。
     const expiresAt = Date.parse(ent.expires_date);
-    return Number.isFinite(expiresAt) && expiresAt > now;
+    const graceAt = ent.grace_period_expires_date ? Date.parse(ent.grace_period_expires_date) : NaN;
+    const until = Math.max(Number.isFinite(expiresAt) ? expiresAt : -Infinity, Number.isFinite(graceAt) ? graceAt : -Infinity);
+    return Number.isFinite(until) && until > now;
   };
 
   return {

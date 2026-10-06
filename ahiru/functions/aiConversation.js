@@ -109,7 +109,12 @@ exports.chatEnglishConversation = onCall(
     // 使わない（誰でも有料枠を名乗れてAPIコストが流出する）。
     // 英語系コンテンツは英単語Pro（vocab）または全部入りMaxで開放。
     // entitlement を集合で見るので、受験Proと英単語Proの両方を買っている人も正しく通る。
-    const paid = (await hasVocabAccess(uid)) === true;
+    const paidStatus = await hasVocabAccess(uid);
+    const paid = paidStatus === true;
+    // 会員状態が取れなかったときは、有料の人を無料枠（1日3回）で止めない
+    if (paidStatus === null) {
+      throw new HttpsError("unavailable", "いま会員の状態を確認できません。少し待ってから、もう一度試してね。");
+    }
     // 無料枠は実アカウント（匿名でない）にだけ出す。匿名UIDは、Web版で
     // ブラウザのデータを消すだけ（App Check未実装のネイティブでも再インストール）で
     // いくらでも作り直せるため、1日3回の無料枠が事実上無制限になっていた。

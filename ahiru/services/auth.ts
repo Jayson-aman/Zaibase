@@ -4,7 +4,7 @@
 // ログイン成功時に identifyUser(uid) で RevenueCat に同一ユーザーを紐付ける。
 
 import { getFirebaseAuth, isFirebaseConfigured } from './firebaseClient';
-import { identifyUser, logoutUser } from './subscription';
+import { identifyUser, logoutUser, syncPurchasesToCurrentUser } from './subscription';
 
 export type AuthUser = {
   uid: string;
@@ -124,6 +124,8 @@ export async function signInEmail(email: string, password: string): Promise<Auth
     const cred = await signInWithEmailAndPassword(auth, email.trim(), password);
     await swapLocalUserData(before, localKeyOf(cred.user));
     await identifyUser(cred.user.uid);
+    // ログインせずに買った購入を、このアカウントに引きつぐ
+    await syncPurchasesToCurrentUser();
     return toAuthUser(cred.user);
   } catch (e: any) {
     throw new AuthError(friendlyError(e?.code));

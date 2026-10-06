@@ -132,7 +132,14 @@ exports.askTutor = onCall(
     // 課金判定は RevenueCat を正とする。users/{uid}.tier は書き込み処理が無く
     // 常に free になってしまうため、単独では課金者を判定できない。
     const userRef = db.collection("users").doc(uid);
-    const isMax = (await hasMaxAccess(uid)) === true;
+    const maxStatus = await hasMaxAccess(uid);
+    const isMax = maxStatus === true;
+    // 会員状態が取れなかった（課金の確認先が一時的に落ちている）ときは、Max の人を無料扱いにして
+    // 無料体験を使い切らせたり、「使い切りました」と出したりしない。あとでもう一度試してもらう。
+    if (maxStatus === null && isNewSession) {
+      throw new HttpsError("unavailable", "いま会員の状態を確認できません。少し待ってから、もう一度試してね。");
+    }
+    let trialConsumed = false;
 
     // 無料体験は「1セッション」であって「1メッセージ」ではない。
     // 継続中の会話（isNewSession=false）まで弾くと、体験が1往復で切れて
@@ -161,6 +168,7 @@ exports.askTutor = onCall(
         }
         tx.set(userRef, { trialAiUsed: true, updatedAt: FieldValue.serverTimestamp() }, { merge: true });
       });
+      trialConsumed = true;
     }
 
     const turnCount = await getOrCreateSession(uid, sessionId, isNewSession);
@@ -223,6 +231,10 @@ exports.askTutor = onCall(
       });
     } catch (err) {
       console.error("askTutor: Claude API error", err);
+      // AI が答えられなかったのに無料体験（1回限り）だけ消えるのは不公平なので、戻す
+      if (trialConsumed) {
+        await userRef.set({ trialAiUsed: false, updatedAt: FieldValue.serverTimestamp() }, { merge: true }).catch(() => {});
+      }
       throw new HttpsError("internal", "AIとの通信でエラーが発生しました。もう一度試してね。");
     }
 

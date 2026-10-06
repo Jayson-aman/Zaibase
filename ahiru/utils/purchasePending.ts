@@ -60,3 +60,17 @@ export async function listPending(prefix: string, uid: string | null): Promise<s
     return [];
   }
 }
+
+/**
+ * 購入が「ご家族の承認待ち」（Apple の「承認と購入のリクエスト」／Google の保留中の取引）で止まったか。
+ * RevenueCat は PAYMENT_PENDING_ERROR（コード20）で返す。決済は未確定だが、承認されると確定するので、
+ * 失敗として扱って買い直させると二重に払うことになる。
+ */
+export function isPaymentPending(e: unknown): boolean {
+  const err = e as { code?: unknown; errorCode?: unknown; readableErrorCode?: unknown } | null;
+  return (
+    String(err?.code ?? '') === '20' ||
+    String(err?.errorCode ?? '') === '20' ||
+    String(err?.readableErrorCode ?? '') === 'PAYMENT_PENDING_ERROR'
+  );
+}

@@ -19,7 +19,7 @@ const isWebPlatform = Platform.OS === 'web';
 // あとにユーザーがもう一度ボタンを押したときpurchaseProductを再度呼んでしまい、
 // 消耗型商品なので実際に二重課金されてしまう。
 import { useAuthUser } from './useAuthUser';
-import { markPending, isPending, clearPending, listPending } from '../utils/purchasePending';
+import { markPending, isPending, clearPending, listPending, isPaymentPending } from '../utils/purchasePending';
 const PENDING_KEY_PREFIX = 'formula_unlock_pending_';
 
 // 購入の「確認待ち」の記録は utils/purchasePending.ts（ユーザーごと・画面を開いたときに自動で確認をやり直す）
@@ -166,13 +166,14 @@ export function useFormulaUnlocks(): FormulaUnlocksState {
       }
       // 買う直前に最新の解放済み一覧を確かめる。すでに解放されていれば課金しない（二重課金の防止）。
       try {
-        const fresh = await getUnlockedFormulaIds();
+        const fresh = await getUnlockedFormulaIds({ strict: true });
         if (fresh.has(figureId)) {
           if (mounted.current) setUnlockedIds((prev) => new Set([...prev, ...fresh]));
           return { ok: true };
         }
       } catch {
-        // 取得に失敗したときは、そのまま購入に進む（購入自体はサーバー側で二重解放されない）
+        // 解放済みかどうかが確かめられないまま買うと、買ったものをもう一度買ってしまうことがある
+        return { ok: false, message: '解放済みかどうかを確認できませんでした。通信の状態を確かめて、もう一度お試しください。（お支払いはされていません）' };
       }
       setPurchasingFigureId(figureId);
       // 前回この公式を購入したときに、決済は成功したがサーバー確認が未完了の
@@ -185,6 +186,12 @@ export function useFormulaUnlocks(): FormulaUnlocksState {
         } catch (e) {
           if (mounted.current) setPurchasingFigureId(null);
           if ((e as { userCancelled?: boolean } | null)?.userCancelled) return { ok: false, message: '', cancelled: true };
+          // 「承認と購入のリクエスト」（ご家族の承認待ち）。承認されたあとに買い直すと二重に払うので、
+          // 確認待ちとして記録して、承認後はこの画面を開き直すだけで解放されるようにする
+          if (isPaymentPending(e)) {
+            await markPending(PENDING_KEY_PREFIX, uidRef.current, figureId);
+            return { ok: false, message: 'ご家族の承認待ちです。承認されたら、この画面を開き直してください（もう一度「購入する」は押さないでください）。' };
+          }
           const message = e instanceof Error ? e.message : '購入処理に失敗しました';
           return { ok: false, message };
         }

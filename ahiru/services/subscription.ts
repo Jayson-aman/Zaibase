@@ -107,6 +107,23 @@ export async function identifyUser(uid: string): Promise<void> {
   }
 }
 
+/**
+ * ログインしたあと、ストアの購入をそのアカウントに結びつけ直す（ネイティブのみ・失敗しても続行）。
+ * ログインせずに買ってから既存のアカウントでログインすると、購入が「ログイン前のID」に残り、
+ * 新しいアカウントでは無料に戻って見える。購入の復元（ストアのサインインを求める）を押さなくても、
+ * 受け取った購入を今のアカウントに同期する。
+ */
+export async function syncPurchasesToCurrentUser(): Promise<void> {
+  if (isWeb || !isRevenueCatConfigured()) return;
+  try {
+    const Purchases = (await import('react-native-purchases')).default;
+    await Purchases.syncPurchases();
+    await refreshEntitlements();
+  } catch {
+    // 同期できなくても、あとで「購入を復元」から直せる
+  }
+}
+
 // ログアウト時：RevenueCatを匿名ユーザーへ戻す。
 export async function logoutUser(): Promise<void> {
   if (!isRevenueCatConfigured()) return;

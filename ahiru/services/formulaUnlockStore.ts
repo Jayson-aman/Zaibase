@@ -6,7 +6,7 @@ const COLLECTION = 'formulaUnlocks';
  * ログイン中ユーザーが単発課金（¥50買い切り）で解放済みの公式集formulaId一覧を取得する。
  * Firestore未設定・未ログイン・オフライン時は空集合を返す（内容は既定でロック扱いになる）。
  */
-export async function getUnlockedFormulaIds(): Promise<Set<string>> {
+export async function getUnlockedFormulaIds(opts?: { strict?: boolean }): Promise<Set<string>> {
   if (!isFirebaseConfigured()) return new Set();
   try {
     const uid = await getAuthUid();
@@ -16,7 +16,9 @@ export async function getUnlockedFormulaIds(): Promise<Set<string>> {
     const snap = await getDoc(doc(db, COLLECTION, uid));
     const data = snap.data() as { unlocked?: string[] } | undefined;
     return new Set(data?.unlocked ?? []);
-  } catch {
+  } catch (e) {
+    // 購入の直前の確認では、読めなかったことを「解放済みが0件」と取りちがえない（解放済みをもう一度買ってしまう）
+    if (opts?.strict) throw e;
     return new Set();
   }
 }
