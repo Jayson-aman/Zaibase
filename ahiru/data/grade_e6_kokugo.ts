@@ -364,7 +364,7 @@ export const gradeE6KokugoQuestions: Question[] = [
     examType: 'chugaku',
     grade: 'e6',
     difficulty: 'advanced',
-    question: '次の――線の言葉の敬語の種類として最も適切なものを選びなさい。「本日はお忙しいところ、ご来場いただきありがとうございます。」',
+    question: '次の――線の言葉の敬語の種類として最も適切なものを選びなさい。「本日はお忙しいところ、―ご来場―いただきありがとうございます。」',
     choices: ['尊敬語', '謙譲語', '丁寧語', '美化語'],
     answer: '尊敬語',
     hint: '「ご来場」は、会場に来てくださった相手（お客様）の動作を高めて言っている表現。',

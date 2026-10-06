@@ -3847,9 +3847,9 @@ She was studying math at nine last night.
 Answer: I think studying English is important. First, I can talk with people from other countries. Second, I can enjoy watching English movies without subtitles. For these reasons, I like studying English.
 
 ■ 単語数・時間配分の目安
-・英検5級：Eメール返信・単語補充が中心、時間はゆったり
-・英検4級：短い意見文（25語程度）
-・英検3級：意見文（25〜35語程度）、理由は2つ挙げるのが基本
+・英検5級：筆記（語句補充・会話・語句整序）とリスニングが中心で、ライティング（英作文）は出ない
+・英検4級：ライティング（英作文）は出ない（筆記とリスニングのみ）
+・英検3級：2024年度から2問。Eメールへの返信（15〜25語）と、意見論述（25〜35語、理由は2つ挙げるのが基本）
 
 ★ 型を覚えておけば、どんなお題が出ても「意見→理由→（具体例）→結論」の流れに当てはめて書ける。`,
       },
