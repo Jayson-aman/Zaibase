@@ -422,7 +422,7 @@ export default function QuizScreen() {
         }
       }
       await studyWriteRef.current;
-      reloadStudyStats();
+      await reloadStudyStats();
       setFinished(true);
     } else {
       setCurrentIndex((i) => i + 1);

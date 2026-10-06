@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Linking, Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useSubscription } from '../hooks/useSubscription';
+import { useAuthUser } from '../hooks/useAuthUser';
 import { refreshCustomerInfo } from '../services/subscription';
 import { planNotice } from '../utils/planStatus';
 import PlanNoticeCard from './PlanNoticeCard';
@@ -17,23 +18,28 @@ import PlanNoticeCard from './PlanNoticeCard';
 // ・期限が切れた … 一度閉じたら、同じ終了日のぶんは出さない
 // ・ふつうに契約中／未契約 … 何も出さない
 
-const DISMISS_KEY = 'plan_expired_dismissed_at';
+const DISMISS_KEY_BASE = 'plan_expired_dismissed_at';
 
 export default function PlanStatusBanner({ onAction }: { onAction: () => void }) {
   const { plan, loading } = useSubscription();
+  const { user, loading: authLoading } = useAuthUser();
   const [dismissedAt, setDismissedAt] = useState<string | null>(null);
   const [loaded, setLoaded] = useState(false);
+  // 「閉じた」記録は人ごとに持つ（同じ端末で別の人がログインしても、前の人が閉じた案内を隠さない）
+  const dismissKey = `${DISMISS_KEY_BASE}__${user && !user.isAnonymous ? user.uid : 'anon'}`;
 
   useEffect(() => {
+    if (authLoading) return;
     let alive = true;
-    AsyncStorage.getItem(DISMISS_KEY)
+    setLoaded(false);
+    AsyncStorage.getItem(dismissKey)
       .then((v) => { if (alive) setDismissedAt(v); })
-      .catch(() => {})
+      .catch(() => { if (alive) setDismissedAt(null); })
       .finally(() => { if (alive) setLoaded(true); });
     return () => { alive = false; };
-  }, []);
+  }, [dismissKey, authLoading]);
 
-  if (loading || !loaded) return null;
+  if (loading || authLoading || !loaded) return null;
   const manage = Platform.OS === 'web' ? '購入完了メールの「サブスクリプション管理」リンク' : 'ストアの設定（Apple ID → サブスクリプション）';
   const notice = planNotice(plan, manage);
   if (notice == null) return null;
@@ -59,7 +65,7 @@ export default function PlanStatusBanner({ onAction }: { onAction: () => void })
 
   function dismiss() {
     setDismissedAt(expiryKey);
-    AsyncStorage.setItem(DISMISS_KEY, expiryKey).catch(() => {});
+    AsyncStorage.setItem(dismissKey, expiryKey).catch(() => {});
   }
 
   return (

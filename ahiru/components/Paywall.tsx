@@ -52,7 +52,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
   const [introUsed, setIntroUsed] = useState<Set<string>>(new Set());
   const [loadingOff, setLoadingOff] = useState(true);
   const [purchasing, setPurchasing] = useState(false);
-  const { isLoggedIn } = useAuthUser();
+  const { isLoggedIn, loading: authLoading } = useAuthUser();
   // すでに契約中のプランは「ご利用中」にして、二重に購入させない（Maxの人にProを売らない）
   const { tier: ownedTier, plan } = useSubscription();
   const proOwned = ownedTier === 'pro' || ownedTier === 'max';
@@ -86,6 +86,8 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
     // iOS / Android はストアアカウント（Apple ID / Google）に購入が紐付くため
     // ログイン不要でそのまま購入できる。Web 版のみ Stripe 購入をアカウントに
     // 紐付けるため、未ログインならログイン画面へ誘導する。
+    // ログイン状態の確認中は、ログイン画面へ飛ばさない（ログイン済みの人が一瞬ログインを求められる）
+    if (isWeb && authLoading) return;
     if (isWeb && !isLoggedIn) {
       goLogin();
       return;
@@ -104,6 +106,8 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
   }
 
   async function handleRestore() {
+    // ログイン状態の確認中は何もしない（ログイン済みの人に「ログインが必要です」と出さない）
+    if (isWeb && authLoading) return;
     // iOS / Android はストアの購入履歴から復元するためログイン不要。
     // Web 版のみ、Stripe 購入をアカウントで管理するためログインを促す。
     if (isWeb && !isLoggedIn) {

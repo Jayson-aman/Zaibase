@@ -546,7 +546,24 @@ export function confirmPendingStripeUnlockOnce(): Promise<StripeUnlockConfirmRes
   pendingStripeUnlockConfirm = callFirebaseFunction<
     { sessionId: string },
     StripeUnlockConfirmResult
-  >('confirmAhiruUnlockCheckout', { sessionId }).catch(() => null);
+  >('confirmAhiruUnlockCheckout', { sessionId }).catch(() => {
+    // 決済は済んでいるのに、解放の確認だけが失敗した。黙って捨てると「払ったのに開かない」になるので、
+    // 理由と対処を知らせ、URLを元に戻して、再読み込みで確認をやり直せるようにする。
+    try {
+      const again = new URLSearchParams(window.location.search);
+      again.set('unlock_success', '1');
+      again.set('session_id', sessionId);
+      window.history.replaceState(null, '', `${window.location.pathname}?${again.toString()}${window.location.hash}`);
+    } catch {
+      // URLを戻せなくても、案内は出す
+    }
+    try {
+      window.alert('お支払いは完了していますが、解放の確認ができませんでした。\n通信の状態を確かめて、このページを再読み込みしてください（二重に請求されることはありません）。\n何度やっても開かないときは info@zaibase.group までご連絡ください。');
+    } catch {
+      // 表示できない環境では何も出さない
+    }
+    return null;
+  });
   return pendingStripeUnlockConfirm;
 }
 

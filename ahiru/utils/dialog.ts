@@ -49,10 +49,15 @@ export function noticeDialog(title: string, message: string): void {
  * 返り値は「このまま購入に進んでよいか」。ログインしていなければ、案内を出して false を返す。
  */
 export async function ensureLoggedInForPurchase(
-  isLoggedIn: boolean,
+  isLoggedIn: boolean | null,
   goLogin: () => void,
 ): Promise<boolean> {
   if (isLoggedIn) return true;
+  // ログイン状態をまだ確認している最中（null）に「ログインが必要です」と出すと、ログイン済みの人を驚かせる
+  if (isLoggedIn === null) {
+    await noticeDialog('確認しています', 'ログインの状態を確認しています。数秒おいて、もう一度押してください。');
+    return false;
+  }
   const go = await confirmDialog(
     'ログインが必要です',
     '買い切りの購入は、アカウントに保存されます。再インストールや機種変更のときも、解放した内容を引き継げます。\n\n無料のアカウント登録（メールアドレス）をしてから、もう一度お試しください。',

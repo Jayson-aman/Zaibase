@@ -58,7 +58,7 @@ function trialSections<T extends { body: string }>(sections: T[]): T[] {
 export default function LessonDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
-  const { isLoggedIn } = useAuthUser();
+  const { isLoggedIn, loading: authLoading } = useAuthUser();
   const [paywallVisible, setPaywallVisible] = React.useState(false);
   // loading を見ずに isPro/isMax だけで分岐すると、課金状態の取得が終わるまでの
   // 一瞬、加入者にも「Proプランで閲覧できます」のロック画面が出てしまう。
@@ -93,7 +93,7 @@ export default function LessonDetailScreen() {
   }, [lesson, isKoushikiLesson, subjectPool, isMax]);
 
   async function handleUnlockFormula(figureId: string, heading: string) {
-    if (!(await ensureLoggedInForPurchase(isLoggedIn, () => router.push('/login' as any)))) return;
+    if (!(await ensureLoggedInForPurchase(authLoading ? null : isLoggedIn, () => router.push('/login' as any)))) return;
     const okFormula = await confirmDialog(
       '購入の確認',
       `「${heading}」を ${formulaUnlockPriceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
@@ -110,7 +110,7 @@ export default function LessonDetailScreen() {
   }
 
   async function handleUnlockUnit(lessonId: string, title: string) {
-    if (!(await ensureLoggedInForPurchase(isLoggedIn, () => router.push('/login' as any)))) return;
+    if (!(await ensureLoggedInForPurchase(authLoading ? null : isLoggedIn, () => router.push('/login' as any)))) return;
     const ok = await confirmDialog(
       '購入の確認',
       `「${title}」を ${unitUnlockPriceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,

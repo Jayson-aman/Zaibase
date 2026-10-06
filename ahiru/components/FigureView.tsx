@@ -841,7 +841,9 @@ function LineChartFig({ fig }: { fig: LineChartFigure }) {
 
 function BarChartFig({ fig }: { fig: BarChartFigure }) {
   const area: Area = { x0: 40, y0: 24, w: VBW - 56, h: VBH - 62 };
-  const yMax = fig.yMax ?? ((Math.max(...fig.bars.map((b) => b.value)) * 1.18) || 1);
+  // 答えの棒（hidden）は目盛りの範囲に入れない。入れると、軸の最大値から答えの大きさが読める
+  const shownBars = fig.bars.filter((b) => !b.hidden);
+  const yMax = fig.yMax ?? ((Math.max(...(shownBars.length > 0 ? shownBars : fig.bars).map((b) => b.value)) * 1.18) || 1);
   // 負の値（例：気温が氷点下）の棒があるときは、0の線を境に下へ伸ばす。
   // 以前は負の高さの Rect になり、棒がまったく描かれなかった。
   const minValue = Math.min(0, ...fig.bars.map((b) => b.value));
@@ -868,11 +870,20 @@ function BarChartFig({ fig }: { fig: BarChartFigure }) {
     const color = b.color ?? PALETTE[i % PALETTE.length];
     const vy = py(b.value);
     // 桁の違う値が並ぶと小さい棒が消えてしまうので、最低限の高さを残す
-    const h = b.value === 0 ? 0 : Math.max(2, Math.abs(zeroY - vy));
-    const top = b.value < 0 ? zeroY : zeroY - h;
-    els.push(<Rect key={`b${i}`} x={x} y={top} width={bw} height={h} fill={color} opacity={0.82} stroke={fig.histogram ? '#fff' : color} strokeWidth={fig.histogram ? 1 : 0} />);
+    // 答えにあたる棒（hidden）は、本当の高さで描くと棒の高さから答えが読めてしまうので、
+    // 決まった高さのうすい破線の棒にして「？」を出す
+    const hiddenBar = b.hidden === true;
+    const h = hiddenBar ? area.h * 0.5 : b.value === 0 ? 0 : Math.max(2, Math.abs(zeroY - vy));
+    const top = b.value < 0 && !hiddenBar ? zeroY : zeroY - h;
+    els.push(
+      hiddenBar ? (
+        <Rect key={`b${i}`} x={x} y={top} width={bw} height={h} fill={color} opacity={0.18} stroke={color} strokeWidth={1.5} strokeDasharray="4 3" />
+      ) : (
+        <Rect key={`b${i}`} x={x} y={top} width={bw} height={h} fill={color} opacity={0.82} stroke={fig.histogram ? '#fff' : color} strokeWidth={fig.histogram ? 1 : 0} />
+      ),
+    );
     // 棒の先に実数を出す（正は上、負は下）。目盛りを読まなくても値が分かるようにする。
-    if (!fig.histogram) {
+    if (!fig.histogram || hiddenBar) {
       els.push(
         <SvgText key={`bv${i}`} x={x + bw / 2} y={b.value < 0 ? top + h + 11 : top - 4} fontSize={9.5} fill={INK} textAnchor="middle" fontWeight="bold">
           {b.hidden ? '？' : b.value}
