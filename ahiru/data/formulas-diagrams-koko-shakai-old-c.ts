@@ -497,8 +497,8 @@ const kogyo: DiagramFigure = show([
 // ── 日本の農業の課題と工夫 ──
 const nogyo: DiagramFigure = show([
   {
-    note: '食料自給率とは、国内で消費する食料のうち、国内で作った分の割合です。❓なぜこの数字が大事？→食べ物を国内でどれだけまかなえるか、が分かるからです。日本はカロリーベースで約38%です。',
-    add: [bx(30, 40, 260, 30, undefined, C.gray, FILL.gray), bx(30, 40, 99, 30, '国産 約38%', C.green, FILL.green, 12), lb(210, 60, '輸入 約62%', 12, C.gray, 'middle', true), lb(160, 100, 'カロリーで見た食料の割合', 12, C.ink, 'middle', true), ...cap('食料自給率（カロリーベース）約38%', C.main, FILL.warm)],
+    note: '食料自給率とは、国内で消費する食料のうち、国内で作った分の割合です。❓なぜこの数字が大事？→食べ物を国内でどれだけまかなえるか、が分かるからです。日本はカロリーベースで約37%（2025年度）です。',
+    add: [bx(30, 40, 260, 30, undefined, C.gray, FILL.gray), bx(30, 40, 96, 30, '国産 約37%', C.green, FILL.green, 12), lb(210, 60, '輸入 約63%', 12, C.gray, 'middle', true), lb(160, 100, 'カロリーで見た食料の割合', 12, C.ink, 'middle', true), ...cap('食料自給率（カロリーベース）約37%', C.main, FILL.warm)],
   },
   {
     note: '❓なぜ低い？→米はほぼ自給できていますが、小麦や大豆は輸入が大半だからです。パンやめん、みそや豆腐の原料を、外国にたよっています。',
@@ -533,8 +533,8 @@ const nogyo: DiagramFigure = show([
     add: [...fresh(bx(20, 30, 100, 44, '地元の農家', C.green, FILL.green, 13), ar(124, 52, 196, 52, C.green), bx(200, 30, 100, 44, '地元の人\n学校給食', C.green, FILL.green, 12), lb(160, 110, '輸送が短い → 燃料とCO2が減る', 12, C.ink, 'middle', true)), ...cap('地産地消 ＝ 地元で作って地元で消費', C.green, FILL.green)],
   },
   {
-    note: 'まとめ。自給率は約38%（カロリーベース）。促成＝あたたかい地域で早く、抑制＝涼しい高地で遅く。課題は高齢化と後継者不足、対策は銘柄米・六次産業化・地産地消です。',
-    add: [...fresh(...fl(['自給率\n約38%', '促成：早く\n抑制：遅く', '課題と\n対策'], 30, { h: 60, size: 12, color: C.green, fill: FILL.green })), ...cap('促成＝早く、抑制＝遅く', C.green, FILL.green)],
+    note: 'まとめ。自給率は約37%（カロリーベース）。促成＝あたたかい地域で早く、抑制＝涼しい高地で遅く。課題は高齢化と後継者不足、対策は銘柄米・六次産業化・地産地消です。',
+    add: [...fresh(...fl(['自給率\n約37%', '促成：早く\n抑制：遅く', '課題と\n対策'], 30, { h: 60, size: 12, color: C.green, fill: FILL.green })), ...cap('促成＝早く、抑制＝遅く', C.green, FILL.green)],
   },
 ]);
 

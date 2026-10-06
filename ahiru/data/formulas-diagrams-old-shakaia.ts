@@ -450,8 +450,8 @@ const jikyu: DiagramFigure = show([
     add: [bx(60, 20, 200, 34, '国内で作られた分', C.green, FILL.green, 13), ln(60, 66, 260, 66, C.ink, false, 2), bx(60, 78, 200, 34, '国内で食べた全体', C.blue, FILL.blue, 13), lb(160, 130, '自給率＝作った分 ÷ 食べた全体', 12, C.main, 'middle', true), ...cap('カロリーベースで比べる', C.main, FILL.warm, 40)],
   },
   {
-    note: '❓日本はどれくらい？→カロリーベースで約38%です。100のうち国内で作られたのは約38、残りの約62は輸入です。❓ほかの先進国とくらべると？→日本は低いほうです。',
-    add: fresh(...Array.from({ length: 100 }, (_, i) => ci(24 + (i % 20) * 14.5, 24 + Math.floor(i / 20) * 16, 5, undefined, i < 38 ? C.green : C.gray, i < 38 ? FILL.green : FILL.gray)), lb(80, 118, '国内産 約38', 12, C.green, 'middle', true), lb(220, 118, '輸入 約62', 12, C.gray, 'middle', true), ...cap('日本の食料自給率＝約38%', C.red, FILL.red, 40)),
+    note: '❓日本はどれくらい？→カロリーベースで約37%（2025年度）です。100のうち国内で作られたのは約37、残りの約63は輸入です。❓ほかの先進国とくらべると？→日本は低いほうです。',
+    add: fresh(...Array.from({ length: 100 }, (_, i) => ci(24 + (i % 20) * 14.5, 24 + Math.floor(i / 20) * 16, 5, undefined, i < 37 ? C.green : C.gray, i < 37 ? FILL.green : FILL.gray)), lb(80, 118, '国内産 約37', 12, C.green, 'middle', true), lb(220, 118, '輸入 約63', 12, C.gray, 'middle', true), ...cap('日本の食料自給率＝約37%', C.red, FILL.red, 40)),
   },
   {
     note: '❓食べ物ごとに見ると？→米はほぼ自給できますが、小麦と大豆は自給率が低くなっています。❓なぜ小麦が低い？→パンやめん、大豆の食品を食べる量がふえたのに、国内での生産では足りないからです。',
@@ -470,8 +470,8 @@ const jikyu: DiagramFigure = show([
     add: fresh(bx(20, 40, 110, 50, '地元で作る', C.green, FILL.green, 13), ar(134, 65, 180, 65, C.main), bx(184, 40, 116, 50, '地元で食べる', C.blue, FILL.blue, 13), ...cap('地産地消＝地元で作り、地元で食べる', C.green, FILL.green, 40)),
   },
   {
-    note: 'まとめです。❓日本の自給率は？→カロリーベースで約38%と低い。❓米と小麦・大豆は？→米は高く、小麦・大豆は低い。❓取り組みは？→地産地消です。',
-    add: fresh(bx(12, 14, 296, 26, '自給率＝約38%（低い）', C.red, FILL.red, 12), bx(12, 46, 296, 26, '米は高く、小麦・大豆は低い', C.main, FILL.warm, 12), bx(12, 78, 296, 26, '輸入が止まると困る', C.gray, FILL.gray, 12), bx(12, 110, 296, 26, '地産地消の取り組み', C.green, FILL.green, 12), ...cap('自給率は低い→輸入にたよる課題', C.main, FILL.warm, 40)),
+    note: 'まとめです。❓日本の自給率は？→カロリーベースで約37%と低い。❓米と小麦・大豆は？→米は高く、小麦・大豆は低い。❓取り組みは？→地産地消です。',
+    add: fresh(bx(12, 14, 296, 26, '自給率＝約37%（低い）', C.red, FILL.red, 12), bx(12, 46, 296, 26, '米は高く、小麦・大豆は低い', C.main, FILL.warm, 12), bx(12, 78, 296, 26, '輸入が止まると困る', C.gray, FILL.gray, 12), bx(12, 110, 296, 26, '地産地消の取り組み', C.green, FILL.green, 12), ...cap('自給率は低い→輸入にたよる課題', C.main, FILL.warm, 40)),
   },
 ], '食料自給率と輸入');
 
