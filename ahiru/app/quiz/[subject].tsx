@@ -37,6 +37,7 @@ const SESSION_LIMITED_MODES: TestModeKey[] = ['level', 'nyushi'];
 import QuizCard from '../../components/QuizCard';
 import Paywall from '../../components/Paywall';
 import { saveProgress } from '../../store/progress';
+import { recordStudy, useStudyStats, DAILY_GOAL } from '../../store/studyStreak';
 import { incrementTrialQuestions, isTrialExpired, TRIAL_QUESTION_LIMIT } from '../../store/trial';
 import { getSessionFreeUsed, incrementSessionFreeUsed } from '../../store/sessionLimit';
 import { logAccessEvent, type AccessTier } from '../../services/analytics';
@@ -133,6 +134,7 @@ export default function QuizScreen() {
     topic: topicParam,
     testmode: testModeParam,
     grade: gradeParam,
+    limit: limitParam,
   } = useLocalSearchParams<{
       subject: string;
       difficulty?: string;
@@ -142,6 +144,7 @@ export default function QuizScreen() {
       topic?: string;
       testmode?: string;
       grade?: string;
+      limit?: string;
     }>();
   const router = useRouter();
 
@@ -167,6 +170,9 @@ export default function QuizScreen() {
   const course: CourseKey = courseParam && isCourseKey(courseParam) ? courseParam : 'general';
   const examType: ExamType = examTypeParam && isExamType(examTypeParam) ? examTypeParam : 'chugaku';
   const gradeFilter: GradeKey | null = gradeParam && isGrade(gradeParam) ? gradeParam : null;
+  // 「はじめの5問」「今日の目標」のように、問題数を決めて始めるときの上限（通常の出題だけに効く）
+  const limitNum = Number(limitParam);
+  const questionLimit = Number.isInteger(limitNum) && limitNum >= 1 && limitNum <= 30 ? limitNum : null;
   const info = subjectInfo[subjectKey];
 
   // isMax/isPro を useMemo より前に宣言しないと Temporal Dead Zone クラッシュが起きる
@@ -176,6 +182,8 @@ export default function QuizScreen() {
   const isMax = subIsMax || betaAccess;
 
   const isPreview = (isMock || isKakomon) && !isMax;
+  // 連続日数と今日の目標（結果画面で出す）。問題に答えるたびに recordStudy で増える。
+  const { stats: studyStats, reload: reloadStudyStats } = useStudyStats();
 
   const { questions: subjectPool, loading: questionsLoading } = useSubjectQuestions(subjectKey);
   const { unlockedIds: unlockedFormulaIds } = useFormulaUnlocks();
@@ -245,8 +253,9 @@ export default function QuizScreen() {
       return [...set].sort((a, b) => a.id.localeCompare(b.id)).slice(0, KAKOMON_PREVIEW_COUNT);
     }
     const filtered = filterQuestions(all, examType, course, difficultyFilter, isPro || isMax, gradeFilter);
-    return shuffle(filtered);
-  }, [subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, testModeKey, course, examType, isPro, isMax, topicParam, restartKey, gradeFilter, unlockedFormulaKey]);
+    const picked = shuffle(filtered);
+    return questionLimit != null ? picked.slice(0, questionLimit) : picked;
+  }, [questionLimit, subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, testModeKey, course, examType, isPro, isMax, topicParam, restartKey, gradeFilter, unlockedFormulaKey]);
 
   // 無料/Pro/MAXユーザーがMAX限定モードにどれだけ到達しているかを集計できるよう記録する。
   // baseQuestions（useMemo）はレンダー中に副作用を起こしたくないため、別のeffectで発火する。
@@ -283,6 +292,8 @@ export default function QuizScreen() {
   // 正解/不正解ボタンの二重タップ防止。二重に走ると currentIndex が2つ進み、
   // 最後の2問で範囲外になって落ちる。
   const answeringRef = useRef(false);
+  // 直近の「答えた」記録の書きこみ。結果画面で連続日数を読む前に、これが終わるのを待つ。
+  const studyWriteRef = useRef<Promise<void> | null>(null);
   const scrollRef = useRef<ScrollView>(null);
   const answerYRef = useRef(0);
   // レベル別ドリル・入試対策の「1日あたり無料N問」の消費数。画面を離れて
@@ -410,6 +421,8 @@ export default function QuizScreen() {
           maybeRequestReview(currentScore, scoredTotal).catch(() => {});
         }
       }
+      await studyWriteRef.current;
+      reloadStudyStats();
       setFinished(true);
     } else {
       setCurrentIndex((i) => i + 1);
@@ -474,6 +487,8 @@ export default function QuizScreen() {
   async function handleAnswer(correct: boolean, kind: 'scored' | 'review' = 'scored') {
     if (answeringRef.current) return;
     answeringRef.current = true;
+    // 答えた問題を1問と数える（連続日数・今日の目標）。途中でやめても、答えたぶんは残る。
+    studyWriteRef.current = recordStudy(1).catch(() => {});
 
     // 無料ユーザーのお試し問題数チェック。
     // 課金状態の取得中（subLoading）は加入者も未加入に見えるため、その間は
@@ -536,7 +551,8 @@ export default function QuizScreen() {
       setWrongStreak(newStreak);
       // 3回連続で間違えたら、やさしく基礎問題に戻す（上限到達後はどうせ続けられないので差し込まない）
       let injected = false;
-      if (!hitLimit && newStreak >= 3) {
+      // 問題数を決めて始めたとき（はじめの5問・今日の目標）は、問題を足さない。「5問」が8問に伸びると約束とちがう
+      if (!hitLimit && newStreak >= 3 && questionLimit == null) {
         injected = injectRemedialBasics();
         if (injected) setWrongStreak(0);
       }
@@ -689,6 +705,18 @@ export default function QuizScreen() {
                   </View>
                 </>
               )}
+            </View>
+
+            {/* 連続日数と今日の目標。続けた実感が、あすも開く理由になる */}
+            <View style={styles.streakResult}>
+              <Text style={styles.streakResultMain}>
+                {studyStats.streak > 0 ? `🔥 ${studyStats.streak}日れんぞく！` : '🔥 きょうから スタート！'}
+              </Text>
+              <Text style={styles.streakResultSub}>
+                {studyStats.goalReached
+                  ? `✅ 今日の目標（${DAILY_GOAL}問）を達成しました。あすも続けよう`
+                  : `今日は ${studyStats.todayCount}問 ／ 目標${DAILY_GOAL}問（あと${DAILY_GOAL - studyStats.todayCount}問）`}
+              </Text>
             </View>
 
             {/*
@@ -1257,6 +1285,17 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     letterSpacing: 1,
   },
+  streakResult: {
+    backgroundColor: '#FFF4E5',
+    borderRadius: 14,
+    borderWidth: 1.5,
+    borderColor: '#F0B866',
+    padding: 14,
+    marginBottom: 14,
+    alignItems: 'center',
+  },
+  streakResultMain: { fontSize: 20, fontWeight: '800', color: '#B5622E' },
+  streakResultSub: { fontSize: 13, color: '#6B4226', marginTop: 4, textAlign: 'center' },
   resultsContent: {
     paddingHorizontal: 20,
     paddingTop: 24,

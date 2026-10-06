@@ -18,6 +18,7 @@ import { useBetaAccess } from '../../hooks/useBetaAccess';
 import { useProGate } from '../../hooks/useProGate';
 import { useSubscription } from '../../hooks/useSubscription';
 import PlanStatusBanner from '../../components/PlanStatusBanner';
+import StudyStartCard from '../../components/StudyStartCard';
 import { subjectInfo, type SubjectKey } from '../../data/questions-meta';
 import { useQuestionsBySubjectMap } from '../../hooks/useSubjectQuestions';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
@@ -334,6 +335,9 @@ export default function HomeScreen() {
       >
         {/* お試し中・解約ずみ・期限切れのとき、いつまで使えるかを一番上に出す */}
         {!listenPickerActive && <PlanStatusBanner onAction={() => setPaywallVisible(true)} />}
+
+        {/* はじめての人には「はじめの5問」、続けている人には連続日数と今日の目標 */}
+        {!listenPickerActive && <StudyStartCard examType={examType} />}
 
         {/* まず読んで学ぶところ（教科書・公式集）を一番上に置く。
             問題を解く前に開く場所なので、下のタブではなくここから入る。 */}

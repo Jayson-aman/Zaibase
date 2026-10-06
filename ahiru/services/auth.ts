@@ -58,7 +58,7 @@ export class AuthError extends Error {}
 // そのままだと、ログアウトして別の人がログインしても前の人の記録が見え、記録も混ざる。
 // ユーザーが変わるたびに、いまの記録を「そのユーザー用の退避先」へ移し、
 // 新しいユーザーの退避分があればそれを戻す（無ければ空にする）。
-const USER_DATA_KEYS = ['@entrance_exam_progress', '@ahiru_feedback_log', '@entrance_exam_review_prompt'];
+const USER_DATA_KEYS = ['@entrance_exam_progress', '@ahiru_feedback_log', '@entrance_exam_review_prompt', '@ahiru_study_days'];
 const STASH_PREFIX = '@ahiru_stash/';
 
 async function getStorage() {
