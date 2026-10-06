@@ -160,7 +160,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
   // 購入するプロダクト（年額表示のときは年額）
   const proBuy = showYearly ? proYearlyProd : proProd;
   const maxBuy = showYearly ? maxYearlyProd : maxProd;
-  // 導入オファー（¥500・7日間のPay Up Front等）がApp Store Connect側で設定されて
+  // 導入オファー（¥500・1か月のPay Up Front等）がApp Store Connect側で設定されて
   // いれば、RevenueCatが product.introPrice として返す。ここで「まず¥500で7日間」
   // のように明示しないと、Appleガイドライン3.1.2（トライアル・オファー条件の明示）に
   // 反するだけでなく、ユーザーが通常価格でいきなり課金されると誤解する。
@@ -170,14 +170,14 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
     const intro = (product as any)?.introPrice as { priceString?: string } | null | undefined;
     return intro?.priceString ?? null;
   };
-  // お試し期間の長さ（ストアが返す値。取れなければ7日間）
+  // お試し期間の長さ（ストアが返す値。取れなければ1か月）
   const introDays = (product: unknown): string => {
     const intro = (product as any)?.introPrice as { periodUnit?: string; periodNumberOfUnits?: number } | null | undefined;
     const n = intro?.periodNumberOfUnits;
     if (n && intro?.periodUnit === 'DAY') return `${n}日間`;
     if (n && intro?.periodUnit === 'WEEK') return `${n * 7}日間`;
     if (n && intro?.periodUnit === 'MONTH') return `${n}か月`;
-    return '7日間';
+    return '1か月';
   };
   const proIntro = introPriceLabel(proProd);
   const maxIntro = introPriceLabel(maxProd);
