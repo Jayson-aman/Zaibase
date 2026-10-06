@@ -352,6 +352,28 @@ export default function QuizScreen() {
     sessionFreeUsedRef.current = 0;
   }, [testModeKey, subjectKey]);
 
+  // お試しの枠を使い切った人には、問題を開いた時点でペイウォールを先に出す。
+  // 以前は「答えたあとに出す」作りで、使い切ったあとも、開いて1問答えるたびに○×と解説が見られた
+  // （1問ずつなら、無料で続けられてしまう）。
+  const openGateCheckedRef = useRef(false);
+  useEffect(() => {
+    if (subLoading || questionsLoading || isPro || isMax) return;
+    if (openGateCheckedRef.current) return;
+    openGateCheckedRef.current = true;
+    let cancelled = false;
+    (async () => {
+      const sessionLimited = testModeKey != null && SESSION_LIMITED_MODES.includes(testModeKey);
+      const used = sessionLimited ? await getSessionFreeUsed(`${testModeKey}_${subjectKey}`) : 0;
+      const blocked = (sessionLimited && used >= SESSION_FREE_LIMIT) || (await isTrialExpired());
+      if (cancelled || !blocked) return;
+      setTrialBlocked(true);
+      setShowPaywall(true);
+    })().catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [subLoading, questionsLoading, isPro, isMax, testModeKey, subjectKey]);
+
   // ロード後の一瞬だけ queue が空になるのを避けるため baseQuestions をフォールバックに使う
   const activeQuestions = queue.length > 0 ? queue : baseQuestions;
   const currentQuestion = activeQuestions[currentIndex];

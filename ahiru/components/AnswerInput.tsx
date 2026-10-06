@@ -65,7 +65,7 @@ export default function AnswerInput({ question, onSubmit, submitted, tone = 'blu
     // 残ることがあるので、先にキーボードを閉じる。
     Keyboard.dismiss();
     // 文で書かれた模範解答は、合わなくても×をつけず 'review'（見くらべ）になる
-    const result = isWriting ? 'review' : judge(input, question.answer);
+    const result = isWriting ? 'review' : judge(input, question.answer, question.question);
     onSubmit({ input, result });
   }
 

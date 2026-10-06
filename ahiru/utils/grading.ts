@@ -43,6 +43,8 @@ export type GradableQuestion = {
   choices?: string[];
   subQuestions?: unknown[];
   isWritten?: boolean;
+  /** 問題文（「すべて答えなさい」の問題は答えの順番を問わないため、採点で参照する） */
+  question?: string;
 };
 
 export function answerMode(q: GradableQuestion): AnswerMode {
@@ -276,7 +278,30 @@ function sameValueDifferentForm(x: string, y: string, rawInput: string, rawAnswe
  * 合わなかったとき、模範解答が文で書かれていれば 'review'（見くらべ）を返す。
  * 機械には言いかえの正誤が決められないので、×をつけずに自分で見くらべてもらう。
  */
-export function judge(input: string, answer: string): Judgement {
+/**
+ * 「〜をすべて答えなさい」のように、答えが集まり（順番に意味がない）の問題か。
+ * 並べ順を問う問題（順に・古い順・大きい順・それぞれ・また…）は含めない。
+ * 約数「1、2、3、6」を「6、3、2、1」と書いても正解にするために使う。
+ */
+export function isUnorderedSetQuestion(questionText: string | undefined): boolean {
+  if (!questionText) return false;
+  if (!/(すべて|全て|全部|ぜんぶ)/.test(questionText)) return false;
+  if (/(順|並べ|並び|番目|最初|はじめ|次に|何番|先に|経路|手順|過程|記号で|→|大きい|小さい|多い|少ない|それぞれ|また|および|求め.*求め)/.test(questionText)) return false;
+  return true;
+}
+
+/** 読点・コンマで区切った項目を、書き方のゆれをならして並べ替えた形で返す。かっこを含む答えは対象外（null）。 */
+function sortedItems(s: string): string[] | null {
+  if (/[()（）]/.test(s)) return null;
+  const items = s
+    .split(/[、，,]/)
+    .map((t) => stripTailPunct(normalize(t)))
+    .filter((t) => t.length > 0);
+  if (items.length < 2) return null;
+  return items.sort();
+}
+
+export function judge(input: string, answer: string, questionText?: string): Judgement {
   const got = normalize(input);
   if (!got) return 'wrong';
   const oks = acceptedAnswers(answer);
@@ -295,6 +320,12 @@ export function judge(input: string, answer: string): Judgement {
     if (a != null && b != null && (a.unit === '' || b.unit === '' || a.unit === b.unit) && sameValueDifferentForm(a.num, b.num, input, answer)) {
       return 'correct';
     }
+  }
+  // 「すべて答えなさい」の問題は、順番がちがっても正解（約数 1、2、3、6 を 6、3、2、1 と書く等）
+  if (isUnorderedSetQuestion(questionText)) {
+    const a = sortedItems(answer);
+    const b = sortedItems(input);
+    if (a != null && b != null && a.length === b.length && a.every((x, i) => x === b[i])) return 'correct';
   }
   // 帯分数で書いたとき、模範解答が仮分数でもよい
   const impIn = mixedToImproper(input);

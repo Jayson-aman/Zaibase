@@ -4,7 +4,7 @@
 // ② 書き方のちがい（全角・空白・単位の前の空白・桁区切り・読点とコンマ・末尾の記号）でも正解になるか
 // ③ まちがい（数を1ずらす・帯分数のけたをつなげる・となりの問題の答え）が、正解にならないか
 import { questions } from '../data/questions';
-import { judge, answerMode } from '../utils/grading';
+import { judge, answerMode, isUnorderedSetQuestion } from '../utils/grading';
 
 const qs = (questions as any[]).filter((q) => answerMode(q) === 'input');
 let bad1: string[] = [], bad2: string[] = [], bad3: string[] = [];
@@ -33,6 +33,25 @@ for (let i = 0; i < qs.length; i++) {
   const nb = String(qs[(i + 1) % qs.length].answer);
   if (nb !== String(qs[i].answer) && judge(nb, String(qs[i].answer)) === 'correct' && nb.length < 30) bad3.push(`となりの答え: ${qs[i].id}「${String(qs[i].answer).slice(0, 14)}」←「${nb.slice(0, 14)}」`);
 }
+// ④ 順不同：「すべて答えなさい」の問題は、項目の並びを逆にしても正解。それ以外の問題（順序を問う等）は、逆順は正解にしない
+let bad4: string[] = [];
+let setChecked = 0, orderedChecked = 0;
+for (const q of qs) {
+  const a = String(q.answer);
+  if (/[()（）]/.test(a)) continue;
+  const items = a.split(/[、，,]/).map((t) => t.trim()).filter(Boolean);
+  if (items.length < 2 || items.some((t) => t.length > 12)) continue;
+  const rev = [...items].reverse().join('、');
+  if (rev === items.join('、')) continue;
+  if (isUnorderedSetQuestion(q.question)) {
+    setChecked++;
+    if (judge(rev, a, q.question) !== 'correct') bad4.push(`順不同なのに×: ${q.id}「${a.slice(0, 20)}」←「${rev.slice(0, 20)}」`);
+  } else if (/(順|並べ|大きい|小さい)/.test(q.question)) {
+    orderedChecked++;
+    if (judge(rev, a, q.question) === 'correct') bad4.push(`順序を問う問題で逆順が○: ${q.id}「${a.slice(0, 20)}」←「${rev.slice(0, 20)}」`);
+  }
+}
+console.log(`順不同の検査: 集まりの問題 ${setChecked}問・順序の問題 ${orderedChecked}問`);
 // 手で作った重要ケース
 const cases: [string, string, string][] = [
   ['1と7/12', '19/12', 'correct'], ['1 7/12', '19/12', 'correct'], ['19/12', '1と7/12', 'correct'], ['17/12', '1と7/12', 'wrong'],
@@ -46,11 +65,12 @@ console.log(`入力式の問題 ${qs.length} 問`);
 console.log(`① 模範解答そのまま ×: ${bad1.length}`, bad1.slice(0, 8));
 console.log(`② 書き方のちがい ×: ${bad2.length}`, bad2.slice(0, 12));
 console.log(`③ まちがいが○: ${bad3.length}`, bad3.slice(0, 12));
+console.log(`④ 順不同の食いちがい: ${bad4.length}`, bad4.slice(0, 12));
 console.log(`手作りケース: ${badC.length}`, badC);
 
-// 合否：①②は0件、③は「数ずらし」「帯分数のけたつなぎ」が0件、手作りケースも0件
+// 合否：①②④は0件、③は「数ずらし」「帯分数のけたつなぎ」が0件、手作りケースも0件
 const hard = bad3.filter((x) => x.startsWith('数ずらし') || x.startsWith('帯分数'));
-if (bad1.length || bad2.length || hard.length || badC.length) {
+if (bad1.length || bad2.length || hard.length || badC.length || bad4.length) {
   console.log('⚠ 採点の検査に失敗');
   process.exit(1);
 }
