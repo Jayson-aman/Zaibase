@@ -54,7 +54,7 @@ export const mangaScriptsKokoShakaiChirishi21: Record<string, MangaScript> = {
       { speaker: 's1', line: '信濃川!' },
       { speaker: 't', line: 'その通り。じゃあ流域面積日本一の川は?' },
       { speaker: 's2', line: '利根川! 「坂東太郎」と呼ばれる川。' },
-      { speaker: 't', line: '長さと流域面積は別の記録。信濃川は長さ1位・流域面積2位、利根川は長さ2位・流域面積1位で、それぞれの2位が入れかわる関係になっている。世界の川(ナイル川とアマゾン川)と同じ構図が日本の川にもあてはまる。', emphasis: true },
+      { speaker: 't', line: '長さと流域面積は別の記録。信濃川は長さ1位・流域面積3位（2位は石狩川）、利根川は長さ2位・流域面積1位で、1位が入れかわる関係になっている。世界の川(ナイル川とアマゾン川)と同じ構図が日本の川にもあてはまる。', emphasis: true },
     ],
   },
   new20_j1_shakai_13_manga: {

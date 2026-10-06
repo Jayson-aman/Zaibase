@@ -12,7 +12,7 @@ export const mangaScriptsShakaiChugaku22: Record<string, MangaScript> = {
       { speaker: 's1', line: 'ちがう基準! 長さは端から端までの距離、流域面積は水を集める範囲の広さ。' },
       { speaker: 't', line: 'その通り。じゃあ利根川の長さは、信濃川より長い? 短い?' },
       { speaker: 's2', line: '短い! 長さでは信濃川が1位、利根川は2位。' },
-      { speaker: 't', line: '「長さ日本一=信濃川」「流域面積日本一=利根川」で、それぞれの2位が入れかわる関係になっている。1つの川がすべての1位を独占するとは限らないので、「何の1位か」を必ず確認する。', emphasis: true },
+      { speaker: 't', line: '「長さ日本一=信濃川」「流域面積日本一=利根川」で、長さの2位は利根川、流域面積の2位は石狩川になっている。1つの川がすべての1位を独占するとは限らないので、「何の1位か」を必ず確認する。', emphasis: true },
     ],
   },
   shakai_02_sekaichiri_manga: {
