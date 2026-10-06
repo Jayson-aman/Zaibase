@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
+import { goBack } from '../../utils/nav';
 import { rich } from '../../components/RichText';
 import {
   View,
@@ -192,6 +193,8 @@ export default function QuizScreen() {
 
   // 「もう一度チャレンジ」で毎回シャッフルし直すためのキー
   const [restartKey, setRestartKey] = useState(0);
+  // テスト対策の出題の並びの種。画面を開くたびに変える（固定だと、入り直すたびに同じ問題が同じ順で出る）
+  const testSeedRef = useRef(Date.now() % 1000000);
 
   const baseQuestions = useMemo(() => {
     if (questionsLoading) return [];
@@ -228,7 +231,7 @@ export default function QuizScreen() {
       let pool = all.filter((q) => (q.examType ?? 'chugaku') === examType);
       if (!(isPro || isMax)) pool = pool.filter((q) => !q.maxOnly);
       if (gradeFilter) pool = pool.filter((q) => !q.grade || q.grade === gradeFilter);
-      return buildTestSet(pool, tm, restartKey + 1, difficultyFilter as LevelKey | undefined);
+      return buildTestSet(pool, tm, testSeedRef.current + restartKey + 1, difficultyFilter as LevelKey | undefined);
     }
     if (isMock) {
       // 模擬試験（MAXプラン）: 入試形式（学校別大問）を除いた一般問題のみ使用。
@@ -369,6 +372,8 @@ export default function QuizScreen() {
    * 差し込めたら true。
    */
   function injectRemedialBasics(): boolean {
+    // お試し（模擬3問・入試傾向5問）や日替わりは、決まった問題だけが出題範囲。基礎問題を足すと範囲を超える
+    if (isPreview || isDaily || isMock || isKakomon) return false;
     const seenIds = new Set(activeQuestions.map((q) => q.id));
     // 本題と同じ条件（買い切りの公式集のロック・学年・単元）で絞る。絞らないと、
     // 未購入の公式集の例題や、別の学年・別の単元の問題が混ざって出てしまう。
@@ -591,7 +596,7 @@ export default function QuizScreen() {
     return (
       <SafeAreaView style={styles.safeArea}>
         <View style={[styles.header, { backgroundColor: info.color }]}>
-          <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
+          <TouchableOpacity onPress={() => goBack(router)} style={styles.backBtn}>
             <Text style={styles.backBtnText}>← 戻る</Text>
           </TouchableOpacity>
           <View style={styles.headerCenter}>
@@ -611,7 +616,7 @@ export default function QuizScreen() {
     return (
       <SafeAreaView style={styles.safeArea}>
         <View style={[styles.header, { backgroundColor: info.color }]}>
-          <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
+          <TouchableOpacity onPress={() => goBack(router)} style={styles.backBtn}>
             <Text style={styles.backBtnText}>← 戻る</Text>
           </TouchableOpacity>
           <View style={styles.headerCenter}>
@@ -633,7 +638,7 @@ export default function QuizScreen() {
           ) : (
             <Text style={styles.emptyText}>この難易度の問題はありません</Text>
           )}
-          <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
+          <TouchableOpacity style={styles.backButton} onPress={() => goBack(router)}>
             <Text style={styles.backButtonText}>← 戻る</Text>
           </TouchableOpacity>
         </View>
@@ -786,7 +791,7 @@ export default function QuizScreen() {
 
             <TouchableOpacity
               style={styles.backButton}
-              onPress={() => router.back()}
+              onPress={() => goBack(router)}
               activeOpacity={0.8}
             >
               <Text style={styles.backButtonText}>← 科目一覧に戻る</Text>
@@ -803,7 +808,7 @@ export default function QuizScreen() {
     <SafeAreaView style={styles.safeArea}>
       {/* Header */}
       <View style={[styles.header, { backgroundColor: isDaily ? '#C0392B' : info.color }]}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
+        <TouchableOpacity onPress={() => goBack(router)} style={styles.backBtn}>
           <Text style={styles.backBtnText}>← 戻る</Text>
         </TouchableOpacity>
         <View style={styles.headerCenter}>
@@ -919,13 +924,13 @@ export default function QuizScreen() {
                 {(isPro || isMax) && currentQuestion.memoryTip && (
                   <View style={styles.tipRow}>
                     <Text style={styles.tipLabel}>💡 覚え方</Text>
-                    <Text style={styles.tipText}>{currentQuestion.memoryTip}</Text>
+                    <Text style={styles.tipText}>{rich(currentQuestion.memoryTip)}</Text>
                   </View>
                 )}
                 {(isPro || isMax) && currentQuestion.pitfall && (
                   <View style={styles.tipRow}>
                     <Text style={styles.pitfallLabel}>⚠️ ひっかけ注意</Text>
-                    <Text style={styles.tipText}>{currentQuestion.pitfall}</Text>
+                    <Text style={styles.tipText}>{rich(currentQuestion.pitfall)}</Text>
                   </View>
                 )}
                 {!isPro && !isMax && (currentQuestion.memoryTip || currentQuestion.pitfall) && (

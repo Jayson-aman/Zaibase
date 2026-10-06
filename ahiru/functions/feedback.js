@@ -115,6 +115,26 @@ async function postToLine(token, to, payload) {
   }
 }
 
+const LINE_DAILY_CAP = 20;
+
+/** LINEへ通知してよいか（全体で1日 LINE_DAILY_CAP 通まで）。数え間違えても保存には影響しない。 */
+async function takeLineQuota() {
+  const ref = db.collection("feedbackUsage").doc("_lineGlobal");
+  const today = todayKey();
+  try {
+    return await db.runTransaction(async (tx) => {
+      const snap = await tx.get(ref);
+      const d = snap.exists ? snap.data() : {};
+      const count = d.date === today ? d.count || 0 : 0;
+      if (count >= LINE_DAILY_CAP) return false;
+      tx.set(ref, { date: today, count: count + 1 });
+      return true;
+    });
+  } catch {
+    return true;
+  }
+}
+
 exports.sendFeedback = onCall(
   { region: "asia-northeast1", secrets: [LINE_CHANNEL_ACCESS_TOKEN, LINE_NOTIFY_TO] },
   async (req) => {
@@ -154,7 +174,10 @@ exports.sendFeedback = onCall(
 
     const token = LINE_CHANNEL_ACCESS_TOKEN.value();
     const to = LINE_NOTIFY_TO.value();
-    if (token && to && token !== "placeholder" && to !== "placeholder") {
+    // LINE の無料枠（月200通）を、匿名アカウントの連投で使い切られないよう、全体で1日あたりの通知数に上限を置く。
+    // 超えた分もFirestoreには保存されているので、あとで拾える。
+    const lineAllowed = await takeLineQuota();
+    if (lineAllowed && token && to && token !== "placeholder" && to !== "placeholder") {
       try {
         await postToLine(token, to, { category, comment, subject, examType, context });
       } catch {

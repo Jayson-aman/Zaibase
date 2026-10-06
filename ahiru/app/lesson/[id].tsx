@@ -1,4 +1,5 @@
 import React from 'react';
+import { goBack } from '../../utils/nav';
 import { rich } from '../../components/RichText';
 import {
   View,
@@ -131,7 +132,7 @@ export default function LessonDetailScreen() {
       <SafeAreaView style={styles.container}>
         <View style={styles.center}>
           <Text style={styles.notFound}>レッスンが見つかりません</Text>
-          <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
+          <TouchableOpacity onPress={() => goBack(router)} style={styles.backBtn}>
             <Text style={styles.backBtnText}>← 戻る</Text>
           </TouchableOpacity>
           <HomeButton variant="dark" style={{ marginTop: 12 }} />
@@ -175,7 +176,7 @@ export default function LessonDetailScreen() {
       <View style={[styles.header, { backgroundColor: info.color }]}>
         <View style={styles.headerInner}>
           <View style={styles.headerTopRow}>
-            <TouchableOpacity onPress={() => router.back()} style={styles.backRow}>
+            <TouchableOpacity onPress={() => goBack(router)} style={styles.backRow}>
               <Text style={styles.backArrow}>← </Text>
               <Text style={styles.backLabel}>{info.name}</Text>
             </TouchableOpacity>

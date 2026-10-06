@@ -124,7 +124,7 @@ export default function InlineQuiz({ items, label = 'この公式の一問一答
             q.subQuestions.map((sub, i) => (
               <View key={i} style={styles.subAnswer}>
                 <Text style={styles.subAnswerLabel}>{sub.label}</Text>
-                <Text style={styles.answerText}>{sub.answer}</Text>
+                <Text style={styles.answerText}>{rich(sub.answer)}</Text>
                 {sub.explanation != null && <Text style={styles.explanationText}>{rich(sub.explanation)}</Text>}
               </View>
             ))}

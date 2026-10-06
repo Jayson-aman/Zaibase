@@ -291,15 +291,6 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             答えの側には「問1 216cm³ / 問2 216cm² …」と出るので、
             見えない設問への答えだけが並ぶことになっていた（89問・小問353問）。
           */}
-          {question.subQuestions != null && question.subQuestions.length > 0 && (
-            <View style={styles.subList}>
-              {question.subQuestions.map((sub, i) => (
-                <Text key={i} style={styles.subPrompt}>
-                  {sub.label} {sub.prompt}
-                </Text>
-              ))}
-            </View>
-          )}
           {figure != null && !FIGURE_IS_ANSWER.has(question.id) ? (
             <FigureView figure={maskFigureForProblem(figure, question)} hideAnswerText />
           ) : illustration != null ? (
@@ -339,7 +330,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
                   <Text style={styles.subQAnswerLabel}>{sq.label}　{sq.prompt}</Text>
                   <Text style={styles.subQAnswerText}>{rich(sq.answer, { size: 16, color: '#00694A', bold: true })}</Text>
                   {sq.explanation != null && (
-                    <Text style={styles.subQAnswerExpl}>{sq.explanation}</Text>
+                    <Text style={styles.subQAnswerExpl}>{rich(sq.explanation)}</Text>
                   )}
                 </View>
               ))}

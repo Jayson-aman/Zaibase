@@ -264,6 +264,8 @@ export default function CoachScreen() {
         style={s.scroll}
         contentContainerStyle={s.scrollContent}
         showsVerticalScrollIndicator={false}
+        automaticallyAdjustKeyboardInsets
+        keyboardShouldPersistTaps="handled"
       >
         {/* ─── header ───────────────────────────────────────── */}
         <View style={s.header}>

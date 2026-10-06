@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { goBack } from '../../utils/nav';
 import {
   View,
   Text,
@@ -172,6 +173,11 @@ export default function SchoolCurriculumScreen() {
   const [activeSubject, setActiveSubject] = useState<SubjectKey>('sansu');
   const { questions } = useAllQuestions();
 
+  // 存在しない学校のURL（打ちまちがい・古いリンク）では、先頭の学校の内容を出さずに一覧へ戻す
+  const courseKnown = course != null && ALL_COURSES.some((c) => c.key === course);
+  React.useEffect(() => {
+    if (course != null && !courseKnown) router.replace('/schools' as any);
+  }, [course, courseKnown, router]);
   const courseInfo = course ? getCourseInfo(course as any) : null;
   // 学校の表示名は SCHOOL_META に無い学校（四天王寺・星光・東京/名古屋/福岡など）でも、courses.ts の定義から出す
   const meta = SCHOOL_META[course ?? ''] ?? {
@@ -260,7 +266,7 @@ export default function SchoolCurriculumScreen() {
       )}
       {/* Header */}
       <View style={styles.topBar}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
+        <TouchableOpacity onPress={() => goBack(router)} style={styles.backBtn}>
           <Text style={styles.backArrow}>‹</Text>
         </TouchableOpacity>
         <View style={styles.topBarCenter}>

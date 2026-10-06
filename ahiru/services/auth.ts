@@ -53,6 +53,10 @@ function friendlyError(code: string | undefined): string {
 
 export class AuthError extends Error {}
 
+// メールの結びつけ（linkWithCredential）では Firebase が onAuthStateChanged を呼ばないことがある。
+// そのままだと、登録した直後も画面が「ログインしていません」のままになるので、自分で知らせる。
+const authListeners = new Set<(user: AuthUser | null) => void>();
+
 // ── 端末に残る学習記録を、アカウントごとに分けて持つ ─────────────────
 // 学習記録・フィードバック控えなどはこの端末の AsyncStorage にあり、キーにユーザーを含まない。
 // そのままだと、ログアウトして別の人がログインしても前の人の記録が見え、記録も混ざる。
@@ -103,7 +107,9 @@ export async function signUpEmail(email: string, password: string): Promise<Auth
     if (current != null && current.isAnonymous) {
       const cred = await linkWithCredential(current, EmailAuthProvider.credential(email.trim(), password));
       await identifyUser(cred.user.uid);
-      return toAuthUser(cred.user);
+      const linked = toAuthUser(cred.user);
+      authListeners.forEach((l) => l(linked));
+      return linked;
     }
     const before = localKeyOf(current);
     const cred = await createUserWithEmailAndPassword(auth, email.trim(), password);
@@ -259,7 +265,8 @@ export async function subscribeAuth(
   }
   const auth = await getFirebaseAuth();
   const { onAuthStateChanged } = await import('firebase/auth');
-  return onAuthStateChanged(auth, (u) => {
+  authListeners.add(cb);
+  const unsubscribeFirebase = onAuthStateChanged(auth, (u) => {
     if (u && !u.isAnonymous) {
       identifyUser(u.uid);
       cb(toAuthUser(u));
@@ -269,4 +276,8 @@ export async function subscribeAuth(
       cb(null);
     }
   });
+  return () => {
+    authListeners.delete(cb);
+    unsubscribeFirebase();
+  };
 }

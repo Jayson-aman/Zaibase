@@ -26,7 +26,7 @@ import { alertCompat } from '../../utils/dialog';
 
 const SUBJECTS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
 
-function AccountCard() {
+function AccountCard({ onChanged }: { onChanged: () => void }) {
   const { isLoggedIn, email, loading } = useAuthUser();
   const [pwModal, setPwModal] = useState(false);
   const [pw, setPw] = useState('');
@@ -43,6 +43,7 @@ function AccountCard() {
           if (loggingOut) return;
           setLoggingOut(true);
           signOutUser()
+            .then(() => onChanged())
             .catch(() => {
               alertCompat('ログアウトできませんでした', '通信状況を確認して、もう一度お試しください。');
             })
@@ -79,6 +80,7 @@ function AccountCard() {
       .then(() => {
         setPwModal(false);
         setPw('');
+        onChanged();
         alertCompat('削除しました', 'アカウントを削除しました。ご利用ありがとうございました。');
       })
       .catch((e) => {
@@ -317,7 +319,16 @@ export default function ProgressScreen() {
         </View>
 
         {/* アカウント（複数端末・機種変更の引き継ぎ／二重課金防止） */}
-        <AccountCard />
+        <AccountCard
+          onChanged={() => {
+            // ログアウト・削除のあと、前の人の成績・順位・コーチの文が画面に残らないようにする
+            setProgressData({});
+            setRanking(null);
+            setCoachAdvice(null);
+            fetchProgress();
+            loadRanking();
+          }}
+        />
 
         {/* Overall summary */}
         <View style={styles.summaryCard}>
