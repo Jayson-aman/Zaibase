@@ -33,7 +33,7 @@ import { PRO_FEATURES, MAX_FEATURES } from '../constants/proAccess';
 import { planNotice, tierLabel, formatMonthDay } from '../utils/planStatus';
 import { useSubscription } from '../hooks/useSubscription';
 import { useAuthUser } from '../hooks/useAuthUser';
-import { alertCompat } from '../utils/dialog';
+import { alertCompat, confirmDialog } from '../utils/dialog';
 
 interface Props {
   visible: boolean;
@@ -54,7 +54,10 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
   const [purchasing, setPurchasing] = useState(false);
   const { isLoggedIn, loading: authLoading } = useAuthUser();
   // すでに契約中のプランは「ご利用中」にして、二重に購入させない（Maxの人にProを売らない）
-  const { tier: ownedTier, plan } = useSubscription();
+  const { tier: tierNow, plan, loading: subLoading } = useSubscription();
+  // お支払いに問題がある（請求の失敗）あいだは tier が free に戻るが、契約そのものは続いている。
+  // そこで同じ階層をもう一度買わせると、二重の購読になる。契約中の階層として扱う。
+  const ownedTier = tierNow !== 'free' ? tierNow : plan.kind === 'billing' && plan.tier ? plan.tier : 'free';
   const proOwned = ownedTier === 'pro' || ownedTier === 'max';
   const maxOwned = ownedTier === 'max';
   const isWeb = Platform.OS === 'web';
@@ -82,7 +85,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
       .finally(() => setLoadingOff(false));
   }, [visible]);
 
-  async function handlePurchase(product: unknown) {
+  async function handlePurchase(product: unknown, target: 'pro' | 'max' = 'pro') {
     // iOS / Android はストアアカウント（Apple ID / Google）に購入が紐付くため
     // ログイン不要でそのまま購入できる。Web 版のみ Stripe 購入をアカウントに
     // 紐付けるため、未ログインならログイン画面へ誘導する。
@@ -91,6 +94,17 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
     if (isWeb && !isLoggedIn) {
       goLogin();
       return;
+    }
+    // 契約状態の確認中は買わせない（契約中の人に、同じ階層の購入ボタンが一瞬有効になるのを防ぐ）
+    if (subLoading) return;
+    // Web では、ProからMaxへ切りかえても、いまのProは自動では解約されない（Proの請求が続いてMaxと重なる）。先に知らせる
+    if (isWeb && target === 'max' && ownedTier === 'pro') {
+      const go = await confirmDialog(
+        'プランの切りかえ',
+        'いまのProは、Maxを購入しても自動では解約されません。Maxに切りかえる場合は、購入完了メールの「サブスクリプション管理」のリンクから、Proを解約してください。\n\nこのままMaxを購入しますか？',
+        { confirm: '購入する', cancel: 'やめる' },
+      );
+      if (!go) return;
     }
     setPurchasing(true);
     try {
@@ -284,10 +298,10 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                     style={[
                       styles.buyBtn,
                       { backgroundColor: '#9B59B6' },
-                      (!proBuy || purchasing || proOwned) && styles.buyBtnDisabled,
+                      (!proBuy || purchasing || proOwned || subLoading) && styles.buyBtnDisabled,
                     ]}
                     onPress={proBuy && !proOwned ? () => handlePurchase(proBuy) : undefined}
-                    disabled={!proBuy || purchasing || proOwned}
+                    disabled={!proBuy || purchasing || proOwned || subLoading}
                     activeOpacity={0.8}
                   >
                     {purchasing ? (
@@ -356,10 +370,10 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                     style={[
                       styles.buyBtn,
                       { backgroundColor: '#E74C3C' },
-                      (!maxBuy || purchasing || maxOwned) && styles.buyBtnDisabled,
+                      (!maxBuy || purchasing || maxOwned || subLoading) && styles.buyBtnDisabled,
                     ]}
-                    onPress={maxBuy && !maxOwned ? () => handlePurchase(maxBuy) : undefined}
-                    disabled={!maxBuy || purchasing || maxOwned}
+                    onPress={maxBuy && !maxOwned ? () => handlePurchase(maxBuy, 'max') : undefined}
+                    disabled={!maxBuy || purchasing || maxOwned || subLoading}
                     activeOpacity={0.8}
                   >
                     {purchasing ? (

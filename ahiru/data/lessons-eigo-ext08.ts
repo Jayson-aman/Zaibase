@@ -1608,7 +1608,7 @@ How long have you lived here?（どのくらいここに住んでいますか。
       'by ＝ 〜までに（その時までに一回すればよい期限）。',
       '続く動詞（wait, stay, sleep, work）には until、一回で終わる動詞（come, finish, return）には by。',
       'until は接続詞にもなる（until he comes）。by は前置詞だけで、by the time ... の形で文を続ける。',
-      '「〜までに」の by は、時と条件の副詞節と同じく未来のことでも現在形と組むことがある。',
+      'by the time ＋ 文の節は、時を表す節なので、未来のことでも現在形で書く（will を使わない）。',
     ],
     sections: [
       {

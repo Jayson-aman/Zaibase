@@ -46,7 +46,10 @@ exports.unlockContent = onCall(
     const uid = req.auth?.uid;
     if (!uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
-    const { type, itemId } = req.data ?? {};
+    const { type, itemId, noWait } = req.data ?? {};
+    // noWait：購入の「前」の確認用。待たずに1回だけ調べ、すでに払ってあるのに未解放の購入分が残っていれば、それを使って解放する。
+    // 無ければ、エラーにせず reason:'no-credit' を返す（クライアントはそのとき初めて課金に進む）。
+    // これで、承認待ちが後から通ったとき・確認の前にアプリが落ちたときに、買い直して二重に払うのを防ぐ。
     // "constructor" や "__proto__" のような名前を type に渡されても、設定として扱わない
     const config = typeof type === "string" && Object.prototype.hasOwnProperty.call(TYPE_CONFIG, type) ? TYPE_CONFIG[type] : undefined;
     if (!config || typeof itemId !== "string" || itemId.length === 0 || itemId.length > 200) {
@@ -72,10 +75,11 @@ exports.unlockContent = onCall(
 
     // RevenueCatの購入反映には数秒のラグが起こり得るため、少し待って数回問い合わせる
     let purchaseCount = null;
-    for (let attempt = 0; attempt < 4; attempt++) {
+    const attempts = noWait === true ? 1 : 4;
+    for (let attempt = 0; attempt < attempts; attempt++) {
       purchaseCount = await fetchNonSubscriptionPurchaseCount(uid, config.productId);
       if (purchaseCount !== null && purchaseCount > nativeUnlockedCount(alreadyUnlocked, stripeIds0)) break;
-      if (attempt < 3) await sleep(1500);
+      if (attempt < attempts - 1) await sleep(1500);
     }
 
     if (purchaseCount === null) {
@@ -85,12 +89,13 @@ exports.unlockContent = onCall(
     // 「購入回数 > 解放済み件数」の判定と書き込みは必ず1つのトランザクションで行う。
     // 分けると、1回だけ購入した人が別々のitemIdで同時に2リクエスト送ったとき、
     // 両方が「解放済み0件 < 購入1回」を見て通り、¥50で2件解放できてしまう。
-    await db.runTransaction(async (tx) => {
+    const outcome = await db.runTransaction(async (tx) => {
       const cur = await tx.get(docRef);
       const unlocked = /** @type {string[]} */ (cur.data()?.unlocked ?? []);
       const stripeIds = /** @type {string[]} */ (cur.data()?.stripeUnlocked ?? []);
-      if (unlocked.includes(itemId)) return;
+      if (unlocked.includes(itemId)) return "already";
       if (purchaseCount <= nativeUnlockedCount(unlocked, stripeIds)) {
+        if (noWait === true) return "no-credit";
         throw new HttpsError(
           "failed-precondition",
           "購入が確認できませんでした。決済が完了してから少し時間をおいてもう一度お試しください。"
@@ -101,7 +106,9 @@ exports.unlockContent = onCall(
         { uid, unlocked: FieldValue.arrayUnion(itemId), updatedAt: FieldValue.serverTimestamp() },
         { merge: true }
       );
+      return "unlocked";
     });
-    return { ok: true };
+    if (outcome === "no-credit") return { ok: false, reason: "no-credit" };
+    return { ok: true, unlocked: outcome === "unlocked" };
   }
 );

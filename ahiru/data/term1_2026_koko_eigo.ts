@@ -925,7 +925,7 @@ This castle (　) (　) 300 years ago, and it (　) still (　) by many tourists
     maxOnly: true,
     question: `次の語句を並べ替えて、意味の通る英文を作りなさい。
 
-① [ me / wants / to / help / her / mother ] with the dishes.
+① [ me / wants / to / help / her / my / mother ] with the dishes.
   （母は私にお皿洗いを手伝ってほしいと思っている）
 
 ② [ told / study / me / to / the teacher / harder ].

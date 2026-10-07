@@ -544,7 +544,7 @@ export const kokoKisoEigo50b: Question[] = [
     examType: 'koko',
     difficulty: 'basic',
     maxOnly: true,
-    question: '次の語句を並べかえて、正しい英文にしなさい。（文頭の語も小文字にしてある）\n① [ the / that / girl / runs / fast / is / my / sister ]\n② [ who / do / you / know / anyone / speaks / French ]',
+    question: '次の語句を並べかえて、正しい英文にしなさい。（文頭の語も小文字にしてある）\n① 「速く走る女の子は私の妹です。」[ the / that / girl / runs / fast / is / my / sister ]\n② [ who / do / you / know / anyone / speaks / French ]',
     answer: '① The girl that runs fast is my sister.\n② Do you know anyone who speaks French?',
     hint: '① 関係代名詞thatが「runs fast（速く走る）」という節をgirl（先行詞）に続ける。② 疑問文の語順に注意。',
     explanation:

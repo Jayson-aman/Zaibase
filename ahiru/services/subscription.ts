@@ -76,6 +76,57 @@ async function getWebPurchases() {
 // ログインしたユーザー（Firebase UID）をRevenueCatに紐付ける。
 // 全デバイス・全プラットフォームで同一 appUserId になるため、加入状態が
 // 共有され、iOSで加入した人がWebで二重に課金される事故を防げる。
+// ネイティブの RevenueCat は configure() が終わる前に呼ぶと例外になる。画面（useSubscription など）の読みこみは
+// 親の初期化より先に走ることがあり、そのとき加入者が「無料」のまま固まっていた。configure を待ってから呼ぶ。
+let nativeReadyResolve: () => void = () => {};
+const nativeReady: Promise<void> = new Promise((resolve) => {
+  nativeReadyResolve = resolve;
+});
+async function nativePurchases() {
+  // 初期化が一向に終わらなくても画面を止めない（最大10秒）
+  await Promise.race([nativeReady, new Promise<void>((r) => setTimeout(r, 10000))]);
+  return (await import('react-native-purchases')).default;
+}
+
+/**
+ * 購入の直前に、RevenueCat のユーザーIDが Firebase の uid と一致しているかを確かめる。
+ * ずれたまま買うと、購入は別のIDに付き、サーバー（uidで問い合わせる）からは「買っていない」ことになる。
+ * あとで logIn しても、匿名IDではないので購入は移らない。一致しなければ、課金せずに止める。
+ */
+async function ensureRcIdentityMatchesFirebase(): Promise<void> {
+  let uid: string | null = null;
+  try {
+    const { getAuthUid } = await import('./firebaseClient');
+    uid = await Promise.race([getAuthUid(), new Promise<null>((r) => setTimeout(() => r(null), 5000))]);
+  } catch {
+    return;
+  }
+  if (!uid) return;
+  const notReady = () =>
+    new Error('アカウントの準備中です。数秒おいて、もう一度お試しください。（お支払いはされていません）');
+  if (isWeb) {
+    const { Purchases } = await import('@revenuecat/purchases-js');
+    if (!Purchases.isConfigured()) return;
+    const inst = Purchases.getSharedInstance() as unknown as {
+      getAppUserId?: () => string;
+      changeUser?: (id: string) => Promise<unknown>;
+    };
+    if (typeof inst.getAppUserId !== 'function') return;
+    if (inst.getAppUserId() !== uid) {
+      if (typeof inst.changeUser === 'function') await inst.changeUser(uid).catch(() => {});
+      if (inst.getAppUserId() !== uid) throw notReady();
+    }
+    return;
+  }
+  const Purchases = await nativePurchases();
+  let cur = await Purchases.getAppUserID();
+  if (cur !== uid) {
+    await Purchases.logIn(uid).catch(() => {});
+    cur = await Purchases.getAppUserID();
+    if (cur !== uid) throw notReady();
+  }
+}
+
 export async function identifyUser(uid: string): Promise<void> {
   if (!isRevenueCatConfigured() || !uid) return;
   try {
@@ -98,7 +149,7 @@ export async function identifyUser(uid: string): Promise<void> {
       }
       Purchases.configure({ apiKey: RC_KEY_WEB, appUserId: uid });
     } else {
-      const Purchases = (await import('react-native-purchases')).default;
+      const Purchases = await nativePurchases();
       await Purchases.logIn(uid);
     }
     await refreshEntitlements();
@@ -116,7 +167,7 @@ export async function identifyUser(uid: string): Promise<void> {
 export async function syncPurchasesToCurrentUser(): Promise<void> {
   if (isWeb || !isRevenueCatConfigured()) return;
   try {
-    const Purchases = (await import('react-native-purchases')).default;
+    const Purchases = await nativePurchases();
     await Purchases.syncPurchases();
     await refreshEntitlements();
   } catch {
@@ -145,7 +196,7 @@ export async function logoutUser(): Promise<void> {
         }
       }
     } else {
-      const Purchases = (await import('react-native-purchases')).default;
+      const Purchases = await nativePurchases();
       await Purchases.logOut();
     }
     await refreshEntitlements();
@@ -184,6 +235,7 @@ export function initRevenueCat(): void {
       // uid を紐付ける目的：サーバー（Cloud Functions）は Firebase uid で
       // RevenueCat に問い合わせるため、一致していないと課金者が無料扱いになる。
       Purchases.configure({ apiKey });
+      nativeReadyResolve();
 
       // 認証の待ちで configure 自体が遅れないよう、紐付けは後追いで行う。
       // ネットワーク不調で認証が返らない場合に購入導線ごと死なせないため、
@@ -200,6 +252,8 @@ export function initRevenueCat(): void {
       }
     } catch {
       // RevenueCat 未設定時は無視
+    } finally {
+      nativeReadyResolve();
     }
   })();
 }
@@ -231,7 +285,7 @@ export async function getIntroIneligibleProductIds(productIds: string[]): Promis
   const out = new Set<string>();
   if (isWeb || !isRevenueCatConfigured() || productIds.length === 0) return out;
   try {
-    const Purchases = (await import('react-native-purchases')).default;
+    const Purchases = await nativePurchases();
     const res = await Purchases.checkTrialOrIntroductoryPriceEligibility(productIds);
     for (const id of productIds) {
       // 1 = INTRO_ELIGIBILITY_STATUS_INELIGIBLE（使えない）
@@ -251,7 +305,7 @@ export async function getCustomerInfo(): Promise<unknown> {
     const purchases = await getWebPurchases();
     return purchases.getCustomerInfo();
   }
-  const Purchases = (await import('react-native-purchases')).default;
+  const Purchases = await nativePurchases();
   return Purchases.getCustomerInfo();
 }
 
@@ -265,7 +319,7 @@ export async function refreshCustomerInfo(): Promise<void> {
   if (!isRevenueCatConfigured()) return;
   try {
     if (!isWeb) {
-      const Purchases = (await import('react-native-purchases')).default;
+      const Purchases = await nativePurchases();
       await Purchases.invalidateCustomerInfoCache();
     }
     emitEntitlementChanged(await getCustomerInfo());
@@ -354,7 +408,7 @@ export async function fetchCurrentOffering(): Promise<unknown> {
       return null;
     }
   }
-  const Purchases = (await import('react-native-purchases')).default;
+  const Purchases = await nativePurchases();
   const offerings = await Purchases.getOfferings();
   return offerings.current ?? null;
 }
@@ -393,7 +447,7 @@ export async function fetchProMaxProducts(): Promise<{
   }
   // iOS / Android に年額はない（既存の月額購読者に影響しないため）
   try {
-    const Purchases = (await import('react-native-purchases')).default;
+    const Purchases = await nativePurchases();
     const products = await Purchases.getProducts([PRODUCT_ID_PRO, PRODUCT_ID_MAX]);
     return {
       ...none,
@@ -421,7 +475,7 @@ export async function fetchVocabProducts(): Promise<{ monthly: unknown; yearly: 
     }
   }
   try {
-    const Purchases = (await import('react-native-purchases')).default;
+    const Purchases = await nativePurchases();
     const products = await Purchases.getProducts([PRODUCT_ID_VOCAB_MONTHLY, PRODUCT_ID_VOCAB_YEARLY]);
     return {
       monthly: products.find((p) => p.identifier === PRODUCT_ID_VOCAB_MONTHLY) ?? null,
@@ -437,7 +491,7 @@ export async function fetchVocabProducts(): Promise<{ monthly: unknown; yearly: 
 export async function fetchFormulaUnlockProduct(): Promise<unknown> {
   if (!isRevenueCatConfigured() || isWeb) return null;
   try {
-    const Purchases = (await import('react-native-purchases')).default;
+    const Purchases = await nativePurchases();
     const products = await Purchases.getProducts([PRODUCT_ID_FORMULA_UNLOCK]);
     return products[0] ?? null;
   } catch {
@@ -448,7 +502,7 @@ export async function fetchFormulaUnlockProduct(): Promise<unknown> {
 export async function fetchFormulaBundleProduct(): Promise<unknown> {
   if (!isRevenueCatConfigured() || isWeb) return null;
   try {
-    const Purchases = (await import('react-native-purchases')).default;
+    const Purchases = await nativePurchases();
     const products = await Purchases.getProducts([PRODUCT_ID_FORMULA_BUNDLE]);
     return products[0] ?? null;
   } catch {
@@ -459,7 +513,7 @@ export async function fetchFormulaBundleProduct(): Promise<unknown> {
 export async function fetchUnitUnlockProduct(): Promise<unknown> {
   if (!isRevenueCatConfigured() || isWeb) return null;
   try {
-    const Purchases = (await import('react-native-purchases')).default;
+    const Purchases = await nativePurchases();
     const products = await Purchases.getProducts([PRODUCT_ID_UNIT_UNLOCK]);
     return products[0] ?? null;
   } catch {
@@ -487,6 +541,8 @@ interface StripeUnlockConfirmResult {
   ok: true;
   type: StripeUnlockType;
   itemId: string;
+  /** すでに持っていた項目への二重のお支払い（サーバーが自動で返金した） */
+  duplicate?: boolean;
 }
 
 /**
@@ -563,7 +619,19 @@ export function confirmPendingStripeUnlockOnce(): Promise<StripeUnlockConfirmRes
   pendingStripeUnlockConfirm = callFirebaseFunction<
     { sessionId: string },
     StripeUnlockConfirmResult
-  >('confirmAhiruUnlockCheckout', { sessionId }).catch(() => {
+  >('confirmAhiruUnlockCheckout', { sessionId })
+    .then((r) => {
+      // すでに持っていた項目への二重のお支払いは、サーバーが自動で返金している。そのことを知らせる
+      if (r?.duplicate) {
+        try {
+          window.alert('同じ項目をすでにお持ちだったため、今回のお支払い分は自動で返金されます（カード会社の反映には数日かかることがあります）。');
+        } catch {
+          // 表示できない環境では何も出さない
+        }
+      }
+      return r;
+    })
+    .catch(() => {
     // 決済は済んでいるのに、解放の確認だけが失敗した。黙って捨てると「払ったのに開かない」になるので、
     // 理由と対処を知らせ、URLを元に戻して、再読み込みで確認をやり直せるようにする。
     try {
@@ -586,13 +654,14 @@ export function confirmPendingStripeUnlockOnce(): Promise<StripeUnlockConfirmRes
 
 export async function purchaseProduct(product: unknown): Promise<unknown> {
   if (!isRevenueCatConfigured()) throw new Error('課金は準備中です');
+  await ensureRcIdentityMatchesFirebase();
   let customerInfo: unknown;
   if (isWeb) {
     const purchases = await getWebPurchases();
     const result = await purchases.purchase({ rcPackage: unwrapWebPackage(product) as never, selectedLocale: 'ja' });
     customerInfo = result.customerInfo;
   } else {
-    const Purchases = (await import('react-native-purchases')).default;
+    const Purchases = await nativePurchases();
     customerInfo = (await Purchases.purchaseStoreProduct(product as never)).customerInfo;
   }
   emitEntitlementChanged(customerInfo);
@@ -603,13 +672,14 @@ export async function purchasePackage(pkg: unknown): Promise<unknown> {
   if (!isRevenueCatConfigured()) {
     throw new Error('課金は準備中です');
   }
+  await ensureRcIdentityMatchesFirebase();
   let customerInfo: unknown;
   if (isWeb) {
     const purchases = await getWebPurchases();
     const result = await purchases.purchase({ rcPackage: unwrapWebPackage(pkg) as never, selectedLocale: 'ja' });
     customerInfo = result.customerInfo;
   } else {
-    const Purchases = (await import('react-native-purchases')).default;
+    const Purchases = await nativePurchases();
     customerInfo = (await Purchases.purchasePackage(pkg as never)).customerInfo;
   }
   emitEntitlementChanged(customerInfo);
@@ -626,7 +696,7 @@ export async function restorePurchases(): Promise<unknown> {
     const purchases = await getWebPurchases();
     customerInfo = await purchases.getCustomerInfo();
   } else {
-    const Purchases = (await import('react-native-purchases')).default;
+    const Purchases = await nativePurchases();
     customerInfo = await Purchases.restorePurchases();
   }
   emitEntitlementChanged(customerInfo);

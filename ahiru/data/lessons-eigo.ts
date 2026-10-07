@@ -500,7 +500,7 @@ a) other   b) another   c) the other   d) the others
 ・ox → oxen（雄牛）
 ・単複同形（単数と複数が同じ形）
 　sheep → sheep / fish → fish / deer → deer / series → series / species → species
-⚠ 注意：「fish」は個々の魚を指す場合はfishes（複数種の魚）ともなる。
+⚠ 注意：「fish」はふつう単複同形だが、種類のちがう魚をまとめて言うときは fishes ともなる。
 
 ■ 常に複数形で使われる名詞（s がないと意味が変わる）
 ・scissors（はさみ）/ glasses（眼鏡）/ pants（ズボン）/ stairs（階段）
@@ -1729,7 +1729,7 @@ ph →「フ」（phone 電話）／ ck →「ク」（duck あひる）
 例）ふじさん → 訓令式 huzisan ／ ヘボン式 Fujisan
 
 ■ のばす音・つまる音・「ん」の書き方
-・のばす音（長音）：訓令式は母音の上に「＾」（ô）、ヘボン式はのばさず書くか o を重ねる
+・のばす音（長音）：訓令式は母音の上に「＾」（ô）、ヘボン式は「ō」のように上に横棒をつけるか、のばさず書く
 　例）おおさか → Osaka ／ とうきょう → Tokyo（ヘボン式では長音記号を省くことが多い）
 ・つまる音（促音「っ」）：次の子音を重ねる
 　例）きっぷ → kippu ／ がっこう → gakkou（gakkô）

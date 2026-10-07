@@ -357,7 +357,17 @@ export default function QuizScreen() {
   // （1問ずつなら、無料で続けられてしまう）。
   const openGateCheckedRef = useRef(false);
   useEffect(() => {
-    if (subLoading || questionsLoading || isPro || isMax) return;
+    // あとから会員だと分かったとき（課金状態の取得が遅れた等）は、出したペイウォールを引っこめる。
+    // 出しっぱなしだと、閉じたときに画面から追い出されて、会員を行き止まりにしてしまう
+    if (isPro || isMax) {
+      if (openGateCheckedRef.current) {
+        openGateCheckedRef.current = false;
+        setShowPaywall(false);
+        setTrialBlocked(false);
+      }
+      return;
+    }
+    if (subLoading || questionsLoading) return;
     if (openGateCheckedRef.current) return;
     openGateCheckedRef.current = true;
     let cancelled = false;

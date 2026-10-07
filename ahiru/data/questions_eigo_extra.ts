@@ -2366,7 +2366,7 @@ export const eigoExtra: Question[] = [
     course: 'general',
     difficulty: 'advanced',
     question: '次の語を並べ替えて正しい英文を作りなさい。（something / I / to / want / drink）',
-    choices: ['I want something to drink.', 'I want to drink something.', 'I something want to drink.', 'Something I want to drink.'],
+    choices: ['I want something to drink.', 'I want drink something to.', 'I something want to drink.', 'Something I want to drink.'],
     answer: 'I want something to drink.',
     hint: '「飲む何か」= something to drink（不定詞の形容詞的用法）',
     explanation: 'something to drink は「何か飲み物（飲むための何か）」という不定詞の形容詞的用法です。I want something to drink. = 私は何か飲み物が欲しい。',

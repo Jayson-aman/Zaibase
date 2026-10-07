@@ -69,16 +69,51 @@ function assertLiveSession(session) {
 
 // stripeUnlocked：Stripe（Web）で買った分。RevenueCat経由（ネイティブ）の購入回数と
 // 突き合わせるとき、こちらを数えから除くために別に持つ（contentUnlock.js）。
-async function unlockIfNeeded(config, uid, itemId) {
-  await db.collection(config.collection).doc(uid).set(
-    {
-      uid,
-      unlocked: FieldValue.arrayUnion(itemId),
-      stripeUnlocked: FieldValue.arrayUnion(itemId),
-      updatedAt: FieldValue.serverTimestamp(),
-    },
-    { merge: true }
+//
+// stripeSessions：セッションごとの処理結果（unlocked＝解放した／duplicate＝すでに持っていたので返金した）。
+// 同じ項目の Checkout を2つ作って両方払われたとき、2つ目を自動で返金するための記録。
+// この時刻より前に作られたセッションは記録が無いので、重複とみなして返金することはしない
+// （過去の正当な支払いを、再確認のたびに返金してしまわないため）。
+const SESSION_RECORD_START = 1791331564;
+
+async function refundDuplicate(stripe, session) {
+  const pi = session.payment_intent;
+  const piId = typeof pi === "string" ? pi : pi?.id;
+  if (!piId) return;
+  await stripe.refunds.create(
+    { payment_intent: piId, reason: "duplicate" },
+    { idempotencyKey: `dup_${session.id}` }
   );
+}
+
+/**
+ * 支払い済みセッションを反映する。confirm と webhook のどちらから何度呼ばれても、1つのセッションは1回しか効かない。
+ * すでに同じ項目を持っていた（別のタブ・別経路で先に解放された）ときは、このセッションの支払いを自動で返金する。
+ * 戻り値: "unlocked" | "duplicate"
+ */
+async function unlockIfNeeded(config, uid, itemId, stripe, session) {
+  const ref = db.collection(config.collection).doc(uid);
+  const status = await db.runTransaction(async (tx) => {
+    const snap = await tx.get(ref);
+    const d = snap.exists ? snap.data() : {};
+    const prev = d.stripeSessions?.[session.id];
+    if (prev) return prev;
+    const legacy = (session.created ?? 0) < SESSION_RECORD_START;
+    const dup = !legacy && (d.unlocked ?? []).includes(itemId);
+    tx.set(
+      ref,
+      {
+        uid,
+        stripeSessions: { [session.id]: dup ? "duplicate" : "unlocked" },
+        ...(dup ? {} : { unlocked: FieldValue.arrayUnion(itemId), stripeUnlocked: FieldValue.arrayUnion(itemId) }),
+        updatedAt: FieldValue.serverTimestamp(),
+      },
+      { merge: true }
+    );
+    return dup ? "duplicate" : "unlocked";
+  });
+  if (status === "duplicate") await refundDuplicate(stripe, session);
+  return status;
 }
 
 // そのセッションの支払いが、すでに返金・チャージバックされているか。
@@ -108,12 +143,20 @@ async function revokeIfRefunded(stripe, charge) {
   if (!uid || !config || !itemId) return;
   // 文書があるときだけ取り消す。アカウント削除のあとに返金が来て、空の文書が作り直されるのを防ぐ
   const ref = db.collection(config.collection).doc(uid);
-  const snap = await ref.get();
-  if (!snap.exists) return;
-  await ref.update({
-    unlocked: FieldValue.arrayRemove(itemId),
-    stripeUnlocked: FieldValue.arrayRemove(itemId),
-    updatedAt: FieldValue.serverTimestamp(),
+  await db.runTransaction(async (tx) => {
+    const snap = await tx.get(ref);
+    if (!snap.exists) return;
+    // 重複で返金した分の返金通知では、有効な1件目の解放を取り消さない
+    if (snap.data().stripeSessions?.[obj.id] === "duplicate") {
+      tx.update(ref, { stripeSessions: { ...snap.data().stripeSessions, [obj.id]: "duplicate-refunded" }, updatedAt: FieldValue.serverTimestamp() });
+      return;
+    }
+    tx.update(ref, {
+      unlocked: FieldValue.arrayRemove(itemId),
+      stripeUnlocked: FieldValue.arrayRemove(itemId),
+      stripeSessions: { ...(snap.data().stripeSessions ?? {}), [obj.id]: "revoked" },
+      updatedAt: FieldValue.serverTimestamp(),
+    });
   });
 }
 
@@ -231,8 +274,9 @@ exports.confirmAhiruUnlockCheckout = onCall(
       throw new HttpsError("internal", "セッション情報が不正です");
     }
 
-    await unlockIfNeeded(config, uid, itemId);
-    return { ok: true, type, itemId };
+    const status = await unlockIfNeeded(config, uid, itemId, stripe, session);
+    // duplicate＝すでに持っていた項目への二重の支払い。自動で返金した（画面でお知らせする）
+    return { ok: true, type, itemId, duplicate: status === "duplicate" };
   }
 );
 
@@ -273,7 +317,7 @@ exports.ahiruUnlockWebhook = onRequest(
             // 返金後に、同じ完了イベントが再送されても解放し直さない。
             // 確認に失敗したときは例外のまま外へ出し、500 を返して Stripe に再送させる。
             const refunded = await isSessionRefunded(stripe, obj);
-            if (!refunded) await unlockIfNeeded(config, uid, itemId);
+            if (!refunded) await unlockIfNeeded(config, uid, itemId, stripe, obj);
           }
         }
       } else if (event.type === "charge.refunded" || event.type === "charge.dispute.created") {

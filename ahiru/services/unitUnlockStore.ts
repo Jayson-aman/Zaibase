@@ -28,6 +28,16 @@ export async function getUnlockedUnitIds(opts?: { strict?: boolean }): Promise<S
  * 書き込むのではなく、Cloud Function（unlockContent）にRevenueCatの購入実績との
  * 突き合わせを行わせてから解放してもらう。購入が確認できない場合は例外を投げる。
  */
+/** 購入の「前」に呼ぶ。未使用の購入分があれば、課金せずにそれで解放する（formulaUnlockStore.claimExistingFormulaCredit と同じ考え方）。 */
+export async function claimExistingUnitCredit(lessonId: string): Promise<boolean> {
+  if (!isFirebaseConfigured()) return false;
+  const res = await callFirebaseFunction<{ type: 'unit'; itemId: string; noWait: true }, { ok: boolean; unlocked?: boolean; reason?: string }>(
+    'unlockContent',
+    { type: 'unit', itemId: lessonId, noWait: true },
+  );
+  return res.ok === true;
+}
+
 export async function markUnitUnlocked(lessonId: string): Promise<void> {
   if (!isFirebaseConfigured()) return;
   await callFirebaseFunction<{ type: 'unit'; itemId: string }, { ok: true }>('unlockContent', {

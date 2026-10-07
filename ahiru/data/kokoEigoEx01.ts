@@ -1461,7 +1461,7 @@ When did you last see him? が正解。
 The noise was so loud that she couldn't sleep. が正解。
 so loud（とても大きい）が原因で、that 以下（she couldn't sleep）が結果になる。
 such + 名詞 + that も同様の意味（It was such loud noise that she couldn't sleep.）。
-made は不要（noise は make ではなく be動詞と組み合わせる）。`,
+made と her は不要（noise は make ではなく be動詞と組み合わせる。主語は she だけなので her も使わない）。`,
   },
   {
     id: 'koko_eigo_ex01_099',

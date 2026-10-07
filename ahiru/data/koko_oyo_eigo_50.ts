@@ -710,7 +710,7 @@ export const kokoOyoEigo50: Question[] = [
     difficulty: 'advanced',
     maxOnly: true,
     question:
-      '次の語句を並べ替えて、正しい英文を作りなさい。（１語不要）\n\n[ the / book / written / by / was / wrote / him ]\n\nThe _____ _____ _____ _____ .',
+      '次の語句を並べ替えて、正しい英文を作りなさい。（１語不要）\n\n[ the / book / written / by / was / wrote / him ]\n\nThe _____ _____ _____ _____ _____ .',
     answer: 'The book was written by him.',
     hint: '受動態の文にしよう。by の後ろには動作主が来る。',
     explanation:

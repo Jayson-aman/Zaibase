@@ -642,7 +642,7 @@ for + 期間（for three years）／since + 起点（since 2020）。現在完�
   {
     id: 'koko_nyushi_eigo9_31',
     subject: 'eigo',
-    question: '次の語を並べ替えて正しい英文を作れ。\n（ tested / engineers / it / carefully / before / launching / the / satellite ）\n「衛星を打ち上げる前に、技術者たちはそれを注意深く検査した。」',
+    question: '次の語を並べ替えて正しい英文を作れ。\n（ tested / Engineers / it / carefully / before / launching / the / satellite ）\n「衛星を打ち上げる前に、技術者たちはそれを注意深く検査した。」\n（文頭にくる語は大文字で始めてあります）',
     answer: 'Engineers tested it carefully before launching the satellite.',
     hint: 'before の後には動名詞（〜ing）が来る。before + 動名詞＝〜する前に。',
     explanation:

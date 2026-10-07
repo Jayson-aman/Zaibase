@@ -762,7 +762,7 @@ for vs since：for＋期間（for ten years）、since＋起点（since our chil
   {
     id: 'koko_nyushi_eigo5_31',
     subject: 'eigo',
-    question: '次の語を並べ替えて正しい英文を作れ。\n（ will / go / out / after / finishing / sorting / the / trash / I ）\n「ゴミを分別し終えた後、私は出かけます。」',
+    question: '次の語を並べ替えて正しい英文を作れ。\n（ will / go / out / after / finishing / sorting / the / trash / I ）\n「ゴミを分別し終えた後、私は出かけます。」\n（文頭にくる語は大文字で始めてあります）',
     answer: 'I will go out after finishing sorting the trash.',
     hint: 'after の後には動名詞（〜ing）が来る。after + 動名詞 = 〜した後で。',
     explanation: `【出題意図】

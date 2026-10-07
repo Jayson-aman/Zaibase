@@ -319,7 +319,7 @@ export const SPLUS_KH_B: Question[] = [
     examType: 'chugaku',
     difficulty: 'standard',
     question:
-      '【大問4】並べかえ（受動態・不定詞・条件）\n\n日本文の意味になるように、（　）内の語を並べかえて、正しい英文をつくりなさい。文末の記号（. や ?）は書かなくてもかまいません。\n\n問1: この本は、多くの子どもたちに読まれています。\n（ is / this / by / book / read / many / children ）\n問2: 私は何か冷たい飲み物がほしいです。\n（ want / cold / to / I / something / drink ）\n問3: 彼女は英語を話すのが上手です。\n（ is / English / speaking / she / at / good ）\n問4: もし明日雨なら、私たちは家にいます。\n（ rains / if / tomorrow / will / it / we / stay / at / home ）',
+      '【大問4】並べかえ（受動態・不定詞・条件）\n\n日本文の意味になるように、（　）内の語を並べかえて、正しい英文をつくりなさい。文末の記号（. や ?）は書かなくてもかまいません。\n\n問1: この本は、多くの子どもたちに読まれています。\n（ is / this / by / book / read / many / children ）\n問2: 私は何か冷たい飲み物がほしいです。\n（ want / cold / to / I / something / drink ）\n問3: 彼女は英語を話すのが上手です。\n（ is / English / speaking / she / at / good ）\n問4: もし明日雨なら、私たちは家にいます。（If で始めなさい）\n（ rains / if / tomorrow / will / it / we / stay / at / home ）',
     answer:
       '問1: This book is read by many children.\n問2: I want something cold to drink.\n問3: She is good at speaking English.\n問4: If it rains tomorrow, we will stay at home.',
     hint: '問1は「be動詞＋過去分詞＋by～」、問2は something のあとに形容詞と to 不定詞、問4は if のあとの文は未来のことでも現在形です。',

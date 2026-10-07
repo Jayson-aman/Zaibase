@@ -74,3 +74,14 @@ export function isPaymentPending(e: unknown): boolean {
     String(err?.readableErrorCode ?? '') === 'PAYMENT_PENDING_ERROR'
   );
 }
+
+/**
+ * RevenueCat のエラーのうち、「課金はされていない」と言い切れるもの。
+ * 3 購入が許可されていない／4 購入が無効／5 商品が購入できない／11 認証情報が不正／14 ユーザーIDが不正／15 すでに処理中。
+ * これ以外（通信エラー・ストアの不具合・不明）は、課金された可能性があるので、買い直す前に必ず確認する。
+ */
+export function isDefinitelyNotCharged(e: unknown): boolean {
+  const err = e as { code?: unknown; errorCode?: unknown } | null;
+  const c = Number(err?.code ?? err?.errorCode);
+  return [3, 4, 5, 11, 14, 15].includes(c);
+}

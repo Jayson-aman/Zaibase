@@ -1117,7 +1117,7 @@ export const takatsukiQuestions: Question[] = [
   {
     id: 'takatsuki_eigo_04',
     subject: 'eigo',
-    question: '次の語を並べかえて正しい英文を作りなさい。\n[ the, is, this, visited, museum, that, I, yesterday ]',
+    question: '次の語を並べかえて正しい英文を作りなさい。\n「これは私が昨日訪れた博物館です。」\n[ the, is, this, visited, museum, that, I, yesterday ]',
     answer: 'This is the museum that I visited yesterday.',
     hint: '関係代名詞thatを使った整序作文。先行詞はmuseum',
     explanation:
@@ -1130,7 +1130,7 @@ export const takatsukiQuestions: Question[] = [
     id: 'takatsuki_eigo_05',
     subject: 'eigo',
     question:
-      '次の語を並べかえて正しい英文を作りなさい。\n[ you, I, if, free, were, would, come, to, the, party ]',
+      '次の語を並べかえて正しい英文を作りなさい。\n「もしあなたが暇なら、私はパーティーに来るのに。」\n[ you, I, if, free, were, would, come, to, the, party ]',
     answer:
       'If you were free, I would come to the party.',
     hint:

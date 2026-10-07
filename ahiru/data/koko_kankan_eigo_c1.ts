@@ -302,7 +302,7 @@ He said to me, "I will visit you tomorrow."
 ② I don't know what to say to her.
 ③ This problem is more difficult than that one.`,
     hint: '①分詞構文（理由）、②疑問詞+to不定詞、③比較級+than。',
-    explanation: `【出題意図】分詞構文・疑問詞+to不定詞・比較級構文の語順整序を問う。【解説】①「とても疲れて（いたので）」＝理由を表す分詞構文Feeling very tired。カンマの後に主節she went to bed earlyを続ける。②「何と言うべきか」＝what to say（疑問詞+to不定詞）をknowの目的語にする。③difficultは3音節以上のためmore difficultと比較級を作り、thanで比較対象thatを続ける。【注意点】①はFeelingで始めることでve主語she（主節と同じ）を省略した形と理解する。【関連知識】疑問詞+to不定詞：how to use（使い方）、where to go（どこへ行くか）なども同型。`,
+    explanation: `【出題意図】分詞構文・疑問詞+to不定詞・比較級構文の語順整序を問う。【解説】①「とても疲れて（いたので）」＝理由を表す分詞構文Feeling very tired。カンマの後に主節she went to bed earlyを続ける。②「何と言うべきか」＝what to say（疑問詞+to不定詞）をknowの目的語にする。③difficultは3音節以上のためmore difficultと比較級を作り、thanで比較対象thatを続ける。【注意点】①はFeelingで始めることで、主語she（主節と同じ）を省略した形と理解する。【関連知識】疑問詞+to不定詞：how to use（使い方）、where to go（どこへ行くか）なども同型。`,
     pitfall: '③をthis problem is difficult than thatとmoreを忘れるのは誤り（difficultは比較級にmoreが必要）。',
     memoryTip: '3音節以上の形容詞はmore/mostを付ける、と音節数で判断できるようにする。',
   },
@@ -737,7 +737,7 @@ A growing number of schools are therefore adopting alternative assessment method
     answer: `① Had I known it was true, I would never have spoken.
 ② What surprised all of us most was the news of her sudden resignation.`,
     hint: '①仮定法過去完了のif省略倒置（Had+主語+p.p.〜, 主語+would never have+p.p.）。②What+動詞が主語になる名詞節構文。',
-    explanation: `【出題意図】仮定法過去完了の倒置とwhatの主語用法を組み合わせた高難度の語句整序問題。【解説】①「それが本当だと知っていたら」はIf I had known it was trueだが、ifを省略した倒置形Had I known it was trueにする。主節は「決して〜しなかっただろう」なのでI would never have spoken（仮定法過去完了の帰結節）。②「最も皆を驚かせたこと」はWhat surprised all of us most（whatが主語となる名詞節）。「〜は彼女の突然の辞任だった」でbe動詞wasを続け、補語としてthe news of her sudden resignationを置く。【注意点】①は「不足している1語」としてneverやhaveなどを補う必要がある点に注意。②も同様にall（all of us）などを補う。【関連知識】この2問はいずれも「省略・倒置・名詞節化」という高度な文法操作を組み合わせた最難関レベルの構文。`,
+    explanation: `【出題意図】仮定法過去完了の倒置とwhatの主語用法を組み合わせた高難度の語句整序問題。【解説】①「それが本当だと知っていたら」はIf I had known it was trueだが、ifを省略した倒置形Had I known it was trueにする。主節は「決して〜しなかっただろう」なのでI would never have spoken（仮定法過去完了の帰結節）。②「最も皆を驚かせたこと」はWhat surprised all of us most（whatが主語となる名詞節）。「〜は彼女の突然の辞任だった」でbe動詞wasを続け、補語としてthe news of her sudden resignationを置く。【注意点】語群には、①は knew、②は that という不要な語が1語ずつ入っている。①は knew を使わず、known と had で「Had I known」の倒置にする。②は that を使わず、What を文の主語（名詞節）にする。【関連知識】この2問はいずれも「省略・倒置・名詞節化」という高度な文法操作を組み合わせた最難関レベルの構文。`,
     pitfall: '①でIf I had knownとifを残したまま倒置しない形にすると、問題の指示（並べ替え）と語数が合わなくなる。',
     memoryTip: '倒置の仮定法とwhat主語構文は、まず「元の文（If〜/The thing that〜）」を頭の中で作ってから変形すると整理しやすい。',
   },

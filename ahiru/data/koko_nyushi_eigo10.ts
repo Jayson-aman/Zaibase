@@ -632,11 +632,11 @@ This festival（主語・物）は「開催する」側ではなく「開催さ�
   {
     id: 'koko_nyushi_eigo10_31',
     subject: 'eigo',
-    question: '次の語を並べ替えて正しい英文を作れ。\n（ enough / to / was / the box / light / for / carry / children / it ）\n「その箱は子どもたちが運べるくらい軽かった。」',
-    answer: 'The box was light enough for children to carry it.',
+    question: '次の語を並べ替えて正しい英文を作れ。\n（ enough / to / was / the box / light / for / carry / children ）\n「その箱は子どもたちが運べるくらい軽かった。」',
+    answer: 'The box was light enough for children to carry.',
     hint: '形容詞＋enough＋for＋人＋to＋動詞 の語順。',
     explanation:
-      '【何を聞かれているか】enough / to / was / the box / light / for / carry / children / it を並べ替えて「その箱は子どもたちが運べるくらい軽かった。」という英文を作る。\n【なぜfor＋人が入るのか】「〜が…するのに十分〜だ」と、動作をする人を明示するには、〈形容詞＋enough＋for＋人＋to＋動詞原形〉という構文を使い、for＋人が不定詞の意味上の主語を示すから。\n【ポイント1】構文は主語＋be＋形容詞＋enough＋for＋人＋to＋動詞原形＋目的語。\n【ポイント2】The box was light enough for children to carry it.（その箱は子どもたちが運べるくらい軽かった）。\n【ポイント3】反対の意味を表す〈too＋形容詞＋for＋人＋to＋動詞〉（〜すぎて…できない）とセットで覚える。\n【答え】The box was light enough for children to carry it.\n【確かめ】for childrenがenoughとtoの間に正しく置かれているかを確認する。\n【よくあるまちがい】carryのあとのit（the boxを指す代名詞）を落としてしまう。\n【ここが絶対】「形容詞＋enough＋for＋人＋to＋動詞」の語順を1つのまとまりとして覚える。',
+      '【何を聞かれているか】enough / to / was / the box / light / for / carry / children を並べ替えて「その箱は子どもたちが運べるくらい軽かった。」という英文を作る。\n【なぜfor＋人が入るのか】「〜が…するのに十分〜だ」と、動作をする人を明示するには、〈形容詞＋enough＋for＋人＋to＋動詞原形〉という構文を使い、for＋人が不定詞の意味上の主語を示すから。\n【ポイント1】構文は主語＋be＋形容詞＋enough＋for＋人＋to＋動詞原形。\n【ポイント2】The box was light enough for children to carry.（その箱は子どもたちが運べるくらい軽かった）。\n【ポイント3】反対の意味を表す〈too＋形容詞＋for＋人＋to＋動詞〉（〜すぎて…できない）とセットで覚える。\n【答え】The box was light enough for children to carry.\n【確かめ】for childrenがenoughとtoの間に正しく置かれているかを確認する。\n【よくあるまちがい】carryのあとにit（the boxを指す代名詞）を付けてしまう。the boxは主語になっているので、carryのあとには何も置かない。\n【ここが絶対】「形容詞＋enough＋for＋人＋to＋動詞」の語順を1つのまとまりとして覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',

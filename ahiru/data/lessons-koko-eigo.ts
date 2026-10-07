@@ -2596,9 +2596,9 @@ By the time we arrived, the concert (　　) already (　　).
     title: '分詞構文の発展',
     description: '分詞構文の完了形・受動態・独立分詞構文まで踏み込んで読み書きに使えるようにする',
     keyPoints: [
-      `分詞構文の基本の復習：接続詞・主語を省き動詞を-ingに（Being/Havingは省略可）`,
+      `分詞構文の基本の復習：接続詞・主語を省き動詞を-ingに（受動態ではBeing／Having beenは省略可）`,
       `完了形の分詞構文 Having＋過去分詞は、主節よりも前の時点の出来事を表す`,
-      `受動態の分詞構文（Being＋過去分詞、Havingbeen＋過去分詞）は Being を省略できる`,
+      `受動態の分詞構文（Being＋過去分詞、Having been＋過去分詞）は Being / Having been を省略できる`,
       `否定の分詞構文は Not/Never を分詞の直前に置く`,
       `独立分詞構文：従属節と主節の主語が異なるとき、分詞の前に主語を残す`,
       `with＋名詞＋分詞（付帯状況）：「〜を…しながら／〜が…の状態で」`,
@@ -2659,7 +2659,7 @@ By the time we arrived, the concert (　　) already (　　).
   前：Having seen the movie before, I knew the ending.
     （以前その映画を見たことがあったので、結末を知っていた＝見た方が先）
 
-■ 受動態の分詞構文（Being／Havingbeen ＋ 過去分詞）
+■ 受動態の分詞構文（Being／Having been ＋ 過去分詞）
 元の文が受動態のとき、分詞構文にすると Being／Having been で始まるが、
 これらはしばしば省略される。
 
@@ -2686,7 +2686,7 @@ By the time we arrived, the concert (　　) already (　　).
 分詞構文の主語が主節の主語と異なるとき、分詞の前にその主語を残す。
 これを「独立分詞構文」と呼ぶ。
 
-  例）Because it was raining, we stayed home.
+  例）Because it was rainy, we stayed home.
     → ① Because省略 ② 主語が異なるので it を残す ③ was→being
     → It being rainy, we stayed home.（あまり一般的でないため書き言葉限定）
 
@@ -2753,7 +2753,7 @@ By the time we arrived, the concert (　　) already (　　).
     （宿題を終えていなかったので、テレビを見られなかった）
 
 ⚠注意：Not を分詞の後ろに置くミスが多いので注意。
-  × Having not finished（誤りとされることが多い）
+  × Having not finished（実際には使われるが、標準的でなく入試では誤りとされることが多い）
   〇 Not having finished（Not は分詞の前）
 
 ■ 分詞構文の書き換え問題の解法手順

@@ -2081,7 +2081,7 @@ export const kokoGeneralQuestions: Question[] = [
   {
     id: 'koko_gen_eigo_14',
     subject: 'eigo',
-    question: '次の英文を正しい語順に並べ替えなさい。\n①（is / hard / studying / she / because / English / difficult / is）.（彼女は英語が難しいので一生懸命勉強している）\n②（I / been / have / studying / for / three / hours）.',
+    question: '次の英文を正しい語順に並べ替えなさい。\n①（is / hard / studying / She / because / English / difficult / is）.（彼女は英語が難しいので一生懸命勉強している）\n②（I / been / have / studying / for / three / hours）.\n（①は文頭にくる語を大文字で書いてあります）',
     answer: '①She is studying hard because English is difficult.　②I have been studying for three hours.',
     hint: '①because は接続詞（理由を表す）。②現在完了進行形：have/has been + 動詞ing',
     explanation: '【何を聞かれているか】\n語を並べかえて、①理由を表す文と、②「ずっと〜している」を表す文を作る問題。\n\n【なぜその語順になるのか】\n①は「主語＋動詞（結果）＋because＋主語＋動詞（理由）」の順に並べる。②は現在完了進行形で、have＋been＋動詞ingの形になる。\n\n【ステップ1】①まず前半の「彼女は一生懸命勉強している」を作る。She is studying hard。\n【ステップ2】①because のあとに理由の文を続ける。English is difficult。語群の is は2つあるので、前半と後半で1つずつ使う。\n【ステップ3】②I have been studying を作り、最後に for three hours を置く。for は「〜の間」で、あとに期間が続く。\n\n【答え】\n①She is studying hard because English is difficult.\n②I have been studying for three hours.\n\n【確かめ】\n語群の語（is が2つ、difficult を含む）をすべて使い切ったか、②の語を使い切ったかを数えて確かめる。\n\n【よくあるまちがい】\n②で have been を並べ忘れて studying だけにしてしまう。ずっと続いている動作は have been ＋ ing の形になる。',

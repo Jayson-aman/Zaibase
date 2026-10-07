@@ -52,6 +52,41 @@ async function deleteQuery(query) {
   }
 }
 
+/**
+ * Web（Stripe／RevenueCat Web Billing）の購読が、まだ続いているか。
+ * アカウントを消しても Stripe の購読は止まらず、本人はログインも解約もできないまま請求だけが続く。
+ * true＝続いている（削除を止める）／false＝無い／null＝確認できなかった（削除は止めない）。
+ */
+async function hasActiveWebSubscription(uid) {
+  let key = "";
+  try {
+    key = REVENUECAT_SECRET_KEY.value();
+  } catch {
+    return null;
+  }
+  if (!key || key === "placeholder") return null;
+  try {
+    const res = await fetch(`https://api.revenuecat.com/v1/subscribers/${encodeURIComponent(uid)}`, {
+      headers: { Authorization: `Bearer ${key}`, Accept: "application/json" },
+      signal: AbortSignal.timeout(8000),
+    });
+    if (res.status === 404) return false;
+    if (!res.ok) return null;
+    const json = await res.json();
+    const subs = json?.subscriber?.subscriptions ?? {};
+    const now = Date.now();
+    return Object.values(subs).some((sub) => {
+      if (sub?.store !== "stripe" && sub?.store !== "rc_billing") return false;
+      const exp = sub.expires_date ? Date.parse(sub.expires_date) : Infinity;
+      if (!(exp > now)) return false;
+      // すでに解約済み（期限まで使えるだけ）なら、削除してよい
+      return !sub.unsubscribe_detected_at;
+    });
+  } catch {
+    return null;
+  }
+}
+
 async function deleteRevenueCatSubscriber(uid) {
   let key = "";
   try {
@@ -83,6 +118,11 @@ exports.deleteMyData = onCall(
     const authTime = Number(req.auth.token?.auth_time ?? 0);
     if (!authTime || Date.now() / 1000 - authTime > RECENT_LOGIN_SECONDS) {
       throw new HttpsError("failed-precondition", "requires-recent-login");
+    }
+
+    // Webで購読中のまま消すと、解約できないまま請求が続いてしまう。先に解約してもらう
+    if ((await hasActiveWebSubscription(uid)) === true) {
+      throw new HttpsError("failed-precondition", "has-web-subscription");
     }
 
     for (const col of DOC_BY_UID) {

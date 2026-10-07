@@ -267,7 +267,7 @@ export const SPLUS2_KOH: Question[] = [
     difficulty: 'basic',
     course: 'koko-ohori',
     examType: 'koko',
-    question: `日本語の意味になるように、[　]内の語を並べかえて英文を完成させなさい。\n「彼がなぜ遅れたのか私に教えてください。」\n[ why / tell / late / was / he / me / please ]`,
+    question: `日本語の意味になるように、[　]内の語を並べかえて英文を完成させなさい。\n「彼がなぜ遅れたのか私に教えてください。」（Please で始めなさい）\n[ why / tell / late / was / he / me / please ]`,
     answer: `Please tell me why he was late.`,
     hint: `「なぜ彼が遅れたのか」の部分は、疑問文の語順ではなく、ふつうの文の語順(主語→動詞)になる。`,
     explanation:

@@ -769,7 +769,7 @@ make + 人 + 物 = 人のために物を作る（第4文型）
     id: 'koko_nyushi_eigo_31',
     subject: 'eigo',
     question:
-      '次の語を並べ替えて正しい英文を作れ。\n（ I / will / go / out / after / finishing / my / homework ）\n「私は宿題を終えた後、出かけます。」',
+      '次の語を並べ替えて正しい英文を作れ。\n（ I / will / go / out / after / finishing / my / homework ）\n「私は宿題を終えた後、出かけます。」\n（文頭にくる語は大文字で始めてあります）',
     answer: 'I will go out after finishing my homework.',
     hint: 'after の後には動名詞（〜ing）が来る。after + 動名詞 = 〜した後で。',
     explanation:

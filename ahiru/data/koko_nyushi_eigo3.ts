@@ -805,7 +805,7 @@ buy + 人 + 物 = 人のために物を買う（第4文型）
   {
     id: 'koko_nyushi_eigo3_31',
     subject: 'eigo',
-    question: '次の語を並べ替えて正しい英文を作れ。\n（ without / left / the gym / anyone / he / telling ）\n「彼は誰にも言わずに体育館を出た。」',
+    question: '次の語を並べ替えて正しい英文を作れ。\n（ without / left / the gym / anyone / He / telling ）\n「彼は誰にも言わずに体育館を出た。」\n（文頭にくる語は大文字で始めてあります）',
     answer: 'He left the gym without telling anyone.',
     hint: 'without の後には動名詞（〜ing）が来る。without + 動名詞 = 〜せずに。',
     explanation:

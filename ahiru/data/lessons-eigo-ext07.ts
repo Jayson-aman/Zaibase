@@ -2723,7 +2723,7 @@ soon（時期が早い）と early（時刻が早い）と fast（速度が速�
 4倍：four times
 半分：half
 
-例）This bag is half as heavy as that one.（このかばんはあの箱の半分の重さだ）
+例）This bag is half as heavy as that one.（このかばんはあのかばんの半分の重さだ）
 
 ■ 語順
 倍数は最初の as の前に置く。

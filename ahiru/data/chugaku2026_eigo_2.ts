@@ -701,7 +701,7 @@ Our school has a sports day in October. Students run races and play tug-of-war. 
     maxOnly: true,
     question: `次の語句を並べ替えて、意味の通る英文を作りなさい。
 
-① [ was / it / because / stayed / home / I / raining ].（雨が降っていたので私は家にいた）
+① [ was / it / because / stayed / home / I / raining ].（雨が降っていたので私は家にいた。I で始めなさい）
 ② [ tired / but / I / studied / was / I ].（私は疲れていたが勉強した）`,
     answer: `① I stayed home because it was raining.
 ② I was tired, but I studied.`,

@@ -920,14 +920,14 @@ Climate change is affecting school life in unexpected ways. Extremely hot summer
 ② [ far / as / know / as / I ], the schedule hasn't changed.
   （私が知る限り、予定は変わっていない）
 
-③ [ there / no / of / is / point / worrying ] about things you cannot control.
+③ [ there / no / in / is / point / worrying ] about things you cannot control.
   （自分でどうにもできないことを心配しても仕方がない）`,
     answer: `① I can't help feeling nervous
 ② As far as I know
-③ There is no point of worrying`,
-    hint: '①can\'t help+動名詞（〜せずにはいられない）、②as far as I know（私が知る限り）、③There is no point of/in+動名詞。',
+③ There is no point in worrying`,
+    hint: '①can\'t help+動名詞（〜せずにはいられない）、②as far as I know（私が知る限り）、③There is no point in+動名詞。',
     explanation:
-      '【何を聞かれているか】\ncan\'t help＋動名詞、as far as I know、There is no point in/of＋動名詞という3つの頻出定型表現を、語句を並べ替えて完成させる問題。\n\n【なぜそれぞれの表現の後ろの形が決まっているのか】\ncan\'t help（〜せずにはいられない）、as far as I know（私が知る限り）、There is no point in/of〜ing（〜しても仕方がない）は、それぞれ後ろに続く形（動名詞や語順）が決まった、丸ごと覚えるべき慣用表現。\n\n【ポイント1】①"can\'t help＋動名詞"を確認する\n"I can\'t help feeling nervous"＝「緊張せずにはいられない」。can\'t helpの後ろは必ず動名詞（feeling）。\n\n【ポイント2】②"as far as I know"を確認する\n"As far as I know"＝「私が知る限りでは」という決まった語順の慣用表現。\n\n【ポイント3】③"There is no point of/in＋動名詞"を確認する\n"There is no point of worrying"＝「心配しても仕方がない」。\n\n【答え】\n① I can\'t help feeling nervous\n② As far as I know\n③ There is no point of worrying\n\n【確かめ】\n①のhelpの後ろがfeeling（動名詞）になっていて、to feelになっていないことを確認する。\n\n【よくあるまちがい】\n①を"I can\'t help to feel"としてしまうミス。can\'t helpの後ろは動名詞を使う。\n\n【ここが絶対】\ncan\'t help＋動名詞（〜せずにはいられない）、as far as I know（知る限り）、There is no point in/of＋動名詞（〜しても仕方がない）を、それぞれ定型表現として丸ごと覚える。',
+      '【何を聞かれているか】\ncan\'t help＋動名詞、as far as I know、There is no point in＋動名詞という3つの頻出定型表現を、語句を並べ替えて完成させる問題。\n\n【なぜそれぞれの表現の後ろの形が決まっているのか】\ncan\'t help（〜せずにはいられない）、as far as I know（私が知る限り）、There is no point in〜ing（〜しても仕方がない）は、それぞれ後ろに続く形（動名詞や語順）が決まった、丸ごと覚えるべき慣用表現。\n\n【ポイント1】①"can\'t help＋動名詞"を確認する\n"I can\'t help feeling nervous"＝「緊張せずにはいられない」。can\'t helpの後ろは必ず動名詞（feeling）。\n\n【ポイント2】②"as far as I know"を確認する\n"As far as I know"＝「私が知る限りでは」という決まった語順の慣用表現。\n\n【ポイント3】③"There is no point in＋動名詞"を確認する\n"There is no point in worrying"＝「心配しても仕方がない」。\n\n【答え】\n① I can\'t help feeling nervous\n② As far as I know\n③ There is no point in worrying\n\n【確かめ】\n①のhelpの後ろがfeeling（動名詞）になっていて、to feelになっていないことを確認する。\n\n【よくあるまちがい】\n①を"I can\'t help to feel"としてしまうミス。can\'t helpの後ろは動名詞を使う。\n\n【ここが絶対】\ncan\'t help＋動名詞（〜せずにはいられない）、as far as I know（知る限り）、There is no point in＋動名詞（〜しても仕方がない）を、それぞれ定型表現として丸ごと覚える。',
     pitfall: '①をI can\'t help to feelとしないこと。can\'t helpの後は動名詞。',
     memoryTip: 'can\'t help+ing＝我慢できない、as far as I know＝知る限り、と定型表現ごと丸暗記する。',
   },

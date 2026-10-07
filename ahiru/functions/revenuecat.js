@@ -58,7 +58,7 @@ async function fetchEntitlements(uid) {
   try {
     const res = await fetch(
       `https://api.revenuecat.com/v1/subscribers/${encodeURIComponent(uid)}`,
-      { headers: { Authorization: `Bearer ${key}`, Accept: "application/json" } }
+      { headers: { Authorization: `Bearer ${key}`, Accept: "application/json" }, signal: AbortSignal.timeout(8000) }
     );
     // 404 = 未購入ユーザー。RevenueCat は購入前でも 200 を返すが、念のため両対応。
     if (res.status === 404) return { max: false, pro: false, vocab: false };

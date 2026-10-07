@@ -684,7 +684,7 @@ for + 期間（for three years）、since + 起点（since 2020）
   {
     id: 'koko_nyushi_eigo8_31',
     subject: 'eigo',
-    question: '次の語を並べ替えて正しい英文を作れ。\n（ he / job / got / training / finishing / a / after / his ）\n「彼は研修を終えた後、仕事を得た。」',
+    question: '次の語を並べ替えて正しい英文を作れ。\n（ He / job / got / training / finishing / a / after / his ）\n「彼は研修を終えた後、仕事を得た。」\n（文頭にくる語は大文字で始めてあります）',
     answer: 'He got a job after finishing his training.',
     hint: 'after の後には動名詞（〜ing）が来る。after + 動名詞 = 〜した後で。',
     explanation:

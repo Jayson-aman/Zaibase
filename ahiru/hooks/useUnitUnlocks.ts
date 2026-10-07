@@ -8,7 +8,7 @@ import {
   startStripeUnlockCheckout,
   confirmPendingStripeUnlockOnce,
 } from '../services/subscription';
-import { getUnlockedUnitIds, markUnitUnlocked } from '../services/unitUnlockStore';
+import { getUnlockedUnitIds, markUnitUnlocked, claimExistingUnitCredit } from '../services/unitUnlockStore';
 import { UNIT_UNLOCK_PRICE_LABEL } from '../constants/pricing';
 
 const isWebPlatform = Platform.OS === 'web';
@@ -18,7 +18,7 @@ const isWebPlatform = Platform.OS === 'web';
 // あとにユーザーがもう一度ボタンを押したときpurchaseProductを再度呼んでしまい、
 // 消耗型商品なので実際に二重課金されてしまう。
 import { useAuthUser } from './useAuthUser';
-import { markPending, isPending, clearPending, listPending, isPaymentPending } from '../utils/purchasePending';
+import { markPending, isPending, clearPending, listPending, isPaymentPending, isDefinitelyNotCharged } from '../utils/purchasePending';
 const PENDING_KEY_PREFIX = 'unit_unlock_pending_';
 
 // 購入の「確認待ち」の記録は utils/purchasePending.ts（ユーザーごと・画面を開いたときに自動で確認をやり直す）
@@ -105,6 +105,10 @@ export function useUnitUnlocks(): UnitUnlocksState {
         .catch(() => {});
       // 決済は済んだのに確認に失敗して残っている購入は、ここで確認をやり直す
       if (!isWebPlatform) {
+        // 起動直後の通信が不安定で商品が取れなかったときに、画面を開き直すまで「準備中」のままにならないよう、戻ってくるたびに取り直す
+        fetchUnitUnlockProduct().then((p) => {
+          if (mounted.current && p != null) setProduct(p);
+        });
         const myUid = uidRef.current;
         listPending(PENDING_KEY_PREFIX, myUid)
           .then(async (ids) => {
@@ -160,17 +164,34 @@ export function useUnitUnlocks(): UnitUnlocksState {
       // まま終わっている場合は、購入をやり直さずに確認だけをリトライする。
       const alreadyPurchasedPending = await isPending(PENDING_KEY_PREFIX, uidRef.current, lessonId);
       if (!alreadyPurchasedPending) {
+        // 課金の前に、「すでに払ってあるのに、まだどの項目にも使われていない購入分」を使う（二重に払わない）。
+        try {
+          if (await claimExistingUnitCredit(lessonId)) {
+            if (mounted.current) {
+              setUnlockedIds((prev) => new Set(prev).add(lessonId));
+              setPurchasingLessonId(null);
+            }
+            return { ok: true };
+          }
+        } catch {
+          if (mounted.current) setPurchasingLessonId(null);
+          return { ok: false, message: '購入の状況を確認できませんでした。通信の状態を確かめて、もう一度お試しください。（お支払いはされていません）' };
+        }
         try {
           await purchaseProduct(product);
           await markPending(PENDING_KEY_PREFIX, uidRef.current, lessonId);
         } catch (e) {
           if (mounted.current) setPurchasingLessonId(null);
           if ((e as { userCancelled?: boolean } | null)?.userCancelled) return { ok: false, message: '', cancelled: true };
-          // 「承認と購入のリクエスト」（ご家族の承認待ち）。承認されたあとに買い直すと二重に払うので、
-          // 確認待ちとして記録して、承認後はこの画面を開き直すだけで解放されるようにする
+          // 「承認と購入のリクエスト」（ご家族の承認待ち）。承認されたあと、もう一度「購入する」を押すと、
+          // 払い済みの分が先に使われるので、追加のお支払いなしで解放される。
           if (isPaymentPending(e)) {
+            return { ok: false, message: 'ご家族の承認待ちです。承認されたら、この画面を開き直して、もう一度「購入する」を押してください（承認済みの分は、追加のお支払いなしで解放されます）。' };
+          }
+          // 通信エラーなど、課金されたかどうか分からない失敗。確認待ちとして記録し、次は確認だけを行う。
+          if (!isDefinitelyNotCharged(e)) {
             await markPending(PENDING_KEY_PREFIX, uidRef.current, lessonId);
-            return { ok: false, message: 'ご家族の承認待ちです。承認されたら、この画面を開き直してください（もう一度「購入する」は押さないでください）。' };
+            return { ok: false, message: 'お支払いが完了したか確認できませんでした。しばらくしてから、この画面を開き直して、もう一度「購入する」を押してください（支払い済みなら、追加のお支払いなしで解放されます）。' };
           }
           const message = e instanceof Error ? e.message : '購入処理に失敗しました';
           return { ok: false, message };
@@ -194,7 +215,7 @@ export function useUnitUnlocks(): UnitUnlocksState {
             const message = e instanceof Error ? e.message : '購入の確認に失敗しました';
             return {
               ok: false,
-              message: `${message}\n\n決済自体は完了しています。もう一度「購入する」ボタンは押さず、しばらくしてからこの画面を開き直してください。`,
+              message: `${message}\n\nお支払いは完了しています。しばらくしてから、この画面を開き直して、もう一度「購入する」を押してください（支払い済みの分は、追加のお支払いなしで解放されます）。`,
             };
           }
           await new Promise((resolve) => setTimeout(resolve, 1500 * (attempt + 1)));

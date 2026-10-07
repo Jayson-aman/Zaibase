@@ -42,9 +42,7 @@ const CATEGORIES = [
 const SUBJECTS = ["sansu", "kokugo", "rika", "shakai", "eigo", "all"];
 const EXAM_TYPES = ["chugaku", "koko"];
 
-function todayKey() {
-  return new Date().toISOString().slice(0, 10);
-}
+const { jstDay: todayKey } = require("./_usage");
 
 async function checkAndIncrementLimit(uid) {
   const ref = db.collection("feedbackUsage").doc(uid);

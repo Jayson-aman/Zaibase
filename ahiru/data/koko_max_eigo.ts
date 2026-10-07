@@ -194,7 +194,7 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_15',
     subject: 'eigo',
-    question: '次の語句を並べ替えて、意味の通る英文を作りなさい。\n\n【語群】wish / I / speak / could / I / fluently / English / more',
+    question: '次の語句を並べ替えて、意味の通る英文を作りなさい。\n\n「もっと流暢に英語が話せたらいいのに。」\n【語群】wish / I / speak / could / I / fluently / English / more',
     answer: 'I wish I could speak English more fluently.',
     hint: '「〜だったらいいのに」という現実には叶わない願望を表す構文を考えましょう。',
     explanation:

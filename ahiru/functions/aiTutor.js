@@ -38,8 +38,28 @@ const ANTHROPIC_API_KEY = defineSecret("ANTHROPIC_API_KEY");
 const MONTHLY_SESSION_LIMIT = 18;
 const TURN_LIMIT = 6;
 
-function monthKey() {
-  return new Date().toISOString().slice(0, 7);
+const { jstMonth: monthKey } = require("./_usage");
+
+/**
+ * AI が答えられなかったとき、先に消費した分（月の回数・1問の質問回数・無料体験）を戻す。
+ * 戻せなくても、本来のエラーを隠さない。
+ */
+async function refundTutorTurn(uid, sessionId, wasNewSession) {
+  try {
+    const usageRef = db.collection("aiTutorUsage").doc(uid);
+    const sessionRef = db.collection("aiTutorSessions").doc(`${uid}_${sessionId}`);
+    await db.runTransaction(async (tx) => {
+      const [u, s] = await Promise.all([tx.get(usageRef), tx.get(sessionRef)]);
+      if (wasNewSession && u.exists && u.data().month === monthKey() && (u.data().sessionsUsed ?? 0) > 0) {
+        tx.update(usageRef, { sessionsUsed: u.data().sessionsUsed - 1, updatedAt: FieldValue.serverTimestamp() });
+      }
+      if (s.exists && (s.data().turnCount ?? 0) > 0) {
+        tx.update(sessionRef, { turnCount: s.data().turnCount - 1, updatedAt: FieldValue.serverTimestamp() });
+      }
+    });
+  } catch (e) {
+    console.error("refundTutorTurn failed", e);
+  }
 }
 
 async function getOrCreateSession(uid, sessionId, isNewSession) {
@@ -117,7 +137,8 @@ exports.askTutor = onCall(
       isNewSession = false,
     } = req.data ?? {};
 
-    if (!sessionId || typeof sessionId !== "string" || sessionId.length > 128)
+    // sessionId は Firestore のドキュメントIDの一部になる。「/」などを含むと、別の階層に書きこめてしまう
+    if (!sessionId || typeof sessionId !== "string" || !/^[A-Za-z0-9_-]{1,100}$/.test(sessionId))
       throw new HttpsError("invalid-argument", "sessionId が不正です");
     if (!questionText && !imageBase64)
       throw new HttpsError("invalid-argument", "質問文または画像が必要です");
@@ -199,7 +220,8 @@ exports.askTutor = onCall(
     try {
       response = await client.messages.create({
         model,
-        max_tokens: 600,
+        // 考える分（adaptive thinking）も max_tokens に入るので、Opus のときは余裕を持たせる（足りないと本文が空になる）
+        max_tokens: model === "claude-opus-4-8" ? 2000 : 600,
         ...(model === "claude-opus-4-8" ? { thinking: { type: "adaptive" } } : {}),
         system: `あなたは小学生・中学生の受験勉強を手伝う、優しく丁寧な家庭教師です。
 生徒が「わからない！」と困っています。以下のルールで教えてください：
@@ -231,6 +253,7 @@ exports.askTutor = onCall(
       });
     } catch (err) {
       console.error("askTutor: Claude API error", err);
+      await refundTutorTurn(uid, sessionId, isNewSession);
       // AI が答えられなかったのに無料体験（1回限り）だけ消えるのは不公平なので、戻す
       if (trialConsumed) {
         await userRef.set({ trialAiUsed: false, updatedAt: FieldValue.serverTimestamp() }, { merge: true }).catch(() => {});
@@ -240,7 +263,13 @@ exports.askTutor = onCall(
 
     const textBlock = response.content.find((b) => b.type === "text");
     const answer = textBlock?.text?.trim() ?? "";
-    if (!answer) throw new HttpsError("internal", "回答の生成に失敗しました。もう一度試してね。");
+    if (!answer) {
+      await refundTutorTurn(uid, sessionId, isNewSession);
+      if (trialConsumed) {
+        await userRef.set({ trialAiUsed: false, updatedAt: FieldValue.serverTimestamp() }, { merge: true }).catch(() => {});
+      }
+      throw new HttpsError("internal", "回答の生成に失敗しました。もう一度試してね。");
+    }
 
     return { ok: true, answer, turnCount, model };
   }

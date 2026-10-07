@@ -399,7 +399,7 @@ export default function FormulasScreen() {
     if (!(await ensureLoggedInForPurchase(authLoading ? null : isLoggedIn, () => router.push('/login' as any)))) return;
     const ok = await confirmDialog(
       '購入の確認',
-      `この教科のロック中の公式${bundleCount}項目を、ぜんぶ ${bundlePriceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
+      `この教科の「公式・まとめ」タブで、ロック中の公式${bundleCount}項目を、ぜんぶ ${bundlePriceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。\n※教科書の単元ページにある個別のロックは、この対象には入りません。`,
     );
     if (!ok) return;
     const result = await unlockFormula(id, 'bundle');

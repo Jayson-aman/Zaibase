@@ -2856,7 +2856,7 @@ Emi and her friends are going to visit the science museum on Saturday. They will
 
 ★ ポイント：This is Ken. の This is は「こちらは〜です」の意味。電話では自分のことも This is 〜 と言う。I am Ken. とは言わないので、選択肢問題でねらわれる。
 
-⚠ 注意：Speaking. だけで「私です」を表す。Who's calling? に対して I am Mika. と答えるのは不自然。This is Mika. または Speaking. が正しい。`,
+⚠ 注意：Speaking. だけで「私です」を表す（本人が出たとき）。名のるときに I am Mika. と言うのは不自然で、This is Mika. が正しい（Who's calling? への答えも同じ）。`,
       },
       {
         heading: '実際の電話の会話',
@@ -2869,7 +2869,7 @@ Ken: I see. Can I leave a message?
 Mika's mother: Sure. Go ahead.
 Ken: We are going to meet at the station at nine tomorrow morning, but the trains will be late because of some work on the railway line. Could you tell her to come at nine thirty instead?
 Mika's mother: At nine thirty. All right, I'll tell her.
-Ken: Thank you very much. Good night.
+Ken: Thank you very much. Goodbye.
 
 ■ だれがだれと話しているか
 電話をかけたのは Ken、出たのは Mika の母親。Mika 本人は不在。
@@ -2886,7 +2886,7 @@ Ken: Thank you very much. Good night.
 
 ★ ポイント：Could you tell her to come at nine thirty instead? の instead（そのかわりに）が変更の合図。9時ではなく9時30分になる。
 
-⚠ 注意：会話の中に2つの時刻（six／nine／nine thirty）が出てくる。それぞれ何の時刻かを区別する。six はミカが帰る時刻で、待ち合わせとは関係ない。`,
+⚠ 注意：会話の中に3つの時刻（six／nine／nine thirty）が出てくる。それぞれ何の時刻かを区別する。six はミカが帰る時刻で、待ち合わせとは関係ない。`,
       },
     ],
     trapExamples: [

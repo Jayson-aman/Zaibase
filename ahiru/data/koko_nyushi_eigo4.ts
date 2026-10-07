@@ -843,7 +843,7 @@ for vs since：
   {
     id: 'koko_nyushi_eigo4_31',
     subject: 'eigo',
-    question: '次の語を並べ替えて正しい英文を作れ。\n（ checked / we / in / after / arriving / at / the / hotel ）\n「私たちはホテルに到着した後、チェックインをした。」',
+    question: '次の語を並べ替えて正しい英文を作れ。\n（ checked / We / in / after / arriving / at / the / hotel ）\n「私たちはホテルに到着した後、チェックインをした。」\n（文頭にくる語は大文字で始めてあります）',
     answer: 'We checked in after arriving at the hotel.',
     hint: '前置詞 after の後ろには動名詞（〜ing）が来る。',
     explanation:

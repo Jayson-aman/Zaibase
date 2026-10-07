@@ -717,7 +717,7 @@ export const gradeE6EigoQuestions: Question[] = [
     difficulty: 'advanced',
     examType: 'chugaku',
     grade: GRADE,
-    question: '（　）内の語句を正しく並べかえて、意味の通る文を作りなさい。\n（ than / this / bigger / that / is ）',
+    question: '（　）内の語句を正しく並べかえて、意味の通る文を作りなさい。\n（ than / this / bigger / that / is ）\n「これはあれより大きいです。」',
     answer: 'This is bigger than that.',
     hint: '「主語＋is＋比較級＋than＋比べる相手」の順番になる。',
     explanation:

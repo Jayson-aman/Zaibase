@@ -286,7 +286,7 @@ Another well-known tradition is "origami," the art of paper folding. By folding 
 【解説】
 ①まず疑問文の形「Do you know〜?」を作る。次に「the man」の後ろに関係代名詞「that」を使い、「is standing over there（あそこに立っている）」をつなぐ。
 ②「I was happy」（感情）+ 「to hear」（その感情の原因を表す不定詞の副詞的用法）+ 「the news」。be + 形容詞 + to 不定詞「〜して…だ」の形。
-③「be able to + 動詞原形」= can と同じ意味。主語がshe（3単現）なのでis、動詞は原形のspeakをthenの後ろに置く。
+③「be able to + 動詞原形」= can と同じ意味。主語がshe（3単現）なのでis、動詞は原形のspeakをtoの後ろに置く。
 
 【注意点】
 整序問題では「どの語とどの語がセットになるか」を先に考えるのがコツ。①では「the man + that」、②では「happy + to hear」、③では「is able to + speak」というセットを見抜く。また、整序後に文の意味が日本語訳と合っているか必ず確認すること。

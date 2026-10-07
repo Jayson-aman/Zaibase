@@ -52,9 +52,7 @@ const LEVEL_GUIDE = {
   toeic_800: "TOEIC800点レベル（ビジネス実務英語）",
 };
 
-function dayKey() {
-  return new Date().toISOString().slice(0, 10);
-}
+const { jstDay: dayKey, refundDaily } = require("./_usage");
 
 async function checkAndIncrementUsage(uid, limit) {
   const usageRef = db.collection("aiConversationUsage").doc(uid);
@@ -184,12 +182,16 @@ ${scenarioLine}
       });
     } catch (err) {
       console.error("chatEnglishConversation: Claude API error", err);
+      await refundDaily(db, "aiConversationUsage", uid, "day", "messagesUsed");
       throw new HttpsError("internal", "AIとの通信でエラーが発生しました。もう一度試してください。");
     }
 
     const textBlock = response.content.find((b) => b.type === "text");
     const reply = textBlock?.text?.trim() ?? "";
-    if (!reply) throw new HttpsError("internal", "応答の生成に失敗しました。もう一度試してください。");
+    if (!reply) {
+      await refundDaily(db, "aiConversationUsage", uid, "day", "messagesUsed");
+      throw new HttpsError("internal", "応答の生成に失敗しました。もう一度試してください。");
+    }
 
     return { ok: true, reply };
   }

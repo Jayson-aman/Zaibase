@@ -130,8 +130,9 @@ export async function signInEmail(email: string, password: string): Promise<Auth
     const cred = await signInWithEmailAndPassword(auth, email.trim(), password);
     await swapLocalUserData(before, localKeyOf(cred.user));
     await identifyUser(cred.user.uid);
-    // ログインせずに買った購入を、このアカウントに引きつぐ
-    await syncPurchasesToCurrentUser();
+    // ログインせずに（匿名のまま）買った購入を、このアカウントに引きつぐ。
+    // すでにログイン済みの別の人からの切りかえでは行わない（同じ端末を家族で使うとき、購読が別の人に移ってしまうため）
+    if (before === 'anon') await syncPurchasesToCurrentUser();
     return toAuthUser(cred.user);
   } catch (e: any) {
     throw new AuthError(friendlyError(e?.code));
@@ -199,6 +200,11 @@ export async function deleteAccount(password?: string): Promise<void> {
     } catch (e: any) {
       const code = String(e?.code ?? '');
       const notDeployed = code === 'functions/not-found' || code === 'functions/unimplemented';
+      if (code === 'functions/failed-precondition' && String(e?.message ?? '').includes('has-web-subscription')) {
+        throw new AuthError(
+          'Web版で購読中のため、先に解約してください。購入完了メールの「サブスクリプション管理」のリンクから解約したあと、もう一度お試しください。（解約しないと、アカウントを消したあとも請求が続きます）',
+        );
+      }
       if (!notDeployed) {
         throw new AuthError('削除に失敗しました。通信状況を確認して、もう一度お試しください。');
       }

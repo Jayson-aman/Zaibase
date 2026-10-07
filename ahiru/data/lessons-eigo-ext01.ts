@@ -1019,7 +1019,7 @@ use, cute, June, rule
 have（ハヴ）… ×ヘイヴ
 give（ギヴ）／live（リヴ）… ×ライヴ（「生きている」の意味の形容詞 live はライヴと読む）
 love（ラヴ）／come（カム）／some（サム）／done（ダン）／none（ナン）
-これらはもともと、英語では語末に v を1字だけで置かないというきまりがあり、意味のない e が付いた語である。
+このうち have・give・live・love は、英語では語末に v を1字だけで置かないというきまりのために、意味のない e が付いた語である。come・some・done・none の e は別の歴史的な事情によるもので、これも例外として覚える。
 
 ■ なぜ e を付けるのか
 英語では v で終わる語を作らない。だから have, give, live, love には音を出さない e が必要になる。
@@ -1051,7 +1051,7 @@ live → lived → living　／　come → coming
           'マジックE のきまりを覚えたばかりの段階では、語末に e があるすべての語にあてはめてしまう。have は最もよく使う語なので、この誤読は目立つ。',
         correctAnswer: '短母音（「ハヴ」と読む）',
         correctExplanation:
-          'have, give, live, love, come, some, done はマジックE の例外で、前の母音は短いままである。これらの e は、英語では語末に v を1字で置かないというきまりのために付いた、音を出さない e である。数が少ないので例外としてまとめて覚える。',
+          'have, give, live, love, come, some, done はマジックE の例外で、前の母音は短いままである。このうち have, give, live, love の e は、英語では語末に v を1字で置かないというきまりのために付いた、音を出さない e である（come, some, done の e は別の歴史的な事情による）。数が少ないので例外としてまとめて覚える。',
       },
     ],
   },

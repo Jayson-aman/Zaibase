@@ -336,7 +336,7 @@ export default function VocabScreen() {
           ))}
         </View>
 
-        {!hasVocabPro && filtered.length > visible.length && (
+        {!subLoading && !hasVocabPro && filtered.length > visible.length && (
           <TouchableOpacity style={s.freeLimitBanner} onPress={() => setShowPaywall(true)} activeOpacity={0.85}>
             <Text style={s.freeLimitText}>
               この絞り込みでは無料で{visible.length}語まで試せます。全{filtered.length}語は英単語Proで解放 ▸
@@ -490,7 +490,7 @@ export default function VocabScreen() {
           </View>
         </View>
 
-        {!hasVocabPro && (
+        {!subLoading && !hasVocabPro && (
           <TouchableOpacity style={s.promoBanner} onPress={() => setShowPaywall(true)}>
             <Text style={s.promoText}>🔊 英単語Pro — 単語4,800+・熟語4,000+・英検5,160問・ネイティブ発音　{VOCAB_MONTHLY_LABEL}〜</Text>
           </TouchableOpacity>
