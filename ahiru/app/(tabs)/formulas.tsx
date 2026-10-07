@@ -388,12 +388,14 @@ export default function FormulasScreen() {
     }
     // Web は決済ページへ移動するので、ここでは「解放しました」と言わない（支払い前に言うと誤解を生む）
     if (result.redirected) return;
-    if (boughtCount + 1 >= FORMULA_BUNDLE_ITEM_CAP && boughtCount < FORMULA_BUNDLE_ITEM_CAP) {
+    // ロック項目が上限より少ない教科は、全部買えばそろう（画面の「N/M項目」のMと同じ数え方）
+    const cap = Math.min(FORMULA_BUNDLE_ITEM_CAP, bundleCount);
+    if (boughtCount + 1 >= cap && boughtCount < cap) {
       noticeDialog('ぜんぶそろいました', 'この教科の公式集は、のこりも全部ずっと無料で見られます。');
       return;
     }
-    noticeDialog('解放しました', `「${label}」はこれ以降ずっと無料で見られます。あと${FORMULA_BUNDLE_ITEM_CAP - boughtCount - 1}項目で、この教科は全部そろいます。`);
-  }, [unlockFormula, boughtCount, priceLabel, isLoggedIn, authLoading, router]);
+    noticeDialog('解放しました', `「${label}」はこれ以降ずっと無料で見られます。あと${cap - boughtCount - 1}項目で、この教科は全部そろいます。`);
+  }, [unlockFormula, boughtCount, bundleCount, priceLabel, isLoggedIn, authLoading, router]);
 
   const handleUnlockBundle = React.useCallback(async (id: string) => {
     if (!(await ensureLoggedInForPurchase(authLoading ? null : isLoggedIn, () => router.push('/login' as any)))) return;

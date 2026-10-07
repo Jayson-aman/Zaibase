@@ -190,7 +190,17 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
               choices.length >= 2 &&
               ownLabels.every((l) => l != null) &&
               new Set(ownLabels).size === choices.length;
-            const stripLabel = (s: string) => (useOwn ? s.replace(OWN, '') : s.replace(/^[A-D]\s+/, ''));
+            // 「A H2O」「B CO2」のように全部の選択肢が別々の A〜D で始まるときだけ、その記号を外す。
+            // 1つずつ外すと、英語の選択肢「A sandwich.」「A recipe book.」の冠詞 A まで消えて
+            // 「sandwich.」と表示されてしまう。
+            const LETTER = /^([A-D])\s+/;
+            const letterLabels = choices.map((c) => c.trim().match(LETTER)?.[1] ?? null);
+            const useLetter =
+              !useOwn &&
+              choices.length >= 2 &&
+              letterLabels.every((l) => l != null) &&
+              new Set(letterLabels).size === choices.length;
+            const stripLabel = (s: string) => (useOwn ? s.replace(OWN, '') : useLetter ? s.replace(LETTER, '') : s);
             const shownLabel = (i: number): string => (useOwn ? (ownLabels[i] as string) : choiceLabels[i]);
             const units = choices.map((c) => extractTrailingUnit(stripLabel(c)));
             const first = units[0] ?? '';

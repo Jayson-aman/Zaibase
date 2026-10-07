@@ -107,6 +107,7 @@ async function postToLine(token, to, payload) {
       to,
       messages: [{ type: "text", text: lines.join("\n").slice(0, 4900) }],
     }),
+    signal: AbortSignal.timeout(8000),
   });
   if (!res.ok) {
     throw new Error(`LINE push returned ${res.status}`);

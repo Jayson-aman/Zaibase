@@ -384,7 +384,7 @@ export default function FeaturesPage() {
               <Text style={styles.planPricePeriod}> / ずっと無料</Text>
             </View>
             <View style={styles.planDivider} />
-            {['✓ 全科目クイズ（全問題）', '✓ 3段階難易度選択', '✓ 全国ランキング閲覧', '✓ 科目別進捗管理'].map((f) => (
+            {['✓ 全科目クイズ（無料分は60問まで体験）', '✓ 3段階難易度選択', '✓ 全国ランキング閲覧', '✓ 科目別進捗管理'].map((f) => (
               <Text key={f} style={styles.planFeature}>{f}</Text>
             ))}
             <TouchableOpacity style={styles.planBtnOutline} onPress={handleStart} activeOpacity={0.8}>
@@ -450,7 +450,7 @@ export default function FeaturesPage() {
           <Text style={styles.finalCtaTitle}>今日から、{'\n'}合格への道を歩む。</Text>
           <Text style={styles.finalCtaDesc}>
             登録不要・クレジットカード不要。{'\n'}
-            まず無料で全問題にチャレンジしてみてください。
+            まず無料で、問題と解説を体験してみてください。
           </Text>
           <TouchableOpacity style={styles.finalCtaBtn} onPress={handleStart} activeOpacity={0.85}>
             <Text style={styles.finalCtaBtnText}>無料で始める  →</Text>

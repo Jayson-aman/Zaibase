@@ -50,6 +50,8 @@ export default function ConversationScreen() {
   const [inputText, setInputText] = useState('');
   const [loading, setLoading] = useState(false);
   const scrollRef = useRef<ScrollView>(null);
+  // 「リセット」を押した時点より前に送った返信が、あとから届いて消した会話を復活させないための世代番号
+  const epochRef = useRef(0);
 
   const canSend = inputText.trim().length > 0 && !loading;
 
@@ -61,6 +63,7 @@ export default function ConversationScreen() {
     setMessages(newMessages);
     setInputText('');
     setLoading(true);
+    const epoch = epochRef.current;
 
     try {
       const res = await chatEnglishConversation({
@@ -69,21 +72,27 @@ export default function ConversationScreen() {
         level,
         scenario,
       });
+      if (epoch !== epochRef.current) return; // 返信待ちのあいだにリセットされた
       setMessages([...newMessages, { role: 'assistant', content: res.reply }]);
       setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 100);
     } catch (err: any) {
+      if (epoch !== epochRef.current) return;
       const msg = err?.message ?? 'エラーが発生しました。もう一度試してください。';
       // 無料枠の上限で止まった場合は、エラーではなく案内として見せる
       const isLimit = err?.code === 'functions/resource-exhausted';
       alertCompat(isLimit ? '本日の練習は終了です' : 'AIからの返信エラー', msg);
       setMessages(messages); // revert
+      // 送れなかった文を入力欄に戻す（消えたままだと、長い英文を書き直すことになる）
+      setInputText((cur) => (cur.length === 0 ? text : cur));
     } finally {
-      setLoading(false);
+      if (epoch === epochRef.current) setLoading(false);
     }
   }, [canSend, inputText, messages, level, scenario]);
 
   const resetConversation = useCallback(() => {
+    epochRef.current += 1;
     setMessages([]);
+    setLoading(false);
   }, []);
 
   return (

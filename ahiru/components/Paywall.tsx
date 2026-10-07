@@ -34,6 +34,7 @@ import { planNotice, tierLabel, formatMonthDay } from '../utils/planStatus';
 import { useSubscription } from '../hooks/useSubscription';
 import { useAuthUser } from '../hooks/useAuthUser';
 import { alertCompat, confirmDialog } from '../utils/dialog';
+import { isPaymentPending } from '../utils/purchasePending';
 
 interface Props {
   visible: boolean;
@@ -112,7 +113,15 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
       onPurchased();
     } catch (err: any) {
       if (!(err?.userCancelled || err?.errorCode === 1)) {
-        alertCompat('購入エラー', 'もう一度お試しください。');
+        if (isPaymentPending(err)) {
+          // ご家族の承認待ち。失敗ではなく、承認されると購入が確定する（買い直させると二重に払う）
+          alertCompat('承認待ちです', 'ご家族の承認待ちです。承認されると、そのままご利用いただけます。承認後にアプリを開き直し、「購入を復元する」を押してください。');
+        } else if (err instanceof Error && err.message.includes('お支払いはされていません')) {
+          // 購入前の確認（アカウントの準備中など）で止めたときの案内を、そのまま見せる
+          alertCompat('購入できませんでした', err.message);
+        } else {
+          alertCompat('購入エラー', 'もう一度お試しください。');
+        }
       }
     } finally {
       setPurchasing(false);
@@ -148,7 +157,9 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
       } else {
         alertCompat(
           '復元できる購入がありません',
-          'このApple IDでのご購入が見つかりませんでした。購入時と同じApple IDでサインインしているかご確認ください。',
+          isWeb
+            ? 'このアカウントでのご購入が見つかりませんでした。購入時と同じアカウントでログインしているかご確認ください。'
+            : 'このApple ID（Android では Google アカウント）でのご購入が見つかりませんでした。購入時と同じアカウントでサインインしているかご確認ください。',
         );
       }
     } catch {

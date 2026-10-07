@@ -1572,6 +1572,10 @@ export default function FigureView({
   const [stepReached, setStepReached] = useState(animated ? 0 : totalSteps);
   const [slide, setSlide] = useState(0);
   const [autoPlay, setAutoPlay] = useState(!manual);
+  // 「最初から」で、すでに1枚目にいるときも描画を最初からやり直すための合図。
+  // これが無いと、progress を 0 に戻しても slide・targetProgress が変わらず
+  // 下のアニメーションが再実行されないので、図が空のまま止まる。
+  const [replayNonce, setReplayNonce] = useState(0);
   // ためし表示のとき、ここより先のスライドには進めない
   const lastSlide = Math.max(
     0,
@@ -1650,7 +1654,7 @@ export default function FigureView({
     return () => {
       if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
     };
-  }, [slideMode, targetProgress, parts.length, manual]);
+  }, [slideMode, targetProgress, parts.length, manual, replayNonce]);
 
   // 自動再生。最後のスライドまで来たら止まる。手で送ったら自動送りはやめる。
   useEffect(() => {
@@ -1671,6 +1675,7 @@ export default function FigureView({
     setProgress(0);
     setSlide(0);
     setAutoPlay(true);
+    setReplayNonce((n) => n + 1);
   }
 
   const play = useCallback(() => {

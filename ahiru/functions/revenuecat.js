@@ -127,7 +127,7 @@ async function fetchNonSubscriptionPurchaseCount(uid, productId) {
   try {
     const res = await fetch(
       `https://api.revenuecat.com/v1/subscribers/${encodeURIComponent(uid)}`,
-      { headers: { Authorization: `Bearer ${key}`, Accept: "application/json" } }
+      { headers: { Authorization: `Bearer ${key}`, Accept: "application/json" }, signal: AbortSignal.timeout(8000) }
     );
     if (res.status === 404) return 0;
     if (!res.ok) {

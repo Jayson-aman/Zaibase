@@ -56,6 +56,10 @@ function isArtLine(line: string): boolean {
 function renderBody(body: string): React.ReactNode[] {
   const lines = body.split('\n');
   const out: React.ReactNode[] = [];
+  // 直前の図の箱が受け持った行の終わり。これより前の行は、あとの図の
+  // ラベル探しで巻き戻してはいけない（巻き戻すと out.pop() が箱ごと消し、
+  // 箱の中の行がまるごと落ちる）。
+  let artEnd = 0;
   for (let i = 0; i < lines.length; i++) {
     if (!isArtLine(lines[i])) {
       out.push(renderLine(lines[i], i));
@@ -77,7 +81,7 @@ function renderBody(body: string): React.ReactNode[] {
     let start = i;
     const isLabel = (l: string) =>
       l.trim() !== '' && l.replace(/[　\s]/g, '').length <= 14 && !/^\s*[■●例★→⚠]/.test(l);
-    while (start > 0 && out.length > 0 && isLabel(lines[start - 1])) {
+    while (start > artEnd && out.length > 0 && isLabel(lines[start - 1])) {
       start--;
       out.pop();
     }
@@ -89,6 +93,7 @@ function renderBody(body: string): React.ReactNode[] {
       </ScrollView>,
     );
     i = end - 1;
+    artEnd = end;
   }
   return out;
 }

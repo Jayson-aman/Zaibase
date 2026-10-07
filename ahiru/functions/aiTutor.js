@@ -192,7 +192,16 @@ exports.askTutor = onCall(
       trialConsumed = true;
     }
 
-    const turnCount = await getOrCreateSession(uid, sessionId, isNewSession);
+    let turnCount;
+    try {
+      turnCount = await getOrCreateSession(uid, sessionId, isNewSession);
+    } catch (e) {
+      // 月の上限・往復上限などで AI を呼ぶ前に弾かれたのに、無料体験（1回限り）だけ消えるのを防ぐ
+      if (trialConsumed) {
+        await userRef.set({ trialAiUsed: false, updatedAt: FieldValue.serverTimestamp() }, { merge: true }).catch(() => {});
+      }
+      throw e;
+    }
 
     // 1往復目はOpus（画像解析・深い分析）、2往復目以降はHaiku（低コスト）
     const model = turnCount === 1 ? "claude-opus-4-8" : "claude-haiku-4-5";
