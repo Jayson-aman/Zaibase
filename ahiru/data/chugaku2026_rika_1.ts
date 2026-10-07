@@ -224,7 +224,7 @@ export const chugaku2026Rika1: Question[] = [
     examType: 'chugaku',
     difficulty: 'standard',
     maxOnly: false,
-    question: 'ばね定数が同じで、20gで2cmのびるばねを2本直列につないだ。40gのおもりをつるすと、全体で何cmのびるか。',
+    question: '同じ種類の、20gで2cmのびるばねを2本直列につないだ。40gのおもりをつるすと、全体で何cmのびるか。',
     answer: '8cm',
     hint: '直列つなぎでは各ばねに同じ力（40g）がかかり、それぞれ4cmずつのびる。',
     explanation:

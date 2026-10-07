@@ -693,7 +693,7 @@ export const toinExamTop: Question[] = [
     explanation:
       '【何を聞かれているか】\n毎朝走る練習を続けたケンタについての英文を読んで、この物語から学べることを選ぶ問題。\n\n【なぜ最初から最後までの変化を追うのか】\n物語文の教訓を問う問題では、登場人物の最初の状態と最後の状態の変化（2kmしか走れなかった→10km走れるようになった）を追うことで、その人物がどんな性格・行動を持っているかが読み取れる。\n\n【ポイント1】最初の状態を確認する\n"At first, he could run only two kilometers without stopping."（最初は2kmしか走れなかった）。\n\n【ポイント2】努力の過程を確認する\n"He practiced almost every day, even on rainy days"（雨の日もほぼ毎日練習した）。\n\n【ポイント3】結果を確認する\n"Six months later, he was able to run ten kilometers."（半年後には10km走れるようになった）。\n\n【答え】\nHe kept practicing patiently and improved his ability little by little.\n\n【確かめ】\n選んだ選択肢が、「最初は少ししかできなかったが、根気強く練習して少しずつ上達した」という本文全体の流れと一致しているか確認する。\n\n【よくあるまちがい】\n"rainy days"という単語だけを見て、「雨のせいで練習をやめた」と誤読してしまうミス。実際は雨の日も練習を続けたと書かれている。\n\n【ここが絶対】\n物語の教訓を問う問題は、登場人物の「最初の状態→努力の過程→最後の状態」の変化全体を追って判断する。',
     pitfall: '「rainy days」という単語だけを見て、雨のせいで練習をやめたと誤読しないように注意しましょう。実際は雨の日も練習を続けたと書かれています。',
-    memoryTip: '長文問題では、否定語(even, but, never など)がある文ほど重要な情報を含むことが多いので注意深く読みましょう。',
+    memoryTip: '長文問題では、強調や逆接を表す語(even, but, never など)がある文ほど重要な情報を含むことが多いので注意深く読みましょう。',
   },
   {
     id: 'toin_top2_eigo_009',

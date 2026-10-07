@@ -10,7 +10,7 @@ import {
   Platform,
 } from 'react-native';
 import { useRouter } from 'expo-router';
-import { formatYen, PRICES } from '../constants/pricing';
+import { formatYen, PRICES, WEB_PRICES } from '../constants/pricing';
 import SubjectIcon, { type IconSubject } from '../components/SubjectIcon';
 
 const { width } = Dimensions.get('window');
@@ -399,7 +399,7 @@ export default function FeaturesPage() {
             </View>
             <Text style={[styles.planName, { color: '#7A3FD0' }]}>PRO プラン</Text>
             <View style={styles.planPriceRow}>
-              <Text style={[styles.planPrice, { color: '#7A3FD0' }]}>{formatYen(PRICES.proMonthly)}</Text>
+              <Text style={[styles.planPrice, { color: '#7A3FD0' }]}>{formatYen(Platform.OS === 'web' ? WEB_PRICES.proMonthly : PRICES.proMonthly)}</Text>
               <Text style={styles.planPricePeriod}> / 月（税込）</Text>
             </View>
             <View style={styles.planDivider} />
@@ -424,7 +424,7 @@ export default function FeaturesPage() {
             </View>
             <Text style={[styles.planName, { color: C.gold }]}>MAX プラン</Text>
             <View style={styles.planPriceRow}>
-              <Text style={[styles.planPrice, { color: C.gold }]}>{formatYen(PRICES.maxMonthly)}</Text>
+              <Text style={[styles.planPrice, { color: C.gold }]}>{formatYen(Platform.OS === 'web' ? WEB_PRICES.maxMonthly : PRICES.maxMonthly)}</Text>
               <Text style={styles.planPricePeriod}> / 月（税込）</Text>
             </View>
             <View style={styles.planDivider} />

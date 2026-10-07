@@ -219,7 +219,7 @@ export const kokoMaxSansu: Question[] = [
   {
     id: 'koko_max_sansu_16',
     subject: 'sansu',
-    question: '点 A(2, -1) から直線 3x - 4y + 5 = 0 までの距離を求めなさい。',
+    question: '【高校先取り】点 A(2, -1) から直線 3x - 4y + 5 = 0 までの距離を求めなさい。',
     answer: '3',
     hint: '点と直線の距離の公式：d = |ax₀ + by₀ + c| / √(a² + b²)',
     explanation:
@@ -228,6 +228,7 @@ export const kokoMaxSansu: Question[] = [
     course: 'koko-general',
     examType: 'koko',
     maxOnly: true,
+    pitfall: '点と直線の距離の公式は高校（数学Ⅱ）で習う内容で、高校入試には出ない。中学では、点から直線に垂線をおろし、三平方の定理や相似で長さを求める。',
   },
   {
     id: 'koko_max_sansu_17',

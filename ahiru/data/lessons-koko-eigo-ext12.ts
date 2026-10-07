@@ -2091,7 +2091,7 @@ because / beautiful / friend / delicious / interesting / vacation / different / 
           '「英語として正しい＝満点」と考えてしまう。採点の第一項目が「条件を満たしているか」であり、語数条件が独立した配点を持っていることを知らない。',
         correctAnswer: '語数条件（30語以上）を満たしていないため内容点2点を失い、最大でも10点になる',
         correctExplanation:
-          '語数条件は内容点の中で2点を占める。22語では30語に届かないので、この2点が入らない。学校によっては語数不足をさらに重く扱い、内容点全体を減点することもある。対策は簡単で、理由に具体例を1文足す（For example, I go to the beach every summer. で9語）か、まとめの文を足す（That is why I like summer. で6語）だけでよい。書き終えたら必ず語数を数える。',
+          '語数条件は内容点の中で2点を占める。22語では30語に届かないので、この2点が入らない。学校によっては語数不足をさらに重く扱い、内容点全体を減点することもある。対策は簡単で、理由に具体例を1文足し（For example, I go to the beach every summer. で9語）、まとめの文も足す（That is why I like summer. で6語）と、22＋9＋6＝37語になって条件を満たせる。書き終えたら必ず語数を数える。',
       },
       {
         question:

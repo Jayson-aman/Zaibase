@@ -664,7 +664,7 @@ export const schoolKokoKoyoFill: Question[] = [
     answer: 'They learned that even a small step, if continued patiently, can create a meaningful change.',
     hint: 'The fourth sentence directly states the lesson the students learned.',
     explanation:
-      '【何を聞かれているか】\n風力タービンのプロジェクトから生徒が学んだ教訓を1つの英文で答える問題。\n\n【なぜ第4文に注目するのか】\n「学んだ教訓」という設問の答えは、本文第4文に直接述べられている。\n\n【ポイント1】該当の一文を確認する\n本文第4文に、生徒が学んだ教訓がまとめられている。\n\n【ポイント2】教訓の内容を整理する\n「たとえ小さな一歩でも、根気強く続ければ意味のある変化を生み出せる」という内容。\n\n【ポイント3】答えの形を確認する\n本文の表現をそのまま使って1文にまとめる。\n\n【答え】\nThey learned that even a small step, if continued patiently, can create a meaningful change.\n\n【確かめ】\n答えに「小さな一歩」「根気強く続ける」「意味のある変化」という3つの要素が含まれているか確認する。\n\n【よくあるまちがい】\n発電量など具体的な数値の話に注目してしまい、教訓（考え方）を答え損ねるミス。\n\n【ここが絶対】\n「学んだ教訓」を問う設問は、本文の最後のまとめの一文に注目する。',
+      '【何を聞かれているか】\n風力タービンのプロジェクトから生徒が学んだ教訓を1つの英文で答える問題。\n\n【なぜ第4文に注目するのか】\n「学んだ教訓」という設問の答えは、本文第4文に直接述べられている。\n\n【ポイント1】該当の一文を確認する\n本文第4文に、生徒が学んだ教訓がまとめられている。\n\n【ポイント2】教訓の内容を整理する\n「たとえ小さな一歩でも、根気強く続ければ意味のある変化を生み出せる」という内容。\n\n【ポイント3】答えの形を確認する\n本文の表現をそのまま使って1文にまとめる。\n\n【答え】\nThey learned that even a small step, if continued patiently, can create a meaningful change.\n\n【確かめ】\n答えに「小さな一歩」「根気強く続ける」「意味のある変化」という3つの要素が含まれているか確認する。\n\n【よくあるまちがい】\n発電量など具体的な数値の話に注目してしまい、教訓（考え方）を答え損ねるミス。\n\n【ここが絶対】\n「学んだ教訓」を問う設問は、本文中でまとめとして述べられている一文（この問題では第4文）に注目する。',
     difficulty: 'advanced',
     course: 'koko-koyo',
     examType: 'koko',

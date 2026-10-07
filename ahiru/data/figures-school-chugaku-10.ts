@@ -242,7 +242,7 @@ export const figuresSchoolChugaku10: Record<string, Figure> = {
   // ═════════ 法政第二 理科⑤ 浮力 ═════════
   tokyo_hosei_rika_010: show([
     {
-      note: '体積100cm³、重さ80gの物体を、水に完全に沈めて静止させています。水1cm³の重さは1gです。❓まず、浮力（ふりょく）とは何でしょう。',
+      note: '体積100cm³、重さ80gの物体を、水に完全に沈め、手で支えて静止させています。水1cm³の重さは1gです。❓まず、浮力（ふりょく）とは何でしょう。',
       add: [...tank(), ln(130, 40, 130, 84, C.gray, false, 1.5), objBox(100, 84), lb(272, 60, '体積 100cm³', 11, C.ink, 'middle', true), lb(272, 82, '重さ 80g', 11, C.ink, 'middle', true), lb(272, 104, '水1cm³＝1g', 10, C.gray), ...band(150, tx(180, '水に完全に沈めている', 13), tx(206, '浮力は何gか？', 14, C.red, true))],
     },
     {
