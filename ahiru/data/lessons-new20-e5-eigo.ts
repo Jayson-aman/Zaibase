@@ -239,7 +239,7 @@ be good at のほかに、be a good 〜er（〜する人）という名詞を使
 because の前にコンマは付けません。I like soccer, because it is fun. とはせず、I like soccer because it is fun. とそのまま続けます。
 
 ■ 文を2つに分けて書くこともできる
-書き言葉では、Because で文を始めて理由だけを独立させる書き方もよく使われます。
+会話では、Because で文を始めて理由だけを答える形もよく使われます。
 ・Why do you like summer?（なぜ夏が好きなのですか）
 ・Because I can swim in the sea.（なぜなら海で泳げるからです）
 このように、質問の答えとして Because 〜. だけで答えるのは自然な会話表現です。作文で理由を1文にまとめるときは I like 〜 because …. の形、対話文で理由だけ答えるときは Because …. の形、と使い分けましょう。
@@ -380,7 +380,7 @@ first（まず）・then（それから）・after that（そのあと）・fina
 ・On weekends, I clean my room and do my homework.（週末は部屋をそうじして宿題をします）
 
 ■ 「週末に」の言い方
-「週末に」は on weekends（複数形、週末というものを一般的に指す）または on the weekend（今度の週末、または「週末には」という一般的な意味の両方で使われる）と言います。曜日と同じように on を使う点に注意しましょう。in weekends や at weekends とは言いません。
+「週末に」は on weekends（複数形、週末というものを一般的に指す）または on the weekend（今度の週末、または「週末には」という一般的な意味の両方で使われる）と言います。曜日と同じように on を使う点に注意しましょう。in weekends とは言いません（イギリス英語では at the weekend と言うこともあります）。
 
 ■ 未来の週末の予定をたずねる
 「今度の週末は何をする予定ですか」とたずねるときは What are you going to do this weekend? のように be going to（〜する予定だ）を使います。答えるときも同じ形にそろえます。
@@ -579,7 +579,7 @@ Dear のあとには必ずコンマ（,）を付けます。ピリオドでは�
 ・She is angry with her brother.（彼女は弟に怒っています）with＋人
 ・I'm afraid of the dark.（私は暗いのがこわいです）of＋名詞
 
-このように、感情の形容詞のあとに続く前置詞（because, about, with, of）は形容詞によって決まっているものが多いため、セットで覚えるのが効率的です。`,
+このように、感情の形容詞のあとに続く前置詞（about, with, of など）は形容詞によって決まっているものが多いため、セットで覚えるのが効率的です。`,
       },
       {
         heading: '-ed形と-ing形のちがい：interested と interesting',
@@ -652,7 +652,7 @@ Dear のあとには必ずコンマ（,）を付けます。ピリオドでは�
 ・That sounds like fun.（楽しそうですね）
 ・I'd love to!（ぜひそうしたいです！）would love to（とても〜したい）
 
-Yes, let's. はLet's ~.の文にだけ使う特別な答え方で、Shall we ~?やWhy don't we ~?にはそのままYes, let's.を使ってもよいですが、Sure.やSounds good.のほうがより自然に幅広く使えます。`,
+Yes, let's. は Let's ~. や Shall we ~? に対する決まった答え方で、Why don't we ~? にも使えます。ただし、Sure. や Sounds good. のほうがより自然に幅広く使えます。`,
       },
       {
         heading: '丁寧に断るときの言い方',
@@ -886,7 +886,7 @@ tooやalsoが出てきたときは、直前に述べられた人物と同じ動�
 ・What to bring:（何を持ってくるか）— 例）What to bring: a lunch box, a water bottle, a towel（お弁当、水筒、タオル）
 ・What to wear:（何を着るか）— 例）What to wear: your gym clothes（体操服）
 
-このように、招待状と同じくWhen・Where・What to bring・What to wearという見出し（heading）ごとに情報が整理されているため、見出しを頼りに必要な箇所だけをすばやく探す「スキャニング」の読み方が特に有効です。`,
+このように、When・Where・What to bring・What to wearという見出し（heading）ごとに情報が整理されているため、見出しを頼りに必要な箇所だけをすばやく探す「スキャニング」の読み方が特に有効です。`,
       },
       {
         heading: '集合・持ち物・注意事項の表現',
@@ -1040,7 +1040,7 @@ tooやalsoが出てきたときは、直前に述べられた人物と同じ動�
       {
         heading: 'なぜ人数・順位・割合の三つの言い方を分けて覚えるのか',
         mangaId: 'new20_e5_eigo_16_manga',
-        body: `アンケートの結果は、**人数**（Ten students like math the best.）、**順位**（Soccer is the most popular.／The second most popular is science.）、**割合**（Half of the students 〜／Most students 〜／A few students 〜）の三つの言い方で発表されます。設問もこの三つの角度（一番多い項目・一番少ない項目・2位の項目・全体の何割か）から作られるので、三つの言い方を分けて覚えておくと、どの表現がどの設問に対応するかがすぐ分かります。
+        body: `アンケートの結果は、**人数**（Ten students like math the best.）、**順位**（Soccer is the most popular.／The second most popular is science.）、**割合**（Half of the students 〜／Most students 〜／A few students 〜）の三つの言い方で発表されます。設問は四つの角度（一番多い項目・一番少ない項目・2位の項目・全体の何割か）から作られるので、三つの言い方を分けて覚えておくと、どの表現がどの設問に対応するかがすぐ分かります。
 
 the most popular と the second most popular を取りちがえやすいのは、どちらも most を含むからです。second が付けば「2番目」です。グラフや表とセットで出るときは、文の数字（人数）と項目（教科名）を一つずつ対応させながら読みます。
 
@@ -1050,7 +1050,7 @@ the most popular と the second most popular を取りちがえやすいのは�
 ③**順位**：the most popular（1位）、the second most popular（2位）、comes in third place（3位）。second を見落としていないか。
 ④**割合**：half of（半分）、most（ほとんど）、a few（少数）、no one（だれも〜ない）。数字と項目名をメモしながら読む。
 
-★ ここがポイント：結果は**人数・順位・割合**の三つの言い方で発表され、設問もその三つから出る。**the most popular（1位）と the second most popular（2位）**を取りちがえない。`,
+★ ここがポイント：結果は**人数・順位・割合**の三つの言い方で発表され、設問もそれに対応して出る。**the most popular（1位）と the second most popular（2位）**を取りちがえない。`,
       },
     ],
   },

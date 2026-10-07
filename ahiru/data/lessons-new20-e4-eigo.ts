@@ -283,7 +283,7 @@ diamond（ダイアモンド）＝ひし形
 ・rectangle の rect は「まっすぐ」を意味する部分。角がまっすぐな四角形、というイメージ。
 
 ⚠ square と rectangle のちがい
-・square：辺の長さがすべて同じ四角形（正方形）
+・square：辺の長さがすべて同じで、角もすべて直角な四角形（正方形）
 ・rectangle：たてとよこの長さがちがう四角形（長方形）
 日本語ではどちらも「四角」とまとめがちだが、英語では区別して使う。`,
       },
@@ -694,7 +694,7 @@ vet（ベット）＝獣医（veterinarianの短い言い方）
 ・動詞＋erで「〜する人」を表す語が多い（teach→teacher、sing→singer、play→player）。
 ・「〜選手」は sport（スポーツ名）+ player の組み合わせで作れる（baseball player, tennis playerなど）。
 
-⚠ police officer・firefighter は2語で1つの職業を表す語。間にスペースを忘れずに書く。`,
+⚠ police officer は2語で1つの職業を表す語。間にスペースを忘れずに書く。firefighter は1語で書く（fire fighter と離さない）。`,
       },
       {
         heading: '2. 職業をたずねる・答える表現',
@@ -897,7 +897,7 @@ spring（春）：March, April, May
 summer（夏）：June, July, August
 fall / autumn（秋）：September, October, November
 winter（冬）：December, January, February
-★ 日本と季節の区切りが少しずれていると感じるかもしれないが、これは英語圏で一般的な区切り方。
+★ 春は3〜5月、夏は6〜8月のように3か月ずつ区切る。日本の気象の区切り方と同じで、英語圏でもよく使われる区切り方。
 
 ⚠ よくある間違い
 ・月の前の前置詞をonにしてしまう→月には in を使う（in April）。曜日はon、月・年はinと覚え分ける。`,
@@ -907,7 +907,7 @@ winter（冬）：December, January, February
         mangaId: 'new20_e4_eigo_11_manga',
         body: `月は約30日という**幅のある期間**なので、「その中に」という in を使います（in April）。曜日や日付は一日という面なので on、時こくは点なので at。この三つは「幅→面→点」で整理します。月の名前も曜日と同じく固有名詞なので、文のとちゅうでも大文字で始めます。February の r が発音で抜けやすいのは、つづりが昔の形のまま残っているからで、Febr- と r があることを覚えておきます。
 
-日付を序数（5th＝fifth）で読むのは、日付が「その月の**5番目の日**」という順番を表すからです。April 5 と書いても、読むときは April fifth と順番で読みます。英語の季節の区切りが日本と少しちがう（春＝3・4・5月）のは、英語圏の一般的な区切り方で、そのまま覚えます。
+日付を序数（5th＝fifth）で読むのは、日付が「その月の**5番目の日**」という順番を表すからです。April 5 と書いても、読むときは April fifth と順番で読みます。季節を3か月ずつに区切る（春＝3・4・5月）のは、日本でも英語圏でも一般的な区切り方なので、そのまま覚えます。
 
 ■ 確かめのしかた
 ①月の前は **in**（in April）。曜日・日付は on、時こくは at。× on April。

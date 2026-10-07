@@ -298,7 +298,7 @@ This bag is bigger than mine.（このかばんは私のより大きい）
     studyPeriod: '中2',
     targetLevel: 'kiso',
     keyPoints: [
-      '音節が三つ以上の長い語は more ~ / the most ~ の形にする。',
+      '音節が三つ以上の長い語（と、-ful・-ous で終わる語）は more ~ / the most ~ の形にする。',
       '頻出：beautiful, difficult, important, interesting, popular, expensive, useful, famous, careful。',
       '-ly で終わる副詞は more / most 型（slowly→more slowly、carefully→more carefully）。ただし early は例外。',
       'more を付ける語に -er を重ねない（× more taller、× more easier）。',
@@ -307,7 +307,7 @@ This bag is bigger than mine.（このかばんは私のより大きい）
     sections: [
       {
         heading: 'more / most を使う語',
-        body: `音節（母音のかたまり）が三つ以上ある長い語は、語尾を変えず前に more（比較級）／the most（最上級）を置く。
+        body: `音節（母音のかたまり）が三つ以上ある長い語は、語尾を変えず前に more（比較級）／the most（最上級）を置く。useful・famous・careful のように -ful・-ous で終わる二音節語も、この型になる（くわしくは次のセッション）。
 
 例）beautiful － more beautiful － the most beautiful（美しい）
 　　difficult － more difficult － the most difficult（難しい）
@@ -1453,7 +1453,7 @@ than（…よりも）と then（そのとき・それから）は別の語で�
 
 ■ 比べるものをそろえる
 例）× My bag is heavier than you. → ○ My bag is heavier than yours.（yours = your bag）
-これは次の次のセッションでくわしく扱う。
+これは s238 でくわしく扱う。
 
 ★ ポイント：比較級の文を書いたら、①語形（-er / more）②than のつづり③比べる相手の形、の三点を必ず見直す。この三点を確認するだけで、英作文の失点は大きく減る。
 
@@ -2091,7 +2091,7 @@ of は students（複数）に、in は class（場所・集団）に対応し�
       '副詞の最上級では the を省略できる：Ken runs (the) fastest.',
       '同じ人・同じ物の性質を比べるときは the をつけない：This lake is deepest here.',
       'a と the は同時に使えないのと同じで、限定する語は一つだけ。',
-      'the most は「いちばん多くの」以外に「非常に」の意味になることもある（most people など）。',
+      'the がつかない most は「たいていの」（most people）、a most は「非常に」（a most interesting story）の意味になる。',
     ],
     sections: [
       {
@@ -2921,7 +2921,7 @@ Tennis is the least popular of the three.（いちばん人気がない）
 ■ 数量で表す
 Eighteen students like soccer the best.（18人がサッカーをいちばん好きだ）
 Soccer has three times as many fans as tennis.（18 ÷ 6 ＝ 3 なので three times）
-Twice as many students like soccer as tennis.（同じ内容を students を主語にして表す）
+Three times as many students like soccer as tennis.（同じ内容を students を主語にして表す）
 Six more students like soccer than baseball.（18 − 12 ＝ 6 なので six more）
 
 ■ one of ~ を使う
@@ -3297,7 +3297,7 @@ no less than が「〜も（多い）」になるのは、no が「少なくな�
       {
         heading: 'the + 比較級 + of the two',
         mangaId: 'koko_eigo_s254_manga',
-        body: `比較級に the が付くのは、〈the ＋ 比較級, the ＋ 比較級〉の形と、この of the two の形だけである。
+        body: `比較級に the が付く代表的な形は、〈the ＋ 比較級, the ＋ 比較級〉と、この of the two の形である（ほかに the former / the latter もある。あとで扱う）。
 
 ■ 形
 the ＋ 比較級 ＋ of the two（二つのうちで〜なほう）

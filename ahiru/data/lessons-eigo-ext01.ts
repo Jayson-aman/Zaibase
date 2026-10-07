@@ -36,7 +36,7 @@ export const eigoExt01Lessons: Lesson[] = [
 ①大きさがちがうだけで形は同じ字
 　C-c　O-o　S-s　U-u　V-v　W-w　X-x　Z-z　P-p　K-k　J-j
 ②形そのものが変わる字
-　A-a　B-b　D-d　E-e　G-g　H-h　I-i　L-l　M-m　N-n　Q-q　R-r　T-t　Y-y
+　A-a　B-b　D-d　E-e　F-f　G-g　H-h　I-i　L-l　M-m　N-n　Q-q　R-r　T-t　Y-y
 
 ②のグループがまちがえやすい。とくに R-r、Q-q、G-g は、大文字だけ書けて小文字が書けない子が多い。
 
@@ -1237,7 +1237,7 @@ Sit down.（アウ）／It is snowing.（オウ）
       'all・alk・alt の a も「オー」になる（ball, call, small, walk, talk, salt）。',
       'oo は長い「ウー」（school, food, moon）と短い「ウ」（book, look, good）の2種類。',
       '-ook で終わる語（book, look, cook, took）はほぼ短い「ウ」。',
-      'walk・talk の l は読まない。この2語は「オーク」と読む。',
+      'walk・talk の l は読まない。この2語は「ウォーク」「トーク」と読む。',
     ],
     sections: [
       {
@@ -1494,7 +1494,7 @@ Birds can fly.（飛ぶ）→ fly
     keyPoints: [
       's＋子音の形：sc/sk（school）、sm（small）、sn（snow）、sp（sport）、st（stop）、sw（swim）、sl（sleep）。',
       's＋子音＋子音の形：str（street）、spr（spring）、scr（scream）、spl（splash）、squ（square）。',
-      's のあとの p・t・k は、息を強く出さずに濁ったように聞こえる（sports は「スポーツ」ではなく「スポーツ」に近い）。',
+      's のあとの p・t・k は、息を強く出さずに濁ったように聞こえる（sports は「スポーツ」ではなく「スボーツ」に近い）。',
       '語末の子音連結も多い：-st（best）、-nd（and）、-nt（want）、-mp（jump）、-nk（think）、-sk（ask）。',
       '日本語のカタカナ語は必ず母音を入れてしまうので、カタカナで確認しない。',
     ],
@@ -1621,6 +1621,7 @@ lunch は l－u－n－ch の4音（文字は5つ）。
 　watch, catch, match, kitchen, witch
 直前が長母音や子音なら ch のままでよい。
 　teach（ea の長母音）, beach, each／lunch（n という子音のあと）, March, bench
+ただし much, such, rich, which は短母音のあとでも ch のままの例外である。
 
 ■ 同じきまりが ck にもある
 語末で「ク」の音になるとき、直前が短母音1字なら ck と書く。
@@ -2093,7 +2094,7 @@ hour（1時間）, honest（正直な）, honor（名誉）
           'Wednesday は「ウェンズデイ」と読み、d と e の音が聞こえない。音のとおりに書くと、読まない d と e が抜け落ちてしまう。曜日の中でいちばんまちがえやすい語である。',
         correctAnswer: 'Wednesday',
         correctExplanation:
-          'W－e－d－n－e－s－d－a－y と9文字ある。書くときは「ウェド・ネス・デイ」と区切って唱えると覚えやすい。同じく読まない文字を含む曜日・月の語に Tuesday（チューズデイ）、February（フェブラリー、最初の r を読まないことがある）がある。曜日は大文字で書き始めることも忘れない。',
+          'W－e－d－n－e－s－d－a－y と9文字ある。書くときは「ウェド・ネス・デイ」と区切って唱えると覚えやすい。同じくつづりと音がずれやすい語に Tuesday（チューズデイ）、February（フェブラリー、最初の r を読まないことがある）がある。曜日は大文字で書き始めることも忘れない。',
       },
     ],
   },
@@ -2399,7 +2400,7 @@ com・mu・ni・ca・tion（伝達・5音節）
 
 ■ 語尾で決まるきまり
 ①-tion, -sion で終わる語 … 直前の音節を強く読む
-　in-for-MA-tion, com-mu-ni-CA-tion, ques-TION, sta-TION
+　in-for-MA-tion, com-mu-ni-CA-tion, QUES-tion, STA-tion
 ②-ity, -ical, -ic で終わる語 … 直前の音節
 　e-LEC-tric, fan-TAS-tic
 ③-ese, -eer, -ee で終わる語 … その語尾自体を強く読む
@@ -3329,7 +3330,7 @@ world（世界）… or を「アー」と読む
     targetLevel: 'oyo',
     keyPoints: [
       '同じ文字が2つ続く語は、音を聞いても1つにしか聞こえないため落としやすい。',
-      'r を重ねる語：tomorrow、sorry、carry、hurry、library（library は r は重ねない）。',
+      'r を重ねる語：tomorrow、sorry、carry、hurry。',
       'n を重ねる語：dinner、beginning、tennis、running。',
       'その他：summer（m）、happy（p）、letter（t）、soccer（c）、hobby（b）、address（d と s）。',
       '短母音＋子音1つで終わる語に ing・ed を付けるときは子音を重ねる（run→running）。',

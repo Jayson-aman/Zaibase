@@ -771,11 +771,11 @@ she＝Mika（Ken は男性なので he になるはず）、it＝a letter。
 
 ・② His＝Ken、him＝Ken
 ・③ one＝bike（「同じ種類の別のもの」なので a red bike）、it＝the red bike
-・④ he＝Ken（直前の文の主語ではなく、話の中心人物）
+・④ he＝Ken（直前の③の主語で、話の中心人物でもある）
 ・⑤ it＝the red bike
 
-■ 例外に注意する場面
-主語がとちゅうで入れかわる文章では、直前の名詞ではなく「話の中心人物」を指すことがある。④の he がその例で、直前の③の主語 Ken と一致している。文章全体でだれの話をしているかを頭に入れておくと迷わない。
+■ 候補が二人いる場面
+同じ性別の人が二人出てくる文章では、近さだけでは決められないことがある。②には his father も出てくるが、④の he は、直前の③の主語であり話の中心人物でもある Ken を指す。文章全体でだれの話をしているかを頭に入れておくと迷わない。
 
 ★ ポイント：候補が2人いる（Ken と his father の両方が男性）ときは、入れかえて意味を確かめるしかない。④で「父は十分なお金を持っていなかった」とすると、⑤で父が買ってあげることと矛盾する。だから he＝Ken。
 
@@ -1128,7 +1128,7 @@ Studying with a smartphone looks easy. You can look up any word in a second. How
 ■ such as と for example の使い分け
 ○ I like fruits such as apples and oranges.（名詞に直接つなぐ）
 ○ I like fruits. For example, I often eat apples.（文の先頭）
-× I like fruits, for example apples and oranges.（このつなぎ方はしない）
+× I like fruits for example apples and oranges.（for example を名詞の後ろにそのままつなぐ形はしない。コンマで区切った挿入の形は文法上まちがいではないが、「〜のような」と言うときは such as が安全）
 
 ★ ポイント：段落の要旨を答える問題では、具体例を書いてはいけない。「たとえば〜」を消して残った文が答えになる。
 
@@ -1166,7 +1166,7 @@ Small changes in our daily life can save a lot of energy. For example, if you tu
       },
       {
         question: '「私はりんごやみかんのような果物が好きです」を英語にしなさい。',
-        wrongAnswer: 'I like fruits, for example apples and oranges.',
+        wrongAnswer: 'I like fruits for example apples and oranges.',
         trapExplanation:
           '「〜のような」を「たとえば」と読みかえて for example を使ってしまう。for example は文の先頭に置いて文全体を導く語なので、名詞の後ろに直接つなぐことはできない。',
         correctAnswer: 'I like fruits such as apples and oranges.',
@@ -3297,7 +3297,7 @@ Lucy: Really? That would be a great help. Thank you, Ken.
 ②後ろの返事は Yes, I do. → 空所は Do you 〜? の疑問文。選択肢で Do you で始まるのは ア。しかも後ろで「明日理科のテストがある」と続くので自然。
 ③後ろの返事は That would be a great help.（それはとても助かる）→ 空所は申し出の文。ウ Shall I help you study for the test? が入る。
 
-エは Yes/No で答える質問への返事なので、この位置には入らない。オは「昨夜どこへ行ったか」で、話の内容と合わない。
+エは How are you? のように調子をたずねられたときの返事なので、この位置には入らない（①は Ken の発言で、Ken は相手の様子をたずねる側）。オは「昨夜どこへ行ったか」で、話の内容と合わない。
 
 ★ ポイント：Yes, I do. の do が決め手。Are you 〜? なら Yes, I am. になるので、do と am のどちらかを見れば疑問文の形が決まる。
 

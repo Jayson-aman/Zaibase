@@ -1311,7 +1311,7 @@ never を使う文は形の上では肯定文なので、三人称単数現在�
     subject: 'eigo',
     examType: 'chugaku',
     title: '頻度の副詞②：文のどこに置くか',
-    description: 'be動詞のあと・一般動詞の前・助動詞のあという頻度の副詞の位置の規則を身につける',
+    description: 'be動詞のあと・一般動詞の前・助動詞のあと、という頻度の副詞の位置の規則を身につける',
     intro: 'always を文のどこに置くか。I always am busy. ではなく I am always busy. が正しい形です。be動詞なら後ろ、一般動詞なら前。この一点だけで正誤が分かれる問題が、入試ではくり返し出ます。理由まで含めて理解しておきましょう。',
     order: 739,
     studyPeriod: '小5後半',
@@ -1734,7 +1734,7 @@ more 型：famous, useful, careful, helpful, active, tired, boring, common
       '〈子音字＋y〉は y を i に変えて -er / -est（easy → easier → easiest）。',
       '〈短母音＋子音字〉で終わる1音節語は子音字を重ねる（big → bigger → biggest）。',
       'hot → hotter、sad → sadder、thin → thinner、fat → fatter も同じ型。',
-      'new・slow は母音字が二つ並ぶので重ねない（newer、slower）。',
+      'new・slow は w で終わる（w は重ねない）ので newer、slower。clean・cheap のように母音字が二つ並ぶ語も重ねない。',
     ],
     sections: [
       {
@@ -1776,9 +1776,9 @@ red → redder → reddest
         heading: '重ねない語との区別',
         body: `子音字を重ねるのは〈短母音＋子音字1つ〉の1音節語だけである。次のような語は重ねない。
 
-■ 母音字が二つ並ぶ語
-new → newer → newest（e と w の前に母音字が2つ）
-slow → slower → slowest
+■ w で終わる語・母音字が二つ並ぶ語
+new → newer → newest（w は重ねない）
+slow → slower → slowest（w は重ねない）
 clean → cleaner → cleanest
 cheap → cheaper → cheapest
 great → greater → greatest
@@ -1815,7 +1815,7 @@ sad → sadder（重ねる）／cheap → cheaper（重ねない）
         trapExplanation: '「比較級は -er を付けるだけ」と覚えているため、つづりの変化を確かめずにそのまま -er を付けてしまう。',
         correctAnswer: 'bigger',
         correctExplanation:
-          '〈短母音＋子音字1つ〉で終わる1音節の語は、最後の子音字を重ねてから -er を付ける。hot → hotter、sad → sadder、thin → thinner、fat → fatter も同じ規則である。一方 new や cheap は母音字が二つ並ぶので重ねない。',
+          '〈短母音＋子音字1つ〉で終わる1音節の語は、最後の子音字を重ねてから -er を付ける。hot → hotter、sad → sadder、thin → thinner、fat → fatter も同じ規則である。一方 new は w で終わるので重ねず、cheap は母音字が二つ並ぶので重ねない。',
       },
       {
         question: '「この絵はあの絵よりすてきだ。」を英語にしなさい。',

@@ -145,7 +145,7 @@ who lives in Canada がひとかたまりで a friend を説明している。�
 
 ★ ポイント：関係詞節の中に主語がない（who がその代わり）のが主格の特徴。したがって who のあとの動詞は節の中、その先で主語なしに現れる動詞が文全体の動詞になる。
 
-⚠ 注意：関係詞節が長くなると主語と述語が大きく離れる。The students who came to Japan last summer are studying Japanese now. では主語 The students と述語 are が7語も離れている。`,
+⚠ 注意：関係詞節が長くなると主語と述語が大きく離れる。The students who came to Japan last summer are studying Japanese now. では主語 The students と述語 are の間に6語（who came to Japan last summer）もはさまっている。`,
       },
       {
         heading: '後ろから前へ戻して訳す',
@@ -991,7 +991,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
 　× I visited Nara, is famous for its old temples.
 　目的格でも省略できない。× I met Mr. Tanaka, we like very much.（○ whom we like very much）
 
-★ ポイント：that が使えない場面は「前置詞の直後」「コンマの直後」の二つだけ、と数を決めて覚える。
+★ ポイント：who・which の代わりに that を置けない場面は「前置詞の直後」「コンマの直後」の二つだけ、と数を決めて覚える。（that は whose の代わりにもならないが、これは that が所有格ではないためで、別に押さえておく。）
 
 ⚠ 注意：固有名詞（Nara, Mr. Tanaka など）が先行詞のときは、ふつう継続用法（コンマ付き）になる。固有名詞はすでに一つに決まっていて、絞りこむ必要がないからである。`,
       },
@@ -3225,7 +3225,7 @@ that 節の中が平叙文の語順なのは、that 節が「たずねる」文�
 　→ Do you know where your father works?
 
 　When did the movie start?
-　①did を消す ②where 〜 ではなく when the movie start ③過去形に戻す → started
+　①did を消す ②〈疑問詞＋主語＋動詞〉の順に並べる → when the movie start ③過去形に戻す → started
 　→ I don't remember when the movie started.
 
 ■ 疑問詞が二語以上のとき
@@ -3712,7 +3712,7 @@ that 節の中が平叙文の語順なのは、that 節が「たずねる」文�
 　Either I or you are wrong.
 　どちらも正しいが、動詞の形が変わる。
 
-★ ポイント：「近いほうに合わせる」と唱えて覚える。英語では動詞のすぐ前にある語との音のつながりを優先する。
+★ ポイント：「近いほうに合わせる」と唱えて覚える。これを近接の原則（動詞にいちばん近い語に合わせる）という。
 
 ⚠ 注意：either A or B は「どちらか一方」なので二つのうちの一つ。three 以上には使わない。`,
       },

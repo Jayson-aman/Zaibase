@@ -946,7 +946,7 @@ Does に三単現の s、Did に過去の意味がすでに含まれているの
 
 ■ Who is 〜? の形
 　Who is that tall boy? — He is my cousin.
-この場合の who は主語で、is that tall boy ではなく who is が骨組みになっている。
+この文では who は補語（C）で、主語は that tall boy である。「疑問詞が主語」の形ではなく、be動詞の疑問文の語順（be動詞を主語の前に出す）で疑問詞を文頭に置いた形になっている。
 
 ⚠ 注意：答えるときに be動詞と一般動詞を取りちがえないこと。Who cooks dinner? に対して × My mother is. は誤りで、○ My mother does. が正しい。聞かれた文の動詞の種類に合わせて受ける。`,
       },

@@ -639,7 +639,7 @@ After the study, the club wrote a report for the school newspaper. In the report
 For one year, / the students / in the science club / at our school / measured / the temperature / of the schoolyard.
 外す部分：For one year（副詞句）／in the science club（students の説明）／at our school（club の説明）／of the schoolyard（temperature の説明）
 残る骨：The students measured the temperature.（生徒たちが気温をはかった）
-20語の文が5語になる。長文ではこのレベルの理解で十分先へ進める。
+18語の文が5語になる。長文ではこのレベルの理解で十分先へ進める。
 
 ■ 第2文
 They took the temperature / at noon / on the fifteenth day / of every month.
@@ -1031,7 +1031,7 @@ this experience は「この経験」で、this が experience という名詞�
 
 ★ ポイント：this / that の後ろに名詞が続くか（this idea）、単独で主語になっているか（This was 〜）をまず見る。単独なら内容を指している可能性が高い。
 
-⚠ 注意：it が内容を指すこともある。We just saw the number and thought about it. の it は the number（数字）だが、直後の it worked の it は「その考え」を指す。同じ it でも指す先が違うので、1文ごとに確認する。`,
+⚠ 注意：it が内容を指すこともある。We just saw the number and thought about it. の it は the number（数字）だが、前に出てきた it worked の it は「その考え」を指す。同じ it でも指す先が違うので、1文ごとに確認する。`,
       },
       {
         heading: '記述で「〜こと」とまとめる練習',
@@ -1818,8 +1818,8 @@ Farmers can help too. Some of them now leave a small part of their fields withou
       },
       {
         heading: '要旨をまとめる練習',
-        body: `■ 30字程度でまとめる
-ミツバチは食料生産に欠かせないが数が減っており、市民も農家もできることがある。（38字）
+        body: `■ 40字程度でまとめる
+ミツバチは食料生産に欠かせないが数が減っており、市民も農家もできることがある。（39字）
 
 ■ まとめるときのルール
 ①主題文だけを使う。具体例（りんご・いちご）は入れない。
@@ -2506,7 +2506,7 @@ He almost smiled.（ほとんど笑いかけた）→ 折れた瞬間。
 
 ★ ポイント：会話文では、せりふの長さと語調が感情を表す。短く切り返すほど感情が強い。
 
-⚠ 注意：sara と takumi の関係は her brother（サラの兄または弟）と書かれている。英語の brother だけでは年上か年下かわからない。「兄」と決めつけて解答すると、記述問題で減点されることがある。`,
+⚠ 注意：Sara と Takumi の関係は her brother（サラの兄または弟）と書かれている。英語の brother だけでは年上か年下かわからない。「兄」と決めつけて解答すると、記述問題で減点されることがある。`,
       },
       {
         heading: '会話に隠れた事情を読み取る',
@@ -3285,7 +3285,7 @@ Australia was chosen by 70 students, the United States by 60, Italy by 45 〜
     sections: [
       {
         heading: '英文とグラフを読んでみよう',
-        body: `The population of Minami Town has changed a lot in fifty years. In 1975 it was 12,000. In 1985 it rose to 14,000, the highest number in the town's history. After that it began to fall: 11,000 in 1995, 8,000 in 2005, and 6,000 in 2015.
+        body: `The population of Minami Town has changed a lot in forty years. In 1975 it was 12,000. In 1985 it rose to 14,000, the highest number in the town's history. After that it began to fall: 11,000 in 1995, 8,000 in 2005, and 6,000 in 2015.
 
 The reason for the rise in the 1980s was a factory. It opened in 1978 and gave jobs to about 900 people. When the factory closed in 1990, many families moved to the city.
 
@@ -3914,7 +3914,7 @@ Three families from the city have moved to the village since 2020. Two of them j
 ⚠ 注意：not the rice, but the people は not A but B（AではなくB）の形。「本当の成果は米ではなく人だ」。この一文が題名の手がかりになっている。`,
       },
       {
-        heading: '要旨を50字程度でまとめる',
+        heading: '要旨を80字程度でまとめる',
         body: `■ 手順
 ①各段落の主題文を1行ずつ書く。
 ②数値・固有名詞を削る。

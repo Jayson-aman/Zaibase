@@ -39,14 +39,14 @@ export const lessonFigsEigoExt11: Record<string, Figure> = {
       { x: 0, y: 10 },
     ],
     sideLabels: [
-      '④ every Sunday（修飾語）',
-      '③ is my sister（V＋C ＝骨組みの後半）',
+      '③ every Sunday（修飾語）',
+      '④ is my sister（V＋C ＝骨組みの後半）',
       '① The girl（主語の中心）',
       '② who plays the piano（①を説明する部分）',
     ],
     fill: false,
     caption:
-      '長い主語をもつ文 The girl who plays the piano every Sunday is my sister. を4つのかたまりに切った図。②はあくまで①の説明なので、いったん外して「① The girl ＋ ③ is my sister」と読むと骨組みが見える',
+      '長い主語をもつ文 The girl who plays the piano every Sunday is my sister. を4つのかたまりに切った図。②③はあくまで①の説明・修飾なので、いったん外して「① The girl ＋ ④ is my sister」と読むと骨組みが見える',
   },
 
   // s392：名詞は前からも後ろからも修飾される。その位置関係
@@ -68,9 +68,9 @@ export const lessonFigsEigoExt11: Record<string, Figure> = {
     caption:
       '名詞のまわりの修飾語の位置。1語の修飾語は名詞の前（a tall boy）、2語以上のかたまりは名詞の後ろ（a boy standing by the door）に置く。日本語はすべて前から修飾するので、後ろのかたまりは訳すときに前へ回す',
     steps: [
-      "頂点を順に A・B・C・D と結んだ四角形。まず形と頂点の名前をおさえる。",
-      "辺に書かれている長さは ③ 後ろから修飾：2語以上のかたまり（standing by the door／written in English／to drink）、① 前から修飾：1語（a／the／tall／new）、② 中心の名詞（boy／book／something）。どの辺のことかを図で確かめる。",
-      "四角形の内角の和は360°。角度を求めるときの手がかりになる。",
+      "四角形の4辺に、名詞のまわりの修飾語の位置を書いた図。まず中心の名詞をおさえる。",
+      "辺に書かれているのは ③ 後ろから修飾：2語以上のかたまり（standing by the door／written in English／to drink）、① 前から修飾：1語（a／the／tall／new）、② 中心の名詞（boy／book／something）。どの辺のことかを図で確かめる。",
+      "修飾語が1語なら名詞の前、2語以上のかたまりなら名詞の後ろに置く。",
       "名詞のまわりの修飾語の位置。1語の修飾語は名詞の前（a tall boy）、2語以上のかたまりは名詞の後ろ（a boy standing by the door）に置く。日本語はすべて前から修飾するので、後ろのかたまりは訳すときに前へ回す",
     ],
     buildSteps: 3,
@@ -87,7 +87,7 @@ export const lessonFigsEigoExt11: Record<string, Figure> = {
       { x: 2, label: '②his father' },
       { x: 3, label: '③ it ←' },
       { x: 4, label: '④ he' },
-      { x: 5, label: '⑤ them' },
+      { x: 5, label: '⑤ it' },
     ],
     caption:
       '文の番号を横軸にとって、代名詞と、それが指す名詞の位置を示した図。代名詞は「自分より前」にある名詞しか指さない。しかもふつうは直前の文の中にある。ただし数（単数・複数）と種類（人か物か）が合う名詞まで戻ること',

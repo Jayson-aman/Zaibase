@@ -6,7 +6,7 @@ import type { Figure } from './figures';
 // 【統計の扱い】グラフに使う数値は、中学入試の教科書・資料集で標準的に示される「およその値」のみ。
 // 出典が確認できない数値は使わない。年表（numberLine）は data/timeline.ts と突き合わせて作成。
 // 日本地図のマーカー座標は data/japanPrefectures.ts と同じ viewBox 0 0 300 420 の投影
-// （x = 11.82×東経 − 1436.8、y = 774.1 − 16.2×北緯）で計算している。
+// （本土：x = 14.84×東経 − 1887.0、y = 903.4 − 19.07×北緯。群馬県・福岡県の外形から逆算。沖縄は左下のインセットの県中心）で計算している。
 export const lessonFigsShakaiExt09: Record<string, Figure> = {
   // s296: 幕末の流れ（1853ペリー来航〜1868明治維新）
   sh9_296: {
@@ -33,9 +33,9 @@ export const lessonFigsShakaiExt09: Record<string, Figure> = {
   sh9_297: {
     kind: 'japanMap',
     markers: [
-      { x: 227, y: 97, label: '箱館(函館)' },
-      { x: 206, y: 212, label: '下田' },
-      { x: 215, y: 203, label: '浦賀(ペリー来航)' },
+      { x: 201, y: 107, label: '箱館(函館)' },
+      { x: 175, y: 242, label: '下田' },
+      { x: 186, y: 231, label: '浦賀(ペリー来航)' },
     ],
     caption: '日米和親条約（1854年）で開かれたのは下田（静岡県）と箱館（北海道）の2港。ペリーが来航した浦賀も合わせて確認しよう。',
   },
@@ -44,11 +44,11 @@ export const lessonFigsShakaiExt09: Record<string, Figure> = {
   sh9_298: {
     kind: 'japanMap',
     markers: [
-      { x: 227, y: 97, label: '函館' },
-      { x: 207, y: 160, label: '新潟' },
-      { x: 214, y: 200, label: '神奈川(横浜)' },
-      { x: 161, y: 212, label: '兵庫(神戸)' },
-      { x: 98, y: 243, label: '長崎' },
+      { x: 201, y: 107, label: '函館' },
+      { x: 176, y: 180, label: '新潟' },
+      { x: 185, y: 228, label: '神奈川(横浜)' },
+      { x: 119, y: 242, label: '兵庫(神戸)' },
+      { x: 40, y: 279, label: '長崎' },
     ],
     caption: '日米修好通商条約（1858年）で貿易のために開かれた5港。「函館・新潟・神奈川(横浜)・兵庫(神戸)・長崎」。下田は逆に閉じられた。',
   },
@@ -119,10 +119,10 @@ export const lessonFigsShakaiExt09: Record<string, Figure> = {
   sh9_302: {
     kind: 'japanMap',
     markers: [
-      { x: 168, y: 207, label: '鳥羽・伏見(京都)' },
-      { x: 214, y: 196, label: '江戸(無血開城)' },
-      { x: 217, y: 167, label: '会津若松' },
-      { x: 227, y: 97, label: '函館(五稜郭)' },
+      { x: 127, y: 237, label: '鳥羽・伏見(京都)' },
+      { x: 186, y: 223, label: '江戸(無血開城)' },
+      { x: 190, y: 188, label: '会津若松' },
+      { x: 201, y: 107, label: '函館(五稜郭)' },
     ],
     caption: '戊辰戦争は1868年1月の鳥羽・伏見の戦いで始まり、京都→江戸→会津→函館と北へ移り、1869年5月の五稜郭の戦いで終わった。',
   },
@@ -131,8 +131,8 @@ export const lessonFigsShakaiExt09: Record<string, Figure> = {
   sh9_306: {
     kind: 'japanMap',
     markers: [
-      { x: 214, y: 196, label: '新橋(東京)' },
-      { x: 214, y: 200, label: '横浜' },
+      { x: 186, y: 223, label: '新橋(東京)' },
+      { x: 185, y: 228, label: '横浜' },
     ],
     caption: '1872年、新橋（東京）〜横浜間に日本初の鉄道が開通した。約29kmの短い区間だが、文明開化の象徴となった。',
   },
@@ -186,8 +186,8 @@ export const lessonFigsShakaiExt09: Record<string, Figure> = {
   sh9_309: {
     kind: 'japanMap',
     markers: [
-      { x: 205, y: 187, label: '富岡製糸場(1872・群馬)' },
-      { x: 109, y: 226, label: '八幡製鉄所(1901・福岡)' },
+      { x: 174, y: 212, label: '富岡製糸場(1872・群馬)' },
+      { x: 54, y: 257, label: '八幡製鉄所(1901・福岡)' },
     ],
     caption: '殖産興業の代表が官営模範工場。富岡製糸場（1872年・フランスの技術）と、日清戦争の賠償金でつくられた八幡製鉄所（1901年操業開始）。',
   },
@@ -707,10 +707,10 @@ export const lessonFigsShakaiExt09: Record<string, Figure> = {
   sh9_338: {
     kind: 'japanMap',
     markers: [
-      { x: 214, y: 196, label: '東京大空襲(3月10日)' },
-      { x: 129, y: 217, label: '広島(8月6日)' },
-      { x: 98, y: 243, label: '長崎(8月9日)' },
-      { x: 72, y: 350, label: '沖縄戦(3〜6月)' },
+      { x: 186, y: 223, label: '東京大空襲(3月10日)' },
+      { x: 78, y: 248, label: '広島(8月6日)' },
+      { x: 40, y: 279, label: '長崎(8月9日)' },
+      { x: 43, y: 379, label: '沖縄戦(3〜6月)' },
     ],
     caption: '1945年、日本国内が戦場・空襲の場となった。地上戦が行われたのは沖縄。原子爆弾は8月6日に広島、8月9日に長崎に投下された。',
   },

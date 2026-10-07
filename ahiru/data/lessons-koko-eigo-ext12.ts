@@ -1547,7 +1547,7 @@ The book /（その本は）that I bought /（私が買った）at the store /�
 ・数字 → ○で囲む
 ・逆接の however / but → 三角
 ・段落の第1文 → 下線
-印は3種類までにする。多いと付けること自体に時間がかかる。
+印は4種類までにする。多いと付けること自体に時間がかかる。
 
 ⚠ 注意：先読みしたことを忘れてしまうなら、先読みの量が多すぎる。設問4問ぶんを1分で覚えられないなら、2問ずつに分ける。自分の記憶量に合わせて調整すること。`,
       },
@@ -1965,7 +1965,7 @@ I like summer better than winter. I have two reasons. First, I can swim in the s
 
 ■ 1文を10語以内にする
 長い1文を書くより、短い2文に分けるほうが安全である。
-× I think summer is better than winter because I can swim in the sea and I have a long vacation so I can read many books.（1文で27語・ミスが起きやすい）
+× I think summer is better than winter because I can swim in the sea and I have a long vacation so I can read many books.（1文で26語・ミスが起きやすい）
 ○ I like summer better than winter. First, I can swim in the sea.（2文に分割）
 
 ⚠ 注意：Because で文を始めない。× Because I can swim in the sea. は主語と動詞のある節だけで文になっておらず、減点対象になる。理由を独立した文で書くときは First, I can swim in the sea. のようにする。`,
@@ -1985,7 +1985,7 @@ I like summer better than winter. I have two reasons. First, I can swim in the s
       },
       {
         question:
-          '英作文で「I think summer is better than winter because I can swim in the sea and I have a long vacation so I can read many books.」と1文で27語書いた。この書き方の問題点は何か。',
+          '英作文で「I think summer is better than winter because I can swim in the sea and I have a long vacation so I can read many books.」と1文で26語書いた。この書き方の問題点は何か。',
         wrongAnswer: '問題点はない。長い文が書けるのは英語力が高い証拠で、加点される',
         trapExplanation:
           '「長く複雑な文＝高評価」という思い込み。高校入試の採点基準に「文の長さ」の項目はなく、むしろ長い文ほど文法ミスの数が増えて減点が重なることを見ていない。',
@@ -2091,7 +2091,7 @@ because / beautiful / friend / delicious / interesting / vacation / different / 
           '「英語として正しい＝満点」と考えてしまう。採点の第一項目が「条件を満たしているか」であり、語数条件が独立した配点を持っていることを知らない。',
         correctAnswer: '語数条件（30語以上）を満たしていないため内容点2点を失い、最大でも10点になる',
         correctExplanation:
-          '語数条件は内容点の中で2点を占める。22語では30語に届かないので、この2点が入らない。学校によっては語数不足をさらに重く扱い、内容点全体を減点することもある。対策は簡単で、理由に具体例を1文足す（For example, I go to the beach every summer. で8語）か、まとめの文を足す（That is why I like summer. で6語）だけでよい。書き終えたら必ず語数を数える。',
+          '語数条件は内容点の中で2点を占める。22語では30語に届かないので、この2点が入らない。学校によっては語数不足をさらに重く扱い、内容点全体を減点することもある。対策は簡単で、理由に具体例を1文足す（For example, I go to the beach every summer. で9語）か、まとめの文を足す（That is why I like summer. で6語）だけでよい。書き終えたら必ず語数を数える。',
       },
       {
         question:
@@ -2099,7 +2099,7 @@ because / beautiful / friend / delicious / interesting / vacation / different / 
         wrongAnswer: '文法の誤りのほうが減点が大きいので、played の修正を先に行う',
         trapExplanation:
           '「文法ミスは重い」という漠然とした印象で判断している。実際の配点では、構成の欠落のほうが失点が大きいことを確認していない。',
-        correctAnswer: 'つなぎ語とまとめの文を足す（構成2点の回復）ほうを先に行い、そのあとで played を直す（文法1点分）',
+        correctAnswer: 'つなぎ語とまとめの文を足す（構成2点の回復）ほうを先に行い、そのあとで played を直す（誤りが1つだけなら得点は変わらないが、余裕があれば直す）',
         correctExplanation:
           '構成点はつなぎ語1点とまとめの文1点で合計2点あり、First と That is why I think so. を書き足すだけで回復できる。一方、文法の誤りは「2つ以内なら2点」という基準なので、1つの誤りを直しても得点は変わらないことがある（誤りが1つなら、直さなくても2点のまま）。確認は「足りない要素を足す」を先に、「誤りを直す」を後にする。加点の期待値が大きいほうから手を付けるのが原則である。',
       },
@@ -2160,7 +2160,7 @@ If you come to Japan, you should visit Kyoto.
 
 ■ 組み合わせ例（テーマ：将来の夢）
 I want to be a teacher in the future. I have two reasons. First, I like children very much. Second, it is exciting for me to teach something new. That is why I want to be a teacher.
-（38語。使ったのは②I want to 〜 と ④It is 形容詞 for me to 〜 の2つだけで、どちらも上の8構文の中にある）
+（36語。使ったのは②I want to 〜 と ④It is 形容詞 for me to 〜 の2つだけで、どちらも上の8構文の中にある）
 
 ★ ポイント：同じ構文を繰り返し使ってよい。採点基準に「多様な表現を使うこと」は入っていない。確実に書ける形で埋めるほうが得点が高い。`,
       },
@@ -3150,7 +3150,7 @@ diffrent → different
 vacantion → vacation
 recieve → receive（c の後ろは ei の順。believe / friend は ie の順）
 beleive → believe
-tommorow → tomorrow（m は1つ、r も1つ）
+tommorow → tomorrow（m は1つ、r は2つ）
 Wenesday → Wednesday
 Feburary → February
 langauge → language

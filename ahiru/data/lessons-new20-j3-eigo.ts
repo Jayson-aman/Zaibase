@@ -1360,7 +1360,7 @@ if／whether のあとが平叙文の語順に戻るのは、間接疑問文と�
 　　　（彼女は彼に電車が何時に出たか尋ねた）
 
 ★ポイント：疑問詞のあとは do/does/did を使わない語順（間接疑問文と同じ形）にする。三単現のsや時制の情報は動詞側に残す。
-　Where does he live? → she asked where he lived.（doesが消えてliveにsが戻る）
+　Where does he live? → she asked where he lived.（doesが消え、時制は動詞に移ってlivedになる）
 
 ⚠注意：if/whetherを不要な場面で付け加えてしまう誤りに注意する。
 　× He asked me if where I lived.

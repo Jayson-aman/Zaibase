@@ -407,7 +407,7 @@ export const lessonFigsNew20E4Rika: Record<string, Figure> = {
       { label: '8月', value: 150 },
       { label: '9月', value: 170 },
     ],
-    caption: '気温が高くなる6月から7月にかけて、植物の背たけののびがいちばん大きくなる',
+    caption: '気温が高くなる7月から8月にかけて、植物の背たけののびがいちばん大きくなる',
     steps: [
       '同じ植物の背たけを、毎月同じ日に決まった方法ではかって記録する',
       '5月から6月にかけての差を計算する：35－10＝25cm',

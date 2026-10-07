@@ -691,7 +691,7 @@ over は「おおいかぶさる」感じなので、橋のように上に広が
 例）The plane is flying above the clouds.（飛行機は雲の上を飛んでいます。）
 
 ■ below（〜より下に）
-例）The temperature was below zero.（気温は零度以下でした。）
+例）The temperature was below zero.（気温は零度より下、氷点下でした。）
 例）Write your name below the line.（線の下に名前を書きなさい。）
 
 ★ ポイント：over と under は「真上・真下」で対、above と below は「高さの比較」で対になっている。`,
@@ -735,7 +735,7 @@ on は接している、over は接していない。
         trapExplanation: '「未満＝下」と考えて below を選んでしまう。below も「より下」を表すので意味は近く見えるが、年齢や数の「〜未満」には使わない。',
         correctAnswer: 'under six',
         correctExplanation:
-          '年齢や数量が「〜より少ない」ことを表すのは under である。below は温度や線の位置のように、目盛りや基準線より下にあることを表すのに使う（below zero ＝ 零度以下）。「年齢・値段・数は under と over、目盛りは below と above」と使い分ける。',
+          '年齢や数量が「〜より少ない」ことを表すのは under である。below は温度や線の位置のように、目盛りや基準線より下にあることを表すのに使う（below zero ＝ 零度より下）。「年齢・値段・数は under と over、目盛りは below と above」と使い分ける。',
       },
     ],
   },
@@ -2501,7 +2501,7 @@ know の後ろは「知らない内容」なので、名詞節と考えるのが
       'because of ＋ 名詞。形で使い分ける。',
       'though（although）＝ 〜だけれども（譲歩）。',
       'though と but を同じ文で二つ使わない。because と so も同様。',
-      'Why ...? への答えは Because ... で始める（この場合だけ because で文を始めてよい）。',
+      'Why ...? への答えは Because ... で始める（この場合だけ Because ～ だけで答えの文になる）。',
     ],
     sections: [
       {
@@ -2515,7 +2515,7 @@ know の後ろは「知らない内容」なので、名詞節と考えるのが
 ■ Why の答えは Because
 例）Why were you late?（なぜ遅れたのですか。）
 　－ Because I missed the bus.（バスに乗り遅れたからです。）
-ふつう because で文を始めるのは避けるが、Why への答えのときは Because だけで文を作ってよい。
+Because ～ だけで文を終えるのはふつう避けるが（主となる文が必要）、Why への答えのときは Because ～ だけで文を作ってよい。
 
 ■ since ／ as も理由を表す
 例）Since it was cold, we stayed inside.（寒かったので、私たちは中にいました。）

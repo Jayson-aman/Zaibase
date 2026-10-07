@@ -57,7 +57,7 @@ export const lessonFigsKoushikiC5Kakudo: Record<string, Figure> = {
       { x: 8, y: 0, label: 'C' },
       { x: 0, y: 0, label: 'D' },
     ],
-    caption: '直線ℓ（A→B）と直線m（D→C）は平行。線分BCが2直線を横切る（transversal）',
+    caption: '直線ℓ（A→B）と直線m（D→C）は平行。線分BCが2直線を横切る',
     steps: [
       '平行な2本の直線ℓ・mを、1本の直線（横切る直線）が交わっている場面を考える。直線ℓ上の交点をB、直線m上の交点をCとする',
       '点Bでは、直線ℓと横切る直線が交わり、まわりに4つの角ができる。点Cでも同じように4つの角ができる',

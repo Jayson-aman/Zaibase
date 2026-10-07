@@ -205,7 +205,7 @@ ow は語の終わりにあるとき [oʊ] になることが多い（snow, know
 ■ g の重要な例外
 get, give, girl, begin, gift, forget, together は、後ろが e・i でも [g] と読む。これらはすべて日常語で、しかも入試頻出なので、例外としてまとめて覚える。
 
-★ ポイント：この規則があるので、動詞に -ing を付けるときのつづりの変化も説明がつく。come の e を落として coming とすれば g のうしろは i ではなく n になり、[k] の音が保たれる。つづりの規則と発音の規則はつながっている。`,
+★ ポイント：この規則があるので、動詞に -ing を付けるときのつづりの変化も説明がつく。face の e を落として facing としても、c のうしろが e から i に変わるだけで、e・i・y の前なので c は [s] のままである。つづりの規則と発音の規則はつながっている。`,
       },
       {
         heading: 'ch・th・sh・ph・gh の音',
@@ -228,7 +228,7 @@ gh＝無音 night, light, high, right, though, through, daughter, eight
 gh＝[f] laugh, enough, cough
 wh＝[w] what, when, where, white（ただし who, whose, whole は [h]）
 
-⚠ 注意：-tion は [ʃən]（question, information）、-sion は [ʒən]（television, decision）と [ʃən]（mission, discussion）に分かれる。s のうしろの音が有声か無声かで決まるので、音で覚えるほうが早い。`,
+⚠ 注意：-tion は [ʃən]（information, station）、-sion は [ʒən]（television, decision）と [ʃən]（mission, discussion）に分かれる。s のうしろの音が有声か無声かで決まるので、音で覚えるほうが早い。`,
       },
     ],
     trapExamples: [
@@ -283,7 +283,7 @@ h：hour, honest, honor（アメリカ英語では herb も）
 -mb の b：climb, comb, lamb, thumb, bomb, tomb
 -mn の n：autumn, column
 -gn の g：sign, foreign, design, campaign
-※ ただし signal, designer のように別の音節が続くと g が復活することがある。
+※ ただし signal, signature のように別の音節が続くと g が復活することがある。
 
 ■ 語の途中で読まない
 -stle の t：listen, castle, whistle, fasten
@@ -404,7 +404,7 @@ their（彼らの）／there（そこに）／theyʼre（they are）
 its（それの）／itʼs（it is または it has）
 to（〜へ）／too（〜も・〜すぎる）／two（二）
 
-⚠ 注意：these are their books. のような文で there を書いてしまう誤りは非常に多い。「there は文の主語のような位置に立つ（There is 〜）」「their のあとには必ず名詞が来る」と、置かれる場所で見分けるとまちがえにくい。`,
+⚠ 注意：These are their books. のような文で there を書いてしまう誤りは非常に多い。「there は文の主語のような位置に立つ（There is 〜）」「their のあとには必ず名詞が来る」と、置かれる場所で見分けるとまちがえにくい。`,
       },
     ],
     trapExamples: [
@@ -553,7 +553,7 @@ e-co-NÓM-i-cal, po-LÍT-i-cal, MÚ-si-cal, PRÁC-ti-cal, his-TÓR-i-cal
 pho-TÓG-ra-phy, ge-ÓG-ra-phy, bi-ÓL-o-gy, tech-NÓL-o-gy, psy-CHÓL-o-gy
 
 ■ 二つの型を比べる
-econ-：ÉC-o-no-my（名詞は不規則）／e-co-NÓM-ic（-ic は直前）／e-co-NÓM-i-cal（-ical は三つ目）
+econ-：e-CÓN-o-my（名詞は語末から三つ目）／e-co-NÓM-ic（-ic は直前）／e-co-NÓM-i-cal（-ical は三つ目）
 photo-：PHÓ-to（2音節）／pho-TÓG-ra-phy（-graphy は三つ目）／pho-to-GRÁPH-ic（-ic は直前）
 同じ語根でも、付く語尾によってアクセントの位置がどんどん動くことがわかる。
 
@@ -1650,7 +1650,7 @@ wound（傷つける）[wuːnd] － wounded － wounded
         trapExplanation: 'send は短くて規則動詞のように見えるうえ、end → ended という規則動詞と形が近いため、そのまま -ed を付けてしまう。',
         correctAnswer: 'I sent her an email last night.',
         correctExplanation:
-          'send は send － sent － sent と変化する不規則動詞で、語尾の d が t になる型である。同じ仲間に build － built、spend － spent、lend － lent、bend － bent がある。「-nd で終わる動詞は -nt になる」とまとめて覚えるとよい。',
+          'send は send － sent － sent と変化する不規則動詞で、語尾の d が t になる型である。同じ仲間に build － built、spend － spent、lend － lent、bend － bent がある。send, spend, lend, bend は「-nd が -nt になる」仲間としてまとめて覚えるとよい（end は規則動詞の ended、find は found で別の型なので、-nd で終わる動詞が全部 -nt になるわけではない）。',
       },
       {
         question: '次の文の found は、find（見つける）の過去形である。正しいか。The company was founded in 1950.',
@@ -1701,7 +1701,7 @@ spring － sprang － sprung（跳ねる・高校範囲）
 受け身：The song was sung by many people.
 
 ■ 音でつかむ
-sing／sang／sung を続けて言うと、「イ・ア・ア」ではなく「イ・ア・ウ」と三段に動くのがわかる。この三段の動きを口で覚えてしまえば、drink や swim にもそのまま応用できる。
+sing／sang／sung を続けて言うと、母音が [ɪ]→[æ]→[ʌ] と口の開き方を変えながら動き、つづりの母音字も i・a・u と三段に動く。この三段の動きを口で覚えてしまえば、drink や swim にもそのまま応用できる。
 
 ■ ing で終わる形と混同しない
 sing は原形からすでに -ing で終わっているが、これは進行形の -ing とは無関係である。進行形にすると singing となる。同じく ring → ringing、bring → bringing。
@@ -1714,7 +1714,7 @@ sing は原形からすでに -ing で終わっているが、これは進行形
 
 ■ run（A－B－A 型）
 run － ran － run
-過去形は ran で i－a の動きは同じだが、過去分詞は原形に戻る。runned・run－ran－run の三つ目を「run」と正しく言えるかがポイントである。
+過去形は ran で i－a の動きは同じだが、過去分詞は原形に戻る。run－ran－run の三つ目を「run」と正しく言えるかがポイントである。
 例）I have run in three marathons.（○）
 　　I have ran in three marathons.（×）
 
@@ -2019,7 +2019,7 @@ perform → performance ／ exist → existence
 ■ -ness（もっとも規則的）
 kind → kindness ／ dark → darkness ／ ill → illness ／ sad → sadness ／ weak → weakness
 kind → kindness のようにそのまま付けるのが基本だが、「子音字＋y」で終わる語は y を i に変える。
-　happy → happiness ／ busy → business ／ lonely → loneliness
+　happy → happiness ／ lazy → laziness ／ lonely → loneliness
 
 ■ -ity／-ty
 able → ability ／ real → reality ／ active → activity ／ popular → popularity
@@ -2215,7 +2215,7 @@ kind → kindly ／ sudden → suddenly ／ usual → usually ／ final → fina
 ■ つづりが変わる場合
 「子音字＋y」→ y を i に変える：easy → easily ／ happy → happily ／ angry → angrily ／ busy → busily
 「-le」→ le を ly に変える：gentle → gently ／ simple → simply ／ terrible → terribly ／ possible → possibly
-「-ll」→ l を一つ足すだけ：full → fully ／ careful → carefully
+「-ll」で終わる語 → y だけを付ける：full → fully ／ 「-ful」で終わる語 → -ly を付ける（l が二つ並ぶ）：careful → carefully
 true → truly（e を落とす。truely は誤り）
 
 ■ -ly が付いていても形容詞の語
@@ -2527,7 +2527,7 @@ hard（かたい）⇔ soft
 ■ そのほか
 right（正しい）⇔ wrong ／ right（右）⇔ left
 fine（晴れた）⇔ cloudy, rainy ／ fine（元気な）⇔ sick
-free（ひまな）⇔ busy ／ free（無料の）⇔ expensive
+free（ひまな）⇔ busy ／ free（無料の）⇔ paid（有料の）
 
 ■ 値段の言い方に注意
 「この本は高い」は This book is expensive.（○）
@@ -2541,7 +2541,7 @@ free（ひまな）⇔ busy ／ free（無料の）⇔ expensive
       {
         heading: 'なぜ反意語は「意味ごと」に持ち、なぜ「高い」が expensive になるのか',
         mangaId: 'koko_eigo_s028_manga',
-        body: `light には「軽い」と「明るい」という**別々の意味**があり、それぞれに反対語（heavy・dark）があります。日本語では別の語なので一対一で覚えたくなりますが、英語の一語が複数の意味を持つとき、反意語はその意味ごとに決まります。hard（難しい⇔easy／かたい⇔soft）、right（正しい⇔wrong／右⇔left）、free（ひまな⇔busy／無料の⇔expensive）も同じです。
+        body: `light には「軽い」と「明るい」という**別々の意味**があり、それぞれに反対語（heavy・dark）があります。日本語では別の語なので一対一で覚えたくなりますが、英語の一語が複数の意味を持つとき、反意語はその意味ごとに決まります。hard（難しい⇔easy／かたい⇔soft）、right（正しい⇔wrong／右⇔left）、free（ひまな⇔busy／無料の⇔paid）も同じです。
 
 「この本は高い」を high と言えないのは、high が**高さ**（背・位置）を表す語で、物の値段の高さは expensive という別の語が受け持つからです。値段そのものを主語にすれば The price is high. と言えます。日本語の「高い」が英語では expensive（物が主語）と high（値段が主語）に分かれます。cheap に「安っぽい」の響きがあるのは、値段の安さから質の低さを連想させるからで、手ごろだと言いたいときは inexpensive・reasonable を使います。
 

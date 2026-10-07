@@ -778,7 +778,7 @@ must で聞かれたのだから must で答える、と考えて No, you mustn'
       'have to＋動詞の原形で「〜しなければならない」。主語が三人称単数なら has to。',
       'have to は一般動詞の文。疑問・否定には do / does / did を使う。',
       'must は現在の意味しか表せない。過去は had to、未来は will have to。',
-      'must は話し手の judgment（判断・気持ち）、have to は外からの事情、というのが基本の感じ分け。',
+      'must は話し手の判断・気持ち、have to は外からの事情、というのが基本の感じ分け。',
       '発音は have to ＝ハフトゥ、has to ＝ハストゥ。to の前で音が変わる。',
     ],
     sections: [

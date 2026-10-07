@@ -30,7 +30,7 @@ Sunday（日）・Monday（月）・Tuesday（火）・Wednesday（水）・Thur
 ■ つづりでまちがえやすい語
 Wednesday：真ん中の d は発音しない（「ウェンズデイ」のように読む）。d を忘れて Wensday と書くまちがいも多いので注意。
 Tuesday：Tues- の部分を Tues と書き、Thursday の Thurs- と混同しないこと。
-Saturday：Satur- の部分に a が2つ入る（Saterday ではない）。
+Saturday：Satur- の4文字目は u である（Saterday ではない）。
 
 ■ たずね方と答え方
 What day is it today?（今日は何曜日ですか）
@@ -370,7 +370,7 @@ B: It's about 15 degrees.
       '13〜19は -teen、20・30・40…は -ty で終わる。発音・アクセントの位置が異なる。',
       '21以降は十の位と一の位をハイフンでつなぐ（twenty-one, thirty-five）。',
       'hundred（百）・thousand（千）は、直前に数字が付くとき複数形の s を付けない（three hundred, not three hundreds）。',
-      '「合計で」という意味を出すときだけ hundreds of 〜（何百もの〜）のように複数形＋ of を使う。',
+      '「何百もの」とおおまかに言うときだけ hundreds of 〜 のように複数形＋ of を使う。',
       "値段をたずねる文は How much is this? で、答えは It's ＋金額。",
       '値段が複数ある場合は How much are these? のように are を使う。',
     ],
@@ -515,7 +515,7 @@ y で終わる語に -eth を付けるときは、y を i に変えるという�
         wrongAnswer: 'fiveth',
         trapExplanation: '4以降は基数にそのまま th を足せばよいというルールだけを覚えていて、five が例外的につづりを変えることを知らない。',
         correctAnswer: 'fifth',
-        correctExplanation: 'five は th を付けるときに ve を f に変え、さらに e を1つ省いて fifth となる。eight→eighth、nine→ninth、twelve→twelfth も同じように変化するので、5・8・9・12の4つはセットで例外として覚える。',
+        correctExplanation: 'five は th を付けるときに ve を f に変えて fifth となる。eight→eighth、nine→ninth、twelve→twelfth も同じように変化するので、5・8・9・12の4つはセットで例外として覚える。',
       },
       {
         question: '「21番目」を英語のつづりで書きなさい。',
@@ -677,10 +677,10 @@ Who's coming to the party?（だれがパーティーに来ますか）
     ],
     trapExamples: [
       {
-        question: "（ ）is that girl over there? に適切な語を入れなさい。（Whose / Who's）",
-        wrongAnswer: 'Whose is that girl over there?',
+        question: "（ ）that girl over there? に適切な語を入れなさい。（Whose / Who's）",
+        wrongAnswer: 'Whose that girl over there?',
         trapExplanation: '発音が同じであるため、どちらを書いても正しいだろうと考え、見た目が疑問詞らしい whose を選んでしまう。',
-        correctAnswer: "Who's is that girl over there? ではなく Who's that girl over there?（Who is that girl over there?）",
+        correctAnswer: "Who's that girl over there?（＝ Who is that girl over there?）",
         correctExplanation: 'この文は「あの女の子はだれですか」という意味で、持ち主をたずねているわけではないので who is の短縮形 who\'s を使う。whose を使うのは Whose bag is that? のように、あとに名詞（持ち物）が続くときだけである。',
       },
       {

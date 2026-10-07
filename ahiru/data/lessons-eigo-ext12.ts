@@ -61,7 +61,7 @@ export const eigoExt12Lessons: Lesson[] = [
 　　姉はピアノをひきます。→ My sister plays the piano.
 
 ■ 見分け方
-日本語の「です」を「だ」に置きかえてみて、意味が変わらなければ be動詞、置きかえると変になるなら一般動詞である。「中学生だ」は自然、「英語が好きだ」も自然だが、後者は「好む」という動作を表す語なので like という動詞を使う。
+「です」の直前の語を英語にしたとき、名詞か形容詞（中学生・おもしろい・いそがしい）になるなら be動詞を使う。「好き」「持っている」「ひく」のように、「好む」「持つ」「ひく」という動作や気持ちを表す動詞で言える語なら、その一般動詞だけを使う。「英語が好きです」は「私＝英語」という意味ではないので be動詞は要らず、like English となる。
 
 ⚠ 注意：一つの文に動詞が二つ並んだら、その時点でほぼ誤りである。書き終えたら「動詞は一つか」を必ず確かめる。`,
       },
@@ -142,7 +142,7 @@ for のあとには長さ（three years, ten minutes）、since のあとには�
 　　今日は寒いです。→ It is cold today.
 　　六時です。→ It is six o'clock.
 
-⚠ 注意：Yesterday was rain. と書く答案が非常に多い。日本語の「きのうは」を主語だと思ってしまうためだが、yesterday は時を表す語であって主語にはならない。`,
+⚠ 注意：Yesterday was rain. と書く答案が非常に多い。日本語の「きのうは」を主語だと思ってしまうためだが、天気を言う文の主語は it にする。また rain は名詞なので、was のあとにそのまま置くことはできない（rainy と形容詞にする）。`,
       },
     ],
     trapExamples: [
@@ -339,7 +339,7 @@ for のあとには長さ（three years, ten minutes）、since のあとには�
     examType: 'chugaku',
     title: '主語を変える：There is 構文と have の使い分け',
     description: '「〜がある・いる」を英語らしく言うために、主語を選び直す方法を学ぶ',
-    intro: '「わたしの家には犬がいます」を There is a dog in my house. と書いても正しいのですが、I have a dog. のほうが自然です。「〜がある」をどちらで言うかは、聞き手が知っているかどうかで決まります。使い分けを学びます。',
+    intro: '「わたしの家には犬がいます」を There is a dog in my house. と書いても正しいのですが、I have a dog. のほうが自然です。There is で言うか、その名詞を主語にして言うかは、聞き手がもう知っているものかどうかで決まります。持ち主がはっきりしているときは have も使えます。使い分けを学びます。',
     order: 930,
     studyPeriod: '小6前半',
     targetLevel: 'oyo',
@@ -654,7 +654,7 @@ beautiful, interesting, difficult, popular, important のような長い語は m
 例）This book is more interesting than that one.
 　　Soccer is the most popular sport in this school.
 
-⚠ 注意：good — better — best、bad — worse — worst、many/much — more — most、high — higher — highest は特別。high は短い語なので more high とはしない。`,
+⚠ 注意：good — better — best、bad — worse — worst、many/much — more — most は不規則に変化する特別な語である。high のような短い語は more high とはせず、high — higher — highest と er／est をつける。`,
       },
     ],
     trapExamples: [
@@ -1151,7 +1151,7 @@ a lot of books / many friends / a few people / some water
         heading: '見直しの順序を決めておく',
         body: `見直しは「なんとなく読み返す」のではなく、見る項目を決めて一項目ずつ通す。そのほうが速く、見落としがない。
 
-■ 手順（各十秒）
+■ 手順（各五〜六秒、五項目で三十秒）
 ①三単現の s
 　主語が I, you, 複数以外で、現在の話なら、動詞に s がついているか。
 　My brother like soccer.（誤）→ My brother likes soccer.（正）

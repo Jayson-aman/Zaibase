@@ -105,7 +105,7 @@ const eigoOverviewLessons: Lesson[] = [
 ・子音字＋y→yをiに変えて＋ed：study→studied / try→tried / carry→carried
 ・短母音＋子音字→子音字を重ねて＋ed：stop→stopped / plan→planned / drop→dropped
 
-■ 不規則変化動詞（重要50語）
+■ 不規則変化動詞（重要49語）
 go→went / come→came / see→saw / do→did / have→had / make→made
 get→got / give→gave / take→took / know→knew / think→thought
 write→wrote / read→read（発音はred）/ run→ran / eat→ate
@@ -661,7 +661,8 @@ a) other   b) another   c) the other   d) the others
 
 ・逆接：However / But / Although / Nevertheless
 ・追加：In addition / Also / Furthermore / Moreover
-・理由：Because / Since / Therefore / As a result
+・理由：Because / Since
+・結果：Therefore / As a result
 ・例示：For example / For instance
 
 ■ 表題選択問題（タイトル・テーマ）の解法
@@ -3497,7 +3498,7 @@ There is/are と似た形でHere is/areがある。「ここに〜がある」�
       `否定文はbe動詞＋not＋-ing、疑問文はbe動詞を主語の前に出す`,
       `whenは「〜したとき（一点）」、whileは「〜している間（継続）」。過去進行形とセットでよく使われる`,
       `現在進行形は近い未来の予定を表すこともある（I'm leaving tomorrow.）`,
-      `just/right nowは現在進行形、at that timeやwhen〜は過去進行形のサインワード`,
+      `now/right nowは現在進行形、at that timeやwhen〜は過去進行形のサインワード`,
     ],
     order: 15,
     examType: 'chugaku',
@@ -3810,7 +3811,7 @@ She was studying math at nine last night.
 ・I agree/disagree with this idea.（この意見に賛成/反対だ）
 
 ■ 電話・道案内・買い物での応用会話
-・May I speak to Mr. Smith, please?（スミス先生をお願いできますか）
+・May I speak to Mr. Smith, please?（スミスさんをお願いできますか）
 ・Could you tell me how to get to the station?（駅への行き方を教えていただけますか）
 ・Excuse me, but is this seat taken?（すみません、この席は空いていますか）
 
@@ -3974,9 +3975,9 @@ It is（was）＋ 強調したい語句 ＋ that ＋ 残りの部分
 
 ■ 強調構文と形式主語のitとの見分け方
 形式主語のIt（It is important to study.のような文）と強調構文のItを混同しないよう注意。
-見分け方：強調構文はIt is/was 〜 that の「〜」の部分を消しても、残りの文（that以降）が意味の通る完全な文になる。
+見分け方：強調構文はIt is/was と that を取りのぞいて「〜」をもとの位置にもどすと、意味の通る完全な文になる。
 例）It was Tom that broke the window. → Tom broke the window.（意味が通る＝強調構文）
-例）It is important to study English. → 「important to study English」だけでは主語が欠けた文にならない（形式主語構文）。`,
+例）It is important to study English. → It is を取りのぞくと「important to study English」となり、文として成り立たない（形式主語構文）。`,
       },
       {
         heading: '2. 否定語による倒置（Never have I seen 〜）',
@@ -4100,7 +4101,7 @@ She can sing well. She can dance well.
 【解説】共通する主語（she）と助動詞（can）を省略し、動詞をandでつなぐ。
 
 ★ 入試対策ポイント：
-■ 強調構文：It is/was 〜 that ...の「〜」を消しても文が成立するかで見分ける
+■ 強調構文：It is/was と that を取りのぞいても文が成立するかで見分ける
 ■ 否定語（never/little/hardly）が文頭→倒置（助動詞＋主語）
 ■ So/Neither＋（助）動詞＋主語で「〜もそうです／そうではない」
 ■ 等位接続詞・比較文・従属節では共通部分が省略されることが多い`,
@@ -4403,7 +4404,7 @@ B: Yes, please. Can you check my math problems?
 
 ■ 電話会話の典型的な流れと表現
 ①電話を受ける：Hello, this is 〜 speaking.（もしもし、〜です）
-②取り次ぎを頼む：May I speak to Mr. Green, please?（グリーン先生をお願いできますか）
+②取り次ぎを頼む：May I speak to Mr. Green, please?（グリーンさんをお願いできますか）
 ③本人が出る：Speaking.（私です）
 ④不在の応答：I'm sorry, he is out now.（すみません、今外出しています）
 ⑤伝言：Can I take a message? / Can I leave a message?（伝言を承りましょうか／お伝えいただけますか）
@@ -4474,7 +4475,7 @@ Customer: OK, I'll take them.
 ③埋まった空所の前後から、残りの空所も絞り込んでいく（消去法）
 ④最後に会話全体を通して読み、自然な流れになっているか確認する
 
-■ 例題形式（4つの空所を4つの選択肢から選ぶ）
+■ 例題形式（3つの空所を4つの選択肢から選ぶ）
 A: Excuse me. ( 1 )
 B: Sure. What do you need?
 A: ( 2 )
@@ -4600,8 +4601,8 @@ Emma: You can text him. He always checks his phone.
       `不規則複数形：child→children、man→men、foot→feet、単複同形：sheep/fish/deer`,
       `集合名詞：family/team/classなど、全体として単数扱いにも個々の成員として複数扱いにもなる`,
       `a number of＋複数名詞は「多くの〜」で複数扱い、the number of＋複数名詞は「〜の数」で単数扱い`,
-      `複合名詞の複数形は主要な名詞部分にsをつける（passers-by ではなく通常はgirlfriendsのように末尾でよいが例外に注意）`,
-      `固有名詞の複数扱い（United States等）や学問名（math, news）は単数扱いの不可算名詞として扱う`,
+      `複合名詞の複数形は通常は末尾にsをつける（girlfriends）。意味の中心が前にある語は、その語にsをつける（passers-by）`,
+      `複数形に見える固有名詞（United States等）や学問名（math, news）は単数扱いの不可算名詞として扱う`,
       `everyone/everybody/someone等は単数扱い、その代名詞での受け方（they）は近年広く許容される`,
     ],
     order: 20,
@@ -4655,10 +4656,10 @@ series（シリーズ）→ series／ species（種）→ species
 例）There are many Japanese in this city.（この街には多くの日本人がいる）
 
 ■ 常に複数形で使う名詞（対になっているもの）
-scissors（はさみ）／ glasses（眼鏡）／ pants／ trousers（ズボン）／ shoes（靴）
+scissors（はさみ）／ glasses（眼鏡）／ pants／ trousers（ズボン）／ jeans（ジーンズ）
 これらは「1つ」を表すときも複数形のまま使い、数えるときはa pair of 〜を使う。
 例）I need a pair of scissors.（はさみが1つ必要だ）
-例）These shoes are too small.（この靴は小さすぎる）※このshoesは常に複数扱い
+例）These jeans are too small.（このジーンズは小さすぎる）※このjeansは常に複数扱い
 
 ■ お金・単位を表す語の複数形の注意点
 ・数字＋hundred/thousand/millionは複数でもsをつけない（数を表す形容詞として使うとき）
@@ -4692,7 +4693,7 @@ family（家族）／ team（チーム）／ class（クラス）／ group（グ
 ⚠ 注意：a number of とthe number ofは見た目が似ているが、動詞の単数・複数がまったく逆になる。入試最頻出のひっかけ。
 
 ■ everyone/everybody/someone/somebody/each（単数扱い）
-these + 単数動詞、後で受ける代名詞はhe/she/theyのいずれも使われる。
+これらは単数動詞で受け、後で受ける代名詞はhe/she/theyのいずれも使われる。
 例）Everyone in this class likes music.（このクラスのみんなが音楽を好きだ）※動詞はlikes（単数扱い）
 例）Everybody has to bring his or her（their）own lunch.（全員が自分の昼食を持ってこなければならない）`,
       },
@@ -4879,7 +4880,7 @@ manyのあとに a/an＋単数名詞を続け、動詞も単数にするとい�
 Bを特に強調する表現。動詞はBに一致させる。
 例）Not only Tom but also his sisters are coming.（トムだけでなく彼の姉妹たちも来る）
 例）She is not only kind but also smart.（彼女は親切なだけでなく賢い）
-★ B not only A（Bも、Aだけでなく）と入れ替えた同義表現：B as well as A
+★ not only A but also B とほぼ同じ意味の表現：B as well as A（Bも、Aだけでなく）
 例）His sisters as well as Tom are coming.（トムだけでなく彼の姉妹たちも来る）※こちらは動詞をB（先に来る語）に一致させる
 
 ■ 相関接続詞の動詞の一致まとめ
@@ -4995,7 +4996,7 @@ Neither Tom nor Ken doesn't like vegetables.
       },
       {
         heading: '★ MAXレベル：接続詞の省略と発展的な相関表現',
-        body: `■ that節を導くandの発展用法（発展知識）
+        body: `■ 命令文, and 〜 の発展用法（発展知識）
 まれに、andが「そして」以上の意味（結果・条件）を持つことがある。
 例）Study hard, and you will succeed.（一生懸命勉強しなさい、そうすれば成功する）
 = If you study hard, you will succeed.（もし一生懸命勉強すれば）
@@ -5185,7 +5186,7 @@ be動詞・助動詞・do/does/didの短縮形（isn't/don't/doesn't/didn't等�
 This is a very difficult question.
 
 【解答】What a difficult question this is!
-【解説】nameがある（question）のでWhatを使う。veryを取り、「a difficult question」をWhatとともに前に出し、あとはthis isの語順のまま。
+【解説】名詞がある（question）のでWhatを使う。veryを取り、「a difficult question」をWhatとともに前に出し、あとはthis isの語順のまま。
 
 【問題2】次の文を感嘆文に書きかえなさい。
 She sings very beautifully.

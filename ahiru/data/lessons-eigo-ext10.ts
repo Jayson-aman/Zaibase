@@ -142,7 +142,7 @@ head（頭）／hair（髪）／face（顔）／eye（目）／eyebrow（まゆ�
 shoulder（肩）／arm（うで）／elbow（ひじ）／hand（手）／finger（指）／back（背中）／chest（胸）／stomach（おなか）
 
 ■ 下半身
-leg（あし全体）／knee（ひざ）／foot（足首から先）／toe（足の指）
+leg（ももからくるぶしまでのあし）／knee（ひざ）／foot（足首から先）／toe（足の指）
 
 ★ ポイント：日本語の「あし」は英語で二つに分かれる。ももからくるぶしまでが leg、くるぶしから先が foot である。「足が痛い」も、どこが痛いのかで語がちがう。
 
@@ -747,7 +747,7 @@ Whose are these pencils?（これらのえんぴつはだれのものですか�
         body: `日本の学校行事は、英語では説明的な言い方になるものが多い。組み合わせで覚える。
 
 ■ 一年の行事
-entrance ceremony（入学式）／opening ceremony（始業式）／sports day, field day（運動会）／school trip, field trip（遠足・校外学習）／school excursion（修学旅行）／music festival, chorus contest（音楽会・合唱コンクール）／school festival（学園祭・文化祭）／swimming meet（水泳大会）／marathon（マラソン大会）／graduation ceremony（卒業式）
+entrance ceremony（入学式）／opening ceremony（始業式）／sports day, field day（運動会）／school trip（修学旅行・遠足）／field trip（遠足・校外学習）／school excursion（修学旅行）／music festival, chorus contest（音楽会・合唱コンクール）／school festival（学園祭・文化祭）／swimming meet（水泳大会）／marathon（マラソン大会）／graduation ceremony（卒業式）
 
 ■ 休み
 spring vacation（春休み）／summer vacation（夏休み）／winter vacation（冬休み）
@@ -1264,7 +1264,7 @@ cold（寒い）／snow（雪）／skiing（スキー）／New Year's Day（元�
           '季節・月・年のように幅のある期間には in を使う（in winter、in July、in 2026）。日付・曜日など特定の一日には on（on Monday、on May 5）、時刻には at（at seven）を使う。「広い→in、一日→on、一点→at」と大きさの順で覚える。',
       },
       {
-        question: '「秋には葉が赤くなります。」の「秋」にあたる英語として正しくないものはどれか。 ［fall / autumn / Fall Season / 秋］',
+        question: '「秋には葉が赤くなります。」の「秋」にあたる英語として正しくないものはどれか。 ［fall / autumn / Fall Season］',
         wrongAnswer: 'autumn は誤り（fall だけが正しい）',
         trapExplanation: '教科書で習ったほうだけを正解だと思いこみ、もう一方を誤りだと判断してしまう。アメリカ英語とイギリス英語のちがいだと知らないことが原因。',
         correctAnswer: 'fall も autumn も正しい（Fall Season は誤り）',
@@ -1464,7 +1464,7 @@ Which floor is the music room on?（音楽室は何階ですか。）
         trapExplanation: '「基数に -th を付ける」という規則をそのままあてはめてしまう。nine のつづりを崩さずに残そうとするのが原因。',
         correctAnswer: 'ninth',
         correctExplanation:
-          'nine の e を落として ninth とする。同じようにつづりが変わるものに five → fifth、twelve → twelfth、eight → eighth（t を重ねない）、twenty → twentieth がある。「そのまま -th を付けない4つ」としてまとめて覚える。',
+          'nine の e を落として ninth とする。同じようにつづりが変わるものに five → fifth、twelve → twelfth、eight → eighth（t を重ねない）、twenty → twentieth がある。「そのまま -th を付けない語（ninth・fifth・eighth・twelfth・twentieth）」としてまとめて覚える。',
       },
       {
         question: '「私の誕生日は6月3日です。」を英語にしなさい（数字を使わずに書く場合の読み方を答える）。',
@@ -1919,7 +1919,7 @@ high … 山・かべ・空など、高さそのものに注目するもの
 例）This is the longest river in Japan.（これは日本でいちばん長い川だ。）
 
 ■ つづりの変化
-big → bigger → biggest（g を重ねる）／large → larger → largest（e を足すだけ）／heavy → heavier → heaviest（y を i に）／long → longer → longest（そのまま）
+big → bigger → biggest（g を重ねる）／large → larger → largest（-r・-st を足すだけ）／heavy → heavier → heaviest（y を i に）／long → longer → longest（そのまま）
 
 ⚠ 注意：good → better → best、bad → worse → worst は形が大きく変わる。`,
       },
@@ -2099,7 +2099,7 @@ I don't have any pens. ＝ I have no pens.`,
         heading: '職業を表す語',
         body: `職業名は英検4級・3級で必ず出る。動詞と結びつけて覚えると忘れにくい。
 
-■ 動詞から作られる職業名（-er / -or）
+■ -er / -or で終わる職業名（動詞からできたものが多い）
 teacher（先生。teach＝教える）／singer（歌手。sing）／dancer（ダンサー）／player（選手）／writer（作家。write）／farmer（農家。farm）／driver（運転手。drive）／cook（料理人。cook＝料理する）／baker（パン職人）／actor（俳優）／doctor（医者）／visitor（訪問者）
 
 ■ そのほかの職業
@@ -3415,7 +3415,7 @@ discuss（〜について話し合う）：We discussed the problem.（× discus
 marry（〜と結婚する）：She married him.（× married with）
 answer（〜に答える）：Answer the question.（× answer to）
 
-■ 「着く」の三つの言い方
+■ 「着く」のいろいろな言い方
 arrive at ＋ せまい場所（arrive at the station）
 arrive in ＋ 広い場所（arrive in Japan）
 get to ＋ 場所（get to the station）

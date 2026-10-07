@@ -2275,7 +2275,7 @@ yourself（あなた1人）／ yourselves（あなたたち複数）
 「他の誰でもなくその人が」という強調。取り除いても文は成り立つ。
 例）I myself saw the accident.（私自身がその事故を見た）
 例）She made the cake herself.（彼女は自分でそのケーキを作った）
-例）The president himself came to the school.（校長自身が学校へ来た）
+例）The principal himself came to the school.（校長自身が学校へ来た）
 置く位置は「強調したい語の直後」か「文末」である。
 
 ★ ポイント：取り除いて文が成り立つなら強調用法、成り立たないなら再帰用法。図の人称×数の表で形を確かめておこう。`,

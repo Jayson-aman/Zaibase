@@ -569,7 +569,7 @@ to不定詞には「名詞的用法」「形容詞的用法」「副詞的用法
 ■ 前置修飾（分詞が名詞の前）
   a sleeping baby（眠っている赤ちゃん）：現在分詞
   a broken window（割れた窓）：過去分詞
-  a running water（流れる水）：現在分詞
+  running water（流れる水）：現在分詞
 
 ★ポイント：修飾する語句が1語のときは名詞の前、2語以上のときは名詞の後ろ。
 
@@ -591,7 +591,7 @@ to不定詞には「名詞的用法」「形容詞的用法」「副詞的用法
   The movie was exciting.（その映画は（私を）興奮させた→面白かった）
   I was excited about the movie.（私はその映画にワクワクした）
 
-⚠注意：「面白い映画」は an exciting movie、「興奮した私」は excited me。
+⚠注意：「面白い映画」は an exciting movie、「興奮した子ども」は an excited child。
 
 ■ SVOCにおける分詞（知覚動詞・使役動詞）
 知覚動詞（see/hear/feel/watch/notice）+ O + 現在分詞：〜が...しているのを見る/聞く
@@ -2278,7 +2278,7 @@ B: It's cloudy and cold.
 
 ■ 語尾で強勢の位置が決まるパターン
   -tion / -sion → 直前の音節を強く読む
-    in-for-MA-tion, ques-TION, de-CI-sion, tele-VI-sion
+    in-for-MA-tion, ed-u-CA-tion, de-CI-sion, ex-PLO-sion
   -ic / -ical → 直前の音節を強く読む
     e-co-NOM-ic, sci-en-TIF-ic, his-TOR-i-cal, e-LEC-tric
   -ity → 直前の音節を強く読む
@@ -2288,9 +2288,9 @@ B: It's cloudy and cold.
 
 ■ 日本語の発音につられやすい注意語（カタカナと違う）
   ca-LEN-dar（カレンダー）／ vol-un-TEER（ボランティア）／
-  al-CO-hol（アルコール）／ e-LEV-a-tor（エレベーター）／
-  in-ter-VIEW（インタビュー）／ ba-NAN-a（バナナ）／
-  ca-FE-te-ri-a（カフェテリア）／ com-PU-ter（コンピューター）
+  AL-co-hol（アルコール）／ EL-e-va-tor（エレベーター）／
+  IN-ter-view（インタビュー）／ ba-NAN-a（バナナ）／
+  caf-e-TE-ri-a（カフェテリア）／ com-PU-ter（コンピューター）
 
 ★ポイント：まず語尾（-tion, -ic, -ity など）を見て規則が使えるか確認する。
   規則語尾がなければ、名詞・形容詞は前寄り、動詞は後ろ寄りと当たりをつける。`,
@@ -2837,7 +2837,7 @@ do you think / do you believe などが間に入るときは、疑問詞が文�
 
 ★ポイント：know型（普通の間接疑問）と think型（疑問詞が前に出る）を区別する。
   know型：Do you know where he lives?（where以下は肯定文の語順）
-  think型：Where do you think he lives?（whereが文頭、doyouthinkは疑問文語順）
+  think型：Where do you think he lives?（whereが文頭、do you think は疑問文語順）
 
   他の think型動詞：believe, guess, suppose, imagine
     Who do you suppose will win the game?
@@ -2960,7 +2960,7 @@ ask や tell のように「人＋もの」の2つの目的語をとる動詞の
 【問1】（　）に最も適切なものを選びなさい。
 ( ) do you think she bought at the store?
 ① What  ② Do you know what  ③ What does  ④ You think what
-→ 答え：① What（think型は疑問詞が文頭に出て、doyouthinkが続く）
+→ 答え：① What（think型は疑問詞が文頭に出て、do you think が続く）
 
 【問2】日本語に合うように英文を完成させなさい。
 「彼がどこの出身か教えてもらえますか。」
@@ -3169,7 +3169,7 @@ I think students should do club activities every day. First, it helps them stay 
 "I have a lot of homeworks every day, so I am always busy."
 → 答え：homeworks → homework（不可算名詞は複数形にしない）
 
-【問2】次の日本語を、指定された語数（15語程度）の英語にしなさい。
+【問2】次の日本語を、指定された語数（18語程度）の英語にしなさい。
 「私は将来、外国で働きたいです。なぜなら色々な文化を学べるからです。」
 → 答え例：I want to work in a foreign country in the future because I can learn about different cultures.`,
       },
@@ -3328,7 +3328,7 @@ B: Go straight and turn left at the second corner. (　　)
 
 【問2】次の対話が成立するように並べ替えなさい。
 A: May I speak to Ms. Green, please?
-B: ( is / moment / a / just / please ).
+B: ( moment / a / just / please ).
 → 答え：Just a moment, please.
 
 【問3】次の対話の応答として最も適切なものを選びなさい。
@@ -3699,7 +3699,7 @@ Studying abroad has become more popular among Japanese high school students in r
 ① However, most of them are not interested in it at all.
 ② There are several reasons why they want to do so.
 ③ For this reason, no one wants to study abroad.
-→ 答え：②（直後にSome students...whileothers...と理由が続くため）
+→ 答え：②（直後にSome students ... while others ... と理由が続くため）
 
 【問2】本文の内容と合っているものを選びなさい。
 ① About 20% of high school students have already studied abroad.
@@ -3894,11 +3894,11 @@ B: (　　)
     description: '和文英訳で頻出する日本語特有の言い回しを英語らしい発想に変換する技術を身につける',
     keyPoints: [
       `無生物主語構文：「〜のおかげで」「〜によって」を主語にする（This medicine will make you feel better.）`,
-      `二重否定は肯定的な意味になる（ThereisnooneWhodoesnotknow〜＝みんな知っている）を訳し分ける`,
+      `二重否定は肯定的な意味になる（There is no one who does not know 〜＝みんな知っている）を訳し分ける`,
       `部分否定 not always/not all「いつも〜とは限らない／全てが〜なわけではない」`,
-      `「〜させる」の訳し分け：使役動詞make/have/let、getto〜、help＋原形`,
+      `「〜させる」の訳し分け：使役動詞make/have/let、get＋O＋to〜、help＋原形`,
       `「〜してもらう」「〜される」の受動的表現をhave/get＋O＋過去分詞で表す`,
-      `日本語の「〜ので」「〜けれど」を接続詞1つで表し、becausebutの二重使用を避ける`,
+      `日本語の「〜ので」「〜けれど」を接続詞1つで表し、becauseとso、althoughとbutの二重使用を避ける`,
       `数量・程度の日本語（〜くらい、〜ほど、〜割）を英語の比較・分数表現に対応させる`,
     ],
     sections: [
@@ -4100,7 +4100,7 @@ have/get ＋ 目的語 ＋ 過去分詞の形で表す。
 
   能動態：Everyone looks up to him.（みんなが彼を尊敬している）
   受動態：He is looked up to by everyone.
-  （lookupto全体をひとまとまりとして受動態にする）
+  （look up to 全体をひとまとまりとして受動態にする）
 
 ■ 受動態でよく使われる群動詞（入試頻出）
   take care of（〜の世話をする）
@@ -4240,13 +4240,13 @@ Everyone in the class laughs at his jokes.
 → 答え：His jokes are laughed at by everyone in the class.
 
 【問2】次の文を、下線部の語を主語にして受動態にしなさい。
-My father bought me a new bike.（meを主語に）
-→ 答え：I was bought a new bike by my father.
+My father gave me a new bike.（meを主語に）
+→ 答え：I was given a new bike by my father.
 
 【問3】（　）に最も適切な形を入れなさい。
 He was seen (　　) the building around noon.
-① enter  ② to enter  ③ entering  ④ entered
-→ 答え：② to enter（知覚動詞の受動態は to不定詞になる。※③も文脈により可だが原形からの書き換えでは②が基本）
+① enter  ② to enter  ③ enters  ④ entered
+→ 答え：② to enter（知覚動詞の受動態は to不定詞になる）
 
 【問4】次の文を受動態にしなさい。
 His teacher made him rewrite the report.
@@ -4368,7 +4368,7 @@ This letter (　　) be sent to him by tomorrow.
   I asked him a favor. → I asked a favor of him.（askはtoでもforでもなくof）
 
 ■ 代名詞を目的語にとるときの語順の制約
-SVOOの「人」が代名詞（it/them等）のときは、SVO＋前置詞の形しか使えない。
+SVOOの「物」が代名詞（it/them等）のときは、SVO＋前置詞の形しか使えない。
   × Give me it.（不自然） → 〇 Give it to me.
   ⚠注意：物が代名詞になる場合は前置詞を使った形にするのが基本ルール。`,
       },

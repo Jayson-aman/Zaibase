@@ -1935,7 +1935,7 @@ tell me のうしろは「疑問詞＋主語＋動詞」の順になる。これ
 例）May I come in?（入ってもよろしいですか）先生や目上の人に。
 
 ■ Could I 〜?（〜させていただけますか）
-例）Could I use your phone?（電話をお借りできますか）いちばんていねい。
+例）Could I use your phone?（電話をお借りできますか）May I と同じくらいていねい。
 
 ■ 答え方
 承諾：Sure. ／ Of course. ／ Certainly. ／ Go ahead.（どうぞ）

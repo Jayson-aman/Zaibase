@@ -423,9 +423,9 @@ I played tennis.　He played tennis.　They played tennis.（すべて played）
     id: 'eigo_s121',
     subject: 'eigo',
     examType: 'chugaku',
-    title: '過去形②：-ed のつけ方 四つのパターン',
-    description: '規則動詞の過去形のつづりを、四つの型に整理して確実に書けるようにする',
-    intro: 'stop の過去形は stoped ではなく stopped、study は studyed ではなく studied。同じ -ed を付けるだけなのに、つづりが4通りに分かれます。分かれ目は語尾の形。パターンで覚えれば書きまちがえません。',
+    title: '過去形②：-ed のつけ方 五つのパターン',
+    description: '規則動詞の過去形のつづりを、五つの型に整理して確実に書けるようにする',
+    intro: 'stop の過去形は stoped ではなく stopped、study は studyed ではなく studied。同じ -ed を付けるだけなのに、つづりが5通りに分かれます。分かれ目は語尾の形。パターンで覚えれば書きまちがえません。',
     order: 621,
     studyPeriod: '小5前半',
     targetLevel: 'kiso',
@@ -438,8 +438,8 @@ I played tennis.　He played tennis.　They played tennis.（すべて played）
     ],
     sections: [
       {
-        heading: '四つのパターン',
-        body: `規則動詞の過去形は、次の四つの型に分けて覚える。
+        heading: '五つのパターン',
+        body: `規則動詞の過去形は、次の五つの型に分けて覚える（①〜④のあとに⑤を説明する）。
 
 ① そのまま -ed を付ける（いちばん多い）
 play→played　watch→watched　want→wanted　help→helped　open→opened　visit→visited　call→called　listen→listened

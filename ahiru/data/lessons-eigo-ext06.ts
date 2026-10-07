@@ -1369,7 +1369,7 @@ here（ここに）／there（そこに）／home（家に）
       '時：at＝時刻（点）、on＝曜日・日付（一日）、in＝月・季節・年（広い）。',
       '場所：at＝地点、on＝面にくっつく、in＝囲まれた内部・広い地域。',
       'this / next / last / every が付いた語句には前置詞を付けない。',
-      'here / there / home には to や at を付けない（go home）。',
+      'here / there / home には to を付けない（go home）。「家で」は at home と前置詞が要る。',
       'in the morning だが on Sunday morning。特定の日が付くと on になる。',
     ],
     sections: [
@@ -2493,7 +2493,7 @@ How many books are on the desk?
       '主語をたずねられたら「主語 ＋ do / does / did.」で短く答える（Ken did.）。',
       'be動詞の文なら「主語 ＋ is / was.」で答える（Ken is.）。',
       '動詞をくり返す場合は目的語まで言う（Ken broke it. ／× Ken broke.）。',
-      '疑問詞のすぐあとが動詞なら主語、do/does/did や be動詞なら目的語をたずねている。',
+      '疑問詞のすぐあとが動詞（be動詞・助動詞もふくむ。Who is absent? / Who can swim?）なら主語。do / does / did が来て、そのうしろに別の主語があれば目的語などをたずねている。',
       '日本語の「だれが／だれを」を取りちがえると英文がまるごと変わる。',
     ],
     sections: [
@@ -2546,7 +2546,8 @@ Who broke this window? — Ken broke it.
 ■ 見分けの手順
 ①疑問詞のすぐあとを見る
 ②動詞（broke, likes, happened）なら → 疑問詞が主語
-③do / does / did / be動詞 / 助動詞 なら → 疑問詞は目的語などで、主語はそのうしろにある
+③do / does / did が来て、そのうしろに別の主語があれば → 疑問詞は目的語などで、主語はそのうしろにある
+（Who is absent? / Who can swim? のように、be動詞や助動詞が来ても、そのうしろに別の主語が無ければ疑問詞が主語）
 
 例）Who saw you?（Who が主語。だれがあなたを見た？）
 例）Who did you see?（you が主語。あなたはだれを見た？）

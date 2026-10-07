@@ -1240,7 +1240,7 @@ say と tell のちがいは、動詞が**何に重点を置くか**にありま
           '日本語の「私に言った」をそのまま said me と並べてしまう。say は言った内容を続ける動詞で、人を直接目的語に取れないことを知らないと必ずこう書く。',
         correctAnswer: 'He told me the truth.',
         correctExplanation:
-          '〈人＋内容〉の語順を取れるのは tell である。say を使うなら He said the truth to me. のように to が必要になる。「うしろに人が直接続くなら tell」と形で判断するのが確実である。tell の過去形・過去分詞はどちらも told。',
+          '〈人＋内容〉の語順を取れるのは tell である。say を使うなら He said something to me. のように to が必要になる（said the truth とは言わず、「本当のことを言う」は tell the truth と決まっている）。「うしろに人が直接続くなら tell」と形で判断するのが確実である。tell の過去形・過去分詞はどちらも told。',
       },
       {
         question: '「彼は私たちに数学を教えてくれた」を英語にしなさい。teach を使うこと。',
@@ -1637,7 +1637,7 @@ running（× runing）／swimming（× swiming）／sitting（× siting）／get
       '否定文は〈主語＋be動詞＋not＋ing形〉。not は be動詞のうしろに置く。',
       '疑問文は〈be動詞＋主語＋ing形 〜?〉。Do / Does は使わない。',
       '答えは Yes, I am. / No, I am not. のように be動詞でそろえる。',
-      'Yes の答えでは短縮形にできない（× Yes, I m.）。',
+      'Yes の答えでは短縮形にできない（× Yes, I\'m.）。',
       'What are you doing? には I am 〜ing. と進行形で答える。',
       'Who is 〜ing? のように疑問詞が主語のときは、そのまま is ＋ ing形を続ける。',
     ],
@@ -1710,7 +1710,7 @@ Who is singing? － Ken is.（ケンです）
           '質問が What are you doing? と進行形なので、答えも I am doing 〜. と進行形にそろえる。I do my homework. は「ふだん宿題をします」という習慣の意味になり、今何をしているかという問いへの答えにならない。',
       },
       {
-        question: 'Are you studying English? に「はい」と答えるとき、正しいのはどちらか。ア Yes, I am.　イ Yes, I m.',
+        question: 'Are you studying English? に「はい」と答えるとき、正しいのはどちらか。ア Yes, I am.　イ Yes, I\'m.',
         wrongAnswer: `イ Yes, I'm.`,
         trapExplanation:
           '文中では I am を I m と短縮できるので、答えの部分でも同じように短縮できると考えてしまう。短縮形が使えない位置があることを知らないと誤る。',
@@ -2964,7 +2964,7 @@ tomorrow / next week / this weekend / soon / in a few days
 この質問は会話文の定番なので、答え方もあわせて練習しておく。
 － I am going to visit my grandparents.（祖父母を訪ねる予定です）
 
-⚠ 注意：going to のうしろに名詞を置くことはできない。× I am going to a doctor.（医者になるつもりだ、の意味では誤り）→ ○ I am going to be a doctor. be を落とさないこと。`,
+⚠ 注意：「〜になるつもりだ」と言うとき、going to のうしろに名詞だけを置くことはできない。× I am going to a doctor. は「医者のところへ行く」という別の意味になってしまう。→ ○ I am going to be a doctor.（医者になるつもりだ）be を落とさないこと。`,
       },
     ],
     trapExamples: [

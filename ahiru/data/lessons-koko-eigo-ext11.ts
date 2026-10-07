@@ -488,7 +488,7 @@ by bus / by train / by bike / by car（前に a や the を付けない）
     examType: 'koko',
     title: '会話文⑥：レストランの会話',
     description: '席の案内から注文・食事中・会計まで、店員と客のセリフを流れで覚える',
-    intro: 'レストランで Are you ready to order? と聞かれたとき、まだ決まっていなければ何と言えばよいでしょう。Not yet. の三文字で切り抜けられます。飲食店の会話は入店から会計まで進む順番が決まっていて、どの段階のセリフかがわかれば空所は迷わず埋まります。',
+    intro: 'レストランで Are you ready to order? と聞かれたとき、まだ決まっていなければ何と言えばよいでしょう。Not yet. の二語で切り抜けられます。飲食店の会話は入店から会計まで進む順番が決まっていて、どの段階のセリフかがわかれば空所は迷わず埋まります。',
     order: 881,
     studyPeriod: '中2',
     targetLevel: 'kiso',
@@ -3110,8 +3110,8 @@ This room is not used now.
     targetLevel: 'moshi',
     keyPoints: [
       '中学生が書く一文は、8〜12語が目安。25〜30語なら3文が標準。',
-      '語数はスペースで区切られたまとまりを1語と数える。I am や e-mail は1語、do not は2語。',
-      '短縮形（I am → I am のままか I m か）は数え方が変わるので、短縮せずに書くのが安全。',
+      '語数はスペースで区切られたまとまりを1語と数える。I\'m や e-mail は1語、do not は2語。',
+      '短縮形（I\'m を1語と数えるか、I am で2語と数えるか）は数え方が変わるので、短縮せずに書くのが安全。',
       '数字は算用数字ではなく英語のつづりで書く（ten years old）。',
       '書き終えたら必ず語数を数え、答案の欄外に控えておく。',
       '不足したら理由や具体例を一文足す。超過したら修飾語から削る。',
@@ -3183,13 +3183,13 @@ My town has a big park near the station. Many people run there or walk their dog
     trapExamples: [
       {
         question:
-          '「20語以上25語以内で書きなさい」という条件で、次の答案の語数を数えよ。 I like summer. I can swim in the sea with my friends. We enjoy the summer festival every year.',
+          '「20語以上25語以内で書きなさい」という条件で、次の答案の語数を数えよ。 I like summer. I can swim in the sea with my friends. We enjoy the big summer festival every year.',
         wrongAnswer: '17語（I like summer. を3語と数え、そのあとを数えまちがえた）',
         trapExplanation:
           'a / the / in / with のような短い語を無意識に飛ばして数えてしまう。また文の数だけを見て「短いから足りないだろう」と感覚で判断してしまう。',
         correctAnswer: '20語（条件を満たしている）',
         correctExplanation:
-          '第1文 I / like / summer ＝3語。第2文 I / can / swim / in / the / sea / with / my / friends ＝9語。第3文 We / enjoy / the / summer / festival / every / year ＝8語。合計 3＋9＋8＝20語。冠詞や前置詞も必ず1語として数える。指を使って一語ずつ区切りながら数えるとまちがえない。',
+          '第1文 I / like / summer ＝3語。第2文 I / can / swim / in / the / sea / with / my / friends ＝9語。第3文 We / enjoy / the / big / summer / festival / every / year ＝8語。合計 3＋9＋8＝20語。冠詞や前置詞も必ず1語として数える。指を使って一語ずつ区切りながら数えるとまちがえない。',
       },
       {
         question:
@@ -3329,7 +3329,7 @@ I like winter the best. I like it because I can go skiing with my family every w
           '「because を使って、20語以上で好きな季節と理由を書きなさい」という条件で書け。',
         wrongAnswer: 'I like winter. Because I can go skiing.',
         trapExplanation:
-          'because を使ったことで満足してしまい、because から始まる文を独立させている。また語数が9語しかなく、条件を満たしていない。',
+          'because を使ったことで満足してしまい、because から始まる文を独立させている。また語数が8語しかなく、条件を満たしていない。',
         correctAnswer:
           'I like winter the best. I like it because I can go skiing with my family every winter in Nagano.（20語）',
         correctExplanation:
@@ -4010,7 +4010,7 @@ I have 〜.（経験を表す現在完了）
 ■ 足す前と足したあと
 足す前：I like winter the best. I can enjoy skiing.（9語）
 足したあと：I like winter the best. In winter, I can enjoy skiing with my family. Last year, we went to Nagano and had a great time.（25語）
-語数が2.5倍になり、内容も具体的になった。
+語数が約3倍（9語→25語）になり、内容も具体的になった。
 
 【模範解答（25語）】
 I like winter the best. In winter, I can enjoy skiing with my family. Last year, we went to Nagano and had a great time.

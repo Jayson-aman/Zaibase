@@ -979,8 +979,8 @@ May で始まる疑問文は「May I 〜?」の形が非常に多い。選択肢
     trapExamples: [
       {
         question: '次の文の誤りを直しなさい。I am looking forward to visit Kyoto next month.',
-        wrongAnswer: 'I am looking forward to visiting Kyoto next month.（正しく直せているように見えるが、なぜそうなるかを理解せず暗記だけで対応している例）',
-        trapExplanation: '多くの受験生はto visitをto visitingに直せば良いと形だけ覚えているが、なぜそうなるのかを理解していないと、look forward to以外の似た表現（例：want to）でも誤ってingを付けてしまう二次的なミスにつながる。',
+        wrongAnswer: 'I am looking forward to visit Kyoto next month.（「to＋動詞の原形」を不定詞だと思い、誤りに気づかずそのままにしてしまう）',
+        trapExplanation: 'look forward toのtoを不定詞のtoだと思いこむと、あとの動詞が原形でも自然に見えて誤りに気づけない。また、形だけ暗記していると、wantなど本当に不定詞をとる動詞のあとまでingにしてしまう二次的なミスにもつながる。',
         correctAnswer: 'I am looking forward to visiting Kyoto next month.',
         correctExplanation: 'look forward toのtoは不定詞のtoではなく前置詞のtoである。前置詞のあとには動名詞が続くというルールに従い、visitをvisitingに直す。この理屈を理解しておけば、be used to〜ing（〜に慣れている）など似た形の表現にも正しく対応できる。',
       },

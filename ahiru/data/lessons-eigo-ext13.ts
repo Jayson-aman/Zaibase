@@ -16,7 +16,7 @@ export const eigoExt13Lessons: Lesson[] = [
     title: '音と文字①：二文字で一つの音（sh・ch・th・ph・wh）',
     description: '二つの文字が合わさって別の音になる組み合わせを覚える',
     intro:
-      'アルファベットは一文字ずつ音をもっていますが、二文字が合わさると、まったくちがう音になることがあります。覚える組み合わせは5つだけです。',
+      'アルファベットは一文字ずつ音をもっていますが、二文字が合わさると、まったくちがう音になることがあります。覚える組み合わせは6つだけです。',
     order: 951,
     studyPeriod: '小4',
     targetLevel: 'kiso',
@@ -80,7 +80,7 @@ shop／chair／think／phone／white／clock
 
 ■ 語のはじめと終わり
 ・sh、ch は語のはじめにも終わりにも来る（ship、fish／chair、lunch）
-・ck は語の終わりだけに来る（語のはじめには来ない）
+・ck は語のはじめには来ない（語の終わりに来ることが多く、chicken のように語の中に来ることもある）
 ・ph は語のどこにでも来る（phone、alphabet、graph）
 
 ■ おぼえ方
@@ -206,9 +206,9 @@ Thursday（木曜日）の ur。Tuesday（火曜日）とまちがえやすい�
       },
       {
         question: 'thirteen（13）と three（3）は、同じつづりの部分をもっていますか。',
-        wrongAnswer: 'どちらも「サーティ」に近い音なので、同じ thr で始まり同じつづりである。',
+        wrongAnswer: 'どちらも th で始まる数なので、つづりの部分も同じである。',
         trapExplanation:
-          '音が似ているので、つづりも同じだと思ってしまう。母音の部分がちがう。',
+          'どちらも th で始まる数なので、つづりも同じだと思ってしまう。母音の部分がちがう。',
         correctAnswer: 'ちがう。three は ee、thirteen は ir を使う。',
         correctExplanation:
           'three は th＋r＋ee、thirteen は th＋ir＋teen である。13、30 は ir を使い、3 は ee を使う。thirteen と thirty は ir でそろっているので、この二つをセットで覚えると混ざらない。',
@@ -993,7 +993,7 @@ be動詞の文では、be動詞のうしろに not を置く。
 ・doesn't ＝ does not
 どちらで書いてもよいが、話すときは短くした形をよく使う。
 
-★ ポイント：doesn't のうしろの動詞は、s なしのもとの形。s は一つの文に一回だけ、と覚える。`,
+★ ポイント：doesn't のうしろの動詞は、s なしのもとの形。s の役目は does が引き受けているので、動詞に二重にはつけない。`,
       },
       {
         heading: '練習と気をつけること',
@@ -1032,7 +1032,7 @@ be動詞の文では、be動詞のうしろに not を置く。
           "doesn't のうしろの動詞に s を残してしまった。doesn't がすでに s の役目をしている。",
         correctAnswer: "He doesn't play tennis.",
         correctExplanation:
-          "doesn't の中の does が、主語が1人であることを表している。そのため、うしろの動詞はもとの形（play）にもどす。同じように He doesn't study ~、She doesn't have ~ となる。s は一つの文に一回だけ、と覚えること。",
+          "doesn't の中の does が、主語が1人であることを表している。そのため、うしろの動詞はもとの形（play）にもどす。同じように He doesn't study ~、She doesn't have ~ となる。s の役目は does が引き受けているので、動詞に二重につけないこと。",
       },
       {
         question: '「わたしは学生ではありません」を英語で書きなさい。',
@@ -2103,7 +2103,7 @@ I am ＋ 気持ちを表す語
 ■ hungry と angry
 ・hungry（ハングリー）：おなかがすいた
 ・angry（アングリー）：おこっている
-一文字ちがうだけなので、意味を取りちがえないよう注意する。
+どちらも ngry の部分は同じで、はじめの hu と a がちがうだけなので、意味を取りちがえないよう注意する。
 
 ■ あいさつの中で使う
 A: How are you?
@@ -2132,10 +2132,10 @@ A: I'm good, thanks.
         question: 'angry の意味は何ですか。',
         wrongAnswer: 'おなかがすいた',
         trapExplanation:
-          'hungry とつづりが似ているので取りちがえた。一文字ちがうだけで意味が変わる。',
+          'hungry とつづりが似ているので取りちがえた。はじめの部分がちがうだけで意味が変わる。',
         correctAnswer: 'おこっている',
         correctExplanation:
-          'angry は「おこっている」、hungry は「おなかがすいた」である。つづりは h があるかどうかだけのちがいなので、意味とセットで覚える。I am angry.（おこっています）、I am hungry.（おなかがすいています）と、例文で区別するとよい。',
+          'angry は「おこっている」、hungry は「おなかがすいた」である。つづりは、はじめの hu と a がちがうだけなので、意味とセットで覚える。I am angry.（おこっています）、I am hungry.（おなかがすいています）と、例文で区別するとよい。',
       },
     ],
   },
@@ -2215,7 +2215,7 @@ A: I'm good, thanks.
 ・500 yen（500円）
 ・1,000 yen（1000円）
 ・three dollars（3ドル）
-yen は複数でも s をつけない。three yen ではなく、金額をそのまま言う。
+yen は複数でも s をつけない。three hundred yen（300円）と言い、yens とは書かない。
 
 ■ まちがえやすいところ
 ・How much のあとを is にするか are にするか（1つなら is、2つ以上なら are）

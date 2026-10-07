@@ -1598,7 +1598,7 @@ once a year（年に1回）
 
 ■ 回数の数え方に注意
 1回＝once　　2回＝twice　　3回以上＝three times, four times ...
-⚠ 注意：× one time／× two times とは、ふつう言わない。once, twice を使う。
+⚠ 注意：one time／two times と言うこともあるが、1回・2回は once, twice を使うのがふつうである。
 
 ■ 速さ・単位あたりの量
 sixty kilometers an hour（時速60キロ）
@@ -3273,7 +3273,7 @@ homework, information, advice, furniture, money, water, bread は不可算。a �
 × two advices → ◯ two pieces of advice
 
 ■ 手順②　単数か複数か
-数字・many・some・these の後ろは複数形。one・each・every の後ろは単数。
+数字・many・these の後ろは複数形（some は不可算名詞にも付くので別あつかい）。one・each・every の後ろは単数。
 × three book → ◯ three books
 × many student likes → ◯ many students like
 
