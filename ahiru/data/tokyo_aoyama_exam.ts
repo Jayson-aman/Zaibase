@@ -860,7 +860,7 @@ export const tokyoAoyamaExam: Question[] = [
     examType: 'chugaku',
     difficulty: 'basic',
     examFrequency: 'high',
-    question: '【青山学院 英語①】次の英文の( )に入る最も適切な単語を選びなさい。 I like ( ) very much. It is red and sweet.\n(りんごが大好きです。赤くて甘い果物です。)',
+    question: '【青山学院 英語①】次の英文の( )に入る最も適切な単語を選びなさい。 I have ( ) in my bag. It is red and sweet.\n(かばんの中にりんごが入っています。赤くて甘い果物です。)',
     choices: [
       'an apple',
       'a dog',
@@ -869,7 +869,7 @@ export const tokyoAoyamaExam: Question[] = [
     ],
     answer: 'an apple',
     hint: '「赤くて甘い」という特徴をもつ、りんごを表す英単語を考えよう。母音で始まる単語の前にはaではなくanを使うことにも注意。',
-    explanation: '英文の意味は「私は( )が大好きです。それは赤くて甘いです。」となります。「赤くて甘い」という特徴に合う単語は apple(りんご)です。apple は a・i・u・e・o のような母音で始まる単語なので、冠詞は a ではなく an を使い、an apple となります。青山学院のように英語教育に力を入れる学校の入試では、単語の意味だけでなく、a と an の使い分けのような基本的な文法事項もあわせて問われることが多いので、正確に覚えておきましょう。',
+    explanation: '英文の意味は「私のかばんには( )が入っています。それは赤くて甘いです。」となります。「赤くて甘い」という特徴に合う単語は apple(りんご)です。apple は a・i・u・e・o のような母音で始まる単語なので、冠詞は a ではなく an を使い、an apple となります。青山学院のように英語教育に力を入れる学校の入試では、単語の意味だけでなく、a と an の使い分けのような基本的な文法事項もあわせて問われることが多いので、正確に覚えておきましょう。',
     pitfall: '母音で始まる単語の前に a をつけてしまう間違いが多いので、an との使い分けに注意する。',
     memoryTip: '母音(a,i,u,e,o)で始まる単語の前は an、それ以外は a、と口に出して練習しよう。',
   },
@@ -960,7 +960,7 @@ export const tokyoAoyamaExam: Question[] = [
     examType: 'chugaku',
     difficulty: 'standard',
     examFrequency: 'medium',
-    question: '【青山学院 英語⑥】次の英文の( )に入る最も適切な前置詞を選びなさい。 There is a cat ( ) the box.',
+    question: '【青山学院 英語⑥】次の英文の( )に入る最も適切な前置詞を選びなさい。 There is a cat ( ) the box.\n(箱の中にネコがいます。)',
     choices: [
       'in',
       'on',
@@ -1021,7 +1021,7 @@ export const tokyoAoyamaExam: Question[] = [
     examType: 'chugaku',
     difficulty: 'advanced',
     examFrequency: 'medium',
-    question: '【青山学院 英語⑨】次の英文の下線部の語に最も意味が近い単語を選びなさい。 This question is very difficult for me.',
+    question: '【青山学院 英語⑨】次の英文の difficult に最も意味が近い単語を選びなさい。 This question is very difficult for me.',
     choices: [
       'hard',
       'easy',

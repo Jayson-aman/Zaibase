@@ -41,7 +41,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'D',
     hint: 'A, B, C, ... と順番に声に出して言ってみよう。',
     explanation:
-      '【答え】D\n\n【アルファベットの順番】A, B, C, D, E, F, G ... と続く。Cの次はDである。\n\n【なぜ順番を覚えるのか】ただの暗記ではなく、実際に役に立つからである。\n・辞書は、アルファベット順に単語が並んでいる\n・名簿・図書館の本・電話帳も、この順に並んでいる\n順番を知っていれば、さがしたいものを早く見つけられる。\n\n【26文字ぜんぶ】\n・A B C D E F G\n・H I J K L M N\n・O P Q R S T U V\n・W X Y Z\n7文字・7文字・8文字・4文字に区切ると、歌のリズムと同じで覚えやすい。\n\n【前後をすぐ言えるようにする】テストでは「次の文字」「前の文字」がよく問われる。\n・歌で覚えると、前の文字が出てきにくいという弱点がある\n・「Cの前は？」と聞かれてAから数え直すのでは時間がかかる\n・3文字ずつ区切って言う練習（ABC・DEF・GHI …）をすると、前後がすぐ出てくる\n\n【大文字と小文字】どの文字にも大文字と小文字がある。\n・C → c\n・D → d\n形がまったくちがうもの（A→a、G→g、R→r）は、とくに練習が必要である。\n\n【書くときの注意】Cは左に開いた曲線、Dはたて棒＋右にふくらむ曲線。向きを反対に書かないように気をつける。',
+      '【答え】D\n\n【アルファベットの順番】A, B, C, D, E, F, G ... と続く。Cの次はDである。\n\n【なぜ順番を覚えるのか】ただの暗記ではなく、実際に役に立つからである。\n・辞書は、アルファベット順に単語が並んでいる\n・名簿・図書館の本・電話帳も、この順に並んでいる\n順番を知っていれば、さがしたいものを早く見つけられる。\n\n【26文字ぜんぶ】\n・A B C D E F G\n・H I J K L M N\n・O P Q R S T U V\n・W X Y Z\n7文字・7文字・8文字・4文字に区切ると、歌のリズムと同じで覚えやすい。\n\n【前後をすぐ言えるようにする】テストでは「次の文字」「前の文字」がよく問われる。\n・歌で覚えると、前の文字が出てきにくいという弱点がある\n・「Cの前は？」と聞かれてAから数え直すのでは時間がかかる\n・3文字ずつ区切って言う練習（ABC・DEF・GHI …）をすると、前後がすぐ出てくる\n\n【大文字と小文字】どの文字にも大文字と小文字がある。\n・C → c\n・D → d\n形がまったくちがうもの（A→a、G→g、R→r）は、とくに練習が必要である。\n\n【書くときの注意】Cは右に開いた曲線、Dはたて棒＋右にふくらむ曲線。向きを反対に書かないように気をつける。',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -353,7 +353,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '青',
     hint: '空や海の色だよ。',
     explanation:
-      '【答え】青\n\n【blue の意味】blue は「青」を表す色の単語である。\n\n【つづりと発音】b-l-u-e。\n・最後の e は読まない。「ブルー」と読む\n・l（エル）の音は、舌先を上の歯ぐきにつけて出す\n・blue と blew（吹いた）は同じ発音でつづりがちがう単語である\n\n【青いもの】\n・空 … the sky\n・海 … the sea\n・信号の「進め」… green light（日本語では「青信号」だが、英語では緑という）\n日本語と英語で色の言い方がちがう例である。日本語では昔から緑のものを「青」と呼ぶことがあり、青葉・青リンゴなどもその名残である。\n\n【青が表すもの】\n・落ち着き・冷たさ … 水や空の色\n・悲しさ … feel blue で「気分が落ちこんでいる」\n日本語では悲しいとき「青ざめる」と言うが、英語の feel blue は「ゆううつ」という意味で、少しちがう。\n\n【色を使った言い方】\n・out of the blue … とつぜん、思いがけなく\n・once in a blue moon … めったにない\n\n【使い方の例】\n・The sky is blue.（空は青い）\n・I have a blue pen.（青いペンを持っています）\n・My favorite color is blue.（好きな色は青です）\n\n【好きな色をたずねる】\n・What color do you like?（何色が好きですか）\n・I like blue.（青が好きです）',
+      '【答え】青\n\n【blue の意味】blue は「青」を表す色の単語である。\n\n【つづりと発音】b-l-u-e。\n・最後の e は読まない。「ブルー」と読む\n・l（エル）の音は、舌先を上の歯ぐきにつけて出す\n・blue と blew（吹いた）は同じ発音でつづりがちがう単語である\n\n【青いもの】\n・空 … the sky\n・海 … the sea\n・信号の「進め」… green light（日本語では「青信号」だが、英語では緑という）\n日本語と英語で色の言い方がちがう例である。日本語では昔から緑のものを「青」と呼ぶことがあり、青葉・青リンゴなどもその名残である。\n\n【青が表すもの】\n・落ち着き・冷たさ … 水や空の色\n・悲しさ … feel blue で「気分が落ちこんでいる」\n日本語の「青ざめる」は、おどろいたりこわがったりして顔色が悪くなることだが、英語の feel blue は「ゆううつ」という意味で、少しちがう。\n\n【色を使った言い方】\n・out of the blue … とつぜん、思いがけなく\n・once in a blue moon … めったにない\n\n【使い方の例】\n・The sky is blue.（空は青い）\n・I have a blue pen.（青いペンを持っています）\n・My favorite color is blue.（好きな色は青です）\n\n【好きな色をたずねる】\n・What color do you like?（何色が好きですか）\n・I like blue.（青が好きです）',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -409,7 +409,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '黒',
     hint: '夜の空の色だよ。"white"（白）と反対の色だね。',
     explanation:
-      '【何を聞かれているか】\n"black"が表す色を答える問題。\n\n【なぜwhiteと対にして覚えるのか】\nblack（黒）はwhite（白）と反対の色として、いつもセットで出題されるので、対にして覚えると区別しやすい。\n\n【ポイント1】blackの意味を確認する\nblack は「黒」を表す色の単語である。\n\n【ポイント2】つづりと発音を確認する\nb-l-a-c-k。ckで「ク」の1つの音を表す（black, back, duck, clock, rock, pickも同じ仲間。短い母音のあとはck、長い母音のあとはk（book, week）という決まりがある）。\n\n【ポイント3】語順が日本語と逆になる例を確認する\n"black and white"（白黒）のように、英語は日本語の「白黒」とは逆に黒を先に言う。同様にright and left（右左、日本語は「左右」）、north and south（北南、日本語は「南北」）も語順が逆になる。\n\n【答え】\n黒\n\n【確かめ】\nblackが「黒」であり、白・灰色・茶色などの別の色と混同していないか確認する。\n\n【よくあるまちがい】\nwhite（白）とblack（黒）の意味を逆に覚えてしまうミス。\n\n【ここが絶対】\nblack（黒）とwhite（白）は反対の色としてセットで覚え、英語では黒を先に言う語順（black and white）にも注意する。\n\n【黒いもの】夜の空（the night sky）、からす（a crow）、すみ（ink）、こしょう（pepper）。\n\n【黒が表すもの】夜・暗さ、正式さ（黒のスーツ）、もうけ（in the blackで「黒字」、反対はin the redで「赤字」）。日本語の「黒字・赤字」と同じ言い方があるのがおもしろい。\n\n【使い方の例】I have a black cat.（黒い猫を飼っています）、The night sky is black.（夜空は黒い）。',
+      '【何を聞かれているか】\n"black"が表す色を答える問題。\n\n【なぜwhiteと対にして覚えるのか】\nblack（黒）はwhite（白）と反対の色として、いつもセットで出題されるので、対にして覚えると区別しやすい。\n\n【ポイント1】blackの意味を確認する\nblack は「黒」を表す色の単語である。\n\n【ポイント2】つづりと発音を確認する\nb-l-a-c-k。ckで「ク」の1つの音を表す（black, back, duck, clock, rock, pickも同じ仲間。短い母音のあとはck、長い母音のあとはk（book, week）という決まりがある）。\n\n【ポイント3】語順が日本語と逆になる例を確認する\n"black and white"（白黒）のように、英語は日本語の「白黒」とは逆に黒を先に言う。同様にladies and gentlemen（日本語は「紳士淑女」）、north and south（北南、日本語は「南北」）も語順が逆になる。\n\n【答え】\n黒\n\n【確かめ】\nblackが「黒」であり、白・灰色・茶色などの別の色と混同していないか確認する。\n\n【よくあるまちがい】\nwhite（白）とblack（黒）の意味を逆に覚えてしまうミス。\n\n【ここが絶対】\nblack（黒）とwhite（白）は反対の色としてセットで覚え、英語では黒を先に言う語順（black and white）にも注意する。\n\n【黒いもの】夜の空（the night sky）、からす（a crow）、すみ（ink）、こしょう（pepper）。\n\n【黒が表すもの】夜・暗さ、正式さ（黒のスーツ）、もうけ（in the blackで「黒字」、反対はin the redで「赤字」）。日本語の「黒字・赤字」と同じ言い方があるのがおもしろい。\n\n【使い方の例】I have a black cat.（黒い猫を飼っています）、The night sky is black.（夜空は黒い）。',
     difficulty: 'standard',
     examType: 'chugaku',
     grade: 'e4',
@@ -525,7 +525,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: 'お父さん',
     hint: '"mother"（お母さん）とペアで覚える単語だよ。',
     explanation:
-      '【答え】お父さん\n\n【father の意味】father は「お父さん・父」を表す英単語である。\n\n【mother とセットで覚える】\n・mother（母）／ father（父）\n・つづりも -other の部分が同じで、m と f だけがちがう\n・brother（兄弟）も同じ -other の形である\n形の似た単語をまとめて覚えると、記おくに残りやすい。\n\n【つづりと発音】f-a-t-h-e-r。\n・th はにごる音（mother と同じ）。上下の歯の間に舌先を少し出す\n・f の音は、上の歯を下くちびるに当てて息を出す。日本語の「フ」とはちがう\n・f と h … father（父）と hat（ぼうし）で、音のちがいを確かめてみるとよい\n\n【呼びかけるとき】\n・Dad / Daddy\n・ふだんの会話では Father より Dad のほうがふつうである\n・Father は改まった言い方で、少しかたい感じがする\n\n【父の日・母の日】\n・Father\'s Day … 父の日（6月の第3日曜日）\n・Mother\'s Day … 母の日（5月の第2日曜日）\nアポストロフィ と s をつけて「〜の」という意味を表す。\n\n【所有を表す言い方】\n・my father（わたしの父）\n・my father\'s car（わたしの父の車）\n人を表す言葉には、アポストロフィ と s をつけて「〜の」を表す。\n\n【家族をしょうかいする言い方】\n・This is my father.（こちらはわたしの父です）\n・He is a teacher.（彼は先生です）\n2文目からは he（彼）や she（彼女）に置きかえるのが自然である。同じ言葉をくり返さないのが英語の習慣である。',
+      '【答え】お父さん\n\n【father の意味】father は「お父さん・父」を表す英単語である。\n\n【mother とセットで覚える】\n・mother（母）／ father（父）\n・つづりも -ther の部分が同じで、はじめの mo と fa だけがちがう\n・brother（兄弟）は mother と同じ -other の形である\n形の似た単語をまとめて覚えると、記おくに残りやすい。\n\n【つづりと発音】f-a-t-h-e-r。\n・th はにごる音（mother と同じ）。上下の歯の間に舌先を少し出す\n・f の音は、上の歯を下くちびるに当てて息を出す。日本語の「フ」とはちがう\n・f と h … father（父）と hat（ぼうし）で、音のちがいを確かめてみるとよい\n\n【呼びかけるとき】\n・Dad / Daddy\n・ふだんの会話では Father より Dad のほうがふつうである\n・Father は改まった言い方で、少しかたい感じがする\n\n【父の日・母の日】\n・Father\'s Day … 父の日（6月の第3日曜日）\n・Mother\'s Day … 母の日（5月の第2日曜日）\nアポストロフィ と s をつけて「〜の」という意味を表す。\n\n【所有を表す言い方】\n・my father（わたしの父）\n・my father\'s car（わたしの父の車）\n人を表す言葉には、アポストロフィ と s をつけて「〜の」を表す。\n\n【家族をしょうかいする言い方】\n・This is my father.（こちらはわたしの父です）\n・He is a teacher.（彼は先生です）\n2文目からは he（彼）や she（彼女）に置きかえるのが自然である。同じ言葉をくり返さないのが英語の習慣である。',
     difficulty: 'basic',
     examType: 'chugaku',
     grade: 'e4',
@@ -654,7 +654,7 @@ export const gradeE4EigoQuestions: Question[] = [
     answer: '消しゴム',
     hint: 'えんぴつで書いた字を消すときに使う道具だよ。',
     explanation:
-      '【答え】消しゴム\n\n【eraser の意味】eraser は「消しゴム」を表す英単語である。\n\n【言葉の成り立ち】ここがこの単語のおもしろいところである。\n・erase … 「消す」という動詞\n・それに -er をつけて eraser ＝ 「消すもの」\n動詞 ＋ er で「〜する人・〜するもの」になる、という作り方である。\n\n【同じ作り方の単語】たくさんある。\n・teach（教える）→ teacher（先生）\n・play（する）→ player（選手）\n・sing（歌う）→ singer（歌手）\n・write（書く）→ writer（作家）\n・drive（運転する）→ driver（運転手）\n・wash（洗う）→ washer（洗うもの）\nこの形を知っていると、知らない単語でも意味が想像できる。\n\n【つづりの注意】erase の最後の e は、er をつけるときにそのまま残る（eraser）。\n・ただし多くの語では e が消える … write → writer（e が1つに）、make → maker\n\n【アメリカとイギリスでちがう】\n・アメリカ英語 … eraser\n・イギリス英語 … rubber（ラバー）\n同じものでも国によって言い方がちがう例である。ほかにも、\n・消しゴム … eraser（米）／ rubber（英）\n・サッカー … soccer（米）／ football（英）\n・エレベーター … elevator（米）／ lift（英）\n・アパート … apartment（米）／ flat（英）\n\n【数え方】an eraser（e で始まるので an）／ erasers。\n\n【使い方の例】May I use your eraser?（消しゴムを使ってもいいですか）',
+      '【答え】消しゴム\n\n【eraser の意味】eraser は「消しゴム」を表す英単語である。\n\n【言葉の成り立ち】ここがこの単語のおもしろいところである。\n・erase … 「消す」という動詞\n・それに -er をつけて eraser ＝ 「消すもの」\n動詞 ＋ er で「〜する人・〜するもの」になる、という作り方である。\n\n【同じ作り方の単語】たくさんある。\n・teach（教える）→ teacher（先生）\n・play（する）→ player（選手）\n・sing（歌う）→ singer（歌手）\n・write（書く）→ writer（作家）\n・drive（運転する）→ driver（運転手）\n・wash（洗う）→ washer（洗うもの）\nこの形を知っていると、知らない単語でも意味が想像できる。\n\n【つづりの注意】erase は最後が e なので、er ではなく r だけをつける（erase ＋ r ＝ eraser。e は2つ重ならず1つ）。\n・同じように e で終わる語は r だけをつける … write → writer、make → maker、drive → driver\n\n【アメリカとイギリスでちがう】\n・アメリカ英語 … eraser\n・イギリス英語 … rubber（ラバー）\n同じものでも国によって言い方がちがう例である。ほかにも、\n・消しゴム … eraser（米）／ rubber（英）\n・サッカー … soccer（米）／ football（英）\n・エレベーター … elevator（米）／ lift（英）\n・アパート … apartment（米）／ flat（英）\n\n【数え方】an eraser（e で始まるので an）／ erasers。\n\n【使い方の例】May I use your eraser?（消しゴムを使ってもいいですか）',
     difficulty: 'standard',
     examType: 'chugaku',
     grade: 'e4',

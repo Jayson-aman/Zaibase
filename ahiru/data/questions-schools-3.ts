@@ -248,11 +248,11 @@ export const myojoQuestions: Question[] = [
   {
     id: 'myojo_eigo_02', subject: 'eigo', difficulty: 'advanced',
     course: 'myojo', examType: 'chugaku',
-    question: '下線部の誤りを正して文全体を書き直せ。"He don\'t like playing soccer in the rain."',
+    question: '次の文の誤りを正して、文全体を書き直せ。"He don\'t like playing soccer in the rain."',
     answer: 'He doesn\'t like playing soccer in the rain.',
     hint: '三人称単数現在は does not（doesn\'t）',
     explanation:
-      '【何を聞かれているか】\n"He don\'t like playing soccer in the rain."という文の下線部の誤りを正して、文全体を書き直す問題。\n\n【なぜdoesn\'tを使うのか】\n主語がHe（三人称単数）のとき、一般動詞の否定文にはdon\'tではなくdoesn\'tを使うという決まりがある。\n\n【ポイント1】三人称単数の否定文の形を確認する\n主語がHe/She/Itのとき、一般動詞の否定文は"doesn\'t＋動詞の原形"。\n\n【ポイント2】don\'tとdoesn\'tの使い分けを確認する\ndon\'tはI/you/we/theyなど、doesn\'tはhe/she/itなど三人称単数の主語に対応する。\n\n【ポイント3】"like playing"の形が正しいことを確認する\n"like＋動名詞（-ing）"は「〜するのが好き」という正しい形で、この部分は直す必要がない。\n\n【答え】\nHe doesn\'t like playing soccer in the rain.\n\n【確かめ】\n主語Heに対して"doesn\'t"が使われていること、"like playing"の部分はそのままになっていることを確認する。\n\n【よくあるまちがい】\ndon\'tをそのまま使ってしまい、主語との一致（三人称単数）を確認しないミス。主語がhe/she/itのときは必ずdoesn\'tを使う。\n\n【ここが絶対】\n一般動詞の否定文は、主語に合わせてdon\'t（I/you/we/they）とdoesn\'t（he/she/it）を使い分ける。',
+      '【何を聞かれているか】\n"He don\'t like playing soccer in the rain."という文の誤りを正して、文全体を書き直す問題。\n\n【なぜdoesn\'tを使うのか】\n主語がHe（三人称単数）のとき、一般動詞の否定文にはdon\'tではなくdoesn\'tを使うという決まりがある。\n\n【ポイント1】三人称単数の否定文の形を確認する\n主語がHe/She/Itのとき、一般動詞の否定文は"doesn\'t＋動詞の原形"。\n\n【ポイント2】don\'tとdoesn\'tの使い分けを確認する\ndon\'tはI/you/we/theyなど、doesn\'tはhe/she/itなど三人称単数の主語に対応する。\n\n【ポイント3】"like playing"の形が正しいことを確認する\n"like＋動名詞（-ing）"は「〜するのが好き」という正しい形で、この部分は直す必要がない。\n\n【答え】\nHe doesn\'t like playing soccer in the rain.\n\n【確かめ】\n主語Heに対して"doesn\'t"が使われていること、"like playing"の部分はそのままになっていることを確認する。\n\n【よくあるまちがい】\ndon\'tをそのまま使ってしまい、主語との一致（三人称単数）を確認しないミス。主語がhe/she/itのときは必ずdoesn\'tを使う。\n\n【ここが絶対】\n一般動詞の否定文は、主語に合わせてdon\'t（I/you/we/they）とdoesn\'t（he/she/it）を使い分ける。',
   },
   {
     id: 'myojo_eigo_03', subject: 'eigo', difficulty: 'advanced',
@@ -508,7 +508,7 @@ export const tezukayamaQuestions: Question[] = [
     id: 'tezukayama_shakai_05', subject: 'shakai', difficulty: 'advanced',
     course: 'tezukayama', examType: 'chugaku',
     question: '環境問題に関して、「酸性雨」が発生するメカニズムを説明せよ。',
-    answer: '工場・自動車から排出される硫黄酸化物（SO₂）や窒素酸化物（NOx）が大気中の水分と反応して硫酸・硝酸となり、酸性の強い雨として降る。',
+    answer: '工場・自動車から排出される硫黄酸化物や窒素酸化物が大気中の水分と反応して硫酸・硝酸となり、酸性の強い雨として降る。',
     hint: '化石燃料の燃焼が原因',
     explanation:
       '【何を聞かれているか】酸性雨が発生するしくみ。\n【なぜそうなるのか】工場や自動車で**石炭・石油を燃やすと硫黄酸化物・窒素酸化物**が出る。これが空気中の水と結びついて硫酸・硝酸になり、雨を強い酸性にする。\n【ステップ1】化石燃料の燃焼→硫黄酸化物・窒素酸化物。\n【ステップ2】水と反応→硫酸・硝酸。\n【ステップ3】雨にとけて酸性雨。\n【答え】硫黄酸化物や窒素酸化物が水と反応して硫酸・硝酸になり、酸性の雨として降る\n【確かめ】森林がかれる、湖の魚が死ぬ、銅像がとける。風で国境をこえて被害が出る。\n【よくあるまちがい】二酸化炭素が原因とする。**二酸化炭素は温暖化**。\n【ここが絶対】「酸性雨の原因は硫黄酸化物・窒素酸化物、二酸化炭素は温暖化の原因」という区別は環境問題の最頻出のひっかけ。',
@@ -1137,7 +1137,7 @@ export const otaniQuestions: Question[] = [
   {
     id: 'otani_eigo_05', subject: 'eigo', difficulty: 'advanced',
     course: 'otani', examType: 'chugaku',
-    question: '次の英文を読んで、質問に日本語で答えよ。\n"Sato family has three members: father, mother, and Kenji. Kenji is 11 years old. His father is 35 years old."\nQ: What is the age difference between Kenji and his father?',
+    question: '次の英文を読んで、質問に日本語で答えよ。\n"The Sato family has three members: father, mother, and Kenji. Kenji is 11 years old. His father is 35 years old."\nQ: What is the age difference between Kenji and his father?',
     answer: '24歳（35-11=24）',
     hint: 'age difference = 年の差',
     explanation:

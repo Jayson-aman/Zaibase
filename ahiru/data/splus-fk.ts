@@ -436,7 +436,7 @@ export const SPLUS_FK: Question[] = [
     choices: ["On Monday.","On Wednesday.","On Thursday.","On Friday."],
     answer: "On Wednesday.",
     hint: "図書館（library）という語が出てくる文を探そう。",
-    explanation: "【何を聞かれているか】\nエミがお姉さんと図書館に行くのはいつか。\n【なぜそうなるのか】\n本文の2文目に、On Wednesday, she goes to the library with her sister. とある。質問の library と sister が同じ文に出てくるので、その文の曜日が答えになる。\n【ステップ1】質問の語（library, sister）を本文でさがす。\n【ステップ2】2文目に見つかる。On Wednesday（水曜日）。\n【ステップ3】他の曜日を確かめる。月曜日と木曜日はピアノ、金曜日はテニス。\n【答え】On Wednesday.\n【確かめ】日曜日と火曜日は出てこないが、火曜日は予定なしと書かれている。選択肢の曜日と本文の内容がすべて対応している。\n【よくあるまちがい】最初に出てきた曜日（Monday）を、**質問の内容を確かめずに**選んでしまう。",
+    explanation: "【何を聞かれているか】\nエミがお姉さんと図書館に行くのはいつか。\n【なぜそうなるのか】\n本文の2文目に、On Wednesday, she goes to the library with her sister. とある。質問の library と sister が同じ文に出てくるので、その文の曜日が答えになる。\n【ステップ1】質問の語（library, sister）を本文でさがす。\n【ステップ2】2文目に見つかる。On Wednesday（水曜日）。\n【ステップ3】他の曜日を確かめる。月曜日と木曜日はピアノ、金曜日はテニス。\n【答え】On Wednesday.\n【確かめ】火曜日は「予定なし」と書かれているので、選択肢にある曜日と本文の内容がすべて対応している。\n【よくあるまちがい】最初に出てきた曜日（Monday）を、**質問の内容を確かめずに**選んでしまう。",
     pitfall: "質問と関係のない最初の曜日を選んでしまう誤りがある。",
     memoryTip: "質問の語を本文でさがし、同じ文から答えをとる。",
   },

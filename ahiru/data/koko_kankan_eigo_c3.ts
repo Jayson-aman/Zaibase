@@ -100,13 +100,13 @@ A: Me too. Let's ask the teacher for one more day.
 
 ① I have (　) to Kyoto twice.（私は京都に2回行ったことがある）
 ② Have you ever (　) natto before?（今までに納豆を食べたことがありますか）
-③ She has never (　) abroad.（彼女は一度も海外へ行ったことがない）
+③ He has just (　) to the station, so he is not here now.（彼はちょうど駅へ行ってしまったので、今ここにはいない）
 
 語群：been / eaten / gone`,
-    answer: '① been　② eaten　③ been',
-    hint: '「行ったことがある」経験用法はhave been to、eatの過去分詞はeaten。',
-    explanation: `【出題意図】現在完了（経験用法）でのbeenとgoneの使い分け、動詞の過去分詞形を問う。【解説】①③「〜へ行ったことがある」という経験はhave been to〜を使う（have goneは「行ってしまって今ここにいない」という意味になるため経験用法には使えない）。②eatの過去分詞はeaten。【注意点】have gone toは「行ってしまい、今は不在」を表すので、経験を尋ねる文脈ではbeenを使うのが原則。【関連知識】経験用法でよく使う副詞：ever、never、before、once/twice/〜times。`,
-    pitfall: '①③をhave/has goneとすると「行ってしまっていない」という意味になり経験を表せない。',
+    answer: '① been　② eaten　③ gone',
+    hint: '「行ったことがある」経験用法はhave been to、「行ってしまって今いない」はhave gone to、eatの過去分詞はeaten。',
+    explanation: `【出題意図】現在完了でのbeenとgoneの使い分け、動詞の過去分詞形を問う。【解説】①「〜へ行ったことがある」という経験はhave been to〜を使う（have goneは「行ってしまって今ここにいない」という意味になるため経験用法には使えない）。②eatの過去分詞はeaten。③後ろにso he is not here now（だから今ここにいない）とあるので、「行ってしまって今はいない」を表すhas gone to〜が入る（has beenだと「行って戻ってきた」意味になり、文意に合わない）。【注意点】have gone toは「行ってしまい、今は不在」を表すので、経験を尋ねる文脈ではbeenを使うのが原則。【関連知識】経験用法でよく使う副詞：ever、never、before、once/twice/〜times。`,
+    pitfall: '①をhave goneとすると「行ってしまっていない」という意味になり経験を表せない。③をhas beenとすると「行って戻ってきた」意味になり、後ろのso he is not here nowと矛盾する。',
     memoryTip: '経験の「行ったことがある」はbeen、「行ってしまった（不在）」はgoneと覚える。',
   },
   {
@@ -351,7 +351,7 @@ Many schools in Japan have started to allow students to use smartphones for lear
 ① Do you know (　) this word means?（この単語が何を意味するか知っていますか）
 ② I wonder (　) will win the speech contest.（誰がスピーチコンテストで優勝するのだろう）
 ③ Please tell me (　) the club activity (　) start.（部活動がいつ始まるか教えてください）`,
-    answer: '① what　② who　③ when, will (does)',
+    answer: '① what　② who　③ when, will',
     hint: '間接疑問文は「疑問詞+主語+動詞」の語順になる（疑問文の倒置をしない）。',
     explanation: `【出題意図】間接疑問文の語順（疑問詞+主語+動詞、疑問文の倒置をしない）を問う。【解説】①「What does this word mean?」→間接疑問ではwhat this word meansの語順（doは消える）。②「Who will win〜?」のwhoが主語の場合は間接疑問でも語順が変わらない（who will win）。③「When will the club activity start?」→間接疑問ではwhen the club activity will startの語順。【注意点】疑問詞が主語の場合（②）は普通の疑問文と間接疑問文で語順が変わらない点に注意。①③は疑問詞が主語でないため、主語+動詞の平叙文の語順に戻す。【関連知識】間接疑問文はknow/wonder/tell/askなどの動詞の目的語としてよく使われる。`,
     pitfall: '①をwhat does this word meanのままにするのは誤り。間接疑問ではdoesを使わない。',
@@ -599,7 +599,7 @@ Artificial intelligence (AI) is increasingly used in schools to help students le
 「もし私が生徒会長だったら、もっと多くの生徒の意見を聞く仕組みを作るだろう。学校生活をより良くするために、私たち一人ひとりが行動を起こすべきだと思う。」`,
     answer: `（解答例）If I were the student council president, I would create a system to listen to more students' opinions. I believe each of us should take action to make our school life better.（32語）
 
-（別解）If I were the president of the student council, I would make a way for more students to share their opinions. I think we should all try to improve our school life.（33語）`,
+（別解）If I were the president of the student council, I would make a way for more students to share their opinions. I think we should all try to improve our school life.（32語）`,
     hint: '「もし〜だったら〜だろう」→仮定法過去（If+主語+were/過去形, would+動詞原形）。「〜すべきだと思う」→I believe/think+that節。',
     explanation: `【出題意図】仮定法過去を使った和文英訳と、意見を述べる文の複合英作文。【解説】「もし生徒会長だったら」→現在の事実に反する仮定なので仮定法過去：If I were the student council president（be動詞は主語に関わらずwere）。「〜仕組みを作るだろう」→would create a system to〜。「〜べきだと思う」→I believe/think (that) we should〜。【注意点】仮定法過去のif節ではbe動詞は人称に関係なくwereを使うのが原則（口語ではwasも使われるが、書き言葉ではwereが標準）。【関連知識】生徒会（student council）、意見を聞く（listen to opinions）は学校生活の英作文で頻出のテーマ語彙。`,
     pitfall: '「If I am the president」と直説法にすると、現在の事実に反する仮定を正しく表せない。',
@@ -647,7 +647,7 @@ Uniforms have long been a standard part of school life in Japan. Supporters argu
     answer: `① Uniforms create a sense of equality among students regardless of their family's income, and they reduce the time and stress of choosing clothes every morning.
 ② ・制服は生徒の自己表現を制限してしまう。・厳しい服装規定が、特に厳しい気候の際に不快になることがある。
 ③ 〜に関係なく
-④ 伝統と個人の自由のバランスを取るため、制服と私服のどちらかを選べるようにする学校が出てきている。（47字）`,
+④ 伝統と個人の自由のバランスを取るため、制服と私服のどちらかを選べるようにする学校が出てきている。（48字）`,
     hint: '①Supporters argue that〜以下、②opponents claim that〜以下、③regardless of=〜にかかわらず、④最終文に注目。',
     explanation: `【出題意図】学校制服をテーマにした賛否対比の論説文読解。情報抽出・語彙・要約力を総合的に問う最高難度の問題。【解説】①賛成理由：「create a sense of equality among students regardless of their family's income（家庭の収入に関係なく平等感を生む）」と「reduce the time and stress of choosing clothes（服選びの時間とストレスを減らす）」の2点。②反対理由：「limit students' self-expression（自己表現を制限する）」と「strict dress codes can be uncomfortable, especially in extreme weather（厳しい服装規定が極端な気候で不快になりうる）」の2点。③regardless of=「〜に関わらず」。④最終文「some schools have begun allowing students to choose between uniforms and casual clothes, aiming to balance tradition with individual freedom」を50字以内で要約する。【注意点】④は「伝統」と「個人の自由」のバランスという本文のキーワードを必ず盛り込む。【関連知識】equality（平等）、self-expression（自己表現）、dress code（服装規定）は社会的テーマの頻出語彙。`,
     pitfall: '②で賛成理由を混ぜて答えないこと。opponents（反対派）の理由のみを問われている。',
@@ -667,7 +667,7 @@ Uniforms have long been a standard part of school life in Japan. Supporters argu
 （I think / I believe で書き始めること）`,
     answer: `（賛成例）I think schools should allow students to use smartphones. Students can quickly look up information, communicate with teachers about schedule changes, and use educational apps. If schools set clear rules about when to use them, smartphones can support learning effectively.（40語）
 
-（反対例）I believe schools should not allow smartphones during class. Many students would use them for games or social media instead of studying. Without smartphones, students can focus better on lessons and communicate with classmates face to face.（36語）`,
+（反対例）I believe schools should not allow smartphones during class. Many students would use them for games or social media instead of studying. Without smartphones, students can focus better on lessons and communicate with classmates face to face.（37語）`,
     hint: '主張→理由1・2→まとめの構成で書く。ルール設定などの条件を付けると説得力が増す。',
     explanation: `【出題意図】学校でのスマートフォン使用をテーマにした意見英作文。主張・理由・具体例・まとめの構成力と35語以上の語数条件を問う。【解説】賛成の理由例：情報検索の迅速さ・先生との連絡・教育アプリの活用・明確なルール設定による効果的な学習支援。反対の理由例：授業中のゲームやSNS利用への懸念・集中力低下・対面コミュニケーションの重要性。どちらの立場でも理由が具体的で論理的なら評価される。【注意点】35語以上を確実に満たすために理由を2つ以上挙げ、「If〜」や「Without〜」などの条件節を使うと説得力が増す。【関連知識】educational app（教育アプリ）、social media（SNS）、face to face（対面で）は頻出関連語彙。`,
     pitfall: '理由を1つしか挙げないと語数不足・説得力不足になりやすい。必ず2点以上の理由を書く。',
@@ -692,11 +692,11 @@ C: (　④　) I'll prepare the proposal for tomorrow.
 
 ア. How about combining both? We could visit Kyoto in the morning and Osaka in the afternoon.
 イ. Sounds good.
-ウ. That makes sense.
+ウ. I see your point.
 エ. I think Kyoto would be a great choice.`,
     answer: '① エ　② ウ　③ ア　④ イ',
     hint: '①提案、②相手の意見への同意しつつ反論の前振り、③折衷案の提示、④賛同して締める。',
-    explanation: `【出題意図】学校行事（修学旅行）の企画会議という文脈での会話の流れと妥協案の提示パターンを問う。【解説】①「Kyoto has a lot of historical sites」に自然につながる提案→「I think Kyoto would be a great choice.」（エ）。②「But some students want〜」と逆接が続くので、直前は一旦同意する表現→「That makes sense.」（ウ）。③「A great compromise」と評価されているので、折衷案を提示する文→「How about combining both?〜」（ア）。④最後にCが同意して締めくくる→「Sounds good.」（イ）。【注意点】compromise（妥協案・折衷案）という単語がヒントとして機能している。【関連知識】会議での意見表現：How about〜ing?（〜するのはどうか）、That makes sense.（それは筋が通っている）、Sounds good.（いいですね）。`,
+    explanation: `【出題意図】学校行事（修学旅行）の企画会議という文脈での会話の流れと妥協案の提示パターンを問う。【解説】①「Kyoto has a lot of historical sites」に自然につながる提案→「I think Kyoto would be a great choice.」（エ）。②「But some students want〜」と逆接が続くので、直前は相手の意見を一旦受け止める表現→「I see your point.」（ウ）。④は直前でAが妥協案を評価して採決を提案しているので、賛成して締める「Sounds good.」（イ）が合う（I see your pointは意見を受け止める表現なので、④には合わない）。③「A great compromise」と評価されているので、折衷案を提示する文→「How about combining both?〜」（ア）。【注意点】compromise（妥協案・折衷案）という単語がヒントとして機能している。【関連知識】会議での意見表現：How about〜ing?（〜するのはどうか）、I see your point.（なるほど、一理ある）、Sounds good.（いいですね）。`,
     pitfall: '②でアを先に選んでしまうと、Aの発言「But some students want〜」との論理的なつながりが崩れる。',
     memoryTip: 'compromise（妥協案）という語から、その直前に折衷案を提示する文が入ると逆算する。',
   },
@@ -861,7 +861,7 @@ Finding the right balance between the benefits of club activities and the well-b
   （とても緊張していたが、私は何事もなかったかのように振る舞った）`,
     answer: '① were　② Were　③ as',
     hint: '①If it were not for〜／had it not been for〜、②Ifの省略による倒置、③as if+仮定法過去完了。',
-    explanation: `【出題意図】仮定法の発展表現（If it were not for、Ifの省略による倒置、as if構文）を問う。【解説】①「If it were not for your advice」は現在の仮定だが、文全体は「would have given up」と過去の仮定法過去完了の帰結節になっているため、「If it had not been for」がより厳密だが、①では空欄1つのためwereまたはhad beenのいずれかを入れる形（過去の話なのでhad beenがより正確、werebでも許容）。②Ifを省略した倒置形：Were I in your position（=If I were in your position）。③「〜であったかのように」＝as if+仮定法。ここでは「何事もなかったかのように」という過去の事実に反する内容なのでas if+過去完了（had happened）が使われている。【注意点】①はIf it were not for〜（現在）とIf it had not been for〜（過去）の区別が入試での頻出ポイント。ここでは文脈が過去（studying Englishをあきらめていただろう、という過去の話）なのでhad not been forがより正確だが、had beenも許容。②Were+S+〜は倒置によるifの省略形。【関連知識】as if/as though+仮定法過去（現在の事実に反する）、as if+仮定法過去完了（過去の事実に反する）の使い分けも重要。`,
+    explanation: `【出題意図】仮定法の発展表現（If it were not for、Ifの省略による倒置、as if構文）を問う。【解説】①「If it were not for your advice」は「あなたの助言がなければ」という現在の事実に反する仮定（仮定法過去）で、帰結節もwould give upと仮定法過去になっているので、空欄にはwereが入る（過去の話なら「If it had not been for 〜, I would have given up」と過去完了にする）。②Ifを省略した倒置形：Were I in your position（=If I were in your position）。③「〜であったかのように」＝as if+仮定法。ここでは「何事もなかったかのように」という過去の事実に反する内容なのでas if+過去完了（had happened）が使われている。【注意点】①はIf it were not for〜（現在）とIf it had not been for〜（過去）の区別が入試での頻出ポイント。本問は帰結節がwould give up（現在の話）なのでIf it were not for。②Were+S+〜は倒置によるifの省略形。【関連知識】as if/as though+仮定法過去（現在の事実に反する）、as if+仮定法過去完了（過去の事実に反する）の使い分けも重要。`,
     pitfall: '②をIf I were の語順のままにしないこと。設問はIfを省略した倒置形を要求している。',
     memoryTip: 'If の省略→倒置（Were/Had/Should+S+〜）というパターンをセットで覚える。',
   },
@@ -874,7 +874,7 @@ Finding the right balance between the benefits of club activities and the well-b
     maxOnly: true,
     question: `次の各文の誤りを1か所指摘し、正しく直しなさい。
 
-① The number of foreign tourists visiting Japan have increased rapidly these years.
+① The number of foreign tourists visiting Japan have increased rapidly in recent years.
 ② One of the biggest challenge facing Japanese schools is the shortage of teachers.
 ③ This is one of the most difficult problem I have ever faced.`,
     answer: `① have increased → has increased（The number of〜は単数扱い）
@@ -952,7 +952,7 @@ A: Exactly. Some teachers are worried about the extra workload, but the school b
     answer: `① Teachers will write detailed comments on each student's strengths and areas to improve, in addition to letter grades.
 ② 教師が詳細なコメントを書くのに、より多くの時間がかかってしまうという懸念。
 ③ It will help students understand their progress better.`,
-    hint: '①Aの3番目の発言、②Bの発言「it must take teachers a lot more time」、③Aの最後の発言後半。',
+    hint: '①Aの2番目の発言、②Bの発言「it must take teachers a lot more time」、③Aの最後の発言後半。',
     explanation:
       '【何を聞かれているか】\n学校の新しい成績評価制度についての会話文を読んで、制度の内容・懸念・メリットを答える問題。\n\n【なぜ"Instead of just A, also B"に注目するのか】\n"Instead of just letter grades, teachers will also write detailed comments"という文は、「文字評価だけでなく、コメントも書く」という追加のニュアンスを表しており、文字評価が完全になくなるわけではないことを正確に読み取る必要がある。\n\n【ポイント1】①制度の内容を確認する\n"teachers will also write detailed comments on each student\'s strengths and areas to improve, in addition to letter grades"（文字評価に加えて詳細なコメントを書く）。\n\n【ポイント2】②懸念を確認する\nBの発言"it must take teachers a lot more time to write"から、教師の時間的負担の増加が懸念点。\n\n【ポイント3】③メリットを確認する\n"the school board says it will help students understand their progress better"（生徒が自分の成長をよりよく理解できる）。\n\n【答え】\n① Teachers will write detailed comments on each student\'s strengths and areas to improve, in addition to letter grades.\n② 教師が詳細なコメントを書くのに、より多くの時間がかかってしまうという懸念。\n③ It will help students understand their progress better.\n\n【確かめ】\n①の答えが「文字評価に加えて」コメントを書くという内容になっていて、文字評価がなくなるという誤った内容になっていないか確認する。\n\n【よくあるまちがい】\n①でletter gradesを完全になくす制度だと誤解してしまうミス。"Instead of just〜"は「〜だけでなく」という追加の意味を表す。\n\n【ここが絶対】\n"Instead of just A, also B"＝「Aだけでなく、Bも」という追加のニュアンスを正確に読み取る。',
     pitfall: '①でletter gradesを完全になくす制度だと誤解しないこと。「加えて」コメントを書く制度。',
@@ -973,12 +973,12 @@ A: Exactly. Some teachers are worried about the extra workload, but the school b
 ② No sooner (　) she finished her homework than her friend called her.
   ア. had　イ. has　ウ. did　エ. was
 
-③ Never (　) I seen such a beautiful sunset before.
+③ Never (　) I seen such a beautiful sunset as the one in front of me now.
   ア. had　イ. have　ウ. did　エ. was`,
     answer: '① ア(had)　② ア(had)　③ イ(have)',
     hint: 'Hardly had+S+p.p.+when〜、No sooner had+S+p.p.+than〜、Never have+S+p.p.（否定語の倒置）。',
-    explanation: `【出題意図】否定語（Hardly/No sooner/Never）を文頭に置いたときの倒置構文を問う。【解説】①②「Hardly had S p.p. when〜」「No sooner had S p.p. than〜」＝「〜するとすぐに…した」という頻出の倒置構文。どちらも過去完了（had+p.p.）を使い、Hardly/No soonerの直後は倒置（had+主語）になる。③「Never have I seen〜」＝現在完了の否定語倒置。Neverが文頭に来たことでhave+主語+p.p.の倒置形になる。文脈上「これまで見たことがない」という現在完了の経験用法なのでhaveを使う（時制の指定がhad〜beforeでないため現在完了）。【注意点】①②はwhen/thanとセットで覚える（Hardly〜when、No sooner〜than）。③はhad(過去完了)ではなくhave(現在完了)を使う点に注意（文全体が現在完了の経験を表しているため）。【関連知識】否定語による倒置：Little did I know that〜（〜だとは知らなかった）、Not only did〜も同グループの重要構文。`,
-    pitfall: '③をhadにしないこと。文脈が現在完了（seen...before）なのでhaveが正しい。',
+    explanation: `【出題意図】否定語（Hardly/No sooner/Never）を文頭に置いたときの倒置構文を問う。【解説】①②「Hardly had S p.p. when〜」「No sooner had S p.p. than〜」＝「〜するとすぐに…した」という頻出の倒置構文。どちらも過去完了（had+p.p.）を使い、Hardly/No soonerの直後は倒置（had+主語）になる。③「Never have I seen〜」＝現在完了の否定語倒置。Neverが文頭に来たことでhave+主語+p.p.の倒置形になる。「今目の前にあるような夕焼けは、今までに一度も見たことがない」という、現在を基準にした現在完了の経験用法なのでhaveを使う（過去のある時点を基準にする文脈ではないのでhadは不可）。【注意点】①②はwhen/thanとセットで覚える（Hardly〜when、No sooner〜than）。③はhad(過去完了)ではなくhave(現在完了)を使う点に注意（現在を基準にした現在完了の経験を表しているため）。【関連知識】否定語による倒置：Little did I know that〜（〜だとは知らなかった）、Not only did〜も同グループの重要構文。`,
+    pitfall: '③をhadにしないこと。基準が現在（now）なので現在完了のhaveが正しい。',
     memoryTip: 'Hardly〜when、No sooner〜than、をセットの熟語として覚え、否定語倒置は疑問文と同じ語順になると意識する。',
   },
   {
@@ -1014,7 +1014,7 @@ Peer pressure among teenagers can influence decisions ranging from fashion choic
     question: `次の日本語を英語に訳しなさい。（25語以上）
 
 「私たちの学校には、生徒がお互いに助け合う文化がある。この伝統を守り続けることが、より良い学校生活につながると私は信じている。」`,
-    answer: `（解答例）Our school has a culture in which students help each other. I believe that keeping this tradition alive will lead to a better school life for all of us.（28語）
+    answer: `（解答例）Our school has a culture in which students help each other. I believe that keeping this tradition alive will lead to a better school life for all of us.（29語）
 
 （別解）Our school has a strong tradition of students supporting one another, and I am convinced that continuing this custom will make our school life better for everyone.（27語）`,
     hint: '「〜する文化」→a culture in which〜/a culture of〜ing、「〜につながると信じている」→I believe (that)〜will lead to〜。',
@@ -1091,7 +1091,7 @@ Many educators now suggest a hybrid model, combining in-person and online classe
     answer: `① Online classes allow students to learn at their own pace, and to review recorded lessons whenever they need to.
 ② ・生徒が学習意欲を保ちにくく、クラスメートとの人間関係を築きにくくなる。・対面での交流がないため、教師が生徒の困りごとに気づきにくくなる。
 ③ 対面授業とオンライン授業を組み合わせた学習モデル。
-④ 対面とオンラインを組み合わせたハイブリッド型の授業を導入し、両方の利点を生かしつつ欠点を最小限に抑えるべきだという考え。（59字）`,
+④ 対面とオンラインを組み合わせたハイブリッド型の授業を導入し、両方の利点を生かしつつ欠点を最小限に抑えるべきだという考え。（60字）`,
     hint: '①Supporters say online classes offer〜、②critics point out that〜とteachers find it〜、③combining in-person and online classes、④第3段落全体の要旨。',
     explanation: `【出題意図】オンライン教育をテーマにした3段落構成の論説文読解。賛否対比とハイブリッド型という結論の把握を総合的に問う最高難度の問題。【解説】①「allowing students to learn at their own pace and review recorded lessons whenever they need to」から2点。②「harder for students to stay motivated and to build relationships with classmates」と「teachers...find it more difficult to notice when a student is struggling」の2点。③hybrid model=「in-person（対面）とonline（オンライン）を組み合わせた学習モデル」。④第3段落「Many educators now suggest a hybrid model...as a way to capture the benefits of both approaches while minimizing their drawbacks」を60字以内でまとめる。【注意点】④は「両方の利点を生かし、欠点を最小限にする」というキーワードを必ず含める。【関連知識】remote learning（遠隔学習）、hybrid model（ハイブリッド型）、drawback（欠点）はオンライン教育の頻出語彙。`,
     pitfall: '②で生徒側の課題（意欲・人間関係）と教師側の課題（気づきにくさ）の両方に触れる必要がある。',
@@ -1111,7 +1111,7 @@ Many educators now suggest a hybrid model, combining in-person and online classe
 （I think / I believe で書き始めること）`,
     answer: `（賛成例）I think inquiry-based learning is more effective than traditional lectures. Students research topics themselves, ask questions, and develop critical thinking skills. This active process helps them remember information better and prepares them for real-world problem solving.（36語）
 
-（反対例）I believe traditional lectures are still important along with inquiry-based learning. Lectures allow teachers to explain complex ideas clearly and efficiently, while inquiry-based learning can take more time. Combining both methods would help students learn most effectively.（36語）`,
+（反対例）I believe traditional lectures are still important along with inquiry-based learning. Lectures allow teachers to explain complex ideas clearly and efficiently, while inquiry-based learning can take more time. Combining both methods would help students learn most effectively.（37語）`,
     hint: '探究学習の利点（主体性・批判的思考・実践力）と講義形式の利点（効率的な知識伝達）を対比しながら理由を述べる。',
     explanation: `【出題意図】探究学習（inquiry-based learning）と従来の講義形式の比較をテーマにした意見英作文。理由の具体性と語数条件（35語以上）を問う。【解説】賛成の理由例：生徒が自ら調べ、質問し、批判的思考力を養う能動的なプロセス・記憶の定着・実社会での問題解決力の育成。反対（併用）の理由例：講義は複雑な内容を効率的に説明できる・探究学習は時間がかかる・両方を組み合わせることが最も効果的。どちらの立場でも具体的な理由を2つ以上挙げれば評価される。【注意点】「inquiry-based learning」という専門用語をそのまま使い、意味を誤解しないよう「生徒主体の学び」という前提で理由を展開する。【関連知識】critical thinking（批判的思考力）、active learning（能動的学習）、real-world problem solving（実社会での問題解決）は探究学習関連の頻出語彙。`,
     pitfall: '専門用語（inquiry-based learning）の意味を誤解し、単なる自習と混同して理由を書かないよう注意する。',

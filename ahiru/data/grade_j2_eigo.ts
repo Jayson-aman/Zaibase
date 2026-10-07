@@ -150,11 +150,11 @@ export const gradeJ2EigoQuestions: Question[] = [
     difficulty: 'advanced',
     passage:
       'Last Saturday, Mika went to the zoo with her family. She saw many animals and took a lot of pictures there. In the afternoon, they ate lunch at a small restaurant near the zoo. After lunch, Mika bought a T-shirt with a panda on it. She had a really great day.',
-    question: '次の英文を読んで、質問に答えなさい。\n質問：What did Mika buy at the zoo?',
+    question: '次の英文を読んで、質問に答えなさい。\n質問：What did Mika buy after lunch?',
     answer: 'a T-shirt with a panda on it（パンダの絵が描かれたTシャツ）',
     hint: '「Mika bought」に続く部分に注目する。',
     explanation:
-      '【何を聞かれているか】\n本文を読み、ミカが動物園で何を買ったかを答える問題。\n\n【なぜboughtに注目するのか】\n「何を買ったか」という設問の答えは、buy（買う）の過去形boughtを含む一文に直接示されている。\n\n【ポイント1】該当の一文を確認する\n本文中の"Mika bought a T-shirt with a panda on it."に注目する。\n\n【ポイント2】boughtの意味を確認する\nboughtはbuy（買う）の過去形。\n\n【ポイント3】答えの内容を確認する\nミカが動物園の帰りに買ったのは「パンダの絵が描かれたTシャツ」。\n\n【答え】\na T-shirt with a panda on it（パンダの絵が描かれたTシャツ）\n\n【確かめ】\n答えが、boughtの直後に続く具体的な品物（Tシャツ）になっているか確認する。\n\n【よくあるまちがい】\n本文中の他の出来事（動物園で見た動物など）と混同してしまうミス。\n\n【ここが絶対】\n「何を買ったか」を問う設問は、buy/boughtの直後に続く目的語に注目する。',
+      '【何を聞かれているか】\n本文を読み、ミカが昼食のあとに何を買ったかを答える問題。\n\n【なぜboughtに注目するのか】\n「何を買ったか」という設問の答えは、buy（買う）の過去形boughtを含む一文に直接示されている。\n\n【ポイント1】該当の一文を確認する\n本文中の"Mika bought a T-shirt with a panda on it."に注目する。\n\n【ポイント2】boughtの意味を確認する\nboughtはbuy（買う）の過去形。\n\n【ポイント3】答えの内容を確認する\nミカが昼食のあとに買ったのは「パンダの絵が描かれたTシャツ」。\n\n【答え】\na T-shirt with a panda on it（パンダの絵が描かれたTシャツ）\n\n【確かめ】\n答えが、boughtの直後に続く具体的な品物（Tシャツ）になっているか確認する。\n\n【よくあるまちがい】\n本文中の他の出来事（動物園で見た動物など）と混同してしまうミス。\n\n【ここが絶対】\n「何を買ったか」を問う設問は、buy/boughtの直後に続く目的語に注目する。',
   },
 
   // ============================================================
@@ -363,7 +363,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     question:
       "次の文の（　）に入る正しい形はどれですか。\nYou (　) touch that stove. It's very hot. （そのストーブにさわってはいけません。とても熱いです。）",
     answer: 'must not',
-    choices: ['must not', "don't have to", 'should', "can't"],
+    choices: ['must not', "don't have to", 'should', 'can'],
     hint: '「〜してはいけない」という禁止を表す言い方。',
     explanation:
       "【解説】\n「〜してはいけない」という禁止は must not（mustn't）で表す。don't have to は「〜する必要がない」という意味で、禁止の意味にはならないので注意。\n答え：must not",
@@ -469,7 +469,7 @@ export const gradeJ2EigoQuestions: Question[] = [
     answer: 'It is difficult for me to read this book.',
     hint: '「〜することは…にとって〜だ」は It is 〜 for 人 to 〜. の形で表す。',
     explanation:
-      '【何を聞かれているか】\n「この本を読むことは、わたしにとって難しいです。」を「It is ... for ... to ...」の形を使って英語にする問題。\n\n【なぜItが形式上の主語なのか】\n〈It is+形容詞+for+人+to+動詞の原形〉の構文では、Itはあとに続くto read this book（この本を読むこと）を指す形式上の主語として使われる。\n\n【ポイント1】構文の基本の形を確認する\nIt is+形容詞+for+人+to+動詞の原形。\n\n【ポイント2】語句を当てはめる\n形容詞difficult、人me、動詞the原形read this bookを当てはめる。\n\n【ポイント3】完成した文を確認する\n"It is difficult for me to read this book."という型になる。\n\n【答え】\nIt is difficult for me to read this book.\n\n【確かめ】\nItの後にis difficult、for me、to read this bookの順に正しく並んでいるか確認する。\n\n【よくあるまちがい】\nforとtoの位置を逆にしてしまうミス。\n\n【ここが絶対】\nIt is+形容詞+for+人+to+動詞の原形＝「〜することは…にとって〜だ」という型で覚える。',
+      '【何を聞かれているか】\n「この本を読むことは、わたしにとって難しいです。」を「It is ... for ... to ...」の形を使って英語にする問題。\n\n【なぜItが形式上の主語なのか】\n〈It is+形容詞+for+人+to+動詞の原形〉の構文では、Itはあとに続くto read this book（この本を読むこと）を指す形式上の主語として使われる。\n\n【ポイント1】構文の基本の形を確認する\nIt is+形容詞+for+人+to+動詞の原形。\n\n【ポイント2】語句を当てはめる\n形容詞difficult、人me、動詞の原形read this bookを当てはめる。\n\n【ポイント3】完成した文を確認する\n"It is difficult for me to read this book."という型になる。\n\n【答え】\nIt is difficult for me to read this book.\n\n【確かめ】\nItの後にis difficult、for me、to read this bookの順に正しく並んでいるか確認する。\n\n【よくあるまちがい】\nforとtoの位置を逆にしてしまうミス。\n\n【ここが絶対】\nIt is+形容詞+for+人+to+動詞の原形＝「〜することは…にとって〜だ」という型で覚える。',
   },
 
   // ============================================================

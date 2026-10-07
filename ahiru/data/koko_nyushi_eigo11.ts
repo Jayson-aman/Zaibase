@@ -272,16 +272,16 @@ want to be〜：〜になりたい（職業や役割を表すのに頻出）
     id: 'koko_nyushi_eigo11_12',
     subject: 'eigo',
     question: '次の（　）内に最も適切な語を選べ。  ( ) folk songs at the summer festival is one of my happiest childhood memories.',
-    choices: ['① Sing', '② To sing', '③ Singing', '④ Sung'],
+    choices: ['① Sing', '② Sings', '③ Singing', '④ Sung'],
     answer: '③ Singing',
     hint: '文全体の主語になる形を選ぶ。動名詞は主語になれる。',
     explanation: `【出題意図】
-動名詞が文の主語になれることを問う問題。原形・不定詞・過去分詞との識別も含む。
+動名詞が文の主語になれることを問う問題。原形・三単現・過去分詞との識別も含む。
 
 【解説】
 この文は「（  ）folk songs at the summer festival」全体が主語で、「is one of my happiest memories」が述語になっている。動名詞（〜ing）は主語になれる。
 ・① Sing → 原形（そのままでは主語になれない）
-・② To sing → 不定詞も主語になれるが、文頭で使う場合は形式主語 It を使うのが一般的で、この形では不自然
+・② Sings → 三人称単数現在の動詞の形（そのままでは主語になれない）
 ・③ Singing → 動名詞（✓）文の主語として自然
 ・④ Sung → 過去分詞（主語にはなれない）
 
@@ -646,7 +646,7 @@ be interested in〜／be known for〜・as〜／be filled with〜
     id: 'koko_nyushi_eigo11_26',
     subject: 'eigo',
     question: '次の（　）内に最も適切な語を選べ。  Could you tell me ( ) this festival is held every autumn?',
-    choices: ['① why', '② which', '③ where', '④ who'],
+    choices: ['① why', '② which', '③ whose', '④ who'],
     answer: '① why',
     hint: '「なぜ毎年秋に行われるのか」という理由を尋ねる間接疑問文。',
     explanation: `【出題意図】
@@ -657,7 +657,7 @@ be interested in〜／be known for〜・as〜／be filled with〜
 理由を尋ねているので why を使う。
 ・① why → 「なぜ」理由を尋ねる（✓）
 ・② which → 「どちら・どれ」選択を尋ねる
-・③ where → 「どこ」場所を尋ねる
+・③ whose → 「誰の」持ち主を尋ねる
 ・④ who → 「誰が」人を尋ねる
 
 日本語訳：「この祭りがなぜ毎年秋に行われるのか教えていただけますか？」

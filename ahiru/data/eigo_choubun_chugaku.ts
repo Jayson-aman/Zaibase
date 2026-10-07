@@ -88,7 +88,7 @@ Emma says, "Japan has four seasons, and each season is very different. In spring
 At first, Coco was very shy. It hid under the table and did not eat any food. Tom was worried. He sat next to the table and talked to Coco in a soft voice every day.
 
 After one week, Coco started to eat. After two weeks, it began to play with Tom. Now Coco runs to the door every day when Tom comes home from school. Tom loves it very much, and it loves Tom, too.`,
-    question: '本文中の下線部 it（Now Coco runs to the door every day when Tom comes home）は何を指していますか。最も適切なものを選びなさい。',
+    question: '本文の最後の文 "Tom loves it very much, and it loves Tom, too." の it は何を指していますか。最も適切なものを選びなさい。',
     choices: [
       'the door',
       'the table',
@@ -96,16 +96,16 @@ After one week, Coco started to eat. After two weeks, it began to play with Tom.
       'Tom',
     ],
     answer: 'Coco (the dog)',
-    hint: '"it" は「もの」や「動物」を指します。この文で「ドアに走っていく」のはだれでしょう。',
+    hint: '"it" は「もの」や「動物」を指します。トムが大好きで、トムを大好きでいるのはだれ（何）でしょう。',
     explanation: `【出題意図】
 指示語（代名詞 it）が本文中の何を指しているかを、文脈から正しくとらえられるかを問う問題。
 
 【解説】
-下線部をふくむ文は "Now Coco runs to the door every day when Tom comes home from school." です。走っていく主語は Coco なので、この段落全体で "it" は一貫して犬の Coco を指しています。正解は "Coco (the dog)" です。
+最後の文は "Tom loves it very much, and it loves Tom, too." です。直前の文 "Now Coco runs to the door every day when Tom comes home from school." の主語は Coco で、この段落全体で "it" は一貫して犬の Coco を指しています。正解は "Coco (the dog)" です。
 
 【注意点】
-"the door"（ドア）は Coco が走っていく先であり、走る主体ではありません。人物である Tom は "it" では受けません（人は he/she で受けます）。`,
-    pitfall: '"it" の直前の名詞（door）を機械的に選ばないこと。だれ（何）が動作をしているかで判断する。',
+"the door"（ドア）は直前の文で Coco が走っていく先であり、トムが大好きな相手ではありません。人物である Tom は "it" では受けません（人は he/she で受けます）。`,
+    pitfall: '"it" の近くに出てくる名詞（door など）を機械的に選ばないこと。だれ（何）についての文かで判断する。',
     memoryTip: '代名詞は「人＝he/she」「もの・動物＝it」。it が出たら直前の「もの・動物」の名詞を候補にする。',
   },
 

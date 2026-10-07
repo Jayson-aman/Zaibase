@@ -55,7 +55,7 @@ export const eigoExtra: Question[] = [
     question: '「月曜日」を英語で言うと？',
     choices: ['Sunday', 'Monday', 'Tuesday', 'Wednesday'],
     answer: 'Monday',
-    hint: '週の始まりの日（日本では月曜が週の最初）。',
+    hint: '日曜日の次の日です。',
     explanation:
       '【答え】Monday\n\n【曜日の名前の由来】曜日の名前には、天体と北欧の神々の名が使われている。\n・Sunday … sun（太陽）の日\n・Monday … moon（月）の日\n・Tuesday … 北欧の神ティールの日\n・Wednesday … 北欧の神オーディンの日\n・Thursday … 雷神トールの日\n・Friday … 女神フリッグの日\n・Saturday … 土星（Saturn）の日\n日本語の曜日も、日・月・火・水・木・金・土という天体の名前である。もともとは同じ考え方から来ている。\n\n【曜日は大文字で始める】Monday、Tuesday のように、曜日と月の名前は必ず大文字で書き始める。これは書き取りで減点されやすい。\n\n【曜日に使う前置詞】on を使う。on Monday、on Sunday。\n・every Monday（毎週月曜に）… every がつくと前置詞はいらない\n\n【つづりの注意】Wednesday は d を忘れやすい。ウェドネスデイと区切って覚えるとよい。\n\n【例文】I have piano lessons on Monday.',
     examFrequency: 'high',
@@ -211,7 +211,7 @@ export const eigoExtra: Question[] = [
     answer: 'grandfather',
     hint: 'お父さんやお母さんのお父さんのことです。',
     explanation:
-      '【答え】grandfather\n\n【ほかの選択肢】\n・uncle … おじ\n・father … 父\n・brother … 兄・弟\n\n【grand の意味】「一世代上（または下）」を表す。\n・grandfather（祖父）・grandmother（祖母）・grandparents（祖父母）\n・grandson（孫息子）・granddaughter（孫娘）・grandchildren（孫たち）\n・great-grandfather（曽祖父）… great をつけると、もう一世代さかのぼる\ngrand と great の組み合わせで、何世代でも表せる。\n\n【日本語とのちがい】英語では father と母方・父方を区別しない。\n・日本語 … 祖父・おじいさん・父方の祖父\n・英語 … grandfather だけ\n逆に日本語では、兄と弟を区別するので、細かさの方向がちがう。\n\n【呼びかけの言い方】Grandpa、Granddad（おじいちゃん）／Grandma、Granny（おばあちゃん）。\n\n【家系を表す語】family（家族）・relative（親せき）・ancestor（先祖）・descendant（子孫）。\n\n【例文】My grandfather is eighty years old.',
+      '【答え】grandfather\n\n【ほかの選択肢】\n・uncle … おじ\n・father … 父\n・brother … 兄・弟\n\n【grand の意味】「一世代上（または下）」を表す。\n・grandfather（祖父）・grandmother（祖母）・grandparents（祖父母）\n・grandson（孫息子）・granddaughter（孫娘）・grandchildren（孫たち）\n・great-grandfather（曽祖父）… great をつけると、もう一世代さかのぼる\ngrand と great の組み合わせで、何世代でも表せる。\n\n【日本語とのちがい】英語では祖父を父方・母方で区別しない。\n・日本語 … 祖父・おじいさん・父方の祖父\n・英語 … grandfather だけ\n逆に日本語では、兄と弟を区別するので、細かさの方向がちがう。\n\n【呼びかけの言い方】Grandpa、Granddad（おじいちゃん）／Grandma、Granny（おばあちゃん）。\n\n【家系を表す語】family（家族）・relative（親せき）・ancestor（先祖）・descendant（子孫）。\n\n【例文】My grandfather is eighty years old.',
     examFrequency: 'medium',
   },
   {
@@ -377,7 +377,7 @@ export const eigoExtra: Question[] = [
     examType: 'chugaku',
     course: 'general',
     difficulty: 'basic',
-    question: '次の文の空欄に入る正しいbe動詞を選びなさい。「We ___ students.」',
+    question: '次の文の空欄に入る正しいbe動詞を選びなさい。「We ___ students now.」',
     choices: ['am', 'is', 'are', 'were'],
     answer: 'are',
     hint: '主語が We（複数）のとき be動詞は？',
@@ -391,7 +391,7 @@ export const eigoExtra: Question[] = [
     examType: 'chugaku',
     course: 'general',
     difficulty: 'basic',
-    question: '「am not」の短縮形は？',
+    question: '「am not」を、isn\'t や aren\'t のように1語にした標準的な短縮形は？',
     choices: ['amn\'t', 'ain\'t', '\'mn\'t', '短縮形はない'],
     answer: '短縮形はない',
     hint: 'is not → isn\'t、are not → aren\'t だが、am not は？',
@@ -492,7 +492,7 @@ export const eigoExtra: Question[] = [
     question: '「She\'s」は何の短縮形？',
     choices: ['She is', 'She was', 'She has', 'She is または She has'],
     answer: 'She is または She has',
-    hint: '\'s は is または has の短縮形になります。',
+    hint: '\'s のうしろに続く語の形（名詞・形容詞か、過去分詞か）も手がかりにして考えましょう。',
     explanation:
       '【何を聞かれているか】\n"She\'s"が何の短縮形かを答える問題。\n\n【なぜisとhasの両方の可能性があるのか】\nアポストロフィ\'s は、be動詞のis（She is）と、現在完了のhas（She has）の両方を短縮できる形なので、文脈によってどちらを表しているか判断する必要がある。\n\n【ポイント1】\'s がisの短縮であるパターンを確認する\n"She\'s a doctor."（＝She is a doctor.）のように、後ろに名詞・形容詞が続くときはis。\n\n【ポイント2】\'s がhasの短縮であるパターンを確認する\n"She\'s finished."（＝She has finished.）のように、後ろに過去分詞が続くときはhas（現在完了）。\n\n【ポイント3】文脈で判断することを確認する\n\'s の後ろに続く語の形（名詞・形容詞か、過去分詞か）を見て、isかhasかを判断する。\n\n【答え】\nShe is または She has\n\n【確かめ】\n"She\'s a doctor."と"She\'s finished."という2つの例文で、\'s がそれぞれis／hasを表していることを確認する。\n\n【よくあるまちがい】\n\'s を常にis（またはhas）だけの短縮だと決めつけてしまうミス。後ろに続く語の形を見て判断する必要がある。\n\n【ここが絶対】\n\'s ＝is またはhasの短縮形。後ろに続く語（名詞・形容詞か過去分詞か）で判断する。',
     examFrequency: 'high',
@@ -647,11 +647,11 @@ export const eigoExtra: Question[] = [
     course: 'general',
     difficulty: 'basic',
     question: '「I don\'t know.」の意味は？',
-    choices: ['私は知っています。', '私は知りません。', '私は行きません。', '私は分かりません（すべて同じ）。'],
+    choices: ['私は知っています。', '私は知りません。', '私は行きません。', '私は知っていました。'],
     answer: '私は知りません。',
     hint: 'don\'t は do not の短縮形で否定を表します。',
     explanation:
-      '【答え】私は知りません\n\n【don\'t の意味】do not の短縮形で、一般動詞の否定をつくる。\n\n【know と understand の区別】選択肢にあった「分かりません」との使い分けが大事である。\n・I don\'t know. … 知らない、情報を持っていない\n・I don\'t understand. … 理解できない、意味が分からない\n例）\n・Where is the station? — I don\'t know.（知らない）\n・説明を聞いた後で … I don\'t understand.（分からない）\n日本語ではどちらも「分かりません」と言えてしまうので、使い分けを意識する。\n\n【I don\'t know の使い方の注意】質問に対して I don\'t know. とだけ答えると、そっけなく聞こえることがある。\n・I\'m not sure.（はっきりとは分かりません）\n・I\'m afraid I don\'t know.（申し訳ありませんが分かりません）\nやわらかい言い方を知っておくとよい。\n\n【know の変化】know - knew - known。k を発音しない（knife、knee、knock も同じ）。\n\n【例文】I don\'t know his name.',
+      '【答え】私は知りません\n\n【don\'t の意味】do not の短縮形で、一般動詞の否定をつくる。\n\n【know と understand の区別】日本語の「分かりません」との使い分けが大事である。\n・I don\'t know. … 知らない、情報を持っていない\n・I don\'t understand. … 理解できない、意味が分からない\n例）\n・Where is the station? — I don\'t know.（知らない）\n・説明を聞いた後で … I don\'t understand.（分からない）\n日本語ではどちらも「分かりません」と言えてしまうので、使い分けを意識する。\n\n【I don\'t know の使い方の注意】質問に対して I don\'t know. とだけ答えると、そっけなく聞こえることがある。\n・I\'m not sure.（はっきりとは分かりません）\n・I\'m afraid I don\'t know.（申し訳ありませんが分かりません）\nやわらかい言い方を知っておくとよい。\n\n【know の変化】know - knew - known。k を発音しない（knife、knee、knock も同じ）。\n\n【例文】I don\'t know his name.',
     examFrequency: 'very-high',
   },
   {
@@ -773,7 +773,7 @@ export const eigoExtra: Question[] = [
     course: 'general',
     difficulty: 'basic',
     question: '「We don\'t play basketball.」を肯定文にすると？',
-    choices: ['We play basketball.', 'We plays basketball.', 'We do play basketball.', 'We does play basketball.'],
+    choices: ['We play basketball.', 'We plays basketball.', 'We are play basketball.', 'We does play basketball.'],
     answer: 'We play basketball.',
     hint: '否定の don\'t を取り除くだけです。',
     explanation: '「We don\'t play basketball.」の否定（don\'t）を取り除くと「We play basketball.」になります。We は三人称単数ではないので動詞に s はつきません。',
@@ -803,7 +803,7 @@ export const eigoExtra: Question[] = [
     answer: 'teaches',
     hint: '-ch で終わる動詞は -es をつけます。',
     explanation:
-      '【答え】teaches\n\n【ch で終わる動詞】es をつける。\n・teach → teaches、watch → watches、catch → catches\n\n【teach の使い方】目的語を2つとれる。\n・teach ＋ 人 ＋ もの … She teaches us English.\n・teach ＋ もの ＋ to ＋ 人 … She teaches English to us.\n2通りの言い方ができるので、書きかえ問題としてよく出る。\n\n【to を使うか for を使うか】\n・to … give、show、tell、teach、send、lend（相手が必要な動作）\n・for … buy、make、cook、get（相手がいなくてもできる動作）\n・I bought a book for her.（to ではない）\n相手がいないと成り立たない動作なら to と考えると分かりやすい。\n\n【teach の変化】teach - taught - taught。au のつづりになるのは、catch - caught、buy - bought、think - thought、bring - brought も同じである。\n\n【teach と learn】\n・teach … 教える\n・learn … 学ぶ\n日本語の「教わる」は learn である。teach と取りちがえないこと。\n\n【例文】Mr. Sato teaches math at our school.',
+      '【答え】teaches\n\n【ch で終わる動詞】es をつける。\n・teach → teaches、watch → watches、catch → catches\n\n【teach の使い方】目的語を2つとれる。\n・teach ＋ 人 ＋ もの … She teaches us English.\n・teach ＋ もの ＋ to ＋ 人 … She teaches English to us.\n2通りの言い方ができるので、書きかえ問題としてよく出る。\n\n【to を使うか for を使うか】\n・to … give、show、tell、teach、send、lend（相手が必要な動作）\n・for … buy、make、cook、get（相手がいなくてもできる動作）\n・I bought a book for her.（to ではない）\n相手がいないと成り立たない動作なら to と考えると分かりやすい。\n\n【teach の変化】teach - taught - taught。catch - caught も teach - taught と同じ aught のつづりである。buy - bought、think - thought、bring - brought は ought のつづりで、どれも「オー」に近い音で読む。\n\n【teach と learn】\n・teach … 教える\n・learn … 学ぶ\n日本語の「教わる」は learn である。teach と取りちがえないこと。\n\n【例文】Mr. Sato teaches math at our school.',
     examFrequency: 'high',
   },
   {
@@ -1009,7 +1009,7 @@ export const eigoExtra: Question[] = [
     answer: 'ボランティア・自発的に行動する人',
     hint: '報酬なしで自発的に活動する人です。',
     explanation:
-      '【答え】ボランティア・自発的に活動する人\n\n【語のなりたち】ラテン語の voluntas（意志）から来ている。自分の意志で進んで行うという意味が語の中心にある。\n・volunteer（名詞・動詞）\n・voluntary（形容詞・自発的な）\n\n【日本語との意味のちがい】日本語の「ボランティア」は、無償で人の役に立つ活動をする人を指すことが多い。英語の volunteer は、報酬の有無より「自分から進んで申し出る」ことが中心である。\n・volunteer to help（進んで手伝いを申し出る）\n・a volunteer army（志願兵の軍隊）\n日本語になったカタカナ語は、意味がせまくなっていることがある。\n\n【ほかの選択肢】\n・expert … 専門家\n・employee … 従業員（employ ＋ ee）\n・customer … 顧客\n・ee がつくと「〜される人」になる。employer（雇う人）／employee（雇われる人）\n\n【ボランティアに関わる語】\n・charity（慈善）・donate（寄付する）・support（支える）・community（地域社会）・help the elderly（高齢者を助ける）\n\n【例文】She works as a volunteer at the hospital.',
+      '【答え】ボランティア・自発的に行動する人\n\n【語のなりたち】ラテン語の voluntas（意志）から来ている。自分の意志で進んで行うという意味が語の中心にある。\n・volunteer（名詞・動詞）\n・voluntary（形容詞・自発的な）\n\n【日本語との意味のちがい】日本語の「ボランティア」は、無償で人の役に立つ活動をする人を指すことが多い。英語の volunteer は、報酬の有無より「自分から進んで申し出る」ことが中心である。\n・volunteer to help（進んで手伝いを申し出る）\n・a volunteer army（志願兵の軍隊）\n日本語になったカタカナ語は、意味がせまくなっていることがある。\n\n【ほかの選択肢】\n・expert … 専門家\n・employee … 従業員（employ ＋ ee）\n・customer … 顧客\n・ee がつくと「〜される人」になる。employer（雇う人）／employee（雇われる人）\n\n【ボランティアに関わる語】\n・charity（慈善）・donate（寄付する）・support（支える）・community（地域社会）・help the elderly（高齢者を助ける）\n\n【例文】She works as a volunteer at the hospital.',
     examFrequency: 'high',
   },
   {
@@ -1484,9 +1484,9 @@ export const eigoExtra: Question[] = [
     question: '「enjoy」の後には何が来る？',
     choices: ['to + 動詞の原形（不定詞）', '動詞の -ing 形（動名詞）', '動詞の原形', 'that 節'],
     answer: '動詞の -ing 形（動名詞）',
-    hint: 'enjoy, finish, stop などの動詞は動名詞を目的語にとります。',
+    hint: 'enjoy, finish, practice などの動詞は動名詞を目的語にとります。',
     explanation:
-      '【何を聞かれているか】\n"enjoy"の後ろに続く、正しい動詞の形を答える問題。\n\n【なぜ動名詞（-ing形）を使うのか】\nenjoyは、後ろに動名詞（-ing形）だけを目的語に取るという決まりを持つ動詞のグループに属している。\n\n【ポイント1】enjoyの後ろの形を確認する\nenjoy＋動名詞（-ing形）。"enjoy to play"のように不定詞を続けるのは誤り。\n\n【ポイント2】同じグループの動詞を確認する\nfinish（終える）、stop（やめる）も、enjoyと同じように動名詞を目的語に取る。\n\n【ポイント3】例文で確認する\n"I enjoy playing soccer."＝「私はサッカーをすることを楽しむ」。\n\n【答え】\n動詞の -ing 形（動名詞）\n\n【確かめ】\n"enjoy"の後ろが"playing"のように-ing形になっていて、不定詞（to play）になっていないことを確認する。\n\n【よくあるまちがい】\n"enjoy to play"のように、不定詞を続けてしまうミス。enjoyは動名詞だけを目的語に取る動詞。\n\n【ここが絶対】\nenjoy・finish・stopなどの動詞は、後ろに動名詞（-ing形）だけを取るというグループとしてセットで覚える。',
+      '【何を聞かれているか】\n"enjoy"の後ろに続く、正しい動詞の形を答える問題。\n\n【なぜ動名詞（-ing形）を使うのか】\nenjoyは、後ろに動名詞（-ing形）だけを目的語に取るという決まりを持つ動詞のグループに属している。\n\n【ポイント1】enjoyの後ろの形を確認する\nenjoy＋動名詞（-ing形）。"enjoy to play"のように不定詞を続けるのは誤り。\n\n【ポイント2】同じグループの動詞を確認する\nfinish（終える）、practice（練習する）も、enjoyと同じように動名詞を目的語に取る。\n\n【ポイント3】例文で確認する\n"I enjoy playing soccer."＝「私はサッカーをすることを楽しむ」。\n\n【答え】\n動詞の -ing 形（動名詞）\n\n【確かめ】\n"enjoy"の後ろが"playing"のように-ing形になっていて、不定詞（to play）になっていないことを確認する。\n\n【よくあるまちがい】\n"enjoy to play"のように、不定詞を続けてしまうミス。enjoyは動名詞だけを目的語に取る動詞。\n\n【ここが絶対】\nenjoy・finish・practiceなどの動詞は、後ろに動名詞（-ing形）だけを取るというグループとしてセットで覚える。',
     examFrequency: 'very-high',
   },
   {
@@ -1550,11 +1550,11 @@ export const eigoExtra: Question[] = [
     examType: 'chugaku',
     course: 'general',
     difficulty: 'standard',
-    question: '「Baseball is played in many countries.」を能動態に直すと？',
-    choices: ['Many countries play baseball.', 'Many countries plays baseball.', 'Many countries are playing baseball.', 'Many countries played baseball.'],
-    answer: 'Many countries play baseball.',
-    hint: '「in many countries（多くの国で）」の many countries を主語に置きかえて考えます。',
-    explanation: 'Baseball is played in many countries. は「多くの国で野球が行われている」という意味。by ～ による行為者は書かれていませんが、「多くの国（で）」を動作をする側と考えて能動態に直すと Many countries play baseball. となります。many countries は複数なので動詞は plays ではなく play。played は過去形ではなく過去分詞なので、時制は現在のままです。',
+    question: '「Baseball is played by many people.」を能動態に直すと？',
+    choices: ['Many people play baseball.', 'Many people plays baseball.', 'Many people are playing baseball.', 'Many people played baseball.'],
+    answer: 'Many people play baseball.',
+    hint: '「by many people（多くの人によって）」の many people を主語にして考えます。',
+    explanation: 'Baseball is played by many people. は「野球は多くの人によってプレーされている」という意味。受動態を能動態に直すときは、by のあとの語（many people）を主語にし、動詞を be動詞＋過去分詞から元の形にもどします。is played は現在の受け身なので、能動態も現在形で Many people play baseball. となります。many people は複数なので動詞は plays ではなく play。played は過去形ではなく is played の一部の過去分詞なので、時制は現在のままです。',
     examFrequency: 'high',
   },
   {
@@ -1564,11 +1564,11 @@ export const eigoExtra: Question[] = [
     course: 'general',
     difficulty: 'standard',
     question: '「swimming」が動名詞として使われている文はどれ？',
-    choices: ['She is swimming in the pool.', 'Swimming is good exercise.', 'The swimming pool is big.', 'A swimming fish is fast.'],
+    choices: ['She is swimming in the pool.', 'Swimming is good exercise.', 'The swimming girl is my sister.', 'A swimming fish is fast.'],
     answer: 'Swimming is good exercise.',
     hint: '動名詞は文の主語・目的語・補語として使われます。',
     explanation:
-      '【何を聞かれているか】\n"swimming"が動名詞として使われている文を選ぶ問題。\n\n【なぜ動名詞と現在分詞を見分ける必要があるのか】\n"swimming"のような-ing形は、動名詞（名詞の働き）・現在進行形の一部・形容詞的な働きなど、複数の役割を持つことができるため、文の中でどの役割をしているかを見分ける必要がある。\n\n【ポイント1】動名詞の役割を確認する\n動名詞は文の主語・目的語・補語として使われる、名詞の働きをする-ing形。"Swimming is good exercise."では、Swimmingが文全体の主語になっている。\n\n【ポイント2】他の選択肢の-ing形の役割を確認する\n"She is swimming in the pool."のis swimmingは現在進行形の一部。"The swimming pool"のswimmingはpoolを説明する形容詞的な働き。"A swimming fish"のswimmingもfishを説明する現在分詞。\n\n【ポイント3】主語になっているかどうかで判断する\n"Swimming is good exercise."だけが、-ing形（Swimming）が単独で文の主語になっている。\n\n【答え】\nSwimming is good exercise.\n\n【確かめ】\n"Swimming"を"It"に置き換えても意味が通じる（"It is good exercise."）ことから、Swimmingが名詞と同じ働きをしていることを確認する。\n\n【よくあるまちがい】\n-ing形が使われている文をすべて動名詞だと思い込んでしまうミス。進行形（be動詞+ing）や形容詞的な用法との違いを、文の中での役割から見分ける。\n\n【ここが絶対】\n動名詞は「文の主語・目的語・補語になっている-ing形」。進行形や名詞を修飾する-ing形と区別する。',
+      '【何を聞かれているか】\n"swimming"が動名詞として使われている文を選ぶ問題。\n\n【なぜ動名詞と現在分詞を見分ける必要があるのか】\n"swimming"のような-ing形は、動名詞（名詞の働き）・現在進行形の一部・形容詞的な働きなど、複数の役割を持つことができるため、文の中でどの役割をしているかを見分ける必要がある。\n\n【ポイント1】動名詞の役割を確認する\n動名詞は文の主語・目的語・補語として使われる、名詞の働きをする-ing形。"Swimming is good exercise."では、Swimmingが文全体の主語になっている。\n\n【ポイント2】他の選択肢の-ing形の役割を確認する\n"She is swimming in the pool."のis swimmingは現在進行形の一部。"The swimming girl"のswimmingはgirlを説明する現在分詞（形容詞的な働き）。"A swimming fish"のswimmingもfishを説明する現在分詞。\n\n【ポイント3】主語になっているかどうかで判断する\n"Swimming is good exercise."だけが、-ing形（Swimming）が単独で文の主語になっている。\n\n【答え】\nSwimming is good exercise.\n\n【確かめ】\n"Swimming"を"It"に置き換えても意味が通じる（"It is good exercise."）ことから、Swimmingが名詞と同じ働きをしていることを確認する。\n\n【よくあるまちがい】\n-ing形が使われている文をすべて動名詞だと思い込んでしまうミス。進行形（be動詞+ing）や形容詞的な用法との違いを、文の中での役割から見分ける。\n\n【ここが絶対】\n動名詞は「文の主語・目的語・補語になっている-ing形」。進行形や名詞を修飾する-ing形と区別する。',
     examFrequency: 'high',
   },
   {
@@ -1595,7 +1595,7 @@ export const eigoExtra: Question[] = [
     answer: '動詞の -ing 形（動名詞）',
     hint: 'finish は動名詞を目的語にとります。',
     explanation:
-      '【何を聞かれているか】\n"finish"の後ろに続く、正しい動詞の形を答える問題。\n\n【なぜ動名詞（-ing形）を使うのか】\nfinishは、後ろに動名詞（-ing形）だけを目的語に取るという決まりを持つ動詞のグループに属している。\n\n【ポイント1】finishの後ろの形を確認する\nfinish＋動名詞（-ing形）。"finish to read"のように不定詞を続けるのは誤り。\n\n【ポイント2】同じグループの動詞を確認する\nenjoy（楽しむ）、stop（やめる）も、finishと同じように動名詞を目的語に取る。\n\n【ポイント3】例文で確認する\n"I finished reading the book."＝「私は本を読み終えた」。\n\n【答え】\n動詞の -ing 形（動名詞）\n\n【確かめ】\n"finish"の後ろが"reading"のように-ing形になっていて、不定詞（to read）になっていないことを確認する。\n\n【よくあるまちがい】\n"finish to read"のように、不定詞を続けてしまうミス。finishは動名詞だけを目的語に取る動詞。\n\n【ここが絶対】\nfinish・enjoy・stopなどの動詞は、後ろに動名詞（-ing形）だけを取るというグループとしてセットで覚える。',
+      '【何を聞かれているか】\n"finish"の後ろに続く、正しい動詞の形を答える問題。\n\n【なぜ動名詞（-ing形）を使うのか】\nfinishは、後ろに動名詞（-ing形）だけを目的語に取るという決まりを持つ動詞のグループに属している。\n\n【ポイント1】finishの後ろの形を確認する\nfinish＋動名詞（-ing形）。"finish to read"のように不定詞を続けるのは誤り。\n\n【ポイント2】同じグループの動詞を確認する\nenjoy（楽しむ）、practice（練習する）も、finishと同じように動名詞を目的語に取る。\n\n【ポイント3】例文で確認する\n"I finished reading the book."＝「私は本を読み終えた」。\n\n【答え】\n動詞の -ing 形（動名詞）\n\n【確かめ】\n"finish"の後ろが"reading"のように-ing形になっていて、不定詞（to read）になっていないことを確認する。\n\n【よくあるまちがい】\n"finish to read"のように、不定詞を続けてしまうミス。finishは動名詞だけを目的語に取る動詞。\n\n【ここが絶対】\nfinish・enjoy・practiceなどの動詞は、後ろに動名詞（-ing形）だけを取るというグループとしてセットで覚える。',
     examFrequency: 'high',
   },
   {
@@ -2008,12 +2008,12 @@ export const eigoExtra: Question[] = [
     examType: 'chugaku',
     course: 'general',
     difficulty: 'advanced',
-    question: '「I wish I could fly.」の意味は？',
-    choices: ['私は飛ぶことができる。', '私は飛べたらいいのに（でも実際には飛べない）。', '私は飛ぶつもりだ。', '私は飛ぶことを願っている。'],
-    answer: '私は飛べたらいいのに（でも実際には飛べない）。',
-    hint: 'I wish + 仮定法過去 で「～だったらいいのに」という非現実の願いを表します。',
+    question: '「___ a beautiful flower this is!」の空欄に入る語は？',
+    choices: ['What', 'How', 'Which', 'Who'],
+    answer: 'What',
+    hint: 'a beautiful flower のように「a ＋ 形容詞 ＋ 名詞」が続く感嘆文です。',
     explanation:
-      '【答え】私は飛べたらいいのに（でも実際には飛べない）\n\n【仮定法とは】事実と反することを言うときの言い方である。\n・I wish I could fly.（飛べたらいいのに）\n・実際には飛べないという意味が含まれている\n\n【なぜ過去形を使うのか】ここが仮定法の要点である。事実と反することを言うために、わざと時制を一つ過去にずらす。\n・現在の事実と反する … 過去形を使う（仮定法過去）\n・I wish I could fly.（can ではなく could）\n・I wish I had more time.（have ではなく had）\n時制をずらすことで、現実から距離を置くという発想である。日本語でも「〜だったらなあ」と過去形で言うことがあり、似ている。\n\n【I wish と I hope】\n・I wish … 実現しそうにないことを願う。I wish I were a bird.\n・I hope … 実現しそうなことを願う。I hope you will come.\n実現の見こみがあるかどうかで使い分ける。\n\n【be動詞は were を使う】仮定法では、主語が I や he でも were を使うのが本来の形である。\n・If I were a bird（もし私が鳥なら）\n\n【例文】I wish I could speak English like you.',
+      '【何を聞かれているか】\n感嘆文（「なんて〜だろう」という文）の空欄に入る語を選ぶ問題。\n\n【なぜ What なのか】\n空欄のあとに a beautiful flower という「a ＋ 形容詞 ＋ 名詞」が続いている。このように名詞までふくむときは What を使う。\n\n【感嘆文の2つの型】\n・What ＋ a（an）＋ 形容詞 ＋ 名詞 ＋ 主語 ＋ 動詞！ … What a beautiful flower this is!\n・How ＋ 形容詞（副詞）＋ 主語 ＋ 動詞！ … How beautiful this flower is!\n名詞があれば What、形容詞だけなら How と覚える。\n\n【ほかの選択肢がまちがいな理由】\n・How a beautiful flower … How のあとに名詞は続けられない\n・Which、Who … 感嘆文には使わない（Which は「どちら」、Who は「だれ」をたずねる語）\n\n【確かめ】\n同じ意味を How で言いかえると How beautiful this flower is! になる。a と flower が消えていることを確かめる。\n\n【よくあるまちがい】\nWhat のあとの a をぬかして What beautiful flower と書くミス。数えられる名詞が1つのときは a（an）が必要。\n\n【例文】What a nice day it is!',
     examFrequency: 'high',
   },
   {
@@ -2022,13 +2022,13 @@ export const eigoExtra: Question[] = [
     examType: 'chugaku',
     course: 'general',
     difficulty: 'advanced',
-    question: '「If I were you, I would study harder.」の意味は？',
-    choices: ['もし私があなただったら、もっと一生懸命勉強するのに。', 'もし私があなたなら、一生懸命勉強します。', '私はあなたのようにもっと一生懸命勉強した。', 'あなたは一生懸命勉強するべきだ。'],
-    answer: 'もし私があなただったら、もっと一生懸命勉強するのに。',
-    hint: 'If + 主語 + were, 主語 + would + 動詞原形 が仮定法過去の形です。',
+    question: '「If it ___ tomorrow, we will stay home.」の空欄に入る語は？',
+    choices: ['rain', 'rains', 'will rain', 'rained'],
+    answer: 'rains',
+    hint: '「もし〜なら」を表す if の中では、未来のことも現在形で言います。',
     explanation:
-      '【何を聞かれているか】\n"If I were you, I would study harder."の意味を答える問題。\n\n【なぜ「〜するのに」という意味になるのか】\n仮定法過去（If＋主語＋were, 主語＋would＋動詞の原形）は、「実際にはそうではないが、もし〜だったら」という現実に反する仮定を表す。\n\n【ポイント1】仮定法過去の公式を確認する\nIf＋主語＋were（またはwere/動詞の過去形）〜, 主語＋would＋動詞の原形〜。\n\n【ポイント2】"If I were you"の意味を確認する\n「もし私があなただったら」＝実際には私はあなたではない、という現実と反対の仮定。\n\n【ポイント3】wouldの意味を確認する\nwouldはここでは「〜するのに」という、仮定に基づく結果を表す。\n\n【答え】\nもし私があなただったら、もっと一生懸命勉強するのに。\n\n【確かめ】\n"If I were you"が現実に反する仮定であること、"would study"がその仮定に基づく結果を表していることを確認する。\n\n【よくあるまちがい】\n"If I were you, I would study harder."を、単なる助言（あなたは勉強すべきだ）のように直訳してしまうミス。仮定法は「実際にはそうではない」という前提を含む表現。\n\n【ここが絶対】\n"If I were you, I would〜"＝「もし私があなたなら〜するのに」というアドバイスの定番表現として、仮定法過去の公式とセットで覚える。',
-    examFrequency: 'very-high',
+      '【何を聞かれているか】\n「もし明日雨が降ったら、私たちは家にいます」の空欄に入る動詞の形を選ぶ問題。\n\n【なぜ rains なのか】\nif（もし〜なら）のあとに続く部分では、これから先のことでも will を使わず、現在形で言う決まりがある。主語 it は三人称単数なので、s をつけて rains になる。\n\n【ほかの選択肢がまちがいな理由】\n・rain … 主語が it なので s が必要\n・will rain … if の中では will を使わない\n・rained … 過去形なので「明日」と合わない\n\n【when との共通点】\nwhen（〜するとき）、before（〜する前に）、after（〜したあとに）のあとでも、未来のことを現在形で言う。\n・When he comes, I will tell him.\n\n【確かめ】\n文の後半が we will stay home と未来になっているので、前半が現在形でも未来のことを表していることを確かめる。\n\n【よくあるまちがい】\n未来のことだからと If it will rain tomorrow とするミス。if の中は現在形にする。\n\n【例文】If it is sunny tomorrow, we will go on a picnic.',
+    examFrequency: 'high',
   },
   {
     id: 'ee_146',
@@ -2120,7 +2120,7 @@ export const eigoExtra: Question[] = [
     answer: '～にもかかわらず・たとえ～でも',
     hint: 'although は逆接の接続詞です。',
     explanation:
-      '【何を聞かれているか】\n"Although it was raining, we went for a walk."の"Although"の意味を答える問題。\n\n【なぜ「〜にもかかわらず」という意味になるのか】\nalthoughは、前後の内容が食い違う（逆接）ことを示す接続詞で、「〜であるにもかかわらず」という意味を表す。\n\n【ポイント1】althoughの意味を確認する\nalthough＝「〜にもかかわらず、たとえ〜でも」。thoughとほぼ同じ意味。\n\n【ポイント2】文の内容を確認する\n「雨が降っていた」（マイナスの状況）にもかかわらず「散歩に行った」（それを覆す行動）という、逆接の関係になっている。\n\n【ポイント3】他の接続詞との違いを確認する\nbecauseは理由（なぜなら）、ifは条件（もし〜なら）、asa resultは結果（その結果）を表し、althoughとは意味が異なる。\n\n【答え】\n～にもかかわらず・たとえ～でも\n\n【確かめ】\n"Although it was raining"（雨にもかかわらず）と"we went for a walk"（散歩に行った）が、逆接の関係でつながっていることを確認する。\n\n【よくあるまちがい】\nalthoughを理由を表すbecauseと混同してしまうミス。althoughは前後の内容が食い違う逆接の接続詞。\n\n【ここが絶対】\nalthough（＝though）＝「〜にもかかわらず」という逆接・譲歩の接続詞としてセットで覚える。',
+      '【何を聞かれているか】\n"Although it was raining, we went for a walk."の"Although"の意味を答える問題。\n\n【なぜ「〜にもかかわらず」という意味になるのか】\nalthoughは、前後の内容が食い違う（逆接）ことを示す接続詞で、「〜であるにもかかわらず」という意味を表す。\n\n【ポイント1】althoughの意味を確認する\nalthough＝「〜にもかかわらず、たとえ〜でも」。thoughとほぼ同じ意味。\n\n【ポイント2】文の内容を確認する\n「雨が降っていた」（マイナスの状況）にもかかわらず「散歩に行った」（それを覆す行動）という、逆接の関係になっている。\n\n【ポイント3】他の接続詞との違いを確認する\nbecauseは理由（なぜなら）、ifは条件（もし〜なら）、as a resultは結果（その結果）を表し、althoughとは意味が異なる。\n\n【答え】\n～にもかかわらず・たとえ～でも\n\n【確かめ】\n"Although it was raining"（雨にもかかわらず）と"we went for a walk"（散歩に行った）が、逆接の関係でつながっていることを確認する。\n\n【よくあるまちがい】\nalthoughを理由を表すbecauseと混同してしまうミス。althoughは前後の内容が食い違う逆接の接続詞。\n\n【ここが絶対】\nalthough（＝though）＝「〜にもかかわらず」という逆接・譲歩の接続詞としてセットで覚える。',
     examFrequency: 'high',
   },
   {
@@ -2326,11 +2326,11 @@ export const eigoExtra: Question[] = [
     course: 'general',
     difficulty: 'advanced',
     question: '「It takes 30 minutes to walk to school.」の意味は？',
-    choices: ['学校まで歩いて30分かかる。', '学校まで30分で歩ける。', '学校まで歩くと30分節約できる。', '30分後に学校まで歩いて行く。'],
+    choices: ['学校まで歩いて30分かかる。', '学校まで30分歩き続けた。', '学校まで歩くと30分節約できる。', '30分後に学校まで歩いて行く。'],
     answer: '学校まで歩いて30分かかる。',
     hint: 'It takes + 時間 + to + 動詞原形 で「～するのに（時間が）かかる」という意味です。',
     explanation:
-      '【何を聞かれているか】\n"It takes 30 minutes to walk to school."の意味を答える問題。\n\n【なぜ「かかる」という意味になるのか】\n"It takes＋時間＋to＋動詞の原形"は、「〜するのに（時間が）かかる」という所要時間を表す決まった構文。\n\n【ポイント1】"It takes＋時間＋to不定詞"の形を確認する\nItは形式的な主語で、実際の内容は"to walk to school"（学校まで歩くこと）。\n\n【ポイント2】文全体の意味を確認する\n"It takes 30 minutes to walk to school."＝「学校まで歩くと30分かかる」。\n\n【ポイント3】他の選択肢との違いを確認する\n「30分で歩ける」「30分節約できる」「30分後に行く」はいずれも所要時間を表す"It takes〜"の意味とは異なる。\n\n【答え】\n学校まで歩いて30分かかる。\n\n【確かめ】\n"It takes 30 minutes"が「30分かかる」という所要時間を表し、"to walk to school"がその内容（学校まで歩くこと）を表していることを確認する。\n\n【よくあるまちがい】\n"It takes〜to…"を「〜すれば…できる」のような別の意味に訳してしまうミス。この構文は所要時間だけを表す。\n\n【ここが絶対】\n"It takes＋時間＋to＋動詞の原形"＝「〜するのに（時間が）かかる」という所要時間の決まった構文をセットで覚える。',
+      '【何を聞かれているか】\n"It takes 30 minutes to walk to school."の意味を答える問題。\n\n【なぜ「かかる」という意味になるのか】\n"It takes＋時間＋to＋動詞の原形"は、「〜するのに（時間が）かかる」という所要時間を表す決まった構文。\n\n【ポイント1】"It takes＋時間＋to不定詞"の形を確認する\nItは形式的な主語で、実際の内容は"to walk to school"（学校まで歩くこと）。\n\n【ポイント2】文全体の意味を確認する\n"It takes 30 minutes to walk to school."＝「学校まで歩くと30分かかる」。\n\n【ポイント3】他の選択肢との違いを確認する\n「30分歩き続けた」「30分節約できる」「30分後に行く」はいずれも所要時間を表す"It takes〜"の意味とは異なる。\n\n【答え】\n学校まで歩いて30分かかる。\n\n【確かめ】\n"It takes 30 minutes"が「30分かかる」という所要時間を表し、"to walk to school"がその内容（学校まで歩くこと）を表していることを確認する。\n\n【よくあるまちがい】\n"It takes〜to…"を「〜すれば…できる」のような別の意味に訳してしまうミス。この構文は所要時間だけを表す。\n\n【ここが絶対】\n"It takes＋時間＋to＋動詞の原形"＝「〜するのに（時間が）かかる」という所要時間の決まった構文をセットで覚える。',
     examFrequency: 'high',
   },
   {
@@ -2339,11 +2339,12 @@ export const eigoExtra: Question[] = [
     examType: 'chugaku',
     course: 'general',
     difficulty: 'advanced',
-    question: '次の文の空欄に入る最も適切な語句を選びなさい。「This is the park ___ I used to play as a child.」',
+    question: '次の文の空欄に入る最も適切な語を選びなさい。「This is the park ___ I visited last year.」',
     choices: ['which', 'who', 'where', 'when'],
-    answer: 'where',
-    hint: 'park（場所）を受けて「そこで」という関係副詞は？',
-    explanation: '先行詞が場所（park）を表し、「そこで」という意味の関係副詞 where を使います。This is the park where I used to play as a child. = ここは私が子どもの頃よく遊んだ公園です。',
+    answer: 'which',
+    hint: 'park（もの）を説明していて、I visited のあとに目的語がありません。',
+    explanation:
+      '【何を聞かれているか】\n「ここは私が去年おとずれた公園です」の空欄に入る関係代名詞を選ぶ問題。\n\n【なぜ which なのか】\n先行詞（説明される語）は the park で、人ではなく「もの」。よって who ではなく which を使う。I visited の visited は「〜をおとずれた」で、そのあとに目的語がない。which が the park の代わりに目的語のはたらきをしている（目的格の関係代名詞）。\n\n【文を分けて確かめる】\n・This is the park.（これは公園です）\n・I visited the park last year.（私は去年その公園をおとずれた）\n2つ目の the park を which にして前に出すと、This is the park which I visited last year. になる。\n\n【ほかの選択肢がまちがいな理由】\n・who … 先行詞が人のときに使う\n・where、when … 中学ではまだ学ばない形で、この文には合わない\n\n【目的格は省略できる】\nThis is the park I visited last year. としてもよい。that を使うこともできる。\n\n【よくあるまちがい】\npark が場所だからと、場所を表す語を入れてしまうミス。関係代名詞は先行詞が人かものかで選ぶ。\n\n【例文】This is the book which I bought yesterday.',
     examFrequency: 'high',
   },
   {
@@ -2422,12 +2423,12 @@ export const eigoExtra: Question[] = [
     examType: 'chugaku',
     course: 'general',
     difficulty: 'advanced',
-    question: '次の文の空欄に入る最も適切な語を選びなさい。「By the time she arrived, the meeting had already ___.」',
-    choices: ['start', 'started', 'been started', 'been starting'],
-    answer: 'started',
-    hint: 'had + 過去分詞 が過去完了形です。',
+    question: '次の文の空欄に入る最も適切な語を選びなさい。「___ this room cleaned every day?」',
+    choices: ['Is', 'Are', 'Does', 'Do'],
+    answer: 'Is',
+    hint: '「cleaned」は過去分詞。受動態の疑問文は be動詞 ＋ 主語 ＋ 過去分詞 です。',
     explanation:
-      '【何を聞かれているか】\n"By the time she arrived, the meeting had already (　)."の空欄に入る、正しい動詞の形を選ぶ問題。\n\n【なぜ過去完了形を使うのか】\n"By the time〜"（〜するまでに）という表現では、2つの過去の出来事のうち、より先に起きた方を過去完了形（had＋過去分詞）で表すという決まりがある。\n\n【ポイント1】過去完了形の公式を確認する\nhad＋過去分詞。ここでは"had already started"（すでに始まっていた）。\n\n【ポイント2】2つの出来事の前後関係を確認する\n「彼女が到着した（過去形arrived）」より前に「会議が始まっていた（過去完了had started）」という、時間の前後関係を表している。\n\n【ポイント3】他の選択肢を消去する\n"start"（原形）はhadの後ろに続けられない。"been started"は受動態でmeetingを主語にした「始められた」という意味になり不自然。"been starting"は受動態の進行形で使わない形。\n\n【答え】\nstarted\n\n【確かめ】\n"had already started"が「（彼女が到着する前に）すでに始まっていた」という、過去のさらに前の出来事を表していることを確認する。\n\n【よくあるまちがい】\n"By the time〜"の文で、単純な過去形（started単独ではなくhad started全体を使わない）にしてしまうミス。2つの過去の出来事の前後関係を表すには過去完了形が必要。\n\n【ここが絶対】\n"By the time＋過去形〜, 主語＋had＋過去分詞…"＝「〜するまでに、すでに…していた」という過去完了形の使い方をセットで覚える。',
+      '【何を聞かれているか】\n「この部屋は毎日そうじされますか」という受け身の疑問文の、文の最初に入る語を選ぶ問題。\n\n【なぜ Is なのか】\ncleaned は過去分詞で、「そうじされる」という受け身（受動態）の文。受け身の疑問文は be動詞を主語の前に出す。主語 this room は単数なので Is を使う。\n\n【受け身の形】\n・ふつうの文 … This room is cleaned every day.\n・疑問文 … Is this room cleaned every day?\n・否定文 … This room is not cleaned every day.\n\n【ほかの選択肢がまちがいな理由】\n・Are … 主語が複数のときの be動詞\n・Does、Do … 一般動詞の疑問文に使う。cleaned は過去分詞なので、Do や Does は使わない\n\n【答え方】\nYes, it is. ／ No, it isn\'t.\n\n【確かめ】\nふつうの文にもどして This room is cleaned every day. と言えるか確かめる。\n\n【よくあるまちがい】\n受け身の疑問文を Does this room cleaned ...? のように作るミス。受け身は be動詞だけで疑問文を作る。\n\n【例文】Is English spoken in your country?',
     examFrequency: 'high',
   },
   {

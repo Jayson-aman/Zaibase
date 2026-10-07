@@ -584,7 +584,7 @@ export const gradeJ3EigoQuestions: Question[] = [
     ],
     hint: '"She told me that the cost had not been decided yet because..." の部分に注目する。',
     explanation:
-      '本文の最後から2つ目の文に "the cost had not been decided yet because the robot was still being improved"（ロボットがまだ改良中だったので、費用はまだ決まっていなかった）とある。was still being improvedは受動態の進行形で「まだ改良され続けている」という意味。\n答え：Because the robot was still being improved and the cost had not been decided yet.',
+      '本文の第3段落の最後の文に "the cost had not been decided yet because the robot was still being improved"（ロボットがまだ改良中だったので、費用はまだ決まっていなかった）とある。was still being improvedは受動態の進行形で「まだ改良され続けている」という意味。\n答え：Because the robot was still being improved and the cost had not been decided yet.',
   },
 
   // ==================== 長文読解② 食品ロス問題 ====================

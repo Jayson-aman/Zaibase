@@ -1897,7 +1897,7 @@ export const naniwaExam: Question[] = [
     examType: 'chugaku',
     difficulty: 'standard',
     examFrequency: 'medium',
-    question: '【浪速中学校 英語⑩】次の文の空所に入る最も適切な語を選びなさい。 The cat is ( ) the box.',
+    question: '【浪速中学校 英語⑩】次の文の空所に入る最も適切な語を選びなさい。「ねこは箱の中にいます。」 The cat is ( ) the box.',
     choices: [
       'in',
       'on',

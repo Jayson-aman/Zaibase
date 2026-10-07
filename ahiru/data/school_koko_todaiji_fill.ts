@@ -528,7 +528,7 @@ export const schoolKokoTodaijiFill: Question[] = [
       '冷帯（亜寒帯）気候は、夏と冬の気温差が大きく、冬の寒さが非常に厳しい気候である。この気候に見られる針葉樹林を「タイガ」と呼ぶ。',
     hint: 'シベリアなど高緯度地域に広がる、夏と冬の気温差が大きい気候を思い浮かべる',
     explanation:
-      '【何を聞かれているか】冷帯（亜寒帯）気候の特徴と、この気候区分に見られる代表的な針葉樹林の名称である。\n\n【なぜそうなるのか】夏と冬の気温差が非常に大きい厳しい環境の中で、限られた樹種の針葉樹だけが広範囲に生育できる。\n\n【ステップ1】冷帯（亜寒帯）気候は、シベリアやカナダ北部など北半球の高緯度地域に広がり、夏は比較的温暖になる一方、冬は非常に厳しい寒さになるため、年間の気温差が大きいことが特徴である。\n\n【ステップ2】この気候帯に広がる針葉樹の森林を「タイガ」と呼び、木材資源として利用されている。\n\n【答え】冷帯（亜寒帯）気候は、夏と冬の気温差が大きく、冬の寒さが非常に厳しい気候である。この気候に見られる針葉樹林を「タイガ」と呼ぶ。\n\n【確かめ】「冷帯（亜寒帯）＝年較差が大きい、タイガ」を確認する。\n\n【よくあるまちがい】タイガと熱帯雨林を混同しないこと。タイガは単一樹種の針葉樹林である。\n\n【ここが絶対】「冷帯（亜寒帯）気候とタイガ」は地理の最頻出事項。',
+      '【何を聞かれているか】冷帯（亜寒帯）気候の特徴と、この気候区分に見られる代表的な針葉樹林の名称である。\n\n【なぜそうなるのか】夏と冬の気温差が非常に大きい厳しい環境の中で、限られた樹種の針葉樹だけが広範囲に生育できる。\n\n【ステップ1】冷帯（亜寒帯）気候は、シベリアやカナダ北部など北半球の高緯度地域に広がり、夏は比較的温暖になる一方、冬は非常に厳しい寒さになるため、年間の気温差が大きいことが特徴である。\n\n【ステップ2】この気候帯に広がる針葉樹の森林を「タイガ」と呼び、木材資源として利用されている。\n\n【答え】冷帯（亜寒帯）気候は、夏と冬の気温差が大きく、冬の寒さが非常に厳しい気候である。この気候に見られる針葉樹林を「タイガ」と呼ぶ。\n\n【確かめ】「冷帯（亜寒帯）＝年較差が大きい、タイガ」を確認する。\n\n【よくあるまちがい】タイガと熱帯雨林を混同しないこと。タイガは針葉樹林（限られた種類の針葉樹が広く分布する森林）である。\n\n【ここが絶対】「冷帯（亜寒帯）気候とタイガ」は地理の最頻出事項。',
     difficulty: 'standard',
     course: 'koko-todaiji',
     examType: 'koko',
@@ -880,7 +880,7 @@ export const schoolKokoTodaijiFill: Question[] = [
     id: 'todaiji_eigo_15',
     subject: 'eigo',
     question:
-      'What does the underlined phrase mean? "The meeting was put off until next week."',
+      'What does "put off" mean in the following sentence? "The meeting was put off until next week."',
     answer: 'postponed (delayed to a later time)',
     hint: '"put off" is a phrasal verb that describes changing the timing of an event.',
     explanation:
@@ -983,10 +983,10 @@ export const figuresKokoTodaijiFill: Record<string, Figure> = {
   todaiji_shakai_09: {
     kind: 'pieChart',
     slices: [
-      { label: '火力', value: 60 },
+      { label: '火力', value: 66 },
       { label: '原子力', value: 25 },
       { label: '水力', value: 8 },
-      { label: '新エネルギー等', value: 7 },
+      { label: '新エネルギー等', value: 1 },
     ],
   },
 };

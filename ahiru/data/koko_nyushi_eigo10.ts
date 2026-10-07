@@ -7,12 +7,12 @@ export const kokoNyushiEigo10: Question[] = [
   {
     id: 'koko_nyushi_eigo10_01',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語句を選べ。  The volunteers ( ) food to homeless people for over ten years.',
-    choices: ['① serve', '② served', '③ have served', '④ have been serving'],
+    question: '次の（　）内に最も適切な語句を選べ。  The volunteers ( ) food to homeless people for over ten years now.',
+    choices: ['① serve', '② served', '③ had served', '④ have been serving'],
     answer: '④ have been serving',
     hint: '「10年以上ずっと〜している」という継続を表す時制を選ぶ。',
     explanation:
-      '【何を聞かれているか】「The volunteers ( ) food to homeless people for over ten years.」の空所に入る適切な時制を選ぶ。\n【なぜhave been servingになるのか】「10年以上ずっと」という、今も続いている動作の継続を強調するには、現在完了進行形（have been＋動詞のing形）を使う必要があるから。\n【ポイント1】for over ten years（10年以上にわたって）は継続を表す語句。\n【ポイント2】①serve（現在形、継続の強調がない）、②served（過去形、今も続くニュアンスが出ない）、③have served（現在完了形、継続の強調が弱い）はどれも文脈に合わない。\n【ポイント3】④have been serving（現在完了進行形）が正解。for〜、since〜とセットで頻出。\n【答え】④ have been serving\n【確かめ】for over ten yearsという継続の期間を表す語句と、have been＋Vingの組み合わせがセットになっていることを確認する。\n【よくあるまちがい】have served（現在完了形）を選んでしまう。現在完了進行形の方が「今も続いている」ことをより強調する。\n【ここが絶対】過去から現在まで続く動作の継続を強調するときは現在完了進行形（have/has been＋Ving）を使う。',
+      '【何を聞かれているか】「The volunteers ( ) food to homeless people for over ten years now.」の空所に入る適切な時制を選ぶ。\n【なぜhave been servingになるのか】「10年以上ずっと」という、今も続いている動作の継続を強調するには、現在完了進行形（have been＋動詞のing形）を使う必要があるから。\n【ポイント1】for over ten years now（今で10年以上にわたって）は、今も続く継続を表す語句。\n【ポイント2】①serve（現在形、継続の期間を表せない）、②served（過去形、nowがあるので今は終わっている意味になり合わない）、③had served（過去完了形、過去の基準点がなくnowとも合わない）はどれも文脈に合わない。\n【ポイント3】④have been serving（現在完了進行形）が正解。for〜、since〜とセットで頻出。\n【答え】④ have been serving\n【確かめ】for over ten years nowという継続の期間を表す語句と、have been＋Vingの組み合わせがセットになっていることを確認する。\n【よくあるまちがい】過去形served（nowと合わない）や、過去完了had served（過去の基準点がない）を選んでしまう。\n【ここが絶対】過去から現在まで続く動作の継続を強調するときは現在完了進行形（have/has been＋Ving）を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -174,11 +174,11 @@ avoid＋動名詞＝「〜するのを避ける」。avoidは不定詞を目的�
     id: 'koko_nyushi_eigo10_08',
     subject: 'eigo',
     question: '次の（　）内に最も適切な語を選べ。  If we ( ) more about local problems, we can find better ways to solve them.',
-    choices: ['① will learn', '② learn', '③ learned', '④ have learned'],
+    choices: ['① will learn', '② learn', '③ learned', '④ learning'],
     answer: '② learn',
     hint: '条件を表すif節の中では、未来のことでも現在形を使う。',
     explanation:
-      '【何を聞かれているか】「If we ( ) more about local problems, we can find better ways to solve them.」の空所に入る適切な語を選ぶ。\n【なぜlearnになるのか】条件を表すif節の中では、未来のことでもwillを使わず現在形を使うという決まりがあるから。\n【ポイント1】if節などの副詞節の中では、未来のことでも現在形で表す。①will learnはif節の中では使えない。\n【ポイント2】③learned（過去形、仮定法になり文意がずれる）、④have learned（現在完了、この文脈では不要）はどちらも誤り。\n【ポイント3】②learn（現在形）が正解。「私たちが地域の問題についてもっと学べば」という条件を表す。\n【答え】② learn\n【確かめ】主節にcan（可能性）が使われていることと、if節が現在形（learn）になっていることのバランスを確認する。\n【よくあるまちがい】if節の中にもwillを入れてしまう。\n【ここが絶対】時・条件を表す副詞節の中では、未来のことでも現在形を使う。',
+      '【何を聞かれているか】「If we ( ) more about local problems, we can find better ways to solve them.」の空所に入る適切な語を選ぶ。\n【なぜlearnになるのか】条件を表すif節の中では、未来のことでもwillを使わず現在形を使うという決まりがあるから。\n【ポイント1】if節などの副詞節の中では、未来のことでも現在形で表す。①will learnはif節の中では使えない。\n【ポイント2】③learned（過去形、仮定法になり文意がずれる）、④learning（ing形、動詞の形としてif節に使えない）はどちらも誤り。\n【ポイント3】②learn（現在形）が正解。「私たちが地域の問題についてもっと学べば」という条件を表す。\n【答え】② learn\n【確かめ】主節にcan（可能性）が使われていることと、if節が現在形（learn）になっていることのバランスを確認する。\n【よくあるまちがい】if節の中にもwillを入れてしまう。\n【ここが絶対】時・条件を表す副詞節の中では、未来のことでも現在形を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -551,10 +551,10 @@ take action＝行動を起こす。似た形にtake steps（措置を講じる�
     id: 'koko_nyushi_eigo10_27',
     subject: 'eigo',
     question: '次の語を並べ替えて正しい英文を作れ。\n（ has / for / she / been / working / three years / this NPO / at ）\n「彼女はこのNPOで3年間働き続けている。」',
-    answer: 'She has been working at this NPO for three years.',
+    answer: 'She has been working at this NPO for three years. / She has been working for three years at this NPO.',
     hint: '現在完了進行形（have/has been＋Ving）の語順。forは期間を表す。',
     explanation:
-      '【何を聞かれているか】has / for / she / been / working / three years / this NPO / at を並べ替えて「彼女はこのNPOで3年間働き続けている。」という英文を作る。\n【なぜhas been workingという語順になるのか】「今も続けて働いている」という継続を表すには現在完了進行形（has been＋動詞のing形）を使い、そのあとに場所、最後に期間を表すforの句を置くという英語の語順があるから。\n【ポイント1】現在完了進行形＝has been＋Ving。\n【ポイント2】主語She＋has been working＋場所（at this NPO）＋期間（for three years）という順で並べる。\n【ポイント3】She has been working at this NPO for three years.\n【答え】She has been working at this NPO for three years.\n【確かめ】has been workingの語順（has→been→-ing）が正しく並んでいるかを確認する。\n【よくあるまちがい】forの期間の句を場所の句より先に置いてしまう。\n【ここが絶対】現在完了進行形は必ずhave/has→been→動詞のingの順番で並べ、場所・期間などの修飾語はそのあとに続ける。',
+      '【何を聞かれているか】has / for / she / been / working / three years / this NPO / at を並べ替えて「彼女はこのNPOで3年間働き続けている。」という英文を作る。\n【なぜhas been workingという語順になるのか】「今も続けて働いている」という継続を表すには現在完了進行形（has been＋動詞のing形）を使い、そのあとに場所、最後に期間を表すforの句を置くという英語の語順があるから。\n【ポイント1】現在完了進行形＝has been＋Ving。\n【ポイント2】主語She＋has been working＋場所（at this NPO）＋期間（for three years）という順で並べる。\n【ポイント3】She has been working at this NPO for three years.（場所と期間を入れかえたShe has been working for three years at this NPO.も正しい）\n【答え】She has been working at this NPO for three years. / She has been working for three years at this NPO.\n【確かめ】has been workingの語順（has→been→-ing）が正しく並んでいるかを確認する。\n【よくあるまちがい】hasとbeenの順をぎゃくにしたり、workingを前に出してしまう。\n【ここが絶対】現在完了進行形は必ずhave/has→been→動詞のingの順番で並べ、場所・期間などの修飾語はそのあとに続ける。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -605,7 +605,7 @@ so＋形容詞/副詞＋that＋主語＋動詞＝結果を表す構文。such＋
     id: 'koko_nyushi_eigo10_30',
     subject: 'eigo',
     question: '次の語を並べ替えて正しい英文を作れ。\n（ was / by / this festival / local volunteers / organized / last month ）\n「このお祭りは先月、地元のボランティアによって開催された。」',
-    answer: 'This festival was organized by local volunteers last month.',
+    answer: 'This festival was organized by local volunteers last month. / This festival was organized last month by local volunteers.',
     hint: '受動態（be動詞＋過去分詞＋by〜）の語順。',
     explanation: `【出題意図】
 受動態の基本語順（主語＋be＋過去分詞＋by＋動作主）を問う整序問題。
@@ -613,7 +613,7 @@ so＋形容詞/副詞＋that＋主語＋動詞＝結果を表す構文。such＋
 【解説】
 This festival（主語・物）は「開催する」側ではなく「開催される」側なので受動態を使う。was organized by local volunteersという語順。
 
-正しい語順：This festival was organized by local volunteers last month.
+正しい語順：This festival was organized by local volunteers last month.（This festival was organized last month by local volunteers. も正しい）
 
 日本語訳：「このお祭りは先月、地元のボランティアによって開催された。」
 
@@ -801,11 +801,11 @@ B：それは心配しないで。回収センターまで車で送ってあげ�
     id: 'koko_nyushi_eigo10_39',
     subject: 'eigo',
     question: '次の英文の（　）に入る最も適切な語を選べ。  The volunteer meeting will be held ( ) the community center this Saturday.',
-    choices: ['① in', '② at', '③ on', '④ to'],
+    choices: ['① from', '② at', '③ on', '④ to'],
     answer: '② at',
     hint: '特定の建物・地点を表す前置詞を選ぶ。',
     explanation:
-      '【何を聞かれているか】「The volunteer meeting will be held ( ) the community center this Saturday.」の空所に入る適切な前置詞を選ぶ。\n【なぜatになるのか】the community center（特定の建物・地点）を表すときは、前置詞atを使うという決まりがあるから。\n【ポイント1】①in（広い空間の内側に使う）、③on（面・特定の日に使う）、④to（方向を表す）はどれもこの文脈に合わない。\n【ポイント2】②at（特定の地点に使う）が正解。\n【ポイント3】場所の前置詞：at＝特定の地点（at the station）、in＝広い空間の中（in the city）、on＝面に接する場所（on the street）。\n【答え】② at\n【確かめ】the community centerが「特定の地点」として捉えられていることを確認する。\n【よくあるまちがい】the community centerを広い空間だと考えてinを使ってしまう。\n【ここが絶対】at＝特定の地点、in＝広い空間の中、on＝面に接する場所、と使い分ける。',
+      '【何を聞かれているか】「The volunteer meeting will be held ( ) the community center this Saturday.」の空所に入る適切な前置詞を選ぶ。\n【なぜatになるのか】the community center（特定の建物・地点）を表すときは、前置詞atを使うという決まりがあるから。\n【ポイント1】①from（起点を表す）、③on（面・特定の日に使う）、④to（方向を表す）はどれもこの文脈に合わない。\n【ポイント2】②at（特定の地点に使う）が正解。\n【ポイント3】場所の前置詞：at＝特定の地点（at the station）、in＝広い空間の中（in the city）、on＝面に接する場所（on the street）。\n【答え】② at\n【確かめ】the community centerが「特定の地点」として捉えられていることを確認する。\n【よくあるまちがい】前置詞の意味を取りちがえ、起点を表すfromや方向を表すtoを選んでしまう。\n【ここが絶対】at＝特定の地点、in＝広い空間の中、on＝面に接する場所、と使い分ける。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -814,12 +814,12 @@ B：それは心配しないで。回収センターまで車で送ってあげ�
   {
     id: 'koko_nyushi_eigo10_40',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語を選べ。  Every year, our school ( ) old textbooks to students who cannot afford new ones.',
+    question: '次の英文の（　）に入る最も適切な語を選べ。  Every year, our school ( ) old textbooks to students who cannot afford new ones, without asking for any money.',
     choices: ['① borrows', '② donates', '③ sells', '④ rents'],
     answer: '② donates',
     hint: '「〜を寄付する」という意味の動詞を選ぶ。',
     explanation:
-      '【何を聞かれているか】「Every year, our school ( ) old textbooks to students who cannot afford new ones.」の空所に入る適切な動詞を選ぶ。\n【なぜdonatesになるのか】「新しい教科書を買う余裕のない生徒に古い教科書を渡す」という文脈から、「寄付する」という意味のdonateが最も適切だから。\n【ポイント1】①borrows（借りる）、③sells（売る、affordと矛盾する）、④rents（賃貸する）はどれもこの文脈に合わない。\n【ポイント2】②donates（寄付する）が正解。\n【ポイント3】donate〜to…＝…に〜を寄付する。名詞形はdonation（寄付）。\n【答え】② donates\n【確かめ】「教科書を買う余裕のない生徒」という文脈にdonate（寄付する）が合っているかを確認する。\n【よくあるまちがい】sellsを選んでしまい、「買う余裕がない」という文脈と矛盾してしまう。\n【ここが絶対】donate〜to…＝…に〜を寄付する、という決まった形で覚える。',
+      '【何を聞かれているか】「Every year, our school ( ) old textbooks to students who cannot afford new ones, without asking for any money.」の空所に入る適切な動詞を選ぶ。\n【なぜdonatesになるのか】「新しい教科書を買う余裕のない生徒に、お金を取らずに古い教科書を渡す」という文脈から、「寄付する」という意味のdonateが最も適切だから。\n【ポイント1】①borrows（借りる、to studentsと合わない）、③sells（売る、お金を取らないことと矛盾する）、④rents（賃貸する、お金を取らないことと矛盾する）はどれもこの文脈に合わない。\n【ポイント2】②donates（寄付する）が正解。\n【ポイント3】donate〜to…＝…に〜を寄付する。名詞形はdonation（寄付）。\n【答え】② donates\n【確かめ】「お金を取らずに、買う余裕のない生徒へ」という文脈にdonate（寄付する）が合っているかを確認する。\n【よくあるまちがい】sellsやrentsを選んでしまい、「お金を取らない」という文脈と矛盾してしまう。\n【ここが絶対】donate〜to…＝…に〜を寄付する、という決まった形で覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -959,10 +959,10 @@ B：それは心配しないで。回収センターまで車で送ってあげ�
     id: 'koko_nyushi_eigo10_48',
     subject: 'eigo',
     passage: `After the earthquake, many houses in the small town were badly damaged. Volunteers from all over the country came to help clear debris, repair roofs, and rebuild homes. Local residents were grateful for this support, but they also wanted to take an active role themselves. They organized their own teams to plan the rebuilding process and to decide which buildings should be fixed first. This combination of outside help and local leadership allowed the town to recover faster than expected. Experts say that this is a good model for other communities facing similar disasters.`,
-    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文中の下線部 "this" が指す内容として最も適切なものを選べ。',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文最後の文 "Experts say that this is a good model for other communities..." の "this" が指す内容として最も適切なものを選べ。',
     choices: ['① 地震で家が壊れたこと', '② 外部からの支援と地元住民のリーダーシップの組み合わせ', '③ 専門家が町を訪れたこと', '④ ボランティアが屋根を修理したこと'],
     answer: '② 外部からの支援と地元住民のリーダーシップの組み合わせ',
-    hint: '"this" の直前の文 "This combination of outside help and local leadership" を確認する。',
+    hint: '最後の文の "this" の直前の文 "This combination of outside help and local leadership" を確認する。',
     explanation:
       '【何を聞かれているか】本文中の下線部"this"が指す内容として最も適切なものを選ぶ。\n【なぜ②が正解なのか】下線部を含む文の直前に"This combination of outside help and local leadership allowed the town to recover faster"とあり、"this"はこの「外部からの支援と地元のリーダーシップの組み合わせ」を指しているから。\n【ポイント1】指示語の直前の文を確認する：外部からの支援と地元のリーダーシップの組み合わせが町の早い復興を可能にしたと書かれている。\n【ポイント2】①「地震で家が壊れたこと」はthisの直前の話題ではない。③「専門家が町を訪れたこと」は本文に記述がない。④「屋根を修理したこと」は支援内容の一部にすぎず、thisが指す全体ではない。\n【ポイント3】"this"が指すのは②「外部からの支援と地元住民のリーダーシップの組み合わせ」。\n【答え】② 外部からの支援と地元住民のリーダーシップの組み合わせ\n【確かめ】"this"を②の内容に置きかえて文を読み直し、意味が通ることを確認する。\n【よくあるまちがい】thisの直前の文の一部（屋根の修理など）だけを見て、combination（組み合わせ）という全体をとらえ損ねてしまう。\n【ここが絶対】「combination of A and B」のような複合的な内容を一語のthisでまとめることがあるので、直前の文全体を確認する。',
     difficulty: 'advanced',

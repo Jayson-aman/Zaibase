@@ -294,7 +294,7 @@ export const SPLUS_OT_B: Question[] = [
     difficulty: 'standard',
     course: 'otani',
     examType: 'chugaku',
-    question: `【大問2】次の日本語の意味になるように、（　）内の語を並べかえて、正しい英文を書きなさい。文頭の語は大文字で書きなさい。\n\n問1: 私は昨日、図書館で本を読みました。\n（ library / a / I / yesterday / read / book / in / the ）\n\n問2: あなたは何時に起きますか。\n（ time / do / you / what / get / up ）\n\n問3: この花は英語で何と呼ばれていますか。\n（ called / is / flower / this / what / in / English ）`,
+    question: `【大問2】次の日本語の意味になるように、（　）内の語を並べかえて、正しい英文を書きなさい。文頭の語は大文字で書きなさい。\n\n問1: 私は昨日、図書館で本を読みました。（yesterday は文の最後に置く）\n（ library / a / I / yesterday / read / book / in / the ）\n\n問2: あなたは何時に起きますか。\n（ time / do / you / what / get / up ）\n\n問3: この花は英語で何と呼ばれていますか。\n（ called / is / flower / this / what / in / English ）`,
     answer: '問1: I read a book in the library yesterday.\n問2: What time do you get up?\n問3: What is this flower called in English?',
     hint: '日本語の語順と英語の語順のちがいに注意。問2は疑問詞（what time）がはじめに来る。',
     explanation: `【何を聞かれているか】日本語の意味に合うように、英語の語順を正しく組み立てる。\n【なぜその語順か】英語の基本の語順は「だれが（主語）＋どうする（動詞）＋何を（目的語）」。場所や時間をあらわす言葉は文の最後に置くことが多い。疑問文では、疑問詞が先頭に来る。\n【ステップ1】問1：主語 I → 動詞 read（過去形も同じつづり）→ 目的語 a book → 場所 in the library → 時 yesterday の順。I read a book in the library yesterday.\n【ステップ2】問2：「何時に」は What time。疑問文で do you が続き、動詞 get up（起きる）を最後に置く。What time do you get up?\n【ステップ3】問3：受け身の疑問文。「何と呼ばれていますか」は What is 〜 called?。「この花は」は this flower、「英語で」は in English。What is this flower called in English?\n【答え】問1: I read a book in the library yesterday.　問2: What time do you get up?　問3: What is this flower called in English?\n【確かめ】並べた英文を日本語に直して読む。問1「私は読みました／本を／図書館で／昨日」、問2「何時に／あなたは起きますか」、問3「何と／この花は／呼ばれていますか／英語で」。もとの日本語と同じ意味になっている。\n【よくあるまちがい】**文頭を大文字にし忘れる**。**文末にピリオドやクエスチョンマークをつけ忘れる**。問2で What time を離して、Time what としてしまう。`,

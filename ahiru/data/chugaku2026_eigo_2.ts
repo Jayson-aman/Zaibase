@@ -444,7 +444,7 @@ A: Thank you very much.
 
 ① I (　) (　) help you.（私はあなたを手伝います）
 ② It (　) (　) rain tomorrow.（明日は雨が降るでしょう）
-③ (　) you (　) come to the party?（あなたはパーティーに来ますか）`,
+③ (　) you (　) to the party?（あなたはパーティーに来ますか）`,
     answer: `① will help　② will rain　③ Will, come`,
     hint: `willの後は動詞の原形。疑問文はWillを主語の前に置く。`,
     explanation:
@@ -478,9 +478,9 @@ A: Thank you very much.
 
 ① Students (　) wear a uniform at this school.（この学校の生徒は制服を着なければならない）
 ② You (　) (　) (　) study today. It's a holiday.（今日は勉強する必要はない。休日だから）`,
-    answer: `① must (have to)　② don't have to`,
+    answer: `① must (have to)　② don't have to (don't need toも可)`,
     hint: `①「〜しなければならない」を表す助動詞を考える。②「〜する必要はない」は、禁止の must not とは別の言い方。空所は3つなので3語で答える。`,
-    explanation: `【出題意図】義務を表すmust/have toと、不必要を表すdon't have toの違いを問う。【解説】①「〜しなければならない」はmustまたはhave toで表す→must(またはhave to) wear。②「〜する必要はない」はdon't have to+動詞の原形で表す→don't have to study。【注意点】must notは「〜してはいけない」という禁止の意味になり、don't have toの「する必要がない」とは意味が異なるので混同しない。【関連知識】mustには過去形がないため、過去の義務にはhad toを使う。`,
+    explanation: `【出題意図】義務を表すmust/have toと、不必要を表すdon't have toの違いを問う。【解説】①「〜しなければならない」はmustまたはhave toで表す→must(またはhave to) wear。②「〜する必要はない」はdon't have to+動詞の原形で表す→don't have to study。don't need to studyも同じ意味で正解になる。【注意点】must notは「〜してはいけない」という禁止の意味になり、don't have toの「する必要がない」とは意味が異なるので混同しない。【関連知識】mustには過去形がないため、過去の義務にはhad toを使う。`,
     pitfall: `②をmust notとすると「勉強してはいけない」という禁止の意味になり誤り。「必要がない」はdon't have to。`,
     memoryTip: `「must not=禁止(してはいけない)」「don't have to=不必要(しなくてよい)」の違いをセットで覚える。`,
   },
@@ -499,7 +499,7 @@ A: Thank you very much.
     answer: `① should　② should not (shouldn't)`,
     hint: `「〜すべきだ」はshould、「〜すべきではない」はshould not。`,
     explanation:
-      '【何を聞かれているか】\n助動詞shouldを使った肯定文・否定文を完成させる問題。\n\n【なぜshouldを使うのか】\n「〜すべきだ」というアドバイス・提案を表すときは、助動詞shouldを使う。\n\n【ポイント1】①肯定文を確認する\n"You should study more."＝「もっと勉強すべきだ」。should＋動詞の原形。\n\n【ポイント2】②否定文を確認する\n"He should not (shouldn\'t) worry so much."＝「そんなに心配すべきではない」。\n\n【ポイント3】mustとの違いを確認する\nshouldはmustより弱い義務・アドバイスを表す。\n\n【答え】\n① should　② should not (shouldn\'t)\n\n【確かめ】\nshouldの後ろの動詞（study, worry）が原形になっているか確認する。\n\n【よくあるまちがい】\nshouldの後の動詞に原形以外（worriesなど）を使ってしまうミス。\n\n【ここが絶対】\n「should＝アドバイスの べきだ」「must＝強い義務の ねばならない」というニュアンスの違いを覚える。',
+      '【何を聞かれているか】\n助動詞shouldを使った肯定文・否定文を完成させる問題。\n\n【なぜshouldを使うのか】\n「〜すべきだ」というアドバイス・提案を表すときは、助動詞shouldを使う。\n\n【ポイント1】①肯定文を確認する\n"You should study more."＝「もっと勉強すべきだ」。should＋動詞の原形。\n\n【ポイント2】②否定文を確認する\n"He should not (shouldn\'t) worry so much."＝「そんなに心配すべきではない」。\n\n【ポイント3】mustとの違いを確認する\nshouldはmustより弱い義務・アドバイスを表す。\n\n【答え】\n① should　② should not (shouldn\'t)\n\n【確かめ】\nshouldの後ろの動詞（study, worry）が原形になっているか確認する。\n\n【よくあるまちがい】\nshouldの後の動詞に原形以外（worriesなど）を使ってしまうミス。\n\n【ここが絶対】\n「should＝アドバイスのべきだ」「must＝強い義務のねばならない」というニュアンスの違いを覚える。',
     pitfall: `shouldの後の動詞に原形以外(worries等)を使わない。`,
     memoryTip: `「should=アドバイスのべきだ」「must=強い義務のねばならない」とニュアンスの違いを覚える。`,
   },
@@ -533,9 +533,9 @@ A: Thank you very much.
 ① I like (　) in the sea.（私は海で泳ぐことが好きだ）(swim)
 ② She enjoys (　) books.（彼女は本を読むことを楽しむ）(read)
 ③ (　) the piano is fun.（ピアノを弾くことは楽しい）(play)`,
-    answer: `① swimming　② reading　③ Playing`,
+    answer: `① swimming (to swimも可)　② reading　③ Playing`,
     hint: `like/enjoyの後や文の主語になるとき、動詞をing形（動名詞）にする。`,
-    explanation: `【出題意図】動名詞(動詞のing形が名詞の働きをする形)の基本用法を問う。【解説】①like+動名詞で「〜することが好き」→swimming(短母音+子音1字なのでmを重ねる)。②enjoy+動名詞で「〜することを楽しむ」→reading。③動名詞は文の主語にもなれる→Playing the piano is fun.(ピアノを弾くことは楽しい)。【注意点】enjoyは動名詞のみをとり、to不定詞は続けられない(enjoy to readは誤り)。【関連知識】動名詞をとる動詞:enjoy、finish、stop。to不定詞をとる動詞:want、hope、decide。`,
+    explanation: `【出題意図】動名詞(動詞のing形が名詞の働きをする形)の基本用法を問う。【解説】①like+動名詞で「〜することが好き」→swimming(短母音+子音1字なのでmを重ねる)。likeは不定詞もとれるので、to swimでも正解。②enjoy+動名詞で「〜することを楽しむ」→reading。③動名詞は文の主語にもなれる→Playing the piano is fun.(ピアノを弾くことは楽しい)。【注意点】enjoyは動名詞のみをとり、to不定詞は続けられない(enjoy to readは誤り)。【関連知識】動名詞をとる動詞:enjoy、finish、stop。to不定詞をとる動詞:want、hope、decide。`,
     pitfall: `enjoy to readのようにenjoyの後にto不定詞を使わない。enjoyは動名詞のみをとる。`,
     memoryTip: `「like/enjoy+動詞のing形」とセットで覚え、動名詞は「主語にもなれる名詞」と意識する。`,
   },
@@ -818,17 +818,17 @@ Mika wanted to make a birthday cake for her mother. She read a recipe book and b
 
 Dear Emily,
 
-Thank you for your letter. I am happy to hear that you are coming to Japan this summer. My family and I will show you around Kyoto. Please bring warm clothes because it can be rainy in June.
+Thank you for your letter. I am happy to hear that you are coming to Japan this summer. My family and I will show you around Kyoto. Please bring an umbrella because it can be rainy in June.
 
 See you soon,
 Yumi
 
 ① What will Yumi's family do for Emily?
-② Why should Emily bring warm clothes?`,
+② Why should Emily bring an umbrella?`,
     answer: `① They will show Emily around Kyoto.
 ② Because it can be rainy in June.`,
-    hint: `Yumiの家族がすることは「show you around」、暖かい服を持ってくる理由は「because」以降を確認する。`,
-    explanation: `【出題意図】手紙形式の英文を読み、内容を正確に把握する問題。【解説】①「My family and I will show you around Kyoto.」からThey will show Emily around Kyoto.。②「Please bring warm clothes because it can be rainy in June.」から「6月は雨が降ることがあるから」→Because it can be rainy in June.。【注意点】show+人+around+場所で「(人)に(場所)を案内する」という意味。【関連知識】手紙の書き出しはDear〜,、結びはSee you soon,/Best wishes,などがよく使われる。`,
+    hint: `Yumiの家族がすることは「show you around」、かさ(umbrella)を持ってくる理由は「because」以降を確認する。`,
+    explanation: `【出題意図】手紙形式の英文を読み、内容を正確に把握する問題。【解説】①「My family and I will show you around Kyoto.」からThey will show Emily around Kyoto.。②「Please bring an umbrella because it can be rainy in June.」から「6月は雨が降ることがあるから」→Because it can be rainy in June.。【注意点】show+人+around+場所で「(人)に(場所)を案内する」という意味。【関連知識】手紙の書き出しはDear〜,、結びはSee you soon,/Best wishes,などがよく使われる。`,
     pitfall: `rainyを「雨」とだけ訳さず、「雨が降りやすい・雨模様である」というニュアンスで理解する。`,
     memoryTip: `手紙文はDear(宛先)→本文→結びの言葉+差出人名、という決まった形を意識して読む。`,
   },

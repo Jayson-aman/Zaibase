@@ -13,7 +13,7 @@ export const kokoKisoEigo50b: Question[] = [
     hint: '現在完了形は「have / has + 過去分詞」。主語が3人称単数のときは has を使う。',
     explanation:
       '【何を聞かれているか】①「I (　) (　) this book before.」（私はこの本を以前読んだことがある）②「She (　) (　) her keys.」（彼女は鍵をなくしてしまった）の空所を現在完了形で埋める。\n【なぜhave/hasと過去分詞を使うのか】「以前〜したことがある」「〜してしまった（今もその状態が続く）」という、過去の出来事が今に影響しているという意味を表すには、現在完了形（have/has＋過去分詞）を使う必要があるから。\n【ポイント1】現在完了形はhave/has＋過去分詞で作る。主語がI/you/we/theyならhave、he/she/itならhasを使う。\n【ポイント2】①の主語はI（1人称）なのでhave、readの過去分詞はread（原形と同じつづりだが発音が変わる）。①have read。\n【ポイント3】②の主語はShe（3人称単数）なのでhas、loseの過去分詞はlost。②has lost。\n【答え】① have read　② has lost\n【確かめ】主語がI（have）、She（has）とそれぞれ正しく対応しているかを確認する。\n【よくあるまちがい】She have lostのように、3人称単数の主語にhaveを使ってしまう。\n【ここが絶対】現在完了形はhave/has＋過去分詞。主語がhe/she/itのときは必ずhasを使う。',
-    pitfall: '「She have lost」のようにheads/sheにhaveを使ってしまうミス。3単現はhas！',
+    pitfall: '「She have lost」のようにhe/sheにhaveを使ってしまうミス。3単現はhas！',
     memoryTip: 'have/has + 過去分詞。主語がI/You/We/They → have、He/She/It → has。このセットを丸ごと覚えよう！',
   },
   {
@@ -216,10 +216,10 @@ export const kokoKisoEigo50b: Question[] = [
     difficulty: 'basic',
     maxOnly: true,
     question: '次の文の下線部の誤りを正しく直しなさい。\n① She was surprising to hear the news.\n② The window was broke by the ball.\n③ I have went to Okinawa twice.',
-    answer: '① surprised　② broken　③ gone',
+    answer: '① surprised　② broken　③ been',
     hint: '感情を表す受動態はsurprised/excited/tired。過去分詞を正確に覚えよう。',
     explanation:
-      '【何を聞かれているか】①「She was surprising to hear the news.」②「The window was broke by the ball.」③「I have went to Okinawa twice.」の下線部の誤りを正しく直す。\n【なぜ間違っているのか】①は感情を「感じる」側（人）にはsurprised（驚かされた）を使うべきなのにsurprising（驚かせる）になっている。②③はbreak、goの過去分詞が過去形と違う不規則動詞であることを見落としている。\n【ポイント1】①感情を受ける側（人）はsurprised、驚かせる側（物・出来事）はsurprising。ここでは「彼女が驚いた」のでsurprisedが正しい。\n【ポイント2】②breakの過去分詞はbroken（不規則変化）。brokeは過去形なので、be動詞のあとには使えない。\n【ポイント3】③goの過去分詞はgone（不規則変化）。wentは過去形なので、haveのあとには使えない。\n【答え】① surprised　② broken　③ gone\n【確かめ】①が「人が感じる」文脈でsurprisedになっているか、②③がbe動詞・haveのあとに正しい過去分詞（broken、gone）が続いているかを確認する。\n【よくあるまちがい】surprising／broke／wentはすべて文法的に存在する語なので、スペルチェックでは誤りに気づけない。意味と用法を確認することが大事。\n【ここが絶対】感情の受け身（人が感じる側）はed形（surprised）、原因（物・出来事）はing形（surprising）。break-broke-broken、go-went-goneの活用を正確に覚える。',
+      '【何を聞かれているか】①「She was surprising to hear the news.」②「The window was broke by the ball.」③「I have went to Okinawa twice.」の下線部の誤りを正しく直す。\n【なぜ間違っているのか】①は感情を「感じる」側（人）にはsurprised（驚かされた）を使うべきなのにsurprising（驚かせる）になっている。②③はbreak、goの過去分詞が過去形と違う不規則動詞であることを見落としている。\n【ポイント1】①感情を受ける側（人）はsurprised、驚かせる側（物・出来事）はsurprising。ここでは「彼女が驚いた」のでsurprisedが正しい。\n【ポイント2】②breakの過去分詞はbroken（不規則変化）。brokeは過去形なので、be動詞のあとには使えない。\n【ポイント3】③「〜に行ったことがある（経験）」はhave been to〜で表す。wentは過去形なので、haveのあとには使えない。なおhave gone to〜は「〜へ行ってしまった（今ここにいない）」という意味で、twice（2回）という経験の文には合わない。beの過去分詞はbeen。\n【答え】① surprised　② broken　③ been\n【確かめ】①が「人が感じる」文脈でsurprisedになっているか、②③がbe動詞・haveのあとに正しい過去分詞（broken、been）が続いているかを確認する。\n【よくあるまちがい】surprising／broke／wentはすべて文法的に存在する語なので、スペルチェックでは誤りに気づけない。意味と用法を確認することが大事。\n【ここが絶対】感情の受け身（人が感じる側）はed形（surprised）、原因（物・出来事）はing形（surprising）。break-broke-broken、be-was/were-beenの活用を正確に覚える。「〜に行ったことがある」はhave been to〜（have gone toではない）。',
     pitfall: '「surprising / broke / went」はすべて文法的に存在する語なのでスペルチェックでは引っかからない。意味と用法を確認することが大事。',
     memoryTip: '感情の受け身（人が感じる側）はed形（surprised/excited/tired）。物・出来事が原因のときはing形（surprising/exciting）。',
   },
@@ -500,10 +500,10 @@ export const kokoKisoEigo50b: Question[] = [
     difficulty: 'basic',
     maxOnly: true,
     question: '次の（　）に適切な語を入れ、電話表現を完成させなさい。\nA: Hello. (　) I (　) to Tom, please?（トムをお願いできますか）\nB: I\'m sorry, he\'s out right now. (　) I (　) a message?（伝言を承りましょうか）',
-    answer: 'A: May / speak　B: May / take（またはCan / leave）',
+    answer: 'A: May / speak　B: May / take（またはCan / take）',
     hint: '電話での依頼：May I speak to ...? 伝言を申し出る：May I take a message? / Shall I take a message?',
     explanation:
-      '【何を聞かれているか】「A: Hello. (　) I (　) to Tom, please?」「B: I\'m sorry, he\'s out right now. (　) I (　) a message?」の空所を埋め、電話表現を完成させる。\n【なぜMay I speak to〜?とMay I take a message?を使うのか】電話で人を呼び出すときはMay I speak to〜?、相手が不在のときに伝言を申し出るときはMay I take a message?という決まった表現を使うから。\n【ポイント1】「トムをお願いできますか」＝May I speak to Tom, please?。電話ではtalkではなくspeak toを使う。\n【ポイント2】「伝言を承りましょうか」＝May I take a message?（またはShall I take a message?/Can I leave a message?）。\n【ポイント3】電話表現の定番：Hello, this is 〜 speaking.（こちら〜です）、He\'s out right now.（今席を外しています）。\n【答え】A: May / speak　B: May / take（またはCan / leave）\n【確かめ】May I speak to〜?とMay I take a message?がそれぞれ正しい場面で使われているかを確認する。\n【よくあるまちがい】May I talk to〜?のように、電話特有のspeak toではなくtalk toを使ってしまう。\n【ここが絶対】電話表現May I speak to〜?とMay I take a message?はセリフごと丸ごと覚える。',
+      '【何を聞かれているか】「A: Hello. (　) I (　) to Tom, please?」「B: I\'m sorry, he\'s out right now. (　) I (　) a message?」の空所を埋め、電話表現を完成させる。\n【なぜMay I speak to〜?とMay I take a message?を使うのか】電話で人を呼び出すときはMay I speak to〜?、相手が不在のときに伝言を申し出るときはMay I take a message?という決まった表現を使うから。\n【ポイント1】「トムをお願いできますか」＝May I speak to Tom, please?。電話ではtalkではなくspeak toを使う。\n【ポイント2】「伝言を承りましょうか」＝May I take a message?（またはShall I take a message?/Can I take a message?）。\n【ポイント3】電話表現の定番：Hello, this is 〜 speaking.（こちら〜です）、He\'s out right now.（今席を外しています）。\n【答え】A: May / speak　B: May / take（またはCan / take）\n【確かめ】May I speak to〜?とMay I take a message?がそれぞれ正しい場面で使われているかを確認する。\n【よくあるまちがい】May I talk to〜?のように、電話特有のspeak toではなくtalk toを使ってしまう。\n【ここが絶対】電話表現May I speak to〜?とMay I take a message?はセリフごと丸ごと覚える。',
     pitfall: '「Can I speak to」も通じるが、電話での丁寧な依頼はMay I ...?が一般的。試験ではMayが模範解答になることが多い。',
     memoryTip: '「May I speak to ...?」「May I take a message?」の2文は電話英語の最重要フレーズ！ドラマや映画でも頻出。',
   },
@@ -617,11 +617,11 @@ export const kokoKisoEigo50b: Question[] = [
     examType: 'koko',
     difficulty: 'basic',
     maxOnly: true,
-    question: '次の（　）に適切な語句をA〜Dから選びなさい。\n① She has been studying English (　) she was ten.\nA. for　B. since　C. when　D. during\n② I (　) this town for thirty years before I moved.\nA. lived in　B. have lived in　C. had lived in　D. live in',
-    answer: '① B（since）　② C（had lived in）',
-    hint: '① sinceは「起点＋現在完了」。② 引っ越す前という「過去の過去」は過去完了（had + 過去分詞）。',
+    question: '次の（　）に適切な語句をA〜Dから選びなさい。\n① She has been studying English (　) she was ten.\nA. for　B. since　C. when　D. during\n② By the time I moved away, I (　) in this town for thirty years.\nA. lived　B. have lived　C. had lived　D. live',
+    answer: '① B（since）　② C（had lived）',
+    hint: '① sinceは「起点＋現在完了」。② By the time（〜するまでには）＋過去形のときは「過去の過去」で過去完了（had + 過去分詞）。',
     explanation:
-      '【何を聞かれているか】①「She has been studying English (　) she was ten.」②「I (　) this town for thirty years before I moved.」の空所に適切な語句を選ぶ。\n【なぜsinceとhad lived inになるのか】①は現在完了進行形とともに「10歳のときから」という起点を表すのでsince、②は「引っ越した（過去）」よりもさらに前の期間を表すので過去完了had lived inを使う必要があるから。\n【ポイント1】①she was ten（過去の起点）とhas been studying（現在完了進行形）が組み合わさるのでsince。\n【ポイント2】②before I moved（過去形）よりもさらに前の期間を表すには過去完了（had＋過去分詞）を使う。\n【ポイント3】have livedを選ぶと「今も住み続けている」という意味になり、「引っ越す前」という文脈と合わなくなる。\n【答え】① B（since）　② C（had lived in）\n【確かめ】②が「引っ越す前」という過去よりもさらに前の期間を表していることを確認する。\n【よくあるまちがい】②でhave livedを選んでしまい、「今も住んでいる」という意味になってしまう。\n【ここが絶対】2つの過去が登場したら「どちらが先か」を考えて、先の方を過去完了（had＋過去分詞）にする。',
+      '【何を聞かれているか】①「She has been studying English (　) she was ten.」②「By the time I moved away, I (　) in this town for thirty years.」の空所に適切な語句を選ぶ。\n【なぜsinceとhad livedになるのか】①は現在完了進行形とともに「10歳のときから」という起点を表すのでsince、②は「引っ越した（過去）」までに30年間住んでいた、つまり過去のある時点より前から続く期間を表すので過去完了had livedを使う必要があるから。\n【ポイント1】①she was ten（過去の起点）とhas been studying（現在完了進行形）が組み合わさるのでsince。\n【ポイント2】②By the time I moved away（過去形）までの期間を表すには過去完了（had＋過去分詞）を使う。単なる過去形livedでは「引っ越した時点より前」という前後関係がはっきりしない。\n【ポイント3】have livedを選ぶと「今も住み続けている」という意味になり、「引っ越す前」という文脈と合わなくなる。\n【答え】① B（since）　② C（had lived）\n【確かめ】②が「引っ越す前」という過去よりもさらに前の期間を表していることを確認する。\n【よくあるまちがい】②でhave livedを選んでしまい、「今も住んでいる」という意味になってしまう。\n【ここが絶対】2つの過去が登場したら「どちらが先か」を考えて、先の方を過去完了（had＋過去分詞）にする。',
     pitfall: '②でhave lived を選ぶと「現在まで住んでいる」という意味になってしまい、「引っ越す前」という文脈と合わなくなる。',
     memoryTip: '2つの過去が登場したら「どちらが先か」を考えてhad + 過去分詞！「過去の過去 = 過去完了」を合言葉に！',
   },
@@ -637,7 +637,7 @@ export const kokoKisoEigo50b: Question[] = [
     hint: '①関係代名詞+受動態の組み合わせ。②最上級+現在完了+everの組み合わせ。',
     explanation:
       '【何を聞かれているか】①「彼女が書いた本は世界中で読まれている。」②「これは私がこれまでに見た中で最もわくわくする映画だ。」を英語に訳す。\n【なぜ関係代名詞・受動態・最上級・現在完了を組み合わせるのか】①は「彼女が書いた」という説明を関係代名詞で加え、「読まれている」を受動態で表す必要があり、②は最上級と、「これまでに」を表す現在完了＋everを組み合わせる必要があるから。\n【ポイント1】①The book（先行詞）+ which she wrote（関係代名詞節）+ is read（受動態）+ all over the world。\n【ポイント2】②This is the most exciting movie（最上級）+ that I have ever seen（現在完了+ever＝これまでで）。\n【ポイント3】「the＋最上級＋…＋I have ever＋過去分詞」は試験の頻出パターン。\n【答え】① The book (which/that) she wrote is read all over the world.　② This is the most exciting movie (that) I have ever seen.\n【確かめ】②でhave、ever、過去分詞（seen）の3点セットがそろっているかを確認する。\n【よくあるまちがい】②でthe most exciting movie I ever see.のように、seeを現在形にしてしまう。\n【ここが絶対】「the＋最上級＋that＋主語＋have ever＋過去分詞」の形をセットで覚える。',
-    pitfall: '②「the most exciting movie I ever see」のようにseeを現在形にするミス。haveとevenと過去分詞（seen）の3点セットが必要！',
+    pitfall: '②「the most exciting movie I ever see」のようにseeを現在形にするミス。haveとeverと過去分詞（seen）の3点セットが必要！',
     memoryTip: '「the + 最上級 + ... + I have ever + 過去分詞」は試験の頻出パターン！全体を1つの文として音読して覚えよう！',
   },
   {
@@ -735,10 +735,10 @@ export const kokoKisoEigo50b: Question[] = [
     difficulty: 'basic',
     maxOnly: true,
     question: '次の文を英語にしなさい。不定詞・動名詞・受動態・比較のいずれかを使うこと。\n① 彼は昨年よりも英語が上手になった。\n② 音楽を聴くことは私をリラックスさせる。\n③ その橋は100年前に建てられた。',
-    answer: '① He has become better at English than last year. （またはHis English is better than last year.）\n② Listening to music makes me relax. （またはListening to music relaxes me.）\n③ The bridge was built 100 years ago.',
+    answer: '① He is better at English than he was last year. （またはHis English is better than it was last year.）\n② Listening to music makes me relax. （またはListening to music relaxes me.）\n③ The bridge was built 100 years ago.',
     hint: '① better（good/wellの比較級）+ than。② 動名詞Listening が主語。③ was built（受動態の過去形）。',
     explanation:
-      '【何を聞かれているか】\n不定詞・動名詞・受動態・比較のどれかを使って、3つの日本語を英語に直す総合問題。\n\n【なぜこの文法を使うのか】\n①「昨年よりも上手になった」は比較を表すので比較級（better）＋than。②「音楽を聴くこと」は動作を名詞化するので動名詞（Listening）を主語にする。③「建てられた」は「建てる」という動作を橋が受ける側なので受動態（be動詞＋過去分詞）。\n\n【ポイント1】比較級\ngood/wellの比較級はbetter。「英語が上手」はbe good at English、比較するときはbetter at English than 〜。\n\n【ポイント2】動名詞を主語にする\n「〜すること」を主語にするときは動詞にingをつけて名詞化する（動名詞）。Listening to music（音楽を聴くこと）が主語になり、そのあとの動詞は3人称単数扱いでmakesやrelaxesとsをつける。\n\n【ポイント3】受動態\n「建てられた」は橋（The bridge）が「建てる」という動作をされる側なので、be動詞＋過去分詞（was built）を使う。buildの過去分詞はbuilt（不規則変化）。\n\n【答え】\n① He is better at English than he was last year.\n② Listening to music makes me relax.\n③ The bridge was built 100 years ago.\n\n【確かめ】\n①betterのあとにthanがあるか確認。②Listeningで文が始まり、動詞が3人称単数の形になっているか確認。③be動詞＋過去分詞のセットになっているか確認（builtの前にwasがあるか）。\n\n【よくあるまちがい】\n③「The bridge built 100 years ago」のようにbe動詞を省略してしまうミス。受動態は必ずbe動詞＋過去分詞のセットで使う。\n\n【ここが絶対】\n比較→比較級+than、動名詞主語→ing形で始める、受動態→be動詞+過去分詞。3つのルールをそれぞれ単独できれいに使えるかが採点のポイント。',
+      '【何を聞かれているか】\n不定詞・動名詞・受動態・比較のどれかを使って、3つの日本語を英語に直す総合問題。\n\n【なぜこの文法を使うのか】\n①「昨年よりも上手になった」は比較を表すので比較級（better）＋than。②「音楽を聴くこと」は動作を名詞化するので動名詞（Listening）を主語にする。③「建てられた」は「建てる」という動作を橋が受ける側なので受動態（be動詞＋過去分詞）。\n\n【ポイント1】比較級\ngood/wellの比較級はbetter。「英語が上手」はbe good at English、比較するときはbetter at English than he was last year（昨年の彼よりも）のように、同じ種類のものどうしを比べる。\n\n【ポイント2】動名詞を主語にする\n「〜すること」を主語にするときは動詞にingをつけて名詞化する（動名詞）。Listening to music（音楽を聴くこと）が主語になり、そのあとの動詞は3人称単数扱いでmakesやrelaxesとsをつける。\n\n【ポイント3】受動態\n「建てられた」は橋（The bridge）が「建てる」という動作をされる側なので、be動詞＋過去分詞（was built）を使う。buildの過去分詞はbuilt（不規則変化）。\n\n【答え】\n① He is better at English than he was last year.\n② Listening to music makes me relax.\n③ The bridge was built 100 years ago.\n\n【確かめ】\n①betterのあとにthanがあるか確認。②Listeningで文が始まり、動詞が3人称単数の形になっているか確認。③be動詞＋過去分詞のセットになっているか確認（builtの前にwasがあるか）。\n\n【よくあるまちがい】\n③「The bridge built 100 years ago」のようにbe動詞を省略してしまうミス。受動態は必ずbe動詞＋過去分詞のセットで使う。\n\n【ここが絶対】\n比較→比較級+than、動名詞主語→ing形で始める、受動態→be動詞+過去分詞。3つのルールをそれぞれ単独できれいに使えるかが採点のポイント。',
     pitfall: '③「The bridge built 100 years ago」のようにbe動詞（was）を省略するミス。受動態は必ずbe動詞＋過去分詞！',
     memoryTip: '3文とも「一つのルールをしっかり使えているか」が採点ポイント。比較→than、動名詞→主語に、受動態→was+pp。それぞれのルールをきれいに使うことを意識しよう！',
   },

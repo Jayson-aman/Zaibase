@@ -982,7 +982,7 @@ export const tokyoGakushuinExam: Question[] = [
     examType: 'chugaku',
     difficulty: 'standard',
     examFrequency: 'medium',
-    question: '【学習院 英語⑦】次の文の空所に入る最も適切な語を選びなさい。She ( ) speak French very well.',
+    question: '【学習院 英語⑦】次の日本語の意味になるように、空所に入る最も適切な語を選びなさい。「彼女はフランス語をとても上手に話すことができます。」 She ( ) speak French very well.',
     choices: [
       'is',
       'does',

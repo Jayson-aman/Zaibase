@@ -21,7 +21,7 @@ export const kokoNyushiEigo50: Question[] = [
   {
     id: 'koko_nyushi_eigo_02',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。  You ( ) finish the report by tomorrow.',
+    question: '次の（　）内に最も適切な語を選べ。  You ( ) finish the report by tomorrow.（あなたは明日までにレポートを仕上げなければならない。）',
     choices: ['① may', '② can', '③ have to', '④ need'],
     answer: '③ have to',
     hint: '「明日までに」という締め切りがある場合、最も強い義務・必要性を表す表現を選ぶ。',
@@ -149,11 +149,11 @@ export const kokoNyushiEigo50: Question[] = [
     id: 'koko_nyushi_eigo_08',
     subject: 'eigo',
     question: '次の（　）内に最も適切な語を選べ。  If it ( ) tomorrow, we will cancel the picnic.',
-    choices: ['① rains', '② will rain', '③ rained', '④ is raining'],
+    choices: ['① rains', '② will rain', '③ rained', '④ rain'],
     answer: '① rains',
     hint: '条件を表す if 節の中では、未来のことでも現在形を使う。',
     explanation:
-      '【何を聞かれているか】「If it ( ) tomorrow, we will cancel the picnic.」の空所に入る適切な語を選ぶ。\n【なぜrainsになるのか】条件を表すif節の中では、未来のことであってもwillを使わず現在形を使うという決まりがあるから。\n【ポイント1】if節・when節などの副詞節の中では、未来のことでも現在形で表す。②will rainはif節の中では使えない。\n【ポイント2】③rained（過去形）は仮定法になってしまい、④is raining（進行形）は文脈に合わない。①rains（現在形）が正解。\n【ポイント3】同じルールが使われる接続詞：when（〜するとき）、until（〜まで）、as soon as（〜したらすぐ）、before（〜する前に）、after（〜した後）。\n【答え】① rains\n【確かめ】主節にwillが使われている（we will cancel）ことと、if節が現在形（rains）になっていることのバランスを確認する。\n【よくあるまちがい】if節の中にもwillを入れてIf it will rain tomorrowとしてしまう。\n【ここが絶対】時・条件を表す副詞節の中では、未来のことでも現在形を使う。',
+      '【何を聞かれているか】「If it ( ) tomorrow, we will cancel the picnic.」の空所に入る適切な語を選ぶ。\n【なぜrainsになるのか】条件を表すif節の中では、未来のことであってもwillを使わず現在形を使うという決まりがあるから。\n【ポイント1】if節・when節などの副詞節の中では、未来のことでも現在形で表す。②will rainはif節の中では使えない。\n【ポイント2】③rained（過去形）は仮定法になってしまい、④rain（原形）は主語itが3人称単数なのでsがなく誤り。①rains（現在形）が正解。\n【ポイント3】同じルールが使われる接続詞：when（〜するとき）、until（〜まで）、as soon as（〜したらすぐ）、before（〜する前に）、after（〜した後）。\n【答え】① rains\n【確かめ】主節にwillが使われている（we will cancel）ことと、if節が現在形（rains）になっていることのバランスを確認する。\n【よくあるまちがい】if節の中にもwillを入れてIf it will rain tomorrowとしてしまう。\n【ここが絶対】時・条件を表す副詞節の中では、未来のことでも現在形を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -459,8 +459,8 @@ be different from〜 は「〜と異なる、〜とは違う」という意味�
   {
     id: 'koko_nyushi_eigo_19',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。  I ( ) up early every morning to exercise.',
-    choices: ['① wake', '② get', '③ rise', '④ stand'],
+    question: '次の（　）内に最も適切な語を選べ。  I ( ) up early every morning to exercise.（私は運動するために毎朝早く起き上がる。）',
+    choices: ['① make', '② get', '③ rise', '④ stand'],
     answer: '② get',
     hint: '「朝起きる」という日常動作に最もよく使われる句動詞を選ぶ。',
     explanation: `【出題意図】
@@ -468,12 +468,10 @@ be different from〜 は「〜と異なる、〜とは違う」という意味�
 
 【解説】
 「朝起きる（ベッドから起き上がる）」には get up が最も一般的。
-・① wake up → 「目が覚める」（眠りから覚める意味が強い。wake up early は可だが、この文では get up が最もよい）
+・① make up → 「作り上げる・化粧する・埋め合わせる」で、「起きる」の意味にならない
 ・② get up → 「起き上がる、起床する」（✓）日常の起床行動全体を指す
 ・③ rise → 「上がる、昇る」（太陽が昇る/物価が上がるなど。人の起床にはやや堅い文語表現）
 ・④ stand up → 「立ち上がる」（座った状態から立つ）
-
-注意：wake up も文法的には使えるが、get up の方がより自然で入試では正解とされやすい。
 
 日本語訳：「私は運動するために毎朝早く起きる。」
 
@@ -964,9 +962,9 @@ in：月・年・季節・時間帯（in March / in 2020 / in summer / in the mo
     question: '次の英文の（　）に入る最も適切な語句を選べ。  I think ( ) very important to keep our environment clean.',
     choices: ['① this', '② that', '③ it', '④ what'],
     answer: '③ it',
-    hint: '形式主語 it を使った「it is + 形容詞 + to 動詞」の構文。',
+    hint: '「think + it + 形容詞 + to 動詞」の形。it は to 以下を指す形式目的語。',
     explanation:
-      '【何を聞かれているか】「I think ( ) very important to keep our environment clean.」の空所に入る適切な語を選ぶ。\n【なぜitになるのか】to keep our environment clean（環境を清潔に保つこと）という長い内容を先に置くと文のバランスが悪くなるため、その内容を指す形式主語itを先に置いて、本当の中身をあとに回すという英語の決まりがあるから。\n【ポイント1】this、that、whatはこの位置に置いても文法的に成立しない。\n【ポイント2】③it（形式主語）が正解。itはto keep our environment cleanを指す。この文はthink＋it＋（is）＋形容詞＋to不定詞という形（あるいはI think that it is very important to〜のthatが省略された形）と理解できる。\n【ポイント3】形式主語itの基本構文：It is＋形容詞＋to＋動詞〜＝「〜することは（形容詞）だ」（例：It is important to study English.）。\n【答え】③ it\n【確かめ】itがto keep our environment cleanを指していることを確認する。\n【よくあるまちがい】thisやthatを使ってしまう。形式主語には必ずitを使う。\n【ここが絶対】「〜することは…だ」を表すときは、形式主語itを使い、本当の中身（to不定詞）は後ろに置く。',
+      '【何を聞かれているか】「I think ( ) very important to keep our environment clean.」の空所に入る適切な語を選ぶ。\n【なぜitになるのか】to keep our environment clean（環境を清潔に保つこと）という長い内容を先に置くと文のバランスが悪くなるため、その内容を指す形式目的語itを先に置いて、本当の中身をあとに回すという英語の決まりがあるから。\n【ポイント1】this、that、whatはこの位置に置いても文法的に成立しない。\n【ポイント2】③it（形式目的語）が正解。itはto keep our environment cleanを指す。この文はthink＋it＋形容詞＋to不定詞（think A B＝AをBだと思う）という形で、isは入らない。「I think it is very important to〜」と同じ意味を表す。\n【ポイント3】形式主語itの基本構文：It is＋形容詞＋to＋動詞〜＝「〜することは（形容詞）だ」（例：It is important to study English.）。\n【答え】③ it\n【確かめ】itがto keep our environment cleanを指していることを確認する。\n【よくあるまちがい】thisやthatを使ってしまう。形式主語・形式目的語には必ずitを使う。\n【ここが絶対】「〜することは…だ」を表すときは、形式主語（think/find＋itの形では形式目的語）itを使い、本当の中身（to不定詞）は後ろに置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',

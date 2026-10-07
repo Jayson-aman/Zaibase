@@ -233,7 +233,7 @@ if節は時・条件を表す副詞節であり、未来のことでも現在形
   {
     id: 'koko_nyushi_eigo6_11',
     subject: 'eigo',
-    question: `次の（　）内に最も適切な語を選べ。\n\nMy dream is ( ) a professional soccer player someday.\n① become  ② becoming  ③ to become  ④ became`,
+    question: `次の（　）内に最も適切な語を選べ。\n\nMy dream is ( ) a professional soccer player someday.\n① become  ② becomes  ③ to become  ④ became`,
     answer: `③ to become`,
     hint: `is の補語として「〜になること」を表す不定詞を選ぶ。`,
     explanation: `【出題意図】
@@ -242,7 +242,7 @@ if節は時・条件を表す副詞節であり、未来のことでも現在形
 【解説】
 My dream is ( ) の（　）には is の補語が入る。「いつかプロサッカー選手になること」という意味を表すには不定詞の名詞的用法を使う。
 ・① become → 原形のみは不可
-・② becoming → 動名詞も文法的には補語になれるが、この文脈では to不定詞が自然で入試ではこちらが正解とされやすい
+・② becomes → 3人称単数現在形の動詞は補語になれない
 ・③ to become → 不定詞（✓）
 ・④ became → 過去形で補語になれない
 
@@ -478,7 +478,7 @@ warm up：準備運動をする⇔cool down：整理運動をする。運動関�
   {
     id: 'koko_nyushi_eigo6_20',
     subject: 'eigo',
-    question: `次の（　）内に最も適切な語を選べ。\n\nWhether we can win the tournament ( ) on how hard we practice this week.\n① depends  ② relies  ③ waits  ④ counts`,
+    question: `次の（　）内に最も適切な語を選べ。\n\nWhether we can win the tournament ( ) on how hard we practice this week.\n① depends  ② lives  ③ waits  ④ counts`,
     answer: `① depends`,
     hint: `depend on〜で「〜次第である、〜に左右される」という熟語。`,
     explanation: `【出題意図】
@@ -487,14 +487,14 @@ depend on〜（〜次第である、〜による）を問う問題。似た意�
 【解説】
 depend on〜は「〜次第である」という意味で、主語が3人称単数（Whether〜という節全体）のときは depends となる。
 ・① depends → depend on〜（✓）
-・② relies → rely on〜で似た意味を持つが、この文の選択肢としてはdependsが自然
+・② lives → live on〜（〜を常食とする、〜で暮らす）で意味が異なる
 ・③ waits → 「待つ」で文脈に合わない
 ・④ counts → count on〜（頼りにする）で意味が異なる
 
 日本語訳：「大会で優勝できるかどうかは、今週どれだけ一生懸命練習するかにかかっている。」
 
 【文法ポイント】
-depend on〜＝rely on〜：〜次第である、〜に頼る。Whether〜節が主語のときは3人称単数扱い。
+depend on〜：〜次第である、〜に頼る（rely on〜は「〜に頼る」）。Whether〜節が主語のときは3人称単数扱い。
 
 【入試頻出】
 ・Success depends on daily practice.

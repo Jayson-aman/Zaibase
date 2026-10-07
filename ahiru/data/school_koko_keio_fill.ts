@@ -844,11 +844,11 @@ export const schoolKokoKeioFill: Question[] = [
     answer: 'over',
     hint: 'Think about which preposition describes a change happening throughout an entire period of time.',
     explanation:
-      '【何を聞かれているか】\n"The number of students who study abroad has been increasing (　) the last decade."の空欄に入る正しい前置詞を選ぶ問題。\n\n【なぜoverを使うのか】\n"the last decade"（この10年間）のような期間全体にわたる変化・推移を表す場合、前置詞overを使う。\n\n【ポイント1】overの意味を確認する\nover the last decade＝「この10年間にわたって」という期間を通じた変化を表す。\n\n【ポイント2】他の前置詞との違いを確認する\nsinceは起点、forは単なる期間の長さ、untilは継続の終点を表す前置詞で、いずれも文脈に合わない。\n\n【ポイント3】現在完了進行形との組み合わせを確認する\nhas been increasing（現在完了進行形）とoverの組み合わせで「ずっと増え続けている」という変化を表す。\n\n【答え】\nover\n\n【確かめ】\n選んだ前置詞が、期間を通じた変化・推移を表すover（since, for, untilではない）になっているか確認する。\n\n【よくあるまちがい】\n期間を表す語だからとforを選んでしまい、「変化・推移」のニュアンスを見落とすミス。\n\n【ここが絶対】\nover+期間＝「〜の間にわたる変化・推移」を表すと覚える。',
+      '【何を聞かれているか】\n"The number of students who study abroad has been increasing (　) the last decade."の空欄に入る正しい前置詞を選ぶ問題。\n\n【なぜoverを使うのか】\n"the last decade"（この10年間）のような期間全体にわたる変化・推移を表す場合、前置詞overを使う。\n\n【ポイント1】overの意味を確認する\nover the last decade＝「この10年間にわたって」という期間を通じた変化を表す。\n\n【ポイント2】他の前置詞との違いを確認する\nsinceは起点、byは「〜までに」という期限、untilは継続の終点を表す前置詞で、いずれも「この10年間にわたって」という意味にはならない。\n\n【ポイント3】現在完了進行形との組み合わせを確認する\nhas been increasing（現在完了進行形）とoverの組み合わせで「ずっと増え続けている」という変化を表す。\n\n【答え】\nover\n\n【確かめ】\n選んだ前置詞が、期間を通じた変化・推移を表すover（since, by, untilではない）になっているか確認する。\n\n【よくあるまちがい】\n期間を表す語だからとsinceやuntilを選んでしまい、「期間全体にわたる変化・推移」を表すoverを見落とすミス。\n\n【ここが絶対】\nover+期間＝「〜の間にわたる変化・推移」を表すと覚える。',
     difficulty: 'advanced',
     course: 'koko-keio',
     examType: 'koko',
-    choices: ['since', 'for', 'over', 'until'],
+    choices: ['since', 'by', 'over', 'until'],
   },
   {
     id: 'keio_eigo_14',

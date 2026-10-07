@@ -884,7 +884,7 @@ export const nagoyaTokaiExam: Question[] = [
     answer: 'easier',
     hint: '文の中にthanがあるときは比較級の形を使う。',
     explanation:
-      '【何を聞かれているか】\n"This question is ( ) than that one."の空欄に入る、正しい比較級を選ぶ問題。\n\n【なぜeasierという形になるのか】\n文中にthanがあることから比較級の文だとわかり、easyのように語尾がyで終わる形容詞は、yをiに変えてerをつけて比較級を作る。\n\n【ポイント1】thanから比較級だと判断する\n文にthanがあるので、比較級の形が必要。\n\n【ポイント2】yで終わる形容詞の変化を確認する\neasy→easier（yをiに変えてer）。\n\n【ポイント3】他の選択肢を消去する\n"most easy"や"more easy"のような形は誤りで、easyのような短い形容詞は規則通りにerをつける形が正しい。\n\n【答え】\neasier\n\n【確かめ】\neasyのyがiに変わって"easi"となり、そこにerがついてeasierになっているか確認する。\n\n【よくあるまちがい】\n"more easy"のように、moreを付けてしまうミス。easyは短い形容詞なのでerをつける形を使う。\n\n【ここが絶対】\n「thanがあれば比較級」「yで終わる短い形容詞はyをiにしてer」という2つのルールをセットで覚える。',
+      '【何を聞かれているか】\n"This question is ( ) than that one."の空欄に入る、正しい比較級を選ぶ問題。\n\n【なぜeasierという形になるのか】\n文中にthanがあることから比較級の文だとわかり、easyのように語尾がyで終わる形容詞は、yをiに変えてerをつけて比較級を作る。\n\n【ポイント1】thanから比較級だと判断する\n文にthanがあるので、比較級の形が必要。\n\n【ポイント2】yで終わる形容詞の変化を確認する\neasy→easier（yをiに変えてer）。\n\n【ポイント3】他の選択肢を消去する\n"more easy"のような形は誤りで、easiestは3つ以上を比べる最上級なのでここでは合わない。また、easyのような短い形容詞は規則通りにerをつける形が正しい。\n\n【答え】\neasier\n\n【確かめ】\neasyのyがiに変わって"easi"となり、そこにerがついてeasierになっているか確認する。\n\n【よくあるまちがい】\n"more easy"のように、moreを付けてしまうミス。easyは短い形容詞なのでerをつける形を使う。\n\n【ここが絶対】\n「thanがあれば比較級」「yで終わる短い形容詞はyをiにしてer」という2つのルールをセットで覚える。',
     pitfall: 'more easyのようにmoreを付けてしまう誤りが多いが、easyは短い形容詞なのでerをつける形を使う。',
     memoryTip: '「thanがあれば比較級」「yで終わる短い形容詞はyをiにしてer」とセットで覚える。',
   },
@@ -916,7 +916,7 @@ export const nagoyaTokaiExam: Question[] = [
     examType: 'chugaku',
     difficulty: 'standard',
     examFrequency: 'medium',
-    question: '【東海中学校 英語④】次の文の( )に入る最も適切な語を選びなさい。 There is a cat ( ) the box.',
+    question: '【東海中学校 英語④】次の文の( )に入る最も適切な語を選びなさい。「箱の中に猫がいます。」 There is a cat ( ) the box.',
     choices: [
       'in',
       'on',

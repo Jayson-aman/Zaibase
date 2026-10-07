@@ -494,7 +494,7 @@ export const gradeE6EigoQuestions: Question[] = [
       'This singer is most famous than that singer.',
       'This singer is famous more than that singer.',
     ],
-    hint: 'famous のように長い単語は before に more を置いて比較級にする。',
+    hint: 'famous のように長い単語は前に more を置いて比較級にする。',
     explanation:
       '【何を聞かれているか】\n「この歌手はあの歌手より有名です。」を英語にする問題。\n\n【なぜmoreを前に置くのか】\nfamous（有名な）のようにつづりが長い単語は、語尾にerをつけずに前にmoreを置いて比較級を作るという決まりがある。\n\n【ポイント1】famousの音節の長さを確認する\nfamousは長い（複数音節の）形容詞。\n\n【ポイント2】長い形容詞の比較級の作り方を確認する\n語尾にerをつけず、moreを前に置く（more famous）。\n\n【ポイント3】他の選択肢を消去する\nfamouser（誤った変化）、most famous（最上級）、famous more（語順の誤り）はいずれも不適切。\n\n【答え】\nThis singer is more famous than that singer.\n\n【確かめ】\nfamousの前にmoreが置かれており、語尾にerがついていないか確認する。\n\n【よくあるまちがい】\nfamouserのように語尾にerをつけてしまうミス。\n\n【ここが絶対】\n長い形容詞（複数音節）の比較級はmoreを前に置くと覚える。',
   },

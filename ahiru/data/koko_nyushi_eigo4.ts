@@ -109,7 +109,7 @@ should：義務より弱い推奨
     id: 'koko_nyushi_eigo4_04',
     subject: 'eigo',
     question: '次の（　）内に最も適切な語を選べ。  Kyoto is ( ) tourist destination in Japan for foreign visitors.',
-    choices: ['① a popular', '② more popular', '③ the most popular', '④ most popular'],
+    choices: ['① popular', '② more popular', '③ the most popular', '④ most popular'],
     answer: '③ the most popular',
     hint: '「日本で一番〜」という範囲の中での最上級を選ぶ。最上級には the が必要。',
     explanation: `【出題意図】
@@ -117,7 +117,7 @@ should：義務より弱い推奨
 
 【解説】
 「in Japan（日本の中で）」は範囲を示す語句で、その中での「一番」を表すには最上級が必要。
-・① a popular → 原級（比較の意味がない）
+・① popular → 原級で冠詞もない（tourist destination の前に a / the が必要で、比較の意味もない）
 ・② more popular → 比較級（2つを比べる場合に使う）
 ・③ the most popular → 最上級（✓）the が必要
 ・④ most popular → the が抜けている（最上級には必ず the が必要）

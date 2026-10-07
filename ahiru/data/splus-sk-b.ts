@@ -394,7 +394,7 @@ export const SPLUS_SK_B: Question[] = [
     id: 'seiko_plus_eigo_53',
     subject: 'eigo',
     question:
-      '次の日本語に合うように、（　）内の語を並べかえて英文を書きなさい。\n「私は英語を勉強するために図書館へ行きました。」\n（ to / went / I / study / the library / English / to ）',
+      '次の日本語に合うように、（　）内の語を並べかえて英文を書きなさい。\n「私は英語を勉強するために図書館へ行きました。」（I で始めなさい）\n（ to / went / I / study / the library / English / to ）',
     answer: 'I went to the library to study English.',
     hint: '「〜するために」は to のあとに動詞の原形を置く。to が2回あるので、どちらが「行く先」でどちらが「目的」かを区別する。',
     explanation:

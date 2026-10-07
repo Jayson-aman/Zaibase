@@ -87,7 +87,7 @@ export const kkEigo: Question[] = [
     question:
       '次の英文を読んで問いに答えよ。"Recycling is one of the most important ways to protect our environment. When we recycle paper, glass, and plastic, we reduce the amount of waste we produce. This helps save natural resources and energy. However, recycling alone is not enough. We should also try to reduce and reuse materials before recycling them."\n問：本文の主旨を日本語で30字以内にまとめよ。また "reduce, reuse, recycle" を順番通りに日本語に訳せ。',
     answer:
-      '主旨：環境を守るためにリサイクルは大切だが、まず削減・再利用を心がけることが重要。reduce=削減する、reuse=再利用する、recycle=再生利用する',
+      '主旨：リサイクルは大切だが、その前に削減と再利用に努めるべきだ。（29字）reduce=削減する、reuse=再利用する、recycle=再生利用する',
     hint: '本文最後の文が主張。reduce/reuse/recycleの順序に注目',
     explanation:
       '本文の構造：①リサイクルの重要性②リサイクルの効果③「しかし(However)」で逆接→リサイクルだけでは不十分④should also try to reduce and reuse=主張。3R：Reduce(使う量を減らす)・Reuse(繰り返し使う)・Recycle(資源として再利用)の順番が重要（削減が最優先）。',
@@ -143,11 +143,11 @@ export const ktEigo: Question[] = [
     id: 'kt_eigo_01',
     subject: 'eigo',
     question:
-      '分詞・分詞構文の問題。日本語に合うように英語の空所を補え。\n①「眠っている赤ちゃんを起こさないでください。」Don\'t wake up the baby ( ) (　　).\n②「宿題を終えてから、彼は外に出た。」( ) (　　) his homework, he went outside.',
+      '分詞・分詞構文の問題。日本語に合うように英語の空所を補え。\n①「眠っている赤ちゃんを起こさないでください。」Don\'t wake up the (　　) baby.\n②「宿題を終えてから、彼は外に出た。」( ) (　　) his homework, he went outside.',
     answer: '①sleeping ②Having finished',
     hint: '現在分詞(〜している)が名詞を修飾。分詞構文の完了形：Having+過去分詞',
     explanation:
-      '【何を聞かれているか】①「眠っている赤ちゃんを起こさないでください。」②「宿題を終えてから、彼は外に出た。」の空所を、分詞・分詞構文を使って補う。\n【なぜ分詞を使うのか】①は「赤ちゃん」を「眠っている」という状態で修飾するために現在分詞を使い、②は主文より前に完了した動作を1語で表すために、分詞構文の完了形（Having+過去分詞）を使うという決まりがあるから。\n【ポイント1】①分詞による名詞修飾：sleeping baby＝「眠っている赤ちゃん」（現在分詞が形容詞的に使われる）。Don\'t wake up the baby sleeping.\n【ポイント2】②分詞構文：主文の動詞より前の動作をHaving＋過去分詞で表す（完了形分詞構文）。Having finished his homework（宿題を終えてから）→he went outside。\n【ポイント3】分詞構文の主語は主文の主語と同じ（he）であることを確認する。\n【答え】①sleeping ②Having finished\n【確かめ】②の文で「宿題を終えた」のが主文の動作（外に出た）より前であることから、Having＋過去分詞（完了形）が使われているかを確認する。\n【よくあるまちがい】②でHaving finishedではなくFinishing（単なる現在分詞）にしてしまい、「終える」と「外に出る」が同時であるかのような形にしてしまう。\n【ここが絶対】主文より前に完了した動作を分詞構文で表すときはHaving＋過去分詞を使う。',
+      '【何を聞かれているか】①「眠っている赤ちゃんを起こさないでください。」②「宿題を終えてから、彼は外に出た。」の空所を、分詞・分詞構文を使って補う。\n【なぜ分詞を使うのか】①は「赤ちゃん」を「眠っている」という状態で修飾するために現在分詞を使い、②は主文より前に完了した動作を1語で表すために、分詞構文の完了形（Having+過去分詞）を使うという決まりがあるから。\n【ポイント1】①分詞による名詞修飾：sleeping baby＝「眠っている赤ちゃん」（現在分詞が形容詞的に使われる）。Don\'t wake up the sleeping baby.\n【ポイント2】②分詞構文：主文の動詞より前の動作をHaving＋過去分詞で表す（完了形分詞構文）。Having finished his homework（宿題を終えてから）→he went outside。\n【ポイント3】分詞構文の主語は主文の主語と同じ（he）であることを確認する。\n【答え】①sleeping ②Having finished\n【確かめ】②の文で「宿題を終えた」のが主文の動作（外に出た）より前であることから、Having＋過去分詞（完了形）が使われているかを確認する。\n【よくあるまちがい】②でHaving finishedではなくFinishing（単なる現在分詞）にしてしまい、「終える」と「外に出る」が同時であるかのような形にしてしまう。\n【ここが絶対】主文より前に完了した動作を分詞構文で表すときはHaving＋過去分詞を使う。',
     difficulty: 'advanced',
     course: 'koko-top',
     examType: 'koko',

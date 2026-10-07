@@ -41,11 +41,11 @@ export const NT_NTCE_QUESTIONS: Question[] = [
     hint: '14（fourteen）とは、つづりが少しちがいます。',
     explanation: ex(
       '40 の英語のつづりを書く。',
-      '10のかたまりを表す -ty がつく数のうち、4 の数だけ、つづりが four から変わるので、まちがえやすい。',
+      '10のかたまりを表す -ty がつく数では、40 の forty だけが four の u をなくすので、14（fourteen）とまちがえやすい。',
       [
         '14 は fourteen で、four の u が残る。',
         '40 は forty で、u がなくなる。',
-        '同じ型の 20 は twenty、30 は thirty、50 は fifty、90 は ninety。',
+        'つづりが少し変わる数は、ほかに 20 の twenty、30 の thirty、50 の fifty がある。90 の ninety は、nine の e が残る。',
       ],
       'forty',
       'forty を声に出すと、前の for が強く、ty は弱く聞こえる。fourteen は後ろの teen が強い。',

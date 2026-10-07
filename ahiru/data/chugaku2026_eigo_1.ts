@@ -1043,7 +1043,7 @@ This is a picture of my family. My father is a teacher, and my mother is a nurse
     answer: '（解答例）My name is Hana. I am eleven years old. I like drawing pictures.',
     hint: 'My name is〜.（名前）、I am 〜 years old.（年齢）、I like 〜.（好きなこと）の3文構成で書く。',
     explanation:
-      '【何を聞かれているか】\n名前・年齢・好きなことを含めて、自分の自己紹介文を英語で3文以上書く問題。\n\n【なぜ3文構成にするのか】\n自己紹介は、「My name is〜.」（名前）、「I am〜years old.」（年齢）、「I like〜.」（好きなこと）という、それぞれ異なる基本表現を組み合わせることで、必要な情報を過不足なく伝えられる。\n\n【ポイント1】名前の文を組み立てる\n"My name is Hana."＝「私の名前はハナです」。\n\n【ポイント2】年齢の文を組み立てる\n"I am eleven years old."＝「私は11歳です」。yearsoldを忘れずにつける。\n\n【ポイント3】好きなことの文を組み立てる\n"I like drawing pictures."＝「絵を描くことが好きです」。likeの後ろの動詞はing形にする。\n\n【答え】\n（解答例）My name is Hana. I am eleven years old. I like drawing pictures.\n\n【確かめ】\n3文がそれぞれ「名前」「年齢」「好きなこと」の内容を含んでいるか確認する。\n\n【よくあるまちがい】\n"I like draw pictures."のように、動詞の原形のまま置いてしまうミス。likeの後ろはing形にする。\n\n【ここが絶対】\n「名前→年齢→好きなこと」の3点セットで自己紹介文を組み立てる型を覚える。',
+      '【何を聞かれているか】\n名前・年齢・好きなことを含めて、自分の自己紹介文を英語で3文以上書く問題。\n\n【なぜ3文構成にするのか】\n自己紹介は、「My name is〜.」（名前）、「I am〜years old.」（年齢）、「I like〜.」（好きなこと）という、それぞれ異なる基本表現を組み合わせることで、必要な情報を過不足なく伝えられる。\n\n【ポイント1】名前の文を組み立てる\n"My name is Hana."＝「私の名前はハナです」。\n\n【ポイント2】年齢の文を組み立てる\n"I am eleven years old."＝「私は11歳です」。years oldを忘れずにつける。\n\n【ポイント3】好きなことの文を組み立てる\n"I like drawing pictures."＝「絵を描くことが好きです」。likeの後ろの動詞はing形にする。\n\n【答え】\n（解答例）My name is Hana. I am eleven years old. I like drawing pictures.\n\n【確かめ】\n3文がそれぞれ「名前」「年齢」「好きなこと」の内容を含んでいるか確認する。\n\n【よくあるまちがい】\n"I like draw pictures."のように、動詞の原形のまま置いてしまうミス。likeの後ろはing形にする。\n\n【ここが絶対】\n「名前→年齢→好きなこと」の3点セットで自己紹介文を組み立てる型を覚える。',
     pitfall: 'I like draw pictures.のように動詞の原形のまま置かない。ing形にする。',
     memoryTip: '「名前→年齢→好きなこと」の3点セットで自己紹介文を組み立てる型を覚える。',
   },

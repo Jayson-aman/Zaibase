@@ -299,7 +299,7 @@ export const SPLUS2_TK4: Question[] = [
     choices: ["It's 1,500 yen.", "Yes, it is.", "I like it very much.", "It's red and blue."],
     answer: "It's 1,500 yen.",
     hint: "How much ～? は、何をたずねる質問でしょうか。そして、A さんが最後に「買います」と言っているので、B さんは何を答えたはずか、考えましょう。",
-    explanation: "【何を聞かれているか】How much is this T-shirt? に対する、自然な答え。\n【なぜその答えなのか】How much ～? は「いくらですか」と、値段をたずねる質問です。だから、答えは値段を言う文になります。\n【ステップ1】B：It's 1,500 yen. =「1,500円です。」値段を答えている。\n【ステップ2】A：Yes, it is. は、Yes / No で答える質問に対する答えなので、合いません。\n【ステップ3】C・D：「気に入っている」「色を言う」は、値段の答えではありません。\n【答え】It's 1,500 yen.\n【確かめ】A さんは最後に I'll take it.（それをいただきます）と言っています。値段を聞いて納得した流れなので、値段を答えた文がつながります。\n【よくあるまちがい】How ～? の質問を、Yes / No の質問だと思って Yes, it is. を選ぶこと。**How much は値段**をたずねます。",
+    explanation: "【何を聞かれているか】How much is this T-shirt? に対する、自然な答え。\n【なぜその答えなのか】How much ～? は「いくらですか」と、値段をたずねる質問です。だから、答えは値段を言う文になります。\n【ステップ1】It's 1,500 yen. =「1,500円です。」値段を答えている。\n【ステップ2】Yes, it is. は、Yes / No で答える質問に対する答えなので、合いません。\n【ステップ3】I like it very much. と It's red and blue. は、「気に入っている」「色を言う」文で、値段の答えではありません。\n【答え】It's 1,500 yen.\n【確かめ】A さんは最後に I'll take it.（それをいただきます）と言っています。値段を聞いて納得した流れなので、値段を答えた文がつながります。\n【よくあるまちがい】How ～? の質問を、Yes / No の質問だと思って Yes, it is. を選ぶこと。**How much は値段**をたずねます。",
     pitfall: "How much を Yes / No の質問と取りちがえがち。値段を答える。",
     memoryTip: "How much ～? ＝ いくらですか（値段をたずねる）。",
   },

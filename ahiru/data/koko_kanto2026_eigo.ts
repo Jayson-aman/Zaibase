@@ -399,7 +399,7 @@ Her success was not so much a matter of talent (　) hard work.
     course: 'koko-waseda',
     difficulty: 'advanced',
     maxOnly: true,
-    question: `次の各文の誤りを1か所指摘し、正しく直しなさい。
+    question: `次の各文の誤りを1か所指摘し、正しく直しなさい。ただし、誤りのない文が1つ含まれている。
 
 ① Rarely I have seen such a beautiful sunset.
 ② If she had studied harder, she would pass the exam.
@@ -508,7 +508,7 @@ I don't often agree with him, but he (　) make a good point this time.
     course: 'koko-kankan',
     difficulty: 'advanced',
     maxOnly: true,
-    question: `次の各文の誤りを1か所指摘し、正しく直しなさい。
+    question: `次の各文の誤りを1か所指摘し、正しく直しなさい。ただし、誤りのない文が1つ含まれている。
 
 ① Scarcely had we arrived at the airport than our flight was announced as delayed.
 ② Were I you, I would accept the offer immediately.
@@ -639,7 +639,7 @@ If I had taken the earlier train, I (　) at the meeting right now instead of st
     question: `次の日本語を英語に訳しなさい。（35語以上）
 
 「テクノロジーが便利になればなるほど、私たちは実際に人と顔を合わせて話すことの大切さを忘れがちだと思う。もし私が学校のルールを一つ変えられるとしたら、生徒が休み時間にスマートフォンを使わず友達と話す時間を作るだろう。」`,
-    answer: `（解答例）I think that the more convenient technology becomes, the more we tend to forget the importance of talking to people face to face. If I could change one school rule, I would create a time when students talk with their friends without using smartphones during break time.（46語）
+    answer: `（解答例）I think that the more convenient technology becomes, the more we tend to forget the importance of talking to people face to face. If I could change one school rule, I would create a time when students talk with their friends without using smartphones during break time.（47語）
 
 （別解）The more convenient technology gets, the easier it is for us to forget how important it is to talk with people in person, I believe. If I were allowed to change just one school rule, I would make a rule that encourages students to spend break time talking with friends instead of using their smartphones.（55語）`,
     hint: '「〜すればするほど…」→the+比較級, the+比較級構文。「もし〜変えられるとしたら」→仮定法過去（If I could change〜, I would〜）。',

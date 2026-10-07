@@ -1602,7 +1602,7 @@ export const pooleExam: Question[] = [
     examType: 'chugaku',
     difficulty: 'advanced',
     examFrequency: 'medium',
-    question: '【プール学院 社会⑯】プール学院中学校はキリスト教精神にもとづく学校です。世界三大宗教のうち、ヨーロッパ州や南北アメリカ州で最も信者数が多い宗教はどれですか。',
+    question: '【プール学院 社会⑯】プール学院中学校はキリスト教精神にもとづく学校です。世界の主な宗教のうち、ヨーロッパ州や南北アメリカ州で最も信者数が多い宗教はどれですか。',
     choices: [
       'キリスト教',
       'イスラム教',
@@ -1623,7 +1623,7 @@ export const pooleExam: Question[] = [
     examType: 'chugaku',
     difficulty: 'advanced',
     examFrequency: 'medium',
-    question: '【プール学院 社会⑰】1911年に外務大臣小村寿太郎のもとで達成された、日本にとって不利な内容であった条約改正の内容はどれですか。',
+    question: '【プール学院 社会⑰】日本にとって不利な内容であった不平等条約のうち、1911年に外務大臣小村寿太郎のもとで改正が達成された内容はどれですか。',
     choices: [
       '関税自主権の回復',
       '領事裁判権の撤廃',
@@ -1870,7 +1870,7 @@ export const pooleExam: Question[] = [
     examType: 'chugaku',
     difficulty: 'standard',
     examFrequency: 'medium',
-    question: '【プール学院 英語⑨】次の英文の空所に入る最も適切な単語を選びなさい。 The cat is ( ) the box.',
+    question: '【プール学院 英語⑨】次の英文の空所に入る最も適切な単語を選びなさい。「猫は箱の中にいます。」 The cat is ( ) the box.',
     choices: [
       'in',
       'on',

@@ -316,14 +316,14 @@ To solve these problems, individuals, companies, and governments must work toget
 【設問】
 ① What mainly causes global warming?（英語で答えよ）
 ② What happens when plastic waste enters the ocean?（英語で答えよ）
-③ 下線部「have risen」を日本語に訳せ。
+③ 下線部「has risen」を日本語に訳せ。
 ④ 本文の内容に合うものをすべて選べ。
 　ア. 地球の気温は過去100年で約1℃上昇した。
 　イ. プラスチック汚染は魚にだけ影響を与える。
 　ウ. 2050年には海の魚よりプラスチックが多くなる可能性がある。
 　エ. 環境問題は個人の努力では解決できない。`,
     answer: '① Greenhouse gases (such as CO₂), which are released when people burn fossil fuels, mainly cause global warming.\n② It harms fish, birds, and other sea animals.\n③ 上昇している（上がってきた）\n④ ア、ウ',
-    hint: '①第1段落「This change is mainly caused by〜」に注目。②第2段落「harming〜」の部分。③have risen = 現在完了形（結果）。④各選択肢を本文と照合する。',
+    hint: '①第1段落「This change is mainly caused by〜」に注目。②第2段落「harming〜」の部分。③has risen = 現在完了形（結果）。④各選択肢を本文と照合する。',
     explanation: `【出題意図】
 環境問題をテーマにした150語程度の英文読解問題。内容把握（情報の特定・照合）、現在完了形の訳、選択肢の正誤判定という、模擬試験形式の総合的な読解力を問う。
 
@@ -454,7 +454,7 @@ B: (　③　) Have a nice day!
 ③ He is the most tallest player on the team.
 ④ If I will have more time, I would study abroad.
 ⑤ The book which I borrowed it from the library was very interesting.`,
-    answer: '① since → for　② interesting → interested　③ most tallest → tallest（the most を削除）　④ will have → had　⑤ borrowed it → borrowed（it を削除）',
+    answer: '① since → for　② interesting → interested　③ most tallest → tallest（most を削除）　④ will have → had　⑤ borrowed it → borrowed（it を削除）',
     hint: '①期間にはfor、起点にはsince。②感情を「感じる側」は -ed 形。③最上級の二重使用は不可。④仮定法ではif節に will を使わない。⑤関係代名詞節の中で目的語を重複させない。',
     explanation: `【出題意図】
 文法的な誤り指摘問題（誤文訂正）。高校受験で最も頻出の文法ミス5種類（継続のfor/since、感情形容詞の-ed/-ing、最上級の形、仮定法のif節、関係代名詞節の重複）を一問に集約した総合問題。
@@ -494,7 +494,7 @@ Despite these concerns, many experts believe that AI will ultimately benefit hum
 ③ 下線部「will work alongside us」とはどういう意味か、日本語で説明せよ。
 ④ 筆者のAIに対する立場を、本文の根拠を示しながら日本語で説明せよ。（60字以内）`,
     answer: '① Medicine (helping doctors analyze medical images) and education (creating personalized learning plans).\n② （例）Some people worry that AI will take away jobs. Others are concerned about privacy and the collection of personal data.\n③ 人間と並んで・協力しながら働く（人間を置き換えるのではなく、AIが人間の隣に立って共同作業をする）という意味。\n④ 筆者は条件付きで肯定的。責任ある形で使えばAIは人類に恩恵をもたらすと述べ、人間の創造的な仕事を支援する立場をとる。（58字）',
-    hint: '①第1段落にmedicine（医療）とeducation（教育）の具体例がある。②第2段落「Some people worry〜」「Others are concerned〜」に注目。③alongside = 〜の横に・並んで。④第3段落のDespit〜の部分に筆者の見解が集約されている。',
+    hint: '①第1段落にmedicine（医療）とeducation（教育）の具体例がある。②第2段落「Some people worry〜」「Others are concerned〜」に注目。③alongside = 〜の横に・並んで。④第3段落のDespite〜の部分に筆者の見解が集約されている。',
     explanation: `【出題意図】
 AIと未来社会をテーマにした200語程度の論説文読解問題。情報の抽出・英語での記述・語句の意味説明・筆者の主張の把握という、記述を含む4問の総合的な読解力と表現力を問う。関大一高・同志社高レベルの入試形式。
 
@@ -564,21 +564,21 @@ Yumi: I'd love to visit Kinkakuji and maybe try some traditional Kyoto cuisine!
 ア. That sounds exciting!
 イ. I think most of the cost is covered by the school.
 ウ. I can't believe we're going abroad.
-エ. It's my first time going to Kyoto.
+エ. I'm a little worried about the cost, though.
 オ. I don't want to go at all.
 カ. We should probably check the notice board for details.
 キ. I've been there many times already.
 ク. That's disappointing news.`,
-    answer: '① ア　② エ　③ イまたはカ　④ カまたはイ（③④はイとカの順序入れ替えでも可）',
+    answer: '① ア　② エ　③ イ　④ カ',
     hint: '①「京都に行きたかった」という発言の前に来る反応。②「費用を自分で払う必要があるか」という話題への導入。③費用についての情報。④「空き時間に何をするか」という次の話題への橋渡し。',
     explanation: `【出題意図】
 学校行事（修学旅行）についての会話文から、文脈に合う応答を選ぶ問題。会話の自然な流れ・登場人物の感情・話題の展開を正確に読み取る力を問う。リスニング代替問題としても機能する、会話の論理的な流れを把握する問題。
 
 【解説】
-①ゆみが「ずっと京都に行きたかった」と述べているので、その前の反応は「わくわくする・楽しそう」など肯定的な表現が来る。ア「楽しそう！」が最適。ウ「海外に行くとは信じられない」は京都なのでNG。ク「残念なお知らせだ」は文脈に反する。②「費用を自分で払うか知ってる？」という質問の前に来る文。エ「京都に行くのは初めて」が自然な流れ（初めてだから費用も気になる）。③費用についての情報→ イ「ほとんどの費用は学校が負担する」、またはカ「掲示板で詳細を確認した方がいい」。どちらも文脈に合うため、③④でイとカの順序が入れ替わってもよい。④「空き時間に何をするか」という次の話題への転換にカ（掲示板確認を提案）またはイが入る。
+①ゆみが「ずっと京都に行きたかった」と述べているので、その前の反応は「わくわくする・楽しそう」など肯定的な表現が来る。ア「楽しそう！」が最適。ウ「海外に行くとは信じられない」は京都なのでNG。ク「残念なお知らせだ」は文脈に反する。②Kenjiが「Me too!」と同意したあと、「費用を自分で払うか知ってる？」と聞く前に来る文。エ「でも費用が少し心配だ」が、費用の質問への自然な前置きになる。（アを②に入れてエを①に入れると、「ずっと行きたかった」と言う前に「費用が心配」と言うことになり、流れが不自然。）③「I'm not sure.」のあと、Yumiが費用について思っていることを述べる→イ「ほとんどの費用は学校が負担すると思う」。直後の「But I heard we'll need to bring some extra money」と逆接でつながる。④Kenjiは費用を知らずに質問した側なので、イ（費用は学校負担だと思う）を言う立場ではない。「That makes sense.」のあと、詳細を確認しようと提案するカ「掲示板で詳細を確認したほうがいい」が自然で、そのあと「空き時間に何をするか」という次の話題に移る。
 
 【注意点】
-会話文選択では選択肢を読む前に会話全体の流れを把握することが大切。NG選択肢の見極めが重要：ウ（京都は国内なので abroad は誤り）、オ（肯定的な会話の流れに合わない）、キ（ケンジが「京都に初めて行きたい」と述べているのと矛盾）。1つ選んだら「前後の発言との整合性」を必ず確認する。
+会話文選択では選択肢を読む前に会話全体の流れを把握することが大切。NG選択肢の見極めが重要：ウ（京都は国内なので abroad は誤り）、オ（肯定的な会話の流れに合わない）、キ（Yumiが「ずっと行きたかった」と言っているのと矛盾）。1つ選んだら「前後の発言との整合性」を必ず確認する。
 
 【関連知識】
 会話の流れを作る表現：Really?（本当に？）= 相手の発言への驚き・関心。That makes sense.（それは理にかなっている・なるほど）= 納得の表現。I'm not sure.（はっきりはわからないけど）= 不確かな情報を伝える前置き。I'd love to〜（ぜひ〜したい）= 強い希望の表現。これらは実際の会話でも頻繁に使われる表現。`,

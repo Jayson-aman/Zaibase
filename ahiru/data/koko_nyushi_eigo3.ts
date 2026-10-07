@@ -670,7 +670,7 @@ come up with〜：（考え・計画・解決策を）思いつく
   {
     id: 'koko_nyushi_eigo3_26',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。  Could you tell me ( ) the drama club is going to perform this year?',
+    question: '次の（　）内に最も適切な語を選べ。  Could you tell me ( ) the drama club is going to perform this year?\n「演劇部が今年どの劇を上演するのか教えてもらえますか？」',
     choices: ['① when', '② which play', '③ where', '④ how'],
     answer: '② which play',
     hint: '「今年どの劇を上演するか」という意味の間接疑問文。選択を尋ねる疑問詞を選ぶ。',
@@ -959,7 +959,7 @@ A：どうもありがとうございます。
 ・③ on → 曜日・特定の日・日付（on April 8th）（✓）
 ・④ by → 期限（by Friday = 金曜日までに）
 
-「April 8th」だけなら in April も使えるが、日付まで特定されているので on を使う。
+月だけなら in April だが、「April 8th」と日付まで特定されているので on を使う。
 
 日本語訳：「入学式は今年4月8日に行われる予定だ。」
 
@@ -995,12 +995,12 @@ in：月・年・季節・時間帯（in April / in 2026 / in spring）
   {
     id: 'koko_nyushi_eigo3_41',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語句を選べ。  I think ( ) important for club members to support each other.',
+    question: '次の英文の（　）に入る最も適切な語句を選べ。  I think ( ) is important for club members to support each other.',
     choices: ['① this', '② that', '③ it', '④ what'],
     answer: '③ it',
     hint: '形式主語 it を使った「it is + 形容詞 + to 動詞」の構文。',
     explanation:
-      '【何を聞かれているか】「I think ( ) important for club members to support each other.」の空所に入る適切な語を選ぶ。\n【なぜitになるのか】for club members to support each other（部員がお互いを支え合うこと）という長い内容を先に置くと文のバランスが悪くなるため、その内容を指す形式主語itを先に置いて、本当の中身をあとに回すという英語の決まりがあるから。\n【ポイント1】this、that、whatはこの位置に置いても文法的に成立しない。\n【ポイント2】③it（形式主語）が正解。itはfor club members to support each otherを指す。\n【ポイント3】形式主語itの基本構文：It is＋形容詞＋to＋動詞〜＝「〜することは（形容詞）だ」。for＋人は不定詞の意味上の主語を示す（例：It is important for us to practice every day.）。\n【答え】③ it\n【確かめ】itがfor club members to support each otherを指していることを確認する。\n【よくあるまちがい】thisやthatを使ってしまう。形式主語には必ずitを使う。\n【ここが絶対】「〜することは…だ」を表すときは、形式主語itを使い、本当の中身（to不定詞）は後ろに置く。',
+      '【何を聞かれているか】「I think ( ) is important for club members to support each other.」の空所に入る適切な語を選ぶ。\n【なぜitになるのか】for club members to support each other（部員がお互いを支え合うこと）という長い内容を先に置くと文のバランスが悪くなるため、その内容を指す形式主語itを先に置いて、本当の中身をあとに回すという英語の決まりがあるから。\n【ポイント1】this、that、whatはこの位置に置いても文法的に成立しない。\n【ポイント2】③it（形式主語）が正解。itはfor club members to support each otherを指す。\n【ポイント3】形式主語itの基本構文：It is＋形容詞＋to＋動詞〜＝「〜することは（形容詞）だ」。for＋人は不定詞の意味上の主語を示す（例：It is important for us to practice every day.）。\n【答え】③ it\n【確かめ】itがfor club members to support each otherを指していることを確認する。\n【よくあるまちがい】thisやthatを使ってしまう。形式主語には必ずitを使う。\n【ここが絶対】「〜することは…だ」を表すときは、形式主語itを使い、本当の中身（to不定詞）は後ろに置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',

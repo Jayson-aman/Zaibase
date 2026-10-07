@@ -98,7 +98,7 @@ export const kokoNyushiEigo7: Question[] = [
     id: 'koko_nyushi_eigo7_05',
     subject: 'eigo',
     question: '次の（　）内に最も適切な語を選べ。  My father went to the shopping mall ( ) a birthday present for my sister.',
-    choices: ['① for', '② so', '③ to buy', '④ buying'],
+    choices: ['① by', '② so', '③ to buy', '④ buying'],
     answer: '③ to buy',
     hint: '「〜するために」という目的を表す不定詞の副詞的用法を選ぶ。',
     explanation: `【出題意図】
@@ -106,7 +106,7 @@ export const kokoNyushiEigo7: Question[] = [
 
 【解説】
 「ショッピングモールへ行った」目的を表すには to + 動詞原形（不定詞の副詞的用法）を使う。
-・① for → 前置詞。for の後ろに動詞原形は続けられない
+・① by → 前置詞。「〜によって」の意味で、目的（〜するために）は表せない
 ・② so → 接続詞だけでは目的を表せない（so that なら可）
 ・③ to buy → 不定詞（✓）「買うために」
 ・④ buying → 動名詞。went to buying という形は使わない
@@ -264,7 +264,7 @@ want to do：〜したい（不定詞のみを目的語にとる動詞：want, h
     id: 'koko_nyushi_eigo7_12',
     subject: 'eigo',
     question: '次の（　）内に最も適切な語を選べ。  ( ) the laundry every morning is one of my daily jobs at home.',
-    choices: ['① Do', '② Doing', '③ To do', '④ Did'],
+    choices: ['① Do', '② Doing', '③ Done', '④ Did'],
     answer: '② Doing',
     hint: '文全体の主語になる部分を選ぶ。主語には動名詞が使える。',
     explanation: `【出題意図】
@@ -274,7 +274,7 @@ want to do：〜したい（不定詞のみを目的語にとる動詞：want, h
 この文は「（　）the laundry every morning」全体が主語で、「is one of my daily jobs」が述語。動名詞は文の主語になれる。
 ・① Do → 原形は主語になれない
 ・② Doing → 動名詞（✓）主語として使える
-・③ To do → 不定詞も主語になれるが、文頭でこの形にすると意味が硬く不自然（To do the laundry is も文法的には可だが、日常的な習慣を述べるこの文では動名詞の方が自然で入試では動名詞が正解とされやすい）
+・③ Done → 過去分詞は主語になれない
 ・④ Did → 過去形は主語になれない
 
 日本語訳：「毎朝洗濯をすることは、私の家での日課の一つだ。」
@@ -498,21 +498,21 @@ depend on〜：〜次第である、〜に頼る。Whether〜（〜かどうか�
   {
     id: 'koko_nyushi_eigo7_20',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。  We left the supermarket early to be ( ) time for dinner.',
+    question: '次の（　）内に最も適切な語を選べ。  We left the supermarket early to be ( ) time to cook dinner.',
     choices: ['① in', '② on', '③ at', '④ for'],
     answer: '① in',
-    hint: '「〜に間に合って」という意味の熟語 in time for〜 を思い出す。',
+    hint: '「〜するのに間に合って」という意味の熟語 in time to〜 を思い出す。',
     explanation: `【出題意図】
-熟語 in time for〜（〜に間に合って）を、買い物から帰宅する場面で問う問題。on time との違いも意識させる。
+熟語 in time to〜（〜するのに間に合って）を、買い物から帰宅する場面で問う問題。on time との違いも意識させる。
 
 【解説】
-in time for〜 は「〜に（遅れずに）間に合って」という意味。
-・① in → in time for〜（✓）
-・② on → on time は「時間通りに（定刻に）」という別の意味の熟語
+in time to do は「（遅れずに）〜するのに間に合って」という意味。
+・① in → in time to〜（✓）
+・② on → on time は「時間通りに（定刻に）」という別の意味の熟語で、on time to do という形では使わない
 ・③ at → at time という熟語は存在しない
 ・④ for → for time という熟語は存在しない
 
-日本語訳：「私たちは夕食に間に合うように早めにスーパーを出た。」
+日本語訳：「私たちは夕食を作るのに間に合うように早めにスーパーを出た。」
 
 【文法ポイント】
 in time for〜／to do：〜に間に合って。on time：時間通りに（定刻ぴったり）。両者は意味が異なるため入試で頻出。

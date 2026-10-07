@@ -322,10 +322,10 @@ export const kankanQuestions: Question[] = [
     id: 'kankan_shakai_04', subject: 'shakai', difficulty: 'advanced',
     course: 'kankan', examType: 'chugaku',
     question: '日本の工業地帯・地域を生産額が多い順に3つ答えよ。（2020年代）',
-    answer: '①中京工業地帯（愛知中心）②阪神工業地帯（大阪・兵庫）③関東内陸工業地域（または京浜工業地帯）',
+    answer: '①中京工業地帯（愛知中心）②阪神工業地帯（大阪・兵庫）③関東内陸工業地域（または瀬戸内工業地域）',
     hint: '中京は自動車産業が集中。かつては京浜が1位だったが今は中京が最大',
     explanation:
-      '【何を聞かれているか】工業地帯・地域を生産額の多い順に3つ。\n【なぜそうなるのか】**自動車（豊田市）**が集まる中京が最大。次に阪神。3位は関東内陸と瀬戸内が近く、かつて1位だった京浜は用地不足で縮小。\n【ステップ1】①中京工業地帯（愛知）。\n【ステップ2】②阪神工業地帯（大阪・兵庫）。\n【ステップ3】③関東内陸工業地域（または瀬戸内・京浜）。\n【答え】①中京 ②阪神 ③関東内陸（または京浜）\n【確かめ】北九州はかつて四大工業地帯の一つだったが規模が小さくなった。\n【よくあるまちがい】京浜を今も1位と思う。**今は中京**。\n【ここが絶対】「出荷額1位は中京工業地帯」は最頻出。かつて1位だった京浜との入れ替わりを必ず覚える。',
+      '【何を聞かれているか】工業地帯・地域を生産額の多い順に3つ。\n【なぜそうなるのか】**自動車（豊田市）**が集まる中京が最大。次に阪神。3位は関東内陸と瀬戸内が近く、かつて1位だった京浜は用地不足で縮小。\n【ステップ1】①中京工業地帯（愛知）。\n【ステップ2】②阪神工業地帯（大阪・兵庫）。\n【ステップ3】③関東内陸工業地域（または瀬戸内）。\n【答え】①中京 ②阪神 ③関東内陸（または瀬戸内）\n【確かめ】北九州はかつて四大工業地帯の一つだったが規模が小さくなった。\n【よくあるまちがい】京浜を今も1位と思う。**今は中京**。\n【ここが絶対】「出荷額1位は中京工業地帯」は最頻出。かつて1位だった京浜との入れ替わりを必ず覚える。',
   },
   {
     id: 'kankan_shakai_05', subject: 'shakai', difficulty: 'advanced',
@@ -464,11 +464,11 @@ export const kankanQuestions: Question[] = [
   {
     id: 'kankan_eigo_10', subject: 'eigo', difficulty: 'advanced',
     course: 'kankan', examType: 'chugaku',
-    question: '仮定法過去の文を完成させよ。「もし私が鳥だったら、あなたのところへ飛んでいけるのに。」',
-    answer: 'If I were a bird, I could fly to you.',
-    hint: '仮定法過去：If + 主語 + were/動詞の過去形, 主語 + would/could + 動詞の原形',
+    question: '条件を表すifの文を完成させよ。「もし明日晴れたら、私たちは公園でサッカーをします。」',
+    answer: 'If it is sunny tomorrow, we will play soccer in the park.',
+    hint: '条件のif：If + 主語 + 現在形, 主語 + will + 動詞の原形（未来のことでもif節は現在形）',
     explanation:
-      '【何を聞かれているか】「もし私が鳥だったら、あなたのところへ飛んでいけるのに。」を仮定法過去の文で完成させる。\n【なぜwereや過去形を使うのか】仮定法過去は「現実ではないこと」を仮定する言い方で、現在の事実に反することをわざと過去形で表すことで「実際はそうではない」という気持ちを示すルールになっているから。\n【ポイント1】形は「If＋主語＋were/動詞の過去形, 主語＋would/could/might＋動詞原形」。\n【ポイント2】If I were a bird, I could fly to you.＝「（実際は鳥ではないが）もし鳥だったら、飛んでいけるのに」。be動詞は主語に関わらずwereを使う（口語ではwasも可）。\n【ポイント3】直説法（本当に起こりうること）との違いを確認する。直説法：If it rains, I will stay home.（本当に雨かもしれない）。仮定法：If it rained, I would stay home.（実際は雨ではないと思いながら）。\n【答え】If I were a bird, I could fly to you.\n【確かめ】be動詞がwasではなくwereになっているか、主節の動詞がcould（過去形の助動詞）になっているかを確認する。\n【よくあるまちがい】If I am a bird, I can fly to you.のように現在形のまま書いてしまう。仮定法は動詞が1つ過去にずれる。\n【ここが絶対】仮定法過去はbe動詞を必ずwereにし、主節にはwould/could/mightを使う。',
+      '【何を聞かれているか】「もし明日晴れたら、私たちは公園でサッカーをします。」を、条件を表すifの文で英語にする。\n【なぜif節は現在形なのか】「もし〜ならば」と本当に起こるかもしれないことを言うときは、未来のことでもif節の中だけは現在形にし、結果を言う主節にwillを使うという決まりがあるから。\n【ポイント1】形は「If＋主語＋現在形, 主語＋will＋動詞の原形」。\n【ポイント2】If it is sunny tomorrow, we will play soccer in the park.＝「もし明日晴れたら、私たちは公園でサッカーをします」。天気を言うときの主語はitで、be動詞はisになる。\n【ポイント3】if節の中でwillを使うのは誤り。If it will be sunny tomorrow, ... とは書かない。ただし、when節・after節など時を表す節でも同じく現在形になる。\n【答え】If it is sunny tomorrow, we will play soccer in the park.\n【確かめ】if節がit is sunny（現在形）、主節がwe will play（will＋原形）になっているかを確認する。\n【よくあるまちがい】If it will be sunny tomorrow, ... のように、明日のことだからとif節にwillを入れてしまう。\n【ここが絶対】条件のifでは、if節は未来のことでも現在形、主節はwill＋動詞の原形。',
   },
 ];
 
@@ -826,8 +826,8 @@ export const shitennojiQuestions: Question[] = [
     id: 'shitennoji_shakai_08', subject: 'shakai', difficulty: 'advanced',
     course: 'shitennoji', examType: 'chugaku',
     question: '日本の貿易について、①戦後から1970年代の日本の主要輸出品の変化（軽工業→重化学工業）②現在の日本の主要輸出品と輸出相手国（上位2か国）③貿易摩擦とは何かを簡単に説明せよ。',
-    answer: '①軽工業（綿製品・生糸）→重化学工業（鉄鋼・船舶→自動車・電子機器）　②自動車・機械類・電子部品など。輸出相手国：中国・アメリカ　③輸出が多すぎて相手国の産業が打撃を受け、貿易上の対立が起きること。',
-    hint: '戦後の輸出変化：繊維→鉄鋼→自動車→半導体。貿易相手：中国が1位。',
+    answer: '①軽工業（綿製品・生糸）→重化学工業（鉄鋼・船舶→自動車・電子機器）　②自動車・機械類・電子部品など。輸出相手国：アメリカ・中国　③輸出が多すぎて相手国の産業が打撃を受け、貿易上の対立が起きること。',
+    hint: '戦後の輸出変化：繊維→鉄鋼→自動車→半導体。輸出相手国の上位はアメリカと中国。',
     explanation:
       '【何を聞かれているか】輸出品の変化、現在の輸出品と相手国、貿易摩擦。\n【なぜそうなるのか】戦後は**せんい（軽工業）→鉄鋼・船→自動車・電子機器**と、加工貿易で高度な製品へ移った。輸出が多すぎると相手国の産業が困り、対立が起こる（貿易摩擦）。\n【ステップ1】①綿製品・生糸→鉄鋼・船舶→自動車・電子機器。\n【ステップ2】②自動車・機械類・電子部品。相手国はアメリカと中国（近年は年によって1位が入れかわる）。\n【ステップ3】③輸出しすぎて相手国の産業が打撃を受け、対立すること。例：1980年代の日米自動車摩擦。\n【答え】①軽工業→重化学工業 ②自動車・機械類、アメリカ・中国 ③輸出が多すぎて相手国と対立すること\n【確かめ】摩擦の対策として日本企業は現地生産（アメリカに工場）を増やした。\n【よくあるまちがい】輸出品を今も生糸とする。**今は自動車・機械**。\n【ここが絶対】「輸出品の変化（軽工業→重化学工業→自動車・電子機器）」の流れは地理・歴史複合の頻出テーマ。',
   },
@@ -859,7 +859,7 @@ export const shitennojiQuestions: Question[] = [
     answer: '①This book is more interesting than that book.　②Mt. Fuji is the highest mountain in Japan.',
     hint: 'interesting は長い形容詞→more/most。high は短い→-er/-est。',
     explanation:
-      '【何を聞かれているか】①「This book is interesting.」を比較級に、②「Mt. Fuji is high.」を最上級に直す。\n【なぜ-erやmoreの使い分けがあるのか】形容詞の音節（区切り）の長さによって、比較級・最上級の作り方（語尾に-er/-estをつけるか、前にmore/mostをつけるか）が変わるルールがあるから。\n【ポイント1】短い形容詞（1〜2音節）は語尾に-er/-estをつける。high→higher/highest、tall→taller/tallest、big→bigger/biggest（子音字を重ねる）。\n【ポイント2】長い形容詞（3音節以上）はmore/mostを前につける。interesting→more interesting/most interesting、beautiful→more beautiful/most beautiful。\n【ポイント3】比較級の文型はA is＋比較級＋than B。最上級の文型はA is the＋最上級＋in/of〜。①This book is more interesting than that book. ②Mt. Fuji is the highest mountain in Japan.（in Japanは範囲を示す場所）。\n【答え】①This book is more interesting than that book.　②Mt. Fuji is the highest mountain in Japan.\n【確かめ】①の文にtheが入っていないか（比較級にtheは不要）、②の文にtheが入っているか（最上級には必要）を確認する。\n【よくあるまちがい】interestingのような長い形容詞にmoreをつけずに、interestinger のように-erをつけてしまう。\n【ここが絶対】比較級の文にtheは不要、最上級の文には必ずtheが必要。',
+      '【何を聞かれているか】①「This book is interesting.」を比較級に、②「Mt. Fuji is high.」を最上級に直す。\n【なぜ-erやmoreの使い分けがあるのか】形容詞の音節（区切り）の長さによって、比較級・最上級の作り方（語尾に-er/-estをつけるか、前にmore/mostをつけるか）が変わるルールがあるから。\n【ポイント1】短い形容詞（おもに1音節の語）は語尾に-er/-estをつける。high→higher/highest、tall→taller/tallest、big→bigger/biggest（子音字を重ねる）。easyのように-yで終わる2音節の語も、easier/easiestとする（yをiに変える）。\n【ポイント2】長い形容詞（3音節以上の語と、famous・crowdedなど多くの2音節の語）はmore/mostを前につける。interesting→more interesting/most interesting、beautiful→more beautiful/most beautiful。\n【ポイント3】比較級の文型はA is＋比較級＋than B。最上級の文型はA is the＋最上級＋in/of〜。①This book is more interesting than that book. ②Mt. Fuji is the highest mountain in Japan.（in Japanは範囲を示す場所）。\n【答え】①This book is more interesting than that book.　②Mt. Fuji is the highest mountain in Japan.\n【確かめ】①の文にtheが入っていないか（比較級にtheは不要）、②の文にtheが入っているか（最上級には必要）を確認する。\n【よくあるまちがい】interestingのような長い形容詞にmoreをつけずに、interestinger のように-erをつけてしまう。\n【ここが絶対】比較級の文にtheは不要、最上級の文には必ずtheが必要。',
   },
   {
     id: 'shitennoji_eigo_02', subject: 'eigo', difficulty: 'advanced',
@@ -894,16 +894,16 @@ export const shitennojiQuestions: Question[] = [
     question: '不定詞（to + 動詞の原形）の用法を判断せよ。①「I want to be a doctor.」（名詞的・形容詞的・副詞的のどれか）②「I have something to tell you.」③「He studied hard to pass the exam.」',
     answer: '①名詞的用法（〜することが欲しい→want の目的語）　②形容詞的用法（something を修飾）　③副詞的用法（試験に合格するために→目的を表す）',
     hint: '名詞的：S・O・Cになる。形容詞的：直前の名詞を修飾。副詞的：動詞・形容詞・文全体を修飾（目的・原因・結果）。',
-    explanation: '【解説】不定詞（to + 動詞の原形）の3用法：\n\n①名詞的用法：\n「〜すること」という意味。文中でS（主語）・O（目的語）・C（補語）になる。\nI want [to be a doctor].\n→ want の目的語（O）：「医者になることを望む」\n\n②形容詞的用法：\n「〜するための〜」「〜すべき〜」という意味。直前の名詞（代名詞）を修飾する。\nI have something [to tell you].\n→ somethingを修飾：「あなたに話すべきこと」\n（「-thing / -one / -body」の後は不定詞が後ろから修飾）\n\n③副詞的用法：\n動詞・形容詞・文全体を修飾。目的・原因・結果・判断の根拠などを表す。\nHe studied hard [to pass the exam].\n→「試験に合格するために」（目的）\n「〜するために」は副詞的用法の中で最も頻出。\n\n【見分け方のコツ】\n直後に名詞があるか？→形容詞的\n文中でS/O/Cになるか？→名詞的\n上記でなければ→副詞的',
+    explanation: '【解説】不定詞（to + 動詞の原形）の3用法：\n\n①名詞的用法：\n「〜すること」という意味。文中でS（主語）・O（目的語）・C（補語）になる。\nI want [to be a doctor].\n→ want の目的語（O）：「医者になることを望む」\n\n②形容詞的用法：\n「〜するための〜」「〜すべき〜」という意味。直前の名詞（代名詞）を修飾する。\nI have something [to tell you].\n→ somethingを修飾：「あなたに話すべきこと」\n（「-thing / -one / -body」の後は不定詞が後ろから修飾）\n\n③副詞的用法：\n動詞・形容詞・文全体を修飾。目的・原因・結果・判断の根拠などを表す。\nHe studied hard [to pass the exam].\n→「試験に合格するために」（目的）\n「〜するために」は副詞的用法の中で最も頻出。\n\n【見分け方のコツ】\nto の直前に、説明される名詞があるか？→形容詞的\n文中でS/O/Cになるか？→名詞的\n上記でなければ→副詞的',
   },
   {
     id: 'shitennoji_eigo_06', subject: 'eigo', difficulty: 'advanced',
     course: 'shitennoji', examType: 'chugaku',
     question: '動名詞（-ing形）と不定詞（to+原形）の使い分けについて、①動名詞のみを目的語に取る動詞を3つ②不定詞のみを目的語に取る動詞を3つ③両方取れるが意味が変わる動詞を1つ挙げ、例文で意味の違いを示せ。',
-    answer: '①enjoy/finish/mind（avoid, giveup等も可）　②want/hope/decide（plan, promise等も可）　③remember：I remember locking（施錠したことを覚えている）/ I remembered to lock（施錠することを忘れずにした）',
+    answer: '①enjoy/finish/mind（avoid, give up等も可）　②want/hope/decide（plan, promise等も可）　③remember：I remember locking（施錠したことを覚えている）/ I remembered to lock（施錠することを忘れずにした）',
     hint: '動名詞好き：enjoy・finish・mind・avoid・give up。不定詞好き：want・hope・decide・plan。',
     explanation:
-      '【何を聞かれているか】①動名詞のみを目的語に取る動詞を3つ、②不定詞のみを目的語に取る動詞を3つ、③両方取れるが意味が変わる動詞を1つ挙げ、例文で意味の違いを示す。\n【なぜ動詞によって形が決まっているのか】英語では動詞ごとに「あとに動名詞（-ing）が続くか、不定詞（to＋原形）が続くか」が決まっており、これは理屈で導けるものではなく、動詞とセットで覚える必要があるから。\n【ポイント1】動名詞のみを目的語に取る動詞：enjoy（楽しむ、I enjoy swimming.）、finish（終える、He finished eating.）、mind（気にする、Do you mind opening the window?）。ほかにavoid、give upなど。\n【ポイント2】不定詞のみを目的語に取る動詞：want（欲しい、I want to go.）、hope（望む、She hopes to win.）、decide（決める、He decided to leave.）。ほかにplan、promiseなど。\n【ポイント3】両方取れて意味が変わる動詞remember：remember＋動名詞は「（過去の行動を）覚えている」（I remember locking the door.＝鍵を締めたことを覚えている）、remember＋不定詞は「（これからすることを）忘れずにする」（I remembered to lock the door.＝忘れずに鍵を締めた）。forget・try・stopも同様に意味が変わる。\n【答え】①enjoy/finish/mind（avoid, giveup等も可）　②want/hope/decide（plan, promise等も可）　③remember：I remember locking（施錠したことを覚えている）/ I remembered to lock（施錠することを忘れずにした）\n【確かめ】rememberの2つの例文を比べて、動名詞では「過去にした行動」、不定詞では「これからすべきこと」を表しているかを確認する。\n【よくあるまちがい】enjoy to swimのように、動名詞のみを取る動詞に不定詞をつけてしまう。\n【ここが絶対】動詞ごとに動名詞・不定詞のどちらを取るかが決まっているので、動詞とセットで覚える。',
+      '【何を聞かれているか】①動名詞のみを目的語に取る動詞を3つ、②不定詞のみを目的語に取る動詞を3つ、③両方取れるが意味が変わる動詞を1つ挙げ、例文で意味の違いを示す。\n【なぜ動詞によって形が決まっているのか】英語では動詞ごとに「あとに動名詞（-ing）が続くか、不定詞（to＋原形）が続くか」が決まっており、これは理屈で導けるものではなく、動詞とセットで覚える必要があるから。\n【ポイント1】動名詞のみを目的語に取る動詞：enjoy（楽しむ、I enjoy swimming.）、finish（終える、He finished eating.）、mind（気にする、Do you mind opening the window?）。ほかにavoid、give upなど。\n【ポイント2】不定詞のみを目的語に取る動詞：want（欲しい、I want to go.）、hope（望む、She hopes to win.）、decide（決める、He decided to leave.）。ほかにplan、promiseなど。\n【ポイント3】両方取れて意味が変わる動詞remember：remember＋動名詞は「（過去の行動を）覚えている」（I remember locking the door.＝鍵を締めたことを覚えている）、remember＋不定詞は「（これからすることを）忘れずにする」（I remembered to lock the door.＝忘れずに鍵を締めた）。forget・try・stopも同様に意味が変わる。\n【答え】①enjoy/finish/mind（avoid, give up等も可）　②want/hope/decide（plan, promise等も可）　③remember：I remember locking（施錠したことを覚えている）/ I remembered to lock（施錠することを忘れずにした）\n【確かめ】rememberの2つの例文を比べて、動名詞では「過去にした行動」、不定詞では「これからすべきこと」を表しているかを確認する。\n【よくあるまちがい】enjoy to swimのように、動名詞のみを取る動詞に不定詞をつけてしまう。\n【ここが絶対】動詞ごとに動名詞・不定詞のどちらを取るかが決まっているので、動詞とセットで覚える。',
   },
   {
     id: 'shitennoji_eigo_07', subject: 'eigo', difficulty: 'advanced',
@@ -925,11 +925,11 @@ export const shitennojiQuestions: Question[] = [
   {
     id: 'shitennoji_eigo_09', subject: 'eigo', difficulty: 'advanced',
     course: 'shitennoji', examType: 'chugaku',
-    question: '仮定法過去について、①仮定法過去の文の形（公式）②「もし私がもっとお金を持っていたら、新しいパソコンを買うのに。」を英語にせよ　③直説法（現実を述べる文）との違いを例文で示せ。',
-    answer: '①If + S + were/動詞の過去形, S + would/could/might + 動詞の原形　②If I had more money, I would buy a new computer.　③直説法：If it rains, I will stay home.（本当に雨かもしれない）仮定法：If it rained, I would stay home.（実際は雨ではないと思っている）',
-    hint: '仮定法過去=現在の事実と反対の仮定。be動詞はwere（主語に関係なく）。',
+    question: '条件を表す if について、①文の形（公式）②「もし明日時間があれば、私はあなたを手伝います。」を英語にせよ　③if節の中では、未来のことでも will を使わないことを例文で示せ。',
+    answer: '①If + S + 現在形, S + will + 動詞の原形　②If I have time tomorrow, I will help you.　③If it rains tomorrow, I will stay home.（×If it will rain tomorrow, ...）',
+    hint: 'if節の中は未来のことでも現在形。主節はwill+動詞の原形。',
     explanation:
-      '【何を聞かれているか】①仮定法過去の文の形（公式）、②「もし私がもっとお金を持っていたら、新しいパソコンを買うのに。」の英訳、③直説法との違いを例文で示す。\n【なぜ動詞を過去形にするのか】仮定法過去は「現在の事実と反対のこと」を仮定する言い方で、実際にはそうではないという気持ちを、わざと動詞を1つ過去にずらすことで表す決まりになっているから。\n【ポイント1】公式：If＋S＋were／動詞の過去形, S＋would／could／might＋動詞の原形。条件節（if節）は動詞を1つ過去にずらし（be動詞はwere）、帰結節（主節）はwould/could/might＋動詞の原形にする。\n【ポイント2】②「持っている」を現在の文にするとhaveだが、仮定法過去ではhadにする。If I had more money, I would buy a new computer.\n【ポイント3】③直説法（本当に起こりうること）：If it rains tomorrow, I will stay home.（明日雨かもしれないという現実の可能性）。仮定法過去（反事実的仮定）：If it rained, I would stay home.（実際は雨ではないが、もし雨だったら）。\n【答え】①If + S + were/動詞の過去形, S + would/could/might + 動詞の原形　②If I had more money, I would buy a new computer.　③直説法：If it rains, I will stay home.（本当に雨かもしれない）仮定法：If it rained, I would stay home.（実際は雨ではないと思っている）\n【確かめ】②の文でbe動詞を使う場合はwereになっているか（If I were you, I wouldn\'t do that.のように）確認する。\n【よくあるまちがい】仮定法でbe動詞をwasにしてしまう。試験ではwereを使うのが正解とされる。\n【ここが絶対】仮定法過去では主語に関係なくbe動詞はwereを使う。',
+      '【何を聞かれているか】①条件を表すifの文の形（公式）、②「もし明日時間があれば、私はあなたを手伝います。」の英訳、③if節の中では未来のことでもwillを使わないことを例文で示す。\n【なぜif節は現在形なのか】「もし〜ならば」と本当に起こるかもしれないことを言うときは、未来のことでもif節の中だけは現在形にし、結果を言う主節にwillを使うという決まりがあるから。\n【ポイント1】公式：If＋S＋現在形, S＋will＋動詞の原形。条件を言うif節は現在形、その結果を言う主節はwill＋動詞の原形にする。\n【ポイント2】②「時間がある」はhave time。明日のことでもif節は現在形のhaveにする。If I have time tomorrow, I will help you.\n【ポイント3】③If it rains tomorrow, I will stay home.（もし明日雨が降ったら、家にいる）。×If it will rain tomorrow, ... とはしない。\n【答え】①If + S + 現在形, S + will + 動詞の原形　②If I have time tomorrow, I will help you.　③If it rains tomorrow, I will stay home.（×If it will rain tomorrow, ...）\n【確かめ】②でif節がI have（現在形）、主節がI will help（will＋原形）になっているかを確認する。\n【よくあるまちがい】If I will have time tomorrow, ... のように、明日のことだからとif節にwillを入れてしまう。\n【ここが絶対】条件のifでは、if節は未来のことでも現在形、主節はwill＋動詞の原形。',
   },
   {
     id: 'shitennoji_eigo_10', subject: 'eigo', difficulty: 'advanced',
@@ -1419,7 +1419,7 @@ export const kokoGeneralQuestions: Question[] = [
     answer: '黒船(1853)→日米和親条約(1854)→大政奉還(1867)→王政復古(1867)→戊辰戦争→廃藩置県(1871)。改革：廃藩置県・地租改正・富国強兵（殖産興業）',
     hint: '「黒船来航」は1853年、ペリーが浦賀に来航した出来事です。',
     explanation:
-      '【何を聞かれているか】黒船来航から廃藩置県までの出来事を年代順に並べ、明治維新の3つの改革を答える。\n【なぜそうなるのか】開国を迫られたことをきっかけに幕府への不満が高まり、政権交代（大政奉還・王政復古）を経て、新政府が中央集権国家をつくるための改革を進めた。\n【ステップ1】1853年黒船来航→1854年日米和親条約→1858年日米修好通商条約→1867年大政奉還・王政復古→1868〜69年戊辰戦争→1871年廃藩置県。\n【ステップ2】明治維新の改革＝廃藩置県（中央集権化）・地租改正（近代的税制）・富国強兵/殖産興業。\n【答え】黒船(1853)→日米和親条約(1854)→大政奉還(1867)→王政復古(1867)→戊辰戦争→廃藩置県(1871)。改革：廃藩置県・地租改正・富国強兵（殖産興業）\n【確かめ】大政奉還（1867年11月）は徳川慶喜が政権を返上、王政復古（同年12月）は天皇中心の新政府樹立の宣言で、順番も内容もちがう。\n【よくあるまちがい】大政奉還と王政復古を同じ出来事だと思う。**大政奉還は幕府側、王政復古は新政府側の動き**。\n【ここが絶対】「1853年黒船来航→1867年大政奉還・王政復古→1871年廃藩置県」の幕末〜明治維新の年表は歴史の最頻出テーマ。',
+      '【何を聞かれているか】黒船来航から廃藩置県までの出来事を年代順に並べ、明治維新の3つの改革を答える。\n【なぜそうなるのか】開国を迫られたことをきっかけに幕府への不満が高まり、政権交代（大政奉還・王政復古）を経て、新政府が中央集権国家をつくるための改革を進めた。\n【ステップ1】1853年黒船来航→1854年日米和親条約→1858年日米修好通商条約→1867年大政奉還・王政復古→1868〜69年戊辰戦争→1871年廃藩置県。\n【ステップ2】明治維新の改革＝廃藩置県（中央集権化）・地租改正（近代的税制）・富国強兵/殖産興業。\n【答え】黒船(1853)→日米和親条約(1854)→大政奉還(1867)→王政復古(1867)→戊辰戦争→廃藩置県(1871)。改革：廃藩置県・地租改正・富国強兵（殖産興業）\n【確かめ】大政奉還（1867年10月・旧暦）は徳川慶喜が政権を返上、王政復古（同年12月・旧暦）は天皇中心の新政府樹立の宣言で、順番も内容もちがう。\n【よくあるまちがい】大政奉還と王政復古を同じ出来事だと思う。**大政奉還は幕府側、王政復古は新政府側の動き**。\n【ここが絶対】「1853年黒船来航→1867年大政奉還・王政復古→1871年廃藩置県」の幕末〜明治維新の年表は歴史の最頻出テーマ。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1523,7 +1523,7 @@ export const kokoGeneralQuestions: Question[] = [
   {
     id: 'koko_gen_eigo_08',
     subject: 'eigo',
-    question: '次の（　）に when / while / after のいずれか適切な接続詞を入れなさい。\n① ( ) I was walking home, it started to rain.\n② ( ) finishing dinner, he watched TV.\n③ ( ) I grow up, I want to be a doctor.',
+    question: '次の（　）に when / while / after のいずれか適切な接続詞を入れなさい。\n① ( ) I was walking home, it started to rain.（家に歩いて帰っている間に、雨がふり始めた）\n② ( ) finishing dinner, he watched TV.（夕食を終えたあとで、彼はテレビを見た）\n③ ( ) I grow up, I want to be a doctor.（大人になったとき、医者になりたい）',
     answer: '① While ② After ③ When',
     hint: 'while は「〜している間」、after は「〜した後」、when は「〜するとき（将来の場合も現在形で）」です。',
     explanation:
@@ -1549,7 +1549,7 @@ export const kokoGeneralQuestions: Question[] = [
     question: '次の英文を読んで、（1）タイトルとして最も適切なものを選びなさい。（2）筆者が最も伝えたいことを日本語で30字以内にまとめなさい。\n\n"Many students use smartphones every day. Smartphones are very useful for studying and communicating with friends. However, if students use them too much, they may have problems. For example, they might not sleep enough, or they might not focus on their studies. It is important to use smartphones wisely and set a time limit for using them each day."\n\n【タイトル選択肢】\nA. The History of Smartphones\nB. How to Use Smartphones Wisely\nC. Why Students Need Smartphones',
     answer: '(1) B. How to Use Smartphones Wisely　(2) スマートフォンを賢く使い、1日の使用時間を決めることが大切。',
     hint: '本文の最後の文（It is important to...）が筆者の主張です。',
-    explanation: '【解説】\n長文読解のポイント：\n\n【タイトル選択】\n・A「スマートフォンの歴史」→歴史については書かれていない ✗\n・B「スマートフォンを賢く使う方法」→"use smartphones wisely" "set a time limit"という表現と一致 ✓\n・C「なぜ生徒にスマートフォンが必要か」→必要性の説明ではなく、使い方の注意 ✗\n\n【本文の構造分析】\n第1〜2文：スマホは便利（使用頻度）\n第3〜4文：しかし（however）問題もある→睡眠不足・集中できない\n第5文（主張）：大切なのは賢く使うこと＋1日の使用時間を設ける\n\n→「however」の後ろから筆者の問題意識が始まり、最後の文に主張がある。\n\n【要約（30字以内）】\n「スマートフォンを賢く使い、1日の使用時間を決めることが大切。」（29字）\n\n読解のコツ：however（しかし）・it is important（大切なのは）などのキーワードに注目！',
+    explanation: '【解説】\n長文読解のポイント：\n\n【タイトル選択】\n・A「スマートフォンの歴史」→歴史については書かれていない ✗\n・B「スマートフォンを賢く使う方法」→"use smartphones wisely" "set a time limit"という表現と一致 ✓\n・C「なぜ生徒にスマートフォンが必要か」→必要性の説明ではなく、使い方の注意 ✗\n\n【本文の構造分析】\n第1〜2文：スマホは便利（使用頻度）\n第3〜4文：しかし（however）問題もある→睡眠不足・集中できない\n第5文（主張）：大切なのは賢く使うこと＋1日の使用時間を設ける\n\n→「however」の後ろから筆者の問題意識が始まり、最後の文に主張がある。\n\n【要約（30字以内）】\n「スマートフォンを賢く使い、1日の使用時間を決めることが大切。」（30字）\n\n読解のコツ：however（しかし）・it is important（大切なのは）などのキーワードに注目！',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1972,11 +1972,11 @@ export const kokoGeneralQuestions: Question[] = [
   {
     id: 'koko_gen_shakai_15',
     subject: 'shakai',
-    question: '第二次世界大戦について答えなさい。\n①太平洋戦争が始まった年と、日本軍が最初に攻撃した場所\n②日本がポツダム宣言を受諾した年',
+    question: '第二次世界大戦について答えなさい。\n①太平洋戦争が始まった年と、日本軍がアメリカ海軍基地を奇襲攻撃した場所\n②日本がポツダム宣言を受諾した年',
     answer: '①1941年、真珠湾（ハワイ・オアフ島）　②1945年',
     hint: '真珠湾攻撃は日本時間の12月8日（米国時間12月7日）。1945年8月15日に玉音放送。',
     explanation:
-      '【何を聞かれているか】太平洋戦争が始まった年と最初の攻撃場所、ポツダム宣言受諾の年。\n【なぜそうなるのか】日本はアメリカとの対立の末、ハワイの米海軍基地を奇襲攻撃して開戦し、原爆投下とソ連参戦を受けて1945年に降伏した。\n【ステップ1】1941年12月8日、真珠湾（ハワイ・オアフ島）を攻撃。\n【ステップ2】1945年8月14日にポツダム宣言受諾、15日玉音放送、9月2日降伏文書調印。\n【答え】①1941年、真珠湾（ハワイ・オアフ島）　②1945年\n【確かめ】同時にマレー半島（イギリス領）にも上陸した。戦争期間は1941〜1945年の4年間。\n【よくあるまちがい】真珠湾攻撃だけで、マレー半島上陸も同時だったことを見落とす。\n【ここが絶対】「1941年真珠湾攻撃と同時にマレー半島上陸」の2方面同時開戦は太平洋戦争の頻出テーマ。',
+      '【何を聞かれているか】太平洋戦争が始まった年とアメリカ海軍基地を奇襲攻撃した場所、ポツダム宣言受諾の年。\n【なぜそうなるのか】日本はアメリカとの対立の末、ハワイの米海軍基地を奇襲攻撃して開戦し、原爆投下とソ連参戦を受けて1945年に降伏した。\n【ステップ1】1941年12月8日、真珠湾（ハワイ・オアフ島）を攻撃。\n【ステップ2】1945年8月14日にポツダム宣言受諾、15日玉音放送、9月2日降伏文書調印。\n【答え】①1941年、真珠湾（ハワイ・オアフ島）　②1945年\n【確かめ】同時にマレー半島（イギリス領）にも上陸した。戦争期間は1941〜1945年の4年間。\n【よくあるまちがい】真珠湾攻撃だけで、マレー半島上陸も同時だったことを見落とす。\n【ここが絶対】「1941年真珠湾攻撃と同時にマレー半島上陸」の2方面同時開戦は太平洋戦争の頻出テーマ。',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
@@ -2012,7 +2012,7 @@ export const kokoGeneralQuestions: Question[] = [
     answer: '①1人の女性が一生の間に産む平均子どもの数　②社会保障費の増大・現役世代の負担増・労働力不足など',
     hint: '合計特殊出生率が2.07を下回ると人口が減少します（日本は2025年に1.14）。',
     explanation:
-      '【何を聞かれているか】合計特殊出生率の定義と、少子高齢化が社会保障制度に与える影響。\n【なぜそうなるのか】1人の女性が一生に産む子どもの平均数が人口を維持できる水準（約2.07）を下回ると、支える現役世代が減り、社会保障の負担が重くなる。\n【ステップ1】合計特殊出生率＝1人の女性が一生の間に産む平均子どもの数。\n【ステップ2】少子高齢化の影響＝社会保障費の増大・現役世代の負担増・労働力不足。\n【答え】①1人の女性が一生の間に産む平均子どもの数　②社会保障費の増大・現役世代の負担増・労働力不足など\n【確かめ】人口維持に必要な水準は約2.07だが、日本の現状は約1.2〜1.3。\n【よくあるまちがい】合計特殊出生率を「実際に生まれた子どもの総数」だと思う。**1人あたりの平均を表す割合**。\n【ここが絶対】「合計特殊出生率＝1人の女性が一生に産む子どもの平均数、人口維持ラインは約2.07」は公民の最頻出事項。',
+      '【何を聞かれているか】合計特殊出生率の定義と、少子高齢化が社会保障制度に与える影響。\n【なぜそうなるのか】1人の女性が一生に産む子どもの平均数が人口を維持できる水準（約2.07）を下回ると、支える現役世代が減り、社会保障の負担が重くなる。\n【ステップ1】合計特殊出生率＝1人の女性が一生の間に産む平均子どもの数。\n【ステップ2】少子高齢化の影響＝社会保障費の増大・現役世代の負担増・労働力不足。\n【答え】①1人の女性が一生の間に産む平均子どもの数　②社会保障費の増大・現役世代の負担増・労働力不足など\n【確かめ】人口維持に必要な水準は約2.07だが、日本の現状は約1.1（2025年は1.14）。\n【よくあるまちがい】合計特殊出生率を「実際に生まれた子どもの総数」だと思う。**1人あたりの平均を表す割合**。\n【ここが絶対】「合計特殊出生率＝1人の女性が一生に産む子どもの平均数、人口維持ラインは約2.07」は公民の最頻出事項。',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',

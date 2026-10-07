@@ -19,9 +19,9 @@ export const kokoKankanEigoC2: Question[] = [
 ③ Momoは庭に出るのが嫌いだ。
 ④ Kenの母はMomoを好きではない。`,
     answer: `② Kenは学校に行く前にMomoに餌をあげる。`,
-    hint: `本文2文目「Every morning, Ken gives Momo some food before he goes to school.」に注目する。`,
+    hint: `本文4文目「Every morning, Ken gives Momo some food before he goes to school.」に注目する。`,
     explanation:
-      '【何を聞かれているか】\n飼い犬モモについての英文を読んで、内容と合っている選択肢を選ぶ問題。\n\n【なぜbeforeの位置を正確に読み取る必要があるのか】\n本文の"Ken gives Momo some food before he goes to school."という文は、「学校に行く前に」餌をあげるという順序を表しており、before（〜する前に）の位置を取り違えると、逆の意味（学校から帰った後）だと誤解してしまう。\n\n【ポイント1】①を確認する\n本文には"white and very small"（白くて小さい）とあり、「黒くて大きい」という選択肢①は本文と矛盾する。\n\n【ポイント2】②を確認する\n"gives Momo some food before he goes to school"（学校に行く前に餌をあげる）が選択肢②とそのまま一致する。\n\n【ポイント3】③④を確認する\n③は"plays with Momo in the garden"（庭で楽しく遊ぶ）とあり「嫌い」という内容と矛盾。④は"makes our family happier"（家族をより幸せにする）とあり「好きではない」という内容と矛盾する。\n\n【答え】\n② Kenは学校に行く前にMomoに餌をあげる。\n\n【確かめ】\n選んだ選択肢が、本文の"before he goes to school"（学校に行く前に）という順序と正確に一致しているか確認する。\n\n【よくあるまちがい】\nbeforeの位置を読み違えて、「学校から帰ってから餌をあげる」のように逆の意味に誤解してしまうミス。\n\n【ここが絶対】\n内容一致問題は、本文中の同じ意味の表現（言い換え）を探すことが得点のカギ。before/afterのような順序を表す語は特に正確に読み取る。',
+      '【何を聞かれているか】\n飼い猫モモについての英文を読んで、内容と合っている選択肢を選ぶ問題。\n\n【なぜbeforeの位置を正確に読み取る必要があるのか】\n本文の"Ken gives Momo some food before he goes to school."という文は、「学校に行く前に」餌をあげるという順序を表しており、before（〜する前に）の位置を取り違えると、逆の意味（学校から帰った後）だと誤解してしまう。\n\n【ポイント1】①を確認する\n本文には"white and very small"（白くて小さい）とあり、「黒くて大きい」という選択肢①は本文と矛盾する。\n\n【ポイント2】②を確認する\n"gives Momo some food before he goes to school"（学校に行く前に餌をあげる）が選択肢②とそのまま一致する。\n\n【ポイント3】③④を確認する\n③は"plays with Momo in the garden"（庭で楽しく遊ぶ）とあり「嫌い」という内容と矛盾。④は"makes our family happier"（家族をより幸せにする）とあり「好きではない」という内容と矛盾する。\n\n【答え】\n② Kenは学校に行く前にMomoに餌をあげる。\n\n【確かめ】\n選んだ選択肢が、本文の"before he goes to school"（学校に行く前に）という順序と正確に一致しているか確認する。\n\n【よくあるまちがい】\nbeforeの位置を読み違えて、「学校から帰ってから餌をあげる」のように逆の意味に誤解してしまうミス。\n\n【ここが絶対】\n内容一致問題は、本文中の同じ意味の表現（言い換え）を探すことが得点のカギ。before/afterのような順序を表す語は特に正確に読み取る。',
     pitfall: `④のように本文に直接書かれていない否定的な内容を安易に選ばない。本文にははっきり「makes our family happier」と書かれている。`,
     memoryTip: `内容一致問題は「本文中の同じ意味の表現」を探して、言い換え（paraphrase）に気づくことが得点のカギ。`,
   },
@@ -193,7 +193,7 @@ export const kokoKankanEigoC2: Question[] = [
     answer: `① Because of the language barrier.
 ② あと1年間。
 ③ 怖くても新しいことに挑戦することが、成長するための最良の方法だという考え方。`,
-    hint: `①本文2文目「because of the language barrier」に注目。②最終文「for one more year」。③「trying new things, even when they are scary, is the best way to grow」を日本語にする。`,
+    hint: `①本文3文目「because of the language barrier」に注目。②最終文「for one more year」。③「trying new things, even when they are scary, is the best way to grow」を日本語にする。`,
     explanation: `【出題意図】留学生の体験談を通して、理由を表すbecause of、期間表現、筆者（登場人物）の考え方を読み取る力を問う。【解説】①「found it difficult... because of the language barrier」から「言語の壁のため」と分かる。②最終文「plans to stay in Japan for one more year」より「あと1年間」。③「trying new things, even when they are scary, is the best way to grow」がEmmaの考え方の核心。【注意点】becauseの後ろは節（主語＋動詞）、because ofの後ろは名詞（句）が続く点に注意。ここではbecause of the language barrier（名詞句）。【関連知識】exchange student（交換留学生）、language barrier（言語の壁）は留学をテーマにした英文で頻出。`,
     pitfall: `②を「6か月」と答えないよう注意する。「studying for six months」はこれまでの期間で、設問はこれからの期間（one more year）を聞いている。`,
     memoryTip: `even when〜（〜のときでも）は譲歩を表す表現で、「困難でも挑戦する」という前向きな主張とセットで使われることが多い。`,
@@ -421,7 +421,7 @@ Yuki`,
     difficulty: 'standard',
     maxOnly: false,
     question: `部活動に入ることの良い点について、25語以上の英語で書きなさい。`,
-    answer: `（解答例）Joining a club has many good points. First, students can make new friends who share the same interests. Second, they can learn teamwork and improve their skills through daily practice.（29語）`,
+    answer: `（解答例）Joining a club has many good points. First, students can make new friends who share the same interests. Second, they can learn teamwork and improve their skills through daily practice.（30語）`,
     hint: `「主張→First〜→Second〜」の構成で理由を整理して書く。`,
     explanation: `【出題意図】部活動の利点について、First/Secondを用いて理由を整理しながら述べる自由英作文。論理的な構成力と基本文法の正確さを問う。【解説】まず主張（部活動には良い点が多い）を述べ、First（友達ができる）、Second（チームワークを学べる・技術が向上する）と理由を2つ整理して並べる。【注意点】First, Second（第一に、第二に）のような順序を示す語を使うと採点者に構成が伝わりやすい。25語以上の条件を満たすため、理由をできるだけ具体的に（例：through daily practiceなど）書く。【関連知識】club activities（部活動）、teamwork（チームワーク）、improve one's skills（技術を向上させる）はこのテーマで頻出の語彙・表現。`,
     pitfall: `Joining a club is good.だけで終わらせず、必ず具体的な理由を2つ以上加えて語数を満たす。`,
@@ -446,7 +446,7 @@ Yuki`,
 ③ 本文全体を通して筆者が伝えたい考えを80字以内の日本語でまとめよ。`,
     answer: `① Answering customer questions and checking data for errors.
 ② 人間を完全に置き換えるのではなく
-③ AIは仕事を完全に奪うのではなく、単純作業を代わりに行うことで、人間がより創造的で複雑な仕事に集中できるよう、人間と共に働く存在になる可能性が高いという考え。（77字）`,
+③ AIは仕事を完全に奪うのではなく、単純作業を代わりに行うことで、人間がより創造的で複雑な仕事に集中できるよう、人間と共に働く存在になる可能性が高いという考え。（79字）`,
     hint: `①「such as answering customer questions or checking data for errors」。②rather than=〜ではなく。③最終文「AI may end up working alongside people, handling repetitive tasks so that humans can focus on creative and complex work.」が結論。`,
     explanation: `【出題意図】AIと雇用というテーマの論説文で、具体例の抽出・比較表現（rather than）の理解・筆者の主張の要約という3段階の読解力を問う。【解説】①第1文後半の具体例をそのまま抜き出す。②rather than〜completely＝「完全に〜するのではなく」という比較・対比の表現。③本文は「job losses（懸念）」と「new kinds of jobs（期待）」の両方を提示した上で、最終文で「AIは人間と共存し、単純作業を担うことで人間が創造的な仕事に集中できる」という折衷的な結論を述べている。【注意点】rather than A, Bの構文はA（否定される内容）とB（実際に主張される内容）が対比される。ここではreplacing humans completely（A）とworking alongside people（B）が対比されている。【関連知識】AI関連語彙：artificial intelligence、repetitive task（反復作業）、alongside（〜と並んで）は現代の論説文で頻出。`,
     pitfall: `③でjob losses（懸念）だけ、あるいはnew jobs（期待）だけを書かず、両方を踏まえた上での結論（共存・分担）まで含めてまとめる。`,
@@ -844,7 +844,7 @@ Manager: Perfect. We'll be in touch by the end of this week with our decision.`,
 この本は、私がこれまでに読んだ中で最も感動的な物語の一つだと思う。`,
     answer: `（解答例）I think this book is one of the most moving stories that I have ever read, and I would like to recommend it to everyone.（25語）`,
     hint: `「〜の中で最も…な一つ」はone of the most+形容詞+複数名詞。「これまでに読んだ中で」はthat I have ever read（現在完了の経験用法）。`,
-    explanation: `【出題意図】最上級の重要表現「one of the most+形容詞+複数名詞」と、現在完了の経験用法（ever）を組み合わせた英作文を問う。【解説】「最も感動的な物語の一つ」はone of the most moving stories（最上級+複数名詞、theは省略可）。「私がこれまでに読んだ中で」は関係代名詞thatを使ってthat I have ever read（現在完了の経験、everは「これまでに」を強調）。【注意点】one of the most+形容詞の後ろは必ず複数名詞（storiesであってstoryではない）にする。movingは「感動的な」という意味の現在分詞形容詞（moved=感動させられた、との違いに注意）。【関連知識】one of the+最上級+複数名詞（〜の中で最も…なものの一つ）は、highest score、best playersなど幅広い場面で使える定番表現。`,
+    explanation: `【出題意図】最上級の重要表現「one of the most+形容詞+複数名詞」と、現在完了の経験用法（ever）を組み合わせた英作文を問う。【解説】「最も感動的な物語の一つ」はone of the most moving stories（the＋最上級＋複数名詞）。「私がこれまでに読んだ中で」は関係代名詞thatを使ってthat I have ever read（現在完了の経験、everは「これまでに」を強調）。【注意点】one of the most+形容詞の後ろは必ず複数名詞（storiesであってstoryではない）にする。movingは「感動的な」という意味の現在分詞形容詞（moved=感動させられた、との違いに注意）。【関連知識】one of the+最上級+複数名詞（〜の中で最も…なものの一つ）は、highest score、best playersなど幅広い場面で使える定番表現。`,
     pitfall: `one of the most moving storyと単数名詞にしない。「one of the+最上級」の後ろは必ず複数形。`,
     memoryTip: `one of the+最上級+複数名詞＝「最も…な（複数の中の）一つ」。最上級の後ろは必ず複数名詞になる点を強く意識する。`,
   },
@@ -906,10 +906,10 @@ Manager: Perfect. We'll be in touch by the end of this week with our decision.`,
     question: `次の日本語を英語に訳しなさい。（20語以上）
 
 将来何になりたいかまだ決めていないが、人の役に立つ仕事に就きたいとは思っている。`,
-    answer: `（解答例）I haven't decided what I want to be in the future yet, but I want to have a job that helps other people.（22語）`,
+    answer: `（解答例）I haven't decided what I want to be in the future yet, but I want to have a job that helps other people.（23語）`,
     hint: `「まだ〜していない」は現在完了の否定形+yet。「何になりたいか」は間接疑問文what I want to be。「人の役に立つ仕事」は関係代名詞thatを使う。`,
     explanation:
-      '【何を聞かれているか】\n「将来何になりたいかまだ決めていないが、人の役に立つ仕事に就きたいとは思っている。」という日本語を、20語以上の英語にする問題。\n\n【なぜ間接疑問文と関係代名詞を組み合わせるのか】\n「まだ決めていない」＋「将来何になりたいか」＋「人の役に立つ仕事」という3つの内容を1つの文にまとめるには、現在完了＋yet、間接疑問文、関係代名詞thatという3つの文法をそれぞれ正しい位置で使う必要がある。\n\n【ポイント1】"まだ決めていない"の部分を組み立てる\n"I haven\'t decided〜yet"（現在完了の否定＋文末のyet）。\n\n【ポイント2】"何になりたいか"の部分を組み立てる\ndecidedの目的語になる間接疑問文"what I want to be in the future"（疑問詞＋主語＋動詞の語順）。\n\n【ポイント3】"人の役に立つ仕事"の部分を組み立てる\n"a job that helps other people"（関係代名詞thatが主格でjobを修飾。先行詞jobに合わせてhelpsと3単現のsをつける）。\n\n【答え】\n（解答例）I haven\'t decided what I want to be in the future yet, but I want to have a job that helps other people.（22語）\n\n【確かめ】\n間接疑問文の部分が"what do I want to be"のような疑問文の語順になっていないこと、関係代名詞節の動詞がhelps（3人称単数）になっていることを確認する。\n\n【よくあるまちがい】\n関係代名詞節内の動詞をhelpにしてしまうミス。先行詞a job（単数）に合わせてhelpsにする。\n\n【ここが絶対】\n間接疑問文は「疑問詞＋主語＋動詞」の語順、関係代名詞節内の動詞は先行詞の人称・数に一致させる、という2点を必ず確認する。',
+      '【何を聞かれているか】\n「将来何になりたいかまだ決めていないが、人の役に立つ仕事に就きたいとは思っている。」という日本語を、20語以上の英語にする問題。\n\n【なぜ間接疑問文と関係代名詞を組み合わせるのか】\n「まだ決めていない」＋「将来何になりたいか」＋「人の役に立つ仕事」という3つの内容を1つの文にまとめるには、現在完了＋yet、間接疑問文、関係代名詞thatという3つの文法をそれぞれ正しい位置で使う必要がある。\n\n【ポイント1】"まだ決めていない"の部分を組み立てる\n"I haven\'t decided〜yet"（現在完了の否定＋文末のyet）。\n\n【ポイント2】"何になりたいか"の部分を組み立てる\ndecidedの目的語になる間接疑問文"what I want to be in the future"（疑問詞＋主語＋動詞の語順）。\n\n【ポイント3】"人の役に立つ仕事"の部分を組み立てる\n"a job that helps other people"（関係代名詞thatが主格でjobを修飾。先行詞jobに合わせてhelpsと3単現のsをつける）。\n\n【答え】\n（解答例）I haven\'t decided what I want to be in the future yet, but I want to have a job that helps other people.（23語）\n\n【確かめ】\n間接疑問文の部分が"what do I want to be"のような疑問文の語順になっていないこと、関係代名詞節の動詞がhelps（3人称単数）になっていることを確認する。\n\n【よくあるまちがい】\n関係代名詞節内の動詞をhelpにしてしまうミス。先行詞a job（単数）に合わせてhelpsにする。\n\n【ここが絶対】\n間接疑問文は「疑問詞＋主語＋動詞」の語順、関係代名詞節内の動詞は先行詞の人称・数に一致させる、という2点を必ず確認する。',
     pitfall: `関係代名詞節内の動詞をhelpとしない。先行詞a job（単数）に合わせてhelpsにする。`,
     memoryTip: `間接疑問文は「疑問詞＋主語＋動詞」、関係代名詞節内の動詞は先行詞の人称・数に一致させる、の2点を必ず確認する。`,
   },
@@ -980,7 +980,7 @@ Manager: Perfect. We'll be in touch by the end of this week with our decision.`,
 （I agree / I disagree で書き始めること）`,
     answer: `（賛成例）I agree that students should wear school uniforms. Uniforms make it easier for students to focus on studying instead of worrying about fashion every morning. In addition, uniforms create a sense of equality among students, regardless of their family's financial situation.（41語）
 
-（反対例）I disagree that students should be required to wear school uniforms. Students should be free to express their own personality through the clothes they choose to wear. Moreover, uniforms can be expensive for families, and students may feel uncomfortable in clothes that do not fit them well.（46語）`,
+（反対例）I disagree that students should be required to wear school uniforms. Students should be free to express their own personality through the clothes they choose to wear. Moreover, uniforms can be expensive for families, and students may feel uncomfortable in clothes that do not fit them well.（47語）`,
     hint: `賛成の理由：勉強への集中、経済的平等。反対の理由：個性の表現、経済的負担。In additionやMoreoverでつなぐ。`,
     explanation: `【出題意図】学校制服の是非という定番テーマで、35語以上の意見英作文を通じて主張・理由・補足を論理的に展開する力を問う。【解説】賛成の理由例：ファッションを気にせず勉強に集中できる、家庭の経済状況にかかわらず平等感が生まれる。反対の理由例：服装を通じた個性の表現の自由、制服の費用負担、体に合わない服の不快感。in addition（さらに）、moreover（その上）は理由を追加する際の定番の接続語。【注意点】語数条件を満たすため、理由を最低でも2点挙げる。文法面ではshould be allowed to〜/should be required to〜のような受動態表現も使えるようにしておく。【関連知識】uniform（制服）、equality（平等）、personality（個性）は学校生活の意見英作文で頻出のテーマ語彙。`,
     pitfall: `理由を1つだけ（例：「かわいいから」等の主観的な理由のみ）で終わらせず、社会的・経済的観点も含めて具体性を持たせる。`,
@@ -998,7 +998,7 @@ Manager: Perfect. We'll be in touch by the end of this week with our decision.`,
 テーマ：「中学生や高校生がアルバイトをすることに賛成ですか、反対ですか。」
 
 （I agree / I disagree で書き始めること）`,
-    answer: `（賛成例）I agree that high school students should be allowed to have part-time jobs. Working part-time helps students learn how to manage their time and money responsibly. It also gives them a chance to experience the real world outside of school before they graduate.（42語）
+    answer: `（賛成例）I agree that high school students should be allowed to have part-time jobs. Working part-time helps students learn how to manage their time and money responsibly. It also gives them a chance to experience the real world outside of school before they graduate.（43語）
 
 （反対例）I disagree that junior high and high school students should work part-time jobs. Their main responsibility at this stage of life is to focus on their studies. If students spend too much time working, they may become too tired to concentrate on schoolwork and lose sleep.（46語）`,
     hint: `賛成：時間管理・お金の管理、社会経験。反対：本分は勉強、疲労による学業への悪影響。`,

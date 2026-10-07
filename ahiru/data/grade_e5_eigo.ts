@@ -242,7 +242,7 @@ export const gradeE5EigoQuestions: Question[] = [
     choices: ['I like soccer.', 'I likes soccer.', 'I like a soccer.', 'I liking soccer.'],
     hint: '主語が I（わたし）のときの like の形は変わらない。',
     explanation:
-      '【何を聞かれているか】\n「私はサッカーが好きです。」を英語にする問題。\n\n【なぜIike にsをつけないのか】\n主語がI（わたし）のときは、動詞likeにsをつけず、そのままの形で使うという決まりがある。\n\n【ポイント1】基本の形を確認する\n「〜が好きです」はI like 〜.で表す。\n\n【ポイント2】主語Iとlikeの形を確認する\n主語がIのときはlikeのまま（sはつけない）。\n\n【ポイント3】スポーツ名の前のaを確認する\nsoccerのようなスポーツ名にはaをつけない。\n\n【答え】\nI like soccer.\n\n【確かめ】\nlikeにsがついていない（likesになっていない）か、soccerの前にaがついていないか確認する。\n\n【よくあるまちがい】\n主語がIなのにlikesとsをつけてしまうミス。\n\n【ここが絶対】\n主語がIのときの一般動詞は、そのままの形（原形）を使うと覚える。',
+      '【何を聞かれているか】\n「私はサッカーが好きです。」を英語にする問題。\n\n【なぜ I like の like に s をつけないのか】\n主語がI（わたし）のときは、動詞likeにsをつけず、そのままの形で使うという決まりがある。\n\n【ポイント1】基本の形を確認する\n「〜が好きです」はI like 〜.で表す。\n\n【ポイント2】主語Iとlikeの形を確認する\n主語がIのときはlikeのまま（sはつけない）。\n\n【ポイント3】スポーツ名の前のaを確認する\nsoccerのようなスポーツ名にはaをつけない。\n\n【答え】\nI like soccer.\n\n【確かめ】\nlikeにsがついていない（likesになっていない）か、soccerの前にaがついていないか確認する。\n\n【よくあるまちがい】\n主語がIなのにlikesとsをつけてしまうミス。\n\n【ここが絶対】\n主語がIのときの一般動詞は、そのままの形（原形）を使うと覚える。',
   },
   {
     id: 'grade_e5_eigo_20',
@@ -332,7 +332,7 @@ export const gradeE5EigoQuestions: Question[] = [
     difficulty: 'basic',
     examType: 'chugaku',
     grade: GRADE,
-    question: '「好き」を意味する英単語はどれですか。',
+    question: '「好き」を意味する動詞の原形（もとの形）はどれですか。',
     answer: 'like',
     choices: ['like', 'likes', 'liking', 'liked'],
     hint: '主語が I や you のときに使う形。',
@@ -487,7 +487,7 @@ export const gradeE5EigoQuestions: Question[] = [
     ],
     hint: '時刻を答えるときは It\'s で始める。',
     explanation:
-      '【答え】It\'s three o\'clock.\n\n【時こくの答え方】時こくをたずねられたら、It is（It\'s）＋ 時こく の形で答える。\n・What time is it? — It\'s three o\'clock.\n\n【なぜ It を使うのか】ここがおもしろいところである。この It は「それ」という意味ではなく、時間・天気・明暗・きょりを表すときに置く主語である。言うべき主語がないときの「置きもの」の役目をしている。\n・時間 … It is three o\'clock.\n・天気 … It is sunny.（晴れです）\n・日付 … It is Monday.（月曜です）\n・明暗 … It is dark.（暗い）\n・きょり … It is 2 kilometers to the station.\n日本語に訳すときは「それ」と訳さない。\n\n【ほかの選択肢がなぜちがうか】\n・It is three o\'clock is. … is が2つある\n・Time is three. … 英語ではこの言い方をしない\n・Three o\'clock is it. … 語順が逆\n\n【短縮形】\n・It is → It\'s（アポストロフィが is の i を省いたしるし）\n・It\'s と Its を取りちがえない。Its は「それの」という意味で、アポストロフィがつかない\n\n【時こみのたずね方】\n・What time is it?（今何時ですか）\n・What time is it now?\n・Do you have the time?（時間が分かりますか。ていねいな言い方）\n\n【使い方】\n・It\'s seven thirty.（7時30分です）\n・It\'s noon.（正午です）',
+      '【答え】It\'s three o\'clock.\n\n【時こくの答え方】時こくをたずねられたら、It is（It\'s）＋ 時こく の形で答える。\n・What time is it? — It\'s three o\'clock.\n\n【なぜ It を使うのか】ここがおもしろいところである。この It は「それ」という意味ではなく、時間・天気・明暗・きょりを表すときに置く主語である。言うべき主語がないときの「置きもの」の役目をしている。\n・時間 … It is three o\'clock.\n・天気 … It is sunny.（晴れです）\n・日付 … It is Monday.（月曜です）\n・明暗 … It is dark.（暗い）\n・きょり … It is 2 kilometers to the station.\n日本語に訳すときは「それ」と訳さない。\n\n【ほかの選択肢がなぜちがうか】\n・It is three o\'clock is. … is が2つある\n・Time is three. … 英語ではこの言い方をしない\n・Three o\'clock is it. … 語順が逆\n\n【短縮形】\n・It is → It\'s（アポストロフィが is の i を省いたしるし）\n・It\'s と Its を取りちがえない。Its は「それの」という意味で、アポストロフィがつかない\n\n【時こくのたずね方】\n・What time is it?（今何時ですか）\n・What time is it now?\n・Do you have the time?（時間が分かりますか。ていねいな言い方）\n\n【使い方】\n・It\'s seven thirty.（7時30分です）\n・It\'s noon.（正午です）',
   },
   {
     id: 'grade_e5_eigo_37',
@@ -594,12 +594,12 @@ export const gradeE5EigoQuestions: Question[] = [
     choices: [
       'Whose pen is this?',
       'Who pen is this?',
-      'Whose is this pen?',
+      'Whose this pen is?',
       "Who's this pen?",
     ],
     hint: '「誰の」をたずねる疑問詞のすぐあとに名詞を続ける。',
     explanation:
-      '【何を聞かれているか】\n「これは誰のペンですか。」を英語にする問題。\n\n【なぜWhoseのすぐ後に名詞を置くのか】\n「誰の〜ですか」とたずねるときは、疑問詞Whoseのすぐ後に名詞（pen）を続けるという決まりがある。\n\n【ポイント1】疑問文の基本の形を確認する\nWhose pen is this?の形にする。\n\n【ポイント2】WhoとWhoseの違いを確認する\nWho（誰が）とWhose（誰の）は意味が異なるので混同しない。\n\n【ポイント3】他の選択肢を消去する\n"Who pen is this?"（Whoseの代わりにWhoを使う誤り）、"Whose is this pen?"（語順が誤り）、"Who\'s this pen?"（Who\'sはWho isの短縮形で意味が異なる）はいずれも不適切。\n\n【答え】\nWhose pen is this?\n\n【確かめ】\nWhoseのすぐ後に名詞penが続いているか確認する。\n\n【よくあるまちがい】\nWhoとWhoseを混同してしまうミス。\n\n【ここが絶対】\nWho＝「誰が」、Whose＝「誰の」という意味の違いをしっかり区別する。',
+      '【何を聞かれているか】\n「これは誰のペンですか。」を英語にする問題。\n\n【なぜWhoseのすぐ後に名詞を置くのか】\n「誰の〜ですか」とたずねるときは、疑問詞Whoseのすぐ後に名詞（pen）を続けるという決まりがある。\n\n【ポイント1】疑問文の基本の形を確認する\nWhose pen is this?の形にする。\n\n【ポイント2】WhoとWhoseの違いを確認する\nWho（誰が）とWhose（誰の）は意味が異なるので混同しない。\n\n【ポイント3】他の選択肢を消去する\n"Who pen is this?"（Whoseの代わりにWhoを使う誤り）、"Whose this pen is?"（語順が誤り）、"Who\'s this pen?"（Who\'sはWho isの短縮形で意味が異なる）はいずれも不適切。\n\n【答え】\nWhose pen is this?\n\n【確かめ】\nWhoseのすぐ後に名詞penが続いているか確認する。\n\n【よくあるまちがい】\nWhoとWhoseを混同してしまうミス。\n\n【ここが絶対】\nWho＝「誰が」、Whose＝「誰の」という意味の違いをしっかり区別する。',
     pitfall: 'Who は「誰が」、Whose は「誰の」という意味のちがいをしっかり区別する。',
   },
   {

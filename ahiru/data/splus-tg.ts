@@ -404,7 +404,7 @@ export const SPLUS_TG: Question[] = [
     examType: "chugaku",
     examFrequency: "medium",
     question: "【学習院 英語⑬】次の文を疑問文に書きかえたとき、正しいものを選びなさい。She has a brother.",
-    choices: ["Does she have a brother?","Has she a brother?","Does she has a brother?","Is she have a brother?"],
+    choices: ["Does she have a brother?","Have she a brother?","Does she has a brother?","Is she have a brother?"],
     answer: "Does she have a brother?",
     hint: "一般動詞を使う文の疑問文は、文のはじめにDoかDoesをおく。そのあとの動詞の形がどうなるか。",
     explanation: "【何を聞かれているか】\n一般動詞hasを使う文を、疑問文に書きかえる。\n\n【なぜその形になるのか】\n一般動詞の文の疑問文は、文のはじめにDoまたはDoesをおき、動詞は原形にする。主語が三人称単数（she）のときはDoesを使う。このとき、三単現を表すのはDoesの役目になるので、動詞はもとの形（原形）にもどす。\n\n【ステップ1】主語がsheなので、Doesを文頭におく。\n【ステップ2】hasは、三単現のsがついた形。Doesがその役目を引き受けるので、原形のhaveにもどす。\n【ステップ3】Does she have a brother?\n\n【答え】**Does she have a brother?**\n\n【確かめ】答え方はYes, she does. / No, she doesn't.となり、Doesの文に合う。\n\n【よくあるまちがい】Does she has ...?とhasのままにしてしまう。Doesのあとは必ず原形。",

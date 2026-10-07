@@ -12,13 +12,13 @@ export const kokoOyoEigo50: Question[] = [
     difficulty: 'advanced',
     maxOnly: true,
     question:
-      '次の英文を読んで、空欄に入る最も適切な語を選びなさい。\n\nPlastic waste is one of the most serious environmental problems today. Every year, millions of tons of plastic are thrown away, and much of it ends up in the ocean. Scientists have found that small pieces of plastic, called microplastics, (　　) in the bodies of fish and other sea animals.\n\n① collect  ② accumulate  ③ disappear  ④ reduce',
+      '次の英文を読んで、空欄に入る最も適切な語を選びなさい。\n\nPlastic waste is one of the most serious environmental problems today. Every year, millions of tons of plastic are thrown away, and much of it ends up in the ocean. Scientists have found that small pieces of plastic, called microplastics, (　　) in the bodies of fish and other sea animals.\n\n① escape  ② accumulate  ③ disappear  ④ reduce',
     answer: '② accumulate',
     hint: '「体内に蓄積する」という意味になる動詞を選ぼう。',
     explanation:
-      '【解法のコツ】\n空欄の前後をよく読もう。「小さなプラスチック片が魚や海の生き物の体内に（　）される」という文脈。accumulate は「蓄積する・たまる」という意味で、マイクロプラスチックが生体に蓄積するという科学的事実にぴったり。\n① collect「集める」→他動詞の用法が主で文脈に合わない\n③ disappear「消える」→逆の意味\n④ reduce「減らす」→ここでは蓄積の話なので不適\n英語は必ずできるようになる！文脈を丁寧に読めば正解できる問題だよ。',
+      '【解法のコツ】\n空欄の前後をよく読もう。「小さなプラスチック片が魚や海の生き物の体内に（　）される」という文脈。accumulate は「蓄積する・たまる」という意味で、マイクロプラスチックが生体に蓄積するという科学的事実にぴったり。\n① escape「逃げる」→体内に「とどまってたまる」話なので文脈に合わない\n③ disappear「消える」→逆の意味\n④ reduce「減らす」→ここでは蓄積の話なので不適\n英語は必ずできるようになる！文脈を丁寧に読めば正解できる問題だよ。',
     pitfall:
-      'collect と accumulate は似ているが、accumulate は「自然と蓄積される」ニュアンスが強い。生物濃縮の文脈では accumulate が正解。',
+      'accumulate は「少しずつたまって増えていく」という意味。escape（逃げる）や disappear（消える）は「体内にたまる」という文脈と逆になる。',
     memoryTip:
       'accumulate ＝ a（強調）+ cumulate（積み上げる）→ どんどん積み上がる＝蓄積する。山が積み上がるイメージで覚えよう！',
   },
@@ -70,7 +70,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '② As a result, more and more people are using it.',
     hint: '直前の文「太陽光エネルギーがずっと安くなった」という内容の「結果」として自然なものを選ぼう。',
     explanation:
-      '【解法のコツ】\n文挿入問題は「流れ」が命。直前「安くなった」→ 空欄 → 直後「多くの国でコールや天然ガスより安い」という文脈。「安くなった結果どうなるか？」を考えると「より多くの人が使うようになった」② が自然。\n① 「少ない人しか買えない」→ 安くなったのに矛盾\n③ 「価格が上がると予測される」→ Howeverで逆接なのに文脈が合わない\n④ 「政府が支援をやめた」→ 唐突で文脈が合わない\n英語は必ずできるようになる！接続詞（As a result / However / Therefore）を手がかりにしよう！',
+      '【解法のコツ】\n文挿入問題は「流れ」が命。直前「安くなった」→ 空欄 → 直後「多くの国で石炭や天然ガスより安い」という文脈。「安くなった結果どうなるか？」を考えると「より多くの人が使うようになった」② が自然。\n① 「少ない人しか買えない」→ 安くなったのに矛盾\n③ 「価格が上がると予測される」→ Howeverで逆接なのに文脈が合わない\n④ 「政府が支援をやめた」→ 唐突で文脈が合わない\n英語は必ずできるようになる！接続詞（As a result / However / Therefore）を手がかりにしよう！',
     pitfall:
       '直後の文が「実際に（In fact）」と続くので、空欄は「太陽光エネルギーが普及した」という内容でないといけない。In fact の前後は同じ方向性の内容になる。',
     memoryTip:
@@ -120,13 +120,13 @@ export const kokoOyoEigo50: Question[] = [
     difficulty: 'advanced',
     maxOnly: true,
     question:
-      '次の英文の空欄に入る最も適切な語句を選びなさい。\n\nVolunteering has many benefits. (　　), it gives people a sense of purpose and happiness. It also helps build social connections and develop new skills. Moreover, communities become stronger when more people volunteer.\n\n① On the other hand\n② For example\n③ First of all\n④ As a result',
+      '次の英文の空欄に入る最も適切な語句を選びなさい。\n\nVolunteering has many benefits. (　　), it gives people a sense of purpose and happiness. It also helps build social connections and develop new skills. Moreover, communities become stronger when more people volunteer.\n\n① On the other hand\n② In conclusion\n③ First of all\n④ As a result',
     answer: '③ First of all',
     hint: '空欄の後ろに続く文をよく読もう。ボランティアのメリットが列挙されている。',
     explanation:
-      '【解法のコツ】\nこの文は「ボランティアのメリット」を列挙している構造。空欄の後ろには "it gives..." → "It also helps..." → "Moreover..." と続く。最初のメリットを導く接続表現は "First of all"（まず第一に）が最適。\n① "On the other hand"（一方で）→ 対比には使わない\n② "For example"（例えば）→ 例示なので「メリット全体を示す最初の文」には合わない\n④ "As a result"（その結果）→ 原因・結果の関係がないので不可\n英語は必ずできるようになる！列挙のパターン（First / Also / Moreover）を覚えておこう！',
+      '【解法のコツ】\nこの文は「ボランティアのメリット」を列挙している構造。空欄の後ろには "it gives..." → "It also helps..." → "Moreover..." と続く。最初のメリットを導く接続表現は "First of all"（まず第一に）が最適。\n① "On the other hand"（一方で）→ 対比には使わない\n② "In conclusion"（結論として）→ 文章の最後に使う表現で、冒頭の列挙には合わない\n④ "As a result"（その結果）→ 原因・結果の関係がないので不可\n英語は必ずできるようになる！列挙のパターン（First / Also / Moreover）を覚えておこう！',
     pitfall:
-      '"For example" は「具体例を出すとき」に使う。ここはメリットの第一番目を述べているので First of all が正解。',
+      '"In conclusion" は「結論を述べるとき」に使う。ここはメリットの第一番目を述べているので First of all が正解。',
     memoryTip:
       '列挙の定番フレーズ：First of all → Also / In addition → Moreover / Furthermore → Finally。この順序で覚えよう！',
   },
@@ -440,7 +440,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '② much more',
     hint: '「～よりずっと exciting だ」という比較級の文。"than" に注目。',
     explanation:
-      '【何を聞かれているか】\n比較級を強調する語として正しいものを選ぶ文法問題。\n\n【なぜveryが使えないのか】\n"very"は原級（exciting, goodなど、そのままの形容詞）を強調する語であり、比較級（more exciting, betterなど、比べる形）を強調するには使えない。比較級を強調する語は別に決まっている。\n\n【ポイント1】比較級の強調語を確認する\n比較級を強めるときは"much / far / even / a lot"を使う。「ずっと〜」という意味になる。\n\n【ポイント2】文の形を確認する\n"This movie is (　　) exciting than..."という文はexciting（原級のまま比較級として使われている）とthanがセットになっているので、比較級の文だとわかる。\n\n【ポイント3】他の選択肢を消去する\n①"very"は比較級には使えない。③"the most"は最上級（3つ以上を比べるとき）の形で、thanとは一緒に使わない。④"as"は"as~as"（同等比較）の構文で使う語で、thanとは組み合わせない。\n\n【答え】\n② much more\n\n【確かめ】\n"This movie is much more exciting than the one I watched last week."を訳し、「この映画は先週見たものよりずっとおもしろい」という自然な意味になることを確認する。\n\n【よくあるまちがい】\n"very exciting"のように、うっかり"very"を比較級の前に置いてしまうミス。veryは比較級（more/-er）の前には置けない。\n\n【ここが絶対】\n比較級を強調するときは"much / far / even / a lot"を使う。"very"は原級専用と覚えておく。',
+      '【何を聞かれているか】\n比較級を強調する語として正しいものを選ぶ文法問題。\n\n【なぜveryが使えないのか】\n"very"は原級（exciting, goodなど、そのままの形容詞）を強調する語であり、比較級（more exciting, betterなど、比べる形）を強調するには使えない。比較級を強調する語は別に決まっている。\n\n【ポイント1】比較級の強調語を確認する\n比較級を強めるときは"much / far / even / a lot"を使う。「ずっと〜」という意味になる。\n\n【ポイント2】文の形を確認する\n"This movie is (　　) exciting than..."という文はthanがあるので、〈more exciting than〜〉の比較級の文だとわかる。空所にはmoreを含み、比較級を強める語句が入る。\n\n【ポイント3】他の選択肢を消去する\n①"very"は比較級には使えない。③"the most"は最上級（3つ以上を比べるとき）の形で、thanとは一緒に使わない。④"as"は"as~as"（同等比較）の構文で使う語で、thanとは組み合わせない。\n\n【答え】\n② much more\n\n【確かめ】\n"This movie is much more exciting than the one I watched last week."を訳し、「この映画は先週見たものよりずっとおもしろい」という自然な意味になることを確認する。\n\n【よくあるまちがい】\n"very exciting"のように、うっかり"very"を比較級の前に置いてしまうミス。veryは比較級（more/-er）の前には置けない。\n\n【ここが絶対】\n比較級を強調するときは"much / far / even / a lot"を使う。"very"は原級専用と覚えておく。',
     pitfall:
       '比較級の強調で "very" は使えない！"very"は原級（exciting / good）にのみ使える。比較級には "much / far / even / a lot" を使おう。',
     memoryTip:
@@ -674,11 +674,11 @@ export const kokoOyoEigo50: Question[] = [
     difficulty: 'advanced',
     maxOnly: true,
     question:
-      '次の語句を並べ替えて、正しい英文を作りなさい。（１語不要）\n\n[ tell / you / could / can / me / where / she / lives ]?\n\nCould you _____ _____ _____ _____ ?',
+      '次の語句を並べ替えて、正しい英文を作りなさい。（１語不要）\n\n[ tell / can / me / where / she / lives ]?\n\nCould you _____ _____ _____ _____ _____ ?',
     answer: 'Could you tell me where she lives?',
     hint: '間接疑問文の語順は「疑問詞＋主語＋動詞」。',
     explanation:
-      '【何を聞かれているか】\n語句を並べ替えて、間接疑問文を含む正しい英文を作る問題（１語不要）。\n\n【なぜ間接疑問文の語順にするのか】\n疑問文が別の文の中に組み込まれる（間接疑問文になる）とき、疑問詞の後ろは「疑問文の語順」ではなく「普通の文の語順（主語＋動詞）」になる、という英語のルールがある。\n\n【ポイント1】間接疑問文の語順を確認する\n疑問詞（where）＋主語（she）＋動詞（lives）の順になる。ふつうの疑問文"Where does she live?"のdoesは消え、動詞にsがついたlivesになる。\n\n【ポイント2】外側の文の形を確認する\n"Could you tell me 〜?"（〜を教えてもらえますか）という依頼の文の中に、where she livesという間接疑問文を組み込む形。\n\n【ポイント3】不要な語を見つける\n語群には"could"と"can"の2つの助動詞が入っているが、文頭にすでに"Could you"があるため、"can"は使わない不要な語。\n\n【答え】\nCould you tell me where she lives?\n\n【確かめ】\nwhere以下が"where does she live"ではなく"where she lives"という普通の文の語順になっているか、また"can"が使われずに余っているかを確認する。\n\n【よくあるまちがい】\n間接疑問文の中まで疑問文の語順（where does she live）にしてしまうミス。tell me以下に組み込まれた瞬間に、疑問文の語順から普通の文の語順に変わる。\n\n【ここが絶対】\n間接疑問文は「疑問詞＋主語＋動詞」という普通の文の語順にする。does/doなどの助動詞は消えて、動詞がその分の形（3人称単数ならs）に変わる。',
+      '【何を聞かれているか】\n語句を並べ替えて、間接疑問文を含む正しい英文を作る問題（１語不要）。\n\n【なぜ間接疑問文の語順にするのか】\n疑問文が別の文の中に組み込まれる（間接疑問文になる）とき、疑問詞の後ろは「疑問文の語順」ではなく「普通の文の語順（主語＋動詞）」になる、という英語のルールがある。\n\n【ポイント1】間接疑問文の語順を確認する\n疑問詞（where）＋主語（she）＋動詞（lives）の順になる。ふつうの疑問文"Where does she live?"のdoesは消え、動詞にsがついたlivesになる。\n\n【ポイント2】外側の文の形を確認する\n"Could you tell me 〜?"（〜を教えてもらえますか）という依頼の文の中に、where she livesという間接疑問文を組み込む形。\n\n【ポイント3】不要な語を見つける\n語群の"can"は助動詞だが、文頭にすでに"Could you"があるため、"can"は使わない不要な語。\n\n【答え】\nCould you tell me where she lives?\n\n【確かめ】\nwhere以下が"where does she live"ではなく"where she lives"という普通の文の語順になっているか、また"can"が使われずに余っているかを確認する。\n\n【よくあるまちがい】\n間接疑問文の中まで疑問文の語順（where does she live）にしてしまうミス。tell me以下に組み込まれた瞬間に、疑問文の語順から普通の文の語順に変わる。\n\n【ここが絶対】\n間接疑問文は「疑問詞＋主語＋動詞」という普通の文の語順にする。does/doなどの助動詞は消えて、動詞がその分の形（3人称単数ならs）に変わる。',
     pitfall:
       '間接疑問文の中は疑問文の語順にしない！"where does she live" → "where she lives" に変換。助動詞 does は不要になる。',
     memoryTip:

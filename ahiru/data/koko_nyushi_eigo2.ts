@@ -7,12 +7,12 @@ export const kokoNyushiEigo2: Question[] = [
   {
     id: 'koko_nyushi_eigo2_01',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。  It ( ) for three hours before we finally left the mountain.',
+    question: '次の（　）内に最も適切な語を選べ。  By the time we finally left the mountain, it ( ) for three hours.',
     choices: ['① snows', '② snowed', '③ has snowed', '④ had been snowing'],
     answer: '④ had been snowing',
     hint: '「山を出発した」という過去の時点より前から続いていた動作を表す時制を選ぶ。',
     explanation:
-      '【何を聞かれているか】「It ( ) for three hours before we finally left the mountain.」の空所に入る適切な時制を選ぶ。\n【なぜ過去完了進行形になるのか】「私たちが山を出発した」という過去の時点よりさらに前から「雪が降り続いていた」という継続動作を表すには、過去のある時点までの継続を表す過去完了進行形（had been＋動詞のing形）を使う必要があるから。\n【ポイント1】we finally left the mountain（私たちがついに山を出発した）は過去の1つの時点。その時点よりも前から継続していた動作を表すには、さらに過去を示す時制が必要。\n【ポイント2】①snows（現在形）、②snowed（過去形、継続の意味が出ない）、③has snowed（現在完了形、過去の基準点には使えない）はどれも文脈に合わない。\n【ポイント3】④had been snowing（過去完了進行形）が正解。「私たちがついに山を出発する前、3時間ずっと雪が降り続いていた」という意味になる。\n【答え】④ had been snowing\n【確かめ】「for三時間」という継続の期間を表す語句と、過去完了進行形の組み合わせがセットになっていることを確認する。\n【よくあるまちがい】has snowed（現在完了形）を選んでしまう。現在完了は現在を基準にするので、過去の基準点（we left the mountain）には使えない。\n【ここが絶対】過去のある時点よりもさらに前から、その時点まで継続していた動作には過去完了進行形を使う。',
+      '【何を聞かれているか】「By the time we finally left the mountain, it ( ) for three hours.」の空所に入る適切な時制を選ぶ。\n【なぜ過去完了進行形になるのか】「私たちが山を出発した」という過去の時点よりさらに前から「雪が降り続いていた」という継続動作を表すには、過去のある時点までの継続を表す過去完了進行形（had been＋動詞のing形）を使う必要があるから。\n【ポイント1】we finally left the mountain（私たちがついに山を出発した）は過去の1つの時点。その時点よりも前から継続していた動作を表すには、さらに過去を示す時制が必要。\n【ポイント2】①snows（現在形）、②snowed（過去形、「出発した時点までずっと降り続いていた」という継続が表せない）、③has snowed（現在完了形、過去の基準点には使えない）はどれも文脈に合わない。\n【ポイント3】④had been snowing（過去完了進行形）が正解。「私たちがついに山を出発したときには、3時間ずっと雪が降り続いていた」という意味になる。\n【答え】④ had been snowing\n【確かめ】「By the time＋過去（出発したときまでに）」「for three hours（3時間）」という語句と、過去完了進行形の組み合わせがセットになっていることを確認する。\n【よくあるまちがい】has snowed（現在完了形）を選んでしまう。現在完了は現在を基準にするので、過去の基準点（we left the mountain）には使えない。\n【ここが絶対】過去のある時点よりもさらに前から、その時点まで継続していた動作には過去完了進行形を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -100,7 +100,7 @@ give の変化：give → gave → given（過去分詞）
   {
     id: 'koko_nyushi_eigo2_05',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。  We got up very early ( ) the sunrise from the top of the hill.',
+    question: '次の（　）内に最も適切な語を選べ。  We got up very early ( ) see the sunrise from the top of the hill.',
     choices: ['① for', '② so', '③ to', '④ in order'],
     answer: '③ to',
     hint: '「〜するために」という目的を表す不定詞の副詞的用法。',
@@ -109,10 +109,10 @@ give の変化：give → gave → given（過去分詞）
 
 【解説】
 「早起きした」目的を表す文。「日の出を見るために」は不定詞の副詞的用法（目的）で表す。
-・① for → 前置詞。for の後ろは名詞のみ（for watching なら可だが選択肢にない形）
-・② so → 接続詞「だから」（so that なら目的を表せるが単独では不可）
+・① for → 前置詞。for のあとに動詞の原形（see）は続けられない（for seeing なら可だが選択肢にない形）
+・② so → 接続詞「だから」（so that なら目的を表せるが、so see とは続けられない）
 ・③ to → to + 動詞原形で「〜するために」（✓）
-・④ in order → in order to なら目的を表せるが、in order 単独では不完全
+・④ in order → in order to なら目的を表せるが、in order see では to が足りない
 
 日本語訳：「私たちは丘の頂上から日の出を見るためにとても早く起きた。」
 

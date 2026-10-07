@@ -1124,7 +1124,7 @@ export const schoolKokoOhori: Question[] = [
     choices: [`did`, `was`, `is`, `has`],
     answer: `did`,
     hint: `Not onlyを文頭に置くと、後ろの主語と動詞の語順が入れかわる「倒置」が起こることに注目しよう。`,
-    explanation: `Not only(〜だけでなく)を強調のために文頭に置くと、疑問文と同じ語順(助動詞+主語+動詞)への倒置が起こる。もとの文はThe plan did not only cost too muchにあたる内容なので、doの過去形didを使ってNot only did the plan cost too muchという倒置形になる。`,
+    explanation: `Not only(〜だけでなく)を強調のために文頭に置くと、疑問文と同じ語順(助動詞+主語+動詞)への倒置が起こる。もとの文はThe plan not only cost too muchにあたる内容で、倒置にすると一般動詞costの過去形の代わりにdidが前に出て、動詞はcost(原形)に戻る。よってNot only did the plan cost too muchという倒置形になる。`,
     pitfall: `costを状態動詞のように捉え、be動詞(was)を選んでしまうミスに注意(costは一般動詞であり、疑問文と同じ語順にするにはdo/does/didを使う)。`,
     memoryTip: `「Not only+助動詞+主語+動詞の原形」の倒置パターンを、Not only did he ~のような典型例で丸ごと覚えておく。`,
   },

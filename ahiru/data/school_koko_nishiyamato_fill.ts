@@ -426,7 +426,7 @@ export const schoolKokoNishiyamatoFill: Question[] = [
     answer: '直接請求権(条例の制定・改廃請求)',
     hint: '地方自治は「民主主義の学校」と呼ばれ、住民が直接政治に参加できる権利が保障されている',
     explanation:
-      '【何を聞かれているか】地方自治において、住民が一定数以上の署名を集めることで条例の制定・改廃を首長に請求できる権利の名称である。\n\n【なぜそうなるのか】地方自治は住民に身近で参加しやすいため、住民が直接政治に働きかけられるしくみが設けられている。\n\n【ステップ1】地方自治法では、有権者の一定数以上（原則50分の1以上）の署名により、条例の制定・改廃、監査、議会の解散、首長・議員の解職などを請求できる直接請求権が住民に認められている。\n\n【ステップ2】条例の制定・改廃を求める場合、必要な署名数は有権者の50分の1以上とされている。\n\n【答え】直接請求権(条例の制定・改廃請求)\n\n【確かめ】「条例の制定・改廃＝有権者の50分の1以上の署名」を確認する。\n\n【よくあるまちがい】条例の制定・改廃請求（50分の1以上）と解職・解散請求（原則3分の1以上）の署名数の要件を混同しないこと。\n\n【ここが絶対】「直接請求権（条例改廃は50分の1以上）」は公民の最頻出事項。',
+      '【何を聞かれているか】地方自治において、住民が一定数以上の署名を集めることで条例の制定・改廃を首長に請求できる権利の名称である。\n\n【なぜそうなるのか】地方自治は住民に身近で参加しやすいため、住民が直接政治に働きかけられるしくみが設けられている。\n\n【ステップ1】地方自治法では、有権者の一定数以上の署名により、条例の制定・改廃、監査、議会の解散、首長・議員の解職などを請求できる直接請求権が住民に認められている（必要な署名数は請求の種類によって異なる）。\n\n【ステップ2】条例の制定・改廃を求める場合、必要な署名数は有権者の50分の1以上とされている。\n\n【答え】直接請求権(条例の制定・改廃請求)\n\n【確かめ】「条例の制定・改廃＝有権者の50分の1以上の署名」を確認する。\n\n【よくあるまちがい】条例の制定・改廃請求（50分の1以上）と解職・解散請求（原則3分の1以上）の署名数の要件を混同しないこと。\n\n【ここが絶対】「直接請求権（条例改廃は50分の1以上）」は公民の最頻出事項。',
     difficulty: 'standard',
     course: 'koko-nishiyamato',
     examType: 'koko',
@@ -802,7 +802,7 @@ export const schoolKokoNishiyamatoFill: Question[] = [
     id: 'nishiyamato_eigo_15',
     subject: 'eigo',
     question: 'Write your opinion in English (about 30-40 words): "Do you think it is important to learn a foreign language? Give one reason."',
-    answer: '(自由英作文・模範解答例) "I think it is important to learn a foreign language because it allows us to communicate with people from different cultures and understand their ways of thinking more deeply."',
+    answer: '(自由英作文・模範解答例) "I think it is important to learn a foreign language because it allows us to communicate with people from different cultures and understand their ways of thinking more deeply, which is very useful in today\'s global society."',
     hint: 'State your opinion clearly first (I think.../I don\'t think...), then give one clear reason using "because."',
     explanation: '【解説】\nこれは唯一の正解がない自由英作文問題(西大和学園の国際性重視の校風を反映した出題)。採点にあたっては、①意見が明確に述べられているか、②理由が"because"などを使って論理的に示されているか、③文法・語彙の正確さ、の3点を評価するとよい。模範解答はあくまで一例であり、賛成・反対どちらの立場でも、理由が論理的であれば正答となり得る。',
     difficulty: 'advanced',

@@ -178,11 +178,11 @@ export const nichinokenEigo: Question[] = [
   {
     id: 'nk_eigo_reading_03',
     subject: 'eigo',
-    question: '下線部の "it" が指すものを本文から抜き出して日本語で答えなさい。',
+    question: '本文の2文目の "It" が指すものを本文から抜き出して日本語で答えなさい。',
     answer: 'プラスチックごみ（plastic waste / plastic trash）',
     hint: '代名詞は必ず前に出てきた名詞を指す。直前の文に注目。',
     explanation:
-      '【何を聞かれているか】\n下線部の"it"が指すものを、本文から抜き出して日本語で答える問題。\n\n【なぜ直前の文を確認するのか】\n代名詞（it/they/heなど）は、直前の文（または同じ文の中）に出てきた名詞を指すことが多いため、指示語問題では直前の文をまず確認する。\n\n【ポイント1】代名詞の基本ルールを確認する\nitのような代名詞は、同じ内容を繰り返さずに済ませるために、直前に出てきた名詞を指す。\n\n【ポイント2】該当する文を確認する\n"It can be found in every ocean in the world."（それは世界中のあらゆる海で見つかる）という文のItが、直前に述べられていた"plastic waste"（プラスチックごみ）を指している。\n\n【ポイント3】答え方を確認する\n指示語が指す内容を、本文中の具体的な名詞（plastic waste）で答える。\n\n【答え】\nプラスチックごみ（plastic waste / plastic trash）\n\n【確かめ】\n"It"の位置に"plastic waste"を当てはめて文を読み直し、「プラスチックごみは世界中のあらゆる海で見つかる」という意味が通ることを確認する。\n\n【よくあるまちがい】\nitが指す内容を、遠く離れた文や無関係な名詞から探してしまうミス。まずは直前の文を確認するのが基本の手順。\n\n【ここが絶対】\n代名詞問題は「直前の文（または同じ文）の名詞」を指すという基本ルールに従って、該当する名詞を探す。',
+      '【何を聞かれているか】\n本文の2文目の"It"が指すものを、本文から抜き出して日本語で答える問題。\n\n【なぜ直前の文を確認するのか】\n代名詞（it/they/heなど）は、直前の文（または同じ文の中）に出てきた名詞を指すことが多いため、指示語問題では直前の文をまず確認する。\n\n【ポイント1】代名詞の基本ルールを確認する\nitのような代名詞は、同じ内容を繰り返さずに済ませるために、直前に出てきた名詞を指す。\n\n【ポイント2】該当する文を確認する\n"It can be found in every ocean in the world."（それは世界中のあらゆる海で見つかる）という文のItが、直前に述べられていた"plastic waste"（プラスチックごみ）を指している。\n\n【ポイント3】答え方を確認する\n指示語が指す内容を、本文中の具体的な名詞（plastic waste）で答える。\n\n【答え】\nプラスチックごみ（plastic waste / plastic trash）\n\n【確かめ】\n"It"の位置に"plastic waste"を当てはめて文を読み直し、「プラスチックごみは世界中のあらゆる海で見つかる」という意味が通ることを確認する。\n\n【よくあるまちがい】\nitが指す内容を、遠く離れた文や無関係な名詞から探してしまうミス。まずは直前の文を確認するのが基本の手順。\n\n【ここが絶対】\n代名詞問題は「直前の文（または同じ文）の名詞」を指すという基本ルールに従って、該当する名詞を探す。',
     difficulty: 'advanced',
     maxOnly: true,
     passage: 'Plastic waste is a serious global problem. It can be found in every ocean in the world. Many animals, such as sea turtles and birds, eat it by mistake and get sick or die. We need to reduce the amount of plastic we use every day.',
@@ -194,7 +194,7 @@ export const nichinokenEigo: Question[] = [
     answer: 'In addition',
     hint: '前の文と後の文の関係は「逆接・追加・結果」のどれ？ 2文目の should also に注目する。',
     explanation:
-      '【何を聞かれているか】\n"Regular exercise is good for your health. ( ), you should also eat balanced meals and get enough sleep."の空欄に入る、最も適切な語句を選ぶ問題。\n\n【なぜIn additionが正解なのか】\n1文目は「運動は健康によい」、2文目は「バランスのよい食事と十分な睡眠も大切だ」と、よいことをもう一つ付け加えている。前の内容に別の内容を足すときは、「さらに・そのうえ」を表すIn additionを使う。2文目の also（〜も）も、足していく流れを示す目印になっている。\n\n【ステップ1】前後の文の関係を確かめる\n1文目も2文目も「健康のためによいこと」を述べていて、反対の内容ではない。つまり「逆接」ではなく「追加」の関係である。\n\n【ステップ2】選択肢を一つずつ確かめる\nHowever（しかし）は反対の内容をつなぐ語なので合わない。Because（なぜなら）は理由を導く語で、2文目が1文目の理由になっていないので合わない。Although（〜だけれども）は文と文をつなぐ接続詞で、単独の文の先頭には置けない。\n\n【答え】\nIn addition\n\n【確かめ】\n"In addition, you should also eat balanced meals and get enough sleep." と読むと、「さらに、バランスのよい食事と十分な睡眠も大切だ」となり、自然につながる。\n\n【よくあるまちがい】\n文の最初の空欄を見ると、つい However を選びたくなる。しかし、前後が反対の内容かどうかを確かめずに選んではいけない。',
+      '【何を聞かれているか】\n"Regular exercise is good for your health. ( ), you should also eat balanced meals and get enough sleep."の空欄に入る、最も適切な語句を選ぶ問題。\n\n【なぜIn additionが正解なのか】\n1文目は「運動は健康によい」、2文目は「バランスのよい食事と十分な睡眠も大切だ」と、よいことをもう一つ付け加えている。前の内容に別の内容を足すときは、「さらに・そのうえ」を表すIn additionを使う。2文目の also（〜も）も、足していく流れを示す目印になっている。\n\n【ステップ1】前後の文の関係を確かめる\n1文目も2文目も「健康のためによいこと」を述べていて、反対の内容ではない。つまり「逆接」ではなく「追加」の関係である。\n\n【ステップ2】選択肢を一つずつ確かめる\nHowever（しかし）は反対の内容をつなぐ語なので合わない。Because（なぜなら）は理由を導く語で、2文目が1文目の理由になっていないので合わない。Although（〜だけれども）は後ろに「主語＋動詞」を続けて使う接続詞で、"Although, you should..." のように単独で置いてコンマで区切ることはできない。\n\n【答え】\nIn addition\n\n【確かめ】\n"In addition, you should also eat balanced meals and get enough sleep." と読むと、「さらに、バランスのよい食事と十分な睡眠も大切だ」となり、自然につながる。\n\n【よくあるまちがい】\n文の最初の空欄を見ると、つい However を選びたくなる。しかし、前後が反対の内容かどうかを確かめずに選んではいけない。',
     difficulty: 'advanced',
     maxOnly: true,
     choices: ['However', 'Because', 'Although', 'In addition'],  },
@@ -214,10 +214,10 @@ export const nichinokenEigo: Question[] = [
   {
     id: 'nk_eigo_sakubun_02',
     subject: 'eigo',
-    question: '次の日本語を英語にしなさい。\n「もし私が鳥だったら、世界中を飛び回るでしょう。」',
-    answer: 'If I were a bird, I would fly around the world.',
-    hint: '仮定法過去：If + 過去形, 主語 + would + 動詞原形。be動詞は were を使う。',
-    explanation: '仮定法過去（現実でない仮定）：\nIf I were + 名詞/形容詞, 主語 + would + 動詞原形\n・「もし〜だったら」= If + 過去形（be動詞は were）\n・「〜するだろう」= would + 動詞原形\n実際には鳥ではないので仮定法を使う。現在形のif節（条件節）と区別する。',
+    question: '次の日本語を英語にしなさい。\n「私は毎朝6時に起きなければなりません。」',
+    answer: 'I have to get up at six every morning. (または I must get up at six every morning.)',
+    hint: '「〜しなければならない」は have to ＋ 動詞の原形。「起きる」は get up。',
+    explanation: '【何を聞かれているか】\n「私は毎朝6時に起きなければなりません。」という日本語を英語にする問題。\n\n【なぜhave toを使うのか】\n「〜しなければならない」と義務を表すときは、have to＋動詞の原形（またはmust＋動詞の原形）を使う。\n\n【ステップ1】各部分を組み立てる\n「起きる」→get up、「6時に」→at six、「毎朝」→every morning。\n\n【ステップ2】義務の言い方をつける\n主語がIなので I have to get up とする。主語がhe/sheのときだけ has to になる。\n\n【答え】\nI have to get up at six every morning.\n\n【確かめ】\nhave toのあとが原形のget upになっていること、「時」を表すat sixと「毎朝」のevery morningが入っていることを確認する。\n\n【よくあるまちがい】\n"I have to gets up" のようにtoのあとの動詞に s や ing をつけてしまうミス。toのあとは必ず原形。',
     difficulty: 'advanced',
     maxOnly: true,
   },

@@ -238,7 +238,7 @@ export const kokoKankanEigo30: Question[] = [
     answer: '① where　② when　③ why',
     hint: '場所→where、時→when、理由→why。先行詞の種類で関係副詞が決まる。',
     explanation: `【出題意図】関係副詞（where/when/why）の使い分けを問う。【解説】①先行詞the city（場所）→where。②先行詞the day（時）→when。③先行詞the reason（理由）→why。関係副詞は「前置詞+関係代名詞」に書き換え可能（①=in which）。【注意点】関係代名詞との混同に注意。「where I was born」→場所を修飾（先行詞が場所の名詞）。【関連知識】how（方法）も関係副詞だが先行詞the wayと一緒には使わない（the way how→どちらか一方を省く）。`,
-    pitfall: 'the city which I was born はwhichの後に動詞が来るため不自然（inが必要）。',
+    pitfall: 'the city which I was born は、whichの後ろがすでに「主語＋動詞」で文として完結しているため不自然（in which か where が必要）。',
     memoryTip: '先行詞の種類→場所=where、時=when、理由=why、方法=how（the way単独）。',
   },
   {
@@ -452,10 +452,10 @@ Social media has changed the way people communicate. Today, millions of people s
 ② I wish I (　) taller. I'm only 155cm.
   ア. am　イ. were　ウ. will be　エ. have been
 
-③ Without your help, I (　) this project.
-  ア. can't finish　イ. couldn't have finished　ウ. didn't finish　エ. won't finish`,
+③ Without your help, I (　) this project last week.
+  ア. can't finish　イ. couldn't have finished　ウ. don't finish　エ. won't finish`,
     answer: '① イ(had)　② イ(were)　③ イ(couldn\'t have finished)',
-    hint: '①現在の仮定→仮定法過去（過去形）。②I wish+仮定法過去。③Without〜=If it were not for〜の変形（仮定法過去完了）。',
+    hint: '①現在の仮定→仮定法過去（過去形）。②I wish+仮定法過去。③Without〜=If it had not been for〜の変形。last weekという過去の事実に反する仮定なので仮定法過去完了。',
     explanation: `【出題意図】仮定法過去・I wish・Without〜の仮定法の応用を問う。【解説】①現実に反する現在の仮定→仮定法過去（If+過去形, would+原形）。②I wish+仮定法過去：現在の望みを過去形で表す。be動詞はwereを使う。③「あなたの助けなしには」=仮定法の条件部分。過去の事実に反する仮定→couldn't have finished（仮定法過去完了の帰結節）。【注意点】③Withoutは過去の文脈（プロジェクト完了）なので仮定法過去完了を使う。【関連知識】If it had not been for〜=Without〜（過去の仮定）の書き換えも頻出。`,
     pitfall: '①にhaveを使うと直説法になり「今本当に時間がある」という意味に変わる。',
     memoryTip: '仮定法：現在の仮定=過去形、過去の仮定=had+p.p.とwouldの後ろにhave+p.p.。',
@@ -561,7 +561,7 @@ Reading books and watching videos are both popular ways to learn. Some people pr
     answer: `① Books allow readers to think at their own pace and develop deeper understanding.
 ② 読書（深い理解のため）と動画視聴（最初の理解のため）を組み合わせること。
 ③ 読書で深く理解し、動画で最初の理解を得るという、両方の方法を組み合わせた学習法。`,
-    hint: '①「Some people prefer books because〜」に注目。②combining both methods=reading for depth + videos for initial understanding。③第3文がresearch suggestsの主張。',
+    hint: '①「Some people prefer books because〜」に注目。②combining both methods=reading for depth + videos for initial understanding。③最後の文がresearch suggestsの主張。',
     explanation: `【出題意図】比較・対比構造の英文読解。情報の抽出・下線部説明・筆者の結論把握を問う。【解説】①reading利点：「think at their own pace」「develop deeper understanding」。②combining both methods=「reading for depth（深い理解のための読書）」と「videos for initial understanding（最初の理解のための動画）」。③最後の文「combining both methods...may produce the best results」が筆者の結論。【注意点】①は「Some people prefer books because〜」の because以下が理由=利点。複数要素を含むので全部答える。【関連知識】学習法に関する語彙：pace（ペース）、concept（概念）、visual（視覚的なもの）、comprehension（理解）。`,
     pitfall: '①でvideoの利点を答えないこと。「books」の利点を選択的に答える。',
     memoryTip: 'Some prefer A because〜. Others prefer B because〜. Research says combine both. この流れが論説文の典型パターン。',

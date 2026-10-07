@@ -1766,7 +1766,7 @@ export const josejogakuenExam: Question[] = [
     examType: 'chugaku',
     difficulty: 'basic',
     examFrequency: 'medium',
-    question: '【城星学園 英語④】次の絵の内容に合う単語を選びなさい。「雨」',
+    question: '【城星学園 英語④】次の日本語に合う単語を選びなさい。「雨」',
     choices: [
       'rain',
       'snow',
@@ -1806,7 +1806,7 @@ export const josejogakuenExam: Question[] = [
     examType: 'chugaku',
     difficulty: 'basic',
     examFrequency: 'medium',
-    question: '【城星学園 英語⑥】次の文を疑問文に書きかえるとき、空所に入る語を選びなさい。( ) you like cats?',
+    question: '【城星学園 英語⑥】次の疑問文の空所に入る語を選びなさい。( ) you like cats?',
     choices: [
       'Do',
       'Does',
@@ -1866,7 +1866,7 @@ export const josejogakuenExam: Question[] = [
     examType: 'chugaku',
     difficulty: 'standard',
     examFrequency: 'medium',
-    question: '【城星学園 英語⑨】次の文の下線部の質問に対する答えとして最も適切なものを選びなさい。What time do you get up?',
+    question: '【城星学園 英語⑨】次の質問に対する答えとして最も適切なものを選びなさい。What time do you get up?',
     choices: [
       'I get up at six.',
       'I get up in Osaka.',

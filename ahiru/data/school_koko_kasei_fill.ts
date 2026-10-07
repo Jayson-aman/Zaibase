@@ -875,11 +875,11 @@ export const schoolKokoKaseiFill: Question[] = [
     answer: 'over',
     hint: '"over" is commonly used with a period of time to describe a change or trend that has continued through that period.',
     explanation:
-      '【何を聞かれているか】\n"The number of students interested in studying abroad has increased (　) the past decade."の空欄に入る正しい前置詞を選ぶ問題。\n\n【なぜoverを使うのか】\n「この10年間で」というように、ある期間を通じた変化・傾向を表す場合、前置詞overがよく使われる。\n\n【ポイント1】overの意味を確認する\nover the past decade＝「この10年間にわたって」という期間を通じた変化を表す。\n\n【ポイント2】sinceとの違いを確認する\nsinceは変化の起点を表すときに使う。\n\n【ポイント3】forとの違いを確認する\nforは単なる期間の長さを表すのに使われることが多く、変化・傾向のニュアンスは弱い。\n\n【答え】\nover\n\n【確かめ】\n選んだ前置詞が、期間を通じた変化・傾向を表すover（sinceやforではない）になっているか確認する。\n\n【よくあるまちがい】\n期間を表す語だからとsinceやforを選んでしまい、「変化・傾向」のニュアンスを見落とすミス。\n\n【ここが絶対】\nover+期間＝「〜の間にわたる変化・傾向」を表すと覚える。',
+      '【何を聞かれているか】\n"The number of students interested in studying abroad has increased (　) the past decade."の空欄に入る正しい前置詞を選ぶ問題。\n\n【なぜoverを使うのか】\n「この10年間で」というように、ある期間を通じた変化・傾向を表す場合、前置詞overがよく使われる。\n\n【ポイント1】overの意味を確認する\nover the past decade＝「この10年間にわたって」という期間を通じた変化を表す。\n\n【ポイント2】sinceとの違いを確認する\nsinceは変化の起点を表すときに使う。\n\n【ポイント3】byとの違いを確認する\nbyは「〜までに」という期限や、変化した差の大きさ（by 20%）を表す語で、「この10年間にわたって」という期間を表すのには使えない。\n\n【答え】\nover\n\n【確かめ】\n選んだ前置詞が、期間を通じた変化・傾向を表すover（sinceやbyではない）になっているか確認する。\n\n【よくあるまちがい】\n期間を表す語だからとsinceやbyを選んでしまい、「期間にわたる変化・傾向」を表すoverを見落とすミス。\n\n【ここが絶対】\nover+期間＝「〜の間にわたる変化・傾向」を表すと覚える。',
     difficulty: 'standard',
     course: 'koko-kasei',
     examType: 'koko',
-    choices: ['since', 'for', 'over', 'at'],
+    choices: ['since', 'by', 'over', 'at'],
   },
   {
     id: 'kasei_eigo_14',

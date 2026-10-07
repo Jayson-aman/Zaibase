@@ -1038,12 +1038,12 @@ export const schoolOsakaJogakuin: Question[] = [
     course: 'osaka-jogakuin',
     examType: 'chugaku',
     difficulty: 'advanced',
-    question: '【大阪女学院 英語⑬】次の( )に入る正しい語を選びなさい。"I ( ) already finished my homework."',
+    question: '【大阪女学院 英語⑬】次の( )に入る正しい語を選びなさい。"I ( ) already finished my homework, so I can play now."',
     choices: ['have', 'has', 'had', 'having'],
     answer: 'have',
     hint: '"already"があるときは現在完了形を考えましょう。',
     explanation:
-      '【何を聞かれているか】\n"I ( ) already finished my homework."の空欄に入る正しい語を選ぶ問題。\n\n【なぜhaveを使うのか】\nalready（すでに）という語があることから現在完了の文だとわかり、主語Iに対応する現在完了の形はhave＋過去分詞になる。\n\n【ポイント1】alreadyから時制を確認する\nalready＝現在完了の完了用法でよく使われる語。\n\n【ポイント2】主語との対応を確認する\n主語Iには現在完了でhaveを使う（hasは三人称単数のときに使う）。\n\n【ポイント3】文の形を確認する\n"I have already finished my homework."＝「私はすでに宿題を終えました」。\n\n【答え】\nhave\n\n【確かめ】\n主語Iに対応する語（have）が選ばれ、has（三人称単数用）と混同していないか確認する。\n\n【よくあるまちがい】\n主語がIなのにhasを選んでしまうミス。\n\n【ここが絶対】\n現在完了はhave/has＋過去分詞、主語IにはhaveをセットでI have already〜と覚える。',
+      '【何を聞かれているか】\n"I ( ) already finished my homework."の空欄に入る正しい語を選ぶ問題。\n\n【なぜhaveを使うのか】\nalready（すでに）という語があることから現在完了の文だとわかり、主語Iに対応する現在完了の形はhave＋過去分詞になる。\n\n【ポイント1】alreadyから時制を確認する\nalready＝現在完了の完了用法でよく使われる語。\n\n【ポイント2】主語との対応を確認する\n主語Iには現在完了でhaveを使う（hasは三人称単数のときに使う）。\n\n【ポイント3】文の形を確認する\n"I have already finished my homework, so I can play now."＝「私はすでに宿題を終えたので、今は遊べます」。「今」の状態につながる内容なので、過去完了のhadではなく現在完了のhaveを使う。\n\n【答え】\nhave\n\n【確かめ】\n主語Iに対応する語（have）が選ばれ、has（三人称単数用）と混同していないか確認する。\n\n【よくあるまちがい】\n主語がIなのにhasを選んでしまうミス。\n\n【ここが絶対】\n現在完了はhave/has＋過去分詞、主語IにはhaveをセットでI have already〜と覚える。',
   },
   {
     id: 'osakajo_eigo_14',

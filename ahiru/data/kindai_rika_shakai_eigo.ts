@@ -117,9 +117,9 @@ export const kindaiShakai: Question[] = [
       '〔資料1〕農業産出額上位都道府県（2024年・農林水産省）\n' +
       '　1位：北海道（約1兆5000億円）、2位：鹿児島県、3位：茨城県、4位：千葉県、5位：青森県\n\n' +
       '〔資料2〕漁業生産量上位都道府県（2022年・農林水産省）\n' +
-      '　1位：北海道、2位：長崎県、3位：茨城県、4位：静岡県、5位：宮城県\n\n' +
-      '〔資料3〕工業製品出荷額上位都道府県（2021年・経済産業省）\n' +
-      '　1位：愛知県（約48兆円）、2位：神奈川県、3位：大阪府、4位：静岡県、5位：兵庫県\n\n' +
+      '　1位：北海道、2位：長崎県、3位：茨城県、4位：宮城県、5位：静岡県\n\n' +
+      '〔資料3〕工業製品出荷額上位都道府県（2021年・経済センサス-活動調査）\n' +
+      '　1位：愛知県（約44兆円）、2位：大阪府、3位：静岡県、4位：神奈川県、5位：兵庫県\n\n' +
       '■問(1)　資料1で北海道が1位である理由を、土地・気候の観点から説明しなさい。\n\n' +
       '■問(2)　資料2で北海道が1位の理由を、海の環境の観点から説明しなさい。\n' +
       '　　北海道の漁業を支える「潮目」（潮境）について、2つの海流の名前を挙げて説明しなさい。\n\n' +
@@ -346,23 +346,23 @@ export const kindaiEigo: Question[] = [
       '■問(2)　次の文を（　）の指示に従って書き換えなさい。\n' +
       '　① He plays the guitar every day.（現在進行形に）\n' +
       '　② They visited Kyoto last year.（疑問文に）\n' +
-      '　③ I have never eaten sushi.（下線部を「3回」に変えて肯定文に）\n\n' +
+      '　③ I have never eaten sushi.（never を「3回」に変えて肯定文に）\n\n' +
       '■問(3)　次の日本語の意味になるように、（　）に適切な語を入れなさい。\n' +
       '　① 私の兄は私より背が高い。\n' +
-      '　　My brother is ( taller ) ( than ) me.\n' +
+      '　　My brother is (　　) (　　) me.\n' +
       '　② 英語はこのクラスで一番難しい科目です。\n' +
-      '　　English is the ( most ) ( difficult ) subject in this class.\n' +
+      '　　English is the (　　) (　　) subject in this class.\n' +
       '　③ 彼女はピアノを弾くのが得意です。\n' +
-      '　　She is good ( at ) ( playing ) the piano.\n\n' +
+      '　　She is good (　　) (　　) the piano.\n\n' +
       '■問(4)　次の文の誤りを1か所ずつ訂正しなさい。\n' +
       '　① I am interesting in science.\n' +
       '　② He don\'t have any brothers.\n' +
       '　③ We go to school by a bus every day.\n\n' +
       '■問(5)　次の2文をほぼ同じ意味になるように、（　）に適切な語を入れなさい。\n' +
       '　① Tom is the tallest boy in his class.\n' +
-      '　　= No other boy in his class is ( as ) ( tall ) ( as ) Tom.\n' +
+      '　　= No other boy in his class is (　　) (　　) (　　) Tom.\n' +
       '　② It is important to learn English.\n' +
-      '　　= ( Learning ) English is important.',
+      '　　= (　　) English is important.',
     answer:
       '■問(1)　① swimming　② to become　③ higher\n' +
       '■問(2)　① He is playing the guitar now.　② Did they visit Kyoto last year?　③ I have eaten sushi three times.\n' +

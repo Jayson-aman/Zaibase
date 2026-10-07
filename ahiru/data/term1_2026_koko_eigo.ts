@@ -715,7 +715,7 @@ Students at our school must wear their school uniform. They must not use their s
   （あなたは今までに納豆を食べたことがありますか）
 
 ② [ finished / has / she / yet / not / her report ].
-  （彼女はまだレポートを終えていない）`,
+  （彼女はまだレポートを終えていない）※yetは文末に置くこと`,
     answer: `① Have you ever eaten natto?
 ② She has not finished her report yet.`,
     hint: `①現在完了の疑問文はHave/Has+主語+過去分詞〜?、②否定文はhas not（hasn't）+過去分詞、文末にyet。`,
@@ -766,7 +766,7 @@ Students at our school must wear their school uniform. They must not use their s
     examType: 'koko',
     difficulty: 'advanced',
     maxOnly: true,
-    question: `次の（　）内の動詞を適切な形にしなさい。
+    question: `【高校先取り】次の（　）内の動詞を適切な形にしなさい。
 
 ① It (rain) since this morning.（今朝からずっと雨が降り続いている）
 ② I (study) English for two hours before you called me.（あなたが電話をくれる前、私は2時間ずっと英語を勉強していた）`,
@@ -1018,16 +1018,16 @@ This pool is (　) (　) (　) children to swim in.`,
 This old bridge was built more than 100 years ago. It has been used by local people for a long time, and it is still loved as a symbol of the town. However, it has not been repaired since last year's typhoon, so it may be closed to traffic soon.
 
 ① 下線部「it is still loved as a symbol of the town」を日本語に訳しなさい。
-② この橋が最近修理されていない理由は何か。（日本語で答えよ）
+② この橋はいつから修理されていないか。（日本語で答えよ）
 ③ 本文の内容と合うものを選べ。
   ア. この橋は建設されて間もない。
   イ. この橋は台風の後、修理されていない。
   ウ. この橋はもう使われていない。`,
     answer: `① それは今でも町のシンボルとして愛されている。
-② 昨年の台風の被害を受けてから修理されていないため。
+② 昨年の台風以来（修理されていない）。
 ③ イ`,
     hint: `①受動態is lovedの訳、②has not been repaired since last year's typhoonに注目、③本文全体の内容と照合。`,
-    explanation: `【出題意図】現在完了の受動態（has been used/has not been repaired）を含む読解問題で、受動態の訳と内容把握を問う。【解説】①「it is still loved as a symbol of the town」＝「それ（橋）は今でも町のシンボルとして愛されている」と受動態のまま自然な日本語に訳す。②「it has not been repaired since last year's typhoon」から、昨年の台風以来修理されていないことが理由だとわかる。③本文には「it has not been repaired since last year's typhoon」とあり、これに合致するのはイ。アは「建てられて100年以上」という記述と矛盾し、ウは「今でも使われている（has been used）」という記述と矛盾する。【注意点】has been used、is loved、has not been repairedとすべて受動態で書かれているので、それぞれ「〜される、〜されている」という意味で正確に読み取る。【関連知識】現在完了の受動態（have/has been+過去分詞）は「（過去から現在まで）〜され続けている」という意味を表す。`,
+    explanation: `【出題意図】現在完了の受動態（has been used/has not been repaired）を含む読解問題で、受動態の訳と内容把握を問う。【解説】①「it is still loved as a symbol of the town」＝「それ（橋）は今でも町のシンボルとして愛されている」と受動態のまま自然な日本語に訳す。②「it has not been repaired since last year's typhoon」から、昨年の台風以来（その時から今まで）修理されていないことがわかる。③本文には「it has not been repaired since last year's typhoon」とあり、これに合致するのはイ。アは「建てられて100年以上」という記述と矛盾し、ウは「今でも使われている（has been used）」という記述と矛盾する。【注意点】has been used、is loved、has not been repairedとすべて受動態で書かれているので、それぞれ「〜される、〜されている」という意味で正確に読み取る。【関連知識】現在完了の受動態（have/has been+過去分詞）は「（過去から現在まで）〜され続けている」という意味を表す。`,
     pitfall: '③でウを選ばないこと。it has been used（今でも使われている）とあり、「もう使われていない」は誤り。',
     memoryTip: '現在完了の受動態＝have/has been+過去分詞＝「ずっと〜されている／されてきた」と覚える。',
   },

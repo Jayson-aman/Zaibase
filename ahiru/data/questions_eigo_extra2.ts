@@ -323,7 +323,7 @@ export const eigoExtra2: Question[] = [
     answer: 'She is not happy.',
     hint: '「幸せな」は "happy" です',
     explanation:
-      '【何を聞かれているか】\n「彼女は幸せではありません」という日本語を英語にする問題。\n\n【なぜbe動詞の後ろにnotを置くのか】\nbe動詞の否定文は、語順を変えずにbe動詞の後ろにnotを入れるだけで作れる。\n\n【ポイント1】be動詞の否定文の作り方を確認する\n"She is happy."のisの後ろにnotを入れて、"She is not happy."にする。\n\n【ポイント2】短縮形を確認する\nis notはisn\'t、are notはaren\'tと短縮できるが、am notには短縮形がない（I am notまたはI\'mnotのまま）。\n\n【ポイント3】一般動詞の否定文との違いを確認する\nbe動詞の否定文はnotを入れるだけだが、一般動詞の否定文（She does not play tennis.）はdo/doesが必要。"She does not be happy."のようにbe動詞にdoesを使うのは誤り。\n\n【答え】\nShe is not happy.\n\n【確かめ】\nbe動詞isの直後にnotが置かれていて、語順自体は変わっていないことを確認する。\n\n【よくあるまちがい】\nbe動詞の文にdoesを使ってしまうミス（"She does not be happy."は誤り）。be動詞の否定文にはdo/doesを使わない。\n\n【ここが絶対】\nbe動詞の否定文は「be動詞＋not」。am notには短縮形がないことも覚えておく。',
+      '【何を聞かれているか】\n「彼女は幸せではありません」という日本語を英語にする問題。\n\n【なぜbe動詞の後ろにnotを置くのか】\nbe動詞の否定文は、語順を変えずにbe動詞の後ろにnotを入れるだけで作れる。\n\n【ポイント1】be動詞の否定文の作り方を確認する\n"She is happy."のisの後ろにnotを入れて、"She is not happy."にする。\n\n【ポイント2】短縮形を確認する\nis notはisn\'t、are notはaren\'tと短縮できるが、am notは「amn\'t」とは短縮せず、I\'m notと短縮する。\n\n【ポイント3】一般動詞の否定文との違いを確認する\nbe動詞の否定文はnotを入れるだけだが、一般動詞の否定文（She does not play tennis.）はdo/doesが必要。"She does not be happy."のようにbe動詞にdoesを使うのは誤り。\n\n【答え】\nShe is not happy.\n\n【確かめ】\nbe動詞isの直後にnotが置かれていて、語順自体は変わっていないことを確認する。\n\n【よくあるまちがい】\nbe動詞の文にdoesを使ってしまうミス（"She does not be happy."は誤り）。be動詞の否定文にはdo/doesを使わない。\n\n【ここが絶対】\nbe動詞の否定文は「be動詞＋not」。am notは「amn\'t」とは言わず、I\'m notと短縮することも覚えておく。',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -456,7 +456,7 @@ export const eigoExtra2: Question[] = [
     answer: 'She has a dog.',
     hint: '「飼っている・持っている」は "have/has" を使います',
     explanation:
-      '【答え】She has a dog.\n\n【have と has】have は三人称単数のとき has になる。s をつけるのではなく、形そのものが変わる特別な動詞である。\n・I have a dog. ／ You have a dog. ／ They have a dog.\n・She has a dog. ／ He has a dog. ／ My father has a dog.\n三単現で形が変わるのは have だけなので、確実に覚える。\n\n【have の意味の広さ】英語で最もよく使う動詞の一つで、意味が広い。\n・持っている … I have a pen.\n・飼っている … She has a dog.\n・家族がいる … I have two brothers.\n・食べる・飲む … I have breakfast at seven.\n・（病気に）かかる … I have a cold.\n・（時間を）過ごす … Have a good day.\n日本語ではまったくちがう言い方になるものが、英語ではすべて have で言える。\n\n【疑問文・否定文】does を使うと have に戻る。\n・Does she have a dog?（has ではなく have）\n・She does not have a dog.\ndoes を使ったら動詞は原形、という決まりがここでも働いている。\n\n【例文】My grandmother has three cats.',
+      '【答え】She has a dog.\n\n【have と has】have は三人称単数のとき has になる。s をつけるのではなく、形そのものが変わる特別な動詞である。\n・I have a dog. ／ You have a dog. ／ They have a dog.\n・She has a dog. ／ He has a dog. ／ My father has a dog.\nhave は s をつけずに has という特別な形になる（do が does になるのも同じ仲間）ので、確実に覚える。\n\n【have の意味の広さ】英語で最もよく使う動詞の一つで、意味が広い。\n・持っている … I have a pen.\n・飼っている … She has a dog.\n・家族がいる … I have two brothers.\n・食べる・飲む … I have breakfast at seven.\n・（病気に）かかる … I have a cold.\n・（時間を）過ごす … Have a good day.\n日本語ではまったくちがう言い方になるものが、英語ではすべて have で言える。\n\n【疑問文・否定文】does を使うと have に戻る。\n・Does she have a dog?（has ではなく have）\n・She does not have a dog.\ndoes を使ったら動詞は原形、という決まりがここでも働いている。\n\n【例文】My grandmother has three cats.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -757,7 +757,7 @@ export const eigoExtra2: Question[] = [
     answer: 'What is the date today?',
     hint: '「日付」は "date" を使います',
     explanation:
-      '【答え】What is the date today?\n\n【date に the がつく理由】その日の日付は1つに決まっているので the をつける。世界に1つしかないものや、はっきり決まっているものには the がつく。the sun、the moon、the earth も同じ理由である。\n\n【答え方】\n・It is June 20.（読み方は June the twentieth、または June twentieth）\n・日付は書き方が2通りある。アメリカ式は月・日・年（June 20, 2024）、イギリス式は日・月・年（20 June 2024）\n数字だけで 6/20 と書くと、アメリカでは6月20日、イギリスでは思わぬ読まれ方をすることがあるので、月名を書くほうが安全である。\n\n【序数（順番を表す数）】日付には序数を使う。\n・first（1st）、second（2nd）、third（3rd）、fourth（4th）、fifth（5th）\n・eighth（8th）、ninth（9th）、twelfth（12th）、twentieth（20th）\n・first、second、third だけ形が特別で、あとは th をつけるのが基本である\n\n【月の語】January、February、March、April、May、June、July、August、September、October、November、December。すべて大文字で書き始める。\n\n【例文】What is the date today? — It is October 1.',
+      '【答え】What is the date today?\n\n【date に the がつく理由】その日の日付は1つに決まっているので the をつける。世界に1つしかないものや、はっきり決まっているものには the がつく。the sun、the moon、the earth も同じ理由である。\n\n【答え方】\n・It is June 20.（読み方は June the twentieth、または June twentieth）\n・日付は書き方が2通りある。アメリカ式は月・日・年（June 20, 2024）、イギリス式は日・月・年（20 June 2024）\n数字だけで 6/20 と書くと、アメリカでは6月20日、イギリスでは思わぬ読まれ方をすることがあるので、月名を書くほうが安全である。\n\n【序数（順番を表す数）】日付には序数を使う。\n・first（1st）、second（2nd）、third（3rd）、fourth（4th）、fifth（5th）\n・eighth（8th）、ninth（9th）、twelfth（12th）、twentieth（20th）\n・first、second、third は形が特別で、fifth・eighth・ninth・twelfth もつづりが変わる。あとは th をつけるのが基本である\n\n【月の語】January、February、March、April、May、June、July、August、September、October、November、December。すべて大文字で書き始める。\n\n【例文】What is the date today? — It is October 1.',
     difficulty: 'basic',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -999,7 +999,7 @@ export const eigoExtra2: Question[] = [
     answer: 'I read two books yesterday.',
     hint: '"read" の過去形は "read"（発音：レッド）です',
     explanation:
-      '【答え】I read two books yesterday.\n\n【つづりは同じ、発音がちがう】read の変化は read - read - read で、3つとも同じつづりである。しかし発音が変わる。\n・現在形 read … リード（long i の音）\n・過去形・過去分詞 read … レッド（短い e の音）\nつづりでは区別できないので、文の中の他の語（yesterday、last week など）で時制を判断する。この問題では yesterday があるので過去形だと分かる。\n\n【同じつづりで発音が変わる語】\n・read（リード・レッド）\n・live（リヴ＝住む・ライヴ＝生の）\n・wind（ウィンド＝風・ワインド＝巻く）\n・tear（ティア＝涙・テア＝引き裂く）\nこれらは発音問題で出る。\n\n【つづりが変わらない不規則動詞】\n・put - put - put、cut - cut - cut、let - let - let、set - set - set、hit - hit - hit、shut - shut - shut、cost - cost - cost、read - read - read\nread 以外は発音も変わらない。\n\n【two books と複数形】2冊なので books になる。数を表す語の後は必ず形を確かめる。\n\n【例文】\n・I read this book last month.（レッドと読む）\n・I read books every day.（リードと読む）',
+      '【答え】I read two books yesterday.\n\n【つづりは同じ、発音がちがう】read の変化は read - read - read で、3つとも同じつづりである。しかし発音が変わる。\n・現在形 read … リード（イーとのばす音）\n・過去形・過去分詞 read … レッド（短い e の音）\nつづりでは区別できないので、文の中の他の語（yesterday、last week など）で時制を判断する。この問題では yesterday があるので過去形だと分かる。\n\n【同じつづりで発音が変わる語】\n・read（リード・レッド）\n・live（リヴ＝住む・ライヴ＝生の）\n・wind（ウィンド＝風・ワインド＝巻く）\n・tear（ティア＝涙・テア＝引き裂く）\nこれらは発音問題で出る。\n\n【つづりが変わらない不規則動詞】\n・put - put - put、cut - cut - cut、let - let - let、set - set - set、hit - hit - hit、shut - shut - shut、cost - cost - cost、read - read - read\nread 以外は発音も変わらない。\n\n【two books と複数形】2冊なので books になる。数を表す語の後は必ず形を確かめる。\n\n【例文】\n・I read this book last month.（レッドと読む）\n・I read books every day.（リードと読む）',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -1480,7 +1480,7 @@ export const eigoExtra2: Question[] = [
     answer: 'You may sit here.',
     hint: '"may" で許可を与えます',
     explanation:
-      '【答え】You may sit here.\n\n【may で許可を与える】may は「〜してよい」という許可を表す。目上の人が許可を与えるときに使うことが多く、ややあらたまった響きがある。\n\n【can との使い分け】\n・You can sit here.（くだけた言い方。友達にも使える）\n・You may sit here.（あらたまった言い方）\n意味はほぼ同じだが、may のほうが改まった場面に合う。\n\n【sit と sit down】\n・sit … すわっている状態、またはすわる\n・sit down … すわる動作（立っている人が腰を下ろす）\n・Please sit down.（おすわりください）\n・Please have a seat.（よりていねい）\n\n【here と there】\n・here（ここに）・there（そこに、あそこに）\n・どちらも副詞なので、前置詞をつけない。in here、to there は誤り\n・ただし over here、over there（あちらのほうに）という言い方はある\n\n【教室でよく使う表現】\n・May I come in?（入ってもいいですか）\n・May I go to the restroom?\n・Please stand up. ／ Please sit down.\n\n【例文】You may use this computer.',
+      '【答え】You may sit here.\n\n【may で許可を与える】may は「〜してよい」という許可を表す。目上の人が許可を与えるときに使うことが多く、ややあらたまった響きがある。\n\n【can との使い分け】\n・You can sit here.（くだけた言い方。友達にも使える）\n・You may sit here.（あらたまった言い方）\n意味はほぼ同じだが、may のほうが改まった場面に合う。\n\n【sit と sit down】\n・sit … すわっている状態、またはすわる\n・sit down … すわる動作（立っている人が腰を下ろす）\n・Please sit down.（おすわりください）\n・Please have a seat.（よりていねい）\n\n【here と there】\n・here（ここに）・there（そこに、あそこに）\n・どちらも副詞なので、前置詞 to はつけない。to here、to there は誤り\n・ただし over here、over there（あちらのほうに）という言い方はある\n\n【教室でよく使う表現】\n・May I come in?（入ってもいいですか）\n・May I go to the restroom?\n・Please stand up. ／ Please sit down.\n\n【例文】You may use this computer.',
     difficulty: 'standard',
     examType: 'chugaku' as const,
     examFrequency: 'medium',
@@ -2355,15 +2355,15 @@ export const eigoExtra2: Question[] = [
     examType: 'chugaku' as const,
     examFrequency: 'high',
   },
-  // 仮定法・複雑な文構造 196-200
+  // 条件のif・複雑な文構造 196-200
   {
     id: 'ee2_196',
     subject: 'eigo' as const,
-    question: '「もし私が鳥だったら、空を飛べるのに」を英語にしなさい。',
-    answer: 'If I were a bird, I could fly in the sky.',
-    hint: '仮定法過去では動詞の過去形を使い、"I" に対しても "were" を使います',
+    question: '「もし明日雨が降ったら、私は家にいます」を英語にしなさい。',
+    answer: 'If it rains tomorrow, I will stay home.',
+    hint: 'if の節（もし〜ならば）では、未来のことでも動詞は現在形にします',
     explanation:
-      '【何を聞かれているか】\n「もし私が鳥だったら、空を飛べるのに」という日本語を英語にする問題。\n\n【なぜbe動詞をwereにするのか】\n仮定法過去では、be動詞は主語が何であっても（Iやheでも）wereを使うという伝統的なルールがある（口語ではwasも使われる）。\n\n【ポイント1】仮定法過去の公式を確認する\nIf＋主語＋動詞の過去形〜, 主語＋would/could/might＋動詞の原形〜。\n\n【ポイント2】if節を組み立てる\n「もし私が鳥だったら」は"If I were a bird"。beの過去形はwereを使う。\n\n【ポイント3】主節を組み立てる\n「空を飛べるのに」は"I could fly in the sky"。可能性を表すcouldを使う。\n\n【答え】\nIf I were a bird, I could fly in the sky.\n\n【確かめ】\nif節のbe動詞がwasではなくwereになっていること、また「実際は鳥ではない」という現実と反対の内容になっていることを確認する。\n\n【よくあるまちがい】\n"If I was a bird"のように、主語Iに合わせてwasを使ってしまうミス。仮定法のif節では、主語が単数でもwereを使うのが原則。\n\n【ここが絶対】\n仮定法過去では、be動詞は主語に関係なくwereを使う。「もし〜だったら」という現実と反対の仮定を表す公式とセットで覚える。',
+      '【何を聞かれているか】\n「もし明日雨が降ったら、私は家にいます」という日本語を英語にする問題。\n\n【なぜ if の中は現在形なのか】\n「もし〜ならば」と、本当に起こるかもしれないことを言うときは、〈If ＋ 主語 ＋ 動詞の現在形, 主語 ＋ will ＋ 動詞の原形〉の形にする。「明日」のことでも、if の節の中だけは will を使わず、現在形にするのが決まりである。\n\n【ステップ1】if の節を作る。「もし明日雨が降ったら」は If it rains tomorrow。主語の it は三人称単数なので、動詞に s がついて rains になる。\n【ステップ2】主節を作る。「私は家にいます」は I will stay home。これからすることは will ＋ 動詞の原形で表す。\n【ステップ3】2つをカンマ（,）でつなぐ。\n\n【答え】\nIf it rains tomorrow, I will stay home.\n\n【確かめ】\nif の節の動詞が rains（現在形で s つき）、主節が will stay（will ＋ 原形）になっているかを見る。will rain になっていたら誤りである。\n\n【よくあるまちがい】\n「明日」だから未来だと考えて、If it will rain tomorrow, ... と書いてしまう。if の節の中は、未来のことでも現在形にする。\n\n【ここが絶対】\nIf ＋ 主語 ＋ 現在形, 主語 ＋ will ＋ 動詞の原形。if の節の中に will は入れない。',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -2371,11 +2371,11 @@ export const eigoExtra2: Question[] = [
   {
     id: 'ee2_197',
     subject: 'eigo' as const,
-    question: '「もし100万円持っていたら、世界旅行するのに」を英語にしなさい。',
-    answer: 'If I had one million yen, I would travel around the world.',
-    hint: '仮定法過去の構文を使います',
+    question: '「もし急げば、あなたは電車に間に合います」を英語にしなさい。',
+    answer: 'If you hurry, you will catch the train.',
+    hint: '「間に合う」は catch（つかまえる）を使います。if の節は現在形です',
     explanation:
-      '【何を聞かれているか】\n「もし100万円持っていたら、世界旅行するのに」という日本語を英語にする問題。\n\n【なぜ仮定法過去を使うのか】\n「実際は100万円を持っていないが、もし持っていたら」という、現在の事実に反する仮定を表すときは、仮定法過去（If＋過去形, would＋原形）を使う。\n\n【ポイント1】仮定法過去の公式を確認する\nIf＋主語＋動詞の過去形〜, 主語＋would＋動詞の原形〜。\n\n【ポイント2】if節を組み立てる\n「もし100万円持っていたら」は"If I had one million yen"。haveの過去形hadを使う。\n\n【ポイント3】主節を組み立てる\n「世界旅行するのに」は"I would travel around the world"。"travel around the world"は「世界旅行する」という重要表現。\n\n【答え】\nIf I had one million yen, I would travel around the world.\n\n【確かめ】\nif節の動詞が過去形（had）になっていて、主節がwould＋動詞の原形（would travel）になっていることを確認する。\n\n【よくあるまちがい】\n"If I have"のように、if節を現在形のままにしてしまうミス。仮定法過去では、現在の事実に反する内容でも動詞を過去形にする。\n\n【ここが絶対】\n仮定法過去の公式（If+過去形, would+原形）をセットで覚える。"travel around the world"（世界を旅する）という表現も覚えておく。',
+      '【何を聞かれているか】\n「もし急げば、あなたは電車に間に合います」という日本語を英語にする問題。\n\n【なぜ catch を使うのか】\n電車やバスに「間に合う・乗れる」ことは、動いている物をつかまえるイメージで、catch the train と言う。日本語の「間に合う」にあたる語を探さず、決まった言い方として覚える。\n\n【ステップ1】if の節を作る。「もし急げば」は If you hurry。if の節の中は未来のことでも現在形なので、hurry のままにして will は入れない。\n【ステップ2】主節を作る。「電車に間に合います」は you will catch the train。これから起こる結果を will ＋ 動詞の原形で表す。\n【ステップ3】2つをカンマ（,）でつなぐ。\n\n【答え】\nIf you hurry, you will catch the train.\n\n【確かめ】\nif の節が hurry（現在形）、主節が will catch（will ＋ 原形）になっているかを見る。\n\n【よくあるまちがい】\nIf you will hurry のように、if の節に will を入れてしまう。また、「間に合う」を meet などの別の語で訳してしまう。\n\n【ここが絶対】\n「電車に間に合う」は catch the train。if の節の中は、未来のことでも現在形にする。',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'high',
@@ -2383,11 +2383,11 @@ export const eigoExtra2: Question[] = [
   {
     id: 'ee2_198',
     subject: 'eigo' as const,
-    question: '「彼女が昨日来ていたら、パーティーはもっと楽しかったのに」を英語にしなさい。',
-    answer: 'If she had come yesterday, the party would have been more fun.',
-    hint: '仮定法過去完了は過去の事実に反することを仮定します',
+    question: '「もし彼女が来たら、パーティーはもっと楽しくなるでしょう」を英語にしなさい。',
+    answer: 'If she comes, the party will be more fun.',
+    hint: 'if の節は現在形、主節は will ＋ 動詞の原形です。fun は「楽しいこと」という意味です',
     explanation:
-      '【何を聞かれているか】\n「彼女が昨日来ていたら、パーティーはもっと楽しかったのに」という日本語を英語にする問題。\n\n【なぜ仮定法過去完了を使うのか】\n「実際には彼女は昨日来なかったが、もし来ていたら」という、過去の事実に反する仮定を表すときは、仮定法過去完了（If＋had＋過去分詞, would have＋過去分詞）を使う。\n\n【ポイント1】仮定法過去完了の公式を確認する\nIf＋主語＋had＋過去分詞〜, 主語＋would have＋過去分詞〜。\n\n【ポイント2】if節を組み立てる\n「彼女が昨日来ていたら」は"If she had come yesterday"。comeの過去分詞comeを使い、hadと組み合わせる。\n\n【ポイント3】主節を組み立てる\n「もっと楽しかったのに」は"the party would have been more fun"。beの過去分詞beenを使う。\n\n【答え】\nIf she had come yesterday, the party would have been more fun.\n\n【確かめ】\nif節が"had come"（過去完了）、主節が"would have been"（would have+過去分詞）になっていることを確認する。\n\n【よくあるまちがい】\n仮定法過去（If+過去形, would+原形）と仮定法過去完了（If+had+過去分詞, would have+過去分詞）を混同してしまうミス。過去の事実に反する内容には過去完了の形を使う。\n\n【ここが絶対】\n仮定法過去完了の公式（If+had+過去分詞, would have+過去分詞）を、過去の事実に反する仮定を表すときに使うこととセットで覚える。',
+      '【何を聞かれているか】\n「もし彼女が来たら、パーティーはもっと楽しくなるでしょう」という日本語を英語にする問題。\n\n【なぜ主節に will を使うのか】\n「彼女が来る」ことは、まだ起きていないが、起こるかもしれないことである。その結果として「楽しくなるだろう」と予想するときは will を使う。if の節の中は現在形、結果を言う主節は will ＋ 動詞の原形、という組み合わせになる。\n\n【ステップ1】if の節を作る。「もし彼女が来たら」は If she comes。主語の she は三人称単数なので、動詞に s がついて comes になる。\n【ステップ2】主節を作る。「パーティーはもっと楽しくなる」は the party will be more fun。「もっと楽しい」は more fun の形で表す。\n【ステップ3】2つをカンマ（,）でつなぐ。\n\n【答え】\nIf she comes, the party will be more fun.\n\n【確かめ】\nif の節が comes（現在形で s つき）、主節が will be（will ＋ 原形）になっているかを見る。\n\n【よくあるまちがい】\nIf she will come と書いてしまう。または、三人称単数なのに If she come と s を忘れてしまう。\n\n【ここが絶対】\nIf ＋ 主語 ＋ 現在形, 主語 ＋ will ＋ 動詞の原形。三人称単数の現在形には s をつける。',
     difficulty: 'advanced',
     examType: 'chugaku' as const,
     examFrequency: 'medium',

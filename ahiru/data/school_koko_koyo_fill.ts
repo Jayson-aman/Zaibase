@@ -534,7 +534,7 @@ export const schoolKokoKoyoFill: Question[] = [
     subject: 'shakai',
     question: '地方自治において、有権者が条例の制定・改廃を首長に請求できる「直接請求権」を行使するために必要な署名数の要件を答えなさい。',
     answer: '有権者の50分の1以上の署名',
-    hint: '条例の制定・改廃の請求は、住民監査請求などと比べて必要な署名数が少なく設定されている。',
+    hint: '条例の制定・改廃の請求は、議会の解散や首長・議員の解職の請求と比べて、必要な署名数が少なく設定されている。',
     explanation:
       '【何を聞かれているか】地方自治において、有権者が条例の制定・改廃を首長に請求できる「直接請求権」を行使するために必要な署名数の要件である。\n\n【なぜそうなるのか】条例の制定・改廃は人事に関わる重い請求（解職・解散）よりも要件がゆるく設定されている。\n\n【ステップ1】条例の制定・改廃を求める直接請求（イニシアティブ）には、有権者の50分の1以上の署名を集め、首長（市区町村長・都道府県知事）に請求する必要がある。\n\n【ステップ2】これに対し、議会の解散や首長・議員の解職（リコール）を求める請求には、より重い要件である原則として有権者の3分の1以上の署名が必要とされる。\n\n【答え】有権者の50分の1以上の署名\n\n【確かめ】「条例の制定・改廃＝50分の1以上」「解職・解散＝原則3分の1以上」を確認する。\n\n【よくあるまちがい】署名数の要件（50分の1と3分の1）を混同しないこと。人事に関わる重い請求ほど要件が厳しい。\n\n【ここが絶対】「直接請求権（条例改廃は50分の1以上）」は公民の最頻出事項。',
     difficulty: 'advanced',
@@ -823,7 +823,7 @@ export const schoolKokoKoyoFill: Question[] = [
     id: 'koyo_eigo_16',
     subject: 'eigo',
     question: 'Write your opinion in English (about 30-40 words): "Do you think it is important to learn a foreign language? Give one reason."',
-    answer: '(自由英作文・模範解答例) "I think it is important to learn a foreign language because it allows us to communicate with people from different countries and understand their cultures more deeply."',
+    answer: '(自由英作文・模範解答例) "I think it is important to learn a foreign language because it allows us to communicate with people from different countries and understand their cultures more deeply. This skill can also help us in our future careers."',
     hint: 'State your opinion clearly first (I think.../I don\'t think...), then give one clear reason using "because."',
     explanation:
       '【この問題の答え方】正解が1つに決まらない自由英作文である。賛成でも反対でも、理由が筋道立っていれば正答になる。\n\n【書く順番】\n①立場をはっきり言う … I think 〜 / I do not think 〜\n②理由を言う … because 〜\n③理由をもう一歩くわしくする … For example 〜 / Also 〜\n\n【この題（外国語を学ぶこと）の書き方】\n・大切だという理由 … 外国の人と話せる／その国の文化を深く知ることができる／将来の仕事の幅が広がる／ほかの見方を知って、自分の国のことがよく分かるようになる\n・そうは思わないという理由 … 翻訳の道具が進んでいる／まず母語をしっかり身につけるほうが先だ\nどちらの立場でも、理由を2つ思いうかべてから書きはじめると、語数がそろう。\n\n【語数について】30〜40語という指示なので、3文くらいが目安である。1文を長くしすぎると文法をまちがえやすい。短い文を3つ並べるほうが安全である。\n\n【採点で見られるところ】\n①意見がはっきり書かれているか\n②理由が because などで示されているか\n③文法と語いが正しいか\n立場を最初の1文で言いきるのが得点のこつである。\n\n【使える言い回し】\n・It allows us to 〜（〜することができるようになる）\n・It helps us understand 〜（〜を理解する助けになる）\n・For these reasons, I think 〜（まとめ）',

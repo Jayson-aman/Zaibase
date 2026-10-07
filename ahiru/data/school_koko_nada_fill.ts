@@ -527,7 +527,7 @@ export const schoolKokoNadaFill: Question[] = [
     id: 'nada_shakai_05',
     subject: 'shakai',
     figureDescription:
-      'ある国のGDP（国内総生産）に占める産業別の構成比を示す円グラフ。農業（第1次産業）・鉱工業（第2次産業）・サービス業（第3次産業）の3つに分かれている。',
+      'ある国のGDP（国内総生産）に占める産業別の構成比を示す円グラフ。農業（第1次産業）12%・鉱工業（第2次産業）33%・サービス業（第3次産業）55%の3つに分かれている。',
     question:
       '下のグラフは、ある国のGDPに占める産業別の構成比を示したものである。このグラフから読み取れる、この国の産業構造の特徴を、農業が45%を占めるような発展途上国の産業構造と比較して説明しなさい。',
     answer:
@@ -584,7 +584,7 @@ export const schoolKokoNadaFill: Question[] = [
     id: 'nada_shakai_09',
     subject: 'shakai',
     figureDescription:
-      '日本のある年における年齢別人口構成（0〜14歳・15〜64歳・65歳以上）の割合を示す棒グラフ。',
+      '日本のある年における年齢別人口構成（0〜14歳12%・15〜64歳59%・65歳以上29%）の割合を示す棒グラフ。',
     question:
       '下の棒グラフは、日本のある年における年齢別人口構成の割合を示したものである。老年人口指数（65歳以上人口÷生産年齢人口（15〜64歳人口）×100）を、小数第1位を四捨五入して求めなさい。',
     answer: '約49',
@@ -702,7 +702,7 @@ export const schoolKokoNadaFill: Question[] = [
       'When Aiko began her research project on renewable energy, she expected to find simple answers about solar panels and wind turbines. Instead, she discovered that every energy source involves trade-offs among cost, reliability, and environmental impact. After interviewing three local engineers, she realized that choosing the right energy source depends heavily on where you live and what resources are available nearby. Her final report argued that there is no single perfect solution, only choices that fit local needs.',
     question: 'What did Aiko expect to find when she began her research?',
     answer: 'She expected to find simple answers about solar panels and wind turbines.',
-    hint: 'Look at the second sentence of the passage.',
+    hint: 'Look at the first sentence of the passage.',
     explanation:
       '【解説】\n本文第1文「she expected to find simple answers about solar panels and wind turbines」がそのまま答えになる。「expected to find」＝「見つかると予想していた」という意味。',
     difficulty: 'standard',
@@ -808,7 +808,7 @@ export const schoolKokoNadaFill: Question[] = [
     difficulty: 'advanced',
     course: 'koko-nada',
     examType: 'koko',
-    choices: ['have', 'had', 'was having', 'has'],
+    choices: ['have', 'had', 'will have', 'has'],
   },
   {
     id: 'nada_eigo_09',
@@ -896,11 +896,11 @@ export const schoolKokoNadaFill: Question[] = [
     answer: 'gave in',
     hint: '"Give in" means to yield or stop resisting after a period of resistance.',
     explanation:
-      '【解説】\n"give in"は「（抵抗をやめて）折れる・屈する」という意味の句動詞で、長い議論の末に相手の意見に従うという文脈に合う。"give up"は「あきらめる・やめる」という意味で、何かを続けることを完全にやめるニュアンスが強く、ここでは「相手の計画に同意した」という文脈には合わない。"give away"（無償で譲る）、"give out"（配る・尽きる）も文脈に合わない。',
+      '【解説】\n"give in"は「（抵抗をやめて）折れる・屈する」という意味の句動詞で、長い議論の末に相手の意見に従うという文脈に合う。"give back"（返す）、"give away"（無償で譲る）、"give out"（配る・尽きる）も文脈に合わない。',
     difficulty: 'advanced',
     course: 'koko-nada',
     examType: 'koko',
-    choices: ['gave in', 'gave up', 'gave away', 'gave out'],
+    choices: ['gave in', 'gave back', 'gave away', 'gave out'],
   },
   {
     id: 'nada_eigo_16',

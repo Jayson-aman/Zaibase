@@ -342,7 +342,7 @@ export const SPLUS_MY_B: Question[] = [
     examType: 'chugaku',
     difficulty: 'standard',
     question:
-      '【整序英作文】次の日本語に合うように、（　）内の語を並べかえて英文を作りなさい。ただし、不要な語が1つ含まれているものがあります。文頭の文字も小文字で示してあります。\n\n① 彼女は毎朝6時に起きます。\n（ gets / she / up / at six / every morning / getting ）\n\n② この本は私にとって、読むには難しすぎます。\n（ is / too / for / difficult / read / this book / me / to ）\n\n③ あなたはいつ京都を訪れる予定ですか。\n（ are / when / you / going / visit / to / Kyoto / do ）',
+      '【整序英作文】次の日本語に合うように、（　）内の語を並べかえて英文を作りなさい。ただし、不要な語が1つ含まれているものがあります。文頭の文字も小文字で示してあります。\n\n① 彼女は毎朝6時に起きます。（She で始めなさい）\n（ gets / she / up / at six every morning / getting ）\n\n② この本は私にとって、読むには難しすぎます。\n（ is / too / for / difficult / read / this book / me / to ）\n\n③ あなたはいつ京都を訪れる予定ですか。\n（ are / when / you / going / visit / to / Kyoto / do ）',
     answer:
       '① She gets up at six every morning.\n② This book is too difficult for me to read.\n③ When are you going to visit Kyoto?',
     hint: '①は主語の人称に合う動詞の形を選びます。②は too ... to ~ の形を使います。③は疑問詞を文頭にして、be動詞の疑問文の形にします。',

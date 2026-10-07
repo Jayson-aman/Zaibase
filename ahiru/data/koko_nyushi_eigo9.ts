@@ -22,18 +22,18 @@ export const kokoNyushiEigo9: Question[] = [
     id: 'koko_nyushi_eigo9_02',
     subject: 'eigo',
     question: '次の（　）内に最も適切な語を選べ。  Astronauts ( ) wear special suits when they walk outside the space station because there is no air.',
-    choices: ['① can', '② should', '③ have to', '④ need'],
+    choices: ['① can', '② may', '③ have to', '④ need'],
     answer: '③ have to',
     hint: '「空気がないから」という外的な状況による必要性を表す表現を選ぶ。',
     explanation: `【出題意図】
-助動詞（can / should / have to / need）の意味の違いを問う問題。外的状況による必要性を表す表現の識別が目標。
+助動詞（can / may / have to / need）の意味の違いを問う問題。外的状況による必要性を表す表現の識別が目標。
 
 【解説】
 「because there is no air（空気がないから）」は外部の状況が理由。外的な必要性を表すには have to が最適。
-・① can → 能力・可能性「〜できる」
-・② should → 推奨「〜すべきだ」
+・① can → 能力・可能性「〜できる」。理由の内容と合わない
+・② may → 許可・推量「〜してもよい／〜かもしれない」。理由の内容と合わない
 ・③ have to → 状況による必要性「〜しなければならない」（✓）
-・④ need → 動詞として使う場合、肯定文では to needed（need to wear）が必要で、単独の need では不自然
+・④ need → 動詞として使う場合、肯定文では need to wear のように to が必要で、このまま need wear とは言えない
 
 日本語訳：「宇宙飛行士は宇宙ステーションの外を歩くとき、空気がないので特別なスーツを着なければならない。」
 
@@ -139,12 +139,12 @@ have to：外部の規則・状況による義務。must：話者の主観的な
   {
     id: 'koko_nyushi_eigo9_07',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。  By the year 2030, scientists ( ) a cure for many diseases with the help of AI.',
-    choices: ['① will discover', '② will have discovered', '③ have discovered', '④ discovered'],
-    answer: '② will have discovered',
-    hint: '「2030年までには」という未来の時点での完了を表す時制を選ぶ。',
+    question: '次の（　）内に最も適切な語を選べ。  By the year 2030, scientists ( ) this disease for thirty years with the help of AI.',
+    choices: ['① will study', '② will have studied', '③ have studied', '④ studied'],
+    answer: '② will have studied',
+    hint: '「2030年までには30年間〜していることになる」という、未来の時点までの継続を表す時制を選ぶ。',
     explanation:
-      '【何を聞かれているか】「By the year 2030, scientists ( ) a cure for many diseases with the help of AI.」の空所に入る適切な時制を選ぶ。\n【なぜwill have discoveredになるのか】「2030年までには」という未来のある時点で「発見を終えていることになる」という完了を表すには、未来完了形（will have＋過去分詞）を使う必要があるから。\n【ポイント1】By the year 2030（2030年までには）は未来の時点を示す表現。\n【ポイント2】①will discover（単純未来）、③have discovered（現在完了、未来の時点には使えない）、④discovered（過去形）はどれも文脈に合わない。\n【ポイント3】②will have discovered（未来完了）が正解。目印はby the time〜、by then、by 2030など。\n【答え】② will have discovered\n【確かめ】By the year 2030という未来の時点を示す語句と、will have＋過去分詞の組み合わせがセットになっていることを確認する。\n【よくあるまちがい】have discovered（現在完了）を選んでしまう。現在完了は現在を基準にするので、未来の時点には使えない。\n【ここが絶対】未来のある時点での完了にはwill have＋過去分詞（未来完了形）を使う。',
+      '【何を聞かれているか】「By the year 2030, scientists ( ) this disease for thirty years with the help of AI.」の空所に入る適切な時制を選ぶ。\n【なぜwill have studiedになるのか】「2030年までには」という未来のある時点で「30年間研究し続けていることになる」という継続を表すには、未来完了形（will have＋過去分詞）を使う必要があるから。\n【ポイント1】By the year 2030（2030年までには）は未来の時点を示す表現。for thirty years（30年間）はその時点までの継続の長さを表す。\n【ポイント2】①will study（単純未来）は「30年間」と合わない。③have studied（現在完了、未来の時点には使えない）、④studied（過去形）もどれも文脈に合わない。\n【ポイント3】②will have studied（未来完了）が正解。目印はby the time〜、by then、by 2030など。\n【答え】② will have studied\n【確かめ】By the year 2030という未来の時点を示す語句と、will have＋過去分詞の組み合わせがセットになっていることを確認する。\n【よくあるまちがい】have studied（現在完了）を選んでしまう。現在完了は現在を基準にするので、未来の時点には使えない。\n【ここが絶対】未来のある時点での完了にはwill have＋過去分詞（未来完了形）を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -642,7 +642,7 @@ for + 期間（for three years）／since + 起点（since 2020）。現在完�
   {
     id: 'koko_nyushi_eigo9_31',
     subject: 'eigo',
-    question: '次の語を並べ替えて正しい英文を作れ。\n（ tested / Engineers / it / carefully / before / launching / the / satellite ）\n「衛星を打ち上げる前に、技術者たちはそれを注意深く検査した。」\n（文頭にくる語は大文字で始めてあります）',
+    question: '次の語を並べ替えて正しい英文を作れ。\n（ tested / Engineers / it / carefully / before / launching / the / satellite ）\n「衛星を打ち上げる前に、技術者たちはそれを注意深く検査した。」\n（文頭にくる語は大文字で始めてあります。carefully は tested it の直後に置きます）',
     answer: 'Engineers tested it carefully before launching the satellite.',
     hint: 'before の後には動名詞（〜ing）が来る。before + 動名詞＝〜する前に。',
     explanation:

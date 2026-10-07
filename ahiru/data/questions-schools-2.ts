@@ -151,10 +151,10 @@ export const kaimeiQuestions: Question[] = [
     id: 'kaimei_rika_04', subject: 'rika', difficulty: 'advanced',
     course: 'kaimei', examType: 'chugaku',
     question: '天気記号で「丸の中に×印」は何を表すか。',
-    answer: 'みぞれ',
-    hint: '雨と雪が混じった降水',
+    answer: '雪',
+    hint: '空から白いものが降ってくる天気。雨は丸の中を黒くぬる。',
     explanation:
-      '【何を聞かれているか】丸の中に×の天気記号。\n【なぜその式なのか】天気記号は丸の中の印で決まる。**●＝雨、※＝雪、×＝みぞれ（雨と雪が混じる）**。\n【ステップ1】みぞれ。\n【答え】みぞれ\n【確かめ】○＝快晴、①（丸に縦線）＝晴れ、◎＝くもり。\n【よくあるまちがい】×を雪とする。**雪は米印**。',
+      '【何を聞かれているか】丸の中に×の天気記号。\n【なぜその式なのか】日本の天気記号は丸の中の印で決まる。**●（丸の中を黒くぬる）＝雨、○の中に×＝雪**。雨と雪が混じるみぞれは、雨と雪の印を組み合わせた別の記号で表す。\n【ステップ1】丸の中に×は雪。\n【答え】雪\n【確かめ】○＝快晴、①（丸に縦線）＝晴れ、◎＝くもり。\n【よくあるまちがい】×をみぞれとする。**×は雪**で、みぞれは雨と雪の印を組み合わせた記号である。',
   },
   {
     id: 'kaimei_rika_05', subject: 'rika', difficulty: 'advanced',
@@ -272,11 +272,11 @@ export const kaimeiQuestions: Question[] = [
   {
     id: 'kaimei_eigo_05', subject: 'eigo', difficulty: 'advanced',
     course: 'kaimei', examType: 'chugaku',
-    question: '次の英文の下線部の意味を答えなさい。「I have been to Kyoto twice.」',
+    question: '次の英文の意味を答えなさい。「I have been to Kyoto twice.」',
     answer: '私は京都に2回行ったことがあります。',
     hint: '現在完了形（経験）の文',
     explanation:
-      '【何を聞かれているか】\n"I have been to Kyoto twice."という文の下線部（現在完了形の部分）の意味を答える問題。\n\n【なぜhave been toが「行ったことがある」という意味になるのか】\n"have been to〜"は「〜に行ったことがある」という経験を表す現在完了形の決まった表現。「行って、そして戻ってきた」というニュアンスを含む。\n\n【ポイント1】"have been to〜"の意味を確認する\n"have been to Kyoto"＝「京都に行ったことがある」。\n\n【ポイント2】"twice"の意味を確認する\n"twice"＝「2回」。once（1回）、twice（2回）、three times（3回）と数える。\n\n【ポイント3】"have been to"と"have gone to"の違いを確認する\n"have been to〜"は行って戻ってきた経験、"have gone to〜"は「行ってしまって今そこにいる」という意味になる。\n\n【答え】\n私は京都に2回行ったことがあります。\n\n【確かめ】\n"have been to"を「行ったことがある」、"twice"を「2回」と訳して、文全体の意味が自然になっているか確認する。\n\n【よくあるまちがい】\n"have been to"を「〜にいたことがある」のような別の意味で捉えてしまうミス。「行って戻ってきた経験」というニュアンスを正確に理解する。\n\n【ここが絶対】\n"have been to〜"＝〜に行ったことがある、という現在完了形（経験）の決まった表現としてセットで覚える。',
+      '【何を聞かれているか】\n"I have been to Kyoto twice."という文の意味を答える問題。\n\n【なぜhave been toが「行ったことがある」という意味になるのか】\n"have been to〜"は「〜に行ったことがある」という経験を表す現在完了形の決まった表現。「行って、そして戻ってきた」というニュアンスを含む。\n\n【ポイント1】"have been to〜"の意味を確認する\n"have been to Kyoto"＝「京都に行ったことがある」。\n\n【ポイント2】"twice"の意味を確認する\n"twice"＝「2回」。once（1回）、twice（2回）、three times（3回）と数える。\n\n【ポイント3】"have been to"と"have gone to"の違いを確認する\n"have been to〜"は行って戻ってきた経験、"have gone to〜"は「行ってしまって今そこにいる」という意味になる。\n\n【答え】\n私は京都に2回行ったことがあります。\n\n【確かめ】\n"have been to"を「行ったことがある」、"twice"を「2回」と訳して、文全体の意味が自然になっているか確認する。\n\n【よくあるまちがい】\n"have been to"を「〜にいたことがある」のような別の意味で捉えてしまうミス。「行って戻ってきた経験」というニュアンスを正確に理解する。\n\n【ここが絶対】\n"have been to〜"＝〜に行ったことがある、という現在完了形（経験）の決まった表現としてセットで覚える。',
   },
   {
     id: 'kaimei_eigo_06', subject: 'eigo', difficulty: 'advanced',
@@ -805,9 +805,9 @@ export const kindaiQuestions: Question[] = [
   {
     id: 'kindai_eigo_01', subject: 'eigo', difficulty: 'advanced',
     course: 'kindai', examType: 'chugaku',
-    question: '次の（　）に入る適切な語を選びなさい。「I am ( ) about history.」①interest ②interests ③interested ④interesting',
+    question: '次の（　）に入る適切な語を選びなさい。「I am ( ) in history.」①interest ②interests ③interested ④interesting',
     answer: '③interested',
-    hint: '「I am ～ about」→ 人が感じる感情は過去分詞形',
+    hint: '「I am ～ in」→ 人が感じる感情は過去分詞形',
     explanation: '感情を表す形容詞の使い分け：\ninterested（人が）興味を持っている\ninteresting（物が）興味深い\n主語がI（人）なので「interested」。「I am interested in ～」＝「私は～に興味がある」',
   },
   {
@@ -1087,7 +1087,7 @@ export const kansaiHokuyoQuestions: Question[] = [
   {
     id: 'kansai_hokuyo_eigo_01', subject: 'eigo', difficulty: 'advanced',
     course: 'kansai-hokuyo', examType: 'chugaku',
-    question: '次の会話の（　）に入る適切な文を選びなさい。 A: \\"Excuse me, can you help me?\\" B: \\"( )\\"',
+    question: '次の会話の（　）に入る適切な文を選びなさい。 A: \"Excuse me, can you help me?\" B: \"( )\"',
     choices: ['① No, I can\'t.', '② Sure, what can I do for you?', '③ I\'m fine, thank you.', '④ Yes, it is.'],
     answer: '② Sure, what can I do for you?',
     hint: '助けを求められたときの自然な返答',

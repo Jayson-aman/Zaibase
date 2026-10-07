@@ -301,7 +301,7 @@ export const seikoQuestions: Question[] = [
     id: 'seiko_shakai_06',
     subject: 'shakai',
     question: '日本の農業について、稲作が盛んな地域として有名な平野を3つ答えなさい。また、その理由を簡単に説明しなさい。',
-    answer: '越後平野・秋田平野（横手盆地）・庄内平野など。理由：夏の気温が高く日照時間が長い。冬は積雪が多く雪どけ水が豊富。',
+    answer: '越後平野・秋田平野・庄内平野など。理由：夏の気温が高く日照時間が長い。冬は積雪が多く雪どけ水が豊富。',
     hint: '東北・北陸地方の平野が多い',
     explanation:
       '【何を聞かれているか】稲作がさかんな平野3つと理由。\n【なぜそうなるのか】東北・北陸は**夏に気温が高く日照が長く、冬の雪どけ水が豊富で、広く平らな土地**があるので稲作に向く。\n【ステップ1】越後平野（新潟・コシヒカリ）。\n【ステップ2】秋田平野（あきたこまち）。庄内平野（山形・はえぬき）。\n【ステップ3】理由：夏の高温と日照、雪どけ水、平らな土地。\n【答え】越後平野・秋田平野・庄内平野など。理由：夏が高温で日照が長く、雪どけ水が豊富で土地が平らだから\n【確かめ】仙台平野・石狩平野も米どころ。\n【よくあるまちがい】「寒いから米ができない」と思う。**夏は暑い**。\n【ここが絶対】「東北・北陸＝稲作の中心」という理由（夏の高温日照＋雪どけ水）は地理の頻出テーマ。',
@@ -659,10 +659,10 @@ export const seifuNankaiQuestions: Question[] = [
     id: 'seifu_nankai_shakai_04',
     subject: 'shakai',
     question: '室町時代の文化について答えなさい。\n(1) 足利義満が金閣寺を建てた時期の文化名を答えなさい。\n(2) 足利義政の時代に栄えた文化名と、この時代に完成した芸術形式を1つ答えなさい。',
-    answer: '(1) 北山文化\n(2) 東山文化。能（能楽）・水墨画・書院造・枯山水など',
+    answer: '(1) 北山文化\n(2) 東山文化。水墨画・書院造・枯山水・茶の湯など',
     hint: '室町時代の文化は2つの時期に分かれる',
     explanation:
-      '【何を聞かれているか】義満の時代の文化名と、義政の時代の文化名・芸術。\n【なぜそうなるのか】3代義満は京都の北山に金閣（**北山文化**）、8代義政は東山に銀閣（**東山文化**）。東山文化の書院造・能・水墨画が今の日本文化の原型。\n【ステップ1】(1) 北山文化。\n【ステップ2】(2) 東山文化。能・水墨画・書院造・枯山水・茶の湯。\n【答え】(1) 北山文化 (2) 東山文化。能・水墨画・書院造など\n【確かめ】北山は公家と武家の文化の融合、東山は禅とわび・さび。\n【よくあるまちがい】金閣を東山文化とする。**金＝北山**。\n【ここが絶対】「金閣＝北山文化（義満）、銀閣＝東山文化（義政）」の組み合わせは超頻出。',
+      '【何を聞かれているか】義満の時代の文化名と、義政の時代の文化名・芸術。\n【なぜそうなるのか】3代義満は京都の北山に金閣（**北山文化**）、8代義政は東山に銀閣（**東山文化**）。東山文化の書院造・水墨画・茶の湯が今の日本文化の原型。\n【ステップ1】(1) 北山文化。\n【ステップ2】(2) 東山文化。水墨画・書院造・枯山水・茶の湯。\n【答え】(1) 北山文化 (2) 東山文化。水墨画・書院造など\n【確かめ】北山は公家と武家の文化の融合、東山は禅とわび・さび。\n【よくあるまちがい】金閣を東山文化とする。**金＝北山**。\n【ここが絶対】「金閣＝北山文化（義満）、銀閣＝東山文化（義政）」の組み合わせは超頻出。',
     difficulty: 'advanced',
     course: 'seifu-nankai',
     examType: 'chugaku',
@@ -687,7 +687,7 @@ export const seifuNankaiQuestions: Question[] = [
     hint:
       '日本は加工貿易国（原料輸入→製品輸出）',
     explanation:
-      '【何を聞かれているか】日本が最も多く輸入している品目（エネルギー以外）と相手国、および主要な輸出品目を3つ答える。\n\n【なぜそうなるのか】日本は天然資源が乏しいため、原料や工業製品を輸入して加工した製品を輸出する「加工貿易」が基本になっている。\n\n【ステップ1】輸入はエネルギー資源（石油・天然ガス・石炭）、食料品、機械類、衣類など。最大の貿易相手国は中国（輸出入ともに1位かつ2位に中国とアメリカ）。\n\n【ステップ2】輸出は自動車・機械類・電子部品（半導体など）・化学製品が中心。\n\n【答え】(1) 機械類・衣類など、相手国：中国 (2) 自動車・機械類・電子部品（半導体など）\n\n【確かめ】日本は天然資源が乏しいため、原料を輸入して加工した製品を輸出する「加工貿易」が基本である。\n\n【よくあるまちがい】日本の最大の貿易相手国をアメリカだと思ってしまう。現在は中国が輸出入ともに上位に入る主要な相手国である。\n\n【ここが絶対】「日本の貿易＝加工貿易（原料輸入・製品輸出）、最大の貿易相手国の一つは中国」は地理の最頻出事項。',
+      '【何を聞かれているか】日本が最も多く輸入している品目（エネルギー以外）と相手国、および主要な輸出品目を3つ答える。\n\n【なぜそうなるのか】日本は天然資源が乏しいため、原料や工業製品を輸入して加工した製品を輸出する「加工貿易」が基本になっている。\n\n【ステップ1】輸入はエネルギー資源（石油・天然ガス・石炭）、食料品、機械類、衣類など。最大の貿易相手国は中国（輸入は中国が1位、輸出はアメリカが1位で中国が2位）。\n\n【ステップ2】輸出は自動車・機械類・電子部品（半導体など）・化学製品が中心。\n\n【答え】(1) 機械類・衣類など、相手国：中国 (2) 自動車・機械類・電子部品（半導体など）\n\n【確かめ】日本は天然資源が乏しいため、原料を輸入して加工した製品を輸出する「加工貿易」が基本である。\n\n【よくあるまちがい】日本の最大の貿易相手国をアメリカだと思ってしまう。現在は中国が輸出入ともに上位に入る主要な相手国である。\n\n【ここが絶対】「日本の貿易＝加工貿易（原料輸入・製品輸出）、最大の貿易相手国の一つは中国」は地理の最頻出事項。',
     difficulty: 'advanced',
     course: 'seifu-nankai',
     examType: 'chugaku',
@@ -710,11 +710,11 @@ export const seifuNankaiQuestions: Question[] = [
   {
     id: 'seifu_nankai_eigo_02',
     subject: 'eigo',
-    question: '次の（　）に不定詞または動名詞を入れなさい。\n①"I want (   ) play soccer."（不定詞）\n②"She enjoys (   ) music."（動名詞）\n③"He decided (   ) study abroad."（不定詞）',
-    answer: '①to play　②listening to　③to study',
+    question: '次の（　）に不定詞または動名詞を入れなさい。\n①"I want (   ) play soccer."（不定詞）\n②"She enjoys (   ) to music."（動名詞）\n③"He decided (   ) study abroad."（不定詞）',
+    answer: '①to play　②listening　③to study',
     hint: 'want・decide→不定詞、enjoy→動名詞（-ing形）',
     explanation:
-      '【何を聞かれているか】\nそれぞれの動詞の後ろに、不定詞（to+動詞の原形）または動名詞（動詞のing形）のどちらを入れるべきかを答える文法問題。\n\n【なぜ動詞によって不定詞・動名詞が決まっているのか】\n英語の動詞には、後ろに「不定詞だけを取る動詞」「動名詞だけを取る動詞」「どちらも取れる動詞」という3つのグループがあり、それぞれ決まっている。\n\n【ポイント1】不定詞を取る動詞を確認する\nwant（〜したい）、hope（〜を望む）、decide（〜すると決める）、plan（〜する予定だ）、wish（〜を願う）、promiseなどは、後ろに不定詞（to+動詞の原形）を取る。\n\n【ポイント2】動名詞を取る動詞を確認する\nenjoy（〜を楽しむ）、finish（〜を終える）、stop（〜をやめる）、mind（〜を気にする）、give upなどは、後ろに動名詞（動詞のing形）を取る。\n\n【ポイント3】両方取れる動詞も確認する\nlike、love、start、beginなどは、不定詞・動名詞のどちらを続けてもほぼ同じ意味になる。\n\n【答え】\n①to play　②listening to　③to study\n\n【確かめ】\nwant→to play（不定詞）、enjoy→listening to（動名詞）、decide→to study（不定詞）と、それぞれ正しいグループの形になっているか確認する。\n\n【よくあるまちがい】\nenjoyの後ろに不定詞（to listen）を使ってしまうミス。enjoyは動名詞だけを取る動詞なので、-ing形にする必要がある。\n\n【ここが絶対】\n不定詞を取る動詞（want/hope/decide/plan/wish/promise）と動名詞を取る動詞（enjoy/finish/stop/mind/give up）はグループごとにセットで覚える。',
+      '【何を聞かれているか】\nそれぞれの動詞の後ろに、不定詞（to+動詞の原形）または動名詞（動詞のing形）のどちらを入れるべきかを答える文法問題。\n\n【なぜ動詞によって不定詞・動名詞が決まっているのか】\n英語の動詞には、後ろに「不定詞だけを取る動詞」「動名詞だけを取る動詞」「どちらも取れる動詞」という3つのグループがあり、それぞれ決まっている。\n\n【ポイント1】不定詞を取る動詞を確認する\nwant（〜したい）、hope（〜を望む）、decide（〜すると決める）、plan（〜する予定だ）、wish（〜を願う）、promiseなどは、後ろに不定詞（to+動詞の原形）を取る。\n\n【ポイント2】動名詞を取る動詞を確認する\nenjoy（〜を楽しむ）、finish（〜を終える）、stop（〜をやめる）、mind（〜を気にする）、give upなどは、後ろに動名詞（動詞のing形）を取る。\n\n【ポイント3】両方取れる動詞も確認する\nlike、love、start、beginなどは、不定詞・動名詞のどちらを続けてもほぼ同じ意味になる。\n\n【答え】\n①to play　②listening　③to study\n\n【確かめ】\nwant→to play（不定詞）、enjoy→listening（動名詞。あとの to music の to は前置詞）、decide→to study（不定詞）と、それぞれ正しいグループの形になっているか確認する。\n\n【よくあるまちがい】\nenjoyの後ろに不定詞（to listen）を使ってしまうミス。enjoyは動名詞だけを取る動詞なので、-ing形にする必要がある。\n\n【ここが絶対】\n不定詞を取る動詞（want/hope/decide/plan/wish/promise）と動名詞を取る動詞（enjoy/finish/stop/mind/give up）はグループごとにセットで覚える。',
     difficulty: 'advanced',
     course: 'seifu-nankai',
     examType: 'chugaku',
@@ -1094,10 +1094,10 @@ export const takatsukiQuestions: Question[] = [
   {
     id: 'takatsuki_eigo_02',
     subject: 'eigo',
-    question: '関係副詞を使って次の文の（　）を埋めなさい。\n"This is the city (   ) I was born."',
-    answer: 'where',
-    hint: '場所を表す関係副詞',
-    explanation: '【解説】\n関係副詞：\n・where（場所）：the place where I studied\n・when（時）：the day when I met her\n・why（理由）：the reason why he left\n・how（方法）：the way how / the way he did it\n\n"the city" は場所なので関係副詞 where を使います。\n"This is the city where I was born."（私が生まれた街がここです）',
+    question: '次の文の（　）に入る語を答えなさい。\n"English (   ) in many countries."（英語は多くの国で話されています。）',
+    answer: 'is spoken',
+    hint: '受け身：be動詞 + 過去分詞。speak の過去分詞は spoken',
+    explanation: '【解説】\n「〜される」という受け身は〈be動詞＋過去分詞〉で表します。\nEnglish（英語）は「話される」側なので受け身にします。\nspeak - spoke - spoken と変化するので、過去分詞は spoken。\n今の話なので be動詞は現在形の is（English は単数あつかい）。\n"English is spoken in many countries."（英語は多くの国で話されています）\nよくあるまちがい：speaked や is speak と書いてしまう。',
     difficulty: 'advanced',
     course: 'takatsuki',
     examType: 'chugaku',
@@ -1105,11 +1105,11 @@ export const takatsukiQuestions: Question[] = [
   {
     id: 'takatsuki_eigo_03',
     subject: 'eigo',
-    question: '仮定法過去の文を完成させなさい。\n「もし私が鳥だったら、空を飛べるのに。」\n"If I (   ) a bird, I (   ) fly in the sky."',
-    answer: 'If I were a bird, I could fly in the sky.',
-    hint: '仮定法過去：If + 主語 + 動詞の過去形（beはwere）、主語 + could/would + 動詞原形',
+    question: '次の文の（　）に適切な語を入れなさい。\n「もし明日晴れたら、私たちはピクニックに行きます。」\n"If it (   ) sunny tomorrow, we will go on a picnic."',
+    answer: 'is',
+    hint: '「もし〜なら」の文では、未来のことでも if のあとは現在形を使う',
     explanation:
-      '【何を聞かれているか】\n「もし私が鳥だったら、空を飛べるのに。」という日本語に合うように、仮定法過去の文を完成させる問題。\n\n【なぜbe動詞をwereにするのか】\n仮定法過去では、be動詞は主語が何であっても（Iやheでも）wereを使うという伝統的なルールがある（口語ではwasも使われることがある）。\n\n【ポイント1】仮定法過去の公式を確認する\nIf＋主語＋動詞の過去形〜, 主語＋would/could/might＋動詞の原形〜。\n\n【ポイント2】if節を組み立てる\n「もし私が鳥だったら」は"If I were a bird"。beの過去形はwereを使う。\n\n【ポイント3】主節を組み立てる\n「空を飛べるのに」は"I could fly in the sky"。可能性を表すcouldを使う。\n\n【答え】\nIf I were a bird, I could fly in the sky.\n\n【確かめ】\nif節のbe動詞がwasではなくwereになっていること、また「実際は鳥ではない」という現実と反対の内容になっていることを確認する。\n\n【よくあるまちがい】\n"If I was a bird"のように、主語Iに合わせてwasを使ってしまうミス。仮定法のif節では、主語が単数でもwereを使うのが原則。\n\n【ここが絶対】\n仮定法過去では、be動詞は主語に関係なくwereを使う。「もし〜だったら」という現実と反対の仮定を表す公式とセットで覚える。',
+      '【何を聞かれているか】\n「もし明日晴れたら、私たちはピクニックに行きます。」に合うように、if のあとの動詞の形を答える問題。\n\n【なぜ will ではなく現在形なのか】\n「もし〜なら」を表す if の文では、明日のような未来のことでも、if のあとは現在形を使うというきまりがある。will を使うのは、あとの「結果」を言う文のほうだけ。\n\n【ポイント1】文の形を確認する\nIf＋主語＋現在形, 主語＋will＋動詞の原形。\n\n【ポイント2】主語とbe動詞を合わせる\n主語は it（三人称単数）で、現在形の be動詞は is。\n\n【ポイント3】文を組み立てる\n"If it is sunny tomorrow, we will go on a picnic."＝「もし明日晴れたら、私たちはピクニックに行きます」。\n\n【答え】\nis\n\n【確かめ】\nif のあとが will be ではなく現在形の is になっているか確認する。\n\n【よくあるまちがい】\n明日のことだからと、"If it will be sunny tomorrow" と書いてしまうミス。if のあとは未来のことでも現在形にする。\n\n【ここが絶対】\n「If＋現在形, will＋動詞の原形」＝「もし〜なら、…します」の形をセットで覚える。',
     difficulty: 'advanced',
     course: 'takatsuki',
     examType: 'chugaku',
@@ -1130,13 +1130,13 @@ export const takatsukiQuestions: Question[] = [
     id: 'takatsuki_eigo_05',
     subject: 'eigo',
     question:
-      '次の語を並べかえて正しい英文を作りなさい。\n「もしあなたが暇なら、私はパーティーに来るのに。」\n[ you, I, if, free, were, would, come, to, the, party ]',
+      '次の語を並べかえて正しい英文を作りなさい。\n「もしあなたが暇なら、私はパーティーに行きます。」\n[ you, I, If, free, are, will, go, to, the, party ]',
     answer:
-      'If you were free, I would come to the party.',
+      'If you are free, I will go to the party.',
     hint:
-      '仮定法過去の整序問題。「もし暇なら、私はパーティーに来るのに」',
+      '「If＋主語＋現在形, 主語＋will＋動詞の原形」の形。文は If で始める',
     explanation:
-      '【何を聞かれているか】\n語句を並べ替えて、仮定法過去を使った正しい英文を作る問題。\n\n【なぜwereを使うのか】\n仮定法過去では、be動詞は主語に関係なくwereを使うという決まりがある。「もし〜だったら」という現実と反対の仮定を表す。\n\n【ポイント1】仮定法過去の公式を確認する\nIf＋主語＋動詞の過去形〜, 主語＋would＋動詞の原形〜。\n\n【ポイント2】if節を組み立てる\n「もしあなたが暇なら」は"If you were free"。\n\n【ポイント3】主節を組み立てる\n「私はパーティーに来るのに」は"I would come to the party"。\n\n【答え】\nIf you were free, I would come to the party.\n\n【確かめ】\nif節のbe動詞がwereになっていること、また与えられた語をすべて過不足なく使えているかを確認する。\n\n【よくあるまちがい】\nif節の中でwouldを使ってしまうミス。仮定法過去では、if節は過去形（were）、主節はwould+原形という役割分担がある。\n\n【ここが絶対】\n仮定法過去の公式（If+過去形, would+原形）をセットで覚える。be動詞はwereを使うことも忘れずに。',
+      '【何を聞かれているか】\n語句を並べ替えて、「もし〜なら、…します」という条件の文を作る問題。\n\n【なぜ are と will を使うのか】\nif のあとは、これからのことでも現在形を使う。結果を言うほうの文には will＋動詞の原形を使う。\n\n【ポイント1】文の形を確認する\nIf＋主語＋現在形, 主語＋will＋動詞の原形。\n\n【ポイント2】if のあとを組み立てる\n「もしあなたが暇なら」は"If you are free"。\n\n【ポイント3】結果の文を組み立てる\n「私はパーティーに行きます」は"I will go to the party"。\n\n【答え】\nIf you are free, I will go to the party.\n\n【確かめ】\n文が If で始まっているか、与えられた語をすべて過不足なく使えているかを確認する。\n\n【よくあるまちがい】\nif のあとに will を使って "If you will be free" としてしまうミス。if のあとは現在形にする。\n\n【ここが絶対】\n「If＋現在形, will＋動詞の原形」をセットで覚える。',
     difficulty: 'advanced',
     course: 'takatsuki',
     examType: 'chugaku',
@@ -1144,11 +1144,11 @@ export const takatsukiQuestions: Question[] = [
   {
     id: 'takatsuki_eigo_06',
     subject: 'eigo',
-    question: '次の日本語を英語に直しなさい。\n「私が住んでいる町には古いお寺があります。」\n（関係代名詞またはin whichを使って）',
-    answer: 'The town where I live has an old temple. または: The town in which I live has an old temple.',
-    hint: '「私が住んでいる町」= the town where I live',
+    question: '次の日本語を英語に直しなさい。\n「私が昨日買った本はとてもおもしろいです。」\n（関係代名詞を使って）',
+    answer: 'The book that I bought yesterday is very interesting. または: The book which I bought yesterday is very interesting.',
+    hint: '「私が昨日買った本」= the book that I bought yesterday',
     explanation:
-      '【何を聞かれているか】\n「私が住んでいる町には古いお寺があります。」という日本語を、関係代名詞またはin whichを使って英語にする問題。\n\n【なぜ関係副詞whereを使うのか】\n「町」という場所を表す名詞を、後ろから「私が住んでいる」という文で説明したいとき、場所を表す関係副詞whereを使うと、前置詞（in）を別に置かずに自然につなげられる。\n\n【ポイント1】関係副詞whereの形を確認する\n"the town where I live"＝「私が住んでいる町」。whereの後ろは「主語＋動詞」の完全な文が続く。\n\n【ポイント2】in whichとの書き換えを確認する\n"the town where I live" ＝ "the town in which I live"。whereはin which（＝in the place）と同じ働きをする。\n\n【ポイント3】文全体を組み立てる\n"The town where I live has an old temple."＝「私が住んでいる町には古いお寺がある」。\n\n【答え】\nThe town where I live has an old temple. （または The town in which I live has an old temple.）\n\n【確かめ】\nwhereの後ろが「I live」という完全な文（主語＋動詞のみで、前置詞や目的語が欠けていない文）になっているか確認する。\n\n【よくあるまちがい】\nwhereの後ろに前置詞inを重ねて"where I live in"としてしまうミス。whereはin whichの働きをすでに含んでいるので、inを重ねて使う必要はない。\n\n【ここが絶対】\n関係副詞where＝in which＝in the place、という対応をセットで覚え、「場所を表す名詞＋where＋完全な文」という形を使う。',
+      '【何を聞かれているか】\n「私が昨日買った本はとてもおもしろいです。」という日本語を、関係代名詞を使って英語にする問題。\n\n【なぜ関係代名詞を使うのか】\n「本」という名詞を、後ろから「私が昨日買った」という文で説明したいとき、物をさす関係代名詞 that（または which）を使うと、1つの文にまとめられる。\n\n【ポイント1】名詞を後ろから説明する形を確認する\n"the book that I bought yesterday"＝「私が昨日買った本」。that のあとは「主語＋動詞」が続く。\n\n【ポイント2】that と which の関係を確認する\n先行詞が物のときは that も which も使える。\n\n【ポイント3】文全体を組み立てる\n"The book that I bought yesterday is very interesting."＝「私が昨日買った本はとてもおもしろい」。主語は The book なので動詞は is。\n\n【答え】\nThe book that I bought yesterday is very interesting. （または The book which I bought yesterday is very interesting.）\n\n【確かめ】\nthat I bought yesterday が the book の直後に置かれ、そのあとに is very interesting が続いているか確認する。\n\n【よくあるまちがい】\n"The book that I bought it yesterday" のように、bought のあとに it を重ねてしまうミス。that がすでに the book の代わりをしている。\n\n【ここが絶対】\n「名詞＋that＋主語＋動詞」で、名詞を後ろから説明する。物には that か which を使う。',
     difficulty: 'advanced',
     course: 'takatsuki',
     examType: 'chugaku',

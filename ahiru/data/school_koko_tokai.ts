@@ -965,7 +965,7 @@ export const schoolKokoTokai: Question[] = [
     difficulty: 'standard',
     course: 'koko-tokai',
     examType: 'koko',
-    question: `次の英文の下線部のイディオムの意味として最も適切なものを選びなさい。"I could not make up my mind about which university to choose."`,
+    question: `次の英文中のイディオム make up my mind の意味として最も適切なものを選びなさい。"I could not make up my mind about which university to choose."`,
     choices: [`決心する`, `あきらめる`, `思い出す`, `気にする`],
     answer: `決心する`,
     hint: `make up one's mindは重要イディオム。`,
@@ -1077,7 +1077,7 @@ export const schoolKokoTokai: Question[] = [
     difficulty: 'advanced',
     course: 'koko-tokai',
     examType: 'koko',
-    passage: `Water shortages are becoming a serious problem in many parts of the world, even in countries that used to have plenty of rain. Some cities are now reusing wastewater after cleaning it carefully, turning it into safe drinking water again. Although this idea sounds unusual to many people at first, scientists say that properly treated water can be just as clean, or even cleaner, than water taken directly from rivers or lakes. As the world's population continues to grow, more cities may need to accept this kind of technology in order to guarantee a stable supply of clean water for the future.`,
+    passage: `Water shortages are becoming a serious problem in many parts of the world, even in countries that used to have plenty of rain. Some cities are now reusing wastewater after cleaning it carefully, turning it into safe drinking water again. Although this idea sounds unusual to many people at first, scientists say that properly treated water can be just as clean as, or even cleaner than, water taken directly from rivers or lakes. As the world's population continues to grow, more cities may need to accept this kind of technology in order to guarantee a stable supply of clean water for the future.`,
     question: `本文のタイトルとして最も適切なものを選びなさい。`,
     choices: [
       `The History of Rain`,

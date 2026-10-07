@@ -238,11 +238,11 @@ export const meidaiEigo: Question[] = [
 (1) "She visited Kyoto three times." を現在完了形に書き換えなさい。
 (2) "I lost my key." を現在完了の「結果」用法で書き換えなさい。
 (3) 括弧内の動詞を適切な形に変えなさい。
-   "By the time he arrived, we (finish) dinner."`,
+   "My brother (be) busy since this morning."`,
     answer: `(1) She has visited Kyoto three times.
 (2) I have lost my key.
-(3) had finished`,
-    hint: `(1)「〜したことがある」は現在完了の経験用法（have/has + 過去分詞）。(3) by the time は過去の基準点より前の出来事なので過去完了（had + 過去分詞）。`,
+(3) has been`,
+    hint: `(1)「〜したことがある」は現在完了の経験用法（have/has + 過去分詞）。(3) since は「〜からずっと」と起点を表すので、継続の現在完了（have/has + 過去分詞）を使う。主語は3人称単数。`,
     explanation: `(1) 現在完了・経験用法
   「〜したことがある」= have/has + 過去分詞
   She visited → She has visited
@@ -258,12 +258,12 @@ export const meidaiEigo: Question[] = [
   ※"I lost my key." は単なる過去の事実。
     "I have lost my key." は「今も鍵がない」という状態を含む。
 
-(3) 過去完了（大過去）
-  "By the time he arrived" = 「彼が到着した時点まで（に）」
-  arrived は過去形 → その前に完了していた出来事は過去完了形
-  finish の過去分詞 = finished → 過去完了 had finished
-  ✓ "By the time he arrived, we had finished dinner."
-  （彼が到着したときには、私たちはもう夕食を終えていた。）`,
+(3) 現在完了・継続用法
+  "since this morning" = 「今朝から（ずっと）」
+  過去のある時点から今まで続いている状態 → 現在完了形
+  be の過去分詞 = been、主語 My brother は3人称単数 → has been
+  ✓ "My brother has been busy since this morning."
+  （兄は今朝からずっと忙しい。）`,
     difficulty: 'advanced',
     course: 'tokyo-meidai',
     examType: 'chugaku',
@@ -316,9 +316,9 @@ export const meidaiEigo: Question[] = [
     question: `【長文読解】
 次の文章を読んで、問いに答えなさい。
 
-"Tokyo is one of the world's most populated cities, with over 13 million people living in the city center alone. Despite its size, Tokyo is known for being remarkably safe and clean. The city has an excellent public transportation system, including the famous Yamanote Line, which circles the central districts. Visitors often marvel at the punctuality of Tokyo's trains — they are rarely more than a minute late."
+"Tokyo is one of the world's most populated cities, with over 13 million people living in the metropolis alone. Despite its size, Tokyo is known for being remarkably safe and clean. The city has an excellent public transportation system, including the famous Yamanote Line, which circles the central districts. Visitors often marvel at the punctuality of Tokyo's trains — they are rarely more than a minute late."
 
-Q1: How many people live in central Tokyo?
+Q1: How many people live in the Tokyo metropolis?
 Q2: What is the Yamanote Line famous for?
 Q3: What two characteristics is Tokyo known for, according to the passage? （日本語で答えなさい）`,
     answer: `Q1: Over 13 million people.
@@ -326,7 +326,7 @@ Q2: It circles (goes around) the central districts of Tokyo. / It is part of Tok
 Q3: 非常に安全であることと、清潔であること。`,
     hint: `Q1は "with over 13 million people" の部分。Q2は "which circles the central districts" という関係節に注目。Q3は "known for being ..." の直後を探す。`,
     explanation:
-      '【何を聞かれているか】\n東京についての英文を読んで、3つの問いに答える読解問題。\n\n【なぜ数字や特定の語句に注目するのか】\n説明文の読解では、"with over 13 million people"のような数字や、"known for being〜"のような「何で知られているか」を示す表現に、設問の答えが集約されていることが多い。\n\n【ポイント1】Q1：人口の数字を確認する\n"with over 13 million people living in the city center alone"（中心部だけで1300万人以上）から答えがわかる。\n\n【ポイント2】Q2：山手線の説明を確認する\n"the famous Yamanote Line, which circles the central districts"（中心地区を一周する山手線）という関係代名詞節が、山手線が有名な理由を説明している。\n\n【ポイント3】Q3：2つの特徴を確認する\n"Tokyo is known for being remarkably safe and clean."（東京は非常に安全で清潔なことで知られている）から、2つの特徴（安全・清潔）がわかる。\n\n【答え】\nQ1: Over 13 million people.\nQ2: It circles (goes around) the central districts of Tokyo. / It is part of Tokyo\'s excellent public transportation system.\nQ3: 非常に安全であることと、清潔であること。\n\n【確かめ】\nそれぞれの答えが、本文中の該当する表現（over 13 million、which circles the central districts、known for being remarkably safe and clean）と対応しているか確認する。\n\n【よくあるまちがい】\nQ3で「安全」だけ、あるいは「清潔」だけの1つしか答えず、問題が"two characteristics"（2つの特徴）を求めていることを見落としてしまうミス。\n\n【ここが絶対】\n説明文の読解は、数字を含む表現と「何で知られているか」を示す表現（known for〜）に注目して、設問の答えを本文中から正確に見つける。',
+      '【何を聞かれているか】\n東京についての英文を読んで、3つの問いに答える読解問題。\n\n【なぜ数字や特定の語句に注目するのか】\n説明文の読解では、"with over 13 million people"のような数字や、"known for being〜"のような「何で知られているか」を示す表現に、設問の答えが集約されていることが多い。\n\n【ポイント1】Q1：人口の数字を確認する\n"with over 13 million people living in the metropolis alone"（東京都だけで1300万人以上）から答えがわかる。\n\n【ポイント2】Q2：山手線の説明を確認する\n"the famous Yamanote Line, which circles the central districts"（中心地区を一周する山手線）という関係代名詞節が、山手線が有名な理由を説明している。\n\n【ポイント3】Q3：2つの特徴を確認する\n"Tokyo is known for being remarkably safe and clean."（東京は非常に安全で清潔なことで知られている）から、2つの特徴（安全・清潔）がわかる。\n\n【答え】\nQ1: Over 13 million people.\nQ2: It circles (goes around) the central districts of Tokyo. / It is part of Tokyo\'s excellent public transportation system.\nQ3: 非常に安全であることと、清潔であること。\n\n【確かめ】\nそれぞれの答えが、本文中の該当する表現（over 13 million、which circles the central districts、known for being remarkably safe and clean）と対応しているか確認する。\n\n【よくあるまちがい】\nQ3で「安全」だけ、あるいは「清潔」だけの1つしか答えず、問題が"two characteristics"（2つの特徴）を求めていることを見落としてしまうミス。\n\n【ここが絶対】\n説明文の読解は、数字を含む表現と「何で知られているか」を示す表現（known for〜）に注目して、設問の答えを本文中から正確に見つける。',
     difficulty: 'advanced',
     course: 'tokyo-meidai',
     examType: 'chugaku',
@@ -547,7 +547,7 @@ export const aoyamaShakai: Question[] = [
 (3) 熱帯・モンスーン気候で高温多雨。稲は生育に高温と大量の水が必要であり、東南アジアの気候条件（年間高温・雨季の大量降雨）に合っているから。`,
     hint: `インドのIT都市はバンガロール（カルナータカ州）。東南アジアはモンスーン（季節風）の影響で雨季に大量の雨が降る。`,
     explanation:
-      '【何を聞かれているか】中国の人口が多い地理的・歴史的理由、インドのIT産業都市とその発展理由、東南アジアで稲作が盛んな気候的理由である。\n\n【なぜそうなるのか】中国は大河川流域の肥沃な平野が多くの人口を養う食料生産力を持ち、大家族制度の価値観が出生率を高めた。インドは英語教育とIT教育機関の充実、時差・人件費の面で欧米企業に選ばれた。東南アジアは高温多雨のモンスーン気候が稲の生育条件に合っている。\n\n【ステップ1】中国は黄河・長江という大河川流域に広大な沖積平野（華北平原・長江デルタ）が広がり肥沃な土地で古くから大規模農業が可能だったこと、大家族制度・儒教的な「子孫繁栄」の価値観で多くの子どもが生まれたことが人口増加の理由。インドのIT産業都市はバンガロール（ベンガルール）で、英語教育の普及・インド工科大学（IIT）等の理工系教育機関の充実・アメリカとの時差を利用した24時間業務体制・低い人件費が発展理由。\n\n【ステップ2】東南アジアは熱帯・亜熱帯に位置し年間を通じて高温（平均25℃以上）で、モンスーン（季節風）の影響で雨季（5〜10月頃）に大量の降水（年1500〜3000mm）がある。稲の生育には高温（20〜30℃）と豊富な水が不可欠で、この条件を満たすためタイ・ベトナム・インドネシアは世界有数の米輸出国になっている。\n\n【答え】(1) ①黄河・長江流域の広大な平野が農業に適し、古くから多くの人口を養える食料生産力があった。②歴史的に大家族制が続き、労働力として子どもが多く生まれた。(2) バンガロール（ベンガルール）。英語教育が普及し数学・理系人材が豊富で、人件費が低く欧米企業のアウトソーシング先として発展した。(3) 熱帯・モンスーン気候で高温多雨。稲は生育に高温と大量の水が必要であり、東南アジアの気候条件（年間高温・雨季の大量降雨）に合っているから。\n\n【確かめ】中国の一人っ子政策（1979〜2015年）は人口抑制策で、それでも世界最多の人口を維持している点から人口規模の大きさが分かる。\n\n【よくあるまちがい】インドのIT都市をムンバイやデリーだと誤答する。IT産業の中心はバンガロール（カルナータカ州）である。\n\n【ここが絶対】「インドのIT産業＝バンガロール」「東南アジアの稲作＝モンスーン気候」は地理の最頻出事項。',
+      '【何を聞かれているか】中国の人口が多い地理的・歴史的理由、インドのIT産業都市とその発展理由、東南アジアで稲作が盛んな気候的理由である。\n\n【なぜそうなるのか】中国は大河川流域の肥沃な平野が多くの人口を養う食料生産力を持ち、大家族制度の価値観が出生率を高めた。インドは英語教育とIT教育機関の充実、時差・人件費の面で欧米企業に選ばれた。東南アジアは高温多雨のモンスーン気候が稲の生育条件に合っている。\n\n【ステップ1】中国は黄河・長江という大河川流域に広大な沖積平野（華北平原・長江デルタ）が広がり肥沃な土地で古くから大規模農業が可能だったこと、大家族制度・儒教的な「子孫繁栄」の価値観で多くの子どもが生まれたことが人口増加の理由。インドのIT産業都市はバンガロール（ベンガルール）で、英語教育の普及・インド工科大学（IIT）等の理工系教育機関の充実・アメリカとの時差を利用した24時間業務体制・低い人件費が発展理由。\n\n【ステップ2】東南アジアは熱帯・亜熱帯に位置し年間を通じて高温（平均25℃以上）で、モンスーン（季節風）の影響で雨季（5〜10月頃）に大量の降水（年1500〜3000mm）がある。稲の生育には高温（20〜30℃）と豊富な水が不可欠で、この条件を満たすためタイ・ベトナム・インドネシアは世界有数の米輸出国になっている。\n\n【答え】(1) ①黄河・長江流域の広大な平野が農業に適し、古くから多くの人口を養える食料生産力があった。②歴史的に大家族制が続き、労働力として子どもが多く生まれた。(2) バンガロール（ベンガルール）。英語教育が普及し数学・理系人材が豊富で、人件費が低く欧米企業のアウトソーシング先として発展した。(3) 熱帯・モンスーン気候で高温多雨。稲は生育に高温と大量の水が必要であり、東南アジアの気候条件（年間高温・雨季の大量降雨）に合っているから。\n\n【確かめ】中国の一人っ子政策（1979〜2015年）は人口抑制策で、それでも2023年にインドに抜かれるまで世界最多の人口だった点から人口規模の大きさが分かる。\n\n【よくあるまちがい】インドのIT都市をムンバイやデリーだと誤答する。IT産業の中心はバンガロール（カルナータカ州）である。\n\n【ここが絶対】「インドのIT産業＝バンガロール」「東南アジアの稲作＝モンスーン気候」は地理の最頻出事項。',
     difficulty: 'advanced',
     course: 'tokyo-aoyama',
     examType: 'chugaku',
@@ -621,15 +621,15 @@ export const aoyamaEigo: Question[] = [
     question: `【読解・内容一致 T/F】
 次の文章を読んで、各文が True（T）か False（F）か答えなさい。
 
-"The Amazon rainforest covers about 60% of Brazil and is home to more than 10% of all species on Earth. It produces 20% of the world's oxygen and plays a vital role in regulating the global climate. However, deforestation has destroyed large areas of the forest due to farming, logging, and mining."
+"The Amazon rainforest covers about 60% of Brazil and is home to more than 10% of all species on Earth. Its rivers carry about 20% of the fresh water that flows into the world's oceans, and the forest plays a vital role in regulating the global climate. However, deforestation has destroyed large areas of the forest due to farming, logging, and mining."
 
 (1) The Amazon covers more than half of Brazil.
-(2) The Amazon produces half of the world's oxygen.
+(2) The Amazon's rivers carry half of the fresh water that flows into the world's oceans.
 (3) The main causes of deforestation mentioned are farming, logging, and mining.`,
     answer: `(1) T　(2) F　(3) T`,
     hint: `(1) "about 60%" と "more than half（50%超）"を比べる。(2) "20%" と "half（50%）"は違う。(3) 本文に列挙されている3つの原因を確認。`,
     explanation:
-      '【何を聞かれているか】\nアマゾンの熱帯雨林についての英文を読んで、3つの文がTrue（正しい）かFalse（誤り）かを答える問題。\n\n【なぜ数字の比較が正誤の決め手になるのか】\nこの問題では、本文の具体的な数字（60%、20%）と、選択肢の表現（more than half＝50%超、half＝50%）を正確に比較することが正誤判定の鍵になる。\n\n【ポイント1】(1)を確認する\n"covers about 60% of Brazil"（ブラジルの約60%）は、"more than half"（50%超）に当てはまるのでTrue。\n\n【ポイント2】(2)を確認する\n"produces 20% of the world\'s oxygen"（世界の酸素の20%）は、"half"（50%）とは異なるのでFalse。\n\n【ポイント3】(3)を確認する\n"due to farming, logging, and mining"（農業・伐採・採掘が原因）と、選択肢の3つの原因がそのまま一致するのでTrue。\n\n【答え】\n(1) T　(2) F　(3) T\n\n【確かめ】\n60%と50%、20%と50%をそれぞれ数字で比較し、本文の内容と選択肢の表現が一致するかどうかを確認する。\n\n【よくあるまちがい】\n"20%"という数字を見て、大まかに「多い」と判断して安易にTrueにしてしまうミス。"half"（50%）という具体的な基準と正確に比較する必要がある。\n\n【ここが絶対】\nT/F問題では、本文の数字と選択肢の数字表現（more than half、halfなど）を正確に比較して判定する。',
+      '【何を聞かれているか】\nアマゾンの熱帯雨林についての英文を読んで、3つの文がTrue（正しい）かFalse（誤り）かを答える問題。\n\n【なぜ数字の比較が正誤の決め手になるのか】\nこの問題では、本文の具体的な数字（60%、20%）と、選択肢の表現（more than half＝50%超、half＝50%）を正確に比較することが正誤判定の鍵になる。\n\n【ポイント1】(1)を確認する\n"covers about 60% of Brazil"（ブラジルの約60%）は、"more than half"（50%超）に当てはまるのでTrue。\n\n【ポイント2】(2)を確認する\n"Its rivers carry about 20% of the fresh water that flows into the world\'s oceans"（アマゾンの川が運ぶ水は、海に流れこむ世界の淡水の約20%）は、"half"（50%）とは異なるのでFalse。\n\n【ポイント3】(3)を確認する\n"due to farming, logging, and mining"（農業・伐採・採掘が原因）と、選択肢の3つの原因がそのまま一致するのでTrue。\n\n【答え】\n(1) T　(2) F　(3) T\n\n【確かめ】\n60%と50%、20%と50%をそれぞれ数字で比較し、本文の内容と選択肢の表現が一致するかどうかを確認する。\n\n【よくあるまちがい】\n"20%"という数字を見て、大まかに「多い」と判断して安易にTrueにしてしまうミス。"half"（50%）という具体的な基準と正確に比較する必要がある。\n\n【ここが絶対】\nT/F問題では、本文の数字と選択肢の数字表現（more than half、halfなど）を正確に比較して判定する。',
     difficulty: 'advanced',
     course: 'tokyo-aoyama',
     examType: 'chugaku',
@@ -969,7 +969,7 @@ export const tokyoChuoEigo: Question[] = [
     answer: `問1. He loves science.　問2. ウ　問3. 人々を助けるロボットを作ること`,
     hint: `まず英文全体の内容を把握する。問2は各選択肢を本文と照らし合わせる。問3の「that」は関係代名詞。`,
     explanation:
-      '【何を聞かれているか】\nケンジについての英文を読んで、3つの問いに答える読解問題。\n\n【なぜ本文の各文を設問に対応させるのか】\nこの英文は「性格・好きなこと→毎週の行動→将来の夢→先生の評価→最近の実績」という流れで書かれており、設問もこの流れに沿って作られている。\n\n【ポイント1】問1：好きなことを確認する\n"Kenji is a twelve-year-old boy who loves science."（ケンジは理科が好きな12歳の少年だ）から答えがわかる。\n\n【ポイント2】問2：選択肢を本文と照合する\nア「毎日」ではなく"every weekend"（毎週末）、イ「医者」ではなく"engineer"（技術者）、ウ「科学コンテストで優勝」は本文と一致する。\n\n【ポイント3】問3：関係代名詞thatを含む部分を訳す\n"build robots that help people"＝「人々を助けるロボットを作ること」。thatはrobotsを説明する関係代名詞。\n\n【答え】\n問1. He loves science.　問2. ウ　問3. 人々を助けるロボットを作ること\n\n【確かめ】\n問2の選択肢が、本文の"every weekend"（イ ではなく毎日ではない）、"engineer"（医者ではない）、"won first prize"（優勝した）と正確に対応しているか確認する。\n\n【よくあるまちがい】\n問2で、本文に出てくる単語（library、science）だけを見て、内容を確認せずに選んでしまうミス。"every day"と"every weekend"のような細かい違いに注意する。\n\n【ここが絶対】\n説明文の読解は、選択肢の細かい表現（頻度・職業名など）を本文と1つずつ正確に照合する。',
+      '【何を聞かれているか】\nケンジについての英文を読んで、3つの問いに答える読解問題。\n\n【なぜ本文の各文を設問に対応させるのか】\nこの英文は「性格・好きなこと→毎週の行動→将来の夢→先生の評価→最近の実績」という流れで書かれており、設問もこの流れに沿って作られている。\n\n【ポイント1】問1：好きなことを確認する\n"Kenji is a twelve-year-old boy who loves science."（ケンジは理科が好きな12歳の少年だ）から答えがわかる。\n\n【ポイント2】問2：選択肢を本文と照合する\nア「毎日」ではなく"every weekend"（毎週末）、イ「医者」ではなく"engineer"（技術者）、ウ「科学コンテストで優勝」は本文と一致する。\n\n【ポイント3】問3：関係代名詞thatを含む部分を訳す\n"build robots that help people"＝「人々を助けるロボットを作ること」。thatはrobotsを説明する関係代名詞。\n\n【答え】\n問1. He loves science.　問2. ウ　問3. 人々を助けるロボットを作ること\n\n【確かめ】\n問2の選択肢が、本文の"every weekend"（アの「毎日」ではない）、"engineer"（イの「医者」ではない）、"won first prize"（優勝した）と正確に対応しているか確認する。\n\n【よくあるまちがい】\n問2で、本文に出てくる単語（library、science）だけを見て、内容を確認せずに選んでしまうミス。"every day"と"every weekend"のような細かい違いに注意する。\n\n【ここが絶対】\n説明文の読解は、選択肢の細かい表現（頻度・職業名など）を本文と1つずつ正確に照合する。',
     difficulty: 'advanced',
     course: 'tokyo-chuo',
     examType: 'chugaku',
@@ -1190,12 +1190,12 @@ export const tokyoHoseiShakai: Question[] = [
     question: `【大問2】（江戸時代：参勤交代と鎖国）
 
 問1. 参勤交代とはどのような制度ですか。その目的も含めて説明しなさい。
-問2. 江戸幕府の「鎖国」政策で、唯一外国と貿易を続けた場所（出島）はどこの国（2か国）と貿易しましたか。
+問2. 江戸幕府の「鎖国」政策のもとで、長崎で貿易を続けることを許されたのはどこの国（2か国）ですか。
 問3. 鎖国期間中、対馬藩が外交・貿易の窓口とした国はどこですか。`,
     answer: `問1. 大名が一定期間、江戸と自国の領地を交互に住む制度。大名の経済力を消耗させ、反乱を防ぐことが目的　問2. オランダと中国（清）　問3. 朝鮮（李氏朝鮮）`,
-    hint: `参勤交代は3代将軍・徳川家光が武家諸法度に明文化。鎖国でも長崎の出島でオランダ・清と貿易継続。`,
+    hint: `参勤交代は3代将軍・徳川家光が武家諸法度に明文化。鎖国でも長崎でオランダ（出島）・清（唐人屋敷）と貿易継続。`,
     explanation:
-      '【何を聞かれているか】参勤交代の内容と目的、出島の貿易相手、対馬藩の窓口。\n【なぜそうなるのか】参勤交代は**1年おきに江戸と領地を往復**させて大名の財力を消耗させる制度。鎖国中も長崎の出島で**オランダと中国（清）**とだけ貿易し、**対馬藩は朝鮮**との窓口だった。\n【ステップ1】問1 大名が江戸と領地を1年おきに往復。目的は大名の力を弱め反乱をふせぐ。\n【ステップ2】問2 オランダ・中国（清）。\n【ステップ3】問3 朝鮮。\n【答え】問1 大名が1年おきに江戸と領地を往復する制度。大名の力を弱めるため 問2 オランダと中国（清） 問3 朝鮮\n【確かめ】薩摩藩は琉球、松前藩はアイヌとの窓口。朝鮮からは朝鮮通信使。\n【よくあるまちがい】出島の相手をポルトガルとする。**ポルトガルは追放され、オランダだけ**。\n【ここが絶対】鎖国中の4つの窓口（長崎＝オランダ・清、対馬藩＝朝鮮、薩摩藩＝琉球、松前藩＝アイヌ）は超頻出。',
+      '【何を聞かれているか】参勤交代の内容と目的、出島の貿易相手、対馬藩の窓口。\n【なぜそうなるのか】参勤交代は**1年おきに江戸と領地を往復**させて大名の財力を消耗させる制度。鎖国中も長崎で**オランダ（出島）と中国（清、唐人屋敷）**とだけ貿易し、**対馬藩は朝鮮**との窓口だった。\n【ステップ1】問1 大名が江戸と領地を1年おきに往復。目的は大名の力を弱め反乱をふせぐ。\n【ステップ2】問2 オランダ・中国（清）。\n【ステップ3】問3 朝鮮。\n【答え】問1 大名が1年おきに江戸と領地を往復する制度。大名の力を弱めるため 問2 オランダと中国（清） 問3 朝鮮\n【確かめ】薩摩藩は琉球、松前藩はアイヌとの窓口。朝鮮からは朝鮮通信使。\n【よくあるまちがい】出島の相手をポルトガルとする。**ポルトガルは追放され、オランダだけ**。\n【ここが絶対】鎖国中の4つの窓口（長崎＝オランダ・清、対馬藩＝朝鮮、薩摩藩＝琉球、松前藩＝アイヌ）は超頻出。',
     difficulty: 'advanced',
     course: 'tokyo-hosei',
     examType: 'chugaku',
@@ -1262,7 +1262,7 @@ A: "Excuse me. （　問1　）"
 B: "Sure. It's about ten minutes on foot. Go straight and turn left at the traffic light."
 A: "Thank you. （　問2　）"
 B: "No problem. Have a nice day."
-A: "（　問3　） And you too."
+A: "（　問3　）"
 
 問1. ア. What time is it?　イ. How do I get to the station?　ウ. Can I help you?　エ. Where are you from?
 問2. ア. I'm sorry.　イ. That's mine.　ウ. That's very helpful.　エ. I don't understand.
@@ -1272,7 +1272,7 @@ A: "（　問3　） And you too."
     explanation: `問1. Bが道を教えている（Go straight...）ので、Aは道を聞いている。
   イ "How do I get to the station?"（駅へはどう行けばよいですか）が適切。
 
-問2. BがNo problem.と答えているので、AはB（お礼）に対する返答が先。
+問2. Aは道を教えてもらったあとで "Thank you." と言い、さらに感謝の気持ちを続ける場面。Bが No problem.（どういたしまして）と答えているので、問2にはお礼や感謝を表す文が入る。
   ウ "That's very helpful."（それはとても助かります）が感謝の表現として適切。
 
 問3. B: "Have a nice day."（よい一日を）へのお返し表現。
@@ -1532,7 +1532,7 @@ export const tokyoGakushiinEigo: Question[] = [
     subject: 'eigo',
     question: `【大問1】（基本文型：SV・SVO・SVC）
 
-問1. 次の文の文型（SV・SVO・SVCのいずれか）を答えなさい。
+問1. 次の文の文型（SV・SVO・SVOO・SVCのいずれか）を答えなさい。
   ①"She runs fast."
   ②"He gave me a present."
   ③"The soup smells delicious."
@@ -1603,10 +1603,10 @@ export const tokyoGakushiinEigo: Question[] = [
   イ. Yumi decided to study hard to travel in the future.
   ウ. Yumi's favorite subject is math.
 問3. 下線部「so that she could travel」を日本語に直しなさい。`,
-    answer: `問1. 読書（特に冒険物語）と英語映画を見ること　問2. イ　問3. 彼女が（将来）旅行できるように`,
-    hint: `問1は本文中の「She likes...」と「practices...」を探す。問2は各選択肢を本文と照合する。問3の「so that S can/could」は「〜できるように」という目的を表す。`,
+    answer: `問1. 読書（特に冒険物語）　問2. イ　問3. 彼女が（将来）旅行できるように`,
+    hint: `問1は本文中の「She likes...」を探す。問2は各選択肢を本文と照合する。問3の「so that S can/could」は「〜できるように」という目的を表す。`,
     explanation:
-      '【何を聞かれているか】\nユミという生徒についての英文を読んで、3つの問いに答える読解問題。\n\n【なぜ本文の複数の文をまとめて答えるのか】\n問1のように「趣味は何か」を聞かれたとき、答えが1つの文だけでなく複数の文に分かれて書かれていることがあるので、本文全体から関連する情報を集めてまとめる必要がある。\n\n【ポイント1】問1：趣味に関する2つの情報を確認する\n"She likes reading books, especially adventure stories."（読書、特に冒険物語）と"she practices it every day by watching English movies."（英語映画を見て練習する）の両方が趣味に関連する。\n\n【ポイント2】問2：選択肢を本文と照合する\nア「男の子についての本」ではなく"a girl who traveled"（女の子）、イ「将来旅行できるよう勉強することを決めた」は本文と一致、ウ「好きな科目は数学」ではなく"English"（英語）。\n\n【ポイント3】問3："so that S could V"の意味を確認する\n"so that she could travel"＝「彼女が（将来）旅行できるように」という目的を表す表現。\n\n【答え】\n問1. 読書（特に冒険物語）と英語映画を見ること　問2. イ　問3. 彼女が（将来）旅行できるように\n\n【確かめ】\n問1の答えが、本文中の2つの関連する文（reading books, especially adventure stories／practices it every day by watching English movies）の両方をカバーしているか確認する。\n\n【よくあるまちがい】\n問1で「読書」だけを答え、「英語映画を見ること」を見落としてしまうミス。本文に趣味に関する情報が複数の文に分かれている場合は、すべて集めて答える。\n\n【ここが絶対】\n"so that S could/can V"＝「Sが〜できるように」という目的を表す構文をセットで覚える。設問の答えが1つの文に収まらないこともあるので、本文全体から関連情報を集める。',
+      '【何を聞かれているか】\nユミという生徒についての英文を読んで、3つの問いに答える読解問題。\n\n【なぜ「好きなこと」を表す文を探すのか】\n問1のように「趣味は何か」を聞かれたとき、本文の中で「好き」を表す文（likes など）を探せば答えが見つかる。\n\n【ポイント1】問1：趣味に関する文を確認する\n"She likes reading books, especially adventure stories."（読書、特に冒険物語が好き）が趣味にあたる。"she practices it every day by watching English movies."（英語映画を見て練習する）は、英語の練習方法であって趣味とは書かれていない。\n\n【ポイント2】問2：選択肢を本文と照合する\nア「男の子についての本」ではなく"a girl who traveled"（女の子）、イ「将来旅行できるよう勉強することを決めた」は本文と一致、ウ「好きな科目は数学」ではなく"English"（英語）。\n\n【ポイント3】問3："so that S could V"の意味を確認する\n"so that she could travel"＝「彼女が（将来）旅行できるように」という目的を表す表現。\n\n【答え】\n問1. 読書（特に冒険物語）　問2. イ　問3. 彼女が（将来）旅行できるように\n\n【確かめ】\n問1の答えが、本文中の likes を使った文（reading books, especially adventure stories）と一致しているか確認する。\n\n【よくあるまちがい】\n問1で、「英語を練習する方法（英語映画を見ること）」を趣味と取りちがえてしまうミス。本文で「好き（likes）」と書かれているのは読書のほうである。\n\n【ここが絶対】\n"so that S could/can V"＝「Sが〜できるように」という目的を表す構文をセットで覚える。「趣味」を聞かれたら、本文の「好き」を表す文を探す。',
     difficulty: 'advanced',
     course: 'tokyo-gakushuin',
     examType: 'chugaku',

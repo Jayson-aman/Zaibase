@@ -627,7 +627,7 @@ export const SPLUS_OT_A: Question[] = [
       '【ステップ5】⑤ 主語が my sister（三人称単数）で、現在の習慣なので動詞に s をつけて eats。\n' +
       '【答え】① イ（is）/ ② ア（do）/ ③ イ（Does）/ ④ イ（are）/ ⑤ イ（eats）\n' +
       '【確かめ】③ は Does she play ～?（play は原形）、②は I do not like ～（like は原形）と、do / does のあとは原形になっている。\n' +
-      '【よくあるまちがい】③ で Does she plays ～? と、動詞に s をつけてしまう。④ で There is two dogs ～ と、直後ではなく動詞に近い名詞に合わせてしまう。',
+      '【よくあるまちがい】③ で Does she plays ～? と、動詞に s をつけてしまう。④ で There is two dogs ～ と、あとに続く two dogs が複数であることを見落として is を選んでしまう。',
     pitfall: 'do / does のあとの動詞は**必ず原形**。三単現の s は does がすでに引き受けている。',
   },
   {

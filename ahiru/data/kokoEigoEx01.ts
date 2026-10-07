@@ -293,8 +293,8 @@ export const kokoEigoEx01: Question[] = [
     course: 'koko-general',
     difficulty: 'basic',
     question: '（　）内に適切な語を入れなさい。\nThe boy ( ) is playing in the garden is my brother.',
-    answer: 'who',
-    hint: '先行詞が人の場合の関係代名詞は who。',
+    answer: 'who（that）',
+    hint: '先行詞が人の場合の関係代名詞は who。that も可。',
     explanation:
       '【何を聞かれているか】\n"The boy ( ) is playing in the garden is my brother."の空欄に入る、正しい関係代名詞を答える問題。\n\n【なぜwhoを使うのか】\n先行詞The boy（人）を、後ろの"is playing in the garden"（庭で遊んでいる）という文で説明したいとき、主格の関係代名詞whoを使う。\n\n【ポイント1】先行詞が人であることを確認する\nThe boy（人）が先行詞なので、whoまたはthatを使う。\n\n【ポイント2】whoが主格であることを確認する\nwhoの後ろに動詞（is playing）が直接続いているので、whoは節の中で主語の役割をしている（主格）。\n\n【ポイント3】文全体の意味を確認する\n"The boy who is playing in the garden is my brother."＝「庭で遊んでいる男の子は私の弟だ」。\n\n【答え】\nwho\n\n【確かめ】\n"who"の後ろが"is playing in the garden"という、主語が欠けた文になっているか確認する。\n\n【よくあるまちがい】\n先行詞が人であることを確認せずに、物に使うwhichを選んでしまうミス。\n\n【ここが絶対】\n先行詞が人で主格のときはwhoを使う。「who＋動詞」の形で先行詞を後ろから修飾する。',
   },
@@ -328,8 +328,8 @@ export const kokoEigoEx01: Question[] = [
     course: 'koko-general',
     difficulty: 'basic',
     question: '（　）内に適切な語を入れなさい。\nDo you know the girl ( ) is talking with Ms. Tanaka?',
-    answer: 'who',
-    hint: '先行詞が人で、関係詞節の主語になる場合。',
+    answer: 'who（that）',
+    hint: '先行詞が人で、関係詞節の主語になる場合。that も可。',
     explanation: `先行詞 the girl は人なので関係代名詞は who を使う。who is talking with Ms. Tanaka が the girl を修飾している。who が関係詞節の中で主語の役割を果たしているため、主格の who を使う。that と置き換えることも可能。`,
   },
   {
@@ -339,7 +339,7 @@ export const kokoEigoEx01: Question[] = [
     course: 'koko-general',
     difficulty: 'basic',
     question: '次の文の（　）に入る関係代名詞を書きなさい。\nThe movie ( ) we watched last night was very exciting.',
-    answer: 'that',
+    answer: 'that（which）',
     hint: '先行詞が物で目的格の場合。which も可。',
     explanation: `先行詞 The movie は物なので関係代名詞は which または that。we watched last night の中で目的語の役割を果たしているため目的格の関係代名詞。目的格の関係代名詞は省略することもでき、The movie we watched last night ... とも書ける。`,
   },
@@ -453,8 +453,8 @@ export const kokoEigoEx01: Question[] = [
     course: 'koko-general',
     difficulty: 'standard',
     question: '（　）内に適切な語を入れなさい。\nThe building ( ) was built 100 years ago is a museum now.',
-    answer: 'which',
-    hint: '先行詞が物・場所の場合の主格関係代名詞。',
+    answer: 'which（that）',
+    hint: '先行詞が物・場所の場合の主格関係代名詞。that も可。',
     explanation: `先行詞 The building は物なので関係代名詞は which（または that）。was built 100 years ago という関係詞節の中で主語の役割を果たしているため主格の which を使う。「100年前に建てられたその建物は今は美術館だ」という文。`,
   },
   {
@@ -585,7 +585,7 @@ I have ( ) ( ) to Paris.`,
     answer: 'never been',
     hint: '現在完了（経験）の否定形。never を使う。',
     explanation: `「一度も〜したことがない」は現在完了の経験用法で、have never + 過去分詞 で表す。
-go の過去分詞は gone ではなく been を使い、「〜に行ったことがある」は have been to 〜 となる。
+「〜に行ったことがある」は、be動詞の過去分詞 been を使って have been to 〜 と表す（gone は使わない）。
 have gone to は「行ってしまった（今ここにいない）」という意味になるので注意。
 I have never been to Paris. が正しい文。
 否定文では not を使う場合も have not been to Paris. で同様の意味になる。`,
@@ -1101,7 +1101,7 @@ on the other hand だけをおぼえていて、一方の側にも other を入�
 
 悪天候にもかかわらず、彼らは試合を続けた。
 
-( ) ( ) the bad weather, they continued the game.`,
+( ) ( ) ( ) the bad weather, they continued the game.`,
     answer: 'In spite of',
     hint: '「〜にもかかわらず」を表す3語の前置詞句。1語の despite と同じ意味。',
     explanation:
@@ -1189,11 +1189,9 @@ make a promise（約束をする）、keep a promise（約束を守る）、brea
     examType: 'koko',
     course: 'koko-general',
     difficulty: 'standard',
-    question: `次の文中の下線部と最も近い意味の語句を選び、その表現を使って同じ意味の英文を書きなさい。
+    question: `次の文の bring about を、同じ意味の動詞 cause を使って書き換えなさい。
 
-The new policy will bring about significant changes in education.
-
-（bring about の意味を日本語で説明し、同義表現 cause を使って書き換えなさい。）`,
+The new policy will bring about significant changes in education.`,
     answer: 'The new policy will cause significant changes in education.',
     hint: 'bring about = cause（〜を引き起こす・もたらす）。',
     explanation: `bring about は「〜を引き起こす、もたらす」という意味の重要イディオム。
@@ -1210,7 +1208,7 @@ significant は「重大な・著しい」という意味の重要語。`,
     examType: 'koko',
     course: 'koko-general',
     difficulty: 'advanced',
-    question: `次の文中の下線部の語句の意味を文脈から推測し、日本語で説明しなさい。
+    question: `次の文中の breakthrough の意味を文脈から推測し、日本語で説明しなさい。
 
 After months of hard work, the scientist finally made a breakthrough in cancer research, which gave hope to millions of patients.`,
     answer: '画期的な発見・突破口（研究や問題解決における重要な前進）',
@@ -1245,7 +1243,7 @@ She is, so to speak, a modern Shakespeare. が正解。`,
     examType: 'koko',
     course: 'koko-general',
     difficulty: 'advanced',
-    question: `次の文中の下線部の意味を文脈から推測し、日本語で答えなさい。
+    question: `次の文中の skepticism の意味を文脈から推測し、日本語で答えなさい。
 
 The government's new environmental policy was met with skepticism by many scientists, who argued that it was too little, too late to address the climate crisis effectively.
 
@@ -1269,13 +1267,12 @@ too little, too late（あまりにも少なく遅すぎる）は英語の決ま
 言うまでもなく、健康は最も大切なものの一つだ。
 
 ( ) ( ) ( ), health is one of the most important things.`,
-    answer: 'It goes without',
-    hint: '「〜は言うまでもない」を表す定型表現。主語 It のあとに動詞が続き、前置詞＋ing の形になる。',
-    explanation: `It goes without saying that 〜 は「〜は言うまでもない」という意味の重要な慣用表現。
-It が形式主語で、真の主語は that 節（that health is...）。
-without saying は「言わなくても」という意味で、全体で「言わずとも済む＝言うまでもない」となる。
-It goes without saying that health is one of the most important things. が正解。
-Needless to say も同様の意味（Needless to say, health is...）。`,
+    answer: 'Needless to say',
+    hint: '「言うまでもなく」を表す、文頭に置く3語の決まった言い方。to 不定詞を使う。',
+    explanation: `Needless to say, 〜 は「言うまでもなく〜」という意味の重要な慣用表現（文頭に置き、コンマで主節につなぐ）。
+needless は「必要のない」という意味で、「言う必要さえない」ということから「言うまでもなく」となる。
+Needless to say, health is one of the most important things. が正解。
+It goes without saying that health is ... も同じ意味だが、こちらは that 節をつなぐ形で、コンマでつなぐこの文には合わない。`,
   },
   {
     id: 'koko_eigo_ex01_089',
@@ -1302,7 +1299,7 @@ Thanks to my efforts, the project succeeded. が正解。
     examType: 'koko',
     course: 'koko-general',
     difficulty: 'advanced',
-    question: `次の文中の下線部の語句の意味を文脈から推測し、日本語で答えなさい。
+    question: `次の文中の affluent と modest の意味を文脈から推測し、日本語で答えなさい。
 
 Despite his affluent background, he chose to live a modest life, donating most of his wealth to charity.
 
@@ -1583,7 +1580,7 @@ similar expressions: be said to 〜（〜と言われている）、be supposed 
 
 ( has / studying / she / been / abroad / for / English ) two years.
 
-日本語訳：彼女は2年間、英語を勉強するために海外にいる。`,
+日本語訳：彼女は2年間、海外で英語を勉強している。`,
     answer: 'She has been studying English abroad for two years.',
     hint: '現在完了進行形（have been -ing）。継続中の動作を強調する。',
     explanation: `現在完了進行形（have / has + been + -ing）は「（ずっと）〜し続けている」という継続中の動作を表す。
@@ -1703,10 +1700,10 @@ Little did he realize how few people would read his book. が正解。
     examType: 'koko',
     course: 'koko-general',
     difficulty: 'standard',
-    question: '次の英文を読んで、質問に答えなさい。\n\nThe Amazon rainforest is often called the "lungs of the Earth." It produces about 20% of the world\'s oxygen and is home to millions of plant and animal species. However, large areas of the forest are being cut down every year for farming and logging. Scientists warn that if deforestation continues at this rate, the rainforest could disappear within a century.\n\n質問：アマゾンの熱帯雨林が「地球の肺」と呼ばれる理由を日本語で説明しなさい。',
-    answer: '世界の酸素の約20%を生産しているから。',
+    question: '次の英文を読んで、質問に答えなさい。\n\nThe Amazon rainforest is often called the "lungs of the Earth." It is said to produce about 20% of the world\'s oxygen and is home to millions of plant and animal species. However, large areas of the forest are being cut down every year for farming and logging. Scientists warn that if deforestation continues at this rate, the rainforest could disappear within a century.\n\n質問：アマゾンの熱帯雨林が「地球の肺」と呼ばれる理由を日本語で説明しなさい。',
+    answer: '世界の酸素の約20%を生産していると言われているから。',
     explanation:
-      '【何を聞かれているか】\nアマゾンの熱帯雨林についての英文を読んで、「地球の肺」と呼ばれる理由を日本語で説明する問題。\n\n【なぜ酸素生産の割合に注目するのか】\n「地球の肺」という比喩は、人間の肺が呼吸によって酸素を取り込む役割と同じように、アマゾンが地球規模で酸素を生み出す役割を果たしていることに基づいている。\n\n【ポイント1】該当する文を確認する\n"It produces about 20% of the world\'s oxygen"（世界の酸素の約20%を生産している）。\n\n【ポイント2】比喩の意味を確認する\n肺が呼吸によって酸素を取り込むように、アマゾンは光合成によって大量の酸素を生み出しているため、「地球の肺」と呼ばれる。\n\n【ポイント3】他の情報と区別する\n"home to millions of plant and animal species"（多くの動植物の生息地）は別の特徴であり、「肺」という比喩の直接の理由ではない。\n\n【答え】\n世界の酸素の約20%を生産しているから。\n\n【確かめ】\n答えが「20%の酸素生産」という具体的な数字を含んでいるか確認する。\n\n【よくあるまちがい】\n「多くの動植物が生息しているから」のように、別の特徴を理由として答えてしまうミス。「肺」の比喩は酸素生産に基づいている。\n\n【ここが絶対】\n比喩表現の理由を問われたら、その比喩と直接対応する具体的な事実（ここでは酸素生産量）を本文から探す。',
+      '【何を聞かれているか】\nアマゾンの熱帯雨林についての英文を読んで、「地球の肺」と呼ばれる理由を日本語で説明する問題。\n\n【なぜ酸素生産の割合に注目するのか】\n「地球の肺」という比喩は、人間の肺が呼吸によって酸素を取り込む役割と同じように、アマゾンが地球規模で酸素を生み出す役割を果たしていることに基づいている。\n\n【ポイント1】該当する文を確認する\n"It is said to produce about 20% of the world\'s oxygen"（世界の酸素の約20%を生産していると言われている）。\n\n【ポイント2】比喩の意味を確認する\n肺が呼吸によって酸素を取り込むように、アマゾンは光合成によって大量の酸素を生み出しているため、「地球の肺」と呼ばれる。\n\n【ポイント3】他の情報と区別する\n"home to millions of plant and animal species"（多くの動植物の生息地）は別の特徴であり、「肺」という比喩の直接の理由ではない。\n\n【答え】\n世界の酸素の約20%を生産していると言われているから。\n\n【確かめ】\n答えが「20%の酸素生産」という具体的な数字を含んでいるか確認する。\n\n【よくあるまちがい】\n「多くの動植物が生息しているから」のように、別の特徴を理由として答えてしまうミス。「肺」の比喩は酸素生産に基づいている。\n\n【ここが絶対】\n比喩表現の理由を問われたら、その比喩と直接対応する具体的な事実（ここでは酸素生産量）を本文から探す。',
   },
   {
     id: 'koko_eigo_ex01_113',
@@ -1806,7 +1803,7 @@ Little did he realize how few people would read his book. が正解。
     question: '次の英文を読んで、質問に答えなさい。\n\nIn recent decades, the rise of "fast fashion" has transformed the clothing industry. Garments are now produced at unprecedented speed and sold at very low prices, encouraging consumers to buy more and discard clothes sooner. While this model has made fashion accessible to a wider population, it comes at a significant environmental cost. The textile industry is responsible for approximately 10% of global carbon emissions and is the second-largest consumer of the world\'s water supply. Microplastic fibers shed during washing also enter waterways, accumulating in marine ecosystems.\n\n質問：ファストファッションが環境に与える問題点を本文から２点挙げ、日本語で説明しなさい。',
     answer: '①衣料品産業は世界の炭素排出量の約10%を占め、世界で2番目に水を消費する産業であること。②洗濯時に流出するマイクロプラスチック繊維が水路に入り、海洋生態系に蓄積すること。',
     explanation:
-      '【何を聞かれているか】\nファストファッションについての英文を読んで、環境への問題点を2点、日本語で説明する問題。\n\n【なぜ第4・5文に注目するのか】\n本文は「ファストファッションの普及→利点（服が身近になった）→しかし環境コストが大きい」という流れで進み、その直後の2つの文で具体的な環境問題（炭素排出・水資源、マイクロプラスチック）が説明されている。\n\n【ポイント1】1つ目の問題点を確認する\n"The textile industry is responsible for approximately 10% of global carbon emissions and is the second-largest consumer of the world\'s water supply."（繊維産業は世界の炭素排出量の約10%を占め、世界で2番目に水を消費する産業）。\n\n【ポイント2】2つ目の問題点を確認する\n"Microplastic fibers shed during washing also enter waterways, accumulating in marine ecosystems."（洗濯時に流出するマイクロプラスチック繊維が水路に入り、海洋生態系に蓄積する）。\n\n【ポイント3】howeverの前後の構造を確認する\n"it comes at a significant environmental cost"の直後に、具体的な2つの問題点が続く構成になっている。\n\n【答え】\n①衣料品産業は世界の炭素排出量の約10%を占め、世界で2番目に水を消費する産業であること。②洗濯時に流出するマイクロプラスチック繊維が水路に入り、海洋生態系に蓄積すること。\n\n【確かめ】\n答えが2点とも本文の具体的な数字・事実（10%、マイクロプラスチック）を含んでいるか確認する。\n\n【よくあるまちがい】\n「環境に悪い」というような曖昧な答えで終わらせてしまうミス。本文にある具体的な事実を2点明示する。\n\n【ここが絶対】\n「利点を認めつつ問題点を指摘する」構成の英文では、howeverやbutの直後に具体的な問題点が続くことが多い。',
+      '【何を聞かれているか】\nファストファッションについての英文を読んで、環境への問題点を2点、日本語で説明する問題。\n\n【なぜ第4・5文に注目するのか】\n本文は「ファストファッションの普及→利点（服が身近になった）→しかし環境コストが大きい」という流れで進み、その直後の2つの文で具体的な環境問題（炭素排出・水資源、マイクロプラスチック）が説明されている。\n\n【ポイント1】1つ目の問題点を確認する\n"The textile industry is responsible for approximately 10% of global carbon emissions and is the second-largest consumer of the world\'s water supply."（繊維産業は世界の炭素排出量の約10%を占め、世界で2番目に水を消費する産業）。\n\n【ポイント2】2つ目の問題点を確認する\n"Microplastic fibers shed during washing also enter waterways, accumulating in marine ecosystems."（洗濯時に流出するマイクロプラスチック繊維が水路に入り、海洋生態系に蓄積する）。\n\n【ポイント3】While〜の文の構造を確認する\n"it comes at a significant environmental cost"の直後に、具体的な2つの問題点が続く構成になっている。\n\n【答え】\n①衣料品産業は世界の炭素排出量の約10%を占め、世界で2番目に水を消費する産業であること。②洗濯時に流出するマイクロプラスチック繊維が水路に入り、海洋生態系に蓄積すること。\n\n【確かめ】\n答えが2点とも本文の具体的な数字・事実（10%、マイクロプラスチック）を含んでいるか確認する。\n\n【よくあるまちがい】\n「環境に悪い」というような曖昧な答えで終わらせてしまうミス。本文にある具体的な事実を2点明示する。\n\n【ここが絶対】\n「利点を認めつつ問題点を指摘する」構成の英文では、howeverやbutの直後に具体的な問題点が続くことが多い。',
   },
   {
     id: 'koko_eigo_ex01_122',
@@ -2015,7 +2012,7 @@ Little did he realize how few people would read his book. が正解。
     examType: 'koko',
     course: 'koko-general',
     difficulty: 'advanced',
-    question: '次の日本語を英語に直しなさい。\n\n「先生は私たちに、試験が終わったらすぐに問題用紙を提出するよう言いました。」',
+    question: '次の日本語を英語に直しなさい。\n\n「先生は私たちに、試験が終わったらすぐに解答用紙を提出するよう言いました。」',
     answer: 'The teacher told us to hand in our answer sheets as soon as we finished the exam.',
     hint: 'tell + O + to不定詞 の構文を使います。「～するとすぐに」は as soon as。',
     explanation: 'tell + O + to do。as soon as S + 過去形（時を表す副詞節なので現在形→過去形）。hand in「提出する」。',

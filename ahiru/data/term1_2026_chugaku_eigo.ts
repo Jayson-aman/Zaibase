@@ -71,8 +71,8 @@ export const term1_2026ChugakuEigo: Question[] = [
     answer: `① three　② seven　③ ten`,
     hint: `1から10までの数字の英語（one, two, three...）を順番に思い出す。`,
     explanation:
-      '【何を聞かれているか】\n3・7・10という数字を英語で書く問題。\n\n【なぜ1〜10の数字を正確に覚える必要があるのか】\n数字の英単語は、時刻・年齢・値段など様々な表現の基礎になる、最も基本的な語彙。\n\n【ポイント1】数字の並びを確認する\none, two, three, four, five, six, seven, eight, nine, tenの順。\n\n【ポイント2】3と7と10を確認する\n3→three、7→seven、10→ten。\n\n【ポイント3】つづりに注意する\neightはe-i-g-h-tで、gの後にhが入る点に注意する。\n\n【答え】\n① three　② seven　③ ten\n\n【確かめ】\nそれぞれの数字が正しい英単語のつづりになっているか確認する。\n\n【よくあるまちがい】\nsevenのスペルを、oとeの順番を間違えて書いてしまうミス。\n\n【ここが絶対】\none, two, three...と声に出して10まで数える練習を通して、数字の英単語を正確に覚える。',
-    pitfall: `sevenのスペルを正しく確認すること。o-eの順番を間違えやすい。`,
+      '【何を聞かれているか】\n3・7・10という数字を英語で書く問題。\n\n【なぜ1〜10の数字を正確に覚える必要があるのか】\n数字の英単語は、時刻・年齢・値段など様々な表現の基礎になる、最も基本的な語彙。\n\n【ポイント1】数字の並びを確認する\none, two, three, four, five, six, seven, eight, nine, tenの順。\n\n【ポイント2】3と7と10を確認する\n3→three、7→seven、10→ten。\n\n【ポイント3】つづりに注意する\nsevenはs-e-v-e-nで、eが2つ入る点に注意する。\n\n【答え】\n① three　② seven　③ ten\n\n【確かめ】\nそれぞれの数字が正しい英単語のつづりになっているか確認する。\n\n【よくあるまちがい】\nsevenのスペルを、eの数を間違えて（sevn、sevenn など）書いてしまうミス。\n\n【ここが絶対】\none, two, three...と声に出して10まで数える練習を通して、数字の英単語を正確に覚える。',
+    pitfall: `sevenのスペルを正しく確認すること。s-e-v-e-nとeが2つ入るので、eの数を間違えやすい。`,
     memoryTip: `one, two, three...と指を折りながら声に出して10まで数える練習をする。`,
   },
   {
@@ -87,11 +87,11 @@ export const term1_2026ChugakuEigo: Question[] = [
 ② blue
 ③ yellow`,
     answer: `① 赤　② 青　③ 黄色`,
-    hint: `信号の色（red=止まれ、blue=進め、yellow=注意）をイメージする。`,
+    hint: `信号の止まれ（red）・注意（yellow）や、空や海の色（blue）をイメージする。`,
     explanation:
-      '【何を聞かれているか】\nred・blue・yellowという色を表す英単語の意味を日本語で答える問題。\n\n【なぜこれらの単語が重要なのか】\n基本的な色の単語は、小学校英語で最初に習う、日常会話で頻繁に使われる基礎語彙。\n\n【ポイント1】redの意味を確認する\nred＝赤。\n\n【ポイント2】blueの意味を確認する\nblue＝青。\n\n【ポイント3】yellowの意味を確認する\nyellow＝黄色。\n\n【答え】\n① 赤　② 青　③ 黄色\n\n【確かめ】\nそれぞれの単語が正しい色を表しているか確認する。\n\n【よくあるまちがい】\nblueとgreen（緑）、redとpink（ピンク）のように、似た系統の色の単語を混同してしまうミス。\n\n【ここが絶対】\n信号機の色（red・yellow・blue）から色の単語を覚えると忘れにくい。',
+      '【何を聞かれているか】\nred・blue・yellowという色を表す英単語の意味を日本語で答える問題。\n\n【なぜこれらの単語が重要なのか】\n基本的な色の単語は、小学校英語で最初に習う、日常会話で頻繁に使われる基礎語彙。\n\n【ポイント1】redの意味を確認する\nred＝赤。\n\n【ポイント2】blueの意味を確認する\nblue＝青。\n\n【ポイント3】yellowの意味を確認する\nyellow＝黄色。\n\n【答え】\n① 赤　② 青　③ 黄色\n\n【確かめ】\nそれぞれの単語が正しい色を表しているか確認する。\n\n【よくあるまちがい】\nblueとgreen（緑）、redとpink（ピンク）のように、似た系統の色の単語を混同してしまうミス。\n\n【ここが絶対】\n信号機の止まれ（red）・注意（yellow）や、空や海の色（blue）から色の単語を覚えると忘れにくい（英語では、進めの色は green と言う）。',
     pitfall: `yellowのつづりでwを忘れないこと。y-e-l-l-o-wが正しい。`,
-    memoryTip: `信号機の色（red・yellow・blue）から覚えると忘れにくい。`,
+    memoryTip: `信号機の止まれ（red）・注意（yellow）や、空や海の色（blue）から覚えると忘れにくい。`,
   },
   {
     id: 'term1_2026_chugaku_eigo_006',
@@ -1024,7 +1024,7 @@ I get up at seven every morning. I go to school by bike. I have four classes in 
     examType: 'chugaku',
     difficulty: 'advanced',
     maxOnly: true,
-    question: `次の文には誤りが1か所あります。誤りを指摘し、正しく直しなさい。
+    question: `次の文には誤りが2か所あります。誤りを指摘し、正しく直しなさい。
 
 I have a apple and a orange in my bag.`,
     answer: `a apple → an apple、a orange → an orange（母音で始まる語の前はanを使う）`,
