@@ -964,7 +964,7 @@ export const kenmeiExam: Question[] = [
       '南中',
       '日の出',
       '日の入り',
-      '正中',
+      '夏至',
     ],
     answer: '南中',
     hint: '太陽が真南の空にあるときの言葉を思い出しましょう。',

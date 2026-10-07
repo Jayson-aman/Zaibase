@@ -185,7 +185,7 @@ export default function FeaturesPage() {
           <View style={styles.heroInner}>
             {/* タグバッジ */}
             <View style={styles.heroTag}>
-              <Text style={styles.heroTagText}>中学受験・高校受験  ｜  2026年度入試対応</Text>
+              <Text style={styles.heroTagText}>中学受験・高校受験  ｜  最新の入試傾向に対応</Text>
             </View>
 
             {/* メインタイトル（明朝体） */}
