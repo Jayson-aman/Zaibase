@@ -717,7 +717,9 @@ const styles = StyleSheet.create({
     color: '#221C18',
     textAlign: 'center',
     lineHeight: 40,
-    marginBottom: 20,
+    // 分数（縦表示）が行の下で切れないよう、文字の枠の下に余白を持たせる（見た目の間隔は同じ）
+    paddingBottom: 14,
+    marginBottom: 6,
     fontFamily: SERIF,
   },
   passageBox: {

@@ -29,11 +29,16 @@ const SPLIT = /(\*\*[^*]+?\*\*)/g;
 // 「9/20（金）」のように、あとに曜日のかっこが続くものは日付なので分数にしない。
 const FRACTION = /(^|[^\d./√π])(\d{1,5})\/(\d{1,5})(?![\d./])(?!（[月火水木金土日]）)/g;
 
+// ⚠️ iOS は、行の中に置いた分数の View を、文字の枠（Text の高さ）の下端で切る。
+//    実機（TestFlight 1.1.13）で、答えの「a＝3/2」の分母が下で切れた（2026/10/7）。
+//    原因は、分数を下へずらす量（translateY）が、行の下の余白より大きかったこと。
+//    ずらす量を 0.42→0.24 に、分子・分母の行の高さを 1.2→1.1 に縮めて、切れない側に寄せた。
+//    ずらしすぎない代わりに、横棒が文字の中心よりやや上に来る。実機で見ながら微調整すること。
 export type RichOpts = { size?: number; color?: string; bold?: boolean };
 
 function Fraction({ n, d, size, color, bold }: { n: string; d: string; size: number; color: string; bold: boolean }) {
   const fs = Math.round(size * 0.82);
-  const text: TextStyle = { fontSize: fs, lineHeight: Math.round(fs * 1.2), color, fontWeight: bold ? '900' : '600', textAlign: 'center' };
+  const text: TextStyle = { fontSize: fs, lineHeight: Math.round(fs * 1.1), color, fontWeight: bold ? '900' : '600', textAlign: 'center' };
   const wide = Math.max(n.length, d.length);
   return (
     <View
@@ -41,7 +46,7 @@ function Fraction({ n, d, size, color, bold }: { n: string; d: string; size: num
         styles.fraction,
         Platform.OS === 'web'
           ? ({ display: 'inline-flex', verticalAlign: 'middle' } as object)
-          : { transform: [{ translateY: Math.round(size * 0.42) }] },
+          : { transform: [{ translateY: Math.round(size * 0.24) }] },
         { minWidth: wide * fs * 0.62 + 4 },
       ]}
       accessible

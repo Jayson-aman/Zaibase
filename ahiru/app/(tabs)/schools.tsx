@@ -1,5 +1,6 @@
 import React from 'react';
 import { schoolQuestionStats } from '../../data/school-counts';
+import { ALL_COURSES, type CourseInfo } from '../../data/courses';
 import {
   View,
   Text,
@@ -48,7 +49,7 @@ type SchoolGroup = {
   schools: SchoolEntry[];
 };
 
-const SCHOOL_GROUPS: SchoolGroup[] = [
+const BASE_SCHOOL_GROUPS: SchoolGroup[] = [
   {
     label: '関関同立附属',
     icon: '🎓',
@@ -103,6 +104,42 @@ const SCHOOL_GROUPS: SchoolGroup[] = [
     ],
   },
 ];
+
+// 問題データがあるのに一覧に載っていなかった学校を、courses.ts の定義から自動で足す
+// （高校受験の学校が4校しか出ていなかった。データには13校以上あった。2026/10/7）。
+// 名前・偏差値・男女・MAX限定の別は courses.ts が持っているので、ここに二重に書かない。
+function entryFromCourse(c: CourseInfo): SchoolEntry {
+  return {
+    key: c.key,
+    name: c.name,
+    emoji: c.emoji,
+    hensachi: c.hensachi ?? '',
+    gender: c.gender ?? '共学',
+    tier: c.maxOnly ? 'max' : 'pro',
+  };
+}
+
+function buildSchoolGroups(): SchoolGroup[] {
+  const listed = new Set(BASE_SCHOOL_GROUPS.flatMap((g) => g.schools.map((s) => s.key)));
+  // 偏差値の定義があるコースだけが「学校」。一般・公立などのカテゴリは入れない。
+  const missing = ALL_COURSES.filter((c) => c.hensachi && !listed.has(c.key));
+  const kokoExtra = missing.filter((c) => c.examType === 'koko').map(entryFromCourse);
+  const chugakuExtra = missing.filter((c) => c.examType === 'chugaku').map(entryFromCourse);
+  const groups = BASE_SCHOOL_GROUPS.map((g) =>
+    g.label === '高校受験' ? { ...g, schools: [...g.schools, ...kokoExtra] } : g,
+  );
+  if (chugakuExtra.length > 0) {
+    groups.splice(Math.max(0, groups.length - 1), 0, {
+      label: 'そのほかの中学受験校',
+      icon: '🏫',
+      color: '#0EA5E9',
+      schools: chugakuExtra,
+    });
+  }
+  return groups;
+}
+
+const SCHOOL_GROUPS: SchoolGroup[] = buildSchoolGroups();
 
 export default function SchoolsScreen() {
   const router = useRouter();
