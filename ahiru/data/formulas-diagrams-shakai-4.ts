@@ -27,7 +27,7 @@ const kokkai: DiagramFigure = show([
       ...fresh(),
       ln(20, 70, 300, 70, C.gray),
       ...[0, 1, 2, 3, 4, 5].flatMap((i) => [ln(30 + i * 45, 64, 30 + i * 45, 76, C.gray), lb(30 + i * 45, 90, `${i + 1}月`, 11, C.gray, 'middle')]),
-      bx(30, 30, 222, 24, '会期 150日（1月〜5月ごろ）', C.blue, FILL.blue, 12),
+      bx(30, 30, 222, 24, '会期 150日（1月〜6月ごろ）', C.blue, FILL.blue, 12),
       ln(165, 58, 165, 100, C.red, true, 2),
       lb(165, 114, '4月 新年度スタート', 11, C.red, 'middle', true),
       ...band(130, cap('4月までに 次の年度の予算を決める', 160, C.blue), sub('だから常会は 予算の審議（しんぎ）が中心', 186)),

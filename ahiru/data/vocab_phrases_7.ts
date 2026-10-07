@@ -650,9 +650,9 @@ export const vocabPhrases7: VocabEntry[] = [
     level: 'entrance', category: 'phrase', frequency: 'medium', isPhrase: true,
   },
   {
-    id: 'p1290', word: 'by exception', pronunciation: 'バイ エクセプション',
+    id: 'p1290', word: 'as an exception', pronunciation: 'アズ アン イクセプション',
     pos: 'phr.', meaning: '例外として・特例として',
-    example: 'Access was granted by exception for the senior staff.',
+    example: 'Access was granted to the senior staff as an exception.',
     exampleJa: 'アクセスは上級スタッフに限り例外として許可された。',
     level: 'entrance', category: 'phrase', frequency: 'medium', isPhrase: true,
   },
@@ -1082,7 +1082,7 @@ export const vocabPhrases7: VocabEntry[] = [
   },
   {
     id: 'p1349', word: 'besides that', pronunciation: 'ビサイドズ ザット',
-    pos: 'phr.', meaning: 'それに加えて・それはさておき',
+    pos: 'phr.', meaning: 'それに加えて・それ以外には',
     example: 'Besides that, the cost was much higher than expected.',
     exampleJa: 'それに加えて、費用は予想よりはるかに高かった。',
     level: 'senior_basic', category: 'phrase', frequency: 'high', isPhrase: true,

@@ -63,7 +63,7 @@ const hikaku: DiagramFigure = show([
 
 // ── as 〜 as と不規則な比較変化 ──
 const asas: DiagramFigure = show([
-  s('Ken と Tom の走る速さがちょうど同じです。❓同じくらいのとき、比較級（faster than）は使えるでしょうか。→比較級は「ちがい」を言う形なので、同じときには合いません。',
+  s('He（彼）と I（私）の走る速さがちょうど同じです。❓同じくらいのとき、比較級（faster than）は使えるでしょうか。→比較級は「ちがい」を言う形なので、同じときには合いません。',
     [...bar(90, 70, 'He', 'blue'), ...bar(180, 70, 'I', 'blue'), ln(80, 70, 250, 70, C.gray, true, 1.5), t(160, 28, '走る速さが同じ', 'ink', 14, 'middle', true)],
     bt('「同じ」は「ちがい」ではない', '❓では、どう言う？', 'blue')),
   s('❓「同じくらい」はどう言う？→as と as ではさみます。He runs as fast as I do. 「私と同じくらい速く走る」の意味です。',

@@ -67,7 +67,7 @@ const narabe: DiagramFigure = show([
   S('手順2は、主語と動詞を先に置くことです。This が主語、is が動詞なので「This is」から始めます。❓なぜ主語と動詞から置くのでしょう。この2つが文の骨組みで、残りの語は説明を付け足すだけだからです。',
     ...chips(40, [B('This'), R('is'), K('？？？', 4)], { h: 40, size: 14 }), lb(78, 96, '主語', 12, C.blue, 'middle', true), lb(140, 96, '動詞', 12, C.red, 'middle', true), cap('骨組み ＝ 主語 ＋ 動詞', C.red, FILL.red)),
   S('手順3は、かたまりを作ることです。the book は「冠詞＋名詞」、I bought yesterday は「だれが・どうした・いつ」で1つのかたまりです。❓なぜかたまりにするのでしょう。1語ずつ並べると組み合わせが多すぎるので、かたまりにすれば並べる数が減るからです。',
-    ...chips(30, [G('the book', 1), P('I bought yesterday', 2)], { h: 40, size: 13 }), lb(160, 96, '7語 → 3かたまり', 13, C.ink, 'middle', true), ...chips(116, [B('This'), R('is'), G('the book'), P('I bought yesterday', 2)], { h: 34, size: 11 }), cap('かたまりを作ってから並べる', C.green, FILL.green, 13, 176)),
+    ...chips(30, [G('the book', 1), P('I bought yesterday', 2)], { h: 40, size: 13 }), lb(160, 96, '7語 → 4つのかたまり', 13, C.ink, 'middle', true), ...chips(116, [B('This'), R('is'), G('the book'), P('I bought yesterday', 2)], { h: 34, size: 11 }), cap('かたまりを作ってから並べる', C.green, FILL.green, 13, 176)),
   S('❓では I bought yesterday はどこに置くのでしょう。book のあとです。日本語では「私が昨日買った本」と前から説明しますが、英語では説明したい名詞の後ろに置きます。だから the book I bought yesterday になります。',
     ...chips(34, [G('the book', 1), P('I bought yesterday', 2)], { h: 40, size: 13 }), ar(230, 88, 100, 76, C.purple), lb(160, 110, '後ろから book を説明', 13, C.purple, 'middle', true), cap('説明は名詞のあとに置く', C.purple, FILL.purple)),
   S('完成です。This is the book I bought yesterday. 「これは私が昨日買った本です」と意味が合います。',

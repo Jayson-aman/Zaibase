@@ -405,7 +405,7 @@ const hatsuden: DiagramFigure = show([
   },
   {
     note: '日本の発電は時代とともに変わりました。1950年代まで水力、次に火力、1970年代から原子力が増え、2011年以降は火力への依存が高まります。❓なぜ変わったのか、順に見ます。',
-    add: [...fresh(...fl(['1960年代\nまで', '高度経済\n成長期', '1970年代', '2011年\n以降'], 20, { h: 40, size: 10, color: C.main, fill: FILL.warm, gap: 12, pad: 6 }), ...fl(['水力中心', '火力へ', '原子力増', '火力高い'], 80, { h: 34, size: 11, color: C.blue, fill: FILL.blue, gap: 12, pad: 6 })), ...cap('水力 → 火力 → 原子力 → 火力', C.main, FILL.warm)],
+    add: [...fresh(...fl(['1950年代\nまで', '高度経済\n成長期', '1970年代', '2011年\n以降'], 20, { h: 40, size: 10, color: C.main, fill: FILL.warm, gap: 12, pad: 6 }), ...fl(['水力中心', '火力へ', '原子力増', '火力高い'], 80, { h: 34, size: 11, color: C.blue, fill: FILL.blue, gap: 12, pad: 6 })), ...cap('水力 → 火力 → 原子力 → 火力', C.main, FILL.warm)],
   },
   {
     note: '❓なぜ水力から火力へ？→高度経済成長で工場や家庭の電気の使用量が急に増え、水力だけでは足りなくなったからです。❓なぜ火力？→安い石油が大量に輸入できたからです。',

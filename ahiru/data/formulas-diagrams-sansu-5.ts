@@ -175,7 +175,7 @@ const dial = { x: 160, y: 125 };
 const ray = (deg: number, len: number, color: string, dashed = false) => ln(dial.x, dial.y, dial.x + len * Math.cos((deg * Math.PI) / 180), dial.y - len * Math.sin((deg * Math.PI) / 180), color, dashed, 2);
 const sankaku: DiagramFigure = show([
   {
-    note: '三角定規は2枚1組です。1枚は 30°・60°・90°、もう1枚は 45°・45°・90° の角をもっています。角度の問題では、この5種類の角をすぐ言えることが出発点です。',
+    note: '三角定規は2枚1組です。1枚は 30°・60°・90°、もう1枚は 45°・45°・90° の角をもっています。角度の問題では、この4種類の角（30°・45°・60°・90°）をすぐ言えることが出発点です。',
     add: [pg([[25, 125], [112, 125], [25, 75]], C.blue, 'rgba(2,132,199,0.12)'), lb(42, 118, '90°', 9, C.ink, 'middle', true), lb(88, 119, '30°', 10, C.blue, 'middle', true), lb(34, 90, '60°', 10, C.blue, 'middle', true), pg([[180, 125], [270, 125], [180, 35]], C.green, 'rgba(22,163,74,0.12)'), lb(196, 118, '90°', 9, C.ink, 'middle', true), lb(250, 119, '45°', 10, C.green, 'middle', true), lb(192, 62, '45°', 10, C.green, 'middle', true), ...band(150, lb(160, 190, '30°・60°・90° と 45°・45°・90°', 14, C.ink, 'middle', true))],
   },
   {
@@ -187,7 +187,7 @@ const sankaku: DiagramFigure = show([
     add: [...fresh(pg([[110, 20], [210, 20], [210, 120], [110, 120]], C.green, 'rgba(22,163,74,0.08)'), ln(110, 120, 210, 20, C.red, true, 2)), lb(121, 98, '45°', 10, C.green, 'middle', true), lb(190, 27, '45°', 9, C.green, 'middle', true), lb(124, 36, '90°', 10, C.ink, 'middle', true), ...band(150, lb(160, 190, '正方形を半分 → 45°・45°・90°', 13, C.green, 'middle', true))],
   },
   {
-    note: 'この5種類の角から、新しい角を作れます。まず「重ねる」やり方です。60° の角と 45° の角を、頂点と一つの辺をそろえて重ねます。',
+    note: 'この4種類の角から、新しい角を作れます。まず「重ねる」やり方です。60° の角と 45° の角を、頂点と一つの辺をそろえて重ねます。',
     add: [...fresh(sc(dial.x, dial.y, 100, 0, 60, C.red, 'rgba(225,29,72,0.15)'), sc(dial.x, dial.y, 70, 0, 45, C.blue, 'rgba(2,132,199,0.2)'), ln(dial.x, dial.y, dial.x + 110, dial.y, C.ink, false, 2), ray(60, 100, C.red), ray(45, 100, C.blue)), lb(232, 118, '45°', 11, C.blue, 'middle', true), lb(196, 80, '60°', 11, C.red, 'middle', true), ...band(152, lb(160, 195, '60° と 45° を重ねる', 13, C.ink, 'middle', true))],
   },
   {

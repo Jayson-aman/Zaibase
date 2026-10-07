@@ -164,7 +164,7 @@ const tokoshiki: DiagramFigure = show([
   },
   {
     note: '物体を焦点の内側に置くと、光はレンズを出たあと広がってしまい、1点に集まりません。❓ではなぜ像が見えるのでしょう。広がった光をレンズの向こうへ逆にのばすと1点に交わり、目にはそこから光が来たように見えるからです。これが拡大された正立虚像です。',
-    add: fresh(...lensAxis(), ...objArrow(130, 20), ar(130, 90, 160, 90, C.red), ar(170, 90, 250, 116, C.red), ar(130, 90, 160, 110, C.green), ar(160, 110, 240, 137, C.green), ln(160, 90, 100, 70, C.red, true), ln(160, 110, 100, 70, C.green, true), ...objArrow(100, 40, C.gray, true), lb(92, 68, '虚像', 11, C.gray, 'end', true), lb(142, 128, '物', 11, C.main), ...band(BY + 50, lb(160, 215, '光が広がる → 逆にのばした交点に虚像', 12, C.ink, 'middle', true))),
+    add: fresh(...lensAxis(), ...objArrow(130, 20), ar(130, 90, 160, 90, C.red), ar(170, 90, 250, 116, C.red), ar(130, 90, 160, 110, C.green), ar(160, 110, 238, 162, C.green), ln(160, 90, 100, 70, C.red, true), ln(160, 110, 100, 70, C.green, true), ...objArrow(100, 40, C.gray, true), lb(92, 68, '虚像', 11, C.gray, 'end', true), lb(142, 128, '物', 11, C.main), ...band(BY + 50, lb(160, 215, '光が広がる → 逆にのばした交点に虚像', 12, C.ink, 'middle', true))),
   },
   {
     note: '実像は、光が実際に集まってできる像なので、スクリーンにうつります。虚像は、光は集まっていなくて、そう見えるだけなので、スクリーンにはうつりません。実像は上下左右が逆（倒立）、虚像は同じ向き（正立）です。',
@@ -541,7 +541,7 @@ const slopeForces = (deg: number, L: number): DiagramElement[] => {
 const gousei: DiagramFigure = show([
   {
     note: '2つの力を1つにまとめることを合成、まとめた力を合力といいます。まず、同じ向きの2力です。3Nと5Nが同じ向きなら、合力は 3＋5＝8N です。❓なぜ足し算？ 同じ向きに引けば、力がそのまま重なるからです。',
-    add: [bx(110, 60, 60, 40, '物体', C.main, FILL.warm, 13), ar(170, 80, 205, 80, C.red), ar(205, 80, 260, 80, C.red), lb(188, 66, '3N', 11, C.red, 'middle', true), lb(232, 66, '5N', 11, C.red, 'middle', true), ar(110, 120, 20, 120, C.green), lb(65, 136, '合力 8N', 13, C.green, 'middle', true), ...band(BY + 20, lb(160, 195, '3 ＋ 5 ＝ 8N', 18, C.green, 'middle', true))],
+    add: [bx(110, 60, 60, 40, '物体', C.main, FILL.warm, 13), ar(170, 80, 205, 80, C.red), ar(205, 80, 260, 80, C.red), lb(188, 66, '3N', 11, C.red, 'middle', true), lb(232, 66, '5N', 11, C.red, 'middle', true), ar(110, 120, 200, 120, C.green), lb(155, 136, '合力 8N', 13, C.green, 'middle', true), ...band(BY + 20, lb(160, 195, '3 ＋ 5 ＝ 8N', 18, C.green, 'middle', true))],
   },
   {
     note: '反対向きの2力です。8Nと3Nが反対向きなら、合力は 8−3＝5N で、大きいほう（8N）の向きです。❓なぜ引き算？ 3N分は打ち消し合い、残りの5Nが勝つからです。',

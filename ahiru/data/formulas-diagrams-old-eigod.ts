@@ -116,7 +116,7 @@ const asas: DiagramFigure = show([
   S('比較級で書きかえます。Tom is taller than Ken. ❓なぜ主語が入れかわる？→ 比較級は「高いほうを先に言う」形だからです。トムのほうが高いので、トムを主語にします。例: I am not as old as my brother. ＝ My brother is older than I am.',
     hd('主語が入れかわる'), ...chips(36, [K('A is not as 〜 as B', 1)], { h: 34 }), ar(160, 74, 160, 92, C.gray), ...chips(98, [G('B is 〜er than A', 1)], { h: 34 }), cap('高いほうを主語に立てなおす', C.red, FILL.red)),
   S('次は倍数です。This box is twice as large as that one.（あの箱の2倍の大きさ）。❓なぜ as large as の前に twice？→ as large as が「同じ大きさ」で、それをまるごと2倍にするので、かたまりの前に置くからです。',
-    hd('倍数は as 〜 as の前'), bx(40, 60, 60, 50, 'that', C.gray, FILL.gray, 13), bx(130, 40, 120, 70, 'this', C.blue, FILL.blue, 14), lb(190, 122, 'twice as large as that one', 12, C.blue, 'middle'), cap('twice ＋ as large as', C.blue, FILL.blue)),
+    hd('倍数は as 〜 as の前'), bx(40, 60, 60, 50, 'that', C.gray, FILL.gray, 13), bx(130, 60, 120, 50, 'this', C.blue, FILL.blue, 14), lb(190, 122, 'twice as large as that one', 12, C.blue, 'middle'), cap('twice ＋ as large as', C.blue, FILL.blue)),
   S('3倍以上は three times as large as のように times（回）を使います。❓なぜ twice だけちがう？→ twice は「2回」を表す特別な1語で、3回目からは three times と数えるからです。半分は half as large as です。',
     hd('2倍・3倍・半分'), ...chips(36, [B('twice', 1), K('2倍', 1)], { h: 30 }), ...chips(72, [B('three times', 1), K('3倍', 1)], { h: 30 }), ...chips(108, [B('half', 1), K('半分', 1)], { h: 30 }), cap('倍数 ＋ as 〜 as', C.purple, FILL.purple)),
   S('できるだけ、の言い方です。as soon as possible（できるだけ早く）。❓なぜその意味？→ possible は「できる」。「できるかぎり早く」を、as ○ as possible の形で言っているからです。',

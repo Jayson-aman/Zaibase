@@ -144,7 +144,7 @@ const jisa: DiagramFigure = show([
 const nl = (x0: number, x1: number, y: number): DiagramElement[] => [ln(x0, y, x1, y, C.gray, false, 2)];
 const jisaOnaji: DiagramFigure = show([
   { note: '❓東経どうし（または西経どうし）の2都市の時差は、どう求める？→まず、経度を数直線で見ます。左が経度0度で、右へ東経が大きくなっていきます。', add: [...nl(30, 290, 70), ln(30, 62, 30, 78, C.ink), lb(30, 92, '0度', 11, C.ink, 'middle')] },
-  { note: '東京は東経135度、東経15度の都市（ヨーロッパの中央あたりの時刻の基準）があります。❓2つの都市は、0度から見てどちらの側にある？→どちらも0度の東側、つまり同じ側です。', add: [ci(246, 70, 6, undefined, C.red, FILL.red), lb(246, 56, '東京 135', 10, C.red, 'middle', true), ci(54, 70, 6, undefined, C.blue, FILL.blue), lb(54, 56, 'ローマ 15', 10, C.blue, 'middle', true)] },
+  { note: '東京は東経135度、東経15度の都市（ヨーロッパの中央あたりの時刻の基準）があります。❓2つの都市は、0度から見てどちらの側にある？→どちらも0度の東側、つまり同じ側です。', add: [ci(246, 70, 6, undefined, C.red, FILL.red), lb(246, 56, '東京 135', 10, C.red, 'middle', true), ci(54, 70, 6, undefined, C.blue, FILL.blue), lb(54, 56, '東経15度の都市', 10, C.blue, 'middle', true)] },
   { note: '❓なぜ引き算になる？→どちらも0度から同じ側にあるので、2つの間のきょりは、経度の大きいほうから小さいほうを引いた「差」になるからです。135−15＝120度。', add: [ln(54, 106, 246, 106, C.green, false, 3), lb(150, 124, '135 − 15 ＝ 120度', 13, C.green, 'middle', true), ...cap('同じ側 → 経度は引き算', C.green)] },
   { note: '❓120度は何時間ぶん？→15度で1時間なので、120÷15＝8時間です。', add: fresh(bx(20, 30, 130, 46, '120 ÷ 15', C.green, FILL.green, 16), ar(152, 53, 178, 53, C.green), bx(180, 30, 120, 46, '＝ 8時間', C.green, FILL.green, 16), ...cap('経度の差 ÷ 15 ＝ 時差', C.green)) },
   { note: '❓どちらが進んでいる？→東にある東京のほうが、8時間進んでいます。東経どうしなら、数字の大きいほうが東です。', add: cap('数字の大きい東京が8時間進んでいる', C.red) },

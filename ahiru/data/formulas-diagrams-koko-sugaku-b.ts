@@ -65,7 +65,7 @@ const kaiKeisu: DiagramFigure = show([
     add: fresh(bx(20, 20, 280, 34, 'x ＝ 3 → 9 ＋ 3 − 12 ＝ 0', C.green, FILL.green, 15), bx(20, 68, 280, 34, 'x ＝ −4 → 16 − 4 − 12 ＝ 0', C.green, FILL.green, 15), lb(160, 128, 'どちらも 0 になった', 15, C.green, 'middle', true), lb(160, 158, '(−4)² ＝ 16（マイナスどうしのかけ算は＋）', 12, C.gray), box(184, 'a ＝ 1、もう1つの解 ＝ −4', C.blue, FILL.blue, 15, 34)),
   },
   {
-    note: '逆向きの問題もあります。解が 1 と 3 の式は？ ❓ なぜ (x−1)(x−3)＝0 と書けるの？ x＝1 のとき (x−1) が 0、x＝3 のとき (x−3) が 0 になり、かけ算が 0 になるからです。',
+    note: '逆向きの問題もあります。x²＋ax＋b＝0 の解が 1 と 3 のとき、a と b は？ ❓ なぜ (x−1)(x−3)＝0 と書けるの？ x＝1 のとき (x−1) が 0、x＝3 のとき (x−3) が 0 になり、かけ算が 0 になるからです。',
     add: fresh(box(16, '解が 1 と 3', C.red, FILL.red, 16, 32), box(62, '(x − 1)(x − 3) ＝ 0', C.purple, FILL.purple, 18, 36), lb(160, 118, 'x＝1 で (x−1)＝0、x＝3 で (x−3)＝0', 12, C.gray), lb(160, 138, 'どちらの解でも かけ算が 0', 12, C.gray), box(160, '展開 → x² − 4x ＋ 3 ＝ 0', C.blue, FILL.blue, 16, 36), lb(160, 214, 'a＝−4、b＝3', 14, C.green, 'middle', true)),
   },
   {
@@ -386,7 +386,7 @@ const houbutsu: DiagramFigure = show([
     add: fresh(...geBase(), pg([[gE.X(0), gE.Y(0)], [gE.X(-1), gE.Y(1)], [gE.X(0), gE.Y(2)]], C.blue, FILL.blue), pg([[gE.X(0), gE.Y(0)], [gE.X(2), gE.Y(4)], [gE.X(0), gE.Y(2)]], C.green, FILL.green), ...band(140, box(148, '△OAB ＝ 1 ＋ 2 ＝ 3', C.green, FILL.green, 17, 32), lb(160, 200, 'まとめて：(1/2)×OC×(1＋2)', 13, C.gray, 'middle', true), lb(160, 222, '底辺 OC が共通だから', 12, C.gray))),
   },
   {
-    note: '❓ 別の方法で確かめると？ 座標から直接、|(−1)×4−2×1|÷2＝|−4−2|÷2＝3 と出せます。答えが 3 で一致します。ちがう道で同じ答えなら、まず安心です。',
+    note: '❓ 別の方法で確かめると？ 高校で習う公式ですが、座標から直接、|(−1)×4−2×1|÷2＝|−4−2|÷2＝3 と出せます（高校入試では使わない方法です）。答えが 3 で一致します。ちがう道で同じ答えなら、まず安心です。',
     add: fresh(box(14, 'O(0,0)、A(−1,1)、B(2,4)', C.gray, FILL.gray, 15, 30), box(54, '|(−1)×4 − 2×1| ÷ 2', C.blue, FILL.blue, 15, 30), box(94, '＝ |−4 − 2| ÷ 2 ＝ 6 ÷ 2', C.blue, FILL.blue, 15, 30), box(134, '＝ 3', C.green, FILL.green, 20, 36), lb(160, 194, '前と同じ答え。ただし入試では', 12, C.gray), lb(160, 214, 'y軸で分ける方法を使えるようにしよう', 12, C.gray)),
   },
   {

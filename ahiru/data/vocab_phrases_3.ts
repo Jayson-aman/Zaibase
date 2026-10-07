@@ -301,7 +301,7 @@ export const vocabPhrases3: VocabEntry[] = [
     word: "in addition to",
     pronunciation: "イン アディション トゥ",
     pos: "phr.",
-    meaning: "〜に加えて、〜に加えて",
+    meaning: "〜に加えて、〜のほかに",
     example: "In addition to English, she speaks three other languages.",
     exampleJa: "英語に加えて、彼女は他に3つの言語を話します。",
     level: "senior_basic",
