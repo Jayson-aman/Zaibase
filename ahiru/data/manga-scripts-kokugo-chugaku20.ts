@@ -5,7 +5,7 @@ export const mangaScriptsKokugoChugaku20: Record<string, MangaScript> = {
     id: 'kokugo_s477_manga',
     title: '「空」は「工」が音符だから、音読みは必ずコウ?',
     panels: [
-      { speaker: 's1', line: '「空」の右上は「工」で、「工」が音符ならコウと読むはずだよね?' },
+      { speaker: 's1', line: '「空」の下の部分は「工」で、「工」が音符ならコウと読むはずだよね?' },
       { speaker: 't', line: '音符が同じなら、いつも同じ読み方になる? それとも例外がある?' },
       { speaker: 's2', line: 'あ、例外がある! 「空」はクウと読む。' },
       { speaker: 't', line: 'その通り。じゃあ音符から読み方を見当づけたあと、そのまま答えとして書いていい? それとも確かめが必要?' },
@@ -19,7 +19,7 @@ export const mangaScriptsKokugoChugaku20: Record<string, MangaScript> = {
     id: 'kokugo_s478_manga',
     title: '「兄は毎朝早く起きる。」は五文節?',
     panels: [
-      { speaker: 's1', line: '「兄は毎朝早く起きる。」を単語で分けると「兄・は・毎朝・早く・起きる」で五つだから、五文節だよね?' },
+      { speaker: 's1', line: '「兄は毎朝早く起きる。」を「兄・は・毎朝・早く・起きる」と五つに分けられるから、五文節だよね?' },
       { speaker: 't', line: '文節はどうやって区切る?' },
       { speaker: 's2', line: 'あ、「ネ」を入れて自然なところで切る!' },
       { speaker: 't', line: 'その通り。じゃあ「兄はネ」は自然だけど、「兄ネはネ」のように「兄」と「は」を切りはなすのは自然?' },
@@ -96,7 +96,7 @@ export const mangaScriptsKokugoChugaku20: Record<string, MangaScript> = {
       { speaker: 's1', line: 'うさぎも「羽」で数える! 鳥と同じグループ。' },
       { speaker: 't', line: 'その通り。うさぎは体の大きさで見ると小さい動物に見えるが、数え方では「羽」を使う。じゃあこの数え方は、見た目の大きさだけで決めてよい?' },
       { speaker: 's2', line: 'だめ! 決まった種類ごとに覚える必要がある。' },
-      { speaker: 't', line: 'その通り。犬・ねこ・魚・虫は「匹」、うさぎ・にわとり・すずめのような鳥は「羽」。数え方は「大きさ」だけでなく「種類」によって決まっているものもあるので、形や大きさだけで機械的に判断しないこと。', emphasis: true },
+      { speaker: 't', line: 'その通り。犬・ねこ・魚・虫は「匹」、うさぎや、にわとり・すずめのような鳥は「羽」。数え方は「大きさ」だけでなく「種類」によって決まっているものもあるので、形や大きさだけで機械的に判断しないこと。', emphasis: true },
     ],
   },
   kokugo_s485_manga: {

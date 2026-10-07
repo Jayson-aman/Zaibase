@@ -79,7 +79,7 @@ export const mangaScriptsKokoMath23: Record<string, MangaScript> = {
       { speaker: 't', line: '折り目は、どの2点を結ぶ線分の垂直二等分線だったかな?' },
       { speaker: 's2', line: 'あ、重なり合う2点、つまりAとCを結ぶ線分の垂直二等分線だ! BCの垂直二等分線じゃない!' },
       { speaker: 't', line: 'その通り。じゃあ折り返しでどの長さが等しくなる?' },
-      { speaker: 's1', line: 'AE=EC! BE=xとおいて三角比…三平方の定理で方程式を立てる!' },
+      { speaker: 's1', line: 'AE=EC! BE=xとおいて、三平方の定理で方程式を立てる!' },
       { speaker: 't', line: '正解。36+x²=(8−x)²を解くと?' },
       { speaker: 's2', line: '36=64−16xで、x=1.75cm! BCの中点じゃなくて、ちゃんと計算しないとだめなんだね。' },
       { speaker: 't', line: '折り目は「重なり合う2点を結ぶ線分の垂直二等分線」である。AがCに重なるとき、折り目はACの垂直二等分線であり、BCの垂直二等分線ではない。折り返しで等しくなる辺（AE=EC）を使って方程式を立てて解く必要がある。', emphasis: true },

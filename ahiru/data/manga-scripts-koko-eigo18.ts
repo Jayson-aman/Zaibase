@@ -51,7 +51,7 @@ export const mangaScriptsKokoEigo18: Record<string, MangaScript> = {
       { speaker: 't', line: 'of my friendsをかっこでくくって消すと、主語はどう見える?' },
       { speaker: 's2', line: 'あ、"One is a doctor."になる! Oneだけが主語。' },
       { speaker: 't', line: 'その通り。じゃあ主語の中心は、One? それともfriends?' },
-      { speaker: 's1', line: 'One! of the studentsは修飾する部分。' },
+      { speaker: 's1', line: 'One! of my friendsは修飾する部分。' },
       { speaker: 't', line: 'その通り。じゃあOneは単数、複数、どっち?' },
       { speaker: 's2', line: '単数! だからis。' },
       { speaker: 't', line: 'その通り。直前の複数形に引かれてareにするのが典型的なミス。主語の中心を見つけるには、of以下をかっこでくくって消してみる。この見方は関係代名詞や分詞の単元でもそのまま使える。', emphasis: true },

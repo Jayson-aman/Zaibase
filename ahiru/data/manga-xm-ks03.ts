@@ -173,7 +173,7 @@ export const XM_KS03_SCRIPTS: Record<string, MangaScript> = {
     title: '大きな数が並んだら、筆算の前に何を考えるのか',
     panels: [
       { speaker: 't', line: '1234×1236−1235² を計算しよう。さあ、どうする？' },
-      { speaker: 's1', line: '6けたの計算が2回だから、筆算で3分はかかりそうです。' },
+      { speaker: 's1', line: '4けた×4けたの計算が2回だから、筆算で3分はかかりそうです。' },
       { speaker: 's2', line: '1234 と 1236 の平均が 1235 だから、差は 0 じゃないかな。' },
       { speaker: 't', line: '感覚で決める前に、1235 を x とおいてみよう。1234 と 1236 は x で表すとどうなる？' },
       { speaker: 's1', line: 'x−1 と x＋1 です。式は (x−1)(x＋1)−x² になります。' },

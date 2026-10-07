@@ -73,7 +73,7 @@ export const mangaScriptsEigoChugaku21: Record<string, MangaScript> = {
   },
   eigo_s028_manga: {
     id: 'eigo_s028_manga',
-    title: '名詞のbeginも動詞のbeginも、アクセントの位置は同じ?',
+    title: '名詞のteacherも動詞のbeginも、アクセントの位置は同じ?',
     panels: [
       { speaker: 's1', line: '2音節の語って、名詞でも動詞でもアクセントの位置は同じだよね?' },
       { speaker: 't', line: 'teacherのような名詞は、第1音節と第2音節、どちらを強く読む?' },

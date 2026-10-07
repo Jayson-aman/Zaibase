@@ -68,7 +68,7 @@ export const mangaScriptsEigoChugaku13: Record<string, MangaScript> = {
       { speaker: 's1', line: '"Does he plays tennis?"って書いたら間違いだった。playsのsはそのままでいいと思ったのに、なぜ消さないといけないの?' },
       { speaker: 't', line: 'いい失敗をしたね。まず三単現のsって何を表す印だった?' },
       { speaker: 's2', line: '「今のことで、主語が三人称単数」っていう印。' },
-      { speaker: 't', line: 'そう。じゃあ、Doesを文の先頭に置いたとき、その「三人称単数の今のこと」という印は、DoesとplaysのどちらがすでにDoesを使っていて表している?' },
+      { speaker: 't', line: 'そう。じゃあ、Doesを文の先頭に置いたとき、その「三人称単数の今のこと」という印は、Doesとplaysのどちらがすでにそれをあらわしているでしょうか?' },
       { speaker: 's1', line: 'あ、Doesがすでにその印を持ってる! だから動詞にもsを付けると、印が二重になっちゃうんだね。' },
       { speaker: 't', line: 'その通り。だから動詞は原形(sのない形)に戻す。じゃあ、Doを使う主語とDoesを使う主語、どう見分ける?' },
       { speaker: 's2', line: 'he/she/it、Kenやmy fatherのような「一人(一つ)で、私でもあなたでもないもの」(三人称単数)ならDoes。それ以外(I, you, we, they, 複数の名詞)はDo!' },

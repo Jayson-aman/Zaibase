@@ -99,7 +99,7 @@ export const XM_CE05_SCRIPTS: Record<string, MangaScript> = {
       { speaker: 't', line: `つまり to は「これから」、ing は「すでに」というイメージだ。この向きが分かれば、覚えていない動詞でも見当がつく。` },
       { speaker: 's2', line: `あと、like や begin のように、どちらでも使える動詞もあるんですね。` },
       { speaker: 't', line: `want・hope・decide は to だけ、enjoy・finish・stop は ing だけ。like・love・begin・start・continue は、どちらでもよい。`, emphasis: true },
-      { speaker: 's1', line: `まず代表の七語ずつを覚えて、「これから」か「すでに」かで考えればいいんですね。` },
+      { speaker: 's1', line: `まず代表の三語ずつを覚えて、「これから」か「すでに」かで考えればいいんですね。` },
     ],
   },
 

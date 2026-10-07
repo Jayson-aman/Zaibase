@@ -12,7 +12,7 @@ export const mangaScriptsSansuChugaku23: Record<string, MangaScript> = {
       { speaker: 's1', line: '端まで行って戻ってくる分…2人合わせてもう2つ分!' },
       { speaker: 't', line: '正解。じゃあ合計で2回目は何つ分?' },
       { speaker: 's2', line: '1つ分＋2つ分で3つ分! だから時間も3倍の24分後になるんだ。' },
-      { speaker: 't', line: '向かい合って往復するとき、2回目に出会うのは2人合わせてPQ間「3つ分」進んだとき（1回目の2倍ではなく3倍）。n回目は(2n−1)つ分と、奇数倍で増えていく。「2倍」という直感に頼らず、折り返しの分も足して考えること。', emphasis: true },
+      { speaker: 't', line: '向かい合って往復するとき、2回目に出会うのは2人合わせてPQ間「3つ分」進んだとき（1回目の2倍ではなく3倍）。□回目は(□×2−1)つ分と、奇数倍で増えていく。「2倍」という直感に頼らず、折り返しの分も足して考えること。', emphasis: true },
     ],
   },
   sansu_s311_manga: {
@@ -33,7 +33,7 @@ export const mangaScriptsSansuChugaku23: Record<string, MangaScript> = {
     id: 'sansu_s355_manga',
     title: '給水と排水を同時に開けたら、速さを足せばいい?',
     panels: [
-      { speaker: 's1', line: 'Aだけなら20分、Bだけなら30分で空にする排水管。同時に開けたら1/20＋1/30を計算すればいいよね?' },
+      { speaker: 's1', line: 'Aだけなら20分で満水になる給水管、Bだけなら30分で空にする排水管。同時に開けたら1/20＋1/30を計算すればいいよね?' },
       { speaker: 't', line: 'Bは水をどっちの向きに動かす管だった? 増やす? それとも減らす?' },
       { speaker: 's2', line: 'あ、Bは排水管だから減らす向きだ! 増やす向きのAと同じように足しちゃだめなんじゃない?' },
       { speaker: 't', line: 'その通り。じゃあ正しい式は?' },

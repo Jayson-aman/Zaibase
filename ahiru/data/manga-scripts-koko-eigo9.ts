@@ -101,7 +101,7 @@ export const mangaScriptsKokoEigo9: Record<string, MangaScript> = {
       { speaker: 't', line: 'じゃあ考えよう。Tom is taller than Ken.は、トムとケン、どちらが上だと言っている文?' },
       { speaker: 's1', line: 'トム。トムの方が背が高い。' },
       { speaker: 't', line: 'その通り。じゃあnot as ~ asは「〜ほどではない」という、下のほうを主語にして言う形だったよね。この文で下にあたるのは?' },
-      { speaker: 's2', line: 'あ、ケン! ケインはトムほど高くない、って言いたいなら、主語はケンにしないといけないんだ。' },
+      { speaker: 's2', line: 'あ、ケン! ケンはトムほど高くない、って言いたいなら、主語はケンにしないといけないんだ。' },
       { speaker: 't', line: 'その通り。比較級は上を主語にした言い方、not as ~ asは下を主語にした言い方。同じ事実を別の側から言うから、書きかえると主語が入れかわるんだ。じゃあMt. Fuji is higher than any other mountain.のany otherの後、なぜ単数形にする?' },
       { speaker: 's1', line: 'う〜ん、「他のすべての山」ってイメージだから複数な気がするけど……' },
       { speaker: 't', line: 'anyという語は、そもそも何を表していた? 「他のすべて」をまとめて指す語?' },

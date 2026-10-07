@@ -34,7 +34,7 @@ export const mangaScriptsKokoRikaButsuriSeibutsu20: Record<string, MangaScript> 
     title: '東向き4Nと北向き3Nの合力は7N?',
     panels: [
       { speaker: 's1', line: '東向き4Nと北向き3Nの合力って、単純に足して7Nだよね?' },
-      { speaker: 't', line: '4Nと7Nの合力が7Nになるのは、2力がどんな向きのとき?' },
+      { speaker: 't', line: '4Nと3Nの合力が7Nになるのは、2力がどんな向きのとき?' },
       { speaker: 's2', line: 'あ、同じ向き(角度0度)のとき! 完全に一致してるとき。' },
       { speaker: 't', line: 'その通り。じゃあ東向きと北向きは、同じ向き? 直角?' },
       { speaker: 's1', line: '直角!' },

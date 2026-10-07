@@ -85,7 +85,7 @@ export const mangaScriptsKokoEigo1: Record<string, MangaScript> = {
   koko_eigo_s221_hikaku_manga: {
     id: 'koko_eigo_s221_hikaku_manga',
     panels: [
-      { speaker: 's1', line: 'famous の比較級を famouser って書いたら×でした。文字数だけならbig（3文字）より長くないのに、なんで -er がつけられないんですか？' },
+      { speaker: 's1', line: 'famous の比較級を famouser って書いたら×でした。busy は busier なのに、文字数もそんなに変わらない famous には、なんで -er がつけられないんですか？' },
       { speaker: 't', line: 'いい疑問。実は判断基準は文字数じゃなくて「音節数」なんだ。fa-mous って、発音上いくつのかたまりに分かれる？' },
       { speaker: 's2', line: 'ファ・マス……2つ、ですか？' },
       { speaker: 't', line: 'その通り、二音節。じゃあ busy はどう？4文字だけど、bu-sy で音節はいくつ？' },
@@ -105,7 +105,7 @@ export const mangaScriptsKokoEigo1: Record<string, MangaScript> = {
       { speaker: 't', line: 'いい疑問。実は訳は同じでも、義務がどこから来ているかが違うんだ。I must study harder. これ、誰がそう思ってる？' },
       { speaker: 's1', line: '「もっと勉強しなきゃ」って、自分自身で思ってる感じがします。' },
       { speaker: 't', line: 'その通り！must は話し手自身の判断や気持ちから出てくる義務。じゃあ I have to study for the test tomorrow. は？' },
-      { speaker: 's2', line: '「明日試験があるから」……自分の気持ちというより、外side の事情って感じですね。' },
+      { speaker: 's2', line: '「明日試験があるから」……自分の気持ちというより、外側の事情って感じですね。' },
       { speaker: 't', line: 'その通り！have to は規則・予定・状況など、自分の外にある事情が理由になっている。だから We have to wear a helmet on the bike. は「そういう決まりだから」という意味になる。' },
       { speaker: 's1', line: 'でも現在の肯定文なら、実際どっちを使っても通じることが多いんですよね？だったら試験ではどうやって使い分けさせるんですか？' },
       { speaker: 't', line: 'いいところに気づいた。試験がよく使う決め手は「時制」。He had to leave then. のように過去のことを言いたいときは、must には過去形がないから have to（has to / had to）しか使えない。' },

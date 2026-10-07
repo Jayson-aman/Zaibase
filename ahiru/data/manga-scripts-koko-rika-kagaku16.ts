@@ -20,7 +20,7 @@ export const mangaScriptsKokoRikaKagaku16: Record<string, MangaScript> = {
     title: '5%の食塩水を10%にするには、食塩を何g足す?',
     panels: [
       { speaker: 's1', line: '5%の食塩水180gを10%にする問題、10%だから180×0.1÷2みたいな計算をしようとしたけど分からなくなった。' },
-      { speaker: 't', line: '食塩をxg加えるとき、食塩の量（分子）とお塩水全体の量（分母）、どっちが変わる?' },
+      { speaker: 't', line: '食塩をxg加えるとき、食塩の量（分子）と食塩水全体の量（分母）、どっちが変わる?' },
       { speaker: 's2', line: 'あ、両方変わる! 食塩を足せば食塩水全体も増える。' },
       { speaker: 't', line: 'その通り。これがこの型の特徴。じゃあはじめの食塩の量、5%の180gに含まれる食塩は?' },
       { speaker: 's1', line: '180×0.05＝9g。' },

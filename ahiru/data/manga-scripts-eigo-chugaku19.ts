@@ -96,7 +96,7 @@ export const mangaScriptsEigoChugaku19: Record<string, MangaScript> = {
       { speaker: 's1', line: '原形! likeのまま。' },
       { speaker: 't', line: 'その通り。じゃあ正しい文は?' },
       { speaker: 's2', line: '"He doesn\'t like natto."!' },
-      { speaker: 't', line: 'その通り。doesn\'t・didn\'tのうしろは必ず原形にもどる。「-sは文の中に一つだけ」と覚えると、does側とlike側の両方に付けるまちがいを防げる。', emphasis: true },
+      { speaker: 't', line: 'その通り。doesn\'t・didn\'tのうしろは必ず原形にもどる。doesがすでに三単現の印を持っているので、like側にもsを付けると印が二重になる、と覚えると、does側とlike側の両方に付けるまちがいを防げる。', emphasis: true },
     ],
   },
   eigo_s245_manga: {

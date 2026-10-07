@@ -93,7 +93,7 @@ export const XM_CE03_SCRIPTS: Record<string, MangaScript> = {
       { speaker: 't', line: "そう、短い母音の音を守るために、子音字(しいんじ)を重ねるんだ。hot は hotter、sad は sadder になるよ。" },
       { speaker: 's2', line: "large は e で終わるから、r だけ付けて larger。easy は y を i に変えて easier ですね。" },
       { speaker: 't', line: "急所は、短い母音と子音字ひとつで終わる1音節の語は、子音字を重ねるということ。e で終わるなら -r だけ、子音字＋y なら y を i に変える。", emphasis: true },
-      { speaker: 's1', line: "new や cheap は、母音字が二つ並んでいるから重ねないんですね。" },
+      { speaker: 's1', line: "cheap は母音字が二つ並んでいるから重ねないんですね。new も w は重ねないので newer です。" },
       { speaker: 's2', line: "hotest や biger や happyer は、書かないように気をつけます。" },
     ],
   },

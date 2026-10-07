@@ -11,7 +11,7 @@ export const mangaScriptsKokugoChugaku18: Record<string, MangaScript> = {
       { speaker: 't', line: 'その通り。じゃあ「絵」に訓読みは存在する?' },
       { speaker: 's1', line: 'しない! 音読みしかない漢字だった。' },
       { speaker: 't', line: 'その通り。じゃあ日常語になっているからといって、それだけで訓読みと判断していい?' },
-      { speaker: 's2', line: 'だめ! 肉・茶・駅・本なども音読みしかないのに日常語になってる。' },
+      { speaker: 's2', line: 'だめ! 肉・茶・駅・線なども音読みしかないのに日常語になってる。' },
       { speaker: 't', line: 'その通り。日常語として定着しているかどうかと、音読みか訓読みかは別の話。逆に畑・峠・込のような国字は訓読みしか持たない。「訓読みを書きなさい」に無理に答えず「訓読みなし」と答える場合もある。', emphasis: true },
     ],
   },

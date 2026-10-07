@@ -82,7 +82,7 @@ export const mangaScriptsEigoChugaku20: Record<string, MangaScript> = {
       { speaker: 's1', line: '同じグループ! 曜日と同じくonを使う。' },
       { speaker: 't', line: 'その通り。じゃあ「週末に」の正しい言い方は?' },
       { speaker: 's2', line: 'on weekends!' },
-      { speaker: 't', line: 'その通り。「週末に」は on weekends または on the weekend と言う。曜日と同じように on を使い、in weekends や at weekends とは言わない。', emphasis: true },
+      { speaker: 't', line: 'その通り。「週末に」は on weekends または on the weekend と言う。曜日と同じように on を使い、in weekends とは言わない。', emphasis: true },
     ],
   },
   new20_e5_eigo_07_manga: {

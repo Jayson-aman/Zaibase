@@ -68,7 +68,7 @@ export const mangaScriptsSansuChugaku20: Record<string, MangaScript> = {
       { speaker: 's1', line: '底辺OBとODが同じ直線BD上にある! 高さが共通。' },
       { speaker: 't', line: 'その通り。高さが共通な2つの三角形の面積比は、何の比で決まる?' },
       { speaker: 's2', line: '底辺の比! OB:OD。' },
-      { speaker: 't', line: 'その通り。相似な組(△OAB・△OCD)は相似比の2乗、高さ共通の組(△OAB・△OAD)は底辺の比。どの2つの三角形を比べているかで使う性質が変わるので、25:4をそのまま使い回さないこと。', emphasis: true },
+      { speaker: 't', line: 'その通り。相似な組(△OAB・△OCD)は相似比を2回かけた比（参考：中学では『相似比の2乗』と言います）、高さ共通の組(△OAB・△OAD)は底辺の比。どの2つの三角形を比べているかで使う性質が変わるので、25:4をそのまま使い回さないこと。', emphasis: true },
     ],
   },
   sansu_s093_manga: {

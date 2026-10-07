@@ -82,7 +82,7 @@ export const mangaScriptsKokoShakaiChirishi17: Record<string, MangaScript> = {
       { speaker: 's1', line: '測量の技術! それが幾何学の基礎になった。' },
       { speaker: 't', line: 'その通り。じゃあエジプトで記録に使われたのは、パピルスという紙のようなものに書く象形文字。メソポタミアで使われたのは何に書く文字?' },
       { speaker: 's2', line: '粘土板に書くくさび形文字!' },
-      { speaker: 't', line: 'その通り。「くさび形文字＝メソポタミア（粘土板）」「象形文字＝エジプト（パピルス）」と、記す材料とセットで覚えると入れかわらない。エジプトでは太陽暦とピラミッドも増水の観測から生まれた。', emphasis: true },
+      { speaker: 't', line: 'その通り。「くさび形文字＝メソポタミア（粘土板）」「象形文字＝エジプト（パピルス）」と、記す材料とセットで覚えると入れかわらない。エジプトでは増水の観測から太陽暦が生まれた。', emphasis: true },
     ],
   },
   koko_shakai_s180_manga: {

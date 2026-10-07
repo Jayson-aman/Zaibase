@@ -172,7 +172,7 @@ export const XM_KS07_SCRIPTS: Record<string, MangaScript> = {
       { speaker: 't', line: '∠A＝90°なら、点AはBCを直径とする円周上にあったね。その円の中心はどこ?' },
       { speaker: 's2', line: '直径BCの中点、つまりM。だからMA・MB・MCはみんな半径で、等しい。' },
       { speaker: 't', line: 'MA＝MBがわかると、△MABはどんな三角形になる?' },
-      { speaker: 's1', line: '二等辺三角形。∠B＝35°なら、∠MAB＝35°とすぐにわかる。' },
+      { speaker: 's1', line: '二等辺三角形。底角が等しいから、∠MABは∠Bと同じ大きさだとすぐにわかる。' },
       { speaker: 't', line: '直角三角形では、斜辺の中点から3つの頂点までの距離がすべて等しい。だからAMは斜辺の半分の5cmになる。', emphasis: true },
       { speaker: 's2', line: '半分にするのは斜辺だけ。AB・ACの半分ではないし、中点連結定理とは別の話なんだね。' },
     ],

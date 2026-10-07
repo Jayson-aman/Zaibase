@@ -87,7 +87,7 @@ export const mangaScriptsKokoRikaButsuriSeibutsu21: Record<string, MangaScript> 
   },
   new20_j1_rika_16_manga: {
     id: 'new20_j1_rika_16_manga',
-    title: '接眼レンズ15倍・対物レンズ10倍のとき、倍率は15+40=55倍?',
+    title: '接眼レンズ15倍・対物レンズ10倍のとき、倍率は15+10=25倍?',
     panels: [
       { speaker: 's1', line: '接眼レンズ15倍・対物レンズ10倍で観察していたときの倍率って、15+10=25倍だよね?' },
       { speaker: 't', line: '接眼レンズと対物レンズの倍率は、足し算で組み合わさる? かけ算で組み合わさる?' },

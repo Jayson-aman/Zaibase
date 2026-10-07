@@ -99,7 +99,7 @@ export const mangaScriptsEigoChugaku7: Record<string, MangaScript> = {
       { speaker: 's2', line: 'わたしもtakeの意味がバラバラすぎて覚えられなかった。' },
       { speaker: 't', line: 'じゃあ考えよう。takeのもともとの意味は「手に取る、つかむ」。「お風呂」や「散歩」のような活動を、自分から「つかみに行く、始める」とイメージしたら、どんな意味に近づく?' },
       { speaker: 's1', line: '……その活動を「する」に近づく! 「お風呂という行動をつかむ」＝「お風呂に入る」みたいな。' },
-      { speaker: 't', line: 'その通り。takeはもとの意味(つかむ)から、動作を表す名詞(a bath・a walk・a picture)と組み合わさって、「〜する」という意味に広がっていった。じゃあIt takes ten minutes to school.のItは、何を指してる?' },
+      { speaker: 't', line: 'その通り。takeはもとの意味(つかむ)から、動作を表す名詞(a bath・a walk・a picture)と組み合わさって、「〜する」という意味に広がっていった。じゃあIt takes ten minutes to get to school.のItは、何を指してる?' },
       { speaker: 's2', line: '……さっき勉強した、時刻のitと同じで、具体的な何かを指してない形だけの主語?' },
       { speaker: 't', line: 'その通り。時間の長さを表す文でも、意味を持たない形だけの主語Itを使う。じゃあ「このかばんは1000円した」を表すとき、時間ならtakeを使うけど、お金の場合は何を使う?' },
       { speaker: 's1', line: '……cost! This bag cost 1000 yen.のように、costを使う。' },

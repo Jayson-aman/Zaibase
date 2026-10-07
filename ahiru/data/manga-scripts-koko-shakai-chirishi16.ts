@@ -54,7 +54,7 @@ export const mangaScriptsKokoShakaiChirishi16: Record<string, MangaScript> = {
       { speaker: 's1', line: '5割前後。企業数の割合ほど大きくない。' },
       { speaker: 't', line: 'その通り。じゃあ働く人の割合はどれくらい?' },
       { speaker: 's2', line: 'およそ7割! 企業数（99%）、働く人（7割）、出荷額（5割）、全部違う数字なんだ。' },
-      { speaker: 't', line: 'その通り。「中小企業は日本の企業の99%以上」は事業所数の話であって、出荷額や生産額の割合と混同してはいけない。3つの数字をそれぞれ別のものとして押さえておこう。', emphasis: true },
+      { speaker: 't', line: 'その通り。「中小企業は日本の企業の99%以上」は企業の数の話であって、出荷額や生産額の割合と混同してはいけない。3つの数字をそれぞれ別のものとして押さえておこう。', emphasis: true },
     ],
   },
   koko_shakai_s136_manga: {

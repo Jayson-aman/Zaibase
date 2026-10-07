@@ -6,7 +6,7 @@ export const mangaScriptsEigoChugaku17: Record<string, MangaScript> = {
     title: 'have に付いた e、なんで読まないの?',
     panels: [
       { speaker: 's1', line: 'マジックEって語末のeで前の母音を伸ばすルールだよね? じゃあhaveも「ヘイヴ」って読むはずじゃない?' },
-      { speaker: 't', line: 'have・give・love・comeに共通する最後の文字、eの前は何?' },
+      { speaker: 't', line: 'have・give・love・liveに共通する最後の文字、eの前は何?' },
       { speaker: 's2', line: 'あ、v! どれもvで終わりそうな語。' },
       { speaker: 't', line: 'その通り。じゃあ英語には、語末をvだけで終える語を作らないというきまりがある。じゃあこのeは、母音を伸ばすためについてる?' },
       { speaker: 's1', line: 'ちがう! 意味のない、形をととのえるためだけのe!' },

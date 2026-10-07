@@ -62,7 +62,7 @@ export const mangaScriptsKokoEigo15: Record<string, MangaScript> = {
     title: 'Do you know what do you think...? はなぜ変?',
     panels: [
       { speaker: 's1', line: '「彼が何をしていると思いますか」を Do you know what do you think he is doing? って書いたら変だと言われた。' },
-      { speaker: 't', line: 'この文、doyouthinkが2回分入っているように見えないかな? Do you know と do you think、両方使う必要ある?' },
+      { speaker: 't', line: 'この文、Do you know と do you think の2つの問いかけが重なっているように見えないかな? 両方使う必要ある?' },
       { speaker: 's2', line: 'あ、think型の動詞のときは、疑問詞がそのまま文頭に出るんだったよね。Do you knowはいらないのかも。' },
       { speaker: 't', line: 'その通り。think/believe/guessが来るときは、普通の間接疑問文とちがって疑問詞が文頭に出て、その後は疑問文の語順が続く。じゃあ正しくは?' },
       { speaker: 's1', line: 'What do you think he is doing? 疑問詞Whatが先頭で、do you thinkがそのまま続くだけでいいんだ。' },

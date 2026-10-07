@@ -258,7 +258,7 @@ export const XM_KE05_SCRIPTS: Record<string, MangaScript> = {
     A('He got out of the car. が正しいんですね。乗り物の中の広さを思い浮かべれば迷いません。'),
   ] },
   'koko_eigo_s406_xm': { id: 'koko_eigo_s406_xm', title: '短い語を飛ばすと、語数がずれる', panels: [
-    T('「20語以上25語以内で書きなさい」という問題で、I can swim in the sea with my friends. は何語だろう。'),
+    T('「25語以上30語以内で書きなさい」という問題で、I can swim in the sea with my friends. は何語だろう。'),
     A('swim と sea と friends が大事な語だから、3語くらいかな。'),
     B('いえ、in や the や with も数えるんだと思います。短い語も1語ですよね。'),
     T('その通り。a、an、the、in、to、of といった短い語も、スペースで区切られたまとまりなら1語として数える。声を出して、指で一語ずつ押さえてみよう。'),

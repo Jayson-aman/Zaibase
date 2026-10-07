@@ -118,13 +118,13 @@ export const mangaScriptsKokoEigo16: Record<string, MangaScript> = {
     title: 'The cake my mother made was delicious.、動詞が2つある?',
     panels: [
       { speaker: 's1', line: 'The cake my mother made was delicious.、madeとwas、動詞が2つあってどっちが文全体の動詞か分からない。' },
-      { speaker: 't', line: 'The cakeのすぐ後ろに、another主語my motherが来てるよね。これは何の合図?' },
+      { speaker: 't', line: 'The cakeのすぐ後ろに、もう1つの主語my motherが来てるよね。これは何の合図?' },
       { speaker: 's2', line: 'あ、関係代名詞が省略されている合図!' },
       { speaker: 't', line: 'その通り。じゃあThe cake (that) my mother madeまでが、文の中でどんな役割をしている?' },
       { speaker: 's1', line: '主語のかたまり! The cake my mother madeで1つの主語。' },
       { speaker: 't', line: 'その通り。じゃあ文全体の述語動詞はどっち?' },
       { speaker: 's2', line: 'was! madeは節の中の動詞で、文全体の動詞じゃない。' },
-      { speaker: 't', line: 'その通り。英語の一文には述語動詞が1つだけ。動詞が2つ見えたら、必ずどちらかが省略された関係代名詞節の中にある。この合図を見つける癖をつけよう。', emphasis: true },
+      { speaker: 't', line: 'その通り。この文のように接続詞のない一つのまとまりには、文全体の述語動詞は1つだけ。動詞が2つ見えたら、どちらかが省略された関係代名詞節の中にあると疑ってみる。この合図を見つける癖をつけよう。', emphasis: true },
     ],
   },
 };

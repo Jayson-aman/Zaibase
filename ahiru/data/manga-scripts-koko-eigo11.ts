@@ -102,7 +102,7 @@ export const mangaScriptsKokoEigo11: Record<string, MangaScript> = {
       { speaker: 's1', line: 'もとの助動詞の意味を引きついでる! willは意志・単純な推量だから、wouldは「〜するだろうに」' },
       { speaker: 't', line: 'いいね。じゃあcanは能力・可能性だよね。couldはどんな意味になる?' },
       { speaker: 's2', line: '「〜できるのに」! mayは「かもしれない」だから、mightは「〜かもしれないのに」で、いちばん確信が弱いんだね。' },
-      { speaker: 't', line: 'その通り。文法の形は三つとも同じで、ちがうのは何だけ?' },
+      { speaker: 't', line: 'その通り。文法の形は三つとも同じで、ちがうのは何だと思う?' },
       { speaker: 's1', line: '話し手の確信の強さだけ! 日本語の手がかりで「〜できるのに」→could、「〜かもしれないのに」→might、それ以外→would、って選べばいいんだね!', emphasis: true },
     ],
   },

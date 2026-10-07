@@ -53,7 +53,7 @@ export const mangaScriptsKokoMath16: Record<string, MangaScript> = {
       { speaker: 't', line: 'その通り。じゃあML＝BCの何倍?' },
       { speaker: 's1', line: '半分! ML=(1/2)BC。' },
       { speaker: 't', line: 'その通り。じゃあ△ACDでLとNは? LN＝ADの半分になるはず。' },
-      { speaker: 's2', line: 'その通り。じゃあMN＝ML＋LNだから、MN＝(1/2)BC＋(1/2)AD＝(AD＋BC)/2になる! 平均の長さだ。' },
+      { speaker: 's2', line: '同じようにLN＝(1/2)ADだね。M・L・Nは一直線に並ぶから、MN＝ML＋LNで、MN＝(1/2)BC＋(1/2)AD＝(AD＋BC)/2になる! 平均の長さだ。' },
       { speaker: 't', line: 'その通り。対角線を引いて2つの三角形に分け、それぞれに中点連結定理を使う。この補助線の発想さえ身につければ、台形の中点連結定理は自分で証明できるよ。', emphasis: true },
     ],
   },
@@ -91,7 +91,7 @@ export const mangaScriptsKokoMath16: Record<string, MangaScript> = {
     panels: [
       { speaker: 's1', line: '10本中3本当たりのくじ、Aさんが先に引くから、Aさんのほうが当たりやすいよね?' },
       { speaker: 't', line: 'Bさんが当たる場合、どんなパターンがある?' },
-      { speaker: 's2', line: 'Aが当たってBも当たるパターンと、Aがはずれてbが当たるパターン。' },
+      { speaker: 's2', line: 'Aが当たってBも当たるパターンと、AがはずれてBが当たるパターン。' },
       { speaker: 't', line: 'その通り。それぞれ計算してみると?' },
       { speaker: 's1', line: '(3/10)×(2/9)＝6/90 と (7/10)×(3/9)＝21/90。合わせて27/90＝3/10!' },
       { speaker: 't', line: 'その通り。Aさんが当たる確率は?' },

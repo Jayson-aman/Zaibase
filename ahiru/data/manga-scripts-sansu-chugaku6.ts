@@ -21,7 +21,7 @@ export const mangaScriptsSansuChugaku6: Record<string, MangaScript> = {
   },
   sansu_s156_manga: {
     id: 'sansu_s156_manga',
-    title: '面積比は、なぜ相似比の「2乗」になるのか',
+    title: '面積比は、なぜ相似比を「2回かけた比」になるのか',
     panels: [
       { speaker: 's1', line: '相似比3:5の三角形で、小さいほうが27cm²のとき大きいほうを27×5/3=45cm²って計算したら×だった。相似比をそのまま使っただけなのに。' },
       { speaker: 's2', line: 'わたしも同じ間違いした。' },
@@ -32,9 +32,9 @@ export const mangaScriptsSansuChugaku6: Record<string, MangaScript> = {
       { speaker: 't', line: 'その通り。1辺3の正方形と1辺5の正方形で確かめてみよう。マスの数はそれぞれ何個?' },
       { speaker: 's1', line: '……9マスと25マス! 9:25=3×3:5×5になってる!' },
       { speaker: 't', line: 'その通り。じゃあ長さの比をそのまま面積比に使うと、本当の面積比と比べて大きく出る? 小さく出る?' },
-      { speaker: 's2', line: '……小さく出る! 2乗してないから。27×5/3=45は、本当は27×25/9=75になるはず。' },
-      { speaker: 't', line: 'なぜ面積比は相似比の「2乗」になるんだった?', emphasis: true },
-      { speaker: 's1', line: '面積は「長さ×長さ」でできているので、長さが5/3倍になると面積は5/3×5/3=25/9倍になる。相似比をそのまま使うと2乗を忘れていることになり、必ず小さく出る!', emphasis: true },
+      { speaker: 's2', line: '……小さく出る! 2回かけてないから。27×5/3=45は、本当は27×25/9=75になるはず。' },
+      { speaker: 't', line: 'なぜ面積比は相似比を2回かけた比になるんだった（参考：中学では「相似比の2乗」と言います）?', emphasis: true },
+      { speaker: 's1', line: '面積は「長さ×長さ」でできているので、長さが5/3倍になると面積は5/3×5/3=25/9倍になる。相似比をそのまま使うと2回かけるのを忘れていることになり、必ず小さく出る!', emphasis: true },
     ],
   },
   sansu_s031_manga: {

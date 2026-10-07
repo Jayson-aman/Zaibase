@@ -27,7 +27,7 @@ export const XM_KE09_SCRIPTS: Record<string, MangaScript> = {
       { speaker: 't', line: 'ea の語を並べてみよう。eat, sea, teach, easy は、どう読む？' },
       { speaker: 's1', line: 'どれも「イー」と長く伸ばして読みます。いちばん数が多いグループです。' },
       { speaker: 't', line: 'では head, bread, ready, weather, heavy は？ これは何の仲間だろう。' },
-      { speaker: 's2', line: '短い「エ」の音です。book や good の短い音と同じ、短く読む仲間ですね。' },
+      { speaker: 's2', line: '短い「エ」の音です。eat や sea の長い「イー」とちがって、短く読む仲間ですね。' },
       { speaker: 't', line: 'ea には、great, break, steak の三語だけ「エイ」と読むグループもある。ea は三通りだけで、ふつうは「イー」、短い「エ」の仲間があり、「エイ」はこの三語だけだ。', emphasis: true },
       { speaker: 's1', line: '全部が例外なのではなくて、数の少ないグループが二つあるだけなんですね。' },
       { speaker: 's2', line: '数が少ないぶん、great, break, steak の三語はそのまま覚えてしまえばいいですね。' },

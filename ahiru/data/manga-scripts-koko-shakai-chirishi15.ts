@@ -7,7 +7,7 @@ export const mangaScriptsKokoShakaiChirishi15: Record<string, MangaScript> = {
     panels: [
       { speaker: 's1', line: 'この雨温図、1月がいちばん気温高くて7月が低い。なんか変な気候だなって思っちゃった。' },
       { speaker: 't', line: '気温のグラフの形、山型と谷型、どっちに近い?' },
-      { speaker: 's2', line: '谷型。1月が高くて7月が低いから、逆U字みたいな形。' },
+      { speaker: 's2', line: '谷型。1月が高くて7月が低いから、U字みたいな形。' },
       { speaker: 't', line: 'その通り。じゃあ最初に確認すべきステップ①は?' },
       { speaker: 's1', line: 'あ、南半球か北半球かを見るんだった。谷型なら南半球!' },
       { speaker: 't', line: 'その通り。南半球だとわかった時点で、変な気候じゃなくて、単に季節が逆なだけだとわかる。じゃあ次に何を確認する?' },

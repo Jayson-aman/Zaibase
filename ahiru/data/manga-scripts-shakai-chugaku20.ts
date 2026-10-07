@@ -104,7 +104,7 @@ export const mangaScriptsShakaiChugaku20: Record<string, MangaScript> = {
     title: '地方の条例は、その地域では法律よりも優先される?',
     panels: [
       { speaker: 's1', line: '「地方のことは地方が決める」んだから、条例はその地域では法律よりも優先されるよね?' },
-      { speaker: 't', line: '国のきまりには、憲法・法律・政令・条例という上下関係がある。条例は上から何番目?' },
+      { speaker: 't', line: '国のきまりには、憲法・法律・政令・省令・条例という上下関係がある。条例は上から何番目?' },
       { speaker: 's2', line: 'あ、一番下! 5番目。' },
       { speaker: 't', line: 'その通り。じゃあ上位のきまりに反する下位のきまりは、効力をもつ? もたない?' },
       { speaker: 's1', line: 'もたない!' },

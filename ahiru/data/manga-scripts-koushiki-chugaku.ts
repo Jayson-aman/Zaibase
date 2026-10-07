@@ -179,7 +179,7 @@ export const mangaScriptsKoushikiChugaku: Record<string, MangaScript> = {
       { speaker: 's2', line: '四角形や五角形はどうなるんですか。' },
       { speaker: 't', line: 'よい質問だ。1つの頂点から対角線を引いて、三角形に分けてごらん。四角形はいくつに分かれる？' },
       { speaker: 's1', line: '2つです。だから180×2で360度！ 五角形なら3つで540度ですね。' },
-      { speaker: 't', line: 'その通り。n角形なら(n−2)個の三角形に分かれる。公式を丸暗記しなくても、その場で作れるようになったね。' },
+      { speaker: 't', line: 'その通り。□角形なら(□−2)個の三角形に分かれる。公式を丸暗記しなくても、その場で作れるようになったね。' },
     ],
   },
   koushiki_c5kakudo_gaikaku_manga: {
@@ -229,7 +229,7 @@ export const mangaScriptsKoushikiChugaku: Record<string, MangaScript> = {
       { speaker: 't', line: 'そう。たてが2倍、横も2倍になるから、2×2で4倍。面積は2つの方向に広がるからなんだ。', emphasis: false },
       { speaker: 't', line: '相似比が2倍 → 面積は2×2＝4倍、体積は2×2×2＝8倍', emphasis: true },
       { speaker: 's2', line: '立体だと、たて・横・高さの3方向だから3回かけるんですね。' },
-      { speaker: 't', line: 'その通り。方向の数だけかける、と考えれば、2乗・3乗を丸暗記しなくていい。' },
+      { speaker: 't', line: 'その通り。方向の数だけかける、と考えれば、「2回かける」「3回かける」と覚えられて、丸暗記しなくていい（参考：中学では「2乗」「3乗」と言います）。' },
       { speaker: 's1', line: '相似比3:5なら、面積比は9:25、体積比は27:125ですね。' },
       { speaker: 't', line: 'よくできた。逆に面積比が9:25と言われたら、相似比は3:5に戻せる。両方の向きに使えるようにしておこう。' },
     ],

@@ -20,13 +20,13 @@ export const mangaScriptsSansuChugaku19: Record<string, MangaScript> = {
     title: 'DE:BCが1:2だから、△ADEと台形の面積比も1:2?',
     panels: [
       { speaker: 's1', line: '中点を結んでできたDEとBCの比が1:2だから、△ADEと台形DBCEの面積比も1:2だよね?' },
-      { speaker: 't', line: '△ADEと△ABCの相似比が1:2のとき、面積比は相似比をそのまま使う? それとも2乗する?' },
-      { speaker: 's2', line: 'あ、2乗! 1×1:2×2で1:4になる。' },
+      { speaker: 't', line: '△ADEと△ABCの相似比が1:2のとき、面積比は相似比をそのまま使う? それとも2回かける?' },
+      { speaker: 's2', line: 'あ、2回かける! 1×1:2×2で1:4になる。' },
       { speaker: 't', line: 'その通り。じゃあ△ABC全体を4としたとき、△ADEはいくつ?' },
       { speaker: 's1', line: '1!' },
       { speaker: 't', line: 'その通り。じゃあ台形DBCEは、全体4から何を引けば求まる?' },
       { speaker: 's2', line: '△ADEの1を引く! 4−1＝3。' },
-      { speaker: 't', line: 'その通り。△ADE:台形DBCE＝1:3になる。DE:BCの長さの比（1:2）をそのまま面積比に使わず、相似な部分どうしは2乗、残りの部分は全体から引く、という2段階で考える。', emphasis: true },
+      { speaker: 't', line: 'その通り。△ADE:台形DBCE＝1:3になる。DE:BCの長さの比（1:2）をそのまま面積比に使わず、相似な部分どうしは相似比を2回かけた比（参考：「2乗」とも言います。中学で習います）、残りの部分は全体から引く、という2段階で考える。', emphasis: true },
     ],
   },
   sansu_s095_manga: {
@@ -61,7 +61,7 @@ export const mangaScriptsSansuChugaku19: Record<string, MangaScript> = {
     id: 'sansu_s110_manga',
     title: '往復の時間は、往復の道のりを静水時の速さでわればいい?',
     panels: [
-      { speaker: 's1', line: '往復54kmを往復するときの時間は、往復の道のり108kmを静水時の速さ15km/hでわればいいよね?' },
+      { speaker: 's1', line: '片道54kmの川を往復するときの時間は、往復の道のり108kmを静水時の速さ15km/hでわればいいよね?' },
       { speaker: 't', line: '静水時の速さは「流れが無いとき」の速さ。じゃあ実際に川を下るときと上るときの速さは、静水時の速さと同じ?' },
       { speaker: 's2', line: 'あ、ちがう! 下りは18km/h、上りは12km/hで、どちらも15km/hとは別の速さ。' },
       { speaker: 't', line: 'その通り。じゃあ下りにかかる時間と上りにかかる時間は、それぞれ何時間?' },

@@ -394,7 +394,7 @@ export const XM_KH03_SCRIPTS: Record<string, MangaScript> = {
       { speaker: 's2', line: '清盛に敗れて、義朝は逃げる途中で殺された。' },
       { speaker: 't', line: '保元の乱は味方どうし、平治の乱は勝った者どうしの争いだ。清盛と義朝は、保元では味方、平治では敵。この関係の変化が最重要だよ。', emphasis: true },
       { speaker: 's1', line: '平治の乱で、13歳の源頼朝は命を助けられて、伊豆に流された。' },
-      { speaker: 's2', line: 'その判断が、約20年後に平氏を滅ぼすことになるんだね。' },
+      { speaker: 's2', line: 'その判断が、約20年後の挙兵につながって、やがて平氏を滅ぼすことになるんだね。' },
     ],
   },
   'koko_shakai_s055_xm': {

@@ -103,7 +103,7 @@ export const mangaScriptsKokoEigo24: Record<string, MangaScript> = {
     id: 'koko_eigo_s353_manga',
     title: '日本の睡眠時間は世界最短?',
     panels: [
-      { speaker: 's1', line: '"Japan sleep less than students in many other countries." って書いてあるから、日本の中学生は世界でいちばん睡眠時間が短いんだよね?' },
+      { speaker: 's1', line: '"junior high school students in Japan sleep less than students in many other countries." って書いてあるから、日本の中学生は世界でいちばん睡眠時間が短いんだよね?' },
       { speaker: 't', line: '"less than students in many other countries"は「多くの他国より少ない」。これは「世界一少ない」と同じ意味?' },
       { speaker: 's2', line: 'あ、ちがう! 「多くの国より少ない」だけで、「すべての国より少ない」とは言ってない!' },
       { speaker: 't', line: 'その通り。じゃあ本文に書かれている比較の範囲は?' },

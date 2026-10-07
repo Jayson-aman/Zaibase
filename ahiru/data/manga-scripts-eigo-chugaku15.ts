@@ -6,7 +6,7 @@ export const mangaScriptsEigoChugaku15: Record<string, MangaScript> = {
     title: '「英語が好きです」はbe動詞を使う？',
     panels: [
       { speaker: 's1', line: '「私は英語が好きです」を英語にするとき、「です」があるから、I am like English.でいいよね。' },
-      { speaker: 's2', line: 'えっ、でもそれだと one文にamとlikeで動詞が2つ入っちゃわない？　英語の文って動詞は1つのはずだよね。' },
+      { speaker: 's2', line: 'えっ、でもそれだと1文にamとlikeで動詞が2つ入っちゃわない？　英語の文って動詞は1つのはずだよね。' },
       { speaker: 't', line: 'いい違和感です。「〜です」を「〜だ」に置きかえてみましょう。「英語が好きだ」は自然な日本語ですか。' },
       { speaker: 's1', line: 'あ、自然だ。でも「好きだ」は動作じゃなくて、心の働きを表してる気がする。' },
       { speaker: 't', line: 'その通りです。「好き」は「好む」という動作・心の働きを表す語ですね。この場合、どちらの動詞を使えばいいでしょうか。' },

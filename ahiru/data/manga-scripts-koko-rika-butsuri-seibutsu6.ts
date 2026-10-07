@@ -127,7 +127,7 @@ export const mangaScriptsKokoRikaButsuriSeibutsu6: Record<string, MangaScript> =
       { speaker: 's2', line: 'わたしも「遺伝子の比」と「見た目の比」がいつも混ざる。' },
       { speaker: 't', line: 'じゃあ考えよう。Aa×Aaの子の遺伝子の組み合わせを表にすると、AA・Aa・Aa・aaの4通りができる。この4通りを遺伝子の組み合わせとして数えると、比はどうなる?' },
       { speaker: 's1', line: '……AA:Aa:aa = 1:2:1。これが遺伝子の比。' },
-      { speaker: 't', line: 'その通り。じゃあ、Aが優性(見た目に出る)、aが劣性だとすると、AAとAaは見た目が同じになる? それぞれ違う見た目になる?' },
+      { speaker: 't', line: 'その通り。じゃあ、Aが顕性(見た目に出る)、aが潜性だとすると、AAとAaは見た目が同じになる? それぞれ違う見た目になる?' },
       { speaker: 's2', line: '……同じになる! AAもAaも、Aの性質が見た目に出るから、見分けがつかない。' },
       { speaker: 't', line: 'その通り。じゃあ、見た目で数えるとき、AA(1)とAa(2)は合わせて何としてまとめられる?' },
       { speaker: 's1', line: '……「Aの見た目」として合わせて3。残りのaa(1)が「aの見た目」。だから見た目の比は3:1!' },

@@ -124,7 +124,7 @@ export const mangaScriptsKokoEigo3: Record<string, MangaScript> = {
   },
   koko_eigo_s318_manga: {
     id: 'koko_eigo_s318_manga',
-    title: '「雨だったので家にいた」、soとbecomeどっちを使う？',
+    title: '「雨だったので家にいた」、soとbecauseどっちを使う？',
     panels: [
       { speaker: 's1', line: '「雨だったので家にいた」を英語にするとき、「〜ので」だからbecauseを使えばいいんじゃない?' },
       { speaker: 's2', line: 'でも「It was raining, so I stayed home.」もよく見るよ。soとbecauseってどっちも「〜ので」って訳せるのに、どうやって使い分ければいいんだろう?' },
@@ -133,8 +133,8 @@ export const mangaScriptsKokoEigo3: Record<string, MangaScript> = {
       { speaker: 't', line: 'その通りです。では「I stayed home because it was raining.」ではどうですか?' },
       { speaker: 's2', line: 'あ、こっちは「家にいた」（結果）が先で、「雨が降っていたので」（理由）がbecauseの後に来てる。soとbecauseで、理由と結果の前後関係が正反対になってるんだ!' },
       { speaker: 's1', line: 'じゃあ、どっちを使うかを決めるには、何を基準にすればいいの?' },
-      { speaker: 't', line: 'いい質問です。日本語の「〜ので」だけを手がかりにすると、どちらも当てはまってしまいます。決め手は「どちらを先に書くか」です。先に書くのが理由ならso、先に書くのが結果ならbecauseを使います。この判断基準を持っておけば、日本語訳に惑わされずに選べます。' },
-      { speaker: 't', line: '★ ここがポイント：soとbecauseはどちらも原因と結果を結ぶが、置く位置が正反対。「理由→so→結果」の順、「結果→because→理由」の順になる。日本語の「〜ので」ではなく、どちらを先に書くかで使い分ける。', emphasis: true },
+      { speaker: 't', line: 'いい質問です。日本語の「〜ので」だけを手がかりにすると、どちらも当てはまってしまいます。決め手は「理由と結果のどちらの前に置くか」です。結果の前に置くならso（理由を先に書く）、理由の前に置くならbecause（結果を先に書くのがふつう）を使います。この判断基準を持っておけば、日本語訳に惑わされずに選べます。' },
+      { speaker: 't', line: '★ ここがポイント：soとbecauseはどちらも原因と結果を結ぶが、置く位置が正反対。「理由→so→結果」の順、「結果→because→理由」の順になる。日本語の「〜ので」ではなく、理由と結果のどちらの前に置くかで使い分ける。', emphasis: true },
     ],
   },
 };

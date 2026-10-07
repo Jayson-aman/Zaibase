@@ -95,8 +95,8 @@ export const mangaScriptsEigoChugaku24: Record<string, MangaScript> = {
       { speaker: 't', line: 'その通り。じゃあ同じつづりが同じ音だと決めつけるとどうなる?' },
       { speaker: 's1', line: '"Christmas" とかも読みまちがえちゃう!' },
       { speaker: 't', line: '正解。じゃあ "wh" で始まる語も同じような例外がある?' },
-      { speaker: 's2', line: 'あるね。"white" や "what" は「ホワ」だけど、"who" だけは「フー」で読むんだった。同じつづりでも例外は一つずつ覚えるしかないんだ。' },
-      { speaker: 't', line: '"ch" は "chair" のように「チ」の音になることが多いが、"school"・"Christmas" のように「ク」の音になる例外がある。同様に "wh" は多くの語で「ホワ」の音だが、"who" だけは「フー」と読む。同じつづりでも音が変わることがあるので、例外は語ごとに覚えること。', emphasis: true },
+      { speaker: 's2', line: 'あるね。"white" や "what" は「ホワ」だけど、"who" や "whose" は「フー」で読むんだった。同じつづりでも例外は一つずつ覚えるしかないんだ。' },
+      { speaker: 't', line: '"ch" は "chair" のように「チ」の音になることが多いが、"school"・"Christmas" のように「ク」の音になる例外がある。同様に "wh" は多くの語で「ホワ」の音だが、"who"・"whose" などは「フー」と読む。同じつづりでも音が変わることがあるので、例外は語ごとに覚えること。', emphasis: true },
     ],
   },
   eigo_s454_manga: {

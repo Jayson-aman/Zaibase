@@ -65,7 +65,7 @@ export const mangaScriptsEigoChugaku23: Record<string, MangaScript> = {
       { speaker: 't', line: "doesn'tの中のdoesは、もう何を表している?" },
       { speaker: 's2', line: "あ、主語が1人ってことをdoesがもう表してる! だから動詞にはsをつけなくていいんじゃない?" },
       { speaker: 't', line: "その通り。じゃあ正しい形は?" },
-      { speaker: 's1', line: "He doesn't play tennis.! sは一つの文に一回だけなんだね。" },
+      { speaker: 's1', line: "He doesn't play tennis.! 三単現のsは、doesのほうだけに付ければいいんだね。" },
       { speaker: 't', line: "正解。次は「私は学生ではありません」を考えよう。I don't a student.でいい?" },
       { speaker: 's2', line: "あ、「です」の文だからdon'tじゃない! be動詞の文はnotをamのうしろに置くから、I am not a student.だ。" },
       { speaker: 't', line: "doesn'tの中のdoesが主語が1人であることをすでに表しているので、うしろの動詞はもとの形にもどす。また「です」の否定はbe動詞＋not、「します」の否定はdon't・doesn'tと分けて覚えること。", emphasis: true },
@@ -82,7 +82,7 @@ export const mangaScriptsEigoChugaku23: Record<string, MangaScript> = {
       { speaker: 's1', line: "I have three books.! " },
       { speaker: 't', line: "正解。じゃあ「多くの生徒がサッカーが好きです」、Many students likes soccer.でいい?" },
       { speaker: 's2', line: "あ、many studentsは複数だから、動詞にsはつけない! Many students like soccer.が正しいんだ。名詞のsと動詞のsを混同しちゃってた。" },
-      { speaker: 't', line: "数字・many・someなどが名詞の前にあるときは名詞を複数形にする。ただし主語が複数になったら、動詞の三人称単数のsは消える。「名詞にsが付いたら動詞のsは消える」とセットで覚えること。", emphasis: true },
+      { speaker: 't', line: "数字・many・someなどが名詞の前にあるときは名詞を複数形にする。ただし主語が複数になったら、動詞の三人称単数のsは消える。「主語の名詞にsが付いたら動詞のsは消える」とセットで覚えること。", emphasis: true },
     ],
   },
   eigo_s095_manga: {

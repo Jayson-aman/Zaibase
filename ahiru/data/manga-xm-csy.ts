@@ -382,7 +382,7 @@ export const XM_CSY_SCRIPTS: Record<string, MangaScript> = {
   },
   'sansu_s187_xm': {
     id: 'sansu_s187_xm',
-    title: '相似比はなぜ「AD:AB」？ 面積はなぜ2乗？',
+    title: '相似比はなぜ「AD:AB」？ 面積はなぜ2回かける？',
     panels: [
       { speaker: 't', line: '三角形ABCで、DE∥BC（DEとBCは平行）。ADとDBの比は2:3、BC＝15cm。DEの長さは？' },
       { speaker: 's1', line: '相似（そうじ）比は2:3だから、DE＝15×2/3で10cmです。' },
@@ -391,7 +391,7 @@ export const XM_CSY_SCRIPTS: Record<string, MangaScript> = {
       { speaker: 's1', line: 'ABはAD＋DBで2＋3＝5。相似比は2:5だ。DE＝15×2/5で6cm。' },
       { speaker: 't', line: 'もし三角形ABCの面積が50cm²なら、ADEは？ 2/5をかけて20cm²かな？' },
       { speaker: 's2', line: '三角形ADEは、底辺も高さも2/5に縮んでいる。面積は2/5×2/5で4/25。50×4/25で8cm²。' },
-      { speaker: 't', line: '相似比は「部分：全体」（AD:AB）。長さは相似比のまま、面積は相似比を2回かける。底辺も高さも、いっしょに縮むから。', emphasis: true },
+      { speaker: 't', line: '相似比は「部分：全体」（AD:AB）。長さは相似比のまま、面積は相似比を2回かける（参考：中学では「相似比の2乗」と言います）。底辺も高さも、いっしょに縮むから。', emphasis: true },
       { speaker: 's1', line: '底辺か高さの片方だけが変わるときは、面積の比も1回だけ。相似は、両方が変わるから2回なんだね。' },
     ],
   },
