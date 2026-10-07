@@ -291,7 +291,7 @@ export default function VocabScreen() {
           <HomeButton variant="dark" />
         </View>
         <Text style={[s.title, fontsLoaded && { fontFamily: TEXTBOOK_BOLD }]}>英単語・英熟語</Text>
-        <Text style={s.sub}>単語4,800語+・熟語4,000+・英会話200　英検準2級〜1級・TOEIC800対応</Text>
+        <Text style={s.sub}>単語3,200語+・熟語3,200+・英会話200　英検準2級〜1級・TOEIC800対応</Text>
 
         <TouchableOpacity style={s.conversationEntryBtn} onPress={() => router.push('/conversation')}>
           <Text style={s.conversationEntryText}>🗣️ AIと英会話を練習する</Text>
@@ -492,7 +492,7 @@ export default function VocabScreen() {
 
         {!subLoading && !hasVocabPro && (
           <TouchableOpacity style={s.promoBanner} onPress={() => setShowPaywall(true)}>
-            <Text style={s.promoText}>🔊 英単語Pro — 単語4,800+・熟語4,000+・英検5,160問・ネイティブ発音　{VOCAB_MONTHLY_LABEL}〜</Text>
+            <Text style={s.promoText}>🔊 英単語Pro — 単語3,200+・熟語3,200+・英検5,160問・ネイティブ発音　{VOCAB_MONTHLY_LABEL}〜</Text>
           </TouchableOpacity>
         )}
       </ScrollView>
@@ -576,7 +576,7 @@ function VocabPaywall({ onClose, onPurchased }: { onClose: () => void; onPurchas
         {[
           '🔊 ネイティブ発音（OpenAI TTS・高音質）',
           '▶ 聞き流しモード（自動ページ送り）',
-          '📖 単語4,800語+ ＋ 熟語4,000+ ＋ 日常英会話200',
+          '📖 単語3,200語+ ＋ 熟語3,200+ ＋ 日常英会話200',
           '🇬🇧 英検対策 2・3・4級 5,160問（リスニング音声つき）',
           '🗣️ AIと英会話練習',
           '🎓 英検準2級〜1級・TOEIC800レベル対応',

@@ -63,13 +63,6 @@ export const vocabPhrases7: VocabEntry[] = [
     level: 'senior_basic', category: 'phrase', frequency: 'high', isPhrase: true,
   },
   {
-    id: 'p1209', word: 'in fact', pronunciation: 'イン ファクト',
-    pos: 'phr.', meaning: '実際には・実は',
-    example: 'The task looked simple; in fact, it was quite complex.',
-    exampleJa: 'その作業は簡単そうに見えたが、実際にはかなり複雑だった。',
-    level: 'junior_std', category: 'phrase', frequency: 'very-high', isPhrase: true,
-  },
-  {
     id: 'p1210', word: 'in favor of', pronunciation: 'イン フェイヴァー オブ',
     pos: 'phr.', meaning: '〜に賛成して・〜を支持して',
     example: 'Most members voted in favor of the new proposal.',
@@ -136,33 +129,12 @@ export const vocabPhrases7: VocabEntry[] = [
     level: 'entrance', category: 'phrase', frequency: 'high', isPhrase: true,
   },
   {
-    id: 'p1219', word: 'in relation to', pronunciation: 'イン リレイション トゥ',
-    pos: 'phr.', meaning: '〜に関して・〜との関係で',
-    example: 'The data was analyzed in relation to previous studies.',
-    exampleJa: 'データは以前の研究との関係で分析された。',
-    level: 'senior_std', category: 'phrase', frequency: 'high', isPhrase: true,
-  },
-  {
-    id: 'p1220', word: 'in response to', pronunciation: 'イン レスポンス トゥ',
-    pos: 'phr.', meaning: '〜に応えて・〜に対応して',
-    example: 'The company changed its policy in response to customer feedback.',
-    exampleJa: '会社は顧客のフィードバックに応えて方針を変更した。',
-    level: 'senior_std', category: 'phrase', frequency: 'very-high', isPhrase: true,
-  },
-  {
     id: 'p1221', word: 'in spite of', pronunciation: 'イン スパイト オブ',
     pos: 'phr.', meaning: '〜にもかかわらず',
     example: 'In spite of the rain, the festival continued as planned.',
     exampleJa: '雨にもかかわらず、フェスティバルは予定通り続いた。',
     level: 'junior_std', category: 'phrase', frequency: 'very-high', isPhrase: true,
     keyPoint: 'despite と同義。後ろは名詞・動名詞のみ（that節は不可）。',
-  },
-  {
-    id: 'p1222', word: 'in terms of', pronunciation: 'イン タームズ オブ',
-    pos: 'phr.', meaning: '〜の観点から・〜に関して言えば',
-    example: 'In terms of quality, this product is superior.',
-    exampleJa: '品質の観点から、この製品は優れている。',
-    level: 'senior_std', category: 'phrase', frequency: 'very-high', isPhrase: true,
   },
   {
     id: 'p1223', word: 'in the long run', pronunciation: 'イン ザ ロング ラン',
@@ -185,13 +157,6 @@ export const vocabPhrases7: VocabEntry[] = [
     example: 'Each student answered the question in turn.',
     exampleJa: '各生徒が順番に質問に答えた。',
     level: 'senior_basic', category: 'phrase', frequency: 'high', isPhrase: true,
-  },
-  {
-    id: 'p1226', word: 'in view of', pronunciation: 'イン ヴュー オブ',
-    pos: 'phr.', meaning: '〜を考慮して・〜を鑑みて',
-    example: 'In view of the circumstances, the event was postponed.',
-    exampleJa: '状況を考慮して、イベントは延期された。',
-    level: 'entrance', category: 'phrase', frequency: 'high', isPhrase: true,
   },
   {
     id: 'p1227', word: 'in a sense', pronunciation: 'イン ア センス',
@@ -224,28 +189,6 @@ export const vocabPhrases7: VocabEntry[] = [
   },
   // ── on + 前置詞熟語 ──────────────────────────────────────────
   {
-    id: 'p1231', word: 'on account of', pronunciation: 'オン アカウント オブ',
-    pos: 'phr.', meaning: '〜のために・〜の理由で',
-    example: 'The match was canceled on account of heavy rain.',
-    exampleJa: '大雨のために試合は中止となった。',
-    level: 'senior_std', category: 'phrase', frequency: 'high', isPhrase: true,
-  },
-  {
-    id: 'p1232', word: 'on behalf of', pronunciation: 'オン ビハーフ オブ',
-    pos: 'phr.', meaning: '〜を代表して・〜のために',
-    example: 'I am speaking on behalf of the whole team.',
-    exampleJa: 'チーム全体を代表して話しています。',
-    level: 'senior_std', category: 'phrase', frequency: 'high', isPhrase: true,
-    keyPoint: '「代理で」は on behalf of、「〜のためになるように」のニュアンスもある。',
-  },
-  {
-    id: 'p1233', word: 'on the basis of', pronunciation: 'オン ザ ベイシス オブ',
-    pos: 'phr.', meaning: '〜に基づいて',
-    example: 'Decisions should be made on the basis of solid evidence.',
-    exampleJa: '決定は確かな証拠に基づいて行われるべきだ。',
-    level: 'senior_std', category: 'phrase', frequency: 'very-high', isPhrase: true,
-  },
-  {
     id: 'p1234', word: 'on condition that', pronunciation: 'オン コンディション ザット',
     pos: 'phr.', meaning: '〜という条件で・〜という条件付きで',
     example: 'He agreed to help on condition that he was paid.',
@@ -268,33 +211,11 @@ export const vocabPhrases7: VocabEntry[] = [
     level: 'entrance', category: 'phrase', frequency: 'medium', isPhrase: true,
   },
   {
-    id: 'p1237', word: 'on the other hand', pronunciation: 'オン ジ アザー ハンド',
-    pos: 'phr.', meaning: '一方では・他方では',
-    example: 'City life is convenient; on the other hand, it can be stressful.',
-    exampleJa: '都市生活は便利だが、一方ではストレスになることもある。',
-    level: 'junior_std', category: 'phrase', frequency: 'very-high', isPhrase: true,
-  },
-  {
-    id: 'p1238', word: 'on the whole', pronunciation: 'オン ザ ホール',
-    pos: 'phr.', meaning: '概して・全体的に見て',
-    example: 'On the whole, the project was a great success.',
-    exampleJa: '概して、プロジェクトは大成功だった。',
-    level: 'senior_basic', category: 'phrase', frequency: 'high', isPhrase: true,
-  },
-  {
     id: 'p1239', word: 'on a regular basis', pronunciation: 'オン ア レギュラー ベイシス',
     pos: 'phr.', meaning: '定期的に',
     example: 'You should exercise on a regular basis to stay healthy.',
     exampleJa: '健康を保つために定期的に運動すべきだ。',
     level: 'junior_std', category: 'phrase', frequency: 'very-high', isPhrase: true,
-  },
-  {
-    id: 'p1240', word: 'on purpose', pronunciation: 'オン パーパス',
-    pos: 'phr.', meaning: '故意に・わざと',
-    example: 'Did you break the vase on purpose or by accident?',
-    exampleJa: '花瓶をわざと壊したのですか、それとも偶然ですか？',
-    level: 'junior_std', category: 'phrase', frequency: 'very-high', isPhrase: true,
-    setNote: 'by accident（偶然に）と対で覚える。',
   },
   {
     id: 'p1241', word: 'on schedule', pronunciation: 'オン スケジュール',
@@ -415,25 +336,11 @@ export const vocabPhrases7: VocabEntry[] = [
     level: 'junior_std', category: 'phrase', frequency: 'very-high', isPhrase: true,
   },
   {
-    id: 'p1257', word: 'at the expense of', pronunciation: 'アット ジ エクスペンス オブ',
-    pos: 'phr.', meaning: '〜を犠牲にして・〜の費用で',
-    example: 'He succeeded at the expense of his health.',
-    exampleJa: '彼は健康を犠牲にして成功した。',
-    level: 'entrance', category: 'phrase', frequency: 'high', isPhrase: true,
-  },
-  {
     id: 'p1258', word: 'at the risk of', pronunciation: 'アット ザ リスク オブ',
     pos: 'phr.', meaning: '〜の危険を冒して',
     example: 'At the risk of being criticized, I will speak the truth.',
     exampleJa: '批判される危険を冒してでも、真実を話す。',
     level: 'entrance', category: 'phrase', frequency: 'medium', isPhrase: true,
-  },
-  {
-    id: 'p1259', word: 'at stake', pronunciation: 'アット ステイク',
-    pos: 'phr.', meaning: '危険にさらされて・賭けられて',
-    example: 'Many lives are at stake if the dam fails.',
-    exampleJa: 'ダムが決壊すれば、多くの命が危険にさらされる。',
-    level: 'senior_std', category: 'phrase', frequency: 'high', isPhrase: true,
   },
   {
     id: 'p1260', word: 'at the same time', pronunciation: 'アット ザ セイム タイム',
@@ -515,32 +422,11 @@ export const vocabPhrases7: VocabEntry[] = [
   },
   // ── by + 前置詞熟語 ──────────────────────────────────────────
   {
-    id: 'p1271', word: 'by accident', pronunciation: 'バイ アクシデント',
-    pos: 'phr.', meaning: '偶然に・事故で',
-    example: 'He found the old letter by accident while cleaning.',
-    exampleJa: '彼は掃除中に偶然、古い手紙を見つけた。',
-    level: 'junior_std', category: 'phrase', frequency: 'very-high', isPhrase: true,
-  },
-  {
     id: 'p1272', word: 'by all means', pronunciation: 'バイ オール ミーンズ',
     pos: 'phr.', meaning: 'ぜひ・もちろん・どんな手段を使っても',
     example: '\"Can I join the meeting?\" \"By all means.\"',
     exampleJa: '「会議に参加してもいいですか？」「もちろんです。」',
     level: 'junior_std', category: 'phrase', frequency: 'very-high', isPhrase: true,
-  },
-  {
-    id: 'p1273', word: 'by chance', pronunciation: 'バイ チャンス',
-    pos: 'phr.', meaning: '偶然に・たまたま',
-    example: 'We met by chance on the train to Osaka.',
-    exampleJa: '大阪行きの電車でたまたま出会った。',
-    level: 'junior_std', category: 'phrase', frequency: 'very-high', isPhrase: true,
-  },
-  {
-    id: 'p1274', word: 'by contrast', pronunciation: 'バイ コントラスト',
-    pos: 'phr.', meaning: 'それとは対照的に',
-    example: 'The north is cold; the south, by contrast, is tropical.',
-    exampleJa: '北部は寒いが、それとは対照的に南部は熱帯性だ。',
-    level: 'senior_std', category: 'phrase', frequency: 'high', isPhrase: true,
   },
   {
     id: 'p1275', word: 'by far', pronunciation: 'バイ ファー',
@@ -558,26 +444,11 @@ export const vocabPhrases7: VocabEntry[] = [
     level: 'junior_std', category: 'phrase', frequency: 'high', isPhrase: true,
   },
   {
-    id: 'p1277', word: 'by means of', pronunciation: 'バイ ミーンズ オブ',
-    pos: 'phr.', meaning: '〜によって・〜を使って',
-    example: 'They communicated by means of hand signals.',
-    exampleJa: '彼らは手信号によってコミュニケーションをとった。',
-    level: 'senior_std', category: 'phrase', frequency: 'high', isPhrase: true,
-  },
-  {
     id: 'p1278', word: 'by nature', pronunciation: 'バイ ネイチャー',
     pos: 'phr.', meaning: '生まれつき・本来の性質として',
     example: 'She is by nature a very optimistic person.',
     exampleJa: '彼女は生まれつきとても楽観的な人だ。',
     level: 'senior_basic', category: 'phrase', frequency: 'high', isPhrase: true,
-  },
-  {
-    id: 'p1279', word: 'by no means', pronunciation: 'バイ ノー ミーンズ',
-    pos: 'phr.', meaning: '決して〜ない',
-    example: 'This problem is by no means easy to solve.',
-    exampleJa: 'この問題は決して解くのが容易ではない。',
-    level: 'senior_std', category: 'phrase', frequency: 'high', isPhrase: true,
-    keyPoint: '否定の意味が強い強調表現。文頭に置くと倒置が起きる（By no means is this easy.）。',
   },
   {
     id: 'p1280', word: 'by turns', pronunciation: 'バイ ターンズ',
@@ -606,13 +477,6 @@ export const vocabPhrases7: VocabEntry[] = [
     example: 'By comparison, last year\'s results were much worse.',
     exampleJa: '比較すると、昨年の結果はずっと悪かった。',
     level: 'senior_std', category: 'phrase', frequency: 'high', isPhrase: true,
-  },
-  {
-    id: 'p1284', word: 'by virtue of', pronunciation: 'バイ ヴァーチュー オブ',
-    pos: 'phr.', meaning: '〜のおかげで・〜の力で',
-    example: 'By virtue of her experience, she was promoted quickly.',
-    exampleJa: '彼女の経験のおかげで、彼女は素早く昇進した。',
-    level: 'entrance', category: 'phrase', frequency: 'high', isPhrase: true,
   },
   {
     id: 'p1285', word: 'by implication', pronunciation: 'バイ インプリケイション',
@@ -708,13 +572,6 @@ export const vocabPhrases7: VocabEntry[] = [
     level: 'senior_std', category: 'phrase', frequency: 'high', isPhrase: true,
   },
   {
-    id: 'p1298', word: 'for lack of', pronunciation: 'フォー ラック オブ',
-    pos: 'phr.', meaning: '〜の欠如のために',
-    example: 'The event was canceled for lack of interest.',
-    exampleJa: 'そのイベントは関心の欠如のために中止になった。',
-    level: 'senior_std', category: 'phrase', frequency: 'high', isPhrase: true,
-  },
-  {
     id: 'p1299', word: 'for the purpose of', pronunciation: 'フォー ザ パーパス オブ',
     pos: 'phr.', meaning: '〜の目的で',
     example: 'Data was collected for the purpose of improving the service.',
@@ -736,20 +593,6 @@ export const vocabPhrases7: VocabEntry[] = [
     exampleJa: 'ご応募に関しては、まもなくご連絡いたします。',
     level: 'senior_std', category: 'phrase', frequency: 'very-high', isPhrase: true,
     setNote: 'with respect to / regarding / concerning と同義の書き言葉的表現。',
-  },
-  {
-    id: 'p1302', word: 'with respect to', pronunciation: 'ウィズ リスペクト トゥ',
-    pos: 'phr.', meaning: '〜に関して・〜の点では',
-    example: 'With respect to environmental issues, we need urgent action.',
-    exampleJa: '環境問題に関しては、早急な対策が必要だ。',
-    level: 'senior_std', category: 'phrase', frequency: 'very-high', isPhrase: true,
-  },
-  {
-    id: 'p1303', word: 'with the aim of', pronunciation: 'ウィズ ジ エイム オブ',
-    pos: 'phr.', meaning: '〜を目的として',
-    example: 'The project was launched with the aim of reducing waste.',
-    exampleJa: 'ゴミを減らすことを目的としてプロジェクトが開始された。',
-    level: 'senior_std', category: 'phrase', frequency: 'high', isPhrase: true,
   },
   {
     id: 'p1304', word: 'with the exception of', pronunciation: 'ウィズ ジ エクセプション オブ',
@@ -774,13 +617,6 @@ export const vocabPhrases7: VocabEntry[] = [
     level: 'senior_basic', category: 'phrase', frequency: 'high', isPhrase: true,
   },
   {
-    id: 'p1307', word: 'without fail', pronunciation: 'ウィズアウト フェイル',
-    pos: 'phr.', meaning: '必ず・間違いなく',
-    example: 'Please submit your report without fail by tomorrow morning.',
-    exampleJa: '明日の朝までに必ずレポートを提出してください。',
-    level: 'senior_basic', category: 'phrase', frequency: 'high', isPhrase: true,
-  },
-  {
     id: 'p1308', word: 'without hesitation', pronunciation: 'ウィズアウト ヘジテイション',
     pos: 'phr.', meaning: 'ためらいなく・即座に',
     example: 'He answered without hesitation.',
@@ -802,13 +638,6 @@ export const vocabPhrases7: VocabEntry[] = [
     level: 'entrance', category: 'phrase', frequency: 'medium', isPhrase: true,
   },
   // ── to + 前置詞熟語 ──────────────────────────────────────────
-  {
-    id: 'p1311', word: 'to a certain extent', pronunciation: 'トゥ ア サートゥン エクステント',
-    pos: 'phr.', meaning: 'ある程度まで',
-    example: 'To a certain extent, your success depends on luck.',
-    exampleJa: 'ある程度まで、あなたの成功は運に左右される。',
-    level: 'senior_std', category: 'phrase', frequency: 'very-high', isPhrase: true,
-  },
   {
     id: 'p1312', word: 'to some degree', pronunciation: 'トゥ サム ディグリー',
     pos: 'phr.', meaning: 'ある程度',
@@ -867,21 +696,7 @@ export const vocabPhrases7: VocabEntry[] = [
     exampleJa: '彼は機械を修理しようとしたが、無駄だった。',
     level: 'entrance', category: 'phrase', frequency: 'medium', isPhrase: true,
   },
-  {
-    id: 'p1320', word: 'to this end', pronunciation: 'トゥ ジス エンド',
-    pos: 'phr.', meaning: 'この目的のために',
-    example: 'We aim to cut emissions by 50%. To this end, we are investing in green energy.',
-    exampleJa: '私たちは排出量を50%削減することを目指している。この目的のために、再生可能エネルギーに投資している。',
-    level: 'entrance', category: 'phrase', frequency: 'medium', isPhrase: true,
-  },
   // ── of + 前置詞熟語 ──────────────────────────────────────────
-  {
-    id: 'p1321', word: 'of course', pronunciation: 'オブ コース',
-    pos: 'phr.', meaning: 'もちろん',
-    example: 'Of course, you are welcome to join us.',
-    exampleJa: 'もちろん、ご参加いただけます。',
-    level: 'junior_basic', category: 'phrase', frequency: 'very-high', isPhrase: true,
-  },
   {
     id: 'p1322', word: 'of necessity', pronunciation: 'オブ ネセシティ',
     pos: 'phr.', meaning: '必然的に・どうしても',
@@ -1134,21 +949,6 @@ export const vocabPhrases7: VocabEntry[] = [
   },
   // ── 複合・発展熟語 ────────────────────────────────────────────
   {
-    id: 'p1356', word: 'in the wake of', pronunciation: 'イン ザ ウェイク オブ',
-    pos: 'phr.', meaning: '〜の結果として・〜の直後に',
-    example: 'In the wake of the earthquake, many volunteers gathered.',
-    exampleJa: '地震の直後に、多くのボランティアが集まった。',
-    level: 'entrance', category: 'phrase', frequency: 'high', isPhrase: true,
-  },
-  {
-    id: 'p1357', word: 'in light of', pronunciation: 'イン ライト オブ',
-    pos: 'phr.', meaning: '〜を考慮すると・〜に照らして',
-    example: 'In light of new evidence, the verdict was reconsidered.',
-    exampleJa: '新しい証拠を考慮して、評決が再検討された。',
-    level: 'entrance', category: 'phrase', frequency: 'high', isPhrase: true,
-    keyPoint: 'in view of と同義だが、新しい情報・発見に対して使われることが多い。',
-  },
-  {
     id: 'p1358', word: 'on the grounds of', pronunciation: 'オン ザ グラウンズ オブ',
     pos: 'phr.', meaning: '〜を理由に',
     example: 'The case was dismissed on the grounds of lack of evidence.',
@@ -1161,13 +961,6 @@ export const vocabPhrases7: VocabEntry[] = [
     example: 'He achieved fame at the cost of his personal life.',
     exampleJa: '彼は私生活を犠牲にして名声を得た。',
     level: 'senior_std', category: 'phrase', frequency: 'high', isPhrase: true,
-  },
-  {
-    id: 'p1360', word: 'by the time', pronunciation: 'バイ ザ タイム',
-    pos: 'phr.', meaning: '〜するころには',
-    example: 'By the time she arrived, the meeting had already ended.',
-    exampleJa: '彼女が到着したころには、会議はすでに終わっていた。',
-    level: 'junior_std', category: 'phrase', frequency: 'very-high', isPhrase: true,
   },
   {
     id: 'p1361', word: 'in accordance with', pronunciation: 'イン アコーダンス ウィズ',
@@ -1205,13 +998,6 @@ export const vocabPhrases7: VocabEntry[] = [
     level: 'junior_basic', category: 'phrase', frequency: 'very-high', isPhrase: true,
   },
   {
-    id: 'p1366', word: 'on the basis of', pronunciation: 'オン ザ ベイシス オブ',
-    pos: 'phr.', meaning: '〜に基づいて',
-    example: 'Staff are evaluated on the basis of their performance.',
-    exampleJa: 'スタッフはパフォーマンスに基づいて評価される。',
-    level: 'senior_std', category: 'phrase', frequency: 'very-high', isPhrase: true,
-  },
-  {
     id: 'p1367', word: 'under the circumstances', pronunciation: 'アンダー ザ サーカムスタンセズ',
     pos: 'phr.', meaning: 'このような状況では・状況を考えると',
     example: 'Under the circumstances, it is wise to postpone the event.',
@@ -1225,27 +1011,6 @@ export const vocabPhrases7: VocabEntry[] = [
     exampleJa: '会議は明日だという印象を持っていた。',
     level: 'senior_std', category: 'phrase', frequency: 'high', isPhrase: true,
     keyPoint: '誤解・思い込みのニュアンスが含まれることが多い。',
-  },
-  {
-    id: 'p1369', word: 'as opposed to', pronunciation: 'アズ オポーズド トゥ',
-    pos: 'phr.', meaning: '〜とは対照的に・〜ではなく',
-    example: 'We prefer quality, as opposed to quantity.',
-    exampleJa: '私たちは量よりも質を重視する。',
-    level: 'senior_std', category: 'phrase', frequency: 'high', isPhrase: true,
-  },
-  {
-    id: 'p1370', word: 'in the absence of', pronunciation: 'イン ジ アブセンス オブ',
-    pos: 'phr.', meaning: '〜がない場合には・〜の不在時に',
-    example: 'In the absence of proof, we cannot draw conclusions.',
-    exampleJa: '証拠がない場合には、結論を出すことができない。',
-    level: 'entrance', category: 'phrase', frequency: 'high', isPhrase: true,
-  },
-  {
-    id: 'p1371', word: 'with the exception of', pronunciation: 'ウィズ ジ エクセプション オブ',
-    pos: 'phr.', meaning: '〜を除いて',
-    example: 'With the exception of one student, everyone passed the exam.',
-    exampleJa: '1人の生徒を除いて、全員が試験に合格した。',
-    level: 'senior_basic', category: 'phrase', frequency: 'high', isPhrase: true,
   },
   {
     id: 'p1372', word: 'in keeping with', pronunciation: 'イン キーピング ウィズ',
@@ -1262,13 +1027,6 @@ export const vocabPhrases7: VocabEntry[] = [
     level: 'entrance', category: 'phrase', frequency: 'medium', isPhrase: true,
   },
   {
-    id: 'p1374', word: 'with this in mind', pronunciation: 'ウィズ ジス イン マインド',
-    pos: 'phr.', meaning: 'このことを念頭に置いて',
-    example: 'With this in mind, let\'s plan our strategy carefully.',
-    exampleJa: 'このことを念頭に置いて、慎重に戦略を立てよう。',
-    level: 'senior_std', category: 'phrase', frequency: 'high', isPhrase: true,
-  },
-  {
     id: 'p1375', word: 'in excess of', pronunciation: 'イン エクセス オブ',
     pos: 'phr.', meaning: '〜を超えて・〜以上',
     example: 'The project will cost in excess of one million dollars.',
@@ -1276,26 +1034,11 @@ export const vocabPhrases7: VocabEntry[] = [
     level: 'entrance', category: 'phrase', frequency: 'high', isPhrase: true,
   },
   {
-    id: 'p1376', word: 'prior to', pronunciation: 'プライア トゥ',
-    pos: 'phr.', meaning: '〜に先立って・〜の前に',
-    example: 'Prior to the meeting, please read the attached report.',
-    exampleJa: '会議に先立って、添付のレポートをお読みください。',
-    level: 'senior_std', category: 'phrase', frequency: 'high', isPhrase: true,
-  },
-  {
     id: 'p1377', word: 'subsequent to', pronunciation: 'サブシークウェント トゥ',
     pos: 'phr.', meaning: '〜の後で・〜に続いて',
     example: 'Subsequent to the discovery, more research was conducted.',
     exampleJa: 'その発見の後で、さらなる研究が行われた。',
     level: 'entrance', category: 'phrase', frequency: 'medium', isPhrase: true,
-  },
-  {
-    id: 'p1378', word: 'with reference to', pronunciation: 'ウィズ レファレンス トゥ',
-    pos: 'phr.', meaning: '〜を参照して・〜に関しては',
-    example: 'With reference to your letter dated June 1, we are pleased to confirm.',
-    exampleJa: '6月1日付けのお手紙に関しては、喜んでご確認申し上げます。',
-    level: 'entrance', category: 'phrase', frequency: 'medium', isPhrase: true,
-    keyPoint: 'ビジネスレターや公式文書の冒頭でよく使われる定型表現。',
   },
   {
     id: 'p1379', word: 'at the outset', pronunciation: 'アット ジ アウトセット',
@@ -1353,20 +1096,6 @@ export const vocabPhrases7: VocabEntry[] = [
     example: 'In the context of global warming, this data is alarming.',
     exampleJa: '地球温暖化の文脈において、このデータは警戒すべきものだ。',
     level: 'senior_std', category: 'phrase', frequency: 'very-high', isPhrase: true,
-  },
-  {
-    id: 'p1387', word: 'by the same token', pronunciation: 'バイ ザ セイム トークン',
-    pos: 'phr.', meaning: '同様に・それと同じ理由で',
-    example: 'You should respect others; by the same token, you deserve respect.',
-    exampleJa: '他者を尊重すべきだ。同様に、あなた自身も尊重を受けるに値する。',
-    level: 'entrance', category: 'phrase', frequency: 'medium', isPhrase: true,
-  },
-  {
-    id: 'p1388', word: 'in conjunction with', pronunciation: 'イン コンジャンクション ウィズ',
-    pos: 'phr.', meaning: '〜と連携して・〜と合わせて',
-    example: 'This medicine should be taken in conjunction with a healthy diet.',
-    exampleJa: 'この薬は健康的な食事と合わせて服用する必要がある。',
-    level: 'entrance', category: 'phrase', frequency: 'medium', isPhrase: true,
   },
   {
     id: 'p1389', word: 'with the intention of', pronunciation: 'ウィズ ジ インテンション オブ',

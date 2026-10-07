@@ -430,7 +430,7 @@ export default function FeaturesPage() {
             <View style={styles.planDivider} />
             {[
               '✓ PROプランの全機能',
-              '✓ 英単語Proを丸ごと同梱（単語4,800+・熟語4,000+）',
+              '✓ 英単語Proを丸ごと同梱（単語3,200+・熟語3,200+）',
               '✓ 英検対策 2・3・4級 5,160問',
               '✓ AIと英会話練習',
               '✓ AI弱点コーチ（間違い問題をAI分析）',
