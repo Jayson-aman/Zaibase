@@ -1220,15 +1220,15 @@ export const eikenQuestions4kyuGrammarX3: EikenQuestion[] = [
     id: 'eiken_4kyu_gra3_082',
     level: '4kyu',
     category: 'grammar',
-    question: 'Choose the best word or phrase to complete the sentence.\n\nI have known him ( ) many years.',
+    question: 'Choose the best word or phrase to complete the sentence.\n\nI met him many years ( ).',
     choices: [
-      { key: 'A', text: 'for' },
+      { key: 'A', text: 'ago' },
       { key: 'B', text: 'in' },
       { key: 'C', text: 'since' },
       { key: 'D', text: 'at' },
     ],
     correctKey: 'A',
-    explanation: '〈for＋期間〉で「〜の間」という長さを表します。for many years で「長年」という意味です。since は「〜から（起点）」、at/in は時点を表すので、期間の長さには for を使います。\n【図解】期間の for\n★ルール:「〜の間」＝for＋期間の長さ\n○正解:for many years\n×誤り:since many years\n→期間の長さは for。',
+    explanation: '【何を聞かれているか】「何年も前に」と、今から数えて前の時を表す語を選びます。\n【なぜその形か】met（会った）は過去形です。過去のことが今からどれだけ前かを言うときは〈期間＋ago〉を使います。many years ago ＝ 何年も前に。\n【正解】ago（私は何年も前に彼に会った）\n【よくあるまちがい】in は in 2015 のように年や月の前、at は at 3 o\'clock のような時刻の前に置き、since は「〜以来」で意味が合いません。',
     difficulty: 'basic',
   },
   {

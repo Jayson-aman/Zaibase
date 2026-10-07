@@ -979,19 +979,19 @@ export const SPLUS_TC_HO: Question[] = [
     difficulty: 'standard',
     examFrequency: 'medium',
     question:
-      '【法政第二 英語（現在進行形）】次の文の（　）に入る最も適切な語（句）を選びなさい。\nLook! The boys （　） soccer in the park now.',
-    choices: ['play', 'plays', 'are playing', 'played'],
-    answer: 'are playing',
-    hint: 'Look! と now は、「いま、まさにしている」ことを表す手がかりです。主語が複数であることにも注目しよう。',
-    explanation: `【何を聞かれているか】文の中の動詞の正しい形。
-【なぜその答えか】Look!（見て！）と now（いま）があるので、「いま、まさにしている最中」を表す現在進行形（be動詞＋動詞のing形）を使います。主語 The boys は複数なので、be動詞は are です。
-【ステップ1】now や Look! があれば、いまの動作＝現在進行形。
-【ステップ2】現在進行形は「be動詞(am/is/are)＋動詞のing」。
-【ステップ3】主語 The boys は複数なので are を使う。are playing となる。
-【答え】are playing
-【確かめ】The boys are playing soccer in the park now. は「少年たちはいま公園でサッカーをしています」の意味で、Look! とも自然につながります。
-【よくあるまちがい】現在形の play を選ぶこと。現在形はふだんの習慣を表すので、**「いま」には現在進行形**を使います。`,
-    pitfall: 'now があるのに、ふだんの習慣を表す現在形を選ぶ。',
-    memoryTip: 'いま〜している＝be動詞＋ing。主語が複数なら are。',
+      '【法政第二 英語（比較）】次の文の（　）に入る最も適切な語（句）を選びなさい。\nMy brother is （　） than I. He is 170 cm tall and I am 160 cm tall.',
+    choices: ['tall', 'taller', 'tallest', 'more tall'],
+    answer: 'taller',
+    hint: '「〜より」という意味の than があるときは、2人（2つ）をくらべる形を使います。tall の形がどう変わるかを考えよう。',
+    explanation: `【何を聞かれているか】2人の背の高さをくらべる文の、tall の正しい形。
+【なぜその答えか】空所のあとに than（〜より）があるので、「AはBより〜だ」というくらべる文（比較級）です。短い形容詞の比較級は、語のおわりに er をつけて作ります。tall は短い語なので taller になります。
+【ステップ1】than があれば、2つをくらべる文＝比較級。
+【ステップ2】tall のような短い語は、おわりに er をつけて taller。
+【ステップ3】170cm の兄のほうが、160cm の私より高いので、「兄は私より背が高い」＝ My brother is taller than I. で内容も合います。
+【答え】taller
+【確かめ】tall（もとの形）のままだと「兄は背が高い」とくらべない文になり、than とつながりません。tallest は「いちばん高い」で、2人だけのくらべには使いません。
+【よくあるまちがい】more tall と書くこと。tall のような短い語は more をつけず、er をつけます（more は beautiful のような長い語に使います）。`,
+    pitfall: 'than があるのに、もとの形（tall）を選んでしまう。短い語に more をつけてしまう。',
+    memoryTip: 'AはBより〜＝短い語は〜er＋than。長い語は more〜＋than。',
   },
 ];

@@ -7,7 +7,7 @@ export const kokoNyushiEigo7: Question[] = [
   {
     id: 'koko_nyushi_eigo7_01',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。  My mother ( ) dinner for two hours when I got home.',
+    question: '【高校先取り】次の（　）内に最も適切な語を選べ。  My mother ( ) dinner for two hours when I got home.',
     choices: ['① cooks', '② cooked', '③ has cooked', '④ had been cooking'],
     answer: '④ had been cooking',
     hint: '「私が帰宅したとき」より前から続いていた動作を表す時制を選ぶ。',
@@ -16,6 +16,7 @@ export const kokoNyushiEigo7: Question[] = [
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
+    pitfall: '過去完了進行形（過去のある時点まで続いていた動作）は高校で習う文法で、高校入試には出ない。中学では、その時点でしていた動作は過去進行形で、継続は現在完了の文で表す。',
     maxOnly: true,
   },
   {
@@ -159,7 +160,7 @@ finish は目的語に動名詞のみをとり、不定詞（to +原形）はと
   {
     id: 'koko_nyushi_eigo7_07',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。  By the time my parents come home, I ( ) all the cleaning.',
+    question: '【高校先取り】次の（　）内に最も適切な語を選べ。  By the time my parents come home, I ( ) all the cleaning.',
     choices: ['① will finish', '② have finished', '③ will have finished', '④ finished'],
     answer: '③ will have finished',
     hint: '「両親が帰宅するまでには」という未来の時点での完了を表す時制を選ぶ。',
@@ -168,6 +169,7 @@ finish は目的語に動名詞のみをとり、不定詞（to +原形）はと
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
+    pitfall: '未来完了（未来のある時点までの完了・継続）は高校で習う文法で、高校入試には出ない。中学では、未来のことは未来の文（will）で、現在までの完了・継続は現在完了で表す。',
     maxOnly: true,
   },
   {
@@ -561,7 +563,7 @@ in time for〜／to do：〜に間に合って。on time：時間通りに（定
   {
     id: 'koko_nyushi_eigo7_23',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語を選べ。  I still remember the store ( ) my grandmother used to buy vegetables.',
+    question: '【高校先取り】次の（　）内に最も適切な語を選べ。  I still remember the store ( ) my grandmother used to buy vegetables.',
     choices: ['① which', '② who', '③ where', '④ when'],
     answer: '③ where',
     hint: '先行詞は「場所（store）」で、関係副詞を使う。',
@@ -570,6 +572,7 @@ in time for〜／to do：〜に間に合って。on time：時間通りに（定
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
+    pitfall: '関係副詞（場所・時・理由・方法を先行詞にとる語）は高校で習う文法で、高校入試には出ない。中学では、関係代名詞（who・which・that）を使って先行詞を後ろから説明する文を学ぶ。',
     maxOnly: true,
   },
   {
@@ -649,7 +652,7 @@ which＋名詞（which vegetables, which bag）で「どの〜」という限定
   {
     id: 'koko_nyushi_eigo7_28',
     subject: 'eigo',
-    question: '次の語を並べ替えて正しい英文を作れ。（1語不要な語が含まれる）\n（ have / been / I / cooking / for / since / an hour ）\n「私は1時間ずっと料理をしている。」',
+    question: '【高校先取り】次の語を並べ替えて正しい英文を作れ。（1語不要な語が含まれる）\n（ have / been / I / cooking / for / since / an hour ）\n「私は1時間ずっと料理をしている。」',
     answer: 'I have been cooking for an hour.',
     hint: '「1時間ずっと〜している」は現在完了進行形。for（〜の間）か since（〜以来）かを判断する。',
     explanation: `【出題意図】
@@ -674,6 +677,7 @@ for＋期間（for an hour, for two days）／since＋起点（since noon, since
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
+    pitfall: '現在完了進行形（ずっと〜し続けている）は高校で習う文法で、高校入試には出ない。中学では、継続は現在完了（have＋過去分詞）の継続用法で、いま行っている動作は現在進行形で表す。',
     maxOnly: true,
   },
   {
@@ -1101,7 +1105,7 @@ This is the chair my grandfather made for me.
   {
     id: 'koko_nyushi_eigo7_46',
     subject: 'eigo',
-    question: '次の日本語を英語にしなさい。\n\n「もし十分なお金があれば、家族全員に新しい服を買ってあげるのに。」',
+    question: '【高校先取り】次の日本語を英語にしなさい。\n\n「もし十分なお金があれば、家族全員に新しい服を買ってあげるのに。」',
     answer: 'If I had enough money, I would buy new clothes for all my family members.',
     hint: '現在の事実に反する仮定は「if＋過去形、主語＋would＋動詞原形」（仮定法過去）を使う。',
     explanation:
@@ -1109,6 +1113,7 @@ This is the chair my grandfather made for me.
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
+    pitfall: '仮定法（「もし〜だったら」と現実と反対のことを仮定する文）は高校で習う文法で、高校入試には出ない。中学では、実現しそうな条件を表す「if＋現在形」の文（もし明日晴れたら〜）を学ぶ。',
     maxOnly: true,
   },
 

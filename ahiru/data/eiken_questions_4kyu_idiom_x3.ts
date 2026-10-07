@@ -811,15 +811,15 @@ export const eikenQuestions4kyuIdiomX3: EikenQuestion[] = [
   },
   {
     id: 'eiken_4kyu_idi3_063', level: '4kyu', category: 'idiom',
-    question: 'Choose the best word to complete the phrase.\n\nI have known him for a long ( ).',
+    question: 'Choose the best word to complete the phrase.\n\nI studied English for a long ( ) yesterday.',
     choices: [
       { key: 'A', text: 'ago' },
       { key: 'B', text: 'time' },
-      { key: 'C', text: 'while' },
-      { key: 'D', text: 'day' },
+      { key: 'C', text: 'lot' },
+      { key: 'D', text: 'clock' },
     ],
     correctKey: 'B',
-    explanation: '"for a long time"（長い間）が正解。for a long ago／for a long while／for a long day はこの形にならない。\n【図解】for a long time の意味\n★for a long time = 長い間、ずっと\n○例文の文脈: 彼を昔からずっと知っている場面\n×for a while = しばらくの間（短め）\n→長期間を表すのは for a long time。',
+    explanation: '【何を聞かれているか】「長い間」を表す決まった言い方 for a long ＿ の空所を選びます。\n【なぜその形か】「長い間」は for a long time という決まった言い方です。time は「時間」の意味で、昨日長い時間英語を勉強したという文になります。\n【正解】time（私は昨日、長い時間英語を勉強した）\n【よくあるまちがい】ago は「〜前に」、lot は a lot of（たくさんの）の形で使い、clock は「時計」で、どれも for a long のあとには入りません。',
     difficulty: 'basic',
   },
   {

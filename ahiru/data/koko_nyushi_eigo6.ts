@@ -7,7 +7,7 @@ export const kokoNyushiEigo6: Question[] = [
   {
     id: 'koko_nyushi_eigo6_01',
     subject: 'eigo',
-    question: `次の（　）内に最も適切な語句を選べ。\n\nWe ( ) basketball for about an hour when it began to rain heavily.\n① play  ② have played  ③ had been playing  ④ will have played`,
+    question: `【高校先取り】次の（　）内に最も適切な語句を選べ。\n\nWe ( ) basketball for about an hour when it began to rain heavily.\n① play  ② have played  ③ had been playing  ④ will have played`,
     answer: `③ had been playing`,
     hint: `「雨が降り始めた」という過去の時点よりも前から続いていた動作を表す時制を選ぶ。`,
     explanation:
@@ -15,6 +15,7 @@ export const kokoNyushiEigo6: Question[] = [
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
+    pitfall: '過去完了進行形（過去のある時点まで続いていた動作）は高校で習う文法で、高校入試には出ない。中学では、その時点でしていた動作は過去進行形で、継続は現在完了の文で表す。',
     maxOnly: true,
   },
   {
@@ -133,7 +134,7 @@ Of all the events（すべての種目の中で）は範囲を示す表現で最
   {
     id: 'koko_nyushi_eigo6_07',
     subject: 'eigo',
-    question: `次の（　）内に最も適切な語句を選べ。\n\nBy the time the concert starts, we ( ) for over three hours.\n① rehearse  ② will rehearse  ③ have rehearsed  ④ will have rehearsed`,
+    question: `【高校先取り】次の（　）内に最も適切な語句を選べ。\n\nBy the time the concert starts, we ( ) for over three hours.\n① rehearse  ② will rehearse  ③ have rehearsed  ④ will have rehearsed`,
     answer: `④ will have rehearsed`,
     hint: `「コンサートが始まるまでには」という未来のある時点での完了・継続を表す時制を選ぶ。`,
     explanation:
@@ -141,6 +142,7 @@ Of all the events（すべての種目の中で）は範囲を示す表現で最
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
+    pitfall: '未来完了（未来のある時点までの完了・継続）は高校で習う文法で、高校入試には出ない。中学では、未来のことは未来の文（will）で、現在までの完了・継続は現在完了で表す。',
     maxOnly: true,
   },
   {
@@ -571,7 +573,7 @@ depend on〜：〜次第である、〜に頼る（rely on〜は「〜に頼る�
   {
     id: 'koko_nyushi_eigo6_23',
     subject: 'eigo',
-    question: `次の（　）内に最も適切な語を選べ。\n\nThis is the gym ( ) our basketball team practices every day.\n① which  ② who  ③ where  ④ when`,
+    question: `【高校先取り】次の（　）内に最も適切な語を選べ。\n\nThis is the gym ( ) our basketball team practices every day.\n① which  ② who  ③ where  ④ when`,
     answer: `③ where`,
     hint: `先行詞は「場所」。関係副詞を使う。`,
     explanation:
@@ -579,6 +581,7 @@ depend on〜：〜次第である、〜に頼る（rely on〜は「〜に頼る�
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
+    pitfall: '関係副詞（場所・時・理由・方法を先行詞にとる語）は高校で習う文法で、高校入試には出ない。中学では、関係代名詞（who・which・that）を使って先行詞を後ろから説明する文を学ぶ。',
     maxOnly: true,
   },
   {
@@ -656,7 +659,7 @@ how many＋複数名詞（数）／how much＋不可算名詞（量・値段）�
   {
     id: 'koko_nyushi_eigo6_28',
     subject: 'eigo',
-    question: `次の語を並べ替えて正しい英文を作れ。（1語不要な語が含まれる）\n（ has / for / she / been / since / practicing / piano / the / three / years ）\n「彼女は3年間ずっとピアノを練習し続けている。」`,
+    question: `【高校先取り】次の語を並べ替えて正しい英文を作れ。（1語不要な語が含まれる）\n（ has / for / she / been / since / practicing / piano / the / three / years ）\n「彼女は3年間ずっとピアノを練習し続けている。」`,
     answer: `She has been practicing the piano for three years.`,
     hint: `「3年間ずっと〜している」は現在完了進行形。since は起点を表すときに使う。`,
     explanation: `【出題意図】
@@ -680,6 +683,7 @@ for＋期間（for three years）／since＋起点（since 2020）。現在完�
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
+    pitfall: '現在完了進行形（ずっと〜し続けている）は高校で習う文法で、高校入試には出ない。中学では、継続は現在完了（have＋過去分詞）の継続用法で、いま行っている動作は現在進行形で表す。',
     maxOnly: true,
   },
   {

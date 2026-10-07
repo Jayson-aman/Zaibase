@@ -200,12 +200,12 @@ export const kokoKisoEigo50b: Question[] = [
     examType: 'koko',
     difficulty: 'basic',
     maxOnly: true,
-    question: '次の（　）に過去完了形（had + 過去分詞）の動詞の正しい形を入れなさい。\n① When I arrived at the station, the train (　) already (　). （私が駅に着いたとき、電車はすでに出発していた）\n② She (　) never (　) pizza before she visited Italy. （イタリアを訪れる前、彼女はピザを一度も食べたことがなかった）',
+    question: '【高校先取り】次の（　）に過去完了形（had + 過去分詞）の動詞の正しい形を入れなさい。\n① When I arrived at the station, the train (　) already (　). （私が駅に着いたとき、電車はすでに出発していた）\n② She (　) never (　) pizza before she visited Italy. （イタリアを訪れる前、彼女はピザを一度も食べたことがなかった）',
     answer: '① had already left　② had never eaten',
     hint: '過去完了形は「had + 過去分詞」。過去のある時点よりさらに前に起きたことを表す。',
     explanation:
       '【何を聞かれているか】①「When I arrived at the station, the train (　) already (　).」②「She (　) never (　) pizza before she visited Italy.」の空所を過去完了形で埋める。\n【なぜhad＋過去分詞を使うのか】過去のある時点（駅に着いたとき、イタリアを訪れる前）よりもさらに前に起きたことを表すには、過去完了形（had＋過去分詞）を使う必要があるから。\n【ポイント1】①電車の出発（過去完了）→私の到着（過去）という順序を表す。had already left。\n【ポイント2】②ピザを食べていない（過去完了）→イタリア訪問（過去）という順序を表す。had never eaten。\n【ポイント3】2つの過去の出来事のうち、より前に起きた方をhad＋過去分詞にする。\n【答え】① had already left　② had never eaten\n【確かめ】2つの出来事のうち、どちらが先に起きたかを確認し、先に起きた方が過去完了になっているかを見直す。\n【よくあるまちがい】When I arrived, the train already left.のように過去形で書いてしまい、どちらが先かが不明確になる。\n【ここが絶対】過去完了は「過去の過去」。2つの過去がある文では、先に起きた方をhad＋過去分詞にする。',
-    pitfall: '「When I arrived, the train already left」のように過去形で書いてしまうと「順番」が不明確になる。hadを付けて過去完了にすることが大切。',
+    pitfall: '過去完了（動作の前後を表す形）は高校で習う文法で、高校入試には出ない。中学では、過去の出来事は過去形で表し、前後関係は「〜する前に」「〜した後で」などの語で示す。「When I arrived, the train already left」のように過去形で書いてしまうと「順番」が不明確になる。hadを付けて過去完了にすることが大切。',
     memoryTip: '過去完了 = 「過去の過去」。2つの過去がある文を見たら「どちらが先か」を考えてhad + 過去分詞！',
   },
   {
@@ -617,12 +617,12 @@ export const kokoKisoEigo50b: Question[] = [
     examType: 'koko',
     difficulty: 'basic',
     maxOnly: true,
-    question: '次の（　）に適切な語句をA〜Dから選びなさい。\n① She has been studying English (　) she was ten.\nA. for　B. since　C. when　D. during\n② By the time I moved away, I (　) in this town for thirty years.\nA. lived　B. have lived　C. had lived　D. live',
+    question: '【高校先取り】次の（　）に適切な語句をA〜Dから選びなさい。\n① She has been studying English (　) she was ten.\nA. for　B. since　C. when　D. during\n② By the time I moved away, I (　) in this town for thirty years.\nA. lived　B. have lived　C. had lived　D. live',
     answer: '① B（since）　② C（had lived）',
     hint: '① sinceは「起点＋現在完了」。② By the time（〜するまでには）＋過去形のときは「過去の過去」で過去完了（had + 過去分詞）。',
     explanation:
       '【何を聞かれているか】①「She has been studying English (　) she was ten.」②「By the time I moved away, I (　) in this town for thirty years.」の空所に適切な語句を選ぶ。\n【なぜsinceとhad livedになるのか】①は現在完了進行形とともに「10歳のときから」という起点を表すのでsince、②は「引っ越した（過去）」までに30年間住んでいた、つまり過去のある時点より前から続く期間を表すので過去完了had livedを使う必要があるから。\n【ポイント1】①she was ten（過去の起点）とhas been studying（現在完了進行形）が組み合わさるのでsince。\n【ポイント2】②By the time I moved away（過去形）までの期間を表すには過去完了（had＋過去分詞）を使う。単なる過去形livedでは「引っ越した時点より前」という前後関係がはっきりしない。\n【ポイント3】have livedを選ぶと「今も住み続けている」という意味になり、「引っ越す前」という文脈と合わなくなる。\n【答え】① B（since）　② C（had lived）\n【確かめ】②が「引っ越す前」という過去よりもさらに前の期間を表していることを確認する。\n【よくあるまちがい】②でhave livedを選んでしまい、「今も住んでいる」という意味になってしまう。\n【ここが絶対】2つの過去が登場したら「どちらが先か」を考えて、先の方を過去完了（had＋過去分詞）にする。',
-    pitfall: '②でhave lived を選ぶと「現在まで住んでいる」という意味になってしまい、「引っ越す前」という文脈と合わなくなる。',
+    pitfall: '①の現在完了進行形と②の過去完了は高校で習う文法で、高校入試には出ない。中学では、継続は現在完了（have＋過去分詞）で、過去の出来事は過去形で表す。②でhave lived を選ぶと「現在まで住んでいる」という意味になってしまい、「引っ越す前」という文脈と合わなくなる。',
     memoryTip: '2つの過去が登場したら「どちらが先か」を考えてhad + 過去分詞！「過去の過去 = 過去完了」を合言葉に！',
   },
   {
@@ -720,11 +720,11 @@ export const kokoKisoEigo50b: Question[] = [
     examType: 'koko',
     difficulty: 'basic',
     maxOnly: true,
-    question: '次の（　）に適切な関係副詞（where / when / why / how）を入れなさい。\n① This is the town (　) I was born.（これが私の生まれた町です）\n② Do you remember the day (　) we first met?（私たちが初めて会った日を覚えていますか）\n③ I don\'t know the reason (　) she is crying.（彼女が泣いている理由がわからない）',
+    question: '【高校先取り】次の（　）に適切な関係副詞（where / when / why / how）を入れなさい。\n① This is the town (　) I was born.（これが私の生まれた町です）\n② Do you remember the day (　) we first met?（私たちが初めて会った日を覚えていますか）\n③ I don\'t know the reason (　) she is crying.（彼女が泣いている理由がわからない）',
     answer: '① where　② when　③ why',
     hint: '関係副詞：where=場所、when=時、why=理由、how=方法（先行詞に対応する）。',
     explanation: '【文法ポイント】\n関係副詞は「先行詞が何か」で選ぶ。このパターンを覚えるだけでOK！\n\n【関係副詞の対応表】\n・where → 先行詞が場所（town / city / place）\n・when → 先行詞が時（day / time / year / moment）\n・why → 先行詞がthe reason\n・how → 先行詞なし（the way how とは言わない）\n\n【例文】\n○ This is the house where he lives.\n○ I remember the night when we saw the meteor shower.\n○ Do you know the reason why she left?\n\n【日本語との違い】\n日本語では「生まれた町」「会った日」「泣いている理由」と普通に修飾できるが、英語は関係副詞を使って後から修飾する。\n\n【答え】\n① where　② when　③ why',
-    pitfall: '「the town which I was born」のようにwhereの代わりにwhichを使うミス。場所には関係代名詞（which）でなく関係副詞（where）が自然。',
+    pitfall: '関係副詞（場所・時・理由・方法を先行詞にとる語）は高校で習う文法で、高校入試には出ない。中学では、関係代名詞（who・which・that）を使って先行詞を後ろから説明する文を学ぶ。「the town which I was born」のようにwhereの代わりにwhichを使うミス。場所には関係代名詞（which）でなく関係副詞（where）が自然。',
     memoryTip: '場所=where（どこ）、時=when（いつ）、理由=why（なぜ）。関係副詞は英語の「〜した」を先行詞につなぐ接着剤！',
   },
   {

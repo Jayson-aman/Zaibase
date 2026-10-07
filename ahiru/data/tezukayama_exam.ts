@@ -313,40 +313,52 @@ export const tezukayamaEigo: Question[] = [
     course: 'tezukayama',
     examType: 'chugaku',
     question:
-      '【大問3】語形変化と英作文の問題です。\n\n' +
+      '【大問3】語形変化と英作文の問題です。\n' +
+      '\n' +
       '問1: 括弧内の語を適切な形に変えなさい。\n' +
       '①She （study） English every day. → 昨日のことに変える\n' +
-      '②I have （go） to Tokyo. → have + 過去分詞の形に\n' +
-      '③She is （write） a letter now. → 現在進行形の形に\n\n' +
-      '問2: 「彼女は3年間フランス語を学んでいます」を英語で書きなさい。（現在完了進行形を使うこと）\n\n' +
-      '問3: 「その本は英語で書かれています」を英語で書きなさい。（受動態を使うこと）',
+      '②I （go） to Tokyo last week. → 過去形に\n' +
+      '③She is （write） a letter now. → 現在進行形の形に\n' +
+      '\n' +
+      '問2: 「彼女は今、フランス語を勉強しています」を英語で書きなさい。（現在進行形を使うこと）\n' +
+      '\n' +
+      '問3: 「私は昨日、公園で友だちとサッカーをしました」を英語で書きなさい。（過去形を使うこと）',
     answer:
-      '問1: ①studied　②gone　③writing\n' +
-      '問2: She has been learning French for three years.\n' +
-      '問3: The book is written in English.',
-    hint: '現在完了進行形＝have/has been + -ing。受動態＝be動詞 + 過去分詞。',
+      '問1: ①studied　②went　③writing\n' +
+      '問2: She is studying French now.\n' +
+      '問3: I played soccer with my friends in the park yesterday.',
+    hint: '現在進行形＝be動詞（am/is/are）＋動詞のing形。過去形＝動詞の終わりに ed をつける（go のように形が変わる動詞もある）。',
     explanation:
-      '【解説】\n\n' +
-      '【■問1】\n' +
-      '①"She studies English every day."（現在形）→ 昨日のこと（過去形）にするので、\n' +
-      'study（規則動詞）の過去形：y→iedで"studied"。\n' +
-      '"She studied English yesterday."\n\n' +
-      '②"have gone"は現在完了形のhave + 過去分詞。\n' +
-      'go（不規則動詞）の過去分詞：went→gone（go-went-goneと変化）\n' +
-      '"I have gone to Tokyo."（私は東京に行ってしまった）\n\n' +
-      '③現在進行形はbe動詞 + -ing形。\n' +
-      'write + ing = writing（eを取ってing）\n' +
-      '"She is writing a letter now."\n\n' +
-      '【■問2】\n' +
-      '現在完了進行形：have/has + been + 動詞-ing\n' +
-      '「3年間」＝for three years\n' +
-      '"She has been learning French for three years."\n' +
-      '（have been learning＝ずっと学び続けている、という継続の意味を表す）\n\n' +
-      '【■問3】\n' +
-      '受動態：be動詞 + 過去分詞 + by〜（〜によって）\n' +
-      '「書かれている」＝is written\n' +
-      '「英語で」＝in English（言語・道具にはinを使う）\n' +
-      '"The book is written in English."\n' +
-      '（The bookが主語で3人称単数なのでis。writtenはwriteの過去分詞）',
+      '【何を聞かれているか】\n' +
+      '問1は括弧内の動詞を指示どおりの形に直す問題、問2は「今〜しています」の英文、問3は「昨日〜しました」の英文を書く問題です。\n' +
+      '\n' +
+      '【なぜその形か】\n' +
+      '動詞の形は、いつのことかで決まります。「今」は be動詞＋ing形（現在進行形）、「昨日・先週」は過去形です。文の中の now や yesterday や last week が手がかりになります。\n' +
+      '\n' +
+      '【ポイント1】問1①\n' +
+      'study の過去形は、最後の y を i にかえて ed をつけ、studied。\n' +
+      '\n' +
+      '【ポイント2】問1②\n' +
+      'last week（先週）があるので過去の文です。go は形が変わる動詞で、過去形は went。\n' +
+      '\n' +
+      '【ポイント3】問1③\n' +
+      'is のあとなので ing 形にします。write は最後の e を消して ing をつけ、writing。\n' +
+      '\n' +
+      '【ポイント4】問2\n' +
+      '「今〜しています」は、be動詞＋ing形。主語が She なので is を使い、study の ing 形は studying（y はそのまま ing をつける）。She is studying French now.\n' +
+      '\n' +
+      '【ポイント5】問3\n' +
+      '「昨日」は yesterday で、過去の文です。play の過去形は ed をつけて played。「友だちと」は with my friends、「公園で」は in the park。\n' +
+      '\n' +
+      '【答え】\n' +
+      '問1: ①studied　②went　③writing\n' +
+      '問2: She is studying French now.\n' +
+      '問3: I played soccer with my friends in the park yesterday.\n' +
+      '\n' +
+      '【確かめ】\n' +
+      '問2は is のあとが ing 形になっているか、問3は yesterday があるのに動詞が過去形（played）になっているかを見直します。\n' +
+      '\n' +
+      '【よくあるまちがい】\n' +
+      '② goed と書くこと（go は不規則に went と変わる）、③ writeing と書くこと（e は消してから ing）、問2で is を忘れて She studying と書くこと。',
   },
 ];

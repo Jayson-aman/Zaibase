@@ -695,15 +695,15 @@ export const eikenQuestions4kyuDialogueX3: EikenQuestion[] = [
     id: 'eiken_4kyu_dia3_047',
     level: '4kyu',
     category: 'dialogue',
-    question: 'Choose the best response to complete the conversation.\n\nA: Have you ever been to Kyoto?\nB: (  )\nA: You should go. It\'s beautiful.',
+    question: 'Choose the best response to complete the conversation.\n\nA: Are you going to go to Kyoto this summer?\nB: (  )\nA: You should go. It\'s beautiful.',
     choices: [
-      { key: 'A', text: 'No, I\'ve never been there.' },
+      { key: 'A', text: 'No, I\'m not going there.' },
       { key: 'B', text: 'Kyoto is in Japan.' },
       { key: 'C', text: 'I go to school by train.' },
       { key: 'D', text: 'Yes, I like Kyoto food.' },
     ],
     correctKey: 'A',
-    explanation: '「京都に行ったことある？」という経験を尋ねる質問です。Aが「行くべきだよ、きれいだから」と勧めているので、まだ行ったことがないと答えるAの「いや、一度もない」が正解。B・C・Dは経験の答えになっておらず、勧めの流れに合いません。\n【図解】会話のポイント\n★問いかけ：京都に行ったことある？（経験）\n○自然な応答：いや、一度もない\n×かみ合わない応答：京都は日本にある／電車で通学\n→Have you ever〜には経験の有無を答える。',
+    explanation: '【何を聞かれているか】「この夏、京都に行く予定？」という質問への自然な答えを選びます。\n【なぜその形か】A は Are you going to〜?（〜する予定ですか）と予定をたずねています。A が「行くべきだよ、きれいだから」と勧めているので、予定が無い、と答える No, I\'m not going there. が流れに合います。\n【正解】No, I\'m not going there.（いいえ、行く予定はありません）\n【よくあるまちがい】「京都は日本にある」「電車で通学している」は質問にこたえていません。「京都の食べ物が好き」は予定への返事になっていません。',
     difficulty: 'basic',
   },
   {

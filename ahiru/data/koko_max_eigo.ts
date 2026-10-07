@@ -22,7 +22,7 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_02',
     subject: 'eigo',
-    question: '次の英文の（　）内に入る最も適切な語句を選びなさい。  By the time she arrived at the station, the train ( ).',
+    question: '【高校先取り】次の英文の（　）内に入る最も適切な語句を選びなさい。  By the time she arrived at the station, the train ( ).',
     choices: ['① already left', '② has already left', '③ had already left', '④ was already leaving'],
     answer: '③ had already left',
     hint: '「駅に着いた」のが過去、「電車が出た」のはそれより前の出来事です。',
@@ -30,6 +30,7 @@ export const kokoMaxEigo: Question[] = [
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
+    pitfall: '過去完了（動作の前後を表す形）は高校で習う文法で、高校入試には出ない。中学では、過去の出来事は過去形で表し、前後関係は「〜する前に」「〜した後で」などの語で示す。',
     maxOnly: true,
   },
   {
@@ -47,7 +48,7 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_04',
     subject: 'eigo',
-    question: '次の英文の（　）内に入る最も適切な語句を選びなさい。  If I ( ) a bird, I could fly to you right now.',
+    question: '【高校先取り】次の英文の（　）内に入る最も適切な語句を選びなさい。  If I ( ) a bird, I could fly to you right now.',
     choices: ['① am', '② was', '③ were', '④ will be'],
     answer: '③ were',
     hint: '現実とは異なる仮定（「もし〜だったら」）を表す構文を考えましょう。',
@@ -55,12 +56,13 @@ export const kokoMaxEigo: Question[] = [
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
+    pitfall: '仮定法（「もし〜だったら」と現実と反対のことを仮定する文）は高校で習う文法で、高校入試には出ない。中学では、実現しそうな条件を表す「if＋現在形」の文（もし明日晴れたら〜）を学ぶ。',
     maxOnly: true,
   },
   {
     id: 'koko_max_eigo_05',
     subject: 'eigo',
-    question: '次の英文の（　）内に入る最も適切な語句を選びなさい。  If she had studied harder, she ( ) the exam.',
+    question: '【高校先取り】次の英文の（　）内に入る最も適切な語句を選びなさい。  If she had studied harder, she ( ) the exam.',
     choices: ['① would pass', '② would have passed', '③ had passed', '④ will have passed'],
     answer: '② would have passed',
     hint: '過去の事実に反する仮定（「あのとき〜していたら」）の帰結節を考えましょう。',
@@ -68,6 +70,7 @@ export const kokoMaxEigo: Question[] = [
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
+    pitfall: '仮定法過去完了（過去の事実と反対の仮定）は高校で習う文法で、高校入試には出ない。中学では、実現しそうな条件を表す「if＋現在形」の文を学ぶ。',
     maxOnly: true,
   },
   {
@@ -86,13 +89,14 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_07',
     subject: 'eigo',
-    question: '次の直接話法の文を間接話法に書き換えなさい。\n\n直接話法：She said to me, "I will help you tomorrow."\n間接話法：She told me ( ) ( ) ( ) help me the next day.',
+    question: '【高校先取り】次の直接話法の文を間接話法に書き換えなさい。\n\n直接話法：She said to me, "I will help you tomorrow."\n間接話法：She told me ( ) ( ) ( ) help me the next day.',
     answer: 'She told me that she would help me the next day.',
     hint: '時制の一致と、代名詞・時の副詞の変化に注意しましょう。',
     explanation: '正解：She told me that she would help me the next day.\n\n【間接話法への書き換えルール】\n\n①動詞の変化：said to → told\n（say to = 「〜に言う」は間接話法では tell に変わる）\n\n②接続詞：that を入れる（省略可）\n\n③代名詞の変化：\n"I" → she（発言者に合わせる）\n"you" → me（聞き手＝me に合わせる）\n\n④時制の一致（主節が過去形 told なので従属節も過去にする）：\nwill → would\n\n⑤時の副詞の変化：\ntomorrow → the next day（または the following day）\n\n【時の副詞の変化表】\nnow → then\ntoday → that day\ntomorrow → the next day\nyesterday → the day before\nago → before\nhere → there',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
+    pitfall: '話法の書きかえ（直接話法と間接話法の入れかえ）は高校で習う文法で、高校入試には出ない。中学では、tell や say のあとに that で文を続ける形を中心に学ぶ。',
     maxOnly: true,
   },
   {
@@ -123,13 +127,14 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_10',
     subject: 'eigo',
-    question: '次の英文には文法的な誤りが1か所あります。誤りを指摘し、正しい形に直して、なぜ誤りなのかを日本語で説明しなさい。\n\n"She has been waiting for the bus since two hours."',
+    question: '【高校先取り】次の英文には文法的な誤りが1か所あります。誤りを指摘し、正しい形に直して、なぜ誤りなのかを日本語で説明しなさい。\n\n"She has been waiting for the bus since two hours."',
     answer: '誤り：since two hours → 正しくは for two hours',
     hint: '現在完了進行形で使う since と for の違いを考えましょう。',
     explanation: '【誤りの箇所と修正】\nsince two hours → for two hours\n\n正しい文：She has been waiting for the bus for two hours.\n（彼女はバスを2時間ずっと待っています）\n\n【since と for の違い】\n■ since：特定の時点（起点）から現在まで続いていることを表す\n→ since + 「特定の時刻・日・年・出来事」\n例：since 9 o\'clock（9時から）、since Monday（月曜日から）、since 2020（2020年から）、since I was a child（子どもの頃から）\n\n■ for：「〜の間」という継続期間の長さを表す\n→ for + 「期間を表す語句」\n例：for two hours（2時間）、for three days（3日間）、for a long time（長い間）\n\n「two hours（2時間）」は期間の長さを表す言葉なので for を使わなければなりません。since を使う場合は since two hours ago（2時間前から）とします。\n\n【現在完了進行形】\nhave/has been + 〜ing の形で「（過去から今まで）ずっと〜している」という継続を強調する。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
+    pitfall: '現在完了進行形（ずっと〜し続けている）は高校で習う文法で、高校入試には出ない。中学では、継続は現在完了（have＋過去分詞）の継続用法で、いま行っている動作は現在進行形で表す。',
     maxOnly: true,
   },
 
@@ -169,7 +174,7 @@ export const kokoMaxEigo: Question[] = [
     id: 'koko_max_eigo_13',
     subject: 'eigo',
     question:
-      '次の語句を並べ替えて、意味の通る英文を作りなさい。\n\n「彼は正午より前に家を出たに違いない。」\n【語群】he / have / must / left / home / before / noon',
+      '【高校先取り】次の語句を並べ替えて、意味の通る英文を作りなさい。\n\n「彼は正午より前に家を出たに違いない。」\n【語群】he / have / must / left / home / before / noon',
     answer: 'He must have left home before noon.',
     hint: '「〜したに違いない」という過去の推量を表す助動詞の構文を考えましょう。',
     explanation:
@@ -177,6 +182,7 @@ export const kokoMaxEigo: Question[] = [
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
+    pitfall: '〈助動詞＋have＋過去分詞〉（過去についての推量・後悔）は高校で習う文法で、高校入試には出ない。中学では、助動詞は現在や未来の文で「〜しなければならない」「〜したほうがよい」の意味で学ぶ。',
     maxOnly: true,
   },
   {
@@ -194,7 +200,7 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_15',
     subject: 'eigo',
-    question: '次の語句を並べ替えて、意味の通る英文を作りなさい。\n\n「もっと流暢に英語が話せたらいいのに。」\n【語群】wish / I / speak / could / I / fluently / English / more',
+    question: '【高校先取り】次の語句を並べ替えて、意味の通る英文を作りなさい。\n\n「もっと流暢に英語が話せたらいいのに。」\n【語群】wish / I / speak / could / I / fluently / English / more',
     answer: 'I wish I could speak English more fluently.',
     hint: '「〜だったらいいのに」という現実には叶わない願望を表す構文を考えましょう。',
     explanation:
@@ -202,6 +208,7 @@ export const kokoMaxEigo: Question[] = [
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
+    pitfall: '「〜だったらいいのに」という仮定法の願望の文は高校で習う文法で、高校入試には出ない。中学では「〜したい」「〜だといいな」を want や hope の文で表す。',
     maxOnly: true,
   },
   {
@@ -245,13 +252,14 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_19',
     subject: 'eigo',
-    question: '次の語句を並べ替えて、意味の通る英文を作りなさい。\n\n【語群】not / only / did / study / she / hard / but / she / also / helped / classmates / her',
+    question: '【高校先取り】次の語句を並べ替えて、意味の通る英文を作りなさい。\n\n【語群】not / only / did / study / she / hard / but / she / also / helped / classmates / her',
     answer: 'Not only did she study hard, but she also helped her classmates.',
     hint: '「〜だけでなく…もまた」という否定語で始まる倒置構文を考えましょう。',
     explanation: '正解：Not only did she study hard, but she also helped her classmates.\n（彼女は一生懸命勉強しただけでなく、クラスメートも助けた）\n\n【Not only 〜, but also … 構文】\n「〜だけでなく…もまた」\n通常形：She not only studied hard but also helped her classmates.\n\n【倒置（Not only が文頭に来る場合）】\nNot only が文頭に置かれると、後ろの節では主語と助動詞（do/does/did）が倒置される。\n\nNot only + 助動詞 + 主語 + 動詞 〜, but + 主語 + also + 動詞 〜\n\n過去の文なので助動詞は did：\nNot only did she study hard, but she also helped her classmates.\n\n【否定語倒置の例】\n• Never have I seen such a beautiful sunset.\n• Seldom does he come on time.\n• Not only did he win, but he also broke the record.\n\n倒置は強調のための文学的・フォーマルな表現。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
+    pitfall: '否定語を文頭に出して語順を入れかえる倒置は高校で習う文法で、高校入試には出ない。中学では、not only A but also B をふつうの語順の文で学ぶ。',
     maxOnly: true,
   },
   {
@@ -311,7 +319,7 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_24',
     subject: 'eigo',
-    question: '次の日本語を英語に訳しなさい。\n\n「あなたはその映画を見に行くべきだったのに。とても感動的でしたよ。」',
+    question: '【高校先取り】次の日本語を英語に訳しなさい。\n\n「あなたはその映画を見に行くべきだったのに。とても感動的でしたよ。」',
     answer: 'You should have gone to see the movie. It was very moving.',
     hint: '「〜すべきだったのに（しなかった）」という後悔を表す助動詞の構文を使いましょう。',
     explanation:
@@ -319,6 +327,7 @@ export const kokoMaxEigo: Question[] = [
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
+    pitfall: '〈助動詞＋have＋過去分詞〉（過去についての推量・後悔）は高校で習う文法で、高校入試には出ない。中学では、助動詞は現在や未来の文で「〜しなければならない」「〜したほうがよい」の意味で学ぶ。',
     maxOnly: true,
   },
   {
@@ -578,13 +587,14 @@ export const kokoMaxEigo: Question[] = [
   {
     id: 'koko_max_eigo_44',
     subject: 'eigo',
-    question: '次の英文の空所（　）に適切な語を入れて文を完成させなさい。\n\n(a) He is the best player ( ) I have ever seen.\n(b) This is the place ( ) my grandfather was born.\n(c) Do you know the reason ( ) she left early?',
+    question: '【高校先取り】次の英文の空所（　）に適切な語を入れて文を完成させなさい。\n\n(a) He is the best player ( ) I have ever seen.\n(b) This is the place ( ) my grandfather was born.\n(c) Do you know the reason ( ) she left early?',
     answer: '(a) that または whom  (b) where  (c) why',
     hint: '先行詞の種類と関係詞節内での役割（主語・目的語・場所・理由）を考えましょう。',
     explanation: '正解：(a) that（または whom）  (b) where  (c) why\n\n【関係詞の種類と使い分け】\n\n(a) the best player ( ) I have ever seen\n先行詞：the best player（人）\n節内の役割：seen の目的語\n→ 目的格の関係代名詞：whom または that（口語的）\n→ 省略も可能：the best player I have ever seen\n\n最上級 + ever + 現在完了（have ever seen）は「今まで見た中で最も〜」という表現のパターン。\n\n(b) the place ( ) my grandfather was born\n先行詞：the place（場所）\n節内の役割：場所を表す副詞的修飾語\n→ 関係副詞：where\nwhere = in which / at which\n(the place where = the place in which)\n\n(c) the reason ( ) she left early\n先行詞：the reason（理由）\n節内の役割：理由を表す副詞的修飾語\n→ 関係副詞：why\nwhy = for which\n\n【関係副詞のまとめ】\n• where：場所（場所を表す先行詞）\n• when：時（時を表す先行詞）\n• why：理由（the reason が先行詞）\n• how：方法（the way が先行詞、ただし the way how は使わない）',
     difficulty: 'standard',
     course: 'koko-general',
     examType: 'koko',
+    pitfall: '(b)(c) の関係副詞（where・why）は高校で習う文法で、高校入試には出ない。中学では、関係代名詞（(a) の that や who・which）を使って先行詞を後ろから説明する文を学ぶ。',
     maxOnly: true,
   },
   {
