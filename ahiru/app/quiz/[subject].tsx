@@ -448,6 +448,15 @@ export default function QuizScreen() {
     scrollRef.current?.scrollTo({ y: 0, animated: false });
   }, [currentIndex]);
 
+  // 答え合わせの結果（正解・不正解）の画面になったら、いちばん上（答えと解説のカード）に戻す。
+  // 答えを書く欄を押すと、画面はその欄の位置までスクロールされている。そのまま結果を出すと、
+  // 解説は画面の上に隠れて、解説のあとの余白と「次の問題へ」だけが見えてしまっていた（実機で報告あり）。
+  useEffect(() => {
+    if (!waitingNext) return;
+    const id = setTimeout(() => scrollRef.current?.scrollTo({ y: 0, animated: true }), 120);
+    return () => clearTimeout(id);
+  }, [waitingNext]);
+
   async function advanceOrFinish(currentScore: number, currentWrongIds: string[]) {
     setWaitingNext(false);
     answeringRef.current = false;
