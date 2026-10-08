@@ -47,6 +47,11 @@ type Props = {
    * カードは自分で表裏の状態を持っているので、外から開けるようにしておく。
    */
   forceReveal?: boolean;
+  /**
+   * 解説（スライド・ヒント・はやく解くコツ）をカードの中に出さない。
+   * 答え合わせの結果の枠（○ 正解！／✗ 不正解！）の下に、同じ解説を出すときに使う（重複を避ける）。
+   */
+  hideExplanation?: boolean;
 };
 
 const { width } = Dimensions.get('window');
@@ -72,7 +77,7 @@ function fitText(text: string, max: number, min: number, longAt = 90) {
   return { fontSize, lineHeight: Math.round(fontSize * 1.6) };
 }
 
-export default function QuizCard({ question, onReveal, choices, onChoiceSelect, isPro = false, lockFlip = false, forceReveal = false }: Props) {
+export default function QuizCard({ question, onReveal, choices, onChoiceSelect, isPro = false, lockFlip = false, forceReveal = false, hideExplanation = false }: Props) {
   const [flipped, setFlipped] = useState(false);
   const revealed = flipped || forceReveal;
   const [selectedChoice, setSelectedChoice] = useState<string | null>(null);
@@ -370,7 +375,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             <Image source={illustration} style={styles.subjectImage} resizeMode="cover" />
           ) : null}
           {video != null && <VideoPlayer url={video.url} title={video.title} />}
-          {(question.explanation != null || question.hint != null) && (
+          {!hideExplanation && (question.explanation != null || question.hint != null) && (
             <View style={styles.hintBox}>
               <Text style={styles.hintLabel}>📖 解説</Text>
               <ExplanationSlides key={question.id} q={question} />

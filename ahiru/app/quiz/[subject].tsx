@@ -19,7 +19,9 @@ import { getTestMode, buildTestSet, type TestModeKey, type LevelKey } from '../.
 import { GRADE_ORDER, type GradeKey } from '../../data/grades';
 import { getKoushikiFormulaIdForQuestion, isKoushikiFormulaFree } from '../../data/koushiki-access';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
-import { explanationText } from '../../utils/explanation';
+import { explanationText, hintText } from '../../utils/explanation';
+import ExplanationSlides from '../../components/ExplanationSlides';
+import { getQuickTrick } from '../../data/quick-tricks';
 
 // 「レベル別ドリル」「入試対策」は問題プールから毎回ランダムに出題するため、
 // 個別の問題にmaxOnlyを付けて絞れない。代わりに1回のセッションで
@@ -448,12 +450,14 @@ export default function QuizScreen() {
     scrollRef.current?.scrollTo({ y: 0, animated: false });
   }, [currentIndex]);
 
-  // 答え合わせの結果（正解・不正解）の画面になったら、いちばん上（答えと解説のカード）に戻す。
+  // 答え合わせの結果（○ 正解！／✗ 不正解！）の枠が出たら、その枠の位置までスクロールする。
   // 答えを書く欄を押すと、画面はその欄の位置までスクロールされている。そのまま結果を出すと、
-  // 解説は画面の上に隠れて、解説のあとの余白と「次の問題へ」だけが見えてしまっていた（実機で報告あり）。
+  // 解説が画面の外にあって、「次の問題へ」だけが見えてしまっていた（実機で報告あり）。
+  // 解説は結果の枠のすぐ下に出すので、枠の位置に合わせれば、結果と解説が一緒に目に入る。
+  const resultYRef = useRef(0);
   useEffect(() => {
     if (!waitingNext) return;
-    const id = setTimeout(() => scrollRef.current?.scrollTo({ y: 0, animated: true }), 120);
+    const id = setTimeout(() => scrollRef.current?.scrollTo({ y: Math.max(0, resultYRef.current - 12), animated: true }), 250);
     return () => clearTimeout(id);
   }, [waitingNext]);
 
@@ -928,6 +932,7 @@ export default function QuizScreen() {
           onReveal={handleReveal}
           lockFlip={!currentChoices && typed == null}
           forceReveal={typed != null}
+          hideExplanation={waitingNext}
           choices={currentChoices}
           onChoiceSelect={handleChoiceAnswer}
           isPro={isPro}
@@ -935,7 +940,7 @@ export default function QuizScreen() {
 
         {/* Wrong answer feedback - Gemini-style */}
         {waitingNext && (
-          <View style={styles.wrongFeedbackWrap}>
+          <View style={styles.wrongFeedbackWrap} onLayout={(e) => { resultYRef.current = e.nativeEvent.layout.y; }}>
             <View style={[styles.wrongHeader, lastWasCorrect && styles.correctHeader]}>
               <Text style={[styles.wrongHeaderText, lastWasCorrect && styles.correctHeaderText]}>
                 {lastWasCorrect ? '○ 正解！' : '✗ 不正解！'}
@@ -958,6 +963,24 @@ export default function QuizScreen() {
                   {pickStreakEncouragement(wrongIds.length)}
                   {'\n'}このあと基礎問題を数問はさんでから、また同じコースに戻るよ。
                 </Text>
+              </View>
+            )}
+
+            {/* 解説。答えのカードの中ではなく、結果の枠のすぐ下に出す
+                （画面のスクロール位置に関係なく、結果と一緒に必ず目に入る）。 */}
+            {(currentQuestion.explanation != null || currentQuestion.hint != null) && (
+              <View style={styles.resultExplainBox}>
+                <Text style={styles.resultExplainLabel}>📖 解説</Text>
+                <ExplanationSlides key={currentQuestion.id} q={currentQuestion} />
+                {hintText(currentQuestion) !== '' && (
+                  <Text style={styles.resultExplainHint}>💡 {rich(hintText(currentQuestion))}</Text>
+                )}
+                {getQuickTrick(currentQuestion.id) != null && (
+                  <View style={styles.resultTrickBox}>
+                    <Text style={styles.resultTrickLabel}>⚡ はやく解くコツ</Text>
+                    <Text style={styles.resultTrickText}>{getQuickTrick(currentQuestion.id)}</Text>
+                  </View>
+                )}
               </View>
             )}
 
@@ -1498,6 +1521,27 @@ const styles = StyleSheet.create({
     borderColor: '#E74C3C',
     alignItems: 'center',
   },
+  resultExplainBox: {
+    backgroundColor: '#FFFBEB',
+    borderRadius: 16,
+    padding: 18,
+    width: '100%',
+    borderLeftWidth: 4,
+    borderLeftColor: '#F59E0B',
+  },
+  resultExplainLabel: { fontSize: 13.5, fontWeight: '700', color: '#B45309', marginBottom: 6 },
+  resultExplainHint: { fontSize: 17, color: '#78350F', lineHeight: 24, marginTop: 12 },
+  resultTrickBox: {
+    marginTop: 10,
+    backgroundColor: '#FFF7ED',
+    borderLeftWidth: 4,
+    borderLeftColor: '#F59E0B',
+    borderRadius: 10,
+    padding: 10,
+    gap: 4,
+  },
+  resultTrickLabel: { fontSize: 13, fontWeight: '900', color: '#B45309' },
+  resultTrickText: { fontSize: 14, lineHeight: 22, color: '#7C2D12', fontWeight: '500' },
   correctHeader: {
     backgroundColor: '#E6F7EC',
     borderColor: '#00A651',
