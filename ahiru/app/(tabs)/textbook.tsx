@@ -220,7 +220,7 @@ export default function TextbookScreen() {
         {!isPro && (
           <View style={styles.proBanner}>
             <Text style={styles.proBannerText}>
-              🔒 各科目・受験種別ごとに、最初の{FREE_LESSON_LIMIT}単元は無料です。
+              🔒 各科目・受験種別ごとに、最初の{FREE_LESSON_LIMIT}単元は無料です（「🆕 新単元」は、学年・科目ごとに最初の5つが無料）。
             </Text>
             <Text style={styles.proBannerNote}>
               ・鍵の下が「PRO会員で開く」…PRO会員になると読めます{'\n'}
