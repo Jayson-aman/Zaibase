@@ -37,7 +37,7 @@ reanimated 4.5.3 / worklets 0.11.1 は固定のまま（レンジ指定に戻さ
 ## 3. 提出
 - 「このバージョンで何が新しくなったか」は `store-metadata/ja/release_notes.txt`。
 - 紹介文は `store-metadata/ja/description.txt`（16,000問・各校100問以上は 2.2.8 から有効）。
-- 紹介画像（案）は `store-metadata/screenshots-new/`。実機のスクリーンショットに差しかえるのがおすすめ。
+- 紹介画像（10枚・各サイズ）は `store-metadata/screenshots-2.2.8/`、プレビュー動画は `store-metadata/app-preview-2.2.8/`。実機のスクリーンショットに差しかえるのがおすすめ。
 - 審査用メモ・デモアカウントは 2.2.7 のものを引き継ぐ（情報はチャットやリポジトリに書かない）。
 
 ## 4. 審査が通ったあと
