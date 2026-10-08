@@ -219,9 +219,12 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
       onRequestClose={onClose}
     >
       <LinearGradient colors={['#FFFFFF', '#F5EFE4']} style={styles.container}>
-        <TouchableOpacity style={styles.closeBtn} onPress={onClose}>
-          <Text style={styles.closeBtnText}>✕</Text>
-        </TouchableOpacity>
+        {/* 閉じるボタンは、スクロールする内容の上の帯に置く（内容の上に浮かせると、料金の文字と重なる） */}
+        <View style={styles.closeRow}>
+          <TouchableOpacity style={styles.closeBtn} onPress={onClose} accessibilityRole="button" accessibilityLabel="閉じる">
+            <Text style={styles.closeBtnText}>✕</Text>
+          </TouchableOpacity>
+        </View>
 
         <ScrollView
           contentContainerStyle={styles.scroll}
@@ -494,11 +497,12 @@ const styles = StyleSheet.create({
   periodBtnTextOn: { color: '#3B2A1A' },
   yearlyNote: { color: '#FFFFFF', fontSize: 11, marginTop: 2, textAlign: 'right' },
   container: { flex: 1 },
+  closeRow: {
+    paddingTop: 12,
+    paddingHorizontal: 20,
+    alignItems: 'flex-end',
+  },
   closeBtn: {
-    position: 'absolute',
-    top: 52,
-    right: 20,
-    zIndex: 10,
     width: 44,
     height: 44,
     borderRadius: 22,
@@ -508,7 +512,7 @@ const styles = StyleSheet.create({
   },
   closeBtnText: { color: '#1F1912', fontSize: 20, fontWeight: '700' },
   scroll: {
-    paddingTop: 80,
+    paddingTop: 16,
     paddingHorizontal: 20,
     paddingBottom: 60,
     alignItems: 'center',

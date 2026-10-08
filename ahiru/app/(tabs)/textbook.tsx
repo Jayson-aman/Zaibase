@@ -14,6 +14,7 @@ import { getLessonsBySubject, FREE_LESSON_LIMIT } from '../../data/lessons';
 import type { ExamType } from '../../data/courses';
 import type { Lesson } from '../../data/lessons';
 import { isNew20Unit, isNew20UnitFree } from '../../data/new20-access';
+import { UNIT_UNLOCK_PRICE_LABEL } from '../../constants/pricing';
 import { subjectInfo, type SubjectKey } from '../../data/questions-meta';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
@@ -103,7 +104,15 @@ const LessonCard = React.memo(function LessonCard({
           <Text style={styles.maxTag}>⭐ MAX深堀りあり</Text>
         )}
       </View>
-      <Text style={styles.lessonArrow}>{locked ? '🔒' : '›'}</Text>
+      {locked ? (
+        <View style={styles.lockCol}>
+          <Text style={styles.lessonArrow}>🔒</Text>
+          {/* 買い切りで開ける単元は金額を、ほかはどのプランで開くかを、鍵の下に出す */}
+          <Text style={styles.lockLabel}>{isNew20Unit(lesson.id) ? UNIT_UNLOCK_PRICE_LABEL : 'PRO'}</Text>
+        </View>
+      ) : (
+        <Text style={styles.lessonArrow}>›</Text>
+      )}
     </TouchableOpacity>
   );
 });
@@ -461,4 +470,6 @@ const styles = StyleSheet.create({
   lessonDesc: { fontSize: 12.5, color: '#6E645C', lineHeight: 18 },
   maxTag: { fontSize: 11, color: '#92400E', fontWeight: '700', marginTop: 4 },
   lessonArrow: { fontSize: 24, color: '#9C9186', paddingLeft: 8 },
+  lockCol: { alignItems: 'center', paddingLeft: 8, minWidth: 52 },
+  lockLabel: { fontSize: 13, fontWeight: '800', color: '#8B5E1A', marginTop: 2 },
 });
