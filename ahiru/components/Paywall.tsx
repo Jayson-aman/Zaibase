@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { logPurchaseEvent } from '../services/analytics';
 import {
   View,
   Text,
@@ -107,12 +108,27 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
       );
       if (!go) return;
     }
+    const hasIntro = introPriceLabel(product) != null;
+    logPurchaseEvent('plan_tapped', 'subscription', { tier: tierNow, plan: target, detail: hasIntro ? 'intro' : 'full' });
     setPurchasing(true);
     try {
       await purchaseProduct(product);
+      logPurchaseEvent('purchase_succeeded', 'subscription', { tier: tierNow, plan: target, detail: hasIntro ? 'intro' : 'full' });
       onPurchased();
     } catch (err: any) {
-      if (!(err?.userCancelled || err?.errorCode === 1)) {
+      if (err?.userCancelled || err?.errorCode === 1) {
+        logPurchaseEvent('purchase_cancelled', 'subscription', { tier: tierNow, plan: target, detail: hasIntro ? 'intro' : 'full' });
+      } else {
+        if (isPaymentPending(err)) {
+          logPurchaseEvent('purchase_pending', 'subscription', { tier: tierNow, plan: target });
+        } else {
+          // 失敗の理由（ストアのエラー番号と、メッセージの先頭）。何が起きたか後から分かるように残す
+          logPurchaseEvent('purchase_failed', 'subscription', {
+            tier: tierNow,
+            plan: target,
+            detail: `E${err?.errorCode ?? '?'}:${String(err?.message ?? '').replace(/\s+/g, ' ')}`,
+          });
+        }
         if (isPaymentPending(err)) {
           // ご家族の承認待ち。失敗ではなく、承認されると購入が確定する（買い直させると二重に払う）
           alertCompat('承認待ちです', 'ご家族の承認待ちです。承認されると、そのままご利用いただけます。承認後にアプリを開き直し、「購入を復元する」を押してください。');
@@ -144,6 +160,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
       );
       return;
     }
+    logPurchaseEvent('restore_tapped', 'subscription', { tier: tierNow });
     setPurchasing(true);
     try {
       const info = await restorePurchases();
@@ -151,6 +168,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
       // ように見える（App Store審査でよく指摘される）。結果を必ず伝える。
       const restored =
         tierFromCustomerInfo(info) !== 'free' || hasVocabEntitlement(info);
+      logPurchaseEvent(restored ? 'restore_found' : 'restore_none', 'subscription', { tier: tierNow });
       if (restored) {
         alertCompat('復元しました', 'ご購入内容を復元しました。');
         onPurchased();
@@ -210,6 +228,23 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
   };
   const proIntro = introPriceLabel(proProd);
   const maxIntro = introPriceLabel(maxProd);
+
+  // ペイウォールが開いて、商品の読みこみが終わったときに1回だけ記録する。
+  // detail は、お試し価格が出ているか（intro）・通常価格だけか（full）・商品が取れなかったか（none）
+  const openedLogged = React.useRef(false);
+  useEffect(() => {
+    if (!visible) {
+      openedLogged.current = false;
+      return;
+    }
+    if (loadingOff || openedLogged.current) return;
+    openedLogged.current = true;
+    const flag = (prod: unknown, intro: string | null) => (prod == null ? 'none' : intro ? 'intro' : 'full');
+    logPurchaseEvent('paywall_opened', 'subscription', {
+      tier: tierNow,
+      detail: `pro_${flag(proProd, proIntro)},max_${flag(maxProd, maxIntro)}`,
+    });
+  }, [visible, loadingOff]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <Modal

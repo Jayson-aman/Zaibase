@@ -28,6 +28,7 @@ import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
 import { confirmDialog, noticeDialog, ensureLoggedInForPurchase } from '../../utils/dialog';
+import { logPurchaseEvent } from '../../services/analytics';
 import { useAuthUser } from '../../hooks/useAuthUser';
 import { useUnitUnlocks } from '../../hooks/useUnitUnlocks';
 import { subjectInfo } from '../../data/questions-meta';
@@ -94,34 +95,58 @@ export default function LessonDetailScreen() {
   }, [lesson, isKoushikiLesson, subjectPool, isMax]);
 
   async function handleUnlockFormula(figureId: string, heading: string) {
-    if (!(await ensureLoggedInForPurchase(authLoading ? null : isLoggedIn, () => router.push('/login' as any)))) return;
+    logPurchaseEvent('unlock_tapped', 'formula');
+    if (!(await ensureLoggedInForPurchase(authLoading ? null : isLoggedIn, () => router.push('/login' as any)))) {
+      logPurchaseEvent('unlock_login_required', 'formula');
+      return;
+    }
     const okFormula = await confirmDialog(
       '購入の確認',
       `「${heading}」を ${formulaUnlockPriceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
     );
-    if (!okFormula) return;
-    const result = await unlockFormula(figureId);
-    if (!result.ok) {
-      if (!result.cancelled) noticeDialog('購入できませんでした', result.message);
+    if (!okFormula) {
+      logPurchaseEvent('unlock_confirm_declined', 'formula');
       return;
     }
+    const result = await unlockFormula(figureId);
+    if (!result.ok) {
+      if (result.cancelled) logPurchaseEvent('unlock_store_cancelled', 'formula');
+      else {
+        logPurchaseEvent('unlock_failed', 'formula', { detail: result.message.replace(/\s+/g, ' ') });
+        noticeDialog('購入できませんでした', result.message);
+      }
+      return;
+    }
+    logPurchaseEvent('unlock_succeeded', 'formula');
     // Web は決済ページへ移動するので、ここでは「解放しました」と言わない（支払い前に言うと誤解を生む）
     if (result.redirected) return;
     noticeDialog('解放しました', `「${heading}」はこれ以降ずっと無料で見られます。`);
   }
 
   async function handleUnlockUnit(lessonId: string, title: string) {
-    if (!(await ensureLoggedInForPurchase(authLoading ? null : isLoggedIn, () => router.push('/login' as any)))) return;
+    logPurchaseEvent('unlock_tapped', 'unit');
+    if (!(await ensureLoggedInForPurchase(authLoading ? null : isLoggedIn, () => router.push('/login' as any)))) {
+      logPurchaseEvent('unlock_login_required', 'unit');
+      return;
+    }
     const ok = await confirmDialog(
       '購入の確認',
       `「${title}」を ${unitUnlockPriceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
     );
-    if (!ok) return;
-    const result = await unlockUnit(lessonId);
-    if (!result.ok) {
-      if (!result.cancelled) noticeDialog('購入できませんでした', result.message);
+    if (!ok) {
+      logPurchaseEvent('unlock_confirm_declined', 'unit');
       return;
     }
+    const result = await unlockUnit(lessonId);
+    if (!result.ok) {
+      if (result.cancelled) logPurchaseEvent('unlock_store_cancelled', 'unit');
+      else {
+        logPurchaseEvent('unlock_failed', 'unit', { detail: result.message.replace(/\s+/g, ' ') });
+        noticeDialog('購入できませんでした', result.message);
+      }
+      return;
+    }
+    logPurchaseEvent('unlock_succeeded', 'unit');
     // Web は決済ページへ移動するので、ここでは「解放しました」と言わない（支払い前に言うと誤解を生む）
     if (result.redirected) return;
     noticeDialog('解放しました', `「${title}」はこれ以降ずっと無料で見られます。`);

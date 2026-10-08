@@ -25,6 +25,7 @@ import { formulaImages } from '../../data/formulaImages';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
 import { PRICES, formatYen, FORMULA_BUNDLE_ITEM_CAP } from '../../constants/pricing';
 import { confirmDialog, noticeDialog, ensureLoggedInForPurchase } from '../../utils/dialog';
+import { logPurchaseEvent } from '../../services/analytics';
 import { useAuthUser } from '../../hooks/useAuthUser';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
@@ -375,17 +376,29 @@ export default function FormulasScreen() {
   const bundleOffPercent = Math.max(0, Math.round((1 - bundleValue / Math.max(0.01, fullValue)) * 100));
 
   const handleUnlock = React.useCallback(async (label: string) => {
-    if (!(await ensureLoggedInForPurchase(authLoading ? null : isLoggedIn, () => router.push('/login' as any)))) return;
+    logPurchaseEvent('unlock_tapped', 'formula');
+    if (!(await ensureLoggedInForPurchase(authLoading ? null : isLoggedIn, () => router.push('/login' as any)))) {
+      logPurchaseEvent('unlock_login_required', 'formula');
+      return;
+    }
     const ok = await confirmDialog(
       '購入の確認',
       `「${label}」を ${priceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
     );
-    if (!ok) return;
-    const result = await unlockFormula(label);
-    if (!result.ok) {
-      if (!result.cancelled) noticeDialog('購入できませんでした', result.message);
+    if (!ok) {
+      logPurchaseEvent('unlock_confirm_declined', 'formula');
       return;
     }
+    const result = await unlockFormula(label);
+    if (!result.ok) {
+      if (result.cancelled) logPurchaseEvent('unlock_store_cancelled', 'formula');
+      else {
+        logPurchaseEvent('unlock_failed', 'formula', { detail: result.message.replace(/\s+/g, ' ') });
+        noticeDialog('購入できませんでした', result.message);
+      }
+      return;
+    }
+    logPurchaseEvent('unlock_succeeded', 'formula');
     // Web は決済ページへ移動するので、ここでは「解放しました」と言わない（支払い前に言うと誤解を生む）
     if (result.redirected) return;
     // ロック項目が上限より少ない教科は、全部買えばそろう（画面の「N/M項目」のMと同じ数え方）
@@ -398,17 +411,29 @@ export default function FormulasScreen() {
   }, [unlockFormula, boughtCount, bundleCount, priceLabel, isLoggedIn, authLoading, router]);
 
   const handleUnlockBundle = React.useCallback(async (id: string) => {
-    if (!(await ensureLoggedInForPurchase(authLoading ? null : isLoggedIn, () => router.push('/login' as any)))) return;
+    logPurchaseEvent('unlock_tapped', 'bundle');
+    if (!(await ensureLoggedInForPurchase(authLoading ? null : isLoggedIn, () => router.push('/login' as any)))) {
+      logPurchaseEvent('unlock_login_required', 'bundle');
+      return;
+    }
     const ok = await confirmDialog(
       '購入の確認',
       `この教科の「公式・まとめ」タブで、ロック中の公式${bundleCount}項目を、ぜんぶ ${bundlePriceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。\n※教科書の単元ページにある個別のロックは、この対象には入りません。`,
     );
-    if (!ok) return;
-    const result = await unlockFormula(id, 'bundle');
-    if (!result.ok) {
-      if (!result.cancelled) noticeDialog('購入できませんでした', result.message);
+    if (!ok) {
+      logPurchaseEvent('unlock_confirm_declined', 'bundle');
       return;
     }
+    const result = await unlockFormula(id, 'bundle');
+    if (!result.ok) {
+      if (result.cancelled) logPurchaseEvent('unlock_store_cancelled', 'bundle');
+      else {
+        logPurchaseEvent('unlock_failed', 'bundle', { detail: result.message.replace(/\s+/g, ' ') });
+        noticeDialog('購入できませんでした', result.message);
+      }
+      return;
+    }
+    logPurchaseEvent('unlock_succeeded', 'bundle');
     // Web は決済ページへ移動するので、ここでは「解放しました」と言わない（支払い前に言うと誤解を生む）
     if (result.redirected) return;
     noticeDialog('解放しました', 'この教科の公式集は、これ以降ずっと無料で見られます。');
