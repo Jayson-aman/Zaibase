@@ -119,22 +119,53 @@ function entryFromCourse(c: CourseInfo): SchoolEntry {
   };
 }
 
+// 学校の地域。名前だけでは、どの学校が関西・関東・名古屋・福岡なのか分からなかったので、
+// 地域ごと（さらに中学受験／高校受験ごと）に分けて並べる（2026/10/8、ユーザー要望）。
+type RegionKey = 'kansai' | 'kanto' | 'tokai' | 'kyushu' | 'national';
+
+const REGIONS: { key: RegionKey; label: string; icon: string; color: string }[] = [
+  { key: 'kansai',   label: '関西（大阪・兵庫・京都・奈良）', icon: '🏯', color: '#E74C3C' },
+  { key: 'kanto',    label: '関東（東京・神奈川）',           icon: '🗼', color: '#A855F7' },
+  { key: 'tokai',    label: '東海（名古屋）',                 icon: '⚓', color: '#0EA5E9' },
+  { key: 'kyushu',   label: '九州（福岡）',                   icon: '🌟', color: '#10B981' },
+  { key: 'national', label: '全国',                           icon: '🏆', color: '#C8A84B' },
+];
+
+// 高校の学校は、key だけでは地域が決まらないので、ここに書く。
+const KANTO_KOKO = new Set(['koko-hibiya', 'koko-waseda', 'koko-meidai', 'koko-kasei', 'koko-keio', 'koko-azabu']);
+const TOKAI_KOKO = new Set(['koko-tokai', 'koko-taki', 'koko-nanzan']);
+const KYUSHU_KOKO = new Set(['koko-kurume', 'koko-seinan', 'koko-ohori']);
+
+function regionOf(key: string): RegionKey {
+  if (key.startsWith('tokyo-') || KANTO_KOKO.has(key)) return 'kanto';
+  if (key.startsWith('nagoya-') || TOKAI_KOKO.has(key)) return 'tokai';
+  if (key.startsWith('fukuoka-') || KYUSHU_KOKO.has(key)) return 'kyushu';
+  if (key === 'koko-top') return 'national';
+  // 上のどれでもない学校は、大阪・兵庫・奈良の学校（関西）
+  return 'kansai';
+}
+
 function buildSchoolGroups(): SchoolGroup[] {
   const listed = new Set(BASE_SCHOOL_GROUPS.flatMap((g) => g.schools.map((s) => s.key)));
-  // 偏差値の定義があるコースだけが「学校」。一般・公立などのカテゴリは入れない。
-  const missing = ALL_COURSES.filter((c) => c.hensachi && !listed.has(c.key));
-  const kokoExtra = missing.filter((c) => c.examType === 'koko').map(entryFromCourse);
-  const chugakuExtra = missing.filter((c) => c.examType === 'chugaku').map(entryFromCourse);
-  const groups = BASE_SCHOOL_GROUPS.map((g) =>
-    g.label === '高校受験' ? { ...g, schools: [...g.schools, ...kokoExtra] } : g,
-  );
-  if (chugakuExtra.length > 0) {
-    groups.splice(Math.max(0, groups.length - 1), 0, {
-      label: 'そのほかの中学受験校',
-      icon: '🏫',
-      color: '#0EA5E9',
-      schools: chugakuExtra,
-    });
+  // 問題データがあるのに一覧に載っていなかった学校を、courses.ts の定義から足す
+  // （高校受験の学校が4校しか出ていなかった）。偏差値の定義があるコースだけが「学校」。
+  const extra = ALL_COURSES.filter((c) => c.hensachi && !listed.has(c.key)).map(entryFromCourse);
+  const all = [...BASE_SCHOOL_GROUPS.flatMap((g) => g.schools), ...extra];
+  const examOf = (key: string): 'chugaku' | 'koko' =>
+    ALL_COURSES.find((c) => c.key === key)?.examType ?? (key.startsWith('koko-') ? 'koko' : 'chugaku');
+
+  const groups: SchoolGroup[] = [];
+  for (const r of REGIONS) {
+    for (const exam of ['chugaku', 'koko'] as const) {
+      const schools = all.filter((s) => regionOf(s.key) === r.key && examOf(s.key) === exam);
+      if (schools.length === 0) continue;
+      groups.push({
+        label: `${r.label}｜${exam === 'chugaku' ? '中学受験' : '高校受験'}`,
+        icon: r.icon,
+        color: r.color,
+        schools,
+      });
+    }
   }
   return groups;
 }
