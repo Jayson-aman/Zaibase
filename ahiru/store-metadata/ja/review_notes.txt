@@ -21,6 +21,7 @@ Screenshots for each purchase are attached to the individual in-app purchase pag
 [Subscriptions] (auto-renewable, monthly)
 - PRO: 1,980 JPY / month
 - MAX: 2,890 JPY / month (includes everything in PRO, plus the AI weakness coach, the English vocabulary Pro content and Eiken practice)
+An introductory offer (pay up front, 500 JPY for the first month) is configured for both monthly subscriptions. It is shown on the subscription screen to eligible new subscribers and can be used once per Apple Account; after the first month the regular price renews automatically. In the sandbox the first month passes in a few minutes.
 Where to find them: tap any locked item (for example a locked lesson in the Textbook tab after the free lessons) or the upgrade banner; the subscription screen shows both plans, the price, the billing period and the auto-renewal terms, a "Restore Purchases" button, and links to the Terms of Use and Privacy Policy. Subscriptions are managed in the device's Settings > Subscriptions. All purchases on iOS use Apple's in-app purchase; the app does not link to any outside payment method.
 
 [One-time items]
