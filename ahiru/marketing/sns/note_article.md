@@ -11,6 +11,9 @@ https://apps.apple.com/app/id6782930084
 ▼ Webでも試せます
 https://exam.zaibase.group
 
+▼ インスタグラム（解説スライドの紹介）
+https://www.instagram.com/zaibase.group.exam/
+
 ## 「公式は覚えたのに、少し形が変わると解けない」
 
 受験勉強で、こんなことはありませんか。
@@ -73,6 +76,9 @@ https://apps.apple.com/app/id6782930084
 
 ▼ Web版
 https://exam.zaibase.group
+
+▼ インスタグラム
+https://www.instagram.com/zaibase.group.exam/
 
 ※本アプリは、記載の学校・団体と提携・関連はありません。公開情報をもとに、過去の入試傾向を独自に分析した対策教材です。
 

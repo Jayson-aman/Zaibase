@@ -17,3 +17,5 @@ facebook_post.txt … Facebookの投稿文
   App Store  https://apps.apple.com/app/id6782930084
   Web版     https://exam.zaibase.group
 ※画像は、実機ではなく Web版（アプリと同じ画面）を撮ったもの。
+
+インスタグラム（受験用）：@zaibase.group.exam  https://www.instagram.com/zaibase.group.exam/
