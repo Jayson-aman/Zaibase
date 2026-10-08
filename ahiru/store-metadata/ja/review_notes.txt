@@ -1,0 +1,31 @@
+Thank you for reviewing Zaibase受験 (Ver. 2.2.8).
+
+[About the app]
+An exam-preparation app for Japanese students (elementary school students preparing for junior-high entrance exams, and junior-high students preparing for high-school entrance exams). It offers a textbook with animated diagrams, a formula collection, about 16,000 practice questions in five subjects (math, Japanese, science, social studies, English) and school-specific courses. The app is in Japanese only. The school names are used only to describe which entrance exam the practice questions are based on; the app is not affiliated with any school (stated in the App Store description).
+
+[Sign-in]
+Most content can be used without an account. A demo account is provided in the App Review Information section. Signing in is required only before buying a one-time (consumable) item, so that the unlocked content is saved to the user's account.
+
+[What is new in 2.2.8]
+- After answering a question (correct or incorrect), a step-by-step explanation (8 slides) is shown right under the result box.
+- School courses are grouped by region (Kansai / Kanto / Tokai / Kyushu) and by exam type (junior-high / high-school).
+- A "first 5 questions" starter, a daily goal and a streak counter on the home screen.
+- English Eiken grade-2 listening questions now have four choices, like the real exam.
+- Many corrections to question and explanation content.
+
+[Subscriptions] (auto-renewable, monthly)
+- PRO: 1,980 JPY / month
+- MAX: 2,890 JPY / month (includes everything in PRO, plus the AI weakness coach, the English vocabulary Pro content and Eiken practice)
+Where to find them: tap any locked item (for example a locked lesson in the Textbook tab after the free lessons) or the upgrade banner; the subscription screen shows both plans, the price, the billing period and the auto-renewal terms, a "Restore Purchases" button, and links to the Terms of Use and Privacy Policy. Subscriptions are managed in the device's Settings > Subscriptions. All purchases on iOS use Apple's in-app purchase; the app does not link to any outside payment method.
+
+[One-time items] (consumable, not subscriptions)
+Formula unlock 200 JPY, formula bundle for one subject 2,980 JPY, and single lesson unlock 150 JPY. Steps to find each of them are in the notes of each in-app purchase product.
+
+[AI features] (MAX plan)
+The AI tutor and the English conversation practice send the text the user types to our server, which asks an AI model for an answer. The user is not asked for personal information. The features are limited to study topics.
+
+[Account deletion]
+Progress tab > scroll to the bottom > "アカウントを削除" (Delete account). This deletes the account and its data.
+
+[Contact]
+info@zaibase.group
