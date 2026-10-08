@@ -286,6 +286,8 @@ export default function QuizScreen() {
   const [wrongIds, setWrongIds] = useState<string[]>([]);
   const [feedback, setFeedback] = useState<'correct' | 'wrong' | null>(null);
   const [waitingNext, setWaitingNext] = useState(false);
+  // 解説の画面を、正解のあとにも出すための印（○正解！／×不正解！の見出しを切りかえる）
+  const [lastWasCorrect, setLastWasCorrect] = useState(false);
   // いま解いている問題に、自分で書いた答え（まだ書いていなければ null）
   const [typed, setTyped] = useState<SubmitResult | null>(null);
   // あとで採点・添削を見せるための記録。1問ごとに「問題・自分の答え・結果」を残す
@@ -328,6 +330,7 @@ export default function QuizScreen() {
     setSavedProgress(false);
     setWrongIds([]);
     setWaitingNext(false);
+    setLastWasCorrect(false);
     setFeedback(null);
     setWrongStreak(0);
     setRemedialJustInjected(false);
@@ -594,6 +597,7 @@ export default function QuizScreen() {
         if (injected) setWrongStreak(0);
       }
       setRemedialJustInjected(injected);
+      setLastWasCorrect(false);
       setFeedback('wrong');
       timersRef.current.push(setTimeout(() => {
         setFeedback(null);
@@ -605,12 +609,15 @@ export default function QuizScreen() {
     // 正解：連続不正解をリセットして花火を打ち上げる
     setWrongStreak(0);
     setShowFireworks(true);
-    timersRef.current.push(setTimeout(async () => {
+    timersRef.current.push(setTimeout(() => {
       setShowFireworks(false);
       if (hitLimit) {
         setShowPaywall(true);
       } else {
-        await advanceOrFinish(newScore, newWrongIds);
+        // 正解でも、花火のあとに自動で次へ進まず、解説を読んでから自分で進む。
+        // （以前は約1秒で次の問題に進み、正解した問題の解説を読めなかった。）
+        setLastWasCorrect(true);
+        setWaitingNext(true);
       }
     }, 1100));
   }
@@ -920,18 +927,22 @@ export default function QuizScreen() {
         {/* Wrong answer feedback - Gemini-style */}
         {waitingNext && (
           <View style={styles.wrongFeedbackWrap}>
-            <View style={styles.wrongHeader}>
-              <Text style={styles.wrongHeaderText}>✗ 不正解！</Text>
+            <View style={[styles.wrongHeader, lastWasCorrect && styles.correctHeader]}>
+              <Text style={[styles.wrongHeaderText, lastWasCorrect && styles.correctHeaderText]}>
+                {lastWasCorrect ? '○ 正解！' : '✗ 不正解！'}
+              </Text>
               <Text style={styles.wrongCorrectAnswer}>正解：{rich(currentQuestion.answer, { size: 18, color: '#555', bold: true })}</Text>
             </View>
 
-            {/* 励みになる言葉 */}
-            <View style={styles.cheerCard}>
-              <Text style={styles.cheerText}>{pickEncouragement(wrongIds.length)}</Text>
-            </View>
+            {/* 励みになる言葉（不正解のときだけ） */}
+            {!lastWasCorrect && (
+              <View style={styles.cheerCard}>
+                <Text style={styles.cheerText}>{pickEncouragement(wrongIds.length)}</Text>
+              </View>
+            )}
 
             {/* 連続で間違えたときは、やさしく基礎に戻したことを伝える */}
-            {remedialJustInjected && (
+            {!lastWasCorrect && remedialJustInjected && (
               <View style={styles.remedialCard}>
                 <Text style={styles.remedialTitle}>🌱 いったん基礎にもどろう</Text>
                 <Text style={styles.remedialText}>
@@ -952,7 +963,7 @@ export default function QuizScreen() {
             {(currentQuestion.memoryTip || currentQuestion.pitfall) && (
               <View style={styles.wrongExplanationCard}>
                 {/* くわしい解説（スライド）・ヒント・はやく解くコツは、すぐ上の答えのカードに出ているので、ここでは繰り返さない */}
-                <Text style={styles.wrongExplanationTitle}>🧠 まちがいを減らすヒント</Text>
+                <Text style={styles.wrongExplanationTitle}>{lastWasCorrect ? '🧠 もっと確実にするヒント' : '🧠 まちがいを減らすヒント'}</Text>
                 {(isPro || isMax) && currentQuestion.memoryTip && (
                   <View style={styles.tipRow}>
                     <Text style={styles.tipLabel}>💡 覚え方</Text>
@@ -1477,6 +1488,13 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#E74C3C',
     alignItems: 'center',
+  },
+  correctHeader: {
+    backgroundColor: '#E6F7EC',
+    borderColor: '#00A651',
+  },
+  correctHeaderText: {
+    color: '#00804A',
   },
   wrongHeaderText: {
     fontSize: 18,
