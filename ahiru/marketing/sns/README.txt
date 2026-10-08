@@ -19,3 +19,5 @@ facebook_post.txt … Facebookの投稿文
 ※画像は、実機ではなく Web版（アプリと同じ画面）を撮ったもの。
 
 インスタグラム（受験用）：@zaibase.group.exam  https://www.instagram.com/zaibase.group.exam/
+
+note記事の本文に貼る図：banner/note_body_1920x1080.png（解説が7〜8枚のスライドで進む様子）
