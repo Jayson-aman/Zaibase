@@ -1,7 +1,7 @@
 Thank you for reviewing Zaibase受験 (Ver. 2.2.8).
 
 [About the app]
-An exam-preparation app for Japanese students (elementary school students preparing for junior-high entrance exams, and junior-high students preparing for high-school entrance exams). It offers a textbook with animated diagrams, a formula collection, about 16,000 practice questions in five subjects (math, Japanese, science, social studies, English) and school-specific courses. The app is in Japanese only. The school names are used only to describe which entrance exam the practice questions are based on; the app is not affiliated with any school (stated in the App Store description).
+An exam-preparation app for Japanese students (elementary school students preparing for junior-high entrance exams, and junior-high students preparing for high-school entrance exams). It offers a textbook with animated diagrams, a formula collection, about 16,000 practice questions in five subjects (math, Japanese, science, social studies, English) and school-specific courses. The app is in Japanese only. The app is not affiliated with any school (stated in the App Store description).
 
 [Sign-in]
 Most content can be used without an account. Sign-in is required only before buying a one-time (consumable) item, so that the unlocked content is saved to the user's account. Buying a PRO/MAX subscription on iOS does not require sign-in. For testing the one-time items, please sign in with the demo account in the App Review Information section (email and password).
@@ -16,19 +16,19 @@ Screenshots for each purchase are attached to the individual in-app purchase pag
 - School courses are grouped by region (Kansai / Kanto / Tokai / Kyushu) and by exam type (junior-high / high-school).
 - A "first 5 questions" starter, a daily goal and a streak counter on the home screen.
 - English Eiken grade-2 listening questions now have four choices, like the real exam.
-- Many corrections to question and explanation content.
+- Corrections to question and explanation content.
 
 [Subscriptions] (auto-renewable, monthly)
 - PRO: 1,980 JPY / month
 - MAX: 2,890 JPY / month (includes everything in PRO, plus the AI weakness coach, the English vocabulary Pro content and Eiken practice)
 An introductory offer (pay up front, 500 JPY for the first month) is configured for both monthly subscriptions. It is shown on the subscription screen to eligible new subscribers and can be used once per Apple Account; after the first month the regular price renews automatically. In the sandbox the first month passes in a few minutes.
-Where to find them: tap any locked item (for example a locked lesson in the Textbook tab after the free lessons) or the upgrade banner; the subscription screen shows both plans, the price, the billing period and the auto-renewal terms, a "Restore Purchases" button, and links to the Terms of Use and Privacy Policy. Subscriptions are managed in the device's Settings > Subscriptions. All purchases on iOS use Apple's in-app purchase; the app does not link to any outside payment method.
+Where to find them: tap any locked item (for example a locked lesson in the Textbook tab) or the upgrade banner. The subscription screen shows both plans, prices, billing period, auto-renewal terms, a "Restore Purchases" button, and links to the Terms of Use and Privacy Policy. All purchases on iOS use Apple's in-app purchase; the app does not link to any outside payment method.
 
 [One-time items]
 Formula unlock 200 JPY, formula bundle for one subject 2,980 JPY, and single lesson unlock 150 JPY. They are consumables, not subscriptions.
 
 [AI features] (MAX plan)
-The AI tutor and the English conversation practice send the text the user types to our server, which asks an AI model for an answer. The user is not asked for personal information. The features are limited to study topics.
+The AI tutor and the English conversation practice send the text the user types to our server, which asks an AI model for an answer. The user is not asked for personal information.
 
 [User-generated content]
 The app has no user-to-user chat and no user-generated content shown to other users. Its chat features are only with an AI model (MAX plan, see above). Users can send private feedback to the developer through a form; it is not shown to anyone else. The ranking feature shows only the user's own rank and score, never other users' names or data. Practice questions are original, tendency-based questions (not actual past exam papers).
