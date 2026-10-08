@@ -101,14 +101,14 @@ const LessonCard = React.memo(function LessonCard({
           {lesson.description}
         </Text>
         {lesson.sections.some((s) => s.maxOnly) && (
-          <Text style={styles.maxTag}>⭐ MAX深堀りあり</Text>
+          <Text style={styles.maxTag}>⭐ MAX会員は、深掘り解説も読めます</Text>
         )}
       </View>
       {locked ? (
         <View style={styles.lockCol}>
           <Text style={styles.lessonArrow}>🔒</Text>
           {/* 買い切りで開ける単元は金額を、ほかはどのプランで開くかを、鍵の下に出す */}
-          <Text style={styles.lockLabel}>{isNew20Unit(lesson.id) ? UNIT_UNLOCK_PRICE_LABEL : 'PRO'}</Text>
+          <Text style={styles.lockLabel}>{isNew20Unit(lesson.id) ? `${UNIT_UNLOCK_PRICE_LABEL}で開く` : 'PRO会員で開く'}</Text>
         </View>
       ) : (
         <Text style={styles.lessonArrow}>›</Text>
@@ -220,7 +220,12 @@ export default function TextbookScreen() {
         {!isPro && (
           <View style={styles.proBanner}>
             <Text style={styles.proBannerText}>
-              🔒 各科目・受験種別ごとに最初の{FREE_LESSON_LIMIT}単元は無料。続きはProプランで
+              🔒 各科目・受験種別ごとに、最初の{FREE_LESSON_LIMIT}単元は無料です。
+            </Text>
+            <Text style={styles.proBannerNote}>
+              ・鍵の下が「PRO会員で開く」…PRO会員になると読めます{'\n'}
+              ・鍵の下が「{UNIT_UNLOCK_PRICE_LABEL}で開く」…この単元だけ買い切りでも読めます{'\n'}
+              ・⭐ MAX会員は、深掘り解説（難しい応用）も読めます
             </Text>
           </View>
         )}
@@ -374,6 +379,7 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
   },
   proBannerText: { fontSize: 12, color: '#FEF3C7', fontWeight: '700' },
+  proBannerNote: { fontSize: 12, color: '#FEF3C7', fontWeight: '500', lineHeight: 19, marginTop: 4 },
   sectionLabel: {
     fontSize: 12,
     fontWeight: '800',
@@ -470,6 +476,6 @@ const styles = StyleSheet.create({
   lessonDesc: { fontSize: 12.5, color: '#6E645C', lineHeight: 18 },
   maxTag: { fontSize: 11, color: '#92400E', fontWeight: '700', marginTop: 4 },
   lessonArrow: { fontSize: 24, color: '#9C9186', paddingLeft: 8 },
-  lockCol: { alignItems: 'center', paddingLeft: 8, minWidth: 52 },
-  lockLabel: { fontSize: 13, fontWeight: '800', color: '#8B5E1A', marginTop: 2 },
+  lockCol: { alignItems: 'center', paddingLeft: 8, maxWidth: 84 },
+  lockLabel: { fontSize: 11, fontWeight: '800', color: '#8B5E1A', marginTop: 2, textAlign: 'center' },
 });
