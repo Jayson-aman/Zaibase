@@ -58,6 +58,9 @@ export default function StudyStartCard({ examType }: { examType: ExamType }) {
         <TouchableOpacity style={styles.startButton} onPress={start} activeOpacity={0.85}>
           <Text style={styles.startButtonText}>はじめる</Text>
         </TouchableOpacity>
+        <TouchableOpacity onPress={() => router.push('/easy' as any)} activeOpacity={0.7}>
+          <Text style={styles.easyLink}>気が重い日は、1問だけでOK →</Text>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -100,6 +103,9 @@ export default function StudyStartCard({ examType }: { examType: ExamType }) {
           <Text style={styles.startButtonText}>あと{remaining}問やる</Text>
         </TouchableOpacity>
       )}
+        <TouchableOpacity onPress={() => router.push('/easy' as any)} activeOpacity={0.7}>
+          <Text style={styles.easyLink}>気が重い日は、1問だけでOK →</Text>
+        </TouchableOpacity>
     </View>
   );
 }
@@ -135,6 +141,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     alignItems: 'center',
   },
+  easyLink: { marginTop: 10, textAlign: 'center', fontSize: 13, fontWeight: '700', color: '#6B4226', textDecorationLine: 'underline' },
   startButtonText: { color: '#FFFFFF', fontSize: 16, fontWeight: '800' },
   card: {
     backgroundColor: '#FFF4E5',

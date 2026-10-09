@@ -726,6 +726,11 @@ export default function QuizScreen() {
       message = 'よく書けました！下の模範解答と見くらべてみよう';
       emoji = '✍️';
     }
+    // 「1問だけ」で始めた子には、点数でなく、やったことをほめる
+    if (questionLimit === 1) {
+      message = '1問できたね。今日はここまででもOK！';
+      emoji = '🌱';
+    }
 
     return (
       <SafeAreaView style={[styles.safeArea, { backgroundColor: '#FAF7F2' }]}>
