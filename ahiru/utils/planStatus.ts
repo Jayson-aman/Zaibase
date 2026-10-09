@@ -94,6 +94,12 @@ export function planStatusFromCustomerInfo(info: unknown, now: Date = new Date()
 const TIER_NAME = { pro: 'PRO', max: 'MAX' } as const;
 export const tierLabel = (t: 'pro' | 'max' | null) => (t == null ? '' : TIER_NAME[t]);
 
+/** やめたときに使えなくなるもの（短く）。ストアの契約内容（constants/proAccess.ts）と同じ内容にそろえる */
+export function lostFeatures(t: 'pro' | 'max' | null): string {
+  const pro = '聞き流しモード・全問題・学校別コース・覚え方とひっかけ注意・教科書（無料の15単元より先）';
+  return t === 'max' ? `${pro}・AI弱点コーチ・英単語Pro・英検対策` : pro;
+}
+
 export function formatMonthDay(d: Date | null): string {
   return d == null ? '' : `${d.getMonth() + 1}月${d.getDate()}日`;
 }
@@ -127,7 +133,7 @@ export function planNotice(s: PlanStatus, manageHint = 'ストアの設定（App
       return {
         icon: '⌛',
         title: `${name}は${when}まで使えます${leftText}`,
-        body: '解約ずみで、自動更新はオフです。期限を過ぎると無料の範囲に戻ります。',
+        body: `解約ずみで、自動更新はオフです。${when}を過ぎると、次が使えなくなります：${lostFeatures(s.tier)}。続けたいときは「続ける」を押してください。`,
         urgent: left != null && left <= 3,
         action: '続ける',
       };
@@ -153,7 +159,7 @@ export function planNotice(s: PlanStatus, manageHint = 'ストアの設定（App
       return {
         icon: '🔒',
         title: `${name}は${when}に終了しました`,
-        body: '今は無料の範囲でお使いです。PRO・MAXの内容をまた使うには、プランを選びなおしてください。',
+        body: '今は無料の範囲でお使いです。いつでも再開できます。再開すると、聞き流しモード・全問題・学校別コースなどが、またすぐ使えます。',
         urgent: false,
         action: '再開する',
       };
