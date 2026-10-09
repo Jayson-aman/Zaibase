@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Linking, Platform } from 'react-native';
+import { useRouter } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useSubscription } from '../hooks/useSubscription';
 import { useAuthUser } from '../hooks/useAuthUser';
@@ -23,6 +24,7 @@ const DISMISS_KEY_BASE = 'plan_expired_dismissed_at';
 export default function PlanStatusBanner({ onAction }: { onAction: () => void }) {
   const { plan, loading } = useSubscription();
   const { user, loading: authLoading } = useAuthUser();
+  const router = useRouter();
   const [dismissedAt, setDismissedAt] = useState<string | null>(null);
   const [loaded, setLoaded] = useState(false);
   // 「閉じた」記録は人ごとに持つ（同じ端末で別の人がログインしても、前の人が閉じた案内を隠さない）
@@ -56,6 +58,7 @@ export default function PlanStatusBanner({ onAction }: { onAction: () => void })
         ? 'https://play.google.com/store/account/subscriptions'
         : null);
   const isBilling = plan.kind === 'billing';
+  const wantsFeedback = plan.kind === 'ending' || plan.kind === 'expired' || (plan.kind === 'trial' && !plan.willRenew);
   const actionLabel = isBilling && storeUrl == null ? null : notice.action;
   function onActionPress() {
     if (!isBilling) { onAction(); return; }
@@ -77,6 +80,9 @@ export default function PlanStatusBanner({ onAction }: { onAction: () => void })
       // お支払いを直したあと、アプリを閉じなくても帯を消せるようにする
       secondaryLabel={isBilling ? '直したので更新する' : null}
       onSecondary={isBilling ? () => { void refreshCustomerInfo(); } : undefined}
+      // 解約した人・期限が切れた人に、理由を聞く入口を出す（2026/10/9。解約の理由は、ストアからは分からないため）
+      feedbackLabel={wantsFeedback ? '💬 使いにくかったところを、教えてください' : null}
+      onFeedback={wantsFeedback ? () => router.push('/feedback' as any) : undefined}
     />
   );
 }

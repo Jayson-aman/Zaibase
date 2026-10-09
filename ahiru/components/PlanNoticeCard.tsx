@@ -11,6 +11,8 @@ export default function PlanNoticeCard({
   onDismiss,
   secondaryLabel,
   onSecondary,
+  feedbackLabel,
+  onFeedback,
 }: {
   notice: PlanNotice;
   actionLabel: string | null;
@@ -19,6 +21,9 @@ export default function PlanNoticeCard({
   /** 2つ目のボタン（例：お支払いを直したあとの「状態を更新する」） */
   secondaryLabel?: string | null;
   onSecondary?: () => void;
+  /** 小さな文字のリンク（例：解約した人に「使いにくかったところ」を聞く入口） */
+  feedbackLabel?: string | null;
+  onFeedback?: () => void;
 }) {
   return (
     <View style={[styles.box, notice.urgent && styles.boxUrgent]}>
@@ -43,6 +48,11 @@ export default function PlanNoticeCard({
             </TouchableOpacity>
           )}
         </View>
+        {feedbackLabel != null && onFeedback != null && (
+          <TouchableOpacity style={styles.feedbackLink} onPress={onFeedback} activeOpacity={0.7} accessibilityRole="button">
+            <Text style={styles.feedbackText}>{feedbackLabel}</Text>
+          </TouchableOpacity>
+        )}
       </View>
     </View>
   );
@@ -72,6 +82,8 @@ const styles = StyleSheet.create({
   btnText: { color: '#FFFFFF', fontSize: 14, fontWeight: '800' },
   secondaryBtn: { borderWidth: 1.5, borderColor: '#C0392B', paddingHorizontal: 14, paddingVertical: 7, borderRadius: 20 },
   secondaryText: { color: '#A12A1F', fontSize: 13, fontWeight: '800' },
+  feedbackLink: { marginTop: 10, alignSelf: 'flex-start' },
+  feedbackText: { color: '#7A5A12', fontSize: 13, fontWeight: '700', textDecorationLine: 'underline' },
   closeBtn: { paddingHorizontal: 8, paddingVertical: 9 },
   closeText: { color: '#6B5E50', fontSize: 13, fontWeight: '700' },
 });
