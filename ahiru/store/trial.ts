@@ -1,8 +1,8 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const TRIAL_QUESTIONS_KEY = 'trial_questions_answered';
-// 無料で解ける問題数は、1教科あたり15問まで（2026/10/17に、全体60問から変更）。
-export const TRIAL_QUESTION_LIMIT = 15;
+// 無料で解ける問題数は、1教科あたり10問まで（2026/10/17に、全体60問から変更）。
+export const TRIAL_QUESTION_LIMIT = 10;
 const subjectKeyOf = (subject: string) => `${TRIAL_QUESTIONS_KEY}_${subject}`;
 
 export async function getTrialQuestionsAnswered(): Promise<number> {
