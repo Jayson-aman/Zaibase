@@ -384,7 +384,7 @@ export default function FeaturesPage() {
               <Text style={styles.planPricePeriod}> / ずっと無料</Text>
             </View>
             <View style={styles.planDivider} />
-            {['✓ 全科目クイズ（無料分は60問まで体験）', '✓ 3段階難易度選択', '✓ 全国ランキング閲覧', '✓ 科目別進捗管理'].map((f) => (
+            {['✓ 全科目クイズ（無料は1教科15問まで体験）', '✓ 3段階難易度選択', '✓ 全国ランキング閲覧', '✓ 科目別進捗管理'].map((f) => (
               <Text key={f} style={styles.planFeature}>{f}</Text>
             ))}
             <TouchableOpacity style={styles.planBtnOutline} onPress={handleStart} activeOpacity={0.8}>

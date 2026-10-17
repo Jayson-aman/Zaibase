@@ -379,7 +379,7 @@ export default function QuizScreen() {
     (async () => {
       const sessionLimited = testModeKey != null && SESSION_LIMITED_MODES.includes(testModeKey);
       const used = sessionLimited ? await getSessionFreeUsed(`${testModeKey}_${subjectKey}`) : 0;
-      const blocked = (sessionLimited && used >= SESSION_FREE_LIMIT) || (await isTrialExpired());
+      const blocked = (sessionLimited && used >= SESSION_FREE_LIMIT) || (await isTrialExpired(subjectKey));
       if (cancelled || !blocked) return;
       setTrialBlocked(true);
       setShowPaywall(true);
@@ -563,7 +563,7 @@ export default function QuizScreen() {
           tier: 'free',
         });
       } else {
-        const expired = await isTrialExpired();
+        const expired = await isTrialExpired(subjectKey);
         if (expired) {
           hitLimit = true;
           logAccessEvent('trial_limit_paywall_shown', {
@@ -573,7 +573,7 @@ export default function QuizScreen() {
             tier: 'free',
           });
         } else {
-          await incrementTrialQuestions();
+          await incrementTrialQuestions(subjectKey);
           if (isSessionLimitedMode) {
             sessionFreeUsedRef.current = await incrementSessionFreeUsed(`${testModeKey}_${subjectKey}`);
           }
