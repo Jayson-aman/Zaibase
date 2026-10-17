@@ -96,7 +96,7 @@ export const tierLabel = (t: 'pro' | 'max' | null) => (t == null ? '' : TIER_NAM
 
 /** やめたときに使えなくなるもの（短く）。ストアの契約内容（constants/proAccess.ts）と同じ内容にそろえる */
 export function lostFeatures(t: 'pro' | 'max' | null): string {
-  const pro = '聞き流しモード・全問題・学校別コース・覚え方とひっかけ注意・教科書（無料の15単元より先）';
+  const pro = '聞き流しモード・全問題・学校別コース・覚え方とひっかけ注意・教科書（無料の10単元より先）';
   return t === 'max' ? `${pro}・AI弱点コーチ・英単語Pro・英検対策` : pro;
 }
 
