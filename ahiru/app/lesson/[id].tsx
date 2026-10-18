@@ -172,7 +172,7 @@ export default function LessonDetailScreen() {
   // 各科目・各受験種別の最初の10単元は、Pro未加入でも無料で閲覧できる
   const freeLesson = isLessonFree(lesson);
   // 学年×科目で追加した新規単元（new20_で始まるid）は、上記のPro一括ロードとは別枠で、
-  // 学年×科目クラスターごとに最初の10単元は無料、それ以降は¥150買い切りで解放する。
+  // 学年×科目クラスターごとに最初の5単元（FREE_UNITS_PER_CLUSTER）は無料、それ以降は¥150買い切りで解放する。
   const isNew20 = isNew20Unit(lesson.id);
   const new20Free = isNew20 && isNew20UnitFree(lesson.id);
   const new20Unlocked = isNew20 && unlockedUnitIds.has(lesson.id);
