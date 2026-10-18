@@ -45,6 +45,8 @@
     "generate:history-images:pro": "node scripts/generate-history-images.mjs --model pro",
     "gen:static": "npx --yes esbuild@0.23.1 scripts/gen-static-data.ts --bundle --platform=node --format=cjs --loader:.png=empty --loader:.jpg=empty --outfile=/tmp/gen-static.cjs --log-level=error && node /tmp/gen-static.cjs",
     "gen:static:check": "npx --yes esbuild@0.23.1 scripts/gen-static-data.ts --bundle --platform=node --format=cjs --loader:.png=empty --loader:.jpg=empty --outfile=/tmp/gen-static.cjs --log-level=error && node /tmp/gen-static.cjs --check",
+    "gen:questions": "npx --yes esbuild@0.23.1 scripts/gen-questions.ts --bundle --platform=node --format=cjs --loader:.png=empty --loader:.jpg=empty --outfile=/tmp/gen-questions.cjs --log-level=error && node /tmp/gen-questions.cjs",
+    "gen:questions:check": "npx --yes esbuild@0.23.1 scripts/gen-questions.ts --bundle --platform=node --format=cjs --loader:.png=empty --loader:.jpg=empty --outfile=/tmp/gen-questions.cjs --log-level=error && node /tmp/gen-questions.cjs --check",
     "audit": "bash scripts/audit.sh"
   },
   "private": true
