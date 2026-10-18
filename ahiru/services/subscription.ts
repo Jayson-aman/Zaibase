@@ -574,10 +574,13 @@ export async function startStripeUnlockCheckout(
   // ハッシュが残ってしまい、サーバー側でその後ろに ?unlock_success=1 を
   // 付け足すと「クエリがハッシュの後ろに来る」壊れたURLになる。その場合
   // location.search で拾えず、Checkout成功後の即時解放確認が効かなくなる。
+  // 決済後の戻り先は、必ず実在する画面（教科書の一覧／公式集の一覧）にする。
+  // 単元ページ（/lesson/<id>）のように動的なURLに戻すと、Vercel が 404 を返して
+  // 決済は済んでいるのに戻れない（実際に発生した）。どちらの一覧も、解放の確定処理
+  // （confirmPendingStripeUnlockOnce）を呼ぶフックを持っているので、戻った直後に反映される。
+  const returnPath = type === 'unit' ? '/textbook' : '/formulas';
   const returnUrl =
-    typeof window !== 'undefined'
-      ? `${window.location.origin}${window.location.pathname}`
-      : undefined;
+    typeof window !== 'undefined' ? `${window.location.origin}${returnPath}` : undefined;
   const result = await callFirebaseFunction<
     { type: StripeUnlockType; itemId: string; returnUrl?: string },
     StripeUnlockCheckoutResult
