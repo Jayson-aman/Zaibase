@@ -27,8 +27,7 @@ import {
 import { VOCAB_MONTHLY_LABEL, VOCAB_YEARLY_LABEL } from '../../constants/pricing';
 import type { VocabEntry, VocabLevel } from '../../data/vocab-meta';
 import { levelColor, levelLabel } from '../../data/vocab-meta';
-import { vocabWords } from '../../data/vocab_words';
-import { vocabUsageNotes } from '../../data/vocab-usage-notes';
+import { vocabModule, type VocabModule } from '../../data/vocab-lazy';
 import { useFonts, BIZUDGothic_400Regular, BIZUDGothic_700Bold } from '@expo-google-fonts/biz-udgothic';
 import { alertCompat } from '../../utils/dialog';
 
@@ -96,7 +95,7 @@ const FREE_WORDS_PER_LEVEL = 3;
 const FREE_PHRASES_PER_LEVEL = 2;
 const FREE_CONVERSATIONS = 5;
 /** 無料で見られる語（全語の中で固定。絞り込みやシャッフルでは変わらない） */
-const FREE_WORD_SET: Set<VocabEntry> = (() => {
+function makeFreeWordSet(vocabWords: VocabEntry[]): Set<VocabEntry> {
   const out = new Set<VocabEntry>();
   const seen = new Map<string, { w: number; p: number }>();
   let conv = 0;
@@ -108,9 +107,10 @@ const FREE_WORD_SET: Set<VocabEntry> = (() => {
     seen.set(w.level, c);
   }
   return out;
-})();
+}
 
-export default function VocabScreen() {
+function VocabScreenInner({ vocabWords, vocabUsageNotes }: VocabModule) {
+  const FREE_WORD_SET = React.useMemo(() => makeFreeWordSet(vocabWords), [vocabWords]);
   const router = useRouter();
   const { hasVocab, loading: vocabLoading } = useVocabSubscription();
   const { isMax, loading: maxLoading } = useSubscription();
@@ -764,3 +764,17 @@ const s = StyleSheet.create({
   closeBtn:          { marginTop: 16, padding: 10 },
   closeBtnText:      { fontSize: 14, color: D.muted },
 });
+
+// 英単語帳（約3MB）は、この画面を開いてから読みこむ。読みこみ中は読みこみ中の表示だけ出し、
+// 済んでから本体（VocabScreenInner）を描く。本体の中のフックの数は、読みこみ前後で変わらない。
+export default function VocabScreen() {
+  const mod = vocabModule.use();
+  if (mod == null) {
+    return (
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#FAF7F2' }}>
+        <Text style={{ color: '#64748B' }}>読みこみ中です…（はじめて開くときは、少し時間がかかります）</Text>
+      </View>
+    );
+  }
+  return <VocabScreenInner vocabWords={mod.vocabWords} vocabUsageNotes={mod.vocabUsageNotes} />;
+}

@@ -1,4 +1,5 @@
 import type { Lesson } from './lesson-types';
+import { FREE_LESSON_LIMIT } from './lesson-limits';
 import { sansuLessons } from './lessons-sansu';
 import { kokugoLessons } from './lessons-kokugo';
 import { rikaLessons } from './lessons-rika';
@@ -14,8 +15,7 @@ import { kokoShakaiLessons } from './lessons-koko-shakai';
 import { gapLessons } from './lessons-gap';
 import { ntLessons } from './lessons-nt';
 
-import { EXTRA_SECTION_FIGURES } from './lesson-extra-figures';
-import { EXTRA_MANGA_SECTIONS } from './manga-extra';
+import { EXTRA_SECTION_FIGURES, EXTRA_MANGA_SECTIONS } from './extra-section-maps.generated';
 import { EXTRA_SECTIONS } from './lesson-extra-sections';
 
 export type { Lesson };
@@ -75,7 +75,7 @@ export function getLessonById(id: string): Lesson | undefined {
 /** 教科書機能の無料お試し数。各科目・各受験種別ごとに最初のN単元まで無料。 */
 // 2026/9/29 5→15。「もう少し見たいところで課金表示」「教科書が少ない」という指摘を受けて広げた。
 // 1教科・1受験種別あたり約550単元あるうち、最初の10単元は無料で通しで読める。
-export const FREE_LESSON_LIMIT = 10;
+export { FREE_LESSON_LIMIT };
 
 /** その単元が、無料お試し範囲（同じ科目・同じ受験種別の中で最初のN単元）に入っているか */
 export function isLessonFree(lesson: Lesson): boolean {

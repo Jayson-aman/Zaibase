@@ -4,10 +4,9 @@ import { rich } from './RichText';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, ActivityIndicator, Platform } from 'react-native';
 import type { LessonSection } from '../data/lesson-types';
 import type { SubjectKey } from '../data/questions-meta';
-import { getLessonFigure } from '../data/lesson-figures';
 import { getKoushikiFormulaInfo } from '../data/koushiki-access';
-import { getMangaScript } from '../data/manga-scripts';
-import { getKoushikiQuestionsForFigure } from '../data/koushiki-questions';
+import { lessonMediaModule } from '../data/lesson-media-lazy';
+import { figuresModule } from '../data/figures-lazy';
 import FigureView from './FigureView';
 import MangaDialogue from './MangaDialogue';
 import InlineQuiz, { questionsToQuizItems } from './InlineQuiz';
@@ -161,6 +160,9 @@ export default function LessonRenderer({
   examType,
   figurePreviewSlides,
 }: Props) {
+  // 動く図解・マンガ・例題（約20MB）は、単元ページを開いてから読みこむ。読みこみ中は、その部分だけ空く。
+  const media = lessonMediaModule.use();
+  const figs = figuresModule.use();
   const visibleSections = isMax ? sections : sections.filter((s) => !s.maxOnly);
 
   return (
@@ -217,11 +219,11 @@ export default function LessonRenderer({
             )}
             {renderBody(section.body)}
             {section.figureId != null && (() => {
-              const fig = getLessonFigure(section.figureId);
+              const fig = media ? media.getLessonFigure(section.figureId as string) : null;
               return fig != null ? <FigureView figure={fig} animated previewSlides={figurePreviewSlides} /> : null;
             })()}
             {section.mangaId != null && figurePreviewSlides == null && (() => {
-              const script = getMangaScript(section.mangaId);
+              const script = media ? media.getMangaScript(section.mangaId as string) : undefined;
               return script != null ? (
                 <MangaDialogue
                   script={script}
@@ -234,8 +236,8 @@ export default function LessonRenderer({
                 上のisLockedFormula分岐でこの行まで到達しないので、
                 買い切り前の公式の問題が漏れることはない。 */}
             {section.figureId != null && (() => {
-              const qs = getKoushikiQuestionsForFigure(section.figureId);
-              return qs.length > 0 ? <InlineQuiz items={questionsToQuizItems(qs)} /> : null;
+              const qs = media ? media.getKoushikiQuestionsForFigure(section.figureId as string) : [];
+              return qs.length > 0 ? <InlineQuiz items={questionsToQuizItems(qs, figs ? figs.getFigure : undefined)} /> : null;
             })()}
           </View>
         );

@@ -53,7 +53,7 @@ import TutorChat from '../../components/TutorChat';
 import HomeButton from '../../components/HomeButton';
 import Fireworks from '../../components/Fireworks';
 import AnswerInput, { type SubmitResult } from '../../components/AnswerInput';
-import { getFigure } from '../../data/figures';
+import { figuresModule } from '../../data/figures-lazy';
 import FigureView from '../../components/FigureView';
 import { shuffledChoices } from '../../utils/choices';
 import { pickEncouragement, pickStreakEncouragement } from '../../data/encouragements';
@@ -189,6 +189,8 @@ export default function QuizScreen() {
   const { stats: studyStats, reload: reloadStudyStats } = useStudyStats();
 
   const { questions: subjectPool, loading: questionsLoading } = useSubjectQuestions(subjectKey);
+  // 図の登録簿（約8MB）は、問題を解く画面を開いてから読みこむ
+  const figuresMod = figuresModule.use();
   const { unlockedIds: unlockedFormulaIds } = useFormulaUnlocks();
   // Setが差しかえられるたびに出題が組み直されないよう、中身から作った文字列を依存にする
   const unlockedFormulaKey = React.useMemo(() => [...unlockedFormulaIds].sort().join('|'), [unlockedFormulaIds]);
@@ -394,7 +396,7 @@ export default function QuizScreen() {
   const currentQuestion = activeQuestions[currentIndex];
   const total = activeQuestions.length;
   const diffInfo = difficultyFilter ? DIFF_LABELS[difficultyFilter] : null;
-  const currentFigure = currentQuestion ? getFigure(currentQuestion.id) : undefined;
+  const currentFigure = currentQuestion && figuresMod ? figuresMod.getFigure(currentQuestion.id) : undefined;
 
   // 正解が1番目に偏った問題群があるので、表示のときに並べ替える（同じ起動中は同じ並び）
   const currentChoices = currentQuestion ? shuffledChoices(currentQuestion.id, currentQuestion.choices) : undefined;

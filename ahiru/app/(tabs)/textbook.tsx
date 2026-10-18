@@ -10,7 +10,8 @@ import {
   Platform,
 } from 'react-native';
 import { useRouter } from 'expo-router';
-import { getLessonsBySubject, FREE_LESSON_LIMIT } from '../../data/lessons';
+import { FREE_LESSON_LIMIT } from '../../data/lesson-limits';
+import { lessonsModule } from '../../data/lessons-lazy';
 import type { ExamType } from '../../data/courses';
 import type { Lesson } from '../../data/lessons';
 import { isNew20Unit, isNew20UnitFree } from '../../data/new20-access';
@@ -147,12 +148,14 @@ export default function TextbookScreen() {
   // メモ化しないと再描画のたびに配列の同一性が変わり、FlatListが全行を
   // 作りなおすため、単元数の多い社会・理科で画面が点滅する。
   // （早期returnより前に置くこと。フックの呼び出し順が変わってしまう）
+  // 全単元（約40MB）は、この画面を開いてから読みこむ（読みこみ中は lessonsMod が null）
+  const lessonsMod = lessonsModule.use();
   const lessons = useMemo(
     () =>
-      selectedSubject
-        ? getLessonsBySubject(selectedSubject).filter((l) => (l.examType ?? 'chugaku') === examType)
+      lessonsMod && selectedSubject
+        ? lessonsMod.getLessonsBySubject(selectedSubject).filter((l) => (l.examType ?? 'chugaku') === examType)
         : [],
-    [selectedSubject, examType],
+    [lessonsMod, selectedSubject, examType],
   );
 
   // 科目タイルの単元数。5科目ぶんを毎回数えなおすと、上のlessonsと合わせて
@@ -160,10 +163,12 @@ export default function TextbookScreen() {
   const subjectCounts = useMemo(() => {
     const m = {} as Record<SubjectKey, number>;
     for (const { key } of SUBJECTS) {
-      m[key] = getLessonsBySubject(key).filter((l) => (l.examType ?? 'chugaku') === examType).length;
+      m[key] = lessonsMod
+        ? lessonsMod.getLessonsBySubject(key).filter((l) => (l.examType ?? 'chugaku') === examType).length
+        : -1; // -1 = まだ読みこみ中
     }
     return m;
-  }, [examType]);
+  }, [lessonsMod, examType]);
 
   function handleSubjectPress(key: SubjectKey) {
     // 各科目の最初のFREE_LESSON_LIMIT単元は無料で見られるため、一覧自体は
@@ -201,7 +206,9 @@ export default function TextbookScreen() {
     [isPro, unlockedUnitIds, handleLessonPress],
   );
 
-  const showEmpty = selectedSubject != null && lessons.length === 0;
+  // 読みこみ中は「準備中」と出さない（本当に空のときだけ出す）
+  const showEmpty = selectedSubject != null && lessonsMod != null && lessons.length === 0;
+  const showLoading = selectedSubject != null && lessonsMod == null;
   const showList = selectedSubject != null && lessons.length > 0;
 
   // ヘッダーを毎回作りなおすと、科目タイルごと描き直される。
@@ -273,7 +280,9 @@ export default function TextbookScreen() {
               <Text style={[styles.subjectName, isSelected && { color }]}>
                 {subjectLabel(key, examType)}
               </Text>
-              {count > 0 ? (
+              {count < 0 ? (
+                <Text style={styles.lessonCountPending}>読みこみ中…</Text>
+              ) : count > 0 ? (
                 <Text style={styles.lessonCount}>{count}単元</Text>
               ) : (
                 <Text style={styles.lessonCountPending}>準備中</Text>
@@ -289,6 +298,11 @@ export default function TextbookScreen() {
           {subjectLabel(selectedSubject, examType)} の単元一覧
         </Text>
       )}
+      {showLoading && (
+        <View style={styles.emptyBox}>
+          <Text style={styles.emptyText}>読みこみ中です…（はじめて開くときは、少し時間がかかります）</Text>
+        </View>
+      )}
       {showEmpty && (
         <View style={styles.emptyBox}>
           <Text style={styles.emptyText}>
@@ -298,7 +312,7 @@ export default function TextbookScreen() {
       )}
     </View>
     ),
-    [isPro, examType, selectedSubject, subjectCounts, showEmpty],
+    [isPro, examType, selectedSubject, subjectCounts, showEmpty, showLoading],
   );
 
   if (loading) {
