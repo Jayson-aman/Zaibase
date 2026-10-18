@@ -1,105 +1,95 @@
 import { useState, useEffect, useRef } from 'react';
 import type { Question, SubjectKey } from '../data/questions-meta';
+import { createLazyModule } from '../utils/lazyModule';
 
-type QuestionsModule = {
-  questions: Question[];
-  questionsBySubject: Record<SubjectKey, Question[]>;
+// 問題集は教科ごとのファイル（data/questions-gen/*.ts。scripts/gen-questions.ts が書き出す）に分けてあり、
+// 使う教科だけを読みこむ。全教科が要るのは、他の教科の問題をまたいで探す画面（学校別・進捗・コーチ）だけ。
+//
+// `import()` の引数は文字列リテラルで書くこと（変数だと Metro がファイルを分けられない）。
+const subjectModules: Record<SubjectKey, ReturnType<typeof createLazyModule<Question[]>>> = {
+  sansu: createLazyModule(() => import('../data/questions-gen/sansu').then((m) => m.questions)),
+  kokugo: createLazyModule(() => import('../data/questions-gen/kokugo').then((m) => m.questions)),
+  rika: createLazyModule(() => import('../data/questions-gen/rika').then((m) => m.questions)),
+  shakai: createLazyModule(() => import('../data/questions-gen/shakai').then((m) => m.questions)),
+  eigo: createLazyModule(() => import('../data/questions-gen/eigo').then((m) => m.questions)),
 };
+const SUBJECT_KEYS = Object.keys(subjectModules) as SubjectKey[];
 
-let cache: QuestionsModule | null = null;
-const listeners: Array<(mod: QuestionsModule) => void> = [];
+const EMPTY: Question[] = [];
 
-let inFlight: Promise<QuestionsModule> | null = null;
+/** 1教科の問題。enabled=false のあいだは読みこまない（まだ教科が決まっていない画面用）。 */
+export function useSubjectQuestions(subject: SubjectKey, enabled = true) {
+  const lazy = subjectModules[subject];
+  const [questions, setQuestions] = useState<Question[]>(() => lazy.peek() ?? EMPTY);
+  const [loading, setLoading] = useState(() => enabled && lazy.peek() == null);
 
-function loadQuestionsModule(): Promise<QuestionsModule> {
-  if (cache) return Promise.resolve(cache);
-  // 読み込みに失敗したら再試行できるようにする（失敗を握ったままだと
-  // 問題が0件のまま二度と復帰しない）。
-  if (inFlight) return inFlight;
-  inFlight = import('../data/questions')
-    .then((mod) => {
-      cache = { questions: mod.questions, questionsBySubject: mod.questionsBySubject };
-      listeners.forEach((fn) => fn(cache!));
-      listeners.length = 0;
-      inFlight = null;
-      return cache;
+  useEffect(() => {
+    const cached = lazy.peek();
+    if (cached) {
+      setQuestions(cached);
+      setLoading(false);
+      return;
+    }
+    if (!enabled) {
+      setQuestions(EMPTY);
+      setLoading(false);
+      return;
+    }
+    let alive = true;
+    setLoading(true);
+    lazy.load().then((qs) => {
+      if (!alive) return;
+      setQuestions(qs);
+      setLoading(false);
+    }).catch(() => {
+      // 失敗したら、次に開いたとき再試行する（loading のままにして、0件の画面を出さない）
+    });
+    return () => { alive = false; };
+  }, [lazy, enabled]);
+
+  return { questions, loading };
+}
+
+type BySubject = Record<SubjectKey, Question[]>;
+
+let allCache: { bySubject: BySubject; all: Question[] } | null = null;
+let allInFlight: Promise<{ bySubject: BySubject; all: Question[] }> | null = null;
+
+function loadAll() {
+  if (allCache) return Promise.resolve(allCache);
+  if (allInFlight) return allInFlight;
+  allInFlight = Promise.all(SUBJECT_KEYS.map((k) => subjectModules[k].load()))
+    .then((lists) => {
+      const bySubject = {} as BySubject;
+      SUBJECT_KEYS.forEach((k, i) => { bySubject[k] = lists[i]; });
+      allCache = { bySubject, all: lists.flat() };
+      allInFlight = null;
+      return allCache;
     })
-    .catch((err) => {
-      inFlight = null;
-      throw err;
-    });
-  return inFlight;
+    .catch((e) => { allInFlight = null; throw e; });
+  return allInFlight;
 }
 
-export function useSubjectQuestions(subject: SubjectKey) {
-  const [questions, setQuestions] = useState<Question[]>(
-    cache ? cache.questionsBySubject[subject] : [],
-  );
-  const [loading, setLoading] = useState(!cache);
+function useAll() {
+  const [data, setData] = useState(allCache);
   const mounted = useRef(true);
-
   useEffect(() => {
     mounted.current = true;
-    if (cache) {
-      setQuestions(cache.questionsBySubject[subject]);
-      setLoading(false);
-      return;
-    }
-    loadQuestionsModule().then((mod) => {
-      if (!mounted.current) return;
-      setQuestions(mod.questionsBySubject[subject]);
-      setLoading(false);
-    });
+    if (allCache) { setData(allCache); return; }
+    loadAll().then((d) => { if (mounted.current) setData(d); }).catch(() => {});
     return () => { mounted.current = false; };
-  }, [subject]);
-
-  return { questions, loading };
+  }, []);
+  return data;
 }
 
+/** 全教科の問題（学校別コースなど、教科をまたいで探す画面だけが使う） */
 export function useAllQuestions() {
-  const [questions, setQuestions] = useState<Question[]>(cache?.questions ?? []);
-  const [loading, setLoading] = useState(!cache);
-  const mounted = useRef(true);
-
-  useEffect(() => {
-    mounted.current = true;
-    if (cache) {
-      setQuestions(cache.questions);
-      setLoading(false);
-      return;
-    }
-    loadQuestionsModule().then((mod) => {
-      if (!mounted.current) return;
-      setQuestions(mod.questions);
-      setLoading(false);
-    });
-    return () => { mounted.current = false; };
-  }, []);
-
-  return { questions, loading };
+  const d = useAll();
+  return { questions: d?.all ?? EMPTY, loading: d == null };
 }
 
+/** 教科ごとの問題（進捗・コーチの「まちがえた問題を探す」用） */
 export function useQuestionsBySubjectMap() {
-  const [bySubject, setBySubject] = useState<Record<SubjectKey, Question[]> | null>(
-    cache?.questionsBySubject ?? null,
-  );
-  const [loading, setLoading] = useState(!cache);
-  const mounted = useRef(true);
-
-  useEffect(() => {
-    mounted.current = true;
-    if (cache) {
-      setBySubject(cache.questionsBySubject);
-      setLoading(false);
-      return;
-    }
-    loadQuestionsModule().then((mod) => {
-      if (!mounted.current) return;
-      setBySubject(mod.questionsBySubject);
-      setLoading(false);
-    });
-    return () => { mounted.current = false; };
-  }, []);
-
-  return { bySubject, loading };
+  const d = useAll();
+  return { bySubject: d?.bySubject ?? null, loading: d == null };
 }

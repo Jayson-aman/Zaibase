@@ -21,7 +21,8 @@ import PlanStatusBanner from '../../components/PlanStatusBanner';
 import FreeUpgradeCard from '../../components/FreeUpgradeCard';
 import StudyStartCard from '../../components/StudyStartCard';
 import { subjectInfo, type SubjectKey } from '../../data/questions-meta';
-import { useQuestionsBySubjectMap } from '../../hooks/useSubjectQuestions';
+import { useSubjectQuestions } from '../../hooks/useSubjectQuestions';
+import { COUNTS_BY_COURSE, COUNTS_GENERAL } from '../../data/question-counts.generated';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
 import { useExamType } from '../../store/examType';
 import { getKoushikiFormulaIdForQuestion, isKoushikiFormulaFree } from '../../data/koushiki-access';
@@ -77,39 +78,12 @@ const DIFFICULTY_OPTIONS: {
 // 発生し、ホーム画面が数百ミリ秒固まる（古い端末ほど顕著）。
 type CountIndex = {
   // key: `${subject}|${examType}|${course}|${difficulty}`
-  counts: Map<string, number>;
-  generalCounts: Map<string, number>;
+  counts: Record<string, number>;
+  generalCounts: Record<string, number>;
 };
 
-function buildCountIndex(
-  questionsBySubject: Record<SubjectKey, import('../../data/questions-meta').Question[]> | null,
-): CountIndex | null {
-  if (!questionsBySubject) return null;
-  const counts = new Map<string, number>();
-  const generalCounts = new Map<string, number>();
-
-  const bump = (m: Map<string, number>, k: string) => m.set(k, (m.get(k) ?? 0) + 1);
-
-  (Object.keys(questionsBySubject) as SubjectKey[]).forEach((subject) => {
-    for (const q of questionsBySubject[subject]) {
-      const examType = (q.examType ?? 'chugaku') as ExamType;
-      const generalKey = examType === 'koko' ? 'koko-general' : 'general';
-      const isGeneral = !q.course || q.course === generalKey;
-      const diff = q.difficulty;
-
-      if (isGeneral) {
-        // 「共通問題」はどのコースからも参照されるので別集計にする
-        bump(generalCounts, `${subject}|${examType}|all`);
-        bump(generalCounts, `${subject}|${examType}|${diff}`);
-      } else {
-        bump(counts, `${subject}|${examType}|${q.course}|all`);
-        bump(counts, `${subject}|${examType}|${q.course}|${diff}`);
-      }
-    }
-  });
-
-  return { counts, generalCounts };
-}
+// 集計表は scripts/gen-static-data.ts が前もって書き出している（全問題を読まずに数えるため）。
+const COUNT_INDEX: CountIndex = { counts: COUNTS_BY_COURSE, generalCounts: COUNTS_GENERAL };
 
 function getQuestionCount(
   subject: SubjectKey,
@@ -120,9 +94,9 @@ function getQuestionCount(
 ): number {
   if (!index) return 0;
   const d = difficulty === 'all' ? 'all' : difficulty;
-  const general = index.generalCounts.get(`${subject}|${examType}|${d}`) ?? 0;
+  const general = index.generalCounts[`${subject}|${examType}|${d}`] ?? 0;
   if (course === 'general' || course === 'koko-general') return general;
-  const school = index.counts.get(`${subject}|${examType}|${course}|${d}`) ?? 0;
+  const school = index.counts[`${subject}|${examType}|${course}|${d}`] ?? 0;
   // 学校別コースは「その学校の問題＋共通問題」を出題する
   return school + general;
 }
@@ -256,8 +230,9 @@ export default function HomeScreen() {
     setListenPickerActive(false);
   }
 
-  const { bySubject: questionsBySubject } = useQuestionsBySubjectMap();
-  const countIndex = React.useMemo(() => buildCountIndex(questionsBySubject), [questionsBySubject]);
+  // 問題数の表示は前もって書き出した集計表を使う。聞き流しで教科を選んだときだけ、その教科の問題を読みこむ。
+  const countIndex: CountIndex | null = COUNT_INDEX;
+  const { questions: listenSubjectQuestions } = useSubjectQuestions(listenSubject ?? 'sansu', listenSubject != null);
   const listenInfo = listenSubject ? subjectInfo[listenSubject] : null;
   const { hasAccess: betaAccess } = useBetaAccess();
   const { isPro, loading: proLoading, paywallVisible, setPaywallVisible, requirePro } = useProGate(betaAccess);
@@ -273,10 +248,10 @@ export default function HomeScreen() {
 
   const listenQuestions = React.useMemo(() => {
     // 聞き流しは問題そのものが要るので、集計表ではなく元データを使う
-    if (listenSubject == null || !questionsBySubject) return [];
+    if (listenSubject == null) return [];
     // 問題集と同じ条件で絞る。絞らないと、Max限定の問題や、未購入の公式集の例題、
     // 選んでいない受験種別の問題まで読み上げてしまう。
-    const allowed = questionsBySubject[listenSubject].filter((q) => {
+    const allowed = listenSubjectQuestions.filter((q) => {
       if ((q.examType ?? 'chugaku') !== examType) return false;
       if (q.maxOnly && !isMax) return false;
       const figureId = getKoushikiFormulaIdForQuestion(q.id);
@@ -291,7 +266,7 @@ export default function HomeScreen() {
       [a[i], a[j]] = [a[j], a[i]];
     }
     return a;
-  }, [listenSubject, difficulty, questionsBySubject, examType, isMax, isPro, unlockedFormulaIds]);
+  }, [listenSubject, difficulty, listenSubjectQuestions, examType, isMax, isPro, unlockedFormulaIds]);
 
   // Courses that require MAX or Pro
   const maxOnlyCourses = ALL_COURSES.filter(c => c.maxOnly).map(c => c.key);

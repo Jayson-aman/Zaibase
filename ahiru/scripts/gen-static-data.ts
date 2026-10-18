@@ -100,6 +100,35 @@ ${list(locked)}
 `;
 }
 
+function genQuestionCounts(): string {
+  // ホームの「◯問」表示用。キーは app/(tabs)/index.tsx の buildCountIndex と同じ形。
+  const counts = new Map<string, number>();
+  const general = new Map<string, number>();
+  const bump = (m: Map<string, number>, k: string) => m.set(k, (m.get(k) ?? 0) + 1);
+  for (const q of questions) {
+    const examType = q.examType ?? 'chugaku';
+    const generalKey = examType === 'koko' ? 'koko-general' : 'general';
+    if (!q.course || q.course === generalKey) {
+      bump(general, `${q.subject}|${examType}|all`);
+      bump(general, `${q.subject}|${examType}|${q.difficulty}`);
+    } else {
+      bump(counts, `${q.subject}|${examType}|${q.course}|all`);
+      bump(counts, `${q.subject}|${examType}|${q.course}|${q.difficulty}`);
+    }
+  }
+  const obj = (m: Map<string, number>) => [...m.keys()].sort().map((k) => `  ${JSON.stringify(k)}: ${m.get(k)},`).join('\n');
+  return `// scripts/gen-static-data.ts が自動生成する。手で直さない（npm run gen:static で作り直す）。
+// ホームに出す問題数の集計表。全問題（約14MB）を読まずに数えられるよう、前もって書き出してある。
+export const COUNTS_BY_COURSE: Record<string, number> = {
+${obj(counts)}
+};
+
+export const COUNTS_GENERAL: Record<string, number> = {
+${obj(general)}
+};
+`;
+}
+
 function genSchoolCounts(): string {
   const m = new Map<string, { total: number; subjects: Set<string> }>();
   for (const q of questions) {
@@ -136,6 +165,7 @@ ${entries(EXTRA_MANGA_SECTIONS)}
 }
 
 const targets: Array<[string, string]> = [
+  ['data/question-counts.generated.ts', genQuestionCounts()],
   ['data/extra-section-maps.generated.ts', genExtraSectionMaps()],
   ['data/new20-ids.generated.ts', genNew20Ids()],
   ['data/school-counts.generated.ts', genSchoolCounts()],
