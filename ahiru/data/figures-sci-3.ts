@@ -91,27 +91,27 @@ export const figuresSci3: Record<string, Figure> = {
     buildSteps: 2,
   },
 
-  // 直列回路（3Ω・6Ω・9V）。
+  // 直列回路（抵抗3・抵抗6・電池3個）。
   'rika-024': {
     kind: 'circuit',
     layout: 'series',
     series: [
-      { type: 'resistor', label: '3Ω' },
-      { type: 'resistor', label: '6Ω' },
+      { type: 'resistor', label: '抵抗3' },
+      { type: 'resistor', label: '抵抗6' },
     ],
-    battery: { label: '9V' },
+    battery: { label: '電池3個', cells: 3 },
   },
 
-  // 混合回路（4Ω に 2Ω・6Ω の並列が直列接続、12V）。
+  // 混合回路（電池2個直列。抵抗2に、抵抗3・抵抗6の並列が直列接続）。
   'rika-026': {
     kind: 'circuit',
     layout: 'parallel',
-    series: [{ type: 'resistor', label: '4Ω' }],
+    series: [{ type: 'resistor', label: '抵抗2' }],
     branches: [
-      [{ type: 'resistor', label: '2Ω' }],
-      [{ type: 'resistor', label: '6Ω' }],
+      [{ type: 'resistor', label: '抵抗3' }],
+      [{ type: 'resistor', label: '抵抗6' }],
     ],
-    battery: { label: '12V' },
+    battery: { label: '電池2個', cells: 2 },
   },
 
   // 光合成速度と呼吸速度（単一曲線）。補償点・飽和点は答えのため記さない。

@@ -29,6 +29,7 @@ export const eigoExt11Lessons: Lesson[] = [
     sections: [
       {
         heading: 'なぜ設問を先に読むのか',
+        mangaId: 'eigo_s386_manga',
         body: `長文問題で時間が足りなくなる人のほとんどは、「本文を最初から最後まで読んでから設問を見る」という順で解いている。この順だと、読んでいる間じゅう何が問われるか分からないので、全部を同じ強さで読むことになる。そして設問を見た瞬間に「どこに書いてあったっけ」となり、もう一度本文をさがす。つまり本文を2回読んでいることになる。
 
 ■ 正しい手順
@@ -140,6 +141,21 @@ After we left the museum, ／ we had lunch ／ at a small restaurant ／ near th
 ★ ポイント：told me that … の that は「〜ということ」で、ここから文が1つ始まる合図。that を見たら「ここから新しい文が始まる」と考えて区切ればよい。
 
 ⚠ 注意：区切りすぎもよくない。a small restaurant を a ／ small ／ restaurant のように切ると、かえって意味がつながらない。「1つのまとまった意味」になる長さで切ること。`,
+      },
+      {
+        heading: 'なぜ前から読めるのか、なぜ切れ目が4か所なのか',
+        mangaId: 'eigo_s387_manga',
+        body: `英語は「中心の語を先に言い、説明をあとから足す」ことばです。The boy（少年は）→who is playing（弾いている）→under the tree（木の下で）→in the park（公園の）→is my brother（兄だ）と、**情報が出てくる順に足していけば意味がつながる**ようにできています。日本語の順に並べ直すと、右端から左へ戻る往復が必要になり、長文では数百回になります。返り読みは時間が二倍かかるだけでなく、戻っている間に前の内容を忘れて迷子になります。
+
+切れ目が前置詞・関係代名詞・接続詞・カンマの前なのは、これらの語が**「ここから説明を足します」という合図**だからです。前置詞は場所や時の説明、関係代名詞は名詞の説明、接続詞（that・when・because）は新しい文の始まり。told me that の that を見たら「ここから別の主語と動詞が始まる」と考えれば、lived の主語が his grandmother だとすぐ分かります。
+
+■ 確かめのしかた
+①英文にスラッシュを入れる：**前置詞の前・関係代名詞の前・接続詞の前・カンマ**。My father told me ／ that his grandmother lived in a house ／ like that.
+②切ったかたまりを**前から順に日本語で足す**。「父は私に言った→祖母が家に住んでいたと→そんな家に」。戻らない。
+③that のあとに主語と動詞のセットがもう一つあるか。told の主語と lived の主語を分けて言えるか。
+④切りすぎていないか。a small restaurant は一つのまとまり。Its のような代名詞は、直前の名詞のかたまりの中で「意味が通る語」を指す（Its roof→屋根があるのは farmhouse）。
+
+★ ここがポイント：英語は**情報が出た順に足せばつながる**ので前から読む。切れ目は**前置詞・関係代名詞・接続詞・カンマ**という「ここから説明」の合図。that のあとは主語と動詞をもう一組数える。`,
       },
     ],
     trapExamples: [
@@ -682,7 +698,7 @@ Yuki has a small brown rabbit. She got it two years ago. Its name is Coco. Coco 
           'この文章の中心はウサギの Coco なので、it といえばウサギだろうと決めつけてしまう。また前の文で it がウサギを指していたことも、思いこみを強める。',
         correctAnswer: 'the cage（ケージ・かご）',
         correctExplanation:
-          '入れかえて確かめる。「Coco becomes dirty in a week（コロは1週間でよごれる）」よりも「the cage becomes dirty in a week（ケージは1週間でよごれる）」のほうが、そうじをする理由として自然である。代名詞は直前の名詞を指すのが原則で、この文でも直前の名詞は the cage である。必ず入れかえて意味を確かめること。',
+          '入れかえて確かめる。「Coco becomes dirty in a week（ココは1週間でよごれる）」よりも「the cage becomes dirty in a week（ケージは1週間でよごれる）」のほうが、そうじをする理由として自然である。代名詞は直前の名詞を指すのが原則で、この文でも直前の名詞は the cage である。必ず入れかえて意味を確かめること。',
       },
       {
         question: '上の英文の they never forget to give her fresh water. の they と her はそれぞれ何を指すか。',
@@ -755,11 +771,11 @@ she＝Mika（Ken は男性なので he になるはず）、it＝a letter。
 
 ・② His＝Ken、him＝Ken
 ・③ one＝bike（「同じ種類の別のもの」なので a red bike）、it＝the red bike
-・④ he＝Ken（直前の文の主語ではなく、話の中心人物）
+・④ he＝Ken（直前の③の主語で、話の中心人物でもある）
 ・⑤ it＝the red bike
 
-■ 例外に注意する場面
-主語がとちゅうで入れかわる文章では、直前の名詞ではなく「話の中心人物」を指すことがある。④の he がその例で、直前の③の主語 Ken と一致している。文章全体でだれの話をしているかを頭に入れておくと迷わない。
+■ 候補が二人いる場面
+同じ性別の人が二人出てくる文章では、近さだけでは決められないことがある。②には his father も出てくるが、④の he は、直前の③の主語であり話の中心人物でもある Ken を指す。文章全体でだれの話をしているかを頭に入れておくと迷わない。
 
 ★ ポイント：候補が2人いる（Ken と his father の両方が男性）ときは、入れかえて意味を確かめるしかない。④で「父は十分なお金を持っていなかった」とすると、⑤で父が買ってあげることと矛盾する。だから he＝Ken。
 
@@ -1112,7 +1128,7 @@ Studying with a smartphone looks easy. You can look up any word in a second. How
 ■ such as と for example の使い分け
 ○ I like fruits such as apples and oranges.（名詞に直接つなぐ）
 ○ I like fruits. For example, I often eat apples.（文の先頭）
-× I like fruits, for example apples and oranges.（このつなぎ方はしない）
+× I like fruits for example apples and oranges.（for example を名詞の後ろにそのままつなぐ形はしない。コンマで区切った挿入の形は文法上まちがいではないが、「〜のような」と言うときは such as が安全）
 
 ★ ポイント：段落の要旨を答える問題では、具体例を書いてはいけない。「たとえば〜」を消して残った文が答えになる。
 
@@ -1150,7 +1166,7 @@ Small changes in our daily life can save a lot of energy. For example, if you tu
       },
       {
         question: '「私はりんごやみかんのような果物が好きです」を英語にしなさい。',
-        wrongAnswer: 'I like fruits, for example apples and oranges.',
+        wrongAnswer: 'I like fruits for example apples and oranges.',
         trapExplanation:
           '「〜のような」を「たとえば」と読みかえて for example を使ってしまう。for example は文の先頭に置いて文全体を導く語なので、名詞の後ろに直接つなぐことはできない。',
         correctAnswer: 'I like fruits such as apples and oranges.',
@@ -1597,6 +1613,21 @@ Do you know how many kinds of insects live on the earth? Scientists have found a
 
 ⚠ 注意：メモに具体例や数字を書かないこと。「①ペットボトルは年間4000億本作られる」のように数字を書くと、メモが段落の一部の情報になってしまい、全体像がわからなくなる。数字は本文に線を引くだけでよい。`,
       },
+      {
+        heading: 'なぜ結論を最後に置く段落があり、なぜメモは日本語で短く書くのか',
+        mangaId: 'eigo_s403_manga',
+        body: `書き手が問いかけ・体験・意外な数字から段落を始めるのは、**読者を引きこんでから結論を言いたい**からです。「昆虫は何種類いるか知っていますか」と問い、100万種という数字で驚かせ、森が切られると消えると示したあとで、This means that 〜（これは〜を意味する）と主張を置く。だから1文目が例や問いかけなら、主題文は最後にあります。So・Therefore・In this way・This means that は「ここまでをまとめます」という合図です。
+
+段落ごとのメモを日本語で10〜20字にするのは、メモの目的が**「その段落が何の話か」を思い出すこと**だからです。英語で書くと書くこと自体に時間を取られ、数字を入れると段落の一部の情報になって全体像がぼやけます。設問「海の生き物への影響はどの段落か」に一瞬で答えるには、段落全体をおおう広さのメモが要ります。数字は本文に線を引いておけば、メモで段落を特定してから見に行けます。
+
+■ 確かめのしかた
+①1文目が**問いかけ・体験・意外な事実・数字**なら、最後の1文を見る。So／Therefore／This means that／We should があれば主題文。
+②見つからなければ However のあと。探す順は「1文目→最終文→However の後ろ」。
+③段落を読み終えるたびに**日本語で10〜20字、主語と述語のある形、段落番号つき**でメモする。数字は書かず本文に線。
+④設問に対応させる：内容一致→メモで段落を決めて読み返す。要旨・タイトル→メモをつないで一文に。段落の要旨→そのメモ。
+
+★ ここがポイント：問いかけや例から始まる段落は**読者を引きこんでから結論を置く**ので、主題文は最後（So・This means that）。メモは**段落が何の話かを思い出すため**なので、日本語で短く、数字は入れない。`,
+      },
     ],
     trapExamples: [
       {
@@ -1689,6 +1720,21 @@ shouted（さけんだ）／whispered（ささやいた）／cried（泣いた�
 ★ ポイント：会話文の順番を追うときは、せりふの横に「ケ」「ミ」のように話し手の頭文字を書きこむとよい。あとで読み返すときに一目でわかる。
 
 ⚠ 注意：英語では「〜と言った」の部分がせりふの前に来ることも後ろに来ることもある。Ken said, "Let's go." と "Let's go," said Ken. はどちらも正しく、意味は同じである。said Ken のように動詞が主語より前に来ても、主語は Ken である。`,
+      },
+      {
+        heading: 'なぜ最初の3文で人物・時・場所を確定するのか、なぜ said Ken の主語が Ken なのか',
+        mangaId: 'eigo_s404_manga',
+        body: `英語の物語文は、最初の2〜3文に「だれが・いつ・どこで」をまとめて書くのがふつうです。ここで登場人物の数と関係（my sister Yuki・her friend Ken）を確定しておかないと、あとで he・she が出たときにだれを指すか決められず、気持ちも行動も混ざります。説明文の「主題文を探す」読み方が物語文に使えないのは、物語には主張がなく、**出来事の流れそのものが内容**だからです。
+
+"Let's go," said Ken. で主語が Ken なのは、これがせりふのあとに「〜と言った」を置くときの**決まった語順の入れかえ**だからです。意味は Ken said, "Let's go." と同じです。代名詞のときは入れかえず he said とします。he・she が出たら、**性別**と**会話が交互に入れかわるリズム**の二つで話し手を決めます。
+
+■ 確かめのしかた
+①最初の3文で、**人名に○、時を表す語に□、場所に下線**を引く。人物が何人いるかを言えるか。
+②人物の関係を表す語（my sister 〇〇、her friend 〇〇、a boy named 〇〇）から関係をつかむ。
+③せりふのあとの asked Ken／Mika answered／said Ken で話し手を決める。代名詞なら性別（he＝男性）と交互のリズムで確かめる。
+④shouted・whispered・cried は気持ちの手がかり。せりふの横に話し手の頭文字を書きこむ。
+
+★ ここがポイント：物語文は**出来事の流れが内容**なので、最初の3文で**人物・時・場所を確定**してから追う。said Ken は**語順を入れかえた決まった形**で主語は Ken、代名詞は性別と交互のリズムで決める。`,
       },
     ],
     trapExamples: [
@@ -1968,6 +2014,21 @@ Last month, our class had a chorus contest. I was chosen as the pianist, and at 
 
 ⚠ 注意：最後の I have never been so glad. は現在完了で「今までに一度もこんなにうれしかったことはない」＝「今がいちばんうれしい」という意味。never を見て「うれしくない」と読まないこと。`,
         figureId: 'lf_eigoext11_407',
+      },
+      {
+        heading: 'なぜ気持ちは行動から読み、なぜ never so がいちばんうれしいになるのか',
+        mangaId: 'eigo_s407_manga',
+        body: `物語の書き手は、気持ちを glad・sad と直接書くより、**手がふるえた・みんながほほえんだ**という行動や体の様子で示すことを好みます。そのほうが読者が場面を思いうかべられるからです。だから気持ちを問う設問では、気持ちの語を○で囲むだけでなく、行動から気持ちを読み取ります。気持ちが変わった**直前の出来事**がきっかけなのは、心が動くには必ず原因があり、書き手はそれを変化の直前に置くからです。「優勝したから前向きになった」と想像で答えると、本文の did not win と矛盾します。
+
+I have never been so glad. が「これまででいちばんうれしい」になるのは、「こんなにうれしかったことは一度もない」＝「今がいちばん」という**最上級の言いかえ**だからです。never だけを見て「うれしくない」と読むと、結末が逆になります。-ed（surprised）は人がその気持ちになる、-ing（surprising）は物事がその気持ちにさせる、という区別も、主語が人か物事かで決めます。
+
+■ 確かめのしかた
+①気持ちの語（glad・sad・worried・nervous・proud・surprised）を○で囲み、**行動や体の様子**（hands were shaking・smiled・could not sleep）も気持ちとして読む。
+②気持ちの流れを①→②→③と番号で追い、変わった**直前の文**をきっかけとする。想像（優勝した）で答えていないか、本文と矛盾しないか。
+③never＋so／such は**最上級の言いかえ**：I have never seen such a beautiful sunset.＝これまででいちばん美しい。
+④-ed は人（I was excited.）、-ing は物事（The game was exciting.）。be surprised at・be interested in・be worried about は前置詞とセット。
+
+★ ここがポイント：書き手は気持ちを**行動や体の様子で示す**ので、行動から読む。きっかけは**変化の直前の出来事**。never so／such は**最上級の言いかえ**（今がいちばん）。`,
       },
     ],
     trapExamples: [
@@ -2795,7 +2856,7 @@ Emi and her friends are going to visit the science museum on Saturday. They will
 
 ★ ポイント：This is Ken. の This is は「こちらは〜です」の意味。電話では自分のことも This is 〜 と言う。I am Ken. とは言わないので、選択肢問題でねらわれる。
 
-⚠ 注意：Speaking. だけで「私です」を表す。Who's calling? に対して I am Mika. と答えるのは不自然。This is Mika. または Speaking. が正しい。`,
+⚠ 注意：Speaking. だけで「私です」を表す（本人が出たとき）。名のるときに I am Mika. と言うのは不自然で、This is Mika. が正しい（Who's calling? への答えも同じ）。`,
       },
       {
         heading: '実際の電話の会話',
@@ -2808,7 +2869,7 @@ Ken: I see. Can I leave a message?
 Mika's mother: Sure. Go ahead.
 Ken: We are going to meet at the station at nine tomorrow morning, but the trains will be late because of some work on the railway line. Could you tell her to come at nine thirty instead?
 Mika's mother: At nine thirty. All right, I'll tell her.
-Ken: Thank you very much. Good night.
+Ken: Thank you very much. Goodbye.
 
 ■ だれがだれと話しているか
 電話をかけたのは Ken、出たのは Mika の母親。Mika 本人は不在。
@@ -2825,7 +2886,7 @@ Ken: Thank you very much. Good night.
 
 ★ ポイント：Could you tell her to come at nine thirty instead? の instead（そのかわりに）が変更の合図。9時ではなく9時30分になる。
 
-⚠ 注意：会話の中に2つの時刻（six／nine／nine thirty）が出てくる。それぞれ何の時刻かを区別する。six はミカが帰る時刻で、待ち合わせとは関係ない。`,
+⚠ 注意：会話の中に3つの時刻（six／nine／nine thirty）が出てくる。それぞれ何の時刻かを区別する。six はミカが帰る時刻で、待ち合わせとは関係ない。`,
       },
     ],
     trapExamples: [
@@ -3032,6 +3093,21 @@ Woman: You're welcome.
 ⚠ 注意：最後の If you walk past the post office 〜, you'll find the library. は「行きすぎた場合」の説明であって、目的地の道順ではない。But you don't need to go that far.（そこまで行く必要はない）という一文で、これが余分な情報だとわかる。`,
         figureId: 'lf_eigoext11_418',
       },
+      {
+        heading: 'なぜ地図に書きこみ、なぜ最初の発言に戻るのか',
+        mangaId: 'eigo_s418_manga',
+        body: `道案内の会話には Turn right・on your left のように向きの語が何度も出ます。向きは**歩く人から見たもの**なので、地図の上で進行方向が変わるたびに右と左の意味が変わります。頭の中で回転させると必ずどこかで入れかわるので、出発点から指でたどり、曲がるたびに印をつけます。block が「建物」ではなく「交差点から次の交差点までの区画」なのは、英語の block が町を道で区切ったひとつのかたまりを指す語だからです。two blocks は角を二つ通り過ぎた所です。
+
+目的地を答えるときに最初の発言に戻るのは、会話文では**最初の1〜2文に話題が書かれる**からです。あとから出る the library は「行きすぎた場合」の説明で、But you don't need to go that far. がそれを示しています。最後に出た語を答えにするのは典型的な誤りです。
+
+■ 確かめのしかた
+①出発点と向きを確認し、Go straight for 〇 blocks で角を数え、Turn 〇 で向きを変え、on your 〇 で位置を決める。**曲がるたびに指でたどる**。
+②block は**交差点の区画**。two blocks＝2つ目の角まで。
+③「何を探しているか」は**最初の発言**（Could you tell me how to get to the post office?）に戻る。最後に出た建物を答えにしない。
+④聞き手のくり返し（Two blocks. All right.）は大事な情報の目印。「〜する必要はない」と断られた情報は目的地の道順ではない。
+
+★ ここがポイント：向きは**歩く人から見たもの**なので、地図の上で指でたどる。block は**交差点の区画**。目的地は**最初の発言**にあり、最後に出た語で答えない。`,
+      },
     ],
     trapExamples: [
       {
@@ -3221,7 +3297,7 @@ Lucy: Really? That would be a great help. Thank you, Ken.
 ②後ろの返事は Yes, I do. → 空所は Do you 〜? の疑問文。選択肢で Do you で始まるのは ア。しかも後ろで「明日理科のテストがある」と続くので自然。
 ③後ろの返事は That would be a great help.（それはとても助かる）→ 空所は申し出の文。ウ Shall I help you study for the test? が入る。
 
-エは Yes/No で答える質問への返事なので、この位置には入らない。オは「昨夜どこへ行ったか」で、話の内容と合わない。
+エは How are you? のように調子をたずねられたときの返事なので、この位置には入らない（①は Ken の発言で、Ken は相手の様子をたずねる側）。オは「昨夜どこへ行ったか」で、話の内容と合わない。
 
 ★ ポイント：Yes, I do. の do が決め手。Are you 〜? なら Yes, I am. になるので、do と am のどちらかを見れば疑問文の形が決まる。
 
@@ -3606,6 +3682,21 @@ Sea turtles lay their eggs on the beach at night. A mother turtle digs a hole in
 ★ ポイント：正解のウは、本文の at night が during the night に言いかえられている。正解の選択肢ほど、本文とは違う語で書かれている。語が同じかどうかではなく、意味が同じかどうかで判断する。
 
 ⚠ 注意：a few（少しはある）と only a few（ごくわずかしかない）と few（ほとんどない）は意味の強さがちがう。本文の only a few を「けっこういる」と読むと、イを選んでしまう。`,
+      },
+      {
+        heading: 'なぜ正解は言いかえてあり、なぜ誤答は4つの型で作られるのか',
+        mangaId: 'eigo_s424_manga',
+        body: `内容一致問題で正解が本文と同じ語で書かれていたら、本文を探すだけで解けてしまい、**意味を理解しているか**を測れません。だから出題者は正解を言いかえ（at night→during the night）、誤答には本文と同じ語をわざと残します。見た目の一致で選ぶと、誤答に引きよせられます。判断は「語が同じか」ではなく「意味が同じか」です。
+
+誤答の作り方が4つの型に決まっているのは、本文の一部を**少しだけ変える**のがもっとも作りやすく、もっとも引っかかるからです。some→all と強める（言いすぎ）、妹→ケンと主語を入れかえる（すりかえ）、常識で正しそうなことを足す（本文にない）、前半だけ本文どおりにする（一部だけ正しい）。型を知っていれば、選択肢の強い語・人名・時・場所に○をつけるだけで、見るべき所が定まります。
+
+■ 確かめのしかた
+①設問文の「合うもの」「合わないもの」に線を引く。ここを読みちがえると全部落とす。
+②選択肢の**強い語**（all・every・always・never・only・must）と**人名・時・場所・数字**に○をつける。
+③本文の該当する1文と突き合わせる。正解は**本文のどの1文に対応するか**を言えるか。語がちがっても意味が同じなら○。
+④選択肢は**最後まで読む**。a few（少しある）・only a few（ごくわずか）・few（ほとんどない）の強さのちがいを本文で確かめる。
+
+★ ここがポイント：正解は**意味を測るために言いかえてある**ので、語ではなく意味で照合する。誤答は**言いすぎ・すりかえ・本文にない・一部だけ**の4型で、強い語と人名・時・場所に○をつけて見破る。`,
       },
     ],
     trapExamples: [

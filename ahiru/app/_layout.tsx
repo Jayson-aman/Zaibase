@@ -52,7 +52,11 @@ export default function RootLayout() {
   }, []);
 
   async function handleConsent() {
-    await AsyncStorage.setItem(CONSENT_KEY, '1');
+    try {
+      await AsyncStorage.setItem(CONSENT_KEY, '1');
+    } catch {
+      // 保存できない環境でも、同意画面は閉じて先へ進めるようにする
+    }
     setShowConsent(false);
   }
 
@@ -60,10 +64,10 @@ export default function RootLayout() {
     <ErrorBoundary>
       {Platform.OS === 'web' && (
         <Head>
-          <title>中学受験・高校受験の対策アプリ｜Zaibase受験 5科目13,000問＋動く図解</title>
+          <title>中学受験・高校受験の対策アプリ｜Zaibase受験 5科目16,000問＋動く図解</title>
           <meta
             name="description"
-            content="中学受験・高校受験の対策アプリ。算数・国語・理科・社会・英語の5科目13,000問以上、灘・開成・慶應など40校以上に対応、図形やグラフが動く図解つき教科書とAI弱点コーチ。無料で今すぐ始められます。"
+            content="中学受験・高校受験の対策アプリ。算数・国語・理科・社会・英語の5科目16,000問以上、灘・開成・慶應など50校（各校100問以上）に対応、図形やグラフが動く図解つき教科書とAI弱点コーチ。無料で今すぐ始められます。"
           />
         </Head>
       )}
@@ -123,6 +127,10 @@ export default function RootLayout() {
         />
         <Stack.Screen
           name="tokusho"
+          options={{ headerShown: false, presentation: 'modal' }}
+        />
+        <Stack.Screen
+          name="feedback"
           options={{ headerShown: false, presentation: 'modal' }}
         />
       </Stack>

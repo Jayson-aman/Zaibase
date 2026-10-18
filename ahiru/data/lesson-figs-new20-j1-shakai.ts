@@ -229,8 +229,8 @@ export const lessonFigsNew20J1Shakai: Record<string, Figure> = {
       { label: '利根川', value: 322, color: '#0284C7' },
       { label: '石狩川', value: 268, color: '#0EA5E9' },
       { label: '天塩川', value: 256, color: '#38BDF8' },
-      { label: '阿武隈川', value: 239, color: '#7DD3FC' },
-      { label: '最上川', value: 229, color: '#BAE6FD' },
+      { label: '北上川', value: 249, color: '#7DD3FC' },
+      { label: '阿武隈川', value: 239, color: '#BAE6FD' },
     ],
     caption: '日本の川の長さランキング上位6本（概数）。長さ1位は信濃川だが、流域面積1位は2位の利根川である',
     steps: [
@@ -238,8 +238,8 @@ export const lessonFigsNew20J1Shakai: Record<string, Figure> = {
       '利根川は約322kmで長さは2位だが、流域面積では日本一（約1万6840km²）である',
       '石狩川は約268kmで北海道最大の川。石狩平野を形づくる',
       '天塩川は約256kmで北海道北部を流れる',
+      '北上川は約249kmで岩手県から宮城県へ流れる東北地方最長の川',
       '阿武隈川は約239kmで東北地方南部を流れる',
-      '最上川は約229kmで山形県を流れ、日本三大急流の一つに数えられる',
     ],
   },
 

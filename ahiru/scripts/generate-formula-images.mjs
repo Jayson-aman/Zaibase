@@ -137,7 +137,7 @@ const PRODUCTS = [
   { key: 'sansu-divisibility', label: '倍数の見分け方', prompt: `A colorful calendar grid of numbered squares arranged in neat rows and columns, abstract pattern only. ${SCENE_STYLE}` },
 
   // ───────── 理科：てこ・滑車・輪軸・ばね ─────────
-  { key: 'rika-lever-balance', label: 'てこのつり合い（モーメント）', prompt: `A simple wooden seesaw balancing two different-sized weights, one on each side, resting on a central pivot. ${RIKA_STYLE}` },
+  { key: 'rika-lever-balance', label: 'てこのつり合い（かたむけるはたらき）', prompt: `A simple wooden seesaw balancing two different-sized weights, one on each side, resting on a central pivot. ${RIKA_STYLE}` },
   { key: 'rika-lever-rod-weight', label: '棒の重さがあるてこ', prompt: `A single uniform wooden rod balanced horizontally on a small triangular pivot stand, level and steady. ${RIKA_STYLE}` },
   { key: 'rika-fixed-pulley', label: '定滑車', prompt: `A single pulley wheel fixed to a ceiling beam, with a rope over it holding a weight on one end. ${RIKA_STYLE}` },
   { key: 'rika-movable-pulley', label: '動滑車', prompt: `A pulley system where the pulley wheel itself moves, lifted by two strands of rope holding a weight below it. ${RIKA_STYLE}` },

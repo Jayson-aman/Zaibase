@@ -197,6 +197,7 @@ export const kokoEigoExt02Lessons: Lesson[] = [
     sections: [
       {
         heading: 'つづりの4つの規則',
+        mangaId: 'koko_eigo_s038_manga',
         body: `三人称単数現在の -s は、ただ s を足すだけではない場合がある。次の4つに分けて覚える。
 
 ■ ①そのまま -s を付ける（大多数）
@@ -286,6 +287,7 @@ s, z, sh, ch, x など「シュ・ズ」系の音で終わる語のあと。音�
     sections: [
       {
         heading: 'なぜ am play のような誤りが起きるのか',
+        mangaId: 'koko_eigo_s039_manga',
         body: `日本語は「私はテニスをします」「私は忙しいです」のように、どちらも「〜ます・です」で終わる。この語尾の感覚を英語に持ちこむと、be動詞を「です」の訳として付け足してしまう。
 
 ■ よくある誤りと直し方
@@ -499,6 +501,21 @@ am not には isn't のような1語の短縮形が存在しない。主語と b
 　no ＋ 名詞：I have no brothers.（＝ I don't have any brothers.）
 
 ⚠ 注意：「〜ではありません」という日本語だけを見て be動詞の否定を選ばないこと。「サッカーをしません」なら一般動詞の否定、「サッカー選手ではありません」なら be動詞の否定になる。うしろが動作か名詞かで見分ける。`,
+      },
+      {
+        heading: 'なぜ not は be動詞の直後で、なぜ amn\'t がないのか',
+        mangaId: 'koko_eigo_s041_manga',
+        body: `be動詞は「〜である」という意味を自分で持つ語なので、否定するにはそのすぐうしろに not を置くだけで足ります。日本語の「忙しくありません」は打ち消しが文末に来ますが、英語では**打ち消したい語（be動詞）の直後**に not を置くので、位置が前に来ます。一般動詞は自分で not を受けられないので、do／does／did を借りて don't play とし、動詞は原形に戻します。この二つを混ぜた He isn't play soccer. は、be動詞と一般動詞が並んで動詞が二つになり誤りです。
+
+am not に amn't がないのは、英語の歴史の中でこの形が定着しなかったからで、理屈ではなく事実として覚えます。短縮するなら主語のほうと縮めて I'm not とします。He isn't と He's not のように、be動詞と not を縮めるか、主語と be動詞を縮めるかは、どちらでもよく意味は同じです。
+
+■ 確かめのしかた
+①述語が am／is／are／was／were なら、**その直後に not**。それ以外（一般動詞）なら don't／doesn't／didn't＋原形。
+②× I amn't→I'm not。isn't／aren't／wasn't／weren't は可。
+③× He isn't play soccer.→動詞が二つ並んでいる→He doesn't play soccer.「〜しません」（動作）は一般動詞の否定、「〜ではありません」（名詞・形容詞）は be動詞の否定。
+④never は単独で打ち消し（He is never late.）、not 〜 any＝no＋名詞。
+
+★ ここがポイント：not は**打ち消したい語（be動詞）の直後**に置くので、日本語より前に来る。一般動詞は do を借りる。**amn't は存在しない**ので I'm not。うしろが動作か名詞かで、どちらの否定かを決める。`,
       },
     ],
     trapExamples: [
@@ -929,7 +946,7 @@ Does に三単現の s、Did に過去の意味がすでに含まれているの
 
 ■ Who is 〜? の形
 　Who is that tall boy? — He is my cousin.
-この場合の who は主語で、is that tall boy ではなく who is が骨組みになっている。
+この文では who は補語（C）で、主語は that tall boy である。「疑問詞が主語」の形ではなく、be動詞の疑問文の語順（be動詞を主語の前に出す）で疑問詞を文頭に置いた形になっている。
 
 ⚠ 注意：答えるときに be動詞と一般動詞を取りちがえないこと。Who cooks dinner? に対して × My mother is. は誤りで、○ My mother does. が正しい。聞かれた文の動詞の種類に合わせて受ける。`,
       },
@@ -1478,6 +1495,21 @@ go, come, run, walk, swim, live, work, stay, sit, stand, sleep, happen, rise, fa
 
 ⚠ 注意：動詞と目的語の間に副詞をはさむと不自然になる。× I like very much music. は誤りで、○ I like music very much. とする。「動詞のすぐうしろに目的語」を守る。`,
       },
+      {
+        heading: 'なぜ S ≠ O で見分け、なぜ「〜に」でも前置詞が要らないのか',
+        mangaId: 'koko_eigo_s052_manga',
+        body: `第2文型（He is a teacher.）も第3文型（He knows a teacher.）も、動詞のあとに名詞が一つ来る形は同じです。ちがいは、その名詞が**主語とイコールか**（C）、**動作の相手か**（O）です。He＝a teacher なら第2文型、He≠a teacher なら第3文型。イコールで結べるかどうかが、形では見えない区別をつける唯一の手がかりです。
+
+call him・marry her・enter the room で前置詞が要らないのは、これらが**目的語を直接とる動詞（他動詞）**だからです。日本語では「彼に電話する」「彼女と結婚する」「部屋に入る」と助詞が「を」ではありませんが、英語の他動詞かどうかは日本語の助詞と無関係に、動詞ごとに決まっています。語順が S→V→O に固定されているのは、英語には助詞がなく、**位置だけで「だれが・何を」を示す**からです。Ken likes Yumi. と Yumi likes Ken. は語順で意味が変わります。
+
+■ 確かめのしかた
+①動詞のあとの名詞が**主語とイコールか**。イコール→C（第2文型）、ちがう→O（第3文型）。
+②「〜に・〜と」と訳す動詞でも、他動詞なら前置詞を入れない：call him、marry her、enter the room、resemble her mother。× called to him。
+③語順 S→V→O を崩さない。副詞（M）を動詞と目的語の間にはさまない（× I like very much music.→I like music very much.）。
+④目的語の代名詞は**目的格**（me・you・him・her・it・us・them）。× I know he.→I know him.
+
+★ ここがポイント：第2・第3文型は**主語とイコールか**で見分ける。他動詞は**日本語の助詞と無関係に**目的語を直接とる（call him）。英語は**位置で「だれが・何を」を示す**ので語順を崩さず、目的語の代名詞は目的格。`,
+      },
     ],
     trapExamples: [
       {
@@ -1545,6 +1577,7 @@ go, come, run, walk, swim, live, work, stay, sit, stand, sleep, happen, rise, fa
       },
       {
         heading: '動詞によって決まる ing と to の使い分け',
+        mangaId: 'koko_eigo_s053_doumeishi_manga',
         body: `動名詞と不定詞のどちらをとるかは、動詞ごとに決まっている。丸暗記が必要な部分なので、グループで覚える。
 
 ■ 動名詞だけをとる動詞
@@ -1609,6 +1642,7 @@ go, come, run, walk, swim, live, work, stay, sit, stand, sleep, happen, rise, fa
     sections: [
       {
         heading: '前置詞を入れてはいけない動詞',
+        mangaId: 'koko_eigo_s054_manga',
         body: `日本語では「〜について」「〜と」「〜に」と助詞が付くのに、英語では前置詞を入れない動詞がある。入試の定番なので確実に覚える。
 
 ■ 代表的な他動詞
@@ -1729,6 +1763,7 @@ go, come, run, walk, swim, live, work, stay, sit, stand, sleep, happen, rise, fa
       },
       {
         heading: '同じ動詞が両方の文型を作る',
+        mangaId: 'koko_eigo_s055_manga',
         body: `1つの動詞が、うしろに置く語によって SVC にも SVO にもなる。よく出るものを整理しておく。
 
 ■ get
@@ -1888,6 +1923,7 @@ look のうしろに名詞をそのまま置くことはできない。
     sections: [
       {
         heading: 'to をとるグループ',
+        mangaId: 'koko_eigo_s057_manga',
         body: `第4文型の文は、目的語の順序を入れかえて前置詞を補うことで、第3文型に書きかえられる。give の仲間では前置詞に to を使う。
 
 ■ 書きかえの手順
@@ -2099,6 +2135,7 @@ ask a question of him という形は、日常会話ではあまり使われな�
       },
       {
         heading: '書きかえられない動詞',
+        mangaId: 'koko_eigo_s059_manga',
         body: `第4文型の形をしていても、書きかえられない動詞がある。むしろ「書きかえ不可」と見抜けるかどうかが問われる。
 
 ■ cost（〜に…の費用がかかる）
@@ -2250,6 +2287,7 @@ say は第4文型を作らない動詞である。
     sections: [
       {
         heading: 'O ＝ C を確かめる',
+        mangaId: 'koko_eigo_s061_manga',
         body: `第5文型では、動詞のうしろに来る2つの語がイコールで結ばれる。「O は C である」という関係を作るのが特徴。
 
 ■ 基本の形
@@ -2528,6 +2566,7 @@ C は O の状態を説明している。つまり名詞を説明しているの
     sections: [
       {
         heading: 'イコールが成り立つかで決める',
+        mangaId: 'koko_eigo_s064_manga',
         body: `動詞のうしろに名詞が2つ並ぶ文は、SVOO か SVOC のどちらかである。見分ける方法は、2つの名詞の間に is を入れてみることである。
 
 ■ SVOO（イコールにならない）
@@ -2669,6 +2708,21 @@ O と原形の間に、主語と述語の関係が成り立っている。
 受け身では make のあとにも to が付く。
 
 ⚠ 注意：want のうしろに that 節は置けない。× I want that you come. は誤りで、○ I want you to come. とする。日本語の「〜してほしいと思う」を that で表そうとしないこと。`,
+      },
+      {
+        heading: 'なぜ make には to が要らず want には要るのか',
+        mangaId: 'koko_eigo_s065_naze_manga',
+        body: `make・let・have（使役動詞）と see・hear・feel（知覚動詞）は、O がする動作を**そのまま目の前の出来事として**表します。「私が掃除する」「彼が入る」という主語・述語の関係を、動詞の原形でじかに置きます。いっぽう want・tell・ask は「O に〜してほしい・〜するように言う」と、**これからの動作へ向かう**意味なので、未来へ向かう to＋原形と組みます。to の有無は動詞ごとに決まっているので、グループで覚えます。help はどちらの形もとれます。
+
+受け身になると I was made to clean the room. と to が現れるのは、受け身では「させられて→掃除する」という向きが表に出て、to で結ぶ必要があるからです。want のうしろに that 節が置けないのは、want が「人に〜してほしい」を O＋to で表す動詞だからで、日本語の「〜してほしいと思う」の「と」を that にしてはいけません。
+
+■ 確かめのしかた
+①原形をとるグループを言えるか：**make／let／have（使役）、see／watch／hear／feel（知覚）、help（どちらも可）**。それ以外は to。
+②× made me to clean→made me clean。× wants me help→wants me to help。
+③O と動詞の間に「O が〜する」の関係があるか（made me clean→私が掃除する）。否定は not を to の前に（told me not to go）。
+④受け身にすると to が現れる（was made to clean）。× I want that you come.→I want you to come.
+
+★ ここがポイント：使役・知覚動詞は O の動作を**目の前の出来事としてじかに置く**ので原形、want／tell／ask は**これからの動作へ向かう**ので to。グループで覚え、受け身では to が現れる。`,
       },
     ],
     trapExamples: [
@@ -2896,6 +2950,7 @@ There is a cat under the table. を「そこにネコがいます」と訳して
     sections: [
       {
         heading: '特定のものは主語にできない',
+        mangaId: 'koko_eigo_s068_manga',
         body: `There is / are は、相手がまだ知らないものを話題に出すときの言い方である。そのため、すでに特定されているものには使えない。
 
 ■ 使えないもの（特定のもの）
@@ -2991,6 +3046,7 @@ There is a cat under the table. を「そこにネコがいます」と訳して
     sections: [
       {
         heading: '意味の近いペアで比べる',
+        mangaId: 'koko_eigo_s069_manga',
         body: `入試で問われるのは、意味が似ているのに扱いが違う動詞の組み合わせである。ペアで整理して覚える。
 
 ■ 聞く

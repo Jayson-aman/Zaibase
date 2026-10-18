@@ -56,8 +56,8 @@ export const lessonFigsKoushikiK3Souji: Record<string, Figure> = {
       '答 同位角。同位角が等しいのだからMN∥BCが言える。予想の1つ目がこれで示せた。',
       '問 相似比は1:2だった。では対応する辺MNとBCの比はいくつになる？',
       '答 MN:BC＝1:2でMNはBCの半分。BC＝14cmならMN＝7cm、MN＝5cmならBC＝10cm。',
-      '問 別証明も見よう。Nを通りABに平行な直線と辺BCの交点をPとすると、四角形ABPNは何になる？',
-      'まとめ 平行四辺形になりNP＝AB。2辺の中点を結ぶ線分は残りの辺に平行で長さは半分、台形版は(a+b)/2。',
+      '問 別証明も見よう。MNをNの先へNQ＝MNとなる点Qまで延ばし、AとQ、CとQを結ぶと、四角形AMCQは何になる？',
+      'まとめ 平行四辺形になりCQ∥MB、CQ＝MB。2辺の中点を結ぶ線分は残りの辺に平行で長さは半分、台形版は(a+b)/2。',
     ],
   },
   lf_koushiki_k3souji_heikousen: {

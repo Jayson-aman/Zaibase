@@ -1,4 +1,6 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
+import { goBack } from '../../utils/nav';
+import { rich } from '../../components/RichText';
 import {
   View,
   Text,
@@ -18,12 +20,13 @@ import { GRADE_ORDER, type GradeKey } from '../../data/grades';
 import { getKoushikiFormulaIdForQuestion, isKoushikiFormulaFree } from '../../data/koushiki-access';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
 import { explanationText, hintText } from '../../utils/explanation';
+import ExplanationSlides from '../../components/ExplanationSlides';
 import { getQuickTrick } from '../../data/quick-tricks';
 
 // 「レベル別ドリル」「入試対策」は問題プールから毎回ランダムに出題するため、
 // 個別の問題にmaxOnlyを付けて絞れない。代わりに1回のセッションで
 // 最初のN問だけを無料にする（セッションをまたいだ累計ではない）。
-const SESSION_FREE_LIMIT = 5;
+const SESSION_FREE_LIMIT = 15;
 const SESSION_LIMITED_MODES: TestModeKey[] = ['level', 'nyushi'];
 
 // 予備の解説（data/explanations_*.ts）は2026/9/15に配線を外した。
@@ -37,6 +40,7 @@ const SESSION_LIMITED_MODES: TestModeKey[] = ['level', 'nyushi'];
 import QuizCard from '../../components/QuizCard';
 import Paywall from '../../components/Paywall';
 import { saveProgress } from '../../store/progress';
+import { recordStudy, useStudyStats, DAILY_GOAL } from '../../store/studyStreak';
 import { incrementTrialQuestions, isTrialExpired, TRIAL_QUESTION_LIMIT } from '../../store/trial';
 import { getSessionFreeUsed, incrementSessionFreeUsed } from '../../store/sessionLimit';
 import { logAccessEvent, type AccessTier } from '../../services/analytics';
@@ -48,8 +52,10 @@ import { useBetaAccess } from '../../hooks/useBetaAccess';
 import TutorChat from '../../components/TutorChat';
 import HomeButton from '../../components/HomeButton';
 import Fireworks from '../../components/Fireworks';
+import AnswerInput, { type SubmitResult } from '../../components/AnswerInput';
 import { getFigure } from '../../data/figures';
 import FigureView from '../../components/FigureView';
+import { shuffledChoices } from '../../utils/choices';
 import { pickEncouragement, pickStreakEncouragement } from '../../data/encouragements';
 import SubjectIcon from '../../components/SubjectIcon';
 
@@ -131,6 +137,7 @@ export default function QuizScreen() {
     topic: topicParam,
     testmode: testModeParam,
     grade: gradeParam,
+    limit: limitParam,
   } = useLocalSearchParams<{
       subject: string;
       difficulty?: string;
@@ -140,6 +147,7 @@ export default function QuizScreen() {
       topic?: string;
       testmode?: string;
       grade?: string;
+      limit?: string;
     }>();
   const router = useRouter();
 
@@ -152,6 +160,8 @@ export default function QuizScreen() {
   const isKakomon = mode === 'kakomon';
   // MAX限定コンテンツを未加入でも試せる問題数
   const PREVIEW_COUNT = 3;
+  // 学校別の入試傾向問題は、どんな問題か分かるよう5問を無料にする（毎回同じ代表問題）
+  const KAKOMON_PREVIEW_COUNT = 5;
   // テスト対策モード（学期末・学力調査・レベル別・入試）。
   // 種類ごとに難易度の配分と、記述式・複数小問（活用型）の比率を変える。
   const testModeKey: TestModeKey | null =
@@ -163,6 +173,9 @@ export default function QuizScreen() {
   const course: CourseKey = courseParam && isCourseKey(courseParam) ? courseParam : 'general';
   const examType: ExamType = examTypeParam && isExamType(examTypeParam) ? examTypeParam : 'chugaku';
   const gradeFilter: GradeKey | null = gradeParam && isGrade(gradeParam) ? gradeParam : null;
+  // 「はじめの5問」「今日の目標」のように、問題数を決めて始めるときの上限（通常の出題だけに効く）
+  const limitNum = Number(limitParam);
+  const questionLimit = Number.isInteger(limitNum) && limitNum >= 1 && limitNum <= 30 ? limitNum : null;
   const info = subjectInfo[subjectKey];
 
   // isMax/isPro を useMemo より前に宣言しないと Temporal Dead Zone クラッシュが起きる
@@ -172,12 +185,18 @@ export default function QuizScreen() {
   const isMax = subIsMax || betaAccess;
 
   const isPreview = (isMock || isKakomon) && !isMax;
+  // 連続日数と今日の目標（結果画面で出す）。問題に答えるたびに recordStudy で増える。
+  const { stats: studyStats, reload: reloadStudyStats } = useStudyStats();
 
   const { questions: subjectPool, loading: questionsLoading } = useSubjectQuestions(subjectKey);
   const { unlockedIds: unlockedFormulaIds } = useFormulaUnlocks();
+  // Setが差しかえられるたびに出題が組み直されないよう、中身から作った文字列を依存にする
+  const unlockedFormulaKey = React.useMemo(() => [...unlockedFormulaIds].sort().join('|'), [unlockedFormulaIds]);
 
   // 「もう一度チャレンジ」で毎回シャッフルし直すためのキー
   const [restartKey, setRestartKey] = useState(0);
+  // テスト対策の出題の並びの種。画面を開くたびに変える（固定だと、入り直すたびに同じ問題が同じ順で出る）
+  const testSeedRef = useRef(Date.now() % 1000000);
 
   const baseQuestions = useMemo(() => {
     if (questionsLoading) return [];
@@ -214,7 +233,7 @@ export default function QuizScreen() {
       let pool = all.filter((q) => (q.examType ?? 'chugaku') === examType);
       if (!(isPro || isMax)) pool = pool.filter((q) => !q.maxOnly);
       if (gradeFilter) pool = pool.filter((q) => !q.grade || q.grade === gradeFilter);
-      return buildTestSet(pool, tm, restartKey + 1, difficultyFilter as LevelKey | undefined);
+      return buildTestSet(pool, tm, testSeedRef.current + restartKey + 1, difficultyFilter as LevelKey | undefined);
     }
     if (isMock) {
       // 模擬試験（MAXプラン）: 入試形式（学校別大問）を除いた一般問題のみ使用。
@@ -234,11 +253,14 @@ export default function QuizScreen() {
       const set = schoolQ.length > 0
         ? shuffle(schoolQ)
         : shuffle(filterQuestions(all, examType, course, 'advanced', true));
-      return isMax ? set : set.slice(0, PREVIEW_COUNT);
+      if (isMax) return set;
+      // 未加入の無料枠は、開くたびに変わらないよう id 順の先頭5問に固定する
+      return [...set].sort((a, b) => a.id.localeCompare(b.id)).slice(0, KAKOMON_PREVIEW_COUNT);
     }
     const filtered = filterQuestions(all, examType, course, difficultyFilter, isPro || isMax, gradeFilter);
-    return shuffle(filtered);
-  }, [subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, testModeKey, course, examType, isPro, isMax, topicParam, restartKey, gradeFilter, unlockedFormulaIds]);
+    const picked = shuffle(filtered);
+    return questionLimit != null ? picked.slice(0, questionLimit) : picked;
+  }, [questionLimit, subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, testModeKey, course, examType, isPro, isMax, topicParam, restartKey, gradeFilter, unlockedFormulaKey]);
 
   // 無料/Pro/MAXユーザーがMAX限定モードにどれだけ到達しているかを集計できるよう記録する。
   // baseQuestions（useMemo）はレンダー中に副作用を起こしたくないため、別のeffectで発火する。
@@ -258,15 +280,29 @@ export default function QuizScreen() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
+  // 記述（正誤をつけない）問題の数。満点・正解率の分母から除く
+  const [reviewCount, setReviewCount] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [finished, setFinished] = useState(false);
   const [savedProgress, setSavedProgress] = useState(false);
   const [wrongIds, setWrongIds] = useState<string[]>([]);
   const [feedback, setFeedback] = useState<'correct' | 'wrong' | null>(null);
   const [waitingNext, setWaitingNext] = useState(false);
+  // 解説の画面を、正解のあとにも出すための印（○正解！／×不正解！の見出しを切りかえる）
+  const [lastWasCorrect, setLastWasCorrect] = useState(false);
+  // いま解いている問題に、自分で書いた答え（まだ書いていなければ null）
+  const [typed, setTyped] = useState<SubmitResult | null>(null);
+  // あとで採点・添削を見せるための記録。1問ごとに「問題・自分の答え・結果」を残す
+  const [answerLog, setAnswerLog] = useState<
+    Array<{ id: string; question: string; answer: string; input: string; result: SubmitResult['result'] }>
+  >([]);
   // 正解/不正解ボタンの二重タップ防止。二重に走ると currentIndex が2つ進み、
   // 最後の2問で範囲外になって落ちる。
   const answeringRef = useRef(false);
+  // 直近の「答えた」記録の書きこみ。結果画面で連続日数を読む前に、これが終わるのを待つ。
+  const studyWriteRef = useRef<Promise<void> | null>(null);
+  const scrollRef = useRef<ScrollView>(null);
+  const answerYRef = useRef(0);
   // レベル別ドリル・入試対策の「1日あたり無料N問」の消費数。画面を離れて
   // 入り直すだけで無料枠が復活しないよう、AsyncStorageの永続値を読み込んで保持する。
   const sessionFreeUsedRef = useRef(0);
@@ -290,15 +326,19 @@ export default function QuizScreen() {
     setQueue(baseQuestions);
     setCurrentIndex(0);
     setScore(0);
+    setReviewCount(0);
     setRevealed(false);
     setFinished(false);
     setSavedProgress(false);
     setWrongIds([]);
     setWaitingNext(false);
+    setLastWasCorrect(false);
     setFeedback(null);
     setWrongStreak(0);
     setRemedialJustInjected(false);
     setShowFireworks(false);
+    setTyped(null);
+    setAnswerLog([]);
   }, [baseQuestions]);
 
   // レベル別ドリル・入試対策の「1日あたり無料N問」の消費数を読み込む。
@@ -317,6 +357,38 @@ export default function QuizScreen() {
     sessionFreeUsedRef.current = 0;
   }, [testModeKey, subjectKey]);
 
+  // お試しの枠を使い切った人には、問題を開いた時点でペイウォールを先に出す。
+  // 以前は「答えたあとに出す」作りで、使い切ったあとも、開いて1問答えるたびに○×と解説が見られた
+  // （1問ずつなら、無料で続けられてしまう）。
+  const openGateCheckedRef = useRef(false);
+  useEffect(() => {
+    // あとから会員だと分かったとき（課金状態の取得が遅れた等）は、出したペイウォールを引っこめる。
+    // 出しっぱなしだと、閉じたときに画面から追い出されて、会員を行き止まりにしてしまう
+    if (isPro || isMax) {
+      if (openGateCheckedRef.current) {
+        openGateCheckedRef.current = false;
+        setShowPaywall(false);
+        setTrialBlocked(false);
+      }
+      return;
+    }
+    if (subLoading || questionsLoading) return;
+    if (openGateCheckedRef.current) return;
+    openGateCheckedRef.current = true;
+    let cancelled = false;
+    (async () => {
+      const sessionLimited = testModeKey != null && SESSION_LIMITED_MODES.includes(testModeKey);
+      const used = sessionLimited ? await getSessionFreeUsed(`${testModeKey}_${subjectKey}`) : 0;
+      const blocked = (sessionLimited && used >= SESSION_FREE_LIMIT) || (await isTrialExpired(subjectKey));
+      if (cancelled || !blocked) return;
+      setTrialBlocked(true);
+      setShowPaywall(true);
+    })().catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [subLoading, questionsLoading, isPro, isMax, testModeKey, subjectKey]);
+
   // ロード後の一瞬だけ queue が空になるのを避けるため baseQuestions をフォールバックに使う
   const activeQuestions = queue.length > 0 ? queue : baseQuestions;
   const currentQuestion = activeQuestions[currentIndex];
@@ -324,7 +396,8 @@ export default function QuizScreen() {
   const diffInfo = difficultyFilter ? DIFF_LABELS[difficultyFilter] : null;
   const currentFigure = currentQuestion ? getFigure(currentQuestion.id) : undefined;
 
-  const currentChoices = currentQuestion?.choices;
+  // 正解が1番目に偏った問題群があるので、表示のときに並べ替える（同じ起動中は同じ並び）
+  const currentChoices = currentQuestion ? shuffledChoices(currentQuestion.id, currentQuestion.choices) : undefined;
 
   function handleReveal() {
     setRevealed(true);
@@ -336,14 +409,21 @@ export default function QuizScreen() {
    * 差し込めたら true。
    */
   function injectRemedialBasics(): boolean {
+    // お試し（模擬3問・入試傾向5問）や日替わりは、決まった問題だけが出題範囲。基礎問題を足すと範囲を超える
+    if (isPreview || isDaily || isMock || isKakomon) return false;
     const seenIds = new Set(activeQuestions.map((q) => q.id));
-    const basics = subjectPool.filter(
-      (q) =>
-        (q.examType ?? 'chugaku') === examType &&
-        q.difficulty === 'basic' &&
-        !q.maxOnly &&
-        !seenIds.has(q.id),
-    );
+    // 本題と同じ条件（買い切りの公式集のロック・学年・単元）で絞る。絞らないと、
+    // 未購入の公式集の例題や、別の学年・別の単元の問題が混ざって出てしまう。
+    const topicDef = topicParam ? getTopic(subjectKey, topicParam) : null;
+    const basics = subjectPool.filter((q) => {
+      if ((q.examType ?? 'chugaku') !== examType) return false;
+      if (q.difficulty !== 'basic' || q.maxOnly || seenIds.has(q.id)) return false;
+      const figureId = getKoushikiFormulaIdForQuestion(q.id);
+      if (figureId != null && !(isPro || isMax) && !isKoushikiFormulaFree(figureId) && !unlockedFormulaIds.has(figureId)) return false;
+      if (gradeFilter && q.grade && q.grade !== gradeFilter) return false;
+      if (topicDef && !questionMatchesTopic(q, topicDef)) return false;
+      return true;
+    });
     if (basics.length === 0) return false;
     const pick = shuffle(basics).slice(0, 3);
     setQueue((prev) => {
@@ -363,26 +443,105 @@ export default function QuizScreen() {
     };
   }, []);
 
+  // 次の問題に進んだら、いちばん上に戻す。
+  // 長い解説を下まで読んでから進むと、短い次の問題のカードの上が画面の外に残り、
+  // 「タップして答えを見る」の下に白い余白だけが見える状態になっていた。
+  useEffect(() => {
+    scrollRef.current?.scrollTo({ y: 0, animated: false });
+  }, [currentIndex]);
+
+  // 答え合わせの結果（○ 正解！／✗ 不正解！）の枠が出たら、その枠の位置までスクロールする。
+  // 答えを書く欄を押すと、画面はその欄の位置までスクロールされている。そのまま結果を出すと、
+  // 解説が画面の外にあって、「次の問題へ」だけが見えてしまっていた（実機で報告あり）。
+  // 解説は結果の枠のすぐ下に出すので、枠の位置に合わせれば、結果と解説が一緒に目に入る。
+  const resultYRef = useRef(0);
+  useEffect(() => {
+    if (!waitingNext) return;
+    const id = setTimeout(() => scrollRef.current?.scrollTo({ y: Math.max(0, resultYRef.current - 12), animated: true }), 250);
+    return () => clearTimeout(id);
+  }, [waitingNext]);
+
   async function advanceOrFinish(currentScore: number, currentWrongIds: string[]) {
     setWaitingNext(false);
     answeringRef.current = false;
     if (currentIndex + 1 >= total) {
       if (!savedProgress) {
         setSavedProgress(true);
-        await saveProgress(subjectKey, currentScore, total, currentWrongIds);
-        submitRankingScore(currentScore, total).catch(() => {});
-        maybeRequestReview(currentScore, total).catch(() => {});
+        const scoredTotal = total - reviewCount;
+        if (scoredTotal > 0) {
+          await saveProgress(subjectKey, currentScore, scoredTotal, currentWrongIds);
+          submitRankingScore(currentScore, scoredTotal).catch(() => {});
+          maybeRequestReview(currentScore, scoredTotal).catch(() => {});
+        }
       }
+      await studyWriteRef.current;
+      await reloadStudyStats();
       setFinished(true);
     } else {
       setCurrentIndex((i) => i + 1);
       setRevealed(false);
+      // 次の問題に進んだら、書いた答えの欄をからにする
+      setTyped(null);
     }
   }
 
-  async function handleAnswer(correct: boolean) {
+  /**
+   * 書いた答えを受け取って採点する。
+   *
+   * 記述問題（result が 'review'）は機械で正誤を決められないので、点数には
+   * 数えず、模範解答を出して自分で見くらべてもらう。
+   * 短い答えは、ここで正誤が決まる。合っていれば花火が上がる。
+   */
+  function handleSubmitTyped(r: SubmitResult) {
+    if (typed != null) return;
+    setTyped(r);
+    setRevealed(true);
+    setAnswerLog((log) => [
+      ...log,
+      {
+        id: currentQuestion.id,
+        question: currentQuestion.question,
+        answer: currentQuestion.answer,
+        input: r.input,
+        result: r.result,
+      },
+    ]);
+    if (r.result === 'review') {
+      // 正誤をつけないので「✗ 不正解！」の帯は出さない。
+      // ただし無料枠の消費は他の問題と同じように行う。
+      handleAnswer(false, 'review');
+      return;
+    }
+    handleAnswer(r.result === 'correct');
+  }
+
+  /** 選択肢をタップして答えたとき。こちらも記録に残す */
+  function handleChoiceAnswer(correct: boolean) {
+    setAnswerLog((log) => [
+      ...log,
+      {
+        id: currentQuestion.id,
+        question: currentQuestion.question,
+        answer: currentQuestion.answer,
+        input: correct ? currentQuestion.answer : '（えらんだ答えがちがいました）',
+        result: correct ? 'correct' : 'wrong',
+      },
+    ]);
+    handleAnswer(correct);
+  }
+
+  /**
+   * 答えたあとの処理。
+   *
+   * kind が 'review'（記述問題）のときは、正誤をつけず点数にも数えないが、
+   * 無料枠の消費だけは同じように行う。ここを素通りさせると、
+   * 記述問題4,312問がいくらでも無料で解けてしまう。
+   */
+  async function handleAnswer(correct: boolean, kind: 'scored' | 'review' = 'scored') {
     if (answeringRef.current) return;
     answeringRef.current = true;
+    // 答えた問題を1問と数える（連続日数・今日の目標）。途中でやめても、答えたぶんは残る。
+    studyWriteRef.current = recordStudy(1).catch(() => {});
 
     // 無料ユーザーのお試し問題数チェック。
     // 課金状態の取得中（subLoading）は加入者も未加入に見えるため、その間は
@@ -404,7 +563,7 @@ export default function QuizScreen() {
           tier: 'free',
         });
       } else {
-        const expired = await isTrialExpired();
+        const expired = await isTrialExpired(subjectKey);
         if (expired) {
           hitLimit = true;
           logAccessEvent('trial_limit_paywall_shown', {
@@ -414,7 +573,7 @@ export default function QuizScreen() {
             tier: 'free',
           });
         } else {
-          await incrementTrialQuestions();
+          await incrementTrialQuestions(subjectKey);
           if (isSessionLimitedMode) {
             sessionFreeUsedRef.current = await incrementSessionFreeUsed(`${testModeKey}_${subjectKey}`);
           }
@@ -424,6 +583,15 @@ export default function QuizScreen() {
         setTrialBlocked(true);
         answeringRef.current = false;
       }
+    }
+
+    if (kind === 'review') {
+      // 記述問題：正誤をつけず、点数にも数えない。
+      // カードが模範解答を見せ、「見くらべたので次へ」で自分で進む。
+      answeringRef.current = false;
+      setReviewCount((c) => c + 1);
+      if (hitLimit) setShowPaywall(true);
+      return;
     }
 
     const newScore = correct ? score + 1 : score;
@@ -436,11 +604,13 @@ export default function QuizScreen() {
       setWrongStreak(newStreak);
       // 3回連続で間違えたら、やさしく基礎問題に戻す（上限到達後はどうせ続けられないので差し込まない）
       let injected = false;
-      if (!hitLimit && newStreak >= 3) {
+      // 問題数を決めて始めたとき（はじめの5問・今日の目標）は、問題を足さない。「5問」が8問に伸びると約束とちがう
+      if (!hitLimit && newStreak >= 3 && questionLimit == null) {
         injected = injectRemedialBasics();
         if (injected) setWrongStreak(0);
       }
       setRemedialJustInjected(injected);
+      setLastWasCorrect(false);
       setFeedback('wrong');
       timersRef.current.push(setTimeout(() => {
         setFeedback(null);
@@ -452,12 +622,15 @@ export default function QuizScreen() {
     // 正解：連続不正解をリセットして花火を打ち上げる
     setWrongStreak(0);
     setShowFireworks(true);
-    timersRef.current.push(setTimeout(async () => {
+    timersRef.current.push(setTimeout(() => {
       setShowFireworks(false);
       if (hitLimit) {
         setShowPaywall(true);
       } else {
-        await advanceOrFinish(newScore, newWrongIds);
+        // 正解でも、花火のあとに自動で次へ進まず、解説を読んでから自分で進む。
+        // （以前は約1秒で次の問題に進み、正解した問題の解説を読めなかった。）
+        setLastWasCorrect(true);
+        setWaitingNext(true);
       }
     }, 1100));
   }
@@ -475,7 +648,7 @@ export default function QuizScreen() {
     return (
       <SafeAreaView style={styles.safeArea}>
         <View style={[styles.header, { backgroundColor: info.color }]}>
-          <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
+          <TouchableOpacity onPress={() => goBack(router)} style={styles.backBtn}>
             <Text style={styles.backBtnText}>← 戻る</Text>
           </TouchableOpacity>
           <View style={styles.headerCenter}>
@@ -495,7 +668,7 @@ export default function QuizScreen() {
     return (
       <SafeAreaView style={styles.safeArea}>
         <View style={[styles.header, { backgroundColor: info.color }]}>
-          <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
+          <TouchableOpacity onPress={() => goBack(router)} style={styles.backBtn}>
             <Text style={styles.backBtnText}>← 戻る</Text>
           </TouchableOpacity>
           <View style={styles.headerCenter}>
@@ -517,7 +690,7 @@ export default function QuizScreen() {
           ) : (
             <Text style={styles.emptyText}>この難易度の問題はありません</Text>
           )}
-          <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
+          <TouchableOpacity style={styles.backButton} onPress={() => goBack(router)}>
             <Text style={styles.backButtonText}>← 戻る</Text>
           </TouchableOpacity>
         </View>
@@ -526,7 +699,8 @@ export default function QuizScreen() {
   }
 
   if (finished) {
-    const pct = Math.round((score / total) * 100);
+    const scoredTotal = total - reviewCount;
+    const pct = scoredTotal > 0 ? Math.round((score / scoredTotal) * 100) : 100;
     let message = '';
     let emoji = '';
     if (pct === 100) {
@@ -545,6 +719,18 @@ export default function QuizScreen() {
       message = 'もっと練習しよう！';
       emoji = '💪';
     }
+    // 文で書く（正誤をつけない）問題だけで終わったときは、点数が出せない。
+    // 「満点」と出さずに、見くらべてふり返るよう伝える。
+    const noScore = scoredTotal === 0;
+    if (noScore) {
+      message = 'よく書けました！下の模範解答と見くらべてみよう';
+      emoji = '✍️';
+    }
+    // 「1問だけ」で始めた子には、点数でなく、やったことをほめる
+    if (questionLimit === 1) {
+      message = '1問できたね。今日はここまででもOK！';
+      emoji = '🌱';
+    }
 
     return (
       <SafeAreaView style={[styles.safeArea, { backgroundColor: '#FAF7F2' }]}>
@@ -560,30 +746,87 @@ export default function QuizScreen() {
             <View style={styles.resultCard}>
               <Text style={styles.resultEmoji}>{emoji}</Text>
               <Text style={styles.resultMessage}>{message}</Text>
-              <View style={styles.resultScoreRow}>
-                <Text style={styles.resultScore}>{score}</Text>
-                <Text style={styles.resultScoreSep}> / </Text>
-                <Text style={styles.resultScoreTotal}>{total}</Text>
-                <Text style={styles.resultScoreLabel}> 問正解</Text>
-              </View>
-              <Text style={[styles.resultPct, { color: info.color }]}>{pct}%</Text>
+              {!noScore && (
+                <>
+                  <View style={styles.resultScoreRow}>
+                    <Text style={styles.resultScore}>{score}</Text>
+                    <Text style={styles.resultScoreSep}> / </Text>
+                    <Text style={styles.resultScoreTotal}>{scoredTotal}</Text>
+                    <Text style={styles.resultScoreLabel}> 問正解</Text>
+                  </View>
+                  <Text style={[styles.resultPct, { color: info.color }]}>{pct}%</Text>
 
-              {/* Score bar */}
-              <View style={styles.resultBarTrack}>
-                <View
-                  style={[
-                    styles.resultBarFill,
-                    { width: `${pct}%`, backgroundColor: info.color },
-                  ]}
-                />
-              </View>
+                  {/* Score bar */}
+                  <View style={styles.resultBarTrack}>
+                    <View
+                      style={[
+                        styles.resultBarFill,
+                        { width: `${pct}%`, backgroundColor: info.color },
+                      ]}
+                    />
+                  </View>
+                </>
+              )}
             </View>
+
+            {/* 連続日数と今日の目標。続けた実感が、あすも開く理由になる */}
+            <View style={styles.streakResult}>
+              <Text style={styles.streakResultMain}>
+                {studyStats.streak > 0 ? `🔥 ${studyStats.streak}日れんぞく！` : '🔥 きょうから スタート！'}
+              </Text>
+              <Text style={styles.streakResultSub}>
+                {studyStats.goalReached
+                  ? `✅ 今日の目標（${DAILY_GOAL}問）を達成しました。あすも続けよう`
+                  : `今日は ${studyStats.todayCount}問 ／ 目標${DAILY_GOAL}問（あと${DAILY_GOAL - studyStats.todayCount}問）`}
+              </Text>
+            </View>
+
+            {/*
+              採点・添削。「どこが間違えたか分かるようにしてほしい」という要望で追加。
+              自分の書いた答えと正しい答えを並べ、記述問題は正誤をつけずに見くらべる形にする。
+            */}
+            {answerLog.length > 0 && (
+              <View style={styles.reviewListCard}>
+                <Text style={styles.reviewListTitle}>採点・添削</Text>
+                <Text style={styles.reviewListNote}>
+                  自分の書いた答えと、正しい答えを見くらべてみましょう。
+                  文で答える問題は正誤をつけていません。
+                </Text>
+                {answerLog.map((a, i) => (
+                  <View
+                    key={`${a.id}_${i}`}
+                    style={[
+                      styles.reviewItem,
+                      a.result === 'correct' && styles.reviewItemCorrect,
+                      a.result === 'wrong' && styles.reviewItemWrong,
+                    ]}
+                  >
+                    <Text style={styles.reviewItemHead}>
+                      {a.result === 'correct' ? '○ 正解' : a.result === 'wrong' ? '● 見直そう' : '― 記述'}
+                      {'　'}
+                      {i + 1}問目
+                    </Text>
+                    <Text style={styles.reviewItemQ} numberOfLines={3}>
+                      {a.question}
+                    </Text>
+                    {a.result !== 'correct' && (
+                      <>
+                        <Text style={styles.reviewItemLabel}>あなたの答え</Text>
+                        <Text style={styles.reviewItemMine}>{a.input}</Text>
+                        <Text style={styles.reviewItemLabel}>正しい答え</Text>
+                        <Text style={styles.reviewItemRight}>{a.answer}</Text>
+                      </>
+                    )}
+                  </View>
+                ))}
+              </View>
+            )}
 
             {isPreview && (
               <View style={styles.previewCard}>
-                <Text style={styles.previewTitle}>ここまでがお試しの{PREVIEW_COUNT}問です</Text>
+                <Text style={styles.previewTitle}>ここまでがお試しの{isKakomon ? KAKOMON_PREVIEW_COUNT : PREVIEW_COUNT}問です</Text>
                 <Text style={styles.previewText}>
-                  {isKakomon ? '過去入試問題' : '模擬試験'}の続きはMAXプランで解けます。
+                  {isKakomon ? '入試傾向問題' : '模擬試験'}の続きはMAXプランで解けます。
                 </Text>
                 <TouchableOpacity
                   style={styles.previewBtn}
@@ -605,7 +848,7 @@ export default function QuizScreen() {
 
             <TouchableOpacity
               style={styles.backButton}
-              onPress={() => router.back()}
+              onPress={() => goBack(router)}
               activeOpacity={0.8}
             >
               <Text style={styles.backButtonText}>← 科目一覧に戻る</Text>
@@ -622,7 +865,7 @@ export default function QuizScreen() {
     <SafeAreaView style={styles.safeArea}>
       {/* Header */}
       <View style={[styles.header, { backgroundColor: isDaily ? '#C0392B' : info.color }]}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
+        <TouchableOpacity onPress={() => goBack(router)} style={styles.backBtn}>
           <Text style={styles.backBtnText}>← 戻る</Text>
         </TouchableOpacity>
         <View style={styles.headerCenter}>
@@ -647,7 +890,7 @@ export default function QuizScreen() {
       {isPreview && (
         <View style={styles.previewBanner}>
           <Text style={styles.previewBannerText}>
-            お試し{PREVIEW_COUNT}問（{isKakomon ? '過去入試問題' : '模擬試験'}の続きはMAXプラン）
+            お試し{isKakomon ? KAKOMON_PREVIEW_COUNT : PREVIEW_COUNT}問（{isKakomon ? '入試傾向問題' : '模擬試験'}の続きはMAXプラン）
           </Text>
         </View>
       )}
@@ -666,9 +909,15 @@ export default function QuizScreen() {
       </View>
 
       <ScrollView
+        ref={scrollRef}
         style={styles.scroll}
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}
+        // 答えを書く欄がキーボードに隠れて、打っている文字が見えなかった。
+        // iOS はキーボードの高さぶん余白を足して、入力欄を見える位置まで自動でずらす。
+        automaticallyAdjustKeyboardInsets
+        // 入力中に「答え合わせ」を押すと、最初の1回はキーボードを閉じるだけで押せていなかった
+        keyboardShouldPersistTaps="handled"
       >
         {/* Score display */}
         <View style={styles.scoreRow}>
@@ -686,32 +935,57 @@ export default function QuizScreen() {
           question={currentQuestion}
           questionIndex={currentIndex}
           onReveal={handleReveal}
+          lockFlip={!currentChoices && typed == null}
+          forceReveal={typed != null}
+          hideExplanation={waitingNext}
           choices={currentChoices}
-          onChoiceSelect={handleAnswer}
+          onChoiceSelect={handleChoiceAnswer}
           isPro={isPro}
         />
 
         {/* Wrong answer feedback - Gemini-style */}
         {waitingNext && (
-          <View style={styles.wrongFeedbackWrap}>
-            <View style={styles.wrongHeader}>
-              <Text style={styles.wrongHeaderText}>✗ 不正解！</Text>
-              <Text style={styles.wrongCorrectAnswer}>正解：{currentQuestion.answer}</Text>
+          <View style={styles.wrongFeedbackWrap} onLayout={(e) => { resultYRef.current = e.nativeEvent.layout.y; }}>
+            <View style={[styles.wrongHeader, lastWasCorrect && styles.correctHeader]}>
+              <Text style={[styles.wrongHeaderText, lastWasCorrect && styles.correctHeaderText]}>
+                {lastWasCorrect ? '○ 正解！' : '✗ 不正解！'}
+              </Text>
+              <Text style={styles.wrongCorrectAnswer}>正解：{rich(currentQuestion.answer, { size: 18, color: '#555', bold: true })}</Text>
             </View>
 
-            {/* 励みになる言葉 */}
-            <View style={styles.cheerCard}>
-              <Text style={styles.cheerText}>{pickEncouragement(wrongIds.length)}</Text>
-            </View>
+            {/* 励みになる言葉（不正解のときだけ） */}
+            {!lastWasCorrect && (
+              <View style={styles.cheerCard}>
+                <Text style={styles.cheerText}>{pickEncouragement(wrongIds.length)}</Text>
+              </View>
+            )}
 
             {/* 連続で間違えたときは、やさしく基礎に戻したことを伝える */}
-            {remedialJustInjected && (
+            {!lastWasCorrect && remedialJustInjected && (
               <View style={styles.remedialCard}>
                 <Text style={styles.remedialTitle}>🌱 いったん基礎にもどろう</Text>
                 <Text style={styles.remedialText}>
                   {pickStreakEncouragement(wrongIds.length)}
                   {'\n'}このあと基礎問題を数問はさんでから、また同じコースに戻るよ。
                 </Text>
+              </View>
+            )}
+
+            {/* 解説。答えのカードの中ではなく、結果の枠のすぐ下に出す
+                （画面のスクロール位置に関係なく、結果と一緒に必ず目に入る）。 */}
+            {(currentQuestion.explanation != null || currentQuestion.hint != null) && (
+              <View style={styles.resultExplainBox}>
+                <Text style={styles.resultExplainLabel}>📖 解説</Text>
+                <ExplanationSlides key={currentQuestion.id} q={currentQuestion} />
+                {hintText(currentQuestion) !== '' && (
+                  <Text style={styles.resultExplainHint}>💡 {rich(hintText(currentQuestion))}</Text>
+                )}
+                {getQuickTrick(currentQuestion.id) != null && (
+                  <View style={styles.resultTrickBox}>
+                    <Text style={styles.resultTrickLabel}>⚡ はやく解くコツ</Text>
+                    <Text style={styles.resultTrickText}>{getQuickTrick(currentQuestion.id)}</Text>
+                  </View>
+                )}
               </View>
             )}
 
@@ -723,31 +997,20 @@ export default function QuizScreen() {
               </View>
             )}
 
-            {(currentQuestion.hint || currentQuestion.explanation) && (
+            {(currentQuestion.memoryTip || currentQuestion.pitfall) && (
               <View style={styles.wrongExplanationCard}>
-                <Text style={styles.wrongExplanationTitle}>📖 くわしい解説</Text>
-                <Text style={styles.wrongExplanationText}>
-                  {explanationText(currentQuestion)}
-                </Text>
-                {hintText(currentQuestion) !== '' && (
-                  <Text style={styles.wrongExplanationText}>💡 {hintText(currentQuestion)}</Text>
-                )}
-                {getQuickTrick(currentQuestion.id) != null && (
-                  <View style={styles.tipRow}>
-                    <Text style={styles.trickLabel}>⚡ はやく解くコツ</Text>
-                    <Text style={styles.tipText}>{getQuickTrick(currentQuestion.id)}</Text>
-                  </View>
-                )}
+                {/* くわしい解説（スライド）・ヒント・はやく解くコツは、すぐ上の答えのカードに出ているので、ここでは繰り返さない */}
+                <Text style={styles.wrongExplanationTitle}>{lastWasCorrect ? '🧠 もっと確実にするヒント' : '🧠 まちがいを減らすヒント'}</Text>
                 {(isPro || isMax) && currentQuestion.memoryTip && (
                   <View style={styles.tipRow}>
                     <Text style={styles.tipLabel}>💡 覚え方</Text>
-                    <Text style={styles.tipText}>{currentQuestion.memoryTip}</Text>
+                    <Text style={styles.tipText}>{rich(currentQuestion.memoryTip)}</Text>
                   </View>
                 )}
                 {(isPro || isMax) && currentQuestion.pitfall && (
                   <View style={styles.tipRow}>
                     <Text style={styles.pitfallLabel}>⚠️ ひっかけ注意</Text>
-                    <Text style={styles.tipText}>{currentQuestion.pitfall}</Text>
+                    <Text style={styles.tipText}>{rich(currentQuestion.pitfall)}</Text>
                   </View>
                 )}
                 {!isPro && !isMax && (currentQuestion.memoryTip || currentQuestion.pitfall) && (
@@ -805,32 +1068,37 @@ export default function QuizScreen() {
           </View>
         )}
 
-        {/* Answer buttons - only shown in flip-card mode after reveal (hide when waiting for next) */}
-        {revealed && !currentChoices && !waitingNext && (
-          <View style={styles.answerButtons}>
-            <TouchableOpacity
-              style={styles.correctButton}
-              onPress={() => handleAnswer(true)}
-              activeOpacity={0.85}
-            >
-              <Text style={styles.correctButtonText}>✓ 正解</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.wrongButton}
-              onPress={() => handleAnswer(false)}
-              activeOpacity={0.85}
-            >
-              <Text style={styles.wrongButtonText}>✗ 不正解</Text>
-            </TouchableOpacity>
+        {/*
+          答えを自分で書く欄。
+          もとは「✓正解 / ✗不正解」を自分で押す作りだったが、それでは答えを
+          見てから判断することになり、本当に解けたのかが分からなかった。
+          先に書いてもらい、機械が採点する（記述問題は正誤をつけず見くらべる）。
+        */}
+        {!currentChoices && (
+          <View onLayout={(e) => { answerYRef.current = e.nativeEvent.layout.y; }}>
+            <AnswerInput
+              key={currentQuestion.id}
+              question={currentQuestion}
+              onSubmit={handleSubmitTyped}
+              submitted={typed}
+              // キーボードが出たら、入力欄が画面の上のほうに来るまでスクロールする
+              onFocus={() => setTimeout(() => scrollRef.current?.scrollTo({ y: Math.max(0, answerYRef.current - 16), animated: true }), 250)}
+            />
           </View>
         )}
 
-        {!revealed && !currentChoices && (
-          <View style={styles.revealHint}>
-            <Text style={styles.revealHintText}>
-              カードをタップして答えを確認してね 👆
-            </Text>
-          </View>
+        {/* 記述問題は正誤をつけないので、模範解答を見たら自分で次へ進む */}
+        {!currentChoices && typed?.result === 'review' && (
+          <TouchableOpacity
+            style={styles.reviewNextBtn}
+            onPress={() => {
+              setWaitingNext(false);
+              advanceOrFinish(score, wrongIds);
+            }}
+            activeOpacity={0.85}
+          >
+            <Text style={styles.reviewNextBtnText}>見くらべたので次へ →</Text>
+          </TouchableOpacity>
         )}
       </ScrollView>
 
@@ -994,57 +1262,82 @@ const styles = StyleSheet.create({
     color: '#6B4226',
     fontWeight: '700',
   },
-  answerButtons: {
-    flexDirection: 'row',
-    gap: 14,
-    paddingHorizontal: 16,
-    marginTop: 20,
+  reviewListCard: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 14,
+    padding: 16,
+    marginTop: 16,
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
   },
-  correctButton: {
-    flex: 1,
-    backgroundColor: '#00A651',
-    borderRadius: 20,
-    paddingVertical: 18,
-    alignItems: 'center',
-    shadowColor: '#00A651',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 8,
-    elevation: 5,
+  reviewListTitle: {
+    fontSize: 17,
+    fontWeight: '700',
+    color: '#0369A1',
   },
-  correctButtonText: {
-    fontSize: 22,
-    fontWeight: '900',
-    color: '#FFFFFF',
-    letterSpacing: 1,
+  reviewListNote: {
+    fontSize: 12,
+    color: '#64748B',
+    lineHeight: 18,
+    marginTop: 4,
+    marginBottom: 10,
   },
-  wrongButton: {
-    flex: 1,
-    backgroundColor: '#E74C3C',
-    borderRadius: 20,
-    paddingVertical: 18,
-    alignItems: 'center',
-    shadowColor: '#E74C3C',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 8,
-    elevation: 5,
+  reviewItem: {
+    borderRadius: 10,
+    padding: 12,
+    marginBottom: 8,
+    backgroundColor: '#F8FAFC',
+    borderLeftWidth: 4,
+    borderLeftColor: '#CBD5E1',
   },
-  wrongButtonText: {
-    fontSize: 22,
-    fontWeight: '900',
-    color: '#FFFFFF',
-    letterSpacing: 1,
+  reviewItemCorrect: {
+    backgroundColor: '#F0FDF4',
+    borderLeftColor: '#22C55E',
   },
-  revealHint: {
-    marginTop: 24,
-    alignItems: 'center',
-    paddingHorizontal: 16,
+  reviewItemWrong: {
+    backgroundColor: '#FFFBEB',
+    borderLeftColor: '#F59E0B',
   },
-  revealHintText: {
+  reviewItemHead: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: '#334155',
+    marginBottom: 4,
+  },
+  reviewItemQ: {
     fontSize: 14,
-    color: '#AAA',
-    fontWeight: '600',
+    color: '#0F172A',
+    lineHeight: 21,
+  },
+  reviewItemLabel: {
+    fontSize: 11,
+    fontWeight: '700',
+    color: '#64748B',
+    marginTop: 8,
+  },
+  reviewItemMine: {
+    fontSize: 15,
+    color: '#B45309',
+    lineHeight: 22,
+  },
+  reviewItemRight: {
+    fontSize: 15,
+    fontWeight: '700',
+    color: '#15803D',
+    lineHeight: 22,
+  },
+  reviewNextBtn: {
+    marginHorizontal: 16,
+    marginTop: 12,
+    backgroundColor: '#0369A1',
+    borderRadius: 10,
+    paddingVertical: 14,
+    alignItems: 'center',
+  },
+  reviewNextBtnText: {
+    color: '#FFFFFF',
+    fontSize: 16,
+    fontWeight: '700',
   },
   feedbackOverlay: {
     ...StyleSheet.absoluteFill,
@@ -1077,6 +1370,17 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     letterSpacing: 1,
   },
+  streakResult: {
+    backgroundColor: '#FFF4E5',
+    borderRadius: 14,
+    borderWidth: 1.5,
+    borderColor: '#F0B866',
+    padding: 14,
+    marginBottom: 14,
+    alignItems: 'center',
+  },
+  streakResultMain: { fontSize: 20, fontWeight: '800', color: '#B5622E' },
+  streakResultSub: { fontSize: 13, color: '#6B4226', marginTop: 4, textAlign: 'center' },
   resultsContent: {
     paddingHorizontal: 20,
     paddingTop: 24,
@@ -1221,6 +1525,34 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#E74C3C',
     alignItems: 'center',
+  },
+  resultExplainBox: {
+    backgroundColor: '#FFFBEB',
+    borderRadius: 16,
+    padding: 18,
+    width: '100%',
+    borderLeftWidth: 4,
+    borderLeftColor: '#F59E0B',
+  },
+  resultExplainLabel: { fontSize: 13.5, fontWeight: '700', color: '#B45309', marginBottom: 6 },
+  resultExplainHint: { fontSize: 17, color: '#78350F', lineHeight: 24, marginTop: 12 },
+  resultTrickBox: {
+    marginTop: 10,
+    backgroundColor: '#FFF7ED',
+    borderLeftWidth: 4,
+    borderLeftColor: '#F59E0B',
+    borderRadius: 10,
+    padding: 10,
+    gap: 4,
+  },
+  resultTrickLabel: { fontSize: 13, fontWeight: '900', color: '#B45309' },
+  resultTrickText: { fontSize: 14, lineHeight: 22, color: '#7C2D12', fontWeight: '500' },
+  correctHeader: {
+    backgroundColor: '#E6F7EC',
+    borderColor: '#00A651',
+  },
+  correctHeaderText: {
+    color: '#00804A',
   },
   wrongHeaderText: {
     fontSize: 18,

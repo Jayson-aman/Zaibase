@@ -3,7 +3,7 @@
     "name": "Zaibase受験",
     "slug": "entrance-exam",
     "scheme": "entrance-exam",
-    "version": "1.2.11",
+    "version": "2.2.8",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -30,7 +30,7 @@
       "lang": "ja",
       "output": "static",
       "meta": {
-        "description": "中学受験・高校受験対策アプリ。5科目15,000問以上・灘/開成/慶應など50校対応・図形やグラフが動く図解付き教科書。"
+        "description": "中学受験・高校受験対策アプリ。5科目16,000問以上・灘/開成/慶應など50校対応（各校100問以上）・図形やグラフが動く図解付き教科書。"
       }
     },
     "plugins": [

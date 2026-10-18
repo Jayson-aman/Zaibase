@@ -24,9 +24,7 @@ const ANTHROPIC_API_KEY = defineSecret("ANTHROPIC_API_KEY");
 const DAILY_LIMIT = 5;
 const MAX_ITEMS = 10;
 
-function todayKey() {
-  return new Date().toISOString().slice(0, 10);
-}
+const { jstDay: todayKey, refundDaily } = require("./_usage");
 
 async function checkAndIncrementLimit(uid) {
   const ref = db.collection("aiCoachUsage").doc(uid);
@@ -60,6 +58,10 @@ exports.getWeakPointCoaching = onCall(
 
     // 課金判定はRevenueCatを正とする（Maxプラン限定機能）
     const allowed = await hasMaxAccess(uid);
+    // 会員状態が取れなかった（課金の確認先が一時的に落ちている）ときに、会員の人へ「限定機能です」と出さない
+    if (allowed === null) {
+      throw new HttpsError("unavailable", "いま会員の状態を確認できません。少し待ってから、もう一度試してね。");
+    }
     if (allowed !== true) {
       throw new HttpsError(
         "permission-denied",
@@ -113,12 +115,16 @@ exports.getWeakPointCoaching = onCall(
       });
     } catch (err) {
       console.error("getWeakPointCoaching: Claude API error", err);
+      await refundDaily(db, "aiCoachUsage", uid, "date", "count");
       throw new HttpsError("internal", "アドバイスの生成でエラーが発生しました。もう一度試してください。");
     }
 
     const textBlock = response.content.find((b) => b.type === "text");
     const advice = textBlock?.text?.trim() ?? "";
-    if (!advice) throw new HttpsError("internal", "アドバイスの生成に失敗しました");
+    if (!advice) {
+      await refundDaily(db, "aiCoachUsage", uid, "date", "count");
+      throw new HttpsError("internal", "アドバイスの生成に失敗しました");
+    }
 
     return { ok: true, advice };
   }

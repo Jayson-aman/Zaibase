@@ -30,6 +30,7 @@ export const eigoExt03Lessons: Lesson[] = [
     sections: [
       {
         heading: '英語の名詞には二種類ある',
+        mangaId: 'eigo_s081_manga',
         body: `日本語で「本」「水」「宿題」と言うとき、私たちは形をあまり気にしない。「本が3つ」も「水が3つ」も、言い方としては同じ形で作れてしまう。ところが英語では、名詞をまず二つのグループに分けてから使う。
 
 ■ 数えられる名詞（可算名詞）
@@ -220,6 +221,7 @@ much（たくさんの）／a lot of・lots of（たくさんの）／some（い
     sections: [
       {
         heading: 'まちがえやすい不可算名詞リスト',
+        mangaId: 'eigo_s083_manga',
         body: `日本語では「宿題が3つ」「情報を2つ」と平気で数えるのに、英語では数えられない語がある。理屈で考えるより、次のリストを丸暗記してしまうのが早い。
 
 ■ 必ず覚える11語
@@ -490,6 +492,7 @@ no（一つもない・少しもない）…名詞の前に置くだけで否定
     sections: [
       {
         heading: '複数形の作り方の原則',
+        mangaId: 'eigo_s086_manga',
         body: `数えられる名詞が2つ以上あるときは、名詞の形を変える。これを複数形という。日本語には「本」と「本たち」の区別がないので、書き忘れがいちばん多い項目である。
 
 ■ 原則：語尾に -s を付ける
@@ -667,6 +670,7 @@ leaf → leaves のように、f・fe で終わる語には別の規則がある
     sections: [
       {
         heading: 'y で終わる語：直前の文字を見る',
+        mangaId: 'eigo_s088_manga',
         body: `y で終わる語は二種類に分かれる。決め手は「y の直前が母音字か子音字か」の一点だけである。母音字とは a・i・u・e・o の五文字をいう。
 
 ■ 子音字＋y → y を i に変えて -es
@@ -748,6 +752,7 @@ roof → roofs（屋根）／chief → chiefs（長）／safe → safes（金庫
     sections: [
       {
         heading: '不規則に変わる語',
+        mangaId: 'eigo_s089_manga',
         body: `-s も -es も付けず、語の形そのものが変わる名詞がある。数は十数語しかないので、まとめて丸暗記する。
 
 ■ 母音が変わる型
@@ -842,6 +847,7 @@ There is a sheep.（1ぴき）／There are five sheep.（5ひき）
     sections: [
       {
         heading: '三つの読み方と、その決まり方',
+        mangaId: 'eigo_s090_manga',
         body: `複数形は書くときは -s / -es だが、読むときは三通りある。どれになるかは、-s の直前の音で自動的に決まる。
 
 ■ ①[s] と読む（「ス」）
@@ -1111,6 +1117,7 @@ She bought a loaf of bread at the bakery.（彼女はパン屋でパンを1斤�
     sections: [
       {
         heading: 'いつも複数形で使う語',
+        mangaId: 'eigo_s093_manga',
         body: `英語では、左右または二つの部分がそろって初めて役に立つ物を、いつも複数形で表す。
 
 ■ 代表的な語
@@ -1287,6 +1294,7 @@ I bought a loaf of bread, two bottles of milk, and three pairs of socks.
     sections: [
       {
         heading: 'a / an の意味と使い方',
+        mangaId: 'eigo_s095_manga',
         body: `a / an を冠詞という。日本語にはない品詞なので、意味を正しくつかんでおく必要がある。
 
 ■ 意味①「一つの」
@@ -1383,6 +1391,7 @@ My uncle is a vet. He takes care of dogs and cats.（おじは獣医だ。犬や
     sections: [
       {
         heading: '原則は音で決まる',
+        mangaId: 'eigo_s096_manga',
         body: `a と an のどちらを使うかは、次に来る語の最初の「音」で決まる。母音の音で始まるなら an、そうでないなら a である。
 
 ■ an を使う（母音の音で始まる語）
@@ -1476,6 +1485,7 @@ an hour（1時間）／an eight-year-old boy（8歳の少年）／an A（Aとい
     sections: [
       {
         heading: '所有格・指示語とは重ねられない',
+        mangaId: 'eigo_s097_manga',
         body: `名詞の前に置ける「限定することば」は、原則として一つだけである。a / an と my / this などは、同じ位置を取り合うため並べられない。
 
 ■ 並べられない組み合わせ
@@ -1588,7 +1598,7 @@ once a year（年に1回）
 
 ■ 回数の数え方に注意
 1回＝once　　2回＝twice　　3回以上＝three times, four times ...
-⚠ 注意：× one time／× two times とは、ふつう言わない。once, twice を使う。
+⚠ 注意：one time／two times と言うこともあるが、1回・2回は once, twice を使うのがふつうである。
 
 ■ 速さ・単位あたりの量
 sixty kilometers an hour（時速60キロ）
@@ -1789,6 +1799,7 @@ the station（駅）／the post office（郵便局）／the hospital（病院）
       },
       {
         heading: '楽器・序数・最上級',
+        mangaId: 'eigo_s100_manga',
         body: `決まって the が付く言い方を三つ覚える。ここは入試で直接問われやすい。
 
 ■ ①楽器を演奏する
@@ -2099,6 +2110,21 @@ go to school／go to bed／by bus／at home／have lunch／play tennis／play th
 
 ⚠ 注意：名詞の前に my・your・this・that・数字・some・any があるときは、a も the も付けない。× the my book／× a two books。冠詞を入れる前に、名詞の前に何があるかを必ず見る。`,
       },
+      {
+        heading: 'なぜ三つの手順で冠詞が決まるのか',
+        mangaId: 'eigo_s103_manga',
+        body: `冠詞は、名詞について**「数えられるか」「一つか」「相手にどれか分かるか」**という三つの情報を相手に伝える語です。a は「数えられるものが一つで、どれでもよい」、the は「相手にどれのことか分かる」、冠詞なしは「数えられない、または複数で、特定していない」。だから、この三つの情報を順に確かめれば、a・the・無冠詞のどれかが一つに決まります。勘で選ぶと、太陽（世界に一つ→相手に分かる→the）を a sun と書いたり、coffee（数えられない）を a coffee と書いたりします。
+
+決まった言い方（play the piano・go to school・by bus）を手順より優先するのは、これらが**理屈ではなく習慣で固まった形**だからです。手順で考え直すとかえって迷うので、形ごと覚えます。名詞の前に my・this・数字があるときに a / the を付けないのは、それらがすでに「どれか」を示しているからです。
+
+■ 確かめのしかた
+①**数えられるか**：water・music・homework・coffee→数えられない→a は使えない。
+②**単数か複数か**：単数→a か the、複数→the か冠詞なし。
+③**相手にどれか分かるか**：すでに出た／その場に一つ／後ろに説明が付く／世界に一つ→the。初めて出す・どれでもよい→単数なら a、複数・不可算なら冠詞なし。
+④名詞の前に my・your・this・数字・some があれば冠詞は付けない。決まった言い方（play the piano／play tennis／go to bed／in the morning）は形ごと覚える。
+
+★ ここがポイント：冠詞は**数えられるか・一つか・相手に分かるか**の三つの情報を伝える語なので、**三つの手順を最後まで進める**と一つに決まる（the sun は「世界に一つ」で the）。決まった言い方は手順より優先。`,
+      },
     ],
     trapExamples: [
       {
@@ -2167,6 +2193,7 @@ I（私は）／you（あなたは・あなたたちは）／he（彼は）／sh
       },
       {
         heading: 'it の特別な使い方と、並べる順序',
+        mangaId: 'eigo_s104_manga',
         body: `it には「それは」と訳さない使い方がある。天気や時間を表す文で使う it である。
 
 ■ 天気・時間・曜日・日付・距離・明暗の it
@@ -2236,6 +2263,7 @@ She likes soccer. → She and her sister like soccer.`,
     sections: [
       {
         heading: '位置で形が変わる',
+        mangaId: 'eigo_s105_manga',
         body: `英語は語順で役割が決まる言語である。同じ「彼」でも、文のどこに置くかで形が変わる。
 
 ■ 主格と目的格の対応
@@ -2391,6 +2419,21 @@ I stayed at my uncle’s.（おじの家に泊まった）
 ※ 後ろの office や house が省略された形である。
 
 ★ ポイント：「生き物なら ’s、物なら of」が原則。ただし時を表す語（today’s, this year’s）は例外的に ’s を使う。`,
+      },
+      {
+        heading: 'なぜ所有格に冠詞を重ねず、なぜ物には of を使うのか',
+        mangaId: 'eigo_s106_manga',
+        body: `my・your・his のような所有格は、「だれのものか」を示すことで、**その名詞がどれのことかをすでに決めています**。a は「どれでもよい一つ」、the は「相手に分かるあれ」を示す語なので、所有格と重ねると「どれでもよくて、私のもの」のように矛盾します。だから a my book とは言えず、両方言いたければ a book of mine と形を変えます。
+
+生き物には 's、物には of が多いのは、**'s が「持ち主」を表す形**だからです。人や動物は持ち主になれますが、車や山は何かを「持つ」わけではないので、the color of the car のように of で「〜の一部・〜に属する」と言います。today's のように時を表す語が 's を使うのは例外として覚えます。its と it's の区別は、**アポストロフィは短縮の印**で、所有格には付かない、と考えれば迷いません。
+
+■ 確かめのしかた
+①所有格（my・his・their）を付けたら、その前に a・the が残っていないか。× a my book。
+②「〜の」が二つある日本語（私の父の車）は、英語でも二つ必要か。my father's car（my→father、father's→car）。
+③人・動物→'s（Ken's book、the dog's name）。複数の -s で終わる語→' だけ（the students' room）。-s で終わらない複数→'s（children's books）。物→of（the top of the mountain）。
+④its（それの）と it's（it is）を文に入れて確かめる。The dog wagged its tail.（それの）／It's cold.（it is）。
+
+★ ここがポイント：所有格は**どれのことかをすでに決めている**ので冠詞を重ねない。**'s は持ち主の形**なので生き物に使い、物は of。アポストロフィは短縮の印なので所有格の its には付かない。`,
       },
     ],
     trapExamples: [
@@ -2822,6 +2865,7 @@ Is this yours?（これはあなたのものですか）→ Yes, it is.
     sections: [
       {
         heading: 'it と one のちがい',
+        mangaId: 'eigo_s111_manga',
         body: `どちらも前に出た名詞のくり返しをさけるための語だが、さす中身がちがう。
 
 ■ it＝まったく同じ物
@@ -3067,6 +3111,21 @@ police officer（警察官1人） → three police officers（警察官3人）
 family（1家族） → two families（2家族）
 それぞれ、数えるときにどの語を使うかを確かめておく。`,
       },
+      {
+        heading: 'なぜ family は単数で、people は複数なのか',
+        mangaId: 'eigo_s113_manga',
+        body: `family・team・class は、何人かの人を**ひとまとまりとして見た名前**です。まとまりが一つなら単数なので My family is large. と is を使い、まとまりが二つ以上（ten families）ならふつうに複数形にします。「私の家族は5人です」を My family is five. と言えないのは、family は「まとまり」であって「人数」ではないからで、人数を言うなら There are five people in my family. と人（people）を数えます。
+
+people は形に -s がありませんが、**person の複数にあたる語**で、それ自体が「人々」という複数の意味を持っています。だから動詞は are / were で、-s を付けると「諸民族」という別の語になります。police も「警察官たち」を表す語で複数あつかいです。警察官一人は a police officer と言います。形に -s があるかどうかではなく、その語が何を表しているかで単複が決まります。
+
+■ 確かめのしかた
+①family・team・class・group・club は**まとまり一つ→is / has**。まとまりが二つ以上→families・teams。
+②人数を言うときは people を数える：There are five people in my family. ／ I have a family of five.
+③people・police は**-s が無くても複数あつかい**：Many people were there. ／ The police are coming.
+④× many peoples（諸民族の意味になる）、× a police（→a police officer）。person（1人）→two people（2人）と数える。
+
+★ ここがポイント：family は**まとまりの名前**なので一つなら単数、people は**person の複数にあたる語**なので -s が無くても複数。形の -s ではなく**その語が何を表すか**で動詞を決める。`,
+      },
     ],
     trapExamples: [
       {
@@ -3214,7 +3273,7 @@ homework, information, advice, furniture, money, water, bread は不可算。a �
 × two advices → ◯ two pieces of advice
 
 ■ 手順②　単数か複数か
-数字・many・some・these の後ろは複数形。one・each・every の後ろは単数。
+数字・many・these の後ろは複数形（some は不可算名詞にも付くので別あつかい）。one・each・every の後ろは単数。
 × three book → ◯ three books
 × many student likes → ◯ many students like
 

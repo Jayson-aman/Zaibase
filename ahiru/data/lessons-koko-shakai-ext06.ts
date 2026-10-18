@@ -50,7 +50,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
 
 ■ 承平・天慶の乱（939年ごろ）
 ・平将門の乱 … 関東で一族の争いから兵をあげ、常陸・下野・上野の国府を攻め落として自らを「新皇」と称した。朝廷の任命によらず天皇を名乗ったところに衝撃があった。平貞盛・藤原秀郷らによって討たれる。
-・藤原純友の乱 … ほぼ同じ時期に、伊予の国司であった藤原純友が瀬戸内海の海賊を率いて反乱を起こし、大宰府を攻めた。源経基らに討たれる。
+・藤原純友の乱 … ほぼ同じ時期に、もと伊予の国司の役人（掾）であった藤原純友が瀬戸内海の海賊を率いて反乱を起こし、大宰府を攻めた。源経基らに討たれる。
 
 この二つをあわせて承平・天慶の乱と呼ぶ。朝廷の正規軍ではなく武士の力で鎮圧されたことで、「地方は武士がいないと治まらない」ことが明らかになった。
 
@@ -71,7 +71,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
           '「〜の乱」が二つ並ぶと反射的に保元・平治と答えてしまう。また、将門の「門」から西国の関門海峡を、純友の「藤原」から都に近い地域を連想して、東西を逆に覚えてしまう受験生が多い。',
         correctAnswer: '承平・天慶の乱。平将門は関東（東国）、藤原純友は瀬戸内海（西国）。',
         correctExplanation:
-          '承平・天慶は当時の年号で、乱はどちらも939年ごろ。将門は関東で新皇を名乗り、純友は伊予の国司の経歴を生かして瀬戸内の海賊を率いた。保元の乱（1156年）・平治の乱（1159年）は220年ほど後の、都で起きた争いである。時代がまったく違うことを年号で押さえる。',
+          '承平・天慶は当時の年号で、乱はどちらも939年ごろ。将門は関東で新皇を名乗り、純友は伊予の国司の役人だった経歴を生かして瀬戸内の海賊を率いた。保元の乱（1156年）・平治の乱（1159年）は220年ほど後の、都で起きた争いである。時代がまったく違うことを年号で押さえる。',
       },
       {
         question: '後三年の役の後、平泉を拠点に東北地方を支配したのは誰の一族か。',
@@ -106,6 +106,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '院政のしくみと目的',
+        mangaId: 'koko_shakai_s192_manga',
         body: `藤原氏の摂関政治は、天皇の母方の祖父になることで力を持つしくみだった。ところが藤原氏を外戚としない後三条天皇が即位すると、この前提がくずれる。次の白河天皇は、幼い子に位をゆずって自分は上皇となり、上皇の御所（院）から政治を動かした。1086年、院政の始まりである。
 
 ■ なぜ上皇のほうが自由なのか
@@ -183,6 +184,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '平氏政権のかたち',
+        mangaId: 'koko_shakai_s193_manga',
         body: `平治の乱に勝った清盛は、急速に位を上げていく。1167年、ついに太政大臣に就任した。太政大臣は律令の官職の最高位で、それまで摂関家など上級貴族しか就けなかった地位である。武士がそこに座ったこと自体が事件だった。
 
 ■ 権力の固め方は藤原氏と同じ
@@ -360,6 +362,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
       },
       {
         heading: '守護・地頭と幕府の成立年',
+        mangaId: 'koko_shakai_s195_manga',
         body: `1185年、頼朝は義経をとらえるという名目で、国ごとに守護を、荘園と公領ごとに地頭を置くことを朝廷に認めさせた。これによって幕府の支配は全国に及ぶことになる。
 
 ■ 守護（国ごとに一人）
@@ -425,6 +428,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '御恩と奉公の向きを固定する',
+        mangaId: 'koko_shakai_s196_gonhoukou_manga',
         body: `鎌倉幕府の支配は、将軍と御家人が結ぶ一対一の約束の積み重ねでできている。この約束の中身が御恩と奉公である。
 
 ■ 御恩（将軍 → 御家人）
@@ -527,6 +531,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
       },
       {
         heading: '執権政治のしくみ',
+        mangaId: 'koko_shakai_s197_shikkenseiji_manga',
         body: `執権はもともと政所の別当（長官）の地位だが、北条氏はそこに侍所別当を兼ねることで幕府の軍事と行政を一手ににぎった。
 
 ■ 幕府の階層
@@ -589,6 +594,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: 'なぜ上皇は兵をあげたのか',
+        mangaId: 'koko_shakai_s198_manga',
         body: `後鳥羽上皇は和歌・蹴鞠・刀剣づくりにも通じた多才な人物で、『新古今和歌集』の編さんを命じたことでも知られる。同時に、朝廷の権威を回復しようという強い意志を持っていた。
 
 ■ 挙兵の背景
@@ -678,6 +684,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: 'なぜ武家の法が必要だったのか',
+        mangaId: 'koko_shakai_s199_manga',
         body: `承久の乱の後、幕府は西国にも多くの地頭を置いた。すると地頭と荘園領主、あるいは御家人どうしの争いが急増する。訴訟は幕府に持ちこまれるが、判断の基準がなかった。
 
 ■ 律令では裁けない
@@ -861,6 +868,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
       },
       {
         heading: 'フビライと日本への圧力',
+        mangaId: 'koko_shakai_s201_manga',
         body: `5代皇帝となったフビライ・ハンは、遊牧国家から中国風の王朝への転換を進めた。
 
 ■ 元の成立
@@ -926,6 +934,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '文永の役（1274年）',
+        mangaId: 'koko_shakai_s202_manga',
         body: `フビライの服属要求を幕府が拒み続けたため、ついに元は軍を送った。
 
 ■ 経過
@@ -1011,6 +1020,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '御家人はなぜ困窮したのか',
+        mangaId: 'koko_shakai_s203_manga',
         body: `元寇後の御家人の没落は、三つの原因が重なって起きた。
 
 ■ ①恩賞が出せない
@@ -1115,6 +1125,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
       },
       {
         heading: '1333年、幕府の滅亡',
+        mangaId: 'koko_shakai_s204_manga',
         body: `後醍醐天皇の再挙兵に対し、幕府は有力御家人の足利高氏（尊氏）を大将として京都へ派遣した。
 
 ■ 足利尊氏の寝返り
@@ -1181,6 +1192,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '建築と彫刻',
+        mangaId: 'koko_shakai_s205_manga',
         body: `鎌倉時代の文化は、京都の公家文化を土台にしながら、そこへ武士と民衆の感覚、そして宋から伝わった新しい様式が加わって生まれた。特徴を一言でいえば「素朴・力強い・写実的」である。
 
 ■ 東大寺の再建
@@ -1346,6 +1358,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: 'なぜ新しい仏教が生まれたのか',
+        mangaId: 'koko_shakai_s207_manga',
         body: `平安末から鎌倉初期にかけて、日本は大きな不安のなかにあった。
 
 ■ 時代の不安
@@ -1455,6 +1468,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
       },
       {
         heading: '禅宗の二つの流れ',
+        mangaId: 'koko_shakai_s208_manga',
         body: `禅宗は坐禅によって自ら悟りを開こうとする教えで、宋から伝えられた。念仏系が阿弥陀仏の力にすがる他力であるのに対し、禅宗は自力である。
 
 ■ 臨済宗 — 栄西（1141〜1215）
@@ -1632,6 +1646,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
       },
       {
         heading: '武士の不満と新政の崩壊',
+        mangaId: 'koko_shakai_s210_manga',
         body: `■ 二条河原落書（1334年）
 京都の二条河原に立てられたとされる落書は、新政を風刺した88句からなる。
 「このごろ都にはやるもの、夜討・強盗・にせ綸旨、召人・早馬・虚騒動……」
@@ -1713,6 +1728,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
       },
       {
         heading: 'なぜ60年も続いたのか',
+        mangaId: 'koko_shakai_s211_manga',
         body: `南朝は軍事的には圧倒的に不利だった。それでも動乱が長引いたのには理由がある。
 
 ■ ①観応の擾乱（1350〜52年）
@@ -1779,6 +1795,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '守護の権限はどう広がったか',
+        mangaId: 'koko_shakai_s212_manga',
         body: `鎌倉時代の守護は、国ごとに置かれた軍事・警察の役職にすぎなかった。職務は大犯三カ条に限られ、国司の権限や荘園の内部には手を出せない建前だった。
 
 ■ 南北朝期に加わった権限
@@ -1861,6 +1878,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '中央のしくみ',
+        mangaId: 'koko_shakai_s213_manga',
         body: `室町幕府の組織は鎌倉幕府をもとにしているが、補佐役の名前と、担当する一族が変わっている点が最大の相違である。
 
 ■ 管領
@@ -2025,6 +2043,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '倭寇と勘合のしくみ',
+        mangaId: 'koko_shakai_s215_manga',
         body: `■ 倭寇
 14世紀、朝鮮半島や中国の沿岸を襲って人や物を奪う海賊集団が活発になった。中国・朝鮮側はこれを倭寇と呼んだ。対馬・壱岐・松浦地方の住民が中心だったとされる（前期倭寇）。
 高麗はこの被害に苦しんで衰え、倭寇を撃退して名をあげた李成桂が1392年に朝鮮国を建てることになる。明も倭寇の取りしまりを日本に強く求めた。
@@ -2113,6 +2132,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '朝鮮国との交流',
+        mangaId: 'koko_shakai_s216_manga',
         body: `■ 朝鮮国の成立
 高麗は元の支配と倭寇の被害で衰えた。倭寇を撃退して名声を得た武将の李成桂が、1392年に高麗を倒して朝鮮国を建てた。都は漢城（現在のソウル）である。
 朝鮮では儒学（朱子学）が国の学問とされ、4代世宗のとき民族固有の文字である訓民正音（ハングル）が作られた。銅活字による印刷も盛んだった。
@@ -2561,6 +2581,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: '金閣と五山',
+        mangaId: 'koko_shakai_s221_manga',
         body: `■ 北山文化とは
 3代将軍足利義満の時代の文化を、義満の北山山荘にちなんで北山文化という。特色は「融合」である。
 ・公家文化 … 伝統的な和歌・有職故実。
@@ -2658,7 +2679,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
 観音殿と呼ばれる二層の建物。
 ・一層 … 書院造風の住宅様式
 ・二層 … 禅宗様
-金閣と違い、銀箔は貼られていない（貼る計画があったかどうかも定かでない）。義政は応仁の乱の最中から造営を始め、政治から離れて東山山荘で文化に没頭した。
+金閣と違い、銀箔は貼られていない（貼る計画があったかどうかも定かでない）。義政は応仁の乱が終わった後の1482年から東山山荘の造営を始め、政治から離れて文化に没頭した。
 
 ■ 書院造
 東山文化の最大の遺産は、書院造という住宅様式である。銀閣と同じ敷地にある東求堂同仁斎（四畳半）が現存する代表例である。
@@ -2849,6 +2870,7 @@ export const kokoShakaiExt06Lessons: Lesson[] = [
       },
       {
         heading: '乱の影響と下剋上',
+        mangaId: 'koko_shakai_s224_gekokujou_manga',
         body: `■ ①幕府の権威の失墜
 将軍は京都周辺しか支配できなくなった。命令に従う大名はほとんどいなくなり、幕府は名前だけの存在に近づいた。以後も幕府は続くが、実質は細川氏など有力者に担がれる存在となる。
 

@@ -1,3 +1,4 @@
+import { rich } from '../../components/RichText';
 import React, { useState } from 'react';
 import {
   View,
@@ -14,7 +15,7 @@ import {
   useWindowDimensions,
 } from 'react-native';
 import { useRouter } from 'expo-router';
-import { FORMULAS, SUBJECTS, type Subject, type FormulaItem } from '../../data/formulas';
+import { FORMULAS, SUBJECTS, formulaBundleId, countLockedFormulas, lockedFormulaLabels, type Subject, type FormulaItem } from '../../data/formulas';
 import { STUDY_PERIOD_ORDER, type StudyPeriod } from '../../data/formulas-types';
 import { useExamType, examTypeLabel, type ExamType } from '../../store/examType';
 import SubjectIcon, { type IconSubject } from '../../components/SubjectIcon';
@@ -22,11 +23,24 @@ import FigureView from '../../components/FigureView';
 import InlineQuiz from '../../components/InlineQuiz';
 import { formulaImages } from '../../data/formulaImages';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
+import { PRICES, formatYen, FORMULA_BUNDLE_ITEM_CAP } from '../../constants/pricing';
+import { confirmDialog, noticeDialog, ensureLoggedInForPurchase } from '../../utils/dialog';
+import { logPurchaseEvent } from '../../services/analytics';
+import { useAuthUser } from '../../hooks/useAuthUser';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 
 // 公式タブの教科名（算数/理科/社会）→ アイコンキー
 // 毎回作り直すとリスト全体の再描画のきっかけになるので、定数にしておく
+/** 通貨つきの金額表示（例：US$23.00 / ¥23,200）。Intlが使えない環境では通貨コードを前置する */
+function formatMoney(value: number, currency: string): string {
+  try {
+    return new Intl.NumberFormat('ja-JP', { style: 'currency', currency }).format(value);
+  } catch {
+    return `${currency} ${value.toFixed(2)}`;
+  }
+}
+
 const LIST_FOOTER = <View style={{ height: 120 }} />;
 
 const SUBJ_ICON: Record<Subject, IconSubject> = {
@@ -51,8 +65,22 @@ const FormulaRow = React.memo(function FormulaRow({
   purchasing,
   onUnlock,
   imageSize,
+  bundleId,
+  bundleCount,
+  bundleReady,
+  bundlePriceLabel,
+  bundlePurchasing,
+  onUnlockBundle,
+  boughtCount,
+  bundleItemCap,
+  fullPriceLabel,
+  bundleOffPercent,
+  reviewSubject,
+  reviewExamType,
 }: {
   item: FormulaItem;
+  reviewSubject: string;
+  reviewExamType: string;
   accent: string;
   bypassLock: boolean;
   isUnlocked: boolean;
@@ -61,6 +89,16 @@ const FormulaRow = React.memo(function FormulaRow({
   purchasing: boolean;
   onUnlock: (label: string) => void;
   imageSize: number;
+  bundleId: string;
+  bundleCount: number;
+  bundleReady: boolean;
+  bundlePriceLabel: string;
+  bundlePurchasing: boolean;
+  onUnlockBundle: (bundleId: string) => void;
+  boughtCount: number;
+  bundleItemCap: number;
+  fullPriceLabel: string;
+  bundleOffPercent: number;
 }) {
   if (item.locked && !bypassLock && !isUnlocked) {
     return (
@@ -69,27 +107,84 @@ const FormulaRow = React.memo(function FormulaRow({
           <Text style={styles.formulaLabelText}>{item.label}</Text>
         </View>
         <View style={[styles.formulaBox, { borderColor: accent + '55' }]}>
-          <Text style={[styles.formulaText, { color: accent }]}>{item.formula}</Text>
+          <Text style={[styles.formulaText, { color: accent }]}>{rich(item.formula, { size: 15, color: accent, bold: true })}</Text>
         </View>
         <View style={styles.lockCard}>
           <Text style={styles.lockIcon}>🔒</Text>
           <Text style={styles.lockText}>
-            くわしい説明・図解・例題・一問一答は買い切りで解放できます（{priceLabel}・1回のみ）
+            くわしい説明・動く図解・例題・一問一答がついています
           </Text>
-          <TouchableOpacity
-            style={[styles.unlockBtn, { backgroundColor: accent }, (!productReady || purchasing) && styles.unlockBtnDisabled]}
-            activeOpacity={0.85}
-            disabled={!productReady || purchasing}
-            onPress={() => onUnlock(item.label)}
-          >
-            {purchasing ? (
-              <ActivityIndicator color="#FFFFFF" />
-            ) : (
-              <Text style={styles.unlockBtnText}>
-                {productReady ? `${priceLabel}で解放する` : '準備中です'}
-              </Text>
-            )}
-          </TouchableOpacity>
+
+          {/* 何が読めるか（買う前に中身のイメージをつかめるように） */}
+          <View style={styles.teaserBox}>
+            <Text style={styles.teaserTitle}>📖 解放すると読めること</Text>
+            <Text style={styles.teaserLine}>
+              {[
+                item.figure?.steps?.length ? `動く図解 ${item.figure.steps.length}枚` : null,
+                item.quiz?.length ? `一問一答 ${item.quiz.length}問` : null,
+                item.checkpoints?.length ? `テストで狙われる点 ${item.checkpoints.length}つ` : null,
+              ]
+                .filter(Boolean)
+                .join(' ／ ') || 'くわしい説明・例題'}
+            </Text>
+            {item.quiz?.[0]?.q ? (
+              <Text style={styles.teaserQuiz}>{`たとえばこんな問題が解けるようになります：\n「${item.quiz[0].q}」`}</Text>
+            ) : null}
+          </View>
+
+          {/* おすすめ：この教科ぜんぶ */}
+          {/* ロック項目が少なくて、まとめ買いのほうが高くなる教科では出さない */}
+          {bundleOffPercent > 0 && (
+          <View style={[styles.bundleCard, { borderColor: accent }]}>
+            <View style={[styles.bundleBadge, { backgroundColor: accent }]}>
+              <Text style={styles.bundleBadgeText}>おすすめ・上限つき</Text>
+            </View>
+            <Text style={styles.bundleHeadline} maxFontSizeMultiplier={1.25}>{`この教科の${bundleCount}項目、ぜんぶ ${bundlePriceLabel}`}</Text>
+            <Text style={styles.bundleText} maxFontSizeMultiplier={1.25}>
+              {bundleOffPercent >= 5
+                ? `1つずつ買うと ${fullPriceLabel}。まとめてなら約${bundleOffPercent}％オフで、この先ふえる項目も追加料金なしです。`
+                : 'まとめて買うほうがおトクです。この先ふえる項目も追加料金なしです。'}
+            </Text>
+            <TouchableOpacity
+              style={[styles.unlockBtn, { backgroundColor: accent }, (!bundleReady || bundlePurchasing) && styles.unlockBtnDisabled]}
+              activeOpacity={0.85}
+              disabled={!bundleReady || bundlePurchasing}
+              onPress={() => onUnlockBundle(bundleId)}
+            >
+              {bundlePurchasing ? (
+                <ActivityIndicator color="#FFFFFF" />
+              ) : (
+                <Text style={styles.unlockBtnText} maxFontSizeMultiplier={1.25}>
+                  {bundleReady ? `ぜんぶ ${bundlePriceLabel} で解放する` : 'まとめ買いは準備中です'}
+                </Text>
+              )}
+            </TouchableOpacity>
+          </View>
+          )}
+
+          {/* 1項目ずつ買う場合。買った数が上限に届いたら、のこりは自動で全部ひらく */}
+          <View style={styles.singleBox}>
+            <Text style={styles.singleProgressText}>
+              {`この教科で ${boughtCount}/${bundleItemCap}項目 買いました。${bundleItemCap - boughtCount}項目ぶん買えば、のこりは全部無料になります`}
+            </Text>
+            <View style={styles.progressTrack}>
+              <View style={[styles.progressFill, { backgroundColor: accent, width: `${Math.min(100, Math.round((boughtCount / bundleItemCap) * 100))}%` }]} />
+            </View>
+            <TouchableOpacity
+              style={[styles.bundleBtn, { borderColor: accent }, (!productReady || purchasing) && styles.unlockBtnDisabled]}
+              activeOpacity={0.85}
+              disabled={!productReady || purchasing}
+              onPress={() => onUnlock(item.label)}
+            >
+              {purchasing ? (
+                <ActivityIndicator color={accent} />
+              ) : (
+                <Text style={[styles.bundleBtnText, { color: accent }]}>
+                  {productReady ? `この1項目だけ ${priceLabel} で解放` : '準備中です'}
+                </Text>
+              )}
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     );
@@ -102,8 +197,8 @@ const FormulaRow = React.memo(function FormulaRow({
         </View>
 
         <View style={styles.formulaBox}>
-          <Text style={[styles.formulaText, { color: accent }]}>{item.formula}</Text>
-          {item.note && <Text style={styles.formulaNote}>{item.note}</Text>}
+          <Text style={[styles.formulaText, { color: accent }]}>{rich(item.formula, { size: 15, color: accent, bold: true })}</Text>
+          {item.note && <Text style={styles.formulaNote}>{rich(item.note, { size: 11, color: '#888' })}</Text>}
         </View>
 
         {item.explanation && (
@@ -113,7 +208,7 @@ const FormulaRow = React.memo(function FormulaRow({
         {item.figure && (
           <View style={styles.figureBox}>
             <Text style={styles.figureLabel}>図解</Text>
-            <FigureView figure={item.figure} />
+            <FigureView figure={item.figure} animated={item.figure.kind === 'diagram'} manual />
           </View>
         )}
 
@@ -178,6 +273,8 @@ const FormulaRow = React.memo(function FormulaRow({
               question: qz.q,
               answer: qz.a,
               explanation: qz.explanation,
+              subject: reviewSubject,
+              examType: reviewExamType,
             }))}
           />
         )}
@@ -192,6 +289,7 @@ function subjectLabel(key: Subject, examType: ExamType): string {
 
 export default function FormulasScreen() {
   const router = useRouter();
+  const { isLoggedIn, loading: authLoading } = useAuthUser();
   const [subject, setSubject] = useState<Subject>('算数');
   // 図解画像の一辺。画面幅から1回だけ決める。行ごとに測り直すと、
   // スクロールで行が外れて戻るたびに測り直しが走り、画像が点滅する。
@@ -255,16 +353,91 @@ export default function FormulasScreen() {
     priceLabel,
     purchasingFigureId,
     unlockFormula,
+    bundleReady,
+    bundlePriceLabel,
+    itemPriceValue,
+    bundlePriceValue,
+    currencyCode,
   } = useFormulaUnlocks();
 
+  const bundleId = formulaBundleId(examType, subject);
+  const bundleCount = React.useMemo(() => countLockedFormulas(examType, subject), [examType, subject]);
+  const groupLabels = React.useMemo(() => lockedFormulaLabels(examType, subject), [examType, subject]);
+  // この教科で、1項目ずつ買った数。上限（FORMULA_BUNDLE_ITEM_CAP）に届けば、のこりは全部ひらく。
+  const boughtCount = React.useMemo(() => groupLabels.filter((l) => unlockedIds.has(l)).length, [groupLabels, unlockedIds]);
+  const groupUnlocked = unlockedIds.has(bundleId) || boughtCount >= FORMULA_BUNDLE_ITEM_CAP;
+  // 「1つずつ買うと」の金額と割引率は、ストアが実際に返した価格（表示中の通貨）で計算する。
+  // 円の定数を、ドルなどで表示されるボタンの横に出すと食いちがって見えて誤解を招くため。
+  // ストアの価格が取れないとき（Web版のStripe決済など）は、円の定数で計算する（Webは円のみ）。
+  const useStorePrice = itemPriceValue != null && bundlePriceValue != null && currencyCode != null;
+  const fullValue = useStorePrice ? itemPriceValue! * bundleCount : PRICES.formulaUnlock * bundleCount;
+  const bundleValue = useStorePrice ? bundlePriceValue! : PRICES.formulaBundle;
+  const fullPriceLabel = useStorePrice ? formatMoney(fullValue, currencyCode!) : formatYen(fullValue);
+  const bundleOffPercent = Math.max(0, Math.round((1 - bundleValue / Math.max(0.01, fullValue)) * 100));
+
   const handleUnlock = React.useCallback(async (label: string) => {
-    const result = await unlockFormula(label);
-    if (!result.ok) {
-      Alert.alert('購入できませんでした', result.message);
+    logPurchaseEvent('unlock_tapped', 'formula');
+    if (!(await ensureLoggedInForPurchase(authLoading ? null : isLoggedIn, () => router.push('/login' as any)))) {
+      logPurchaseEvent('unlock_login_required', 'formula');
       return;
     }
-    Alert.alert('解放しました', `「${label}」はこれ以降ずっと無料で見られます。`);
-  }, [unlockFormula]);
+    const ok = await confirmDialog(
+      '購入の確認',
+      `「${label}」を ${priceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
+    );
+    if (!ok) {
+      logPurchaseEvent('unlock_confirm_declined', 'formula');
+      return;
+    }
+    const result = await unlockFormula(label);
+    if (!result.ok) {
+      if (result.cancelled) logPurchaseEvent('unlock_store_cancelled', 'formula');
+      else {
+        logPurchaseEvent('unlock_failed', 'formula', { detail: result.message.replace(/\s+/g, ' ') });
+        noticeDialog('購入できませんでした', result.message);
+      }
+      return;
+    }
+    logPurchaseEvent('unlock_succeeded', 'formula');
+    // Web は決済ページへ移動するので、ここでは「解放しました」と言わない（支払い前に言うと誤解を生む）
+    if (result.redirected) return;
+    // ロック項目が上限より少ない教科は、全部買えばそろう（画面の「N/M項目」のMと同じ数え方）
+    const cap = Math.min(FORMULA_BUNDLE_ITEM_CAP, bundleCount);
+    if (boughtCount + 1 >= cap && boughtCount < cap) {
+      noticeDialog('ぜんぶそろいました', 'この教科の公式集は、のこりも全部ずっと無料で見られます。');
+      return;
+    }
+    noticeDialog('解放しました', `「${label}」はこれ以降ずっと無料で見られます。あと${cap - boughtCount - 1}項目で、この教科は全部そろいます。`);
+  }, [unlockFormula, boughtCount, bundleCount, priceLabel, isLoggedIn, authLoading, router]);
+
+  const handleUnlockBundle = React.useCallback(async (id: string) => {
+    logPurchaseEvent('unlock_tapped', 'bundle');
+    if (!(await ensureLoggedInForPurchase(authLoading ? null : isLoggedIn, () => router.push('/login' as any)))) {
+      logPurchaseEvent('unlock_login_required', 'bundle');
+      return;
+    }
+    const ok = await confirmDialog(
+      '購入の確認',
+      `この教科の「公式・まとめ」タブで、ロック中の公式${bundleCount}項目を、ぜんぶ ${bundlePriceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。\n※教科書の単元ページにある個別のロックは、この対象には入りません。`,
+    );
+    if (!ok) {
+      logPurchaseEvent('unlock_confirm_declined', 'bundle');
+      return;
+    }
+    const result = await unlockFormula(id, 'bundle');
+    if (!result.ok) {
+      if (result.cancelled) logPurchaseEvent('unlock_store_cancelled', 'bundle');
+      else {
+        logPurchaseEvent('unlock_failed', 'bundle', { detail: result.message.replace(/\s+/g, ' ') });
+        noticeDialog('購入できませんでした', result.message);
+      }
+      return;
+    }
+    logPurchaseEvent('unlock_succeeded', 'bundle');
+    // Web は決済ページへ移動するので、ここでは「解放しました」と言わない（支払い前に言うと誤解を生む）
+    if (result.redirected) return;
+    noticeDialog('解放しました', 'この教科の公式集は、これ以降ずっと無料で見られます。');
+  }, [unlockFormula, bundleCount, bundlePriceLabel, isLoggedIn, authLoading, router]);
 
   // セクション見出しと項目を1本のリストにならし、FlatListで仮想化できるようにする
   type Row =
@@ -355,12 +528,24 @@ export default function FormulasScreen() {
           item={row.item}
           accent={subjectInfo.color}
           bypassLock={bypassLock}
-          isUnlocked={unlockedIds.has(row.item.label)}
+          isUnlocked={unlockedIds.has(row.item.label) || groupUnlocked}
           priceLabel={priceLabel}
           productReady={productReady}
           purchasing={purchasingFigureId === row.item.label}
           onUnlock={handleUnlock}
           imageSize={imageSize}
+          bundleId={bundleId}
+          bundleCount={bundleCount}
+          bundleReady={bundleReady}
+          bundlePriceLabel={bundlePriceLabel}
+          bundlePurchasing={purchasingFigureId === bundleId}
+          onUnlockBundle={handleUnlockBundle}
+          boughtCount={boughtCount}
+          bundleItemCap={Math.min(FORMULA_BUNDLE_ITEM_CAP, bundleCount)}
+          fullPriceLabel={fullPriceLabel}
+          bundleOffPercent={bundleOffPercent}
+          reviewSubject={subject === '算数' ? 'sansu' : 'other'}
+          reviewExamType={examType}
         />
       ),
     [
@@ -373,6 +558,17 @@ export default function FormulasScreen() {
       purchasingFigureId,
       handleUnlock,
       imageSize,
+      bundleId,
+      bundleCount,
+      bundleReady,
+      bundlePriceLabel,
+      handleUnlockBundle,
+      groupUnlocked,
+      boughtCount,
+      fullPriceLabel,
+      bundleOffPercent,
+      subject,
+      examType,
     ],
   );
 
@@ -453,6 +649,9 @@ export default function FormulasScreen() {
       <FlatList
         style={styles.scroll}
         contentContainerStyle={styles.content}
+        // 一問一答の答えを書く欄がキーボードに隠れないようにする
+        automaticallyAdjustKeyboardInsets
+        keyboardShouldPersistTaps="handled"
         data={rows}
         keyExtractor={(r) => r.key}
         // 行の高さがばらばらなリストを少しずつ描画すると、スクロールのたびに
@@ -643,7 +842,68 @@ const styles = StyleSheet.create({
     minWidth: 160,
     alignItems: 'center',
   },
-  unlockBtnDisabled: { backgroundColor: '#C7B9A6' },
+  unlockBtnDisabled: { opacity: 0.55 },
+  teaserBox: {
+    alignSelf: 'stretch',
+    backgroundColor: '#FFFFFF',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#EBE4D8',
+    padding: 12,
+    marginBottom: 14,
+  },
+  teaserTitle: { fontSize: 12.5, fontWeight: '800', color: '#8B5A38', marginBottom: 4 },
+  teaserLine: { fontSize: 13.5, fontWeight: '700', color: '#2B2420', lineHeight: 20 },
+  teaserQuiz: { fontSize: 12.5, color: '#6E645C', marginTop: 6, lineHeight: 19 },
+  bundleCard: {
+    alignSelf: 'stretch',
+    alignItems: 'center',
+    borderWidth: 2,
+    borderRadius: 12,
+    padding: 14,
+    paddingTop: 20,
+    backgroundColor: '#FFFDF8',
+    marginBottom: 14,
+  },
+  bundleBadge: {
+    position: 'absolute',
+    top: -11,
+    paddingHorizontal: 12,
+    paddingVertical: 3,
+    borderRadius: 10,
+  },
+  bundleBadgeText: { color: '#FFFFFF', fontSize: 11.5, fontWeight: '800' },
+  bundleHeadline: { fontSize: 16, fontWeight: '800', color: '#2B2420', textAlign: 'center', marginBottom: 4 },
+  singleBox: { alignSelf: 'stretch', alignItems: 'center' },
+  singleProgressText: { fontSize: 12, color: '#6E645C', textAlign: 'center', lineHeight: 18, marginBottom: 6 },
+  progressTrack: {
+    alignSelf: 'stretch',
+    height: 6,
+    borderRadius: 3,
+    backgroundColor: '#E8DCC8',
+    marginBottom: 10,
+    overflow: 'hidden',
+  },
+  progressFill: { height: 6, borderRadius: 3 },
+  bundleBox: {
+    marginTop: 14,
+    paddingTop: 12,
+    borderTopWidth: 1,
+    borderTopColor: '#E8DCC8',
+    alignItems: 'center',
+    alignSelf: 'stretch',
+  },
+  bundleText: { fontSize: 12.5, color: '#6E645C', textAlign: 'center', marginBottom: 8, lineHeight: 19 },
+  bundleBtn: {
+    borderWidth: 2,
+    borderRadius: 8,
+    paddingVertical: 9,
+    paddingHorizontal: 18,
+    minWidth: 160,
+    alignItems: 'center',
+    backgroundColor: '#FFFFFF',
+  },
+  bundleBtnText: { fontSize: 14, fontWeight: '800' },
   unlockBtnText: { color: '#FFFFFF', fontSize: 14.5, fontWeight: '800' },
   formulaBox: {
     backgroundColor: '#FAF6EF',

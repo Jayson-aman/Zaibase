@@ -10,7 +10,6 @@ import {
   Animated,
   Dimensions,
   ActivityIndicator,
-  Alert,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useAuthUser } from '../../hooks/useAuthUser';
@@ -31,6 +30,7 @@ import { levelColor, levelLabel } from '../../data/vocab-meta';
 import { vocabWords } from '../../data/vocab_words';
 import { vocabUsageNotes } from '../../data/vocab-usage-notes';
 import { useFonts, BIZUDGothic_400Regular, BIZUDGothic_700Bold } from '@expo-google-fonts/biz-udgothic';
+import { alertCompat } from '../../utils/dialog';
 
 // 教科書体に近い、可読性重視のUD（ユニバーサルデザイン）フォント
 const TEXTBOOK_REGULAR = 'BIZUDGothic_400Regular';
@@ -87,7 +87,28 @@ const LISTEN_SPEED_OPTIONS: { key: ListenSpeed; label: string }[] = [
 // 無料で試せる単語数。英検対策と同じ「一部無料・続きは加入」方式に合わせる。
 // 全部無料だと、英単語Proの目玉として宣伝している内容が実際には無料で
 // 読めてしまい、宣伝と実態が食い違う。
-const FREE_WORD_LIMIT = 50;
+//
+// ⚠️ 無料分は「いま選んでいる絞り込みの先頭50語」ではなく、全語の中で固定する。
+//    絞り込みごとに先頭50語を数えると、レベル×種類を切り替えるだけで別の50語が
+//    出てきて、合計で数百語が無料のまま読めてしまっていた（2026/10/3 修正）。
+//    今は レベルごとに 単語3・熟語2、英会話は全体で5、のあわせて約50語だけが無料。
+const FREE_WORDS_PER_LEVEL = 3;
+const FREE_PHRASES_PER_LEVEL = 2;
+const FREE_CONVERSATIONS = 5;
+/** 無料で見られる語（全語の中で固定。絞り込みやシャッフルでは変わらない） */
+const FREE_WORD_SET: Set<VocabEntry> = (() => {
+  const out = new Set<VocabEntry>();
+  const seen = new Map<string, { w: number; p: number }>();
+  let conv = 0;
+  for (const w of vocabWords) {
+    if (w.category === 'conversation') { if (conv < FREE_CONVERSATIONS) { conv++; out.add(w); } continue; }
+    const c = seen.get(w.level) ?? { w: 0, p: 0 };
+    if (w.isPhrase) { if (c.p < FREE_PHRASES_PER_LEVEL) { c.p++; out.add(w); } }
+    else if (c.w < FREE_WORDS_PER_LEVEL) { c.w++; out.add(w); }
+    seen.set(w.level, c);
+  }
+  return out;
+})();
 
 export default function VocabScreen() {
   const router = useRouter();
@@ -125,13 +146,13 @@ export default function VocabScreen() {
     });
   }, [levelFilter, typeFilter]);
 
-  // 表示対象。未加入は「安定順の先頭 FREE_WORD_LIMIT 語」に限定してから並べ替える。
+  // 表示対象。未加入は「安定順の先頭の固定された無料分（FREE_WORD_SET）」に限定してから並べ替える。
   //
   // ⚠️ 先にシャッフルしてから slice すると、シャッフルのたびに違う50語が出てきて
   //    無料のまま全語を読めてしまう（＝有料の意味が無くなる）。必ず
   //    「絞り込み → 無料分を切り出す → その中だけ並べ替える」の順にすること。
   const visible = useMemo(() => {
-    const pool = hasVocabPro ? filtered : filtered.slice(0, FREE_WORD_LIMIT);
+    const pool = hasVocabPro ? filtered : filtered.filter((w) => FREE_WORD_SET.has(w));
     // Fisher-Yates シャッフル（偏りのない並べ替え）
     const a = [...pool];
     for (let i = a.length - 1; i > 0; i--) {
@@ -228,7 +249,7 @@ export default function VocabScreen() {
       // 何も起きない（無音のまま完了する）ので、押し間違いと区別できるよう
       // はっきり伝える。
       if (!ok) {
-        Alert.alert(
+        alertCompat(
           '読み上げできませんでした',
           'この端末の読み上げ機能を利用できませんでした。端末を再起動するか、しばらくしてからもう一度お試しください。'
         );
@@ -270,7 +291,7 @@ export default function VocabScreen() {
           <HomeButton variant="dark" />
         </View>
         <Text style={[s.title, fontsLoaded && { fontFamily: TEXTBOOK_BOLD }]}>英単語・英熟語</Text>
-        <Text style={s.sub}>単語4,800語+・熟語4,000+・英会話200　英検準2級〜1級・TOEIC800対応</Text>
+        <Text style={s.sub}>単語3,200語+・熟語3,200+・英会話200　英検準2級〜1級・TOEIC800対応</Text>
 
         <TouchableOpacity style={s.conversationEntryBtn} onPress={() => router.push('/conversation')}>
           <Text style={s.conversationEntryText}>🗣️ AIと英会話を練習する</Text>
@@ -315,10 +336,10 @@ export default function VocabScreen() {
           ))}
         </View>
 
-        {!hasVocabPro && filtered.length > FREE_WORD_LIMIT && (
+        {!subLoading && !hasVocabPro && filtered.length > visible.length && (
           <TouchableOpacity style={s.freeLimitBanner} onPress={() => setShowPaywall(true)} activeOpacity={0.85}>
             <Text style={s.freeLimitText}>
-              無料で{FREE_WORD_LIMIT}語まで試せます。全{filtered.length}語は英単語Proで解放 ▸
+              この絞り込みでは無料で{visible.length}語まで試せます。全{filtered.length}語は英単語Proで解放 ▸
             </Text>
           </TouchableOpacity>
         )}
@@ -326,7 +347,7 @@ export default function VocabScreen() {
         <View style={s.progressRow}>
           <Text style={s.progress}>
             {cardIndex + 1} / {visible.length}
-            {!hasVocabPro && filtered.length > FREE_WORD_LIMIT && `（無料分・全${filtered.length}語）`}　🔀ランダム出題
+            {!hasVocabPro && filtered.length > visible.length && `（無料分・全${filtered.length}語）`}　🔀ランダム出題
           </Text>
           <TouchableOpacity
             style={s.shuffleBtn}
@@ -469,9 +490,9 @@ export default function VocabScreen() {
           </View>
         </View>
 
-        {!hasVocabPro && (
+        {!subLoading && !hasVocabPro && (
           <TouchableOpacity style={s.promoBanner} onPress={() => setShowPaywall(true)}>
-            <Text style={s.promoText}>🔊 英単語Pro — 単語4,800+・熟語4,000+・英検5,160問・ネイティブ発音　{VOCAB_MONTHLY_LABEL}〜</Text>
+            <Text style={s.promoText}>🔊 英単語Pro — 単語3,200+・熟語3,200+・英検5,160問・ネイティブ発音　{VOCAB_MONTHLY_LABEL}〜</Text>
           </TouchableOpacity>
         )}
       </ScrollView>
@@ -514,7 +535,7 @@ function VocabPaywall({ onClose, onPurchased }: { onClose: () => void; onPurchas
       await purchaseProduct(product);
       onPurchased();
     } catch (err: any) {
-      if (!err?.userCancelled) {
+      if (!(err?.userCancelled || err?.errorCode === 1)) {
         alert('購入エラー。もう一度お試しください。');
       }
     } finally {
@@ -555,7 +576,7 @@ function VocabPaywall({ onClose, onPurchased }: { onClose: () => void; onPurchas
         {[
           '🔊 ネイティブ発音（OpenAI TTS・高音質）',
           '▶ 聞き流しモード（自動ページ送り）',
-          '📖 単語4,800語+ ＋ 熟語4,000+ ＋ 日常英会話200',
+          '📖 単語3,200語+ ＋ 熟語3,200+ ＋ 日常英会話200',
           '🇬🇧 英検対策 2・3・4級 5,160問（リスニング音声つき）',
           '🗣️ AIと英会話練習',
           '🎓 英検準2級〜1級・TOEIC800レベル対応',

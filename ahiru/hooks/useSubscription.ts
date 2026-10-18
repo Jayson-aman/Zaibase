@@ -4,27 +4,38 @@ import {
   getCustomerInfo,
   tierFromCustomerInfo,
   onEntitlementChanged,
+  ensureForegroundRefresh,
   SubscriptionTier,
 } from '../services/subscription';
+import { planStatusFromCustomerInfo, type PlanStatus } from '../utils/planStatus';
 
 export interface SubscriptionState {
   tier: SubscriptionTier;
   loading: boolean;
   isPro: boolean;
   isMax: boolean;
+  /** 契約の状態（お試し中・終了間近・期限切れなど）。画面に案内を出すのに使う */
+  plan: PlanStatus;
 }
 
 export function useSubscription(): SubscriptionState {
   const [tier, setTier] = useState<SubscriptionTier>('free');
+  const [plan, setPlan] = useState<PlanStatus>(() => planStatusFromCustomerInfo(null));
+  const apply = (info: unknown) => {
+    setTier(tierFromCustomerInfo(info));
+    setPlan(planStatusFromCustomerInfo(info));
+  };
   const [loading, setLoading] = useState(true);
   const mounted = useRef(true);
 
   useEffect(() => {
     mounted.current = true;
+    // 前面に戻ったときの取り直しを、アプリ全体で1回だけ登録する
+    ensureForegroundRefresh();
 
     getCustomerInfo()
       .then((info) => {
-        if (mounted.current) setTier(tierFromCustomerInfo(info));
+        if (mounted.current) apply(info);
       })
       .catch(() => {})
       .finally(() => {
@@ -41,7 +52,7 @@ export function useSubscription(): SubscriptionState {
         try {
           const Purchases = (await import('react-native-purchases')).default;
           const listener = (info: Parameters<typeof Purchases.addCustomerInfoUpdateListener>[0] extends (arg: infer A) => void ? A : never) => {
-            if (mounted.current) setTier(tierFromCustomerInfo(info));
+            if (mounted.current) apply(info);
           };
           if (disposed) return;
           Purchases.addCustomerInfoUpdateListener(listener);
@@ -56,7 +67,7 @@ export function useSubscription(): SubscriptionState {
 
     // 購入・復元の直後にも即座に反映する（Web版にはネイティブの更新リスナーが無いため）
     const unsubscribe = onEntitlementChanged((info) => {
-      if (mounted.current) setTier(tierFromCustomerInfo(info));
+      if (mounted.current) apply(info);
     });
 
     return () => {
@@ -72,5 +83,6 @@ export function useSubscription(): SubscriptionState {
     loading,
     isPro: tier === 'pro' || tier === 'max',
     isMax: tier === 'max',
+    plan,
   };
 }

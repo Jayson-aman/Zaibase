@@ -41,6 +41,7 @@ have a headache のように a を付けるのがふつうです。ただし hav
       },
       {
         heading: '「気分が悪い」を伝える feel の使い方',
+        mangaId: 'new20_e5_eigo_01_manga',
         body: `症状の名前がはっきりしないときや、全体的な気分の悪さを伝えるときは feel（感じる）を使います。feel は動詞のあとに形容詞をそのまま置く点が特徴です。
 
 ■ feel＋形容詞
@@ -91,6 +92,7 @@ have a headache のように a を付けるのがふつうです。ただし hav
     sections: [
       {
         heading: '年齢をたずねる・答える',
+        mangaId: 'new20_e5_eigo_02_manga',
         body: `年齢をたずねるときは How old are you?（あなたは何歳ですか）という決まった疑問文を使います。old は「古い」という意味だけでなく「〜歳の」という意味でも使われる点がポイントです。
 
 ■ たずね方と答え方
@@ -157,6 +159,7 @@ have my birthday（誕生日を迎える）という言い方も使われます�
     sections: [
       {
         heading: 'be good at / be poor at の基本の形',
+        mangaId: 'new20_e5_eigo_03_manga',
         body: `「〜が得意だ」を表す最も基本的な言い方が be good at 〜 です。at は「〜の点において」という意味を持つ前置詞で、good at で「〜の点において上手だ」というイメージになります。
 
 ■ at のあとに名詞を置く場合
@@ -225,6 +228,7 @@ be good at のほかに、be a good 〜er（〜する人）という名詞を使
     sections: [
       {
         heading: 'becauseで理由をつなぐ文の作り方',
+        mangaId: 'new20_e5_eigo_04_manga',
         body: `好きな理由を説明するときの基本の形は「I like 〜.（私は〜が好きです）」のあとに「because ….（なぜなら…だからです）」を続ける形です。because は「なぜなら〜だから」という意味の接続詞で、あとには〈主語＋動詞〉のそろった文が続きます。
 
 ■ 基本の型
@@ -235,7 +239,7 @@ be good at のほかに、be a good 〜er（〜する人）という名詞を使
 because の前にコンマは付けません。I like soccer, because it is fun. とはせず、I like soccer because it is fun. とそのまま続けます。
 
 ■ 文を2つに分けて書くこともできる
-書き言葉では、Because で文を始めて理由だけを独立させる書き方もよく使われます。
+会話では、Because で文を始めて理由だけを答える形もよく使われます。
 ・Why do you like summer?（なぜ夏が好きなのですか）
 ・Because I can swim in the sea.（なぜなら海で泳げるからです）
 このように、質問の答えとして Because 〜. だけで答えるのは自然な会話表現です。作文で理由を1文にまとめるときは I like 〜 because …. の形、対話文で理由だけ答えるときは Because …. の形、と使い分けましょう。
@@ -292,6 +296,7 @@ first（第一に）・second（第二に）・also（また）・too（〜も�
     sections: [
       {
         heading: '朝の動作を表す熟語',
+        mangaId: 'new20_e5_eigo_05_manga',
         body: `一日の日課を説明する文章では、決まった動詞のかたまり（熟語）が次々に出てきます。まず朝の動作から順番に整理しましょう。日課はふだんくり返される習慣なので、現在形の文で表すのが基本です。
 
 ■ 朝の流れ
@@ -324,7 +329,7 @@ first（第一に）・second（第二に）・also（また）・too（〜も�
 ・take a bath（お風呂に入る）— bath（バス、風呂）、take a shower（シャワーを浴びる）
 ・watch TV（テレビを見る）
 ・read a book（本を読む）
-・go to bed（寝る、ベッドに入る）— sleep（眠る）とのちがいに注意。go to bed は「寝床に入る」動作、sleep は「実際に眠っている」状態。I go to bed at nine, but I can't sleep soon.（9時に寝床に入るが、すぐには眠れない）のように区別される。
+・go to bed（寝る、ベッドに入る）— sleep（眠る）とのちがいに注意。go to bed は「寝床に入る」動作、sleep は「実際に眠っている」状態。I go to bed at nine, but I can't fall asleep right away.（9時に寝床に入るが、すぐには眠れない）のように区別される。
 
 ■ 順序を表すつなぎ語
 一日の流れを文章として説明するときは、時間の順番を示す語を使うと分かりやすくなります。
@@ -365,6 +370,7 @@ first（まず）・then（それから）・after that（そのあと）・fina
     sections: [
       {
         heading: '週末の過ごし方をたずねる・答える',
+        mangaId: 'new20_e5_eigo_06_manga',
         body: `週末の過ごし方をたずねるときは What do you do on weekends?（あなたは週末に何をしますか）という言い方をします。日課をたずねるときと同じく、ふだんの習慣について聞いているので、現在形の一般動詞の疑問文（Do you 〜? / What do you 〜?）を使います。
 
 ■ たずね方と答え方
@@ -374,7 +380,7 @@ first（まず）・then（それから）・after that（そのあと）・fina
 ・On weekends, I clean my room and do my homework.（週末は部屋をそうじして宿題をします）
 
 ■ 「週末に」の言い方
-「週末に」は on weekends（複数形、週末というものを一般的に指す）または on the weekend（今度の週末、または「週末には」という一般的な意味の両方で使われる）と言います。曜日と同じように on を使う点に注意しましょう。in weekends や at weekends とは言いません。
+「週末に」は on weekends（複数形、週末というものを一般的に指す）または on the weekend（今度の週末、または「週末には」という一般的な意味の両方で使われる）と言います。曜日と同じように on を使う点に注意しましょう。in weekends とは言いません（イギリス英語では at the weekend と言うこともあります）。
 
 ■ 未来の週末の予定をたずねる
 「今度の週末は何をする予定ですか」とたずねるときは What are you going to do this weekend? のように be going to（〜する予定だ）を使います。答えるときも同じ形にそろえます。
@@ -428,6 +434,7 @@ first（まず）・then（それから）・after that（そのあと）・fina
     sections: [
       {
         heading: '天気を伝える文の基本形と天気を表す語',
+        mangaId: 'new20_e5_eigo_07_manga',
         body: `天気を表す文では、天候そのものを主語にするのではなく、It（それ）を主語にした特別な形を使います。この It は「それ」という意味を持たない、天候・時刻・明暗などを表すときだけに使う特別な it です。
 
 ■ 天気を表す基本の文
@@ -490,6 +497,7 @@ if のあとの文は未来のことでも現在形で書く（if it rains で�
     sections: [
       {
         heading: '手紙の基本の型：書き出しから本文へ',
+        mangaId: 'new20_e5_eigo_08_manga',
         body: `英語の手紙には、日本語の「拝啓」「敬具」のような決まった型があります。中学受験の読解問題では、この型を知っているだけで文章の構成がすばやくつかめるようになります。
 
 ■ 書き出し（あいさつ）
@@ -571,10 +579,11 @@ Dear のあとには必ずコンマ（,）を付けます。ピリオドでは�
 ・She is angry with her brother.（彼女は弟に怒っています）with＋人
 ・I'm afraid of the dark.（私は暗いのがこわいです）of＋名詞
 
-このように、感情の形容詞のあとに続く前置詞（because, about, with, of）は形容詞によって決まっているものが多いため、セットで覚えるのが効率的です。`,
+このように、感情の形容詞のあとに続く前置詞（about, with, of など）は形容詞によって決まっているものが多いため、セットで覚えるのが効率的です。`,
       },
       {
         heading: '-ed形と-ing形のちがい：interested と interesting',
+        mangaId: 'new20_e5_eigo_09_manga',
         body: `感情を表す語の中には、interested／interesting のように -ed で終わる形と -ing で終わる形の両方がある一群があります。この2つは似ているようで、使う相手がまったく違います。
 
 ■ -ed形＝「（人が）〜と感じる」
@@ -626,6 +635,7 @@ Dear のあとには必ずコンマ（,）を付けます。ピリオドでは�
     sections: [
       {
         heading: 'さそいの文の種類と、受けるときの返事',
+        mangaId: 'new20_e5_eigo_10_manga',
         body: `友達を何かにさそうときには、いくつかの決まった言い方があります。まずはさそいの文の形を確認しましょう。
 
 ■ さそいの文
@@ -642,7 +652,7 @@ Dear のあとには必ずコンマ（,）を付けます。ピリオドでは�
 ・That sounds like fun.（楽しそうですね）
 ・I'd love to!（ぜひそうしたいです！）would love to（とても〜したい）
 
-Yes, let's. はLet's ~.の文にだけ使う特別な答え方で、Shall we ~?やWhy don't we ~?にはそのままYes, let's.を使ってもよいですが、Sure.やSounds good.のほうがより自然に幅広く使えます。`,
+Yes, let's. は Let's ~. や Shall we ~? に対する決まった答え方で、Why don't we ~? にも使えます。ただし、Sure. や Sounds good. のほうがより自然に幅広く使えます。`,
       },
       {
         heading: '丁寧に断るときの言い方',
@@ -876,7 +886,7 @@ tooやalsoが出てきたときは、直前に述べられた人物と同じ動�
 ・What to bring:（何を持ってくるか）— 例）What to bring: a lunch box, a water bottle, a towel（お弁当、水筒、タオル）
 ・What to wear:（何を着るか）— 例）What to wear: your gym clothes（体操服）
 
-このように、招待状と同じくWhen・Where・What to bring・What to wearという見出し（heading）ごとに情報が整理されているため、見出しを頼りに必要な箇所だけをすばやく探す「スキャニング」の読み方が特に有効です。`,
+このように、When・Where・What to bring・What to wearという見出し（heading）ごとに情報が整理されているため、見出しを頼りに必要な箇所だけをすばやく探す「スキャニング」の読み方が特に有効です。`,
       },
       {
         heading: '集合・持ち物・注意事項の表現',
@@ -1026,6 +1036,21 @@ tooやalsoが出てきたときは、直前に述べられた人物と同じ動�
 
 ■ グラフ読解のコツ
 このタイプの読解問題では、「一番多い項目」「一番少ない項目」「2位の項目」「全体の何割か」という4つの角度から質問されることが多いです。文章中に出てくる数字と項目名を丁寧にメモしながら読み、the most popular（最も人気）とthe second most popular（2番目に人気）を取りちがえないように注意しましょう。`,
+      },
+      {
+        heading: 'なぜ人数・順位・割合の三つの言い方を分けて覚えるのか',
+        mangaId: 'new20_e5_eigo_16_manga',
+        body: `アンケートの結果は、**人数**（Ten students like math the best.）、**順位**（Soccer is the most popular.／The second most popular is science.）、**割合**（Half of the students 〜／Most students 〜／A few students 〜）の三つの言い方で発表されます。設問は四つの角度（一番多い項目・一番少ない項目・2位の項目・全体の何割か）から作られるので、三つの言い方を分けて覚えておくと、どの表現がどの設問に対応するかがすぐ分かります。
+
+the most popular と the second most popular を取りちがえやすいのは、どちらも most を含むからです。second が付けば「2番目」です。グラフや表とセットで出るときは、文の数字（人数）と項目（教科名）を一つずつ対応させながら読みます。
+
+■ 確かめのしかた
+①たずね方：What's your favorite 〇〇?／What 〇〇 do you like the best?／Which 〇〇 do you like the best, A, B, or C?
+②**人数**：〇 students like 〜 the best.／〇 students chose 〜.／Nobody chose 〜.
+③**順位**：the most popular（1位）、the second most popular（2位）、comes in third place（3位）。second を見落としていないか。
+④**割合**：half of（半分）、most（ほとんど）、a few（少数）、no one（だれも〜ない）。数字と項目名をメモしながら読む。
+
+★ ここがポイント：結果は**人数・順位・割合**の三つの言い方で発表され、設問もそれに対応して出る。**the most popular（1位）と the second most popular（2位）**を取りちがえない。`,
       },
     ],
   },

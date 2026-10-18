@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { rich } from './RichText';
 import {
   View,
   Text,
@@ -19,10 +20,13 @@ import { Question, subjectInfo } from '../data/questions-meta';
 import SubjectIcon from './SubjectIcon';
 import { getHistoryThemeLabel } from '../data/images';
 import { explanationText, hintText } from '../utils/explanation';
+import ExplanationSlides from './ExplanationSlides';
 import { getQuickTrick } from '../data/quick-tricks';
 import { getSubjectThemeLabel, getSubjectIllustration } from '../data/subjectImages';
 import { getFigure } from '../data/figures';
+import { ALL_COURSES } from '../data/courses';
 import FigureView from './FigureView';
+import { maskFigureForProblem, FIGURE_IS_ANSWER } from '../utils/figure-mask';
 import { getQuestionVideo } from '../data/videos';
 import VideoPlayer from './VideoPlayer';
 
@@ -33,12 +37,29 @@ type Props = {
   choices?: string[];
   onChoiceSelect?: (correct: boolean) => void;
   isPro?: boolean;
+  /**
+   * 答えを書く前にカードをめくって答えを見てしまわないようにする。
+   * 自分で答えを書く方式にしたので、書き終えるまでは答え側に返せない。
+   */
+  lockFlip?: boolean;
+  /**
+   * 答え合わせをしたら、タップを待たずに答え側を見せる。
+   * カードは自分で表裏の状態を持っているので、外から開けるようにしておく。
+   */
+  forceReveal?: boolean;
+  /**
+   * 解説（スライド・ヒント・はやく解くコツ）をカードの中に出さない。
+   * 答え合わせの結果の枠（○ 正解！／✗ 不正解！）の下に、同じ解説を出すときに使う（重複を避ける）。
+   */
+  hideExplanation?: boolean;
 };
 
 const { width } = Dimensions.get('window');
 
 function extractTrailingUnit(text: string): string {
-  const m = text.trim().match(/(cm²|㎠|cm³|km²|m²|㎡|mm|km|cm|m|kg|g|[%％]|円|羽|本|個|匹|頭|枚|冊|杯|台|艘|門|度|℃|時間|分|秒)$/u);
+  // 数字の直後にある単位だけを単位とみなす。
+  // （語の終わりの g・度・門・分 まで単位とみなすと、looking が lookin に、「こう門」が「こう」になる）
+  const m = text.trim().match(/[0-9０-９][0-9０-９.,/]*\s*(cm²|㎠|cm³|km²|m²|㎡|mm|km|cm|m|kg|g|[%％]|円|羽|本|個|匹|頭|枚|冊|杯|台|艘|門|度|℃|時間|分|秒)$/u);
   return m ? m[1] : '';
 }
 
@@ -56,8 +77,9 @@ function fitText(text: string, max: number, min: number, longAt = 90) {
   return { fontSize, lineHeight: Math.round(fontSize * 1.6) };
 }
 
-export default function QuizCard({ question, onReveal, choices, onChoiceSelect, isPro = false }: Props) {
-  const [revealed, setRevealed] = useState(false);
+export default function QuizCard({ question, onReveal, choices, onChoiceSelect, isPro = false, lockFlip = false, forceReveal = false, hideExplanation = false }: Props) {
+  const [flipped, setFlipped] = useState(false);
+  const revealed = flipped || forceReveal;
   const [selectedChoice, setSelectedChoice] = useState<string | null>(null);
   const info = subjectInfo[question.subject];
   // 単元テーマ判定（理科・社会）：問題文＋解説からキーワードで自動分類
@@ -70,13 +92,13 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
   const figure = getFigure(question.id);
   // 図形化しにくい理科・社会の単元（植物のつくり・人体・時代の様子など）はAI生成の単元イラストで補う。
   // ベクター図形がある問題は図の方が正確なので、そちらを優先する。
-  const illustration = figure == null ? getSubjectIllustration(question.subject, themeText) : null;
+  const illustration = figure == null || FIGURE_IS_ANSWER.has(question.id) ? getSubjectIllustration(question.subject, themeText) : null;
   // 解説動画（レジストリ or 問題データの videoUrl）。あれば解答側で再生。
   const video = getQuestionVideo(question.id, question.videoUrl);
 
   function handlePress() {
-    if (choices != null || revealed) return;
-    setRevealed(true);
+    if (choices != null || revealed || lockFlip) return;
+    setFlipped(true);
     onReveal?.();
   }
 
@@ -89,6 +111,14 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
 
   const choiceLabels = ['A', 'B', 'C', 'D'];
 
+  // 学校別の問題には「学校名・難しさ」を出す（実際の過去問ではなく、その学校の出題傾向をもとにした問題であることが分かるように）
+  const schoolInfo =
+    question.course && question.course !== 'general' && question.course !== 'koko-general'
+      ? ALL_COURSES.find((c) => c.key === question.course)
+      : undefined;
+  const levelLabel =
+    question.difficulty === 'advanced' ? '難関' : question.difficulty === 'standard' ? '標準' : '基礎';
+
   // 長い問題文・解答ほど小さくして、折り返しで読みにくくならないようにする
   const qFit = fitText(question.question, 21, 17);
   const aFit = fitText(question.answer, 25, 17, 70);
@@ -97,7 +127,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
   return (
     <TouchableOpacity
       onPress={handlePress}
-      activeOpacity={choices != null ? 1 : 0.9}
+      activeOpacity={choices != null || lockFlip ? 1 : 0.9}
       style={[styles.card, choices == null && revealed && styles.cardRevealed]}
     >
       <View style={styles.subjectChipRow}>
@@ -105,6 +135,13 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
           <SubjectIcon subject={question.subject} size={16} color="#FFFFFF" strokeWidth={2.2} />
           <Text style={styles.subjectChipText}>{info.name}</Text>
         </View>
+        {schoolInfo != null && (
+          <View style={styles.historyChip}>
+            <Text style={styles.historyChipText}>
+              🏫 {schoolInfo.name}型・{levelLabel}
+            </Text>
+          </View>
+        )}
         {historyLabel != null && (
           <View style={styles.historyChip}>
             <Text style={styles.historyChipText}>
@@ -135,9 +172,9 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             </View>
           )}
           <Text style={styles.questionLabel}>問 題</Text>
-          <Text style={[styles.questionTextChoice, qFit]}>{question.question}</Text>
-          {figure != null ? (
-            <FigureView figure={figure} />
+          <Text style={[styles.questionTextChoice, qFit]}>{rich(question.question, { size: (qFit as { fontSize?: number }).fontSize ?? 18, color: '#221C18', bold: true })}</Text>
+          {figure != null && !FIGURE_IS_ANSWER.has(question.id) ? (
+            <FigureView figure={maskFigureForProblem(figure, question)} hideAnswerText />
           ) : illustration != null ? (
             <Image source={illustration} style={styles.subjectImage} resizeMode="cover" />
           ) : question.figureDescription != null ? (
@@ -149,7 +186,27 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             </View>
           ) : null}
           {(() => {
-            const stripLabel = (s: string) => s.replace(/^[A-D]\s+/, '');
+            // 選択肢が「① read」「ア 〜」のように自前のラベルで始まるときは、A〜Dの記号をかさねない
+            // （「A ① read」と二重に見える）。全部の選択肢がそろって同じ種類のラベルで始まるときだけ、
+            // そのラベルを記号として使い、本文からは外す。
+            const OWN = /^([①②③④⑤]|[ア-オ])[\s.．:：)）、]\s*/u;
+            const ownLabels = choices.map((c) => c.trim().match(OWN)?.[1] ?? null);
+            const useOwn =
+              choices.length >= 2 &&
+              ownLabels.every((l) => l != null) &&
+              new Set(ownLabels).size === choices.length;
+            // 「A H2O」「B CO2」のように全部の選択肢が別々の A〜D で始まるときだけ、その記号を外す。
+            // 1つずつ外すと、英語の選択肢「A sandwich.」「A recipe book.」の冠詞 A まで消えて
+            // 「sandwich.」と表示されてしまう。
+            const LETTER = /^([A-D])\s+/;
+            const letterLabels = choices.map((c) => c.trim().match(LETTER)?.[1] ?? null);
+            const useLetter =
+              !useOwn &&
+              choices.length >= 2 &&
+              letterLabels.every((l) => l != null) &&
+              new Set(letterLabels).size === choices.length;
+            const stripLabel = (s: string) => (useOwn ? s.replace(OWN, '') : useLetter ? s.replace(LETTER, '') : s);
+            const shownLabel = (i: number): string => (useOwn ? (ownLabels[i] as string) : choiceLabels[i]);
             const units = choices.map((c) => extractTrailingUnit(stripLabel(c)));
             const first = units[0] ?? '';
             const sharedUnit = first !== '' && units.every((u) => u === first) ? first : '';
@@ -190,7 +247,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
                           <Text style={[
                             styles.choiceLetterText,
                             showResult && (isCorrect || isSelected) && styles.choiceLetterTextResult,
-                          ]}>{choiceLabels[i]}</Text>
+                          ]}>{shownLabel(i)}</Text>
                         </View>
                         <Text
                           style={[
@@ -199,7 +256,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
                             showResult && isSelected && !isCorrect && styles.choiceTextWrong,
                           ]}
                           numberOfLines={3}
-                        >{displayText}</Text>
+                        >{rich(displayText, { size: 17, color: '#221C18' })}</Text>
                         {showResult && isCorrect && (
                           <Text style={styles.choiceCorrectMark}>✓</Text>
                         )}
@@ -217,11 +274,9 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
           {selectedChoice != null && (question.explanation != null || question.hint != null) && (
             <View style={styles.hintBox}>
               <Text style={styles.hintLabel}>📖 解説</Text>
-              <Text style={styles.hintText}>
-                {explanationText(question)}
-              </Text>
+              <ExplanationSlides key={question.id} q={question} />
               {hintText(question) !== '' && (
-                <Text style={styles.hintText}>💡 {hintText(question)}</Text>
+                <Text style={styles.hintText}>💡 {rich(hintText(question))}</Text>
               )}
               {getQuickTrick(question.id) != null && (
                 <View style={styles.trickBox}>
@@ -243,7 +298,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             </View>
           )}
           <Text style={styles.questionLabel}>問 題</Text>
-          <Text style={[styles.questionText, qFit]}>{question.question}</Text>
+          <Text style={[styles.questionText, qFit]}>{rich(question.question, { size: (qFit as { fontSize?: number }).fontSize ?? 20, color: '#221C18', bold: true })}</Text>
           {/*
             小問（問1〜問4）。これを出していなかったため、たとえば
             「1辺が6cmの立方体の容器があります。1L＝1000cm³とします。」だけが
@@ -251,17 +306,8 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             答えの側には「問1 216cm³ / 問2 216cm² …」と出るので、
             見えない設問への答えだけが並ぶことになっていた（89問・小問353問）。
           */}
-          {question.subQuestions != null && question.subQuestions.length > 0 && (
-            <View style={styles.subList}>
-              {question.subQuestions.map((sub, i) => (
-                <Text key={i} style={styles.subPrompt}>
-                  {sub.label} {sub.prompt}
-                </Text>
-              ))}
-            </View>
-          )}
-          {figure != null ? (
-            <FigureView figure={figure} />
+          {figure != null && !FIGURE_IS_ANSWER.has(question.id) ? (
+            <FigureView figure={maskFigureForProblem(figure, question)} hideAnswerText />
           ) : illustration != null ? (
             <Image source={illustration} style={styles.subjectImage} resizeMode="cover" />
           ) : question.figureDescription != null ? (
@@ -280,11 +326,15 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
               ))}
             </View>
           )}
-          <View style={styles.tapHint}>
-            <Text style={styles.tapHintText}>
-              {question.isWritten ? '自分の言葉で説明してから、タップして模範解答を見る 👆' : 'タップして答えを見る 👆'}
-            </Text>
-          </View>
+          {/* 書いて答える問題（lockFlip）は、このカードをタップしても答えは出ない（下の欄に書いて答え合わせする）。
+              押せないボタンを出すと、押しても何も起きない上に、その分だけ縦にも長くなる。 */}
+          {!lockFlip && (
+            <View style={styles.tapHint}>
+              <Text style={styles.tapHintText}>
+                {question.isWritten ? '自分の言葉で説明してから、タップして模範解答を見る 👆' : 'タップして答えを見る 👆'}
+              </Text>
+            </View>
+          )}
         </View>
       ) : (
         <View style={styles.answerSide}>
@@ -293,9 +343,9 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
               {question.subQuestions.map((sq) => (
                 <View key={sq.label} style={styles.subQAnswerRow}>
                   <Text style={styles.subQAnswerLabel}>{sq.label}　{sq.prompt}</Text>
-                  <Text style={styles.subQAnswerText}>{sq.answer}</Text>
+                  <Text style={styles.subQAnswerText}>{rich(sq.answer, { size: 16, color: '#00694A', bold: true })}</Text>
                   {sq.explanation != null && (
-                    <Text style={styles.subQAnswerExpl}>{sq.explanation}</Text>
+                    <Text style={styles.subQAnswerExpl}>{rich(sq.explanation)}</Text>
                   )}
                 </View>
               ))}
@@ -304,23 +354,9 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             <>
               <Text style={styles.answerLabel}>{question.isWritten ? '模範解答' : '答 え'}</Text>
               <Text style={[styles.answerText, aFit, { textAlign: answerAlign }]}>
-                {question.answer}
+                {rich(question.answer, { size: (aFit as { fontSize?: number }).fontSize ?? 25, color: '#221C18', bold: true })}
               </Text>
             </>
-          )}
-          {/* 小問ごとの答えと解説。まとめた1行だけでは、どの問がどうしてそうなるのか分からない */}
-          {question.subQuestions != null && question.subQuestions.length > 0 && (
-            <View style={styles.subAnswerList}>
-              {question.subQuestions.map((sub, i) => (
-                <View key={i} style={styles.subAnswerBox}>
-                  <Text style={styles.subAnswerLabel}>{sub.label}</Text>
-                  <Text style={styles.subAnswerText}>{sub.answer}</Text>
-                  {sub.explanation != null && sub.explanation !== '' && (
-                    <Text style={styles.subAnswerExpl}>{sub.explanation}</Text>
-                  )}
-                </View>
-              ))}
-            </View>
           )}
           {question.isWritten && question.rubricPoints != null && question.rubricPoints.length > 0 && (
             <View style={styles.rubricBox}>
@@ -339,14 +375,12 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             <Image source={illustration} style={styles.subjectImage} resizeMode="cover" />
           ) : null}
           {video != null && <VideoPlayer url={video.url} title={video.title} />}
-          {(question.explanation != null || question.hint != null) && (
+          {!hideExplanation && (question.explanation != null || question.hint != null) && (
             <View style={styles.hintBox}>
               <Text style={styles.hintLabel}>📖 解説</Text>
-              <Text style={styles.hintText}>
-                {explanationText(question)}
-              </Text>
+              <ExplanationSlides key={question.id} q={question} />
               {hintText(question) !== '' && (
-                <Text style={styles.hintText}>💡 {hintText(question)}</Text>
+                <Text style={styles.hintText}>💡 {rich(hintText(question))}</Text>
               )}
               {getQuickTrick(question.id) != null && (
                 <View style={styles.trickBox}>
@@ -688,7 +722,9 @@ const styles = StyleSheet.create({
     color: '#221C18',
     textAlign: 'center',
     lineHeight: 40,
-    marginBottom: 20,
+    // 分数（縦表示）が行の下で切れないよう、文字の枠の下に余白を持たせる（見た目の間隔は同じ）
+    paddingBottom: 14,
+    marginBottom: 6,
     fontFamily: SERIF,
   },
   passageBox: {
@@ -769,6 +805,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     color: '#78350F',
     lineHeight: 24,
+    marginTop: 12,
   },
   trickBox: {
     marginTop: 10,

@@ -108,7 +108,7 @@ export const lessonFigsKokoEigoExt11: Record<string, Figure> = {
     max: 17,
     step: 1,
     points: [
-      { x: 8, label: 'homeroom 8:30' },
+      { x: 8.5, label: 'homeroom 8:30' },
       { x: 9, label: 'first period' },
       { x: 12, label: 'lunch' },
       { x: 15, label: 'school is over' },

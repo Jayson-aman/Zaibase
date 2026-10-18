@@ -58,6 +58,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
       },
       {
         heading: '2. ねじれの位置を見抜くコツと、平面の常識が通じない例',
+        mangaId: 'koko_math_s306_manga',
         body: `ねじれの位置の辺は「基準の辺と、頂点を1つも共有しない辺のうち、平行でないもの」と言い換えられる。この言い換えを使うと、頂点の記号を見るだけで機械的に候補が絞れる。
 
 例）辺ABを基準にするとき、記号にAもBも含まない辺だけを書き出す。直方体ABCD−EFGHなら、CD、CG、DH、EF、FG、GH、EH の7本。この7本のうち、ABと平行なDC、EF、HGの3本を除いた CG、DH、FG、EH の4本がねじれの位置である。
@@ -135,6 +136,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
       },
       {
         heading: '2. 直線と平面の垂直―「2直線に垂直」が条件',
+        mangaId: 'koko_math_s307_manga',
         body: `直線ℓが平面Pと垂直であるとは、ℓがPと交わり、その交点を通るP上のすべての直線とℓが垂直になることをいう。しかし「すべての直線」を確かめるのは不可能なので、実際には次の判定条件を使う。
 
 ■ 垂直の判定条件
@@ -385,6 +387,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
       },
       {
         heading: '2. 正多面体5種類とオイラーの多面体定理',
+        mangaId: 'koko_math_s310_manga',
         body: `すべての面が合同な正多角形で、どの頂点にも同じ数の面が集まる凸多面体を正多面体という。正多面体はたった5種類しかない。
 
 ■ 5種類の一覧（面の形／面・頂点・辺）
@@ -475,6 +478,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
       },
       {
         heading: '2. 投影図から立体を特定する手順',
+        mangaId: 'koko_math_s311_manga',
         body: `投影図を見て立体を答える問題では、次の順に読むと迷わない。
 
 ■ 手順1　平面図（下の図）で底面の形をつかむ
@@ -629,6 +633,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 向かい合う面を機械的に決める',
+        mangaId: 'koko_math_s313_manga',
         figureId: 'lf_kokomathext09_313',
         body: `立方体の展開図の問題は、ほとんどが「向かい合う面はどれか」に帰着する。感覚で組み立てず、次の2つのルールで機械的に処理する。
 
@@ -897,6 +902,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 円柱の展開図―よこは直径ではなく円周',
+        mangaId: 'koko_math_s316_manga',
         body: `円柱を切り開くと、長方形1枚（側面）と円2枚（上下の底面）になる。
 
 ■ 側面の長方形
@@ -1211,7 +1217,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
 　表面積＝4000＋800＝4800 cm²
 （m²で答えるなら 4800÷10000＝0.48 m²）
 
-⚠ 注意：高さを0.5のまま使って 80×0.5＝40 cm² としてしまうと、答えは840 cm²となり、正解の6分の1以下になる。計算を始める前に単位を1つに統一する習慣をつける。
+⚠ 注意：高さを0.5のまま使って 80×0.5＝40 cm² としてしまうと、答えは840 cm²となり、正解のおよそ6分の1にしかならない。計算を始める前に単位を1つに統一する習慣をつける。
 
 ■ 容積とリットル
 容器の問題では、容積をLで答えさせることがある。1L＝1000 cm³ なので、体積が4500 cm³ なら4.5Lである。1000で割るのか掛けるのか迷ったら、「1辺10cmの立方体＝1000cm³＝1L」を思い出すとよい。
@@ -1287,6 +1293,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
       },
       {
         heading: '2. 直径・半径の取り違えを防ぐ',
+        mangaId: 'koko_math_s320_manga',
         body: `円柱の問題で最も多いミスは、直径を半径として使ってしまうことである。体積では r が2乗されるので、直径をそのまま入れると答えは4倍になる。
 
 ■ 直径が与えられた例
@@ -1373,6 +1380,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
       },
       {
         heading: '2. おもりを沈める・容器を傾ける',
+        mangaId: 'koko_math_s321_manga',
         body: `■ おもりを完全に沈めたとき
 水中に完全に沈めた物は、その体積の分だけ水を押しのける。押しのけられた水は上に行くしかないので、水面は次の分だけ上がる。
 　上がる高さ ＝（沈めた物の体積）÷（容器の底面積）
@@ -1440,6 +1448,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 3分の1の意味と使い方',
+        mangaId: 'koko_math_s322_manga',
         figureId: 'lf_kokomathext09_322',
         body: `底面が同じで高さも同じ「柱」と「すい」を用意して、すいに入れた水を柱に移すと、ちょうど3杯で柱がいっぱいになる。これがすい体の体積が3分の1である理由である（厳密な証明は高校で扱う）。
 
@@ -1532,6 +1541,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 中心角の公式を自分で導く',
+        mangaId: 'koko_math_s323_manga',
         figureId: 'lf_kokomathext09_323',
         body: `円すいの側面を切り開くと、半径が母線 l のおうぎ形になる。このおうぎ形の弧は、もとの立体では底面の円の縁にぴったり巻きついていたので、
 
@@ -1688,9 +1698,9 @@ export const kokoMathExt09Lessons: Lesson[] = [
       },
       {
         question: '母線が8cm、表面積が33π cm²の円すいの底面の半径を求めなさい（円周率はπ）。',
-        wrongAnswer: '約1.3 cm（33π÷(8π)を計算した値）',
+        wrongAnswer: '約1.3 cm（33÷(8π)を計算した値）',
         trapExplanation:
-          '表面積を側面積だけだと思いこみ、πrl＝33π から r＝33/8≒4.1 としたり、逆に33π÷(8π)として1.3程度の値を出したりしてしまう。表面積には底面 πr² が含まれるので、rについての二次方程式になる。',
+          '表面積を側面積だけだと思いこみ、πrl＝33π から r＝33/8≒4.1 としたり、πを払わずに 33÷(8π) として1.3程度の値を出したりしてしまう。表面積には底面 πr² が含まれるので、rについての二次方程式になる。',
         correctAnswer: '3 cm',
         correctExplanation:
           '表面積＝πrl＋πr²＝πr(l＋r) なので πr(8＋r)＝33π。両辺をπで割って r²＋8r−33＝0、(r＋11)(r−3)＝0 より r＝3（r＞0）。検算：側面積 π×3×8＝24π、底面積 π×9＝9π、合計33π ✓。母線8cmは半径3cmより長く、条件も満たしている。',
@@ -2080,6 +2090,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 円すい：球：円柱＝1:2:3',
+        mangaId: 'koko_math_s329_manga',
         body: `底面の半径が r、高さが 2r（＝球の直径）でそろえた3つの立体を比べる。
 
 ■ 円すい（底面の半径 r、高さ 2r）
@@ -2444,6 +2455,7 @@ export const kokoMathExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '1. 切り口をかく3つの原則',
+        mangaId: 'koko_math_s333_manga',
         figureId: 'lf_kokomathext09_333',
         body: `「3点A、P、Qを通る平面で切る」と言われたら、その平面はただ1つに決まっている（一直線上にない3点で平面が1つに決まる）。だから切り口も1つの形に定まる。あとは次の3原則にしたがって、面ごとに線を引いていけばよい。
 
@@ -2705,6 +2717,7 @@ BD、DE、EB はいずれも立方体の面の対角線なので、長さは √
     sections: [
       {
         heading: '1. 三平方の定理を2回使う',
+        mangaId: 'koko_math_s336_manga',
         figureId: 'lf_kokomathext09_336',
         body: `たて a、よこ b、高さ c の直方体で、向かい合う2つの頂点を結ぶ線分（立体の対角線）の長さを求める。
 
@@ -2891,6 +2904,7 @@ BD、DE、EB はいずれも立方体の面の対角線なので、長さは √
     sections: [
       {
         heading: '1. 3つの量の関係',
+        mangaId: 'koko_math_s338_manga',
         figureId: 'lf_kokomathext09_338',
         body: `円すいを、頂点と底面の中心を通る平面で切ると、二等辺三角形の断面が現れる。その半分をとると、直角をはさむ2辺が r と h、斜辺が l の直角三角形になる。
 
@@ -2924,7 +2938,7 @@ BD、DE、EB はいずれも立方体の面の対角線なので、長さは √
 例）側面のおうぎ形の中心角が120°、母線が9cmの円すい
 　r＝l×(120/360)＝9×(1/3)＝3 cm
 　h＝√(9²−3²)＝√(81−9)＝√72＝6√2 cm
-　体積＝(1/3)π×3²×6√2＝18√2 π cm³（およそ79.9 cm³）
+　体積＝(1/3)π×3²×6√2＝18√2 π cm³（およそ80.0 cm³）
 　側面積＝π×3×9＝27π cm²、表面積＝27π＋9π＝36π cm²
 
 例）側面のおうぎ形の中心角が216°、底面の半径が6cmの円すい
@@ -2958,7 +2972,7 @@ BD、DE、EB はいずれも立方体の面の対角線なので、長さは √
         wrongAnswer: '27π cm³',
         trapExplanation:
           '半径を r＝9×(120/360)＝3 と正しく求めたあと、高さを求めずに母線9cmをそのまま高さに使って (1/3)π×3²×9＝27π としてしまう。母線と高さは別物で、l²＝r²＋h² の関係で結ばれている。',
-        correctAnswer: '18√2 π cm³（およそ79.9 cm³）',
+        correctAnswer: '18√2 π cm³（およそ80.0 cm³）',
         correctExplanation:
           '中心角120°より r＝9×(1/3)＝3 cm。高さ＝√(9²−3²)＝√72＝6√2 cm。体積＝(1/3)×π×3²×6√2＝18√2 π cm³。誤答の27πは高さを9cmとしたもので、実際の高さ 6√2≒8.49cm より大きいため体積も過大になる。母線＞高さ の関係で検算できる。',
       },

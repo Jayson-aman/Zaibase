@@ -18,7 +18,8 @@ export const kokoKankanEigoC1: Question[] = [
 ③ The girl (　) bag is red is my sister.`,
     answer: '① who　② which (that)　③ whose',
     hint: '人が先行詞→who、物が先行詞で目的格→which/that、所有格→whose。',
-    explanation: `【出題意図】関係代名詞who・which・whoseの基本的な使い分けを問う。【解説】①先行詞a friend（人）が主語の働きをする→who。②先行詞the book（物）でboughtの目的語→which（thatも可）。③先行詞the girlの後ろにbag（名詞）が続き「その子のかばん」という所有関係→whose。【注意点】whoseは「whose+名詞」の形で1つのまとまりとして働く点がwho/whichと異なる。【関連知識】目的格の関係代名詞（whom/which/that）は口語では省略されることが多い。`,
+    explanation:
+      '【何を聞かれているか】\nwho・which（that）・whoseという関係代名詞の基本的な使い分けを問う問題。\n\n【なぜwhoseだけ形が違うのか】\nwho・whichは先行詞そのものが主語や目的語の代わりをするが、whoseは「先行詞の（所有物）」という所有関係を表すため、「whose＋名詞」という形でひとまとまりに使うという違いがある。\n\n【ポイント1】①主格のwhoを確認する\n"a friend（人）"がspeaksの主語の代わりをしているので、主格の関係代名詞who。\n\n【ポイント2】②目的格のwhich(that)を確認する\n"the book（物）"がboughtの目的語の代わりをしているので、目的格の関係代名詞which（thatも可）。\n\n【ポイント3】③所有格のwhoseを確認する\n"the girl"の後ろに"bag"（名詞）が続き、「その子のかばん」という所有関係を表すので、whose。\n\n【答え】\n① who　② which (that)　③ whose\n\n【確かめ】\n③で"whose"の直後に名詞bagが来ていて、「the girl\'s bag」と同じ意味を表しているか確認する。\n\n【よくあるまちがい】\n③をwhoやwhichにしてしまうミス。直後に名詞（bag）が続く所有の構造は、whoseでしか表せない。\n\n【ここが絶対】\n人→who、物→which、所有関係（whose＋名詞）→whose、という3つの使い分けを、先行詞の種類で判断する。',
     pitfall: '③をwhoやwhichにすると、直後に名詞bagが続く構造を説明できない。所有格はwhose。',
     memoryTip: '人→who、物→which、所有→whose、と先行詞の種類で3択に絞る。',
   },
@@ -35,7 +36,8 @@ export const kokoKankanEigoC1: Question[] = [
 書き換え：He said (that) (　) (　) tired.`,
     answer: 'he was',
     hint: '直接話法→間接話法では、主語I→he、現在形am→過去形wasに変える（時制の一致）。',
-    explanation: `【出題意図】話法の転換（直接話法→間接話法）における人称代名詞と時制の一致を問う。【解説】伝達動詞said（過去形）に合わせて、引用符内の現在形amは過去形wasに変える（時制の一致）。また主語Iは話者から見た第三者heに変える。【注意点】時制の一致：said（過去）の後の従属節は原則1つ過去にずらす（am→was、will→would等）。ただし普遍の真理はそのまま現在形を保つ例外もある。【関連知識】伝達動詞がsays（現在形）のときは時制の一致は起こらない（He says he is tired.）。`,
+    explanation:
+      '【何を聞かれているか】\n"He said, "I am tired.""という直接話法の文を、間接話法（伝達文）に書き換える問題。\n\n【なぜ人称と時制の両方を変えるのか】\n直接話法から間接話法にするときは、①話している人の視点に合わせて人称代名詞を変え、②伝達動詞（said）の過去形に合わせて、引用内容の時制も1段階過去にずらす（時制の一致）という、2つの変化が同時に起こる。\n\n【ポイント1】人称の変化を確認する\n引用符の中の"I"（話し手自身）は、話者から見た第三者heに変わる。\n\n【ポイント2】時制の変化を確認する\n伝達動詞saidが過去形なので、時制の一致により現在形amは過去形wasに変わる。\n\n【ポイント3】例外を確認する\n普遍の真理を述べる文は時制の一致の例外として現在形のまま保つことがあるが、今回のような一時的な状態（疲れている）には適用されない。\n\n【答え】\nhe was\n\n【確かめ】\n"He said (that) he was tired."が、主語（he）と時制（was）の両方を正しく変換した文になっているか確認する。\n\n【よくあるまちがい】\n"He said that I am tired."のように、人称・時制を変えずにそのまま使ってしまうミス。\n\n【ここが絶対】\n話法の転換は「人称は話者目線に、時制は1つ過去へ」の2ステップで行う。伝達動詞が現在形（says）のときは時制の一致が起こらないことも覚えておく。',
     pitfall: 'He said that I am tiredのように人称・時制を変えないのは誤り。',
     memoryTip: '話法の転換は「人称は話者目線に、時制は1つ過去へ」の2ステップで覚える。',
   },
@@ -53,7 +55,8 @@ export const kokoKankanEigoC1: Question[] = [
 ③ The more you practice, the (　) you will get.（練習すればするほど上達する）`,
     answer: '① as difficult as　② the most　③ better',
     hint: '①原級比較as〜as、②the most+形容詞、③the 比較級, the 比較級の構文。',
-    explanation: `【出題意図】原級比較・最上級・「the+比較級, the+比較級」構文を問う。【解説】①同程度を表す原級比較→as difficult as。②「何よりも大切」→the most important（thing of allで「すべての中で」を強調）。③「〜すればするほど…」→The 比較級 S V, the 比較級 S V。goodの比較級betterを使いthe betterとする。【注意点】③の構文は前半・後半とも「the+比較級」で始まる語順が固定されている点に注意。【関連知識】The more, the better.（多ければ多いほど良い）は省略形として単独でも使われる。`,
+    explanation:
+      '【何を聞かれているか】\n原級比較（as〜as）・最上級（the most）・「the＋比較級, the＋比較級」構文という3つの比較表現を完成させる問題。\n\n【なぜ3つの異なる形が必要なのか】\n「同じくらい」（原級比較）、「何よりも」（最上級）、「〜すればするほど」（比例の比較級構文）は、それぞれ表したい意味が異なるため、対応する決まった形が別々に存在する。\n\n【ポイント1】①原級比較を確認する\n「同じくらい難しい」→as＋形容詞（difficult、原級）＋as。\n\n【ポイント2】②最上級を確認する\n「何よりも大切」→the most important（thing of allで「すべての中で」を強調）。\n\n【ポイント3】③「the＋比較級, the＋比較級」構文を確認する\n「練習すればするほど上達する」→The more you practice, the better you will get.前半・後半とも"the＋比較級"で始まる決まった語順。goodの比較級はbetter（不規則変化）。\n\n【答え】\n① as difficult as　② the most　③ better\n\n【確かめ】\n①のasが2回使われていること、③がgoodの不規則な比較級betterになっていることを確認する。\n\n【よくあるまちがい】\n③を"the more good"としてしまうミス。goodの比較級はgood→better→bestという不規則変化。\n\n【ここが絶対】\n「the＋比較級, the＋比較級」＝「〜すればするほど…」という構文を、goodの不規則変化（better）とあわせて丸暗記する。',
     pitfall: '③をthe more goodとするのは誤り。goodの比較級はbetterで不規則変化する。',
     memoryTip: '「the+比較級, the+比較級」は「〜すれば〜するほど」の定型パターンとして丸暗記する。',
   },
@@ -67,12 +70,12 @@ export const kokoKankanEigoC1: Question[] = [
     question: `次の（　）に適切な分詞を入れなさい。（現在分詞か過去分詞のいずれか）
 
 ① (　) by the news, she started to cry.（その知らせに驚いて、彼女は泣き始めた）
-② (　) tired, he kept on studying.（疲れていたが、彼は勉強を続けた）
+② (　) tired, he went to bed early.（疲れていたので、彼は早く寝た）
 
-語群：Surprised / Being (Though being)`,
-    answer: '① Surprised　② Being (Though being)',
-    hint: '主語が「驚かされる（受動）」ならSurprised、「疲れている（状態）」を表す分詞構文はBeing tiredまたはThough being tired。',
-    explanation: `【出題意図】分詞構文の基本形（受動の分詞構文）を問う。【解説】①「驚かされて」という受動の意味→過去分詞Surprisedで始める分詞構文（Being surprised by the newsのBeingが省略された形）。②「疲れているけれども」という譲歩の意味を表すためBeing tiredまたは接続詞を残したThough being tiredとする。【注意点】分詞構文でbe動詞の現在分詞Beingはしばしば省略されるため、Surprisedのように過去分詞から始まる形が非常に多い。【関連知識】分詞構文には時（〜すると）・理由（〜なので）・譲歩（〜だが）・付帯状況（〜しながら）の意味がある。`,
+語群：Surprised / Being`,
+    answer: '① Surprised　② Being',
+    hint: '主語が「驚かされる（受動）」ならSurprised、「疲れている（状態）」の理由を表す分詞構文はBeing tired。',
+    explanation: `【出題意図】分詞構文の基本形（受動の分詞構文）を問う。【解説】①「驚かされて」という受動の意味→過去分詞Surprisedで始める分詞構文（Being surprised by the newsのBeingが省略された形）。②「疲れていたので」という理由の意味→Being tired（Because he was tiredの書き換え。Beingを省略してTired, he went to bed early.としても同じ意味）。【注意点】分詞構文でbe動詞の現在分詞Beingはしばしば省略されるため、Surprisedのように過去分詞から始まる形が非常に多い。【関連知識】分詞構文には時（〜すると）・理由（〜なので）・譲歩（〜だが）・付帯状況（〜しながら）の意味がある。`,
     pitfall: '①をSurprisingとすると「（何かを）驚かせて」という能動の意味になり不自然。',
     memoryTip: '感情動詞は「（人が）される」→p.p.形で始まる分詞構文になることが多いと覚える。',
   },
@@ -89,7 +92,8 @@ If I (　) a bird, I could fly to see you.
 （もし私が鳥だったら、あなたに会いに飛んでいけるのに）`,
     answer: 'were',
     hint: '仮定法過去のbe動詞はwereを使う（口語ではwasも許容されることがある）。',
-    explanation: `【出題意図】仮定法過去における be動詞の特別なルール（were）を問う。【解説】現在の事実に反する仮定を表す仮定法過去では、if節のbe動詞は主語の人称・数にかかわらずwereを用いるのが原則。【注意点】口語ではI was〜も使われるが、学校文法・入試ではwereが標準として求められることが多い。【関連知識】If I were you,〜（もし私があなたなら）は仮定法過去の最頻出表現の1つ。`,
+    explanation:
+      '【何を聞かれているか】\n"If I (　) a bird, I could fly to see you."の空欄に入る、仮定法過去のbe動詞を答える問題。\n\n【なぜwereを使うのか】\n仮定法過去は「実際にはそうではないが、もし〜だったら」という現実に反する仮定を表す表現で、if節のbe動詞は主語の人称・数にかかわらずwereを使うのが原則。\n\n【ポイント1】仮定法過去の公式を確認する\nIf＋主語＋動詞の過去形〜, 主語＋would/could/might＋動詞の原形〜。\n\n【ポイント2】be動詞がwereになる理由を確認する\n仮定法過去では、be動詞は主語がIやhe/sheであってもwereを使うという、この文法特有のルールがある。\n\n【ポイント3】口語との違いを確認する\n口語ではI wasも使われることがあるが、学校文法・入試ではwereが標準として求められる。\n\n【答え】\nwere\n\n【確かめ】\n"If I were a bird"が、現実には鳥ではないという事実に反する仮定を表していることを確認する。\n\n【よくあるまちがい】\n"If I was a bird"のように、主語Iに合わせてwasを使ってしまうミス。仮定法のif節では、主語が単数でもwereを使うのが原則。\n\n【ここが絶対】\n"If I were you"（もし私があなたなら）というフレーズごと暗記して、仮定法過去のbe動詞はwereだと定着させる。',
     pitfall: 'If I was a bird とするのは口語では許容されても、試験では減点対象になりうる。wereが正式。',
     memoryTip: '仮定法のbe動詞は「If I were you」のフレーズごと暗記してwereを定着させる。',
   },
@@ -139,7 +143,8 @@ She said to me, "Do you like tea?"
 → She asked me (　) (　) liked tea.`,
     answer: 'if (whether) I',
     hint: 'Yes/No疑問文の間接話法はif/whetherを使い、語順は平叙文の語順（主語+動詞）に戻す。',
-    explanation: `【出題意図】Yes/No疑問文の話法転換（if/whetherの導入と語順変化）を問う。【解説】伝達動詞をaskedに変え、疑問文の内容をif（またはwhether）+平叙文の語順で続ける。youは話者（私）から見てIに変わる。動詞likeは伝達動詞askedの過去形に合わせてlikedにする（時制の一致）。【注意点】疑問詞のない疑問文（Yes/Noで答えられる疑問文）はif/whetherを使う点が、疑問詞がある疑問文（What did you like?等）と異なる。語順もDo you like→if I likedと平叙文の語順に戻す。【関連知識】疑問詞がある間接疑問文は疑問詞をそのまま使う（She asked me what I liked.）。`,
+    explanation:
+      '【何を聞かれているか】\n"She said to me, "Do you like tea?""という直接話法のYes/No疑問文を、間接話法に書き換える問題。\n\n【なぜif/whetherを使うのか】\n「〜かどうか」という意味を持たないYes/No疑問文（疑問詞のない疑問文）を間接話法にするときは、if（またはwhether）を導入し、その後ろを普通の文の語順（主語＋動詞）に戻すという決まりがある。\n\n【ポイント1】if/whetherの導入を確認する\n"Do you like tea?"のようなYes/No疑問文は、間接話法ではif（whether）を使って"if I liked tea"のような形にする。\n\n【ポイント2】人称の変化を確認する\nyouは話者（私）から見てIに変わる。\n\n【ポイント3】時制の一致を確認する\n伝達動詞askedが過去形なので、動詞likeも過去形likedに変わる（時制の一致）。\n\n【答え】\nif (whether) I\n\n【確かめ】\n"She asked me if I liked tea."が、疑問文の語順（Do you like）ではなく、平叙文の語順（I liked）になっているか確認する。\n\n【よくあるまちがい】\n"She asked me did I like tea."のように、疑問文の語順のまま使ってしまうミス。間接話法では平叙文の語順に戻す。\n\n【ここが絶対】\nYes/No疑問文の間接話法はif/whether＋平叙文の語順、疑問詞のある疑問文は疑問詞＋平叙文の語順、という2つの型をセットで覚える。',
     pitfall: 'She asked me did I like tea と疑問文の語順のまま使うのは誤り。',
     memoryTip: 'Yes/No疑問文→if/whether+平叙文語順、疑問詞疑問文→疑問詞+平叙文語順、と型で覚える。',
   },
@@ -297,7 +302,7 @@ He said to me, "I will visit you tomorrow."
 ② I don't know what to say to her.
 ③ This problem is more difficult than that one.`,
     hint: '①分詞構文（理由）、②疑問詞+to不定詞、③比較級+than。',
-    explanation: `【出題意図】分詞構文・疑問詞+to不定詞・比較級構文の語順整序を問う。【解説】①「とても疲れて（いたので）」＝理由を表す分詞構文Feeling very tired。カンマの後に主節she went to bed earlyを続ける。②「何と言うべきか」＝what to say（疑問詞+to不定詞）をknowの目的語にする。③difficultは3音節以上のためmore difficultと比較級を作り、thanで比較対象thatを続ける。【注意点】①はFeelingで始めることでve主語she（主節と同じ）を省略した形と理解する。【関連知識】疑問詞+to不定詞：how to use（使い方）、where to go（どこへ行くか）なども同型。`,
+    explanation: `【出題意図】分詞構文・疑問詞+to不定詞・比較級構文の語順整序を問う。【解説】①「とても疲れて（いたので）」＝理由を表す分詞構文Feeling very tired。カンマの後に主節she went to bed earlyを続ける。②「何と言うべきか」＝what to say（疑問詞+to不定詞）をknowの目的語にする。③difficultは3音節以上のためmore difficultと比較級を作り、thanで比較対象thatを続ける。【注意点】①はFeelingで始めることで、主語she（主節と同じ）を省略した形と理解する。【関連知識】疑問詞+to不定詞：how to use（使い方）、where to go（どこへ行くか）なども同型。`,
     pitfall: '③をthis problem is difficult than thatとmoreを忘れるのは誤り（difficultは比較級にmoreが必要）。',
     memoryTip: '3音節以上の形容詞はmore/mostを付ける、と音節数で判断できるようにする。',
   },
@@ -342,7 +347,8 @@ A: That's a great attitude to have.
 ④ It doesn't matter to me at all.`,
     answer: '① I couldn\'t have done it without my teacher\'s help.',
     hint: 'Aが「素晴らしい心構えだ」と褒めていることから、Bは謙虚で前向きな発言をしているはず。',
-    explanation: `【出題意図】自然な会話の流れと仮定法（couldn't have done）の理解を問う。【解説】Aの最後の発言「That's a great attitude to have.（それは素晴らしい心構えだ）」につながるには、Bが謙虚に感謝を示す発言をしている必要がある。①「先生の助けがなければやり遂げられなかった」→謙虚な姿勢を示し、Aの褒め言葉と自然につながる。②③④はいずれも文脈やAの返答と矛盾する。【注意点】couldn't have done it without〜は仮定法過去完了（Without〜, I couldn't have done it.の倒置的な言い方）。感謝や謙虚さを表す定番表現。【関連知識】I owe it all to〜（すべて〜のおかげだ）も同様の謙虚な感謝表現。`,
+    explanation:
+      '【何を聞かれているか】\n合格を祝う会話の空欄に、最も自然な返答を選ぶ問題。\n\n【なぜ謙虚な発言が正解になるのか】\nAの最後の発言"That\'s a great attitude to have."（それは素晴らしい心構えだ）につながるには、Bが謙虚に感謝を示す発言をしている必要があるため、その流れに合う選択肢を選ぶ。\n\n【ポイント1】文脈全体を確認する\nAが合格を祝い、Bがお礼を言った後の発言なので、謙虚で前向きな内容が自然。\n\n【ポイント2】選択肢①の意味と文法を確認する\n"I couldn\'t have done it without my teacher\'s help."（先生の助けがなければやり遂げられなかった）は、仮定法過去完了を使った謙虚な感謝の表現。\n\n【ポイント3】他の選択肢を消去する\n「勉強が嫌い」「試験を受けたことがない」「気にしていない」は、いずれも合格を喜ぶ文脈やAの褒め言葉と矛盾する。\n\n【答え】\n① I couldn\'t have done it without my teacher\'s help.\n\n【確かめ】\n選んだ発言が、Aの"That\'s a great attitude to have."（それは素晴らしい心構えだ）という褒め言葉に自然につながっているか確認する。\n\n【よくあるまちがい】\n文脈を確認せず、単語だけを見て無関係な選択肢を選んでしまうミス。会話問題は必ず前後のやり取り全体を確認する。\n\n【ここが絶対】\n"couldn\'t have done it without〜"＝「〜がなければやり遂げられなかった」という、感謝や謙虚さを表す仮定法過去完了の定番表現を覚えておく。',
     pitfall: '②「勉強が嫌い」を選ぶと、合格を喜ぶ文脈やAの褒め言葉と矛盾する。',
     memoryTip: 'Aの返答（That\'s a great attitude）から逆算し、謙虚・前向きな発言を選ぶ。',
   },
@@ -466,7 +472,7 @@ Having grown up in a small village, Maria had never seen a big city until she mo
   ア. If　イ. Were　ウ. Had　エ. Was`,
     answer: '① イ(Had he thought)　② ウ(Had)',
     hint: '①仮定法過去完了のifの省略による倒置（Had+主語+p.p.）。②「Had it not been for〜」=「〜がなかったら」の倒置形。',
-    explanation: `【出題意図】仮定法における if の省略と倒置（Had+S+p.p.〜）を問う高難度問題。【解説】①仮定法過去完了のif節「If he had thought more carefully」からifを省略すると、主語と助動詞を倒置してHad he thought more carefullyとなる。主節would not have made（仮定法過去完了の帰結節）と時制が一致する。②「If it had not been for the internet」からifを省略した倒置形はHad it not been for the internet。主節would be（仮定法過去の帰結節）に注目すると、実は現在の話（today）なので厳密にはIf it were not forが対応するはずだが、本問はHad（過去）を使った倒置形が示され、過去のインターネット普及が現在にも影響しているという文脈上、Hadの倒置が正解となる。【注意点】ifの省略による倒置はwere/had/should から始まる仮定法特有の語順変化。疑問文の語順と混同しないよう注意（意味は疑問文ではなく条件節）。【関連知識】Should you have any questions,〜（もし質問があれば）も同様のif省略倒置（仮定法未来）。`,
+    explanation: `【出題意図】仮定法における if の省略と倒置（Had+S+p.p.〜）を問う高難度問題。【解説】①仮定法過去完了のif節「If he had thought more carefully」からifを省略すると、主語と助動詞を倒置してHad he thought more carefullyとなる。主節would not have made（仮定法過去完了の帰結節）と時制が一致する。②「If it had not been for the internet」からifを省略した倒置形はHad it not been for the internet。主節would be〜 todayは「今日の暮らし」という現在の結果だが、if節は「（過去に）インターネットが登場していなかったら」という過去の仮定なので、「過去の仮定＋現在の結果」の組み合わせ（混合仮定法）になる。if節は仮定法過去完了のHad it not been forでよい。また空所の直後がit not beenなので、Were・If・Wasは入らない。【注意点】ifの省略による倒置はwere/had/should から始まる仮定法特有の語順変化。疑問文の語順と混同しないよう注意（意味は疑問文ではなく条件節）。【関連知識】Should you have any questions,〜（もし質問があれば）も同様のif省略倒置（仮定法未来）。`,
     pitfall: '①でイ以外を選ぶと、ifの省略による倒置という高度な文法知識が反映されない誤答になる。',
     memoryTip: 'if節の省略による倒置：Were（仮定法過去）、Had（仮定法過去完了）、Should（仮定法未来）で始まる形を覚える。',
   },
@@ -528,11 +534,9 @@ Artificial intelligence, which was once considered science fiction, is now part 
     question: `次の日本語を英語に訳しなさい。（30語以上、分詞構文を1つ使うこと）
 
 「彼女が言ったことに驚いて、私は何と答えればよいかわからなかった。もし彼女がもっと早く教えてくれていたら、私はもっとうまく準備できていたのに。」`,
-    answer: `（解答例）Surprised at what she said, I didn't know what to say. If she had told me earlier, I could have prepared much better.（22語→語数を増やす必要あり）
-
-（30語以上の解答例）Being surprised at what she had told me, I had no idea what to say in response. If only she had told me about it earlier, I could have prepared myself much better for the situation.（35語）`,
+    answer: `（解答例）Being surprised at what she had told me, I had no idea what to say in response. If only she had told me about it earlier, I could have prepared myself much better for the situation.（36語）`,
     hint: '「驚いて」→分詞構文Surprised at〜またはBeing surprised at〜。「もし〜していたら〜できたのに」→仮定法過去完了。',
-    explanation: `【出題意図】分詞構文と仮定法過去完了を組み合わせた和文英訳。感情の分詞構文・関係詞what・仮定法の複合運用を問う。【解説】「彼女が言ったことに驚いて」→Being surprised at what she had told me（whatは「〜すること・もの」を表す関係代名詞、she had toldは私が驚いた時点よりも前の出来事なので過去完了にすると精密）。「何と答えればよいかわからなかった」→had no idea what to say（疑問詞+to不定詞）。「もし彼女がもっと早く教えてくれていたら」→If she had told me earlier（仮定法過去完了のif節）。「もっとうまく準備できていたのに」→I could have prepared much better（仮定法過去完完了の帰結節）。【注意点】感情を表す分詞構文はBeing+p.p.の形が基本だが、Being省略でSurprisedのみで始めることも可能。仮定法過去完了はhad+p.p.（if節）とwould/could have+p.p.（主節）の組み合わせを正確に対応させる。【関連知識】If only〜（〜でありさえすれば）は仮定法の強い願望・後悔を表す表現として頻出。`,
+    explanation: `【出題意図】分詞構文と仮定法過去完了を組み合わせた和文英訳。感情の分詞構文・関係詞what・仮定法の複合運用を問う。【解説】「彼女が言ったことに驚いて」→Being surprised at what she had told me（whatは「〜すること・もの」を表す関係代名詞、she had toldは私が驚いた時点よりも前の出来事なので過去完了にすると精密）。「何と答えればよいかわからなかった」→had no idea what to say（疑問詞+to不定詞）。「もし彼女がもっと早く教えてくれていたら」→If she had told me earlier（仮定法過去完了のif節）。「もっとうまく準備できていたのに」→I could have prepared much better（仮定法過去完了の帰結節）。【注意点】感情を表す分詞構文はBeing+p.p.の形が基本だが、Being省略でSurprisedのみで始めることも可能。仮定法過去完了はhad+p.p.（if節）とwould/could have+p.p.（主節）の組み合わせを正確に対応させる。【関連知識】If only〜（〜でありさえすれば）は仮定法の強い願望・後悔を表す表現として頻出。`,
     pitfall: 'If she told me earlierと仮定法過去にすると、過去の後悔ではなく現在の仮定になり文脈と矛盾する。',
     memoryTip: '感情の分詞構文＋仮定法過去完了の組み合わせは高度な入試英作文の定番パターン。',
   },
@@ -546,18 +550,37 @@ Artificial intelligence, which was once considered science fiction, is now part 
     question: `次の（　）に最も適切な語句をア〜エから選びなさい。
 
 ① Judging from the sky, it (　) rain this afternoon.
-  ア. must　イ. can　ウ. should　エ. would
+  ア. will　イ. can　ウ. has to　エ. used to
 
 ② The more information we have access to, the (　) it becomes to make a decision.
   ア. easy　イ. easier　ウ. easiest　エ. more easy
 
-③ She speaks English as (　) fluently as a native speaker.
+③ She speaks English (　) fluently as a native speaker.
   ア. so　イ. such　ウ. as　エ. more`,
-    answer: '① ア(must)　② イ(easier)　③ ウ(as)',
-    hint: '①「空模様から判断すると」→高い確信の推量must。②the比較級, the比較級構文。③as〜as構文（原級比較）の最初のas。',
-    explanation: `【出題意図】慣用的分詞構文Judging from〜、the比較級構文、as〜as構文の複合運用を問う。【解説】①Judging from〜（〜から判断すると）は慣用的な分詞構文。空模様から強い確信を持って推量する場合、must（〜に違いない）が適切。②「the more情報, the 比較級」の構文なので、easyの比較級easierを選ぶ。③as fluently as〜（〜と同じくらい流暢に）の原級比較構文の最初のasを選ぶ。【注意点】①のcan/should/wouldは確信度がmustより弱く、文脈（空模様からの明確な判断）には合わない。③はas〜asがセットであり、soやsuchでは代用できない。【関連知識】Judging from〜と同様の慣用分詞構文：Speaking of〜（〜と言えば）、Considering〜（〜を考えると）、Talking of〜（〜と言えば）。`,
-    pitfall: '①でイ(can)を選ぶと「降るかもしれない」程度の弱い推量になり、Judging fromの強い根拠に基づく文脈と合わない。',
-    memoryTip: 'Judging from〜=判断すると→強い確信のmustと相性が良いと覚える。',
+    answer: '① ア(will)　② イ(easier)　③ ウ(as)',
+    hint: '①「空模様から判断すると」→これから起こることの予測を表す助動詞。②the比較級, the比較級構文。③as〜as構文（原級比較）の最初のas。',
+    explanation: `【何を聞かれているか】
+3つの英文の空所に、文の型に合う語を選ぶ問題です。
+
+【なぜそうなるのか】
+①は、空模様という証拠から「これから降る」と未来を予測する言い方です。②は、「～すればするほど、ますます…」という、比較級を2つ重ねるきまりの型。③は、「同じくらい」を表すas ～ asの枠です。
+
+【ステップ1】① Judging from the sky（空を見て判断すると）は、これから起こることの予測を述べる文です。未来の予測には will を使います。can は「～できる」、has to は「～しなければならない」、used to は「以前は～したものだった」で、どれも意味が合いません。
+【ステップ2】② the+比較級, the+比較級
+The more information we have access to, the easier it becomes to make a decision. 「情報が多いほど、決めることが楽になる」。easy の比較級 easier を選びます。
+【ステップ3】③ as ～ as
+She speaks English as fluently as a native speaker. 空所には最初の as が入り、fluently をはさんで2つ目の as につながります。
+
+【答え】
+① ア(will)　② イ(easier)　③ ウ(as)
+
+【確かめ】
+①は日本語に訳して「降るだろう」が自然か、②は the の後に比較級が来ているか、③は as が2つセットになっているかを確認します。
+
+【よくあるまちがい】
+③で so fluently as を選ぶこと。so を使えるのは否定文の場合だけで、肯定文では as にします。また②で、the more easy のように書くのもまちがいです。`,
+    pitfall: '①でイ(can)を選ぶと「降ることができる」という意味になり、予測の文にならない。未来の予測にはwillを使う。',
+    memoryTip: 'Judging from〜（〜から判断すると）のあとは、根拠にもとづく未来の予測なのでwillを使うと覚える。',
   },
   {
     id: 'koko_kankan_eigo_c1_29',
@@ -575,7 +598,7 @@ Strictly speaking, the word "hero" does not always mean someone with superpowers
 ③ 筆者が最終的に伝えたいメッセージを日本語で40字以内でまとめよ。`,
     answer: `① いずれも慣用的な分詞構文（独立分詞構文的に使われ、文全体を修飾する副詞句として機能する）。
 ② スーパーパワーを持つ人とは限らず、小さなことであっても勇気と思いやりを持って行動する人。
-③ 認知されなくても他者を助ける普通の人々の中にこそ、思っているより多くの英雄がいるということ。（44字→要約：普通の人々の中に、気づかぬヒーローが多くいるということ。）`,
+③ 認められなくても人を助ける普通の人々の中に、思うより多くの英雄がいる。（35字）`,
     hint: '①いずれも慣用句化した分詞構文（Strictly speaking=厳密に言うと等）。②本文2文目の定義。③本文最終文「perhaps the world has far more heroes than we realize」。',
     explanation: `【出題意図】慣用的分詞構文（Strictly speaking等）の文法的性質理解と、論説文の定義・結論把握を問う高難度問題。【解説】①Strictly speaking（厳密に言えば）、Generally speaking（一般的に言えば）、Considering〜（〜を考えると）はいずれも文全体を修飾する副詞的な働きをする慣用的分詞構文。特定の主語に依存せず、話者の視点を示す独立した表現として定着している。②本文「a hero is anyone who acts with courage and compassion, even in small ways」から、スーパーパワーの有無に関わらず、勇気と思いやりを持って（小さなことでも）行動する人と定義されている。③最終文「perhaps the world has far more heroes than we realize」から、認識されていないだけで、私たちが思う以上に多くの英雄が世の中にいる、というメッセージが読み取れる。【注意点】①のような慣用的分詞構文は、通常の分詞構文の「主語一致」のルールから外れた例外的表現として整理する。【関連知識】同様の慣用分詞構文：Frankly speaking（率直に言うと）、Judging from〜（〜から判断すると）、Given〜（〜を考慮すると）。`,
     pitfall: '①を「独立分詞構文（主語がその都度示される）」と混同しない。これらは主語を示さない完全な慣用句。',
@@ -613,7 +636,7 @@ Having been postponed twice due to bad weather, the marathon finally took place 
     question: `次のテーマについて、英語で意見を述べなさい。（35語以上、仮定法を1つ使うこと）
 
 テーマ：「もしあなたが1年間、世界のどこにでも住めるとしたら、どこに住みたいですか。理由とともに述べなさい。」`,
-    answer: `（解答例）If I could live anywhere in the world for a year, I would choose New Zealand. I love nature, and I believe living there would allow me to experience a slower, more peaceful lifestyle surrounded by beautiful scenery. （36語）`,
+    answer: `（解答例）If I could live anywhere in the world for a year, I would choose New Zealand. I love nature, and I believe living there would allow me to experience a slower, more peaceful lifestyle surrounded by beautiful scenery. （38語）`,
     hint: '仮定法過去（If I could〜, I would〜）を使い、理由を具体的に述べる。',
     explanation: `【出題意図】仮定法過去を用いた自由英作文。現実には起きていない仮定の状況について、理由とともに意見を述べる表現力を問う。【解説】「もし〜できるとしたら」という現実には起こっていない仮定はIf I could live anywhere〜, I would choose〜という仮定法過去の基本形で表す。理由付けにはbecause、and、believeなどでつなぎ、具体的な内容（自然・ライフスタイル等）を加えることで説得力が増す。【注意点】35語以上を確実に満たすため、場所を選んだ理由を1〜2文で具体的に展開する。仮定法の時制のねじれ（If節：過去形、主節：would+原形）を必ず守る。【関連知識】自由英作文で使える理由付け表現：This is because〜、One reason is that〜、For example〜。`,
     pitfall: 'If I can live anywhereと現在形にすると仮定法にならず、単なる条件文になってしまう。',
@@ -645,9 +668,10 @@ A growing number of schools are therefore adopting alternative assessment method
     answer: `① Standardized tests provide an objective, fair way to compare students from different schools and backgrounds.
 ② ・標準テストは記憶力など狭い範囲の能力しか測れず、創造性や批判的思考、協働性を評価できない。・テストが苦手な生徒が、他の分野で優れた能力を持っていても不当に低く評価される可能性がある。
 ③ project-based evaluations and portfolios
-④ 標準テストの利点（客観性・公平性）を提示した後、その限界（狭い評価範囲・不公平さ）を批判し、代替評価法の登場という展開を紹介する構成。（68字→要約する）標準テストの利点→批判→代替案の紹介という3段階の構成。`,
+④ 標準テストの利点→批判→代替案の紹介という3段階の構成。（28字）`,
     hint: '①第1段落のSupporters argue that〜。②第2段落のCriticsの2つの主張。③第3段落のsuch as以降。④賛成→反対→代替案という論説文の典型構成。',
-    explanation: `【出題意図】標準テストをテーマにした3段落構成の論説文読解。賛成・反対・代替案という論説文の典型パターンの理解と情報抽出能力を問う。【解説】①第1段落のSupporters argueの内容：客観的で公平な比較方法を提供する、という1文。②第2段落の批判点：(a)記憶力など狭い範囲の能力しか測れず、創造性・批判的思考・協働性を無視している、(b)テストが苦手な生徒が他の能力を持っていても不当に評価される可能性がある、の2点。③第3段落の代替手段：project-based evaluations（プロジェクト型評価）とportfolios（ポートフォリオ）の2つ。④全体の論理構成：第1段落で利点を提示→第2段落で批判・限界を指摘→第3段落で代替案の登場と、その有効性については議論が続いていることを紹介する3段階構成。【注意点】④は単なる要約ではなく「論理構成（どのような順序で議論が展開されているか）」を説明することが求められている点に注意。【関連知識】教育評価に関する語彙：standardized test、objective、critical thinking、collaboration、portfolio、project-based evaluation。`,
+    explanation:
+      '【何を聞かれているか】\n標準テストについての3段落構成の英文を読んで、支持派の主張・批判点・代替手段・全体の論理構成を答える問題。\n\n【なぜ論理構成（段落の役割）を意識するのか】\nこの英文は「①標準テスト支持派の主張→②批判派の指摘→③代替評価法の紹介」という3段階の構成になっており、単なる要約ではなく、この議論の流れ自体を説明することが求められている。\n\n【ポイント1】①第1段落の主張を確認する\n"provide an objective, fair way to compare students from different schools and backgrounds"（客観的で公平な比較方法を提供する）。\n\n【ポイント2】②第2段落の批判を確認する\n「記憶力など狭い範囲の能力しか測れず、創造性・批判的思考・協働性を無視している」「テストが苦手な生徒が不当に評価される可能性がある」の2点。\n\n【ポイント3】③④第3段落の代替案と全体構成を確認する\n"project-based evaluations and portfolios"（プロジェクト型評価とポートフォリオ）が代替手段。全体は「利点提示→批判→代替案の紹介」という3段階の構成。\n\n【答え】\n① Standardized tests provide an objective, fair way to compare students from different schools and backgrounds.\n② ・標準テストは記憶力など狭い範囲の能力しか測れず、創造性や批判的思考、協働性を評価できない。・テストが苦手な生徒が、他の分野で優れた能力を持っていても不当に低く評価される可能性がある。\n③ project-based evaluations and portfolios\n④ 標準テストの利点→批判→代替案の紹介という3段階の構成。\n\n【確かめ】\n④の答えが、単なる内容の要約ではなく「どのような順序で議論が展開されているか」という構成の説明になっているか、また50字以内に収まっているか確認する。\n\n【よくあるまちがい】\n④で本文の内容をそのまま要約してしまうミス。設問は「論理構成」を聞いているので、賛成→反対→代替案という展開の流れを説明する必要がある。\n\n【ここが絶対】\n賛成→批判→代替案という3段落論説文の型を覚え、「内容の要約」と「論理構成の説明」を区別して答える。',
     pitfall: '④で本文の内容をそのまま要約するのではなく、賛成→反対→代替案という「構成の流れ」を説明する必要がある。',
     memoryTip: '3段落論説文の型：段落1=利点提示、段落2=批判、段落3=代替案・結論、というパターンを毎回確認する。',
   },
@@ -671,7 +695,7 @@ A growing number of schools are therefore adopting alternative assessment method
     answer: '① イ(knowing)　② ウ(considered)　③ ア(but)',
     hint: '①否定の分詞構文Not+ing。②独立分詞構文（受動：considered）。③There is nothing left ... but wait=「〜する以外にない」。butの後ろは動詞原形。',
     explanation: `【出題意図】否定の分詞構文・独立分詞構文（All things considered）・nothing but構文という3つの高難度表現を問う。【解説】①「何と言うべきかわからず」という否定の分詞構文はNot+現在分詞（knowing）。②All things consideredは「すべてを考慮すると」という意味の独立分詞構文（things=主語、consideredは受動の過去分詞）で、慣用表現として定着している。③There is nothing left for us to do but wait.=「私たちが待つ以外にすることは残されていない」。butは前置詞的に「〜以外」の意味で使われ、後ろには動詞原形（wait）が続く。【注意点】②はAll things being consideredのbeingが省略された形と理解できる。③のbutの直後は動詞原形が続く点に注意（but to waitとしない）。【関連知識】nothing but〜（ただ〜だけ）、have no choice but to do（〜する以外に選択肢がない）も同系統の表現。`,
-    pitfall: '③でイ(except to do)を選ぶと、butの後ろにさらにto doが続き二重になり不自然。exceptの後ろは動詞原形または名詞句が続く。',
+    pitfall: '③でイ(except to do)を選ぶと「except to do wait」となり、to doが余って文にならない。',
     memoryTip: 'All things considered（すべてを考慮すると）は独立分詞構文の定型句として丸暗記する。',
   },
   {
@@ -703,17 +727,17 @@ A growing number of schools are therefore adopting alternative assessment method
     course: 'koko-kankan',
     difficulty: 'advanced',
     maxOnly: true,
-    question: `次の語句を並べ替えて、意味の通る英文を作りなさい。（それぞれ1語不足しているので補うこと）
+    question: `次の語句を並べ替えて、意味の通る英文を作りなさい。（それぞれ不要な語が1語ある）
 
-① [ known / had / true / the / , / never / I / it / spoken ].
+① [ known / had / true / was / it / , / I / I / would / never / have / spoken / knew ].
   （それが本当だと知っていたら、私はそんなことは決して言わなかっただろう）
 
-② [ the news / all / surprised / , / most / what / was ] her sudden resignation.
+② [ what / surprised / all / of / us / most / was / the news / of / that ] her sudden resignation.
   （最も皆を驚かせたのは、彼女の突然の辞任だった）`,
     answer: `① Had I known it was true, I would never have spoken.
 ② What surprised all of us most was the news of her sudden resignation.`,
     hint: '①仮定法過去完了のif省略倒置（Had+主語+p.p.〜, 主語+would never have+p.p.）。②What+動詞が主語になる名詞節構文。',
-    explanation: `【出題意図】仮定法過去完了の倒置とwhatの主語用法を組み合わせた高難度の語句整序問題。【解説】①「それが本当だと知っていたら」はIf I had known it was trueだが、ifを省略した倒置形Had I known it was trueにする。主節は「決して〜しなかっただろう」なのでI would never have spoken（仮定法過去完了の帰結節）。②「最も皆を驚かせたこと」はWhat surprised all of us most（whatが主語となる名詞節）。「〜は彼女の突然の辞任だった」でbe動詞wasを続け、補語としてthe news of her sudden resignationを置く。【注意点】①は「不足している1語」としてneverやhaveなどを補う必要がある点に注意。②も同様にall（all of us）などを補う。【関連知識】この2問はいずれも「省略・倒置・名詞節化」という高度な文法操作を組み合わせた最難関レベルの構文。`,
+    explanation: `【出題意図】仮定法過去完了の倒置とwhatの主語用法を組み合わせた高難度の語句整序問題。【解説】①「それが本当だと知っていたら」はIf I had known it was trueだが、ifを省略した倒置形Had I known it was trueにする。主節は「決して〜しなかっただろう」なのでI would never have spoken（仮定法過去完了の帰結節）。②「最も皆を驚かせたこと」はWhat surprised all of us most（whatが主語となる名詞節）。「〜は彼女の突然の辞任だった」でbe動詞wasを続け、補語としてthe news of her sudden resignationを置く。【注意点】語群には、①は knew、②は that という不要な語が1語ずつ入っている。①は knew を使わず、known と had で「Had I known」の倒置にする。②は that を使わず、What を文の主語（名詞節）にする。【関連知識】この2問はいずれも「省略・倒置・名詞節化」という高度な文法操作を組み合わせた最難関レベルの構文。`,
     pitfall: '①でIf I had knownとifを残したまま倒置しない形にすると、問題の指示（並べ替え）と語数が合わなくなる。',
     memoryTip: '倒置の仮定法とwhat主語構文は、まず「元の文（If〜/The thing that〜）」を頭の中で作ってから変形すると整理しやすい。',
   },
@@ -750,10 +774,10 @@ Ms. Yamada, whose research focuses on climate change, was invited to speak at th
 
 The manager said to the staff, "If I were you, I would apologize to the customer immediately."
 → The manager told the staff that if (　) (　) (　), (　) (　) apologize to the customer immediately.`,
-    answer: 'he (she) were they, they would',
+    answer: 'he (she) were they (them), he (she) would',
     hint: '仮定法の文は話法を転換しても時制はそのまま変わらない（仮定法は既に「時制のずれ」を含むため）。人称のみ話者目線に変える。',
-    explanation: `【出題意図】仮定法を含む文の話法転換における時制不変の原則を問う高難度問題。【解説】仮定法の文（If I were you, I would〜）は、すでに「現実とは異なる」という特殊な時制を含んでいるため、話法を転換しても時制の一致（さらに1つ過去にずらす）は適用されない。ここでは人称のみを話者目線に変える：I→he（マネージャー自身を指すのでhe/she）、you→they（staffを指す）。werewould もそのまま変わらない。【注意点】通常の話法転換では時制を1つ過去にずらすが、仮定法・格言・普遍の真理などの特殊な文はこの原則の例外となる。【関連知識】同様に、格言や真理を伝達する場合も時制の一致を受けない（He said that the earth goes around the sun.）。`,
-    pitfall: 'if he had been they, they would haveのように仮定法過去完了に変えてしまうのは誤り。仮定法の時制はそのまま保持する。',
+    explanation: `【出題意図】仮定法を含む文の話法転換における時制不変の原則を問う高難度問題。【解説】仮定法の文（If I were you, I would〜）は、すでに「現実とは異なる」という特殊な時制を含んでいるため、話法を転換しても時制の一致（さらに1つ過去にずらす）は適用されない。ここでは人称のみを話者目線に変える：主節の主語 I→he（マネージャー自身を指すのでhe/she）、if節の you→they（staffを指す。themも可）。were・would はそのまま変わらない。つまり「if he were they, he would apologize」となる。【注意点】通常の話法転換では時制を1つ過去にずらすが、仮定法・格言・普遍の真理などの特殊な文はこの原則の例外となる。【関連知識】同様に、格言や真理を伝達する場合も時制の一致を受けない（He said that the earth goes around the sun.）。`,
+    pitfall: 'if he had been they, he would haveのように仮定法過去完了に変えてしまうのは誤り。仮定法の時制はそのまま保持する。',
     memoryTip: '仮定法・ことわざ・普遍の真理は「時制の一致の例外」として特別にまとめて覚える。',
   },
   {
@@ -771,7 +795,7 @@ The manager said to the staff, "If I were you, I would apologize to the customer
 ② No sooner (　) the bell rung than the students rushed out of the classroom.
   ア. did　イ. had　ウ. has　エ. does
 
-③ Rarely (　) such a beautiful sunset as we saw yesterday.
+③ Rarely (　) such a beautiful sunset in our lives.
   ア. we have seen　イ. have we seen　ウ. we saw　エ. did we see`,
     answer: '① ウ(whose)　② イ(had)　③ イ(have we seen)',
     hint: '①所有格の関係代名詞。②No sooner had S p.p. than S+過去形＝「〜するとすぐに…した」。③否定語Rarelyが文頭に出ると倒置。',
@@ -799,7 +823,7 @@ Little did the villagers know that the quiet stranger who had arrived that morni
     answer: `① 否定語Little（ほとんど〜ない）が文頭に出たことによる倒置構文（did+主語+動詞の原形）。「村人たちはほとんど知らなかった」という意味。
 ② 完了形の分詞構文（Having+過去分詞）。主節（brought）より前の出来事（旅をしてきたこと）を表す。
 ③ 関係代名詞whoseの非制限用法。先行詞the villagersについて「彼らの収穫は何年も不作だった」という補足説明を加えている。
-④ ある朝訪れた見知らぬ男が新しい農法をもたらし、長年不作だった村の収穫を劇的に増やし、村人に感謝された。（50字）`,
+④ ある朝訪れた見知らぬ男が新しい農法をもたらし、長年不作だった村の収穫を劇的に増やし、感謝された。（48字）`,
     hint: '①Littleの文頭倒置。②Having+p.p.は主節より前の時制。③コンマ+whoseで先行詞に補足説明。④全体のあらすじを要約。',
     explanation: `【出題意図】否定語Littleの倒置・完了形の分詞構文・非制限用法のwhoseを組み合わせた最高難度の総合読解問題。【解説】①Little did the villagers knowは、否定的な意味を持つ副詞Little（ほとんど〜ない）が文頭に出たことによる倒置（疑問文と同じ語順did+主語+動詞原形）。「村人たちはほとんど知らなかった」という意味を強調する。②Having traveled from a distant cityは、主節brought（過去）よりも前に完了していた動作（遠い都市から旅してきたこと）を表す完了形の分詞構文。③the villagers, whose harvests had been poor for years,は、非制限用法の関係代名詞whoseを使い、村人たちについて「彼らの収穫は何年も不作だった」という補足情報を加えている。④全体は、ある朝到着した見知らぬ旅人が新しい農法をもたらし、長年不作だった村の収穫を大幅に改善し、村人たちに感謝され受け入れられた、という内容。【注意点】①のLittleは「ほとんど〜ない」という否定的な意味の副詞であり、Littleが強調のために文頭に出ると倒置が必須になる点に注意。【関連知識】Little did S know that〜（Sはほとんど知らなかった、〜ということを）は物語文の書き出しでよく使われる劇的効果を狙った表現。`,
     pitfall: '①をLittleの通常の語順（The villagers knew little that〜）と混同せず、倒置の理由（否定語の文頭移動）を明確に説明する。',
@@ -815,9 +839,7 @@ Little did the villagers know that the quiet stranger who had arrived that morni
     question: `次の日本語を英語に訳しなさい。（40語以上。分詞構文と関係代名詞の非制限用法をそれぞれ1つ以上使うこと）
 
 「駅から遠く離れたところに住んでいるので、彼女は毎朝早く起きなければならない。彼女の兄は、大学で経済学を専攻しているのだが、車で彼女を駅まで送ってくれることがある。」`,
-    answer: `（解答例）Living far from the station, she has to get up early every morning. Her brother, who is majoring in economics at university, sometimes drives her to the station by car.（30語→語数を増やす必要あり）
-
-（40語以上の解答例）Since she is living quite far away from the nearest train station, living there means she has to wake up very early every single morning. Her older brother, who happens to be majoring in economics at university, sometimes kindly drives her all the way to the station by car.（46語）`,
+    answer: `（解答例）Living quite far away from the nearest train station, she has to wake up very early every single morning. Her older brother, who happens to be majoring in economics at university, sometimes kindly drives her all the way to the station by car.（43語）`,
     hint: '「〜なので」→理由の分詞構文Living far from〜。「彼女の兄は、〜専攻しているのだが」→非制限用法の関係代名詞who。',
     explanation: `【出題意図】理由を表す分詞構文と非制限用法の関係代名詞を組み合わせた自由英作文。複文構造を英語で正確に表現する力を問う。【解説】「駅から遠く離れたところに住んでいるので」→理由を表す分詞構文Living far from the station（Because she lives far from the stationの書き換え）。「彼女は毎朝早く起きなければならない」→she has to get up early every morning。「彼女の兄は、大学で経済学を専攻しているのだが」→Her brother, who is majoring in economics at university,（非制限用法。兄が1人しかいないことを前提に補足情報として専攻を加える）。「車で彼女を駅まで送ってくれることがある」→sometimes drives her to the station by car。【注意点】非制限用法はコンマを忘れずに付け、thatではなくwhoを使う。分詞構文の主語（Living〜の意味上の主語）は主節の主語sheと一致させる。【関連知識】理由の分詞構文はBecause/Since/Asで始まる節から接続詞と主語を省略して作ることができる。`,
     pitfall: 'Her brother who is majoring in economicsとコンマを忘れると、複数いる兄弟の中から専攻で限定する制限用法の意味に変わってしまう。',
@@ -953,7 +975,7 @@ Not until the twentieth century did women in most countries gain the right to vo
     answer: `① Not until〜が文頭に出たことによる倒置構文（did+主語+動詞原形）。「20世紀になって初めて女性は〜を得た」という意味を強調している。
 ② 関係代名詞whoseの非制限用法。先行詞The suffrage movementについて「その指導者たちは大きな困難や投獄にさえ直面した」という補足説明を加えている。
 ③ It is 〜 that … の強調構文。「持続的な小さな努力の積み重ねこそが、最終的に永続的な変化をもたらす」という部分（the accumulation of small, persistent efforts）を強調している。
-④ 大きな社会変革は一夜にして起こるのではなく、小さく粘り強い努力の積み重ねによって実現するということ。（49字）`,
+④ 大きな社会変革は一夜にして起こるのではなく、小さく粘り強い努力の積み重ねによって実現するということ。（50字）`,
     hint: '①Not untilの文頭倒置。②コンマ+whoseで運動の指導者を補足説明。③It is 〜 thatの強調構文。④最終文の内容がメッセージの核心。',
     explanation: `【出題意図】Not untilの倒置・関係代名詞whoseの非制限用法・強調構文It is〜thatを組み合わせた最高難度の総合読解問題。【解説】①Not until the twentieth century did women in most countries gain the right to voteは、Not until〜が文頭に出たことによる倒置（did+主語+動詞原形）。「20世紀になるまで（ほとんどの国で）女性は選挙権を得なかった＝20世紀になって初めて得た」という強調的な意味。②The suffrage movement, whose leaders faced great hardship and even imprisonment,は非制限用法の関係代名詞whoseで、運動について「その指導者たちは大きな困難や投獄さえ経験した」という補足情報を加えている。③it is the accumulation of small, persistent efforts that eventually brings about lasting changeは、It is〜thatの強調構文で、「持続的な小さな努力の積み重ね」の部分を強調している（本来はThe accumulation of small, persistent efforts eventually brings about lasting change.という文のthe accumulation〜effortsを強調した形）。④全体を通して、大きな社会変革（女性参政権など）は一夜にして実現するのではなく、小さく粘り強い努力の積み重ねによって時間をかけて達成されるというメッセージが読み取れる。【注意点】③の強調構文It is〜thatは、通常の関係代名詞のthat節と混同しないよう、「It is」と「that」を取り除いても文が成立するかどうかで判別する。【関連知識】強調構文の判別法：It is [強調したい語句] that残りの文、という形で、[ ]を取り除いても元の文として意味が通ればthatは強調構文の目印。`,
     pitfall: '③を単なる関係代名詞のthat節（the accumulation of small effortsを修飾）と誤読しない。It is〜thatを外しても文が成立するため強調構文と判断する。',
@@ -969,7 +991,7 @@ Not until the twentieth century did women in most countries gain the right to vo
     question: `次の日本語を英語に訳しなさい。（45語以上。分詞構文・仮定法・関係代名詞の非制限用法を、それぞれ少なくとも1つずつ使うこと）
 
 「体調が悪かったので、彼女はパーティーに行かなかった。もし彼女が来ていたら、私たちはもっと楽しく過ごせただろう。彼女の親友であるユキは、彼女がいなくてとても寂しかったと言った。」`,
-    answer: `（解答例）Feeling sick, she did not go to the party. If she had come, we could have had a much more enjoyable time together. Yuki, who is her best friend, said that she had really missed her, feeling quite lonely without her presence there that night.（46語）`,
+    answer: `（解答例）Feeling sick, she did not go to the party. If she had come, we could have had a much more enjoyable time together. Yuki, who is her best friend, said that she had really missed her, feeling quite lonely without her presence there that night.（45語）`,
     hint: '「体調が悪かったので」→分詞構文Feeling sick。「もし〜来ていたら〜できただろう」→仮定法過去完了。「彼女の親友であるユキ」→非制限用法who。',
     explanation: `【出題意図】分詞構文・仮定法過去完了・非制限用法の関係代名詞という3つの高難度文法を1つの文章に組み込む総合的な英作文力を問う。【解説】「体調が悪かったので」→理由を表す分詞構文Feeling sick（Because she felt sickの書き換え）。「彼女はパーティーに行かなかった」→she did not go to the party。「もし彼女が来ていたら、私たちはもっと楽しく過ごせただろう」→過去の事実に反する仮定なので仮定法過去完了：If she had come, we could have had a much more enjoyable time together。「彼女の親友であるユキ」→Yuki, who is her best friend,（非制限用法。ユキは1人に特定されるため、補足情報として親友であることを加える）。「彼女がいなくてとても寂しかったと言った」→said that she had really missed her（時制の一致でhad missed）。【注意点】3つの文法事項をすべて自然に組み込みつつ、全体の文脈（体調不良→欠席→仮定→友人の発言）が一貫するよう構成する。45語以上を満たすために、feeling quite lonely without her presenceのような分詞構文の追加要素を加えるのも効果的。【関連知識】said that she had missed herのように、間接話法における時制の一致（過去完了）も同時に確認できる複合問題。`,
     pitfall: 'If she came（仮定法過去）にすると現在の仮定になり、過去の出来事（パーティーへの不参加）に対する後悔を正確に表せない。',
@@ -994,7 +1016,7 @@ Not until the twentieth century did women in most countries gain the right to vo
   ア. Despite　イ. Although　ウ. However　エ. Whatever`,
     answer: '① ウ(would be)　② イ(when)　③ ア(Despite)',
     hint: '①Were it not for〜（現在の仮定）に対応する帰結節は仮定法過去would be。②Scarcely had S p.p. when〜。③Despite+名詞句（〜にもかかわらず）。',
-    explanation: `【出題意図】Were it not for〜の倒置仮定法・Scarcely〜whenの構文・Despite+名詞という3つの構文を問う。【解説】①Were it not for modern medicine（現代医学がなかったら）は現在の事実に反する仮定法過去の倒置形（If it were not for〜の倒置）。したがって帰結節も仮定法過去would beが対応する。②Scarcely had the plane taken off when it began to shake＝「飛行機が離陸するかしないうちに、激しく揺れ始めた」。Scarcely had S p.p. when Sは、No sooner had S p.p. than Sと同系統の構文だが、ScarcelyにはwhenがセットになるのがルールA。③Despite all his wealth（彼のすべての富にもかかわらず）は、Despite+名詞句の形。Althoughは接続詞で後ろに主語+動詞が必要なため、all his wealthという名詞句には使えない。【注意点】②のScarcely〜whenとNo sooner〜thanのペアを混同しないよう、セットで覚えることが重要。【関連知識】Despite/In spite of+名詞、Although/Though+S+V、という「前置詞と接続詞の違い」は入試頻出のポイント。`,
+    explanation: `【出題意図】Were it not for〜の倒置仮定法・Scarcely〜whenの構文・Despite+名詞という3つの構文を問う。【解説】①Were it not for modern medicine（現代医学がなかったら）は現在の事実に反する仮定法過去の倒置形（If it were not for〜の倒置）。したがって帰結節も仮定法過去would beが対応する。②Scarcely had the plane taken off when it began to shake＝「飛行機が離陸するかしないうちに、激しく揺れ始めた」。Scarcely had S p.p. when Sは、No sooner had S p.p. than Sと同系統の構文だが、Scarcelyにはwhenがセットになるのが決まり。③Despite all his wealth（彼のすべての富にもかかわらず）は、Despite+名詞句の形。Althoughは接続詞で後ろに主語+動詞が必要なため、all his wealthという名詞句には使えない。【注意点】②のScarcely〜whenとNo sooner〜thanのペアを混同しないよう、セットで覚えることが重要。【関連知識】Despite/In spite of+名詞、Although/Though+S+V、という「前置詞と接続詞の違い」は入試頻出のポイント。`,
     pitfall: '③でイ(Although)を選ぶと、後ろに主語+動詞のない名詞句(all his wealth)が続いているため文法的に誤り。',
     memoryTip: 'Scarcely〜when、No sooner〜than、とそれぞれの相棒をセットで暗記し、混同しないようにする。',
   },
@@ -1007,19 +1029,19 @@ Not until the twentieth century did women in most countries gain the right to vo
     maxOnly: true,
     question: `次の英文を読んで、設問①〜④に答えよ。
 
-Were it not for the invention of the printing press, knowledge would have spread far more slowly throughout history. Scarcely had Gutenberg's press been introduced when books began to be produced in numbers previously unimaginable. This technology, whose impact is still felt today, laid the foundation for the widespread literacy that modern societies now take for granted.
+Had it not been for the invention of the printing press, knowledge would have spread far more slowly throughout history. Scarcely had Gutenberg's press been introduced when books began to be produced in numbers previously unimaginable. This technology, whose impact is still felt today, laid the foundation for the widespread literacy that modern societies now take for granted.
 
-① 「Were it not for the invention of the printing press」の文法的特徴と、対応する主節の時制について説明せよ。
+① 「Had it not been for the invention of the printing press」の文法的特徴と、対応する主節の時制について説明せよ。
 ② 「Scarcely had Gutenberg's press been introduced when」の意味を日本語で述べよ。
 ③ 「whose impact is still felt today」の文法的用法を答えよ。
 ④ この文章の要旨を日本語で50字以内でまとめよ。`,
-    answer: `① Were it not forは「If it were not for〜」のifを省略した倒置形で、現在の事実に反する仮定を表す仮定法過去。しかし本文では"would have spread"という仮定法過去完了の帰結節が続いており、歴史全体を通じた過去の話として述べられている（仮定法過去の形と過去の内容が組み合わさった用法）。
+    answer: `① Had it not been forは「If it had not been for〜」のifを省略した倒置形で、過去の事実に反する仮定を表す仮定法過去完了。主節も"would have spread"という仮定法過去完了の帰結節（would have+過去分詞）で、時制が対応している。
 ② グーテンベルクの活版印刷機が導入されるやいなや（すぐに、本が桁違いの数で作られ始めた）
 ③ 関係代名詞whoseの非制限用法。先行詞This technologyについて「その影響は今日でもなお感じられている」という補足説明を加えている。
 ④ 活版印刷術の発明が、識字率の普及という現代社会の基盤を築いた、歴史的に重要な技術だったということ。（49字）`,
-    hint: '①Were it not for＝If it were not forの倒置。②Scarcely had S p.p. when〜＝「〜するやいなや」。③コンマ+whoseで技術の影響を補足。④全体の要旨を簡潔にまとめる。',
-    explanation: `【出題意図】倒置の仮定法・Scarcely〜whenの構文・非制限用法whoseを組み合わせた印刷技術をテーマにした最高難度の総合読解問題。【解説】①Were it not for the invention of the printing pressは、If it were not for〜のifを省略した倒置形で、文法上は仮定法過去（現在の事実に反する仮定）の形を取っている。しかし文脈上は歴史全体（過去から現在にかけて）を通じた話をしており、帰結節はwould have spread（仮定法過去完了相当）となっている点が特徴的（歴史的な事実に対する仮定として、形式は仮定法過去でも意味的には過去〜現在の話をしている）。②Scarcely had Gutenberg's press been introduced when books began to be producedは「グーテンベルクの印刷機が導入されるやいなや、本が生産され始めた」という意味。Scarcely had S p.p. when S+過去形の構文。③This technology, whose impact is still felt today,は非制限用法の関係代名詞whoseで、technologyについて「その影響は今日でも感じられている」という補足情報を加えている。④全体の要旨：活版印刷の発明が知識の普及速度を劇的に高め、現代社会の識字率の基盤を作った、という歴史的意義についての文章。【注意点】①のように、仮定法の「形式（過去/過去完了）」と「実際に述べている内容の時間軸」が必ずしも一致しない高度な例もあることを理解する。【関連知識】printing press（活版印刷機）、literacy（識字率）、take for granted（当然のことと思う）などの語彙も重要。`,
-    pitfall: '①で単に「仮定法過去」とだけ答えず、帰結節との組み合わせ（過去の歴史的事実についての仮定）についても触れる必要がある。',
+    hint: '①Had it not been for＝If it had not been forの倒置。②Scarcely had S p.p. when〜＝「〜するやいなや」。③コンマ+whoseで技術の影響を補足。④全体の要旨を簡潔にまとめる。',
+    explanation: `【出題意図】倒置の仮定法・Scarcely〜whenの構文・非制限用法whoseを組み合わせた印刷技術をテーマにした最高難度の総合読解問題。【解説】①Had it not been for the invention of the printing pressは、If it had not been for〜のifを省略した倒置形で、過去の事実に反する仮定（仮定法過去完了）を表す。印刷機の発明は過去の出来事なので、主節も would have spread（would have+過去分詞）と仮定法過去完了の帰結節になり、時制が対応している。②Scarcely had Gutenberg's press been introduced when books began to be producedは「グーテンベルクの印刷機が導入されるやいなや、本が生産され始めた」という意味。Scarcely had S p.p. when S+過去形の構文。③This technology, whose impact is still felt today,は非制限用法の関係代名詞whoseで、technologyについて「その影響は今日でも感じられている」という補足情報を加えている。④全体の要旨：活版印刷の発明が知識の普及速度を劇的に高め、現代社会の識字率の基盤を作った、という歴史的意義についての文章。【注意点】①のように、倒置の仮定法ではif節（Had it not been for）と主節（would have+過去分詞）の時制が対応していることを確認する。【関連知識】printing press（活版印刷機）、literacy（識字率）、take for granted（当然のことと思う）などの語彙も重要。`,
+    pitfall: '①で単に「仮定法」とだけ答えず、仮定法過去完了であることと、主節のwould have+過去分詞との対応についても触れる必要がある。',
     memoryTip: '倒置の仮定法（Were it not for〜、Had it not been for〜）は文脈（現在か過去か）に応じてどちらの形になるかを見極める。',
   },
   {

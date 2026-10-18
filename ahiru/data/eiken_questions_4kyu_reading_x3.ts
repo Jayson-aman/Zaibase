@@ -9,12 +9,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the notice and answer the question.\n\nSCHOOL SWIMMING POOL\nOpen: July 20 - August 25\nTime: 9:00 a.m. - 4:00 p.m.\nThe pool is closed on Mondays.\nPlease bring your own towel.\n\nQuestion: When is the pool closed?',
     choices: [
-      { key: 'A', text: 'On Sundays.' },
-      { key: 'B', text: 'On Mondays.' },
-      { key: 'C', text: 'In the morning.' },
-      { key: 'D', text: 'After August 25.' },
+      { key: 'A', text: 'In the morning.' },
+      { key: 'B', text: 'After August 25.' },
+      { key: 'C', text: 'On Sundays.' },
+      { key: 'D', text: 'On Mondays.' },
     ],
-    correctKey: 'B',
+    correctKey: 'D',
     explanation:
       '掲示に「The pool is closed on Mondays（プールは月曜日は閉まっている）」とあります。closed on ~（~曜日は閉館）という表現を読み取りましょう。日曜や午前中に閉まるとは書かれていません。\n【図解】読み取りのポイント\n★本文の該当箇所: The pool is closed on Mondays.\n○正解の根拠: 閉まる曜日＝Mondays\n×ひっかけ: Sundaysや午前中は書かれていない\n→結論: 答えはB',
     difficulty: 'basic',
@@ -26,10 +26,10 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the notice and answer the question.\n\nLIBRARY BOOK SALE\nDate: Saturday, September 5\nPlace: Reading Room\nOld books are only 100 yen each.\nYou can buy up to five books.\n\nQuestion: How many books can one person buy?',
     choices: [
-      { key: 'A', text: 'Only one book.' },
-      { key: 'B', text: 'Up to three books.' },
+      { key: 'A', text: 'Up to three books.' },
+      { key: 'B', text: 'Any number of books.' },
       { key: 'C', text: 'Up to five books.' },
-      { key: 'D', text: 'Any number of books.' },
+      { key: 'D', text: 'Only one book.' },
     ],
     correctKey: 'C',
     explanation:
@@ -44,11 +44,11 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
       'Read the notice and answer the question.\n\nSCIENCE MUSEUM\nSpecial Robot Show\nStart: 2:00 p.m. every day\nThe show is about 40 minutes long.\nChildren under six years old are free.\n\nQuestion: How long is the robot show?',
     choices: [
       { key: 'A', text: 'About 20 minutes.' },
-      { key: 'B', text: 'About 40 minutes.' },
+      { key: 'B', text: 'About two hours.' },
       { key: 'C', text: 'About one hour.' },
-      { key: 'D', text: 'About two hours.' },
+      { key: 'D', text: 'About 40 minutes.' },
     ],
-    correctKey: 'B',
+    correctKey: 'D',
     explanation:
       '掲示に「The show is about 40 minutes long（ショーは約40分間）」とあります。~ minutes long（~分間の長さ）で時間を表します。2:00 p.m.は開始時刻で、長さではありません。\n【図解】読み取りのポイント\n★本文の該当箇所: The show is about 40 minutes long.\n○正解の根拠: 長さ＝40 minutes\n×ひっかけ: 2:00 p.m.は開始時刻\n→結論: 答えはB',
     difficulty: 'basic',
@@ -77,12 +77,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the notice and answer the question.\n\nCITY MARATHON\nSunday, November 3\nStart at the City Park at 8:00 a.m.\nIf it rains, the race will be next Sunday.\n\nQuestion: What will happen if it rains?',
     choices: [
-      { key: 'A', text: 'The race will start at the park.' },
-      { key: 'B', text: 'The race will be next Sunday.' },
-      { key: 'C', text: 'The race will stop.' },
+      { key: 'A', text: 'The race will be next Sunday.' },
+      { key: 'B', text: 'The race will stop.' },
+      { key: 'C', text: 'The race will start at the park.' },
       { key: 'D', text: 'The race will start at noon.' },
     ],
-    correctKey: 'B',
+    correctKey: 'A',
     explanation:
       '掲示に「If it rains, the race will be next Sunday（雨なら来週の日曜日になる）」とあります。If it rains（もし雨なら）の後ろに答えがあります。中止や正午開始とは書かれていません。\n【図解】読み取りのポイント\n★本文の該当箇所: If it rains, the race will be next Sunday.\n○正解の根拠: 雨天時＝翌週の日曜\n×ひっかけ: 中止や時間変更は書いていない\n→結論: 答えはB',
     difficulty: 'standard',
@@ -111,12 +111,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the notice and answer the question.\n\nGUITAR LESSONS\nEvery Wednesday evening\nFor students in junior high school\nLessons are 500 yen.\nGuitars are ready, so you do not need one.\n\nQuestion: Who can join these lessons?',
     choices: [
-      { key: 'A', text: 'Small children.' },
-      { key: 'B', text: 'Junior high school students.' },
-      { key: 'C', text: 'College students.' },
-      { key: 'D', text: 'Only teachers.' },
+      { key: 'A', text: 'College students.' },
+      { key: 'B', text: 'Small children.' },
+      { key: 'C', text: 'Only teachers.' },
+      { key: 'D', text: 'Junior high school students.' },
     ],
-    correctKey: 'B',
+    correctKey: 'D',
     explanation:
       '掲示に「For students in junior high school（中学生向け）」とあります。For ~（~向け）で対象者がわかります。小さな子どもや大学生、先生だけとは書かれていません。\n【図解】読み取りのポイント\n★本文の該当箇所: For students in junior high school\n○正解の根拠: 対象＝junior high school students\n×ひっかけ: 幼児や大学生は対象外\n→結論: 答えはB',
     difficulty: 'standard',
@@ -128,12 +128,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the notice and answer the question.\n\nTO ALL STUDENTS\nThe gym floor will be cleaned this weekend.\nYou cannot use the gym on Saturday and Sunday.\nPlease use the gym again from Monday.\n\nQuestion: When can students use the gym again?',
     choices: [
-      { key: 'A', text: 'On Saturday.' },
+      { key: 'A', text: 'From Monday.' },
       { key: 'B', text: 'On Sunday.' },
-      { key: 'C', text: 'From Monday.' },
-      { key: 'D', text: 'Next month.' },
+      { key: 'C', text: 'Next month.' },
+      { key: 'D', text: 'On Saturday.' },
     ],
-    correctKey: 'C',
+    correctKey: 'A',
     explanation:
       '掲示に「Please use the gym again from Monday（月曜日から再び体育館を使ってください）」とあります。土日は掃除で使えず、再開は月曜です。again（再び）に注目しましょう。\n【図解】読み取りのポイント\n★本文の該当箇所: use the gym again from Monday\n○正解の根拠: 再開＝Monday\n×ひっかけ: 土日は掃除で使用不可\n→結論: 答えはC',
     difficulty: 'standard',
@@ -145,10 +145,10 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the notice and answer the question.\n\nSUMMER CAMP\nDate: August 3 - August 5\nPlace: Green Lake\nWe will fish, cook, and sleep in tents.\nThe bus leaves the school at 7:30 a.m.\n\nQuestion: Where will the students sleep?',
     choices: [
-      { key: 'A', text: 'In a hotel.' },
+      { key: 'A', text: 'On the bus.' },
       { key: 'B', text: 'In tents.' },
-      { key: 'C', text: 'At school.' },
-      { key: 'D', text: 'On the bus.' },
+      { key: 'C', text: 'In a hotel.' },
+      { key: 'D', text: 'At school.' },
     ],
     correctKey: 'B',
     explanation:
@@ -179,12 +179,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the notice and answer the question.\n\nENGLISH SPEECH CONTEST\nDate: December 12\nEach speech must be under three minutes.\nWinners will get a book gift card.\nPlease tell Mr. Green if you want to join.\n\nQuestion: Who should students talk to if they want to join?',
     choices: [
-      { key: 'A', text: 'Mr. Green.' },
+      { key: 'A', text: 'The librarian.' },
       { key: 'B', text: 'The winners.' },
       { key: 'C', text: 'Their parents.' },
-      { key: 'D', text: 'The librarian.' },
+      { key: 'D', text: 'Mr. Green.' },
     ],
-    correctKey: 'A',
+    correctKey: 'D',
     explanation:
       '掲示に「Please tell Mr. Green if you want to join（参加したい人はグリーン先生に伝えてください）」とあります。tell ~（~に伝える）の相手はMr. Greenです。\n【図解】読み取りのポイント\n★本文の該当箇所: Please tell Mr. Green\n○正解の根拠: 申込先＝Mr. Green\n×ひっかけ: winnersは受賞者で申込先ではない\n→結論: 答えはA',
     difficulty: 'standard',
@@ -196,12 +196,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the notice and answer the question.\n\nZOO NEWS\nA baby lion was born last week!\nYou can see the baby lion from May 1.\nThe lion house opens at 10:00 a.m.\n\nQuestion: When can people see the baby lion?',
     choices: [
-      { key: 'A', text: 'Last week.' },
-      { key: 'B', text: 'From May 1.' },
-      { key: 'C', text: 'At 9:00 a.m.' },
-      { key: 'D', text: 'Next year.' },
+      { key: 'A', text: 'At 9:00 a.m.' },
+      { key: 'B', text: 'Next year.' },
+      { key: 'C', text: 'From May 1.' },
+      { key: 'D', text: 'Last week.' },
     ],
-    correctKey: 'B',
+    correctKey: 'C',
     explanation:
       '掲示に「You can see the baby lion from May 1（5月1日から赤ちゃんライオンを見られる）」とあります。last weekは生まれた時期で、見られる日ではありません。from ~（~から）に注目しましょう。\n【図解】読み取りのポイント\n★本文の該当箇所: see the baby lion from May 1\n○正解の根拠: 観覧開始＝May 1\n×ひっかけ: last weekは誕生した時期\n→結論: 答えはB',
     difficulty: 'standard',
@@ -213,12 +213,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the notice and answer the question.\n\nSCHOOL FESTIVAL\nOur class will open a coffee shop.\nWe need people to help on the festival day.\nCome to Room 3-B after school on Friday.\n\nQuestion: What will the class do at the festival?',
     choices: [
-      { key: 'A', text: 'Sing songs.' },
-      { key: 'B', text: 'Open a coffee shop.' },
-      { key: 'C', text: 'Sell books.' },
+      { key: 'A', text: 'Sell books.' },
+      { key: 'B', text: 'Sing songs.' },
+      { key: 'C', text: 'Open a coffee shop.' },
       { key: 'D', text: 'Show a movie.' },
     ],
-    correctKey: 'B',
+    correctKey: 'C',
     explanation:
       '掲示に「Our class will open a coffee shop（私たちのクラスは喫茶店を開く）」とあります。文化祭でクラスがすることは喫茶店の出店です。歌や映画の話はありません。\n【図解】読み取りのポイント\n★本文の該当箇所: Our class will open a coffee shop.\n○正解の根拠: 出し物＝coffee shop\n×ひっかけ: 歌や映画は書いていない\n→結論: 答えはB',
     difficulty: 'basic',
@@ -248,9 +248,9 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
       'Read the notice and answer the question.\n\nSOCCER CLUB MEMBERS\nWe will practice in the morning this week.\nMeet at the sports ground at 7:00 a.m.\nDo not forget to eat breakfast before you come.\n\nQuestion: What should members do before practice?',
     choices: [
       { key: 'A', text: 'Eat breakfast.' },
-      { key: 'B', text: 'Buy a new ball.' },
+      { key: 'B', text: 'Call the coach.' },
       { key: 'C', text: 'Clean the ground.' },
-      { key: 'D', text: 'Call the coach.' },
+      { key: 'D', text: 'Buy a new ball.' },
     ],
     correctKey: 'A',
     explanation:
@@ -264,12 +264,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the notice and answer the question.\n\nMOUNTAIN TRAIN\nThe train to the top runs every 30 minutes.\nThe first train is at 9:00 a.m.\nThe last train down the mountain is at 5:00 p.m.\n\nQuestion: How often does the train run?',
     choices: [
-      { key: 'A', text: 'Every 10 minutes.' },
-      { key: 'B', text: 'Every 30 minutes.' },
-      { key: 'C', text: 'Every hour.' },
-      { key: 'D', text: 'Every 5 minutes.' },
+      { key: 'A', text: 'Every 30 minutes.' },
+      { key: 'B', text: 'Every hour.' },
+      { key: 'C', text: 'Every 5 minutes.' },
+      { key: 'D', text: 'Every 10 minutes.' },
     ],
-    correctKey: 'B',
+    correctKey: 'A',
     explanation:
       '掲示に「The train to the top runs every 30 minutes（頂上行きの電車は30分ごとに運行）」とあります。every ~（~ごとに）で頻度がわかります。9:00は始発時刻です。\n【図解】読み取りのポイント\n★本文の該当箇所: runs every 30 minutes\n○正解の根拠: 頻度＝30 minutes\n×ひっかけ: 9:00は始発の時刻\n→結論: 答えはB',
     difficulty: 'basic',
@@ -298,12 +298,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the notice and answer the question.\n\nART CLASS TRIP\nWe will visit the city art museum.\nDate: June 15\nMeet at the front door at 8:45 a.m.\nThe bus will leave at 9:00 a.m. Do not be late.\n\nQuestion: What time will the bus leave?',
     choices: [
-      { key: 'A', text: 'At 8:45 a.m.' },
-      { key: 'B', text: 'At 9:00 a.m.' },
-      { key: 'C', text: 'At 9:15 a.m.' },
-      { key: 'D', text: 'At 6:15 a.m.' },
+      { key: 'A', text: 'At 9:15 a.m.' },
+      { key: 'B', text: 'At 6:15 a.m.' },
+      { key: 'C', text: 'At 9:00 a.m.' },
+      { key: 'D', text: 'At 8:45 a.m.' },
     ],
-    correctKey: 'B',
+    correctKey: 'C',
     explanation:
       '掲示に「The bus will leave at 9:00 a.m.（バスは9時に出発する）」とあります。8:45は集合時刻で、出発は9:00です。meet（集合）とleave（出発）の時刻を分けて読みましょう。\n【図解】読み取りのポイント\n★本文の該当箇所: The bus will leave at 9:00 a.m.\n○正解の根拠: 出発＝9:00\n×ひっかけ: 8:45は集合時刻\n→結論: 答えはB',
     difficulty: 'standard',
@@ -317,8 +317,8 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     choices: [
       { key: 'A', text: 'On Saturday.' },
       { key: 'B', text: 'On Sunday.' },
-      { key: 'C', text: 'Every day.' },
-      { key: 'D', text: 'On Monday.' },
+      { key: 'C', text: 'On Monday.' },
+      { key: 'D', text: 'Every day.' },
     ],
     correctKey: 'B',
     explanation:
@@ -351,9 +351,9 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the e-mail and answer the question.\n\nFrom: Emily\nTo: Kate\nHi Kate,\nAre you free this Saturday? I want to go to the new ice cream shop near the park. My sister says the chocolate one is really good. Can you come with me?\nEmily\n\nQuestion: What does Emily want to do on Saturday?',
     choices: [
-      { key: 'A', text: 'Go to the park to play.' },
+      { key: 'A', text: 'Visit her sister.' },
       { key: 'B', text: 'Go to a new ice cream shop.' },
-      { key: 'C', text: 'Visit her sister.' },
+      { key: 'C', text: 'Go to the park to play.' },
       { key: 'D', text: 'Make chocolate at home.' },
     ],
     correctKey: 'B',
@@ -368,12 +368,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the e-mail and answer the question.\n\nFrom: Dad\nTo: Ken\nKen,\nI will come home late tonight. There is curry in the fridge. Please warm it in the microwave for dinner. Do your homework before you eat.\nDad\n\nQuestion: What should Ken do before dinner?',
     choices: [
-      { key: 'A', text: 'Cook curry.' },
-      { key: 'B', text: 'Go shopping.' },
-      { key: 'C', text: 'Do his homework.' },
-      { key: 'D', text: 'Clean the kitchen.' },
+      { key: 'A', text: 'Clean the kitchen.' },
+      { key: 'B', text: 'Do his homework.' },
+      { key: 'C', text: 'Cook curry.' },
+      { key: 'D', text: 'Go shopping.' },
     ],
-    correctKey: 'C',
+    correctKey: 'B',
     explanation:
       'メールに「Do your homework before you eat（食べる前に宿題をしなさい）」とあります。before you eat（食べる前に）することは宿題です。カレーは温めるだけで作りません。\n【図解】読み取りのポイント\n★本文の該当箇所: Do your homework before you eat.\n○正解の根拠: 夕食前＝宿題\n×ひっかけ: curryは温めるだけ\n→結論: 答えはC',
     difficulty: 'standard',
@@ -386,11 +386,11 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
       'Read the e-mail and answer the question.\n\nFrom: Coach Tom\nTo: Team\nHello everyone,\nOur game on Sunday will start at 1:00 p.m., not 2:00 p.m. Please come to the field by 12:30 p.m. Wear your blue shirts.\nCoach Tom\n\nQuestion: What color shirts should the players wear?',
     choices: [
       { key: 'A', text: 'Red.' },
-      { key: 'B', text: 'White.' },
-      { key: 'C', text: 'Blue.' },
-      { key: 'D', text: 'Green.' },
+      { key: 'B', text: 'Blue.' },
+      { key: 'C', text: 'Green.' },
+      { key: 'D', text: 'White.' },
     ],
-    correctKey: 'C',
+    correctKey: 'B',
     explanation:
       'メールに「Wear your blue shirts（青いシャツを着なさい）」とあります。着る色は青です。時刻の変更（1:00開始）にも注意ですが、質問は色についてです。\n【図解】読み取りのポイント\n★本文の該当箇所: Wear your blue shirts.\n○正解の根拠: 服の色＝blue\n×ひっかけ: 時刻の話は色の答えではない\n→結論: 答えはC',
     difficulty: 'basic',
@@ -403,8 +403,8 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
       'Read the e-mail and answer the question.\n\nFrom: Grandma\nTo: Lucy\nDear Lucy,\nThank you for the birthday card. It was very pretty. I will visit your house next month. I want to teach you how to make cookies. See you soon.\nGrandma\n\nQuestion: What does Grandma want to teach Lucy?',
     choices: [
       { key: 'A', text: 'How to make cookies.' },
-      { key: 'B', text: 'How to draw a card.' },
-      { key: 'C', text: 'How to play the piano.' },
+      { key: 'B', text: 'How to play the piano.' },
+      { key: 'C', text: 'How to draw a card.' },
       { key: 'D', text: 'How to ride a bike.' },
     ],
     correctKey: 'A',
@@ -419,12 +419,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the e-mail and answer the question.\n\nFrom: Mika\nTo: Beth\nHi Beth,\nI can’t go to school today because I have a cold. Can you tell me our math homework? I don’t want to fall behind. Thank you.\nMika\n\nQuestion: Why can’t Mika go to school?',
     choices: [
-      { key: 'A', text: 'She is on a trip.' },
-      { key: 'B', text: 'She has a cold.' },
-      { key: 'C', text: 'She is too busy.' },
-      { key: 'D', text: 'She forgot the way.' },
+      { key: 'A', text: 'She has a cold.' },
+      { key: 'B', text: 'She is too busy.' },
+      { key: 'C', text: 'She forgot the way.' },
+      { key: 'D', text: 'She is on a trip.' },
     ],
-    correctKey: 'B',
+    correctKey: 'A',
     explanation:
       'メールに「I can’t go to school today because I have a cold（かぜをひいたので今日は学校へ行けない）」とあります。because（なぜなら）の後ろに理由があります。\n【図解】読み取りのポイント\n★本文の該当箇所: because I have a cold\n○正解の根拠: 理由＝かぜ\n×ひっかけ: 旅行や忙しさは書いていない\n→結論: 答えはB',
     difficulty: 'basic',
@@ -470,12 +470,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the e-mail and answer the question.\n\nFrom: Nina\nTo: Mom\nHi Mom,\nSoccer practice will finish at 6:00 today, not 5:00. Can you pick me up at the school gate at six? I will wait near the gate.\nNina\n\nQuestion: What time will Nina finish practice today?',
     choices: [
-      { key: 'A', text: 'At 5:00.' },
-      { key: 'B', text: 'At 6:00.' },
-      { key: 'C', text: 'At 7:00.' },
+      { key: 'A', text: 'At 7:00.' },
+      { key: 'B', text: 'At 5:00.' },
+      { key: 'C', text: 'At 6:00.' },
       { key: 'D', text: 'At 4:00.' },
     ],
-    correctKey: 'B',
+    correctKey: 'C',
     explanation:
       'メールに「Soccer practice will finish at 6:00 today, not 5:00（今日の練習は5時ではなく6時に終わる）」とあります。not 5:00（5時ではなく）に注意し、終了は6時です。\n【図解】読み取りのポイント\n★本文の該当箇所: finish at 6:00 today, not 5:00\n○正解の根拠: 終了＝6:00\n×ひっかけ: 5:00は「~ではない」と否定\n→結論: 答えはB',
     difficulty: 'standard',
@@ -488,11 +488,11 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
       'Read the e-mail and answer the question.\n\nFrom: Paul\nTo: David\nHi David,\nI’m sorry, but I can’t play tennis tomorrow. I have to visit my grandfather in the hospital. How about next Saturday? Please tell me if you are free.\nPaul\n\nQuestion: Why can’t Paul play tennis tomorrow?',
     choices: [
       { key: 'A', text: 'He is sick.' },
-      { key: 'B', text: 'He will visit his grandfather.' },
-      { key: 'C', text: 'It will rain.' },
-      { key: 'D', text: 'He has a lot of homework.' },
+      { key: 'B', text: 'It will rain.' },
+      { key: 'C', text: 'He has a lot of homework.' },
+      { key: 'D', text: 'He will visit his grandfather.' },
     ],
-    correctKey: 'B',
+    correctKey: 'D',
     explanation:
       'メールに「I have to visit my grandfather in the hospital（祖父を病院に見舞わなければならない）」とあります。テニスができない理由は祖父のお見舞いです。\n【図解】読み取りのポイント\n★本文の該当箇所: I have to visit my grandfather in the hospital\n○正解の根拠: 理由＝祖父の見舞い\n×ひっかけ: 病気や雨は書いていない\n→結論: 答えはB',
     difficulty: 'standard',
@@ -504,10 +504,10 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the e-mail and answer the question.\n\nFrom: Aunt Sara\nTo: Mary\nDear Mary,\nI will come to Japan this summer. I want to see Mt. Fuji and eat sushi. Can you show me some good places? I will stay for two weeks.\nAunt Sara\n\nQuestion: How long will Aunt Sara stay in Japan?',
     choices: [
-      { key: 'A', text: 'For two days.' },
-      { key: 'B', text: 'For one week.' },
+      { key: 'A', text: 'For one week.' },
+      { key: 'B', text: 'For one month.' },
       { key: 'C', text: 'For two weeks.' },
-      { key: 'D', text: 'For one month.' },
+      { key: 'D', text: 'For two days.' },
     ],
     correctKey: 'C',
     explanation:
@@ -555,12 +555,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the e-mail and answer the question.\n\nFrom: Lily\nTo: Grandpa\nDear Grandpa,\nOur school has a music concert on May 20. I will play the flute. Can you come and listen? It starts at 3:00 p.m. in the school hall.\nLily\n\nQuestion: What will Lily do at the concert?',
     choices: [
-      { key: 'A', text: 'Sing a song.' },
-      { key: 'B', text: 'Play the flute.' },
-      { key: 'C', text: 'Play the drums.' },
+      { key: 'A', text: 'Play the drums.' },
+      { key: 'B', text: 'Sing a song.' },
+      { key: 'C', text: 'Play the flute.' },
       { key: 'D', text: 'Dance.' },
     ],
-    correctKey: 'B',
+    correctKey: 'C',
     explanation:
       'メールに「I will play the flute（私はフルートを演奏する）」とあります。play the flute（フルートを吹く）がリリーのすることです。歌やダンスではありません。\n【図解】読み取りのポイント\n★本文の該当箇所: I will play the flute\n○正解の根拠: 演奏＝フルート\n×ひっかけ: singやdanceは書いていない\n→結論: 答えはB',
     difficulty: 'basic',
@@ -573,11 +573,11 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
       'Read the e-mail and answer the question.\n\nFrom: Mr. Lee\nTo: Music Club\nHello,\nWe will not use the music room on Thursday. It is used for a meeting. Let’s practice in the gym instead. Meet there at 4:00 p.m.\nMr. Lee\n\nQuestion: Where will the club practice on Thursday?',
     choices: [
       { key: 'A', text: 'In the music room.' },
-      { key: 'B', text: 'In the gym.' },
-      { key: 'C', text: 'In the library.' },
-      { key: 'D', text: 'In the park.' },
+      { key: 'B', text: 'In the park.' },
+      { key: 'C', text: 'In the gym.' },
+      { key: 'D', text: 'In the library.' },
     ],
-    correctKey: 'B',
+    correctKey: 'C',
     explanation:
       'メールに「Let’s practice in the gym instead（代わりに体育館で練習しよう）」とあります。insteadは「代わりに」の意味。木曜は音楽室が会議で使えないため体育館です。\n【図解】読み取りのポイント\n★本文の該当箇所: practice in the gym instead\n○正解の根拠: 練習場所＝gym\n×ひっかけ: music roomは会議で使用中\n→結論: 答えはB',
     difficulty: 'standard',
@@ -623,9 +623,9 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the e-mail and answer the question.\n\nFrom: George\nTo: Mom\nHi Mom,\nI’m at the bookstore now. I found a good English dictionary, but it is 2,000 yen. I only have 1,500 yen. Can I buy it? Please text me back.\nGeorge\n\nQuestion: What is George’s problem?',
     choices: [
-      { key: 'A', text: 'He cannot find the bookstore.' },
+      { key: 'A', text: 'The store is closed.' },
       { key: 'B', text: 'He does not have enough money.' },
-      { key: 'C', text: 'The store is closed.' },
+      { key: 'C', text: 'He cannot find the bookstore.' },
       { key: 'D', text: 'He lost his dictionary.' },
     ],
     correctKey: 'B',
@@ -640,10 +640,10 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the e-mail and answer the question.\n\nFrom: Mr. Sato\nTo: Parents\nHello,\nOn Sports Day, please send your child to school by 8:00 a.m. If it rains, we will hold Sports Day next Tuesday. We will send a message in the morning.\nMr. Sato\n\nQuestion: What will happen if it rains on Sports Day?',
     choices: [
-      { key: 'A', text: 'It will start at 8:00.' },
+      { key: 'A', text: 'It will be canceled.' },
       { key: 'B', text: 'It will be next Tuesday.' },
-      { key: 'C', text: 'It will be canceled.' },
-      { key: 'D', text: 'It will be indoors.' },
+      { key: 'C', text: 'It will be indoors.' },
+      { key: 'D', text: 'It will start at 8:00.' },
     ],
     correctKey: 'B',
     explanation:
@@ -657,12 +657,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the e-mail and answer the question.\n\nFrom: Amy\nTo: Sophie\nHi Sophie,\nI can’t find my English notebook. I think I left it in the classroom. Can you look on my desk tomorrow morning? Thank you so much.\nAmy\n\nQuestion: What does Amy ask Sophie to do?',
     choices: [
-      { key: 'A', text: 'Buy a new notebook.' },
-      { key: 'B', text: 'Look on her desk.' },
+      { key: 'A', text: 'Look on her desk.' },
+      { key: 'B', text: 'Clean the classroom.' },
       { key: 'C', text: 'Call the teacher.' },
-      { key: 'D', text: 'Clean the classroom.' },
+      { key: 'D', text: 'Buy a new notebook.' },
     ],
-    correctKey: 'B',
+    correctKey: 'A',
     explanation:
       'メールに「Can you look on my desk tomorrow morning?（明日の朝、私の机を見てくれる？）」とあります。エイミーの頼みは机を見てもらうことです。\n【図解】読み取りのポイント\n★本文の該当箇所: Can you look on my desk tomorrow morning?\n○正解の根拠: 頼み＝机を見る\n×ひっかけ: 新しいノート購入は頼んでいない\n→結論: 答えはB',
     difficulty: 'standard',
@@ -674,12 +674,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the e-mail and answer the question.\n\nFrom: Mark\nTo: Grandma\nDear Grandma,\nI won first prize in the drawing contest! My picture of the mountains will be shown at the city hall. Please come and see it next Sunday.\nMark\n\nQuestion: Why is Mark happy?',
     choices: [
-      { key: 'A', text: 'He got a new bike.' },
-      { key: 'B', text: 'He won first prize in a contest.' },
-      { key: 'C', text: 'He met a famous artist.' },
-      { key: 'D', text: 'He went to the mountains.' },
+      { key: 'A', text: 'He met a famous artist.' },
+      { key: 'B', text: 'He went to the mountains.' },
+      { key: 'C', text: 'He got a new bike.' },
+      { key: 'D', text: 'He won first prize in a contest.' },
     ],
-    correctKey: 'B',
+    correctKey: 'D',
     explanation:
       'メールに「I won first prize in the drawing contest!（絵のコンテストで一等賞をとった）」とあります。うれしい理由は一等賞をとったことです。山は絵の題材です。\n【図解】読み取りのポイント\n★本文の該当箇所: I won first prize in the drawing contest\n○正解の根拠: 喜びの理由＝一等賞\n×ひっかけ: mountainsは絵の題材\n→結論: 答えはB',
     difficulty: 'standard',
@@ -693,12 +693,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the passage and answer the question.\n\nTaro has a dog named Choco. Every morning, Taro walks Choco in the park before school. Choco likes to run after the birds, so Taro holds the leash tightly.\n\nQuestion: When does Taro walk Choco?',
     choices: [
-      { key: 'A', text: 'After school.' },
-      { key: 'B', text: 'Every morning before school.' },
-      { key: 'C', text: 'At night.' },
-      { key: 'D', text: 'On weekends only.' },
+      { key: 'A', text: 'Every morning before school.' },
+      { key: 'B', text: 'At night.' },
+      { key: 'C', text: 'On weekends only.' },
+      { key: 'D', text: 'After school.' },
     ],
-    correctKey: 'B',
+    correctKey: 'A',
     explanation:
       '本文に「Every morning, Taro walks Choco in the park before school（毎朝、学校の前に公園でチョコを散歩させる）」とあります。散歩の時間は毎朝の登校前です。\n【図解】読み取りのポイント\n★本文の該当箇所: Every morning ... before school\n○正解の根拠: 散歩＝毎朝、登校前\n×ひっかけ: after schoolや夜ではない\n→結論: 答えはB',
     difficulty: 'basic',
@@ -710,9 +710,9 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the passage and answer the question.\n\nMs. Green is an English teacher from Canada. She came to Japan three years ago. On weekends, she teaches a free English class for children at the community center.\n\nQuestion: What does Ms. Green do on weekends?',
     choices: [
-      { key: 'A', text: 'She travels around Canada.' },
+      { key: 'A', text: 'She studies Japanese.' },
       { key: 'B', text: 'She teaches a free English class.' },
-      { key: 'C', text: 'She studies Japanese.' },
+      { key: 'C', text: 'She travels around Canada.' },
       { key: 'D', text: 'She works at a store.' },
     ],
     correctKey: 'B',
@@ -727,12 +727,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the passage and answer the question.\n\nLast Sunday, Yumi went hiking with her father. They climbed a small mountain near their town. At the top, they ate rice balls and drank warm tea. Yumi took many photos of the view.\n\nQuestion: What did Yumi and her father eat at the top?',
     choices: [
-      { key: 'A', text: 'Sandwiches.' },
-      { key: 'B', text: 'Rice balls.' },
-      { key: 'C', text: 'Cake.' },
-      { key: 'D', text: 'Noodles.' },
+      { key: 'A', text: 'Rice balls.' },
+      { key: 'B', text: 'Cake.' },
+      { key: 'C', text: 'Noodles.' },
+      { key: 'D', text: 'Sandwiches.' },
     ],
-    correctKey: 'B',
+    correctKey: 'A',
     explanation:
       '本文に「they ate rice balls and drank warm tea（おにぎりを食べて温かいお茶を飲んだ）」とあります。山頂で食べたのはおにぎりです。\n【図解】読み取りのポイント\n★本文の該当箇所: they ate rice balls\n○正解の根拠: 食べた物＝rice balls\n×ひっかけ: sandwichesやcakeは書いていない\n→結論: 答えはB',
     difficulty: 'basic',
@@ -761,12 +761,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the passage and answer the question.\n\nThe Tanaka family moved to a new house last month. The new house has a big garden. Mr. Tanaka planted tomatoes and cucumbers. The children help him give water to the plants every evening.\n\nQuestion: What did Mr. Tanaka plant in the garden?',
     choices: [
-      { key: 'A', text: 'Flowers.' },
+      { key: 'A', text: 'Tomatoes and cucumbers.' },
       { key: 'B', text: 'Trees.' },
-      { key: 'C', text: 'Tomatoes and cucumbers.' },
+      { key: 'C', text: 'Flowers.' },
       { key: 'D', text: 'Rice.' },
     ],
-    correctKey: 'C',
+    correctKey: 'A',
     explanation:
       '本文に「Mr. Tanaka planted tomatoes and cucumbers（田中さんはトマトときゅうりを植えた）」とあります。植えたのはトマトときゅうりです。\n【図解】読み取りのポイント\n★本文の該当箇所: planted tomatoes and cucumbers\n○正解の根拠: 植えた物＝トマトときゅうり\n×ひっかけ: flowersやriceは書いていない\n→結論: 答えはC',
     difficulty: 'basic',
@@ -778,12 +778,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the passage and answer the question.\n\nEmma likes to collect stamps. She has stamps from many countries. Her favorite one is a stamp from France with a picture of a cat. Her pen pal in France sent it to her.\n\nQuestion: Who sent Emma her favorite stamp?',
     choices: [
-      { key: 'A', text: 'Her teacher.' },
-      { key: 'B', text: 'Her pen pal in France.' },
-      { key: 'C', text: 'Her brother.' },
-      { key: 'D', text: 'Her mother.' },
+      { key: 'A', text: 'Her brother.' },
+      { key: 'B', text: 'Her mother.' },
+      { key: 'C', text: 'Her teacher.' },
+      { key: 'D', text: 'Her pen pal in France.' },
     ],
-    correctKey: 'B',
+    correctKey: 'D',
     explanation:
       '本文に「Her pen pal in France sent it to her（フランスのペンフレンドが送ってくれた）」とあります。send ~ to her（~を彼女に送る）の主語がペンフレンドです。\n【図解】読み取りのポイント\n★本文の該当箇所: Her pen pal in France sent it to her\n○正解の根拠: 送り主＝フランスのペンフレンド\n×ひっかけ: 先生や兄弟は書いていない\n→結論: 答えはB',
     difficulty: 'standard',
@@ -795,12 +795,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the passage and answer the question.\n\nEvery summer, Kenta visits his grandmother in Okinawa. She lives near the sea, so they swim every day. This year, Kenta learned how to catch fish. He was very happy.\n\nQuestion: What did Kenta learn this year?',
     choices: [
-      { key: 'A', text: 'How to swim.' },
-      { key: 'B', text: 'How to catch fish.' },
-      { key: 'C', text: 'How to cook.' },
-      { key: 'D', text: 'How to sail a boat.' },
+      { key: 'A', text: 'How to catch fish.' },
+      { key: 'B', text: 'How to sail a boat.' },
+      { key: 'C', text: 'How to swim.' },
+      { key: 'D', text: 'How to cook.' },
     ],
-    correctKey: 'B',
+    correctKey: 'A',
     explanation:
       '本文に「This year, Kenta learned how to catch fish（今年、ケンタは魚のとり方を覚えた）」とあります。今年学んだのは魚のとり方です。泳ぐことは毎日していた活動です。\n【図解】読み取りのポイント\n★本文の該当箇所: Kenta learned how to catch fish\n○正解の根拠: 今年学んだこと＝魚のとり方\n×ひっかけ: 泳ぎは以前からしていた\n→結論: 答えはB',
     difficulty: 'standard',
@@ -812,10 +812,10 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the passage and answer the question.\n\nSarah is in the school brass band. She practices the trumpet after school on Tuesdays and Thursdays. Next month, the band will play at a big concert in the city hall.\n\nQuestion: What instrument does Sarah play?',
     choices: [
-      { key: 'A', text: 'The violin.' },
+      { key: 'A', text: 'The piano.' },
       { key: 'B', text: 'The trumpet.' },
-      { key: 'C', text: 'The piano.' },
-      { key: 'D', text: 'The guitar.' },
+      { key: 'C', text: 'The guitar.' },
+      { key: 'D', text: 'The violin.' },
     ],
     correctKey: 'B',
     explanation:
@@ -829,12 +829,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the passage and answer the question.\n\nMr. Ford opened a small pet shop ten years ago. He sells birds, fish, and rabbits. He does not sell dogs or cats because his shop is too small. Many families visit his shop on weekends.\n\nQuestion: Why doesn’t Mr. Ford sell dogs?',
     choices: [
-      { key: 'A', text: 'His shop is too small.' },
-      { key: 'B', text: 'Dogs are too expensive.' },
-      { key: 'C', text: 'He does not like dogs.' },
-      { key: 'D', text: 'People do not want dogs.' },
+      { key: 'A', text: 'People do not want dogs.' },
+      { key: 'B', text: 'His shop is too small.' },
+      { key: 'C', text: 'Dogs are too expensive.' },
+      { key: 'D', text: 'He does not like dogs.' },
     ],
-    correctKey: 'A',
+    correctKey: 'B',
     explanation:
       '本文に「He does not sell dogs or cats because his shop is too small（店が小さすぎるので犬や猫は売らない）」とあります。because（なぜなら）の後ろが理由です。\n【図解】読み取りのポイント\n★本文の該当箇所: because his shop is too small\n○正解の根拠: 理由＝店が小さすぎる\n×ひっかけ: 値段や好みは書いていない\n→結論: 答えはA',
     difficulty: 'standard',
@@ -863,12 +863,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the passage and answer the question.\n\nThere is a small cafe near Jack’s house. The cafe sells warm soup and fresh bread. Jack often goes there with his mother on cold days. His favorite is the pumpkin soup.\n\nQuestion: What is Jack’s favorite food at the cafe?',
     choices: [
-      { key: 'A', text: 'Fresh bread.' },
-      { key: 'B', text: 'Pumpkin soup.' },
-      { key: 'C', text: 'Hot coffee.' },
-      { key: 'D', text: 'Ice cream.' },
+      { key: 'A', text: 'Ice cream.' },
+      { key: 'B', text: 'Hot coffee.' },
+      { key: 'C', text: 'Fresh bread.' },
+      { key: 'D', text: 'Pumpkin soup.' },
     ],
-    correctKey: 'B',
+    correctKey: 'D',
     explanation:
       '本文に「His favorite is the pumpkin soup（彼のお気に入りはかぼちゃスープ）」とあります。favorite（お気に入り）はかぼちゃスープです。パンも売っていますがお気に入りではありません。\n【図解】読み取りのポイント\n★本文の該当箇所: His favorite is the pumpkin soup\n○正解の根拠: お気に入り＝かぼちゃスープ\n×ひっかけ: breadは売っているだけ\n→結論: 答えはB',
     difficulty: 'standard',
@@ -880,12 +880,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the passage and answer the question.\n\nRika joined the cooking club this year. Last week, the club made curry for the first time. Rika cut the vegetables, and her friend cooked the rice. Everyone said the curry was delicious.\n\nQuestion: What did Rika do when the club made curry?',
     choices: [
-      { key: 'A', text: 'She cooked the rice.' },
-      { key: 'B', text: 'She cut the vegetables.' },
-      { key: 'C', text: 'She washed the dishes.' },
-      { key: 'D', text: 'She bought the meat.' },
+      { key: 'A', text: 'She cut the vegetables.' },
+      { key: 'B', text: 'She washed the dishes.' },
+      { key: 'C', text: 'She bought the meat.' },
+      { key: 'D', text: 'She cooked the rice.' },
     ],
-    correctKey: 'B',
+    correctKey: 'A',
     explanation:
       '本文に「Rika cut the vegetables（リカは野菜を切った）」とあります。リカの仕事は野菜を切ることでした。ご飯を炊いたのは友達です。\n【図解】読み取りのポイント\n★本文の該当箇所: Rika cut the vegetables\n○正解の根拠: リカ＝野菜を切る\n×ひっかけ: ご飯は友達が炊いた\n→結論: 答えはB',
     difficulty: 'standard',
@@ -898,11 +898,11 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
       'Read the passage and answer the question.\n\nMr. Kim is a bookshop owner. His shop has many old and rare books. Students often come to read after school. Mr. Kim is happy because he loves talking about books with young people.\n\nQuestion: Why is Mr. Kim happy?',
     choices: [
       { key: 'A', text: 'He sells many books.' },
-      { key: 'B', text: 'He loves talking about books with young people.' },
-      { key: 'C', text: 'His shop is very big.' },
-      { key: 'D', text: 'He gets many new books.' },
+      { key: 'B', text: 'He gets many new books.' },
+      { key: 'C', text: 'He loves talking about books with young people.' },
+      { key: 'D', text: 'His shop is very big.' },
     ],
-    correctKey: 'B',
+    correctKey: 'C',
     explanation:
       '本文に「he loves talking about books with young people（若い人と本の話をするのが大好き）」とあります。うれしい理由は若者との本の話です。\n【図解】読み取りのポイント\n★本文の該当箇所: he loves talking about books with young people\n○正解の根拠: 喜びの理由＝若者との本の会話\n×ひっかけ: 販売数や店の広さは無関係\n→結論: 答えはB',
     difficulty: 'standard',
@@ -914,12 +914,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the passage and answer the question.\n\nDaniel has a part-time job at a flower shop on Saturdays. He carries the flowers and cleans the floor. He earns some money and buys books with it. He wants to save money for a trip.\n\nQuestion: What does Daniel do with the money he earns?',
     choices: [
-      { key: 'A', text: 'He buys flowers.' },
-      { key: 'B', text: 'He buys books.' },
-      { key: 'C', text: 'He gives it to his sister.' },
-      { key: 'D', text: 'He buys food.' },
+      { key: 'A', text: 'He gives it to his sister.' },
+      { key: 'B', text: 'He buys flowers.' },
+      { key: 'C', text: 'He buys food.' },
+      { key: 'D', text: 'He buys books.' },
     ],
-    correctKey: 'B',
+    correctKey: 'D',
     explanation:
       '本文に「buys books with it（そのお金で本を買う）」とあります。稼いだお金で本を買います。旅行のためにためたいとも書かれていますが、buysの対象は本です。\n【図解】読み取りのポイント\n★本文の該当箇所: buys books with it\n○正解の根拠: お金の使い道＝本を買う\n×ひっかけ: flowersは仕事で運ぶだけ\n→結論: 答えはB',
     difficulty: 'standard',
@@ -931,12 +931,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the passage and answer the question.\n\nThe town has a new library. It is open until 8:00 p.m., so students can study there after club activities. There is also a quiet room for reading. Many people are glad about the new library.\n\nQuestion: Until what time is the new library open?',
     choices: [
-      { key: 'A', text: 'Until 5:00 p.m.' },
+      { key: 'A', text: 'Until 8:00 p.m.' },
       { key: 'B', text: 'Until 6:00 p.m.' },
-      { key: 'C', text: 'Until 8:00 p.m.' },
-      { key: 'D', text: 'Until 10:00 p.m.' },
+      { key: 'C', text: 'Until 10:00 p.m.' },
+      { key: 'D', text: 'Until 5:00 p.m.' },
     ],
-    correctKey: 'C',
+    correctKey: 'A',
     explanation:
       '本文に「It is open until 8:00 p.m.（午後8時まで開いている）」とあります。until ~（~まで）で閉館時刻がわかります。\n【図解】読み取りのポイント\n★本文の該当箇所: It is open until 8:00 p.m.\n○正解の根拠: 閉館＝8:00 p.m.\n×ひっかけ: 5:00や6:00ではない\n→結論: 答えはC',
     difficulty: 'basic',
@@ -948,12 +948,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the passage and answer the question.\n\nOn New Year’s Day, Mina’s family visits a shrine. They wish for a good year. After that, they eat special food called osechi. Mina’s favorite part is getting money from her grandparents.\n\nQuestion: What is Mina’s favorite part of New Year’s Day?',
     choices: [
-      { key: 'A', text: 'Visiting the shrine.' },
-      { key: 'B', text: 'Eating osechi.' },
-      { key: 'C', text: 'Getting money from her grandparents.' },
-      { key: 'D', text: 'Playing games.' },
+      { key: 'A', text: 'Eating osechi.' },
+      { key: 'B', text: 'Playing games.' },
+      { key: 'C', text: 'Visiting the shrine.' },
+      { key: 'D', text: 'Getting money from her grandparents.' },
     ],
-    correctKey: 'C',
+    correctKey: 'D',
     explanation:
       '本文に「Mina’s favorite part is getting money from her grandparents（ミナのお気に入りは祖父母からお金をもらうこと）」とあります。favorite part（一番好きなこと）はお年玉です。\n【図解】読み取りのポイント\n★本文の該当箇所: getting money from her grandparents\n○正解の根拠: 一番好き＝お金をもらうこと\n×ひっかけ: 神社やおせちは他の行事\n→結論: 答えはC',
     difficulty: 'standard',
@@ -982,12 +982,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the passage and answer the question.\n\nEvery winter, Ben’s family goes to the mountains to ski. Ben started skiing when he was five. Now he can ski very well. This year, he will teach his little sister how to ski.\n\nQuestion: What will Ben do this year?',
     choices: [
-      { key: 'A', text: 'Learn to ski.' },
-      { key: 'B', text: 'Teach his sister to ski.' },
-      { key: 'C', text: 'Buy new skis.' },
-      { key: 'D', text: 'Stay home.' },
+      { key: 'A', text: 'Buy new skis.' },
+      { key: 'B', text: 'Learn to ski.' },
+      { key: 'C', text: 'Stay home.' },
+      { key: 'D', text: 'Teach his sister to ski.' },
     ],
-    correctKey: 'B',
+    correctKey: 'D',
     explanation:
       '本文に「This year, he will teach his little sister how to ski（今年、妹にスキーの仕方を教える）」とあります。今年することは妹に教えることです。ベン自身は5歳から滑っています。\n【図解】読み取りのポイント\n★本文の該当箇所: he will teach his little sister how to ski\n○正解の根拠: 今年＝妹に教える\n×ひっかけ: ベンはもう上手に滑れる\n→結論: 答えはB',
     difficulty: 'standard',
@@ -1016,12 +1016,12 @@ export const eikenQuestions4kyuReadingX3: EikenQuestion[] = [
     question:
       'Read the passage and answer the question.\n\nLast Saturday, it was rainy, so Tom and his brother could not play soccer outside. Instead, they stayed home and made a model plane together. It took them three hours, but they had a lot of fun.\n\nQuestion: Why did Tom and his brother stay home?',
     choices: [
-      { key: 'A', text: 'They were sick.' },
-      { key: 'B', text: 'It was rainy.' },
-      { key: 'C', text: 'They had homework.' },
-      { key: 'D', text: 'It was too cold.' },
+      { key: 'A', text: 'They had homework.' },
+      { key: 'B', text: 'It was too cold.' },
+      { key: 'C', text: 'They were sick.' },
+      { key: 'D', text: 'It was rainy.' },
     ],
-    correctKey: 'B',
+    correctKey: 'D',
     explanation:
       '本文に「it was rainy, so Tom and his brother could not play soccer outside（雨だったので外でサッカーができなかった）」とあります。家にいた理由は雨です。so（だから）の前が理由になります。\n【図解】読み取りのポイント\n★本文の該当箇所: it was rainy, so ... could not play soccer outside\n○正解の根拠: 理由＝雨\n×ひっかけ: 病気や寒さは書いていない\n→結論: 答えはB',
     difficulty: 'standard',

@@ -56,7 +56,7 @@ export const eikenQuestions2kyuReadingX4: EikenQuestion[] = [
       { key: 'D', text: 'Travelers preferred to drive their own cars across Europe.' },
     ],
     correctKey: 'B',
-    explanation: '本文に "many railway companies closed their sleeper services because they were losing money" とあり、格安航空がより安く速い移動手段を提供したことが背景です。Bが正解。老朽車両やGの財政支援は「復活」の文脈で語られており、廃止理由ではありません。\n\n【図解】読み取りのポイント\n★because they were losing money / Budget airlines offered cheaper and faster ways\n○赤字経営が廃止の直接理由。格安航空との競争が原因\n×carriages need costly repairs は現在の復活の障害であって廃止理由ではない\n→答えはB',
+    explanation: '本文に "many railway companies closed their sleeper services because they were losing money" とあり、格安航空がより安く速い移動手段を提供したことが背景です。Bが正解。老朽車両の修理費は現在の復活の障害として、政府の資金援助は復活を後押しする動きとして語られており、廃止理由ではありません（Cの「政府が支援を拒んだ」とも書かれていません）。\n\n【図解】読み取りのポイント\n★because they were losing money / Budget airlines offered cheaper and faster ways\n○赤字経営が廃止の直接理由。格安航空との競争が原因\n×carriages need costly repairs は現在の復活の障害であって廃止理由ではない\n→答えはB',
     difficulty: 'advanced',
   },
   {

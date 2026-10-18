@@ -4,12 +4,12 @@ import type { Figure } from './figures';
 // 純粋な計算問題（最大公約数・素因数分解・単純な四則など）や、
 // 樹形図が必要な場合の数などは、図で理解が深まらないため付けていない。
 export const figuresCoreSansu: Record<string, Figure> = {
-  // 半径5cmの円の面積。円周率3.14 → 78.5㎠。
+  // 半径5cmの円の面積。円周率3.14 → 78.5cm²。
   sansu_03: {
     kind: 'circle',
     radiusLabel: '5cm',
     showCenter: true,
-    caption: '面積 = 5×5×3.14 = 78.5㎠',
+    caption: '面積 = 5×5×3.14 = 78.5cm²',
   },
 
   // 速さ・時間・距離の比例のグラフ。時速60km（傾き60）で2.5時間 → 150km。
@@ -72,7 +72,7 @@ export const figuresCoreSansu: Record<string, Figure> = {
     caption: '体積 = 10×10×10 = 1000cm³',
   },
 
-  // 底辺12cm・高さ8cmの三角形。面積 = 12×8÷2 = 48㎠。
+  // 底辺12cm・高さ8cmの三角形。面積 = 12×8÷2 = 48cm²。
   sansu_18: {
     kind: 'polygon',
     points: [
@@ -82,7 +82,7 @@ export const figuresCoreSansu: Record<string, Figure> = {
     ],
     sideLabels: ['12cm', null, null],
     heights: [{ from: 2, toEdge: [0, 1], label: '8cm' }],
-    caption: '面積 = 12×8÷2 = 48㎠',
+    caption: '面積 = 12×8÷2 = 48cm²',
   },
 
   // 植木算（円形）。周囲120mに8m間隔 → 120÷8 = 15本（円形は本数＝間隔数）。
@@ -129,7 +129,7 @@ export const figuresCoreSansu: Record<string, Figure> = {
     labels: { radius: '3cm', height: '10cm' },
     caption: '体積 = 3.14×3²×10 = 282.6cm³',
     steps: [
-      '底面積 = 3 × 3 × 3.14 = 28.26㎠',
+      '底面積 = 3 × 3 × 3.14 = 28.26cm²',
       '体積 = 底面積 × 高さ = 28.26 × 10 = 282.6cm³',
     ],
   },
@@ -153,20 +153,20 @@ export const figuresCoreSansu: Record<string, Figure> = {
     ],
   },
 
-  // 面積が1辺6cmの正方形（36㎠）と等しい円。半径 ≈ 3.39cm。
+  // 面積が1辺6cmの正方形（36cm²）と等しい円。半径 ≈ 3.39cm。
   sansu_34: {
     kind: 'circle',
     radiusLabel: '約3.39cm',
     showCenter: true,
-    caption: '面積 = 36㎠（1辺6cmの正方形と同じ）→ 半径≈3.39cm',
+    caption: '面積 = 36cm²（1辺6cmの正方形と同じ）→ 半径≈3.39cm',
     steps: [
-      '正方形の面積 = 6 × 6 = 36㎠',
+      '正方形の面積 = 6 × 6 = 36cm²',
       '半径 × 半径 = 36 ÷ 3.14 ≈ 11.46',
       '3.39 × 3.39 ≈ 11.49 に近いので、半径 ≈ 3.39cm',
     ],
   },
 
-  // 直角をはさむ2辺が6cm・8cmの直角三角形。面積 = 6×8÷2 = 24㎠。
+  // 直角をはさむ2辺が6cm・8cmの直角三角形。面積 = 6×8÷2 = 24cm²。
   sansu_39: {
     kind: 'polygon',
     points: [
@@ -176,10 +176,10 @@ export const figuresCoreSansu: Record<string, Figure> = {
     ],
     sideLabels: ['6cm', '8cm', null],
     rightAngles: [1],
-    caption: '面積 = 6×8÷2 = 24㎠',
+    caption: '面積 = 6×8÷2 = 24cm²',
   },
 
-  // 半径10cmの円に内接する正三角形。面積 = 75√3 ≈ 129.9㎠。
+  // 半径10cmの円に内接する正三角形。面積 = 75√3 ≈ 129.9cm²。
   sansu_41: {
     kind: 'circle',
     radiusLabel: '10cm',
@@ -194,11 +194,11 @@ export const figuresCoreSansu: Record<string, Figure> = {
       [2, 0],
     ],
     showCenter: true,
-    caption: '内接する正三角形の面積 = 75√3 ≈ 129.9㎠',
+    caption: '内接する正三角形の面積 = 75√3 ≈ 129.9cm²',
     steps: [
       '外接円の半径 R=10cm から、1辺 a = R√3 = 10√3 cm',
-      '正三角形の面積 = (√3/4) × a² = (√3/4) × 300 = 75√3 ㎠',
-      '75 × 1.732 ≈ 129.9㎠',
+      '正三角形の面積 = (√3/4) × a² = (√3/4) × 300 = 75√3 cm²',
+      '75 × 1.732 ≈ 129.9cm²',
     ],
   },
 

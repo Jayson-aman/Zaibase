@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { logPurchaseEvent } from '../services/analytics';
 import {
   View,
   Text,
@@ -7,21 +8,34 @@ import {
   Modal,
   ActivityIndicator,
   ScrollView,
-  Alert,
   Platform,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
-import { PRO_PRICE_LABEL, MAX_PRICE_LABEL } from '../constants/pricing';
+import {
+  PRO_PRICE_LABEL,
+  MAX_PRICE_LABEL,
+  PRO_YEARLY_PRICE_LABEL,
+  MAX_YEARLY_PRICE_LABEL,
+  WEB_PRICES,
+  formatYen,
+  yearlyPerMonth,
+  yearlyDiscountPercent,
+} from '../constants/pricing';
 import {
   fetchProMaxProducts,
   purchaseProduct,
   restorePurchases,
   tierFromCustomerInfo,
   hasVocabEntitlement,
+  getIntroIneligibleProductIds,
 } from '../services/subscription';
 import { PRO_FEATURES, MAX_FEATURES } from '../constants/proAccess';
+import { planNotice, tierLabel, formatMonthDay } from '../utils/planStatus';
+import { useSubscription } from '../hooks/useSubscription';
 import { useAuthUser } from '../hooks/useAuthUser';
+import { alertCompat, confirmDialog } from '../utils/dialog';
+import { isPaymentPending } from '../utils/purchasePending';
 
 interface Props {
   visible: boolean;
@@ -32,9 +46,22 @@ interface Props {
 export default function Paywall({ visible, onClose, onPurchased }: Props) {
   const [proProd, setProProd] = useState<unknown>(null);
   const [maxProd, setMaxProd] = useState<unknown>(null);
+  const [proYearlyProd, setProYearlyProd] = useState<unknown>(null);
+  const [maxYearlyProd, setMaxYearlyProd] = useState<unknown>(null);
+  // Web版のみ。年額のパッケージがRevenueCatに作られているときだけ切り替えが出る
+  const [yearly, setYearly] = useState(false);
+  // 導入オファーをすでに使った商品（その商品には「まず¥500」を出さない）
+  const [introUsed, setIntroUsed] = useState<Set<string>>(new Set());
   const [loadingOff, setLoadingOff] = useState(true);
   const [purchasing, setPurchasing] = useState(false);
-  const { isLoggedIn } = useAuthUser();
+  const { isLoggedIn, loading: authLoading } = useAuthUser();
+  // すでに契約中のプランは「ご利用中」にして、二重に購入させない（Maxの人にProを売らない）
+  const { tier: tierNow, plan, loading: subLoading } = useSubscription();
+  // お支払いに問題がある（請求の失敗）あいだは tier が free に戻るが、契約そのものは続いている。
+  // そこで同じ階層をもう一度買わせると、二重の購読になる。契約中の階層として扱う。
+  const ownedTier = tierNow !== 'free' ? tierNow : plan.kind === 'billing' && plan.tier ? plan.tier : 'free';
+  const proOwned = ownedTier === 'pro' || ownedTier === 'max';
+  const maxOwned = ownedTier === 'max';
   const isWeb = Platform.OS === 'web';
 
   function goLogin() {
@@ -46,29 +73,71 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
     if (!visible) return;
     setLoadingOff(true);
     fetchProMaxProducts()
-      .then(({ pro, max }) => {
+      .then(({ pro, max, proYearly, maxYearly }) => {
         setProProd(pro);
         setMaxProd(max);
+        setProYearlyProd(proYearly);
+        setMaxYearlyProd(maxYearly);
+        const ids = [pro, max]
+          .map((p) => (p as { identifier?: string } | null)?.identifier)
+          .filter((x): x is string => typeof x === 'string');
+        getIntroIneligibleProductIds(ids).then(setIntroUsed).catch(() => {});
       })
       .catch(() => {})
       .finally(() => setLoadingOff(false));
   }, [visible]);
 
-  async function handlePurchase(product: unknown) {
+  async function handlePurchase(product: unknown, target: 'pro' | 'max' = 'pro') {
     // iOS / Android はストアアカウント（Apple ID / Google）に購入が紐付くため
     // ログイン不要でそのまま購入できる。Web 版のみ Stripe 購入をアカウントに
     // 紐付けるため、未ログインならログイン画面へ誘導する。
+    // ログイン状態の確認中は、ログイン画面へ飛ばさない（ログイン済みの人が一瞬ログインを求められる）
+    if (isWeb && authLoading) return;
     if (isWeb && !isLoggedIn) {
       goLogin();
       return;
     }
+    // 契約状態の確認中は買わせない（契約中の人に、同じ階層の購入ボタンが一瞬有効になるのを防ぐ）
+    if (subLoading) return;
+    // Web では、ProからMaxへ切りかえても、いまのProは自動では解約されない（Proの請求が続いてMaxと重なる）。先に知らせる
+    if (isWeb && target === 'max' && ownedTier === 'pro') {
+      const go = await confirmDialog(
+        'プランの切りかえ',
+        'いまのProは、Maxを購入しても自動では解約されません。Maxに切りかえる場合は、購入完了メールの「サブスクリプション管理」のリンクから、Proを解約してください。\n\nこのままMaxを購入しますか？',
+        { confirm: '購入する', cancel: 'やめる' },
+      );
+      if (!go) return;
+    }
+    const hasIntro = introPriceLabel(product) != null;
+    logPurchaseEvent('plan_tapped', 'subscription', { tier: tierNow, plan: target, detail: hasIntro ? 'intro' : 'full' });
     setPurchasing(true);
     try {
       await purchaseProduct(product);
+      logPurchaseEvent('purchase_succeeded', 'subscription', { tier: tierNow, plan: target, detail: hasIntro ? 'intro' : 'full' });
       onPurchased();
     } catch (err: any) {
-      if (!err?.userCancelled) {
-        Alert.alert('購入エラー', 'もう一度お試しください。');
+      if (err?.userCancelled || err?.errorCode === 1) {
+        logPurchaseEvent('purchase_cancelled', 'subscription', { tier: tierNow, plan: target, detail: hasIntro ? 'intro' : 'full' });
+      } else {
+        if (isPaymentPending(err)) {
+          logPurchaseEvent('purchase_pending', 'subscription', { tier: tierNow, plan: target });
+        } else {
+          // 失敗の理由（ストアのエラー番号と、メッセージの先頭）。何が起きたか後から分かるように残す
+          logPurchaseEvent('purchase_failed', 'subscription', {
+            tier: tierNow,
+            plan: target,
+            detail: `E${err?.errorCode ?? '?'}:${String(err?.message ?? '').replace(/\s+/g, ' ')}`,
+          });
+        }
+        if (isPaymentPending(err)) {
+          // ご家族の承認待ち。失敗ではなく、承認されると購入が確定する（買い直させると二重に払う）
+          alertCompat('承認待ちです', 'ご家族の承認待ちです。承認されると、そのままご利用いただけます。承認後にアプリを開き直し、「購入を復元する」を押してください。');
+        } else if (err instanceof Error && err.message.includes('お支払いはされていません')) {
+          // 購入前の確認（アカウントの準備中など）で止めたときの案内を、そのまま見せる
+          alertCompat('購入できませんでした', err.message);
+        } else {
+          alertCompat('購入エラー', 'もう一度お試しください。');
+        }
       }
     } finally {
       setPurchasing(false);
@@ -76,10 +145,12 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
   }
 
   async function handleRestore() {
+    // ログイン状態の確認中は何もしない（ログイン済みの人に「ログインが必要です」と出さない）
+    if (isWeb && authLoading) return;
     // iOS / Android はストアの購入履歴から復元するためログイン不要。
     // Web 版のみ、Stripe 購入をアカウントで管理するためログインを促す。
     if (isWeb && !isLoggedIn) {
-      Alert.alert(
+      alertCompat(
         'ログインが必要です',
         'Web版でご購入を復元するにはログインが必要です。',
         [
@@ -89,6 +160,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
       );
       return;
     }
+    logPurchaseEvent('restore_tapped', 'subscription', { tier: tierNow });
     setPurchasing(true);
     try {
       const info = await restorePurchases();
@@ -96,17 +168,20 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
       // ように見える（App Store審査でよく指摘される）。結果を必ず伝える。
       const restored =
         tierFromCustomerInfo(info) !== 'free' || hasVocabEntitlement(info);
+      logPurchaseEvent(restored ? 'restore_found' : 'restore_none', 'subscription', { tier: tierNow });
       if (restored) {
-        Alert.alert('復元しました', 'ご購入内容を復元しました。');
+        alertCompat('復元しました', 'ご購入内容を復元しました。');
         onPurchased();
       } else {
-        Alert.alert(
+        alertCompat(
           '復元できる購入がありません',
-          'このApple IDでのご購入が見つかりませんでした。購入時と同じApple IDでサインインしているかご確認ください。',
+          isWeb
+            ? 'このアカウントでのご購入が見つかりませんでした。購入時と同じアカウントでログインしているかご確認ください。'
+            : 'このApple ID（Android では Google アカウント）でのご購入が見つかりませんでした。購入時と同じアカウントでサインインしているかご確認ください。',
         );
       }
     } catch {
-      Alert.alert('復元エラー', '購入の復元に失敗しました。');
+      alertCompat('復元エラー', '購入の復元に失敗しました。');
     } finally {
       setPurchasing(false);
     }
@@ -116,18 +191,60 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
   // Appleのガイドライン3.1.2で課金期間の明示が必須なため、必ず「/月」を付ける。
   const withPeriod = (priceString: string | undefined, fallback: string) =>
     priceString ? `${priceString}/月` : fallback;
-  const proPrice = withPeriod((proProd as any)?.priceString, PRO_PRICE_LABEL);
-  const maxPrice = withPeriod((maxProd as any)?.priceString, MAX_PRICE_LABEL);
-  // 導入オファー（¥500・7日間のPay Up Front等）がApp Store Connect側で設定されて
+  const hasYearly = isWeb && !!proYearlyProd && !!maxYearlyProd;
+  const showYearly = hasYearly && yearly;
+  const withYear = (priceString: string | undefined, fallback: string) =>
+    priceString ? `${priceString}/年` : fallback;
+  const proPrice = showYearly
+    ? withYear((proYearlyProd as any)?.priceString, PRO_YEARLY_PRICE_LABEL)
+    : withPeriod((proProd as any)?.priceString, PRO_PRICE_LABEL);
+  const maxPrice = showYearly
+    ? withYear((maxYearlyProd as any)?.priceString, MAX_YEARLY_PRICE_LABEL)
+    : withPeriod((maxProd as any)?.priceString, MAX_PRICE_LABEL);
+  // 年額の補足（月あたりの換算と、月額12か月分に対する割引率）
+  const proYearlyNote = `月あたり約${formatYen(yearlyPerMonth(WEB_PRICES.proYearly))}（月額より${yearlyDiscountPercent(WEB_PRICES.proMonthly, WEB_PRICES.proYearly)}%おトク）`;
+  const maxYearlyNote = `月あたり約${formatYen(yearlyPerMonth(WEB_PRICES.maxYearly))}（月額より${yearlyDiscountPercent(WEB_PRICES.maxMonthly, WEB_PRICES.maxYearly)}%おトク）`;
+  // 購入するプロダクト（年額表示のときは年額）
+  const proBuy = showYearly ? proYearlyProd : proProd;
+  const maxBuy = showYearly ? maxYearlyProd : maxProd;
+  // 導入オファー（¥500・1か月のPay Up Front等）がApp Store Connect側で設定されて
   // いれば、RevenueCatが product.introPrice として返す。ここで「まず¥500で7日間」
   // のように明示しないと、Appleガイドライン3.1.2（トライアル・オファー条件の明示）に
   // 反するだけでなく、ユーザーが通常価格でいきなり課金されると誤解する。
   const introPriceLabel = (product: unknown): string | null => {
+    const id = (product as any)?.identifier as string | undefined;
+    if (id && introUsed.has(id)) return null;
     const intro = (product as any)?.introPrice as { priceString?: string } | null | undefined;
     return intro?.priceString ?? null;
   };
+  // お試し期間の長さ（ストアが返す値。取れなければ1か月）
+  const introDays = (product: unknown): string => {
+    const intro = (product as any)?.introPrice as { periodUnit?: string; periodNumberOfUnits?: number } | null | undefined;
+    const n = intro?.periodNumberOfUnits;
+    if (n && intro?.periodUnit === 'DAY') return `${n}日間`;
+    if (n && intro?.periodUnit === 'WEEK') return `${n * 7}日間`;
+    if (n && intro?.periodUnit === 'MONTH') return `${n}か月`;
+    return '1か月';
+  };
   const proIntro = introPriceLabel(proProd);
   const maxIntro = introPriceLabel(maxProd);
+
+  // ペイウォールが開いて、商品の読みこみが終わったときに1回だけ記録する。
+  // detail は、お試し価格が出ているか（intro）・通常価格だけか（full）・商品が取れなかったか（none）
+  const openedLogged = React.useRef(false);
+  useEffect(() => {
+    if (!visible) {
+      openedLogged.current = false;
+      return;
+    }
+    if (loadingOff || openedLogged.current) return;
+    openedLogged.current = true;
+    const flag = (prod: unknown, intro: string | null) => (prod == null ? 'none' : intro ? 'intro' : 'full');
+    logPurchaseEvent('paywall_opened', 'subscription', {
+      tier: tierNow,
+      detail: `pro_${flag(proProd, proIntro)},max_${flag(maxProd, maxIntro)}`,
+    });
+  }, [visible, loadingOff]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <Modal
@@ -137,9 +254,12 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
       onRequestClose={onClose}
     >
       <LinearGradient colors={['#FFFFFF', '#F5EFE4']} style={styles.container}>
-        <TouchableOpacity style={styles.closeBtn} onPress={onClose}>
-          <Text style={styles.closeBtnText}>✕</Text>
-        </TouchableOpacity>
+        {/* 閉じるボタンは、スクロールする内容の上の帯に置く（内容の上に浮かせると、料金の文字と重なる） */}
+        <View style={styles.closeRow}>
+          <TouchableOpacity style={styles.closeBtn} onPress={onClose} accessibilityRole="button" accessibilityLabel="閉じる">
+            <Text style={styles.closeBtnText}>✕</Text>
+          </TouchableOpacity>
+        </View>
 
         <ScrollView
           contentContainerStyle={styles.scroll}
@@ -149,6 +269,23 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
           <Text style={styles.title}>プレミアムプラン</Text>
           <Text style={styles.subtitle}>聞き流し学習でさらに力をつける</Text>
 
+          {/* いまの契約と、いつまで使えるか。お試し・解約・期限切れが画面のどこにも出ていなかった */}
+          {(() => {
+            const manage = isWeb ? '購入完了メールの「サブスクリプション管理」リンク' : 'ストアの設定（Apple ID → サブスクリプション）';
+            const n = planNotice(plan, manage);
+            const name = tierLabel(plan.tier);
+            const when = formatMonthDay(plan.expiresAt);
+            if (n == null && !(plan.kind === 'active' && plan.expiresAt != null)) return null;
+            return (
+              <View style={styles.planInfoBox}>
+                <Text style={styles.planInfoTitle}>
+                  {n != null ? `${n.icon} ${n.title}` : `✅ ご契約中：${name}　次の更新日 ${when}`}
+                </Text>
+                {n != null && <Text style={styles.planInfoBody}>{n.body}</Text>}
+              </View>
+            );
+          })()}
+
           {isWeb && !isLoggedIn && (
             <TouchableOpacity style={styles.loginBanner} onPress={goLogin} activeOpacity={0.85}>
               <Text style={styles.loginBannerText}>
@@ -156,6 +293,25 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                 <Text style={styles.loginBannerSub}>ログインするとご購入内容を引き継げます。</Text>
               </Text>
             </TouchableOpacity>
+          )}
+
+          {!loadingOff && hasYearly && (
+            <View style={styles.periodToggle}>
+              <TouchableOpacity
+                style={[styles.periodBtn, !yearly && styles.periodBtnOn]}
+                onPress={() => setYearly(false)}
+                activeOpacity={0.85}
+              >
+                <Text style={[styles.periodBtnText, !yearly && styles.periodBtnTextOn]}>月額</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[styles.periodBtn, yearly && styles.periodBtnOn]}
+                onPress={() => setYearly(true)}
+                activeOpacity={0.85}
+              >
+                <Text style={[styles.periodBtnText, yearly && styles.periodBtnTextOn]}>年額（おトク）</Text>
+              </TouchableOpacity>
+            </View>
           )}
 
           {loadingOff ? (
@@ -169,14 +325,15 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                   style={styles.cardHeader}
                 >
                   <View>
-                    <Text style={styles.cardName}>PRO</Text>
-                    <Text style={styles.cardTagline}>基本機能フルセット</Text>
+                    <Text style={styles.cardName} maxFontSizeMultiplier={1.2}>PRO</Text>
+                    <Text style={styles.cardTagline} maxFontSizeMultiplier={1.2}>基本機能フルセット</Text>
                   </View>
                   <View style={styles.priceCol}>
-                    {proIntro && (
-                      <Text style={styles.introPrice}>まず{proIntro}で7日間</Text>
+                    {proIntro && !showYearly && (
+                      <Text style={styles.introPrice}>まず{proIntro}で{introDays(proProd)}</Text>
                     )}
-                    <Text style={styles.cardPrice}>{proPrice}</Text>
+                    <Text style={styles.cardPrice} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.6} maxFontSizeMultiplier={1.2}>{proPrice}</Text>
+                    {showYearly && <Text style={styles.yearlyNote}>{proYearlyNote}</Text>}
                   </View>
                 </LinearGradient>
                 <View style={styles.cardBody}>
@@ -190,19 +347,21 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                     style={[
                       styles.buyBtn,
                       { backgroundColor: '#9B59B6' },
-                      (!proProd || purchasing) && styles.buyBtnDisabled,
+                      (!proBuy || purchasing || proOwned || subLoading) && styles.buyBtnDisabled,
                     ]}
-                    onPress={proProd ? () => handlePurchase(proProd) : undefined}
-                    disabled={!proProd || purchasing}
+                    onPress={proBuy && !proOwned ? () => handlePurchase(proBuy) : undefined}
+                    disabled={!proBuy || purchasing || proOwned || subLoading}
                     activeOpacity={0.8}
                   >
                     {purchasing ? (
                       <ActivityIndicator color="#fff" />
                     ) : (
                       <Text style={styles.buyBtnText}>
-                        {proProd
-                          ? proIntro
-                            ? `${proIntro}で7日間お試し`
+                        {proOwned
+                          ? 'ご利用中'
+                          : proBuy
+                          ? proIntro && !showYearly
+                            ? `${proIntro}で${introDays(proProd)}お試し`
                             : 'PRO プランを始める'
                           : '準備中'}
                       </Text>
@@ -218,14 +377,15 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                   style={styles.cardHeader}
                 >
                   <View>
-                    <Text style={styles.cardName}>MAX</Text>
-                    <Text style={styles.cardTagline}>プロ全機能＋AIコーチ</Text>
+                    <Text style={styles.cardName} maxFontSizeMultiplier={1.2}>MAX</Text>
+                    <Text style={styles.cardTagline} maxFontSizeMultiplier={1.2}>プロ全機能＋AIコーチ</Text>
                   </View>
                   <View style={styles.priceCol}>
-                    {maxIntro && (
-                      <Text style={styles.introPrice}>まず{maxIntro}で7日間</Text>
+                    {maxIntro && !showYearly && (
+                      <Text style={styles.introPrice}>まず{maxIntro}で{introDays(maxProd)}</Text>
                     )}
-                    <Text style={styles.cardPrice}>{maxPrice}</Text>
+                    <Text style={styles.cardPrice} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.6} maxFontSizeMultiplier={1.2}>{maxPrice}</Text>
+                    {showYearly && <Text style={styles.yearlyNote}>{maxYearlyNote}</Text>}
                   </View>
                 </LinearGradient>
                 <View style={styles.cardBody}>
@@ -259,19 +419,21 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
                     style={[
                       styles.buyBtn,
                       { backgroundColor: '#E74C3C' },
-                      (!maxProd || purchasing) && styles.buyBtnDisabled,
+                      (!maxBuy || purchasing || maxOwned || subLoading) && styles.buyBtnDisabled,
                     ]}
-                    onPress={maxProd ? () => handlePurchase(maxProd) : undefined}
-                    disabled={!maxProd || purchasing}
+                    onPress={maxBuy && !maxOwned ? () => handlePurchase(maxBuy, 'max') : undefined}
+                    disabled={!maxBuy || purchasing || maxOwned || subLoading}
                     activeOpacity={0.8}
                   >
                     {purchasing ? (
                       <ActivityIndicator color="#fff" />
                     ) : (
                       <Text style={styles.buyBtnText}>
-                        {maxProd
-                          ? maxIntro
-                            ? `${maxIntro}で7日間お試し`
+                        {maxOwned
+                          ? 'ご利用中'
+                          : maxBuy
+                          ? maxIntro && !showYearly
+                            ? `${maxIntro}で${introDays(maxProd)}お試し`
                             : 'MAX プランを始める'
                           : '準備中'}
                       </Text>
@@ -299,9 +461,15 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
             <Text style={styles.restoreBtnText}>購入を復元する</Text>
           </TouchableOpacity>
 
+          {(proIntro != null || maxIntro != null) && !showYearly && (
+            <Text style={styles.terms}>
+              {`初回のお試し価格は、${introDays(proIntro != null ? proProd : maxProd)}のあいだだけの特別価格です。期間が終わると、通常価格（PRO ${proPrice}／MAX ${maxPrice}）で自動更新されます。お試しは1つのサブスクリプショングループにつき1回までです。`}
+            </Text>
+          )}
+
           <Text style={styles.terms}>
             {Platform.OS === 'web'
-              ? 'サブスクリプションは期間終了の24時間前までに解約しない限り自動更新されます。お支払いはクレジットカード（Stripe経由）です。解約は購入完了メール内の「サブスクリプション管理」リンクからいつでも可能です。'
+              ? 'サブスクリプションは期間終了の24時間前までに解約しない限り、月額は毎月・年額は毎年自動更新されます。お支払いはクレジットカード（Stripe経由）です。解約は購入完了メール内の「サブスクリプション管理」リンクからいつでも可能です。'
               : 'サブスクリプションは期間終了の24時間前までに解約しない限り自動更新されます。解約はApp Store / Google Playの設定からいつでも可能です。お支払いは購入確定時にストアアカウントへ請求されます。'}
           </Text>
 
@@ -323,6 +491,15 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
             >
               <Text style={styles.legalLinkText}>プライバシーポリシー</Text>
             </TouchableOpacity>
+            <Text style={styles.legalSep}>・</Text>
+            <TouchableOpacity
+              onPress={() => {
+                onClose();
+                router.push('/tokusho');
+              }}
+            >
+              <Text style={styles.legalLinkText}>特定商取引法</Text>
+            </TouchableOpacity>
           </View>
         </ScrollView>
       </LinearGradient>
@@ -331,12 +508,36 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
 }
 
 const styles = StyleSheet.create({
+  planInfoBox: {
+    marginTop: 10,
+    padding: 12,
+    borderRadius: 12,
+    backgroundColor: '#FFF8E6',
+    borderWidth: 1,
+    borderColor: '#F2D48A',
+  },
+  planInfoTitle: { fontSize: 14, fontWeight: '800', color: '#7A5A12' },
+  planInfoBody: { fontSize: 12.5, lineHeight: 19, color: '#4A4036', marginTop: 4 },
+  periodToggle: {
+    flexDirection: 'row',
+    alignSelf: 'center',
+    backgroundColor: '#EFE6D6',
+    borderRadius: 999,
+    padding: 4,
+    marginBottom: 14,
+  },
+  periodBtn: { paddingVertical: 8, paddingHorizontal: 20, borderRadius: 999 },
+  periodBtnOn: { backgroundColor: '#FFFFFF' },
+  periodBtnText: { fontSize: 14, fontWeight: '700', color: '#8B6B4A' },
+  periodBtnTextOn: { color: '#3B2A1A' },
+  yearlyNote: { color: '#FFFFFF', fontSize: 11, marginTop: 2, textAlign: 'right' },
   container: { flex: 1 },
+  closeRow: {
+    paddingTop: 12,
+    paddingHorizontal: 20,
+    alignItems: 'flex-end',
+  },
   closeBtn: {
-    position: 'absolute',
-    top: 52,
-    right: 20,
-    zIndex: 10,
     width: 44,
     height: 44,
     borderRadius: 22,
@@ -346,7 +547,7 @@ const styles = StyleSheet.create({
   },
   closeBtnText: { color: '#1F1912', fontSize: 20, fontWeight: '700' },
   scroll: {
-    paddingTop: 80,
+    paddingTop: 16,
     paddingHorizontal: 20,
     paddingBottom: 60,
     alignItems: 'center',
@@ -390,7 +591,7 @@ const styles = StyleSheet.create({
   cardName: { fontSize: 28, fontWeight: '900', color: '#fff' },
   cardTagline: { fontSize: 16, color: 'rgba(255,255,255,0.8)', fontWeight: '600', marginTop: 2 },
   cardPrice: { fontSize: 24, fontWeight: '800', color: '#fff' },
-  priceCol: { alignItems: 'flex-end' },
+  priceCol: { alignItems: 'flex-end', flexShrink: 1, marginLeft: 8, maxWidth: '55%' },
   introPrice: { fontSize: 12, fontWeight: '700', color: '#fff', marginBottom: 2 },
   cardBody: { padding: 20, gap: 10 },
   featureRow: { flexDirection: 'row', alignItems: 'flex-start', gap: 10 },

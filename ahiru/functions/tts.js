@@ -28,9 +28,7 @@ const OPENAI_API_KEY = defineSecret("OPENAI_API_KEY");
 const DAILY_LIMIT = 30;
 const MAX_CHARS = 150;
 
-function todayKey() {
-  return new Date().toISOString().slice(0, 10);
-}
+const { jstDay: todayKey, refundDaily } = require("./_usage");
 
 async function checkAndIncrementLimit(uid) {
   const ref = db.collection("ttsUsage").doc(uid);
@@ -65,6 +63,10 @@ exports.speakText = onCall(
     // 課金判定はRevenueCatを正とする（英単語Pro・Maxプラン限定機能）。
     // entitlement を集合で見るので、受験Proと英単語Proを両方買っている人も正しく通る。
     const allowed = await hasVocabAccess(uid);
+    // 会員状態が取れなかった（課金の確認先が一時的に落ちている）ときに、会員の人へ「限定機能です」と出さない
+    if (allowed === null) {
+      throw new HttpsError("unavailable", "いま会員の状態を確認できません。少し待ってから、もう一度試してね。");
+    }
     if (allowed !== true) {
       throw new HttpsError(
         "permission-denied",
@@ -86,22 +88,31 @@ exports.speakText = onCall(
 
     await checkAndIncrementLimit(uid);
 
-    const response = await fetch("https://api.openai.com/v1/audio/speech", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${OPENAI_API_KEY.value()}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "tts-1",
-        input: safeText,
-        voice: "alloy",
-        response_format: "mp3",
-        speed: safeSpeed,
-      }),
-    });
+    let response;
+    try {
+      response = await fetch("https://api.openai.com/v1/audio/speech", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${OPENAI_API_KEY.value()}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model: "tts-1",
+          input: safeText,
+          voice: "alloy",
+          response_format: "mp3",
+          speed: safeSpeed,
+        }),
+        signal: AbortSignal.timeout(45000),
+      });
+    } catch (err) {
+      console.error("speakText: OpenAI request failed", err);
+      await refundDaily(db, "ttsUsage", uid, "date", "count");
+      throw new HttpsError("internal", "音声生成に失敗しました");
+    }
 
     if (!response.ok) {
+      await refundDaily(db, "ttsUsage", uid, "date", "count");
       throw new HttpsError("internal", "音声生成に失敗しました");
     }
 

@@ -12,13 +12,13 @@ export const kokoOyoEigo50: Question[] = [
     difficulty: 'advanced',
     maxOnly: true,
     question:
-      '次の英文を読んで、空欄に入る最も適切な語を選びなさい。\n\nPlastic waste is one of the most serious environmental problems today. Every year, millions of tons of plastic are thrown away, and much of it ends up in the ocean. Scientists have found that small pieces of plastic, called microplastics, (　　) in the bodies of fish and other sea animals.\n\n① collect  ② accumulate  ③ disappear  ④ reduce',
+      '次の英文を読んで、空欄に入る最も適切な語を選びなさい。\n\nPlastic waste is one of the most serious environmental problems today. Every year, millions of tons of plastic are thrown away, and much of it ends up in the ocean. Scientists have found that small pieces of plastic, called microplastics, (　　) in the bodies of fish and other sea animals.\n\n① escape  ② accumulate  ③ disappear  ④ reduce',
     answer: '② accumulate',
     hint: '「体内に蓄積する」という意味になる動詞を選ぼう。',
     explanation:
-      '【解法のコツ】\n空欄の前後をよく読もう。「小さなプラスチック片が魚や海の生き物の体内に（　）される」という文脈。accumulate は「蓄積する・たまる」という意味で、マイクロプラスチックが生体に蓄積するという科学的事実にぴったり。\n① collect「集める」→他動詞の用法が主で文脈に合わない\n③ disappear「消える」→逆の意味\n④ reduce「減らす」→ここでは蓄積の話なので不適\n英語は必ずできるようになる！文脈を丁寧に読めば正解できる問題だよ。',
+      '【解法のコツ】\n空欄の前後をよく読もう。「小さなプラスチック片が魚や海の生き物の体内に（　）される」という文脈。accumulate は「蓄積する・たまる」という意味で、マイクロプラスチックが生体に蓄積するという科学的事実にぴったり。\n① escape「逃げる」→体内に「とどまってたまる」話なので文脈に合わない\n③ disappear「消える」→逆の意味\n④ reduce「減らす」→ここでは蓄積の話なので不適\n英語は必ずできるようになる！文脈を丁寧に読めば正解できる問題だよ。',
     pitfall:
-      'collect と accumulate は似ているが、accumulate は「自然と蓄積される」ニュアンスが強い。生物濃縮の文脈では accumulate が正解。',
+      'accumulate は「少しずつたまって増えていく」という意味。escape（逃げる）や disappear（消える）は「体内にたまる」という文脈と逆になる。',
     memoryTip:
       'accumulate ＝ a（強調）+ cumulate（積み上げる）→ どんどん積み上がる＝蓄積する。山が積み上がるイメージで覚えよう！',
   },
@@ -34,7 +34,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '② 人々が都市から農村へ移住していること',
     hint: '直前の文に this phenomenon が指す内容が書かれているよ。',
     explanation:
-      '【解法のコツ】\n指示語（this / these / it など）が何を指すかは、直前の文を確認するのが鉄則。「people are leaving and moving to the countryside（人々が農村に移住している）」という内容を "this phenomenon" が指している。"reverse urbanization"（逆都市化）と名付けられているのもヒント。\n英語は必ずできるようになる！指示語問題は「直前を見る」この一手で解けるよ！',
+      '【何を聞かれているか】\n下線部の指示語 "this phenomenon"（この現象）が、本文中の何を指しているかを選ぶ問題。\n\n【なぜ直前の文を見るのか】\n指示語（this/these/itなど）は、基本的に「直前に述べられた内容」を受けて使われる。英語では同じ内容を繰り返さずに指示語で言い換えるのが自然なので、指示語が出てきたら必ず一つ前の文に戻って確認する。\n\n【ポイント1】直前の文を確認する\n"this phenomenon" の直前には "people are leaving and moving to the countryside"（人々が都市を離れ、農村に移住している）とある。この内容を"phenomenon"（現象）と呼んでいる。\n\n【ポイント2】言い換え表現もヒントになる\n本文はこの現象を "reverse urbanization"（逆都市化）と名付けている。「都市化の逆」なので「都市から農村への移動」という内容と一致する。\n\n【ポイント3】選択肢を1つずつ照合する\n①「都市の人口が増加」→本文と逆の内容。③「農村の生活費が上昇」→本文は「都市の生活費が高い」と言っており逆。④「人口が同じになる」→本文に記述なし。②のみが本文と一致。\n\n【答え】\n② 人々が都市から農村へ移住していること\n\n【確かめ】\n"this phenomenon" の一文前を読み返し、"leaving and moving to the countryside" が「都市から農村への移住」と一致することを確認する。\n\n【よくあるまちがい】\n"high living costs"（生活費が高い）という語だけを見て③を選んでしまうミス。この語は「都市の」生活費が高いことの説明であり、農村の生活費の話ではない。\n\n【ここが絶対】\n指示語問題は必ず「直前の文」に戻って確認する。難しい単語（reverse urbanizationなど）に惑わされず、直前のやさしい説明文を読めば答えが見つかる。',
     pitfall:
       '「reverse urbanization」という難しい単語に惑わされないこと。本文の簡単な説明部分を読めば内容がわかる。',
     memoryTip:
@@ -70,7 +70,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '② As a result, more and more people are using it.',
     hint: '直前の文「太陽光エネルギーがずっと安くなった」という内容の「結果」として自然なものを選ぼう。',
     explanation:
-      '【解法のコツ】\n文挿入問題は「流れ」が命。直前「安くなった」→ 空欄 → 直後「多くの国でコールや天然ガスより安い」という文脈。「安くなった結果どうなるか？」を考えると「より多くの人が使うようになった」② が自然。\n① 「少ない人しか買えない」→ 安くなったのに矛盾\n③ 「価格が上がると予測される」→ Howeverで逆接なのに文脈が合わない\n④ 「政府が支援をやめた」→ 唐突で文脈が合わない\n英語は必ずできるようになる！接続詞（As a result / However / Therefore）を手がかりにしよう！',
+      '【解法のコツ】\n文挿入問題は「流れ」が命。直前「安くなった」→ 空欄 → 直後「多くの国で石炭や天然ガスより安い」という文脈。「安くなった結果どうなるか？」を考えると「より多くの人が使うようになった」② が自然。\n① 「少ない人しか買えない」→ 安くなったのに矛盾\n③ 「価格が上がると予測される」→ Howeverで逆接なのに文脈が合わない\n④ 「政府が支援をやめた」→ 唐突で文脈が合わない\n英語は必ずできるようになる！接続詞（As a result / However / Therefore）を手がかりにしよう！',
     pitfall:
       '直後の文が「実際に（In fact）」と続くので、空欄は「太陽光エネルギーが普及した」という内容でないといけない。In fact の前後は同じ方向性の内容になる。',
     memoryTip:
@@ -88,7 +88,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: 'アマゾン熱帯雨林（The Amazon rainforest）',
     hint: '最初の文に登場する名詞を探そう。',
     explanation:
-      '【解法のコツ】\n"it" は単数の名詞を指す代名詞。最初の文に「The Amazon rainforest」が登場し、以降の文で "it" はすべてこれを指している。代名詞の指示内容は「最初に登場した名詞」か「直前の名詞」を見つければ解ける。\n英語は必ずできるようになる！代名詞は「最初に登場した名詞に矢印を引く」習慣が大切！',
+      '【何を聞かれているか】\n下線部の代名詞 "it" が、本文中で何を指しているかを日本語で答える問題。\n\n【なぜ最初の文の名詞を確認するのか】\n代名詞（it/they/heなど）は一度出てきた名詞を、以降くり返さずに指すために使われる。1つの段落の中で同じものを指し続けることが多いので、最初に登場した中心となる名詞を確認するのが基本。\n\n【ポイント1】最初の文の主語を確認する\n本文の最初の文は "The Amazon rainforest is often called..."。主語はThe Amazon rainforest（単数）で、これがitで置き換えられる対象になる。\n\n【ポイント2】すべての"it"が同じものを指しているか確認する\n2文目・3文目の"it"も、内容的に「熱帯雨林が伐採されている」「熱帯雨林を守らないと」とつながっており、すべて同じThe Amazon rainforestを指している。\n\n【ポイント3】the Earthとのひっかけに注意する\n文中には"the Earth"（地球）という語も出てくるが、これは"the lungs of the Earth"というカッコ内の比喩表現の一部であり、文の主語ではない。\n\n【答え】\nアマゾン熱帯雨林（The Amazon rainforest）\n\n【確かめ】\n"it"の位置に"The Amazon rainforest"を当てはめて文を読み直し、意味が通ることを確認する（例：「アマゾン熱帯雨林は森林伐採によって恐ろしい速さで破壊されている」）。\n\n【よくあるまちがい】\n"the lungs of the Earth"というフレーズの中の"the Earth"を答えにしてしまうミス。itが指すのは比喩の対象である「熱帯雨林」であり、比喩の中の「地球」ではない。\n\n【ここが絶対】\n代名詞問題はまず文の最初に出てきた名詞（多くは主語）を確認する。カッコ内の説明や比喩表現に惑わされないこと。',
     pitfall:
       '"it" が指すものは「地球（the Earth）」ではない。the Earth はカッコ内の説明で登場するだけで、文の主語は the Amazon rainforest。',
     memoryTip:
@@ -106,7 +106,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '② 就寝1時間前にスマートフォンをやめると健康と成績が改善される。',
     hint: '最後の文（筆者の主張）に注目しよう。',
     explanation:
-      '【解法のコツ】\n説明文の「筆者の主張」は最後の文に集約されることが多い。"To improve their health and grades, students should try to put their phones away at least one hour before bedtime." が本文の結論。\n④は内容として正しいが、これは「根拠の一つ」であり、筆者の最終メッセージではない。\n英語は必ずできるようになる！主張問題は「最後の文、特にshould/must/need to が出る文」に注目！',
+      '【何を聞かれているか】\n説明文を読んで、筆者が最も伝えたい主張（要点）を選ぶ問題。\n\n【なぜ最後の文に注目するのか】\n説明文（意見文）は「問題提起→根拠→主張（結論）」という構成になることが多く、筆者の一番言いたいことは最後の文にまとめられることが多い。\n\n【ポイント1】最後の文を読む\n最後の文は"To improve their health and grades, students should try to put their phones away at least one hour before bedtime."（健康と成績を良くするために、少なくとも寝る1時間前にはスマホを片付けるべき）。ここに筆者の主張が集約されている。\n\n【ポイント2】"should"に注目する\n"should"（〜すべきだ）という語は、筆者の意見・主張を表す代表的なサイン。この語を含む文が主張文であることが多い。\n\n【ポイント3】根拠と主張を区別する\n④「睡眠不足は集中力に影響する」は本文中に書かれている事実だが、これは主張を支える「根拠」の一つであり、筆者が最終的に伝えたい「主張」そのものではない。\n\n【答え】\n② 就寝1時間前にスマートフォンをやめると健康と成績が改善される。\n\n【確かめ】\n選んだ選択肢が、最後の文の内容（スマホを片付ける→健康と成績の改善）と一致しているか読み比べる。\n\n【よくあるまちがい】\n本文中に出てくる正しい内容（④睡眠不足と集中力の関係）を、そのまま主張だと思ってしまうミス。正しい情報＝筆者の主張、とは限らない。\n\n【ここが絶対】\n説明文の主張問題は「最後の文、特にshould/must/need toを含む文」に注目する。途中の情報は根拠であり、結論ではないことを意識する。',
     pitfall:
       '途中の内容（④睡眠不足と集中力）は「根拠」であり「主張」ではない。根拠と主張を区別しよう。',
     memoryTip:
@@ -120,13 +120,13 @@ export const kokoOyoEigo50: Question[] = [
     difficulty: 'advanced',
     maxOnly: true,
     question:
-      '次の英文の空欄に入る最も適切な語句を選びなさい。\n\nVolunteering has many benefits. (　　), it gives people a sense of purpose and happiness. It also helps build social connections and develop new skills. Moreover, communities become stronger when more people volunteer.\n\n① On the other hand\n② For example\n③ First of all\n④ As a result',
+      '次の英文の空欄に入る最も適切な語句を選びなさい。\n\nVolunteering has many benefits. (　　), it gives people a sense of purpose and happiness. It also helps build social connections and develop new skills. Moreover, communities become stronger when more people volunteer.\n\n① On the other hand\n② In conclusion\n③ First of all\n④ As a result',
     answer: '③ First of all',
     hint: '空欄の後ろに続く文をよく読もう。ボランティアのメリットが列挙されている。',
     explanation:
-      '【解法のコツ】\nこの文は「ボランティアのメリット」を列挙している構造。空欄の後ろには "it gives..." → "It also helps..." → "Moreover..." と続く。最初のメリットを導く接続表現は "First of all"（まず第一に）が最適。\n① "On the other hand"（一方で）→ 対比には使わない\n② "For example"（例えば）→ 例示なので「メリット全体を示す最初の文」には合わない\n④ "As a result"（その結果）→ 原因・結果の関係がないので不可\n英語は必ずできるようになる！列挙のパターン（First / Also / Moreover）を覚えておこう！',
+      '【解法のコツ】\nこの文は「ボランティアのメリット」を列挙している構造。空欄の後ろには "it gives..." → "It also helps..." → "Moreover..." と続く。最初のメリットを導く接続表現は "First of all"（まず第一に）が最適。\n① "On the other hand"（一方で）→ 対比には使わない\n② "In conclusion"（結論として）→ 文章の最後に使う表現で、冒頭の列挙には合わない\n④ "As a result"（その結果）→ 原因・結果の関係がないので不可\n英語は必ずできるようになる！列挙のパターン（First / Also / Moreover）を覚えておこう！',
     pitfall:
-      '"For example" は「具体例を出すとき」に使う。ここはメリットの第一番目を述べているので First of all が正解。',
+      '"In conclusion" は「結論を述べるとき」に使う。ここはメリットの第一番目を述べているので First of all が正解。',
     memoryTip:
       '列挙の定番フレーズ：First of all → Also / In addition → Moreover / Furthermore → Finally。この順序で覚えよう！',
   },
@@ -161,7 +161,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '③ The Problem of Food Waste and the Need to Reduce It',
     hint: '英文全体のテーマを表すタイトルを選ぼう。',
     explanation:
-      '【解法のコツ】\nタイトル選択問題は「文全体のテーマ」を最もよく表すものを選ぶ。本文は「食品廃棄が問題であること」と「それを減らすことが大切」の2点を軸にしている。\n① 健康的な食事の重要性 → 本文に出てこない\n② お金の無駄 → 本文のテーマではない\n③ 食品廃棄の問題と削減の必要性 → ✓ 本文を完全にカバー\n④ 温室効果ガスが気候に与える影響 → 一部だけ言及、メインテーマではない\n英語は必ずできるようになる！タイトルは「部分的な内容」ではなく「全体をカバー」するものを選ぼう！',
+      '【何を聞かれているか】\n英文を読んで、内容全体を最もよく表すタイトルを選ぶ問題。\n\n【なぜ全体をカバーする選択肢を選ぶのか】\nタイトルは文章の一部分だけでなく、全体のテーマを要約するものでなければならない。一部の情報だけに合う選択肢は、たとえ本文に書かれていても正解にならない。\n\n【ポイント1】本文の2つの柱を確認する\n本文は「食品廃棄が世界的な問題であること」と「それを減らすことが持続可能な未来に必要であること」の2点を軸にしている。\n\n【ポイント2】選択肢を1つずつ照合する\n①健康的な食事の重要性→本文にない内容。②お金の無駄→本文の主題ではない。④温室効果ガスの影響→本文の一部で触れているだけでメインテーマではない。\n\n【ポイント3】③が両方をカバーしていることを確認する\n③"The Problem of Food Waste and the Need to Reduce It"（食品廃棄の問題とそれを減らす必要性）は、問題提起と主張の両方を含んでおり、本文全体を過不足なく表している。\n\n【答え】\n③ The Problem of Food Waste and the Need to Reduce It\n\n【確かめ】\n本文の最初の文（問題提起：Food waste is a global problem）と最後の文（主張：Reducing food waste ... is essential）の両方が、選んだタイトルに反映されているか確認する。\n\n【よくあるまちがい】\n④のように、本文中に書かれてはいるが「一部の情報」にすぎない選択肢を選んでしまうミス。部分的に正しいことと、全体を表すタイトルであることは別。\n\n【ここが絶対】\nタイトル問題は「最初の文（問題提起）」と「最後の文（主張）」の両方を組み合わせてカバーしている選択肢を選ぶ。',
     pitfall:
       '④ は本文に温室効果ガスへの言及があるが、それはサブの論点であり、文全体のテーマではない。部分的に正しいものに引っかからないこと。',
     memoryTip:
@@ -201,7 +201,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '① 相手のやる気を称えて励ましている。',
     hint: '"That\'s the spirit!" は英語の会話でよく使う励ましの表現。',
     explanation:
-      '【解法のコツ】\n"That\'s the spirit!" は「その意気！」「そうこなくては！」というポジティブな励ましの表現。Kenが「やり直す（start over）」と言ったのを受けて Saki が使っている。直後の "I\'m sure you can do it."（絶対できるよ）もヒント。\n英語は必ずできるようになる！会話表現は文脈と続く言葉から意図を読み取ろう！',
+      '【何を聞かれているか】\n会話表現 "That\'s the spirit!" が、どのような意図で使われているかを選ぶ問題。\n\n【なぜ文脈から意図を読み取るのか】\n熟語的な会話表現は単語を直訳しても意味がわからないことが多い。誰が、どんな場面で、何と言った直後にその表現を使っているかという文脈から意図を判断する。\n\n【ポイント1】直前の発言を確認する\nKenは「テストで恥ずかしい思いをしたが、やり直すと決めた」と言っている。これは前向きな決意の発言。\n\n【ポイント2】"That\'s the spirit!"の意味を確認する\nこのフレーズは「その意気だ！」「そうこなくちゃ！」という、相手の前向きな姿勢をほめて励ます決まり文句。\n\n【ポイント3】直後の発言もヒントになる\n続けてSakiは"I\'m sure you can do it."（絶対できるよ）と言っており、これも激励の言葉。前後とも励ましの流れなので、①の「やる気を称えて励ましている」が一致する。\n\n【答え】\n① 相手のやる気を称えて励ましている。\n\n【確かめ】\n"spirit"を「気力・意気込み」という意味で読み、Kenの前向きな発言→Sakiの励まし→さらなる励まし、という一連の流れが自然につながることを確認する。\n\n【よくあるまちがい】\n"spirit"を「幽霊・魂」という意味だと思い込み、文の意図を誤解してしまうミス。会話表現の中の単語は、決まり文句としての意味を覚えておく必要がある。\n\n【ここが絶対】\n会話表現の意図問題は、その一文だけでなく前後の発言もあわせて文脈で判断する。"That\'s the spirit!"＝「その意気！」という励ましの定番表現として覚えておく。',
     pitfall:
       '"spirit" を「幽霊」の意味で訳してしまう間違いに注意。ここでは「気力・意気込み・やる気」という意味。',
     memoryTip:
@@ -219,7 +219,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '② 長い練習の成果が実り、感動している。',
     hint: '演奏後の観客の反応とEmiの様子に注目しよう。',
     explanation:
-      '【解法のコツ】\n物語の心情読み取り問題は、登場人物の行動・状況・表情の変化に注目しよう。\n・3ヶ月間毎日練習した（努力の積み重ね）\n・手が震えた（緊張）\n・深呼吸して弾き始めた（克服）\n・観客が大きな拍手をした（成功）\n・涙が出た（感動・達成感）\n"tears came to her eyes" は感動の涙。悲しみではなく喜びや達成感の場面。\n英語は必ずできるようになる！心情は「その後どうなったか」で判断しよう！',
+      '【何を聞かれているか】\n物語文を読んで、登場人物Emiの気持ちを選ぶ問題。\n\n【なぜ行動や状況の変化に注目するのか】\n物語の心情読み取り問題では、心情を直接表す言葉が書かれていないことが多い。そのかわり、登場人物の行動・状況・体の反応（震える、涙が出るなど）の変化から心情を推測する。\n\n【ポイント1】流れを順に追う\n①3か月間毎日練習した（努力）→②手が震えた（緊張）→③深呼吸して弾き始めた（緊張を乗り越える）→④観客が大きな拍手をした（成功）→⑤涙が出た（感動）という流れになっている。\n\n【ポイント2】"tears came to her eyes"の意味を文脈で判断する\n涙には「悲しみの涙」と「感動の涙」があるが、直前に「大きな拍手」という成功を表す出来事があるため、ここでの涙は感動・達成感の涙だと判断できる。\n\n【ポイント3】選択肢を消去する\n①「演奏が失敗」→本文に演奏の失敗は書かれていない。③「拍手に困惑」→拍手は喜ばしい反応で、困惑するとは考えにくい。④「逃げ出したい」→震えたのは緊張であり、その後実際に弾いているので逃げ出してはいない。\n\n【答え】\n② 長い練習の成果が実り、感動している。\n\n【確かめ】\n「努力→緊張→克服→成功→感動」という一連の流れの最後に涙が出ていることを確認し、涙の理由が悲しみではなく達成感であることを確かめる。\n\n【よくあるまちがい】\n「手が震えた」という描写だけを見て、そのままネガティブな気持ちが最後まで続くと考えてしまうミス。心情は「最初の状態」ではなく「その後どうなったか」まで含めて判断する。\n\n【ここが絶対】\n物語の心情問題は「最初の状態→出来事→最後の状態」の変化をすべて追ってから答える。途中の一場面だけで判断しない。',
     pitfall:
       '「手が震えた」を「怖くて逃げ出したい」と結びつけてはいけない。その後の行動（演奏 → 成功 → 感動の涙）を総合して判断すること。',
     memoryTip:
@@ -237,7 +237,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: "③ I'd be happy to.",
     hint: '"Of course!" の後に続く自然な返答を選ぼう。',
     explanation:
-      '【解法のコツ】\nAが助けを求め、Bが "Of course!"（もちろん！）と答えている。その流れに続くのは快く引き受ける表現。"I\'d be happy to."（喜んで）が最も自然。\n① "I\'m afraid I can\'t."（残念ですができません）→ Of course! と矛盾\n② "That\'s none of my business."（私には関係ない）→ 失礼で文脈に合わない\n④ "You should ask someone else."（他の人に聞いて）→ Of course! と矛盾\n英語は必ずできるようになる！会話の流れを読んで、直前の発言に矛盾しない選択肢を選ぼう！',
+      '【何を聞かれているか】\n会話文の空欄に入る、自然な返答を選ぶ問題。\n\n【なぜ直前の発言とのつながりを見るのか】\n会話文の空欄補充は、文法的に正しいかだけでなく、前後の発言と意味がつながるかどうかで判断する。Bはすでに"Of course!"と快諾しているので、その後に矛盾する内容は入らない。\n\n【ポイント1】"Of course!"の意味を確認する\n"Of course!"は「もちろん！」という快諾（引き受ける）の表現。\n\n【ポイント2】快諾の流れに合う表現を選ぶ\n③"I\'d be happy to."（喜んで）は快諾の気持ちをさらに表す表現で、"Of course!"のあとに続けて自然。\n\n【ポイント3】矛盾する選択肢を消去する\n①「残念ですができません」、②「私には関係ない」、④「他の人に聞いて」は、いずれも断りや拒否のニュアンスがあり、直前の"Of course!"（快諾）と矛盾するため不自然。\n\n【答え】\n③ I\'d be happy to.\n\n【確かめ】\n選んだ文をBの発言全体に当てはめて読み、"Of course! I\'d be happy to. Let\'s begin with the research part."という自然な流れになっているか確認する。\n\n【よくあるまちがい】\n選択肢の意味だけを単独で考えて、直前の"Of course!"との整合性を見落としてしまうミス。会話文は必ず前後のつながりで判断する。\n\n【ここが絶対】\n会話の空欄補充は、直前の発言と矛盾しない選択肢を選ぶ。"I\'d be happy to."＝「喜んで」は依頼を快く引き受けるときの定番表現として覚えておく。',
     pitfall:
       'Of course! は「もちろん！（承諾）」の表現。この後に断りの文は絶対に来ない。',
     memoryTip:
@@ -309,7 +309,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '② turn left',
     hint: '道案内の表現を考えよう。',
     explanation:
-      '【解法のコツ】\n道案内の定番表現：\n・Go straight（真っすぐ行く）\n・Turn left / right（左/右に曲がる）\n・Take the first / second street（最初/2番目の道を行く）\n\n"at the second traffic light"（2つ目の信号で）に続く動作として、"turn left"（左に曲がる）が最も自然。\n① take off「離陸する・脱ぐ」→ 道案内では使わない\n③ get on「乗る」→ 道案内で「信号で乗る」は不自然\n④ look up「調べる・見上げる」→ 道案内では使わない\n英語は必ずできるようになる！道案内の表現を丸ごと覚えてしまおう！',
+      '【何を聞かれているか】\n道案内の会話文の空欄に入る、自然な表現を選ぶ問題。\n\n【なぜ道案内特有の表現を覚えるのか】\n道案内には決まった言い回しのパターンがあり、それを知っていれば場面から自然に判断できる。\n\n【ポイント1】道案内の基本表現を確認する\n"Go straight"（真っすぐ行く）、"Turn left/right"（左/右に曲がる）、"Take the ... street"（〜番目の道を行く）が道案内の代表的な表現。\n\n【ポイント2】空欄の位置を確認する\n"Go straight down this street, then (　　) at the second traffic light."（この道を真っすぐ行き、2つ目の信号で〜）という文脈なので、信号のところで行う動作が入る。\n\n【ポイント3】選択肢を意味で確認する\n①"take off"（離陸する・脱ぐ）、③"get on"（乗る）、④"look up"（調べる・見上げる）はいずれも道案内の場面では使わない表現。②"turn left"（左に曲がる）だけが自然。\n\n【答え】\n② turn left\n\n【確かめ】\n"then turn left at the second traffic light"（それから2つ目の信号で左に曲がる）という文が、道案内として自然な意味になっているか確認する。\n\n【よくあるまちがい】\n"get on"を「（信号に）乗る」のような意味だと誤解して選んでしまうミス。get onは電車やバスなど乗り物に使う表現で、信号には使わない。\n\n【ここが絶対】\n道案内の三種の神器（Go straight／Turn left・right／Take the ... street）を覚えておけば、道案内問題のほとんどに対応できる。',
     pitfall:
       '"at the traffic light" は「信号のところで」という意味。"in the traffic light" とは言わない。前置詞 at に注意。',
     memoryTip:
@@ -325,10 +325,10 @@ export const kokoOyoEigo50: Question[] = [
     question:
       '次の物語を読んで、Riku がどのような経験を通じて何を学んだかを日本語で説明しなさい（40字以内）。\n\nRiku had always avoided speaking English because he was afraid of making mistakes. One day, a foreign tourist asked him for help. Although his English was not perfect, he tried his best to help the person find the museum. The tourist smiled and said, "Thank you so much!" After that, Riku realized that communication is more important than perfection.',
     answer:
-      '間違いを恐れずに英語で外国人を助けた経験を通じて、完璧さより伝えることの大切さを学んだ。',
+      '間違いを恐れず外国人を助けた経験から、完璧さより伝える大切さを学んだ。',
     hint: '最後の文 "Riku realized that..." が何を学んだかを示しているよ。',
     explanation:
-      '【解法のコツ】\n「何を学んだか」問題は、最後の文に注目。"communication is more important than perfection"（完璧さよりコミュニケーションが大切）がリクの学び。経験として「外国人観光客に道案内をした」ことを組み合わせてまとめよう。\n英語は必ずできるようになる！物語文のまとめ問題は「きっかけ＋学び」を組み合わせると完璧！',
+      '【何を聞かれているか】\n物語文を読んで、登場人物Rikuがどのような経験を通じて何を学んだかを40字以内の日本語でまとめる問題。\n\n【なぜ最後の文に注目するのか】\n「何を学んだか」を問う問題では、登場人物の気づきや心境の変化が書かれた最後の文に、学びの内容が直接示されていることが多い。\n\n【ポイント1】経験の内容を確認する\nRikuは英語を話すことを避けていたが、外国人観光客に助けを求められ、完璧ではない英語で道案内を手伝った、という経験をしている。\n\n【ポイント2】学びの内容を確認する\n最後の文"Riku realized that communication is more important than perfection."（コミュニケーションは完璧さより大切だと気づいた）が、学びそのものを表している。\n\n【ポイント3】「経験＋学び」の形でまとめる\nまとめ問題では「（どんな経験）を通じて、（何を学んだか）」という形に整理すると、字数内に要点を収められる。\n\n【答え】\n間違いを恐れず外国人を助けた経験から、完璧さより伝える大切さを学んだ。（35字）\n\n【確かめ】\n書き上げた文の文字数を実際に数え、40字以内におさまっているか確認する（この答えは35字）。また「経験」と「学び」の両方が含まれているか見直す。\n\n【よくあるまちがい】\n「英語が完璧になった」のように、本文に書かれていない結果を答えにしてしまうミス。本文が伝えているのは「完璧さより伝えることが大切だという気づき」であり、英語力そのものの向上ではない。また、字数を数えずに書いて指定の字数を超えてしまうミスにも注意。\n\n【ここが絶対】\nまとめ問題は「経験（きっかけ）＋学び（気づき）」の2つを必ず両方入れる。文字数指定がある場合は、書いたあと必ず数え直して確認する。',
     pitfall:
       '「英語が完璧になった」とまとめてしまいがちだが、本文にはそうは書いていない。あくまでも「完璧さより伝えることが大切」という気づきが学び。',
     memoryTip:
@@ -364,7 +364,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '② ハナが財布をなくして心配しているが、見つかって安心する場面。',
     hint: '最初と最後のハナの様子の変化に注目しよう。',
     explanation:
-      '【解法のコツ】\n場面把握問題は「登場人物の状況と感情の変化」を追おう。\n・財布をレストランに忘れた（問題発生）\n・心臓がドキドキした（心配・不安）\n・母が微笑んで「見つかった」と言った（解決・安心）\nこの流れから②が正解。\n英語は必ずできるようになる！物語は「問題 → 解決」の流れで読もう！',
+      '【何を聞かれているか】\n物語の場面（状況と登場人物の心情の流れ）として最も適切なものを選ぶ問題。\n\n【なぜ状況と感情の変化を追うのか】\n場面把握問題は、出来事の流れと登場人物の感情の変化をセットで確認することで、正しい場面を選べる。\n\n【ポイント1】出来事の流れを確認する\n①ハナが財布をレストランに忘れたかもしれないと言う（問題発生）→②母が「電話しよう」と言う（対応）→③ハナの心臓がドキドキする（不安）→④母が「見つかった」と微笑んで言う（解決）。\n\n【ポイント2】心情の変化を確認する\n不安（心臓がドキドキ）から安心（母の笑顔で「見つかった」）へと感情が変化している。\n\n【ポイント3】選択肢を消去する\n①「外食を楽しむ」→財布をなくした話なので不一致。③「盗まれた」→本文には盗難の記述はなく、レストランに忘れただけ。④「先生に叱られる」→先生は登場しない。\n\n【答え】\n② ハナが財布をなくして心配しているが、見つかって安心する場面。\n\n【確かめ】\n出来事（忘れ物→不安→発見→安心）の流れが選んだ選択肢と一致しているか確認する。\n\n【よくあるまちがい】\n「心臓がドキドキした」という描写を見て、単に「怖い場面」と決めつけてしまうミス。直後に「見つかった」という解決が続くため、最終的には安心する場面だと判断する必要がある。\n\n【ここが絶対】\n物語は「問題発生→解決」という流れで読み、感情も出来事に合わせて変化することを意識する。',
     pitfall:
       '「心臓がドキドキした（heart was beating fast）」を「怒り」や「興奮」と解釈しないこと。文脈（財布をなくした）から「不安・心配」と判断する。',
     memoryTip:
@@ -386,7 +386,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '② had',
     hint: '「今もし～なら」という現在の事実に反する仮定を表す場合、動詞はどの形を使う？',
     explanation:
-      '【解法のコツ】\n仮定法過去：「今もし～なら（実際はそうではないが）」という表現。\n公式：If + 主語 + 動詞の過去形 ～, 主語 + would / could / might + 動詞の原形 ～\n\n"If I had more time, I would travel around the world."\n＝「もし時間がもっとあれば（実際にはない）、世界中を旅するのに」\n\n① have → 直説法（現在の事実）になってしまう\n③ will have → 未来形：仮定法ではない\n④ have had → 仮定法過去完了（過去の事実に反する仮定）\n英語は必ずできるようになる！仮定法は「公式」を丸暗記すれば必ず解けるよ！',
+      '【何を聞かれているか】\n仮定法過去を使った文の空欄に入る、動詞の正しい形を選ぶ文法問題。\n\n【なぜ動詞を過去形にするのか】\n仮定法過去は「今の事実とは違うことを仮に想像する」ときに使う形。実際にはそうではないことを表すために、あえて時制を1段階過去にずらして「現実味を薄める」というのが英語の仕組み。\n\n【ポイント1】仮定法過去の公式を確認する\nIf＋主語＋動詞の過去形〜, 主語＋would/could/might＋動詞の原形〜。\n\n【ポイント2】文の意味から現在の事実に反する仮定だと判断する\n「もし時間がもっとあれば、世界中を旅するのに」は、実際には「今、時間がない」という現在の事実に反する内容。よって仮定法過去（過去形）を使う。\n\n【ポイント3】他の選択肢を消去する\n①"have"は直説法（現実の話）になってしまう。③"will have"は未来形で仮定法ではない。④"have had"は仮定法過去完了（過去の事実に反する仮定）で、今回は「現在」の話なので合わない。\n\n【答え】\n② had\n\n【確かめ】\n"If I had more time, I would travel around the world."を日本語に戻し、「もし（今）時間がもっとあれば、世界中を旅するのに（実際は時間がない）」という意味になることを確認する。\n\n【よくあるまちがい】\n"If"があるからといって単純に現在形（have）を使ってしまうミス。仮定法では「今の話」でも動詞を過去形にするのがルール。\n\n【ここが絶対】\n仮定法過去の公式（If+過去形, would+原形）は「今もし〜なら」という意味とセットで丸暗記する。',
     pitfall:
       'If節で "was" の代わりに "were" を使うのが仮定法の特徴（I were / he were）。were は全人称で使える。',
     memoryTip:
@@ -440,7 +440,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '② much more',
     hint: '「～よりずっと exciting だ」という比較級の文。"than" に注目。',
     explanation:
-      '【解法のコツ】\n比較級の強調：比較級（more / -er）を強調するには "much / far / even / a lot" を使う。\n"This movie is much more exciting than..."（この映画はずっとよりエキサイティングだ）\n\n① "very" → 比較級の強調には使えない（×very more）\n③ "the most" → 最上級（3者以上の比較）。thanと一緒には使わない\n④ "as" → "as ~ as"（同等比較）の構文。than と一緒には使わない\n英語は必ずできるようになる！比較の強調は "much" を使う！very は原級のみ！',
+      '【何を聞かれているか】\n比較級を強調する語として正しいものを選ぶ文法問題。\n\n【なぜveryが使えないのか】\n"very"は原級（exciting, goodなど、そのままの形容詞）を強調する語であり、比較級（more exciting, betterなど、比べる形）を強調するには使えない。比較級を強調する語は別に決まっている。\n\n【ポイント1】比較級の強調語を確認する\n比較級を強めるときは"much / far / even / a lot"を使う。「ずっと〜」という意味になる。\n\n【ポイント2】文の形を確認する\n"This movie is (　　) exciting than..."という文はthanがあるので、〈more exciting than〜〉の比較級の文だとわかる。空所にはmoreを含み、比較級を強める語句が入る。\n\n【ポイント3】他の選択肢を消去する\n①"very"は比較級には使えない。③"the most"は最上級（3つ以上を比べるとき）の形で、thanとは一緒に使わない。④"as"は"as~as"（同等比較）の構文で使う語で、thanとは組み合わせない。\n\n【答え】\n② much more\n\n【確かめ】\n"This movie is much more exciting than the one I watched last week."を訳し、「この映画は先週見たものよりずっとおもしろい」という自然な意味になることを確認する。\n\n【よくあるまちがい】\n"very exciting"のように、うっかり"very"を比較級の前に置いてしまうミス。veryは比較級（more/-er）の前には置けない。\n\n【ここが絶対】\n比較級を強調するときは"much / far / even / a lot"を使う。"very"は原級専用と覚えておく。',
     pitfall:
       '比較級の強調で "very" は使えない！"very"は原級（exciting / good）にのみ使える。比較級には "much / far / even / a lot" を使おう。',
     memoryTip:
@@ -476,7 +476,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '① S＝We、V＝call、O＝this bird、C＝a sparrow',
     hint: '"call A B" は「AをBと呼ぶ」という SVOC の構文。',
     explanation:
-      '【解法のコツ】\nSVOC の第5文型の代表的な動詞：call（呼ぶ）、name（名付ける）、make（させる）、keep（保つ）、find（わかる）。\n"We call this bird a sparrow."\n＝「私たちはこの鳥をスズメと呼ぶ」\nS=We、V=call、O=this bird（目的語）、C=a sparrow（補語）\nOとCの関係：this bird = a sparrow（目的語と補語がイコール関係）\n英語は必ずできるようになる！SVOCはO＝Cのイコール関係が見抜けたら完璧！',
+      '【何を聞かれているか】\n"We call this bird a sparrow."という文の文構造（SVOC）を正しく分析する問題。\n\n【なぜOとCがイコールの関係になるのか】\n"call A B"（AをBと呼ぶ）という形の動詞では、目的語（O）と補語（C）が「＝（イコール）」の関係になる。この文型を第5文型（SVOC）と呼ぶ。\n\n【ポイント1】SVOCをとる代表的な動詞を確認する\ncall（呼ぶ）、name（名付ける）、make（させる）、keep（保つ）、find（わかる）などがSVOCをとる代表的な動詞。\n\n【ポイント2】文を要素に分ける\n"We(S) call(V) this bird(O) a sparrow(C)."と分けられる。this bird（この鳥）とa sparrow（スズメ）はイコールの関係になっている。\n\n【ポイント3】他の選択肢を確認する\n②はOとCが逆になっている。③は動詞のまとめ方が誤り（"call this bird"を一つのVとして扱っている）。④は主語の取り方が誤り。\n\n【答え】\n① S＝We、V＝call、O＝this bird、C＝a sparrow\n\n【確かめ】\nO（this bird）とC（a sparrow）を"="でつないでみて、"this bird = a sparrow"（この鳥＝スズメ）という意味が成り立つか確認する。\n\n【よくあるまちがい】\nOとCの順番を逆にして覚えてしまうミス。"call A B"は「AをBと呼ぶ」の語順で、Aが先、Bが後。\n\n【ここが絶対】\nSVOCの文は「O＝C」の関係が成り立つかどうかで見分ける。call/name/make/keep/findの5つの動詞は特にセットで覚えておく。',
     pitfall:
       'OとCの順番を逆にしないこと。"call O C"（OをCと呼ぶ）の語順はV→O→Cの順。',
     memoryTip:
@@ -494,7 +494,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '② had studied',
     hint: 'would have passed（主節の過去完了）が使われているので、if節も対応した形にしよう。',
     explanation:
-      '【解法のコツ】\n仮定法過去完了：「あの時もし～していたら（実際はしなかった）」\n公式：If + 主語 + had + 過去分詞 ～, 主語 + would have + 過去分詞 ～\n\n主節に "would have passed" があるのがポイント。if節は "had studied"（過去完了）が対応。\n\n① "studied" → 仮定法過去（現在の仮定）との混同\n③ "have studied" → 現在完了形（仮定法ではない）\n④ "study" → 現在形（仮定法ではない）\n英語は必ずできるようになる！would have ＋過去分詞が主節にあったら、if節は had + 過去分詞！',
+      '【何を聞かれているか】\n仮定法過去完了を使った文の空欄に入る、動詞の正しい形を選ぶ文法問題。\n\n【なぜ過去完了の形にするのか】\n仮定法過去完了は「あの時もし〜していたら（実際はしなかった）」という、過去の事実に反する内容を表すときに使う。過去のことなので、動詞は「過去形」よりもさらに1段階前の「過去完了形（had+過去分詞）」にする。\n\n【ポイント1】仮定法過去完了の公式を確認する\nIf＋主語＋had＋過去分詞〜, 主語＋would have＋過去分詞〜。\n\n【ポイント2】主節の形をヒントにする\n主節に"would have passed"（過去完了に対応する形）があることから、if節も同じ「過去の仮定」であるとわかり、"had studied"が対応する。\n\n【ポイント3】他の選択肢を消去する\n①"studied"は仮定法過去（現在の仮定）用の形で、時制が合わない。③"have studied"は現在完了形で仮定法ではない。④"study"は現在形で仮定法ではない。\n\n【答え】\n② had studied\n\n【確かめ】\n"If I had studied harder, I would have passed the exam."を訳し、「もしもっと勉強していたら、試験に合格していたのに（実際は勉強しなかったので不合格だった）」という過去の事実に反する意味になることを確認する。\n\n【よくあるまちがい】\n仮定法過去（If+過去形, would+原形）と仮定法過去完了（If+had+過去分詞, would have+過去分詞）を混同してしまうミス。\n\n【ここが絶対】\n主節が"would have+過去分詞"のときは、if節は必ず"had+過去分詞"にする。この対応関係をセットで覚える。',
     pitfall:
       '仮定法過去（If + 過去形, would + 原形）と仮定法過去完了（If + had + 過去分詞, would have + 過去分詞）を混同しないこと。時制を見分ける鍵は主節の "would" か "would have" か。',
     memoryTip:
@@ -512,7 +512,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '③ whose',
     hint: '「友達の父が」→ 所有関係を示す関係代名詞を選ぼう。',
     explanation:
-      '【解法のコツ】\n所有格の関係代名詞 "whose" は「～の（先行詞の所有物を示す）」。\n"a friend whose father is a famous musician"\n＝「父が有名な音楽家である友人」\n\nwhose の後ろには必ず名詞（ここでは father）が来る。\n① who → 主格（後ろに動詞が来る）\n② that → 所有格では使えない\n④ whom → 目的格（後ろに主語＋動詞が来る）\n英語は必ずできるようになる！whose の後ろに名詞が来たら所有格の関係代名詞！',
+      '【何を聞かれているか】\n関係代名詞"whose"を使う文の空欄に入る、正しい語を選ぶ文法問題。\n\n【なぜwhoseを使うのか】\n"whose"は「〜の」という所有関係を表す関係代名詞。先行詞（a friend）の所有物（father）を後ろで説明するときに使う。\n\n【ポイント1】whoseの後ろの形を確認する\nwhoseの後ろには必ず名詞が続く（今回はfather）。「(先行詞)の(名詞)が〜」という意味を作る。\n\n【ポイント2】他の関係代名詞と役割を区別する\n①"who"は主格で、後ろに動詞が直接続く。④"whom"は目的格で、後ろに主語＋動詞が続く。②"that"は主格・目的格の代わりに使えるが、所有格の代わりには使えない。\n\n【ポイント3】文全体の意味を確認する\n"a friend whose father is a famous musician"＝「父が有名な音楽家である友人」。友達自身の説明ではなく、友達の「父」について説明している点がポイント。\n\n【答え】\n③ whose\n\n【確かめ】\nwhoseの後ろに"father"という名詞が直接続いていること、そして文全体が「友達の父は有名な音楽家だ」という所有の意味になっていることを確認する。\n\n【よくあるまちがい】\n先行詞が「人」だからといって、所有格が必要な場面で"who"を選んでしまうミス。whoの後ろには動詞が来るが、今回は後ろに名詞（father）が来ているのでwhoseが正しい。\n\n【ここが絶対】\nwhoseの後ろには必ず名詞が来る。「whose＋名詞」のセットで「〜の（名詞）が」という意味になると覚える。whoseは人にも物にも使える。',
     pitfall:
       'whose は「人」にも「物」にも使える（先行詞を選ばない）。"a book whose cover is red"（表紙が赤い本）のように物にも使う。',
     memoryTip:
@@ -530,7 +530,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '① is',
     hint: '主語は English（単数）。時制は現在。',
     explanation:
-      '【解法のコツ】\n受動態の公式：主語 ＋ be動詞 ＋ 過去分詞（＋ by ＋ 動作主）\n\n主語：English（単数・三人称）\n時制：現在形（speaks → is spoken）\nbe動詞の選択：主語が単数・現在 → is\n\n"English is spoken all over the world."\n英語は必ずできるようになる！受動態は「主語に合うbe動詞」＋「過去分詞」のセット！',
+      '【何を聞かれているか】\n能動態の文を受動態に書き換えたとき、空欄に入る正しいbe動詞を選ぶ文法問題。\n\n【なぜbe動詞を主語と時制に合わせるのか】\n受動態は「主語＋be動詞＋過去分詞」という形を取り、be動詞は主語の人称・数と、もとの文の時制の両方に合わせて選ぶ必要がある。\n\n【ポイント1】受動態の公式を確認する\n主語＋be動詞＋過去分詞（＋by＋動作主）。もとの文People all over the world speak English.のspeakを受動態にすると、目的語のEnglishが主語になり、動詞はspoken（過去分詞）になる。\n\n【ポイント2】主語と時制を確認する\n新しい主語はEnglish（単数・三人称）。もとの文の動詞speakは現在形なので、時制も現在のまま保つ。\n\n【ポイント3】be動詞を選ぶ\n単数・現在の組み合わせに合うbe動詞はis。「English is spoken all over the world.」となる。\n\n【答え】\n① is\n\n【確かめ】\n"English is spoken all over the world."を訳し、「英語は世界中で話されている」という意味になっていること、また主語Englishと動詞isの数・時制が一致していることを確認する。\n\n【よくあるまちがい】\nもとの文の主語People（複数）につられて、are/wereのような複数形のbe動詞を選んでしまうミス。受動態では新しい主語（English）に合わせてbe動詞を選び直す必要がある。\n\n【ここが絶対】\n受動態はbe動詞＋過去分詞のセット。be動詞は「新しい主語の人称・数」と「もとの文の時制」の両方に必ず合わせる。',
     pitfall:
       '受動態で使うのは「be動詞＋過去分詞」の組み合わせ。"be動詞＋動詞の原形"や"be動詞＋ing形"は受動態ではない。',
     memoryTip:
@@ -548,7 +548,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '② was',
     hint: '間接話法では時制を1段階過去にずらす（時制の一致）。',
     explanation:
-      '【解法のコツ】\n直接話法→間接話法の変換ルール（時制の一致）：\n・主節の said（過去形）に合わせて、"am"（現在形）→ "was"（過去形）にずらす\n・"now"→"then"（現在を示す語も過去を示す語に変換）\n・"I"（引用内の主語）→ "she"（間接話法での主語）に変換\n\n"She said that she was busy then." が正解。\n英語は必ずできるようになる！間接話法は「時制を1つ過去にする」が大原則！',
+      '【何を聞かれているか】\n直接話法の文を間接話法に書き換えたとき、空欄に入る正しい動詞の形を選ぶ文法問題。\n\n【なぜ時制を1段階過去にずらすのか】\n間接話法では、主節の動詞（said＝過去形）に合わせて、引用符の中の動詞も時制を1段階過去にずらす。これを「時制の一致」と呼ぶ。\n\n【ポイント1】時制の一致のルールを確認する\n主節が過去形（said）のとき、that節の中の動詞も現在形→過去形に変える。am/is→was、will→would、can→couldのように対応する。\n\n【ポイント2】直接話法から変換の流れを確認する\n直接話法："I am busy now."（現在形）→間接話法：she was busy then（過去形）。主語も"I"→"she"に、時を表す語も"now"→"then"に変える。\n\n【ポイント3】他の選択肢を消去する\n①"is"は現在形のままで時制の一致がされていない。③"will be"は未来形で対応関係が違う。④"has been"は現在完了形で今回のルールとは異なる。\n\n【答え】\n② was\n\n【確かめ】\n"She said that she was busy then."を読み、"said"（過去）と"was"（過去）で時制がそろっていることを確認する。\n\n【よくあるまちがい】\n動詞（am→was）だけ変えて、"now"を"then"に変え忘れてしまうミス。時を表す語（now/today/yesterdayなど）も間接話法用に変換する必要がある。\n\n【ここが絶対】\n時制の一致は「主節が過去なら、that節も過去に」が大原則。am/is→was、will→would、can→couldの対応をセットで覚える。',
     pitfall:
       '"now" → "then"、"today" → "that day"、"yesterday" → "the day before" など、時を示す語も変換することを忘れずに！',
     memoryTip:
@@ -566,7 +566,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '② have lived in',
     hint: '"for ten years"（10年間）というキーワードがある。現在まで続いている状態を表す時制は？',
     explanation:
-      '【解法のコツ】\n現在完了（継続）：「（ずっと）～している」\n公式：have/has ＋ 過去分詞\nキーワード：for ＋ 期間（for ten years）/ since ＋ 起点（since 2015）\n\n"I have lived in this city for ten years."\n＝「私はこの街に10年間（ずっと）住んでいる」\n① lived in → 単純過去（10年前に住んだが今はどうかわからない）\n③ am living in → 現在進行形（今まさに住んでいる状態、継続の強調なし）\n④ was living in → 過去進行形\n英語は必ずできるようになる！"for ＋ 期間"が出たら現在完了（継続）を疑え！',
+      '【何を聞かれているか】\n"for ten years"という期間を表す語句とともに使う、正しい動詞の形を選ぶ文法問題。\n\n【なぜ現在完了を使うのか】\n"for＋期間"は「（過去のある時点から今まで）ずっと〜」という継続を表す。過去から現在まで続いている状態を表すには、現在完了（have/has＋過去分詞）を使う。\n\n【ポイント1】現在完了（継続用法）の公式を確認する\nhave/has＋過去分詞。「今まで（期間）ずっと〜している」という意味になる。\n\n【ポイント2】キーワードを確認する\n"for＋期間"（for ten years）や"since＋起点"（since 2015）が文中にあれば、現在完了（継続）が使われるサイン。\n\n【ポイント3】他の選択肢を消去する\n①"lived in"は単純過去で、「10年前に住んだ」だけの意味になり、今も住んでいるかは不明。③"am living in"は現在進行形で「今まさに」を表すが継続の長さは表せない。④"was living in"は過去進行形で今とのつながりがない。\n\n【答え】\n② have lived in\n\n【確かめ】\n"I have lived in this city for ten years."を訳し、「私はこの街に10年間（ずっと今も）住んでいる」という、過去から現在までの継続を表す意味になっていることを確認する。\n\n【よくあるまちがい】\n"for ten years"を見て単純に過去形（lived in）を選んでしまうミス。"for＋期間"は「今も続いている」ことを表すため、現在完了が必要。\n\n【ここが絶対】\n"for＋期間"や"since＋起点"が出てきたら、現在完了（have/has＋過去分詞）を疑う。liveのような状態動詞は進行形にしにくいことも覚えておく。',
     pitfall:
       'live は状態動詞なので進行形には使いにくい。"for ＋ 期間"と一緒なら現在完了（継続）が正解になることが多い。',
     memoryTip:
@@ -620,7 +620,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '① clean',
     hint: '使役動詞 make の後ろの形に注意。',
     explanation:
-      '【解法のコツ】\n使役動詞の後ろの動詞の形：\n・make / let / have + 目的語 ＋ 動詞の原形（to なし）\n・help + 目的語 ＋ 動詞の原形（または to ＋ 原形）\n・get + 目的語 ＋ to ＋ 動詞の原形（to あり）\n\n"My mother made me clean my room."\n＝「母は私に部屋をきれいにさせた」\n\nmake は「原形不定詞（to なし）」を使うのがルール。\n② "to clean" → get や need の後ならOKだが make の後は✗\n英語は必ずできるようになる！make / let / have は「動詞の原形（toなし）」が絶対ルール！',
+      '【何を聞かれているか】\n使役動詞"make"を使った文の空欄に入る、正しい動詞の形を選ぶ文法問題。\n\n【なぜ原形（toなし）を使うのか】\n使役動詞make/let/haveは、「目的語に〜させる」という意味を作るとき、後ろの動詞をtoのつかない原形（原形不定詞）にするという決まりがある動詞のグループ。\n\n【ポイント1】使役動詞の後ろの形を確認する\nmake/let/have＋目的語＋動詞の原形（toなし）。get＋目的語＋to＋動詞の原形（toあり）とは形が違うので区別する。\n\n【ポイント2】文の意味を確認する\n"My mother made me clean my room before dinner."＝「母は夕食前に私に部屋をきれいにさせた」。madeの後ろの目的語meに対する動作がclean（原形）。\n\n【ポイント3】他の選択肢を消去する\n②"to clean"はgetの後ろでは使うがmakeの後ろでは使わない。③"cleaning"は進行形の形でmakeの後ろでは使わない。④"cleaned"は過去分詞で受動的な意味になり文意に合わない。\n\n【答え】\n① clean\n\n【確かめ】\nmadeとcleanの間にtoが入っていないこと、また"made me clean"（私に掃除させた）という使役の意味が成り立つことを確認する。\n\n【よくあるまちがい】\n他の一般動詞の感覚で"to clean"にしてしまうミス。make/let/haveの3つの使役動詞は例外的にtoをつけない原形を使う。\n\n【ここが絶対】\n使役動詞make/let/haveの後ろは「目的語＋動詞の原形（toなし）」。この3つの動詞はセットで覚えておく。',
     pitfall:
       'make は強制的に「させる」、let は許可して「させる」、have は当然として「させる」。ニュアンスの違いも覚えておこう。',
     memoryTip:
@@ -674,11 +674,11 @@ export const kokoOyoEigo50: Question[] = [
     difficulty: 'advanced',
     maxOnly: true,
     question:
-      '次の語句を並べ替えて、正しい英文を作りなさい。（１語不要）\n\n[ tell / you / could / can / me / where / she / lives ]?\n\nCould you _____ _____ _____ _____ ?',
+      '次の語句を並べ替えて、正しい英文を作りなさい。（１語不要）\n\n[ tell / can / me / where / she / lives ]?\n\nCould you _____ _____ _____ _____ _____ ?',
     answer: 'Could you tell me where she lives?',
     hint: '間接疑問文の語順は「疑問詞＋主語＋動詞」。',
     explanation:
-      '【解法のコツ】\n間接疑問文の語順：疑問詞（where）＋主語（she）＋動詞（lives）\n"Could you tell me where she lives?"\n不要な語は "can"（Could と重複）。\n\n疑問文の語順（where does she live?）ではなく、普通の文の語順（where she lives）になることに注意。\n英語は必ずできるようになる！並べ替えは「動詞を決めてから文型を組み立てる」とスムーズ！',
+      '【何を聞かれているか】\n語句を並べ替えて、間接疑問文を含む正しい英文を作る問題（１語不要）。\n\n【なぜ間接疑問文の語順にするのか】\n疑問文が別の文の中に組み込まれる（間接疑問文になる）とき、疑問詞の後ろは「疑問文の語順」ではなく「普通の文の語順（主語＋動詞）」になる、という英語のルールがある。\n\n【ポイント1】間接疑問文の語順を確認する\n疑問詞（where）＋主語（she）＋動詞（lives）の順になる。ふつうの疑問文"Where does she live?"のdoesは消え、動詞にsがついたlivesになる。\n\n【ポイント2】外側の文の形を確認する\n"Could you tell me 〜?"（〜を教えてもらえますか）という依頼の文の中に、where she livesという間接疑問文を組み込む形。\n\n【ポイント3】不要な語を見つける\n語群の"can"は助動詞だが、文頭にすでに"Could you"があるため、"can"は使わない不要な語。\n\n【答え】\nCould you tell me where she lives?\n\n【確かめ】\nwhere以下が"where does she live"ではなく"where she lives"という普通の文の語順になっているか、また"can"が使われずに余っているかを確認する。\n\n【よくあるまちがい】\n間接疑問文の中まで疑問文の語順（where does she live）にしてしまうミス。tell me以下に組み込まれた瞬間に、疑問文の語順から普通の文の語順に変わる。\n\n【ここが絶対】\n間接疑問文は「疑問詞＋主語＋動詞」という普通の文の語順にする。does/doなどの助動詞は消えて、動詞がその分の形（3人称単数ならs）に変わる。',
     pitfall:
       '間接疑問文の中は疑問文の語順にしない！"where does she live" → "where she lives" に変換。助動詞 does は不要になる。',
     memoryTip:
@@ -696,7 +696,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: 'If I were you, I would accept the offer.',
     hint: '仮定法過去の公式：If + 主語 + were/動詞の過去形 ～, 主語 + would ＋ 動詞の原形。',
     explanation:
-      '【解法のコツ】\n仮定法過去の公式：If ＋ S ＋ 動詞の過去形, S ＋ would ＋ 動詞の原形\n"If I were you" → I の場合も were を使う（仮定法では was ではなく were が原則）\n"I would accept the offer."（申し出を受け入れるのに）\n\n"accept the offer" は「申し出を受け入れる」という頻出表現。\n英語は必ずできるようになる！"If I were you" は英語で超頻出の仮定法表現！まるごと覚えよう！',
+      '【何を聞かれているか】\n「もし私があなたなら、その申し出を受け入れるのに。」という日本語を、仮定法過去を使って英語にする問題。\n\n【なぜwereを使うのか】\n仮定法では、主語が"I"であっても特別に"was"ではなく"were"を使うという伝統的なルールがある（口語ではwasも使われるが、試験ではwereが基本）。\n\n【ポイント1】仮定法過去の公式にあてはめる\nIf＋主語＋動詞の過去形〜, 主語＋would＋動詞の原形〜。"If I were you"（もし私があなたなら）がこの型にぴったり当てはまる。\n\n【ポイント2】"accept the offer"という表現を使う\n「申し出を受け入れる」は"accept the offer"という頻出のセット表現。\n\n【ポイント3】文をつなげる\n"If I were you, I would accept the offer."という形にまとめる。\n\n【答え】\nIf I were you, I would accept the offer.\n\n【確かめ】\n"was"ではなく"were"になっていること、またIf節（過去形）と主節（would+原形）の組み合わせが仮定法過去の公式通りになっていることを確認する。\n\n【よくあるまちがい】\n"If I was you"のように、"I"にあわせて"was"を使ってしまうミス。仮定法のIf節では、主語が単数でも"were"を使うのが原則。\n\n【ここが絶対】\n"If I were you, I would 〜"（もし私があなたなら〜するのに）はアドバイスをするときの超頻出フレーズ。丸ごとセットで覚えておく。',
     pitfall:
       '仮定法で "I was" ではなく "I were" を使う。Were は仮定法の特徴的な形。"If I was you" は口語では聞くが、試験では were を使おう。',
     memoryTip:
@@ -710,11 +710,11 @@ export const kokoOyoEigo50: Question[] = [
     difficulty: 'advanced',
     maxOnly: true,
     question:
-      '次の語句を並べ替えて、正しい英文を作りなさい。（１語不要）\n\n[ the / book / written / by / was / wrote / him ]\n\nThe _____ _____ _____ _____ .',
+      '次の語句を並べ替えて、正しい英文を作りなさい。（１語不要）\n\n[ the / book / written / by / was / wrote / him ]\n\nThe _____ _____ _____ _____ _____ .',
     answer: 'The book was written by him.',
     hint: '受動態の文にしよう。by の後ろには動作主が来る。',
     explanation:
-      '【解法のコツ】\n受動態：主語 ＋ be動詞 ＋ 過去分詞 ＋ by ＋ 動作主\n"The book was written by him."\n不要な語は "wrote"（能動態の形、受動態では使わない）。\n\nwrite の過去分詞は written（不規則変化）。\n英語は必ずできるようになる！受動態の並べ替えは「be動詞＋過去分詞＋by」の型を見つけること！',
+      '【何を聞かれているか】\n語句を並べ替えて、受動態を使った正しい英文を作る問題（１語不要）。\n\n【なぜ受動態にするのか】\n日本語の「その本は彼によって書かれた」は、本（the book）が「書く」という動作をされる側になっているので、英語では受動態（be動詞＋過去分詞）で表す。\n\n【ポイント1】受動態の公式を確認する\n主語＋be動詞＋過去分詞＋by＋動作主。"The book was written by him."という形になる。\n\n【ポイント2】writeの活用を確認する\nwrite（原形）→wrote（過去形）→written（過去分詞）という不規則変化。受動態で使うのは過去分詞のwritten。\n\n【ポイント3】不要な語を見つける\n語群には過去形の"wrote"と過去分詞の"written"の両方が入っているが、受動態で使うのは過去分詞のwrittenだけなので、"wrote"が不要な語。\n\n【答え】\nThe book was written by him.\n\n【確かめ】\n"was written"という「be動詞＋過去分詞」のセットになっていること、また"wrote"が使われずに余っていることを確認する。\n\n【よくあるまちがい】\n過去形のwroteと過去分詞のwrittenを混同し、"was wrote"のように誤って組み合わせてしまうミス。受動態には必ず過去分詞を使う。\n\n【ここが絶対】\nwrite→wrote→writtenの活用をセットで覚え、受動態には必ず過去分詞（written）を使うことを徹底する。',
     pitfall:
       'write の活用：write → wrote（過去形）→ written（過去分詞）。受動態では過去分詞 written を使い、過去形 wrote は不要。',
     memoryTip:
@@ -746,11 +746,11 @@ export const kokoOyoEigo50: Question[] = [
     difficulty: 'advanced',
     maxOnly: true,
     question:
-      '次の語句を並べ替えて、正しい英文を作りなさい。（１語不要）\n\n[ is / the / tallest / most tall / building / in / this / city ]\n\nThis is _____ _____ _____ _____ _____ .',
-    answer: 'This is the tallest building in the city.',
+      '次の語句を並べ替えて、正しい英文を作りなさい。（１語不要）\n\n[ the / tallest / most / building / in / this / city ]\n\nThis is _____ _____ _____ _____ _____ _____ .',
+    answer: 'This is the tallest building in this city.',
     hint: '最上級の形容詞の作り方：短い語は -est、長い語は most。tall はどちら？',
     explanation:
-      '【解法のコツ】\n最上級の作り方：\n・短い語（1〜2音節）→ -est（tall → tallest）\n・長い語（3音節以上）→ most ＋ 形容詞（beautiful → most beautiful）\n\ntall は1音節なので "tallest" が正解。"most tall" は誤りで不要語。\n"This is the tallest building in the city."\n最上級には必ず "the" をつける！\n英語は必ずできるようになる！最上級は「the ＋ 形容詞-est ＋ 名詞 ＋ in/of」が基本形！',
+      '【解法のコツ】\n最上級の作り方：\n・短い語（1〜2音節）→ -est（tall → tallest）\n・長い語（3音節以上）→ most ＋ 形容詞（beautiful → most beautiful）\n\ntall は1音節なので "tallest" が正解。"most tall" は誤りで不要語。\n"This is the tallest building in this city."\n不要語は most。最上級には必ず "the" をつける！\n英語は必ずできるようになる！最上級は「the ＋ 形容詞-est ＋ 名詞 ＋ in/of」が基本形！',
     pitfall:
       'most tall は絶対に使わない！tall の最上級は tallest（-est 形）のみ。most は3音節以上の長い語に使う。',
     memoryTip:
@@ -768,7 +768,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: "I couldn't understand what she said.",
     hint: '「彼女が言ったこと」＝ what she said（関係詞 what ＝ the thing that）',
     explanation:
-      '【解法のコツ】\n関係詞 what は "the thing(s) that" と同じ意味で「～すること/もの」を表す名詞節を作る。\n"what she said" ＝「彼女が言ったこと」\n"I couldn\'t understand what she said."\n＝「彼女が言ったことが理解できなかった」\n\nwhat の語順：what ＋ S ＋ V（普通の文の語順）\ncouldn\'t は "could not" の短縮形で過去の否定。\n英語は必ずできるようになる！what she said ＝「彼女が言ったこと」は英作文の超頻出パターン！',
+      '【何を聞かれているか】\n「彼女が言ったことが理解できませんでした。」という日本語を、関係詞"what"を使って英語にする問題。\n\n【なぜwhatを使うのか】\n"what"は"the thing(s) that"（〜すること・もの）と同じ意味を表す関係代名詞で、先行詞を含んだまま「〜すること」という名詞のかたまり（名詞節）を作れる。\n\n【ポイント1】"what she said"の意味を確認する\n"what she said"＝「彼女が言ったこと」。"the thing that she said"と同じ意味になる。\n\n【ポイント2】語順を確認する\nwhatの後ろは疑問文の語順ではなく、"what＋主語＋動詞"という普通の文の語順（she said）になる。\n\n【ポイント3】文全体を組み立てる\n"I couldn\'t understand what she said."＝「私は彼女が言ったことを理解できなかった」。couldn\'tはcould notの短縮形で、過去の否定を表す。\n\n【答え】\nI couldn\'t understand what she said.\n\n【確かめ】\n"what she said"の部分が"what did she say"のような疑問文の語順になっていないこと、また文全体が「彼女が言ったことが理解できなかった」という意味になっていることを確認する。\n\n【よくあるまちがい】\n"what did she say"のように疑問文の語順のまま名詞節として使ってしまうミス。名詞節のwhatは間接疑問文と同じく「what+主語+動詞」の語順にする。\n\n【ここが絶対】\n関係詞whatは"the thing(s) that"と同じ意味。"what she said"（彼女が言ったこと）は英作文で非常によく使われるパターンとして覚えておく。',
     pitfall:
       '"what did she say" は疑問文の語順。名詞節として使うときは "what she said" の普通の語順にする。what = the thing that の置き換えで確認しよう。',
     memoryTip:
@@ -782,11 +782,11 @@ export const kokoOyoEigo50: Question[] = [
     difficulty: 'advanced',
     maxOnly: true,
     question:
-      '次の語句を並べ替えて、正しい英文を作りなさい。（１語不要）\n\n[ nice / how / she / is / what / sings ]\n\n_____ _____ she sings!',
+      '次の語句を並べ替えて、正しい英文を作りなさい。（１語不要）\n\n[ nicely / how / what ]\n\n_____ _____ she sings!',
     answer: 'How nicely she sings!',
     hint: '感嘆文のパターンを思い出そう。副詞を使うには How を使う。',
     explanation:
-      '【解法のコツ】\n感嘆文のパターン：\n・What ＋ （a/an）＋ 形容詞 ＋ 名詞 ＋ S ＋ V !（名詞を強調）\n・How ＋ 形容詞/副詞 ＋ S ＋ V !（形容詞・副詞を強調）\n\n"she sings"（動詞）を強調するには副詞が必要 → nice（形容詞）→ nicely（副詞）\n"How nicely she sings!"\n不要語：what、nice（nicelyに変換するため）\n英語は必ずできるようになる！感嘆文は How ＋ 副詞 / What ＋ 名詞 の2パターンを覚えよう！',
+      '【解法のコツ】\n感嘆文のパターン：\n・What ＋ （a/an）＋ 形容詞 ＋ 名詞 ＋ S ＋ V !（名詞を強調）\n・How ＋ 形容詞/副詞 ＋ S ＋ V !（形容詞・副詞を強調）\n\n"she sings"（動詞）を強調するには副詞が必要 → nicely（副詞）を使う\n"How nicely she sings!"\n不要語：what（名詞を強調するときの感嘆文に使う語）\n英語は必ずできるようになる！感嘆文は How ＋ 副詞 / What ＋ 名詞 の2パターンを覚えよう！',
     pitfall:
       '"nice" のまま使うと "How nice she sings" は不自然（nice は形容詞で副詞的に動詞を修飾できない）。副詞 "nicely" に変換が必要。',
     memoryTip:
@@ -804,7 +804,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: 'I hope he will come. / I want him to come.',
     hint: 'hope は "that節"、want は "O + to 不定詞" の構文を使う。',
     explanation:
-      '【解法のコツ】\n2つの構文を使い分けよう：\n① hope + that節：I hope (that) he will come.\n② want + O + to 不定詞：I want him to come.\n\nhope の後ろに "him to come" は使えない点に注意（hope は that節のみ）。\nwant は "want + O + to 動詞原形"。\n英語は必ずできるようになる！hope と want の使い方の違いを覚えておこう！',
+      '【何を聞かれているか】\n「私は彼が来ることを望んでいます。」という日本語を、"I hope～"または"I want～"を使って英語にする問題。\n\n【なぜ2つの構文を使い分けるのか】\nhopeとwantは同じ「望む」という意味でも、後ろに続く形が違う。hopeは「そうなってほしい」という願望をthat節で表し、wantは「（自分の意志で）〜してほしい」という気持ちをO+to不定詞で表す、という文型上の決まりがある。\n\n【ポイント1】hope+that節\n"I hope (that) he will come."＝「彼が来ることを望む」。hopeの後ろは主語＋動詞のある文（that節）が続く。willは未来の出来事に対する願望を表す。\n\n【ポイント2】want+O+to不定詞\n"I want him to come."＝「彼に来てほしい」。wantの後ろは「人＋to＋動詞の原形」という形になる。\n\n【ポイント3】hopeの後ろにO+to不定詞は使えない\n"I hope him to come."という形は文法的に誤り。hopeはthat節のみを取り、want/ask/tellのようにO+to不定詞を取ることはできない。\n\n【答え】\nI hope he will come. / I want him to come.\n\n【確かめ】\nhopeを使った文はthat節（he will come）になっているか、wantを使った文はO+to不定詞（him to come）になっているかをそれぞれ確認する。\n\n【よくあるまちがい】\n"I hope him to come."のように、hopeの後ろにwantと同じ形を使ってしまうミス。hopeとwantで後ろに続く形が違うことを覚えておく。\n\n【ここが絶対】\nhope→that節（I hope that S will V）、want→O to V（I want O to V）。この違いをセットで覚える。',
     pitfall:
       'I hope him to come. は✗。hope の後は that節（that S V）のみ。want / ask / tell などは "O to 不定詞" を使える動詞。',
     memoryTip:
@@ -818,11 +818,11 @@ export const kokoOyoEigo50: Question[] = [
     difficulty: 'advanced',
     maxOnly: true,
     question:
-      '次の語句を並べ替えて、正しい英文を作りなさい。（１語不要）\n\n[ had / I / have / studied / math / harder / if / would / passed ]\n\nIf I _____ _____ _____ harder, I _____ _____ the exam.',
+      '次の語句を並べ替えて、正しい英文を作りなさい。（１語不要）\n\n[ had / studied / would / have / passed / math ]\n\nIf I （　）（　） harder, I （　）（　）（　） the exam.',
     answer: 'If I had studied harder, I would have passed the exam.',
     hint: '仮定法過去完了：If + had + 過去分詞, would have + 過去分詞',
     explanation:
-      '【解法のコツ】\n仮定法過去完了の公式：\nIf ＋ S ＋ had ＋ 過去分詞 ～, S ＋ would have ＋ 過去分詞 ～\n\n"If I had studied harder, I would have passed the exam."\n＝「もっと一生懸命勉強していたら、試験に合格していたのに（実際はしなかった）」\n\n不要語：have（if節に単独では使わない）\n英語は必ずできるようになる！had studied ＋ would have passed の組み合わせが仮定法過去完了のサイン！',
+      '【何を聞かれているか】\n語句を並べ替えて、仮定法過去完了を使った正しい英文を作る問題（１語不要）。\n\n【なぜ仮定法過去完了を使うのか】\n「もっと勉強していたら合格していたのに（実際はしなかった）」という、過去の事実に反する内容を表すときは、仮定法過去完了（If+had+過去分詞, would have+過去分詞）を使う。\n\n【ポイント1】仮定法過去完了の公式を確認する\nIf＋主語＋had＋過去分詞〜, 主語＋would have＋過去分詞〜。\n\n【ポイント2】if節を組み立てる\n「もし〜していたら」の部分は"If I had studied harder"（もしもっと一生懸命勉強していたら）。hadとstudiedを組み合わせる。\n\n【ポイント3】主節を組み立てる\n「合格していたのに」の部分は"I would have passed the exam"。would・have・passedの3語を組み合わせる。\n\n【答え】\nIf I had studied harder, I would have passed the exam.\n\n【確かめ】\nif節が"had+過去分詞"、主節が"would have+過去分詞"になっているかを確認し、"math"が使われずに余っていることを確認する。\n\n【よくあるまちがい】\nif節に"have studied"（hadを使わない形）を使ってしまうミス。仮定法過去完了のif節は必ず"had+過去分詞"にする。\n\n【ここが絶対】\n仮定法過去完了の合言葉は「If+had→would have」。ifのhadと主節のwould haveをセットで覚える。',
     pitfall:
       '仮定法過去完了のif節は "had + 過去分詞"（had studied）で、"have + 過去分詞"（have studied）ではない。had を必ず使う。',
     memoryTip:
@@ -862,7 +862,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '④ take a day off from',
     hint: '「今日は学校を（　）」という文脈。体調不良で学校を休む表現は？',
     explanation:
-      '【解法のコツ】\n"take a day off from school"（学校を1日休む）が文脈に最も合う。\n① take a chance on「～に賭ける・試してみる」\n② take part in「～に参加する」\n③ take care of「～の世話をする」\n④ take a day off from「～を1日休む」→ ✓\n\n"I\'m not feeling well"（体調が良くない）という状況から「休む」を選べる。\n英語は必ずできるようになる！体調不良の場面で使う表現として "take a day off" は必須！',
+      '【何を聞かれているか】\n体調不良で学校を休むという文脈に合う、正しい熟語を選ぶ問題。\n\n【なぜtake a day offが正しいのか】\n文の前半で"I\'m not feeling well today."（今日は体調が良くない）と述べられているので、後半には「休む」という意味の熟語が続くのが自然な流れになる。\n\n【ポイント1】選択肢の意味を確認する\n①take a chance on「〜に賭ける・試してみる」、②take part in「〜に参加する」、③take care of「〜の世話をする」、④take a day off from「〜を1日休む」。\n\n【ポイント2】文脈と一致する熟語を選ぶ\n体調不良→学校を休む、という流れに合うのは④のみ。①②③はいずれも体調不良とは関係のない意味。\n\n【ポイント3】fromの役割を確認する\n"take a day off from school"のfromは「何を休むか」を示す。fromを省いても「休む」という意味は通じるが、fromがあることで対象が明確になる。\n\n【答え】\n④ take a day off from\n\n【確かめ】\n"I think I\'ll take a day off from school."を訳し、「学校を1日休もうと思う」という、体調不良の文脈に合う自然な意味になっているか確認する。\n\n【よくあるまちがい】\n"take off"（離陸する・脱ぐ）という意味と混同し、文脈に合わない意味で解釈してしまうミス。"take a day off"は「休暇を取る」という別の意味を持つ熟語。\n\n【ここが絶対】\n"take a day off (from)"＝1日休む、という体調不良の場面で使う定番の熟語として覚えておく。',
     pitfall:
       'take a day off from school の from を忘れないこと。take a day off だけでも「休む」の意味はあるが、from があることで「どこを休むか」を明示できる。',
     memoryTip:
@@ -916,7 +916,7 @@ export const kokoOyoEigo50: Question[] = [
     answer: '② at',
     hint: '"be good ＋ 前置詞 ＋ 動名詞" の組み合わせ。何の前置詞が使われる？',
     explanation:
-      '【解法のコツ】\n"be good at ～"（～が得意だ）は頻出の重要熟語。at の後ろには名詞または動名詞（-ing形）が来る。\n"She is very good at playing the violin."\n＝「彼女はバイオリンを弾くのがとても得意だ」\n\n他の前置詞との違い：\n・be good for「～に良い（健康・何かの用途に）」\n・be good in「一般的にある分野で良い」（あまり使わない）\n・be good on「～の上で良い」（文脈による）\n英語は必ずできるようになる！"be good at" は絶対に覚えるべき超頻出熟語！',
+      '【何を聞かれているか】\n「バイオリンを弾くのが得意だ」という文の空欄に入る、正しい前置詞を選ぶ問題。\n\n【なぜatを使うのか】\n"be good at 〜"は「〜が得意だ」という意味を表す決まった熟語で、技術やスキルについて述べるときにatを使うと決まっている。\n\n【ポイント1】"be good at"の形を確認する\nbe good at＋名詞または動名詞（-ing形）。"good at playing the violin"＝「バイオリンを弾くのが得意」。\n\n【ポイント2】他の前置詞との意味の違いを確認する\n"be good for"は「〜に良い（健康や用途について）」、"be good in"や"be good on"は一般的な熟語としては使われない。\n\n【ポイント3】反対の意味も一緒に覚える\n"be bad at 〜ing"＝「〜するのが苦手」。goodとbadをセットで覚えると使い分けやすい。\n\n【答え】\n② at\n\n【確かめ】\n"She is very good at playing the violin."を訳し、「彼女はバイオリンを弾くのがとても得意だ」という意味になっていることを確認する。\n\n【よくあるまちがい】\n"good for"（健康に良いなどの意味）と"good at"（技術が得意という意味）を混同してしまうミス。前置詞によって意味が大きく変わることに注意する。\n\n【ここが絶対】\n"be good at 〜ing"＝〜するのが得意、は超頻出の熟語。「得意・スキル→at」とセットで覚える。',
     pitfall:
       '"be good for" は「健康に良い（good for your health）」、"be good at" は「得意だ（技術・スキルに使う）」。文脈によって使い分けよう。',
     memoryTip:

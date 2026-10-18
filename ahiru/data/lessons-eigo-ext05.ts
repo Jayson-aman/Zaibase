@@ -29,6 +29,7 @@ export const eigoExt05Lessons: Lesson[] = [
     sections: [
       {
         heading: '助動詞に共通する三つの決まり',
+        mangaId: 'eigo_s156_manga',
         body: `英語の動詞は、そのままでは「する・した」という事実しか伝えられない。そこに「できる」「〜しなければならない」「〜かもしれない」といった話し手の気持ちを付け加えるのが助動詞である。can・may・must・will・should などがその仲間で、いつも動詞の前に置く。
 
 助動詞にはどれにも共通する三つの決まりがある。この三つを最初に丸ごと覚えてしまえば、can でも must でも will でも同じように文が作れる。
@@ -215,6 +216,7 @@ be able to は「be動詞＋able to＋動詞の原形」で、be動詞の部分�
       },
       {
         heading: 'could と was able to の使い分け',
+        mangaId: 'eigo_s158_manga',
         body: `どちらも「〜できた」と訳せるが、英検三級や上位校の入試では区別が問われることがある。
 
 ■ could ＝ もともとその力があった（能力・状態）
@@ -296,6 +298,7 @@ Yes, you can. とも言えるが、上から許可を出すひびきになるこ
       },
       {
         heading: 'can\'t ＝「〜のはずがない」',
+        mangaId: 'eigo_s159_manga',
         body: `can't は「〜できない」のほかに、「〜のはずがない」という強い打ち消しの推量を表すことがある。上位校や英検三級で問われる用法である。
 
 例）It can't be true.（それが本当のはずがない）
@@ -370,7 +373,7 @@ must be 〜（〜にちがいない） ⇔ can't be 〜（〜のはずがない�
 断り：I'm sorry, but you can't. ／ I'm afraid not.
 No, you may not. は「だめです」と強くはねつけるひびきになるので、ふつうは I'm sorry を付けてやわらげる。
 
-★ ポイント：ていねいさの順は Can I 〜? ＜ May I 〜? ＜ Could I 〜? のイメージ。相手が友達なら Can I、店員さんや先生になら May I、と場面で選ぶ。`,
+★ ポイント：ていねいさの順は Can I 〜? ＜ May I 〜? ≒ Could I 〜? のイメージ。相手が友達なら Can I、店員さんや先生になら May I、と場面で選ぶ。`,
       },
       {
         heading: '会話で覚える決まり文句',
@@ -548,7 +551,7 @@ It may be sunny. ＝ Perhaps it will be sunny.
 ※maybe は一語の副詞で「たぶん」。may be（助動詞＋be）と混同しないこと。
 
 ■ ていねいさの階段（許可を求める言い方）
-Can I 〜?（友達に）＜ May I 〜?（目上の人に）＜ Could I 〜?（さらにていねい）
+Can I 〜?（友達に）＜ May I 〜?・Could I 〜?（目上の人に、ていねい）
 どれも答え方は同じで、Sure. / Of course. / I'm sorry, but 〜。
 
 ■ 会話でよく出るやりとり
@@ -897,6 +900,21 @@ need not は少しかたい言い方だが、英検三級の書きかえで見�
 I didn't have to work last Sunday.（先週の日曜は働かなくてよかった）
 
 ⚠ 注意：和訳問題で don't have to を「してはいけない」と書くと、正解にはならない。逆に must not を「しなくてよい」と書いても同じ。訳を書き終えたら、「禁止か、不要か」を必ず読み返して確認する。`,
+      },
+      {
+        heading: 'なぜ must と have to は否定になると意味が正反対になるのか',
+        mangaId: 'eigo_s166_manga',
+        body: `肯定文の must と have to はどちらも「しなければならない」ですが、**not が打ち消す相手がちがいます**。must not の not は、うしろの動作（go・eat）を打ち消して「行くな・食べるな」という禁止になります。don't have to の not は、have to（しなければならないという義務）を打ち消して「その義務はない」＝「しなくてよい」になります。同じ「〜ない」で終わる日本語に見えても、英語では打ち消す相手がちがうので、意味が正反対になります。
+
+Must I go? の No が No, you don't have to. になるのも同じ理由です。「行かなければなりませんか」に「いいえ」と答えるのは「その義務はない」という意味なので、義務を打ち消す don't have to を使います。No, you mustn't. は「行ってはいけない」という別の答えになります。
+
+■ 確かめのしかた
+①訳を書いたら、**禁止か、不要か**を読み返す。must not→してはいけない（禁止）、don't have to→しなくてよい（不要）。
+②「〜なくてよい」を英語にするとき、must not を選んでいないか。You don't have to come tomorrow.
+③Must I 〜? への答え：Yes, you must. ／ No, you don't have to.（× No, you mustn't.）
+④言いかえで確かめる：禁止＝Don't 〜.／You can't 〜.、不要＝You need not 〜.／There is no need to 〜.。過去の不要は didn't have to。
+
+★ ここがポイント：**must not は動作を、don't have to は義務を打ち消す**ので意味が正反対（禁止／不要）。Must I? の No は「義務がない」ので **don't have to**。訳を書いたら禁止か不要かを必ず読み返す。`,
       },
     ],
     trapExamples: [
@@ -1561,6 +1579,7 @@ A: Yes, please.（はい、お願いします）
     sections: [
       {
         heading: 'Shall I 〜? の形と場面',
+        mangaId: 'eigo_s174_shall_manga',
         body: `Shall I 〜? は「（私が）〜しましょうか」と、自分から手助けを申し出る言い方である。困っている人を見かけたときの決まり文句として、会話問題で頻出する。
 
 例）Shall I open the window?（窓を開けましょうか）
@@ -1899,7 +1918,7 @@ tell me のうしろは「疑問詞＋主語＋動詞」の順になる。これ
     targetLevel: 'oyo',
     keyPoints: [
       'May I 〜? / Could I 〜? ＝「〜してもよろしいですか」。主語は I。',
-      'ていねいさは Can I ＜ May I ＜ Could I の順。',
+      'ていねいさは Can I ＜ May I ≒ Could I の順。',
       'use（その場で使う）と borrow（借りて持っていく）を使い分ける。',
       '電話の May I speak to 〜? への返事は Speaking. / Just a moment, please.',
       '断るときは I\'m sorry, but 〜 とやわらげる。',
@@ -1916,7 +1935,7 @@ tell me のうしろは「疑問詞＋主語＋動詞」の順になる。これ
 例）May I come in?（入ってもよろしいですか）先生や目上の人に。
 
 ■ Could I 〜?（〜させていただけますか）
-例）Could I use your phone?（電話をお借りできますか）いちばんていねい。
+例）Could I use your phone?（電話をお借りできますか）May I と同じくらいていねい。
 
 ■ 答え方
 承諾：Sure. ／ Of course. ／ Certainly. ／ Go ahead.（どうぞ）
@@ -2177,6 +2196,7 @@ I'd like to, but 〜（行きたいのですが〜）は、断り方としてと
     sections: [
       {
         heading: '命令文の作り方',
+        mangaId: 'eigo_s181_manga',
         body: `相手に「〜しなさい」「〜してください」と言う文を命令文という。作り方はとても簡単で、ふつうの文から主語 You を取り、動詞を原形にするだけである。
 
 ■ 一般動詞の文から
@@ -2735,6 +2755,7 @@ How many books he has!（彼はなんてたくさんの本を持っているの�
     sections: [
       {
         heading: '名詞があるかどうかで決める',
+        mangaId: 'eigo_s187_manga',
         body: `感嘆文で What と How のどちらを使うかは、文の中に名詞があるかどうかで決まる。手順にしてしまえば迷わない。
 
 ■ 手順① 「なんて〜」の部分に名詞があるか
@@ -2928,6 +2949,7 @@ There is a park near here, isn't there?
     sections: [
       {
         heading: '答え方は「事実」で決める',
+        mangaId: 'eigo_s189_manga',
         body: `付加疑問への答え方は、付いている疑問の形ではなく、実際にどうなのかという事実で決まる。
 
 ■ 原則

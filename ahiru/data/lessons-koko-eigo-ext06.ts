@@ -662,6 +662,21 @@ a piece of furniture → a desk / a chair（具体名）
 
 ★ ポイント：英作文では、単位語が出てこないときに「可算名詞に言いかえる」逃げ道を持っておくと減点を防げる。`,
       },
+      {
+        heading: 'なぜ形で単位語が決まり、なぜ複数形にするのは単位語だけなのか',
+        mangaId: 'koko_eigo_s187_manga',
+        body: `紙・パン・アドバイスのような不可算名詞は、それ自体には区切りがありません。数えるには**区切りを表す語**（単位語）を借ります。単位語は「もとの形と切り方」を表すので、薄く平らなら sheet、薄く切ったら slice、焼いたかたまりなら loaf、棒状なら bar、二つで一組なら pair、それ以外の「ひとつ・一片」は piece。形から決められるので丸暗記が要りません。
+
+複数形にするのが単位語だけなのは、数えられているのが**単位のほう**だからです。two pieces of paper は「紙の一片が二つ」であって、紙が二つではありません。だから × two pieces of papers、× two advices です。単位語が思い出せないときは、可算名詞に言いかえる（advice→suggestion、work→job）と減点を防げます。
+
+■ 確かめのしかた
+①名詞の**形と切り方**を言う：薄く平ら→sheet（paper・glass）、薄切り→slice（bread・cheese・ham）、かたまり→loaf（bread）・bar（chocolate・soap）、二つ一組→pair（shoes・glasses・scissors）、それ以外→piece。
+②複数は**単位語に -s**：two pieces of advice、three slices of cheese、two loaves of bread（f→v）。× advices、× informations。
+③a news／an information／an advice になっていないか→a piece of news。
+④抽象名詞×piece（advice・information・news・work）と furniture／baggage×piece を例文ごと確かめる。
+
+★ ここがポイント：不可算名詞は**区切りを表す単位語**を借りて数え、単位語は**形と切り方**で決まる。数えているのは単位なので**複数形にするのは単位語だけ**。`,
+      },
     ],
     trapExamples: [
       {
@@ -913,6 +928,7 @@ How many の後ろは必ず可算名詞の複数形になる。× How many book
     sections: [
       {
         heading: '判断するのは「つづり」ではなく「音」',
+        mangaId: 'koko_eigo_s190_manga',
         figureId: 'lf_kokoeigoext06_190',
         body: `不定冠詞 a / an は、可算名詞の単数形の前に置いて「不特定の1つ」を表す。どちらを使うかは、直後に来る語の最初の「音」で決まる。
 
@@ -1005,6 +1021,7 @@ a UFO（ユー＝子音）／a USB cable（ユー＝子音）／a UN officer
     sections: [
       {
         heading: 'the が付く三つの場面',
+        mangaId: 'koko_eigo_s191_manga',
         body: `定冠詞 the は「相手にも特定できる」ことを示す語である。付ける・付けないは、次の三場面で判断する。
 
 ■ 場面①：二度目に指すとき
@@ -1254,6 +1271,21 @@ the sun／the moon／the earth／the sky／the sea／the world／the universe／
 例）The sooner, the better.（早ければ早いほどよい）
 
 ★ ポイント：the + 形容詞と the 比較級の構文は、意味も形も入試頻出。「the の後ろが形容詞なら人々の意味を疑う」と覚えておく。`,
+      },
+      {
+        heading: 'なぜ最上級や序数に the が付き、なぜ the young は複数なのか',
+        mangaId: 'koko_eigo_s193_manga',
+        body: `the は「相手にどれのことか分かる」ことを示す語です。世界に一つしかないもの（the sun）、いちばん〜なもの（the highest）、〇番目のもの（the first）、方角（the north）は、言った瞬間に**どれか一つに決まる**ので、文脈を考えなくても the が付きます。楽器の the piano や年代の the 1990s も、英語の習慣で決まった形です。決まりとして覚えれば、冠詞問題で悩む時間が減ります。
+
+the＋形容詞が「〜な人々」で複数扱いになるのは、the young が「若い人たち全体」というまとまりを指すからです。形は単数に見えても意味は複数なので、The young are 〜 です。一人なら a young person。体の部位に the を使う（caught me by the arm）のは、動作の対象が人（me）で、部位はどこに触れたかを示すだけだからで、所有格は使いません。
+
+■ 確かめのしかた
+①**言った瞬間に一つに決まるか**：唯一のもの・最上級・序数・方角→the。副詞の最上級は the を省いてもよい（runs (the) fastest）。
+②the＋形容詞は**複数扱い**：The rich are 〜。× The rich is。一人なら a rich person。
+③体の部位は「人＋前置詞＋the＋部位」：He tapped me on the shoulder.／caught me by the arm. 所有格にしない。
+④the same／the only／the very、the 比較級 the 比較級（The sooner, the better.）も the が決まった形。
+
+★ ここがポイント：the は**どれか一つに決まる**印なので、唯一・最上級・序数・方角は自動的に the。**the＋形容詞は人々（複数扱い）**、体の部位は「人＋前置詞＋the＋部位」。`,
       },
     ],
     trapExamples: [
@@ -2243,7 +2275,7 @@ yourself（あなた1人）／ yourselves（あなたたち複数）
 「他の誰でもなくその人が」という強調。取り除いても文は成り立つ。
 例）I myself saw the accident.（私自身がその事故を見た）
 例）She made the cake herself.（彼女は自分でそのケーキを作った）
-例）The president himself came to the school.（校長自身が学校へ来た）
+例）The principal himself came to the school.（校長自身が学校へ来た）
 置く位置は「強調したい語の直後」か「文末」である。
 
 ★ ポイント：取り除いて文が成り立つなら強調用法、成り立たないなら再帰用法。図の人称×数の表で形を確かめておこう。`,
@@ -2636,6 +2668,7 @@ some of / any of の後ろの名詞に合わせる。
     sections: [
       {
         heading: '「別のもの」の one と「そのもの」の it',
+        mangaId: 'koko_eigo_s207_manga',
         figureId: 'lf_kokoeigoext06_207',
         body: `■ one＝同じ種類の別のもの
 例）I lost my umbrella, so I have to buy one.（傘をなくしたので1本買わなければならない）※ one ＝ an umbrella（別の傘）
@@ -2743,6 +2776,7 @@ that / those：比較の文で名詞のくり返しを避ける
     sections: [
       {
         heading: '残りがあるか、これで最後か',
+        mangaId: 'koko_eigo_s208_manga',
         body: `■ another（もう一つ・別の一つ）
 an + other が語源で、「不特定のもう一つ」を表す。残りがまだたくさんある場面で使う。
 例）This cake is delicious. Can I have another?（このケーキおいしい。もう一つもらえる？）
@@ -3062,6 +3096,7 @@ no / none ＝ 全体否定「一人も〜ない」
     sections: [
       {
         heading: 'both・either・neither の使い分け',
+        mangaId: 'koko_eigo_s211_manga',
         body: `■ both（二つとも）
 複数扱い。both + 複数名詞、both of + 限定語 + 複数名詞。
 例）Both books are interesting.（両方の本ともおもしろい）
@@ -3275,6 +3310,7 @@ late：限定＝故〜（the late Mr. Smith）／叙述＝遅れて（He was lat
     sections: [
       {
         heading: '形容詞を並べる順序',
+        mangaId: 'koko_eigo_s213_manga',
         figureId: 'lf_kokoeigoext06_213',
         body: `■ 基本の並び
 限定語 → 数量 → 評価 → 大きさ → 新旧 → 形 → 色 → 出身 → 材料 → 名詞
@@ -3867,6 +3903,21 @@ before：過去のある時点から見て「以前に」。現在完了・過�
 ⚠ 注意：ago は必ず「期間 + ago」の形で使い、単独では使わない。× I met him ago.
 
 ★ ポイント：already / yet / still は現在完了の単元でも問われる。「肯定＝already、否定＝yet、継続中＝still」と三点セットで覚える。`,
+      },
+      {
+        heading: 'なぜ肯定と否定で語が替わるのか',
+        mangaId: 'koko_eigo_s218_manga',
+        body: `too と either は、どちらも「〜も」ですが、英語では**肯定文の「も」と否定文の「も」を別の語で表します**。I like it, too.／I don't like it, either. と、文の形で語が決まるので、日本語の「も」を too に一対一で置きかえると否定文で誤ります。already／yet／still も同じで、「すでに」は肯定文の already、「まだ〜ない」は否定文の yet、「もう〜したか」は疑問文の yet、「まだ〜している」は肯定でも否定でも still。**文の形（肯定・否定・疑問）を見てから語を選ぶ**のがこの単元の核です。
+
+ago が現在完了と使えないのは、ago が「今から〇だけ前の一点」を指す語で、過去形とだけ組むからです。before は「以前に」とだけ言って時点を指さないので、現在完了と組めます。ago は必ず「期間＋ago」の形で使います。
+
+■ 確かめのしかた
+①「〜も」：肯定文→too（文末）、否定文→either（文末）、ややかたい→also（一般動詞の前・be動詞のあと）。× I don't like it, too.
+②「すでに・まだ・もう」：肯定→already、否定→yet（まだ〜ない）、疑問→yet（もう）、続いている→still（not の前）。× hasn't come already→yet。
+③短い返事：Me too.（肯定）／Me neither.・Neither do I.（否定）。
+④「〇前に」→期間＋ago（過去形）。「以前に」→before（現在完了）。× I have met him three days ago。
+
+★ ここがポイント：英語は**肯定・否定・疑問で「も」「まだ」の語が替わる**（too／either、already／yet／still）ので、文の形を見てから選ぶ。ago は**過去の一点**なので過去形とだけ。`,
       },
     ],
     trapExamples: [

@@ -32,6 +32,7 @@ export const kokoEigoExt09Lessons: Lesson[] = [
       {
         heading: '2文を1文にする三つの手順',
         figureId: 'lf_kokoeigoext09_296',
+        mangaId: 'koko_eigo_s296_manga',
         body: `関係代名詞は、同じものを指す語を共有している2つの文を、1つの文にまとめるための語である。
 
 例）I know the girl.（私はその女の子を知っている）
@@ -124,6 +125,7 @@ export const kokoEigoExt09Lessons: Lesson[] = [
     sections: [
       {
         heading: '関係詞節の範囲を線で囲う',
+        mangaId: 'koko_eigo_s297_manga',
         figureId: 'lf_kokoeigoext09_297',
         body: `関係代名詞が出てきたら、まず「どこまでが説明か」を決める。
 
@@ -143,7 +145,7 @@ who lives in Canada がひとかたまりで a friend を説明している。�
 
 ★ ポイント：関係詞節の中に主語がない（who がその代わり）のが主格の特徴。したがって who のあとの動詞は節の中、その先で主語なしに現れる動詞が文全体の動詞になる。
 
-⚠ 注意：関係詞節が長くなると主語と述語が大きく離れる。The students who came to Japan last summer are studying Japanese now. では主語 The students と述語 are が7語も離れている。`,
+⚠ 注意：関係詞節が長くなると主語と述語が大きく離れる。The students who came to Japan last summer are studying Japanese now. では主語 The students と述語 are の間に6語（who came to Japan last summer）もはさまっている。`,
       },
       {
         heading: '後ろから前へ戻して訳す',
@@ -207,7 +209,7 @@ who lives in Canada がひとかたまりで a friend を説明している。�
       '先行詞＋関係詞節が主語になると、主語と述語動詞が大きく離れる。',
       '述語動詞の単数・複数は、関係詞節の中の語ではなく先行詞（主語の芯）で決める。',
       '関係詞節をカッコでくくって消すと、文の骨格（主語＋動詞）が見える。',
-      '「主語の芯」は関係代名詞の直前にある名詞。',
+      '「主語の芯」は、ふつう関係代名詞の直前にある名詞（of 句がはさまる文は例外）。',
       '節の中の動詞と文全体の動詞、合計2つの動詞があるのが正常な形。',
     ],
     sections: [
@@ -350,6 +352,21 @@ who lives in Canada がひとかたまりで a friend を説明している。�
 
 ⚠ 注意：whose の直後の名詞が節の主語になっているとき（whose father is a doctor）、その is を文全体の動詞と取りちがえないこと。文全体の動詞はさらに後ろにある。`,
       },
+      {
+        heading: 'なぜ「直後を見る」だけで who・whose・whom が決まるのか',
+        mangaId: 'koko_eigo_s299_manga',
+        body: `関係代名詞は、もとの文の名詞（he・his・him）の代わりです。主格 who は he の代わりなので直後に動詞が続き、所有格 whose は his の代わりなので直後に名詞が続き、目的格 whom は him の代わりなので直後に主語＋動詞が続いて動詞の目的語が欠けます。つまり**格は「もとの文でどのはたらきをしていたか」**で決まり、それがそのまま直後の形に表れます。だから「先行詞が人だから who」ではなく「直後が名詞だから whose」と判断します。
+
+whose のあとに a／the を付けないのは、whose が his と同じ所有格で、所有格と冠詞は重ねられないからです。前置詞の直後に置けるのが whom と which だけなのは、that と who が前置詞のあとに立てない語だからで、ふつうの言い方では前置詞を文末に残します（the friend I went with）。
+
+■ 確かめのしかた
+①空所の**直後**を見る：動詞→who（主格）、名詞→whose（所有格）、主語＋動詞で目的語が欠ける→whom（目的格）。
+②whose＋名詞に a／the を付けていないか（× whose the father）。whose のあとは完全な文。
+③もとの2文に分けて確かめる：I have a friend.＋His father is a doctor.→his→whose。We met him.→him→whom。
+④whom は who・that で代用でき、省略もできる。前置詞の直後は whom・which だけ。whose＋名詞＋動詞の動詞を文全体の動詞と取りちがえない。
+
+★ ここがポイント：関係代名詞は**もとの文の he・his・him の代わり**なので、格は直後の形（動詞／名詞／主語＋動詞）に表れる。**直後を見るだけ**で who・whose・whom が決まる。`,
+      },
     ],
     trapExamples: [
       {
@@ -417,6 +434,7 @@ who lives in Canada がひとかたまりで a friend を説明している。�
       },
       {
         heading: '先行詞が「される側」のときは受動態',
+        mangaId: 'koko_eigo_s300_manga',
         body: `関係詞節の中の動詞を能動にするか受動にするかは、先行詞がその動作を「する側」か「される側」かで決まる。
 
 例）Kyoto is a city which is visited by many people every year.
@@ -508,6 +526,7 @@ who lives in Canada がひとかたまりで a friend を説明している。�
       },
       {
         heading: '「欠け」を探す読み方',
+        mangaId: 'koko_eigo_s301_manga',
         body: `関係詞節を読むときは、「何が欠けているか」を必ず確認する。欠けの位置で主格か目的格かが決まる。
 
 ■ 主格の場合（主語が欠けている）
@@ -577,6 +596,7 @@ who lives in Canada がひとかたまりで a friend を説明している。�
       {
         heading: '判定は「直後を見る」だけ',
         figureId: 'lf_kokoeigoext09_302',
+        mangaId: 'koko_eigo_s302_kankei_manga',
         body: `関係代名詞の格は、次の一点だけで決まる。
 
 ■ 直後が動詞（助動詞を含む）→ 主格
@@ -667,6 +687,7 @@ who lives in Canada がひとかたまりで a friend を説明している。�
     sections: [
       {
         heading: '前置詞は消えない',
+        mangaId: 'koko_eigo_s303_manga',
         body: `関係代名詞を作るときに落としやすいのが、もとの文にあった前置詞である。
 
 例）This is the house.（これがその家です）
@@ -761,6 +782,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: 'that は who・which の両方の代わりになる',
+        mangaId: 'koko_eigo_s304_manga',
         body: `that は、先行詞の種類を問わずに使える関係代名詞である。
 
 ■ 人が先行詞（who の代わり）
@@ -851,6 +873,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: 'that が好まれる先行詞のリスト',
+        mangaId: 'koko_eigo_s305_manga',
         body: `次のような語が先行詞に付いているとき、関係代名詞は that を使うのがふつうである。
 
 ■ ①最上級
@@ -968,12 +991,13 @@ in を落として This is the house which I live. と書くと、live の後ろ
 　× I visited Nara, is famous for its old temples.
 　目的格でも省略できない。× I met Mr. Tanaka, we like very much.（○ whom we like very much）
 
-★ ポイント：that が使えない場面は「前置詞の直後」「コンマの直後」の二つだけ、と数を決めて覚える。
+★ ポイント：who・which の代わりに that を置けない場面は「前置詞の直後」「コンマの直後」の二つだけ、と数を決めて覚える。（that は whose の代わりにもならないが、これは that が所有格ではないためで、別に押さえておく。）
 
 ⚠ 注意：固有名詞（Nara, Mr. Tanaka など）が先行詞のときは、ふつう継続用法（コンマ付き）になる。固有名詞はすでに一つに決まっていて、絞りこむ必要がないからである。`,
       },
       {
         heading: 'コンマの有無で意味が変わる',
+        mangaId: 'koko_eigo_s306_manga',
         body: `コンマの有無は見落としやすいが、意味を大きく変える。
 
 ■ 限定用法（コンマなし）
@@ -1074,6 +1098,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
       },
       {
         heading: '同格の that との区別',
+        mangaId: 'koko_eigo_s307_manga',
         body: `名詞の直後に that が来て、しかも後ろが完全な文になっている場合がある。これを同格の that という。
 
 例）The news that she had passed the exam surprised us.
@@ -1145,6 +1170,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: '目的格は落としてよい',
+        mangaId: 'koko_eigo_s308_manga',
         figureId: 'lf_kokoeigoext09_308',
         body: `目的格の関係代名詞は、あってもなくても意味が決まるので省略できる。
 
@@ -1244,6 +1270,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: 'なぜ主格は省略できないのか',
+        mangaId: 'koko_eigo_s309_manga',
         figureId: 'lf_kokoeigoext09_309',
         body: `主格の関係代名詞を省略すると、文の形が壊れる。
 
@@ -1341,6 +1368,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: '合図を見つけて節を切り出す',
+        mangaId: 'koko_eigo_s310_manga',
         figureId: 'lf_kokoeigoext09_310',
         body: `省略された関係代名詞を見つける手順は次のとおりである。
 
@@ -1437,6 +1465,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: '飾りを外して骨格を見る',
+        mangaId: 'koko_eigo_s311_manga',
         body: `長い文を読む手順を固定しておくと、時間内に処理できるようになる。
 
 例）The letters that my grandfather wrote to my grandmother during the war are kept in this box.
@@ -1536,6 +1565,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: 'who is をまとめて消す',
+        mangaId: 'koko_eigo_s312_manga',
         figureId: 'lf_kokoeigoext09_312',
         body: `主格の関係代名詞のあとが be動詞＋現在分詞になっているとき、〈関係代名詞＋be動詞〉をまとめて省ける。
 
@@ -1736,6 +1766,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: '目的格は分詞に直せない',
+        mangaId: 'koko_eigo_s314_manga',
         body: `分詞の後置修飾は「その名詞が動作をする（現在分詞）」「その名詞が動作をされる（過去分詞）」の二つだけを表せる。だから節の中に別の主語がある目的格は表現できない。
 
 例）The boy who I met at the station was Ken's brother.
@@ -1925,6 +1956,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: '「そうすれば」の and',
+        mangaId: 'koko_eigo_s316_manga',
         body: `命令文のあとに and を置くと、「そうすれば」という意味になる。
 
 例）Turn left, and you will see the post office.
@@ -2078,6 +2110,21 @@ in を落として This is the house which I live. と書くと、live の後ろ
 
 ⚠ 注意：日本語につられて「そうしないと」を and で書いてしまう誤りが多い。空所補充では必ず後半の意味を読んでから選ぶ。`,
       },
+      {
+        heading: 'なぜ命令文のあとの or が「そうしないと」になり、なぜ if では don\'t が要るのか',
+        mangaId: 'koko_eigo_s317_manga',
+        body: `or はもともと「または」です。命令文のあとに置くと、「急ぎなさい、**または**（急がなければ）バスに乗り遅れる」と、命令に従わなかった場合の結果を示すことになり、「そうしないと」の意味になります。and なら「急ぎなさい、**そうすれば**間に合う」と、従った場合の結果です。だから後半が望ましくない結果（miss・be late・fail・catch a cold）なら or、望ましい結果なら and と、後半の内容で決まります。
+
+if に書きかえるとき don't が要るのは、or が表しているのが「命令に**従わない**場合」だからです。Hurry up, or 〜＝If you don't hurry up, 〜。don't を落とすと「急げば乗り遅れる」と正反対になります。unless は「〜しない限り」でそれ自体に否定を含むので、Unless you hurry up と don't を入れません（二重否定になる）。
+
+■ 確かめのしかた
+①後半の内容が**望ましくない**→or、**望ましい**→and。同じ命令文でも後半（catch／miss）で入れかわる。
+②or の文を if に直すとき、**If you don't**（否定）になっているか。× If you wear a coat, you will catch a cold.
+③unless を使うなら don't を入れない（Unless you wear a coat）。
+④対応表：命令文, and＝If you〜（肯定）／命令文, or＝If you don't〜＝Unless you〜。
+
+★ ここがポイント：命令文のあとの or は「**または（従わなければ）**」なので「そうしないと」。後半が困った結果なら or、よい結果なら and。if に直すと**否定（don't）**、unless なら否定を含むので don't は入れない。`,
+      },
     ],
     trapExamples: [
       {
@@ -2122,6 +2169,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: '語順で決まる so と because',
+        mangaId: 'koko_eigo_s318_manga',
         body: `so と because は、どちらも原因と結果を結ぶが、置く位置が正反対である。
 
 ■ so（だから）… 理由 → so → 結果
@@ -2321,6 +2369,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: '条件の if の作り方',
+        mangaId: 'koko_eigo_s320_manga',
         body: `if は「もし〜なら」と条件を表す。時を表す接続詞と同じく、副詞節の中では未来のことでも現在形を使う。
 
 　○ If it rains tomorrow, we will stay home.
@@ -2345,7 +2394,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
 
 ★ ポイント：if 節の中を現在形にするのを忘れる誤りが最多。「if 節の中に will は書かない」と決めて覚える。
 
-⚠ 注意：現在の事実に反する仮定（仮定法）は高校で学ぶ範囲。中学範囲では「もし〜なら」の条件文として、現在形＋will で書けばよい。`,
+⚠ 注意：現在の事実に反する仮定（仮定法、If I were a bird, ... など）は別の課で学ぶ。この課のように実際に起こりうる条件なら、「もし〜なら」の条件文として、現在形＋will で書けばよい。`,
       },
       {
         heading: 'unless は「〜しない限り」',
@@ -2420,6 +2469,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: 'because と because of',
+        mangaId: 'koko_eigo_s321_manga',
         body: `because は接続詞、because of は前置詞のはたらきをする。後ろに来る形がちがう。
 
 ■ because ＋〈主語＋動詞〉
@@ -2520,6 +2570,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: 'though・although と but の使い分け',
+        mangaId: 'koko_eigo_s322_manga',
         body: `逆接には二つの型がある。
 
 ■ 従属接続詞 though / although
@@ -2676,6 +2727,21 @@ in を落として This is the house which I live. と書くと、live の後ろ
 
 ⚠ 注意：that の後ろが完全な文でないなら、それは接続詞ではなく関係代名詞である。The book that I bought の that は関係代名詞。`,
       },
+      {
+        heading: 'なぜ that は文をまるごと名詞にでき、なぜ中は平叙文の語順なのか',
+        mangaId: 'koko_eigo_s323_manga',
+        body: `接続詞の that は、He is right. という一つの文の前について、その文全体を「彼が正しい**ということ**」という名詞のかたまりに変えます。だから think・know・say の目的語になれ、be sure that・be glad that のように形容詞のあとにも続きます。この that の後ろが**完全な文**（主語も目的語も欠けていない）なのは、もとが独立した文だからで、関係代名詞の that（後ろに欠けがある）との決定的なちがいです。
+
+that 節の中が平叙文の語順なのは、that 節が「たずねる」文ではなく「〜ということ」という**内容を述べる**かたまりだからです。全体を疑問文にするときは主節だけを Do you think 〜? とし、that 節の中はそのままです。疑問詞が付くときは What do you think he will say? と疑問詞を文頭に出し、that は使いません。
+
+■ 確かめのしかた
+①that の後ろが**完全な文**か。完全→接続詞、欠けがある→関係代名詞。
+②that 節の中が**主語＋動詞**の平叙文の語順か（× I think that is he a good teacher）。that を外して読み、文として成り立つか。
+③全体を疑問文にするなら主節だけ（Do you think that he is right?）。疑問詞は文頭に出し that なし（What do you think he will say?）。
+④省略できる that は接続詞と目的格の関係代名詞。時制の一致（He said that he was busy.）。否定は not を think に付ける（I don't think that 〜）。
+
+★ ここがポイント：接続詞の that は**文をまるごと「〜ということ」の名詞にする**ので、後ろは**完全な文で平叙文の語順**。関係代名詞の that は後ろに欠けがある。疑問文にするのは主節だけ。`,
+      },
     ],
     trapExamples: [
       {
@@ -2721,6 +2787,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
       {
         heading: '主節が過去なら節の中も過去',
         figureId: 'lf_kokoeigoext09_324',
+        mangaId: 'koko_eigo_s324_manga',
         body: `主節の動詞を過去形にすると、that 節の中の動詞も過去形に変える。これを時制の一致という。
 
 例）He says that he is busy.（彼は忙しいと言っている）
@@ -2913,6 +2980,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: '否定は前の動詞に付ける',
+        mangaId: 'koko_eigo_s326_manga',
         body: `日本語では「彼は来ないと思う」と、否定を後ろの内容に付ける。英語ではふつう前の動詞に付ける。
 
 　○ I don't think he will come.（彼は来ないと思います）
@@ -3010,6 +3078,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: '疑問文が文の中に入ると語順が戻る',
+        mangaId: 'koko_eigo_s327_manga',
         figureId: 'lf_kokoeigoext09_327',
         body: `疑問文をそのまま別の文の中に入れることはできない。語順を平叙文（ふつうの文）に戻す必要がある。
 
@@ -3110,6 +3179,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: '消した分を動詞に返す',
+        mangaId: 'koko_eigo_s328_manga',
         figureId: 'lf_kokoeigoext09_328',
         body: `疑問文の do / does / did は、間接疑問にすると消える。ただし、それらが表していた情報は動詞に戻さなければならない。
 
@@ -3155,7 +3225,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
 　→ Do you know where your father works?
 
 　When did the movie start?
-　①did を消す ②where 〜 ではなく when the movie start ③過去形に戻す → started
+　①did を消す ②〈疑問詞＋主語＋動詞〉の順に並べる → when the movie start ③過去形に戻す → started
 　→ I don't remember when the movie started.
 
 ■ 疑問詞が二語以上のとき
@@ -3313,6 +3383,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: '疑問詞が主語の疑問文',
+        mangaId: 'koko_eigo_s330_manga',
         figureId: 'lf_kokoeigoext09_330',
         body: `疑問詞そのものが主語になっている疑問文は、はじめから〈主語＋動詞〉の語順である。
 
@@ -3616,6 +3687,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: '動詞は「近いほう」に合わせる',
+        mangaId: 'koko_eigo_s333_manga',
         figureId: 'lf_kokoeigoext09_333',
         body: `either A or B と neither A nor B が主語になるとき、動詞は B（動詞に近いほう）に合わせる。
 
@@ -3640,7 +3712,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
 　Either I or you are wrong.
 　どちらも正しいが、動詞の形が変わる。
 
-★ ポイント：「近いほうに合わせる」と唱えて覚える。英語では動詞のすぐ前にある語との音のつながりを優先する。
+★ ポイント：「近いほうに合わせる」と唱えて覚える。これを近接の原則（動詞にいちばん近い語に合わせる）という。
 
 ⚠ 注意：either A or B は「どちらか一方」なので二つのうちの一つ。three 以上には使わない。`,
       },
@@ -3713,6 +3785,7 @@ in を落として This is the house which I live. と書くと、live の後ろ
     sections: [
       {
         heading: '順序が入れかわる書きかえ',
+        mangaId: 'koko_eigo_s334_manga',
         body: `not only A but also B（A だけでなく B も）を as well as で書きかえると、A と B の順序が入れかわる。
 
 例）She can speak not only English but also Chinese.
@@ -3873,6 +3946,21 @@ in を落として This is the house which I live. と書くと、live の後ろ
 ★ ポイント：どの項目も「形をそろえる」「語順を戻す」「重ねない」の三つに分類できる。
 
 ⚠ 注意：一つの文に二つ以上の要素が同時に出ることが多い。長い文ほど、上の項目を順に確認する習慣が効いてくる。`,
+      },
+      {
+        heading: 'なぜ「直前と直後」だけで that と who の働きが分かるのか',
+        mangaId: 'koko_eigo_s335_manga',
+        body: `that も who も、働きがちがえば**つながっている相手がちがいます**。関係代名詞は名詞（先行詞）につくので直前に名詞があり、接続詞・疑問詞は動詞や形容詞のあとに来るので直前に名詞がありません。さらに関係代名詞は名詞の代わりをするので直後の文に欠けがあり、接続詞のあとは完全な文、疑問詞のあとは疑問詞＋主語＋動詞の間接疑問です。だから直前（名詞があるか）と直後（欠けがあるか）の二か所を見れば、すべて判別できます。
+
+Do you know the boy who broke the window? と Do you know who broke the window? の意味がちがうのは、前者の who が the boy を説明する関係代名詞で know の目的語が the boy 全体、後者の who が疑問詞で who broke the window というかたまり全体が know の目的語だからです。先行詞になれるのは名詞だけなので、動詞や前置詞のあとの who は疑問詞です。
+
+■ 確かめのしかた
+①**直前**：名詞がある→関係代名詞の可能性、ない→接続詞か疑問詞。
+②**直後**：動詞→主格（省略不可）、主語＋動詞で欠けあり→目的格（省略可）、欠けなし→接続詞の that か間接疑問、名詞→whose か指示語。
+③チェックリスト：主格は省略しない、動詞は先行詞に合わせる、前置詞は消えない、前置詞・コンマの直後に that は不可、because と so を重ねない、時・条件の副詞節は現在形、間接疑問は疑問詞＋主語＋動詞、both A and B は複数。
+④三つの that（接続詞・関係代名詞・指示語）を並べた問題は、後ろの形だけで分ける。
+
+★ ここがポイント：働きがちがえば**つながる相手がちがう**ので、**直前（名詞があるか）と直後（欠けがあるか）**の二か所で that も who も判別できる。先行詞になれるのは名詞だけ。`,
       },
     ],
     trapExamples: [

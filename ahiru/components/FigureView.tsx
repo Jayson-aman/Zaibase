@@ -32,6 +32,8 @@ import type {
   StratumFigure,
   JapanMapFigure,
   BioDiagramFigure,
+  DiagramFigure,
+  DiagramElement,
   Pt,
 } from '../data/figures';
 import { prefectureShapes, JP_MAP_VIEWBOX } from '../data/japanPrefectures';
@@ -95,6 +97,13 @@ function clampLabelX(x: number, anchor: 'start' | 'middle' | 'end') {
   return { x, anchor };
 }
 
+/**
+ * 目盛り・格子・軸のように「図の下地」にあたる部品の数。buildParts が返した配列をキーにして覚える。
+ * 下地を最後のほうのスライドまで出さないと、棒や線の説明が出ているのに図が空っぽに見える。
+ * （説明が「元値2,000円…」と言っているのに、目盛りの線しか描かれていなかった）
+ */
+const SCAFFOLD = new WeakMap<object, number>();
+
 function CoordinateFig({ fig, uid }: { fig: CoordFigure; uid: string }) {
   const pad = 24;
   const area: Area = { x0: pad, y0: 12, w: VBW - pad * 2, h: VBH - pad * 2 };
@@ -130,8 +139,9 @@ function CoordinateFig({ fig, uid }: { fig: CoordFigure; uid: string }) {
   const els: React.ReactNode[] = [];
 
   // グリッド＋目盛り
-  const sx = niceStep(xr[1] - xr[0]);
-  const sy = niceStep(yr[1] - yr[0]);
+  // 範囲がある程度広いときは、目盛りを整数にする（-1.5 -1 -0.5 0 と0.5きざみで並び、原点の「O」と重なっていた）
+  const sx = (xr[1] - xr[0]) >= 4 ? Math.max(1, niceStep(xr[1] - xr[0])) : niceStep(xr[1] - xr[0]);
+  const sy = (yr[1] - yr[0]) >= 4 ? Math.max(1, niceStep(yr[1] - yr[0])) : niceStep(yr[1] - yr[0]);
   for (let x = Math.ceil(xr[0] / sx) * sx; x <= xr[1] + 1e-9; x += sx) {
     els.push(<Line key={`gx${x}`} x1={px(x)} y1={area.y0} x2={px(x)} y2={area.y0 + area.h} stroke={GRID} strokeWidth={1} />);
   }
@@ -148,6 +158,7 @@ function CoordinateFig({ fig, uid }: { fig: CoordFigure; uid: string }) {
   // 軸目盛り数値
   for (let x = Math.ceil(xr[0] / sx) * sx; x <= xr[1] + 1e-9; x += sx) {
     if (Math.abs(x) < 1e-9) continue;
+    if (x < 0 && x0 - px(x) < 22) continue; // 原点の「O」と重なる
     els.push(<SvgText key={`tx${x}`} x={px(x)} y={y0 + 13} fontSize={10} fill={AXIS} textAnchor="middle">{+x.toFixed(2)}</SvgText>);
   }
   for (let y = Math.ceil(yr[0] / sy) * sy; y <= yr[1] + 1e-9; y += sy) {
@@ -155,6 +166,7 @@ function CoordinateFig({ fig, uid }: { fig: CoordFigure; uid: string }) {
     els.push(<SvgText key={`ty${y}`} x={x0 - 5} y={py(y) + 3.5} fontSize={10} fill={AXIS} textAnchor="end">{+y.toFixed(2)}</SvgText>);
   }
 
+  SCAFFOLD.set(els, els.length);
   const clipId = `coord-${uid}`;
 
   // 塗りつぶし領域
@@ -233,7 +245,11 @@ function CoordinateFig({ fig, uid }: { fig: CoordFigure; uid: string }) {
   // 点
   fig.points?.forEach((p, i) => {
     els.push(<SvgCircle key={`pt${i}`} cx={px(p.x)} cy={py(p.y)} r={3.2} fill={INK} />);
-    if (p.label) els.push(<SvgText key={`ptl${i}`} x={px(p.x) + 5} y={py(p.y) - 5} fontSize={11} fill={INK} fontWeight="bold">{p.label}</SvgText>);
+    if (p.label) {
+      // 右端の点のラベルが枠の外へ切れないよう、端に近いときは左側に寄せる
+      const c = clampLabelX(px(p.x) + 5, 'start');
+      els.push(<SvgText key={`ptl${i}`} x={c.x} y={py(p.y) - 5} fontSize={11} fill={INK} fontWeight="bold" textAnchor={c.anchor}>{p.label}</SvgText>);
+    }
   });
 
   return [
@@ -335,6 +351,9 @@ function PolygonFig({ fig }: { fig: PolyFigure }) {
       />,
     );
     if (sg.label) els.push(<SvgText key={`xsl${k}`} x={(a.x + b.x) / 2 + 6} y={(a.y + b.y) / 2 - 4} fontSize={11} fill={INK}>{sg.label}</SvgText>);
+    // 補助線の端点そのものにラベルを付ける（交点など、多角形の頂点ではない点に名前を振りたいとき用）
+    if (sg.from.label) els.push(<SvgText key={`xsfl${k}`} x={a.x + 6} y={a.y - 6} fontSize={12} fill={INK} fontWeight="bold">{sg.from.label}</SvgText>);
+    if (sg.to.label) els.push(<SvgText key={`xstl${k}`} x={b.x + 6} y={b.y - 6} fontSize={12} fill={INK} fontWeight="bold">{sg.to.label}</SvgText>);
   });
 
   // 対角線
@@ -437,7 +456,11 @@ function PolygonFig({ fig }: { fig: PolyFigure }) {
     const B = P[(i + 1) % P.length];
     const mid = { x: (A.x + B.x) / 2, y: (A.y + B.y) / 2 };
     const out = norm({ x: mid.x - c.x, y: mid.y - c.y });
-    els.push(<SvgText key={`sl${i}`} x={mid.x + out.x * 12} y={mid.y + out.y * 12 + 3} fontSize={11} fill={INK} textAnchor="middle">{lab}</SvgText>);
+    // 右にある辺の文字は枠線から右へ、左にある辺の文字は左へのばす。
+    // 中央そろえのままだと、長い文字（「つくり(右)」など）が枠線にかかってしまう。
+    const anchor = out.x > 0.5 ? ('start' as const) : out.x < -0.5 ? ('end' as const) : ('middle' as const);
+    const lc = clampLabelX(mid.x + out.x * 12, anchor);
+    els.push(<SvgText key={`sl${i}`} x={lc.x} y={mid.y + out.y * 12 + 3} fontSize={11} fill={INK} textAnchor={lc.anchor}>{lab}</SvgText>);
   });
 
   // 頂点ラベル
@@ -798,6 +821,7 @@ function LineChartFig({ fig }: { fig: LineChartFigure }) {
   }
   els.push(<Line key="xax" x1={area.x0} y1={area.y0 + area.h} x2={area.x0 + area.w} y2={area.y0 + area.h} stroke={AXIS} strokeWidth={1.6} />);
   els.push(<Line key="yax" x1={area.x0} y1={area.y0} x2={area.x0} y2={area.y0 + area.h} stroke={AXIS} strokeWidth={1.6} />);
+  SCAFFOLD.set(els, els.length);
   fig.series.forEach((s, i) => {
     const color = s.color ?? PALETTE[i % PALETTE.length];
     const pts = s.points.map((p) => `${px(p.x).toFixed(1)},${py(p.y).toFixed(1)}`).join(' ');
@@ -817,34 +841,52 @@ function LineChartFig({ fig }: { fig: LineChartFigure }) {
 
 function BarChartFig({ fig }: { fig: BarChartFigure }) {
   const area: Area = { x0: 40, y0: 24, w: VBW - 56, h: VBH - 62 };
-  const yMax = fig.yMax ?? ((Math.max(...fig.bars.map((b) => b.value)) * 1.18) || 1);
+  // 答えの棒（hidden）は目盛りの範囲に入れない。入れると、軸の最大値から答えの大きさが読める
+  const shownBars = fig.bars.filter((b) => !b.hidden);
+  const yMax = fig.yMax ?? ((Math.max(...(shownBars.length > 0 ? shownBars : fig.bars).map((b) => b.value)) * 1.18) || 1);
+  // 負の値（例：気温が氷点下）の棒があるときは、0の線を境に下へ伸ばす。
+  // 以前は負の高さの Rect になり、棒がまったく描かれなかった。
+  const minValue = Math.min(0, ...fig.bars.map((b) => b.value));
+  const yMin = minValue < 0 ? minValue * 1.18 : 0;
+  const span = yMax - yMin || 1;
   const n = fig.bars.length;
   const slot = area.w / n;
   const gap = fig.histogram ? 0 : slot * 0.28;
   const bw = slot - gap;
-  const py = (v: number) => area.y0 + area.h - (v / yMax) * area.h;
+  const py = (v: number) => area.y0 + area.h - ((v - yMin) / span) * area.h;
+  const zeroY = py(0);
   const els: React.ReactNode[] = [];
   // 目盛りは5本前後に抑える。棒の上に実数を出すので、細かい目盛りは不要。
-  const sy = niceStepFor(yMax, 5);
-  for (let y = 0; y <= yMax + 1e-9; y += sy) {
+  const sy = niceStepFor(span, 5);
+  for (let y = Math.ceil(yMin / sy - 1e-9) * sy; y <= yMax + 1e-9; y += sy) {
     els.push(<Line key={`gy${y}`} x1={area.x0} y1={py(y)} x2={area.x0 + area.w} y2={py(y)} stroke={GRID} strokeWidth={1} />);
     els.push(<SvgText key={`gyl${y}`} x={area.x0 - 4} y={py(y) + 3} fontSize={9} fill={AXIS} textAnchor="end">{tickText(y, sy)}</SvgText>);
   }
-  els.push(<Line key="xax" x1={area.x0} y1={area.y0 + area.h} x2={area.x0 + area.w} y2={area.y0 + area.h} stroke={AXIS} strokeWidth={1.6} />);
+  els.push(<Line key="xax" x1={area.x0} y1={zeroY} x2={area.x0 + area.w} y2={zeroY} stroke={AXIS} strokeWidth={1.6} />);
   els.push(<Line key="yax" x1={area.x0} y1={area.y0} x2={area.x0} y2={area.y0 + area.h} stroke={AXIS} strokeWidth={1.6} />);
+  SCAFFOLD.set(els, els.length);
   fig.bars.forEach((b, i) => {
     const x = area.x0 + slot * i + gap / 2;
     const color = b.color ?? PALETTE[i % PALETTE.length];
+    const vy = py(b.value);
     // 桁の違う値が並ぶと小さい棒が消えてしまうので、最低限の高さを残す
-    const rawH = area.y0 + area.h - py(b.value);
-    const h = b.value > 0 ? Math.max(2, rawH) : rawH;
-    const top = area.y0 + area.h - h;
-    els.push(<Rect key={`b${i}`} x={x} y={top} width={bw} height={h} fill={color} opacity={0.82} stroke={fig.histogram ? '#fff' : color} strokeWidth={fig.histogram ? 1 : 0} />);
-    // 棒の上に実数を出す。目盛りを読まなくても値が分かるようにする。
-    if (!fig.histogram) {
+    // 答えにあたる棒（hidden）は、本当の高さで描くと棒の高さから答えが読めてしまうので、
+    // 決まった高さのうすい破線の棒にして「？」を出す
+    const hiddenBar = b.hidden === true;
+    const h = hiddenBar ? area.h * 0.5 : b.value === 0 ? 0 : Math.max(2, Math.abs(zeroY - vy));
+    const top = b.value < 0 && !hiddenBar ? zeroY : zeroY - h;
+    els.push(
+      hiddenBar ? (
+        <Rect key={`b${i}`} x={x} y={top} width={bw} height={h} fill={color} opacity={0.18} stroke={color} strokeWidth={1.5} strokeDasharray="4 3" />
+      ) : (
+        <Rect key={`b${i}`} x={x} y={top} width={bw} height={h} fill={color} opacity={0.82} stroke={fig.histogram ? '#fff' : color} strokeWidth={fig.histogram ? 1 : 0} />
+      ),
+    );
+    // 棒の先に実数を出す（正は上、負は下）。目盛りを読まなくても値が分かるようにする。
+    if (!fig.histogram || hiddenBar) {
       els.push(
-        <SvgText key={`bv${i}`} x={x + bw / 2} y={top - 4} fontSize={9.5} fill={INK} textAnchor="middle" fontWeight="bold">
-          {b.value}
+        <SvgText key={`bv${i}`} x={x + bw / 2} y={b.value < 0 ? top + h + 11 : top - 4} fontSize={9.5} fill={INK} textAnchor="middle" fontWeight="bold">
+          {b.hidden ? '？' : b.value}
         </SvgText>,
       );
     }
@@ -1310,6 +1352,110 @@ function BioDiagramFig({ fig }: { fig: BioDiagramFigure }): React.ReactNode[] {
   }
 }
 
+
+// ---------- 図解スライド（言葉・箱・矢印の自由な図） ----------
+
+const DIAG_INK = '#2B2420';
+
+function sectorPath(cx: number, cy: number, r: number, from: number, to: number): string {
+  const rad = (d: number) => (d * Math.PI) / 180;
+  const x1 = cx + r * Math.cos(rad(from));
+  const y1 = cy - r * Math.sin(rad(from));
+  const x2 = cx + r * Math.cos(rad(to));
+  const y2 = cy - r * Math.sin(rad(to));
+  const large = Math.abs(to - from) > 180 ? 1 : 0;
+  return `M${cx},${cy} L${x1},${y1} A${r},${r} 0 ${large} 0 ${x2},${y2} Z`;
+}
+
+/** 全角1字＝1、半角＝0.55 として、いちばん長い行の幅（fontSize 1 あたり）を返す */
+function textUnits(line: string): number {
+  let u = 0;
+  for (const ch of line) u += ch.charCodeAt(0) < 256 ? 0.55 : 1;
+  return u;
+}
+
+/**
+ * 複数行（\n 区切り）の文字を、箱の幅に収まる大きさで中央に描く。
+ * はみ出すときは文字を小さくする（下限8）。
+ */
+function DiagText({ text, cx, cy, maxW, size, color, bold, anchor }: {
+  text: string; cx: number; cy: number; maxW: number; size: number; color: string; bold?: boolean;
+  anchor?: 'start' | 'middle' | 'end';
+}) {
+  const lines = text.split('\n');
+  const widest = Math.max(...lines.map(textUnits), 1);
+  const fs = Math.max(8, Math.min(size, maxW / widest));
+  const lh = fs * 1.25;
+  const y0 = cy - ((lines.length - 1) * lh) / 2 + fs * 0.36;
+  return (
+    <>
+      {lines.map((ln, li) => (
+        <SvgText key={li} x={cx} y={y0 + li * lh} fontSize={fs} fill={color} textAnchor={anchor ?? 'middle'} fontWeight={bold ? 'bold' : 'normal'}>
+          {ln}
+        </SvgText>
+      ))}
+    </>
+  );
+}
+
+function diagramPart(el: DiagramElement, i: number): React.ReactNode {
+  const k = `d${i}`;
+  switch (el.t) {
+    case 'box': {
+      return (
+        <G key={k}>
+          <Rect x={el.x} y={el.y} width={el.w} height={el.h} rx={6} fill={el.fill ?? '#FFF8EC'} stroke={el.color ?? ACCENT} strokeWidth={1.6} />
+          {el.text != null && (
+            <DiagText text={el.text} cx={el.x + el.w / 2} cy={el.y + el.h / 2} maxW={el.w - 8} size={el.size ?? 12} color={DIAG_INK} bold />
+          )}
+        </G>
+      );
+    }
+    case 'label':
+      return (
+        <G key={k}>
+          <DiagText text={el.text} cx={el.x} cy={el.y} maxW={VBW - 8} size={el.size ?? 12} color={el.color ?? DIAG_INK} bold={el.bold} anchor={el.anchor} />
+        </G>
+      );
+    case 'line':
+      return <Line key={k} x1={el.x1} y1={el.y1} x2={el.x2} y2={el.y2} stroke={el.color ?? AXIS} strokeWidth={el.width ?? 1.6} strokeDasharray={el.dashed ? '4 3' : undefined} />;
+    case 'arrow': {
+      const dx = el.x2 - el.x1;
+      const dy = el.y2 - el.y1;
+      const len = Math.max(1, Math.hypot(dx, dy));
+      const ux = dx / len, uy = dy / len;
+      const hx = el.x2 - ux * 8, hy = el.y2 - uy * 8;
+      const c = el.color ?? ACCENT;
+      return (
+        <G key={k}>
+          <Line x1={el.x1} y1={el.y1} x2={el.x2} y2={el.y2} stroke={c} strokeWidth={1.8} strokeDasharray={el.dashed ? '4 3' : undefined} />
+          <SvgPolygon points={`${el.x2},${el.y2} ${hx - uy * 4.5},${hy + ux * 4.5} ${hx + uy * 4.5},${hy - ux * 4.5}`} fill={c} stroke={c} strokeWidth={1} />
+        </G>
+      );
+    }
+    case 'circle': {
+      return (
+        <G key={k}>
+          <SvgCircle cx={el.cx} cy={el.cy} r={el.r} fill={el.fill ?? '#FFF8EC'} stroke={el.color ?? ACCENT} strokeWidth={1.6} />
+          {el.text != null && (
+            <DiagText text={el.text} cx={el.cx} cy={el.cy} maxW={el.r * 1.7} size={el.size ?? 12} color={DIAG_INK} bold />
+          )}
+        </G>
+      );
+    }
+    case 'poly':
+      return <SvgPolygon key={k} points={el.pts.map((p) => `${p[0]},${p[1]}`).join(' ')} fill={el.fill ?? 'rgba(14,165,233,0.14)'} stroke={el.color ?? ACCENT} strokeWidth={1.6} />;
+    case 'sector':
+      return <Path key={k} d={sectorPath(el.cx, el.cy, el.r, el.from, el.to)} fill={el.fill ?? 'rgba(181,98,46,0.25)'} stroke={el.color ?? ACCENT} strokeWidth={1.6} />;
+    default:
+      return null;
+  }
+}
+
+function DiagramFig({ fig }: { fig: DiagramFigure }) {
+  return fig.parts.map((el, i) => diagramPart(el, i));
+}
+
 // ---------- 公開コンポーネント ----------
 
 function buildParts(figure: Figure, uid: string): React.ReactNode[] {
@@ -1329,6 +1475,7 @@ function buildParts(figure: Figure, uid: string): React.ReactNode[] {
     case 'stratum': return StratumFig({ fig: figure });
     case 'japanMap': return JapanMapFig({ fig: figure });
     case 'bioDiagram': return BioDiagramFig({ fig: figure });
+    case 'diagram': return DiagramFig({ fig: figure });
     default: return [];
   }
 }
@@ -1374,11 +1521,30 @@ export default function FigureView({
   figure: rawFigure,
   animated = false,
   question,
+  manual = false,
+  previewSlides,
+  hideAnswerText,
 }: {
   figure: Figure;
   animated?: boolean;
+  /**
+   * true のとき、手順（steps）と説明文（caption）を出さず、図そのものだけ見せる。
+   * 問題文の横に置く図では、解く前に手順や答えが読めてしまうのを防ぐため。
+   */
+  hideAnswerText?: boolean;
+  /**
+   * 買う前の人に見せる枚数。指定すると、その枚数目で止まり、続きは「購入で見られる」表示になる。
+   * ロック中の単元の「ためし表示」で使う。省略すると全部見られる。
+   */
+  previewSlides?: number;
   /** 図に添える問題。あると「何を聞かれているか」「答え」まで説明に入る */
   question?: FigureQuestion;
+  /**
+   * true のとき、自動では進めず、最初の1枚を出した状態で待つ（「つぎへ」で進む）。
+   * 公式集のようにWebで大量の図が同時に並ぶ画面で、全部のアニメーションが
+   * 一斉に走ってカクつくのを防ぐ。
+   */
+  manual?: boolean;
 }) {
   const [boxWidth, setBoxWidth] = useState<number | null>(null);
 
@@ -1405,7 +1571,18 @@ export default function FigureView({
   const [progress, setProgress] = useState(animated ? 0 : 1);
   const [stepReached, setStepReached] = useState(animated ? 0 : totalSteps);
   const [slide, setSlide] = useState(0);
-  const [autoPlay, setAutoPlay] = useState(true);
+  const [autoPlay, setAutoPlay] = useState(!manual);
+  // 「最初から」で、すでに1枚目にいるときも描画を最初からやり直すための合図。
+  // これが無いと、progress を 0 に戻しても slide・targetProgress が変わらず
+  // 下のアニメーションが再実行されないので、図が空のまま止まる。
+  const [replayNonce, setReplayNonce] = useState(0);
+  // ためし表示のとき、ここより先のスライドには進めない
+  const lastSlide = Math.max(
+    0,
+    (previewSlides != null ? Math.min(totalSteps, Math.max(1, previewSlides)) : totalSteps) - 1,
+  );
+  const isPreviewLimited = previewSlides != null && lastSlide < totalSteps - 1;
+  const introDone = useRef(false);
   const rafRef = useRef<number | null>(null);
   const stepTimersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
   const autoTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -1432,7 +1609,20 @@ export default function FigureView({
     1,
     Math.min(totalSteps, (figure as { buildSteps?: number }).buildSteps ?? Math.max(1, totalSteps - 1)),
   );
-  const targetProgress = slideMode ? Math.min(1, (slide + 1) / buildSlides) : 1;
+  // 図解スライド（diagram）は、スライドごとに見せる部品の数が決まっている。
+  const stepPartsArr = figure.kind === 'diagram' ? (figure as DiagramFigure).stepParts : undefined;
+  const targetProgress = slideMode
+    ? stepPartsArr && stepPartsArr.length > 0
+      ? Math.min(1, (stepPartsArr[Math.min(slide, stepPartsArr.length - 1)] ?? parts.length) / Math.max(parts.length, 1))
+      : (() => {
+          // 目盛り・格子などの下地は最初のスライドから出しておき、棒・線・点を早めに見せる
+          const base = SCAFFOLD.get(parts) ?? 0;
+          const content = parts.length - base;
+          if (base <= 0 || content <= 0) return Math.min(1, (slide + 1) / buildSlides);
+          const contentSlides = Math.min(buildSlides, Math.max(2, Math.ceil(content / 3)));
+          return Math.min(1, (base + content * Math.min(1, (slide + 1) / contentSlides)) / parts.length);
+        })()
+    : 1;
 
   // スライドが変わるたびに、図の描画量を今の値から目標値までなめらかに動かす。
   // かかる時間は「そのスライドで増える部品の数」に比例させる。
@@ -1440,6 +1630,14 @@ export default function FigureView({
   // まとめてパッと出たようにしか見えなかった。
   useEffect(() => {
     if (!slideMode) return;
+    // manual のとき、最初の1枚はアニメーションなしでそのまま出す
+    if (manual && !introDone.current) {
+      introDone.current = true;
+      progressRef.current = targetProgress;
+      setProgress(targetProgress);
+      return;
+    }
+    introDone.current = true;
     let startTs: number | null = null;
     const from = progressRef.current;
     const added = Math.max(0, targetProgress - from) * Math.max(parts.length, 1);
@@ -1456,20 +1654,20 @@ export default function FigureView({
     return () => {
       if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
     };
-  }, [slideMode, targetProgress, parts.length]);
+  }, [slideMode, targetProgress, parts.length, manual, replayNonce]);
 
   // 自動再生。最後のスライドまで来たら止まる。手で送ったら自動送りはやめる。
   useEffect(() => {
-    if (!slideMode || !autoPlay || slide >= totalSteps - 1) return;
-    autoTimerRef.current = setTimeout(() => setSlide((s) => Math.min(totalSteps - 1, s + 1)), SLIDE_DUR);
+    if (!slideMode || !autoPlay || slide >= lastSlide) return;
+    autoTimerRef.current = setTimeout(() => setSlide((s) => Math.min(lastSlide, s + 1)), SLIDE_DUR);
     return () => {
       if (autoTimerRef.current != null) clearTimeout(autoTimerRef.current);
     };
-  }, [slideMode, autoPlay, slide, totalSteps]);
+  }, [slideMode, autoPlay, slide, lastSlide]);
 
   function goToSlide(next: number) {
     setAutoPlay(false);
-    setSlide(Math.max(0, Math.min(totalSteps - 1, next)));
+    setSlide(Math.max(0, Math.min(lastSlide, next)));
   }
 
   function replay() {
@@ -1477,6 +1675,7 @@ export default function FigureView({
     setProgress(0);
     setSlide(0);
     setAutoPlay(true);
+    setReplayNonce((n) => n + 1);
   }
 
   const play = useCallback(() => {
@@ -1533,10 +1732,10 @@ export default function FigureView({
           <ChemEquationFig fig={figure as ChemEqFigure} />
         </TouchableOpacity>
         {animated && <Text style={styles.replayHint}>▶ タップで再生</Text>}
-        {figure.steps != null && figure.steps.length > 0 && (
+        {!hideAnswerText && figure.steps != null && figure.steps.length > 0 && (
           <StepsList steps={figure.steps} animated={animated} stepReached={stepReached} />
         )}
-        {figure.caption != null && <Text style={styles.caption}>{figure.caption}</Text>}
+        {!hideAnswerText && figure.caption != null && <Text style={styles.caption}>{figure.caption}</Text>}
       </View>
     );
   }
@@ -1556,7 +1755,12 @@ export default function FigureView({
   const pos = animated ? progress * N : N;
   /** その部品の不透明度。描き終わったものは 1、描きかけは途中、まだのものは 0 */
   const opacityOf = (i: number) => {
-    if (!animated) return 1;
+    if (!animated) {
+      // 問題の横に置く静止の図解スライド（hideAnswerText）は、最初の1枚ぶんの部品だけを描く。
+      // 全部品（＝答えの数字まで入った最終の絵）を出すと、解く前に答えが見えてしまう。
+      if (hideAnswerText && stepPartsArr != null && stepPartsArr.length > 0) return i < (stepPartsArr[0] ?? 0) ? 1 : 0;
+      return 1;
+    }
     // 1部品ぶんの登場に使う割合。短すぎるとパッと出て見えるので少し長めに取る
     const t = (pos - i) / 0.75;
     return Math.max(0, Math.min(1, t));
@@ -1595,13 +1799,18 @@ export default function FigureView({
             {(figure.steps ?? []).map((_, i) => (
               <View
                 key={i}
-                style={[styles.slideDot, i === slide && styles.slideDotActive, i < slide && styles.slideDotDone]}
+                style={[
+                  styles.slideDot,
+                  i === slide && styles.slideDotActive,
+                  i < slide && styles.slideDotDone,
+                  i > lastSlide && styles.slideDotLocked,
+                ]}
               />
             ))}
           </View>
           <View style={styles.slideHeaderRow}>
             <Text style={styles.slideCounter}>{slide + 1} / {totalSteps}</Text>
-            {autoPlay && slide < totalSteps - 1 && <Text style={styles.slideAuto}>自動で進みます</Text>}
+            {autoPlay && slide < lastSlide && <Text style={styles.slideAuto}>自動で進みます</Text>}
           </View>
           <Text style={styles.slideText}>{(figure.steps ?? [])[slide]}</Text>
           <View style={styles.slideNav}>
@@ -1613,10 +1822,14 @@ export default function FigureView({
             >
               <Text style={[styles.slideBtnText, styles.slideBtnBackText]}>◀ もどる</Text>
             </TouchableOpacity>
-            {slide < totalSteps - 1 ? (
+            {slide < lastSlide ? (
               <TouchableOpacity style={styles.slideBtn} onPress={() => goToSlide(slide + 1)} activeOpacity={0.8}>
                 <Text style={styles.slideBtnText}>つぎへ ▶</Text>
               </TouchableOpacity>
+            ) : isPreviewLimited ? (
+              <View style={[styles.slideBtn, styles.slideBtnLocked]}>
+                <Text style={styles.slideBtnText} numberOfLines={1}>🔒 続きは解放すると</Text>
+              </View>
             ) : (
               <TouchableOpacity style={styles.slideBtn} onPress={replay} activeOpacity={0.8}>
                 <Text style={styles.slideBtnText}>🔁 最初から</Text>
@@ -1632,10 +1845,10 @@ export default function FigureView({
         </View>
       )}
       {animated && !slideMode && <Text style={styles.replayHint}>▶ タップで再生（動く解説）</Text>}
-      {!slideMode && figure.steps != null && figure.steps.length > 0 && (
+      {!hideAnswerText && !slideMode && figure.steps != null && figure.steps.length > 0 && (
         <StepsList steps={figure.steps} animated={animated} stepReached={stepReached} />
       )}
-      {figure.caption != null && <Text style={styles.caption}>{figure.caption}</Text>}
+      {!hideAnswerText && figure.caption != null && <Text style={styles.caption}>{figure.caption}</Text>}
     </View>
   );
 }
@@ -1709,6 +1922,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   slideBtnBack: { backgroundColor: '#EFE7D8' },
+  slideBtnLocked: { backgroundColor: '#94A3B8' },
+  slideDotLocked: { opacity: 0.35 },
   slideBtnDisabled: { opacity: 0.4 },
   slideBtnText: { color: '#FFFFFF', fontWeight: '800', fontSize: 13.5 },
   slideBtnBackText: { color: '#8B5A38' },

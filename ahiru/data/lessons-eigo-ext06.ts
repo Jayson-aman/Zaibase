@@ -29,6 +29,7 @@ export const eigoExt06Lessons: Lesson[] = [
     sections: [
       {
         heading: 'be動詞の文を疑問文にする手順',
+        mangaId: 'eigo_s191_manga',
         body: `英語の疑問文は「日本語のように文の終わりに『か』を付ける」のではなく、語の順番を入れかえて作る。be動詞の文はいちばんかんたんで、be動詞を主語の前に持ち上げるだけでよい。
 
 ■ 手順は二つだけ
@@ -122,6 +123,7 @@ No, I'm not. は言えるが、Yes, I'm. とは言えない。文の最後に来
     sections: [
       {
         heading: 'Do と Does の使い分け',
+        mangaId: 'eigo_s192_manga',
         body: `一般動詞の文には、be動詞のように前に出せる語がない。そこで Do / Does という助っ人（助動詞）を文の先頭に置いて疑問文を作る。
 
 ■ 手順
@@ -470,6 +472,7 @@ Yes の答えでは短縮できない。Yes, it is.（× Yes, it's.）／Yes, I 
     sections: [
       {
         heading: '疑問詞つき疑問文の作り方',
+        mangaId: 'eigo_s196_manga',
         body: `「これは何ですか」「あなたは何がほしいですか」のように、Yes / No では答えられない内容をたずねるときは疑問詞を使う。作り方は二段階で覚えるとかんたんである。
 
 ■ 二段階の手順
@@ -1027,6 +1030,7 @@ Where are you from?（どこの出身ですか）← be from
       },
       {
         heading: 'who と whom',
+        mangaId: 'eigo_s202_manga',
         body: `英語には「だれが」を表す who と、「だれを・だれに」を表す whom という二つの形がある。日本語の「が」と「を」の区別に近い。
 
 ■ whom の使いどころ
@@ -1365,7 +1369,7 @@ here（ここに）／there（そこに）／home（家に）
       '時：at＝時刻（点）、on＝曜日・日付（一日）、in＝月・季節・年（広い）。',
       '場所：at＝地点、on＝面にくっつく、in＝囲まれた内部・広い地域。',
       'this / next / last / every が付いた語句には前置詞を付けない。',
-      'here / there / home には to や at を付けない（go home）。',
+      'here / there / home には to を付けない（go home）。「家で」は at home と前置詞が要る。',
       'in the morning だが on Sunday morning。特定の日が付くと on になる。',
     ],
     sections: [
@@ -2403,6 +2407,7 @@ Which trains stop at this station?（trains は複数なので stop）
     sections: [
       {
         heading: 'What が主語になる文',
+        mangaId: 'eigo_s217_manga',
         body: `What も主語になれる。そのときは Who と同じく do / does / did を使わず、語順も変わらない。
 
 ■ What happened?（何が起きたのですか）
@@ -2488,7 +2493,7 @@ How many books are on the desk?
       '主語をたずねられたら「主語 ＋ do / does / did.」で短く答える（Ken did.）。',
       'be動詞の文なら「主語 ＋ is / was.」で答える（Ken is.）。',
       '動詞をくり返す場合は目的語まで言う（Ken broke it. ／× Ken broke.）。',
-      '疑問詞のすぐあとが動詞なら主語、do/does/did や be動詞なら目的語をたずねている。',
+      '疑問詞のすぐあとが動詞（be動詞・助動詞もふくむ。Who is absent? / Who can swim?）なら主語。do / does / did が来て、そのうしろに別の主語があれば目的語などをたずねている。',
       '日本語の「だれが／だれを」を取りちがえると英文がまるごと変わる。',
     ],
     sections: [
@@ -2541,7 +2546,8 @@ Who broke this window? — Ken broke it.
 ■ 見分けの手順
 ①疑問詞のすぐあとを見る
 ②動詞（broke, likes, happened）なら → 疑問詞が主語
-③do / does / did / be動詞 / 助動詞 なら → 疑問詞は目的語などで、主語はそのうしろにある
+③do / does / did が来て、そのうしろに別の主語があれば → 疑問詞は目的語などで、主語はそのうしろにある
+（Who is absent? / Who can swim? のように、be動詞や助動詞が来ても、そのうしろに別の主語が無ければ疑問詞が主語）
 
 例）Who saw you?（Who が主語。だれがあなたを見た？）
 例）Who did you see?（you が主語。あなたはだれを見た？）
@@ -2714,6 +2720,7 @@ Do you know where he lives? — Yes, I do. He lives near the station.
       },
       {
         heading: 'Do you think 〜? だけは例外',
+        mangaId: 'eigo_s220_manga',
         body: `Do you know 〜? は Yes / No で答えられるが、Do you think 〜?（〜だと思いますか）は「あなたの考え」をたずねるので Yes / No では答えられない。そのため、疑問詞が文の先頭に出るという特別な形になる。
 
 ■ know の場合（疑問詞は中に残る）
@@ -3012,6 +3019,7 @@ You must go. → You must not go.（mustn't）
       },
       {
         heading: '短縮形と、まちがえやすい形',
+        mangaId: 'eigo_s223_manga',
         body: `■ 短縮形の一覧
 is not → isn't　　are not → aren't　　was not → wasn't　　were not → weren't
 do not → don't　　does not → doesn't　　did not → didn't
@@ -3178,6 +3186,7 @@ never（0％）＜ hardly / seldom（ほとんど・めったに）＜ sometimes
     sections: [
       {
         heading: '部分否定（一部だけを否定する）',
+        mangaId: 'eigo_s225_manga',
         body: `all（すべて）・every（どの〜も）・always（いつも）・both（両方）のように「全部」を表す語が not といっしょに使われると、「全部が〜というわけではない」という一部だけの否定になる。これを部分否定という。
 
 ■ 代表的な形

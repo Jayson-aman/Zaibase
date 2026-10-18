@@ -20,6 +20,7 @@ export const lessonsNew20E6Eigo: Lesson[] = [
     sections: [
       {
         heading: '1. 過去のことを語る文の型',
+        mangaId: 'new20_e6_eigo_01_manga',
         body: `英語で「〜した」と過去のことを言うときは、動詞を過去形に変えるだけでよい。日本語の「食べる→食べた」のように主語によって形が変わることは一切ない。
 
 ■ 基本の形
@@ -282,6 +283,7 @@ Last summer, I went to my grandmother's house in Nagano with my family. First, w
       },
       {
         heading: '2. will と be going to を会話の中で使い分ける',
+        mangaId: 'new20_e6_eigo_04_manga',
         body: `文法では「will＝その場の意志、be going to＝前からの予定」と習うが、実際の会話ではこの違いがそのまま表れる。
 
 ■ その場で決める・提案に答える → will
@@ -452,6 +454,7 @@ Good morning. Here is today's weather. It will be cloudy in the morning, but it 
       },
       {
         heading: '2. 理由を添えて、説得力のある答えにする',
+        mangaId: 'new20_e6_eigo_06_manga',
         body: `「I want to be a doctor.」だけで終わらせず、because を使って理由を1文加えると、聞き手に自分の考えが伝わる答えになる。
 
 ■ 理由を加える型
@@ -493,7 +496,7 @@ Good morning. Here is today's weather. It will be cloudy in the morning, but it 
 　My dream is to be a vet. I want to be a vet because I love animals very much. I have a dog, and I take care of him every day. In the future, I want to help sick animals and their owners. I will study hard to make my dream come true.
 　（私の夢は獣医になることです。動物が大好きだから獣医になりたいです。私は犬を飼っていて、毎日世話をしています。将来は病気の動物とその飼い主を助けたいです。夢をかなえるために一生懸命勉強します。）
 
-★ ポイント：make my dream come true（夢をかなえる）は将来の夢スピーチの締めによく使われる決まり文句。covered「夢」を語る作文・面接では、この一言で結ぶと印象がまとまる。`,
+★ ポイント：make my dream come true（夢をかなえる）は将来の夢スピーチの締めによく使われる決まり文句。「夢」を語る作文・面接では、この一言で結ぶと印象がまとまる。`,
       },
     ],
   },
@@ -549,7 +552,7 @@ To make my dream come true, I read books about animals every week. I also help m
 　I want to be someone who ~.（〜する人になりたい）※人物像を伝える便利な形
 　　例）I want to be someone who can help people in need.（困っている人を助けられる人になりたい）
 
-⚠ 注意：someone who のあとには「主語のはたらきをする文」が続く。someone who help ではなく someone who can help のように、動詞の形にも注意する（who が主語の役割をするので、動詞は who の後ろにそのまま続く）。`,
+⚠ 注意：someone who のあとには「主語のはたらきをする文」が続く。someone who help ではなく someone who helps（または someone who can help）のように、動詞の形にも注意する（who が主語の役割をするので、動詞は who の後ろにそのまま続き、三人称単数なら s がつく）。`,
       },
       {
         heading: '3. スピーチをまとめる：完成モデルと締めの表現',
@@ -581,7 +584,7 @@ Hello, everyone. Today I want to talk about my dream. My dream is to be a vet. W
     keyPoints: [
       `動名詞（動詞のing形）は「〜すること」という意味の名詞のはたらきをする`,
       `like ~ing／enjoy ~ing／be interested in ~ing／be good at ~ing はすべて動詞のあとに-ing形を置く`,
-      `like と enjoy はどちらも to不定詞も使えるが、be good at・be interested inのあとは必ず-ing（前置詞のあとだから）`,
+      `like は to不定詞も -ing も使えるが、enjoy は -ing だけ。be good at・be interested inのあとは必ず-ing（前置詞のあとだから）`,
       `how often（頻度）や how long（期間）を添えると趣味の説明に具体性が出る`,
       `自己紹介では「趣味→理由・きっかけ→頻度→得意なこと」の順で話すとまとまりが良い`,
     ],
@@ -722,6 +725,21 @@ My dog, Momo, is smaller than my friend's dog, but she is much smarter. She is t
 （私の犬モモは友達の犬より小さいですが、ずっと賢いです。私が今まで見た中で一番賢い犬です。猫と同じくらい人懐っこくて、家族みんなが一番愛しています。）
 
 ★ ポイント：than anyone else（他の誰よりも）、I have ever seen（今まで見た中で）は最上級を強めるときに便利な決まり文句。使いこなせると、比較表現の作文が一段レベルアップする。`,
+      },
+      {
+        heading: 'なぜ比較の対象をはっきりさせ、なぜ very で比較級を強められないのか',
+        mangaId: 'new20_e6_eigo_09_manga',
+        body: `「兄は背が高い」だけでは、どれくらい高いのかが読み手に伝わりません。「私より高い」「家族の中で一番高い」と**比べる相手**を示してはじめて、兄の背の高さが具体的に分かります。比較級は二つを比べる形（taller than）、最上級は三つ以上の中で一番を言う形（the tallest in）、as 〜 as は同じくらいを言う形で、比べる相手や範囲（than me・in my family・of the three）をそろえて書きます。
+
+very が比較級を強められないのは、very が「程度が高い」ことを表す語で、比較級が表す**二つの差**には付けられないからです。差を強めるには「差が大きい」と言う much・a lot・far を使います。than のあとに代名詞を置くとき、書き言葉では than I（am）、会話では than me が一般的で、入試では than me でも問題ないことが多いですが、文法問題では than I の形も覚えておきます。
+
+■ 確かめのしかた
+①二つ→**比較級＋than**、三つ以上→**the＋最上級＋in／of**、同じくらい→**as 〜 as**。比べる相手・範囲が書かれているか。
+②つづり：funny→funniest（y を i に）、good／well→best（不規則）。
+③強めるときは much／a lot／far＋比較級（much taller）。× very taller。
+④最上級を強める決まり文句：than anyone else（他の誰よりも）、I have ever seen（今まで見た中で）。見た目・性格・特技をそれぞれ比較で言うと紹介文に具体性が出る。
+
+★ ここがポイント：比較表現は**比べる相手や範囲をそろえて書く**ことで具体性が出る。very は程度の語なので**差の形（比較級）には much／a lot／far**。`,
       },
     ],
   },
@@ -1074,6 +1092,21 @@ Officer: Enjoy your stay.
 
 ★ ポイント：入国審査では What's the purpose of your visit?（目的）と How long will you stay?（期間）の2つがほぼ必ず聞かれる。この2つへの答え方さえ準備しておけば、リスニング問題でも慌てずに対応できる。`,
       },
+      {
+        heading: 'なぜ旅行英語は場面ごとに覚えると得点しやすいのか',
+        mangaId: 'new20_e6_eigo_13_manga',
+        body: `空港や機内の会話は、**聞かれることがほぼ決まっています**。チェックインでは「パスポートとチケット」「窓側か通路側か」「預ける荷物はいくつか」、機内では「飲み物はいかがですか」「シートベルトを締めて」、入国審査では「訪問の目的」「滞在期間」「滞在先」。決まった質問には決まった答え方があるので、場面順にセットで覚えれば、リスニングで知らない語が出ても、どの場面かが分かれば内容を推測できます。
+
+Would you like 〜? が Do you want 〜? よりていねいなのは、would が「もしよろしければ」というやわらかさを足す語だからで、接客の場面ではこちらが使われます。check in は「チェックインする・（荷物を）預ける」の動詞句、check-in（ハイフンあり）は名詞で、形で区別します。
+
+■ 確かめのしかた
+①**チェックイン**：May I see your passport and ticket?→Here you are.／Window or aisle seat?／How many bags are you checking in?→Just one.
+②**機内**：Would you like something to drink?→〇〇, please.／Please fasten your seatbelt.／We will be landing soon.
+③**入国審査**：What's the purpose of your visit?→Sightseeing.／I'm here on business.、How long will you stay?→For one week.、Where will you be staying?→At a hotel.
+④場面が分かれば、質問の中身を先に予想して聞く。Would you like 〜? は「いかがですか」（すすめる）。
+
+★ ここがポイント：旅行英語は**聞かれることが場面ごとに決まっている**ので、場面順に質問と答えをセットで覚える。入国審査は**目的と期間**の二つがほぼ必ず聞かれる。`,
+      },
     ],
   },
 
@@ -1207,8 +1240,8 @@ Have you ever heard of ~?（〜を聞いたことがありますか）という�
 
 ■ 数字に関する表現
 　Axolotls can grow up to 30 centimeters long.（ウーパールーパーは体長30センチまで成長することがある）
-　They can live for more than 10 years.（10年以上生きることができる）
-　→ 「up to（最大で）」「more than（〜以上）」のような数の範囲を表す語に注意する。
+　They can live for more than 10 years.（10年をこえて生きることができる）
+　→ 「up to（最大で）」「more than（〜より多い。ちょうどは入らない）」のような数の範囲を表す語に注意する。
 
 ■ 比較を表す表現
 　Axolotls are more unusual than other salamanders because they don't go through a full change into adults.
@@ -1233,11 +1266,11 @@ Have you ever heard of ~?（〜を聞いたことがありますか）という�
 
 ■ 完成モデル（全体）
 Have you ever heard of the axolotl? It is a kind of salamander that lives in lakes in Mexico. Unlike other salamanders, axolotls usually keep their gills even after they become adults. Because of this, they can breathe underwater their whole lives. Axolotls can grow up to 30 centimeters long, and they can live for more than 10 years. However, axolotls now live in only a few lakes, and they are an endangered species. Many people are working hard to protect them.
-（ウーパールーパーについて聞いたことがありますか。それはメキシコの湖に生息するサンショウウオの一種です。他のサンショウウオと違い、ウーパールーパーは大人になってもえらを保持することが多いです。このため、一生水中で呼吸することができます。ウーパールーパーは体長30センチまで成長することがあり、10年以上生きることができます。しかし、ウーパールーパーは今ではわずかな湖にしか生息しておらず、絶滅危惧種となっています。多くの人がウーパールーパーを守るために努力しています。）
+（ウーパールーパーについて聞いたことがありますか。それはメキシコの湖に生息するサンショウウオの一種です。他のサンショウウオと違い、ウーパールーパーは大人になってもえらを保持することが多いです。このため、一生水中で呼吸することができます。ウーパールーパーは体長30センチまで成長することがあり、10年をこえて生きることができます。しかし、ウーパールーパーは今ではわずかな湖にしか生息しておらず、絶滅危惧種となっています。多くの人がウーパールーパーを守るために努力しています。）
 
 ■ この文章から読み取れる要点
 　①ウーパールーパーの特徴：えらを保持したまま大人になる
-　②大きさ・寿命：最大30センチ、10年以上生きる
+　②大きさ・寿命：最大30センチ、10年をこえて生きる
 　③現状：however（しかし）以降で「絶滅危惧種」という転換が起きている
 
 ★ ポイント：However（しかし）のあとには、それまでの説明と対照的な内容（多くは問題点や課題）が続く。この転換に気づけると、文章の要旨（何を最も伝えたいか）をつかみやすくなる。`,
@@ -1336,7 +1369,7 @@ Wangari Maathai believed that protecting nature and helping people were connecte
     studyPeriod: '小6後半・直前',
     keyPoints: [
       `リンキングとは、前の単語の最後の音と、次の単語の最初の音がつながって聞こえる現象`,
-      `子音で終わる語＋母音で始まる語は特につながりやすい（例：an apple「アン・アップル」→「アナポー」）`,
+      `子音で終わる語＋母音で始まる語は特につながりやすい（例：an apple「アン・アップル」→「アナプル」）`,
       `同じ子音、または似た子音が続くときは音が1つに重なって聞こえる（例：good day）`,
       `t や d のあとに you が続くと、音が変化して「チュ」「ジュ」のように聞こえることがある（want you→ワンチュ）`,
       `リンキングは「知らないと聞き取れない」だけで、書くとき・読むときのつづりは変わらない。音の変化だと理解して聞くことが大切`,
@@ -1515,17 +1548,33 @@ Wangari Maathai believed that protecting nature and helping people were connecte
 ■ 例題①
 　My sister ( ) to school every day.
 　1. go　2. goes　3. going　4. went
-　→ every day（毎日）から現在の習慣とわかる。主語 My sister は三人称単数なので、動詞には -s が必要。答えは goes。
+　【何を聞かれているか】空所に入る、動詞の正しい形を選ぶ問題。
+　【手がかり1】every day（毎日）があるので、「いつもしていること」を表す現在の文。過去形の went や、ing形だけの going は合わない。
+　【手がかり2】主語は My sister（私の姉）で、I と you 以外の1人の人、つまり三人称単数。現在の文で主語が三人称単数のときは、動詞に -s や -es をつけるきまりがあるから、go だけでは誤り。
+　【手順】go に -es をつけると goes になる（go は o で終わるので -es）。
+　→ 答えは 2. goes。
+　【確かめ】声に出して My sister goes to school every day. と読み、不自然でないかを確かめる。別の主語で I go to school every day. なら go でよいと比べると、-s が必要な理由がはっきりする。
+　【よくあるまちがい】主語が My sister（1人）だと気づかず、複数の主語のつもりで go を選ぶこと。
 
 ■ 例題②
-　A: What time is it now?　B: It's ( ) nine.
+　A: What time do you get up?　B: I get up ( ) seven.
 　1. in　2. on　3. at　4. to
-　→ 時刻の前に置く前置詞は at。at nine で「9時に」という意味になる。
+　【何を聞かれているか】時刻 seven（7時）の前に入る前置詞を選ぶ問題。
+　【手がかり】What time ~?（何時に〜？）とたずねられ、「7時に起きる」と答える文。「〜時に」と時刻を言うときの前置詞を選ぶ。
+　【なぜ at か】前置詞は、後ろに来る語の種類によって決まっている。時刻（seven、7:30 など）の前は at。曜日（Monday）の前は on、月や季節の前は in を使うので、ここでは in や on は合わない。to は「〜へ」と方向を表す語で、時刻の前には使わない。
+　→ 答えは 3. at。（at seven で「7時に」という意味になる。）
+　【確かめ】I get up at seven. と声に出して読み、「7時に起きる」という意味で自然に聞こえるかを確かめる。
+　【よくあるまちがい】in the morning（朝に）のイメージから in を選ぶこと。in は「朝・午後・夜」「月」「年」の前で使い、時刻そのものの前は at です。
 
 ■ 例題③
 　There ( ) two cats under the table.
 　1. is　2. are　3. was　4. am
-　→ 主語 two cats（複数）に合わせて are を選ぶ。There is/are のあとの動詞は、そのあとに続く名詞の数に合わせる。
+　【何を聞かれているか】There ( ) ... の空所に入る be動詞を選ぶ問題。
+　【手がかり】There is / There are の文では、be動詞は「あとに続く名詞」の数に合わせる。ここでは two cats（2ひきのねこ）で複数。
+　【なぜ are か】is は1つのもの、are は2つ以上のものに使うから。was は過去形なので、時を表す語がないこの文では合わない。am は I のときだけ使う。
+　→ 答えは 2. are。
+　【確かめ】There is a cat under the table. なら a cat（1ぴき）なので is。two cats に変えると are になる、と並べて比べると、数と be動詞の対応がわかる。
+　【よくあるまちがい】There が先に来ているので、There に合わせて is を選んでしまうこと。数を決めるのは、あとの名詞です。
 
 ★ ポイント：語句選択問題は、空所の前後にある「時を表す語（every day、now）」「主語の数（三人称単数か複数か）」「決まった組み合わせ（at＋時刻）」の3つを手がかりに探すと、確実に絞り込める。`,
       },
@@ -1536,8 +1585,17 @@ Wangari Maathai believed that protecting nature and helping people were connecte
 ■ 例題①
 　A: Would you like some tea?
 　B: ( )
-　1. Yes, please.　2. I'm fine, thanks.　3. See you.　4. Nice to meet you.
-　→ Would you like ~?（〜はいかがですか）という申し出への返事なので、Yes, please.（はい、お願いします）が自然。
+　1. Yes, please.　2. It's Monday.　3. See you.　4. Nice to meet you.
+　【何を聞かれているか】Bの発言として、会話がいちばん自然につながるものを選ぶ問題。
+　【手がかり】A の Would you like some tea? は「お茶はいかがですか」というすすめる言い方（申し出）。申し出には「はい、いただきます」か「いいえ、けっこうです」で答えるのが自然。
+　【選択肢を1つずつ当てはめる】
+　　1. Yes, please.（はい、お願いします）→ 申し出を受けている。自然。
+　　2. It's Monday.（月曜日です）→ 曜日をたずねられたときの答え。お茶の話とつながらない。
+　　3. See you.（またね）→ 別れるときのあいさつ。
+　　4. Nice to meet you.（はじめまして）→ 会ったときのあいさつ。
+　　だから、答えは 1. Yes, please.
+　【確かめ】A と B を続けて読み、「お茶はいかが？」「はい、お願いします」と会話が成り立つことを確かめる。
+　【よくあるまちがい】文法が正しい文なら何でも正解だと思い、It's Monday. のような文を選んでしまうこと。質問の種類と答えの種類が合っているかを見る。
 
 ■ 例題②
 　A: How was your weekend?
@@ -1563,12 +1621,18 @@ Wangari Maathai believed that protecting nature and helping people were connecte
 
 ■ 例題
 　( is / your / this / bag / ) ?
-　→ 疑問文なので be動詞 is を主語の前に置く。並べると Is this your bag? となる。
+　【何を聞かれているか】4つの語を並べかえて、意味の通る疑問文をつくる問題。
+　【手順1】動詞を探す。与えられた語の中で動詞は is（be動詞）だけ。
+　【手順2】骨組みを決める。最後に ? があるので疑問文。be動詞の疑問文は「Be動詞＋主語＋〜?」の順なので、is を文の最初に置く。主語は this。ここまでで Is this ~? になる。
+　【手順3】残りを当てはめる。残りは your と bag。your は名詞 bag の前に置いて「あなたのかばん」になるから、your bag の順。
+　→ 並べると Is this your bag? （これはあなたのかばんですか）。
+　【確かめ】最初の語を大文字にして、声に出して読み、意味が通ることを確かめる。This is your bag. の文の is と this を入れかえた形になっている点も確認する。
+　【よくあるまちがい】this を最初に置いて This is your bag? としてしまうこと。疑問文では、be動詞が主語の前に出ます。
 
 ■ リスニング問題の種類と対策
-　パート1：絵を見て、説明として合う英文を選ぶ → 絵の中の人物・物・動作をあらかじめ確認しておく
-　パート2：短い会話を聞き、最後の応答として自然なものを選ぶ → 会話文問題（本課2つ目）と同じ考え方で解く
-　パート3：やや長い会話や英文を聞き、内容に合う絵・選択肢を選ぶ → 数字・場所・人物名に集中して聞く
+　第1部：会話を聞き、最後の発言への応答として自然なものを選ぶ（イラストがヒントになる） → 会話文問題（本課2つ目）と同じ考え方で解く
+　第2部：会話を聞き、その内容についての質問に答える → 数字・場所・人物名に集中して聞く
+　第3部：英文を聞き、内容に合うイラストを選ぶ → 絵の中の人物・物・動作をあらかじめ確認しておく
 
 ■ 試験全体を通じてのアドバイス
 ・時間配分：筆記は語句選択→会話文→並べかえの順に解くと、得意なところから確実に得点できる
@@ -1586,37 +1650,55 @@ Wangari Maathai believed that protecting nature and helping people were connecte
     examType: 'chugaku',
     title: '英検4級レベル総合演習：模擬問題で実力チェック',
     description: '英検4級相当の文法・読解・会話文問題を実際に解き、5級との違いと得点のコツを整理する',
-    intro: '英検4級は中学中級程度のレベルで、5級より扱う文法の範囲が広がり、短い長文問題も加わる。ここでは5級との違いを意識しながら、4級で新しく問われるポイント（過去形・比較・不定詞・関係代名詞の基礎など）を模擬問題形式で確認する。',
+    intro: '英検4級は中学中級程度のレベルで、5級より扱う文法の範囲が広がり、短い長文問題も加わる。ここでは5級との違いを意識しながら、4級で問われるポイント（過去形・未来表現・比較・不定詞・動名詞・接続詞など）を模擬問題形式で確認する。',
     order: 7099,
     studyPeriod: '小6後半・直前',
     keyPoints: [
-      `英検4級では現在完了・不定詞・比較・受動態など、5級より広い文法範囲が問われる`,
+      `英検4級では不定詞・動名詞・比較・接続詞など、5級より広い文法範囲が問われる（現在完了・受動態・関係代名詞は3級から）`,
       `長文問題（Eメール・掲示文形式）が加わり、複数の設問に答える形式に慣れておく必要がある`,
       `語句整序問題は5級より語数が増え、不定詞・比較などを含む複雑な文型が出題される`,
       `内容一致問題は本文の言い換え表現（同じ意味を別の語で言い換えた選択肢）に注意する`,
-      `リスニングは「Eメールに関する応答」など、5級より会話が長く、情報量も増える`,
+      `リスニングは、5級より会話や英文が長くなり、問われる情報量も増える`,
     ],
     sections: [
       {
         heading: '1. 4級で新しく問われる文法を確認する',
-        body: `英検4級では、5級で学んだ基礎（be動詞・一般動詞・疑問詞など）に加えて、次のような文法が新たに問われる。
+        body: `英検4級では、5級で学んだ基礎（be動詞・一般動詞・疑問詞など）に加えて、次のような文法が問われる。なお、現在完了・受動態・関係代名詞は英検3級の範囲なので、4級では中心になりません。
 
 ■ 4級で問われる主な文法
-　現在完了形（have/has＋過去分詞）：I have just finished my homework.
 　不定詞（to＋原形）：I want to be a doctor. / It's fun to swim.
+　動名詞（-ing）：I enjoy playing soccer. / She is good at singing.
 　比較級・最上級：This book is more interesting than that one.
-　受動態：This song is loved by many people.
+　助動詞：You must wash your hands. / Can I use your pen?
 　接続詞（when/if/because など）：I was happy when I saw you.
 
-■ 例題①（現在完了）
-　A: Have you ( ) finished your homework?　B: Yes, I have.
-　1. yet　2. already　3. still　4. never
-　→ Have you already finished ~? は完了用法の疑問文で自然な組み合わせ。yetは主に疑問文の文末や否定文で使われる。
+■ 例題①（不定詞）
+　My brother likes ( ) soccer on Sundays.
+　1. play　2. plays　3. to play　4. played
+　【何を聞かれているか】likes のあとに入る、play の正しい形を選ぶ問題。
+　【手がかり】like（〜が好き）のあとに動詞を続けるときは、「to＋原形」か「-ing形」のどちらかの形にする。like は動詞のあとに動詞をそのまま並べることはできない。
+　【選択肢を1つずつ考える】
+　　1. play → 原形だけでは likes のあとに続けられない。
+　　2. plays → likes と動詞が2つ並んでしまい、文として成り立たない。
+　　3. to play → 「to＋原形」の形で「サッカーをすることが好き」になる。
+　　4. played → 過去形も likes のあとには置けない。
+　→ 答えは 3. to play。（likes playing とも言えるが、選択肢にあるのは to play だけ。）
+　【確かめ】My brother likes to play soccer on Sundays.（兄は日曜日にサッカーをするのが好きです）と読み、意味が通ることを確かめる。
+　【よくあるまちがい】主語が My brother（三人称単数）なので plays を選んでしまうこと。likes がすでに三人称単数の -s を受け持っているので、あとの動詞は to＋原形にする。
 
 ■ 例題②（比較）
 　This mountain is ( ) than that one.
 　1. high　2. higher　3. highest　4. more high
-　→ than があるので比較級が入る。high は -er をつける規則変化なので higher が正解。
+　【何を聞かれているか】than の前に入る、high の正しい形を選ぶ問題。
+　【手がかり】空所のあとに than（〜よりも）がある。「AはBより〜だ」と2つを比べる文では、形容詞を比較級にして、あとに than を置く。
+　【なぜ higher か】high のような短い（1音節の）形容詞は、語の終わりに -er をつけて比較級にする。high → higher。
+　【選択肢を1つずつ考える】
+　　1. high → 比べていない形なので、than とは合わない。
+　　3. highest → 最上級で、「いちばん高い」。than ではなく the highest in ~ の形で使う。
+　　4. more high → more をつけるのは interesting や beautiful のような長い形容詞。high は短いので -er を使う。
+　→ 答えは 2. higher。
+　【確かめ】This mountain is higher than that one.（この山はあの山より高い）と読み、意味が通ることを確かめる。
+　【よくあるまちがい】more interesting のように何でも more をつけると思い、more high と言ってしまうこと。短い語は -er、長い語は more です。
 
 ★ ポイント：4級は5級の範囲がそのまま出題される土台の上に、新しい文法が積み重なる試験。5級レベルの基礎に不安があるまま4級の対策をしても、応用問題でつまずきやすいので、まず土台を固めることが大切。`,
       },
@@ -1657,7 +1739,7 @@ Hi Yuki, are you free next Saturday? Our school is having a festival, and I want
 ③残りの語句（時・場所を表す語句）を文末に配置する
 
 ■ リスニング対策（4級で変わる点）
-5級よりも会話が長く、Eメールの内容について問われる問題も出る。「誰が」「何を」「いつ」を聞き取るだけでなく、会話全体の流れ（提案→断る理由→代わりの案）まで追う必要がある。
+5級よりも会話や英文が長くなり、問われる情報も増える。「誰が」「何を」「いつ」を聞き取るだけでなく、会話全体の流れ（提案→断る理由→代わりの案）まで追う必要がある。
 
 ■ 総仕上げとしての学習の進め方
 ①これまでの新20単元・既存の全単元で学んだ文法・表現を横断的に復習する

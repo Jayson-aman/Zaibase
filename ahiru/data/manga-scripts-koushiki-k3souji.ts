@@ -8,7 +8,7 @@ export const mangaScriptsKoushikiK3Souji: Record<string, MangaScript> = {
       { speaker: 't', line: '三角形ABCの中に点Pをとって、A・B・CからPを通る直線をそれぞれ対辺までのばすよ。これで辺が3か所に分けられるね。' },
       { speaker: 's1', line: 'BD:DC、CE:EA、AF:FBの3つの比ができました。バラバラな数字になりそうですね。' },
       { speaker: 's2', line: 'でも先生、これって点Pの位置を変えても、この3つの比の間に何か規則がありそうな気がします…！' },
-      { speaker: 't', line: 'いいところに気づいたね。実際に三角形の面積を使って比べてみよう。△ABPと△ACPの面積の比は、底辺BP・PCの比と同じになるんだったね。' },
+      { speaker: 't', line: 'いいところに気づいたね。実際に三角形の面積を使って比べてみよう。△ABDと△ACDの面積の比は、底辺BD・DCの比と同じになるんだったね。' },
       { speaker: 's1', line: 'あ、面積比＝底辺の比！ これ、平行線と面積のところでやりました。' },
       { speaker: 't', line: 'その通り。同じように考えると、BD:DC＝△ABD:△ACD＝△PBD:△PCDになる。この2つの差や比をうまく組み合わせると…' },
       { speaker: 's2', line: 'BD:DC＝△PAB:△PACになりますね！ 面積を仲立ちにすると、線分の比が三角形の比に変身するんですね。' },

@@ -5,6 +5,47 @@
 
 import type { Figure } from './figures';
 import { lessonFigsSansu } from './lesson-figs-sansu';
+import { lessonFigsSansuPic } from './lesson-figs-sansu-pic';
+import { lessonFigsRsPicQ01 } from './lesson-figs-rs-pic-q01';
+import { lessonFigsRsPicQ02 } from './lesson-figs-rs-pic-q02';
+import { lessonFigsRsPicQ03 } from './lesson-figs-rs-pic-q03';
+import { lessonFigsRsPicQ04 } from './lesson-figs-rs-pic-q04';
+import { lessonFigsRsPicQ05 } from './lesson-figs-rs-pic-q05';
+import { lessonFigsRsPicQ06 } from './lesson-figs-rs-pic-q06';
+import { lessonFigsRsPicQ07 } from './lesson-figs-rs-pic-q07';
+import { lessonFigsRsPicQ08 } from './lesson-figs-rs-pic-q08';
+import { lessonFigsRsPicQ09 } from './lesson-figs-rs-pic-q09';
+import { lessonFigsRsPicQ10 } from './lesson-figs-rs-pic-q10';
+import { lessonFigsRsPicQ11 } from './lesson-figs-rs-pic-q11';
+import { lessonFigsRsPicQ12 } from './lesson-figs-rs-pic-q12';
+import { lessonFigsRsPicQ13 } from './lesson-figs-rs-pic-q13';
+import { lessonFigsRsPicQ14 } from './lesson-figs-rs-pic-q14';
+import { lessonFigsRsPicQ15 } from './lesson-figs-rs-pic-q15';
+import { lessonFigsRsPicQ16 } from './lesson-figs-rs-pic-q16';
+import { lessonFigsRsPicQ17 } from './lesson-figs-rs-pic-q17';
+import { lessonFigsRsPicQ18 } from './lesson-figs-rs-pic-q18';
+import { lessonFigsRsPicQ19 } from './lesson-figs-rs-pic-q19';
+import { lessonFigsRsPicQ20 } from './lesson-figs-rs-pic-q20';
+import { lessonFigsSansuPicP01 } from './lesson-figs-sansu-pic-p01';
+import { lessonFigsSansuPicP02 } from './lesson-figs-sansu-pic-p02';
+import { lessonFigsSansuPicP03 } from './lesson-figs-sansu-pic-p03';
+import { lessonFigsSansuPicP04 } from './lesson-figs-sansu-pic-p04';
+import { lessonFigsSansuPicP05 } from './lesson-figs-sansu-pic-p05';
+import { lessonFigsSansuPicP06 } from './lesson-figs-sansu-pic-p06';
+import { lessonFigsSansuPicP07 } from './lesson-figs-sansu-pic-p07';
+import { lessonFigsSansuPicP08 } from './lesson-figs-sansu-pic-p08';
+import { lessonFigsSansuPicP09 } from './lesson-figs-sansu-pic-p09';
+import { lessonFigsSansuPicP10 } from './lesson-figs-sansu-pic-p10';
+import { lessonFigsSansuPicP11 } from './lesson-figs-sansu-pic-p11';
+import { lessonFigsSansuPicP12 } from './lesson-figs-sansu-pic-p12';
+import { lessonFigsSansuPicP13 } from './lesson-figs-sansu-pic-p13';
+import { lessonFigsSansuPicP14 } from './lesson-figs-sansu-pic-p14';
+import { lessonFigsSansuPicP15 } from './lesson-figs-sansu-pic-p15';
+import { lessonFigsSansuPicP16 } from './lesson-figs-sansu-pic-p16';
+import { lessonFigsSansuPicP17 } from './lesson-figs-sansu-pic-p17';
+import { lessonFigsSansuPicP18 } from './lesson-figs-sansu-pic-p18';
+import { lessonFigsSansuPicP19 } from './lesson-figs-sansu-pic-p19';
+import { lessonFigsSansuPicP20 } from './lesson-figs-sansu-pic-p20';
 import { lessonFigsRika } from './lesson-figs-rika';
 import { lessonFigsKokoMath } from './lesson-figs-koko-math';
 import { lessonFigsKokoRika } from './lesson-figs-koko-rika';
@@ -171,7 +212,11 @@ import { lessonFigsNew20J3Kokugo } from './lesson-figs-new20-j3-kokugo';
 import { lessonFigsNew20J2Rika } from './lesson-figs-new20-j2-rika';
 import { lessonFigsNew20J3Rika } from './lesson-figs-new20-j3-rika';
 
+import { EXTRA_LESSON_FIGURES } from './lesson-extra-figures';
+import { repairChartSteps } from './chart-steps-fix';
+
 export const lessonFigures: Record<string, Figure> = {
+  ...EXTRA_LESSON_FIGURES,
   ...lessonFigsKoushikiC1Menseki,
   ...lessonFigsKoushikiC2En,
   ...lessonFigsKoushikiC3Tairyoku1,
@@ -338,8 +383,59 @@ export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsKokoEigoExt10,
   ...lessonFigsKokoEigoExt11,
   ...lessonFigsKokoEigoExt12,
+  // 絵（人・箱・線分図）で描き直した図。同じキーなら、必ずこちらが優先されるよう、いちばん最後に並べる
+  ...lessonFigsSansuPic,
+  ...lessonFigsSansuPicP01,
+  ...lessonFigsSansuPicP02,
+  ...lessonFigsSansuPicP03,
+  ...lessonFigsSansuPicP04,
+  ...lessonFigsSansuPicP05,
+  ...lessonFigsSansuPicP06,
+  ...lessonFigsSansuPicP07,
+  ...lessonFigsSansuPicP08,
+  ...lessonFigsSansuPicP09,
+  ...lessonFigsSansuPicP10,
+  ...lessonFigsSansuPicP11,
+  ...lessonFigsSansuPicP12,
+  ...lessonFigsSansuPicP13,
+  ...lessonFigsSansuPicP14,
+  ...lessonFigsSansuPicP15,
+  ...lessonFigsSansuPicP16,
+  ...lessonFigsSansuPicP17,
+  ...lessonFigsSansuPicP18,
+  ...lessonFigsSansuPicP19,
+  ...lessonFigsSansuPicP20,
+  // 理科・社会の絵の図
+  ...lessonFigsRsPicQ01,
+  ...lessonFigsRsPicQ02,
+  ...lessonFigsRsPicQ03,
+  ...lessonFigsRsPicQ04,
+  ...lessonFigsRsPicQ05,
+  ...lessonFigsRsPicQ06,
+  ...lessonFigsRsPicQ07,
+  ...lessonFigsRsPicQ08,
+  ...lessonFigsRsPicQ09,
+  ...lessonFigsRsPicQ10,
+  ...lessonFigsRsPicQ11,
+  ...lessonFigsRsPicQ12,
+  ...lessonFigsRsPicQ13,
+  ...lessonFigsRsPicQ14,
+  ...lessonFigsRsPicQ15,
+  ...lessonFigsRsPicQ16,
+  ...lessonFigsRsPicQ17,
+  ...lessonFigsRsPicQ18,
+  ...lessonFigsRsPicQ19,
+  ...lessonFigsRsPicQ20,
 };
 
+const repairedCache = new Map<string, Figure>();
 export function getLessonFigure(figureId: string): Figure | null {
-  return lessonFigures[figureId] ?? null;
+  const raw = lessonFigures[figureId];
+  if (!raw) return null;
+  // 折れ線・棒グラフの定型の説明は、数値と食いちがうことがあるので、読み出すときに直す
+  const hit = repairedCache.get(figureId);
+  if (hit) return hit;
+  const fixed = repairChartSteps(raw);
+  repairedCache.set(figureId, fixed);
+  return fixed;
 }

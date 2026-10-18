@@ -207,13 +207,13 @@ export const lessonFigsEigoExt05: Record<string, Figure> = {
     yRange: [0, 10],
     points: [
       { x: 3, y: 2, label: 'Can I' },
-      { x: 6, y: 2, label: 'May I' },
+      { x: 7, y: 2, label: 'May I' },
       { x: 9, y: 2, label: 'Could I' },
       { x: 3, y: 8, label: 'Can you' },
       { x: 5, y: 8, label: 'Will you' },
       { x: 9, y: 8, label: 'Could you' },
     ],
-    caption: '横軸＝ていねいさ、縦軸＝だれが動作をするか（下＝自分がする「許可」、上＝相手がする「依頼」）。I で始まれば許可を求める文、you で始まれば依頼の文。右へ行くほどていねいになる',
+    caption: '横軸＝ていねいさ、縦軸＝だれが動作をするか（下＝自分がする「許可」、上＝相手がする「依頼」）。I で始まれば許可を求める文、you で始まれば依頼の文。右へ行くほどていねいになる（May I と Could I はほぼ同じていねいさ）',
   },
 
   // s181：命令文の語順（主語を書かず、動詞の原形で始める）

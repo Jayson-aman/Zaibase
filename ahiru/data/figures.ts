@@ -238,7 +238,7 @@ export type BarChartFigure = {
   yLabel?: string;
   yMax?: number;
   histogram?: boolean; // 棒を隙間なく並べる（度数分布）
-  bars: { label: string; value: number; color?: string }[];
+  bars: { label: string; value: number; color?: string; /** 問題を解く前の画面で、値の数字を「？」にする（答えが棒の上に書いてあると先に見えてしまう） */ hidden?: boolean }[];
   caption?: string;
   /** 解く手順（①②③…の順で並べた文字列の配列）。動く図解で番号付きで段階的に表示する */
   steps?: string[];
@@ -394,7 +394,31 @@ export type StratumFigure = {
   buildSteps?: number;
 };
 
+// 図解スライド（言葉・箱・矢印・図形を自由に組み合わせた解説用の図）。
+// 座標は 320×240 の内部座標。parts を上から順に描き、stepParts で
+// 「スライド i までに何個の部品を見せるか」（累計）を指定する。
+export type DiagramElement =
+  | { t: 'box'; x: number; y: number; w: number; h: number; text?: string; color?: string; fill?: string; size?: number }
+  | { t: 'label'; x: number; y: number; text: string; size?: number; color?: string; anchor?: 'start' | 'middle' | 'end'; bold?: boolean }
+  | { t: 'arrow'; x1: number; y1: number; x2: number; y2: number; color?: string; dashed?: boolean }
+  | { t: 'line'; x1: number; y1: number; x2: number; y2: number; color?: string; dashed?: boolean; width?: number }
+  | { t: 'circle'; cx: number; cy: number; r: number; color?: string; fill?: string; text?: string; size?: number }
+  | { t: 'poly'; pts: [number, number][]; color?: string; fill?: string }
+  | { t: 'sector'; cx: number; cy: number; r: number; from: number; to: number; color?: string; fill?: string };
+
+export type DiagramFigure = {
+  kind: 'diagram';
+  parts: DiagramElement[];
+  /** スライドごとの「ここまで見せる部品の数」（累計）。steps と同じ長さ */
+  stepParts: number[];
+  caption?: string;
+  /** スライドの説明文（1枚ぶんずつ）。7枚以上を目安に、内容に必要なだけ */
+  steps?: string[];
+  buildSteps?: number;
+};
+
 export type Figure =
+  | DiagramFigure
   | CoordFigure
   | PolyFigure
   | CircleFigure
@@ -492,6 +516,27 @@ import { figuresKoushikiOyoK2Heikou } from './figures-koushiki-oyo-k2heikou';
 import { figuresKoushikiOyoK1Godo } from './figures-koushiki-oyo-k1godo';
 import { figuresKoushikiOyoC5Kakudo } from './figures-koushiki-oyo-c5kakudo';
 import { figuresQuizAdd01 } from './figures-quiz-add01';
+import { figuresSchoolChugaku02 } from './figures-school-chugaku-02';
+import { figuresSchoolKoko01 } from './figures-school-koko-01';
+import { figuresSchoolKoko05 } from './figures-school-koko-05';
+import { figuresSchoolKoko06 } from './figures-school-koko-06';
+import { figuresSchoolKoko00 } from './figures-school-koko-00';
+import { figuresSchoolKoko02 } from './figures-school-koko-02';
+import { figuresSchoolKoko04 } from './figures-school-koko-04';
+import { figuresSchoolKoko07 } from './figures-school-koko-07';
+import { figuresSchoolKoko03 } from './figures-school-koko-03';
+import { figuresSchoolChugaku01 } from './figures-school-chugaku-01';
+import { figuresSchoolChugaku03 } from './figures-school-chugaku-03';
+import { figuresSchoolChugaku04 } from './figures-school-chugaku-04';
+import { figuresSchoolChugaku09 } from './figures-school-chugaku-09';
+import { figuresSchoolChugaku07 } from './figures-school-chugaku-07';
+import { figuresSchoolChugaku06 } from './figures-school-chugaku-06';
+import { figuresSchoolChugaku05 } from './figures-school-chugaku-05';
+import { figuresSchoolChugaku00 } from './figures-school-chugaku-00';
+import { figuresSchoolChugaku11 } from './figures-school-chugaku-11';
+import { figuresSchoolChugaku10 } from './figures-school-chugaku-10';
+import { figuresSchoolChugaku08 } from './figures-school-chugaku-08';
+import { figuresSansuGap7 } from './figures-sansu-gap-7';
 
 export const figures: Record<string, Figure> = {
   ...figuresKoushikiOyoC3Tairyoku1,
@@ -592,6 +637,27 @@ export const figures: Record<string, Figure> = {
   ...figuresGradeJ2Rika,
   ...figuresGradeJ3Rika,
   ...figuresQuizAdd01,
+  ...figuresSchoolChugaku02,
+  ...figuresSchoolKoko01,
+  ...figuresSchoolKoko05,
+  ...figuresSchoolKoko06,
+  ...figuresSchoolKoko00,
+  ...figuresSchoolKoko02,
+  ...figuresSchoolKoko04,
+  ...figuresSchoolKoko07,
+  ...figuresSchoolKoko03,
+  ...figuresSchoolChugaku01,
+  ...figuresSchoolChugaku03,
+  ...figuresSchoolChugaku04,
+  ...figuresSchoolChugaku09,
+  ...figuresSchoolChugaku07,
+  ...figuresSchoolChugaku06,
+  ...figuresSchoolChugaku05,
+  ...figuresSchoolChugaku00,
+  ...figuresSchoolChugaku11,
+  ...figuresSchoolChugaku10,
+  ...figuresSchoolChugaku08,
+  ...figuresSansuGap7,
 };
 
 export function getFigure(questionId: string): Figure | null {

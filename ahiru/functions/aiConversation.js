@@ -52,9 +52,7 @@ const LEVEL_GUIDE = {
   toeic_800: "TOEIC800点レベル（ビジネス実務英語）",
 };
 
-function dayKey() {
-  return new Date().toISOString().slice(0, 10);
-}
+const { jstDay: dayKey, refundDaily } = require("./_usage");
 
 async function checkAndIncrementUsage(uid, limit) {
   const usageRef = db.collection("aiConversationUsage").doc(uid);
@@ -109,7 +107,21 @@ exports.chatEnglishConversation = onCall(
     // 使わない（誰でも有料枠を名乗れてAPIコストが流出する）。
     // 英語系コンテンツは英単語Pro（vocab）または全部入りMaxで開放。
     // entitlement を集合で見るので、受験Proと英単語Proの両方を買っている人も正しく通る。
-    const paid = (await hasVocabAccess(uid)) === true;
+    const paidStatus = await hasVocabAccess(uid);
+    const paid = paidStatus === true;
+    // 会員状態が取れなかったときは、有料の人を無料枠（1日3回）で止めない
+    if (paidStatus === null) {
+      throw new HttpsError("unavailable", "いま会員の状態を確認できません。少し待ってから、もう一度試してね。");
+    }
+    // 無料枠は実アカウント（匿名でない）にだけ出す。匿名UIDは、Web版で
+    // ブラウザのデータを消すだけ（App Check未実装のネイティブでも再インストール）で
+    // いくらでも作り直せるため、1日3回の無料枠が事実上無制限になっていた。
+    if (!paid && req.auth?.token?.firebase?.sign_in_provider === "anonymous") {
+      throw new HttpsError(
+        "permission-denied",
+        "AI英会話の無料枠（1日3回）は、ログインすると使えます。マイページからログインしてください。"
+      );
+    }
     const dailyLimit = paid ? PAID_DAILY_LIMIT : FREE_DAILY_LIMIT;
 
     await checkAndIncrementUsage(uid, dailyLimit);
@@ -170,12 +182,16 @@ ${scenarioLine}
       });
     } catch (err) {
       console.error("chatEnglishConversation: Claude API error", err);
+      await refundDaily(db, "aiConversationUsage", uid, "day", "messagesUsed");
       throw new HttpsError("internal", "AIとの通信でエラーが発生しました。もう一度試してください。");
     }
 
     const textBlock = response.content.find((b) => b.type === "text");
     const reply = textBlock?.text?.trim() ?? "";
-    if (!reply) throw new HttpsError("internal", "応答の生成に失敗しました。もう一度試してください。");
+    if (!reply) {
+      await refundDaily(db, "aiConversationUsage", uid, "day", "messagesUsed");
+      throw new HttpsError("internal", "応答の生成に失敗しました。もう一度試してください。");
+    }
 
     return { ok: true, reply };
   }

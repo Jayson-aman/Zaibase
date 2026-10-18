@@ -131,5 +131,33 @@ for (const f of dataFiles.filter((f) => /^lessons-.*ext\d+\.ts$/.test(f))) {
 }
 report('単元ファイルの結線漏れ', unwired, 'import と spread の両方が要る');
 
+// 2) 問題オブジェクトの欄が id より前に置かれている。
+//    一括で pitfall を足した道具が「次のオブジェクトの { の直後」に差しこんだため、
+//    9問で ひっかけ が1つ前の問題のものになっていた（koko_max_sansu_15 に nCr の話 など）。
+//    TypeScript としては正しいので tsc では見つからない。書き直し道具（rwf）は
+//    id の後ろしか見ないので、欄が id より前にあると「欄が無い」と誤認する。
+const fieldBeforeId = [];
+for (const f of dataFiles) {
+  const s = fs.readFileSync(path.join(dataDir, f), 'utf8');
+  const re = /\{\n\s+(pitfall|hint|explanation|memoryTip|answer|question|choices):[^\n]*\n(?:\s+'[^\n]*\n)?\s+id: '([^']+)'/g;
+  let m;
+  while ((m = re.exec(s))) fieldBeforeId.push(`${f}: ${m[2]} の ${m[1]} が id より前にある`);
+}
+report('問題の欄が id より前に置かれている', fieldBeforeId, '欄は id の後ろに置く。前の問題の欄が紛れこんでいないか本文も読む');
+
+// 問題を解く前の画面に出す図は、解き方の手順（steps）と説明文（caption）を隠す。
+// 隠さないと「問題文の下に答えまでの手順①〜⑤がそのまま並ぶ」（実際に起きた）。
+// animated を付けた FigureView は解説側なので対象外。
+const unhidden = [];
+for (const f of files.filter((f) => /components\/(QuizCard|InlineQuiz)\.tsx$/.test(f))) {
+  const src = fs.readFileSync(f, 'utf8');
+  for (const m of src.matchAll(/<FigureView\b[^>]*>/g)) {
+    if (/\banimated\b/.test(m[0])) continue;
+    if (!/\bhideAnswerText\b/.test(m[0]) || !/maskFigureForProblem/.test(m[0]))
+      unhidden.push(`${rel(f)}:${src.slice(0, m.index).split('\n').length}`);
+  }
+}
+report('解く前の画面の図が、手順・答えを隠していない', unhidden, 'hideAnswerText と maskFigureForProblem(figure, question) を付けること');
+
 console.log(`\n合計 ${problems} 件`);
 process.exit(problems === 0 ? 0 : 1);

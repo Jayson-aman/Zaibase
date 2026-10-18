@@ -149,7 +149,7 @@ export default function ConsentModal({ onAgree }: Props) {
     <Modal
       visible
       animationType="slide"
-      presentationStyle="pageSheet"
+      presentationStyle="fullScreen"
       statusBarTranslucent
     >
       {inner}

@@ -16,25 +16,27 @@ export const kokoKankanEigo20: Question[] = [
 A: "Have you ever ( ) to Kyoto?"
 B: "Yes, I went there last summer."
 
-① go  ② went  ③ gone  ④ goes`,
-    answer: '③ gone',
+① go  ② went  ③ been  ④ goes`,
+    answer: '③ been',
     hint: '「Have you ever ___?」は現在完了形の疑問文。ever の後ろは過去分詞が入る。',
-    explanation: `【出題意図】
-現在完了形（経験用法）における過去分詞の選択を問う問題。「Have/Has + 主語 + 過去分詞」という現在完了の疑問文の基本形を理解しているかが問われる。
+    explanation: `【何を聞かれているか】
+Have you ever ( ) to Kyoto? の空所に入る、「京都に行ったことがありますか」という経験をたずねる動詞の形を選ぶ問題。
 
-【解説】
-「Have you ever ___?」は「〜したことがありますか」という経験を尋ねる現在完了の疑問文。この形では動詞は必ず過去分詞を使う。go の過去形は went、過去分詞は gone。
-・① go → 動詞原形（Have you go? は文法的に誤り）
-・② went → 過去形（have/has の後ろには使えない）
-・③ gone → 過去分詞（✓）Have you ever gone to Kyoto?
-・④ goes → 3人称単数現在形（have の後ろには使えない）
-Bの返答「I went there last summer」は過去形であり、経験の内容を過去形で補足している点も確認しよう。
+【なぜ been なのか】
+「〜に行ったことがある」という経験は、現在完了の have been to で表す。have の後ろには過去分詞を置く。be動詞の過去分詞は been である。
 
-【注意点】
-have/has の後ろには「動詞原形」ではなく必ず「過去分詞」を置く。go–went–gone のような不規則変化動詞の三形変化を確実に覚えておくこと。「went」は過去形なので現在完了には使えない。
+【ステップ1】Have you ever 〜? は「〜したことがありますか」と経験をたずねる現在完了の疑問文。have のあとは過去分詞。
+【ステップ2】① go は原形、② went は過去形、④ goes は三人称単数の現在形で、いずれも have のあとには置けない。
+【ステップ3】過去分詞の③ been を入れる。Have you ever been to Kyoto?
 
-【関連知識】
-現在完了の4用法：①経験（ever, never, once, twice）②継続（for, since）③完了（already, just, yet）④結果（now, still）。経験用法の頻出表現：「Have you ever been to〜?」（beenはgoの過去分詞としても使われる）も覚えておこう。`,
+【答え】
+③ been
+
+【確かめ】
+Bの返答「Yes, I went there last summer.」は、行ったことがあるという意味で、質問と合っている。
+
+【よくあるまちがい】
+have のあとに過去形の went を置いてしまう。現在完了では過去形ではなく過去分詞を使う。`,
   },
   {
     id: 'koko_kankan_eigo_02',
@@ -78,20 +80,8 @@ like / love / hate / prefer は不定詞・動名詞どちらもOK（意味は�
 ③ This is the book (　) changed my life.`,
     answer: '① who / that　② which / that　③ which / that',
     hint: '先行詞が「人」→ who または that。先行詞が「物・動物」→ which または that。',
-    explanation: `【出題意図】
-関係代名詞 who / which / that の使い分けを問う問題。先行詞（関係代名詞が修飾する名詞）が人か物かを見分ける力が試される。
-
-【解説】
-①先行詞は「the girl（人）」→ who または that が使える。who が文法上最も自然。
-②先行詞は「the bag（物）」→ which または that が使える。②は目的格の関係代名詞（省略も可能）。
-③先行詞は「the book（物）」→ which または that が使える。③も主格の関係代名詞。
-that はほぼ万能に使えるが、カンマ（非制限用法）の後ろには使えない（→ thatではなくwhich/who）。
-
-【注意点】
-who は人のみ。which は物・動物のみ。that は人にも物にも使えるが、制限用法（カンマなし）に限られる。目的格の関係代名詞（〜を/〜に）は省略できる：「the bag my mother gave me」でもOK。先行詞の直後に関係代名詞を置くルールも重要。
-
-【関連知識】
-関係代名詞の格：主格（〜が）→ who/which/that、目的格（〜を/〜に）→ whom/which/that（省略可）、所有格（〜の）→ whose。関大一高・立命館高では「非制限用法（, which）」も出題される。The book, which I bought yesterday, was interesting.（コンマの後はwhichのみ）`,
+    explanation:
+      '【何を聞かれているか】\nwho・which・thatという3つの関係代名詞のうち、それぞれの文に最も適切なものを選ぶ問題（複数正解の場合はすべて答える）。\n\n【なぜ先行詞の種類で使う関係代名詞が決まるのか】\n関係代名詞は、説明したい名詞（先行詞）が「人」か「物・動物」かによって、使える語（who/which）が決まっている。thatはどちらにも使える便利な語だが、コンマをつけた非制限用法では使えないという制限がある。\n\n【ポイント1】①先行詞が人のときを確認する\n"The girl（人）is singing..."→先行詞がgirl（人）なのでwhoまたはthatを使う。\n\n【ポイント2】②③先行詞が物のときを確認する\n"the bag"「the book」（物）→whichまたはthatを使う。②は目的格（省略可能）、③は主格。\n\n【ポイント3】thatの制限を確認する\nthatは人にも物にも使えるが、コンマをつけた非制限用法（The book, which I bought yesterday, ...）には使えず、whichやwhoを使う。\n\n【答え】\n① who / that　② which / that　③ which / that\n\n【確かめ】\n①はwhoの後ろに動詞（is singing）が続く主格、②はwhichの後ろに主語＋動詞（my mother gave me）が続く目的格、③はwhichの後ろに動詞（changed）が続く主格になっているか確認する。\n\n【よくあるまちがい】\n先行詞が物（bag、book）なのにwhoを選んでしまうミス。whoは人にしか使えない。\n\n【ここが絶対】\nwho（人）・which（物・動物）・that（人にも物にも使えるが非制限用法は不可）という3つの使い分けを、主格・目的格・所有格（whose）という格の区別とあわせてセットで覚える。',
   },
   {
     id: 'koko_kankan_eigo_04',
@@ -112,19 +102,8 @@ who は人のみ。which は物・動物のみ。that は人にも物にも使�
    （バスはタクシーより安い）`,
     answer: '① highest　② as, as　③ less, than',
     hint: '①最上級は the + 形容詞-est（または the most）。②同等比較は as〜as。③「より安い」はless + 形容詞 + than。',
-    explanation: `【出題意図】
-比較表現（同等比較 as〜as・比較級 more〜than / less〜than・最上級 the〜est / the most）の使い分けを問う問題。3つの比較形を一度に整理できる良問。
-
-【解説】
-①「最も高い」→最上級。high → higher → highest。最上級には必ず the をつける。in Japan（場所）または of all mountains（グループ）とセットで使う。
-②「同じくらい〜」→ as + 形容詞（原級）+ as の形。exciting はそのまま（変化しない）。
-③「タクシーより安い」→ expensive の反対を比較級で表す。more expensive の反対は less expensive + than。または cheap → cheaper than も可。
-
-【注意点】
-最上級の the を忘れるミスが多い。②の as〜as は最初の as を省略できない（× so exciting as）。③のless〜than（〜より少ない程度で）は日本語の「〜より安い」に対応するが、入試ではcheaper thanのシンプルな形の方が多い。
-
-【関連知識】
-比較級の不規則変化：good→better→best、bad→worse→worst、many/much→more→most、little→less→least。「3つ以上のものを比べるとき最上級、2つを比べるとき比較級」という原則も押さえておこう。関関同立附属高では最上級+in/of の使い分けも頻出。`,
+    explanation:
+      '【何を聞かれているか】\n最上級・同等比較・比較級という3種類の比較表現を、それぞれの文に合わせて完成させる問題。\n\n【なぜ3つの比較表現を使い分けるのか】\n「最も〜」（3つ以上の中で一番）、「〜と同じくらい」（2つが同程度）、「〜より…」（2つを比べて片方が上か下か）という、比べ方の違いによって使う形が決まっている。\n\n【ポイント1】①最上級を確認する\n「日本で最も高い」→3つ以上（日本中の山）の中で一番なので最上級。high→highest。最上級には必ずtheをつける。\n\n【ポイント2】②同等比較を確認する\n「東京と同じくらい」→2つを同程度として比べるのでas＋原級（exciting）＋as。\n\n【ポイント3】③比較級（劣等）を確認する\n「タクシーより安い」→expensiveの反対の意味を、lessを使った比較級less expensive thanで表す。\n\n【答え】\n① highest　② as, as　③ less, than\n\n【確かめ】\n①theがhighestの前についていること、②asが2つ使われていること、③lessとthanがセットで使われていることを確認する。\n\n【よくあるまちがい】\n最上級にtheをつけ忘れる、②のas〜asの最初のasを省略してしまう、というミスが多い。\n\n【ここが絶対】\n比べる対象が3つ以上なら最上級、2つが同程度ならas〜as、2つを比べて優劣をつけるなら比較級（more/less〜than）、という3つの使い分けをセットで覚える。goodの比較級betterのような不規則変化もあわせて確認する。',
   },
   {
     id: 'koko_kankan_eigo_05',
@@ -248,17 +227,8 @@ B：「今朝から（since this morning）ずっと〜し続けている（今�
    （流暢に英語が話せればいいのに）`,
     answer: '① were, would　② had, would　③ could',
     hint: '仮定法過去：If + 主語 + 動詞の過去形〜, 主語 + would/could/might + 動詞原形。be動詞は主語に関係なく were を使う。',
-    explanation: `【出題意図】
-仮定法過去（現実に反することを仮定する表現）の正しい形を問う問題。直説法（現実の話）と仮定法（仮想の話）の使い分けが理解できているか試される。
-
-【解説】
-仮定法過去の公式：If + S + 動詞の過去形〜, S + would/could/might + 動詞原形。①be動詞は主語に関係なく were（I were, he were, she were）。「If I were a bird」は仮定法の定番表現。②「have → had」（過去形）、帰結節は「would buy」。③I wish + 仮定法過去：現在の実現困難な望みを表す。「could speak」（speak の前に could が必要）。
-
-【注意点】
-現代英語では「If I was」も使われるが、入試では「If I were」が正解とされる。仮定法では時制を1つ過去にずらす（現在の仮定 → 過去形を使う）。帰結節のwould/could/mightは過去形だが意味は「現在の仮定」を表す。「I wish」の後ろも仮定法と同じ過去形にする。
-
-【関連知識】
-仮定法過去完了（過去の事実と反対のことを仮定）：If + S + had + p.p.〜, S + would have + p.p.。「If I had studied harder, I would have passed the exam.（もっと勉強していたら合格していたのに）」。関関同立附属高では仮定法過去がメイン出題、最難関では仮定法過去完了も出る。`,
+    explanation:
+      '【何を聞かれているか】\n仮定法過去とI wish構文を使った、3つの文を完成させる問題。\n\n【なぜ動詞を過去形にするのか】\n仮定法過去は「実際にはそうではないが、もし〜だったら」という現実に反する内容を表すため、あえて時制を1段階過去にずらして「現実味を薄める」という英語の仕組みを使う。\n\n【ポイント1】①②仮定法過去の公式を確認する\nIf＋主語＋動詞の過去形〜, 主語＋would/could＋動詞の原形〜。be動詞は主語に関係なくwereを使う。\n\n【ポイント2】I wishの形を確認する\n"I wish＋仮定法過去"は「（今）〜であればいいのに」という、現在の実現困難な望みを表す。\n\n【ポイント3】③couldの位置を確認する\n"I wish I could speak English fluently."のcouldは、canの過去形で、speakの前に置く。\n\n【答え】\n① were, would　② had, would　③ could\n\n【確かめ】\n①のbe動詞がwereになっていること、②のhaveが過去形hadになっていること、③のcouldがspeakの前にあることを確認する。\n\n【よくあるまちがい】\n①でIに合わせてwasを使ってしまうミス。仮定法過去のbe動詞は主語に関係なくwereを使うのが原則。\n\n【ここが絶対】\n仮定法過去の公式（If+過去形, would/could+原形）とI wish+仮定法過去（〜だったらいいのに）をセットで覚える。be動詞は必ずwereにする。',
   },
   {
     id: 'koko_kankan_eigo_09',
@@ -316,7 +286,7 @@ Another well-known tradition is "origami," the art of paper folding. By folding 
 【解説】
 ①まず疑問文の形「Do you know〜?」を作る。次に「the man」の後ろに関係代名詞「that」を使い、「is standing over there（あそこに立っている）」をつなぐ。
 ②「I was happy」（感情）+ 「to hear」（その感情の原因を表す不定詞の副詞的用法）+ 「the news」。be + 形容詞 + to 不定詞「〜して…だ」の形。
-③「be able to + 動詞原形」= can と同じ意味。主語がshe（3単現）なのでis、動詞は原形のspeakをthenの後ろに置く。
+③「be able to + 動詞原形」= can と同じ意味。主語がshe（3単現）なのでis、動詞は原形のspeakをtoの後ろに置く。
 
 【注意点】
 整序問題では「どの語とどの語がセットになるか」を先に考えるのがコツ。①では「the man + that」、②では「happy + to hear」、③では「is able to + speak」というセットを見抜く。また、整序後に文の意味が日本語訳と合っているか必ず確認すること。
@@ -346,14 +316,14 @@ To solve these problems, individuals, companies, and governments must work toget
 【設問】
 ① What mainly causes global warming?（英語で答えよ）
 ② What happens when plastic waste enters the ocean?（英語で答えよ）
-③ 下線部「have risen」を日本語に訳せ。
+③ 下線部「has risen」を日本語に訳せ。
 ④ 本文の内容に合うものをすべて選べ。
 　ア. 地球の気温は過去100年で約1℃上昇した。
 　イ. プラスチック汚染は魚にだけ影響を与える。
 　ウ. 2050年には海の魚よりプラスチックが多くなる可能性がある。
 　エ. 環境問題は個人の努力では解決できない。`,
     answer: '① Greenhouse gases (such as CO₂), which are released when people burn fossil fuels, mainly cause global warming.\n② It harms fish, birds, and other sea animals.\n③ 上昇している（上がってきた）\n④ ア、ウ',
-    hint: '①第1段落「This change is mainly caused by〜」に注目。②第2段落「harming〜」の部分。③have risen = 現在完了形（結果）。④各選択肢を本文と照合する。',
+    hint: '①第1段落「This change is mainly caused by〜」に注目。②第2段落「harming〜」の部分。③has risen = 現在完了形（結果）。④各選択肢を本文と照合する。',
     explanation: `【出題意図】
 環境問題をテーマにした150語程度の英文読解問題。内容把握（情報の特定・照合）、現在完了形の訳、選択肢の正誤判定という、模擬試験形式の総合的な読解力を問う。
 
@@ -484,7 +454,7 @@ B: (　③　) Have a nice day!
 ③ He is the most tallest player on the team.
 ④ If I will have more time, I would study abroad.
 ⑤ The book which I borrowed it from the library was very interesting.`,
-    answer: '① since → for　② interesting → interested　③ most tallest → tallest（the most を削除）　④ will have → had　⑤ borrowed it → borrowed（it を削除）',
+    answer: '① since → for　② interesting → interested　③ most tallest → tallest（most を削除）　④ will have → had　⑤ borrowed it → borrowed（it を削除）',
     hint: '①期間にはfor、起点にはsince。②感情を「感じる側」は -ed 形。③最上級の二重使用は不可。④仮定法ではif節に will を使わない。⑤関係代名詞節の中で目的語を重複させない。',
     explanation: `【出題意図】
 文法的な誤り指摘問題（誤文訂正）。高校受験で最も頻出の文法ミス5種類（継続のfor/since、感情形容詞の-ed/-ing、最上級の形、仮定法のif節、関係代名詞節の重複）を一問に集約した総合問題。
@@ -524,7 +494,7 @@ Despite these concerns, many experts believe that AI will ultimately benefit hum
 ③ 下線部「will work alongside us」とはどういう意味か、日本語で説明せよ。
 ④ 筆者のAIに対する立場を、本文の根拠を示しながら日本語で説明せよ。（60字以内）`,
     answer: '① Medicine (helping doctors analyze medical images) and education (creating personalized learning plans).\n② （例）Some people worry that AI will take away jobs. Others are concerned about privacy and the collection of personal data.\n③ 人間と並んで・協力しながら働く（人間を置き換えるのではなく、AIが人間の隣に立って共同作業をする）という意味。\n④ 筆者は条件付きで肯定的。責任ある形で使えばAIは人類に恩恵をもたらすと述べ、人間の創造的な仕事を支援する立場をとる。（58字）',
-    hint: '①第1段落にmedicine（医療）とeducation（教育）の具体例がある。②第2段落「Some people worry〜」「Others are concerned〜」に注目。③alongside = 〜の横に・並んで。④第3段落のDespit〜の部分に筆者の見解が集約されている。',
+    hint: '①第1段落にmedicine（医療）とeducation（教育）の具体例がある。②第2段落「Some people worry〜」「Others are concerned〜」に注目。③alongside = 〜の横に・並んで。④第3段落のDespite〜の部分に筆者の見解が集約されている。',
     explanation: `【出題意図】
 AIと未来社会をテーマにした200語程度の論説文読解問題。情報の抽出・英語での記述・語句の意味説明・筆者の主張の把握という、記述を含む4問の総合的な読解力と表現力を問う。関大一高・同志社高レベルの入試形式。
 
@@ -594,21 +564,21 @@ Yumi: I'd love to visit Kinkakuji and maybe try some traditional Kyoto cuisine!
 ア. That sounds exciting!
 イ. I think most of the cost is covered by the school.
 ウ. I can't believe we're going abroad.
-エ. It's my first time going to Kyoto.
+エ. I'm a little worried about the cost, though.
 オ. I don't want to go at all.
 カ. We should probably check the notice board for details.
 キ. I've been there many times already.
 ク. That's disappointing news.`,
-    answer: '① ア　② エ　③ イまたはカ　④ カまたはイ（③④はイとカの順序入れ替えでも可）',
+    answer: '① ア　② エ　③ イ　④ カ',
     hint: '①「京都に行きたかった」という発言の前に来る反応。②「費用を自分で払う必要があるか」という話題への導入。③費用についての情報。④「空き時間に何をするか」という次の話題への橋渡し。',
     explanation: `【出題意図】
 学校行事（修学旅行）についての会話文から、文脈に合う応答を選ぶ問題。会話の自然な流れ・登場人物の感情・話題の展開を正確に読み取る力を問う。リスニング代替問題としても機能する、会話の論理的な流れを把握する問題。
 
 【解説】
-①ゆみが「ずっと京都に行きたかった」と述べているので、その前の反応は「わくわくする・楽しそう」など肯定的な表現が来る。ア「楽しそう！」が最適。ウ「海外に行くとは信じられない」は京都なのでNG。ク「残念なお知らせだ」は文脈に反する。②「費用を自分で払うか知ってる？」という質問の前に来る文。エ「京都に行くのは初めて」が自然な流れ（初めてだから費用も気になる）。③費用についての情報→ イ「ほとんどの費用は学校が負担する」、またはカ「掲示板で詳細を確認した方がいい」。どちらも文脈に合うため、③④でイとカの順序が入れ替わってもよい。④「空き時間に何をするか」という次の話題への転換にカ（掲示板確認を提案）またはイが入る。
+①ゆみが「ずっと京都に行きたかった」と述べているので、その前の反応は「わくわくする・楽しそう」など肯定的な表現が来る。ア「楽しそう！」が最適。ウ「海外に行くとは信じられない」は京都なのでNG。ク「残念なお知らせだ」は文脈に反する。②Kenjiが「Me too!」と同意したあと、「費用を自分で払うか知ってる？」と聞く前に来る文。エ「でも費用が少し心配だ」が、費用の質問への自然な前置きになる。（アを②に入れてエを①に入れると、「ずっと行きたかった」と言う前に「費用が心配」と言うことになり、流れが不自然。）③「I'm not sure.」のあと、Yumiが費用について思っていることを述べる→イ「ほとんどの費用は学校が負担すると思う」。直後の「But I heard we'll need to bring some extra money」と逆接でつながる。④Kenjiは費用を知らずに質問した側なので、イ（費用は学校負担だと思う）を言う立場ではない。「That makes sense.」のあと、詳細を確認しようと提案するカ「掲示板で詳細を確認したほうがいい」が自然で、そのあと「空き時間に何をするか」という次の話題に移る。
 
 【注意点】
-会話文選択では選択肢を読む前に会話全体の流れを把握することが大切。NG選択肢の見極めが重要：ウ（京都は国内なので abroad は誤り）、オ（肯定的な会話の流れに合わない）、キ（ケンジが「京都に初めて行きたい」と述べているのと矛盾）。1つ選んだら「前後の発言との整合性」を必ず確認する。
+会話文選択では選択肢を読む前に会話全体の流れを把握することが大切。NG選択肢の見極めが重要：ウ（京都は国内なので abroad は誤り）、オ（肯定的な会話の流れに合わない）、キ（Yumiが「ずっと行きたかった」と言っているのと矛盾）。1つ選んだら「前後の発言との整合性」を必ず確認する。
 
 【関連知識】
 会話の流れを作る表現：Really?（本当に？）= 相手の発言への驚き・関心。That makes sense.（それは理にかなっている・なるほど）= 納得の表現。I'm not sure.（はっきりはわからないけど）= 不確かな情報を伝える前置き。I'd love to〜（ぜひ〜したい）= 強い希望の表現。これらは実際の会話でも頻繁に使われる表現。`,
@@ -626,10 +596,10 @@ Yumi: I'd love to visit Kinkakuji and maybe try some traditional Kyoto cuisine!
 
 （解答用紙には「I think」または「I believe」で書き始めること）`,
     answer: `（解答例1 – 制限すべき立場）
-I think junior high school students should limit their smartphone use. Using smartphones too much can cause sleep problems and make it hard to focus on studying. Students should spend more time on hobbies and face-to-face conversations instead. A limit of one hour per day seems reasonable.（53語）
+I think junior high school students should limit their smartphone use. Using smartphones too much can cause sleep problems and make it hard to focus on studying. Students should spend more time on hobbies and face-to-face conversations instead. A limit of one hour per day seems reasonable.（47語）
 
 （解答例2 – 自由に使うべき立場）
-I believe students should be free to use smartphones every day. Smartphones help us learn new things, communicate with friends, and stay safe when we are away from home. However, we should also be responsible and avoid using them during class or late at night.（47語）`,
+I believe students should be free to use smartphones every day. Smartphones help us learn new things, communicate with friends, and stay safe when we are away from home. However, we should also be responsible and avoid using them during class or late at night.（45語）`,
     hint: '「I think / I believe + 主張」の後に「Because / because / This is because」で理由をつなぐ。具体的な理由を1〜2つ挙げて、最後にまとめの文を書くと30語以上になりやすい。',
     explanation: `【出題意図】
 自分の意見を英語で論理的に述べる英作文問題（意見型）。主張・理由・具体例・まとめという意見文の構成力と、30語以上という語数条件を満たす表現力を同時に問う。関大一高・同志社高の英作文形式。

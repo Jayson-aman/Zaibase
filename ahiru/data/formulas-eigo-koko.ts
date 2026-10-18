@@ -37,7 +37,6 @@ export const eigoKokoFormulas: FormulaSection[] = [
     items: [
       {
         label: "5つの文型と動詞の後ろの形",
-        locked: true,
         formula:
           "SV ／ SVC（S＝C）／ SVO ／ SVOO（人＋物）／ SVOC（O＝C）",
         explanation:
@@ -81,7 +80,6 @@ export const eigoKokoFormulas: FormulaSection[] = [
       },
       {
         label: "There構文と存在を表す言い方",
-        locked: true,
         formula:
           "There is ＋ 単数 ／ There are ＋ 複数 ／ the や所有格がつく名詞には使わない",
         explanation:
@@ -124,7 +122,6 @@ export const eigoKokoFormulas: FormulaSection[] = [
       },
       {
         label: "名詞の数と冠詞の使い分け",
-        locked: true,
         formula:
           "数えられる名詞は a/an か複数形 ／ 数えられない名詞は a をつけず複数形にもしない",
         explanation:
@@ -807,7 +804,7 @@ export const eigoKokoFormulas: FormulaSection[] = [
           "難しい日本語を無理に訳そうとせず、自分が確実に書ける英語に言いかえるのが要点です。「私は感動しました」が書けなければ「私はとてもうれしかった」でよいのです。語数や文数の条件を守らないと、内容が良くても得点になりません。",
         steps: [
           "条件（語数・文数・使う語）に線を引く",
-          "日本語を、自分が書ける easy な日本語に言いかえる",
+          "日本語を、自分が書ける易しい日本語に言いかえる",
           "主語と動詞をはっきりさせる",
           "時制と三単現のsを確かめる",
           "ピリオド・大文字を確かめる",
@@ -815,7 +812,7 @@ export const eigoKokoFormulas: FormulaSection[] = [
         ],
         example: {
           q: "難しい日本語を英語にできないとき、どうしますか。",
-          a: "自分が確実に書ける easy な日本語に言いかえてから英語にする",
+          a: "自分が確実に書ける易しい日本語に言いかえてから英語にする",
         },
         quiz: [
           {

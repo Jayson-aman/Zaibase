@@ -221,6 +221,21 @@ in time は「ぎりぎりでも間に合った」、on time は「ぴったり�
 
 ⚠ 注意：「三日後に会いましょう」は See you in three days. である。after three days としないよう気をつける。`,
       },
+      {
+        heading: 'なぜ朝は in で夜は at なのか、なぜ「〜後に」が in なのか',
+        mangaId: 'eigo_s263_manga',
+        body: `in は「幅のある時間の中に」、at は「一点の時刻に」を表します。朝・午後・夕方は活動する時間の幅としてとらえるので in the morning、時刻（seven）・正午（noon）・真夜中（midnight）は時計の針が一か所を指す一点なので at です。night が at なのは、昔から夜を活動の「幅」ではなく、一日の区切りの「点」のようにとらえてきたからで、理屈より決まった形として覚えます。
+
+「〜後に」が in なのは、in three days が「三日という幅を過ぎたところで」という意味だからです。今を出発点にして未来のことを言うときに使います。after は「〜のあとで」と、過去の出来事を語るときに使います（He came back after two hours.）。日本語の辞書で「後に」を引くと after が出るので、未来にも after を使ってしまう誤りが多く、「未来は in、過去は after」と対で覚えます。
+
+■ 確かめのしかた
+①**幅なら in、一点なら at**：in the morning／in the afternoon／in the evening（the が要る）、at seven／at noon／at midnight／at night（the は付けない）。
+②時刻と時間帯を重ねるときは、せまい方を先に：at six in the morning。
+③「今から〇後に」（未来）→in＋期間（I will be back in two hours.）。過去の話→after＋期間。
+④in time（間に合って）と on time（時間どおりに）を区別する。
+
+★ ここがポイント：in は**幅**、at は**一点**（朝・午後は幅、時刻・正午・夜は点）。「〜後に」は**未来なら in＋期間、過去なら after＋期間**。`,
+      },
     ],
     trapExamples: [
       {
@@ -340,6 +355,7 @@ every Saturday は on Saturdays（毎週土曜日に）と同じ意味を表す�
     sections: [
       {
         heading: '三つの前置詞の元のイメージ',
+        mangaId: 'eigo_s265_manga',
         body: `場所を表す at・on・in も、時の前置詞と同じように「どういう見方をしているか」で決まる。日本語の「〜に」「〜で」だけを手がかりにすると必ず迷うので、イメージごと覚えてしまう。
 
 ■ at ＝ 点
@@ -417,6 +433,7 @@ every Saturday は on Saturdays（毎週土曜日に）と同じ意味を表す�
     sections: [
       {
         heading: 'せまい場所は at、広い場所は in',
+        mangaId: 'eigo_s266_manga',
         body: `at と in の境目は「その場所を一点と見るか、広がりのある空間と見るか」で決まる。とくに「〜に着く」を表す動詞と一緒に問われることが多い。
 
 ■ 到着を表す言い方
@@ -674,7 +691,7 @@ over は「おおいかぶさる」感じなので、橋のように上に広が
 例）The plane is flying above the clouds.（飛行機は雲の上を飛んでいます。）
 
 ■ below（〜より下に）
-例）The temperature was below zero.（気温は零度以下でした。）
+例）The temperature was below zero.（気温は零度より下、氷点下でした。）
 例）Write your name below the line.（線の下に名前を書きなさい。）
 
 ★ ポイント：over と under は「真上・真下」で対、above と below は「高さの比較」で対になっている。`,
@@ -682,6 +699,7 @@ over は「おおいかぶさる」感じなので、橋のように上に広が
       },
       {
         heading: 'over と under の数の意味・on との区別',
+        mangaId: 'eigo_s269_manga',
         body: `over と under には位置以外の意味もあり、そちらも入試でよく問われる。
 
 ■ 数の「〜を越えて／〜未満」
@@ -717,7 +735,7 @@ on は接している、over は接していない。
         trapExplanation: '「未満＝下」と考えて below を選んでしまう。below も「より下」を表すので意味は近く見えるが、年齢や数の「〜未満」には使わない。',
         correctAnswer: 'under six',
         correctExplanation:
-          '年齢や数量が「〜より少ない」ことを表すのは under である。below は温度や線の位置のように、目盛りや基準線より下にあることを表すのに使う（below zero ＝ 零度以下）。「年齢・値段・数は under と over、目盛りは below と above」と使い分ける。',
+          '年齢や数量が「〜より少ない」ことを表すのは under である。below は温度や線の位置のように、目盛りや基準線より下にあることを表すのに使う（below zero ＝ 零度より下）。「年齢・値段・数は under と over、目盛りは below と above」と使い分ける。',
       },
     ],
   },
@@ -742,6 +760,7 @@ on は接している、over は接していない。
     sections: [
       {
         heading: 'between と among の使い分け',
+        mangaId: 'eigo_s270_manga',
         body: `「〜の間に」を表す前置詞は二つあり、いくつのものにはさまれているかで使い分ける。
 
 ■ between ＝ 二つの間
@@ -899,7 +918,7 @@ in front of（〜の前に）／in the middle of（〜の真ん中に）／at th
     targetLevel: 'oyo',
     keyPoints: [
       'near ＝ 近くに（少し離れていてもよい）。by ＝ すぐそばに（near より近い）。',
-      'near は前置詞なので near to my school のように to を入れない。',
+      'near は前置詞なので、ふつう near my school のように to を入れずに書く。',
       'around ＝ 〜の周りに／〜のあちこちに／約〜（数の前では「約」）。',
       'along ＝ 〜に沿って（川・道・かべなど細長いものに沿って）。',
       'against ＝ 〜に寄りかかって／〜に反対して。',
@@ -912,7 +931,7 @@ in front of（〜の前に）／in the middle of（〜の真ん中に）／at th
 ■ near（近くに）
 例）I live near the station.（私は駅の近くに住んでいます。）
 例）There is a park near my house.（私の家の近くに公園があります。）
-near は前置詞なので、後ろに直接名詞を置く。near to とはしない。
+near は前置詞なので、後ろに直接名詞を置く。near to という言い方もあるが、ふつうは to を入れずに書く。
 
 ■ by（すぐそばに）
 例）She was sitting by the window.（彼女は窓ぎわにすわっていました。）
@@ -955,11 +974,11 @@ nearby は一語で「近くに」という副詞なので、後ろに名詞を�
     trapExamples: [
       {
         question: '「私は学校の近くに住んでいます。」の下線部の誤りを直しなさい。　I live near to my school.',
-        wrongAnswer: '誤りはない（near to でよい）',
+        wrongAnswer: '誤りはない（near to のままでよい）',
         trapExplanation: 'next to（〜のとなりに）や close to（〜に近い）という形を覚えているため、near にも to が必要だと考えてしまう。「近い」という意味の語はすべて to を取るように感じられるのが原因である。',
         correctAnswer: 'I live near my school.',
         correctExplanation:
-          'near はそれ自体が前置詞なので、後ろに直接名詞を置く。to を入れるのは close to my school のように close を使うときである。next to は next が形容詞なので to が必要、near は前置詞なので不要、と語ごとに覚え分ける。',
+          'near はそれ自体が前置詞なので、後ろに直接名詞を置き、ふつうは to を入れない（near to という形も使われるが、入試の答案では near my school と書く）。to が必要なのは close to my school や next to my school のように close・next を使うときである。語ごとに覚え分ける。',
       },
       {
         question: '次の英文の下線部の意味を答えなさい。　There were around thirty students in the gym.',
@@ -1250,6 +1269,7 @@ on と in で分けたのと同じ理由で、乗り物の大きさによって�
     sections: [
       {
         heading: '四つの進み方を絵で区別する',
+        mangaId: 'eigo_s276_manga',
         body: `移動を表す前置詞は、進む道すじの形で決まる。日本語ではどれも「〜を」と言ってしまうので、絵で覚えるのがいちばん確実である。
 
 ■ through ＝ 中を通り抜ける
@@ -1588,11 +1608,12 @@ How long have you lived here?（どのくらいここに住んでいますか。
       'by ＝ 〜までに（その時までに一回すればよい期限）。',
       '続く動詞（wait, stay, sleep, work）には until、一回で終わる動詞（come, finish, return）には by。',
       'until は接続詞にもなる（until he comes）。by は前置詞だけで、by the time ... の形で文を続ける。',
-      '「〜までに」の by は、時と条件の副詞節と同じく未来のことでも現在形と組むことがある。',
+      'by the time ＋ 文の節は、時を表す節なので、未来のことでも現在形で書く（will を使わない）。',
     ],
     sections: [
       {
         heading: '線の until、点の by',
+        mangaId: 'eigo_s280_manga',
         body: `どちらも日本語では「〜まで」だが、until は終わりまで続く線、by は締め切りの点である。
 
 ■ until（till）＝ 〜までずっと
@@ -1701,6 +1722,7 @@ during ＋ 名詞 ／ while ＋ 文
       },
       {
         heading: 'while と when のちがい',
+        mangaId: 'eigo_s281_manga',
         body: `while も when も「〜のとき」と訳せるが、時間のはばがちがう。
 
 ■ while ＝ 〜している間（続いている時間）
@@ -1898,6 +1920,21 @@ be made into ＋ 製品（〜に作りかえられる）：Milk is made into che
 
 ⚠ 注意：「約十分間」は for about ten minutes の順に書く。about for とはしない。`,
       },
+      {
+        heading: 'なぜ of は語順が逆になり、なぜ of と from を使い分けるのか',
+        mangaId: 'eigo_s283_manga',
+        body: `英語は「中心になる語を先に言い、説明をあとに足す」ことばです。「その部屋のドア」なら、中心は「ドア」なので the door を先に言い、どの部屋のドアかを of the room であとから足します。だから「A の B」は B of A の順になり、日本語の順のまま the room of the door と書くと、中心が「部屋」になって意味が逆転します。長い日本語ほど、うしろから訳すと英語の順になります。
+
+be made of と be made from の区別は、**材料の形が残っているか**で決まります。木の机は見れば木だと分かるので of、チーズは見ても牛乳だと分からないので from。of は「そのものの一部・材料そのまま」、from は「出発点から変化した」という前置詞の意味のちがいがそのまま表れています。about が「約」を表すときは、about ten minutes のように数のすぐ前に置くので、for about ten minutes の順になります。
+
+■ 確かめのしかた
+①「A の B」を英語にしたら、**中心の語（B）が先**か。the title of this book（この本の題名）。
+②材料は**見て分かるか**。分かる（wood・paper・stone・glass）→of。分からない（milk・grapes）→from。
+③about が「約」なら、**数のすぐ前**に置く。for about thirty minutes（× about for）。at about seven、in about a week。
+④of の三つの使い方：所有（the name of the city）、部分・分量（a cup of tea）、材料（made of wood）。
+
+★ ここがポイント：英語は**中心の語を先に言う**ので「A の B」は **B of A**。材料は**見て分かるなら of、分からないなら from**。「約」の about は数のすぐ前。`,
+      },
     ],
     trapExamples: [
       {
@@ -1939,6 +1976,7 @@ be made into ＋ 製品（〜に作りかえられる）：Milk is made into che
     sections: [
       {
         heading: 'like と as のちがい',
+        mangaId: 'eigo_s284_manga',
         body: `どちらも「〜のように」と訳せるが、実際にそうなのかどうかで意味が大きく変わる。
 
 ■ like ＝ 〜のように（似ているだけ）
@@ -2379,6 +2417,7 @@ I don't know（何を知らないのか分からない）→ 名詞節
     sections: [
       {
         heading: '条件の if と、未来を現在形で表す規則',
+        mangaId: 'eigo_s289_manga',
         body: `if は「もし〜なら」と条件を表す接続詞である。時を表す接続詞と同じく、条件を表す副詞節の中では未来のことでも現在形で書く。
 
 ■ 基本の形
@@ -2462,7 +2501,7 @@ know の後ろは「知らない内容」なので、名詞節と考えるのが
       'because of ＋ 名詞。形で使い分ける。',
       'though（although）＝ 〜だけれども（譲歩）。',
       'though と but を同じ文で二つ使わない。because と so も同様。',
-      'Why ...? への答えは Because ... で始める（この場合だけ because で文を始めてよい）。',
+      'Why ...? への答えは Because ... で始める（この場合だけ Because ～ だけで答えの文になる）。',
     ],
     sections: [
       {
@@ -2476,7 +2515,7 @@ know の後ろは「知らない内容」なので、名詞節と考えるのが
 ■ Why の答えは Because
 例）Why were you late?（なぜ遅れたのですか。）
 　－ Because I missed the bus.（バスに乗り遅れたからです。）
-ふつう because で文を始めるのは避けるが、Why への答えのときは Because だけで文を作ってよい。
+Because ～ だけで文を終えるのはふつう避けるが（主となる文が必要）、Why への答えのときは Because ～ だけで文を作ってよい。
 
 ■ since ／ as も理由を表す
 例）Since it was cold, we stayed inside.（寒かったので、私たちは中にいました。）

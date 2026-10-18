@@ -81,6 +81,21 @@ run — ran — run　　　　become — became — become
 
 ★ ポイント：現在完了で誤りが出るときは、たいてい過去分詞のところで過去形を書いてしまっている。まず過去分詞の欄を口に出して確かめる習慣をつける。`,
       },
+      {
+        heading: 'なぜ現在完了という形があり、なぜ has のあとに s を付けないのか',
+        mangaId: 'koko_eigo_s111_manga',
+        body: `「大阪に住んで10年です」は、10年前に始まって**今も続いている**ことです。過去形（lived）は今と切れた過去の事実、現在形（lives）は今だけの事実で、どちらも「過去から今までの幅」を表せません。過去と今をつなぐためだけに用意された形が現在完了（have／has＋過去分詞）で、数直線の矢印の右端が必ず「今」に届いています。右端が今に届かない話（He lived in Osaka for ten years.＝今は住んでいない）には使えません。
+
+has は「三単現の s」が付いた形ではなく、**have の3人称単数形**です。主語に合わせて形を変える役目は has が引き受けているので、そのあとの過去分詞は lived のままで、× has lives とはなりません。現在完了で誤りが出るのは、たいてい過去分詞の欄に過去形を書いてしまうとき（× have saw→have seen）です。
+
+■ 確かめのしかた
+①since・for・「ずっと」があれば現在完了。since 2016 に lives（現在形）を入れていないか→has lived。
+②主語が3人称単数なら has、それ以外は have。has のあとに s を付けない。
+③過去分詞を口に出して確かめる：過去形と同じもの（had・made・bought・taught・found）と、ちがうもの（been・gone・done・seen・eaten・taken・written・spoken・known・given）。原形＝過去分詞の come・run・become に注意。
+④状態動詞（know・live・be・have・want・like）は進行形にしない。× I am knowing→I have known。
+
+★ ここがポイント：現在完了は**過去と今をつなぐ**ための形で、矢印の右端が今に届く。has は**have の3人称単数形**なので過去分詞に s を付けない。誤りはたいてい過去分詞の欄で起きる。`,
+      },
     ],
     trapExamples: [
       {
@@ -122,6 +137,7 @@ run — ran — run　　　　become — became — become
     sections: [
       {
         heading: 'for と since は指しているものがちがう',
+        mangaId: 'koko_eigo_s112_manga',
         figureId: 'lf_kokoeigoext04_112',
         body: `for も since も継続用法とセットで使うが、指しているものが根本的にちがう。
 
@@ -299,6 +315,7 @@ For about two months.
     sections: [
       {
         heading: '状態動詞と動作動詞',
+        mangaId: 'koko_eigo_s114_manga',
         body: `英語の動詞は、大きく「動作動詞」と「状態動詞」に分けられる。この区別が進行形を使えるかどうかを決める。
 
 ■ 動作動詞（動きがあり、始まりと終わりがある）
@@ -391,6 +408,7 @@ live は状態に近いが動作としても扱えるため、I have lived here 
       {
         heading: '4通りの言いかえを1本の数直線で見る',
         figureId: 'lf_kokoeigoext04_115',
+        mangaId: 'koko_eigo_s115_genzaikanryo_manga',
         body: `次の4文はすべて同じ状況を表している。試験ではこの間の書きかえが問われる。
 
 ① He died five years ago.（彼は5年前に亡くなった）
@@ -436,7 +454,7 @@ It began to rain two hours ago.
 
 ⚠ 注意：「最後に会ったのは2年前」を現在完了で言いかえるときは否定文になる。「2年間会っていない」と発想を裏返すのがコツで、ここを肯定文のままにすると誤りになる。
 
-★ ポイント：時間の言いかえは「ago ↔ for ↔ since」の三角形。ago は過去形とだけ、for と since は現在完了とだけ組む。この対応表が頭に入っていれば、初見の文でも同じ手順で処理できる。`,
+★ ポイント：時間の言いかえは「ago ↔ for ↔ since」の三角形。ago は過去形とだけ組み、since は現在完了と組む（for は現在完了にも過去形にも使えるが、「今まで続いている」と言いたいときは現在完了と組む）。この対応表が頭に入っていれば、初見の文でも同じ手順で処理できる。`,
       },
     ],
     trapExamples: [
@@ -621,7 +639,7 @@ yet を肯定文で使って「もう〜した」とは言わない。
 × I have yet finished it.
 ○ I have already finished it.
 
-⚠ 注意：already は l が2つ、そして l の後ろの e に注意。× allready／× alredy は綴りの誤り。同じく yet は3文字だけなので、疑問文で yes と書きまちがえないこと。
+⚠ 注意：already は all ＋ ready が合わさった語で、l は1つだけ。× allready（l を2つ書く）／× alredy（ea の a を落とす）は綴りの誤り。同じく yet は3文字だけなので、疑問文で yes と書きまちがえないこと。
 
 ■ 語順の練習
 （　）内を並べかえる問題では、already は have/has の直後、yet は文末という原則がそのまま答えになる。
@@ -766,6 +784,7 @@ B: Yes, I have. I have been there twice.
     sections: [
       {
         heading: 'been と gone のちがいは「今どこにいるか」',
+        mangaId: 'koko_eigo_s119_manga',
         figureId: 'lf_kokoeigoext04_119',
         body: `be動詞の過去分詞 been と、go の過去分詞 gone は、どちらも「行く」に関係するが意味が正反対になる。
 
@@ -856,6 +875,7 @@ I have lost my key.（なくして、今も手元にない）
     sections: [
       {
         heading: '結果用法でよく使う動詞',
+        mangaId: 'koko_eigo_s120_manga',
         figureId: 'lf_kokoeigoext04_120',
         body: `結果用法は「過去に起きた出来事の結果が、今も残っている」ことを表す。次の動詞がよく使われる。
 
@@ -1052,6 +1072,7 @@ I have cleaned this room three times.（経験）→ この部屋を3回そう�
       {
         heading: 'never と ever の位置と意味',
         figureId: 'lf_kokoeigoext04_122',
+        mangaId: 'koko_eigo_s122_manga',
         body: `経験用法の否定と疑問は、never と ever が担当する。
 
 ■ never（一度も〜ない）
@@ -1207,6 +1228,21 @@ When 〜? → 過去の一点 → 過去形で答える（現在完了とは使�
 ○ How many times have you been to Kyoto?
 
 ★ ポイント：疑問詞ごとに「どの用法とセットか」を覚えておくと、長文の設問でも答えの形をすぐ決められる。`,
+      },
+      {
+        heading: 'なぜ1回・2回だけ once・twice なのか、なぜ How many times と How long を分けるのか',
+        mangaId: 'koko_eigo_s123_manga',
+        body: `once と twice は、古い英語から残った**1回・2回専用の語**です。two times でも通じますが、英語では twice が自然で、入試の答えも twice です。3回以上は「数＋times」で規則的に作ります。回数は文末に置き、いつのことかは問わないので、経験用法（過去に打たれた点の数）と相性が合います。
+
+How many times（何回）と How long（どのくらいの期間）を分けるのは、たずねているものが**回数**（経験用法）か**期間**（継続用法）かで、答え方も Three times.／For three years. と変わるからです。When は過去の一点をたずねるので、過去形とだけ組み、現在完了とは組めません。疑問詞のあとは疑問文の語順（have／has＋主語＋過去分詞）です。
+
+■ 確かめのしかた
+①1回→once、2回→twice、3回以上→〇 times。× two times（入試では twice）。位置は文末。
+②下線部が**回数**なら How many times、**期間**（for 〇 years）なら How long、**時点**なら When（過去形）。
+③How many times のあとが**疑問文の語順**か（× How many times you have been→have you been）。
+④How often は現在形と組むと頻度（Twice a week.）。once a week・twice a month・once upon a time も確かめる。
+
+★ ここがポイント：once・twice は**1回・2回専用の古い語**で、3回以上は数＋times。**回数は How many times（経験）、期間は How long（継続）、時点は When（過去形）**と、たずねるものと用法をセットにする。`,
       },
     ],
     trapExamples: [
@@ -1541,6 +1577,7 @@ know／live（ただし live は例外的に可）／be／have（持っている
     sections: [
       {
         heading: '二つの形の役割分担',
+        mangaId: 'koko_eigo_s127_genzaikanryoshinkoukei_manga',
         body: `現在完了と現在完了進行形は、どちらも過去から今までをつなぐが、注目点がちがう。
 
 ■ 現在完了進行形：まだ終わっていない、続いている最中
@@ -1664,6 +1701,7 @@ It started to rain three hours ago. It is still raining now.
       },
       {
         heading: '判定の手順',
+        mangaId: 'koko_eigo_s128_manga',
         body: `試験で迷ったときに使える判定手順をまとめる。
 
 ■ 手順①：文中に時を表す語句があるか探す
@@ -1729,6 +1767,7 @@ It started to rain three hours ago. It is still raining now.
     sections: [
       {
         heading: '使える語句・使えない語句',
+        mangaId: 'koko_eigo_s129_manga',
         figureId: 'lf_kokoeigoext04_129',
         body: `現在完了は右端が必ず「今」に届く表現である。だから「今から切れた一点」を指す語とは同居できない。
 
@@ -1854,6 +1893,7 @@ lose（なくす）→ not have（持っていない）
       },
       {
         heading: '否定を使う書きかえ',
+        mangaId: 'koko_eigo_s130_manga',
         body: `「最後に〜したのは…前」という文は、否定の現在完了に書きかえる。
 
 ■ 型
@@ -2034,6 +2074,7 @@ lose（なくす）→ not have（持っていない）
     sections: [
       {
         heading: '受動態の形と意味',
+        mangaId: 'koko_eigo_s132_judotai_manga',
         body: `英語の文は、動作を「する側」を主語にするか「される側」を主語にするかで2通りに書ける。
 
 ■ 能動態（する側が主語）
@@ -2063,6 +2104,7 @@ be動詞は主語と時制に合わせる。
       },
       {
         heading: '受動態を使う理由',
+        mangaId: 'koko_eigo_s132b_manga',
         body: `なぜわざわざ「される側」を主語にするのか。理由がわかると、長文で受動態が出てきたときの読み方も変わる。
 
 ■ 理由①：動作主がわからない・言う必要がない
@@ -2160,6 +2202,7 @@ I → me／we → us／he → him／she → her／they → them／you → you／
       },
       {
         heading: '受動態にするときの注意点',
+        mangaId: 'koko_eigo_s133_manga',
         body: `機械的に書きかえられない場合がある。次の点に注意する。
 
 ■ 目的語が2つある文（SVOO）
@@ -2316,6 +2359,21 @@ We were invited to the party.
 
 ★ ポイント：受動態の問題で空所に入るのはほぼ必ず過去分詞である。空所の前に be動詞があったら、迷わず3番目の欄を思い出す。`,
       },
+      {
+        heading: 'なぜ受動態の失敗は文法ではなく過去分詞で起きるのか',
+        mangaId: 'koko_eigo_s134_manga',
+        body: `受動態の手順（目的語を主語に→be動詞→過去分詞→by）は数行で覚えられます。しかし過去分詞が出てこなければ、手順を知っていても文が書けません。不規則動詞は数が多いですが、変化のしかたは A-A-A（put・cut・read）、A-B-B（make－made－made）、A-B-C（write－wrote－written）、A-B-A（come－came－come）の**4つの型**しかありません。型でまとめると、一つの動詞から同じ型の仲間が引き出せ、負担が一気に減ります。
+
+受動態で使うのは3番目の欄だけです。A-B-C 型で過去形（broke）を入れてしまうのは、2番目で止まって3番目まで確認していないからです。-en で終わる過去分詞（written・spoken・broken・eaten・taken・given）は受動態で頻出なので、原形と過去分詞を対にして声に出します。
+
+■ 確かめのしかた
+①空所の前に **be動詞があれば3番目の欄**。過去形（broke）を入れていないか→broken。
+②-ed を付けていないか（× builded→built）。型で仲間を確認（build・buy・teach・catch＝A-B-B）。
+③つづり：written・forgotten は t が2つ、grown・known の n を落とさない、read は3つとも同じつづりで発音がレッド。
+④A-B-A 型（come・run・become）は原形と過去分詞が同じ。頻出の受動態（was built・was written・is spoken・was taken・was broken・is known・were held）を例文ごと確かめる。
+
+★ ここがポイント：受動態の失敗は**過去分詞が出てこないこと**で起きるので、不規則動詞を**4つの型**でまとめる。be動詞のあとは**3番目の欄**、A-B-C 型で2番目（過去形）で止めない。`,
+      },
     ],
     trapExamples: [
       {
@@ -2357,6 +2415,7 @@ We were invited to the party.
     sections: [
       {
         heading: 'by を書く場合・書かない場合',
+        mangaId: 'koko_eigo_s135_manga',
         body: `受動態の by 〜 は「だれによって」を示すが、いつも必要なわけではない。
 
 ■ by を書く場合
@@ -2450,6 +2509,7 @@ They speak English in Australia. → English is spoken in Australia.
     sections: [
       {
         heading: '受動態にできない動詞',
+        mangaId: 'koko_eigo_s136_manga',
         body: `受動態が作れるのは「目的語をとる他動詞」だけである。目的語がなければ、主語に持ってくるものがない。
 
 ■ 自動詞（目的語をとらない）
@@ -2682,6 +2742,7 @@ have か has かは主語で決まる。been と過去分詞の部分は変わ�
       },
       {
         heading: '過去形の受動態・過去完了との区別',
+        mangaId: 'koko_eigo_s138_manga',
         body: `似た形が並ぶので、それぞれの意味を区別しておく。
 
 ■ 3つの形を並べる
@@ -2906,6 +2967,21 @@ The music could be heard from far away.
 
 ★ ポイント：助動詞・進行形・完了形のどれと組み合わせても、受動態の核は「be ＋ 過去分詞」で変わらない。be の形（be / being / been / is / was）だけが変化する。`,
       },
+      {
+        heading: 'なぜ助動詞のあとは be で、なぜ「見える」が受動態になるのか',
+        mangaId: 'koko_eigo_s140_manga',
+        body: `助動詞のあとは必ず動詞の原形が来ます。受動態の be動詞も動詞なので、助動詞のあとでは**原形 be** になります。だから can be seen・must be finished・should be sent と、助動詞＋be＋過去分詞の3語で1セットです。be を落とした × can seen は、助動詞のあとに過去分詞が直接来ていて文になりません。進行形の受動態（is being built）や完了形の受動態（has been built）でも、核の「be＋過去分詞」は変わらず、be の形（be・being・been・is・was）だけが変わります。
+
+「ここから富士山が見える」が Mt. Fuji can be seen from here. と受動態になるのは、英語では「富士山が（人に）見られうる」と、**見られる側（富士山）を主語にして状況を説明する**言い方が自然だからです。I can see Mt. Fuji. も誤りではありませんが、看板や案内のように「だれが」を言わない状況説明では受動態が使われます。
+
+■ 確かめのしかた
+①助動詞＋**be**＋過去分詞の3語がそろっているか。× can seen、× can is seen→can be seen。
+②否定は助動詞＋not＋be＋過去分詞（cannot be seen・must not be broken）、疑問は助動詞を主語の前に（Can this word be used?）。
+③能動態に書きかえるときは by のあとを主語にし、助動詞のあとは**原形**（× must used→must use）。by がなければ we／people を補う。
+④進行形の受動態は being を落とさない（is being built＝今建てられている／is built＝建てられる習慣）。核の be＋過去分詞は、どの形でも変わらない。
+
+★ ここがポイント：助動詞のあとは原形なので受動態の be動詞も**原形 be**（助動詞＋be＋過去分詞）。「見える」は**見られる側を主語にした状況説明**なので受動態が自然。どの形でも核は be＋過去分詞。`,
+      },
     ],
     trapExamples: [
       {
@@ -2948,6 +3024,7 @@ The music could be heard from far away.
     sections: [
       {
         heading: '3つの前置詞を意味で分ける',
+        mangaId: 'koko_eigo_s141_manga',
         body: `known は「知られている」だが、後ろの前置詞によって何を言っているかが変わる。
 
 ■ be known to 〜（〜に知られている）
@@ -3078,6 +3155,7 @@ be satisfied with（〜に満足する）
       },
       {
         heading: '感情を表す受動態',
+        mangaId: 'koko_eigo_s142_manga',
         body: `英語では「驚く」「喜ぶ」「興奮する」などの感情を、受動態で表すことが多い。日本語では能動的に訳す。
 
 ■ be surprised at 〜（〜に驚く）
@@ -3149,6 +3227,7 @@ be tired from 〜＝「〜で疲れる」　I am tired from working all day.
     sections: [
       {
         heading: 'of と from の使い分け',
+        mangaId: 'koko_eigo_s143_manga',
         body: `made の後ろの前置詞は、材料が元の姿をとどめているかどうかで決まる。
 
 ■ be made of 〜（材料が見てわかる）
@@ -3255,6 +3334,7 @@ up of → 構成要素
     sections: [
       {
         heading: '2通りの受動態の作り方',
+        mangaId: 'koko_eigo_s144_manga',
         body: `目的語を2つとる動詞（SVOO）の文は、受動態が2通り作れる。
 
 ■ もとの文

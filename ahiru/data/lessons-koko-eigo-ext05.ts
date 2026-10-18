@@ -187,6 +187,7 @@ Can you 〜?（〜してくれますか＝依頼）／Can I 〜?（〜しても�
     sections: [
       {
         heading: 'can が使えない場所を be able to が埋める',
+        mangaId: 'koko_eigo_s148_manga',
         figureId: 'lf_kokoeigoext05_148',
         body: `can は便利だが、たった二つの形（can・could）しか持たない。未来を表す will や、完了形の have、不定詞の to といっしょに使いたいとき、can では対応できない。英語には「助動詞を二つ並べてはいけない」という決まりがあるからである。
 
@@ -301,6 +302,7 @@ will not be able to の語順で、not は will のうしろに入る。
       },
       {
         heading: '②控えめ・丁寧を表す could',
+        mangaId: 'koko_eigo_s149_manga',
         body: `過去形をわざと使うと、「今ここ」から一歩引いた言い方になる。英語ではこれを丁寧さとして利用する。
 
 ■ Could you 〜?（〜してくださいませんか）
@@ -385,6 +387,7 @@ Could you 〜? / Could I 〜? / could be 〜 の三つの形を見たら、ほ�
       },
       {
         heading: '例外：見えた・聞こえた・わかった は could',
+        mangaId: 'koko_eigo_s150_manga',
         body: `一回きりの出来事でも、次のグループの動詞は could を使うのが自然である。
 
 ■ 知覚・心理を表す動詞
@@ -608,6 +611,7 @@ might を「〜だったかもしれない」と訳すのは誤りで、過去�
     sections: [
       {
         heading: '確信の強さで並べる',
+        mangaId: 'koko_eigo_s153_manga',
         figureId: 'lf_kokoeigoext05_153',
         body: `同じ場面を、助動詞だけ変えて言ってみる。
 
@@ -774,7 +778,7 @@ must で聞かれたのだから must で答える、と考えて No, you mustn'
       'have to＋動詞の原形で「〜しなければならない」。主語が三人称単数なら has to。',
       'have to は一般動詞の文。疑問・否定には do / does / did を使う。',
       'must は現在の意味しか表せない。過去は had to、未来は will have to。',
-      'must は話し手の judgment（判断・気持ち）、have to は外からの事情、というのが基本の感じ分け。',
+      'must は話し手の判断・気持ち、have to は外からの事情、というのが基本の感じ分け。',
       '発音は have to ＝ハフトゥ、has to ＝ハストゥ。to の前で音が変わる。',
     ],
     sections: [
@@ -810,6 +814,7 @@ must は現在にしか使えないので、過去・未来・他の助動詞と
       },
       {
         heading: 'must と have to の意味のちがい',
+        mangaId: 'koko_eigo_s155_musthaveto_manga',
         body: `二つとも「〜しなければならない」と訳せるが、どこから来た義務なのかが違う。
 
 ■ must＝話し手の中から出てくる義務
@@ -877,6 +882,7 @@ must は現在にしか使えないので、過去・未来・他の助動詞と
     sections: [
       {
         heading: 'must not の形と強さ',
+        mangaId: 'koko_eigo_s156_manga',
         body: `must not は「〜してはいけない」という禁止を表す。学校の規則、公共の場の掲示、親から子への注意など、守らせたい場面で使う。
 
 ■ 形
@@ -965,6 +971,7 @@ must には過去形がないため、「〜してはいけなかった」をそ
     sections: [
       {
         heading: 'not がどこを打ち消しているか',
+        mangaId: 'koko_eigo_s157_manga',
         figureId: 'lf_kokoeigoext05_157',
         body: `二つの文を並べて、意味の差を確かめる。
 
@@ -1060,6 +1067,7 @@ need not のうしろは原形（needn't worry）、don't need to のうしろ�
       {
         heading: '義務の must と推量の must',
         figureId: 'lf_kokoeigoext05_158',
+        mangaId: 'koko_eigo_s158_manga',
         body: `must の二つの意味を、同じ主語で並べてみる。
 
 　You must go home now.　もう家に帰らなければならない。（義務）
@@ -1181,6 +1189,7 @@ must ⇄ have to の書きかえが成り立つのは、義務の意味のとき
       },
       {
         heading: 'didn\'t have to の意味を取りちがえない',
+        mangaId: 'koko_eigo_s159_manga',
         body: `■ didn't have to＝「する必要がなかった」
 例）I didn't have to pay for the ticket. My friend bought it for me.
 　（チケット代を払う必要がなかった。友達が買ってくれたから）
@@ -1365,6 +1374,7 @@ Had I better 〜? という形もあるが、実際にはあまり使わない�
       },
       {
         heading: '強さと、使う相手',
+        mangaId: 'koko_eigo_s161_manga',
         body: `■ 「そうしないと困る」という含み
 had better は、そうしなかった場合に良くない結果が起こることをほのめかす言い方である。
 例）You'd better see a doctor.（医者に行ったほうがいい。行かないと悪化するよ）
@@ -1547,6 +1557,7 @@ had better は上から言う響きがあるので、目上の人や初対面の
       },
       {
         heading: '時・条件の副詞節では現在形',
+        mangaId: 'koko_eigo_s163_manga',
         body: `未来のことを言う文でも、when や if で始まる部分の中では will を使わない。これは英語の大きな決まりの一つである。
 
 例）I will call you when I arrive at the station.
@@ -1824,6 +1835,7 @@ live / be / have / like / know などの状態を表す語には used to しか�
       },
       {
         heading: 'be used to 〜ing との区別',
+        mangaId: 'koko_eigo_s166_manga',
         body: `形が似ていてまぎらわしい三つを並べる。
 
 ■ ①used to＋動詞の原形（以前は〜していた）
@@ -2177,6 +2189,7 @@ How about だけが ing になる。about が前置詞だからである。
     sections: [
       {
         heading: '丁寧さの階段',
+        mangaId: 'koko_eigo_s170_manga',
         figureId: 'lf_kokoeigoext05_170',
         body: `相手に行動を頼む形を、気軽なものから順に並べる。
 
@@ -2296,6 +2309,7 @@ How about だけが ing になる。about が前置詞だからである。
       },
       {
         heading: 'Would you mind 〜? の答えが逆になる理由',
+        mangaId: 'koko_eigo_s171_manga',
         body: `■ mind の意味
 mind は「いやだと思う・気にする」という意味の動詞である。うしろには動名詞（〜ing）が来る。
 例）Would you mind opening the window?
@@ -2504,6 +2518,21 @@ Would you mind 〜? のほうが丁寧だが、答え方は同じである。
 ■ 解き方の手順
 ①場面（店・道・電話・教室）を確認する　②話し手の立場（店員か客か、かける側か受ける側か）を確認する　③その場面の決まり文句から選ぶ
 選択肢を一つずつ訳すより、この三段階のほうが速く正確である。`,
+      },
+      {
+        heading: 'なぜ電話では I am Ken. と言わず、なぜ場面で選ぶと速いのか',
+        mangaId: 'koko_eigo_s173_manga',
+        body: `電話では相手に顔が見えないので、英語では「今話しているこの声が」という意味で **This is Ken.** と言い、「私です」も **Speaking.** と答えます。I am Ken. は目の前で自己紹介するときの言い方で、電話の習慣ではありません。Here you are. が品物を手渡すときだけの言葉なのは、「はい、これがあなたのものです」と物を差し出す動作そのものを表すからで、行動を許す Go ahead. とは場面がちがいます。
+
+会話文の空所補充を「場面→話し手の立場→決まり文句」の三段階で解くのは、会話の決まり文句が**場面と立場で決まっている**からです。店員か客か、かける側か受ける側かが分かれば、候補は数個にしぼれます。選択肢を一つずつ訳すより速く、正確です。
+
+■ 確かめのしかた
+①**場面**（店・道・電話）と**話し手の立場**を先に確かめてから決まり文句を選ぶ。
+②電話：This is Ken.（× I am Ken.）／Speaking.（× I am.）／May I speak to 〜?／Hold on, please.／Can I take a message?
+③買い物：May I help you?→Yes, please. I'm looking for 〜.／No, thank you. I'm just looking.／Can I try it on?／I'll take it. 手渡すときは Here you are.（Yes, please. は頼む側）。
+④道案内：Could you tell me the way to 〜?／Shall I show you the way?／I'm a stranger here. 聞き返しは Pardon?／Could you say that again?
+
+★ ここがポイント：電話は顔が見えないので **This is 〜／Speaking.**。会話の決まり文句は**場面と立場で決まる**ので、三段階で選ぶ。Here you are. は**手渡す動作**の言葉。`,
       },
     ],
     trapExamples: [
@@ -2966,6 +2995,7 @@ How のうしろに来るのは形容詞か副詞だけである。名詞があ�
       },
       {
         heading: 'What ⇄ How の書きかえ',
+        mangaId: 'koko_eigo_s178_manga',
         body: `同じ内容を、What の文でも How の文でも言える場合がある。入試ではこの書きかえが頻出する。
 
 ■ 型①：be動詞の文
@@ -3039,6 +3069,7 @@ good（形容詞）→ well（副詞）と形が変わることに注意する�
     sections: [
       {
         heading: '作り方の三手順',
+        mangaId: 'koko_eigo_s179_manga',
         figureId: 'lf_kokoeigoext05_179',
         body: `付加疑問文は「〜ですね・〜でしょう」と相手に確認する言い方である。作り方は次の三手順で決まる。
 
@@ -3163,6 +3194,7 @@ be動詞・助動詞・do の否定の短縮形を文頭に置く。
       {
         heading: '答え方——内容で決める',
         figureId: 'lf_kokoeigoext05_180',
+        mangaId: 'koko_eigo_s180_manga',
         body: `英語の Yes / No は、質問の形とは無関係に、答えの中身で決まる。
 
 ■ 原則

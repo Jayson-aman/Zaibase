@@ -51,10 +51,15 @@ function sanitizeHistory(
         } else if (
           b.type === "image" &&
           b.source &&
+          b.source.type === "base64" &&
           typeof b.source.data === "string" &&
           b.source.data.length <= 200000
         ) {
-          blocks.push(b);
+          // 余計な項目（cache_control など）を持ちこませない。許可した形に作り直す
+          const mt = ["image/jpeg", "image/png", "image/gif", "image/webp"].includes(b.source.media_type)
+            ? b.source.media_type
+            : "image/jpeg";
+          blocks.push({ type: "image", source: { type: "base64", media_type: mt, data: b.source.data } });
         }
       }
       if (!blocks.length) continue;
@@ -114,7 +119,7 @@ function sanitizeHistory(
  * 画像base64のサイズ上限チェック（巨大画像によるトークン濫用・メモリ枯渇の防止）。
  * デフォルト上限は約5MB相当。
  */
-function assertImageSize(imageBase64, maxChars = 7000000) {
+function assertImageSize(imageBase64, maxChars = 6500000) {
   if (imageBase64 == null) return;
   if (typeof imageBase64 !== "string") {
     throw new HttpsError("invalid-argument", "画像データが不正です");

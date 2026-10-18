@@ -38,8 +38,28 @@ const ANTHROPIC_API_KEY = defineSecret("ANTHROPIC_API_KEY");
 const MONTHLY_SESSION_LIMIT = 18;
 const TURN_LIMIT = 6;
 
-function monthKey() {
-  return new Date().toISOString().slice(0, 7);
+const { jstMonth: monthKey } = require("./_usage");
+
+/**
+ * AI が答えられなかったとき、先に消費した分（月の回数・1問の質問回数・無料体験）を戻す。
+ * 戻せなくても、本来のエラーを隠さない。
+ */
+async function refundTutorTurn(uid, sessionId, wasNewSession) {
+  try {
+    const usageRef = db.collection("aiTutorUsage").doc(uid);
+    const sessionRef = db.collection("aiTutorSessions").doc(`${uid}_${sessionId}`);
+    await db.runTransaction(async (tx) => {
+      const [u, s] = await Promise.all([tx.get(usageRef), tx.get(sessionRef)]);
+      if (wasNewSession && u.exists && u.data().month === monthKey() && (u.data().sessionsUsed ?? 0) > 0) {
+        tx.update(usageRef, { sessionsUsed: u.data().sessionsUsed - 1, updatedAt: FieldValue.serverTimestamp() });
+      }
+      if (s.exists && (s.data().turnCount ?? 0) > 0) {
+        tx.update(sessionRef, { turnCount: s.data().turnCount - 1, updatedAt: FieldValue.serverTimestamp() });
+      }
+    });
+  } catch (e) {
+    console.error("refundTutorTurn failed", e);
+  }
 }
 
 async function getOrCreateSession(uid, sessionId, isNewSession) {
@@ -117,7 +137,8 @@ exports.askTutor = onCall(
       isNewSession = false,
     } = req.data ?? {};
 
-    if (!sessionId || typeof sessionId !== "string" || sessionId.length > 128)
+    // sessionId は Firestore のドキュメントIDの一部になる。「/」などを含むと、別の階層に書きこめてしまう
+    if (!sessionId || typeof sessionId !== "string" || !/^[A-Za-z0-9_-]{1,100}$/.test(sessionId))
       throw new HttpsError("invalid-argument", "sessionId が不正です");
     if (!questionText && !imageBase64)
       throw new HttpsError("invalid-argument", "質問文または画像が必要です");
@@ -132,27 +153,55 @@ exports.askTutor = onCall(
     // 課金判定は RevenueCat を正とする。users/{uid}.tier は書き込み処理が無く
     // 常に free になってしまうため、単独では課金者を判定できない。
     const userRef = db.collection("users").doc(uid);
-    const userSnap = await userRef.get();
-    const userData = userSnap.exists ? userSnap.data() : {};
-    const isMax = (await hasMaxAccess(uid)) === true;
-    const trialAiUsed = userData?.trialAiUsed ?? false;
+    const maxStatus = await hasMaxAccess(uid);
+    const isMax = maxStatus === true;
+    // 会員状態が取れなかった（課金の確認先が一時的に落ちている）ときは、Max の人を無料扱いにして
+    // 無料体験を使い切らせたり、「使い切りました」と出したりしない。あとでもう一度試してもらう。
+    if (maxStatus === null && isNewSession) {
+      throw new HttpsError("unavailable", "いま会員の状態を確認できません。少し待ってから、もう一度試してね。");
+    }
+    let trialConsumed = false;
 
     // 無料体験は「1セッション」であって「1メッセージ」ではない。
     // 継続中の会話（isNewSession=false）まで弾くと、体験が1往復で切れて
     // 会話の途中で遮断されてしまうため、判定は新規セッション時のみ行う。
     // 継続には既存のセッション文書が必要で、その作成はここを通るので抜け道にはならない。
     if (!isMax && isNewSession) {
-      if (trialAiUsed) {
+      // 無料体験は実アカウント（匿名でない）にだけ出す。匿名UIDはブラウザの
+      // データ削除や再インストールで作り直せるため、Opusを使う無料体験が
+      // 何度でもリセットできていた（1回あたりのAPIコストが最も高い経路）。
+      if (req.auth?.token?.firebase?.sign_in_provider === "anonymous") {
         throw new HttpsError(
           "permission-denied",
-          "AI個別指導の無料体験（1回）は使い切りました。Maxプランにアップグレードすると月18回使えるよ！"
+          "AI個別指導の無料体験（1回）は、ログインすると使えます。マイページからログインしてください。"
         );
       }
-      // 初回のみ許可 → 体験済みマークを付ける
-      await userRef.set({ trialAiUsed: true, updatedAt: FieldValue.serverTimestamp() }, { merge: true });
+      // 体験の「未使用を確認 → 使用済みにする」を1つのトランザクションで行う。
+      // 分けると、同じuidで別sessionIdの新規セッションを並列に送ったとき、
+      // 全部が「未使用」を見て通り、Opusの無料体験が何セッションも使えてしまう。
+      await db.runTransaction(async (tx) => {
+        const cur = await tx.get(userRef);
+        if (cur.exists && cur.data()?.trialAiUsed) {
+          throw new HttpsError(
+            "permission-denied",
+            "AI個別指導の無料体験（1回）は使い切りました。Maxプランにアップグレードすると月18回使えるよ！"
+          );
+        }
+        tx.set(userRef, { trialAiUsed: true, updatedAt: FieldValue.serverTimestamp() }, { merge: true });
+      });
+      trialConsumed = true;
     }
 
-    const turnCount = await getOrCreateSession(uid, sessionId, isNewSession);
+    let turnCount;
+    try {
+      turnCount = await getOrCreateSession(uid, sessionId, isNewSession);
+    } catch (e) {
+      // 月の上限・往復上限などで AI を呼ぶ前に弾かれたのに、無料体験（1回限り）だけ消えるのを防ぐ
+      if (trialConsumed) {
+        await userRef.set({ trialAiUsed: false, updatedAt: FieldValue.serverTimestamp() }, { merge: true }).catch(() => {});
+      }
+      throw e;
+    }
 
     // 1往復目はOpus（画像解析・深い分析）、2往復目以降はHaiku（低コスト）
     const model = turnCount === 1 ? "claude-opus-4-8" : "claude-haiku-4-5";
@@ -180,7 +229,8 @@ exports.askTutor = onCall(
     try {
       response = await client.messages.create({
         model,
-        max_tokens: 600,
+        // 考える分（adaptive thinking）も max_tokens に入るので、Opus のときは余裕を持たせる（足りないと本文が空になる）
+        max_tokens: model === "claude-opus-4-8" ? 2000 : 600,
         ...(model === "claude-opus-4-8" ? { thinking: { type: "adaptive" } } : {}),
         system: `あなたは小学生・中学生の受験勉強を手伝う、優しく丁寧な家庭教師です。
 生徒が「わからない！」と困っています。以下のルールで教えてください：
@@ -212,12 +262,23 @@ exports.askTutor = onCall(
       });
     } catch (err) {
       console.error("askTutor: Claude API error", err);
+      await refundTutorTurn(uid, sessionId, isNewSession);
+      // AI が答えられなかったのに無料体験（1回限り）だけ消えるのは不公平なので、戻す
+      if (trialConsumed) {
+        await userRef.set({ trialAiUsed: false, updatedAt: FieldValue.serverTimestamp() }, { merge: true }).catch(() => {});
+      }
       throw new HttpsError("internal", "AIとの通信でエラーが発生しました。もう一度試してね。");
     }
 
     const textBlock = response.content.find((b) => b.type === "text");
     const answer = textBlock?.text?.trim() ?? "";
-    if (!answer) throw new HttpsError("internal", "回答の生成に失敗しました。もう一度試してね。");
+    if (!answer) {
+      await refundTutorTurn(uid, sessionId, isNewSession);
+      if (trialConsumed) {
+        await userRef.set({ trialAiUsed: false, updatedAt: FieldValue.serverTimestamp() }, { merge: true }).catch(() => {});
+      }
+      throw new HttpsError("internal", "回答の生成に失敗しました。もう一度試してね。");
+    }
 
     return { ok: true, answer, turnCount, model };
   }

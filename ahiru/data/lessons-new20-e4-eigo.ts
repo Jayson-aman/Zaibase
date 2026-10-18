@@ -32,7 +32,7 @@ export const lessonsNew20E4Eigo: Lesson[] = [
 ・four と for（〜のために）は同じ発音（フォー）。書くときのつづりを間違えないようにする。
 
 ⚠ よくある間違い
-・nine を「ナイン」ではなく「ニネ」と読んでしまう→ i は「アイ」の音になる（like「マイン=mine」と同じ）。
+・nine を「ナイン」ではなく「ニネ」と読んでしまう→ i は「アイ」の音になる（nine と mine は同じ音の仲間）。
 ・one の発音は「オネ」ではなく「ワン」。o なのに w の音から始まる、英語特有の読み方なので丸ごと覚える。`,
       },
       {
@@ -51,7 +51,7 @@ export const lessonsNew20E4Eigo: Lesson[] = [
 20 twenty（トゥエンティ）
 
 ★ つづりが変化する語（テストで狙われやすい）
-・three→thirteen（e が抜けて thir になる）
+・three→thirteen（ee が ir に変わって thir になる）
 ・five→fifteen（v が f に変わる）
 ・eight→eighteen（t が1つだけ、eightのtとteenのtが重なって1つになる）
 ・nine→nineteen（そのままnine+teenで作れる）
@@ -194,7 +194,7 @@ gray（グレー）※イギリス英語ではgrey＝灰色
 ★ 発音のポイント
 ・orange は「オレンジ」ではなく「オーレンジ」に近い音で、最初のオを強く長めに言う。
 ・purple は語尾の le を「プル」と軽く発音する。「パーポー」のようにならないよう気をつける。
-・yellow の -ow は「オウ」の音（yellow のように、Hello や window と同じ響き）。`,
+・yellow の -ow は「オウ」の音（Hello や window と同じ響き）。`,
       },
       {
         heading: '2. 色をたずねる・答える表現',
@@ -207,7 +207,7 @@ It's red.（それは赤です）
 I like blue.（私は青が好きです）
 
 ■ 色＋名詞の順番
-英語では「色（形容詞）＋名詞」の順番になる。日本語の「赤いりんご」と同じ順番だが、between の位置に気をつける。
+英語では「色（形容詞）＋名詞」の順番になる。日本語の「赤いりんご」と同じ順番だが、a の位置に気をつける。
 例）a red apple（赤いりんご）
 例）a blue pen（青いペン）
 ⚠ 注意：a red apple の a は「色」の前に置く。× red a apple のように途中に入れない。
@@ -231,6 +231,21 @@ B: I like pink the best.（一番ピンクが好きです）
 ⚠ よくある間違い
 ・green を「グリン」と短く言ってしまう→「グリーン」と e を長く伸ばす音。
 ・「オレンジ色」と「オレンジ（果物）」はどちらも orange で同じつづり・同じ発音。文脈で意味が変わる。`,
+      },
+      {
+        heading: 'なぜ色は名詞の前に置き、a は色の前に置くのか',
+        mangaId: 'new20_e4_eigo_03_manga',
+        body: `英語では、名詞を説明する語（形容詞）は**名詞の前**に置きます。「赤いりんご」は a red apple で、日本語の「赤い→りんご」と同じ順です。ただし a（一つの）は「どのりんごか」を決める語なので、説明の語よりさらに前の**列の先頭**に置きます。red a apple のように a を途中に入れると、a が何を指すのか分からなくなります。
+
+色をたずねる文が What color is it? と What color で始まるのは、「何色か」という知りたいことを先頭に置く英語のきまりだからです。答えは It's red. のように、聞かれた中身（色）を答えます。orange が色にも果物にも使われるのは、果物のオレンジの色をそのまま色の名前にしたからで、文脈で意味が決まります。
+
+■ 確かめのしかた
+①色を名詞の**前**に置いたか。a red apple／a blue pen。
+②a・the は**列の先頭**か。× red a apple→a red apple。
+③What color is it?→It's 〇〇.、What color do you like?→I like 〇〇. と中身で答えているか。
+④発音：orange は最初の「オ」を強く長め、purple の le は軽く「プル」、green は e を長く。gray（米）／grey（英）。
+
+★ ここがポイント：形容詞は**名詞の前**、a・the は**列の先頭**（a red apple）。色をたずねる文は**知りたいことを先頭**に置く What color 〜?。`,
       },
     ],
     keyPoints: [
@@ -268,7 +283,7 @@ diamond（ダイアモンド）＝ひし形
 ・rectangle の rect は「まっすぐ」を意味する部分。角がまっすぐな四角形、というイメージ。
 
 ⚠ square と rectangle のちがい
-・square：辺の長さがすべて同じ四角形（正方形）
+・square：辺の長さがすべて同じで、角もすべて直角な四角形（正方形）
 ・rectangle：たてとよこの長さがちがう四角形（長方形）
 日本語ではどちらも「四角」とまとめがちだが、英語では区別して使う。`,
       },
@@ -309,6 +324,21 @@ The moon looks like a circle.（月は丸に見える）
 ・triangle のつづりで tri のあとを angle（アングル＝角度）と混同して triangel と書いてしまう→ triangle が正しいつづり。
 ・square を「スクウェア」と最後まで強く読みすぎない。最初の音（スク）をやや短めに、全体をなめらかにつなげて発音する。`,
       },
+      {
+        heading: 'なぜ square と rectangle を分け、なぜ circle と round を分けるのか',
+        mangaId: 'new20_e4_eigo_04_manga',
+        body: `日本語では「四角」でまとめてしまう形も、英語では**辺の長さが全部同じ**なら square（正方形）、**たてとよこがちがう**なら rectangle（長方形）と、別の語で呼びます。算数で正方形と長方形を分けるのと同じ考え方です。triangle の tri は「3」（tricycle＝三輪車の tri）で「3つの角」、rectangle の rect は「まっすぐ」で「角がまっすぐな四角形」と、語のつくりから覚えると忘れにくくなります。
+
+circle と round を分けるのは、**品詞がちがう**からです。circle は「円そのもの」を指す名詞（Draw a circle.）、round は「丸い」という様子を表す形容詞（The plate is round.）。日本語ではどちらも「丸」で済みますが、英語では「円を描く」と「丸い」を別の語で言います。
+
+■ 確かめのしかた
+①四角形なら、**辺が全部同じか**を見る。同じ→square、たてよこがちがう→rectangle。
+②「円」そのものなら **circle**（名詞）、「丸い」様子なら **round**（形容詞）。A ball is round.／Draw a circle.
+③形をたずねる：What shape is it?→It's a star. 形容詞は名詞の前（a red triangle、a big circle）。
+④つづり：triangle（× triangel）。tri＝3、rect＝まっすぐ。
+
+★ ここがポイント：square は**辺が全部同じ**、rectangle は**たてよこがちがう**。circle は**名詞（円）**、round は**形容詞（丸い）**。語のつくり（tri＝3、rect＝まっすぐ）で覚える。`,
+      },
     ],
     keyPoints: [
       '基本の形：circle, triangle, square, rectangle, star, heart, diamond',
@@ -341,7 +371,7 @@ fish（フィッシュ）＝魚
 turtle（タートル）＝カメ
 
 ★ 発音のポイント
-・rabbit の a は「ラ」よりも「ラビット」全体を軽く弾むように言うと自然。
+・rabbit は最初の「ラ」を強く言い、「ビット」は弱く短く言うと自然。
 ・fish の複数形はそのままfish（形が変わらない特別な語）。× fishes とは基本的に言わない。
 
 ⚠ ペットについて話すときの表現
@@ -423,7 +453,7 @@ zebra（ズィーブラ）＝シマウマ
 koala（コアラ）＝コアラ
 
 ★ 発音のポイント
-・giraffe はつづりの見た目と発音の差が大きい語。「ジラフ」ではなく、最後のfeを強く「ジ・ラフ」に近く発音する。
+・giraffe はつづりの見た目と発音の差が大きい語。「ジラフ」と平らに言わず、2つ目の「ラフ」（raf）を強く「ジ・ラフ」に近く発音する。
 ・elephant はアクセントが最初のe（エ）にある。「エレファント」の「エ」を強く。
 
 ⚠ 動物の名前の頭文字は大文字にしない（固有名詞ではないため）。文の最初以外は小文字で書く。`,
@@ -612,6 +642,21 @@ This is my dog. His name is Pochi.（これは私の犬です。名前はポチ�
 
 ★ 発表のコツ：This is my ~. を1文ずつ区切って、ゆっくりはっきり言うと聞き手に伝わりやすい。`,
       },
+      {
+        heading: 'なぜ This is my 〜. で紹介でき、なぜ his と her を分けるのか',
+        mangaId: 'new20_e4_eigo_08_manga',
+        body: `This は「近くにあるもの・今見せているもの」を指す語です。写真や絵を指さしながら This is my father. と言えば、「今指しているこの人が私の父です」と自然に伝わります。家族以外にも This is my dog.／This is my friend Ken. と使えるので、使い道の広い形です。
+
+his（彼の）と her（彼女の）を分けるのは、英語では**その人が男性か女性か**で「〜の」の形が変わるからです。日本語の「名前は」には性別の区別がありませんが、英語では His name is Ken.／Her name is Yuki. と必ず選びます。家族の人数を There are four people in my family. と言うのは、family が「まとまり」であって人数ではなく、人数を言うなら people を数えるからです。
+
+■ 確かめのしかた
+①紹介は **This is my 〇〇.** 指さしながら言う。Who is this?→This is my father.
+②名前を言うときは**男性→His name is 〇〇.、女性→Her name is 〇〇.**
+③様子は My father is tall.／My sister is kind.、人数は There are 〇 people in my family.／I have one brother.
+④仕事をたずねる What does he do?→He is a teacher. ペットも This is my dog. His name is Pochi. で紹介できる。
+
+★ ここがポイント：This は**今見せているもの**を指すので、指さしながら **This is my 〜.**。「〜の」は**男性なら his、女性なら her**。人数は people を数える。`,
+      },
     ],
     keyPoints: [
       'This is my 〜. で「これは私の〜です」と紹介できる',
@@ -646,10 +691,10 @@ soccer player（サッカー プレイヤー）＝サッカー選手
 vet（ベット）＝獣医（veterinarianの短い言い方）
 
 ★ つくりから覚えるコツ
-・動詞＋erで「〜する人」を表す語が多い（teach→teacher、sing→singer、cook→cook）。
+・動詞＋erで「〜する人」を表す語が多い（teach→teacher、sing→singer、play→player）。
 ・「〜選手」は sport（スポーツ名）+ player の組み合わせで作れる（baseball player, tennis playerなど）。
 
-⚠ police officer・firefighter は2語で1つの職業を表す語。間にスペースを忘れずに書く。`,
+⚠ police officer は2語で1つの職業を表す語。間にスペースを忘れずに書く。firefighter は1語で書く（fire fighter と離さない）。`,
       },
       {
         heading: '2. 職業をたずねる・答える表現',
@@ -761,6 +806,21 @@ I like weekends.（週末が好きです）
 
 ★ 覚え方のコツ：Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sundayを歌のリズムに乗せて声に出す練習をすると、順番も発音も自然に身につく。`,
       },
+      {
+        heading: 'なぜ曜日は大文字で、なぜ on を使うのか',
+        mangaId: 'new20_e4_eigo_10_manga',
+        body: `英語の曜日は、Sunday（太陽の日）・Monday（月の日）のように**神や天体の名前から作られた固有名詞**です。固有名詞は文のとちゅうでも大文字で始めるきまりなので、I like monday. は誤りで I like Monday. と書きます。Wednesday のつづりに読まない d が残っているのも、昔の名前（ウォーデンの日）の形がそのまま残っているからで、Wed-nes-day と三つに分けて覚えます。
+
+曜日に on を使うのは、曜日が「一日」という**面**だからです。時こく（点）は at、月（幅）は in で、曜日と日付は on と整理します。「毎週日曜日に」を on Sundays と複数形にするのは、日曜日が何度もくり返されるからです。
+
+■ 確かめのしかた
+①曜日の**最初の文字が大文字**か（Monday）。× monday。
+②つづり：Wed-nes-day、Tuesday（Tues＋day）、Thursday（th で始まる）、Saturday（u がある）。
+③曜日の前は **on**（on Monday）。× in Monday、× at Monday。「毎週」なら on Sundays。
+④What day is it today?→It's Monday. 平日は weekday、週末は weekend。
+
+★ ここがポイント：曜日は**神や天体の名前から来た固有名詞**なので大文字。一日という**面**なので **on**。毎週なら複数形（on Sundays）。`,
+      },
     ],
     keyPoints: [
       '曜日：Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday',
@@ -837,10 +897,25 @@ spring（春）：March, April, May
 summer（夏）：June, July, August
 fall / autumn（秋）：September, October, November
 winter（冬）：December, January, February
-★ 日本と季節の区切りが少しずれていると感じるかもしれないが、これは英語圏で一般的な区切り方。
+★ 春は3〜5月、夏は6〜8月のように3か月ずつ区切る。日本の気象の区切り方と同じで、英語圏でもよく使われる区切り方。
 
 ⚠ よくある間違い
 ・月の前の前置詞をonにしてしまう→月には in を使う（in April）。曜日はon、月・年はinと覚え分ける。`,
+      },
+      {
+        heading: 'なぜ月には in を使い、なぜ日付は序数で読むのか',
+        mangaId: 'new20_e4_eigo_11_manga',
+        body: `月は約30日という**幅のある期間**なので、「その中に」という in を使います（in April）。曜日や日付は一日という面なので on、時こくは点なので at。この三つは「幅→面→点」で整理します。月の名前も曜日と同じく固有名詞なので、文のとちゅうでも大文字で始めます。February の r が発音で抜けやすいのは、つづりが昔の形のまま残っているからで、Febr- と r があることを覚えておきます。
+
+日付を序数（5th＝fifth）で読むのは、日付が「その月の**5番目の日**」という順番を表すからです。April 5 と書いても、読むときは April fifth と順番で読みます。季節を3か月ずつに区切る（春＝3・4・5月）のは、日本でも英語圏でも一般的な区切り方なので、そのまま覚えます。
+
+■ 確かめのしかた
+①月の前は **in**（in April）。曜日・日付は on、時こくは at。× on April。
+②月の**最初の文字が大文字**か。February は Febr- の r を落としていないか。
+③誕生日は When is your birthday?→My birthday is 月＋日（April 5th）。日は**序数**で読む（1st・2nd・3rd・4th・5th）。
+④季節：spring＝March・April・May、summer＝June・July・August、fall／autumn＝September・October・November、winter＝December・January・February。
+
+★ ここがポイント：月は**幅のある期間**なので **in**、日付は**その月の何番目の日か**なので**序数**で読む。月名も固有名詞なので大文字。`,
       },
     ],
     keyPoints: [
@@ -1054,6 +1129,21 @@ Nice to meet you.（はじめまして）は自己紹介の最後にそえる決
 
 ★ 自己紹介の型：あいさつ→名前→年れい→出身→好きなもの→Nice to meet you. の順で組み立てると、まとまりのある自己紹介になる。`,
       },
+      {
+        heading: 'なぜ二つの言い方があり、なぜ from と live in を分けるのか',
+        mangaId: 'new20_e4_eigo_14_manga',
+        body: `I'm 〜. は「私は〜です」と自分をそのまま言う形、My name is 〜. は「私の名前は〜です」と名前を主語にした形です。どちらも自己紹介で使えますが、My name is 〜. のほうがややていねいで、初めて会う人向きです。二つを混ぜて My name is I'm Yuki. とすると、主語が二つになって文がこわれます。どちらか一つの形にそろえます。
+
+I'm from 〜（出身）と I live in 〜（住んでいる所）を分けるのは、**生まれ育った場所と今住んでいる場所がちがう**ことがあるからです。from は「〜から来た」という出発点、live in は「〜の中に住んでいる」という今の場所。Where are you from? には I'm from Kyoto.、Do you live in Kyoto now? には Yes, I do. と、聞かれた形で答えます。
+
+■ 確かめのしかた
+①名前は **I'm 〇〇.** か **My name is 〇〇.** のどちらか一つ。混ぜていないか。
+②出身→**I'm from 〇〇.**（国・都市）、住まい→**I live in 〇〇.** Where are you from? には from で答える。
+③型の順：あいさつ→名前→年れい→出身→好きなもの→Nice to meet you.
+④Nice to meet you. は初めて会う相手だけ。二回目以降は Nice to see you again.
+
+★ ここがポイント：I'm 〜. と My name is 〜. は**どちらか一つ**（混ぜない）。**from は出身、live in は今の住まい**で、聞かれた形で答える。`,
+      },
     ],
     keyPoints: [
       `名前を伝える形：I'm 〜. / My name is 〜.`,
@@ -1191,6 +1281,21 @@ B: They are books.（本だよ）
 かばんの中のものを見せて What's this? と友達にたずねる、絵カードを使って What's that? で当てっこをする、といった活動を通じて、ものの名前と一緒に自然にこの表現が身につく。
 
 ★ ポイントまとめ：this/that、these/thoseは「近い・遠い」と「単数・複数」の2つの区別が同時に関わってくる。表にして整理しながら覚えると混乱しにくい。`,
+      },
+      {
+        heading: 'なぜ this と that、these と those を分けるのか',
+        mangaId: 'new20_e4_eigo_16_manga',
+        body: `英語では、ものを指すときに**話し手からの距離**と**数**の二つを言葉で区別します。近くにあれば this、離れていれば that。日本語の「これ・あれ」と同じ区別です。さらに、指すものが二つ以上なら these・those と形が変わり、答えの It's 〜. も They are 〜. に変わります。日本語では「これ」と「これら」をあまり使い分けませんが、英語では単数と複数で文の形が全部変わるので、対応表で整理しておきます。
+
+What's が What is の短縮形なのは、会話では短く言うほうが自然だからです。答えの a と an は、次の語が母音（a・i・u・e・o の音）で始まるかどうかで決まります（an apple・an orange）。
+
+■ 確かめのしかた
+①指すものが**近いか遠いか**：近い→this／these、遠い→that／those。
+②**一つか二つ以上か**：一つ→What's this?→It's a 〇〇.、二つ以上→What are these?→They are 〇〇s.
+③答えの a／an は次の語の**最初の音**で決める（a pen、an orange）。
+④対応表で確かめる：this⇔these、that⇔those、It's⇔They are。
+
+★ ここがポイント：英語は**距離（this／that）と数（単数／複数）の二つ**を言葉で区別する。**複数になると質問も答えも形が変わる**（What are these?→They are 〜.）。`,
       },
     ],
     keyPoints: [
@@ -1468,6 +1573,21 @@ Find a friend who can whistle.（口笛をふける友達を見つけよう）�
 ・I can't 〜.：できないことを伝える
 ・Can you 〜?：たずねる（答えはYes, I can. / No, I can't.）
 ・canのあとの動詞は必ず原形のまま`,
+      },
+      {
+        heading: 'なぜ can のあとは原形で、なぜ Can you? に can で答えるのか',
+        mangaId: 'new20_e4_eigo_20_manga',
+        body: `can は「〜できる」という意味を動詞に**足す**語（助動詞）です。主語に合わせて形を変える役目は can が引き受けるので、あとの動詞はそのままの形（原形）でよく、He can swim. のように三人称でも s を付けません。s や ing を付けるのは、can が「動詞のかわりに形を担当している」ことを忘れているからです。
+
+たずねる文が Can you swim? と can を主語の前に出す形なのは、be動詞の疑問文（Are you 〜?）と同じ作り方です。答えは、質問に使った can をくり返して Yes, I can. / No, I can't. と言います。can't は cannot の短縮形で、それ自体に打ち消しが入っています。
+
+■ 確かめのしかた
+①can のあとの動詞が**原形**か。He can swim.（× can swims、× can swimming）。
+②たずねる文は **can を主語の前**に：Can you swim?
+③答えは **Yes, I can. / No, I can't.**（質問の can をくり返す）。
+④できないことは I can't 〇〇.、程度は well（I can play soccer well.）、広くたずねるなら What can you do?
+
+★ ここがポイント：can は動詞に「できる」を**足す語**で、形の変化を can が引き受けるので**あとは原形**。たずねるときは can を前に出し、答えは **can をくり返す**。`,
       },
     ],
     keyPoints: [

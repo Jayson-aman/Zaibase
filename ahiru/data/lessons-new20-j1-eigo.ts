@@ -30,7 +30,7 @@ Sunday（日）・Monday（月）・Tuesday（火）・Wednesday（水）・Thur
 ■ つづりでまちがえやすい語
 Wednesday：真ん中の d は発音しない（「ウェンズデイ」のように読む）。d を忘れて Wensday と書くまちがいも多いので注意。
 Tuesday：Tues- の部分を Tues と書き、Thursday の Thurs- と混同しないこと。
-Saturday：Satur- の部分に a が2つ入る（Saterday ではない）。
+Saturday：Satur- の4文字目は u である（Saterday ではない）。
 
 ■ たずね方と答え方
 What day is it today?（今日は何曜日ですか）
@@ -53,7 +53,7 @@ January（1月）・February（2月）・March（3月）・April（4月）・May
 ■ グループで覚える
 -ary で終わる：January, February
 -ber で終わる：September, October, November, December（9〜12月がまとまってこの形になる）
-1文字だけの月：May（唯一3文字で、短縮形もそのまま May）
+短縮しない月：May（3文字だけの月で、短縮形もそのまま May）
 
 ■ つづりでまちがえやすい語
 February：真ん中の r を忘れて Febuary と書いてしまう人が非常に多い。Feb-ru-ary と区切って発音しながら書く。
@@ -94,7 +94,7 @@ Jan., Feb., Mar., Apr., Jun., Jul., Aug., Sep., Oct., Nov., Dec.（May, June, Ju
     examType: 'koko',
     title: '日付の言い方とたずね方',
     description: '"What\'s the date today?" への答え方と、序数を使った日付の読み上げ方を練習する',
-    intro: 'カレンダーには "5/5" と数字だけで書いてあっても、それを声に出して読むときは「メイ・ザ・フィフス」のように序数を使う。日付は数字ではなく序数で読む――この一点を知っているかどうかで、英作文や会話の自然さが大きく変わる。',
+    intro: 'カレンダーには "5／5" と数字だけで書いてあっても、それを声に出して読むときは「メイ・ザ・フィフス」のように序数を使う。日付は数字ではなく序数で読む――この一点を知っているかどうかで、英作文や会話の自然さが大きく変わる。',
     order: 7581,
     studyPeriod: '中1',
     targetLevel: 'kiso',
@@ -370,7 +370,7 @@ B: It's about 15 degrees.
       '13〜19は -teen、20・30・40…は -ty で終わる。発音・アクセントの位置が異なる。',
       '21以降は十の位と一の位をハイフンでつなぐ（twenty-one, thirty-five）。',
       'hundred（百）・thousand（千）は、直前に数字が付くとき複数形の s を付けない（three hundred, not three hundreds）。',
-      '「合計で」という意味を出すときだけ hundreds of 〜（何百もの〜）のように複数形＋ of を使う。',
+      '「何百もの」とおおまかに言うときだけ hundreds of 〜 のように複数形＋ of を使う。',
       "値段をたずねる文は How much is this? で、答えは It's ＋金額。",
       '値段が複数ある場合は How much are these? のように are を使う。',
     ],
@@ -515,7 +515,7 @@ y で終わる語に -eth を付けるときは、y を i に変えるという�
         wrongAnswer: 'fiveth',
         trapExplanation: '4以降は基数にそのまま th を足せばよいというルールだけを覚えていて、five が例外的につづりを変えることを知らない。',
         correctAnswer: 'fifth',
-        correctExplanation: 'five は th を付けるときに ve を f に変え、さらに e を1つ省いて fifth となる。eight→eighth、nine→ninth、twelve→twelfth も同じように変化するので、5・8・9・12の4つはセットで例外として覚える。',
+        correctExplanation: 'five は th を付けるときに ve を f に変えて fifth となる。eight→eighth、nine→ninth、twelve→twelfth も同じように変化するので、5・8・9・12の4つはセットで例外として覚える。',
       },
       {
         question: '「21番目」を英語のつづりで書きなさい。',
@@ -652,6 +652,7 @@ It doesn't matter which.（どちらでもかまいません）
       },
       {
         heading: 'whose と who\'s の区別',
+        mangaId: 'new20_j1_eigo_08_manga',
         body: `whose と who's（who is または who has の短縮形）はまったく同じ発音（フーズ）をするが、意味も文法上の働きもまったく別の語である。書くときに混同すると誤りになる。
 
 ■ whose：疑問詞「だれの」。あとに名詞（または省略）が続く
@@ -671,15 +672,15 @@ It doesn't matter which.（どちらでもかまいません）
 Whose turn is it?（だれの番ですか）
 Who's coming to the party?（だれがパーティーに来ますか）
 
-⚠ 注意：スペリング問題や並べかえ問題で whose と who's はよく引っかけとして出題される。発音记号だけを頼りに書くと必ずどちらかを取り違えるので、「持ち主をたずねているか」「who is／who has の短縮か」を意味で判断する習慣をつける。`,
+⚠ 注意：スペリング問題や並べかえ問題で whose と who's はよく引っかけとして出題される。発音記号だけを頼りに書くと必ずどちらかを取り違えるので、「持ち主をたずねているか」「who is／who has の短縮か」を意味で判断する習慣をつける。`,
       },
     ],
     trapExamples: [
       {
-        question: "（ ）is that girl over there? に適切な語を入れなさい。（Whose / Who's）",
-        wrongAnswer: 'Whose is that girl over there?',
+        question: "（ ）that girl over there? に適切な語を入れなさい。（Whose / Who's）",
+        wrongAnswer: 'Whose that girl over there?',
         trapExplanation: '発音が同じであるため、どちらを書いても正しいだろうと考え、見た目が疑問詞らしい whose を選んでしまう。',
-        correctAnswer: "Who's is that girl over there? ではなく Who's that girl over there?（Who is that girl over there?）",
+        correctAnswer: "Who's that girl over there?（＝ Who is that girl over there?）",
         correctExplanation: 'この文は「あの女の子はだれですか」という意味で、持ち主をたずねているわけではないので who is の短縮形 who\'s を使う。whose を使うのは Whose bag is that? のように、あとに名詞（持ち物）が続くときだけである。',
       },
       {
@@ -931,6 +932,21 @@ next to と beside はほぼ同じ意味で使われる。
 There is / are の文では、文末に場所を表す前置詞句を置くのが基本の語順である。
 
 ⚠ 注意：between と among を「2つ」か「3つ以上」かで機械的に区別するのが基本だが、間にはさまれる対象が具体的な2つのグループ（国と国、チームとチームなど）であれば、数が多くても between を使うことがある（between the two teams など）。まずは基本の使い分けから確実に覚える。`,
+      },
+      {
+        heading: 'なぜ between は2つで among は3つ以上なのか、なぜ There is の文は前置詞句が文末なのか',
+        mangaId: 'new20_j1_eigo_11_zenchishi_manga',
+        body: `between は「二つのものに**はさまれて**」という語で、tw（two と同じ「二」）が語の中に入っています。だから between A and B と二つを名指しします。among は「多くのものの**中に混じって**」という語なので、三つ以上の集団に使います。国と国、チームとチームのように「二つのグループ」なら数が多くても between です。under（真下・覆われた位置）と over、in front of と behind、near（近い）と by（すぐそば）のように、位置の語は対で覚えると意味の幅が分かります。
+
+There is／are の文で前置詞句が文末に来るのは、この文が「（どこそこに）〜がある」と**存在を告げてから場所を足す**形だからです。There is a cat under the table. と、まず a cat の存在、次に位置。日本語の語順（テーブルの下にねこがいる）のまま前置詞句を前に出さないのが基本です。
+
+■ 確かめのしかた
+①位置の語を**対**で言えるか：under／over、in front of／behind、near／by、between（2つ）／among（3つ以上）、next to＝beside。
+②between は **A and B の二つを名指し**、among は集団。「30人の中で」→among the students。
+③There is／are＋名詞＋**前置詞句（文末）**。be動詞はあとの名詞の数に合わせる（There are some flowers between the two trees.）。
+④「いすの下に」を in にしていないか。in は囲まれた空間の中で、上下関係は表せない→under。
+
+★ ここがポイント：between は語の中に「二」を含むので**二つにはさまれて**、among は**集団の中**。位置の語は対で覚え、There is の文は**存在を告げてから場所を足す**ので前置詞句は文末。`,
       },
     ],
     trapExamples: [
@@ -1287,6 +1303,21 @@ A: Really? This is my sister. She's ten years old.
 
 ⚠ 注意：「兄弟が2人います」という文で、名詞の複数形を忘れる誤りが多い。I have two brother. ではなく、two のあとの名詞は必ず複数形にして I have two brothers. とする。`,
       },
+      {
+        heading: 'なぜ紹介は This is で、なぜ「兄弟がいる」は have なのか',
+        mangaId: 'new20_j1_eigo_15_kazoku_manga',
+        body: `写真や目の前の人を指して紹介するときは、「これ（この人）は」と指し示す This is を使います。紹介したあとは同じ人を he／she で受け、my father を何度もくり返しません。複数なら These are。英語の brother・sister には兄弟・姉妹の上下の区別がなく、上下を言いたいときだけ older／younger を付けます。
+
+「妹が一人います」を I am a sister. と言えないのは、be動詞が「私＝妹」というイコールを作ってしまうからです。家族の存在は「持っている」の have で表し、I have a sister. とします。日本語の「います」に引きずられて be動詞を使わない、と型で覚えます。two のあとの名詞は必ず複数形（two brothers）です。
+
+■ 確かめのしかた
+①紹介は **This is my 〜.**（複数は These are）→そのあとは he／she で説明を続ける。
+②人数は **I have＋数＋brother(s)／sister(s).** × I am a sister。一人っ子は I don't have any brothers or sisters.／I'm an only child.
+③数詞のあとの名詞が**複数形**か（× two brother→two brothers）。
+④たずね方 Do you have any brothers or sisters?→Yes, I have one brother.／No, I don't. 上下は older／younger brother。
+
+★ ここがポイント：指し示す紹介は **This is**、家族の存在は**「持っている」の have**（be動詞はイコールを作ってしまう）。数詞のあとは複数形。`,
+      },
     ],
     trapExamples: [
       {
@@ -1342,7 +1373,7 @@ be動詞を使う I'm from 〜. のほうが会話ではよく使われる。com
 ■ 都市と国を一緒に言うとき
 「〜市の、〜国出身です」と言うときは、狭い場所（都市）を先に、広い場所（国）を後に言う。
 例）I'm from Kyoto, Japan.（私は日本の京都出身です）
-これは日付を「日→月→年」の順で細かい方から言うのと似た感覚である。
+住所を「市→県→国」と、せまい場所から広い場所へ書くのと同じ順序である。
 
 ■ 会話の流れの例
 A: Where are you from?
@@ -1464,6 +1495,21 @@ What club are you in?（何部に入っていますか）
 How many times a week do you have practice?（週に何回練習がありますか）
 
 ⚠ 注意：「〜部に入っています」を I am 〜 club. のように club の前に in を忘れて言ってしまう誤りが多い。club という「場所・グループ」に入っている、というイメージで前置詞 in を必ず入れる。`,
+      },
+      {
+        heading: 'なぜ授業は have で言い、なぜ at のあとは -ing なのか',
+        mangaId: 'new20_j1_eigo_17_manga',
+        body: `「月曜日に数学がある」は、時間割という**自分の持ち物として授業を持っている**という発想で I have math on Monday. と言います。日本語の「ある」につられて There is を使うより、have の型で覚えるほうが会話でそのまま使えます。「何時間目」は period（時間割の1コマ）を序数と組み合わせて in the first period です。
+
+be good at のあとが -ing になるのは、at が**前置詞**で、前置詞のあとには名詞（動名詞）しか置けないからです。教科名（math）はそのまま名詞なので I'm good at math.、動作なら I'm good at singing.。「〜部に入っている」が I'm in the 〜 club. なのは、部を「グループという場所」ととらえて in で「その中にいる」と言うからで、in を落とすと「私は美術部です」という別の文になります。
+
+■ 確かめのしかた
+①教科をたずねる What subject do you like?／What's your favorite subject?→I like math the best.／My favorite subject is science.
+②授業は **have**：I have math on Monday.（曜日は on）／We have P.E. in the third period.
+③be good at＋**名詞か -ing**（× at sing→at singing）。苦手は be poor at／not good at。
+④部活は **I'm in the 〜 club.**／I belong to the 〜 club.（in と the を落とさない）。教科名の English・Japanese は大文字。
+
+★ ここがポイント：授業は**持ち物として持っている**発想で have。at は**前置詞なので -ing**。部活は**グループの中にいる**ので in。`,
       },
     ],
     trapExamples: [

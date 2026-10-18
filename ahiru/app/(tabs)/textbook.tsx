@@ -1,4 +1,5 @@
 import React, { useCallback, useMemo, useState } from 'react';
+import { useExamType } from '../../store/examType';
 import {
   View,
   Text,
@@ -13,6 +14,7 @@ import { getLessonsBySubject, FREE_LESSON_LIMIT } from '../../data/lessons';
 import type { ExamType } from '../../data/courses';
 import type { Lesson } from '../../data/lessons';
 import { isNew20Unit, isNew20UnitFree } from '../../data/new20-access';
+import { UNIT_UNLOCK_PRICE_LABEL } from '../../constants/pricing';
 import { subjectInfo, type SubjectKey } from '../../data/questions-meta';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
@@ -27,7 +29,7 @@ function isKoushikiLesson(lessonId: string): boolean {
 }
 
 // 一覧画面での🔒表示・タップブロック判定。new20は学年×科目クラスターごとの
-// 先頭5単元だけ無料（購入済みなら常に解放）、koushikiは常に開放、それ以外は
+// 先頭10単元だけ無料（購入済みなら常に解放）、koushikiは常に開放、それ以外は
 // 科目内で最初のFREE_LESSON_LIMIT件だけ無料という、旧来のidx基準の判定を使う。
 function isLockedForBrowse(
   lesson: Lesson,
@@ -99,10 +101,18 @@ const LessonCard = React.memo(function LessonCard({
           {lesson.description}
         </Text>
         {lesson.sections.some((s) => s.maxOnly) && (
-          <Text style={styles.maxTag}>⭐ MAX深堀りあり</Text>
+          <Text style={styles.maxTag}>⭐ MAX会員は、深掘り解説も読めます</Text>
         )}
       </View>
-      <Text style={styles.lessonArrow}>{locked ? '🔒' : '›'}</Text>
+      {locked ? (
+        <View style={styles.lockCol}>
+          <Text style={styles.lessonArrow}>🔒</Text>
+          {/* 買い切りで開ける単元は金額を、ほかはどのプランで開くかを、鍵の下に出す */}
+          <Text style={styles.lockLabel}>{isNew20Unit(lesson.id) ? `${UNIT_UNLOCK_PRICE_LABEL}で開く` : 'PRO会員で開く'}</Text>
+        </View>
+      ) : (
+        <Text style={styles.lessonArrow}>›</Text>
+      )}
     </TouchableOpacity>
   );
 });
@@ -125,7 +135,13 @@ export default function TextbookScreen() {
 
   const [selectedSubject, setSelectedSubject] = useState<SubjectKey | null>(null);
   // 受験種別で絞らないと、中学受験の小学生に中1〜中3の内容が混ざって出てしまう。
+  const { examType: savedExamType } = useExamType();
   const [examType, setExamType] = useState<ExamType>('chugaku');
+  const examTypePicked = React.useRef(false);
+  React.useEffect(() => {
+    // 入口で選んだ受験種別を初期値にする。まだ手で切りかえていないときだけ反映する。
+    if (savedExamType && !examTypePicked.current) setExamType(savedExamType);
+  }, [savedExamType]);
 
   // getLessonsBySubject は毎回 5,000件超をfilter+sortして新しい配列を返す。
   // メモ化しないと再描画のたびに配列の同一性が変わり、FlatListが全行を
@@ -158,6 +174,12 @@ export default function TextbookScreen() {
   const handleLessonPress = useCallback(
     (lesson: Lesson, idx: number) => {
       if (isLockedForBrowse(lesson, idx, isPro, unlockedUnitIds)) {
+        // 買い切り（¥150）で開ける単元は、単元ページ（ためし読み＋「解放する」ボタン）へ進める。
+        // ここでPRO/MAXのペイウォールだけを出すと、買い切りのボタンにたどり着けない。
+        if (isNew20Unit(lesson.id)) {
+          router.push(`/lesson/${lesson.id}` as any);
+          return;
+        }
         setPaywallVisible(true);
         return;
       }
@@ -198,7 +220,12 @@ export default function TextbookScreen() {
         {!isPro && (
           <View style={styles.proBanner}>
             <Text style={styles.proBannerText}>
-              🔒 各科目・受験種別ごとに最初の{FREE_LESSON_LIMIT}単元は無料。続きはProプランで
+              🔒 各科目・受験種別ごとに、最初の{FREE_LESSON_LIMIT}単元は無料です（「🆕 新単元」は、学年・科目ごとに最初の5つが無料）。
+            </Text>
+            <Text style={styles.proBannerNote}>
+              ・鍵の下が「PRO会員で開く」…PRO会員になると読めます{'\n'}
+              ・鍵の下が「{UNIT_UNLOCK_PRICE_LABEL}で開く」…この単元だけ買い切りでも読めます{'\n'}
+              ・⭐ MAX会員は、深掘り解説（難しい応用）も読めます
             </Text>
           </View>
         )}
@@ -213,7 +240,10 @@ export default function TextbookScreen() {
           <TouchableOpacity
             key={t.key}
             style={[styles.examTypeBtn, examType === t.key && styles.examTypeBtnActive]}
-            onPress={() => setExamType(t.key)}
+            onPress={() => {
+              examTypePicked.current = true;
+              setExamType(t.key);
+            }}
             activeOpacity={0.85}
           >
             <Text style={[styles.examTypeText, examType === t.key && styles.examTypeTextActive]}>
@@ -349,6 +379,7 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
   },
   proBannerText: { fontSize: 12, color: '#FEF3C7', fontWeight: '700' },
+  proBannerNote: { fontSize: 12, color: '#FEF3C7', fontWeight: '500', lineHeight: 19, marginTop: 4 },
   sectionLabel: {
     fontSize: 12,
     fontWeight: '800',
@@ -445,4 +476,6 @@ const styles = StyleSheet.create({
   lessonDesc: { fontSize: 12.5, color: '#6E645C', lineHeight: 18 },
   maxTag: { fontSize: 11, color: '#92400E', fontWeight: '700', marginTop: 4 },
   lessonArrow: { fontSize: 24, color: '#9C9186', paddingLeft: 8 },
+  lockCol: { alignItems: 'center', paddingLeft: 8, maxWidth: 84 },
+  lockLabel: { fontSize: 11, fontWeight: '800', color: '#8B5E1A', marginTop: 2, textAlign: 'center' },
 });

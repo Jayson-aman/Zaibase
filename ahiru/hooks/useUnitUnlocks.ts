@@ -1,46 +1,37 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { useFocusEffect } from 'expo-router';
+import { Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { fetchUnitUnlockProduct, purchaseProduct } from '../services/subscription';
-import { getUnlockedUnitIds, markUnitUnlocked } from '../services/unitUnlockStore';
+import {
+  fetchUnitUnlockProduct,
+  purchaseProduct,
+  startStripeUnlockCheckout,
+  confirmPendingStripeUnlockOnce,
+} from '../services/subscription';
+import { getUnlockedUnitIds, markUnitUnlocked, claimExistingUnitCredit } from '../services/unitUnlockStore';
 import { UNIT_UNLOCK_PRICE_LABEL } from '../constants/pricing';
+
+const isWebPlatform = Platform.OS === 'web';
 
 // 決済（消耗型・課金確定）は成功したが、サーバー側の確認（unlockContent）が
 // まだ済んでいないlessonIdを端末に記録しておく。これが無いと、確認が失敗した
 // あとにユーザーがもう一度ボタンを押したときpurchaseProductを再度呼んでしまい、
 // 消耗型商品なので実際に二重課金されてしまう。
+import { useAuthUser } from './useAuthUser';
+import { markPending, isPending, clearPending, listPending, isPaymentPending, isDefinitelyNotCharged } from '../utils/purchasePending';
 const PENDING_KEY_PREFIX = 'unit_unlock_pending_';
 
-async function markPurchasePending(lessonId: string): Promise<void> {
-  try {
-    await AsyncStorage.setItem(`${PENDING_KEY_PREFIX}${lessonId}`, '1');
-  } catch {
-    // 保存に失敗しても処理は続行する
-  }
-}
+// 購入の「確認待ち」の記録は utils/purchasePending.ts（ユーザーごと・画面を開いたときに自動で確認をやり直す）
 
-async function isPurchasePending(lessonId: string): Promise<boolean> {
-  try {
-    return (await AsyncStorage.getItem(`${PENDING_KEY_PREFIX}${lessonId}`)) === '1';
-  } catch {
-    return false;
-  }
-}
-
-async function clearPurchasePending(lessonId: string): Promise<void> {
-  try {
-    await AsyncStorage.removeItem(`${PENDING_KEY_PREFIX}${lessonId}`);
-  } catch {
-    // 消し忘れても実害はない
-  }
-}
-
-export type UnitUnlockPurchaseResult = { ok: true } | { ok: false; message: string };
+export type UnitUnlockPurchaseResult =
+  | { ok: true; /** Webで決済ページへ移動した（まだ購入は終わっていない） */ redirected?: boolean }
+  | { ok: false; message: string; /** 本人が取りやめた（エラーとして見せない） */ cancelled?: boolean };
 
 export interface UnitUnlocksState {
   /** 買い切り解放済みのLesson.id一覧（Firestoreから読み込み中はloadingがtrue） */
   unlockedIds: Set<string>;
   loading: boolean;
-  /** ¥100の商品が実際に購入可能な状態か（App Store Connect/Play Console未登録の間はfalse） */
+  /** ¥150の商品が実際に購入可能な状態か（App Store Connect/Play Console未登録の間はfalse） */
   productReady: boolean;
   priceLabel: string;
   unlockUnit: (lessonId: string) => Promise<UnitUnlockPurchaseResult>;
@@ -53,39 +44,155 @@ export function useUnitUnlocks(): UnitUnlocksState {
   const [product, setProduct] = useState<unknown>(null);
   const [purchasingLessonId, setPurchasingLessonId] = useState<string | null>(null);
   const mounted = useRef(true);
+  // ログイン中のユーザーが変わったら、前のユーザーの解放済み表示を捨てて取り直す
+  // （足し合わせるだけだと、ログアウトしても前のユーザーの解放内容が残る）
+  const { user: authUser } = useAuthUser();
+  const uid = authUser?.uid ?? null;
+  // 購入のコールバックの中で、いまのユーザーを読むため
+  const uidRef = useRef<string | null>(uid);
+  uidRef.current = uid;
+  const seenUid = useRef<string | null | undefined>(undefined);
+  useEffect(() => {
+    if (seenUid.current === undefined) {
+      seenUid.current = uid;
+      return;
+    }
+    if (seenUid.current === uid) return;
+    seenUid.current = uid;
+    setUnlockedIds(new Set());
+    getUnlockedUnitIds()
+      .then((ids) => {
+        if (mounted.current) setUnlockedIds(new Set(ids));
+      })
+      .catch(() => {});
+  }, [uid]);
 
   useEffect(() => {
     mounted.current = true;
     getUnlockedUnitIds()
       .then((ids) => {
-        if (mounted.current) setUnlockedIds(ids);
+        // 画面が開いたあとにStripeの確認などで足された分を消さないよう、合成する
+        if (mounted.current) setUnlockedIds((prev) => new Set([...prev, ...ids]));
       })
       .finally(() => {
         if (mounted.current) setLoading(false);
       });
-    fetchUnitUnlockProduct().then((p) => {
-      if (mounted.current) setProduct(p);
-    });
+    if (isWebPlatform) {
+      // Web版はStripe直接決済を使うため、RevenueCatの商品取得（常にnull）はしない。
+      // Stripe Checkoutから戻ってきた直後なら、ここで解放を確定させる。
+      confirmPendingStripeUnlockOnce().then((result) => {
+        if (mounted.current && result?.type === 'unit') {
+          setUnlockedIds((prev) => new Set(prev).add(result.itemId));
+        }
+      });
+    } else {
+      fetchUnitUnlockProduct().then((p) => {
+        if (mounted.current) setProduct(p);
+      });
+    }
     return () => {
       mounted.current = false;
     };
   }, []);
 
-  const unlockUnit = useCallback(
+  // 別の画面で買った分を、この画面に戻ったときに反映する（二重課金の防止）
+  useFocusEffect(
+    useCallback(() => {
+      getUnlockedUnitIds()
+        .then((ids) => {
+          if (mounted.current) setUnlockedIds((prev) => new Set([...prev, ...ids]));
+        })
+        .catch(() => {});
+      // 決済は済んだのに確認に失敗して残っている購入は、ここで確認をやり直す
+      if (!isWebPlatform) {
+        // 起動直後の通信が不安定で商品が取れなかったときに、画面を開き直すまで「準備中」のままにならないよう、戻ってくるたびに取り直す
+        fetchUnitUnlockProduct().then((p) => {
+          if (mounted.current && p != null) setProduct(p);
+        });
+        const myUid = uidRef.current;
+        listPending(PENDING_KEY_PREFIX, myUid)
+          .then(async (ids) => {
+            for (const id of ids) {
+              try {
+                await markUnitUnlocked(id);
+                await clearPending(PENDING_KEY_PREFIX, myUid, id);
+                if (mounted.current) setUnlockedIds((prev) => new Set(prev).add(id));
+              } catch {
+                // まだ確認できない。記録は残し、次に画面を開いたときにまたやり直す
+              }
+            }
+          })
+          .catch(() => {});
+      }
+    }, []),
+  );
+
+  const unlockUnitInner = useCallback(
     async (lessonId: string): Promise<UnitUnlockPurchaseResult> => {
+      if (isWebPlatform) {
+        setPurchasingLessonId(lessonId);
+        try {
+          const { alreadyUnlocked } = await startStripeUnlockCheckout('unit', lessonId);
+          if (alreadyUnlocked && mounted.current) {
+            setUnlockedIds((prev) => new Set(prev).add(lessonId));
+          }
+          // alreadyUnlockedでなければここでブラウザがStripe Checkoutへ遷移する。
+          if (mounted.current) setPurchasingLessonId(null);
+          return { ok: true, redirected: !alreadyUnlocked };
+        } catch (e) {
+          if (mounted.current) setPurchasingLessonId(null);
+          const message = e instanceof Error ? e.message : '購入処理に失敗しました';
+          return { ok: false, message };
+        }
+      }
       if (product == null) {
         return { ok: false, message: 'この機能は準備中です。しばらくしてからもう一度お試しください。' };
+      }
+      // 買う直前に最新の解放済み一覧を確かめる。すでに解放されていれば課金しない。
+      try {
+        const fresh = await getUnlockedUnitIds({ strict: true });
+        if (fresh.has(lessonId)) {
+          if (mounted.current) setUnlockedIds((prev) => new Set([...prev, ...fresh]));
+          return { ok: true };
+        }
+      } catch {
+        // 解放済みかどうかが確かめられないまま買うと、買ったものをもう一度買ってしまうことがある
+        return { ok: false, message: '解放済みかどうかを確認できませんでした。通信の状態を確かめて、もう一度お試しください。（お支払いはされていません）' };
       }
       setPurchasingLessonId(lessonId);
       // 前回この単元を購入したときに、決済は成功したがサーバー確認が未完了の
       // まま終わっている場合は、購入をやり直さずに確認だけをリトライする。
-      const alreadyPurchasedPending = await isPurchasePending(lessonId);
+      const alreadyPurchasedPending = await isPending(PENDING_KEY_PREFIX, uidRef.current, lessonId);
       if (!alreadyPurchasedPending) {
+        // 課金の前に、「すでに払ってあるのに、まだどの項目にも使われていない購入分」を使う（二重に払わない）。
+        try {
+          if (await claimExistingUnitCredit(lessonId)) {
+            if (mounted.current) {
+              setUnlockedIds((prev) => new Set(prev).add(lessonId));
+              setPurchasingLessonId(null);
+            }
+            return { ok: true };
+          }
+        } catch {
+          if (mounted.current) setPurchasingLessonId(null);
+          return { ok: false, message: '購入の状況を確認できませんでした。通信の状態を確かめて、もう一度お試しください。（お支払いはされていません）' };
+        }
         try {
           await purchaseProduct(product);
-          await markPurchasePending(lessonId);
+          await markPending(PENDING_KEY_PREFIX, uidRef.current, lessonId);
         } catch (e) {
           if (mounted.current) setPurchasingLessonId(null);
+          if ((e as { userCancelled?: boolean } | null)?.userCancelled) return { ok: false, message: '', cancelled: true };
+          // 「承認と購入のリクエスト」（ご家族の承認待ち）。承認されたあと、もう一度「購入する」を押すと、
+          // 払い済みの分が先に使われるので、追加のお支払いなしで解放される。
+          if (isPaymentPending(e)) {
+            return { ok: false, message: 'ご家族の承認待ちです。承認されたら、この画面を開き直して、もう一度「購入する」を押してください（承認済みの分は、追加のお支払いなしで解放されます）。' };
+          }
+          // 通信エラーなど、課金されたかどうか分からない失敗。確認待ちとして記録し、次は確認だけを行う。
+          if (!isDefinitelyNotCharged(e)) {
+            await markPending(PENDING_KEY_PREFIX, uidRef.current, lessonId);
+            return { ok: false, message: 'お支払いが完了したか確認できませんでした。しばらくしてから、この画面を開き直して、もう一度「購入する」を押してください（支払い済みなら、追加のお支払いなしで解放されます）。' };
+          }
           const message = e instanceof Error ? e.message : '購入処理に失敗しました';
           return { ok: false, message };
         }
@@ -96,7 +203,7 @@ export function useUnitUnlocks(): UnitUnlocksState {
       for (let attempt = 0; attempt < 3; attempt++) {
         try {
           await markUnitUnlocked(lessonId);
-          await clearPurchasePending(lessonId);
+          await clearPending(PENDING_KEY_PREFIX, uidRef.current, lessonId);
           if (mounted.current) {
             setUnlockedIds((prev) => new Set(prev).add(lessonId));
             setPurchasingLessonId(null);
@@ -108,7 +215,7 @@ export function useUnitUnlocks(): UnitUnlocksState {
             const message = e instanceof Error ? e.message : '購入の確認に失敗しました';
             return {
               ok: false,
-              message: `${message}\n\n決済自体は完了しています。もう一度「購入する」ボタンは押さず、しばらくしてからこの画面を開き直してください。`,
+              message: `${message}\n\nお支払いは完了しています。しばらくしてから、この画面を開き直して、もう一度「購入する」を押してください（支払い済みの分は、追加のお支払いなしで解放されます）。`,
             };
           }
           await new Promise((resolve) => setTimeout(resolve, 1500 * (attempt + 1)));
@@ -120,12 +227,28 @@ export function useUnitUnlocks(): UnitUnlocksState {
     [product]
   );
 
+  // 購入ボタンの連打で、購入の確認ダイアログや決済が二重に走らないようにする
+  // （state の更新は遅れるので、同期的に確かめられる ref で守る）
+  const inFlight = useRef(false);
+  const unlockUnit = useCallback(
+    async (lessonId: string): Promise<UnitUnlockPurchaseResult> => {
+      if (inFlight.current) return { ok: false, message: '', cancelled: true };
+      inFlight.current = true;
+      try {
+        return await unlockUnitInner(lessonId);
+      } finally {
+        inFlight.current = false;
+      }
+    },
+    [unlockUnitInner]
+  );
+
   const storePriceString = (product as { priceString?: string } | null)?.priceString;
 
   return {
     unlockedIds,
     loading,
-    productReady: product != null,
+    productReady: isWebPlatform || product != null,
     priceLabel: storePriceString ?? UNIT_UNLOCK_PRICE_LABEL,
     unlockUnit,
     purchasingLessonId,

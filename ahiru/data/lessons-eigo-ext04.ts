@@ -41,13 +41,14 @@ export const eigoExt04Lessons: Lesson[] = [
 every day（毎日）・every week（毎週）・every Sunday（毎週日曜日）・on Sundays（日曜日にはいつも）
 always（いつも）・usually（たいてい）・often（よく）・sometimes（ときどき）・never（けっして〜ない）
 
-これらの語が文の中にあれば、その文はほぼ現在形である。逆に、これらの語がある文を進行形にしてはいけない。
+これらの語が文の中にあれば、その文はふつう現在形である。（ただし always は「いつも〜ばかりしている」と不満を表すときに進行形と使うことがある。入試ではまず現在形と考えてよい。）
 
 ★ ポイント：現在形＝「点がくり返し並んでいる」イメージ。今この瞬間だけを指す一本の帯（現在進行形）とは、指している時間そのものがちがう。`,
         figureId: 'lf_eigoext04_116',
       },
       {
         heading: '主語によって動詞の形が変わる',
+        mangaId: 'eigo_s116_manga',
         body: `現在形でいちばん失点しやすいのが、主語が三人称単数のときに動詞へ -s を付け忘れることである。
 
 ■ 三人称単数とは
@@ -422,9 +423,9 @@ I played tennis.　He played tennis.　They played tennis.（すべて played）
     id: 'eigo_s121',
     subject: 'eigo',
     examType: 'chugaku',
-    title: '過去形②：-ed のつけ方 四つのパターン',
-    description: '規則動詞の過去形のつづりを、四つの型に整理して確実に書けるようにする',
-    intro: 'stop の過去形は stoped ではなく stopped、study は studyed ではなく studied。同じ -ed を付けるだけなのに、つづりが4通りに分かれます。分かれ目は語尾の形。パターンで覚えれば書きまちがえません。',
+    title: '過去形②：-ed のつけ方 五つのパターン',
+    description: '規則動詞の過去形のつづりを、五つの型に整理して確実に書けるようにする',
+    intro: 'stop の過去形は stoped ではなく stopped、study は studyed ではなく studied。同じ -ed を付けるだけなのに、つづりが5通りに分かれます。分かれ目は語尾の形。パターンで覚えれば書きまちがえません。',
     order: 621,
     studyPeriod: '小5前半',
     targetLevel: 'kiso',
@@ -437,8 +438,8 @@ I played tennis.　He played tennis.　They played tennis.（すべて played）
     ],
     sections: [
       {
-        heading: '四つのパターン',
-        body: `規則動詞の過去形は、次の四つの型に分けて覚える。
+        heading: '五つのパターン',
+        body: `規則動詞の過去形は、次の五つの型に分けて覚える（①〜④のあとに⑤を説明する）。
 
 ① そのまま -ed を付ける（いちばん多い）
 play→played　watch→watched　want→wanted　help→helped　open→opened　visit→visited　call→called　listen→listened
@@ -463,6 +464,7 @@ stop→stopped　plan→planned　drop→dropped　shop→shopped
       },
       {
         heading: '子音字を重ねる型を広げすぎない',
+        mangaId: 'eigo_s121_manga',
         body: `五つ目の「子音字を重ねる」型は便利だが、当てはめすぎる誤りが非常に多い。重ねるのは次の条件をすべて満たすときだけである。
 
 ■ 重ねる条件
@@ -547,6 +549,7 @@ played（プレイド）・opened（オープンド）・listened（リスンド
       },
       {
         heading: 'つづりでまちがえやすい語',
+        mangaId: 'eigo_s122_manga',
         body: `発音とあわせて、つづりの例外も確認しておく。
 
 ■ e で終わる語に -ed を付けるとき
@@ -705,6 +708,7 @@ You were tired. → Were you tired?
     sections: [
       {
         heading: '数は少ないが、出会う回数は多い',
+        mangaId: 'eigo_s124_manga',
         body: `英語の動詞の大部分は -ed を付けるだけで過去形になる「規則動詞」である。しかし一部の動詞は、まったくちがう形に変わる。これを「不規則動詞」という。
 
 例）go → went（行った）　　see → saw（見た）　　buy → bought（買った）
@@ -1173,6 +1177,7 @@ spend：（お金を）使う／（時間を）過ごす　I spent two hours on 
     sections: [
       {
         heading: '現在進行形が指す時間',
+        mangaId: 'eigo_s129_manga',
         body: `現在進行形は「今まさにしている最中だ」ということを表す。少し前に始まり、今も続いていて、もうすぐ終わる、という短い時間の幅を指している。
 
 例）I am reading a book now.（私は今、本を読んでいるところです）
@@ -1284,6 +1289,7 @@ in the park や with two dogs は主語の説明にすぎない。前置詞の�
       },
       {
         heading: '進行形にしてはいけない「〜ています」',
+        mangaId: 'eigo_s130_manga',
         body: `日本語で「〜ています」となっていても、英語では進行形にできない場合がある。とくに次の三つに注意する。
 
 ■ ① 職業や役割を述べるとき
@@ -1711,6 +1717,7 @@ When I opened the door, the cat ran out.
     sections: [
       {
         heading: '状態動詞とは',
+        mangaId: 'eigo_s135_manga',
         body: `動詞には「動作」を表すものと「状態」を表すものがある。状態を表す動詞は進行形にしない。
 
 ■ 状態動詞の代表
@@ -1797,6 +1804,7 @@ I am thinking about my future.（将来について考えているところだ�
     sections: [
       {
         heading: 'have の二つの顔',
+        mangaId: 'eigo_s136_manga',
         body: `have は英語で最もよく使う動詞の一つで、意味によって進行形にできるかどうかが変わる。
 
 ■ 状態の have（進行形にしない）
@@ -2150,6 +2158,7 @@ go が二回続くので変に見えるが、これは正しい文である。�
     sections: [
       {
         heading: '「いつ決めたか」で選ぶ',
+        mangaId: 'eigo_s140_manga',
         body: `will と be going to は、どちらも未来のことを表す。ちがいは「決めた時点がどこにあるか」である。
 
 ■ その場で決めた → will
@@ -2290,6 +2299,21 @@ If it rains tomorrow, I will stay home.
 「if・when のあとは will を使わない」と一言で覚えてしまう。これは中学入試でも高校入試でも必ず出る決まりである。
 
 ⚠ 注意：when には「いつ〜か」という疑問の意味もあり、その場合は will を使える。I don't know when he will come.（彼がいつ来るか分からない）。ただし中学受験ではまず「時・条件のまとまりでは現在形」を確実にしておけばよい。`,
+      },
+      {
+        heading: 'なぜ if・when のあとは will を使わないのか、なぜ進行形が予定を表すのか',
+        mangaId: 'eigo_s141_manga',
+        body: `If it rains tomorrow, I will stay home. で if のあとに will を使わないのは、if のまとまりが「雨が降る」という**条件をただ置いているだけ**で、未来を予測しているわけではないからです。予測や意志を表す will は文の中心（I will stay home）に一度あれば足り、条件の側にまで付けると意味が重なります。when・before・after・until・as soon as も同じで、時や条件のまとまりの中では現在形にします。理屈は複雑なので、「if・when のあとは will を使わない」と一言で覚えて、必ず出るひっかけとして対処します。
+
+現在進行形が予定を表せるのは、約束や予約がすんで**すでに動き出している**予定だからです。I'm meeting Ken at three tomorrow. は、今もその約束が進行中というとらえ方です。時刻表や行事のように個人では動かせない予定は現在形（The train leaves at 6:30.）で、動かせない順に 現在形→進行形→be going to→will と並びます。
+
+■ 確かめのしかた
+①if・when・before・after・until・as soon as を見つけたら、**そのまとまりの動詞が現在形か**。If it will rain→×→If it rains（三単現の s も忘れない）。
+②文の中心のほうは will のままでよい。両方を現在形にしない。
+③tomorrow・this Saturday・next week があるのに進行形なら、「〜している最中」ではなく**「〜する予定」**と読む。
+④予定の確かさで形を選ぶ：時刻表・行事→現在形、約束ずみ→進行形、前から決めていた→be going to、今決めた・予測→will。
+
+★ ここがポイント：if・when のまとまりは**条件を置いているだけ**なので will を使わず現在形。進行形は**約束がすんで動き出している予定**を表す。未来を示す語と進行形が一緒なら「予定」と読む。`,
       },
     ],
     trapExamples: [
@@ -2515,6 +2539,7 @@ I have been waiting for you for an hour.（1時間ずっとあなたを待って
     sections: [
       {
         heading: 'for は長さ、since は起点',
+        mangaId: 'eigo_s144_manga',
         body: `継続用法でいちばん問われるのが for と since の使い分けである。指しているものがまったくちがう。
 
 ■ for ＋「どれくらいの長さか」
@@ -2812,6 +2837,7 @@ Have ＋ 主語 ＋ 過去分詞 ＋ yet ?　… 「もう〜しましたか」
       },
       {
         heading: 'just と just now のちがい',
+        mangaId: 'eigo_s147_manga',
         body: `just と just now は形が似ているが、いっしょに使う時制がちがう。
 
 ■ just ＋ 現在完了
@@ -2879,6 +2905,7 @@ Have you already finished your homework?（もう終わったの？）… 「そ
     sections: [
       {
         heading: '否定文の yet と疑問文の yet',
+        mangaId: 'eigo_s148_manga',
         body: `yet は文末に置く語で、否定文と疑問文で意味が変わる。
 
 ■ 否定文の yet ＝「まだ〜していない」
@@ -2992,19 +3019,43 @@ It has become warm.（暖かくなりました＝今は暖かい）
 
 ■ 例1
 I lost my key yesterday.（昨日かぎをなくした）
-　→ 今どうなっているかは分からない。もう見つかっているかもしれない。
 I have lost my key.（かぎをなくしてしまった）
-　→ 今も見つかっていない。だから今こまっている。
+【解法】
+【何を聞かれているか】同じ「かぎをなくした」でも、過去形と現在完了で伝わることがどうちがうか。
+【なぜこの考え方か】過去形は「昔あったできごと」を言うだけの形で、今のことには何も触れない。現在完了は have（今持っている）＋過去分詞（なくした結果）の形なので、「その結果を今も持っている」＝今もその状態だ、という意味になる。
+【ステップ1】過去形 I lost my key yesterday. は、昨日の話だけを言っている。
+【ステップ2】今どうなっているかは書いていないので、もう見つかっているかもしれない。
+【ステップ3】現在完了 I have lost my key. は、have が今のことを表すので、なくした結果が今も続いている。
+【ステップ4】だから「今も見つかっていない。だから今こまっている」と伝わる。
+【答え】過去形は今の状態が分からない。現在完了は今も見つかっていない。
+【確かめ】日本語に直して「今も見つかっていないか」を自分に聞く。「見つかっていない」と言えるなら現在完了、言えないなら過去形を選ぶ。
+【よくあるまちがい】どちらも「なくした」と訳して同じ意味だと思ってしまう。今の状態が伝わるかどうかがちがう。
 
 ■ 例2
 He went to America.（彼はアメリカへ行った）
-　→ 今もどっているかどうかは分からない。
 He has gone to America.（彼はアメリカへ行ってしまった）
-　→ 今ここにいない。
+【解法】
+【何を聞かれているか】went と has gone で、彼が今どこにいるかの伝わり方はどうちがうか。
+【なぜこの考え方か】例1と同じで、過去形は昔のできごとだけを言い、現在完了は「行った結果、今どうなのか」まで言うからである。
+【ステップ1】He went to America. は、行ったという昔の事実だけを言っている。
+【ステップ2】行ったあとに帰ってきたかどうかは書いていないので、今もどっているかどうかは分からない。
+【ステップ3】He has gone to America. は、行った結果を今も持っている形なので、行ったきりで今も向こうにいる。
+【ステップ4】だから「今ここにいない」と伝わる。
+【答え】went は今のことが分からない。has gone は今ここにいない。
+【確かめ】has gone のあとに「でも今ここにいるよ」とつなげると、意味が合わなくなる。合わなくなるのは、今いないという意味をもっているからである。
+【よくあるまちがい】has gone を「行ったことがある」と読んでしまう。「行ったことがある」なら今ここにいることもあり、has been to を使う。
 
 ■ 例3
 She lost her wallet, but she found it later.（財布をなくしたが、あとで見つけた）
-この文では「今はある」ので、現在完了ではなく過去形を使う。現在完了を使うと「今もない」という意味と矛盾してしまう。
+【解法】
+【何を聞かれているか】この文を現在完了にしてよいか、過去形にすべきか。
+【なぜこの考え方か】現在完了は「結果が今も続いている」ときの形だから、結果が今は消えているなら使えない。
+【ステップ1】文の後半に「あとで見つけた」とあるので、今は財布がある。
+【ステップ2】現在完了 has lost にすると「今も財布がない」という意味になり、後半の「見つけた」と食いちがう。
+【ステップ3】結果がもう続いていないので、過去形 lost を使う。
+【答え】過去形（She lost her wallet, but she found it later.）。
+【確かめ】現在完了にした文を日本語に直し、「今もない」と読めるか見る。後半とけんかするなら過去形が正しい。
+【よくあるまちがい】「なくした」という動詞を見ただけで、すぐ現在完了にしてしまう。あとの文で結果が消えていないかまで読む。
 
 ■ 会話でのはたらき
 現在完了は「だから今こまっている」「だから今いない」という、今の事情を相手に伝える形である。だから会話文で理由を説明する場面によく出てくる。
@@ -3195,6 +3246,21 @@ ago は必ず前に数量が付く（three days ago, a year ago）。before は�
 
 ⚠ 注意：before にも「〜する前に」という別の使い方がある（before I go to bed）。現在完了といっしょに文末に置かれていれば「以前に」の意味である。`,
       },
+      {
+        heading: 'なぜ never は中で before は文末なのか、なぜ ago は使えないのか',
+        mangaId: 'eigo_s151_manga',
+        body: `ever・never・just・already は、**動作の「あり方」を説明する語**で、have と過去分詞のあいだに入って動詞を修飾します。before・yet・回数（twice・three times）は、**文全体に「いつ・何回」という情報を足す語**なので、文の終わりに置きます。「have＋never＋過去分詞」をかたまりで覚えるのは、日本語の「一度も」を先に言いたい気持ちで never を have の前に出す誤りを防ぐためです。
+
+ago が現在完了と使えないのは、ago が「今から3日さかのぼった**過去の一点**」を指す語だからです。現在完了は「過去から今までの幅」を表すので、一点を指す語（ago・yesterday・last year）とは合いません。before は「以前に」とだけ言って時点を指さないので、現在完了と使えます。ago には必ず数量が付く（three days ago）ので、数量が付いていたら過去形、と判断できます。
+
+■ 確かめのしかた
+①**中に置く語**（ever・never・just・already）と**文末に置く語**（before・yet・once・twice・three times）に分けて言えるか。
+②I never have read→× → I have never read。「have＋never＋過去分詞」の順か。
+③「以前に」→before（現在完了）。「〇日前に」→ago（過去形）。× I have met him three days ago。
+④回数：once（1回）・twice（2回）・three times（3回〜）。たずねるときは How many times have you 〜?、答えは Three times. / Only once. / Never.
+
+★ ここがポイント：ever・never は**動作のあり方**なので中に、before・yet・回数は**文全体への情報**なので文末に置く。ago は**過去の一点**を指すので過去形とだけ使い、現在完了には before。`,
+      },
     ],
     trapExamples: [
       {
@@ -3238,6 +3304,7 @@ ago は必ず前に数量が付く（three days ago, a year ago）。before は�
     sections: [
       {
         heading: '三つの形を並べて区別する',
+        mangaId: 'eigo_s152_manga',
         body: `be動詞の過去分詞 been を使った形は、前置詞と組み合わせで意味が変わる。三つを並べて覚える。
 
 ■ have been to 〜（経験：〜へ行ったことがある）
@@ -3326,6 +3393,7 @@ It has been three years since he left Japan.（彼が日本を発ってから3�
     sections: [
       {
         heading: '二つの形が指す範囲のちがい',
+        mangaId: 'eigo_s153_manga',
         body: `過去形と現在完了は、どちらも「過去に起きたこと」を語る。ちがいは、その出来事を今と結びつけるかどうかである。
 
 ■ 過去形：点で終わる
@@ -3417,6 +3485,7 @@ I have been busy since last week.（先週からずっといそがしい）… �
     sections: [
       {
         heading: 'いっしょに使えない語',
+        mangaId: 'eigo_s154_manga',
         body: `現在完了は「過去から今まで」を一本の線でとらえる形である。だから、線の途中の一点だけを指す語とは矛盾してしまい、いっしょに使えない。
 
 ■ 使えない語
@@ -3564,6 +3633,21 @@ if・when・before・after・until・as soon as のあとは will を使わな�
 （ウ）助動詞・did・to のあとは原形か
 （エ）have のあとは過去分詞か
 この四つを確認するだけで、時制の失点は大きく減らせる。`,
+      },
+      {
+        heading: 'なぜ「今とつながるか」「点か幅か」の二つで決まるのか',
+        mangaId: 'eigo_s155_manga',
+        body: `英語の時制は、**出来事が時間軸のどこにあるか**と**どんな長さか**の二つを表す形です。過去形は過去の一点、過去進行形は過去の幅、現在完了は過去から今までの幅、現在形はくり返す点、現在進行形は今の幅。だから「今とつながっているか」で過去形と現在完了を分け、「点か幅か」で単純形と進行形を分ければ、七つ以上ある形も二つの問いで一つに決まります。ばらばらに覚えると英作文のたびに迷いますが、一本の時間軸に並べれば、迷う場所が二か所に減ります。
+
+最後の確認事項（and で時制をそろえる・状態動詞は進行形にしない・現在完了に yesterday を付けない・助動詞と did のあとは原形・have のあとは過去分詞）は、**時制を決めたあとに形が崩れる**失敗を防ぐものです。日本語では文末にしか「〜しました」が付かないので、and のあとの動詞の時制を意識しにくく、ここでよく落とします。
+
+■ 確かめのしかた
+①**今とつながっているか**：since・for・「ずっと」があれば現在完了（I haven't seen her since yesterday.）。yesterday・ago があれば過去形。
+②**点か幅か**：「〜している最中」なら進行形、習慣・事実なら現在形。
+③書き終えたら四つを見直す：（ア）主語と動詞の数、（イ）時を表す語と時制の矛盾、（ウ）助動詞・did・to のあとは原形、（エ）have のあとは過去分詞。
+④and・but の前後で時制がそろっているか。I went 〜 and play→×→played。
+
+★ ここがポイント：時制は**時間軸の位置と長さ**を表す形なので、**今とつながるか／点か幅か**の二つで決まる。決めたあとは**and の前後・原形・過去分詞**の四つの見直しで形の崩れを防ぐ。`,
       },
     ],
     trapExamples: [

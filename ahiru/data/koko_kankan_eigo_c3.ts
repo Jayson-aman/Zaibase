@@ -37,7 +37,7 @@ A: Me too. Let's ask the teacher for one more day.
     question: `次の（　）に適切な語を選びなさい。
 
 ① Our school festival was (　) an exciting event that we still talk about it.（私たちの学園祭は、今でも話題になるほどわくわくする行事だった）
-② There were (　) many food stalls in the schoolyard.（校庭にはとても多くの屋台があった）
+② There were (　) many food stalls in the schoolyard that we could not visit all of them.（校庭には屋台がとても多かったので、全部は回れなかった）
 ③ I had (　) fun that I want to join again next year.（とても楽しかったので来年もまた参加したい）
 
 ア. so　イ. very　ウ. such`,
@@ -64,7 +64,8 @@ A: Me too. Let's ask the teacher for one more day.
     answer: `① What are you going to do this summer?
 ② I have not finished my homework yet.`,
     hint: '①be going to（〜するつもりだ）の疑問文、②現在完了の否定文＋yet。',
-    explanation: `【出題意図】未来表現（be going to）の疑問文と現在完了の否定文の語順を問う。【解説】①「What+be動詞+主語+going to+動詞原形」の語順。疑問詞Whatを文頭に置く。②現在完了の否定文はhave/has+not+過去分詞。「yet」は否定文の文末で「まだ」の意味。【注意点】①のare you going toの語順を崩さない。②not yetは「まだ〜ない」、already yetは肯定文で使う点との違いに注意。【関連知識】be going toは「すでに決まっている予定」、willは「その場での決定」に使い分ける。`,
+    explanation:
+      '【何を聞かれているか】\n語句を並べ替えて、be going toの疑問文と現在完了の否定文（＋yet）を完成させる問題。\n\n【なぜそれぞれ異なる語順が必要なのか】\n①未来の予定をたずねる疑問文（What＋be動詞＋主語＋going to＋動詞の原形）と、②現在完了の否定文（have/has＋not＋過去分詞）は、それぞれ決まった語順のパターンを持つ。\n\n【ポイント1】①be going toの疑問文を確認する\n"What are you going to do this summer?"＝疑問詞Whatを文頭に置き、be動詞areを主語youの前に置く。\n\n【ポイント2】②現在完了の否定文を確認する\n"I have not finished my homework yet."＝have＋not＋過去分詞（finished）の順。yetは否定文の文末で「まだ」の意味。\n\n【ポイント3】語順のポイントを確認する\n①はare you going toという語順を崩さない、②はnotをhaveの直後に置く。\n\n【答え】\n① What are you going to do this summer?\n② I have not finished my homework yet.\n\n【確かめ】\n①のare you going toの語順、②のnotがhaveの直後にあることを確認する。\n\n【よくあるまちがい】\n②を"I have finished my homework not yet."のように、notの位置を間違えてしまうミス。notは必ずhaveの直後に置く。\n\n【ここが絶対】\n現在完了の否定文は「have/has＋not＋過去分詞」、文末にyetを置いて「まだ〜ない」を表す。',
     pitfall: '②をI have finished my homework not yetとするのは語順の誤り。notはhaveの直後。',
     memoryTip: '現在完了の否定：have/has + not + 過去分詞、文末にyetを置く。',
   },
@@ -99,13 +100,13 @@ A: Me too. Let's ask the teacher for one more day.
 
 ① I have (　) to Kyoto twice.（私は京都に2回行ったことがある）
 ② Have you ever (　) natto before?（今までに納豆を食べたことがありますか）
-③ She has never (　) abroad.（彼女は一度も海外へ行ったことがない）
+③ He has just (　) to the station, so he is not here now.（彼はちょうど駅へ行ってしまったので、今ここにはいない）
 
 語群：been / eaten / gone`,
-    answer: '① been　② eaten　③ been',
-    hint: '「行ったことがある」経験用法はhave been to、eatの過去分詞はeaten。',
-    explanation: `【出題意図】現在完了（経験用法）でのbeenとgoneの使い分け、動詞の過去分詞形を問う。【解説】①③「〜へ行ったことがある」という経験はhave been to〜を使う（have goneは「行ってしまって今ここにいない」という意味になるため経験用法には使えない）。②eatの過去分詞はeaten。【注意点】have gone toは「行ってしまい、今は不在」を表すので、経験を尋ねる文脈ではbeenを使うのが原則。【関連知識】経験用法でよく使う副詞：ever、never、before、once/twice/〜times。`,
-    pitfall: '①③をhave/has goneとすると「行ってしまっていない」という意味になり経験を表せない。',
+    answer: '① been　② eaten　③ gone',
+    hint: '「行ったことがある」経験用法はhave been to、「行ってしまって今いない」はhave gone to、eatの過去分詞はeaten。',
+    explanation: `【出題意図】現在完了でのbeenとgoneの使い分け、動詞の過去分詞形を問う。【解説】①「〜へ行ったことがある」という経験はhave been to〜を使う（have goneは「行ってしまって今ここにいない」という意味になるため経験用法には使えない）。②eatの過去分詞はeaten。③後ろにso he is not here now（だから今ここにいない）とあるので、「行ってしまって今はいない」を表すhas gone to〜が入る（has beenだと「行って戻ってきた」意味になり、文意に合わない）。【注意点】have gone toは「行ってしまい、今は不在」を表すので、経験を尋ねる文脈ではbeenを使うのが原則。【関連知識】経験用法でよく使う副詞：ever、never、before、once/twice/〜times。`,
+    pitfall: '①をhave goneとすると「行ってしまっていない」という意味になり経験を表せない。③をhas beenとすると「行って戻ってきた」意味になり、後ろのso he is not here nowと矛盾する。',
     memoryTip: '経験の「行ったことがある」はbeen、「行ってしまった（不在）」はgoneと覚える。',
   },
   {
@@ -142,7 +143,8 @@ A: Me too. Let's ask the teacher for one more day.
 ③ Please tell me (　) time to leave home.（何時に家を出ればいいか教えてください）`,
     answer: '① how　② what　③ what',
     hint: '疑問詞+to不定詞の形。「行き方」→how to、「何を言うか」→what to、「何時に」→what time to。',
-    explanation: `【出題意図】「疑問詞+to不定詞」の基本形（how to / what to / what time to）を問う。【解説】①「どうやって〜するか」→how to get。②「何を言うか」→what to say。③「何時に〜するか」→what time to leave。すべて「疑問詞+to+動詞原形」で名詞句を作り、tell/knowの目的語になる。【注意点】疑問詞+to doは「疑問詞+主語+should+動詞原形」とほぼ同意（例：what to say=what I should say）。【関連知識】where to go（どこへ行くべきか）、which to choose（どちらを選ぶべきか）もセットで押さえる。`,
+    explanation:
+      '【何を聞かれているか】\n「疑問詞＋to不定詞」の基本形（how to／what to／what time to）を完成させる問題。\n\n【なぜ「疑問詞＋to不定詞」で名詞のかたまりを作るのか】\n「〜すべきか」という内容を、動詞（tell/know）の目的語になる1つの名詞のかたまりとして表したいとき、「疑問詞＋to＋動詞の原形」という形を使う。\n\n【ポイント1】①howを確認する\n「どうやって〜するか」→"how to get"（どうやって着くか＝行き方）。\n\n【ポイント2】②whatを確認する\n「何を言うか」→"what to say"。\n\n【ポイント3】③what timeを確認する\n「何時に〜するか」→"what time to leave"。\n\n【答え】\n① how　② what　③ what\n\n【確かめ】\nそれぞれの文が、「疑問詞＋to＋動詞の原形」という名詞のかたまりを作り、tell/knowの目的語になっているか確認する。\n\n【よくあるまちがい】\n①を"what to get"にしてしまうミス。「何を得るか」という意味になり、道案内の文脈に合わない。howを使うことで「どうやって（行き方）」という意味になる。\n\n【ここが絶対】\n「疑問詞＋to do」＝「疑問詞＋すべきか」（what to say＝what I should sayとほぼ同意）と覚えて、意味から逆算して疑問詞を選ぶ。',
     pitfall: '①をwhat to getとすると「何を得るか」になり、道案内の文脈に合わない。',
     memoryTip: '疑問詞+to do=「疑問詞+すべきか」と覚えて意味から逆算する。',
   },
@@ -163,7 +165,8 @@ A: Me too. Let's ask the teacher for one more day.
 語群：had / clean / helped / help`,
     answer: '① had, help　② had, clean',
     hint: '「have+人+動詞原形」＝人に〜してもらう／させる（使役動詞）。',
-    explanation: `【出題意図】使役動詞haveの用法（have+O+動詞原形）を問う。【解説】①「友達に手伝ってもらった」→had my friend help me（have+人+動詞原形＝〜してもらう）。②「母は私に部屋を掃除させた」→had me clean my room（have+人+動詞原形＝〜させる）。どちらもhaveの後は動詞原形（原形不定詞）を使う点が共通。【注意点】makeは「強制的に〜させる」、haveは「頼んで〜してもらう／当然のこととして〜させる」、letは「〜させてあげる（許可）」とニュアンスが異なる。【関連知識】get+人+to doも同様の意味を表すが、こちらはto不定詞を使う（get my friend to help me）。`,
+    explanation:
+      '【何を聞かれているか】\n使役動詞haveを使った、2つの日本語を英語にする問題。\n\n【なぜhaveの後ろに動詞の原形を使うのか】\n「（人）に〜してもらう／させる」という使役の意味を表すhaveは、後ろに「人＋動詞の原形」を続けるという、toをつけない特別な形を取る。\n\n【ポイント1】①「友達に手伝ってもらった」を組み立てる\n"had my friend help me"＝have＋人（my friend）＋動詞の原形（help）。\n\n【ポイント2】②「母は私に部屋を掃除させた」を組み立てる\n"had me clean my room"＝have＋人（me）＋動詞の原形（clean）。\n\n【ポイント3】makeとの違いを確認する\nmakeは「強制的に〜させる」、haveは「頼んで〜してもらう／当然のこととして〜させる」というニュアンスの違いがある。\n\n【答え】\n① had, help　② had, clean\n\n【確かめ】\n①②とも、hadの後ろの動詞（help、clean）がtoのつかない原形になっていることを確認する。\n\n【よくあるまちがい】\n②を"had me to clean"としてしまうミス。使役動詞haveの後ろはto不定詞ではなく動詞の原形（原形不定詞）を使う。\n\n【ここが絶対】\nhave/make/let＋人＋動詞の原形（toなし）という使役動詞の形をセットで覚える。get＋人＋to doは同じ意味だがto不定詞を使う点が異なることもあわせて確認する。',
     pitfall: '②をhad me to cleanとするのは誤り。使役のhaveの後はto不定詞ではなく動詞原形。',
     memoryTip: 'have/make/let+O+動詞原形（原形不定詞）とget+O+to doをセットで区別する。',
   },
@@ -262,7 +265,8 @@ B: That's a good idea. I'll ask them tomorrow.
   （これは私の父が卒業した学校だ）`,
     answer: '① which (that)　② who(m) (that) 省略可　③ which (that) 省略可',
     hint: '①主格（先行詞は物）、②目的格（先行詞は人）、③目的格（先行詞は物、前置詞fromが残る）。',
-    explanation: `【出題意図】関係代名詞の格（主格・目的格）と先行詞の種類（人・物）による使い分け、省略可否を問う。【解説】①先行詞the book（物）が主語の働き→主格which(that)。主格は省略不可。②先行詞the girl（人）が目的語の働き→目的格who(m)(that)。目的格は省略可能。③先行詞the school（物）で「graduated from the school」のfromが後ろに残った形→目的格which(that)。省略可能。【注意点】主格の関係代名詞は動詞の前に置かれ省略できない。目的格は動詞・前置詞の目的語になり省略できる。【関連知識】前置詞+関係代名詞（from which）にまとめる書き換えも重要（This is the school from which my father graduated.）。`,
+    explanation:
+      '【何を聞かれているか】\n関係代名詞の格（主格・目的格）を答え、省略できるかどうかも答える問題。\n\n【なぜ主格は省略できず目的格は省略できるのか】\n主格の関係代名詞は、その後ろの動詞の主語の役割を直接担っているため省略すると文が壊れるが、目的格の関係代名詞は、後ろに主語と動詞がすでにそろっているため、省略しても意味が通じる。\n\n【ポイント1】①主格を確認する\n"The book（物）is on the desk"のように、先行詞the bookが動詞isの主語の働きをしているので主格which(that)。省略不可。\n\n【ポイント2】②目的格を確認する\n先行詞the girl（人）が"I met"の目的語の働きをしているので目的格who(m)(that)。省略可能。\n\n【ポイント3】③前置詞が残る目的格を確認する\n"graduated from the school"のfromが後ろに残った形で、先行詞the school（物）は目的格which(that)。省略可能。\n\n【答え】\n① which (that)　② who(m) (that) 省略可　③ which (that) 省略可\n\n【確かめ】\n①が省略不可（主格）、②③が省略可（目的格）になっているか確認する。\n\n【よくあるまちがい】\n①を省略可としてしまうミス。主格の関係代名詞は、その後ろの動詞の主語を兼ねているため省略できない。\n\n【ここが絶対】\n主格＝省略不可、目的格＝省略可、という関係代名詞の格による省略のルールをセットで覚える。',
     pitfall: '①を省略可とするのは誤り。主格の関係代名詞は省略できない。',
     memoryTip: '主格＝省略不可、目的格＝省略可、と役割で判断する。',
   },
@@ -310,7 +314,8 @@ Many schools in Japan have started to allow students to use smartphones for lear
    ア. join  イ. leave  ウ. skip`,
     answer: '① イ(count on)　② ウ(correct)　③ ア(join)',
     hint: 'count on=頼りにする、correct=訂正する、join=参加する・入部する。',
-    explanation: `【出題意図】学校生活・部活動に関する頻出動詞・イディオムの意味を問う。【解説】①count on〜=「〜を頼りにする、当てにする」。rely on〜も同意表現。②correct=「（間違いを）訂正する」。fix a mistakeとも言い換え可能。③join=「（部活・クラブに）参加する、入る」。【注意点】take off（脱ぐ・離陸する）、give up（あきらめる）、put off（延期する）、work out（うまくいく・運動する）、leave（去る・辞める）、skip（欠席する・飛ばす）などの意味も混同しないよう区別する。【関連知識】部活動関連の頻出表現：join a club（入部する）、quit a club（退部する）、take part in〜（〜に参加する）。`,
+    explanation:
+      '【何を聞かれているか】\ncount on・correct・joinという、学校生活・部活動に関するイディオムの空欄を埋める問題。\n\n【なぜイディオムを1つずつ正確に区別する必要があるのか】\ncount on（頼りにする）、correct（訂正する）、join（参加する）は、似た場面で使われる他の熟語（take off、put off、leaveなど）と意味がまったく異なるため、混同しないよう正確に覚える必要がある。\n\n【ポイント1】①count onを確認する\ncount on〜＝「〜を頼りにする、当てにする」。rely on〜も同じ意味。\n\n【ポイント2】②correctを確認する\ncorrect＝「（間違いを）訂正する」。fix a mistakeとも言い換えられる。\n\n【ポイント3】③joinを確認する\njoin＝「（部活・クラブに）参加する、入る」。\n\n【答え】\n① イ(count on)　② ウ(correct)　③ ア(join)\n\n【確かめ】\nそれぞれの文脈（お互いを助け合う、間違いを直す、部活に入る）に、選んだ熟語の意味が合っているか確認する。\n\n【よくあるまちがい】\n①でtake off（脱ぐ・離陸する）を選んでしまうミス。count on（頼りにする）とはまったく異なる意味。\n\n【ここが絶対】\ncount on（頼りにする）、correct（訂正する）、join（参加する）を、take off、put off、leaveなどの似た場面で使われる別の熟語と区別してセットで覚える。',
     pitfall: '①をrely onと混同してtake offを選ばないこと。take offは全く異なる意味。',
     memoryTip: 'count on=カウント（数える）→「数に入れて頼る」とイメージすると覚えやすい。',
   },
@@ -346,7 +351,7 @@ Many schools in Japan have started to allow students to use smartphones for lear
 ① Do you know (　) this word means?（この単語が何を意味するか知っていますか）
 ② I wonder (　) will win the speech contest.（誰がスピーチコンテストで優勝するのだろう）
 ③ Please tell me (　) the club activity (　) start.（部活動がいつ始まるか教えてください）`,
-    answer: '① what　② who　③ when, will (does)',
+    answer: '① what　② who　③ when, will',
     hint: '間接疑問文は「疑問詞+主語+動詞」の語順になる（疑問文の倒置をしない）。',
     explanation: `【出題意図】間接疑問文の語順（疑問詞+主語+動詞、疑問文の倒置をしない）を問う。【解説】①「What does this word mean?」→間接疑問ではwhat this word meansの語順（doは消える）。②「Who will win〜?」のwhoが主語の場合は間接疑問でも語順が変わらない（who will win）。③「When will the club activity start?」→間接疑問ではwhen the club activity will startの語順。【注意点】疑問詞が主語の場合（②）は普通の疑問文と間接疑問文で語順が変わらない点に注意。①③は疑問詞が主語でないため、主語+動詞の平叙文の語順に戻す。【関連知識】間接疑問文はknow/wonder/tell/askなどの動詞の目的語としてよく使われる。`,
     pitfall: '①をwhat does this word meanのままにするのは誤り。間接疑問ではdoesを使わない。',
@@ -371,7 +376,8 @@ B: That sounds great. Thanks for the offer.
     answer: `① 放課後に一緒に練習しようという提案。
 ② She (He) hasn't practiced her (his) speech script enough.`,
     hint: '①Why don\'t we〜?の内容、②Bの2番目の発言「I haven\'t practiced enough」に注目。',
-    explanation: `【出題意図】スピーチコンテストという学校行事を題材にした会話文の内容把握を問う。【解説】①「Why don't we practice together after school?」＝「放課後一緒に練習しない？」という提案。②Bは「I've written my script, but I haven't practiced enough.」と述べており、原稿は書いたが練習が足りていないことが悩みだとわかる。【注意点】Why don't we〜?は「〜しませんか」という一緒に行動する提案の定型表現（Why don't you〜?は相手への提案）。【関連知識】speech contest関連語彙：script（原稿）、practice（練習する）、offer（申し出）。`,
+    explanation:
+      '【何を聞かれているか】\nスピーチコンテストについての会話文を読んで、提案の内容とBの悩みを答える問題。\n\n【なぜWhy don\'t we〜?とWhy don\'t you〜?を区別するのか】\n"Why don\'t we〜?"は「（一緒に）〜しませんか」という提案、"Why don\'t you〜?"は「あなたが〜したら」という相手への提案で、主語の違いで意味が変わる。\n\n【ポイント1】①Aの提案を確認する\n"Why don\'t we practice together after school?"＝「放課後一緒に練習しない？」という提案。\n\n【ポイント2】②Bの悩みを確認する\n"I\'ve written my script, but I haven\'t practiced enough."から、原稿は書いたが練習不足であることがわかる。\n\n【ポイント3】weを使っていることを確認する\nAの提案はwe（私たちで一緒に）なので、一緒に行動する提案だとわかる。\n\n【答え】\n① 放課後に一緒に練習しようという提案。\n② She (He) hasn\'t practiced her (his) speech script enough.\n\n【確かめ】\n②の答えが「原稿を書いていない」ではなく「練習が足りていない」という内容になっているか確認する。\n\n【よくあるまちがい】\n②を「原稿を書いていない」と答えてしまうミス。原稿はすでに書き終えており、悩みは練習不足の方。\n\n【ここが絶対】\nWhy don\'t we〜?＝「一緒に〜しよう」、Why don\'t you〜?＝「あなたが〜したら」と主語で意味を区別する。',
     pitfall: '②を「原稿を書いていない」と答えるのは誤り。原稿は書き終えている（練習不足が問題）。',
     memoryTip: 'Why don\'t we〜?=「一緒に〜しよう」、Why don\'t you〜?=「あなたが〜したら」と主語で区別する。',
   },
@@ -389,7 +395,8 @@ B: That sounds great. Thanks for the offer.
 ③ Let's go to the library, (　) (　)?`,
     answer: '① aren\'t you　② does she　③ shall we',
     hint: '肯定文→否定の付加疑問、否定文→肯定の付加疑問、Let\'s〜→shall we?',
-    explanation: `【出題意図】付加疑問文の作り方（肯定⇄否定の反転、Let'sの特別ルール）を問う。【解説】①肯定文（You are〜）→否定の付加疑問（aren't you?）。②否定文（She doesn't like〜）→肯定の付加疑問（does she?）。③Let's〜（勧誘文）の付加疑問は特別にshall we?を使う。【注意点】付加疑問文は前の文が肯定なら否定形、否定なら肯定形を後ろに付ける。動詞の種類（be動詞・一般動詞・助動詞）に応じてdo/does/did/be動詞/助動詞を使い分ける。【関連知識】命令文の付加疑問はwill you?（例：Close the door, will you?）。`,
+    explanation:
+      '【何を聞かれているか】\n付加疑問文（〜ですよね、のように確認する表現）を完成させる問題。\n\n【なぜ肯定文と否定文で付加疑問の形が逆になるのか】\n付加疑問文は、前の文と反対の形（肯定文には否定形、否定文には肯定形）を後ろに付けて確認するという決まりがある。ただしLet\'s〜（勧誘文）は特別にshall we?を使う。\n\n【ポイント1】①肯定文の付加疑問を確認する\n"You are〜"（肯定）→"aren\'t you?"（否定形）。\n\n【ポイント2】②否定文の付加疑問を確認する\n"She doesn\'t like〜"（否定）→"does she?"（肯定形）。\n\n【ポイント3】③Let\'s〜の特別ルールを確認する\n"Let\'s〜"（勧誘文）の付加疑問はshall we?という決まった形を使う。\n\n【答え】\n① aren\'t you　② does she　③ shall we\n\n【確かめ】\n①が否定形、②が肯定形、③がshall weになっているか確認する。\n\n【よくあるまちがい】\n③を"do we"としてしまうミス。Let\'s〜の付加疑問は必ずshall weという特別な形。\n\n【ここが絶対】\n肯定文→否定形、否定文→肯定形という反転ルールと、Let\'s〜→shall we?という例外をセットで覚える。',
     pitfall: '③をdo weとするのは誤り。Let\'s〜の付加疑問は必ずshall we。',
     memoryTip: '肯定→否定、否定→肯定の反転ルールと、Let\'s→shall we?の例外を覚える。',
   },
@@ -455,7 +462,8 @@ Reducing plastic waste has become an important topic at schools. Some students h
     answer: `① Bringing their own water bottles instead of buying plastic ones, and bringing reusable bags for school events.
 ② 大きな違いを生む・大きな効果をもたらす`,
     hint: '①本文2文目・3文目、②make a differenceは「変化・効果を生む」という意味の熟語。',
-    explanation: `【出題意図】環境問題（プラスチックごみ削減）をテーマにした読解問題。情報抽出と熟語の意味把握を問う。【解説】①本文2文目「bringing their own water bottles instead of buying plastic ones」と3文目「bring reusable bags for school events」の2つの行動を答える。②make a difference=「違いを生む、効果をもたらす」。a bigが付くことで「大きな効果」を意味する。【注意点】①は「2つ」を明確に分けて答えることが求められている。【関連知識】環境語彙：reduce（減らす）、reusable（再利用可能な）、plastic waste（プラスチックごみ）、sustainability（持続可能性）。`,
+    explanation:
+      '【何を聞かれているか】\nプラスチックごみ削減についての英文を読んで、生徒の行動例と熟語の意味を答える問題。\n\n【なぜ「2つ」を明確に分けて答える必要があるのか】\n設問が"two examples"（2つの例）と明示しているので、本文中の2つの行動（マイボトル持参、マイバッグ持参）を、どちらも漏らさず答える必要がある。\n\n【ポイント1】①2つの行動を確認する\n"bringing their own water bottles instead of buying plastic ones"（マイボトルを持参する）と"bring reusable bags for school events"（学校行事にマイバッグを持参する）の2つ。\n\n【ポイント2】②make a differenceの意味を確認する\nmake a difference＝「違いを生む、効果をもたらす」。a bigがつくことで「大きな効果」を意味する。\n\n【ポイント3】文章全体の流れを確認する\n「小さな行動の例→that合計すると大きな効果になる」という結論の流れになっている。\n\n【答え】\n① Bringing their own water bottles instead of buying plastic ones, and bringing reusable bags for school events.\n② 大きな違いを生む・大きな効果をもたらす\n\n【確かめ】\n①の答えが2つの行動を両方含んでいるか確認する。\n\n【よくあるまちがい】\n①で1つだけ答えて終わらせてしまうミス。設問で「two examples」と明示されている場合は、必ず2つ答える。\n\n【ここが絶対】\nmake a difference＝「差を作る」→「効果・変化をもたらす」という直訳から意味を導く。設問の「いくつ答えるか」という指示を必ず確認する。',
     pitfall: '①で1つだけ答えて終わらないこと。設問で「two examples」と明示されている。',
     memoryTip: 'make a difference=「差を作る」→「効果・変化をもたらす」と直訳から意味を導く。',
   },
@@ -476,7 +484,8 @@ Reducing plastic waste has become an important topic at schools. Some students h
     answer: `① The student that spoke first was very nervous.
 ② Could you tell me where the gym is?`,
     hint: '①関係代名詞thatを使った文構造、②Could you tell me+間接疑問文（語順注意）。',
-    explanation: `【出題意図】関係代名詞thatの主格用法と、Could you tell me+間接疑問文の語順を問う。【解説】①「The student that spoke first」＝「最初に話した生徒」。thatは主格の関係代名詞で先行詞the studentを修飾。②「Could you tell me where the gym is?」＝丁寧な依頼表現+間接疑問文（where+主語+be動詞の語順）。【注意点】②をCould you tell me where is the gym?としないこと。間接疑問文は疑問文の倒置をしない。【関連知識】依頼の丁寧表現：Could you tell me〜? / Would you mind telling me〜?も類似表現として押さえる。`,
+    explanation:
+      '【何を聞かれているか】\n語句を並べ替えて、関係代名詞thatを使った文と、Could you tell me＋間接疑問文を完成させる問題。\n\n【なぜ間接疑問文で疑問文の語順にしないのか】\n"Could you tell me〜?"のように、疑問文が別の文の中に組み込まれる（間接疑問文になる）ときは、後ろの部分を疑問文の倒置ではなく、普通の文の語順（主語＋動詞）に戻すという決まりがある。\n\n【ポイント1】①関係代名詞thatの主格用法を確認する\n"The student that spoke first"＝「最初に話した生徒」。thatは主格の関係代名詞で先行詞the studentを修飾する。\n\n【ポイント2】②間接疑問文の語順を確認する\n"where the gym is"（体育館がどこにあるか）は、where＋主語（the gym）＋be動詞（is）という平叙文の語順。\n\n【ポイント3】丁寧な依頼表現を確認する\n"Could you tell me〜?"は丁寧に何かを尋ねるときの定番表現。\n\n【答え】\n① The student that spoke first was very nervous.\n② Could you tell me where the gym is?\n\n【確かめ】\n②が"where is the gym"という疑問文の語順ではなく、"where the gym is"という平叙文の語順になっているか確認する。\n\n【よくあるまちがい】\n②を"Could you tell me where is the gym?"のように、疑問文の語順のまま使ってしまうミス。間接疑問文は疑問文の倒置をしない。\n\n【ここが絶対】\n間接疑問文は「疑問詞＋主語＋動詞」という平叙文の語順にする。普通の疑問文の倒置をしないことを徹底する。',
     pitfall: '②をwhere is the gymの語順のままにすると間接疑問文の語順ミスになる。',
     memoryTip: '間接疑問文＝「疑問詞+主語+動詞」、普通の疑問文の倒置をしないと徹底する。',
   },
@@ -502,7 +511,8 @@ Many high schools in Japan have introduced tablet devices for every student. Sup
 ② ・画面を常に見続けることで視力に悪影響を及ぼす可能性がある。・一部の生徒が授業中に勉強ではなくゲームにタブレットを使ってしまう。
 ③ 常に画面を見続けること（継続的な画面への露出）`,
     hint: '①supporters say〜以下の3点から2点を選ぶ、②critics argue〜以下、③constant=絶え間ない、exposure=さらされること。',
-    explanation: `【出題意図】タブレット教育をテーマにした賛否両論の読解問題。情報抽出・語句の意味把握を問う。【解説】①supportersの主張：「make lessons more interactive」「allow students to access materials instantly」「reduce the amount of paper used」の中から2点を選んで答える。②criticsの懸念：「screen exposureが視力に悪影響」「一部の生徒が授業中にゲームに使う」の2点。③constant（絶え間ない）+screen exposure（画面にさらされること）＝「継続的に画面を見続けること」。【注意点】however（しかし）の前後で賛成・反対の立場が分かれる典型的な論説構造。【関連知識】eyesight（視力）、interactive（双方向の）は教育ICT関連の頻出語彙。`,
+    explanation:
+      '【何を聞かれているか】\nタブレット教育についての英文を読んで、支持者の利点と批判者の懸念、下線部の意味を答える問題。\n\n【なぜhoweverの前後で立場が分かれることを意識するのか】\n本文は"Supporters say〜however, Critics argue〜"という構造になっており、howeverの前が賛成派の主張、後ろが批判派の主張という典型的な論説構造になっている。\n\n【ポイント1】①利点を確認する\n"make lessons more interactive"（授業をより双方向的にする）、"allow students to access materials instantly"（教材にすぐアクセスできる）、"reduce the amount of paper used"（紙の使用量を減らす）の中から2点。\n\n【ポイント2】②懸念を確認する\n"constant screen exposure may harm students\' eyesight"（視力への悪影響）、"some students use tablets for games instead of studying"（授業中にゲームに使う生徒がいる）の2点。\n\n【ポイント3】③下線部の意味を確認する\n"constant screen exposure"＝constant（絶え間ない）＋screen exposure（画面にさらされること）＝「常に画面を見続けること」。\n\n【答え】\n① They make lessons more interactive, and they allow students to access materials instantly. (also reduce paper use)\n② ・画面を常に見続けることで視力に悪影響を及ぼす可能性がある。・一部の生徒が授業中に勉強ではなくゲームにタブレットを使ってしまう。\n③ 常に画面を見続けること（継続的な画面への露出）\n\n【確かめ】\n①の答えがsupporters（支持者）の主張だけで、②のcritics（批判者）の内容を混ぜていないか確認する。\n\n【よくあるまちがい】\n①でcriticsの内容（視力への悪影響など）を混ぜて答えてしまうミス。設問はsupportersの利点のみを問うている。\n\n【ここが絶対】\nhoweverの前後で「賛成派の主張」と「批判派の主張」が対比される論説構造を意識し、設問がどちらの立場を問うているかを確認してから答える。',
     pitfall: '①でcriticsの内容を混ぜて答えないこと。設問は「supporters」の利点のみを問うている。',
     memoryTip: 'however の前後で「賛成派の主張」と「批判派の主張」が対比される構造を意識する。',
   },
@@ -525,7 +535,8 @@ Many high schools in Japan have introduced tablet devices for every student. Sup
   ア. However　イ. Whatever　ウ. Whoever　エ. Wherever`,
     answer: '① ア(However)　② イ(Whatever)　③ ウ(Whoever)',
     hint: '①However+形容詞/副詞+S+V（どんなに〜でも）、②Whatever=何を〜しようとも、③Whoever=〜する人は誰でも。',
-    explanation: `【出題意図】複合関係詞（However/Whatever/Whoever等）の使い分けを問う。【解説】①「どんなに一生懸命努力しても」＝However+形容詞/副詞+S+V（=no matter how）。hardは副詞でtriedを修飾。②「あなたが何と言おうとも」＝Whatever+S+V（=no matter what）。③「マラソンを最初に終える人は誰でも」＝Whoever（=anyone who）が文の主語になる名詞節を作る。【注意点】Howeverは後ろに形容詞・副詞を伴う点がWhatever/Whoeverと構造上異なる。③のWhoeverは名詞節を作り文全体の主語になっている。【関連知識】Whichever（どちらを〜しても）、Wherever（どこで〜しても）も同グループの複合関係詞。`,
+    explanation:
+      '【何を聞かれているか】\nHowever・Whatever・Whoeverという複合関係詞の使い分けを問う問題。\n\n【なぜ形が異なるのか】\nHowever（どんなに〜でも）は後ろに形容詞・副詞を伴うのに対し、Whatever（何を〜しようとも）・Whoever（〜する人は誰でも）は後ろに直接「主語＋動詞」が続く、という構造上の違いがある。\n\n【ポイント1】①Howeverの形を確認する\n"However hard she tried"＝「どんなに一生懸命努力しても」。However＋副詞（hard）＋主語＋動詞（=no matter how hard）。\n\n【ポイント2】②Whateverの形を確認する\n"Whatever you may say"＝「あなたが何と言おうとも」。Whatever＋主語＋動詞（=no matter what）。\n\n【ポイント3】③Whoeverの形を確認する\n"Whoever finishes the marathon first"＝「マラソンを最初に終える人は誰でも」。Whoever（=anyone who）が名詞節を作り、文全体の主語になっている。\n\n【答え】\n① ア(However)　② イ(Whatever)　③ ウ(Whoever)\n\n【確かめ】\n①の後ろに形容詞・副詞（hard）が続いていること、③のWhoeverが文全体の主語の働きをしていることを確認する。\n\n【よくあるまちがい】\n①をWhateverにしてしまうミス。Howeverは後ろに形容詞・副詞（hard）を伴うが、Whateverは直接主語＋動詞が続くので、構造が合わなくなる。\n\n【ここが絶対】\nHowever＋形容詞/副詞＋S＋V、Whatever/Whoever/Wherever＋S＋Vという構造の違いをセットで覚える。',
     pitfall: '①をWhateverとすると後ろのhard（副詞）の説明が不自然になる。Howeverは形容詞・副詞を伴う。',
     memoryTip: 'However+形容詞/副詞、Whatever/Whoever/Wherever+主語+動詞、と構造の違いで覚える。',
   },
@@ -588,7 +599,7 @@ Artificial intelligence (AI) is increasingly used in schools to help students le
 「もし私が生徒会長だったら、もっと多くの生徒の意見を聞く仕組みを作るだろう。学校生活をより良くするために、私たち一人ひとりが行動を起こすべきだと思う。」`,
     answer: `（解答例）If I were the student council president, I would create a system to listen to more students' opinions. I believe each of us should take action to make our school life better.（32語）
 
-（別解）If I were the president of the student council, I would make a way for more students to share their opinions. I think we should all try to improve our school life.（33語）`,
+（別解）If I were the president of the student council, I would make a way for more students to share their opinions. I think we should all try to improve our school life.（32語）`,
     hint: '「もし〜だったら〜だろう」→仮定法過去（If+主語+were/過去形, would+動詞原形）。「〜すべきだと思う」→I believe/think+that節。',
     explanation: `【出題意図】仮定法過去を使った和文英訳と、意見を述べる文の複合英作文。【解説】「もし生徒会長だったら」→現在の事実に反する仮定なので仮定法過去：If I were the student council president（be動詞は主語に関わらずwere）。「〜仕組みを作るだろう」→would create a system to〜。「〜べきだと思う」→I believe/think (that) we should〜。【注意点】仮定法過去のif節ではbe動詞は人称に関係なくwereを使うのが原則（口語ではwasも使われるが、書き言葉ではwereが標準）。【関連知識】生徒会（student council）、意見を聞く（listen to opinions）は学校生活の英作文で頻出のテーマ語彙。`,
     pitfall: '「If I am the president」と直説法にすると、現在の事実に反する仮定を正しく表せない。',
@@ -636,7 +647,7 @@ Uniforms have long been a standard part of school life in Japan. Supporters argu
     answer: `① Uniforms create a sense of equality among students regardless of their family's income, and they reduce the time and stress of choosing clothes every morning.
 ② ・制服は生徒の自己表現を制限してしまう。・厳しい服装規定が、特に厳しい気候の際に不快になることがある。
 ③ 〜に関係なく
-④ 伝統と個人の自由のバランスを取るため、制服と私服のどちらかを選べるようにする学校が出てきている。（47字）`,
+④ 伝統と個人の自由のバランスを取るため、制服と私服のどちらかを選べるようにする学校が出てきている。（48字）`,
     hint: '①Supporters argue that〜以下、②opponents claim that〜以下、③regardless of=〜にかかわらず、④最終文に注目。',
     explanation: `【出題意図】学校制服をテーマにした賛否対比の論説文読解。情報抽出・語彙・要約力を総合的に問う最高難度の問題。【解説】①賛成理由：「create a sense of equality among students regardless of their family's income（家庭の収入に関係なく平等感を生む）」と「reduce the time and stress of choosing clothes（服選びの時間とストレスを減らす）」の2点。②反対理由：「limit students' self-expression（自己表現を制限する）」と「strict dress codes can be uncomfortable, especially in extreme weather（厳しい服装規定が極端な気候で不快になりうる）」の2点。③regardless of=「〜に関わらず」。④最終文「some schools have begun allowing students to choose between uniforms and casual clothes, aiming to balance tradition with individual freedom」を50字以内で要約する。【注意点】④は「伝統」と「個人の自由」のバランスという本文のキーワードを必ず盛り込む。【関連知識】equality（平等）、self-expression（自己表現）、dress code（服装規定）は社会的テーマの頻出語彙。`,
     pitfall: '②で賛成理由を混ぜて答えないこと。opponents（反対派）の理由のみを問われている。',
@@ -654,9 +665,9 @@ Uniforms have long been a standard part of school life in Japan. Supporters argu
 テーマ：「学校でスマートフォンの使用を許可すべきだと思いますか。理由とともに述べなさい。」
 
 （I think / I believe で書き始めること）`,
-    answer: `（賛成例）I think schools should allow students to use smartphones. Students can quickly look up information, communicate with teachers about schedule changes, and use educational apps. If schools set clear rules about when to use them, smartphones can support learning effectively.（38語）
+    answer: `（賛成例）I think schools should allow students to use smartphones. Students can quickly look up information, communicate with teachers about schedule changes, and use educational apps. If schools set clear rules about when to use them, smartphones can support learning effectively.（40語）
 
-（反対例）I believe schools should not allow smartphones during class. Many students would use them for games or social media instead of studying. Without smartphones, students can focus better on lessons and communicate with classmates face to face.（36語）`,
+（反対例）I believe schools should not allow smartphones during class. Many students would use them for games or social media instead of studying. Without smartphones, students can focus better on lessons and communicate with classmates face to face.（37語）`,
     hint: '主張→理由1・2→まとめの構成で書く。ルール設定などの条件を付けると説得力が増す。',
     explanation: `【出題意図】学校でのスマートフォン使用をテーマにした意見英作文。主張・理由・具体例・まとめの構成力と35語以上の語数条件を問う。【解説】賛成の理由例：情報検索の迅速さ・先生との連絡・教育アプリの活用・明確なルール設定による効果的な学習支援。反対の理由例：授業中のゲームやSNS利用への懸念・集中力低下・対面コミュニケーションの重要性。どちらの立場でも理由が具体的で論理的なら評価される。【注意点】35語以上を確実に満たすために理由を2つ以上挙げ、「If〜」や「Without〜」などの条件節を使うと説得力が増す。【関連知識】educational app（教育アプリ）、social media（SNS）、face to face（対面で）は頻出関連語彙。`,
     pitfall: '理由を1つしか挙げないと語数不足・説得力不足になりやすい。必ず2点以上の理由を書く。',
@@ -681,11 +692,11 @@ C: (　④　) I'll prepare the proposal for tomorrow.
 
 ア. How about combining both? We could visit Kyoto in the morning and Osaka in the afternoon.
 イ. Sounds good.
-ウ. That makes sense.
+ウ. I see your point.
 エ. I think Kyoto would be a great choice.`,
     answer: '① エ　② ウ　③ ア　④ イ',
     hint: '①提案、②相手の意見への同意しつつ反論の前振り、③折衷案の提示、④賛同して締める。',
-    explanation: `【出題意図】学校行事（修学旅行）の企画会議という文脈での会話の流れと妥協案の提示パターンを問う。【解説】①「Kyoto has a lot of historical sites」に自然につながる提案→「I think Kyoto would be a great choice.」（エ）。②「But some students want〜」と逆接が続くので、直前は一旦同意する表現→「That makes sense.」（ウ）。③「A great compromise」と評価されているので、折衷案を提示する文→「How about combining both?〜」（ア）。④最後にCが同意して締めくくる→「Sounds good.」（イ）。【注意点】compromise（妥協案・折衷案）という単語がヒントとして機能している。【関連知識】会議での意見表現：How about〜ing?（〜するのはどうか）、That makes sense.（それは筋が通っている）、Sounds good.（いいですね）。`,
+    explanation: `【出題意図】学校行事（修学旅行）の企画会議という文脈での会話の流れと妥協案の提示パターンを問う。【解説】①「Kyoto has a lot of historical sites」に自然につながる提案→「I think Kyoto would be a great choice.」（エ）。②「But some students want〜」と逆接が続くので、直前は相手の意見を一旦受け止める表現→「I see your point.」（ウ）。④は直前でAが妥協案を評価して採決を提案しているので、賛成して締める「Sounds good.」（イ）が合う（I see your pointは意見を受け止める表現なので、④には合わない）。③「A great compromise」と評価されているので、折衷案を提示する文→「How about combining both?〜」（ア）。【注意点】compromise（妥協案・折衷案）という単語がヒントとして機能している。【関連知識】会議での意見表現：How about〜ing?（〜するのはどうか）、I see your point.（なるほど、一理ある）、Sounds good.（いいですね）。`,
     pitfall: '②でアを先に選んでしまうと、Aの発言「But some students want〜」との論理的なつながりが崩れる。',
     memoryTip: 'compromise（妥協案）という語から、その直前に折衷案を提示する文が入ると逆算する。',
   },
@@ -705,7 +716,8 @@ C: (　④　) I'll prepare the proposal for tomorrow.
   （何かを失って初めて、私たちはその本当の価値に気づく）`,
     answer: '① who (that)　② that',
     hint: 'It is/was+強調したい語句+who/that+残りの文、の強調構文。',
-    explanation: `【出題意図】強調構文（It is/was〜that/who…）の形を問う。【解説】①「It was Emi who won〜」＝Emiを強調する強調構文。人を強調する場合はwhoも使えるが、thatでも可。②「It is not until we lose something that we realize〜」＝「〜して初めて…」という頻出の強調構文パターン（not until〜が強調される）。【注意点】①のような人を強調する強調構文ではwho/thatどちらも使用可能。②は「It is not until A that B」の形をセットで覚える必要がある。【関連知識】強調構文は元の文（Emi won the speech contest.）からEmiを取り出し「It is/was Emi that/who+残りの文」の形にすると理解しやすい。`,
+    explanation:
+      '【何を聞かれているか】\n強調構文（It is/was〜that/who…）を使って、2つの文を完成させる問題。\n\n【なぜIt is/wasを使って強調するのか】\n"It is/was＋強調したい語句＋that/who＋残りの文"という形にすると、文中の特定の語句（人・もの・時など）を「〜こそが」と強調して伝えることができる。\n\n【ポイント1】①人を強調する強調構文を確認する\n"It was Emi who won the speech contest"＝「優勝したのはエミだった」。Emiという人を強調しているので、whoまたはthatが使える。\n\n【ポイント2】②"not until〜"を強調する構文を確認する\n"It is not until we lose something that we realize its true value."＝「何かを失って初めて、その本当の価値に気づく」。not until〜（〜して初めて）という部分を強調している。\n\n【ポイント3】強調構文の作り方を確認する\n元の文（Emi won the speech contest.）から強調したい語句（Emi）を取り出し、"It is/was＋Emi＋that/who＋残りの文"の形にする。\n\n【答え】\n① who (that)　② that\n\n【確かめ】\n①が人（Emi）を強調していて、whoまたはthatが使われていること、②が"It is not until A that B"（Aして初めてB）という決まった形になっていることを確認する。\n\n【よくあるまちがい】\n①をwhichにしてしまうミス。先行詞（強調されている語）が人（Emi）の場合はwho（またはthat）を使う。\n\n【ここが絶対】\n"It is not until A that B"＝「Aして初めてB」という決まり文句を丸ごと覚える。強調構文は元の文から強調したい語句を取り出して考えると理解しやすい。',
     pitfall: '①をwhichにするのは誤り。先行詞が人（Emi）の場合はwho（またはthat）を使う。',
     memoryTip: 'It is not until A that B=「Aして初めてB」という決まり文句として丸ごと覚える。',
   },
@@ -792,7 +804,8 @@ Japan's declining birthrate has led to a decrease in the number of children, and
     answer: `① The harder you study, the more interesting the subject becomes.
 ② What matters most is not how long you study but how you study.`,
     hint: '①the+比較級, the+比較級構文、②not A but B構文と名詞節What matters mostが主語。',
-    explanation: `【出題意図】「the+比較級, the+比較級」構文と、「not A but B」＋名詞節主語の複合的な語順整序を問う最高難度の問題。【解説】①「The harder you study, the more interesting the subject becomes.」＝「勉強すればするほど」the harder you study、「その科目はより面白くなる」the more interesting the subject becomes。②「What matters most is not how long you study but how you study.」＝「What matters most（最も重要なことは）」が主語の名詞節、be動詞の後に「not A but B」（AではなくB）の形でhow long you study（どれだけ長く）とhow you study（どのように）を対比させる。【注意点】①は「the+比較級」の部分を文頭に必ず2つ並べる語順。②はnot A but Bの語順を崩さない。【関連知識】What matters is〜（重要なのは〜だ）は評論文でよく使われる主語構文。`,
+    explanation:
+      '【何を聞かれているか】\n「the＋比較級, the＋比較級」構文と「not A but B」を含む文を、語句を並べ替えて完成させる問題。\n\n【なぜこの2つの構文が組み合わさるのか】\n①「勉強すればするほど面白くなる」という比例関係は「the＋比較級, the＋比較級」構文、②「重要なのはAではなくB」という対比は「not A but B」＋名詞節主語という、それぞれ異なる複合的な構文で表す。\n\n【ポイント1】①「the＋比較級, the＋比較級」を確認する\n"The harder you study, the more interesting the subject becomes."＝前半・後半ともthe＋比較級で始まる決まった語順。\n\n【ポイント2】②主語になる名詞節を確認する\n"What matters most"（最も重要なことは）が、文全体の主語になる名詞節。\n\n【ポイント3】②"not A but B"を確認する\nbe動詞の後に"not how long you study but how you study"（どれだけ長くではなく、どのように）という対比の形を続ける。\n\n【答え】\n① The harder you study, the more interesting the subject becomes.\n② What matters most is not how long you study but how you study.\n\n【確かめ】\n①が「the＋比較級」で始まる2つの部分から成っていること、②がnot A but Bの語順（AとBが逆になっていない）を確認する。\n\n【よくあるまちがい】\n②でnotとbutの位置を逆にしたり、how longとhowを入れ替えたりしてしまうミス。\n\n【ここが絶対】\n「the＋比較級, the＋比較級」は必ず対で使う。"not A but B"（AではなくB）は語順を固定して覚える。',
     pitfall: '②でnotとbutの位置を逆にしたり、howとhow longを入れ替えたりしないよう注意する。',
     memoryTip: '「the+比較級, the+比較級」は必ず対で使う。not A but B は「AではなくB」の順序を固定して覚える。',
   },
@@ -824,7 +837,8 @@ Finding the right balance between the benefits of club activities and the well-b
 ③ Several schools have started to set limits on practice hours.
 ④ 部活動の利点と、生徒・教師双方の心身の健康とのバランスをどう取るかが、日本の学校にとって今も続く課題である。（54字）`,
     hint: '①Supporters say bukatsu teaches〜、②critics argue that〜とteachers report〜、③本文最終文、④第3段落全体の要旨。',
-    explanation: `【出題意図】部活動（bukatsu）をテーマにした3段落構成の論説文読解。賛否両論と結論という論説の典型構造を理解し、情報を整理・要約する高難度の総合問題。【解説】①「bukatsu teaches teamwork, discipline, and perseverance」から2点（teamwork, discipline/perseverance）。②「the heavy time commitment...can interfere with students' academic studies and rest」と「teachers...report feeling overworked」の2点。③「several schools have started to set limits on practice hours」。④第3段落「Finding the right balance between the benefits of club activities and the well-being of both students and teachers remains an ongoing challenge」を60字以内で要約する。【注意点】④は「利点」と「生徒・教師の健康」のバランスというキーワードを必ず含める。【関連知識】perseverance（忍耐力）、unpaid coach（無給の顧問）、well-being（心身の健康）は社会的トピックの重要語彙。`,
+    explanation:
+      '【何を聞かれているか】\n日本の部活動（bukatsu）についての3段落構成の英文を読んで、利点・批判・対応策・結論を答える問題。\n\n【なぜ段落ごとの役割（利点→問題点→結論）を意識するのか】\nこの英文は「①部活動の利点→②時間的負担という批判→③バランスを取ることが課題という結論」という構成になっており、各段落がどの立場を述べているかを意識すると設問に対応しやすい。\n\n【ポイント1】①利点を確認する\n"bukatsu teaches teamwork, discipline, and perseverance"（チームワーク・規律・忍耐力を学べる）から2点。\n\n【ポイント2】②③批判と対応策を確認する\n批判は"heavy time commitment...can interfere with students\' academic studies and rest"（学業・休息への支障）と"teachers...report feeling overworked"（教師の働き過ぎ）の2点。対応策は"several schools have started to set limits on practice hours"（練習時間に制限を設け始めた）。\n\n【ポイント3】④結論を確認する\n第3段落は「部活動の利点」と「生徒・教師の心身の健康」のバランスを取ることが、日本の学校にとって今も続く課題だという結論。\n\n【答え】\n① Bukatsu teaches teamwork and discipline (and perseverance).\n② ・部活動にかかる時間の負担が大きく、生徒の学業や休息に支障をきたす可能性がある。・無給で顧問を務める教師の中に、働き過ぎだと感じている人がいる。\n③ Several schools have started to set limits on practice hours.\n④ 部活動の利点と、生徒・教師双方の心身の健康とのバランスをどう取るかが、日本の学校にとって今も続く課題である。（54字）\n\n【確かめ】\n②の答えが、生徒側の負担（学業・休息）と教師側の負担（働き過ぎ）の両方に触れているか確認する。\n\n【よくあるまちがい】\n②で生徒側の負担だけを答え、教師側の負担（無給の顧問）を見落としてしまうミス。\n\n【ここが絶対】\n3段落構成の論説文は「利点→問題点→バランス・結論」というパターンを押さえ、各段落の役割を整理してから答える。',
     pitfall: '②で第2段落の批判点を答える際、生徒側の負担と教師側の負担の両方に触れる必要がある。',
     memoryTip: '3段落構成：段落1=利点、段落2=問題点、段落3=バランス・結論、というパターンを押さえる。',
   },
@@ -837,17 +851,17 @@ Finding the right balance between the benefits of club activities and the well-b
     maxOnly: true,
     question: `次の（　）に適切な語を入れなさい。（仮定法を使うこと）
 
-① If it (　) not for your advice, I would have given up studying English.
-  （あなたの助言がなかったら、私は英語の勉強をあきらめていただろう）
+① If it (　) not for your advice, I would give up studying English.
+  （あなたの助言がなければ、私は英語の勉強をあきらめてしまうだろう）
 
 ② (　) I in your position, I would ask the teacher for help immediately.
   （もし私があなたの立場だったら、すぐに先生に助けを求めるだろう）
 
 ③ I acted (　) if nothing had happened, though I was very nervous.
   （とても緊張していたが、私は何事もなかったかのように振る舞った）`,
-    answer: '① were (had been)　② Were　③ as',
+    answer: '① were　② Were　③ as',
     hint: '①If it were not for〜／had it not been for〜、②Ifの省略による倒置、③as if+仮定法過去完了。',
-    explanation: `【出題意図】仮定法の発展表現（If it were not for、Ifの省略による倒置、as if構文）を問う。【解説】①「If it were not for your advice」は現在の仮定だが、文全体は「would have given up」と過去の仮定法過去完了の帰結節になっているため、「If it had not been for」がより厳密だが、①では空欄1つのためwereまたはhad beenのいずれかを入れる形（過去の話なのでhad beenがより正確、werebでも許容）。②Ifを省略した倒置形：Were I in your position（=If I were in your position）。③「〜であったかのように」＝as if+仮定法。ここでは「何事もなかったかのように」という過去の事実に反する内容なのでas if+過去完了（had happened）が使われている。【注意点】①はIf it were not for〜（現在）とIf it had not been for〜（過去）の区別が入試での頻出ポイント。ここでは文脈が過去（studying Englishをあきらめていただろう、という過去の話）なのでhad not been forがより正確だが、had beenも許容。②Were+S+〜は倒置によるifの省略形。【関連知識】as if/as though+仮定法過去（現在の事実に反する）、as if+仮定法過去完了（過去の事実に反する）の使い分けも重要。`,
+    explanation: `【出題意図】仮定法の発展表現（If it were not for、Ifの省略による倒置、as if構文）を問う。【解説】①「If it were not for your advice」は「あなたの助言がなければ」という現在の事実に反する仮定（仮定法過去）で、帰結節もwould give upと仮定法過去になっているので、空欄にはwereが入る（過去の話なら「If it had not been for 〜, I would have given up」と過去完了にする）。②Ifを省略した倒置形：Were I in your position（=If I were in your position）。③「〜であったかのように」＝as if+仮定法。ここでは「何事もなかったかのように」という過去の事実に反する内容なのでas if+過去完了（had happened）が使われている。【注意点】①はIf it were not for〜（現在）とIf it had not been for〜（過去）の区別が入試での頻出ポイント。本問は帰結節がwould give up（現在の話）なのでIf it were not for。②Were+S+〜は倒置によるifの省略形。【関連知識】as if/as though+仮定法過去（現在の事実に反する）、as if+仮定法過去完了（過去の事実に反する）の使い分けも重要。`,
     pitfall: '②をIf I were の語順のままにしないこと。設問はIfを省略した倒置形を要求している。',
     memoryTip: 'If の省略→倒置（Were/Had/Should+S+〜）というパターンをセットで覚える。',
   },
@@ -860,7 +874,7 @@ Finding the right balance between the benefits of club activities and the well-b
     maxOnly: true,
     question: `次の各文の誤りを1か所指摘し、正しく直しなさい。
 
-① The number of foreign tourists visiting Japan have increased rapidly these years.
+① The number of foreign tourists visiting Japan have increased rapidly in recent years.
 ② One of the biggest challenge facing Japanese schools is the shortage of teachers.
 ③ This is one of the most difficult problem I have ever faced.`,
     answer: `① have increased → has increased（The number of〜は単数扱い）
@@ -906,13 +920,14 @@ Climate change is affecting school life in unexpected ways. Extremely hot summer
 ② [ far / as / know / as / I ], the schedule hasn't changed.
   （私が知る限り、予定は変わっていない）
 
-③ [ there / no / of / is / point / worrying ] about things you cannot control.
+③ [ there / no / in / is / point / worrying ] about things you cannot control.
   （自分でどうにもできないことを心配しても仕方がない）`,
     answer: `① I can't help feeling nervous
 ② As far as I know
-③ There is no point of worrying`,
-    hint: '①can\'t help+動名詞（〜せずにはいられない）、②as far as I know（私が知る限り）、③There is no point of/in+動名詞。',
-    explanation: `【出題意図】can't help+動名詞、as far as I know、There is no point in/of+動名詞という頻出定型表現の語順整序を問う。【解説】①「can't help+動名詞」＝「〜せずにはいられない」（can't help but+原形も同意で使われる）。②「as far as I know」＝「私が知る限りでは」という頻出の慣用表現。③「There is no point in/of+動名詞」＝「〜しても意味がない・仕方がない」。【注意点】①のcan't helpの後は必ず動名詞（feeling）が続く（can't help to feelは誤り）。②asとfarの語順を崩さない。③point in doingの方が一般的だが、point of doingも用いられる。【関連知識】can't help but+動詞原形（=can't help+動名詞）、it's no use+動名詞（〜しても無駄だ）も類似の重要表現。`,
+③ There is no point in worrying`,
+    hint: '①can\'t help+動名詞（〜せずにはいられない）、②as far as I know（私が知る限り）、③There is no point in+動名詞。',
+    explanation:
+      '【何を聞かれているか】\ncan\'t help＋動名詞、as far as I know、There is no point in＋動名詞という3つの頻出定型表現を、語句を並べ替えて完成させる問題。\n\n【なぜそれぞれの表現の後ろの形が決まっているのか】\ncan\'t help（〜せずにはいられない）、as far as I know（私が知る限り）、There is no point in〜ing（〜しても仕方がない）は、それぞれ後ろに続く形（動名詞や語順）が決まった、丸ごと覚えるべき慣用表現。\n\n【ポイント1】①"can\'t help＋動名詞"を確認する\n"I can\'t help feeling nervous"＝「緊張せずにはいられない」。can\'t helpの後ろは必ず動名詞（feeling）。\n\n【ポイント2】②"as far as I know"を確認する\n"As far as I know"＝「私が知る限りでは」という決まった語順の慣用表現。\n\n【ポイント3】③"There is no point in＋動名詞"を確認する\n"There is no point in worrying"＝「心配しても仕方がない」。\n\n【答え】\n① I can\'t help feeling nervous\n② As far as I know\n③ There is no point in worrying\n\n【確かめ】\n①のhelpの後ろがfeeling（動名詞）になっていて、to feelになっていないことを確認する。\n\n【よくあるまちがい】\n①を"I can\'t help to feel"としてしまうミス。can\'t helpの後ろは動名詞を使う。\n\n【ここが絶対】\ncan\'t help＋動名詞（〜せずにはいられない）、as far as I know（知る限り）、There is no point in＋動名詞（〜しても仕方がない）を、それぞれ定型表現として丸ごと覚える。',
     pitfall: '①をI can\'t help to feelとしないこと。can\'t helpの後は動名詞。',
     memoryTip: 'can\'t help+ing＝我慢できない、as far as I know＝知る限り、と定型表現ごと丸暗記する。',
   },
@@ -937,8 +952,9 @@ A: Exactly. Some teachers are worried about the extra workload, but the school b
     answer: `① Teachers will write detailed comments on each student's strengths and areas to improve, in addition to letter grades.
 ② 教師が詳細なコメントを書くのに、より多くの時間がかかってしまうという懸念。
 ③ It will help students understand their progress better.`,
-    hint: '①Aの3番目の発言、②Bの発言「it must take teachers a lot more time」、③Aの最後の発言後半。',
-    explanation: `【出題意図】学校の成績評価制度の変更をテーマにした会話文読解。制度内容・懸念・メリットの3点を整理する問題。【解説】①「teachers will also write detailed comments on each student's strengths and areas to improve」に加え「Instead of just letter grades」から、文字による評価に加えて詳細なコメントを書く制度だとわかる。②Bの「it must take teachers a lot more time to write」＝教師の負担増加への懸念。③「the school board says it will help students understand their progress better」＝生徒が自分の成長をよりよく理解できるようになる、というメリット。【注意点】①は「letter gradesに加えて」という点を明確に含める必要がある。【関連知識】grading system（成績評価制度）、workload（仕事量・負担）は教育制度に関する頻出語彙。`,
+    hint: '①Aの2番目の発言、②Bの発言「it must take teachers a lot more time」、③Aの最後の発言後半。',
+    explanation:
+      '【何を聞かれているか】\n学校の新しい成績評価制度についての会話文を読んで、制度の内容・懸念・メリットを答える問題。\n\n【なぜ"Instead of just A, also B"に注目するのか】\n"Instead of just letter grades, teachers will also write detailed comments"という文は、「文字評価だけでなく、コメントも書く」という追加のニュアンスを表しており、文字評価が完全になくなるわけではないことを正確に読み取る必要がある。\n\n【ポイント1】①制度の内容を確認する\n"teachers will also write detailed comments on each student\'s strengths and areas to improve, in addition to letter grades"（文字評価に加えて詳細なコメントを書く）。\n\n【ポイント2】②懸念を確認する\nBの発言"it must take teachers a lot more time to write"から、教師の時間的負担の増加が懸念点。\n\n【ポイント3】③メリットを確認する\n"the school board says it will help students understand their progress better"（生徒が自分の成長をよりよく理解できる）。\n\n【答え】\n① Teachers will write detailed comments on each student\'s strengths and areas to improve, in addition to letter grades.\n② 教師が詳細なコメントを書くのに、より多くの時間がかかってしまうという懸念。\n③ It will help students understand their progress better.\n\n【確かめ】\n①の答えが「文字評価に加えて」コメントを書くという内容になっていて、文字評価がなくなるという誤った内容になっていないか確認する。\n\n【よくあるまちがい】\n①でletter gradesを完全になくす制度だと誤解してしまうミス。"Instead of just〜"は「〜だけでなく」という追加の意味を表す。\n\n【ここが絶対】\n"Instead of just A, also B"＝「Aだけでなく、Bも」という追加のニュアンスを正確に読み取る。',
     pitfall: '①でletter gradesを完全になくす制度だと誤解しないこと。「加えて」コメントを書く制度。',
     memoryTip: 'Instead of just A, also B＝「Aだけでなく、Bも」という追加のニュアンスを正しく読み取る。',
   },
@@ -957,12 +973,12 @@ A: Exactly. Some teachers are worried about the extra workload, but the school b
 ② No sooner (　) she finished her homework than her friend called her.
   ア. had　イ. has　ウ. did　エ. was
 
-③ Never (　) I seen such a beautiful sunset before.
+③ Never (　) I seen such a beautiful sunset as the one in front of me now.
   ア. had　イ. have　ウ. did　エ. was`,
     answer: '① ア(had)　② ア(had)　③ イ(have)',
     hint: 'Hardly had+S+p.p.+when〜、No sooner had+S+p.p.+than〜、Never have+S+p.p.（否定語の倒置）。',
-    explanation: `【出題意図】否定語（Hardly/No sooner/Never）を文頭に置いたときの倒置構文を問う。【解説】①②「Hardly had S p.p. when〜」「No sooner had S p.p. than〜」＝「〜するとすぐに…した」という頻出の倒置構文。どちらも過去完了（had+p.p.）を使い、Hardly/No soonerの直後は倒置（had+主語）になる。③「Never have I seen〜」＝現在完了の否定語倒置。Neverが文頭に来たことでhave+主語+p.p.の倒置形になる。文脈上「これまで見たことがない」という現在完了の経験用法なのでhaveを使う（時制の指定がhad〜beforeでないため現在完了）。【注意点】①②はwhen/thanとセットで覚える（Hardly〜when、No sooner〜than）。③はhad(過去完了)ではなくhave(現在完了)を使う点に注意（文全体が現在完了の経験を表しているため）。【関連知識】否定語による倒置：Little did I know that〜（〜だとは知らなかった）、Not only did〜も同グループの重要構文。`,
-    pitfall: '③をhadにしないこと。文脈が現在完了（seen...before）なのでhaveが正しい。',
+    explanation: `【出題意図】否定語（Hardly/No sooner/Never）を文頭に置いたときの倒置構文を問う。【解説】①②「Hardly had S p.p. when〜」「No sooner had S p.p. than〜」＝「〜するとすぐに…した」という頻出の倒置構文。どちらも過去完了（had+p.p.）を使い、Hardly/No soonerの直後は倒置（had+主語）になる。③「Never have I seen〜」＝現在完了の否定語倒置。Neverが文頭に来たことでhave+主語+p.p.の倒置形になる。「今目の前にあるような夕焼けは、今までに一度も見たことがない」という、現在を基準にした現在完了の経験用法なのでhaveを使う（過去のある時点を基準にする文脈ではないのでhadは不可）。【注意点】①②はwhen/thanとセットで覚える（Hardly〜when、No sooner〜than）。③はhad(過去完了)ではなくhave(現在完了)を使う点に注意（現在を基準にした現在完了の経験を表しているため）。【関連知識】否定語による倒置：Little did I know that〜（〜だとは知らなかった）、Not only did〜も同グループの重要構文。`,
+    pitfall: '③をhadにしないこと。基準が現在（now）なので現在完了のhaveが正しい。',
     memoryTip: 'Hardly〜when、No sooner〜than、をセットの熟語として覚え、否定語倒置は疑問文と同じ語順になると意識する。',
   },
   {
@@ -983,7 +999,8 @@ Peer pressure among teenagers can influence decisions ranging from fashion choic
 ② 授業をサボったり、危険な行動に及んだりすること。
 ③ 生徒の自己肯定感（自信）と批判的思考力を育てることで、良い社会的影響は受け入れつつ、悪い同調圧力には抵抗できるようにすること。`,
     hint: '①While以下前半、②such as skipping class or engaging in risky behavior、③Experts suggest that以下。',
-    explanation: `【出題意図】ピア・プレッシャー（同調圧力）という思春期心理をテーマにした読解問題。対比構造と対策の把握を問う。【解説】①「some forms of peer pressure encourage positive behavior, such as studying harder because friends are doing so」＝友人が勉強しているから自分も頑張るというポジティブな影響。②「skipping class or engaging in risky behavior（授業をサボる、危険な行動をする）」がネガティブな例。③「building students' self-confidence and critical thinking skills can help them resist negative peer pressure while still benefiting from positive social influences」＝自己肯定感と批判的思考力を育てることで、良い影響は受けつつ悪い同調圧力に抵抗する力をつける、という対策。【注意点】Whileは「〜だが一方で」という対比の接続詞として機能している。【関連知識】peer pressure（同調圧力）、self-confidence（自己肯定感）、critical thinking（批判的思考）は心理・教育系読解の頻出語彙。`,
+    explanation:
+      '【何を聞かれているか】\nピア・プレッシャー（同調圧力）についての英文を読んで、ポジティブな影響・ネガティブな例・対策を答える問題。\n\n【なぜWhile A, Bの対比構造に注目するのか】\n本文の"While some forms of peer pressure encourage positive behavior..., other forms can lead to negative outcomes..."は、Whileを使ってポジティブな面とネガティブな面を対比しており、この構造を見抜くと設問の答えが整理しやすい。\n\n【ポイント1】①ポジティブな影響を確認する\n"encourage positive behavior, such as studying harder because friends are doing so"（友人が勉強しているから自分も頑張る）。\n\n【ポイント2】②ネガティブな例を確認する\n"skipping class or engaging in risky behavior"（授業をサボる、危険な行動をする）。\n\n【ポイント3】③専門家の対策を確認する\n"building students\' self-confidence and critical thinking skills can help them resist negative peer pressure while still benefiting from positive social influences"（自己肯定感と批判的思考力を育てることで、良い影響は受けつつ悪い同調圧力に抵抗する）。\n\n【答え】\n① It can encourage positive behavior, such as studying harder because friends are doing so.\n② 授業をサボったり、危険な行動に及んだりすること。\n③ 生徒の自己肯定感（自信）と批判的思考力を育てることで、良い社会的影響は受け入れつつ、悪い同調圧力には抵抗できるようにすること。\n\n【確かめ】\n②の答えがネガティブな例（授業をサボる、危険な行動）になっていて、①のポジティブな例と混同していないか確認する。\n\n【よくあるまちがい】\n②を「勉強を頑張る」というポジティブな例と混同してしまうミス。設問はネガティブな例を問うている。\n\n【ここが絶対】\n"While A, B"の構造では、Aが一部の良い面、Bが対比される内容（悪い面）と整理して読む。',
     pitfall: '②を「勉強を頑張る」というポジティブな例と混同しないこと。ネガティブな例を問われている。',
     memoryTip: 'While A, B の構造では、Aが譲歩（一部は良い面）、Bが対比される内容（悪い面）と整理する。',
   },
@@ -997,7 +1014,7 @@ Peer pressure among teenagers can influence decisions ranging from fashion choic
     question: `次の日本語を英語に訳しなさい。（25語以上）
 
 「私たちの学校には、生徒がお互いに助け合う文化がある。この伝統を守り続けることが、より良い学校生活につながると私は信じている。」`,
-    answer: `（解答例）Our school has a culture in which students help each other. I believe that keeping this tradition alive will lead to a better school life for all of us.（28語）
+    answer: `（解答例）Our school has a culture in which students help each other. I believe that keeping this tradition alive will lead to a better school life for all of us.（29語）
 
 （別解）Our school has a strong tradition of students supporting one another, and I am convinced that continuing this custom will make our school life better for everyone.（27語）`,
     hint: '「〜する文化」→a culture in which〜/a culture of〜ing、「〜につながると信じている」→I believe (that)〜will lead to〜。',
@@ -1074,7 +1091,7 @@ Many educators now suggest a hybrid model, combining in-person and online classe
     answer: `① Online classes allow students to learn at their own pace, and to review recorded lessons whenever they need to.
 ② ・生徒が学習意欲を保ちにくく、クラスメートとの人間関係を築きにくくなる。・対面での交流がないため、教師が生徒の困りごとに気づきにくくなる。
 ③ 対面授業とオンライン授業を組み合わせた学習モデル。
-④ 対面とオンラインを組み合わせたハイブリッド型の授業を導入し、両方の利点を生かしつつ欠点を最小限に抑えるべきだという考え。（59字）`,
+④ 対面とオンラインを組み合わせたハイブリッド型の授業を導入し、両方の利点を生かしつつ欠点を最小限に抑えるべきだという考え。（60字）`,
     hint: '①Supporters say online classes offer〜、②critics point out that〜とteachers find it〜、③combining in-person and online classes、④第3段落全体の要旨。',
     explanation: `【出題意図】オンライン教育をテーマにした3段落構成の論説文読解。賛否対比とハイブリッド型という結論の把握を総合的に問う最高難度の問題。【解説】①「allowing students to learn at their own pace and review recorded lessons whenever they need to」から2点。②「harder for students to stay motivated and to build relationships with classmates」と「teachers...find it more difficult to notice when a student is struggling」の2点。③hybrid model=「in-person（対面）とonline（オンライン）を組み合わせた学習モデル」。④第3段落「Many educators now suggest a hybrid model...as a way to capture the benefits of both approaches while minimizing their drawbacks」を60字以内でまとめる。【注意点】④は「両方の利点を生かし、欠点を最小限にする」というキーワードを必ず含める。【関連知識】remote learning（遠隔学習）、hybrid model（ハイブリッド型）、drawback（欠点）はオンライン教育の頻出語彙。`,
     pitfall: '②で生徒側の課題（意欲・人間関係）と教師側の課題（気づきにくさ）の両方に触れる必要がある。',
@@ -1094,7 +1111,7 @@ Many educators now suggest a hybrid model, combining in-person and online classe
 （I think / I believe で書き始めること）`,
     answer: `（賛成例）I think inquiry-based learning is more effective than traditional lectures. Students research topics themselves, ask questions, and develop critical thinking skills. This active process helps them remember information better and prepares them for real-world problem solving.（36語）
 
-（反対例）I believe traditional lectures are still important along with inquiry-based learning. Lectures allow teachers to explain complex ideas clearly and efficiently, while inquiry-based learning can take more time. Combining both methods would help students learn most effectively.（36語）`,
+（反対例）I believe traditional lectures are still important along with inquiry-based learning. Lectures allow teachers to explain complex ideas clearly and efficiently, while inquiry-based learning can take more time. Combining both methods would help students learn most effectively.（37語）`,
     hint: '探究学習の利点（主体性・批判的思考・実践力）と講義形式の利点（効率的な知識伝達）を対比しながら理由を述べる。',
     explanation: `【出題意図】探究学習（inquiry-based learning）と従来の講義形式の比較をテーマにした意見英作文。理由の具体性と語数条件（35語以上）を問う。【解説】賛成の理由例：生徒が自ら調べ、質問し、批判的思考力を養う能動的なプロセス・記憶の定着・実社会での問題解決力の育成。反対（併用）の理由例：講義は複雑な内容を効率的に説明できる・探究学習は時間がかかる・両方を組み合わせることが最も効果的。どちらの立場でも具体的な理由を2つ以上挙げれば評価される。【注意点】「inquiry-based learning」という専門用語をそのまま使い、意味を誤解しないよう「生徒主体の学び」という前提で理由を展開する。【関連知識】critical thinking（批判的思考力）、active learning（能動的学習）、real-world problem solving（実社会での問題解決）は探究学習関連の頻出語彙。`,
     pitfall: '専門用語（inquiry-based learning）の意味を誤解し、単なる自習と混同して理由を書かないよう注意する。',

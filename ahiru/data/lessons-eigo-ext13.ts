@@ -16,7 +16,7 @@ export const eigoExt13Lessons: Lesson[] = [
     title: '音と文字①：二文字で一つの音（sh・ch・th・ph・wh）',
     description: '二つの文字が合わさって別の音になる組み合わせを覚える',
     intro:
-      'アルファベットは一文字ずつ音をもっていますが、二文字が合わさると、まったくちがう音になることがあります。覚える組み合わせは5つだけです。',
+      'アルファベットは一文字ずつ音をもっていますが、二文字が合わさると、まったくちがう音になることがあります。覚える組み合わせは6つだけです。',
     order: 951,
     studyPeriod: '小4',
     targetLevel: 'kiso',
@@ -62,6 +62,7 @@ black（黒い）／duck（あひる）／clock（時計）／rock（岩）／ba
       },
       {
         heading: '練習と気をつけること',
+        mangaId: 'eigo_s451_manga',
         body: `■ 読む練習
 次の語を、二文字のかたまりに気をつけて読む。
 shop／chair／think／phone／white／clock
@@ -79,7 +80,7 @@ shop／chair／think／phone／white／clock
 
 ■ 語のはじめと終わり
 ・sh、ch は語のはじめにも終わりにも来る（ship、fish／chair、lunch）
-・ck は語の終わりだけに来る（語のはじめには来ない）
+・ck は語のはじめには来ない（語の終わりに来ることが多く、chicken のように語の中に来ることもある）
 ・ph は語のどこにでも来る（phone、alphabet、graph）
 
 ■ おぼえ方
@@ -205,9 +206,9 @@ Thursday（木曜日）の ur。Tuesday（火曜日）とまちがえやすい�
       },
       {
         question: 'thirteen（13）と three（3）は、同じつづりの部分をもっていますか。',
-        wrongAnswer: 'どちらも「サーティ」に近い音なので、同じ thr で始まり同じつづりである。',
+        wrongAnswer: 'どちらも th で始まる数なので、つづりの部分も同じである。',
         trapExplanation:
-          '音が似ているので、つづりも同じだと思ってしまう。母音の部分がちがう。',
+          'どちらも th で始まる数なので、つづりも同じだと思ってしまう。母音の部分がちがう。',
         correctAnswer: 'ちがう。three は ee、thirteen は ir を使う。',
         correctExplanation:
           'three は th＋r＋ee、thirteen は th＋ir＋teen である。13、30 は ir を使い、3 は ee を使う。thirteen と thirty は ir でそろっているので、この二つをセットで覚えると混ざらない。',
@@ -252,7 +253,7 @@ snow（雪）／window（まど）／yellow（黄色）／know（知っている
 
 ■ au・aw
 「オー」に近い音。
-autumn（秋）／because（なぜなら）
+autumn（秋）／August（8月）
 saw（のこぎり、see の過去形）／draw（絵をかく）／straw（ストロー）
 
 ■ oo
@@ -379,6 +380,7 @@ It's October 10th.（10月10日です）
       },
       {
         heading: '練習と気をつけること',
+        mangaId: 'eigo_s454_manga',
         body: `■ 言ってみる
 ・自分のたん生日を英語で言う
 　My birthday is April 3rd.
@@ -523,6 +525,21 @@ I go to bed at nine thirty.（9時30分にねます）
 この三つは、次の単元でもくわしく学ぶ。
 
 ⚠ 注意：7時30分を It's seven thirty o'clock. とは言わない。o'clock はちょうどの時こくだけにつける。`,
+      },
+      {
+        heading: 'なぜ答えは It\'s で始め、なぜ o\'clock はちょうどのときだけなのか',
+        mangaId: 'eigo_s455_manga',
+        body: `英語の文には必ず主語が要ります。「7時です」には「何が」にあたることばがないので、**形をそろえるための It** を主語に置きます。この It は「それ」という意味ではなく、天気や曜日を言うときと同じ決まった言い方です。I is 〜 や This is 〜 とはしません。「〜時に」に at を使うのは、時こくが時計の針が一か所を指す**点**だからで、幅のある月や季節には in、日には on を使います。
+
+o'clock は「〜時ちょうど」という意味のことばです。だから分があるとき（seven thirty）には付けられません。分が1けたのときに 0 を oh と読む（ten oh five）のは、時こくを数字の並びとして読む決まりです。past・to の言い方は、まず数字をそのまま読む形を確実にしてから覚えます。
+
+■ 確かめのしかた
+①答えが **It's** で始まっているか。What time is it?→It's seven.
+②**ちょうどのときだけ o'clock**。It's seven o'clock.／It's seven thirty.（× seven thirty o'clock）。
+③時→分の順に数字を読む。分が1けたなら oh（It's ten oh five.）。
+④「〜時に」は **at**（I get up at six.）。曜日・日付は on、月・年・季節は in。× I get up in seven.
+
+★ ここがポイント：時こくの文は**主語が無いので It's で形をそろえる**。o'clock は**ちょうどのときだけ**。「〜時に」は時こくが**点**なので at。`,
       },
     ],
     trapExamples: [
@@ -768,6 +785,21 @@ He や She が主語のときは、動詞の形が変わる。これは次の単
 
 ⚠ 注意：like のあとに来る動物や食べ物は、ふつう複数形にする。I like dog. だと「犬の肉が好き」という意味になってしまう。I like dogs. が正しい。`,
       },
+      {
+        heading: 'なぜ英語は「だれが→どうする→何を」の順で、なぜ am と play を並べないのか',
+        mangaId: 'eigo_s457_manga',
+        body: `日本語は「わたしは サッカーを します」と、動作を最後に言います。英語は「わたしは します サッカーを」と、**だれが何をするかを先に言い、そのあとに相手を足す**ことばです。だから語順は主語→動詞→そのほか。この順を声に出しながら並べると、日本語のまま I soccer play と書く誤りが減ります。
+
+am・is・are（be動詞）は「〜です・〜がいる」を表す語で、play・like（一般動詞）は「〜します」を表す語です。一つの文には動詞が一つなので、I am play tennis. のように両方入れると、「です」と「します」が重なって意味が通りません。「です」の文なら be動詞、「します」の文なら一般動詞と分けます。go のあとに to が要るのは、go が「行く」という動きだけを表し、「どこへ」を表す語が別に必要だからです。home は「家へ」という意味をすでに持つので to を付けません。
+
+■ 確かめのしかた
+①**だれが→どうする→何を**の順か。I play soccer.（× I soccer play.）
+②文の中に動詞が一つか。× I am play tennis.→I play tennis.「です」なら be動詞、「します」なら一般動詞。
+③go のあとに **to** があるか（go to school／go to the park）。home には付けない（go home）。
+④楽器には the（play the piano）、好きなものは複数形（I like dogs. ／ I like dog. は犬の肉）。at school・every day・after school は文の終わりに。
+
+★ ここがポイント：英語は**だれが何をするかを先に言う**ので、主語→動詞→そのほか。**一つの文に動詞は一つ**なので be動詞と一般動詞を並べない。go は「どこへ」の to が要る（home は不要）。`,
+      },
     ],
     trapExamples: [
       {
@@ -812,6 +844,7 @@ He や She が主語のときは、動詞の形が変わる。これは次の単
     sections: [
       {
         heading: '形の変え方',
+        mangaId: 'eigo_s458_manga',
         body: `■ s をつける主語
 he（かれ）／she（かのじょ）／it（それ）
 そして、1人・1つを表す名前やもの。
@@ -923,6 +956,7 @@ carry → carries／enjoy → enjoys／wash → washes／do → does
     sections: [
       {
         heading: '文のつくり方',
+        mangaId: 'eigo_s459_manga',
         body: `■ 置く場所
 動詞の前に置く。
 ・I don't play soccer.（わたしはサッカーをしません）
@@ -959,7 +993,7 @@ be動詞の文では、be動詞のうしろに not を置く。
 ・doesn't ＝ does not
 どちらで書いてもよいが、話すときは短くした形をよく使う。
 
-★ ポイント：doesn't のうしろの動詞は、s なしのもとの形。s は一つの文に一回だけ、と覚える。`,
+★ ポイント：doesn't のうしろの動詞は、s なしのもとの形。s の役目は does が引き受けているので、動詞に二重にはつけない。`,
       },
       {
         heading: '練習と気をつけること',
@@ -998,7 +1032,7 @@ be動詞の文では、be動詞のうしろに not を置く。
           "doesn't のうしろの動詞に s を残してしまった。doesn't がすでに s の役目をしている。",
         correctAnswer: "He doesn't play tennis.",
         correctExplanation:
-          "doesn't の中の does が、主語が1人であることを表している。そのため、うしろの動詞はもとの形（play）にもどす。同じように He doesn't study ~、She doesn't have ~ となる。s は一つの文に一回だけ、と覚えること。",
+          "doesn't の中の does が、主語が1人であることを表している。そのため、うしろの動詞はもとの形（play）にもどす。同じように He doesn't study ~、She doesn't have ~ となる。s の役目は does が引き受けているので、動詞に二重につけないこと。",
       },
       {
         question: '「わたしは学生ではありません」を英語で書きなさい。',
@@ -1105,6 +1139,21 @@ be動詞の文では、be動詞を先頭に出す。
 　この形には Yes／No では答えず、I like dogs. のように答える。
 
 ⚠ 注意：Does he likes ~? としてしまう誤りが最も多い。Does を書いた時点で、うしろの動詞はもとの形と決まっている。`,
+      },
+      {
+        heading: 'なぜ Do のうしろは s なしで、なぜ答えの語をそろえるのか',
+        mangaId: 'eigo_s460_manga',
+        body: `be動詞の文は、be動詞を先頭に出せばたずねる文になります（Are you 〜?）。一般動詞は先頭に出せないので、**「これからたずねます」という合図の語 Do を先頭に置きます**。主語が he・she・it・1人・1つのときは、その s の役目を Do が引き受けて Does になります。だから Does のうしろの動詞にはもう s は要りません。Does he likes 〜? は s が二重になっています。
+
+答えの語をそろえるのは、答えが**質問の動詞をくり返している**からです。Do you like music? への Yes, I do. は「Yes, I (like music)」の do です。Are you 〜? への Yes, I am. は am をくり返しています。Do でたずねられたのに Yes, I am. と答えると、何をくり返しているのか分からなくなります。答えるときに名前を he・she・they に変えるのも、同じ人を二度名前で呼ばないためです。
+
+■ 確かめのしかた
+①主語が I・you・we・they→**Do**、he・she・it・1人・1つ→**Does**。
+②Does のうしろの動詞が**もとの形**か。× Does she plays→Does she play。
+③答えの語が質問とそろっているか。Do→do／don't、Does→does／doesn't、Are→am／are、Is→is。× Do you like music?→Yes, I am.
+④答えでは名前を代名詞に（Does Ken 〜?→Yes, he does.）。文末に ? があるか。A or B? には Yes/No で答えない。
+
+★ ここがポイント：Do／Does は**たずねる合図の語**で、Does が s の役目を引き受けるので動詞は**もとの形**。答えは**質問の語をくり返す**ので Do→do、Are→am とそろえる。`,
       },
     ],
     trapExamples: [
@@ -1230,6 +1279,21 @@ Let's は Let us を短くした形である。
 
 ⚠ 注意：Let's のあとは、必ず動詞のもとの形が来る。Let's playing や Let's to play は誤りである。`,
       },
+      {
+        heading: 'なぜ命令する文に主語がなく、なぜ Be quiet. なのか',
+        mangaId: 'eigo_s461_manga',
+        body: `命令する文は、**目の前の相手（you）に向かって言う**ので、だれに言っているかは分かりきっています。だから主語を書かず、動詞から始めます。逆に言えば、動詞から始まる文を見たら命令する文だと分かります。動詞が「もとの形」なのは、主語が無いので主語に合わせて形を変える必要がないからです。be動詞のもとの形は be なので、「静かにしなさい」は Be quiet. です。am・is・are は主語に合わせて変わった形なので、主語のない命令文では使いません。
+
+Let's のあとに動詞のもとの形が来るのは、Let's が Let us（私たちに〜させて）を短くした形で、let のあとには動詞のもとの形を置く決まりがあるからです。Let's to play や Let's playing は誤りです。「〜しないで」は動詞の前に Don't を置き、Don't のあとも動詞のもとの形です。
+
+■ 確かめのしかた
+①命令する文に **You** を付けていないか。動詞（もとの形）から始まっているか。
+②be動詞の命令文は **Be**（Be quiet.／Be careful.）。× Are quiet.
+③Let's のあとが**もとの形**か。Let's play soccer.（× Let's to play、× Let's playing）。
+④ていねいさ：Open the window.→Please open the window.／Open the window, please.→Can you open the window? の順にていねいになる。Don't のあとももとの形。
+
+★ ここがポイント：命令する文は**目の前の you に言うので主語を書かず**、動詞は**もとの形**（be動詞は Be）。Let's は Let us なので、あとは**もとの形**。`,
+      },
     ],
     trapExamples: [
       {
@@ -1308,6 +1372,7 @@ by のほうが近く、near は少しはなれていてもよい。
       },
       {
         heading: '練習と気をつけること',
+        mangaId: 'eigo_s462_manga',
         body: `■ 言ってみる
 ・つくえの上に本があります。→ There is a book on the desk.
 ・かばんの中にペンがあります。→ There is a pen in my bag.
@@ -1459,6 +1524,21 @@ every day（毎日）／today（今日）／tomorrow（明日）／yesterday（�
 
 ⚠ 注意：日本語の「〜に」はすべて同じだが、英語では at・on・in を使い分ける。時こくか、日か、月かを先に決めてから語を選ぶこと。`,
       },
+      {
+        heading: 'なぜ「せまい順に at・on・in」なのか',
+        mangaId: 'eigo_s463_manga',
+        body: `at・on・in は、場所を表すときの意味がそのまま時にも使われています。at は「一点で」（at the station）、on は「面に触れて」（on the desk）、in は「中に」（in the room）。時に当てはめると、時こくは時計の針が一か所を指す**点**なので at、日は一日という**面**なので on、月・季節・年は**中に入っている広い幅**なので in。だから「点→面→中」の順に at・on・in と並び、せまい順に覚えると忘れません。
+
+night だけ at なのは、昔から夜を「活動する幅」ではなく一日の区切りの「点」のように扱ってきた習慣です。every day・today・tomorrow に前置詞を付けないのは、これらの語がそれ自体で「いつ」を表しているからです。日本語の「〜に」はどれも同じですが、英語では時こくか、日か、月かを先に決めてから語を選びます。
+
+■ 確かめのしかた
+①「〜に」の中身が**時こく（点）か、日（面）か、月から上（幅）か**を言う。at nine／on Sunday／in April。
+②朝・午後・夕方は in the 〜、夜だけ at night。日が決まると on が勝つ（on Monday morning）。
+③every day・today・tomorrow・yesterday・this morning・next week に前置詞を付けていないか（× in every day）。
+④場所でも同じ順（at the station／on the desk／in the room）。決まった言い方（on time・in time）は形ごと覚える。
+
+★ ここがポイント：at は**点**、on は**面**、in は**中**で、場所と同じ意味が時にも使われている。だから**時こく→日→月**の順に at・on・in。every day には付けない。`,
+      },
     ],
     trapExamples: [
       {
@@ -1574,6 +1654,21 @@ how のあとに語をつけて、たずねる内容をくわしくする。
 
 ⚠ 注意：職業をたずねるときは What を使う。What is your father? は「お父さんの仕事は何ですか」という意味になる。Who is your father? は「どの人がお父さんですか」という意味である。`,
       },
+      {
+        heading: 'なぜたずねる語は先頭で、なぜ Yes／No で答えないのか',
+        mangaId: 'eigo_s464_manga',
+        body: `what・where・when・who・how は、**知りたいことそのもの**を表す語です。英語ではいちばん知りたいことを文の先頭に置き、そのあとにふつうのたずねる文（do you like／does he live）を続けます。だから「たずねる語＋ふつうのたずねる文」の形になり、Does を使えばうしろの動詞はもとの形です。
+
+Yes／No で答えないのは、これらの質問が「はい・いいえ」を聞いているのではなく、**中身（何・どこ・いつ・だれ・どのように）を聞いている**からです。Where do you live? に Yes, I do. と答えても、どこに住んでいるかは伝わりません。Yes／No で答えるのは Do・Are で始まる質問だけです。職業を What でたずねるのは、What が「何（をする人）か」を聞く語で、Who は「どの人か」を聞く語だからです。
+
+■ 確かめのしかた
+①知りたいことを言う：何→what、どこ→where、いつ→when、だれ→who、どのように・どれくらい→how。**先頭**に置く。
+②うしろが**ふつうのたずねる文**の形か。Where does he live?（Does のあとは live）。
+③答えが**中身**になっているか。Where do you live?→I live in Tokyo.（× Yes, I do.）。
+④how の組み合わせ：How old／How many（＋複数形）／How much／How long／How tall。職業→What is your father?、どの人→Who。
+
+★ ここがポイント：たずねる語は**知りたいことそのもの**なので先頭。**中身を聞いている**ので Yes／No では答えない。How many のあとは複数形、職業は What。`,
+      },
     ],
     trapExamples: [
       {
@@ -1614,7 +1709,7 @@ how のあとに語をつけて、たずねる内容をくわしくする。
       'supermarket（スーパー）、bookstore（書店）、restaurant（レストラン）。',
       'zoo（動物園）、aquarium（水族館）、stadium（競技場）。',
       '「〜へ行く」は go to ~。「〜で」は at ~。',
-      'go to bed、go home には to や at をつけない使い方がある。',
+      'go to bed（寝る）には to がつく。go home（家に帰る）は、home が「家へ」の意味を含むので to をつけない。',
     ],
     sections: [
       {
@@ -1781,6 +1876,21 @@ My favorite sport is soccer.（好きなスポーツはサッカーです）
 I am on the soccer team.（サッカー部に入っています）
 
 ⚠ 注意：「テレビを見る」は watch TV で、TV に the をつけない。一方「ラジオを聞く」は listen to the radio で the をつける。決まった言い方として覚えること。`,
+      },
+      {
+        heading: 'なぜ楽器には the が付き、スポーツには付かないのか',
+        mangaId: 'eigo_s466_manga',
+        body: `楽器は、**ピアノという種類の楽器そのもの**を指して「その楽器をひく」と言う習慣があり、the を付けて play the piano とします。スポーツは「サッカーという活動をする」という意味で、活動の名前には冠詞を付けません。理屈より、英語の長い習慣で決まった形なので、「楽器は the あり、スポーツは the なし」の一点で覚えます。
+
+swim・run・ski に play を使わないのは、これらが**それ自体で「泳ぐ・走る」という動作を表す動詞**だからです。play は「ボールなどを使うスポーツをする」「楽器をひく」ときの動詞で、動作そのものが動詞になっているものには要りません。柔道や空手のような武道は do を使います。
+
+■ 確かめのしかた
+①楽器→**play the 〇〇**（play the piano／the guitar／the violin）。スポーツ→**play 〇〇**（play soccer／tennis）。× play piano、× play the soccer。
+②動作そのものが動詞のもの（swim・run・ski・skate・ride a bike）には play を付けない。× play swimming。
+③武道は do（do judo／do karate／do kendo）。
+④「見る」は watch soccer、「サッカー選手」は a soccer player。watch TV（the なし）、listen to the radio（the あり）は決まった言い方。
+
+★ ここがポイント：**楽器は the あり、スポーツは the なし**の一点。swim・run は**それ自体が動詞**なので play を付けず、武道は do。`,
       },
     ],
     trapExamples: [
@@ -1993,7 +2103,7 @@ I am ＋ 気持ちを表す語
 ■ hungry と angry
 ・hungry（ハングリー）：おなかがすいた
 ・angry（アングリー）：おこっている
-一文字ちがうだけなので、意味を取りちがえないよう注意する。
+どちらも ngry の部分は同じで、はじめの hu と a がちがうだけなので、意味を取りちがえないよう注意する。
 
 ■ あいさつの中で使う
 A: How are you?
@@ -2022,10 +2132,10 @@ A: I'm good, thanks.
         question: 'angry の意味は何ですか。',
         wrongAnswer: 'おなかがすいた',
         trapExplanation:
-          'hungry とつづりが似ているので取りちがえた。一文字ちがうだけで意味が変わる。',
+          'hungry とつづりが似ているので取りちがえた。はじめの部分がちがうだけで意味が変わる。',
         correctAnswer: 'おこっている',
         correctExplanation:
-          'angry は「おこっている」、hungry は「おなかがすいた」である。つづりは h があるかどうかだけのちがいなので、意味とセットで覚える。I am angry.（おこっています）、I am hungry.（おなかがすいています）と、例文で区別するとよい。',
+          'angry は「おこっている」、hungry は「おなかがすいた」である。つづりは、はじめの hu と a がちがうだけなので、意味とセットで覚える。I am angry.（おこっています）、I am hungry.（おなかがすいています）と、例文で区別するとよい。',
       },
     ],
   },
@@ -2105,7 +2215,7 @@ A: I'm good, thanks.
 ・500 yen（500円）
 ・1,000 yen（1000円）
 ・three dollars（3ドル）
-yen は複数でも s をつけない。three yen ではなく、金額をそのまま言う。
+yen は複数でも s をつけない。three hundred yen（300円）と言い、yens とは書かない。
 
 ■ まちがえやすいところ
 ・How much のあとを is にするか are にするか（1つなら is、2つ以上なら are）
@@ -2233,6 +2343,21 @@ corner（角）／traffic light（信号）／crossing（こうさ点）／bridg
 
 ⚠ 注意：Turn right のあとに to は入れない。ただし「右へ行く」は go to the right と言うこともある。turn のときは to をつけない、と覚えること。`,
       },
+      {
+        heading: 'なぜ三つの言い方で道案内ができるのか、なぜ Turn に to が要らないのか',
+        mangaId: 'eigo_s470_manga',
+        body: `道順は、どんなに複雑でも「**まっすぐ進む・曲がる・着く**」の三つの動きの組み合わせです。だから Go straight（進む）、Turn right／left at 〜（曲がる）、It's on your right／next to 〜（着く）の三つの言い方があれば、たいていの道を説明できます。目印（corner・traffic light・bridge）を at 〜 で足せば、どこで曲がるかも伝わります。
+
+Turn right に to が要らないのは、right が「右に」という**向きを表す副詞**で、それだけで動詞 turn を説明できるからです。to を付けると「右という場所へ」となって不自然です。「歩いて」が on foot なのは、by のあとに置けるのが乗り物の名前だけで、足は乗り物ではないからです。
+
+■ 確かめのしかた
+①たずねるときは **Excuse me.** から。Where is 〜?／How can I get to 〜?／Is there a 〜 near here?
+②道順を三つの動きで組み立てる：Go straight (for two blocks)→Turn right at the corner→It's on your right／next to the bank。
+③× Turn to right→Turn right。× by the bus→by bus。× by foot→on foot（または I walk to school.）。
+④分からないときは I'm sorry. I don't know.／I'm not from here.、聞き返すときは Pardon?／Could you say that again?
+
+★ ここがポイント：道順は**進む・曲がる・着く**の三つの動きなので、Go straight・Turn right／left・It's on your right で説明できる。right は向きの副詞なので **Turn right（to なし）**、歩くのは **on foot**。`,
+      },
     ],
     trapExamples: [
       {
@@ -2355,6 +2480,21 @@ Thank you.
 ・最後に Thank you. と言う
 
 ⚠ 注意：Nice to meet you. は初めて会ったときだけに使う。二回目からは Nice to see you. または How are you? を使う。`,
+      },
+      {
+        heading: 'なぜ話す順番を決めておくのか、なぜ too を付けるのか',
+        mangaId: 'eigo_s471_manga',
+        body: `自己しょうかいは、聞く側が**名前→好きなもの→できること**の順で情報を受け取ると、相手の人物像を組み立てやすくなります。話す側も順番が決まっていれば、その場で考えずに、空らんをうめるだけで話せます。「〜になりたい」が want to be なのは、want（〜したい）のあとに動作を続けるには to＋動詞のもとの形が要り、「〜である」の動詞が be だからです。I want be は to が抜けて文になりません。
+
+Nice to meet you. に Nice to meet you, too. と返すのは、相手が先に言った「会えてうれしい」に「**私もです**」と気持ちを重ねるからです。too（〜も）が無いと、相手の言葉をただくり返しただけになります。初めて会ったときだけに使い、二回目からは Nice to see you. か How are you? です。
+
+■ 確かめのしかた
+①**あいさつ→名前→好きなもの→できること→なりたいもの→Thank you.** の順で言えるか。
+②I'm ten years old.（years に s）、I want **to** be a teacher.（to を落とさない）。
+③Nice to meet you. と言われたら **Nice to meet you, too.**（コンマと too）。二回目以降は Nice to see you.
+④あいづち（Really?／Me too.／That's nice.）を入れると会話が続く。発表は大きな声でゆっくり、相手の顔を見て、最後に Thank you.
+
+★ ここがポイント：**名前→好きなもの→できること**の順は、聞く側が人物像を組み立てやすい順。want のあとは **to＋もとの形**（want to be）。Nice to meet you. には**「私も」の too** を付けて返す。`,
       },
     ],
     trapExamples: [
@@ -2687,7 +2827,7 @@ Ken
 手紙の形
 ・Dear ~,（〜さんへ）で始める
 ・本文
-・Your friend, / Your friend,（友だちの〜より）
+・Your friend,（友だちの〜より）
 ・自分の名前
 
 ★ ポイント：時こく・曜日・always などの語に印をつけながら読むと、内容が整理される。`,
@@ -2727,6 +2867,21 @@ never（一度も〜ない）
 ・手紙の Dear のあとのコンマを忘れる
 
 ⚠ 注意：never は「一度も〜ない」という意味で、それだけで打ち消しを表す。I never don't eat ~ のように don't を重ねてはいけない。`,
+      },
+      {
+        heading: 'なぜ表に整理しながら読み、なぜ never には don\'t を重ねないのか',
+        mangaId: 'eigo_s474_manga',
+        body: `一日の生活の文には時こくが次々に出てくるので、読みながら「何時に何をするか」を表にすると、あとで What time does he get up? と聞かれたときに表を見るだけで答えられます。時こく・曜日・ひんどの語（always・usually・sometimes）に印をつけるのは、設問がそこを聞くからです。
+
+never が「一度も〜ない」で don't を重ねないのは、never が**それ自体に打ち消しの意味を持つ語**だからです。I never don't eat 〜 と書くと打ち消しが二重になります。ひんどの語が一般動詞の前に置かれるのは、動詞の「どれくらいの頻度で」を説明する語だからで、be動詞のときはそのうしろ（I am always busy.）に置きます。always→usually→often→sometimes→never の順に少なくなります。
+
+■ 確かめのしかた
+①読みながら**時こく・曜日・ひんどの語に印**をつけ、「何時に何を」を表にする。
+②ひんどの語の位置：**一般動詞の前**（I sometimes play tennis.）、**be動詞のあと**（I am always busy.）。× I play sometimes tennis。
+③never は単独で打ち消し（I never eat natto.＝一度も食べない）。× I never don't eat。always（いつも）と取りちがえていないか。
+④手紙の形：Dear 〇〇,（コンマ）→本文→Your friend,→自分の名前。Please write to me soon.
+
+★ ここがポイント：時こく・ひんどの語に**印をつけて表にする**と設問にすぐ答えられる。never は**それ自体が打ち消し**なので don't を重ねず、ひんどの語は**一般動詞の前・be動詞のあと**。`,
       },
     ],
     trapExamples: [

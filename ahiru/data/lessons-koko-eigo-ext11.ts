@@ -341,6 +341,7 @@ I'm sorry, I'm a stranger here.（この辺は不案内です）
       },
       {
         heading: '位置を表す前置詞をまちがえない',
+        mangaId: 'koko_eigo_s379_manga',
         body: `道案内の設問は「地図上のどこか」を選ばせる形が多い。位置を表す語を正確に区別できるかどうかで差がつく。
 
 ■ よく出る位置表現
@@ -487,7 +488,7 @@ by bus / by train / by bike / by car（前に a や the を付けない）
     examType: 'koko',
     title: '会話文⑥：レストランの会話',
     description: '席の案内から注文・食事中・会計まで、店員と客のセリフを流れで覚える',
-    intro: 'レストランで Are you ready to order? と聞かれたとき、まだ決まっていなければ何と言えばよいでしょう。Not yet. の三文字で切り抜けられます。飲食店の会話は入店から会計まで進む順番が決まっていて、どの段階のセリフかがわかれば空所は迷わず埋まります。',
+    intro: 'レストランで Are you ready to order? と聞かれたとき、まだ決まっていなければ何と言えばよいでしょう。Not yet. の二語で切り抜けられます。飲食店の会話は入店から会計まで進む順番が決まっていて、どの段階のセリフかがわかれば空所は迷わず埋まります。',
     order: 881,
     studyPeriod: '中2',
     targetLevel: 'kiso',
@@ -846,6 +847,21 @@ I'm sorry.／I'm sorry for being late.（遅れてすみません）
 ⚠ 注意：Excuse me. と I'm sorry. は使い分ける。Excuse me. は話しかけるとき・人の前を通るとき（これから迷惑をかけるとき）。I'm sorry. はすでにしたことをわびるとき。
 
 ★ ポイント：別れ際の表現は、会話の内容を答える設問のヒントにもなる。Good luck on your test. とあれば、相手はこれから試験を受けるとわかる。`,
+      },
+      {
+        heading: 'なぜあいさつは「組」で覚え、なぜ You too. が正解になるのか',
+        mangaId: 'koko_eigo_s384_manga',
+        body: `あいさつは一人では成り立たず、必ず**かける側と返す側の組**でできています。入試の空所補充は、この組の片方を抜いて作られるので、片方だけ覚えていると、空所がもう一方にあったときに答えられません。How are you? に Not so good. と返されたら That's too bad. / What's wrong? と受ける、というところまでが一組です。
+
+Have a nice weekend. に Thanks, you too. と返すのが正解になるのは、「よい週末を」が**相手にも同じことが当てはまるあいさつ**だからです。Thank you. だけでは相手への言葉が抜けており、入試ではより自然な You too. を含む選択肢が選ばれます。You're welcome. は Thank you. への返しなので、この場面では使えません。Thank you for のあとが動名詞なのは、for が前置詞だからです。
+
+■ 確かめのしかた
+①**かける側と返す側を組**で言えるか：Nice to meet you.→Nice to meet you, too.（二度目は Nice to see you again.）／Long time no see.→How have you been?→I've been fine.／Thank you.→You're welcome.／No problem.／My pleasure.／I'm sorry.→That's all right.
+②「あなたもね」の場面（Have a nice weekend.／Have a good day.）は **You too.**。× Thank you. だけ、× You're welcome.
+③How are you? への返しは三通り（良い・ふつう・良くない）。Not so good. には That's too bad.（× That's good.）。
+④Thank you for＋動名詞（× for help me）。Excuse me.（これから迷惑をかける）と I'm sorry.（すでにしたことをわびる）を分ける。人の紹介も This is 〜。
+
+★ ここがポイント：あいさつは**かける側と返す側の組**でできているので、片方だけ覚えない。**相手にも当てはまるあいさつには You too.**、Thank you for は前置詞なので動名詞。`,
       },
     ],
     trapExamples: [
@@ -1345,6 +1361,21 @@ C（Aの次のセリフ）: Thank you. That would help a lot.
 
 ★ ポイント：空所補充を解いたあとは、必ずその2行を声に出さずに読み直す。会話として不自然だと感じたら、たいてい選びなおしが必要である。`,
       },
+      {
+        heading: 'なぜ空所は「直後」を見ると決まるのか',
+        mangaId: 'koko_eigo_s389_manga',
+        body: `会話は必ず「たずねる→答える」の組でできています。空所が質問の側なら、**直後の返事に質問の形がそのまま写っています**。Yes, I did. なら Did you 〜?、Yes, I have. なら Have you 〜?、About fifteen minutes. なら How long 〜?、Because 〜 なら Why 〜?。返事の助動詞・時制・単位が質問の形を決めるので、空所の前を見て想像するより、後ろを見て逆算するほうが確実です。
+
+同じ Yes でも Yes, please. は申し出（Shall I 〜?／Would you like 〜?）への返事、Yes, I do. は疑問文への返事です。直後で決まらないときだけ、直前の文と場面（店・道・電話）を足します。長い選択肢が正解とはかぎらず、Not yet.／Speaking.／Neither do I. のような短い定型が答えになる問題が多いのは、会話の決まり文句を知っているかを測っているからです。
+
+■ 確かめのしかた
+①**直後の返事**を見る：Yes／No＋助動詞→その助動詞の疑問文（Yes, I did.→Did you〜?）。数・時・場所→疑問詞（minutes→How long、dollars→How much、meters→How far）。Because→Why。Sure.→依頼・許可。Yes, please.→申し出。
+②返事の**時制**と合うか（last night があれば現在完了は不可）。同じ語（finished）があるだけで選ばない。
+③直後で決まらなければ直前と場面。消去法：場面に合わない→話し手が逆→時制が合わない、の順に消す。
+④入れた文が**直前と直後の両方**に矛盾しないか、前後3行を読み直す。片方だけに合う誤答が必ずある。
+
+★ ここがポイント：会話は「たずねる→答える」の組なので、**直後の返事に質問の形が写っている**（助動詞・時制・単位で逆算）。直後→直前→場面の順に手がかりを使い、前後3行で確かめる。`,
+      },
     ],
     trapExamples: [
       {
@@ -1745,6 +1776,21 @@ instead（そのかわりに）／actually（実は）／but／how about 〜 ins
 
 ★ ポイント：メモは上書きせず、矢印でつなぐ。「駅3:00 → 図書館 → 3:30」のように書けば、最終形が一目でわかる。`,
       },
+      {
+        heading: 'なぜリスニングは放送前の30秒で決まり、なぜ最初の情報が答えにならないのか',
+        mangaId: 'koko_eigo_s393_manga',
+        body: `音声は一度流れたら戻れません。何を聞き取るかを決めずに聞くと、すべてを同じ重さで聞くことになり、肝心の情報が流れていきます。設問と選択肢を先に読めば、聞くのは「時刻は3:00か3:30か」「場所は station か library か」の二点だけになり、それ以外は流してよくなります。先読みは全部読むことではなく、**選択肢のちがう部分だけに印を付ける**ことで、10秒で終わります。
+
+最初に聞こえた情報が答えにならない問題が多いのは、出題者が「最初の案→変更→承認」という会話の流れを作り、**変更を聞き取れるか**を測っているからです。instead・actually・but・make it 〜・Let's change は変更の合図で、最後の Sure.／OK. が承認です。メモは上書きせず「駅3:00→図書館→3:30」と矢印でつなぐと、最終形が一目で分かります。
+
+■ 確かめのしかた
+①放送前に**設問文の疑問詞**（What time／Where／Why／How many）を拾い、答えの形を予想する。
+②選択肢を縦に見比べ、**ちがっている部分すべて**に印を付ける（曜日と交通手段の二点、のように）。
+③聞きながら**変更の合図**（instead・actually・but・make it）に反応し、矢印でメモする。最後の Sure. で最終形を確定。
+④一回目は全体の流れ、二回目で細部。一語一句書き取ろうとしない。最初に聞こえた案を答えにしない。
+
+★ ここがポイント：リスニングは**何を聞くかを先に決める**ことで決まる（先読みはちがう部分に印を付けるだけ）。会話は**最初の案→変更→承認**の流れなので、変更の合図をメモして最後まで聞く。`,
+      },
     ],
     trapExamples: [
       {
@@ -1950,6 +1996,21 @@ at the end of the street（通りの突き当たり）
 
 ★ ポイント：目的地は最後の一文で言われることが多い。途中の目印に飛びつかず、最後まで聞いてから答える。`,
       },
+      {
+        heading: 'なぜ線を引きながら聞き、なぜ南向きの右が西になるのか',
+        mangaId: 'koko_eigo_s395_manga',
+        body: `道順を頭の中でたどると、曲がるたびに「今どちらを向いているか」を記憶しながら次の指示を聞くことになり、必ずどこかで右と左が入れかわります。地図に線を引き、曲がった瞬間に進行方向の矢印を書き直せば、向きを記憶する必要がなくなり、耳を次の指示に使えます。手を動かすのは、記憶の負担を紙に移すためです。
+
+on your right の右が**歩いている人から見た右**なのは、道案内が歩く人の立場で語られるからです。北を上にした地図で南（下）へ歩いている人の右手は、地図では左（西）になります。地図を見ている自分の右ではありません。だから曲がるたびに矢印を書き直し、その矢印を基準に右左を決めます。you'll see 〜 は途中の目印で、目的地は最後の一文（The post office is next to 〜）で言われるので、目印に飛びつかず最後まで聞きます。
+
+■ 確かめのしかた
+①放送前に**出発点と建物の名前**を確認し、選択肢の記号の位置を把握する。
+②Go straight→線、for two blocks→交差点を2つ数える、Turn right／left→線を折り**矢印を書き直す**。
+③右左は**矢印（歩く人の向き）を基準**に決める。南向きなら右＝西（地図の左）。
+④first／second corner を数えまちがえない。you'll see 〜（目印）と目的地（最後の一文）を区別。next to（となり）／across from（向かい）／between／in front of／behind／at the end of を聞き分ける。You can't miss it. は位置情報ではない。
+
+★ ここがポイント：線を引くのは**向きの記憶を紙に移す**ため。右左は**歩く人の向き（矢印）を基準**に決めるので、南向きの右は西。目的地は最後の一文、目印に飛びつかない。`,
+      },
     ],
     trapExamples: [
       {
@@ -2024,6 +2085,7 @@ I don't think so.（そうは思いません）／I'm afraid not.（残念なが
       },
       {
         heading: '否定疑問文と条件・譲歩',
+        mangaId: 'koko_eigo_s396_manga',
         body: `否定がからむ表現には、日本語と答え方が逆になるものがある。
 
 ■ 否定疑問文への答え
@@ -2759,6 +2821,7 @@ Whose bag is this?
       },
       {
         heading: '間接疑問と付加疑問',
+        mangaId: 'koko_eigo_s403_manga',
         body: `文の中に組みこまれた疑問文（間接疑問）は、語順がふつうの文に戻る。ここが並べかえの最頻出ポイントである。
 
 ■ 間接疑問の作り方
@@ -2974,6 +3037,7 @@ the letter which was written by Ken ＝ the letter written by Ken
       },
       {
         heading: '比較・受け身の型',
+        mangaId: 'koko_eigo_s405_manga',
         body: `比較と受け身は、型そのものが答えになる。丸ごと覚えて当てはめる。
 
 ■ 比較の型
@@ -3046,8 +3110,8 @@ This room is not used now.
     targetLevel: 'moshi',
     keyPoints: [
       '中学生が書く一文は、8〜12語が目安。25〜30語なら3文が標準。',
-      '語数はスペースで区切られたまとまりを1語と数える。I am や e-mail は1語、do not は2語。',
-      '短縮形（I am → I am のままか I m か）は数え方が変わるので、短縮せずに書くのが安全。',
+      '語数はスペースで区切られたまとまりを1語と数える。I\'m や e-mail は1語、do not は2語。',
+      '短縮形（I\'m を1語と数えるか、I am で2語と数えるか）は数え方が変わるので、短縮せずに書くのが安全。',
       '数字は算用数字ではなく英語のつづりで書く（ten years old）。',
       '書き終えたら必ず語数を数え、答案の欄外に控えておく。',
       '不足したら理由や具体例を一文足す。超過したら修飾語から削る。',
@@ -3119,13 +3183,13 @@ My town has a big park near the station. Many people run there or walk their dog
     trapExamples: [
       {
         question:
-          '「20語以上25語以内で書きなさい」という条件で、次の答案の語数を数えよ。 I like summer. I can swim in the sea with my friends. We enjoy the summer festival every year.',
+          '「20語以上25語以内で書きなさい」という条件で、次の答案の語数を数えよ。 I like summer. I can swim in the sea with my friends. We enjoy the big summer festival every year.',
         wrongAnswer: '17語（I like summer. を3語と数え、そのあとを数えまちがえた）',
         trapExplanation:
           'a / the / in / with のような短い語を無意識に飛ばして数えてしまう。また文の数だけを見て「短いから足りないだろう」と感覚で判断してしまう。',
         correctAnswer: '20語（条件を満たしている）',
         correctExplanation:
-          '第1文 I / like / summer ＝3語。第2文 I / can / swim / in / the / sea / with / my / friends ＝9語。第3文 We / enjoy / the / summer / festival / every / year ＝8語。合計 3＋9＋8＝20語。冠詞や前置詞も必ず1語として数える。指を使って一語ずつ区切りながら数えるとまちがえない。',
+          '第1文 I / like / summer ＝3語。第2文 I / can / swim / in / the / sea / with / my / friends ＝9語。第3文 We / enjoy / the / big / summer / festival / every / year ＝8語。合計 3＋9＋8＝20語。冠詞や前置詞も必ず1語として数える。指を使って一語ずつ区切りながら数えるとまちがえない。',
       },
       {
         question:
@@ -3170,24 +3234,51 @@ My town has a big park near the station. Many people run there or walk their dog
 ④前後をうめる。
 
 ■ 例1：have been to（〜へ行ったことがある）
-①現在完了の動詞句 → 述語になる。
-②主語を I にする。
-③I have been to 〜 の 〜 に場所を入れる。
-【模範解答】I have been to Kyoto three times. It is a beautiful city with many old temples.
-※ 主語が三人称単数なら has been to に変える。My brother has been to Australia.
+【解法】
+【何を聞かれているか】have been to（〜へ行ったことがある）を使って、まとまった英文を書く。
+【なぜこの考え方か】指定語句は、品詞とはたらきを先に決めると、文のどこに置くかが決まる。have been to は〈have＋過去分詞〉の現在完了で、動詞のかたまりなので述語になる。述語が決まれば、主語と、to のうしろの場所を入れるだけで文が組み立つ。
+【ステップ1】はたらきを確認する。現在完了の動詞句なので、述語になる。
+【ステップ2】主語を決める。自分のことなら書きやすいので I にする。I のときは have、三人称単数のときは has を使う。
+【ステップ3】to のうしろに場所を入れる。I have been to Kyoto. 回数を示す three times を文末に足す。
+【ステップ4】内容を広げるため、もう1文書く。京都は今もある事実を述べるので現在形にする。It is a beautiful city with many old temples.
+【答え（模範解答）】I have been to Kyoto three times. It is a beautiful city with many old temples.
+【確かめ】①have been to が入っている。②have のうしろが過去分詞 been になっている。③to のうしろが場所になっている。④2文とも主語と動詞がそろっている。主語が三人称単数なら has been to に変える。例）My brother has been to Australia.
+【よくあるまちがい】have gone to と書く。have gone to は「行ってしまって今ここにいない」という意味で、「行ったことがある」にならない。
 
 ■ 例2：as 〜 as（〜と同じくらい）
-①比較の型 → 形容詞をはさむ。
-②This book is as interesting as that one.
-※ as と as の間は必ず原級。
+【解法】
+【何を聞かれているか】as 〜 as（〜と同じくらい）を使って、二つのものが同じ程度であることを表す英文を書く。
+【なぜこの考え方か】as 〜 as は〈主語＋be動詞＋as＋形容詞＋as＋比べる相手〉という型で使う。「同じ程度」を言う表現なので、二つの as の間には形容詞をそのままの形（原級）で入れる。比較級にすると「〜より」という別の意味になってしまうためである。
+【ステップ1】型を確認する。〈主語＋be動詞＋as＋形容詞＋as＋相手〉。
+【ステップ2】形容詞を選ぶ。本の話にして interesting（おもしろい）を使う。
+【ステップ3】主語を This book、比べる相手を that one にする。that one は that book のくり返しを避けた言い方。
+【ステップ4】型にあてはめて組み立てる。
+【答え】This book is as interesting as that one.（この本はあの本と同じくらいおもしろい）
+【確かめ】as が2つあり、その間に原級の interesting が入っている。主語 This book は単数なので、be動詞 is も合っている。
+【よくあるまちがい】as more interesting as のように、二つの as の間に比較級を入れる。
 
 ■ 例3：too 〜 to 〜（〜すぎて…できない）
-This bag is too heavy for me to carry.
-※ for 人 を to の前に入れることもできる。
+【解法】
+【何を聞かれているか】too 〜 to 〜（〜すぎて…できない）を使って、英文を書く。
+【なぜこの考え方か】too 〜 to … は「〜すぎるので…できない」という意味の型である。not のような否定の語がなくても、too 自体が「〜すぎる」という否定的な意味を持つので、to … が「できない」になる。「だれにとってできないのか」を言いたいときは、to の前に for 人 を入れる。
+【ステップ1】型を確認する。〈主語＋be動詞＋too＋形容詞＋to＋動詞の原形〉。
+【ステップ2】形容詞と動詞を選ぶ。かばんの話にして、heavy（重い）と carry（運ぶ）を使う。
+【ステップ3】「だれが運べないか」を言うため、to の前に for me を入れる。
+【ステップ4】組み立てる。
+【答え】This bag is too heavy for me to carry.（このかばんは重すぎて、私には運べない）
+【確かめ】too が形容詞の前、to が動詞の原形 carry の前にある。not は入っていない。This bag is so heavy that I can't carry it. と同じ意味になっているかも見る。
+【よくあるまちがい】carry it と書いて、it を足してしまう。carry の目的語は主語の This bag と同じものなので、it は要らない。
 
 ■ 例4：名詞が指定された場合（例：environment）
-名詞は主語か目的語に置く。
-We should think about the environment. We can start by using our own bags.
+【解法】
+【何を聞かれているか】名詞 environment（環境）が指定された条件で、英文を書く。
+【なぜこの考え方か】名詞は、文の中で主語か目的語（前置詞のうしろを含む）になる。動詞のように文の型を決める語ではないので、先に「どの役目にするか」を決めて、その位置にはめこむ。environment は「〜について考える」の目的語にすると、自然な文になる。
+【ステップ1】品詞を確認する。environment は名詞なので、主語か目的語に置く。
+【ステップ2】目的語にする。think about（〜について考える）のうしろに置く。「地球の環境」のように決まったものを指すので、the を付ける。We should think about the environment.
+【ステップ3】具体的な行動をもう1文で書く。by ＋ 〜ing は「〜することによって」。We can start by using our own bags.
+【答え】We should think about the environment. We can start by using our own bags.
+【確かめ】environment が入っている。2文とも主語と動詞がそろっている。by のうしろが using（〜ing形）になっている。
+【よくあるまちがい】the を落として think about environment と書く。ここでは決まったもの（私たちの環境）を指すので the が必要である。
 
 ★ ポイント：指定語句を文の途中に無理やり押しこむと、周りの語順が崩れる。語句を紙に書き、その前後に空欄を作ってからうめると安定する。`,
       },
@@ -3199,9 +3290,9 @@ We should think about the environment. We can start by using our own bags.
 「あなたの好きな季節とその理由を、because を使って20語以上で書きなさい」
 　条件①好きな季節を書く　条件②理由を書く　条件③because を使う　条件④20語以上
 
-【模範解答（21語）】
+【模範解答（20語）】
 I like winter the best. I like it because I can go skiing with my family every winter in Nagano.
-語数の内訳：第1文 I / like / winter / the / best ＝5語。第2文 I / like / it / because / I / can / go / skiing / with / my / family / every / winter / in / Nagano ＝16語。合計21語。
+語数の内訳：第1文 I / like / winter / the / best ＝5語。第2文 I / like / it / because / I / can / go / skiing / with / my / family / every / winter / in / Nagano ＝15語。合計20語。
 文法の確認：go skiing（スキーに行く）は go ＋ 〜ing の形。because のあとは主語＋動詞（I can go）がそろっている。
 
 ■ 条件のチェックリストを作る
@@ -3238,9 +3329,9 @@ I like winter the best. I like it because I can go skiing with my family every w
           '「because を使って、20語以上で好きな季節と理由を書きなさい」という条件で書け。',
         wrongAnswer: 'I like winter. Because I can go skiing.',
         trapExplanation:
-          'because を使ったことで満足してしまい、because から始まる文を独立させている。また語数が9語しかなく、条件を満たしていない。',
+          'because を使ったことで満足してしまい、because から始まる文を独立させている。また語数が8語しかなく、条件を満たしていない。',
         correctAnswer:
-          'I like winter the best. I like it because I can go skiing with my family every winter in Nagano.（21語）',
+          'I like winter the best. I like it because I can go skiing with my family every winter in Nagano.（20語）',
         correctExplanation:
           'because は接続詞なので、原則として二つの文をつなぐ形で使う。Because I can go skiing. だけでは主節がなく、文として不完全である。また語数条件も満たさない。条件は「指定語句」と「語数」の両方を同時に満たす必要があるので、書いたあとに条件を一つずつ確認する。',
       },
@@ -3917,15 +4008,15 @@ Last year, I 〜.／When I was ten, I 〜.（私が10歳のとき）
 I have 〜.（経験を表す現在完了）
 
 ■ 足す前と足したあと
-足す前：I like winter the best. I can enjoy skiing.（10語）
+足す前：I like winter the best. I can enjoy skiing.（9語）
 足したあと：I like winter the best. In winter, I can enjoy skiing with my family. Last year, we went to Nagano and had a great time.（25語）
-語数が2.5倍になり、内容も具体的になった。
+語数が約3倍（9語→25語）になり、内容も具体的になった。
 
 【模範解答（25語）】
 I like winter the best. In winter, I can enjoy skiing with my family. Last year, we went to Nagano and had a great time.
 
 【語数の内訳】
-第1文 5語／第2文 10語／第3文 10語　合計25語
+第1文 5語／第2文 9語／第3文 11語　合計25語
 
 【文法の検算】
 ・I like winter the best.：最上級で「いちばん好き」を表す言い方。○
@@ -3995,7 +4086,7 @@ I like winter the best. In winter, I can enjoy skiing with my family. Last year,
     examType: 'koko',
     title: '自由英作文⑤：50語の総合演習',
     description: '意見・理由2つ・具体例・まとめを50語にまとめ、最後に全項目を検算する',
-    intro: '難関校では50語前後の自由英作文が課されます。語数が増えるぶん、書く内容も見直す項目も増えますが、やることは今まで積み上げてきたことの組み合わせです。型で骨組みを作り、配分で語数を合わせ、五段階で検算する。最後の総仕上げをしましょう。',
+    intro: '難関校では50語前後の自由英作文が課されます。語数が増えるぶん、書く内容も見直す項目も増えますが、やることは今まで積み上げてきたことの組み合わせです。型で骨組みを作り、配分で語数を合わせ、六項目で検算する。最後の総仕上げをしましょう。',
     order: 915,
     studyPeriod: '中3秋〜直前',
     targetLevel: 'nyushi',

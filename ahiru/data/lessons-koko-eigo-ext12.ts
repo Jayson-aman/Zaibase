@@ -110,7 +110,7 @@ export const kokoEigoExt12Lessons: Lesson[] = [
       'リスニングの12分は放送時間で固定。自分で調整できるのは残り38分だけと考える。',
       '大問ごとの「終了予定時刻」を問題用紙の余白に書いてから解き始める。',
       '予定時刻を過ぎたら、解けていなくても次へ進む。1問に固執すると後ろが全部崩れる。',
-      '見直しの5分は削らない。ここは平均8点を回収できる時間である。',
+      '見直しの5分は削らない。ここは複数形の -s や三単現の -s、つづり、空欄もれなどの失点を回収できる時間である。',
     ],
     sections: [
       {
@@ -422,7 +422,7 @@ Step4　①知らなかったの中身は語彙か文法か → 該当分野を�
         correctAnswer:
           '不適切。英作文は白紙なら0点だが、型どおりに4文書けば6〜8点入る。7分を長文に足しても6点は増えないので、英作文は捨ててはいけない',
         correctExplanation:
-          '目標80点の設計では英作文に8点を割り当てている。ここを0点にすると、長文で28点満点を取っても合計が足りなくなる。しかも英作文は「I think 〜 . I have two reasons. First, 〜 . Second, 〜 .」という型を覚えるだけで構成点と内容点が入るため、投入時間あたりの回収が最も大きい。捨てる対象は「時間をかけても入る点が小さい設問」であって、「苦手な大問まるごと」ではない。',
+          '目標80点の設計では英作文に8点を割り当てている。ここを0点にすると、その8点を取り戻すために、長文を設計の20点から満点の28点まで引き上げなければならない。7分を足した程度でそこまで伸びるとは考えにくい。しかも英作文は「I think 〜 . I have two reasons. First, 〜 . Second, 〜 .」という型を覚えるだけで構成点と内容点が入るため、投入時間あたりの回収が最も大きい。捨てる対象は「時間をかけても入る点が小さい設問」であって、「苦手な大問まるごと」ではない。',
       },
     ],
   },
@@ -775,20 +775,41 @@ tell は「人に〜を教える」なので SVOO（tell＋人＋もの）。
 
 ■ 例題1
 「この本を読めば、彼の考え方がよくわかります。」
-①主語を補う →「（あなたが）この本を読めば、（あなたは）彼の考え方をよく理解できます」
-②③平易化 →「もしあなたがこの本を読めば、あなたは彼の考えをよく理解できる」
-④模範解答：If you read this book, you will understand his ideas well.
-（if 節の中は未来のことでも現在形 read を使う。これは頻出の減点ポイント）
+【解法】
+【何を聞かれているか】日本語の文を、英語に直す。
+【なぜこの考え方か】日本語は主語を省くし、「読めば」のような言い方は英語の型とそのまま対応しない。そのまま英語にしようとすると詰まるので、先に英語にしやすい日本語へ作り直す。
+【ステップ1】主語を補う。「読めば」「わかります」の主語は書かれていないが、一般的な「あなた」を補う。→「（あなたが）この本を読めば、（あなたは）彼の考え方をよく理解できます」
+【ステップ2】述語をやさしく言いかえる。「彼の考え方がよくわかる」を、「あなたは彼の考えをよく理解できる」（understand his ideas well）にほぐす。
+【ステップ3】「〜すれば…」は if を使う。if の節が条件、主節が結果になる。If you read this book, you will understand ...
+【ステップ4】時制を決める。結果は未来のことなので will を使う。ただし if の節の中は、未来のことでも現在形 read を使う。
+【答え】If you read this book, you will understand his ideas well.
+【確かめ】①if節の動詞が現在形の read になっている。②主節が will ＋ 動詞の原形 understand になっている。③his ideas の形で、「彼の考え」が入っている。
+【よくあるまちがい】If you will read this book と、if節の中にも will を入れてしまう。これは頻出の減点ポイントである。
 
 ■ 例題2
 「私は英語を話すのが得意ではありません。」
-模範解答：I am not good at speaking English.
-（be good at の後ろは動名詞。× I am not good at speak English. は誤り）
+【解法】
+【何を聞かれているか】日本語の文を、英語に直す。
+【なぜこの考え方か】「〜するのが得意だ」は、英語では be good at ＋ 動名詞という決まった型で言う。at は前置詞で、前置詞のうしろには名詞の働きをする語が来る。動詞を名詞の働きにするには ing 形（動名詞）にする。
+【ステップ1】主語を確認する。「私は」とあるので I。
+【ステップ2】「得意ではない」を be good at の否定で表す。「得意だ」は be good at、否定は be の後ろに not で I am not good at。
+【ステップ3】at のうしろに「英語を話すこと」を置く。前置詞のうしろなので、speak を speaking にする。
+【ステップ4】つなげる。
+【答え】I am not good at speaking English.
+【確かめ】主語 I に be動詞 am が合っている。at のうしろが speaking（ing形）になっている。
+【よくあるまちがい】at のうしろを speak（原形）にして、I am not good at speak English. と書く。at は前置詞なので、動詞は ing 形にする。
 
 ■ 例題3
 「昨日から雨が降り続いています。」
-模範解答：It has been raining since yesterday.
-（現在完了進行形が書けなければ It has rained since yesterday. でも意味は通じる。ただし「降り続いている」の継続感は進行形のほうが正確）
+【解法】
+【何を聞かれているか】日本語の文を、英語に直す。
+【なぜこの考え方か】「昨日から」は、過去の一点から今まで続くことを表す。過去から現在までのつながりは、英語では現在完了で言う。さらに「降り続けている」という動作の継続を強く出したいので、現在完了進行形を使う。
+【ステップ1】主語を決める。日本語に主語がない。天気を表す文では it を主語にする。
+【ステップ2】時制を決める。「昨日から今まで続いている」ので現在完了。動作が続いているので、has been ＋ ing形（現在完了進行形）にする。主語が it（三人称単数）なので has。
+【ステップ3】「昨日から」を since yesterday とする。since のうしろには、過去の起点を置く。
+【答え】It has been raining since yesterday.
+【確かめ】has been ＋ raining（ing形）の形になっている。since のうしろに起点 yesterday がある。現在完了進行形が書けなければ、It has rained since yesterday. でも意味は通じる。ただし、降り続く継続感は進行形のほうが正確である。
+【よくあるまちがい】It is raining since yesterday. と現在進行形にする。since は、現在完了（進行形）とセットで使う。
 
 ■ 書き終えたあとの4点確認
 ①三単現の -s は付いているか
@@ -1094,6 +1115,21 @@ be 動詞の後ろなら進行形、前置詞の後ろなら動名詞、名詞�
 be(was/were―been)／begin(began―begun)／break(broke―broken)／bring(brought―brought)／build(built―built)／buy(bought―bought)／catch(caught―caught)／choose(chose―chosen)／come(came―come)／do(did―done)／drink(drank―drunk)／drive(drove―driven)／eat(ate―eaten)／fall(fell―fallen)／feel(felt―felt)／find(found―found)／forget(forgot―forgotten)／get(got―gotten)／give(gave―given)／go(went―gone)／grow(grew―grown)／hear(heard―heard)／hold(held―held)／keep(kept―kept)／know(knew―known)／leave(left―left)／lose(lost―lost)／make(made―made)／mean(meant―meant)／meet(met―met)／put(put―put)／read(read―read)／ride(rode―ridden)／rise(rose―risen)／run(ran―run)／say(said―said)／see(saw―seen)／sell(sold―sold)／send(sent―sent)／sing(sang―sung)／sit(sat―sat)／sleep(slept―slept)／speak(spoke―spoken)／spend(spent―spent)／stand(stood―stood)／swim(swam―swum)／take(took―taken)／teach(taught―taught)／tell(told―told)／think(thought―thought)／understand(understood―understood)／write(wrote―written)
 
 ⚠ 注意：受動態や現在完了で「過去形」を書いてしまう誤りが非常に多い。× This letter was wrote by Ken. は誤り。was の後ろは過去分詞 written である。過去形と過去分詞が違う語（write / wrote / written、take / took / taken、see / saw / seen）は特に注意する。`,
+      },
+      {
+        heading: 'なぜ「直前の1語」で変化先が決まるのか',
+        mangaId: 'koko_eigo_s427_manga',
+        body: `（　）に動詞が与えられたとき、変化先は三単現・過去形・過去分詞・-ing・原形の5つしかありません。しかもどれになるかは、**直前の語が何を要求しているか**で決まります。be動詞は過去分詞（受動態）か -ing（進行形）を、have／has は過去分詞（現在完了）を、助動詞・to・do／does／did は原形を、前置詞は動名詞（-ing）を要求します。直前に名詞があれば、それは文の動詞ではなく後置修飾の分詞（〜している→-ing、〜された→過去分詞）です。だから（　）の直前の1語を見れば候補は2つ以下に絞れます。
+
+後置修飾の正答率が低いのは、名詞の直後に動詞が来ている形を「文の動詞」と読んでしまうからです。Look at the girl running over there. の文の動詞は Look で、running は the girl を説明しているだけです。名詞の直後に動詞が現れたら後置修飾を疑います。
+
+■ 確かめのしかた
+①（　）の**直前の語**を見る：be動詞→過去分詞か -ing／have・has→過去分詞／助動詞・to・do→原形／前置詞→-ing／名詞→後置修飾の分詞。
+②時を表す語（yesterday・last・ago→過去形、every→現在形＋三単現）と主語の数を確かめる。
+③受動態・現在完了に過去形を書いていないか（× was wrote→written、× have know→known）。書き分けが要る不規則動詞（write／wrote／written、take／took／taken、see／saw／seen）。
+④形容詞なら than→比較級、the＋of／in→最上級、動詞を修飾→-ly。書いたあと主語との一致（三単現・単複）を確認。
+
+★ ここがポイント：変化先は**直前の語が要求する形**で決まる（be→過去分詞・-ing、have→過去分詞、助動詞→原形、前置詞→-ing、名詞→後置修飾）。名詞の直後の動詞は文の動詞ではない。`,
       },
     ],
     trapExamples: [
@@ -1511,7 +1547,7 @@ The book /（その本は）that I bought /（私が買った）at the store /�
 ・数字 → ○で囲む
 ・逆接の however / but → 三角
 ・段落の第1文 → 下線
-印は3種類までにする。多いと付けること自体に時間がかかる。
+印は4種類までにする。多いと付けること自体に時間がかかる。
 
 ⚠ 注意：先読みしたことを忘れてしまうなら、先読みの量が多すぎる。設問4問ぶんを1分で覚えられないなら、2問ずつに分ける。自分の記憶量に合わせて調整すること。`,
       },
@@ -1929,7 +1965,7 @@ I like summer better than winter. I have two reasons. First, I can swim in the s
 
 ■ 1文を10語以内にする
 長い1文を書くより、短い2文に分けるほうが安全である。
-× I think summer is better than winter because I can swim in the sea and I have a long vacation so I can read many books.（1文で27語・ミスが起きやすい）
+× I think summer is better than winter because I can swim in the sea and I have a long vacation so I can read many books.（1文で26語・ミスが起きやすい）
 ○ I like summer better than winter. First, I can swim in the sea.（2文に分割）
 
 ⚠ 注意：Because で文を始めない。× Because I can swim in the sea. は主語と動詞のある節だけで文になっておらず、減点対象になる。理由を独立した文で書くときは First, I can swim in the sea. のようにする。`,
@@ -1949,7 +1985,7 @@ I like summer better than winter. I have two reasons. First, I can swim in the s
       },
       {
         question:
-          '英作文で「I think summer is better than winter because I can swim in the sea and I have a long vacation so I can read many books.」と1文で27語書いた。この書き方の問題点は何か。',
+          '英作文で「I think summer is better than winter because I can swim in the sea and I have a long vacation so I can read many books.」と1文で26語書いた。この書き方の問題点は何か。',
         wrongAnswer: '問題点はない。長い文が書けるのは英語力が高い証拠で、加点される',
         trapExplanation:
           '「長く複雑な文＝高評価」という思い込み。高校入試の採点基準に「文の長さ」の項目はなく、むしろ長い文ほど文法ミスの数が増えて減点が重なることを見ていない。',
@@ -2055,7 +2091,7 @@ because / beautiful / friend / delicious / interesting / vacation / different / 
           '「英語として正しい＝満点」と考えてしまう。採点の第一項目が「条件を満たしているか」であり、語数条件が独立した配点を持っていることを知らない。',
         correctAnswer: '語数条件（30語以上）を満たしていないため内容点2点を失い、最大でも10点になる',
         correctExplanation:
-          '語数条件は内容点の中で2点を占める。22語では30語に届かないので、この2点が入らない。学校によっては語数不足をさらに重く扱い、内容点全体を減点することもある。対策は簡単で、理由に具体例を1文足す（For example, I go to the beach every summer. で8語）か、まとめの文を足す（That is why I like summer. で6語）だけでよい。書き終えたら必ず語数を数える。',
+          '語数条件は内容点の中で2点を占める。22語では30語に届かないので、この2点が入らない。学校によっては語数不足をさらに重く扱い、内容点全体を減点することもある。対策は簡単で、理由に具体例を1文足し（For example, I go to the beach every summer. で9語）、まとめの文も足す（That is why I like summer. で6語）と、22＋9＋6＝37語になって条件を満たせる。書き終えたら必ず語数を数える。',
       },
       {
         question:
@@ -2063,7 +2099,7 @@ because / beautiful / friend / delicious / interesting / vacation / different / 
         wrongAnswer: '文法の誤りのほうが減点が大きいので、played の修正を先に行う',
         trapExplanation:
           '「文法ミスは重い」という漠然とした印象で判断している。実際の配点では、構成の欠落のほうが失点が大きいことを確認していない。',
-        correctAnswer: 'つなぎ語とまとめの文を足す（構成2点の回復）ほうを先に行い、そのあとで played を直す（文法1点分）',
+        correctAnswer: 'つなぎ語とまとめの文を足す（構成2点の回復）ほうを先に行い、そのあとで played を直す（誤りが1つだけなら得点は変わらないが、余裕があれば直す）',
         correctExplanation:
           '構成点はつなぎ語1点とまとめの文1点で合計2点あり、First と That is why I think so. を書き足すだけで回復できる。一方、文法の誤りは「2つ以内なら2点」という基準なので、1つの誤りを直しても得点は変わらないことがある（誤りが1つなら、直さなくても2点のまま）。確認は「足りない要素を足す」を先に、「誤りを直す」を後にする。加点の期待値が大きいほうから手を付けるのが原則である。',
       },
@@ -2124,7 +2160,7 @@ If you come to Japan, you should visit Kyoto.
 
 ■ 組み合わせ例（テーマ：将来の夢）
 I want to be a teacher in the future. I have two reasons. First, I like children very much. Second, it is exciting for me to teach something new. That is why I want to be a teacher.
-（38語。使ったのは②I want to 〜 と ④It is 形容詞 for me to 〜 の2つだけで、どちらも上の8構文の中にある）
+（36語。使ったのは②I want to 〜 と ④It is 形容詞 for me to 〜 の2つだけで、どちらも上の8構文の中にある）
 
 ★ ポイント：同じ構文を繰り返し使ってよい。採点基準に「多様な表現を使うこと」は入っていない。確実に書ける形で埋めるほうが得点が高い。`,
       },
@@ -2346,33 +2382,72 @@ It is famous for 〜 .
 ①主語を補う →「私は、明日雨が降るだろうと聞いています」
 ②述語をほぐす →「私は聞いている＋明日雨が降るだろう」
 ③英語にする
-模範解答：I hear that it will rain tomorrow.
-（天気の it を主語にする。× Tomorrow rains. は誤り）
+【解法】
+【何を聞かれているか】「〜そうです」を含む日本語を、英語に直す。
+【なぜこの考え方か】「〜そうです」は、人から聞いた話（伝聞）を表す。日本語は「だれが聞いたか」を省くが、英語は必ず主語が要る。そこで、まず「私は聞いている」と主語を補い、聞いた内容を that 以下に入れる。
+【ステップ1】主語を補う。「私は聞いている」→ I hear。
+【ステップ2】聞いた内容を作る。「明日雨が降る」。天気を表す文では it を主語にする。未来のことなので will を使い、it will rain tomorrow。
+【ステップ3】2つをつなぐ。I hear that it will rain tomorrow.
+【答え】I hear that it will rain tomorrow.
+【確かめ】主語と動詞の組が2つ（I hear ／ it will rain）そろっている。tomorrow があるので、未来を表す will が合っている。
+【よくあるまちがい】Tomorrow rains. のように、it を使わず動詞だけで文を作る。英語の文には主語が必要で、天気の文では it が主語になる。
 
 ■ 例題2
 「私は彼に何と言えばよいかわからなかった。」
 ①主語はすでにある（私は）
 ②述語をほぐす →「わからなかった＋何を言うべきか」
 ③〈疑問詞＋to 不定詞〉を使う
-模範解答：I did not know what to say to him.
+【解法】
+【何を聞かれているか】「何と言えばよいか」を含む日本語を、英語に直す。
+【なぜこの考え方か】「何と言えばよいか」は、「何を言うべきか」という意味である。英語には、これを〈疑問詞＋to不定詞〉（what to say）の一かたまりで言う型がある。名詞のように know のあとに置けるので、文が短く書ける。
+【ステップ1】主語と述語を決める。主語は「私は」で I。「わからなかった」は過去の否定なので did not know。
+【ステップ2】わからなかった内容を作る。「何を言うべきか」→ what to say。
+【ステップ3】「彼に」を足す。say は「〜に言う」というとき、to を使う。say to him。
+【ステップ4】つなげる。
+【答え】I did not know what to say to him.
+【確かめ】did not のあとの know は原形になっている。what のあとが to ＋ 原形 say になっている。
+【よくあるまちがい】did not knew のように、did not のあとを過去形にする。did not のあとは原形である。
 
 ■ 例題3
 「私たちの学校は50年前に建てられました。」
 ②「建てられた」＝受動態
-模範解答：Our school was built fifty years ago.
-（build―built―built。× was build は誤り）
+【解法】
+【何を聞かれているか】「建てられました」を含む日本語を、英語に直す。
+【なぜこの考え方か】学校は自分で建つのではなく、人によって建てられる。「〜される」という受け身は、英語では〈be動詞＋過去分詞〉で表す。過去のことなので、be動詞は was にする。
+【ステップ1】主語を決める。「私たちの学校は」→ Our school。
+【ステップ2】述語を決める。「建てられた」は受動態なので was ＋ 過去分詞。build の変化は build ― built ― built なので、過去分詞は built。
+【ステップ3】「50年前に」を fifty years ago とし、文の最後に置く。
+【答え】Our school was built fifty years ago.
+【確かめ】was のあとが過去分詞 built になっている。ago があるので、過去を表す was が合っている。
+【よくあるまちがい】was build のように、過去分詞にせず原形のままにする。build は不規則に変化するので、built と覚える。
 
 ■ 例題4
 「彼女は3年間ずっとピアノを練習しています。」
 ②「ずっと〜している」＝現在完了（継続）
-模範解答：She has practiced the piano for three years.
-（楽器には the を付ける。主語が三人称単数なので has）
+【解法】
+【何を聞かれているか】「3年間ずっと練習しています」を含む日本語を、英語に直す。
+【なぜこの考え方か】「3年間ずっと〜している」は、3年前から今まで続いていることを表す。過去から現在までのつながりを表すのは現在完了なので、〈have / has ＋ 過去分詞〉を使う。続いた期間は for ＋ 期間で表す。
+【ステップ1】主語と have / has を決める。主語は she（三人称単数）なので has。
+【ステップ2】過去分詞を作る。practice の過去分詞は practiced。
+【ステップ3】楽器の前には the を付ける。the piano。
+【ステップ4】期間を足す。for three years。「3年間」は複数なので years と s を付ける。
+【答え】She has practiced the piano for three years.
+【確かめ】has ＋ 過去分詞 practiced の形になっている。for のあとに期間があり、years が複数形になっている。
+【よくあるまちがい】She practices the piano for three years. と現在形にする。現在形は「いつもしている」で、「3年間ずっと」という継続を表せない。
 
 ■ 例題5
 「この本を読めば、彼の考え方がよくわかります。」
 ①主語を補う →「（あなたが）この本を読めば、（あなたは）彼の考えをよく理解できます」
-模範解答：If you read this book, you will understand his ideas well.
-（if 節の中は未来でも現在形）
+【解法】
+【何を聞かれているか】「〜すれば…」の形の日本語を、英語に直す。
+【なぜこの考え方か】「〜すれば」は条件を表すので、英語では if を使う。if の節が条件、主節が結果という2つの文の組み合わせにして考えると、書きやすい。
+【ステップ1】主語を補う。読む人も、理解する人も「あなた」。→ you。
+【ステップ2】条件の部分を作る。「この本を読めば」→ If you read this book。
+【ステップ3】結果の部分を作る。「彼の考えをよく理解できる」。未来のことなので will を使い、you will understand his ideas well。
+【ステップ4】if 節の中の時制に気をつける。条件の節の中は、未来のことでも現在形 read にする。
+【答え】If you read this book, you will understand his ideas well.
+【確かめ】if 節が現在形（read）、主節が will ＋ 原形（understand）になっている。if 節を前に置いたので、コンマで区切っている。
+【よくあるまちがい】If you will read this book と、if 節にも will を入れる。
 
 ★ ポイント：日本語で主語が省かれているときは、まず I か you を補ってみる。学校・町・建物などが主語になる場合は、受動態を疑う。`,
       },
@@ -2385,18 +2460,45 @@ A: How was your weekend?
 B:（　　　　　）（「家族と京都を訪れました。とても楽しかったです。」）
 模範解答：I visited Kyoto with my family. It was a lot of fun.
 （A が How was 〜? と過去形で聞いているので、答えも過去形にそろえる。× I visit Kyoto は誤り）
+【解法】
+【何を聞かれているか】対話文の（　）に入る英文を、日本語に合わせて書く。
+【なぜこの考え方か】対話では、相手の質問の時制に答えをそろえる。A は How was your weekend?（週末はどうだった）と過去形で聞いているので、答えも過去形でそろえないと、会話がかみ合わない。
+【ステップ1】時制を決める。A の質問が過去形なので、答えも過去形にする。
+【ステップ2】1文目を作る。「家族と京都を訪れました」→ I visited Kyoto with my family。visit の過去形は visited。
+【ステップ3】2文目を作る。「とても楽しかった」→ It was a lot of fun。it は、週末にしたことを指す。
+【答え】I visited Kyoto with my family. It was a lot of fun.
+【確かめ】2文とも過去形（visited、was）になっている。with my family が「家族と」を表している。
+【よくあるまちがい】I visit Kyoto with my family. と現在形にする。過去の週末の話なので、過去形にする。
 
 ■ 例題7
 A: Have you ever been to Hokkaido?
 B:（　　　　　）（「はい、2回行ったことがあります。」）
 模範解答：Yes, I have been there twice.
 （現在完了で聞かれたら現在完了で答える。been to の to は there があるので不要）
+【解法】
+【何を聞かれているか】対話文の（　）に入る英文を、日本語に合わせて書く。
+【なぜこの考え方か】A は Have you ever been to Hokkaido?（北海道に行ったことがありますか）と、現在完了で経験を聞いている。経験を聞かれたら、答えも現在完了（have been）の経験で答える。過去形で答えると、「いつ行ったか」の話になり、質問とずれる。
+【ステップ1】Yes と答え、I have been で現在完了の経験の形にする。
+【ステップ2】場所を言う。Hokkaido をくり返さず、「そこへ」を表す there にする。there は「そこに」という意味の語で、to の意味を含んでいるので、been to there とはしない。
+【ステップ3】回数を足す。「2回」は twice。
+【答え】Yes, I have been there twice.
+【確かめ】have ＋ been（過去分詞）の形になっている。there の前に to が入っていない。回数 twice が文末にある。
+【よくあるまちがい】I have been to there twice. と、there の前に to を入れる。there には「そこへ」の意味が入っているので、to は不要。
 
 ■ 例題8
 A: Could you tell me the way to the station?
 B:（　　　　　）（「この道をまっすぐ行けば、右手に見えますよ。」）
 模範解答：Go straight along this street, and you will see it on your right.
 （命令文＋and で「〜すれば…」を表す）
+【解法】
+【何を聞かれているか】対話文の（　）に入る英文を、日本語に合わせて書く。
+【なぜこの考え方か】道案内では、相手にしてほしい動作を「〜してください」と伝える。それには、動詞の原形で始める命令文が向いている。また、〈命令文＋and ＋ 結果〉は、「〜すれば…」を表す形である。
+【ステップ1】「この道をまっすぐ行けば」を命令文で作る。Go straight along this street。along は「〜に沿って」の意味。
+【ステップ2】結果の部分を作る。「右手に見える」→ you will see it on your right。it は the station（駅）を指す。on your right は「右手に」。
+【ステップ3】2つを、コンマと and でつなぐ。
+【答え】Go straight along this street, and you will see it on your right.
+【確かめ】命令文が動詞の原形 Go で始まっている。and のあとが主語 you ＋ will ＋ 原形 see になっている。it が駅を指している。
+【よくあるまちがい】right を「右手」と直訳して、on the right hand のように言いかえる。on your right で十分に伝わる。
 
 ■ 書き終えたあとの4点確認
 ①三単現の -s：主語が he / she / it / 単数名詞で現在形なら動詞に -s
@@ -2605,6 +2707,7 @@ One of my friends lives in Tokyo.（主語の核は One＝単数→ lives。frie
       },
       {
         heading: '助動詞・受動態・完了・準動詞',
+        mangaId: 'koko_eigo_s441_manga',
         body: `残りの3つの点検項目を確認する。
 
 ■ 点検②：助動詞の後ろは原形
@@ -2682,6 +2785,7 @@ be 動詞と一般動詞が並んだら、原則としてどちらかが不要�
     sections: [
       {
         heading: '前置詞が要らない動詞・要る動詞',
+        mangaId: 'koko_eigo_s442_zenchishi_manga',
         body: `日本語で「〜に」「〜と」「〜について」が付くのに、英語では前置詞を取らない動詞がある。ここが最頻出の誤りである。
 
 ■ 前置詞が不要な他動詞
@@ -3046,7 +3150,7 @@ diffrent → different
 vacantion → vacation
 recieve → receive（c の後ろは ei の順。believe / friend は ie の順）
 beleive → believe
-tommorow → tomorrow（m は1つ、r も1つ）
+tommorow → tomorrow（m は1つ、r は2つ）
 Wenesday → Wednesday
 Feburary → February
 langauge → language

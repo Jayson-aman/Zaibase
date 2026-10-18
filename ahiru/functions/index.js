@@ -30,6 +30,21 @@ exports.chatEnglishConversation = aiConversation.chatEnglishConversation;
 const ranking = require("./ranking");
 exports.getMyRanking = ranking.getMyRanking;
 
-// ── 公式集(¥50)・新規追加単元(¥100)の買い切り解放（RevenueCatの購入実績をサーバー側で検証） ──
+// ── 公式集・新規追加単元の買い切り解放（RevenueCatの購入実績をサーバー側で検証） ──
 const contentUnlock = require("./contentUnlock");
 exports.unlockContent = contentUnlock.unlockContent;
+
+// ── Web版：公式集・新規追加単元の買い切りをStripeへ直接決済（RevenueCat Web Billingが
+//    消費型に未対応のため。iOS/Androidは引き続き上のunlockContent＝RevenueCat経由） ──
+const stripeUnlock = require("./stripeUnlock");
+exports.createAhiruUnlockCheckout = stripeUnlock.createAhiruUnlockCheckout;
+exports.confirmAhiruUnlockCheckout = stripeUnlock.confirmAhiruUnlockCheckout;
+exports.ahiruUnlockWebhook = stripeUnlock.ahiruUnlockWebhook;
+
+// ── 保護者向けフィードバック（感想・要望をSlackへ通知） ──────────────────
+const feedback = require("./feedback");
+exports.sendFeedback = feedback.sendFeedback;
+
+// アカウント削除（サーバー側データの完全削除）
+const accountDeletion = require("./accountDeletion");
+exports.deleteMyData = accountDeletion.deleteMyData;

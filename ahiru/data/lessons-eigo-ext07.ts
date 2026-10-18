@@ -161,6 +161,21 @@ a・an・the・my・your・his・two・three・some などは、形容詞より�
 
 ⚠ 注意：「たくさんの美しい花」を beautiful many flowers としないこと。many のような数量の語は必ず前に出す。`,
       },
+      {
+        heading: 'なぜ形容詞の順番が決まっているのか',
+        mangaId: 'eigo_s227_manga',
+        body: `英語では、**名詞に近い形容詞ほど、その名詞と切りはなせない性質**を表します。色や材料（red・Japanese）はそのものの変わらない性質なので名詞のすぐ前、大きさや新しさは見た印象、評価（nice・beautiful）は話し手の気持ちなので名詞から遠くに置きます。数や a・my はそもそも「どれ・いくつ」を決める語なので列の先頭です。話し手は考えずにこの順で口にしているので、順番を変えると英語らしくなくなります。
+
+同じ種類の形容詞（どちらも大きさ、どちらも性格）を and でつなぐのは、**同じ種類は順番がつけられない**からです。big と heavy はどちらも見た印象なので a big and heavy bag、big と red は種類がちがうので a big red ball と並べます。
+
+■ 確かめのしかた
+①**数・冠詞・所有格は先頭**か。× new my bike→my new bike。× beautiful many flowers→many beautiful flowers。
+②**色は名詞のいちばん近く**か。× three red big apples→three big red apples。
+③二つの形容詞が同じ種類なら and、ちがう種類ならそのまま並べる。a big and heavy bag／a big white dog。
+④三つ以上並べるときはコンマでつなぎ、最後だけ and（kind, cheerful, and honest）。
+
+★ ここがポイント：**名詞に近いほど、その名詞と切りはなせない性質**（色・材料）を表すので順番が決まる。**数・a・my は先頭、色は名詞のとなり**の二点で入試はほぼ解ける。同じ種類は and でつなぐ。`,
+      },
     ],
     trapExamples: [
       {
@@ -299,6 +314,7 @@ look のあとに at が付くと「〜を見る」という動作の意味に�
     sections: [
       {
         heading: 'exciting と excited のちがい',
+        mangaId: 'eigo_s229_manga',
         body: `動詞から作られた -ing・-ed の形は、そのまま形容詞として使うことができる。二つの形の意味のちがいをはっきりさせておく。
 
 ■ -ing の形容詞＝「（人を）〜させるような」
@@ -455,6 +471,21 @@ much は否定文・疑問文でよく使われるが、ふつうの肯定文で
 
 ⚠ 注意：How many のあとの名詞は必ず複数形（How many book ではなく How many books）。`,
       },
+      {
+        heading: 'なぜ homework は数えられず、なぜ肯定文で much を避けるのか',
+        mangaId: 'eigo_s230_manga',
+        body: `英語で「数えられる」とは、**形がはっきりしていて一つ二つと区切れる**ことです。water や bread は区切りがなく、homework・information・news・advice は目に見えない「まとまり」なので、英語では数えません。日本語では「宿題が三つ」と数えるので、そのまま many homeworks と書いてしまいますが、英語の感覚では区切れないものです。数えたいときは a glass of water・two pieces of homework のように**容器や単位で区切ります**。
+
+many と much を使い分けるのは、many が「数」、much が「量」を表す語だからです。much が肯定文でかたく響くのは、英語の習慣として much は否定文・疑問文（I don't have much time. ／ How much 〜?）で使われることが多く、肯定文では a lot of が自然だからです。many は肯定文でもふつうに使えます。
+
+■ 確かめのしかた
+①名詞が**数えられるか**を先に決める。homework・information・news・advice・furniture・money・time は数えられない。
+②数えられる→many＋複数形（many books）、数えられない→much（much water）。× many waters、× much friends。
+③肯定文なら a lot of（I have a lot of homework.）。much は否定文・疑問文で。
+④数をたずねる→How many＋複数形、量・値段をたずねる→How much。× How many book。
+
+★ ここがポイント：英語の「数えられる」は**形がはっきりして区切れる**こと。homework・information は区切れないので複数形にせず、much か a lot of。**肯定文は a lot of、否定・疑問は much**が自然。`,
+      },
     ],
     trapExamples: [
       {
@@ -589,6 +620,7 @@ a lot of とまったく同じ意味で、より会話的でくだけた言い�
     sections: [
       {
         heading: '四つの表現を表で整理する',
+        mangaId: 'eigo_s232_manga',
         body: `「少し」を表す表現は、後ろの名詞が数えられるかどうかと、a が付くかどうかの組み合わせで四つに分かれる。
 
 ■ 数えられる名詞（複数形）につくもの
@@ -684,6 +716,7 @@ little には「小さい」という別の意味もある。〈a little＋数�
     sections: [
       {
         heading: '基本の使い分け',
+        mangaId: 'eigo_s233_manga',
         body: `some と any はどちらも「いくらかの」を表すが、使う文の種類で使い分けるのが原則である。
 
 ■ 肯定文 → some
@@ -920,6 +953,7 @@ of を使わないときは the などは不要である。
       },
       {
         heading: 'good と well、fast と fastly',
+        mangaId: 'eigo_s235_manga',
         body: `■ good は形容詞、well は副詞
 「よい・上手な」は good、「よく・上手に」は well である。日本語では区別があいまいなので誤りやすい。
 
@@ -1121,6 +1155,7 @@ always・usually などの頻度の副詞は位置の規則がちがう。これ
       },
       {
         heading: '様態・場所・時の順番',
+        mangaId: 'eigo_s237_manga',
         body: `副詞（副詞句）を二つ以上ならべるときは、〈様態（どのように）→場所（どこで）→時（いつ）〉の順にする。
 
 例）I played tennis hard in the park yesterday.
@@ -1276,7 +1311,7 @@ never を使う文は形の上では肯定文なので、三人称単数現在�
     subject: 'eigo',
     examType: 'chugaku',
     title: '頻度の副詞②：文のどこに置くか',
-    description: 'be動詞のあと・一般動詞の前・助動詞のあという頻度の副詞の位置の規則を身につける',
+    description: 'be動詞のあと・一般動詞の前・助動詞のあと、という頻度の副詞の位置の規則を身につける',
     intro: 'always を文のどこに置くか。I always am busy. ではなく I am always busy. が正しい形です。be動詞なら後ろ、一般動詞なら前。この一点だけで正誤が分かれる問題が、入試ではくり返し出ます。理由まで含めて理解しておきましょう。',
     order: 739,
     studyPeriod: '小5後半',
@@ -1494,6 +1529,7 @@ every day（毎日）／every week（毎週）／every month（毎月）／every
     sections: [
       {
         heading: '三つの形と基本の文',
+        mangaId: 'eigo_s241_manga',
         body: `英語で二つ以上のものを比べるときは、形容詞・副詞の形を変える。形は三つある。
 
 原級（もとの形）：tall（背が高い）
@@ -1600,6 +1636,7 @@ than のあとが比べる相手である。
     sections: [
       {
         heading: '語の長さで決まる',
+        mangaId: 'eigo_s242_manga',
         body: `比較級・最上級の作り方は、その語の長さ（音節の数）で決まる。音節とは、母音を中心とした音のまとまりのことである。
 
 ■ 短い語 → -er / -est
@@ -1697,7 +1734,7 @@ more 型：famous, useful, careful, helpful, active, tired, boring, common
       '〈子音字＋y〉は y を i に変えて -er / -est（easy → easier → easiest）。',
       '〈短母音＋子音字〉で終わる1音節語は子音字を重ねる（big → bigger → biggest）。',
       'hot → hotter、sad → sadder、thin → thinner、fat → fatter も同じ型。',
-      'new・slow は母音字が二つ並ぶので重ねない（newer、slower）。',
+      'new・slow は w で終わる（w は重ねない）ので newer、slower。clean・cheap のように母音字が二つ並ぶ語も重ねない。',
     ],
     sections: [
       {
@@ -1739,9 +1776,9 @@ red → redder → reddest
         heading: '重ねない語との区別',
         body: `子音字を重ねるのは〈短母音＋子音字1つ〉の1音節語だけである。次のような語は重ねない。
 
-■ 母音字が二つ並ぶ語
-new → newer → newest（e と w の前に母音字が2つ）
-slow → slower → slowest
+■ w で終わる語・母音字が二つ並ぶ語
+new → newer → newest（w は重ねない）
+slow → slower → slowest（w は重ねない）
 clean → cleaner → cleanest
 cheap → cheaper → cheapest
 great → greater → greatest
@@ -1778,7 +1815,7 @@ sad → sadder（重ねる）／cheap → cheaper（重ねない）
         trapExplanation: '「比較級は -er を付けるだけ」と覚えているため、つづりの変化を確かめずにそのまま -er を付けてしまう。',
         correctAnswer: 'bigger',
         correctExplanation:
-          '〈短母音＋子音字1つ〉で終わる1音節の語は、最後の子音字を重ねてから -er を付ける。hot → hotter、sad → sadder、thin → thinner、fat → fatter も同じ規則である。一方 new や cheap は母音字が二つ並ぶので重ねない。',
+          '〈短母音＋子音字1つ〉で終わる1音節の語は、最後の子音字を重ねてから -er を付ける。hot → hotter、sad → sadder、thin → thinner、fat → fatter も同じ規則である。一方 new は w で終わるので重ねず、cheap は母音字が二つ並ぶので重ねない。',
       },
       {
         question: '「この絵はあの絵よりすてきだ。」を英語にしなさい。',
@@ -1943,6 +1980,7 @@ be動詞と一般動詞を混ぜて Ken is run faster ... としないように�
       },
       {
         heading: '比較する相手をそろえる',
+        mangaId: 'eigo_s245_manga',
         body: `比較の文では、比べる二つが同じ種類のものでなければならない。
 
 ■ 名詞の繰り返しは one / ones
@@ -2071,6 +2109,21 @@ better・the best は目的語のあとに置く。
 
 ⚠ 注意：2つを比べるときは better、3つ以上なら the best。「どちらが」なら better、「どれがいちばん」なら the best と判断する。`,
       },
+      {
+        heading: 'なぜ good の比較級は gooder ではないのか',
+        mangaId: 'eigo_s246_manga',
+        body: `good・bad・well のように、**もっともよく使う語ほど不規則な形**をしています。よく使う語は昔の形がそのまま残りやすく、規則で作った gooder・badder に置きかわらなかったからです。better・best はもともと別の語で、good の比較級・最上級として使われるようになりました。だから音ごと覚えるしかなく、more good・more better のように more を付けると、比較級を二重にしたことになって誤りです。
+
+形容詞の good と副詞の well が同じ better・best になるので、文の中でどちらの意味かは**何を修飾しているか**で決めます。This book is better（本がよい→形容詞）、He swims better（泳ぎ方が上手→副詞）。like A better than B は「B より A が好き」で、better は目的語（A）のあとに置きます。
+
+■ 確かめのしかた
+①good／well→**better→best**、bad／ill→**worse→worst**。gooder・weller・badder・more good は存在しない。
+②比較級を作ったら、**more が重なっていないか**。× more well、× more better。
+③like A better than B（2つを比べる）、like A the best（3つ以上）。「どちらが」なら better、「どれがいちばん」なら the best。
+④better の位置は目的語のあと。× I like better soccer than baseball。× I like soccer than baseball（better の落とし）。
+
+★ ここがポイント：よく使う語ほど**昔の形が残って不規則**（good→better→best、bad→worse→worst）。不規則な語に **more を重ねない**。like A better than B は「B より A が好き」で、better は目的語のあと。`,
+      },
     ],
     trapExamples: [
       {
@@ -2170,6 +2223,21 @@ little には「小さい」という意味もあり、その場合は smaller�
 
 ⚠ 注意：less time（時間が少ない）を littler time としない。littler という形は数量の意味では使わない。`,
       },
+      {
+        heading: 'なぜ many も much も more になり、なぜ little は less なのか',
+        mangaId: 'eigo_s247_manga',
+        body: `many（数が多い）と much（量が多い）は、肯定の原級では数と量で語を分けますが、**比較すると「もっと多い」という一つの意味**にまとまるので、比較級・最上級は more・most の一つの形になります。more books（数）も more water（量）も同じ more です。逆に「少ない」は、比較しても数（fewer books）と量（less water）を分けたままなので、few→fewer→fewest、little→less→least と別々に変化します。
+
+more に二つの働き（many/much の比較級と、長い形容詞の比較級を作る語）があるので、**more のあとに名詞が来るか、形容詞が来るか**で読み分けます。more books は「本の数が多い」、more beautiful は「美しさの程度が上」です。数量の little の比較級を規則どおり littler としないのは、less という別の語が決まっているからです。
+
+■ 確かめのしかた
+①数が多い：many→more→most。量が多い：much→more→most。「あなたより多くの本」→more books than you（× many books than）。
+②数が少ない：few→fewer→fewest（fewer students）。量が少ない：little→less→least（less time）。× littler time。
+③more のあとが**名詞**なら「より多くの」、**形容詞・副詞**なら「もっと〜」。
+④「小さい」の little は smaller・smallest（a smaller dog）。数量の little とは別の変化。
+
+★ ここがポイント：比較すると数も量も「もっと多い」にまとまるので **many/much→more→most**。「少ない」は数（few→fewer）と量（little→less）を分けたまま。more は**あとの語（名詞か形容詞か）**で読み分ける。`,
+      },
     ],
     trapExamples: [
       {
@@ -2211,6 +2279,7 @@ little には「小さい」という意味もあり、その場合は smaller�
     sections: [
       {
         heading: 'far の変化',
+        mangaId: 'eigo_s248_manga',
         body: `far（遠い・遠くに）は二通りの変化を持つ。
 
 ■ 距離を表すとき：far → farther → farthest
@@ -2309,6 +2378,7 @@ worse に -er を付けた worser も存在しない形である。
     sections: [
       {
         heading: 'as ~ as の基本',
+        mangaId: 'eigo_s249_manga',
         body: `二つのものが同じ程度であることを表すときは、形容詞・副詞を二つの as ではさむ。
 
 ■ 基本の形
@@ -2475,6 +2545,21 @@ Ken is not as tall as Tom.（トムのほうが上）
 
 ⚠ 注意：書きかえ問題では、まず「どちらが上か」を日本語で確かめてから英文を作る。主語の入れかえを機械的にできるようにしておく。`,
       },
+      {
+        heading: 'なぜ not as 〜 as は「as のあとが上」で、なぜ書きかえで主語が入れかわるのか',
+        mangaId: 'eigo_s250_manga',
+        body: `as tall as は「ケンと同じ高さに達している」という意味です。それに not を付けると「**その高さに達していない**」＝「ケンほど高くない」になります。「同じくらい高くない（二人とも低い）」ではなく、「ケンの高さにおよばない」なので、as のあとの人（ケン）のほうが上です。not as 〜 as を見たら「as のあとが上」と反射的に判断します。
+
+比較級に書きかえるとき主語が入れかわるのは、比較級の文（B is taller than A.）が**上のほうを主語にして言う形**だからです。not as 〜 as では下のほう（Tom）が主語、上のほう（Ken）が as のあと。同じ関係を比較級で言うと、上の Ken を主語にして Ken is taller than Tom. になります。主語をそのままにして Tom is taller than Ken. とすると、上下が逆転して意味が反対になります。
+
+■ 確かめのしかた
+①not as 〜 as の文を訳したら、**どちらが上か**を日本語で言う。Tom is not as tall as Ken.→ケンが上。「同じくらい〜ない」は×。
+②比較級に書きかえるとき、**上のほうを主語**にする。Ken is taller than Tom.
+③逆に比較級→not as 〜 as も主語を入れかえる。Ken is taller than Tom.＝Tom is not as tall as Ken.
+④三つの形を並べて確かめる：Ken is taller than Tom.（ケンが上）／Ken is as tall as Tom.（同じ）／Ken is not as tall as Tom.（トムが上）。一般動詞は don't / doesn't で否定（He doesn't run as fast as I do.）。
+
+★ ここがポイント：not as 〜 as は「**その高さに達していない**」なので **as のあとが上**。比較級は**上のほうを主語にする形**なので、書きかえでは**主語を入れかえる**。まず「どちらが上か」を日本語で確かめてから書く。`,
+      },
     ],
     trapExamples: [
       {
@@ -2638,7 +2723,7 @@ soon（時期が早い）と early（時刻が早い）と fast（速度が速�
 4倍：four times
 半分：half
 
-例）This bag is half as heavy as that one.（このかばんはあの箱の半分の重さだ）
+例）This bag is half as heavy as that one.（このかばんはあのかばんの半分の重さだ）
 
 ■ 語順
 倍数は最初の as の前に置く。
@@ -2837,6 +2922,7 @@ than と that を書きまちがえる誤りも多いので注意する。
     sections: [
       {
         heading: '「ずっと〜だ」の表し方',
+        mangaId: 'eigo_s254_manga',
         body: `比較級に「ずっと・はるかに」という強めの意味を足したいときは、比較級の前に much・far・a lot を置く。
 
 例）He is much taller than me.（彼は私よりずっと背が高い）
@@ -2899,6 +2985,21 @@ much と very は使う場所が正反対だと覚えるとよい。
 最上級を強める：by far（by far the best）
 
 ⚠ 注意：Thank you much. は誤りで Thank you very much. が正しい。much を単独で動詞の強調に使わない。`,
+      },
+      {
+        heading: 'なぜ very は比較級を強められないのか',
+        mangaId: 'eigo_s254_verymuch_manga',
+        body: `very は「とても」と、**その性質の程度が高い**ことを表す語です。tall（背が高い）の程度を上げて very tall と言えます。ところが taller（〜より高い）は、程度ではなく**二つの差**を表す形です。差を強めるには「差が大きい」と言う必要があり、それを表すのが much・far・a lot（ずっと・はるかに）です。very は程度の語なので、差の形（比較級）には付けられません。逆に much は差の語なので、原級（tall）には付けられません。だから使う場所が正反対になります。
+
+最上級を強める by far も「他と比べて差が大きい」という意味で、比較級と同じ仲間です。動詞を強めるときに very much と二語になるのは、much だけでは動詞の程度を表せないからで、Thank you much. は誤りです。
+
+■ 確かめのしかた
+①強めたい語が**原級か比較級か**を見る。原級→very（very tall）。比較級→much / far / a lot / even（much taller）。
+②× very taller、× much tall になっていないか。
+③最上級→by far（by far the best）。動詞→very much（like it very much）。
+④a little（少し）も比較級に付く（a little heavier）。even は「さらに」（even better）。
+
+★ ここがポイント：very は**程度**、much は**差**を表す語なので、**原級には very、比較級には much**（very tall／much taller）。最上級は by far、動詞は very much。`,
       },
     ],
     trapExamples: [
@@ -3148,6 +3249,7 @@ Which is the longest of the three pencils?（3つ → 最上級）
     sections: [
       {
         heading: 'in と of の見分け方',
+        mangaId: 'eigo_s257_manga',
         body: `最上級の文では「どの範囲でいちばんか」を in か of で示す。この使い分けが入試の定番である。
 
 ■ in＋場所・集団（ひとまとまりの範囲）

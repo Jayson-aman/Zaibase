@@ -24,10 +24,16 @@ const db = getFirestore();
 
 const PRODUCT_ID_FORMULA_UNLOCK = "com.zaibase.exam.formulaunlock";
 const PRODUCT_ID_UNIT_UNLOCK = "com.zaibase.exam.unitunlock";
+const PRODUCT_ID_FORMULA_BUNDLE = "com.zaibase.exam.formulabundle";
+
+// まとめ買い（受験種別×教科）のID。formulaUnlocks の unlocked に、公式のlabelと並べて入れる。
+const BUNDLE_ID_RE = /^bundle:(chugaku|koko):(算数|国語|理科|社会|英語)$/;
+const isBundleId = (id) => typeof id === "string" && id.startsWith("bundle:");
 
 const TYPE_CONFIG = {
-  formula: { collection: "formulaUnlocks", productId: PRODUCT_ID_FORMULA_UNLOCK },
-  unit: { collection: "unitUnlocks", productId: PRODUCT_ID_UNIT_UNLOCK },
+  formula: { collection: "formulaUnlocks", productId: PRODUCT_ID_FORMULA_UNLOCK, bundle: false },
+  bundle: { collection: "formulaUnlocks", productId: PRODUCT_ID_FORMULA_BUNDLE, bundle: true },
+  unit: { collection: "unitUnlocks", productId: PRODUCT_ID_UNIT_UNLOCK, bundle: false },
 };
 
 function sleep(ms) {
@@ -40,15 +46,27 @@ exports.unlockContent = onCall(
     const uid = req.auth?.uid;
     if (!uid) throw new HttpsError("unauthenticated", "ログインが必要です");
 
-    const { type, itemId } = req.data ?? {};
-    const config = TYPE_CONFIG[type];
-    if (!config || typeof itemId !== "string" || itemId.length === 0) {
+    const { type, itemId, noWait } = req.data ?? {};
+    // noWait：購入の「前」の確認用。待たずに1回だけ調べ、すでに払ってあるのに未解放の購入分が残っていれば、それを使って解放する。
+    // 無ければ、エラーにせず reason:'no-credit' を返す（クライアントはそのとき初めて課金に進む）。
+    // これで、承認待ちが後から通ったとき・確認の前にアプリが落ちたときに、買い直して二重に払うのを防ぐ。
+    // "constructor" や "__proto__" のような名前を type に渡されても、設定として扱わない
+    const config = typeof type === "string" && Object.prototype.hasOwnProperty.call(TYPE_CONFIG, type) ? TYPE_CONFIG[type] : undefined;
+    if (!config || typeof itemId !== "string" || itemId.length === 0 || itemId.length > 200) {
       throw new HttpsError("invalid-argument", "type/itemIdが不正です");
+    }
+    if (type === "bundle" ? !BUNDLE_ID_RE.test(itemId) : type === "formula" && isBundleId(itemId)) {
+      throw new HttpsError("invalid-argument", "itemIdが不正です");
     }
 
     const docRef = db.collection(config.collection).doc(uid);
     const snap = await docRef.get();
     const alreadyUnlocked = /** @type {string[]} */ (snap.data()?.unlocked ?? []);
+    // Web（Stripe）で解放した分は、RevenueCatの購入回数とは別勘定なので数えから外す。
+    // 商品ごと（1項目／まとめ買い）に別勘定で数える。
+    const nativeUnlockedCount = (ids, stripeIds) =>
+      ids.filter((x) => !stripeIds.includes(x) && isBundleId(x) === config.bundle).length;
+    const stripeIds0 = /** @type {string[]} */ (snap.data()?.stripeUnlocked ?? []);
 
     // すでに解放済みなら購入確認なしでそのまま成功を返す（二重課金防止・冪等性）
     if (alreadyUnlocked.includes(itemId)) {
@@ -57,26 +75,40 @@ exports.unlockContent = onCall(
 
     // RevenueCatの購入反映には数秒のラグが起こり得るため、少し待って数回問い合わせる
     let purchaseCount = null;
-    for (let attempt = 0; attempt < 4; attempt++) {
+    const attempts = noWait === true ? 1 : 4;
+    for (let attempt = 0; attempt < attempts; attempt++) {
       purchaseCount = await fetchNonSubscriptionPurchaseCount(uid, config.productId);
-      if (purchaseCount !== null && purchaseCount > alreadyUnlocked.length) break;
-      if (attempt < 3) await sleep(1500);
+      if (purchaseCount !== null && purchaseCount > nativeUnlockedCount(alreadyUnlocked, stripeIds0)) break;
+      if (attempt < attempts - 1) await sleep(1500);
     }
 
     if (purchaseCount === null) {
       throw new HttpsError("unavailable", "購入状況の確認に失敗しました。しばらくしてからもう一度お試しください。");
     }
-    if (purchaseCount <= alreadyUnlocked.length) {
-      throw new HttpsError(
-        "failed-precondition",
-        "購入が確認できませんでした。決済が完了してから少し時間をおいてもう一度お試しください。"
-      );
-    }
 
-    await docRef.set(
-      { uid, unlocked: FieldValue.arrayUnion(itemId), updatedAt: FieldValue.serverTimestamp() },
-      { merge: true }
-    );
-    return { ok: true };
+    // 「購入回数 > 解放済み件数」の判定と書き込みは必ず1つのトランザクションで行う。
+    // 分けると、1回だけ購入した人が別々のitemIdで同時に2リクエスト送ったとき、
+    // 両方が「解放済み0件 < 購入1回」を見て通り、¥50で2件解放できてしまう。
+    const outcome = await db.runTransaction(async (tx) => {
+      const cur = await tx.get(docRef);
+      const unlocked = /** @type {string[]} */ (cur.data()?.unlocked ?? []);
+      const stripeIds = /** @type {string[]} */ (cur.data()?.stripeUnlocked ?? []);
+      if (unlocked.includes(itemId)) return "already";
+      if (purchaseCount <= nativeUnlockedCount(unlocked, stripeIds)) {
+        if (noWait === true) return "no-credit";
+        throw new HttpsError(
+          "failed-precondition",
+          "購入が確認できませんでした。決済が完了してから少し時間をおいてもう一度お試しください。"
+        );
+      }
+      tx.set(
+        docRef,
+        { uid, unlocked: FieldValue.arrayUnion(itemId), updatedAt: FieldValue.serverTimestamp() },
+        { merge: true }
+      );
+      return "unlocked";
+    });
+    if (outcome === "no-credit") return { ok: false, reason: "no-credit" };
+    return { ok: true, unlocked: outcome === "unlocked" };
   }
 );

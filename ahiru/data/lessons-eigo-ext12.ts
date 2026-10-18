@@ -47,6 +47,7 @@ export const eigoExt12Lessons: Lesson[] = [
       },
       {
         heading: '動詞は一つの文に一つ',
+        mangaId: 'eigo_s426_manga',
         body: `日本語の「〜です」は、英語では be動詞になる場合と、ならない場合がある。ここを取りちがえると、一つの文に動詞が二つ入ってしまう。
 
 ■ be動詞になる「です」
@@ -60,7 +61,7 @@ export const eigoExt12Lessons: Lesson[] = [
 　　姉はピアノをひきます。→ My sister plays the piano.
 
 ■ 見分け方
-日本語の「です」を「だ」に置きかえてみて、意味が変わらなければ be動詞、置きかえると変になるなら一般動詞である。「中学生だ」は自然、「英語が好きだ」も自然だが、後者は「好む」という動作を表す語なので like という動詞を使う。
+「です」の直前の語を英語にしたとき、名詞か形容詞（中学生・おもしろい・いそがしい）になるなら be動詞を使う。「好き」「持っている」「ひく」のように、「好む」「持つ」「ひく」という動作や気持ちを表す動詞で言える語なら、その一般動詞だけを使う。「英語が好きです」は「私＝英語」という意味ではないので be動詞は要らず、like English となる。
 
 ⚠ 注意：一つの文に動詞が二つ並んだら、その時点でほぼ誤りである。書き終えたら「動詞は一つか」を必ず確かめる。`,
       },
@@ -126,6 +127,7 @@ export const eigoExt12Lessons: Lesson[] = [
       },
       {
         heading: '「〜から」「〜でした」の落とし穴',
+        mangaId: 'eigo_s427_manga',
         body: `日本語の助詞を直訳すると誤りになる代表例が二つある。
 
 ■ 「〜から…しています」
@@ -140,7 +142,7 @@ for のあとには長さ（three years, ten minutes）、since のあとには�
 　　今日は寒いです。→ It is cold today.
 　　六時です。→ It is six o'clock.
 
-⚠ 注意：Yesterday was rain. と書く答案が非常に多い。日本語の「きのうは」を主語だと思ってしまうためだが、yesterday は時を表す語であって主語にはならない。`,
+⚠ 注意：Yesterday was rain. と書く答案が非常に多い。日本語の「きのうは」を主語だと思ってしまうためだが、天気を言う文の主語は it にする。また rain は名詞なので、was のあとにそのまま置くことはできない（rainy と形容詞にする）。`,
       },
     ],
     trapExamples: [
@@ -286,6 +288,7 @@ for のあとには長さ（three years, ten minutes）、since のあとには�
       },
       {
         heading: '主語がない文・it を立てる文',
+        mangaId: 'eigo_s429_manga',
         body: `主語をどうしても言えない、あるいは言う必要がない場合の型を覚えておく。
 
 ■ 命令文（主語を書かない）
@@ -336,7 +339,7 @@ for のあとには長さ（three years, ten minutes）、since のあとには�
     examType: 'chugaku',
     title: '主語を変える：There is 構文と have の使い分け',
     description: '「〜がある・いる」を英語らしく言うために、主語を選び直す方法を学ぶ',
-    intro: '「わたしの家には犬がいます」を There is a dog in my house. と書いても正しいのですが、I have a dog. のほうが自然です。「〜がある」をどちらで言うかは、聞き手が知っているかどうかで決まります。使い分けを学びます。',
+    intro: '「わたしの家には犬がいます」を There is a dog in my house. と書いても正しいのですが、I have a dog. のほうが自然です。There is で言うか、その名詞を主語にして言うかは、聞き手がもう知っているものかどうかで決まります。持ち主がはっきりしているときは have も使えます。使い分けを学びます。',
     order: 930,
     studyPeriod: '小6前半',
     targetLevel: 'oyo',
@@ -371,6 +374,7 @@ There are not any chairs in this room.（There are no chairs in this room. も�
       },
       {
         heading: 'the がつくものは There を使わない',
+        mangaId: 'eigo_s430_manga',
         body: `There is のうしろに、the / my / your / this / that のついた名詞や、人名を置くことはできない。これらは「相手がもう知っているもの」を指すからである。
 
 ■ すでに知っているものの居場所を言うとき
@@ -494,7 +498,7 @@ give（あげる）、show（見せる・教える）、tell（伝える）、te
           '日本語の「駅への道を（私に）教えて」の順に置いてしまい、show のあとに物を先に出した。人を表す me が行き場を失って文末に取り残されている。',
         correctAnswer: 'Can you show me the way to the station?',
         correctExplanation:
-          'show, give, tell, teach などは＜動詞＋人＋物＞の順に置く。人を後ろに回したいときは to が必要で Can you show the way to the station to me? となるが、to が一つしかない語群ではこの形は作れない。語群に to for が足りるかどうかで型を決める。',
+          'show, give, tell, teach などは＜動詞＋人＋物＞の順に置く。人を後ろに回したいときは to が必要で Can you show the way to the station to me? となるが、この形には to が余分に1つ必要である。この語群の to は to the station の1つだけなので作れない。語群に to や for が余っているかどうかで、どちらの型を作るかを決める。',
       },
     ],
   },
@@ -605,6 +609,7 @@ give（あげる）、show（見せる・教える）、tell（伝える）、te
     sections: [
       {
         heading: '間接疑問：語順が肯定文に戻る',
+        mangaId: 'eigo_s433_manga',
         body: `疑問詞で始まる文が、別の文の中に入りこむと、語順が肯定文と同じに戻る。これを間接疑問という。並べかえの頻出項目である。
 
 ■ もとの疑問文
@@ -649,7 +654,7 @@ beautiful, interesting, difficult, popular, important のような長い語は m
 例）This book is more interesting than that one.
 　　Soccer is the most popular sport in this school.
 
-⚠ 注意：good — better — best、bad — worse — worst、many/much — more — most、high — higher — highest は特別。high は短い語なので more high とはしない。`,
+⚠ 注意：good — better — best、bad — worse — worst、many/much — more — most は不規則に変化する特別な語である。high のような短い語は more high とはせず、high — higher — highest と er／est をつける。`,
       },
     ],
     trapExamples: [
@@ -884,7 +889,16 @@ I'm going to visit my aunt tomorrow.
 Ａ：（　　　　　　　）
 Ｂ：It's ten thirty.
 Ａ：Oh, we have to hurry.
-答えが時刻なので、空所には What time is it now? が入る。
+【解法】
+【何を聞かれているか】Ａの空所に、どんな質問が入るか。
+【なぜこの考え方か】対話文では、答え（返事）の中身から、もとの質問がたどれる。質問と答えは、必ず内容がぴったり合っているからである。
+【ステップ1】Ｂの返事 It's ten thirty.（十時三十分です）を見る。これは「時刻」を答えている。
+【ステップ2】時刻を答えるのだから、たずねた質問は時刻をきく文である。
+【ステップ3】時刻をきく形は What time is it now?（今何時ですか）である。
+【ステップ4】そのあとのＡのせりふ Oh, we have to hurry.（ああ、急がなくちゃ）を読む。時刻を知って急ぐ気持ちになったので、つながりが自然である。
+【答え】What time is it now?
+【確かめ】空所に入れて通して読む。Ａ：What time is it now? Ｂ：It's ten thirty. Ａ：Oh, we have to hurry. 質問・答え・感想が一本の流れになる。
+【よくあるまちがい】How is the weather? のように、Ｂの返事の形を見ずに入れる。返事が時刻なら、きく文も時刻でなければ合わない。
 
 ★ ポイント：Ｂの返事だけでなく、そのあとのＡのせりふも読む。「急がなくちゃ」と続いているので、時刻をたずねていることが確かめられる。`,
       },
@@ -969,6 +983,18 @@ I'm going to visit my aunt tomorrow.
 I like summer better than winter. First, I can swim in the sea with my family. Second, we have a long vacation in summer, so I can read many books. That is why I like summer better.
 
 （語数＝40語程度。文の数＝4文）
+
+【解法】
+【何を聞かれているか】夏と冬のどちらが好きかを、四十語程度の英語で書く。
+【なぜこの考え方か】自由英作文は、何を書くかで迷うと時間がなくなる。だから「意見→理由①→理由②→まとめ」の四文の型に内容を流しこむ。型に合わせれば、設問の条件（立場を決める・理由が二つ）を自然に満たせるからである。
+【ステップ1】日本語でメモを作る。「夏。理由①海で泳げる。理由②休みが長い」。先に決めておくと、書くときに迷わない。
+【ステップ2】①意見。I like summer better than winter.（立場を一つに決めるので、どちらも好きとは書かない）
+【ステップ3】②理由①。First, I can swim in the sea with my family.（First で一つ目だと読み手に伝える）
+【ステップ4】③理由②。Second, we have a long vacation in summer, so I can read many books.（理由①とはちがう角度の理由にする）
+【ステップ5】④まとめ。That is why I like summer better.（①をくり返して終わるので、新しい内容を考えずにすむ）
+【答え】上の四文。語数は約40語で、四文になっている。
+【確かめ】①立場は一つか ②理由は角度のちがうものが二つあるか ③四文あるか ④語数が足りているか、を順に指でたどる。
+【よくあるまちがい】理由②が「海が好きだから」で、理由①と同じ内容になってしまう。理由は別の角度にする。
 
 ★ ポイント：①と④はほとんど同じ内容でよい。書く前に日本語で「夏。理由は海で泳げる、休みが長い」とメモしておけば、あとは型に流しこむだけで書き終わる。`,
         figureId: 'lf_eigoext12_437',
@@ -1125,7 +1151,7 @@ a lot of books / many friends / a few people / some water
         heading: '見直しの順序を決めておく',
         body: `見直しは「なんとなく読み返す」のではなく、見る項目を決めて一項目ずつ通す。そのほうが速く、見落としがない。
 
-■ 手順（各十秒）
+■ 手順（各五〜六秒、五項目で三十秒）
 ①三単現の s
 　主語が I, you, 複数以外で、現在の話なら、動詞に s がついているか。
 　My brother like soccer.（誤）→ My brother likes soccer.（正）
@@ -1238,6 +1264,7 @@ study English / like math / in summer
       },
       {
         heading: '進行形にしない動詞',
+        mangaId: 'eigo_s440_manga',
         body: `動作ではなく「状態」を表す動詞は、進行形にしない。絵の描写でよくまちがえるので注意する。
 
 ■ 進行形にしない代表的な動詞
@@ -1302,6 +1329,7 @@ wear は「身につけている」という状態、put on は「身につけ�
     sections: [
       {
         heading: '位置の前置詞',
+        mangaId: 'eigo_s441_manga',
         body: `位置を表す前置詞は、日本語の「上・下・中」と一対一で対応しない。ふれているかどうか、囲まれているかどうかで選ぶ。
 
 ■ 基本の使い分け
@@ -1513,6 +1541,7 @@ A boy wearing glasses is reading a book.（めがねをかけた男の子が本�
       },
       {
         heading: 'does を使ったら動詞は原形',
+        mangaId: 'eigo_s443_manga',
         body: `疑問文や否定文で does を使うと、s の働きは does が引き受ける。だから動詞は原形に戻さなければならない。
 
 ■ 正しい形
@@ -1579,6 +1608,7 @@ There are many book in the library.（誤）→ There are many books in the libr
     sections: [
       {
         heading: 'a と an は音で決める',
+        mangaId: 'eigo_s444_manga',
         body: `a と an の使い分けは「次の語が母音字（a, i, u, e, o）で始まるかどうか」ではなく、「母音の音で始まるかどうか」で決まる。
 
 ■ an を使う例

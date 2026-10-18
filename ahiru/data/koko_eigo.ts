@@ -22,7 +22,7 @@ export const kkEigo: Question[] = [
       'I have been studying English for three years. （または I have studied English for three years.）',
     hint: '継続を表す現在完了：have/has + 過去分詞。期間はfor、起点はsince',
     explanation:
-      '現在完了（継続）：have/has+p.p.。for+期間(for three years)、since+起点(since 2021)。継続動作を強調するなら現在完了進行形(have been -ing)が自然。I have studied=3年間の学習(完了・継続)、I have been studying=今もずっと勉強中(継続強調)。',
+      '【何を聞かれているか】「私は3年間ずっと英語を勉強しています（現在も継続中）」を現在完了形で英語にする。\n【なぜforを使うのか】「3年間」という期間の長さを表すにはfor＋期間を使い、「2021年から」のような起点を表すにはsince＋起点を使うという使い分けのルールがあるから。\n【ポイント1】継続を表す現在完了はhave/has＋過去分詞。期間はfor（for three years）、起点はsince（since 2021）を使う。\n【ポイント2】I have studied English for three years.は「3年間の学習」という完了・継続を表す。\n【ポイント3】継続動作をより強調したいときは現在完了進行形（have been -ing）を使うのが自然。I have been studying English for three years.は「今もずっと勉強中」という継続を強調する。\n【答え】I have been studying English for three years. （または I have studied English for three years.）\n【確かめ】「3年間」という期間を表す語にforが使われているか（sinceになっていないか）を確認する。\n【よくあるまちがい】期間を表すのにsinceを使ってしまう（since three yearsは誤り）。\n【ここが絶対】forは期間、sinceは起点に使うと覚える。',
     difficulty: 'advanced',
     course: 'koko-kankan',
     examType: 'koko',
@@ -49,7 +49,7 @@ export const kkEigo: Question[] = [
     answer: 'I met a student who won the science prize.',
     hint: '先行詞が人→who。先行詞が物→which/that',
     explanation:
-      '関係代名詞whoは先行詞が人のとき使い、後に続く節（won the science prize）が先行詞(a student)を修飾する。she→who（同じ人物を指す）。I met a student who won...「科学賞を取った生徒に会った」。先行詞が物ならwhich/that。',
+      '【何を聞かれているか】「I met a student. She won the science prize.」を関係代名詞を使って1文にする。\n【なぜwhoを使うのか】2つ目の文の主語She（人）が1つ目の文の名詞a student（人）と同じものを指しているため、その主語を関係代名詞に置きかえて先行詞a studentのうしろにつなげることができ、先行詞が人の場合はwhoを使うというルールがあるから。\n【ポイント1】関係代名詞whoは先行詞が人のときに使う。\n【ポイント2】後に続く節（won the science prize）が先行詞（a student）を修飾する。sheがwhoに置きかわり、同じ人物を指している。\n【ポイント3】I met a student who won the science prize.＝「科学賞を取った生徒に会った」。先行詞が物ならwhich/thatを使う。\n【答え】I met a student who won the science prize.\n【確かめ】もとの2つの文（I met a student. / She won the science prize.）に分けて、Sheがwhoに置きかわったことを確認する。\n【よくあるまちがい】先行詞が人（a student）なのにwhichを使ってしまう。\n【ここが絶対】先行詞が人のときはwhoを使う。',
     difficulty: 'advanced',
     course: 'koko-kankan',
     examType: 'koko',
@@ -63,7 +63,7 @@ export const kkEigo: Question[] = [
       '①Tokyo is larger than Osaka. ②Mt. Fuji is the highest mountain in Japan. ③She runs three times as fast as he (does).',
     hint: '比較級-er than / more+形容詞 than。最上級the -est / the most。倍数+as...as',
     explanation:
-      '比較級：形容詞にerまたはmore。large→larger(1音節はer)。最上級：the+形容詞est/the most。high→highest。倍数：数+times as+原級+as（3倍速い=three times as fast as）。',
+      '【何を聞かれているか】①「東京は大阪よりも大きい。」②「富士山は日本で一番高い山だ。」③「彼女は彼の3倍速く走る。」を比較の文で完成させる。\n【なぜそれぞれ形がちがうのか】①は比較級（2つを比べる）、②は最上級（3つ以上の中でいちばん）、③は倍数比較（何倍かを表す）という、比べ方がそれぞれちがう表現だから。\n【ポイント1】①比較級は形容詞に-erまたはmoreをつける。large（1音節）→larger。Tokyo is larger than Osaka.\n【ポイント2】②最上級はthe＋形容詞-estまたはthe most。high→highest。Mt. Fuji is the highest mountain in Japan.\n【ポイント3】③倍数比較は「数＋times as＋原級＋as」。3倍速い＝three times as fast as。She runs three times as fast as he (does).\n【答え】①Tokyo is larger than Osaka. ②Mt. Fuji is the highest mountain in Japan. ③She runs three times as fast as he (does).\n【確かめ】①でlargeにrだけを足してlarger（すでに語尾がeなので）になっているかを確認する。\n【よくあるまちがい】①でlargeerのように、すでにeで終わる語にさらにeをつけてerを重ねてしまう。\n【ここが絶対】倍数比較は「数字+times as+原級+as」の形で覚える。',
     difficulty: 'advanced',
     course: 'koko-kankan',
     examType: 'koko',
@@ -76,7 +76,7 @@ export const kkEigo: Question[] = [
     answer: "I don't know where he lives.",
     hint: '間接疑問文：疑問詞+主語+動詞（疑問文語順にしない）',
     explanation:
-      "直接疑問文(Where does he live?)を他の文に組み込む場合、語順を平叙文と同じにする。Where does he live? → where he lives（does消えて3単現sが動詞につく）。I don't know + where he lives.。Do you know what time it is?なども同じ構造。",
+      '【何を聞かれているか】「Where does he live?」を「I don\'t know （　　）.」の形の間接疑問文に書きかえる。\n【なぜdoesが消えるのか】直接疑問文を他の文に組み込むとき（間接疑問文）、語順を平叙文と同じ〈疑問詞＋主語＋動詞〉に戻すため、疑問文特有の助動詞doesは不要になり、そのかわり動詞に三人称単数のsをつけるというルールがあるから。\n【ポイント1】Where does he live?を間接疑問文にすると、doesが消えて動詞にsがつき、where he livesの形になる。\n【ポイント2】I don\'t know＋where he lives.で1つの文にする。\n【ポイント3】Do you know what time it is?なども同じ構造（疑問詞＋主語＋動詞）になる。\n【答え】I don\'t know where he lives.\n【確かめ】doesが消えて、動詞がliveではなくlives（三人称単数のs付き）になっているかを確認する。\n【よくあるまちがい】I don\'t know where does he live.のように疑問文の語順のままにしてしまう。\n【ここが絶対】間接疑問文ではdo/does/didを使わず、動詞を主語に合わせた形に戻す。',
     difficulty: 'advanced',
     course: 'koko-kankan',
     examType: 'koko',
@@ -87,7 +87,7 @@ export const kkEigo: Question[] = [
     question:
       '次の英文を読んで問いに答えよ。"Recycling is one of the most important ways to protect our environment. When we recycle paper, glass, and plastic, we reduce the amount of waste we produce. This helps save natural resources and energy. However, recycling alone is not enough. We should also try to reduce and reuse materials before recycling them."\n問：本文の主旨を日本語で30字以内にまとめよ。また "reduce, reuse, recycle" を順番通りに日本語に訳せ。',
     answer:
-      '主旨：環境を守るためにリサイクルは大切だが、まず削減・再利用を心がけることが重要。reduce=削減する、reuse=再利用する、recycle=再生利用する',
+      '主旨：リサイクルは大切だが、その前に削減と再利用に努めるべきだ。（29字）reduce=削減する、reuse=再利用する、recycle=再生利用する',
     hint: '本文最後の文が主張。reduce/reuse/recycleの順序に注目',
     explanation:
       '本文の構造：①リサイクルの重要性②リサイクルの効果③「しかし(However)」で逆接→リサイクルだけでは不十分④should also try to reduce and reuse=主張。3R：Reduce(使う量を減らす)・Reuse(繰り返し使う)・Recycle(資源として再利用)の順番が重要（削減が最優先）。',
@@ -101,10 +101,10 @@ export const kkEigo: Question[] = [
     question:
       "対話文の空所を補え。A: \"Have you ever been to Kyoto?\" B: \"( ①　).\" A: \"Really? I went there last year. It was beautiful.\" B: \"I'd like to go someday. ( ②　)?\" A: \"I recommend Kinkakuji Temple.\"",
     answer:
-      "①No, I haven't. （または Yes, I have.） ②What do you recommend? （または What should I visit?）",
+      '①No, I haven\'t. ②What do you recommend? （または What should I visit?）',
     hint: "Have you ever been to~?はhave+過去分詞の現在完了疑問文。応答はYes/No+have/haven't",
     explanation:
-      "Have you ever been to~?「〜に行ったことがありますか」→現在完了の経験。返答：Yes, I have. / No, I haven't.。②の空所：A's answer「金閣寺をおすすめします」から逆算→「何をおすすめしますか」What do you recommend?が自然。",
+      '【何を聞かれているか】対話文「A: Have you ever been to Kyoto? B: (①). A: Really? I went there last year. It was beautiful. B: I\'d like to go someday. (②)? A: I recommend Kinkakuji Temple.」の空所を補う。\n【なぜNo, I haven\'tが正しいのか】この後B自身が「I\'d like to go someday.（いつか行ってみたい）」と言っており、これはまだ京都に行ったことがない人の発言として自然なので、①はNo, I haven\'t.（行ったことがない）が会話全体の流れと合う。\n【ポイント1】Have you ever been to〜?＝「〜に行ったことがありますか」という現在完了の経験用法の疑問文。\n【ポイント2】①の返答はYes/No＋have/haven\'tの形。今回はB自身が後で「いつか行ってみたい」と言っているので、まだ行ったことがないNo, I haven\'t.が文脈に合う。\n【ポイント3】②はAの答え「金閣寺をおすすめします」から逆算する。「何をおすすめしますか」What do you recommend?が自然な質問になる。\n【答え】①No, I haven\'t. ②What do you recommend? （または What should I visit?）\n【確かめ】①をNo, I haven\'t.にした場合、そのあとの「I\'d like to go someday.」（まだ行ったことがないから、いつか行きたい）と矛盾しないことを確認する。\n【よくあるまちがい】①をYes, I have.にしてしまうと、後の「I\'d like to go someday.」（いつか行きたい＝まだ行っていない）と話がかみ合わなくなる。\n【ここが絶対】対話文の空所は、その前後の文とつじつまが合うかどうかで判断する。',
     difficulty: 'advanced',
     course: 'koko-kankan',
     examType: 'koko',
@@ -117,7 +117,7 @@ export const kkEigo: Question[] = [
     answer: 'I have never been to London.',
     hint: '現在完了：have/has + p.p.。副詞neverはhave/hasの直後',
     explanation:
-      '現在完了の語順：主語+have/has(+副詞)+p.p.。neverはhaveの直後に置く。been to+場所「〜に行ったことがある」。I have never been to London.「私はロンドンに行ったことがない」(経験の否定)。',
+      '【何を聞かれているか】[ never / have / to / I / been / London ]を正しい語順に並べ替える。\n【なぜneverをhaveの直後に置くのか】現在完了の文で頻度を表す副詞（never/ever/alreadyなど）は、have/hasと過去分詞の間に置くという決まった位置があるから。\n【ポイント1】現在完了の基本語順は「主語＋have/has（＋副詞）＋過去分詞」。\n【ポイント2】neverはhaveの直後に置く。been to＋場所で「〜に行ったことがある」。\n【ポイント3】I have never been to London.＝「私はロンドンに行ったことがない」（経験の否定）。\n【答え】I have never been to London.\n【確かめ】neverがhaveの直後、過去分詞been の前に置かれているかを確認する。\n【よくあるまちがい】neverをbeenのあとに置いてI have been never to London.としてしまう。\n【ここが絶対】現在完了の否定・頻度の副詞はhave/hasと過去分詞の間に置く。',
     difficulty: 'advanced',
     course: 'koko-kankan',
     examType: 'koko',
@@ -128,7 +128,7 @@ export const kkEigo: Question[] = [
     question:
       '条件英作文。テーマ「あなたが将来やってみたい仕事と、その理由」について30語以上で書け。',
     answer:
-      'I want to be a doctor in the future. I want to help sick people and save their lives. I am also interested in science, so I think this job suits me well.（約35語）',
+      'I want to be a doctor in the future. I want to help sick people and save their lives. I am also interested in science, so I think this job suits me well.（33語）',
     hint: 'I want to be a / I would like to work as a 〜で始める。Because/soで理由を続ける',
     explanation:
       '英作文の型：①結論(what)「〜になりたい/〜で働きたい」②理由(why)「because/so」③具体的説明。語数チェック：30語以上を意識。よく使える表現：in the future(将来), I am interested in~(〜に興味がある), I think~(〜と思う), suits me(自分に合っている)。スペル・文法を確認する。',
@@ -143,11 +143,11 @@ export const ktEigo: Question[] = [
     id: 'kt_eigo_01',
     subject: 'eigo',
     question:
-      '分詞・分詞構文の問題。日本語に合うように英語の空所を補え。\n①「眠っている赤ちゃんを起こさないでください。」Don\'t wake up the baby ( ) (　　).\n②「宿題を終えてから、彼は外に出た。」( ) (　　) his homework, he went outside.',
+      '分詞・分詞構文の問題。日本語に合うように英語の空所を補え。\n①「眠っている赤ちゃんを起こさないでください。」Don\'t wake up the (　　) baby.\n②「宿題を終えてから、彼は外に出た。」( ) (　　) his homework, he went outside.',
     answer: '①sleeping ②Having finished',
     hint: '現在分詞(〜している)が名詞を修飾。分詞構文の完了形：Having+過去分詞',
     explanation:
-      '①分詞による名詞修飾：sleeping baby「眠っている赤ちゃん」（現在分詞が形容詞的に使われる）。②分詞構文：主文の動詞より前の動作をHaving+p.p.で表す（完了形分詞構文）。Having finished his homework(宿題を終えてから)→he went outside。分詞構文の主語は主文の主語と同じ(he)。',
+      '【何を聞かれているか】①「眠っている赤ちゃんを起こさないでください。」②「宿題を終えてから、彼は外に出た。」の空所を、分詞・分詞構文を使って補う。\n【なぜ分詞を使うのか】①は「赤ちゃん」を「眠っている」という状態で修飾するために現在分詞を使い、②は主文より前に完了した動作を1語で表すために、分詞構文の完了形（Having+過去分詞）を使うという決まりがあるから。\n【ポイント1】①分詞による名詞修飾：sleeping baby＝「眠っている赤ちゃん」（現在分詞が形容詞的に使われる）。Don\'t wake up the sleeping baby.\n【ポイント2】②分詞構文：主文の動詞より前の動作をHaving＋過去分詞で表す（完了形分詞構文）。Having finished his homework（宿題を終えてから）→he went outside。\n【ポイント3】分詞構文の主語は主文の主語と同じ（he）であることを確認する。\n【答え】①sleeping ②Having finished\n【確かめ】②の文で「宿題を終えた」のが主文の動作（外に出た）より前であることから、Having＋過去分詞（完了形）が使われているかを確認する。\n【よくあるまちがい】②でHaving finishedではなくFinishing（単なる現在分詞）にしてしまい、「終える」と「外に出る」が同時であるかのような形にしてしまう。\n【ここが絶対】主文より前に完了した動作を分詞構文で表すときはHaving＋過去分詞を使う。',
     difficulty: 'advanced',
     course: 'koko-top',
     examType: 'koko',
@@ -161,7 +161,7 @@ export const ktEigo: Question[] = [
       '①私が生まれた都市はとても有名だ。(in whichは場所を示す関係詞句) ②What surprised me was that he came early.',
     hint: '前置詞+which=which+...+前置詞。Whatは先行詞を含む関係代名詞「〜すること・もの」',
     explanation:
-      '①前置詞+関係代名詞：in which = where（場所を示す関係副詞と同義）。"the city where I was born"と書き換え可。②Whatは先行詞を含む関係代名詞(=the thing which)。What surprised me「私を驚かせたこと」が主語→述語はwas→補語はthat節「彼が早く来たこと」。',
+      '【何を聞かれているか】①「The city in which I was born is very famous.」を「The city which I was born in」の形に書きかえて意味を日本語にする。②「What surprised me was（　　）。」（彼が早く来たこと）を完成させる。\n【なぜin whichやwhatを使うのか】①は前置詞＋関係代名詞（in which）が場所を表す関係副詞whereと同じ働きをするため、前置詞を後ろに残す形にも書きかえられる。②のwhatは「先行詞を含む関係代名詞」で、「〜すること・もの」という意味のかたまりを作れるから。\n【ポイント1】①in which＝where（場所を示す関係副詞と同義）。the city where I was bornと書きかえられる。\n【ポイント2】①前置詞を後ろに残す形にすると、The city which I was born inとなり、意味は変わらない。\n【ポイント3】②Whatは先行詞を含む関係代名詞（＝the thing which）。What surprised me「私を驚かせたこと」が主語、wasが述語、補語にthat節「彼が早く来たこと」を置く。What surprised me was that he came early.\n【答え】①私が生まれた都市はとても有名だ。(in whichは場所を示す関係詞句) ②What surprised me was that he came early.\n【確かめ】①の2つの文（in whichの形とwhich〜inの形）が同じ意味になっているかを確認する。\n【よくあるまちがい】前置詞を後ろに残すとき、前置詞を消し忘れて2つとも残してしまう。\n【ここが絶対】前置詞＋関係代名詞は、前置詞を関係詞節の最後に移動させても同じ意味になる。',
     difficulty: 'advanced',
     course: 'koko-top',
     examType: 'koko',
@@ -199,7 +199,7 @@ export const ktEigo: Question[] = [
     question:
       '高度な英作文。「スマートフォンの使用時間を制限することの賛否について、あなたの考えを60語以上で書け。理由を2つ挙げること。」',
     answer:
-      'I agree that we should limit smartphone use. First, spending too much time on smartphones can harm our health, especially our eyesight and sleep. Second, it can reduce face-to-face communication with family and friends. Of course, smartphones are useful, but we need to use them wisely and set a time limit.（約60語）',
+      'I agree that we should limit smartphone use. First, spending too much time on smartphones can harm our health, especially our eyesight and sleep. Second, it can reduce face-to-face communication with family and friends. For example, many students stay up late using their phones, and they feel tired at school the next day. Of course, smartphones are useful, but we need to use them wisely and set a time limit.（70語）',
     hint: 'I agree/disagree thatで意見を示す。First, Second,で理由を2つ。反論も少し触れるとより高評価',
     explanation:
       '意見文の型：①意見(agree/disagree)②First（理由1）③Second（理由2）④反論への言及(Of course, but...)⑤まとめ。語数管理：60語を超えるよう意識。減点ポイント：スペルミス・三単現のs漏れ・時制の混乱。高評価ポイント：because/although/however等の接続詞使用・具体例・論理的構成。',
@@ -215,7 +215,7 @@ export const ktEigo: Question[] = [
     answer: 'She told me that she would help me the next day.',
     hint: 'said to → told。I→she、will→would、you→me、tomorrow→the next day',
     explanation:
-      '話法転換のルール：①said to+人→told+人②I→she(話者に合わせる)③you→me(聞き手に合わせる)④時制を1つ過去にずらす(will→would)⑤時の表現変換：tomorrow→the next day, now→then, today→that day, yesterday→the day before。',
+      '【何を聞かれているか】「She said to me, "I will help you tomorrow."」を間接話法に書きかえる。\n【なぜ人称や時制が変わるのか】間接話法では、せりふの中の人称（I/you）を実際の話し手・聞き手に合わせ、主節（said）が過去形であることに合わせて時制も1つ過去にずらすという決まりがあるから。\n【ポイント1】said to＋人はtold＋人に変わる。\n【ポイント2】I（話者She自身）はsheに、you（聞き手＝話している相手・私）はmeに変わる。willはwouldになる（時制の一致）。\n【ポイント3】時の表現も変わる：tomorrow→the next day、now→then、today→that day、yesterday→the day before。\n【答え】She told me that she would help me the next day.\n【確かめ】もとの文のI（She自身）とyou（聞き手）が、それぞれ正しくsheとmeに置きかわっているかを確認する。\n【よくあるまちがい】youをyouのままにしてしまう、またはwillをwouldに変え忘れる。\n【ここが絶対】間接話法では、人称代名詞は実際の話し手・聞き手に合わせ、時制は主節の過去形に合わせて1つ過去にずらす。',
     difficulty: 'advanced',
     course: 'koko-top',
     examType: 'koko',
@@ -224,11 +224,11 @@ export const ktEigo: Question[] = [
     id: 'kt_eigo_07',
     subject: 'eigo',
     question:
-      '複雑な整序英作文。[ been / long / Japan / for / in / he / has / living ]',
-    answer: 'He has been living in Japan for long.',
+      '複雑な整序英作文。[ been / long / Japan / for / in / he / has / living / a / time ]',
+    answer: 'He has been living in Japan for a long time.',
     hint: '現在完了進行形：have/has been -ing。for+期間',
     explanation:
-      '現在完了進行形：S+have/has+been+-ing（今もずっと〜し続けている）。He has been living in Japan「ずっと日本に住んでいる」。for long / for a long time「長い間」。語順：S(He)+has+been+living(動詞)+in Japan(場所)+for long(期間)。',
+      '【何を聞かれているか】[ been / long / Japan / for / in / he / has / living / a / time ]を並べ替えて正しい英文を作る。\n【なぜhas been livingという形になるのか】「今もずっと〜し続けている」という継続の動作を強調するには、現在完了進行形（have/has＋been＋動詞のing形）を使う必要があるから。\n【ポイント1】現在完了進行形の形はS＋have/has＋been＋-ing。\n【ポイント2】He has been living in Japanで「ずっと日本に住んでいる」という意味になる。\n【ポイント3】for a long time で「長い間」という期間を表す。語順はS(He)+has+been+living(動詞)+in Japan(場所)+for a long time(期間)。\n【答え】He has been living in Japan for a long time.\n【確かめ】has been livingの語順（has→been→-ing）が正しく並んでいるかを確認する。\n【よくあるまちがい】has living beenのように語順を入れかえてしまう。\n【ここが絶対】現在完了進行形は必ずhave/has→been→動詞のingの順番で並べる。',
     difficulty: 'advanced',
     course: 'koko-top',
     examType: 'koko',
@@ -241,7 +241,7 @@ export const ktEigo: Question[] = [
     answer: '細心の注意を払う・几帳面な・緻密な（細部まで注意深い）',
     hint: '後に続く説明文から意味を推測する。checked every detail, never made careless mistakes',
     explanation:
-      '語彙推測の戦略：①ターゲット語の前後の文脈を読む②肯定的/否定的文脈を判断③具体的な行動（checked every detail, never made careless mistakes）から抽象的な意味を推測。meticulous=非常に細心・几帳面な（英語の語感：micro=細かい、curious=好奇心→combined: very careful about details）。',
+      '【何を聞かれているか】「The scientist was very meticulous in her work. She checked every detail twice and never made careless mistakes.」の下線部meticulousの意味を文脈から推測する。\n【なぜ前後の文から推測できるのか】未知の単語の意味は、その語の前後に書かれている具体的な行動や説明から推測できることが多く、この問題ではchecked every detail twice（細部を2回確認した）、never made careless mistakes（不注意なミスを一度もしなかった）という具体例がmeticulousの意味を裏づけているから。\n【ポイント1】ターゲット語meticulousの前後の文脈を読む。\n【ポイント2】文脈が肯定的か否定的かを判断する。checked every detail twice、never made careless mistakesはどちらも「注意深さ」を示す肯定的な内容。\n【ポイント3】具体的な行動（細部を2回確認する、ミスをしない）から、抽象的な意味「非常に細心・几帳面」を推測する。\n【答え】細心の注意を払う・几帳面な・緻密な（細部まで注意深い）\n【確かめ】meticulousを「細心の注意を払う」に置きかえて文を読み直し、意味が通ることを確認する。\n【よくあるまちがい】前後の文脈を読まずに、単語の見た目や一部の文字だけから意味を推測してしまう。\n【ここが絶対】未知の単語の意味は、その前後にある具体的な説明や行動から推測する。',
     difficulty: 'advanced',
     course: 'koko-top',
     examType: 'koko',
@@ -254,7 +254,7 @@ export const ktEigo: Question[] = [
     answer: 'B → D → A → C',
     hint: '話の流れ：問題提起→具体的政策→結果→効果の順になる',
     explanation:
-      '段落整序のポイント：①最初の文＝トピック導入（BのOne city decided...が話の出発点）②具体的措置（DのCars were charged...がpolicyの説明）③結果（Aのmore people started...がAs a resultで始まる=因果）④最終結論（Cのcleaner air...がThis led to=さらなる結果）。接続表現(As a result, This led to)が順序のヒント。',
+      '【何を聞かれているか】4つの文A〜Dを正しい順序に並べ替える段落整序問題。\n【なぜこの順序になるのか】文章にはふつう「話題の導入→具体的な内容→結果→さらなる効果」という論理の流れがあり、As a resultやThis led toのような接続表現が、その文がどの段階にあたるかを教えてくれるから。\n【ポイント1】Bの「One city decided to introduce a new policy」が話題の導入（問題提起）にあたる。\n【ポイント2】Dの「Cars were charged a fee」が、Bで述べた政策の具体的な内容の説明にあたる。\n【ポイント3】Aの「As a result（その結果）」が政策による直接の結果、Cの「This led to（これが〜につながった）」がさらなる効果を表しており、この2つの接続表現の意味から順序が決まる。\n【答え】B → D → A → C\n【確かめ】各文の接続表現（As a result、This led to）が、前の文とのつながりを正しく示しているかを見直す。\n【よくあるまちがい】接続表現に注目せず、内容だけを見て順序を決めようとしてしまう。\n【ここが絶対】段落整序ではAs a result、This led toのような接続表現が、文と文のつながりを示す手がかりになる。',
     difficulty: 'advanced',
     course: 'koko-top',
     examType: 'koko',
@@ -265,7 +265,7 @@ export const ktEigo: Question[] = [
     question:
       'テーマ英作文。「外国語を学ぶことの意義について、具体的な経験や例を挙げながら70語以上で自分の考えを書け。」',
     answer:
-      "Learning a foreign language is very important in today's world. First, it allows us to communicate with people from different countries and understand their cultures. For example, if you can speak English, you can make friends all over the world and get access to more information. Second, learning another language helps us understand our own language better. In conclusion, foreign language learning broadens our horizons and connects us to the world.（約80語）",
+      "Learning a foreign language is very important in today's world. First, it allows us to communicate with people from different countries and understand their cultures. For example, if you can speak English, you can make friends all over the world and get access to more information. Second, learning another language helps us understand our own language better. In conclusion, foreign language learning broadens our horizons and connects us to the world.（71語）",
     hint: 'First/Second/In conclusionで構成。具体例(For example)を必ず入れる。allow/broaden horizons等の表現',
     explanation:
       '高得点英作文の要素：①明確な主張「Learning a foreign language is important」②理由1+例(First...For example)③理由2(Second)④まとめ(In conclusion)。高校入試で差がつく表現：allow us to do「〜することを可能にする」、broaden horizons「視野を広げる」、get access to「〜にアクセスする」、connect us to「〜と繋げる」。',

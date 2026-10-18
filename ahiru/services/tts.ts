@@ -127,6 +127,8 @@ export async function speakWithDevice(text: string, speed: number = 1.0): Promis
         language: 'en-US',
         rate,
         onDone: () => resolve(true),
+        // stopSpeaking() で止めたときは onDone が呼ばれない。解決しないと呼び出し側の「再生中…」が戻らない
+        onStopped: () => resolve(true),
         onError: (e) => {
           console.error('speakWithDevice: expo-speech onError', e);
           resolve(false);

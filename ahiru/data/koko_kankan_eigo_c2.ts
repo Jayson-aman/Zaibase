@@ -19,8 +19,9 @@ export const kokoKankanEigoC2: Question[] = [
 ③ Momoは庭に出るのが嫌いだ。
 ④ Kenの母はMomoを好きではない。`,
     answer: `② Kenは学校に行く前にMomoに餌をあげる。`,
-    hint: `本文2文目「Every morning, Ken gives Momo some food before he goes to school.」に注目する。`,
-    explanation: `【出題意図】短い日常英文を読み、細部の情報（時系列・動作の順序）を正確に読み取れるかを問う基礎的な内容一致問題。【解説】①本文には「white and very small」とあり黒くて大きいは誤り。②「gives Momo some food before he goes to school」と一致し正解。③「plays with Momo in the garden」と楽しんでいる様子が書かれており誤り。④「makes our family happier」とあり、母がMomoを好きではないというのは本文と矛盾する。【注意点】before（〜する前に）の位置を正確に読み取ることが重要。「学校に行く前に餌をあげる」であり「学校から帰ってから」ではない。【関連知識】welcome（出迎える）、take care of〜（〜の世話をする）は日常生活を描く英文で頻出の表現。`,
+    hint: `本文4文目「Every morning, Ken gives Momo some food before he goes to school.」に注目する。`,
+    explanation:
+      '【何を聞かれているか】\n飼い猫モモについての英文を読んで、内容と合っている選択肢を選ぶ問題。\n\n【なぜbeforeの位置を正確に読み取る必要があるのか】\n本文の"Ken gives Momo some food before he goes to school."という文は、「学校に行く前に」餌をあげるという順序を表しており、before（〜する前に）の位置を取り違えると、逆の意味（学校から帰った後）だと誤解してしまう。\n\n【ポイント1】①を確認する\n本文には"white and very small"（白くて小さい）とあり、「黒くて大きい」という選択肢①は本文と矛盾する。\n\n【ポイント2】②を確認する\n"gives Momo some food before he goes to school"（学校に行く前に餌をあげる）が選択肢②とそのまま一致する。\n\n【ポイント3】③④を確認する\n③は"plays with Momo in the garden"（庭で楽しく遊ぶ）とあり「嫌い」という内容と矛盾。④は"makes our family happier"（家族をより幸せにする）とあり「好きではない」という内容と矛盾する。\n\n【答え】\n② Kenは学校に行く前にMomoに餌をあげる。\n\n【確かめ】\n選んだ選択肢が、本文の"before he goes to school"（学校に行く前に）という順序と正確に一致しているか確認する。\n\n【よくあるまちがい】\nbeforeの位置を読み違えて、「学校から帰ってから餌をあげる」のように逆の意味に誤解してしまうミス。\n\n【ここが絶対】\n内容一致問題は、本文中の同じ意味の表現（言い換え）を探すことが得点のカギ。before/afterのような順序を表す語は特に正確に読み取る。',
     pitfall: `④のように本文に直接書かれていない否定的な内容を安易に選ばない。本文にははっきり「makes our family happier」と書かれている。`,
     memoryTip: `内容一致問題は「本文中の同じ意味の表現」を探して、言い換え（paraphrase）に気づくことが得点のカギ。`,
   },
@@ -128,7 +129,8 @@ export const kokoKankanEigoC2: Question[] = [
 あなたは犬を飼っていますか。`,
     answer: `Do you have a dog?`,
     hint: `一般動詞haveの疑問文はDo you+動詞の原形〜?の形。`,
-    explanation: `【出題意図】一般動詞の疑問文（Do you〜?）の基本形を問う。【解説】「飼っている」はhaveを使う。一般動詞の疑問文は主語の前にDoを置き、動詞は原形のままにする（havesのようにしない）。文末には疑問符を付ける。【注意点】be動詞の疑問文（Are you〜?）と混同しない。一般動詞haveにはbe動詞を使わない。【関連知識】「犬を飼っている」はkeep a dogより一般的にはhave a dogが自然。Do you have any pets?（何かペットを飼っていますか）も類似表現。`,
+    explanation:
+      '【何を聞かれているか】\n「あなたは犬を飼っていますか。」という日本語を英語にする問題。\n\n【なぜDoを使うのか】\nhaveは一般動詞なので、疑問文にするときはbe動詞ではなくDoを主語の前に置き、動詞は原形のままにするという決まりがある。\n\n【ポイント1】一般動詞の疑問文の公式を確認する\nDo＋主語＋動詞の原形〜?\n\n【ポイント2】haveが原形のままであることを確認する\nDoがすでに疑問文の役割を担っているので、haveはhasのような形にせず原形のまま使う。\n\n【ポイント3】be動詞との違いを確認する\n"Are you have a dog?"のように、be動詞と一般動詞を混ぜて使うのは誤り。\n\n【答え】\nDo you have a dog?\n\n【確かめ】\nDoが文頭にあり、haveが原形のまま使われていることを確認する。\n\n【よくあるまちがい】\n"Are you have a dog?"のように、be動詞Areと一般動詞haveを混ぜて使ってしまうミス。一般動詞の疑問文にはDoを使う。\n\n【ここが絶対】\n一般動詞の疑問文は「Do/Does＋主語＋動詞の原形」。be動詞の疑問文（Are you〜?）とは作り方が違うことをセットで覚える。',
     pitfall: `Are you have a dog?のようにbe動詞と一般動詞を混ぜて使わない。`,
     memoryTip: `一般動詞の疑問文は「Do/Does＋主語＋動詞の原形」の順と唱えて覚える。`,
   },
@@ -144,7 +146,8 @@ export const kokoKankanEigoC2: Question[] = [
 今日はとても暑いです。`,
     answer: `It is very hot today.`,
     hint: `天候・気温を表す文の主語はItを使う。「とても暑い」はvery hot。`,
-    explanation: `【出題意図】天候・気温を表す英文における非人称のitの使い方を問う。【解説】天気・気温・時刻・明暗などを表す英文では、意味を持たない主語itを使う。「暑い」はhot、程度を強めるveryを形容詞の前に置く。「今日は」はtodayで、文末に置くのが自然。【注意点】This is very hot todayのようにThisを使うのは誤り（Thisは何か具体的なものを指す代名詞であり、天候を表す非人称のitとは異なる）。【関連知識】It is rainy today.（今日は雨だ）、It is 3 o'clock now.（今3時だ）など、非人称のitは天候・時刻の表現で幅広く使われる。`,
+    explanation:
+      '【何を聞かれているか】\n「今日はとても暑いです。」という日本語を英語にする問題。\n\n【なぜItを主語に使うのか】\n天候・気温・時刻を表す英文では、意味を持たない主語Itを使うという決まりがある。Thisのように何か具体的なものを指す代名詞は使わない。\n\n【ポイント1】非人称のItを確認する\n天気・気温・時刻・明暗を表す文の主語はIt。"It is very hot today."のItには「それ」という意味はない。\n\n【ポイント2】程度を表すveryの位置を確認する\nveryは形容詞（hot）の前に置いて、程度を強める。\n\n【ポイント3】todayの位置を確認する\n"today"（今日は）は文末に置くのが自然。\n\n【答え】\nIt is very hot today.\n\n【確かめ】\n主語がIt（非人称）になっていて、Thisのような具体的なものを指す代名詞になっていないことを確認する。\n\n【よくあるまちがい】\n"This is very hot today."のようにThisを使ってしまうミス。Thisは具体的なものを指す代名詞で、天候を表す非人称のitとは役割が異なる。\n\n【ここが絶対】\n天気・時刻・気温を表す文の主語は「意味のないIt」を使う。"It is rainy today."や"It is 3 o\'clock now."も同じ仕組み。',
     pitfall: `Today is very hot.は文法的には可能だが、天候表現の定番はIt is 〜.の形。`,
     memoryTip: `天気・時刻・気温の文の主語は「意味のないIt」と覚えておく。`,
   },
@@ -190,7 +193,7 @@ export const kokoKankanEigoC2: Question[] = [
     answer: `① Because of the language barrier.
 ② あと1年間。
 ③ 怖くても新しいことに挑戦することが、成長するための最良の方法だという考え方。`,
-    hint: `①本文2文目「because of the language barrier」に注目。②最終文「for one more year」。③「trying new things, even when they are scary, is the best way to grow」を日本語にする。`,
+    hint: `①本文3文目「because of the language barrier」に注目。②最終文「for one more year」。③「trying new things, even when they are scary, is the best way to grow」を日本語にする。`,
     explanation: `【出題意図】留学生の体験談を通して、理由を表すbecause of、期間表現、筆者（登場人物）の考え方を読み取る力を問う。【解説】①「found it difficult... because of the language barrier」から「言語の壁のため」と分かる。②最終文「plans to stay in Japan for one more year」より「あと1年間」。③「trying new things, even when they are scary, is the best way to grow」がEmmaの考え方の核心。【注意点】becauseの後ろは節（主語＋動詞）、because ofの後ろは名詞（句）が続く点に注意。ここではbecause of the language barrier（名詞句）。【関連知識】exchange student（交換留学生）、language barrier（言語の壁）は留学をテーマにした英文で頻出。`,
     pitfall: `②を「6か月」と答えないよう注意する。「studying for six months」はこれまでの期間で、設問はこれからの期間（one more year）を聞いている。`,
     memoryTip: `even when〜（〜のときでも）は譲歩を表す表現で、「困難でも挑戦する」という前向きな主張とセットで使われることが多い。`,
@@ -257,7 +260,8 @@ export const kokoKankanEigoC2: Question[] = [
 ② 若い日本人で伝統料理を作れる人の数が減っていること。
 ③ Some schools have begun teaching students how to cook traditional Japanese meals.`,
     hint: `①「UNESCO added washoku to its list of Intangible Cultural Heritage」。②「the number of young Japanese people who can cook traditional dishes is decreasing」。③最終文をそのまま抜き出す。`,
-    explanation: `【出題意図】文化・社会的な話題を扱う説明文で、事実（歴史的認定）・懸念（社会問題）・対策の3段構成を読み取る力を問う。【解説】①「added washoku to its list of Intangible Cultural Heritage」＝無形文化遺産リストに追加された。②「the number of... is decreasing」＝伝統料理を作れる若者の数が減少していること。③最終文がその対策で、学校で伝統料理の作り方を教え始めたという内容。【注意点】becauseの前後の因果関係（減少の原因＝ファストフードやコンビニの人気）も合わせて理解しておくと記述問題で役立つ。【関連知識】Intangible Cultural Heritage（無形文化遺産）、seasonal ingredients（旬の食材）は和食関連の英文で頻出。`,
+    explanation:
+      '【何を聞かれているか】\n和食のユネスコ無形文化遺産登録についての英文を読んで、3つの問いに答える問題。\n\n【なぜ「事実→懸念→対策」の構成を意識するのか】\nこの英文は「①和食が無形文化遺産に登録された事実→②専門家の懸念（伝統料理を作れる若者の減少）→③学校の対策」という順序で書かれており、however（しかし）の前後で内容が切り替わる。\n\n【ポイント1】①事実を確認する\n"added washoku to its list of Intangible Cultural Heritage"（無形文化遺産のリストに和食を追加した）から、2013年にユネスコがどう認定したかがわかる。\n\n【ポイント2】②懸念を確認する\n"the number of young Japanese people who can cook traditional dishes is decreasing"（伝統料理を作れる若い日本人の数が減っている）が専門家の心配。\n\n【ポイント3】③対策を確認する\n"Some schools have begun teaching students how to cook traditional Japanese meals."（一部の学校が伝統料理の作り方を教え始めた）が対策。\n\n【答え】\n① 無形文化遺産のリストに登録された。\n② 若い日本人で伝統料理を作れる人の数が減っていること。\n③ Some schools have begun teaching students how to cook traditional Japanese meals.\n\n【確かめ】\n②の答えが、「和食が世界的に人気」という肯定的な内容ではなく、「伝統料理を作れる若者が減っている」という否定的な内容になっているか確認する。\n\n【よくあるまちがい】\n②で和食の人気（肯定的な内容）と専門家の懸念（否定的な内容）を混同してしまうミス。\n\n【ここが絶対】\nhowever（しかし）の後ろには、それまでの流れと反対の内容（ここでは懸念）が続くと意識して読む。',
     pitfall: `②で「和食が世界的に人気」という肯定的な内容と、専門家の懸念（否定的な内容）を混同しない。`,
     memoryTip: `however（しかし）の後ろには、それまでの流れと反対の内容（ここでは懸念）が続くと意識して読む。`,
   },
@@ -325,7 +329,8 @@ Yuki`,
 ② Yuki's mother is going to make a chocolate cake.
 ③ 金曜日までに。`,
     hint: `①「a birthday party at my house next Sunday at 3 p.m.」。②「My mother is going to make a chocolate cake」。③「Please let me know by Friday」。`,
-    explanation: `【出題意図】メール形式の実用的な英文から、日時・行動主体・期限といった具体的情報を正確に抽出する力を問う。【解説】①「at my house next Sunday at 3 p.m.」＝次の日曜日の午後3時、Yukiの家。②「My mother is going to make a chocolate cake」がそのまま答え。③「let me know by Friday」のbyは「〜までに」という期限を表す前置詞。【注意点】by Friday（金曜日までに、期限）とuntil Friday（金曜日までずっと、継続）の違いに注意。ここでは期限を表すbyが正しい。【関連知識】メール英文の定型表現：I would be happy if you could〜（〜していただけたら嬉しいです）、let me know（教えてください）は実用英語で頻出。`,
+    explanation:
+      '【何を聞かれているか】\n誕生日パーティーの案内メールを読んで、日時・場所・行動・期限について答える問題。\n\n【なぜbyとuntilを区別する必要があるのか】\n"let me know by Friday"のbyは「金曜日までに（期限）」を表す前置詞で、「金曜日までずっと（継続）」を表すuntilとは意味が異なるため、正確に読み分ける必要がある。\n\n【ポイント1】①日時と場所を確認する\n"a birthday party at my house next Sunday at 3 p.m."から、次の日曜日の午後3時にYukiの家で行われるとわかる。\n\n【ポイント2】②行動を確認する\n"My mother is going to make a chocolate cake."がそのまま答えになる。\n\n【ポイント3】③期限を確認する\n"Please let me know by Friday"のbyは「〜までに」という期限を表すので、金曜日までに返事が必要。\n\n【答え】\n① 次の日曜日の午後3時に、Yukiの家で行われる。\n② Yuki\'s mother is going to make a chocolate cake.\n③ 金曜日までに。\n\n【確かめ】\n③の答えが「金曜日までに（期限）」であり、「金曜日以降」のような誤った解釈になっていないか確認する。\n\n【よくあるまちがい】\nbyを「〜までずっと」というuntilの意味だと勘違いしてしまうミス。byは期限（〜までに）、untilは継続（〜までずっと）を表す。\n\n【ここが絶対】\nby＝期限（〜までに）、until＝継続（〜までずっと）という前置詞の意味の違いをセットで覚える。',
     pitfall: `③をby Fridayの意味を取り違えて「金曜日以降」としない。byは「〜までに」という期限を表す。`,
     memoryTip: `by＝期限（〜までに）、until＝継続（〜までずっと）と対比させて覚える。`,
   },
@@ -341,7 +346,8 @@ Yuki`,
 すみません、遅れてしまって。今度はもっと早く来るつもりです。`,
     answer: `I'm sorry for being late. I will come earlier next time.`,
     hint: `「〜してすみません」はsorry for+動名詞。「今度は」はnext time、「もっと早く」は比較級earlier。`,
-    explanation: `【出題意図】謝罪表現（be sorry for+動名詞）と未来の意志（willまたはbe going to）を組み合わせた2文構成の英作文を問う。【解説】「遅れてしまってすみません」はI'm sorry for being late.（sorry for+動名詞）。「今度はもっと早く来るつもりです」はI will come earlier next time.（比較級earlierを使う）。【注意点】I'm sorry to be lateも可能だが、be sorry for〜ing（すでに起きたことへの謝罪）の方がここでは自然。比較級のearlierはearlyの比較級で不規則変化ではなく-yをiに変えてerを付ける形。【関連知識】I'm sorry for being late.の代わりにI apologize for being late.（よりフォーマル）も使える。`,
+    explanation:
+      '【何を聞かれているか】\n「すみません、遅れてしまって。今度はもっと早く来るつもりです。」という日本語を英語にする問題。\n\n【なぜsorry for＋動名詞を使うのか】\n「〜してすみません」という、すでに起きたことへの謝罪は、"be sorry for＋動名詞"の形で表す。\n\n【ポイント1】謝罪の表現を確認する\n"I\'m sorry for being late."＝「遅れてすみません」。sorry forの後ろは動名詞（being）。\n\n【ポイント2】未来の意志を確認する\n"I will come earlier next time."＝「今度はもっと早く来ます」。willで未来の意志を表す。\n\n【ポイント3】比較級earlierの作り方を確認する\nearlyの比較級はearlier（yをiに変えてerをつける）。more earlyという不規則な形にはしない。\n\n【答え】\nI\'m sorry for being late. I will come earlier next time.\n\n【確かめ】\n"sorry for"の後ろが動名詞（being）になっていること、"earlier"がearlyの正しい比較級になっていることを確認する。\n\n【よくあるまちがい】\nearlierを"more early"としてしまうミス。1〜2音節でyで終わる形容詞・副詞の比較級は-erをつけて作る。\n\n【ここが絶対】\n"be sorry for＋動名詞"（すでに起きたことへの謝罪）と"be sorry to＋動詞の原形"（これから起きることへの謝罪）を使い分ける。',
     pitfall: `earlierをmore earlyとしない。1音節・2音節でyで終わる形容詞・副詞は比較級を-erで作るのが原則。`,
     memoryTip: `sorry for+動名詞＝すでに起きたことへの謝罪、sorry to+動詞原形＝これから起きることへの謝罪、と使い分ける。`,
   },
@@ -415,7 +421,7 @@ Yuki`,
     difficulty: 'standard',
     maxOnly: false,
     question: `部活動に入ることの良い点について、25語以上の英語で書きなさい。`,
-    answer: `（解答例）Joining a club has many good points. First, students can make new friends who share the same interests. Second, they can learn teamwork and improve their skills through daily practice.（29語）`,
+    answer: `（解答例）Joining a club has many good points. First, students can make new friends who share the same interests. Second, they can learn teamwork and improve their skills through daily practice.（30語）`,
     hint: `「主張→First〜→Second〜」の構成で理由を整理して書く。`,
     explanation: `【出題意図】部活動の利点について、First/Secondを用いて理由を整理しながら述べる自由英作文。論理的な構成力と基本文法の正確さを問う。【解説】まず主張（部活動には良い点が多い）を述べ、First（友達ができる）、Second（チームワークを学べる・技術が向上する）と理由を2つ整理して並べる。【注意点】First, Second（第一に、第二に）のような順序を示す語を使うと採点者に構成が伝わりやすい。25語以上の条件を満たすため、理由をできるだけ具体的に（例：through daily practiceなど）書く。【関連知識】club activities（部活動）、teamwork（チームワーク）、improve one's skills（技術を向上させる）はこのテーマで頻出の語彙・表現。`,
     pitfall: `Joining a club is good.だけで終わらせず、必ず具体的な理由を2つ以上加えて語数を満たす。`,
@@ -440,7 +446,7 @@ Yuki`,
 ③ 本文全体を通して筆者が伝えたい考えを80字以内の日本語でまとめよ。`,
     answer: `① Answering customer questions and checking data for errors.
 ② 人間を完全に置き換えるのではなく
-③ AIは仕事を完全に奪うのではなく、単純作業を代わりに行うことで、人間がより創造的で複雑な仕事に集中できるよう、人間と共に働く存在になる可能性が高いという考え。（77字）`,
+③ AIは仕事を完全に奪うのではなく、単純作業を代わりに行うことで、人間がより創造的で複雑な仕事に集中できるよう、人間と共に働く存在になる可能性が高いという考え。（79字）`,
     hint: `①「such as answering customer questions or checking data for errors」。②rather than=〜ではなく。③最終文「AI may end up working alongside people, handling repetitive tasks so that humans can focus on creative and complex work.」が結論。`,
     explanation: `【出題意図】AIと雇用というテーマの論説文で、具体例の抽出・比較表現（rather than）の理解・筆者の主張の要約という3段階の読解力を問う。【解説】①第1文後半の具体例をそのまま抜き出す。②rather than〜completely＝「完全に〜するのではなく」という比較・対比の表現。③本文は「job losses（懸念）」と「new kinds of jobs（期待）」の両方を提示した上で、最終文で「AIは人間と共存し、単純作業を担うことで人間が創造的な仕事に集中できる」という折衷的な結論を述べている。【注意点】rather than A, Bの構文はA（否定される内容）とB（実際に主張される内容）が対比される。ここではreplacing humans completely（A）とworking alongside people（B）が対比されている。【関連知識】AI関連語彙：artificial intelligence、repetitive task（反復作業）、alongside（〜と並んで）は現代の論説文で頻出。`,
     pitfall: `③でjob losses（懸念）だけ、あるいはnew jobs（期待）だけを書かず、両方を踏まえた上での結論（共存・分担）まで含めてまとめる。`,
@@ -505,7 +511,8 @@ Yuki`,
 ② 在宅勤務は同僚同士のコミュニケーションを難しくし、会社内のチームワーク意識を弱める可能性があるという批判。
 ③ 従業員が週に数日は出社し、それ以外の日は在宅で働くという、出社と在宅勤務を組み合わせた働き方。`,
     hint: `①「gives employees more flexibility, reduces commuting time, and allows people to balance work and family life」。②「working from home can make communication... more difficult and may weaken a sense of teamwork」。③「employees come to the office a few days a week and work from home on other days」。`,
-    explanation: `【出題意図】在宅勤務をテーマにした賛否両論の論説文で、利点・批判・折衷案（ハイブリッドモデル）を整理して理解する力を問う。【解説】①supporters（支持者）の主張から3つの利点（柔軟性・通勤時間の削減・仕事と家庭の両立）のうち2つ以上を答える。②critics（批判者）の主張：コミュニケーションが難しくなる、チームワーク意識が弱まる。③a hybrid model＝出社と在宅を組み合わせた働き方で、直後の関係代名詞節（in which〜）で具体的に説明されている。【注意点】supportersとcriticsという対立する立場を表す語に印をつけ、それぞれの主張を混同しないようにする。【関連知識】remote work（リモートワーク）、commute（通勤する）、hybrid model（ハイブリッド型）は働き方に関する英文の重要語彙。`,
+    explanation:
+      '【何を聞かれているか】\nリモートワークについての英文を読んで、利点・批判・折衷案（ハイブリッドモデル）を整理して答える問題。\n\n【なぜ支持者と批判者の主張を分けて整理するのか】\nこの英文は「①リモートワーク支持者の主張→②批判者の懸念→③ハイブリッドモデルという折衷案」という構成になっており、それぞれの立場を混同せずに整理することが設問を正確に解く鍵になる。\n\n【ポイント1】①利点を確認する\n"gives employees more flexibility"（柔軟性が増す）、"reduces commuting time"（通勤時間が減る）、"allows people to balance work and family life"（仕事と家庭の両立ができる）のうち2つ以上。\n\n【ポイント2】②批判を確認する\n"working from home can make communication... more difficult and may weaken a sense of teamwork"（コミュニケーションが難しくなり、チームワーク意識が弱まる）。\n\n【ポイント3】③ハイブリッドモデルを確認する\n"employees come to the office a few days a week and work from home on other days"（週に数日出社し、それ以外は在宅）という、出社と在宅を組み合わせた働き方。\n\n【答え】\n① It gives employees more flexibility, and it reduces commuting time (and allows people to balance work and family life more easily).\n② 在宅勤務は同僚同士のコミュニケーションを難しくし、会社内のチームワーク意識を弱める可能性があるという批判。\n③ 従業員が週に数日は出社し、それ以外の日は在宅で働くという、出社と在宅勤務を組み合わせた働き方。\n\n【確かめ】\n②の答えが批判（critics）の内容だけで、①の利点（flexibilityなど）を混ぜていないか確認する。\n\n【よくあるまちがい】\n①と②の内容を取り違えてしまうミス。supporters（支持者）とcritics（批判者）という立場を示す語を目印に、主張を分けて整理する。\n\n【ここが絶対】\n賛成・批判・折衷案という3つの立場が出てくる論説文は、supporters say〜／critics point out〜のような表現を目印に主張を分けて読む。',
     pitfall: `②で利点（flexibilityなど）を混ぜて書かない。批判（critics）の内容だけを抽出する。`,
     memoryTip: `supporters say〜／critics point out〜のように立場を示す動詞句を目印にして、賛成意見と反対意見を分けて整理する。`,
   },
@@ -547,7 +554,8 @@ Yuki`,
 ② 授業に集中しにくくなること、免疫系が弱まること（感情が不安定になることも含む）。
 ③ Some schools have started later start times in the morning.`,
     hint: `①「sleep between eight and ten hours per night」。②「make it harder to concentrate in class, weaken the immune system, and even affect emotional stability」。③「Some schools have started later start times in the morning」。`,
-    explanation: `【出題意図】睡眠不足という健康テーマの論説文で、推奨基準・悪影響・対策という3段階の情報を整理して読み取る力を問う。【解説】①「between eight and ten hours per night」＝8時間〜10時間。②「harder to concentrate」「weaken the immune system」「affect emotional stability」の3点から2つ以上を挙げる。③「later start times in the morning」＝始業時刻を遅らせること。【注意点】3つ並んだ悪影響（集中力・免疫・感情）はandで並列されており、設問で「2つ以上」と言われたら少なくとも2つを明確に答える。【関連知識】concentrate（集中する）、immune system（免疫系）、emotional stability（感情の安定）は健康・医学系の英文で重要語彙。`,
+    explanation:
+      '【何を聞かれているか】\n10代の睡眠不足についての英文を読んで、推奨時間・悪影響・対策を答える問題。\n\n【なぜ3つ並んだ悪影響を見落とさないようにするのか】\n本文の"make it harder to concentrate in class, weaken the immune system, and even affect emotional stability"は、andで3つの悪影響が並列されており、設問で「2つ以上」と言われたら、この中から明確に2つ以上を選んで答える必要がある。\n\n【ポイント1】①推奨時間を確認する\n"sleep between eight and ten hours per night"（1晩に8〜10時間）。\n\n【ポイント2】②悪影響を確認する\n"harder to concentrate in class"（授業に集中しにくい）、"weaken the immune system"（免疫系が弱まる）、"affect emotional stability"（感情の安定に影響する）の中から2つ以上。\n\n【ポイント3】③対策を確認する\n"Some schools have started later start times in the morning."（始業時刻を遅らせる）。\n\n【答え】\n① 1晩に8時間から10時間。\n② 授業に集中しにくくなること、免疫系が弱まること（感情が不安定になることも含む）。\n③ Some schools have started later start times in the morning.\n\n【確かめ】\n②の答えが、本文にある具体的な悪影響（集中力・免疫・感情）のうち少なくとも2つを明示しているか確認する。\n\n【よくあるまちがい】\n②を「眠れないこと」のように曖昧に答えてしまうミス。本文の具体的な悪影響を明示する必要がある。\n\n【ここが絶対】\n動詞が3つ並列された文（make... harder, weaken..., and affect...）は、影響を複数列挙するサイン。設問の「2つ以上」という指示に合わせて具体的に答える。',
     pitfall: `②を「眠れないこと」のように曖昧に答えず、本文にある具体的な悪影響（集中力・免疫・感情）を明示する。`,
     memoryTip: `make it harder to do〜, weaken〜, and affect〜のように動詞が3つ並列された文は、影響を複数列挙するサイン。`,
   },
@@ -577,7 +585,8 @@ At the same time, an aging population means a greater need for medical care and 
 ③ Robots and AI technology.
 ④ 日本は少子高齢化による労働力・介護人材不足に直面しており、今後同様の高齢化に直面する他国にとって日本の経験が参考になる可能性があるということ。（71字）`,
     hint: `①「nearly 35 percent of the population will be over 65 years old」。②「encouraged businesses to hire more women and elderly people, and has also relaxed some rules on accepting foreign workers」。③「Robots and AI technology are increasingly being used」。④最終文をそのまま日本語でまとめる。`,
-    explanation: `【出題意図】3段落構成の論説文（現状提示→課題→対策と展望）を読み、数値情報・政府対応・技術活用・結論の要約という総合的な読解力を問う最高難度の問題。【解説】①第1段落「nearly 35 percent... over 65 years old」。②第2段落「encouraged businesses to hire more women and elderly people」「relaxed some rules on accepting foreign workers」の2点。③第3段落「Robots and AI technology」。④第3段落最終文は「日本の高齢化対応の経験が、今後同様の課題に直面する他国の参考になりうる」という将来への示唆で締めくくられている。【注意点】3段落構成の論説文では、各段落の役割（1：現状・データ、2：労働力の課題と対策、3：医療・介護の課題と将来への示唆）を意識して読むと整理しやすい。【関連知識】aging population（高齢化社会）、workforce（労働力）、caregiver（介護者）は社会保障・人口問題の英文で頻出語彙。`,
+    explanation:
+      '【何を聞かれているか】\n日本の高齢化についての3段落構成の英文を読んで、数値・政府の対応・技術活用・全体の結論を答える問題。\n\n【なぜ各段落の役割を意識するのか】\nこの英文は「①現状のデータ→②労働力の課題と政府の対策→③医療・介護の課題と将来への示唆」という3段階の構成になっており、設問もこの構成に沿って作られている。\n\n【ポイント1】①数値を確認する\n"nearly 35 percent of the population will be over 65 years old"（人口の約35％が65歳以上になる）。\n\n【ポイント2】②政府の対応を確認する\n"encouraged businesses to hire more women and elderly people"（女性・高齢者の雇用促進）、"relaxed some rules on accepting foreign workers"（外国人労働者受け入れの規則緩和）の2点。\n\n【ポイント3】③④技術活用と結論を確認する\n"Robots and AI technology"（ロボットとAI技術）が人手不足を補う。第3段落の最終文は、日本の経験が他国の参考になりうるという将来への示唆。\n\n【答え】\n① 約35パーセント。\n② ・女性や高齢者をより多く雇うよう企業に促した。・外国人労働者の受け入れに関する規則を一部緩和した。\n③ Robots and AI technology.\n④ 日本は少子高齢化による労働力・介護人材不足に直面しており、今後同様の高齢化に直面する他国にとって日本の経験が参考になる可能性があるということ。（71字）\n\n【確かめ】\n②が「規則を緩和した（relaxed some rules）」という本文の表現通りで、「外国人労働者を増やした」のように断定しすぎていないか確認する。\n\n【よくあるまちがい】\n②で本文にない断定（外国人労働者を増やした）をしてしまうミス。本文の表現（規則を緩和した）に忠実に答える。\n\n【ここが絶対】\n3段落論説文は「現状データ→課題と対策→課題と将来への示唆」という構成パターンを意識して、各段落の役割を整理してから答える。',
     pitfall: `②で「外国人労働者を増やした」のように断定しすぎない。本文は「relaxed some rules（規則を緩和した）」であり、直接「増やした」とまでは書かれていない点に注意。`,
     memoryTip: `3段落論説文：段落1＝現状データ、段落2＝課題と対策①、段落3＝課題と対策②＋将来への示唆、という構成パターンを意識する。`,
   },
@@ -650,7 +659,8 @@ Applicant: Yes, actually. Could you tell me more about the training new employee
 ② 母語の基礎をしっかり築きながら第二言語も学ばなければならず、幼い学習者にとって負担が大きい可能性があるという批判。
 ③ Finding qualified teachers who can teach effectively in two languages.`,
     hint: `①「helps children develop better problem-solving skills and a deeper understanding of different cultures」。②「bilingual education can be demanding for young learners, especially if they struggle to build a strong foundation in their first language while also learning a second one」。③「Finding qualified teachers who can teach effectively in two languages」。`,
-    explanation: `【出題意図】バイリンガル教育というテーマの論説文で、支持者の主張・批判・実務的課題を段階的に整理して読み取る力を問う。【解説】①支持者の主張＝問題解決能力の向上、異文化理解の深化（追加言語の習得のしやすさも可）。②批判＝母語の基礎形成と第二言語学習を同時に行う負担の大きさ。③実際的な課題＝2言語で効果的に教えられる資格を持つ教員を見つけること。【注意点】supporters argueとcritics point outという対立する立場の表現を目印に、それぞれの主張範囲を正確に区切って読む。【関連知識】bilingual（バイリンガルの）、foundation（基礎）、qualified（資格のある）は教育系の英文で重要語彙。`,
+    explanation:
+      '【何を聞かれているか】\nバイリンガル教育についての英文を読んで、利点・批判・実際的課題を答える問題。\n\n【なぜ支持者と批判者の主張を区切って読むのか】\nこの英文は支持者の主張と批判者の主張が対立して紹介されているため、それぞれの主張範囲を正確に区切って読まないと、利点と批判を混同してしまう。\n\n【ポイント1】①利点を確認する\n"helps children develop better problem-solving skills and a deeper understanding of different cultures"（問題解決能力の向上、異文化理解の深化）の2点。\n\n【ポイント2】②批判を確認する\n"bilingual education can be demanding for young learners, especially if they struggle to build a strong foundation in their first language while also learning a second one"（母語の基礎形成と第二言語学習の同時進行の負担）。\n\n【ポイント3】③実際的課題を確認する\n"Finding qualified teachers who can teach effectively in two languages"（2言語で効果的に教えられる資格を持つ教員を見つけること）。\n\n【答え】\n① ・問題解決能力が向上すること。・異文化に対するより深い理解が得られること。（バイリンガルの子どもはその後さらに別の言語を学びやすくなることも含む）\n② 母語の基礎をしっかり築きながら第二言語も学ばなければならず、幼い学習者にとって負担が大きい可能性があるという批判。\n③ Finding qualified teachers who can teach effectively in two languages.\n\n【確かめ】\n①の答えが利点だけで、②の批判（負担が大きい）の内容を混同していないか確認する。\n\n【よくあるまちがい】\n①で利点を答える際に、批判の内容（負担が大きい）を混ぜて書いてしまうミス。\n\n【ここが絶対】\nsupporters argue〜とcritics point out〜という対立する立場の表現を目印に、それぞれの主張範囲を正確に区切って読む。',
     pitfall: `①で「利点」を答える際に、批判（負担が大きい等）の内容を混同して書かない。`,
     memoryTip: `however（しかし）の前後でsupporters（支持者）とcritics（批判者）の主張が切り替わる典型的な論説構造を意識する。`,
   },
@@ -673,7 +683,8 @@ Applicant: Yes, actually. Could you tell me more about the training new employee
 ③ Some supermarkets have started selling "ugly" fruits and vegetables at lower prices. / Apps that connect restaurants with unsold food to customers have become popular.
 ④ ・お金の節約になること。・埋め立て地で食品が分解される際に発生する温室効果ガスを減らし、環境保護につながること。`,
     hint: `①「Around one-third of all food produced in the world is wasted every year」。②「consumers buy more food than they need or throw away food that looks imperfect but is still safe to eat」。③「selling "ugly" fruits and vegetables at lower prices」「apps that connect restaurants with unsold food to customers」。④「important not only for saving money but also for protecting the environment」。`,
-    explanation: `【出題意図】食品ロスというグローバルな社会問題の論説文で、統計データ・原因・対策・意義を総合的に読み取る力を問う。【解説】①「Around one-third」＝約3分の1。②消費者の過剰購入と、見た目が悪いだけの食品の廃棄の2点。③スーパーでの規格外野菜の安売り、余った食品と客をつなぐアプリの普及の2つの対策。④not only A but also B（お金の節約だけでなく環境保護にも）の構文から2点を抽出する。【注意点】「not only A but also B」の構文が出てきたら、AとBの両方を答えに含めることを忘れない。【関連知識】food waste（食品廃棄・食品ロス）、landfill（埋め立て地）、greenhouse gas（温室効果ガス）は環境問題の英文で重要語彙。`,
+    explanation:
+      '【何を聞かれているか】\n食品廃棄についての英文を読んで、割合・原因・対策・重要性を答える問題。\n\n【なぜnot only A but also Bの構文に注目するのか】\n"important not only for saving money but also for protecting the environment"という構文が出てきたら、AとBの両方（お金の節約と環境保護）を答えに含める必要がある。\n\n【ポイント1】①割合を確認する\n"Around one-third of all food produced in the world is wasted every year"（世界の食料生産の約3分の1が毎年廃棄される）。\n\n【ポイント2】②原因を確認する\n"consumers buy more food than they need"（消費者の過剰購入）、"throw away food that looks imperfect but is still safe to eat"（見た目が不完全な食品の廃棄）の2点。\n\n【ポイント3】③④対策と重要性を確認する\n③は"selling \'ugly\' fruits and vegetables at lower prices"（規格外野菜の安売り）、"apps that connect restaurants with unsold food to customers"（余った食品と客をつなぐアプリ）の2つ。④はnot only A but also Bの両方（お金の節約と環境保護）。\n\n【答え】\n① 約3分の1。\n② ・消費者が必要以上の食料を買ってしまうこと。・見た目が不完全（規格外）だが食べても安全な食品を捨ててしまうこと。\n③ Some supermarkets have started selling "ugly" fruits and vegetables at lower prices. / Apps that connect restaurants with unsold food to customers have become popular.\n④ ・お金の節約になること。・埋め立て地で食品が分解される際に発生する温室効果ガスを減らし、環境保護につながること。\n\n【確かめ】\n④の答えが「お金の節約」だけで終わらず、not only... but also...の後半（環境保護）も含んでいるか確認する。\n\n【よくあるまちがい】\n④で「お金の節約」だけを答えて終わらせてしまうミス。not only A but also Bの構文が出てきたら、両方を答えに含める。\n\n【ここが絶対】\n"not only A but also B"という構文は、設問で「2点答えよ」と言われたときのヒントになりやすい。AとBのペアを見逃さない。',
     pitfall: `④で「お金の節約」だけを答えて終わらせない。not only... but also...の後半（環境保護）も必ず含める。`,
     memoryTip: `not only A but also B＝設問で「2点答えよ」と言われたときのヒントになりやすい構文。AとBのペアを見逃さない。`,
   },
@@ -703,7 +714,8 @@ Experts stress that reducing greenhouse gas emissions is the only long-term solu
 ③ 土地の多くがいずれ人が住めなくなる可能性があるという、国の存続に関わる深刻な脅威。
 ④ Reducing greenhouse gas emissions.`,
     hint: `①「As ice sheets in places like Greenland and Antarctica melt, the extra water flows into the ocean」。②「sea levels could rise by up to one meter by the end of this century」。③「much of their land could eventually become uninhabitable」。④「reducing greenhouse gas emissions is the only long-term solution」。`,
-    explanation: `【出題意図】地球温暖化と海面上昇という3段落構成の論説文で、原因・数値予測・具体的な国の事例・専門家の結論を統合的に読み取る最高難度の問題。【解説】①第1段落：氷床が溶けてその水が海に流れ込むことが直接の原因。②「up to one meter by the end of this century」＝最大約1メートル。③第2段落：ツバルは土地が居住不可能になりうるという存続に関わる脅威に直面している。④第3段落：「reducing greenhouse gas emissions is the only long-term solution」＝温室効果ガス排出の削減が唯一の長期的解決策（防波堤等は一時しのぎ）。【注意点】adaptation（適応策：防波堤等）とmitigation（緩和策：排出削減）の違いを区別する。本文では防波堤は「buy time（時間稼ぎ）」に過ぎないと明確に述べられている。【関連知識】sea level rise（海面上昇）、ice sheet（氷床）、existential threat（存続に関わる脅威）は環境問題の英文で重要語彙。`,
+    explanation:
+      '【何を聞かれているか】\n海面上昇についての3段落構成の英文を読んで、原因・予測・島国の問題・解決策を答える問題。\n\n【なぜ適応策と緩和策を区別するのか】\n本文では、防波堤の強化のような「一時しのぎ（適応策）」と、「温室効果ガス排出の削減という唯一の長期的解決策（緩和策）」が明確に区別されており、この違いを理解しないと④の答えを取り違えてしまう。\n\n【ポイント1】①原因を確認する\n"As ice sheets in places like Greenland and Antarctica melt, the extra water flows into the ocean."（氷床が溶け、その水が海に流れ込む）。\n\n【ポイント2】②数値を確認する\n"sea levels could rise by up to one meter by the end of this century"（今世紀末までに最大約1メートル上昇）。\n\n【ポイント3】③④島国の問題と解決策を確認する\n③は"much of their land could eventually become uninhabitable"（土地の多くが居住不可能になりうる）という存続の脅威。④は"reducing greenhouse gas emissions is the only long-term solution"（温室効果ガス排出削減が唯一の長期的解決策）。\n\n【答え】\n① Ice sheets in places like Greenland and Antarctica melt, and the extra water flows into the ocean.\n② 最大で1メートル程度上昇する可能性がある。\n③ 土地の多くがいずれ人が住めなくなる可能性があるという、国の存続に関わる深刻な脅威。\n④ Reducing greenhouse gas emissions.\n\n【確かめ】\n④の答えが「防波堤の強化」ではなく「温室効果ガス排出の削減」になっているか確認する。\n\n【よくあるまちがい】\n④を「防波堤を強化すること」と誤答してしまうミス。本文は防波堤等を一時的な対策と位置づけ、根本的解決は排出削減だと明言している。\n\n【ここが絶対】\n3段落論説文は「現象と原因→各国の対応事例→専門家の結論」という構成を意識する。一時的な対策（適応策）と根本的解決（緩和策）の違いを区別して読む。',
     pitfall: `④を「防波堤を強化すること」と誤答しない。本文は防波堤等を一時的な対策と位置づけ、根本的解決は排出削減だと明言している。`,
     memoryTip: `3段落論説文：段落1＝現象と原因、段落2＝各国の対応事例、段落3＝専門家の結論、という構成を意識して情報を整理する。`,
   },
@@ -747,7 +759,8 @@ Experts stress that reducing greenhouse gas emissions is the only long-term solu
 ③ ・勝利だけでなく、努力や上達に焦点を当てること。・厳しい批判を恐れずに選手が挑戦できる、安心できるチーム環境を作ること。
 ④ 才能はあっても互いを信頼していない選手だけで構成されたチームより、強い社会的なつながりを持つチームの方が、敗北から早く立ち直る傾向があるという研究結果。`,
     hint: `①「the ability to recover quickly from setbacks such as losing a game or making a mistake」。②「view failures as opportunities to learn rather than as proof that they are not good enough」。③「focusing on effort and improvement rather than only on winning」「creating a team environment where players feel safe to take risks」。④最終文をそのまま日本語にする。`,
-    explanation: `【出題意図】スポーツ心理学を題材にした論説文で、専門用語（resilience）の定義・行動パターン・指導方法・研究結果を段階的に読み取る力を問う。【解説】①resilience＝挫折から素早く立ち直る能力、と本文中で明確に定義されている。②失敗を学びの機会と捉える、という前向きな解釈。③コーチの働きかけ＝努力・上達重視、安心して挑戦できる環境作りの2点。④最終文：社会的なつながりが強いチームの方が、才能はあっても信頼関係のないチームより敗北から早く立ち直るという結果。【注意点】rather than A（Aではなく）の構文がここでは2回使われており（as proof... rather than、only on winning rather than）、否定される内容と肯定される内容を取り違えないようにする。【関連知識】resilience（レジリエンス・回復力）、setback（挫折・後退）、mindset（考え方・心構え）は心理学系の英文で重要語彙。`,
+    explanation:
+      '【何を聞かれているか】\nスポーツ心理学の「レジリエンス」についての英文を読んで、定義・行動パターン・指導方法・研究結果を答える問題。\n\n【なぜrather thanの構文に注目するのか】\n本文には"A rather than B"（BではなくA）という構文が2回使われており、実際に主張・推奨されているのはAの部分（学びの機会として捉える、努力・上達を重視する）であることを正確に読み取る必要がある。\n\n【ポイント1】①レジリエンスの定義を確認する\n"the ability to recover quickly from setbacks such as losing a game or making a mistake"（試合の敗北やミスなどの挫折から素早く立ち直る能力）。\n\n【ポイント2】②③行動パターンと指導方法を確認する\n②は"view failures as opportunities to learn rather than as proof that they are not good enough"（失敗を学びの機会と捉える）。③は"focusing on effort and improvement rather than only on winning"（努力・上達重視）、"creating a team environment where players feel safe to take risks"（安心して挑戦できる環境作り）の2点。\n\n【ポイント3】④研究結果を確認する\n社会的なつながりが強いチームの方が、才能はあっても信頼関係のないチームより敗北から早く立ち直る、という結果。\n\n【答え】\n① 試合に負けたりミスをしたりといった挫折から素早く立ち直る能力。\n② 失敗を「自分に能力がない証拠」としてではなく、「学ぶ機会」として捉える傾向がある。\n③ ・勝利だけでなく、努力や上達に焦点を当てること。・厳しい批判を恐れずに選手が挑戦できる、安心できるチーム環境を作ること。\n④ 才能はあっても互いを信頼していない選手だけで構成されたチームより、強い社会的なつながりを持つチームの方が、敗北から早く立ち直る傾向があるという研究結果。\n\n【確かめ】\n②の答えが「失敗を恐れる」のような逆の意味になっておらず、「学びの機会と捉える」という肯定的な内容になっているか確認する。\n\n【よくあるまちがい】\n②を否定的な意味に取り違えてしまうミス。rather than以降（as proof that they are not good enough）は否定される内容で、実際の主張はrather thanの前（as opportunities to learn）にある。\n\n【ここが絶対】\n"A rather than B"＝「BではなくA」。Aが実際に主張・推奨される内容であることを必ず確認する。',
     pitfall: `②を「失敗を恐れる」のように逆の意味にしない。本文は失敗を前向きな学びの機会と捉える、という肯定的な内容。`,
     memoryTip: `A rather than B＝「BではなくA」。Aが実際に主張・推奨される内容であることを必ず確認する。`,
   },
@@ -798,7 +811,8 @@ Manager: Perfect. We'll be in touch by the end of this week with our decision.`,
 ③ Tuesdays, Thursdays, and Saturdays.
 ④ 今週末までに採用の可否について連絡する、ということ。`,
     hint: `①「In my previous part-time job at a supermarket, I often dealt with customers who were unhappy about long lines or out-of-stock items」。②「I learned to stay calm and listen carefully before offering a solution」。③「I'm free on Tuesdays, Thursdays, and Saturdays」。④「We'll be in touch by the end of this week with our decision.」`,
-    explanation: `【出題意図】アルバイト面接という実用的対話文で、経験・対応の心がけ・具体的な条件（曜日）・今後の流れを正確に読み取る力を問う。【解説】①スーパーでの接客経験（行列・品切れへの不満対応）。②「stay calm and listen carefully before offering a solution」＝落ち着いて話を聞いてから解決策を示す。③「Tuesdays, Thursdays, and Saturdays」。④「be in touch by the end of this week with our decision」＝今週末までに結果を連絡する。【注意点】before offering a solution（解決策を提示する前に）という語順から、「まず聞く→その後に解決策」という手順を正確に読み取る。【関連知識】availability（対応可能な状況）、out-of-stock（品切れの）、be in touch（連絡を取る）はアルバイト・仕事関連の実用英語で頻出。`,
+    explanation:
+      '【何を聞かれているか】\nアルバイトの面接会話を読んで、経験・対応・曜日・面接後の流れを答える問題。\n\n【なぜbeforeの前後の順序を正確に読むのか】\n本文の"stay calm and listen carefully before offering a solution"は、「解決策を提示する前に」まず落ち着いて話を聞く、という順序を表しており、この順序を逆にすると答えが誤りになる。\n\n【ポイント1】①経験を確認する\n"In my previous part-time job at a supermarket, I often dealt with customers who were unhappy about long lines or out-of-stock items"（スーパーで行列・品切れへの不満対応をした経験）。\n\n【ポイント2】②心がけを確認する\n"I learned to stay calm and listen carefully before offering a solution"＝まず落ち着いて話を聞いてから解決策を提示する。\n\n【ポイント3】③④対応可能な曜日と面接後の流れを確認する\n③は"I\'m free on Tuesdays, Thursdays, and Saturdays"。④は"We\'ll be in touch by the end of this week with our decision."（今週末までに結果を連絡する）。\n\n【答え】\n① スーパーマーケットでのアルバイトで、長い行列や品切れについて不満を持つ客への対応を経験した。\n② まず落ち着いて相手の話をよく聞いてから、解決策を提示すること。\n③ Tuesdays, Thursdays, and Saturdays.\n④ 今週末までに採用の可否について連絡する、ということ。\n\n【確かめ】\n②の答えの順序が「まず聞く→その後解決策を示す」になっていて、逆になっていないか確認する。\n\n【よくあるまちがい】\n②の順序を逆にして「解決策を提示してから話を聞く」としてしまうミス。beforeの前後の順序を正確に読み取る。\n\n【ここが絶対】\n"A before B"＝「BよりAが先」。stay calm and listen（先）→offering a solution（後）という順序を正確に読み取る。',
     pitfall: `②の順序を逆にしない。「解決策を提示してから話を聞く」のではなく「まず落ち着いて聞き、その後解決策を示す」が正しい順序。`,
     memoryTip: `A before B＝「BよりAが先」。ここではstay calm and listen（先）→ offering a solution（後）の順序を表す。`,
   },
@@ -830,7 +844,7 @@ Manager: Perfect. We'll be in touch by the end of this week with our decision.`,
 この本は、私がこれまでに読んだ中で最も感動的な物語の一つだと思う。`,
     answer: `（解答例）I think this book is one of the most moving stories that I have ever read, and I would like to recommend it to everyone.（25語）`,
     hint: `「〜の中で最も…な一つ」はone of the most+形容詞+複数名詞。「これまでに読んだ中で」はthat I have ever read（現在完了の経験用法）。`,
-    explanation: `【出題意図】最上級の重要表現「one of the most+形容詞+複数名詞」と、現在完了の経験用法（ever）を組み合わせた英作文を問う。【解説】「最も感動的な物語の一つ」はone of the most moving stories（最上級+複数名詞、theは省略可）。「私がこれまでに読んだ中で」は関係代名詞thatを使ってthat I have ever read（現在完了の経験、everは「これまでに」を強調）。【注意点】one of the most+形容詞の後ろは必ず複数名詞（storiesであってstoryではない）にする。movingは「感動的な」という意味の現在分詞形容詞（moved=感動させられた、との違いに注意）。【関連知識】one of the+最上級+複数名詞（〜の中で最も…なものの一つ）は、highest score、best playersなど幅広い場面で使える定番表現。`,
+    explanation: `【出題意図】最上級の重要表現「one of the most+形容詞+複数名詞」と、現在完了の経験用法（ever）を組み合わせた英作文を問う。【解説】「最も感動的な物語の一つ」はone of the most moving stories（the＋最上級＋複数名詞）。「私がこれまでに読んだ中で」は関係代名詞thatを使ってthat I have ever read（現在完了の経験、everは「これまでに」を強調）。【注意点】one of the most+形容詞の後ろは必ず複数名詞（storiesであってstoryではない）にする。movingは「感動的な」という意味の現在分詞形容詞（moved=感動させられた、との違いに注意）。【関連知識】one of the+最上級+複数名詞（〜の中で最も…なものの一つ）は、highest score、best playersなど幅広い場面で使える定番表現。`,
     pitfall: `one of the most moving storyと単数名詞にしない。「one of the+最上級」の後ろは必ず複数形。`,
     memoryTip: `one of the+最上級+複数名詞＝「最も…な（複数の中の）一つ」。最上級の後ろは必ず複数名詞になる点を強く意識する。`,
   },
@@ -892,9 +906,10 @@ Manager: Perfect. We'll be in touch by the end of this week with our decision.`,
     question: `次の日本語を英語に訳しなさい。（20語以上）
 
 将来何になりたいかまだ決めていないが、人の役に立つ仕事に就きたいとは思っている。`,
-    answer: `（解答例）I haven't decided what I want to be in the future yet, but I want to have a job that helps other people.（22語）`,
+    answer: `（解答例）I haven't decided what I want to be in the future yet, but I want to have a job that helps other people.（23語）`,
     hint: `「まだ〜していない」は現在完了の否定形+yet。「何になりたいか」は間接疑問文what I want to be。「人の役に立つ仕事」は関係代名詞thatを使う。`,
-    explanation: `【出題意図】現在完了+yet、間接疑問文、関係代名詞thatを組み合わせた複合的な英作文を問う。【解説】「まだ決めていない」はI haven't decided〜yet（現在完了の否定＋文末のyet）。「将来何になりたいか」はdecidedの目的語になる間接疑問文what I want to be in the future（疑問詞+主語+動詞の語順）。「人の役に立つ仕事に就きたい」はI want to have a job that helps other people（関係代名詞thatが主格でjobを修飾、helpsは3単現のs）。【注意点】間接疑問文はWhat do I want to be?の語順にしない。また関係代名詞節内の動詞は先行詞jobに合わせてhelps（3人称単数）にする。【関連知識】haven't decided yet（まだ決めていない）、a job that helps〜（〜の役に立つ仕事）は将来の夢に関する英作文で頻出のフレーズ。`,
+    explanation:
+      '【何を聞かれているか】\n「将来何になりたいかまだ決めていないが、人の役に立つ仕事に就きたいとは思っている。」という日本語を、20語以上の英語にする問題。\n\n【なぜ間接疑問文と関係代名詞を組み合わせるのか】\n「まだ決めていない」＋「将来何になりたいか」＋「人の役に立つ仕事」という3つの内容を1つの文にまとめるには、現在完了＋yet、間接疑問文、関係代名詞thatという3つの文法をそれぞれ正しい位置で使う必要がある。\n\n【ポイント1】"まだ決めていない"の部分を組み立てる\n"I haven\'t decided〜yet"（現在完了の否定＋文末のyet）。\n\n【ポイント2】"何になりたいか"の部分を組み立てる\ndecidedの目的語になる間接疑問文"what I want to be in the future"（疑問詞＋主語＋動詞の語順）。\n\n【ポイント3】"人の役に立つ仕事"の部分を組み立てる\n"a job that helps other people"（関係代名詞thatが主格でjobを修飾。先行詞jobに合わせてhelpsと3単現のsをつける）。\n\n【答え】\n（解答例）I haven\'t decided what I want to be in the future yet, but I want to have a job that helps other people.（23語）\n\n【確かめ】\n間接疑問文の部分が"what do I want to be"のような疑問文の語順になっていないこと、関係代名詞節の動詞がhelps（3人称単数）になっていることを確認する。\n\n【よくあるまちがい】\n関係代名詞節内の動詞をhelpにしてしまうミス。先行詞a job（単数）に合わせてhelpsにする。\n\n【ここが絶対】\n間接疑問文は「疑問詞＋主語＋動詞」の語順、関係代名詞節内の動詞は先行詞の人称・数に一致させる、という2点を必ず確認する。',
     pitfall: `関係代名詞節内の動詞をhelpとしない。先行詞a job（単数）に合わせてhelpsにする。`,
     memoryTip: `間接疑問文は「疑問詞＋主語＋動詞」、関係代名詞節内の動詞は先行詞の人称・数に一致させる、の2点を必ず確認する。`,
   },
@@ -910,7 +925,8 @@ Manager: Perfect. We'll be in touch by the end of this week with our decision.`,
 多くの生徒が試験前に十分な睡眠を取ることの大切さを忘れがちだ。`,
     answer: `（解答例）Many high school students tend to forget how important it is to get enough sleep the night before an exam.（20語）`,
     hint: `「〜しがちだ」はtend to〜。「〜することの大切さ」は形式主語構文how important it is to〜。`,
-    explanation: `【出題意図】tend to〜（〜しがちである）という頻度・傾向を表す表現と、形式主語構文it is 〜 to doを組み合わせた英作文を問う。【解説】「忘れがちだ」はtend to forget（tend to〜=〜する傾向がある）。「十分な睡眠を取ることの大切さ」はhow important it is to get enough sleep（間接疑問文＋形式主語構文の組み合わせで「それがどれほど重要か」を表す）。「試験前に」はbefore an exam。【注意点】the importance of getting enough sleepという名詞句を使う書き方も可能だが、how important it is to〜の方が構文としてより実践的で応用が利く。tend toの後ろは動詞の原形（forget）。【関連知識】tend to〜（〜する傾向がある）、be likely to〜（〜しそうである）はいずれも一般的傾向を述べる際に頻出の表現。`,
+    explanation:
+      '【何を聞かれているか】\n「多くの生徒が試験前に十分な睡眠を取ることの大切さを忘れがちだ。」という日本語を、20語以上の英語にする問題。\n\n【なぜtend toと形式主語構文を組み合わせるのか】\n「〜しがちだ」という一般的な傾向はtend to〜で表し、「〜することの大切さ」という内容は、間接疑問文と形式主語構文を組み合わせた"how important it is to〜"で表す。\n\n【ポイント1】"〜しがちだ"の部分を組み立てる\ntend to forget（tend to〜＝〜する傾向がある）。tend toの後ろは動詞の原形。\n\n【ポイント2】"〜することの大切さ"の部分を組み立てる\n"how important it is to get enough sleep"（それがどれほど重要かという間接疑問文＋形式主語構文の組み合わせ）。\n\n【ポイント3】"試験前に"の部分を組み立てる\n"the night before an exam"（試験の前夜に）。\n\n【答え】\n（解答例）Many high school students tend to forget how important it is to get enough sleep the night before an exam.（20語）\n\n【確かめ】\n"how important it is to〜"の部分が疑問文の語順（how is it important）になっていないことを確認する。\n\n【よくあるまちがい】\n"how is it important to〜"のように疑問文の語順にしてしまうミス。間接的な名詞節として平叙文の語順を保つ必要がある。\n\n【ここが絶対】\ntend to do＝「〜する傾向がある」、"how＋形容詞＋it is to do"＝「〜することがどれほど…か」という2つの構文をセットで覚える。',
     pitfall: `how important it is to〜の部分をhow is it important to〜のように疑問文の語順にしない。間接的な名詞節として平叙文の語順を保つ。`,
     memoryTip: `tend to do＝「〜する傾向がある」、how+形容詞+it is to do＝「〜することがどれほど…か」とセットで覚える。`,
   },
@@ -942,9 +958,9 @@ Manager: Perfect. We'll be in touch by the end of this week with our decision.`,
 テーマ：「高校生がスマートフォンを授業中に使うことを許可すべきだと思いますか。」
 
 （I think / I don't think で書き始めること）`,
-    answer: `（賛成例）I think high school students should be allowed to use smartphones during class in some situations. Smartphones can be useful tools for looking up information quickly and taking notes efficiently. However, students should use them only when the teacher gives permission, so that they do not get distracted from studying.（46語）
+    answer: `（賛成例）I think high school students should be allowed to use smartphones during class in some situations. Smartphones can be useful tools for looking up information quickly and taking notes efficiently. However, students should use them only when the teacher gives permission, so that they do not get distracted from studying.（50語）
 
-（反対例）I don't think high school students should be allowed to use smartphones during class. Many students would probably use them to check social media or play games instead of listening to the teacher. Furthermore, it could be difficult for teachers to control how each student is using their phone during a lesson.（49語）`,
+（反対例）I don't think high school students should be allowed to use smartphones during class. Many students would probably use them to check social media or play games instead of listening to the teacher. Furthermore, it could be difficult for teachers to control how each student is using their phone during a lesson.（52語）`,
     hint: `主張→理由1→理由2（または譲歩＋補足）の構成で書く。However/Furthermoreなどの接続語で論理をつなぐ。`,
     explanation: `【出題意図】授業中のスマートフォン使用の是非について、35語以上で主張と理由を論理的にまとめる意見英作文を問う。【解説】賛成の理由例：情報検索やメモに便利、ただし教師の許可がある場合に限定するという条件付き賛成の立場。反対の理由例：SNSやゲームに気を取られる可能性、教師が使用状況を管理しにくいこと。いずれの立場でも、however/furthermoreのような論理接続語を使うと文章の流れが明確になる。【注意点】35語以上を確実に満たすため、理由を1つだけでなく、条件や補足（howeverの後の内容等）まで加えて具体性を持たせる。主語と動詞の一致（studentsは複数、smartphoneの単数/複数）にも注意する。【関連知識】スマートフォン・教育関連語彙：distract（気を散らす）、permission（許可）、efficiently（効率的に）は意見英作文で使いやすい語彙。`,
     pitfall: `I think smartphones are useful.のように理由が漠然としたまま終わらせず、「いつ・どのように使うべきか」といった具体的な条件まで踏み込んで書くと説得力が増す。`,
@@ -964,7 +980,7 @@ Manager: Perfect. We'll be in touch by the end of this week with our decision.`,
 （I agree / I disagree で書き始めること）`,
     answer: `（賛成例）I agree that students should wear school uniforms. Uniforms make it easier for students to focus on studying instead of worrying about fashion every morning. In addition, uniforms create a sense of equality among students, regardless of their family's financial situation.（41語）
 
-（反対例）I disagree that students should be required to wear school uniforms. Students should be free to express their own personality through the clothes they choose to wear. Moreover, uniforms can be expensive for families, and students may feel uncomfortable in clothes that do not fit them well.（46語）`,
+（反対例）I disagree that students should be required to wear school uniforms. Students should be free to express their own personality through the clothes they choose to wear. Moreover, uniforms can be expensive for families, and students may feel uncomfortable in clothes that do not fit them well.（47語）`,
     hint: `賛成の理由：勉強への集中、経済的平等。反対の理由：個性の表現、経済的負担。In additionやMoreoverでつなぐ。`,
     explanation: `【出題意図】学校制服の是非という定番テーマで、35語以上の意見英作文を通じて主張・理由・補足を論理的に展開する力を問う。【解説】賛成の理由例：ファッションを気にせず勉強に集中できる、家庭の経済状況にかかわらず平等感が生まれる。反対の理由例：服装を通じた個性の表現の自由、制服の費用負担、体に合わない服の不快感。in addition（さらに）、moreover（その上）は理由を追加する際の定番の接続語。【注意点】語数条件を満たすため、理由を最低でも2点挙げる。文法面ではshould be allowed to〜/should be required to〜のような受動態表現も使えるようにしておく。【関連知識】uniform（制服）、equality（平等）、personality（個性）は学校生活の意見英作文で頻出のテーマ語彙。`,
     pitfall: `理由を1つだけ（例：「かわいいから」等の主観的な理由のみ）で終わらせず、社会的・経済的観点も含めて具体性を持たせる。`,
@@ -982,9 +998,9 @@ Manager: Perfect. We'll be in touch by the end of this week with our decision.`,
 テーマ：「中学生や高校生がアルバイトをすることに賛成ですか、反対ですか。」
 
 （I agree / I disagree で書き始めること）`,
-    answer: `（賛成例）I agree that high school students should be allowed to have part-time jobs. Working part-time helps students learn how to manage their time and money responsibly. It also gives them a chance to experience the real world outside of school before they graduate.（42語）
+    answer: `（賛成例）I agree that high school students should be allowed to have part-time jobs. Working part-time helps students learn how to manage their time and money responsibly. It also gives them a chance to experience the real world outside of school before they graduate.（43語）
 
-（反対例）I disagree that junior high and high school students should work part-time jobs. Their main responsibility at this stage of life is to focus on their studies. If students spend too much time working, they may become too tired to concentrate on schoolwork and lose sleep.（44語）`,
+（反対例）I disagree that junior high and high school students should work part-time jobs. Their main responsibility at this stage of life is to focus on their studies. If students spend too much time working, they may become too tired to concentrate on schoolwork and lose sleep.（46語）`,
     hint: `賛成：時間管理・お金の管理、社会経験。反対：本分は勉強、疲労による学業への悪影響。`,
     explanation: `【出題意図】学生のアルバイトの是非という身近なテーマで、35語以上の理由付きの意見英作文を作成する力を問う。【解説】賛成の理由例：時間とお金の管理を学べる、社会経験を積める。反対の理由例：学業が本分である、働きすぎて集中力や睡眠に悪影響が出る可能性。いずれの立場も「their main responsibility」「real world experience」のような具体的な語句を使うと説得力が増す。【注意点】If節を使う場合はif+現在形（If students spend too much time）とし、条件文の基本形を守る。語数条件（35語以上）を満たすため、理由を2つ以上、または理由＋具体的な影響まで書く。【関連知識】part-time job（アルバイト）、manage time and money（時間とお金を管理する）、concentrate on〜（〜に集中する）はこのテーマで頻出の表現。`,
     pitfall: `賛成・反対どちらの立場でも、単に「楽しいから」「大変だから」のような感想だけで終わらせず、学業や将来への影響という観点まで触れると評価が高くなる。`,
@@ -1002,9 +1018,9 @@ Manager: Perfect. We'll be in touch by the end of this week with our decision.`,
 テーマ：「競争（competition）は生徒の成長にとって良いものだと思いますか。」
 
 （I think / I don't think で書き始めること）`,
-    answer: `（賛成例）I think competition is good for students' growth. When students compete with each other, they often try harder to improve their skills than they would on their own. Moreover, competition can teach students how to accept both success and failure, which is an important life skill.（44語）
+    answer: `（賛成例）I think competition is good for students' growth. When students compete with each other, they often try harder to improve their skills than they would on their own. Moreover, competition can teach students how to accept both success and failure, which is an important life skill.（46語）
 
-（反対例）I don't think competition is always good for students' growth. Too much competition can create unnecessary stress and make students who are not as skilled feel discouraged. Instead, schools should focus more on cooperation, helping students support each other and grow together as a team.（43語）`,
+（反対例）I don't think competition is always good for students' growth. Too much competition can create unnecessary stress and make students who are not as skilled feel discouraged. Instead, schools should focus more on cooperation, helping students support each other and grow together as a team.（45語）`,
     hint: `賛成：努力の促進、成功と失敗を受け入れる力。反対：過度なストレス、協力の重要性。`,
     explanation: `【出題意図】競争と協力という対立するテーマについて、35語以上で自分の立場と理由を論理的に展開する意見英作文を問う。【解説】賛成の理由例：競争によって一人でやるよりも努力するようになる、成功と失敗を受け入れる力が身につく。反対の理由例：過度な競争は不必要なストレスを生み、苦手な生徒を落胆させる可能性がある、協力を重視すべきという主張。moreover/insteadのような接続語を使って理由や代案を明確に示す。【注意点】「competition is good」と単純に述べるだけでなく、「for students' growth（生徒の成長にとって）」という設問の観点に沿った理由を書くことが重要。反対の立場ではinstead（その代わりに）を使って代案（cooperation）を提示すると説得力が増す。【関連知識】competition（競争）、cooperation（協力）、discouraged（落胆した）は学校生活・教育をテーマにした意見英作文で頻出の対立語彙。`,
     pitfall: `賛成・反対のどちらの立場でも、設問のテーマ「生徒の成長」という観点からずれた理由（例：単に楽しいから）だけで終わらせない。`,

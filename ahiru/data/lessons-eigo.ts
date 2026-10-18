@@ -21,6 +21,7 @@ import { lessonsNew20E6Eigo } from './lessons-new20-e6-eigo';
 const eigoOverviewLessons: Lesson[] = [
   {
     id: 'eigo_01_bunpo_kihon',
+    studyPeriod: '小6前半',
     subject: 'eigo',
     title: '英語の基本文型と時制の完全マスター',
     description: '入試の核心！5文型と時制のルールを体系的に学ぶ',
@@ -37,6 +38,7 @@ const eigoOverviewLessons: Lesson[] = [
     sections: [
       {
         heading: '1. 5文型の理解',
+        mangaId: 'eigo_01_bunkeigo_manga',
         body: `英語の文はすべて「5つの文型」に分類できる。これを理解すると、どんな長い文でも構造が見えてくる。
 
 ■ 第1文型 SV（主語＋動詞）
@@ -103,7 +105,7 @@ const eigoOverviewLessons: Lesson[] = [
 ・子音字＋y→yをiに変えて＋ed：study→studied / try→tried / carry→carried
 ・短母音＋子音字→子音字を重ねて＋ed：stop→stopped / plan→planned / drop→dropped
 
-■ 不規則変化動詞（重要50語）
+■ 不規則変化動詞（重要49語）
 go→went / come→came / see→saw / do→did / have→had / make→made
 get→got / give→gave / take→took / know→knew / think→thought
 write→wrote / read→read（発音はred）/ run→ran / eat→ate
@@ -283,6 +285,7 @@ I wish ＋ 仮定法過去完了：「〜だったらよかったのになぁ」
   },
   {
     id: 'eigo_02_meishi_daimeishi',
+    studyPeriod: '小6前半',
     subject: 'eigo',
     title: '名詞・代名詞・冠詞の完全理解',
     description: '細かいがよく出る！冠詞と代名詞の使い分けをマスター',
@@ -381,6 +384,7 @@ I wish ＋ 仮定法過去完了：「〜だったらよかったのになぁ」
       },
       {
         heading: '3. 人称代名詞と格変化',
+        mangaId: 'eigo_02_daimeishi_manga',
         body: `人称代名詞は文の中での役割（格）によって形が変わる。入試では空欄補充で格を選ぶ問題が頻出。
 
 ■ 格変化一覧表
@@ -417,6 +421,7 @@ myself / yourself / himself / herself / itself / ourselves / yourselves / themse
       },
       {
         heading: '4. 指示代名詞・不定代名詞',
+        mangaId: 'eigo_02_shiji_daimeishi_manga',
         body: `■ 指示代名詞
 ・this（これ）/ that（あれ）→ 単数
 ・these（これら）/ those（あれら）→ 複数
@@ -495,7 +500,7 @@ a) other   b) another   c) the other   d) the others
 ・ox → oxen（雄牛）
 ・単複同形（単数と複数が同じ形）
 　sheep → sheep / fish → fish / deer → deer / series → series / species → species
-⚠ 注意：「fish」は個々の魚を指す場合はfishes（複数種の魚）ともなる。
+⚠ 注意：「fish」はふつう単複同形だが、種類のちがう魚をまとめて言うときは fishes ともなる。
 
 ■ 常に複数形で使われる名詞（s がないと意味が変わる）
 ・scissors（はさみ）/ glasses（眼鏡）/ pants（ズボン）/ stairs（階段）
@@ -532,6 +537,7 @@ a) other   b) another   c) the other   d) the others
   },
   {
     id: 'eigo_03_dokkai',
+    studyPeriod: '小6後半・直前',
     subject: 'eigo',
     title: '長文読解の攻略技術',
     description: '入試英語の配点No.1！長文を速く正確に読む',
@@ -655,7 +661,8 @@ a) other   b) another   c) the other   d) the others
 
 ・逆接：However / But / Although / Nevertheless
 ・追加：In addition / Also / Furthermore / Moreover
-・理由：Because / Since / Therefore / As a result
+・理由：Because / Since
+・結果：Therefore / As a result
 ・例示：For example / For instance
 
 ■ 表題選択問題（タイトル・テーマ）の解法
@@ -792,6 +799,7 @@ d) Why Children Are Better Language Learners
   },
   {
     id: 'eigo_04_eibun',
+    studyPeriod: '小6後半・直前',
     subject: 'eigo',
     title: '英作文・英文並び替えの攻略',
     description: '配点が高い英作文を自信を持って書けるようにする',
@@ -987,15 +995,15 @@ WH疑問文でbe動詞を使う場合：疑問詞 ＋ be動詞 ＋ 主語
 【問題2】次の日本語を英語にしなさい。（6語以上で答えること）
 「私は将来、英語の先生になりたいと思っています。」
 
-【解答例】I want to be an English teacher in the future.（9語）
-【別解】I hope to become an English teacher when I grow up.（10語）
+【解答例】I want to be an English teacher in the future.（10語）
+【別解】I hope to become an English teacher when I grow up.（11語）
 【解説】「〜になりたい」= want to be / hope to become。「将来」= in the future / when I grow up。「英語の先生」= an English teacher（冠詞anを忘れない）。
 
 【問題3】次のテーマについて、60語程度の英語で自分の意見を書きなさい。
 「スマートフォンは子どもにとって良いものか、悪いものか？」
 
 【解答例】
-I think that smartphones are useful for children. First, they can learn many things by searching the internet. For example, I often use my phone to look up new words when I study English. However, we should not use smartphones too much. In conclusion, if children use them wisely, smartphones are a helpful tool.（約60語）
+I think that smartphones are useful for children. First, they can learn many things by searching the internet. For example, I often use my phone to look up new words when I study English. However, we should not use smartphones too much. In conclusion, if children use them wisely, smartphones are a helpful tool.（54語）
 【ポイント】First→For example→However→In conclusionの流れで論理的に展開している。`,
       },
       {
@@ -1050,6 +1058,7 @@ I think that smartphones are useful for children. First, they can learn many thi
   },
   {
     id: 'eigo_05_bunpo_oyo',
+    studyPeriod: '小6後半・直前',
     subject: 'eigo',
     title: '不定詞・動名詞・関係詞・接続詞の応用',
     description: '中学英語の集大成！複雑な文を作る文法を完全習得',
@@ -1195,6 +1204,7 @@ I think that smartphones are useful for children. First, they can learn many thi
       },
       {
         heading: '4. 接続詞と副詞節',
+        mangaId: 'eigo_05_setsuzokushi_manga',
         body: `接続詞は「文と文をつなぐ言葉」。副詞節を作る接続詞は意味と時制のルールが入試で問われる。
 
 ■ 時を表す接続詞
@@ -1318,6 +1328,7 @@ a) after   b) until   c) because   d) although
   },
   {
     id: 'eigo_06_listening_speaking',
+    studyPeriod: '小6後半・直前',
     subject: 'eigo',
     title: 'リスニング対策と英語表現の幅を広げる',
     description: '入試リスニング・会話表現・語彙強化の総まとめ',
@@ -1588,7 +1599,7 @@ d) How long did it take?
 ■ 英語圏の文化・習慣（入試背景知識問題）
 入試では英語圏の文化的慣習を問う長文が出る。知識として押さえておこう。
 
-・Thanks giving（感謝祭）：11月の第4木曜日、アメリカの伝統的な祝日。七面鳥を食べる。
+・Thanksgiving（感謝祭）：11月の第4木曜日、アメリカの伝統的な祝日。七面鳥を食べる。
 ・Halloween（ハロウィン）：10月31日。子どもが仮装して "Trick or treat!" と言ってお菓子をもらう。
 ・Christmas（クリスマス）：12月25日。プレゼントを交換する習慣。サンタクロース（Santa Claus）。
 ・チップ（Tipping）：アメリカではレストランでの飲食後に15〜20%のチップを払う習慣がある。
@@ -1602,6 +1613,7 @@ d) How long did it take?
   },
   {
     id: 'eigo_07_alphabet_phonics',
+    studyPeriod: '小4',
     subject: 'eigo',
     title: 'アルファベット・フォニックス・ローマ字',
     description: '英語のいちばん最初！文字・音・ローマ字の基礎を固める',
@@ -1718,7 +1730,7 @@ ph →「フ」（phone 電話）／ ck →「ク」（duck あひる）
 例）ふじさん → 訓令式 huzisan ／ ヘボン式 Fujisan
 
 ■ のばす音・つまる音・「ん」の書き方
-・のばす音（長音）：訓令式は母音の上に「＾」（ô）、ヘボン式はのばさず書くか o を重ねる
+・のばす音（長音）：訓令式は母音の上に「＾」（ô）、ヘボン式は「ō」のように上に横棒をつけるか、のばさず書く
 　例）おおさか → Osaka ／ とうきょう → Tokyo（ヘボン式では長音記号を省くことが多い）
 ・つまる音（促音「っ」）：次の子音を重ねる
 　例）きっぷ → kippu ／ がっこう → gakkou（gakkô）
@@ -1841,6 +1853,7 @@ iamtom
   },
   {
     id: 'eigo_08_be_ippan_doushi',
+    studyPeriod: '小5前半',
     subject: 'eigo',
     title: 'be動詞と一般動詞の基礎',
     description: '英文づくりの土台！2種類の動詞と肯定・否定・疑問を完全マスター',
@@ -1890,6 +1903,7 @@ She is → She's ／ It is → It's ／ We are → We're ／ They are → They'r
       },
       {
         heading: '2. 一般動詞の使い方と三人称単数のs',
+        mangaId: 'eigo_08_sanninshou_manga',
         body: `一般動詞は「動作や状態」を表す動詞。be動詞（am/is/are）以外の動詞はすべて一般動詞だ。
 
 ■ 一般動詞の例
@@ -1929,6 +1943,7 @@ study（勉強する）／ run（走る）／ eat（食べる）／ read（読�
       },
       {
         heading: '3. 否定文の作り方（〜でない・〜しない）',
+        mangaId: 'eigo_08_hitei_manga',
         body: `「〜ではない」「〜しない」という否定文の作り方は、be動詞と一般動詞でまったく違う。ここを区別するのが最重要。
 
 ■ be動詞の否定文：be動詞のあとに not を置く
@@ -2006,11 +2021,11 @@ do not → don't ／ does not → doesn't
         body: `be動詞と一般動詞を正しく区別できるかが、英文法の第一関門。問題で確認しよう。
 
 ■ 使い分けのまとめ表
-　be動詞（am/is/are）／一般動詞（play/like等）
-　意味 … 一般動詞（play/like等）は〜です・いる/ある／動作・状態
-　否定文 … 一般動詞（play/like等）はbe動詞＋not／do/does not＋原形
-　疑問文 … 一般動詞（play/like等）はbe動詞を前へ／Do/Doesを前へ＋原形
-　答え … 一般動詞（play/like等）はYes, I am.／Yes, I do.
+　項目／be動詞（am/is/are）／一般動詞（play/like等）
+　意味 … be動詞（am/is/are）は〜です・いる/ある／一般動詞（play/like等）は動作・状態
+　否定文 … be動詞（am/is/are）はbe動詞＋not／一般動詞（play/like等）はdo/does not＋原形
+　疑問文 … be動詞（am/is/are）はbe動詞を前へ／一般動詞（play/like等）はDo/Doesを前へ＋原形
+　答え … be動詞（am/is/are）はYes, I am.／一般動詞（play/like等）はYes, I do.
 
 【問題1】（　）に am / is / are のどれかを入れなさい。
 ① I (   ) a soccer fan.　② She (   ) very kind.　③ They (   ) my classmates.
@@ -2082,6 +2097,7 @@ be動詞を使った特別な形。「（場所に）〜がある／いる」を
   },
   {
     id: 'eigo_09_gimonshi',
+    studyPeriod: '小5後半',
     subject: 'eigo',
     title: '疑問詞（what/who/where/when/how など）で質問する',
     description: '5W1Hを使いこなす！具体的にたずねる疑問文の作り方',
@@ -2188,6 +2204,7 @@ be動詞を使った特別な形。「（場所に）〜がある／いる」を
       },
       {
         heading: '4. why・which・whose と答え方',
+        mangaId: 'eigo_09_whywhichwhose_manga',
         body: `残りの疑問詞 why（なぜ）・which（どちら）・whose（だれの）を覚えれば、疑問詞はすべてそろう。
 
 ■ why（なぜ）と答え方
@@ -2213,15 +2230,15 @@ be動詞を使った特別な形。「（場所に）〜がある／いる」を
 ★ 答え方：mine（私の）／ yours（あなたの）／ Tom's（トムの）など所有を表す語。
 
 ■ 疑問詞のまとめ表
-　疑問詞／意味／答えの例
-| what | なに | It's a pen. |
-　who／だれ／She is my sister.
-　where … だれはどこ／She is my sister.はIn Osaka.
-　when … だれはいつ／She is my sister.はOn Sunday.
-| why | なぜ | Because it's fun. |
-| how | どうやって/どのくらい | By bus. / I'm fine. |
-　which／どちら／This one.
-| whose | だれの | It's mine. |
+（疑問詞／意味／答えの例）
+・what … なに／It's a pen.
+・who … だれ／She is my sister.
+・where … どこ／In Osaka.
+・when … いつ／On Sunday.
+・why … なぜ／Because it's fun.
+・how … どうやって/どのくらい／By bus. / I'm fine.
+・which … どちら／This one.
+・whose … だれの／It's mine.
 
 ⚠ 注意：疑問詞疑問文には Yes/No で答えず、たずねられた内容を答える。これが最重要ルール。`,
       },
@@ -2264,6 +2281,7 @@ This is Tom's bag.（下線部：Tom's）
       },
       {
         heading: '★ MAXレベル：間接疑問文・付加疑問・疑問詞＋to',
+        mangaId: 'eigo_09_fukagimonbun_manga',
         body: `■ 間接疑問文（疑問文が文の中に入る形）
 疑問文が別の文の一部になると、語順が「疑問詞 ＋ 主語 ＋ 動詞」（ふつうの文の語順）に変わる。do/does/did は使わない。
 ・直接疑問：Where does she live?
@@ -2302,6 +2320,7 @@ why のくだけた言い方。ただし語順がふつうの文（主語＋動�
   },
   {
     id: 'eigo_10_can_meirei',
+    studyPeriod: '小5後半',
     subject: 'eigo',
     title: 'can・命令文・助動詞の基礎',
     description: '「できる」「〜しなさい」「〜しよう」を表す表現をマスター',
@@ -2317,6 +2336,7 @@ why のくだけた言い方。ただし語順がふつうの文（主語＋動�
     sections: [
       {
         heading: '1. can の使い方（能力・可能）',
+        mangaId: 'eigo_10_can_manga',
         body: `can は「〜できる」という意味を表す言葉。動詞を助ける働きをするので「助動詞（じょどうし）」と呼ばれる。
 
 ■ can の基本の形
@@ -2419,6 +2439,7 @@ Let's（Let us の短縮）＋ 動詞の原形 で「（いっしょに）〜し
       },
       {
         heading: '4. その他の助動詞（will / must / should / may）',
+        mangaId: 'eigo_10_willmust_manga',
         body: `can 以外にも、動詞に意味を加える助動詞がある。どれも「助動詞 ＋ 動詞の原形」の形は共通。
 
 ■ will（〜するつもりだ・〜だろう）：未来を表す
@@ -2540,6 +2561,7 @@ should より強い忠告。「そうしないとまずい」というニュア�
   },
   {
     id: 'eigo_11_aisatsu_kaiwa',
+    studyPeriod: '小4',
     subject: 'eigo',
     title: 'あいさつ・自己紹介・数・曜日・時間の会話表現',
     description: '英語で話す第一歩！日常の決まり文句と数・時・曜日を身につける',
@@ -2753,7 +2775,7 @@ spring（春）, summer（夏）, fall / autumn（秋）, winter（冬）
 ・Speaking.（私です）※本人が出たとき
 ・Hold on, please. / Just a moment, please.（少々お待ちください）
 ・Can I take a message?（伝言をうかがいましょうか）／ Can I leave a message?（伝言をお願いできますか）
-⚠ 注意：電話では自分を this is 〜、相手を you ではなく you のままだが、名乗りは this is。I am Tom とは言わない。
+⚠ 注意：電話で名乗るときは this is 〜 を使う。I am Tom とは言わない。
 
 ■ レストラン・食事での会話
 ・注文をとる：Are you ready to order?（ご注文はお決まりですか）
@@ -2769,10 +2791,10 @@ spring（春）, summer（夏）, fall / autumn（秋）, winter（冬）
 ・お礼：Thank you. — You're welcome.
 
 ■ ていねいさの段階（同じ内容でも表現で印象が変わる）
-　カジュアル／ふつう／ていねい
-　Open the window. … ふつうはCan you open the window?／ていねいはCould you open the window?
-| I want water. | I'd like water. | I'd like some water, please. |
-　What?／Pardon?／I beg your pardon?
+（カジュアル／ふつう／ていねい）
+・Open the window. … Can you open the window?／Could you open the window?
+・I want water. … I'd like water.／I'd like some water, please.
+・What? … Pardon?／I beg your pardon?
 ★ 入試のリスニング・会話問題では、場面（店・電話・食事・道案内）と、ていねいさのレベルを聞き分ける力が問われる。決まり文句をかたまりで覚えておくと即得点につながる。`,
         maxOnly: true,
       },
@@ -2798,6 +2820,7 @@ spring（春）, summer（夏）, fall / autumn（秋）, winter（冬）
     sections: [
       {
         heading: '1. 場所を表す前置詞（in / on / at / under / near など）',
+        mangaId: 'eigo_12_bashozenchishi_manga',
         body: `前置詞は名詞の前に置いて「場所・時・関係」を表す小さな単語だが、入試では空所補充・並び替え・英作文のあらゆる場面で問われる最重要分野の一つ。
 
 ■ in・on・at の基本イメージ
@@ -2832,6 +2855,7 @@ on a bus / on a train / on a plane（広く移動できる乗り物：乗って�
       },
       {
         heading: '2. 時を表す前置詞（at / on / in / for / during）',
+        mangaId: 'eigo_12_zenchishi_manga',
         body: `時を表す前置詞は「範囲の広さ」で使い分けるとわかりやすい。狭い範囲から広い範囲の順に整理しよう。
 
 ■ at・on・in の使い分け（時刻・曜日・月）
@@ -3039,6 +3063,7 @@ The cat is popular (   ) students in our school. (between / among)
     sections: [
       {
         heading: '1. 比較級・最上級の作り方',
+        mangaId: 'eigo_13_hikaku_manga',
         body: `「AはBより〜だ」「Aがいちばん〜だ」という比較の表現は、形容詞・副詞の形を変えて作る。まずは基本の作り方のルールを整理しよう。
 
 ■ 語尾に-er / -estをつけるパターン（原則：1音節の短い語）
@@ -3262,6 +3287,7 @@ This is one of the (biggest / bigger) cities (of / in) Japan.
     sections: [
       {
         heading: '1. There is/are の基本の形',
+        mangaId: 'eigo_14_thereisare_manga',
         body: `「〜がある」「〜がいる」と、あるものの存在を伝えるときに使う特別な構文がThere is/are構文。日本語につられて主語をまちがえやすいので、形をしっかり覚えよう。
 
 ■ There is/are の基本形
@@ -3472,7 +3498,7 @@ There is/are と似た形でHere is/areがある。「ここに〜がある」�
       `否定文はbe動詞＋not＋-ing、疑問文はbe動詞を主語の前に出す`,
       `whenは「〜したとき（一点）」、whileは「〜している間（継続）」。過去進行形とセットでよく使われる`,
       `現在進行形は近い未来の予定を表すこともある（I'm leaving tomorrow.）`,
-      `just/right nowは現在進行形、at that timeやwhen〜は過去進行形のサインワード`,
+      `now/right nowは現在進行形、at that timeやwhen〜は過去進行形のサインワード`,
     ],
     order: 15,
     examType: 'chugaku',
@@ -3511,6 +3537,7 @@ There is/are と似た形でHere is/areがある。「ここに〜がある」�
       },
       {
         heading: '2. 進行形にしない動詞（状態動詞）',
+        mangaId: 'eigo_15_joutaidoushi_manga',
         body: `一般動詞には「動作」を表すものと「状態・気持ち」を表すものがあり、後者（状態動詞）は原則として進行形にしない。入試で頻出のひっかけポイント。
 
 ■ 状態動詞の代表例（進行形にしない）
@@ -3784,7 +3811,7 @@ She was studying math at nine last night.
 ・I agree/disagree with this idea.（この意見に賛成/反対だ）
 
 ■ 電話・道案内・買い物での応用会話
-・May I speak to Mr. Smith, please?（スミス先生をお願いできますか）
+・May I speak to Mr. Smith, please?（スミスさんをお願いできますか）
 ・Could you tell me how to get to the station?（駅への行き方を教えていただけますか）
 ・Excuse me, but is this seat taken?（すみません、この席は空いていますか）
 
@@ -3821,9 +3848,9 @@ She was studying math at nine last night.
 Answer: I think studying English is important. First, I can talk with people from other countries. Second, I can enjoy watching English movies without subtitles. For these reasons, I like studying English.
 
 ■ 単語数・時間配分の目安
-・英検5級：Eメール返信・単語補充が中心、時間はゆったり
-・英検4級：短い意見文（25語程度）
-・英検3級：意見文（25〜35語程度）、理由は2つ挙げるのが基本
+・英検5級：筆記（語句補充・会話・語句整序）とリスニングが中心で、ライティング（英作文）は出ない
+・英検4級：ライティング（英作文）は出ない（筆記とリスニングのみ）
+・英検3級：2024年度から2問。Eメールへの返信（15〜25語）と、意見論述（25〜35語、理由は2つ挙げるのが基本）
 
 ★ 型を覚えておけば、どんなお題が出ても「意見→理由→（具体例）→結論」の流れに当てはめて書ける。`,
       },
@@ -3843,7 +3870,7 @@ d) It's my favorite.
 【解答】c)
 【解説】「今何時ですか」という時刻をたずねる質問には、時刻で答える。
 
-【問題2】次のEメールの一部を読んで、下線部の意味に最も近いものを選びなさい。（4級レベル）
+【問題2】次のEメールの一部を読んで、その意味に最も近いものを選びなさい。（4級レベル）
 "I'm looking forward to seeing you next month."
 a) 私はあなたに会うのが心配だ
 b) 私はあなたに会うのを楽しみにしている
@@ -3948,9 +3975,9 @@ It is（was）＋ 強調したい語句 ＋ that ＋ 残りの部分
 
 ■ 強調構文と形式主語のitとの見分け方
 形式主語のIt（It is important to study.のような文）と強調構文のItを混同しないよう注意。
-見分け方：強調構文はIt is/was 〜 that の「〜」の部分を消しても、残りの文（that以降）が意味の通る完全な文になる。
+見分け方：強調構文はIt is/was と that を取りのぞいて「〜」をもとの位置にもどすと、意味の通る完全な文になる。
 例）It was Tom that broke the window. → Tom broke the window.（意味が通る＝強調構文）
-例）It is important to study English. → 「important to study English」だけでは主語が欠けた文にならない（形式主語構文）。`,
+例）It is important to study English. → It is を取りのぞくと「important to study English」となり、文として成り立たない（形式主語構文）。`,
       },
       {
         heading: '2. 否定語による倒置（Never have I seen 〜）',
@@ -4023,15 +4050,15 @@ B: Neither can I.（私も話せません）
 
 ■ 比較文での省略（as 〜 as / than のあとの省略）
 比較の文では、比較対象の重複部分がよく省略される。
-例）Tom is taller than Ken is tall.（もとの完全な文）
-→ Tom is taller than Ken (is).（重複するtallを省略、isも省略可）
+例）Tom is taller than Ken is.（もとの完全な文）
+→ Tom is taller than Ken.（重複する is を省略）
 
 ■ 従属節での主語＋be動詞の省略（分詞構文的な省略）
 接続詞（when/while/if/although等）の後ろで、主節と主語が同じ場合、「主語＋be動詞」が省略されることがある。
 例）When I was young, I lived in Osaka.
 → When young, I lived in Osaka.（When I wasが省略され、youngだけが残る）
-例）While walking to school, I met my teacher.
-→ While I was walking to school, I met my teacher.（Iwasが省略され、walkingが残る）
+例）While I was walking to school, I met my teacher.
+→ While walking to school, I met my teacher.（I was が省略され、walking が残る）
 ⚠ 注意：この省略は主節と従属節の主語が同じときだけ可能。
 
 ■ 不定詞・動名詞の意味上の主語の省略
@@ -4061,7 +4088,7 @@ B: (   ) have I.
 【解答】Neither
 【解説】相手の否定文（never been）に対して「私も〜ない」と同意するので、Neitherを使った倒置表現。
 
-【問題3】次の並び替え問題を完成させなさい。（1語不足）
+【問題3】次の並び替え問題を完成させなさい。（すべての語を使う）
 （seen / never / I / such / beautiful / a / view / have）
 
 【解答】Never have I seen such a beautiful view.
@@ -4074,7 +4101,7 @@ She can sing well. She can dance well.
 【解説】共通する主語（she）と助動詞（can）を省略し、動詞をandでつなぐ。
 
 ★ 入試対策ポイント：
-■ 強調構文：It is/was 〜 that ...の「〜」を消しても文が成立するかで見分ける
+■ 強調構文：It is/was と that を取りのぞいても文が成立するかで見分ける
 ■ 否定語（never/little/hardly）が文頭→倒置（助動詞＋主語）
 ■ So/Neither＋（助）動詞＋主語で「〜もそうです／そうではない」
 ■ 等位接続詞・比較文・従属節では共通部分が省略されることが多い`,
@@ -4160,6 +4187,7 @@ Last Saturday, I went to the park with my family. We had a picnic there. My moth
       },
       {
         heading: '2. 複数のイラストを時系列でつなげる書き方',
+        mangaId: 'eigo_18_e_nikki_sakubun_manga',
         body: `入試の英作文では、3〜4コマのイラストが並んでいて、それぞれの場面を順番に説明させる形式がよく出題される。時間の順序を示す語（linking words）を使いこなすことがカギ。
 
 ■ 時間の順序を示す語（重要・丸暗記）
@@ -4376,7 +4404,7 @@ B: Yes, please. Can you check my math problems?
 
 ■ 電話会話の典型的な流れと表現
 ①電話を受ける：Hello, this is 〜 speaking.（もしもし、〜です）
-②取り次ぎを頼む：May I speak to Mr. Green, please?（グリーン先生をお願いできますか）
+②取り次ぎを頼む：May I speak to Mr. Green, please?（グリーンさんをお願いできますか）
 ③本人が出る：Speaking.（私です）
 ④不在の応答：I'm sorry, he is out now.（すみません、今外出しています）
 ⑤伝言：Can I take a message? / Can I leave a message?（伝言を承りましょうか／お伝えいただけますか）
@@ -4447,7 +4475,7 @@ Customer: OK, I'll take them.
 ③埋まった空所の前後から、残りの空所も絞り込んでいく（消去法）
 ④最後に会話全体を通して読み、自然な流れになっているか確認する
 
-■ 例題形式（4つの空所を4つの選択肢から選ぶ）
+■ 例題形式（3つの空所を4つの選択肢から選ぶ）
 A: Excuse me. ( 1 )
 B: Sure. What do you need?
 A: ( 2 )
@@ -4461,8 +4489,16 @@ b) Could you help me?
 c) Where can I find children's shoes?
 d) I'll take these, please.
 
-【解答】(1) b (2) c (3) a
-【解説】(1)は「手伝ってもらえますか」という声かけ→Sureという承諾に自然につながる。(2)は「靴はどこにありますか」という質問→「2階です」という場所の答えに対応。(3)は最後のお礼→You're welcome.への応答として自然。
+【解法】
+【何を聞かれているか】4つの選択肢を、3つの空所 (1)(2)(3) に入れる（d は使わない）。
+【なぜこの考え方か】会話は「質問→答え」「お願い→承諾」「お礼→You're welcome.」のように、ペアでできている。だから空所の前後の発言とペアになるものを選べば、一つに決まるからである。
+【ステップ1】(1) の次の発言は B: Sure. What do you need?（いいですよ。何が必要ですか）。Sure は「承諾」の返事なので、直前は「お願い」のはず。b) Could you help me?（手伝ってもらえますか）が、承諾 Sure につながる。
+【ステップ2】(2) の次の発言は B: They're on the second floor, next to the bookstore.（2階の本屋のとなりです）。「場所」を答えているので、直前は「場所をたずねる質問」のはず。c) Where can I find children's shoes?（子ども靴はどこにありますか）が合う。They're は shoes を受ける言葉で、複数形とも合う。
+【ステップ3】(3) の次の発言は B: You're welcome.（どういたしまして）。これは「お礼」への返事なので、直前は「お礼」のはず。a) Thank you very much. が合う。
+【ステップ4】d) I'll take these, please.（これをください）は、買う決心をしたときの言葉。場所をたずねている段階では出てこないので、使わない。
+【答え】(1) b (2) c (3) a
+【確かめ】通して読む。「手伝ってもらえますか→いいですよ、何が必要ですか→子ども靴はどこ？→2階です→ありがとう→どういたしまして」。一本の流れになり、不自然なところがない。
+【よくあるまちがい】(2) に d) I'll take these, please. を入れてしまう。買い物の場面にはそれらしくても、直前の「何が必要ですか」にも、直後の「2階です」にも合わない。
 
 ★ ポイント：それぞれの空所を「独立した1文」として考えず、前後との「対応関係」で判断する。
 
@@ -4500,9 +4536,17 @@ Kate: Here you are.
 【解答】1,200 yen.
 【解説】"That will be 1,200 yen."が金額の答え。
 
-【問題4】次の文が入る最も適切な位置を選びなさい。
-"Would you like anything to drink?"
-すでに本文中にあるが、これと似た構造の設問として「本文中のどの発言が、次の発言の理由になっているか」を問う問題にも応用できる。
+【問題4】次の会話の（　　）に入る最も適切な文を選びなさい。
+Waiter: (　　)
+Kate: Yes, I'll have orange juice.
+
+a) Would you like anything to drink?
+b) How much is it?
+c) What time is it?
+d) Where is the station?
+
+【解答】a)
+【解説】Kate が飲み物を答えているので、直前の Waiter の発言は飲み物をたずねる文になる。
 
 ★ 入試対策ポイント：
 ■ 話者を整理し、質問と答えの対応を確認しながら読む
@@ -4557,8 +4601,8 @@ Emma: You can text him. He always checks his phone.
       `不規則複数形：child→children、man→men、foot→feet、単複同形：sheep/fish/deer`,
       `集合名詞：family/team/classなど、全体として単数扱いにも個々の成員として複数扱いにもなる`,
       `a number of＋複数名詞は「多くの〜」で複数扱い、the number of＋複数名詞は「〜の数」で単数扱い`,
-      `複合名詞の複数形は主要な名詞部分にsをつける（passers-by ではなく通常はgirlfriendsのように末尾でよいが例外に注意）`,
-      `固有名詞の複数扱い（United States等）や学問名（math, news）は単数扱いの不可算名詞として扱う`,
+      `複合名詞の複数形は通常は末尾にsをつける（girlfriends）。意味の中心が前にある語は、その語にsをつける（passers-by）`,
+      `複数形に見える固有名詞（United States等）や学問名（math, news）は単数扱いの不可算名詞として扱う`,
       `everyone/everybody/someone等は単数扱い、その代名詞での受け方（they）は近年広く許容される`,
     ],
     order: 20,
@@ -4567,6 +4611,7 @@ Emma: You can text him. He always checks his phone.
     sections: [
       {
         heading: '1. 複数形の作り方（つづりの変化ルール）',
+        mangaId: 'eigo_20_fukusuu_manga',
         body: `名詞を複数形にするときのつづりの変化には、いくつかのパターンがある。ルールを整理して確実に書けるようにしよう。
 
 ■ 基本パターン：そのまま-sをつける
@@ -4611,10 +4656,10 @@ series（シリーズ）→ series／ species（種）→ species
 例）There are many Japanese in this city.（この街には多くの日本人がいる）
 
 ■ 常に複数形で使う名詞（対になっているもの）
-scissors（はさみ）／ glasses（眼鏡）／ pants／ trousers（ズボン）／ shoes（靴）
+scissors（はさみ）／ glasses（眼鏡）／ pants／ trousers（ズボン）／ jeans（ジーンズ）
 これらは「1つ」を表すときも複数形のまま使い、数えるときはa pair of 〜を使う。
 例）I need a pair of scissors.（はさみが1つ必要だ）
-例）These shoes are too small.（この靴は小さすぎる）※このshoesは常に複数扱い
+例）These jeans are too small.（このジーンズは小さすぎる）※このjeansは常に複数扱い
 
 ■ お金・単位を表す語の複数形の注意点
 ・数字＋hundred/thousand/millionは複数でもsをつけない（数を表す形容詞として使うとき）
@@ -4648,7 +4693,7 @@ family（家族）／ team（チーム）／ class（クラス）／ group（グ
 ⚠ 注意：a number of とthe number ofは見た目が似ているが、動詞の単数・複数がまったく逆になる。入試最頻出のひっかけ。
 
 ■ everyone/everybody/someone/somebody/each（単数扱い）
-these + 単数動詞、後で受ける代名詞はhe/she/theyのいずれも使われる。
+これらは単数動詞で受け、後で受ける代名詞はhe/she/theyのいずれも使われる。
 例）Everyone in this class likes music.（このクラスのみんなが音楽を好きだ）※動詞はlikes（単数扱い）
 例）Everybody has to bring his or her（their）own lunch.（全員が自分の昼食を持ってこなければならない）`,
       },
@@ -4777,6 +4822,7 @@ manyのあとに a/an＋単数名詞を続け、動詞も単数にするとい�
     sections: [
       {
         heading: '1. 等位接続詞 and / but / or / so の基本',
+        mangaId: 'eigo_21_setsuzokushi_manga',
         body: `接続詞には大きく「等位接続詞」と「従属接続詞」の2種類がある。ここでは文法的に対等な語句・文をつなぐ「等位接続詞」を整理する。
 
 ■ and（そして・〜と）：追加・並列
@@ -4834,15 +4880,15 @@ manyのあとに a/an＋単数名詞を続け、動詞も単数にするとい�
 Bを特に強調する表現。動詞はBに一致させる。
 例）Not only Tom but also his sisters are coming.（トムだけでなく彼の姉妹たちも来る）
 例）She is not only kind but also smart.（彼女は親切なだけでなく賢い）
-★ B not only A（Bも、Aだけでなく）と入れ替えた同義表現：B as well as A
+★ not only A but also B とほぼ同じ意味の表現：B as well as A（Bも、Aだけでなく）
 例）His sisters as well as Tom are coming.（トムだけでなく彼の姉妹たちも来る）※こちらは動詞をB（先に来る語）に一致させる
 
 ■ 相関接続詞の動詞の一致まとめ
-　相関接続詞／意味／動詞の一致
-　both A and B … 意味はAとB両方／動詞の一致は常に複数
-　either A or B … 意味はAかBどちらか／動詞の一致はBに一致
-　neither A nor B … 意味はAもBも〜ない／動詞の一致はBに一致
-| not only A but also B | AだけでなくBも | Bに一致 |`,
+（相関接続詞／意味／動詞の一致）
+・both A and B … AとB両方／常に複数
+・either A or B … AかBどちらか／Bに一致
+・neither A nor B … AもBも〜ない／Bに一致
+・not only A but also B … AだけでなくBも／Bに一致`,
       },
       {
         heading: '3. 等位接続詞と並列の原則（品詞・時制をそろえる）',
@@ -4950,7 +4996,7 @@ Neither Tom nor Ken doesn't like vegetables.
       },
       {
         heading: '★ MAXレベル：接続詞の省略と発展的な相関表現',
-        body: `■ that節を導くandの発展用法（発展知識）
+        body: `■ 命令文, and 〜 の発展用法（発展知識）
 まれに、andが「そして」以上の意味（結果・条件）を持つことがある。
 例）Study hard, and you will succeed.（一生懸命勉強しなさい、そうすれば成功する）
 = If you study hard, you will succeed.（もし一生懸命勉強すれば）
@@ -5003,6 +5049,7 @@ think/say/know などのあとのthat（〜ということ）は、口語では�
     sections: [
       {
         heading: '1. 感嘆文（What と How）の作り方',
+        mangaId: 'eigo_22_kantanbun_manga',
         body: `「なんて〜なんだろう！」と驚き・感動を強く表す文を感嘆文という。WhatまたはHowを使って作るが、それぞれ文の形が異なるので正確に区別しよう。
 
 ■ What を使う感嘆文（名詞を強調）
@@ -5139,7 +5186,7 @@ be動詞・助動詞・do/does/didの短縮形（isn't/don't/doesn't/didn't等�
 This is a very difficult question.
 
 【解答】What a difficult question this is!
-【解説】nameがある（question）のでWhatを使う。veryを取り、「a difficult question」をWhatとともに前に出し、あとはthis isの語順のまま。
+【解説】名詞がある（question）のでWhatを使う。veryを取り、「a difficult question」をWhatとともに前に出し、あとはthis isの語順のまま。
 
 【問題2】次の文を感嘆文に書きかえなさい。
 She sings very beautifully.

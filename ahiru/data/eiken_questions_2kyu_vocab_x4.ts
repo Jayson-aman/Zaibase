@@ -9,11 +9,11 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
       'Choose the best word to complete the sentence.\n\nBefore approving the merger, the board members were expected to ( ) every clause of the lengthy contract for hidden liabilities.',
     choices: [
       { key: 'A', text: 'glance' },
-      { key: 'B', text: 'scrutinize' },
-      { key: 'C', text: 'browse' },
+      { key: 'B', text: 'browse' },
+      { key: 'C', text: 'scrutinize' },
       { key: 'D', text: 'skim' },
     ],
-    correctKey: 'B',
+    correctKey: 'C',
     explanation:
       'scrutinize は「細部まで綿密に精査する」。契約の隠れた債務を探す文脈に最適。\n\n【図解】語のイメージ整理\n★scrutinize=細部まで綿密に調べる\n○契約の各条項を精査\n×skim/browse/glance=ざっと見る・流し読み\n→精査の意味を持つのは scrutinize',
     difficulty: 'advanced',
@@ -42,12 +42,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe professor argued that a certain degree of risk is ( ) in any pioneering scientific experiment and cannot be entirely removed.',
     choices: [
-      { key: 'A', text: 'additional' },
-      { key: 'B', text: 'inherent' },
-      { key: 'C', text: 'external' },
-      { key: 'D', text: 'occasional' },
+      { key: 'A', text: 'occasional' },
+      { key: 'B', text: 'external' },
+      { key: 'C', text: 'additional' },
+      { key: 'D', text: 'inherent' },
     ],
-    correctKey: 'B',
+    correctKey: 'D',
     explanation:
       'inherent は「本来備わっている・切り離せない」。取り除けないリスクの文脈に合う。\n\n【図解】語のイメージ整理\n★inherent=本来備わった・固有の\n○実験に元来つきもののリスク\n×external=外的／additional=追加の\n→「除去不能な内在性」は inherent',
     difficulty: 'advanced',
@@ -59,12 +59,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nEmployees complained that the manager\u2019s decisions seemed completely ( ), based on personal mood rather than any consistent rule.',
     choices: [
-      { key: 'A', text: 'deliberate' },
+      { key: 'A', text: 'cautious' },
       { key: 'B', text: 'systematic' },
-      { key: 'C', text: 'cautious' },
-      { key: 'D', text: 'arbitrary' },
+      { key: 'C', text: 'arbitrary' },
+      { key: 'D', text: 'deliberate' },
     ],
-    correctKey: 'D',
+    correctKey: 'C',
     explanation:
       'arbitrary は「気まぐれで恣意的な・一貫した基準のない」。気分次第という文脈に一致。\n\n【図解】語のイメージ整理\n★arbitrary=恣意的・気まぐれな\n○一貫した規則のない判断\n×systematic=体系的／deliberate=意図的\n→「基準なき気まぐれ」は arbitrary',
     difficulty: 'advanced',
@@ -76,9 +76,9 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe philosopher\u2019s lecture had a ( ) effect on the students, permanently changing the way they viewed morality.',
     choices: [
-      { key: 'A', text: 'brief' },
+      { key: 'A', text: 'mild' },
       { key: 'B', text: 'profound' },
-      { key: 'C', text: 'mild' },
+      { key: 'C', text: 'brief' },
       { key: 'D', text: 'temporary' },
     ],
     correctKey: 'B',
@@ -93,12 +93,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nInvestors were frustrated that months of research had produced no ( ) results that could be measured or sold.',
     choices: [
-      { key: 'A', text: 'imaginary' },
-      { key: 'B', text: 'verbal' },
-      { key: 'C', text: 'tangible' },
-      { key: 'D', text: 'distant' },
+      { key: 'A', text: 'tangible' },
+      { key: 'B', text: 'imaginary' },
+      { key: 'C', text: 'distant' },
+      { key: 'D', text: 'verbal' },
     ],
-    correctKey: 'C',
+    correctKey: 'A',
     explanation:
       'tangible は「具体的で実体のある・目に見える」。測定・売却できる成果の文脈。\n\n【図解】語のイメージ整理\n★tangible=具体的・実体のある\n○測れて売れる成果\n×imaginary=架空の／verbal=口頭の\n→「手に取れる実体」は tangible',
     difficulty: 'advanced',
@@ -110,12 +110,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nAfter the two departments merged, several positions became ( ), since the same tasks were now being done twice.',
     choices: [
-      { key: 'A', text: 'essential' },
-      { key: 'B', text: 'redundant' },
-      { key: 'C', text: 'temporary' },
-      { key: 'D', text: 'senior' },
+      { key: 'A', text: 'temporary' },
+      { key: 'B', text: 'essential' },
+      { key: 'C', text: 'senior' },
+      { key: 'D', text: 'redundant' },
     ],
-    correctKey: 'B',
+    correctKey: 'D',
     explanation:
       'redundant は「余剰の・不要になった」。仕事が重複し不要になる文脈。\n\n【図解】語のイメージ整理\n★redundant=余剰で不要な\n○業務重複でいらなくなる\n×essential=不可欠／temporary=一時的\n→「重複による不要」は redundant',
     difficulty: 'advanced',
@@ -127,9 +127,9 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe examiner rejected the essay because its arguments lacked a ( ) structure, jumping randomly from one idea to another.',
     choices: [
-      { key: 'A', text: 'lengthy' },
-      { key: 'B', text: 'formal' },
-      { key: 'C', text: 'decorative' },
+      { key: 'A', text: 'decorative' },
+      { key: 'B', text: 'lengthy' },
+      { key: 'C', text: 'formal' },
       { key: 'D', text: 'coherent' },
     ],
     correctKey: 'D',
@@ -145,11 +145,11 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
       'Choose the best word to complete the sentence.\n\nThe gallery was praised for its ( ) collection, blending classical sculpture with modern digital art and folk crafts.',
     choices: [
       { key: 'A', text: 'uniform' },
-      { key: 'B', text: 'eclectic' },
+      { key: 'B', text: 'outdated' },
       { key: 'C', text: 'narrow' },
-      { key: 'D', text: 'outdated' },
+      { key: 'D', text: 'eclectic' },
     ],
-    correctKey: 'B',
+    correctKey: 'D',
     explanation:
       'eclectic は「多様なものを幅広く取り入れた・折衷的な」。異なる様式を混ぜた文脈。\n\n【図解】語のイメージ整理\n★eclectic=折衷的・幅広く多彩\n○古典と現代を混合\n×uniform=画一的／narrow=偏狭\n→「幅広い折衷」は eclectic',
     difficulty: 'advanced',
@@ -161,12 +161,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nRaised in an ( ) household where luxuries were forbidden, she found the extravagance of the party overwhelming.',
     choices: [
-      { key: 'A', text: 'generous' },
-      { key: 'B', text: 'cheerful' },
-      { key: 'C', text: 'austere' },
-      { key: 'D', text: 'wealthy' },
+      { key: 'A', text: 'austere' },
+      { key: 'B', text: 'wealthy' },
+      { key: 'C', text: 'generous' },
+      { key: 'D', text: 'cheerful' },
     ],
-    correctKey: 'C',
+    correctKey: 'A',
     explanation:
       'austere は「質素で厳格な・禁欲的な」。贅沢を禁じる家庭の文脈。\n\n【図解】語のイメージ整理\n★austere=質素で厳格な\n○贅沢を禁じる暮らし\n×wealthy=裕福／generous=気前よい\n→「禁欲的な質素さ」は austere',
     difficulty: 'advanced',
@@ -180,8 +180,8 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     choices: [
       { key: 'A', text: 'prevalent' },
       { key: 'B', text: 'absent' },
-      { key: 'C', text: 'hidden' },
-      { key: 'D', text: 'harmless' },
+      { key: 'C', text: 'harmless' },
+      { key: 'D', text: 'hidden' },
     ],
     correctKey: 'A',
     explanation:
@@ -212,9 +212,9 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nConstant criticism from his colleagues began to ( ) his confidence, making him doubt every decision.',
     choices: [
-      { key: 'A', text: 'strengthen' },
+      { key: 'A', text: 'ignore' },
       { key: 'B', text: 'undermine' },
-      { key: 'C', text: 'ignore' },
+      { key: 'C', text: 'strengthen' },
       { key: 'D', text: 'restore' },
     ],
     correctKey: 'B',
@@ -229,10 +229,10 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nHer tireless volunteer work seemed to ( ) the very spirit of community that the town hoped to promote.',
     choices: [
-      { key: 'A', text: 'contradict' },
+      { key: 'A', text: 'exceed' },
       { key: 'B', text: 'question' },
       { key: 'C', text: 'exemplify' },
-      { key: 'D', text: 'exceed' },
+      { key: 'D', text: 'contradict' },
     ],
     correctKey: 'C',
     explanation:
@@ -247,11 +247,11 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
       'Choose the best word to complete the sentence.\n\nAs the drug wore off, the patient\u2019s pain gradually began to ( ), allowing her to sleep at last.',
     choices: [
       { key: 'A', text: 'intensify' },
-      { key: 'B', text: 'diminish' },
-      { key: 'C', text: 'spread' },
-      { key: 'D', text: 'return' },
+      { key: 'B', text: 'return' },
+      { key: 'C', text: 'diminish' },
+      { key: 'D', text: 'spread' },
     ],
-    correctKey: 'B',
+    correctKey: 'C',
     explanation:
       'diminish は「（次第に）減少する・和らぐ」。痛みが引く文脈。\n\n【図解】語のイメージ整理\n★diminish=次第に減る・弱まる\n○痛みが和らぐ\n×intensify=強まる／spread=広がる\n→「徐々に減少」は diminish',
     difficulty: 'advanced',
@@ -263,12 +263,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nOver the decades, the retired teacher managed to ( ) a remarkable collection of rare manuscripts.',
     choices: [
-      { key: 'A', text: 'distribute' },
-      { key: 'B', text: 'accumulate' },
-      { key: 'C', text: 'discard' },
+      { key: 'A', text: 'discard' },
+      { key: 'B', text: 'distribute' },
+      { key: 'C', text: 'accumulate' },
       { key: 'D', text: 'borrow' },
     ],
-    correctKey: 'B',
+    correctKey: 'C',
     explanation:
       'accumulate は「（少しずつ）蓄積する・ためる」。長年かけ収集する文脈。\n\n【図解】語のイメージ整理\n★accumulate=蓄積する\n○時間をかけ収集\n×distribute=分配／discard=捨てる\n→「積み重ねて蓄積」は accumulate',
     difficulty: 'advanced',
@@ -280,12 +280,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe general could not ( ) the enormous cost of the campaign to a public that saw no benefit from it.',
     choices: [
-      { key: 'A', text: 'conceal' },
-      { key: 'B', text: 'increase' },
-      { key: 'C', text: 'predict' },
-      { key: 'D', text: 'justify' },
+      { key: 'A', text: 'justify' },
+      { key: 'B', text: 'predict' },
+      { key: 'C', text: 'conceal' },
+      { key: 'D', text: 'increase' },
     ],
-    correctKey: 'D',
+    correctKey: 'A',
     explanation:
       'justify は「正当化する・妥当だと示す」。莫大な費用を正当化できない文脈。\n\n【図解】語のイメージ整理\n★justify=正当化する\n○費用の妥当性を示す\n×conceal=隠す／predict=予測\n→「妥当と示す」は justify',
     difficulty: 'advanced',
@@ -297,10 +297,10 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nDifferent cultures ( ) the same colors in strikingly different ways, associating them with opposite emotions.',
     choices: [
-      { key: 'A', text: 'produce' },
-      { key: 'B', text: 'reject' },
+      { key: 'A', text: 'mix' },
+      { key: 'B', text: 'produce' },
       { key: 'C', text: 'perceive' },
-      { key: 'D', text: 'mix' },
+      { key: 'D', text: 'reject' },
     ],
     correctKey: 'C',
     explanation:
@@ -315,11 +315,11 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
       'Choose the best word to complete the sentence.\n\nThe lawyers argued about whether the vague email could legally ( ) a binding agreement between the two firms.',
     choices: [
       { key: 'A', text: 'cancel' },
-      { key: 'B', text: 'constitute' },
-      { key: 'C', text: 'delay' },
+      { key: 'B', text: 'delay' },
+      { key: 'C', text: 'constitute' },
       { key: 'D', text: 'review' },
     ],
-    correctKey: 'B',
+    correctKey: 'C',
     explanation:
       'constitute は「〜を構成する・〜に相当する」。メールが契約に相当するか争う文脈。\n\n【図解】語のイメージ整理\n★constitute=構成する・相当する\n○メールが契約を成立させるか\n×cancel=取消／review=見直し\n→「〜に相当する」は constitute',
     difficulty: 'advanced',
@@ -331,12 +331,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nFew researchers were willing to ( ) such a dangerous expedition into the unmapped rainforest.',
     choices: [
-      { key: 'A', text: 'avoid' },
-      { key: 'B', text: 'undertake' },
+      { key: 'A', text: 'undertake' },
+      { key: 'B', text: 'avoid' },
       { key: 'C', text: 'describe' },
       { key: 'D', text: 'fund' },
     ],
-    correctKey: 'B',
+    correctKey: 'A',
     explanation:
       'undertake は「（責任をもって）引き受ける・着手する」。危険な探検に取り組む文脈。\n\n【図解】語のイメージ整理\n★undertake=引き受ける・着手する\n○危険な探検に挑む\n×avoid=避ける／fund=出資\n→「責任をもって着手」は undertake',
     difficulty: 'advanced',
@@ -348,12 +348,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe committee had to decide how to ( ) the limited funds among a dozen competing projects.',
     choices: [
-      { key: 'A', text: 'borrow' },
-      { key: 'B', text: 'waste' },
-      { key: 'C', text: 'collect' },
-      { key: 'D', text: 'allocate' },
+      { key: 'A', text: 'allocate' },
+      { key: 'B', text: 'collect' },
+      { key: 'C', text: 'waste' },
+      { key: 'D', text: 'borrow' },
     ],
-    correctKey: 'D',
+    correctKey: 'A',
     explanation:
       'allocate は「（目的別に）割り当てる・配分する」。限られた資金を配分する文脈。\n\n【図解】語のイメージ整理\n★allocate=割り当てる・配分する\n○資金を各案件へ配分\n×collect=集める／borrow=借りる\n→「用途別に配分」は allocate',
     difficulty: 'advanced',
@@ -365,10 +365,10 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe city council voted to ( ) the old harbor as a protected historical zone.',
     choices: [
-      { key: 'A', text: 'demolish' },
-      { key: 'B', text: 'rent' },
+      { key: 'A', text: 'rent' },
+      { key: 'B', text: 'ignore' },
       { key: 'C', text: 'designate' },
-      { key: 'D', text: 'ignore' },
+      { key: 'D', text: 'demolish' },
     ],
     correctKey: 'C',
     explanation:
@@ -382,12 +382,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nSeveral famous athletes agreed to ( ) the new brand of running shoes in its advertising campaign.',
     choices: [
-      { key: 'A', text: 'criticize' },
-      { key: 'B', text: 'purchase' },
-      { key: 'C', text: 'design' },
-      { key: 'D', text: 'endorse' },
+      { key: 'A', text: 'purchase' },
+      { key: 'B', text: 'design' },
+      { key: 'C', text: 'endorse' },
+      { key: 'D', text: 'criticize' },
     ],
-    correctKey: 'D',
+    correctKey: 'C',
     explanation:
       'endorse は「（公に）推奨・支持する」。有名選手が商品を推奨する文脈。\n\n【図解】語のイメージ整理\n★endorse=公に推奨・支持する\n○広告で商品を推薦\n×criticize=批判／design=設計\n→「公的に推奨」は endorse',
     difficulty: 'advanced',
@@ -399,12 +399,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe scientist presented data specifically intended to ( ) the popular but mistaken theory.',
     choices: [
-      { key: 'A', text: 'support' },
-      { key: 'B', text: 'refute' },
+      { key: 'A', text: 'publish' },
+      { key: 'B', text: 'support' },
       { key: 'C', text: 'repeat' },
-      { key: 'D', text: 'publish' },
+      { key: 'D', text: 'refute' },
     ],
-    correctKey: 'B',
+    correctKey: 'D',
     explanation:
       'refute は「（証拠で）論破・反証する」。誤った説を反証する文脈。\n\n【図解】語のイメージ整理\n★refute=論破・反証する\n○誤説を証拠で覆す\n×support=支持／repeat=繰り返す\n→「証拠で反証」は refute',
     difficulty: 'advanced',
@@ -416,10 +416,10 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nHis later testimony seemed to directly ( ) everything he had told the police the previous week.',
     choices: [
-      { key: 'A', text: 'confirm' },
+      { key: 'A', text: 'forget' },
       { key: 'B', text: 'contradict' },
       { key: 'C', text: 'clarify' },
-      { key: 'D', text: 'forget' },
+      { key: 'D', text: 'confirm' },
     ],
     correctKey: 'B',
     explanation:
@@ -433,10 +433,10 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe engineers added steel beams to ( ) the aging bridge against future earthquakes.',
     choices: [
-      { key: 'A', text: 'weaken' },
+      { key: 'A', text: 'replace' },
       { key: 'B', text: 'reinforce' },
       { key: 'C', text: 'decorate' },
-      { key: 'D', text: 'replace' },
+      { key: 'D', text: 'weaken' },
     ],
     correctKey: 'B',
     explanation:
@@ -450,12 +450,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nDespite years abroad, she managed to ( ) a strong memory of her native language and customs.',
     choices: [
-      { key: 'A', text: 'lose' },
-      { key: 'B', text: 'retain' },
-      { key: 'C', text: 'translate' },
+      { key: 'A', text: 'retain' },
+      { key: 'B', text: 'translate' },
+      { key: 'C', text: 'lose' },
       { key: 'D', text: 'question' },
     ],
-    correctKey: 'B',
+    correctKey: 'A',
     explanation:
       'retain は「保ち続ける・維持する」。母語の記憶を保つ文脈。\n\n【図解】語のイメージ整理\n★retain=保持し続ける\n○母語の記憶を保つ\n×lose=失う／translate=訳す\n→「保ち続ける」は retain',
     difficulty: 'advanced',
@@ -467,12 +467,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nOverfishing has begun to seriously ( ) the ocean\u2019s once-abundant stocks of tuna.',
     choices: [
-      { key: 'A', text: 'enrich' },
-      { key: 'B', text: 'deplete' },
-      { key: 'C', text: 'protect' },
+      { key: 'A', text: 'deplete' },
+      { key: 'B', text: 'protect' },
+      { key: 'C', text: 'enrich' },
       { key: 'D', text: 'count' },
     ],
-    correctKey: 'B',
+    correctKey: 'A',
     explanation:
       'deplete は「（資源を）著しく減らす・枯渇させる」。乱獲で資源が減る文脈。\n\n【図解】語のイメージ整理\n★deplete=枯渇させる・使い尽くす\n○マグロ資源を激減させる\n×enrich=豊かにする／protect=守る\n→「資源を枯渇」は deplete',
     difficulty: 'advanced',
@@ -484,12 +484,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe organization used social media to rapidly ( ) accurate information during the crisis.',
     choices: [
-      { key: 'A', text: 'withhold' },
-      { key: 'B', text: 'disseminate' },
-      { key: 'C', text: 'translate' },
-      { key: 'D', text: 'verify' },
+      { key: 'A', text: 'translate' },
+      { key: 'B', text: 'withhold' },
+      { key: 'C', text: 'verify' },
+      { key: 'D', text: 'disseminate' },
     ],
-    correctKey: 'B',
+    correctKey: 'D',
     explanation:
       'disseminate は「（情報を）広める・普及させる」。危機時に情報を拡散する文脈。\n\n【図解】語のイメージ整理\n★disseminate=広く普及させる\n○正確な情報を拡散\n×withhold=差し控える／verify=確認\n→「広く拡散」は disseminate',
     difficulty: 'advanced',
@@ -501,12 +501,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nWithout any hard evidence, reporters could only ( ) about the true cause of the sudden resignation.',
     choices: [
-      { key: 'A', text: 'prove' },
-      { key: 'B', text: 'speculate' },
+      { key: 'A', text: 'speculate' },
+      { key: 'B', text: 'prove' },
       { key: 'C', text: 'announce' },
       { key: 'D', text: 'deny' },
     ],
-    correctKey: 'B',
+    correctKey: 'A',
     explanation:
       'speculate は「（証拠なしに）推測する・臆測する」。確証なく原因を憶測する文脈。\n\n【図解】語のイメージ整理\n★speculate=推測・臆測する\n○証拠なく原因を推量\n×prove=証明／announce=公表\n→「憶測する」は speculate',
     difficulty: 'advanced',
@@ -519,11 +519,11 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
       'Choose the best word to complete the sentence.\n\nSitting alone by the lake, he began to ( ) the direction his life had taken over the past decade.',
     choices: [
       { key: 'A', text: 'ignore' },
-      { key: 'B', text: 'describe' },
-      { key: 'C', text: 'contemplate' },
-      { key: 'D', text: 'waste' },
+      { key: 'B', text: 'waste' },
+      { key: 'C', text: 'describe' },
+      { key: 'D', text: 'contemplate' },
     ],
-    correctKey: 'C',
+    correctKey: 'D',
     explanation:
       'contemplate は「じっくり熟考する・思いめぐらす」。人生を静かに省みる文脈。\n\n【図解】語のイメージ整理\n★contemplate=熟考する・思案する\n○人生を静かに省みる\n×describe=描写／ignore=無視\n→「じっくり熟考」は contemplate',
     difficulty: 'advanced',
@@ -535,12 +535,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nCurrency values tend to ( ) sharply whenever political uncertainty grips a region.',
     choices: [
-      { key: 'A', text: 'stabilize' },
-      { key: 'B', text: 'fluctuate' },
-      { key: 'C', text: 'disappear' },
-      { key: 'D', text: 'double' },
+      { key: 'A', text: 'double' },
+      { key: 'B', text: 'disappear' },
+      { key: 'C', text: 'stabilize' },
+      { key: 'D', text: 'fluctuate' },
     ],
-    correctKey: 'B',
+    correctKey: 'D',
     explanation:
       'fluctuate は「（上下に）変動する・不安定に動く」。為替が乱高下する文脈。\n\n【図解】語のイメージ整理\n★fluctuate=変動する・上下する\n○通貨が激しく変動\n×stabilize=安定／double=倍増\n→「上下に変動」は fluctuate',
     difficulty: 'advanced',
@@ -552,12 +552,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nNeighboring countries were reluctant to ( ) in the dispute, fearing it might escalate the conflict.',
     choices: [
-      { key: 'A', text: 'celebrate' },
-      { key: 'B', text: 'invest' },
-      { key: 'C', text: 'remain' },
-      { key: 'D', text: 'intervene' },
+      { key: 'A', text: 'invest' },
+      { key: 'B', text: 'celebrate' },
+      { key: 'C', text: 'intervene' },
+      { key: 'D', text: 'remain' },
     ],
-    correctKey: 'D',
+    correctKey: 'C',
     explanation:
       'intervene は「（間に入って）介入する」。紛争に介入する文脈。\n\n【図解】語のイメージ整理\n★intervene=介入する\n○争いに割って入る\n×invest=投資／remain=とどまる\n→「間に入り介入」は intervene',
     difficulty: 'advanced',
@@ -569,10 +569,10 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nFactories that refuse to ( ) with the new safety regulations will face heavy fines.',
     choices: [
-      { key: 'A', text: 'compete' },
-      { key: 'B', text: 'interfere' },
+      { key: 'A', text: 'interfere' },
+      { key: 'B', text: 'expand' },
       { key: 'C', text: 'comply' },
-      { key: 'D', text: 'expand' },
+      { key: 'D', text: 'compete' },
     ],
     correctKey: 'C',
     explanation:
@@ -586,12 +586,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe pilot was instructed never to ( ) from the assigned flight path without authorization.',
     choices: [
-      { key: 'A', text: 'deviate' },
-      { key: 'B', text: 'proceed' },
-      { key: 'C', text: 'benefit' },
+      { key: 'A', text: 'proceed' },
+      { key: 'B', text: 'benefit' },
+      { key: 'C', text: 'deviate' },
       { key: 'D', text: 'recover' },
     ],
-    correctKey: 'A',
+    correctKey: 'C',
     explanation:
       'deviate (from) は「（基準・経路から）逸脱する」。指定航路を外れる文脈。\n\n【図解】語のイメージ整理\n★deviate from=逸脱する・外れる\n○決められた航路を外れる\n×proceed=進む／recover=回復\n→「基準から逸脱」は deviate',
     difficulty: 'advanced',
@@ -603,8 +603,8 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nA brief apology would not ( ) to repair the damage done to their long friendship.',
     choices: [
-      { key: 'A', text: 'matter' },
-      { key: 'B', text: 'appear' },
+      { key: 'A', text: 'appear' },
+      { key: 'B', text: 'matter' },
       { key: 'C', text: 'suffice' },
       { key: 'D', text: 'remain' },
     ],
@@ -620,12 +620,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nDespite fierce opposition, the reformers were confident that reason would eventually ( ).',
     choices: [
-      { key: 'A', text: 'collapse' },
-      { key: 'B', text: 'prevail' },
-      { key: 'C', text: 'hesitate' },
-      { key: 'D', text: 'vanish' },
+      { key: 'A', text: 'prevail' },
+      { key: 'B', text: 'collapse' },
+      { key: 'C', text: 'vanish' },
+      { key: 'D', text: 'hesitate' },
     ],
-    correctKey: 'B',
+    correctKey: 'A',
     explanation:
       'prevail は「（最終的に）勝る・優勢になる・広く行き渡る」。理性が最後に勝つ文脈。\n\n【図解】語のイメージ整理\n★prevail=勝る・優勢になる\n○理性が最終的に勝利\n×collapse=崩壊／vanish=消える\n→「最後に勝る」は prevail',
     difficulty: 'advanced',
@@ -637,12 +637,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe sudden flood threatened to ( ) the main road completely impassable for weeks.',
     choices: [
-      { key: 'A', text: 'render' },
-      { key: 'B', text: 'repair' },
-      { key: 'C', text: 'widen' },
-      { key: 'D', text: 'cross' },
+      { key: 'A', text: 'widen' },
+      { key: 'B', text: 'cross' },
+      { key: 'C', text: 'render' },
+      { key: 'D', text: 'repair' },
     ],
-    correctKey: 'A',
+    correctKey: 'C',
     explanation:
       'render は「（ある状態に）する・〜にならせる」。道を通行不能にする文脈。\n\n【図解】語のイメージ整理\n★render=ある状態にする\n○道路を通行不能にする\n×repair=修理／widen=広げる\n→「〜の状態にする」は render',
     difficulty: 'advanced',
@@ -672,11 +672,11 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
       'Choose the best word to complete the sentence.\n\nStarting a business will inevitably ( ) long hours and considerable financial risk.',
     choices: [
       { key: 'A', text: 'avoid' },
-      { key: 'B', text: 'reduce' },
+      { key: 'B', text: 'entail' },
       { key: 'C', text: 'forbid' },
-      { key: 'D', text: 'entail' },
+      { key: 'D', text: 'reduce' },
     ],
-    correctKey: 'D',
+    correctKey: 'B',
     explanation:
       'entail は「（必然的に）伴う・必要とする」。起業に伴う負担の文脈。\n\n【図解】語のイメージ整理\n★entail=必然的に伴う\n○長時間労働と危険を伴う\n×reduce=減らす／avoid=避ける\n→「必然的に伴う」は entail',
     difficulty: 'advanced',
@@ -688,12 +688,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nInvestigators suspected that a small group of outsiders had come to ( ) the riot for political gain.',
     choices: [
-      { key: 'A', text: 'calm' },
-      { key: 'B', text: 'instigate' },
-      { key: 'C', text: 'witness' },
-      { key: 'D', text: 'prevent' },
+      { key: 'A', text: 'witness' },
+      { key: 'B', text: 'prevent' },
+      { key: 'C', text: 'instigate' },
+      { key: 'D', text: 'calm' },
     ],
-    correctKey: 'B',
+    correctKey: 'C',
     explanation:
       'instigate は「（悪事を）扇動する・引き起こす」。暴動をあおる文脈。\n\n【図解】語のイメージ整理\n★instigate=扇動する・そそのかす\n○暴動をあおり起こす\n×calm=鎮める／witness=目撃\n→「悪事を扇動」は instigate',
     difficulty: 'advanced',
@@ -706,11 +706,11 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
       'Choose the best word to complete the sentence.\n\nRather than avoiding the problem, the new director chose to ( ) the company\u2019s debts head-on.',
     choices: [
       { key: 'A', text: 'ignore' },
-      { key: 'B', text: 'conceal' },
-      { key: 'C', text: 'confront' },
+      { key: 'B', text: 'confront' },
+      { key: 'C', text: 'conceal' },
       { key: 'D', text: 'inherit' },
     ],
-    correctKey: 'C',
+    correctKey: 'B',
     explanation:
       'confront は「（問題に）正面から立ち向かう・直面する」。負債に真っ向から対処する文脈。\n\n【図解】語のイメージ整理\n★confront=正面から立ち向かう\n○負債に真正面から対処\n×ignore=無視／conceal=隠す\n→「直面し対峙」は confront',
     difficulty: 'advanced',
@@ -722,8 +722,8 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe sheer volume of applications threatened to ( ) the small admissions team.',
     choices: [
-      { key: 'A', text: 'assist' },
-      { key: 'B', text: 'delay' },
+      { key: 'A', text: 'delay' },
+      { key: 'B', text: 'assist' },
       { key: 'C', text: 'reduce' },
       { key: 'D', text: 'overwhelm' },
     ],
@@ -740,11 +740,11 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
       'Choose the best word to complete the sentence.\n\nThrough years of relentless practice, she finally ( ) the level of skill she had long dreamed of.',
     choices: [
       { key: 'A', text: 'abandoned' },
-      { key: 'B', text: 'questioned' },
-      { key: 'C', text: 'attained' },
+      { key: 'B', text: 'attained' },
+      { key: 'C', text: 'questioned' },
       { key: 'D', text: 'borrowed' },
     ],
-    correctKey: 'C',
+    correctKey: 'B',
     explanation:
       'attain は「（努力して）到達する・獲得する」。夢見た技量に達する文脈。\n\n【図解】語のイメージ整理\n★attain=努力して到達・達成する\n○念願の水準に達する\n×abandon=放棄／question=疑う\n→「努力で到達」は attain',
     difficulty: 'advanced',
@@ -756,8 +756,8 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nEngineers spent another year working to ( ) the prototype until it ran flawlessly.',
     choices: [
-      { key: 'A', text: 'discard' },
-      { key: 'B', text: 'copy' },
+      { key: 'A', text: 'copy' },
+      { key: 'B', text: 'discard' },
       { key: 'C', text: 'sell' },
       { key: 'D', text: 'refine' },
     ],
@@ -773,12 +773,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe new software was designed to ( ) the ordering process, cutting the number of steps in half.',
     choices: [
-      { key: 'A', text: 'complicate' },
-      { key: 'B', text: 'streamline' },
+      { key: 'A', text: 'streamline' },
+      { key: 'B', text: 'complicate' },
       { key: 'C', text: 'cancel' },
       { key: 'D', text: 'delay' },
     ],
-    correctKey: 'B',
+    correctKey: 'A',
     explanation:
       'streamline は「（工程を）合理化・効率化する」。手順を簡素化する文脈。\n\n【図解】語のイメージ整理\n★streamline=合理化・効率化する\n○工程を簡素で効率的に\n×complicate=複雑化／cancel=中止\n→「無駄を省き効率化」は streamline',
     difficulty: 'advanced',
@@ -790,12 +790,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nAfter the acquisition, the firm moved to ( ) its three regional offices into a single headquarters.',
     choices: [
-      { key: 'A', text: 'scatter' },
-      { key: 'B', text: 'close' },
-      { key: 'C', text: 'consolidate' },
-      { key: 'D', text: 'rent' },
+      { key: 'A', text: 'consolidate' },
+      { key: 'B', text: 'scatter' },
+      { key: 'C', text: 'rent' },
+      { key: 'D', text: 'close' },
     ],
-    correctKey: 'C',
+    correctKey: 'A',
     explanation:
       'consolidate は「（複数を）統合する・一本化する・強固にする」。事務所を一つに統合する文脈。\n\n【図解】語のイメージ整理\n★consolidate=統合する・一本化\n○三拠点を本社に統合\n×scatter=分散／close=閉鎖\n→「まとめて統合」は consolidate',
     difficulty: 'advanced',
@@ -807,12 +807,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nWith limited time, the surgeons had to ( ) the most critical patients first.',
     choices: [
-      { key: 'A', text: 'delay' },
+      { key: 'A', text: 'prioritize' },
       { key: 'B', text: 'ignore' },
-      { key: 'C', text: 'count' },
-      { key: 'D', text: 'prioritize' },
+      { key: 'C', text: 'delay' },
+      { key: 'D', text: 'count' },
     ],
-    correctKey: 'D',
+    correctKey: 'A',
     explanation:
       'prioritize は「優先する・優先順位をつける」。重症患者を先に扱う文脈。\n\n【図解】語のイメージ整理\n★prioritize=優先順位をつける\n○重症者を最優先\n×delay=遅らせる／ignore=無視\n→「優先させる」は prioritize',
     difficulty: 'advanced',
@@ -824,12 +824,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nSales in the first quarter were expected to easily ( ) those of the entire previous year.',
     choices: [
-      { key: 'A', text: 'match' },
-      { key: 'B', text: 'delay' },
-      { key: 'C', text: 'surpass' },
-      { key: 'D', text: 'reduce' },
+      { key: 'A', text: 'reduce' },
+      { key: 'B', text: 'surpass' },
+      { key: 'C', text: 'delay' },
+      { key: 'D', text: 'match' },
     ],
-    correctKey: 'C',
+    correctKey: 'B',
     explanation:
       'surpass は「（水準を）上回る・しのぐ」。前年を超える文脈。\n\n【図解】語のイメージ整理\n★surpass=上回る・凌駕する\n○前年実績を超える\n×match=同等／reduce=減らす\n→「上回りしのぐ」は surpass',
     difficulty: 'advanced',
@@ -841,10 +841,10 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe bold claim was initially met with widespread ( ) from the scientific community.',
     choices: [
-      { key: 'A', text: 'enthusiasm' },
+      { key: 'A', text: 'approval' },
       { key: 'B', text: 'skepticism' },
-      { key: 'C', text: 'approval' },
-      { key: 'D', text: 'indifference' },
+      { key: 'C', text: 'indifference' },
+      { key: 'D', text: 'enthusiasm' },
     ],
     correctKey: 'B',
     explanation:
@@ -858,12 +858,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nIt is a curious ( ) that the more choices we are given, the less satisfied we often feel.',
     choices: [
-      { key: 'A', text: 'tradition' },
-      { key: 'B', text: 'benefit' },
-      { key: 'C', text: 'routine' },
-      { key: 'D', text: 'paradox' },
+      { key: 'A', text: 'benefit' },
+      { key: 'B', text: 'paradox' },
+      { key: 'C', text: 'tradition' },
+      { key: 'D', text: 'routine' },
     ],
-    correctKey: 'D',
+    correctKey: 'B',
     explanation:
       'paradox は「逆説・一見矛盾した事実」。選択肢が増えるほど不満という逆説の文脈。\n\n【図解】語のイメージ整理\n★paradox=逆説・矛盾した真実\n○多いほど不満という逆説\n×tradition=伝統／routine=日常\n→「一見矛盾の真実」は paradox',
     difficulty: 'advanced',
@@ -876,9 +876,9 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
       'Choose the best word to complete the sentence.\n\nA good translator must capture every subtle ( ) of meaning, not merely the literal words.',
     choices: [
       { key: 'A', text: 'error' },
-      { key: 'B', text: 'volume' },
+      { key: 'B', text: 'rhythm' },
       { key: 'C', text: 'nuance' },
-      { key: 'D', text: 'rhythm' },
+      { key: 'D', text: 'volume' },
     ],
     correctKey: 'C',
     explanation:
@@ -893,11 +893,11 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
       'Choose the best word to complete the sentence.\n\nAfter hours of heated debate, the delegates finally reached a ( ) on the wording of the treaty.',
     choices: [
       { key: 'A', text: 'dispute' },
-      { key: 'B', text: 'delay' },
-      { key: 'C', text: 'refusal' },
-      { key: 'D', text: 'consensus' },
+      { key: 'B', text: 'consensus' },
+      { key: 'C', text: 'delay' },
+      { key: 'D', text: 'refusal' },
     ],
-    correctKey: 'D',
+    correctKey: 'B',
     explanation:
       'consensus は「（総意による）合意・コンセンサス」。議論の末に合意に至る文脈。\n\n【図解】語のイメージ整理\n★consensus=合意・総意\n○文言で全体合意に到達\n×dispute=論争／refusal=拒否\n→「皆の合意」は consensus',
     difficulty: 'advanced',
@@ -909,12 +909,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe prolonged drought led to a severe ( ) of clean drinking water across the region.',
     choices: [
-      { key: 'A', text: 'abundance' },
-      { key: 'B', text: 'scarcity' },
-      { key: 'C', text: 'quality' },
-      { key: 'D', text: 'demand' },
+      { key: 'A', text: 'scarcity' },
+      { key: 'B', text: 'abundance' },
+      { key: 'C', text: 'demand' },
+      { key: 'D', text: 'quality' },
     ],
-    correctKey: 'B',
+    correctKey: 'A',
     explanation:
       'scarcity は「（絶対的な）不足・欠乏」。干ばつで水が欠乏する文脈。\n\n【図解】語のイメージ整理\n★scarcity=不足・欠乏\n○清潔な水の深刻な欠乏\n×abundance=豊富／demand=需要\n→「欠乏」は scarcity',
     difficulty: 'advanced',
@@ -927,11 +927,11 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
       'Choose the best word to complete the sentence.\n\nThe fertile valley was famous for its ( ) of fruit, feeding the entire province.',
     choices: [
       { key: 'A', text: 'shortage' },
-      { key: 'B', text: 'abundance' },
-      { key: 'C', text: 'absence' },
-      { key: 'D', text: 'lack' },
+      { key: 'B', text: 'absence' },
+      { key: 'C', text: 'lack' },
+      { key: 'D', text: 'abundance' },
     ],
-    correctKey: 'B',
+    correctKey: 'D',
     explanation:
       'abundance は「豊富・潤沢」。果実が豊かに実る文脈。\n\n【図解】語のイメージ整理\n★abundance=豊富・潤沢\n○果実が有り余るほど\n×shortage=不足／absence=欠如\n→「有り余る豊かさ」は abundance',
     difficulty: 'advanced',
@@ -943,12 +943,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nSupporters argue that heavier penalties act as a powerful ( ) against reckless driving.',
     choices: [
-      { key: 'A', text: 'deterrent' },
-      { key: 'B', text: 'reward' },
-      { key: 'C', text: 'invitation' },
-      { key: 'D', text: 'excuse' },
+      { key: 'A', text: 'excuse' },
+      { key: 'B', text: 'deterrent' },
+      { key: 'C', text: 'reward' },
+      { key: 'D', text: 'invitation' },
     ],
-    correctKey: 'A',
+    correctKey: 'B',
     explanation:
       'deterrent は「抑止力・思いとどまらせるもの」。重い罰が違反を抑える文脈。\n\n【図解】語のイメージ整理\n★deterrent=抑止力\n○無謀運転を思いとどまらせる\n×reward=報酬／invitation=誘い\n→「抑止するもの」は deterrent',
     difficulty: 'advanced',
@@ -960,12 +960,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe government offered tax breaks as an ( ) for companies to hire younger workers.',
     choices: [
-      { key: 'A', text: 'obstacle' },
-      { key: 'B', text: 'penalty' },
-      { key: 'C', text: 'warning' },
-      { key: 'D', text: 'incentive' },
+      { key: 'A', text: 'incentive' },
+      { key: 'B', text: 'warning' },
+      { key: 'C', text: 'penalty' },
+      { key: 'D', text: 'obstacle' },
     ],
-    correctKey: 'D',
+    correctKey: 'A',
     explanation:
       'incentive は「（行動を促す）誘因・動機付け」。減税で採用を促す文脈。\n\n【図解】語のイメージ整理\n★incentive=誘因・動機付け\n○採用を促す誘い\n×obstacle=障害／penalty=罰\n→「行動を促す誘因」は incentive',
     difficulty: 'advanced',
@@ -994,12 +994,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nAccountants noticed a troubling ( ) between the reported profits and the actual bank balance.',
     choices: [
-      { key: 'A', text: 'agreement' },
-      { key: 'B', text: 'discrepancy' },
-      { key: 'C', text: 'increase' },
+      { key: 'A', text: 'discrepancy' },
+      { key: 'B', text: 'increase' },
+      { key: 'C', text: 'agreement' },
       { key: 'D', text: 'record' },
     ],
-    correctKey: 'B',
+    correctKey: 'A',
     explanation:
       'discrepancy は「（数値・記述の）食い違い・不一致」。報告と実残高の差の文脈。\n\n【図解】語のイメージ整理\n★discrepancy=食い違い・相違\n○報告と実際のずれ\n×agreement=一致／increase=増加\n→「数値の不一致」は discrepancy',
     difficulty: 'advanced',
@@ -1011,12 +1011,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe remote branch was granted considerable ( ), allowing it to make decisions without central approval.',
     choices: [
-      { key: 'A', text: 'supervision' },
-      { key: 'B', text: 'funding' },
-      { key: 'C', text: 'criticism' },
-      { key: 'D', text: 'autonomy' },
+      { key: 'A', text: 'criticism' },
+      { key: 'B', text: 'autonomy' },
+      { key: 'C', text: 'supervision' },
+      { key: 'D', text: 'funding' },
     ],
-    correctKey: 'D',
+    correctKey: 'B',
     explanation:
       'autonomy は「自治・自律性・裁量権」。本部承認なしに決定できる文脈。\n\n【図解】語のイメージ整理\n★autonomy=自治・自律・裁量\n○独自に判断できる権限\n×supervision=監督／funding=資金\n→「自律・裁量」は autonomy',
     difficulty: 'advanced',
@@ -1028,12 +1028,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nIn such a rigid corporate ( ), junior staff rarely spoke directly to senior executives.',
     choices: [
-      { key: 'A', text: 'hierarchy' },
-      { key: 'B', text: 'holiday' },
+      { key: 'A', text: 'holiday' },
+      { key: 'B', text: 'territory' },
       { key: 'C', text: 'budget' },
-      { key: 'D', text: 'territory' },
+      { key: 'D', text: 'hierarchy' },
     ],
-    correctKey: 'A',
+    correctKey: 'D',
     explanation:
       'hierarchy は「階層組織・序列」。上下関係の厳しい組織の文脈。\n\n【図解】語のイメージ整理\n★hierarchy=階層・序列\n○厳格な上下組織\n×budget=予算／territory=領域\n→「上下の序列」は hierarchy',
     difficulty: 'advanced',
@@ -1045,9 +1045,9 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nCritics questioned the ( ) of the election, pointing to numerous irregularities in the count.',
     choices: [
-      { key: 'A', text: 'popularity' },
+      { key: 'A', text: 'timing' },
       { key: 'B', text: 'cost' },
-      { key: 'C', text: 'timing' },
+      { key: 'C', text: 'popularity' },
       { key: 'D', text: 'legitimacy' },
     ],
     correctKey: 'D',
@@ -1062,12 +1062,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe house\u2019s ( ) to the noisy airport significantly lowered its market value.',
     choices: [
-      { key: 'A', text: 'loyalty' },
-      { key: 'B', text: 'exposure' },
-      { key: 'C', text: 'proximity' },
-      { key: 'D', text: 'resemblance' },
+      { key: 'A', text: 'resemblance' },
+      { key: 'B', text: 'loyalty' },
+      { key: 'C', text: 'exposure' },
+      { key: 'D', text: 'proximity' },
     ],
-    correctKey: 'C',
+    correctKey: 'D',
     explanation:
       'proximity は「近接・近さ」。騒がしい空港に近いことの文脈。\n\n【図解】語のイメージ整理\n★proximity=近接・近さ\n○空港への近さ\n×exposure=露出／resemblance=類似\n→「近いこと」は proximity',
     difficulty: 'advanced',
@@ -1079,12 +1079,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nHealthy alliances are built on ( ), with each side offering something the other needs.',
     choices: [
-      { key: 'A', text: 'secrecy' },
-      { key: 'B', text: 'rivalry' },
-      { key: 'C', text: 'obedience' },
-      { key: 'D', text: 'reciprocity' },
+      { key: 'A', text: 'reciprocity' },
+      { key: 'B', text: 'obedience' },
+      { key: 'C', text: 'secrecy' },
+      { key: 'D', text: 'rivalry' },
     ],
-    correctKey: 'D',
+    correctKey: 'A',
     explanation:
       'reciprocity は「相互性・互恵」。互いに与え合う関係の文脈。\n\n【図解】語のイメージ整理\n★reciprocity=相互性・互恵\n○互いに必要を提供\n×rivalry=対抗／obedience=服従\n→「持ちつ持たれつ」は reciprocity',
     difficulty: 'advanced',
@@ -1098,10 +1098,10 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     choices: [
       { key: 'A', text: 'absence' },
       { key: 'B', text: 'cure' },
-      { key: 'C', text: 'prevalence' },
-      { key: 'D', text: 'cost' },
+      { key: 'C', text: 'cost' },
+      { key: 'D', text: 'prevalence' },
     ],
-    correctKey: 'C',
+    correctKey: 'D',
     explanation:
       'prevalence は「（病気などの）蔓延・有病率・普及度」。糖尿病の増加の文脈。\n\n【図解】語のイメージ整理\n★prevalence=蔓延・有病率\n○若者の糖尿病の広がり\n×cure=治療／absence=不在\n→「広がり・蔓延度」は prevalence',
     difficulty: 'advanced',
@@ -1113,12 +1113,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nAlthough talented in science, she had always felt a stronger ( ) toward the arts.',
     choices: [
-      { key: 'A', text: 'inclination' },
+      { key: 'A', text: 'resistance' },
       { key: 'B', text: 'objection' },
       { key: 'C', text: 'obligation' },
-      { key: 'D', text: 'resistance' },
+      { key: 'D', text: 'inclination' },
     ],
-    correctKey: 'A',
+    correctKey: 'D',
     explanation:
       'inclination は「（心の）傾向・好み・気持ちの傾き」。芸術に惹かれる文脈。\n\n【図解】語のイメージ整理\n★inclination=傾向・好み・志向\n○芸術への心の傾き\n×obligation=義務／objection=反対\n→「気持ちの傾き」は inclination',
     difficulty: 'advanced',
@@ -1130,12 +1130,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nHis deep ( ) to crowds made large festivals an unbearable experience for him.',
     choices: [
-      { key: 'A', text: 'attraction' },
-      { key: 'B', text: 'addiction' },
-      { key: 'C', text: 'aversion' },
-      { key: 'D', text: 'exposure' },
+      { key: 'A', text: 'exposure' },
+      { key: 'B', text: 'attraction' },
+      { key: 'C', text: 'addiction' },
+      { key: 'D', text: 'aversion' },
     ],
-    correctKey: 'C',
+    correctKey: 'D',
     explanation:
       'aversion は「（強い）嫌悪・忌避」。人混みを嫌う文脈。\n\n【図解】語のイメージ整理\n★aversion=嫌悪・忌避\n○人混みへの強い嫌悪\n×attraction=魅了／addiction=依存\n→「強い嫌悪」は aversion',
     difficulty: 'advanced',
@@ -1147,9 +1147,9 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nAs a leading ( ) of renewable energy, she lobbied tirelessly for solar subsidies.',
     choices: [
-      { key: 'A', text: 'opponent' },
-      { key: 'B', text: 'observer' },
-      { key: 'C', text: 'critic' },
+      { key: 'A', text: 'observer' },
+      { key: 'B', text: 'critic' },
+      { key: 'C', text: 'opponent' },
       { key: 'D', text: 'proponent' },
     ],
     correctKey: 'D',
@@ -1164,12 +1164,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nIn the final round, the champion faced her most formidable ( ) yet.',
     choices: [
-      { key: 'A', text: 'ally' },
-      { key: 'B', text: 'adversary' },
-      { key: 'C', text: 'partner' },
-      { key: 'D', text: 'admirer' },
+      { key: 'A', text: 'adversary' },
+      { key: 'B', text: 'admirer' },
+      { key: 'C', text: 'ally' },
+      { key: 'D', text: 'partner' },
     ],
-    correctKey: 'B',
+    correctKey: 'A',
     explanation:
       'adversary は「（手強い）敵・対戦相手」。決勝で強敵と対する文脈。\n\n【図解】語のイメージ整理\n★adversary=敵・対戦相手\n○最強の相手と対戦\n×ally=味方／partner=仲間\n→「手強い相手」は adversary',
     difficulty: 'advanced',
@@ -1181,12 +1181,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe report highlighted a widening ( ) between the incomes of urban and rural households.',
     choices: [
-      { key: 'A', text: 'disparity' },
-      { key: 'B', text: 'similarity' },
+      { key: 'A', text: 'similarity' },
+      { key: 'B', text: 'disparity' },
       { key: 'C', text: 'agreement' },
       { key: 'D', text: 'balance' },
     ],
-    correctKey: 'A',
+    correctKey: 'B',
     explanation:
       'disparity は「（不公平な）格差・相違」。都市と農村の所得差の文脈。\n\n【図解】語のイメージ整理\n★disparity=格差・相違\n○所得格差の拡大\n×similarity=類似／balance=均衡\n→「不均衡な格差」は disparity',
     difficulty: 'advanced',
@@ -1200,8 +1200,8 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     choices: [
       { key: 'A', text: 'shortage' },
       { key: 'B', text: 'surplus' },
-      { key: 'C', text: 'demand' },
-      { key: 'D', text: 'quality' },
+      { key: 'C', text: 'quality' },
+      { key: 'D', text: 'demand' },
     ],
     correctKey: 'B',
     explanation:
@@ -1216,11 +1216,11 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
       'Choose the best word to complete the sentence.\n\nYears of overspending had left the city with a crippling budget ( ).',
     choices: [
       { key: 'A', text: 'surplus' },
-      { key: 'B', text: 'deficit' },
-      { key: 'C', text: 'reserve' },
-      { key: 'D', text: 'profit' },
+      { key: 'B', text: 'profit' },
+      { key: 'C', text: 'deficit' },
+      { key: 'D', text: 'reserve' },
     ],
-    correctKey: 'B',
+    correctKey: 'C',
     explanation:
       'deficit は「赤字・不足額」。使い過ぎで財政赤字の文脈。\n\n【図解】語のイメージ整理\n★deficit=赤字・不足額\n○深刻な財政赤字\n×surplus=黒字／reserve=蓄え\n→「赤字」は deficit',
     difficulty: 'advanced',
@@ -1232,12 +1232,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe unexpected resignation threw the entire government into ( ) for weeks.',
     choices: [
-      { key: 'A', text: 'order' },
-      { key: 'B', text: 'turmoil' },
+      { key: 'A', text: 'celebration' },
+      { key: 'B', text: 'order' },
       { key: 'C', text: 'silence' },
-      { key: 'D', text: 'celebration' },
+      { key: 'D', text: 'turmoil' },
     ],
-    correctKey: 'B',
+    correctKey: 'D',
     explanation:
       'turmoil は「大混乱・動揺」。突然の辞任で政府が混乱する文脈。\n\n【図解】語のイメージ整理\n★turmoil=大混乱・動揺\n○政府が数週間混乱\n×order=秩序／silence=沈黙\n→「大混乱」は turmoil',
     difficulty: 'advanced',
@@ -1266,12 +1266,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe artist\u2019s provocative sculpture sparked fierce ( ) about the limits of public art.',
     choices: [
-      { key: 'A', text: 'controversy' },
-      { key: 'B', text: 'agreement' },
-      { key: 'C', text: 'silence' },
+      { key: 'A', text: 'silence' },
+      { key: 'B', text: 'controversy' },
+      { key: 'C', text: 'agreement' },
       { key: 'D', text: 'praise' },
     ],
-    correctKey: 'A',
+    correctKey: 'B',
     explanation:
       'controversy は「（世論を二分する）論争・物議」。彫刻が論争を呼ぶ文脈。\n\n【図解】語のイメージ整理\n★controversy=論争・物議\n○公共芸術をめぐる論争\n×agreement=合意／praise=称賛\n→「物議・論争」は controversy',
     difficulty: 'advanced',
@@ -1283,12 +1283,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nTorn between loyalty and honesty, she faced an agonizing moral ( ).',
     choices: [
-      { key: 'A', text: 'solution' },
-      { key: 'B', text: 'routine' },
-      { key: 'C', text: 'dilemma' },
+      { key: 'A', text: 'routine' },
+      { key: 'B', text: 'dilemma' },
+      { key: 'C', text: 'solution' },
       { key: 'D', text: 'victory' },
     ],
-    correctKey: 'C',
+    correctKey: 'B',
     explanation:
       'dilemma は「板挟み・ジレンマ」。忠誠と正直の間で悩む文脈。\n\n【図解】語のイメージ整理\n★dilemma=板挟み・ジレンマ\n○忠誠と誠実の間の葛藤\n×solution=解決／victory=勝利\n→「二者択一の板挟み」は dilemma',
     difficulty: 'advanced',
@@ -1300,12 +1300,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe entire argument rests on the questionable ( ) that people always act rationally.',
     choices: [
-      { key: 'A', text: 'conclusion' },
-      { key: 'B', text: 'evidence' },
+      { key: 'A', text: 'evidence' },
+      { key: 'B', text: 'premise' },
       { key: 'C', text: 'result' },
-      { key: 'D', text: 'premise' },
+      { key: 'D', text: 'conclusion' },
     ],
-    correctKey: 'D',
+    correctKey: 'B',
     explanation:
       'premise は「（議論の）前提」。合理的行動という前提に立つ文脈。\n\n【図解】語のイメージ整理\n★premise=前提\n○議論が立脚する前提\n×conclusion=結論／evidence=証拠\n→「議論の土台=前提」は premise',
     difficulty: 'advanced',
@@ -1317,12 +1317,12 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
     question:
       'Choose the best word to complete the sentence.\n\nThe scientist warned that the discovery had troubling ( ) for the future of privacy.',
     choices: [
-      { key: 'A', text: 'celebrations' },
-      { key: 'B', text: 'instructions' },
-      { key: 'C', text: 'implications' },
-      { key: 'D', text: 'definitions' },
+      { key: 'A', text: 'implications' },
+      { key: 'B', text: 'definitions' },
+      { key: 'C', text: 'celebrations' },
+      { key: 'D', text: 'instructions' },
     ],
-    correctKey: 'C',
+    correctKey: 'A',
     explanation:
       'implication は「（間接的な）影響・含意・波及」。発見のプライバシーへの波及の文脈。\n\n【図解】語のイメージ整理\n★implication=含意・波及・影響\n○将来への懸念すべき影響\n×instructions=指示／definitions=定義\n→「間接的な影響・含み」は implication',
     difficulty: 'advanced',
@@ -1335,11 +1335,11 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
       'Choose the best word to complete the sentence.\n\nThe economic crisis served as a ( ) for sweeping political reform across the continent.',
     choices: [
       { key: 'A', text: 'barrier' },
-      { key: 'B', text: 'symbol' },
-      { key: 'C', text: 'delay' },
-      { key: 'D', text: 'catalyst' },
+      { key: 'B', text: 'delay' },
+      { key: 'C', text: 'catalyst' },
+      { key: 'D', text: 'symbol' },
     ],
-    correctKey: 'D',
+    correctKey: 'C',
     explanation:
       'catalyst は「（変化の）きっかけ・触媒」。危機が改革の契機になる文脈。\n\n【図解】語のイメージ整理\n★catalyst=きっかけ・触媒\n○改革を促す契機\n×barrier=障壁／symbol=象徴\n→「変化の引き金」は catalyst',
     difficulty: 'advanced',
@@ -1352,11 +1352,11 @@ export const eikenQuestions2kyuVocabX4: EikenQuestion[] = [
       'Choose the best word to complete the sentence.\n\nLosing its main investor was a serious ( ), but the startup refused to give up.',
     choices: [
       { key: 'A', text: 'advantage' },
-      { key: 'B', text: 'reward' },
-      { key: 'C', text: 'setback' },
+      { key: 'B', text: 'setback' },
+      { key: 'C', text: 'reward' },
       { key: 'D', text: 'routine' },
     ],
-    correctKey: 'C',
+    correctKey: 'B',
     explanation:
       'setback は「後退・挫折・つまずき」。出資者を失う打撃の文脈。\n\n【図解】語のイメージ整理\n★setback=後退・挫折\n○出資者喪失という打撃\n×advantage=利点／reward=報酬\n→「一時的な後退」は setback',
     difficulty: 'advanced',

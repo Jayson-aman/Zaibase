@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "中学受験対策 ahiru Cloud Functions",
   "main": "index.js",
-  "engines": { "node": "20" },
+  "engines": { "node": "22" },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.104.2",
     "firebase-admin": "^12.0.0",
-    "firebase-functions": "^5.0.0"
+    "firebase-functions": "^5.0.0",
+    "stripe": "^16.0.0"
   }
 }

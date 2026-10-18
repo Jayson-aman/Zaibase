@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import type { MangaScript, MangaSpeaker } from '../data/manga-types';
+import type { SubjectKey } from '../data/questions-meta';
+import FeedbackForm from './FeedbackForm';
+import { rich } from './RichText';
 
 type SpeakerInfo = {
   name: string;
@@ -16,13 +19,25 @@ const SPEAKERS: Record<MangaSpeaker, SpeakerInfo> = {
   t: { name: '先生', emoji: '🧑‍🏫', color: '#1B7A4A', bg: '#EAF8EF', align: 'center' },
 };
 
-type Props = {
-  script: MangaScript;
+type MangaContext = {
+  lessonId?: string;
+  lessonTitle?: string;
+  subject?: SubjectKey;
+  examType?: 'chugaku' | 'koko';
 };
 
-export default function MangaDialogue({ script }: Props) {
+type Props = {
+  script: MangaScript;
+  /** 単元側から渡す文脈（フィードバック送信時にどの単元か分かるようにする） */
+  context?: MangaContext;
+};
+
+export default function MangaDialogue({ script, context }: Props) {
   const [index, setIndex] = useState(0);
+  const [showFeedback, setShowFeedback] = useState(false);
   const panel = script.panels[index];
+  // コマが空の台本でも落ちないようにする
+  if (panel == null) return null;
   const info = SPEAKERS[panel.speaker];
   const total = script.panels.length;
   const isLast = index >= total - 1;
@@ -56,7 +71,7 @@ export default function MangaDialogue({ script }: Props) {
           </View>
           <Text style={[styles.speakerName, { color: info.color }]}>{info.name}</Text>
         </View>
-        <Text style={[styles.line, panel.emphasis && styles.lineEmphasis]}>{panel.line}</Text>
+        <Text style={[styles.line, panel.emphasis && styles.lineEmphasis]}>{rich(panel.line, { size: panel.emphasis ? 17 : 15.5, color: panel.emphasis ? '#221C18' : '#2B2420', bold: !!panel.emphasis })}</Text>
       </View>
 
       <View style={styles.navRow}>
@@ -78,11 +93,43 @@ export default function MangaDialogue({ script }: Props) {
           </TouchableOpacity>
         )}
         {isLast && (
-          <TouchableOpacity style={styles.navBtn} onPress={() => setIndex(0)} activeOpacity={0.8}>
+          <TouchableOpacity
+            style={styles.navBtn}
+            onPress={() => {
+              setIndex(0);
+              setShowFeedback(false);
+            }}
+            activeOpacity={0.8}
+          >
             <Text style={styles.navBtnText}>🔁 もう一度読む</Text>
           </TouchableOpacity>
         )}
       </View>
+
+      {isLast && !showFeedback && (
+        <TouchableOpacity
+          style={styles.feedbackToggle}
+          onPress={() => setShowFeedback(true)}
+          activeOpacity={0.8}
+        >
+          <Text style={styles.feedbackToggleText}>📮 このマンガに感想を送る</Text>
+        </TouchableOpacity>
+      )}
+      {isLast && showFeedback && (
+        <View style={styles.feedbackBox}>
+          <FeedbackForm
+            compact
+            subject={context?.subject}
+            examType={context?.examType}
+            context={{
+              lessonId: context?.lessonId,
+              lessonTitle: context?.lessonTitle,
+              mangaId: script.id,
+            }}
+            onDone={() => setShowFeedback(false)}
+          />
+        </View>
+      )}
     </View>
   );
 }
@@ -183,5 +230,20 @@ const styles = StyleSheet.create({
   },
   navBtnBackText: {
     color: '#8B5A38',
+  },
+  feedbackToggle: {
+    marginTop: 10,
+    alignSelf: 'center',
+    paddingVertical: 8,
+    paddingHorizontal: 14,
+  },
+  feedbackToggleText: {
+    fontSize: 12.5,
+    fontWeight: '700',
+    color: '#8B5A38',
+    textDecorationLine: 'underline',
+  },
+  feedbackBox: {
+    marginTop: 10,
   },
 });

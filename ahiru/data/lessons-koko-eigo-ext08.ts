@@ -52,6 +52,7 @@ not を to の前に置く。
       {
         heading: '三つの用法の見取り図',
         figureId: 'lf_kokoeigoext08_256',
+        mangaId: 'koko_eigo_s256_futeishi_manga',
         body: `同じ to＋原形でも、文の中でどの品詞のはたらきをしているかで三つに分かれる。訳し方が違うのではなく、はたらきが違うから訳が変わる、という順序で理解する。
 
 ■ 名詞的用法（〜すること）
@@ -69,7 +70,7 @@ not を to の前に置く。
 例）I went to the library to study math.（I went to the library で文は完成している）
 例）I am glad to see you.（I am glad で完成、その理由を付け足している）
 
-★ ポイント：判別の手順は「①その to〜を消しても文が成り立つか → 成り立てば副詞的用法。②消すと成り立たず、直前が名詞なら形容詞的用法。③どちらでもなければ名詞的用法」。`,
+★ ポイント：判別の手順は「①主語・目的語・補語の席にあり、取り除くと文が成り立たない → 名詞的用法。②直前の名詞を説明している → 形容詞的用法。③どちらでもなく、取り除いても文が成り立つ付け足し → 副詞的用法」。`,
       },
     ],
     trapExamples: [
@@ -262,9 +263,9 @@ like / love / begin / start / continue は、うしろに to不定詞でも動�
     studyPeriod: '中2',
     targetLevel: 'oyo',
     keyPoints: [
-      '判定手順①：to〜 を取り除いても文が成立する → 副詞的用法。',
-      '判定手順②：取り除くと成立せず、直前が名詞 → 形容詞的用法。',
-      '判定手順③：どちらでもない（主語・目的語・補語の席にある）→ 名詞的用法。',
+      '判定手順①：主語・目的語・補語の席にあり、取り除くと文が成立しない → 名詞的用法。',
+      '判定手順②：直前の名詞を説明している（その名詞が to〜 の目的語や内容にあたる）→ 形容詞的用法。',
+      '判定手順③：①②のどちらでもなく、取り除いても文が成立する付け足し（目的・原因など）→ 副詞的用法。',
       '名詞的用法は「〜すること」と訳せるが、訳だけで決めない（形容詞的用法も「〜すること」と訳せる場合がある）。',
       'like / want / hope のうしろの to〜 は、ほぼ確実に名詞的用法（目的語）。',
     ],
@@ -273,26 +274,27 @@ like / love / begin / start / continue は、うしろに to不定詞でも動�
         heading: '取り除いてみる、が最短の判定法',
         body: `不定詞の用法を決めるのは意味ではなく、文の骨組み（主語＋動詞＋目的語・補語）の中にその to〜 が組みこまれているかどうかである。
 
-■ 手順①：消してみる
-消しても文として成り立つなら、その to〜 は骨組みの外にある付け足し、つまり副詞的用法である。
-例）I went to the park to play tennis.
-　→ I went to the park. で成立 → 副詞的用法（目的）
-例）I was glad to hear the news.
-　→ I was glad. で成立 → 副詞的用法（原因）
-
-■ 手順②：直前が名詞かを見る
-消すと文が不完全になり、しかも直前に名詞があるなら形容詞的用法。
-例）I have a lot of homework to do.
-　→ I have a lot of homework. は成立するが、to do は直前の homework を説明している → 形容詞的用法
-判断に迷うときは「その名詞を to〜 の目的語にできるか」を確かめる。do the homework が成り立つので形容詞的用法だとわかる。
-
-■ 手順③：残りが名詞的用法
+■ 手順①：主語・目的語・補語の席にあるか
+その to〜 を取り除くと文が成り立たなければ、骨組みの一部になっている名詞的用法である。
 例）I want to buy a new bike.
 　→ I want. では意味をなさない（何をほしいのかが必要）→ 目的語＝名詞的用法
 例）To swim in this river is dangerous.
 　→ 主語の席にある → 名詞的用法
 
-★ ポイント：①→②→③の順に当てはめる。順序を変えると、副詞的用法を「〜すること」と訳せてしまう場面で迷うことになる。`,
+■ 手順②：直前の名詞を説明しているか
+名詞のすぐうしろにあり、その名詞の内容や用途を説明していれば形容詞的用法。
+例）I have a lot of homework to do.
+　→ I have a lot of homework. だけでも文は成立するが、to do は直前の homework を説明している → 形容詞的用法
+判断に迷うときは「その名詞を to〜 の目的語にできるか」を確かめる。do the homework が成り立つので形容詞的用法だとわかる。
+
+■ 手順③：残りが副詞的用法
+①②のどちらでもなく、取り除いても文として成り立つなら、骨組みの外にある付け足し、つまり副詞的用法である。
+例）I went to the park to play tennis.
+　→ I went to the park. で成立。went の目的を付け足している → 副詞的用法（目的）
+例）I was glad to hear the news.
+　→ I was glad. で成立。glad の原因を付け足している → 副詞的用法（原因）
+
+★ ポイント：①→②→③の順に当てはめる。「消しても成り立つ」だけで副詞的用法と決めると、homework to do のような形容詞的用法を取りちがえる。先に直前の名詞を説明していないかを確かめる。`,
       },
       {
         heading: '同じ動詞でも用法が変わる',
@@ -320,7 +322,7 @@ like / love / begin / start / continue は、うしろに to不定詞でも動�
         trapExplanation: '「〜すること」と訳せてしまうため、訳だけを手がかりに名詞的用法だと判断してしまう。',
         correctAnswer: '副詞的用法（感情の原因を表す）',
         correctExplanation:
-          'to see my old friend を取り除いても I was very happy. で文として完成する。骨組みの外にある付け足しなので副詞的用法で、ここでは「うれしかった理由」を表している。訳ではなく「消しても成り立つか」で判定するのが確実である。',
+          'to see my old friend を取り除いても I was very happy. で文として完成する。骨組みの外にある付け足しなので副詞的用法で、ここでは「うれしかった理由」を表している。訳ではなく、骨組みの中の語か、名詞を説明しているか、付け足しかで判定するのが確実である。',
       },
       {
         question: '次の文の to visit は何用法か。I have a plan to visit Okinawa this summer.',
@@ -388,7 +390,7 @@ like / love / begin / start / continue は、うしろに to不定詞でも動�
 ■ 名詞が不定詞の主語のようにはたらく関係
 例）He has many friends to help him.
 　　→ friends help him（友達が彼を助ける）が成り立つ
-例）I have no one to talk to.（話し相手がいない）
+例）I have no one to help me.（私を助けてくれる人がいない）
 
 ■ 名詞の中身を説明する関係
 time / way / chance / plan / promise など、内容を必要とする名詞に付く。
@@ -482,6 +484,21 @@ time / way / chance / plan / promise など、内容を必要とする名詞に�
 
 ★ ポイント：付け足す語はすべて -thing の右側に、形容詞 → else → to不定詞 の順に並ぶと覚えておけばよい。`,
       },
+      {
+        heading: 'なぜ -thing だけ形容詞が後ろに回り、なぜ否定語は一つなのか',
+        mangaId: 'koko_eigo_s261_manga',
+        body: `something・anything・nothing は、「some＋thing」のように**すでに語の中に修飾語（some）を持った代名詞**なので、その前に別の形容詞を置けません。だから形容詞は後ろに回って something cold となり、さらに不定詞はそのあとに来て something cold to drink の順に固定されます。日本語の「冷たい何か」の順や、cold water の順に引きずられると × cold something になります。
+
+否定語が一文に一つなのは、英語では not と nothing を重ねると**打ち消しが二重になって意味が反転する**からです。「何もすることがない」は I don't have anything to do. か I have nothing to do. のどちらかで、× I don't have nothing to do. とはしません。疑問文・否定文で anything を使い、相手に Yes を期待してすすめるときだけ疑問文でも something（Would you like something to drink?）を使います。
+
+■ 確かめのしかた
+①語順は **-thing → 形容詞 → else → to＋原形**：something cold to drink、anything else to eat。× cold something、× something to drink cold。
+②肯定文→something、疑問文・否定文→anything／nothing。すすめる疑問文（Would you like 〜?／Can I have 〜?）は something。
+③否定語は**一文に一つ**：don't 〜 anything か nothing。× don't have nothing。
+④I want to drink something cold.（冷たい物を飲みたい）と I want something cold to drink.（冷たい飲み物がほしい）を区別する。
+
+★ ここがポイント：-thing は**語の中に修飾語を持つ**ので形容詞は後ろに回り、**-thing→形容詞→else→to 不定詞**の順。否定語は**一文に一つ**（don't 〜 anything／nothing）。`,
+      },
     ],
     trapExamples: [
       {
@@ -523,6 +540,7 @@ time / way / chance / plan / promise など、内容を必要とする名詞に�
     sections: [
       {
         heading: '前置詞が残るしくみ',
+        mangaId: 'koko_eigo_s262_manga',
         body: `形容詞的用法は「名詞を不定詞の目的語の位置から前に取り出した形」だと考えるとわかりやすい。取り出したときに、その名詞と動詞をつないでいた前置詞は、行き場がないので文末に残る。
 
 ■ 作り方の手順
@@ -870,6 +888,7 @@ go / come のあとに目的を付け足す形は会話でも頻出である。
     sections: [
       {
         heading: '気持ちを先に、理由をあとに',
+        mangaId: 'koko_eigo_s266_manga',
         figureId: 'lf_kokoeigoext08_266',
         body: `英語は「どう感じたか」を先に述べ、「なぜそう感じたか」をあとから to＋原形で足す。日本語と順序が逆になる。
 
@@ -1044,7 +1063,7 @@ to〜 の直前を見る。be動詞＋感情形容詞 なら原因、動作動�
 ■ ①直前が名詞・代名詞 → 形容詞的用法
 例）I have a lot of work to do.（work＝名詞）
 例）Give me something to drink.（something＝代名詞）
-ただし tell me to go のように「動詞＋人＋to〜」の形（s280）は例外で、名詞的用法の一種として扱う。
+ただし tell me to go のように「動詞＋人＋to〜」の形（s280）は、三用法のどれかに分けるのではなく、独立した形として扱う。
 
 ■ ②直前が be動詞＋感情形容詞 → 副詞的用法（原因）
 例）I was glad to hear from you.
@@ -1058,7 +1077,7 @@ to〜 の直前を見る。be動詞＋感情形容詞 なら原因、動作動�
 例）I want to read this book.（目的語）
 例）My hope is to read many books.（補語）
 
-★ ポイント：判定に迷ったら「to〜 を消してみる」に戻る。消して文が残れば副詞的用法、残らなければ名詞的用法か形容詞的用法である。`,
+★ ポイント：判定に迷ったら、まず「主語・目的語・補語の席か」「直前の名詞を説明しているか」を確かめる。どちらでもなく、消しても文が残る付け足しなら副詞的用法である。`,
       },
       {
         heading: '入試での問われ方',
@@ -1319,6 +1338,7 @@ how to do のうしろには目的語 it が必要である。do の目的語が
       },
       {
         heading: '間接疑問文の語順に注意',
+        mangaId: 'koko_eigo_s271_manga',
         body: `書きかえで最も多い誤りが、疑問文の語順のまま書いてしまうことである。
 
 ■ 正しい語順
@@ -1428,6 +1448,21 @@ It は訳さず、to〜 以下を「〜することは」と主語のように�
 まず前の文に指すべき名詞があるかを見る → あれば代名詞。なければ、うしろに to〜 があるかを見る → あれば形式主語、なければ天候・時刻などの it。
 
 ★ ポイント：It is nine o'clock. It is time to go to bed. のように、②と①が続けて出ることもある。to〜 の有無だけで機械的に切り分ける。`,
+      },
+      {
+        heading: 'なぜ It を先に置くのか、なぜ動名詞は続けられないのか',
+        mangaId: 'koko_eigo_s272_manga',
+        body: `英語は「主語→動詞」の骨組みを早く示したいことばです。To read English books every day is important. では、動詞 is にたどりつくまでが長く、読み手は主語がどこまでか分からないまま待たされます。そこで意味を持たない It を主語の席に置いて骨組み（It is important）を先に見せ、中身（to read 〜）をあとから言い直します。だからこの It は「それは」と訳さず、to 〜以下を「〜することは」と主語のように訳します。
+
+形式主語の It が受けるのが to 不定詞だけなのは、It is 〜 to … が**ひとまとまりの型**として固まっているからです。動名詞を主語にしたいなら Swimming in this river is easy. とそのまま主語の席に置きます。it の識別は、前の文に指す名詞があるか（→代名詞）、うしろに to 〜があるか（→形式主語）、どちらもなければ天候・時刻の it、の順で機械的に行います。
+
+■ 確かめのしかた
+①It is＋形容詞＋to〜 を見たら、**To〜 is 形容詞.** に戻して主語であることを確かめる。訳は「〜することは…だ」（× それは〜ために）。
+②It のうしろが動名詞になっていないか（× It is easy swimming）。動名詞なら主語の席へ。
+③it の識別：前の文に指す名詞→代名詞（訳す）／うしろに to〜→形式主語（訳さない）／どちらもない→天候・時刻・距離（訳さない）。
+④よく使う形容詞：easy・difficult・hard・important・necessary・dangerous・interesting・fun。
+
+★ ここがポイント：英語は**骨組みを先に見せたい**ので It を置いて中身を後回しにする（It は訳さない）。It が受けるのは **to 不定詞だけ**。it は「前に名詞があるか→to があるか」で識別。`,
       },
     ],
     trapExamples: [
@@ -1554,6 +1589,7 @@ for は前置詞なので、うしろの代名詞は目的格になる。
     sections: [
       {
         heading: 'of をとる形容詞と for をとる形容詞',
+        mangaId: 'koko_eigo_s274_manga',
         body: `不定詞の意味上の主語は、ふつう for＋人 で表す。しかし、その形容詞が「動作の難しさ」ではなく「人そのものの性質」を評価している場合は of を使う。
 
 ■ of を使う例
@@ -1731,6 +1767,7 @@ Playing the piano is not easy. のように動名詞が主語のときも、It �
     sections: [
       {
         heading: 'too と very の違い',
+        mangaId: 'koko_eigo_s276_manga',
         figureId: 'lf_kokoeigoext08_276',
         body: `very は単に程度が大きいことを表すが、too は「必要な程度・許される程度を越えている」という否定的な評価を含む。
 
@@ -1840,6 +1877,7 @@ for〜 を置かなければ、「一般にだれにとっても」あるいは�
       },
       {
         heading: 'so 〜 that … can\'t への書きかえ',
+        mangaId: 'koko_eigo_s277_sothat_manga',
         body: `too 〜 to … は、so 〜 that … can't を使った文にほぼ同じ意味で書きかえられる。
 
 ■ 手順
@@ -2042,6 +2080,21 @@ kind / nice を使った文は「親切にも〜してくれた」と訳すと�
 
 ⚠ 注意：so 〜 that … の that は省略されることがあるが、書きかえ問題では省略せずに書くほうが安全である。また enough to の文を that 節に直したとき、主語を書き忘れる誤りが多い。that のうしろは必ず主語から始める。`,
       },
+      {
+        heading: 'なぜ enough to は so 〜 that can になり、なぜ it を補ったり補わなかったりするのか',
+        mangaId: 'koko_eigo_s279_manga',
+        body: `rich enough to buy that car は「あの車を買えるほど金持ちだ」で、「とても金持ちなので買える」と言いかえられます。そこで enough を消して形容詞の前に so を置き、to〜 を that＋主語＋can＋原形にします。too 〜 to … が so 〜 that … can't になるのと同じ手順で、否定が肯定に変わるだけです。不定詞には時制がないので、主節が過去なら that 節は could にそろえます。
+
+it を補うのは that 節のときだけです。The book is easy enough for children to read. の不定詞 to read は、主語の the book をそのまま目的語として受けているので it は不要です。that 節に直すと read は独立した文の動詞になり、目的語がないと文が成り立たないので it（＝the book）を補います。「不定詞では不要、that 節では必要」と対で覚えます。
+
+■ 確かめのしかた
+①手順：**①so を置く→②that＋主語＋can→③過去なら could→④他動詞なら目的語を補う**。
+②主語は for＋人 があればその人、なければ文の主語。that のあとを主語から始めているか。
+③不定詞の文に it を足していないか（× easy enough for me to read it）。that 節に it を落としていないか（so easy that I can read it）。
+④too 〜 to … と対で：too difficult to read＝so difficult that I can't read it／easy enough to read＝so easy that I can read it。kind enough to は「親切にも〜してくれた」。
+
+★ ここがポイント：enough to は「**〜できるほど**」なので so 〜 that … can（過去なら could）。目的語の it は**不定詞では不要、that 節では必要**。`,
+      },
     ],
     trapExamples: [
       {
@@ -2191,6 +2244,7 @@ say はこの形をとらない。
       },
       {
         heading: '否定の形と、その他の動詞',
+        mangaId: 'koko_eigo_s281_manga',
         body: `■ not は to の前
 例）The teacher told us not to run in the hallway.（先生は廊下を走らないように言った）
 例）My mother told me not to eat too much.（母は食べすぎないように言った）
@@ -2338,6 +2392,7 @@ said to me の me が伝えられた相手なので、tell / ask のうしろに
     sections: [
       {
         heading: 'make / let / help の使い分け',
+        mangaId: 'koko_eigo_s283_manga',
         body: `使役動詞と呼ばれるグループで、いずれも「人に何かをさせる」を表すが、強さが違う。うしろは to のない原形になる。
 
 ■ make ＋人＋原形（強制）
@@ -2535,6 +2590,7 @@ make を受け身にすると、消えていた to が現れる。
       },
       {
         heading: 'mind の答え方と、両方とれる動詞',
+        mangaId: 'koko_eigo_s285_manga',
         body: `■ Would you mind ~ing? への答え方
 mind は「〜をいやだと思う」という意味なので、承諾するときは否定で答える。
 例）Would you mind opening the window?（窓を開けていただけませんか）
@@ -2738,6 +2794,21 @@ look forward to のように、to で終わる熟語では to が前置詞なの
 
 ⚠ 注意：be interested in ~ing のように前置詞で終わる熟語と、want to〜 のように不定詞をとる動詞を混同しないこと。熟語の最後の語が前置詞なら動名詞、不定詞の to なら原形である。`,
       },
+      {
+        heading: 'なぜ go 〜ing で、なぜ be used to と used to は別物なのか',
+        mangaId: 'koko_eigo_s287_manga',
+        body: `go fishing・go shopping の -ing は「釣り・買い物」という**活動そのもの**を表す動名詞です。「〜しに行く」を目的の不定詞（go to fish）で作ると、「どこかへ行って、そこで釣る」という別の目的の移動に聞こえ、「釣りに出かける」という決まった言い方としては使われません。活動へ出かけるときは go＋活動（-ing）という決まった形を使い、場所は go shopping at the store と at／in で続けます（to は使わない）。go studying と言わないのは、study が「活動として出かける」種類の動作ではないからです。
+
+be used to 〜ing（慣れている）と used to＋原形（以前は〜した）が別物なのは、前者の to が**前置詞**で、後者の used to が**助動詞のように働くひとかたまり**だからです。前置詞のあとには名詞（動名詞）が来て、助動詞のあとには原形が来ます。見分けは be動詞の有無で行います。
+
+■ 確かめのしかた
+①「〜しに行く」は **go 〜ing**（go shopping／fishing／swimming／skiing）。× go to shop。場所は at／in（× go shopping to the store）。
+②be busy 〜ing、feel like 〜ing、spend＋時間・お金＋〜ing の形。
+③**be動詞があれば be used to 〜ing（慣れている）、なければ used to＋原形（以前は〜した）**。My grandfather used to walk→「以前は歩いたものだ」。
+④熟語の最後が前置詞なら動名詞（be interested in 〜ing、How about 〜ing?）、不定詞の to なら原形（want to〜、Why don't you＋原形）。
+
+★ ここがポイント：go 〜ing の -ing は**活動そのもの**を表す。**be used to の to は前置詞（動名詞）、used to は助動詞のかたまり（原形）**で、be動詞の有無で見分ける。`,
+      },
     ],
     trapExamples: [
       {
@@ -2804,6 +2875,7 @@ look forward to のように、to で終わる熟語では to が前置詞なの
       },
       {
         heading: '三つのグループの全体像',
+        mangaId: 'koko_eigo_s288_manga',
         body: `中学で覚えるべき動詞を三つに分けて整理する。合計二十語で、入試に出るものはほぼ尽くされる。
 
 ■ ①動名詞だけ（8語）
@@ -2866,6 +2938,7 @@ like／love／begin／start／continue
     sections: [
       {
         heading: '七つの動詞と例文',
+        mangaId: 'koko_eigo_s289_manga',
         body: `不定詞だけを目的語にとる動詞は、いずれも「これから実現すること」を続けている。
 
 ■ want to 〜（〜したい）
@@ -2952,6 +3025,7 @@ want / tell / ask は「人＋to」をとるが、hope / say / think はとら�
     sections: [
       {
         heading: 'stop の二つの形',
+        mangaId: 'koko_eigo_s290_manga',
         body: `stop は動名詞だけを目的語にとる動詞である。したがって stop のうしろの to不定詞は目的語ではなく、「〜するために」を表す副詞的用法になる。この違いが意味を大きく変える。
 
 ■ stop ~ing（〜するのをやめる）
@@ -3061,6 +3135,7 @@ try to do は「うまくいかなかった」という含みを持つことが�
       },
       {
         heading: '入試での出題形式',
+        mangaId: 'koko_eigo_s291_manga',
         body: `■ ①適語選択・語形変化
 例）I'm interested in （learn） about history. → learning（前置詞 in のうしろ）
 例）He decided （go） abroad. → to go（decide は不定詞）
@@ -3126,6 +3201,7 @@ enjoy のうしろは -ing、という知識がそのまま語順の決め手に
     sections: [
       {
         heading: 'する側か、される側か',
+        mangaId: 'koko_eigo_s292_bunshi_manga',
         body: `分詞とは、動詞に -ing や -ed を付けて形容詞のように使う形をいう。どちらを使うかは、修飾される名詞との関係で決まる。
 
 ■ 現在分詞（-ing）＝「〜している」
@@ -3345,6 +3421,21 @@ be動詞が -ing の直前にあれば進行形、名詞の直後にいきなり
 
 ⚠ 注意：The boy running in the park my brother. のように文の動詞を書き忘れる誤りが多い。分詞のかたまりを主語に付けたら、必ずそのあとに動詞があるかを確認する。`,
       },
+      {
+        heading: 'なぜ2語以上は後ろに回り、なぜ動詞は先頭の名詞に合わせるのか',
+        mangaId: 'koko_eigo_s294_manga',
+        body: `英語では、名詞を説明する語が1語なら前に置きます（a running boy）が、説明が2語以上のかたまりになると、名詞と動詞の距離が離れて読みにくくなるので**かたまりごと名詞の後ろに回します**（the boy running in the park）。後ろに回った分詞のかたまりは、関係代名詞＋be動詞（the boy who is running）を縮めたものと考えると、書きかえも語順もつながります。
+
+動詞を先頭の名詞に合わせるのは、文の主語が the boy であって、分詞のかたまりの中の the park ではないからです。かたまりの直前の名詞に引きずられて is／are をまちがえる誤りが多いので、長い主語を見たら先頭の名詞まで戻ります。名詞の直後にいきなり -ing が来ていれば分詞（文の動詞は後ろにある）、be動詞＋-ing なら進行形（それが文の動詞）です。
+
+■ 確かめのしかた
+①分詞が**1語なら前、2語以上なら後ろ**。× a written in English book→a book written in English。
+②長い主語は「名詞／分詞のかたまり／文の動詞」と**スラッシュで切り**、文の動詞を先に探す。動詞を書き忘れていないか（× The boy running in the park my brother.）。
+③動詞の単複は**先頭の名詞**に合わせる。The children playing soccer in the park **are** my classmates.（× is）。
+④関係代名詞に戻して確かめる：running＝who is running、written＝which was written（時制は文全体に合わせる）。
+
+★ ここがポイント：2語以上の分詞は**名詞と動詞の距離をあけないために後ろに回る**。主語は**先頭の名詞**なので動詞もそれに合わせ、長い主語ではまず文の動詞を探す。`,
+      },
     ],
     trapExamples: [
       {
@@ -3370,7 +3461,7 @@ be動詞が -ing の直前にあれば進行形、名詞の直後にいきなり
     id: 'koko_eigo_s295',
     subject: 'eigo',
     examType: 'koko',
-    title: '分詞・動名詞・不定詞：後置修飾の総合識別',
+    title: '分詞・動名詞・不定詞：名詞を修飾する形の総合識別',
     description: '名詞のうしろに続く -ing・過去分詞・to不定詞を、正確に読み分けて訳す',
     intro: 'a swimming pool は「泳いでいるプール」ではありません。a swimming boy なら「泳いでいる少年」なのに、なぜ違うのか。同じ -ing でも、動名詞（〜するための）と現在分詞（〜している）では意味がまるで変わります。最後にこの単元の全体を、識別という一点でまとめ上げます。',
     order: 795,

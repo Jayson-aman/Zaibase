@@ -58,7 +58,7 @@ async function fetchEntitlements(uid) {
   try {
     const res = await fetch(
       `https://api.revenuecat.com/v1/subscribers/${encodeURIComponent(uid)}`,
-      { headers: { Authorization: `Bearer ${key}`, Accept: "application/json" } }
+      { headers: { Authorization: `Bearer ${key}`, Accept: "application/json" }, signal: AbortSignal.timeout(8000) }
     );
     // 404 = 未購入ユーザー。RevenueCat は購入前でも 200 を返すが、念のため両対応。
     if (res.status === 404) return { max: false, pro: false, vocab: false };
@@ -79,8 +79,12 @@ async function fetchEntitlements(uid) {
     if (!ent) return false;
     // expires_date が無い = 期限なし（生涯）。ある場合は未来かどうかで判定。
     if (!ent.expires_date) return true;
+    // 請求の猶予期間（更新に失敗したが、ストアが再試行している間）は expires_date が過去になるが、
+    // アプリ側（SDK）はまだ有効と扱う。サーバーも合わせて、遅いほうで判定する。
     const expiresAt = Date.parse(ent.expires_date);
-    return Number.isFinite(expiresAt) && expiresAt > now;
+    const graceAt = ent.grace_period_expires_date ? Date.parse(ent.grace_period_expires_date) : NaN;
+    const until = Math.max(Number.isFinite(expiresAt) ? expiresAt : -Infinity, Number.isFinite(graceAt) ? graceAt : -Infinity);
+    return Number.isFinite(until) && until > now;
   };
 
   return {
@@ -101,7 +105,7 @@ async function fetchEntitlements(uid) {
  *   商品IDごとの購入履歴配列として入っている。
  *
  * @returns {Promise<number | null>}
- *   購入回数（sandbox購入は本番の課金判定に使わないため除外）。
+ *   購入回数（sandbox購入も数える。AHIRU_IGNORE_SANDBOX=1 のときだけ除外）。
  *   null = 判定不能（キー未設定・API障害など）。呼び出し元はフォールバックを使う。
  */
 async function fetchNonSubscriptionPurchaseCount(uid, productId) {
@@ -123,7 +127,7 @@ async function fetchNonSubscriptionPurchaseCount(uid, productId) {
   try {
     const res = await fetch(
       `https://api.revenuecat.com/v1/subscribers/${encodeURIComponent(uid)}`,
-      { headers: { Authorization: `Bearer ${key}`, Accept: "application/json" } }
+      { headers: { Authorization: `Bearer ${key}`, Accept: "application/json" }, signal: AbortSignal.timeout(8000) }
     );
     if (res.status === 404) return 0;
     if (!res.ok) {
@@ -138,7 +142,11 @@ async function fetchNonSubscriptionPurchaseCount(uid, productId) {
 
   const purchases = json?.subscriber?.non_subscriptions?.[productId] ?? [];
   if (!Array.isArray(purchases)) return 0;
-  return purchases.filter((p) => !p?.is_sandbox).length;
+  // ⚠️ sandbox 購入も数える。App Review と TestFlight の購入は sandbox 扱いで、数えないと
+  // 「購入は成功したのに解放されない」状態になり、審査で却下される。sandbox 環境はストアの開発・審査用で、
+  // 一般ユーザーの本番ビルドからは使えない。将来ゆるめたくないときは AHIRU_IGNORE_SANDBOX=1 を設定する。
+  const ignoreSandbox = process.env.AHIRU_IGNORE_SANDBOX === "1";
+  return purchases.filter((p) => !(ignoreSandbox && p?.is_sandbox)).length;
 }
 
 /**

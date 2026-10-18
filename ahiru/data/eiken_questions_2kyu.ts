@@ -10,13 +10,13 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
       'The committee decided to ( ) the decision until more data was available, hoping for a clearer picture before committing to any course of action.',
     choices: [
       { key: 'A', text: 'suspend' },
-      { key: 'B', text: 'delay' },
-      { key: 'C', text: 'postpone' },
-      { key: 'D', text: 'defer' },
+      { key: 'B', text: 'defer' },
+      { key: 'C', text: 'announce' },
+      { key: 'D', text: 'cancel' },
     ],
-    correctKey: 'D',
+    correctKey: 'B',
     explanation:
-      '"defer a decision" は「より信頼できる情報や権威が整うまで先送りにする」というニュアンスで、データを待つ文脈に最も適切。delay・postpone も「遅らせる」意味だが defer ほど「判断を委ねる」含意がない。suspend は「活動・特権などを一時停止する」場合に使い、通常 decision には使わない。',
+      '"defer a decision" は「判断を先送りにする」意で、データがそろうまで決定を待つ文脈に合う。suspend は活動・特権などを一時停止する場合に使い decision には通常使わない。cancel（取り消す）や announce（発表する）は「より明確な状況を待つ」という文意に合わない。',
     difficulty: 'advanced',
   },
   {
@@ -26,12 +26,12 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'His remarks were so ( ) that different members of the audience interpreted them in completely opposite ways.',
     choices: [
-      { key: 'A', text: 'vague' },
-      { key: 'B', text: 'ambivalent' },
-      { key: 'C', text: 'obscure' },
-      { key: 'D', text: 'ambiguous' },
+      { key: 'A', text: 'obscure' },
+      { key: 'B', text: 'vague' },
+      { key: 'C', text: 'ambiguous' },
+      { key: 'D', text: 'ambivalent' },
     ],
-    correctKey: 'D',
+    correctKey: 'C',
     explanation:
       'ambiguous は「（発言・意味が）複数の解釈を許す、曖昧な」で、異なる人が反対の解釈をしたという文脈に最適。ambivalent は「心情が両面にある、矛盾した気持ちを持つ」で主に感情に使う。obscure は「（知識・作品が）無名・難解な」、vague は「漠然とした」で曖昧さは表すが「複数の解釈」のニュアンスは薄い。',
     difficulty: 'advanced',
@@ -43,12 +43,12 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'The new medication proved ( ) in clinical trials, reducing symptoms in over 90 percent of participants.',
     choices: [
-      { key: 'A', text: 'capable' },
-      { key: 'B', text: 'potent' },
+      { key: 'A', text: 'effective' },
+      { key: 'B', text: 'capable' },
       { key: 'C', text: 'efficient' },
-      { key: 'D', text: 'effective' },
+      { key: 'D', text: 'potent' },
     ],
-    correctKey: 'D',
+    correctKey: 'A',
     explanation:
       '"effective" は「（薬・方法が）意図した効果を上げる」意。症状軽減という結果を強調する文脈に最適。potent は「（薬・物質が）強力な作用を持つ」で効能の強さに焦点があり、症状軽減率には直接つながりにくい。efficient は「効率的な」でプロセスに着目。capable は人や機械の「能力がある」に使う。',
     difficulty: 'standard',
@@ -60,14 +60,14 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'Rising sea levels ( ) a serious threat to coastal communities around the world, potentially displacing millions of people.',
     choices: [
-      { key: 'A', text: 'raise' },
-      { key: 'B', text: 'present' },
-      { key: 'C', text: 'pose' },
-      { key: 'D', text: 'provide' },
+      { key: 'A', text: 'provide' },
+      { key: 'B', text: 'pose' },
+      { key: 'C', text: 'raise' },
+      { key: 'D', text: 'hold' },
     ],
-    correctKey: 'C',
+    correctKey: 'B',
     explanation:
-      '"pose a threat" は英語の固定コロケーションで「脅威をもたらす」の意。present a threat も文法的には成立するが、pose の方がより慣用的で自然。raise a threat という表現は一般的でなく、provide a threat は意味的に不自然。',
+      '"pose a threat" は「脅威をもたらす」の意の固定コロケーション。raise は「（問題・疑問を）提起する」で threat とは結びつかず、hold・provide も threat とは自然に組まない。',
     difficulty: 'standard',
   },
   {
@@ -77,14 +77,14 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       "The professor's lecture was highly ( ); she drew connections between ancient philosophy and contemporary neuroscience that no one had considered before.",
     choices: [
-      { key: 'A', text: 'innovative' },
-      { key: 'B', text: 'provocative' },
-      { key: 'C', text: 'stimulating' },
+      { key: 'A', text: 'irritating' },
+      { key: 'B', text: 'tedious' },
+      { key: 'C', text: 'predictable' },
       { key: 'D', text: 'enlightening' },
     ],
     correctKey: 'D',
     explanation:
-      '"enlightening" は「新たな知識や視点をもたらす」意で、誰も考えなかった視点を示した講義の説明として最適。stimulating は「知的好奇心を刺激する」、innovative は「革新的な」でどちらも惜しいが、enlightening は「無知から理解へ導く」ニュアンスがある。provocative は「物議を醸す、挑発的な」で否定的含意もある。',
+      '"enlightening" は「新たな知識や視点をもたらす」意で、誰も考えなかった視点を示した講義の説明として最適。irritating（いらだたせる）・tedious（退屈な）・predictable（予想どおりの）は「誰も考えなかった結びつきを示した」という内容と矛盾する。',
     difficulty: 'advanced',
   },
   {
@@ -94,14 +94,14 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'The charity relies ( ) on donations from the public, as it receives no government funding whatsoever.',
     choices: [
-      { key: 'A', text: 'entirely' },
+      { key: 'A', text: 'heavily' },
       { key: 'B', text: 'largely' },
-      { key: 'C', text: 'heavily' },
-      { key: 'D', text: 'solely' },
+      { key: 'C', text: 'solely' },
+      { key: 'D', text: 'barely' },
     ],
-    correctKey: 'D',
+    correctKey: 'C',
     explanation:
-      '"relies solely on" は「ただ一つの源だけに頼る」という排他的な依存を表し、"no government funding whatsoever" という後半と論理的に一致する。entirely や wholly も類似するが、"relies entirely on" は稀な表現。largely・heavily は部分的依存を示し "no government funding" と矛盾する。',
+      '"relies solely on" は「ただ一つの源だけに頼る」という排他的な依存を表し、"no government funding whatsoever" という後半と論理的に一致する。barely は「ほとんど〜ない」で relies と組み合わせると文意が成立せず、largely・heavily は部分的依存を示し "no government funding" と食いちがう。',
     difficulty: 'standard',
   },
   {
@@ -111,14 +111,14 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       "The mayor's proposal to build a new stadium was met with ( ) from local residents, who argued that schools and hospitals were more urgently needed.",
     choices: [
-      { key: 'A', text: 'criticism' },
-      { key: 'B', text: 'opposition' },
-      { key: 'C', text: 'resistance' },
-      { key: 'D', text: 'objection' },
+      { key: 'A', text: 'opposition' },
+      { key: 'B', text: 'approval' },
+      { key: 'C', text: 'indifference' },
+      { key: 'D', text: 'enthusiasm' },
     ],
-    correctKey: 'D',
+    correctKey: 'A',
     explanation:
-      '"met with objection" は「異議・反対意見を受ける」という慣用表現。"raise an objection" とも言う。opposition は「反対勢力・組織的抵抗」、resistance は「物理的・継続的な抵抗」、criticism は「批判」でいずれも正しくはあるが、"met with" というコロケーションでは objection が最も自然。',
+      '"met with opposition" は「反対を受ける」という自然な表現。住民が学校や病院のほうが急務だと主張していることから、提案への反対があったとわかる。approval（賛成）・enthusiasm（熱意）は文意と逆。indifference（無関心）は住民が意見を述べている内容と合わない。',
     difficulty: 'advanced',
   },
   {
@@ -128,14 +128,14 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'After years of ( ) research, the team finally published their findings on the genetic causes of the rare disorder.',
     choices: [
-      { key: 'A', text: 'rigorous' },
-      { key: 'B', text: 'thorough' },
-      { key: 'C', text: 'meticulous' },
+      { key: 'A', text: 'occasional' },
+      { key: 'B', text: 'hasty' },
+      { key: 'C', text: 'careless' },
       { key: 'D', text: 'relentless' },
     ],
     correctKey: 'D',
     explanation:
-      '"relentless research" は「何年もやめることなく続けた研究」という粘り強さを表し、"years of" という時間的長さと最もよく対応する。meticulous は「細部に注意を払った」、rigorous は「厳密な手順に従った」、thorough は「徹底的な」でいずれも研究の質には合うが、長年継続したという粘り強さを最も強く表すのは relentless。',
+      '"relentless research" は「何年もやめることなく続けた研究」という粘り強さを表し、"years of" という時間的長さと対応する。careless（不注意な）・hasty（性急な）・occasional（ときどきの）は、長年かけて結果を発表したという流れに合わない。',
     difficulty: 'advanced',
   },
   {
@@ -145,14 +145,14 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'The documentary ( ) the devastating impact of plastic pollution on marine wildlife, prompting many viewers to change their daily habits.',
     choices: [
-      { key: 'A', text: 'depicted' },
-      { key: 'B', text: 'portrayed' },
-      { key: 'C', text: 'illustrated' },
+      { key: 'A', text: 'concealed' },
+      { key: 'B', text: 'denied' },
+      { key: 'C', text: 'ignored' },
       { key: 'D', text: 'exposed' },
     ],
     correctKey: 'D',
     explanation:
-      '"exposed" は「（隠れていた問題を）明らかにする・暴く」で、視聴者の行動変容を促したという結果と自然につながる。depicted・portrayed は「描写した」、illustrated は「例示・図示した」でいずれも中立的な描写。exposed には「社会的問題を告発する」強い含意がある。',
+      '"exposed" は「（隠れていた問題を）明らかにする・暴く」で、視聴者の行動変容を促したという結果と自然につながる。ignored（無視した）・concealed（隠した）・denied（否定した）は、視聴者が習慣を変えたという内容と合わない。',
     difficulty: 'advanced',
   },
   {
@@ -162,14 +162,14 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'The two countries signed a trade agreement designed to ( ) tariffs on agricultural products over the next five years.',
     choices: [
-      { key: 'A', text: 'abolish' },
-      { key: 'B', text: 'reduce' },
-      { key: 'C', text: 'phase out' },
-      { key: 'D', text: 'eliminate' },
+      { key: 'A', text: 'raise' },
+      { key: 'B', text: 'phase out' },
+      { key: 'C', text: 'impose' },
+      { key: 'D', text: 'increase' },
     ],
-    correctKey: 'C',
+    correctKey: 'B',
     explanation:
-      '"phase out" は「段階的に廃止する」意で、"over the next five years" という時間的段階を示す表現と最も適合する。abolish・eliminate は即時・完全な廃止を示唆し、段階的ニュアンスが薄い。reduce は「削減する」で廃止ではなく量の減少にとどまる。',
+      '"phase out" は「段階的に廃止する」意で、"over the next five years" という時間的段階を示す表現と合う。impose（課す）・raise（引き上げる）・increase（増やす）は、貿易協定が関税を扱う目的と逆になる。',
     difficulty: 'standard',
   },
   {
@@ -179,12 +179,12 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'The new traffic regulations were ( ) on all drivers regardless of the type of vehicle they operated.',
     choices: [
-      { key: 'A', text: 'compelling' },
-      { key: 'B', text: 'obligatory' },
-      { key: 'C', text: 'mandatory' },
-      { key: 'D', text: 'binding' },
+      { key: 'A', text: 'mandatory' },
+      { key: 'B', text: 'binding' },
+      { key: 'C', text: 'compelling' },
+      { key: 'D', text: 'obligatory' },
     ],
-    correctKey: 'D',
+    correctKey: 'B',
     explanation:
       '"binding on" は「（規則・契約が）〜に対して法的拘束力を持つ」という法律用語的な表現で、"on all drivers" との相性が最も良い。mandatory・obligatory はいずれも「義務的な」を意味するが、"mandatory/obligatory on" という構文は一般的でない。compelling は「説得力のある」という別義が主で、法的義務の文脈には不適切。',
     difficulty: 'advanced',
@@ -196,12 +196,12 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'Scientists warn that the current rate of deforestation is ( ) the natural carbon cycle, making climate targets increasingly difficult to meet.',
     choices: [
-      { key: 'A', text: 'disturbing' },
-      { key: 'B', text: 'interrupting' },
-      { key: 'C', text: 'disrupting' },
-      { key: 'D', text: 'interfering' },
+      { key: 'A', text: 'interfering' },
+      { key: 'B', text: 'disturbing' },
+      { key: 'C', text: 'interrupting' },
+      { key: 'D', text: 'disrupting' },
     ],
-    correctKey: 'C',
+    correctKey: 'D',
     explanation:
       '"disrupting" は「（システム・プロセスを）大規模に乱す、機能不全にする」意で、炭素循環という複雑なシステムへの影響に最適。disturbing は「不安にさせる」という心理的影響が主。interrupting は「短期的・一時的な中断」。interfering は "interfering with" の形を取り他動詞として目的語を直接取れない。',
     difficulty: 'standard',
@@ -213,12 +213,12 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       "The architect's design was both aesthetically pleasing and highly ( ), making excellent use of space without wasting any materials.",
     choices: [
-      { key: 'A', text: 'effective' },
+      { key: 'A', text: 'efficient' },
       { key: 'B', text: 'functional' },
-      { key: 'C', text: 'efficient' },
+      { key: 'C', text: 'effective' },
       { key: 'D', text: 'practical' },
     ],
-    correctKey: 'C',
+    correctKey: 'A',
     explanation:
       '"efficient" は「投入資源（素材・スペース）に対して最大の成果を上げる」意。"without wasting any materials" という表現と正確に対応する。functional は「機能する・実用的」、practical は「現実的・実際的」でいずれも近いが、資源の無駄なし、というニュアンスは efficient が最も強く表す。effective は「効果を上げる」で、資源節約ではなく結果に焦点がある。',
     difficulty: 'standard',
@@ -230,14 +230,14 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       "The government's economic policy was heavily ( ) toward supporting large corporations, leaving small businesses with little assistance.",
     choices: [
-      { key: 'A', text: 'inclined' },
-      { key: 'B', text: 'biased' },
-      { key: 'C', text: 'oriented' },
+      { key: 'A', text: 'hostile' },
+      { key: 'B', text: 'blind' },
+      { key: 'C', text: 'indifferent' },
       { key: 'D', text: 'skewed' },
     ],
     correctKey: 'D',
     explanation:
-      '"skewed toward" は「（分配・政策などが）特定の方向に歪んでいる」意で、不公平な偏りを示す最も強い表現。biased は近い意味だが "biased toward" より "biased against" の方が一般的。oriented は「〜向けの」で中立的な方向性のみ示す。inclined は「傾向がある」で個人の意見や感情に使うことが多い。',
+      '"skewed toward" は「（政策などが）特定の方向に歪んでいる」意で、大企業ばかりを支援し中小企業に援助が少ないという不公平な偏りを表す。indifferent（無関心な）・blind（盲目の）・hostile（敵対的な）は "toward supporting large corporations" と自然に結びつかない。',
     difficulty: 'advanced',
   },
   {
@@ -247,14 +247,14 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       "The athlete's recovery was ( ) by a strict rehabilitation program that combined physical therapy with nutritional support.",
     choices: [
-      { key: 'A', text: 'facilitated' },
-      { key: 'B', text: 'promoted' },
-      { key: 'C', text: 'enhanced' },
-      { key: 'D', text: 'accelerated' },
+      { key: 'A', text: 'accelerated' },
+      { key: 'B', text: 'interrupted' },
+      { key: 'C', text: 'prevented' },
+      { key: 'D', text: 'delayed' },
     ],
-    correctKey: 'D',
+    correctKey: 'A',
     explanation:
-      '"accelerated" は「（回復などの）速度を速める」で、リハビリプログラムの直接的な効果として最も明確。facilitated は「容易にする・促進する」、promoted は「推進する」、enhanced は「質を高める」でいずれも成立しうるが、回復という時間的プロセスの速度向上を表す語は accelerated。',
+      '"accelerated" は「（回復などの）速度を速める」で、リハビリプログラムの直接的な効果として最も明確。prevented（妨げた）・delayed（遅らせた）・interrupted（中断した）は、プログラムが回復を助けたという文意と逆。',
     difficulty: 'advanced',
   },
   {
@@ -264,14 +264,14 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'The historian argued that the treaty, far from resolving tensions, actually ( ) them by leaving key territorial disputes unaddressed.',
     choices: [
-      { key: 'A', text: 'aggravated' },
-      { key: 'B', text: 'intensified' },
-      { key: 'C', text: 'escalated' },
+      { key: 'A', text: 'eased' },
+      { key: 'B', text: 'settled' },
+      { key: 'C', text: 'reduced' },
       { key: 'D', text: 'compounded' },
     ],
     correctKey: 'D',
     explanation:
-      '"compounded" は「（既存の問題に）さらに問題を重ねて悪化させる」意で、「解決したはずが未解決問題を残した」という構造と最も合う。aggravated は「（状況を）悪化させた」、intensified は「強度を増した」、escalated は「（対立が）段階的に拡大した」でいずれも成立するが、問題の積み重なりを示す compound が文意に最も忠実。',
+      '"compounded" は「（既存の問題にさらに問題を重ねて）悪化させる」意で、「解決するどころか、領土問題を未解決のまま残して緊張を重ねた」という構造と合う。eased・settled・reduced は「緊張を和らげた」意で、"far from resolving" と矛盾する。',
     difficulty: 'advanced',
   },
   {
@@ -281,14 +281,14 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'It is essential that companies ( ) their supply chains to ensure they are not sourcing materials from regions with poor environmental records.',
     choices: [
-      { key: 'A', text: 'investigate' },
-      { key: 'B', text: 'inspect' },
-      { key: 'C', text: 'examine' },
-      { key: 'D', text: 'audit' },
+      { key: 'A', text: 'conceal' },
+      { key: 'B', text: 'audit' },
+      { key: 'C', text: 'ignore' },
+      { key: 'D', text: 'expand' },
     ],
-    correctKey: 'D',
+    correctKey: 'B',
     explanation:
-      '"audit" は「（組織・プロセスを）公式・体系的に点検・評価する」意で、特にビジネス・コンプライアンス文脈でのサプライチェーン評価に使う専門的な表現。investigate は「問題があるときに調査する」、examine は「詳しく調べる」（医療や学術でも使う）、inspect は「物理的な検査」が主。',
+      '"audit" は「（組織・プロセスを）公式・体系的に点検・評価する」意で、サプライチェーンの評価に使う。ignore（無視する）・expand（拡大する）・conceal（隠す）は、環境記録の悪い地域から調達していないか確かめるという目的に合わない。',
     difficulty: 'standard',
   },
   {
@@ -298,14 +298,14 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       "The CEO's resignation came as a complete surprise; until then, her leadership had appeared ( ) and her position secure.",
     choices: [
-      { key: 'A', text: 'unwavering' },
-      { key: 'B', text: 'steadfast' },
-      { key: 'C', text: 'resolute' },
-      { key: 'D', text: 'unshakeable' },
+      { key: 'A', text: 'doubtful' },
+      { key: 'B', text: 'reluctant' },
+      { key: 'C', text: 'unshakeable' },
+      { key: 'D', text: 'fragile' },
     ],
-    correctKey: 'D',
+    correctKey: 'C',
     explanation:
-      '"unshakeable" は「（地位・信念などが）揺るぎない」で、辞任直前まで地位が安泰に見えた、という文脈に最も合う形容詞。steadfast・resolute・unwavering はいずれも「意志の固い」という個人の態度を表すが、leadership（指導力・リーダーシップ）という抽象概念への修飾には unshakeable が最も自然。',
+      '"unshakeable" は「（地位・信念などが）揺るぎない」で、辞任直前まで地位が安泰に見えた、という文脈に合う。fragile（もろい）・doubtful（疑わしい）・reluctant（気が進まない）は "her position secure" と食いちがう。',
     difficulty: 'advanced',
   },
   {
@@ -315,14 +315,14 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'The report ( ) the need for immediate investment in renewable energy, warning that delays would make the transition far more costly.',
     choices: [
-      { key: 'A', text: 'stressed' },
-      { key: 'B', text: 'reinforced' },
-      { key: 'C', text: 'accentuated' },
+      { key: 'A', text: 'denied' },
+      { key: 'B', text: 'questioned' },
+      { key: 'C', text: 'ignored' },
       { key: 'D', text: 'underlined' },
     ],
     correctKey: 'D',
     explanation:
-      '"underlined the need" は「必要性を強調した」という慣用表現。"raise an objection" とも言う。stressed も同義だが、"underlined" の方が書面・報告書の文脈で格式的。reinforced は「（既にある認識を）補強した」、accentuated は「際立たせた」でニュアンスが異なる。',
+      '"underlined the need" は「必要性を強調した」という意味の表現。報告書が即時の投資を求め、遅れれば費用が増すと警告している内容に合う。ignored（無視した）・denied（否定した）・questioned（疑問視した）は文意と逆。',
     difficulty: 'standard',
   },
   {
@@ -332,14 +332,14 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       "The country's economic growth has been ( ) by decades of political instability, keeping it among the least developed nations in the region.",
     choices: [
-      { key: 'A', text: 'constrained' },
-      { key: 'B', text: 'impeded' },
+      { key: 'A', text: 'accelerated' },
+      { key: 'B', text: 'boosted' },
       { key: 'C', text: 'hampered' },
-      { key: 'D', text: 'hindered' },
+      { key: 'D', text: 'encouraged' },
     ],
     correctKey: 'C',
     explanation:
-      '"hampered by" は「（外的障害によって）妨げられる」の意で、長期的な政治的不安定という外的要因による成長阻害に最も適切なコロケーション。impeded・hindered もほぼ同義だが、"hampered by" は経済・努力・計画などとの相性が特に良い慣用表現。constrained は「制約される」で制度・規則的な制限に使いやすい。',
+      '"hampered by" は「（障害によって）妨げられる」の意で、長期的な政治的不安定が成長を妨げたという文意に合う。boosted・accelerated・encouraged は「促進された」意で、"least developed nations" にとどまっているという内容と矛盾する。',
     difficulty: 'advanced',
   },
 
@@ -351,12 +351,12 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'Not until the final results were announced ( ) the team realized they had won the championship.',
     choices: [
-      { key: 'A', text: 'that' },
-      { key: 'B', text: 'had' },
-      { key: 'C', text: 'was' },
-      { key: 'D', text: 'did' },
+      { key: 'A', text: 'did' },
+      { key: 'B', text: 'that' },
+      { key: 'C', text: 'had' },
+      { key: 'D', text: 'was' },
     ],
-    correctKey: 'D',
+    correctKey: 'A',
     explanation:
       '"Not until ..." で始まる否定の副詞節が文頭に置かれると、主節に倒置が生じる（否定倒置）。"Not until ... did + 主語 + 動詞原形" が正しい構造。主語 the team に対して did を使い、"did the team realize" となる。',
     difficulty: 'advanced',
@@ -369,11 +369,11 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
       'Had the engineers identified the flaw earlier, the bridge ( ) collapsed.',
     choices: [
       { key: 'A', text: 'will not have' },
-      { key: 'B', text: 'would not' },
-      { key: 'C', text: 'had not' },
-      { key: 'D', text: 'would not have' },
+      { key: 'B', text: 'had not' },
+      { key: 'C', text: 'would not have' },
+      { key: 'D', text: 'would not' },
     ],
-    correctKey: 'D',
+    correctKey: 'C',
     explanation:
       '"Had + 主語 + 過去分詞..." は if を省略した仮定法過去完了の条件節。過去の事実に反する仮定を表すため、帰結節は "would not have + 過去分詞" となる。"would not" は仮定法過去（現在の仮定）の帰結節形式で不適切。',
     difficulty: 'advanced',
@@ -385,10 +385,10 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'The proposal requires that every participant ( ) a signed consent form before the study begins.',
     choices: [
-      { key: 'A', text: 'submits' },
-      { key: 'B', text: 'submitted' },
+      { key: 'A', text: 'will submit' },
+      { key: 'B', text: 'submits' },
       { key: 'C', text: 'submit' },
-      { key: 'D', text: 'will submit' },
+      { key: 'D', text: 'submitted' },
     ],
     correctKey: 'C',
     explanation:
@@ -402,12 +402,12 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'Only after conducting extensive surveys ( ) the researchers able to draw any firm conclusions.',
     choices: [
-      { key: 'A', text: 'are' },
-      { key: 'B', text: 'did' },
-      { key: 'C', text: 'have' },
-      { key: 'D', text: 'were' },
+      { key: 'A', text: 'were' },
+      { key: 'B', text: 'have' },
+      { key: 'C', text: 'are' },
+      { key: 'D', text: 'did' },
     ],
-    correctKey: 'D',
+    correctKey: 'A',
     explanation:
       '"Only after ..." が文頭に来ると主節で倒置が起きる。主語が "the researchers"、述語が be動詞 "were able to" なので、倒置後は "were the researchers able to" となる。"did" は一般動詞の倒置に使うが、"be able to" には were を使う。',
     difficulty: 'advanced',
@@ -419,12 +419,12 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       "The museum's new exhibit, ( ) is scheduled to open next month, will feature artifacts from ancient civilizations.",
     choices: [
-      { key: 'A', text: 'that' },
-      { key: 'B', text: 'what' },
-      { key: 'C', text: 'which' },
-      { key: 'D', text: 'where' },
+      { key: 'A', text: 'where' },
+      { key: 'B', text: 'which' },
+      { key: 'C', text: 'that' },
+      { key: 'D', text: 'what' },
     ],
-    correctKey: 'C',
+    correctKey: 'B',
     explanation:
       'コンマで囲まれた非制限的（非限定）関係節では which を使う。that は制限的関係節にのみ使われ、コンマとともに非制限的関係節で使うことはできない。what は「〜すること・もの」で名詞節を導く。where は場所を表す関係副詞で不適。',
     difficulty: 'standard',
@@ -436,12 +436,12 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'The children were made ( ) their rooms before they were allowed to go outside and play.',
     choices: [
-      { key: 'A', text: 'clean' },
-      { key: 'B', text: 'cleaning' },
+      { key: 'A', text: 'cleaning' },
+      { key: 'B', text: 'to clean' },
       { key: 'C', text: 'cleaned' },
-      { key: 'D', text: 'to clean' },
+      { key: 'D', text: 'clean' },
     ],
-    correctKey: 'D',
+    correctKey: 'B',
     explanation:
       '使役動詞 make の受動態 "be made to do" では、不定詞の to が必要となる。能動態 "make + 目的語 + 動詞原形" では to を省略するが、受動態に変換すると to が復活する（"The children were made to clean ..."）。',
     difficulty: 'standard',
@@ -454,13 +454,13 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
       'It was the mayor herself ( ) announced the decision to close the factory, surprising many local residents.',
     choices: [
       { key: 'A', text: 'which' },
-      { key: 'B', text: 'who' },
+      { key: 'B', text: 'whose' },
       { key: 'C', text: 'that' },
       { key: 'D', text: 'whom' },
     ],
     correctKey: 'C',
     explanation:
-      '"It is/was ... that ..." は強調構文（cleft sentence）。強調する要素が人であっても who または that が使える。ただし herself という再帰代名詞が既に強調を担っているこの文では、強調構文の標識として that が最も自然。who も可だが、whom は目的格なので主語位置には使えない。',
+      '"It was ... that ..." は強調構文（cleft sentence）。強調する要素が人でも that が使える。which は人に使えず、whom は目的格なので主語位置には使えない。whose は所有格で、直後に名詞が必要なので不適。',
     difficulty: 'advanced',
   },
   {
@@ -470,12 +470,12 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'Rarely ( ) such a dramatic shift in public opinion occur within such a short period of time.',
     choices: [
-      { key: 'A', text: 'had' },
+      { key: 'A', text: 'does' },
       { key: 'B', text: 'do' },
       { key: 'C', text: 'has' },
-      { key: 'D', text: 'does' },
+      { key: 'D', text: 'had' },
     ],
-    correctKey: 'D',
+    correctKey: 'A',
     explanation:
       '"Rarely" が文頭に置かれると主節で倒置が生じる。主語 "such a dramatic shift"（単数）＋一般動詞 occur に対して助動詞 does を使い、"Rarely does such a shift occur" となる。do は複数主語用、has は現在完了の倒置、had は過去完了の倒置で不適。',
     difficulty: 'advanced',
@@ -487,14 +487,14 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'The policy change, ( ) many experts had predicted, led to a sharp rise in youth unemployment rates.',
     choices: [
-      { key: 'A', text: 'what' },
-      { key: 'B', text: 'which' },
-      { key: 'C', text: 'as' },
-      { key: 'D', text: 'that' },
+      { key: 'A', text: 'that' },
+      { key: 'B', text: 'whose' },
+      { key: 'C', text: 'what' },
+      { key: 'D', text: 'as' },
     ],
-    correctKey: 'C',
+    correctKey: 'D',
     explanation:
-      '"as many experts had predicted" の as は「専門家が予測したとおり」という様態の接続詞。この as は前の文全体または節を先行詞として受ける関係詞的用法でもある。"which many experts had predicted" も文法的だが、which は先行詞として特定の名詞句（the policy change）を指す非制限的関係節になる。ここでは「予測した（こと＝その結果）」という節全体を受けるので as が適切。',
+      '"as many experts had predicted" の as は「〜のとおり」の意の接続詞（関係詞的用法）で、前の内容を受けて「専門家が予測したとおり」を表す。what は先行詞を含み名詞節を導くので不適。whose は所有格で直後に名詞が必要、that は非制限的関係節（コンマつき）では使えない。',
     difficulty: 'advanced',
   },
   {
@@ -504,14 +504,14 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'The survey results indicate that the majority of consumers prefer ( ) contacted by email rather than by telephone.',
     choices: [
-      { key: 'A', text: 'to be' },
-      { key: 'B', text: 'to have been' },
+      { key: 'A', text: 'be' },
+      { key: 'B', text: 'to be' },
       { key: 'C', text: 'having been' },
-      { key: 'D', text: 'being' },
+      { key: 'D', text: 'to have been' },
     ],
-    correctKey: 'D',
+    correctKey: 'B',
     explanation:
-      '"prefer + 動名詞" と "prefer + to不定詞" はどちらも正しいが、"prefer + being done" は「〜されることを好む」という受動態の動名詞。"prefer to be contacted" も文法的だが、prefer に続く動名詞形の受動態 "prefer being contacted" の方が実際には口語・書き言葉ともに一般的。',
+      '"prefer to do ... rather than (do) ..." は「〜するほうを好む」の形で、受動態にすると "prefer to be contacted by email rather than by telephone" となる。prefer のあとに原形の be は置けない。to have been は完了形で「過去に〜されたことを好む」となり文脈に合わず、having been も同様。',
     difficulty: 'standard',
   },
   {
@@ -522,11 +522,11 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
       'No sooner ( ) the announcement been made than protesters gathered outside the government building.',
     choices: [
       { key: 'A', text: 'did' },
-      { key: 'B', text: 'was' },
-      { key: 'C', text: 'has' },
-      { key: 'D', text: 'had' },
+      { key: 'B', text: 'has' },
+      { key: 'C', text: 'had' },
+      { key: 'D', text: 'was' },
     ],
-    correctKey: 'D',
+    correctKey: 'C',
     explanation:
       '"No sooner ... than ..." は「〜するやいなや」を表す慣用表現で、had を使った倒置構文になる。"No sooner had + 主語 + 過去分詞 + than + 主語 + 過去形動詞" が正しい構造。過去完了の had が倒置されて文頭直後に来る。',
     difficulty: 'advanced',
@@ -538,8 +538,8 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'The students found the examination far more ( ) than they had anticipated based on the sample questions.',
     choices: [
-      { key: 'A', text: 'challenge' },
-      { key: 'B', text: 'challenged' },
+      { key: 'A', text: 'challenged' },
+      { key: 'B', text: 'challenge' },
       { key: 'C', text: 'challenging' },
       { key: 'D', text: 'to challenge' },
     ],
@@ -555,12 +555,12 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'Were the company ( ) declare bankruptcy, thousands of employees would lose their jobs and retirement savings.',
     choices: [
-      { key: 'A', text: 'should' },
-      { key: 'B', text: 'would' },
-      { key: 'C', text: 'to' },
+      { key: 'A', text: 'would' },
+      { key: 'B', text: 'to' },
+      { key: 'C', text: 'should' },
       { key: 'D', text: 'might' },
     ],
-    correctKey: 'C',
+    correctKey: 'B',
     explanation:
       '"Were + 主語 + to不定詞 ..." は if を省略した仮定法の倒置形で、「もし〜するとしたら」という意味。"Were the company to declare ..." = "If the company were to declare ..." となる。特に書き言葉・フォーマルな文脈で使われる仮定法の格式表現。',
     difficulty: 'advanced',
@@ -572,12 +572,12 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'The research paper, along with its supplementary data, ( ) to be reviewed by a panel of international experts.',
     choices: [
-      { key: 'A', text: 'are' },
-      { key: 'B', text: 'were' },
-      { key: 'C', text: 'is' },
+      { key: 'A', text: 'were' },
+      { key: 'B', text: 'is' },
+      { key: 'C', text: 'are' },
       { key: 'D', text: 'have' },
     ],
-    correctKey: 'C',
+    correctKey: 'B',
     explanation:
       '"along with ..." は主語に付加された情報であり、主語の数には影響しない。主語は "The research paper"（単数）なので動詞は is が正しい。"along with" は "as well as" "together with" と同様に、後続の句を主語に含めない点に注意。',
     difficulty: 'standard',
@@ -589,14 +589,14 @@ export const eikenQuestions2kyu: EikenQuestion[] = [
     question:
       'The government does ( ) take the issue of food security seriously, but its current policies are simply not sufficient to address the scale of the problem.',
     choices: [
-      { key: 'A', text: 'so' },
+      { key: 'A', text: 'never' },
       { key: 'B', text: 'even' },
-      { key: 'C', text: 'really' },
+      { key: 'C', text: 'so' },
       { key: 'D', text: 'indeed' },
     ],
     correctKey: 'D',
     explanation:
-      '"does indeed + 動詞原形" は emphatic do（強調の do）を使った表現で、「確かに〜する」という肯定の強調を表す。but で逆説が続く前に主張の誠意を示す際に使う。"does so take" は文法的に不自然。really・even は副詞として機能するが、"does really/even take" という語順は emphatic do の強調構文として成立しない。',
+      '"does indeed + 動詞原形" は emphatic do（強調の do）を使った表現で、「確かに〜する」という肯定の強調を表す。but で逆説が続く前に政府の姿勢を認める際に使う。"does so take" は不自然。even は "does even take" の語順では強調構文として成立せず、"does never take" は文法的に誤り。',
     difficulty: 'advanced',
   },
 
@@ -651,7 +651,7 @@ In the passage, the phrase "falls short of" most closely means:`,
     ],
     correctKey: 'C',
     explanation:
-      '"falls short of" は「〜に達しない、〜を十分に果たしていない」という意味の慣用表現。批評家たちは規制が根本的な解決（過剰なプラスチック生産の抑制）に「及んでいない」と主張しているので、A「完全には達成できていない」が正しい。「完全に無視している」（B）は言い過ぎ。',
+      '"falls short of" は「〜に達しない、〜を十分に果たしていない」という意味の慣用表現。批評家たちは規制が根本的な解決（過剰なプラスチック生産の抑制）に「及んでいない」と主張しているので、C「十分には達成できていない」が正しい。「完全に無視している」（B）は言い過ぎ。',
     difficulty: 'standard',
   },
   {
@@ -730,12 +730,12 @@ The widespread adoption of remote work following the global pandemic has had pro
 
 In the passage, the word "democratizes" most nearly means:`,
     choices: [
-      { key: 'A', text: 'reduces the overall number of people seeking employment' },
-      { key: 'B', text: 'allows citizens to vote on important decisions' },
-      { key: 'C', text: 'makes something available to a wider range of people' },
-      { key: 'D', text: 'transfers power from governments to private companies' },
+      { key: 'A', text: 'transfers power from governments to private companies' },
+      { key: 'B', text: 'makes something available to a wider range of people' },
+      { key: 'C', text: 'allows citizens to vote on important decisions' },
+      { key: 'D', text: 'reduces the overall number of people seeking employment' },
     ],
-    correctKey: 'C',
+    correctKey: 'B',
     explanation:
       'パッセージでは "democratizes opportunity by enabling workers in less affluent areas to access high-paying jobs" とあり、「機会を民主化する」は「高収入の仕事へのアクセスをより多くの地域の人々に開放する」という意味で使われている。「より広い範囲の人々が利用できるようにする」という言い換えがこの意味に最も近い。',
     difficulty: 'standard',
@@ -1053,12 +1053,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'The lawyer presented ( ) evidence that left the jury with little doubt about the defendant\'s guilt.',
     choices: [
-      { key: 'A', text: 'compelling' },
-      { key: 'B', text: 'convenient' },
-      { key: 'C', text: 'considerate' },
-      { key: 'D', text: 'consistent' },
+      { key: 'A', text: 'convenient' },
+      { key: 'B', text: 'considerate' },
+      { key: 'C', text: 'consistent' },
+      { key: 'D', text: 'compelling' },
     ],
-    correctKey: 'A',
+    correctKey: 'D',
     explanation:
       '"compelling evidence" は「説得力があり、疑いの余地を残さない証拠」という意味の定番コロケーション。convenient（都合の良い）、considerate（思いやりのある）、consistent（一貫した）はいずれも証拠の説得力を表す語ではなく文脈に合わない。',
     difficulty: 'advanced',
@@ -1070,12 +1070,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'The new regulations aim to ( ) carbon emissions from factories by 30 percent within the next decade.',
     choices: [
-      { key: 'A', text: 'curl' },
-      { key: 'B', text: 'curb' },
+      { key: 'A', text: 'cure' },
+      { key: 'B', text: 'curl' },
       { key: 'C', text: 'curve' },
-      { key: 'D', text: 'cure' },
+      { key: 'D', text: 'curb' },
     ],
-    correctKey: 'B',
+    correctKey: 'D',
     explanation:
       '"curb emissions" は「排出量を抑制する」という意味の固定表現で、環境政策の文脈で頻出する。curl（巻く）、curve（曲げる）、cure（治す）はいずれも綴りは似ているが意味が異なり不適切。',
     difficulty: 'standard',
@@ -1087,12 +1087,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'It is ( ) that all passengers fasten their seatbelts before the aircraft begins to taxi.',
     choices: [
-      { key: 'A', text: 'imperative' },
-      { key: 'B', text: 'impressive' },
-      { key: 'C', text: 'impartial' },
+      { key: 'A', text: 'impartial' },
+      { key: 'B', text: 'imperative' },
+      { key: 'C', text: 'impressive' },
       { key: 'D', text: 'improbable' },
     ],
-    correctKey: 'A',
+    correctKey: 'B',
     explanation:
       '"imperative" は「絶対に必要な、緊急の」という意味で、安全のために欠かせない指示を述べる文脈に最適。impressive（印象的な）、impartial（公平な）、improbable（ありそうもない）はいずれも文脈に合わない。',
     difficulty: 'advanced',
@@ -1104,12 +1104,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'Despite the global recession, the country\'s economy proved remarkably ( ), recovering faster than most analysts had predicted.',
     choices: [
-      { key: 'A', text: 'resistant' },
-      { key: 'B', text: 'reliant' },
-      { key: 'C', text: 'reluctant' },
-      { key: 'D', text: 'resilient' },
+      { key: 'A', text: 'resilient' },
+      { key: 'B', text: 'resistant' },
+      { key: 'C', text: 'reliant' },
+      { key: 'D', text: 'reluctant' },
     ],
-    correctKey: 'D',
+    correctKey: 'A',
     explanation:
       '"resilient" は「（打撃を受けても）素早く立ち直る、回復力がある」という意味で、不況からの早い回復を表す文脈に最適。resistant（抵抗力がある）は外的圧力を跳ね返す意味合いが強く、reliant（依存した）・reluctant（気が進まない）は文脈に合わない。',
     difficulty: 'advanced',
@@ -1121,12 +1121,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'All employees are expected to ( ) the company\'s code of conduct at all times, both in and outside the office.',
     choices: [
-      { key: 'A', text: 'adhere to' },
-      { key: 'B', text: 'adapt to' },
+      { key: 'A', text: 'adapt to' },
+      { key: 'B', text: 'adhere to' },
       { key: 'C', text: 'attend to' },
       { key: 'D', text: 'attribute to' },
     ],
-    correctKey: 'A',
+    correctKey: 'B',
     explanation:
       '"adhere to a code of conduct" は「行動規範を遵守する」という意味の固定表現。adapt to（〜に適応する）、attend to（〜に対応する）、attribute to（〜に起因すると考える）はいずれも規則の遵守を表す組み合わせとして不適切。',
     difficulty: 'advanced',
@@ -1138,12 +1138,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'The new open-plan office was designed to ( ) collaboration among employees from different departments.',
     choices: [
-      { key: 'A', text: 'forge' },
-      { key: 'B', text: 'foster' },
+      { key: 'A', text: 'foster' },
+      { key: 'B', text: 'forecast' },
       { key: 'C', text: 'forbid' },
-      { key: 'D', text: 'forecast' },
+      { key: 'D', text: 'forge' },
     ],
-    correctKey: 'B',
+    correctKey: 'A',
     explanation:
       '"foster collaboration" は「協力関係を育む、促進する」という意味の定番コロケーション。forge（鍛造する、偽造する）、forbid（禁じる）、forecast（予測する）はいずれもcollaborationとの組み合わせとして不自然。',
     difficulty: 'standard',
@@ -1155,12 +1155,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'The city introduced several measures to ( ) traffic congestion during rush hour, including expanded bus lanes.',
     choices: [
-      { key: 'A', text: 'mitigate' },
-      { key: 'B', text: 'migrate' },
-      { key: 'C', text: 'moderate' },
-      { key: 'D', text: 'mediate' },
+      { key: 'A', text: 'mediate' },
+      { key: 'B', text: 'moderate' },
+      { key: 'C', text: 'mitigate' },
+      { key: 'D', text: 'migrate' },
     ],
-    correctKey: 'A',
+    correctKey: 'C',
     explanation:
       '"mitigate congestion" は「渋滞を緩和する」という意味で、都市政策の文脈で頻出する表現。migrate（移住する）は無関係、moderate（穏やかにする）は感情や発言に使うことが多く、mediate（仲裁する）は対立の調停に使う語で不適切。',
     difficulty: 'advanced',
@@ -1172,12 +1172,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'A cure for the disease has remained ( ) despite decades of intensive research by scientists worldwide.',
     choices: [
-      { key: 'A', text: 'elusive' },
-      { key: 'B', text: 'exclusive' },
-      { key: 'C', text: 'excessive' },
-      { key: 'D', text: 'exempt' },
+      { key: 'A', text: 'excessive' },
+      { key: 'B', text: 'exempt' },
+      { key: 'C', text: 'exclusive' },
+      { key: 'D', text: 'elusive' },
     ],
-    correctKey: 'A',
+    correctKey: 'D',
     explanation:
       '"remain elusive" は「（目標や答えが）なかなか手に入らない、捉えどころがない」という意味で、長年研究しても見つからない治療法を表す文脈に最適。exclusive（排他的な）、excessive（過剰な）、exempt（免除された）はいずれも不適切。',
     difficulty: 'advanced',
@@ -1190,9 +1190,9 @@ What argument do platform companies make against mandatory reclassification of g
       'The new employee proved to be remarkably ( ), handling everything from customer service to accounting with equal ease.',
     choices: [
       { key: 'A', text: 'versatile' },
-      { key: 'B', text: 'valuable' },
-      { key: 'C', text: 'vulnerable' },
-      { key: 'D', text: 'voluntary' },
+      { key: 'B', text: 'vulnerable' },
+      { key: 'C', text: 'voluntary' },
+      { key: 'D', text: 'valuable' },
     ],
     correctKey: 'A',
     explanation:
@@ -1206,12 +1206,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'The accountant was known for her ( ) attention to detail, rarely making even the smallest error in her reports.',
     choices: [
-      { key: 'A', text: 'meticulous' },
-      { key: 'B', text: 'moderate' },
-      { key: 'C', text: 'modest' },
+      { key: 'A', text: 'moderate' },
+      { key: 'B', text: 'modest' },
+      { key: 'C', text: 'meticulous' },
       { key: 'D', text: 'momentary' },
     ],
-    correctKey: 'A',
+    correctKey: 'C',
     explanation:
       '"meticulous attention to detail" は「細部への徹底したこだわり」を表す定番コロケーション。滅多に間違えないという記述と一致する。moderate（適度な）、modest（控えめな）、momentary（一瞬の）はいずれも文脈に合わない。',
     difficulty: 'standard',
@@ -1223,12 +1223,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'Although the witness\'s account sounded ( ), detectives later discovered several inconsistencies that raised doubts.',
     choices: [
-      { key: 'A', text: 'plausible' },
-      { key: 'B', text: 'playful' },
-      { key: 'C', text: 'pleasant' },
-      { key: 'D', text: 'plentiful' },
+      { key: 'A', text: 'playful' },
+      { key: 'B', text: 'pleasant' },
+      { key: 'C', text: 'plentiful' },
+      { key: 'D', text: 'plausible' },
     ],
-    correctKey: 'A',
+    correctKey: 'D',
     explanation:
       '"plausible" は「もっともらしい、信じられそうな」という意味で、一見信用できそうに聞こえたが後に矛盾が見つかったという文脈に最適。playful（遊び心のある）、pleasant（心地よい）、plentiful（豊富な）はいずれも証言の信憑性とは無関係。',
     difficulty: 'advanced',
@@ -1240,12 +1240,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'The manager gave ( ) feedback on the proposal, pointing out both its strengths and its serious weaknesses without hesitation.',
     choices: [
-      { key: 'A', text: 'candid' },
-      { key: 'B', text: 'cautious' },
+      { key: 'A', text: 'cautious' },
+      { key: 'B', text: 'callous' },
       { key: 'C', text: 'casual' },
-      { key: 'D', text: 'callous' },
+      { key: 'D', text: 'candid' },
     ],
-    correctKey: 'A',
+    correctKey: 'D',
     explanation:
       '"candid feedback" は「率直で正直な意見」という意味で、長所も短所も遠慮なく述べたという文脈に最適。cautious（慎重な）、casual（気軽な）、callous（無情な）はいずれも率直さのニュアンスとは異なる。',
     difficulty: 'advanced',
@@ -1259,8 +1259,8 @@ What argument do platform companies make against mandatory reclassification of g
     choices: [
       { key: 'A', text: 'inevitable' },
       { key: 'B', text: 'invaluable' },
-      { key: 'C', text: 'incidental' },
-      { key: 'D', text: 'infinite' },
+      { key: 'C', text: 'infinite' },
+      { key: 'D', text: 'incidental' },
     ],
     correctKey: 'A',
     explanation:
@@ -1276,8 +1276,8 @@ What argument do platform companies make against mandatory reclassification of g
     choices: [
       { key: 'A', text: 'sporadic' },
       { key: 'B', text: 'spontaneous' },
-      { key: 'C', text: 'specific' },
-      { key: 'D', text: 'spacious' },
+      { key: 'C', text: 'spacious' },
+      { key: 'D', text: 'specific' },
     ],
     correctKey: 'A',
     explanation:
@@ -1291,12 +1291,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'The connection between the two events turned out to be rather ( ), based more on coincidence than on any real cause.',
     choices: [
-      { key: 'A', text: 'tedious' },
-      { key: 'B', text: 'tenuous' },
-      { key: 'C', text: 'tentative' },
-      { key: 'D', text: 'tangible' },
+      { key: 'A', text: 'tangible' },
+      { key: 'B', text: 'tentative' },
+      { key: 'C', text: 'tenuous' },
+      { key: 'D', text: 'tedious' },
     ],
-    correctKey: 'B',
+    correctKey: 'C',
     explanation:
       '"tenuous" は「（つながりや根拠が）薄弱な、こじつけの」という意味で、偶然によるものに過ぎないという文脈に最適。tedious（退屈な）、tentative（暫定的な）、tangible（有形の、明白な）はいずれも文脈に合わない。',
     difficulty: 'advanced',
@@ -1308,12 +1308,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'The company reported ( ) growth last quarter, far exceeding anything seen in its thirty-year history.',
     choices: [
-      { key: 'A', text: 'unprecedented' },
-      { key: 'B', text: 'undisclosed' },
-      { key: 'C', text: 'undesirable' },
-      { key: 'D', text: 'unfounded' },
+      { key: 'A', text: 'undisclosed' },
+      { key: 'B', text: 'undesirable' },
+      { key: 'C', text: 'unfounded' },
+      { key: 'D', text: 'unprecedented' },
     ],
-    correctKey: 'A',
+    correctKey: 'D',
     explanation:
       '"unprecedented growth" は「前例のない成長」という意味で、過去30年間で最大の成長を表す文脈に最適。undisclosed（未公開の）、undesirable（望ましくない）、unfounded（根拠のない）はいずれも文脈に合わない。',
     difficulty: 'standard',
@@ -1325,12 +1325,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'Engineers are exploring whether solar power is a ( ) alternative to fossil fuels for this remote region.',
     choices: [
-      { key: 'A', text: 'viable' },
-      { key: 'B', text: 'valid' },
-      { key: 'C', text: 'vigorous' },
-      { key: 'D', text: 'vacant' },
+      { key: 'A', text: 'vigorous' },
+      { key: 'B', text: 'vacant' },
+      { key: 'C', text: 'viable' },
+      { key: 'D', text: 'valid' },
     ],
-    correctKey: 'A',
+    correctKey: 'C',
     explanation:
       '"viable alternative" は「実行可能な代替案」という意味の定番コロケーション。validは「（論理・書類などが）正当な」、vigorousは「活発な」、vacantは「空いている」でいずれも文脈に合わない。',
     difficulty: 'standard',
@@ -1342,12 +1342,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'Years of careful negotiation finally ( ) in a landmark peace agreement between the two nations.',
     choices: [
-      { key: 'A', text: 'culminated' },
-      { key: 'B', text: 'cultivated' },
-      { key: 'C', text: 'circulated' },
+      { key: 'A', text: 'cultivated' },
+      { key: 'B', text: 'circulated' },
+      { key: 'C', text: 'culminated' },
       { key: 'D', text: 'calculated' },
     ],
-    correctKey: 'A',
+    correctKey: 'C',
     explanation:
       '"culminate in" は「最終的に〜という結果に至る」という意味で、長い交渉の末に達成された成果を表す文脈に最適。cultivate（育成する）、circulate（循環させる）、calculate（計算する）はいずれも文脈に合わない。',
     difficulty: 'advanced',
@@ -1359,12 +1359,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'Trained art experts can often ( ) subtle differences between an original painting and a skillful forgery.',
     choices: [
-      { key: 'A', text: 'discern' },
+      { key: 'A', text: 'discard' },
       { key: 'B', text: 'disclose' },
-      { key: 'C', text: 'discard' },
-      { key: 'D', text: 'discourage' },
+      { key: 'C', text: 'discourage' },
+      { key: 'D', text: 'discern' },
     ],
-    correctKey: 'A',
+    correctKey: 'D',
     explanation:
       '"discern subtle differences" は「微妙な違いを見分ける」という意味で、専門家の鋭い観察力を表す文脈に最適。disclose（暴露する）、discard（捨てる）、discourage（落胆させる）はいずれも文脈に合わない。',
     difficulty: 'advanced',
@@ -1376,12 +1376,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'Even under intense questioning, the spokesperson was able to ( ) the company\'s position clearly and confidently.',
     choices: [
-      { key: 'A', text: 'articulate' },
-      { key: 'B', text: 'arbitrate' },
-      { key: 'C', text: 'accumulate' },
-      { key: 'D', text: 'appreciate' },
+      { key: 'A', text: 'appreciate' },
+      { key: 'B', text: 'accumulate' },
+      { key: 'C', text: 'articulate' },
+      { key: 'D', text: 'arbitrate' },
     ],
-    correctKey: 'A',
+    correctKey: 'C',
     explanation:
       '"articulate a position" は「立場を明確に表現する」という意味で、厳しい質問の中でも明確に説明できたという文脈に最適。arbitrate（仲裁する）、accumulate（蓄積する）、appreciate（感謝する、理解する）はいずれも文脈に合わない。',
     difficulty: 'standard',
@@ -1395,12 +1395,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'So exhausted ( ) the climbers that they decided to set up camp two hours earlier than planned.',
     choices: [
-      { key: 'A', text: 'were' },
-      { key: 'B', text: 'did' },
-      { key: 'C', text: 'had' },
-      { key: 'D', text: 'have' },
+      { key: 'A', text: 'have' },
+      { key: 'B', text: 'had' },
+      { key: 'C', text: 'were' },
+      { key: 'D', text: 'did' },
     ],
-    correctKey: 'A',
+    correctKey: 'C',
     explanation:
       '"So + 形容詞 + be動詞 + 主語 ... that ..." は倒置構文で、「非常に〜だったので…」という結果を強調する。主語 the climbers（複数）に対応するbe動詞 were が正しい。did・had・haveは形容詞 exhausted を補語として続ける倒置には使わない。',
     difficulty: 'advanced',
@@ -1412,12 +1412,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'The committee insists that the budget report ( ) revised before it is presented to shareholders.',
     choices: [
-      { key: 'A', text: 'is' },
-      { key: 'B', text: 'be' },
-      { key: 'C', text: 'was' },
-      { key: 'D', text: 'will be' },
+      { key: 'A', text: 'be' },
+      { key: 'B', text: 'was' },
+      { key: 'C', text: 'will be' },
+      { key: 'D', text: 'is' },
     ],
-    correctKey: 'B',
+    correctKey: 'A',
     explanation:
       '"insist that + 主語 + 動詞原形" は仮定法現在の構文。受動態の原形は "be + 過去分詞" となるため be revised が正しい。is・was・will be はいずれも直説法の時制で、insistが要求する仮定法現在には合わない。',
     difficulty: 'advanced',
@@ -1429,12 +1429,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'Little ( ) that her presentation would later be cited in dozens of academic papers.',
     choices: [
-      { key: 'A', text: 'she did know' },
-      { key: 'B', text: 'she knew' },
-      { key: 'C', text: 'did she know' },
-      { key: 'D', text: 'knew she' },
+      { key: 'A', text: 'did she know' },
+      { key: 'B', text: 'knew she' },
+      { key: 'C', text: 'she knew' },
+      { key: 'D', text: 'she did know' },
     ],
-    correctKey: 'C',
+    correctKey: 'A',
     explanation:
       '"Little" が否定的な意味を持つ副詞として文頭に置かれると倒置が起こる。"Little did + 主語 + 動詞原形" で「〜とは全く知らなかった」という意味になる。she did know・she knew・knew she はいずれも正しい倒置の語順ではない。',
     difficulty: 'advanced',
@@ -1446,12 +1446,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'The novel, ( ) plot twists kept readers guessing until the final page, became an instant bestseller.',
     choices: [
-      { key: 'A', text: 'who' },
-      { key: 'B', text: 'which' },
-      { key: 'C', text: 'whose' },
-      { key: 'D', text: 'that' },
+      { key: 'A', text: 'whose' },
+      { key: 'B', text: 'who' },
+      { key: 'C', text: 'that' },
+      { key: 'D', text: 'which' },
     ],
-    correctKey: 'C',
+    correctKey: 'A',
     explanation:
       '先行詞 the novel（物）に対して所有格の関係代名詞 whose を使い、"whose plot twists"（その小説の意外な展開）とする。who は人に使う所有格ではなく主格・目的格、which・that は名詞を直接所有する形にならない。',
     difficulty: 'advanced',
@@ -1463,12 +1463,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'By the time the final guests arrive tonight, the caterers ( ) preparing the banquet hall for over six hours.',
     choices: [
-      { key: 'A', text: 'will have been' },
-      { key: 'B', text: 'have been' },
-      { key: 'C', text: 'had been' },
-      { key: 'D', text: 'were' },
+      { key: 'A', text: 'had been' },
+      { key: 'B', text: 'were' },
+      { key: 'C', text: 'will have been' },
+      { key: 'D', text: 'have been' },
     ],
-    correctKey: 'A',
+    correctKey: 'C',
     explanation:
       '"By the time + 現在形" の節に対して、未来のある時点までの継続を表すには未来完了進行形 "will have been + 〜ing" を使う。「今夜ゲストが到着する頃には、6時間以上準備を続けていることになる」という未来の継続を示す。',
     difficulty: 'advanced',
@@ -1480,12 +1480,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'The board members were divided over the merger; some favored it enthusiastically, ( ) others remained firmly opposed.',
     choices: [
-      { key: 'A', text: 'so' },
-      { key: 'B', text: 'while' },
-      { key: 'C', text: 'because' },
-      { key: 'D', text: 'unless' },
+      { key: 'A', text: 'unless' },
+      { key: 'B', text: 'so' },
+      { key: 'C', text: 'while' },
+      { key: 'D', text: 'because' },
     ],
-    correctKey: 'B',
+    correctKey: 'C',
     explanation:
       '"while" は「一方で」という対比を表す接続詞で、賛成派と反対派に分かれた状況を対照的に示す文脈に最適。so（だから）は因果関係、because（なぜなら）は理由、unless（〜しない限り）は条件を表し、いずれも対比のニュアンスを表せない。',
     difficulty: 'standard',
@@ -1497,12 +1497,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'The professor would rather the students ( ) their essays a week before the deadline to allow time for revisions.',
     choices: [
-      { key: 'A', text: 'submit' },
-      { key: 'B', text: 'submitted' },
+      { key: 'A', text: 'submitted' },
+      { key: 'B', text: 'to submit' },
       { key: 'C', text: 'will submit' },
-      { key: 'D', text: 'to submit' },
+      { key: 'D', text: 'submit' },
     ],
-    correctKey: 'B',
+    correctKey: 'A',
     explanation:
       '"would rather + 主語 + 過去形" は「（他の誰かに）〜してほしいのだが」という仮定法過去の構文で、現在または未来の願望を表す。submitは原形（主語+would ratherの構文ではない場合）、will submit・to submitはこの構文に合わない。',
     difficulty: 'advanced',
@@ -1514,12 +1514,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'Such was the intensity of the storm ( ) several coastal towns had to be evacuated overnight.',
     choices: [
-      { key: 'A', text: 'so' },
-      { key: 'B', text: 'as' },
-      { key: 'C', text: 'that' },
+      { key: 'A', text: 'as' },
+      { key: 'B', text: 'that' },
+      { key: 'C', text: 'so' },
       { key: 'D', text: 'which' },
     ],
-    correctKey: 'C',
+    correctKey: 'B',
     explanation:
       '"Such + be動詞 + 主語 + that ..." は倒置構文で「〜は非常に…だったので」という結果を強調する。この構文では that が必須であり、so・as・which はこの特定の倒置パターンでは使えない。',
     difficulty: 'advanced',
@@ -1531,12 +1531,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'The contract stipulates that payment ( ) in full within thirty days of the invoice date.',
     choices: [
-      { key: 'A', text: 'is made' },
-      { key: 'B', text: 'be made' },
+      { key: 'A', text: 'be made' },
+      { key: 'B', text: 'is made' },
       { key: 'C', text: 'will be made' },
       { key: 'D', text: 'was made' },
     ],
-    correctKey: 'B',
+    correctKey: 'A',
     explanation:
       '"stipulate that + 主語 + 動詞原形" は法律・契約文書でよく使われる仮定法現在の構文。受動態の原形は "be + 過去分詞" となるため be made が正しい。is made・will be made・was madeはいずれも直説法で、stipulateが要求する仮定法現在の形にならない。',
     difficulty: 'advanced',
@@ -1548,12 +1548,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'Not only ( ) the deadline, but she also exceeded every expectation the client had set for the project.',
     choices: [
-      { key: 'A', text: 'she met' },
-      { key: 'B', text: 'did she meet' },
-      { key: 'C', text: 'she did meet' },
-      { key: 'D', text: 'meet she did' },
+      { key: 'A', text: 'she did meet' },
+      { key: 'B', text: 'meet she did' },
+      { key: 'C', text: 'she met' },
+      { key: 'D', text: 'did she meet' },
     ],
-    correctKey: 'B',
+    correctKey: 'D',
     explanation:
       '"Not only" が文頭に置かれると倒置が生じる。"Not only did + 主語 + 動詞原形 ..., but also ..." が正しい構造で、"did she meet" となる。she met・she did meet・meet she did はいずれも正しい倒置の語順ではない。',
     difficulty: 'advanced',
@@ -1567,8 +1567,8 @@ What argument do platform companies make against mandatory reclassification of g
     choices: [
       { key: 'A', text: 'thereby' },
       { key: 'B', text: 'therefore' },
-      { key: 'C', text: 'nonetheless' },
-      { key: 'D', text: 'otherwise' },
+      { key: 'C', text: 'otherwise' },
+      { key: 'D', text: 'nonetheless' },
     ],
     correctKey: 'A',
     explanation:
@@ -1582,9 +1582,9 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'The new policy, ( ) beneficial in theory, has proven extremely difficult to implement in practice.',
     choices: [
-      { key: 'A', text: 'despite' },
+      { key: 'A', text: 'because of' },
       { key: 'B', text: 'while' },
-      { key: 'C', text: 'because of' },
+      { key: 'C', text: 'despite' },
       { key: 'D', text: 'due to' },
     ],
     correctKey: 'B',
@@ -1599,12 +1599,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'It is high time the government ( ) concrete measures to address the housing crisis.',
     choices: [
-      { key: 'A', text: 'takes' },
-      { key: 'B', text: 'will take' },
-      { key: 'C', text: 'took' },
-      { key: 'D', text: 'has taken' },
+      { key: 'A', text: 'has taken' },
+      { key: 'B', text: 'took' },
+      { key: 'C', text: 'takes' },
+      { key: 'D', text: 'will take' },
     ],
-    correctKey: 'C',
+    correctKey: 'B',
     explanation:
       '"It is high time + 主語 + 過去形" は「もうとっくに〜すべき時だ」という仮定法過去を使う慣用構文で、現在の状況に対する強い不満や催促を表す。takes・will take・has taken はこの構文の後には使えない。',
     difficulty: 'advanced',
@@ -1616,12 +1616,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'The applicant was rejected, ( ) her impressive qualifications and years of relevant experience.',
     choices: [
-      { key: 'A', text: 'despite' },
-      { key: 'B', text: 'although' },
+      { key: 'A', text: 'although' },
+      { key: 'B', text: 'despite' },
       { key: 'C', text: 'even though' },
       { key: 'D', text: 'while' },
     ],
-    correctKey: 'A',
+    correctKey: 'B',
     explanation:
       '"despite" は前置詞で、後に名詞句（her impressive qualifications）を直接続けることができる。although・even though・while は接続詞であり、後には主語と動詞を含む節が必要なため、名詞句だけを続けることはできない。',
     difficulty: 'standard',
@@ -1633,12 +1633,12 @@ What argument do platform companies make against mandatory reclassification of g
     question:
       'The evacuation plan, ( ) drafted years ago, was finally put to the test during last month\'s earthquake.',
     choices: [
-      { key: 'A', text: 'first' },
-      { key: 'B', text: 'firstly' },
-      { key: 'C', text: 'at first' },
-      { key: 'D', text: 'firstborn' },
+      { key: 'A', text: 'firstly' },
+      { key: 'B', text: 'first' },
+      { key: 'C', text: 'firstborn' },
+      { key: 'D', text: 'at first' },
     ],
-    correctKey: 'A',
+    correctKey: 'B',
     explanation:
       '"first drafted" は「最初に起草された」という意味で、過去分詞 drafted を修飾する副詞として first を使う。firstly は文全体を修飾する列挙の副詞（Firstly, ... Secondly, ...）で単独の分詞修飾には不自然。at first（最初のうちは）は対比を含意し文意に合わない。firstborn（第一子の）は形容詞・名詞で無関係。',
     difficulty: 'advanced',

@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { schoolQuestionStats } from '../../data/school-counts';
 import {
   View,
   Text,
@@ -16,8 +17,13 @@ import Paywall from '../../components/Paywall';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 import { useProGate } from '../../hooks/useProGate';
 import { useSubscription } from '../../hooks/useSubscription';
+import PlanStatusBanner from '../../components/PlanStatusBanner';
+import StudyStartCard from '../../components/StudyStartCard';
 import { subjectInfo, type SubjectKey } from '../../data/questions-meta';
 import { useQuestionsBySubjectMap } from '../../hooks/useSubjectQuestions';
+import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
+import { useExamType } from '../../store/examType';
+import { getKoushikiFormulaIdForQuestion, isKoushikiFormulaFree } from '../../data/koushiki-access';
 import type { CourseKey, ExamType } from '../../data/courses';
 import {
   ALL_COURSES, CHUGAKU_COURSES, KOKO_COURSES, CATEGORY_COURSES, SCHOOL_COURSES,
@@ -190,14 +196,26 @@ export default function HomeScreen() {
     setDifficulty(level);
     scrollRef.current?.scrollTo({ y: Math.max(0, subjectSectionY.current - 12), animated: true });
   }
+  // 入口で選んだ受験種別を初期値にする（無いと、高校受験を選んでも毎回「中学受験」で始まる）
+  const { examType: savedExamType, setExamType: saveExamTypeChoice } = useExamType();
   const [examType, setExamType] = useState<ExamType>('chugaku');
+  const examTypePicked = React.useRef(false);
   const [selectedCourse, setSelectedCourse] = useState<CourseKey>('general');
+  React.useEffect(() => {
+    // 保存値の読みこみは非同期。まだ手で切りかえていないときだけ反映する。
+    if (savedExamType && !examTypePicked.current) {
+      setExamType(savedExamType);
+      setSelectedCourse(savedExamType === 'chugaku' ? 'general' : 'koko-general');
+    }
+  }, [savedExamType]);
   const [courseTab, setCourseTab] = useState<'category' | 'school'>('school');
 
   const courses = examType === 'chugaku' ? CHUGAKU_COURSES : KOKO_COURSES;
 
   function handleExamTypeChange(type: ExamType) {
+    examTypePicked.current = true;
     setExamType(type);
+    saveExamTypeChoice(type).catch(() => {});
     // Reset to first course for this exam type
     const firstCourse = type === 'chugaku' ? 'general' : 'koko-general';
     setSelectedCourse(firstCourse);
@@ -243,6 +261,7 @@ export default function HomeScreen() {
   const { hasAccess: betaAccess } = useBetaAccess();
   const { isPro, loading: proLoading, paywallVisible, setPaywallVisible, requirePro } = useProGate(betaAccess);
   const { isMax: subIsMax, loading: maxLoading } = useSubscription();
+  const { unlockedIds: unlockedFormulaIds } = useFormulaUnlocks();
   const isMax = subIsMax || betaAccess;
   // 課金状態の取得中は isPro/isMax が初期値(false)のため、加入者でも
   // MAX/PROロックの判定でペイウォールを誤表示してしまう。確定するまでは
@@ -254,9 +273,16 @@ export default function HomeScreen() {
   const listenQuestions = React.useMemo(() => {
     // 聞き流しは問題そのものが要るので、集計表ではなく元データを使う
     if (listenSubject == null || !questionsBySubject) return [];
-    const qs = difficulty === 'all'
-      ? questionsBySubject[listenSubject]
-      : questionsBySubject[listenSubject].filter((q) => q.difficulty === difficulty);
+    // 問題集と同じ条件で絞る。絞らないと、Max限定の問題や、未購入の公式集の例題、
+    // 選んでいない受験種別の問題まで読み上げてしまう。
+    const allowed = questionsBySubject[listenSubject].filter((q) => {
+      if ((q.examType ?? 'chugaku') !== examType) return false;
+      if (q.maxOnly && !isMax) return false;
+      const figureId = getKoushikiFormulaIdForQuestion(q.id);
+      if (figureId != null && !(isPro || isMax) && !isKoushikiFormulaFree(figureId) && !unlockedFormulaIds.has(figureId)) return false;
+      return true;
+    });
+    const qs = difficulty === 'all' ? allowed : allowed.filter((q) => q.difficulty === difficulty);
     // Fisher-Yates（sort(() => Math.random() - 0.5) は偏るため使わない）
     const a = [...qs];
     for (let i = a.length - 1; i > 0; i--) {
@@ -264,7 +290,7 @@ export default function HomeScreen() {
       [a[i], a[j]] = [a[j], a[i]];
     }
     return a;
-  }, [listenSubject, difficulty, questionsBySubject]);
+  }, [listenSubject, difficulty, questionsBySubject, examType, isMax, isPro, unlockedFormulaIds]);
 
   // Courses that require MAX or Pro
   const maxOnlyCourses = ALL_COURSES.filter(c => c.maxOnly).map(c => c.key);
@@ -307,6 +333,12 @@ export default function HomeScreen() {
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
       >
+        {/* お試し中・解約ずみ・期限切れのとき、いつまで使えるかを一番上に出す */}
+        {!listenPickerActive && <PlanStatusBanner onAction={() => setPaywallVisible(true)} />}
+
+        {/* はじめての人には「はじめの5問」、続けている人には連続日数と今日の目標 */}
+        {!listenPickerActive && <StudyStartCard examType={examType} />}
+
         {/* まず読んで学ぶところ（教科書・公式集）を一番上に置く。
             問題を解く前に開く場所なので、下のタブではなくここから入る。 */}
         {!listenPickerActive && (
@@ -384,7 +416,7 @@ export default function HomeScreen() {
             <View style={styles.vocabEntryTextWrap}>
               <Text style={styles.vocabEntryBadge}>受験対策とは別の学習コンテンツ</Text>
               <Text style={styles.vocabEntryTitle}>🔤 英単語・英熟語・英会話</Text>
-              <Text style={styles.vocabEntrySub}>英検準2級〜1級・TOEIC800対応　単語4,800+・熟語4,000+</Text>
+              <Text style={styles.vocabEntrySub}>英検準2級〜1級・TOEIC800対応　単語3,200+・熟語3,200+</Text>
             </View>
             <Text style={styles.vocabEntryArrow}>›</Text>
           </TouchableOpacity>
@@ -521,6 +553,8 @@ export default function HomeScreen() {
                                 if (needsPro && !isPro) { setPaywallVisible(true); return; }
                                 setSelectedCourse(s.key);
                                 setCourseTab('school');
+                                // 学校をタップしたら、その学校の問題の画面へ進む（教科を選んで、すぐ問題が出る）
+                                router.push(`/school/${s.key}` as any);
                               }}
                               activeOpacity={0.8}
                             >
@@ -546,6 +580,14 @@ export default function HomeScreen() {
                                   </Text>
                                 )}
                               </View>
+                              {(() => {
+                                const st = schoolQuestionStats(s.key);
+                                return st.total > 0 ? (
+                                  <Text style={[styles.schoolCardCount, isSelected && { color: '#FFF' }]}>
+                                    {st.subjects}科・全{st.total}問
+                                  </Text>
+                                ) : null;
+                              })()}
                             </TouchableOpacity>
                           );
                         })}
@@ -588,8 +630,8 @@ export default function HomeScreen() {
                 <Text style={styles.scholarshipItemTitle}>① 高等学校等就学支援金（国）</Text>
                 <Text style={styles.scholarshipCondition}>
                   【対象】国公私立高校に在籍する生徒{'\n'}
-                  【所得条件】保護者の年収目安910万円未満（市町村民税所得割額＋道府県民税所得割額が50万7千円未満）{'\n'}
-                  【支給額】私立高校：最大年間39万6,000円（加算あり）{'\n'}
+                  【所得条件】2026年度（令和8年度）から所得制限なし（全世帯が対象）。2025年度は、公立相当額（年11万8,800円）は所得制限なし、私立の上乗せ分（最大年39万6,000円）は年収目安590万円未満が対象でした{'\n'}
+                  【支給額】私立高校：最大年間45万7,200円／公立高校：年間11万8,800円（2026年度〜）{'\n'}
                   【申請】入学時に学校を通じて申請。様式は入学先の学校から配布されます。
                 </Text>
                 <TouchableOpacity
@@ -604,7 +646,7 @@ export default function HomeScreen() {
               <View style={styles.scholarshipItem}>
                 <Text style={styles.scholarshipItemTitle}>② 奨学のための給付金（国・非課税世帯）</Text>
                 <Text style={styles.scholarshipCondition}>
-                  【対象】住民税非課税世帯の高校生（生活保護・非課税）{'\n'}
+                  【対象】生活保護世帯・住民税非課税世帯の高校生。2026年度（令和8年度）から、年収目安約490万円未満の世帯まで対象が広がりました{'\n'}
                   【支給額】私立高校：年間138,000円〜152,000円程度（学年・扶養人数により変動）{'\n'}
                   【申請】毎年7〜9月頃、在籍高校経由で申請。様式は学校またはお住まいの市区町村窓口で入手可。
                 </Text>
@@ -618,18 +660,19 @@ export default function HomeScreen() {
 
               {/* 3. 大阪府 授業料支援 */}
               <View style={styles.scholarshipItem}>
-                <Text style={styles.scholarshipItemTitle}>③ 大阪府 授業料支援補助金</Text>
+                <Text style={styles.scholarshipItemTitle}>③ 大阪府 授業料無償化（府独自の上乗せ）</Text>
                 <Text style={styles.scholarshipCondition}>
-                  【対象】大阪府内在住で府内私立高校等に在籍する生徒{'\n'}
-                  【所得条件】保護者の年収目安800万円未満（世帯によっては無償化）{'\n'}
-                  【支給額】授業料から就学支援金を差し引いた実質負担分を補助（最大無償）{'\n'}
-                  【申請】入学後4〜5月頃、在籍高校経由で申請。申請様式は学校で配布または大阪府HPからダウンロード可。
+                  【対象】大阪府内に住む高校生等{'\n'}
+                  【所得条件】2026年度（令和8年度）から全学年で所得制限なし。2024年度は高3、2025年度は高2・3から段階的に実施されました{'\n'}
+                  【支給額】国の就学支援金に府が上乗せして、授業料を年間63万円まで補助（授業料が63万円を超える分は学校が負担する仕組み）{'\n'}
+                  【対象外】入学金・教材費・修学旅行積立金などは、無償化の対象に入りません{'\n'}
+                  【申請】在籍高校経由で申請。手続きの時期・様式は学校または大阪府HPで確認してください。
                 </Text>
                 <TouchableOpacity
                   onPress={() => Linking.openURL('https://www.pref.osaka.lg.jp/o180160/shigaku/shigakumushouka/index.html')}
                   activeOpacity={0.75}
                 >
-                  <Text style={styles.scholarshipLink}>▸ 大阪府 私立高校授業料支援補助金</Text>
+                  <Text style={styles.scholarshipLink}>▸ 大阪府 私立高校等の授業料無償化</Text>
                 </TouchableOpacity>
               </View>
 
@@ -1155,6 +1198,7 @@ const styles = StyleSheet.create({
     lineHeight: 18,
     marginBottom: 4,
   },
+  schoolCardCount: { fontSize: 12, fontWeight: '800', color: '#0F766E', marginTop: 4 },
   schoolCardMeta: {
     flexDirection: 'row',
     gap: 4,

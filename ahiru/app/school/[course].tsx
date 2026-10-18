@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { goBack } from '../../utils/nav';
 import {
   View,
   Text,
@@ -152,9 +153,9 @@ const STAGES: Stage[] = [
   },
   {
     key: 'kakomon',
-    label: '過去入試問題',
+    label: '入試傾向問題',
     emoji: '🏆',
-    desc: '実際の入試問題・学校別傾向を完全対策',
+    desc: '学校別の出題傾向をもとにした入試レベルの問題',
     color: D.gold,
     tier: 'max',
     difficultyLabel: '入試',
@@ -172,8 +173,19 @@ export default function SchoolCurriculumScreen() {
   const [activeSubject, setActiveSubject] = useState<SubjectKey>('sansu');
   const { questions } = useAllQuestions();
 
-  const meta = SCHOOL_META[course ?? ''] ?? { name: course ?? '学校', emoji: '🏫', hensachi: '—', region: '—' };
+  // 存在しない学校のURL（打ちまちがい・古いリンク）では、先頭の学校の内容を出さずに一覧へ戻す
+  const courseKnown = course != null && ALL_COURSES.some((c) => c.key === course);
+  React.useEffect(() => {
+    if (course != null && !courseKnown) router.replace('/schools' as any);
+  }, [course, courseKnown, router]);
   const courseInfo = course ? getCourseInfo(course as any) : null;
+  // 学校の表示名は SCHOOL_META に無い学校（四天王寺・星光・東京/名古屋/福岡など）でも、courses.ts の定義から出す
+  const meta = SCHOOL_META[course ?? ''] ?? {
+    name: courseInfo?.name ?? course ?? '学校',
+    emoji: courseInfo?.emoji ?? '🏫',
+    hensachi: courseInfo?.hensachi ?? '—',
+    region: '—',
+  };
   const examType = courseInfo?.examType ?? 'chugaku';
 
   // Question counts per stage
@@ -237,10 +249,10 @@ export default function SchoolCurriculumScreen() {
     });
   }, [questions, course]);
 
-  const pageTitle = `${meta.name}の過去問対策｜Zaibase受験`;
+  const pageTitle = `${meta.name}の入試対策｜Zaibase受験`;
   const pageDescription =
     courseInfo?.description ??
-    `${meta.name}（偏差値${meta.hensachi}）の入試問題・過去問を科目別に演習できます。中学受験対策アプリ「Zaibase受験」。`;
+    `${meta.name}（偏差値${meta.hensachi}）の出題傾向をもとにした入試レベルの問題を科目別に演習できます。中学受験対策アプリ「Zaibase受験」。`;
 
   return (
     <SafeAreaView style={styles.safe}>
@@ -254,7 +266,7 @@ export default function SchoolCurriculumScreen() {
       )}
       {/* Header */}
       <View style={styles.topBar}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
+        <TouchableOpacity onPress={() => goBack(router)} style={styles.backBtn}>
           <Text style={styles.backArrow}>‹</Text>
         </TouchableOpacity>
         <View style={styles.topBarCenter}>
@@ -269,7 +281,7 @@ export default function SchoolCurriculumScreen() {
       <View style={styles.pathBanner}>
         <Text style={styles.pathLabel}>📈 学習ロードマップ</Text>
         <View style={styles.pathFlow}>
-          {['テキスト', '基礎', '応用', '模試', '過去問'].map((step, i, arr) => (
+          {['テキスト', '基礎', '応用', '模試', '入試傾向'].map((step, i, arr) => (
             <React.Fragment key={step}>
               <Text style={styles.pathStep}>{step}</Text>
               {i < arr.length - 1 && <Text style={styles.pathArrow}>→</Text>}
@@ -317,6 +329,26 @@ export default function SchoolCurriculumScreen() {
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
       >
+        {/* この学校の問題を、すぐ解く */}
+        {stageCounts.kakomon > 0 && (
+          <TouchableOpacity
+            style={styles.startCta}
+            activeOpacity={0.85}
+            onPress={() => {
+              if (subLoading) return;
+              router.push(`/quiz/${activeSubject}?mode=kakomon&course=${course}&examType=${examType}` as any);
+            }}
+            accessibilityRole="button"
+          >
+            <Text style={styles.startCtaTitle}>
+              ▶ {meta.name}の{SUBJECTS.find((x) => x.key === activeSubject)?.label ?? ''}の問題を解く
+            </Text>
+            <Text style={styles.startCtaSub}>
+              この学校の入試傾向問題 {stageCounts.kakomon}問（無料で5問・全部はMAXプラン）
+            </Text>
+          </TouchableOpacity>
+        )}
+
         {STAGES.map((stage, idx) => {
           const unlocked = hasAccess(stage.tier);
           const count = stageCounts[stage.key];
@@ -396,7 +428,7 @@ export default function SchoolCurriculumScreen() {
         {/* Info note */}
         <View style={styles.infoNote}>
           <Text style={styles.infoNoteText}>
-            💡 テキスト→基礎→応用→模試→過去問の順に進むと効果的です
+            💡 テキスト→基礎→応用→模試→入試傾向の順に進むと効果的です
           </Text>
         </View>
       </ScrollView>
@@ -405,6 +437,15 @@ export default function SchoolCurriculumScreen() {
 }
 
 const styles = StyleSheet.create({
+  startCta: {
+    backgroundColor: '#B5622E',
+    borderRadius: 14,
+    paddingVertical: 14,
+    paddingHorizontal: 16,
+    marginBottom: 14,
+  },
+  startCtaTitle: { color: '#FFFFFF', fontSize: 17, fontWeight: '900' },
+  startCtaSub: { color: '#FFE9D6', fontSize: 12.5, fontWeight: '700', marginTop: 4 },
   safe: { flex: 1, backgroundColor: D.bg },
   topBar: {
     flexDirection: 'row',

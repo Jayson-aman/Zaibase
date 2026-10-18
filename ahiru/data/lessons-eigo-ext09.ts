@@ -612,6 +612,7 @@ time to go（行く時間）／something to say（言うべきこと）／a plac
     sections: [
       {
         heading: 'なぜ最後に前置詞が残るのか',
+        mangaId: 'eigo_s303_manga',
         body: `「いっしょに遊ぶ友だち」を英語にするとき、a friend to play では足りない。play with a friend（友だちといっしょに遊ぶ）というもとの言い方に with が必要だからである。
 
 例）I want a friend to play with.（いっしょに遊ぶ友だちがほしい）
@@ -697,6 +698,7 @@ time to go（行く時間）／something to say（言うべきこと）／a plac
     sections: [
       {
         heading: '「なぜ？」に答える不定詞',
+        mangaId: 'eigo_s304_manga',
         body: `副詞的用法の不定詞は、動詞に説明を付け加える。いちばん多いのが目的を表す使い方である。
 
 例）I went to the library to borrow some books.（本を借りるために図書館へ行った）
@@ -1384,6 +1386,7 @@ It is important to read many books when you are young.
     sections: [
       {
         heading: 'for 人 の位置と意味',
+        mangaId: 'eigo_s312_forhito_manga',
         body: `不定詞の動作をするのがだれかを示したいときは、to の前に「for ＋ 人」を置く。
 
 例）It is easy for me to swim.（わたしにとって泳ぐことは簡単だ）
@@ -1733,7 +1736,7 @@ for me が I になっている点に注意する。
     keyPoints: [
       '動名詞＝動詞の 〜ing 形が名詞のはたらきをするもの。「〜すること」と訳す。',
       '入る場所は四つ：主語・動詞の目的語・be動詞のあとの補語・前置詞のあと。',
-      '進行形の 〜ing とは形が同じ。前に be動詞があるかどうかで見分ける。',
+      '進行形の 〜ing とは形が似ている。be動詞のあとでも、「主語＝〜すること」の関係なら動名詞（My hobby is playing tennis.）。',
       '動名詞が主語のときの動詞は is・was など単数の形。',
       '前置詞のあとに動詞を置くときは、必ず動名詞にする（不定詞は置けない）。',
     ],
@@ -1903,7 +1906,7 @@ To play the piano is fun. も文法的には正しいが、ふだんくり返し
     targetLevel: 'moshi',
     keyPoints: [
       'enjoy 〜ing（〜して楽しむ）／finish 〜ing（〜し終える）／stop 〜ing（〜するのをやめる）。',
-      'これらの動詞のあとに to＋原形は置けない。',
+      'enjoy・finish などのあとに to＋原形は置けない（stop to 〜 は「〜するために立ち止まる」で、別の意味の形）。',
       'How about 〜ing?（〜はどうですか）は前置詞 about のあとなので動名詞。',
       'Thank you for 〜ing.（〜してくれてありがとう）も前置詞のあとなので動名詞。',
       '否定は not 〜ing の順（動名詞の直前に not）。',
@@ -1927,7 +1930,7 @@ enjoy（楽しむ）・finish（終える）・stop（やめる）・give up（�
 例）Did you enjoy watching the game?（試合を見て楽しかったですか）
 例）Let\'s finish cleaning the room first.（まず部屋のそうじを終わらせよう）
 
-★ ポイント：enjoy to play・finish to do は誤り。この三語（enjoy・finish・stop）は動名詞専用だと最初に固めておく。`,
+★ ポイント：enjoy to play・finish to do は誤り。enjoy・finish は動名詞専用、stop は「やめる」なら stop 〜ing（stop to 〜 は「〜するために立ち止まる」で別の意味）と最初に固めておく。`,
       },
       {
         heading: '前置詞のあとの動名詞と決まり文句',
@@ -2165,7 +2168,7 @@ like（好む）・love（大好きだ）・begin（始める）・start（始�
       'Would you mind 〜ing? は「〜していただけませんか」というていねいな依頼。',
       'mind の質問に「いいですよ」と答えるときは No, not at all. などと否定で答える。',
       'keep 〜ing は「〜し続ける」。',
-      'これらの動詞に to＋原形を続けたら必ず誤りになる。',
+      'enjoy・finish・mind などに to＋原形を続けたら誤りになる（stop to 〜 は「〜するために立ち止まる」で別の意味）。',
     ],
     sections: [
       {
@@ -2198,7 +2201,7 @@ like（好む）・love（大好きだ）・begin（始める）・start（始�
 　意味：窓を開けていただけませんか
 
 ■ 答え方
-承知するとき：No, not at all.（いいえ、まったくかまいません）／ Of course not.／ Certainly.
+承知するとき：No, not at all.（いいえ、まったくかまいません）／ Of course not.／ Certainly not.
 断るとき：I\'m sorry, but I have a cold.（すみませんが、かぜをひいているので）
 
 「いいですよ」と引き受けるのに No で答えるのは、「いやだと思いますか」に対して「いやではありません」と答えているからである。
@@ -2508,7 +2511,7 @@ a sleeping bag を「眠っているふくろ」と訳すと意味が通らな�
     examType: 'chugaku',
     title: '分詞②：二語以上は名詞の後ろ（the boy running in the park）',
     description: '現在分詞のかたまりが名詞を後ろから説明する形を読めるようにする',
-    intro: 'a sleeping baby は前から、the boy running in the park はうしろから説明します。同じ ing なのに位置が変わるのは、running in the park が三語のかたまりだからです。長いものはうしろへ——英語のこの原則をもう一度確かめます。',
+    intro: 'a sleeping baby は前から、the boy running in the park はうしろから説明します。同じ ing なのに位置が変わるのは、running in the park が四語のかたまりだからです。長いものはうしろへ——英語のこの原則をもう一度確かめます。',
     order: 825,
     studyPeriod: '小6後半・直前',
     targetLevel: 'nyushi',
@@ -2531,7 +2534,7 @@ a sleeping bag を「眠っているふくろ」と訳すと意味が通らな�
 
 ■ 前と後ろの対応
 a sleeping baby（一語→前）
-the baby sleeping in the bed（三語→後ろ）
+the baby sleeping in the bed（四語→後ろ）
 同じ sleeping でも、後ろに語句が付くかどうかで位置が変わる。
 
 ■ 訳し上げる
@@ -2631,6 +2634,7 @@ The boy running in the park → 公園で走っている少年
       },
       {
         heading: '過去形と過去分詞を混同しない',
+        mangaId: 'eigo_s326_manga',
         body: `過去分詞は過去形とは別物である。形が同じ動詞が多いので、位置で判断する。
 
 例）I read the book written by him.（彼によって書かれた本を読んだ）
@@ -2693,6 +2697,7 @@ used は過去形とも過去分詞とも同じ形だが、あとに was／is �
     sections: [
       {
         heading: 'する側か、される側か',
+        mangaId: 'eigo_s327_manga',
         body: `現在分詞と過去分詞のどちらを使うかは、説明される名詞と動作の関係で決まる。
 
 ■ 名詞が動作をする側 → 現在分詞
@@ -2970,6 +2975,7 @@ are が二回出てくるが、一つ目は関係詞の中の動詞（先行詞 
     sections: [
       {
         heading: '主格と目的格の見分け方',
+        mangaId: 'eigo_s330_manga',
         body: `関係代名詞のあとに何が続くかで、主格か目的格かが決まる。
 
 ■ 主格：関係詞のあとが動詞
@@ -3562,6 +3568,21 @@ why は先行詞 the reason とともに使い、how は先行詞なしで「〜
 
 ⚠ 注意：もとの語（She・it・there）を消し忘れるのが最も多いミスである。関係詞に置きかえた語は必ず消す。`,
       },
+      {
+        heading: 'なぜ「あとの文が完全か」で関係代名詞と関係副詞が分かれるのか',
+        mangaId: 'eigo_s336_manga',
+        body: `関係代名詞（who・which・that）は、もとの文の**主語や目的語だった名詞**を置きかえた語です。だから関係代名詞のあとの文には、主語か目的語が欠けています（can play the guitar には主語がない）。関係副詞（where・when）は、もとの文の**there・then のような副詞**を置きかえた語なので、あとの文には主語も目的語もそろっています（we have lunch は完全）。つまり「あとの文に欠けた所があるか」を見れば、どちらの仲間かが決まり、欠けているのが主語なら主格、目的語なら目的格と分かります。
+
+二文を一文にするときに、もとの語（She・it・there）を消し忘れる誤りが多いのは、関係詞が**その語の代わり**になっていることを意識していないからです。関係詞を置いたら、置きかえた語は必ず消します。前置詞が残る場合（play in it→which I often play in）は in を文末に残すか、in it をまとめて where にします。
+
+■ 確かめのしかた
+①**先行詞の種類**：人→who／that、もの→which／that、場所→where、時→when。
+②**あとの文が完全か**：主語が欠けている→主格、目的語が欠けている→目的格、欠けていない→関係副詞。the day (　) I first met her→完全→when。
+③二文を一文にするときは、共通する語を見つけ、あとの文でのはたらき（主語・目的語・副詞）を見て、関係詞に置きかえ、**もとの語を消す**。
+④目的格は省略できる。目的格かどうかを確かめてから省略する。
+
+★ ここがポイント：関係代名詞は**名詞の代わり**なのであとの文が不完全、関係副詞は**副詞の代わり**なのであとの文が完全。**先行詞→あとの文が完全か**の順に見て、置きかえた語は必ず消す。`,
+      },
     ],
     trapExamples: [
       {
@@ -3606,6 +3627,7 @@ why は先行詞 the reason とともに使い、how は先行詞なしで「〜
     sections: [
       {
         heading: '語順が入れかわるしくみ',
+        mangaId: 'eigo_s337_manga',
         body: `受動態は「〜される」という言い方で、be動詞＋過去分詞で作る。
 
 例）Tom broke the window.（トムが窓をこわした）… 能動態
@@ -3658,7 +3680,7 @@ write－wrote－written／speak－spoke－spoken／break－broke－broken／take
     trapExamples: [
       {
         question: '受動態に書きかえなさい。My brother washed the car yesterday.',
-        wrongAnswer: 'The car was washed by my brother yesterday.（正しい）／The car is washed by my brother yesterday.（誤り）',
+        wrongAnswer: 'The car is washed by my brother yesterday.',
         trapExplanation:
           '受動態の be動詞をいつも is・are にしてしまい、もとの文が過去（washed）であることを反映させ忘れる。yesterday という語があっても気づかない。',
         correctAnswer: 'The car was washed by my brother yesterday.',
@@ -3816,6 +3838,7 @@ put－put－put（置く）／cut－cut－cut（切る）／read－read－read�
       },
       {
         heading: '助動詞のある受動態と未来の受動態',
+        mangaId: 'eigo_s339_manga',
         body: `助動詞といっしょに使うときは、「助動詞＋be＋過去分詞」の形になる。助動詞のあとは必ず原形なので、be動詞は be の形になる。
 
 例）This song will be sung at the concert.（この歌はコンサートで歌われるだろう）

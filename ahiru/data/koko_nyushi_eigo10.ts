@@ -7,29 +7,12 @@ export const kokoNyushiEigo10: Question[] = [
   {
     id: 'koko_nyushi_eigo10_01',
     subject: 'eigo',
-    question: '次の（　）内に最も適切な語句を選べ。  The volunteers ( ) food to homeless people for over ten years.',
-    choices: ['① serve', '② served', '③ have served', '④ have been serving'],
+    question: '次の（　）内に最も適切な語句を選べ。  The volunteers ( ) food to homeless people for over ten years now.',
+    choices: ['① serve', '② served', '③ had served', '④ have been serving'],
     answer: '④ have been serving',
     hint: '「10年以上ずっと〜している」という継続を表す時制を選ぶ。',
-    explanation: `【出題意図】
-現在完了進行形（have been + Ving）の用法を問う問題。継続動作か単なる完了かの区別が目標。
-
-【解説】
-"for over ten years" は継続を示す語句。ボランティアが「今も続けて」食事を提供している動作の継続を強調するには現在完了進行形が適切。
-・① serve → 現在形（習慣ではあるが継続の強調がない）
-・② served → 過去形（今も続くニュアンスが出ない）
-・③ have served → 現在完了形（完了・経験、継続の強調が弱い）
-・④ have been serving → 現在完了進行形（✓）
-
-日本語訳：「そのボランティアたちは10年以上にわたってホームレスの人々に食事を提供し続けている。」
-
-【文法ポイント】
-have/has been + Ving ＝過去から現在まで続く動作の継続を強調する。for〜（〜の間）、since〜（〜以来）とセットで頻出。
-
-【入試頻出】
-・She has been helping at the shelter since she was a student.
-・They have been collecting donations for the past month.
-・He has been working as a volunteer for five years.`,
+    explanation:
+      '【何を聞かれているか】「The volunteers ( ) food to homeless people for over ten years now.」の空所に入る適切な時制を選ぶ。\n【なぜhave been servingになるのか】「10年以上ずっと」という、今も続いている動作の継続を強調するには、現在完了進行形（have been＋動詞のing形）を使う必要があるから。\n【ポイント1】for over ten years now（今で10年以上にわたって）は、今も続く継続を表す語句。\n【ポイント2】①serve（現在形、継続の期間を表せない）、②served（過去形、nowがあるので今は終わっている意味になり合わない）、③had served（過去完了形、過去の基準点がなくnowとも合わない）はどれも文脈に合わない。\n【ポイント3】④have been serving（現在完了進行形）が正解。for〜、since〜とセットで頻出。\n【答え】④ have been serving\n【確かめ】for over ten years nowという継続の期間を表す語句と、have been＋Vingの組み合わせがセットになっていることを確認する。\n【よくあるまちがい】過去形served（nowと合わない）や、過去完了had served（過去の基準点がない）を選んでしまう。\n【ここが絶対】過去から現在まで続く動作の継続を強調するときは現在完了進行形（have/has been＋Ving）を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -42,25 +25,8 @@ have/has been + Ving ＝過去から現在まで続く動作の継続を強調�
     choices: ['① must not', '② should', '③ can\'t', '④ won\'t'],
     answer: '② should',
     hint: '「困っているときは助けるべきだ」という一般的な義務・道徳的な推奨を表す助動詞を選ぶ。',
-    explanation: `【出題意図】
-助動詞shouldの「〜すべきだ」という道徳的義務・推奨の用法を問う問題。
-
-【解説】
-文脈は近所の人が困っているときの一般的なアドバイス・社会的責任について。should＝「〜すべきだ」が最も自然。
-・① must not → 「〜してはいけない」で逆の意味
-・② should → 道徳的な推奨（✓）
-・③ can't → 「〜できない」で文脈に合わない
-・④ won't → 「〜しないだろう」意志未来で不適切
-
-日本語訳：「私たちは近所の人が困っているときは助けるべきだ。」
-
-【文法ポイント】
-should＝道徳的義務・アドバイス。must＝強い義務・規則。ought toはshouldとほぼ同義でやや書き言葉的。
-
-【入試頻出】
-・You should recycle more to protect the environment.
-・We ought to support people in need.
-・Students should take part in community activities.`,
+    explanation:
+      '【何を聞かれているか】「We ( ) help our neighbors when they are in trouble.」の空所に入る適切な助動詞を選ぶ。\n【なぜshouldになるのか】近所の人が困っているときの一般的なアドバイス・道徳的な責任を表すには、should（〜すべきだ）が最も自然だから。\n【ポイント1】①must not（〜してはいけない、逆の意味）、③can\'t（〜できない）、④won\'t（〜しないだろう）はどれも文脈に合わない。\n【ポイント2】②should（道徳的な推奨・アドバイス）が正解。\n【ポイント3】should＝道徳的義務・アドバイス、must＝強い義務・規則、ought toはshouldとほぼ同義でやや書き言葉的。\n【答え】② should\n【確かめ】文全体が「困っている人への一般的なアドバイス」という内容になっているかを確認する。\n【よくあるまちがい】mustを選んでしまい、規則的な義務と道徳的なアドバイスを混同する。\n【ここが絶対】should＝〜すべきだ（道徳的な推奨・アドバイス）、must／have to＝〜しなければならない（強い義務）と使い分ける。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -197,25 +163,8 @@ avoid＋動名詞＝「〜するのを避ける」。avoidは不定詞を目的�
     choices: ['① will help', '② has helped', '③ will have helped', '④ helped'],
     answer: '③ will have helped',
     hint: '「今年の終わりまでには」という未来の時点での完了を表す時制を選ぶ。',
-    explanation: `【出題意図】
-未来完了形（will have＋過去分詞）の用法を問う問題。
-
-【解説】
-「By the end of this year（今年の終わりまでに）」は未来の一時点。それまでに「1000家族以上を助けたことになる」という完了を表すには未来完了形が必要。
-・① will help → 単純未来（完了の意味がない）
-・② has helped → 現在完了（未来の基準点には使えない）
-・③ will have helped → 未来完了（✓）
-・④ helped → 過去形（文脈に合わない）
-
-日本語訳：「今年の終わりまでには、このNPOは1000家族以上を助けたことになるだろう。」
-
-【文法ポイント】
-未来完了形＝will have＋過去分詞。by〜、by the time〜などとセットで使われる。
-
-【入試頻出】
-・By next spring, the group will have built ten houses for poor families.
-・By the time she graduates, she will have volunteered for three years.
-・By 2030, this project will have reached one million people.`,
+    explanation:
+      '【何を聞かれているか】「By the end of this year, this NPO ( ) more than one thousand families.」の空所に入る適切な時制を選ぶ。\n【なぜwill have helpedになるのか】「今年の終わりまでには」という未来のある時点で「1000家族以上を助けたことになる」という完了を表すには、未来完了形（will have＋過去分詞）を使う必要があるから。\n【ポイント1】By the end of this year（今年の終わりまでには）は未来の時点を示す表現。\n【ポイント2】①will help（単純未来）、②has helped（現在完了、未来の時点には使えない）、④helped（過去形）はどれも文脈に合わない。\n【ポイント3】③will have helped（未来完了）が正解。目印はby the time〜、by then、by 2030など。\n【答え】③ will have helped\n【確かめ】By the end of this yearという未来の時点を示す語句と、will have＋過去分詞の組み合わせがセットになっていることを確認する。\n【よくあるまちがい】has helped（現在完了）を選んでしまう。現在完了は現在を基準にするので、未来の時点には使えない。\n【ここが絶対】未来のある時点での完了にはwill have＋過去分詞（未来完了形）を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -225,28 +174,11 @@ avoid＋動名詞＝「〜するのを避ける」。avoidは不定詞を目的�
     id: 'koko_nyushi_eigo10_08',
     subject: 'eigo',
     question: '次の（　）内に最も適切な語を選べ。  If we ( ) more about local problems, we can find better ways to solve them.',
-    choices: ['① will learn', '② learn', '③ learned', '④ have learned'],
+    choices: ['① will learn', '② learn', '③ learned', '④ learning'],
     answer: '② learn',
     hint: '条件を表すif節の中では、未来のことでも現在形を使う。',
-    explanation: `【出題意図】
-条件節（if節）における時制のルールを問う問題。if節内では未来のことも現在形で表す。
-
-【解説】
-主節「we can find」は現在の可能性を表す。if節は未来・一般的な条件を示すが、if節内では現在形を使うのが原則。
-・① will learn → if節でwillは使えない
-・② learn → 現在形（✓）
-・③ learned → 過去形（仮定法になり文意がずれる）
-・④ have learned → 現在完了（この文脈では不要）
-
-日本語訳：「私たちが地域の問題についてもっと学べば、それを解決するより良い方法を見つけることができる。」
-
-【文法ポイント】
-時・条件を表す副詞節（if, when, as soon asなど）の中では未来のことも現在形。
-
-【入試頻出】
-・If people work together, they can change their community.
-・If we don't act now, the problem will get worse.
-・When enough volunteers join, the project will succeed.`,
+    explanation:
+      '【何を聞かれているか】「If we ( ) more about local problems, we can find better ways to solve them.」の空所に入る適切な語を選ぶ。\n【なぜlearnになるのか】条件を表すif節の中では、未来のことでもwillを使わず現在形を使うという決まりがあるから。\n【ポイント1】if節などの副詞節の中では、未来のことでも現在形で表す。①will learnはif節の中では使えない。\n【ポイント2】③learned（過去形、仮定法になり文意がずれる）、④learning（ing形、動詞の形としてif節に使えない）はどちらも誤り。\n【ポイント3】②learn（現在形）が正解。「私たちが地域の問題についてもっと学べば」という条件を表す。\n【答え】② learn\n【確かめ】主節にcan（可能性）が使われていることと、if節が現在形（learn）になっていることのバランスを確認する。\n【よくあるまちがい】if節の中にもwillを入れてしまう。\n【ここが絶対】時・条件を表す副詞節の中では、未来のことでも現在形を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -259,25 +191,8 @@ avoid＋動名詞＝「〜するのを避ける」。avoidは不定詞を目的�
     choices: ['① used to', '② is used to', '③ was used to', '④ has used to'],
     answer: '① used to',
     hint: '「以前は〜だった（今は違う）」という過去の状態を表す表現を選ぶ。',
-    explanation: `【出題意図】
-used to＋動詞原形（過去の習慣・状態と現在との対比）の用法を問う問題。
-
-【解説】
-「以前は空き地があったが、今は違う」という過去の状態と現在の対比。used to＋動詞原形が適切。
-・② is used to → 「〜に慣れている」の意味になり不適切
-・③ was used to → 誤った形（used toは形が変化しない）
-・④ has used to → 存在しない形
-・① used to → 過去の状態・習慣（✓）
-
-日本語訳：「以前ここには空き地があったが、今はコミュニティガーデンになっている。」
-
-【文法ポイント】
-used to＋動詞原形＝以前は〜だった（今は違う）。be used to＋動名詞＝〜に慣れている、と混同しないよう注意。
-
-【入試頻出】
-・There used to be a small shop on this street.
-・People used to throw away plastic without thinking.
-・This area used to have many empty houses.`,
+    explanation:
+      '【何を聞かれているか】「There ( ) be an empty lot here, but now it is a community garden.」の空所に入る適切な表現を選ぶ。\n【なぜused toになるのか】「以前は〜だった（今は違う）」という過去の状態と現在の対比を表すには、used to＋動詞原形という決まった形を使う必要があるから。\n【ポイント1】used to＋動詞原形は「以前は〜だった」という過去の状態・習慣を表す（形は変化しない）。\n【ポイント2】②is used to（「〜に慣れている」という別の意味になる）、③was used to（誤った形）、④has used to（存在しない形）はどれも誤り。\n【ポイント3】①used to（過去の状態・習慣）が正解。There used to be〜で「以前は〜があった」という意味になる。\n【答え】① used to\n【確かめ】「今はコミュニティガーデンになっている」というbut nowの部分と、「以前は空き地だった」という対比になっているかを確認する。\n【よくあるまちがい】used to（過去の状態）とbe used to〜ing（〜に慣れている）を混同してしまう。\n【ここが絶対】used to＋動詞原形＝以前は〜だった（今は違う）。be used to＋動名詞＝〜に慣れている、と区別する。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -290,25 +205,8 @@ used to＋動詞原形＝以前は〜だった（今は違う）。be used to＋
     choices: ['① so', '② very', '③ as', '④ much'],
     answer: '③ as',
     hint: '「〜と同じくらい…」という原級比較 as＋形容詞＋as の形を考える。',
-    explanation: `【出題意図】
-原級を使った同等比較（as〜as）の構文を問う問題。
-
-【解説】
-「今年のボランティアの数は昨年と同じくらい多い」という2つを同等に比べる表現はas＋形容詞＋as〜。
-・① so → 通常so〜thatの形で使う
-・② very → 単独の強調（as構文にならない）
-・③ as → 同等比較（✓）
-・④ much → 比較級の強調（largerの前になら使えるが原級には不可）
-
-日本語訳：「今年のボランティアの数は昨年と同じくらい多い。」
-
-【文法ポイント】
-as＋形容詞/副詞＋as〜＝〜と同じくらい…。否定文not as/so〜as＝〜ほど…でない。
-
-【入試頻出】
-・This problem is as serious as that one.
-・She works as hard as any other volunteer.
-・The town is not as clean as it used to be.`,
+    explanation:
+      '【何を聞かれているか】「The number of volunteers this year is ( ) large as last year\'s.」の空所に入る適切な語を選ぶ。\n【なぜasになるのか】「今年のボランティアの数は昨年と同じくらい多い」という2つを同等に比べる表現は、as＋形容詞＋as〜という決まった形で表すから。\n【ポイント1】①so（通常so〜thatの形で使う）、②very（単独の強調でas構文にならない）、④much（比較級の強調で原級には使わない）はどれも誤り。\n【ポイント2】③as（同等比較as〜as）が正解。\n【ポイント3】as＋形容詞/副詞＋as〜＝〜と同じくらい…。否定文not as/so〜as＝〜ほど…でない。\n【答え】③ as\n【確かめ】文末にas last year\'s（＝as last year\'s number）という比較対象が続いていることを確認する。\n【よくあるまちがい】soやveryをasの代わりに使ってしまう。\n【ここが絶対】「〜と同じくらい…」という同等比較はas＋形容詞/副詞＋as〜の形で表す。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -386,26 +284,9 @@ have＋人＋動詞原形＝「人に〜させる、〜してもらう」。教�
     question: '次の（　）内に最も適切な語を選べ。  Many students decided to take ( ) in the beach cleanup last Sunday.',
     choices: ['① part', '② care', '③ place', '④ turns'],
     answer: '① part',
-    hint: 'take part in〜で「〜に参加する」という熟語。',
-    explanation: `【出題意図】
-熟語take part in〜（〜に参加する）の正確な使用を問う問題。
-
-【解説】
-take part in〜＝「〜に参加する」。joinとほぼ同義でよく使われる。
-・② care → take care of〜「〜の世話をする」
-・③ place → take place「行われる、起こる」（inを伴わない）
-・④ turns → take turns「交代でする」
-・① part → 正解（✓）
-
-日本語訳：「多くの生徒たちがこの前の日曜日のビーチの清掃活動に参加することにした。」
-
-【文法ポイント】
-take part in〜＝join〜とほぼ同義。inを忘れないこと。
-
-【入試頻出】
-・She took part in a volunteer program abroad.
-・Everyone in our class took part in the food drive.
-・He was too busy to take part in the meeting.`,
+    hint: '「〜に参加する」という熟語。take と in のあいだに入る名詞を選ぶ。',
+    explanation:
+      '【何を聞かれているか】「Many students decided to take ( ) in the beach cleanup last Sunday.」の空所に入る適切な語を選ぶ。\n【なぜpartになるのか】「〜に参加する」という意味は、take part in〜という決まったイディオムで表すから。\n【ポイント1】take part in〜は「〜に参加する」というjoinとほぼ同義の重要イディオム。\n【ポイント2】②care（take care of〜「〜の世話をする」）、③place（take place「行われる」でinを伴わない）、④turns（take turns「交代でする」）はどれも別のイディオム。\n【ポイント3】①part（take part in〜）が正解。\n【答え】① part\n【確かめ】take part in the beach cleanupで「ビーチの清掃活動に参加する」という意味になっているかを確認する。\n【よくあるまちがい】take part inとtake place（inを伴わない）を混同してしまう。\n【ここが絶対】「〜に参加する」はtake part in〜という決まった形で覚える。inを忘れないこと。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -417,26 +298,9 @@ take part in〜＝join〜とほぼ同義。inを忘れないこと。
     question: '次の（　）内に最も適切な語を選べ。  We need to be more ( ) of the problems that homeless people face every day.',
     choices: ['① aware', '② afraid', '③ ashamed', '④ ready'],
     answer: '① aware',
-    hint: 'be aware of〜で「〜に気づいている、〜を意識している」という熟語。',
-    explanation: `【出題意図】
-熟語be aware of〜（〜を意識している）を問う問題。
-
-【解説】
-be aware of〜＝「〜を意識している、〜に気づいている」。社会問題への理解を促す文脈で頻出。
-・② afraid → be afraid of〜「〜を恐れる」
-・③ ashamed → be ashamed of〜「〜を恥じる」
-・④ ready → be ready for〜「〜の準備ができている」（forを使う）
-・① aware → 正解（✓）
-
-日本語訳：「私たちはホームレスの人々が毎日直面する問題についてもっと意識する必要がある。」
-
-【文法ポイント】
-be aware of〜＝〜に気づいている、意識している。似た形のbe afraid of / be proud ofと区別すること。
-
-【入試頻出】
-・Few people are aware of this local issue.
-・She became aware of the difficulties older people face.
-・We should be aware of how our actions affect others.`,
+    hint: '「〜に気づいている」という意味の、〈形容詞＋of〉の熟語。',
+    explanation:
+      '【何を聞かれているか】「We need to be more ( ) of the problems that homeless people face every day.」の空所に入る適切な語を選ぶ。\n【なぜawareになるのか】「〜を意識している、〜に気づいている」という意味は、be aware of〜という決まったイディオムで表すから。\n【ポイント1】be aware of〜は「〜を意識している、〜に気づいている」という重要イディオム。\n【ポイント2】②afraid（be afraid of〜「〜を恐れる」）、③ashamed（be ashamed of〜「〜を恥じる」）、④ready（be ready for〜「〜の準備ができている」、forを使う）はどれも別のイディオム。\n【ポイント3】①aware（be aware of〜）が正解。\n【答え】① aware\n【確かめ】be aware of the problemsで「問題を意識している」という意味になっているかを確認する。\n【よくあるまちがい】be aware ofとbe afraid ofを混同してしまう。\n【ここが絶対】be aware of〜＝〜に気づいている、意識している。似た形のbe afraid of／be proud ofと区別する。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -449,23 +313,8 @@ be aware of〜＝〜に気づいている、意識している。似た形のbe 
     choices: ['① in', '② on', '③ at', '④ for'],
     answer: '① in',
     hint: 'in need で「困っている、困窮している」という定型表現。',
-    explanation: `【出題意図】
-熟語in need（困窮している）の前置詞用法を問う問題。
-
-【解説】
-in need＝「困っている、必要としている」。families in need＝「困窮している家族」。
-・② on ③ at ④ for → いずれも存在しない組み合わせ
-・① in → 正解（✓）
-
-日本語訳：「この慈善団体は困窮している家族に食料と衣類を提供している。」
-
-【文法ポイント】
-in need（of〜）＝（〜を）必要としている、困っている。people in needで「困っている人々」という頻出表現。
-
-【入試頻出】
-・The volunteers helped people in need after the earthquake.
-・This program supports children in need of education.
-・Many families were in need of basic supplies.`,
+    explanation:
+      '【何を聞かれているか】「This charity provides food and clothes for families ( ) need.」の空所に入る適切な前置詞を選ぶ。\n【なぜinになるのか】「困っている、必要としている」という意味は、in needという決まった定型表現で表すから。\n【ポイント1】in needは「困っている、必要としている」という意味。families in needで「困窮している家族」を表す。\n【ポイント2】②on、③at、④forはどれもneedと組み合わせて使われない前置詞。\n【ポイント3】①in（in need）が正解。people in needで「困っている人々」という頻出表現になる。\n【答え】① in\n【確かめ】families in needが「困窮している家族」という意味になっているかを確認する。\n【よくあるまちがい】inを別の前置詞に置きかえてしまう。\n【ここが絶対】in need（of〜）＝（〜を）必要としている、困っている、という決まった形で覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -508,25 +357,9 @@ run out of〜＝資源・物が尽きる。似た表現にbe out of〜（〜が�
     question: '次の（　）内に最も適切な語を選べ。  Even a small act of kindness can make a ( ) in someone\'s life.',
     choices: ['① difference', '② decision', '③ direction', '④ distance'],
     answer: '① difference',
-    hint: 'make a difference で「変化をもたらす、役に立つ」という熟語。',
-    explanation: `【出題意図】
-熟語make a difference（良い変化をもたらす）を問う問題。
-
-【解説】
-make a difference＝「変化をもたらす、大きな影響を与える」。ボランティア活動の意義を語る際の頻出表現。
-・② decision → make a decision「決断する」
-・③ direction ④ distance → 熟語として成立しない
-・① difference → 正解（✓）
-
-日本語訳：「ほんの小さな親切な行いでも、誰かの人生に変化をもたらすことができる。」
-
-【文法ポイント】
-make a difference（to/in〜）＝〜に良い影響を与える。makeを使った頻出熟語：make an effort（努力する）、make a decision（決断する）。
-
-【入試頻出】
-・Volunteers can make a real difference in their community.
-・Every small donation makes a difference.
-・We believe that one person can make a difference.`,
+    hint: '「効果がある・役に立つ」という熟語。make a ○○ の形になる名詞を選ぶ。',
+    explanation:
+      '【何を聞かれているか】「Even a small act of kindness can make a ( ) in someone\'s life.」の空所に入る適切な語を選ぶ。\n【なぜdifferenceになるのか】「変化をもたらす、大きな影響を与える」という意味は、make a differenceという決まったイディオムで表すから。\n【ポイント1】make a differenceは「変化をもたらす、大きな影響を与える」という重要イディオム。\n【ポイント2】②decision（make a decision「決断する」）、③direction、④distanceはどれも熟語として成立しない。\n【ポイント3】①difference（make a difference）が正解。\n【答え】① difference\n【確かめ】make a difference in someone\'s lifeで「誰かの人生に変化をもたらす」という意味になっているかを確認する。\n【よくあるまちがい】make a decisionと混同してdecisionを選んでしまう。\n【ここが絶対】make a difference（to/in〜）＝〜に良い影響を与える、という決まった形で覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -538,26 +371,9 @@ make a difference（to/in〜）＝〜に良い影響を与える。makeを使っ
     question: '次の（　）内に最も適切な語を選べ。  All of us are ( ) for keeping our town clean and safe.',
     choices: ['① responsible', '② possible', '③ available', '④ suitable'],
     answer: '① responsible',
-    hint: 'be responsible for〜で「〜に対して責任がある」という熟語。',
-    explanation: `【出題意図】
-熟語be responsible for〜（〜に責任がある）を問う問題。
-
-【解説】
-be responsible for〜＝「〜に対して責任がある」。社会的責任を語る文脈で頻出。
-・② possible → 「可能な」（be possible forでは意味が異なる）
-・③ available → 「利用可能な」
-・④ suitable → 「適した」
-・① responsible → 正解（✓）
-
-日本語訳：「私たち全員が、自分たちの町を清潔で安全に保つ責任がある。」
-
-【文法ポイント】
-be responsible for〜＝〜の責任を負う。forの後ろには名詞または動名詞が続く。
-
-【入試頻出】
-・Each citizen is responsible for reducing waste.
-・The company is responsible for cleaning up the river it polluted.
-・Who is responsible for organizing this event?`,
+    hint: '「〜に責任がある」という意味の、〈形容詞＋for〉の熟語。',
+    explanation:
+      '【何を聞かれているか】「All of us are ( ) for keeping our town clean and safe.」の空所に入る適切な語を選ぶ。\n【なぜresponsibleになるのか】「〜に対して責任がある」という意味は、be responsible for〜という決まったイディオムで表すから。\n【ポイント1】be responsible for〜は「〜に対して責任がある」という重要イディオム。\n【ポイント2】②possible（「可能な」）、③available（「利用可能な」）、④suitable（「適した」）はどれもこの文脈に合わない。\n【ポイント3】①responsible（be responsible for〜）が正解。forのあとには名詞または動名詞が続く。\n【答え】① responsible\n【確かめ】be responsible for keeping our town clean and safeで「町を清潔で安全に保つ責任がある」という意味になっているかを確認する。\n【よくあるまちがい】responsibleとpossibleのスペルや意味を混同してしまう。\n【ここが絶対】be responsible for〜＝〜の責任を負う、という決まった形で覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -600,7 +416,7 @@ depend on〜＝rely on〜＝count on〜（すべて「〜に頼る」）。前�
     question: '次の（　）内に最も適切な語を選べ。  It is time for us to take ( ) to solve the problem of poverty in our city.',
     choices: ['① action', '② act', '③ activity', '④ actor'],
     answer: '① action',
-    hint: 'take action で「行動を起こす」という熟語。',
+    hint: '「行動を起こす」という熟語。take のあとに入る名詞を選ぶ。',
     explanation: `【出題意図】
 熟語take action（行動を起こす）の正しい語形を問う問題。
 
@@ -633,25 +449,8 @@ take action＝行動を起こす。似た形にtake steps（措置を講じる�
     choices: ['① who', '② which', '③ whom', '④ whose'],
     answer: '① who',
     hint: '先行詞は「人」で、関係詞節内で主語の役割をしている。',
-    explanation: `【出題意図】
-関係代名詞who（先行詞が人・主格）の用法を問う問題。
-
-【解説】
-先行詞The man（人）。関係詞節内でstarted（始めた）の主語になっている。
-・② which → 先行詞が物・動物
-・③ whom → 先行詞が人・目的格
-・④ whose → 先行詞が人または物・所有格
-・① who → 正解（✓）
-
-日本語訳：「このボランティアグループを始めた男性は私のおじです。」
-
-【文法ポイント】
-関係代名詞の主格：人ならwho、物ならwhich、どちらもthatで代用可。
-
-【入試頻出】
-・The woman who runs this shelter is very kind.
-・I know a boy who helps at the food bank every week.
-・The group who organized the event worked very hard.`,
+    explanation:
+      '【何を聞かれているか】「The man ( ) started this volunteer group is my uncle.」の空所に入る適切な関係代名詞を選ぶ。\n【なぜwhoになるのか】先行詞The man（男性）は人で、関係代名詞節の中でstarted（始めた）の主語の役割をしているため、先行詞が人・主格のときに使うwhoを選ぶ必要があるから。\n【ポイント1】先行詞がThe man（人）で、関係代名詞節内でstartedの主語になっている（主格）。\n【ポイント2】②whichは先行詞が物や動物、③whomは先行詞が人・目的格、④whoseは所有格で、どれも文脈に合わない。\n【ポイント3】関係代名詞の主格：人ならwho、物ならwhich、どちらもthatで代用可。\n【答え】① who\n【確かめ】whoのあとに動詞（started）が続いている（主語の役割）ことを確認する。\n【よくあるまちがい】先行詞が人なのにwhichを選んでしまう。\n【ここが絶対】関係代名詞は、先行詞が人か物かと、節内での役割（主格・目的格・所有格）の両方で決まる。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -695,25 +494,8 @@ take action＝行動を起こす。似た形にtake steps（措置を講じる�
     choices: ['① who', '② which', '③ whose', '④ whom'],
     answer: '③ whose',
     hint: '「その家族の家が」という所有の関係を表す関係代名詞を選ぶ。',
-    explanation: `【出題意図】
-所有格の関係代名詞whoseの用法を問う問題。
-
-【解説】
-a family（先行詞）とhouse（名詞）の間に所有の関係がある（＝their house）。この関係を表すのが関係代名詞whose。
-・① who → 主格
-・② which → 目的格・主格（所有は表せない）
-・④ whom → 目的格
-・③ whose → 正解（✓）
-
-日本語訳：「私たちは、洪水で家が壊れてしまった家族を支援した。」
-
-【文法ポイント】
-whose＋名詞＋動詞〜の形で「〜の（名詞）が…」を表す。先行詞は人でも物でも使える。
-
-【入試頻出】
-・She helped an old man whose wife had passed away.
-・This is the family whose garden became a community space.
-・We visited a town whose houses were damaged by the storm.`,
+    explanation:
+      '【何を聞かれているか】「We supported a family ( ) house was destroyed by the flood.」の空所に入る適切な関係代名詞を選ぶ。\n【なぜwhoseになるのか】関係代名詞節内のhouse（家）は先行詞a family（家族）の所有物（＝their house）という関係にあり、この所有の関係を表すには所有格の関係代名詞whoseを使う必要があるから。\n【ポイント1】先行詞はa family（家族）。houseは「その家族の（＝family\'sの）家」という所有の関係にある。\n【ポイント2】①who（主格）、②which（主格・目的格）、④whom（目的格）はどれも所有の関係を表せない。\n【ポイント3】③whose（所有格）が正解。whose節は先行詞＋whose＋名詞＋動詞〜の形で「〜の（名詞）が…」を表す。先行詞は人でも物でも使える。\n【答え】③ whose\n【確かめ】whoseのあとにhouse（名詞）、was（動詞）と続いているかを確認する。\n【よくあるまちがい】所有の関係なのにwhoやwhichを使ってしまう。\n【ここが絶対】whoseは先行詞（人・物）の所有格を表す関係代名詞。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -726,25 +508,8 @@ whose＋名詞＋動詞〜の形で「〜の（名詞）が…」を表す。先
     choices: ['① which', '② who', '③ where', '④ when'],
     answer: '③ where',
     hint: '先行詞は「場所」。関係副詞を選ぶ。',
-    explanation: `【出題意図】
-関係副詞where（先行詞が場所）の用法を問う問題。
-
-【解説】
-先行詞the shelter（場所）。節内はmany homeless people can stay (in the shelter) for freeという構造で、in the shelterがwhereに置き換わっている。
-・① which → 前置詞が必要（the shelter in which〜）
-・② who → 人に使う
-・④ when → 時に使う
-・③ where → 正解（✓）
-
-日本語訳：「ここは多くのホームレスの人々が無料で滞在できる避難所です。」
-
-【文法ポイント】
-関係副詞where＝前置詞＋which。先行詞が場所（place, shelter, townなど）のときに使う。
-
-【入試頻出】
-・This is the town where the festival takes place every year.
-・I know a place where volunteers can get training.
-・That is the center where people donate old clothes.`,
+    explanation:
+      '【何を聞かれているか】「This is the shelter ( ) many homeless people can stay for free.」の空所に入る適切な語を選ぶ。\n【なぜwhereになるのか】先行詞the shelter（避難所）は場所を表し、関係詞節の中に前置詞（in the shelter）が隠れているため、「前置詞＋which」の働きをする関係副詞whereを使う必要があるから。\n【ポイント1】先行詞the shelterは場所。節の元の形はmany homeless people can stay in the shelter for freeで、in the shelterがwhereに置きかわっている。\n【ポイント2】①which（前置詞が必要、the shelter in which〜）、②who（人に使う）、④when（時に使う）はどれも文脈に合わない。\n【ポイント3】③where（場所を先行詞にとる関係副詞）が正解。\n【答え】③ where\n【確かめ】whereの節の中に前置詞が抜けている（in the shelterのinが不要になっている）ことを確認する。\n【よくあるまちがい】先行詞が場所なのに、前置詞を補わずにwhichを使ってしまう。\n【ここが絶対】関係副詞where＝前置詞＋which。先行詞が場所のときに使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -757,25 +522,8 @@ whose＋名詞＋動詞〜の形で「〜の（名詞）が…」を表す。先
     choices: ['① what', '② which', '③ how', '④ whose'],
     answer: '① what',
     hint: '「何が原因だったのか」を尋ねる間接疑問文。疑問詞が主語の役割も果たす。',
-    explanation: `【出題意図】
-間接疑問文で、疑問詞が節内の主語を兼ねる特殊なパターンを問う問題。
-
-【解説】
-この文では疑問詞whatがcausedの主語を兼ねている（疑問詞＝主語の場合、語順はそのまま）。
-・② which → 「どちら」選択を尋ねる
-・③ how → 「どのように」方法を尋ねる
-・④ whose → 「誰の」所有を尋ねる
-・① what → 正解（✓）Do you know what caused〜？＝何が〜を引き起こしたか知っていますか。
-
-日本語訳：「何がそんなに多くの人々に家を失わせる原因になったか知っていますか？」
-
-【文法ポイント】
-間接疑問文で疑問詞が主語の場合は、疑問詞＋動詞〜とそのままの語順になる（主語と動詞の入れ替えが不要）。
-
-【入試頻出】
-・I don't know what happened to the old building.
-・Please tell me who started this project.
-・Do you know what made her decide to volunteer?`,
+    explanation:
+      '【何を聞かれているか】「Do you know ( ) caused so many people to lose their homes?」の空所に入る適切な語を選ぶ。\n【なぜwhatになるのか】「何が〜を引き起こしたか」を尋ねるとき、疑問詞whatがcausedの主語を兼ねる特殊な間接疑問文になるため、疑問詞＋動詞という語順がそのまま使えるから。\n【ポイント1】この文では疑問詞whatがcausedの主語を兼ねている。疑問詞が主語の場合、語順の入れ替えは不要。\n【ポイント2】②which（「どちら」を尋ねる）、③how（「どのように」を尋ねる）、④whose（「誰の」を尋ねる）はどれも文脈に合わない。\n【ポイント3】①what（Do you know what caused〜？＝「何が〜を引き起こしたか知っていますか」）が正解。\n【答え】① what\n【確かめ】whatのあとに動詞causedが直接続いている（主語の入れ替えがない）ことを確認する。\n【よくあるまちがい】疑問詞が主語の場合にも、通常の間接疑問文と同じように主語と動詞を探して並べ替えようとしてしまう。\n【ここが絶対】間接疑問文で疑問詞が主語の場合は、疑問詞＋動詞〜とそのままの語順になる。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -788,27 +536,8 @@ whose＋名詞＋動詞〜の形で「〜の（名詞）が…」を表す。先
     choices: ['① what', '② when', '③ whom', '④ which'],
     answer: '② when',
     hint: '「次のボランティア会議がいつ開かれるか」を尋ねる間接疑問文。',
-    explanation: `【出題意図】
-間接疑問文における適切な疑問詞の選択を問う問題。
-
-【解説】
-「次の会議がいつ開かれるか」という時を尋ねる文脈。whenが適切。
-・① what → 「何」
-・③ whom → 「誰を」（目的格）
-・④ which → 「どちら」
-・② when → 正解（✓）
-
-節内はthe next volunteer meeting will be held（平叙文語順）であることにも注意。
-
-日本語訳：「次のボランティア会議がいつ開かれるか教えていただけますか？」
-
-【文法ポイント】
-間接疑問文＝疑問詞＋主語＋動詞（平叙文語順）。Could you tell me〜？は丁寧な依頼表現。
-
-【入試頻出】
-・Do you know when the food drive starts?
-・I want to know when the shelter opens.
-・Can you tell me when volunteers are needed most?`,
+    explanation:
+      '【何を聞かれているか】「Could you tell me ( ) the next volunteer meeting will be held?」の空所に入る適切な疑問詞を選ぶ。\n【なぜwhenになるのか】「次の会議がいつ開かれるか」という時を尋ねる文脈なので、時を尋ねる疑問詞whenを使う必要があるから。\n【ポイント1】①what（何）、③whom（誰を）、④which（どちら）はどれもこの文脈（時を尋ねる）に合わない。\n【ポイント2】②when（いつ）が正解。\n【ポイント3】節内はthe next volunteer meeting will be held（平叙文語順）であることにも注意する。\n【答え】② when\n【確かめ】whenのあとが〈主語＋動詞〉の平叙文語順になっているかを確認する。\n【よくあるまちがい】時を尋ねる文脈なのにwhatを選んでしまう。\n【ここが絶対】間接疑問文＝疑問詞＋主語＋動詞（平叙文語順）。文脈に合った疑問詞を選ぶ。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -822,25 +551,10 @@ whose＋名詞＋動詞〜の形で「〜の（名詞）が…」を表す。先
     id: 'koko_nyushi_eigo10_27',
     subject: 'eigo',
     question: '次の語を並べ替えて正しい英文を作れ。\n（ has / for / she / been / working / three years / this NPO / at ）\n「彼女はこのNPOで3年間働き続けている。」',
-    answer: 'She has been working at this NPO for three years.',
+    answer: 'She has been working at this NPO for three years. / She has been working for three years at this NPO.',
     hint: '現在完了進行形（have/has been＋Ving）の語順。forは期間を表す。',
-    explanation: `【出題意図】
-現在完了進行形の語順整序問題。for＋期間の位置も確認する。
-
-【解説】
-現在完了進行形＝has been＋Ving。主語She＋has been working＋場所（at this NPO）＋期間（for three years）という順で並べる。
-
-正しい語順：She has been working at this NPO for three years.
-
-日本語訳：「彼女はこのNPOで3年間働き続けている。」
-
-【文法ポイント】
-has/have been＋Ving＝現在まで続く動作の継続。for＋期間、since＋起点とセットで使う。
-
-【入試頻出】
-・He has been volunteering at the shelter for two months.
-・They have been raising money for the project since spring.
-・We have been planning this event for weeks.`,
+    explanation:
+      '【何を聞かれているか】has / for / she / been / working / three years / this NPO / at を並べ替えて「彼女はこのNPOで3年間働き続けている。」という英文を作る。\n【なぜhas been workingという語順になるのか】「今も続けて働いている」という継続を表すには現在完了進行形（has been＋動詞のing形）を使い、そのあとに場所、最後に期間を表すforの句を置くという英語の語順があるから。\n【ポイント1】現在完了進行形＝has been＋Ving。\n【ポイント2】主語She＋has been working＋場所（at this NPO）＋期間（for three years）という順で並べる。\n【ポイント3】She has been working at this NPO for three years.（場所と期間を入れかえたShe has been working for three years at this NPO.も正しい）\n【答え】She has been working at this NPO for three years. / She has been working for three years at this NPO.\n【確かめ】has been workingの語順（has→been→-ing）が正しく並んでいるかを確認する。\n【よくあるまちがい】hasとbeenの順をぎゃくにしたり、workingを前に出してしまう。\n【ここが絶対】現在完了進行形は必ずhave/has→been→動詞のingの順番で並べ、場所・期間などの修飾語はそのあとに続ける。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -880,23 +594,8 @@ so＋形容詞/副詞＋that＋主語＋動詞＝結果を表す構文。such＋
     question: '次の語を並べ替えて正しい英文を作れ。\n（ who / lives / next door / the woman / often / needs / our help ）\n「隣に住むその女性は、しばしば私たちの助けを必要としている。」',
     answer: 'The woman who lives next door often needs our help.',
     hint: '関係代名詞whoの節（who lives next door）が先行詞the womanを修飾する。',
-    explanation: `【出題意図】
-関係代名詞whoを使った主格の関係詞節の語順整序問題。
-
-【解説】
-文の骨格：The woman needs our help.（その女性は私たちの助けを必要としている）
-修飾部：who lives next door（隣に住んでいる）
-関係詞節は先行詞the womanの直後に置く：The woman [who lives next door] often needs our help.
-
-日本語訳：「隣に住むその女性は、しばしば私たちの助けを必要としている。」
-
-【文法ポイント】
-関係代名詞節は先行詞のすぐ後ろに置き、主節の動詞はその後に続く。oftenのような頻度の副詞は一般動詞の前に置く。
-
-【入試頻出】
-・The boy who helps at the shelter is my classmate.
-・The family who moved here needs support from neighbors.
-・People who volunteer regularly often feel happier.`,
+    explanation:
+      '【何を聞かれているか】who / lives / next door / the woman / often / needs / our help を並べ替えて「隣に住むその女性は、しばしば私たちの助けを必要としている。」という英文を作る。\n【なぜwho livesという語順になるのか】関係代名詞whoを使って、先行詞the womanのうしろにwho lives next door（隣に住んでいる）という節を置くことで、the womanを説明できるから。\n【ポイント1】文の骨格はThe woman needs our help.（その女性は私たちの助けを必要としている）。\n【ポイント2】修飾部はwho lives next door（隣に住んでいる）。関係詞節は先行詞the womanの直後に置く。\n【ポイント3】often（しばしば）のような頻度の副詞は一般動詞needsの前に置く。The woman who lives next door often needs our help.\n【答え】The woman who lives next door often needs our help.\n【確かめ】oftenが一般動詞needsの直前に置かれているかを確認する。\n【よくあるまちがい】oftenを文末やneedsのあとに置いてしまう。\n【ここが絶対】関係代名詞節は先行詞のすぐ後ろに置く。頻度の副詞は一般動詞の前に置く。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -906,7 +605,7 @@ so＋形容詞/副詞＋that＋主語＋動詞＝結果を表す構文。such＋
     id: 'koko_nyushi_eigo10_30',
     subject: 'eigo',
     question: '次の語を並べ替えて正しい英文を作れ。\n（ was / by / this festival / local volunteers / organized / last month ）\n「このお祭りは先月、地元のボランティアによって開催された。」',
-    answer: 'This festival was organized by local volunteers last month.',
+    answer: 'This festival was organized by local volunteers last month. / This festival was organized last month by local volunteers.',
     hint: '受動態（be動詞＋過去分詞＋by〜）の語順。',
     explanation: `【出題意図】
 受動態の基本語順（主語＋be＋過去分詞＋by＋動作主）を問う整序問題。
@@ -914,7 +613,7 @@ so＋形容詞/副詞＋that＋主語＋動詞＝結果を表す構文。such＋
 【解説】
 This festival（主語・物）は「開催する」側ではなく「開催される」側なので受動態を使う。was organized by local volunteersという語順。
 
-正しい語順：This festival was organized by local volunteers last month.
+正しい語順：This festival was organized by local volunteers last month.（This festival was organized last month by local volunteers. も正しい）
 
 日本語訳：「このお祭りは先月、地元のボランティアによって開催された。」
 
@@ -933,26 +632,11 @@ This festival（主語・物）は「開催する」側ではなく「開催さ�
   {
     id: 'koko_nyushi_eigo10_31',
     subject: 'eigo',
-    question: '次の語を並べ替えて正しい英文を作れ。\n（ enough / to / was / the box / light / for / carry / children / it ）\n「その箱は子どもたちが運べるくらい軽かった。」',
-    answer: 'The box was light enough for children to carry it.',
+    question: '次の語を並べ替えて正しい英文を作れ。\n（ enough / to / was / the box / light / for / carry / children ）\n「その箱は子どもたちが運べるくらい軽かった。」',
+    answer: 'The box was light enough for children to carry.',
     hint: '形容詞＋enough＋for＋人＋to＋動詞 の語順。',
-    explanation: `【出題意図】
-enough to構文に「for＋人」が加わった形の語順整序問題。
-
-【解説】
-主語＋be＋形容詞＋enough＋for＋人＋to＋動詞（原形）＋目的語 という語順。「for＋人」は不定詞の意味上の主語を示す。
-
-正しい語順：The box was light enough for children to carry it.
-
-日本語訳：「その箱は子どもたちが運べるくらい軽かった。」
-
-【文法ポイント】
-形容詞＋enough＋for＋人＋to＋動詞＝「（人）が〜するのに十分…だ」。too〜for人to…（〜すぎて人が…できない）と対で覚える。
-
-【入試頻出】
-・The bag was heavy enough for two people to carry together.
-・This task is easy enough for beginners to try.
-・The room was large enough for everyone to sit down.`,
+    explanation:
+      '【何を聞かれているか】enough / to / was / the box / light / for / carry / children を並べ替えて「その箱は子どもたちが運べるくらい軽かった。」という英文を作る。\n【なぜfor＋人が入るのか】「〜が…するのに十分〜だ」と、動作をする人を明示するには、〈形容詞＋enough＋for＋人＋to＋動詞原形〉という構文を使い、for＋人が不定詞の意味上の主語を示すから。\n【ポイント1】構文は主語＋be＋形容詞＋enough＋for＋人＋to＋動詞原形。\n【ポイント2】The box was light enough for children to carry.（その箱は子どもたちが運べるくらい軽かった）。\n【ポイント3】反対の意味を表す〈too＋形容詞＋for＋人＋to＋動詞〉（〜すぎて…できない）とセットで覚える。\n【答え】The box was light enough for children to carry.\n【確かめ】for childrenがenoughとtoの間に正しく置かれているかを確認する。\n【よくあるまちがい】carryのあとにit（the boxを指す代名詞）を付けてしまう。the boxは主語になっているので、carryのあとには何も置かない。\n【ここが絶対】「形容詞＋enough＋for＋人＋to＋動詞」の語順を1つのまとまりとして覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -994,25 +678,8 @@ enough to構文に「for＋人」が加わった形の語順整序問題。
     question: '次の語を並べ替えて正しい英文を作れ。\n（ who / the number / this year / of volunteers / joined / than / last year\'s / is / larger ）\n「今年参加したボランティアの数は、去年の数より多い。」',
     answer: 'The number of volunteers who joined this year is larger than last year\'s.',
     hint: '関係代名詞who節（who joined this year）が主語the number of volunteersを修飾し、比較級is largerが続く。',
-    explanation: `【出題意図】
-関係代名詞と比較級を組み合わせた複雑な語順整序問題。
-
-【解説】
-文の骨格：The number of volunteers is larger than last year's.（ボランティアの数は去年より多い）
-修飾部：who joined this year（今年参加した）は先行詞volunteersを修飾。
-
-組み合わせ：The number of volunteers [who joined this year] is larger than last year's.
-last year'sはlast year's number（去年の数）の省略形。
-
-日本語訳：「今年参加したボランティアの数は、去年の数より多い。」
-
-【文法ポイント】
-the number of〜（〜の数）は単数扱い（is/wasを使う）。a number of〜（たくさんの〜）は複数扱いと区別すること。
-
-【入試頻出】
-・The number of people who support this project is increasing.
-・The amount of food that was donated was larger than expected.
-・The number of students who volunteer is growing every year.`,
+    explanation:
+      '【何を聞かれているか】who / the number / this year / of volunteers / joined / than / last year\'s / is / larger を並べ替えて「今年参加したボランティアの数は、去年の数より多い。」という英文を作る。\n【なぜwho joinedという語順になるのか】関係代名詞whoを使って、先行詞volunteersのうしろにwho joined this year（今年参加した）という節を置き、そのあとに比較級is larger than〜を続ける必要があるから。\n【ポイント1】文の骨格はThe number of volunteers is larger than last year\'s.（ボランティアの数は去年より多い）。\n【ポイント2】修飾部はwho joined this year（今年参加した）で、先行詞volunteersを修飾する。\n【ポイント3】last year\'sはlast year\'s number（去年の数）の省略形。the number of〜（〜の数）は単数扱いでisを使う。\n【答え】The number of volunteers who joined this year is larger than last year\'s.\n【確かめ】the number of〜が単数扱いでis largerとなっているかを確認する。\n【よくあるまちがい】the number of〜（数）とa number of〜（たくさんの〜、複数扱い）を混同してしまう。\n【ここが絶対】the number of〜は単数扱い（is/wasを使う）。a number of〜（たくさんの〜）は複数扱いと区別する。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1029,27 +696,8 @@ the number of〜（〜の数）は単数扱い（is/wasを使う）。a number o
     choices: ['① Sure, I\'d love to.', '② No, I don\'t.', '③ I have already cleaned it.', '④ Yes, I did.'],
     answer: '① Sure, I\'d love to.',
     hint: 'Would you like to〜?（勧誘・誘い）への自然な受け方を選ぶ。',
-    explanation: `【出題意図】
-Would you like to〜?（勧誘・誘い）への適切な応答を問う会話表現問題。
-
-【解説】
-Would you like to join us?は「一緒にやりませんか」という丁寧な誘い。
-・② No, I don't. → 文法的に不自然（誘いの断りにはNo, thank you.などを使う）
-・③ 時制が合わない（まだ行われていない活動）
-・④ 質問と噛み合わない
-・① Sure, I'd love to. → 最も自然な受け答え（✓）
-
-日本語訳：
-A：今週の土曜日に川の清掃を手伝ってくれるボランティアを探しています。一緒にやりませんか？
-B：はい、ぜひやりたいです。
-
-【文法ポイント】
-Would you like to〜?への返答：受ける＝Sure, I'd love to./I'd be happy to. 断る＝I'm sorry, I can't this time.
-
-【入試頻出】
-・Would you like to join our clean-up event? — I'd love to.
-・Would you like to help at the food bank? — Sure, why not?
-・Would you like to volunteer with us? — I'd be happy to.`,
+    explanation:
+      '【何を聞かれているか】「We\'re looking for volunteers to help clean the river this Saturday. Would you like to join us?」への適切な返答を選ぶ。\n【なぜ「Sure, I\'d love to.」が正しいのか】Would you like to join us?は「一緒にやりませんか」という丁寧な誘いの表現で、受けるときはSure, I\'d love to.のような自然な返答をするから。\n【ポイント1】②No, I don\'t.は誘いの断りとしては文法的に不自然（No, thank you.などを使う）。\n【ポイント2】③I have already cleaned it.は時制が合わない（まだ行われていない活動）。④Yes, I did.は質問と噛み合わない。\n【ポイント3】①Sure, I\'d love to.が最も自然な受け答え。\n【答え】① Sure, I\'d love to.\n【確かめ】Would you like to〜?への肯定応答として自然な形になっているかを確認する。\n【よくあるまちがい】まだ行われていない活動なのに、過去形の返答（already cleaned）を選んでしまう。\n【ここが絶対】Would you like to〜?への返答：受けるときはSure, I\'d love to./I\'d be happy to.、断るときはI\'m sorry, I can\'t this time.',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1128,27 +776,8 @@ B：それは心配しないで。回収センターまで車で送ってあげ�
     choices: ['① That\'s very kind of you. Thank you.', '② No, I never carry boxes.', '③ I don\'t like donations.', '④ Yes, you must carry it.'],
     answer: '① That\'s very kind of you. Thank you.',
     hint: 'Can I〜?（申し出）への自然な受け方を選ぶ。',
-    explanation: `【出題意図】
-Can I〜?（申し出）への適切な返答を問う会話表現問題。
-
-【解説】
-Can I carry that box for you?は「持ってあげましょうか」という申し出。感謝を込めて受け入れる返答が自然。
-・② 文脈と無関係な返答
-・③ 質問の内容とずれている
-・④ 命令のような不自然な表現
-・① That's very kind of you. Thank you. → 正解（✓）
-
-日本語訳：
-A：疲れているようですね。その寄付の箱を運びましょうか？
-B：ご親切にありがとうございます。
-
-【文法ポイント】
-申し出への応答：That's very kind of you./Thank you, I'd appreciate that. 断る場合：That's okay, I can manage, thank you.
-
-【入試頻出】
-・Can I help you with that? — That's very kind of you.
-・Shall I carry your bag? — Thank you, I'd appreciate it.
-・Can I get you something? — No, thank you, I'm fine.`,
+    explanation:
+      '【何を聞かれているか】「You look tired. Can I carry that box of donations for you?」への適切な返答を選ぶ。\n【なぜ「That\'s very kind of you. Thank you.」が正しいのか】Can I carry that box for you?は「持ってあげましょうか」という申し出の表現で、感謝を込めて受け入れる返答が自然だから。\n【ポイント1】②「箱は絶対運ばない」、③「寄付が好きではない」はどちらも文脈と無関係。\n【ポイント2】④Yes, you must carry it.は命令のような不自然な表現。\n【ポイント3】①That\'s very kind of you. Thank you.が正解。申し出への応答として自然。\n【答え】① That\'s very kind of you. Thank you.\n【確かめ】Can I〜?（申し出）に対する感謝の返答として自然な形になっているかを確認する。\n【よくあるまちがい】申し出に対して命令文のような返答をしてしまう。\n【ここが絶対】申し出への応答：That\'s very kind of you./Thank you, I\'d appreciate that.（受ける）、That\'s okay, I can manage, thank you.（断る）。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1161,25 +790,8 @@ B：ご親切にありがとうございます。
     choices: ['① see', '② saw', '③ seen', '④ seeing'],
     answer: '③ seen',
     hint: '現在完了形（have/has＋過去分詞）。seeの過去分詞を選ぶ。',
-    explanation: `【出題意図】
-現在完了形の形とsee-saw-seenの活用を問う問題。
-
-【解説】
-has＋過去分詞＝現在完了形。seeの活用：see-saw-seen。sinceは現在完了とセットで使われる典型的な語。
-・① see → 原形
-・② saw → 過去形
-・④ seeing → 現在分詞（hasの後には使えない）
-・③ seen → 正解（✓）
-
-日本語訳：「そのボランティアグループがここで活動を始めてから、私たちの町は多くの変化を経験してきた。」
-
-【文法ポイント】
-現在完了形（経験・継続）＝have/has＋過去分詞。sinceは「〜以来」という起点を表す。
-
-【入試頻出】
-・This community has seen great improvement in recent years.
-・We have learned a lot since we joined this project.
-・The town has changed a lot since the shelter opened.`,
+    explanation:
+      '【何を聞かれているか】「Our town has ( ) many changes since the volunteer group started working here.」の空所に入る適切な形を選ぶ。\n【なぜseenになるのか】hasのあとには過去分詞が続く現在完了形にする必要があり、seeの過去分詞はseenだから。sinceは現在完了形とセットで使われる典型的な語。\n【ポイント1】has＋過去分詞＝現在完了形。①see（原形）、②saw（過去形）はhasのあとに使えない。\n【ポイント2】④seeing（現在分詞）もhasの後には使えない。③seen（過去分詞）が正解。\n【ポイント3】seeの活用：see（原形）→saw（過去形）→seen（過去分詞）。\n【答え】③ seen\n【確かめ】hasのあとに過去分詞seenが続いているかを確認する。\n【よくあるまちがい】has sawのように、hasのあとに過去形をそのまま続けてしまう。\n【ここが絶対】現在完了形（経験・継続）はhave/has＋過去分詞。sinceは「〜以来」という起点を表す。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1189,28 +801,11 @@ has＋過去分詞＝現在完了形。seeの活用：see-saw-seen。sinceは現
     id: 'koko_nyushi_eigo10_39',
     subject: 'eigo',
     question: '次の英文の（　）に入る最も適切な語を選べ。  The volunteer meeting will be held ( ) the community center this Saturday.',
-    choices: ['① in', '② at', '③ on', '④ to'],
+    choices: ['① from', '② at', '③ on', '④ to'],
     answer: '② at',
     hint: '特定の建物・地点を表す前置詞を選ぶ。',
-    explanation: `【出題意図】
-場所を表す前置詞（in/at/on）の使い分けを問う問題。
-
-【解説】
-the community center（特定の建物・地点）にはatを使う。inは広い空間の内部、onは面に接する場所に使う。
-・① in → 広い空間の内側
-・③ on → 面・特定の日
-・④ to → 方向を表す
-・② at → 正解（✓）
-
-日本語訳：「ボランティア会議は今週の土曜日にコミュニティセンターで開かれる。」
-
-【文法ポイント】
-場所の前置詞：at＝特定の地点（at the station, at the center）、in＝広い空間の中（in the city, in the room）、on＝面に接する場所（on the street）。
-
-【入試頻出】
-・The event will take place at the town hall.
-・Many people gathered in the park for the festival.
-・The poster is on the wall of the community center.`,
+    explanation:
+      '【何を聞かれているか】「The volunteer meeting will be held ( ) the community center this Saturday.」の空所に入る適切な前置詞を選ぶ。\n【なぜatになるのか】the community center（特定の建物・地点）を表すときは、前置詞atを使うという決まりがあるから。\n【ポイント1】①from（起点を表す）、③on（面・特定の日に使う）、④to（方向を表す）はどれもこの文脈に合わない。\n【ポイント2】②at（特定の地点に使う）が正解。\n【ポイント3】場所の前置詞：at＝特定の地点（at the station）、in＝広い空間の中（in the city）、on＝面に接する場所（on the street）。\n【答え】② at\n【確かめ】the community centerが「特定の地点」として捉えられていることを確認する。\n【よくあるまちがい】前置詞の意味を取りちがえ、起点を表すfromや方向を表すtoを選んでしまう。\n【ここが絶対】at＝特定の地点、in＝広い空間の中、on＝面に接する場所、と使い分ける。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1219,29 +814,12 @@ the community center（特定の建物・地点）にはatを使う。inは広�
   {
     id: 'koko_nyushi_eigo10_40',
     subject: 'eigo',
-    question: '次の英文の（　）に入る最も適切な語を選べ。  Every year, our school ( ) old textbooks to students who cannot afford new ones.',
+    question: '次の英文の（　）に入る最も適切な語を選べ。  Every year, our school ( ) old textbooks to students who cannot afford new ones, without asking for any money.',
     choices: ['① borrows', '② donates', '③ sells', '④ rents'],
     answer: '② donates',
     hint: '「〜を寄付する」という意味の動詞を選ぶ。',
-    explanation: `【出題意図】
-社会貢献に関連する動詞donate（寄付する）の意味を問う語彙問題。
-
-【解説】
-文脈は「新しい教科書を買えない生徒に古い教科書を渡す」こと。これはdonate（寄付する）が最も適切。
-・① borrows → 「借りる」
-・③ sells → 「売る」（affordと矛盾）
-・④ rents → 「賃貸する」
-・② donates → 正解（✓）
-
-日本語訳：「毎年、私たちの学校は新しい教科書を買う余裕のない生徒たちに古い教科書を寄付している。」
-
-【文法ポイント】
-donate〜to…＝…に〜を寄付する。名詞形はdonation（寄付）。
-
-【入試頻出】
-・People donated clothes and blankets to the shelter.
-・The company donated money to support local schools.
-・We collected donations for families affected by the disaster.`,
+    explanation:
+      '【何を聞かれているか】「Every year, our school ( ) old textbooks to students who cannot afford new ones, without asking for any money.」の空所に入る適切な動詞を選ぶ。\n【なぜdonatesになるのか】「新しい教科書を買う余裕のない生徒に、お金を取らずに古い教科書を渡す」という文脈から、「寄付する」という意味のdonateが最も適切だから。\n【ポイント1】①borrows（借りる、to studentsと合わない）、③sells（売る、お金を取らないことと矛盾する）、④rents（賃貸する、お金を取らないことと矛盾する）はどれもこの文脈に合わない。\n【ポイント2】②donates（寄付する）が正解。\n【ポイント3】donate〜to…＝…に〜を寄付する。名詞形はdonation（寄付）。\n【答え】② donates\n【確かめ】「お金を取らずに、買う余裕のない生徒へ」という文脈にdonate（寄付する）が合っているかを確認する。\n【よくあるまちがい】sellsやrentsを選んでしまい、「お金を取らない」という文脈と矛盾してしまう。\n【ここが絶対】donate〜to…＝…に〜を寄付する、という決まった形で覚える。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1251,28 +829,10 @@ donate〜to…＝…に〜を寄付する。名詞形はdonation（寄付）。
     id: 'koko_nyushi_eigo10_41',
     subject: 'eigo',
     question: '次の英文の（　）に入る最も適切な語句を選べ。  Many elderly people live alone in this area. ( ), a group of students visits them once a week to talk and help with small tasks.',
-    choices: ['① As a result', '② However', '③ For example', '④ Instead'],
-    answer: '① As a result',
-    hint: '前文の内容（高齢者が一人暮らしをしている）を受けて、その結果として行われている取り組みを表すつなぎ言葉を選ぶ。',
-    explanation: `【出題意図】
-文と文をつなぐ副詞（as a result / however / for example / instead）の使い分けを問う問題。
-
-【解説】
-前文「多くの高齢者がこの地域で一人暮らしをしている」という状況を受けて、後文は「学生たちが週に一度訪問する」という対応策・結果を述べている。
-・② However → 逆接（前後で対立する内容が必要）
-・③ For example → 具体例を示す語（前文に対する例ではない）
-・④ Instead → 「代わりに」（合わない）
-・① As a result → 結果・つながりを示す（✓）
-
-日本語訳：「この地域では多くの高齢者が一人暮らしをしている。その結果として、学生のグループが週に一度、彼らと話したり簡単な作業を手伝ったりするために訪問している。」
-
-【文法ポイント】
-文をつなぐ副詞（接続副詞）：as a result（その結果）、however（しかし）、for example（例えば）、in addition（さらに）、therefore（それゆえ）。文脈から論理関係を判断する。
-
-【入試頻出】
-・The town has few young workers. As a result, volunteers play an important role.
-・Some people cannot cook for themselves. As a result, local groups deliver meals to them.
-・This area lacks public transportation. As a result, elderly residents often feel isolated.`,
+    choices: ['① For this reason', '② However', '③ For example', '④ Instead'],
+    answer: '① For this reason',
+    hint: '前文の内容（高齢者が一人暮らしをしている）が、あとの取り組みの理由になっていることに注目して、理由を受けるつなぎ言葉を選ぶ。',
+    explanation: '【何を聞かれているか】\nMany elderly people live alone in this area. ( ), a group of students visits them once a week... の空所に入る、文と文をつなぐ語句を選ぶ問題。\n\n【なぜ For this reason なのか】\n「多くの高齢者が一人暮らしをしている」ことが理由となって、「学生たちが週に一度訪ねている」という取り組みが行われている。前の文を理由としてあとの文につなぐには、For this reason（こうした理由で）を使う。\n\n【ステップ1】前の文と後ろの文の関係を確かめる。前の文は「状況」、後ろの文はその状況に対する「取り組み」。\n【ステップ2】選択肢を一つずつ見る。However は反対の内容をつなぐ語で、ここは反対ではない。For example は前の文の具体例を示す語で、ここは具体例ではない。Instead は「そのかわりに」で、意味が合わない。\n【ステップ3】理由を受ける① For this reason を入れる。\n\n【答え】\n① For this reason\n\n【確かめ】\n「この地域では多くの高齢者が一人暮らしをしている。こうした理由で、学生のグループが週に一度、彼らと話したり簡単な作業を手伝ったりするために訪問している。」と意味が通るか確かめる。\n\n【よくあるまちがい】\nつなぎ言葉を前後の内容の関係を見ずに選んでしまう。「状況→それに対する行動」の関係では、理由を表す語を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1288,24 +848,8 @@ donate〜to…＝…に〜を寄付する。名詞形はdonation（寄付）。
     question: '次の日本文を英語に訳せ。\n「私は今までにボランティア活動に参加したことが一度もありません。」',
     answer: 'I have never taken part in volunteer activities. / I have never participated in any volunteer activities.',
     hint: '「〜したことが一度もない」は現在完了の経験用法（have never＋過去分詞）。「参加する」はtake part in / participate in。',
-    explanation: `【出題意図】
-現在完了形（経験）の否定と、「参加する」の言い換え表現（take part in / participate in）を問う英作文。
-
-【解説】
-「今までに〜したことがない」＝have never＋過去分詞。「ボランティア活動に参加する」＝take part in volunteer activities / participate in volunteer activities。
-
-組み合わせ：I have never taken part in volunteer activities.
-別解：I have never participated in any volunteer activities.
-
-日本語訳確認：「私は今までにボランティア活動に参加したことが一度もありません。」
-
-【文法ポイント】
-have never＋過去分詞＝一度も〜したことがない。take part in＝participate in（どちらも「参加する」）。
-
-【入試頻出】
-・She has never joined a community event before.
-・I have never donated blood in my life.
-・Have you ever helped at a shelter?`,
+    explanation:
+      '【何を聞かれているか】「私は今までにボランティア活動に参加したことが一度もありません。」を英語に訳す。\n【なぜhave never taken part inになるのか】「今までに〜したことがない」は現在完了形の経験用法の否定have never＋過去分詞で表し、「参加する」はtake part in（またはparticipate in）という決まった表現を使う必要があるから。\n【ポイント1】「今までに〜したことがない」＝have never＋過去分詞。\n【ポイント2】「ボランティア活動に参加する」＝take part in volunteer activities／participate in volunteer activities。\n【ポイント3】I have never taken part in volunteer activities.（takeの過去分詞はtaken）。\n【答え】I have never taken part in volunteer activities. / I have never participated in any volunteer activities.\n【確かめ】haveのあとにtaken（過去分詞）が続いているかを確認する。\n【よくあるまちがい】takeの過去分詞をtakedのように誤って規則動詞化してしまう。\n【ここが絶対】have never＋過去分詞＝一度も〜したことがない。take part in＝participate in（どちらも「参加する」）。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1317,24 +861,8 @@ have never＋過去分詞＝一度も〜したことがない。take part in＝p
     question: '次の日本文を英語に訳せ。\n「私が去年会ったその女性は、今この施設で働いています。」',
     answer: 'The woman I met last year is working at this facility now. / The woman who(m) I met last year is working at this facility now.',
     hint: '「私が去年会った」は関係代名詞（目的格）で修飾。目的格の関係代名詞は省略可能。',
-    explanation: `【出題意図】
-関係代名詞（目的格）を使った修飾表現と現在進行形を組み合わせる英作文。
-
-【解説】
-「その女性」the womanを「私が去年会った（that/whom I met last year）」という節が修飾。目的格の関係代名詞は省略可能。
-「今〜している」は現在進行形is workingで表す。
-
-組み合わせ：The woman (whom/that) I met last year is working at this facility now.
-
-日本語訳確認：「私が去年会ったその女性は、今この施設で働いています。」
-
-【文法ポイント】
-目的格の関係代名詞は省略できる。現在進行形（is/am/are＋Ving）は「今まさに〜している」動作を表す。
-
-【入試頻出】
-・The man I talked to yesterday works at the shelter.
-・The girl who helped me is volunteering at the hospital now.
-・The book she recommended is very popular.`,
+    explanation:
+      '【何を聞かれているか】「私が去年会ったその女性は、今この施設で働いています。」を英語に訳す。\n【なぜ関係代名詞と現在進行形を組み合わせるのか】「私が去年会った」という説明はthe womanのうしろに関係代名詞（目的格）でmet節をつなげて表し、「今〜している」は現在進行形is workingで表す必要があるから。\n【ポイント1】「その女性」the womanを「私が去年会った」（that/whom I met last year）という節が修飾する。目的格の関係代名詞は省略可能。\n【ポイント2】「今〜している」は現在進行形is/am/are＋Vingで表す。\n【ポイント3】The woman (whom/that) I met last year is working at this facility now.\n【答え】The woman I met last year is working at this facility now. / The woman who(m) I met last year is working at this facility now.\n【確かめ】the womanのあとにI met（主語＋動詞）が続いており、meetの目的語がthe womanであることを確認する。\n【よくあるまちがい】is workingのかわりにworksを使ってしまい、「今まさに」という意味が弱くなる。\n【ここが絶対】目的格の関係代名詞は省略できる。現在進行形は「今まさに〜している」動作を表す。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1374,23 +902,8 @@ have never＋過去分詞＝一度も〜したことがない。take part in＝p
     question: '次の日本文を英語に訳せ。\n「このプログラムはお年寄りだけでなく、子どもたちも支援しています。」',
     answer: 'This program supports not only elderly people but also children.',
     hint: '「〜だけでなく…も」はnot only A but also Bの構文。',
-    explanation: `【出題意図】
-相関接続詞not only A but also B（〜だけでなく…も）を使った英作文。
-
-【解説】
-「お年寄りだけでなく子どもたちも」＝not only elderly people but also children。AとBは文法的に同じ形（名詞句）で並べる。
-
-完成した文：This program supports not only elderly people but also children.
-
-日本語訳確認：「このプログラムはお年寄りだけでなく、子どもたちも支援しています。」
-
-【文法ポイント】
-not only A but also B＝AだけでなくBも。動詞の後にA, Bがくる場合は両方とも目的語として同じ形にする。
-
-【入試頻出】
-・This shelter helps not only homeless people but also stray animals.
-・The event is popular with not only adults but also children.
-・She volunteers not only on weekends but also after school.`,
+    explanation:
+      '【何を聞かれているか】「このプログラムはお年寄りだけでなく、子どもたちも支援しています。」を英語に訳す。\n【なぜnot only A but also Bを使うのか】「〜だけでなく…も」という意味は、相関接続詞not only A but also Bという決まった形で表し、AとBには同じ形（この文では名詞句）を並べる必要があるから。\n【ポイント1】「お年寄りだけでなく子どもたちも」＝not only elderly people but also children。\n【ポイント2】This program supports not only elderly people but also children.\n【ポイント3】AとBは文法的に同じ形（名詞句）で並べる。動詞の後にA、Bがくる場合は両方とも目的語として同じ形にする。\n【答え】This program supports not only elderly people but also children.\n【確かめ】not onlyのあとと、but alsoのあとがどちらも名詞句になっているかを確認する。\n【よくあるまちがい】not onlyとbut alsoのあとの形をそろえず、別の品詞を混ぜてしまう。\n【ここが絶対】not only A but also BのAとBは文法的に同じ形にする。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1402,23 +915,8 @@ not only A but also B＝AだけでなくBも。動詞の後にA, Bがくる場�
     question: '次の日本文を英語に訳せ。\n「もし私たち全員がゴミを減らせば、この街はもっときれいになるでしょう。」',
     answer: 'If all of us reduce our garbage, this city will become cleaner. / If we all reduce the amount of garbage, this city will be cleaner.',
     hint: '条件を表すif節では、未来のことでも現在形を使う。「もっときれいになる」は比較級。',
-    explanation: `【出題意図】
-条件節（if節）の時制ルールと比較級を組み合わせた英作文。
-
-【解説】
-if節の中では未来のことも現在形で表す（willを使わない）。「ゴミを減らす」＝reduce garbage/waste。「もっときれいになる」＝become cleaner（比較級）。
-
-完成した文：If all of us reduce our garbage, this city will become cleaner.
-
-日本語訳確認：「もし私たち全員がゴミを減らせば、この街はもっときれいになるでしょう。」
-
-【文法ポイント】
-if節内は現在形で未来を表す。主節はwill＋動詞原形。比較級はclean→cleaner。
-
-【入試頻出】
-・If everyone recycles more, we will have less waste.
-・If people help each other, the community will become stronger.
-・If we plant more trees, the air will become cleaner.`,
+    explanation:
+      '【何を聞かれているか】「もし私たち全員がゴミを減らせば、この街はもっときれいになるでしょう。」を英語に訳す。\n【なぜif節が現在形になるのか】実現可能な未来の条件を表す条件文では、if節の中は未来のことでも現在形を使い、主節でwillを使って未来を表すという決まりがあるから。\n【ポイント1】if節の中では未来のことも現在形で表す（willを使わない）。「ゴミを減らす」＝reduce garbage/waste。\n【ポイント2】「もっときれいになる」＝become cleaner（cleanの比較級cleaner）。\n【ポイント3】If all of us reduce our garbage, this city will become cleaner.\n【答え】If all of us reduce our garbage, this city will become cleaner. / If we all reduce the amount of garbage, this city will be cleaner.\n【確かめ】if節の動詞がreduce（現在形）になっており、willがreduceではなくbecomeの前についていることを確認する。\n【よくあるまちがい】if節の中にwillを入れてIf all of us will reduce our garbageとしてしまう。\n【ここが絶対】実現可能な条件を表すif節の中では、未来のことでも現在形を使う。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',
@@ -1461,27 +959,12 @@ if節内は現在形で未来を表す。主節はwill＋動詞原形。比較�
     id: 'koko_nyushi_eigo10_48',
     subject: 'eigo',
     passage: `After the earthquake, many houses in the small town were badly damaged. Volunteers from all over the country came to help clear debris, repair roofs, and rebuild homes. Local residents were grateful for this support, but they also wanted to take an active role themselves. They organized their own teams to plan the rebuilding process and to decide which buildings should be fixed first. This combination of outside help and local leadership allowed the town to recover faster than expected. Experts say that this is a good model for other communities facing similar disasters.`,
-    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文中の下線部 "this" が指す内容として最も適切なものを選べ。',
+    question: '次の英文を読んで、問いに答えなさい。  （本文は上の passage を参照）  問：本文最後の文 "Experts say that this is a good model for other communities..." の "this" が指す内容として最も適切なものを選べ。',
     choices: ['① 地震で家が壊れたこと', '② 外部からの支援と地元住民のリーダーシップの組み合わせ', '③ 専門家が町を訪れたこと', '④ ボランティアが屋根を修理したこと'],
     answer: '② 外部からの支援と地元住民のリーダーシップの組み合わせ',
-    hint: '"this" の直前の文 "This combination of outside help and local leadership" を確認する。',
-    explanation: `【出題意図】
-指示語（this）が指す内容を本文中から特定する問題。長文読解で頻出の設問形式。
-
-【解説】
-下線部を含む文は"Experts say that this is a good model for other communities."。thisは直前の文"This combination of outside help and local leadership allowed the town to recover faster"の主語部分（外部からの支援と地元のリーダーシップの組み合わせ）を指している。
-① 「地震で家が壊れたこと」→thisの直前の話題ではない（×）
-③ 「専門家が町を訪れたこと」→本文にそのような記述はない（×）
-④ 「屋根を修理したこと」→これは支援内容の一部であり、thisが指す全体ではない（×）
-② が正解（✓）
-
-【文法ポイント】
-指示語問題では、直前の文（特に主語）を確認し、代入して意味が通るか確かめる。thisは単数の概念・出来事全体を指すことが多い。
-
-【入試頻出】
-・thisが直前の文全体やその主語を指すパターンに注意。
-・「combination of A and B」のような複合的な内容を一語のthisでまとめることがある。
-・段落の最後のthis/thatは、その段落全体の要約であることが多い。`,
+    hint: '最後の文の "this" の直前の文 "This combination of outside help and local leadership" を確認する。',
+    explanation:
+      '【何を聞かれているか】本文中の下線部"this"が指す内容として最も適切なものを選ぶ。\n【なぜ②が正解なのか】下線部を含む文の直前に"This combination of outside help and local leadership allowed the town to recover faster"とあり、"this"はこの「外部からの支援と地元のリーダーシップの組み合わせ」を指しているから。\n【ポイント1】指示語の直前の文を確認する：外部からの支援と地元のリーダーシップの組み合わせが町の早い復興を可能にしたと書かれている。\n【ポイント2】①「地震で家が壊れたこと」はthisの直前の話題ではない。③「専門家が町を訪れたこと」は本文に記述がない。④「屋根を修理したこと」は支援内容の一部にすぎず、thisが指す全体ではない。\n【ポイント3】"this"が指すのは②「外部からの支援と地元住民のリーダーシップの組み合わせ」。\n【答え】② 外部からの支援と地元住民のリーダーシップの組み合わせ\n【確かめ】"this"を②の内容に置きかえて文を読み直し、意味が通ることを確認する。\n【よくあるまちがい】thisの直前の文の一部（屋根の修理など）だけを見て、combination（組み合わせ）という全体をとらえ損ねてしまう。\n【ここが絶対】「combination of A and B」のような複合的な内容を一語のthisでまとめることがあるので、直前の文全体を確認する。',
     difficulty: 'advanced',
     course: 'koko-general',
     examType: 'koko',

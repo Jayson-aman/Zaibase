@@ -53,11 +53,33 @@ export async function getFirebaseAuth(): Promise<Auth> {
 
 async function ensureSignedIn(): Promise<string> {
   const auth = await getFirebaseAuth();
+  // 保存済みのログイン状態を読み込み終わるまで待つ。待たずに currentUser を見ると、
+  // ログイン済みでも一瞬 null で、匿名ログインが新しいユーザーに差し替えてしまう。
+  try {
+    await auth.authStateReady();
+  } catch {
+    // 待てない環境では、そのまま続ける
+  }
   if (auth.currentUser) return auth.currentUser.uid;
-  const { signInAnonymously } = await import('firebase/auth');
-  const cred = await signInAnonymously(auth);
-  return cred.user.uid;
+  // 起動直後は購入状況・解放状況・ランキングなどが同時に uid を求める。それぞれが匿名ログインを
+  // 始めると別々の匿名ユーザーが作られ、後の呼び出しが前のユーザーを置き換えてしまう
+  // （購入の紐付け先と、サーバーに問い合わせる uid がずれる）。進行中の1回を共有する。
+  if (!anonSignInInFlight) {
+    const p = (async () => {
+      const { signInAnonymously } = await import('firebase/auth');
+      const cred = await signInAnonymously(auth);
+      return cred.user.uid;
+    })();
+    const clear = () => {
+      if (anonSignInInFlight === p) anonSignInInFlight = null;
+    };
+    p.then(clear, clear);
+    anonSignInInFlight = p;
+  }
+  return anonSignInInFlight;
 }
+
+let anonSignInInFlight: Promise<string> | null = null;
 
 // Web のみ reCAPTCHA v3 で App Check を有効化。
 // ネイティブ（iOS/Android）の App Check（App Attest / Play Integrity）は

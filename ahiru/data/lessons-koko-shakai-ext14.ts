@@ -31,12 +31,13 @@ export const kokoShakaiExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '流れをつかむ',
+        mangaId: 'koko_shakai_s475_kome_manga',
         body: `■ 旧石器時代
 打製石器を使い、大型動物を追って移動しながら暮らした。土器はまだない。岩宿遺跡（群馬県）の発見で、日本にも旧石器時代があったことが確かめられた。
 
 ■ 縄文時代（約1万年前から）
 ・気候が暖かくなり、木の実や魚がとれるようになった
-・磨製石器と縄文土器を使う
+・打製石器（磨製石器も使う）と縄文土器を使う
 ・たて穴住居に住み、むらをつくって定住する
 ・食べ物の残りかすを捨てた貝塚が残る（大森貝塚）
 ・土偶は、豊かなみのりや安産を願ってつくられたと考えられている
@@ -346,6 +347,7 @@ export const kokoShakaiExt14Lessons: Lesson[] = [
       },
       {
         heading: '入試ではこう問われる',
+        mangaId: 'koko_shakai_s478_manga',
         body: `■ よく出る問い1：公地公民とは何か
 「豪族が支配していた土地と人民を、国（天皇）のものとすること」。誰から誰へ移すのかを書く。
 
@@ -597,6 +599,7 @@ export const kokoShakaiExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '流れをつかむ',
+        mangaId: 'koko_shakai_s481_bushi_manga',
         body: `■ 遣唐使の停止（894年）
 菅原道真が「唐が衰えており、航海の危険も大きい」と意見し、停止された。これにより大陸の文化をそのまま取り入れる流れが弱まり、日本の風土や感覚に合った文化が育っていった。
 
@@ -898,6 +901,7 @@ export const kokoShakaiExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '流れをつかむ',
+        mangaId: 'koko_shakai_s484_manga',
         body: `■ 幕府のしくみ
 将軍を頂点とし、御家人がこれに従う。
 中央
@@ -1089,6 +1093,7 @@ export const kokoShakaiExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '流れをつかむ',
+        mangaId: 'koko_shakai_s486_manga',
         body: `■ 元の成立
 チンギス・ハンが築いたモンゴル帝国は、ユーラシアの広い範囲を支配した。その孫のフビライ・ハンは都を大都（今の北京）に移し、国号を元とした。高麗を従えたあと、日本にも服属を求める使者を送った。
 
@@ -1284,6 +1289,7 @@ export const kokoShakaiExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '流れをつかむ',
+        mangaId: 'koko_shakai_s488_souikki_manga',
         body: `■ 農業の発達
 ・二毛作：同じ田で米を作ったあと、冬に麦を作る。近畿で広まり、各地へ。
 ・牛馬を使った耕作、水車による水の引き入れ
@@ -1382,7 +1388,7 @@ export const kokoShakaiExt14Lessons: Lesson[] = [
         body: `■ 応仁の乱（1467〜1477年）
 原因は重なっていた。
 ・8代将軍足利義政のあとつぎをめぐる争い
-・管領家（細川氏・畠山氏）の家督争い
+・管領家（畠山氏・斯波氏）の家督争い
 ・有力守護大名である細川氏と山名氏の対立
 
 これらが結びつき、東軍（細川方）と西軍（山名方）に分かれて11年間戦った。
@@ -1664,6 +1670,7 @@ export const kokoShakaiExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '流れをつかむ',
+        mangaId: 'koko_shakai_s492_manga',
         body: `■ 全国統一まで
 ・1582年 本能寺の変のあと、明智光秀を討つ
 ・1583年 大阪城を築く
@@ -1860,6 +1867,7 @@ export const kokoShakaiExt14Lessons: Lesson[] = [
     sections: [
       {
         heading: '流れをつかむ',
+        mangaId: 'koko_shakai_s494_manga',
         body: `■ はじめは貿易を進めた
 家康は貿易の利益を重んじ、大名や商人に朱印状を与えて東南アジアとの貿易を認めた（朱印船貿易）。東南アジア各地に日本町ができた。
 

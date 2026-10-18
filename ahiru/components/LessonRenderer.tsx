@@ -1,6 +1,9 @@
+import { FORMULA_UNLOCK_PRICE_LABEL } from '../constants/pricing';
 import React from 'react';
+import { rich } from './RichText';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, ActivityIndicator, Platform } from 'react-native';
 import type { LessonSection } from '../data/lesson-types';
+import type { SubjectKey } from '../data/questions-meta';
 import { getLessonFigure } from '../data/lesson-figures';
 import { getKoushikiFormulaInfo } from '../data/koushiki-access';
 import { getMangaScript } from '../data/manga-scripts';
@@ -19,6 +22,13 @@ type Props = {
   formulaUnlockProductReady?: boolean;
   purchasingFigureId?: string | null;
   onUnlockFormula?: (figureId: string, heading: string) => void;
+  /** マンガの感想フォームに単元の文脈を渡すための情報（無くても動作する） */
+  lessonId?: string;
+  lessonTitle?: string;
+  subject?: SubjectKey;
+  examType?: 'chugaku' | 'koko';
+  /** 指定すると、本文中の動く図解をこの枚数までしか見せない（購入前のためし読み用） */
+  figurePreviewSlides?: number;
 };
 
 // 本文に直接書かれた罫線の図（┌─┐│└┘ を使った枠や樹形図）は、
@@ -46,6 +56,10 @@ function isArtLine(line: string): boolean {
 function renderBody(body: string): React.ReactNode[] {
   const lines = body.split('\n');
   const out: React.ReactNode[] = [];
+  // 直前の図の箱が受け持った行の終わり。これより前の行は、あとの図の
+  // ラベル探しで巻き戻してはいけない（巻き戻すと out.pop() が箱ごと消し、
+  // 箱の中の行がまるごと落ちる）。
+  let artEnd = 0;
   for (let i = 0; i < lines.length; i++) {
     if (!isArtLine(lines[i])) {
       out.push(renderLine(lines[i], i));
@@ -67,7 +81,7 @@ function renderBody(body: string): React.ReactNode[] {
     let start = i;
     const isLabel = (l: string) =>
       l.trim() !== '' && l.replace(/[　\s]/g, '').length <= 14 && !/^\s*[■●例★→⚠]/.test(l);
-    while (start > 0 && out.length > 0 && isLabel(lines[start - 1])) {
+    while (start > artEnd && out.length > 0 && isLabel(lines[start - 1])) {
       start--;
       out.pop();
     }
@@ -79,6 +93,7 @@ function renderBody(body: string): React.ReactNode[] {
       </ScrollView>,
     );
     i = end - 1;
+    artEnd = end;
   }
   return out;
 }
@@ -88,35 +103,35 @@ function renderLine(line: string, i: number): React.ReactNode {
     if (line.startsWith('■ ') || line.startsWith('● ')) {
       return (
         <Text key={i} style={styles.bullet}>
-          {line}
+          {rich(line)}
         </Text>
       );
     }
     if (line.startsWith('→ ')) {
       return (
         <Text key={i} style={styles.arrow}>
-          {line}
+          {rich(line)}
         </Text>
       );
     }
     if (line.startsWith('例）') || line.startsWith('例：') || line.startsWith('【例】')) {
       return (
         <View key={i} style={styles.exampleBox}>
-          <Text style={styles.exampleText}>{line}</Text>
+          <Text style={styles.exampleText}>{rich(line)}</Text>
         </View>
       );
     }
     if (line.startsWith('⚠') || line.startsWith('注意') || line.startsWith('【注意】')) {
       return (
         <View key={i} style={styles.warningBox}>
-          <Text style={styles.warningText}>{line}</Text>
+          <Text style={styles.warningText}>{rich(line)}</Text>
         </View>
       );
     }
     if (line.startsWith('★') || line.startsWith('✓') || line.startsWith('【ポイント】')) {
       return (
         <View key={i} style={styles.pointBox}>
-          <Text style={styles.pointText}>{line}</Text>
+          <Text style={styles.pointText}>{rich(line)}</Text>
         </View>
       );
     }
@@ -125,7 +140,7 @@ function renderLine(line: string, i: number): React.ReactNode {
     }
     return (
       <Text key={i} style={styles.body}>
-        {line}
+        {rich(line)}
       </Text>
     );
   }
@@ -140,6 +155,11 @@ export default function LessonRenderer({
   formulaUnlockProductReady = false,
   purchasingFigureId = null,
   onUnlockFormula,
+  lessonId,
+  lessonTitle,
+  subject,
+  examType,
+  figurePreviewSlides,
 }: Props) {
   const visibleSections = isMax ? sections : sections.filter((s) => !s.maxOnly);
 
@@ -162,7 +182,7 @@ export default function LessonRenderer({
               <View style={styles.lockCard}>
                 <Text style={styles.lockIcon}>🔒</Text>
                 <Text style={styles.lockText}>
-                  この公式は買い切りで解放できます（{formulaUnlockPriceLabel ?? '¥50'}・1回のみ）
+                  この公式は買い切りで解放できます（{formulaUnlockPriceLabel ?? FORMULA_UNLOCK_PRICE_LABEL}・1回のみ）
                 </Text>
                 <TouchableOpacity
                   style={[styles.unlockBtn, (!formulaUnlockProductReady || isPurchasing) && styles.unlockBtnDisabled]}
@@ -174,7 +194,7 @@ export default function LessonRenderer({
                     <ActivityIndicator color="#FFFFFF" />
                   ) : (
                     <Text style={styles.unlockBtnText}>
-                      {formulaUnlockProductReady ? `${formulaUnlockPriceLabel ?? '¥50'}で解放する` : '準備中です'}
+                      {formulaUnlockProductReady ? `${formulaUnlockPriceLabel ?? FORMULA_UNLOCK_PRICE_LABEL}で解放する` : '準備中です'}
                     </Text>
                   )}
                 </TouchableOpacity>
@@ -198,11 +218,16 @@ export default function LessonRenderer({
             {renderBody(section.body)}
             {section.figureId != null && (() => {
               const fig = getLessonFigure(section.figureId);
-              return fig != null ? <FigureView figure={fig} animated /> : null;
+              return fig != null ? <FigureView figure={fig} animated previewSlides={figurePreviewSlides} /> : null;
             })()}
-            {section.mangaId != null && (() => {
+            {section.mangaId != null && figurePreviewSlides == null && (() => {
               const script = getMangaScript(section.mangaId);
-              return script != null ? <MangaDialogue script={script} /> : null;
+              return script != null ? (
+                <MangaDialogue
+                  script={script}
+                  context={{ lessonId, lessonTitle, subject, examType }}
+                />
+              ) : null;
             })()}
             {/* 「何の問題を解いているか分からない」を防ぐため、公式集は
                 その公式の例題・応用問題をこの場に出す。ロック中のセクションは

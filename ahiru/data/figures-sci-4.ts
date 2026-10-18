@@ -2,16 +2,16 @@ import type { Figure } from './figures';
 
 // 新図形種別（回路図・曲線グラフ・棒/円グラフ・展開図・柱状図）のバッチ。
 export const figuresSci4: Record<string, Figure> = {
-  // 並列回路：電源6V、2Ωと3Ωの抵抗（各電流・合成抵抗が答えなので図には描かない）
+  // 並列回路：電池1個、抵抗2と抵抗3（各電流・合成抵抗が答えなので図には描かない）
   'rika-025': {
     kind: 'circuit',
     layout: 'parallel',
     branches: [
-      [{ type: 'resistor', label: '2Ω' }],
-      [{ type: 'resistor', label: '3Ω' }],
+      [{ type: 'resistor', label: '抵抗2' }],
+      [{ type: 'resistor', label: '抵抗3' }],
     ],
-    battery: { label: '6V' },
-    caption: '並列回路（電源電圧6V）',
+    battery: { label: '電池1個', cells: 1 },
+    caption: '並列回路（電池1個）',
   },
 
   // 硝酸カリウムの溶解度曲線（与えられた表の4点。析出量は答えなので描かない）

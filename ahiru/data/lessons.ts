@@ -10,10 +10,17 @@ import { kokoRikaLessons } from './lessons-koko-rika';
 import { kokoKokugoLessons } from './lessons-koko-kokugo';
 import { kokoEigoLessons } from './lessons-koko-eigo';
 import { kokoShakaiLessons } from './lessons-koko-shakai';
+// 問題に対して足りなかった分野を補う単元
+import { gapLessons } from './lessons-gap';
+import { ntLessons } from './lessons-nt';
+
+import { EXTRA_SECTION_FIGURES } from './lesson-extra-figures';
+import { EXTRA_MANGA_SECTIONS } from './manga-extra';
+import { EXTRA_SECTIONS } from './lesson-extra-sections';
 
 export type { Lesson };
 
-export const allLessons: Lesson[] = [
+export const baseLessons: Lesson[] = [
   ...sansuLessons,
   ...kokugoLessons,
   ...rikaLessons,
@@ -25,7 +32,30 @@ export const allLessons: Lesson[] = [
   ...kokoKokugoLessons,
   ...kokoEigoLessons,
   ...kokoShakaiLessons,
+  ...gapLessons,
+  ...ntLessons,
 ];
+
+// あとから足した動く図解（data/lesson-extra-figures.ts）を、図解のない節に取りつける。
+// 元から figureId がある節は変えない。
+export const allLessons: Lesson[] = baseLessons.map((l) => {
+  let changed = false;
+  const sections = l.sections.map((sec, i) => {
+    const fid = EXTRA_SECTION_FIGURES[`${l.id}#${i}`];
+    const mid = EXTRA_MANGA_SECTIONS[`${l.id}#${i}`];
+    const needFig = fid != null && !sec.figureId;
+    const needManga = mid != null && !sec.mangaId;
+    if (!needFig && !needManga) return sec;
+    changed = true;
+    return { ...sec, ...(needFig ? { figureId: fid } : {}), ...(needManga ? { mangaId: mid } : {}) };
+  });
+  // 前提になる計算の出し方（data/lesson-extra-sections.ts）を、節0の直後に差しこむ。
+  const extra = EXTRA_SECTIONS[l.id];
+  if (extra && extra.length > 0) {
+    return { ...l, sections: [...sections.slice(0, 1), ...extra, ...sections.slice(1)] };
+  }
+  return changed ? { ...l, sections } : l;
+});
 
 export function getLessonsBySubject(subject: string): Lesson[] {
   return allLessons.filter((l) => l.subject === subject).sort((a, b) => a.order - b.order);
@@ -43,7 +73,9 @@ export function getLessonById(id: string): Lesson | undefined {
 }
 
 /** 教科書機能の無料お試し数。各科目・各受験種別ごとに最初のN単元まで無料。 */
-export const FREE_LESSON_LIMIT = 5;
+// 2026/9/29 5→15。「もう少し見たいところで課金表示」「教科書が少ない」という指摘を受けて広げた。
+// 1教科・1受験種別あたり約550単元あるうち、最初の10単元は無料で通しで読める。
+export const FREE_LESSON_LIMIT = 10;
 
 /** その単元が、無料お試し範囲（同じ科目・同じ受験種別の中で最初のN単元）に入っているか */
 export function isLessonFree(lesson: Lesson): boolean {

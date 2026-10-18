@@ -1,4 +1,6 @@
 import React from 'react';
+import { goBack } from '../../utils/nav';
+import { rich } from '../../components/RichText';
 import {
   View,
   Text,
@@ -13,21 +15,53 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import { getLessonById, isLessonFree } from '../../data/lessons';
 import { isNew20Unit, isNew20UnitFree } from '../../data/new20-access';
 import LessonRenderer from '../../components/LessonRenderer';
+import FigureView from '../../components/FigureView';
+import { getLessonFigure } from '../../data/lesson-figures';
 import InlineQuiz, { questionsToQuizItems } from '../../components/InlineQuiz';
 import { getRelatedQuestions } from '../../data/lesson-questions';
 import { useSubjectQuestions } from '../../hooks/useSubjectQuestions';
 import VideoPlayer from '../../components/VideoPlayer';
 import { getLessonVideo } from '../../data/videos';
 import HomeButton from '../../components/HomeButton';
+import Paywall from '../../components/Paywall';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
+import { confirmDialog, noticeDialog, ensureLoggedInForPurchase } from '../../utils/dialog';
+import { logPurchaseEvent } from '../../services/analytics';
+import { useAuthUser } from '../../hooks/useAuthUser';
 import { useUnitUnlocks } from '../../hooks/useUnitUnlocks';
 import { subjectInfo } from '../../data/questions-meta';
+
+/** 購入前の人に見せる、動く図解の枚数（最初の「❓なぜ？」と、その答えまで） */
+const TRIAL_FIGURE_SLIDES = 2;
+
+/**
+ * ロック中の単元に見せる「ためし読み」の節。
+ * 節が2つ以上あるなら最初の節だけ。節が1つしかない単元（中学受験に91本ある）は、
+ * そのまま出すと本文が全部読めてしまうので、前半の段落だけにする。
+ */
+function trialSections<T extends { body: string }>(sections: T[]): T[] {
+  if (sections.length !== 1) return sections.slice(0, 1);
+  const only = sections[0];
+  const paras = only.body.split(/\n\s*\n/);
+  if (paras.length <= 1) return [{ ...only, body: only.body.slice(0, Math.ceil(only.body.length * 0.45)) }];
+  const target = only.body.length * 0.45;
+  let acc = 0;
+  const kept: string[] = [];
+  for (const para of paras) {
+    kept.push(para);
+    acc += para.length;
+    if (acc >= target) break;
+  }
+  return [{ ...only, body: kept.join('\n\n') }];
+}
 
 export default function LessonDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
+  const { isLoggedIn, loading: authLoading } = useAuthUser();
+  const [paywallVisible, setPaywallVisible] = React.useState(false);
   // loading を見ずに isPro/isMax だけで分岐すると、課金状態の取得が終わるまでの
   // 一瞬、加入者にも「Proプランで閲覧できます」のロック画面が出てしまう。
   const { isPro: subIsPro, isMax: subIsMax, loading: subLoading } = useSubscription();
@@ -61,21 +95,61 @@ export default function LessonDetailScreen() {
   }, [lesson, isKoushikiLesson, subjectPool, isMax]);
 
   async function handleUnlockFormula(figureId: string, heading: string) {
-    const result = await unlockFormula(figureId);
-    if (!result.ok) {
-      Alert.alert('購入できませんでした', result.message);
+    logPurchaseEvent('unlock_tapped', 'formula');
+    if (!(await ensureLoggedInForPurchase(authLoading ? null : isLoggedIn, () => router.push('/login' as any)))) {
+      logPurchaseEvent('unlock_login_required', 'formula');
       return;
     }
-    Alert.alert('解放しました', `「${heading}」はこれ以降ずっと無料で見られます。`);
+    const okFormula = await confirmDialog(
+      '購入の確認',
+      `「${heading}」を ${formulaUnlockPriceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
+    );
+    if (!okFormula) {
+      logPurchaseEvent('unlock_confirm_declined', 'formula');
+      return;
+    }
+    const result = await unlockFormula(figureId);
+    if (!result.ok) {
+      if (result.cancelled) logPurchaseEvent('unlock_store_cancelled', 'formula');
+      else {
+        logPurchaseEvent('unlock_failed', 'formula', { detail: result.message.replace(/\s+/g, ' ') });
+        noticeDialog('購入できませんでした', result.message);
+      }
+      return;
+    }
+    logPurchaseEvent('unlock_succeeded', 'formula');
+    // Web は決済ページへ移動するので、ここでは「解放しました」と言わない（支払い前に言うと誤解を生む）
+    if (result.redirected) return;
+    noticeDialog('解放しました', `「${heading}」はこれ以降ずっと無料で見られます。`);
   }
 
   async function handleUnlockUnit(lessonId: string, title: string) {
-    const result = await unlockUnit(lessonId);
-    if (!result.ok) {
-      Alert.alert('購入できませんでした', result.message);
+    logPurchaseEvent('unlock_tapped', 'unit');
+    if (!(await ensureLoggedInForPurchase(authLoading ? null : isLoggedIn, () => router.push('/login' as any)))) {
+      logPurchaseEvent('unlock_login_required', 'unit');
       return;
     }
-    Alert.alert('解放しました', `「${title}」はこれ以降ずっと無料で見られます。`);
+    const ok = await confirmDialog(
+      '購入の確認',
+      `「${title}」を ${unitUnlockPriceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
+    );
+    if (!ok) {
+      logPurchaseEvent('unlock_confirm_declined', 'unit');
+      return;
+    }
+    const result = await unlockUnit(lessonId);
+    if (!result.ok) {
+      if (result.cancelled) logPurchaseEvent('unlock_store_cancelled', 'unit');
+      else {
+        logPurchaseEvent('unlock_failed', 'unit', { detail: result.message.replace(/\s+/g, ' ') });
+        noticeDialog('購入できませんでした', result.message);
+      }
+      return;
+    }
+    logPurchaseEvent('unlock_succeeded', 'unit');
+    // Web は決済ページへ移動するので、ここでは「解放しました」と言わない（支払い前に言うと誤解を生む）
+    if (result.redirected) return;
+    noticeDialog('解放しました', `「${title}」はこれ以降ずっと無料で見られます。`);
   }
 
   if (!lesson) {
@@ -83,7 +157,7 @@ export default function LessonDetailScreen() {
       <SafeAreaView style={styles.container}>
         <View style={styles.center}>
           <Text style={styles.notFound}>レッスンが見つかりません</Text>
-          <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
+          <TouchableOpacity onPress={() => goBack(router)} style={styles.backBtn}>
             <Text style={styles.backBtnText}>← 戻る</Text>
           </TouchableOpacity>
           <HomeButton variant="dark" style={{ marginTop: 12 }} />
@@ -95,10 +169,10 @@ export default function LessonDetailScreen() {
   const info = subjectInfo[lesson.subject];
   const hasMaxContent = lesson.sections.some((s) => s.maxOnly);
   const lessonVideo = getLessonVideo(lesson.id);
-  // 各科目・各受験種別の最初の5単元は、Pro未加入でも無料で閲覧できる
+  // 各科目・各受験種別の最初の10単元は、Pro未加入でも無料で閲覧できる
   const freeLesson = isLessonFree(lesson);
   // 学年×科目で追加した新規単元（new20_で始まるid）は、上記のPro一括ロードとは別枠で、
-  // 学年×科目クラスターごとに最初の5単元は無料、それ以降は¥100買い切りで解放する。
+  // 学年×科目クラスターごとに最初の10単元は無料、それ以降は¥150買い切りで解放する。
   const isNew20 = isNew20Unit(lesson.id);
   const new20Free = isNew20 && isNew20UnitFree(lesson.id);
   const new20Unlocked = isNew20 && unlockedUnitIds.has(lesson.id);
@@ -109,38 +183,86 @@ export default function LessonDetailScreen() {
   const isKoushiki = lesson.id.startsWith('koushiki_');
   const contentUnlocked =
     isPro || (isNew20 ? new20Free || new20Unlocked : isKoushiki ? true : freeLesson);
+  // ロック中の単元のためし読み：最初の節に図解が無いときは、あとの節の最初の図解を
+  // 「最初の数枚だけ」見せる（動く図解の出来を、買う前に確かめられるようにする）。
+  const trialFigure = (() => {
+    if (lesson.sections.length === 0 || lesson.sections[0].figureId != null) return null;
+    for (const sec of lesson.sections) {
+      if (sec.figureId == null || sec.maxOnly) continue;
+      const fig = getLessonFigure(sec.figureId);
+      if (fig != null && (fig.steps?.length ?? 0) > 1) return fig;
+    }
+    return null;
+  })();
 
   return (
     <SafeAreaView style={styles.container}>
       {/* Header */}
       <View style={[styles.header, { backgroundColor: info.color }]}>
-        <View style={styles.headerTopRow}>
-          <TouchableOpacity onPress={() => router.back()} style={styles.backRow}>
-            <Text style={styles.backArrow}>← </Text>
-            <Text style={styles.backLabel}>{info.name}</Text>
-          </TouchableOpacity>
-          <HomeButton variant="light" />
-        </View>
-        <Text style={styles.lessonTitle}>{lesson.title}</Text>
-        <Text style={styles.lessonDesc}>{lesson.description}</Text>
-        {hasMaxContent && (
-          <View style={[styles.tier, isMax ? styles.tierMax : styles.tierPro]}>
-            <Text style={styles.tierText}>
-              {isMax ? '⭐ MAX — 深堀り解説含む' : '📘 PRO — 標準解説'}
-            </Text>
+        <View style={styles.headerInner}>
+          <View style={styles.headerTopRow}>
+            <TouchableOpacity onPress={() => goBack(router)} style={styles.backRow}>
+              <Text style={styles.backArrow}>← </Text>
+              <Text style={styles.backLabel}>{info.name}</Text>
+            </TouchableOpacity>
+            <HomeButton variant="light" />
           </View>
-        )}
+          <Text style={styles.lessonTitle}>{lesson.title}</Text>
+          <Text style={styles.lessonDesc}>{lesson.description}</Text>
+          {hasMaxContent && (
+            <View style={[styles.tier, isMax ? styles.tierMax : styles.tierPro]}>
+              <Text style={styles.tierText}>
+                {isMax ? '⭐ MAX — 深堀り解説含む' : '📘 PRO — 標準解説'}
+              </Text>
+            </View>
+          )}
+        </View>
       </View>
 
-      <ScrollView style={styles.scroll} contentContainerStyle={styles.content}>
+      <ScrollView style={styles.scroll} contentContainerStyle={styles.content} automaticallyAdjustKeyboardInsets keyboardShouldPersistTaps="handled">
         {(subLoading || (isNew20 && unitUnlocksLoading)) && (
           <View style={styles.center}>
             <ActivityIndicator color={info.color} />
           </View>
         )}
+        {!subLoading && !(isNew20 && unitUnlocksLoading) && !contentUnlocked && lesson.sections.length > 0 && (
+          // 続きが読みたくなるところまで見せてから案内を出す（最初の節はためし読み）。
+          <View>
+            {lesson.intro != null && lesson.intro !== '' && (
+              <View style={styles.introBox}>
+                <Text style={styles.introLabel}>🌱 まずはここから</Text>
+                <Text style={styles.introText}>{lesson.intro}</Text>
+              </View>
+            )}
+            <LessonRenderer
+              sections={trialSections(lesson.sections)}
+              isMax={false}
+              bypassFormulaLock={false}
+              unlockedFormulaIds={unlockedFormulaIds}
+              formulaUnlockPriceLabel={formulaUnlockPriceLabel}
+              formulaUnlockProductReady={formulaUnlockProductReady}
+              purchasingFigureId={purchasingFigureId}
+              onUnlockFormula={handleUnlockFormula}
+              lessonId={lesson.id}
+              lessonTitle={lesson.title}
+              subject={lesson.subject}
+              examType={lesson.examType}
+              figurePreviewSlides={TRIAL_FIGURE_SLIDES}
+            />
+            {trialFigure != null && (
+              <View style={styles.trialFigureBox}>
+                <Text style={styles.trialFigureLabel}>🎬 動く図解（ためし表示：最初の{TRIAL_FIGURE_SLIDES}枚）</Text>
+                <FigureView figure={trialFigure} animated manual previewSlides={TRIAL_FIGURE_SLIDES} />
+              </View>
+            )}
+            <View style={styles.freeTeaser}>
+              <Text style={styles.freeTeaserText}>👀 ここまでがためし読みです。この先に「なぜそうなるか」「確かめ方」「ひっかけ」が続きます</Text>
+            </View>
+          </View>
+        )}
         {!subLoading && !(isNew20 && unitUnlocksLoading) && !contentUnlocked && isNew20 && (
           <View style={styles.lockedBanner}>
-            <Text style={styles.lockedText}>
+            <Text style={styles.lockedText} maxFontSizeMultiplier={1.25}>
               🔒 この単元は買い切りで解放できます（{unitUnlockPriceLabel}・1回のみ）
             </Text>
             <TouchableOpacity
@@ -155,7 +277,7 @@ export default function LessonDetailScreen() {
               {purchasingLessonId === lesson.id ? (
                 <ActivityIndicator color="#FFFFFF" />
               ) : (
-                <Text style={styles.unlockUnitBtnText}>
+                <Text style={styles.unlockUnitBtnText} maxFontSizeMultiplier={1.25}>
                   {unitUnlockProductReady ? `${unitUnlockPriceLabel}で解放する` : '準備中です'}
                 </Text>
               )}
@@ -167,6 +289,9 @@ export default function LessonDetailScreen() {
             <Text style={styles.lockedText}>
               🔒 このコンテンツはProプランで閲覧できます
             </Text>
+            <TouchableOpacity style={styles.lockedPlanBtn} onPress={() => setPaywallVisible(true)} activeOpacity={0.85}>
+              <Text style={styles.lockedPlanBtnText}>プランを見る</Text>
+            </TouchableOpacity>
           </View>
         )}
         {!subLoading && !(isNew20 && unitUnlocksLoading) && contentUnlocked && (
@@ -210,6 +335,10 @@ export default function LessonDetailScreen() {
               formulaUnlockProductReady={formulaUnlockProductReady}
               purchasingFigureId={purchasingFigureId}
               onUnlockFormula={handleUnlockFormula}
+              lessonId={lesson.id}
+              lessonTitle={lesson.title}
+              subject={lesson.subject}
+              examType={lesson.examType}
             />
             {lesson.keyPoints != null && lesson.keyPoints.length > 0 && (
               <View style={styles.keyPointsBox}>
@@ -217,7 +346,7 @@ export default function LessonDetailScreen() {
                 {lesson.keyPoints.map((p, i) => (
                   <View key={i} style={styles.keyPointRow}>
                     <Text style={styles.keyPointCheck}>✅</Text>
-                    <Text style={styles.keyPointText}>{p}</Text>
+                    <Text style={styles.keyPointText}>{rich(p)}</Text>
                   </View>
                 ))}
               </View>
@@ -228,14 +357,14 @@ export default function LessonDetailScreen() {
                 {lesson.trapExamples.map((t, i) => (
                   <View key={i} style={[styles.trapItem, i > 0 && styles.trapItemSpacer]}>
                     <Text style={styles.trapQuestionLabel}>問題</Text>
-                    <Text style={styles.trapQuestion}>{t.question}</Text>
+                    <Text style={styles.trapQuestion}>{rich(t.question)}</Text>
                     <View style={styles.trapWrongBox}>
                       <Text style={styles.trapWrongLabel}>❌ こう間違えがち：{t.wrongAnswer}</Text>
-                      <Text style={styles.trapWrongText}>{t.trapExplanation}</Text>
+                      <Text style={styles.trapWrongText}>{rich(t.trapExplanation)}</Text>
                     </View>
                     <View style={styles.trapCorrectBox}>
                       <Text style={styles.trapCorrectLabel}>✅ 正解：{t.correctAnswer}</Text>
-                      <Text style={styles.trapCorrectText}>{t.correctExplanation}</Text>
+                      <Text style={styles.trapCorrectText}>{rich(t.correctExplanation)}</Text>
                     </View>
                   </View>
                 ))}
@@ -261,11 +390,18 @@ export default function LessonDetailScreen() {
           </>
         )}
       </ScrollView>
+      <Paywall
+        visible={paywallVisible}
+        onClose={() => setPaywallVisible(false)}
+        onPurchased={() => setPaywallVisible(false)}
+      />
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  trialFigureBox: { marginTop: 12, marginBottom: 4 },
+  trialFigureLabel: { fontSize: 13, fontWeight: '800', color: '#7C3AED', marginBottom: 6 },
   container: { flex: 1, backgroundColor: '#FAF7F2' },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 24 },
   notFound: { fontSize: 18, color: '#6E645C', marginBottom: 16 },
@@ -313,7 +449,8 @@ const styles = StyleSheet.create({
   tierMax: { backgroundColor: 'rgba(251,191,36,0.3)' },
   tierText: { fontSize: 11, color: '#FFFFFF', fontWeight: '800', letterSpacing: 0.2 },
   scroll: { flex: 1 },
-  content: { padding: 16, paddingBottom: 56 },
+  content: { padding: 16, paddingBottom: 56, width: '100%', maxWidth: 720, alignSelf: 'center' },
+  headerInner: { width: '100%', maxWidth: 720, alignSelf: 'center' },
   lockedBanner: {
     backgroundColor: '#FAF6EF',
     borderRadius: 12,
@@ -321,6 +458,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   lockedText: { fontSize: 15, color: '#8B5A38', fontWeight: '600', textAlign: 'center' },
+  lockedPlanBtn: { marginTop: 12, backgroundColor: '#8B5A38', borderRadius: 10, paddingVertical: 10, paddingHorizontal: 22 },
+  lockedPlanBtnText: { color: '#FFFFFF', fontWeight: '800', fontSize: 15 },
   unlockUnitBtn: {
     backgroundColor: '#B5622E',
     borderRadius: 8,

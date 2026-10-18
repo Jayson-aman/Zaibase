@@ -8,11 +8,11 @@ import Svg, { Path, Rect, Circle, Line } from 'react-native-svg';
 // ───────────────────────────────────────────────────────────────
 
 export type TabName =
-  | 'schools' | 'quiz' | 'textbook' | 'geography' | 'timeline' | 'formulas' | 'coach';
+  | 'home' | 'schools' | 'quiz' | 'textbook' | 'geography' | 'timeline' | 'formulas' | 'coach';
 
 export default function TabBarIcon({ name, color, size = 22 }: { name: TabName; color: ColorValue; size?: number }) {
   const stroke = color as string;
-  const c = { stroke, strokeWidth: 1.8, fill: 'none', strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const };
+  const c = { stroke, strokeWidth: 2.2, fill: 'none', strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const };
   return (
     <Svg width={size} height={size} viewBox="0 0 24 24">
       {name === 'schools' && (
@@ -22,6 +22,13 @@ export default function TabBarIcon({ name, color, size = 22 }: { name: TabName; 
           <Path d="M12 5.5V3M10.5 4h3" {...c} />
           <Rect x={10} y={15} width={4} height={5} {...c} />
           <Path d="M9 10h1.5M13.5 10h1.5M9 12.5h1.5M13.5 12.5h1.5" {...c} />
+        </>
+      )}
+      {name === 'home' && (
+        <>
+          <Path d="M3.5 11.5 12 4l8.5 7.5" {...c} />
+          <Path d="M5.5 10v10h13V10" {...c} />
+          <Path d="M10 20v-6h4v6" {...c} />
         </>
       )}
       {name === 'quiz' && (

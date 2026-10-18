@@ -20,6 +20,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
     sections: [
       {
         heading: '1. 反射の法則の復習と潜望鏡のしくみ',
+        mangaId: 'new20_j1_rika_01_manga',
         level: 'kiso',
         figureId: 'lf_new20j1rika_01',
         body: `■ 反射の法則のふりかえり
@@ -284,6 +285,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '2. 吸音材が音を吸収するしくみ',
+        mangaId: 'new20_j1_rika_04_manga',
         level: 'oyo',
         figureId: 'lf_new20j1rika_04',
         body: `■ 穴の多い素材が音を吸収する理由
@@ -442,6 +444,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '2. ゴムひもで同じ実験をすると',
+        mangaId: 'new20_j1_rika_06_manga',
         level: 'oyo',
         figureId: 'lf_new20j1rika_06',
         body: `■ 実験結果
@@ -518,6 +521,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '2. 実験結果とその意味',
+        mangaId: 'new20_j1_rika_07_manga',
         level: 'oyo',
         figureId: 'lf_new20j1rika_07',
         body: `■ 結果
@@ -597,11 +601,12 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '2. hPa(ヘクトパスカル)と天気予報',
+        mangaId: 'new20_j1_rika_08_manga',
         level: 'oyo',
         figureId: 'lf_new20j1rika_08',
         body: `■ Paだけでは数字が大きくなりすぎる
 
-大気圧(空気の重さによる圧力)を計算すると、地表付近ではおよそ101300Paにもなる。このように面積が広い場合(空気の柱が地表を押す圧力など)には、Paのままだと数字が大きくなりすぎて扱いにくい。
+大気圧(空気の重さによる圧力)を計算すると、地表付近ではおよそ101300Paにもなる。Paは1m²に1Nという小さな単位なので、このように大きな圧力(空気の柱が地表を押す圧力など)をPaのまま表すと、数字が大きくなりすぎて扱いにくい。
 
 ■ ヘクトパスカルの登場
 
@@ -671,6 +676,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '2. 水圧の差から浮力を導く',
+        mangaId: 'new20_j1_rika_09_manga',
         level: 'oyo',
         figureId: 'lf_new20j1rika_09',
         body: `■ 物体の上面と下面にはたらく水圧を比べる
@@ -750,6 +756,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '2. 実験：金色の石は本物の金か',
+        mangaId: 'new20_j1_rika_10_manga',
         level: 'oyo',
         figureId: 'lf_new20j1rika_10',
         body: `■ 純金と黄鉄鉱
@@ -813,6 +820,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
     sections: [
       {
         heading: '1. 沸点は「決まった温度」ではない',
+        mangaId: 'new20_j1_rika_11_manga',
         level: 'kiso',
         body: `■ 沸とうとは
 
@@ -928,6 +936,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '3. クロマトグラフィー：動きやすさのちがいを利用する',
+        mangaId: 'new20_j1_rika_12_manga',
         level: 'nyushi',
         figureId: 'lf_new20j1rika_12',
         body: `■ ペーパークロマトグラフィー
@@ -976,6 +985,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
     sections: [
       {
         heading: '1. 溶解度と飽和水溶液のふりかえり',
+        mangaId: 'new20_j1_rika_13_manga1',
         level: 'kiso',
         body: `■ 溶解度とは
 
@@ -994,6 +1004,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '2. 硝酸カリウムと塩化ナトリウムの曲線を比べる',
+        mangaId: 'new20_j1_rika_13_manga2',
         level: 'oyo',
         figureId: 'lf_new20j1rika_13',
         body: `■ 2つの物質の溶解度(水100gあたり)
@@ -1017,6 +1028,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '3. 入試レベル：2つの物質が混じった水溶液の計算',
+        mangaId: 'new20_j1_rika_13_manga3',
         level: 'nyushi',
         body: `📝入試問題例
 【問】60℃の水100gに、硝酸カリウム90gと塩化ナトリウム20gの両方を同時に溶かした。この水溶液をゆっくり20℃まで冷やしていく。ただし、2つの物質はたがいの溶解度に影響しないものとする。
@@ -1077,6 +1089,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '2. ガス警報器と消火器への応用',
+        mangaId: 'new20_j1_rika_14_manga',
         level: 'oyo',
         figureId: 'lf_new20j1rika_14',
         body: `■ ガス警報器の取り付け位置
@@ -1134,6 +1147,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
     sections: [
       {
         heading: '1. 集め方を決める2つの手がかり',
+        mangaId: 'new20_j1_rika_15_manga1',
         level: 'kiso',
         body: `■ 3つの集め方の復習
 
@@ -1152,6 +1166,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '2. 気体ごとの溶けやすさを比べる',
+        mangaId: 'new20_j1_rika_15_manga2',
         level: 'oyo',
         figureId: 'lf_new20j1rika_15',
         body: `■ 溶けやすさのちがい
@@ -1176,6 +1191,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '3. 入試レベル：未知の気体の集め方を判断する',
+        mangaId: 'new20_j1_rika_15_manga3',
         level: 'nyushi',
         body: `📝入試問題例
 【問】ある気体Xの性質を調べたところ、水に非常によくとけ、同じ体積の空気と比べて質量が大きい(空気より重い)ことが分かった。
@@ -1257,6 +1273,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '3. 倍率と視野の関係：入試レベルの計算',
+        mangaId: 'new20_j1_rika_16_manga',
         level: 'nyushi',
         body: `■ 倍率を上げると視野はどうなるか
 
@@ -1320,6 +1337,7 @@ export const lessonsNew20J1Rika: Lesson[] = [
       },
       {
         heading: '2. 1枚の葉の中で同時に起こっていること',
+        mangaId: 'new20_j1_rika_17_manga',
         level: 'oyo',
         figureId: 'lf_new20j1rika_17',
         body: `■ 昼間の葉
@@ -1491,6 +1509,7 @@ E:ゼニゴケ(維管束がなく、種子をつくらない)
       },
       {
         heading: '2. 動物の分類の検索表',
+        mangaId: 'new20_j1_rika_19_manga',
         level: 'oyo',
         figureId: 'lf_new20j1rika_19',
         body: `■ 検索表の流れ

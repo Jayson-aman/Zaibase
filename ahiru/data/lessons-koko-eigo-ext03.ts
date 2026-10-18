@@ -479,6 +479,7 @@ yesterday（昨日）／last night, last week, last year（昨夜・先週・昨
       },
       {
         heading: '過去形と現在完了の線引き',
+        mangaId: 'koko_eigo_s076_manga',
         body: `高校入試では、過去形と現在完了のどちらを選ぶかが選択問題で頻繁に問われる。判断のかぎは「時を示す語句が、今とつながっているか」である。
 
 ■ 過去形しか使えない語句
@@ -633,6 +634,7 @@ show → showed　snow → snowed　fix → fixed
     sections: [
       {
         heading: '三つの発音の決まり方',
+        mangaId: 'koko_eigo_s078_manga',
         body: `-ed の発音は、直前の音が何かだけで機械的に決まる。
 
 ■ ①[t] と読む：直前が無声音のとき
@@ -914,6 +916,7 @@ go－went－gone／see－saw－seen／write－wrote－written／take－took－ta
       },
       {
         heading: '過去形と過去分詞を取りちがえない',
+        mangaId: 'koko_eigo_s081_manga',
         body: `入試で最も多い誤りは、過去形を書くべきところに過去分詞を書いてしまう（またはその逆）という取りちがえである。
 
 ■ 見分けの原則
@@ -1213,6 +1216,21 @@ tell－told－told（伝える）／sell－sold－sold（売る）／say－said�
 
 ⚠ 注意：「〜に言った」という日本語だけで say を選ぶと誤る。うしろに人が直接続くなら tell、内容が続くなら say と判断する。`,
       },
+      {
+        heading: 'なぜ音のグループで覚えると速く、なぜ say は人を直接とれないのか',
+        mangaId: 'koko_eigo_s084_manga',
+        body: `A-B-B 型の不規則動詞は数が多いので、意味で覚えると一つずつ孤立します。しかし buy－bought、teach－taught、think－thought は**音の終わり方が同じ**なので、一つ思い出せば同じ音の仲間が芋づる式に出てきます。思い出すときの手がかりが「意味」と「音」の二本になるので、忘れにくくなります。つづりが ought と aught に分かれても発音は同じで、teach と catch だけが aught です。
+
+say と tell のちがいは、動詞が**何に重点を置くか**にあります。say は「言った内容」に重点があり、うしろに言葉や that 節が来て、人を続けるには to が要ります。tell は「伝える相手」に重点があり、〈tell＋人＋内容〉の語順をとります。だから「私に本当のことを言った」は He told me the truth. で、He said me 〜 は誤りです。speak は一方的に話す・言語を話す、talk は話し合う、と重点がちがいます。
+
+■ 確かめのしかた
+①音のグループで三つ一組で言えるか：-ought／-aught（buy・think・bring・fight／teach・catch）、-t（keep・sleep・leave・feel・build・send・spend・lose）、母音変化（find・meet・win・hold・sit・stand・hear・get）、-old／-aid（tell・sell・say・pay）。
+②-ed を付けていないか（× teached→taught）。
+③うしろに**人が直接続くなら tell**、**内容が続くなら say**（say something to me）。× He said me the truth.
+④speak（言語・一方的）／talk（話し合う・about）。tell a lie／tell the truth／tell A from B。
+
+★ ここがポイント：不規則動詞は**音の終わり方でまとめる**と手がかりが二本になる。say は**内容**、tell は**相手**に重点があるので、人が直接続くのは tell。`,
+      },
     ],
     trapExamples: [
       {
@@ -1222,7 +1240,7 @@ tell－told－told（伝える）／sell－sold－sold（売る）／say－said�
           '日本語の「私に言った」をそのまま said me と並べてしまう。say は言った内容を続ける動詞で、人を直接目的語に取れないことを知らないと必ずこう書く。',
         correctAnswer: 'He told me the truth.',
         correctExplanation:
-          '〈人＋内容〉の語順を取れるのは tell である。say を使うなら He said the truth to me. のように to が必要になる。「うしろに人が直接続くなら tell」と形で判断するのが確実である。tell の過去形・過去分詞はどちらも told。',
+          '〈人＋内容〉の語順を取れるのは tell である。say を使うなら He said something to me. のように to が必要になる（said the truth とは言わず、「本当のことを言う」は tell the truth と決まっている）。「うしろに人が直接続くなら tell」と形で判断するのが確実である。tell の過去形・過去分詞はどちらも told。',
       },
       {
         question: '「彼は私たちに数学を教えてくれた」を英語にしなさい。teach を使うこと。',
@@ -1560,6 +1578,7 @@ i が二つ続く diing のような形を避けるための変化である。
       },
       {
         heading: '-ed のつづりとの比較',
+        mangaId: 'koko_eigo_s088_manga',
         body: `-ed と -ing は似た規則を持つが、y の扱いだけが決定的に違う。ここを混ぜないことが重要である。
 
 ■ 比較表
@@ -1618,7 +1637,7 @@ running（× runing）／swimming（× swiming）／sitting（× siting）／get
       '否定文は〈主語＋be動詞＋not＋ing形〉。not は be動詞のうしろに置く。',
       '疑問文は〈be動詞＋主語＋ing形 〜?〉。Do / Does は使わない。',
       '答えは Yes, I am. / No, I am not. のように be動詞でそろえる。',
-      'Yes の答えでは短縮形にできない（× Yes, I m.）。',
+      'Yes の答えでは短縮形にできない（× Yes, I\'m.）。',
       'What are you doing? には I am 〜ing. と進行形で答える。',
       'Who is 〜ing? のように疑問詞が主語のときは、そのまま is ＋ ing形を続ける。',
     ],
@@ -1691,7 +1710,7 @@ Who is singing? － Ken is.（ケンです）
           '質問が What are you doing? と進行形なので、答えも I am doing 〜. と進行形にそろえる。I do my homework. は「ふだん宿題をします」という習慣の意味になり、今何をしているかという問いへの答えにならない。',
       },
       {
-        question: 'Are you studying English? に「はい」と答えるとき、正しいのはどちらか。ア Yes, I am.　イ Yes, I m.',
+        question: 'Are you studying English? に「はい」と答えるとき、正しいのはどちらか。ア Yes, I am.　イ Yes, I\'m.',
         wrongAnswer: `イ Yes, I'm.`,
         trapExplanation:
           '文中では I am を I m と短縮できるので、答えの部分でも同じように短縮できると考えてしまう。短縮形が使えない位置があることを知らないと誤る。',
@@ -2002,6 +2021,7 @@ ing 形が見えたら be動詞の文だと判断する。
     sections: [
       {
         heading: '点と帯を見分ける',
+        mangaId: 'koko_eigo_s093_manga',
         figureId: 'lf_kokoeigoext03_093',
         body: `二つの出来事が同じ場面に出てくるとき、まず「一瞬で終わる出来事（点）」と「しばらく続いていた動作（帯）」に分ける。
 
@@ -2191,17 +2211,46 @@ know / believe / understand / like / love / want / need / have（所有）／see
 （what / was / he / doing / then）を並べかえなさい。
 → What was he doing then?（彼はそのとき何をしていたのですか）
 配られた be動詞が was なので、主語は I か三人称単数だと逆に読み取れる。ここでは he があるので was で正しい。were が配られていたら、主語は you か複数のはずだと確かめられる。
+【解法】
+【何を聞かれているか】5つの語を並べかえて、「彼はそのとき何をしていたのですか」という文を作る。
+【なぜこの考え方か】並べかえは、文の骨組みから作ると迷わない。過去進行形の骨組みは〈was / were＋ing形〉の組なので、まずその組を作る。そのうえで、疑問詞があれば先頭へ出し、残りを順に並べる。
+【ステップ1】was と doing があるので、過去進行形の文だとわかる。主語 he を入れて、he was doing という述語のかたまりを作る。
+【ステップ2】疑問詞 what があるので、先頭に置く。疑問文では be動詞を主語の前に出すので、What was he doing の語順になる。
+【ステップ3】残った then（そのとき）は時を表す語なので、最後に置く。
+【答え】What was he doing then?
+【確かめ】①主語 he は三人称単数なので、be動詞は was で合っている。②doing は ing 形。③then と過去の時制が合っている。④疑問詞の疑問文なので、文末は「?」になっている。
+【よくあるまちがい】What he was doing then? のように、主語を was の前に置いてしまう。疑問詞のある疑問文では、be動詞が主語の前に出る。
 
 ■ 例題2
-（were / when / came / they / I / home / playing / soccer）
+（were / when / came / they / I / home / playing / soccer）を並べかえて、「私が帰ってきたとき、彼らはサッカーをしていました」という文にしなさい。
 → They were playing soccer when I came home.
 または When I came home, they were playing soccer.
 when 節を前に置いたときはコンマが必要になる。
+【解法】
+【何を聞かれているか】8つの語を並べかえて、「私が帰ってきたとき、彼らはサッカーをしていました」という文を作る。
+【なぜこの考え方か】二つの出来事をつなぐ文では、まず「続いていた動作」と「割りこんだ出来事」を見分ける。続いていた動作には過去進行形（were playing）、割りこんだ出来事には過去形（came）を使う。when は「〜したとき」で、割りこんだ出来事の側につく。
+【ステップ1】続いていた動作を作る。were と playing があるので、they were playing soccer。主語 they は複数なので were で合っている。
+【ステップ2】割りこんだ出来事を作る。came があるので、I came home（帰ってきた）。
+【ステップ3】割りこんだ出来事の前に when を置いて、二つをつなぐ。They were playing soccer when I came home.
+【ステップ4】when の節を前に出すこともできる。その場合は、節の終わりにコンマを付ける。When I came home, they were playing soccer.
+【答え】They were playing soccer when I came home.（または When I came home, they were playing soccer.）
+【確かめ】過去進行形が1つ（were playing）、過去形が1つ（came）になっていて、続いていた動作と割りこんだ出来事の関係が日本語の意味と合っている。配られた8語をすべて使っているかも数える。
+【よくあるまちがい】when を playing の側にくっつけて、時制の割りあてを逆にしてしまう。「帰ってきた」が割りこんだ出来事なので、came の側に when を付ける。
 
 ■ 例題3
 （not / she / was / listening / to / me）
 → She was not listening to me.（彼女は私の話を聞いていなかった）
 not は be動詞のうしろに置く。
+【解法】
+【何を聞かれているか】6つの語を並べかえて、「彼女は私の話を聞いていなかった」という文を作る。
+【なぜこの考え方か】過去進行形の否定文は、be動詞のうしろに not を置いて作る。be動詞 was が否定文を作る役目を持っているので、一般動詞の否定文のように did not は使わない。
+【ステップ1】述語のかたまりを作る。she was listening（彼女は聞いていた）。
+【ステップ2】not を be動詞のうしろに入れる。she was not listening。
+【ステップ3】listen は「〜を聞く」というとき to とセットで使う。そのため、残りの to me をそのまま続ける。
+【ステップ4】文頭を大文字にして、文末にピリオドを付ける。
+【答え】She was not listening to me.
+【確かめ】not を取りのぞくと She was listening to me. という肯定文になる。not が was のうしろに入っただけの形になっていることを確かめる。was not は wasn't と短縮してもよい。
+【よくあるまちがい】She did not was listening to me. のように did を使う。または She not was listening to me. のように not の位置を be動詞の前に置く。
 
 ★ ポイント：語順で迷ったら、まず述語のかたまり〈be動詞＋ing形〉を作る。ここが決まれば残りは自然に並ぶ。`,
       },
@@ -2374,6 +2423,7 @@ see（見える）／hear（聞こえる）／smell（においがする）／ta
     sections: [
       {
         heading: '二つの顔を持つ動詞',
+        mangaId: 'koko_eigo_s097_manga',
         body: `同じ動詞でも、状態を表すか動作を表すかで進行形にできるかどうかが変わる。
 
 ■ have
@@ -2474,6 +2524,7 @@ be動詞も進行形にすると「ふだんはそうでないが、今だけそ
     sections: [
       {
         heading: '着る・住む・結婚する',
+        mangaId: 'koko_eigo_s098_manga',
         body: `■ wear と put on
 ・wear：身につけている状態
 例）She wears glasses.（彼女は眼鏡をかけている＝ふだんから）
@@ -2913,7 +2964,7 @@ tomorrow / next week / this weekend / soon / in a few days
 この質問は会話文の定番なので、答え方もあわせて練習しておく。
 － I am going to visit my grandparents.（祖父母を訪ねる予定です）
 
-⚠ 注意：going to のうしろに名詞を置くことはできない。× I am going to a doctor.（医者になるつもりだ、の意味では誤り）→ ○ I am going to be a doctor. be を落とさないこと。`,
+⚠ 注意：「〜になるつもりだ」と言うとき、going to のうしろに名詞だけを置くことはできない。× I am going to a doctor. は「医者のところへ行く」という別の意味になってしまう。→ ○ I am going to be a doctor.（医者になるつもりだ）be を落とさないこと。`,
       },
     ],
     trapExamples: [
@@ -2959,6 +3010,7 @@ tomorrow / next week / this weekend / soon / in a few days
     sections: [
       {
         heading: '決定の時点で分ける',
+        mangaId: 'koko_eigo_s103_manga',
         figureId: 'lf_kokoeigoext03_103',
         body: `will と be going to は、実行するのがどちらも未来である点は同じである。違うのは「いつ決めたか」だけである。
 
@@ -3285,6 +3337,7 @@ Would you like to 〜?（〜しませんか）は誘う表現になる。
       },
       {
         heading: '書くときの注意点',
+        mangaId: 'koko_eigo_s106_manga',
         body: `■ 三単現の -s を忘れない
 副詞節の中は現在形なので、主語が三人称単数なら -s が必要になる。
 例）When he comes home, I will tell him.（× When he come home）
@@ -3351,6 +3404,7 @@ when や if が示す時点は、主節の will によってすでに「未来�
     sections: [
       {
         heading: '副詞節と名詞節の見分け方',
+        mangaId: 'koko_eigo_s107_manga',
         body: `同じ when / if でも、文の中でのはたらきが二種類ある。
 
 ■ 副詞節（〜するとき／もし〜なら）
@@ -3479,6 +3533,7 @@ know / tell / ask / wonder / find out / remember / be sure / be afraid
       },
       {
         heading: 'until と by の使い分け',
+        mangaId: 'koko_eigo_s108_manga',
         body: `日本語ではどちらも「〜まで」と訳せるが、英語では意味がはっきり違う。
 
 ■ until（till）＝「〜までずっと」
@@ -3577,6 +3632,7 @@ if 〜 not を unless に変えるときは、not を消して肯定の形にす
       },
       {
         heading: '命令文＋and / or と、そのほかの条件表現',
+        mangaId: 'koko_eigo_s109_manga',
         body: `■ 〈命令文, and 〜〉＝そうすれば
 例）Hurry up, and you will catch the train.（急ぎなさい、そうすれば電車に間に合います）
 　＝ If you hurry up, you will catch the train.

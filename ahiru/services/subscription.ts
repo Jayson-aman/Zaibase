@@ -1,4 +1,5 @@
-import { Platform } from 'react-native';
+import { AppState, Platform } from 'react-native';
+import { callFirebaseFunction } from './firebaseClient';
 
 export type SubscriptionTier = 'free' | 'pro' | 'max';
 
@@ -15,6 +16,9 @@ const RC_KEY_WEB = process.env.EXPO_PUBLIC_RC_API_KEY_WEB ?? '';
 // RevenueCatダッシュボードのWeb Billingオファリングで、これらのIDのパッケージを作成する
 const WEB_PACKAGE_ID_PRO = 'pro_monthly';
 const WEB_PACKAGE_ID_MAX = 'max_monthly';
+// 年額（Web版のみ。RevenueCatのWeb Billingでこのidのパッケージを作ると、Paywallに月額/年額の切り替えが出る）
+const WEB_PACKAGE_ID_PRO_YEARLY = 'pro_yearly';
+const WEB_PACKAGE_ID_MAX_YEARLY = 'max_yearly';
 const WEB_PACKAGE_ID_VOCAB_MONTHLY = 'vocab_monthly';
 const WEB_PACKAGE_ID_VOCAB_YEARLY = 'vocab_yearly';
 
@@ -37,6 +41,16 @@ export function onEntitlementChanged(listener: EntitlementListener): () => void 
 
 function emitEntitlementChanged(info: unknown): void {
   entitlementListeners.forEach((listener) => listener(info));
+}
+
+// ログイン・ログアウトでユーザーが変わったら、プラン表示も取り直す。
+// （Webにはネイティブの更新リスナーが無く、取り直さないとPro表示や無料表示が古いまま残る）
+async function refreshEntitlements(): Promise<void> {
+  try {
+    emitEntitlementChanged(await getCustomerInfo());
+  } catch {
+    // 取り直せなくても致命的ではない
+  }
 }
 
 async function getWebPurchases() {
@@ -62,6 +76,57 @@ async function getWebPurchases() {
 // ログインしたユーザー（Firebase UID）をRevenueCatに紐付ける。
 // 全デバイス・全プラットフォームで同一 appUserId になるため、加入状態が
 // 共有され、iOSで加入した人がWebで二重に課金される事故を防げる。
+// ネイティブの RevenueCat は configure() が終わる前に呼ぶと例外になる。画面（useSubscription など）の読みこみは
+// 親の初期化より先に走ることがあり、そのとき加入者が「無料」のまま固まっていた。configure を待ってから呼ぶ。
+let nativeReadyResolve: () => void = () => {};
+const nativeReady: Promise<void> = new Promise((resolve) => {
+  nativeReadyResolve = resolve;
+});
+async function nativePurchases() {
+  // 初期化が一向に終わらなくても画面を止めない（最大10秒）
+  await Promise.race([nativeReady, new Promise<void>((r) => setTimeout(r, 10000))]);
+  return (await import('react-native-purchases')).default;
+}
+
+/**
+ * 購入の直前に、RevenueCat のユーザーIDが Firebase の uid と一致しているかを確かめる。
+ * ずれたまま買うと、購入は別のIDに付き、サーバー（uidで問い合わせる）からは「買っていない」ことになる。
+ * あとで logIn しても、匿名IDではないので購入は移らない。一致しなければ、課金せずに止める。
+ */
+async function ensureRcIdentityMatchesFirebase(): Promise<void> {
+  let uid: string | null = null;
+  try {
+    const { getAuthUid } = await import('./firebaseClient');
+    uid = await Promise.race([getAuthUid(), new Promise<null>((r) => setTimeout(() => r(null), 5000))]);
+  } catch {
+    return;
+  }
+  if (!uid) return;
+  const notReady = () =>
+    new Error('アカウントの準備中です。数秒おいて、もう一度お試しください。（お支払いはされていません）');
+  if (isWeb) {
+    const { Purchases } = await import('@revenuecat/purchases-js');
+    if (!Purchases.isConfigured()) return;
+    const inst = Purchases.getSharedInstance() as unknown as {
+      getAppUserId?: () => string;
+      changeUser?: (id: string) => Promise<unknown>;
+    };
+    if (typeof inst.getAppUserId !== 'function') return;
+    if (inst.getAppUserId() !== uid) {
+      if (typeof inst.changeUser === 'function') await inst.changeUser(uid).catch(() => {});
+      if (inst.getAppUserId() !== uid) throw notReady();
+    }
+    return;
+  }
+  const Purchases = await nativePurchases();
+  let cur = await Purchases.getAppUserID();
+  if (cur !== uid) {
+    await Purchases.logIn(uid).catch(() => {});
+    cur = await Purchases.getAppUserID();
+    if (cur !== uid) throw notReady();
+  }
+}
+
 export async function identifyUser(uid: string): Promise<void> {
   if (!isRevenueCatConfigured() || !uid) return;
   try {
@@ -78,16 +143,35 @@ export async function identifyUser(uid: string): Promise<void> {
         };
         if (typeof inst.changeUser === 'function') {
           await inst.changeUser(uid);
+          await refreshEntitlements();
           return;
         }
       }
       Purchases.configure({ apiKey: RC_KEY_WEB, appUserId: uid });
     } else {
-      const Purchases = (await import('react-native-purchases')).default;
+      const Purchases = await nativePurchases();
       await Purchases.logIn(uid);
     }
+    await refreshEntitlements();
   } catch {
     // 紐付け失敗は致命的ではない（購入自体は可能）
+  }
+}
+
+/**
+ * ログインしたあと、ストアの購入をそのアカウントに結びつけ直す（ネイティブのみ・失敗しても続行）。
+ * ログインせずに買ってから既存のアカウントでログインすると、購入が「ログイン前のID」に残り、
+ * 新しいアカウントでは無料に戻って見える。購入の復元（ストアのサインインを求める）を押さなくても、
+ * 受け取った購入を今のアカウントに同期する。
+ */
+export async function syncPurchasesToCurrentUser(): Promise<void> {
+  if (isWeb || !isRevenueCatConfigured()) return;
+  try {
+    const Purchases = await nativePurchases();
+    await Purchases.syncPurchases();
+    await refreshEntitlements();
+  } catch {
+    // 同期できなくても、あとで「購入を復元」から直せる
   }
 }
 
@@ -112,9 +196,10 @@ export async function logoutUser(): Promise<void> {
         }
       }
     } else {
-      const Purchases = (await import('react-native-purchases')).default;
+      const Purchases = await nativePurchases();
       await Purchases.logOut();
     }
+    await refreshEntitlements();
   } catch {
     // ignore
   }
@@ -150,6 +235,7 @@ export function initRevenueCat(): void {
       // uid を紐付ける目的：サーバー（Cloud Functions）は Firebase uid で
       // RevenueCat に問い合わせるため、一致していないと課金者が無料扱いになる。
       Purchases.configure({ apiKey });
+      nativeReadyResolve();
 
       // 認証の待ちで configure 自体が遅れないよう、紐付けは後追いで行う。
       // ネットワーク不調で認証が返らない場合に購入導線ごと死なせないため、
@@ -166,6 +252,8 @@ export function initRevenueCat(): void {
       }
     } catch {
       // RevenueCat 未設定時は無視
+    } finally {
+      nativeReadyResolve();
     }
   })();
 }
@@ -188,6 +276,27 @@ export function hasVocabEntitlement(info: unknown): boolean {
   return ENTITLEMENT_VOCAB in active;
 }
 
+/**
+ * 導入オファー（初回特別価格）を使えない商品のIDを返す（ネイティブのみ）。
+ * すでにオファーを使った人に「まず¥500で7日間」と出すと、通常価格で課金されて誤解を招くため。
+ * 判定できないとき（Web・通信失敗・unknown）は空にして、従来どおり表示する。
+ */
+export async function getIntroIneligibleProductIds(productIds: string[]): Promise<Set<string>> {
+  const out = new Set<string>();
+  if (isWeb || !isRevenueCatConfigured() || productIds.length === 0) return out;
+  try {
+    const Purchases = await nativePurchases();
+    const res = await Purchases.checkTrialOrIntroductoryPriceEligibility(productIds);
+    for (const id of productIds) {
+      // 1 = INTRO_ELIGIBILITY_STATUS_INELIGIBLE（使えない）
+      if ((res as Record<string, { status?: number }>)[id]?.status === 1) out.add(id);
+    }
+  } catch {
+    // 判定できなければ、従来どおりの表示
+  }
+  return out;
+}
+
 export async function getCustomerInfo(): Promise<unknown> {
   if (!isRevenueCatConfigured()) {
     return { entitlements: { active: {} } };
@@ -196,8 +305,57 @@ export async function getCustomerInfo(): Promise<unknown> {
     const purchases = await getWebPurchases();
     return purchases.getCustomerInfo();
   }
-  const Purchases = (await import('react-native-purchases')).default;
+  const Purchases = await nativePurchases();
   return Purchases.getCustomerInfo();
+}
+
+/**
+ * 契約情報をストアから取り直して、画面に知らせる。
+ * 支払いの問題を直したあと、アプリに戻っても「お支払いの問題」の帯が消えずに残っていた。
+ * （取り直す処理がどこにも無く、アプリを再起動するまで古い情報のままだった）
+ * ネイティブは RevenueCat のキャッシュを捨ててから取り直す。
+ */
+export async function refreshCustomerInfo(): Promise<void> {
+  if (!isRevenueCatConfigured()) return;
+  try {
+    if (!isWeb) {
+      const Purchases = await nativePurchases();
+      await Purchases.invalidateCustomerInfoCache();
+    }
+    emitEntitlementChanged(await getCustomerInfo());
+  } catch {
+    // 取り直せなくても、いまの表示はそのまま（致命的ではない）
+  }
+}
+
+// アプリが前面に戻るたびに取り直す。画面ごとに登録すると同時に何度も走るので、
+// アプリ全体で1回だけ登録し、続けて何度も呼ばれないよう15秒あける。
+let foregroundBound = false;
+let lastForegroundRefresh = 0;
+export function ensureForegroundRefresh(): void {
+  if (foregroundBound || !isRevenueCatConfigured()) return;
+  foregroundBound = true;
+  const run = () => {
+    const now = Date.now();
+    if (now - lastForegroundRefresh < 15_000) return;
+    lastForegroundRefresh = now;
+    void refreshCustomerInfo();
+  };
+  try {
+    if (isWeb) {
+      if (typeof document !== 'undefined') {
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'visible') run();
+        });
+      }
+    } else {
+      AppState.addEventListener('change', (st) => {
+        if (st === 'active') run();
+      });
+    }
+  } catch {
+    foregroundBound = false;
+  }
 }
 
 // ⚠️ 製品IDは App Store Connect で一度作成すると削除しても再利用不可（Apple仕様）。
@@ -207,12 +365,15 @@ export const PRODUCT_ID_PRO = 'com.zaibase.exam.promonthly';
 export const PRODUCT_ID_MAX = 'com.zaibase.exam.maxmonthly';
 export const PRODUCT_ID_VOCAB_MONTHLY = 'com.zaibase.exam.vocabmonthly';
 export const PRODUCT_ID_VOCAB_YEARLY = 'com.zaibase.exam.vocabyearly';
-// ⚠️ 公式集（無料5個超）を1個¥50で買い切り解放する消費型（Consumable）商品。
+// ⚠️ 公式集（各教科の先頭8項目を超えた分）を1個¥200で買い切り解放する消費型（Consumable）商品。
 // Pro/Maxの月額課金とは別枠。App Store Connect / Google Play Console / RevenueCat の
-// いずれにも「このID・消費型・¥50」で新規登録するまでは fetchFormulaUnlockProduct が
+// いずれにも「このID・消費型・¥200」で登録するまでは fetchFormulaUnlockProduct が
 // 空を返し続け、購入ボタンは「準備中」表示のままになる。
 export const PRODUCT_ID_FORMULA_UNLOCK = 'com.zaibase.exam.formulaunlock';
-// ⚠️ 学年×科目ごとに追加した新規単元（無料5個超）を1個¥100で買い切り解放する消費型商品。
+// ⚠️ 公式集のまとめ買い（受験種別×教科）。消費型・¥2,980。App Store Connect / Google Play Console /
+// RevenueCat に、このIDで新規登録するまでは、まとめ買いのボタンは「準備中」表示のままになる。
+export const PRODUCT_ID_FORMULA_BUNDLE = 'com.zaibase.exam.formulabundle';
+// ⚠️ 学年×科目ごとに追加した新規単元（無料5個超）を1個¥150で買い切り解放する消費型商品。
 // 上記と同様、App Store Connect / Google Play Console / RevenueCat にこのIDで
 // 新規登録するまでは購入ボタンが「準備中」表示のままになる。
 export const PRODUCT_ID_UNIT_UNLOCK = 'com.zaibase.exam.unitunlock';
@@ -247,7 +408,7 @@ export async function fetchCurrentOffering(): Promise<unknown> {
       return null;
     }
   }
-  const Purchases = (await import('react-native-purchases')).default;
+  const Purchases = await nativePurchases();
   const offerings = await Purchases.getOfferings();
   return offerings.current ?? null;
 }
@@ -259,30 +420,42 @@ async function fetchWebOfferingPackages(): Promise<WebPackageLike[]> {
   return (current?.availablePackages as WebPackageLike[] | undefined) ?? [];
 }
 
-export async function fetchProMaxProducts(): Promise<{ pro: unknown; max: unknown }> {
-  if (!isRevenueCatConfigured()) return { pro: null, max: null };
+export async function fetchProMaxProducts(): Promise<{
+  pro: unknown;
+  max: unknown;
+  proYearly: unknown;
+  maxYearly: unknown;
+}> {
+  const none = { pro: null, max: null, proYearly: null, maxYearly: null };
+  if (!isRevenueCatConfigured()) return none;
   if (isWeb) {
     try {
       const packages = await fetchWebOfferingPackages();
-      const pro = packages.find((p) => p.identifier === WEB_PACKAGE_ID_PRO);
-      const max = packages.find((p) => p.identifier === WEB_PACKAGE_ID_MAX);
+      const find = (id: string) => {
+        const pkg = packages.find((p) => p.identifier === id);
+        return pkg ? wrapWebPackage(pkg) : null;
+      };
       return {
-        pro: pro ? wrapWebPackage(pro) : null,
-        max: max ? wrapWebPackage(max) : null,
+        pro: find(WEB_PACKAGE_ID_PRO),
+        max: find(WEB_PACKAGE_ID_MAX),
+        proYearly: find(WEB_PACKAGE_ID_PRO_YEARLY),
+        maxYearly: find(WEB_PACKAGE_ID_MAX_YEARLY),
       };
     } catch {
-      return { pro: null, max: null };
+      return none;
     }
   }
+  // iOS / Android に年額はない（既存の月額購読者に影響しないため）
   try {
-    const Purchases = (await import('react-native-purchases')).default;
+    const Purchases = await nativePurchases();
     const products = await Purchases.getProducts([PRODUCT_ID_PRO, PRODUCT_ID_MAX]);
     return {
+      ...none,
       pro: products.find((p) => p.identifier === PRODUCT_ID_PRO) ?? null,
       max: products.find((p) => p.identifier === PRODUCT_ID_MAX) ?? null,
     };
   } catch {
-    return { pro: null, max: null };
+    return none;
   }
 }
 
@@ -302,7 +475,7 @@ export async function fetchVocabProducts(): Promise<{ monthly: unknown; yearly: 
     }
   }
   try {
-    const Purchases = (await import('react-native-purchases')).default;
+    const Purchases = await nativePurchases();
     const products = await Purchases.getProducts([PRODUCT_ID_VOCAB_MONTHLY, PRODUCT_ID_VOCAB_YEARLY]);
     return {
       monthly: products.find((p) => p.identifier === PRODUCT_ID_VOCAB_MONTHLY) ?? null,
@@ -318,8 +491,19 @@ export async function fetchVocabProducts(): Promise<{ monthly: unknown; yearly: 
 export async function fetchFormulaUnlockProduct(): Promise<unknown> {
   if (!isRevenueCatConfigured() || isWeb) return null;
   try {
-    const Purchases = (await import('react-native-purchases')).default;
+    const Purchases = await nativePurchases();
     const products = await Purchases.getProducts([PRODUCT_ID_FORMULA_UNLOCK]);
+    return products[0] ?? null;
+  } catch {
+    return null;
+  }
+}
+
+export async function fetchFormulaBundleProduct(): Promise<unknown> {
+  if (!isRevenueCatConfigured() || isWeb) return null;
+  try {
+    const Purchases = await nativePurchases();
+    const products = await Purchases.getProducts([PRODUCT_ID_FORMULA_BUNDLE]);
     return products[0] ?? null;
   } catch {
     return null;
@@ -329,7 +513,7 @@ export async function fetchFormulaUnlockProduct(): Promise<unknown> {
 export async function fetchUnitUnlockProduct(): Promise<unknown> {
   if (!isRevenueCatConfigured() || isWeb) return null;
   try {
-    const Purchases = (await import('react-native-purchases')).default;
+    const Purchases = await nativePurchases();
     const products = await Purchases.getProducts([PRODUCT_ID_UNIT_UNLOCK]);
     return products[0] ?? null;
   } catch {
@@ -337,15 +521,147 @@ export async function fetchUnitUnlockProduct(): Promise<unknown> {
   }
 }
 
+// ───────────────────────────────────────────────────────────────
+// Web版：公式集・単元の買い切りをStripeへ直接決済する
+// ───────────────────────────────────────────────────────────────
+// RevenueCatのWeb Billingは消費型（買い切り）商品に対応していないため、
+// Web版だけはRevenueCatを介さず、functions/stripeUnlock.js が発行する
+// Stripe Checkoutへブラウザごとリダイレクトする。iOS/Androidは引き続き
+// purchaseProduct（RevenueCat）を使う。
+export type StripeUnlockType = 'formula' | 'unit' | 'bundle';
+
+interface StripeUnlockCheckoutResult {
+  ok: true;
+  url?: string;
+  sessionId?: string;
+  alreadyUnlocked?: boolean;
+}
+
+interface StripeUnlockConfirmResult {
+  ok: true;
+  type: StripeUnlockType;
+  itemId: string;
+  /** すでに持っていた項目への二重のお支払い（サーバーが自動で返金した） */
+  duplicate?: boolean;
+}
+
+/**
+ * Checkoutページを作成し、そのままブラウザを遷移させる。
+ * 既に解放済みの場合はページ遷移せず {alreadyUnlocked: true} を返す。
+ */
+export async function startStripeUnlockCheckout(
+  type: StripeUnlockType,
+  itemId: string
+): Promise<{ alreadyUnlocked: boolean }> {
+  // Web版の買い切りはFirebase UIDに紐づけて解放する。匿名のまま購入させると、
+  // あとでブラウザのデータが消える・別ブラウザで開く・本当のアカウントで
+  // ログインし直す等で匿名UIDを失った瞬間、支払い済みの解放を二度と
+  // 見られなくなる（Paywallの月額課金と同じ理由でログイン必須にする）。
+  const { getFirebaseAuth } = await import('./firebaseClient');
+  const auth = await getFirebaseAuth();
+  // 保存済みのログイン状態の読み込みが終わるまで待つ（待たないと、ログイン済みでも「ログインが必要」と出る）
+  try {
+    await auth.authStateReady();
+  } catch {
+    // 待てない環境では、そのまま判定する
+  }
+  if (!auth.currentUser || auth.currentUser.isAnonymous) {
+    throw new Error('ご購入にはログインが必要です。ログインしてからもう一度お試しください。');
+  }
+
+  // クエリ文字列とハッシュの両方を必ず落とす。href.split('?')[0] だと、
+  // ハッシュだけがあってクエリが無いURL（例: ".../lesson/abc#section2"）で
+  // ハッシュが残ってしまい、サーバー側でその後ろに ?unlock_success=1 を
+  // 付け足すと「クエリがハッシュの後ろに来る」壊れたURLになる。その場合
+  // location.search で拾えず、Checkout成功後の即時解放確認が効かなくなる。
+  const returnUrl =
+    typeof window !== 'undefined'
+      ? `${window.location.origin}${window.location.pathname}`
+      : undefined;
+  const result = await callFirebaseFunction<
+    { type: StripeUnlockType; itemId: string; returnUrl?: string },
+    StripeUnlockCheckoutResult
+  >('createAhiruUnlockCheckout', { type, itemId, returnUrl });
+
+  if (result.alreadyUnlocked) return { alreadyUnlocked: true };
+  if (!result.url) throw new Error('決済ページの作成に失敗しました');
+  window.location.href = result.url;
+  return { alreadyUnlocked: false };
+}
+
+let pendingStripeUnlockConfirm: Promise<StripeUnlockConfirmResult | null> | null = null;
+
+/**
+ * Stripe Checkoutからの戻りURL（?unlock_success=1&session_id=...）を一度だけ
+ * 読み取り、その場でURLから消してから解放を確定させる。formula/unit両方の
+ * フックが同時にマウントされても、実際にサーバーへ問い合わせるのは1回だけになる。
+ */
+export function confirmPendingStripeUnlockOnce(): Promise<StripeUnlockConfirmResult | null> {
+  if (!isWeb || typeof window === 'undefined') return Promise.resolve(null);
+  if (pendingStripeUnlockConfirm) return pendingStripeUnlockConfirm;
+
+  const params = new URLSearchParams(window.location.search);
+  const success = params.get('unlock_success');
+  const sessionId = params.get('session_id');
+  if (success !== '1' || !sessionId) {
+    pendingStripeUnlockConfirm = Promise.resolve(null);
+    return pendingStripeUnlockConfirm;
+  }
+
+  // 読んだらすぐURLから消す。リロードや複数フックの二重マウントで
+  // 同じsession_idをもう一度確認しにいくのを防ぐ。
+  params.delete('unlock_success');
+  params.delete('session_id');
+  const query = params.toString();
+  const newUrl = window.location.pathname + (query ? `?${query}` : '') + window.location.hash;
+  window.history.replaceState(null, '', newUrl);
+
+  pendingStripeUnlockConfirm = callFirebaseFunction<
+    { sessionId: string },
+    StripeUnlockConfirmResult
+  >('confirmAhiruUnlockCheckout', { sessionId })
+    .then((r) => {
+      // すでに持っていた項目への二重のお支払いは、サーバーが自動で返金している。そのことを知らせる
+      if (r?.duplicate) {
+        try {
+          window.alert('同じ項目をすでにお持ちだったため、今回のお支払い分は自動で返金されます（カード会社の反映には数日かかることがあります）。');
+        } catch {
+          // 表示できない環境では何も出さない
+        }
+      }
+      return r;
+    })
+    .catch(() => {
+    // 決済は済んでいるのに、解放の確認だけが失敗した。黙って捨てると「払ったのに開かない」になるので、
+    // 理由と対処を知らせ、URLを元に戻して、再読み込みで確認をやり直せるようにする。
+    try {
+      const again = new URLSearchParams(window.location.search);
+      again.set('unlock_success', '1');
+      again.set('session_id', sessionId);
+      window.history.replaceState(null, '', `${window.location.pathname}?${again.toString()}${window.location.hash}`);
+    } catch {
+      // URLを戻せなくても、案内は出す
+    }
+    try {
+      window.alert('お支払いは完了していますが、解放の確認ができませんでした。\n通信の状態を確かめて、このページを再読み込みしてください（二重に請求されることはありません）。\n何度やっても開かないときは info@zaibase.group までご連絡ください。');
+    } catch {
+      // 表示できない環境では何も出さない
+    }
+    return null;
+  });
+  return pendingStripeUnlockConfirm;
+}
+
 export async function purchaseProduct(product: unknown): Promise<unknown> {
   if (!isRevenueCatConfigured()) throw new Error('課金は準備中です');
+  await ensureRcIdentityMatchesFirebase();
   let customerInfo: unknown;
   if (isWeb) {
     const purchases = await getWebPurchases();
-    const result = await purchases.purchase({ rcPackage: unwrapWebPackage(product) as never });
+    const result = await purchases.purchase({ rcPackage: unwrapWebPackage(product) as never, selectedLocale: 'ja' });
     customerInfo = result.customerInfo;
   } else {
-    const Purchases = (await import('react-native-purchases')).default;
+    const Purchases = await nativePurchases();
     customerInfo = (await Purchases.purchaseStoreProduct(product as never)).customerInfo;
   }
   emitEntitlementChanged(customerInfo);
@@ -356,13 +672,14 @@ export async function purchasePackage(pkg: unknown): Promise<unknown> {
   if (!isRevenueCatConfigured()) {
     throw new Error('課金は準備中です');
   }
+  await ensureRcIdentityMatchesFirebase();
   let customerInfo: unknown;
   if (isWeb) {
     const purchases = await getWebPurchases();
-    const result = await purchases.purchase({ rcPackage: unwrapWebPackage(pkg) as never });
+    const result = await purchases.purchase({ rcPackage: unwrapWebPackage(pkg) as never, selectedLocale: 'ja' });
     customerInfo = result.customerInfo;
   } else {
-    const Purchases = (await import('react-native-purchases')).default;
+    const Purchases = await nativePurchases();
     customerInfo = (await Purchases.purchasePackage(pkg as never)).customerInfo;
   }
   emitEntitlementChanged(customerInfo);
@@ -379,7 +696,7 @@ export async function restorePurchases(): Promise<unknown> {
     const purchases = await getWebPurchases();
     customerInfo = await purchases.getCustomerInfo();
   } else {
-    const Purchases = (await import('react-native-purchases')).default;
+    const Purchases = await nativePurchases();
     customerInfo = await Purchases.restorePurchases();
   }
   emitEntitlementChanged(customerInfo);

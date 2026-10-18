@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { rich } from './RichText';
+import ReviewBlocks from './ReviewBlocks';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import type { Question, QuestionSubItem } from '../data/questions-meta';
 import type { Figure } from '../data/figures';
 import { getFigure } from '../data/figures';
 import FigureView from './FigureView';
+import AnswerInput, { type SubmitResult } from './AnswerInput';
+import Fireworks from './Fireworks';
+import { maskFigureForProblem, FIGURE_IS_ANSWER } from '../utils/figure-mask';
 
 /**
  * 公式集（koushiki・Question由来）と公式まとめ（formulas・手書きの一問一答）の
@@ -18,6 +23,9 @@ export type InlineQuizItem = {
   isWritten?: boolean;
   rubricPoints?: string[];
   subQuestions?: QuestionSubItem[];
+  /** おさらいブロックの出しわけに使う（算数・数学のおさらいを他教科に出さないため） */
+  subject?: string;
+  examType?: string;
 };
 
 export function questionsToQuizItems(questions: Question[]): InlineQuizItem[] {
@@ -29,6 +37,8 @@ export function questionsToQuizItems(questions: Question[]): InlineQuizItem[] {
     isWritten: q.isWritten,
     rubricPoints: q.rubricPoints,
     subQuestions: q.subQuestions,
+    subject: q.subject,
+    examType: q.examType,
   }));
 }
 
@@ -40,17 +50,35 @@ type Props = {
 
 export default function InlineQuiz({ items, label = 'この公式の一問一答' }: Props) {
   const [index, setIndex] = useState(0);
-  const [revealed, setRevealed] = useState(false);
+  // 自分で書いた答え。書くまでは答えを見られない（答えを見てから
+  // 「できた」と思いこむのを防ぐため、問題集と同じやり方にそろえた）。
+  const [typed, setTyped] = useState<SubmitResult | null>(null);
+  const [showFireworks, setShowFireworks] = useState(false);
+  // 花火のタイマーを、画面から消えたあとに触らないよう持っておく
+  const fireTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => () => {
+    if (fireTimer.current != null) clearTimeout(fireTimer.current);
+  }, []);
 
   if (items.length === 0) return null;
 
   const total = items.length;
   const q = items[Math.min(index, total - 1)];
   const figure = q.figure;
+  const revealed = typed != null;
 
   function go(next: number) {
     setIndex(next);
-    setRevealed(false);
+    setTyped(null);
+    setShowFireworks(false);
+  }
+
+  function handleSubmit(r: SubmitResult) {
+    setTyped(r);
+    if (r.result === 'correct') {
+      setShowFireworks(true);
+      fireTimer.current = setTimeout(() => setShowFireworks(false), 1400);
+    }
   }
 
   return (
@@ -64,9 +92,9 @@ export default function InlineQuiz({ items, label = 'この公式の一問一答
         )}
       </View>
 
-      <Text style={styles.question}>{q.question}</Text>
+      <Text style={styles.question}>{rich(q.question, { size: 17, color: '#2B2420', bold: true })}</Text>
 
-      {figure != null && <FigureView figure={figure} />}
+      {figure != null && <FigureView figure={maskFigureForProblem(figure, q)} hideAnswerText />}
 
       {q.subQuestions != null && q.subQuestions.length > 0 && (
         <View style={styles.subList}>
@@ -78,23 +106,26 @@ export default function InlineQuiz({ items, label = 'この公式の一問一答
         </View>
       )}
 
-      {!revealed && (
-        <TouchableOpacity style={styles.revealBtn} activeOpacity={0.85} onPress={() => setRevealed(true)}>
-          <Text style={styles.revealBtnText}>答えを見る</Text>
-        </TouchableOpacity>
-      )}
+      <AnswerInput
+        key={`${index}_${q.question}`}
+        question={{ answer: q.answer, subQuestions: q.subQuestions, isWritten: q.isWritten }}
+        onSubmit={handleSubmit}
+        submitted={typed}
+        tone="brown"
+        flush
+      />
 
       {revealed && (
         <View style={styles.answerBox}>
           <Text style={styles.answerLabel}>{q.isWritten ? '模範解答' : '答え'}</Text>
-          <Text style={styles.answerText}>{q.answer}</Text>
+          <Text style={styles.answerText}>{rich(q.answer, { size: 15, color: '#2B2420' })}</Text>
 
           {q.subQuestions != null &&
             q.subQuestions.map((sub, i) => (
               <View key={i} style={styles.subAnswer}>
                 <Text style={styles.subAnswerLabel}>{sub.label}</Text>
-                <Text style={styles.answerText}>{sub.answer}</Text>
-                {sub.explanation != null && <Text style={styles.explanationText}>{sub.explanation}</Text>}
+                <Text style={styles.answerText}>{rich(sub.answer)}</Text>
+                {sub.explanation != null && <Text style={styles.explanationText}>{rich(sub.explanation)}</Text>}
               </View>
             ))}
 
@@ -112,9 +143,16 @@ export default function InlineQuiz({ items, label = 'この公式の一問一答
           {q.explanation != null && q.explanation !== '' && (
             <View style={styles.explanationBox}>
               <Text style={styles.explanationTitle}>💡 解説</Text>
-              <Text style={styles.explanationText}>{q.explanation}</Text>
+              <Text style={styles.explanationText}>{rich(q.explanation)}</Text>
             </View>
           )}
+          <ReviewBlocks q={{ subject: q.subject ?? 'other', examType: q.examType, question: q.question, answer: q.answer, explanation: q.explanation }} />
+        </View>
+      )}
+
+      {showFireworks && (
+        <View style={styles.fireworksLayer} pointerEvents="none">
+          <Fireworks />
         </View>
       )}
 
@@ -210,6 +248,15 @@ const styles = StyleSheet.create({
   },
   explanationTitle: { fontSize: 13, fontWeight: '800', color: '#8B5A38', marginBottom: 5 },
   explanationText: { fontSize: 14, lineHeight: 23, color: '#4A4038' },
+  fireworksLayer: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   navRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',

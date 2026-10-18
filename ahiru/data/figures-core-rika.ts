@@ -37,36 +37,36 @@ export const figuresCoreRika: Record<string, Figure> = {
   // rika_23 中和：塩酸＋水酸化ナトリウム → 塩化ナトリウム＋水
   rika_23: {
     kind: 'chemEquation',
-    equation: 'HCl + NaOH -> NaCl + H2O',
-    caption: '塩酸と水酸化ナトリウム水溶液の中和',
+    equation: '塩酸 ＋ 水酸化ナトリウム → 塩化ナトリウム（食塩）＋ 水',
+    caption: '塩酸と水酸化ナトリウム水溶液の中和。酸とアルカリが打ち消し合って、塩と水ができる',
   },
 
-  // rika_24 直列回路：3Ω＋6Ω＝9Ω
+  // rika_24 直列回路：抵抗3＋抵抗6＝9（豆電球1個分の抵抗を1とする言い方）
   rika_24: {
     kind: 'circuit',
     layout: 'series',
     series: [
-      { type: 'resistor', label: '3Ω' },
-      { type: 'resistor', label: '6Ω' },
+      { type: 'resistor', label: '抵抗3' },
+      { type: 'resistor', label: '抵抗6' },
     ],
     battery: { label: '電池', cells: 1 },
-    caption: '直列：合成抵抗 = 3 + 6 = 9Ω',
+    caption: '直列：全体の抵抗 ＝ 3 ＋ 6 ＝ 9',
   },
 
-  // rika_25 並列回路：3Ωと6Ω → 2Ω
+  // rika_25 並列回路：抵抗3と抵抗6 → 全体の抵抗2（電池1個・豆電球1個の電流を①とする言い方）
   rika_25: {
     kind: 'circuit',
     layout: 'parallel',
     branches: [
-      [{ type: 'resistor', label: '3Ω' }],
-      [{ type: 'resistor', label: '6Ω' }],
+      [{ type: 'resistor', label: '抵抗3' }],
+      [{ type: 'resistor', label: '抵抗6' }],
     ],
     battery: { label: '電池', cells: 1 },
-    caption: '並列：1/R = 1/3 + 1/6 = 1/2 → R = 2Ω',
+    caption: '並列：電池1個なら電流は 1/3 ＋ 1/6 ＝ 1/2、抵抗 ＝ 1 ÷ 1/2 ＝ 2',
     steps: [
-      '合成抵抗の式：1/R = 1/3 + 1/6',
-      '通分して計算：1/R = 2/6 + 1/6 = 3/6 = 1/2',
-      'R = 2Ω',
+      '電池1個のとき、並列では枝ごとに電流が流れる。抵抗3の枝は 1÷3＝1/3、抵抗6の枝は 1÷6＝1/6',
+      '全体の電流は枝の電流の合計。通分して 1/3 ＋ 1/6 ＝ 2/6 ＋ 1/6 ＝ 3/6 ＝ 1/2',
+      '抵抗 ＝ 電池の数 ÷ 電流 ＝ 1 ÷ 1/2 ＝ 2',
     ],
   },
 
@@ -115,9 +115,9 @@ export const figuresCoreRika: Record<string, Figure> = {
       [{ x: -30, y: 0 }, { x: -30, y: -3 }], // 60gのおもり
       [{ x: 20, y: 0 }, { x: 20, y: -3 }], // 90gのおもり
     ],
-    caption: 'てこのつりあい：60×30 = 90×20 =1800（左右のモーメントが等しい）',
+    caption: 'てこのつりあい：60×30 = 90×20 =1800（左右のてこをかたむけるはたらきが等しい）',
     steps: [
-      '左側のモーメント = 60g × 30cm = 1800',
+      '左側にかたむけるはたらき = 60g × 30cm = 1800',
       '右側は F × 20cm = 1800 とおく',
       'F = 1800 ÷ 20 = 90g',
     ],
@@ -199,7 +199,7 @@ export const figuresCoreRika: Record<string, Figure> = {
     caption: 'てこ：100×30 = F×90 → F ≈ 33g',
     steps: [
       '支点から右端までの距離 = 120 − 30 = 90cm',
-      '左側のモーメント = 100g × 30cm = 3000',
+      '左側にかたむけるはたらき = 100g × 30cm = 3000',
       'F × 90 = 3000 → F = 3000 ÷ 90 ≈ 33.3g',
     ],
   },

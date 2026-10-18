@@ -63,7 +63,7 @@ plan（計画）[plæn] → plane（飛行機）[pleɪn]
 a＝[eɪ]／e＝[iː]／i＝[aɪ]／o＝[oʊ]／u＝[juː] または [uː]
 つまり「エイ・イー・アイ・オウ・ユー」であり、アルファベットを言うときの音そのものである。make, these, time, home, use はすべてこの形にあてはまる。
 
-⚠ 注意：この規則には有名な例外がある。have, give, live（住む）, come, some, love, none, done は e で終わるのに母音は短いままである。これは英語では語を v で終わらせない習慣があり、意味のない e を付けているためで、e が音を変えているわけではない。「love を [loʊv] と読む」といった誤りはここから生まれる。`,
+⚠ 注意：この規則には有名な例外がある。have, give, live（住む）, love, come, some, none, done は e で終わるのに母音は短いままである。have, give, live, love は、英語では語を v で終わらせない習慣があるため、意味のない e を付けているだけで、e が音を変えているわけではない。come, some, none, done は v で終わる語ではなく、つづりの歴史による別の例外なので、語として覚える。「love を [loʊv] と読む」といった誤りはここから生まれる。`,
       },
     ],
     trapExamples: [
@@ -81,7 +81,7 @@ a＝[eɪ]／e＝[iː]／i＝[aɪ]／o＝[oʊ]／u＝[juː] または [uː]
         trapExplanation: 'マジック e の規則を覚えたてのときに、形だけを見て機械的にあてはめてしまう。gave [geɪv] が実際にその読み方をするので、なおさら正しく見える。',
         correctAnswer: '誤り（have は [hæv]、a は短い音）',
         correctExplanation:
-          '英語では語末を v で終わらせないため、have, give, live, love, come, some には意味のない e が付いている。この e はマジック e ではないので母音は短いままである。gave, five, drive のようにアルファベット読みになる語と混同しないよう、have 型の例外は語として覚えてしまうのが早い。',
+          '英語では語末を v で終わらせないため、have, give, live, love には意味のない e が付いている。この e はマジック e ではないので母音は短いままである。come, some, none, done も短い音の例外だが、v とは関係のないつづりの歴史による例外なので、語として覚える。gave, five, drive のようにアルファベット読みになる語と混同しないよう、have 型の例外は語として覚えてしまうのが早い。',
       },
     ],
   },
@@ -205,7 +205,7 @@ ow は語の終わりにあるとき [oʊ] になることが多い（snow, know
 ■ g の重要な例外
 get, give, girl, begin, gift, forget, together は、後ろが e・i でも [g] と読む。これらはすべて日常語で、しかも入試頻出なので、例外としてまとめて覚える。
 
-★ ポイント：この規則があるので、動詞に -ing を付けるときのつづりの変化も説明がつく。come の e を落として coming とすれば g のうしろは i ではなく n になり、[k] の音が保たれる。つづりの規則と発音の規則はつながっている。`,
+★ ポイント：この規則があるので、動詞に -ing を付けるときのつづりの変化も説明がつく。face の e を落として facing としても、c のうしろが e から i に変わるだけで、e・i・y の前なので c は [s] のままである。つづりの規則と発音の規則はつながっている。`,
       },
       {
         heading: 'ch・th・sh・ph・gh の音',
@@ -228,7 +228,7 @@ gh＝無音 night, light, high, right, though, through, daughter, eight
 gh＝[f] laugh, enough, cough
 wh＝[w] what, when, where, white（ただし who, whose, whole は [h]）
 
-⚠ 注意：-tion は [ʃən]（question, information）、-sion は [ʒən]（television, decision）と [ʃən]（mission, discussion）に分かれる。s のうしろの音が有声か無声かで決まるので、音で覚えるほうが早い。`,
+⚠ 注意：-tion は [ʃən]（information, station）、-sion は [ʒən]（television, decision）と [ʃən]（mission, discussion）に分かれる。s のうしろの音が有声か無声かで決まるので、音で覚えるほうが早い。`,
       },
     ],
     trapExamples: [
@@ -283,7 +283,7 @@ h：hour, honest, honor（アメリカ英語では herb も）
 -mb の b：climb, comb, lamb, thumb, bomb, tomb
 -mn の n：autumn, column
 -gn の g：sign, foreign, design, campaign
-※ ただし signal, designer のように別の音節が続くと g が復活することがある。
+※ ただし signal, signature のように別の音節が続くと g が復活することがある。
 
 ■ 語の途中で読まない
 -stle の t：listen, castle, whistle, fasten
@@ -404,7 +404,7 @@ their（彼らの）／there（そこに）／theyʼre（they are）
 its（それの）／itʼs（it is または it has）
 to（〜へ）／too（〜も・〜すぎる）／two（二）
 
-⚠ 注意：these are their books. のような文で there を書いてしまう誤りは非常に多い。「there は文の主語のような位置に立つ（There is 〜）」「their のあとには必ず名詞が来る」と、置かれる場所で見分けるとまちがえにくい。`,
+⚠ 注意：These are their books. のような文で there を書いてしまう誤りは非常に多い。「there は文の主語のような位置に立つ（There is 〜）」「their のあとには必ず名詞が来る」と、置かれる場所で見分けるとまちがえにくい。`,
       },
     ],
     trapExamples: [
@@ -532,7 +532,7 @@ in-for-MÁ-tion, in-VÉN-tion, QUÉS-tion, dis-CÚS-sion, mu-SÍ-cian, tra-DÍ-t
 fan-TÁS-tic, e-LÉC-tric, dra-MÁT-ic, sci-en-TÍF-ic, e-co-NÓM-ic, at-LÁN-tic, spe-CÍF-ic
 ※ 例外：Árabic, pólitics, cátholic は前に来る。
 
-■ -ial／-ious／-ial
+■ -ial／-ious
 of-FÍ-cial, ma-TÉ-ri-al, de-LÍ-cious, mys-TÉ-ri-ous, am-BÍ-tious
 
 ★ ポイント：この型の語は、日本語のカタカナ語になっているものが多い。「インフォメーション」「エレクトリック」と平らに読む癖が邪魔をするので、「メ」「レ」を強く長く言う練習をしておく。`,
@@ -543,17 +543,17 @@ of-FÍ-cial, ma-TÉ-ri-al, de-LÍ-cious, mys-TÉ-ri-ous, am-BÍ-tious
         body: `もう一つの型は、語末から三つ目の音節を強く読むものである。語尾が -ity, -ical, -graphy, -logy などのときに起こる。
 
 ■ -ity／-ety
-a-BÍL-i-ty（a-bil-i-ty の3番目から数えて…語末 ty から数えて三つ目が BIL）
+a-BÍL-i-ty（語末の ty から数えて、ty が一つ目、i が二つ目、BIL が三つ目）
 u-ni-VÉR-si-ty, ac-TÍV-i-ty, pos-si-BÍL-i-ty, so-CÍ-e-ty, va-RÍ-e-ty, ma-JÓR-i-ty
 
 ■ -ical
-e-co-NÓM-i-cal, po-LÍT-i-cal, MÚ-si-cal, prac-ti-cal → PRÁC-ti-cal, his-TÓR-i-cal
+e-co-NÓM-i-cal, po-LÍT-i-cal, MÚ-si-cal, PRÁC-ti-cal, his-TÓR-i-cal
 
 ■ -graphy／-logy／-ology
 pho-TÓG-ra-phy, ge-ÓG-ra-phy, bi-ÓL-o-gy, tech-NÓL-o-gy, psy-CHÓL-o-gy
 
 ■ 二つの型を比べる
-econ-：ÉC-o-no-my（名詞は不規則）／e-co-NÓM-ic（-ic は直前）／e-co-NÓM-i-cal（-ical は三つ目）
+econ-：e-CÓN-o-my（名詞は語末から三つ目）／e-co-NÓM-ic（-ic は直前）／e-co-NÓM-i-cal（-ical は三つ目）
 photo-：PHÓ-to（2音節）／pho-TÓG-ra-phy（-graphy は三つ目）／pho-to-GRÁPH-ic（-ic は直前）
 同じ語根でも、付く語尾によってアクセントの位置がどんどん動くことがわかる。
 
@@ -782,6 +782,7 @@ cunning は「ずるい」で、試験の不正行為は cheating。
     sections: [
       {
         heading: '三つに分かれる理由',
+        mangaId: 'koko_eigo_s010_manga',
         body: `名詞の複数形や動詞の三人称単数現在形に付ける -s は、書くときは一種類だが、読むときは三種類に分かれる。分かれ方は、-s のすぐ前の「音」によって自動的に決まる。
 
 ■ [s] と読む場合
@@ -864,6 +865,7 @@ knife → knives、leaf → leaves のように f が v になる語は、当然
     sections: [
       {
         heading: '三分類と判断の手順',
+        mangaId: 'koko_eigo_s011_manga',
         body: `規則動詞の過去形・過去分詞に付ける -ed も、-s と同じように直前の音で三通りに分かれる。ただし判断の順序を決めておくと迷わない。
 
 ■ 手順1：直前の音が [t] か [d] か
@@ -1401,6 +1403,7 @@ lie → lying ／ die → dying ／ tie → tying
     sections: [
       {
         heading: '四つの型で整理する',
+        mangaId: 'koko_eigo_s017_manga',
         body: `動詞の変化は「原形・過去形・過去分詞」の三つで一組になっている。この三つの関係で分類すると、不規則動詞は次の四型になる。
 
 ■ A－A－A 型（三つとも同じ）
@@ -1647,7 +1650,7 @@ wound（傷つける）[wuːnd] － wounded － wounded
         trapExplanation: 'send は短くて規則動詞のように見えるうえ、end → ended という規則動詞と形が近いため、そのまま -ed を付けてしまう。',
         correctAnswer: 'I sent her an email last night.',
         correctExplanation:
-          'send は send － sent － sent と変化する不規則動詞で、語尾の d が t になる型である。同じ仲間に build － built、spend － spent、lend － lent、bend － bent がある。「-nd で終わる動詞は -nt になる」とまとめて覚えるとよい。',
+          'send は send － sent － sent と変化する不規則動詞で、語尾の d が t になる型である。同じ仲間に build － built、spend － spent、lend － lent、bend － bent がある。send, spend, lend, bend は「-nd が -nt になる」仲間としてまとめて覚えるとよい（end は規則動詞の ended、find は found で別の型なので、-nd で終わる動詞が全部 -nt になるわけではない）。',
       },
       {
         question: '次の文の found は、find（見つける）の過去形である。正しいか。The company was founded in 1950.',
@@ -1698,7 +1701,7 @@ spring － sprang － sprung（跳ねる・高校範囲）
 受け身：The song was sung by many people.
 
 ■ 音でつかむ
-sing／sang／sung を続けて言うと、「イ・ア・ア」ではなく「イ・ア・ウ」と三段に動くのがわかる。この三段の動きを口で覚えてしまえば、drink や swim にもそのまま応用できる。
+sing／sang／sung を続けて言うと、母音が [ɪ]→[æ]→[ʌ] と口の開き方を変えながら動き、つづりの母音字も i・a・u と三段に動く。この三段の動きを口で覚えてしまえば、drink や swim にもそのまま応用できる。
 
 ■ ing で終わる形と混同しない
 sing は原形からすでに -ing で終わっているが、これは進行形の -ing とは無関係である。進行形にすると singing となる。同じく ring → ringing、bring → bringing。
@@ -1711,7 +1714,7 @@ sing は原形からすでに -ing で終わっているが、これは進行形
 
 ■ run（A－B－A 型）
 run － ran － run
-過去形は ran で i－a の動きは同じだが、過去分詞は原形に戻る。runned・run－ran－run の三つ目を「run」と正しく言えるかがポイントである。
+過去形は ran で i－a の動きは同じだが、過去分詞は原形に戻る。run－ran－run の三つ目を「run」と正しく言えるかがポイントである。
 例）I have run in three marathons.（○）
 　　I have ran in three marathons.（×）
 
@@ -1814,6 +1817,7 @@ show － showed － shown（見せる。過去形は規則変化）
       },
       {
         heading: '最重要の四語と、have been／have gone',
+        mangaId: 'koko_eigo_s021_manga',
         body: `使用頻度がとくに高く、まちがえると文全体が壊れる四語を確実にする。
 
 ■ 四語の変化
@@ -2015,7 +2019,7 @@ perform → performance ／ exist → existence
 ■ -ness（もっとも規則的）
 kind → kindness ／ dark → darkness ／ ill → illness ／ sad → sadness ／ weak → weakness
 kind → kindness のようにそのまま付けるのが基本だが、「子音字＋y」で終わる語は y を i に変える。
-　happy → happiness ／ busy → business ／ lonely → loneliness
+　happy → happiness ／ lazy → laziness ／ lonely → loneliness
 
 ■ -ity／-ty
 able → ability ／ real → reality ／ active → activity ／ popular → popularity
@@ -2211,7 +2215,7 @@ kind → kindly ／ sudden → suddenly ／ usual → usually ／ final → fina
 ■ つづりが変わる場合
 「子音字＋y」→ y を i に変える：easy → easily ／ happy → happily ／ angry → angrily ／ busy → busily
 「-le」→ le を ly に変える：gentle → gently ／ simple → simply ／ terrible → terribly ／ possible → possibly
-「-ll」→ l を一つ足すだけ：full → fully ／ careful → carefully
+「-ll」で終わる語 → y だけを付ける：full → fully ／ 「-ful」で終わる語 → -ly を付ける（l が二つ並ぶ）：careful → carefully
 true → truly（e を落とす。truely は誤り）
 
 ■ -ly が付いていても形容詞の語
@@ -2523,7 +2527,7 @@ hard（かたい）⇔ soft
 ■ そのほか
 right（正しい）⇔ wrong ／ right（右）⇔ left
 fine（晴れた）⇔ cloudy, rainy ／ fine（元気な）⇔ sick
-free（ひまな）⇔ busy ／ free（無料の）⇔ expensive
+free（ひまな）⇔ busy ／ free（無料の）⇔ paid（有料の）
 
 ■ 値段の言い方に注意
 「この本は高い」は This book is expensive.（○）
@@ -2533,6 +2537,21 @@ free（ひまな）⇔ busy ／ free（無料の）⇔ expensive
 日本語では「高い」の一語で済むが、英語では expensive（物が主語）と high（値段が主語）を使い分ける。安いほうも同じで、cheap（物）／ low（値段）となる。
 
 ⚠ 注意：cheap には「安っぽい・質が悪い」という悪い意味が含まれることがある。値段が手ごろだと言いたいときは inexpensive や reasonable を使うほうが自然である。`,
+      },
+      {
+        heading: 'なぜ反意語は「意味ごと」に持ち、なぜ「高い」が expensive になるのか',
+        mangaId: 'koko_eigo_s028_manga',
+        body: `light には「軽い」と「明るい」という**別々の意味**があり、それぞれに反対語（heavy・dark）があります。日本語では別の語なので一対一で覚えたくなりますが、英語の一語が複数の意味を持つとき、反意語はその意味ごとに決まります。hard（難しい⇔easy／かたい⇔soft）、right（正しい⇔wrong／右⇔left）、free（ひまな⇔busy／無料の⇔paid）も同じです。
+
+「この本は高い」を high と言えないのは、high が**高さ**（背・位置）を表す語で、物の値段の高さは expensive という別の語が受け持つからです。値段そのものを主語にすれば The price is high. と言えます。日本語の「高い」が英語では expensive（物が主語）と high（値段が主語）に分かれます。cheap に「安っぽい」の響きがあるのは、値段の安さから質の低さを連想させるからで、手ごろだと言いたいときは inexpensive・reasonable を使います。
+
+■ 確かめのしかた
+①反意語を答えるとき、**その文でどの意味か**を先に言う。This bag is light.（軽い）→heavy。The room is light.（明るい）→dark。
+②温度は cold－cool－warm－hot の四段階で、両端どうし・内側どうしが対。
+③「高い・安い」は主語で分ける：物が主語→expensive／cheap、price が主語→high／low。× This bike is high.
+④対をセットで声に出す：long-short、high-low、old-new（物）／old-young（人）、easy-difficult、safe-dangerous、full-empty。
+
+★ ここがポイント：反意語は**その語の意味ごと**に持つ（light＝heavy／dark）。「高い」は**高さなら high、値段の高さは expensive**（price が主語なら high）。`,
       },
     ],
     trapExamples: [
@@ -2899,6 +2918,7 @@ big は口語的で幅広く使える。large は数量・面積に使う（a la
     sections: [
       {
         heading: 'say／tell／speak／talk',
+        mangaId: 'koko_eigo_s032_manga',
         body: `どれも「言う・話す」と訳せるが、後ろに続く形がそれぞれ決まっている。形で選ぶ。
 
 ■ say（内容を言う）
@@ -3006,6 +3026,7 @@ lend 人 物／lend 物 to 人
     sections: [
       {
         heading: '数えられる名詞と数えられない名詞',
+        mangaId: 'koko_eigo_s033_manga',
         body: `数量を表す語は、後ろの名詞が数えられるかどうかで変わる。まずこの区別を確認する。
 
 ■ many／much

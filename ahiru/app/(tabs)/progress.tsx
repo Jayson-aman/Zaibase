@@ -6,9 +6,10 @@ import {
   StyleSheet,
   SafeAreaView,
   TouchableOpacity,
-  Alert,
   ActivityIndicator,
   Linking,
+  Modal,
+  TextInput,
 } from 'react-native';
 import { useFocusEffect, router } from 'expo-router';
 import { loadProgress, resetProgress, ProgressData } from '../../store/progress';
@@ -20,65 +21,123 @@ import { fetchMyRanking, RankingResult } from '../../services/ranking';
 import Paywall from '../../components/Paywall';
 import SubjectIcon from '../../components/SubjectIcon';
 import { useAuthUser } from '../../hooks/useAuthUser';
-import { signOutUser, deleteAccount, AuthError } from '../../services/auth';
+import { signOutUser, deleteAccount, AuthError, ReauthRequired } from '../../services/auth';
+import { alertCompat } from '../../utils/dialog';
 
 const SUBJECTS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
 
-function AccountCard() {
-  const { isLoggedIn, email } = useAuthUser();
+function AccountCard({ onChanged }: { onChanged: () => void }) {
+  const { isLoggedIn, email, loading } = useAuthUser();
+  const [pwModal, setPwModal] = useState(false);
+  const [pw, setPw] = useState('');
+  const [deleting, setDeleting] = useState(false);
+  const [loggingOut, setLoggingOut] = useState(false);
+
   async function handleLogout() {
-    Alert.alert('ログアウト', 'ログアウトしますか？', [
+    alertCompat('ログアウト', 'ログアウトしますか？', [
       { text: 'キャンセル', style: 'cancel' },
       {
         text: 'ログアウト',
         style: 'destructive',
         onPress: () => {
-          signOutUser().catch(() => {});
+          if (loggingOut) return;
+          setLoggingOut(true);
+          signOutUser()
+            .then(() => onChanged())
+            .catch(() => {
+              alertCompat('ログアウトできませんでした', '通信状況を確認して、もう一度お試しください。');
+            })
+            .finally(() => setLoggingOut(false));
         },
       },
     ]);
   }
   // Appleのガイドライン5.1.1(v)により、アプリ内でアカウント削除ができる必要がある。
   async function handleDeleteAccount() {
-    Alert.alert(
+    alertCompat(
       'アカウントを削除',
       'アカウントと学習記録を完全に削除します。この操作は取り消せません。\n\n' +
-        '※ サブスクリプションはApple IDに紐づいているため、この操作では解約されません。' +
-        '解約は「設定」アプリ →（あなたの名前）→「サブスクリプション」から行ってください。',
+        '※ 買い切りで解放した内容（公式集・単元）も、アカウントごと失われ、元に戻せません。\n' +
+        '※ サブスクリプションはストアのアカウント（Apple IDなど）やWeb版の決済に紐づいているため、この操作では解約されません。' +
+        '解約は、iPhoneは「設定」アプリ →（あなたの名前）→「サブスクリプション」、AndroidはGoogle Playの「定期購入」、Web版は購入完了メールの「サブスクリプション管理」リンクから行ってください。',
       [
         { text: 'キャンセル', style: 'cancel' },
         {
-          text: '削除する',
+          text: '次へ（パスワードの確認）',
           style: 'destructive',
           onPress: () => {
-            deleteAccount()
-              .then(() => {
-                Alert.alert('削除しました', 'アカウントを削除しました。ご利用ありがとうございました。');
-              })
-              .catch((e) => {
-                Alert.alert(
-                  '削除できませんでした',
-                  e instanceof AuthError ? e.message : 'もう一度お試しください。',
-                );
-              });
+            setPw('');
+            setPwModal(true);
           },
         },
       ],
     );
   }
+  function runDelete() {
+    if (deleting) return;
+    setDeleting(true);
+    deleteAccount(pw)
+      .then(() => {
+        setPwModal(false);
+        setPw('');
+        onChanged();
+        alertCompat('削除しました', 'アカウントを削除しました。ご利用ありがとうございました。');
+      })
+      .catch((e) => {
+        if (e instanceof ReauthRequired) {
+          alertCompat('パスワードを入力してください', e.message);
+          return;
+        }
+        alertCompat('削除できませんでした', e instanceof AuthError ? e.message : 'もう一度お試しください。');
+      })
+      .finally(() => setDeleting(false));
+  }
+
+  // ログイン状態が確定するまでは何も出さない（確定前は一瞬「ログイン」が出てしまう）
+  if (loading) return null;
 
   if (isLoggedIn) {
     return (
       <View style={styles.accountCard}>
         <Text style={styles.accountLabel}>ログイン中</Text>
         <Text style={styles.accountEmail}>{email ?? 'アカウント'}</Text>
-        <Text style={styles.accountNote}>学習の記録やご購入内容を引き継げます。</Text>
+        <Text style={styles.accountNote}>ご購入内容は、同じアカウントでログインすれば別の端末でも引き継げます。</Text>
         <TouchableOpacity style={styles.accountLogout} onPress={handleLogout} activeOpacity={0.85}>
           <Text style={styles.accountLogoutText}>ログアウト</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.accountDelete} onPress={handleDeleteAccount} activeOpacity={0.85}>
           <Text style={styles.accountDeleteText}>アカウントを削除</Text>
         </TouchableOpacity>
+        <Modal visible={pwModal} transparent animationType="fade" onRequestClose={() => setPwModal(false)}>
+          <View style={styles.pwBackdrop}>
+            <View style={styles.pwBox}>
+              <Text style={styles.pwTitle}>パスワードの確認</Text>
+              <Text style={styles.pwNote}>
+                本人確認のため、ログイン中のアカウントのパスワードを入力してください。入力後、アカウントとデータを完全に削除します。
+              </Text>
+              <TextInput
+                style={styles.pwInput}
+                value={pw}
+                onChangeText={setPw}
+                secureTextEntry
+                autoCapitalize="none"
+                autoComplete="current-password"
+                placeholder="パスワード"
+                placeholderTextColor="#9C9186"
+                editable={!deleting}
+                onSubmitEditing={runDelete}
+              />
+              <View style={styles.pwRow}>
+                <TouchableOpacity style={styles.pwCancel} onPress={() => setPwModal(false)} disabled={deleting}>
+                  <Text style={styles.pwCancelText}>やめる</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.pwOk} onPress={runDelete} disabled={deleting || pw.length === 0}>
+                  {deleting ? <ActivityIndicator color="#fff" /> : <Text style={styles.pwOkText}>削除する</Text>}
+                </TouchableOpacity>
+              </View>
+            </View>
+          </View>
+        </Modal>
       </View>
     );
   }
@@ -86,7 +145,7 @@ function AccountCard() {
     <TouchableOpacity style={styles.accountCardCta} onPress={() => router.push('/login')} activeOpacity={0.9}>
       <Text style={styles.accountCtaTitle}>🔑 ログイン / 新規登録</Text>
       <Text style={styles.accountCtaSub}>
-        ログインすると学習の記録やご購入内容を引き継げます
+        ログインすると、ご購入内容を別の端末にも引き継げます
       </Text>
     </TouchableOpacity>
   );
@@ -126,7 +185,7 @@ export default function ProgressScreen() {
   );
 
   function handleReset() {
-    Alert.alert(
+    alertCompat(
       'リセット確認',
       '全ての学習記録を削除しますか？',
       [
@@ -152,7 +211,7 @@ export default function ProgressScreen() {
         .map((q) => ({ question: q.question, answer: q.answer }));
 
       if (items.length === 0) {
-        Alert.alert(
+        alertCompat(
           'まだデータがありません',
           'もう少し問題に挑戦すると、AIコーチが弱点を分析できるようになります。'
         );
@@ -165,7 +224,7 @@ export default function ProgressScreen() {
         const advice = await getWeakPointCoaching(subjectInfo[subjectKey].name, items);
         setCoachAdvice(advice);
       } catch {
-        Alert.alert('エラー', 'AIコーチの呼び出しに失敗しました。もう一度お試しください。');
+        alertCompat('エラー', 'AIコーチの呼び出しに失敗しました。もう一度お試しください。');
       } finally {
         setCoachLoading(false);
       }
@@ -231,7 +290,7 @@ export default function ProgressScreen() {
       '',
       `送信日：${today}`,
       '',
-      '※この成績は本人が自己採点した記録です。目安としてご確認ください。',
+      '※この成績は、アプリが自動で採点した記録（記述問題は含みません）です。目安としてご確認ください。',
     ];
     const subject = encodeURIComponent('【Zaibase受験】学習成績のご報告');
     const body = encodeURIComponent(lines.join('\n'));
@@ -239,7 +298,7 @@ export default function ProgressScreen() {
     try {
       await Linking.openURL(url);
     } catch {
-      Alert.alert(
+      alertCompat(
         'メールを開けませんでした',
         'この端末でメールアプリを開けませんでした。メールアプリが設定されているかご確認ください。',
       );
@@ -260,7 +319,16 @@ export default function ProgressScreen() {
         </View>
 
         {/* アカウント（複数端末・機種変更の引き継ぎ／二重課金防止） */}
-        <AccountCard />
+        <AccountCard
+          onChanged={() => {
+            // ログアウト・削除のあと、前の人の成績・順位・コーチの文が画面に残らないようにする
+            setProgressData({});
+            setRanking(null);
+            setCoachAdvice(null);
+            fetchProgress();
+            loadRanking();
+          }}
+        />
 
         {/* Overall summary */}
         <View style={styles.summaryCard}>
@@ -292,7 +360,7 @@ export default function ProgressScreen() {
                 <Text style={styles.rankingTotal}>/ {ranking.totalUsers}人中</Text>
               </View>
               <Text style={styles.rankingPct}>
-                上位 {Math.round((ranking.rank / ranking.totalUsers) * 100)}% に入っています
+                上位 {ranking.totalUsers > 0 ? Math.round((ranking.rank / ranking.totalUsers) * 100) : 100}% に入っています
               </Text>
               {ranking.rank <= 10 && (
                 <View style={styles.rankingBadge}>
@@ -415,6 +483,18 @@ export default function ProgressScreen() {
           );
         })}
 
+        {/* Feedback entry point */}
+        <TouchableOpacity
+          style={styles.feedbackCard}
+          onPress={() => router.push('/feedback')}
+          activeOpacity={0.85}
+        >
+          <Text style={styles.feedbackCardTitle}>📮 ご意見・ご要望</Text>
+          <Text style={styles.feedbackCardSub}>
+            わからないこと・こうしてほしいことを教えてください
+          </Text>
+        </TouchableOpacity>
+
         {/* Reset button */}
         <TouchableOpacity
           style={styles.resetButton}
@@ -504,6 +584,16 @@ const styles = StyleSheet.create({
   accountLogoutText: { color: '#6E645C', fontWeight: '700', fontSize: 14 },
   accountDelete: { marginTop: 8, alignSelf: 'flex-start', paddingVertical: 8, paddingHorizontal: 16, borderRadius: 10, borderWidth: 1, borderColor: '#FCA5A5' },
   accountDeleteText: { color: '#DC2626', fontWeight: '700', fontSize: 14 },
+  pwBackdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', alignItems: 'center', justifyContent: 'center', padding: 24 },
+  pwBox: { width: '100%', maxWidth: 420, backgroundColor: '#fff', borderRadius: 16, padding: 20, gap: 12 },
+  pwTitle: { fontSize: 18, fontWeight: '800', color: '#221C18' },
+  pwNote: { fontSize: 14, lineHeight: 21, color: '#5A5148' },
+  pwInput: { borderWidth: 1, borderColor: '#D9D2C7', borderRadius: 10, paddingHorizontal: 12, paddingVertical: 10, fontSize: 16, color: '#221C18' },
+  pwRow: { flexDirection: 'row', gap: 10, justifyContent: 'flex-end' },
+  pwCancel: { paddingVertical: 10, paddingHorizontal: 18, borderRadius: 10, borderWidth: 1, borderColor: '#D9D2C7' },
+  pwCancelText: { color: '#5A5148', fontWeight: '700', fontSize: 15 },
+  pwOk: { paddingVertical: 10, paddingHorizontal: 18, borderRadius: 10, backgroundColor: '#DC2626', minWidth: 96, alignItems: 'center' },
+  pwOkText: { color: '#fff', fontWeight: '800', fontSize: 15 },
   accountCardCta: {
     backgroundColor: '#B5622E',
     marginHorizontal: 20,
@@ -805,9 +895,30 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     minWidth: 4,
   },
-  resetButton: {
+  feedbackCard: {
     marginHorizontal: 20,
     marginTop: 24,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 14,
+    paddingVertical: 16,
+    paddingHorizontal: 18,
+    borderWidth: 1,
+    borderColor: '#E8DCC8',
+  },
+  feedbackCardTitle: {
+    fontSize: 15,
+    fontWeight: '800',
+    color: '#221C18',
+    marginBottom: 4,
+  },
+  feedbackCardSub: {
+    fontSize: 12,
+    color: '#888',
+    fontWeight: '500',
+  },
+  resetButton: {
+    marginHorizontal: 20,
+    marginTop: 12,
     backgroundColor: '#FFF0F0',
     borderRadius: 14,
     paddingVertical: 16,

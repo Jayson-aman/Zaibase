@@ -28,6 +28,19 @@ fi
 rm -rf "$OUT"
 
 echo
+echo "━━━ 2b/4 採点の検査（全問） ━━━"
+OUT=$(mktemp -d)
+if npx --yes esbuild@0.23.1 scripts/verify-grading.ts \
+     --bundle --platform=node --format=cjs --loader:.png=empty \
+     --outfile="$OUT/verify-grading.cjs" --log-level=error; then
+  node "$OUT/verify-grading.cjs" | tail -3 || fail=1
+  [ "${PIPESTATUS[0]}" -eq 0 ] || fail=1
+else
+  echo "⚠ 採点の検査のビルドに失敗"; fail=1
+fi
+rm -rf "$OUT"
+
+echo
 echo "━━━ 3/4 コード監査（静的） ━━━"
 node scripts/audit-code.mjs || fail=1
 

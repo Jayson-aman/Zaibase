@@ -3,18 +3,45 @@
 // ───────────────────────────────────────────────────────────────
 // 各教科のデータは data/formulas-*.ts に分割。ここで一つにまとめる。
 import type { FormulaSection } from './formulas-types';
+import { FORMULA_DIAGRAMS } from './formulas-diagrams';
 import { sansuFormulas } from './formulas-sansu';
+import { sansuTsuikaFormulas } from './formulas-sansu-tsuika';
+import { sansuTsuika2Formulas } from './formulas-sansu-tsuika2';
+import { sansuTsuika3Formulas } from './formulas-sansu-tsuika3';
+import { sansuTsuika4Formulas } from './formulas-sansu-tsuika4';
+import { sansuTsuika5Formulas } from './formulas-sansu-tsuika5';
+import { sansuTsuika6Formulas } from './formulas-sansu-tsuika6';
 import { kokoSugakuFormulas } from './formulas-koko-sugaku';
+import { kokoSugakuTsuikaFormulas } from './formulas-koko-sugaku-tsuika';
 import { rikaFormulas } from './formulas-rika';
 import { rikaButsuriKagakuFormulas } from './formulas-rika-butsuri-kagaku';
+import { rikaTsuika2Formulas } from './formulas-rika-tsuika2';
+import { rikaTsuika3Formulas } from './formulas-rika-tsuika3';
+import { rikaTsuika4Formulas } from './formulas-rika-tsuika4';
+import { rikaTsuika5Formulas } from './formulas-rika-tsuika5';
+import { rikaTsuika6Formulas } from './formulas-rika-tsuika6';
+import { rikaTsuika7Formulas } from './formulas-rika-tsuika7';
 import { kokoRikaFormulas } from './formulas-koko-rika';
+import { kokoRikaTsuikaFormulas } from './formulas-koko-rika-tsuika';
 import { shakaiFormulas } from './formulas-shakai';
 import { shakaiTsuikaFormulas } from './formulas-shakai-tsuika';
+import { shakaiTsuika2Formulas } from './formulas-shakai-tsuika2';
+import { shakaiTsuika3Formulas } from './formulas-shakai-tsuika3';
+import { shakaiTsuika4Formulas } from './formulas-shakai-tsuika4';
+import { shakaiTsuika5Formulas } from './formulas-shakai-tsuika5';
+import { shakaiTsuika6Formulas } from './formulas-shakai-tsuika6';
+import { shakaiTsuika7Formulas } from './formulas-shakai-tsuika7';
+import { shakaiTsuika8Formulas } from './formulas-shakai-tsuika8';
 import { kokoShakaiFormulas } from './formulas-koko-shakai';
+import { kokoShakaiTsuikaFormulas } from './formulas-koko-shakai-tsuika';
 import { kokugoFormulas } from './formulas-kokugo';
+import { kokugoTsuikaFormulas } from './formulas-kokugo-tsuika';
 import { kokoKokugoFormulas } from './formulas-koko-kokugo';
+import { kokoKokugoTsuikaFormulas } from './formulas-koko-kokugo-tsuika';
 import { eigoFormulas } from './formulas-eigo';
+import { eigoTsuikaFormulas } from './formulas-eigo-tsuika';
 import { eigoKokoFormulas } from './formulas-eigo-koko';
+import { eigoKokoTsuikaFormulas } from './formulas-eigo-koko-tsuika';
 
 export type Subject = '算数' | '国語' | '理科' | '社会' | '英語';
 
@@ -26,15 +53,90 @@ export const SUBJECTS: { key: Subject; emoji: string; color: string }[] = [
   { key: '英語', emoji: '🔤', color: '#9B59B6' },
 ];
 
-// 既存の無料項目（rikaFormulas・shakaiFormulas）はそのまま。あとから足した分は
-// 買い切り（locked: true）の別ファイルにして後ろに連結する。既存ファイルを
-// 編集しないので、無料だった項目が誤って有料になることがない。
-export const FORMULAS: Record<Subject, FormulaSection[]> = {
-  算数: [...sansuFormulas, ...kokoSugakuFormulas],
-  国語: [...kokugoFormulas, ...kokoKokugoFormulas],
-  理科: [...rikaFormulas, ...rikaButsuriKagakuFormulas, ...kokoRikaFormulas],
-  社会: [...shakaiFormulas, ...shakaiTsuikaFormulas, ...kokoShakaiFormulas],
-  英語: [...eigoFormulas, ...eigoKokoFormulas],
+// 2026/9/29 方針変更：全教科・両受験種別とも「ファイル先頭の3項目だけ無料、
+// 残りは¥50買い切り（locked: true）」に統一した。それまでは算数・理科・社会の
+// 元からある項目（95・62・86件）が無料のままだった。
+// Pro/Max購読者はロックに関係なく全項目を読める（formulas.tsx の bypassLock）。
+// ⚠️ iOS/Androidの¥50商品（com.zaibase.exam.formulaunlock）がストアに未登録の
+// あいだは、非購読者には「準備中です」ボタンが出るだけで購入できない。
+const FORMULAS_RAW: Record<Subject, FormulaSection[]> = {
+  算数: [...sansuFormulas, ...sansuTsuikaFormulas, ...sansuTsuika2Formulas, ...sansuTsuika3Formulas, ...sansuTsuika4Formulas, ...sansuTsuika5Formulas, ...sansuTsuika6Formulas, ...kokoSugakuFormulas, ...kokoSugakuTsuikaFormulas],
+  国語: [...kokugoFormulas, ...kokugoTsuikaFormulas, ...kokoKokugoFormulas, ...kokoKokugoTsuikaFormulas],
+  理科: [...rikaFormulas, ...rikaButsuriKagakuFormulas, ...rikaTsuika2Formulas, ...rikaTsuika3Formulas, ...rikaTsuika4Formulas, ...rikaTsuika5Formulas, ...rikaTsuika6Formulas, ...rikaTsuika7Formulas, ...kokoRikaFormulas, ...kokoRikaTsuikaFormulas],
+  社会: [...shakaiFormulas, ...shakaiTsuikaFormulas, ...shakaiTsuika2Formulas, ...shakaiTsuika3Formulas, ...shakaiTsuika4Formulas, ...shakaiTsuika5Formulas, ...shakaiTsuika6Formulas, ...shakaiTsuika7Formulas, ...shakaiTsuika8Formulas, ...kokoShakaiFormulas, ...kokoShakaiTsuikaFormulas],
+  英語: [...eigoFormulas, ...eigoTsuikaFormulas, ...eigoKokoFormulas, ...eigoKokoTsuikaFormulas],
 };
+
+// 動く図解スライドを、label が一致する項目に取りつける（項目に figure が無いときだけ）。
+// あわせて「受験種別×教科ごとに先頭 FREE_FORMULAS_PER_CELL 項目は無料」を適用する。
+// 2026/9/29 3→8。3項目だけでは「公式集がどういうものか」を判断できず、
+// 「少ない」と受け取られたため。残りは¥200／まとめ買い¥2,980。
+export const FREE_FORMULAS_PER_CELL = 8;
+function withDiagrams(sections: FormulaSection[]): FormulaSection[] {
+  // 受験種別（中学受験／高校受験）ごとに、見える順で先頭の FREE_FORMULAS_PER_CELL 個だけを無料にする。
+  // 受験種別を決めていないセクション（英語がこれにあたる）はどちらの画面にも出るので、
+  // 両方の数え方に1つぶん入れる。別の「どちらも」という数え方を作ると、
+  // 中学受験の画面で8個＋8個の16個が無料になってしまう（英語で実際に起きた）。
+  const seen = { chugaku: 0, koko: 0 };
+  return sections.map((sec) => {
+    return {
+      ...sec,
+      items: sec.items.map((it) => {
+        let idx: number;
+        if (sec.examType === 'chugaku') {
+          idx = seen.chugaku;
+          seen.chugaku = idx + 1;
+        } else if (sec.examType === 'koko') {
+          idx = seen.koko;
+          seen.koko = idx + 1;
+        } else {
+          idx = Math.max(seen.chugaku, seen.koko);
+          seen.chugaku = idx + 1;
+          seen.koko = idx + 1;
+        }
+        const free = idx < FREE_FORMULAS_PER_CELL;
+        // 項目に直接書かれた図があれば優先する。ただし、あとから足した動く図解のほうがスライドが多いときはそちらを使う。
+        const dg = FORMULA_DIAGRAMS[it.label];
+        const fig = !dg ? it.figure : !it.figure || ((dg.steps?.length ?? 0) > ((it.figure as { steps?: string[] }).steps?.length ?? 0)) ? dg : it.figure;
+        // 無料の枠を超えた項目は、データに locked が書かれていなくても必ずロックにする
+        // （書き忘れた項目が、いつまでも無料のまま残るのを防ぐ）。
+        return { ...it, locked: free ? false : true, ...(fig ? { figure: fig } : {}) };
+      }),
+    };
+  });
+}
+
+export const FORMULAS: Record<Subject, FormulaSection[]> = {
+  算数: withDiagrams(FORMULAS_RAW.算数),
+  国語: withDiagrams(FORMULAS_RAW.国語),
+  理科: withDiagrams(FORMULAS_RAW.理科),
+  社会: withDiagrams(FORMULAS_RAW.社会),
+  英語: withDiagrams(FORMULAS_RAW.英語),
+};
+
+/** まとめ買いのID（受験種別×教科）。formulaUnlocks の unlocked に、公式のlabelと並べて入る。 */
+export function formulaBundleId(examType: 'chugaku' | 'koko', subject: Subject): string {
+  return `bundle:${examType}:${subject}`;
+}
+
+/** その受験種別×教科で、ロックされている項目のlabel一覧。 */
+export function lockedFormulaLabels(examType: 'chugaku' | 'koko', subject: Subject): string[] {
+  const out: string[] = [];
+  for (const sec of FORMULAS[subject]) {
+    if (sec.examType != null && sec.examType !== examType) continue;
+    for (const it of sec.items) if (it.locked) out.push(it.label);
+  }
+  return out;
+}
+
+/** その受験種別×教科で、ロックされている項目の数（まとめ買いで読めるようになる数）。 */
+export function countLockedFormulas(examType: 'chugaku' | 'koko', subject: Subject): number {
+  let n = 0;
+  for (const sec of FORMULAS[subject]) {
+    if (sec.examType != null && sec.examType !== examType) continue;
+    for (const it of sec.items) if (it.locked) n++;
+  }
+  return n;
+}
 
 export type { FormulaSection, FormulaItem, FormulaExample, FormulaQuizItem } from './formulas-types';

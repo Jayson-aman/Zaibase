@@ -1,4 +1,6 @@
 import React from 'react';
+import { schoolQuestionStats } from '../../data/school-counts';
+import { ALL_COURSES, type CourseInfo } from '../../data/courses';
 import {
   View,
   Text,
@@ -47,7 +49,7 @@ type SchoolGroup = {
   schools: SchoolEntry[];
 };
 
-const SCHOOL_GROUPS: SchoolGroup[] = [
+const BASE_SCHOOL_GROUPS: SchoolGroup[] = [
   {
     label: '関関同立附属',
     icon: '🎓',
@@ -102,6 +104,73 @@ const SCHOOL_GROUPS: SchoolGroup[] = [
     ],
   },
 ];
+
+// 問題データがあるのに一覧に載っていなかった学校を、courses.ts の定義から自動で足す
+// （高校受験の学校が4校しか出ていなかった。データには13校以上あった。2026/10/7）。
+// 名前・偏差値・男女・MAX限定の別は courses.ts が持っているので、ここに二重に書かない。
+function entryFromCourse(c: CourseInfo): SchoolEntry {
+  return {
+    key: c.key,
+    name: c.name,
+    emoji: c.emoji,
+    hensachi: c.hensachi ?? '',
+    gender: c.gender ?? '共学',
+    tier: c.maxOnly ? 'max' : 'pro',
+  };
+}
+
+// 学校の地域。名前だけでは、どの学校が関西・関東・名古屋・福岡なのか分からなかったので、
+// 地域ごと（さらに中学受験／高校受験ごと）に分けて並べる（2026/10/8、ユーザー要望）。
+type RegionKey = 'kansai' | 'kanto' | 'tokai' | 'kyushu' | 'national';
+
+const REGIONS: { key: RegionKey; label: string; icon: string; color: string }[] = [
+  { key: 'kansai',   label: '関西（大阪・兵庫・京都・奈良）', icon: '🏯', color: '#E74C3C' },
+  { key: 'kanto',    label: '関東（東京・神奈川）',           icon: '🗼', color: '#A855F7' },
+  { key: 'tokai',    label: '東海（名古屋）',                 icon: '⚓', color: '#0EA5E9' },
+  { key: 'kyushu',   label: '九州（福岡）',                   icon: '🌟', color: '#10B981' },
+  { key: 'national', label: '全国',                           icon: '🏆', color: '#C8A84B' },
+];
+
+// 高校の学校は、key だけでは地域が決まらないので、ここに書く。
+const KANTO_KOKO = new Set(['koko-hibiya', 'koko-waseda', 'koko-meidai', 'koko-kasei', 'koko-keio', 'koko-azabu']);
+const TOKAI_KOKO = new Set(['koko-tokai', 'koko-taki', 'koko-nanzan']);
+const KYUSHU_KOKO = new Set(['koko-kurume', 'koko-seinan', 'koko-ohori']);
+
+function regionOf(key: string): RegionKey {
+  if (key.startsWith('tokyo-') || KANTO_KOKO.has(key)) return 'kanto';
+  if (key.startsWith('nagoya-') || TOKAI_KOKO.has(key)) return 'tokai';
+  if (key.startsWith('fukuoka-') || KYUSHU_KOKO.has(key)) return 'kyushu';
+  if (key === 'koko-top') return 'national';
+  // 上のどれでもない学校は、大阪・兵庫・奈良の学校（関西）
+  return 'kansai';
+}
+
+function buildSchoolGroups(): SchoolGroup[] {
+  const listed = new Set(BASE_SCHOOL_GROUPS.flatMap((g) => g.schools.map((s) => s.key)));
+  // 問題データがあるのに一覧に載っていなかった学校を、courses.ts の定義から足す
+  // （高校受験の学校が4校しか出ていなかった）。偏差値の定義があるコースだけが「学校」。
+  const extra = ALL_COURSES.filter((c) => c.hensachi && !listed.has(c.key)).map(entryFromCourse);
+  const all = [...BASE_SCHOOL_GROUPS.flatMap((g) => g.schools), ...extra];
+  const examOf = (key: string): 'chugaku' | 'koko' =>
+    ALL_COURSES.find((c) => c.key === key)?.examType ?? (key.startsWith('koko-') ? 'koko' : 'chugaku');
+
+  const groups: SchoolGroup[] = [];
+  for (const r of REGIONS) {
+    for (const exam of ['chugaku', 'koko'] as const) {
+      const schools = all.filter((s) => regionOf(s.key) === r.key && examOf(s.key) === exam);
+      if (schools.length === 0) continue;
+      groups.push({
+        label: `${r.label}｜${exam === 'chugaku' ? '中学受験' : '高校受験'}`,
+        icon: r.icon,
+        color: r.color,
+        schools,
+      });
+    }
+  }
+  return groups;
+}
+
+const SCHOOL_GROUPS: SchoolGroup[] = buildSchoolGroups();
 
 export default function SchoolsScreen() {
   const router = useRouter();
@@ -166,6 +235,11 @@ export default function SchoolsScreen() {
                       <Text style={styles.schoolName}>{school.name}</Text>
                       {school.note && <Text style={styles.schoolNote}>{school.note}</Text>}
                       <Text style={styles.schoolMeta}>偏差値 {school.hensachi}　{school.gender}</Text>
+                      {schoolQuestionStats(school.key).total > 0 && (
+                        <Text style={styles.schoolCount}>
+                          {schoolQuestionStats(school.key).subjects}科・全{schoolQuestionStats(school.key).total}問（各科目 無料5問）
+                        </Text>
+                      )}
                     </View>
                   </View>
                   <View style={styles.schoolRight}>
@@ -272,6 +346,7 @@ const styles = StyleSheet.create({
     fontSize: 11,
     marginTop: 1,
   },
+  schoolCount: { fontSize: 12, fontWeight: '800', color: '#0F766E', marginTop: 2 },
   schoolMeta: {
     color: D.muted,
     fontSize: 11,

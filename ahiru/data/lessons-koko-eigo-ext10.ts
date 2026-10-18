@@ -398,6 +398,7 @@ The next week, six students brought different answers. Some of them were wrong, 
       },
       {
         heading: '主語と動詞の見つけ方',
+        mangaId: 'koko_eigo_s340_manga',
         body: `■ 主語（S）の見つけ方
 文の先頭から見て、前置詞の付いていない最初の名詞（または代名詞）が主語である。
 例）Mr. Green teaches science 〜 → S＝Mr. Green、V＝teaches
@@ -501,15 +502,54 @@ Last week, a young woman who used to visit the shop as a child opened a small ca
         heading: '主語のかたまりを( )でくくる',
         body: `■ 例1：The man (who ran it for forty years) was ninety years old.
 S＝The man、V＝was。( )の中は「それを40年間営んでいた」という説明。日本語では「40年間その店をやっていた男性は90歳だった」となり、説明が主語の前に来る。英語は後ろ、日本語は前、という語順の差を意識する。
+【解法】
+【何を聞かれているか】文の主語（S）と動詞（V）を見つけて、意味をとる。
+【なぜこの考え方か】英語では、名詞を説明する語句が名詞のうしろに付く。説明が長くなると、どこまでが主語で、本物の動詞がどれなのか分からなくなる。そこで、説明のかたまりを( )でくくって外し、のこった骨組みを先に読む。
+【ステップ1】The man のうしろに who ran it for forty years が付いている。who は関係代名詞で、The man を説明している。この部分を( )でくくる。
+【ステップ2】( )の中にも動詞 ran があるが、これは「営んでいた」という説明の動詞なので、文全体の V ではない。
+【ステップ3】( )を外した骨組みは The man was ninety years old. S＝The man、V＝was と決まる。
+【ステップ4】意味をとる。( )は「それを40年間営んでいた」。日本語は説明を名詞の前に置くので、「40年間その店をやっていた男性は90歳だった」となる。
+【答え】S＝The man、V＝was。訳は「40年間その店をやっていた男性は90歳だった」。
+【確かめ】( )を取った The man was ninety years old.（その男性は90歳だった）が、意味の通る文になっているかを見る。通れば( )のくくり方は正しい。
+【よくあるまちがい】ran を文全体の動詞と考えて、was との二つの動詞が並んでいるように見てしまう。( )の中の動詞は説明の一部である。
 
 ■ 例2：The books (that he sold) were not new.
 S＝The books（複数）、V＝were。( )内の he sold につられて was と書くと誤り。動詞の形は「本体の名詞」に合わせる。
+【解法】
+【何を聞かれているか】主語（S）と動詞（V）を見つけ、be動詞の形が主語に合っているかを確かめる。
+【なぜこの考え方か】動詞の形（単数か複数か）は、文全体の主語である「本体の名詞」で決まる。( )の中の語は説明であって、主語ではない。だから、本体の名詞を先に見つけ、( )の中の語は見ないようにする。
+【ステップ1】books のうしろの that he sold を( )でくくる。that は関係代名詞で、he sold the books（彼がその本を売った）の the books にあたる。
+【ステップ2】( )の中の he sold は説明なので、文全体の S・V ではない。
+【ステップ3】骨組みは The books were not new. 本体は The books（複数）なので、be動詞は were。he は単数だが、( )の中なので動詞の形には関係しない。
+【答え】S＝The books、V＝were。訳は「彼が売った本は新しくなかった」。
+【確かめ】( )を外した The books were not new. で、books（複数）と were が合っているか確かめる。
+【よくあるまちがい】( )の中の he につられて was と書く。動詞の形は、本体の名詞に合わせる。
 
 ■ 例3：The thing (I remember best) is his memory.
 The thing の後ろにいきなり I remember と〈S＋V〉が続いている。これは関係代名詞 that（または which）が省略された形。「名詞＋S＋V」と並んだら省略を疑う。
+【解法】
+【何を聞かれているか】主語（S）と動詞（V）を見つけ、( )の中の文の成り立ちを説明する。
+【なぜこの考え方か】名詞のうしろに〈S＋V〉がいきなり続く形は、関係代名詞（that / which）が省略されたものである。目的語の働きをする関係代名詞は、なくても意味が通じるので省略できる。この規則を知っていれば、I remember を文全体の S・V と取りちがえない。
+【ステップ1】The thing のうしろに I remember best が続いている。名詞＋S＋V の並びなので、that の省略を疑う。
+【ステップ2】省略を戻すと The thing (that) I remember best。remember の目的語が The thing にあたる（その事を覚えている）。この部分を( )でくくる。
+【ステップ3】( )を外した骨組みは The thing is his memory. S＝The thing、V＝is。
+【ステップ4】意味をとる。「私がいちばんよく覚えていること」が主語で、それが「彼の記憶力」だと言っている。
+【答え】S＝The thing、V＝is。訳は「いちばん覚えているのは彼の記憶力だ」。
+【確かめ】that を入れて The thing that I remember best is his memory. と読んでも、自然な文になるかを見る。自然なら、省略の判断は正しい。
+【よくあるまちがい】I remember を文全体の主語と動詞だと考えて、The thing を浮いた語にしてしまう。
 
 ■ 例4：a young woman (who used to visit the shop as a child) opened a small cafe
 S＝a young woman、V＝opened。( )が9語もあるので、opened を見失いやすい。
+【解法】
+【何を聞かれているか】長い( )がある文で、主語（S）と動詞（V）を見つける。
+【なぜこの考え方か】( )が長いと、( )の中の動詞に目を奪われて、本物の動詞を見落とす。本物の V は( )が閉じた直後に出てくるので、( )を先にくくって外せば、骨組みだけが見える。
+【ステップ1】a young woman のうしろの who used to visit the shop as a child を( )でくくる。who は関係代名詞で、a young woman を説明している。
+【ステップ2】( )の中は9語ある。used to visit は「以前はよく訪れていた」、as a child は「子どものころ」。この visit は説明の動詞で、文全体の V ではない。
+【ステップ3】( )を外すと a young woman opened a small cafe。S＝a young woman、V＝opened と決まる。
+【ステップ4】意味をとる。「子どものころによくその店に来ていた若い女性が、小さなカフェを開いた」。
+【答え】S＝a young woman、V＝opened
+【確かめ】( )を取った a young woman opened a small cafe（若い女性が小さなカフェを開いた）で文が成り立つかを見る。本文の第4段落とも合っている。
+【よくあるまちがい】( )の中の visit を文の V と考えて、「若い女性が店を訪れた」で読み終えてしまう。( )が閉じた直後の語を見る。
 
 例）The old bookshop (near the station) closed last month.
 　　前置詞句も主語を長くする。S＝The old bookshop、V＝closed。
@@ -599,7 +639,7 @@ After the study, the club wrote a report for the school newspaper. In the report
 For one year, / the students / in the science club / at our school / measured / the temperature / of the schoolyard.
 外す部分：For one year（副詞句）／in the science club（students の説明）／at our school（club の説明）／of the schoolyard（temperature の説明）
 残る骨：The students measured the temperature.（生徒たちが気温をはかった）
-20語の文が5語になる。長文ではこのレベルの理解で十分先へ進める。
+18語の文が5語になる。長文ではこのレベルの理解で十分先へ進める。
 
 ■ 第2文
 They took the temperature / at noon / on the fifteenth day / of every month.
@@ -801,6 +841,7 @@ be 動詞の部分が変化するだけで、構造は同じである。
       },
       {
         heading: '形式主語 it と、it takes 〜',
+        mangaId: 'koko_eigo_s344_manga',
         body: `■ It is 〜 for 人 to do
 It is not easy for the students who come by bus.
 この it は「それ」ではなく、後ろの内容を先に示すための形式主語である。本来はここに to 以下が入るが、この文では前後の文脈から「バス通学すること」が省略されている。完全な形なら It is not easy for the students to come by bus. となる。
@@ -875,6 +916,7 @@ Small changes can save an animal. We do not always have to build something new. 
       },
       {
         heading: '3つの手順で指示内容を決める',
+        mangaId: 'koko_eigo_s345_manga',
         body: `■ 手順①：数を合わせる
 it → 単数の名詞　they / them → 複数の名詞
 a turtle eats it by mistake の it は単数なので、候補は a plastic bag か a jellyfish。
@@ -971,6 +1013,7 @@ Our teacher said that this experience taught us something important. When we can
       },
       {
         heading: '内容を指す this / that の見つけ方',
+        mangaId: 'koko_eigo_s346_manga',
         body: `■ 名詞を探しても見つからないとき
 This was a simple idea, but it worked.
 this にあたる名詞は直前にない。指しているのは「2週間、残した食べ物の重さを記録し、その数字を教室の壁に貼り出したこと」という前段落の内容全体である。「これは単純な考えだったが、うまくいった」となる。
@@ -988,7 +1031,7 @@ this experience は「この経験」で、this が experience という名詞�
 
 ★ ポイント：this / that の後ろに名詞が続くか（this idea）、単独で主語になっているか（This was 〜）をまず見る。単独なら内容を指している可能性が高い。
 
-⚠ 注意：it が内容を指すこともある。We just saw the number and thought about it. の it は the number（数字）だが、直後の it worked の it は「その考え」を指す。同じ it でも指す先が違うので、1文ごとに確認する。`,
+⚠ 注意：it が内容を指すこともある。We just saw the number and thought about it. の it は the number（数字）だが、前に出てきた it worked の it は「その考え」を指す。同じ it でも指す先が違うので、1文ごとに確認する。`,
       },
       {
         heading: '記述で「〜こと」とまとめる練習',
@@ -1004,7 +1047,7 @@ this experience は「この経験」で、this が experience という名詞�
 ④指示語をその日本語に置きかえて読み直し、文が通るか確認する。
 
 ■ 字数の目安
-「30字以内」なら中心だけを残す：残した食べ物の重さを記録して教室にはり出したこと（26字）。
+「30字以内」なら中心だけを残す：残した食べ物の重さを記録して教室にはり出したこと（24字）。
 「50字程度」なら条件（2週間・全員が見られる）も入れる。
 
 ■ 数値の扱い
@@ -1068,6 +1111,7 @@ We are going to do the same survey again next year with the new first-year stude
       },
       {
         heading: 'one / another / the other の使い分け',
+        mangaId: 'koko_eigo_s347_manga',
         body: `■ one＝不特定の一つ
 One student said, "I see many cats 〜"（ある生徒が言った）
 だれか特定できない一人を指す。it に置きかえられない。
@@ -1263,6 +1307,7 @@ This does not mean that tablets are bad. A tablet can hold a thousand books, and
       },
       {
         heading: '逆接の語の後ろに主張がある',
+        mangaId: 'koko_eigo_s349_manga',
         body: `■ 第1段落の構造
 Many people say that 〜（多くの人は〜と言う）＝一般論
 However, some studies show a difference.（しかし、いくつかの研究は違いを示している）＝筆者の立場
@@ -1453,6 +1498,7 @@ The lesson is clear. When a living thing disappears, there is usually more than 
       },
       {
         heading: '原因と結果の向きをそろえる',
+        mangaId: 'koko_eigo_s351_manga',
         body: `■ 矢印で整理する
 Because rivers were covered with concrete, the snails lost their homes.
 　川がコンクリートで覆われた（原因）→ カワニナが住みかを失った（結果）
@@ -1653,6 +1699,7 @@ Some schools in Japan have begun to change. One school in Chiba stopped morning 
       },
       {
         heading: '対比を表に整理する',
+        mangaId: 'koko_eigo_s353_manga',
         body: `■ 日本とフィンランドの対比
 　　　　　　　日本　　　　　　　　　　フィンランド
 睡眠時間　　　7.0時間　　　　　　　　8.4時間
@@ -1771,8 +1818,8 @@ Farmers can help too. Some of them now leave a small part of their fields withou
       },
       {
         heading: '要旨をまとめる練習',
-        body: `■ 30字程度でまとめる
-ミツバチは食料生産に欠かせないが数が減っており、市民も農家もできることがある。（38字）
+        body: `■ 40字程度でまとめる
+ミツバチは食料生産に欠かせないが数が減っており、市民も農家もできることがある。（39字）
 
 ■ まとめるときのルール
 ①主題文だけを使う。具体例（りんご・いちご）は入れない。
@@ -1844,6 +1891,7 @@ Big inventions are not born finished. They grow through many failures, and the p
       },
       {
         heading: '結論が後ろにある型を見抜く',
+        mangaId: 'koko_eigo_s355_manga',
         body: `■ 各段落の性格
 第1段落：1958年・43歳・3時間・2日 → 事実の羅列（年号と数値）
 第2段落：周囲の反対と、それでも続けたこと → 出来事
@@ -2172,7 +2220,7 @@ had come（来ていた）／had died（亡くなっていた）／had asked（�
 
 ■ 選択肢問題での考え方
 「このときの老人の気持ちとして最も適切なものはどれか」
-ア 箱を早く受け取りたいといらだっている → 10分待たせたのはケンタのほうで、根拠がない。
+ア 箱を早く受け取りたいといらだっている → ケンタを10分待たせたのは老人のほうで、老人がいらだつ根拠がない。
 イ 友人が約束を果たしたことに深く心を動かされている → 手の震え・沈黙・せりふと一致。
 ウ 箱の出来ばえに満足していない → 本文に不満を示す描写がない。
 
@@ -2458,7 +2506,7 @@ He almost smiled.（ほとんど笑いかけた）→ 折れた瞬間。
 
 ★ ポイント：会話文では、せりふの長さと語調が感情を表す。短く切り返すほど感情が強い。
 
-⚠ 注意：sara と takumi の関係は her brother（サラの兄または弟）と書かれている。英語の brother だけでは年上か年下かわからない。「兄」と決めつけて解答すると、記述問題で減点されることがある。`,
+⚠ 注意：Sara と Takumi の関係は her brother（サラの兄または弟）と書かれている。英語の brother だけでは年上か年下かわからない。「兄」と決めつけて解答すると、記述問題で減点されることがある。`,
       },
       {
         heading: '会話に隠れた事情を読み取る',
@@ -2644,11 +2692,31 @@ Engineers look at plants and animals, find a useful design, and use the same ide
 発見：カワセミはほとんど水しぶきを立てずに水に入る。くちばしが細長い。
 応用：似た形の先頭部にした
 結果：音が小さくなり、電気の使用量も減った
+【解法】
+【何を聞かれているか】第2段落の新幹線の例が、「問題→発見→応用→結果」の流れで、どう説明されているかを整理する。
+【なぜこの考え方か】説明文の「例」は、定義（自然をまねて新しいものを作ること）が本当だと示すために置かれている。例の出来事を決まった順に分けて読むと、定義とのつながりが見え、設問で問われる場所をすぐ探せる。
+【ステップ1】問題を探す。the Shinkansen made a loud noise when it came out of a tunnel の部分。トンネルから出るときの大きな音が、困りごとである。
+【ステップ2】発見を探す。A kingfisher can enter water almost without a splash. Its beak is long and thin. 自然の側（カワセミ）に、ほとんどしぶきを立てない仕組みがあり、その理由は細長いくちばしだと分かる。
+【ステップ3】応用を探す。The team gave the train a similar nose. 似た形の先頭部を、新幹線に取り入れた。
+【ステップ4】結果を探す。the noise became smaller. The new train also used less electricity. 音が小さくなり、also のあとで電気の使用量も減ったと、結果が一つ増えている。
+【答え】問題＝トンネルでの大きな音、発見＝カワセミの細長いくちばし、応用＝似た形の先頭部、結果＝音が小さくなり電気も減った。
+【確かめ】本文に戻って確かめる。四つがそれぞれ本文の文に対応しているか、そして「自然を観察して、機械に使う」という定義の流れに合っているかを見る。
+【よくあるまちがい】almost without a splash を「まったくしぶきを立てない」と訳す。almost があるので、「ほとんど立てない」が正しい。
 
 ■ 例2（第3段落）：ヤモリとテープ
 発見：ヤモリの足には無数の細かい毛があり、壁を歩ける
 応用：同じ構造のテープを作った
 結果：のりなしでくっつき、何度も使える
+【解法】
+【何を聞かれているか】第3段落のヤモリの例が、どんな流れで説明されているかを整理する。
+【なぜこの考え方か】例が二つあるときは、二つを同じ型で整理すると、共通点が見える。この共通点が、筆者の言いたいこと（要旨）になる。だから、例1と同じ「発見→応用→結果」の型にあてはめて読む。
+【ステップ1】発見を探す。The feet of a gecko have millions of very small hairs, and these hairs let the animal walk on a wall. ヤモリの足には細かい毛が無数にあり、その毛のおかげで壁を歩ける。let ＋ 動物 ＋ 動詞は、「〜できるようにする」という意味。
+【ステップ2】応用を探す。Scientists made a tape with the same structure. 科学者が、同じ構造のテープを作った。
+【ステップ3】結果を探す。It sticks without glue and can be used again and again. のりなしでくっつき、くり返し使える。
+【ステップ4】例1とくらべる。例1にあった「問題」は、この例には書かれていない。それでも、発見→応用→結果の流れは同じである。
+【答え】発見＝ヤモリの足の無数の細かい毛、応用＝同じ構造のテープ、結果＝のりなしでくっつき、何度も使える。
+【確かめ】本文に戻って確かめる。It が指すのは直前に作られた tape（ヤモリではない）。指すものを入れかえて読み、意味が通るかを見る。
+【よくあるまちがい】It sticks の It を gecko と取ってしまう。直前の文の主語は科学者が作った tape なので、It は the tape を指す。
 
 ■ 二つの例の共通点
 どちらも「自然の観察 → 人工物への応用 → 性能の向上」という同じ流れである。共通点こそが筆者の主張であり、最終段落の Nature has been testing designs for millions of years. につながる。
@@ -3217,7 +3285,7 @@ Australia was chosen by 70 students, the United States by 60, Italy by 45 〜
     sections: [
       {
         heading: '英文とグラフを読んでみよう',
-        body: `The population of Minami Town has changed a lot in fifty years. In 1975 it was 12,000. In 1985 it rose to 14,000, the highest number in the town's history. After that it began to fall: 11,000 in 1995, 8,000 in 2005, and 6,000 in 2015.
+        body: `The population of Minami Town has changed a lot in forty years. In 1975 it was 12,000. In 1985 it rose to 14,000, the highest number in the town's history. After that it began to fall: 11,000 in 1995, 8,000 in 2005, and 6,000 in 2015.
 
 The reason for the rise in the 1980s was a factory. It opened in 1978 and gave jobs to about 900 people. When the factory closed in 1990, many families moved to the city.
 
@@ -3846,14 +3914,14 @@ Three families from the city have moved to the village since 2020. Two of them j
 ⚠ 注意：not the rice, but the people は not A but B（AではなくB）の形。「本当の成果は米ではなく人だ」。この一文が題名の手がかりになっている。`,
       },
       {
-        heading: '要旨を50字程度でまとめる',
+        heading: '要旨を80字程度でまとめる',
         body: `■ 手順
 ①各段落の主題文を1行ずつ書く。
 ②数値・固有名詞を削る。
 ③最終段落の結論を最後に置く。
 ④指定字数に合わせて修飾語を削る。
 
-■ 完成した要旨（約60字）
+■ 完成した要旨（約80字）
 農家が減り続ける村が、都市の人が農作業に参加する仕組みを始めた。もうけは出ないが、田を支える人が増え、移住者も生まれた。村は米ではなく人を得たと考えている。
 
 ■ 入れないもの
