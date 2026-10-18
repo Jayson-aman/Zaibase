@@ -4,6 +4,11 @@
   "framework": null,
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/lesson/:id", "destination": "/lesson/[id]" },
+    { "source": "/quiz/:subject", "destination": "/quiz/[subject]" },
+    { "source": "/topics/:subject", "destination": "/topics/[subject]" },
+    { "source": "/school/:course", "destination": "/school/[course]" },
+    { "source": "/eiken/:level", "destination": "/eiken/[level]" },
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
