@@ -5,7 +5,9 @@
  *   毎月1日 10:00（日本時間）に winbackMonthly が起動する。
  *   1. Firebase Authentication の全ユーザー（メールアドレスがある実アカウントだけ）を順に見る
  *   2. RevenueCat に問い合わせ、「過去に有料の購読があったが、いまは有効な権利が無い」人を拾う
- *   3. 配信停止していない・前回の送信から28日以上たっている人だけに、Resend で送る
+ *   3. 解約した人（lapsed）には再開のご案内を、まだ契約していない人（never）には、登録時に
+ *      「お知らせメールを受け取る」にチェックした人（emailConsent/{uid}.marketing）だけに送る。
+ *      配信停止していない・前回の送信から28日以上たっている人だけ。Resend で送る
  *   4. 送った日を winbackLog/{uid} に記録する
  *
  * 守っていること（特定電子メール法）:
@@ -25,7 +27,7 @@
  */
 
 const { onSchedule } = require("firebase-functions/v2/scheduler");
-const { onRequest } = require("firebase-functions/v2/https");
+const { onRequest, onCall, HttpsError } = require("firebase-functions/v2/https");
 const { defineSecret } = require("firebase-functions/params");
 const admin = require("firebase-admin");
 const crypto = require("crypto");
@@ -53,14 +55,14 @@ function unsubscribeUrl(uid) {
   return `${UNSUB_BASE}?u=${encodeURIComponent(uid)}&s=${sign(uid)}`;
 }
 
-/** RevenueCat で「過去に購読があり、いまは有効な購読が無い」か。判定不能は null */
-async function isLapsedSubscriber(uid, key) {
+/** RevenueCat の状態。'lapsed'＝過去に購読があり今は無い／'active'＝購読中／'never'＝購読したことがない／null＝判定不能 */
+async function subscriberState(uid, key) {
   try {
     const res = await fetch(`https://api.revenuecat.com/v1/subscribers/${encodeURIComponent(uid)}`, {
       headers: { Authorization: `Bearer ${key}`, Accept: "application/json" },
       signal: AbortSignal.timeout(8000),
     });
-    if (res.status === 404) return false;
+    if (res.status === 404) return "never";
     if (!res.ok) return null;
     const json = await res.json();
     const subs = json?.subscriber?.subscriptions ?? {};
@@ -75,7 +77,8 @@ async function isLapsedSubscriber(uid, key) {
       const grace = s?.grace_period_expires_date ? Date.parse(s.grace_period_expires_date) : -Infinity;
       if (Math.max(exp, grace) > now) activeNow = true;
     }
-    return everSubscribed && !activeNow;
+    if (activeNow) return "active";
+    return everSubscribed ? "lapsed" : "never";
   } catch (e) {
     console.error("winback: RevenueCat 照会に失敗", e?.message);
     return null;
@@ -121,6 +124,47 @@ function buildEmail(uid) {
   return { subject, text, html, unsub };
 }
 
+/** 無料のまま使っている、お知らせメールに同意した人への月1回のメール */
+function buildFreeEmail(uid) {
+  const unsub = unsubscribeUrl(uid);
+  const subject = "【Zaibase受験】無料のまま、ここまで使えます（＋月1回のヒント）";
+  const text = [
+    "Zaibase受験をお使いいただき、ありがとうございます。",
+    "お知らせメールの受け取りにご同意いただいたので、月に1回だけお送りします。",
+    "",
+    "今月のヒント：やる気の出ない日は、「1問だけでOK」から。",
+    "ホームの「気が重い日は、1問だけでOK」を開くと、やさしい問題を1問だけ解いて終われます。",
+    "",
+    "無料でできること：",
+    "・問題集は1教科10問まで／教科書は10単元まで（解説はすべて読めます）",
+    "・そのあとの単元も、導入と最初の節は「ためし読み」できます",
+    "",
+    "PRO・MAXにすると、全教科の教科書・全問題・志望校コース・聞き流しが使えます。",
+    "（iPhone・iPadは、はじめての方は最初の1か月500円。いつでも解約できます）",
+    APP_URL,
+    "",
+    "──────────",
+    "このメールは、お知らせメールの受け取りにご同意いただいた方へ、月に1回お送りしています。",
+    "配信を停止する（1クリックで完了します）：",
+    unsub,
+    "",
+    "運営：南條 雅哉 / Zaibase Group",
+    ADDRESS,
+    "お問い合わせ：info@zaibase.group",
+  ].join("\n");
+  const html = `<div style="font-family:-apple-system,'Hiragino Sans',sans-serif;line-height:1.8;color:#1B2540;max-width:520px">
+<p>Zaibase受験をお使いいただき、ありがとうございます。<br>お知らせメールの受け取りにご同意いただいたので、月に1回だけお送りします。</p>
+<p><b>今月のヒント：</b>やる気の出ない日は、「1問だけでOK」から。ホームの「気が重い日は、1問だけでOK」を開くと、やさしい問題を1問だけ解いて終われます。</p>
+<p><b>無料でできること</b><br>・問題集は1教科10問まで／教科書は10単元まで（解説はすべて読めます）<br>・そのあとの単元も、導入と最初の節は「ためし読み」できます</p>
+<p>PRO・MAXにすると、全教科の教科書・全問題・志望校コース・聞き流しが使えます。（iPhone・iPadは、はじめての方は最初の1か月500円。いつでも解約できます）</p>
+<p><a href="${APP_URL}" style="display:inline-block;background:#F97316;color:#fff;text-decoration:none;font-weight:bold;padding:12px 22px;border-radius:999px">くわしく見る</a></p>
+<hr style="border:none;border-top:1px solid #E2E8F0;margin:24px 0">
+<p style="font-size:12px;color:#64748B">このメールは、お知らせメールの受け取りにご同意いただいた方へ、月に1回お送りしています。<br>
+<a href="${unsub}">こちらから配信を停止</a>できます（1クリックで完了します）。<br><br>
+運営：南條 雅哉 / Zaibase Group　${ADDRESS}<br>お問い合わせ：info@zaibase.group</p></div>`;
+  return { subject, text, html, unsub };
+}
+
 async function sendViaResend(to, mail, apiKey) {
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
@@ -160,8 +204,13 @@ async function runWinback() {
       // 実アカウント（メールあり・匿名でない・無効化されていない）だけ
       if (!u.email || u.disabled || u.providerData.length === 0) continue;
 
-      const lapsed = await isLapsedSubscriber(u.uid, rcKey);
-      if (lapsed !== true) continue;
+      const state = await subscriberState(u.uid, rcKey);
+      if (state !== "lapsed" && state !== "never") continue;
+      // 解約した人には「再開のご案内」を、まだ契約していない人には、お知らせメールに同意した人だけに送る
+      if (state === "never") {
+        const consent = await db.collection("emailConsent").doc(u.uid).get();
+        if (!(consent.exists && consent.data().marketing === true)) continue;
+      }
       candidates++;
 
       const optOut = await db.collection("emailOptOut").doc(u.uid).get();
@@ -172,11 +221,11 @@ async function runWinback() {
       if (now - last < minGap) { skipped++; continue; }
 
       if (!enabled) {
-        console.log(`winback[ドライラン]: 送る予定 ${u.email.replace(/^(.).*(@.*)$/, "$1***$2")}`);
+        console.log(`winback[ドライラン]: 送る予定(${state}) ${u.email.replace(/^(.).*(@.*)$/, "$1***$2")}`);
         continue;
       }
       try {
-        await sendViaResend(u.email, buildEmail(u.uid), resendKey);
+        await sendViaResend(u.email, state === "lapsed" ? buildEmail(u.uid) : buildFreeEmail(u.uid), resendKey);
         await logRef.set({ lastSentAt: admin.firestore.FieldValue.serverTimestamp(), count: admin.firestore.FieldValue.increment(1) }, { merge: true });
         sent++;
       } catch (e) {
@@ -196,6 +245,23 @@ exports.winbackMonthly = onSchedule(
     secrets: [RESEND_API_KEY, WINBACK_SIGNING_KEY, REVENUECAT_SECRET_KEY] },
   async () => { await runWinback(); }
 );
+
+// お知らせメールの同意の記録。登録画面のチェックから呼ばれる。実アカウント（匿名でない）だけ。
+exports.setMarketingConsent = onCall({ region: "asia-northeast1" }, async (req) => {
+  const uid = req.auth?.uid;
+  if (!uid) throw new HttpsError("unauthenticated", "ログインが必要です");
+  if (req.auth?.token?.firebase?.sign_in_provider === "anonymous") {
+    throw new HttpsError("failed-precondition", "アカウント登録のあとに設定できます");
+  }
+  const consent = req.data?.consent === true;
+  await admin.firestore().collection("emailConsent").doc(uid).set(
+    { marketing: consent, at: admin.firestore.FieldValue.serverTimestamp() },
+    { merge: true }
+  );
+  // 同意しなおしたときは、前の配信停止を解除する（本人が選び直したため）
+  if (consent) await admin.firestore().collection("emailOptOut").doc(uid).delete().catch(() => {});
+  return { ok: true };
+});
 
 // 配信停止（メールのリンクから開く。ログイン不要・1クリック）
 exports.unsubscribeEmail = onRequest(
@@ -224,4 +290,4 @@ exports.unsubscribeEmail = onRequest(
   }
 );
 
-module.exports.__test = { buildEmail, isLapsedSubscriber };
+module.exports.__test = { buildEmail, buildFreeEmail, subscriberState };

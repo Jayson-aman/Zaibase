@@ -12,7 +12,7 @@ import {
   Platform,
 } from 'react-native';
 import { useRouter } from 'expo-router';
-import { signInEmail, signUpEmail, sendResetEmail, AuthError } from '../services/auth';
+import { signInEmail, signUpEmail, sendResetEmail, setMarketingConsent, AuthError } from '../services/auth';
 
 export default function LoginScreen() {
   // 直接このURLを開いた場合は戻り先が無く router.back() が無反応になるため、
@@ -30,6 +30,8 @@ export default function LoginScreen() {
   const busyRef = useRef(false);
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
+  // お知らせメール（月に1回）を受け取るか。初期値はオフ（同意したときだけ送る）。
+  const [wantsMail, setWantsMail] = useState(false);
 
   const isSignup = mode === 'signup';
 
@@ -44,7 +46,11 @@ export default function LoginScreen() {
     busyRef.current = true;
     setBusy(true);
     try {
-      if (isSignup) await signUpEmail(email, password);
+      if (isSignup) {
+        await signUpEmail(email, password);
+        // 同意は、チェックしたときだけ記録する。記録に失敗しても登録は成功として進める（あとで設定から変えられる）。
+        if (wantsMail) await setMarketingConsent(true).catch(() => {});
+      }
       else await signInEmail(email, password);
       safeBack();
     } catch (e) {
@@ -111,6 +117,15 @@ export default function LoginScreen() {
             editable={!busy}
           />
 
+          {isSignup && (
+            <TouchableOpacity style={styles.consentRow} onPress={() => setWantsMail((v) => !v)} activeOpacity={0.8} disabled={busy}>
+              <Text style={styles.consentBox}>{wantsMail ? '☑' : '☐'}</Text>
+              <Text style={styles.consentText}>
+                学習のヒントや新機能のお知らせメールを、月に1回受け取る（任意。いつでも配信停止できます）
+              </Text>
+            </TouchableOpacity>
+          )}
+
           {error != null && <Text style={styles.error}>{error}</Text>}
           {notice != null && <Text style={styles.notice}>{notice}</Text>}
 
@@ -150,6 +165,9 @@ export default function LoginScreen() {
 }
 
 const styles = StyleSheet.create({
+  consentRow: { flexDirection: 'row', alignItems: 'flex-start', gap: 8, marginBottom: 12 },
+  consentBox: { fontSize: 20, color: '#0369A1', lineHeight: 22 },
+  consentText: { flex: 1, fontSize: 12.5, color: '#4A4036', lineHeight: 19 },
   container: { flex: 1, backgroundColor: '#FAF6EF' },
   scroll: { padding: 24, paddingTop: 12, alignItems: 'center' },
   closeBtn: { alignSelf: 'flex-end', padding: 8 },

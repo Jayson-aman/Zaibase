@@ -53,3 +53,4 @@ exports.deleteMyData = accountDeletion.deleteMyData;
 const winback = require("./winback");
 exports.winbackMonthly = winback.winbackMonthly;
 exports.unsubscribeEmail = winback.unsubscribeEmail;
+exports.setMarketingConsent = winback.setMarketingConsent;
