@@ -41,7 +41,7 @@ import QuizCard from '../../components/QuizCard';
 import Paywall from '../../components/Paywall';
 import { saveProgress } from '../../store/progress';
 import { recordStudy, useStudyStats, DAILY_GOAL } from '../../store/studyStreak';
-import { incrementTrialQuestions, isTrialExpired, TRIAL_QUESTION_LIMIT } from '../../store/trial';
+import { incrementTrialQuestions, isTrialExpired } from '../../store/trial';
 import { getSessionFreeUsed, incrementSessionFreeUsed } from '../../store/sessionLimit';
 import { logAccessEvent, type AccessTier } from '../../services/analytics';
 import { submitRankingScore } from '../../services/ranking';

@@ -10,7 +10,7 @@ export async function getTrialQuestionsAnswered(): Promise<number> {
     const val = await AsyncStorage.getItem(TRIAL_QUESTIONS_KEY);
     if (!val) return 0;
     const n = parseInt(val, 10);
-    // 壊れた値が入っていると NaN になり、NaN >= 30 が常に false になって
+    // 壊れた値が入っていると NaN になり、NaN >= 上限 が常に false になって
     // 無料体験の上限が事実上無効化されてしまうため、0 に戻す。
     return Number.isFinite(n) && n >= 0 ? n : 0;
   } catch {
