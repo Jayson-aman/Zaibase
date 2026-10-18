@@ -4,7 +4,7 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import MCQQuiz from '../../components/MCQQuiz';
 import CertPaywall from '../../components/CertPaywall';
 import HomeButton from '../../components/HomeButton';
-import { eikenQuestions } from '../../data/eiken_questions';
+import { eikenModule } from '../../data/eiken-lazy';
 import { VOCAB_MONTHLY_LABEL, VOCAB_YEARLY_LABEL } from '../../constants/pricing';
 
 const FREE_QUESTION_LIMIT = 5;
@@ -36,7 +36,9 @@ export default function EikenLevelScreen() {
   const router = useRouter();
   const info = LEVEL_INFO[level ?? ''] ?? { name: level, nameEn: '', emoji: '📖', color: '#7B1FA2', cefr: '' };
 
-  const allQuestions = eikenQuestions
+  // 英検の問題（約5MB）は、この画面を開いてから読みこむ
+  const eikenMod = eikenModule.use();
+  const allQuestions = (eikenMod ? eikenMod.eikenQuestions : [])
     .filter(q => q.level === level)
     .map(q => ({
       id: q.id,
@@ -49,6 +51,15 @@ export default function EikenLevelScreen() {
       audioScript: q.audioScript,
     }));
 
+  if (eikenMod == null) {
+    return (
+      <SafeAreaView style={styles.safeArea}>
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+          <Text>読みこみ中です…</Text>
+        </View>
+      </SafeAreaView>
+    );
+  }
   if (allQuestions.length === 0) {
     return (
       <SafeAreaView style={styles.safeArea}>

@@ -98,7 +98,7 @@ for (const f of files.filter((f) => f.endsWith('.tsx'))) {
   let inHookBody = 0;
   for (let i = 0; i < lines.length; i++) {
     const l = lines[i];
-    if (/^(export default function|export function)/.test(l)) { early = null; inHookBody = 0; }
+    if (/^(export default function|export function|function )/.test(l)) { early = null; inHookBody = 0; }
     if (/\b(useEffect|useCallback|useMemo|useLayoutEffect)\s*\(/.test(l)) inHookBody = 1;
     if (inHookBody && /^  \}, \[/.test(l)) inHookBody = 0;
     // インデント2の return（コンポーネント直下）だけを早期returnとみなす
@@ -158,6 +158,31 @@ for (const f of files.filter((f) => /components\/(QuizCard|InlineQuiz)\.tsx$/.te
   }
 }
 report('解く前の画面の図が、手順・答えを隠していない', unhidden, 'hideAnswerText と maskFigureForProblem(figure, question) を付けること');
+
+// 重いデータを、画面の中で静的に import している（Web版が起動時に数百MBを落とす原因になる）。
+// 教科書・問題集・図解・公式集・英検・英単語などは合わせて100MB超。値（関数・配列）を取りに行く
+// import は、必ず *-lazy.ts（createLazyModule）を通すこと。`import type` は消えるので構わない。
+// 例外：data/koushiki-access は小さい（約0.3MB）ので静的でよい。
+const HEAVY = /data\/(questions|lessons|lesson-figures|manga-scripts|formulas|formulas-diagrams|eiken_questions|vocab_words|vocab-usage-notes|figures|koushiki-questions|lesson-questions|review-blocks)['"]/;
+const allUi = [
+  ...walk(path.join(ROOT, 'app')),
+  ...walk(path.join(ROOT, 'components')),
+  ...walk(path.join(ROOT, 'hooks')),
+  ...walk(path.join(ROOT, 'utils')),
+  ...walk(path.join(ROOT, 'store')),
+  ...walk(path.join(ROOT, 'services')),
+];
+const staticHeavy = [];
+for (const f of allUi) {
+  const src = fs.readFileSync(f, 'utf8');
+  for (const m of src.matchAll(/^import\s+(?!type\b)[^;]*?from\s+['"]([^'"]+)['"];?/gms)) {
+    if (HEAVY.test(m[1] + "'")) staticHeavy.push(`${rel(f)}:${src.slice(0, m.index).split('\n').length}  ${m[1]}`);
+  }
+}
+// lesson-questions と review-blocks は中身が小さいが、types 以外の値 import を許す（上の HEAVY から外す）
+report('重いデータを静的 import している（Web版が重くなる）',
+  staticHeavy.filter((h) => !/data\/(lesson-questions|review-blocks)['"]?$/.test(h)),
+  'data/*-lazy.ts の createLazyModule（xxxModule.use()）を通すこと。型だけなら import type にする');
 
 console.log(`\n合計 ${problems} 件`);
 process.exit(problems === 0 ? 0 : 1);

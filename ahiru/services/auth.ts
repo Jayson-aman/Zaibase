@@ -287,3 +287,10 @@ export async function subscribeAuth(
     unsubscribeFirebase();
   };
 }
+
+/** お知らせメール（月に1回）を受け取ることへの同意を記録する。サーバー側の関数が書く（端末から直接は書けない）。 */
+export async function setMarketingConsent(consent: boolean): Promise<void> {
+  if (!isFirebaseConfigured()) return;
+  const { callFirebaseFunction } = await import('./firebaseClient');
+  await callFirebaseFunction<{ consent: boolean }, { ok: true }>('setMarketingConsent', { consent });
+}

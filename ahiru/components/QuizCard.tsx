@@ -23,7 +23,7 @@ import { explanationText, hintText } from '../utils/explanation';
 import ExplanationSlides from './ExplanationSlides';
 import { getQuickTrick } from '../data/quick-tricks';
 import { getSubjectThemeLabel, getSubjectIllustration } from '../data/subjectImages';
-import { getFigure } from '../data/figures';
+import { figuresModule } from '../data/figures-lazy';
 import { ALL_COURSES } from '../data/courses';
 import FigureView from './FigureView';
 import { maskFigureForProblem, FIGURE_IS_ANSWER } from '../utils/figure-mask';
@@ -89,7 +89,8 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
   const historyLabel = getHistoryThemeLabel(question.id)
     ?? getSubjectThemeLabel(question.subject, themeText);
   // ベクター図形（座標グラフ・図形・立体・化学式など）。あれば図で表示。
-  const figure = getFigure(question.id);
+  const figuresMod = figuresModule.use();
+  const figure = figuresMod ? figuresMod.getFigure(question.id) : null;
   // 図形化しにくい理科・社会の単元（植物のつくり・人体・時代の様子など）はAI生成の単元イラストで補う。
   // ベクター図形がある問題は図の方が正確なので、そちらを優先する。
   const illustration = figure == null || FIGURE_IS_ANSWER.has(question.id) ? getSubjectIllustration(question.subject, themeText) : null;

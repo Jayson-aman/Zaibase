@@ -43,15 +43,9 @@ import { eigoTsuikaFormulas } from './formulas-eigo-tsuika';
 import { eigoKokoFormulas } from './formulas-eigo-koko';
 import { eigoKokoTsuikaFormulas } from './formulas-eigo-koko-tsuika';
 
-export type Subject = '算数' | '国語' | '理科' | '社会' | '英語';
-
-export const SUBJECTS: { key: Subject; emoji: string; color: string }[] = [
-  { key: '算数', emoji: '📐', color: '#4A90D9' },
-  { key: '国語', emoji: '📖', color: '#E74C3C' },
-  { key: '理科', emoji: '🔬', color: '#27AE60' },
-  { key: '社会', emoji: '🌍', color: '#F39C12' },
-  { key: '英語', emoji: '🔤', color: '#9B59B6' },
-];
+import { SUBJECTS, FREE_FORMULAS_PER_CELL, formulaBundleId, type Subject } from './formulas-meta';
+export { SUBJECTS, FREE_FORMULAS_PER_CELL, formulaBundleId };
+export type { Subject };
 
 // 2026/9/29 方針変更：全教科・両受験種別とも「ファイル先頭の3項目だけ無料、
 // 残りは¥50買い切り（locked: true）」に統一した。それまでは算数・理科・社会の
@@ -71,7 +65,6 @@ const FORMULAS_RAW: Record<Subject, FormulaSection[]> = {
 // あわせて「受験種別×教科ごとに先頭 FREE_FORMULAS_PER_CELL 項目は無料」を適用する。
 // 2026/9/29 3→8。3項目だけでは「公式集がどういうものか」を判断できず、
 // 「少ない」と受け取られたため。残りは¥200／まとめ買い¥2,980。
-export const FREE_FORMULAS_PER_CELL = 8;
 function withDiagrams(sections: FormulaSection[]): FormulaSection[] {
   // 受験種別（中学受験／高校受験）ごとに、見える順で先頭の FREE_FORMULAS_PER_CELL 個だけを無料にする。
   // 受験種別を決めていないセクション（英語がこれにあたる）はどちらの画面にも出るので、
@@ -113,11 +106,6 @@ export const FORMULAS: Record<Subject, FormulaSection[]> = {
   社会: withDiagrams(FORMULAS_RAW.社会),
   英語: withDiagrams(FORMULAS_RAW.英語),
 };
-
-/** まとめ買いのID（受験種別×教科）。formulaUnlocks の unlocked に、公式のlabelと並べて入る。 */
-export function formulaBundleId(examType: 'chugaku' | 'koko', subject: Subject): string {
-  return `bundle:${examType}:${subject}`;
-}
 
 /** その受験種別×教科で、ロックされている項目のlabel一覧。 */
 export function lockedFormulaLabels(examType: 'chugaku' | 'koko', subject: Subject): string[] {

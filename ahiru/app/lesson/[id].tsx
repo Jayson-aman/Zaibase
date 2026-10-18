@@ -12,11 +12,12 @@ import {
   Alert,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { getLessonById, isLessonFree } from '../../data/lessons';
+import { lessonsModule } from '../../data/lessons-lazy';
+import { lessonMediaModule } from '../../data/lesson-media-lazy';
+import { figuresModule } from '../../data/figures-lazy';
 import { isNew20Unit, isNew20UnitFree } from '../../data/new20-access';
 import LessonRenderer from '../../components/LessonRenderer';
 import FigureView from '../../components/FigureView';
-import { getLessonFigure } from '../../data/lesson-figures';
 import InlineQuiz, { questionsToQuizItems } from '../../components/InlineQuiz';
 import { getRelatedQuestions } from '../../data/lesson-questions';
 import { useSubjectQuestions } from '../../hooks/useSubjectQuestions';
@@ -84,7 +85,11 @@ export default function LessonDetailScreen() {
     unlockUnit,
   } = useUnitUnlocks();
 
-  const lesson = id ? getLessonById(id) : undefined;
+  // 全単元（約40MB）・動く図解は、単元ページを開いてから読みこむ（読みこみ中は null）
+  const lessonsMod = lessonsModule.use();
+  const media = lessonMediaModule.use();
+  const figs = figuresModule.use();
+  const lesson = id && lessonsMod ? lessonsMod.getLessonById(id) : undefined;
 
   // 公式集は公式ごとに専用の問題を出しているので、こちらの「関係する問題」は不要。
   const isKoushikiLesson = lesson?.id.startsWith('koushiki_') ?? false;
@@ -153,6 +158,17 @@ export default function LessonDetailScreen() {
   }
 
   if (!lesson) {
+    // 単元データの読みこみが終わるまでは、「見つかりません」と出さない
+    if (id && lessonsMod == null) {
+      return (
+        <SafeAreaView style={styles.container}>
+          <View style={styles.center}>
+            <ActivityIndicator />
+            <Text style={styles.notFound}>読みこみ中です…</Text>
+          </View>
+        </SafeAreaView>
+      );
+    }
     return (
       <SafeAreaView style={styles.container}>
         <View style={styles.center}>
@@ -170,7 +186,7 @@ export default function LessonDetailScreen() {
   const hasMaxContent = lesson.sections.some((s) => s.maxOnly);
   const lessonVideo = getLessonVideo(lesson.id);
   // 各科目・各受験種別の最初の10単元は、Pro未加入でも無料で閲覧できる
-  const freeLesson = isLessonFree(lesson);
+  const freeLesson = lessonsMod ? lessonsMod.isLessonFree(lesson) : false;
   // 学年×科目で追加した新規単元（new20_で始まるid）は、上記のPro一括ロードとは別枠で、
   // 学年×科目クラスターごとに最初の5単元（FREE_UNITS_PER_CLUSTER）は無料、それ以降は¥150買い切りで解放する。
   const isNew20 = isNew20Unit(lesson.id);
@@ -189,7 +205,7 @@ export default function LessonDetailScreen() {
     if (lesson.sections.length === 0 || lesson.sections[0].figureId != null) return null;
     for (const sec of lesson.sections) {
       if (sec.figureId == null || sec.maxOnly) continue;
-      const fig = getLessonFigure(sec.figureId);
+      const fig = media ? media.getLessonFigure(sec.figureId) : null;
       if (fig != null && (fig.steps?.length ?? 0) > 1) return fig;
     }
     return null;
@@ -373,7 +389,7 @@ export default function LessonDetailScreen() {
             {relatedQuestions.length > 0 && (
               <InlineQuiz
                 label="この単元に関係する一問一答"
-                items={questionsToQuizItems(relatedQuestions)}
+                items={questionsToQuizItems(relatedQuestions, figs ? figs.getFigure : undefined)}
               />
             )}
             <TouchableOpacity

@@ -18,6 +18,7 @@ import { useBetaAccess } from '../../hooks/useBetaAccess';
 import { useProGate } from '../../hooks/useProGate';
 import { useSubscription } from '../../hooks/useSubscription';
 import PlanStatusBanner from '../../components/PlanStatusBanner';
+import FreeUpgradeCard from '../../components/FreeUpgradeCard';
 import StudyStartCard from '../../components/StudyStartCard';
 import { subjectInfo, type SubjectKey } from '../../data/questions-meta';
 import { useQuestionsBySubjectMap } from '../../hooks/useSubjectQuestions';
@@ -335,6 +336,9 @@ export default function HomeScreen() {
       >
         {/* お試し中・解約ずみ・期限切れのとき、いつまで使えるかを一番上に出す */}
         {!listenPickerActive && <PlanStatusBanner onAction={() => setPaywallVisible(true)} />}
+
+        {/* 無料のまま何日か続けて使っている人にだけ、プランの案内を小さく出す（閉じたら7日は出さない） */}
+        {!listenPickerActive && <FreeUpgradeCard onOpenPaywall={() => setPaywallVisible(true)} />}
 
         {/* はじめての人には「はじめの5問」、続けている人には連続日数と今日の目標 */}
         {!listenPickerActive && <StudyStartCard examType={examType} />}

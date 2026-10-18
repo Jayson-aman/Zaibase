@@ -15,7 +15,9 @@ import {
   useWindowDimensions,
 } from 'react-native';
 import { useRouter } from 'expo-router';
-import { FORMULAS, SUBJECTS, formulaBundleId, countLockedFormulas, lockedFormulaLabels, type Subject, type FormulaItem } from '../../data/formulas';
+import { SUBJECTS, formulaBundleId, type Subject } from '../../data/formulas-meta';
+import type { FormulaItem } from '../../data/formulas-types';
+import { formulasModule } from '../../data/formulas-lazy';
 import { STUDY_PERIOD_ORDER, type StudyPeriod } from '../../data/formulas-types';
 import { useExamType, examTypeLabel, type ExamType } from '../../store/examType';
 import SubjectIcon, { type IconSubject } from '../../components/SubjectIcon';
@@ -322,9 +324,11 @@ export default function FormulasScreen() {
   const [period, setPeriod] = useState<StudyPeriod | null>(null);
 
   // examType 未設定のセクションは「どちらにも出す」（英語がこれにあたる）
+  // 公式集の本体（約15MB）は、この画面を開いてから読みこむ（読みこみ中は formulasMod が null）
+  const formulasMod = formulasModule.use();
   const allSections = React.useMemo(
-    () => FORMULAS[subject].filter((s) => s.examType == null || s.examType === examType),
-    [subject, examType],
+    () => (formulasMod ? formulasMod.FORMULAS[subject].filter((s) => s.examType == null || s.examType === examType) : []),
+    [formulasMod, subject, examType],
   );
 
   // その教科に実際にあるものだけをチップに出す（空の学年を押せても意味がない）
@@ -361,8 +365,8 @@ export default function FormulasScreen() {
   } = useFormulaUnlocks();
 
   const bundleId = formulaBundleId(examType, subject);
-  const bundleCount = React.useMemo(() => countLockedFormulas(examType, subject), [examType, subject]);
-  const groupLabels = React.useMemo(() => lockedFormulaLabels(examType, subject), [examType, subject]);
+  const bundleCount = React.useMemo(() => (formulasMod ? formulasMod.countLockedFormulas(examType, subject) : 0), [formulasMod, examType, subject]);
+  const groupLabels = React.useMemo(() => (formulasMod ? formulasMod.lockedFormulaLabels(examType, subject) : []), [formulasMod, examType, subject]);
   // この教科で、1項目ずつ買った数。上限（FORMULA_BUNDLE_ITEM_CAP）に届けば、のこりは全部ひらく。
   const boughtCount = React.useMemo(() => groupLabels.filter((l) => unlockedIds.has(l)).length, [groupLabels, unlockedIds]);
   const groupUnlocked = unlockedIds.has(bundleId) || boughtCount >= FORMULA_BUNDLE_ITEM_CAP;
@@ -646,6 +650,9 @@ export default function FormulasScreen() {
         </ScrollView>
       )}
 
+      {formulasMod == null && (
+        <Text style={{ textAlign: 'center', color: '#64748B', padding: 24 }}>読みこみ中です…（はじめて開くときは、少し時間がかかります）</Text>
+      )}
       <FlatList
         style={styles.scroll}
         contentContainerStyle={styles.content}

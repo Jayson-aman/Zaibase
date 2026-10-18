@@ -4,7 +4,6 @@ import ReviewBlocks from './ReviewBlocks';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import type { Question, QuestionSubItem } from '../data/questions-meta';
 import type { Figure } from '../data/figures';
-import { getFigure } from '../data/figures';
 import FigureView from './FigureView';
 import AnswerInput, { type SubmitResult } from './AnswerInput';
 import Fireworks from './Fireworks';
@@ -28,7 +27,11 @@ export type InlineQuizItem = {
   examType?: string;
 };
 
-export function questionsToQuizItems(questions: Question[]): InlineQuizItem[] {
+/** 図の登録簿は重いので、読みこみ済みのものを呼び出し側（figuresModule.use()）から受け取る。未読みこみのあいだは図なしで出す */
+export function questionsToQuizItems(
+  questions: Question[],
+  getFigure: (id: string) => Figure | null = () => null,
+): InlineQuizItem[] {
   return questions.map((q) => ({
     question: q.question,
     answer: q.answer,

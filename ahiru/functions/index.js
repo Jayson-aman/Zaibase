@@ -48,3 +48,9 @@ exports.sendFeedback = feedback.sendFeedback;
 // アカウント削除（サーバー側データの完全削除）
 const accountDeletion = require("./accountDeletion");
 exports.deleteMyData = accountDeletion.deleteMyData;
+
+// ── 解約された方への月1回の再開のお誘いメール（winback.js の先頭の説明を参照） ──
+const winback = require("./winback");
+exports.winbackMonthly = winback.winbackMonthly;
+exports.unsubscribeEmail = winback.unsubscribeEmail;
+exports.setMarketingConsent = winback.setMarketingConsent;

@@ -7,14 +7,17 @@ import { LinearGradient } from 'expo-linear-gradient';
 import CertPaywall from '../../components/CertPaywall';
 import HomeButton from '../../components/HomeButton';
 import { VOCAB_MONTHLY_LABEL, VOCAB_YEARLY_LABEL } from '../../constants/pricing';
-import { eikenQuestions } from '../../data/eiken_questions';
+import { eikenModule } from '../../data/eiken-lazy';
 
 // 英検は「受験対策とは別枠の英語学習コンテンツ」として、英単語Pro（vocab）で開放する。
 const FREE_QUESTION_LIMIT = 5;
 
 // 実際の問題データから級別の問題数を集計（ハードコードせずズレを防ぐ）
-const LEVEL_COUNT: Record<string, number> = {};
-eikenQuestions.forEach((q) => { LEVEL_COUNT[q.level] = (LEVEL_COUNT[q.level] ?? 0) + 1; });
+function countByLevel(qs: { level: string }[]): Record<string, number> {
+  const m: Record<string, number> = {};
+  qs.forEach((q) => { m[q.level] = (m[q.level] ?? 0) + 1; });
+  return m;
+}
 
 const LEVELS = [
   {
@@ -52,10 +55,13 @@ const LEVELS = [
   },
 ];
 
-const TOTAL_EIKEN_QUESTIONS = Object.values(LEVEL_COUNT).reduce((s, n) => s + n, 0);
 
 export default function EikenScreen() {
   const router = useRouter();
+  // 英検の問題（約5MB）は、この画面を開いてから読みこむ
+  const mod = eikenModule.use();
+  const LEVEL_COUNT = React.useMemo(() => (mod ? countByLevel(mod.eikenQuestions) : {}), [mod]);
+  const TOTAL_EIKEN_QUESTIONS = React.useMemo(() => Object.values(LEVEL_COUNT).reduce((s, n) => s + n, 0), [LEVEL_COUNT]);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -120,7 +126,7 @@ export default function EikenScreen() {
                   {level.topics.map((t, i) => (
                     <Text key={i} style={styles.cardTopic}>• {t}</Text>
                   ))}
-                  <Text style={styles.cardMeta}>{LEVEL_COUNT[level.key] ?? 0}問収録</Text>
+                  <Text style={styles.cardMeta}>{mod ? `${LEVEL_COUNT[level.key] ?? 0}問収録` : '読みこみ中…'}</Text>
                 </View>
                 <Text style={styles.cardArrow}>›</Text>
               </LinearGradient>
