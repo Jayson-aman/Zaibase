@@ -163,7 +163,7 @@ export const TEIKI_Q_J1_RIKA: TeikiQuestion[] = [
     answer: '1020m',
     explanation: '距離は 速さ×時間 で求めます。340×3＝**1020**m です。光は一瞬で届くとみなして、光が見えた時刻から数えます。' },
   { id: 'j1-rika-q39', grade: G, subject: S, term: 3, topic: '力',
-    question: '力の大きさを表す単位の記号は何ですか（カタカナの名前でも可）。',
+    question: '力の大きさを表す単位の記号は、次のうちどれですか。',
     answer: 'N', choices: ['N', 'g', 'kg', 'cm'],
     explanation: '力の大きさの単位は、ニュートン（記号**N**）です。g・kgは質量の単位なので、力と混同しないようにしましょう。' },
   { id: 'j1-rika-q40', grade: G, subject: S, term: 3, topic: '力',
