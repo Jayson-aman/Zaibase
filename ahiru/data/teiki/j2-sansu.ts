@@ -333,7 +333,7 @@ const ichiji: TeikiUnit = {
     {
       note: '❓切片 b=1 はグラフのどこ？ → x=0 のとき y=2×0+1=1。つまり、グラフが y 軸と交わる点 (0, 1) の高さが切片です。グラフをかくときの出発点になります。',
       add: [
-        ci(gx(0), gy(1), 7, undefined, C.main, undefined),
+        ci(gx(0), gy(1), 5, undefined, C.main, undefined),
         lb(gx(0) + 14, gy(1) + 18, '切片 (0, 1)', 11, C.main, 'start', true),
         ...cap('y軸と交わる点が切片', C.main),
       ],
@@ -478,7 +478,7 @@ const kakuritsu: TeikiUnit = {
         ln(40, 80, 280, 80, C.ink, false, 2),
         ln(40, 72, 40, 88, C.ink), ln(280, 72, 280, 88, C.ink), ln(160, 74, 160, 86, C.ink),
         lb(40, 104, '0', 14, C.red, 'middle', true), lb(160, 104, '1/2', 14, C.ink, 'middle', true), lb(280, 104, '1', 14, C.blue, 'middle', true),
-        lb(40, 56, '起こらない', 11, C.red, 'middle', true), lb(280, 56, 'かならず起こる', 11, C.blue, 'middle', true),
+        lb(40, 56, '起こらない', 11, C.red, 'middle', true), lb(300, 56, 'かならず起こる', 11, C.blue, 'end', true),
         ...cap('確率は 0 以上 1 以下'),
       ),
     },
