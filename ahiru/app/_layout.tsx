@@ -133,6 +133,10 @@ export default function RootLayout() {
           name="feedback"
           options={{ headerShown: false, presentation: 'modal' }}
         />
+        <Stack.Screen
+          name="cancel-survey"
+          options={{ headerShown: false, presentation: 'modal' }}
+        />
       </Stack>
       {consentChecked && showConsent && !isLegalRoute && (
         <ConsentModal onAgree={handleConsent} />

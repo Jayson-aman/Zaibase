@@ -81,8 +81,8 @@ export default function PlanStatusBanner({ onAction }: { onAction: () => void })
       secondaryLabel={isBilling ? '直したので更新する' : null}
       onSecondary={isBilling ? () => { void refreshCustomerInfo(); } : undefined}
       // 解約した人・期限が切れた人に、理由を聞く入口を出す（2026/10/9。解約の理由は、ストアからは分からないため）
-      feedbackLabel={wantsFeedback ? '💬 使いにくかったところを、教えてください' : null}
-      onFeedback={wantsFeedback ? () => router.push('/feedback' as any) : undefined}
+      feedbackLabel={wantsFeedback ? '💬 やめる理由を、1タップで教えてください' : null}
+      onFeedback={wantsFeedback ? () => router.push('/cancel-survey' as any) : undefined}
     />
   );
 }
