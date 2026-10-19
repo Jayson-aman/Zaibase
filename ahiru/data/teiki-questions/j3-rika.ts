@@ -141,9 +141,9 @@ export const TEIKI_Q_J3_RIKA: TeikiQuestion[] = [
     answer: '銅', choices: ['銅', '塩素', '水素'],
     explanation: '塩化銅は Cu²⁺ と Cl⁻ に電離しています。陰極では Cu²⁺ が電子を受け取って**銅**になり付着します。陽極では塩素が発生します。' },
   { id: 'j3-rika-q34', grade: G, subject: S, term: 2, topic: 'イオン',
-    question: '原子がイオンになることを考えるとき、原子が電子を受け取ると何イオンになりますか。',
-    answer: '陰イオン', choices: ['陽イオン', '陰イオン'],
-    explanation: '電子は−の電気をもつので、受け取ると全体として−になり**陰イオン**となります。塩素原子が Cl⁻ になるのはこの例です。' },
+    question: '原子の中心にある原子核のまわりを回っている、−の電気をもつ粒子を何といいますか。',
+    answer: '電子', choices: ['陽子', '中性子', '電子'],
+    explanation: '原子核のまわりには−の電気をもつ**電子**があります。原子は陽子と電子の数が等しいので、全体としては電気を帯びていません。' },
 
   // ───── 学年末：遺伝・進化・天体・自然界 ─────
   { id: 'j3-rika-q35', grade: G, subject: S, term: 3, topic: '遺伝',
@@ -201,7 +201,7 @@ export const TEIKI_Q_J3_RIKA: TeikiQuestion[] = [
   { id: 'j3-rika-q48', grade: G, subject: S, term: 3, topic: '天体',
     question: '太陽の表面に見える黒点は、周囲より温度が高いですか、低いですか。',
     answer: '低い', choices: ['高い', '低い'],
-    explanation: '黒点は周囲の約6000℃より温度が約4000℃と**低い**ため、暗く見えます。黒点の動きから太陽が自転していることが分かります。' },
+    explanation: '黒点は、周囲（約6000℃）より温度が約4000℃と**低い**ため、暗く見えます。黒点の動きから太陽が自転していることが分かります。' },
   { id: 'j3-rika-q49', grade: G, subject: S, term: 3, topic: '天体',
     question: '北緯35°の地点で、春分の日の太陽の南中高度は何度ですか。',
     answer: '55°',
