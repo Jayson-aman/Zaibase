@@ -14,6 +14,8 @@ import { getLessonFigure } from '../data/lesson-figures';
 import * as fs from 'fs';
 import * as path from 'path';
 import { lintDiagram } from './figlint';
+import { TEIKI_UNITS } from '../data/teiki';
+import { TEIKI_MIN_SLIDES } from '../data/teiki/types';
 import { getMangaScript } from '../data/manga-scripts';
 import { questions } from '../data/questions';
 import { explanationText } from '../utils/explanation';
@@ -1767,6 +1769,29 @@ info('日本語の中に英単語が挟まっている（要目視）', latin, 8
     mgmt('javascript:alert(1)') === null ? '' : 'javascript: を通している',
     mgmt(undefined) === null ? '' : '無いのに値が入る',
   ].filter((x) => x !== ''));
+}
+
+// ── 定期テスト向け「教科書の延長」（data/teiki）──
+{
+  const T = TEIKI_UNITS;
+  const ids = new Map<string, number>();
+  for (const u of T) ids.set(u.id, (ids.get(u.id) ?? 0) + 1);
+  check('【定期テスト】id が重複している', [...ids].filter(([, n]) => n > 1).map(([id]) => id));
+  check(`【定期テスト】動く図解が ${TEIKI_MIN_SLIDES} 枚に満たない／枚数と部品の対応が合わない`, T.filter((u) => {
+    const n = u.figure.steps?.length ?? 0;
+    return n < TEIKI_MIN_SLIDES || u.figure.stepParts.length !== n;
+  }).map((u) => `${u.id}(${u.figure.steps?.length ?? 0}枚)`));
+  check('【定期テスト】図解の文字がはみ出す・重なる', T.filter((u) => lintDiagram(u.id, u.figure).length > 0).map((u) => u.id));
+  check('【定期テスト】各スライドの説明が短すぎる（40字未満）', T.filter((u) => (u.figure.steps ?? []).some((x) => x.length < 40)).map((u) => u.id));
+  check('【定期テスト】解説の節・ポイント・確認問題が足りない', T.filter((u) =>
+    u.sections.length < 2 || u.testPoints.length < 3 || u.checks.length < 3 || u.checks.some((c) => c.why.length < 20),
+  ).map((u) => u.id));
+  check('【定期テスト】id の学年・教科が中身とちがう', T.filter((u) => !u.id.startsWith(`${u.grade}-${u.subject}-`)).map((u) => u.id));
+  const screenText = (u: (typeof T)[number]) =>
+    [u.title, u.chapter, u.gist, ...u.sections.flatMap((x) => [x.heading, x.body]), ...u.testPoints, ...(u.figure.steps ?? []), ...u.checks.flatMap((c) => [c.q, c.a, c.why])].join('\n');
+  check('【定期テスト】画面に出る文に、よその国の文字・文字化けがまぎれている', T.filter((u) => /[\u0400-\u04FF\uAC00-\uD7AF\u0600-\u06FF\u0E00-\u0E7F\uFFFD]/.test(screenText(u))).map((u) => u.id));
+  check('【定期テスト】説明に **強調** の閉じ忘れがある', T.filter((u) => u.sections.some((x) => (x.body.match(/\*\*/g) ?? []).length % 2 === 1)).map((u) => u.id));
+  console.log(`  （定期テスト：${T.length}単元）`);
 }
 
 console.log(`\n合計 ${problems} 件`);

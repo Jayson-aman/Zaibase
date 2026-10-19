@@ -5,6 +5,7 @@
   "cleanUrls": true,
   "rewrites": [
     { "source": "/lesson/:id", "destination": "/lesson/[id]" },
+    { "source": "/teiki/:id", "destination": "/teiki/[id]" },
     { "source": "/quiz/:subject", "destination": "/quiz/[subject]" },
     { "source": "/topics/:subject", "destination": "/topics/[subject]" },
     { "source": "/school/:course", "destination": "/school/[course]" },
