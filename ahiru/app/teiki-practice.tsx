@@ -6,6 +6,13 @@ import { rich } from '../components/RichText';
 import AnswerInput, { type SubmitResult } from '../components/AnswerInput';
 import HomeButton from '../components/HomeButton';
 import LadderCard from '../components/LadderCard';
+import Paywall from '../components/Paywall';
+import { useSubscription } from '../hooks/useSubscription';
+import { useBetaAccess } from '../hooks/useBetaAccess';
+import { logPurchaseEvent } from '../services/analytics';
+
+/** 無料の人が解ける基本問題の数（1学年×1教科あたり）。続きは Pro / Max */
+const FREE_QUESTIONS = 5;
 import { subjectInfo, type SubjectKey } from '../data/questions-meta';
 
 const TERMS: { key: 'all' | '1' | '2' | '3'; label: string }[] = [
@@ -23,11 +30,16 @@ export default function TeikiPractice() {
   const [term, setTerm] = useState<'all' | '1' | '2' | '3'>('all');
   const [idx, setIdx] = useState(0);
   const [results, setResults] = useState<Record<string, SubmitResult>>({});
+  const { isPro, isMax } = useSubscription();
+  const { hasAccess: betaAccess } = useBetaAccess();
+  const full = isPro || isMax || betaAccess;
+  const [paywallVisible, setPaywallVisible] = useState(false);
 
-  const list = useMemo(
+  const allList = useMemo(
     () => (mod ? mod.TEIKI_QUESTIONS.filter((q) => q.grade === grade && q.subject === subject && (term === 'all' || String(q.term) === term)) : []),
     [mod, grade, subject, term],
   );
+  const list = useMemo(() => (full ? allList : allList.slice(0, FREE_QUESTIONS)), [full, allList]);
   useEffect(() => { setIdx(0); }, [term, grade, subject]);
 
   const subjName = subject === 'sansu' ? '数学' : subjectInfo[subject as SubjectKey]?.name ?? '';
@@ -93,6 +105,14 @@ export default function TeikiPractice() {
                 grade={String(grade)}
                 onRetry={() => { setResults({}); setIdx(0); }}
               />
+              {!full && allList.length > list.length && (
+                <View style={styles.expBox}>
+                  <Text style={styles.ans}>🔒 続きの {allList.length - list.length} 問は Pro / Max で</Text>
+                  <TouchableOpacity style={styles.nextBtn} onPress={() => { logPurchaseEvent('teiki_lock_tapped', 'subscription'); setPaywallVisible(true); }} activeOpacity={0.85}>
+                    <Text style={styles.nextText}>プランを見る</Text>
+                  </TouchableOpacity>
+                </View>
+              )}
               <TouchableOpacity style={styles.nextBtn} onPress={() => { setResults({}); setIdx(0); }} activeOpacity={0.85}>
                 <Text style={styles.nextText}>もう一度やる</Text>
               </TouchableOpacity>
@@ -100,6 +120,7 @@ export default function TeikiPractice() {
           )}
         </ScrollView>
       </KeyboardAvoidingView>
+      <Paywall visible={paywallVisible} onClose={() => setPaywallVisible(false)} onPurchased={() => setPaywallVisible(false)} />
     </SafeAreaView>
   );
 }

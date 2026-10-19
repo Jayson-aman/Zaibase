@@ -5,6 +5,12 @@ import { C, FILL, bx, lb, ar, ln, ci, show, band, fresh, flow, stack } from '../
 
 const cap = (t: string, color: string = C.ink) => band(150, lb(160, 188, t, 12, color, 'middle', true));
 
+import type { DiagramElement } from '../figures';
+const T = (t: string, color: string = C.ink) => lb(160, 18, t, 12, color, 'middle', true);
+const R = (rows: string[], color: string, fill: string, y0 = 28): DiagramElement[] => rows.map((t, i) => bx(10, y0 + i * 30, 300, 24, t, color, fill, 11));
+const F = (labels: string[], y: number, color: string, fill: string, h = 46): DiagramElement[] => flow(labels, y, { h, color, fill, size: 11 }).flat();
+const S = (note: string, capText: string, color: string, ...els: DiagramElement[]) => ({ note, add: fresh(...els, ...cap(capText, color)) });
+
 const edo: TeikiUnit = {
   id: 'j2-shakai-01',
   grade: 'j2',

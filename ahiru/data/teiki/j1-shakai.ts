@@ -5,6 +5,12 @@ import { C, FILL, bx, lb, ar, ln, ci, show, band, fresh, flow } from '../diagram
 
 const cap = (t: string, color: string = C.ink) => band(150, lb(160, 188, t, 12, color, 'middle', true));
 
+import type { DiagramElement } from '../figures';
+const T = (t: string, color: string = C.ink) => lb(160, 18, t, 12, color, 'middle', true);
+const R = (rows: string[], color: string, fill: string, y0 = 28): DiagramElement[] => rows.map((t, i) => bx(10, y0 + i * 30, 300, 24, t, color, fill, 11));
+const F = (labels: string[], y: number, color: string, fill: string, h = 46): DiagramElement[] => flow(labels, y, { h, color, fill, size: 11 }).flat();
+const S = (note: string, capText: string, color: string, ...els: DiagramElement[]) => ({ note, add: fresh(...els, ...cap(capText, color)) });
+
 const climate: TeikiUnit = {
   id: 'j1-shakai-01',
   grade: 'j1',
@@ -27,6 +33,11 @@ const climate: TeikiUnit = {
       heading: '気候と暮らしのつながり',
       body:
         '気候によって、育つ植物や手に入る材料、動物がちがいます。人々はそれを使って暮らしを工夫してきました。\n\n例：熱帯では、暑さや湿気をさけるため**高床式の住居**。乾燥帯では、草を求めて家畜と移動する**遊牧**や、わき水のある**オアシス**での農業。冷帯では、寒さを防ぐ厚い壁や二重の窓。\n\n「**気候 → 手に入る材料や食べ物 → 住まい・食事・服**」という流れで覚えると、一つひとつ丸暗記しなくて済みます。',
+    },
+    {
+      heading: '具体例でつかむ気候と暮らし',
+      body:
+        '・**サハラ砂漠（乾燥帯）**：空気中の水蒸気が少ないので、昼は熱がこもって暑く、夜は熱が逃げて冷えこみます。水が少ないので、ラクダと移動する暮らしや、わき水のあるオアシスでのナツメヤシの栽培が生まれました。\n・**アマゾン川流域（熱帯）**：一年中暑くて雨が多いため、大きな熱帯雨林が育ちます。森を焼いて畑にする焼畑でキャッサバを育てますが、近年は開発で森林が減っています。\n・**北海道（冷帯）**：冬の寒さがきびしいため、家の窓を二重にして熱が逃げないようにし、暖房を使います。雪が多い地域では、雪が積もりにくい屋根の形も工夫されます。',
     },
   ],
   testPoints: [
@@ -115,6 +126,10 @@ const climate: TeikiUnit = {
         ...cap('寒帯：農業は難しく、狩りや漁が中心', C.purple),
       ),
     },
+    S('具体例1：アフリカ北部のサハラ砂漠は乾燥帯です。❓なぜ昼は暑いのに夜は冷えるのでしょう。→ 空気中の水蒸気が少なく、日がしずむと熱がすぐに逃げるからです。人々はラクダと移動したり、わき水のあるオアシスでナツメヤシを育てたりします。', '具体例：サハラ砂漠とオアシスの暮らし', C.main,
+      T('サハラ砂漠（乾燥帯）', C.main), ...R(['昼は暑く、夜は冷えこむ（水蒸気が少ない）', 'ラクダに荷物をのせて、砂漠を移動する', 'オアシスでナツメヤシを育てて暮らす'], C.main, FILL.yellow)),
+    S('具体例2：南アメリカのアマゾン川流域は熱帯雨林です。❓なぜ森が育つのでしょう。→ 一年中暑くて雨が多いからです。人々は森を焼いて畑にする焼畑でキャッサバを育ててきましたが、近年は開発で森林が減っています。', '具体例：アマゾンの熱帯雨林', C.red,
+      T('アマゾン川流域（熱帯）', C.red), ...R(['一年中暑く雨が多い → 大きな森が育つ', '森を焼いた灰を肥料にする焼畑でキャッサバを育てる', '近年は開発で森林が減っていることが問題'], C.red, FILL.red)),
     {
       note: '❓では、なぜ気候で暮らしがちがうのでしょう。→ 気候によって育つ植物や手に入る材料が決まり、人はそれを使って家を建て、食事を作り、服を選ぶからです。気候が暮らしの土台になっています。',
       add: fresh(

@@ -5,12 +5,25 @@ import { teikiModule } from '../../data/teiki-lazy';
 import FigureView from '../../components/FigureView';
 import { rich } from '../../components/RichText';
 import HomeButton from '../../components/HomeButton';
+import Paywall from '../../components/Paywall';
+import { useSubscription } from '../../hooks/useSubscription';
+import { useBetaAccess } from '../../hooks/useBetaAccess';
+import { logPurchaseEvent } from '../../services/analytics';
+
+/** 無料の人に見せる動く図解の枚数（最初の「なぜ？」と、その答えまで） */
+const FREE_SLIDES = 2;
 
 export default function TeikiUnitScreen() {
   const router = useRouter();
   const { id } = useLocalSearchParams<{ id: string }>();
   const mod = teikiModule.use();
   const [shown, setShown] = useState<Record<number, boolean>>({});
+  const { isPro, isMax } = useSubscription();
+  const { hasAccess: betaAccess } = useBetaAccess();
+  // 定期テストの教科書は Pro / Max の中身。無料の人は、図解の最初の2枚と最初の節までためし読みできる
+  const full = isPro || isMax || betaAccess;
+  const [paywallVisible, setPaywallVisible] = useState(false);
+  const openPaywall = () => { logPurchaseEvent('teiki_lock_tapped', 'subscription'); setPaywallVisible(true); };
 
   const unit = mod ? mod.TEIKI_UNITS.find((u) => u.id === id) : null;
 
@@ -34,15 +47,26 @@ export default function TeikiUnitScreen() {
           </View>
 
           <Text style={styles.h2}>🎞 動く図解（{unit.figure.steps?.length ?? 0}枚）</Text>
-          <FigureView figure={unit.figure} animated manual />
+          <FigureView figure={unit.figure} animated manual previewSlides={full ? undefined : FREE_SLIDES} />
 
-          {unit.sections.map((s, i) => (
+          {(full ? unit.sections : unit.sections.slice(0, 1)).map((s, i) => (
             <View key={i} style={styles.section}>
               <Text style={styles.h2}>{s.heading}</Text>
               <Text style={styles.body}>{rich(s.body)}</Text>
             </View>
           ))}
 
+          {!full && (
+            <View style={styles.lockBox}>
+              <Text style={styles.lockTitle}>🔒 続きは Pro / Max で</Text>
+              <Text style={styles.lockBody}>動く図解の全部、具体例、テストに出るポイント、確認の一問一答が読めます。</Text>
+              <TouchableOpacity style={styles.showBtn} onPress={openPaywall} activeOpacity={0.85}>
+                <Text style={styles.showText}>プランを見る</Text>
+              </TouchableOpacity>
+            </View>
+          )}
+
+          {full && (<>
           <View style={styles.pointBox}>
             <Text style={styles.pointTitle}>★ テストに出るポイント</Text>
             {unit.testPoints.map((p, i) => (
@@ -66,8 +90,10 @@ export default function TeikiUnitScreen() {
               )}
             </View>
           ))}
+          </>)}
         </ScrollView>
       )}
+      <Paywall visible={paywallVisible} onClose={() => setPaywallVisible(false)} onPurchased={() => setPaywallVisible(false)} />
     </SafeAreaView>
   );
 }
@@ -86,6 +112,9 @@ const styles = StyleSheet.create({
   h2: { fontSize: 16, fontWeight: '800', color: '#4A3320', marginTop: 22, marginBottom: 8 },
   section: {},
   body: { fontSize: 14, lineHeight: 24, color: '#3E3126' },
+  lockBox: { backgroundColor: '#FFF1E6', borderRadius: 12, borderWidth: 1.5, borderColor: '#E8B98E', padding: 14, marginTop: 22 },
+  lockTitle: { fontSize: 15, fontWeight: '800', color: '#8A3F12' },
+  lockBody: { fontSize: 13, lineHeight: 21, color: '#4A4036', marginTop: 4 },
   pointBox: { backgroundColor: '#FFFBE6', borderRadius: 12, borderWidth: 1.5, borderColor: '#F2D48A', padding: 14, marginTop: 22 },
   pointTitle: { fontSize: 15, fontWeight: '800', color: '#7A5A12', marginBottom: 6 },
   point: { fontSize: 14, lineHeight: 23, color: '#3E3126', marginTop: 3 },
