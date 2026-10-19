@@ -30,7 +30,7 @@ export default function TeikiPractice() {
   const mod = teikiQuestionsModule.use();
   const [term, setTerm] = useState<'all' | '1' | '2' | '3'>('all');
   // やさしいステップ1から始める。できたら次へ、むずかしければもどる
-  const [step, setStep] = useState<StepLevel>(1);
+  const [step, setStep] = useState<StepLevel | 0>(1); // 0＝ぜんぶ（やさしい順）
   const [idx, setIdx] = useState(0);
   const [results, setResults] = useState<Record<string, SubmitResult>>({});
   const { isPro, isMax } = useSubscription();
@@ -43,11 +43,16 @@ export default function TeikiPractice() {
   useEffect(() => { setMounted(true); }, []);
 
   const allList = useMemo(
-    () => (mod ? mod.TEIKI_QUESTIONS.filter((q) => q.grade === grade && q.subject === subject && (term === 'all' || String(q.term) === term) && mod.levelOf(q.id) === step) : []),
+    () => {
+      if (!mod) return [];
+      const qs = mod.TEIKI_QUESTIONS.filter((q) => q.grade === grade && q.subject === subject && (term === 'all' || String(q.term) === term) && (step === 0 || mod.levelOf(q.id) === step));
+      // ぜんぶ表示のときも、やさしい問題（ステップ1）を先頭に並べる（同じステップの中は教科書の順のまま）
+      return step === 0 ? [...qs].sort((a, b) => mod.levelOf(a.id) - mod.levelOf(b.id)) : qs;
+    },
     [mod, grade, subject, term, step],
   );
   // 無料の人は、いちばんやさしいステップ1の最初の5問まで（ステップ2・3は Pro / Max）
-  const list = useMemo(() => (full ? allList : step === 1 ? allList.slice(0, FREE_QUESTIONS) : []), [full, allList, step]);
+  const list = useMemo(() => (full ? allList : step <= 1 ? allList.slice(0, FREE_QUESTIONS) : []), [full, allList, step]);
   useEffect(() => { setIdx(0); }, [term, grade, subject, step]);
 
   const subjName = subject === 'sansu' ? '数学' : subjectInfo[subject as SubjectKey]?.name ?? '';
@@ -70,13 +75,16 @@ export default function TeikiPractice() {
             <Text style={styles.startBody}>むずかしくないよ。やさしい問題から、ひとつずつ。できたら次へ、むずかしかったら、いつでも前にもどっていいからね。{mounted ? FIRST_STEP_HINT[String(subject)] ?? '' : ''}</Text>
           </View>
           <View style={styles.row}>
+            <TouchableOpacity style={[styles.chip, step === 0 && styles.chipOn]} onPress={() => setStep(0)} activeOpacity={0.85}>
+              <Text style={[styles.chipText, step === 0 && styles.chipTextOn]}>ぜんぶ（やさしい順）</Text>
+            </TouchableOpacity>
             {STEPS.map((st) => (
               <TouchableOpacity key={st.level} style={[styles.chip, step === st.level && styles.chipOn]} onPress={() => setStep(st.level)} activeOpacity={0.85}>
                 <Text style={[styles.chipText, step === st.level && styles.chipTextOn]}>{st.label} {st.title}</Text>
               </TouchableOpacity>
             ))}
           </View>
-          <Text style={styles.stepLead}>{STEPS.find((x) => x.level === step)?.lead}</Text>
+          <Text style={styles.stepLead}>{step === 0 ? 'やさしい問題から順に、ぜんぶ並べました。' : STEPS.find((x) => x.level === step)?.lead}</Text>
           <View style={styles.row}>
             {TERMS.map((t) => (
               <TouchableOpacity key={t.key} style={[styles.chip, term === t.key && styles.chipOn]} onPress={() => setTerm(t.key)} activeOpacity={0.85}>
@@ -151,7 +159,7 @@ export default function TeikiPractice() {
               )}
               {(() => {
                 const pct = Math.round((correct / list.length) * 100);
-                if (step < 3 && pct >= STEP_UP_PCT) {
+                if (step !== 0 && step < 3 && pct >= STEP_UP_PCT) {
                   const nx = (step + 1) as StepLevel;
                   return (
                     <View style={styles.expBox}>
@@ -177,7 +185,7 @@ export default function TeikiPractice() {
                 }
                 return null;
               })()}
-              {step === 3 && (
+              {(step === 3 || step === 0) && (
               <LadderCard
                 pct={Math.round((correct / list.length) * 100)}
                 from="teiki"
