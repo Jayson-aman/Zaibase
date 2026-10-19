@@ -64,7 +64,7 @@ export default function TeikiIndex() {
           ))}
         </View>
         <TouchableOpacity style={styles.practice} activeOpacity={0.85} onPress={() => router.push(`/teiki-practice?grade=${grade}&subject=${subject}` as any)}>
-          <Text style={styles.practiceTitle}>📝 基本中の基本 50問（学期末テスト対応）</Text>
+          <Text style={styles.practiceTitle}>📝 やさしい問題から 50問（学期末テスト対応）</Text>
           <Text style={styles.practiceSub}>{GRADES.find((g) => g.key === grade)?.label}{subjName(subject)}・1学期末／2学期末／学年末で絞れます →</Text>
         </TouchableOpacity>
         {!mod && <ActivityIndicator style={{ marginTop: 40 }} color="#B5622E" />}

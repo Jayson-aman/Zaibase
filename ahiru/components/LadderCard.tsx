@@ -35,26 +35,26 @@ export default function LadderCard({
 
   if (pct >= 80) {
     if (from === 'teiki') {
-      title = '🌟 基礎はバッチリ。つぎの段階へ';
-      body = 'いつもの問題集の「基礎」に進みます。むずかしいと感じたら、いつでもここにもどれます。';
-      primary = { label: '問題集の基礎へ進む', onPress: () => toQuiz('basic') };
+      title = '🌟 よくできました。つぎへ進んでみよう';
+      body = 'いつもの問題集の、やさしい問題に進みます。むずかしいと感じたら、いつでもここにもどれます。';
+      primary = { label: 'やさしい問題集へ進む', onPress: () => toQuiz('basic') };
     } else if (from === 'basic') {
-      title = '🌟 基礎ができました。標準に挑戦';
-      body = '基礎で8割以上とれました。つぎは標準レベルに進みましょう。';
-      primary = { label: '標準問題へ進む', onPress: () => toQuiz('standard') };
+      title = '🌟 できたね。つぎは少しだけ上へ';
+      body = 'やさしい問題で8割以上とれました。つぎは「ふつう」のレベルに進んでみましょう。';
+      primary = { label: '「ふつう」の問題へ進む', onPress: () => toQuiz('standard') };
     } else {
-      title = '🏆 標準もよくできています';
+      title = '🏆 「ふつう」もよくできています';
       body = 'このまま応用や、ほかの単元に進んでだいじょうぶです。';
     }
   } else if (pct >= 60) {
-    title = '👍 あと少し。もう一回やってみよう';
-    body = 'まちがえた所を見直して、同じ段階でもう一度やると定着します。';
+    title = '👍 あと少し。もう一回、ゆっくりやってみよう';
+    body = 'まちがえた所を見直して、同じところでもう一度やると、身についてきます。';
     if (onRetry) primary = { label: 'もう一度やる', onPress: onRetry };
-    secondary = { label: '基礎の解説を見直す', onPress: toBasics };
+    secondary = { label: '動く図解を見直す', onPress: toBasics };
   } else {
-    title = '📘 ここで基礎にもどろう';
-    body = 'つまずいた所は、基礎の動く図解と基本問題で、ゆっくり固め直しましょう。もどるのは悪いことではありません。';
-    primary = { label: '基礎の図解と基本問題へ', onPress: toBasics };
+    title = '📘 ゆっくり、基礎にもどろう';
+    body = 'つまずいた所は、動く図解とやさしい問題で、ゆっくりおさらいしよう。もどっても全然だいじょうぶ。';
+    primary = { label: '動く図解とやさしい問題へ', onPress: toBasics };
     if (onRetry) secondary = { label: 'もう一度やる', onPress: onRetry };
   }
 
