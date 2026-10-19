@@ -14,6 +14,7 @@ import { logPurchaseEvent } from '../services/analytics';
 /** 無料の人が解ける基本問題の数（1学年×1教科あたり）。続きは Pro / Max */
 const FREE_QUESTIONS = 5;
 import { subjectInfo, type SubjectKey } from '../data/questions-meta';
+import { STEPS, FIRST_STEP_HINT, STEP_UP_PCT, STEP_DOWN_PCT, type StepLevel } from '../data/teiki-questions/start-guide';
 
 const TERMS: { key: 'all' | '1' | '2' | '3'; label: string }[] = [
   { key: 'all', label: '全部' },
@@ -28,6 +29,8 @@ export default function TeikiPractice() {
   const { grade = 'j1', subject = 'sansu' } = useLocalSearchParams<{ grade?: string; subject?: string }>();
   const mod = teikiQuestionsModule.use();
   const [term, setTerm] = useState<'all' | '1' | '2' | '3'>('all');
+  // やさしいステップ1から始める。できたら次へ、むずかしければもどる
+  const [step, setStep] = useState<StepLevel>(1);
   const [idx, setIdx] = useState(0);
   const [results, setResults] = useState<Record<string, SubmitResult>>({});
   const { isPro, isMax } = useSubscription();
@@ -40,11 +43,12 @@ export default function TeikiPractice() {
   useEffect(() => { setMounted(true); }, []);
 
   const allList = useMemo(
-    () => (mod ? mod.TEIKI_QUESTIONS.filter((q) => q.grade === grade && q.subject === subject && (term === 'all' || String(q.term) === term)) : []),
-    [mod, grade, subject, term],
+    () => (mod ? mod.TEIKI_QUESTIONS.filter((q) => q.grade === grade && q.subject === subject && (term === 'all' || String(q.term) === term) && mod.levelOf(q.id) === step) : []),
+    [mod, grade, subject, term, step],
   );
-  const list = useMemo(() => (full ? allList : allList.slice(0, FREE_QUESTIONS)), [full, allList]);
-  useEffect(() => { setIdx(0); }, [term, grade, subject]);
+  // 無料の人は、いちばんやさしいステップ1の最初の5問まで（ステップ2・3は Pro / Max）
+  const list = useMemo(() => (full ? allList : step === 1 ? allList.slice(0, FREE_QUESTIONS) : []), [full, allList, step]);
+  useEffect(() => { setIdx(0); }, [term, grade, subject, step]);
 
   const subjName = subject === 'sansu' ? '数学' : subjectInfo[subject as SubjectKey]?.name ?? '';
   const q = list[idx];
@@ -61,6 +65,18 @@ export default function TeikiPractice() {
       <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
         <ScrollView contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled">
           <Text style={styles.title}>{mounted ? `📝 ${GRADE_LABEL[grade] ?? ''}${subjName} 基本中の基本` : '📝 基本中の基本'}</Text>
+          <View style={styles.startBox}>
+            <Text style={styles.startTitle}>🌱 基礎中の基礎</Text>
+            <Text style={styles.startBody}>やさしい問題から始めよう。できたら次のステップへ、むずかしかったら、いつでもステップ1にもどってOK。{mounted ? FIRST_STEP_HINT[String(subject)] ?? '' : ''}</Text>
+          </View>
+          <View style={styles.row}>
+            {STEPS.map((st) => (
+              <TouchableOpacity key={st.level} style={[styles.chip, step === st.level && styles.chipOn]} onPress={() => setStep(st.level)} activeOpacity={0.85}>
+                <Text style={[styles.chipText, step === st.level && styles.chipTextOn]}>{st.label} {st.title}</Text>
+              </TouchableOpacity>
+            ))}
+          </View>
+          <Text style={styles.stepLead}>{STEPS.find((x) => x.level === step)?.lead}</Text>
           <View style={styles.row}>
             {TERMS.map((t) => (
               <TouchableOpacity key={t.key} style={[styles.chip, term === t.key && styles.chipOn]} onPress={() => setTerm(t.key)} activeOpacity={0.85}>
@@ -69,19 +85,50 @@ export default function TeikiPractice() {
             ))}
           </View>
           {!mod && <ActivityIndicator style={{ marginTop: 40 }} color="#B5622E" />}
-          {mod && list.length === 0 && <Text style={styles.empty}>この範囲の問題は準備中です。</Text>}
+          {mod && list.length === 0 && full && <Text style={styles.empty}>この範囲の問題は準備中です。</Text>}
+          {mod && list.length === 0 && !full && (
+            <View style={styles.expBox}>
+              <Text style={styles.ans}>🔒 ステップ2・3は Pro / Max で</Text>
+              <Text style={styles.exp}>ステップ1の最初の5問は無料で試せます。</Text>
+              <TouchableOpacity style={styles.nextBtn} onPress={() => { logPurchaseEvent('teiki_lock_tapped', 'subscription'); setPaywallVisible(true); }} activeOpacity={0.85}>
+                <Text style={styles.nextText}>プランを見る</Text>
+              </TouchableOpacity>
+            </View>
+          )}
           {q && (
             <View style={styles.card}>
               <Text style={styles.meta}>{idx + 1} / {list.length} ・ {q.topic}</Text>
               <Text style={styles.qText}>{q.question}</Text>
-              <AnswerInput
-                key={q.id}
-                question={{ question: q.question, answer: q.answer, choices: q.choices }}
-                submitted={sub}
-                tone="brown"
-                flush
-                onSubmit={(r) => setResults((p) => ({ ...p, [q.id]: r }))}
-              />
+              {q.choices && q.choices.length > 0 ? (
+                <View style={styles.choices}>
+                  {q.choices.map((c) => {
+                    const picked = sub?.input === c;
+                    const isAns = c === q.answer;
+                    const done = sub != null;
+                    return (
+                      <TouchableOpacity
+                        key={c}
+                        disabled={done}
+                        style={[styles.choice, done && isAns && styles.choiceOk, done && picked && !isAns && styles.choiceNg]}
+                        onPress={() => setResults((p) => ({ ...p, [q.id]: { input: c, result: c === q.answer ? 'correct' : 'wrong' } }))}
+                        activeOpacity={0.85}
+                        accessibilityRole="button"
+                      >
+                        <Text style={styles.choiceText}>{done && isAns ? '◎ ' : done && picked ? '✕ ' : ''}{c}</Text>
+                      </TouchableOpacity>
+                    );
+                  })}
+                </View>
+              ) : (
+                <AnswerInput
+                  key={q.id}
+                  question={{ question: q.question, answer: q.answer }}
+                  submitted={sub}
+                  tone="brown"
+                  flush
+                  onSubmit={(r) => setResults((p) => ({ ...p, [q.id]: r }))}
+                />
+              )}
               {sub && (
                 <View style={styles.expBox}>
                   <Text style={styles.ans}>答え：{q.answer}</Text>
@@ -102,6 +149,35 @@ export default function TeikiPractice() {
                   まちがえた所：{list.filter((x) => results[x.id]?.result !== 'correct').map((x) => x.topic).filter((v, i, a) => a.indexOf(v) === i).join('、')}
                 </Text>
               )}
+              {(() => {
+                const pct = Math.round((correct / list.length) * 100);
+                if (step < 3 && pct >= STEP_UP_PCT) {
+                  const nx = (step + 1) as StepLevel;
+                  return (
+                    <View style={styles.expBox}>
+                      <Text style={styles.ans}>🌟 {STEPS[step - 1].label}クリア！</Text>
+                      <Text style={styles.exp}>つぎは「{STEPS[nx - 1].title}」に進みます。むずかしかったら、いつでももどれます。</Text>
+                      <TouchableOpacity style={styles.nextBtn} onPress={() => { setResults({}); setIdx(0); setStep(nx); }} activeOpacity={0.85}>
+                        <Text style={styles.nextText}>{STEPS[nx - 1].label}へ進む</Text>
+                      </TouchableOpacity>
+                    </View>
+                  );
+                }
+                if (step > 1 && pct < STEP_DOWN_PCT) {
+                  const pv = (step - 1) as StepLevel;
+                  return (
+                    <View style={styles.expBox}>
+                      <Text style={styles.ans}>📘 ひとつ前にもどろう</Text>
+                      <Text style={styles.exp}>もどるのは悪いことではありません。やさしい問題でもう一度ならしてから、また来ましょう。</Text>
+                      <TouchableOpacity style={styles.nextBtn} onPress={() => { setResults({}); setIdx(0); setStep(pv); }} activeOpacity={0.85}>
+                        <Text style={styles.nextText}>{STEPS[pv - 1].label}にもどる</Text>
+                      </TouchableOpacity>
+                    </View>
+                  );
+                }
+                return null;
+              })()}
+              {step === 3 && (
               <LadderCard
                 pct={Math.round((correct / list.length) * 100)}
                 from="teiki"
@@ -109,6 +185,7 @@ export default function TeikiPractice() {
                 grade={String(grade)}
                 onRetry={() => { setResults({}); setIdx(0); }}
               />
+              )}
               {!full && allList.length > list.length && (
                 <View style={styles.expBox}>
                   <Text style={styles.ans}>🔒 続きの {allList.length - list.length} 問は Pro / Max で</Text>
@@ -140,10 +217,19 @@ const styles = StyleSheet.create({
   chipOn: { backgroundColor: '#B5622E', borderColor: '#B5622E' },
   chipText: { fontSize: 13, fontWeight: '700', color: '#4A3320' },
   chipTextOn: { color: '#fff' },
+  startBox: { backgroundColor: '#F1F8F1', borderRadius: 12, borderWidth: 1.5, borderColor: '#BFE0C4', padding: 12, marginTop: 12 },
+  startTitle: { fontSize: 14, fontWeight: '800', color: '#1E7A3C' },
+  startBody: { fontSize: 12, lineHeight: 19, color: '#3E3126', marginTop: 3 },
+  stepLead: { fontSize: 12, lineHeight: 18, color: '#6B5A48', marginTop: 8 },
   empty: { marginTop: 30, textAlign: 'center', color: '#8A7A68' },
   card: { backgroundColor: '#fff', borderRadius: 14, borderWidth: 1.5, borderColor: '#E8DCCB', padding: 16, marginTop: 16 },
   meta: { fontSize: 12, color: '#8A7A68', fontWeight: '700' },
   qText: { fontSize: 16, lineHeight: 26, fontWeight: '700', color: '#4A3320', marginTop: 8, marginBottom: 6 },
+  choices: { marginTop: 8, gap: 8 },
+  choice: { borderWidth: 1.5, borderColor: '#E0D4C2', borderRadius: 12, paddingVertical: 12, paddingHorizontal: 14, backgroundColor: '#FAF7F2' },
+  choiceOk: { borderColor: '#1E7A3C', backgroundColor: '#E6F4EA' },
+  choiceNg: { borderColor: '#C0392B', backgroundColor: '#FDECEA' },
+  choiceText: { fontSize: 15, color: '#4A3320', fontWeight: '700' },
   expBox: { marginTop: 14, backgroundColor: '#F6F1E8', borderRadius: 10, padding: 12 },
   ans: { fontSize: 14, fontWeight: '800', color: '#1E7A3C' },
   exp: { fontSize: 13, lineHeight: 21, color: '#3E3126', marginTop: 6 },
