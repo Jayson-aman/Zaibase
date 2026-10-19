@@ -6,7 +6,7 @@ import { C, FILL, bx, lb, ln, ci, show, band, fresh, stack } from '../diagram-ki
 const cap = (t: string, color: string = C.ink) => band(150, lb(160, 188, t, 12, color, 'middle', true));
 // 式の1行（左そろえ）。番号つき
 const eq = (y: number, no: string, t: string, color: string = C.ink) => [
-  lb(24, y, no, 14, C.main, 'start', true),
+  lb(no.length > 1 ? 12 : 24, y, no, no.length > 2 ? 11 : 14, C.main, 'start', true),
   lb(56, y, t, 18, color, 'start', true),
 ];
 
@@ -317,7 +317,7 @@ const ichiji: TeikiUnit = {
     },
     {
       note: 'グラフにします。表の (x, y) を座標の点として打ちます。(0, 1)、(1, 3)、(2, 5) の3点は、一列にならんでいます。',
-      add: fresh(...axes(), pt(0, 1), pt(1, 3), pt(2, 5), lb(gx(0.2) + 16, gy(1) + 4, '(0,1)', 10, C.red, 'start'), lb(gx(1) + 8, gy(3) + 4, '(1,3)', 10, C.red, 'start'), lb(gx(2) + 8, gy(5) + 4, '(2,5)', 10, C.red, 'start'), ...cap('表の値を点として打つ')),
+      add: fresh(...axes(), pt(0, 1), pt(1, 3), pt(2, 5), lb(gx(0) + 8, gy(1) + 15, '(0,1)', 10, C.red, 'start'), lb(gx(1) + 8, gy(3) + 4, '(1,3)', 10, C.red, 'start'), lb(gx(2) + 8, gy(5) + 4, '(2,5)', 10, C.red, 'start'), ...cap('表の値を点として打つ')),
     },
     {
       note: '3点を直線でむすびます。1次関数のグラフはいつも直線です。右へ1進むと上へ2のぼる、これがちょうど傾き2の意味。ふえ方がいつも同じなので、まっすぐな線になります。',
@@ -325,7 +325,7 @@ const ichiji: TeikiUnit = {
         ln(gx(0), gy(1), gx(2.5), gy(6), C.blue, false, 2),
         ln(gx(0), gy(1), gx(1), gy(1), C.green, true),
         ln(gx(1), gy(1), gx(1), gy(3), C.red, true),
-        lb(gx(0.5), gy(1) - 4, '右へ1', 10, C.green, 'middle', true),
+        lb(gx(1) + 5, gy(1) + 4, '右へ1', 10, C.green, 'start', true),
         lb(gx(1) + 20, gy(2) + 4, '上へ2', 10, C.red, 'start', true),
         ...cap('右へ 1 で 上へ 2 → 傾き 2', C.blue),
       ],
@@ -334,7 +334,7 @@ const ichiji: TeikiUnit = {
       note: '❓切片 b=1 はグラフのどこ？ → x=0 のとき y=2×0+1=1。つまり、グラフが y 軸と交わる点 (0, 1) の高さが切片です。グラフをかくときの出発点になります。',
       add: [
         ci(gx(0), gy(1), 5, undefined, C.main, undefined),
-        lb(gx(0) + 14, gy(1) + 18, '切片 (0, 1)', 11, C.main, 'start', true),
+        lb(gx(0) + 38, gy(1) + 15, '切片 b＝1', 11, C.main, 'start', true),
         ...cap('y軸と交わる点が切片', C.main),
       ],
     },
