@@ -16,7 +16,7 @@ import * as path from 'path';
 import { lintDiagram } from './figlint';
 import { TEIKI_UNITS } from '../data/teiki';
 import { TEIKI_MIN_SLIDES } from '../data/teiki/types';
-import { TEIKI_QUESTIONS } from '../data/teiki-questions';
+import { TEIKI_QUESTIONS, TEIKI_LEVELS } from '../data/teiki-questions';
 import { TEIKI_Q_PER_CELL } from '../data/teiki-questions/types';
 import { judge } from '../utils/grading';
 import { getMangaScript } from '../data/manga-scripts';
@@ -1820,6 +1820,19 @@ info('日本語の中に英単語が挟まっている（要目視）', latin, 8
   })());
   check('【定期テスト問題】** の閉じ忘れ・外国の文字・文字化け', Q.filter((q) => (q.explanation.match(/\*\*/g) ?? []).length % 2 === 1 || /[\u0400-\u04FF\uAC00-\uD7AF\u0600-\u06FF\uFFFD]/.test(q.question + q.answer + q.explanation)).map((q) => q.id));
   check('【定期テスト問題】** が問題文・答え・選択肢に入っている（採点が合わなくなる）', Q.filter((q) => /\*\*/.test(q.question + q.answer + (q.choices ?? []).join(''))).map((q) => q.id));
+  check('【定期テスト問題】やさしさのステップが付いていない・存在しない id に付いている', [
+    ...Q.filter((q) => TEIKI_LEVELS[q.id] === undefined).map((q) => q.id + '（未設定）'),
+    ...Object.keys(TEIKI_LEVELS).filter((id) => !Q.some((q) => q.id === id)).map((id) => id + '（問題が無い）'),
+  ]);
+  check('【定期テスト問題】ステップ1（ウォームアップ）が各学年・教科・学期末に4問未満（やさしい所から始められない）', (() => {
+    const cnt = new Map<string, number>();
+    for (const q of Q) if (TEIKI_LEVELS[q.id] === 1) cnt.set(`${q.grade}-${q.subject}-t${q.term}`, (cnt.get(`${q.grade}-${q.subject}-t${q.term}`) ?? 0) + 1);
+    const bad: string[] = [];
+    for (const g of ['j1', 'j2', 'j3']) for (const s of ['sansu', 'kokugo', 'rika', 'shakai', 'eigo']) for (const t of [1, 2, 3]) {
+      const k = `${g}-${s}-t${t}`; if ((cnt.get(k) ?? 0) < 4) bad.push(`${k}=${cnt.get(k) ?? 0}`);
+    }
+    return bad;
+  })());
   console.log(`  （定期テスト基本問題：${Q.length}問）`);
 }
 

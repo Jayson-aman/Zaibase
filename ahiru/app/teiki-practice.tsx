@@ -99,14 +99,36 @@ export default function TeikiPractice() {
             <View style={styles.card}>
               <Text style={styles.meta}>{idx + 1} / {list.length} ・ {q.topic}</Text>
               <Text style={styles.qText}>{q.question}</Text>
-              <AnswerInput
-                key={q.id}
-                question={{ question: q.question, answer: q.answer, choices: q.choices }}
-                submitted={sub}
-                tone="brown"
-                flush
-                onSubmit={(r) => setResults((p) => ({ ...p, [q.id]: r }))}
-              />
+              {q.choices && q.choices.length > 0 ? (
+                <View style={styles.choices}>
+                  {q.choices.map((c) => {
+                    const picked = sub?.input === c;
+                    const isAns = c === q.answer;
+                    const done = sub != null;
+                    return (
+                      <TouchableOpacity
+                        key={c}
+                        disabled={done}
+                        style={[styles.choice, done && isAns && styles.choiceOk, done && picked && !isAns && styles.choiceNg]}
+                        onPress={() => setResults((p) => ({ ...p, [q.id]: { input: c, result: c === q.answer ? 'correct' : 'wrong' } }))}
+                        activeOpacity={0.85}
+                        accessibilityRole="button"
+                      >
+                        <Text style={styles.choiceText}>{done && isAns ? '◎ ' : done && picked ? '✕ ' : ''}{c}</Text>
+                      </TouchableOpacity>
+                    );
+                  })}
+                </View>
+              ) : (
+                <AnswerInput
+                  key={q.id}
+                  question={{ question: q.question, answer: q.answer }}
+                  submitted={sub}
+                  tone="brown"
+                  flush
+                  onSubmit={(r) => setResults((p) => ({ ...p, [q.id]: r }))}
+                />
+              )}
               {sub && (
                 <View style={styles.expBox}>
                   <Text style={styles.ans}>答え：{q.answer}</Text>
@@ -203,6 +225,11 @@ const styles = StyleSheet.create({
   card: { backgroundColor: '#fff', borderRadius: 14, borderWidth: 1.5, borderColor: '#E8DCCB', padding: 16, marginTop: 16 },
   meta: { fontSize: 12, color: '#8A7A68', fontWeight: '700' },
   qText: { fontSize: 16, lineHeight: 26, fontWeight: '700', color: '#4A3320', marginTop: 8, marginBottom: 6 },
+  choices: { marginTop: 8, gap: 8 },
+  choice: { borderWidth: 1.5, borderColor: '#E0D4C2', borderRadius: 12, paddingVertical: 12, paddingHorizontal: 14, backgroundColor: '#FAF7F2' },
+  choiceOk: { borderColor: '#1E7A3C', backgroundColor: '#E6F4EA' },
+  choiceNg: { borderColor: '#C0392B', backgroundColor: '#FDECEA' },
+  choiceText: { fontSize: 15, color: '#4A3320', fontWeight: '700' },
   expBox: { marginTop: 14, backgroundColor: '#F6F1E8', borderRadius: 10, padding: 12 },
   ans: { fontSize: 14, fontWeight: '800', color: '#1E7A3C' },
   exp: { fontSize: 13, lineHeight: 21, color: '#3E3126', marginTop: 6 },
