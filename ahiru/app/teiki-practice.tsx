@@ -5,6 +5,7 @@ import { teikiQuestionsModule } from '../data/teiki-questions-lazy';
 import { rich } from '../components/RichText';
 import AnswerInput, { type SubmitResult } from '../components/AnswerInput';
 import HomeButton from '../components/HomeButton';
+import LadderCard from '../components/LadderCard';
 import { subjectInfo, type SubjectKey } from '../data/questions-meta';
 
 const TERMS: { key: 'all' | '1' | '2' | '3'; label: string }[] = [
@@ -85,6 +86,13 @@ export default function TeikiPractice() {
                   まちがえた所：{list.filter((x) => results[x.id]?.result !== 'correct').map((x) => x.topic).filter((v, i, a) => a.indexOf(v) === i).join('、')}
                 </Text>
               )}
+              <LadderCard
+                pct={Math.round((correct / list.length) * 100)}
+                from="teiki"
+                subject={String(subject)}
+                grade={String(grade)}
+                onRetry={() => { setResults({}); setIdx(0); }}
+              />
               <TouchableOpacity style={styles.nextBtn} onPress={() => { setResults({}); setIdx(0); }} activeOpacity={0.85}>
                 <Text style={styles.nextText}>もう一度やる</Text>
               </TouchableOpacity>

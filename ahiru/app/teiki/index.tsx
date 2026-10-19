@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { ActivityIndicator, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { useRouter } from 'expo-router';
+import { useLocalSearchParams, useRouter } from 'expo-router';
 import { teikiModule } from '../../data/teiki-lazy';
 import type { TeikiGrade } from '../../data/teiki/types';
 import { subjectInfo, type SubjectKey } from '../../data/questions-meta';
@@ -18,8 +18,9 @@ const subjName = (s: SubjectKey) => (s === 'sansu' ? '数学' : subjectInfo[s].n
 export default function TeikiIndex() {
   const router = useRouter();
   const mod = teikiModule.use();
-  const [grade, setGrade] = useState<TeikiGrade>('j1');
-  const [subject, setSubject] = useState<SubjectKey>('sansu');
+  const params = useLocalSearchParams<{ grade?: string; subject?: string }>();
+  const [grade, setGrade] = useState<TeikiGrade>(params.grade === 'j2' || params.grade === 'j3' ? params.grade : 'j1');
+  const [subject, setSubject] = useState<SubjectKey>(SUBJECTS.includes(params.subject as SubjectKey) ? (params.subject as SubjectKey) : 'sansu');
 
   const units = useMemo(
     () => (mod ? mod.TEIKI_UNITS.filter((u) => u.grade === grade && u.subject === subject) : []),
