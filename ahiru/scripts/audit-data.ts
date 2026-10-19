@@ -16,6 +16,9 @@ import * as path from 'path';
 import { lintDiagram } from './figlint';
 import { TEIKI_UNITS } from '../data/teiki';
 import { TEIKI_MIN_SLIDES } from '../data/teiki/types';
+import { TEIKI_QUESTIONS } from '../data/teiki-questions';
+import { TEIKI_Q_PER_CELL } from '../data/teiki-questions/types';
+import { judge } from '../utils/grading';
 import { getMangaScript } from '../data/manga-scripts';
 import { questions } from '../data/questions';
 import { explanationText } from '../utils/explanation';
@@ -1792,6 +1795,29 @@ info('日本語の中に英単語が挟まっている（要目視）', latin, 8
   check('【定期テスト】画面に出る文に、よその国の文字・文字化けがまぎれている', T.filter((u) => /[\u0400-\u04FF\uAC00-\uD7AF\u0600-\u06FF\u0E00-\u0E7F\uFFFD]/.test(screenText(u))).map((u) => u.id));
   check('【定期テスト】説明に **強調** の閉じ忘れがある', T.filter((u) => u.sections.some((x) => (x.body.match(/\*\*/g) ?? []).length % 2 === 1)).map((u) => u.id));
   console.log(`  （定期テスト：${T.length}単元）`);
+}
+
+// ── 定期テストの基本問題（data/teiki-questions）──
+{
+  const Q = TEIKI_QUESTIONS;
+  const qids = new Map<string, number>();
+  for (const q of Q) qids.set(q.id, (qids.get(q.id) ?? 0) + 1);
+  check('【定期テスト問題】id が重複している', [...qids].filter(([, n]) => n > 1).map(([id]) => id));
+  const cells = new Map<string, number>();
+  for (const q of Q) cells.set(`${q.grade}-${q.subject}`, (cells.get(`${q.grade}-${q.subject}`) ?? 0) + 1);
+  check(`【定期テスト問題】学年×教科が ${TEIKI_Q_PER_CELL} 問になっていない（書いたセルだけ見る）`, [...cells].filter(([, n]) => n !== TEIKI_Q_PER_CELL).map(([c, n]) => `${c}=${n}`));
+  check('【定期テスト問題】id の学年・教科が中身とちがう', Q.filter((q) => !q.id.startsWith(`${q.grade}-${q.subject}-q`)).map((q) => q.id));
+  check('【定期テスト問題】答え・解説が空、または解説が短い（30字未満）', Q.filter((q) => !q.answer.trim() || q.explanation.length < 30).map((q) => q.id));
+  check('【定期テスト問題】選択肢の中に答えが無い', Q.filter((q) => q.choices && !q.choices.includes(q.answer)).map((q) => q.id));
+  check('【定期テスト問題】模範解答をそのまま入れても正解にならない（選択肢なし）', Q.filter((q) => !q.choices && judge(q.answer, q.answer, q.question) !== 'correct').map((q) => q.id));
+  check('【定期テスト問題】同じ問題文の重複（同じ学年・教科）', (() => {
+    const seen = new Set<string>(); const dup: string[] = [];
+    for (const q of Q) { const k = `${q.grade}|${q.subject}|${q.question}`; if (seen.has(k)) dup.push(q.id); seen.add(k); }
+    return dup;
+  })());
+  check('【定期テスト問題】** の閉じ忘れ・外国の文字・文字化け', Q.filter((q) => (q.explanation.match(/\*\*/g) ?? []).length % 2 === 1 || /[\u0400-\u04FF\uAC00-\uD7AF\u0600-\u06FF\uFFFD]/.test(q.question + q.answer + q.explanation)).map((q) => q.id));
+  check('【定期テスト問題】** が問題文・答え・選択肢に入っている（採点が合わなくなる）', Q.filter((q) => /\*\*/.test(q.question + q.answer + (q.choices ?? []).join(''))).map((q) => q.id));
+  console.log(`  （定期テスト基本問題：${Q.length}問）`);
 }
 
 console.log(`\n合計 ${problems} 件`);

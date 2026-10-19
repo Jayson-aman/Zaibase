@@ -61,6 +61,10 @@ export default function TeikiIndex() {
             </TouchableOpacity>
           ))}
         </View>
+        <TouchableOpacity style={styles.practice} activeOpacity={0.85} onPress={() => router.push(`/teiki-practice?grade=${grade}&subject=${subject}` as any)}>
+          <Text style={styles.practiceTitle}>📝 基本中の基本 50問（学期末テスト対応）</Text>
+          <Text style={styles.practiceSub}>{GRADES.find((g) => g.key === grade)?.label}{subjName(subject)}・1学期末／2学期末／学年末で絞れます →</Text>
+        </TouchableOpacity>
         {!mod && <ActivityIndicator style={{ marginTop: 40 }} color="#B5622E" />}
         {mod && units.length === 0 && <Text style={styles.empty}>この学年・教科は準備中です。順次ふやします。</Text>}
         {units.map((u) => (
@@ -89,6 +93,9 @@ const styles = StyleSheet.create({
   chipOn: { backgroundColor: '#B5622E', borderColor: '#B5622E' },
   chipText: { fontSize: 13, fontWeight: '700', color: '#4A3320' },
   chipTextOn: { color: '#fff' },
+  practice: { backgroundColor: '#FFF1E6', borderRadius: 14, borderWidth: 1.5, borderColor: '#E8B98E', padding: 14, marginTop: 4 },
+  practiceTitle: { fontSize: 15, fontWeight: '800', color: '#8A3F12' },
+  practiceSub: { fontSize: 12, color: '#6B5A48', marginTop: 4 },
   empty: { marginTop: 30, textAlign: 'center', color: '#8A7A68', fontSize: 14 },
   card: { backgroundColor: '#fff', borderRadius: 14, padding: 14, marginTop: 10, borderWidth: 1.5, borderColor: '#E8DCCB' },
   chapter: { fontSize: 11, fontWeight: '800', color: '#B5622E' },
