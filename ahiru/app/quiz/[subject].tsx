@@ -17,6 +17,7 @@ import type { CourseKey, ExamType } from '../../data/courses';
 import { getTopic, questionMatchesTopic } from '../../data/topics';
 import { getTestMode, buildTestSet, type TestModeKey, type LevelKey } from '../../data/test-modes';
 import { GRADE_ORDER, type GradeKey } from '../../data/grades';
+import LadderCard from '../../components/LadderCard';
 import { getKoushikiFormulaIdForQuestion, isKoushikiFormulaFree } from '../../data/koushiki-access';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
 import { explanationText, hintText } from '../../utils/explanation';
@@ -770,6 +771,16 @@ export default function QuizScreen() {
                 </>
               )}
             </View>
+
+            {/* 中学生向け：基礎（定期テストの教科書）→ 問題集の基礎 → 標準 → できなければ基礎へ、をつなぐ */}
+            {!noScore && examType === 'koko' && !isDaily && !isMock && !isKakomon && questionLimit == null && (
+              <LadderCard
+                pct={pct}
+                from={difficultyFilter === 'standard' ? 'standard' : 'basic'}
+                subject={subjectKey}
+                grade={gradeFilter}
+              />
+            )}
 
             {/* 連続日数と今日の目標。続けた実感が、あすも開く理由になる */}
             <View style={styles.streakResult}>

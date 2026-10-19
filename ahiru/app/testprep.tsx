@@ -60,6 +60,11 @@ export default function TestPrepScreen() {
       </View>
 
       <ScrollView contentContainerStyle={styles.content}>
+        <TouchableOpacity style={styles.teikiLink} onPress={() => router.push('/teiki' as any)} activeOpacity={0.85}>
+          <Text style={styles.teikiTitle}>📘 定期テストの教科書（中1〜中3）</Text>
+          <Text style={styles.teikiSub}>学校の教科書を、動く図解でかみくだきます →</Text>
+        </TouchableOpacity>
+
         <Text style={styles.sectionLabel}>① 何のためのテストですか</Text>
         {TEST_MODES.map((m) => {
           const active = modeKey === m.key;
@@ -183,6 +188,9 @@ export default function TestPrepScreen() {
 }
 
 const styles = StyleSheet.create({
+  teikiLink: { backgroundColor: '#FFF1E6', borderRadius: 14, borderWidth: 1.5, borderColor: '#E8B98E', padding: 14, marginBottom: 14 },
+  teikiTitle: { fontSize: 15, fontWeight: '800', color: '#8A3F12' },
+  teikiSub: { fontSize: 12, color: '#6B5A48', marginTop: 4 },
   root: { flex: 1, backgroundColor: '#FAF6EF' },
   header: {
     backgroundColor: '#2B2420',
