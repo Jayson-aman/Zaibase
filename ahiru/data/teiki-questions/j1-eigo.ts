@@ -132,7 +132,7 @@ export const TEIKI_Q_J1_EIGO: TeikiQuestion[] = [
   q(48, 3, '基本単語', '「3月」を表す英語を書きなさい。', 'March',
     '3月は **March**。月の名前は文頭でなくても大文字で始める。'),
   q(49, 3, '基本単語', '数字の 15 を英語で書きなさい。', 'fifteen',
-    '13〜19 は **teen** で終わる。15 は five ではなく fif をつくって fifteen。50 の fifty とつづりを区別する。'),
+    '13〜19 は **teen** で終わる。15 は five が fif に変わって teen がつく（five ではなく fif）。50 の fifty とつづりを区別する。'),
   q(50, 3, '疑問詞', '語を並べかえて正しい英文にしなさい。 (like / do / you / what / sport)', 'What sport do you like?',
     '**What sport** で「何のスポーツ」というひとまとまり。その後ろに do you like の疑問文の語順を続ける。'),
 ];

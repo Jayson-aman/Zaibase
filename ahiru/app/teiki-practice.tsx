@@ -34,6 +34,10 @@ export default function TeikiPractice() {
   const { hasAccess: betaAccess } = useBetaAccess();
   const full = isPro || isMax || betaAccess;
   const [paywallVisible, setPaywallVisible] = useState(false);
+  // Web の事前描画（静的ページ）には URL の ?grade= ?subject= が入らず、既定値で描かれる。
+  // そのまま描くとブラウザで文言が食いちがい（React #418）になるので、読みこんだあとに描く。
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => { setMounted(true); }, []);
 
   const allList = useMemo(
     () => (mod ? mod.TEIKI_QUESTIONS.filter((q) => q.grade === grade && q.subject === subject && (term === 'all' || String(q.term) === term)) : []),
@@ -56,7 +60,7 @@ export default function TeikiPractice() {
       </View>
       <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
         <ScrollView contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled">
-          <Text style={styles.title}>📝 {GRADE_LABEL[grade] ?? ''}{subjName} 基本中の基本</Text>
+          <Text style={styles.title}>{mounted ? `📝 ${GRADE_LABEL[grade] ?? ''}${subjName} 基本中の基本` : '📝 基本中の基本'}</Text>
           <View style={styles.row}>
             {TERMS.map((t) => (
               <TouchableOpacity key={t.key} style={[styles.chip, term === t.key && styles.chipOn]} onPress={() => setTerm(t.key)} activeOpacity={0.85}>

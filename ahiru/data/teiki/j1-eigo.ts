@@ -383,7 +383,7 @@ const unit3: TeikiUnit = {
     {
       heading: '具体例（例文・日本語訳・なぜその形か）',
       body:
-        '①What is this?（これは何ですか。）— It is a pen.（それはペンです。）\n→ be動詞の疑問文なので What のあとに is＋主語。\n\n②What do you eat for breakfast?（朝食に何を食べますか。）— I eat bread.（パンを食べます。）\n→ 一般動詞なので do you eat。eat のあとに目的語 bread が入る分、疑問詞が出ています。\n\n③Where do you live?（あなたはどこに住んでいますか。）— I live in Osaka.\n→ 場所をたずねるので Where。\n\n④Who is that boy?（あの男の子はだれですか。）— He is my brother.\n→ 人をたずねるので Who。\n\n⑤Why do you like English?（なぜ英語が好きですか。）— Because it is fun.\n→ 理由をたずねるので Why、答えは **Because** で始めます。\n\n⑥How do you go to school?（どうやって学校へ行きますか。）— I go by bike.\n→ 方法をたずねるので How。',
+        '①What is this?（これは何ですか。）— It is a pen.（それはペンです。）\n→ be動詞の疑問文なので What のあとに is＋主語。\n\n②What do you eat for breakfast?（朝食に何を食べますか。）— I eat bread.（パンを食べます。）\n→ 一般動詞なので do you eat。「何を食べるか」を聞きたいので、eat の目的語にあたる部分を What にして文のはじめに出しています。\n\n③Where do you live?（あなたはどこに住んでいますか。）— I live in Osaka.\n→ 場所をたずねるので Where。\n\n④Who is that boy?（あの男の子はだれですか。）— He is my brother.\n→ 人をたずねるので Who。\n\n⑤Why do you like English?（なぜ英語が好きですか。）— Because it is fun.\n→ 理由をたずねるので Why、答えは **Because** で始めます。\n\n⑥How do you go to school?（どうやって学校へ行きますか。）— I go by bike.\n→ 方法をたずねるので How。',
     },
   ],
   testPoints: [
