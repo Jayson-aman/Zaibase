@@ -33,3 +33,10 @@ export const TEIKI_QUESTIONS: TeikiQuestion[] = [
   ...TEIKI_Q_J3_SHAKAI,
   ...TEIKI_Q_J3_EIGO,
 ];
+
+// やさしさのステップ（1=ウォームアップ 2=基本 3=テスト基本）。教科ごとの levels-*.ts を束ねる。
+const LEVELS: Record<string, 1 | 2 | 3> = {};
+/** 問題のステップ。付いていない問題は「基本（2）」として扱う */
+export function levelOf(id: string): 1 | 2 | 3 {
+  return LEVELS[id] ?? 2;
+}
