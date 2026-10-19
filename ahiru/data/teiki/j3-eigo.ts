@@ -59,7 +59,7 @@ const lst = (note: string, texts: (string | [string, Col])[], capT: string, col:
 };
 
 const unit: TeikiUnit = {
-  id: 'j3-eigo-01',
+  id: 'j3-eigo-03',
   grade: 'j3',
   subject: 'eigo',
   chapter: '関係代名詞',
@@ -208,7 +208,7 @@ const unit: TeikiUnit = {
 };
 
 const unit2: TeikiUnit = {
-  id: 'j3-eigo-02',
+  id: 'j3-eigo-01',
   grade: 'j3',
   subject: 'eigo',
   chapter: '受け身',
@@ -364,7 +364,7 @@ const unit2: TeikiUnit = {
 };
 
 const unit3: TeikiUnit = {
-  id: 'j3-eigo-03',
+  id: 'j3-eigo-02',
   grade: 'j3',
   subject: 'eigo',
   chapter: '現在完了',
@@ -530,4 +530,4 @@ const unit3: TeikiUnit = {
 };
 
 
-export const TEIKI_J3_EIGO: TeikiUnit[] = [unit, unit2, unit3];
+export const TEIKI_J3_EIGO: TeikiUnit[] = [unit2, unit3, unit];
