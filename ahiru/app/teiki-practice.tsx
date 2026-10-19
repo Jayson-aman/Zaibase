@@ -64,10 +64,10 @@ export default function TeikiPractice() {
       </View>
       <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
         <ScrollView contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled">
-          <Text style={styles.title}>{mounted ? `📝 ${GRADE_LABEL[grade] ?? ''}${subjName} 基本中の基本` : '📝 基本中の基本'}</Text>
+          <Text style={styles.title}>{mounted ? `📝 ${GRADE_LABEL[grade] ?? ''}${subjName} まずは、やさしい問題から` : '📝 まずは、やさしい問題から'}</Text>
           <View style={styles.startBox}>
-            <Text style={styles.startTitle}>🌱 基礎中の基礎</Text>
-            <Text style={styles.startBody}>やさしい問題から始めよう。できたら次のステップへ、むずかしかったら、いつでもステップ1にもどってOK。{mounted ? FIRST_STEP_HINT[String(subject)] ?? '' : ''}</Text>
+            <Text style={styles.startTitle}>🌱 ゆっくり、ここから</Text>
+            <Text style={styles.startBody}>むずかしくないよ。やさしい問題から、ひとつずつ。できたら次へ、むずかしかったら、いつでも前にもどっていいからね。{mounted ? FIRST_STEP_HINT[String(subject)] ?? '' : ''}</Text>
           </View>
           <View style={styles.row}>
             {STEPS.map((st) => (
@@ -142,7 +142,7 @@ export default function TeikiPractice() {
           )}
           {done && (
             <View style={styles.card}>
-              <Text style={styles.title}>おつかれさまでした</Text>
+              <Text style={styles.title}>おつかれさま！</Text>
               <Text style={styles.qText}>{list.length}問中 {correct}問 正解</Text>
               {list.filter((x) => results[x.id]?.result !== 'correct').length > 0 && (
                 <Text style={styles.exp}>
@@ -155,8 +155,8 @@ export default function TeikiPractice() {
                   const nx = (step + 1) as StepLevel;
                   return (
                     <View style={styles.expBox}>
-                      <Text style={styles.ans}>🌟 {STEPS[step - 1].label}クリア！</Text>
-                      <Text style={styles.exp}>つぎは「{STEPS[nx - 1].title}」に進みます。むずかしかったら、いつでももどれます。</Text>
+                      <Text style={styles.ans}>🌟 {STEPS[step - 1].label}、できたね！</Text>
+                      <Text style={styles.exp}>つぎは「{STEPS[nx - 1].title}」に進んでみる？むずかしかったら、いつでももどれるよ。</Text>
                       <TouchableOpacity style={styles.nextBtn} onPress={() => { setResults({}); setIdx(0); setStep(nx); }} activeOpacity={0.85}>
                         <Text style={styles.nextText}>{STEPS[nx - 1].label}へ進む</Text>
                       </TouchableOpacity>
@@ -167,8 +167,8 @@ export default function TeikiPractice() {
                   const pv = (step - 1) as StepLevel;
                   return (
                     <View style={styles.expBox}>
-                      <Text style={styles.ans}>📘 ひとつ前にもどろう</Text>
-                      <Text style={styles.exp}>もどるのは悪いことではありません。やさしい問題でもう一度ならしてから、また来ましょう。</Text>
+                      <Text style={styles.ans}>📘 ひとつ前で、ゆっくりならそう</Text>
+                      <Text style={styles.exp}>ちょっと休けいして、やさしい問題でもう一度ならしてみよう。いつでもまた来ていいよ。</Text>
                       <TouchableOpacity style={styles.nextBtn} onPress={() => { setResults({}); setIdx(0); setStep(pv); }} activeOpacity={0.85}>
                         <Text style={styles.nextText}>{STEPS[pv - 1].label}にもどる</Text>
                       </TouchableOpacity>
