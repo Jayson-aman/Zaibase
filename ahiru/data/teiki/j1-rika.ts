@@ -21,7 +21,7 @@ const eye = () => [ci(220, 50, 5, undefined, C.blue, FILL.blue), lb(220, 38, '�
 
 // ── 屈折（境界は y=90、法線は x=160） ──
 const BY = 90;
-const region = () => [pg([[30, BY], [290, BY], [290, 150], [30, 150]], C.blue, FILL.blue), lb(36, 80, '空気', 11, C.gray, 'start', true), lb(36, 108, 'ガラス', 11, C.blue, 'start', true)];
+const region = () => [pg([[30, BY], [290, BY], [290, 146], [30, 146]], C.blue, FILL.blue), lb(36, 80, '空気', 11, C.gray, 'start', true), lb(36, 108, 'ガラス', 11, C.blue, 'start', true)];
 const normal2 = () => ln(160, 14, 160, 142, C.gray, true, 1.5);
 
 const reflection: TeikiUnit = {

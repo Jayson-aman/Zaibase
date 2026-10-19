@@ -96,11 +96,11 @@ const unit: TeikiUnit = {
   ],
   figure: show([
     (() => {
-      const r1 = row(24, [{ t: 'to', ...RD }, { t: 'play', ...BL }], 14, 6, 30);
-      const r2 = row(78, [{ t: 'to', ...RD }, { t: 'read', ...BL }, { t: 'to', ...RD }, { t: 'eat', ...BL }, { t: 'to', ...RD }, { t: 'be', ...BL }], 13, 6, 28);
+      const r1 = row(12, [{ t: 'to', ...RD }, { t: 'play', ...BL }], 14, 6, 30);
+      const r2 = row(86, [{ t: 'to', ...RD }, { t: 'read', ...BL }, { t: 'to', ...RD }, { t: 'eat', ...BL }, { t: 'to', ...RD }, { t: 'be', ...BL }], 13, 6, 28);
       return {
         note: '不定詞は「to＋動詞の原形」の形です。to のあとに、play, read, eat, be など好きな動詞の原形を置けます。まずはこの形をしっかり覚えましょう。',
-        add: fresh(...r1.els, lb(160, 70, 'to ＋ 動詞の原形', 13, C.ink, 'middle', true), ...r2.els, lb(160, 128, 'いろいろな動詞が入る', 12, C.gray, 'middle'), ...cap('不定詞 ＝ to ＋ 動詞の原形')),
+        add: fresh(...r1.els, lb(160, 62, 'to ＋ 動詞の原形', 13, C.ink, 'middle', true), ...r2.els, lb(160, 132, 'いろいろな動詞が入る', 12, C.gray, 'middle'), ...cap('不定詞 ＝ to ＋ 動詞の原形')),
       };
     })(),
     (() => {
@@ -158,7 +158,7 @@ const unit: TeikiUnit = {
       const x1 = r1.xs[3], x2 = r1.xs[2];
       return {
         note: '❓なぜ形容詞的用法というのでしょう。→ 形容詞は名詞を説明する語です。a book のすぐ後ろの to read が「どんな本か」を説明して、「読むための本」という意味になります。something to drink（飲むための何か＝飲み物）も同じ形です。',
-        add: fresh(...r1.els, ar(x1, 42, x2 + 4, 42, C.purple), ln(x1, 40, x1, 42, C.purple), lb(160, 66, '「読むための本」 to read が a book を説明', 11, C.purple, 'middle', true), ...r2.els, lb(160, 138, '名詞の後ろから説明する', 12, C.gray, 'middle'), ...cap('名詞を説明：〜するための', C.purple)),
+        add: fresh(...r1.els, ar(x1, 50, x2 + 4, 50, C.purple), ln(x1, 40, x1, 50, C.purple), lb(160, 70, '「読むための本」 to read が a book を説明', 11, C.purple, 'middle', true), ...r2.els, lb(160, 138, '名詞の後ろから説明する', 12, C.gray, 'middle'), ...cap('名詞を説明：〜するための', C.purple)),
       };
     })(),
     one(

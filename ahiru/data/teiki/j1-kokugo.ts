@@ -94,9 +94,9 @@ const kanji: TeikiUnit = {
     {
       note: '答えは、印をつけることでした。木の根もとに印をつけると「本」、木の先に印をつけると「末」です。線の上に印をつければ「上」、下につければ「下」。こうして作った字が指事文字です。',
       add: fresh(
-        bx(20, 14, 44, 34, '木', C.green, FILL.green, 20), lb(78, 36, '＋根もとに印', 11, C.ink), ar(170, 31, 206, 31, C.blue), bx(212, 14, 44, 34, '本', C.blue, FILL.blue, 20),
-        bx(20, 58, 44, 34, '木', C.green, FILL.green, 20), lb(78, 80, '＋先に印', 11, C.ink), ar(170, 75, 206, 75, C.blue), bx(212, 58, 44, 34, '末', C.blue, FILL.blue, 20),
-        bx(20, 102, 44, 34, '一', C.gray, FILL.gray, 20), lb(78, 124, '＋上や下に印', 11, C.ink), ar(170, 119, 206, 119, C.blue), bx(212, 102, 44, 34, '上', C.blue, FILL.blue, 20), bx(262, 102, 44, 34, '下', C.blue, FILL.blue, 20),
+        bx(20, 14, 44, 34, '木', C.green, FILL.green, 20), lb(74, 36, '＋根もとに印', 11, C.ink, 'start'), ar(170, 31, 206, 31, C.blue), bx(212, 14, 44, 34, '本', C.blue, FILL.blue, 20),
+        bx(20, 58, 44, 34, '木', C.green, FILL.green, 20), lb(74, 80, '＋先に印', 11, C.ink, 'start'), ar(170, 75, 206, 75, C.blue), bx(212, 58, 44, 34, '末', C.blue, FILL.blue, 20),
+        bx(20, 102, 44, 34, '一', C.gray, FILL.gray, 20), lb(74, 124, '＋上や下に印', 11, C.ink, 'start'), ar(170, 119, 206, 119, C.blue), bx(212, 102, 44, 34, '上', C.blue, FILL.blue, 20), bx(262, 102, 44, 34, '下', C.blue, FILL.blue, 20),
         ...cap('指事：印をつけて意味を示す', C.blue),
       ),
     },

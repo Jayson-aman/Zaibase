@@ -61,39 +61,39 @@ const addition: TeikiUnit = {
     },
     {
       note: '例1：（＋2）＋（＋3）を考えます。出発点は＋2。ここから＋3を足すので、右へ3つ進みます。止まった所が答えです。',
-      add: fresh(...base(), ci(nx(2), NY, 6, undefined, C.main, FILL.warm), lb(nx(2), 62, 'スタート ＋2', 11, C.main, 'middle', true), ar(nx(2), 76, nx(5), 76, C.blue), lb(nx(3.5), 70, '右へ3', 11, C.blue, 'middle'), ...cap('（＋2）＋（＋3）：右へ3進む')),
+      add: fresh(...base(), ci(nx(2), NY, 6, undefined, C.main, FILL.warm), lb(nx(2), 50, 'スタート ＋2', 11, C.main, 'middle', true), ar(nx(2), 74, nx(5), 74, C.blue), lb(nx(3.5), 66, '右へ3', 11, C.blue, 'middle'), ...cap('（＋2）＋（＋3）：右へ3進む')),
     },
     {
       note: '止まった所は＋5です。つまり（＋2）＋（＋3）＝＋5。同じ向きに2回進んだので、動きが重なって長くなります。数字の部分は 2＋3 と足し算になっています。',
-      add: [...band(150, lb(160, 188, '（＋2）＋（＋3）＝＋5　数字は足す', 12, C.blue, 'middle', true)), ci(nx(5), NY, 6, undefined, C.red, FILL.red), lb(nx(5), 62, '答え ＋5', 11, C.red, 'middle', true)],
+      add: [...band(150, lb(160, 188, '（＋2）＋（＋3）＝＋5　数字は足す', 12, C.blue, 'middle', true)), ci(nx(5), NY, 6, undefined, C.red, FILL.red), lb(nx(5), 130, '答え ＋5', 11, C.red, 'middle', true)],
     },
     {
       note: '例2：（−2）＋（−3）を考えます。出発点は−2。−3を足すので、左へ3つ進みます。',
-      add: fresh(...base(), ci(nx(-2), NY, 6, undefined, C.main, FILL.warm), lb(nx(-2), 62, 'スタート −2', 11, C.main, 'middle', true), ar(nx(-2), 76, nx(-5), 76, C.red), lb(nx(-3.5), 70, '左へ3', 11, C.red, 'middle'), ...cap('（−2）＋（−3）：左へ3進む')),
+      add: fresh(...base(), ci(nx(-2), NY, 6, undefined, C.main, FILL.warm), lb(nx(-2), 50, 'スタート −2', 11, C.main, 'middle', true), ar(nx(-2), 74, nx(-5), 74, C.red), lb(nx(-3.5), 66, '左へ3', 11, C.red, 'middle'), ...cap('（−2）＋（−3）：左へ3進む')),
     },
     {
       note: '止まった所は−5です。（−2）＋（−3）＝−5。同じ向き（左）に2回進んだので、これも動きが重なります。数字は 2＋3 と足して、共通の符号「−」をつけました。「符号が同じなら足して、同じ符号をつける」の理由はこれです。',
-      add: [...band(150, lb(160, 188, '（−2）＋（−3）＝−5　足して符号をつける', 12, C.red, 'middle', true)), ci(nx(-5), NY, 6, undefined, C.red, FILL.red), lb(nx(-5), 62, '答え −5', 11, C.red, 'middle', true)],
+      add: [...band(150, lb(160, 188, '（−2）＋（−3）＝−5　足して符号をつける', 12, C.red, 'middle', true)), ci(nx(-5), NY, 6, undefined, C.red, FILL.red), lb(nx(-5), 130, '答え −5', 11, C.red, 'middle', true)],
     },
     {
       note: '例3：（＋5）＋（−3）を考えます。出発点は＋5。−3を足すので左へ3つ。今度は前の動きと逆向きなので、戻ることになります。',
-      add: fresh(...base(), ci(nx(5), NY, 6, undefined, C.main, FILL.warm), lb(nx(5), 62, 'スタート ＋5', 11, C.main, 'middle', true), ar(nx(5), 76, nx(2), 76, C.red), lb(nx(3.5), 70, '左へ3', 11, C.red, 'middle'), ...cap('（＋5）＋（−3）：左へ3戻る')),
+      add: fresh(...base(), ci(nx(5), NY, 6, undefined, C.main, FILL.warm), lb(nx(5), 50, 'スタート ＋5', 11, C.main, 'middle', true), ar(nx(5), 74, nx(2), 74, C.red), lb(nx(3.5), 66, '左へ3', 11, C.red, 'middle'), ...cap('（＋5）＋（−3）：左へ3戻る')),
     },
     {
       note: '止まった所は＋2です。（＋5）＋（−3）＝＋2。逆向きの動きは打ち消し合うので、短くなりました。数字は 5−3 と引き算になり、大きい方（5）の符号「＋」が残っています。',
-      add: [...band(150, lb(160, 188, '（＋5）＋（−3）＝＋2　引いて、大きい方の符号', 12, C.blue, 'middle', true)), ci(nx(2), NY, 6, undefined, C.red, FILL.red), lb(nx(2), 62, '答え ＋2', 11, C.red, 'middle', true)],
+      add: [...band(150, lb(160, 188, '（＋5）＋（−3）＝＋2　引いて、大きい方の符号', 12, C.blue, 'middle', true)), ci(nx(2), NY, 6, undefined, C.red, FILL.red), lb(nx(2), 130, '答え ＋2', 11, C.red, 'middle', true)],
     },
     {
       note: '例4：（−5）＋（＋3）を考えます。出発点は−5で、＋3を足すので右へ3つ進みます。止まった所は−2です。やはり逆向きなので打ち消し合い、数字は 5−3＝2、大きい方（5）の符号「−」が残って−2になります。',
-      add: fresh(...base(), ci(nx(-5), NY, 6, undefined, C.main, FILL.warm), lb(nx(-5), 62, 'スタート −5', 11, C.main, 'middle', true), ar(nx(-5), 76, nx(-2), 76, C.blue), lb(nx(-3.5), 70, '右へ3', 11, C.blue, 'middle'), ci(nx(-2), NY, 6, undefined, C.red, FILL.red), lb(nx(-2), 130, '答え −2', 11, C.red, 'middle', true), ...cap('（−5）＋（＋3）＝−2')),
+      add: fresh(...base(), ci(nx(-5), NY, 6, undefined, C.main, FILL.warm), lb(nx(-5), 50, 'スタート −5', 11, C.main, 'middle', true), ar(nx(-5), 74, nx(-2), 74, C.blue), lb(nx(-3.5), 66, '右へ3', 11, C.blue, 'middle'), ci(nx(-2), NY, 6, undefined, C.red, FILL.red), lb(nx(-2), 130, '答え −2', 11, C.red, 'middle', true), ...cap('（−5）＋（＋3）＝−2')),
     },
     {
       note: '例5：（−3）＋（−4）。出発点は−3で、−4を足すので左へ4つ進みます。同じ向き（左）なので動きが重なり、止まる所は−7です。数字は 3＋4＝7、共通の符号「−」をつけて−7。気温でいうと、−3℃からさらに4℃下がったら−7℃、という場面です。',
-      add: fresh(...base(), ci(nx(-3), NY, 6, undefined, C.main, FILL.warm), lb(nx(-3), 62, 'スタート −3', 11, C.main, 'middle', true), ar(nx(-3), 76, nx(-7) + 8, 76, C.red), lb(nx(-5), 70, '左へ4', 11, C.red, 'middle'), ...cap('（−3）＋（−4）＝−7　気温がさらに4℃下がる')),
+      add: fresh(...base(), ci(nx(-3), NY, 6, undefined, C.main, FILL.warm), lb(nx(-3), 50, 'スタート −3', 11, C.main, 'middle', true), ar(nx(-3), 74, nx(-7) + 8, 74, C.red), lb(nx(-5), 66, '左へ4', 11, C.red, 'middle'), ...cap('（−3）＋（−4）＝−7　気温がさらに4℃下がる')),
     },
     {
       note: '例6：（＋4）＋（−4）。出発点は＋4で、−4を足すので左へ4つ進みます。ちょうど0に戻ります。「4℃上がって、また4℃下がった」ときの気温の変化は0℃、つまり変わらない、という意味です。反対の数どうしを足すと、いつも0になります。',
-      add: fresh(...base(), ci(nx(4), NY, 6, undefined, C.main, FILL.warm), lb(nx(4), 62, 'スタート ＋4', 11, C.main, 'middle', true), ar(nx(4), 76, nx(0), 76, C.red), lb(nx(2), 70, '左へ4', 11, C.red, 'middle'), ci(nx(0), NY, 6, undefined, C.red, FILL.red), ...cap('（＋4）＋（−4）＝0　反対の数どうしは0')),
+      add: fresh(...base(), ci(nx(4), NY, 6, undefined, C.main, FILL.warm), lb(nx(4), 50, 'スタート ＋4', 11, C.main, 'middle', true), ar(nx(4), 74, nx(0), 74, C.red), lb(nx(2), 66, '左へ4', 11, C.red, 'middle'), ci(nx(0), NY, 6, undefined, C.red, FILL.red), ...cap('（＋4）＋（−4）＝0　反対の数どうしは0')),
     },
     {
       note: 'まとめます。符号が同じなら、動きが重なるので「数字を足して、同じ符号をつける」。符号がちがうなら、動きが打ち消し合うので「数字は大きい方から小さい方を引いて、大きい方の符号をつける」。迷ったら、数直線の移動を思い出してください。',
@@ -294,7 +294,7 @@ const linear: TeikiUnit = {
     },
     {
       note: '例3：5x＋3＝2x＋15 のように、両辺に x があるときは、文字の項を左辺、数の項を右辺に集めます。5x と 2x は青（文字の項）、＋3 と ＋15 は緑（数の項）です。',
-      add: fresh(tx(26, '5x＋3＝2x＋15', C.ink, 13), bx(14, 44, 50, 30, '5x', C.blue, FILL.blue, 16), bx(68, 44, 50, 30, '＋3', C.green, FILL.green, 16), tx(66, '＝', C.ink, 20), bx(158, 44, 50, 30, '2x', C.blue, FILL.blue, 16), bx(212, 44, 60, 30, '＋15', C.green, FILL.green, 16), lb(160, 106, '文字の項は左へ、数の項は右へ', 12, C.ink, 'middle', true), ...cap('文字は左、数は右に集める')),
+      add: fresh(tx(26, '5x＋3＝2x＋15', C.ink, 13), bx(14, 44, 50, 30, '5x', C.blue, FILL.blue, 16), bx(68, 44, 50, 30, '＋3', C.green, FILL.green, 16), lb(138, 66, '＝', 20, C.ink, 'middle', true), bx(158, 44, 50, 30, '2x', C.blue, FILL.blue, 16), bx(212, 44, 60, 30, '＋15', C.green, FILL.green, 16), lb(160, 106, '文字の項は左へ、数の項は右へ', 12, C.ink, 'middle', true), ...cap('文字は左、数は右に集める')),
     },
     {
       note: '右辺の 2x を左へ移すと −2x、左辺の＋3を右へ移すと −3 になります。5x−2x＝15−3。整理して 3x＝12、両辺を3でわって x＝4。移項した項は必ず符号が変わります。',

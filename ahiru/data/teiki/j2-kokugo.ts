@@ -10,8 +10,8 @@ const S = (note: string, c: string, color: string, ...els: DiagramElement[]) => 
 /** 「昔の書き方 → 今の書き方」を1行で見せる（x は左端、y は中心） */
 const pair = (x: number, y: number, a: string, b: string, color: string = C.main) => [
   lb(x, y, a, 14, C.ink, 'start', true),
-  ar(x + 70, y - 5, x + 96, y - 5, color),
-  lb(x + 104, y, b, 14, color, 'start', true),
+  ar(x + a.length * 14 + 6, y - 5, x + a.length * 14 + 28, y - 5, color),
+  lb(x + a.length * 14 + 34, y, b, 14, color, 'start', true),
 ];
 
 const kana: TeikiUnit = {
