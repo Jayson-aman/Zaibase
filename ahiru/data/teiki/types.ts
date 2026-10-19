@@ -24,10 +24,10 @@ export type TeikiUnit = {
   sections: { heading: string; body: string }[];
   /** テストによく出るポイント（箇条書き。3〜6個） */
   testPoints: string[];
-  /** 動く図解（8枚以上）。diagram-kit の show() で作る */
+  /** 動く図解（12枚以上）。diagram-kit の show() で作る */
   figure: DiagramFigure;
   /** 確認の一問一答（3問以上。why に理由まで） */
   checks: TeikiCheck[];
 };
 
-export const TEIKI_MIN_SLIDES = 8;
+export const TEIKI_MIN_SLIDES = 12;

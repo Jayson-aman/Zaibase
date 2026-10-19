@@ -1789,6 +1789,9 @@ info('日本語の中に英単語が挟まっている（要目視）', latin, 8
   check('【定期テスト】解説の節・ポイント・確認問題が足りない', T.filter((u) =>
     u.sections.length < 2 || u.testPoints.length < 3 || u.checks.length < 3 || u.checks.some((c) => c.why.length < 20),
   ).map((u) => u.id));
+  check('【定期テスト】「具体例」の節が無い、または図解の説明に ** が入っている', T.filter((u) =>
+    !u.sections.some((x) => x.heading.includes('具体例')) || (u.figure.steps ?? []).some((x) => x.includes('**')),
+  ).map((u) => u.id));
   check('【定期テスト】id の学年・教科が中身とちがう', T.filter((u) => !u.id.startsWith(`${u.grade}-${u.subject}-`)).map((u) => u.id));
   const screenText = (u: (typeof T)[number]) =>
     [u.title, u.chapter, u.gist, ...u.sections.flatMap((x) => [x.heading, x.body]), ...u.testPoints, ...(u.figure.steps ?? []), ...u.checks.flatMap((c) => [c.q, c.a, c.why])].join('\n');
