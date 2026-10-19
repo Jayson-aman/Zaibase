@@ -5,6 +5,7 @@ import { teikiModule } from '../../data/teiki-lazy';
 import type { TeikiGrade } from '../../data/teiki/types';
 import { subjectInfo, type SubjectKey } from '../../data/questions-meta';
 import HomeButton from '../../components/HomeButton';
+import { rich } from '../../components/RichText';
 
 const GRADES: { key: TeikiGrade; label: string }[] = [
   { key: 'j1', label: '中1' },
@@ -72,7 +73,7 @@ export default function TeikiIndex() {
           <TouchableOpacity key={u.id} style={styles.card} activeOpacity={0.85} onPress={() => router.push(`/teiki/${u.id}` as any)}>
             <Text style={styles.chapter}>{u.chapter}</Text>
             <Text style={styles.unitTitle}>{u.title}</Text>
-            <Text style={styles.gist} numberOfLines={2}>{u.gist}</Text>
+            <Text style={styles.gist} numberOfLines={2}>{rich(u.gist)}</Text>
             <Text style={styles.meta}>🎞 動く図解 {u.figure.steps?.length ?? 0}枚 ・ ✍ 確認 {u.checks.length}問</Text>
           </TouchableOpacity>
         ))}
