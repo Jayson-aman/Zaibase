@@ -98,6 +98,7 @@ function buildEmail(uid) {
     "・答えのあとに「なんでそうなるの？」までスライドで説明します",
     "・つまずいたら、その場で「おさらい」が開きます",
     "・5教科16,000問以上、志望校50校の入試傾向問題",
+    "・中学生向けに「定期テストの教科書」（動く図解つき）と、やさしい問題から始められる基本問題を追加しました",
     "",
     "無料の範囲でもお試しいただけます。再開はいつでもできます。",
     APP_URL,
@@ -114,7 +115,7 @@ function buildEmail(uid) {
   const html = `<div style="font-family:-apple-system,'Hiragino Sans',sans-serif;line-height:1.8;color:#1B2540;max-width:520px">
 <p>Zaibase受験をお使いいただき、ありがとうございました。</p>
 <p>最近、勉強のペースはいかがでしょうか。<br>Zaibase受験には、やる気のない日のための<b>「1問だけでOK」</b>の入口があります。1問できたら、そこで終わっても大丈夫です。</p>
-<ul><li>答えのあとに「なんでそうなるの？」までスライドで説明します</li><li>つまずいたら、その場で「おさらい」が開きます</li><li>5教科16,000問以上、志望校50校の入試傾向問題</li></ul>
+<ul><li>答えのあとに「なんでそうなるの？」までスライドで説明します</li><li>つまずいたら、その場で「おさらい」が開きます</li><li>5教科16,000問以上、志望校50校の入試傾向問題</li><li>中学生向けに「定期テストの教科書」（動く図解つき）と、やさしい問題から始められる基本問題を追加しました</li></ul>
 <p>無料の範囲でもお試しいただけます。再開はいつでもできます。</p>
 <p><a href="${APP_URL}" style="display:inline-block;background:#F97316;color:#fff;text-decoration:none;font-weight:bold;padding:12px 22px;border-radius:999px">もう一度、1問だけ解いてみる</a></p>
 <hr style="border:none;border-top:1px solid #E2E8F0;margin:24px 0">
