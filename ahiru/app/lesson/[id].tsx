@@ -12,7 +12,9 @@ import {
   Alert,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { lessonsModule } from '../../data/lessons-lazy';
+import { useLessonChunk } from '../../hooks/useLessonChunk';
+import { LESSON_CHUNK } from '../../data/lesson-index.generated';
+import { FREE_LESSON_LIMIT } from '../../data/lesson-limits';
 import { lessonMediaModule } from '../../data/lesson-media-lazy';
 import { figuresModule } from '../../data/figures-lazy';
 import { isNew20Unit, isNew20UnitFree } from '../../data/new20-access';
@@ -86,10 +88,12 @@ export default function LessonDetailScreen() {
   } = useUnitUnlocks();
 
   // 全単元（約40MB）・動く図解は、単元ページを開いてから読みこむ（読みこみ中は null）
-  const lessonsMod = lessonsModule.use();
+  // この単元が入っているファイル（教科×受験種別）だけを読みこむ。idに対応するファイルが無ければ「見つかりません」
+  const chunkKey = id ? LESSON_CHUNK[id] ?? null : null;
+  const chunk = useLessonChunk(chunkKey);
   const media = lessonMediaModule.use();
   const figs = figuresModule.use();
-  const lesson = id && lessonsMod ? lessonsMod.getLessonById(id) : undefined;
+  const lesson = id && chunk ? chunk.find((l) => l.id === id) : undefined;
 
   // 公式集は公式ごとに専用の問題を出しているので、こちらの「関係する問題」は不要。
   const isKoushikiLesson = lesson?.id.startsWith('koushiki_') ?? false;
@@ -159,7 +163,7 @@ export default function LessonDetailScreen() {
 
   if (!lesson) {
     // 単元データの読みこみが終わるまでは、「見つかりません」と出さない
-    if (id && lessonsMod == null) {
+    if (id && chunkKey != null && chunk == null) {
       return (
         <SafeAreaView style={styles.container}>
           <View style={styles.center}>
@@ -186,7 +190,9 @@ export default function LessonDetailScreen() {
   const hasMaxContent = lesson.sections.some((s) => s.maxOnly);
   const lessonVideo = getLessonVideo(lesson.id);
   // 各科目・各受験種別の最初の10単元は、Pro未加入でも無料で閲覧できる
-  const freeLesson = lessonsMod ? lessonsMod.isLessonFree(lesson) : false;
+  // 無料お試し：同じ教科・同じ受験種別の最初の FREE_LESSON_LIMIT 単元（chunk は order の昇順）
+  const freeIdx = chunk ? chunk.findIndex((l) => l.id === lesson.id) : -1;
+  const freeLesson = freeIdx >= 0 && freeIdx < FREE_LESSON_LIMIT;
   // 学年×科目で追加した新規単元（new20_で始まるid）は、上記のPro一括ロードとは別枠で、
   // 学年×科目クラスターごとに最初の5単元（FREE_UNITS_PER_CLUSTER）は無料、それ以降は¥150買い切りで解放する。
   const isNew20 = isNew20Unit(lesson.id);
