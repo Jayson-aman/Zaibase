@@ -11,7 +11,8 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { FREE_LESSON_LIMIT } from '../../data/lesson-limits';
-import { lessonsModule } from '../../data/lessons-lazy';
+import { useLessonChunk } from '../../hooks/useLessonChunk';
+import { LESSON_COUNTS } from '../../data/lesson-index.generated';
 import type { ExamType } from '../../data/courses';
 import type { Lesson } from '../../data/lessons';
 import { isNew20Unit, isNew20UnitFree } from '../../data/new20-access';
@@ -148,27 +149,16 @@ export default function TextbookScreen() {
   // メモ化しないと再描画のたびに配列の同一性が変わり、FlatListが全行を
   // 作りなおすため、単元数の多い社会・理科で画面が点滅する。
   // （早期returnより前に置くこと。フックの呼び出し順が変わってしまう）
-  // 全単元（約40MB）は、この画面を開いてから読みこむ（読みこみ中は lessonsMod が null）
-  const lessonsMod = lessonsModule.use();
-  const lessons = useMemo(
-    () =>
-      lessonsMod && selectedSubject
-        ? lessonsMod.getLessonsBySubject(selectedSubject).filter((l) => (l.examType ?? 'chugaku') === examType)
-        : [],
-    [lessonsMod, selectedSubject, examType],
-  );
+  // 選んだ教科×受験種別の単元だけ（約4MB）を、教科を選んでから読みこむ（読みこみ中は null）
+  const chunk = useLessonChunk(selectedSubject ? `${selectedSubject}-${examType}` : null);
+  const lessons = useMemo(() => chunk ?? [], [chunk]);
 
-  // 科目タイルの単元数。5科目ぶんを毎回数えなおすと、上のlessonsと合わせて
-  // 1回の描画で全単元を6周することになる。受験種別が変わったときだけ数える。
+  // 科目タイルの単元数は、前もって書き出した数（data/lesson-index.generated.ts）を使う。単元の本体は読まない。
   const subjectCounts = useMemo(() => {
     const m = {} as Record<SubjectKey, number>;
-    for (const { key } of SUBJECTS) {
-      m[key] = lessonsMod
-        ? lessonsMod.getLessonsBySubject(key).filter((l) => (l.examType ?? 'chugaku') === examType).length
-        : -1; // -1 = まだ読みこみ中
-    }
+    for (const { key } of SUBJECTS) m[key] = LESSON_COUNTS[`${key}|${examType}`] ?? 0;
     return m;
-  }, [lessonsMod, examType]);
+  }, [examType]);
 
   function handleSubjectPress(key: SubjectKey) {
     // 各科目の最初のFREE_LESSON_LIMIT単元は無料で見られるため、一覧自体は
@@ -207,8 +197,8 @@ export default function TextbookScreen() {
   );
 
   // 読みこみ中は「準備中」と出さない（本当に空のときだけ出す）
-  const showEmpty = selectedSubject != null && lessonsMod != null && lessons.length === 0;
-  const showLoading = selectedSubject != null && lessonsMod == null;
+  const showEmpty = selectedSubject != null && chunk != null && lessons.length === 0;
+  const showLoading = selectedSubject != null && chunk == null;
   const showList = selectedSubject != null && lessons.length > 0;
 
   // ヘッダーを毎回作りなおすと、科目タイルごと描き直される。

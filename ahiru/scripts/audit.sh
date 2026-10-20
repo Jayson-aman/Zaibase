@@ -19,6 +19,7 @@ echo
 echo "━━━ 1b/4 生成ファイル（学校別の問題数・new20のID）が最新か ━━━"
 if ! npm run --silent gen:static:check; then fail=1; fi
 if ! npm run --silent gen:questions:check; then fail=1; fi
+if ! npm run --silent gen:lessons:check; then fail=1; fi
 
 echo
 echo "━━━ 2/4 データ監査（実行時） ━━━"
