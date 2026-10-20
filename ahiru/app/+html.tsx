@@ -32,6 +32,15 @@ export default function Root({ children }: PropsWithChildren) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="中学受験・高校受験の対策アプリ｜Zaibase受験" />
 
+        {/* アクセス数の集計（Vercel Web Analytics）。Cookieを使わず、個人を特定しない。
+            Vercel のプロジェクトで Analytics を有効にしていないあいだは、何も送られない。 */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: 'window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };',
+          }}
+        />
+        <script defer src="/_vercel/insights/script.js" />
+
         <ScrollViewStyleReset />
       </head>
       <body>{children}</body>
