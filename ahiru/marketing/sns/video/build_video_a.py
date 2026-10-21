@@ -65,6 +65,8 @@ text_center(d, 1030, '中学受験・高校受験', 44, (232, 200, 170), 1)
 pill = (150, 1160, W - 150, 1290); d.rounded_rectangle(pill, 65, fill=ORANGE)
 text_center(d, 1190, '詳しくは プロフィールのリンクから', 40, WHITE, 1)
 text_center(d, 1340, 'exam.zaibase.group', 40, (232, 200, 170), 1)
+text_center(d, 1500, '※無料でお試しできるのは一部です。', 30, (232, 200, 170), 1)
+text_center(d, 1546, '続きは月額プラン（Pro／Max）', 30, (232, 200, 170), 1)
 im.save(f'{TMP}/s4.png'); scenes.append((f'{TMP}/s4.png', 3.8))
 
 # ffmpeg：場面を 0.4 秒のフェードでつなぐ
