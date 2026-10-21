@@ -1,8 +1,30 @@
+import { Platform } from 'react-native';
 import { getAuthUid, getFirestoreDb, isFirebaseConfigured } from './firebaseClient';
 
 const COLLECTION = 'accessEvents';
 
 export type AccessTier = 'free' | 'pro' | 'max';
+
+/**
+ * Web版だけ、同じ操作を Vercel Web Analytics のカスタムイベントにも送る
+ * （ペイウォールを開いた・プランをタップ・購入できた、などを、アクセス数と同じ画面で見られる）。
+ * ・個人を特定する値（uid・メールアドレス・エラー文）は送らない。送るのは、操作の名前と、プラン・種類・お試し価格の有無だけ。
+ * ・Analytics が無効、またはスクリプトが読みこまれていないときは、何も起きない（window.va が無いだけ）。
+ */
+function trackWebEvent(event: string, meta: AccessEventMeta): void {
+  if (Platform.OS !== 'web' || typeof window === 'undefined') return;
+  try {
+    const va = (window as unknown as { va?: (cmd: string, arg: unknown) => void }).va;
+    if (typeof va !== 'function') return;
+    const data: Record<string, string> = { kind: meta.mode, tier: meta.tier };
+    if (meta.subject) data.plan = String(meta.subject).slice(0, 32);
+    // 詳細（examType の欄）は、'intro'・'full' のような短い語だけを送る。エラー文（E…:…）は送らない
+    if (meta.examType && /^(intro|full)$/.test(meta.examType)) data.detail = meta.examType;
+    va('event', { name: event.slice(0, 64), data });
+  } catch {
+    // 集計のために、画面を止めない
+  }
+}
 
 export type AccessEventMeta = {
   /** 'mock' | 'kakomon' | 'daily' | 'trial_limit' | 'session_limit' など */
@@ -20,6 +42,7 @@ export type AccessEventMeta = {
  * 失敗しても機能に影響しないよう、常に握りつぶす（ranking.tsと同じ方針）。
  */
 export async function logAccessEvent(event: string, meta: AccessEventMeta): Promise<void> {
+  trackWebEvent(event, meta);
   if (!isFirebaseConfigured()) return;
   try {
     const uid = await getAuthUid();
