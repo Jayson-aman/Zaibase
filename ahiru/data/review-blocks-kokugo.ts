@@ -679,7 +679,7 @@ export const REVIEW_BLOCKS_KOKUGO: ReviewBlock[] = [
   { id: 'kokugo-kanazukai', label: '歴史的仮名遣い', subject: 'kokugo', section: KANAZUKAI, test: /歴史的仮名遣い|歴史的かなづかい|現代仮名遣い|現代かなづかい|仮名遣い/ },
   { id: 'kokugo-kobun', label: '古文の基本（係り結び・古語）', subject: 'kokugo', section: KOBUN, test: /古文|係り結び|古語|現代語訳|口語訳|係助詞|已然形/ },
   { id: 'kokugo-kanbun', label: '漢文の返り点', subject: 'kokugo', section: KANBUN, test: /漢文|返り点|書き下し|白文|訓読(?!み)|レ点|一二点|上中下点/ },
-  { id: 'kokugo-shiika', label: '俳句・短歌・詩と表現技法', subject: 'kokugo', section: SHIIKA, test: /俳句|短歌|季語|切れ字|句切れ|擬人法|体言止め|倒置|直喩|隠喩|比喩|対句|表現技法|修辞|字余り|(?<![漢唐])詩(?!的)/ },
+  { id: 'kokugo-shiika', label: '俳句・短歌・詩と表現技法', subject: 'kokugo', section: SHIIKA, test: /俳句|短歌|季語|切れ字|句切れ|擬人法|体言止め|倒置|直喩|隠喩|比喩(?!的)|対句|表現技法|修辞|字余り|(?<![漢唐])詩(?!的)/ },
   { id: 'kokugo-kijutsu', label: '記述問題の書き方', subject: 'kokugo', section: KIJUTSU, test: /記述|字以内|字以上|字程度|字ぐらい|[二三四五六七八九十百]+字|\d+字/ },
   { id: 'kokugo-genkou', label: '原稿用紙・作文・手紙', subject: 'kokugo', section: GENKOU, test: /原稿用紙|作文|手紙|メール|小論文|意見文|拝啓|敬具/ },
   { id: 'kokugo-jodoushi', label: '助動詞（れる・られる、ようだ・らしい）', subject: 'kokugo', section: JODOUSHI, test: /助動詞|受け身|受身|れる・られる|らしい|伝聞|推定/ },
