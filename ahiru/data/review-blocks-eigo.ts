@@ -45,7 +45,7 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
     id: 'eigo-be-general',
     label: 'be動詞と一般動詞の使い分け',
     subject: 'eigo',
-    test: /be動詞|一般動詞|\b(I am|You are|He is|She is|We are|They are|It is|This is|That is)\b/,
+    test: /be動詞|一般動詞|\b(I am|You are) [a-z]+ing\b/,
     section: sec(
       'おさらい：be動詞と一般動詞の使い分け',
       `英語の動詞には2種類あります。「〜です」「〜にいる」をあらわす **be動詞**（am・are・is）と、「食べる」「走る」のように動作をあらわす**一般動詞**です。
@@ -107,7 +107,7 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
     id: 'eigo-plural',
     label: '名詞の複数形のつくり方',
     subject: 'eigo',
-    test: /複数形|複数の名詞|不規則な複数|\b(children|women|feet|teeth|knives|leaves)\b|\b(two|three|four|five|many|some) [a-z]+s\b/,
+    test: /複数形|複数の名詞|不規則な複数|\b(children|women|feet|teeth|knives|leaves)\b/,
     section: sec(
       'おさらい：名詞の複数形のつくり方',
       `名詞が2つ（2人）以上のときは、形を変えて複数形にします。
@@ -118,7 +118,7 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 　子音字＋y は y を i に変えて es：city → cities、baby → babies（boy → boys は母音＋y なのでそのまま s）
 　f・fe で終わる語は ves にする語が多い：knife → knives、leaf → leaves
 　不規則（形が変わる）：man → men、woman → women、child → children、foot → feet、tooth → teeth
-　形が変わらない語：fish、sheep
+　形が変わらない語：**fish、sheep**
 
 ■ 具体例
 　I have two dogs.　／　She has three boxes.　／　There are five children in the park.
@@ -137,7 +137,7 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
     id: 'eigo-do-does-did',
     label: '疑問文・否定文のつくり方（do／does／did）',
     subject: 'eigo',
-    test: /疑問文|否定文|\b(Do|Does|Did) (you|he|she|they|we|I|it|your|the|his|her|Tom|[A-Z][a-z]+)\b|\b(don't|doesn't|didn't|do not|does not|did not)\b/,
+    test: /疑問文|否定文|\b(Does|Did) [a-z]+ [a-z]+|\b(don't|doesn't|didn't|does not|did not)\b/,
     section: sec(
       'おさらい：疑問文・否定文のつくり方（do／does／did）',
       `一般動詞の文は、do・does・did の力を借りて、疑問文や否定文にします。
@@ -167,7 +167,7 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
     id: 'eigo-pronoun',
     label: '代名詞（I・my・me・mine）',
     subject: 'eigo',
-    test: /代名詞|所有格|目的格|所有代名詞|\b(mine|yours|hers|ours|theirs)\b/,
+    test: /(?<!関係)代名詞|所有格|(?<!関係)目的格|所有代名詞|\b(mine|yours|hers|ours|theirs)\b/,
     section: sec(
       'おさらい：代名詞の形（I・my・me・mine）',
       `代名詞は、名詞の代わりをすることばです。働きによって形が変わります。
@@ -183,7 +183,7 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 
 ■ 使い分け
 　主語になる（動詞の前）→ I・he・she など
-　名詞の前につく → my・your など　　動詞や前置詞のあとに来る → me・him・them など
+　名詞の前につく → **my・your など**　　動詞や前置詞のあとに来る → me・him・them など
 　「〜のもの」（あとに名詞が続かない）→ mine・yours など
 
 ■ 具体例
@@ -204,7 +204,7 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
     id: 'eigo-past',
     label: '過去形と不規則動詞',
     subject: 'eigo',
-    test: /過去形|不規則動詞|過去の文|\b(went|saw|ate|took|came|bought|wrote|said|gave|ago|yesterday)\b|\blast (night|week|year|summer|month|Sunday)\b/,
+    test: /過去形|不規則動詞|過去の文|\b(went|saw|ate|bought|wrote|yesterday)\b|\blast (night|week|year|summer|month|Sunday)\b/,
     section: sec(
       'おさらい：過去形と不規則動詞',
       `過去のことをいうときは、動詞を**過去形**にします。yesterday・last week・ago などが目印です。
@@ -299,7 +299,7 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
     id: 'eigo-modal',
     label: 'can・must・should などの使い方',
     subject: 'eigo',
-    test: /助動詞|\b(can|could|must|should|may|shall)\b|\b(Can|Could|May|Shall|Must|Should) (I|you|we|he|she)\b|have to|has to|don't have to/,
+    test: /助動詞|\b(must|should)\b|\b(Can|Could|May|Shall) (I|you|we)\b|\b(have|has) to\b/,
     section: sec(
       'おさらい：can・must・should などの使い方',
       `can・must・should などは、動詞を助けて「できる」「しなければならない」などの意味を足すことばです。
@@ -401,7 +401,7 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
     id: 'eigo-article',
     label: '冠詞（a・an・the）',
     subject: 'eigo',
-    test: /冠詞|a と an|\ban [a-z]+|\ba\/an\b/,
+    test: /冠詞|a と an|\ba\/an\b|a と the/,
     section: sec(
       'おさらい：冠詞（a・an・the）',
       `名詞の前につく a・an・the を冠詞といいます。
@@ -440,7 +440,7 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
       `前置詞は、時間や場所を表す小さなことばです。つかい分けにきまりがあります。
 
 ■ 時をあらわす
-　at：時刻・ある一点　at 7:30、at noon、at night
+　**at：時刻・ある一点**　at 7:30、at noon、at night
 　on：曜日・日付　on Monday、on May 5
 　in：月・季節・年・午前午後　in April、in summer、in 2020、in the morning
 ■ 場所をあらわす
@@ -637,7 +637,7 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
     label: '数・時刻・曜日・月の言い方',
     subject: 'eigo',
     exam: 'chugaku',
-    test: /曜日|時刻|何時|序数|基数|数字|o'clock|What time|What day|\b(January|February|March|April|June|July|August|September|October|November|December|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\b|\b(first|second|third|fourth|fifth|twelfth)\b/,
+    test: /曜日|時刻|何時|序数|基数|数字|o'clock|What time|What day|\b(January|February|March|April|June|July|August|September|October|November|December|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\b|\b(fourth|fifth|twelfth)\b/,
     section: sec(
       'おさらい：数・時刻・曜日・月の言い方',
       `数や日づけ、時刻の言い方は、基本のきまりを覚えると楽になります。
@@ -669,7 +669,7 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
     label: '英文読解の基本',
     subject: 'eigo',
     exam: 'chugaku',
-    test: /読解|英文を読|指示語|本文|質問に答え|passage|\b(However|Because|because|but)\b/,
+    test: /読解|英文を読|指示語|(?<!日)本文|質問に答え|passage|\bHowever\b/,
     section: sec(
       'おさらい：英文読解の基本',
       `英文を読むときは、**答えを探しながら読む**と、むだなく内容がつかめます。
@@ -743,7 +743,7 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 ■ 使い方
 　主語になる：Swimming is fun.　／　補語になる：My hobby is reading books.
 　目的語になる：I like playing tennis.
-　前置詞のあと：be good at 〜ing、Thank you for 〜ing、How about 〜ing?、before 〜ing、be interested in 〜ing
+　前置詞のあと（**必ず ing**）：be good at 〜ing、Thank you for 〜ing、How about 〜ing?、before 〜ing、be interested in 〜ing
 
 ■ 動名詞だけを目的語にする動詞
 　enjoy・finish・stop・mind・practice・give up・avoid（「いまやっていること」をする・やめる）
@@ -1007,7 +1007,7 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
     label: '長文読解の進め方',
     subject: 'eigo',
     exam: 'koko',
-    test: /長文|passage|段落|要旨|筆者|本文の内容|本文|読解|内容に合う|英文を読|However|Therefore|For example/,
+    test: /長文|passage|段落|要旨|筆者|(?<!日)本文|読解|内容に合う|英文を読|However|Therefore|For example/,
     section: sec(
       'おさらい：長文読解の進め方',
       `長文は、**設問を先に読んで答えを探しながら**読むと、時間内に正確に解けます。
@@ -1040,7 +1040,7 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
     label: '条件英作文・自由英作文の型',
     subject: 'eigo',
     exam: 'koko',
-    test: /条件英作文|自由英作|your opinion|あなたの考え|理由を|語程度|語で書|語以上|\bwords\b/,
+    test: /条件英作文|自由英作|your opinion|あなたの考え|語程度|語以上/,
     section: sec(
       'おさらい：条件英作文・自由英作文の型',
       `自由に書く英作文は、**型に当てはめて、知っている簡単な英語で正しく書く**のが得点のコツです。
