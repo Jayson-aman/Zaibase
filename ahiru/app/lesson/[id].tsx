@@ -257,6 +257,13 @@ export default function LessonDetailScreen() {
                 <Text style={styles.introText}>{lesson.intro}</Text>
               </View>
             )}
+            {/* ためし読みの人にも、前提になるおさらいは出す（基礎の見直しは、有料の中身ではない） */}
+            <ReviewBlocks
+              q={{ subject: lesson.subject, examType: lesson.examType, question: lesson.title, explanation: [lesson.description, lesson.intro, ...lesson.sections.slice(0, 2).map((x) => x.body)].filter(Boolean).join('\n') }}
+              title="🔁 この単元の前提になる、おさらい"
+              excludeHeadings={lesson.sections.map((x) => x.heading ?? '')}
+              max={2}
+            />
             <LessonRenderer
               sections={trialSections(lesson.sections)}
               isMax={false}

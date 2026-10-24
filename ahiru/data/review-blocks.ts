@@ -365,7 +365,9 @@ export function reviewBlocksFor(q: Q, max = 2): ReviewBlock[] {
     if (b.test.test(text)) hits.push({ b, w: weight(b.test, q), i });
   });
   hits.sort((x, y) => y.w - x.w || x.i - y.i);
-  if (hits.length > 0) return hits.slice(0, max).map((h) => h.b);
+  // いちばん関係の深い1つは必ず出す。2つ目以降は、問題文・答えに出るか、本文に3回以上出るものだけ
+  // （長い単元本文に1回だけ出た語で、関係の薄いおさらいが並ぶのを防ぐ）
+  if (hits.length > 0) return hits.filter((h, i) => i === 0 || h.w >= 3).slice(0, max).map((h) => h.b);
   const fb = mine.find((b) => b.fallback);
   return fb ? [fb] : [];
 }

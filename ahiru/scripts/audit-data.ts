@@ -19,6 +19,7 @@ import { TEIKI_MIN_SLIDES } from '../data/teiki/types';
 import { TEIKI_QUESTIONS, TEIKI_LEVELS } from '../data/teiki-questions';
 import { TEIKI_Q_PER_CELL } from '../data/teiki-questions/types';
 import { judge } from '../utils/grading';
+import { REVIEW_BLOCKS } from '../data/review-blocks';
 import { getMangaScript } from '../data/manga-scripts';
 import { questions } from '../data/questions';
 import { explanationText } from '../utils/explanation';
@@ -1834,6 +1835,30 @@ info('日本語の中に英単語が挟まっている（要目視）', latin, 8
     return bad;
   })());
   console.log(`  （定期テスト基本問題：${Q.length}問）`);
+}
+
+// ── おさらい（data/review-blocks*.ts）──
+{
+  const B = REVIEW_BLOCKS;
+  const ids = new Map<string, number>();
+  for (const b of B) ids.set(b.id, (ids.get(b.id) ?? 0) + 1);
+  check('【おさらい】id が重複している', [...ids].filter(([, n]) => n > 1).map(([id]) => id));
+  check('【おさらい】本文・見出し・名前の ** が閉じていない、または見出し・名前に ** がある', B.filter((b) =>
+    (b.section.body.match(/\*\*/g) ?? []).length % 2 === 1 || /\*\*/.test(b.label) || /\*\*/.test(b.section.heading ?? '')).map((b) => b.id));
+  check('【おさらい】本文が短い（300字未満）、または「★ ここがポイント」が無い', B.filter((b) => b.section.body.length < 300 || !b.section.body.includes('★')).map((b) => b.id));
+  check('【おさらい】よその国の文字・文字化け・自社名・Markdown記法がまぎれている', B.filter((b) =>
+    /[\u0400-\u04FF\uAC00-\uD7AF\u0600-\u06FF\u0E00-\u0E7F\uFFFD]/.test(b.section.body + b.label) || /Zaibase|Stripe|RevenueCat|Firebase|Vercel/.test(b.section.body) || /^#{1,3} /m.test(b.section.body) || /`/.test(b.section.body)).map((b) => b.id));
+  const SUBJ = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
+  const miss: string[] = [];
+  for (const sj of SUBJ) for (const ex of ['chugaku', 'koko'] as const)
+    if (!B.some((b) => (b.subject ?? 'sansu') === sj && b.fallback && (!b.exam || b.exam === ex))) miss.push(`${sj}|${ex}`);
+  check('【おさらい】「基礎の見直し」（fallback）が無い教科×受験種別がある（おさらいが何も出ない問題が出る）', miss);
+  // 小学生に出る（exam が koko でない）おさらいに、中学以上でしか習わない語を入れない
+  const ELEM_NG = /√|平方根|方程式|負の数|マイナスの数|移項|文字式|x²|sin|cos|tan|三平方|イオン|化学式|化学反応式|オームの法則|Ω|比例定数|二次関数|(?<!素)因数分解/;
+  // 英語の文法用語は、英語のおさらいだけで見る（国語の「受け身」は小学校の文法）
+  const ELEM_NG_EIGO = /現在完了|関係代名詞|仮定法|分詞|受け身|不定詞|動名詞/;
+  check('【おさらい】小学生にも出るおさらいに、中学以上で習う語が入っている', B.filter((b) => b.exam !== 'koko' && (ELEM_NG.test(b.section.body + b.label) || (b.subject === 'eigo' && ELEM_NG_EIGO.test(b.section.body + b.label)))).map((b) => b.id + '：' + ((b.section.body + b.label).match(ELEM_NG) ?? (b.section.body + b.label).match(ELEM_NG_EIGO))?.[0]));
+  console.log(`  （おさらい：${B.length}個）`);
 }
 
 console.log(`\n合計 ${problems} 件`);
