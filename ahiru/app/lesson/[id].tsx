@@ -21,6 +21,7 @@ import { isNew20Unit, isNew20UnitFree } from '../../data/new20-access';
 import LessonRenderer from '../../components/LessonRenderer';
 import FigureView from '../../components/FigureView';
 import InlineQuiz, { questionsToQuizItems } from '../../components/InlineQuiz';
+import ReviewBlocks from '../../components/ReviewBlocks';
 import { getRelatedQuestions } from '../../data/lesson-questions';
 import { useSubjectQuestions } from '../../hooks/useSubjectQuestions';
 import VideoPlayer from '../../components/VideoPlayer';
@@ -348,6 +349,18 @@ export default function LessonDetailScreen() {
                 <Text style={styles.introText}>{lesson.intro}</Text>
               </View>
             )}
+            {/* 昔習ったことを思い出せないと、この単元がわからなくなる。前提になる知識を、折りたたんで先に出す */}
+            <ReviewBlocks
+              q={{
+                subject: lesson.subject,
+                examType: lesson.examType,
+                question: lesson.title,
+                explanation: [lesson.description, lesson.intro, ...(lesson.keyPoints ?? []), ...lesson.sections.map((x) => x.body)].filter(Boolean).join('\n'),
+              }}
+              title="🔁 この単元の前提になる、おさらい"
+              excludeHeadings={lesson.sections.map((x) => x.heading ?? '')}
+              max={2}
+            />
             <LessonRenderer
               sections={lesson.sections}
               isMax={isMax}

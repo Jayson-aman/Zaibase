@@ -17,13 +17,16 @@ type Q = {
  * 約分・通分・公約数・公倍数・割合・方程式など、その問題の前提になる計算の出し方を、折りたたんで出す。
  * 閉じたままなら1行だけなので、すでに分かっている子のじゃまにならない。
  */
-export default function ReviewBlocks({ q }: { q: Q }) {
-  const blocks = reviewBlocksFor(q, 2);
+export default function ReviewBlocks({ q, title, excludeHeadings, max = 2 }: { q: Q; title?: string; excludeHeadings?: string[]; max?: number }) {
+  // 単元ページでは、本文にすでに同じ見出しの「おさらい」が差しこんである単元（data/lesson-extra-sections.ts）を二重に出さない
+  const blocks = reviewBlocksFor(q, max + 2)
+    .filter((b) => !(excludeHeadings ?? []).includes(b.section.heading ?? ''))
+    .slice(0, max);
   const [open, setOpen] = useState<string | null>(null);
   if (blocks.length === 0) return null;
   return (
     <View style={styles.wrap}>
-      <Text style={styles.title}>🔁 つまずいたら、おさらい</Text>
+      <Text style={styles.title}>{title ?? '🔁 つまずいたら、おさらい'}</Text>
       {blocks.map((b) => {
         const isOpen = open === b.id;
         return (

@@ -6,6 +6,7 @@ import { rich } from '../components/RichText';
 import AnswerInput, { type SubmitResult } from '../components/AnswerInput';
 import HomeButton from '../components/HomeButton';
 import LadderCard from '../components/LadderCard';
+import ReviewBlocks from '../components/ReviewBlocks';
 import Paywall from '../components/Paywall';
 import { useSubscription } from '../hooks/useSubscription';
 import { useBetaAccess } from '../hooks/useBetaAccess';
@@ -141,6 +142,7 @@ export default function TeikiPractice() {
                 <View style={styles.expBox}>
                   <Text style={styles.ans}>答え：{q.answer}</Text>
                   <Text style={styles.exp}>{rich(q.explanation)}</Text>
+                  <ReviewBlocks q={{ subject: q.subject, examType: 'koko', question: q.question, answer: q.answer, explanation: q.explanation }} />
                   <TouchableOpacity style={styles.nextBtn} onPress={() => setIdx((i) => i + 1)} activeOpacity={0.85}>
                     <Text style={styles.nextText}>{idx + 1 >= list.length ? '結果を見る' : 'つぎの問題へ'}</Text>
                   </TouchableOpacity>
