@@ -340,11 +340,12 @@ export const REVIEW_BLOCKS: ReviewBlock[] = [
 
 type Q = { subject?: string; examType?: string; question?: string; answer?: string; explanation?: string; hint?: string };
 
-/** 語が何回出てくるか（問題文・答えは3倍の重みで数える） */
-function weight(re: RegExp, q: Q): number {
+/** 語が何回出てくるか（問題文・答えは3倍の重みで数える）。head は、問題文・答え（単元では題名）に出た回数 */
+function weight(re: RegExp, q: Q): { w: number; head: number } {
   const g = new RegExp(re.source, 'g');
   const count = (t: string | undefined) => (t ? (t.match(g) ?? []).length : 0);
-  return 3 * (count(q.question) + count(q.answer)) + count(q.explanation) + count(q.hint);
+  const head = count(q.question) + count(q.answer);
+  return { w: 3 * head + count(q.explanation) + count(q.hint), head };
 }
 
 /**
@@ -359,15 +360,15 @@ export function reviewBlocksFor(q: Q, max = 2): ReviewBlock[] {
   if (!text) return [];
   const exam = q.examType === 'koko' ? 'koko' : 'chugaku';
   const mine = REVIEW_BLOCKS.filter((b) => (b.subject ?? 'sansu') === subject && (!b.exam || b.exam === exam));
-  const hits: { b: ReviewBlock; w: number; i: number }[] = [];
+  const hits: { b: ReviewBlock; w: number; head: number; i: number }[] = [];
   mine.forEach((b, i) => {
     if (b.fallback) return;
-    if (b.test.test(text)) hits.push({ b, w: weight(b.test, q), i });
+    if (b.test.test(text)) { const x = weight(b.test, q); hits.push({ b, w: x.w, head: x.head, i }); }
   });
   hits.sort((x, y) => y.w - x.w || x.i - y.i);
-  // いちばん関係の深い1つは必ず出す。2つ目以降は、問題文・答えに出るか、本文に3回以上出るものだけ
-  // （長い単元本文に1回だけ出た語で、関係の薄いおさらいが並ぶのを防ぐ）
-  if (hits.length > 0) return hits.filter((h, i) => i === 0 || h.w >= 3).slice(0, max).map((h) => h.b);
+  // いちばん関係の深い1つは必ず出す。2つ目以降は、問題文・答え（単元は題名）にも出る語か、本文に8回以上出る語のときだけ
+  // （解説や長い単元本文に、ついでに出た語で、関係の薄いおさらいが並ぶのを防ぐ）
+  if (hits.length > 0) return hits.filter((h, i) => i === 0 || h.head > 0 || h.w >= 8).slice(0, max).map((h) => h.b);
   const fb = mine.find((b) => b.fallback);
   return fb ? [fb] : [];
 }
