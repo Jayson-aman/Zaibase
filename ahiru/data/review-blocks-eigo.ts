@@ -31,6 +31,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 　私は犬が好きです。
 　　→ I like dogs.（「好き」も動詞なので、I のすぐあとに like を置く）
 
+■ なぜその形か（例文を3つ）
+　My sister likes music.（私の姉は音楽が好きです）→ 主語 My sister のすぐあとに動詞 likes。主語が1人なので s がつく。
+　We watched TV after dinner.（私たちは夕食のあとテレビを見ました）→ 「何を」の TV は動詞のすぐあと、「いつ」の after dinner は最後。
+　Tom plays the guitar in his room.（トムは自分の部屋でギターをひきます）→ 「どこで」の in his room も最後に置く。
+
 ■ 確かめ
 　英文を作ったら、①最初に主語があるか ②そのすぐあとに動詞があるか ③「いつ・どこで」が最後にあるか、を順に見ます。
 
@@ -60,6 +65,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 　私は生徒です。　　　　I am a student.（「です」→ be動詞）
 　私たちは野球をします。We play baseball.（動作 → 一般動詞。are は入れない）
 　彼女はいそがしいです。She is busy.（「いそがしい」は様子 → be動詞）
+
+■ なぜその形か（例文を3つ）
+　Tom is tall.（トムは背が高いです）→ 「高い」は様子なので be動詞。主語 Tom は1人なので is。
+　They are in the park.（彼らは公園にいます）→ 「いる」場所は be動詞。They は複数なので are。
+　My father works at a bank.（父は銀行で働いています）→ 「働く」は動作なので一般動詞。主語が1人なので works。
 
 ■ 確かめ
 　文の中の動詞を数えます。be動詞か一般動詞のどちらか1つになっていれば正しい形です。
@@ -92,6 +102,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 　He has a dog.
 　I play soccer.／They play soccer.（I と複数には s をつけない）
 
+■ なぜその形か（例文を3つ）
+　Ken goes to school by bus.（ケンはバスで通学します）→ go は o で終わるので es をつけて goes。
+　My father watches TV after dinner.（父は夕食後にテレビを見ます）→ watch は ch で終わるので watches。
+　Our teacher studies English every night.（先生は毎晩英語を勉強します）→ study は子音字＋y なので studies。
+
 ■ 確かめ
 　①主語が1人（1つ）か ②今の文か、を見ます。両方あてはまれば動詞に s です。
 
@@ -123,6 +138,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 ■ 具体例
 　I have two dogs.　／　She has three boxes.　／　There are five children in the park.
 
+■ なぜその形か（例文を3つ）
+　I have three pencils.（私は鉛筆を3本持っています）→ three があるので pencils と複数形にする。
+　There are two buses at the stop.（停留所にバスが2台います）→ bus は s で終わるので es をつけて buses。
+　These babies are cute.（この赤ちゃんたちはかわいいです）→ baby は y を i に変えて babies。複数なので are。
+
 ■ 確かめ
 　two・three・many・some などの数を表すことばがあれば、そのあとの名詞は複数形です。1つのときは a や an をつけます。
 
@@ -152,6 +172,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 　She likes music. → Does she like music?　／　She doesn't like music.（likes が like にもどる）
 　He went there. → Did he go there?（went が go にもどる）
 　答え方：Do you play tennis? — Yes, I do. ／ No, I don't.
+
+■ なぜその形か（例文を3つ）
+　Does your brother play baseball?（あなたの兄は野球をしますか）→ 主語が1人なので Does。play は原形のまま。
+　I didn't eat breakfast this morning.（今朝は朝食を食べませんでした）→ 過去の否定は didn't。eat は原形。
+　Do they live in Osaka?（彼らは大阪に住んでいますか）→ 主語が複数なので Do。live は原形。
 
 ■ 確かめ
 　Do・Does・Did のあとの動詞に s や ed がついていないかを見ます。s や ed は do・does・did のほうが引き受けています。
@@ -190,6 +215,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 　This is my bag.　= This bag is mine.
 　I know him.　／　Please help us.　／　Look at them.　／　Her name is Mika.
 
+■ なぜその形か（例文を3つ）
+　Is this your pen? — Yes, it is mine.（これはあなたのペンですか。はい、私のものです）→ pen の前なので your、「私のもの」は mine。
+　Our teacher gives us homework.（先生は私たちに宿題を出します）→ 動詞のあとの「私たちに」は us。
+　Her brother helps her.（彼女の兄は彼女を手伝います）→ brother の前の「彼女の」は Her、動詞のあとの「彼女を」は her。
+
 ■ 確かめ
 　空所のすぐあとに名詞があれば my 型、動詞のあとで文が終わるなら me 型、と見分けます。
 
@@ -222,6 +252,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 　I went to Kyoto last summer.　／　She bought a bag yesterday.
 　疑問文：Did you see him? — Yes, I did.（Did のあとは原形 see にもどる）
 
+■ なぜその形か（例文を3つ）
+　We played soccer yesterday.（昨日サッカーをしました）→ yesterday があるので過去形。play は ed をつけて played。
+　He studied hard last night.（彼は昨夜一生けんめい勉強しました）→ study は子音字＋y なので y を i に変えて studied。
+　Did you eat lunch? — Yes, I did.（昼食を食べましたか。はい、食べました）→ Did のあとの eat は原形。答えも did を使う。
+
 ■ 確かめ
 　yesterday・ago・last 〜 などの過去を表す語があるか、動詞が過去形になっているかを見ます。
 
@@ -252,6 +287,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 　I am reading a book now.（いま読んでいる）
 　They were playing soccer at that time.（そのとき、していた）
 　疑問文：Is she cooking? — Yes, she is.（be動詞を前に出す）
+
+■ なぜその形か（例文を3つ）
+　My mother is cooking dinner.（母は夕食を作っています）→ 主語が1人で今のことなので is ＋ cooking。
+　The children were swimming in the pool.（子どもたちはプールで泳いでいました）→ 過去で複数なので were。swim は m を重ねて swimming。
+　Are you writing a letter?（あなたは手紙を書いていますか）→ Are を前に出す。write は e をとって writing。
 
 ■ 確かめ
 　be動詞と ing の**両方がそろっているか**を見ます。どちらか片方だけだと進行形になりません。
@@ -285,6 +325,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 　否定：I will not（won't）go.　／　I am not going to go.
 　疑問：Will you come? ／ Are you going to come?
 
+■ なぜその形か（例文を3つ）
+　I will call you tonight.（今夜電話するね）→ その場で決めたことなので will。call は原形。
+　My sister is going to buy a new bag.（姉は新しいバッグを買う予定です）→ 前から決めている予定。主語が1人なので is going to。
+　Will it be sunny tomorrow?（明日は晴れるでしょうか）→ 予想の疑問文は Will を前に出す。be は原形。
+
 ■ 確かめ
 　will のあと、to のあとの動詞が原形になっているか。be going to の be動詞が主語に合っているかを見ます。
 
@@ -315,6 +360,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 　She can swim fast.　／　You must not run here.　／　You should go to bed early.
 　May I use your pen? — Sure.
 　注意：don't have to は「〜しなくてもよい」で、must not（禁止）とは意味がちがいます。
+
+■ なぜその形か（例文を3つ）
+　Can you help me?（手伝ってくれますか）→ 依頼は Can you 〜?。help は原形。
+　You should drink more water.（もっと水を飲んだほうがいいですよ）→ 助言は should。drink は原形で s はつけない。
+　We have to finish this today.（今日これを終えなければなりません）→ have to は must とほぼ同じ意味。
 
 ■ 確かめ
 　can・must・should のすぐあとの動詞が、s や ed や to のついていない原形かを見ます。
@@ -350,6 +400,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 ■ 具体例
 　Tom is taller than Ken.　／　Mt. Fuji is the highest mountain in Japan.
 　This book is more interesting than that one.
+
+■ なぜその形か（例文を3つ）
+　My bag is bigger than yours.（私のかばんはあなたのより大きいです）→ big は g を重ねて bigger。「〜より」は than。
+　She is the youngest of the five.（五人の中で彼女がいちばん若いです）→ 最上級は the ＋ -est。「〜の中で」で人数が決まっているので of。
+　This movie is more exciting than that one.（この映画はあの映画よりわくわくします）→ exciting は長い語なので more を前に置く。
 
 ■ 確かめ
 　than があれば比較級、the や of・in があれば最上級になっているかを見ます。
@@ -387,6 +442,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 　What do you want? — I want a pen.
 　Why are you sad? — Because I lost my bag.
 
+■ なぜその形か（例文を3つ）
+　Where do you live? — I live in Nara.（どこに住んでいますか。奈良に住んでいます）→ 疑問詞のあとは do you の疑問文の形。
+　How many books do you have?（本を何冊持っていますか）→ How many のあとは複数形の名詞 books。
+　Who plays the piano?（だれがピアノをひきますか）→ Who が主語なので does は使わず、動詞に s（plays）。
+
 ■ 確かめ
 　答えが質問にかみ合っているか（Where なのに時間を答えていないか）を見ます。
 
@@ -418,6 +478,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 
 ■ 具体例
 　He is an English teacher.　／　I saw a movie. The movie was great.（2回目は the）
+
+■ なぜその形か（例文を3つ）
+　I need an umbrella.（私はかさが必要です）→ umbrella は最初の音が「ア」なので an。
+　She is a university student.（彼女は大学生です）→ university は最初の音が「ユ」で子音なので a。
+　The sun is bright today.（今日は太陽が明るいです）→ 太陽は1つしかないので the。
 
 ■ 確かめ
 　名詞が1つか、最初の音は母音か子音か、前に出た名詞かを順に見ます。
@@ -452,6 +517,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 ■ 具体例
 　I get up at 6:30.　／　We have a test on Friday.　／　It is hot in August.
 
+■ なぜその形か（例文を3つ）
+　The class starts at nine.（授業は9時に始まります）→ 時刻は at。
+　My birthday is on June 3.（私の誕生日は6月3日です）→ 日付は on。
+　We go skiing in winter.（私たちは冬にスキーに行きます）→ 季節は in。
+
 ■ 確かめ
 　「時刻なら at、曜日・日付なら on、月・季節・年なら in」と声に出して唱えて確かめます。
 
@@ -485,6 +555,13 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 　　→ I read a book in the library yesterday.
 　あなたはどこに住んでいますか。→ Where do you live?（疑問詞が先頭、そのあとは疑問文の形）
 
+■ なぜその形か（例文を3つ）
+　My brother plays soccer every Sunday.（兄は毎週日曜日にサッカーをします）→ 主語 My brother ＋ 動詞。1人で今のことなので plays。「いつ」は最後。
+　Did you visit your grandmother last week?（先週、おばあさんを訪ねましたか）→ last week は過去なので Did。visit は原形。
+　She is reading a book in her room.（彼女は自分の部屋で本を読んでいます）→ 「読んでいる」は進行形で is ＋ reading。
+■ まちがい文 → 正しい文
+　×Where you went yesterday? → ○Where did you go yesterday?（疑問詞のあとは疑問文の形）
+
 ■ 確かめ
 　主語と動詞があるか、三人称の s・過去形・複数形になっているか、文のはじめが大文字で、終わりにピリオド（？）があるかを見ます。
 
@@ -517,6 +594,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 
 ■ 覚え方
 　前置詞が変わると意味が変わります（look at は「見る」、look for は「さがす」）。単語を1つずつでなく、**例文ごと**に声に出して覚えます。
+
+■ なぜその形か（例文を3つ）
+　Please listen to me.（私の話を聞いてください）→ 「〜を聞く」は listen to。to を落とさない。
+　We are waiting for the bus.（私たちはバスを待っています）→ 「〜を待つ」は wait for。
+　She puts on her coat.（彼女はコートを着ます）→ put on は「着る」。主語が1人なので puts。
 
 ■ 確かめ
 　日本語で「〜を聞く」のように「を」がつくのに、英語では前置詞が必要な語（listen to）を探します。
@@ -553,6 +635,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 ■ 感嘆文（なんと〜だ）
 　How ＋ 形容詞！：How beautiful!　／　What a ＋ 形容詞 ＋ 名詞！：What a nice day!
 
+■ なぜその形か（例文を3つ）
+　Close the window, please.（窓を閉めてください）→ 命令文は主語がなく、動詞の原形で始める。
+　Let's go to the park.（公園に行きましょう）→ Let's のあとは原形の go。
+　She can swim, can't she?（彼女は泳げますよね）→ 前が肯定なので、can を使った否定の付加疑問 can't she。
+
 ■ 確かめ
 　付加疑問は「前の文が肯定か否定か」を見て、正反対のものをつけます。
 
@@ -584,6 +671,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 
 ■ 解き方
 　直前の発言が、Yes・No でこたえる質問か、疑問詞（What・Where など）の質問かを見ます。それに合う答えを選びます。
+
+■ なぜその形か（例文を3つ）
+　A: May I help you? B: Yes, please. I'm looking for a bag.（A：いらっしゃいませ。B：はい、バッグをさがしています）→ 申し出には Yes, please. で答える。
+　A: Could you open the door? B: Sure.（A：ドアを開けてくれますか。B：いいですよ）→ 依頼には Sure. で応じる。
+　A: How was your weekend? B: It was great.（A：週末はどうでしたか。B：すばらしかったです）→ 過去のことなので How was 〜? に It was 〜. で答える。
 
 ■ 確かめ
 　選んだ文を空所に入れて、A → B → A と声に出して読み、自然につながるかを確かめます。
@@ -620,6 +712,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 
 ■ 覚え方
 　声に出しながら書く。音の区切りで切って覚える（Sep-tem-ber）。同じ音の語をグループにする（night・light・right）。
+
+■ なぜその形か（例文を3つ）
+　I write a letter every week.（私は毎週手紙を書きます）→ write の w は読まないが、つづりには書く。
+　We are running in the park.（私たちは公園で走っています）→ run は n を重ねて running。
+　Please listen to this song.（この歌を聞いてください）→ listen の t は読まないが、つづりには書く。
 
 ■ 確かめ
 　書いたあと、音を出して読み直します。読まない文字を落としていないか、最初と最後の文字が合っているかを見ます。
@@ -658,6 +755,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 　January February March April May June July August September October November December
 　曜日と月は、**文のとちゅうでも大文字**で始めます。
 
+■ なぜその形か（例文を3つ）
+　It's half past seven.（7時半です）→ 30分は half past。
+　My birthday is May fifth.（私の誕生日は5月5日です）→ 日づけは序数。5番目は fifth。月の May は大文字で始める。
+　I get up at six forty.（私は6時40分に起きます）→ 40は forty（u がない）。時刻は「時、分」の順に読む。
+
 ■ よくあるまちがい
 　・×fourty → ○forty　　・×fiveth → ○fifth　　・×monday → ○Monday
 
@@ -686,6 +788,13 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 　　It は a dog を指す（「犬はとても大きい」と読める）。
 　I was tired, so I went to bed early.　→ so の前が原因、後が結果。
 　I like tennis, but I don't like soccer.　→ but は反対の内容につなぐ。
+
+■ なぜその形か（例文を3つ）
+　Mika has a cat. It is white.（ミカはねこを飼っています。それは白いです）→ It は直前の名詞 a cat を指す。
+　Tom was sick, so he stayed home.（トムは病気だったので家にいました）→ so の前が原因、後ろが結果。
+　I like apples, but my sister doesn't.（私はりんごが好きですが、妹は好きではありません）→ but は反対の内容につなぐ。
+■ まちがい文 → 正しい文
+　×It ＝ Mika → ○It ＝ a cat（指示語は直前の名詞を当てはめて確かめる）
 
 ■ 確かめ
 　答えの根拠になる文に線を引き、指示語は実際に名詞を当てはめて読み直します。
@@ -718,6 +827,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 　〜 enough to …：…できるほど〜だ　　She is tall enough to reach the shelf.
 　It is 〜 for A to …：Aが…することは〜だ
 　want（tell・ask）A to …：Aに…してほしい（Aに…するように言う・頼む）
+
+■ なぜその形か（例文を3つ）
+　I study hard to pass the exam.（私は試験に合格するために一生けんめい勉強します）→ 「〜するために」の目的は副詞的用法。
+　She has something to tell you.（彼女はあなたに伝えたいことがあります）→ to tell が something を後ろから説明する形容詞的用法。
+　It is important for us to help each other.（私たちが助け合うことは大切です）→ It is 〜 for A to … の形。
 
 ■ 確かめ
 　to のあとの動詞が原形になっているかを見ます。to のあとが名詞なら前置詞の to（go to school）で、不定詞とは別物です。
@@ -753,6 +867,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 　→ He decided to study abroad.
 ■ どちらもとる動詞
 　like・love・start・begin：like playing = like to play
+
+■ なぜその形か（例文を3つ）
+　She finished writing the report.（彼女はレポートを書き終えました）→ finish は動名詞だけを目的語にする。
+　I hope to see you again.（またお会いしたいです）→ hope は不定詞だけを目的語にする。
+　He left without saying goodbye.（彼はさよならを言わずに去りました）→ 前置詞 without のあとは ing。
 
 ■ 確かめ
 　動詞が enjoy や finish の仲間なら ing、want や decide の仲間なら to、と声に出して確かめます。
@@ -790,6 +909,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 ■ 具体例
 　English is spoken in many countries.　／　This book was written by Natsume Soseki.
 
+■ なぜその形か（例文を3つ）
+　This room is cleaned every day.（この部屋は毎日そうじされます）→ 部屋は「される側」なので is ＋ cleaned。
+　The letters were sent yesterday.（その手紙は昨日送られました）→ 複数で過去なので were ＋ sent（send の過去分詞）。
+　Was this picture painted by Picasso?（この絵はピカソにえがかれましたか）→ 疑問文は be動詞を前に出す。
+
 ■ 確かめ
 　主語が「する側」でなく「される側」か、be動詞と過去分詞がセットで入っているかを見ます。
 
@@ -823,6 +947,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 ■ 区別
 　have been to 〜：〜へ行ったことがある　／　have gone to 〜：〜へ行ってしまった（今はここにいない）
 
+■ なぜその形か（例文を3つ）
+　I have known her for five years.（私は彼女を5年前から知っています）→ for ＋ 期間は継続。know の過去分詞は known。
+　Has he ever eaten sushi?（彼は寿司を食べたことがありますか）→ ever は経験。主語が he なので Has、eat の過去分詞は eaten。
+　We haven't finished our homework yet.（私たちはまだ宿題を終えていません）→ 否定文の yet は「まだ」で完了の意味。
+
 ■ 確かめ
 　have（has）のあとが過去分詞か、主語が he・she なら has か、過去を示す語が入っていないかを見ます。
 
@@ -855,6 +984,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 ■ 作り方（2つの文を1つにする）
 　I have a friend. She lives in Osaka.
 　　→ I have a friend who lives in Osaka.（She を who に変えて先行詞のあとに置く）
+
+■ なぜその形か（例文を3つ）
+　The woman who lives next door is a doctor.（となりに住んでいる女性は医者です）→ 先行詞が人なので who。lives の s は先行詞に合わせる。
+　This is the bike which my father gave me.（これは父が私にくれた自転車です）→ 先行詞が物で、目的格の which。
+　I know a boy whose father is a pilot.（私は父親がパイロットの男の子を知っています）→ 「〜の」の意味なので whose。
 
 ■ 確かめ
 　先行詞が人か物かを見て who と which を選び、関係代名詞のあとの動詞が先行詞に合っているか（a friend who lives）を見ます。
@@ -893,6 +1027,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 ■ though の使い方
 　Although it was cold, we played outside.　（Although と but を重ねない）
 
+■ なぜその形か（例文を3つ）
+　Call me when you arrive.（着いたら電話してください）→ when の節は未来のことでも現在形（arrive）。
+　If you study hard, you will pass the test.（一生けんめい勉強すれば、テストに合格します）→ If の節は現在形、主文は will。
+　Although he was young, he understood the problem.（彼は若かったが、その問題を理解しました）→ Although の文に but は重ねない。
+
 ■ 確かめ
 　つなぐ2つの文のうち、どちらが理由（原因）でどちらが結果かを日本語にして見ます。
 
@@ -924,6 +1063,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 
 ■ 具体例
 　Do you know what time it is?　／　I don't know why she was late.
+
+■ なぜその形か（例文を3つ）
+　Do you know where she lives?（彼女がどこに住んでいるか知っていますか）→ where のあとは she lives の順。does は消えて live が lives になる。
+　Tell me what you want.（あなたが何がほしいか教えてください）→ what のあとは you want。do は使わない。
+　I wonder if it will rain tomorrow.（明日雨が降るかなと思います）→ Yes・No の疑問文は if でつなぐ。
 
 ■ 確かめ
 　文の途中にある疑問詞のあとが「主語＋動詞」の順になっているか、do・does・did が残っていないかを見ます。
@@ -959,6 +1103,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 　The movie is interesting.（映画が人をおもしろがらせる → ing）
 　I am interested in the movie.（人がおもしろいと感じる → ed）
 
+■ なぜその形か（例文を3つ）
+　The man talking to Ken is my uncle.（ケンと話している男の人は私のおじです）→ 「話している」なので ing。ほかの語がつくので名詞の後ろ。
+　I found a broken cup.（私はこわれたカップを見つけました）→ 「こわされた」なので過去分詞 broken。1語なので名詞の前。
+　The boy named Jack is my friend.（ジャックという名前の少年は私の友だちです）→ 「名づけられた」なので named。
+
 ■ 確かめ
 　名詞に対して「〜している」と読めるか、「〜された」と読めるかを、日本語にして見ます。
 
@@ -990,6 +1139,11 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 ■ 具体例
 　The news made us sad.（us＝sad の関係）
 　He showed me his pictures.
+
+■ なぜその形か（例文を3つ）
+　She became a nurse.（彼女は看護師になりました）→ SVC。She ＝ a nurse の関係。
+　He told me a funny story.（彼は私におもしろい話をしてくれました）→ SVOO。「人」の me が先、「物」の story があと。
+　The song makes me happy.（その歌は私を幸せな気持ちにします）→ SVOC。me ＝ happy の関係。
 
 ■ 確かめ
 　動詞の後ろの語が主語と「＝」の関係なら C（形容詞や名詞）です。「人」「物」の順に2つの名詞が並ぶなら SVOO です。
@@ -1023,6 +1177,13 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 ■ 具体例
 　Many students use phones. However, ... →
 　However のあとは、前と反対の内容や問題点が来ると予想できます。
+
+■ なぜその形か（例文を3つ）
+　Many people like cats. However, some people prefer dogs.（多くの人はねこが好きです。しかし、犬のほうが好きな人もいます）→ However のあとは反対の内容。
+　Tom studied hard. Therefore, he passed the test.（トムは一生けんめい勉強しました。だから、テストに合格しました）→ Therefore は結果をみちびく。
+　I like fruit. For example, I eat apples every day.（私は果物が好きです。たとえば、毎日りんごを食べます）→ For example のあとは具体例。
+■ まちがい文 → 正しい文
+　×It は直後の文から探す → ○It は直前の文から探して当てはめる
 
 ■ 確かめ
 　答えの根拠になる一文を本文で指でおさえ、選択肢のすべての語が本文と合っているかを見ます。
@@ -1059,6 +1220,13 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
 　Which do you like better, summer or winter?
 　→ I like summer better because I can swim in the sea. For example, I go to the beach with my friends every year.
 
+■ なぜその形か（例文を3つ）
+　I think that school uniforms are useful.（制服は便利だと思います）→ 意見は I think that ... で始める。
+　I like reading books because I can learn many things.（私はいろいろなことを学べるので、本を読むのが好きです）→ 理由は because ＋ 主語 ＋ 動詞。
+　For example, I read about Africa last month.（たとえば、私は先月アフリカについての本を読みました）→ 例は過去の出来事なので read（過去形）。
+■ まちがい文 → 正しい文
+　×I like summer because hot. → ○I like summer because it is hot.（because のあとにも主語と動詞）
+
 ■ 確かめ
 　主語と動詞があるか、三人称の s・過去形・複数形は合っているか、スペルは確かか、語数や条件は守れているかを見ます。
 
@@ -1081,6 +1249,14 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
     section: sec(
       'おさらい：英文を読む・書くときの基本の確かめ方',
       `どんな英語の問題でも、次の順番で確かめると、まちがいがぐっと減ります。
+
+■ なぜその形か（例文を3つ）
+　My brothers ( ) soccer every Sunday. → play（主語が複数、every Sunday は今の話）
+　We ( ) a movie yesterday. → saw（yesterday は過去、see の過去形は saw）
+　There ( ) two dogs in the park. → are（two があるので複数、are を選ぶ）
+■ まちがい文 → 正しい文
+　×She play tennis. → ○She plays tennis.（主語が1人）
+　×I goed there. → ○I went there.（go は不規則動詞）
 
 ■ 確かめる順番
 　① **主語と動詞を探す**：英文は「だれが＋どうする」。主語は文のはじめの名詞や代名詞で、動詞はそのすぐあとです。
@@ -1112,6 +1288,14 @@ export const REVIEW_BLOCKS_EIGO: ReviewBlock[] = [
     section: sec(
       'おさらい：英文を読む・書くときの基本の確かめ方',
       `文法問題でも読解でも英作文でも、次の順番で確かめると、まちがいが減ります。
+
+■ なぜその形か（例文を3つ）
+　The book ( ) by many people is a classic. → read（「読まれている」なので過去分詞。名詞の後ろから説明）
+　I'm looking forward to ( ) you. → seeing（この to は前置詞なので ing）
+　The window ( ) by Tom yesterday. → was broken（yesterday と「される側」から受け身の過去）
+■ まちがい文 → 正しい文
+　×She have lived here. → ○She has lived here.（主語が she）
+　×I want playing tennis. → ○I want to play tennis.（want のあとは to）
 
 ■ 確かめる順番
 　① **主語と述語動詞を探す**：文の骨組みは「主語＋動詞」。長い文は、修飾する部分（前置詞のかたまり、who や which の説明）をかっこでくくると骨組みが見えます。
