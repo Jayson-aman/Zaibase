@@ -5,6 +5,7 @@ import { teikiModule } from '../../data/teiki-lazy';
 import FigureView from '../../components/FigureView';
 import { rich } from '../../components/RichText';
 import HomeButton from '../../components/HomeButton';
+import ReviewBlocks from '../../components/ReviewBlocks';
 import Paywall from '../../components/Paywall';
 import { useSubscription } from '../../hooks/useSubscription';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
@@ -45,6 +46,13 @@ export default function TeikiUnitScreen() {
             <Text style={styles.gistLabel}>ひとことで言うと</Text>
             <Text style={styles.gist}>{rich(unit.gist)}</Text>
           </View>
+
+          {/* 昔習ったことを思い出せないと、この単元がわからなくなる。前提になる知識を、折りたたんで先に出す */}
+          <ReviewBlocks
+            q={{ subject: unit.subject, examType: 'koko', question: unit.title, explanation: [unit.gist, ...unit.sections.map((x) => x.body), ...unit.testPoints].join('\n') }}
+            title="🔁 この単元の前提になる、おさらい"
+            excludeHeadings={unit.sections.map((x) => x.heading)}
+          />
 
           <Text style={styles.h2}>🎞 動く図解（{unit.figure.steps?.length ?? 0}枚）</Text>
           <FigureView figure={unit.figure} animated manual previewSlides={full ? undefined : FREE_SLIDES} />

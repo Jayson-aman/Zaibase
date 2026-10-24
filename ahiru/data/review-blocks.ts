@@ -11,6 +11,8 @@ import {
   BLOCK_DECDIV,
 } from './lesson-extra-sections';
 
+export type ReviewSubject = 'sansu' | 'kokugo' | 'rika' | 'shakai' | 'eigo';
+
 export type ReviewBlock = {
   id: string;
   /** 折りたたみの見出しに出す名前 */
@@ -20,6 +22,13 @@ export type ReviewBlock = {
   test: RegExp;
   /** 'koko' なら高校受験の問題だけ、'chugaku' なら中学受験の問題だけ（未指定は両方） */
   exam?: 'koko' | 'chugaku';
+  /** どの教科の問題・単元に出すか（未指定は算数） */
+  subject?: ReviewSubject;
+  /**
+   * true のとき、ほかのおさらいが1つも当てはまらない問題・単元にだけ出す「基礎の見直し」。
+   * （教科×受験種別ごとに、広く当てはまる土台を1つ用意して、おさらいが1つも出ない問題を無くすため）
+   */
+  fallback?: boolean;
 };
 
 const sec = (heading: string, body: string): LessonSection => ({ heading, body });
@@ -299,6 +308,12 @@ const BLOCK_NIJI = sec(
 ★ ここがポイント：**まず因数分解、つぎに平方根の形、だめなら解の公式**。`,
 );
 
+import { REVIEW_BLOCKS_SANSU_MORE } from './review-blocks-sansu';
+import { REVIEW_BLOCKS_KOKUGO } from './review-blocks-kokugo';
+import { REVIEW_BLOCKS_RIKA } from './review-blocks-rika';
+import { REVIEW_BLOCKS_SHAKAI } from './review-blocks-shakai';
+import { REVIEW_BLOCKS_EIGO } from './review-blocks-eigo';
+
 export const REVIEW_BLOCKS: ReviewBlock[] = [
   { id: 'gcd', label: '最大公約数の出し方', section: BLOCK_GCD, test: /最大公約数|公約数/ },
   { id: 'lcm', label: '最小公倍数の出し方', section: BLOCK_LCM, test: /最小公倍数|公倍数/ },
@@ -315,6 +330,12 @@ export const REVIEW_BLOCKS: ReviewBlock[] = [
   { id: 'inbun', label: '因数分解のやり方', section: BLOCK_INBUN, test: /因数分解/, exam: 'koko' },
   { id: 'heihou', label: '平方根の計算のきまり', section: BLOCK_HEIHOU, test: /有理化|根号|平方根/, exam: 'koko' },
   { id: 'niji', label: '二次方程式の解き方', section: BLOCK_NIJI, test: /二次方程式|2次方程式|解の公式/, exam: 'koko' },
+  // 教科ごとのファイルに書いたおさらい（data/review-blocks-*.ts）。各ファイルが自分の教科・受験種別・test を決める
+  ...REVIEW_BLOCKS_SANSU_MORE,
+  ...REVIEW_BLOCKS_KOKUGO,
+  ...REVIEW_BLOCKS_RIKA,
+  ...REVIEW_BLOCKS_SHAKAI,
+  ...REVIEW_BLOCKS_EIGO,
 ];
 
 type Q = { subject?: string; examType?: string; question?: string; answer?: string; explanation?: string; hint?: string };
@@ -327,19 +348,26 @@ function weight(re: RegExp, q: Q): number {
 }
 
 /**
- * その問題でつまずきそうな前提を、最大 max 個まで返す（算数だけ）。
+ * その問題・単元でつまずきそうな前提を、最大 max 個まで返す（全教科）。
  * 関係の深い順（問題文に出る語を重く、解説に出る回数も数える）。同じ重みなら登録順。
+ * どれも当てはまらないときは、その教科・受験種別の「基礎の見直し」（fallback）を1つ返す。
  */
 export function reviewBlocksFor(q: Q, max = 2): ReviewBlock[] {
-  if (q.subject !== undefined && q.subject !== 'sansu') return [];
+  const subject = (q.subject ?? 'sansu') as ReviewSubject;
+  if (!['sansu', 'kokugo', 'rika', 'shakai', 'eigo'].includes(subject)) return [];
   const text = [q.question, q.answer, q.explanation, q.hint].filter(Boolean).join('\n');
   if (!text) return [];
   const exam = q.examType === 'koko' ? 'koko' : 'chugaku';
+  const mine = REVIEW_BLOCKS.filter((b) => (b.subject ?? 'sansu') === subject && (!b.exam || b.exam === exam));
   const hits: { b: ReviewBlock; w: number; i: number }[] = [];
-  REVIEW_BLOCKS.forEach((b, i) => {
-    if (b.exam && b.exam !== exam) return;
+  mine.forEach((b, i) => {
+    if (b.fallback) return;
     if (b.test.test(text)) hits.push({ b, w: weight(b.test, q), i });
   });
   hits.sort((x, y) => y.w - x.w || x.i - y.i);
-  return hits.slice(0, max).map((h) => h.b);
+  // いちばん関係の深い1つは必ず出す。2つ目以降は、問題文・答えに出るか、本文に3回以上出るものだけ
+  // （長い単元本文に1回だけ出た語で、関係の薄いおさらいが並ぶのを防ぐ）
+  if (hits.length > 0) return hits.filter((h, i) => i === 0 || h.w >= 3).slice(0, max).map((h) => h.b);
+  const fb = mine.find((b) => b.fallback);
+  return fb ? [fb] : [];
 }
