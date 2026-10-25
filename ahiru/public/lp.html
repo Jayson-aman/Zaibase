@@ -61,6 +61,12 @@ h2 small{display:block;font-size:13px;color:#F97316;font-weight:800;margin-botto
 .cta-fixed a small{display:block;font-size:12px;font-weight:700;opacity:.95}
 .cta-inline{display:block;text-align:center;text-decoration:none;background:#0369A1;color:#fff;font-weight:900;font-size:17px;border-radius:14px;padding:15px;margin-top:20px}
 .sub{text-align:center;font-size:13px;color:#64748B;margin-top:8px}
+.btns{display:grid;gap:10px;margin-top:18px}
+.btn{display:block;text-align:center;text-decoration:none;background:#0369A1;color:#fff;font-weight:900;font-size:16px;border-radius:14px;padding:14px}
+.btn.o{background:#F97316}
+.btn small{display:block;font-size:12px;font-weight:700;opacity:.95}
+.new{display:inline-block;background:#DC2626;color:#fff;font-size:12px;font-weight:900;border-radius:6px;padding:1px 8px;margin-right:6px}
+.cta-fixed .alt{display:block;text-align:center;font-size:12px;color:#0369A1;font-weight:700;margin-top:6px;text-decoration:none;background:none;box-shadow:none;padding:0}
 .foot{text-align:center;font-size:12px;color:#64748B;padding:26px 20px 10px;line-height:1.9}
 .foot a{color:#0369A1;margin:0 6px}
 </style>
@@ -107,6 +113,24 @@ h2 small{display:block;font-size:13px;color:#F97316;font-weight:800;margin-botto
   </div>
 </section>
 
+<section id="teiki">
+  <div class="wrap">
+    <h2><small><span class="new">NEW</span>中学生向け</small>定期テストの教科書</h2>
+    <p class="lead">学校の教科書にそって、むずかしい所を<span class="mark">動く図解と身近な具体例</span>でかみくだきます。「教科書を読んでも、わからない」を、そのままにしません。</p>
+    <div class="shot"><figure><img src="/lp/teiki.jpg" alt="定期テストの教科書の一覧"><figcaption>中1〜中3・5教科・全51単元</figcaption></figure>
+    <figure><img src="/lp/osarai.jpg" alt="おさらい"><figcaption>つまずいたら「おさらい」</figcaption></figure></div>
+    <div class="pt"><span class="n">1</span><h3>1つの単元に、動く図解が12枚以上</h3><p>式が消える様子、力の矢印、時代の流れ。1枚ずつ「なぜ？」までたどれます。</p></div>
+    <div class="pt"><span class="n">2</span><h3>やさしい問題から始める基本問題（750問）</h3><p>学年・教科ごとに50問。いちばんやさしいステップ1から始めて、できたら次へ。むずかしければ、ひとつ前にもどれます。1学期末・2学期末・学年末で選べます。</p></div>
+    <div class="pt" id="osarai"><span class="n">3</span><h3>全教科の問題・単元に「おさらい」</h3><p>問題がわからないのは、昔習ったことを思い出せないから。分数の計算、正負の数、品詞、年表、英語の語順などを、問題や単元の先頭に出します（通分のやり方も、親が忘れていて大丈夫）。</p></div>
+    <div class="btns">
+      <a class="btn o" href="/easy">ブラウザで、まず1問だけ<small>無料・登録なしで試せます（無料は一部）</small></a>
+      <a class="btn" href="/teiki">定期テストの教科書を見る</a>
+      <a class="btn" href="/lesson/sansu_04_bunsu">算数の「おさらい」を見る</a>
+    </div>
+    <p class="sub">いまはブラウザ版（パソコン・スマホ）でご利用いただけます。iPhone・iPadアプリは、次のアップデートで対応します。</p>
+  </div>
+</section>
+
 <section class="alt">
   <div class="wrap">
     <h2><small>塾とくらべると</small>家計にも、親の時間にもやさしい</h2>
@@ -121,7 +145,9 @@ h2 small{display:block;font-size:13px;color:#F97316;font-weight:800;margin-botto
       <div class="row"><span>無料でできること</span><span class="v">¥0 <small>1教科10問・教科書10単元</small></span></div>
       <div class="row"><span>PRO（全問題・全教科書）</span><span class="v">¥1,980<small>/月</small></span></div>
       <div class="row"><span>MAX（＋AI弱点コーチ・英検）</span><span class="v">¥2,890<small>/月</small></span></div>
-      <div class="intro">はじめての方は、最初の1か月 ¥500（お1人1回）</div>
+      <div class="intro">はじめての方は、最初の1か月 ¥500（お1人1回。iPhone・iPadアプリ）</div>
+      <div class="row" style="margin-top:10px"><span>Web版（ブラウザ）PRO</span><span class="v">¥2,980<small>/月</small></span></div>
+      <div class="row"><span>Web版（ブラウザ）MAX</span><span class="v">¥3,980<small>/月</small></span></div>
     </div>
     <p class="sub">iPhone・iPadのアプリの料金です。Web版（ブラウザ）は PRO ¥2,980／MAX ¥3,980（月額）で、アプリ版とは異なります。公式集・単元の買い切り（¥150〜）はどちらでも購入できます。</p>
   </div>
@@ -133,7 +159,8 @@ h2 small{display:block;font-size:13px;color:#F97316;font-weight:800;margin-botto
     <div class="faq">
       <details><summary>本当に無料で試せますか？</summary><p>はい。アプリを入れて、学年を選ぶと「はじめの5問」から始まります。無料の範囲は1教科10問・教科書10単元（＋新単元は学年・教科ごとに5つ）で、解説は全文読めます。</p></details>
       <details><summary>子どもが勝手に課金しませんか？</summary><p>有料プランのお申し込みはApp Storeの決済（Face ID／パスワード）が必要です。保護者の方の管理するアカウントでお申し込みください。</p></details>
-      <details><summary>解約は簡単ですか？</summary><p>iPhoneの「設定 → サブスクリプション」からいつでも解約できます。解約後も期間の終わりまで使えます。</p></details>
+      <details><summary>解約は簡単ですか？</summary><p>iPhone・iPadは「設定 → サブスクリプション」から、Web版は購入完了メールの「サブスクリプション管理」リンクから、いつでも解約できます。解約後も期間の終わりまで使えます。</p></details>
+      <details><summary>定期テストの教科書は、無料で見られますか？</summary><p>一部です。各単元の動く図解の最初の2枚と最初の節、基本問題はステップ1の最初の5問まで無料でお試しいただけます。続きはPRO／MAX（月額プラン）です。</p></details>
       <details><summary>Androidでも使えますか？</summary><p>いまはiPhone・iPadのアプリと、ブラウザで使えるWeb版があります。AndroidはWeb版（exam.zaibase.group）をお使いください。</p></details>
     </div>
     <a class="cta-inline" href="https://apps.apple.com/app/id6782930084">App Storeで無料ダウンロード</a>
@@ -148,7 +175,8 @@ h2 small{display:block;font-size:13px;color:#F97316;font-weight:800;margin-botto
 </p>
 
 <div class="cta-fixed">
-  <a href="https://apps.apple.com/app/id6782930084">無料で、まず1問だけ<small>App Storeでダウンロード（iPhone・iPad）</small></a>
+  <a href="/easy">無料で、まず1問だけ<small>ブラウザですぐ（無料は一部。続きは月額プラン）</small></a>
+  <a class="alt" href="https://apps.apple.com/app/id6782930084">iPhone・iPadアプリは App Store から</a>
 </div>
 
 </body>
