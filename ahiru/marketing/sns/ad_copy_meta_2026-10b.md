@@ -13,9 +13,9 @@
 **Web版には、2.2.10 の機能（定期テストの教科書・やさしい問題から・全教科のおさらい）が、もう本番に出ている。** iPhoneアプリの公開を待たずに、Web版へのリンクで出せる。
 | 動画 | リンク先（広告の「ウェブサイトのURL」） | 着地ページ |
 |---|---|---|
-| A（45秒・冒頭4種） | `https://exam.zaibase.group/easy?utm_source=facebook&utm_medium=paid&utm_campaign=videoA` | 「気が重い日は、1問だけでOK」の入口 |
-| B（50秒・定期テストの教科書） | `https://exam.zaibase.group/teiki?utm_source=facebook&utm_medium=paid&utm_campaign=videoB` | 定期テストの教科書の一覧 |
-| C（30秒・算数のおさらい） | `https://exam.zaibase.group/lesson/sansu_04_bunsu?utm_source=facebook&utm_medium=paid&utm_campaign=videoC` | 動画で見せた単元（先頭に「おさらい」が出る） |
+| A（45秒・冒頭4種） | `https://exam.zaibase.group/lp?utm_source=facebook&utm_medium=paid&utm_campaign=videoA` | 紹介ページ（/easy は1問だけ出る入口なので広告には使わない） |
+| B（50秒・定期テストの教科書） | `https://exam.zaibase.group/lp?utm_source=facebook&utm_medium=paid&utm_campaign=videoB#teiki` | 紹介ページの定期テストの教科書の節 |
+| C（30秒・算数のおさらい） | `https://exam.zaibase.group/lp?utm_source=facebook&utm_medium=paid&utm_campaign=videoC#osarai` | 紹介ページのおさらいの節 |
 - **/lp には、まだ「定期テストの教科書」「おさらい」の説明が無く、App Store（2.2.9）への案内になっている。** 動画B・Cを /lp に着地させると、広告で見せたものが無く見える。上の、広告で見せたものがそのまま開く着地ページにする。
 - **Web版の広告に書く金額：** Web版は PRO ¥2,980／MAX ¥3,980（月額）。**「1,980円」「最初の1か月500円」は、iPhone・iPadアプリだけの金額なので、Web版の広告には書かない。** 金額を入れるなら：
   > 月額2,980円から（Web版PRO）。いつでも解約できます。
