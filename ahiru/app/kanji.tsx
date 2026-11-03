@@ -28,7 +28,7 @@ export default function KanjiScreen() {
           ))}
         </View>
         <Text style={styles.note}>
-          書き順の データは、学校で ならう「ひつじゅん」と おなじか、ひとつずつ たしかめている ところです。まよったら、先生や ドリルの かきじゅんを 見てね。
+          かきじゅんは、日本の 学校の ひつじゅんに そった データと くらべて たしかめて あります。まよったら、先生や ドリルの かきじゅんを 見てね。
         </Text>
       </ScrollView>
     </SafeAreaView>
