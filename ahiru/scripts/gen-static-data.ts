@@ -10,6 +10,7 @@
 import { writeFileSync, readFileSync, existsSync } from 'fs';
 import { resolve } from 'path';
 import { questions } from '../data/questions';
+import { isLowGrade } from '../data/grades';
 import { EXTRA_SECTION_FIGURES } from '../data/lesson-extra-figures';
 import { EXTRA_MANGA_SECTIONS } from '../data/manga-extra';
 import { lessonsNew20E4Eigo } from '../data/lessons-new20-e4-eigo';
@@ -42,6 +43,7 @@ import { lessonsNew20J3Kokugo } from '../data/lessons-new20-j3-kokugo';
 import { lessonsNew20J3Rika } from '../data/lessons-new20-j3-rika';
 import { lessonsNew20J3Sansu } from '../data/lessons-new20-j3-sansu';
 import { lessonsNew20J3Shakai } from '../data/lessons-new20-j3-shakai';
+import { lessonsU120E1Sansu } from '../data/lessons-u120-e1-sansu';
 
 const FREE_UNITS_PER_CLUSTER = 5;
 const CLUSTERS = [
@@ -75,6 +77,7 @@ const CLUSTERS = [
   lessonsNew20J3Rika,
   lessonsNew20J3Sansu,
   lessonsNew20J3Shakai,
+  lessonsU120E1Sansu,
 ];
 
 function genNew20Ids(): string {
@@ -106,6 +109,8 @@ function genQuestionCounts(): string {
   const general = new Map<string, number>();
   const bump = (m: Map<string, number>, k: string) => m.set(k, (m.get(k) ?? 0) + 1);
   for (const q of questions) {
+    // 小1〜小3の問題は学年を選んだときだけ出るので、ホームの「◯問」には数えない
+    if (isLowGrade(q.grade)) continue;
     const examType = q.examType ?? 'chugaku';
     const generalKey = examType === 'koko' ? 'koko-general' : 'general';
     if (!q.course || q.course === generalKey) {

@@ -16,7 +16,7 @@ import { ALL_COURSES } from '../../data/courses';
 import type { CourseKey, ExamType } from '../../data/courses';
 import { getTopic, questionMatchesTopic } from '../../data/topics';
 import { getTestMode, buildTestSet, type TestModeKey, type LevelKey } from '../../data/test-modes';
-import { GRADE_ORDER, type GradeKey } from '../../data/grades';
+import { GRADE_ORDER, inGradeFilter, isLowGrade, type GradeKey } from '../../data/grades';
 import LadderCard from '../../components/LadderCard';
 import { getKoushikiFormulaIdForQuestion, isKoushikiFormulaFree } from '../../data/koushiki-access';
 import { useFormulaUnlocks } from '../../hooks/useFormulaUnlocks';
@@ -121,10 +121,8 @@ function filterQuestions(
   if (difficultyFilter) {
     qs = qs.filter((q) => q.difficulty === difficultyFilter);
   }
-  if (gradeFilter) {
-    // grade未指定の既存問題は全学年扱いとして残す
-    qs = qs.filter((q) => !q.grade || q.grade === gradeFilter);
-  }
+  // grade未指定の既存問題は全学年扱いとして残す。学年を選ばないときは、小1〜小3の問題を除く
+  qs = qs.filter((q) => inGradeFilter(q.grade, gradeFilter));
   return qs;
 }
 
@@ -227,7 +225,7 @@ export default function QuizScreen() {
         pool = pool.filter((q) => questionMatchesTopic(q, topic));
         if (!(isPro || isMax)) pool = pool.filter((q) => !q.maxOnly);
         if (difficultyFilter) pool = pool.filter((q) => q.difficulty === difficultyFilter);
-        if (gradeFilter) pool = pool.filter((q) => !q.grade || q.grade === gradeFilter);
+        pool = pool.filter((q) => inGradeFilter(q.grade, gradeFilter));
         return shuffle(pool);
       }
     }
@@ -235,7 +233,7 @@ export default function QuizScreen() {
       const tm = getTestMode(testModeKey);
       let pool = all.filter((q) => (q.examType ?? 'chugaku') === examType);
       if (!(isPro || isMax)) pool = pool.filter((q) => !q.maxOnly);
-      if (gradeFilter) pool = pool.filter((q) => !q.grade || q.grade === gradeFilter);
+      pool = pool.filter((q) => inGradeFilter(q.grade, gradeFilter));
       return buildTestSet(pool, tm, testSeedRef.current + restartKey + 1, difficultyFilter as LevelKey | undefined);
     }
     if (isMock) {
@@ -245,6 +243,7 @@ export default function QuizScreen() {
       const generalKey = examType === 'koko' ? 'koko-general' : 'general';
       const pool = all.filter((q) => {
         if ((q.examType ?? 'chugaku') !== examType) return false;
+        if (isLowGrade(q.grade)) return false;
         return !q.course || q.course === generalKey;
       });
       const set = shuffle(pool).slice(0, 30);
@@ -252,7 +251,7 @@ export default function QuizScreen() {
     }
     if (isKakomon) {
       // 過去入試問題（MAXプラン）: 学校別問題のみ（大問形式）。学校ごとに同じ順番にならないようシャッフル。
-      const schoolQ = all.filter((q) => q.course === course && (q.examType ?? 'chugaku') === examType);
+      const schoolQ = all.filter((q) => q.course === course && (q.examType ?? 'chugaku') === examType && !isLowGrade(q.grade));
       const set = schoolQ.length > 0
         ? shuffle(schoolQ)
         : shuffle(filterQuestions(all, examType, course, 'advanced', true));
@@ -423,7 +422,7 @@ export default function QuizScreen() {
       if (q.difficulty !== 'basic' || q.maxOnly || seenIds.has(q.id)) return false;
       const figureId = getKoushikiFormulaIdForQuestion(q.id);
       if (figureId != null && !(isPro || isMax) && !isKoushikiFormulaFree(figureId) && !unlockedFormulaIds.has(figureId)) return false;
-      if (gradeFilter && q.grade && q.grade !== gradeFilter) return false;
+      if (!inGradeFilter(q.grade, gradeFilter)) return false;
       if (topicDef && !questionMatchesTopic(q, topicDef)) return false;
       return true;
     });

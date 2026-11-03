@@ -52,7 +52,7 @@ function info(label: string, hits: unknown[], sample = 6) {
 const SUBJECT_KEYS = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
 const EXAM_TYPES = ['chugaku', 'koko'];
 const PERIODS = [
-  '小4', '小5前半', '小5後半', '小6前半', '小6後半・直前',
+  '小1', '小2', '小3', '小4', '小5前半', '小5後半', '小6前半', '小6後半・直前',
   '中1', '中2', '中3前半', '中3夏', '中3秋〜直前',
 ];
 
