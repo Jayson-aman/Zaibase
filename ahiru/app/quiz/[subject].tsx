@@ -54,6 +54,7 @@ import TutorChat from '../../components/TutorChat';
 import HomeButton from '../../components/HomeButton';
 import Fireworks from '../../components/Fireworks';
 import AnswerInput, { type SubmitResult } from '../../components/AnswerInput';
+import SketchPad from '../../components/SketchPad';
 import { figuresModule } from '../../data/figures-lazy';
 import FigureView from '../../components/FigureView';
 import { shuffledChoices } from '../../utils/choices';
@@ -305,6 +306,8 @@ export default function QuizScreen() {
   const studyWriteRef = useRef<Promise<void> | null>(null);
   const scrollRef = useRef<ScrollView>(null);
   const answerYRef = useRef(0);
+  // 手書きメモ欄（途中式・図）。iPadはペン、iPhoneは指で書く
+  const [sketchOpen, setSketchOpen] = useState(false);
   // レベル別ドリル・入試対策の「1日あたり無料N問」の消費数。画面を離れて
   // 入り直すだけで無料枠が復活しないよう、AsyncStorageの永続値を読み込んで保持する。
   const sessionFreeUsedRef = useRef(0);
@@ -1080,6 +1083,15 @@ export default function QuizScreen() {
           </View>
         )}
 
+        {currentQuestion && (
+          <>
+            <TouchableOpacity style={styles.sketchBtn} onPress={() => setSketchOpen(true)} activeOpacity={0.85} accessibilityRole="button" accessibilityLabel="手書きメモをひらく">
+              <Text style={styles.sketchBtnText}>✏️ メモを かく（途中式・図）</Text>
+            </TouchableOpacity>
+            <SketchPad visible={sketchOpen} onClose={() => setSketchOpen(false)} memoKey={currentQuestion.id} questionText={currentQuestion.question} />
+          </>
+        )}
+
         {/*
           答えを自分で書く欄。
           もとは「✓正解 / ✗不正解」を自分で押す作りだったが、それでは答えを
@@ -1338,6 +1350,19 @@ const styles = StyleSheet.create({
     color: '#15803D',
     lineHeight: 22,
   },
+  sketchBtn: {
+    alignSelf: 'flex-start',
+    marginHorizontal: 16,
+    marginTop: 4,
+    marginBottom: 8,
+    backgroundColor: '#FFF8EC',
+    borderWidth: 1.5,
+    borderColor: '#E8DCCB',
+    paddingHorizontal: 14,
+    paddingVertical: 9,
+    borderRadius: 12,
+  },
+  sketchBtnText: { fontSize: 14, fontWeight: '800', color: '#6B4226' },
   reviewNextBtn: {
     marginHorizontal: 16,
     marginTop: 12,
