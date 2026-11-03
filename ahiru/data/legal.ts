@@ -395,6 +395,18 @@ export const ahiruCredits: LegalSection[] = [
     ],
   },
   {
+    heading: '漢字の書き順データ',
+    paragraphs: [
+      '漢字の書き順を動かして見せる機能には、Hanzi Writer の日本語データ（hanzi-writer-data-jp）を使用しています。',
+      'このデータは、animCJK（Copyright 2016-2019 Francois Mizessyn）と Make Me a Hanzi をもとにしており、さらにその元は、台湾の Arphic Technology 社の字体（Arphic PL KaitiM GB、Arphic PL UKai）です。GNU Lesser General Public License（LGPL）と Arphic Public License の条件のもとで使用しています。',
+    ],
+    bullets: [
+      'animCJK（https://github.com/parsimonhi/animCJK）',
+      'Make Me a Hanzi（https://github.com/skishore/makemeahanzi）',
+      'hanzi-writer-data-jp（https://github.com/chanind/hanzi-writer-data-jp）',
+    ],
+  },
+  {
     heading: 'ご連絡について',
     paragraphs: [
       '掲載画像について、著作権者様より使用許諾範囲に関するご指摘やクレジット表記の追加・修正のご要望、削除のご依頼をいただいた場合は、確認のうえ速やかに対応いたします。下記までご連絡ください。',
