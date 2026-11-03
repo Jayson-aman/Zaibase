@@ -14,7 +14,8 @@ import type { ExamType } from '../store/examType';
 //    残りの問題数ぶんだけ、そのまま始められるボタンを付ける。
 
 const GRADES: Record<ExamType, GradeKey[]> = {
-  chugaku: ['e4', 'e5', 'e6'],
+  // 小1は算数の問題がそろっている。小2・小3は中身ができたら足す
+  chugaku: ['e1', 'e4', 'e5', 'e6'],
   koko: ['j1', 'j2', 'j3'],
 };
 const DEFAULT_GRADE: Record<ExamType, GradeKey> = { chugaku: 'e5', koko: 'j2' };

@@ -17,7 +17,7 @@ import { useRouter } from 'expo-router';
 import { subjectInfo, type SubjectKey } from '../data/questions-meta';
 import { TEST_MODES, levelLabel, type TestModeKey, type LevelKey } from '../data/test-modes';
 import { useExamType, examTypeLabel, subjectDisplayName } from '../store/examType';
-import { GRADE_ORDER, GRADE_SHORT_LABELS, examTypeOfGrade, type GradeKey } from '../data/grades';
+import { GRADE_ORDER, GRADE_SHORT_LABELS, examTypeOfGrade, isLowGrade, type GradeKey } from '../data/grades';
 import HomeButton from '../components/HomeButton';
 
 const SUBJECTS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
@@ -33,7 +33,7 @@ export default function TestPrepScreen() {
   const mode = useMemo(() => TEST_MODES.find((m) => m.key === modeKey) ?? null, [modeKey]);
   const et = examType ?? 'chugaku';
   const gradesForExamType = useMemo(
-    () => GRADE_ORDER.filter((g) => examTypeOfGrade(g) === et),
+    () => GRADE_ORDER.filter((g) => examTypeOfGrade(g) === et && !isLowGrade(g)),
     [et],
   );
 
