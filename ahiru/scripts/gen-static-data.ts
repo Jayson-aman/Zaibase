@@ -10,6 +10,7 @@
 import { writeFileSync, readFileSync, existsSync } from 'fs';
 import { resolve } from 'path';
 import { questions } from '../data/questions';
+import { isLowGrade } from '../data/grades';
 import { EXTRA_SECTION_FIGURES } from '../data/lesson-extra-figures';
 import { EXTRA_MANGA_SECTIONS } from '../data/manga-extra';
 import { lessonsNew20E4Eigo } from '../data/lessons-new20-e4-eigo';
@@ -108,6 +109,8 @@ function genQuestionCounts(): string {
   const general = new Map<string, number>();
   const bump = (m: Map<string, number>, k: string) => m.set(k, (m.get(k) ?? 0) + 1);
   for (const q of questions) {
+    // 小1〜小3の問題は学年を選んだときだけ出るので、ホームの「◯問」には数えない
+    if (isLowGrade(q.grade)) continue;
     const examType = q.examType ?? 'chugaku';
     const generalKey = examType === 'koko' ? 'koko-general' : 'general';
     if (!q.course || q.course === generalKey) {

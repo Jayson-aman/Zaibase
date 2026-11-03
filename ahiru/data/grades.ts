@@ -29,6 +29,17 @@ export const GRADE_SHORT_LABELS: Record<GradeKey, string> = {
   j3: '中3',
 };
 
+/** 小1〜小3（低学年）。学年を選ばない出題（ふつうの練習・模試など）には混ぜない。 */
+export function isLowGrade(grade: GradeKey | undefined): boolean {
+  return grade === 'e1' || grade === 'e2' || grade === 'e3';
+}
+
+/** 学年の絞り込み：小4以上を選んだときは、その学年と学年なしの問題。小1〜小3を選んだときは、その学年だけ。選ばないときは、低学年の問題を除く。 */
+export function inGradeFilter(grade: GradeKey | undefined, filter: GradeKey | null): boolean {
+  if (filter && isLowGrade(filter)) return grade === filter; // 低学年は、その学年の問題だけ（学年なしの問題は小4以上の内容）
+  return filter ? !grade || grade === filter : !isLowGrade(grade);
+}
+
 /** 学年から対応する受験種別（中学受験＝小学生／高校受験＝中学生）を返す。 */
 export function examTypeOfGrade(grade: GradeKey): 'chugaku' | 'koko' {
   return grade === 'j1' || grade === 'j2' || grade === 'j3' ? 'koko' : 'chugaku';
